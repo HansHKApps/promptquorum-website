@@ -185,7 +185,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         nextSteps: {
-          title: 'How Do You Get Started with Local LLMs',
+          title: 'How Do You Get Started with Local LLMs?',
           content: 'The fastest path to running your first local LLM is [How to Install Ollama](/local-llms/how-to-install-ollama) — a single command installs the engine and pulls a model in under 5 minutes on macOS, Windows, or Linux. If you prefer a graphical interface, [How to Install LM Studio](/local-llms/how-to-install-lm-studio) walks through the desktop app setup. To choose which model to start with, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models).',
         },
         sources: {
@@ -941,7 +941,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         installMac: {
           id: 'install-on-macos',
-          title: 'How Do You Install Ollama on macOS',
+          title: 'How Do You Install Ollama on macOS?',
           content: 'There are two methods. The installer download is faster; Homebrew is better if you manage software with brew.',
           numberedItems: [
             'Go to ollama.com/download and click "Download for macOS".',
@@ -958,7 +958,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         installWindows: {
           id: 'install-on-windows',
-          title: 'How Do You Install Ollama on Windows',
+          title: 'How Do You Install Ollama on Windows?',
           numberedItems: [
             'Go to ollama.com/download and click "Download for Windows".',
             'Run the downloaded OllamaSetup.exe installer. Ollama installs to %LOCALAPPDATA%\\Programs\\Ollama.',
@@ -973,7 +973,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         installLinux: {
           id: 'install-on-linux',
-          title: 'How Do You Install Ollama on Linux',
+          title: 'How Do You Install Ollama on Linux?',
           content: 'A single command installs Ollama on any Linux distribution:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
@@ -986,7 +986,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
-          title: 'How Do You Pull and Run Your First Model in Ollama',
+          title: 'How Do You Pull and Run Your First Model in Ollama?',
           content: 'After installing Ollama, run this command to download and start a model:',
           codeBlock: '# Pull a model (downloads to ~/.ollama/models)\nollama pull llama3.2\n\n# Run it interactively\nollama run llama3.2\n\n# Or pull and run in one step\nollama run llama3.2',
           codeLanguage: 'bash',
@@ -1003,7 +1003,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         verify: {
           id: 'verify-ollama-is-working',
-          title: 'How Do You Verify Ollama Is Working',
+          title: 'How Do You Verify Ollama Is Working?',
           content: 'Test the REST API directly to confirm Ollama is running and accessible:',
           codeBlock: '# Check Ollama is running\ncurl http://localhost:11434\n# Expected: "Ollama is running"\n\n# List downloaded models\nollama list\n\n# Send a prompt via API (OpenAI-compatible)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "What is 2+2?",\n  "stream": false\n}\'',
           codeLanguage: 'bash',
@@ -1047,7 +1047,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         nextSteps: {
-          title: 'What to Do After Installing Ollama',
+          title: 'What to Do After Installing Ollama?',
           content: 'Once Ollama is running, the next step is [Run Your First Local LLM](/local-llms/run-first-local-llm) to understand prompting, context length, and what to expect from local inference speed. To pick the best model for your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). If you prefer a graphical chat interface over the terminal, [How to Install LM Studio](/local-llms/how-to-install-lm-studio) covers the desktop app alternative.',
         },
         sources: {
@@ -2475,7 +2475,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         download: {
           id: 'download-and-install',
-          title: 'How Do You Download and Install LM Studio',
+          title: 'How Do You Download and Install LM Studio?',
           numberedItems: [
             'Go to lmstudio.ai and click the download button for your OS.',
             'macOS: Open the .dmg file and drag LM Studio to Applications. On first launch, approve the security prompt in System Preferences → Privacy & Security.',
@@ -2486,7 +2486,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         findModel: {
           id: 'find-and-download-a-model',
-          title: 'How Do You Find and Download a Model in LM Studio',
+          title: 'How Do You Find and Download a Model in LM Studio?',
           content: 'Use the Search tab (magnifying glass icon in the left sidebar) to find models:',
           numberedItems: [
             'Click the Search tab in the left sidebar.',
@@ -2498,7 +2498,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         firstChat: {
           id: 'start-chatting',
-          title: 'How Do You Start Chatting with a Model in LM Studio',
+          title: 'How Do You Start Chatting with a Model in LM Studio?',
           numberedItems: [
             'Click the Chat tab (speech bubble icon) in the left sidebar.',
             'At the top of the chat window, click the model selector dropdown and choose your downloaded model.',
@@ -2508,7 +2508,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         modelSettings: {
-          title: 'How Do You Adjust Model Settings in LM Studio',
+          title: 'How Do You Adjust Model Settings in LM Studio?',
           content: 'The right panel in the Chat tab exposes key inference parameters:',
           items: [
             '**Temperature** (default 0.8): controls response randomness. Lower values (0.1–0.4) produce more focused, predictable output. Higher values (0.8–1.2) produce more varied, creative output.',
@@ -2519,7 +2519,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         localServer: {
           id: 'enable-the-local-server',
-          title: 'How Do You Enable the LM Studio Local Server',
+          title: 'How Do You Enable the LM Studio Local Server?',
           content: 'LM Studio includes a local server that mimics the OpenAI API. Any application that works with OpenAI can use your local model through this server:',
           numberedItems: [
             'Click the Local Server tab (the "<->" icon) in the left sidebar.',
@@ -3950,7 +3950,7 @@ print(response.choices[0].message.content)`,
           codeLanguage: 'bash',
         },
         step3Progress: {
-          title: 'What the Download Looks Like',
+          title: 'What the Download Looks Like?',
           content: 'Ollama shows download progress in the terminal. A `llama3.2:3b` model takes 2–5 minutes on a typical broadband connection. The model is stored compressed — the 2 GB download expands to approximately 2.3 GB on disk.',
           codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
           codeLanguage: 'text',
@@ -3980,7 +3980,7 @@ print(response.choices[0].message.content)`,
         },
         beyondTerminal: {
           id: 'beyond-the-terminal',
-          title: 'How Do You Use Your Local LLM Beyond the Terminal',
+          title: 'How Do You Use Your Local LLM Beyond the Terminal?',
           content: 'The Ollama terminal chat is useful for testing, but most real use cases need a better interface:',
           items: [
             '**Open WebUI**: a full-featured web UI for Ollama. Run it with Docker: `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`. Access at http://localhost:3000.',
@@ -6142,7 +6142,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'CPU-only vs GPU-active: Ollama running on CPU gives 2–8 tok/s; GPU mode gives 30–120 tok/s. Check with ollama ps or nvidia-smi.',
         },
         error2Fixes: {
-          title: 'How Do You Enable GPU in Ollama',
+          title: 'How Do You Enable GPU in Ollama?',
           items: [
             '**NVIDIA on Linux**: install NVIDIA driver 525+ and CUDA toolkit 11.3+. Ollama detects CUDA automatically on restart.',
             '**NVIDIA on Windows**: ensure driver version 452.39 or higher. Ollama installs CUDA support automatically via the Windows installer.',
@@ -6591,7 +6591,7 @@ print(response.choices[0].message.content)`,
         },
         thermals: {
           id: 'thermals',
-          title: 'How Do You Handle Thermal Throttling on a Laptop',
+          title: 'How Do You Handle Thermal Throttling on a Laptop?',
           content: [
             '**Thermal throttling occurs when the CPU or GPU reaches its temperature limit and reduces clock speed to cool down.** For local LLM inference, this typically kicks in after 10–15 minutes of sustained generation, reducing speed by 20–40%.',
           ],
@@ -7988,13 +7988,13 @@ print(response.choices[0].message.content)`,
           ],
         },
         networkIsolation: {
-          title: 'How Do You Block Outbound Connections from Local LLMs',
+          title: 'How Do You Block Outbound Connections from Local LLMs?',
           content: 'For maximum privacy on sensitive workloads, use a firewall rule to prevent the inference tool from making outbound connections after the model is downloaded:',
           codeBlock: '# macOS — block Ollama outbound with pf firewall\n# Add to /etc/pf.conf:\nblock out proto tcp from any to any user ollama\n\n# Linux — block with ufw\nsudo ufw deny out from any to any app ollama\n\n# Or use Little Snitch (macOS) / OpenSnitch (Linux)\n# for per-application network control with a GUI',
           codeLanguage: 'bash',
         },
         telemetry: {
-          title: 'How Do You Disable Telemetry in Local LLM Tools',
+          title: 'How Do You Disable Telemetry in Local LLM Tools?',
           rows: [
             { 'Tool': 'Ollama', 'Telemetry Default': 'None collected', 'How to Confirm': 'Check github.com/ollama/ollama — no analytics code' },
             { 'Tool': 'LM Studio', 'Telemetry Default': 'Anonymous analytics enabled', 'How to Disable': 'Settings → Privacy → uncheck "Send anonymous usage data"' },
@@ -9250,7 +9250,7 @@ print(response.choices[0].message.content)`,
         },
         howWeRanked: {
           id: 'how-we-ranked',
-          title: 'How These Models Were Ranked',
+          title: 'How These Models Were Ranked?',
           content: [
             '**Rankings are based on three benchmarks: MMLU (57-subject knowledge test, higher = better general intelligence), HumanEval (Python code generation, higher = better coding ability), and MATH (competition math problems, higher = stronger reasoning).** Scores are from published papers and the Open LLM Leaderboard as of Q1 2026.',
             'Hardware requirements are calculated for Q4_K_M quantization — the standard beginner setting that balances quality and RAM use. For a primer on quantization, see [LLM Quantization Explained](/local-llms/llm-quantization-explained).',
@@ -12008,7 +12008,7 @@ print(response.choices[0].message.content)`,
         },
         howToEvaluate: {
           id: 'how-to-evaluate',
-          title: 'How Do You Evaluate Local LLM Quality for Creative Writing',
+          title: 'How Do You Evaluate Local LLM Quality for Creative Writing?',
           content: [
             '**As of April 2026, creative writing performance is not well captured by standard benchmarks (MMLU, HumanEval).** To evaluate a model for creative writing, test it directly with the types of prompts you plan to use:',
           ],
@@ -12946,7 +12946,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         modelSelectionGuide: {
-          title: 'Which Model Should You Use? Quick Decision Guide',
+          title: 'Which Model Should You Use? Quick Decision Guide?',
           image: '/images/small-llm-decision-tree-mockup.svg',
           imageCaption: 'Decision tree: choose by priority (reasoning, speed, or coding). Default to Llama 3.2 3B if unsure.',
         },
@@ -25981,7 +25981,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         performance: {
           id: 'performance-tokens-per-second',
-          title: 'How Fast Is Each Engine? Throughput Comparison',
+          title: 'How Fast Is Each Engine? Throughput Comparison?',
           content: [
             '**Throughput (tokens per second) depends on the model size, hardware, and engine optimization.** As of April 2026, here are real-world benchmarks on consumer hardware:',
           ],
@@ -27601,14 +27601,14 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         pythonOpenAI: {
           id: 'python-openai-library',
-          title: 'How to Use Ollama API With Python (OpenAI Library)',
+          title: 'How to Use Ollama API With Python (OpenAI Library)?',
           content: '**Install the OpenAI library and point it to localhost.**',
           codeBlock: '# 1. Install the OpenAI library\npip install openai\n\n# 2. Connect to Ollama\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"  # dummy key; Ollama ignores it\n)\n\n# 3. Make a request\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\n\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
         nodejs: {
           id: 'nodejs-openai',
-          title: 'How to Use Ollama API With Node.js',
+          title: 'How to Use Ollama API With Node.js?',
           content: '**Install the OpenAI SDK and connect it to your local Ollama instance.**',
           codeBlock: '// 1. Install\nnpm install openai\n\n// 2. Connect to Ollama\nconst OpenAI = require("openai").default;\n\nconst client = new OpenAI({\n  baseURL: "http://localhost:11434/v1",\n  apiKey: "ollama"\n});\n\n// 3. Make a request\nconst response = await client.chat.completions.create({\n  model: "llama3.2:3b",\n  messages: [{\n    role: "user",\n    content: "What is 2+2?"\n  }]\n});\n\nconsole.log(response.choices[0].message.content);',
           codeLanguage: 'javascript',
@@ -27631,7 +27631,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         javascript: {
           id: 'javascript-browser',
-          title: 'How to Use Ollama API From JavaScript in the Browser',
+          title: 'How to Use Ollama API From JavaScript in the Browser?',
           content: [
             '**Calling Ollama from browser-side JavaScript requires the browser and server to be on the same machine (or allow CORS).** For security, browser requests to localhost work only if the JavaScript is served from localhost. Check [Best Local LLM Frontends](/local-llms/best-local-llm-frontends) for browser-ready UIs that handle this seamlessly.',
             'If you need to call Ollama from a browser on a different IP, set up a CORS proxy or use a server-side middleware.',
@@ -29585,13 +29585,13 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         vscodeContinue: {
-          title: 'How to Set Up Continue.dev in VS Code',
+          title: 'How to Set Up Continue.dev in VS Code?',
           content: 'Continue.dev is a VS Code extension for local and cloud code completions.',
           codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
           codeLanguage: 'json',
         },
         cursor: {
-          title: 'How to Use Local Models in Cursor',
+          title: 'How to Use Local Models in Cursor?',
           content: [
             '**Cursor is a VS Code fork optimized for AI-assisted coding.** It has built-in support for local models via Ollama.',
           ],
@@ -30535,19 +30535,19 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         ollama: {
-          title: 'How to Run Ollama Headless',
+          title: 'How to Run Ollama Headless?',
           content: 'Ollama can run as a pure API service:',
           codeBlock: '# Run Ollama headless\nollama serve\n\n# This starts the API at http://localhost:11434/v1\n# No chat UI, just a background service\n\n# Use the API from Python\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)\n\n# Or from curl\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{{"model": "llama3.2:3b", "messages": [{{"role": "user", "content": "Hello"}}]}}\'',
           codeLanguage: 'bash',
         },
         vllm: {
-          title: 'How to Run vLLM Headless',
+          title: 'How to Run vLLM Headless?',
           content: 'vLLM is optimized for headless, high-throughput deployments:',
           codeBlock: '# Install vLLM\npip install vllm\n\n# Run headless with API\nvllm serve llama-3.1-8b-instruct \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Access at http://localhost:8000/v1\n# Supports 50+ concurrent requests\n\n# Use from Python (same as Ollama)\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:8000/v1", api_key="anything")\nresponse = client.chat.completions.create(\n  model="meta-llama/Llama-2-7b-chat-hf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'bash',
         },
         production: {
-          title: 'How to Deploy for Production',
+          title: 'How to Deploy for Production?',
           content: [
             '**1. **Use vLLM** for high throughput (50+ concurrent users).**',
             '2. **Use Ollama** for simplicity (single-user or small teams).',
@@ -30560,7 +30560,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           codeLanguage: 'bash',
         },
         monitoring: {
-          title: 'How to Monitor Headless Deployments',
+          title: 'How to Monitor Headless Deployments?',
           content: [
             '**Monitor GPU memory, request latency, and error rates:**',
           ],
@@ -32405,7 +32405,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Hardware', 'Initial Cost', 'Tokens/Sec', 'Tokens/Year (24/7)', 'Long-term Cost'],
         },
         whenToChoose: {
-          title: 'When to Choose Each Platform',
+          title: 'When to Choose Each Platform?',
           content: 'Decision framework:',
           items: [
             '**Choose GPU**: You need real-time chat (<1 sec latency), running models 24/7, or batch processing large datasets.',
@@ -33103,7 +33103,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         splitting: {
-          title: 'How Layer Splitting and Tensor Parallelism Work',
+          title: 'How Layer Splitting and Tensor Parallelism Work?',
           content: [
             '**A 70B Transformer model has 80 layers.** With layer splitting, Ollama might place:',
             '- GPU 1: Layers 1–40',
@@ -33139,7 +33139,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Setup', 'Model', 'Speed', 'Cost'],
         },
         whenToUse: {
-          title: 'When to Use Multi-GPU',
+          title: 'When to Use Multi-GPU?',
           content: 'Multi-GPU is justified when:',
           items: [
             'You need to run 70B+ models.',
@@ -33241,7 +33241,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Option', 'Total Cost', 'LLM Speed', 'Cost Efficiency'],
         },
         whenToChoose: {
-          title: 'When to Choose Laptop vs Desktop',
+          title: 'When to Choose Laptop vs Desktop?',
           content: 'Choose laptop if:',
           items: [
             'You need portability and work from multiple locations.',
@@ -33250,7 +33250,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         desktopChoose: {
-          title: 'When to Choose Desktop',
+          title: 'When to Choose Desktop?',
           content: 'Choose desktop if:',
           items: [
             'You run 70B models or need 80+ tok/sec.',
@@ -34533,7 +34533,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Task', 'Cloud Agents', 'Local Agents'],
         },
         whenToChoose: {
-          title: 'When to Choose Each',
+          title: 'When to Choose Each?',
           content: 'Choose cloud if:',
           items: [
             'Task requires complex reasoning or world knowledge.',
@@ -34544,7 +34544,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         chooseLocal: {
-          title: 'When to Choose Local',
+          title: 'When to Choose Local?',
           content: 'Choose local if:',
           items: [
             'Data is sensitive (healthcare, finance, proprietary).',
@@ -40278,7 +40278,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         'when': {
-          title: 'When to Use Each',
+          title: 'When to Use Each?',
           content: [
             '**llama.cpp:** Minimal dependencies, raw speed. Use if building custom inference engine.',
             '**Ollama:** Everything-included simplicity. Use for chat UI + personal use.',
@@ -41390,7 +41390,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         'why-size': {
-          title: 'Why Model Size Matters for Code Review',
+          title: 'Why Model Size Matters for Code Review?',
           content: [
             '**7B models** lack reasoning depth. They spot obvious syntax errors but miss:',
             '- Race conditions (concurrency bugs)',
@@ -43406,7 +43406,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         'when': {
-          title: 'When to Use Each Level',
+          title: 'When to Use Each Level?',
           content: [
             '**Q4:** Default. Use for all models. Sweet spot of compression + quality.',
             '**Q5:** Never. Wasteful. If you need Q5 quality, use Q4 with slightly larger model. If you have Q5\'s VRAM (88GB), use Q4 on 70B instead.',
@@ -43509,7 +43509,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         'why': {
-          title: 'Why Local LLMs for Compliance',
+          title: 'Why Local LLMs for Compliance?',
           content: [
             '**Cloud APIs (ChatGPT, Claude, Gemini) cannot be used with regulated data:**',
             '- Data transmission to cloud = breach of confidentiality (HIPAA, legal privilege).',
