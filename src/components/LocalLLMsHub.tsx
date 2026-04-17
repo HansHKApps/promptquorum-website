@@ -28,6 +28,109 @@ const HUB_HERO_DESC: Record<string, string> = {
   zh: '2026年4月最佳本地LLM：最新Ollama模型（Llama 4、Qwen3、Gemma 3）、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。',
 }
 
+const HUB_NEW_APRIL_HEADING: Record<string, string> = {
+  en: 'New in April 2026',
+  de: 'Neu im April 2026',
+  fr: 'Nouveautés d\'avril 2026',
+  ja: '2026年4月の新着情報',
+  zh: '2026年4月新增内容',
+}
+
+const HUB_NEW_APRIL_MODELS: Record<string, { name: string; pull: string; vram: string; note: string }[]> = {
+  en: [
+    { name: 'Llama 4 Scout 17B', pull: 'ollama pull llama4:scout', vram: '10 GB', note: 'Meta. Best overall quality on 12 GB VRAM' },
+    { name: 'Qwen3 8B', pull: 'ollama pull qwen3:8b', vram: '5 GB', note: 'Alibaba. Top coding + multilingual, 8 GB GPU' },
+    { name: 'Gemma 3 12B', pull: 'ollama pull gemma3:12b', vram: '8 GB', note: 'Google. Strong reasoning, runs on RTX 3060' },
+    { name: 'DeepSeek-R2 8B', pull: 'ollama pull deepseek-r2:8b', vram: '5 GB', note: 'DeepSeek. Best for math and logic, 8 GB RAM' },
+  ],
+  de: [
+    { name: 'Llama 4 Scout 17B', pull: 'ollama pull llama4:scout', vram: '10 GB', note: 'Meta. Beste Gesamtqualität auf 12 GB VRAM' },
+    { name: 'Qwen3 8B', pull: 'ollama pull qwen3:8b', vram: '5 GB', note: 'Alibaba. Top Coding + mehrsprachig, 8 GB GPU' },
+    { name: 'Gemma 3 12B', pull: 'ollama pull gemma3:12b', vram: '8 GB', note: 'Google. Starkes Reasoning, läuft auf RTX 3060' },
+    { name: 'DeepSeek-R2 8B', pull: 'ollama pull deepseek-r2:8b', vram: '5 GB', note: 'DeepSeek. Beste für Mathe und Logik, 8 GB RAM' },
+  ],
+  fr: [
+    { name: 'Llama 4 Scout 17B', pull: 'ollama pull llama4:scout', vram: '10 Go', note: 'Meta. Meilleure qualité globale sur 12 Go VRAM' },
+    { name: 'Qwen3 8B', pull: 'ollama pull qwen3:8b', vram: '5 Go', note: 'Alibaba. Top code + multilingue, GPU 8 Go' },
+    { name: 'Gemma 3 12B', pull: 'ollama pull gemma3:12b', vram: '8 Go', note: 'Google. Raisonnement puissant, compatible RTX 3060' },
+    { name: 'DeepSeek-R2 8B', pull: 'ollama pull deepseek-r2:8b', vram: '5 Go', note: 'DeepSeek. Meilleur pour les maths et la logique, 8 Go RAM' },
+  ],
+  ja: [
+    { name: 'Llama 4 Scout 17B', pull: 'ollama pull llama4:scout', vram: '10 GB', note: 'Meta。12 GB VRAMで最高の総合品質' },
+    { name: 'Qwen3 8B', pull: 'ollama pull qwen3:8b', vram: '5 GB', note: 'Alibaba。コーディング+多言語トップ、8 GB GPU' },
+    { name: 'Gemma 3 12B', pull: 'ollama pull gemma3:12b', vram: '8 GB', note: 'Google。強力な推論能力、RTX 3060で動作' },
+    { name: 'DeepSeek-R2 8B', pull: 'ollama pull deepseek-r2:8b', vram: '5 GB', note: 'DeepSeek。数学・論理最強、8 GB RAM' },
+  ],
+  zh: [
+    { name: 'Llama 4 Scout 17B', pull: 'ollama pull llama4:scout', vram: '10 GB', note: 'Meta。12 GB VRAM最佳综合质量' },
+    { name: 'Qwen3 8B', pull: 'ollama pull qwen3:8b', vram: '5 GB', note: 'Alibaba。顶级代码+多语言，8 GB GPU' },
+    { name: 'Gemma 3 12B', pull: 'ollama pull gemma3:12b', vram: '8 GB', note: 'Google。强大推理能力，RTX 3060可运行' },
+    { name: 'DeepSeek-R2 8B', pull: 'ollama pull deepseek-r2:8b', vram: '5 GB', note: 'DeepSeek。数学逻辑最强，8 GB RAM' },
+  ],
+}
+
+const HUB_NEW_APRIL_COLS: Record<string, string[]> = {
+  en: ['Model', 'Pull Command', 'VRAM', 'Notes'],
+  de: ['Modell', 'Pull-Befehl', 'VRAM', 'Hinweise'],
+  fr: ['Modèle', 'Commande pull', 'VRAM', 'Notes'],
+  ja: ['モデル', 'Pullコマンド', 'VRAM', 'メモ'],
+  zh: ['模型', 'Pull命令', 'VRAM', '备注'],
+}
+
+const HUB_COMPARISON_HEADING: Record<string, string> = {
+  en: 'Ollama vs LM Studio vs Jan.ai: Which Should You Use?',
+  de: 'Ollama vs LM Studio vs Jan.ai: Was sollten Sie verwenden?',
+  fr: 'Ollama vs LM Studio vs Jan.ai : lequel utiliser ?',
+  ja: 'Ollama vs LM Studio vs Jan.ai：どれを使うべきか？',
+  zh: 'Ollama vs LM Studio vs Jan.ai：该用哪个？',
+}
+
+const HUB_COMPARISON_ROWS: Record<string, { feature: string; ollama: string; lmstudio: string; janai: string }[]> = {
+  en: [
+    { feature: 'Interface', ollama: 'Terminal (CLI)', lmstudio: 'Desktop GUI', janai: 'Desktop GUI + chat' },
+    { feature: 'API endpoint', ollama: 'localhost:11434', lmstudio: 'localhost:1234', janai: 'localhost:1337' },
+    { feature: 'Model browser', ollama: 'CLI only', lmstudio: 'Built-in', janai: 'Built-in' },
+    { feature: 'Best for', ollama: 'Developers, automation', lmstudio: 'Beginners, GUI users', janai: 'Privacy-first chat' },
+    { feature: 'Setup time', ollama: '2 min', lmstudio: '5 min', janai: '5 min' },
+  ],
+  de: [
+    { feature: 'Oberfläche', ollama: 'Terminal (CLI)', lmstudio: 'Desktop-GUI', janai: 'Desktop-GUI + Chat' },
+    { feature: 'API-Endpunkt', ollama: 'localhost:11434', lmstudio: 'localhost:1234', janai: 'localhost:1337' },
+    { feature: 'Modell-Browser', ollama: 'Nur CLI', lmstudio: 'Eingebaut', janai: 'Eingebaut' },
+    { feature: 'Geeignet für', ollama: 'Entwickler, Automatisierung', lmstudio: 'Einsteiger, GUI-Nutzer', janai: 'Privacy-first Chat' },
+    { feature: 'Einrichtungszeit', ollama: '2 Min', lmstudio: '5 Min', janai: '5 Min' },
+  ],
+  fr: [
+    { feature: 'Interface', ollama: 'Terminal (CLI)', lmstudio: 'GUI bureau', janai: 'GUI bureau + chat' },
+    { feature: 'Endpoint API', ollama: 'localhost:11434', lmstudio: 'localhost:1234', janai: 'localhost:1337' },
+    { feature: 'Navigateur modèles', ollama: 'CLI uniquement', lmstudio: 'Intégré', janai: 'Intégré' },
+    { feature: 'Idéal pour', ollama: 'Développeurs, automation', lmstudio: 'Débutants, utilisateurs GUI', janai: 'Chat axé confidentialité' },
+    { feature: 'Temps de setup', ollama: '2 min', lmstudio: '5 min', janai: '5 min' },
+  ],
+  ja: [
+    { feature: 'インターフェース', ollama: 'ターミナル（CLI）', lmstudio: 'デスクトップGUI', janai: 'GUI＋チャット' },
+    { feature: 'APIエンドポイント', ollama: 'localhost:11434', lmstudio: 'localhost:1234', janai: 'localhost:1337' },
+    { feature: 'モデルブラウザ', ollama: 'CLIのみ', lmstudio: '内蔵', janai: '内蔵' },
+    { feature: '最適な用途', ollama: '開発者・自動化', lmstudio: '初心者・GUI利用者', janai: 'プライバシー重視チャット' },
+    { feature: 'セットアップ時間', ollama: '2分', lmstudio: '5分', janai: '5分' },
+  ],
+  zh: [
+    { feature: '界面', ollama: '终端（CLI）', lmstudio: '桌面GUI', janai: 'GUI + 聊天' },
+    { feature: 'API端点', ollama: 'localhost:11434', lmstudio: 'localhost:1234', janai: 'localhost:1337' },
+    { feature: '模型浏览器', ollama: '仅CLI', lmstudio: '内置', janai: '内置' },
+    { feature: '最适合', ollama: '开发者、自动化', lmstudio: '初学者、GUI用户', janai: '隐私优先聊天' },
+    { feature: '设置时间', ollama: '2分钟', lmstudio: '5分钟', janai: '5分钟' },
+  ],
+}
+
+const HUB_COMPARISON_COLS: Record<string, string[]> = {
+  en: ['Feature', 'Ollama', 'LM Studio', 'Jan.ai'],
+  de: ['Merkmal', 'Ollama', 'LM Studio', 'Jan.ai'],
+  fr: ['Fonctionnalité', 'Ollama', 'LM Studio', 'Jan.ai'],
+  ja: ['機能', 'Ollama', 'LM Studio', 'Jan.ai'],
+  zh: ['功能', 'Ollama', 'LM Studio', 'Jan.ai'],
+}
+
 const HUB_CTA_TEXT: Record<string, string> = {
   en: 'PromptQuorum connects to your local LLM (Ollama, LM Studio, Jan AI) and dispatches your prompt to 25+ cloud models simultaneously — compare local vs cloud results in one view.',
   de: 'PromptQuorum verbindet sich mit Ihrem lokalen LLM (Ollama, LM Studio, Jan AI) und sendet Ihren Prompt gleichzeitig an 25+ Cloud-Modelle — lokale vs. Cloud-Ergebnisse in einer Ansicht.',
@@ -344,6 +447,22 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       q: 'How do I update local LLM models when new versions are released?',
       a: 'Ollama: run `ollama pull <model-name>` again — it downloads only changed layers. LM Studio: open the model browser, find the updated version, and download it. Old GGUF files are not automatically removed — delete them manually from ~/.ollama/models (Ollama) or ~/Library/Application Support/LM Studio/models (macOS) to free disk space. Model updates from Meta, Alibaba, and Mistral typically arrive within 24–48 hours of official release.'
     },
+    {
+      q: 'What are the best Ollama models in April 2026?',
+      a: 'Top Ollama models for April 2026: Llama 4 Scout 17B (best overall on 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (best coding, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (strong reasoning on RTX 3060, 8 GB VRAM), and DeepSeek-R2 8B (best math/logic, 5 GB VRAM). Run any model with `ollama run <name>` after pulling.'
+    },
+    {
+      q: 'What is the best local LLM for an RTX 3060 12 GB in 2026?',
+      a: 'The RTX 3060 12 GB VRAM is an excellent local LLM GPU. Best choices: Llama 4 Scout 17B at Q4 (~10 GB VRAM, `ollama pull llama4:scout`), Gemma 3 12B (~8 GB VRAM), or Qwen3 14B (~9 GB VRAM). All run at 20–40 tokens/sec. The 12 GB VRAM puts you above the RTX 3060 Ti (8 GB) and opens up 13B-class models at full quality.'
+    },
+    {
+      q: 'Ollama vs LM Studio vs Jan.ai: which should I use?',
+      a: 'Use Ollama if you want a CLI tool with an OpenAI-compatible API at localhost:11434 — best for developers and automation. Use LM Studio if you want a desktop GUI, built-in model browser, and chat interface — best for beginners. Use Jan.ai if you want a privacy-focused chat app with a built-in model store. All three support the same GGUF models. Setup time: Ollama 2 min, LM Studio 5 min, Jan.ai 5 min.'
+    },
+    {
+      q: 'What are the best budget GPUs for local LLMs in 2026?',
+      a: 'Best budget GPUs for local LLMs: RTX 3060 12 GB (~$250 used) runs 13B models at 20–30 tok/s. RTX 4060 8 GB (~$300 new) runs 7B at 35–45 tok/s. RTX 3080 10 GB (~$350 used) handles 13B comfortably. For sub-$200: RTX 2070 8 GB runs 7B models at 15–20 tok/s. AMD RX 6700 XT 12 GB (~$200 used) is comparable to RTX 3060 with ROCm on Linux. Minimum recommended: 8 GB VRAM for useful 7B inference.'
+    },
   ],
   de: [
     {
@@ -394,6 +513,22 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       q: 'Welche lokalen LLM-Modelle eignen sich best für den deutschen Mittelstand?',
       a: 'Llama 4 und Qwen3.5 für allgemeine Verwendung, DeepSeek-Coder für Softwareentwicklung, beide sind BSI-kompatibel wenn On-Premises bereitgestellt. Diese Modelle ermöglichen DSGVO-konforme KI-Nutzung ohne Anbieter-Lock-in.'
     },
+    {
+      q: 'Was sind die besten Ollama-Modelle im April 2026?',
+      a: 'Top Ollama-Modelle April 2026: Llama 4 Scout 17B (beste Gesamtqualität auf 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (bestes Coding, 5 GB VRAM), Gemma 3 12B (starkes Reasoning auf RTX 3060, 8 GB VRAM), DeepSeek-R2 8B (beste Mathe/Logik, 5 GB VRAM).'
+    },
+    {
+      q: 'Welches lokale LLM eignet sich für eine RTX 3060 12 GB?',
+      a: 'Die RTX 3060 12 GB VRAM ist eine hervorragende GPU für lokale LLMs. Beste Optionen: Llama 4 Scout 17B bei Q4 (~10 GB VRAM), Gemma 3 12B (~8 GB VRAM), Qwen3 14B (~9 GB VRAM). Alle laufen mit 20–40 Tokens/Sek.'
+    },
+    {
+      q: 'Ollama vs LM Studio vs Jan.ai: Was sollte ich verwenden?',
+      a: 'Verwenden Sie Ollama für CLI und OpenAI-kompatible API unter localhost:11434 — ideal für Entwickler. LM Studio für Desktop-GUI und Modellbrowser — ideal für Einsteiger. Jan.ai für datenschutzorientierten Chat mit eingebautem Modellspeicher. Einrichtungszeit: Ollama 2 Min, LM Studio 5 Min, Jan.ai 5 Min.'
+    },
+    {
+      q: 'Was sind die besten Budget-GPUs für lokale LLMs 2026?',
+      a: 'Beste Budget-GPUs: RTX 3060 12 GB (~250€ gebraucht) für 13B-Modelle mit 20–30 Tok/s. RTX 4060 8 GB (~300€ neu) für 7B mit 35–45 Tok/s. RTX 2070 8 GB (~150€) für 7B mit 15–20 Tok/s. AMD RX 6700 XT 12 GB (~200€) vergleichbar mit RTX 3060 unter ROCm/Linux. Minimum: 8 GB VRAM.'
+    },
   ],
   fr: [
     {
@@ -435,6 +570,22 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     {
       q: 'Comment mettre à jour les modèles LLM locaux lors de la sortie de nouvelles versions ?',
       a: 'Ollama : exécutez `ollama pull <model-name>` à nouveau — il télécharge uniquement les couches modifiées. LM Studio : ouvrez le navigateur de modèles, trouvez la version mise à jour et téléchargez-la. Les anciens fichiers GGUF ne sont pas supprimés automatiquement — supprimez-les manuellement de ~/.ollama/models (Ollama) ou ~/Library/Application Support/LM Studio/models (macOS) pour libérer de l\'espace disque. Les mises à jour de modèles de Meta, Alibaba et Mistral arrivent généralement 24–48 heures après la sortie officielle.'
+    },
+    {
+      q: 'Quels sont les meilleurs modèles Ollama en avril 2026 ?',
+      a: 'Top modèles Ollama avril 2026 : Llama 4 Scout 17B (meilleure qualité sur 12 Go VRAM, `ollama pull llama4:scout`), Qwen3 8B (meilleur code, 5 Go VRAM), Gemma 3 12B (raisonnement puissant sur RTX 3060, 8 Go VRAM), DeepSeek-R2 8B (maths/logique, 5 Go VRAM).'
+    },
+    {
+      q: 'Quel est le meilleur LLM local pour une RTX 3060 12 Go ?',
+      a: 'La RTX 3060 12 Go VRAM est un excellent GPU pour les LLMs locaux. Meilleurs choix : Llama 4 Scout 17B en Q4 (~10 Go VRAM), Gemma 3 12B (~8 Go VRAM), Qwen3 14B (~9 Go VRAM). Tous tournent à 20–40 tokens/sec.'
+    },
+    {
+      q: 'Ollama vs LM Studio vs Jan.ai : lequel utiliser ?',
+      a: 'Ollama pour CLI et API OpenAI-compatible sur localhost:11434 — idéal développeurs. LM Studio pour GUI desktop et navigateur de modèles — idéal débutants. Jan.ai pour chat axé confidentialité avec boutique de modèles intégrée. Temps de setup : Ollama 2 min, LM Studio 5 min, Jan.ai 5 min.'
+    },
+    {
+      q: 'Quels sont les meilleurs GPU économiques pour LLMs locaux en 2026 ?',
+      a: 'Meilleurs GPU économiques : RTX 3060 12 Go (~250 € d\'occasion) pour modèles 13B à 20–30 tok/s. RTX 4060 8 Go (~300 € neuf) pour 7B à 35–45 tok/s. RTX 2070 8 Go (~150 €) pour 7B à 15–20 tok/s. AMD RX 6700 XT 12 Go (~200 €) comparable RTX 3060 sous ROCm/Linux. Minimum : 8 Go VRAM.'
     },
   ],
   ja: [
@@ -478,6 +629,22 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       q: '新しいバージョンがリリースされたときにローカルLLMモデルを更新するにはどうすればよいですか？',
       a: 'Ollama: `ollama pull <model-name>`を再実行します — 変更されたレイヤーのみをダウンロードします。LM Studio: モデルブラウザを開き、更新版を見つけてダウンロードします。古いGGUFファイルは自動削除されません — ~/.ollama/models（Ollama）または~/Library/Application Support/LM Studio/models（macOS）から手動で削除してディスク容量を解放します。Meta、Alibaba、Mistralのモデル更新は通常、公式リリースの24–48時間以内に利用可能になります。'
     },
+    {
+      q: '2026年4月のベストOllamaモデルは？',
+      a: '2026年4月トップOllamaモデル：Llama 4 Scout 17B（12 GB VRAMで最高品質、`ollama pull llama4:scout`）、Qwen3 8B（最高コーディング、5 GB VRAM）、Gemma 3 12B（RTX 3060で強力な推論、8 GB VRAM）、DeepSeek-R2 8B（数学・論理最強、5 GB VRAM）。'
+    },
+    {
+      q: 'RTX 3060 12 GB VRAMに最適なローカルLLMは？',
+      a: 'RTX 3060 12 GB VRAMはローカルLLM向けの優れたGPUです。最適な選択肢：Q4でのLlama 4 Scout 17B（~10 GB VRAM）、Gemma 3 12B（~8 GB VRAM）、Qwen3 14B（~9 GB VRAM）。すべて20–40トークン/秒で動作します。'
+    },
+    {
+      q: 'Ollama vs LM Studio vs Jan.ai：どれを使うべきか？',
+      a: 'localhost:11434のOpenAI互換APIが必要な開発者はOllama。デスクトップGUIとモデルブラウザが必要な初心者はLM Studio。プライバシー重視のチャットにはJan.ai。セットアップ時間：Ollama 2分、LM Studio 5分、Jan.ai 5分。'
+    },
+    {
+      q: '2026年ローカルLLM向けのベスト予算GPUは？',
+      a: 'ベスト予算GPU：RTX 3060 12 GB（中古~25,000円）で13Bモデルを20–30トークン/秒。RTX 4060 8 GB（新品~35,000円）で7Bを35–45トークン/秒。RTX 2070 8 GB（中古~15,000円）で7Bを15–20トークン/秒。最低推奨：8 GB VRAM。'
+    },
   ],
   zh: [
     {
@@ -519,6 +686,22 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     {
       q: '发布新版本时如何更新本地LLM模型？',
       a: 'Ollama：再次运行`ollama pull <model-name>`— 仅下载更改的层。LM Studio：打开模型浏览器，找到更新版本并下载。旧的GGUF文件不会自动删除— 从~/.ollama/models（Ollama）或~/Library/Application Support/LM Studio/models（macOS）手动删除以释放磁盘空间。Meta、Alibaba和Mistral的模型更新通常在官方发布后24–48小时内推出。'
+    },
+    {
+      q: '2026年4月最佳Ollama模型是什么？',
+      a: '2026年4月顶级Ollama模型：Llama 4 Scout 17B（12 GB VRAM最佳综合质量，`ollama pull llama4:scout`）、Qwen3 8B（最佳编程，5 GB VRAM）、Gemma 3 12B（RTX 3060上强大推理，8 GB VRAM）、DeepSeek-R2 8B（数学逻辑最强，5 GB VRAM）。'
+    },
+    {
+      q: 'RTX 3060 12 GB最适合哪款本地LLM？',
+      a: 'RTX 3060 12 GB VRAM是优秀的本地LLM GPU。最佳选择：Q4版Llama 4 Scout 17B（~10 GB VRAM）、Gemma 3 12B（~8 GB VRAM）、Qwen3 14B（~9 GB VRAM）。所有模型以20–40 token/秒运行。'
+    },
+    {
+      q: 'Ollama vs LM Studio vs Jan.ai：该用哪个？',
+      a: '需要CLI和localhost:11434 OpenAI兼容API的开发者用Ollama。需要桌面GUI和模型浏览器的初学者用LM Studio。注重隐私的聊天用Jan.ai。设置时间：Ollama 2分钟，LM Studio 5分钟，Jan.ai 5分钟。'
+    },
+    {
+      q: '2026年本地LLM最佳预算GPU是什么？',
+      a: '最佳预算GPU：RTX 3060 12 GB（二手~1800元）运行13B模型20–30 tok/s。RTX 4060 8 GB（新品~2200元）运行7B达35–45 tok/s。RTX 2070 8 GB（二手~1100元）运行7B达15–20 tok/s。AMD RX 6700 XT 12 GB（~1500元）在ROCm/Linux下与RTX 3060相当。最低推荐：8 GB VRAM。'
     },
   ],
 }
@@ -821,6 +1004,62 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
             {HUB_CTA_BUTTON[lang] ?? HUB_CTA_BUTTON['en']}
           </Link>
         </div>
+
+        {/* New in April 2026 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-text-primary mb-6">
+            {HUB_NEW_APRIL_HEADING[lang] ?? HUB_NEW_APRIL_HEADING['en']}
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="border-b border-primary/20">
+                  {(HUB_NEW_APRIL_COLS[lang] ?? HUB_NEW_APRIL_COLS['en']).map((col) => (
+                    <th key={col} className="text-left py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide">{col}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {(HUB_NEW_APRIL_MODELS[lang] ?? HUB_NEW_APRIL_MODELS['en']).map((row, i) => (
+                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/3">
+                    <td className="py-2.5 pr-4 font-medium text-text-primary">{row.name}</td>
+                    <td className="py-2.5 pr-4 font-mono text-xs text-text-secondary bg-primary/5 px-2 rounded">{row.pull}</td>
+                    <td className="py-2.5 pr-4 text-text-secondary">{row.vram}</td>
+                    <td className="py-2.5 text-text-secondary">{row.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Ollama vs LM Studio vs Jan.ai */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-text-primary mb-6">
+            {HUB_COMPARISON_HEADING[lang] ?? HUB_COMPARISON_HEADING['en']}
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="border-b border-primary/20">
+                  {(HUB_COMPARISON_COLS[lang] ?? HUB_COMPARISON_COLS['en']).map((col) => (
+                    <th key={col} className="text-left py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide">{col}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {(HUB_COMPARISON_ROWS[lang] ?? HUB_COMPARISON_ROWS['en']).map((row, i) => (
+                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/3">
+                    <td className="py-2.5 pr-4 font-medium text-text-primary">{row.feature}</td>
+                    <td className="py-2.5 pr-4 text-text-secondary">{row.ollama}</td>
+                    <td className="py-2.5 pr-4 text-text-secondary">{row.lmstudio}</td>
+                    <td className="py-2.5 text-text-secondary">{row.janai}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
 
         {/* Image 2: Local vs Cloud Comparison */}
         <figure className="mb-16">
