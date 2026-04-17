@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local LLM One-Click Installers: Ollama vs LM Studio vs Jan AI vs GPT4All | PromptQuorum</title>
+  <meta name="description" content="Install Ollama, LM Studio, Jan AI, or GPT4All with one click. Compares API ports, model counts, telemetry, and privacy for all four tools." />
+  <meta property="og:title" content="Local LLM One-Click Installers: Ollama vs LM Studio vs Jan AI vs GPT4All — PromptQuorum" />
+  <meta property="og:description" content="Install Ollama, LM Studio, Jan AI, or GPT4All with one click. Compares API ports, model counts, telemetry, and privacy for all four tools." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-one-click-installers" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f6f4f4;
+      color: #1c1b1f;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: white;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 48px;
+      text-align: center;
+      overflow: hidden;
+      animation: fadeIn 0.5s ease-in;
+      position: relative;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .slide h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1c1b1f;
+      line-height: 1.2;
+    }
+
+    .slide h2 {
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1c1b1f;
+    }
+
+    .slide p {
+      font-size: clamp(16px, 1.8vw, 20px);
+      margin-bottom: 10px;
+      color: #49454f;
+      line-height: 1.5;
+    }
+
+    .slide.title {
+      background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+    }
+
+    .slide.title .logo {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 20px;
+    }
+
+    .slide.title p {
+      font-size: clamp(16px, 1.8vw, 22px);
+      color: #6750a4;
+      font-weight: 500;
+      margin-top: 12px;
+    }
+
+    .slide.title a {
+      color: #6750a4;
+      text-decoration: none;
+      border-bottom: 2px solid #6750a4;
+      transition: all 0.2s;
+    }
+
+    .slide.title a:hover {
+      color: #7d5260;
+      border-bottom-color: #7d5260;
+    }
+
+    .slide ul, .slide ol {
+      text-align: left;
+      margin: 12px auto;
+      max-width: 640px;
+    }
+
+    .slide ul li, .slide ol li {
+      font-size: clamp(14px, 1.5vw, 18px);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .slide strong {
+      color: #1c1b1f;
+      font-weight: 700;
+    }
+
+    table {
+      margin: 12px auto;
+      border-collapse: collapse;
+      font-size: clamp(12px, 1.3vw, 15px);
+      text-align: left;
+      max-width: 90%;
+    }
+
+    th {
+      background: #6750a4;
+      color: white;
+      padding: 8px 14px;
+      font-weight: 700;
+      border: none;
+    }
+
+    td {
+      padding: 8px 14px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    tr:hover td {
+      background: #f7f2fa;
+    }
+
+    .header {
+      padding: 12px 20px;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1c1b1f;
+    }
+
+    .header-left img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .header-links a {
+      font-size: 12px;
+      color: #6750a4;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .header-links a:hover {
+      color: #7d5260;
+    }
+
+    .content-area {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      background: white;
+      border-top: 1px solid #e8e0f0;
+      flex-shrink: 0;
+    }
+
+    button {
+      background: #6750a4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #7d5260;
+    }
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 14px;
+      color: #49454f;
+      font-weight: 600;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    @media print {
+      * { margin: 0; padding: 0; }
+
+      html, body {
+        overflow: visible !important;
+        height: auto !important;
+        width: 100% !important;
+        background: white !important;
+        color: black !important;
+      }
+
+      .header, .controls { display: none !important; }
+
+      .presentation-container {
+        display: block !important;
+        height: auto !important;
+        width: 100%;
+        counter-reset: page-counter;
+      }
+
+      .content-area {
+        display: block !important;
+        overflow: visible !important;
+        height: auto !important;
+        width: 100%;
+      }
+
+      .slide {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        page-break-after: always;
+        break-after: page;
+        width: 100%;
+        height: 210mm;
+        padding: 20mm 24mm;
+        box-sizing: border-box;
+        overflow: visible !important;
+        margin: 0;
+        background: white;
+        color: #1c1b1f;
+        position: relative;
+        counter-increment: page-counter;
+      }
+
+      .slide::before {
+        content: "https://www.promptquorum.com/local-llms/local-llm-one-click-installers";
+        position: absolute;
+        bottom: 15mm;
+        left: 24mm;
+        font-size: 9pt;
+        color: #999;
+        text-decoration: none;
+      }
+
+      .slide::after {
+        content: counter(page-counter) " / 14";
+        position: absolute;
+        bottom: 15mm;
+        right: 24mm;
+        font-size: 9pt;
+        color: #999;
+        font-weight: 600;
+      }
+
+      .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+      .slide strong { font-weight: 700; }
+
+      th {
+        background: #5a3e9a !important;
+        color: white !important;
+      }
+
+      a, a:visited { color: #5a3e9a !important; }
+
+      .logo { width: 40px; height: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Local LLM One-Click Installers</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-one-click-installers">← Back to Article</a>
+        <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const ARTICLE_URL = 'https://www.promptquorum.com/local-llms/local-llm-one-click-installers';
+
+    const CONTENT = {
+      en: {
+        title: 'Local LLM One-Click Installers: Ollama vs LM Studio vs Jan AI vs GPT4All',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Local LLM One-Click Installers',
+            subtitle: 'Ollama vs LM Studio vs Jan AI vs GPT4All — install in under 5 minutes, no manual configuration.',
+            link: ARTICLE_URL
+          },
+          {
+            type: 'list',
+            h2: 'What Makes a Tool "One-Click"?',
+            items: [
+              '<strong>Bundles 3 things:</strong> inference engine (llama.cpp) + model manager + user interface — one download',
+              '<strong>Eliminates manual work:</strong> no llama.cpp compilation, no weight conversion, no config files',
+              '<strong>Shared foundation:</strong> all four use llama.cpp and the same GGUF format — switch without re-downloading models',
+              '<strong>Installs in under 5 minutes</strong> on macOS, Windows, and Linux as of April 2026'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'The 4 Tools: Who They\'re For',
+            items: [
+              '<strong>Ollama:</strong> developers — terminal-first, OpenAI-compatible API at localhost:11434, 200+ curated models',
+              '<strong>LM Studio:</strong> beginners — polished desktop GUI, Hugging Face model browser, API at localhost:1234',
+              '<strong>Jan AI:</strong> privacy-focused users — MIT open source, no telemetry, fully offline, API at localhost:1337',
+              '<strong>GPT4All:</strong> non-technical users — single installer, no terminal, built-in LocalDocs RAG, API at localhost:4891'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Ollama — For Developers',
+            columns: ['Attribute', 'Value'],
+            rows: [
+              { 'Attribute': 'Platform', 'Value': 'macOS, Windows, Linux' },
+              { 'Attribute': 'Interface', 'Value': 'Terminal + REST API' },
+              { 'Attribute': 'Model library', 'Value': '~200 curated models' },
+              { 'Attribute': 'API', 'Value': 'OpenAI-compatible at localhost:11434' },
+              { 'Attribute': 'GPU support', 'Value': 'NVIDIA CUDA, AMD ROCm, Apple Metal' },
+              { 'Attribute': 'Open source', 'Value': 'Yes (MIT licence)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'LM Studio — For Beginners',
+            columns: ['Attribute', 'Value'],
+            rows: [
+              { 'Attribute': 'Platform', 'Value': 'macOS, Windows, Linux (AppImage)' },
+              { 'Attribute': 'Interface', 'Value': 'Desktop GUI + local server' },
+              { 'Attribute': 'Model source', 'Value': 'Hugging Face (any GGUF model)' },
+              { 'Attribute': 'API', 'Value': 'OpenAI-compatible at localhost:1234' },
+              { 'Attribute': 'GPU support', 'Value': 'NVIDIA CUDA, AMD ROCm, Apple Metal' },
+              { 'Attribute': 'Open source', 'Value': 'No (free for personal use)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Jan AI — For Privacy',
+            columns: ['Attribute', 'Value'],
+            rows: [
+              { 'Attribute': 'Platform', 'Value': 'macOS, Windows, Linux' },
+              { 'Attribute': 'Interface', 'Value': 'Desktop GUI + API server' },
+              { 'Attribute': 'Model source', 'Value': 'Built-in hub + Hugging Face' },
+              { 'Attribute': 'API', 'Value': 'OpenAI-compatible at localhost:1337' },
+              { 'Attribute': 'Telemetry', 'Value': 'None — fully offline capable' },
+              { 'Attribute': 'Open source', 'Value': 'Yes (MIT) — github.com/janhq/jan' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'GPT4All — Simplest Setup',
+            columns: ['Attribute', 'Value'],
+            rows: [
+              { 'Attribute': 'Platform', 'Value': 'macOS, Windows, Linux' },
+              { 'Attribute': 'Interface', 'Value': 'Desktop GUI' },
+              { 'Attribute': 'Model source', 'Value': 'GPT4All library (~50 models)' },
+              { 'Attribute': 'API', 'Value': 'OpenAI-compatible (optional, port 4891)' },
+              { 'Attribute': 'LocalDocs', 'Value': 'Yes — built-in RAG over local files' },
+              { 'Attribute': 'Open source', 'Value': 'Yes (MIT licence)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Side-by-Side Comparison',
+            columns: ['Factor', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+            rows: [
+              { 'Factor': 'Best for', 'Ollama': 'Developers', 'LM Studio': 'Beginners', 'Jan AI': 'Privacy', 'GPT4All': 'Non-technical' },
+              { 'Factor': 'Model count', 'Ollama': '~200', 'LM Studio': 'Thousands', 'Jan AI': '~50 + HF', 'GPT4All': '~50' },
+              { 'Factor': 'API port', 'Ollama': '11434', 'LM Studio': '1234', 'Jan AI': '1337', 'GPT4All': '4891' },
+              { 'Factor': 'Telemetry', 'Ollama': 'None', 'LM Studio': 'Analytics*', 'Jan AI': 'None', 'GPT4All': 'Opt-in' },
+              { 'Factor': 'Open source', 'Ollama': 'MIT', 'LM Studio': 'No', 'Jan AI': 'MIT', 'GPT4All': 'MIT' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Privacy Rankings',
+            intro: 'All four tools run inference on-device. Data never leaves your machine during inference.',
+            items: [
+              '<strong>#1 Jan AI:</strong> MIT open source, zero telemetry, chat history in local JSON files',
+              '<strong>#2 Ollama:</strong> MIT open source, zero telemetry confirmed in source code',
+              '<strong>#3 GPT4All:</strong> MIT open source, opt-in telemetry only',
+              '<strong>#4 LM Studio:</strong> closed source, anonymous analytics on by default — disable in Settings'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Which Should You Choose?',
+            items: [
+              '<strong>Ollama</strong> — scripting, automation, API integrations: <code>ollama run llama3.2</code>',
+              '<strong>LM Studio</strong> — polished GUI, access to all Hugging Face GGUF models',
+              '<strong>Jan AI</strong> — highest privacy, no telemetry, fully offline, MIT auditable',
+              '<strong>GPT4All</strong> — zero terminal, built-in document chat (LocalDocs), easiest experience',
+              'All four coexist on the same machine using different ports — GGUF models can be shared'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes to Avoid',
+            items: [
+              'Assuming all tools have the same model library — GPT4All and Jan AI have ~50 vs Ollama\'s 200+',
+              'Running all four at once — causes port conflicts and wastes RAM on overlapping model weights',
+              'Not disabling LM Studio telemetry — Settings → Privacy → Send anonymous usage data → off',
+              'Using GPT4All for API integration — Ollama at localhost:11434 is far more reliable for apps',
+              'Expecting Jan AI extensions for production RAG — use Ollama + vector DB for production pipelines'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Install Ollama in 2 Steps',
+            items: [
+              '<strong>Install (macOS / Linux):</strong> <code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+              '<strong>Run a model:</strong> <code>ollama run llama3.2</code> — downloads 2 GB, starts in ~30 sec',
+              '<strong>Use the API:</strong> <code>http://localhost:11434/api/generate</code> — OpenAI-compatible',
+              '<strong>List models:</strong> <code>ollama list</code> | Remove: <code>ollama rm model-name</code>',
+              '<strong>Windows:</strong> Download .exe installer from ollama.com — no terminal required'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              { q: 'Can I use all four tools on the same machine?', a: 'Yes, but run only one at a time to avoid port conflicts: Ollama (11434), LM Studio (1234), Jan AI (1337), GPT4All (4891). GGUF model files can be shared between them.' },
+              { q: 'Which tool is most private?', a: 'Jan AI: fully MIT open source, no telemetry, chat stored in local JSON, fully offline. Ollama is also zero-telemetry. LM Studio sends anonymous analytics by default — disable in Settings.' },
+              { q: 'Do these tools work without an internet connection?', a: 'Yes. All four work fully offline after the initial model download. No internet is required during inference.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Run Local LLMs Today',
+            body: 'PromptQuorum covers Ollama, LM Studio, Jan AI, GPT4All, hardware requirements, model benchmarks, and advanced local LLM techniques.',
+            cta: 'Explore PromptQuorum',
+            href: 'https://www.promptquorum.com/local-llms'
+          }
+        ]
+      },
+
+      de: {
+        title: 'Lokale LLM One-Click-Installer: Ollama vs LM Studio vs Jan AI vs GPT4All',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Lokale LLM One-Click-Installer',
+            subtitle: 'Ollama vs LM Studio vs Jan AI vs GPT4All — in unter 5 Minuten installiert, keine manuelle Konfiguration.',
+            link: ARTICLE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Was macht ein Tool „One-Click"?',
+            items: [
+              '<strong>Bündelt 3 Dinge:</strong> Inference-Engine (llama.cpp) + Model-Manager + Benutzeroberfläche — ein Download',
+              '<strong>Eliminiert manuelle Arbeit:</strong> kein llama.cpp-Kompilieren, keine Gewichtskonvertierung, keine Config-Dateien',
+              '<strong>Gemeinsame Basis:</strong> alle vier nutzen llama.cpp und das GGUF-Format — ohne Re-Download wechseln',
+              '<strong>Installation in unter 5 Minuten</strong> auf macOS, Windows und Linux (Stand April 2026)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Die 4 Tools: Wer nutzt was?',
+            items: [
+              '<strong>Ollama:</strong> Entwickler — Terminal-first, OpenAI-kompatible API auf localhost:11434, 200+ Models',
+              '<strong>LM Studio:</strong> Anfänger — Desktop-GUI, Hugging-Face-Browser, API auf localhost:1234',
+              '<strong>Jan AI:</strong> Datenschutz-Fokus — MIT Open Source, keine Telemetrie, vollständig offline, API auf localhost:1337',
+              '<strong>GPT4All:</strong> Nicht-technische Nutzer — ein Installer, kein Terminal, integriertes LocalDocs-RAG, API auf localhost:4891'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Ollama — Für Entwickler',
+            columns: ['Eigenschaft', 'Wert'],
+            rows: [
+              { 'Eigenschaft': 'Plattform', 'Wert': 'macOS, Windows, Linux' },
+              { 'Eigenschaft': 'Schnittstelle', 'Wert': 'Terminal + REST API' },
+              { 'Eigenschaft': 'Model-Bibliothek', 'Wert': '~200 kuratierte Models' },
+              { 'Eigenschaft': 'API', 'Wert': 'OpenAI-kompatibel auf localhost:11434' },
+              { 'Eigenschaft': 'GPU-Support', 'Wert': 'NVIDIA CUDA, AMD ROCm, Apple Metal' },
+              { 'Eigenschaft': 'Open Source', 'Wert': 'Ja (MIT-Lizenz)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'LM Studio — Für Anfänger',
+            columns: ['Eigenschaft', 'Wert'],
+            rows: [
+              { 'Eigenschaft': 'Plattform', 'Wert': 'macOS, Windows, Linux (AppImage)' },
+              { 'Eigenschaft': 'Schnittstelle', 'Wert': 'Desktop-GUI + lokaler Server' },
+              { 'Eigenschaft': 'Model-Quelle', 'Wert': 'Hugging Face (jedes GGUF-Model)' },
+              { 'Eigenschaft': 'API', 'Wert': 'OpenAI-kompatibel auf localhost:1234' },
+              { 'Eigenschaft': 'GPU-Support', 'Wert': 'NVIDIA CUDA, AMD ROCm, Apple Metal' },
+              { 'Eigenschaft': 'Open Source', 'Wert': 'Nein (kostenlos für Privatnutzer)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Jan AI — Für Datenschutz',
+            columns: ['Eigenschaft', 'Wert'],
+            rows: [
+              { 'Eigenschaft': 'Plattform', 'Wert': 'macOS, Windows, Linux' },
+              { 'Eigenschaft': 'Schnittstelle', 'Wert': 'Desktop-GUI + API-Server' },
+              { 'Eigenschaft': 'Model-Quelle', 'Wert': 'Integrierter Hub + Hugging Face' },
+              { 'Eigenschaft': 'API', 'Wert': 'OpenAI-kompatibel auf localhost:1337' },
+              { 'Eigenschaft': 'Telemetrie', 'Wert': 'Keine — vollständig offline' },
+              { 'Eigenschaft': 'Open Source', 'Wert': 'Ja (MIT) — github.com/janhq/jan' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'GPT4All — Einfachstes Setup',
+            columns: ['Eigenschaft', 'Wert'],
+            rows: [
+              { 'Eigenschaft': 'Plattform', 'Wert': 'macOS, Windows, Linux' },
+              { 'Eigenschaft': 'Schnittstelle', 'Wert': 'Desktop-GUI' },
+              { 'Eigenschaft': 'Model-Quelle', 'Wert': 'GPT4All-Bibliothek (~50 Models)' },
+              { 'Eigenschaft': 'API', 'Wert': 'OpenAI-kompatibel optional (Port 4891)' },
+              { 'Eigenschaft': 'LocalDocs', 'Wert': 'Ja — integriertes RAG über lokale Dateien' },
+              { 'Eigenschaft': 'Open Source', 'Wert': 'Ja (MIT-Lizenz)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Direktvergleich aller vier Tools',
+            columns: ['Merkmal', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+            rows: [
+              { 'Merkmal': 'Am besten für', 'Ollama': 'Entwickler', 'LM Studio': 'Anfänger', 'Jan AI': 'Datenschutz', 'GPT4All': 'Nicht-technisch' },
+              { 'Merkmal': 'Model-Anzahl', 'Ollama': '~200', 'LM Studio': 'Tausende', 'Jan AI': '~50 + HF', 'GPT4All': '~50' },
+              { 'Merkmal': 'API-Port', 'Ollama': '11434', 'LM Studio': '1234', 'Jan AI': '1337', 'GPT4All': '4891' },
+              { 'Merkmal': 'Telemetrie', 'Ollama': 'Keine', 'LM Studio': 'Anonyme Analytik*', 'Jan AI': 'Keine', 'GPT4All': 'Opt-in' },
+              { 'Merkmal': 'Open Source', 'Ollama': 'MIT', 'LM Studio': 'Nein', 'Jan AI': 'MIT', 'GPT4All': 'MIT' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Datenschutz-Ranking',
+            intro: 'Alle vier Tools führen Inference vollständig auf dem Gerät durch. Während der Inference verlassen keine Daten Ihren Computer.',
+            items: [
+              '<strong>#1 Jan AI:</strong> MIT Open Source, keine Telemetrie, Chat-Verlauf in lokalen JSON-Dateien',
+              '<strong>#2 Ollama:</strong> MIT Open Source, keine Telemetrie im Quellcode bestätigt',
+              '<strong>#3 GPT4All:</strong> MIT Open Source, nur Opt-in-Telemetrie',
+              '<strong>#4 LM Studio:</strong> Closed Source, anonyme Analytik standardmäßig aktiv — in Einstellungen deaktivieren'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Welchen Installer sollten Sie wählen?',
+            items: [
+              '<strong>Ollama</strong> — Scripting, Automatisierung, API-Integrationen: <code>ollama run llama3.2</code>',
+              '<strong>LM Studio</strong> — polierte GUI, Zugriff auf alle Hugging-Face-GGUF-Models',
+              '<strong>Jan AI</strong> — höchster Datenschutz, keine Telemetrie, vollständig offline, MIT-überprüfbar',
+              '<strong>GPT4All</strong> — kein Terminal, eingebauter Dokument-Chat (LocalDocs), einfachste Erfahrung',
+              'Alle vier koexistieren auf derselben Maschine — GGUF-Models können geteilt werden'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Fehler vermeiden',
+            items: [
+              'Gleiche Model-Bibliothek annehmen — GPT4All und Jan AI haben ~50 vs Ollamai 200+',
+              'Alle vier gleichzeitig starten — Port-Konflikte und RAM-Verschwendung durch überlappende Model-Gewichte',
+              'LM-Studio-Telemetrie nicht deaktivieren — Einstellungen → Datenschutz → Anonyme Nutzungsdaten → aus',
+              'GPT4All für API-Integration nutzen — Ollama auf localhost:11434 ist für Anwendungen zuverlässiger',
+              'Jan-AI-Erweiterungen für Produktions-RAG erwarten — Ollama + Vektordatenbank für Produktion verwenden'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Ollama in 2 Schritten installieren',
+            items: [
+              '<strong>Installieren (macOS / Linux):</strong> <code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+              '<strong>Model ausführen:</strong> <code>ollama run llama3.2</code> — lädt ~2 GB, startet in ~30 Sek.',
+              '<strong>API verwenden:</strong> <code>http://localhost:11434/api/generate</code> — OpenAI-kompatibel',
+              '<strong>Models auflisten:</strong> <code>ollama list</code> | Entfernen: <code>ollama rm model-name</code>',
+              '<strong>Windows:</strong> .exe-Installer von ollama.com herunterladen — kein Terminal erforderlich'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufige Fragen',
+            faqs: [
+              { q: 'Kann ich alle vier Tools auf derselben Maschine nutzen?', a: 'Ja, aber nur eines gleichzeitig starten, um Port-Konflikte zu vermeiden: Ollama (11434), LM Studio (1234), Jan AI (1337), GPT4All (4891). GGUF-Model-Dateien können geteilt werden.' },
+              { q: 'Welches Tool ist am privatesten?', a: 'Jan AI: vollständig MIT Open Source, keine Telemetrie, Chat lokal in JSON, vollständig offline. Ollama ist ebenfalls telemetriefrei. LM Studio sendet standardmäßig anonyme Analytik — in Einstellungen deaktivieren.' },
+              { q: 'Funktionieren diese Tools ohne Internetverbindung?', a: 'Ja. Alle vier funktionieren nach dem initialen Model-Download vollständig offline. Während der Inference ist keine Internetverbindung erforderlich.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Lokale LLMs starten',
+            body: 'PromptQuorum deckt Ollama, LM Studio, Jan AI, GPT4All, Hardware-Anforderungen, Model-Benchmarks und erweiterte lokale LLM-Techniken ab.',
+            cta: 'PromptQuorum erkunden',
+            href: 'https://www.promptquorum.com/local-llms?lang=de'
+          }
+        ]
+      },
+
+      fr: {
+        title: 'Installateurs LLM locaux One-Click : Ollama vs LM Studio vs Jan AI vs GPT4All',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Installateurs LLM locaux One-Click',
+            subtitle: 'Ollama vs LM Studio vs Jan AI vs GPT4All — installation en moins de 5 minutes, aucune configuration manuelle.',
+            link: ARTICLE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Qu\'est-ce qui rend un outil « One-Click » ?',
+            items: [
+              '<strong>Regroupe 3 choses :</strong> moteur d\'inférence (llama.cpp) + gestionnaire de modèles + interface — un seul téléchargement',
+              '<strong>Élimine le travail manuel :</strong> pas de compilation llama.cpp, pas de conversion de poids, pas de fichiers de configuration',
+              '<strong>Base partagée :</strong> tous quatre utilisent llama.cpp et le format GGUF — basculer sans re-télécharger',
+              '<strong>Installation en moins de 5 minutes</strong> sur macOS, Windows et Linux (avril 2026)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Les 4 outils : qui utilise quoi ?',
+            items: [
+              '<strong>Ollama :</strong> développeurs — terminal-first, API OpenAI-compatible sur localhost:11434, 200+ modèles',
+              '<strong>LM Studio :</strong> débutants — GUI de bureau, navigateur Hugging Face, API sur localhost:1234',
+              '<strong>Jan AI :</strong> confidentialité — MIT open source, aucune télémétrie, entièrement hors ligne, API sur localhost:1337',
+              '<strong>GPT4All :</strong> non-techniciens — un seul installateur, pas de terminal, LocalDocs RAG intégré, API sur localhost:4891'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Ollama — Pour les développeurs',
+            columns: ['Attribut', 'Valeur'],
+            rows: [
+              { 'Attribut': 'Plate-forme', 'Valeur': 'macOS, Windows, Linux' },
+              { 'Attribut': 'Interface', 'Valeur': 'Terminal + API REST' },
+              { 'Attribut': 'Bibliothèque', 'Valeur': '~200 modèles curés' },
+              { 'Attribut': 'API', 'Valeur': 'OpenAI-compatible sur localhost:11434' },
+              { 'Attribut': 'GPU', 'Valeur': 'NVIDIA CUDA, AMD ROCm, Apple Metal' },
+              { 'Attribut': 'Open source', 'Valeur': 'Oui (licence MIT)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'LM Studio — Pour les débutants',
+            columns: ['Attribut', 'Valeur'],
+            rows: [
+              { 'Attribut': 'Plate-forme', 'Valeur': 'macOS, Windows, Linux (AppImage)' },
+              { 'Attribut': 'Interface', 'Valeur': 'GUI de bureau + serveur local' },
+              { 'Attribut': 'Source modèles', 'Valeur': 'Hugging Face (tout GGUF)' },
+              { 'Attribut': 'API', 'Valeur': 'OpenAI-compatible sur localhost:1234' },
+              { 'Attribut': 'GPU', 'Valeur': 'NVIDIA CUDA, AMD ROCm, Apple Metal' },
+              { 'Attribut': 'Open source', 'Valeur': 'Non (gratuit pour usage personnel)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Jan AI — Pour la confidentialité',
+            columns: ['Attribut', 'Valeur'],
+            rows: [
+              { 'Attribut': 'Plate-forme', 'Valeur': 'macOS, Windows, Linux' },
+              { 'Attribut': 'Interface', 'Valeur': 'GUI de bureau + serveur API' },
+              { 'Attribut': 'Source modèles', 'Valeur': 'Hub intégré + Hugging Face' },
+              { 'Attribut': 'API', 'Valeur': 'OpenAI-compatible sur localhost:1337' },
+              { 'Attribut': 'Télémétrie', 'Valeur': 'Aucune — entièrement hors ligne' },
+              { 'Attribut': 'Open source', 'Valeur': 'Oui (MIT) — github.com/janhq/jan' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'GPT4All — Configuration la plus simple',
+            columns: ['Attribut', 'Valeur'],
+            rows: [
+              { 'Attribut': 'Plate-forme', 'Valeur': 'macOS, Windows, Linux' },
+              { 'Attribut': 'Interface', 'Valeur': 'GUI de bureau' },
+              { 'Attribut': 'Source modèles', 'Valeur': 'Bibliothèque GPT4All (~50 modèles)' },
+              { 'Attribut': 'API', 'Valeur': 'OpenAI-compatible optionnel (port 4891)' },
+              { 'Attribut': 'LocalDocs', 'Valeur': 'Oui — RAG intégré sur fichiers locaux' },
+              { 'Attribut': 'Open source', 'Valeur': 'Oui (licence MIT)' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Comparaison complète',
+            columns: ['Facteur', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+            rows: [
+              { 'Facteur': 'Meilleur pour', 'Ollama': 'Développeurs', 'LM Studio': 'Débutants', 'Jan AI': 'Confidentialité', 'GPT4All': 'Non-techniciens' },
+              { 'Facteur': 'Nb modèles', 'Ollama': '~200', 'LM Studio': 'Milliers', 'Jan AI': '~50 + HF', 'GPT4All': '~50' },
+              { 'Facteur': 'Port API', 'Ollama': '11434', 'LM Studio': '1234', 'Jan AI': '1337', 'GPT4All': '4891' },
+              { 'Facteur': 'Télémétrie', 'Ollama': 'Aucune', 'LM Studio': 'Analytique*', 'Jan AI': 'Aucune', 'GPT4All': 'Opt-in' },
+              { 'Facteur': 'Open source', 'Ollama': 'MIT', 'LM Studio': 'Non', 'Jan AI': 'MIT', 'GPT4All': 'MIT' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Classement confidentialité',
+            intro: 'Les quatre outils effectuent l\'inférence entièrement sur l\'appareil. Aucune donnée ne quitte votre machine pendant l\'inférence.',
+            items: [
+              '<strong>#1 Jan AI :</strong> MIT open source, télémétrie zéro, historique de chat en JSON local',
+              '<strong>#2 Ollama :</strong> MIT open source, zéro télémétrie confirmé dans le code source',
+              '<strong>#3 GPT4All :</strong> MIT open source, télémétrie opt-in uniquement',
+              '<strong>#4 LM Studio :</strong> source fermée, analyse anonyme activée par défaut — désactiver dans Paramètres'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Quel installateur choisir ?',
+            items: [
+              '<strong>Ollama</strong> — scripting, automatisation, intégrations API : <code>ollama run llama3.2</code>',
+              '<strong>LM Studio</strong> — GUI soignée, accès à tous les modèles GGUF Hugging Face',
+              '<strong>Jan AI</strong> — confidentialité maximale, zéro télémétrie, hors ligne, MIT auditable',
+              '<strong>GPT4All</strong> — zéro terminal, chat de documents intégré (LocalDocs), expérience la plus simple',
+              'Les quatre coexistent sur la même machine — les modèles GGUF peuvent être partagés'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs courantes à éviter',
+            items: [
+              'Supposer que tous les outils ont la même bibliothèque — GPT4All et Jan AI ~50 vs 200+ pour Ollama',
+              'Démarrer les quatre simultanément — conflits de ports et gaspillage de RAM',
+              'Ne pas désactiver la télémétrie LM Studio — Paramètres → Confidentialité → Données d\'utilisation → off',
+              'Utiliser GPT4All pour intégration API — Ollama sur localhost:11434 est bien plus fiable',
+              'Attendre que les extensions Jan AI soient prêtes pour la production — utiliser Ollama + base vectorielle'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Installer Ollama en 2 étapes',
+            items: [
+              '<strong>Installer (macOS / Linux) :</strong> <code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+              '<strong>Lancer un modèle :</strong> <code>ollama run llama3.2</code> — télécharge ~2 Go, démarre en ~30 s',
+              '<strong>Utiliser l\'API :</strong> <code>http://localhost:11434/api/generate</code> — OpenAI-compatible',
+              '<strong>Lister les modèles :</strong> <code>ollama list</code> | Supprimer : <code>ollama rm model-name</code>',
+              '<strong>Windows :</strong> Télécharger l\'installateur .exe depuis ollama.com — pas de terminal requis'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes',
+            faqs: [
+              { q: 'Puis-je utiliser les quatre outils sur la même machine ?', a: 'Oui, mais démarrez-en un seul à la fois : Ollama (11434), LM Studio (1234), Jan AI (1337), GPT4All (4891). Les fichiers GGUF peuvent être partagés.' },
+              { q: 'Quel outil est le plus confidentiel ?', a: 'Jan AI : MIT open source, aucune télémétrie, historique en JSON local, entièrement hors ligne. Ollama est aussi zéro-télémétrie. LM Studio envoie des analyses anonymes par défaut — à désactiver.' },
+              { q: 'Ces outils fonctionnent-ils sans connexion Internet ?', a: 'Oui. Les quatre fonctionnent entièrement hors ligne après le téléchargement initial du modèle. Aucune connexion Internet n\'est requise pendant l\'inférence.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Démarrer avec les LLMs locaux',
+            body: 'PromptQuorum couvre Ollama, LM Studio, Jan AI, GPT4All, les exigences matérielles, les benchmarks de modèles et les techniques avancées.',
+            cta: 'Explorer PromptQuorum',
+            href: 'https://www.promptquorum.com/local-llms?lang=fr'
+          }
+        ]
+      },
+
+      ja: {
+        title: 'ローカルLLM One-Clickインストーラー比較：Ollama vs LM Studio vs Jan AI vs GPT4All',
+        slides: [
+          {
+            type: 'title',
+            h1: 'ローカルLLM One-Clickインストーラー',
+            subtitle: 'Ollama vs LM Studio vs Jan AI vs GPT4All — 5分以内にインストール、手動設定不要。',
+            link: ARTICLE_URL
+          },
+          {
+            type: 'list',
+            h2: '「One-Click」ツールとは？',
+            items: [
+              '<strong>3つをバンドル：</strong>推論エンジン（llama.cpp）＋モデルマネージャー＋UI — 1回のダウンロード',
+              '<strong>手動作業を排除：</strong>llama.cppのコンパイル不要、重みの変換不要、設定ファイル不要',
+              '<strong>共通基盤：</strong>4つすべてがllama.cppとGGUFフォーマットを使用 — 再ダウンロードなしで切り替え可能',
+              '<strong>5分以内にインストール</strong>（macOS、Windows、Linux、2026年4月時点）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '4つのツール：誰に向いているか',
+            items: [
+              '<strong>Ollama：</strong>開発者向け — ターミナルファースト、localhost:11434でOpenAI互換API、200以上のモデル',
+              '<strong>LM Studio：</strong>初心者向け — デスクトップGUI、Hugging Faceブラウザ、localhost:1234でAPI',
+              '<strong>Jan AI：</strong>プライバシー重視 — MIT OSS、テレメトリなし、完全オフライン、localhost:1337でAPI',
+              '<strong>GPT4All：</strong>非技術者向け — シングルインストーラー、ターミナル不要、LocalDocs RAG内蔵、localhost:4891でAPI'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Ollama — 開発者向け',
+            columns: ['属性', '値'],
+            rows: [
+              { '属性': 'プラットフォーム', '値': 'macOS、Windows、Linux' },
+              { '属性': 'インターフェース', '値': 'ターミナル + REST API' },
+              { '属性': 'モデルライブラリ', '値': '~200のキュレーションモデル' },
+              { '属性': 'API', '値': 'localhost:11434でOpenAI互換' },
+              { '属性': 'GPU対応', '値': 'NVIDIA CUDA、AMD ROCm、Apple Metal' },
+              { '属性': 'オープンソース', '値': 'はい（MITライセンス）' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'LM Studio — 初心者向け',
+            columns: ['属性', '値'],
+            rows: [
+              { '属性': 'プラットフォーム', '値': 'macOS、Windows、Linux（AppImage）' },
+              { '属性': 'インターフェース', '値': 'デスクトップGUI + ローカルサーバー' },
+              { '属性': 'モデルソース', '値': 'Hugging Face（任意のGGUF）' },
+              { '属性': 'API', '値': 'localhost:1234でOpenAI互換' },
+              { '属性': 'GPU対応', '値': 'NVIDIA CUDA、AMD ROCm、Apple Metal' },
+              { '属性': 'オープンソース', '値': 'いいえ（個人利用は無料）' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Jan AI — プライバシー重視',
+            columns: ['属性', '値'],
+            rows: [
+              { '属性': 'プラットフォーム', '値': 'macOS、Windows、Linux' },
+              { '属性': 'インターフェース', '値': 'デスクトップGUI + APIサーバー' },
+              { '属性': 'モデルソース', '値': '内蔵ハブ + Hugging Face' },
+              { '属性': 'API', '値': 'localhost:1337でOpenAI互換' },
+              { '属性': 'テレメトリ', '値': 'なし — 完全オフライン対応' },
+              { '属性': 'オープンソース', '値': 'はい（MIT）— github.com/janhq/jan' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'GPT4All — 最もシンプルなセットアップ',
+            columns: ['属性', '値'],
+            rows: [
+              { '属性': 'プラットフォーム', '値': 'macOS、Windows、Linux' },
+              { '属性': 'インターフェース', '値': 'デスクトップGUI' },
+              { '属性': 'モデルソース', '値': 'GPT4Allライブラリ（~50モデル）' },
+              { '属性': 'API', '値': 'OpenAI互換（任意、ポート4891）' },
+              { '属性': 'LocalDocs', '値': 'はい — ローカルファイル対応内蔵RAG' },
+              { '属性': 'オープンソース', '値': 'はい（MITライセンス）' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: '4ツールの横断比較',
+            columns: ['要素', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+            rows: [
+              { '要素': '最適用途', 'Ollama': '開発者', 'LM Studio': '初心者', 'Jan AI': 'プライバシー', 'GPT4All': '非技術者' },
+              { '要素': 'モデル数', 'Ollama': '~200', 'LM Studio': '数千', 'Jan AI': '~50+HF', 'GPT4All': '~50' },
+              { '要素': 'APIポート', 'Ollama': '11434', 'LM Studio': '1234', 'Jan AI': '1337', 'GPT4All': '4891' },
+              { '要素': 'テレメトリ', 'Ollama': 'なし', 'LM Studio': '匿名収集*', 'Jan AI': 'なし', 'GPT4All': 'オプトイン' },
+              { '要素': 'OSS', 'Ollama': 'MIT', 'LM Studio': 'なし', 'Jan AI': 'MIT', 'GPT4All': 'MIT' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'プライバシーランキング',
+            intro: '4つのツールすべてがデバイス上で推論を実行します。推論中にデータが外部サーバーに送信されることはありません。',
+            items: [
+              '<strong>#1 Jan AI：</strong>MIT OSS、テレメトリゼロ、チャット履歴はローカルJSONファイルに保存',
+              '<strong>#2 Ollama：</strong>MIT OSS、ソースコードでテレメトリなしを確認',
+              '<strong>#3 GPT4All：</strong>MIT OSS、オプトインのテレメトリのみ',
+              '<strong>#4 LM Studio：</strong>クローズドソース、匿名アナリティクスがデフォルトで有効 — 設定で無効化'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'どのインストーラーを選ぶべきか？',
+            items: [
+              '<strong>Ollama</strong> — スクリプト、自動化、API連携：<code>ollama run llama3.2</code>',
+              '<strong>LM Studio</strong> — 洗練されたGUI、Hugging FaceのすべてのGGUFモデルにアクセス',
+              '<strong>Jan AI</strong> — 最高のプライバシー、テレメトリなし、完全オフライン、MIT監査可能',
+              '<strong>GPT4All</strong> — ターミナル不要、内蔵ドキュメントチャット（LocalDocs）、最もシンプルな体験',
+              '4つすべてが同じマシンで共存可能 — GGUFモデルは共有可能'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '避けるべきよくある間違い',
+            items: [
+              '全ツールが同じモデルライブラリを持つと思い込む — GPT4AllとJan AIは~50種 vs Ollamaの200以上',
+              '4つすべてを同時起動 — ポート競合とRAMの無駄使い',
+              'LM Studioのテレメトリを無効化しない — 設定→プライバシー→匿名データ送信→オフ',
+              'API統合にGPT4Allを使用 — アプリにはlocalhost:11434のOllamaが圧倒的に信頼性が高い',
+              'Jan AIの拡張機能を本番RAGに期待 — 本番環境はOllama＋ベクターDBで構築'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Ollamaを2ステップでインストール',
+            items: [
+              '<strong>インストール（macOS / Linux）：</strong><code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+              '<strong>モデルを実行：</strong><code>ollama run llama3.2</code> — ~2GBダウンロード、~30秒で起動',
+              '<strong>APIを使用：</strong><code>http://localhost:11434/api/generate</code> — OpenAI互換',
+              '<strong>モデル一覧：</strong><code>ollama list</code> | 削除：<code>ollama rm model-name</code>',
+              '<strong>Windows：</strong>ollama.comから.exeインストーラーをダウンロード — ターミナル不要'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              { q: '4つのツールを同じマシンで使えますか？', a: 'はい、ただしポート競合を避けるため1つずつ起動してください：Ollama（11434）、LM Studio（1234）、Jan AI（1337）、GPT4All（4891）。GGUFモデルファイルは共有できます。' },
+              { q: '最もプライベートなツールはどれですか？', a: 'Jan AI：完全MIT OSS、テレメトリゼロ、チャットはローカルJSONに保存、完全オフライン。OllamaもテレメトリゼロでOKです。LM Studioはデフォルトで匿名アナリティクスを送信 — 設定で無効化が必要。' },
+              { q: 'インターネット接続なしで使えますか？', a: 'はい。4つすべてが初回モデルダウンロード後は完全オフラインで動作します。推論中にインターネット接続は不要です。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'ローカルLLMを今すぐ始める',
+            body: 'PromptQuorumではOllama、LM Studio、Jan AI、GPT4All、ハードウェア要件、モデルベンチマーク、高度なローカルLLM技術を網羅しています。',
+            cta: 'PromptQuorumを探索',
+            href: 'https://www.promptquorum.com/local-llms?lang=ja'
+          }
+        ]
+      },
+
+      zh: {
+        title: '本地LLM一键安装器对比：Ollama vs LM Studio vs Jan AI vs GPT4All',
+        slides: [
+          {
+            type: 'title',
+            h1: '本地LLM一键安装器',
+            subtitle: 'Ollama vs LM Studio vs Jan AI vs GPT4All — 5分钟内安装完成，无需手动配置。',
+            link: ARTICLE_URL
+          },
+          {
+            type: 'list',
+            h2: '什么是「一键」工具？',
+            items: [
+              '<strong>捆绑3件事：</strong>推理引擎（llama.cpp）+ 模型管理器 + 用户界面 — 一次下载',
+              '<strong>消除手动工作：</strong>无需编译llama.cpp、无需转换权重、无需配置文件',
+              '<strong>共同基础：</strong>四个工具都使用llama.cpp和GGUF格式 — 无需重新下载即可切换',
+              '<strong>5分钟内安装</strong>（macOS、Windows、Linux，截至2026年4月）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '4种工具：各适合谁？',
+            items: [
+              '<strong>Ollama：</strong>开发者 — 终端优先，localhost:11434提供OpenAI兼容API，200+模型',
+              '<strong>LM Studio：</strong>初学者 — 桌面GUI，Hugging Face浏览器，localhost:1234提供API',
+              '<strong>Jan AI：</strong>隐私优先 — MIT开源，无遥测，完全离线，localhost:1337提供API',
+              '<strong>GPT4All：</strong>非技术用户 — 单一安装包，无需终端，内置LocalDocs RAG，localhost:4891提供API'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Ollama — 面向开发者',
+            columns: ['属性', '值'],
+            rows: [
+              { '属性': '平台', '值': 'macOS、Windows、Linux' },
+              { '属性': '界面', '值': '终端 + REST API' },
+              { '属性': '模型库', '值': '~200个精选模型' },
+              { '属性': 'API', '值': 'localhost:11434 OpenAI兼容' },
+              { '属性': 'GPU支持', '值': 'NVIDIA CUDA、AMD ROCm、Apple Metal' },
+              { '属性': '开源', '值': '是（MIT许可证）' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'LM Studio — 面向初学者',
+            columns: ['属性', '值'],
+            rows: [
+              { '属性': '平台', '值': 'macOS、Windows、Linux（AppImage）' },
+              { '属性': '界面', '值': '桌面GUI + 本地服务器' },
+              { '属性': '模型来源', '值': 'Hugging Face（任意GGUF模型）' },
+              { '属性': 'API', '值': 'localhost:1234 OpenAI兼容' },
+              { '属性': 'GPU支持', '值': 'NVIDIA CUDA、AMD ROCm、Apple Metal' },
+              { '属性': '开源', '值': '否（个人使用免费）' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Jan AI — 面向隐私保护',
+            columns: ['属性', '值'],
+            rows: [
+              { '属性': '平台', '值': 'macOS、Windows、Linux' },
+              { '属性': '界面', '值': '桌面GUI + API服务器' },
+              { '属性': '模型来源', '值': '内置模型库 + Hugging Face' },
+              { '属性': 'API', '值': 'localhost:1337 OpenAI兼容' },
+              { '属性': '遥测', '值': '无 — 完全离线可用' },
+              { '属性': '开源', '值': '是（MIT）— github.com/janhq/jan' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'GPT4All — 最简单的安装',
+            columns: ['属性', '值'],
+            rows: [
+              { '属性': '平台', '值': 'macOS、Windows、Linux' },
+              { '属性': '界面', '值': '桌面GUI' },
+              { '属性': '模型来源', '值': 'GPT4All模型库（~50个模型）' },
+              { '属性': 'API', '值': 'OpenAI兼容（可选，端口4891）' },
+              { '属性': 'LocalDocs', '值': '是 — 内置本地文件RAG' },
+              { '属性': '开源', '值': '是（MIT许可证）' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: '四工具全面对比',
+            columns: ['因素', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+            rows: [
+              { '因素': '最适合', 'Ollama': '开发者', 'LM Studio': '初学者', 'Jan AI': '隐私用户', 'GPT4All': '非技术用户' },
+              { '因素': '模型数量', 'Ollama': '~200', 'LM Studio': '数千', 'Jan AI': '~50+HF', 'GPT4All': '~50' },
+              { '因素': 'API端口', 'Ollama': '11434', 'LM Studio': '1234', 'Jan AI': '1337', 'GPT4All': '4891' },
+              { '因素': '遥测', 'Ollama': '无', 'LM Studio': '匿名分析*', 'Jan AI': '无', 'GPT4All': '可选' },
+              { '因素': '开源', 'Ollama': 'MIT', 'LM Studio': '否', 'Jan AI': 'MIT', 'GPT4All': 'MIT' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '隐私排名',
+            intro: '四个工具都在设备上本地运行推理。推理过程中数据不会离开您的机器。',
+            items: [
+              '<strong>#1 Jan AI：</strong>MIT开源，零遥测，聊天记录存储在本地JSON文件中',
+              '<strong>#2 Ollama：</strong>MIT开源，源代码确认零遥测',
+              '<strong>#3 GPT4All：</strong>MIT开源，仅可选遥测',
+              '<strong>#4 LM Studio：</strong>闭源，默认启用匿名分析 — 在设置中关闭'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '应该选择哪个安装器？',
+            items: [
+              '<strong>Ollama</strong> — 脚本、自动化、API集成：<code>ollama run llama3.2</code>',
+              '<strong>LM Studio</strong> — 精致GUI，访问所有Hugging Face GGUF模型',
+              '<strong>Jan AI</strong> — 最高隐私，零遥测，完全离线，MIT可审计',
+              '<strong>GPT4All</strong> — 零终端，内置文档聊天（LocalDocs），最简单体验',
+              '四个工具可在同一台机器上共存 — GGUF模型文件可共享'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '常见错误及避免方法',
+            items: [
+              '以为所有工具有相同模型库 — GPT4All和Jan AI约50个 vs Ollama的200以上',
+              '同时运行全部四个工具 — 导致端口冲突和RAM浪费',
+              '不关闭LM Studio遥测 — 设置→隐私→发送匿名使用数据→关闭',
+              '使用GPT4All进行API集成 — localhost:11434的Ollama更可靠',
+              '期望Jan AI扩展用于生产RAG — 生产环境请使用Ollama + 向量数据库'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '2步安装Ollama',
+            items: [
+              '<strong>安装（macOS / Linux）：</strong><code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+              '<strong>运行模型：</strong><code>ollama run llama3.2</code> — 下载~2GB，~30秒启动',
+              '<strong>使用API：</strong><code>http://localhost:11434/api/generate</code> — OpenAI兼容',
+              '<strong>列出模型：</strong><code>ollama list</code> | 删除：<code>ollama rm model-name</code>',
+              '<strong>Windows：</strong>从ollama.com下载.exe安装程序 — 无需终端'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题解答',
+            faqs: [
+              { q: '可以在同一台机器上使用全部四个工具吗？', a: '可以，但每次只运行一个以避免端口冲突：Ollama（11434）、LM Studio（1234）、Jan AI（1337）、GPT4All（4891）。GGUF模型文件可以共享。' },
+              { q: '哪个工具最注重隐私？', a: 'Jan AI：完全MIT开源，零遥测，聊天存储在本地JSON，完全离线。Ollama也是零遥测。LM Studio默认发送匿名分析 — 需要在设置中关闭。' },
+              { q: '这些工具不需要网络连接就能使用吗？', a: '是的。四个工具在初始模型下载后都可以完全离线工作。推理期间不需要网络连接。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '立即开始使用本地LLM',
+            body: 'PromptQuorum涵盖Ollama、LM Studio、Jan AI、GPT4All、硬件要求、模型基准测试和高级本地LLM技术。',
+            cta: '探索PromptQuorum',
+            href: 'https://www.promptquorum.com/local-llms?lang=zh'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide, langCode) {
+      let html = '';
+      const articleUrl = ARTICLE_URL + '?lang=' + langCode;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 32px; font-size: 16px; color: #79747e;">
+              <a href="${slide.link}">${slide.link.replace('https://www.promptquorum.com', 'promptquorum.com')}</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p style="margin-bottom: 8px;">${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li style="margin-bottom: 8px;">${item}</li>`; });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2 style="margin-bottom: 12px;">${slide.h2}</h2>`;
+          html += '<table style="font-size: 1em;"><tr>';
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 32px; font-size: 1.4em;">${slide.line1}</p>
+            <p style="font-size: 1.4em;">${slide.line2}</p>
+            <p style="margin-top: 32px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ol style="font-size: 1.05em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li style="margin-bottom: 8px;">${item}</li>`; });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2 style="margin-bottom: 16px;">${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 16px; text-align: left; max-width: 700px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="max-width: 600px; margin-top: 12px;">${slide.body}</p>
+            <a href="${slide.href}" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: 600;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}" data-lang="${langCode}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = ARTICLE_URL + '?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide, lang);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', () => { window.print(); });
+    }
+
+    showSlide(0);
+  </script>
+</body>
+</html>
