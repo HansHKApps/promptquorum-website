@@ -4611,6 +4611,8 @@ print(response.choices[0].message.content)`,
         ],
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
+      gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
+      gammaDescription: 'Interactive 14-slide deck: 5 best beginner local LLM models for 2026 — Llama 3.2 3B (2.5 GB RAM), Phi-3.5 Mini (3 GB), Gemma 2 2B (1.7 GB), Mistral 7B (4.5 GB), Qwen2.5 7B (4.7 GB). Covers model comparison table, RAM decision guide, regional compliance (EU/Japan/China), common mistakes, and first-run steps. Download the PDF as a beginner local LLM reference card.',
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
