@@ -469,7 +469,8 @@ All 4 JSON-LD blocks MUST be present in `<head>` before `npm run build`. Missing
 #### **All Articles: Related Reading**
 
 - [ ] **Related Reading section present:** (Rule 2c)
-  - ✓ 3–5 internal links with descriptions
+  - ✓ **6 internal links** with descriptions (minimum; target when body links are sparse)
+  - Combined total of body + Related Reading links must reach 5–10 (Rule 2c)
   - Format: `[Title](/path) — Description`
 - [ ] **All links valid:** (Rule 2c)
   - Test: Click each link; verify it's live (not "Coming Soon")
@@ -876,4 +877,39 @@ _Audit date: April 16, 2026. Article upgraded from ~62% to 91% compliance._
 
 ---
 
-**Last updated:** April 16, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
+### `local-llm-one-click-installers`
+
+_Audit date: April 17, 2026. External audit scored 82/100 (SEO 87, GEO 88, AEO 70). All HIGH issues were fixed in commit `e50fccd6` during GEO reaudit; article upgraded from ~52% to ~91% compliance. External audit ran against a cached pre-deploy version — live page is compliant._
+
+**Fixed issues (HIGH priority):**
+- [x] 🔴 **No FAQ section** — fixed: `faqSection` with 11 Q&As added to EN block; rendered via `section.faqs` loop in component
+- [x] 🔴 **No TechArticle + ItemList + FAQPage schema** — fixed: `schema` (TechArticle), `faqSchema` (FAQPage, 11 Q&As), `itemListSchema` (ItemList, 4 tools) all added to EN block; injected by `[slug]/page.tsx` lines 281–287
+- [x] 🔴 **All EN section `id:` fields missing** — fixed: all 9 sections (`tldr`, `whatIsOneClick`, `ollama`, `ollamaInstall`, `lmStudio`, `janAi`, `gpt4all`, `fullComparison`, `whichToChoose`) now have explicit `id:` values
+- [x] 🔴 **No bold H2 openers** — fixed: all 5 content sections start with bold answer statement
+- [x] 🔴 **Sources missing URLs** — fixed: 4 sources with full GitHub/official URLs
+
+**Fixed issues (MEDIUM priority):**
+- [x] 🟡 **`metaDescription` 148 chars** — fixed: expanded to 155 chars
+- [x] 🟡 **Related Reading only 3 links** — fixed: expanded to 6 links (VS Code + security checklist added)
+- [x] 🟡 **`dateModified` missing** — fixed: `dateModified: '2026-04-17'` added at top level
+- [x] 🟡 **`commonMistakes` only 3 items** — fixed: expanded to 5 (added port conflicts + LM Studio telemetry items)
+- [x] 🟡 **No `regionalContext` section** — fixed: added EU/GDPR privacy ranking, Japan/APPI, China/数据安全法
+
+**Fixed issues (LOW priority):**
+- [x] 🟢 **`<time datetime>` + Speakable** — confirmed present: component line 411 renders `<time dateTime>`, fallback TechArticle schema includes `speakable` with `.article-intro` cssSelector; custom `schema` field also includes it
+
+**Additional improvements (beyond audit scope):**
+- [x] **Gamma presentation** — 14-slide, 5-language deck added (`/presentations/local-llm-one-click-installers-static.html`); commit `c9294715`
+- [x] **4 SVG infographics** — tool-overview, comparison-table, privacy-ranking, ollama-install-steps × 5 languages (20 files); commit `92bd7253`
+
+**Remaining gaps (deferred, require component work):**
+- [ ] 🟢 **Lead Answer Block** — component doesn't support yet
+- [ ] 🟢 **Callout boxes** — component missing `callout` field type renderer
+- [ ] 🟢 **LLM snippet blocks** — no "In One Sentence" / "In Plain Terms" rendering support
+
+**Build verification:** ✓ `npm run build` passed (0 errors)  
+**Estimated compliance score:** ~91% (up from ~52%)
+
+---
+
+**Last updated:** April 17, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
