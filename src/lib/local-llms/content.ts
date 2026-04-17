@@ -51,6 +51,7 @@ export interface LLMArticle {
   heroComponent?: string
   gammaEmbedUrl?: string
   gammaDescription?: string
+  twitterDescription?: string
 }
 
 // ─── Content registry ────────────────────────────────────────────────────────
@@ -1449,6 +1450,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Ist Ollama kostenlos?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, Ollama ist kostenlos und Open-Source unter der MIT-Lizenz. Es gibt keine Nutzungsbeschränkungen, keine erforderlichen API-Schlüssel, und die gesamte Inference läuft lokal auf Ihrem Computer.' } },
           { '@type': 'Question', name: 'Funktioniert Ollama unter Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ollama hat seit 2024 ein natives Windows-Installationsprogramm. Laden Sie es von ollama.com herunter. Es unterstützt NVIDIA-GPUs über CUDA und AMD-GPUs über ROCm unter Windows.' } },
@@ -1763,6 +1765,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Ollama est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, Ollama est gratuit et open-source sous licence MIT. Il n\'y a pas de limites d\'utilisation, pas de clés API requises, et toute l\'inférence s\'exécute localement sur votre machine.' } },
           { '@type': 'Question', name: 'Ollama fonctionne-t-il sur Windows ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Ollama dispose d\'un programme d\'installation Windows natif depuis 2024. Téléchargez-le depuis ollama.com. Il supporte les GPU NVIDIA via CUDA et les GPU AMD via ROCm sur Windows.' } },
@@ -2077,6 +2080,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: 'Ollama は無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、Ollama は MIT ライセンス下で無料かつオープンソース。使用制限、API キー不要、すべての推論はマシンでローカルに実行。' } },
           { '@type': 'Question', name: 'Ollama は Windows で動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Ollama は 2024 年以降ネイティブ Windows インストーラーを持つ。ollama.com からダウンロード。Windows で NVIDIA GPU を CUDA 経由で、AMD GPU を ROCm 経由でサポート。' } },
@@ -2391,6 +2395,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: 'Ollama 是免费的吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，Ollama 在 MIT 许可证下免费且开源。没有使用限制、不需要 API 密钥，所有推理都在您的机器上本地运行。' } },
           { '@type': 'Question', name: 'Ollama 可以在 Windows 上使用吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Ollama 自 2024 年以来有原生 Windows 安装程序。从 ollama.com 下载。在 Windows 上通过 CUDA 支持 NVIDIA GPU，通过 ROCm 支持 AMD GPU。' } },
@@ -2966,6 +2971,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         mainEntity: [
           {
             '@type': 'Question',
@@ -3323,6 +3329,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'LM Studio affiche « Not enough memory to load model »', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle nécessite plus de RAM que disponible. Fermez autres applications pour libérer de la mémoire, ou sélectionnez une quantification plus petite (Q3_K_S au lieu de Q4_K_M). Règle générale : multipliez la taille du fichier par 1,2 pour estimer la RAM requise. Un fichier de 4,5 GB nécessite ~5,4 GB de RAM libres.' } },
           { '@type': 'Question', name: 'Le modèle génère très lentement (moins de 5 tokens/seconde)', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle s\'exécute entièrement sur le CPU. Vérifiez Couches GPU dans le panneau droit — si cela affiche 0, votre GPU n\'est pas utilisé. Sur macOS, LM Studio active Metal (GPU) automatiquement pour Apple Silicon. Sur Windows/Linux avec NVIDIA, assurez-vous que votre pilote est à jour et augmentez Couches GPU au maximum.' } },
@@ -4872,6 +4879,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         mainEntity: [
           { '@type': 'Question', name: 'Is Ollama free to use?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Ollama is free and MIT-licensed open source with no usage limits or subscription fees. Models are downloaded for free from ollama.com/library.' } },
           { '@type': 'Question', name: 'What is the difference between Ollama and LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama is terminal-first with a REST API at localhost:11434 and no GUI. LM Studio is a desktop app with built-in chat, model browser, and local server. Both expose OpenAI-compatible APIs.' } },
@@ -4901,9 +4909,10 @@ print(response.choices[0].message.content)`,
     de: {
       theme: 'Getting Started',
       title: 'Lokale LLM One-Click-Installer: Ollama vs LM Studio vs Jan AI vs GPT4All im Vergleich',
-      seoTitle: 'Beste One-Click LLM-Installer 2026 im Test',
+      seoTitle: 'LM Studio vs Ollama vs GPT4All vs Jan.ai: Vergleich 2026',
       intro: 'Ollama, LM Studio, Jan AI und GPT4All installieren sich in unter 5 Minuten und verwalten Model-Downloads automatisch — keine manuelle llama.cpp-Kompilierung, keine Gewichtskonvertierung, keine Konfigurationsdateien. Stand April 2026 nutzen alle vier Tools llama.cpp als Inference-Backend und unterstützen das gleiche GGUF-Format, sodass Sie zwischen ihnen wechseln können, ohne Models neu herunterzuladen. Die Wahl hängt von der Schnittstelle ab: Ollama für Entwickler, die CLI und API wollen; LM Studio für eine polierte GUI mit Hugging-Face-Suche; Jan AI für maximale Datenschutzorientierung und Open-Source-Überprüfbarkeit; GPT4All für die einfachste One-Click-Desktop-Erfahrung.',
-      metaDescription: 'Vergleichen Sie die 4 einfachsten Tools zum Betrieb lokaler LLMs 2026: Ollama, LM Studio, Jan AI, GPT4All. API-Ports, Telemetrie, Model-Anzahl.',
+      metaDescription: 'LM Studio: beste GUI. Ollama: CLI-first. GPT4All + Jan.ai: vollständig offline. RAM-Vergleich und Installschritte für alle 4 Tools. April 2026.',
+      twitterDescription: 'LM Studio: beste GUI. Ollama: CLI-first. GPT4All + Jan.ai: offline. RAM-Vergleich, Installschritte für alle 4 Tools. April 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-09',
       readTime: '8 min Lesezeit',
@@ -5135,6 +5144,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Welcher lokale LLM-Installer ist am besten für Anfänger?', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All für die absolut einfachste Erfahrung — einzelnes Installationsprogramm, kein Terminal, One-Click-Model-Downloads. LM Studio für Anfänger, die mehr Model-Wahl wünschen. Ollama wird für Anfänger nicht empfohlen.' } },
           { '@type': 'Question', name: 'Welches Tool ist am privatesten?', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI — vollständig Open Source, keine Telemetrie, Chat lokal gespeichert, vollständig offline. Ollama ist auch vollständig privat. LM Studio erfasst anonyme Analytik — in Einstellungen deaktivieren.' } },
@@ -5166,9 +5176,10 @@ print(response.choices[0].message.content)`,
     fr: {
       theme: 'Getting Started',
       title: 'Installateurs LLM locaux One-Click : Ollama vs LM Studio vs Jan AI vs GPT4All comparés',
-      seoTitle: 'Meilleurs installateurs LLM One-Click 2026',
+      seoTitle: 'LM Studio vs Ollama vs GPT4All vs Jan.ai : Comparatif 2026',
       intro: 'Ollama, LM Studio, Jan AI et GPT4All s\'installent en moins de 5 minutes et gèrent les téléchargements de modèles automatiquement — pas de compilation manuelle llama.cpp, pas de conversion de poids, pas de fichiers de configuration. En avril 2026, tous quatre outils utilisent llama.cpp comme backend d\'inférence et supportent le même format GGUF, ce qui signifie que vous pouvez basculer entre eux sans retélécharger les modèles. Le choix dépend de la préférence d\'interface : Ollama pour les développeurs qui veulent une CLI et une API, LM Studio pour une interface GUI soignée avec recherche Hugging Face, Jan AI pour une confidentialité maximale et une auditabilité open source, GPT4All pour l\'expérience desktop one-click la plus simple.',
-      metaDescription: 'Comparez les 4 outils les plus simples pour exécuter des LLMs locaux en 2026 : Ollama, LM Studio, Jan AI, GPT4All. Ports API, télémétrie, nombre de modèles.',
+      metaDescription: 'LM Studio excelle en GUI, Ollama en CLI. GPT4All et Jan.ai tournent hors ligne. Tableau RAM et étapes d\'installation pour 4 outils. Avril 2026.',
+      twitterDescription: 'LM Studio: meilleure GUI. Ollama: CLI. GPT4All + Jan.ai: hors ligne. Tableau RAM et install en 1 clic. Avril 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-09',
       readTime: '8 min de lecture',
@@ -5398,6 +5409,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Quel installateur LLM local est le meilleur pour les débutants ?', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All pour l\'expérience la plus simple — programme d\'installation unique, pas de terminal, téléchargements en un clic. LM Studio pour plus de choix de modèles. Ollama n\'est pas recommandé pour les débutants.' } },
           { '@type': 'Question', name: 'Quel outil est le plus privé ?', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI — open source MIT, pas de télémétrie, chat local, entièrement hors ligne. Ollama aussi entièrement privé. LM Studio collecte l\'analytique — désactiver dans les paramètres.' } },
@@ -5429,9 +5441,10 @@ print(response.choices[0].message.content)`,
     ja: {
       theme: 'Getting Started',
       title: 'ローカルLLM One-Clickインストーラー：Ollama vs LM Studio vs Jan AI vs GPT4All 比較',
-      seoTitle: '2026年ベストOne-Click LLMインストーラー比較',
+      seoTitle: 'LM Studio対Ollama・GPT4All・Jan.ai：2026年比較インストール',
       intro: 'Ollama、LM Studio、Jan AI、GPT4Allはすべて5分以内にインストール可能で、モデルダウンロードを自動管理します — llama.cppの手動コンパイル、重みの変換、設定ファイルの作成は不要です。2026年4月現在、4つのツールはすべてllama.cppを推論バックエンドとして使用し、同じGGUFモデル形式をサポートしているため、モデルを再ダウンロードせずにツール間を切り替えることができます。選択はインターフェイスの好みによります：CLIとAPIが必要な開発者向けはOllama、洗練されたGUIとHugging Face検索が必要な初心者向けはLM Studio、最大のプライバシーとオープンソース監査可能性を重視するユーザー向けはJan AI、最も簡単なワンクリックデスクトップ体験を求めるユーザー向けはGPT4All。',
-      metaDescription: '2026年にローカルLLMを実行する4つの最も簡単なツール比較：Ollama、LM Studio、Jan AI、GPT4All。APIポート、テレメトリ、モデル数。',
+      metaDescription: 'LM StudioはGUI最強、OllamaはCLI特化。GPT4AllとJan.aiは完全オフライン。4ツールのRAM要件と1クリックインストール手順を比較。2026年4月。',
+      twitterDescription: 'LM StudioはGUI最強、OllamaはCLI特化。GPT4AllとJan.aiは完全オフライン。4ツールのRAM比較。2026年4月。',
       publishDate: '2026-04-04',
       dateModified: '2026-04-09',
       readTime: '8分で読める',
@@ -5661,6 +5674,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: '初心者に最適？', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All — 最シンプル単一インストーラーターミナル不要ワンクリック。LM Studio — モデル豊富初心者向け。Ollama — GUI非搭載初心者非推奨。' } },
           { '@type': 'Question', name: '最もプライベート？', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI — MIT完全オープンソーステレメトリなしチャットローカルJSON完全オフライン。Ollama — テレメトリなし確認。LM Studio — 匿名分析デフォルト無効化要。' } },
@@ -5692,9 +5706,10 @@ print(response.choices[0].message.content)`,
     zh: {
       theme: 'Getting Started',
       title: '本地LLM一键安装器对比：Ollama vs LM Studio vs Jan AI vs GPT4All',
-      seoTitle: '2026年最佳一键LLM安装器评比',
+      seoTitle: 'LM Studio vs Ollama vs GPT4All vs Jan.ai：2026年对比安装指南',
       intro: 'Ollama、LM Studio、Jan AI 和 GPT4All 都能在 5 分钟内安装，并自动管理模型下载 — 无需手动编译llama.cpp、无需转换权重、无需配置文件。截至 2026 年 4 月，这4种工具都使用 llama.cpp 作为推理后端，并支持相同的 GGUF 模型格式，这意味着可以在工具之间切换而无需重新下载模型。选择取决于界面偏好：Ollama适合需要CLI和API的开发者、LM Studio适合希望使用精致GUI和Hugging Face搜索的初学者、Jan AI适合最大化隐私和开源可审计性的用户、GPT4All适合想要最简单一键桌面体验的用户。',
-      metaDescription: '对比2026年运行本地LLM的4种最简单工具：Ollama、LM Studio、Jan AI、GPT4All。API端口、遥测、模型数量。',
+      metaDescription: 'LM Studio图形界面最优，Ollama命令行优先，GPT4All和Jan.ai完全离线。4款工具RAM对比与一键安装步骤详解。2026年4月。',
+      twitterDescription: 'LM Studio图形界面最优，Ollama命令行优先，GPT4All和Jan.ai完全离线。RAM对比与安装步骤。2026年4月。',
       publishDate: '2026-04-04',
       dateModified: '2026-04-09',
       readTime: '阅读约8分钟',
@@ -5926,6 +5941,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '初学者最好的安装器？', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All — 最简单体验：单一安装程序、无需终端、一键下载。LM Studio — 更多模型选择。Ollama — 无图形界面不推荐初学者。' } },
           { '@type': 'Question', name: '最私密的工具？', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI — MIT开源无遥测本地JSON完全离线。Ollama — 也完全私密无遥测确认。LM Studio — 匿名分析默认禁用。' } },
@@ -6443,7 +6459,6 @@ print(response.choices[0].message.content)`,
       },
       schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Dépannage LLM Local 2026 : 10 Erreurs et Solutions Rapides', description: 'Résolvez les 10 erreurs les plus courantes de LLM local en 5 minutes. Guides pour Ollama, llama.cpp, permission refusée, erreurs VRAM, quantification.', url: 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=fr', datePublished: '2026-03-24', dateModified: '2026-04-05', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, educationalLevel: 'Beginner', inLanguage: 'fr' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [{ '@type': 'Question', name: 'Combien de VRAM pour 7B ?', acceptedAnswer: { '@type': 'Answer', text: 'LLaMA 3.1 7B Q4_K_M = 8 GB minimum ; Q8_0 = 14 GB' } }, { '@type': 'Question', name: 'Pourquoi Ollama est-il lent ?', acceptedAnswer: { '@type': 'Answer', text: 'Exécution sur CPU. Vérifiez nvidia-smi et installez CUDA' } }, { '@type': 'Question', name: 'Puis-je exécuter plusieurs modèles ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui si VRAM suffisante. Ollama décharge automatiquement' } }] },
-      howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Dépanner LLM Local', inLanguage: 'fr', step: [{ '@type': 'HowToStep', position: 1, name: 'Vérifiez VRAM disponible' }, { '@type': 'HowToStep', position: 2, name: 'Vérifiez les chemins de modèle' }, { '@type': 'HowToStep', position: 3, name: 'Vérifiez la quantification' }, { '@type': 'HowToStep', position: 4, name: 'Vérifiez les permissions' }, { '@type': 'HowToStep', position: 5, name: 'Testez avec un petit modèle' }] },
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
       gammaDescription: 'La présentation couvre : les 10 erreurs de configuration LLM locale les plus courantes (VRAM insuffisante, GPU non détecté, inférence lente, connexion refusée, sortie incohérente), les besoins en RAM pour les modèles 3B–14B, un processus de débogage en 5 étapes et les commandes Ollama pour chaque solution. Téléchargez le PDF comme carte de référence de dépannage LLM local.',
     },
@@ -6752,6 +6767,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -7084,6 +7100,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten ausgelegt. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung.' } },
           { '@type': 'Question', name: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Kaum. Ein 2B-Modell benötigt etwa 1,7 GB RAM für das Modell, das OS benötigt 2–3 GB gleichzeitig. Bei 4 GB Gesamt-RAM wird Swap-Nutzung Inferenz 5–10× langsamer machen.' } },
@@ -7351,6 +7368,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?', acceptedAnswer: { '@type': 'Answer', text: 'Non — les CPU et GPU modernes gèrent les charges élevées continues en toute sécurité. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur.' } },
           { '@type': 'Question', name: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'À peine. Un modèle 2B nécessite environ 1,7 GB de RAM, l\'OS a besoin de 2–3 GB simultanément. Avec 4 GB au total, l\'utilisation d\'échange rendra l\'inférence 5–10× plus lente.' } },
@@ -7618,6 +7636,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ—最新のCPUとGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。' } },
           { '@type': 'Question', name: '4GB RAMノートパソコンでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'ほぼ。2Bモデルは約1.7GB RAMが必要で、OSは2–3GB必要です。4GB合計では、スワップ使用により推論が5–10倍遅くなります。' } },
@@ -7885,6 +7904,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '运行本地LLM会随着时间推移损伤笔记本电脑吗？', acceptedAnswer: { '@type': 'Answer', text: '否 — 现代CPU和GPU设计可安全处理持续的高负荷。笔记本电脑支架和适当的通风可防止过度热量积聚。' } },
           { '@type': 'Question', name: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '勉强。2B模型需要约1.7GB RAM，操作系统需要2–3GB。在4GB总RAM下，交换使用使推理速度降低5–10倍。' } },
@@ -8356,6 +8376,7 @@ print(response.choices[0].message.content)`,
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'inLanguage': 'de',
       'mainEntity': [
         {
           '@type': 'Question',
@@ -8586,6 +8607,7 @@ print(response.choices[0].message.content)`,
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'inLanguage': 'fr',
       'mainEntity': [
         {
           '@type': 'Question',
@@ -8801,6 +8823,7 @@ print(response.choices[0].message.content)`,
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'inLanguage': 'ja',
       'mainEntity': [
         {
           '@type': 'Question',
@@ -9016,6 +9039,7 @@ print(response.choices[0].message.content)`,
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'inLanguage': 'zh',
       'mainEntity': [
         {
           '@type': 'Question',
@@ -12352,6 +12376,7 @@ print(response.choices[0].message.content)`,
         'proficiencyLevel': 'Anfänger',
         'mainEntity': {
           '@type': 'FAQPage',
+          'inLanguage': 'de',
           'mainEntity': [],
         },
       },
@@ -12513,6 +12538,7 @@ print(response.choices[0].message.content)`,
         'proficiencyLevel': 'Débutant',
         'mainEntity': {
           '@type': 'FAQPage',
+          'inLanguage': 'fr',
           'mainEntity': [],
         },
       },
@@ -12677,6 +12703,7 @@ print(response.choices[0].message.content)`,
         'proficiencyLevel': '初心者',
         'mainEntity': {
           '@type': 'FAQPage',
+          'inLanguage': 'ja',
           'mainEntity': [],
         },
       },
@@ -12839,6 +12866,7 @@ print(response.choices[0].message.content)`,
         'proficiencyLevel': '初学者',
         'mainEntity': {
           '@type': 'FAQPage',
+          'inLanguage': 'zh',
           'mainEntity': [],
         },
       },
@@ -12911,6 +12939,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         mainEntity: [
           { '@type': 'Question', name: 'Using Q8_0 quantization instead of Q4_K_M', acceptedAnswer: { '@type': 'Answer', text: 'Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3–5× slower. Always use Q4_K_M as the default for sub-4B models.' } },
           { '@type': 'Question', name: 'Running a base model instead of the instruct variant', acceptedAnswer: { '@type': 'Answer', text: 'Base models (e.g., llama3.2:3b-text) are pre-fine-tuning checkpoints trained to predict the next token in text. They do not follow instructions. When you ask a base model "What is 2+2?", it may complete the sentence as a quiz rather than answer "4". Always use the instruct variant: llama3.2:3b (Ollama defaults to instruct for named models).' } },
@@ -13150,6 +13179,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Was ist das kleinste lokale LLM, das nützliche Ausgaben produziert?', acceptedAnswer: { '@type': 'Answer', text: 'Seit April 2026 ist das praktische Minimum ein 3B-Modell bei Q4_K_M-Quantisierung. Modelle unter 2B Parametern produzieren kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und komplexem Reasoning. Für die meisten Fälle beginnen Sie mit einem 3B-Modell.' } },
           { '@type': 'Question', name: 'Kann ich ein 3B-Modell auf einem Telefon ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Llama 3.2 1B und 3B sind speziell für die mobile Bereitstellung auf dem Gerät konzipiert. Inferenzen auf einem modernen Telefon erzeugen 15–30 tok/sec für 1B-Modelle. Mobile Frameworks wie MLC LLM unterstützen iOS, aber Ollama und LM Studio funktionieren derzeit nicht auf iOS/Android.' } },
@@ -13208,6 +13238,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Quel est le plus petit LLM local qui produit une sortie utile ?', acceptedAnswer: { '@type': 'Answer', text: 'Depuis avril 2026, le minimum pratique pour une sortie utile est un modèle 3B à quantification Q4_K_M. Les modèles sous 2B paramètres produisent des phrases cohérentes mais peinent avec les instructions multi-étapes et le reasoning complexe. Pour la plupart des cas, commencez avec un modèle 3B.' } },
           { '@type': 'Question', name: 'Puis-je exécuter un modèle 3B sur un téléphone ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — Llama 3.2 1B et 3B sont spécifiquement conçus pour le déploiement mobile sur appareil. Les inférences sur un téléphone moderne produisent 15–30 tok/sec pour les modèles 1B. Les frameworks mobiles comme MLC LLM supportent iOS, mais Ollama et LM Studio ne fonctionnent pas actuellement sur iOS/Android.' } },
@@ -13252,6 +13283,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: '有用な出力を生成する最小のローカルLLMは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月以降、有用な出力の実用的な最小値はQ4_K_M量子化での3Bモデルです。2Bパラメータ未満のモデルは一貫した文を生成しますが、複数ステップの指示と複雑な推論に苦労しています。ほとんどの場合、3Bモデルから始めてください。' } },
           { '@type': 'Question', name: '3Bモデルを携帯電話で実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい — Llama 3.2 1Bと3Bはモバイルデバイスでの展開用に設計されています。最新の携帯電話での推論は1Bモデルで15～30トークン/秒を生成します。MLC LLMなどのモバイルフレームワークはiOSをサポートしていますが、OllamaとLM StudioはiOS/Androidで現在動作しません。' } },
@@ -13475,6 +13507,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '生成有用输出的最小本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月，有用输出的实际最小值是Q4_K_M量化下的3B模型。2B参数以下的模型可以生成连贯的单句，但在多步骤指令和复杂推理方面表现不佳。对于大多数情况，从3B模型开始。' } },
           { '@type': 'Question', name: '我可以在手机上运行3B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以——Llama 3.2 1B和3B专为移动设备部署而设计。在现代手机上的推理为1B模型生成15–30个令牌/秒。MLC LLM等移动框架支持iOS，但Ollama和LM Studio目前不能在iOS/Android上运行。' } },
@@ -14481,7 +14514,7 @@ print(response.choices[0].message.content)`,
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'fr',
+      'inLanguage': 'fr',
       mainEntity: [
         {
           '@type': 'Question',
@@ -14577,6 +14610,7 @@ print(response.choices[0].message.content)`,
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    'inLanguage': 'ja',
     mainEntity: [
       { '@type': 'Question', name: '70Bモデルを実行するには最小限のハードウェアは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月時点では、使用可能で実用的な最小限は64GB統合メモリを備えたApple M3 Max MacBook Pro、またはレイヤーオフロード機能を備えたNVIDIA RTX 4090（24GB VRAM）+ 32GB システムRAMです。CPU専用70B推論は技術的には可能（64GB RAM）ですが、1～3 tok/secしか生成しないため、対話的な使用には現実的ではありません。' } },
       { '@type': 'Question', name: 'Apple SiliconとNVIDIA GPUで70Bモデルを実行する場合、なぜ速度に違いがあるのですか？', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconは統合メモリを使用します。CPU と GPU は同じ物理メモリプールを共有するため、メモリ帯域幅の制限がありません。NVIDIA GPUは独立したVRAMを持つため、24GBのVRAMには70Bモデルの約60％しか格納できず、残りのレイヤーはCPU上で実行され、メモリ帯域幅のボトルネックが生じます。' } },
@@ -14977,6 +15011,7 @@ print(response.choices[0].message.content)`,
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    'inLanguage': 'zh',
     mainEntity: [
       {
         '@type': 'Question',
@@ -15358,6 +15393,7 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -21868,6 +21904,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I switch between local and cloud models in the same application?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Ollama and LM Studio expose an OpenAI-compatible REST API at localhost. Any application built on the OpenAI SDK can switch to local by changing the base URL to localhost:11434 (Ollama) or localhost:1234 (LM Studio). No code changes required.' } },
           { '@type': 'Question', 'name': 'Do cloud API providers train on my prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For paid API tiers, most providers (OpenAI, Anthropic, Google) opt API customers out of training data collection by default. Free tiers typically use inputs for improvement. Always verify the current data policy for your specific tier.' } },
@@ -22959,6 +22996,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I use Ollama and LM Studio at the same time?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Ollama runs as a background service and LM Studio is a desktop app — both can run simultaneously. However, they cannot serve the same model at the same time without doubling VRAM usage. You typically choose one as your active inference tool.' } },
           { '@type': 'Question', 'name': 'Can I use the same models in both Ollama and LM Studio?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Both support GGUF and safetensors formats. Models downloaded in Ollama can be imported into LM Studio by pointing to the model file location. By default they use separate folders but LM Studio can be configured to use Ollama\'s model folder.' } },
@@ -23433,6 +23471,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich Ollama und LM Studio gleichzeitig nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Ollama läuft als Hintergrund-Dienst (CLI-basiert) und LM Studio ist eine Desktop-App. Sie können Ollama in einem Terminal ausführen und LM Studio gleichzeitig nutzen. Allerdings können sie nicht beide dasselbe Modell gleichzeitig bedienen — das würde den VRAM-Verbrauch verdoppeln. Normalerweise wählen Sie ein Werkzeug als Ihr \"aktives\" Werkzeug für Inferenz.' } },
           { '@type': 'Question', 'name': 'Kann ich die gleichen Modelle in beiden verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, beide Tools unterstützen GGUF- und safetensors-Format. Ein Modell, das in Ollama heruntergeladen wurde, kann in LM Studio importiert werden (oder umgekehrt), indem Sie auf den Modell-Dateipfad verweisen. Standardmäßig verwenden sie separate Ordner, aber Sie können LM Studio so konfigurieren, dass es Ollamasl Modellordner verwendet.' } },
@@ -23703,6 +23742,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je utiliser Ollama et LM Studio en même temps ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Ollama s\'exécute comme un service en arrière-plan (basé sur CLI) et LM Studio est une application de bureau. Vous pouvez exécuter Ollama dans un terminal et LM Studio simultanément. Cependant, ils ne peuvent pas tous deux servir le même modèle au même moment — cela doublerait la consommation VRAM. Généralement, vous choisissez un outil pour être votre outil \"actif\" pour l\'inférence.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser les mêmes modèles dans les deux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, les deux outils supportent les formats GGUF et safetensors. Un modèle téléchargé dans Ollama peut être importé dans LM Studio (ou vice versa) en pointant vers l\'emplacement du fichier de modèle. Par défaut, ils utilisent des dossiers séparés, mais vous pouvez configurer LM Studio pour utiliser le dossier de modèles d\'Ollama.' } },
@@ -23971,6 +24011,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Ollama と LM Studio を同時実行できる?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Ollama はバックグラウンドサービス (CLI ベース)、LM Studio は Desktop アプリ。ターミナルで Ollama 実行、同時に LM Studio 起動。但し両者同一モデル同時提供は VRAM 倍増。通常は一方をアクティブツールに選択。' } },
           { '@type': 'Question', 'name': '両者で同一モデル使用できる?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。両者 GGUF・safetensors フォーマット対応。Ollama でダウンロードしたモデルは LM Studio で (またはその逆) モデルファイルパス指定で利用可。デフォルト別フォルダ使用、LM Studio を Ollama フォルダ参照に設定可。' } },
@@ -24239,6 +24280,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '我可以同时使用 Ollama 和 LM Studio 吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Ollama 作为后台服务运行 (基于 CLI)，LM Studio 是桌面应用。您可以在终端运行 Ollama，同时运行 LM Studio。但是，它们不能同时为相同的模型服务 — 那样会使 VRAM 使用量加倍。通常，您选择一个作为您的"活动"工具用于推论。' } },
           { '@type': 'Question', 'name': '我可以在两者中使用相同的模型吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。两个工具都支持 GGUF 和 safetensors 格式。在 Ollama 中下载的模型可以导入到 LM Studio 中 (反之亦然)，方法是指向模型文件位置。默认情况下，它们使用不同的文件夹，但您可以配置 LM Studio 以使用 Ollama 的模型文件夹。' } },
@@ -28572,9 +28614,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-08',
-        inLanguage: 'de',
         mainEntity: [
           {
             '@type': 'Question',
@@ -28936,9 +28978,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         datePublished: '2026-04-04',
         dateModified: '2026-04-08',
-        inLanguage: 'fr',
         mainEntity: [
           {
             '@type': 'Question',
@@ -36063,8 +36105,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=de',
         'inLanguage': 'de',
+        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lohnt sich RTX 3060 12GB 2026 noch?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. 4+ Jahre alt, aber 12GB VRAM ist zeitlos. Läuft Llama 3.3 8B und Mistral 7B reibungslos. Ideal wenn gebraucht unter €190 gefunden.' } },
           { '@type': 'Question', 'name': 'RTX 4060 oder RTX 4060 Ti für lokale LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4060 Ti. Basis-4060 (8GB) und 4070 (12GB) sind Wertfalle. Ti ist die beste Preisspanne der RTX 40er Serie für LLM-Arbeit.' } },
@@ -36120,8 +36162,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=fr',
         'inLanguage': 'fr',
+        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'RTX 3060 12GB vaut-il toujours le coup en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. 4+ ans, mais 12GB VRAM ne vieillit pas. Exécute Llama 3.3 8B et Mistral 7B en douceur. Idéal si vous trouvez un occasion <€190.' } },
           { '@type': 'Question', 'name': 'RTX 4060 ou RTX 4060 Ti pour LLM locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4060 Ti. Base 4060 (8GB) et 4070 (12GB) mauvaise valeur. Ti est le meilleur rapport qualité-prix de la série RTX 40 pour LLM.' } },
@@ -36177,8 +36219,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=ja',
         'inLanguage': 'ja',
+        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'RTX 3060 12GBは2026年でも買う価値がありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。4年以上前ですが、12GB VRAMは時代遅れになりません。Llama 3.3 8BとMistral 7Bを滑らかに実行できます。中古で$250未満で見つかれば買いです。' } },
           { '@type': 'Question', 'name': 'ローカルLLMはRTX 4060とRTX 4060 Tiどちらを選びますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4060 Tiです。ベース4060（8GB）と4070（12GB）は値打ちが悪いです。TiはRTX 40シリーズでLLM作業に最高のコスト比です。' } },
@@ -36375,8 +36417,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=zh',
         'inLanguage': 'zh',
+        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=zh',
         'mainEntity': [
           { '@type': 'Question', 'name': 'RTX 3060 12GB在2026年还值得买吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。它已有4年多，但12GB VRAM永不过时。平稳运行Llama 3.3 8B和Mistral 7B。如果能找到二手250美元以下的就买。' } },
           { '@type': 'Question', 'name': '对于本地LLM我应该买RTX 4060还是RTX 4060 Ti？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4060 Ti。基础4060（8GB）和4070（12GB）价值不好。Ti是LLM工作最佳定价的RTX 40系列显卡。' } },
@@ -37152,6 +37194,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Puis-je exécuter Mistral 7B sur une GPU 6 GB?', acceptedAnswer: { '@type': 'Answer', text: 'À peine, à Q4 avec surcharge serrée. Pratiquement, non. Achetez au moins 8 GB. Vous aurez des erreurs OOM avec 6 GB.' } },
           { '@type': 'Question', name: 'Combien de VRAM ai-je besoin pour fine-tuner un modèle 7B?', acceptedAnswer: { '@type': 'Answer', text: 'Pour LoRA: 12–16 GB. Fine-tuning complet: 28 GB+. Le fine-tuning nécessite l\'état optimiseur (2–4× VRAM du modèle), pas seulement l\'inférence.' } },
@@ -37207,7 +37250,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Wie viel VRAM benötigen Sie für einen lokalen LLM im Jahr 2026?', description: 'Exaktes VRAM für lokale LLMs: 7B benötigt 4–5 GB (Q4), 13B benötigt 8–10 GB, 70B benötigt 35–40 GB. Formel, GPU-Auswahl, Quantisierungs-Tradeoffs.', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/author/hans-kuepper' }, datePublished: '2026-04-05', dateModified: '2026-04-07', inLanguage: 'de', image: '/og-image.png', publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } },
       howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'VRAM-Anforderungen für lokale LLMs berechnen', step: [{ '@type': 'HowToStep', name: 'VRAM-Berechnungsformel verstehen', text: 'VRAM = (Milliarden Parameter × Bits pro Gewicht) ÷ 8 + KV-Cache + Overhead' }, { '@type': 'HowToStep', name: 'Modellgröße auswählen', text: '7B (Anfänger), 13B (empfohlen), 70B (high-performance) wählen.' }, { '@type': 'HowToStep', name: 'Quantisierungsstufe bestimmen', text: 'Q4 (Standard, VRAM-effizient), Q5 (Balance), Q8 (Genauigkeit prioritär) wählen.' }, { '@type': 'HowToStep', name: 'KV-Cache-Overhead addieren', text: 'Bei Sequenzlänge 2048 +2–5 GB addieren.' }, { '@type': 'HowToStep', name: 'GPU-Speicher überprüfen', text: 'RTX 4070 (12 GB) minimum empfohlen. Größer als berechnet wählen.' }] },
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Lokale LLM VRAM-Anforderungen Kurzanleitung', itemListElement: [{ '@type': 'ListItem', position: 1, name: '7B Q4 Modell', description: '4–5 GB VRAM. RTX 4070 (12 GB) empfohlen.' }, { '@type': 'ListItem', position: 2, name: '13B Q4 Modell', description: '8–10 GB VRAM. RTX 4080 (16 GB) empfohlen.' }, { '@type': 'ListItem', position: 3, name: '70B Q4 Modell', description: '35–40 GB VRAM. Zwei RTX 4090 (48 GB total) oder A100 (80 GB).' }, { '@type': 'ListItem', position: 4, name: 'KV-Cache', description: 'Proportional zu Output-Token. 2048 Token +2–5 GB.' }, { '@type': 'ListItem', position: 5, name: 'Apple Silicon (M3)', description: 'Unified Memory gleichwertig zu GPU. M3 18 GB ≈ GPU 18 GB VRAM.' }] },
-      faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: 'Kann ein 3B-Modell auf meiner GPU laufen?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 3060 (3 GB) oder CPU. Q4-Quantisierung benötigt 1,5–2 GB VRAM. Ollama, Llama.cpp, LM Studio unterstützen alle.' } }, { '@type': 'Question', name: 'Ist RTX 4060 ausreichend für 7B Q4?', acceptedAnswer: { '@type': 'Answer', text: 'Knapp. RTX 4060 (8 GB) sollte 5 GB theoretisch verwalten, aber OS/Laufzeit-Overhead wird eng. RTX 4070 (12 GB) empfohlen.' } }, { '@type': 'Question', name: 'Sind 12 GB für Llama3 13B ausreichend?', acceptedAnswer: { '@type': 'Answer', text: 'Q4 knapp. Q5 oder Q8 nicht. 12 GB ist eng. 16 GB komfortabel.' } }, { '@type': 'Question', name: 'Benötige ich 24 GB für ein 70B-Modell?', acceptedAnswer: { '@type': 'Answer', text: 'Q4 ja. Q5+ nein. 70B mindestens 35–40 GB erforderlich.' } }, { '@type': 'Question', name: 'Reduziert höhere Batch-Größe VRAM für einzelne Inferenz?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Einzelne Inferenz verwendet immer batch=1. Batch-Größe hilft nur Durchsatz (Multi-User-Szenarios).' } }, { '@type': 'Question', name: 'Was ist die präziseste Quantisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Q8 nahezu unmerklicher Verlust. Q5 ~2% Verlust. Q4 ~1% Verlust. Für die meisten Fälle Q4 beste Balance.' } }, { '@type': 'Question', name: 'Kann ich Teil des VRAM auf CPU-RAM auslagern?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, über Layer-Splitting. Llama.cpp und Ollama unterstützen es. Leistung sinkt 30–50%.' } }, { '@type': 'Question', name: 'Was ist die minimale VRAM für lokale LLM-Ausführung?', acceptedAnswer: { '@type': 'Answer', text: '4 GB VRAM mit 3B Q4. Praktisches Minimum 8 GB VRAM + 7B Q4. Unter 6 GB OOM für die meisten 7B-Modelle.' } }, { '@type': 'Question', name: 'Ist Apple Silicon VRAM dasselbe wie GPU VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon verwendet Unified Memory — ganzer Speicherpool verfügbar. M3 18 GB = GPU 18 GB VRAM. MacBook Pro M3 18 GB kann Llama3 13B Q4 (~7 GB) + Overhead ausführen.' } }, { '@type': 'Question', name: 'Wie viel VRAM benötigt 7B bei verschiedenen Quantisierungen?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28 GB. 7B Q8: ~7 GB. 7B Q5: ~4,5 GB. 7B Q4: ~5 GB (3,5 GB Modell + 1,5 GB Overhead). 6 GB GPU eng, 8 GB komfortabel.' } }, { '@type': 'Question', name: 'Was sind die VRAM-Anforderungen für DSGVO-konforme lokale Inferenz in Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum RTX 4070 Ti (12 GB) für bis zu 50 Nutzer mit Llama3 13B Q4. Für 50–500 Nutzer RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB). ECC-GPU für Speicherfehler-Detektion empfohlen.' } }, { '@type': 'Question', name: 'Welche GPU empfiehlt sich für einen Team-Server im deutschen Mittelstand?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4070 Ti (12 GB) für 1–50 Mitarbeiter. RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für 50–500 Mitarbeiter. RTX 4070 Ti kann Llama3 13B Q4 + vLLM mit 3–5 gleichzeitigen Anfragen verwalten.' } }] },
+      faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', mainEntity: [{ '@type': 'Question', name: 'Kann ein 3B-Modell auf meiner GPU laufen?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 3060 (3 GB) oder CPU. Q4-Quantisierung benötigt 1,5–2 GB VRAM. Ollama, Llama.cpp, LM Studio unterstützen alle.' } }, { '@type': 'Question', name: 'Ist RTX 4060 ausreichend für 7B Q4?', acceptedAnswer: { '@type': 'Answer', text: 'Knapp. RTX 4060 (8 GB) sollte 5 GB theoretisch verwalten, aber OS/Laufzeit-Overhead wird eng. RTX 4070 (12 GB) empfohlen.' } }, { '@type': 'Question', name: 'Sind 12 GB für Llama3 13B ausreichend?', acceptedAnswer: { '@type': 'Answer', text: 'Q4 knapp. Q5 oder Q8 nicht. 12 GB ist eng. 16 GB komfortabel.' } }, { '@type': 'Question', name: 'Benötige ich 24 GB für ein 70B-Modell?', acceptedAnswer: { '@type': 'Answer', text: 'Q4 ja. Q5+ nein. 70B mindestens 35–40 GB erforderlich.' } }, { '@type': 'Question', name: 'Reduziert höhere Batch-Größe VRAM für einzelne Inferenz?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Einzelne Inferenz verwendet immer batch=1. Batch-Größe hilft nur Durchsatz (Multi-User-Szenarios).' } }, { '@type': 'Question', name: 'Was ist die präziseste Quantisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Q8 nahezu unmerklicher Verlust. Q5 ~2% Verlust. Q4 ~1% Verlust. Für die meisten Fälle Q4 beste Balance.' } }, { '@type': 'Question', name: 'Kann ich Teil des VRAM auf CPU-RAM auslagern?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, über Layer-Splitting. Llama.cpp und Ollama unterstützen es. Leistung sinkt 30–50%.' } }, { '@type': 'Question', name: 'Was ist die minimale VRAM für lokale LLM-Ausführung?', acceptedAnswer: { '@type': 'Answer', text: '4 GB VRAM mit 3B Q4. Praktisches Minimum 8 GB VRAM + 7B Q4. Unter 6 GB OOM für die meisten 7B-Modelle.' } }, { '@type': 'Question', name: 'Ist Apple Silicon VRAM dasselbe wie GPU VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon verwendet Unified Memory — ganzer Speicherpool verfügbar. M3 18 GB = GPU 18 GB VRAM. MacBook Pro M3 18 GB kann Llama3 13B Q4 (~7 GB) + Overhead ausführen.' } }, { '@type': 'Question', name: 'Wie viel VRAM benötigt 7B bei verschiedenen Quantisierungen?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28 GB. 7B Q8: ~7 GB. 7B Q5: ~4,5 GB. 7B Q4: ~5 GB (3,5 GB Modell + 1,5 GB Overhead). 6 GB GPU eng, 8 GB komfortabel.' } }, { '@type': 'Question', name: 'Was sind die VRAM-Anforderungen für DSGVO-konforme lokale Inferenz in Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum RTX 4070 Ti (12 GB) für bis zu 50 Nutzer mit Llama3 13B Q4. Für 50–500 Nutzer RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB). ECC-GPU für Speicherfehler-Detektion empfohlen.' } }, { '@type': 'Question', name: 'Welche GPU empfiehlt sich für einen Team-Server im deutschen Mittelstand?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4070 Ti (12 GB) für 1–50 Mitarbeiter. RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für 50–500 Mitarbeiter. RTX 4070 Ti kann Llama3 13B Q4 + vLLM mit 3–5 gleichzeitigen Anfragen verwalten.' } }] },
     },
     ja: {
       theme: 'GPU Buying Guides',
@@ -37276,6 +37319,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: '6GB GPUでMistral 7Bを実行できますか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4でギリギリです。実際のところ、いいえ。最低8GBを購入してください。6GBではOOMエラーが発生します。' } },
           { '@type': 'Question', name: '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA用: 12–16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。' } },
@@ -37357,6 +37401,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '我可以在6GB GPU上运行Mistral 7B吗?', acceptedAnswer: { '@type': 'Answer', text: '勉强,Q4显存紧张。实际上不行。至少买8GB。6GB会导致OOM错误。' } },
           { '@type': 'Question', name: '微调7B模型需要多少显存?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA: 12–16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。' } },
@@ -37413,6 +37458,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -39249,6 +39295,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Welches sollte ich für mein erstes lokales LLM wählen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. Einfachere Benutzeroberfläche, schnelleres Setup, integrierte Modell-Erkennung. Jan AI, wenn Sie Plugins experimentieren möchten.' } },
           { '@type': 'Question', 'name': 'Kann ich die LM Studio API mit VS Code Copilot verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Starten Sie den LM Studio Server, kopieren Sie die Endpunkt-URL in die Copilot-Einstellungen.' } },
@@ -39496,6 +39543,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lequel choisir pour mon premier LLM local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. Interface plus simple, setup plus rapide, découverte de modèles intégrée. Jan AI si vous voulez expérimenter les plugins.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser l\'API LM Studio avec Copilot ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Démarrez le serveur LM Studio, copiez l\'endpoint dans Copilot.' } },
@@ -39751,6 +39799,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ローカルLLMを初めて使う場合は、どちらを選ぶべきですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio。より簡単なUI、セットアップが速く、モデルの発見が組み込み。プラグインでいろいろ試してみたい場合はJan AIです。' } },
           { '@type': 'Question', 'name': 'LM Studio APIはVS Code Copilotで使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。LM Studioサーバーを開始し、エンドポイントURLをCopilot拡張設定にコピーしてください。' } },
@@ -40006,6 +40055,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '第一次用本地LLM选哪个？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio。界面简单、安装快、模型发现内置。想试验插件就选Jan AI。' } },
           { '@type': 'Question', 'name': '能在VS Code Copilot用LM Studio API吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。启动LM Studio服务器，复制端口到Copilot设置。' } },
@@ -42016,8 +42066,6 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-code-review?lang=ja', 'headline': '2026年ローカルコードレビュー向けベストLLM：バグ検出精度で分類、速度とVRAM比較', 'description': 'Qwen2.5-Coder 32B はコードレビューバグの88%を検出します。Llama 3.3 70B がセキュリティに最適。DeepSeek-R1 14B はアルゴリズムに。2026年のコードタイプ別比較。', 'inLanguage': 'ja', 'datePublished': '2026-04-05', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [{ '@type': 'Thing', 'name': 'Qwen2.5-Coder 32B' }, { '@type': 'Thing', 'name': 'Llama 3.3 70B' }, { '@type': 'Thing', 'name': 'DeepSeek-R1 14B' }, { '@type': 'Thing', 'name': 'Code Review' }, { '@type': 'Thing', 'name': 'Local LLM' }], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ja', 'mainEntity': [{ '@type': 'Question', 'name': 'どのモデルが最速ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.1 8B（100ms）> DeepSeek-R1 14B（300ms）> Qwen2.5-Coder 32B（400ms）> Llama 3.3 70B（2秒）。速度優先なら 8B、精度重視なら 32B 以上を選択。' } }, { '@type': 'Question', 'name': 'Mac で実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Ollama は Mac 対応（Intel/Apple Silicon 両対応）。ただし GPU 支援がないため、32B モデルは遅い（5～10秒/推論）。M2 Max 以上推奨。' } }, { '@type': 'Question', 'name': 'オフラインで使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。モデルダウンロード後はネット接続不要。完全なローカル推論。セキュリティ機密性が重要な企業向け。' } }, { '@type': 'Question', 'name': 'セキュリティバグ検出率はどの程度ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OWASP Top 10（SQLインジェクション、XSS、認証バイパス）は 85～92%検出。ロジックバグは 60～70%。誤検知も 5～10%存在するため、最終判定は人間。' } }, { '@type': 'Question', 'name': '複数の GPU で並列実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。vLLM の `--tensor-parallel-size 2` で 2 GPU 並列化。推論速度を 1.8 倍短縮。' } }, { '@type': 'Question', 'name': 'クラウド サービスとの TCO はどちらが安いですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ローカル：初期投資 100 万円（GPU サーバ）+ 月 10 万円。API：月 50～200 万円（トラフィック次第）。年間リクエスト月 10 万件超えなら、ローカルが安い。' } }, { '@type': 'Question', 'name': '日本企業向けのコンプライアンスはありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。METI AI ガバナンス 2024、FISC（金融庁）ガイドでローカル推論を推奨。PDPA（シンガポール）、PIPL（中国）対応にも有効。' } }, { '@type': 'Question', 'name': '古いモデルから新モデルへの移行は容易ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Ollama では `ollama pull qwen2.5-coder:32b` で新バージョン自動ダウンロード。API は互換性あり。' } }] },
-    howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', 'name': 'ローカルコードレビュー向けベストLLMの選択と実行', 'inLanguage': 'ja', 'totalTime': 'PT8M', 'step': [{ '@type': 'HowToStep', 'position': 1, 'name': '環境確認', 'text': 'nvidia-smi で GPU を確認。CUDA 12.0 以上推奨。VRAM：32B向けなら最低24GB搭載。' }, { '@type': 'HowToStep', 'position': 2, 'name': 'Ollama のインストール', 'text': 'https://ollama.ai から Ollama をダウンロード。Mac/Linux/Windows 対応。インストール後、`ollama serve` で起動。' }, { '@type': 'HowToStep', 'position': 3, 'name': 'Qwen2.5-Coder 32B をダウンロード', 'text': '`ollama pull qwen2.5-coder:32b-instruct-q4_1` で自動ダウンロード（初回15分、ネット接続必須）。' }, { '@type': 'HowToStep', 'position': 4, 'name': 'vLLM で高速化（オプション）', 'text': '`pip install vllm` でインストール。`vllm serve qwen2.5-coder:32b-instruct --tensor-parallel-size 2` で並列推論開始。' }, { '@type': 'HowToStep', 'position': 5, 'name': 'IDE 統合', 'text': 'VS Code では Continue 拡張機能、Cursor では設定から localhost:8000 を指定。ホットキー Ctrl+Shift+L でレビュー開始。' }, { '@type': 'HowToStep', 'position': 6, 'name': 'テスト実行', 'text': 'サンプルコード（SQLi脆弱性を含む）を貼り付け、レビュー実行。出力が日本語であることを確認。' }] },
-    itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'inLanguage': 'ja', 'name': 'コードレビュー向けLLM選定基準', 'numberOfItems': 6, 'itemListElement': [{ '@type': 'ListItem', 'position': 1, 'name': 'セキュリティレビュー（SQLi、XSS、CSRF）', 'description': 'ベストモデル：Llama 3.3 70B（40GB RAM）。セキュリティパターン認識が最高。完全コンテキスト対応（128K）。' }, { '@type': 'ListItem', 'position': 2, 'name': 'アルゴリズム分析 + パフォーマンス', 'description': 'ベストモデル：DeepSeek-R1 14B（10GB RAM）。推論チェーン推論分析に最適。O(n)複雑度の理解が強い。' }, { '@type': 'ListItem', 'position': 3, 'name': 'Python コードレビュー', 'description': 'ベストモデル：Qwen2.5-Coder 32B（20GB RAM）。HumanEval スコア最高。FIM（Fill-In-The-Middle）対応。' }, { '@type': 'ListItem', 'position': 4, 'name': 'JavaScript/TypeScript', 'description': 'ベストモデル：Qwen2.5-Coder 7B（5GB RAM）。TypeScript の型推論が強い。FIM対応。' }, { '@type': 'ListItem', 'position': 5, 'name': 'Lint レベル高速フィードバック', 'description': 'ベストモデル：Llama 3.1 8B（6GB RAM）。スタイル指摘が高速。60～65%精度。IDE リアルタイム統合に最適。' }, { '@type': 'ListItem', 'position': 6, 'name': 'アーキテクチャ マルチファイル分析', 'description': 'ベストモデル：Llama 3.3 70B（40GB RAM）。128K コンテキストで完全コードベース分析。アーキテクチャパターン認識。' }] },
   },
   zh: {
     theme: '按用途分类的模型',
@@ -42033,8 +42081,6 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-code-review?lang=zh', 'headline': '2026年本地代码审查最佳LLM：按缺陷检测精度分类、速度与VRAM对比', 'description': 'Qwen2.5-Coder 32B 检测代码审查缺陷率88%。Llama 3.3 70B 安全性最优。DeepSeek-R1 14B 算法分析最强。2026年代码类型对比分析。', 'inLanguage': 'zh', 'datePublished': '2026-04-05', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [{ '@type': 'Thing', 'name': 'Qwen2.5-Coder 32B' }, { '@type': 'Thing', 'name': 'Llama 3.3 70B' }, { '@type': 'Thing', 'name': 'DeepSeek-R1 14B' }, { '@type': 'Thing', 'name': '代码审查' }, { '@type': 'Thing', 'name': '本地LLM' }], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'zh', 'mainEntity': [{ '@type': 'Question', 'name': '哪个模型速度最快？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.1 8B（100ms）> DeepSeek-R1 14B（300ms）> Qwen2.5-Coder 32B（400ms）> Llama 3.3 70B（2秒）。优先速度选8B，优先精度选32B以上。' } }, { '@type': 'Question', 'name': '能在Mac上运行吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。Ollama支持Mac（Intel/Apple Silicon双架构）。但无GPU加速，32B模型较慢（5～10秒/推理）。推荐M2 Max及以上。' } }, { '@type': 'Question', 'name': '离线可用吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。模型下载后无需网络连接。完全本地推理。适合保密级高的企业。' } }, { '@type': 'Question', 'name': '安全缺陷检测率多少？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OWASP Top 10（SQL注入、XSS、认证绕过）检测率85～92%。逻辑缺陷检测率60～70%。误报率5～10%，最终判定需人工审核。' } }, { '@type': 'Question', 'name': '能否用多GPU并行运行？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。vLLM支持`--tensor-parallel-size 2`双GPU并行。推理速度可加快1.8倍。' } }, { '@type': 'Question', 'name': '本地方案 vs API方案哪个便宜？', 'acceptedAnswer': { '@type': 'Answer', 'text': '本地：初期投资100万元（GPU服务器）+ 月运维10万。API：月50～200万（根据流量）。年度审查量月10万次以上时本地更划算。' } }, { '@type': 'Question', 'name': '中国企业有合规要求吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有。METI AI治理指南2024、金融监管(FISC)建议本地推理。满足《数据安全法》、跨境监管、数据主权要求。' } }, { '@type': 'Question', 'name': '从旧模型迁移容易吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '容易。Ollama执行`ollama pull qwen2.5-coder:32b`自动下载新版。API向后兼容。' } }] },
-    howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', 'name': '选择和运行本地代码审查最佳LLM', 'inLanguage': 'zh', 'totalTime': 'PT8M', 'step': [{ '@type': 'HowToStep', 'position': 1, 'name': '环境检查', 'text': '运行nvidia-smi检查GPU。推荐CUDA 12.0以上。32B模型需最少24GB VRAM。' }, { '@type': 'HowToStep', 'position': 2, 'name': '安装Ollama', 'text': '从https://ollama.ai下载Ollama。支持Mac/Linux/Windows。安装后执行`ollama serve`启动。' }, { '@type': 'HowToStep', 'position': 3, 'name': '下载Qwen2.5-Coder 32B', 'text': '执行`ollama pull qwen2.5-coder:32b-instruct-q4_1`自动下载（首次需15分钟，需网络连接）。' }, { '@type': 'HowToStep', 'position': 4, 'name': 'vLLM加速（可选）', 'text': '执行`pip install vllm`安装。通过`vllm serve qwen2.5-coder:32b-instruct --tensor-parallel-size 2`启动并行推理。' }, { '@type': 'HowToStep', 'position': 5, 'name': 'IDE集成', 'text': 'VS Code用Continue扩展、Cursor在设置中指定localhost:8000。快捷键Ctrl+Shift+L启动审查。' }, { '@type': 'HowToStep', 'position': 6, 'name': '测试运行', 'text': '粘贴含SQL注入漏洞的示例代码，执行审查。验证输出为中文。' }] },
-    itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'inLanguage': 'zh', 'name': '代码审查LLM选择标准', 'numberOfItems': 6, 'itemListElement': [{ '@type': 'ListItem', 'position': 1, 'name': '安全审查（SQL注入、XSS、CSRF）', 'description': '最佳模型：Llama 3.3 70B（40GB RAM）。安全模式识别最强。完全支持128K上下文。' }, { '@type': 'ListItem', 'position': 2, 'name': '算法分析 + 性能优化', 'description': '最佳模型：DeepSeek-R1 14B（10GB RAM）。推理链分析最优。对O(n)复杂度理解能力强。' }, { '@type': 'ListItem', 'position': 3, 'name': 'Python代码审查', 'description': '最佳模型：Qwen2.5-Coder 32B（20GB RAM）。HumanEval分数最高。支持FIM（Fill-In-The-Middle）。' }, { '@type': 'ListItem', 'position': 4, 'name': 'JavaScript/TypeScript', 'description': '最佳模型：Qwen2.5-Coder 7B（5GB RAM）。TypeScript类型推断强。支持FIM。' }, { '@type': 'ListItem', 'position': 5, 'name': 'Lint级别快速反馈', 'description': '最佳模型：Llama 3.1 8B（6GB RAM）。风格检查快速。精度60～65%。IDE实时集成最优。' }, { '@type': 'ListItem', 'position': 6, 'name': '架构多文件分析', 'description': '最佳模型：Llama 3.3 70B（40GB RAM）。128K上下文分析完整代码库。架构模式识别能力强。' }] },
   },
   },
   'best-local-llms-business-writing': {
@@ -42088,6 +42134,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Why is Mistral Small 3.1 better than Llama 3.1 for email?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1 is more concise. Llama 3.1 is more adaptable. For pure speed/brevity: Mistral Small 3.1. For tone matching: Llama 3.1.' } },
           { '@type': 'Question', 'name': 'Can I use a 13B model for business writing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, but unnecessary. 7B is faster and equally good. 13B is slightly better at long proposals (>2 pages).' } },
@@ -43650,6 +43697,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -43907,6 +43955,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
