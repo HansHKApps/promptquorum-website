@@ -133,7 +133,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       card: 'summary_large_image',
       site: '@promptquorum',
       title: pageTitle,
-      description: metaDesc,
+      description: (article as any).twitterDescription ?? metaDesc,
     },
   }
 }
