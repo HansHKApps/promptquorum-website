@@ -250,6 +250,53 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
         </div>
       )}
 
+      {/* Decision block */}
+      {section.decisionBlock && (
+        <div className="mt-6 border border-primary/20 rounded-xl overflow-hidden">
+          <h3 className="text-lg font-bold text-text-primary px-5 py-3 bg-primary/5 border-b border-primary/10">
+            {section.decisionBlock.title}
+          </h3>
+          <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-primary/10">
+            {/* Use local if */}
+            <div className="p-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-green-600 mb-2">Use a local LLM if:</p>
+              <ul className="space-y-1.5">
+                {section.decisionBlock.localIf.map((item, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-text-secondary">
+                    <span className="flex-shrink-0 text-green-500 mt-0.5">•</span>
+                    <span>{renderInlineLinks(item, lang)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Use cloud if */}
+            <div className="p-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-orange-600 mb-2">Use a cloud model if:</p>
+              <ul className="space-y-1.5">
+                {section.decisionBlock.cloudIf.map((item, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-text-secondary">
+                    <span className="flex-shrink-0 text-orange-500 mt-0.5">•</span>
+                    <span>{renderInlineLinks(item, lang)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Quick decision */}
+            <div className="p-4 bg-primary/3">
+              <p className="text-xs font-bold uppercase tracking-wide text-primary mb-2">Quick decision:</p>
+              <ul className="space-y-1.5">
+                {section.decisionBlock.quick.map((item, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-text-secondary">
+                    <span className="flex-shrink-0 text-primary mt-0.5">→</span>
+                    <span>{renderInlineLinks(item, lang)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Bullet list */}
       {!section.isTldr && section.items && (
         <ul className="space-y-3 my-4">
