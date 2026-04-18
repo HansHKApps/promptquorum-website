@@ -368,8 +368,8 @@
                 <span id="header-title">Best Beginner Local LLM Models 2026</span>
             </div>
             <div class="header-links">
-                <a id="back-link" href="https://www.promptquorum.com/local-llms/best-beginner-local-llm-models">← Back to Article</a>
-                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/best-beginner-local-llm-models" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
             </div>
         </div>
 
@@ -1133,7 +1133,7 @@
 
         function renderSlide(slide, lang) {
             const articleUrl = ARTICLE_BASE + (lang !== 'en' ? '?lang=' + lang : '');
-            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
             let html = '';
 
             switch (slide.type) {
@@ -1143,7 +1143,7 @@
                         <h1>${slide.h1}</h1>
                         <p>${slide.subtitle}</p>
                         <p style="margin-top: 32px; font-size: 18px; color: #79747e;">
-                            <a href="${slide.link}">${slide.link}</a>
+                            <a href="${slide.link}" target="_blank" rel="noopener">${slide.link}</a>
                         </p>
                         ${footerLink}
                     `;
@@ -1202,7 +1202,7 @@
                     html = `
                         <h2>${slide.h2}</h2>
                         <p style="max-width: 560px;">${slide.body}</p>
-                        <a href="${slide.href}" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: 600;">${slide.cta}</a>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: 600;">${slide.cta}</a>
                         ${footerLink}
                     `;
                     break;
@@ -1221,6 +1221,8 @@
         document.getElementById('header-title').textContent = content.title;
         const backLink = document.getElementById('back-link');
         backLink.textContent = content.backLabel;
+        backLink.target = '_blank';
+        backLink.rel = 'noopener';
         if (lang !== 'en') backLink.href = ARTICLE_BASE + '?lang=' + lang;
 
         // Render all slides
