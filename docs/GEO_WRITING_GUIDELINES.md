@@ -1348,6 +1348,121 @@ Use GPT-4o if your prompt requires multi-step reasoning, creative problem-solvin
 
 ---
 
+### Rule 39: Anchor Text Must Carry Intent (Mandatory)
+
+Every hyperlink — **internal and external** — must use anchor text that includes both **topic** and **intent**, not generic labels like "learn more" or "read this guide".
+
+**Why:** Anchor text feeds the AI semantic graph. When Google, Perplexity, and Claude crawl your article, they use anchor text to understand what the linked article is about AND what action the user will take. Vague anchors provide zero context; intentional anchors improve link relevance scoring and AI citation patterns.
+
+#### Format
+
+```
+[Topic] + [Intent/Action]
+```
+
+#### Examples
+
+**❌ Weak anchors (no intent):**
+- "learn more"
+- "this guide"
+- "click here"
+- "read the article"
+- "see the documentation"
+- "find out more"
+
+**✅ Strong anchors (topic + intent):**
+- "see how quantization reduces VRAM usage"
+- "compare Ollama vs LM Studio performance"
+- "understand temperature's effect on creativity"
+- "explore 7B model benchmarks"
+- "check the VRAM requirements for Llama 3.2"
+- "review the step-by-step installation guide"
+- "discover the difference between Q4_K_M and Q5_K_M quantization"
+
+#### Anchor Text Structure
+
+**Topic:** What is the linked content about?  
+**Intent:** What will the reader learn or do?
+
+```
+Anchor = [Topic noun phrase] + [intent verb or outcome]
+```
+
+**Examples by pattern:**
+
+| Pattern | Example |
+|---------|---------|
+| `see [outcome]` | "see how to reduce inference latency" |
+| `explore [topic]` | "explore GPU memory optimization" |
+| `understand [concept]` | "understand why context windows matter" |
+| `compare [A] vs [B]` | "compare Ollama vs LM Studio for Mac" |
+| `check [resource]` | "check the official Ollama documentation" |
+| `review [content type]` | "review the benchmarks for 7B models" |
+| `discover [insight]` | "discover which quantization format saves the most VRAM" |
+| `learn [skill/knowledge]` | "learn how to use token counting in prompts" |
+
+#### Special Cases
+
+**Links to tools/products:** Include the product name + what it does
+
+```
+❌ "this tool"
+✅ "use Ollama to run local LLMs"
+
+❌ "the comparison"
+✅ "see the LM Studio vs LLaMA.cpp comparison table"
+```
+
+**External resource links:** Include what the reader will find there
+
+```
+❌ "the official docs"
+✅ "review the GGUF specification for quantization formats"
+
+❌ "research paper"
+✅ "read the Attention Is All You Need research paper"
+```
+
+**Related Reading section:** Same rule applies
+
+```
+❌ [How to Optimize Prompts](/prompt-engineering/prompt-optimization)
+✅ [Optimize your prompts for better GPT-4o output](/prompt-engineering/prompt-optimization)
+
+❌ [Local LLMs Guide](/local-llms)
+✅ [Compare the best beginner-friendly local LLM models](/local-llms/best-beginner-local-llm-models)
+```
+
+#### Implementation Workflow
+
+1. **Before publishing:** Scan every hyperlink in the article
+2. **For each link:** Ask "Could I remove the link text and still understand what I'll learn?"
+   - If NO → anchor text needs intent
+   - If YES → anchor text is good
+3. **Replace weak anchors:** Use one of the patterns above
+
+#### Why This Matters
+
+**For SEO/AEO:**
+- Google's link analysis algorithms use anchor text to infer page topic and relevance
+- AI engines (Perplexity, ChatGPT) extract anchor text as semantic signals
+- Descriptive anchors improve both human and AI comprehension of article structure
+
+**For users:**
+- Descriptive anchors let readers preview the link destination before clicking
+- Scanners (who skip prose) can still navigate by reading anchors
+- Screen reader users get better context
+
+#### Validation Checklist
+
+- [ ] No generic anchors remain: "learn more", "read here", "click this", "find out", "see more"
+- [ ] Every anchor includes a topic noun phrase (what the content is about)
+- [ ] Every anchor includes an intent verb or outcome (what you'll learn/do)
+- [ ] Related Reading section anchors follow the same rule (not just article titles)
+- [ ] At least 80% of anchors use one of the approved patterns (see, explore, understand, compare, check, review, discover, learn)
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -1709,7 +1824,7 @@ Use this checklist before committing any new or edited article:
 - [ ] Every H2's first sentence is bold and answers the question
 - [ ] All paragraphs are max 3 sentences
 - [ ] Article includes 5–10 internal links (4–7 in body, 3–5 in Related Reading)
-- [ ] All internal links use descriptive anchor text
+- [ ] All anchor text (internal & external) includes topic + intent, not generic labels ("learn more", "read this") — Rule 39
 - [ ] No more than 1 link per page to the same destination
 
 #### Metadata
@@ -2097,6 +2212,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | First-screen conversion / above-the-fold | Rule 36 | Rule 8c (top-of-page sequence), Rules 31, 33 |
 | Decision density / actionable guidance | Rule 37 | Rules 1, 22 (answer-first), Rule 31 (lead answer) |
 | AI citation extractability / standalone blocks | Rule 38 | Rules 1 (answer-first), Rules 22, 37 (decision statements) |
+| Anchor text intent / semantic graph | Rule 39 | Rule 12 (linking strategy), Rules 31, 1 (answer-first) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
