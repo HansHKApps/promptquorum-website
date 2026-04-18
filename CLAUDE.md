@@ -143,3 +143,27 @@ Writers do not need to create or manage og:images; they are handled automaticall
 - Omit JSON-LD schema markup on new pages
 - Add a client component that renders multilingual content without passing `initialLang` from the server page (see Language / i18n section above)
 - **Use `export const metadata` (static) on any page that supports `?lang=` parameter** — always use `export async function generateMetadata({ searchParams })` instead, so crawlers see correct language metadata on all language URLs. This rule prevents the systematic English-only metadata issue (see commit 1d685040).
+
+## Presentation Skill (/gamma) — gammaDescription Requirement
+
+When implementing a new `/gamma` presentation for a prompt-engineering article:
+
+**MANDATORY:** Add `gammaDescription` for ALL 5 languages (en, de, fr, ja, zh) immediately after `gammaEmbedUrl` in `src/lib/prompt-engineering/content.ts`.
+
+**Why:** Without `gammaDescription`, presentations are invisible to Google, Perplexity, ChatGPT Browse, and other AI search engines. The `gammaDescription` is the plain-text summary that lives above the presentation iframe and is 100% indexable for SEO/GEO purposes.
+
+**What to include in gammaDescription (2-3 sentences):**
+1. **Opening:** "The slide deck below covers:" or language equivalent
+2. **Specific topics:** Name exact slide content (e.g., "7 hallucination types with detection patterns", "temperature 0.0–2.0 range", "nucleus sampling")
+3. **CTA:** "Download the PDF as a [Topic] reference card."
+
+**Example (EN):**
+> "The slide deck below covers: why LLMs hallucinate (probabilistic token prediction, not comprehension), 7 hallucination types with detection patterns, prompt techniques that reduce hallucination, and a comparison of model behavior. Download the PDF as a hallucination reduction reference card."
+
+**Enforcement:**
+- Use the full `/gamma` workflow from `docs/GAMMA_SKILL_UPDATES.md` (Step 0.5 is mandatory)
+- Pre-write `gammaDescription` for all 5 languages before running Step 4
+- Verify build passes with 0 TypeScript errors
+- All 5 languages must be present before committing
+
+**Reference:** `docs/GAMMA_SKILL_UPDATES.md` contains the updated `/gamma` skill specification with full Step 0.5 and GEO indexability requirements.
