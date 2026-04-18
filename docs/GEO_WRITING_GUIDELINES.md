@@ -1155,6 +1155,94 @@ Before publishing, perform the **viewport test**:
 
 ---
 
+### Rule 37: Hard Enforcement — Decision Density Minimum (Mandatory)
+
+**Every 300 words MUST include at least one decision-enabling statement.** Readers come to articles to decide, not to read. If 400+ consecutive words pass without a decision prompt, the article fails this rule.
+
+#### Decision Statements (Choose At Least One Per 300 Words)
+
+At least one of the following must appear in every 300-word section:
+
+- **"Use X if..."** — Prescriptive condition matching (e.g., "Use GPT-4o if you need reasoning on complex math")
+- **"Avoid X if..."** — Inverse prescription (e.g., "Avoid Llama 3.2 if your context window must exceed 8k tokens")
+- **"Best option for..."** — Direct recommendation for use case (e.g., "Best option for cost-sensitive users: Mixtral 8x7B")
+- **"If unsure, start with..."** — Default recommendation for undecided readers (e.g., "If unsure, start with Claude 3.5 Sonnet")
+- **"Choose X when..."** — Conditional selection (e.g., "Choose Qwen when you need Chinese language fluency")
+- **"Switch to X if..."** — Escalation or migration path (e.g., "Switch to Claude if your prompt length exceeds 4k tokens")
+- **"X works best for..."** — Qualified strength statement (e.g., "Reasoning works best for math and logic problems")
+
+#### Why This Matters
+
+**Readers scan articles looking for answers, not reading prose linearly.** If they can't find a decision statement in the first ~300 words of a section, they scroll to the next article.
+
+Conversely, Google and AI systems reward articles with **explicit decision guidance**. Clarity on "when to use what" is a ranking signal — it shows editorial authority and user-intent alignment.
+
+#### Hard Failure Conditions
+
+❌ **FAIL:** More than 400 consecutive words without any of the decision statements listed above
+
+**Examples of FAIL:**
+- A section explaining 3 model architectures without once saying "use Model A if..." or "Model B is better for..."
+- A how-to guide describing 5 steps without indicating which step you need most or when to skip a step
+- A comparison article listing pros/cons but never recommending which product suits which user
+
+❌ **FAIL:** Decision statements that are vague or non-actionable:
+- ❌ "X is good" (no condition, no decision)
+- ❌ "Y might work" (too uncertain)
+- ❌ "Some users prefer Z" (no criterion for who those users are)
+
+✅ **PASS:** Every 300 words includes at least one conditional, actionable statement:
+- ✅ "Use Ollama if you need full local control over model weights"
+- ✅ "Avoid GPT-4 Turbo if your API budget is under $100/month"
+- ✅ "Best option for enterprise: Claude API with fine-tuning"
+
+#### Implementation: Decision Auditing
+
+Before publishing, perform a **decision audit**:
+
+1. Copy your article body (exclude intro, Key Takeaways, FAQ, conclusion)
+2. Split into 300-word chunks
+3. For each chunk, check: Is at least one decision statement present?
+4. If any chunk has **zero decision statements** and the next chunk also has zero → FAIL
+5. If you find a gap of 400+ words, insert a decision block
+
+#### Decision Block Template (When Inserting)
+
+If a section lacks decision guidance:
+
+```
+## When to Use [Topic A]
+
+Use [Topic A] if:
+- You need [specific constraint 1]
+- Your [metric] is [threshold]
+- Your use case is [specific scenario]
+
+Avoid [Topic A] if:
+- You need [opposite constraint]
+- Your [metric] exceeds [threshold]
+
+**Next step:** If you've confirmed [Topic A] fits your use case, [action link or instruction].
+```
+
+#### Word Count Enforcement
+
+- **Ideal:** Decision statement every 200–300 words
+- **Acceptable:** Decision statement every 300–400 words
+- **FAIL:** Gap of 400+ words without a decision statement
+
+This ensures every reader segment (casual scanners, deep readers, AI systems) encounters at least one actionable decision point per page section.
+
+#### Checklist
+
+- [ ] Decision audit performed (split into 300-word chunks)
+- [ ] No gap of 400+ consecutive words without a decision statement
+- [ ] Each decision statement is conditional and actionable (not vague)
+- [ ] Decision statements use one of the 7 required formats listed above
+- [ ] High-value sections (comparisons, tutorials) have decision statements every 200–250 words
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -1548,6 +1636,8 @@ Use this checklist before committing any new or edited article:
 - [ ] Minimum callout boxes present (5 for 500–1500 words, 8 for 1500–3000 words)
 - [ ] Prompt examples include both "Bad Prompt" and "Good Prompt" labels (if applicable)
 - [ ] All data presented in tables (if 3+ comparisons)
+- [ ] Decision audit performed: no gap of 400+ consecutive words without decision statement (Rule 37)
+- [ ] Every section includes at least one actionable decision statement ("Use X if...", "Avoid X if...", "Best option for...", etc.) — Rule 37
 
 #### FAQ & Common Mistakes
 - [ ] FAQ section has 6–8 questions covering 3+ of 5 types
@@ -1898,6 +1988,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | Multilingual titles | Rule 34 | Rule 2d (title tag optimization) |
 | SERP differentiation / title stand-out | Rule 35 | Rule 2d (title), Rule 34 (language strategy) |
 | First-screen conversion / above-the-fold | Rule 36 | Rule 8c (top-of-page sequence), Rules 31, 33 |
+| Decision density / actionable guidance | Rule 37 | Rules 1, 22 (answer-first), Rule 31 (lead answer) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
