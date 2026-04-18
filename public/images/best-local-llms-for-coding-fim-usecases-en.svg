@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">FIM Support & Model Use Cases</text>
+
+  <!-- Left column: FIM Support -->
+  <rect x="28" y="55" width="330" height="280" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="330" height="4" rx="0" fill="#6750A4"/>
+
+  <text x="193" y="85" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">FIM Support (IDE Autocomplete)</text>
+
+  <circle cx="60" cy="130" r="18" fill="#34A853"/>
+  <text x="60" y="138" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="110" y="140" font-size="12" font-weight="700" fill="#1C1B1F">Qwen2.5-Coder 7B</text>
+  <text x="110" y="156" font-size="11" fill="#49454F">Best for 8 GB with FIM</text>
+
+  <circle cx="60" cy="195" r="18" fill="#34A853"/>
+  <text x="60" y="203" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="110" y="205" font-size="12" font-weight="700" fill="#1C1B1F">DeepSeek-Coder V2 Lite</text>
+  <text x="110" y="221" font-size="11" fill="#49454F">Best for 16 GB with FIM</text>
+
+  <circle cx="60" cy="260" r="18" fill="#34A853"/>
+  <text x="60" y="268" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="110" y="270" font-size="12" font-weight="700" fill="#1C1B1F">Starcoder2 15B</text>
+  <text x="110" y="286" font-size="11" fill="#49454F">Purpose-built FIM model</text>
+
+  <!-- Right column: Use Cases -->
+  <rect x="442" y="55" width="330" height="280" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="442" y="55" width="330" height="4" rx="0" fill="#F4B400"/>
+
+  <text x="607" y="85" font-size="14" font-weight="700" fill="#F4B400" text-anchor="middle">Model Selection by Use Case</text>
+
+  <text x="462" y="125" font-size="12" font-weight="700" fill="#1C1B1F">💻 IDE Autocomplete (VS Code)</text>
+  <text x="462" y="145" font-size="11" fill="#49454F">→ Starcoder2 15B (FIM-optimized)</text>
+  <text x="462" y="161" font-size="11" fill="#49454F">→ or Qwen2.5-Coder 7B (via Continue.dev)</text>
+
+  <text x="462" y="200" font-size="12" font-weight="700" fill="#1C1B1F">🚀 Best Quality (Reasoning)</text>
+  <text x="462" y="220" font-size="11" fill="#49454F">→ Qwen2.5-Coder 32B (87% HumanEval)</text>
+  <text x="462" y="236" font-size="11" fill="#49454F">→ Needs 20+ GB RAM</text>
+
+  <text x="462" y="275" font-size="12" font-weight="700" fill="#1C1B1F">⚡ Balanced (8-16 GB Machines)</text>
+  <text x="462" y="295" font-size="11" fill="#49454F">→ Qwen2.5-Coder 7B or DeepSeek V2 Lite</text>
+  <text x="462" y="311" font-size="11" fill="#49454F">→ Strong HumanEval + FIM support</text>
+
+  <text x="400" y="355" font-size="10" fill="#79747E" text-anchor="middle">FIM = Fill-in-the-Middle. Required for IDE autocomplete patterns. Ollama: ollama run [model-name]</text>
+</svg>

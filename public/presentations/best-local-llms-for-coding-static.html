@@ -383,7 +383,8 @@
             h2: 'HumanEval Benchmark Comparison',
             line1: 'Qwen2.5-Coder 32B: 87%',
             line2: 'DeepSeek-Coder V2 Lite: 81% | Qwen2.5-Coder 7B: 72%',
-            tip: '💡 Higher HumanEval scores correlate with better real-world code generation quality.'
+            tip: '💡 Higher HumanEval scores correlate with better real-world code generation quality.',
+            image: '/images/best-local-llms-for-coding-humaneval-comparison-en.svg'
           },
           {
             type: 'table',
@@ -407,7 +408,8 @@
               '<strong>20+ GB RAM:</strong> ollama run qwen2.5-coder:32b — 87% HumanEval, highest quality.',
               '<strong>IDE autocomplete:</strong> Starcoder2 15B via Continue.dev — FIM-optimized.',
               '<strong>Already running Llama 3.1 8B?</strong> Skip downloading a separate model — equivalent to Qwen 7B for everyday tasks.'
-            ]
+            ],
+            image: '/images/best-local-llms-for-coding-hardware-selection-en.svg'
           },
           {
             type: 'list',
@@ -442,6 +444,12 @@
               '<strong>Use Qwen:</strong> For chat-style code generation and general coding tasks.',
               '<strong>Use Starcoder2:</strong> When integrating into VS Code or JetBrains IDEs via Continue.dev or Tabby.'
             ]
+          },
+          {
+            type: 'list',
+            h2: 'FIM Support & Use Case Guide',
+            image: '/images/best-local-llms-for-coding-fim-usecases-en.svg',
+            items: []
           },
           {
             type: 'numbered',
@@ -536,11 +544,15 @@
         case 'list':
           html = `<h2>${slide.h2}</h2>`;
           if (slide.intro) html += `<p class="subtitle">${slide.intro}</p>`;
-          html += '<ul style="text-align: left; font-size: 1.1em;">';
-          slide.items.forEach(item => {
-            html += `<li>${item}</li>`;
-          });
-          html += '</ul>';
+          if (slide.image) {
+            html += `<img src="${slide.image}" alt="${slide.h2}" style="max-width: 85%; height: 280px; object-fit: contain; margin: 12px 0;">`;
+          } else {
+            html += '<ul style="text-align: left; font-size: 1.1em;">';
+            slide.items.forEach(item => {
+              html += `<li>${item}</li>`;
+            });
+            html += '</ul>';
+          }
           html += footerLink;
           break;
 
@@ -565,9 +577,8 @@
         case 'comparison':
           html = `
             <h2>${slide.h2}</h2>
-            <p class="comparison-stat">${slide.line1}</p>
-            <p class="comparison-stat">${slide.line2}</p>
-            <p class="tip">${slide.tip}</p>
+            ${slide.image ? `<img src="${slide.image}" alt="${slide.h2}" style="max-width: 90%; height: 300px; object-fit: contain; margin: 20px 0;">` : ''}
+            ${!slide.image ? `<p class="comparison-stat">${slide.line1}</p><p class="comparison-stat">${slide.line2}</p><p class="tip">${slide.tip}</p>` : ''}
             ${footerLink}
           `;
           break;
