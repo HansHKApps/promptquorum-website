@@ -104,17 +104,34 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-1">Hans Kuepper</h3>
                   <p className="text-sm text-primary font-medium mb-4">Founder &amp; Developer, PromptQuorum</p>
+
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Background</h4>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    Independent developer building privacy-first tools for the AI era.
-                    PromptQuorum started from a simple frustration: when you need a reliable answer,
-                    querying one AI model is not enough. Different models hallucinate differently.
-                    The truth is in the overlap.
+                    Hans is based in Baden-Württemberg, Germany, near Heidelberg in the Kraichgau hill country.
+                    He is a multilingual independent developer who speaks German, English, French, and Russian fluently.
+                    Over the past two decades, he has lived and worked in more than 20 countries across Europe, Asia, and beyond,
+                    collaborating with distributed teams and building tools for global audiences.
                   </p>
+
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Why PromptQuorum</h4>
+                  <p className="text-text-secondary leading-relaxed mb-4">
+                    PromptQuorum started from a simple frustration: when you need a reliable answer,
+                    querying one AI model is not enough. Different models hallucinate differently, make different mistakes,
+                    and succeed on different types of reasoning. The truth is in the overlap — where five independent
+                    models agree on an answer, confidence is dramatically higher than when one model answers alone.
+                  </p>
+                  <p className="text-text-secondary leading-relaxed mb-4">
+                    Before building PromptQuorum, Hans spent years working with enterprise AI workflows and saw the same
+                    problem repeatedly: teams and organizations trusting single-model outputs for high-stakes decisions —
+                    hiring decisions, medical research summaries, legal analysis, risk assessments — without any verification
+                    layer or consensus mechanism. High-stakes decisions deserve better. PromptQuorum is the tool he wanted to exist.
+                  </p>
+
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Philosophy</h4>
                   <p className="text-text-secondary leading-relaxed mb-6">
-                    Before building PromptQuorum, I spent years working with enterprise AI workflows
-                    and saw the same problem repeatedly — teams trusting single-model outputs for
-                    high-stakes decisions without any verification layer. PromptQuorum is the tool
-                    I wanted to exist.
+                    Hans believes that privacy and user agency should be non-negotiable in AI tools. PromptQuorum is built
+                    on a simple principle: your prompts, your API keys, and your responses belong to you. The tool facilitates
+                    consensus and comparison across AI models, but nothing passes through PromptQuorum's servers. You are in control.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
