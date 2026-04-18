@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">按模型大小划分的硬件要求</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">可用的 7B 模型最低需要 16 GB RAM · 高质量 70B 模型需要 40+ GB</text>
+
+  <!-- Table Header -->
+  <rect x="20" y="60" width="760" height="25" rx="3" fill="#F5F5F5"/>
+  <text x="40" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">硬件</text>
+  <text x="280" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">最大模型</text>
+  <text x="500" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">质量级别</text>
+
+  <!-- Row 1: 8 GB -->
+  <rect x="20" y="85" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">笔记本电脑 (8 GB RAM，仅 CPU)</text>
+  <text x="280" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#6750A4">7B @ Q4_K_M</text>
+  <text x="500" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">低于 GPT-3.5</text>
+  <text x="40" y="118" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">速度慢，结果边际</text>
+
+  <!-- Row 2: 16 GB -->
+  <rect x="20" y="125" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">中档配置 (16 GB RAM)</text>
+  <text x="280" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">13B @ Q4_K_M</text>
+  <text x="500" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">≈ GPT-3.5</text>
+  <text x="40" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">适合大多数任务</text>
+
+  <!-- Row 3: 24 GB (GPU) -->
+  <rect x="20" y="165" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="182" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">高端 GPU (24 GB VRAM, RTX 4090)</text>
+  <text x="280" y="182" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">34B @ Q4_K_M</text>
+  <text x="500" y="182" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">≈ GPT-4</text>
+  <text x="40" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">成本: $1,600+</text>
+
+  <!-- Row 4: 40+ GB -->
+  <rect x="20" y="205" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">工作站 (40+ GB RAM 或 VRAM)</text>
+  <text x="280" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">70B (完整精度)</text>
+  <text x="500" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">≈ GPT-4o</text>
+  <text x="40" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Mac Studio 或多 GPU</text>
+
+  <!-- Bottom note -->
+  <rect x="20" y="260" width="760" height="45" rx="3" fill="#F5F5F5" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">💡 提示: 使用 Ollama 或 LM Studio 在下载前检查确切的 VRAM。为系统内存、上下文和安全边际添加 25% 开销。</text>
+
+  <!-- Footer -->
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/local-llm-limitations</text>
+</svg>
