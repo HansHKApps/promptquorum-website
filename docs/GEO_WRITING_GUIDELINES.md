@@ -1012,6 +1012,61 @@ After publishing all 5 language versions, monitor CTR differences in **Google Se
 
 ---
 
+### Rule 35: SERP Differentiation Check (Mandatory Before Publishing)
+
+**Before publishing any article, compare your title against the top 5 Google results for your target keyword. Your title must visually stand out in the SERP.**
+
+CTR is **relative** — you only win traffic if your title stands out among competing results. A good title in isolation is worthless if it blends in with others in the search results.
+
+#### Pre-Publication Checklist
+
+Before hitting publish, answer these questions for your title:
+
+- [ ] Does your title use a different angle than top 5 results?
+- [ ] Does it include a number when others don't (or vice versa)?
+- [ ] Does it include a constraint or specific context (RAM, cost, speed, year)?
+- [ ] Does it include a decision hook ("What Works", "vs", "Which", "Guide")?
+- [ ] Does it match the language-specific strategy (Rule 34)?
+
+If your title looks similar to 3+ results in the SERP:
+→ **Rewrite until yours stands out visually**
+
+#### Examples
+
+**❌ Weak (blends in):**
+All top 5 results say: "Local LLM Guide", "Local LLMs Explained", "Using Local LLMs"
+Your title: "Local LLM Guide" (identical to position #1)
+
+**✅ Strong (stands out):**
+All top 5 results say: "Local LLM Guide", "Local LLMs Explained", "Using Local LLMs"
+Your title: "Run Local LLMs on 8GB RAM (What Actually Works in 2026)" — includes:
+- Specific constraint (8GB RAM)
+- Decision hook ("What Actually Works")
+- Temporal relevance ("2026")
+- Different framing (action-oriented "Run" vs passive "Guide")
+
+#### Why This Matters
+
+**CTR is determined by relative positioning in SERP, not absolute title quality.**
+
+- A mediocre title that stands out visually → higher CTR
+- An excellent title that blends in → lower CTR
+- Google rewards higher CTR → better ranking → more impressions
+
+This creates a virtuous cycle: differentiation → higher CTR → better rankings → sustained traffic growth.
+
+#### Post-Publication Validation
+
+After 2+ weeks, check **Google Search Console** for:
+
+1. **Average CTR by query** — Is your article beating competitors on CTR for the same keyword?
+2. **Impression count** — Is your title being shown?
+3. **Position in SERP** — Are you in top 5?
+
+If CTR is <20% below your avg or <5% below competitors on similar queries, revisit Rule 35 and rewrite the title for better differentiation.
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -1384,6 +1439,7 @@ Use this checklist before committing any new or edited article:
 - [ ] All entity names are exact and consistent (GPT-4o, Claude 4.6 Sonnet, etc.)
 - [ ] Article mentions 5–7 distinct high-value entities
 - [ ] Title strategies adapted per language (not direct translations) — DE/EN/FR/JA/ZH each use language-native hooks (Rule 34)
+- [ ] Title visually differentiates from top 5 Google results (includes number, constraint, or decision hook) — Rule 35
 
 #### Top-of-Page Sequence
 - [ ] Lead Answer Block is bold, 25–50 words, answers H1 in first 10 words
@@ -1750,6 +1806,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | Lead answer block | Rule 31 | Rules 1, 22a (answer-first) |
 | CTR hook / SERP tension | Rule 33 | Rule 8c (top-of-page sequence) |
 | Multilingual titles | Rule 34 | Rule 2d (title tag optimization) |
+| SERP differentiation / title stand-out | Rule 35 | Rule 2d (title), Rule 34 (language strategy) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
