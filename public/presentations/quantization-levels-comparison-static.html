@@ -363,17 +363,6 @@
           },
           {
             type: 'list',
-            h2: 'Quality Loss by Benchmark',
-            intro: 'Measured on MMLU benchmark (57 reasoning tasks). Llama 3 70B baseline: 85.2% accuracy.',
-            items: [
-              '<strong>Q8:</strong> 85.1% accuracy (-0.1% loss) — imperceptible',
-              '<strong>Q5:</strong> 84.7% accuracy (-0.5% loss) — barely noticeable',
-              '<strong>Q4:</strong> 84.0% accuracy (-1.2% loss) — imperceptible for most tasks',
-              '<strong>Q3:</strong> 81.5% accuracy (-3.7% loss) — noticeable, avoid for reasoning'
-            ]
-          },
-          {
-            type: 'list',
             h2: 'When to Use Each Level',
             items: [
               '<strong>Q4 (default):</strong> Use for everything. Sweet spot of compression + quality.',
