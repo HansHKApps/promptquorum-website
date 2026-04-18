@@ -791,12 +791,13 @@ The order of elements after your H1 title determines what AI crawlers extract fi
 1. H1 title
 2. [Optional] Byline + credential signal (Rule 30.1)
 3. Lead Answer Block (Rule 31) — 25–50 words, bold, answers H1 in first 10 words
-4. Key Takeaways block (5–7 bullets, in a styled div with class="key-takeaways")
-5. [Optional] Quick Facts Block (Rule 27) — if 4+ numerical facts present
-6. Table of Contents (with anchor links)
-7. Last Updated date with <time datetime=""> element (Rule 11)
-8. Intro paragraph (2–3 sentences)
-9. First H2 heading (your first section)
+4. CTR-First Opening Block (Rule 33) — 1–2 lines, tension or contradiction, max 30 words
+5. Key Takeaways block (5–7 bullets, in a styled div with class="key-takeaways")
+6. [Optional] Quick Facts Block (Rule 27) — if 4+ numerical facts present
+7. Table of Contents (with anchor links)
+8. Last Updated date with <time datetime=""> element (Rule 11)
+9. Intro paragraph (2–3 sentences)
+10. First H2 heading (your first section)
 ```
 
 **Why this order matters:**
@@ -807,6 +808,7 @@ The order of elements after your H1 title determines what AI crawlers extract fi
 
 **Checklist:**
 - [ ] Lead Answer Block is bold, 25–50 words, answers H1 in first 10 words
+- [ ] CTR-First Opening Block is present (max 30 words, contains tension)
 - [ ] Key Takeaways block has 5–7 bullets and class="key-takeaways"
 - [ ] Quick Facts block present only if 4+ numerical facts
 - [ ] ToC includes all H2 anchors (use single `#` not `##` for markdown)
@@ -832,6 +834,39 @@ Plain text dates alone are insufficient — the `<time>` element with valid ISO 
 - After substantive content changes (new stats, new FAQ entry, rewritten section, added examples)
 - NOT for minor typo fixes or formatting changes
 - Update `dateModified` in schema to match
+
+---
+
+### Rule 33: CTR-First Opening Block (Mandatory)
+
+**Between the Lead Answer Block and Key Takeaways, include a 1–2 line SERP hook that creates tension.**
+
+This block is not a definition — it is a curiosity gap designed to make the reader continue past the fold. CTR is driven by tension and contradiction, not relevance alone.
+
+**Format:**
+```
+[Specific outcome] + [unexpected insight OR tradeoff]
+```
+
+**Example:**
+> "Most local LLM setups fail because of VRAM limits — not model quality. A 7B model can outperform a 13B model if quantized correctly."
+
+**Rules:**
+- Max 30 words
+- Must contain a tension, contradiction, or surprising fact
+- Must NOT repeat title wording
+- Must make the user think: "wait, what?"
+- Not bold (distinct from Lead Answer Block which is always bold)
+
+**When to use:** Every article except glossary entries and coming-soon stubs.
+
+**Why:** AI search snippets preview the first 2–3 sentences below the title. A tension hook in that position lifts CTR by surfacing the unexpected angle before readers click.
+
+**Checklist:**
+- [ ] Block is present between Lead Answer Block and Key Takeaways
+- [ ] Max 30 words
+- [ ] Contains tension, contradiction, or surprising stat
+- [ ] Does not repeat title wording
 
 ---
 
@@ -1209,6 +1244,7 @@ Use this checklist before committing any new or edited article:
 
 #### Top-of-Page Sequence
 - [ ] Lead Answer Block is bold, 25–50 words, answers H1 in first 10 words
+- [ ] CTR-First Opening Block present (max 30 words, tension/contradiction, no title repetition)
 - [ ] Key Takeaways block has 5–7 bullets and class="key-takeaways"
 - [ ] Quick Facts block present (if 4+ numerical facts)
 - [ ] Table of Contents with all H2 anchors (single `#` not `##`)
@@ -1569,6 +1605,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | Callout boxes | Rule 17 | Rule 26.8 (visual signals) |
 | Dates | Rule 11, 28 | Rule 8c (top-of-page sequence) |
 | Lead answer block | Rule 31 | Rules 1, 22a (answer-first) |
+| CTR hook / SERP tension | Rule 33 | Rule 8c (top-of-page sequence) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
