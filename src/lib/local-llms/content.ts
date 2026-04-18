@@ -5363,12 +5363,265 @@ print(response.choices[0].message.content)`,
       title: '2026年初心者向けローカルLLM比較：Llama 3.2・Phi-4 Mini・Gemma 3をRAMと品質で評価',
       seoTitle: 'Llama 3.2・Phi-4 Mini・Gemma 3：2026年初心者向けLLM比較',
       intro: '2026年の初心者向けローカルLLMベスト5は、Meta Llama 3.2 3B、Microsoft Phi-4 Mini、Google Gemma 3 2B、Mistral 7B v0.3、Qwen2.5 7Bです。すべて4〜8 GBのRAMで動作します。Llama 3.2 3Bは2.5 GB RAMで25〜45トークン/秒。Phi-4 Miniは2.5 GB RAMで68% MMLU・70% HumanEvalを達成。Gemma 3 2Bは1.7 GBで40〜60トークン/秒——このリストで最速です。',
+      leadAnswerBlock: '**2026年の初心者向けローカルLLMベスト5はLlama 3.2 3B、Phi-4 Mini 3.8B、Gemma 3 2B、Mistral 7B v0.3、Qwen2.5 7Bです。4〜8 GB RAMで動作し、Ollamaコマンド1つで起動できます。**',
       metaDescription: 'Llama 3.2 3B=2.5GB RAM、Phi-4 Mini=2.5GB、Gemma 3 2B=1.7GB。RAM・速度・品質で5モデルを比較。Ollamaコマンド付き。2026年4月。',
       publishDate: '2026-04-04',
       dateModified: '2026-04-17',
-      readTime: '9 min read',
+      readTime: '9分で読める',
       educationalLevel: 'Beginner',
+      audience: '消費者向けハードウェアでローカルLLMを初めて使用する初心者',
       primaryTerm: 'ローカルLLMモデル',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: '初心者向けモデルの選び方', anchor: '#how-to-choose-a-beginner-model' },
+        { label: '#1 Llama 3.2 3B — 総合的に最適な入門モデル', anchor: '#llama-3-2-3b' },
+        { label: '#2 Phi-4 Mini — 低RAM向けの最良モデル', anchor: '#phi-4-mini' },
+        { label: '#3 Gemma 3 2B — 最速の2Bモデル', anchor: '#gemma-3-2b' },
+        { label: '#4 Mistral 7B — 最良の7Bオールラウンダー', anchor: '#mistral-7b' },
+        { label: '#5 Qwen2.5 7B — 多言語対応に最適', anchor: '#qwen2-5-7b' },
+        { label: '全モデル比較表', anchor: '#full-comparison' },
+        { label: 'どのモデルから始めるべきか？', anchor: '#which-model-to-start-with' },
+        { label: '地域別のモデル選択', anchor: '#regional-context' },
+        { label: 'モデルのダウンロードと実行方法', anchor: '#how-to-download' },
+        { label: 'よくある初心者の失敗', anchor: '#common-mistakes' },
+        { label: '関連記事', anchor: '#related-reading' },
+        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: '参考文献', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '総合的に最良の入門モデル：**Llama 3.2 3B** — 2 GBダウンロード、4 GB RAMで動作、サイズに対して優れた指示追従性能。',
+            '低RAM（4 GB以下）に最適：**Phi-4 Mini 3.8B** — Microsoftの小型モデルで推論・コーディングに強い（68% MMLU、70% HumanEval、わずか2.5 GB RAM）。',
+            '最速の2Bモデル：**Gemma 3 2B** — Googleの更新モデルで128KコンテキストにてCPU上で40〜60トークン/秒（Gemma 2の8Kから大幅拡張）。',
+            '最良の7Bオールラウンダー：**Mistral 7B v0.3** — 信頼性が高く、Function Calling対応、Apache 2.0ライセンス。2026年4月時点でQwen2.5 7Bがコーディングで、Llama 3.1 8Bが英語推論で上回る。',
+            '多言語・コーディングに最適：**Qwen2.5 7B** — コーディングベンチマークでMistral 7Bを超え、29言語にネイティブ対応。',
+          ],
+        },
+        howToChoose: {
+          id: 'how-to-choose-a-beginner-model',
+          title: '初心者向けローカルLLMモデルの選び方',
+          content: [
+            '**ローカルLLMのモデル選択は3つの制約に依存します：利用可能なRAM、推論速度、タスクの種類——この優先順位で。**',
+            'パラメータ数（3B、7B、13B）がRAM要件の主な決定要因です。[4ビット量子化](/local-llms/llm-quantization-explained?lang=ja)——ほとんどのローカル推論ツールのデフォルト——では、パラメータ数に~0.5を掛けて必要なGB RAMを推定できます。Q4_K_Mの7Bモデルは約4.5 GBのRAMを必要とします。',
+            'ほとんどの初心者にとって、**Q4_K_M量子化の7Bモデル**が8 GB以上のマシンで品質・速度・RAM使用のバランスが最良です。4〜6 GB RAMのマシンでは3Bモデルが実用的な上限です。',
+          ],
+          image: '/images/best-beginner-local-llm-models-3b-vs-7b-ja.svg',
+          imageCaption: '3B vs 7Bパラメータのトレードオフ — 3Bモデルは2〜3 GB RAMで25〜60トークン/秒；7Bモデルは4.5〜5 GB RAMで10〜20トークン/秒だが、複雑な推論や長文書で大幅に品質が高い。',
+        },
+        llama32: {
+          id: 'llama-3-2-3b',
+          title: '#1 Meta Llama 3.2 3B — 総合的に最適な入門モデル',
+          content: [
+            '**Meta Llama 3.2 3Bはほとんどのユーザーにとって最良の出発点です。** 5分以内にダウンロードでき、4 GB RAMのどのマシンでも動作し、以前の3Bモデルより明らかに優れた指示追従性能を発揮します。128Kコンテキストウィンドウを使用——同サイズモデルより大幅に広い。',
+            '8コアのノートPC CPUでのテストでは、Llama 3.2 3Bは25〜45トークン/秒を生成します。Apple M3 Proでは70〜90トークン/秒に達します。要約・Q&A・簡単なコーディングタスクには十分な品質ですが、多段階推論では7Bモデルに及びません。',
+          ],
+          rows: [
+            { 'スペック': 'パラメータ数', '値': '3B' },
+            { 'スペック': '必要RAM', '値': '~2.5 GB (Q4_K_M)' },
+            { 'スペック': 'ダウンロードサイズ', '値': '~2 GB' },
+            { 'スペック': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { 'スペック': 'CPU速度（8コアノートPC）', '値': '25〜45トークン/秒' },
+            { 'スペック': 'Ollamaコマンド', '値': 'ollama run llama3.2:3b' },
+          ],
+          columns: ['スペック', '値'],
+        },
+        phi35: {
+          id: 'phi-4-mini',
+          title: '#2 Microsoft Phi-4 Mini 3.8B — 低RAM向けの最良モデル',
+          content: [
+            '**Phi-4 MiniはMicrosoftの小規模での推論・コーディングタスク向けに最適化されたコンパクトモデルです。** 68% MMLU・70% HumanEvalを達成——問題解決に特化した高品質合成データによる訓練のおかげで、多くの2024年製7Bモデルを超えます。',
+            '4〜6 GB RAMで品質が重要なマシンに推奨されるモデルです。Phi-4 MiniはRAM 2.5 GB使用（Phi-3.5 Miniの3 GBから削減）で、4 GBマシンでも使いやすくなっています。',
+          ],
+          rows: [
+            { 'スペック': 'パラメータ数', '値': '3.8B' },
+            { 'スペック': '必要RAM', '値': '~2.5 GB (Q4_K_M)' },
+            { 'スペック': 'ダウンロードサイズ', '値': '~2.3 GB' },
+            { 'スペック': 'MMLUスコア', '値': '68%' },
+            { 'スペック': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { 'スペック': 'CPU速度（8コアノートPC）', '値': '30〜50トークン/秒' },
+            { 'スペック': 'Ollamaコマンド', '値': 'ollama run phi4-mini' },
+          ],
+          columns: ['スペック', '値'],
+        },
+        gemma2: {
+          id: 'gemma-3-2b',
+          title: '#3 Google Gemma 3 2B — 最速の2Bモデル',
+          content: [
+            '**Gemma 3 2BはGoogleの更新された2Bモデルで、CPUのみの推論に最も高速な選択肢です。** ミッドレンジのノートPC CPUで40〜60トークン/秒を生成——同ハードウェアでLlama 3.2 3Bの約2倍の速度。Gemma 3は前バージョンを大幅に改善：コンテキストウィンドウが8K（Gemma 2）から128Kトークンに拡大し、文書タスクの主要な制限が解消されました。',
+            'Gemma 3 2Bは応答速度が最優先の場合、≤4 GB RAMのマシン、またはより大きなモデルをダウンロードする前にローカルLLMセットアップを確認するテストモデルとして適しています。',
+          ],
+          rows: [
+            { 'スペック': 'パラメータ数', '値': '2B' },
+            { 'スペック': '必要RAM', '値': '~1.7 GB (Q4_K_M)' },
+            { 'スペック': 'ダウンロードサイズ', '値': '~1.6 GB' },
+            { 'スペック': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { 'スペック': 'CPU速度（8コアノートPC）', '値': '40〜60トークン/秒' },
+            { 'スペック': 'Ollamaコマンド', '値': 'ollama run gemma3:2b' },
+          ],
+          columns: ['スペック', '値'],
+        },
+        mistral7b: {
+          id: 'mistral-7b',
+          title: '#4 Mistral 7B v0.3 — 最良の7Bオールラウンダー',
+          content: [
+            '**Mistral 7B v0.3は明確な指示フォーマットとFunction Calling対応を持つ信頼性の高い汎用7Bモデルです。** 2026年4月時点でQwen2.5 7Bがコーディングベンチマークで、Llama 3.1 8Bが英語推論で上回っていますが——Mistral AIがApache 2.0ライセンスのフランス企業であるため、EUデータ主権の文脈で依然として有力な選択肢です。',
+            '8 GB RAMのマシンでは、Mistral 7Bは3Bモデルからの自然なステップアップです。長いテキスト、複雑な指示、多段階会話をどの3Bモデルよりも確実に処理します。',
+          ],
+          rows: [
+            { 'スペック': 'パラメータ数', '値': '7B' },
+            { 'スペック': '必要RAM', '値': '~4.5 GB (Q4_K_M)' },
+            { 'スペック': 'ダウンロードサイズ', '値': '~4.1 GB' },
+            { 'スペック': 'コンテキストウィンドウ', '値': '32Kトークン' },
+            { 'スペック': 'CPU速度（8コアノートPC）', '値': '10〜20トークン/秒' },
+            { 'スペック': 'Ollamaコマンド', '値': 'ollama run mistral' },
+          ],
+          columns: ['スペック', '値'],
+        },
+        qwen25: {
+          id: 'qwen2-5-7b',
+          title: '#5 Qwen2.5 7B — 多言語・コーディングに最適',
+          content: [
+            '**Qwen2.5 7BはHumanEval（コーディング）とMBPPベンチマークでMistral 7Bを超え、中国語・日本語・韓国語・アラビア語・主要欧州語を含む29言語にネイティブ対応しています。** 非英語ワークフローやコーディング主体のユースケースに推奨される選択肢です。',
+            'Qwen2.5 7Bは128Kコンテキストウィンドウ（Mistral 7Bの32Kと比較）を使用し、JSONモードによる構造化出力をサポートします。モデルはInstructバージョンとBaseバージョンで利用可能——チャット用途には必ずInstructバージョンを使用してください。詳細なベンチマークデータは[Qwen vs Llama vs Mistralベンチマーク比較](/local-llms/qwen-vs-llama-vs-mistral?lang=ja)を参照。',
+          ],
+          rows: [
+            { 'スペック': 'パラメータ数', '値': '7B' },
+            { 'スペック': '必要RAM', '値': '~4.7 GB (Q4_K_M)' },
+            { 'スペック': 'ダウンロードサイズ', '値': '~4.4 GB' },
+            { 'スペック': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { 'スペック': 'CPU速度（8コアノートPC）', '値': '10〜18トークン/秒' },
+            { 'スペック': 'Ollamaコマンド', '値': 'ollama run qwen2.5:7b' },
+          ],
+          columns: ['スペック', '値'],
+        },
+        fullComparison: {
+          id: 'full-comparison',
+          title: 'RAM・速度・コンテキストウィンドウ別の最優秀モデルは？',
+          rows: [
+            { 'モデル': 'Llama 3.2 3B', 'RAM': '2.5 GB', '速度（CPU）': '25〜45トークン/秒', 'コンテキスト': '128K', '最適用途': '汎用・最初のモデル' },
+            { 'モデル': 'Phi-4 Mini 3.8B', 'RAM': '2.5 GB', '速度（CPU）': '30〜50トークン/秒', 'コンテキスト': '128K', '最適用途': '推論・コーディング・低RAM' },
+            { 'モデル': 'Gemma 3 2B', 'RAM': '1.7 GB', '速度（CPU）': '40〜60トークン/秒', 'コンテキスト': '128K', '最適用途': '速度・超低RAM' },
+            { 'モデル': 'Mistral 7B v0.3', 'RAM': '4.5 GB', '速度（CPU）': '10〜20トークン/秒', 'コンテキスト': '32K', '最適用途': 'EUデプロイ・Function Calling・Apache 2.0' },
+            { 'モデル': 'Qwen2.5 7B', 'RAM': '4.7 GB', '速度（CPU）': '10〜18トークン/秒', 'コンテキスト': '128K', '最適用途': '多言語・コーディング' },
+          ],
+          columns: ['モデル', 'RAM', '速度（CPU）', 'コンテキスト', '最適用途'],
+          image: '/images/best-beginner-local-llm-models-comparison-table-ja.svg',
+          imageCaption: '5つの初心者向けローカルLLMをRAM・CPU推論速度・コンテキストウィンドウ・ユースケースで比較——すべてOllama経由Q4_K_M量子化でベンチマーク。Llama 3.2 3Bが推奨の最初のモデル；Gemma 3 2Bは1.7 GBで最速。',
+        },
+        whichToStart: {
+          id: 'which-model-to-start-with',
+          title: 'どのモデルから始めるべきか？',
+          items: [
+            '**4 GB RAM以下**：`ollama run gemma3:2b` — 最速ダウンロード、最小メモリ使用、128Kコンテキスト。基本タスクに許容できる品質。',
+            '**8 GB RAM、最初のモデル**：`ollama run llama3.2:3b` — 最初の体験に品質とRAMの最良バランス。',
+            '**4〜6 GB RAM、推論/コーディング**：`ollama run phi4-mini` — 68% MMLU、70% HumanEval（わずか2.5 GB RAM）。構造化タスクでLlama 3.2 3Bより優秀。',
+            '**8 GB RAM、本格的な使用**：`ollama run mistral` または `ollama run qwen2.5:7b` — 長文書・複雑な指示向けのステップアップ。',
+            '**主にコーディングタスク**：`ollama run qwen2.5:7b` — このリストで最高のHumanEvalスコア；Python・JavaScript・SQLに強い。',
+            '**日本語・多言語**：`ollama run qwen2.5:7b` — 29言語のネイティブサポート、翻訳オーバーヘッドなし。日本語テキストでのトークン効率が30〜40%向上。',
+          ],
+          image: '/images/best-beginner-local-llm-models-ram-decision-ja.svg',
+          imageCaption: 'RAMに基づくモデル選択ガイド — ≤4 GB RAMでGemma 3 2B、8 GBでLlama 3.2 3B（最初のモデルとして最適）、8 GB+で多言語・コーディング用途にQwen2.5 7B。すべて手動設定なしで`ollama run`で起動。',
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '地域に応じたモデル選択は？',
+          content: [
+            '**日本（METI）**：日本語ワークフローには、Qwen2.5 7Bが正しい最初のモデルです——ネイティブ日本語トークン化によりLlamaやMistralより30〜40%優れたトークン効率を実現。コマンド：`ollama run qwen2.5:7b`。2024年のMETI AIガバナンスガイドラインでは、モデル名とバージョンの文書化が求められています——ここに記載された5つのモデルすべてに、これを満たすバージョン付きOllamaタグがあります。',
+            '**東アジア（データ主権）**：中国語・韓国語ワークフローにもQwen2.5 7Bが推奨されます。29言語のネイティブサポートにより、アジア太平洋地域全体で最も効率的な多言語モデルです。Ollama経由のローカル推論はデータをローカルに保持するため、APAC地域のデータ越境規制要件を満たします。',
+            '**グローバル（EU・その他）**：EU組織ではMistral 7B v0.3（フランス、Apache 2.0）がGDPRコンプライアンス文書化で最も簡単です。英語中心のワークフローにはLlama 3.2 3B（Meta、USA）が広く使用されています。5つのモデルすべてがOllama経由のローカル推論で外部サーバーへのデータ送信なしに動作します。',
+          ],
+        },
+        nextSteps: {
+          id: 'how-to-download',
+          title: 'これらのモデルをどうやってダウンロード・実行するか？',
+          content: '**5つのモデルすべてがOllamaコマンド1つでインストールできます——手動設定は不要です。** セットアップは[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja)を参照し、初回実行の手順は[初めてのローカルLLM実行](/local-llms/run-first-local-llm?lang=ja)をご覧ください。RAMが限られたノートPCで実行する場合は、[ノートPCでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja)で量子化と制約されたハードウェアのパフォーマンスチューニングを参照。',
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'ローカルLLM選択で初心者がよくやる失敗は？',
+          items: [
+            'パラメータ数だけでモデルサイズを選ぶ——4ビット量子化の7Bは、量子化が不適切な13Bより高性能なことがある。',
+            'GPU VRAMの量子化オーバーヘッドを考慮しない——モデルはファイルサイズより10〜15%多いVRAMを必要とする場合がある。',
+            '新しい量子化（Q4_K_M）が同サイズで優れた品質を提供するのに、古い量子化（Q3_K_S）を使用する。',
+            '**Mistral 7Bをデフォルトの7Bモデルに選ぶ：** Mistral 7B v0.3は2023〜2024年のコミュニティ標準でしたが、現在はコーディングでQwen2.5 7Bに、英語タスクでLlama 3.1 8Bに同じRAM要件で上回られています。ツールがデフォルトで`ollama run mistral`を使う場合、RAMを増やさずに良い結果を得るために`ollama run qwen2.5:7b`または`ollama run llama3.1:8b`に切り替えてください。',
+            '**利用可能なRAMを確認せずにモデルをダウンロードする：** 利用可能なRAMを超えるモデルをプルすると、Ollamaはディスクスワップを伴う低速なCPU推論にフォールバックし——時に1トークン/秒未満。7Bを超えるモデルをプルする前に、必ず`free -h`（Linux/macOS）を実行するかタスクマネージャー（Windows）を確認してください。',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連記事',
+          items: [
+            '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) — インストールと最初のモデルダウンロード',
+            '[初めてのローカルLLM実行](/local-llms/run-first-local-llm?lang=ja) — インストール後の入門ガイド',
+            '[ノートPCでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja) — RAMと熱管理の最適化',
+            '[ローカルLLMセットアップのトラブルシューティング](/local-llms/troubleshooting-local-llm-setup?lang=ja) — よくある問題のデバッグ',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=ja) — 7B・13B・70Bの3モデルファミリー全体の詳細ベンチマーク比較',
+            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — 3Bから7B・13Bモデルへのアップグレードに必要なGPUとRAM要件',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: '2026年に初心者向けの最良のローカルLLMモデルは何ですか？',
+              a: 'ほとんどのユーザーにはLlama 3.2 3B——4 GB RAMのどのマシンでも動作し、5分以内にダウンロードでき、優れた指示追従出力を提供します。8 GB RAMにはQwen2.5 7Bがより良いコーディングと多言語性能を提供。最低RAMにはGemma 3 2Bが1.7 GBでCPUで40〜60トークン/秒で動作。',
+            },
+            {
+              q: 'ローカルLLMを実行するために必要な最低RAMはどれくらいですか？',
+              a: '有用な出力の実用的な最低値はQ4_K_M量子化の3Bモデルで4 GB RAMです。8 GB RAMで7Bモデルが解放され、複雑なタスクで明らかに優れた結果を生成します。',
+            },
+            {
+              q: 'Ollamaでこれらのモデルをどうやって実行しますか？',
+              a: 'ollama.comからOllamaをインストールし、推奨入門モデルのために`ollama run llama3.2:3b`を実行します。Ollamaは最初の実行時にモデルをダウンロードします。ここに記載された5つのモデルはすべてOllamaライブラリにあります。',
+            },
+            {
+              q: 'Llama 3.2 3Bは日常的なタスクに十分ですか？',
+              a: '可：要約、シンプルなQ&A、基本的なコード説明、会話チャット。不可：多段階推論、複雑なコーディング、長形式の構造化文章作成。それらのタスクには8 GB RAMでLlama 3.1 8BまたはQwen2.5 7Bにアップグレード。',
+            },
+            {
+              q: '3Bモデルと7Bモデルの違いは何ですか？',
+              a: '7Bモデルは複雑な指示と推論で明らかに優れた出力を生成します。3Bモデルは約半分のRAMを使用し、2〜3倍速く動作します。選択はほぼ常に利用可能なRAMで決まります——4〜6 GBマシンには3B、8 GBマシンには7B。',
+            },
+            {
+              q: 'コーディングタスクに最適なモデルはどれですか？',
+              a: 'Qwen2.5 7Bが5モデルの中でHumanEvalをリード。さらに良いコーディングには専用コードバリアントを使用：`ollama run qwen2.5-coder:7b`。4〜6 GB RAMに限定される場合はPhi-4 Mini 3.8Bが最良のコーディングモデル（2.5 GB RAMで70% HumanEval）。',
+            },
+            {
+              q: '日本語や非英語言語にはどのモデルを使うべきですか？',
+              a: 'Qwen2.5 7Bは中国語・日本語・韓国語・アラビア語・主要欧州語を含む29言語をネイティブサポートします。日本語テキストをLlamaやMistralより効率的に処理し、トークン効率が30〜40%向上します。',
+            },
+            {
+              q: 'これらのモデルは個人データに使っても安全ですか？',
+              a: 'はい——5つのモデルすべてが完全にあなたのハードウェア上で動作します。プロンプトテキスト・コンテキスト・出力は外部サーバーに送信されません。ローカル推論は機密データに対してクラウドAPIより本質的にプライバシーが高いです。',
+            },
+            {
+              q: 'これらのモデルのダウンロードにどれくらいかかりますか？',
+              a: '100 Mbps接続で：Gemma 3 2B（1.6 GB）約2分。Llama 3.2 3B（2 GB）約3分。Phi-4 Mini（2.3 GB）約3分。Mistral 7B（4.1 GB）約5分。モデルは初回ダウンロード後にキャッシュされ——次回の起動は数秒で開始。',
+            },
+            {
+              q: '同じマシンで複数のモデルを実行できますか？',
+              a: 'はい——5つすべてがディスク上に同時に共存できます。5つすべてをインストールする場合は15〜20 GBを計画してください。Ollamaは一度に1つのモデルをロードし、5分の非アクティブ後にアンロードします。',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '参考文献',
+          items: [
+            '**Meta AI. (2024). "Llama 3.2 Model Card."** https://llama.meta.com/ — Llama 3.2 3Bと1Bモデルの公式仕様とベンチマーク。',
+            '**Microsoft. (2025). "Phi-4 Mini Technical Report."** https://huggingface.co/microsoft/Phi-4-mini-instruct — Phi-4 Miniのベンチマークデータ（68% MMLU、70% HumanEval）。',
+            '**Google DeepMind. (2025). "Gemma 3 Model Card."** https://ai.google.dev/gemma/docs/core — 128Kコンテキストウィンドウ更新を含むGemma 3 2Bの仕様と性能。',
+            '**Ollama. (2026). "Ollama Model Library."** https://ollama.com/library — Ollamaモデルタグ・サイズ・プルコマンドの正規ソース。',
+            '**Hugging Face. (2026). "Open LLM Leaderboard."** https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard — すべてのオープンモデルのMMlu・HumanEval・MATHベンチマークスコア。',
+            '**Mistral AI. (2024). "Mistral 7B v0.3 Release Notes."** https://mistral.ai/news/announcing-mistral-7b/ — 技術仕様とApache 2.0ライセンスの詳細。',
+            '**Alibaba DAMO Academy. (2024). "Qwen2.5 Technical Report." arXiv:2412.15115.** https://arxiv.org/abs/2412.15115 — Qwen2.5 7Bの多言語ベンチマークデータとアーキテクチャの詳細。',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -5378,13 +5631,64 @@ print(response.choices[0].message.content)`,
         'description': 'Llama 3.2 3B=2.5GB RAM、Phi-4 Mini=2.5GB、Gemma 3 2B=1.7GB。RAM・速度・品質で5モデルを比較。Ollamaコマンド付き。2026年4月。',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-17',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
+        'about': [
+          { '@type': 'Thing', 'name': 'ローカルLLMモデル' },
+          { '@type': 'Thing', 'name': 'Llama 3.2' },
+          { '@type': 'Thing', 'name': 'Phi-4 Mini' },
+          { '@type': 'Thing', 'name': 'Gemma 3' },
+          { '@type': 'Thing', 'name': 'Qwen2.5' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'LLMベンチマーク比較2026' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
       gammaDescription: 'インタラクティブ14スライドデッキ：2026年初心者向けローカルLLMベスト5 — Llama 3.2 3B（2.5 GB RAM）、Phi-4 Mini（2.5 GB）、Gemma 3 2B（1.7 GB）、Mistral 7B（4.5 GB）、Qwen2.5 7B（4.7 GB）。モデル比較表、RAM決定ガイド、地域別コンプライアンス、最初のステップを網羅。PDFを初心者ローカルLLMリファレンスカードとしてダウンロード。',
-      sections: {},
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'ja',
+        'name': '2026年初心者向けローカルLLMベスト5',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Meta Llama 3.2 3B', 'description': '2.5 GB RAM。25〜45トークン/秒CPU。128Kコンテキスト。総合的に最良の入門モデル。ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Microsoft Phi-4 Mini 3.8B', 'description': '2.5 GB RAM。30〜50トークン/秒CPU。128Kコンテキスト。68% MMLU、70% HumanEval。低RAMで最良の推論モデル。ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Google Gemma 3 2B', 'description': '1.7 GB RAM。40〜60トークン/秒CPU。128Kコンテキスト。最速の2Bモデル。ollama run gemma3:2b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral 7B v0.3', 'description': '4.5 GB RAM。10〜20トークン/秒CPU。32Kコンテキスト。EU出自、Apache 2.0。ollama run mistral' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Qwen2.5 7B', 'description': '4.7 GB RAM。10〜18トークン/秒CPU。128Kコンテキスト。最良のコーディング+多言語対応。ollama run qwen2.5:7b' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          { '@type': 'Question', 'name': '2026年に初心者向けの最良のローカルLLMモデルは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ほとんどのユーザーにはLlama 3.2 3B——4 GB RAMのどのマシンでも動作し、5分以内にダウンロードできます。8 GB RAMにはQwen2.5 7Bが多言語・コーディングで優秀。Gemma 3 2Bは1.7 GBで最低RAMで動作します。' } },
+          { '@type': 'Question', 'name': 'ローカルLLMに必要な最低RAMはどれくらいですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M量子化の3Bモデルで4 GB RAMが実用的な最低値。8 GB RAMで7Bモデルが解放され、複雑なタスクで明らかに優れた結果を生成します。' } },
+          { '@type': 'Question', 'name': 'Ollamaでこれらのモデルをどうやって実行しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ollama.comからOllamaをインストールし、`ollama run llama3.2:3b`を実行します。Ollamaは最初の実行時にモデルをダウンロードします。5つのモデルはすべてOllamaライブラリにあります。' } },
+          { '@type': 'Question', 'name': 'Llama 3.2 3Bは日常的なタスクに十分ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可：要約、シンプルなQ&A、基本的なコード説明、会話チャット。不可：多段階推論、複雑なコーディング、長形式文章作成。それらには8 GB RAMでLlama 3.1 8BかQwen2.5 7Bに。' } },
+          { '@type': 'Question', 'name': '3Bモデルと7Bモデルの違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '7Bモデルは複雑な指示で明らかに優れた出力を生成します。3Bモデルは約半分のRAMで2〜3倍速く動作します。選択はほぼ常にRAMで決まります——4〜6 GBには3B、8 GBには7B。' } },
+          { '@type': 'Question', 'name': 'コーディングタスクに最適なモデルはどれですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5 7BがHumanEvalをリード。さらに良いコーディングには`ollama run qwen2.5-coder:7b`。4〜6 GB RAMに限定ならPhi-4 Mini 3.8Bが最良（2.5 GB RAMで70% HumanEval）。' } },
+          { '@type': 'Question', 'name': '日本語ワークフローにはどのモデルを使うべきですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5 7Bが日本語ワークフローに最適——ネイティブ日本語トークン化でLlamaやMistralより30〜40%優れたトークン効率。コマンド：`ollama run qwen2.5:7b`。' } },
+          { '@type': 'Question', 'name': 'これらのモデルは個人データに使っても安全ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい——すべてのモデルが完全にあなたのハードウェア上で動作します。データは外部サーバーに送信されません。ローカル推論はクラウドAPIより本質的にプライバシーが高いです。' } },
+          { '@type': 'Question', 'name': 'ダウンロードにどれくらいかかりますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '100 Mbps接続で：Gemma 3 2B（1.6 GB）約2分。Llama 3.2 3B（2 GB）約3分。Phi-4 Mini（2.3 GB）約3分。Mistral 7B（4.1 GB）約5分。初回後はキャッシュされ次回から数秒で起動。' } },
+          { '@type': 'Question', 'name': '同じマシンで複数のモデルを実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい——5つすべてがディスク上に同時に共存可能。すべてインストールする場合は15〜20 GBを計画。Ollamaは一度に1つのモデルをロードし、5分の非アクティブ後にアンロード。' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '初心者向けローカルLLMのダウンロードと実行方法',
+        'inLanguage': 'ja',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Ollamaをインストール', 'text': 'ollama.comからOllamaをインストール——macOS・Windows・Linuxに対応した単一インストーラー。手動設定は不要です。' },
+          { '@type': 'HowToStep', 'name': 'RAMに応じてモデルを選択', 'text': '4 GB RAM未満：ollama run gemma3:2b。8 GB RAM、最初のモデル：ollama run llama3.2:3b。4〜6 GB RAM、推論重視：ollama run phi4-mini。8 GB+ コーディング/多言語：ollama run qwen2.5:7b。' },
+          { '@type': 'HowToStep', 'name': 'モデルをプルして実行', 'text': 'ターミナルで選択したコマンドを実行します。Ollamaは最初の実行時にモデルをダウンロードし、インタラクティブなチャットセッションを自動的に開始します。' },
+        ],
+      },
     },
     zh: {
       theme: '入门',
@@ -6949,28 +7253,43 @@ sections: {
           ],
         },
       },
-            schema: {
+      schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'What Are Local LLMs? How AI Models Run on Your Hardware',
-        'description': 'Local LLMs run AI models on your own hardware -- no internet required. Learn what they are, how they work, and when to use them. Guide for 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/what-are-local-llms',
+        'headline': 'Fix Local LLM Errors in 2026: 10 Common Problems in Ollama, LM Studio, and vLLM',
+        'description': 'Fix out-of-memory crashes, GPU not detected, connection refused, and garbled output in Ollama and LM Studio. Exact commands: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
+        'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'dateModified': '2026-04-16',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
-          { '@type': 'Thing', 'name': 'local LLM' },
-          { '@type': 'Thing', 'name': 'Ollama' },
-          { '@type': 'Thing', 'name': 'GGUF format' },
-          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'Ollama troubleshooting' },
+          { '@type': 'Thing', 'name': 'LM Studio errors' },
+          { '@type': 'Thing', 'name': 'local LLM out of memory' },
+          { '@type': 'Thing', 'name': 'OLLAMA_GPU_LAYERS' },
+          { '@type': 'Thing', 'name': 'GPU not detected local LLM' },
         ],
+        'proficiencyLevel': 'Beginner',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Debug Local LLM Setup Errors',
+        'inLanguage': 'en',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Fix out-of-memory errors', 'text': 'Switch to a smaller quantization (Q4_K_M) or smaller model. Check RAM with free -h.' },
+          { '@type': 'HowToStep', 'name': 'Enable GPU detection', 'text': 'Update drivers (NVIDIA 525+), set OLLAMA_GPU_LAYERS=999, verify with nvidia-smi.' },
+          { '@type': 'HowToStep', 'name': 'Speed up slow inference', 'text': 'Confirm GPU activity with ollama ps, reduce model size or use Q4_K_M quantization.' },
+          { '@type': 'HowToStep', 'name': 'Fix connection refused', 'text': 'Start Ollama with ollama serve or restart the systemd service. Verify with curl localhost:11434.' },
+          { '@type': 'HowToStep', 'name': 'Resolve model not found', 'text': 'List models with ollama list, pull missing models with ollama pull, verify exact names/tags.' },
+        ]
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -6979,56 +7298,58 @@ sections: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'What is the difference between a local LLM and a cloud AI API?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A local LLM runs on your own hardware -- your CPU or GPU. A cloud AI API (OpenAI, Anthropic, Google) processes your prompts on remote servers. Local LLMs are private and free after setup; cloud APIs charge per token and send your data to external servers.' }
+            'name': 'What is the most common error in local LLMs?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'The out-of-memory (OOM) error is the most common for new users. It means the model needs more RAM than is available. Switch to a smaller quantization (Q4_K_M) or a smaller model (3B instead of 7B).' }
           },
           {
             '@type': 'Question',
-            'name': 'Can I run a local LLM without a GPU?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. CPU inference works with 8GB+ RAM. A 7B model at Q4 quantization runs at 5-15 tokens/sec on a modern laptop CPU. GPU acceleration (NVIDIA CUDA, AMD ROCm, Apple Metal) boosts this to 30-100 tokens/sec.' }
+            'name': 'How do I enable GPU for Ollama on NVIDIA?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Update the NVIDIA driver to 525+ on Linux or 452+ on Windows. Set OLLAMA_GPU_LAYERS=999. Run nvidia-smi to confirm GPU is detected. Ollama auto-detects CUDA on restart.' }
           },
           {
             '@type': 'Question',
-            'name': 'Where do I download local LLM models?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Three main sources: Ollama library (ollama.com/library) for one-command downloads, Hugging Face (huggingface.co) for the full range of GGUF models, and LM Studio\'s built-in model browser which searches Hugging Face directly.' }
+            'name': 'Why is my inference so slow?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'You are running on CPU only. Check with ollama ps while loading a model. Enable GPU with OLLAMA_GPU_LAYERS=999, reduce model size (7B instead of 13B), or use faster quantization (Q4_K_M).' }
           },
           {
             '@type': 'Question',
-            'name': 'Is running a local LLM private?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- inference is fully local. However, some apps built on local LLMs may send data externally. Always check whether the interface or plugin layer has telemetry or cloud sync enabled.' }
+            'name': 'How do I fix the "Connection Refused" error in Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama is not running. Start it with ollama serve in the terminal (Mac/Linux) or restart the Ollama app (Windows). Verify: curl http://localhost:11434 should return "Ollama is running".' }
           },
           {
             '@type': 'Question',
-            'name': 'What hardware do I need for a local LLM?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum: 8GB RAM for a 7B model at Q4 quantization. Recommended: 16GB RAM and a GPU with 8GB+ VRAM for comfortable inference. Apple Silicon Macs (M1/M2/M3) run local LLMs efficiently using unified memory.' }
+            'name': 'What causes garbled or repetitive output from a local LLM?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Wrong model prompt template. You are using a base model without Instruct format. Switch to the Instruct variant (e.g. llama3.1:8b-instruct) or apply the correct chat template in LM Studio.' }
           },
           {
             '@type': 'Question',
-            'name': 'What is GGUF format?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF (GPT-Generated Unified Format) is the standard file format for quantized local LLMs. Developed by the llama.cpp project, it stores model weights in a compact format that supports multiple quantization levels (Q4_K_M, Q5_K_M, Q8_0).' }
+            'name': 'How do I fix a corrupted model file in Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Delete and re-download: ollama rm modelname && ollama pull modelname. Corruption is caused by interrupted downloads. The sha256 hash is verified on pull.' }
           },
           {
             '@type': 'Question',
-            'name': 'What is quantization in local LLMs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Quantization reduces the numerical precision of model weights from 16-bit to 4-bit or 8-bit, shrinking file size and VRAM requirements by 50-75%. Q4_K_M is the standard: a 7B model shrinks from ~14GB (FP16) to ~4.5GB, with about 1% quality loss.' }
+            'name': 'Why is my model running on CPU even though I have a GPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'The CUDA driver is not installed or not detected. Run nvidia-smi to check. If GPU is missing, reinstall the NVIDIA driver. Then restart Ollama -- it should auto-detect CUDA and show "GPU layers: 35" in logs.' }
           },
           {
             '@type': 'Question',
-            'name': 'What is llama.cpp?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp is an open-source C++ inference library that runs quantized LLMs on CPU and GPU. It is the engine used by Ollama, LM Studio, GPT4All, and most other local LLM tools. It supports GGUF format, NVIDIA CUDA, AMD ROCm, and Apple Metal.' }
+            'name': 'What does "CUDA error: out of memory" mean?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Your GPU VRAM is full. The model does not fit the selected quantization. Fix: use a smaller model, switch to Q4_K_M (lower quantization), or offload some layers to CPU with --n-gpu-layers 20.' }
           },
           {
             '@type': 'Question',
-            'name': 'Can local LLMs match GPT-4 quality?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not yet for the most demanding tasks. As of April 2026, the best consumer-grade local model (Llama 3.3 70B at Q4) approaches GPT-4 Turbo on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than GPT-4o.' }
+            'name': 'What does "port already in use" mean for Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Another process is using port 11434. Find it: lsof -i :11434 (Mac/Linux) or netstat -ano | findstr 11434 (Windows). Kill the process or change OLLAMA_HOST=0.0.0.0:11435 to use a different port.' }
           },
           {
             '@type': 'Question',
-            'name': 'What is the difference between a local LLM and a fine-tuned model?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A local LLM is any model run on your own hardware. A fine-tuned model is a base model retrained on specific data to change its behavior. Fine-tuned models can also run locally via Ollama or llama.cpp using LoRA adapters or merged GGUF files.' }
+            'name': 'Why does my local LLM stop responding mid-answer?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Context length limit reached. The model hit max_tokens. Increase num_ctx in Ollama (e.g. OLLAMA_NUM_CTX=4096) or set a higher max_tokens in LM Studio. Also check RAM pressure -- swap usage interrupts inference.' }
           }
         ]
       },
+      gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
+      gammaDescription: 'The following presentation covers: the 10 most common local LLM setup errors (out-of-memory, GPU not detected, slow inference, connection refused, garbled output), RAM requirements for 3B–14B models at Q4_K_M and Q8_0 quantization, a 5-step debug process, and Ollama commands for each fix. Download the PDF as a local LLM troubleshooting reference card.',
     },
     de: {
   theme: 'Getting Started',
@@ -7360,6 +7681,8 @@ sections: {
       ],
     },
   },
+  gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
+  gammaDescription: 'Die folgende Präsentation behandelt: die 10 häufigsten Fehler beim Einrichten lokaler LLMs (Out-of-Memory, GPU nicht erkannt, langsame Inferenz, Connection Refused, fehlerhafte Ausgabe), RAM-Anforderungen für 3B–14B-Modelle bei Q4_K_M- und Q8_0-Quantisierung, einen 5-Schritte-Debugprozess und Ollama-Befehle für jeden Fix. Als PDF herunterladen als Referenzkarte für die Fehlerbehebung bei lokalen LLMs.',
   },
     fr: {
     theme: 'Getting Started',
@@ -8162,9 +8485,8 @@ sections: {
         'AMD. (2024). "ROCm Installation Guide." https://rocm.docs.amd.com/projects/install-on-linux/en/latest/ —— 官方 AMD ROCm 安装和 Linux GPU 支持。',
       ],
     },
-  },
-  gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-  gammaDescription: '下面的幻灯片涵盖：10 个最常见的本地 LLM 设置错误（内存不足、GPU 无法检测、缓慢推理、连接被拒绝、输出乱码）、Q4_K_M 和 Q8_0 量化下 3B–14B 模型的 RAM 需求、5 步调试流程和每个修复的 Ollama 命令。下载 PDF 作为本地 LLM 故障排除参考卡。',
+    gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
+    gammaDescription: 'The following presentation covers: the 10 most common local LLM setup errors (out-of-memory, GPU not detected, slow inference, connection refused, garbled output), RAM requirements for 3B–14B models at Q4_K_M and Q8_0 quantization, a 5-step debug process, and Ollama commands for each fix. Download the PDF as a local LLM troubleshooting reference card.',
   },
 },
 
