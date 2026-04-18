@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">CPU vs GPU Speed for Local LLMs</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">GPU is 4–10× faster than CPU. Even integrated GPU beats CPU-only inference.</text>
+
+  <!-- Left panel: CPU (red — problem) -->
+  <rect x="18" y="58" width="365" height="272" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="18" y="58" width="365" height="5" rx="0" fill="#EA4335"/>
+
+  <text x="200" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">CPU Only (Slow)</text>
+  <text x="200" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">no discrete GPU required</text>
+
+  <text x="38" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">3B models:</text>
+  <text x="38" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#EA4335">15–40 tok/sec</text>
+
+  <line x1="32" y1="158" x2="370" y2="158" stroke="#FDDCDC" stroke-width="1"/>
+
+  <text x="38" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">7B models:</text>
+  <text x="38" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#EA4335">10–25 tok/sec</text>
+  <text x="38" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">(depends on CPU cores + quant)</text>
+
+  <line x1="32" y1="224" x2="370" y2="224" stroke="#FDDCDC" stroke-width="1"/>
+
+  <text x="200" y="245" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle">Best for:</text>
+  <text x="200" y="265" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ Offline batch processing</text>
+  <text x="200" y="285" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ Privacy-critical tasks (no GPU)</text>
+  <text x="200" y="305" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">✗ Interactive chat (too slow)</text>
+
+  <!-- Right panel: GPU (green — solution) -->
+  <rect x="417" y="58" width="365" height="272" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="417" y="58" width="365" height="5" rx="0" fill="#34A853"/>
+
+  <text x="600" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">GPU (Fast)</text>
+  <text x="600" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">even 4 GB VRAM is 4× faster than CPU</text>
+
+  <text x="435" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">4 GB GPU (GTX 1650):</text>
+  <text x="435" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#F4B400">20–40 tok/sec</text>
+
+  <line x1="430" y1="158" x2="770" y2="158" stroke="#D4EDDA" stroke-width="1"/>
+
+  <text x="435" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">8 GB GPU (RTX 3060):</text>
+  <text x="435" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853">25–60 tok/sec</text>
+  <text x="435" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">(sweet spot — full assistant speed)</text>
+
+  <line x1="430" y1="224" x2="770" y2="224" stroke="#D4EDDA" stroke-width="1"/>
+
+  <text x="600" y="245" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Best for:</text>
+  <text x="600" y="265" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ Interactive chat (25+ tok/sec)</text>
+  <text x="600" y="285" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ Coding assistance</text>
+  <text x="600" y="305" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ Real-time summarization</text>
+
+  <!-- vs divider -->
+  <text x="400" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#79747E" text-anchor="middle">vs</text>
+
+  <!-- Footer -->
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>
