@@ -870,6 +870,148 @@ This block is not a definition — it is a curiosity gap designed to make the re
 
 ---
 
+### Rule 34: Multilingual CTR Calibration (Language-Specific Titles)
+
+**CTR varies by language due to fundamental differences in search behavior and user intent patterns.** A title optimized for English CTR may underperform in German, French, Japanese, or Chinese. Each language requires a distinct title strategy — do NOT reuse the English title structure directly.
+
+#### Language-Specific Title Strategies
+
+**🇩🇪 German (DE) — Formal, Specific, Data-Driven**
+
+German users prioritize **precision and completeness** over emotional language. They search for exact specifications and want to know upfront what they're getting.
+
+**Characteristics:**
+- Longer titles (up to 70 characters acceptable)
+- Include numeric specs early (RAM, latency, cost)
+- Avoid hyperbole and marketing language
+- Use Sie-form, formal register
+- Lead with concrete value
+
+**Examples:**
+- ❌ "Local LLMs on Laptop: What Actually Works"
+- ✅ "Lokale LLMs auf Laptop: 8GB vs 16GB RAM Vergleich & Benchmarks"
+
+---
+
+**🇬🇧 English (EN) — Emotional Contrast, Comparative, Curiosity-Driven**
+
+English-speaking users (especially US/UK) respond to **emotional contrast** and competitive positioning. Superlatives, "vs" comparisons, and "which/what works" phrasing drive higher CTR.
+
+**Characteristics:**
+- Shorter titles (50–60 characters ideal)
+- Use comparative language: "vs", "Best", "Which", "What Works"
+- Create contrast or tension (underdog angle, myth-busting)
+- Conversational tone, less formal
+- Lead with curiosity or benefit
+
+**Examples:**
+- ❌ "Running Local LLMs on Laptops: Technical Guide"
+- ✅ "Local LLMs on Laptop: What Actually Works (8GB vs 16GB)"
+
+---
+
+**🇫🇷 French (FR) — Descriptive, Clarity-First, Practical**
+
+French users prefer **clear, descriptive titles that promise practical utility** over aggressive positioning. They are skeptical of superlatives and respond better to "how to" and "guide" framing.
+
+**Characteristics:**
+- Balanced length (55–65 characters)
+- Descriptive phrasing over comparative ("Guide" over "Best")
+- Practical, utility-focused language
+- Avoid hype and aggression
+- Lead with the task or topic
+
+**Examples:**
+- ❌ "Le meilleur guide pour les LLM locaux"
+- ✅ "Exécuter des LLM locaux sur un ordinateur portable (guide pratique)"
+
+---
+
+**🇯🇵 Japanese (JA) — Keyword-Dense, Functional, Model-Name-First**
+
+Japanese search behavior is **highly structured and keyword-oriented**. Users include specific model names and parameter counts in searches. Titles benefit from being more keyword-dense and less narrative.
+
+**Characteristics:**
+- Shorter, more compact (50–58 characters due to kanji/character width)
+- Include model names and specs early (e.g., "Llama 3.2 3B")
+- Direct utility language, minimal narrative
+- Less emotive, more factual
+- Use です/ます polite form
+
+**Examples:**
+- ❌ "ノートパソコンで実行できるLLMについて"
+- ✅ "ノートパソコンでLlama 3.2を実行：8GB RAMガイド"
+
+---
+
+**🇨🇳 Chinese (ZH) — Direct Utility, Spec-Focused, Brand Names**
+
+Chinese search engines (Baidu, WeChat) prioritize **direct utility and specific models/brands**. Users search with model names, parameter counts, and hardware specs combined. Titles are expected to be comprehensive and informative.
+
+**Characteristics:**
+- Keyword-dense, comprehensive (can be longer in Chinese characters)
+- Include specific model names and specs
+- Direct value proposition, no narrative
+- Practical, no marketing language
+- Lead with the task + model
+
+**Examples:**
+- ❌ "笔记本电脑上的本地LLM"
+- ✅ "笔记本电脑上运行Qwen2.5 7B：8GB RAM完整指南"
+
+---
+
+#### Decision Framework: Choosing Your Title Per Language
+
+For a single topic (e.g., "running local LLMs on 8GB laptops"), apply this framework:
+
+| Language | Primary Hook | Structure | Example |
+|---|---|---|---|
+| **EN** | Emotional contrast / "which" | `[Benefit]: What Works vs [Alternative]` | "Local LLMs: What Works (8GB vs 16GB)" |
+| **DE** | Specificity / specs | `[Topic]: [Spec1] vs [Spec2] + Benchmarks` | "Lokale LLMs: 8GB vs 16GB RAM Vergleich" |
+| **FR** | Practical utility | `[Action] [Topic]: [Guide/Pratique]` | "Exécuter des LLMs: guide pratique" |
+| **JA** | Model + spec | `[Model] を [Device] で実行：[Spec] ガイド` | "Llama 3.2を笔记本で実行：8GB RAMガイド" |
+| **ZH** | Model + task | `[Task] [Model]：[Spec] 完整指南` | "笔记本电脑上运行Qwen：8GB完整指南" |
+
+---
+
+#### Enforcement Rules
+
+**Before translating a title to another language, ask yourself:**
+
+1. **Did I use the English title as a template?** — If yes, this is wrong. Re-think from scratch per language.
+2. **Does the title reflect language-specific search behavior?** — German: specs? English: contrast? French: clarity?
+3. **Are translated titles in the same emotional register?** — EN aggressive ("What Works"), DE neutral ("Vergleich"), FR practical ("Guide")?
+4. **Does each language version drive CTR in that market?** — Test in Google Search Console per language after 2+ weeks.
+
+**Red flags (revise before publishing):**
+- ❌ All language titles are identical (only language changed)
+- ❌ German title uses "Best" or superlatives (wrong for DE audience)
+- ❌ French title includes aggressive "vs" phrasing (wrong for FR audience)
+- ❌ Japanese/Chinese title is a word-for-word translation (loses keyword density)
+- ❌ No model names in Japanese/Chinese titles (critical for search matching)
+
+**Green flags (you're on track):**
+- ✅ Each language title reflects native search patterns
+- ✅ German title includes specs; English includes emotion; French includes clarity
+- ✅ Model names appear early in JA/ZH; later/optional in EN/DE/FR
+- ✅ Titles read naturally in each language (not translated, adapted)
+
+---
+
+#### Post-Publication Monitoring
+
+After publishing all 5 language versions, monitor CTR differences in **Google Search Console**:
+
+1. **Compare CTR by language** after 2+ weeks of impressions
+2. **If one language underperforms by >15%**, revisit the title using this rule
+3. **Document what worked** in PromptQuorum's internal style guide for future articles
+
+**Example learning curve:**
+> "DE audience responds 8% better to titles with specific RAM numbers (8GB, 16GB) vs. rounded (8–16GB). FIX: always use exact numbers in DE titles."
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -1241,6 +1383,7 @@ Use this checklist before committing any new or edited article:
 - [ ] Meta description includes primary keyword
 - [ ] All entity names are exact and consistent (GPT-4o, Claude 4.6 Sonnet, etc.)
 - [ ] Article mentions 5–7 distinct high-value entities
+- [ ] Title strategies adapted per language (not direct translations) — DE/EN/FR/JA/ZH each use language-native hooks (Rule 34)
 
 #### Top-of-Page Sequence
 - [ ] Lead Answer Block is bold, 25–50 words, answers H1 in first 10 words
@@ -1606,6 +1749,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | Dates | Rule 11, 28 | Rule 8c (top-of-page sequence) |
 | Lead answer block | Rule 31 | Rules 1, 22a (answer-first) |
 | CTR hook / SERP tension | Rule 33 | Rule 8c (top-of-page sequence) |
+| Multilingual titles | Rule 34 | Rule 2d (title tag optimization) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
