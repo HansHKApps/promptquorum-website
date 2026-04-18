@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Local LLMs for Coding 2026 | PromptQuorum</title>
+  <meta name="description" content="Qwen2.5-Coder 32B (87% HumanEval) vs DeepSeek-Coder V2 Lite (81%) vs Qwen2.5-Coder 7B (72%) — complete guide with hardware selection, setup, and performance benchmarks." />
+  <meta property="og:title" content="Best Local LLMs for Coding 2026 — PromptQuorum" />
+  <meta property="og:description" content="Qwen2.5-Coder 32B (87% HumanEval) vs DeepSeek-Coder V2 Lite (81%) vs Qwen2.5-Coder 7B (72%)" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/local-llms/best-local-llms-for-coding" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 28px;
+      width: auto;
+    }
+
+    #header-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f1f1f;
+      max-width: 600px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .header-links a {
+      font-size: 12px;
+      color: #6750a4;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .header-links a:hover {
+      color: #4a3a7f;
+    }
+
+    .content-area {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 48px 64px;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .slide h1 {
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 700;
+      color: #1f1f1f;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: #1f1f1f;
+      margin-bottom: 28px;
+      line-height: 1.3;
+    }
+
+    .slide p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: #49454f;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .slide ul {
+      text-align: left;
+      font-size: clamp(16px, 1.8vw, 19px);
+      line-height: 1.8;
+      margin: 20px auto 0;
+      max-width: 90%;
+    }
+
+    .slide ul li {
+      margin-bottom: 14px;
+      color: #49454f;
+    }
+
+    .slide ol {
+      text-align: left;
+      font-size: clamp(16px, 1.8vw, 19px);
+      line-height: 1.8;
+      margin: 20px auto 0;
+      max-width: 90%;
+    }
+
+    .slide ol li {
+      margin-bottom: 12px;
+      color: #49454f;
+    }
+
+    .slide table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-size: clamp(14px, 1.5vw, 17px);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .slide table th,
+    .slide table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+      color: #49454f;
+    }
+
+    .slide table th {
+      background: #f7f2fa;
+      font-weight: 700;
+      color: #1f1f1f;
+    }
+
+    .slide table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .slide .subtitle {
+      font-size: clamp(18px, 2.2vw, 22px);
+      color: #79747e;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    .slide .logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .slide .comparison-stat {
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 700;
+      color: #6750a4;
+      margin: 16px 0;
+    }
+
+    .slide .tip {
+      font-size: clamp(16px, 1.8vw, 18px);
+      color: #6750a4;
+      margin-top: 32px;
+      font-style: italic;
+    }
+
+    .slide .faq-item {
+      margin-bottom: 20px;
+      text-align: left;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slide .faq-item strong {
+      font-size: clamp(15px, 1.7vw, 18px);
+      color: #1f1f1f;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .slide .faq-item p {
+      font-size: clamp(14px, 1.6vw, 16px);
+      color: #49454f;
+      margin: 0;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: white;
+      border-top: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      background: #6750a4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #4a3a7f;
+    }
+
+    .controls button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 13px;
+      color: #79747e;
+      font-weight: 600;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        padding: 32px 24px;
+      }
+
+      .header-left {
+        flex: 1;
+      }
+
+      #header-title {
+        font-size: 12px;
+      }
+
+      .header-links {
+        gap: 8px;
+      }
+
+      .header-links a {
+        font-size: 11px;
+      }
+    }
+
+    @media print {
+      .header,
+      .controls {
+        display: none;
+      }
+
+      .slide {
+        position: relative;
+        display: flex !important;
+        opacity: 1 !important;
+        page-break-after: always;
+        page-break-inside: avoid;
+        height: 100vh;
+        border: 1px solid #e0e0e0;
+        margin: 0;
+      }
+
+      body {
+        background: white;
+      }
+
+      .presentation-container {
+        height: auto;
+      }
+
+      .content-area {
+        position: static;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Best Local LLMs for Coding 2026</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/best-local-llms-for-coding" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container">
+      <!-- Slides will be dynamically injected here -->
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+      <button onclick="document.getElementById('downloadPdf').click()" style="margin-left: 16px; background: #6750a4;">Save as PDF</button>
+      <a id="downloadPdf" href="#" style="display: none;"></a>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Best Local LLMs for Coding in 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Best Local LLMs for Coding in 2026',
+            subtitle: 'Ranked by HumanEval, RAM, and Language Support. Qwen2.5-Coder 32B vs DeepSeek-Coder V2 Lite vs Qwen2.5-Coder 7B.',
+            link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding'
+          },
+          {
+            type: 'list',
+            h2: 'What Makes a Good Coding LLM?',
+            intro: 'Coding models are measured by HumanEval benchmark scores.',
+            items: [
+              '<strong>HumanEval:</strong> 164 Python programming problems. Models must generate correct function bodies.',
+              '<strong>Code-specific vs general:</strong> Dedicated coding models are fine-tuned on GitHub, Stack Overflow, and documentation.',
+              '<strong>5-15% advantage:</strong> Code models score 5-15% higher than general-purpose models at the same parameter count.',
+              '<strong>Fill-in-the-middle (FIM):</strong> Essential for IDE autocomplete. Enables code completion given context before AND after cursor.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'The Three Models to Know',
+            intro: 'Match model to your hardware.',
+            items: [
+              '<strong>Qwen2.5-Coder 32B:</strong> 87% HumanEval, 20 GB RAM — highest quality locally available.',
+              '<strong>DeepSeek-Coder V2 Lite 16B:</strong> 81% HumanEval, 10 GB RAM — best for 16 GB machines.',
+              '<strong>Qwen2.5-Coder 7B:</strong> 72% HumanEval, 4.7 GB RAM — best for 8 GB machines with headroom.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'HumanEval Benchmark Comparison',
+            line1: 'Qwen2.5-Coder 32B: 87%',
+            line2: 'DeepSeek-Coder V2 Lite: 81% | Qwen2.5-Coder 7B: 72%',
+            tip: '💡 Higher HumanEval scores correlate with better real-world code generation quality.'
+          },
+          {
+            type: 'table',
+            h2: 'Model Rankings by Performance',
+            columns: ['Rank', 'Model', 'HumanEval', 'RAM (Q4_K_M)', 'FIM Support'],
+            rows: [
+              { 'Rank': '1', 'Model': 'Qwen2.5-Coder 32B', 'HumanEval': '87%', 'RAM (Q4_K_M)': '20 GB', 'FIM Support': 'Yes' },
+              { 'Rank': '2', 'Model': 'DeepSeek-Coder V2 Lite', 'HumanEval': '81%', 'RAM (Q4_K_M)': '10 GB', 'FIM Support': 'Yes' },
+              { 'Rank': '3', 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'RAM (Q4_K_M)': '4.7 GB', 'FIM Support': 'Yes' },
+              { 'Rank': '4', 'Model': 'Starcoder2 15B', 'HumanEval': '67%', 'RAM (Q4_K_M)': '9 GB', 'FIM Support': 'Yes' },
+              { 'Rank': '5', 'Model': 'Llama 3.1 8B', 'HumanEval': '72%', 'RAM (Q4_K_M)': '5.5 GB', 'FIM Support': 'No' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Which Model Should You Use?',
+            intro: 'Select based on your hardware first, use case second.',
+            items: [
+              '<strong>8 GB RAM:</strong> ollama run qwen2.5-coder:7b — best HumanEval per GB.',
+              '<strong>16 GB RAM:</strong> ollama run deepseek-coder-v2:16b — 81% HumanEval, only 10 GB used.',
+              '<strong>20+ GB RAM:</strong> ollama run qwen2.5-coder:32b — 87% HumanEval, highest quality.',
+              '<strong>IDE autocomplete:</strong> Starcoder2 15B via Continue.dev — FIM-optimized.',
+              '<strong>Already running Llama 3.1 8B?</strong> Skip downloading a separate model — equivalent to Qwen 7B for everyday tasks.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '#1: Qwen2.5-Coder 32B',
+            intro: 'The highest-performing locally-runnable coding model in 2026.',
+            items: [
+              '<strong>Performance:</strong> 87% HumanEval, 79% MBPP, 40+ programming languages, 128K context window.',
+              '<strong>Quality:</strong> Competitive with GPT-4o Mini on complex multi-file refactoring and algorithm design.',
+              '<strong>RAM requirement:</strong> ~20 GB at Q4_K_M quantization. Manageable on workstations and MacBooks with 24+ GB unified memory.',
+              '<strong>Setup:</strong> ollama run qwen2.5-coder:32b'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '#2: DeepSeek-Coder V2 Lite 16B',
+            intro: 'Best for 16 GB RAM machines using Mixture of Experts.',
+            items: [
+              '<strong>Architecture:</strong> 16B parameters with Mixture of Experts (MoE) — only certain experts activate per token.',
+              '<strong>Performance:</strong> 81% HumanEval, 128K context, FIM support.',
+              '<strong>Efficiency:</strong> Only 2.4B active parameters per forward pass. Faster than equivalent dense 16B models.',
+              '<strong>RAM:</strong> ~10 GB at Q4_K_M — leaves headroom on 16 GB machines.',
+              '<strong>Setup:</strong> ollama run deepseek-coder-v2:16b'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '#3 & #4: Qwen 7B & Starcoder2',
+            intro: 'Specialized for different 8 GB+ use cases.',
+            items: [
+              '<strong>Qwen2.5-Coder 7B:</strong> 72% HumanEval, 4.7 GB RAM, FIM support. Best for 8 GB with headroom. Compatible with Continue.dev.',
+              '<strong>Starcoder2 15B:</strong> 67% HumanEval, 9 GB RAM. Purpose-built for IDE autocomplete (FIM). Trained on 619 programming languages.',
+              '<strong>Use Qwen:</strong> For chat-style code generation and general coding tasks.',
+              '<strong>Use Starcoder2:</strong> When integrating into VS Code or JetBrains IDEs via Continue.dev or Tabby.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes With Local Coding Models',
+            items: [
+              '<strong>Using general-purpose models:</strong> Qwen2.5-Coder 7B includes FIM (fill-in-the-middle) support for IDE autocomplete. Llama 3.1 8B general does not.',
+              '<strong>Wrong context length:</strong> Ollama defaults to 2048 tokens. Set num_ctx 32768 for multi-file code review.',
+              '<strong>Expecting IDE replacement:</strong> Local models generate code. They do not provide IDE features like real-time error detection or type checking.',
+              '<strong>Using Q3_K_S quantization:</strong> Below Q4_K_M, code generation accuracy drops significantly. Logical errors and syntax bugs increase.',
+              '<strong>Pulling without specifying size:</strong> ollama pull qwen2.5-coder defaults to smallest variant. Use: ollama pull qwen2.5-coder:32b'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Quick FAQ',
+            faqs: [
+              { q: 'What is HumanEval?', a: 'A benchmark of 164 Python problems. Pass@1 score (% solved on first attempt) is the standard metric for comparing coding models.' },
+              { q: 'What is FIM (fill-in-the-middle)?', a: 'Code completion given context before AND after the cursor. Required for IDE autocomplete. Qwen2.5-Coder, DeepSeek-Coder, and Starcoder2 support it. Llama 3.1 8B general does not.' },
+              { q: 'Can local models replace GitHub Copilot?', a: 'Qwen2.5-Coder 32B matches Copilot quality for function-level generation. Local models via Continue.dev excel at deliberate generation (request-and-review) but not keystroke-level real-time completion.' },
+              { q: 'Is DeepSeek-Coder safe for proprietary code?', a: 'Yes. Local Ollama inference makes zero external connections. Your code stays on your hardware. The data concern applies to their cloud API (api.deepseek.com), not local inference.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Next Steps',
+            intro: 'Ready to run a coding model locally?',
+            items: [
+              '<strong>Install Ollama:</strong> Download from ollama.ai. Takes 2 minutes.',
+              '<strong>Pick your model:</strong> Use the hardware selection guide above.',
+              '<strong>Run it:</strong> ollama run qwen2.5-coder:7b (or 32b, depending on RAM).',
+              '<strong>Integrate with IDE:</strong> Install Continue.dev VS Code extension. Enable FIM-based code completion.',
+              '<strong>Learn more:</strong> Visit the full article for regional compliance notes (GDPR, METI, China Data Security Law).'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Ready to Get Started?',
+            body: 'Get the complete guide with setup instructions, regional compliance, and FAQ.',
+            cta: 'Read Full Article',
+            href: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding'
+          }
+        ]
+      },
+      de: {
+        title: 'Beste lokale LLMs für Coding 2026',
+        slides: [
+          { type: 'title', h1: 'Beste lokale LLMs für Coding 2026', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=de' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+        ]
+      },
+      fr: {
+        title: 'Meilleurs LLM locaux pour le codage 2026',
+        slides: [
+          { type: 'title', h1: 'Meilleurs LLM locaux pour le codage 2026', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=fr' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+        ]
+      },
+      ja: {
+        title: '2026年の最高のローカルコーディングLLM',
+        slides: [
+          { type: 'title', h1: '2026年の最高のローカルコーディングLLM', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=ja' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+        ]
+      },
+      zh: {
+        title: '2026年最佳本地编码LLM',
+        slides: [
+          { type: 'title', h1: '2026年最佳本地编码LLM', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=zh' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p class="subtitle">${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: #79747e; text-decoration: none;">Open Full Article →</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p class="subtitle">${slide.intro}</p>`;
+          html += '<ul style="text-align: left; font-size: 1.1em;">';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table><tr>';
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col]}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p class="comparison-stat">${slide.line1}</p>
+            <p class="comparison-stat">${slide.line2}</p>
+            <p class="tip">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ol style="text-align: left; font-size: 1em; line-height: 1.8; margin-top: 20px;">';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<div style="text-align: left; max-width: 90%; margin: 0 auto;">';
+          slide.faqs.forEach(faq => {
+            html += `<div class="faq-item"><strong>Q: ${faq.q}</strong><p>A: ${faq.a}</p></div>`;
+          });
+          html += '</div>';
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p>${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 24px; padding: 14px 32px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    // Update header
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += `?lang=${lang}`;
+
+    // Render all slides
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    // Initialize navigation
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    // Print handlers
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex !important'; });
+    });
+
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    // PDF download
+    document.getElementById('downloadPdf').href = 'javascript:window.print()';
+
+    showSlide(0);
+  </script>
+</body>
+</html>
