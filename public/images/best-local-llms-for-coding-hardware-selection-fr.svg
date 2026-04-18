@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Quel modèle de codage devez-vous utiliser ? Guide adapté au matériel
+  </text>
+  <rect x="28" y="55" width="340" height="310" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">8 GB RAM</text>
+  <text x="198" y="100" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen2.5-Coder 7B</text>
+  <text x="48" y="125" font-weight="700" fill="#1C1B1F">Performance :</text>
+  <text x="48" y="142" font-size="12" fill="#49454F">• HumanEval : 72%</text>
+  <text x="48" y="158" font-size="12" fill="#49454F">• Vitesse : 15–25 tok/sec</text>
+  <text x="48" y="174" font-size="12" fill="#49454F">• RAM utilisée : 4,7 GB</text>
+  <text x="48" y="200" font-weight="700" fill="#1C1B1F">Idéal pour :</text>
+  <text x="48" y="217" font-size="12" fill="#49454F">• Utilisateurs avec 8 GB</text>
+  <text x="48" y="233" font-size="12" fill="#49454F">• Autocomplétion IDE</text>
+  <text x="48" y="249" font-size="12" fill="#49454F">• Tâches quotidiennes</text>
+  <text x="48" y="275" font-weight="700" fill="#1C1B1F">Configuration :</text>
+  <text x="48" y="295" font-family="'SF Mono'" font-size="11" fill="#49454F">ollama run</text>
+  <text x="48" y="310" font-family="'SF Mono'" font-size="11" fill="#49454F">qwen2.5-coder:7b</text>
+  <rect x="430" y="55" width="340" height="310" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="55" width="340" height="4" rx="0" fill="#F4B400"/>
+  <text x="600" y="80" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle">16 GB RAM</text>
+  <text x="600" y="100" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">DeepSeek-Coder V2 16B</text>
+  <text x="450" y="125" font-weight="700" fill="#1C1B1F">Performance :</text>
+  <text x="450" y="142" font-size="12" fill="#49454F">• HumanEval : 81%</text>
+  <text x="450" y="158" font-size="12" fill="#49454F">• Vitesse : 25–40 tok/sec</text>
+  <text x="450" y="174" font-size="12" fill="#49454F">• RAM utilisée : ~10 GB</text>
+  <text x="450" y="200" font-weight="700" fill="#1C1B1F">Idéal pour :</text>
+  <text x="450" y="217" font-size="12" fill="#49454F">• Laptops/ordinateurs 16 GB</text>
+  <text x="450" y="233" font-size="12" fill="#49454F">• Qualité de code supérieure</text>
+  <text x="450" y="249" font-size="12" fill="#49454F">• Génération rapide et fiable</text>
+  <text x="450" y="275" font-weight="700" fill="#1C1B1F">Configuration :</text>
+  <text x="450" y="295" font-family="'SF Mono'" font-size="11" fill="#49454F">ollama run deepseek-</text>
+  <text x="450" y="310" font-family="'SF Mono'" font-size="11" fill="#49454F">coder-v2:16b</text>
+  <rect x="28" y="380" width="742" height="35" rx="6" fill="#6750A4" filter="url(#shadow)"/>
+  <text x="45" y="397" font-size="13" font-weight="700" fill="#FFFFFF">🏆 20+ GB RAM :</text>
+  <text x="220" y="397" font-size="13" fill="#FFFFFF">Qwen2.5-Coder 32B (87% HumanEval) — meilleure qualité</text>
+  <text x="400" y="420" font-size="10" fill="#79747E" text-anchor="middle">
+    RAM est quantification Q4_K_M. Adapter toujours le modèle à la mémoire disponible.
+  </text>
+</svg>
