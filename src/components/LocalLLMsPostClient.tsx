@@ -265,14 +265,27 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
       {/* Numbered list */}
       {section.numberedItems && (
         <ol className="list-none space-y-4 my-4">
-          {section.numberedItems.map((item, i) => (
-            <li key={i} className="flex gap-4 text-text-secondary">
-              <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white ${colors.dot.replace('bg-', 'bg-').replace('-400', '-500')}`}>
-                {i + 1}
-              </span>
-              <span className="leading-relaxed pt-0.5">{renderInlineLinks(item, lang)}</span>
-            </li>
-          ))}
+          {section.numberedItems.map((item, i) => {
+            const isObject = item && typeof item === 'object' && 'title' in item
+            const title = isObject ? (item as any).title : item
+            const whyItMatters = isObject ? (item as any).whyItMatters : null
+            return (
+              <li key={i} className="flex gap-4 text-text-secondary">
+                <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white ${colors.dot.replace('bg-', 'bg-').replace('-400', '-500')}`}>
+                  {i + 1}
+                </span>
+                <div className="leading-relaxed pt-0.5">
+                  <span className="font-semibold">{renderInlineLinks(title, lang)}</span>
+                  {whyItMatters && (
+                    <>
+                      <br />
+                      <span className="text-sm italic">Why it matters: {whyItMatters}</span>
+                    </>
+                  )}
+                </div>
+              </li>
+            )
+          })}
         </ol>
       )}
 

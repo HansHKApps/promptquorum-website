@@ -405,7 +405,8 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
           name: peHowToName ?? howToSectionData.title ?? article.title,
           description: article.intro,
           step: howToSectionData.numberedItems.map((step, i) => {
-            const cleanText = step.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1').replace(/\[([^\]]+)\]/g, '$1').trim()
+            const stepStr = typeof step === 'string' ? step : step.title
+            const cleanText = stepStr.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1').replace(/\[([^\]]+)\]/g, '$1').trim()
             const colonIdx = cleanText.indexOf(':')
             const stepName = colonIdx > 0 && colonIdx < 80 ? cleanText.slice(0, colonIdx).trim() : undefined
             return {
