@@ -1662,6 +1662,200 @@ This is intentional. Rule 40 prioritizes **clarity over eloquence**. Shorter art
 
 ---
 
+### Rule 41: Scroll Pattern Optimization (Mandatory)
+
+Every reading "screen" (~300–400 words) must include **three visual/semantic anchors**: 
+1. **One bold statement** (emphasis or definition)
+2. **One bullet list** (3–5 items)
+3. **One decision statement** ("Use X if...", "Avoid X if...", etc.)
+
+Additionally, **no continuous prose block may exceed 120 words** without a break (bold, list, decision block, heading, or whitespace).
+
+**Why:** Users scan, AI systems chunk. Walls of uninterrupted text reduce both human CTR (readers scroll past dense blocks) and AI citations (systems extract small, bounded blocks, not entire paragraphs). Visual rhythm signals clarity and expertise.
+
+#### The Pattern
+
+**Screen structure (300–400 words):**
+
+```
+[Opening paragraph: 1–2 sentences, intro to section concept]
+
+[Prose block: up to 120 words, explain the concept]
+
+**[Bold statement: definition, insight, or outcome]**
+
+[Transition sentence: 1 sentence]
+
+Supported options / examples:
+- Item 1: [description]
+- Item 2: [description]
+- Item 3: [description]
+
+[Decision statement: "Use X if...", "Avoid X if...", "Choose X when..."]
+
+[Closing paragraph or transition to next section]
+```
+
+#### The Rule in Numbers
+
+- **Every 300–400 words:** Include all three anchors (bold, list, decision)
+- **Prose blocks:** Max 120 words between breaks
+- **Bold statements:** Minimum 1 per screen (can be more)
+- **Bullet lists:** Minimum 1 per screen (3–5 items each)
+- **Decision statements:** Minimum 1 per screen (can reference Rule 37 formats)
+
+#### Example: Applying the Pattern
+
+**❌ Before (dense, no pattern):**
+
+```markdown
+## Using Quantization to Reduce VRAM
+
+Quantization is a technique that reduces model weight precision to save memory. 
+Instead of storing weights as 32-bit floats, quantization uses 8-bit or 4-bit 
+integers. This reduces file size by 3–4× without significant quality loss. Different 
+quantization formats exist, and choosing the right one depends on your hardware and 
+use case. Q4_K_M is the most popular because it balances quality and VRAM savings. 
+Q3_K_M is lighter but loses more quality. Q2_K_S is the smallest but only for 
+extreme constraints. You should monitor the output quality carefully when using 
+lower quantization levels.
+```
+
+**Word count:** 115 words (one block)  
+**Scannability:** Poor (no visual breaks, no decision guidance)  
+**AI extraction:** Weak (entire paragraph required for context, not extractable in parts)
+
+---
+
+**✅ After (with scroll pattern):**
+
+```markdown
+## Using Quantization to Reduce VRAM
+
+Quantization reduces model weight precision to save 3–4× VRAM with minimal quality loss.
+
+**Q4_K_M preserves 98%+ of quality and is the standard choice for 8GB+ systems.**
+
+Popular quantization formats by VRAM constraint:
+- Q4_K_M: Best balance, 8GB+ systems, 98%+ quality
+- Q3_K_M: Lighter, 4–6GB systems, 95% quality  
+- Q2_K_S: Minimum VRAM only, extreme constraint, 85% quality
+
+Choose Q4_K_M if you have 8GB+ VRAM and prioritize quality. Choose Q3_K_M if 
+you have 4–6GB VRAM and can accept 3–5% quality loss. Avoid Q2_K_S unless you 
+absolutely cannot fit the model otherwise.
+```
+
+**Word count:** 110 words (structured across anchors)  
+**Scannability:** Excellent (bold statement, list, decision visible at glance)  
+**AI extraction:** Strong (each component is standalone and meaningful)
+
+---
+
+#### How to Identify a Problem Section
+
+**Scan your article for:**
+
+1. **"Walls of text"** — A paragraph that looks like one solid block on screen
+   - Fix: Break into smaller paragraphs + add a bullet list or bold statement
+
+2. **No bold between headings** — H2 to first list appears 150+ words later
+   - Fix: Add a bold statement within the first 100 words of the section
+
+3. **List-less section** — An entire section with no bullets
+   - Fix: Convert one paragraph into a 3–5 item list
+
+4. **No decision statement visible** — Reader must scroll far to see "Use X if..."
+   - Fix: Add a decision statement in the first ~200 words of the section
+
+#### Implementation Workflow
+
+**Before publishing:**
+
+1. **Divide article into ~300–400 word "screens"**
+2. **For each screen, verify:**
+   - [ ] Contains at least 1 bold statement (can be part of a sentence)
+   - [ ] Contains at least 1 bullet list (3–5 items)
+   - [ ] Contains at least 1 decision statement
+   - [ ] No prose paragraph exceeds 120 words
+3. **If any screen is missing an element:** Add it or restructure content
+4. **Test on mobile** (375px viewport): Does the pattern still appear above the fold?
+
+#### Special Cases
+
+**Short sections (< 300 words):** Still require all three anchors, but condensed
+
+```markdown
+## Quick Concept
+
+**Prompt caching stores prompts in memory to reduce latency and token costs.**
+
+When to use:
+- Running the same prompt multiple times
+- Cost-sensitive workflows
+- Latency-critical systems
+
+Use prompt caching if running identical prompts repeatedly. Avoid it if prompts 
+are always unique.
+```
+
+**Long sections (> 800 words):** Apply the pattern **twice** (two separate screens within the section)
+
+```markdown
+## Complex Topic [Part 1]
+
+[Opening paragraph]
+[Prose: ~100 words]
+**Bold statement 1**
+- List item 1
+- List item 2
+- List item 3
+Decision statement 1
+
+---
+
+## [Same topic continued, Part 2 or subheading]
+
+[Transition paragraph]
+[Prose: ~100 words]
+**Bold statement 2**
+- List item A
+- List item B
+- List item C
+Decision statement 2
+```
+
+#### Validation Checklist
+
+- [ ] Article divided into ~300–400 word "screens"
+- [ ] Every screen contains at least 1 bold statement
+- [ ] Every screen contains at least 1 bullet list (3–5 items)
+- [ ] Every screen contains at least 1 decision statement (Rule 37 format)
+- [ ] No prose paragraph exceeds 120 words
+- [ ] Visual pattern tested on mobile (375px): all three anchors visible without excessive scrolling
+- [ ] Patterns are natural (not forced; serve content, not just formatting)
+- [ ] At least 50% of screens follow the exact 3-anchor structure
+- [ ] Remaining screens have equivalent visual/semantic breaks (heading changes, whitespace, etc.)
+
+#### Why This Works
+
+**For readers:**
+- Scanners can understand the section in 10 seconds by reading bold + list + decision
+- No cognitive overload from dense prose
+- Clear stopping points for decision-making
+
+**For AI systems:**
+- Google/Perplexity extracts bounded chunks (not sprawling paragraphs)
+- Each screen is independently meaningful (no context-required extraction)
+- Visual rhythm signals expertise and clarity
+
+**For SEO/AEO:**
+- Higher first-screen engagement (users don't bounce from walls of text)
+- Better AI citation rates (extractable components)
+- Improved Time on Page and scroll depth metrics
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -2061,6 +2255,9 @@ Use this checklist before committing any new or edited article:
 - [ ] All citation blocks are 1–2 sentences, standalone, and require no cross-references — Rule 38
 - [ ] Every section has been audited: no paragraph added unless it changes a reader decision (Rule 40)
 - [ ] Sections with 3+ paragraphs have been compressed or consolidated — Rule 40
+- [ ] Article divided into ~300–400 word "screens" with: 1 bold statement + 1 bullet list + 1 decision statement per screen — Rule 41
+- [ ] No prose paragraph exceeds 120 words without a visual break (bold, list, heading, whitespace) — Rule 41
+- [ ] Visual pattern tested on mobile (375px): all three anchors visible without excessive scrolling — Rule 41
 
 #### FAQ & Common Mistakes
 - [ ] FAQ section has 6–8 questions covering 3+ of 5 types
@@ -2415,6 +2612,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | AI citation extractability / standalone blocks | Rule 38 | Rules 1 (answer-first), Rules 22, 37 (decision statements) |
 | Anchor text intent / semantic graph | Rule 39 | Rule 12 (linking strategy), Rules 31, 1 (answer-first) |
 | Content conciseness / decision-only prose | Rule 40 | Rules 1, 22, 37 (answer-first, decision density) |
+| Visual rhythm / scannability & AI chunking | Rule 41 | Rules 1, 37, 38 (answer-first, decisions, citations) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
