@@ -454,8 +454,8 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
 }
 
 function LocalLLMsPostContent({ slug, initialLang }: Props) {
-  const clientLang = useLang() as Language
-  const lang: Language = (clientLang !== 'en' ? clientLang : (initialLang ?? clientLang))
+  const clientLang = useLang(initialLang) as Language
+  const lang: Language = clientLang
   const key = LLM_SLUG_TO_KEY[slug]
   const articleData = key ? llmContent[key] : null
 
