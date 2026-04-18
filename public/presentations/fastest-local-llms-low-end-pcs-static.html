@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fastest Local LLMs for Low-End PCs | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation: fastest local LLMs for low-end PCs. CPU-only: 5–15 tok/sec. 4GB GPU: 20–40 tok/sec. 8GB GPU: 25–60 tok/sec." />
+    <meta property="og:title" content="Fastest Local LLMs for Low-End PCs — PromptQuorum" />
+    <meta property="og:description" content="Hardware-matched model picks, quantization guide, and real benchmarks for low-end PCs." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * { margin: 0; padding: 0; }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls { display: none !important; }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs";
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+            .slide strong { color: #000 !important; font-weight: 700; }
+            .slide li { color: #000 !important; }
+            table { font-size: 11pt; }
+            th { background: #6750a4 !important; color: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Fastest Local LLMs for Low-End PCs</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container"></div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const SLUG = 'fastest-local-llms-low-end-pcs';
+    const BASE = 'https://www.promptquorum.com/local-llms/' + SLUG;
+
+    const CONTENT = {
+      en: {
+        title: 'Fastest Local LLMs for Low-End PCs',
+        back: '← Back to Article',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Fastest Local LLMs for Low-End PCs',
+            subtitle: 'CPU only: 5–15 tok/sec · 4 GB GPU: 20–40 tok/sec · 8 GB GPU: 25–60 tok/sec',
+            link: BASE
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways by Hardware Tier',
+            items: [
+              '<strong>CPU only (no GPU):</strong> Phi-3 Mini 3.8B at 5–15 tok/sec',
+              '<strong>4 GB VRAM:</strong> TinyLlama 1.1B Q5 at 20–40 tok/sec',
+              '<strong>6 GB VRAM:</strong> Phi-3 Mini Q5 at 15–30 tok/sec',
+              '<strong>8 GB VRAM (sweet spot):</strong> Mistral 7B Q4 at 25–60 tok/sec',
+              '<strong>16 GB+:</strong> 13B models Q4 at 20–50 tok/sec',
+              '<strong>Quality ranking:</strong> 13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'The Core Rule: Match Hardware to Model',
+            line1: '❌ Wrong model = 4–10× speed wasted',
+            line2: '✅ Right model = max speed for your hardware',
+            tip: 'GPU always beats CPU. Even 4 GB VRAM gives 4× more speed than CPU-only.'
+          },
+          {
+            type: 'table',
+            h2: 'Fastest Model for Your Hardware',
+            columns: ['Hardware', 'Best Model', 'Speed'],
+            rows: [
+              { 'Hardware': 'CPU only', 'Best Model': 'Phi-3 Mini Q4', 'Speed': '5–15 t/s' },
+              { 'Hardware': '4 GB GPU', 'Best Model': 'TinyLlama 1B Q5', 'Speed': '20–40 t/s' },
+              { 'Hardware': '6 GB GPU', 'Best Model': 'Phi-3 Mini Q5', 'Speed': '15–30 t/s' },
+              { 'Hardware': '8 GB GPU', 'Best Model': 'Mistral 7B Q4', 'Speed': '25–60 t/s' },
+              { 'Hardware': '16 GB+', 'Best Model': '13B models Q4', 'Speed': '20–50 t/s' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'One Model Per Hardware Tier',
+            intro: 'Match your hardware — one correct answer per tier:',
+            items: [
+              '<strong>CPU only →</strong> Phi-3 Mini Q4 (2.5 GB RAM, 5–15 tok/sec)',
+              '<strong>4 GB GPU →</strong> TinyLlama 1B Q5 (0.8 GB VRAM, 20–40 tok/sec)',
+              '<strong>6 GB GPU →</strong> Phi-3 Mini Q5 (2.7 GB VRAM, 15–30 tok/sec)',
+              '<strong>8 GB GPU →</strong> Mistral 7B Q4 (4.1 GB VRAM, 25–60 tok/sec) — sweet spot',
+              '<strong>16 GB+ →</strong> Llama 3.1 13B Q4 (7–9 GB VRAM, 20–50 tok/sec)'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Full Hardware Benchmark Table',
+            columns: ['Hardware', 'Model', 'Quant', 'Speed'],
+            rows: [
+              { 'Hardware': 'CPU only', 'Model': 'Phi-3 Mini', 'Quant': 'Q4', 'Speed': '5–15 t/s' },
+              { 'Hardware': '4 GB GPU', 'Model': 'TinyLlama 1B', 'Quant': 'Q5', 'Speed': '20–40 t/s' },
+              { 'Hardware': '6 GB GPU', 'Model': 'Phi-3 Mini', 'Quant': 'Q5', 'Speed': '15–30 t/s' },
+              { 'Hardware': '8 GB GPU', 'Model': 'Mistral 7B', 'Quant': 'Q4', 'Speed': '25–60 t/s' },
+              { 'Hardware': '16 GB+', 'Model': '13B models', 'Quant': 'Q4', 'Speed': '20–50 t/s' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GPU vs CPU: Speed Facts',
+            items: [
+              '<strong>GPU (RTX 3060):</strong> 15–20 tok/sec. Fastest option. Requires CUDA.',
+              '<strong>Integrated GPU:</strong> 5–8 tok/sec. No setup. Slower than discrete GPU.',
+              '<strong>CPU only:</strong> 1–5 tok/sec. Runs everywhere. Slowest.',
+              '<strong>Rule:</strong> Use any GPU (even integrated) over CPU. CPU is last resort.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'What is Actually "Fast"?',
+            intro: 'Speed perception depends on the task:',
+            items: [
+              '<strong>Below 10 tok/sec:</strong> Feels broken. Words appear one at a time.',
+              '<strong>15–25 tok/sec:</strong> Acceptable. Good for Q&A and coding help.',
+              '<strong>30+ tok/sec:</strong> Smooth. Feels like a real assistant.',
+              '<strong>60+ tok/sec:</strong> Instant. Ideal for real-time autocomplete.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Quantization Guide',
+            intro: 'Trade quality for VRAM savings and speed:',
+            items: [
+              '<strong>Q4:</strong> ~1% quality loss, 50% VRAM savings. Standard choice.',
+              '<strong>Q3:</strong> ~3% quality loss, 62% savings. Acceptable for chat.',
+              '<strong>Q2:</strong> ~10% quality loss, 75% savings. Last resort only.',
+              '<strong>Q2 is 30% faster</strong> than Q4 due to less memory bandwidth.',
+              '<strong>Strategy:</strong> Quantize large models (Mistral 7B Q2) vs switching to tiny ones.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'How to Speed Up CPU Inference',
+            items: [
+              '<strong>Enable AVX-512:</strong> Set LLAMACPP_AVX512=1 — ~20% speedup.',
+              '<strong>Reduce context window:</strong> Use --ctx-size 1024 instead of 4096.',
+              '<strong>Use llama.cpp directly:</strong> ~10% faster than Ollama on CPU.',
+              '<strong>Try single-threaded mode:</strong> Weak CPUs often run faster single-threaded.',
+              '<strong>Offload to iGPU:</strong> Even integrated GPU beats pure CPU inference.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes to Avoid',
+            items: [
+              'Using TinyLlama on CPU — use Phi-3 Mini 3.8B instead.',
+              'Not enabling CPU acceleration flags (AVX-512 or NEON).',
+              'Forcing a 7B model into 4 GB with Q2 — causes OOM crashes.',
+              'Assuming newer hardware always means faster inference — benchmark first.',
+              'Using wrong Ollama slug — ollama run phi loads Phi-2, not Phi-3 Mini.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'What to Avoid on Low-End PCs',
+            items: [
+              '<strong>13B+ models:</strong> Exceed RAM limits. Require 8–10 GB VRAM minimum.',
+              '<strong>Q8 quantization:</strong> 2× VRAM cost for only ~2% quality improvement.',
+              '<strong>Real-time autocomplete:</strong> Needs ≥20 tok/sec — CPU cannot reach this.',
+              '<strong>Production chatbots on CPU:</strong> 300 ms latency is too slow for users.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              { q: 'What qualifies as a low-end PC?', a: 'Any machine with less than 8 GB dedicated VRAM, or a CPU-only system. Includes Intel Iris laptops, GTX 1060 desktops, and Chromebooks.' },
+              { q: 'Can I run Mistral 7B on a 4 GB GPU?', a: 'At Q2, yes. At Q4, expect OOM crash. Q2 gives ~30% speed gain but ~10% quality loss.' },
+              { q: 'How does quantization affect speed?', a: 'Q2 is 30% faster than Q4 because the model loads fewer bytes per pass. Use Q4 by default; drop to Q2 only if OOM.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Compare AI Outputs Instantly',
+            body: 'PromptQuorum lets you run the same prompt across multiple AI models simultaneously — see which one answers best for your use case.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      de: {
+        title: 'Schnellste lokale LLMs für Low-End-PCs',
+        back: '← Zurück zum Artikel',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Schnellste lokale LLMs für Low-End-PCs',
+            subtitle: 'Nur CPU: 5–15 Tok/Sek · 4 GB GPU: 20–40 Tok/Sek · 8 GB GPU: 25–60 Tok/Sek',
+            link: BASE
+          },
+          {
+            type: 'list',
+            h2: 'Wichtige Erkenntnisse nach Hardware-Tier',
+            items: [
+              '<strong>Nur CPU (kein GPU):</strong> Phi-3 Mini 3.8B mit 5–15 Tok/Sek',
+              '<strong>4 GB VRAM:</strong> TinyLlama 1.1B Q5 mit 20–40 Tok/Sek',
+              '<strong>6 GB VRAM:</strong> Phi-3 Mini Q5 mit 15–30 Tok/Sek',
+              '<strong>8 GB VRAM (optimaler Bereich):</strong> Mistral 7B Q4 mit 25–60 Tok/Sek',
+              '<strong>16 GB+:</strong> 13B-Modelle Q4 mit 20–50 Tok/Sek',
+              '<strong>Qualitätsranking:</strong> 13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Grundregel: Hardware zum Modell passend auswählen',
+            line1: '❌ Falsches Modell = 4–10× Geschwindigkeit verschenkt',
+            line2: '✅ Richtiges Modell = maximale Geschwindigkeit für Ihre Hardware',
+            tip: 'GPU schlägt immer CPU. Selbst 4 GB VRAM bieten 4× mehr Geschwindigkeit als CPU.'
+          },
+          {
+            type: 'table',
+            h2: 'Schnellstes Modell für Ihre Hardware',
+            columns: ['Hardware', 'Bestes Modell', 'Geschwindigkeit'],
+            rows: [
+              { 'Hardware': 'Nur CPU', 'Bestes Modell': 'Phi-3 Mini Q4', 'Geschwindigkeit': '5–15 T/Sek' },
+              { 'Hardware': '4 GB GPU', 'Bestes Modell': 'TinyLlama 1B Q5', 'Geschwindigkeit': '20–40 T/Sek' },
+              { 'Hardware': '6 GB GPU', 'Bestes Modell': 'Phi-3 Mini Q5', 'Geschwindigkeit': '15–30 T/Sek' },
+              { 'Hardware': '8 GB GPU', 'Bestes Modell': 'Mistral 7B Q4', 'Geschwindigkeit': '25–60 T/Sek' },
+              { 'Hardware': '16 GB+', 'Bestes Modell': '13B-Modelle Q4', 'Geschwindigkeit': '20–50 T/Sek' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Ein Modell pro Hardware-Tier',
+            intro: 'Eine klare Empfehlung pro Tier:',
+            items: [
+              '<strong>Nur CPU →</strong> Phi-3 Mini Q4 (2,5 GB RAM, 5–15 Tok/Sek)',
+              '<strong>4 GB GPU →</strong> TinyLlama 1B Q5 (0,8 GB VRAM, 20–40 Tok/Sek)',
+              '<strong>6 GB GPU →</strong> Phi-3 Mini Q5 (2,7 GB VRAM, 15–30 Tok/Sek)',
+              '<strong>8 GB GPU →</strong> Mistral 7B Q4 (4,1 GB VRAM, 25–60 Tok/Sek) — optimal',
+              '<strong>16 GB+ →</strong> Llama 3.1 13B Q4 (7–9 GB VRAM, 20–50 Tok/Sek)'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Hardware-Benchmark-Tabelle',
+            columns: ['Hardware', 'Modell', 'Quant.', 'Geschwindigkeit'],
+            rows: [
+              { 'Hardware': 'Nur CPU', 'Modell': 'Phi-3 Mini', 'Quant.': 'Q4', 'Geschwindigkeit': '5–15 T/Sek' },
+              { 'Hardware': '4 GB GPU', 'Modell': 'TinyLlama 1B', 'Quant.': 'Q5', 'Geschwindigkeit': '20–40 T/Sek' },
+              { 'Hardware': '6 GB GPU', 'Modell': 'Phi-3 Mini', 'Quant.': 'Q5', 'Geschwindigkeit': '15–30 T/Sek' },
+              { 'Hardware': '8 GB GPU', 'Modell': 'Mistral 7B', 'Quant.': 'Q4', 'Geschwindigkeit': '25–60 T/Sek' },
+              { 'Hardware': '16 GB+', 'Modell': '13B-Modelle', 'Quant.': 'Q4', 'Geschwindigkeit': '20–50 T/Sek' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GPU vs. CPU: Geschwindigkeitsfakten',
+            items: [
+              '<strong>GPU (RTX 3060):</strong> 15–20 Tok/Sek. Schnellste Option. Erfordert CUDA.',
+              '<strong>Integrierte GPU:</strong> 5–8 Tok/Sek. Kein Setup. Langsamer als dedizierter GPU.',
+              '<strong>Nur CPU:</strong> 1–5 Tok/Sek. Läuft überall. Am langsamsten.',
+              '<strong>Regel:</strong> Jede GPU (auch integriert) schlägt CPU. CPU ist letzter Ausweg.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Was ist eigentlich „schnell"?',
+            intro: 'Geschwindigkeitswahrnehmung hängt vom Einsatzgebiet ab:',
+            items: [
+              '<strong>Unter 10 Tok/Sek:</strong> Fühlt sich defekt an. Wörter erscheinen einzeln.',
+              '<strong>15–25 Tok/Sek:</strong> Akzeptabel. Gut für Q&A und Programmierhilfe.',
+              '<strong>30+ Tok/Sek:</strong> Flüssig. Fühlt sich wie ein echter Assistent an.',
+              '<strong>60+ Tok/Sek:</strong> Sofortig. Ideal für Autovervollständigung.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Quantisierungsleitfaden',
+            intro: 'Qualität gegen VRAM-Einsparungen und Geschwindigkeit tauschen:',
+            items: [
+              '<strong>Q4:</strong> ~1% Qualitätsverlust, 50% VRAM-Einsparung. Standardwahl.',
+              '<strong>Q3:</strong> ~3% Verlust, 62% Einsparung. Akzeptabel für Chat.',
+              '<strong>Q2:</strong> ~10% Verlust, 75% Einsparung. Nur letzter Ausweg.',
+              '<strong>Q2 ist 30% schneller</strong> als Q4 (weniger Speicherbandbreite).',
+              '<strong>Strategie:</strong> Große Modelle quantisieren (Mistral 7B Q2) statt Tiny-Modelle.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'CPU-Inferenz beschleunigen',
+            items: [
+              '<strong>AVX-512 aktivieren:</strong> LLAMACPP_AVX512=1 setzen — ~20% Beschleunigung.',
+              '<strong>Kontext reduzieren:</strong> --ctx-size 1024 statt 4096 verwenden.',
+              '<strong>llama.cpp direkt verwenden:</strong> ~10% schneller als Ollama auf CPU.',
+              '<strong>Einfachen Thread testen:</strong> Schwache CPUs laufen single-threaded schneller.',
+              '<strong>Auf iGPU auslagern:</strong> Selbst integrierte GPU schlägt reine CPU.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Fehler vermeiden',
+            items: [
+              'TinyLlama auf CPU verwenden — Phi-3 Mini 3.8B nehmen.',
+              'CPU-Beschleunigungsflags (AVX-512/NEON) nicht aktivieren.',
+              '7B-Modell mit Q2 in 4 GB zwingen — verursacht OOM-Abstürze.',
+              'Annehmen, neuere Hardware bedeutet schnellere Inferenz — erst benchmarken.',
+              'Falschen Ollama-Slug verwenden — ollama run phi lädt Phi-2, nicht Phi-3.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Was auf Low-End-PCs zu vermeiden ist',
+            items: [
+              '<strong>13B+-Modelle:</strong> Überschreiten RAM-Limits. Benötigen 8–10 GB VRAM.',
+              '<strong>Q8-Quantisierung:</strong> 2× VRAM-Kosten, nur ~2% Qualitätsgewinn.',
+              '<strong>Echtzeit-Autovervollständigung:</strong> Benötigt ≥20 Tok/Sek — CPU schafft das nicht.',
+              '<strong>Produktions-Chatbots auf CPU:</strong> 300 ms Latenz — zu langsam für Nutzer.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              { q: 'Was gilt als Low-End-PC?', a: 'Jedes Gerät mit weniger als 8 GB dedizierten VRAM oder nur CPU. Beinhaltet Intel Iris-Laptops, GTX 1060-Desktops und Chromebooks.' },
+              { q: 'Kann ich Mistral 7B auf 4 GB GPU ausführen?', a: 'Mit Q2 ja. Mit Q4 OOM-Absturz. Q2 bringt ~30% mehr Geschwindigkeit, aber ~10% Qualitätsverlust.' },
+              { q: 'Wie beeinflusst Quantisierung die Geschwindigkeit?', a: 'Q2 ist 30% schneller als Q4 wegen weniger Speicherbandbreite. Q4 als Standard; auf Q2 wechseln nur bei OOM.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'KI-Ausgaben sofort vergleichen',
+            body: 'PromptQuorum ermöglicht es Ihnen, denselben Prompt gleichzeitig auf mehreren KI-Modellen auszuführen und zu sehen, welches am besten auf Ihren Anwendungsfall antwortet.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      fr: {
+        title: 'LLMs locaux les plus rapides pour PC bas de gamme',
+        back: '← Retour à l\'article',
+        slides: [
+          {
+            type: 'title',
+            h1: 'LLMs locaux les plus rapides pour PC bas de gamme',
+            subtitle: 'CPU seul : 5–15 tok/sec · 4 Go GPU : 20–40 tok/sec · 8 Go GPU : 25–60 tok/sec',
+            link: BASE
+          },
+          {
+            type: 'list',
+            h2: 'Points clés par niveau matériel',
+            items: [
+              '<strong>CPU seul (sans GPU) :</strong> Phi-3 Mini 3.8B à 5–15 tok/sec',
+              '<strong>4 Go VRAM :</strong> TinyLlama 1.1B Q5 à 20–40 tok/sec',
+              '<strong>6 Go VRAM :</strong> Phi-3 Mini Q5 à 15–30 tok/sec',
+              '<strong>8 Go VRAM (optimum) :</strong> Mistral 7B Q4 à 25–60 tok/sec',
+              '<strong>16 Go+ :</strong> Modèles 13B Q4 à 20–50 tok/sec',
+              '<strong>Classement qualité :</strong> 13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'La règle fondamentale : adapter le modèle au matériel',
+            line1: '❌ Mauvais modèle = 4–10× de vitesse gaspillée',
+            line2: '✅ Bon modèle = vitesse maximale pour votre matériel',
+            tip: 'Le GPU surpasse toujours le CPU. Même 4 Go VRAM donne 4× plus de vitesse.'
+          },
+          {
+            type: 'table',
+            h2: 'Modèle le plus rapide pour votre matériel',
+            columns: ['Matériel', 'Meilleur modèle', 'Vitesse'],
+            rows: [
+              { 'Matériel': 'CPU seul', 'Meilleur modèle': 'Phi-3 Mini Q4', 'Vitesse': '5–15 t/s' },
+              { 'Matériel': '4 Go GPU', 'Meilleur modèle': 'TinyLlama 1B Q5', 'Vitesse': '20–40 t/s' },
+              { 'Matériel': '6 Go GPU', 'Meilleur modèle': 'Phi-3 Mini Q5', 'Vitesse': '15–30 t/s' },
+              { 'Matériel': '8 Go GPU', 'Meilleur modèle': 'Mistral 7B Q4', 'Vitesse': '25–60 t/s' },
+              { 'Matériel': '16 Go+', 'Meilleur modèle': 'Modèles 13B Q4', 'Vitesse': '20–50 t/s' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Un modèle par niveau matériel',
+            intro: 'Une réponse claire par niveau :',
+            items: [
+              '<strong>CPU seul →</strong> Phi-3 Mini Q4 (2,5 Go RAM, 5–15 tok/sec)',
+              '<strong>4 Go GPU →</strong> TinyLlama 1B Q5 (0,8 Go VRAM, 20–40 tok/sec)',
+              '<strong>6 Go GPU →</strong> Phi-3 Mini Q5 (2,7 Go VRAM, 15–30 tok/sec)',
+              '<strong>8 Go GPU →</strong> Mistral 7B Q4 (4,1 Go VRAM, 25–60 tok/sec) — idéal',
+              '<strong>16 Go+ →</strong> Llama 3.1 13B Q4 (7–9 Go VRAM, 20–50 tok/sec)'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Tableau complet des benchmarks',
+            columns: ['Matériel', 'Modèle', 'Quant.', 'Vitesse'],
+            rows: [
+              { 'Matériel': 'CPU seul', 'Modèle': 'Phi-3 Mini', 'Quant.': 'Q4', 'Vitesse': '5–15 t/s' },
+              { 'Matériel': '4 Go GPU', 'Modèle': 'TinyLlama 1B', 'Quant.': 'Q5', 'Vitesse': '20–40 t/s' },
+              { 'Matériel': '6 Go GPU', 'Modèle': 'Phi-3 Mini', 'Quant.': 'Q5', 'Vitesse': '15–30 t/s' },
+              { 'Matériel': '8 Go GPU', 'Modèle': 'Mistral 7B', 'Quant.': 'Q4', 'Vitesse': '25–60 t/s' },
+              { 'Matériel': '16 Go+', 'Modèle': 'Modèles 13B', 'Quant.': 'Q4', 'Vitesse': '20–50 t/s' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GPU vs CPU : les faits de vitesse',
+            items: [
+              '<strong>GPU (RTX 3060) :</strong> 15–20 tok/sec. Option la plus rapide. Nécessite CUDA.',
+              '<strong>GPU intégré :</strong> 5–8 tok/sec. Pas de configuration. Plus lent que GPU dédié.',
+              '<strong>CPU seul :</strong> 1–5 tok/sec. Fonctionne partout. Le plus lent.',
+              '<strong>Règle :</strong> Tout GPU (même intégré) bat le CPU. CPU en dernier recours.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: "Qu'est-ce qui est vraiment « rapide » ?",
+            intro: 'La vitesse ressentie dépend de la tâche :',
+            items: [
+              '<strong>Sous 10 tok/sec :</strong> Semble cassé. Mots apparaissent un par un.',
+              '<strong>15–25 tok/sec :</strong> Acceptable. Bon pour Q&R et aide au code.',
+              '<strong>30+ tok/sec :</strong> Fluide. Ressemble à un vrai assistant.',
+              '<strong>60+ tok/sec :</strong> Instantané. Idéal pour autocomplétion.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Guide de quantification',
+            intro: 'Échanger qualité contre économies VRAM et vitesse :',
+            items: [
+              '<strong>Q4 :</strong> ~1% de perte de qualité, 50% économies VRAM. Choix standard.',
+              '<strong>Q3 :</strong> ~3% de perte, 62% économies. Acceptable pour le chat.',
+              '<strong>Q2 :</strong> ~10% de perte, 75% économies. Dernier recours uniquement.',
+              '<strong>Q2 est 30% plus rapide</strong> que Q4 (moins de bande passante mémoire).',
+              '<strong>Stratégie :</strong> Quantifier grands modèles (Mistral 7B Q2) plutôt que petits.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: "Accélérer l'inférence CPU",
+            items: [
+              "<strong>Activer AVX-512 :</strong> Définir LLAMACPP_AVX512=1 — ~20% d'accélération.",
+              '<strong>Réduire le contexte :</strong> Utiliser --ctx-size 1024 au lieu de 4096.',
+              "<strong>Utiliser llama.cpp directement :</strong> ~10% plus rapide qu'Ollama sur CPU.",
+              '<strong>Tester mono-thread :</strong> Les CPU faibles sont souvent plus rapides en mono-thread.',
+              '<strong>Décharger sur iGPU :</strong> Même GPU intégré bat le CPU pur.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs courantes à éviter',
+            items: [
+              'Utiliser TinyLlama sur CPU — utiliser Phi-3 Mini 3.8B à la place.',
+              "Ne pas activer les flags d'accélération CPU (AVX-512/NEON).",
+              'Forcer 7B dans 4 Go avec Q2 — provoque des crashs OOM.',
+              'Supposer que matériel plus récent = inférence plus rapide — tester avant.',
+              "Utiliser le mauvais slug Ollama — ollama run phi charge Phi-2 pas Phi-3."
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Ce à éviter sur PC bas de gamme',
+            items: [
+              '<strong>Modèles 13B+ :</strong> Dépassent les limites RAM. Nécessitent 8–10 Go VRAM.',
+              '<strong>Quantification Q8 :</strong> 2× coût VRAM pour seulement ~2% de gain qualité.',
+              "<strong>Autocomplétion temps réel :</strong> Nécessite ≥20 tok/sec — CPU ne peut pas.",
+              '<strong>Chatbots de production sur CPU :</strong> 300 ms latence — trop lent pour utilisateurs.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes',
+            faqs: [
+              { q: "Qu'est-ce qu'un PC bas de gamme ?", a: 'Toute machine avec moins de 8 Go VRAM dédié ou CPU seul. Inclut laptops Intel Iris, desktops GTX 1060 et Chromebooks.' },
+              { q: 'Puis-je exécuter Mistral 7B sur 4 Go GPU ?', a: 'En Q2 oui. En Q4, crash OOM. Q2 donne ~30% de vitesse en plus mais ~10% de perte de qualité.' },
+              { q: 'Comment la quantification affecte-t-elle la vitesse ?', a: 'Q2 est 30% plus rapide que Q4 car moins de bande passante mémoire. Q4 par défaut ; Q2 uniquement si OOM.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Comparez les sorties IA instantanément',
+            body: "PromptQuorum vous permet d'exécuter le même prompt sur plusieurs modèles IA simultanément et de voir lequel répond le mieux à votre cas d'usage.",
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      ja: {
+        title: '低スペックPCで動く最速ローカルLLM',
+        back: '← 記事に戻る',
+        slides: [
+          {
+            type: 'title',
+            h1: '低スペックPCで動く最速ローカルLLM',
+            subtitle: 'CPUのみ：5〜15t/s · 4GB GPU：20〜40t/s · 8GB GPU：25〜60t/s',
+            link: BASE
+          },
+          {
+            type: 'list',
+            h2: 'ハードウェア別の重要ポイント',
+            items: [
+              '<strong>CPUのみ（GPUなし）：</strong>Phi-3 Mini 3.8B、5〜15トークン/秒',
+              '<strong>4GB VRAM：</strong>TinyLlama 1.1B Q5、20〜40トークン/秒',
+              '<strong>6GB VRAM：</strong>Phi-3 Mini Q5、15〜30トークン/秒',
+              '<strong>8GB VRAM（最適）：</strong>Mistral 7B Q4、25〜60トークン/秒',
+              '<strong>16GB+：</strong>13Bモデル Q4、20〜50トークン/秒',
+              '<strong>品質ランキング：</strong>13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '基本ルール：ハードウェアに合ったモデルを選ぶ',
+            line1: '❌ 間違ったモデル = 4〜10倍の速度を無駄に',
+            line2: '✅ 正しいモデル = ハードウェア最大速度を実現',
+            tip: 'GPUは常にCPUより速い。4GB VRAMでもCPUより4倍速い。'
+          },
+          {
+            type: 'table',
+            h2: 'あなたのハードウェアに最速のモデルは？',
+            columns: ['ハードウェア', '最適モデル', '速度'],
+            rows: [
+              { 'ハードウェア': 'CPUのみ', '最適モデル': 'Phi-3 Mini Q4', '速度': '5〜15t/s' },
+              { 'ハードウェア': '4GB GPU', '最適モデル': 'TinyLlama 1B Q5', '速度': '20〜40t/s' },
+              { 'ハードウェア': '6GB GPU', '最適モデル': 'Phi-3 Mini Q5', '速度': '15〜30t/s' },
+              { 'ハードウェア': '8GB GPU', '最適モデル': 'Mistral 7B Q4', '速度': '25〜60t/s' },
+              { 'ハードウェア': '16GB+', '最適モデル': '13Bモデル Q4', '速度': '20〜50t/s' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ハードウェア別モデル選択：1ティア1答え',
+            intro: 'ハードウェアに合わせた明確な推奨：',
+            items: [
+              '<strong>CPUのみ →</strong> Phi-3 Mini Q4（RAM 2.5GB、5〜15t/s）',
+              '<strong>4GB GPU →</strong> TinyLlama 1B Q5（VRAM 0.8GB、20〜40t/s）',
+              '<strong>6GB GPU →</strong> Phi-3 Mini Q5（VRAM 2.7GB、15〜30t/s）',
+              '<strong>8GB GPU →</strong> Mistral 7B Q4（VRAM 4.1GB、25〜60t/s）— 最適',
+              '<strong>16GB+ →</strong> Llama 3.1 13B Q4（VRAM 7〜9GB、20〜50t/s）'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ハードウェアベンチマーク表',
+            columns: ['ハードウェア', 'モデル', '量子化', '速度'],
+            rows: [
+              { 'ハードウェア': 'CPUのみ', 'モデル': 'Phi-3 Mini', '量子化': 'Q4', '速度': '5〜15t/s' },
+              { 'ハードウェア': '4GB GPU', 'モデル': 'TinyLlama 1B', '量子化': 'Q5', '速度': '20〜40t/s' },
+              { 'ハードウェア': '6GB GPU', 'モデル': 'Phi-3 Mini', '量子化': 'Q5', '速度': '15〜30t/s' },
+              { 'ハードウェア': '8GB GPU', 'モデル': 'Mistral 7B', '量子化': 'Q4', '速度': '25〜60t/s' },
+              { 'ハードウェア': '16GB+', 'モデル': '13Bモデル', '量子化': 'Q4', '速度': '20〜50t/s' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GPU vs CPU：速度の事実',
+            items: [
+              '<strong>GPU（RTX 3060）：</strong>15〜20t/s。最速オプション。CUDAが必要。',
+              '<strong>統合GPU：</strong>5〜8t/s。設定不要。専用GPUより遅い。',
+              '<strong>CPUのみ：</strong>1〜5t/s。どこでも動く。最も遅い。',
+              '<strong>ルール：</strong>どんなGPU（統合でも）もCPUに勝る。CPUは最後の手段。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '「速い」とは実際どれくらい？',
+            intro: 'タスクによって速度の体感は異なる：',
+            items: [
+              '<strong>10t/s未満：</strong>壊れている感覚。単語が1つずつ表示される。',
+              '<strong>15〜25t/s：</strong>許容範囲。Q&AやコーディングヘルプにOK。',
+              '<strong>30t/s以上：</strong>スムーズ。本物のアシスタントのような感覚。',
+              '<strong>60t/s以上：</strong>瞬時。オートコンプリートに最適。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '量子化ガイド',
+            intro: '品質をVRAM節約と速度に換える：',
+            items: [
+              '<strong>Q4：</strong>品質損失〜1%、VRAM 50%節約。標準的な選択。',
+              '<strong>Q3：</strong>品質損失〜3%、62%節約。チャットに許容範囲。',
+              '<strong>Q2：</strong>品質損失〜10%、75%節約。最後の手段のみ。',
+              '<strong>Q2はQ4より30%速い</strong>（メモリ帯域幅が少ないため）。',
+              '<strong>戦略：</strong>小型モデルより大型モデルを量子化（Mistral 7B Q2）。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'CPU推論を高速化する方法',
+            items: [
+              '<strong>AVX-512を有効化：</strong>LLAMACPP_AVX512=1を設定 — 約20%高速化。',
+              '<strong>コンテキストを削減：</strong>4096の代わりに--ctx-size 1024を使用。',
+              '<strong>llama.cppを直接使用：</strong>CPU上でOllamaより約10%速い。',
+              '<strong>シングルスレッドを試す：</strong>弱いCPUはシングルスレッドで速い場合がある。',
+              '<strong>iGPUにオフロード：</strong>統合GPUでさえCPUに勝る。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'よくある間違い',
+            items: [
+              'CPU上でTinyLlamaを使う — 代わりにPhi-3 Mini 3.8Bを使用。',
+              'CPUアクセラレーションフラグ（AVX-512/NEON）を有効化しない。',
+              '4GBにQ2で7Bモデルを無理に入れる — OOMクラッシュを引き起こす。',
+              '新しいハードウェア＝高速推論と仮定する — まずベンチマーク。',
+              '間違ったOllamaスラグを使用 — ollama run phiはPhi-2をロード。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '低スペックPCで避けること',
+            items: [
+              '<strong>13B+モデル：</strong>RAMの限界を超える。8〜10GB VRAMが必要。',
+              '<strong>Q8量子化：</strong>VRAMコスト2倍、品質向上わずか〜2%。',
+              '<strong>リアルタイムオートコンプリート：</strong>≥20t/s必要 — CPUでは不可。',
+              '<strong>CPUでの本番チャットボット：</strong>300msレイテンシ — ユーザー向けには遅すぎる。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              { q: '低スペックPCとは何ですか？', a: '8GB未満の専用VRAMまたはCPU専用システム。Intel Irisラップトップ、GTX 1060デスクトップ、Chromebookが含まれる。' },
+              { q: '4GB GPUでMistral 7Bは動きますか？', a: 'Q2では動く。Q4ではOOMクラッシュ。Q2は速度約30%向上だが品質約10%低下。' },
+              { q: '量子化は速度にどう影響しますか？', a: 'Q2はQ4より30%速い（メモリ帯域幅削減）。デフォルトはQ4；OOMの場合のみQ2に下げる。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'AIの出力を即座に比較',
+            body: 'PromptQuorumを使えば、同じプロンプトを複数のAIモデルで同時に実行し、どれがあなたのユースケースに最適かを確認できます。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      zh: {
+        title: '低配PC最快本地大语言模型',
+        back: '← 返回文章',
+        slides: [
+          {
+            type: 'title',
+            h1: '低配PC最快本地大语言模型',
+            subtitle: '纯CPU：5-15词/秒 · 4GB GPU：20-40词/秒 · 8GB GPU：25-60词/秒',
+            link: BASE
+          },
+          {
+            type: 'list',
+            h2: '各硬件层级的核心要点',
+            items: [
+              '<strong>纯CPU（无GPU）：</strong>Phi-3 Mini 3.8B，5-15词元/秒',
+              '<strong>4GB VRAM：</strong>TinyLlama 1.1B Q5，20-40词元/秒',
+              '<strong>6GB VRAM：</strong>Phi-3 Mini Q5，15-30词元/秒',
+              '<strong>8GB VRAM（最佳）：</strong>Mistral 7B Q4，25-60词元/秒',
+              '<strong>16GB+：</strong>13B模型 Q4，20-50词元/秒',
+              '<strong>质量排名：</strong>13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '核心规则：将硬件与模型匹配',
+            line1: '❌ 错误模型 = 浪费4-10倍速度',
+            line2: '✅ 正确模型 = 硬件最大速度',
+            tip: 'GPU始终优于CPU。即使4GB VRAM也比纯CPU快4倍。'
+          },
+          {
+            type: 'table',
+            h2: '适合您硬件的最快模型',
+            columns: ['硬件', '最佳模型', '速度'],
+            rows: [
+              { '硬件': '纯CPU', '最佳模型': 'Phi-3 Mini Q4', '速度': '5-15词/秒' },
+              { '硬件': '4GB GPU', '最佳模型': 'TinyLlama 1B Q5', '速度': '20-40词/秒' },
+              { '硬件': '6GB GPU', '最佳模型': 'Phi-3 Mini Q5', '速度': '15-30词/秒' },
+              { '硬件': '8GB GPU', '最佳模型': 'Mistral 7B Q4', '速度': '25-60词/秒' },
+              { '硬件': '16GB+', '最佳模型': '13B模型 Q4', '速度': '20-50词/秒' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '每个硬件层级一个明确答案',
+            intro: '按硬件匹配，无需猜测：',
+            items: [
+              '<strong>纯CPU →</strong> Phi-3 Mini Q4（RAM 2.5GB，5-15词/秒）',
+              '<strong>4GB GPU →</strong> TinyLlama 1B Q5（VRAM 0.8GB，20-40词/秒）',
+              '<strong>6GB GPU →</strong> Phi-3 Mini Q5（VRAM 2.7GB，15-30词/秒）',
+              '<strong>8GB GPU →</strong> Mistral 7B Q4（VRAM 4.1GB，25-60词/秒）— 最佳选择',
+              '<strong>16GB+ →</strong> Llama 3.1 13B Q4（VRAM 7-9GB，20-50词/秒）'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '硬件基准测试完整表格',
+            columns: ['硬件', '模型', '量化', '速度'],
+            rows: [
+              { '硬件': '纯CPU', '模型': 'Phi-3 Mini', '量化': 'Q4', '速度': '5-15词/秒' },
+              { '硬件': '4GB GPU', '模型': 'TinyLlama 1B', '量化': 'Q5', '速度': '20-40词/秒' },
+              { '硬件': '6GB GPU', '模型': 'Phi-3 Mini', '量化': 'Q5', '速度': '15-30词/秒' },
+              { '硬件': '8GB GPU', '模型': 'Mistral 7B', '量化': 'Q4', '速度': '25-60词/秒' },
+              { '硬件': '16GB+', '模型': '13B模型', '量化': 'Q4', '速度': '20-50词/秒' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GPU vs CPU：速度事实',
+            items: [
+              '<strong>GPU（RTX 3060）：</strong>15-20词/秒。最快选项。需要CUDA。',
+              '<strong>集成GPU：</strong>5-8词/秒。无需配置。比独立GPU慢。',
+              '<strong>纯CPU：</strong>1-5词/秒。可在任何地方运行。最慢。',
+              '<strong>规则：</strong>任何GPU（即使是集显）都优于CPU。CPU是最后手段。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '什么是真正的"快速"？',
+            intro: '速度感因任务而异：',
+            items: [
+              '<strong>10词/秒以下：</strong>感觉坏掉了。单词一个个出现，有明显停顿。',
+              '<strong>15-25词/秒：</strong>可接受。适合问答和编码帮助。',
+              '<strong>30词/秒以上：</strong>流畅。感觉像真正的助手。',
+              '<strong>60词/秒以上：</strong>即时。适合实时自动补全。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '量化指南',
+            intro: '以质量换取速度和VRAM节省：',
+            items: [
+              '<strong>Q4：</strong>质量损失约1%，节省50% VRAM。标准选择。',
+              '<strong>Q3：</strong>质量损失约3%，节省62%。聊天可接受。',
+              '<strong>Q2：</strong>质量损失约10%，节省75%。仅作最后手段。',
+              '<strong>Q2比Q4快30%</strong>（内存带宽更少）。',
+              '<strong>策略：</strong>量化大模型（Mistral 7B Q2）而非使用小模型。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '如何加速纯CPU推理',
+            items: [
+              '<strong>启用AVX-512：</strong>设置LLAMACPP_AVX512=1 — 约20%加速。',
+              '<strong>减少上下文：</strong>使用--ctx-size 1024而非4096。',
+              '<strong>直接使用llama.cpp：</strong>CPU上比Ollama快约10%。',
+              '<strong>尝试单线程：</strong>弱CPU上单线程可能更快。',
+              '<strong>卸载到集显：</strong>即使集成GPU也优于纯CPU。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '常见错误',
+            items: [
+              '在CPU上使用TinyLlama — 应使用Phi-3 Mini 3.8B。',
+              '未启用CPU加速标志（AVX-512/NEON）。',
+              '用Q2将7B模型强塞进4GB — 导致OOM崩溃。',
+              '假设更新的硬件=更快的推理 — 先进行基准测试。',
+              '使用错误的Ollama slug — ollama run phi加载Phi-2而非Phi-3。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '低配PC上应避免什么',
+            items: [
+              '<strong>13B+模型：</strong>超出RAM限制。需要8-10GB VRAM。',
+              '<strong>Q8量化：</strong>VRAM成本2倍，质量提升仅约2%。',
+              '<strong>实时自动补全：</strong>需要≥20词/秒 — CPU达不到。',
+              '<strong>CPU上的生产聊天机器人：</strong>300ms延迟 — 对用户太慢。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              { q: '什么是低配PC？', a: '任何专用VRAM不足8GB或仅有CPU的机器。包括Intel Iris笔记本、GTX 1060台式机和Chromebook。' },
+              { q: '可以在4GB GPU上运行Mistral 7B吗？', a: '用Q2可以。用Q4会OOM崩溃。Q2速度提升约30%但质量损失约10%。' },
+              { q: '量化如何影响速度？', a: 'Q2比Q4快30%（内存带宽减少）。默认用Q4；仅在OOM时降到Q2。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '即时比较AI输出结果',
+            body: 'PromptQuorum让您同时在多个AI模型上运行相同的提示词，并查看哪个模型对您的用例回答最好。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide, lang) {
+      let html = '';
+      const articleUrl = BASE + '?lang=' + lang;
+      const footerLink = '<p style="position:absolute;bottom:16px;right:16px;font-size:11px;color:#999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color:#999;text-decoration:none;border-bottom:1px solid #ddd;">← Article</a></p>';
+
+      switch (slide.type) {
+        case 'title':
+          html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+            + '<h1>' + slide.h1 + '</h1>'
+            + '<p>' + slide.subtitle + '</p>'
+            + '<p style="margin-top:32px;font-size:16px;color:#79747e;"><a href="' + slide.link + '" target="_blank" rel="noopener">promptquorum.com/local-llms/' + SLUG + '</a></p>'
+            + footerLink;
+          break;
+
+        case 'list':
+          html = '<h2>' + slide.h2 + '</h2>';
+          if (slide.intro) html += '<p style="margin-bottom:8px;">' + slide.intro + '</p>';
+          html += '<ul style="font-size:clamp(13px,1.4vw,17px);margin-top:8px;">';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ul>' + footerLink;
+          break;
+
+        case 'table':
+          html = '<h2>' + slide.h2 + '</h2><table style="margin-top:12px;"><tr>';
+          slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+          html += '</tr>';
+          slide.rows.forEach(function(row) {
+            html += '<tr>';
+            slide.columns.forEach(function(col) { html += '<td>' + row[col] + '</td>'; });
+            html += '</tr>';
+          });
+          html += '</table>' + footerLink;
+          break;
+
+        case 'comparison':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top:36px;font-size:clamp(18px,2.2vw,26px);font-weight:600;">' + slide.line1 + '</p>'
+            + '<p style="font-size:clamp(18px,2.2vw,26px);font-weight:600;margin-top:16px;">' + slide.line2 + '</p>'
+            + '<p style="margin-top:32px;font-size:clamp(14px,1.6vw,18px);color:#6750a4;">' + slide.tip + '</p>'
+            + footerLink;
+          break;
+
+        case 'numbered':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<ol style="font-size:clamp(13px,1.4vw,17px);margin-top:12px;text-align:left;max-width:640px;margin-left:auto;margin-right:auto;">';
+          slide.items.forEach(function(item) { html += '<li style="margin-bottom:10px;">' + item + '</li>'; });
+          html += '</ol>' + footerLink;
+          break;
+
+        case 'faq':
+          html = '<h2>' + slide.h2 + '</h2>';
+          slide.faqs.forEach(function(faq) {
+            html += '<div style="margin-bottom:16px;text-align:left;max-width:680px;margin-left:auto;margin-right:auto;">'
+              + '<strong style="font-size:clamp(13px,1.4vw,16px);">Q: ' + faq.q + '</strong>'
+              + '<p style="margin-top:6px;font-size:clamp(12px,1.3vw,15px);">A: ' + faq.a + '</p>'
+              + '</div>';
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="max-width:600px;margin:16px auto;">' + slide.body + '</p>'
+            + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:24px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-weight:700;font-size:16px;">' + slide.cta + '</a>'
+            + footerLink;
+          break;
+      }
+      return '<div class="slide ' + slide.type + '">' + html + '</div>';
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = BASE + '?lang=' + lang;
+    backLink.textContent = content.back || '← Back to Article';
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(function(slide) {
+      container.innerHTML += renderSlide(slide, lang);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(function(s) { s.classList.remove('active'); });
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) { showSlide(currentSlide + n); }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', function() {
+      slides.forEach(function(s) { s.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', function() {
+      slides.forEach(function(s) { s.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) { window.addEventListener('load', function() { window.print(); }); }
+
+    showSlide(0);
+    </script>
+</body>
+</html>
