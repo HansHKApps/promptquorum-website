@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Perte de qualité par niveau de quantification (Benchmark MMLU)</text>
+
+  <!-- Y-axis label -->
+  <text x="35" y="80" font-size="11" font-weight="600" fill="#79747E">85.2 %</text>
+  <text x="35" y="180" font-size="11" font-weight="600" fill="#79747E">82.5 %</text>
+  <text x="35" y="280" font-size="11" font-weight="600" fill="#79747E">80 %</text>
+
+  <!-- Grid lines -->
+  <line x1="50" y1="75" x2="770" y2="75" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="50" y1="175" x2="770" y2="175" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="50" y1="275" x2="770" y2="275" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Bars with labels -->
+
+  <!-- FP32: 85.2% (baseline, at top) -->
+  <rect x="70" y="55" width="45" height="200" rx="3" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="92.5" y="270" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">FP32</text>
+  <text x="92.5" y="290" font-size="11" fill="#49454F" text-anchor="middle">85.2 %</text>
+  <text x="92.5" y="305" font-size="10" fill="#79747E" text-anchor="middle">Baseline</text>
+
+  <!-- Q8: 85.1% (-0.1%) -->
+  <rect x="130" y="56" width="45" height="199" rx="3" fill="#E8F5E9" stroke="#34A853" stroke-width="2"/>
+  <text x="152.5" y="270" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">Q8</text>
+  <text x="152.5" y="290" font-size="11" fill="#49454F" text-anchor="middle">85.1 %</text>
+  <text x="152.5" y="305" font-size="10" fill="#34A853" text-anchor="middle">Perte -0.1 %</text>
+
+  <!-- Q5: 84.7% (-0.5%) -->
+  <rect x="190" y="70" width="45" height="195" rx="3" fill="#FFF9C4" stroke="#F4B400" stroke-width="2"/>
+  <text x="212.5" y="270" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">Q5</text>
+  <text x="212.5" y="290" font-size="11" fill="#49454F" text-anchor="middle">84.7 %</text>
+  <text x="212.5" y="305" font-size="10" fill="#F4B400" text-anchor="middle">Perte -0.5 %</text>
+
+  <!-- Q4: 84.0% (-1.2%) - HIGHLIGHTED -->
+  <rect x="250" y="104" width="45" height="171" rx="3" fill="#F3E5F5" stroke="#6750A4" stroke-width="2"/>
+  <text x="272.5" y="270" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">Q4 ✓</text>
+  <text x="272.5" y="290" font-size="11" fill="#49454F" text-anchor="middle">84.0 %</text>
+  <text x="272.5" y="305" font-size="10" fill="#6750A4" text-anchor="middle">Perte -1.2 %</text>
+
+  <!-- Q3: 81.5% (-3.7%) -->
+  <rect x="310" y="194" width="45" height="81" rx="3" fill="#FFCCBC" stroke="#EA4335" stroke-width="1"/>
+  <text x="332.5" y="270" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">Q3</text>
+  <text x="332.5" y="290" font-size="11" fill="#49454F" text-anchor="middle">81.5 %</text>
+  <text x="332.5" y="305" font-size="10" fill="#EA4335" text-anchor="middle">Perte -3.7 %</text>
+
+  <!-- Q2: 75.2% (-10%) -->
+  <rect x="370" y="295" width="45" height="-20" rx="3" fill="#FFCCBC" stroke="#EA4335" stroke-width="1"/>
+  <rect x="370" y="275" width="45" height="0" rx="3" fill="none"/>
+  <!-- Show Q2 differently since it's far below -->
+  <text x="392.5" y="270" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">Q2</text>
+  <text x="392.5" y="290" font-size="11" fill="#49454F" text-anchor="middle">75.2 %</text>
+  <text x="392.5" y="305" font-size="10" fill="#EA4335" text-anchor="middle">Perte -10 %</text>
+
+  <!-- Info boxes -->
+  <rect x="480" y="80" width="290" height="80" rx="6" fill="#F3E5F5" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="500" y="105" font-size="12" font-weight="700" fill="#6750A4">Q4 est imperceptible</text>
+  <text x="500" y="125" font-size="11" fill="#1C1B1F">Perte de 1.2 % = 1–2 réponses</text>
+  <text x="500" y="140" font-size="11" fill="#1C1B1F">incorrectes pour 100 questions.</text>
+  <text x="500" y="155" font-size="11" fill="#49454F">Acceptable pour toutes les tâches sauf</text>
+
+  <rect x="480" y="180" width="290" height="80" rx="6" fill="#E8F5E9" stroke="#34A853" stroke-width="1.5"/>
+  <text x="500" y="205" font-size="12" font-weight="700" fill="#34A853">Meilleur pour la plupart des utilisateurs</text>
+  <text x="500" y="225" font-size="11" fill="#1C1B1F">Q4 + Q5 conservent >98 % de qualité</text>
+  <text x="500" y="240" font-size="11" fill="#1C1B1F">tout en réduisant VRAM de 75–84 %.</text>
+  <text x="500" y="255" font-size="11" fill="#49454F">Q3 acceptable seulement si VRAM est critique.</text>
+
+  <text x="400" y="330" font-size="10" fill="#79747E" text-anchor="middle">Baseline Llama 3 70B FP32 : 85.2 % de précision sur MMLU (57 tâches de raisonnement). L'impact réel sur la plupart des tâches est imperceptible en dessous d'une perte de 2 %.</text>
+</svg>
