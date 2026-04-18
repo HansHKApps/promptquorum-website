@@ -18,7 +18,7 @@ export function useLang(initialLang?: Lang): Lang {
     const read = () => {
       const params = new URLSearchParams(window.location.search)
       const l = params.get('lang') as Lang
-      setLang(VALID_LANGS.includes(l) ? l : (initialLang ?? 'en'))
+      setLang(VALID_LANGS.includes(l) ? l : 'en')
     }
     read()
     window.addEventListener('popstate', read)
