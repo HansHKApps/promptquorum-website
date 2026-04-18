@@ -412,6 +412,32 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
         </figure>
       )}
 
+      {/* Callout boxes */}
+      {section.callouts && (
+        <div className="space-y-3 my-6">
+          {section.callouts.map((callout, i) => {
+            const calloutIcons: Record<string, string> = {
+              'warning': '⚠️',
+              'tip': '💡',
+              'insight': '🔍',
+              'note': '📌',
+              'practice': '🛠️',
+            }
+            const icon = calloutIcons[callout.type] || '•'
+            const bgColor = callout.type === 'warning' ? 'bg-orange-50 border-orange-200' : 'bg-blue-50 border-blue-200'
+            return (
+              <div key={i} className={`border ${bgColor} rounded-lg p-4`}>
+                <p className="text-text-secondary text-sm">
+                  <span className="mr-2">{icon}</span>
+                  <span className="font-semibold">{callout.type.charAt(0).toUpperCase() + callout.type.slice(1)}:</span>{' '}
+                  {renderInlineLinks(callout.text, lang)}
+                </p>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
       {/* FAQ */}
       {section.faqs && (
         <div className="space-y-6 mt-4">

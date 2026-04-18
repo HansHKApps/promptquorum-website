@@ -1,0 +1,57 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Temps de configuration: local vs cloud</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">La configuration locale prend 20–40 minutes; les APIs cloud sont prêtes en 5 minutes</text>
+
+  <!-- Left panel: Local (purple) -->
+  <rect x="18" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="58" width="370" height="5" rx="0" fill="#6750A4"/>
+
+  <text x="203" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">Configuration locale</text>
+  <text x="203" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Avec Ollama ou LM Studio</text>
+
+  <!-- Timeline -->
+  <text x="45" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">1. Télécharger le moteur d'inférence</text>
+  <text x="45" y="152" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Installateur Ollama ou LM Studio: 2–3 min</text>
+
+  <text x="45" y="175" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">2. Télécharger le fichier du modèle</text>
+  <text x="45" y="192" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Modèle 7B (4 Go): 5–10 min, 70B (40 Go): 1–2 heures</text>
+
+  <text x="45" y="215" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">3. Configurer le GPU (optionnel)</text>
+  <text x="45" y="232" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Pilotes CUDA/Metal: 5–10 min, dépannage possible</text>
+
+  <!-- Total time -->
+  <rect x="32" y="250" width="336" height="50" rx="3" fill="#F5F5F5" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="203" y="270" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">⏱ Total: 20–40 minutes</text>
+  <text x="203" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">+ maintenance continue (mises à jour, corrections de pilotes)</text>
+
+  <!-- Right panel: Cloud (green) -->
+  <rect x="412" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="412" y="58" width="370" height="5" rx="0" fill="#34A853"/>
+
+  <text x="597" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Configuration cloud</text>
+  <text x="597" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">OpenAI, Anthropic, Google, etc.</text>
+
+  <!-- Timeline -->
+  <text x="435" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">1. Créer un compte</text>
+  <text x="435" y="152" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Inscription par e-mail: 1 min</text>
+
+  <text x="435" y="175" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">2. Générer une clé API</text>
+  <text x="435" y="192" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Copiez-collez dans votre code: 1 min</text>
+
+  <text x="435" y="215" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">3. Commencer à utiliser</text>
+  <text x="435" y="232" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Effectuer le premier appel API: 3 min</text>
+
+  <!-- Total time -->
+  <rect x="426" y="250" width="336" height="50" rx="3" fill="#F5F5F5" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="597" y="270" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">⏱ Total: 5 minutes</text>
+  <text x="597" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Aucune maintenance, mises à jour automatiques</text>
+
+  <!-- "vs" divider -->
+  <text x="400" y="175" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#79747E" text-anchor="middle">vs</text>
+
+  <!-- Footer -->
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/local-llm-limitations</text>
+</svg>

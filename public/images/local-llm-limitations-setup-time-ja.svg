@@ -1,0 +1,57 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">セットアップ時間: ローカル対クラウド</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">ローカルセットアップは 20–40 分、Cloud API は 5 分で利用可能</text>
+
+  <!-- Left panel: Local (purple) -->
+  <rect x="18" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="58" width="370" height="5" rx="0" fill="#6750A4"/>
+
+  <text x="203" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">ローカルセットアップ</text>
+  <text x="203" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Ollama または LM Studio を使用</text>
+
+  <!-- Timeline -->
+  <text x="45" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">1. 推論エンジンをダウンロード</text>
+  <text x="45" y="152" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Ollama または LM Studio インストーラー: 2–3 分</text>
+
+  <text x="45" y="175" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">2. モデルファイルをダウンロード</text>
+  <text x="45" y="192" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">7B モデル (4 GB): 5–10 分、70B (40 GB): 1–2 時間</text>
+
+  <text x="45" y="215" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">3. GPU を設定 (オプション)</text>
+  <text x="45" y="232" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">CUDA/Metal ドライバー: 5–10 分、トラブルシューティングが必要な場合もあり</text>
+
+  <!-- Total time -->
+  <rect x="32" y="250" width="336" height="50" rx="3" fill="#F5F5F5" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="203" y="270" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">⏱ 合計: 20–40 分</text>
+  <text x="203" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">+ 継続的なメンテナンス (更新、ドライバー修正)</text>
+
+  <!-- Right panel: Cloud (green) -->
+  <rect x="412" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="412" y="58" width="370" height="5" rx="0" fill="#34A853"/>
+
+  <text x="597" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">クラウドセットアップ</text>
+  <text x="597" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">OpenAI、Anthropic、Google など</text>
+
+  <!-- Timeline -->
+  <text x="435" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">1. アカウント作成</text>
+  <text x="435" y="152" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">メールで登録: 1 分</text>
+
+  <text x="435" y="175" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">2. API キー生成</text>
+  <text x="435" y="192" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">コードにコピー: 1 分</text>
+
+  <text x="435" y="215" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">3. 使用開始</text>
+  <text x="435" y="232" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">最初の API 呼び出し: 3 分</text>
+
+  <!-- Total time -->
+  <rect x="426" y="250" width="336" height="50" rx="3" fill="#F5F5F5" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="597" y="270" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">⏱ 合計: 5 分</text>
+  <text x="597" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">メンテナンスなし、自動更新</text>
+
+  <!-- "vs" divider -->
+  <text x="400" y="175" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#79747E" text-anchor="middle">vs</text>
+
+  <!-- Footer -->
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/local-llm-limitations</text>
+</svg>

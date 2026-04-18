@@ -1,0 +1,67 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">速度: ローカル対 Cloud API</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">ローカル CPU は Cloud API の 4–10 倍少ないトークン数/秒を生成</text>
+
+  <!-- Left panel: Local (purple) -->
+  <rect x="18" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="58" width="370" height="5" rx="0" fill="#6750A4"/>
+
+  <text x="203" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">ローカル推論</text>
+  <text x="203" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">コンシューマーハードウェア上 (CPU または GPU)</text>
+
+  <!-- CPU speed -->
+  <text x="45" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">CPU:</text>
+  <text x="85" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">10–25 トークン/秒</text>
+  <text x="45" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">(4–10 倍遅い)</text>
+
+  <line x1="32" y1="160" x2="375" y2="160" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- GPU speed -->
+  <text x="45" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">GPU (RTX 4090):</text>
+  <text x="45" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">130–160 トークン/秒</text>
+  <text x="45" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">コスト: $1,600以上</text>
+
+  <line x1="32" y1="230" x2="375" y2="230" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Use cases -->
+  <text x="203" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">最適な用途:</text>
+  <text x="203" y="270" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ インタラクティブチャット (非緊急)</text>
+  <text x="203" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ オフラインバッチ処理</text>
+
+  <!-- Right panel: Cloud (green) -->
+  <rect x="412" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="412" y="58" width="370" height="5" rx="0" fill="#34A853"/>
+
+  <text x="597" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Cloud API</text>
+  <text x="597" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">エンタープライズ GPU 上 (H100、A100)</text>
+
+  <!-- Cloud speed -->
+  <text x="435" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">GPT-4o:</text>
+  <text x="485" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">80–150 トークン/秒</text>
+  <text x="435" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">(エンタープライズクラス)</text>
+
+  <line x1="426" y1="160" x2="769" y2="160" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Cost and reliability -->
+  <text x="435" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">コスト:</text>
+  <text x="485" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">1K トークンあたり $0.01–0.10</text>
+  <text x="435" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">SLA:</text>
+  <text x="485" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">99.9% アップタイム保証</text>
+
+  <line x1="426" y1="210" x2="769" y2="210" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Use cases -->
+  <text x="597" y="235" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">最適な用途:</text>
+  <text x="597" y="255" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ リアルタイムインタラクティブ利用</text>
+  <text x="597" y="275" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ 高スループットバッチ (1,000+ ドキュメント)</text>
+  <text x="597" y="295" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">✓ アップタイム保証付き本番運用</text>
+
+  <!-- "vs" divider -->
+  <text x="400" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#79747E" text-anchor="middle">vs</text>
+
+  <!-- Footer -->
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/local-llm-limitations</text>
+</svg>
