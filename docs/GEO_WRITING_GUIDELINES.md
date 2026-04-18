@@ -1463,6 +1463,205 @@ Anchor = [Topic noun phrase] + [intent verb or outcome]
 
 ---
 
+### Rule 40: Explanation Compression (Mandatory)
+
+Every section must **remove information that does not influence a decision**. If an explanation spans more than 2 paragraphs without adding decision value, it must be compressed into bullets or deleted entirely.
+
+**Why:** Readers scan for decisions, not entertainment. Explanations that don't change what the reader should do waste space and obscure the actual guidance. AI systems (Google, Perplexity, Claude) reward content density — saying the same thing in fewer words signals clarity and expertise.
+
+#### Rule
+
+**For every section (H2, H3):**
+
+1. **Count paragraphs** — How many prose paragraphs are in this section?
+2. **Test each paragraph** — Does this paragraph change the reader's decision?
+   - If NO → delete or compress it
+   - If YES → keep it
+
+3. **Apply the 2-paragraph limit:**
+   - **1–2 paragraphs with decision value** = keep as-is
+   - **3+ paragraphs** = either compress into bullets OR delete non-decision content
+
+#### What Counts as "Changes a Decision"?
+
+A paragraph changes a decision if it answers one of these:
+
+- **When to use X** — "Use this if [condition]"
+- **When NOT to use X** — "Avoid this if [condition]"
+- **Why this matters** — "[Outcome] happens because [reason]" (if the reason affects your action)
+- **What tradeoff exists** — "[Choice A] is better for [scenario 1]. [Choice B] is better for [scenario 2]"
+- **How to implement** — Step, configuration, or syntax needed for action
+
+#### What Does NOT Count
+
+- **Background context** — "This feature was invented in 2015..."
+- **General praise** — "This is a powerful technique..."
+- **Analogies for understanding** — "Think of it like..." (nice-to-have, not decision-critical)
+- **Historical notes** — "Previously, people used X, but now..."
+- **Repetition** — Saying the same thing in different words
+
+#### Examples
+
+**❌ Section with 3 paragraphs, only 1 changes decisions:**
+
+```markdown
+## How Token Counting Works
+
+Token counting is the process of calculating how many tokens your prompt will consume 
+before sending it to the API. Tokens are the smallest units that language models use to 
+process text. A token can be a word, a subword, or even punctuation.
+
+OpenAI's tokenizer breaks text into chunks. For example, the word "beautiful" is split 
+into two tokens: "beau" and "tiful". Different models use different tokenizers, but the 
+principle is the same. You can visualize this by using OpenAI's tokenizer tool.
+
+Use token counting if you need to calculate API costs before running queries, or if 
+you're working with models that have strict token limits. Avoid token counting if 
+you're working with small prompts where token counts don't materially affect pricing.
+
+```
+
+**Analysis:**
+- ❌ Paragraph 1 (definition) = no decision value (doesn't change what you do)
+- ❌ Paragraph 2 (background) = no decision value (just explaining how it works)
+- ✅ Paragraph 3 = YES, this changes a decision ("Use if...", "Avoid if...")
+
+**✅ Compressed version (keep only decision-critical content):**
+
+```markdown
+## How Token Counting Works
+
+Use token counting if you need to calculate API costs before running queries, or if 
+you're working with models that have strict token limits. Avoid token counting if 
+you're working with small prompts where token counts don't materially affect pricing.
+
+```
+
+---
+
+**❌ Another example with 4 paragraphs:**
+
+```markdown
+## Quantization Reduces VRAM Usage
+
+Quantization is a compression technique that reduces the precision of model weights. 
+Instead of storing weights as 32-bit floats, quantization stores them as 8-bit or 
+4-bit integers. This reduces the file size significantly.
+
+The history of quantization in language models is interesting. Early quantization 
+attempts in the 2000s were crude and lost a lot of model quality. But modern 
+quantization formats like GGUF and GPTQ have made the process much better.
+
+Modern quantization formats preserve model quality very well. Q4_K_M quantization, 
+for example, preserves 98%+ of original model quality while reducing VRAM usage by 3–4×.
+
+Choose Q4_K_M if you have 8GB+ VRAM and want the best quality. Choose Q3_K_M if 
+you have 4–6GB VRAM and can tolerate slightly lower quality. Avoid Q2_K_S unless 
+you absolutely cannot fit the model otherwise.
+
+```
+
+**Analysis:**
+- ❌ Paragraph 1 (definition) = no decision value
+- ❌ Paragraph 2 (history) = no decision value
+- ⚠️ Paragraph 3 (partially useful, but not actionable)
+- ✅ Paragraph 4 = decision value ("Choose X if...", "Avoid X if...")
+
+**✅ Compressed version:**
+
+```markdown
+## Quantization Reduces VRAM Usage
+
+Quantization compresses model weights to reduce VRAM usage by 3–4× (e.g., Q4_K_M 
+preserves 98%+ of model quality).
+
+Choose Q4_K_M if you have 8GB+ VRAM and want the best quality. Choose Q3_K_M if 
+you have 4–6GB VRAM and can tolerate slightly lower quality. Avoid Q2_K_S unless 
+you absolutely cannot fit the model otherwise.
+
+```
+
+---
+
+#### Compression Techniques
+
+**Technique 1: Merge definitions into decision statements**
+
+```
+BEFORE (2 paragraphs):
+Prompt caching stores recent prompts in memory to avoid reprocessing them.
+Use prompt caching if you're running the same prompt multiple times and want to 
+save tokens and API costs.
+
+AFTER (1 paragraph):
+Use prompt caching if you're running the same prompt multiple times and want to 
+save tokens and API costs. Avoid it if your prompts are always unique or you're 
+only running queries occasionally.
+```
+
+**Technique 2: Convert long explanations to bullet lists**
+
+```
+BEFORE (3 paragraphs):
+Temperature controls randomness in model output. Higher temperatures produce more 
+creative and diverse outputs, while lower temperatures produce more focused and 
+deterministic outputs. The typical range is 0.0 to 2.0.
+
+Use high temperature (1.5–2.0) for creative writing, brainstorming, and content 
+generation. Use low temperature (0.0–0.5) for factual tasks, code generation, and 
+precise reasoning. Use medium temperature (0.7–1.0) for balanced performance across 
+most tasks.
+
+AFTER (1 bullet list):
+Temperature controls output randomness:
+- **High (1.5–2.0):** Creative writing, brainstorming, content generation
+- **Medium (0.7–1.0):** Balanced performance, general tasks
+- **Low (0.0–0.5):** Factual tasks, code, precise reasoning
+```
+
+**Technique 3: Delete purely background/context paragraphs**
+
+```
+BEFORE (3 paragraphs):
+Context windows define the maximum length of text a model can process in a single 
+request. OpenAI introduced longer context windows in 2023, which expanded from 4k 
+tokens to 128k tokens for GPT-4o.
+
+GPT-4o has a 128k token context window, which is 32× larger than GPT-4o mini's 4k 
+context window. GPT-4o mini is sufficient for most conversations and documents.
+
+Use GPT-4o if you need to analyze documents longer than 50 pages or work with 
+multiple large files at once. Use GPT-4o mini for standard conversations and 
+single-document tasks.
+
+AFTER (1 paragraph):
+Use GPT-4o if you need to analyze documents longer than 50 pages or work with 
+multiple large files at once (128k token context). Use GPT-4o mini for standard 
+conversations and single-document tasks (4k token context).
+```
+
+#### Implementation Checklist
+
+- [ ] Every section (H2, H3) has been audited for paragraph count
+- [ ] Sections with 3+ paragraphs have been evaluated for decision value
+- [ ] Non-decision paragraphs have been either compressed or deleted
+- [ ] Background/historical context is removed (unless it directly affects a decision)
+- [ ] Definitions are merged into decision statements where possible
+- [ ] Long explanations are converted to bullet lists
+- [ ] No section repeats the same point across multiple paragraphs
+- [ ] After compression, every remaining paragraph changes at least one reader decision
+
+#### Word Count Impact
+
+**Before applying Rule 40:** 3 paragraphs × 80 words each = **240 words**  
+**After applying Rule 40:** 1 paragraph × 60 words = **60 words**
+
+**Result:** 75% reduction, but 100% of decision value preserved.
+
+This is intentional. Rule 40 prioritizes **clarity over eloquence**. Shorter articles rank better, scan better, and are cited more by AI systems.
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -1860,6 +2059,8 @@ Use this checklist before committing any new or edited article:
 - [ ] Every section includes at least one actionable decision statement ("Use X if...", "Avoid X if...", "Best option for...", etc.) — Rule 37
 - [ ] Every major section (H2, H3) contains at least one extractable citation block (Definition, Decision, or Comparison) — Rule 38
 - [ ] All citation blocks are 1–2 sentences, standalone, and require no cross-references — Rule 38
+- [ ] Every section has been audited: no paragraph added unless it changes a reader decision (Rule 40)
+- [ ] Sections with 3+ paragraphs have been compressed or consolidated — Rule 40
 
 #### FAQ & Common Mistakes
 - [ ] FAQ section has 6–8 questions covering 3+ of 5 types
@@ -2213,6 +2414,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | Decision density / actionable guidance | Rule 37 | Rules 1, 22 (answer-first), Rule 31 (lead answer) |
 | AI citation extractability / standalone blocks | Rule 38 | Rules 1 (answer-first), Rules 22, 37 (decision statements) |
 | Anchor text intent / semantic graph | Rule 39 | Rule 12 (linking strategy), Rules 31, 1 (answer-first) |
+| Content conciseness / decision-only prose | Rule 40 | Rules 1, 22, 37 (answer-first, decision density) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
