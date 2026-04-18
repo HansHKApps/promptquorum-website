@@ -511,6 +511,31 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           </p>
         )}
 
+        {/* Quick Answer Block — AI-crawler-optimized featured snippet */}
+        {article.quickAnswer && (
+          <section className="quick-answer bg-primary/5 border border-primary/20 rounded-xl p-6 mb-6">
+            <h2 className="text-xl font-bold text-text-primary mb-3">
+              {article.quickAnswer.title}
+            </h2>
+            <p className="text-text-secondary text-sm mb-3 leading-relaxed">
+              {article.quickAnswer.intro}
+            </p>
+            <ul className="space-y-2 mb-3">
+              {article.quickAnswer.bullets.map((bullet, i) => (
+                <li key={i} className="flex gap-3 text-sm text-text-secondary">
+                  <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
+                  <span>{renderInlineLinks(bullet, lang)}</span>
+                </li>
+              ))}
+            </ul>
+            {article.quickAnswer.footer && (
+              <p className="text-text-secondary text-sm leading-relaxed">
+                {article.quickAnswer.footer}
+              </p>
+            )}
+          </section>
+        )}
+
         {/* Presentation / Gamma slide deck */}
         {(article as any).gammaEmbedUrl && (
           <div className="mt-6 pt-8 border-t border-primary/20">
