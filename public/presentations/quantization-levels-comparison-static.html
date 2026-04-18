@@ -334,8 +334,26 @@
             ]
           },
           {
+            type: 'image',
+            h2: 'VRAM Savings Across All Levels',
+            image: '/images/quantization-levels-comparison-vram-savings-en.svg',
+            caption: 'VRAM requirements for Llama 3 70B: FP32 = 280GB, Q8 = 140GB (50% savings), Q4 = 70GB (75% savings), Q3 = 53GB (81% savings).'
+          },
+          {
+            type: 'image',
+            h2: 'Quality Loss: MMLU Benchmark Results',
+            image: '/images/quantization-levels-comparison-quality-loss-en.svg',
+            caption: 'Quality loss by quantization level: Q8 loses 0.1%, Q5 loses 0.5%, Q4 loses 1.2%, Q3 loses 3.7%. Q4 quality loss is imperceptible on most tasks.'
+          },
+          {
+            type: 'image',
+            h2: 'Choose by Your Hardware',
+            image: '/images/quantization-levels-comparison-hardware-guide-en.svg',
+            caption: 'Hardware selection guide: 8GB RAM → Q3/Q4 (7B models), 16GB → Q4_K_M (recommended), 32GB+ → Q5/Q6/Q8 (larger models), 64GB+ → Q8 or FP32 (research).'
+          },
+          {
             type: 'list',
-            h2: 'Best Quantization by Hardware',
+            h2: 'Decision Framework',
             items: [
               '<strong>8GB RAM:</strong> Q3 or Q4 (7B models only)',
               '<strong>16GB RAM:</strong> Q4_K_M (recommended for most laptops)',
@@ -498,6 +516,15 @@
             html += `<div style="margin-bottom: 20px; text-align: left;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
           });
           html += footerLink;
+          break;
+
+        case 'image':
+          html = `
+            <h2>${slide.h2}</h2>
+            <img src="${slide.image}" alt="${slide.caption}" style="max-width: 100%; height: auto; margin-top: 20px; border-radius: 6px; border: 1px solid #e0e0e0;" />
+            <p style="margin-top: 12px; font-size: 0.9em; color: #79747e; font-style: italic;">${slide.caption}</p>
+            ${footerLink}
+          `;
           break;
 
         case 'cta':
