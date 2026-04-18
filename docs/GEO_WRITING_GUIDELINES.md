@@ -1243,6 +1243,111 @@ This ensures every reader segment (casual scanners, deep readers, AI systems) en
 
 ---
 
+### Rule 38: AI Citation Blocks (Mandatory)
+
+Every major section must contain **at least one extractable block** — a self-contained, 1–2 sentence statement that AI engines (Google Search, Perplexity, ChatGPT, Claude) can extract and cite without needing surrounding context.
+
+**Why:** Modern AI crawlers extract small chunks from articles for search summaries and citations. If your blocks require context from other sections to be complete, they get skipped. Complete, standalone blocks drive citations and traffic.
+
+#### Three Required Block Types
+
+**1. Definition Block**
+
+A single-sentence definition that stands alone.
+
+```
+X is Y that does Z.
+```
+
+**Example:**
+> "Prompt engineering is the practice of designing and refining instructions given to language models to achieve specific outputs."
+
+*Why:* Featured snippets, AI summaries, and glossaries all extract definition blocks as complete knowledge units.
+
+---
+
+**2. Decision Block**
+
+A conditional statement that covers both positive and negative paths.
+
+```
+Use X if [condition]. Avoid X if [condition].
+```
+
+**Example:**
+> "Use token counting if you need to calculate API costs before running queries. Avoid token counting if you're working with small prompts where exact token counts don't materially affect pricing."
+
+*Why:* Decision blocks are extracted for comparative summaries and AI recommendations. They provide actionable guidance in isolation.
+
+---
+
+**3. Comparison Block**
+
+A relative statement that shows trade-offs without ambiguity.
+
+```
+X is better for [A]. Y is better for [B].
+```
+
+**Example:**
+> "GPT-4o is better for complex reasoning and research-grade output. GPT-4o mini is better for cost-sensitive, repetitive tasks like classification and summarization."
+
+*Why:* Comparison blocks are extracted for feature tables, competitive analyses, and AI model selection flows. They must be complete without reference to other sections.
+
+#### Block Requirements
+
+- **Max 2 sentences** — Longer blocks get truncated
+- **Must stand alone** — Reader should understand it without scrolling back or forward
+- **No cross-section references** — No "see Rule 22" or "as mentioned earlier"
+- **No internal links required** — Hyperlinks are optional; the block must make sense as plain text
+- **Use simple punctuation** — Avoid nested parentheses and complex grammar
+
+#### Implementation
+
+**For every major section (H2 or H3):**
+
+- At the end of the section intro or first paragraph, include **at least one citation block** (definition, decision, or comparison)
+- If the section covers multiple concepts, add one block per concept
+
+**Placement options:**
+
+1. End of intro paragraph (most common)
+2. In bold callout box
+3. Standalone sentence between paragraphs
+4. In a bulleted summary
+
+**Example section structure:**
+
+```markdown
+## How to Choose Between GPT-4o and GPT-4o Mini
+
+...intro paragraph...
+
+**GPT-4o is better for complex reasoning and research-grade output. GPT-4o mini is better for cost-sensitive, repetitive tasks like classification and summarization.**
+
+### When to Use GPT-4o
+
+...content...
+
+Use GPT-4o if your prompt requires multi-step reasoning, creative problem-solving, or reasoning across large documents. Avoid GPT-4o if you're running 1000s of simple classification queries and cost is a primary constraint.
+
+### When to Use GPT-4o mini
+
+...content...
+
+```
+
+#### Validation Checklist
+
+- [ ] Every major section (H2, H3) has at least one extractable block
+- [ ] Each block is 1–2 sentences and stands alone
+- [ ] Blocks use one of the three formats: Definition, Decision, or Comparison
+- [ ] No block contains "see...", "as mentioned...", or cross-references to other sections
+- [ ] Blocks are grammatically complete (no sentence fragments or assumptions)
+- [ ] At least 50% of blocks are definitions or decisions (not all comparisons)
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -1638,6 +1743,8 @@ Use this checklist before committing any new or edited article:
 - [ ] All data presented in tables (if 3+ comparisons)
 - [ ] Decision audit performed: no gap of 400+ consecutive words without decision statement (Rule 37)
 - [ ] Every section includes at least one actionable decision statement ("Use X if...", "Avoid X if...", "Best option for...", etc.) — Rule 37
+- [ ] Every major section (H2, H3) contains at least one extractable citation block (Definition, Decision, or Comparison) — Rule 38
+- [ ] All citation blocks are 1–2 sentences, standalone, and require no cross-references — Rule 38
 
 #### FAQ & Common Mistakes
 - [ ] FAQ section has 6–8 questions covering 3+ of 5 types
@@ -1989,6 +2096,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | SERP differentiation / title stand-out | Rule 35 | Rule 2d (title), Rule 34 (language strategy) |
 | First-screen conversion / above-the-fold | Rule 36 | Rule 8c (top-of-page sequence), Rules 31, 33 |
 | Decision density / actionable guidance | Rule 37 | Rules 1, 22 (answer-first), Rule 31 (lead answer) |
+| AI citation extractability / standalone blocks | Rule 38 | Rules 1 (answer-first), Rules 22, 37 (decision statements) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
