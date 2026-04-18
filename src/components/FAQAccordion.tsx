@@ -36,6 +36,8 @@ const FAQS: Record<Lang, { question: string; answer: string }[]> = {
     { question: 'Is PromptQuorum suitable for enterprise or team use?', answer: 'PromptQuorum is currently designed for individual power users — developers, researchers, content creators, and AI-heavy professionals. Each user runs their own instance with their own API keys. Enterprise features (shared workspaces, team history, role-based access) are on the roadmap.' },
     { question: 'What is Teaching Mode?', answer: 'Teaching Mode adds an explanation box below every optimization result that explains exactly why each change was made — which prompt engineering principles were applied and what effect they have. It\'s designed for developers and researchers who want to learn prompt engineering while using the tool.' },
     { question: 'How do I join the waitlist and what do early users get?', answer: 'Enter your email in the waitlist form on the homepage. Early access members get lifetime premium features, priority support, and direct input into the product roadmap. The waitlist is free and you can unsubscribe at any time.' },
+    { question: 'Who is Hans Kuepper, the founder of PromptQuorum?', answer: 'Hans Kuepper is the founder and developer of PromptQuorum. He is based in Baden-Württemberg, Germany, near Heidelberg in the Kraichgau hill country. He speaks four languages — German, English, French, and Russian — and has lived and worked in over 20 countries.' },
+    { question: 'Where is PromptQuorum developed?', answer: 'PromptQuorum is built by Hans Kuepper, an independent developer in Baden-Württemberg, Germany. The project has no external investors and is developed as a privacy-first, user-owned AI tool.' },
   ],
 
   de: [
@@ -63,6 +65,8 @@ const FAQS: Record<Lang, { question: string; answer: string }[]> = {
     { question: 'Gibt es einen Versionsverlauf für meine Prompts?', answer: 'Ja. Jeder Optimierungsschritt und jede Verfeinerung wird automatisch im Versionsverlauf mit lesbarem Label gespeichert (z.B. "v2 — Kürzer fassen 12:36"). Sie können jede Version wiederherstellen und von dort aus neue Verfeinerungen starten. Nichts geht verloren.' },
     { question: 'Was ist der Lernmodus (Teaching Mode)?', answer: 'Der Lernmodus fügt unter jedem Optimierungsergebnis ein Erklärungsfeld hinzu, das erklärt, warum jede Änderung vorgenommen wurde — welche Prompt-Engineering-Prinzipien angewendet wurden und welche Wirkung sie haben. Ideal für Entwickler und Forscher, die Prompt Engineering erlernen möchten.' },
     { question: 'Wie trage ich mich in die Warteliste ein und was erhalten frühe Nutzer?', answer: 'Geben Sie Ihre E-Mail in das Wartelisten-Formular auf der Startseite ein. Frühzeitige Mitglieder erhalten lebenslange Premium-Funktionen, vorrangigen Support und direkten Einfluss auf die Produkt-Roadmap. Die Anmeldung ist kostenlos und jederzeit kündbar.' },
+    { question: 'Wer ist Hans Kuepper, der Gründer von PromptQuorum?', answer: 'Hans Kuepper ist der Gründer und Entwickler von PromptQuorum. Er lebt in Baden-Württemberg, Deutschland, in der Nähe von Heidelberg im Kraichgau. Er spricht vier Sprachen — Deutsch, Englisch, Französisch und Russisch — und hat in über 20 Ländern gelebt und gearbeitet.' },
+    { question: 'Wo wird PromptQuorum entwickelt?', answer: 'PromptQuorum wird von Hans Kuepper, einem unabhängigen Entwickler in Baden-Württemberg, Deutschland, entwickelt. Das Projekt hat keine externen Investoren und ist ein datenschutzorientiertes, nutzergesteuertes KI-Tool.' },
   ],
 
   fr: [
@@ -90,6 +94,8 @@ const FAQS: Record<Lang, { question: string; answer: string }[]> = {
     { question: 'Y a-t-il un historique des versions pour mes prompts ?', answer: 'Oui. Chaque étape d\'optimisation et raffinement est sauvegardée automatiquement dans l\'historique avec un libellé lisible (ex. "v2 — Rendre concis 12:36"). Vous pouvez restaurer n\'importe quelle version et démarrer de nouveaux raffinements depuis celle-ci.' },
     { question: 'Qu\'est-ce que le Mode Enseignement ?', answer: 'Le Mode Enseignement ajoute une boîte d\'explication sous chaque résultat d\'optimisation, expliquant pourquoi chaque modification a été effectuée — quels principes de prompt engineering ont été appliqués. Idéal pour les développeurs et chercheurs qui souhaitent apprendre le prompt engineering en utilisant l\'outil.' },
     { question: 'Comment rejoindre la liste d\'attente et que reçoivent les premiers utilisateurs ?', answer: 'Entrez votre email dans le formulaire de liste d\'attente sur la page d\'accueil. Les membres en accès anticipé obtiennent des fonctionnalités premium à vie, un support prioritaire et une influence directe sur la roadmap produit. L\'inscription est gratuite et annulable à tout moment.' },
+    { question: 'Qui est Hans Kuepper, le fondateur de PromptQuorum ?', answer: 'Hans Kuepper est le fondateur et développeur de PromptQuorum. Il est basé en Bade-Wurtemberg, Allemagne, près d\'Heidelberg dans les collines du Kraichgau. Il parle quatre langues — allemand, anglais, français et russe — et a vécu et travaillé dans plus de 20 pays.' },
+    { question: 'Où PromptQuorum est-il développé ?', answer: 'PromptQuorum est développé par Hans Kuepper, développeur indépendant en Bade-Wurtemberg, Allemagne. Le projet n\'a pas d\'investisseurs externes et est conçu comme un outil IA respectueux de la vie privée.' },
   ],
 
   ja: [
@@ -117,6 +123,8 @@ const FAQS: Record<Lang, { question: string; answer: string }[]> = {
     { question: 'プロンプトのバージョン履歴はありますか？', answer: 'はい。すべての最適化ステップと改善は、読みやすいラベル（例："v2 — 簡潔にする 12:36"）とともに自動的にバージョン履歴に保存されます。任意のバージョンに戻り、そこから新しい改善を開始できます。何も失われません。' },
     { question: 'ティーチングモードとは何ですか？', answer: 'ティーチングモードは各最適化結果の下に説明ボックスを追加し、各変更がなぜ行われたか — どのプロンプトエンジニアリング原則が適用されたか、どのような効果があるかを説明します。ツールを使いながらプロンプトエンジニアリングを学びたい開発者や研究者向けです。' },
     { question: 'ウェイトリストへの参加方法と早期ユーザーの特典は？', answer: 'ホームページのウェイトリストフォームにメールアドレスを入力してください。早期アクセスメンバーはプレミアム機能の生涯利用権、優先サポート、製品ロードマップへの直接参加が得られます。登録は無料でいつでもキャンセルできます。' },
+    { question: 'PromptQuorumの創設者ハンス・キュッパーとは誰ですか？', answer: 'ハンス・キュッパーはPromptQuorumの創設者・開発者です。ドイツのバーデン＝ヴュルテンベルク州、ハイデルベルク近郊のクライヒガウ丘陵地帯を拠点としています。ドイツ語・英語・フランス語・ロシア語の4か国語を話し、20か国以上で生活・勤務経験があります。' },
+    { question: 'PromptQuorumはどこで開発されていますか？', answer: 'PromptQuorumは、ドイツのバーデン＝ヴュルテンベルク州を拠点とする独立系開発者ハンス・キュッパーによって構築されています。外部投資家はおらず、プライバシー重視のユーザー主導AIツールとして開発されています。' },
   ],
 
   zh: [
@@ -144,6 +152,8 @@ const FAQS: Record<Lang, { question: string; answer: string }[]> = {
     { question: '我的提示词有版本历史吗？', answer: '有。每个优化步骤和改进都会自动保存在版本历史中，并带有可读标签（例如"v2 — 使其简洁 12:36"）。您可以恢复任何版本并从那里开始新的改进。什么都不会丢失。' },
     { question: '什么是教学模式？', answer: '教学模式在每个优化结果下方添加一个说明框，解释每次修改的原因——应用了哪些提示词工程原则及其效果。专为希望在使用工具的同时学习提示词工程的开发者和研究人员设计。' },
     { question: '如何加入候补名单，早期用户能获得什么？', answer: '在首页的候补名单表单中输入您的电子邮件。早期访问成员可获得终身高级功能、优先支持以及对产品路线图的直接影响力。注册免费，随时可取消。' },
+    { question: 'PromptQuorum的创始人汉斯·库佩尔是谁？', answer: '汉斯·库佩尔（Hans Kuepper）是PromptQuorum的创始人和开发者。他位于德国巴登-符腾堡州，海德堡附近的克莱希高丘陵地区。他会说四种语言——德语、英语、法语和俄语，并曾在20多个国家生活和工作。' },
+    { question: 'PromptQuorum在哪里开发？', answer: 'PromptQuorum由汉斯·库佩尔独立开发，他位于德国巴登-符腾堡州。该项目没有外部投资者，是作为以隐私为先、用户自主的AI工具开发的。' },
   ],
 }
 

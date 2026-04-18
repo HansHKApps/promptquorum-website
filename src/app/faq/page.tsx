@@ -78,6 +78,8 @@ export default async function FAQPage({ searchParams }: PageProps) {
               { '@type': 'Question', name: 'How does PromptQuorum handle my API keys securely?', acceptedAnswer: { '@type': 'Answer', text: 'API keys are stored only in your browser\'s localStorage. They are never sent to any PromptQuorum server, never logged, and never included in telemetry (there is none).' } },
               { '@type': 'Question', name: 'What is Teaching Mode?', acceptedAnswer: { '@type': 'Answer', text: 'Teaching Mode adds an explanation box below every optimization result that explains exactly why each change was made — which prompt engineering principles were applied and what effect they have.' } },
               { '@type': 'Question', name: 'How do I join the waitlist and what do early users get?', acceptedAnswer: { '@type': 'Answer', text: 'Enter your email in the waitlist form on the homepage. Early access users get priority onboarding, direct access to the developer, and a free power tool!' } },
+              { '@type': 'Question', name: 'Who is Hans Kuepper, the founder of PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Hans Kuepper is the founder and developer of PromptQuorum. He is based in Baden-Württemberg, Germany, near Heidelberg in the Kraichgau hill country. He speaks four languages — German, English, French, and Russian — and has lived and worked in over 20 countries.' } },
+              { '@type': 'Question', name: 'Where is PromptQuorum developed?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum is built by Hans Kuepper, an independent developer in Baden-Württemberg, Germany. The project has no external investors and is developed as a privacy-first, user-owned AI tool.' } },
             ],
             breadcrumb: {
               '@type': 'BreadcrumbList',
@@ -86,6 +88,29 @@ export default async function FAQPage({ searchParams }: PageProps) {
                 { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.promptquorum.com/faq' },
               ],
             },
+          }),
+        }}
+      />
+
+      {/* Person Schema for Hans Kuepper */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id': 'https://www.promptquorum.com/about#founder',
+            'name': 'Hans Kuepper',
+            'url': 'https://www.promptquorum.com/about',
+            'jobTitle': 'Founder & Developer',
+            'knowsLanguage': ['German', 'English', 'French', 'Russian'],
+            'homeLocation': { '@type': 'Place', 'name': 'Baden-Württemberg, Germany' },
+            'worksFor': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+            'sameAs': [
+              'https://www.linkedin.com/in/hanskuepper/',
+              'https://x.com/HansKuepperAPPs',
+              'https://github.com/HansHKApps',
+            ],
           }),
         }}
       />

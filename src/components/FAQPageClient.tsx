@@ -9,6 +9,9 @@ const T = {
   en: {
     h1: 'PromptQuorum FAQ: Frameworks, Privacy, AI Models & Getting Started',
     subtitle: 'Everything you need to know about PromptQuorum, pricing, privacy, and getting started.',
+    founderH2: 'About the Founder',
+    founderTitle: 'Founder & Developer, PromptQuorum',
+    founderBio: 'Hans Kuepper is based in Baden-Württemberg, Germany, near Heidelberg. He speaks four languages — German, English, French, and Russian — and has lived and worked in over 20 countries.',
     ctaH2: 'Join the Waitlist for Early Access',
     ctaDesc: 'Early access includes lifetime premium features and priority support. Be among the first to try PromptQuorum when it launches.',
     ctaBtn: 'Join Waitlist',
@@ -17,6 +20,9 @@ const T = {
   de: {
     h1: 'PromptQuorum FAQ: Frameworks, Datenschutz, KI-Modelle & Erste Schritte',
     subtitle: 'Alles, was Sie über PromptQuorum, Preise, Datenschutz und den Einstieg wissen müssen.',
+    founderH2: 'Über den Gründer',
+    founderTitle: 'Gründer & Entwickler, PromptQuorum',
+    founderBio: 'Hans Kuepper lebt in Baden-Württemberg, Deutschland, in der Nähe von Heidelberg. Er spricht vier Sprachen und hat in über 20 Ländern gelebt und gearbeitet.',
     ctaH2: 'Warteliste für frühen Zugang beitreten',
     ctaDesc: 'Früher Zugang umfasst lebenslange Premium-Funktionen und vorrangigen Support. Gehören Sie zu den Ersten, die PromptQuorum ausprobieren können.',
     ctaBtn: 'Warteliste beitreten',
@@ -25,6 +31,9 @@ const T = {
   fr: {
     h1: 'FAQ PromptQuorum: Frameworks, Confidentialité, Modèles IA et Premiers Pas',
     subtitle: 'Tout ce que vous devez savoir sur PromptQuorum, les tarifs, la confidentialité et les premiers pas.',
+    founderH2: 'À propos du fondateur',
+    founderTitle: 'Fondateur & Développeur, PromptQuorum',
+    founderBio: 'Hans Kuepper est basé en Bade-Wurtemberg, Allemagne, près d\'Heidelberg. Il parle quatre langues et a vécu et travaillé dans plus de 20 pays.',
     ctaH2: 'Rejoindre la liste d\'attente pour un accès anticipé',
     ctaDesc: 'L\'accès anticipé inclut des fonctionnalités premium à vie et un support prioritaire. Soyez parmi les premiers à essayer PromptQuorum.',
     ctaBtn: 'Rejoindre la liste d\'attente',
@@ -33,6 +42,9 @@ const T = {
   ja: {
     h1: 'PromptQuorum FAQ: フレームワーク、プライバシー、AIモデル、はじめ方',
     subtitle: 'PromptQuorum、料金、プライバシー、使い始め方について知っておくべきことすべて。',
+    founderH2: '創設者について',
+    founderTitle: '創設者 & 開発者、PromptQuorum',
+    founderBio: 'ハンス・キュッパーはドイツのバーデン＝ヴュルテンベルク州、ハイデルベルク近郊を拠点としています。4か国語を話し、20か国以上で生活・勤務経験があります。',
     ctaH2: '早期アクセスのウェイトリストに参加',
     ctaDesc: '早期アクセスは生涯プレミアム機能と優先サポートを含みます。PromptQuorum のローンチ時にいち早く試した最初のユーザーの一員になりましょう。',
     ctaBtn: 'ウェイトリストに参加',
@@ -41,6 +53,9 @@ const T = {
   zh: {
     h1: 'PromptQuorum FAQ: 框架、隐私、AI 模型与入门指南',
     subtitle: '关于 PromptQuorum、定价、隐私和入门您需要了解的一切。',
+    founderH2: '关于创始人',
+    founderTitle: '创始人 & 开发者，PromptQuorum',
+    founderBio: '汉斯·库佩尔位于德国巴登-符腾堡州海德堡附近。他会说四种语言，曾在20多个国家生活和工作。',
     ctaH2: '加入早期访问候补名单',
     ctaDesc: '早期访问包括终身高级功能和优先支持。成为首批尝试 PromptQuorum 的用户之一。',
     ctaBtn: '加入候补名单',
@@ -61,6 +76,52 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
         </div>
 
         <FAQAccordion lang={lang} />
+
+        <section className="mt-16 pt-12 border-t border-gray-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t.founderH2}</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <img
+                  src="/images/hans-kuepper.jpg"
+                  alt="Hans Kuepper, Founder of PromptQuorum"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 rounded-xl object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Hans Kuepper</h3>
+                <p className="text-sm text-purple-600 font-medium mb-4">{t.founderTitle}</p>
+                <p className="text-gray-600 leading-relaxed mb-4">{t.founderBio}</p>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://www.linkedin.com/in/hanskuepper/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-100 transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://x.com/HansKuepperAPPs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-100 transition-colors"
+                  >
+                    X / Twitter
+                  </a>
+                  <a
+                    href="/about"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-100 transition-colors"
+                  >
+                    About Page →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div className="mt-16 pt-12 border-t border-gray-200 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">{t.ctaH2}</h2>
