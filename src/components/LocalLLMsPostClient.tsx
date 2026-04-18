@@ -396,7 +396,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             <span>/</span>
             <span className="text-text-primary font-medium">{article.title}</span>
           </div>
-          <LanguageSwitcher />
+          <LanguageSwitcher initialLang={lang} />
         </div>
 
         {/* Article header */}
