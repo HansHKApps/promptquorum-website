@@ -1,0 +1,102 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">按硬件选择量化</text>
+
+  <!-- 8GB RAM -->
+  <rect x="28" y="55" width="170" height="310" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="170" height="4" rx="0" fill="#34A853"/>
+
+  <text x="113" y="85" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">8 GB RAM</text>
+
+  <text x="48" y="120" font-weight="700" fill="#1C1B1F">推荐 :</text>
+  <text x="48" y="140" font-size="12" fill="#49454F">Q3 或 Q4</text>
+  <text x="48" y="156" font-size="11" fill="#79747E">（仅7B模型）</text>
+
+  <text x="48" y="185" font-weight="700" fill="#1C1B1F">示例模型 :</text>
+  <text x="48" y="202" font-size="12" fill="#49454F">Mistral 7B-Q4</text>
+  <text x="48" y="218" font-size="11" fill="#79747E">~4.2 GB VRAM</text>
+
+  <text x="48" y="250" font-weight="700" fill="#1C1B1F">质量 :</text>
+  <circle cx="60" cy="268" r="6" fill="#F4B400"/>
+  <text x="75" y="272" font-size="11" fill="#49454F">良好（用于聊天）</text>
+
+  <text x="48" y="305" font-weight="700" fill="#1C1B1F">速度 :</text>
+  <text x="48" y="322" font-size="12" fill="#49454F">15–25 tokens/sec</text>
+  <text x="48" y="338" font-size="11" fill="#79747E">CPU瓶颈</text>
+
+  <!-- 16GB RAM -->
+  <rect x="218" y="55" width="170" height="310" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="218" y="55" width="170" height="4" rx="0" fill="#6750A4"/>
+
+  <text x="303" y="85" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">16 GB RAM ✓</text>
+
+  <text x="238" y="120" font-weight="700" fill="#1C1B1F">最佳选择 :</text>
+  <text x="238" y="140" font-size="12" fill="#49454F">Q4_K_M</text>
+  <text x="238" y="156" font-size="11" fill="#79747E">（最常见）</text>
+
+  <text x="238" y="185" font-weight="700" fill="#1C1B1F">示例模型 :</text>
+  <text x="238" y="202" font-size="12" fill="#49454F">Llama 3 8B-Q4</text>
+  <text x="238" y="218" font-size="11" fill="#79747E">~7 GB VRAM</text>
+
+  <text x="238" y="250" font-weight="700" fill="#1C1B1F">质量 :</text>
+  <circle cx="250" cy="268" r="6" fill="#34A853"/>
+  <text x="265" y="272" font-size="11" fill="#49454F">优秀（99 %）</text>
+
+  <text x="238" y="305" font-weight="700" fill="#1C1B1F">速度 :</text>
+  <text x="238" y="322" font-size="12" fill="#49454F">20–40 tokens/sec</text>
+  <text x="238" y="338" font-size="11" fill="#79747E">GPU + CPU组合</text>
+
+  <!-- 32GB RAM -->
+  <rect x="408" y="55" width="170" height="310" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="408" y="55" width="170" height="4" rx="0" fill="#F4B400"/>
+
+  <text x="493" y="85" font-size="14" font-weight="700" fill="#F4B400" text-anchor="middle">32 GB RAM</text>
+
+  <text x="428" y="120" font-weight="700" fill="#1C1B1F">选项 :</text>
+  <text x="428" y="140" font-size="12" fill="#49454F">Q5、Q6 或 Q8</text>
+  <text x="428" y="156" font-size="11" fill="#79747E">（大型模型）</text>
+
+  <text x="428" y="185" font-weight="700" fill="#1C1B1F">示例模型 :</text>
+  <text x="428" y="202" font-size="12" fill="#49454F">Llama 3 70B-Q5</text>
+  <text x="428" y="218" font-size="11" fill="#79747E">~88 GB × 0.5 字节</text>
+
+  <text x="428" y="250" font-weight="700" fill="#1C1B1F">质量 :</text>
+  <circle cx="440" cy="268" r="6" fill="#34A853"/>
+  <text x="455" y="272" font-size="11" fill="#49454F">优秀（99.5 %）</text>
+
+  <text x="428" y="305" font-weight="700" fill="#1C1B1F">速度 :</text>
+  <text x="428" y="322" font-size="12" fill="#49454F">30–60 tokens/sec</text>
+  <text x="428" y="338" font-size="11" fill="#79747E">完全GPU利用</text>
+
+  <!-- 64GB+ RAM -->
+  <rect x="598" y="55" width="174" height="310" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="598" y="55" width="174" height="4" rx="0" fill="#6750A4"/>
+
+  <text x="685" y="85" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">64 GB+ RAM</text>
+
+  <text x="618" y="120" font-weight="700" fill="#1C1B1F">最大质量 :</text>
+  <text x="618" y="140" font-size="12" fill="#49454F">Q8 或 FP32</text>
+  <text x="618" y="156" font-size="11" fill="#79747E">（研究、医疗）</text>
+
+  <text x="618" y="185" font-weight="700" fill="#1C1B1F">示例模型 :</text>
+  <text x="618" y="202" font-size="12" fill="#49454F">Llama 3 70B-Q8</text>
+  <text x="618" y="218" font-size="11" fill="#79747E">~140 GB（完美）</text>
+
+  <text x="618" y="250" font-weight="700" fill="#1C1B1F">质量 :</text>
+  <circle cx="630" cy="268" r="6" fill="#34A853"/>
+  <text x="645" y="272" font-size="11" fill="#49454F">完美（99.9 %）</text>
+
+  <text x="618" y="305" font-weight="700" fill="#1C1B1F">速度 :</text>
+  <text x="618" y="322" font-size="12" fill="#49454F">与Q4–Q5相同</text>
+  <text x="618" y="338" font-size="11" fill="#79747E">（内存受限）</text>
+
+  <!-- Bottom note -->
+  <rect x="28" y="380" width="744" height="35" rx="6" fill="#F3E5F5" stroke="#6750A4" stroke-width="1"/>
+  <text x="48" y="400" font-size="12" fill="#1C1B1F"><tspan font-weight="700">专业提示 :</tspan> 将模型大小与VRAM相匹配。更多RAM = 在Q4上使用更大的模型，而不是在Q8上使用更小的模型。</text>
+</svg>

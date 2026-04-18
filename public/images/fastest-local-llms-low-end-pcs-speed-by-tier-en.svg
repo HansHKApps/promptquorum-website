@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Fastest Local LLMs by Hardware Tier</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Wrong model choice = 4–10× speed wasted. Match hardware to model exactly.</text>
+
+  <!-- Column headers -->
+  <text x="38" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Hardware</text>
+  <text x="185" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Best Model</text>
+  <text x="360" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Quant</text>
+  <text x="440" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Speed</text>
+  <text x="560" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">RAM/VRAM Used</text>
+  <text x="700" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Feel</text>
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: CPU only -->
+  <text x="38" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">CPU only</text>
+  <text x="185" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Phi-3 Mini 3.8B</text>
+  <text x="360" y="104" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="700" fill="#49454F">Q4</text>
+  <text x="440" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#EA4335">5–15 t/s</text>
+  <text x="560" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">2.5 GB RAM</text>
+  <text x="700" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">slow</text>
+  <line x1="18" y1="114" x2="782" y2="114" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: 4 GB GPU -->
+  <text x="38" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">4 GB GPU</text>
+  <text x="185" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">TinyLlama 1.1B</text>
+  <text x="360" y="140" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="700" fill="#49454F">Q5</text>
+  <text x="440" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">20–40 t/s</text>
+  <text x="560" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">0.8 GB VRAM</text>
+  <text x="700" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#F4B400">acceptable</text>
+  <line x1="18" y1="150" x2="782" y2="150" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: 6 GB GPU -->
+  <text x="38" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">6 GB GPU</text>
+  <text x="185" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Phi-3 Mini 3.8B</text>
+  <text x="360" y="176" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="700" fill="#49454F">Q5</text>
+  <text x="440" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">15–30 t/s</text>
+  <text x="560" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">2.7 GB VRAM</text>
+  <text x="700" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#F4B400">decent</text>
+  <line x1="18" y1="186" x2="782" y2="186" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: 8 GB GPU — highlighted sweet spot -->
+  <rect x="18" y="191" width="764" height="38" fill="#F7F2FA" rx="2"/>
+  <text x="38" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#6750A4">8 GB GPU ★</text>
+  <text x="185" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#49454F">Mistral 7B</text>
+  <text x="360" y="214" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="700" fill="#49454F">Q4</text>
+  <text x="440" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">25–60 t/s</text>
+  <text x="560" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">4.1 GB VRAM</text>
+  <text x="700" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4">sweet spot</text>
+  <line x1="18" y1="229" x2="782" y2="229" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 5: 16 GB+ -->
+  <text x="38" y="255" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">16 GB+</text>
+  <text x="185" y="255" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">13B models</text>
+  <text x="360" y="255" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="700" fill="#49454F">Q4</text>
+  <text x="440" y="255" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">20–50 t/s</text>
+  <text x="560" y="255" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">7–9 GB VRAM</text>
+  <text x="700" y="255" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853">strong</text>
+  <line x1="18" y1="265" x2="782" y2="265" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Speed legend -->
+  <circle cx="180" cy="295" r="6" fill="#EA4335"/>
+  <text x="192" y="299" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Slow (&lt;15 t/s)</text>
+  <circle cx="310" cy="295" r="6" fill="#F4B400"/>
+  <text x="322" y="299" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Acceptable (15–30 t/s)</text>
+  <circle cx="480" cy="295" r="6" fill="#34A853"/>
+  <text x="492" y="299" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Smooth (30+ t/s)</text>
+
+  <!-- Footer -->
+  <text x="400" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">★ 8 GB GPU sweet spot: Mistral 7B Q4 at 25–60 tok/sec — full assistant experience at interactive speed.</text>
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>
