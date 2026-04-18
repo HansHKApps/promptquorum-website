@@ -1067,6 +1067,94 @@ If CTR is <20% below your avg or <5% below competitors on similar queries, revis
 
 ---
 
+### Rule 36: First Screen Must Answer + Decide (Mandatory)
+
+**Everything above the fold must allow the reader to make a decision WITHOUT scrolling.** Users and AI systems both prioritize top-visible content. If the visitor must scroll to understand the answer or make a choice, you lose the interaction.
+
+#### Required First-Screen Structure
+
+Every article's first screen (without scrolling) must include, in order:
+
+1. **H1 Title** — What question does this answer?
+2. **Lead Answer Block (Rule 31)** — 25–50 words, bold, answers the H1 completely
+3. **CTR-First Opening Block (Rule 33)** — 1–2 lines with tension or unexpected insight
+4. **Key Takeaways** — 5–7 bullets summarizing the core points
+5. **"Best Choice" or Recommendation Block** (if applicable) — A highlighted block showing the recommended path or tool for the primary use case
+
+**Result:** Reader scrolls zero lines and has:
+- ✅ A complete answer to their question
+- ✅ A surprising insight or tradeoff
+- ✅ The key points summarized
+- ✅ A recommended action or choice
+
+#### Why This Matters
+
+**First-screen conversion is 3–5× higher than below-fold conversion.**
+
+- Users decide within 2–3 seconds if an article helps them
+- AI systems (Perplexity, ChatGPT Browse, Google SGE) extract top-visible content first — if the answer is below the fold, it won't be cited
+- Mobile-first indexing means "above the fold" = approximately 600–800 pixels
+
+If a user must scroll to find the recommendation, they've already mentally left. They may not come back.
+
+#### "Best Choice" Block Examples
+
+**For comparison articles:**
+```
+## 🏆 Best Choice: [Recommended Option]
+
+[Option Name] is the best choice for [use case] because:
+- [Specific benefit 1]
+- [Specific benefit 2]
+- Cost: $[N] vs competitors' $[N+X]
+```
+
+**For how-to articles:**
+```
+## ✅ Quick Start
+
+If you just want to get started: [1–2 sentence simplified path]
+For detailed steps: [Section link]
+```
+
+**For comparison/choosing articles:**
+```
+## 🎯 Choose Based On:
+
+- **If you need [spec/constraint]:** [Option A]
+- **If you need [different spec]:** [Option B]
+- **If budget is your priority:** [Option C]
+```
+
+**For evaluation articles:**
+```
+## Verdict
+
+[Model/Tool/Service] is best for [primary use case].
+
+Second choice: [Alternative] (for [different use case])
+```
+
+#### Viewport Test
+
+Before publishing, perform the **viewport test**:
+
+1. Open article in browser
+2. Resize to 1024×768 (laptop) and 375×812 (mobile)
+3. Check: Can a new visitor see H1 + Lead Answer + CTR Hook + Key Takeaways + "Best Choice" WITHOUT scrolling?
+4. If any of these elements require scrolling → **FAIL** → move them up or split into two articles
+
+#### Checklist
+
+- [ ] H1 visible (top of screen)
+- [ ] Lead Answer Block visible (bold, 25–50 words)
+- [ ] CTR Hook visible (1–2 lines, tension)
+- [ ] Key Takeaways visible (5–7 bullets)
+- [ ] "Best Choice" or recommendation block visible (no scrolling needed)
+- [ ] Viewport test passes on both laptop (1024×768) and mobile (375×812)
+
+---
+
 ## PART 4: ADVANCED CONTENT OPTIMIZATION
 
 ### Rule 31: Lead Answer Block (Canonical Definition)
@@ -1448,6 +1536,8 @@ Use this checklist before committing any new or edited article:
 - [ ] Quick Facts block present (if 4+ numerical facts)
 - [ ] Table of Contents with all H2 anchors (single `#` not `##`)
 - [ ] Visible last-updated date with `<time datetime="">` element
+- [ ] "Best Choice" or recommendation block present (if comparison/choice article) — Rule 36
+- [ ] First-screen viewport test passes: H1 + Lead Answer + CTR Hook + Key Takeaways + Recommendation visible at 1024×768 and 375×812 — Rule 36
 
 #### Content Quality
 - [ ] Every numeric claim is factual, measured, or sourced (never invented)
@@ -1807,6 +1897,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | CTR hook / SERP tension | Rule 33 | Rule 8c (top-of-page sequence) |
 | Multilingual titles | Rule 34 | Rule 2d (title tag optimization) |
 | SERP differentiation / title stand-out | Rule 35 | Rule 2d (title), Rule 34 (language strategy) |
+| First-screen conversion / above-the-fold | Rule 36 | Rule 8c (top-of-page sequence), Rules 31, 33 |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
