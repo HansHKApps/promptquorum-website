@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q4 vs Q5 vs Q8: Which Quantization Level Should You Use? | PromptQuorum</title>
+  <meta name="description" content="Compare LLM quantization levels Q2-Q8. Learn VRAM trade-offs, quality loss, and which level to use for your hardware." />
+  <meta property="og:title" content="Q4 vs Q5 vs Q8: Which Quantization Level Should You Use? — PromptQuorum" />
+  <meta property="og:description" content="Compare LLM quantization levels Q2-Q8. Learn VRAM trade-offs, quality loss, and which level to use for your hardware." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/local-llms/quantization-levels-comparison" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f5f5f5;
+      color: #1c1b1f;
+      line-height: 1.6;
+    }
+
+    .presentation-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-left span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #49454f;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header-links a {
+      font-size: 13px;
+      color: #6750a4;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .header-links a:hover {
+      border-bottom: 1px solid #6750a4;
+    }
+
+    .content-area {
+      flex: 1;
+      overflow: hidden;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 48px 64px;
+      position: relative;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    .slide.title {
+      background: linear-gradient(135deg, #6750a4 0%, #7c5ba8 100%);
+      color: white;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .slide.title h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .slide.title p {
+      font-size: clamp(16px, 2vw, 20px);
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .slide.title .logo {
+      height: 48px;
+      width: auto;
+      margin-bottom: 20px;
+    }
+
+    .slide h2 {
+      font-size: clamp(26px, 3.5vw, 38px);
+      margin-bottom: 28px;
+      color: #1c1b1f;
+      line-height: 1.2;
+    }
+
+    .slide h3 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      color: #6750a4;
+      font-weight: 600;
+    }
+
+    .slide ul {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    .slide li {
+      font-size: clamp(16px, 1.8vw, 20px);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .slide ol {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    .slide ol li {
+      font-size: clamp(16px, 1.8vw, 20px);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .slide p {
+      font-size: clamp(16px, 1.8vw, 18px);
+      margin-bottom: 16px;
+      line-height: 1.6;
+      color: #49454f;
+    }
+
+    .slide table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: clamp(14px, 1.5vw, 16px);
+    }
+
+    .slide table th {
+      background: #f5f5f5;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #6750a4;
+      color: #1c1b1f;
+    }
+
+    .slide table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #49454f;
+    }
+
+    .slide table tr:hover {
+      background: #f9f9f9;
+    }
+
+    .slide table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: white;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .controls button {
+      padding: 10px 16px;
+      font-size: 14px;
+      background: #6750a4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-weight: 500;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #5a4390;
+    }
+
+    .controls button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .slide-counter {
+      font-size: 14px;
+      color: #79747e;
+      font-weight: 500;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .header,
+      .controls {
+        display: none;
+      }
+
+      .content-area {
+        height: auto;
+        break-after: page;
+      }
+
+      .slide {
+        display: flex !important;
+        page-break-after: always;
+        overflow: visible;
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Q4 vs Q5 vs Q8: Which Quantization Level Should You Use?</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/quantization-levels-comparison" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container">
+      <!-- Slides injected here -->
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const SHARED_SLIDES = [
+          {
+            type: 'title',
+            h1: 'Q4 vs Q5 vs Q8: Which Quantization Level Should You Use?',
+            subtitle: 'Compare VRAM savings, quality loss, and speed across all quantization levels. Find the perfect balance for your hardware.',
+            link: 'https://www.promptquorum.com/local-llms/quantization-levels-comparison'
+          },
+          {
+            type: 'list',
+            h2: 'What is LLM Quantization?',
+            intro: 'Quantization compresses a model by reducing numerical precision, lowering memory usage and increasing speed.',
+            items: [
+              '<strong>Q2–Q3:</strong> Fastest, lowest quality. Use for experiments only.',
+              '<strong>Q4:</strong> Best balance (recommended). 87.5% VRAM savings, ~1% quality loss.',
+              '<strong>Q5–Q6:</strong> Higher quality, more RAM required. Q5 is a dead zone between Q4 and Q8.',
+              '<strong>Q8:</strong> Near full precision. Only if you have excess VRAM and need maximum accuracy.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Q4 is the Industry Standard',
+            line1: '87.5% VRAM savings with imperceptible quality loss',
+            line2: 'Fits a 70B model on RTX 4090 with overhead',
+            tip: 'Most users should use Q4. Q5 is pointless. Q8 is only for perfectionists.'
+          },
+          {
+            type: 'comparison',
+            h2: 'VRAM Trade-offs (Llama 3 70B)',
+            line1: 'FP32: 280GB (impractical) → Q4: 70GB (RTX 4090)',
+            line2: 'Q8: 140GB (32GB+ VRAM needed) → Q3: 53GB (budget squeeze)',
+            tip: 'Speed is identical across all quantizations. VRAM is the only difference.'
+          },
+          {
+            type: 'table',
+            h2: 'Quantization Levels Comparison',
+            columns: ['Quantization', 'RAM Usage', 'Speed', 'Quality', 'Best For'],
+            rows: [
+              { 'Quantization': 'Q2', 'RAM Usage': 'Very Low', 'Speed': 'Very Fast', 'Quality': 'Poor', 'Best For': 'Experiments' },
+              { 'Quantization': 'Q3', 'RAM Usage': 'Low', 'Speed': 'Fast', 'Quality': 'Low', 'Best For': 'Small devices' },
+              { 'Quantization': 'Q4', 'RAM Usage': 'Medium', 'Speed': 'Fast', 'Quality': 'Good', 'Best For': 'Most users ✓' },
+              { 'Quantization': 'Q5', 'RAM Usage': 'Medium+', 'Speed': 'Medium', 'Quality': 'Very Good', 'Best For': 'Avoid (dead zone)' },
+              { 'Quantization': 'Q6', 'RAM Usage': 'High', 'Speed': 'Slower', 'Quality': 'Excellent', 'Best For': 'Accuracy focus' },
+              { 'Quantization': 'Q8', 'RAM Usage': 'Very High', 'Speed': 'Slow', 'Quality': 'Near FP16', 'Best For': 'Benchmarking' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Best Quantization by Hardware',
+            items: [
+              '<strong>8GB RAM:</strong> Q3 or Q4 (7B models only)',
+              '<strong>16GB RAM:</strong> Q4_K_M (recommended for most laptops)',
+              '<strong>32GB+ RAM:</strong> Q5, Q6, or Q8 (larger models, higher quality)',
+              '<strong>Maximum accuracy:</strong> Q8 (if VRAM is not a constraint)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Quality Loss by Benchmark',
+            intro: 'Measured on MMLU benchmark (57 reasoning tasks). Llama 3 70B baseline: 85.2% accuracy.',
+            items: [
+              '<strong>Q8:</strong> 85.1% accuracy (-0.1% loss) — imperceptible',
+              '<strong>Q5:</strong> 84.7% accuracy (-0.5% loss) — barely noticeable',
+              '<strong>Q4:</strong> 84.0% accuracy (-1.2% loss) — imperceptible for most tasks',
+              '<strong>Q3:</strong> 81.5% accuracy (-3.7% loss) — noticeable, avoid for reasoning'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'When to Use Each Level',
+            items: [
+              '<strong>Q4 (default):</strong> Use for everything. Sweet spot of compression + quality.',
+              '<strong>Q8:</strong> Only if you have 32GB+ VRAM AND need perfect accuracy (research, medical use).',
+              '<strong>Q5:</strong> Never. If you need Q5 quality, use Q4 with a slightly larger model instead.',
+              '<strong>Q3:</strong> Budget squeeze only. 3% quality loss acceptable? Use Q3. Otherwise upgrade GPU.',
+              '<strong>Q2:</strong> Last resort. Use only if OOM on Q3.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Why Q4 is the Standard',
+            items: [
+              '87.5% VRAM savings (best compression-to-quality ratio)',
+              '&lt;1.2% quality loss (imperceptible to users)',
+              'No speed penalty (memory-bound, not compute-bound)',
+              'Fits consumer hardware (70B on RTX 4090 24GB)',
+              'Every major model (Llama, Mistral, Qwen) ships with Q4 variant'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Common Misconceptions',
+            items: [
+              '<strong>Myth:</strong> Q4 is "low quality" because 4-bit is small. <strong>Fact:</strong> 1% quality loss is imperceptible.',
+              '<strong>Myth:</strong> Quantization makes inference slower. <strong>Fact:</strong> Speed is identical (memory-bound, not compute-bound).',
+              '<strong>Myth:</strong> Use Q8 to be safe. <strong>Fact:</strong> Q4 is proven, safe, standard. Q8 is wasteful.',
+              '<strong>Myth:</strong> I need FP32 for accuracy. <strong>Fact:</strong> Never true. Q8 is sufficient even for research.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Top Questions',
+            faqs: [
+              { q: 'What is the best quantization level?', a: 'Q4_K_M is the best default for most users, balancing performance and quality.' },
+              { q: 'Does quantization reduce accuracy?', a: 'Yes, but Q4–Q5 retain most model quality while significantly reducing memory requirements.' },
+              { q: 'Is Q8 worth it?', a: 'Only if you need maximum accuracy and have enough RAM. Most users will not benefit from Q8.' },
+              { q: 'Should I use Q4 or Q8 for coding?', a: 'Q4. Speed is identical, quality difference is 1%, which is imperceptible for code generation.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '✓ <strong>Use Q4 for everything.</strong> It\'s the proven standard across industry.',
+              '✓ <strong>Q4 saves 87.5% VRAM</strong> with imperceptible quality loss (~1%).',
+              '✓ <strong>Speed is identical</strong> across all quantizations (memory-bound, not compute-bound).',
+              '✓ <strong>Q5 is a dead zone:</strong> Skip it. Use Q4 + larger model = better.',
+              '✓ <strong>Q8 only if you have excess VRAM</strong> and need perfect accuracy.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Optimize Your Local LLM Setup',
+            body: 'Deploy local LLMs with the right quantization level for your hardware. PromptQuorum helps you compare models, benchmark performance, and find the best configuration.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+    ];
+
+    const CONTENT = {
+      en: { title: 'Q4 vs Q5 vs Q8: Which Quantization Level Should You Use?', slides: SHARED_SLIDES },
+      de: { title: 'Q4 vs Q5 vs Q8: Welches Quantisierungsniveau sollten Sie verwenden?', slides: SHARED_SLIDES },
+      fr: { title: 'Q4 vs Q5 vs Q8 : Quel niveau de quantification choisir ?', slides: SHARED_SLIDES },
+      ja: { title: 'Q4 vs Q5 vs Q8: どの量子化レベルを使うべきか？', slides: SHARED_SLIDES },
+      zh: { title: 'Q4 vs Q5 vs Q8：选择哪个量化级别？', slides: SHARED_SLIDES }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const lang = new URLSearchParams(window.location.search).get('lang') || 'en';
+      const articleUrl = 'https://www.promptquorum.com/local-llms/quantization-levels-comparison?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 18px; color: rgba(255,255,255,0.8);">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: white; text-decoration: none;">${slide.link.split('/').slice(-1)[0].replace(/-/g, ' ')}</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="margin-top: 20px;">';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table><tr>';
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col]}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 40px; font-size: 1.5em; font-weight: 500;">${slide.line1}</p>
+            <p style="font-size: 1.5em; font-weight: 500;">${slide.line2}</p>
+            <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ol style="margin-top: 20px;">';
+          slide.items.forEach((item, i) => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 20px; text-align: left;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p>${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = (CONTENT[lang] && CONTENT[lang].slides.length > 0) ? CONTENT[lang] : CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = `https://www.promptquorum.com/local-llms/quantization-levels-comparison?lang=${lang}`;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
