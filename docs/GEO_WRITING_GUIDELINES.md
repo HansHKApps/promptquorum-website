@@ -812,6 +812,7 @@ The order of elements after your H1 title determines what AI crawlers extract fi
 - [ ] Key Takeaways block has 5–7 bullets and class="key-takeaways"
 - [ ] Quick Facts block present only if 4+ numerical facts
 - [ ] ToC includes all H2 anchors (use single `#` not `##` for markdown)
+- [ ] Every ToC `anchor` value (e.g., `#writing`) exactly matches the corresponding section's `id:` field (e.g., `id: 'writing'`) — see Rule 42
 - [ ] `<time datetime="">` element present with ISO 8601 date
 - [ ] Intro paragraph is max 3 sentences
 
@@ -2615,7 +2616,79 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | Visual rhythm / scannability & AI chunking | Rule 41 | Rules 1, 37, 38 (answer-first, decisions, citations) |
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
+| ToC anchor-to-section-id matching | Rule 42 | Rule 8c (top-of-page sequence) |
 
 ---
 
-**Last updated: April 7, 2026** | [Submit feedback](https://github.com/anthropics/promptquorum/issues)
+### Rule 42: ToC Anchor ↔ Section ID Must Match Exactly (Mandatory)
+
+Every Table of Contents entry's `anchor` value must exactly match the corresponding section's `id:` field. A mismatch makes the TOC link broken — clicking it scrolls nowhere.
+
+**Why:** The component renders each section as `<section id={sectionId}>` where `sectionId` comes from the section's explicit `id:` field (or falls back to a title slug). The TOC link uses `href={item.anchor}` directly. If `anchor: '#writing'` but the section has `id: 'content-creation'`, the link breaks silently — no error, just a non-working anchor.
+
+#### The Rule
+
+Every section in `content.ts` that appears in the TOC **must** have an explicit `id:` field whose value matches the TOC anchor (without the `#`).
+
+**✅ Correct — anchor matches id:**
+```typescript
+// TOC entry
+{ label: 'Writing & Content Creation', anchor: '#writing' }
+
+// Section in content.ts
+'writing': {
+  id: 'writing',           // ← matches '#writing' (without #)
+  title: 'Writing & Content Creation',
+  ...
+}
+```
+
+**❌ Broken — anchor does not match id:**
+```typescript
+// TOC entry
+{ label: 'TLDR', anchor: '#tldr' }
+
+// Section in content.ts
+tldr: {
+  id: 'key-takeaways',     // ← '#key-takeaways' ≠ '#tldr' → broken link
+  isTldr: true,
+  ...
+}
+```
+
+**❌ Broken — no explicit id (component falls back to title slug):**
+```typescript
+// TOC entry
+{ label: 'FAQ', anchor: '#faq' }
+
+// Section in content.ts
+faqSection: {
+  // no id: field → component computes id from title (e.g., 'frequently-asked-questions')
+  // '#frequently-asked-questions' ≠ '#faq' → broken link
+  title: 'Frequently Asked Questions',
+  ...
+}
+```
+
+#### How the Component Computes Section IDs
+
+`LocalLLMsPostClient.tsx` line 593:
+```typescript
+const sectionId = section.isTldr
+  ? (section.id ?? 'key-takeaways')
+  : (section.id ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined))
+```
+
+**Rule:** Always add an explicit `id:` field — never rely on the title-slug fallback for sections that appear in the TOC.
+
+#### Checklist
+
+- [ ] Every TOC `anchor` (e.g., `'#faq'`) has a matching section `id:` field (e.g., `id: 'faq'`)
+- [ ] Sections in the TOC that previously had `id: 'key-takeaways'` but are linked as `#tldr` — update `id` to match the anchor
+- [ ] Sections using the key `faqSection` but linked as `#faq` — add `id: 'faq'`
+- [ ] All 5 language blocks (en, de, fr, ja, zh) have the same `id:` values on their corresponding sections
+- [ ] After adding `id:` fields, `npm run build` passes with 0 TypeScript errors
+
+---
+
+**Last updated: April 19, 2026** | [Submit feedback](https://github.com/anthropics/promptquorum/issues)

@@ -265,8 +265,13 @@ All 4 JSON-LD blocks MUST be present in `<head>` before `npm run build`. Missing
    - ✓ Appears before first H2
 4. [ ] **Quick Facts block** (Optional, if 4+ numerical facts) (Rule 27)
    - Only if article has 4+ numeric facts (token counts, costs, VRAM, latency, %s)
-5. [ ] **Table of Contents** (Rule 8c)
+5. [ ] **Table of Contents** (Rule 8c, Rule 42)
    - ✓ All H2 anchors listed; use single `#` not `##`
+   - ✓ **Every `anchor` value matches corresponding section's `id:` field** (Rule 42)
+     - Example: `anchor: '#faq'` requires section to have `id: 'faq'`
+     - `faqSection` key with no `id:` field → broken link; must add `id: 'faq'`
+     - `tldr` with `id: 'key-takeaways'` but `anchor: '#tldr'` → broken; must match
+     - All 5 language blocks need matching `id:` fields
 6. [ ] **Last Updated date** (Rule 11)
    - ✓ `<time datetime="2026-04-07">Last updated: April 2026</time>` element
 7. [ ] **Intro paragraph** (Rule 8c)
