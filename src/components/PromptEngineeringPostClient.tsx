@@ -1207,7 +1207,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             <ol className="space-y-1">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>
-                  <a href={`#${item.anchor}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
+                  <a href={item.anchor.startsWith('#') ? item.anchor : `#${item.anchor}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
                     {item.label}
                   </a>
                 </li>
