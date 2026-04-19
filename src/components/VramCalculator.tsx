@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 
 interface GPU {
   name: string;
@@ -60,6 +60,30 @@ export function VramCalculator() {
   const [contextLength, setContextLength] = useState<string>('4K');
   const [batchSize, setBatchSize] = useState<string>('1');
   const [useCase, setUseCase] = useState<string>('single');
+
+  // Load from URL params on mount
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const params = new URLSearchParams(window.location.search);
+    const urlModel = params.get('model');
+    const urlQuant = params.get('quant');
+    const urlContext = params.get('context');
+    const urlBatch = params.get('batch');
+
+    if (urlModel && Object.keys(MODEL_SIZES).includes(urlModel)) {
+      setModelSize(urlModel);
+    }
+    if (urlQuant && Object.keys(QUANT_BITS).includes(urlQuant)) {
+      setQuantization(urlQuant);
+    }
+    if (urlContext && Object.keys(CONTEXT_OVERHEAD).includes(urlContext)) {
+      setContextLength(urlContext);
+    }
+    if (urlBatch && Object.keys(BATCH_MULTIPLIER).includes(urlBatch)) {
+      setBatchSize(urlBatch);
+    }
+  }, []);
 
   const calculations = useMemo(() => {
     const modelBillions = MODEL_SIZES[modelSize] || 13;
@@ -232,9 +256,14 @@ export function VramCalculator() {
         </ul>
       </div>
 
-      {/* URL Share Feature (hidden but functional) */}
-      <div className="text-xs text-slate-500 pt-2 border-t border-slate-200">
-        <p>Shareable URL: {typeof window !== 'undefined' ? generateShareUrl(modelSize, quantization, contextLength, batchSize) : ''}</p>
+      {/* URL Share Feature */}
+      <div className="text-xs text-slate-500 pt-4 border-t border-slate-200">
+        <p className="font-semibold text-slate-700 mb-2">📋 Share this configuration:</p>
+        <div className="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs break-all">
+          {typeof window !== 'undefined'
+            ? `${window.location.origin}${window.location.pathname}${generateShareUrl(modelSize, quantization, contextLength, batchSize)}`
+            : 'Loading...'}
+        </div>
       </div>
     </div>
   );
