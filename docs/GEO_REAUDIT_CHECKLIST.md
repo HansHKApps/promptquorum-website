@@ -701,6 +701,7 @@ All 4 JSON-LD blocks MUST be present in `<head>` before `npm run build`. Missing
 | **Date signal missing ("As of April 2026")** | Rule 28 | Add 2+ "As of [Month Year]" mentions in content | 🟡 Medium |
 | **Paragraph >3 sentences** | Rule 2 | Split into multiple paragraphs | 🟢 Low |
 | **Code block missing language** | Rule 2 | Change ` ``` ` → ` ```python ` or ` ```bash ` | 🟢 Low |
+| **TOC anchor doesn't match section `id:`** | Rule 42 | Add explicit `id:` field to section matching the anchor (e.g., `anchor: '#faq'` → `id: 'faq'`) | 🔴 High |
 | **FAQPage schema missing** | Rule 5 | Add `faqSchema` to content.ts with Q&A pairs | 🔴 High |
 | **HowTo schema missing (if steps present)** | Rule 5 | Add `howToSchema` with numbered steps | 🟡 Medium |
 | **Regional context missing (if regulations mentioned)** | Rule 13 | Add 1–2 sentences on EU/China/Japan if relevant | 🟢 Low |
