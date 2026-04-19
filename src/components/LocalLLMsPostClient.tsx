@@ -7,6 +7,7 @@ import { llmContent, type LLMSection } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
+import { VramCalculator } from '@/components/VramCalculator'
 
 interface Props {
   slug: string
@@ -247,6 +248,13 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
               {renderInlineLinks(para, lang)}
             </p>
           ))}
+        </div>
+      )}
+
+      {/* Component rendering */}
+      {section.component === 'VramCalculator' && (
+        <div className="my-8">
+          <VramCalculator />
         </div>
       )}
 
