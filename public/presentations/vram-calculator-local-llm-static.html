@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VRAM Calculator for Local LLMs | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on VRAM calculation for local LLMs. Learn the formula (Model Billions × Quantization Bits) ÷ 8 and GPU requirements." />
+    <meta property="og:title" content="VRAM Calculator for Local LLMs — PromptQuorum" />
+    <meta property="og:description" content="Master VRAM calculations with practical GPU scenarios and quantization guides." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/vram-calculator-local-llm" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/vram-calculator-local-llm?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">VRAM Calculator for Local LLMs</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/vram-calculator-local-llm">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const CONTENT = {
+      en: {
+        title: 'VRAM Calculator for Local LLMs',
+        slides: [
+          {
+            type: 'title',
+            h1: 'VRAM Calculator\nfor Local LLMs',
+            subtitle: 'Calculate exact GPU requirements using the formula: (Model Size GB × Quantization Bits) ÷ 8 = VRAM Needed. As of April 2026, this prevents expensive hardware mistakes.',
+            link: 'https://www.promptquorum.com/local-llms/vram-calculator-local-llm'
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              'VRAM = (Model Size × Quantization Bits) ÷ 8',
+              'FP16 = 16 bits, Q8 = 8, Q5 = 5, Q4 = 4 bits',
+              'Example: 13B model at Q4 = (13 × 4) ÷ 8 = 6.5 GB',
+              'Always add 25% buffer for context, system overhead, and safe margin',
+              'As of April 2026, this formula is accurate within ±10%'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Quick Facts: VRAM by GPU',
+            items: [
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB), 70B at Q4 with offloading',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB), 32B at Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB with tight headroom)',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B at FP16 (26 GB), 70B not possible without extreme quantization',
+              '<strong>Rule of thumb:</strong> Always budget 25–40% extra VRAM for context, batching, and system overhead'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'The Formula Explained',
+            line1: '<strong>In one sentence:</strong> VRAM required (GB) equals model parameters in billions multiplied by quantization bits, divided by 8.',
+            line2: '<strong>In plain terms:</strong> Think of VRAM like bookshelf space. Bigger books (larger models) take more room. Smaller books (Q4 quantization) take less space than larger ones (FP16).',
+            tip: 'The formula tells you exactly how many "shelves" (GB) you need. Always leave extra for conversations and requests.'
+          },
+          {
+            type: 'list',
+            h2: 'The VRAM Formula',
+            items: [
+              'VRAM (GB) = (Model Size in Billions × Quantization Bits) ÷ 8',
+              '<strong>Example 1:</strong> 7B model at 4-bit quantization: (7 × 4) ÷ 8 = 3.5 GB',
+              '<strong>Example 2:</strong> 13B model at 5-bit quantization: (13 × 5) ÷ 8 = 8.125 GB',
+              '<strong>Example 3:</strong> 70B model at 8-bit quantization: (70 × 8) ÷ 8 = 70 GB',
+              '💡 <strong>Pro Tip:</strong> This formula calculates model weights only. Real VRAM usage is 25–40% higher due to context, batching, and system overhead. Always add a safety margin.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Quantization Levels',
+            columns: ['Quantization', 'Bits', 'Quality', 'Use Case'],
+            rows: [
+              { 'Quantization': 'FP16 (full)', 'Bits': '16', 'Quality': '100% (perfect)', 'Use Case': 'Research, fine-tuning' },
+              { 'Quantization': 'Q8 (8-bit)', 'Bits': '8', 'Quality': '99% (imperceptible)', 'Use Case': 'Production, servers' },
+              { 'Quantization': 'Q5 (5-bit)', 'Bits': '5', 'Quality': '95% (minor loss)', 'Use Case': 'Good balance' },
+              { 'Quantization': 'Q4 (4-bit)', 'Bits': '4', 'Quality': '90–95% (acceptable)', 'Use Case': 'Maximum compression' },
+              { 'Quantization': 'Q3 (3-bit)', 'Bits': '3', 'Quality': '80–85% (noticeable)', 'Use Case': 'Extreme compression' },
+              { 'Quantization': 'Q2 (2-bit)', 'Bits': '2', 'Quality': '70% (visible loss)', 'Use Case': 'Tiny models only' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Quick Reference: VRAM by Model & Quantization',
+            columns: ['Model Size', 'FP16', 'Q8', 'Q5', 'Q4'],
+            rows: [
+              { 'Model Size': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1.9 GB', 'Q4': '1.5 GB' },
+              { 'Model Size': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
+              { 'Model Size': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8.1 GB', 'Q4': '6.5 GB' },
+              { 'Model Size': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+              { 'Model Size': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43.75 GB', 'Q4': '35 GB' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Real-World GPU Scenarios',
+            items: [
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B at Q4 = 3.5 GB ✓ (plenty of room). Llama 3.1 13B at Q5 = 8.1 GB ✓ (tight, but works).',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B at Q5 = 43.75 GB ✗ (too large). Llama 3.1 70B at Q4 with offloading = works (slow, 3–5 tok/sec).',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B at FP16 = 26 GB ✓ (works). Llama 3.1 70B = impossible (even Q2 has ~70% quality loss).'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Hidden VRAM Overhead',
+            items: [
+              '<strong>Context window:</strong> Key-value cache stores conversation history. A 4k-token context uses ~2–3 GB for a 7B model.',
+              '<strong>Batch processing:</strong> Each concurrent prompt (batch=4) uses 500 MB–2 GB extra. If you run batch=4, multiply single-request VRAM by 4.',
+              '<strong>System overhead:</strong> OS and inference engine (Ollama, vLLM) reserve 500 MB–1 GB. Always maintain a safety margin.',
+              '📌 <strong>Key Point:</strong> The formula calculates model weights only. Budget an additional 25–40% beyond calculated amount for real-world use.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Formula Accuracy',
+            items: [
+              '<strong>Accurate within ±10%.</strong> Real-world VRAM varies based on implementation, model architecture, and engine optimizations.',
+              '<strong>Variation sources:</strong> Different quantization formats (GGUF vs safetensors vs AWQ), model architecture (Transformer vs non-Transformer), and inference engine optimizations (vLLM, llama.cpp, Ollama).',
+              '<strong>Conservative estimate:</strong> As of April 2026, treat the formula as a conservative estimate. Always add 25% safety margin when purchasing GPUs.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common VRAM Mistakes',
+            items: [
+              '<strong>Forgetting context overhead.</strong> A 7B at Q4 is 3.5 GB, but with 4k context, it needs 5–6 GB total.',
+              '<strong>Confusing model size with VRAM.</strong> 70B means 70 billion parameters, not 70 GB VRAM.',
+              '<strong>Not accounting for system overhead.</strong> Models never get full GPU VRAM. Reserve 1–2 GB for OS and inference engine.',
+              '<strong>Buying GPU at calculated size.</strong> Always buy 25% more. A calculated 18 GB need means get a 24 GB GPU.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Regional Deployment',
+            items: [
+              '<strong>European Union (GDPR):</strong> Local inference ensures data residency compliance. Running models on-premises keeps user data in-country.',
+              '<strong>Japan (APPI):</strong> Act on Protection of Personal Information requires careful handling. On-device LLM inference reduces data transfer outside Japan.',
+              '<strong>China (Data Security Law):</strong> 2021 law mandates data residency within Chinese borders. Local LLM on domestic servers (Alibaba, Tencent) is compliant.',
+              '<strong>Global privacy:</strong> Local inference provides stronger data privacy guarantees than cloud APIs. This calculator helps design compliant, privacy-preserving AI systems.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ: Common Questions',
+            faqs: [
+              { q: 'Does the formula work for all models?', a: 'Yes, for Transformer-based models (Llama, Qwen, Mistral, etc.). Non-Transformer architectures are rare and may need adjustment.' },
+              { q: 'What quantization should I use?', a: 'Q5 for best balance (95% quality, 68% smaller). Q4 standard for consumer GPUs. Q8 for production if VRAM allows (99% quality).' },
+              { q: 'How much system RAM do I need?', a: 'Minimum 16 GB for offloading. For batch processing, add 8–16 GB beyond model offload requirements. For single-user chat, 16 GB is sufficient.' },
+              { q: 'Does batch size affect VRAM?', a: 'Yes. The formula calculates single-request VRAM. Batch size adds linearly: each concurrent request adds ~500 MB–2 GB. Batch=4 adds 2–8 GB.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Try PromptQuorum Free',
+            body: 'Use our multi-model AI prompt dispatch tool to run your optimized local LLMs at scale, with automatic fallback and consensus features.',
+            cta: 'Start Free Trial',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'VRAM-Rechner für lokale LLMs',
+        slides: [
+          {
+            type: 'title',
+            h1: 'VRAM-Rechner\nfür lokale LLMs',
+            subtitle: 'Berechnen Sie exakte GPU-Anforderungen mit der Formel: (Modellgröße × Quantisierungsbits) ÷ 8 = VRAM erforderlich. April 2026: Diese Formel verhindert teure Hardware-Fehler.',
+            link: 'https://www.promptquorum.com/local-llms/vram-calculator-local-llm?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              'VRAM = (Modellgröße × Quantisierungsbits) ÷ 8',
+              'FP16 = 16 Bits, Q8 = 8, Q5 = 5, Q4 = 4 Bits',
+              'Beispiel: 13B Modell bei Q4 = (13 × 4) ÷ 8 = 6,5 GB',
+              'Immer 25% Puffer für Kontext, Systemüberlauf und Sicherheitsmarge hinzufügen',
+              'April 2026: Diese Formel ist auf ±10% genau'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Schnelle Fakten nach GPU',
+            items: [
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB), 70B bei Offloading',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB), 32B at Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB mit straffer Reserve)',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B at FP16 (26 GB), 70B unmöglich',
+              '<strong>Faustregel:</strong> 25–40% zusätzliches VRAM für Kontext, Batching und Systemüberlauf'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Formel Erklärung',
+            line1: '<strong>In einem Satz:</strong> VRAM (GB) = Modellparameter in Milliarden × Quantisierungsbits ÷ 8.',
+            line2: '<strong>In einfachen Worten:</strong> VRAM wie Buchregalbrett. Größere Bücher (Modelle) brauchen mehr Platz. Kleinere Bücher (Q4) brauchen weniger als größere (FP16).',
+            tip: 'Die Formel zeigt genau, wie viele "Bretter" (GB) nötig sind. Immer zusätzlichen Platz für Gespräche lassen.'
+          },
+          {
+            type: 'list',
+            h2: 'VRAM-Berechnungsformel',
+            items: [
+              'VRAM (GB) = (Modellgröße in Milliarden × Quantisierungsbits) ÷ 8',
+              '<strong>Beispiel 1:</strong> 7B Modell bei 4-Bit: (7 × 4) ÷ 8 = 3,5 GB',
+              '<strong>Beispiel 2:</strong> 13B Modell bei 5-Bit: (13 × 5) ÷ 8 = 8,125 GB',
+              '<strong>Beispiel 3:</strong> 70B Modell bei 8-Bit: (70 × 8) ÷ 8 = 70 GB',
+              '💡 <strong>Pro-Tipp:</strong> Formel berechnet nur Modellgewichte. Echte VRAM-Nutzung ist 25–40% höher durch Kontext und Batch-Verarbeitung. Immer Sicherheitsmarge hinzufügen.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Quantisierungsstufen',
+            columns: ['Quantisierung', 'Bits', 'Qualität', 'Anwendungsfall'],
+            rows: [
+              { 'Quantisierung': 'FP16 (voll)', 'Bits': '16', 'Qualität': '100% (perfekt)', 'Anwendungsfall': 'Forschung, Optimierung' },
+              { 'Quantisierung': 'Q8 (8-Bit)', 'Bits': '8', 'Qualität': '99% (unmerklich)', 'Anwendungsfall': 'Produktion, Server' },
+              { 'Quantisierung': 'Q5 (5-Bit)', 'Bits': '5', 'Qualität': '95% (geringer Verlust)', 'Anwendungsfall': 'Gutes Gleichgewicht' },
+              { 'Quantisierung': 'Q4 (4-Bit)', 'Bits': '4', 'Qualität': '90–95% (akzeptabel)', 'Anwendungsfall': 'Maximale Kompression' },
+              { 'Quantisierung': 'Q3 (3-Bit)', 'Bits': '3', 'Qualität': '80–85% (bemerkbar)', 'Anwendungsfall': 'Extreme Kompression' },
+              { 'Quantisierung': 'Q2 (2-Bit)', 'Bits': '2', 'Qualität': '70% (sichtbar)', 'Anwendungsfall': 'Nur kleine Modelle' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Schnellreferenz: VRAM nach Modell',
+            columns: ['Modellgröße', 'FP16', 'Q8', 'Q5', 'Q4'],
+            rows: [
+              { 'Modellgröße': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1,9 GB', 'Q4': '1,5 GB' },
+              { 'Modellgröße': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4,4 GB', 'Q4': '3,5 GB' },
+              { 'Modellgröße': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8,1 GB', 'Q4': '6,5 GB' },
+              { 'Modellgröße': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+              { 'Modellgröße': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43,75 GB', 'Q4': '35 GB' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Praktische GPU-Szenarien',
+            items: [
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3,5 GB ✓ (viel Platz). Llama 3.1 13B Q5 = 8,1 GB ✓ (straff, aber funktioniert).',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43,75 GB ✗ (zu groß). Llama 3.1 70B Q4 mit Offloading = funktioniert (langsam, 3–5 Tok/sec).',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (funktioniert). Llama 3.1 70B = unmöglich (~70% Qualitätsverlust).'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Versteckte VRAM-Overheads',
+            items: [
+              '<strong>Kontextfenster:</strong> Schlüssel-Wert-Cache speichert Konversationsverlauf. 4k-Token-Kontext = ~2–3 GB für 7B Modell.',
+              '<strong>Batch-Verarbeitung:</strong> Jede gleichzeitige Anfrage (Batch=4) verbraucht 500 MB–2 GB extra. Bei Batch=4: Single-Request VRAM × 4.',
+              '<strong>Systemüberlauf:</strong> Betriebssystem und Engine reservieren 500 MB–1 GB. Sicherheitsmarge immer halten.',
+              '📌 <strong>Schlüsselpunkt:</strong> Formel berechnet nur Gewichte. 25–40% zusätzlich für echte Nutzung einplanen.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Genauigkeit Formel',
+            items: [
+              '<strong>Genau auf ±10%.</strong> Echte VRAM variiert durch Implementierung, Modellarchitektur und Engine-Optimierung.',
+              '<strong>Variationsquellen:</strong> Unterschiedliche Formate (GGUF, SafeTensors, AWQ), Architektur (Transformer vs. nicht), Engine-Optimierungen (vLLM, llama.cpp).',
+              '<strong>Konservative Schätzung:</strong> April 2026: Formel als konservativ behandeln. 25% Sicherheitsmarge beim GPU-Kauf immer hinzufügen.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige VRAM-Fehler',
+            items: [
+              '<strong>Kontext-Overhead vergessen.</strong> 7B Q4 = 3,5 GB, aber mit 4k Kontext = 5–6 GB benötigt.',
+              '<strong>Modellgröße mit VRAM verwechseln.</strong> 70B = 70 Milliarden Parameter, nicht 70 GB VRAM.',
+              '<strong>Systemüberlauf ignorieren.</strong> Modelle bekommen nicht 100% GPU-VRAM. 1–2 GB für OS reservieren.',
+              '<strong>GPU exakt bei Berechnung kaufen.</strong> Immer 25% mehr. Berechnet 18 GB = 24 GB GPU kaufen.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Regionale Bereitstellung',
+            items: [
+              '<strong>Europäische Union (DSGVO):</strong> Lokale Inferenz gewährleistet Datenstandort-Compliance. On-Premises hält Nutzerdaten im Land.',
+              '<strong>Japan (APPI):</strong> Schutzgesetz erfordert sorgfältige Handhabung. On-Device-LLM reduziert Datenübertragung außerhalb Japans.',
+              '<strong>China (Datensicherheitsgesetz):</strong> 2021-Gesetz verlangt Datenstandort in China. Lokale LLM auf heimischen Servern (Alibaba, Tencent) ist konform.',
+              '<strong>Globaler Datenschutz:</strong> Lokale Inferenz bietet bessere Datenschutzgarantien als Cloud-APIs. Dieser Rechner hilft bei konformen, datenschützenden AI-Systemen.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              { q: 'Funktioniert die Formel für alle Modelle?', a: 'Ja, für Transformer-Modelle (Llama, Qwen, Mistral etc.). Nicht-Transformer-Architekturen sind selten und benötigen möglicherweise Anpassung.' },
+              { q: 'Welche Quantisierung sollte ich nutzen?', a: 'Q5 für besten Kompromiss (95% Qualität, 68% kleiner). Q4 Standard für Consumer-GPUs. Q8 für Produktion wenn VRAM vorhanden (99% Qualität).' },
+              { q: 'Wie viel System-RAM benötige ich?', a: 'Mindestens 16 GB zum Offloaden. Für Batch-Verarbeitung 8–16 GB zusätzlich. Single-User-Chat = 16 GB ausreichend.' },
+              { q: 'Beeinflusst Batch-Größe VRAM?', a: 'Ja. Formel berechnet Single-Request VRAM. Batch-Größe addiert linear: ~500 MB–2 GB pro Request. Batch=4 = +2–8 GB.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'PromptQuorum Kostenlos Testen',
+            body: 'Verwenden Sie unser Multi-Modell AI-Prompt-Dispatch-Tool, um optimierte lokale LLMs skaliert auszuführen, mit automatischem Fallback und Consensus-Features.',
+            cta: 'Kostenlos Testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Calculateur VRAM pour LLMs locaux',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Calculateur VRAM\npour LLMs Locaux',
+            subtitle: 'Calculez les exigences GPU exactes avec la formule : (Taille du Modèle × Bits de Quantification) ÷ 8 = VRAM Nécessaire. Avril 2026: évitez les erreurs hardware coûteuses.',
+            link: 'https://www.promptquorum.com/local-llms/vram-calculator-local-llm?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Points Clés',
+            items: [
+              'VRAM = (Taille du Modèle × Bits de Quantification) ÷ 8',
+              'FP16 = 16 bits, Q8 = 8, Q5 = 5, Q4 = 4 bits',
+              'Exemple : modèle 13B en Q4 = (13 × 4) ÷ 8 = 6,5 GB',
+              'Toujours ajouter 25% de marge pour contexte, overhead système et sécurité',
+              'Avril 2026 : cette formule est précise à ±10%'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Aperçu: VRAM par GPU',
+            items: [
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B Q4 (3,5 GB), 13B Q5 (8,1 GB), 70B avec offloading',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B Q4 (3,5 GB), 13B Q5 (8,1 GB), 32B Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 (3,5 GB), 13B Q5 (8,1 GB marge réduite)',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 (26 GB), 70B impossible',
+              '<strong>Règle d\'or:</strong> Prévoir 25–40% de VRAM supplémentaire pour contexte, batching et overhead'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Explication Formule',
+            line1: '<strong>En une phrase :</strong> VRAM (GB) = milliards de paramètres × bits de quantification ÷ 8.',
+            line2: '<strong>En termes simples :</strong> VRAM comme rayons de bibliothèque. Gros livres (modèles) occupent plus place. Petits livres (Q4) occupent moins que gros (FP16).',
+            tip: 'La formule indique exactement combien de "rayons" (GB) sont nécessaires. Toujours laisser place supplémentaire pour conversations.'
+          },
+          {
+            type: 'list',
+            h2: 'Formule Calcul VRAM',
+            items: [
+              'VRAM (GB) = (Taille Modèle en Milliards × Bits Quantification) ÷ 8',
+              '<strong>Exemple 1 :</strong> modèle 7B à 4-bit : (7 × 4) ÷ 8 = 3,5 GB',
+              '<strong>Exemple 2 :</strong> modèle 13B à 5-bit : (13 × 5) ÷ 8 = 8,125 GB',
+              '<strong>Exemple 3 :</strong> modèle 70B à 8-bit : (70 × 8) ÷ 8 = 70 GB',
+              '💡 <strong>Conseil :</strong> Formule calcule poids du modèle seulement. Usage réel VRAM est 25–40% supérieur par contexte et batching. Toujours ajouter marge sécurité.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Niveaux Quantification',
+            columns: ['Quantification', 'Bits', 'Qualité', 'Cas d\'usage'],
+            rows: [
+              { 'Quantification': 'FP16 (complet)', 'Bits': '16', 'Qualité': '100% (parfait)', 'Cas d\'usage': 'Recherche, fine-tuning' },
+              { 'Quantification': 'Q8 (8-bit)', 'Bits': '8', 'Qualité': '99% (imperceptible)', 'Cas d\'usage': 'Production, serveurs' },
+              { 'Quantification': 'Q5 (5-bit)', 'Bits': '5', 'Qualité': '95% (perte mineure)', 'Cas d\'usage': 'Bon équilibre' },
+              { 'Quantification': 'Q4 (4-bit)', 'Bits': '4', 'Qualité': '90–95% (acceptable)', 'Cas d\'usage': 'Compression maximale' },
+              { 'Quantification': 'Q3 (3-bit)', 'Bits': '3', 'Qualité': '80–85% (notable)', 'Cas d\'usage': 'Compression extrême' },
+              { 'Quantification': 'Q2 (2-bit)', 'Bits': '2', 'Qualité': '70% (visible)', 'Cas d\'usage': 'Petits modèles seulement' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Référence Rapide: VRAM par Modèle',
+            columns: ['Taille Modèle', 'FP16', 'Q8', 'Q5', 'Q4'],
+            rows: [
+              { 'Taille Modèle': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1.9 GB', 'Q4': '1.5 GB' },
+              { 'Taille Modèle': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
+              { 'Taille Modèle': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8.1 GB', 'Q4': '6.5 GB' },
+              { 'Taille Modèle': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+              { 'Taille Modèle': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43.75 GB', 'Q4': '35 GB' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Scénarios GPU Réels',
+            items: [
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3.5 GB ✓ (beaucoup place). Llama 3.1 13B Q5 = 8.1 GB ✓ (serré mais fonctionne).',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43.75 GB ✗ (trop grand). Llama 3.1 70B Q4 offloading = fonctionne (lent, 3–5 tok/sec).',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (fonctionne). Llama 3.1 70B = impossible (~70% perte qualité).'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Overhead VRAM Caché',
+            items: [
+              '<strong>Fenêtre contexte :</strong> Cache clé-valeur stocke historique conversation. Contexte 4k-token = ~2–3 GB pour modèle 7B.',
+              '<strong>Batch-processing :</strong> Chaque requête concurrent (batch=4) = 500 MB–2 GB extra. Si batch=4 : VRAM single-request × 4.',
+              '<strong>Overhead système :</strong> OS et engine réservent 500 MB–1 GB. Toujours maintenir marge sécurité.',
+              '📌 <strong>Point clé :</strong> Formule calcule poids seulement. Budget 25–40% supplémentaire pour usage réel.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Précision Formule',
+            items: [
+              '<strong>Précise à ±10%.</strong> VRAM réel varie par implémentation, architecture modèle, optimisations engine.',
+              '<strong>Sources variation :</strong> Formats différents (GGUF, SafeTensors, AWQ), architecture (Transformer vs autre), optimisations engine (vLLM, llama.cpp).',
+              '<strong>Estimation conservatrice :</strong> Avril 2026 : traiter formule comme conservatrice. Toujours ajouter 25% marge sécurité achat GPU.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs VRAM Courantes',
+            items: [
+              '<strong>Oublier overhead contexte.</strong> 7B Q4 = 3.5 GB, mais avec contexte 4k = 5–6 GB nécessaire.',
+              '<strong>Confondre taille modèle avec VRAM.</strong> 70B = 70 milliards paramètres, pas 70 GB VRAM.',
+              '<strong>Ignorer overhead système.</strong> Modèles ne reçoivent pas 100% VRAM GPU. Réserver 1–2 GB pour OS.',
+              '<strong>Acheter GPU à taille calculée.</strong> Toujours acheter 25% plus. Besoin calculé 18 GB = acheter 24 GB GPU.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Déploiement Régional',
+            items: [
+              '<strong>Union Européenne (RGPD) :</strong> Inférence locale assure conformité résidence données. On-premises garde données utilisateur en pays.',
+              '<strong>Japon (APPI) :</strong> Loi Protection données requiert gestion minutieuse. LLM on-device réduit transfert données hors Japon.',
+              '<strong>Chine (Loi Sécurité Données) :</strong> Loi 2021 impose résidence données en Chine. LLM local sur serveurs locaux (Alibaba, Tencent) conforme.',
+              '<strong>Confidentialité mondiale :</strong> Inférence locale offre meilleures garanties confidentialité que APIs cloud. Ce calculateur aide concevoir systèmes AI conformes, respectueux données.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions Fréquentes',
+            faqs: [
+              { q: 'Formule fonctionne pour tous modèles?', a: 'Oui, modèles Transformer (Llama, Qwen, Mistral etc). Architectures non-Transformer rares, peuvent nécessiter ajustement.' },
+              { q: 'Quelle quantification choisir?', a: 'Q5 meilleur compromis (95% qualité, 68% plus petit). Q4 standard GPUs consumer. Q8 production si VRAM permet (99% qualité).' },
+              { q: 'Combien RAM système nécessaire?', a: 'Minimum 16 GB offloading. Batch-processing ajouter 8–16 GB. Chat single-user = 16 GB suffisant.' },
+              { q: 'Taille batch affecte VRAM?', a: 'Oui. Formule calcule single-request. Batch-size additionne linéaire: ~500 MB–2 GB par requête. Batch=4 ajoute 2–8 GB.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Essayer PromptQuorum Gratuitement',
+            body: 'Utilisez notre outil multi-modèle dispatch IA pour exécuter LLMs locaux optimisés à grande échelle, avec fallback automatique et features consensus.',
+            cta: 'Essai Gratuit',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'ローカルLLM向けVRAMカリキュレーター',
+        slides: [
+          {
+            type: 'title',
+            h1: 'ローカルLLM向け\nVRAMカリキュレーター',
+            subtitle: 'GPU要件の正確な計算：（モデルサイズ × 量子化ビット数）÷ 8 = 必要VRAM。2026年4月現在、この計算式は高価なハードウェアミスを防ぎます。',
+            link: 'https://www.promptquorum.com/local-llms/vram-calculator-local-llm?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: '重要ポイント',
+            items: [
+              'VRAM = (モデルサイズ × 量子化ビット数) ÷ 8',
+              'FP16 = 16ビット、Q8 = 8、Q5 = 5、Q4 = 4ビット',
+              '例：13Bモデル Q4 = (13 × 4) ÷ 8 = 6.5 GB',
+              'コンテキスト、システムオーバーヘッド、安全マージンのために25%のバッファを常に追加',
+              '2026年4月現在、この計算式は±10%の精度'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GPU別クイック情報',
+            items: [
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、70B オフロード対応',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、32B Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB、余裕は少なめ)',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 (26 GB)、70Bは不可能',
+              '<strong>原則:</strong> コンテキスト、バッチ処理、システムオーバーヘッド用に25–40%の追加VRAM予算'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '計算式の説明',
+            line1: '<strong>一文で：</strong> 必要VRAM（GB）= モデルパラメータ（十億） × 量子化ビット数 ÷ 8',
+            line2: '<strong>簡単に：</strong> VRAMは本棚のようなもの。大きい本（大きいモデル）はより多くスペース必要。小さい本（Q4量子化）は大きい本（FP16）より省スペース。',
+            tip: '計算式は必要な「棚」（GB）の数を正確に示します。常に会話や追加要求用の余分なスペースを残してください。'
+          },
+          {
+            type: 'list',
+            h2: 'VRAM計算式',
+            items: [
+              'VRAM (GB) = (モデルサイズ（十億） × 量子化ビット数) ÷ 8',
+              '<strong>例1:</strong> 7Bモデル 4ビット量子化：(7 × 4) ÷ 8 = 3.5 GB',
+              '<strong>例2:</strong> 13Bモデル 5ビット量子化：(13 × 5) ÷ 8 = 8.125 GB',
+              '<strong>例3:</strong> 70Bモデル 8ビット量子化：(70 × 8) ÷ 8 = 70 GB',
+              '💡 <strong>Pro Tip:</strong> この計算式はモデルの重みのみを計算します。実際のVRAM使用量はコンテキストとバッチ処理により25–40%高くなります。常に安全マージンを追加してください。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '量子化レベル',
+            columns: ['量子化', 'ビット', '品質', '用途'],
+            rows: [
+              { '量子化': 'FP16 (完全)', 'ビット': '16', '品質': '100% (完全)', '用途': '研究、ファイン-チューニング' },
+              { '量子化': 'Q8 (8-ビット)', 'ビット': '8', '品質': '99% (知覚不可)', '用途': '本番環境、サーバー' },
+              { '量子化': 'Q5 (5-ビット)', 'ビット': '5', '品質': '95% (軽微な低下)', '用途': 'バランス型' },
+              { '量子化': 'Q4 (4-ビット)', 'ビット': '4', '品質': '90–95% (許容範囲)', '用途': '最大圧縮' },
+              { '量子化': 'Q3 (3-ビット)', 'ビット': '3', '品質': '80–85% (認識可能)', '用途': '極端な圧縮' },
+              { '量子化': 'Q2 (2-ビット)', 'ビット': '2', '品質': '70% (目に見える低下)', '用途': '小規模モデルのみ' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'クイック参考：モデル別VRAM',
+            columns: ['モデルサイズ', 'FP16', 'Q8', 'Q5', 'Q4'],
+            rows: [
+              { 'モデルサイズ': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1.9 GB', 'Q4': '1.5 GB' },
+              { 'モデルサイズ': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
+              { 'モデルサイズ': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8.1 GB', 'Q4': '6.5 GB' },
+              { 'モデルサイズ': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+              { 'モデルサイズ': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43.75 GB', 'Q4': '35 GB' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '実世界のGPUシナリオ',
+            items: [
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3.5 GB ✓ (充分な余裕)。Llama 3.1 13B Q5 = 8.1 GB ✓ (タイトですが動作)。',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43.75 GB ✗ (大きすぎる)。Llama 3.1 70B Q4 オフロード = 動作（遅い、3–5 tok/sec）。',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (動作)。Llama 3.1 70B = 不可能（~70%の品質低下）。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '隠れたVRAMオーバーヘッド',
+            items: [
+              '<strong>コンテキストウィンドウ：</strong> Key-Valueキャッシュが会話履歴を保存。4k-トークンコンテキストは7Bモデルで~2–3 GB。',
+              '<strong>バッチ処理：</strong> 各同時リクエスト（バッチ=4）は500 MB–2 GB追加。バッチ=4の場合、シングルリクエストVRAMを4倍にしてください。',
+              '<strong>システムオーバーヘッド：</strong> OSと推論エンジン（Ollama、vLLM）は500 MB–1 GB予約。常に安全マージンを維持。',
+              '📌 <strong>重要ポイント：</strong> 計算式はモデル重みのみ。実際の使用では計算値から25–40%追加予算必要。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '計算式の精度',
+            items: [
+              '<strong>±10%の精度。</strong> 実際のVRAMは実装、モデルアーキテクチャ、エンジン最適化により変動。',
+              '<strong>変動原因：</strong> 異なる量子化フォーマット（GGUF vs SafeTensors vs AWQ）、モデルアーキテクチャ（Transformer vs その他）、エンジン最適化（vLLM、llama.cpp、Ollama）。',
+              '<strong>保守的推定：</strong> 2026年4月現在、計算式を保守的な推定として扱う。GPU購入時には常に25%の安全マージンを追加。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'VRAMの一般的なミス',
+            items: [
+              '<strong>コンテキストオーバーヘッドを忘れる。</strong> 7B Q4 = 3.5 GBだが、4kコンテキストで5–6 GB必要。',
+              '<strong>モデルサイズとVRAMを混同。</strong> 70B = 70十億パラメータ、70 GB VRAMではない。',
+              '<strong>システムオーバーヘッドを考慮しない。</strong> モデルは100% GPU VRAMを取得しない。OS用に1–2 GB予約。',
+              '<strong>計算値とちょうどのGPUを購入。</strong> 常に25%多く購入。計算が18 GBなら24 GB GPUを購入。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '地域別デプロイ',
+            items: [
+              '<strong>欧州連合（GDPR）：</strong> ローカル推論はデータ管轄権コンプライアンスを保証。オンプレミス実行でユーザーデータが国内に留まる。',
+              '<strong>日本（APPI）：</strong> 個人情報保護方針は慎重な取扱いが必要。オンデバイスLLM推論はデータ国外移転を削減。',
+              '<strong>中国（データセキュリティ法）：</strong> 2021年法律は中国国内データ管轄を義務付け。国内サーバー（Alibaba、Tencent）でのローカルLLMはコンプライアント。',
+              '<strong>グローバルプライバシー：</strong> ローカル推論はクラウドAPIより強いデータプライバシー保証を提供。このカリキュレーターはコンプライアント、プライバシー尊重のAIシステム設計を支援。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              { q: 'すべてのモデルで計算式は機能しますか？', a: 'はい、Transformerモデル（Llama、Qwen、Mistralなど）。非Transformerアーキテクチャは稀で調整が必要な場合があります。' },
+              { q: '使用する量子化はどれですか？', a: 'Q5が最高のバランス（95%品質、68%削減）。Q4がConsumerGPU標準。Q8は本番環境（99%品質、VRAMあれば）。' },
+              { q: 'システムRAMはどのくらい必要？', a: 'オフロード用最小16 GB。バッチ処理は8–16 GB追加。シングルユーザーチャットは16 GB十分。' },
+              { q: 'バッチサイズはVRAMに影響？', a: 'はい。計算式はシングルリクエストVRAM。バッチサイズは線形加算：リクエスト当たり~500 MB–2 GB。バッチ=4は+2–8 GB。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'PromptQuorum無料試用',
+            body: '多モデルAIプロンプトディスパッチツールで最適化ローカルLLMをスケール実行、自動フォールバックとコンセンサス機能付き。',
+            cta: '無料試用開始',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '本地LLM VRAM计算器',
+        slides: [
+          {
+            type: 'title',
+            h1: '本地LLM\nVRAM计算器',
+            subtitle: '使用公式计算精确的GPU需求：（模型大小 × 量化位数）÷ 8 = 需要的VRAM。2026年4月至今，此公式可防止昂贵的硬件错误。',
+            link: 'https://www.promptquorum.com/local-llms/vram-calculator-local-llm?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              'VRAM = （模型大小 × 量化位数）÷ 8',
+              'FP16 = 16位、Q8 = 8位、Q5 = 5位、Q4 = 4位',
+              '示例：13B模型 Q4 = （13 × 4）÷ 8 = 6.5 GB',
+              '始终为上下文、系统开销和安全余量添加25%的缓冲区',
+              '截至2026年4月，此公式精度在±10%以内'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '按GPU快速信息',
+            items: [
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、70B带卸载支持',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、32B Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB，余量紧张)',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 (26 GB)、70B无法运行',
+              '<strong>经验法则：</strong> 始终为上下文、批处理和系统开销预留25–40%的额外VRAM'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '公式说明',
+            line1: '<strong>一句话：</strong> 所需VRAM（GB）= 模型参数（十亿） × 量化位数 ÷ 8',
+            line2: '<strong>简单说：</strong> VRAM像书架。更大的书（更大的模型）占用更多空间。较小的书（Q4量化）占用比大书（FP16）更少空间。',
+            tip: '公式告诉您确切需要多少个"书架"（GB）。始终为对话和额外请求留出额外空间。'
+          },
+          {
+            type: 'list',
+            h2: 'VRAM计算公式',
+            items: [
+              'VRAM (GB) = （模型大小十亿 × 量化位数） ÷ 8',
+              '<strong>示例1：</strong> 7B模型4位量化：(7 × 4) ÷ 8 = 3.5 GB',
+              '<strong>示例2：</strong> 13B模型5位量化：(13 × 5) ÷ 8 = 8.125 GB',
+              '<strong>示例3：</strong> 70B模型8位量化：(70 × 8) ÷ 8 = 70 GB',
+              '💡 <strong>提示：</strong> 此公式仅计算模型权重。实际VRAM使用量因上下文和批处理而高25–40%。始终添加安全余量。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '量化级别',
+            columns: ['量化', '位数', '质量', '用途'],
+            rows: [
+              { '量化': 'FP16 (全)', '位数': '16', '质量': '100% (完美)', '用途': '研究、微调' },
+              { '量化': 'Q8 (8位)', '位数': '8', '质量': '99% (无感知差异)', '用途': '生产、服务器' },
+              { '量化': 'Q5 (5位)', '位数': '5', '质量': '95% (轻微损失)', '用途': '良好平衡' },
+              { '量化': 'Q4 (4位)', '位数': '4', '质量': '90–95% (可接受)', '用途': '最大压缩' },
+              { '量化': 'Q3 (3位)', '位数': '3', '质量': '80–85% (明显损失)', '用途': '极端压缩' },
+              { '量化': 'Q2 (2位)', '位数': '2', '质量': '70% (明显损失)', '用途': '仅限小模型' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: '快速参考：按模型和量化的VRAM',
+            columns: ['模型大小', 'FP16', 'Q8', 'Q5', 'Q4'],
+            rows: [
+              { '模型大小': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1.9 GB', 'Q4': '1.5 GB' },
+              { '模型大小': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
+              { '模型大小': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8.1 GB', 'Q4': '6.5 GB' },
+              { '模型大小': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+              { '模型大小': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43.75 GB', 'Q4': '35 GB' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '实际GPU场景',
+            items: [
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3.5 GB ✓ (余量充足)。Llama 3.1 13B Q5 = 8.1 GB ✓ (余量紧张但可用)。',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43.75 GB ✗ (过大)。Llama 3.1 70B Q4卸载 = 可用（缓慢，3–5 tok/sec）。',
+              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (可用)。Llama 3.1 70B = 不可能（~70%质量丧失）。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '隐藏的VRAM开销',
+            items: [
+              '<strong>上下文窗口：</strong> Key-Value缓存存储对话历史。4k令牌上下文对7B模型约为~2–3 GB。',
+              '<strong>批处理：</strong> 每个并发请求（batch=4）增加500 MB–2 GB。如果运行batch=4，将单请求VRAM乘以4。',
+              '<strong>系统开销：</strong> 操作系统和推理引擎（Ollama、vLLM）保留500 MB–1 GB。始终保持安全余量。',
+              '📌 <strong>关键点：</strong> 公式仅计算模型权重。实际使用需要额外预留25–40%。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '公式精度',
+            items: [
+              '<strong>精度在±10%以内。</strong> 实际VRAM根据实现、模型架构和引擎优化而异。',
+              '<strong>变化来源：</strong> 不同量化格式（GGUF vs SafeTensors vs AWQ）、模型架构（Transformer vs其他）、引擎优化（vLLM、llama.cpp、Ollama）。',
+              '<strong>保守估计：</strong> 截至2026年4月，将公式视为保守估计。购买GPU时始终增加25%安全余量。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'VRAM常见错误',
+            items: [
+              '<strong>忽视上下文开销。</strong> 7B Q4 = 3.5 GB，但4k上下文需要5–6 GB。',
+              '<strong>混淆模型大小和VRAM。</strong> 70B表示70十亿参数，不是70 GB VRAM。',
+              '<strong>不计入系统开销。</strong> 模型不会获得全部GPU VRAM。为OS预留1–2 GB。',
+              '<strong>购买刚好足够的GPU。</strong> 始终购买25%以上。计算需要18 GB = 购买24 GB GPU。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '区域部署考虑',
+            items: [
+              '<strong>欧盟（GDPR）：</strong> 本地推理保证数据驻留合规性。在本地运行模型保护用户数据留在国内。',
+              '<strong>日本（APPI）：</strong> 个人信息保护法需要谨慎处理。设备上的LLM推理减少数据出国转移。',
+              '<strong>中国（数据安全法）：</strong> 2021年法律要求数据驻留中国境内。在国内服务器（阿里云、腾讯云）上运行本地LLM符合规定。',
+              '<strong>全球隐私：</strong> 本地推理提供比云API更强的数据隐私保证。本计算器帮助设计合规、隐私友好的AI系统。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              { q: '公式适用于所有模型吗？', a: '是的，适用于基于Transformer的模型（Llama、Qwen、Mistral等）。非Transformer架构很少见，可能需要调整。' },
+              { q: '应使用哪种量化？', a: 'Q5最好平衡（95%质量、68%更小）。Q4是Consumer GPU标准。如果VRAM允许，Q8用于生产（99%质量）。' },
+              { q: '需要多少系统RAM？', a: '卸载最少16 GB。批处理增加8–16 GB。单用户聊天16 GB足够。' },
+              { q: '批大小影响VRAM吗？', a: '是的。公式计算单请求VRAM。批大小线性增加：每个并发请求约~500 MB–2 GB。Batch=4增加2–8 GB。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '免费试用PromptQuorum',
+            body: '使用我们的多模型AI提示分发工具大规模运行优化的本地LLMs，具有自动故障转移和共识功能。',
+            cta: '免费开始',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const lang = window.currentLang || 'en';
+      const articleUrl = 'https://www.promptquorum.com/local-llms/vram-calculator-local-llm?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: #6750a4; text-decoration: none;">View Article →</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p style="font-style: italic; margin-bottom: 20px;">${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.2em; margin-top: 20px;">';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table style="margin-top: 20px;"><tr>';
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col] || ''}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 40px; font-size: 1.3em;">${slide.line1}</p>
+            <p style="font-size: 1.3em; margin-bottom: 30px;">${slide.line2}</p>
+            <p style="font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ol style="font-size: 1.1em; margin-top: 20px; text-align: left; max-width: 640px; margin-left: auto; margin-right: auto;">';
+          slide.items.forEach(item => {
+            html += `<li style="margin-bottom: 12px;">${item}</li>`;
+          });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<div style="text-align: left; max-width: 600px; margin: 20px auto;">';
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; margin-bottom: 0;">A: ${faq.a}</p></div>`;
+          });
+          html += '</div>';
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 20px; font-size: 1.1em;">${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 28px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    window.currentLang = lang;
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += `?lang=${lang}`;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', () => {
+        window.print();
+      });
+    }
+
+    showSlide(0);
+    </script>
+</body>
+</html>
