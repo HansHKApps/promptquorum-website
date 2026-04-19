@@ -81,9 +81,9 @@ const GPUS: GPU[] = [
   { name: 'RTX 4070 Ti', vram: 12, price: 700 },
   { name: 'RTX 4080', vram: 16, price: 1200 },
   { name: 'RTX 4090', vram: 24, price: 1800 },
-  { name: 'Mac mini M4', vram: 16, price: 0 },
+  { name: 'Mac mini M4 (16 GB)', vram: 16, price: 0 },
   { name: 'MacBook Pro (24 GB)', vram: 24, price: 0 },
-  { name: 'M3 Max', vram: 36, price: 0 },
+  { name: 'M3 Max (36 GB)', vram: 36, price: 0 },
 ];
 
 const MODEL_SIZES: { [key: string]: number } = {
@@ -155,6 +155,14 @@ export function VramCalculator() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setActiveTooltip(null);
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   const calculations = useMemo(() => {
     const modelBillions = MODEL_SIZES[modelSize] || 13;
     const quantBits = QUANT_BITS[quantization] || 4;
@@ -193,7 +201,10 @@ export function VramCalculator() {
       <label className="text-sm font-semibold text-slate-700">{name}</label>
       <button
         type="button"
-        onClick={() => setActiveTooltip(activeTooltip === tooltipKey ? null : tooltipKey)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setActiveTooltip(activeTooltip === tooltipKey ? null : tooltipKey);
+        }}
         className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-600 hover:text-slate-700 text-xs font-bold cursor-help transition-colors"
         title="Click for more info"
       >
