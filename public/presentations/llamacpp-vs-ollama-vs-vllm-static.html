@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>llama.cpp vs Ollama vs vLLM 2026 | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation comparing llama.cpp, Ollama, and vLLM local inference backends. Learn speed benchmarks, features, and when to use each." />
+    <meta property="og:title" content="llama.cpp vs Ollama vs vLLM 2026 — PromptQuorum" />
+    <meta property="og:description" content="Compare llama.cpp vs Ollama vs vLLM: speed benchmarks, features, batching, API compatibility, setup complexity. Interactive 14-slide presentation." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        .slide code {
+            background: #f0eff5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(11px, 1.2vw, 14px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm";
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">llama.cpp vs Ollama vs vLLM</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container"></div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'llama.cpp vs Ollama vs vLLM: Which Inference Backend?',
+                slides: [
+                    { type: 'title', h1: 'llama.cpp vs Ollama vs vLLM: Which Inference Backend?', subtitle: 'llama.cpp fastest per-token (36 tok/s) · Ollama simplest · vLLM best for batching (250+ tok/s). April 2026.', link: 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm' },
+                    { type: 'list', h2: 'Key Takeaways', items: ['<strong>llama.cpp:</strong> Fastest single-token (36 tok/s, 27ms). Minimal dependencies. Best for custom inference.', '<strong>Ollama:</strong> Easiest setup (5 min). One command. 5–10% slower than llama.cpp — negligible for chat.', '<strong>vLLM:</strong> Highest throughput for batched requests (250+ tok/s). Best for production API servers.', 'Single-user chat: llama.cpp or Ollama (nearly identical speed).', 'Multi-user API server: vLLM (3–5× higher throughput with batching).', 'All three produce <strong>identical model outputs</strong> — only speed and features differ.', 'Can run all three simultaneously on different ports — they don\'t conflict.'] },
+                    { type: 'table', h2: 'Speed Benchmarks — RTX 4090, Llama 3 70B Q4', intro: 'Benchmarked on single request (batch=1), April 2026. vLLM batching advantage shown next slide.', columns: ['Backend', 'Tokens/sec', 'ms/token', 'Memory'], rows: [{ Backend: 'llama.cpp (main)', 'Tokens/sec': '36', 'ms/token': '27', Memory: '24 GB' }, { Backend: 'Ollama (native)', 'Tokens/sec': '34', 'ms/token': '29', Memory: '24.5 GB' }, { Backend: 'vLLM (OpenAI API)', 'Tokens/sec': '32', 'ms/token': '31', Memory: '25 GB' }] },
+                    { type: 'comparison', h2: 'Single Request vs. Batch Throughput', line1: 'Single request: llama.cpp 36 tok/s | Ollama 34 tok/s | vLLM 32 tok/s', line2: '10 concurrent requests: <strong>vLLM 250+ tok/s</strong> (7× higher than Ollama)', tip: 'vLLM\'s advantage is batching — irrelevant for single-user interactive chat.' },
+                    { type: 'table', h2: 'Feature Comparison (Key Features)', columns: ['Feature', 'llama.cpp', 'Ollama', 'vLLM'], rows: [{ Feature: 'Installation', llama: 'Compile from source', ollama: 'One binary', vllm: 'pip install' }, { Feature: 'OpenAI API compat', llama: 'No (custom)', ollama: '✓', vllm: '✓ (native)' }, { Feature: 'Batch processing', llama: 'No', ollama: 'Single only', vllm: '✓ (32+ parallel)' }, { Feature: 'Multi-GPU', llama: 'Experimental', ollama: '✓', vllm: '✓ (tensor)' }, { Feature: 'Quantization', llama: '✓ (best)', ollama: '✓ (good)', vllm: 'Limited' }, { Feature: 'Model management', llama: 'Manual .gguf', ollama: 'Auto-downloads', vllm: 'HuggingFace' }] },
+                    { type: 'list', h2: 'Setup Time Comparison', items: ['<strong>Ollama — 5 min:</strong> <code>brew install ollama</code> → <code>ollama run mistral</code>. Done.', '<strong>vLLM — 15 min:</strong> <code>pip install vllm</code> → <code>python -m vllm.entrypoints.openai.api_server</code>.', '<strong>llama.cpp — 30 min:</strong> Compile from source. Manual model file management.', 'Winner for most users: <strong>Ollama</strong>'] },
+                    { type: 'list', h2: 'API Compatibility', items: ['<strong>llama.cpp:</strong> Custom REST API — not OpenAI-compatible. Requires custom client code.', '<strong>Ollama:</strong> OpenAI-compatible via <code>ollama serve</code>. Works with VS Code, Cursor extensions.', '<strong>vLLM:</strong> OpenAI-compatible natively at <code>/v1/chat/completions</code>. Best compatibility.', 'For IDE plugins (VS Code, Cursor): use <strong>Ollama or vLLM</strong> — skip llama.cpp.'] },
+                    { type: 'list', h2: 'When to Use Each Backend?', items: ['<strong>llama.cpp:</strong> Custom inference engine, minimal dependencies, raw speed priority.', '<strong>Ollama:</strong> Personal chat, developer experimentation, simplest workflow.', '<strong>vLLM:</strong> Production API server, multi-user deployments, high-throughput requirements.', 'You can run all three simultaneously on different ports — they don\'t conflict.'] },
+                    { type: 'list', h2: 'vLLM Batching: The Critical Difference', items: ['<strong>llama.cpp:</strong> No native batching. Queues requests. Throughput: 36 tok/s.', '<strong>Ollama:</strong> Single-batch only. Cannot process 2+ requests in parallel. Throughput: 34 tok/s.', '<strong>vLLM:</strong> Native batching (batch=32 default). 32 requests processed concurrently. Throughput: 250+ tok/s.', 'For API servers with 10+ concurrent users: <strong>vLLM is the only viable choice.</strong>'] },
+                    { type: 'numbered', h2: '4 Common Backend Selection Mistakes', items: ['<strong>Assuming llama.cpp is always fastest.</strong> True only for single-token. vLLM is 7× faster at 10+ concurrent requests.', '<strong>Dismissing Ollama as slow.</strong> 5–10% slower than llama.cpp — negligible where 34 tok/s feels instant.', '<strong>Thinking you must pick one.</strong> Run all three on different ports. Ollama for chat, vLLM for your API.', '<strong>Using vLLM for single-user chat.</strong> Its advantage is batching. Ollama is simpler and sufficient for 1 user.'] },
+                    { type: 'numbered', h2: 'Quick Start: Running in 5 Minutes', items: ['Decide your use case: personal chat → Ollama; API server → vLLM; custom build → llama.cpp.', 'Install: <code>brew install ollama</code> (macOS) or <code>pip install vllm</code>.', 'Download a model: <code>ollama pull llama3</code> or via HuggingFace for vLLM.', 'Test the API: <code>curl http://localhost:11434/v1/chat/completions</code>.', 'Optional: Add OpenWebUI as a frontend for any backend.'] },
+                    { type: 'faq', h2: 'Frequently Asked Questions', faqs: [{ q: 'Which should I use as a beginner?', a: 'Ollama. One command installs it, models download automatically, clean interface. The performance difference vs llama.cpp is under 5%.' }, { q: 'Which of llama.cpp, Ollama, or vLLM is fastest?', a: 'Single request: llama.cpp (~3% faster than Ollama). 10 concurrent requests: vLLM (~7× faster due to native batching).' }, { q: 'Can I use llama.cpp instead of Ollama?', a: 'Yes. Setup requires compiling from source. Speed gain is 3–5% — negligible for most users. Ollama is the better default.' }] },
+                    { type: 'faq', h2: 'FAQ (continued)', faqs: [{ q: 'Is vLLM production-ready?', a: 'Yes. Used in real production deployments. Steeper learning curve but worth it for high-throughput API serving with 10+ concurrent users.' }, { q: 'Can I switch backends without retraining?', a: 'Yes. All three use GGUF model format. Convert once, run on any backend. Outputs are identical — only speed and throughput differ.' }, { q: 'Which backend is most stable?', a: 'Ollama (simple architecture, fewer deps). llama.cpp is stable too. vLLM updates frequently with new features — occasional breaking changes.' }] },
+                    { type: 'cta', h2: 'Compare LLM Backends Side-by-Side with PromptQuorum', body: 'PromptQuorum dispatches your prompt to multiple models and backends in parallel — compare responses from llama.cpp, Ollama, and vLLM simultaneously.', cta: 'Try PromptQuorum Free', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            de: {
+                title: 'llama.cpp vs Ollama vs vLLM: Welches Inference-Backend?',
+                slides: [
+                    { type: 'title', h1: 'llama.cpp vs Ollama vs vLLM: Welches Inference-Backend?', subtitle: 'llama.cpp schnellstes Token (36 tok/s) · Ollama einfachste Installation · vLLM beste Batch-Verarbeitung (250+ tok/s). April 2026.', link: 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de' },
+                    { type: 'list', h2: 'Wichtigste Erkenntnisse', items: ['<strong>llama.cpp:</strong> Schnellstes einzelnes Token (36 tok/s, 27ms). Minimale Abhängigkeiten. Beste für benutzerdefinierte Inferenz.', '<strong>Ollama:</strong> Einfachste Installation (5 Min). Ein Befehl. 5–10 % langsamer als llama.cpp — vernachlässigbar für Chat.', '<strong>vLLM:</strong> Höchster Durchsatz bei Batch-Anfragen (250+ tok/s). Beste für Production API-Server.', 'Single-User-Chat: llama.cpp oder Ollama (fast identische Geschwindigkeit).', 'Multi-User API Server: vLLM (3–5× höherer Durchsatz mit Batch-Verarbeitung).', 'Alle drei erzeugen <strong>identische Modell-Ausgaben</strong> — nur Geschwindigkeit und Funktionen unterscheiden sich.', 'Sie können alle drei gleichzeitig auf verschiedenen Ports ausführen — sie konfligieren nicht.'] },
+                    { type: 'table', h2: 'Geschwindigkeitsvergleich — RTX 4090, Llama 3 70B Q4', intro: 'Gemessen auf einzelne Anfrage (batch=1), April 2026. vLLM Batch-Vorteil nächste Folie.', columns: ['Backend', 'Token/sek', 'ms/Token', 'Speicher'], rows: [{ Backend: 'llama.cpp (main)', 'Token/sek': '36', 'ms/Token': '27', Speicher: '24 GB' }, { Backend: 'Ollama (native)', 'Token/sek': '34', 'ms/Token': '29', Speicher: '24,5 GB' }, { Backend: 'vLLM (OpenAI API)', 'Token/sek': '32', 'ms/Token': '31', Speicher: '25 GB' }] },
+                    { type: 'comparison', h2: 'Einzel- vs. Batch-Durchsatz', line1: 'Einzelne Anfrage: llama.cpp 36 tok/s | Ollama 34 tok/s | vLLM 32 tok/s', line2: '10 gleichzeitige Anfragen: <strong>vLLM 250+ tok/s</strong> (7× höher als Ollama)', tip: 'vLLMs Vorteil ist die Batch-Verarbeitung — für Single-User-Chat irrelevant.' },
+                    { type: 'table', h2: 'Feature-Vergleich (Schlüsselfunktionen)', columns: ['Feature', 'llama.cpp', 'Ollama', 'vLLM'], rows: [{ Feature: 'Installation', llama: 'Kompilieren aus Quelle', ollama: 'Ein Binary', vllm: 'pip install' }, { Feature: 'OpenAI API-Kompatibilität', llama: 'Nein (benutzerdefiniert)', ollama: '✓', vllm: '✓ (nativ)' }, { Feature: 'Batch-Verarbeitung', llama: 'Nein', ollama: 'Nur Single', vllm: '✓ (32+ parallel)' }, { Feature: 'Multi-GPU', llama: 'Experimentell', ollama: '✓', vllm: '✓ (tensor)' }, { Feature: 'Quantisierung', llama: '✓ (beste)', ollama: '✓ (gut)', vllm: 'Begrenzt' }, { Feature: 'Modellverwaltung', llama: 'Manuell .gguf', ollama: 'Auto-Downloads', vllm: 'HuggingFace' }] },
+                    { type: 'list', h2: 'Setup-Zeitvergleich', items: ['<strong>Ollama — 5 Min:</strong> <code>brew install ollama</code> → <code>ollama run mistral</code>. Fertig.', '<strong>vLLM — 15 Min:</strong> <code>pip install vllm</code> → <code>python -m vllm.entrypoints.openai.api_server</code>.', '<strong>llama.cpp — 30 Min:</strong> Kompilieren aus Quelle. Manuelle Modellverwaltung.', 'Gewinner für die meisten Benutzer: <strong>Ollama</strong>'] },
+                    { type: 'list', h2: 'API-Kompatibilität', items: ['<strong>llama.cpp:</strong> Benutzerdefinierte REST-API — nicht OpenAI-kompatibel. Erfordert benutzerdefinierten Client-Code.', '<strong>Ollama:</strong> OpenAI-kompatibel via <code>ollama serve</code>. Funktioniert mit VS Code, Cursor-Erweiterungen.', '<strong>vLLM:</strong> OpenAI-kompatibel nativ bei <code>/v1/chat/completions</code>. Beste Kompatibilität.', 'Für IDE-Plugins (VS Code, Cursor): verwenden Sie <strong>Ollama oder vLLM</strong> — überspringen Sie llama.cpp.'] },
+                    { type: 'list', h2: 'Wann welches Backend verwenden?', items: ['<strong>llama.cpp:</strong> Benutzerdefinierte Inference-Engine, minimale Abhängigkeiten, Rohgeschwindigkeit Priorität.', '<strong>Ollama:</strong> Persönlicher Chat, Entwickler-Experimente, einfachster Workflow.', '<strong>vLLM:</strong> Production API Server, Multi-User-Bereitstellungen, Anforderungen mit hohem Durchsatz.', 'Sie können alle drei gleichzeitig auf verschiedenen Ports ausführen — sie konfligieren nicht.'] },
+                    { type: 'list', h2: 'vLLM Batching: Der entscheidende Unterschied', items: ['<strong>llama.cpp:</strong> Keine native Batch-Verarbeitung. Warteschlangen-Anfragen. Durchsatz: 36 tok/s.', '<strong>Ollama:</strong> Nur Single-Batch. Kann 2+ Anfragen nicht parallel verarbeiten. Durchsatz: 34 tok/s.', '<strong>vLLM:</strong> Native Batch-Verarbeitung (batch=32 Standard). 32 Anfragen gleichzeitig verarbeitet. Durchsatz: 250+ tok/s.', 'Für API-Server mit 10+ gleichzeitigen Benutzern: <strong>vLLM ist die einzige praktikable Wahl.</strong>'] },
+                    { type: 'numbered', h2: '4 häufige Backend-Auswahlfehler', items: ['<strong>Annahme, llama.cpp ist immer schneller.</strong> Stimmt nur für einzelnes Token. vLLM ist 7× schneller bei 10+ gleichzeitigen Anfragen.', '<strong>Ollama als langsam ablehnen.</strong> 5–10 % langsamer als llama.cpp — vernachlässigbar wobei 34 tok/s sich sofort anfühlt.', '<strong>Denken, Sie müssen einen auswählen.</strong> Führen Sie alle drei auf verschiedenen Ports aus. Ollama für Chat, vLLM für Ihre API.', '<strong>vLLM für Single-User-Chat verwenden.</strong> Sein Vorteil ist Batch-Verarbeitung. Ollama ist einfacher und ausreichend für 1 Benutzer.'] },
+                    { type: 'numbered', h2: 'Schnellstart: In 5 Minuten starten', items: ['Entscheiden Sie Ihren Use Case: persönlicher Chat → Ollama; API Server → vLLM; benutzerdefinierter Build → llama.cpp.', 'Installieren Sie: <code>brew install ollama</code> (macOS) oder <code>pip install vllm</code>.', 'Laden Sie ein Modell herunter: <code>ollama pull llama3</code> oder via HuggingFace für vLLM.', 'Testen Sie die API: <code>curl http://localhost:11434/v1/chat/completions</code>.', 'Optional: Fügen Sie OpenWebUI als Frontend für jedes Backend hinzu.'] },
+                    { type: 'faq', h2: 'Häufige Fragen', faqs: [{ q: 'Was sollte ich als Anfänger verwenden?', a: 'Ollama. Ein Befehl installiert es, Modelle werden automatisch heruntergeladen, saubere Benutzeroberfläche. Der Leistungsunterschied zu llama.cpp beträgt unter 5 %.', }, { q: 'Welches von llama.cpp, Ollama oder vLLM ist am schnellsten?', a: 'Einzelne Anfrage: llama.cpp (~3 % schneller als Ollama). 10 gleichzeitige Anfragen: vLLM (~7× schneller aufgrund nativer Batch-Verarbeitung).' }, { q: 'Kann ich llama.cpp anstelle von Ollama verwenden?', a: 'Ja. Das Setup erfordert das Kompilieren aus der Quelle. Der Geschwindigkeitszuwachs beträgt 3–5 % — für die meisten Benutzer vernachlässigbar. Ollama ist der bessere Standard.' }] },
+                    { type: 'faq', h2: 'FAQ (Fortsetzung)', faqs: [{ q: 'Ist vLLM produktionsreif?', a: 'Ja. Wird in echten Produktionsbereitstellungen verwendet. Steilere Lernkurve, aber wert für API-Serving mit hohem Durchsatz mit 10+ gleichzeitigen Benutzern.' }, { q: 'Kann ich Backend wechseln ohne Umschulung?', a: 'Ja. Alle drei verwenden das GGUF-Modellformat. Einmal konvertieren, auf jedem Backend ausführen. Ausgaben sind identisch — nur Geschwindigkeit und Durchsatz unterscheiden sich.' }, { q: 'Welches Backend ist am stabilsten?', a: 'Ollama (einfache Architektur, weniger Abhängigkeiten). llama.cpp ist auch stabil. vLLM wird häufig aktualisiert mit neuen Funktionen — gelegentliche Breaking Changes.' }] },
+                    { type: 'cta', h2: 'Vergleichen Sie LLM-Backends nebeneinander mit PromptQuorum', body: 'PromptQuorum sendet Ihre Eingabeaufforderung parallel an mehrere Modelle und Backends — vergleichen Sie Antworten von llama.cpp, Ollama und vLLM gleichzeitig.', cta: 'PromptQuorum kostenlos testen', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            fr: {
+                title: 'llama.cpp vs Ollama vs vLLM : Quel backend d\'inférence ?',
+                slides: [
+                    { type: 'title', h1: 'llama.cpp vs Ollama vs vLLM : Quel backend d\'inférence ?', subtitle: 'llama.cpp plus rapide par token (36 tok/s) · Ollama plus simple · vLLM meilleur pour le traitement par lots (250+ tok/s). Avril 2026.', link: 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr' },
+                    { type: 'list', h2: 'Points clés', items: ['<strong>llama.cpp :</strong> Token unique le plus rapide (36 tok/s, 27ms). Dépendances minimales. Idéal pour l\'inférence personnalisée.', '<strong>Ollama :</strong> Installation la plus simple (5 min). Une commande. 5–10 % plus lent que llama.cpp — négligeable pour le chat.', '<strong>vLLM :</strong> Débit le plus élevé pour les requêtes par lots (250+ tok/s). Idéal pour les serveurs API de production.', 'Chat monoutilisateur : llama.cpp ou Ollama (vitesse pratiquement identique).', 'Serveur API multi-utilisateurs : vLLM (débit 3–5× plus élevé avec traitement par lots).', 'Les trois produisent des <strong>résultats de modèle identiques</strong> — seuls la vitesse et les fonctionnalités diffèrent.', 'Vous pouvez exécuter les trois simultanément sur différents ports — ils ne sont pas en conflit.'] },
+                    { type: 'table', h2: 'Benchmarks de vitesse — RTX 4090, Llama 3 70B Q4', intro: 'Benchmark sur requête unique (batch=1), avril 2026. Avantage vLLM par lots sur slide suivante.', columns: ['Backend', 'Tokens/sec', 'ms/token', 'Mémoire'], rows: [{ Backend: 'llama.cpp (main)', 'Tokens/sec': '36', 'ms/token': '27', Mémoire: '24 GB' }, { Backend: 'Ollama (native)', 'Tokens/sec': '34', 'ms/token': '29', Mémoire: '24,5 GB' }, { Backend: 'vLLM (OpenAI API)', 'Tokens/sec': '32', 'ms/token': '31', Mémoire: '25 GB' }] },
+                    { type: 'comparison', h2: 'Débit : une requête vs. plusieurs', line1: 'Requête unique : llama.cpp 36 tok/s | Ollama 34 tok/s | vLLM 32 tok/s', line2: '10 requêtes concurrentes : <strong>vLLM 250+ tok/s</strong> (7× supérieur à Ollama)', tip: 'L\'avantage de vLLM est le traitement par lots — sans importance pour le chat monoutilisateur.' },
+                    { type: 'table', h2: 'Comparaison des fonctionnalités (principaux)', columns: ['Fonctionnalité', 'llama.cpp', 'Ollama', 'vLLM'], rows: [{ Fonctionnalité: 'Installation', llama: 'Compiler depuis la source', ollama: 'Un binaire', vllm: 'pip install' }, { Fonctionnalité: 'Compat. API OpenAI', llama: 'Non (personnalisé)', ollama: '✓', vllm: '✓ (natif)' }, { Fonctionnalité: 'Traitement par lots', llama: 'Non', ollama: 'Single uniquement', vllm: '✓ (32+ parallèle)' }, { Fonctionnalité: 'Multi-GPU', llama: 'Expérimental', ollama: '✓', vllm: '✓ (tensor)' }, { Fonctionnalité: 'Quantification', llama: '✓ (meilleur)', ollama: '✓ (bon)', vllm: 'Limité' }, { Fonctionnalité: 'Gestion des modèles', llama: 'Manuel .gguf', ollama: 'Téléchargements auto', vllm: 'HuggingFace' }] },
+                    { type: 'list', h2: 'Complexité d\'installation', items: ['<strong>Ollama — 5 min :</strong> <code>brew install ollama</code> → <code>ollama run mistral</code>. Fait.', '<strong>vLLM — 15 min :</strong> <code>pip install vllm</code> → <code>python -m vllm.entrypoints.openai.api_server</code>.', '<strong>llama.cpp — 30 min :</strong> Compiler depuis la source. Gestion manuelle des modèles.', 'Gagnant pour la plupart des utilisateurs : <strong>Ollama</strong>'] },
+                    { type: 'list', h2: 'Compatibilité API', items: ['<strong>llama.cpp :</strong> API REST personnalisée — non compatible OpenAI. Nécessite un code client personnalisé.', '<strong>Ollama :</strong> Compatible OpenAI via <code>ollama serve</code>. Fonctionne avec les extensions VS Code, Cursor.', '<strong>vLLM :</strong> Compatible OpenAI nativement sur <code>/v1/chat/completions</code>. Meilleure compatibilité.', 'Pour les plugins IDE (VS Code, Cursor) : utilisez <strong>Ollama ou vLLM</strong> — ignorez llama.cpp.'] },
+                    { type: 'list', h2: 'Quand utiliser chaque backend ?', items: ['<strong>llama.cpp :</strong> Moteur d\'inférence personnalisé, dépendances minimales, priorité vitesse brute.', '<strong>Ollama :</strong> Chat personnel, expérimentation développeur, flux de travail le plus simple.', '<strong>vLLM :</strong> Serveur API de production, déploiements multi-utilisateurs, exigences de débit élevé.', 'Vous pouvez exécuter les trois simultanément sur différents ports — ils ne sont pas en conflit.'] },
+                    { type: 'list', h2: 'Le traitement par lots vLLM : la différence critique', items: ['<strong>llama.cpp :</strong> Pas de traitement par lots natif. Requêtes en file d\'attente. Débit : 36 tok/s.', '<strong>Ollama :</strong> Single-batch uniquement. Impossible de traiter 2+ requêtes en parallèle. Débit : 34 tok/s.', '<strong>vLLM :</strong> Traitement par lots natif (batch=32 par défaut). 32 requêtes traitées simultanément. Débit : 250+ tok/s.', 'Pour les serveurs API avec 10+ utilisateurs concurrents : <strong>vLLM est la seule option viable.</strong>'] },
+                    { type: 'numbered', h2: '4 erreurs courantes dans le choix du backend', items: ['<strong>Supposer que llama.cpp est toujours le plus rapide.</strong> Vrai uniquement pour un token unique. vLLM est 7× plus rapide pour 10+ requêtes concurrentes.', '<strong>Rejeter Ollama comme lent.</strong> 5–10 % plus lent que llama.cpp — négligeable où 34 tok/s semble instantané.', '<strong>Penser que vous devez en choisir un.</strong> Exécutez les trois sur des ports différents. Ollama pour le chat, vLLM pour votre API.', '<strong>Utiliser vLLM pour le chat monoutilisateur.</strong> Son avantage est le traitement par lots. Ollama est plus simple et suffisant pour 1 utilisateur.'] },
+                    { type: 'numbered', h2: 'Démarrage rapide : fonctionnement en 5 minutes', items: ['Décidez votre cas d\'usage : chat personnel → Ollama ; serveur API → vLLM ; build personnalisé → llama.cpp.', 'Installez : <code>brew install ollama</code> (macOS) ou <code>pip install vllm</code>.', 'Téléchargez un modèle : <code>ollama pull llama3</code> ou via HuggingFace pour vLLM.', 'Testez l\'API : <code>curl http://localhost:11434/v1/chat/completions</code>.', 'Optionnel : ajoutez OpenWebUI comme frontend pour n\'importe quel backend.'] },
+                    { type: 'faq', h2: 'Questions fréquentes', faqs: [{ q: 'Lequel devrais-je utiliser en tant que débutant ?', a: 'Ollama. Une commande l\'installe, les modèles sont téléchargés automatiquement, interface propre. La différence de performance avec llama.cpp est inférieure à 5 %.' }, { q: 'Lequel de llama.cpp, Ollama ou vLLM est le plus rapide ?', a: 'Requête unique : llama.cpp (~3 % plus rapide qu\'Ollama). 10 requêtes concurrentes : vLLM (~7× plus rapide grâce au traitement par lots natif).' }, { q: 'Puis-je utiliser llama.cpp à la place d\'Ollama ?', a: 'Oui. Le setup nécessite une compilation depuis la source. Le gain de vitesse est de 3–5 % — négligeable pour la plupart des utilisateurs. Ollama est le meilleur par défaut.' }] },
+                    { type: 'faq', h2: 'FAQ (suite)', faqs: [{ q: 'vLLM est-il prêt pour la production ?', a: 'Oui. Utilisé dans des déploiements de production réels. Courbe d\'apprentissage plus raide, mais utile pour le serveur API haut débit avec 10+ utilisateurs concurrents.' }, { q: 'Puis-je changer de backend sans recyclage ?', a: 'Oui. Les trois utilisent le format de modèle GGUF. Convertissez une fois, exécutez sur n\'importe quel backend. Les sorties sont identiques — seule la vitesse et le débit diffèrent.' }, { q: 'Quel backend est le plus stable ?', a: 'Ollama (architecture simple, moins de dépendances). llama.cpp est également stable. vLLM est mis à jour fréquemment avec de nouvelles fonctionnalités — changements incompatibles occasionnels.' }] },
+                    { type: 'cta', h2: 'Comparez les backends LLM côte à côte avec PromptQuorum', body: 'PromptQuorum envoie votre prompt à plusieurs modèles et backends en parallèle — comparez les réponses de llama.cpp, Ollama et vLLM simultanément.', cta: 'Essayez PromptQuorum gratuitement', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            ja: {
+                title: 'llama.cpp vs Ollama vs vLLM: 推論バックエンド比較',
+                slides: [
+                    { type: 'title', h1: 'llama.cpp vs Ollama vs vLLM: 推論バックエンド比較', subtitle: 'llama.cpp最速トークン (36 tok/s) · Ollama最シンプル · vLLM最バッチ処理 (250+ tok/s)。2026年4月', link: 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja' },
+                    { type: 'list', h2: '重要ポイント', items: ['<strong>llama.cpp:</strong> 最速単一トークン (36 tok/s, 27ms)。最小限の依存関係。カスタム推論に最適。', '<strong>Ollama:</strong> 最シンプルセットアップ (5分)。1つのコマンド。llama.cpp比5–10%遅い — チャット用に無視できる。', '<strong>vLLM:</strong> バッチ要求の最高スループット (250+ tok/s)。本番API サーバーに最適。', 'シングルユーザーチャット: llama.cpp または Ollama (ほぼ同じ速度)。', 'マルチユーザーAPI サーバー: vLLM (バッチ処理で3–5倍高いスループット)。', '3つすべてが<strong>同一のモデル出力</strong>を生成 — 速度と機能のみが異なる。', '異なるポートで3つすべてを同時に実行できます — 競合しません。'] },
+                    { type: 'table', h2: '速度ベンチマーク — RTX 4090, Llama 3 70B Q4', intro: '単一要求 (batch=1) で計測、2026年4月。vLLMバッチ利点は次スライド。', columns: ['バックエンド', 'トークン/秒', 'ms/トークン', 'メモリ'], rows: [{ バックエンド: 'llama.cpp (main)', 'トークン/秒': '36', 'ms/トークン': '27', メモリ: '24 GB' }, { バックエンド: 'Ollama (native)', 'トークン/秒': '34', 'ms/トークン': '29', メモリ: '24.5 GB' }, { バックエンド: 'vLLM (OpenAI API)', 'トークン/秒': '32', 'ms/トークン': '31', メモリ: '25 GB' }] },
+                    { type: 'comparison', h2: 'シングル vs バッチスループット', line1: '単一要求: llama.cpp 36 tok/s | Ollama 34 tok/s | vLLM 32 tok/s', line2: '10並行要求: <strong>vLLM 250+ tok/s</strong> (Ollama比7倍)', tip: 'vLLMの利点はバッチ処理 — シングルユーザーチャットでは無関係。' },
+                    { type: 'table', h2: '機能比較 (主要機能)', columns: ['機能', 'llama.cpp', 'Ollama', 'vLLM'], rows: [{ 機能: 'インストール', llama: 'ソースからコンパイル', ollama: '1バイナリ', vllm: 'pip install' }, { 機能: 'OpenAI API互換', llama: 'なし (カスタム)', ollama: '✓', vllm: '✓ (ネイティブ)' }, { 機能: 'バッチ処理', llama: 'なし', ollama: 'シングルのみ', vllm: '✓ (32+並列)' }, { 機能: 'マルチGPU', llama: '実験的', ollama: '✓', vllm: '✓ (tensor)' }, { 機能: '量子化', llama: '✓ (最高)', ollama: '✓ (良い)', vllm: '限定的' }, { 機能: 'モデル管理', llama: '手動 .gguf', ollama: '自動ダウンロード', vllm: 'HuggingFace' }] },
+                    { type: 'list', h2: 'セットアップ時間比較', items: ['<strong>Ollama — 5分:</strong> <code>brew install ollama</code> → <code>ollama run mistral</code>。完了。', '<strong>vLLM — 15分:</strong> <code>pip install vllm</code> → <code>python -m vllm.entrypoints.openai.api_server</code>。', '<strong>llama.cpp — 30分:</strong> ソースからコンパイル。モデル手動管理。', 'ほとんどのユーザーの勝者: <strong>Ollama</strong>'] },
+                    { type: 'list', h2: 'API互換性', items: ['<strong>llama.cpp:</strong> カスタムREST API — OpenAI互換ではない。カスタムクライアントコード必須。', '<strong>Ollama:</strong> <code>ollama serve</code>経由でOpenAI互換。VS Code、Cursor拡張と連携。', '<strong>vLLM:</strong> <code>/v1/chat/completions</code>でOpenAI互換 (ネイティブ)。最高互換性。', 'IDEプラグイン (VS Code, Cursor): <strong>Ollama または vLLM</strong>を使用 — llama.cpp をスキップ。'] },
+                    { type: 'list', h2: '使い分けガイド', items: ['<strong>llama.cpp:</strong> カスタム推論エンジン、最小限の依存関係、生速度優先。', '<strong>Ollama:</strong> 個人チャット、開発者実験、最シンプルワークフロー。', '<strong>vLLM:</strong> 本番API サーバー、マルチユーザーデプロイ、高スループット要件。', '異なるポートで3つすべてを同時に実行可能 — 競合しません。'] },
+                    { type: 'list', h2: 'vLLMバッチ処理の重要性', items: ['<strong>llama.cpp:</strong> ネイティブバッチ処理なし。要求をキュー。スループット: 36 tok/s。', '<strong>Ollama:</strong> シングルバッチのみ。2+要求を並列処理できない。スループット: 34 tok/s。', '<strong>vLLM:</strong> ネイティブバッチ処理 (batch=32デフォルト)。32要求を同時処理。スループット: 250+ tok/s。', '10+同行ユーザーのAPIサーバー: <strong>vLLMが唯一の実現可能な選択肢。</strong>'] },
+                    { type: 'numbered', h2: '4つのよくある間違い', items: ['<strong>llama.cpp は常に最速だと想定。</strong> 単一トークンのみ真。vLLM は10+並行要求で7倍速。', '<strong>Ollama を遅いと却下。</strong> llama.cpp より5–10%遅い — 34 tok/s が瞬間的に感じる場所では無視できる。', '<strong>1つを選ぶ必要があると思う。</strong> 異なるポートで3つ実行。チャット用 Ollama、API用 vLLM。', '<strong>シングルユーザーチャット用 vLLM。</strong> 利点はバッチ処理。Ollama がシンプルで1ユーザーに十分。'] },
+                    { type: 'numbered', h2: 'クイックスタート: 5分で実行', items: ['ユースケース決定: 個人チャット → Ollama; API サーバー → vLLM; カスタムビルド → llama.cpp。', 'インストール: <code>brew install ollama</code> (macOS) または <code>pip install vllm</code>。', 'モデルダウンロード: <code>ollama pull llama3</code> または vLLM 用 HuggingFace。', 'API テスト: <code>curl http://localhost:11434/v1/chat/completions</code>。', 'オプション: 任意のバックエンド用フロントエンド OpenWebUI を追加。'] },
+                    { type: 'faq', h2: 'よくある質問', faqs: [{ q: '初心者が使うべきは？', a: 'Ollama。1コマンドインストール、モデル自動ダウンロード、クリーンUI。llama.cpp 比パフォーマンス差は5%未満。' }, { q: 'llama.cpp, Ollama, vLLM のうち最速は？', a: '単一要求: llama.cpp (~Ollama 比3%速い)。10並行要求: vLLM (~ネイティブバッチ処理で7倍速)。' }, { q: 'llama.cpp を Ollama の代わりに使える？', a: 'はい。ソースからコンパイル必須。速度ゲインは3–5% — ほとんどのユーザーに無視できる。Ollama がデフォルト。' }] },
+                    { type: 'faq', h2: 'FAQ（続き）', faqs: [{ q: 'vLLM は本番対応？', a: 'はい。実本番デプロイで使用。学習曲線が急だがハイスループット API サーバー向け (10+並行ユーザー) には価値あり。' }, { q: 'バックエンド切替は再学習必須？', a: 'いいえ。3つすべて GGUF モデル形式使用。1回変換、任意バックエンドで実行。出力同一 — 速度・スループットのみ異なる。' }, { q: '最安定バックエンドは？', a: 'Ollama (シンプル設計、少ない依存)。llama.cpp も安定。vLLM は頻更新 (新機能) — たまに破壊変更。' }] },
+                    { type: 'cta', h2: 'PromptQuorum でLLM バックエンド並べて比較', body: 'PromptQuorum はプロンプトを複数モデル・バックエンドに並列送信 — llama.cpp、Ollama、vLLM 回答を同時比較。', cta: 'PromptQuorum を無料で試す', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            zh: {
+                title: 'llama.cpp vs Ollama vs vLLM：选择哪个推理后端？',
+                slides: [
+                    { type: 'title', h1: 'llama.cpp vs Ollama vs vLLM：选择哪个推理后端？', subtitle: 'llama.cpp最快单token (36 tok/s) · Ollama最简单 · vLLM最佳批处理 (250+ tok/s)。2026年4月', link: 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh' },
+                    { type: 'list', h2: '核心要点', items: ['<strong>llama.cpp:</strong> 最快单token (36 tok/s, 27ms)。最少依赖。适合自定义推理。', '<strong>Ollama:</strong> 最简单安装 (5分钟)。一条命令。比llama.cpp慢5–10% — 对聊天可忽略。', '<strong>vLLM:</strong> 批量请求最高吞吐量 (250+ tok/s)。最适合生产API服务器。', '单用户聊天: llama.cpp 或 Ollama (速度几乎相同)。', '多用户API服务器: vLLM (批处理时吞吐量高3–5倍)。', '三个都产生<strong>相同的模型输出</strong> — 只有速度和功能不同。', '可在不同端口同时运行三个 — 不冲突。'] },
+                    { type: 'table', h2: '速度基准测试 — RTX 4090, Llama 3 70B Q4', intro: '单个请求 (batch=1) 测试, 2026年4月。vLLM批处理优势见下一幻灯片。', columns: ['后端', '令牌/秒', '毫秒/令牌', '内存'], rows: [{ 后端: 'llama.cpp (main)', '令牌/秒': '36', '毫秒/令牌': '27', 内存: '24 GB' }, { 后端: 'Ollama (native)', '令牌/秒': '34', '毫秒/令牌': '29', 内存: '24.5 GB' }, { 后端: 'vLLM (OpenAI API)', '令牌/秒': '32', '毫秒/令牌': '31', 内存: '25 GB' }] },
+                    { type: 'comparison', h2: '单请求 vs 批量吞吐量', line1: '单请求: llama.cpp 36 tok/s | Ollama 34 tok/s | vLLM 32 tok/s', line2: '10并行请求: <strong>vLLM 250+ tok/s</strong> (比Ollama高7倍)', tip: 'vLLM优势是批处理 — 对单用户聊天无关。' },
+                    { type: 'table', h2: '功能对比 (主要功能)', columns: ['功能', 'llama.cpp', 'Ollama', 'vLLM'], rows: [{ 功能: '安装', llama: '从源代码编译', ollama: '单一二进制文件', vllm: 'pip 安装' }, { 功能: 'OpenAI API 兼容', llama: '否 (自定义)', ollama: '✓', vllm: '✓ (原生)' }, { 功能: '批处理', llama: '否', ollama: '仅单个批', vllm: '✓ (32+并行)' }, { 功能: '多GPU', llama: '实验性', ollama: '✓', vllm: '✓ (张量)' }, { 功能: '量化', llama: '✓ (最佳)', ollama: '✓ (良好)', vllm: '有限' }, { 功能: '模型管理', llama: '手动 .gguf', ollama: '自动下载', vllm: 'HuggingFace' }] },
+                    { type: 'list', h2: '安装复杂度对比', items: ['<strong>Ollama — 5分钟:</strong> <code>brew install ollama</code> → <code>ollama run mistral</code>。完成。', '<strong>vLLM — 15分钟:</strong> <code>pip install vllm</code> → <code>python -m vllm.entrypoints.openai.api_server</code>。', '<strong>llama.cpp — 30分钟:</strong> 从源代码编译。手动模型管理。', '大多数用户的赢家: <strong>Ollama</strong>'] },
+                    { type: 'list', h2: 'API兼容性', items: ['<strong>llama.cpp:</strong> 自定义REST API — 不兼容OpenAI。需要自定义客户端代码。', '<strong>Ollama:</strong> 通过<code>ollama serve</code>兼容OpenAI。与VS Code、Cursor扩展兼容。', '<strong>vLLM:</strong> 在<code>/v1/chat/completions</code>原生兼容OpenAI。最佳兼容性。', '对于IDE插件 (VS Code, Cursor): 使用<strong>Ollama或vLLM</strong> — 跳过llama.cpp。'] },
+                    { type: 'list', h2: '使用场景指南', items: ['<strong>llama.cpp:</strong> 自定义推理引擎，最少依赖，原始速度优先。', '<strong>Ollama:</strong> 个人聊天，开发者实验，最简单工作流。', '<strong>vLLM:</strong> 生产API服务器，多用户部署，高吞吐量需求。', '可在不同端口同时运行三个 — 不冲突。'] },
+                    { type: 'list', h2: 'vLLM批处理的重要性', items: ['<strong>llama.cpp:</strong> 无原生批处理。队列请求。吞吐量: 36 tok/s。', '<strong>Ollama:</strong> 仅单批处理。无法并行处理2+请求。吞吐量: 34 tok/s。', '<strong>vLLM:</strong> 原生批处理 (batch=32 默认)。32请求并行处理。吞吐量: 250+ tok/s。', '10+并行用户的API服务器: <strong>vLLM是唯一可行的选择。</strong>'] },
+                    { type: 'numbered', h2: '4个常见错误', items: ['<strong>假设llama.cpp始终最快。</strong> 仅对单token真。vLLM在10+并行请求时快7倍。', '<strong>认为Ollama速度慢。</strong> 比llama.cpp慢5–10% — 在34 tok/s感觉瞬间的地方可忽略。', '<strong>认为必须选一个。</strong> 在不同端口运行三个。聊天用Ollama，API用vLLM。', '<strong>单用户聊天用vLLM。</strong> 优势是批处理。Ollama更简单，对1个用户足够。'] },
+                    { type: 'numbered', h2: '快速入门：5分钟启动', items: ['决定用途: 个人聊天 → Ollama; API服务器 → vLLM; 自定义构建 → llama.cpp。', '安装: <code>brew install ollama</code> (macOS) 或 <code>pip install vllm</code>。', '下载模型: <code>ollama pull llama3</code> 或 vLLM 用 HuggingFace。', '测试API: <code>curl http://localhost:11434/v1/chat/completions</code>。', '可选: 为任何后端添加 OpenWebUI 前端。'] },
+                    { type: 'faq', h2: '常见问题', faqs: [{ q: '初学者应该用哪个？', a: 'Ollama。一条命令安装，模型自动下载，界面清洁。与llama.cpp的性能差异不到5%。' }, { q: 'llama.cpp、Ollama、vLLM中哪个最快？', a: '单请求: llama.cpp (比Ollama快约3%)。10并行请求: vLLM (因原生批处理快约7倍)。' }, { q: '能用llama.cpp替代Ollama吗？', a: '可以。需要从源代码编译。速度提升3–5% — 对大多数用户可忽略。Ollama更好。' }] },
+                    { type: 'faq', h2: '常见问题（续）', faqs: [{ q: 'vLLM可用于生产吗？', a: '可以。用于真实生产部署。学习曲线陡峭，但对10+并行用户的高吞吐量API服务值得。' }, { q: '不重新训练能切换后端吗？', a: '可以。三个都用GGUF模型格式。转换一次，在任何后端运行。输出相同 — 仅速度和吞吐量不同。' }, { q: '哪个后端最稳定？', a: 'Ollama (简单架构，更少依赖)。llama.cpp也很稳定。vLLM频繁更新 (新功能) — 偶有破坏性更改。' }] },
+                    { type: 'cta', h2: '使用PromptQuorum对比LLM后端', body: 'PromptQuorum将您的提示并行发送到多个模型和后端 — 同时对比llama.cpp、Ollama和vLLM的响应。', cta: '免费试用PromptQuorum', href: 'https://www.promptquorum.com' }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm?lang=' + lang;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.2em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="font-size: 1em; margin-bottom: 12px; color: #49454f;">${slide.intro}</p>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 40px; font-size: 1.5em;">${slide.line1}</p>
+                        <p style="font-size: 1.5em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 20px; text-align: left;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p>${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
