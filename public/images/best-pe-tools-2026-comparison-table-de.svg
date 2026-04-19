@@ -1,0 +1,143 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Feature-Vergleich (April 2026)
+  </text>
+
+  <!-- Header row -->
+  <rect x="18" y="42" width="764" height="28" fill="#F7F2FA"/>
+  <line x1="18" y1="70" x2="782" y2="70" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Column headers -->
+  <text x="60" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">
+    Tool
+  </text>
+  <text x="150" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="middle">
+    Evaluierung
+  </text>
+  <text x="260" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">
+    Tests
+  </text>
+  <text x="365" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="middle">
+    Versionierung
+  </text>
+  <text x="480" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="middle">
+    Produktion
+  </text>
+  <text x="720" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="end">
+    Preis
+  </text>
+
+  <!-- Row 1: Braintrust -->
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="60" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Braintrust
+  </text>
+  <text x="150" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle" font-weight="700">
+    ✓ Exzellent
+  </text>
+  <text x="260" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
+    Basis
+  </text>
+  <text x="365" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="480" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="720" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="end">
+    $500+/Mo.
+  </text>
+
+  <!-- Row 2: Vellum -->
+  <line x1="18" y1="120" x2="782" y2="120" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="60" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Vellum
+  </text>
+  <text x="150" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="260" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
+    Basis
+  </text>
+  <text x="365" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
+    Ja
+  </text>
+  <text x="480" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle" font-weight="700">
+    ✓ Exzellent
+  </text>
+  <text x="720" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="end">
+    $200–500/Mo.
+  </text>
+
+  <!-- Row 3: Promptfoo -->
+  <line x1="18" y1="152" x2="782" y2="152" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="60" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Promptfoo
+  </text>
+  <text x="150" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="260" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle" font-weight="700">
+    ✓ Exzellent
+  </text>
+  <text x="365" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
+    Via Git
+  </text>
+  <text x="480" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
+    Nur CI/CD
+  </text>
+  <text x="720" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="end" font-weight="700">
+    Kostenlos
+  </text>
+
+  <!-- Row 4: PromptHub -->
+  <line x1="18" y1="184" x2="782" y2="184" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="60" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    PromptHub
+  </text>
+  <text x="150" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="260" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="365" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle" font-weight="700">
+    ✓ Exzellent
+  </text>
+  <text x="480" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="720" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="end">
+    $50–300/Mo.
+  </text>
+
+  <!-- Row 5: LangSmith -->
+  <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="60" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    LangSmith
+  </text>
+  <text x="150" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="260" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="365" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">
+    Nein
+  </text>
+  <text x="480" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
+    Nur Tracing
+  </text>
+  <text x="720" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="end">
+    Kostenlos/$50+
+  </text>
+
+  <!-- Footer note -->
+  <text x="18" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">
+    Grüne Häkchen zeigen die Stärken. Wähle 2–3 Tools für unterschiedliche Aufgaben.
+  </text>
+</svg>

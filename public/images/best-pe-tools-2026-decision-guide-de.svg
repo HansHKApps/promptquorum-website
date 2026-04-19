@@ -1,0 +1,85 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Welche Tools für dein Team?
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#79747E" text-anchor="middle">
+    Nach Workflow-Stufe wählen
+  </text>
+
+  <!-- Row 1: Startups -->
+  <circle cx="60" cy="85" r="14" fill="#6750A4"/>
+  <text x="60" y="92" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+
+  <text x="110" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">
+    Startups (&lt;10 Personen)
+  </text>
+  <text x="110" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Frühe Etappe, niedriges Budget
+  </text>
+
+  <text x="550" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6750A4" text-anchor="end" font-weight="700">
+    Promptfoo + PromptHub
+  </text>
+
+  <line x1="18" y1="110" x2="782" y2="110" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Production -->
+  <circle cx="60" cy="145" r="14" fill="#6750A4"/>
+  <text x="60" y="152" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+
+  <text x="110" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">
+    In Produktion gehen
+  </text>
+  <text x="110" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Qualität + Bereitstellung
+  </text>
+
+  <text x="550" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6750A4" text-anchor="end" font-weight="700">
+    Vellum + Promptfoo + Braintrust
+  </text>
+
+  <line x1="18" y1="170" x2="782" y2="170" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: LangChain -->
+  <circle cx="60" cy="205" r="14" fill="#6750A4"/>
+  <text x="60" y="212" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+
+  <text x="110" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">
+    LangChain-intensive Teams
+  </text>
+  <text x="110" y="218" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Tracing + Tests erforderlich
+  </text>
+
+  <text x="550" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6750A4" text-anchor="end" font-weight="700">
+    LangSmith + Promptfoo + Braintrust
+  </text>
+
+  <line x1="18" y1="230" x2="782" y2="230" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Enterprise -->
+  <circle cx="60" cy="265" r="14" fill="#6750A4"/>
+  <text x="60" y="272" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+
+  <text x="110" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">
+    Unternehmen (Governance)
+  </text>
+  <text x="110" y="278" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Audit-Trails + Compliance
+  </text>
+
+  <text x="550" y="272" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6750A4" text-anchor="end" font-weight="700">
+    PromptHub + Braintrust + Vellum
+  </text>
+
+  <!-- Footer note -->
+  <text x="18" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">
+    Startups steigen zu Braintrust auf, wenn Eval-Qualität kritisch wird. Tools kombinieren!
+  </text>
+</svg>

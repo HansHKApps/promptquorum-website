@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4つの一般的な失敗
+  </text>
+
+  <rect x="18" y="45" width="360" height="28" fill="#FFEBEE"/>
+  <text x="200" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#C62828" text-anchor="middle">
+    ❌ 失敗パターン
+  </text>
+
+  <rect x="422" y="45" width="360" height="28" fill="#E8F5E9"/>
+  <text x="602" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E7D32" text-anchor="middle">
+    ✓ 解決策
+  </text>
+
+  <line x1="18" y1="73" x2="782" y2="73" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="40" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    オーバーラップ
+  </text>
+  <text x="40" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    するツール購入 (全5個)
+  </text>
+  <text x="442" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    異なるワークフローの
+  </text>
+  <text x="442" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    2-3つツール選択
+  </text>
+  <line x1="18" y1="138" x2="782" y2="138" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    CI/CDテストを
+  </text>
+  <text x="40" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    スキップ
+  </text>
+  <text x="442" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Promptfooで高速テスト後
+  </text>
+  <text x="442" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    本番環境evalに進む
+  </text>
+  <line x1="18" y1="193" x2="782" y2="193" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    初日から
+  </text>
+  <text x="40" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    バージョン管理なし
+  </text>
+  <text x="442" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    PromptHub
+  </text>
+  <text x="442" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    バージョン管理を最初から
+  </text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    汎用ツール
+  </text>
+  <text x="40" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    (Datadog)を使用
+  </text>
+  <text x="442" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    VellumまたはLangSmith
+  </text>
+  <text x="442" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    のプロンプトトレース
+  </text>
+
+  <text x="400" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">
+    これらの失敗は時間とともに増幅。初日から明確な分界線を引きましょう。
+  </text>
+</svg>

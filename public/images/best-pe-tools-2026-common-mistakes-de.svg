@@ -1,0 +1,94 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4 häufige Fehler
+  </text>
+
+  <!-- Left column header -->
+  <rect x="18" y="45" width="360" height="28" fill="#FFEBEE"/>
+  <text x="200" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#C62828" text-anchor="middle">
+    ❌ Fehler
+  </text>
+
+  <!-- Right column header -->
+  <rect x="422" y="45" width="360" height="28" fill="#E8F5E9"/>
+  <text x="602" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E7D32" text-anchor="middle">
+    ✓ Lösung
+  </text>
+
+  <line x1="18" y1="73" x2="782" y2="73" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <text x="40" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Überlappende Tools
+  </text>
+  <text x="40" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    kaufen (alle 5)
+  </text>
+
+  <text x="442" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    2–3 Tools für
+  </text>
+  <text x="442" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    unterschiedliche Aufgaben
+  </text>
+
+  <line x1="18" y1="138" x2="782" y2="138" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="40" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    CI/CD-Tests
+  </text>
+  <text x="40" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    überspringen
+  </text>
+
+  <text x="442" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Mit Promptfoo schnell
+  </text>
+  <text x="442" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    testen, dann evaluieren
+  </text>
+
+  <line x1="18" y1="193" x2="782" y2="193" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="40" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Prompts nicht von
+  </text>
+  <text x="40" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Anfang versionieren
+  </text>
+
+  <text x="442" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    PromptHub-Versionierung
+  </text>
+  <text x="442" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    von Anfang an
+  </text>
+
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="40" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Generische Tools
+  </text>
+  <text x="40" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    (Datadog) verwenden
+  </text>
+
+  <text x="442" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Vellum oder LangSmith
+  </text>
+  <text x="442" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    für Prompt-Tracing
+  </text>
+
+  <!-- Footer -->
+  <text x="400" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">
+    Diese Fehler verstärken sich mit der Zeit. Klare Tool-Grenzen von Anfang an.
+  </text>
+</svg>

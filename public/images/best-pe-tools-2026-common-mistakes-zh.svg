@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4个常见错误
+  </text>
+
+  <rect x="18" y="45" width="360" height="28" fill="#FFEBEE"/>
+  <text x="200" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#C62828" text-anchor="middle">
+    ❌ 常见错误
+  </text>
+
+  <rect x="422" y="45" width="360" height="28" fill="#E8F5E9"/>
+  <text x="602" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E7D32" text-anchor="middle">
+    ✓ 解决方案
+  </text>
+
+  <line x1="18" y1="73" x2="782" y2="73" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="40" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    购买重叠
+  </text>
+  <text x="40" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    的工具 (全5个)
+  </text>
+  <text x="442" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    为不同工作流选2–3
+  </text>
+  <text x="442" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    个工具
+  </text>
+  <line x1="18" y1="138" x2="782" y2="138" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    跳过CI/CD
+  </text>
+  <text x="40" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    测试
+  </text>
+  <text x="442" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    用Promptfoo快速测试
+  </text>
+  <text x="442" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    再做生产评估
+  </text>
+  <line x1="18" y1="193" x2="782" y2="193" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    第一天就不
+  </text>
+  <text x="40" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    做版本管理
+  </text>
+  <text x="442" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    从初始就加入
+  </text>
+  <text x="442" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    PromptHub版本管理
+  </text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    用通用工具
+  </text>
+  <text x="40" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    (Datadog)
+  </text>
+  <text x="442" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    用Vellum或LangSmith
+  </text>
+  <text x="442" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    进行提示追踪
+  </text>
+
+  <text x="400" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">
+    这些错误会随时间恶化。从第一天建立清晰的工具边界。
+  </text>
+</svg>

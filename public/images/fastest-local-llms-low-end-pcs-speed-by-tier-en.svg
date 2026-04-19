@@ -16,7 +16,7 @@
 
   <!-- Row 1: CPU only -->
   <text x="38" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">CPU only</text>
-  <text x="185" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Phi-3 Mini 3.8B</text>
+  <text x="185" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Phi-4 Mini 3.8B</text>
   <text x="360" y="104" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="700" fill="#49454F">Q4</text>
   <text x="440" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#EA4335">5–15 t/s</text>
   <text x="560" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">2.5 GB RAM</text>
@@ -34,7 +34,7 @@
 
   <!-- Row 3: 6 GB GPU -->
   <text x="38" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">6 GB GPU</text>
-  <text x="185" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Phi-3 Mini 3.8B</text>
+  <text x="185" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Phi-4 Mini 3.8B</text>
   <text x="360" y="176" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="700" fill="#49454F">Q5</text>
   <text x="440" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">15–30 t/s</text>
   <text x="560" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">2.7 GB VRAM</text>

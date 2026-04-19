@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4 Erreurs Courantes
+  </text>
+
+  <rect x="18" y="45" width="360" height="28" fill="#FFEBEE"/>
+  <text x="200" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#C62828" text-anchor="middle">
+    ❌ Erreur
+  </text>
+
+  <rect x="422" y="45" width="360" height="28" fill="#E8F5E9"/>
+  <text x="602" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E7D32" text-anchor="middle">
+    ✓ Solution
+  </text>
+
+  <line x1="18" y1="73" x2="782" y2="73" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="40" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Acheter tous
+  </text>
+  <text x="40" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    les outils
+  </text>
+  <text x="442" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Choisir 2–3 outils pour
+  </text>
+  <text x="442" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    workflows différents
+  </text>
+  <line x1="18" y1="138" x2="782" y2="138" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Sauter les
+  </text>
+  <text x="40" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    tests CI/CD
+  </text>
+  <text x="442" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Tester vite avec Promptfoo
+  </text>
+  <text x="442" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    avant evals prod
+  </text>
+  <line x1="18" y1="193" x2="782" y2="193" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Pas de version
+  </text>
+  <text x="40" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    dès le jour 1
+  </text>
+  <text x="442" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Ajouter PromptHub
+  </text>
+  <text x="442" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    dès le début
+  </text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Outils génériques
+  </text>
+  <text x="40" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    (Datadog)
+  </text>
+  <text x="442" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Utiliser Vellum ou LangSmith
+  </text>
+  <text x="442" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    pour prompt tracing
+  </text>
+
+  <text x="400" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">
+    Ces erreurs s'accumulent. Établir des limites claires dès le départ.
+  </text>
+</svg>
