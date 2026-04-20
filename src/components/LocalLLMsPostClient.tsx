@@ -399,7 +399,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
         <figure className="my-8 flex flex-col items-center">
           <img
             src={section.image}
-            alt={section.imageCaption || 'Article visualization'}
+            alt={section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram')}
             className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm"
           />
           {section.imageCaption && (

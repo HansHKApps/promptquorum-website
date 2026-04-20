@@ -314,6 +314,9 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(post.itemListSchema) }}
         />
       )}
+      {sectionImageObjects.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': sectionImageObjects }) }} />
+      )}
       <BlogPostClient post={post} slug={slug} initialLang={selectedLang} />
     </>
   )
