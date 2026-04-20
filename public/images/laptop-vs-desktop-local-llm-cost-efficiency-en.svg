@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Cost Per Token/Sec: Laptop vs Desktop
+  </text>
+
+  <!-- Y-axis -->
+  <line x1="70" y1="55" x2="70" y2="260" stroke="#E8DEF8" stroke-width="2"/>
+  <!-- X-axis -->
+  <line x1="70" y1="260" x2="750" y2="260" stroke="#E8DEF8" stroke-width="2"/>
+
+  <!-- Y-axis labels ($/tok/sec) -->
+  <text x="55" y="268" font-size="11" fill="#79747E" text-anchor="end">$0</text>
+  <text x="55" y="218" font-size="11" fill="#79747E" text-anchor="end">$35</text>
+  <text x="55" y="168" font-size="11" fill="#79747E" text-anchor="end">$70</text>
+  <text x="55" y="118" font-size="11" fill="#79747E" text-anchor="end">$105</text>
+  <text x="55" y="68" font-size="11" fill="#79747E" text-anchor="end">$140</text>
+
+  <!-- Y-axis title -->
+  <text x="20" y="160" font-size="11" fill="#49454F" text-anchor="middle" transform="rotate(-90 20 160)">
+    Cost per tok/sec
+  </text>
+
+  <!-- Bar 1: MacBook Pro M3 Max -->
+  <rect x="100" y="110" width="60" height="150" rx="4" fill="#EA4335" filter="url(#shadow)"/>
+  <text x="130" y="280" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">MacBook</text>
+  <text x="130" y="298" font-size="11" fill="#49454F" text-anchor="middle">M3 Max</text>
+  <!-- Value label -->
+  <text x="130" y="103" font-size="13" font-weight="700" fill="#EA4335" text-anchor="middle">$140</text>
+
+  <!-- Bar 2: MacBook + eGPU -->
+  <rect x="220" y="140" width="60" height="120" rx="4" fill="#F4B400" filter="url(#shadow)"/>
+  <text x="250" y="280" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">MacBook</text>
+  <text x="250" y="298" font-size="11" fill="#49454F" text-anchor="middle">+ eGPU</text>
+  <!-- Value label -->
+  <text x="250" y="133" font-size="13" font-weight="700" fill="#F4B400" text-anchor="middle">$56</text>
+
+  <!-- Bar 3: Desktop RTX 4070 Ti -->
+  <rect x="340" y="235" width="60" height="25" rx="4" fill="#34A853" filter="url(#shadow)"/>
+  <text x="370" y="280" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">RTX</text>
+  <text x="370" y="298" font-size="11" fill="#49454F" text-anchor="middle">4070 Ti</text>
+  <!-- Value label -->
+  <text x="370" y="228" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">$19</text>
+
+  <!-- Bar 4: Desktop RTX 4090 -->
+  <rect x="460" y="230" width="60" height="30" rx="4" fill="#34A853" filter="url(#shadow)"/>
+  <text x="490" y="280" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">RTX</text>
+  <text x="490" y="298" font-size="11" fill="#49454F" text-anchor="middle">4090</text>
+  <!-- Value label -->
+  <text x="490" y="223" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">$22</text>
+
+  <!-- Efficiency multiplier badges -->
+  <circle cx="590" cy="100" r="20" fill="#6750A4"/>
+  <text x="590" y="105" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">7.4×</text>
+  <text x="590" y="125" font-size="10" fill="#6750A4" text-anchor="middle" font-weight="600">better</text>
+
+  <!-- Key insight -->
+  <rect x="650" y="160" width="120" height="80" rx="4" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="710" y="180" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">Key Finding:</text>
+  <text x="665" y="200" font-size="10" fill="#49454F">Desktop is 7–40×</text>
+  <text x="665" y="215" font-size="10" fill="#49454F">cheaper per</text>
+  <text x="665" y="230" font-size="10" fill="#49454F">token/sec.</text>
+</svg>

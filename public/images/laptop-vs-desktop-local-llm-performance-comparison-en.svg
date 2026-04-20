@@ -1,0 +1,60 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Laptop vs Desktop Performance Comparison
+  </text>
+
+  <!-- Left Panel: Laptop (Red/Problem) -->
+  <rect x="28" y="55" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+
+  <text x="198" y="85" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">MacBook Pro M3 Max</text>
+
+  <!-- Laptop specs -->
+  <text x="48" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Peak Speed:</text>
+  <text x="48" y="133" font-size="14" font-weight="700" fill="#EA4335">25 tok/sec</text>
+
+  <text x="48" y="160" font-size="12" font-weight="700" fill="#1C1B1F">After 15 min:</text>
+  <text x="48" y="178" font-size="14" font-weight="700" fill="#EA4335">12-15 tok/sec</text>
+  <text x="48" y="195" font-size="11" fill="#79747E">(50% throttle)</text>
+
+  <text x="48" y="225" font-size="12" font-weight="700" fill="#1C1B1F">Model Max:</text>
+  <text x="48" y="243" font-size="13" fill="#49454F">Llama 3.1 7B</text>
+
+  <text x="48" y="273" font-size="12" font-weight="700" fill="#1C1B1F">Cost:</text>
+  <text x="48" y="291" font-size="13" fill="#49454F">$140/tok/sec</text>
+
+  <!-- Right Panel: Desktop (Green/Solution) -->
+  <rect x="432" y="55" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+
+  <text x="602" y="85" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Desktop RTX 4070 Ti</text>
+
+  <!-- Desktop specs -->
+  <text x="452" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Sustained Speed:</text>
+  <text x="452" y="133" font-size="14" font-weight="700" fill="#34A853">80 tok/sec</text>
+
+  <text x="452" y="160" font-size="12" font-weight="700" fill="#1C1B1F">After 24 hours:</text>
+  <text x="452" y="178" font-size="14" font-weight="700" fill="#34A853">80 tok/sec</text>
+  <text x="452" y="195" font-size="11" fill="#79747E">(0% throttle)</text>
+
+  <text x="452" y="225" font-size="12" font-weight="700" fill="#1C1B1F">Model Max:</text>
+  <text x="452" y="243" font-size="13" fill="#49454F">Llama 3.1 70B</text>
+
+  <text x="452" y="273" font-size="12" font-weight="700" fill="#1C1B1F">Cost:</text>
+  <text x="452" y="291" font-size="13" fill="#49454F">$19/tok/sec</text>
+
+  <!-- Speed ratio badge -->
+  <circle cx="400" cy="320" r="18" fill="#6750A4"/>
+  <text x="400" y="327" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3.2×</text>
+  <text x="400" y="345" font-size="11" fill="#6750A4" text-anchor="middle" font-weight="600">faster</text>
+</svg>
