@@ -181,3 +181,31 @@ When implementing a new `/gamma` presentation for a prompt-engineering article:
 - All 5 languages must be present before committing
 
 **Reference:** `docs/GAMMA_SKILL_UPDATES.md` contains the updated `/gamma` skill specification with full Step 0.5 and GEO indexability requirements.
+
+## Freshness Tier (MANDATORY before writing any new article)
+
+Before writing or substantially editing any article, ask:
+
+1. **"What is the core purpose of this page in one sentence?"** — Clarify scope before classifying.
+
+2. **Apply 3-tier test:**
+   - **evergreen**: Timeless concept, no year/model/hardware refs. Examples: "What is prompt engineering?", "How does an LLM work?", "Guide to fine-tuning fundamentals". → Add `freshness_tier: 'evergreen'`
+   - **semi_annual**: Specific models, hardware, pricing, or "best-of" recommendations with year in title. Examples: "Best Llama 3.2 Models 2026", "RTX 4090 Performance Benchmark 2026", "Top Open-Source LLMs in 2026". → Add `freshness_tier: 'semi_annual'` + set `next_refresh_due` to 6 months from publish date
+   - **annual**: Year-specific event, ranking, or timeline with year in slug URL. Examples: "/2026-ai-model-releases/", "/2026-gpu-price-rankings/". → Add `freshness_tier: 'annual'` + set `specific_year: 2026`
+
+3. **If 2 tiers apply → SPLIT into multiple pages.** Example: "GPT-4 vs Llama 3.2 (models) + How to Fine-Tune (concept)" → write as two separate articles.
+
+4. **Add `freshness_tier` to `en:` block BEFORE writing content:**
+   ```typescript
+   en: {
+     title: '...',
+     freshness_tier: 'evergreen' | 'semi_annual' | 'annual',
+     // ... rest of content
+   }
+   ```
+
+5. **Build will fail if missing** on pages published >= 2026-04-21. The validator `scripts/validate-freshness-tier.mjs` runs at build time and enforces:
+   - All new articles (publishDate ≥ 2026-04-21) must have `freshness_tier` set
+   - `evergreen` articles must NOT contain year references, specific models, or benchmarks
+   - `semi_annual` articles must have year in title and `next_refresh_due` set
+   - `annual` articles must have year in slug and `specific_year` set
