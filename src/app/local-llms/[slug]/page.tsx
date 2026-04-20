@@ -240,6 +240,28 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     },
   }
 
+  // Collect section images for ImageObject JSON-LD attribution
+  const toAbsImageUrl = (path: string) =>
+    path.startsWith('http') ? path :
+    path.startsWith('/') ? `https://www.promptquorum.com${path}` :
+    `https://www.promptquorum.com/images/${path}`
+
+  const sectionImageObjects = Object.values(article.sections)
+    .filter(s => !!s.image)
+    .map(s => ({
+      '@type': 'ImageObject' as const,
+      url: toAbsImageUrl(s.image!),
+      ...(s.imageCaption && { name: s.imageCaption.substring(0, 120), description: s.imageCaption }),
+      creator: { '@type': 'Person', name: 'Hans Kuepper' },
+      copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      license: 'https://www.promptquorum.com/image-license',
+      acquireLicensePage: 'https://www.promptquorum.com/image-license',
+    }))
+
+  if (sectionImageObjects.length > 0 && !(articleSchema as any).image) {
+    ;(articleSchema as any).image = sectionImageObjects[0].url
+  }
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -285,6 +307,9 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
       {article.supplementalSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.supplementalSchema) }} />}
       {article.tableSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.tableSchema) }} />}
       {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ensureItemListSchemaValid(article.itemListSchema)) }} />}
+      {sectionImageObjects.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': sectionImageObjects }) }} />
+      )}
       <LocalLLMsPostClient slug={slug} initialLang={selectedLang} />
     </>
   )

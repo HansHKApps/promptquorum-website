@@ -153,6 +153,26 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
     ],
   }
 
+  // Collect section images for ImageObject JSON-LD attribution
+  const toAbsImageUrl = (path: string) =>
+    path.startsWith('http') ? path :
+    path.startsWith('/') ? `https://www.promptquorum.com${path}` :
+    `https://www.promptquorum.com/images/${path}`
+
+  const sectionImageObjects = post.sections
+    ? Object.values(post.sections)
+        .filter((s: any) => !!(s as any).image)
+        .map((s: any) => ({
+          '@type': 'ImageObject' as const,
+          url: toAbsImageUrl(s.image),
+          ...(s.imageCaption && { name: (s.imageCaption as string).substring(0, 120), description: s.imageCaption }),
+          creator: { '@type': 'Person', name: 'Hans Kuepper' },
+          copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          license: 'https://www.promptquorum.com/image-license',
+          acquireLicensePage: 'https://www.promptquorum.com/image-license',
+        }))
+    : []
+
   // JSON-LD: ScholarlyArticle/ResearchArticle schema (for AI systems)
   const scholarlyArticleSchema = {
     '@context': 'https://schema.org',
