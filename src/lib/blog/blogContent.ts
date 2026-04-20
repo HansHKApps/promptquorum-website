@@ -33,6 +33,12 @@ export interface BlogPost {
   faqSchema?: Record<string, unknown>
   howToSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
+  freshness_tier?: 'evergreen' | 'semi_annual' | 'annual'
+  next_refresh_due?: string
+  current_models_mentioned?: string[]
+  current_hardware_mentioned?: string[]
+  archive_after?: string
+  specific_year?: number
 }
 
 export const blogContent: Record<string, Record<Language, BlogPost>> = {

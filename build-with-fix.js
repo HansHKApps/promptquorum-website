@@ -68,6 +68,16 @@ async function validatePresentations() {
   })
 }
 
+function validateFreshnessTier() {
+  return new Promise((resolve, reject) => {
+    const child = spawn('node', ['scripts/validate-freshness-tier.mjs'], { stdio: 'inherit' })
+    child.on('close', code => {
+      if (code === 0) resolve()
+      else reject(new Error('Freshness tier validation failed'))
+    })
+  })
+}
+
 async function main() {
   console.log('Starting build with validator fix...\n')
 
@@ -75,6 +85,13 @@ async function main() {
     await validatePresentations()
   } catch (err) {
     console.error('\n❌ Presentation validation failed. Please fix errors before building.\n')
+    process.exit(1)
+  }
+
+  try {
+    await validateFreshnessTier()
+  } catch (err) {
+    console.error('\n❌ Freshness tier validation failed. Please fix errors before building.\n')
     process.exit(1)
   }
 
