@@ -1193,7 +1193,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {/* Table of Contents */}
         {(article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Contents</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].tableOfContents}</p>
             <ol className="space-y-1">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>
