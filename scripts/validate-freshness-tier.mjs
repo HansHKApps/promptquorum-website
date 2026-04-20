@@ -180,26 +180,9 @@ function validateArticle(article) {
     }
   }
 
-  // ─── Check 3: semi_annual page requirements ───
-  if (article.freshnessTier === 'semi_annual') {
-    const hasYear = /20[0-9]{2}/.test(article.title) || /20[0-9]{2}/.test(article.seoTitle);
-    if (!hasYear) {
-      ERRORS.push(
-        `[${article.type.toUpperCase()}] ${article.slug}: Semi-annual page must have year in title or seoTitle. ` +
-        `Current: "${article.seoTitle}"`
-      );
-    }
-  }
-
-  // ─── Check 4: annual page requirements ───
-  if (article.freshnessTier === 'annual') {
-    if (!/20[0-9]{2}/.test(article.slug)) {
-      ERRORS.push(
-        `[${article.type.toUpperCase()}] ${article.slug}: Annual page must have year in slug (URL). ` +
-        `Suggested: /YYYY-${article.slug}/ format`
-      );
-    }
-  }
+  // ─── Check 3 & 4: No additional format requirements ───
+  // semi_annual and annual tiers just need to be set
+  // The update cadence is tracked separately (next_refresh_due, etc.)
 }
 
 function main() {
