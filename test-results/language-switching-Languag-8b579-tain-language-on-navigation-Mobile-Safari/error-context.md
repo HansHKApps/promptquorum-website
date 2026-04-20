@@ -1,0 +1,273 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "PromptQuorumPromptQuorum" [ref=e4]:
+        - /url: /
+        - img "PromptQuorum" [ref=e5]
+        - text: PromptQuorum
+      - navigation [ref=e6]:
+        - link "Compare Tools" [ref=e7]:
+          - /url: /compare
+        - link "Features" [ref=e8]:
+          - /url: /features
+        - link "How It Works" [ref=e9]:
+          - /url: /how-it-works
+        - link "FAQ" [ref=e10]:
+          - /url: /faq
+        - link "Blog" [ref=e11]:
+          - /url: /blog
+        - link "Prompt Engineering" [ref=e12]:
+          - /url: /prompt-engineering
+        - link "Local LLMs" [ref=e13]:
+          - /url: /local-llms
+        - link "Waitlist" [ref=e14]:
+          - /url: "#waitlist"
+      - generic [ref=e15]:
+        - button "🇺🇸EN" [ref=e17]
+        - button "Toggle menu" [ref=e18]:
+          - img [ref=e19]
+  - generic [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - img [ref=e24]
+        - text: Liste d'attente ouverte
+      - heading "Un Prompt. 25+ Réponses IA.Trouvez le Consensus" [level=1] [ref=e26]
+      - paragraph [ref=e27]:
+        - strong [ref=e28]: PromptQuorum is a multi-AI dispatch tool that sends one prompt to 25+ models simultaneously — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek, and more — and scores the results for consensus and hallucination risk.
+      - paragraph [ref=e29]: Rédigez et optimisez votre prompt une seule fois — recevez des réponses de ChatGPT, Claude, Gemini et 25+ modèles IA côte à côte. Détectez les hallucinations, évaluez le consensus et trouvez la meilleure réponse parmi tous les modèles.
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - textbox "Votre adresse e-mail" [ref=e34]
+          - button "Rejoindre la liste" [ref=e35]
+        - generic [ref=e36]:
+          - checkbox "J'accepte de recevoir les annonces de lancement bêta et les mises à jour produit de PromptQuorum. Politique de confidentialité" [ref=e38]
+          - generic [ref=e39]:
+            - text: J'accepte de recevoir les annonces de lancement bêta et les mises à jour produit de PromptQuorum.
+            - link "Politique de confidentialité" [ref=e40]:
+              - /url: /privacy
+        - paragraph [ref=e41]: Pas de spam. Désabonnement à tout moment.
+      - paragraph [ref=e42]: Gratuit. Apportez votre propre clé API ou utilisez un LLM local.
+      - button "Play PromptQuorum demo video" [ref=e46]:
+        - img "PromptQuorum demo video thumbnail" [ref=e47]
+        - img [ref=e50]
+    - generic [ref=e53]:
+      - heading "Quel modèle IA donne la meilleure réponse pour votre tâche ?" [level=2] [ref=e54]
+      - paragraph [ref=e55]: Envoyez le même prompt à ChatGPT, Claude, Gemini, Mistral, Llama, DeepSeek et 25+ autres modèles simultanément. Comparez les réponses côte à côte pour identifier le consensus factuel et signaler les contradictions.
+      - link "Voir le guide de comparaison des modèles IA" [ref=e56]:
+        - /url: /compare
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - heading "Que pouvez-vous faire avec PromptQuorum ?" [level=2] [ref=e60]
+        - paragraph [ref=e61]: Six outils pour l'optimisation des prompts, l'envoi multi-modèles et l'analyse de consensus
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - img [ref=e65]
+          - heading "Optimisation des prompts" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Affinez et optimisez automatiquement vos prompts avec 8 techniques de raffinement.
+        - generic [ref=e69]:
+          - img [ref=e71]
+          - heading "Analyse multi-modèles" [level=3] [ref=e75]
+          - paragraph [ref=e76]: Comparez les réponses de 25+ modèles IA côte à côte pour détecter les hallucinations.
+        - generic [ref=e77]:
+          - img [ref=e79]
+          - heading "Comparaison des capacités des modèles" [level=3] [ref=e91]
+          - paragraph [ref=e92]: Identifiez quel modèle excelle en code, raisonnement, écriture créative ou rappel factuel — côte à côte pour votre prompt exact.
+        - generic [ref=e93]:
+          - img [ref=e95]
+          - heading "Rapidité & Efficacité" [level=3] [ref=e97]
+          - paragraph [ref=e98]: Envoyez à 25+ modèles en un clic plutôt que de basculer manuellement entre les onglets du navigateur.
+        - generic [ref=e99]:
+          - img [ref=e101]
+          - heading "Confidentialité d'abord" [level=3] [ref=e103]
+          - paragraph [ref=e104]: Zéro inscription, zéro tracking, contrôle total. Exécutez tout localement.
+        - generic [ref=e105]:
+          - img [ref=e107]
+          - heading "Intégration Open Source" [level=3] [ref=e110]
+          - paragraph [ref=e111]: Déployez localement avec Ollama, LM Studio, Jan AI et Meta Llama — sans clé API requise.
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - heading "Comment fonctionne le pipeline en 4 étapes de PromptQuorum ?" [level=2] [ref=e115]
+        - paragraph [ref=e116]: Optimisez, comparez, analysez et améliorez vos prompts automatiquement
+      - generic [ref=e118]:
+        - button "1 Prompt Start with any idea, rough or refined Show details" [ref=e119]:
+          - generic [ref=e120]: "1"
+          - heading "Prompt" [level=3] [ref=e121]
+          - paragraph [ref=e122]: Start with any idea, rough or refined
+          - generic [ref=e123]:
+            - text: Show details
+            - img [ref=e124]
+        - button "2 Optimize AI transforms it into a precision prompt Show details" [ref=e126]:
+          - generic [ref=e127]: "2"
+          - heading "Optimize" [level=3] [ref=e128]
+          - paragraph [ref=e129]: AI transforms it into a precision prompt
+          - generic [ref=e130]:
+            - text: Show details
+            - img [ref=e131]
+        - button "3 Dispatch Send to multiple AIs at once Show details" [ref=e133]:
+          - generic [ref=e134]: "3"
+          - heading "Dispatch" [level=3] [ref=e135]
+          - paragraph [ref=e136]: Send to multiple AIs at once
+          - generic [ref=e137]:
+            - text: Show details
+            - img [ref=e138]
+        - button "4 Quorum Compare results, find the best answer Show details" [ref=e140]:
+          - generic [ref=e141]: "4"
+          - heading "Quorum" [level=3] [ref=e142]
+          - paragraph [ref=e143]: Compare results, find the best answer
+          - generic [ref=e144]:
+            - text: Show details
+            - img [ref=e145]
+    - generic [ref=e148]:
+      - heading "Questions fréquemment posées" [level=2] [ref=e150]
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - heading "PromptQuorum est-il gratuit ?" [level=3] [ref=e154]
+          - paragraph [ref=e156]: Oui. PromptQuorum est gratuit. Vous pouvez apporter votre propre clé API, utiliser un LLM local, ou essayer notre service backend gratuit limité.
+        - generic [ref=e157]:
+          - heading "Comment fonctionne la confidentialité ?" [level=3] [ref=e159]
+          - paragraph [ref=e161]: Vous décidez où vont vos données. Gardez tout local avec LM Studio ou Ollama, ou utilisez vos propres clés API. PromptQuorum est aussi privé que vous le configurez.
+        - generic [ref=e162]:
+          - heading "Quels fournisseurs IA sont supportés ?" [level=3] [ref=e164]
+          - paragraph [ref=e166]: Plus de 25 fournisseurs IA sont inclus, et vous pouvez ajouter les vôtres. Connectez-vous à ChatGPT, Claude, Gemini et bien plus.
+        - generic [ref=e167]:
+          - heading "Sur quelles plateformes fonctionne PromptQuorum ?" [level=3] [ref=e169]
+          - paragraph [ref=e171]: PromptQuorum commence par des applications desktop (Mac, Windows), suivies d'une application web, puis mobile.
+        - generic [ref=e172]:
+          - heading "Qu'est-ce qui différencie PromptQuorum ?" [level=3] [ref=e174]
+          - paragraph [ref=e176]: PromptQuorum est très automatisé pour améliorer les prompts, peut envoyer le même prompt à plusieurs IA simultanément et analyser les résultats selon vos critères.
+        - generic [ref=e177]:
+          - heading "Y a-t-il des limites ?" [level=3] [ref=e179]
+          - paragraph [ref=e181]: Aucune limite de la part de PromptQuorum. Votre utilisation est uniquement limitée par vos clés API ou ressources LLM locales.
+    - generic [ref=e183]:
+      - generic [ref=e184]:
+        - heading "Prompt Engineering Guides" [level=2] [ref=e185]
+        - paragraph [ref=e186]: 12 research-backed articles on prompt engineering, multi-model dispatch, hallucination detection, RAG, and local LLM techniques for developers.
+      - generic [ref=e187]:
+        - 'link "Prompt Engineering 8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE (2026 Guide) Master the top prompt frameworks and learn which one works best for your use case. 8 min read→" [ref=e188]':
+          - /url: /blog/prompt-frameworks
+          - generic [ref=e189]:
+            - text: Prompt Engineering
+            - 'heading "8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE (2026 Guide)" [level=3] [ref=e190]'
+            - paragraph [ref=e191]: Master the top prompt frameworks and learn which one works best for your use case.
+            - generic [ref=e192]: 8 min read→
+        - 'link "Privacy & Security Local AI vs Cloud Tools: Why Privacy-First Prompt Optimization Matters Why privacy-first prompt optimization matters and when to use local models. 10 min read→" [ref=e193]':
+          - /url: /blog/local-ai-vs-cloud
+          - generic [ref=e194]:
+            - text: Privacy & Security
+            - 'heading "Local AI vs Cloud Tools: Why Privacy-First Prompt Optimization Matters" [level=3] [ref=e195]'
+            - paragraph [ref=e196]: Why privacy-first prompt optimization matters and when to use local models.
+            - generic [ref=e197]: 10 min read→
+        - 'link "AI Comparison AI Model Comparison: ChatGPT, Claude, Gemini, and Local Alternatives Compare the best AI language models and find the best fit for your needs. 12 min read→" [ref=e198]':
+          - /url: /blog/ai-model-comparison
+          - generic [ref=e199]:
+            - text: AI Comparison
+            - 'heading "AI Model Comparison: ChatGPT, Claude, Gemini, and Local Alternatives" [level=3] [ref=e200]'
+            - paragraph [ref=e201]: Compare the best AI language models and find the best fit for your needs.
+            - generic [ref=e202]: 12 min read→
+        - 'link "PromptQuorum PromptQuorum: How Intelligent Prompt Aggregation Works Learn how PromptQuorum aggregates and compares multiple AI models for better results. 7 min read→" [ref=e203]':
+          - /url: /blog/quorum
+          - generic [ref=e204]:
+            - text: PromptQuorum
+            - 'heading "PromptQuorum: How Intelligent Prompt Aggregation Works" [level=3] [ref=e205]'
+            - paragraph [ref=e206]: Learn how PromptQuorum aggregates and compares multiple AI models for better results.
+            - generic [ref=e207]: 7 min read→
+        - 'link "Optimization Prompt Optimization: Advanced Techniques for Better AI Results Learn proven techniques to optimize your prompts for better AI responses. 9 min read→" [ref=e208]':
+          - /url: /blog/prompt-optimization
+          - generic [ref=e209]:
+            - text: Optimization
+            - 'heading "Prompt Optimization: Advanced Techniques for Better AI Results" [level=3] [ref=e210]'
+            - paragraph [ref=e211]: Learn proven techniques to optimize your prompts for better AI responses.
+            - generic [ref=e212]: 9 min read→
+        - 'link "Privacy & Security Enterprise Data Privacy: Zero-Registration, Zero-Tracking AI Tools How enterprises can use AI tools with maximum data protection. 11 min read→" [ref=e213]':
+          - /url: /blog/enterprise-data-privacy
+          - generic [ref=e214]:
+            - text: Privacy & Security
+            - 'heading "Enterprise Data Privacy: Zero-Registration, Zero-Tracking AI Tools" [level=3] [ref=e215]'
+            - paragraph [ref=e216]: How enterprises can use AI tools with maximum data protection.
+            - generic [ref=e217]: 11 min read→
+        - 'link "Research Research: The Impact of Prompt Optimization on AI Performance New research shows how prompt optimization dramatically improves AI performance. 13 min read→" [ref=e218]':
+          - /url: /blog/research-prompt-optimization-impact
+          - generic [ref=e219]:
+            - text: Research
+            - 'heading "Research: The Impact of Prompt Optimization on AI Performance" [level=3] [ref=e220]'
+            - paragraph [ref=e221]: New research shows how prompt optimization dramatically improves AI performance.
+            - generic [ref=e222]: 13 min read→
+        - 'link "AI Reliability AI Consensus Scoring: How to Detect Hallucinations Across Multiple Models When five AI models independently agree on a fact, the answer is far more reliable than when one model answers alone. This is the principle behind AI consensus scoring — and why it is the most effective method for detecting hallucinations at scale. 11 min read→" [ref=e223]':
+          - /url: /blog/ai-consensus-scoring
+          - generic [ref=e224]:
+            - text: AI Reliability
+            - 'heading "AI Consensus Scoring: How to Detect Hallucinations Across Multiple Models" [level=3] [ref=e225]'
+            - paragraph [ref=e226]: When five AI models independently agree on a fact, the answer is far more reliable than when one model answers alone. This is the principle behind AI consensus scoring — and why it is the most effective method for detecting hallucinations at scale.
+            - generic [ref=e227]: 11 min read→
+        - link "Comparison PromptQuorum vs AskQuorum AI — What's the Difference? Two tools, similar names, very different products. Here's a clear breakdown of what PromptQuorum and AskQuorum AI each do, who they're built for, and why they're not the same thing. 4 min read→" [ref=e228]:
+          - /url: /blog/promptquorum-vs-askquorum
+          - generic [ref=e229]:
+            - text: Comparison
+            - heading "PromptQuorum vs AskQuorum AI — What's the Difference?" [level=3] [ref=e230]
+            - paragraph [ref=e231]: Two tools, similar names, very different products. Here's a clear breakdown of what PromptQuorum and AskQuorum AI each do, who they're built for, and why they're not the same thing.
+            - generic [ref=e232]: 4 min read→
+        - link "PromptQuorum What Is AI Consensus Scoring? How PromptQuorum Detects Agreement Across Models Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer. 6 min read→" [ref=e233]:
+          - /url: /blog/what-is-ai-consensus-scoring
+          - generic [ref=e234]:
+            - text: PromptQuorum
+            - heading "What Is AI Consensus Scoring? How PromptQuorum Detects Agreement Across Models" [level=3] [ref=e235]
+            - paragraph [ref=e236]: Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.
+            - generic [ref=e237]: 6 min read→
+    - generic [ref=e239]:
+      - heading "Rejoindre la liste d'attente PromptQuorum" [level=2] [ref=e240]
+      - paragraph [ref=e241]: PromptQuorum est en direct avril 2026. Rejoignez la liste d'attente pour un accès précoce et les fonctionnalités premium à vie. Vos clés API restent dans votre navigateur — zéro inscription, zéro suivi.
+      - generic [ref=e243]:
+        - generic [ref=e244]:
+          - textbox "Votre adresse e-mail" [ref=e245]
+          - button "Rejoindre la liste" [ref=e246]
+        - generic [ref=e247]:
+          - checkbox "J'accepte de recevoir les annonces de lancement bêta et les mises à jour produit de PromptQuorum. Politique de confidentialité" [ref=e249]
+          - generic [ref=e250]:
+            - text: J'accepte de recevoir les annonces de lancement bêta et les mises à jour produit de PromptQuorum.
+            - link "Politique de confidentialité" [ref=e251]:
+              - /url: /privacy
+        - paragraph [ref=e252]: Pas de spam. Désabonnement à tout moment.
+    - contentinfo [ref=e253]:
+      - generic [ref=e254]:
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - img "PromptQuorum" [ref=e257]
+            - text: PromptQuorum
+          - generic [ref=e258]:
+            - link "PromptQuorum on GitHub" [ref=e259]:
+              - /url: https://github.com
+              - img [ref=e260]
+            - link "PromptQuorum on X (Twitter)" [ref=e263]:
+              - /url: https://x.com/HansKuepperAPPs
+              - img [ref=e264]
+            - link "PromptQuorum on LinkedIn" [ref=e266]:
+              - /url: https://www.linkedin.com/company/promptquorum
+              - img [ref=e267]
+            - link "PromptQuorum Discord community" [ref=e269]:
+              - /url: https://discord.com/channels/1482063293509271724/1482063418113396736
+              - img [ref=e270]
+            - link "PromptQuorum on YouTube" [ref=e272]:
+              - /url: https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA
+              - img [ref=e273]
+            - link "PromptQuorum on Substack" [ref=e275]:
+              - /url: https://substack.com/@promptquorum
+              - img [ref=e276]
+        - generic [ref=e278]:
+          - generic [ref=e279]: © 2026 PromptQuorum. Tous droits réservés.
+          - generic [ref=e280]: 🌍 Disponible dans le monde entier•English, Deutsch, Français, 日本語, 中文
+          - generic [ref=e281]:
+            - link "About" [ref=e282]:
+              - /url: /about
+            - text: •
+            - link "Frameworks" [ref=e283]:
+              - /url: /frameworks
+            - text: •
+            - link "Privacy Policy" [ref=e284]:
+              - /url: /privacy
+            - text: •
+            - link "hello@promptquorum.com" [ref=e285]:
+              - /url: mailto:hello@promptquorum.com
+```

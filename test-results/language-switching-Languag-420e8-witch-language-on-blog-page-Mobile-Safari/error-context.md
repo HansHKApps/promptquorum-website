@@ -1,0 +1,296 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "PromptQuorumPromptQuorum" [ref=e4]:
+        - /url: /
+        - img "PromptQuorum" [ref=e5]
+        - text: PromptQuorum
+      - navigation [ref=e6]:
+        - link "Compare Tools" [ref=e7]:
+          - /url: /compare
+        - link "Features" [ref=e8]:
+          - /url: /features
+        - link "How It Works" [ref=e9]:
+          - /url: /how-it-works
+        - link "FAQ" [ref=e10]:
+          - /url: /faq
+        - link "Blog" [ref=e11]:
+          - /url: /blog
+        - link "Prompt Engineering" [ref=e12]:
+          - /url: /prompt-engineering
+        - link "Local LLMs" [ref=e13]:
+          - /url: /local-llms
+        - link "Waitlist" [ref=e14]:
+          - /url: "#waitlist"
+      - generic [ref=e15]:
+        - button "🇺🇸EN" [ref=e17]
+        - button "Toggle menu" [ref=e18]:
+          - img [ref=e19]
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - link "Home" [ref=e24]:
+          - /url: /
+        - text: /
+        - link "Blog" [ref=e25]:
+          - /url: /#blog
+        - text: "/8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE (2026 Guide)"
+      - button "🇺🇸EN" [ref=e27]
+    - article [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]: Prompt Engineering
+        - 'heading "8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE (2026 Guide)" [level=1] [ref=e31]'
+        - paragraph [ref=e32]: Master the top prompt frameworks and learn which one works best for your use case.
+        - generic [ref=e33]:
+          - time [ref=e34]: Published March 14, 2026
+          - text: •8 min read•
+          - generic [ref=e35]:
+            - text: By
+            - link "Hans Kuepper" [ref=e36]:
+              - /url: /author/hans-kuepper
+            - text: · PromptQuorum
+      - generic [ref=e37]:
+        - 'img "8 Prompt Engineering Frameworks: CRAFT, CO-STAR, APE, RISEN, TRACE, RTF, SPECS and Single-Prompt A wheel diagram showing 8 prompt engineering frameworks arranged around a central Prompt node. Each framework addresses a different writing and AI prompting style." [ref=e38]':
+          - text: A wheel diagram showing 8 prompt engineering frameworks arranged around a central Prompt node. Each framework addresses a different writing and AI prompting style.
+          - generic [ref=e44]: Prompt
+          - listitem [ref=e45]:
+            - generic [ref=e47]: CRAFT
+          - listitem [ref=e48]:
+            - generic [ref=e50]: CO
+            - generic [ref=e51]: STAR
+          - listitem [ref=e52]:
+            - generic [ref=e54]: APE
+          - listitem [ref=e55]:
+            - generic [ref=e57]: RISEN
+          - listitem [ref=e58]:
+            - generic [ref=e60]: TRACE
+          - listitem [ref=e61]:
+            - generic [ref=e63]: RTF
+          - listitem [ref=e64]:
+            - generic [ref=e66]: SPECS
+          - listitem [ref=e67]:
+            - generic [ref=e69]: Single
+            - generic [ref=e70]: Prompt
+        - list [ref=e71]:
+          - listitem [ref=e72]: "CRAFT: Context, Role, Action, Format, Target — Best for marketing and creative content"
+          - listitem [ref=e73]: "CO-STAR: Context, Objective, Style, Tone, Audience, Response — Comprehensive structured approach"
+          - listitem [ref=e74]: "APE: Action, Parameter, Example — Concise framework for specific tasks"
+          - listitem [ref=e75]: "RISEN: Role, Intention, Scenario, Expectation, Notation — Best for role-playing and personas"
+          - listitem [ref=e76]: "TRACE: Task, Request, Action, Context, Example — Step-by-step instruction framework"
+          - listitem [ref=e77]: "RTF: Role, Task, Format — Lightweight framework for rapid prompting"
+          - listitem [ref=e78]: "SPECS: Setting, Problem, Expectation, Constraints, Success Criteria — Goal-oriented prompting"
+          - listitem [ref=e79]: "Single-Prompt: One-shot, unstructured prompting for simple requests"
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - heading "What is a Prompt Framework?" [level=2] [ref=e82]
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: A prompt framework is a structured template that guides you through the essential elements of a good prompt. Instead of writing a rambling paragraph, frameworks break down your request into specific fields—like context, objective, tone, and audience. This makes your prompts clearer, more effective, and gives you predictable results.
+            - paragraph [ref=e86]: Think of it like a recipe. You could throw random ingredients into a pot and hope for the best, or you could follow a structured recipe with measured ingredients in the right order. Frameworks are recipes for prompts.
+        - generic [ref=e87]:
+          - heading "1. CRAFT Framework" [level=2] [ref=e88]
+          - paragraph [ref=e90]: "Best for: Marketing, copywriting, creative content"
+        - generic [ref=e91]:
+          - heading "The Fields:" [level=2] [ref=e92]
+          - list [ref=e93]:
+            - listitem [ref=e94]: "•Context: Background information the AI needs to understand"
+            - listitem [ref=e95]: "•Role: What role should the AI take (e.g., \"expert copywriter\")"
+            - listitem [ref=e96]: "•Action: What you want the AI to do (e.g., \"write email subject lines\")"
+            - listitem [ref=e97]: "•Format: How you want the output structured (e.g., \"bullet list\", \"paragraph\")"
+            - listitem [ref=e98]: "•Target: Who this is for (e.g., \"B2B SaaS decision-makers\")"
+        - generic [ref=e99]:
+          - heading "Example:" [level=2] [ref=e100]
+          - generic [ref=e102]:
+            - paragraph [ref=e103]: "Context: We're launching a productivity app for freelancers"
+            - paragraph [ref=e104]: "Role: You are an expert copywriter specializing in SaaS"
+            - paragraph [ref=e105]: "Action: Write 5 compelling email subject lines"
+            - paragraph [ref=e106]: "Format: Numbered list with a 1-sentence explanation for each"
+            - paragraph [ref=e107]: "Target: Busy freelancers aged 25–45 who value time-saving tools"
+        - generic [ref=e108]:
+          - heading "Why It Works:" [level=2] [ref=e109]
+          - paragraph [ref=e111]: CRAFT forces you to think about every angle of your request before asking the AI. The role + target combo ensures the AI understands exactly who the content is for and how to speak to them.
+        - generic [ref=e112]:
+          - heading "2. CO-STAR Framework" [level=2] [ref=e113]
+          - paragraph [ref=e115]: "Best for: Business communication, professional writing, decision-making"
+        - generic [ref=e116]:
+          - heading "The Fields:" [level=2] [ref=e117]
+          - list [ref=e118]:
+            - listitem [ref=e119]: "•Context: The situation or background"
+            - listitem [ref=e120]: "•Objective: What you're trying to achieve"
+            - listitem [ref=e121]: "•Style: The tone and approach (formal, casual, technical, etc.)"
+            - listitem [ref=e122]: "•Tone: The emotional quality (urgent, reassuring, confident, etc.)"
+            - listitem [ref=e123]: "•Audience: Who will read/use this"
+            - listitem [ref=e124]: "•Response: What format/length/detail level you want"
+        - generic [ref=e125]:
+          - heading "Example:" [level=2] [ref=e126]
+          - generic [ref=e128]:
+            - paragraph [ref=e129]: "Context: Our startup just got Series A funding"
+            - paragraph [ref=e130]: "Objective: Announce this to employees"
+            - paragraph [ref=e131]: "Style: Professional but enthusiastic"
+            - paragraph [ref=e132]: "Tone: Celebratory and forward-looking"
+            - paragraph [ref=e133]: "Audience: Internal team (engineers, designers, marketers)"
+            - paragraph [ref=e134]: "Response: 3-paragraph announcement suitable for email"
+        - generic [ref=e135]:
+          - heading "Why It Works:" [level=2] [ref=e136]
+          - paragraph [ref=e138]: CO-STAR separates style from tone (style is the presentation, tone is the emotion), which gives you much more control over how the AI writes. It's excellent for corporate or professional contexts where precision matters.
+        - generic [ref=e139]:
+          - heading "3. SPECS Framework" [level=2] [ref=e140]
+          - paragraph [ref=e142]: "Best for: Complex projects, detailed analysis, technical writing"
+        - generic [ref=e143]:
+          - heading "The Fields:" [level=2] [ref=e144]
+          - list [ref=e145]:
+            - listitem [ref=e146]: "•Situation: The current state or problem"
+            - listitem [ref=e147]: "•Purpose: Why you're asking (what problem does this solve)"
+            - listitem [ref=e148]: "•Expected Output: What the result should look like"
+            - listitem [ref=e149]: "•Context: Additional relevant information"
+            - listitem [ref=e150]: "•Style: The format and tone"
+        - generic [ref=e151]:
+          - heading "Example:" [level=2] [ref=e152]
+          - generic [ref=e154]:
+            - paragraph [ref=e155]: "Situation: We have 1000 customer support tickets waiting to be categorized"
+            - paragraph [ref=e156]: "Purpose: To route them to the right team (billing, technical, feature request)"
+            - paragraph [ref=e157]: "Expected Output: A Python script that reads CSV, categorizes, outputs new CSV"
+            - paragraph [ref=e158]: "Context: We use these categories: [list]. Common keywords per category: [list]"
+            - paragraph [ref=e159]: "Style: Code only, no explanation, use pandas library"
+        - generic [ref=e160]:
+          - heading "Why It Works:" [level=2] [ref=e161]
+          - paragraph [ref=e163]: SPECS is detail-oriented and excellent when you need to convey complex requirements. The expected output field prevents the AI from guessing what you want.
+        - generic [ref=e164]:
+          - heading "4. RISEN Framework" [level=2] [ref=e165]
+          - paragraph [ref=e167]: "Best for: Multi-step tasks, workflows, processes, instructions"
+        - generic [ref=e168]:
+          - heading "The Fields:" [level=2] [ref=e169]
+          - list [ref=e170]:
+            - listitem [ref=e171]: "•Role: What role should the AI play"
+            - listitem [ref=e172]: "•Instructions: Detailed steps or requirements"
+            - listitem [ref=e173]: "•Steps: Numbered breakdown of the process"
+            - listitem [ref=e174]: "•End Goal: What success looks like"
+            - listitem [ref=e175]: "•Narrowing: Constraints or specific rules to follow"
+        - generic [ref=e176]:
+          - heading "Example:" [level=2] [ref=e177]
+          - generic [ref=e179]:
+            - paragraph [ref=e180]: "Role: You are an expert teacher creating a course outline"
+            - paragraph [ref=e181]: "Instructions: Create a 4-week beginner's course on prompt engineering"
+            - paragraph [ref=e182]: "Steps: 1) Define learning objectives 2) Outline each week 3) List resources"
+            - paragraph [ref=e183]: "End Goal: A student should be able to write professional prompts by week 4"
+            - paragraph [ref=e184]: "Narrowing: No code examples, assume no prior AI knowledge, keep lessons under 30 mins each"
+        - generic [ref=e185]:
+          - heading "Why It Works:" [level=2] [ref=e186]
+          - paragraph [ref=e188]: RISEN is perfect for sequences and processes. The "narrowing" field prevents the AI from going off-track and ensures the output respects your constraints.
+        - generic [ref=e189]:
+          - heading "5. APE Framework" [level=2] [ref=e190]
+          - paragraph [ref=e192]: "Best for: Quick requests, simple tasks, when you don't need complexity"
+        - generic [ref=e193]:
+          - heading "The Fields:" [level=2] [ref=e194]
+          - list [ref=e195]:
+            - listitem [ref=e196]: "•Action: What you want the AI to do"
+            - listitem [ref=e197]: "•Purpose: Why you're asking"
+            - listitem [ref=e198]: "•Expectation: What you expect back"
+        - generic [ref=e199]:
+          - heading "Example:" [level=2] [ref=e200]
+          - generic [ref=e202]:
+            - paragraph [ref=e203]: "Action: Summarize this article"
+            - paragraph [ref=e204]: "Purpose: I need a 2-minute overview for a team meeting"
+            - paragraph [ref=e205]: "Expectation: 3-4 bullet points covering key findings"
+        - generic [ref=e206]:
+          - heading "Why It Works:" [level=2] [ref=e207]
+          - paragraph [ref=e209]: APE is beautifully simple. Most everyday requests fit into these 3 fields. It's a great starting point before graduating to more complex frameworks.
+        - generic [ref=e210]:
+          - heading "6. Google Prompt Framework" [level=2] [ref=e211]
+          - paragraph [ref=e213]: "Best for: General purpose, research, finding information"
+        - generic [ref=e214]:
+          - heading "The Fields:" [level=2] [ref=e215]
+          - list [ref=e216]:
+            - listitem [ref=e217]: "•Task: What you want to accomplish"
+            - listitem [ref=e218]: "•Context: Relevant background"
+            - listitem [ref=e219]: "•Persona: Who is asking / what perspective to take"
+        - generic [ref=e220]:
+          - heading "Why It Works:" [level=2] [ref=e221]
+          - paragraph [ref=e223]: Google's framework is lightweight and information-focused. Great for research queries and "what if" scenarios.
+        - generic [ref=e224]:
+          - heading "7. TRACE Framework" [level=2] [ref=e225]
+          - paragraph [ref=e227]: "Best for: Few-shot learning, examples-based requests, teaching the AI"
+        - generic [ref=e228]:
+          - heading "The Fields:" [level=2] [ref=e229]
+          - list [ref=e230]:
+            - listitem [ref=e231]: "•Task: What you want"
+            - listitem [ref=e232]: "•Request: Your specific ask"
+            - listitem [ref=e233]: "•Action: What the AI should do"
+            - listitem [ref=e234]: "•Context: Additional info"
+            - listitem [ref=e235]: "•Example: Show the AI an example of perfect output"
+        - generic [ref=e236]:
+          - heading "Why It Works:" [level=2] [ref=e237]
+          - paragraph [ref=e239]: TRACE is powerful because showing an example teaches the AI exactly what you want. "Do this kind of thing" is often clearer than explaining it.
+        - generic [ref=e240]:
+          - heading "8. RTF Framework" [level=2] [ref=e241]
+          - paragraph [ref=e243]: "Best for: Corporate training, standardized content, teaching materials"
+        - generic [ref=e244]:
+          - heading "The Fields:" [level=2] [ref=e245]
+          - list [ref=e246]:
+            - listitem [ref=e247]: "•Role: The instructor or expert role"
+            - listitem [ref=e248]: "•Task: The teaching objective"
+            - listitem [ref=e249]: "•Format: How to present (slides, quiz, lesson, etc.)"
+        - generic [ref=e250]:
+          - heading "Why It Works:" [level=2] [ref=e251]
+          - paragraph [ref=e253]: RTF is purpose-built for training and education. It ensures consistent, pedagogically sound output.
+        - generic [ref=e254]:
+          - heading "Which Framework Should You Use?" [level=2] [ref=e255]
+          - table [ref=e257]:
+            - rowgroup [ref=e258]:
+              - row "Framework Best For Complexity" [ref=e259]:
+                - columnheader "Framework" [ref=e260]
+                - columnheader "Best For" [ref=e261]
+                - columnheader "Complexity" [ref=e262]
+            - rowgroup [ref=e263]:
+              - row "APE Quick, simple requests ⭐ Low" [ref=e264]:
+                - cell "APE" [ref=e265]
+                - cell "Quick, simple requests" [ref=e266]
+                - cell "⭐ Low" [ref=e267]
+              - row "CRAFT Marketing, copywriting ⭐⭐ Medium" [ref=e268]:
+                - cell "CRAFT" [ref=e269]
+                - cell "Marketing, copywriting" [ref=e270]
+                - cell "⭐⭐ Medium" [ref=e271]
+              - row "CO-STAR Business communication ⭐⭐ Medium" [ref=e272]:
+                - cell "CO-STAR" [ref=e273]
+                - cell "Business communication" [ref=e274]
+                - cell "⭐⭐ Medium" [ref=e275]
+              - row "SPECS Complex, technical tasks ⭐⭐⭐ High" [ref=e276]:
+                - cell "SPECS" [ref=e277]
+                - cell "Complex, technical tasks" [ref=e278]
+                - cell "⭐⭐⭐ High" [ref=e279]
+              - row "RISEN Multi-step processes ⭐⭐⭐ High" [ref=e280]:
+                - cell "RISEN" [ref=e281]
+                - cell "Multi-step processes" [ref=e282]
+                - cell "⭐⭐⭐ High" [ref=e283]
+              - row "TRACE Example-based learning ⭐⭐⭐ High" [ref=e284]:
+                - cell "TRACE" [ref=e285]
+                - cell "Example-based learning" [ref=e286]
+                - cell "⭐⭐⭐ High" [ref=e287]
+              - row "Google General research ⭐⭐ Medium" [ref=e288]:
+                - cell "Google" [ref=e289]
+                - cell "General research" [ref=e290]
+                - cell "⭐⭐ Medium" [ref=e291]
+              - row "RTF Training & education ⭐⭐ Medium" [ref=e292]:
+                - cell "RTF" [ref=e293]
+                - cell "Training & education" [ref=e294]
+                - cell "⭐⭐ Medium" [ref=e295]
+        - generic [ref=e296]:
+          - 'heading "Pro Tip: Test Multiple Frameworks" [level=2] [ref=e297]'
+          - generic [ref=e299]:
+            - paragraph [ref=e300]: "Here's the secret: the same prompt written in CRAFT vs SPECS might produce different results from the same AI model. Different frameworks trigger different reasoning patterns in the AI."
+            - paragraph [ref=e301]: That's why PromptQuorum lets you switch between frameworks instantly and see how the same idea gets restructured. Try your prompt in CRAFT, then switch to SPECS, then CO-STAR. Compare the results. You'll learn which frameworks work best for your specific use case.
+        - generic [ref=e302]:
+          - heading "Next Steps" [level=2] [ref=e303]
+          - generic [ref=e305]:
+            - paragraph [ref=e306]: Pick one framework that matches your most common task. Master it. Then experiment with others as your skills grow.
+            - paragraph [ref=e307]: Ready to put these frameworks into practice? Try them out with PromptQuorum, which includes all 8 frameworks plus automatic optimization and multi-AI comparison.
+    - generic [ref=e308]:
+      - paragraph [ref=e309]: Ready to optimize your prompts?
+      - link "Get Started" [ref=e311]:
+        - /url: /
+    - paragraph [ref=e312]:
+      - link "← Back to Blog" [ref=e313]:
+        - /url: /blog
+```
