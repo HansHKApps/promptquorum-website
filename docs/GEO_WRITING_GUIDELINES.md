@@ -2691,4 +2691,109 @@ const sectionId = section.isTldr
 
 ---
 
-**Last updated: April 19, 2026** | [Submit feedback](https://github.com/anthropics/promptquorum/issues)
+---
+
+## Freshness Tier Classification (Mandatory for All Articles)
+
+Every article on PromptQuorum must be classified into **exactly one** of three freshness tiers. This classification determines how often content is updated, whether it appears in search results for year-specific queries, and how long it remains authoritative.
+
+**Classification rule:** Choose the LOWEST tier that applies to your content. If multiple tiers fit, split the article into separate pages.
+
+### Decision Matrix
+
+| Tier | Definition | Year in Title? | Year in Slug? | Update Frequency | Examples | Set Field |
+|------|-----------|---|---|---|---|---|
+| **evergreen** | Timeless concepts, no year/model/hardware specificity | ❌ NO | ❌ NO | Never (only if new research invalidates content) | "What is Prompt Engineering?", "How to Fine-Tune an LLM", "Introduction to RAG" | `freshness_tier: 'evergreen'` |
+| **semi_annual** | Specific models, hardware, pricing, or "best-of" rankings with year for context | ✅ YES (required) | ❌ NO | Every 6 months | "Best Llama 3.2 Models 2026", "RTX 4090 vs RTX 4080 Performance 2026", "Top Open-Source LLMs April 2026" | `freshness_tier: 'semi_annual'`, `next_refresh_due: 'ISO-8601'` |
+| **annual** | Year-specific events, rankings, or timelines with year embedded in URL | ✅ YES (required) | ✅ YES (required) | Annually (or archive after year passes) | "2026 AI Model Releases", "2026 GPU Price Rankings", "2026 LLM Benchmarks" | `freshness_tier: 'annual'`, `specific_year: 2026` |
+
+### Per-Tier Writing Rules
+
+#### Evergreen Articles
+
+**Audience expectation:** This content will be read 5 years from now. No references to specific product versions, GPU models, or benchmark dates.
+
+**Forbidden patterns:**
+- ❌ "2024", "2025", "2026" (any year reference)
+- ❌ "Latest Llama 3.3", "Current RTX 4090 benchmark", "As of March 2026"
+- ❌ "Best models in 2026", "Top-performing GPU", "current state-of-the-art"
+- ❌ Specific model names: "Claude 3.5 Sonnet", "GPT-4o", "Llama 3.1 70B"
+- ❌ Specific hardware: "RTX 4090", "M3 Max", "H100"
+- ❌ Benchmark numbers: "150 tokens/sec", "8K context window"
+
+**Allowed patterns:**
+- ✅ "How LLMs work" (no year)
+- ✅ "Understanding token probability" (concept)
+- ✅ "Common hallucination types" (timeless patterns)
+- ✅ "Fine-tuning fundamentals" (methodology)
+- ✅ "Comparing approaches to RAG" (architectural comparison without winners)
+- ✅ Generic hardware categories: "GPU", "consumer laptop", "enterprise server" (no model names)
+
+**Internal links:** Link to semi_annual/annual articles for specific recommendations. Example:
+> "For current GPU recommendations, see [Best GPUs for Local LLMs 2026](/local-llms/best-gpus-local-llm)."
+
+#### Semi-Annual Articles
+
+**Audience expectation:** This content will be outdated in 6–12 months. It makes specific product/hardware recommendations or ranks current options.
+
+**Required:**
+- ✅ **Year in title or seoTitle** — e.g., "Best Open-Source LLMs 2026", "RTX 4090 Performance 2026"
+- ✅ **`next_refresh_due` field** — ISO date, 6 months from publishDate
+- ✅ **`current_models_mentioned` array** — list of specific model names included in content (helps with refresh reminders)
+- ✅ **`current_hardware_mentioned` array** — list of specific hardware names included in content
+
+**Allowed patterns:**
+- ✅ "Llama 3.2 8B outperforms Qwen 2.5 7B by 12% on MMLU"
+- ✅ "RTX 4090 (2024 release) vs RTX 5090 (2026)"
+- ✅ "As of April 2026, here are the best open-source LLMs:"
+- ✅ "Best practices for deploying Claude 3.5 Sonnet in production"
+
+**Update process:** Set a calendar reminder for `next_refresh_due`. At that date:
+1. Update model versions (e.g., Llama 3.2 → 3.3)
+2. Refresh benchmarks with new numbers
+3. Check if rankings have changed
+4. Update `next_refresh_due` to 6 months later
+5. Update `publishDate` and/or `dateModified` to reflect refresh
+
+#### Annual Articles
+
+**Audience expectation:** This content is time-bound to a specific year and will be archived/removed when that year passes.
+
+**Required:**
+- ✅ **Year in slug/URL** — e.g., `/blog/2026-ai-model-releases/`, `/local-llms/2026-gpu-rankings/`
+- ✅ **Year in title** — e.g., "2026 AI Model Releases Timeline"
+- ✅ **`specific_year` field** — set to the year (e.g., 2026)
+- ✅ **`archive_after` field** — optional ISO date after which article is moved to `/archive/`
+
+**Allowed patterns:**
+- ✅ "2026: The Year of Multimodal LLMs"
+- ✅ "2026 GPU Price Index"
+- ✅ "Comparing Q1 2026 Model Releases"
+- ✅ "Annual benchmark report: 2026"
+
+**Archival process:** After year X ends:
+1. Archive the article to `/archive/2026-ai-model-releases/` (or remove from index)
+2. Add internal link in current-year article pointing to archived version
+
+### Enforcement
+
+The build validator (`scripts/validate-freshness-tier.mjs`) runs at build time and enforces these rules:
+
+- **All articles published >= 2026-04-21** must have `freshness_tier` set (build FAILS if missing)
+- **Evergreen articles** are scanned for forbidden patterns (year refs, model names, hardware names); matches trigger build ERRORS
+- **Semi-annual articles** must have year in title (build ERROR if missing)
+- **Annual articles** must have year in slug (build ERROR if missing)
+
+### Splitting Articles
+
+**If your article has characteristics of multiple tiers, split it.**
+
+**Example: "Laptop vs Desktop for Running LLMs"**
+- Tier 1 (evergreen): "Understanding Thermal Constraints in Laptop vs Desktop Hardware"
+- Tier 2 (semi_annual): "Best Laptops & Desktops for Running Llama 3.2 in 2026"
+
+Write them as two separate articles, each with its own tier and URL.
+
+---
+
+**Last updated: April 20, 2026** | [Submit feedback](https://github.com/anthropics/promptquorum/issues)
