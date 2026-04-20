@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 415" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 415" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- White background -->
   <rect width="800" height="415" fill="#FFFFFF"/>
 
@@ -69,4 +69,4 @@
   <!-- Bottom bar -->
   <rect x="50" y="380" width="700" height="26" rx="5" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
   <text x="400" y="397" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">All frontends share one Ollama instance · Switch anytime · No model re-download needed</text>
-</svg>
+<text x="792" y="410" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

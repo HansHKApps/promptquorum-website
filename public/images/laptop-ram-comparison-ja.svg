@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="400" fill="#FFFFFF"/>
   <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">8GB対16GB RAM比較</text>
   <rect x="50" y="70" width="300" height="280" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
@@ -9,4 +9,4 @@
   <text x="600" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">16GB RAM
 (フルスピード13B)</text>
   <text x="600" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Full Q4 quantization</text>
-</svg>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

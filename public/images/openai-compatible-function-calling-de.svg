@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 370" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 370" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="370" fill="#FFFFFF"/>
   <defs>
     <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
@@ -78,4 +78,4 @@
   <text x="30" y="304" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">response = client.chat.completions.create(model="llama3.1:8b", messages=[...], <tspan fill="#6750A4" font-weight="700">tools=tools</tspan>)</text>
   <text x="30" y="322" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">if response.choices[0].message.<tspan fill="#6750A4" font-weight="700">tool_calls</tspan>:</text>
   <text x="30" y="340" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">    call = response.choices[0].message.tool_calls[0]  <tspan fill="#79747E"># → call.function.name, .arguments</tspan></text>
-</svg>
+<text x="792" y="365" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

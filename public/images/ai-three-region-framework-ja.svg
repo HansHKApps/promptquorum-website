@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- Background -->
   <rect width="800" height="420" fill="#FFFFFF"/>
 
@@ -170,4 +170,4 @@
   <text x="400" y="415" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
     これらの矛盾したビジョンが、グローバルなAI展開、データレジデンシー、調達を形成する。
   </text>
-</svg>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

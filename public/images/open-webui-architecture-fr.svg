@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- White background -->
   <rect width="800" height="360" fill="#FFFFFF"/>
 
@@ -56,4 +56,4 @@
   <rect x="80" y="305" width="640" height="40" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
   <text x="400" y="321" font-family="'SF Mono','Monaco',monospace" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \</text>
   <text x="400" y="337" font-family="'SF Mono','Monaco',monospace" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 open-webui:latest</text>
-</svg>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

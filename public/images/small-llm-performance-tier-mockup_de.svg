@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- Background -->
   <rect width="1000" height="600" fill="#f8f6ff"/>
 
@@ -70,4 +70,4 @@
   <text x="500" y="570" font-size="13" text-anchor="middle" fill="#999">
     Q4_K_M Quantisierung • CPU-Geschwindigkeiten auf modernen Laptops • April 2026
   </text>
-</svg>
+<text x="992" y="595" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

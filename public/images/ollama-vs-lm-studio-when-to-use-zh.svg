@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 18px; font-weight: 700; }
@@ -90,4 +90,4 @@
 
   <!-- Footer note -->
   <text x="400" y="405" class="footer-text" fill="#79747E" text-anchor="middle">两种工具均免费且本地运行。无需 API 密钥。</text>
-</svg>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

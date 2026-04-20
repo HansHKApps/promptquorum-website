@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .t { font-family: system-ui, -apple-system, sans-serif; }
@@ -60,4 +60,4 @@
   <text x="30" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">
     Plus lent par réponse, mais nettement plus précis sur les tâches mathématiques et logiques.
   </text>
-</svg>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

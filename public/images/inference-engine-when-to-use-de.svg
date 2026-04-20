@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 700; }
@@ -74,4 +74,4 @@
   </g>
 
   <text x="450" y="458" class="footer-text" fill="#79747E" text-anchor="middle">Alle drei Tools sind Open-Source und selbst gehostet. Kein API-Schlüssel nötig.</text>
-</svg>
+<text x="892" y="470" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

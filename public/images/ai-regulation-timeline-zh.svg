@@ -1,4 +1,4 @@
-<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- Background -->
   <rect width="900" height="480" fill="#FFFFFF"/>
 
@@ -121,4 +121,4 @@
   <text x="90" y="464" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
     🇪🇺 欧盟以规定性规则领导 | 🇺🇸 美国采取分行业+自愿方法 | 🇨🇳 中国实施国家AI控制
   </text>
-</svg>
+<text x="892" y="475" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

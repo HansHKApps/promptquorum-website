@@ -35,6 +35,7 @@ const STATIC_PAGES: Page[] = [
   { path: '/about',                priority: 0.5, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/waitlist',             priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/privacy',              priority: 0.3, changefreq: 'monthly', lastmod: '2026-03-15' },
+  { path: '/image-license',        priority: 0.3, changefreq: 'monthly', lastmod: '2026-04-20' },
 ]
 
 const PE_PAGES: Page[] = [

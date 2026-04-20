@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <filter id="shadow">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
@@ -99,4 +99,4 @@
   <!-- Bottom note -->
   <rect x="28" y="380" width="744" height="35" rx="6" fill="#F3E5F5" stroke="#6750A4" stroke-width="1"/>
   <text x="48" y="400" font-size="12" fill="#1C1B1F"><tspan font-weight="700">Pro Tip:</tspan> Match model size to VRAM. More RAM = use larger model at Q4, not smaller model at Q8.</text>
-</svg>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

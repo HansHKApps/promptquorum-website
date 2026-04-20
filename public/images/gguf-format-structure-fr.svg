@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <filter id="shadow">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
@@ -55,4 +55,4 @@
   <!-- Footer note -->
   <text x="400" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Remplace l'ancien format GGML. Le niveau de quantification est encodé dans le nom du fichier (Q4_K_M).</text>
   <text x="400" y="426" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#79747E" text-anchor="middle">Ollama télécharge les fichiers GGUF automatiquement : ollama pull llama3.1:8b</text>
-</svg>
+<text x="792" y="435" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

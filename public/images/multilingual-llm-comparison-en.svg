@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- White background -->
   <rect width="800" height="450" fill="#FFFFFF"/>
 
@@ -117,4 +117,4 @@
   <text x="20" y="405" font-size="12" font-weight="500" fill="#79747E" font-family="system-ui, -apple-system, sans-serif">
     Ratings based on 2026 benchmarks: JMT-bench (Japanese), MMLU (general), language-specific evaluations.
   </text>
-</svg>
+<text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

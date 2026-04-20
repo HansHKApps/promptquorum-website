@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1000 950" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1000 950" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- Background -->
   <rect width="1000" height="950" fill="#f8f6ff"/>
 
@@ -132,4 +132,4 @@
   <rect x="60" y="870" width="880" height="65" fill="#f0f4ff" stroke="#4f46e5" stroke-width="2" rx="4"/>
   <text x="80" y="895" font-size="14" font-weight="bold" fill="#2d1b4e">When to Use Each:</text>
   <text x="80" y="920" font-size="13" fill="#333">• <tspan font-weight="bold">4 GB machine:</tspan> Q4_K_M (0.5 GB headroom)  •  <tspan font-weight="bold">6-8 GB:</tspan> Q4_K_M or Q6_K  •  <tspan font-weight="bold">&lt;4 GB:</tspan> Q3_K_M only</text>
-</svg>
+<text x="992" y="945" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

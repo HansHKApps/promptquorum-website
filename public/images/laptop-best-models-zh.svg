@@ -1,8 +1,8 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="400" fill="#FFFFFF"/>
   <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">2026年笔记本电脑最佳本地LLM</text>
   <rect x="40" y="70" width="720" height="300" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
   <text x="400" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle" font-weight="700">Phi-3 mini • Llama 3.2 3B • Mistral 7B • Qwen 2.5 7B</text>
   <text x="400" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Phi-3 delivers GPT-3.5-level quality at 40 tokens/sec on 8GB RAM</text>
   <text x="400" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Best local LLM choice for MacBook users</text>
-</svg>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

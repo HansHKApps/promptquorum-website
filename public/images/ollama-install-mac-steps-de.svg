@@ -1,6 +1,6 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="400" fill="#FFFFFF"/>
   <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama Mac Installation</text>
   <rect x="80" y="100" width="640" height="240" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
   <text x="400" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="600">3 steps: Download .pkg → Install → ollama serve</text>
-</svg>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

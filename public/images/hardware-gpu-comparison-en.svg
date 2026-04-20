@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- Background -->
   <rect width="800" height="400" fill="#FFFFFF"/>
   
@@ -35,4 +35,4 @@
   <text x="200" y="206" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">24 GB</text>
   <text x="320" y="206" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$1800</text>
   <text x="500" y="206" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">Poor</text>
-</svg>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

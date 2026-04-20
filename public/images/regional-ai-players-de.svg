@@ -1,4 +1,4 @@
-<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- Background -->
   <rect width="900" height="500" fill="#FFFFFF"/>
 
@@ -146,4 +146,4 @@
   <text x="450" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
     US hat Skalierung + Geschwindigkeit | EU hat Open-Source-Dynamik | China hat staatliche Unterstützung + Kontrolle
   </text>
-</svg>
+<text x="892" y="495" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
