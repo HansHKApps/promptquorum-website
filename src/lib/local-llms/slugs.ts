@@ -44,7 +44,6 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-hardware-guide-2026':        'local-llm-hardware-guide-2026',
   'vram-calculator-local-llm':            'vram-calculator-local-llm',
   'gpu-vs-cpu-vs-apple-silicon':          'gpu-vs-cpu-vs-apple-silicon',
-  'quantization-offloading-layer-splitting': 'quantization-offloading-layer-splitting',
   'double-local-llm-speed':              'double-local-llm-speed',
   'best-gpus-for-local-llms':             'best-gpus-for-local-llms',
   'run-70b-models-24gb-vram':             'run-70b-models-24gb-vram',

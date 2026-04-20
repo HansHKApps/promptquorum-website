@@ -76,7 +76,6 @@ export const llmThemes: LLMTheme[] = [
       'local-llm-hardware-guide-2026',
       'vram-calculator-local-llm',
       'gpu-vs-cpu-vs-apple-silicon',
-      'quantization-offloading-layer-splitting',
       'double-local-llm-speed',
       'best-gpus-for-local-llms',
       'run-70b-models-24gb-vram',

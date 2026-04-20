@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/local-llms/quantization-offloading-layer-splitting',
+        destination: '/local-llms/llm-quantization-explained',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {
