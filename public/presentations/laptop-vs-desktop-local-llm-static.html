@@ -340,10 +340,7 @@
   </div>
 
   <script>
-    const CONTENT = {
-      en: {
-        title: 'Laptop vs Desktop for Local LLMs',
-        slides: [
+    const SLIDES = [
           {
             type: 'title',
             h1: 'Laptop vs Desktop for Local LLMs',
@@ -463,12 +460,14 @@
             cta: 'Try PromptQuorum Free',
             href: 'https://www.promptquorum.com'
           }
-        ]
-      },
-      de: { title: 'Laptop vs Desktop für lokale LLMs', slides: CONTENT.en.slides.map(s => s) },
-      fr: { title: 'Laptop vs Desktop pour LLMs locaux', slides: CONTENT.en.slides.map(s => s) },
-      ja: { title: 'ラップトップ対デスクトップのローカルLLM', slides: CONTENT.en.slides.map(s => s) },
-      zh: { title: '笔记本电脑与台式机本地大语言模型', slides: CONTENT.en.slides.map(s => s) }
+        ];
+
+    const CONTENT = {
+      en: { title: 'Laptop vs Desktop for Local LLMs', slides: SLIDES },
+      de: { title: 'Laptop vs Desktop für lokale LLMs', slides: SLIDES },
+      fr: { title: 'Laptop vs Desktop pour LLMs locaux', slides: SLIDES },
+      ja: { title: 'ラップトップ対デスクトップのローカルLLM', slides: SLIDES },
+      zh: { title: '笔记本电脑与台式机本地大语言模型', slides: SLIDES }
     };
 
     function renderSlide(slide) {
