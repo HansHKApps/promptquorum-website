@@ -243,6 +243,38 @@ Google indexes PDFs as standalone documents. Use direct file URLs so the PDF is 
 - Avoid vague superlatives ("best," "leading," "powerful")
 - Compare against benchmarks, not competitors
 
+### Image Branding & Attribution
+
+**Every image (SVG, diagram, chart) embedded in presentations MUST include:**
+
+1. **Corner Attribution Mark**
+   - Small text in bottom-right corner: "promptquorum.com" (gray, 9–10px font)
+   - Position: x="792" y="345" in SVG (viewBox 0 0 800 350)
+   - Color: `#BBBBBB` (light gray)
+
+2. **Dublin Core Metadata**
+   - Embedded `<metadata>` block in SVG `<head>`
+   - Includes: dc:creator, dc:rights, dc:source
+   - Example:
+     ```xml
+     <metadata>
+       <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <rdf:Description>
+           <dc:creator>PromptQuorum</dc:creator>
+           <dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights>
+           <dc:source>https://www.promptquorum.com</dc:source>
+         </rdf:Description>
+       </rdf:RDF>
+     </metadata>
+     ```
+
+3. **Clickable Link (Optional but Recommended)**
+   - Wrap corner mark or entire image in `<a>` link to https://www.promptquorum.com
+   - Improves brand discovery and click-through from presentations
+   - Example: `<a href="https://www.promptquorum.com" target="_blank" rel="noopener">promptquorum.com</a>`
+
+**Automation:** Run `npm run brand-images` after adding new SVGs — this script automatically adds corner marks and Dublin Core metadata to all unbranded images.
+
 ### Sources & Citations
 - Final slide includes real URLs
 - GEO crawlers check citation quality
@@ -285,6 +317,7 @@ Google indexes PDFs as standalone documents. Use direct file URLs so the PDF is 
 Before publishing, verify:
 
 - [ ] **🔴 CRITICAL: Slide 2 "At a Glance"** — 2–3 specific numbers with full context (not vague statements). This determines AI citation extraction. Missing this = GEO citations lost.
+- [ ] **🔴 CRITICAL: Image Branding** — All embedded images (SVGs, diagrams) have corner attribution "promptquorum.com" and Dublin Core metadata. Run `npm run brand-images` after creating new images.
 - [ ] Slide count: 8–12 slides
 - [ ] Slide 1: Title + definition, includes year
 - [ ] Slide 2: "At a Glance" with 2–3 specific numbers (each ≥15 words, each with measurable impact)
