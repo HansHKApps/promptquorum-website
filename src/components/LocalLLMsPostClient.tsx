@@ -16,11 +16,11 @@ interface Props {
 
 // Section header translations
 const SECTION_HEADER_LABELS: Record<Language, Record<string, string>> = {
-  en: { keyTakeaways: 'Key Takeaways' },
-  de: { keyTakeaways: 'Wichtigste Erkenntnisse' },
-  fr: { keyTakeaways: 'Points clés' },
-  ja: { keyTakeaways: '重要なポイント' },
-  zh: { keyTakeaways: '关键要点' },
+  en: { keyTakeaways: 'Key Takeaways', tableOfContents: 'Contents' },
+  de: { keyTakeaways: 'Wichtigste Erkenntnisse', tableOfContents: 'Inhalt' },
+  fr: { keyTakeaways: 'Points clés', tableOfContents: 'Sommaire' },
+  ja: { keyTakeaways: '重要なポイント', tableOfContents: '目次' },
+  zh: { keyTakeaways: '关键要点', tableOfContents: '目录' },
 }
 
 // Post UI translations
@@ -582,7 +582,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {/* Table of Contents */}
         {(article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Contents</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].tableOfContents}</p>
             <ol className="space-y-1">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>

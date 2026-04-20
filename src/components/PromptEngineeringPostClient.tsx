@@ -110,21 +110,11 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
 
 // Section header translations
 const SECTION_HEADER_LABELS: Record<Language, Record<string, string>> = {
-  en: {
-    keyTakeaways: 'Key Takeaways',
-  },
-  de: {
-    keyTakeaways: 'Wichtigste Erkenntnisse',
-  },
-  fr: {
-    keyTakeaways: 'Points clés',
-  },
-  ja: {
-    keyTakeaways: '重要なポイント',
-  },
-  zh: {
-    keyTakeaways: '关键要点',
-  },
+  en: { keyTakeaways: 'Key Takeaways', tableOfContents: 'Contents' },
+  de: { keyTakeaways: 'Wichtigste Erkenntnisse', tableOfContents: 'Inhalt' },
+  fr: { keyTakeaways: 'Points clés', tableOfContents: 'Sommaire' },
+  ja: { keyTakeaways: '重要なポイント', tableOfContents: '目次' },
+  zh: { keyTakeaways: '关键要点', tableOfContents: '目录' },
 }
 
 // Maps article display titles to their URL slugs
