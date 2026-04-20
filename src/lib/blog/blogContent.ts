@@ -7013,6 +7013,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
   },
   'geopolitics-and-ai': {
     en: {
+      freshness_tier: 'semi_annual',
       category: 'AI Policy & Regulation',
       title: 'Geopolitics of AI Regulation: EU vs US vs China (2026 Guide)',
       intro: 'Three incompatible regulatory visions for AI are now clashing globally. The EU enforces rights-based rules, the US prioritizes innovation, and China demands state control. This geopolitical divide reshapes AI deployment, data residency, and vendor strategy for every organization.',

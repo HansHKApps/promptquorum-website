@@ -62,7 +62,8 @@ function extractArticles(filePath, isLLM = false) {
   const lines = content.split('\n');
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    const slugMatch = line.match(/^\s*'([^']+)':\s*\{/);
+    // Match only top-level article entries (2 spaces indent only, not nested)
+    const slugMatch = line.match(/^  '([^']+)':\s*\{/);
 
     if (slugMatch) {
       const slug = slugMatch[1];
@@ -87,8 +88,22 @@ function extractArticles(filePath, isLLM = false) {
         if (foundEn) {
           // Extract specific fields from en block
           if (!publishDate && curr.includes('publishDate:')) {
-            const match = curr.match(/publishDate:\s*['"]([\d-]+)['"]/);
-            if (match) publishDate = match[1];
+            // Try ISO format (2026-04-20) first
+            let match = curr.match(/(\d{4}-\d{2}-\d{2})/);
+            if (match) {
+              publishDate = match[1];
+            } else {
+              // Try "Published Month D, YYYY" format
+              match = curr.match(/(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d+),\s+(\d{4})/i);
+              if (match) {
+                const months = { January: '01', February: '02', March: '03', April: '04', May: '05', June: '06',
+                               July: '07', August: '08', September: '09', October: '10', November: '11', December: '12' };
+                const month = months[match[1].charAt(0).toUpperCase() + match[1].slice(1).toLowerCase()];
+                const day = match[2].padStart(2, '0');
+                const year = match[3];
+                publishDate = `${year}-${month}-${day}`;
+              }
+            }
           }
 
           if (!freshnessTier && curr.includes('freshness_tier:')) {

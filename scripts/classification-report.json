@@ -1,0 +1,1644 @@
+[
+  {
+    "slug": "how-llms-actually-work",
+    "file": "pe",
+    "title": "How LLMs Actually Work: Tokens, Attention, and Inference",
+    "publishDate": "2026-03-30",
+    "suggested_tier": "semi_annual",
+    "confidence": 15,
+    "reasons": [
+      "year in title",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "why-enterprises-use-local-llms",
+    "file": "llm",
+    "title": "Why Enterprises Use Local LLMs: Cost, Compliance, and Control",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "evergreen",
+    "confidence": 25,
+    "reasons": [
+      "concept slug pattern"
+    ]
+  },
+  {
+    "slug": "best-budget-gpus-local-llm",
+    "file": "llm",
+    "title": "Best Budget GPUs for Local LLMs",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 25,
+    "reasons": [
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "used-gpus-for-local-llms",
+    "file": "llm",
+    "title": "Used GPUs for Local LLMs: Best Value Picks",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 25,
+    "reasons": [
+      "specific hardware"
+    ]
+  },
+  {
+    "slug": "local-llm-workstation-build",
+    "file": "llm",
+    "title": "Best Workstation Build for Serious Local AI",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 25,
+    "reasons": [
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "private-local-llm-sensitive-data",
+    "file": "llm",
+    "title": "Best Local LLM Setup for Sensitive Data",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 25,
+    "reasons": [
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-nas-storage-local-llm",
+    "file": "llm",
+    "title": "Best NAS and Storage for Local AI Models",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 25,
+    "reasons": [
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "local-llms-vs-claude-pro",
+    "file": "llm",
+    "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 25,
+    "reasons": [
+      "specific model names"
+    ]
+  },
+  {
+    "slug": "how-to-install-ollama",
+    "file": "llm",
+    "title": "Install Ollama: 2-Minute Setup for macOS, Windows & Linux",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "how-to-install-lm-studio",
+    "file": "llm",
+    "title": "Install LM Studio: GUI Setup for macOS, Windows & Linux",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "run-first-local-llm",
+    "file": "llm",
+    "title": "Run Your First Local LLM in 10 Minutes: Install to First Response",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "troubleshooting-local-llm-setup",
+    "file": "llm",
+    "title": "Fix Local LLM Errors in 2026: 10 Common Problems in Ollama, LM Studio, and vLLM",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-on-laptop",
+    "file": "llm",
+    "title": "Run Local LLMs on a Laptop: RAM, Speed & Thermals 2026",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-security-privacy-checklist",
+    "file": "llm",
+    "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-limitations",
+    "file": "llm",
+    "title": "Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "small-local-llm-models",
+    "file": "llm",
+    "title": "Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "70b-models-consumer-hardware",
+    "file": "llm",
+    "title": "Run 70B LLMs on Consumer Hardware 2026: RAM & GPU Setup",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "llm-quantization-explained",
+    "file": "llm",
+    "title": "LLM Quantization Explained: How Q4_K_M, Q8_0, and GGUF Formats Work in 2026",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-model-updates-2026",
+    "file": "llm",
+    "title": "Local LLM Model Updates 2026: Every Major Open-Weight Release This Year",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llms-vs-cloud-apis",
+    "file": "llm",
+    "title": "Local LLMs vs Cloud APIs: Which Should You Use in 2026?",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-openai-compatible-api",
+    "file": "llm",
+    "title": "OpenAI-Compatible API for Local LLMs (Ollama, vLLM, LM Studio) - Python & Node.js Guide 2026",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "lm-studio-advanced-features",
+    "file": "llm",
+    "title": "LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "ollama-command-guide",
+    "file": "llm",
+    "title": "Ollama Command Guide: Every Command Explained (2026)",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "desktop-vs-webui-local-llm",
+    "file": "llm",
+    "title": "Desktop vs Web UI for Local LLMs: Which Interface Should You Choose?",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "local-llms-with-vscode-cursor",
+    "file": "llm",
+    "title": "Local LLMs With VS Code and Cursor: Setup and Best Practices",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "headless-local-llms",
+    "file": "llm",
+    "title": "Headless Local LLMs: Running Models Without a UI (2026)",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "gpu-vs-cpu-vs-apple-silicon",
+    "file": "llm",
+    "title": "GPU vs CPU vs Apple Silicon for Local LLMs: Performance Breakdown",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "quantization-offloading-layer-splitting",
+    "file": "llm",
+    "title": "Quantization, Offloading, and Layer Splitting: Advanced VRAM Reduction",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-power-consumption",
+    "file": "llm",
+    "title": "Local LLM Power Consumption and Cooling: What You Actually Need",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "multi-gpu-local-llms",
+    "file": "llm",
+    "title": "Multi-GPU Local LLMs: Scaling With 2+ GPUs in 2026",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "laptop-vs-desktop-local-llm",
+    "file": "llm",
+    "title": "Laptop vs Desktop for Local LLMs 2026: Cost, Speed & 70B Capability",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "mobile-local-llms",
+    "file": "llm",
+    "title": "Mobile Local LLMs in 2026: Run AI Models on iPhone and Android",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-rag-2026",
+    "file": "llm",
+    "title": "Local RAG 2026: Build Document Q&A Systems Without Cloud APIs",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "fine-tuning-local-llms-lora",
+    "file": "llm",
+    "title": "Fine-Tuning Local LLMs With LoRA: Adapt Models to Your Domain",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-ai-agents-langgraph-ollama",
+    "file": "llm",
+    "title": "Local AI Agents With LangGraph and Ollama: Build Autonomous Decision-Making Systems",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "prompt-engineering-for-local-models",
+    "file": "llm",
+    "title": "Prompt Engineering For Local Models: Techniques That Actually Work",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "private-local-ai-for-business",
+    "file": "llm",
+    "title": "Private Local AI For Business: On-Premises Deployment Without Cloud",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "local-llms-for-coding-workflows",
+    "file": "llm",
+    "title": "Local LLMs For Coding Workflows: Code Generation, Review, and Testing",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "multimodal-local-llms",
+    "file": "llm",
+    "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "local-vs-cloud-agents",
+    "file": "llm",
+    "title": "Local vs Cloud Agents: When to Choose Each Approach",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "create-custom-local-models",
+    "file": "llm",
+    "title": "Create Custom Local Models: Pre-Training and Domain Adaptation",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "future-of-local-llms",
+    "file": "llm",
+    "title": "Future of Local LLMs: Trends and What\\",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "on-prem-air-gapped-local-llm",
+    "file": "llm",
+    "title": "On-Prem Air-Gapped Local LLMs: Isolated Deployment for Classified Environments",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "enterprise-compliance-local-llms",
+    "file": "llm",
+    "title": "Enterprise Compliance: GDPR, HIPAA, SOC2, and AI Regulations",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "scaling-local-llms-enterprise",
+    "file": "llm",
+    "title": "Scaling Local LLMs for Enterprise: Multi-User, Multi-GPU Production Deployment",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "corporate-rag-local-llms",
+    "file": "llm",
+    "title": "Corporate RAG With Local LLMs: Document Q&A for Organizations",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "how-much-vram-local-llm",
+    "file": "llm",
+    "title": "How Much VRAM Do You Need for Local LLMs?",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "lm-studio-vs-jan-ai",
+    "file": "llm",
+    "title": "LM Studio vs Jan AI: Which Is Better for Local LLMs?",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "open-webui-vs-sillytavern",
+    "file": "llm",
+    "title": "Open WebUI vs SillyTavern: Best Chat UI for Local LLMs",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "quantization-levels-comparison",
+    "file": "llm",
+    "title": "Q4 vs Q5 vs Q8: Which Quantization Level Should You Use?",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-setup-for-teams",
+    "file": "llm",
+    "title": "Local LLM Setup for Business Teams",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "vpn-for-local-llm-users",
+    "file": "llm",
+    "title": "VPNs and Local AI: What You Need to Know",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "secure-offline-local-llm-workflow",
+    "file": "llm",
+    "title": "How to Build a Secure Offline Local LLM Workflow",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "evergreen",
+    "confidence": 30,
+    "reasons": [
+      "conceptual title pattern"
+    ]
+  },
+  {
+    "slug": "local-llms-vs-chatgpt-plus",
+    "file": "llm",
+    "title": "Local LLMs vs ChatGPT Plus: Full Cost Comparison",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "local-llm-vs-cloud-gpu-cost",
+    "file": "llm",
+    "title": "Local LLM vs Cloud GPU: What Is Cheaper?",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "mac-vs-windows-vs-linux-local-llm",
+    "file": "llm",
+    "title": "Mac vs Windows vs Linux for Local LLMs",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "gpu-vs-ai-subscription-roi",
+    "file": "llm",
+    "title": "Is Buying a GPU Worth It vs Paying for AI Subscriptions?",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "build-a-prompt-library",
+    "file": "pe",
+    "title": "Build a Prompt Library That Saves Hours",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "prompt-engineering-history",
+    "file": "pe",
+    "title": "From GPT-2 to Today: How Prompt Engineering Evolved",
+    "publishDate": "2026-03-01",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "prompt-building-blocks",
+    "file": "pe",
+    "title": "The 5 Building Blocks Every Prompt Needs",
+    "publishDate": "2026-03-01",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "ai-hallucinations-how-to-stop",
+    "file": "pe",
+    "title": "AI Hallucinations: Why AI Makes Things Up — and How to Stop Them",
+    "publishDate": "2026-03-22",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "temperature-and-top-p",
+    "file": "pe",
+    "title": "Temperature and Top-P: Control AI Creativity",
+    "publishDate": "2026-03-22",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "prompt-for-speed",
+    "file": "pe",
+    "title": "Faster AI Answers: How to Prompt for Speed",
+    "publishDate": "2026-03-22",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "context-windows-explained",
+    "file": "pe",
+    "title": "Context Windows Explained: Why AI Forgets (and What to Do)",
+    "publishDate": "2026-03-22",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "prompt-with-images",
+    "file": "pe",
+    "title": "Beyond Text: How to Prompt With Images",
+    "publishDate": "2026-03-25",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "tokens-costs-limits",
+    "file": "pe",
+    "title": "Tokens, Costs & Limits: The Economics of AI Prompting in 2026",
+    "publishDate": "2026-03-22",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "system-prompt-vs-user-prompt",
+    "file": "pe",
+    "title": "System Prompt vs User Prompt: What\\",
+    "publishDate": "2026-03-22",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "ai-powered-research",
+    "file": "pe",
+    "title": "AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows",
+    "publishDate": "2026-03-23",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "seo-meets-ai",
+    "file": "pe",
+    "title": "SEO Meets AI: How GEO Is Replacing the Old Playbook",
+    "publishDate": "2026-03-23",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "teaching-with-ai",
+    "file": "pe",
+    "title": "Teaching With AI: Tools, Outcomes, and Prompts for Educators in 2026",
+    "publishDate": "2026-03-23",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "extract-and-summarise",
+    "file": "pe",
+    "title": "Extract and Summarise With AI",
+    "publishDate": "2026-03-23",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "ai-code-review",
+    "file": "pe",
+    "title": "AI Code Review: Tools, Hallucination Rates, and Verification Workflows",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "control-the-output",
+    "file": "pe",
+    "title": "Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "your-brand-voice-ai",
+    "file": "pe",
+    "title": "Your Brand Voice AI: Training Models to Speak in Your Tone",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "build-quality-checks",
+    "file": "pe",
+    "title": "Build Quality Checks With AI In Mind: Detecting Hallucinations and Fabricated Dependencies",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "prompt-injection-and-security",
+    "file": "pe",
+    "title": "Prompt Injection & Security: How to Defend AI Systems",
+    "publishDate": "2026-03-30",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "ai-limitations-what-llms-cant-do",
+    "file": "pe",
+    "title": "AI Limitations: What LLMs Can\\",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "open-source-vs-proprietary-llms",
+    "file": "pe",
+    "title": "Open Source vs Proprietary LLMs",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "geopolitics-and-ai",
+    "file": "pe",
+    "title": "AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)",
+    "publishDate": "2026-04-01",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "which-framework-to-use",
+    "file": "pe",
+    "title": "Which Prompt Framework Should You Use?",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "single-prompt-method",
+    "file": "pe",
+    "title": "The Single Step Prompt Method",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "ape-framework",
+    "file": "pe",
+    "title": "The APE Framework",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "craft-framework",
+    "file": "pe",
+    "title": "The CRAFT Framework",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "co-star-framework",
+    "file": "pe",
+    "title": "The CO-STAR Framework",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "specs-framework",
+    "file": "pe",
+    "title": "The SPECS Framework",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "risen-framework",
+    "file": "pe",
+    "title": "The RISEN Framework",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "trace-framework",
+    "file": "pe",
+    "title": "The TRACE Framework",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "google-prompting-guide",
+    "file": "pe",
+    "title": "Google",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "rtf-framework",
+    "file": "pe",
+    "title": "The RTF Framework",
+    "publishDate": "2026-03-24",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "zero-shot-vs-few-shot",
+    "file": "pe",
+    "title": "Zero-Shot vs. Few-Shot Prompting",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "constrained-prompting",
+    "file": "pe",
+    "title": "Constrained Prompting",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "chain-of-thought-prompting",
+    "file": "pe",
+    "title": "Chain-of-Thought Prompting: Make AI Show Its Reasoning",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "prompt-chaining",
+    "file": "pe",
+    "title": "Prompt Chaining: How to Break Big Tasks Into Winning Steps",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "persona-prompting",
+    "file": "pe",
+    "title": "Persona Prompting: Give Your AI a Role and Watch It Improve",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "negative-prompting",
+    "file": "pe",
+    "title": "Negative Prompting: Tell the AI What NOT to Do",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "self-consistency-prompting",
+    "file": "pe",
+    "title": "Self-Consistency Prompting: Let the AI Check Its Own Work",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "tree-of-thought-react",
+    "file": "pe",
+    "title": "Tree of Thought & ReAct: Advanced Reasoning for Hard Problems",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "rag-explained",
+    "file": "pe",
+    "title": "RAG Explained: How to Ground AI Answers in Real Data",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "structured-output-json-mode",
+    "file": "pe",
+    "title": "Structured Output in LLMs: JSON Mode, Examples, and When to Use It",
+    "publishDate": "2026-03-26",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "prompt-engineering-glossary",
+    "file": "pe",
+    "title": "Prompt Engineering Glossary: 500 Key Terms",
+    "publishDate": "2026-03-28",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "best-prompt-testing-tools",
+    "file": "pe",
+    "title": "Braintrust vs PromptHub vs Vellum",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "best-prompt-management-platforms",
+    "file": "pe",
+    "title": "PromptLayer vs Mirascope vs PromptPerfect",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "braintrust-vs-prompthub-vs-vellum",
+    "file": "pe",
+    "title": "Prompt Engineering vs Fine-Tuning",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "promptlayer-vs-mirascope-vs-promptperfect",
+    "file": "pe",
+    "title": "Prompt Engineering vs RAG",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "prompt-engineering-vs-fine-tuning",
+    "file": "pe",
+    "title": "Manual vs Automated Prompt Optimization",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "default (insufficient signals)"
+    ]
+  },
+  {
+    "slug": "prompt-evaluation-metrics",
+    "file": "pe",
+    "title": "Prompt Evaluation Metrics: What to Measure and How",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "geopolitics-and-ai",
+    "file": "blog",
+    "title": "Geopolitics of AI Regulation: EU vs US vs China (2026 Guide)",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 30,
+    "reasons": [
+      "year in title"
+    ]
+  },
+  {
+    "slug": "double-local-llm-speed",
+    "file": "llm",
+    "title": "How to Double Local LLM Speed: Optimization Techniques",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 45,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "run-70b-models-24gb-vram",
+    "file": "llm",
+    "title": "How to Run 70B Models on 24GB VRAM: Advanced Techniques",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 45,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "write-better-code-with-ai",
+    "file": "pe",
+    "title": "How to Write Better Code With AI: Prompts, Models, and Security in 2026",
+    "publishDate": "2026-03-22",
+    "suggested_tier": "semi_annual",
+    "confidence": 45,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "prompt-engineering-vs-rag",
+    "file": "pe",
+    "title": "How To Evaluate Prompt Quality: A Practical Framework",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 45,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "manual-vs-automated-prompt-optimization",
+    "file": "pe",
+    "title": "How To Evaluate Prompt Quality: A Practical Framework",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 45,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "how-to-evaluate-prompt-quality",
+    "file": "pe",
+    "title": "How To Evaluate Prompt Quality: A Practical Framework",
+    "publishDate": "2026-04-10",
+    "suggested_tier": "semi_annual",
+    "confidence": 45,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "local-llm-one-click-installers",
+    "file": "llm",
+    "title": "Local LLM One-Click Installers: Ollama vs LM Studio vs Jan AI vs GPT4All Compared",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 50,
+    "reasons": [
+      "year in title",
+      "product comparison with specifics"
+    ]
+  },
+  {
+    "slug": "ollama-vs-lm-studio",
+    "file": "llm",
+    "title": "Ollama vs LM Studio in 2026: Which Local LLM Tool Should You Choose?",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 50,
+    "reasons": [
+      "year in title",
+      "product comparison with specifics"
+    ]
+  },
+  {
+    "slug": "text-generation-webui-vs-vllm-vs-llamacpp",
+    "file": "llm",
+    "title": "Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 50,
+    "reasons": [
+      "year in title",
+      "product comparison with specifics"
+    ]
+  },
+  {
+    "slug": "llamacpp-vs-ollama-vs-vllm",
+    "file": "llm",
+    "title": "llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 50,
+    "reasons": [
+      "year in title",
+      "product comparison with specifics"
+    ]
+  },
+  {
+    "slug": "what-are-local-llms",
+    "file": "llm",
+    "title": "What Are Local LLMs? How Running AI Models on Your Own Hardware Works",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "evergreen",
+    "confidence": 55,
+    "reasons": [
+      "conceptual title pattern",
+      "concept slug pattern"
+    ]
+  },
+  {
+    "slug": "best-local-llms-for-creative-writing",
+    "file": "llm",
+    "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "long-context-local-llms",
+    "file": "llm",
+    "title": "Best Long Context Local LLMs April 2026: 128K Context on Ollama -- Model List and RAM Guide",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "top-open-source-models-ollama",
+    "file": "llm",
+    "title": "Best Ollama Models April 2026: Top 10 List with Pull Commands",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-local-llm-frontends",
+    "file": "llm",
+    "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-local-rag-tools",
+    "file": "llm",
+    "title": "Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-amd-gpus-local-llm",
+    "file": "llm",
+    "title": "Best AMD GPUs for Local LLMs",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-mini-pcs-local-llm",
+    "file": "llm",
+    "title": "Best Mini PCs for Running Local LLMs",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-laptops-local-llm",
+    "file": "llm",
+    "title": "Best Laptops for Running Local LLMs",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "best/top/fastest recommendations",
+      "slug pattern: best-laptops-local"
+    ]
+  },
+  {
+    "slug": "best-local-llm-stack-use-case",
+    "file": "llm",
+    "title": "Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "local-llm-developer-stack",
+    "file": "llm",
+    "title": "Best Local LLM Stack for Developers (April 2026)",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-local-llms-code-review",
+    "file": "llm",
+    "title": "Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-local-llms-business-writing",
+    "file": "llm",
+    "title": "Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "gpt-claude-gemini-which-model",
+    "file": "pe",
+    "title": "GPT, Claude or Gemini: How to Pick the Right AI Model",
+    "publishDate": "2026-03-23",
+    "suggested_tier": "semi_annual",
+    "confidence": 55,
+    "reasons": [
+      "year in title",
+      "specific model names"
+    ]
+  },
+  {
+    "slug": "local-llm-hardware-guide-2026",
+    "file": "llm",
+    "title": "Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 60,
+    "reasons": [
+      "year in title",
+      "slug pattern: local-llm-hardware"
+    ]
+  },
+  {
+    "slug": "vram-calculator-local-llm",
+    "file": "llm",
+    "title": "VRAM Calculator 2026: 7B/13B/70B LLM GPU Requirements (Q4, Q5, Q8)",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 60,
+    "reasons": [
+      "year in title",
+      "slug pattern: vram-calculator-local"
+    ]
+  },
+  {
+    "slug": "fundamentals-of-prompt-optimization",
+    "file": "pe",
+    "title": "How to Optimize Prompts: Prompt Optimization Techniques & Best Practices",
+    "publishDate": "2026-04-02",
+    "suggested_tier": "semi_annual",
+    "confidence": 70,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "concept slug pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "what-is-prompt-engineering",
+    "file": "pe",
+    "title": "What Is Prompt Engineering? — PromptQuorum Guide",
+    "publishDate": "2026-03-01",
+    "suggested_tier": "semi_annual",
+    "confidence": 70,
+    "reasons": [
+      "year in title",
+      "conceptual title pattern",
+      "concept slug pattern",
+      "(conflicting: how/what + recommendations)"
+    ]
+  },
+  {
+    "slug": "qwen-vs-llama-vs-mistral",
+    "file": "llm",
+    "title": "Qwen2.5 vs Llama 3.3 vs Mistral in 2026: Full Benchmark Comparison",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 75,
+    "reasons": [
+      "year in title",
+      "specific model names",
+      "product comparison with specifics"
+    ]
+  },
+  {
+    "slug": "multilingual-local-llms",
+    "file": "llm",
+    "title": "Multilingual Local LLMs: Best Models for Non-English Languages in 2026",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 75,
+    "reasons": [
+      "year in title",
+      "specific model names",
+      "product comparison with specifics"
+    ]
+  },
+  {
+    "slug": "rtx-5090-vs-rtx-4090-local-llm",
+    "file": "llm",
+    "title": "RTX 5090 vs RTX 4090 for Local LLM Inference",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 75,
+    "reasons": [
+      "year in title",
+      "specific hardware",
+      "product comparison with specifics"
+    ]
+  },
+  {
+    "slug": "best-local-llms-2026",
+    "file": "llm",
+    "title": "Best Local LLMs in 2026: Top Models Ranked by Task, Hardware, and Quality",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 80,
+    "reasons": [
+      "year in title",
+      "specific model names",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-local-llms-for-coding",
+    "file": "llm",
+    "title": "Best Local LLMs for Coding in 2026: Ranked by HumanEval, RAM, and Language Support",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 80,
+    "reasons": [
+      "year in title",
+      "specific model names",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "fastest-local-llms-low-end-pcs",
+    "file": "llm",
+    "title": "Fastest Local LLMs for Low-End PCs in 2026: Models by VRAM Tier (CPU to 8 GB)",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 80,
+    "reasons": [
+      "year in title",
+      "specific model names",
+      "best/top/fastest recommendations"
+    ]
+  },
+  {
+    "slug": "best-gpus-for-local-llms",
+    "file": "llm",
+    "title": "Best GPUs for Local LLMs in 2026: Complete Benchmark and Selection Guide",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 85,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations",
+      "slug pattern: best-gpus-for"
+    ]
+  },
+  {
+    "slug": "best-7b-models-consumer-hardware",
+    "file": "llm",
+    "title": "Best 7B Models for Consumer Hardware",
+    "publishDate": "2026-04-05",
+    "suggested_tier": "semi_annual",
+    "confidence": 85,
+    "reasons": [
+      "year in title",
+      "best/top/fastest recommendations",
+      "slug pattern: best-7b-models"
+    ]
+  },
+  {
+    "slug": "best-beginner-local-llm-models",
+    "file": "llm",
+    "title": "Best Local LLM Models for Beginners in 2026: Ranked by RAM, Speed, and Quality",
+    "publishDate": "2026-04-04",
+    "suggested_tier": "semi_annual",
+    "confidence": 100,
+    "reasons": [
+      "year in title",
+      "specific model names",
+      "best/top/fastest recommendations",
+      "slug pattern: best-beginner-local"
+    ]
+  }
+]
