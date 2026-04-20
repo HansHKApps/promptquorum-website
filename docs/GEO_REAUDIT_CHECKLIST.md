@@ -918,4 +918,39 @@ _Audit date: April 17, 2026. External audit scored 82/100 (SEO 87, GEO 88, AEO 7
 
 ---
 
-**Last updated:** April 17, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
+### `laptop-vs-desktop-local-llm`
+
+_Audit date: April 20, 2026. Article upgraded from ~42% to ~92% compliance._
+
+**Fixed issues (CRITICAL priority):**
+- [x] 🔴 **No schema blocks** — added TechArticle, FAQPage, ItemList schemas
+- [x] 🔴 **Performance table column key mismatch** — columns now match row keys; model names updated to 'Llama 3.1 7B'/'70B'
+- [x] 🔴 **No `id` fields on 5 sections** — all ToC anchors now functional
+- [x] 🔴 **No faqSection** — added 6 Q&As covering definitional, comparative, quantitative, procedural types
+- [x] 🔴 **metaDescription 128 chars** — expanded to 155 chars with fact opener and value prop
+
+**Fixed issues (HIGH priority):**
+- [x] 🔴 **No commonMistakes section** — added 5 practical mistakes with fixes
+- [x] 🔴 **No bold H2 openers** — added content[] to performance, cost sections
+- [x] 🔴 **TLDR 4 bullets** — expanded to 5
+- [x] 🔴 **No body-text internal links** — added 3 inline links in thermals, whenToChoose, desktopChoose
+- [x] 🟡 **H2 titles not question format** — performance, thermals, cost rewritten; desktopChoose added with `id`
+
+**Fixed issues (MEDIUM priority):**
+- [x] 🟡 **Related Reading 3 links** — expanded to 6
+- [x] 🟡 **Sources not markdown format** — converted to `[text](url)` with full URLs
+- [x] 🟡 **No quickFacts block** — added (6 numeric facts)
+- [x] 🟡 **No regionalContext section** — added EU/GDPR, Japan/APPI, China/CAC
+- [x] 🟡 **Model names vague** — updated all to 'Llama 3.1 7B', 'Llama 3.1 70B'
+
+**Remaining gaps (deferred, require component work):**
+- [ ] 🟢 **Lead Answer Block** — component doesn't support yet
+- [ ] 🟢 **Callout boxes** — component missing `callout` field type renderer
+- [ ] 🟢 **LLM snippet blocks** — no "In One Sentence" / "In Plain Terms" rendering support
+
+**Build verification:** ✓ `npm run build` passed (0 errors)  
+**Estimated compliance score:** ~92% (was ~42%)
+
+---
+
+**Last updated:** April 20, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
