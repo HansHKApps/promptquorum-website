@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptop vs Desktop for Local LLMs: Which Should You Choose? | PromptQuorum</title>
+  <meta name="description" content="Laptops are portable but thermally limited. Desktops offer unlimited scalability. Complete 2026 comparison: performance, thermals, cost analysis, and decision framework." />
+  <meta property="og:title" content="Laptop vs Desktop for Local LLMs — PromptQuorum" />
+  <meta property="og:description" content="Desktops are 3–6× faster and cost $19 vs $140 per tok/sec. Which should you choose?" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      padding: 20px;
+    }
+
+    .presentation-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: #f9f9f9;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 32px;
+      width: auto;
+    }
+
+    #header-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .header-links a {
+      color: #6750a4;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .header-links a:hover {
+      color: #5541a0;
+      text-decoration: underline;
+    }
+
+    .content-area {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #f5f7fa 0%, #f9f9f9 100%);
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 48px 64px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      background: white;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    .slide.title {
+      background: linear-gradient(135deg, #6750a4 0%, #7c5ab8 100%);
+      color: white;
+      align-items: center;
+      text-align: center;
+    }
+
+    .slide.title h1 {
+      font-size: clamp(36px, 5vw, 52px);
+      margin-bottom: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .slide.title p {
+      font-size: clamp(16px, 1.5vw, 20px);
+      line-height: 1.5;
+      margin: 8px 0;
+      opacity: 0.95;
+    }
+
+    .slide.title .logo {
+      height: 48px;
+      margin-bottom: 32px;
+    }
+
+    .slide h2 {
+      font-size: clamp(26px, 3.5vw, 38px);
+      margin-bottom: 24px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .slide p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      color: #555;
+    }
+
+    .slide ul, .slide ol {
+      margin-left: 24px;
+      margin-top: 16px;
+    }
+
+    .slide li {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+      color: #555;
+    }
+
+    .slide table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .slide th {
+      background: #f0f0f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #ddd;
+      color: #333;
+    }
+
+    .slide td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #555;
+    }
+
+    .slide tr:hover {
+      background: #fafafa;
+    }
+
+    .slide.cta {
+      background: linear-gradient(135deg, #6750a4 0%, #7c5ab8 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .slide.cta h2 {
+      color: white;
+      font-size: clamp(32px, 4vw, 48px);
+    }
+
+    .slide.cta p {
+      color: rgba(255,255,255,0.9);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .slide.cta a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: white;
+      color: #6750a4;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 16px;
+    }
+
+    .slide.cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: #f9f9f9;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      background: #6750a4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #5541a0;
+    }
+
+    .controls button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .comparison {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .comparison p {
+      font-size: 24px;
+      font-weight: 600;
+      color: #6750a4;
+      margin: 16px 0;
+    }
+
+    .comparison .tip {
+      font-size: 16px;
+      color: #6750a4;
+      margin-top: 24px;
+      font-style: italic;
+    }
+
+    @page {
+      size: 16in 9in;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+
+      .presentation-container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .header, .controls {
+        display: none;
+      }
+
+      .slide {
+        page-break-after: always;
+        display: flex !important;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        padding: 32px 24px;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .header-links {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Laptop vs Desktop for Local LLMs</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container">
+      <!-- Slides injected here -->
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Laptop vs Desktop for Local LLMs',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Laptop vs Desktop for Local LLMs',
+            subtitle: 'Which Should You Choose in 2026?',
+            link: 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm'
+          },
+          {
+            type: 'list',
+            h2: 'Quick Context',
+            items: [
+              '<strong>Laptop:</strong> 7-13B models, ~15-25 tok/sec, $1500-3000, portable',
+              '<strong>Desktop:</strong> 7B-70B models, 80-150 tok/sec, $1500-4000, stationary',
+              '<strong>The tension:</strong> Portability vs performance. Thermal constraints make laptops impractical for sustained inference.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'The Performance Gap',
+            line1: 'Desktop RTX 4070 Ti: 80 tok/sec',
+            line2: 'MacBook Pro M3 Max: 25 tok/sec (then throttles)',
+            tip: '3–6× performance difference. Desktops outperform laptops due to full-power GPUs and no thermal throttling.'
+          },
+          {
+            type: 'list',
+            h2: 'Key Speed Facts',
+            items: [
+              'MacBook Pro M3 Max: 25 tok/sec on Llama 3.1 7B (throttles after 15 min)',
+              'Desktop RTX 4070 Ti: 80 tok/sec on Llama 3.1 7B (sustained, no throttle)',
+              'Desktop RTX 4090: 150 tok/sec on Llama 3.1 70B',
+              'Laptop thermal throttle onset: 15–20 min (MacBook M3), 30–45 min (gaming laptops)'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Performance Benchmarks',
+            columns: ['Hardware', 'Model', 'Speed', 'Throttle'],
+            rows: [
+              { 'Hardware': 'MacBook Pro 16" M3 Max', 'Model': 'Llama 3.1 7B', 'Speed': '25 tok/sec', 'Throttle': 'After 15 min' },
+              { 'Hardware': 'Framework Laptop 16" + GPU', 'Model': 'Llama 3.1 7B', 'Speed': '45 tok/sec', 'Throttle': 'After 20 min' },
+              { 'Hardware': 'Desktop RTX 4070 Ti', 'Model': 'Llama 3.1 7B', 'Speed': '80 tok/sec', 'Throttle': 'None (24/7)' },
+              { 'Hardware': 'Desktop RTX 4090', 'Model': 'Llama 3.1 70B', 'Speed': '150 tok/sec', 'Throttle': 'None (24/7)' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'The Thermal Problem',
+            items: [
+              'Laptops have limited cooling: CPU + GPU at full load = high temperature, throttling',
+              'MacBook Pro M3 Max throttles after 15-20 minutes of sustained inference',
+              'Gaming laptops: Better cooling, but still throttle after 30-45 minutes',
+              'Desktop: Larger cooling systems, no throttling under normal conditions'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Cost Analysis: True Cost Per Token',
+            columns: ['Option', 'Total Cost', 'LLM Speed', 'Cost Efficiency'],
+            rows: [
+              { 'Option': 'MacBook Pro 16" M3 Max', 'Total Cost': '$3,500', 'LLM Speed': '25 tok/sec', 'Cost Efficiency': '$140/tok/sec' },
+              { 'Option': 'MacBook + external GPU', 'Total Cost': '$4,500+', 'LLM Speed': '80 tok/sec', 'Cost Efficiency': '$56/tok/sec' },
+              { 'Option': 'Desktop RTX 4070 Ti', 'Total Cost': '$1,500', 'LLM Speed': '80 tok/sec', 'Cost Efficiency': '$19/tok/sec' },
+              { 'Option': 'Desktop RTX 4090', 'Total Cost': '$3,300', 'LLM Speed': '150 tok/sec', 'Cost Efficiency': '$22/tok/sec' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'When to Choose Laptop',
+            items: [
+              'You need portability and work from multiple locations',
+              'You run short inference sessions (chat, experimentation)',
+              'You already own a high-end MacBook or gaming laptop',
+              'Offline capability and privacy are critical (no cloud APIs)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'When to Choose Desktop',
+            items: [
+              'You run 70B models or need 80+ tok/sec sustained speed',
+              'You run services 24/7 (APIs, batch processing)',
+              'You prioritize cost efficiency ($19 vs $140 per tok/sec)',
+              'You want to avoid thermal throttling entirely'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes to Avoid',
+            items: [
+              '<strong>Buying a laptop expecting desktop performance.</strong> Laptops thermally throttle after 15–20 minutes. For sustained inference (APIs, batch jobs), a desktop is the only practical choice.',
+              '<strong>Assuming Apple Silicon beats everything.</strong> MacBook Pro M3 Max runs 25 tok/sec. A $1,500 desktop RTX 4070 Ti runs 80 tok/sec on the same model — 3× faster at less cost.',
+              '<strong>Forgetting that 70B models require desktop-class VRAM.</strong> Llama 3.1 70B at Q4 needs 40+ GB VRAM — impossible on any current laptop.',
+              '<strong>Ignoring thermal throttling in benchmarks.</strong> Many benchmarks measure peak speed, not sustained speed. Always check 30-minute sustained performance.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Common Questions',
+            faqs: [
+              {
+                q: 'Can a MacBook Pro run large language models locally?',
+                a: 'Yes. MacBook Pro M3 Max runs Llama 3.1 7B at 25 tok/sec for 15 minutes before throttling. For short sessions and portability, it is capable.'
+              },
+              {
+                q: 'How much faster is a desktop than a laptop?',
+                a: 'A desktop RTX 4070 Ti runs Llama 3.1 7B at 80 tok/sec sustained — 3× faster than MacBook M3 Max, at the same price point ($1,500 vs $3,500).'
+              },
+              {
+                q: 'Is it worth buying a desktop just for local LLMs?',
+                a: 'Yes, if you run LLMs regularly. A $1,500 RTX 4070 Ti costs $19/tok/sec vs $140/tok/sec for MacBook. Desktop pays for itself in months.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Ready to Run Local LLMs?',
+            body: 'PromptQuorum lets you dispatch the same prompt to 25+ models simultaneously — on laptops, desktops, or cloud providers. Test which platform works best for your workflow.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: { title: 'Laptop vs Desktop für lokale LLMs', slides: CONTENT.en.slides.map(s => s) },
+      fr: { title: 'Laptop vs Desktop pour LLMs locaux', slides: CONTENT.en.slides.map(s => s) },
+      ja: { title: 'ラップトップ対デスクトップのローカルLLM', slides: CONTENT.en.slides.map(s => s) },
+      zh: { title: '笔记本电脑与台式机本地大语言模型', slides: CONTENT.en.slides.map(s => s) }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" style="height: 48px; margin-bottom: 32px;" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 18px; color: rgba(255,255,255,0.8);">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">View full article</a>
+            </p>
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2><ul style="font-size: 1.15em; margin-top: 20px;">`;
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>' + footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2><table><tr>`;
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col] || ''}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>' + footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <div class="comparison">
+              <p>${slide.line1}</p>
+              <p>${slide.line2}</p>
+              <p class="tip">${slide.tip}</p>
+            </div>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2><ol style="font-size: 1.05em; margin-top: 16px;">`;
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ol>' + footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 16px; text-align: left; font-size: 0.95em;"><strong style="color: #6750a4;">Q: ${faq.q}</strong><p style="margin-top: 6px; color: #666;">A: ${faq.a}</p></div>`;
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p>${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += `?lang=${lang}`;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
