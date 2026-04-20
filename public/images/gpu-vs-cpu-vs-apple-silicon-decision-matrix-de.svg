@@ -1,0 +1,104 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 18px; font-weight: 700; fill: #1c1b1f; }
+      .subtitle { font-size: 12px; fill: #79747e; }
+      .header { font-size: 13px; font-weight: 600; fill: white; }
+      .cell-label { font-size: 12px; fill: #49454f; }
+      .cell-bold { font-size: 12px; font-weight: 600; fill: #1c1b1f; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">Hardware-Entscheidungsmatrix: Wann welche wählen</text>
+  <text x="450" y="48" text-anchor="middle" class="subtitle">Je nach Anwendungsfall und Budget wählen</text>
+
+  <!-- Header row -->
+  <rect x="50" y="70" width="800" height="40" fill="#6750a4"/>
+  <text x="150" y="100" text-anchor="middle" class="header">GPU (NVIDIA)</text>
+  <text x="400" y="100" text-anchor="middle" class="header">Apple Silicon (M3 Max)</text>
+  <text x="700" y="100" text-anchor="middle" class="header">Nur CPU</text>
+
+  <!-- Row 1: Geschwindigkeit -->
+  <rect x="50" y="110" width="100" height="70" fill="#f5f5f5" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="100" y="135" text-anchor="middle" class="cell-bold">Geschw.</text>
+  <text x="100" y="155" text-anchor="middle" class="cell-label">150 Tok/s</text>
+  <text x="100" y="170" text-anchor="middle" class="cell-label">(RTX 4090)</text>
+
+  <rect x="150" y="110" width="250" height="70" fill="#ffffff" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="275" y="140" text-anchor="middle" class="cell-label">25–30 Tok/s</text>
+  <text x="275" y="160" text-anchor="middle" class="cell-label">Echtzeit-Chat ✓</text>
+
+  <rect x="400" y="110" width="300" height="70" fill="#ffffff" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="550" y="140" text-anchor="middle" class="cell-label">5 Tok/s</text>
+  <text x="550" y="160" text-anchor="middle" class="cell-label">5–10 Sek. Latenz ✗</text>
+
+  <rect x="700" y="110" width="150" height="70" fill="#f5f5f5" stroke="#e8e8e8" stroke-width="1"/>
+
+  <!-- Row 2: Kosten -->
+  <rect x="50" y="180" width="100" height="70" fill="#f5f5f5" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="100" y="205" text-anchor="middle" class="cell-bold">Kosten</text>
+  <text x="100" y="225" text-anchor="middle" class="cell-label">600–1.800 €</text>
+  <text x="100" y="240" text-anchor="middle" class="cell-label">(Anschaffung)</text>
+
+  <rect x="150" y="180" width="250" height="70" fill="#ffffff" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="275" y="210" text-anchor="middle" class="cell-label">Inbegriffen</text>
+  <text x="275" y="230" text-anchor="middle" class="cell-label">(Mac bereits vorhanden)</text>
+
+  <rect x="400" y="180" width="300" height="70" fill="#ffffff" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="550" y="210" text-anchor="middle" class="cell-label">Kostenlos</text>
+  <text x="550" y="230" text-anchor="middle" class="cell-label">(keine Hardware-Kosten)</text>
+
+  <rect x="700" y="180" width="150" height="70" fill="#f5f5f5" stroke="#e8e8e8" stroke-width="1"/>
+
+  <!-- Row 3: Beste Verwendung -->
+  <rect x="50" y="250" width="100" height="90" fill="#f5f5f5" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="100" y="278" text-anchor="middle" class="cell-bold">Beste</text>
+  <text x="100" y="295" text-anchor="middle" class="cell-bold">Verwendung</text>
+
+  <rect x="150" y="250" width="250" height="90" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="275" y="275" text-anchor="middle" font-size="12" font-weight="600" fill="#1c1b1f">✓ Produktions-KI</text>
+  <text x="275" y="295" text-anchor="middle" font-size="11" fill="#49454f">Echtzeit-Chat</text>
+  <text x="275" y="310" text-anchor="middle" font-size="11" fill="#49454f">Batch-Verarbeitung</text>
+  <text x="275" y="325" text-anchor="middle" font-size="11" fill="#49454f">2+ Stunden/Tag</text>
+
+  <rect x="400" y="250" width="300" height="90" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="550" y="275" text-anchor="middle" font-size="12" font-weight="600" fill="#1c1b1f">⭐ Mac-Nutzer</text>
+  <text x="550" y="295" text-anchor="middle" font-size="11" fill="#49454f">Nur 7–13B-Modelle</text>
+  <text x="550" y="310" text-anchor="middle" font-size="11" fill="#49454f">Niedriger Verbrauch</text>
+  <text x="550" y="325" text-anchor="middle" font-size="11" fill="#49454f">Keine Latenz-Krit.</text>
+
+  <rect x="700" y="250" width="150" height="90" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+  <text x="775" y="278" text-anchor="middle" font-size="12" font-weight="600" fill="#1c1b1f">❌ Vermeiden</text>
+  <text x="775" y="298" text-anchor="middle" font-size="11" fill="#49454f">Nicht für Chat</text>
+  <text x="775" y="313" text-anchor="middle" font-size="11" fill="#49454f">Nur Batch</text>
+
+  <!-- Row 4: Max. Modellgröße -->
+  <rect x="50" y="340" width="100" height="80" fill="#f5f5f5" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="100" y="365" text-anchor="middle" class="cell-bold">Max.</text>
+  <text x="100" y="383" text-anchor="middle" class="cell-label">Modellgröße</text>
+
+  <rect x="150" y="340" width="250" height="80" fill="#ffffff" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="275" y="368" text-anchor="middle" class="cell-label">70B-Modelle</text>
+  <text x="275" y="388" text-anchor="middle" class="cell-label">(mit Quantisierung)</text>
+
+  <rect x="400" y="340" width="300" height="80" fill="#ffffff" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="550" y="368" text-anchor="middle" class="cell-label">13B max.</text>
+  <text x="550" y="388" text-anchor="middle" class="cell-label">(Unified-Memory-Grenze)</text>
+
+  <rect x="700" y="340" width="150" height="80" fill="#f5f5f5" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="775" y="368" text-anchor="middle" class="cell-label">Jede Größe</text>
+  <text x="775" y="388" text-anchor="middle" class="cell-label">(aber sehr langsam)</text>
+
+  <!-- Bottom note -->
+  <rect x="50" y="432" width="800" height="50" fill="#f3e5f5" rx="4"/>
+  <text x="60" y="452" font-size="12" font-weight="600" fill="#1c1b1f">Entscheidungsregel:</text>
+  <text x="60" y="470" font-size="11" fill="#49454f">GPU gewinnt für ernsthafte Arbeit. M3 Max gut für Mac-Nutzer. Nur CPU unpraktisch für interaktive Nutzung.</text>
+
+  <!-- Footer -->
+  <text x="450" y="505" text-anchor="middle" font-size="11" fill="#79747e">promptquorum.com/local-llms/gpu-vs-cpu-vs-apple-silicon</text>
+  <text x="850" y="505" text-anchor="end" font-size="10" fill="#999">promptquorum.com</text>
+</svg>

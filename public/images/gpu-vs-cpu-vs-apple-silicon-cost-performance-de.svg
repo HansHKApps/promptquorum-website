@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 18px; font-weight: 700; fill: #1c1b1f; }
+      .subtitle { font-size: 12px; fill: #79747e; }
+      .label { font-size: 12px; fill: #49454f; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Kosten vs. Leistung: 3-Jahres-Gesamtkosten</text>
+  <text x="400" y="48" text-anchor="middle" class="subtitle">Hardware-Investition amortisiert über 3 Jahre</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="320" x2="750" y2="320" stroke="#79747e" stroke-width="2"/>
+  <line x1="100" y1="70" x2="100" y2="320" stroke="#79747e" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="750" y="350" text-anchor="middle" class="label">Kosten (€)</text>
+  <text x="45" y="195" text-anchor="middle" class="label" transform="rotate(-90 45 195)">Geschwindigkeit (Tok/Sek)</text>
+
+  <!-- Y-axis ticks -->
+  <text x="90" y="325" text-anchor="end" class="label">0</text>
+  <text x="90" y="265" text-anchor="end" class="label">50</text>
+  <text x="90" y="205" text-anchor="end" class="label">100</text>
+  <text x="90" y="145" text-anchor="end" class="label">150</text>
+  <text x="90" y="85" text-anchor="end" class="label">200</text>
+
+  <!-- X-axis ticks -->
+  <text x="150" y="340" text-anchor="middle" class="label">0 €</text>
+  <text x="300" y="340" text-anchor="middle" class="label">600 €</text>
+  <text x="450" y="340" text-anchor="middle" class="label">1.200 €</text>
+  <text x="600" y="340" text-anchor="middle" class="label">1.800 €</text>
+  <text x="700" y="340" text-anchor="middle" class="label">2.000 €</text>
+
+  <!-- Grid lines -->
+  <line x1="100" y1="265" x2="750" y2="265" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="100" y1="205" x2="750" y2="205" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="100" y1="145" x2="750" y2="145" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="100" y1="85" x2="750" y2="85" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="300" y1="70" x2="300" y2="320" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="450" y1="70" x2="450" y2="320" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="600" y1="70" x2="600" y2="320" stroke="#e8e8e8" stroke-width="1"/>
+
+  <!-- Data points -->
+  <!-- M3 Max: 0 € (bereits vorhanden), 25 Tok/s -->
+  <circle cx="150" cy="295" r="12" fill="#a78bfa" stroke="#6750a4" stroke-width="2"/>
+  <text x="150" y="278" text-anchor="middle" font-size="11" font-weight="600" fill="#1c1b1f">M3 Max</text>
+
+  <!-- RTX 4070 Ti: 600 €, 80 Tok/s -->
+  <circle cx="300" cy="205" r="14" fill="#7c3aed" stroke="#6750a4" stroke-width="2"/>
+  <text x="300" y="185" text-anchor="middle" font-size="11" font-weight="600" fill="#1c1b1f">RTX 4070 Ti ⭐</text>
+
+  <!-- RTX 4090: 1.800 €, 150 Tok/s -->
+  <circle cx="600" cy="145" r="12" fill="#6750a4" stroke="#6750a4" stroke-width="2"/>
+  <text x="600" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="#1c1b1f">RTX 4090</text>
+
+  <!-- RTX 5090: 2.000 €, 200 Tok/s -->
+  <circle cx="690" cy="85" r="12" fill="#4a1d96" stroke="#4a1d96" stroke-width="2"/>
+  <text x="690" y="68" text-anchor="middle" font-size="11" font-weight="600" fill="#1c1b1f">RTX 5090</text>
+
+  <!-- Intel i9: 0 € (inbegriffen), 5 Tok/s -->
+  <circle cx="150" cy="315" r="10" fill="#d8b4fe" stroke="#999" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="185" y="318" font-size="11" fill="#79747e">Intel i9 (ungeeignet)</text>
+
+  <!-- Trend arrow -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#6750a4"/>
+    </marker>
+  </defs>
+  <line x1="170" y1="290" x2="660" y2="100" stroke="#6750a4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)"/>
+
+  <!-- Legend/Note -->
+  <rect x="100" y="355" width="600" height="30" fill="#f3e5f5" rx="4"/>
+  <text x="110" y="372" font-size="11" fill="#49454f"><tspan font-weight="600">Bestes Preis-Leistungs-Verhältnis:</tspan> RTX 4070 Ti (600 €, 80 Tok/Sek) — ideal für die meisten Anwender.</text>
+
+  <!-- Footer -->
+  <text x="400" y="395" text-anchor="middle" class="subtitle">promptquorum.com/local-llms/gpu-vs-cpu-vs-apple-silicon</text>
+  <text x="750" y="395" text-anchor="end" font-size="10" fill="#999">promptquorum.com</text>
+</svg>
