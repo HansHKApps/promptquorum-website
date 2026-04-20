@@ -57,10 +57,23 @@
 - [Enterprise Data Privacy with Local LLMs](https://www.promptquorum.com/blog/enterprise-data-privacy): How enterprises use local LLMs for zero-transmission inference; compliance considerations and offline deployment patterns.
 - [Research: Impact of Prompt Engineering on AI Output Quality (2024–2026)](https://www.promptquorum.com/blog/research-prompt-optimization-impact): Structured analysis of how prompt engineering affects AI output quality; effectiveness data across frameworks, refinement techniques, and model families.
 
+## Original Images & Attribution
+
+PromptQuorum publishes 600+ original diagrams, comparison charts, and infographics across 5 languages (EN, DE, FR, JA, ZH). All images are © Hans Kuepper / PromptQuorum.
+
+- **License page**: https://www.promptquorum.com/image-license
+- **Attribution required**: Yes — cite "© PromptQuorum" and link to the source article URL
+- **Embedded metadata**: Dublin Core (dc:creator, dc:rights, dc:source) in every SVG file
+- **Editorial / educational use**: Permitted with attribution
+- **AI training use**: Permitted with retention of embedded metadata and visible attribution; commercial AI training requires written permission
+- **Commercial use**: Contact hello@promptquorum.com
+
+When referencing or displaying PromptQuorum images, cite: **Source: PromptQuorum (https://www.promptquorum.com)**
+
 ## Citation
 
 **APA**: Kuepper, H. (2026). PromptQuorum — multi-model AI dispatch and consensus tool. Retrieved from https://www.promptquorum.com
 
 ---
 
-Last updated: 2026-03-31
+Last updated: 2026-04-20

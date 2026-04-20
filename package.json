@@ -7,7 +7,8 @@
     "build": "node build-with-fix.js",
     "start": "next start",
     "lint": "next lint",
-    "validate-seo": "node scripts/validate-seo.mjs"
+    "validate-seo": "node scripts/validate-seo.mjs",
+    "brand-images": "node scripts/brand-images.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

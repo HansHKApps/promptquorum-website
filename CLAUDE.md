@@ -125,6 +125,20 @@ All Prompt Engineering articles automatically generate language-specific Open Gr
 
 Writers do not need to create or manage og:images; they are handled automatically by the system.
 
+## Image Attribution (SVG Branding)
+
+All SVG images in `public/images/` must carry a `promptquorum.com` corner attribution mark and embedded Dublin Core metadata.
+
+**After adding any new SVG files**, run:
+
+```bash
+npm run brand-images
+```
+
+This script (`scripts/brand-images.mjs`) is idempotent — it skips files that already contain `promptquorum.com` and processes only unbranded files. Run it before committing new images.
+
+**Why:** Images are scraped, shared, and used by AI systems without context. The corner mark and SVG `<metadata>` block (dc:creator, dc:rights, dc:source) are the only persistent attribution signals that survive outside the page.
+
 ## Git Workflow
 
 - Branch: `feature/[name]` for all new work, `fix/` for bugs
