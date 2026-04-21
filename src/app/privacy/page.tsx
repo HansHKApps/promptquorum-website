@@ -1,5 +1,6 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { translations, type Language } from '@/translations'
 
