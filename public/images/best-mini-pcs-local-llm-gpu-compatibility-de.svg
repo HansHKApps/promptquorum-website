@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter></defs>
+  <rect width="800" height="420" fill="#FFFFFF" filter="url(#shadow)"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">GPU-Kompatibilität für Mini-ITX-Gehäuse (2026)</text>
+  <text x="50" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">GPU</text>
+  <text x="190" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">VRAM</text>
+  <text x="320" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">Max. Modell</text>
+  <text x="510" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">Passt in Mini-ITX</text>
+  <text x="730" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">Preis (2026)</text>
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+  
+  <text x="50" y="99" font-size="12" fill="#1C1B1F" font-family="system-ui">RTX 5060 Ti</text>
+  <text x="190" y="99" font-size="12" fill="#49454F" font-family="system-ui">16 GB</text>
+  <text x="320" y="99" font-size="12" fill="#49454F" font-family="system-ui">13B Q4</text>
+  <text x="510" y="99" font-size="12" fill="#34A853" font-family="system-ui">Ja (217mm)</text>
+  <text x="730" y="99" font-size="12" fill="#49454F" font-family="system-ui">450–500 $</text>
+  <line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+  
+  <text x="50" y="135" font-size="12" fill="#1C1B1F" font-family="system-ui">RTX 5070</text>
+  <text x="190" y="135" font-size="12" fill="#49454F" font-family="system-ui">12 GB</text>
+  <text x="320" y="135" font-size="12" fill="#49454F" font-family="system-ui">13B Q4</text>
+  <text x="510" y="135" font-size="12" fill="#F4B400" font-family="system-ui">Prüfen (225mm)</text>
+  <text x="730" y="135" font-size="12" fill="#49454F" font-family="system-ui">550–650 $</text>
+  <line x1="18" y1="144" x2="782" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+  
+  <text x="50" y="171" font-size="12" fill="#1C1B1F" font-family="system-ui">RTX 4060 Ti</text>
+  <text x="190" y="171" font-size="12" fill="#49454F" font-family="system-ui">8 GB</text>
+  <text x="320" y="171" font-size="12" fill="#49454F" font-family="system-ui">7B Q4</text>
+  <text x="510" y="171" font-size="12" fill="#34A853" font-family="system-ui">Ja (216mm)</text>
+  <text x="730" y="171" font-size="12" fill="#49454F" font-family="system-ui">280–320 $</text>
+  <line x1="18" y1="180" x2="782" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+  
+  <text x="50" y="207" font-size="12" fill="#1C1B1F" font-family="system-ui">RTX 4070</text>
+  <text x="190" y="207" font-size="12" fill="#49454F" font-family="system-ui">12 GB</text>
+  <text x="320" y="207" font-size="12" fill="#49454F" font-family="system-ui">13B Q4</text>
+  <text x="510" y="207" font-size="12" fill="#F4B400" font-family="system-ui">Prüfen (220mm)</text>
+  <text x="730" y="207" font-size="12" fill="#49454F" font-family="system-ui">400–500 $</text>
+  <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+  
+  <text x="50" y="243" font-size="12" fill="#1C1B1F" font-family="system-ui">RTX A4000</text>
+  <text x="190" y="243" font-size="12" fill="#49454F" font-family="system-ui">16 GB</text>
+  <text x="320" y="243" font-size="12" fill="#49454F" font-family="system-ui">13B Q4</text>
+  <text x="510" y="243" font-size="12" fill="#F4B400" font-family="system-ui">Variante prüfen</text>
+  <text x="730" y="243" font-size="12" fill="#49454F" font-family="system-ui">250–350 $ gebraucht</text>
+  
+  <text x="400" y="400" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui">RTX 5060 Ti: 217mm passt in alle Standard-Mini-ITX-Gehäuse</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

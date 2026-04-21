@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter></defs>
+  <rect width="800" height="350" fill="#FFFFFF" filter="url(#shadow)"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Framework Desktop与Mac Mini M4 Pro对比</text>
+  <rect x="28" y="55" width="340" height="260" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui">Framework（更快）</text>
+  <text x="50" y="110" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">70B速度</text>
+  <text x="50" y="128" font-size="12" fill="#34A853" font-family="system-ui">20–25 tok/s</text>
+  <text x="50" y="155" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">内存</text>
+  <text x="50" y="173" font-size="12" fill="#49454F" font-family="system-ui">128 GB统一</text>
+  <text x="50" y="200" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">价格</text>
+  <text x="50" y="218" font-size="12" fill="#49454F" font-family="system-ui">$1,999</text>
+  <text x="50" y="245" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">GPU API</text>
+  <text x="50" y="263" font-size="12" fill="#49454F" font-family="system-ui">ROCm</text>
+  <text x="50" y="290" font-size="11" fill="#49454F" font-family="system-ui" font-style="italic">快1.5–2倍</text>
+  
+  <rect x="432" y="55" width="340" height="260" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#F4B400"/>
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle" font-family="system-ui">Mac Mini M4（紧凑）</text>
+  <text x="454" y="110" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">70B速度</text>
+  <text x="454" y="128" font-size="12" fill="#49454F" font-family="system-ui">10–15 tok/s</text>
+  <text x="454" y="155" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">内存</text>
+  <text x="454" y="173" font-size="12" fill="#49454F" font-family="system-ui">64 GB统一</text>
+  <text x="454" y="200" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">价格</text>
+  <text x="454" y="218" font-size="12" fill="#49454F" font-family="system-ui">$2,299</text>
+  <text x="454" y="245" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">GPU API</text>
+  <text x="454" y="263" font-size="12" fill="#49454F" font-family="system-ui">Metal</text>
+  <text x="454" y="290" font-size="11" fill="#49454F" font-family="system-ui" font-style="italic">静音运行</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

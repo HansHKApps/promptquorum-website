@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter></defs>
+  <rect width="800" height="350" fill="#FFFFFF" filter="url(#shadow)"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Mini-PC-Plattformen: Preisvergleich (2026)</text>
+  <text x="50" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">Plattform</text>
+  <text x="220" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">GPU-Option</text>
+  <text x="450" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">Gesamtkosten</text>
+  <text x="680" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui">Am besten für</text>
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="99" font-size="12" fill="#1C1B1F" font-family="system-ui">Intel NUC 13</text>
+  <text x="220" y="99" font-size="12" fill="#49454F" font-family="system-ui">RTX 5060 Ti (TB3)</text>
+  <text x="450" y="99" font-size="12" fill="#49454F" font-family="system-ui">~1.300 $</text>
+  <text x="680" y="99" font-size="12" fill="#49454F" font-family="system-ui">Qualität</text>
+  <line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="18" y="116" width="764" height="28" fill="#E8DEF8" rx="2"/>
+  <text x="50" y="135" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">ASUS PN51/52</text>
+  <text x="220" y="135" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui">RTX 5060 Ti (PCIe)</text>
+  <text x="450" y="135" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui">~900 $</text>
+  <text x="680" y="135" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui">Best Verhältnis</text>
+  <line x1="18" y1="152" x2="782" y2="152" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="179" font-size="12" fill="#1C1B1F" font-family="system-ui">Giada/Zotac</text>
+  <text x="220" y="179" font-size="12" fill="#49454F" font-family="system-ui">Nur integriert</text>
+  <text x="450" y="179" font-size="12" fill="#49454F" font-family="system-ui">~400 $</text>
+  <text x="680" y="179" font-size="12" fill="#49454F" font-family="system-ui">3B–7B CPU</text>
+  <line x1="18" y1="188" x2="782" y2="188" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="215" font-size="12" fill="#1C1B1F" font-family="system-ui">Custom ITX</text>
+  <text x="220" y="215" font-size="12" fill="#49454F" font-family="system-ui">Jede GPU</text>
+  <text x="450" y="215" font-size="12" fill="#49454F" font-family="system-ui">1.000–1.400 $</text>
+  <text x="680" y="215" font-size="12" fill="#49454F" font-family="system-ui">Max. Flexibilität</text>
+  <text x="400" y="330" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui">ASUS PN51/52 + RTX 5060 Ti gewinnt beim Preis-Leistungs-Verhältnis</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

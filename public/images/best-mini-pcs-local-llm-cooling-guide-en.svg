@@ -1,0 +1,40 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter></defs>
+  <rect width="800" height="360" fill="#FFFFFF" filter="url(#shadow)"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Mini PC Cooling: 4 Steps to Lower Temps</text>
+  
+  <circle cx="100" cy="100" r="22" fill="#6750A4"/>
+  <text x="100" y="108" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">1</text>
+  <text x="100" y="150" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Monitor</text>
+  <text x="100" y="170" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">GPU-Z</text>
+  <text x="100" y="185" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">HWiNFO64</text>
+  
+  <text x="155" y="108" font-size="20" fill="#6750A4" font-family="system-ui">→</text>
+  
+  <circle cx="245" cy="100" r="22" fill="#6750A4"/>
+  <text x="245" y="108" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">2</text>
+  <text x="245" y="150" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Undervolt</text>
+  <text x="245" y="170" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">MSI Afterburner</text>
+  <text x="245" y="185" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">–50 mV –10°C</text>
+  
+  <text x="300" y="108" font-size="20" fill="#6750A4" font-family="system-ui">→</text>
+  
+  <circle cx="390" cy="100" r="22" fill="#6750A4"/>
+  <text x="390" y="108" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">3</text>
+  <text x="390" y="150" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">New Fan</text>
+  <text x="390" y="170" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">$50–80</text>
+  <text x="390" y="185" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Noctua/BeQuiet</text>
+  
+  <text x="445" y="108" font-size="20" fill="#6750A4" font-family="system-ui">→</text>
+  
+  <circle cx="535" cy="100" r="22" fill="#6750A4"/>
+  <text x="535" y="108" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">4</text>
+  <text x="535" y="150" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Airflow</text>
+  <text x="535" y="170" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Positive</text>
+  <text x="535" y="185" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">pressure setup</text>
+  
+  <rect x="50" y="230" width="700" height="90" fill="#E8DEF8" rx="6"/>
+  <text x="70" y="255" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui">Result:</text>
+  <text x="70" y="275" font-size="11" fill="#49454F" font-family="system-ui">60–70°C GPU temps expected at full load. Monitor temps regularly. Undervolting is safest—</text>
+  <text x="70" y="290" font-size="11" fill="#49454F" font-family="system-ui">saves 5–10°C with zero speed loss. Fan replacement + airflow optimization reduce noise 10–15 dB.</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
