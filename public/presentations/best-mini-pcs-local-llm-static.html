@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Mini PCs for Local LLM 2026 | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on mini PC hardware for local LLM inference. Learn Mac mini M4 Pro, Framework Desktop, GPU compatibility, and cooling strategies." />
+    <meta property="og:title" content="Best Mini PCs for Local LLM 2026 — PromptQuorum" />
+    <meta property="og:description" content="Choose the right mini PC for Llama 3.3 70B: Mac mini M4 Pro vs Framework Desktop vs custom ITX builds." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .header {
+            padding: 16px 32px;
+            border-bottom: 1px solid #e8def8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            z-index: 10;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-left img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .header-left span {
+            font-weight: 700;
+            font-size: 14px;
+            color: #1c1b1f;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 1px solid #e8def8;
+            padding-bottom: 2px;
+        }
+
+        .header-links a:hover {
+            color: #1c1b1f;
+            border-bottom-color: #1c1b1f;
+        }
+
+        .content-area {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide ul {
+            text-align: left;
+            font-size: clamp(14px, 1.6vw, 18px);
+            color: #49454f;
+            margin-top: 20px;
+        }
+
+        .slide ul li {
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .slide ol {
+            text-align: left;
+            font-size: clamp(14px, 1.6vw, 18px);
+            color: #49454f;
+            margin-top: 20px;
+        }
+
+        .slide ol li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .slide table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: clamp(12px, 1.4vw, 16px);
+        }
+
+        .slide table th {
+            background: #f7f2fa;
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 700;
+            color: #79747e;
+            border-bottom: 2px solid #e8def8;
+        }
+
+        .slide table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #f7f2fa;
+            color: #49454f;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .controls {
+            padding: 16px 32px;
+            border-top: 1px solid #e8def8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            background: white;
+        }
+
+        .controls button {
+            padding: 8px 16px;
+            background: #6750a4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .controls button:disabled {
+            background: #e8def8;
+            color: #79747e;
+            cursor: not-allowed;
+        }
+
+        .controls button:hover:not(:disabled) {
+            background: #5a3f9a;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            font-weight: 600;
+            color: #49454f;
+            min-width: 60px;
+        }
+    </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Best Mini PCs for Local LLM 2026</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container">
+      <!-- Slides injected here -->
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Best Mini PCs for Local LLM 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Best Mini PCs for Local LLM 2026',
+            subtitle: 'Run Llama 3.3 70B on Mac mini M4 Pro, Framework Desktop, or Custom ITX builds',
+            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm'
+          },
+          {
+            type: 'list',
+            h2: 'Why Mini PCs for Local LLM?',
+            items: [
+              '<strong>Compact:</strong> 5–15L case, desk-friendly form factor',
+              '<strong>Silent operation:</strong> No data center noise or cooling complexity',
+              '<strong>Cost-effective:</strong> $900–2,300 runs 70B models at production speeds',
+              '<strong>Privacy:</strong> All inference local, no cloud dependencies'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Mac Mini M4 Pro Performance',
+            columns: ['Configuration', '7B Q4 tok/s', '70B Q4 tok/s', 'Price'],
+            rows: [
+              { 'Configuration': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': 'Cannot fit', 'Price': '$599' },
+              { 'Configuration': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': 'Cannot fit', 'Price': '$1,399' },
+              { 'Configuration': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', 'Price': '$1,999' },
+              { 'Configuration': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', 'Price': '$2,299' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Mac Mini M4 Pro: Pros & Cons',
+            items: [
+              '<strong>✓ Pros:</strong> Silent, 30W power, Metal GPU acceleration out-of-box',
+              '<strong>✓ Pros:</strong> 5.1×5.1×1.5 inches (smallest 70B option)',
+              '<strong>✗ Cons:</strong> RAM not upgradeable (choose 64 GB upfront)',
+              '<strong>✗ Cons:</strong> 10–15 tok/s slower than RTX 4090 (60–80 tok/s)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop AMD Ryzen AI Max',
+            items: [
+              '<strong>CPU:</strong> Ryzen AI Max 395+ (16-core Zen 5)',
+              '<strong>GPU:</strong> Radeon 8060S (40 RDNA CUs)',
+              '<strong>Memory:</strong> 128 GB LPDDR5X unified (upgradeable)',
+              '<strong>Form:</strong> 4.5L mini-ITX, modular design',
+              '<strong>Power:</strong> 120W sustained, 200W peak'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Framework Desktop: Model Speeds',
+            columns: ['Model', 'tok/s'],
+            rows: [
+              { 'Model': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'Model': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
+              { 'Model': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
+              { 'Model': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            items: [
+              '<strong>Speed:</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s (1.5–2× faster)',
+              '<strong>Memory:</strong> Framework 128 GB vs Mac mini 64 GB (2× capacity)',
+              '<strong>Upgradeable:</strong> Framework yes, Mac mini no',
+              '<strong>Price:</strong> Framework $1,999 vs Mac mini $2,299 (Framework better value)',
+              '<strong>Setup:</strong> Framework needs ROCm, Mac mini works out-of-box'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'GPU Compatibility for Mini-ITX',
+            columns: ['GPU', 'VRAM', 'Max Model', 'Fits Case?', 'Price (2026)'],
+            rows: [
+              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Max Model': '13B Q4', 'Fits Case?': 'Yes (217mm)', 'Price (2026)': '$450–500' },
+              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Max Model': '13B Q4', 'Fits Case?': 'Check (225mm)', 'Price (2026)': '$550–650' },
+              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', 'Max Model': '7B Q4', 'Fits Case?': 'Yes (216mm)', 'Price (2026)': '$280–320' },
+              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Max Model': '13B Q4', 'Fits Case?': 'Check variant', 'Price (2026)': '$250–350 used' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Platform Value Comparison',
+            columns: ['Platform', 'GPU Option', 'Total Cost', 'Best For'],
+            rows: [
+              { 'Platform': 'Intel NUC 13', 'GPU Option': 'RTX 5060 Ti (TB3)', 'Total Cost': '~$1,300', 'Best For': 'Build quality' },
+              { 'Platform': 'ASUS PN51/52', 'GPU Option': 'RTX 5060 Ti (PCIe)', 'Total Cost': '~$900', 'Best For': 'Best value' },
+              { 'Platform': 'Giada/Zotac', 'GPU Option': 'Integrated only', 'Total Cost': '~$400', 'Best For': '3B–7B models' },
+              { 'Platform': 'Custom ITX', 'GPU Option': 'Any GPU', 'Total Cost': '$1,000–1,400', 'Best For': 'Max flexibility' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Cooling: 4 Steps to Lower Temps',
+            items: [
+              '<strong>1. Monitor:</strong> GPU-Z or HWiNFO64 — watch temps at full load',
+              '<strong>2. Undervolt:</strong> MSI Afterburner (–50 mV) saves 5–10°C, zero speed loss',
+              '<strong>3. Replace fans:</strong> Noctua or BeQuiet! ($50–80) cuts noise 10–15 dB',
+              '<strong>4. Optimize airflow:</strong> Positive pressure case design = better cooling'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Limitations: What Won\'t Work',
+            items: [
+              '<strong>70B models require:</strong> Minimum 64 GB (Mac mini M4 Pro 64GB) or 128 GB (Framework)',
+              '<strong>RTX 4090 maxes out:</strong> 70B Q4 at 60–80 tok/s (no further speedup)',
+              '<strong>Mac mini RAM not upgradeable:</strong> Choose 64 GB at purchase; no upgrade path',
+              '<strong>Custom ITX complexity:</strong> Requires case modding, cable management, thermal paste'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'FAQ: Common Questions',
+            items: [
+              '<strong>Q: Can I run 70B on RTX 4090?</strong> Yes, but 60–80 tok/s (slower than Framework Desktop)',
+              '<strong>Q: Mac mini M4 Pro vs Framework?</strong> Mac silent+compact (10–15 tok/s), Framework faster (20–25 tok/s)',
+              '<strong>Q: Best mini PC 2026?</strong> ASUS PN51 + RTX 5060 Ti for value (~$900); Framework for speed',
+              '<strong>Q: What quantization to use?</strong> Q4_K_M: best balance of speed, quality, VRAM (13B on 16GB, 70B on 64GB)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Common Mistakes to Avoid',
+            items: [
+              '<strong>1.</strong> Buying 48 GB Mac mini instead of 64 GB (70B won\'t fit)',
+              '<strong>2.</strong> Choosing RTX 4070 without measuring case depth (220mm limit)',
+              '<strong>3.</strong> Assuming offloading solves VRAM (slower than native GPU)',
+              '<strong>4.</strong> Not undervolting (free 5–10°C with no downside)',
+              '<strong>5.</strong> Buying pre-2025 GPU drivers (ROCm unstable on older Framework)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'How PromptQuorum Helps',
+            items: [
+              '<strong>Multi-model dispatch:</strong> Send prompt to best model for lowest latency',
+              '<strong>Consensus generation:</strong> Run same prompt on 2–3 models, aggregate answers',
+              '<strong>Cost tracking:</strong> Monitor token spend across local models (no cloud bills)',
+              '<strong>Easy setup:</strong> One API, all local LLMs (Ollama, LM Studio, vLLM)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Next Steps',
+            items: [
+              '<strong>✓ Step 1:</strong> Decide: Mac mini (silent), Framework (fast), or custom ITX (cheap)?',
+              '<strong>✓ Step 2:</strong> Order hardware, install Ollama or LM Studio',
+              '<strong>✓ Step 3:</strong> Download Llama 3.3 70B Q4 model (~40 GB)',
+              '<strong>✓ Step 4:</strong> Connect to PromptQuorum for multi-model dispatch',
+              '<strong>Try PromptQuorum Free:</strong> No credit card, start dispatching to local models today'
+            ]
+          }
+        ]
+      },
+      de: {
+        title: 'Beste Mini-PCs für lokale LLM 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Beste Mini-PCs für lokale LLM 2026',
+            subtitle: 'Führen Sie Llama 3.3 70B auf Mac mini M4 Pro, Framework Desktop oder Custom ITX aus',
+            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Warum Mini-PCs für lokale LLM?',
+            items: [
+              '<strong>Kompakt:</strong> 5–15L Gehäuse, schreibtischfreundliche Form',
+              '<strong>Stille Funktion:</strong> Kein Rechenzentrumlärm, keine Kühlungskomplexität',
+              '<strong>Kosteneffektiv:</strong> 900–2.300 $ führen 70B-Modelle mit Produktionsgeschwindigkeiten aus',
+              '<strong>Datenschutz:</strong> Alle Inferenzen lokal, keine Cloud-Abhängigkeiten'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Mac Mini M4 Pro Leistung',
+            columns: ['Konfiguration', '7B Q4 tok/s', '70B Q4 tok/s', 'Preis'],
+            rows: [
+              { 'Konfiguration': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': 'Nicht möglich', 'Preis': '599 $' },
+              { 'Konfiguration': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': 'Nicht möglich', 'Preis': '1.399 $' },
+              { 'Konfiguration': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', 'Preis': '1.999 $' },
+              { 'Konfiguration': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', 'Preis': '2.299 $' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Mac Mini M4 Pro: Vor- und Nachteile',
+            items: [
+              '<strong>✓ Vorteile:</strong> Leise, 30W Stromverbrauch, Metal GPU-Beschleunigung ab Werk',
+              '<strong>✓ Vorteile:</strong> 5,1×5,1×1,5 Zoll (kompakteste 70B-Option)',
+              '<strong>✗ Nachteile:</strong> RAM nicht aufrüstbar (wählen Sie beim Kauf 64 GB)',
+              '<strong>✗ Nachteile:</strong> 10–15 tok/s langsamer als RTX 4090 (60–80 tok/s)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop AMD Ryzen AI Max',
+            items: [
+              '<strong>CPU:</strong> Ryzen AI Max 395+ (16-Core Zen 5)',
+              '<strong>GPU:</strong> Radeon 8060S (40 RDNA CUs)',
+              '<strong>Speicher:</strong> 128 GB LPDDR5X einheitlich (aufrüstbar)',
+              '<strong>Form:</strong> 4,5L Mini-ITX, modulares Design',
+              '<strong>Stromverbrauch:</strong> 120W dauerhaft, 200W Spitzenlast'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Framework Desktop: Modellgeschwindigkeiten',
+            columns: ['Modell', 'tok/s'],
+            rows: [
+              { 'Modell': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'Modell': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
+              { 'Modell': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
+              { 'Modell': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            items: [
+              '<strong>Geschwindigkeit:</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s (1,5–2× schneller)',
+              '<strong>Speicher:</strong> Framework 128 GB vs Mac mini 64 GB (2× Kapazität)',
+              '<strong>Aufrüstbar:</strong> Framework ja, Mac mini nein',
+              '<strong>Preis:</strong> Framework 1.999 $ vs Mac mini 2.299 $ (Framework besser)',
+              '<strong>Setup:</strong> Framework braucht ROCm, Mac mini funktioniert sofort'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'GPU-Kompatibilität für Mini-ITX',
+            columns: ['GPU', 'VRAM', 'Max. Modell', 'Passt?', 'Preis (2026)'],
+            rows: [
+              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Max. Modell': '13B Q4', 'Passt?': 'Ja (217mm)', 'Preis (2026)': '450–500 $' },
+              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Max. Modell': '13B Q4', 'Passt?': 'Prüfen (225mm)', 'Preis (2026)': '550–650 $' },
+              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', 'Max. Modell': '7B Q4', 'Passt?': 'Ja (216mm)', 'Preis (2026)': '280–320 $' },
+              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Max. Modell': '13B Q4', 'Passt?': 'Variante prüfen', 'Preis (2026)': '250–350 $ gebraucht' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Plattform-Preisvergleich',
+            columns: ['Plattform', 'GPU-Option', 'Gesamtkosten', 'Am besten für'],
+            rows: [
+              { 'Plattform': 'Intel NUC 13', 'GPU-Option': 'RTX 5060 Ti (TB3)', 'Gesamtkosten': '~1.300 $', 'Am besten für': 'Verarbeitungsqualität' },
+              { 'Plattform': 'ASUS PN51/52', 'GPU-Option': 'RTX 5060 Ti (PCIe)', 'Gesamtkosten': '~900 $', 'Am besten für': 'Bestes Verhältnis' },
+              { 'Plattform': 'Giada/Zotac', 'GPU-Option': 'Nur integriert', 'Gesamtkosten': '~400 $', 'Am besten für': '3B–7B Modelle' },
+              { 'Plattform': 'Custom ITX', 'GPU-Option': 'Jede GPU', 'Gesamtkosten': '1.000–1.400 $', 'Am besten für': 'Max. Flexibilität' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Kühlung: 4 Schritte zur Temperaturreduktion',
+            items: [
+              '<strong>1. Überwachen:</strong> GPU-Z oder HWiNFO64 — Temps bei Vollast beobachten',
+              '<strong>2. Undervolten:</strong> MSI Afterburner (–50 mV) spart 5–10°C, null Geschwindigkeitsverlust',
+              '<strong>3. Lüfter ersetzen:</strong> Noctua oder BeQuiet! (50–80 €) reduziert Lärm 10–15 dB',
+              '<strong>4. Luftstrom optimieren:</strong> Positive-Druck-Gehäuse-Design = bessere Kühlung'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Einschränkungen: Was funktioniert nicht',
+            items: [
+              '<strong>70B-Modelle erfordern:</strong> Minimum 64 GB (Mac mini M4 Pro 64GB) oder 128 GB (Framework)',
+              '<strong>RTX 4090 Obergrenze:</strong> 70B Q4 bei 60–80 tok/s (keine weitere Beschleunigung)',
+              '<strong>Mac mini RAM nicht aufrüstbar:</strong> Wählen Sie beim Kauf 64 GB; kein Upgrade möglich',
+              '<strong>Custom ITX Komplexität:</strong> Erfordert Gehäuseanpassung, Kabelmanagement, Wärmeleitpaste'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'FAQ: Häufig gestellte Fragen',
+            items: [
+              '<strong>F: Kann ich 70B auf RTX 4090 ausführen?</strong> Ja, aber 60–80 tok/s (langsamer als Framework)',
+              '<strong>F: Mac mini M4 Pro vs Framework?</strong> Mac leise+kompakt (10–15 tok/s), Framework schneller (20–25 tok/s)',
+              '<strong>F: Bester Mini-PC 2026?</strong> ASUS PN51 + RTX 5060 Ti für Preis (~900 $); Framework für Speed',
+              '<strong>F: Welche Quantisierung verwenden?</strong> Q4_K_M: beste Balance Geschwindigkeit, Qualität, VRAM'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Häufige Fehler vermeiden',
+            items: [
+              '<strong>1.</strong> Kauf 48 GB Mac mini statt 64 GB (70B passt nicht)',
+              '<strong>2.</strong> Wahl RTX 4070 ohne Gehäusetiefe messen (220mm Limit)',
+              '<strong>3.</strong> Annahme Offloading löst VRAM (langsamer als nativ GPU)',
+              '<strong>4.</strong> Nicht undervolten (kostenlos 5–10°C ohne Nachteil)',
+              '<strong>5.</strong> Kauf vor-2025 GPU-Treiber (ROCm instabil auf älterem Framework)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wie PromptQuorum hilft',
+            items: [
+              '<strong>Multi-Modell-Versand:</strong> Senden Sie Prompt an bestes Modell für niedrigste Latenz',
+              '<strong>Konsens-Generierung:</strong> Führen Sie denselben Prompt auf 2–3 Modellen aus, aggregieren Sie Antworten',
+              '<strong>Kosten-Tracking:</strong> Überwachen Sie Token-Ausgaben über lokale Modelle (keine Cloud-Rechnungen)',
+              '<strong>Einfaches Setup:</strong> Eine API, alle lokalen LLMs (Ollama, LM Studio, vLLM)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Nächste Schritte',
+            items: [
+              '<strong>✓ Schritt 1:</strong> Entscheiden: Mac mini (leise), Framework (schnell) oder Custom ITX (billig)?',
+              '<strong>✓ Schritt 2:</strong> Hardware bestellen, Ollama oder LM Studio installieren',
+              '<strong>✓ Schritt 3:</strong> Llama 3.3 70B Q4 Modell herunterladen (~40 GB)',
+              '<strong>✓ Schritt 4:</strong> Mit PromptQuorum verbinden für Multi-Modell-Versand',
+              '<strong>Probieren Sie PromptQuorum kostenlos:</strong> Keine Kreditkarte, starten Sie heute mit lokalen Modellen'
+            ]
+          }
+        ]
+      },
+      fr: {
+        title: 'Meilleurs mini PC pour LLM locaux 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Meilleurs mini PC pour LLM locaux 2026',
+            subtitle: 'Exécutez Llama 3.3 70B sur Mac mini M4 Pro, Framework Desktop ou constructions ITX personnalisées',
+            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Pourquoi mini PC pour LLM locaux?',
+            items: [
+              '<strong>Compact :</strong> Boîtier 5–15L, facteur de forme adapté au bureau',
+              '<strong>Fonctionnement silencieux :</strong> Pas de bruit de centre de données, pas de complexité de refroidissement',
+              '<strong>Rentable :</strong> 900–2 300 $ exécutent les modèles 70B aux vitesses de production',
+              '<strong>Confidentialité :</strong> Tous les appels locaux, pas de dépendances cloud'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Performance Mac Mini M4 Pro',
+            columns: ['Configuration', '7B Q4 tok/s', '70B Q4 tok/s', 'Prix'],
+            rows: [
+              { 'Configuration': 'M4 (16 Go)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': 'Impossible', 'Prix': '599 $' },
+              { 'Configuration': 'M4 Pro (24 Go)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': 'Impossible', 'Prix': '1 399 $' },
+              { 'Configuration': 'M4 Pro (48 Go)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', 'Prix': '1 999 $' },
+              { 'Configuration': 'M4 Pro (64 Go)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', 'Prix': '2 299 $' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Mac Mini M4 Pro : Avantages et inconvénients',
+            items: [
+              '<strong>✓ Avantages :</strong> Silencieux, consommation 30W, accélération GPU Metal out-of-box',
+              '<strong>✓ Avantages :</strong> 5,1×5,1×1,5 pouces (plus petite option 70B)',
+              '<strong>✗ Inconvénients :</strong> RAM non extensible (choisissez 64 Go à l\'achat)',
+              '<strong>✗ Inconvénients :</strong> 10–15 tok/s plus lent que RTX 4090 (60–80 tok/s)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop AMD Ryzen AI Max',
+            items: [
+              '<strong>CPU :</strong> Ryzen AI Max 395+ (16-cœur Zen 5)',
+              '<strong>GPU :</strong> Radeon 8060S (40 CU RDNA)',
+              '<strong>Mémoire :</strong> 128 Go LPDDR5X unifiée (extensible)',
+              '<strong>Format :</strong> 4,5L Mini-ITX, design modulaire',
+              '<strong>Puissance :</strong> 120W soutenu, 200W pic'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Framework Desktop : Vitesses des modèles',
+            columns: ['Modèle', 'tok/s'],
+            rows: [
+              { 'Modèle': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'Modèle': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
+              { 'Modèle': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
+              { 'Modèle': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            items: [
+              '<strong>Vitesse :</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s (1,5–2× plus rapide)',
+              '<strong>Mémoire :</strong> Framework 128 Go vs Mac mini 64 Go (2× capacité)',
+              '<strong>Extensible :</strong> Framework oui, Mac mini non',
+              '<strong>Prix :</strong> Framework 1 999 $ vs Mac mini 2 299 $ (Framework meilleur)',
+              '<strong>Configuration :</strong> Framework nécessite ROCm, Mac mini fonctionne immédiatement'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Compatibilité GPU pour Mini-ITX',
+            columns: ['GPU', 'VRAM', 'Modèle max.', 'Compatible?', 'Prix (2026)'],
+            rows: [
+              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 Go', 'Modèle max.': '13B Q4', 'Compatible?': 'Oui (217mm)', 'Prix (2026)': '450–500 $' },
+              { 'GPU': 'RTX 5070', 'VRAM': '12 Go', 'Modèle max.': '13B Q4', 'Compatible?': 'Vérifier (225mm)', 'Prix (2026)': '550–650 $' },
+              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 Go', 'Modèle max.': '7B Q4', 'Compatible?': 'Oui (216mm)', 'Prix (2026)': '280–320 $' },
+              { 'GPU': 'RTX A4000', 'VRAM': '16 Go', 'Modèle max.': '13B Q4', 'Compatible?': 'Vérifier variante', 'Prix (2026)': '250–350 $ occasion' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Comparatif valeur plateforme',
+            columns: ['Plateforme', 'Option GPU', 'Coût total', 'Idéal pour'],
+            rows: [
+              { 'Plateforme': 'Intel NUC 13', 'Option GPU': 'RTX 5060 Ti (TB3)', 'Coût total': '~1 300 $', 'Idéal pour': 'Qualité de fabrication' },
+              { 'Plateforme': 'ASUS PN51/52', 'Option GPU': 'RTX 5060 Ti (PCIe)', 'Coût total': '~900 $', 'Idéal pour': 'Meilleur rapport' },
+              { 'Plateforme': 'Giada/Zotac', 'Option GPU': 'Intégré seul', 'Coût total': '~400 $', 'Idéal pour': 'Modèles 3B–7B' },
+              { 'Plateforme': 'Custom ITX', 'Option GPU': 'N\'importe quel GPU', 'Coût total': '1 000–1 400 $', 'Idéal pour': 'Flexibilité max' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Refroidissement : 4 étapes pour réduire les températures',
+            items: [
+              '<strong>1. Surveiller :</strong> GPU-Z ou HWiNFO64 — regarder les temps à charge complète',
+              '<strong>2. Sous-voltage :</strong> MSI Afterburner (–50 mV) économise 5–10°C, zéro perte de vitesse',
+              '<strong>3. Remplacer ventilateurs :</strong> Noctua ou BeQuiet! (50–80 €) réduit le bruit 10–15 dB',
+              '<strong>4. Optimiser flux d\'air :</strong> Design boîtier pression positive = meilleur refroidissement'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Limitations : Ce qui ne fonctionne pas',
+            items: [
+              '<strong>Les modèles 70B nécessitent :</strong> Minimum 64 Go (Mac mini M4 Pro 64Go) ou 128 Go (Framework)',
+              '<strong>RTX 4090 plafond :</strong> 70B Q4 à 60–80 tok/s (pas d\'accélération supplémentaire)',
+              '<strong>RAM Mac mini non extensible :</strong> Choisissez 64 Go à l\'achat ; pas de chemin de mise à niveau',
+              '<strong>Complexité Custom ITX :</strong> Nécessite modification boîtier, gestion câbles, pâte thermique'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'FAQ : Questions fréquemment posées',
+            items: [
+              '<strong>Q: Puis-je exécuter 70B sur RTX 4090?</strong> Oui, mais 60–80 tok/s (plus lent que Framework)',
+              '<strong>Q: Mac mini M4 Pro vs Framework?</strong> Mac silencieux+compact (10–15 tok/s), Framework rapide (20–25 tok/s)',
+              '<strong>Q: Meilleur mini PC 2026?</strong> ASUS PN51 + RTX 5060 Ti pour rapport (~900 $); Framework pour vitesse',
+              '<strong>Q: Quel quantification utiliser?</strong> Q4_K_M: meilleur équilibre vitesse, qualité, VRAM'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Erreurs courantes à éviter',
+            items: [
+              '<strong>1.</strong> Acheter 48 Go Mac mini au lieu de 64 Go (70B ne tient pas)',
+              '<strong>2.</strong> Choisir RTX 4070 sans mesurer profondeur boîtier (limite 220mm)',
+              '<strong>3.</strong> Supposer déchargement résout VRAM (plus lent que GPU natif)',
+              '<strong>4.</strong> Ne pas faire de sous-voltage (5–10°C gratuit sans inconvénient)',
+              '<strong>5.</strong> Acheter pilotes GPU pré-2025 (ROCm instable sur Framework ancien)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Comment PromptQuorum aide',
+            items: [
+              '<strong>Envoi multi-modèle :</strong> Envoyer invite au meilleur modèle pour latence la plus basse',
+              '<strong>Génération consensus :</strong> Exécuter même invite sur 2–3 modèles, agréger réponses',
+              '<strong>Suivi coûts :</strong> Surveiller dépense tokens sur modèles locaux (pas factures cloud)',
+              '<strong>Configuration facile :</strong> Une API, tous LLM locaux (Ollama, LM Studio, vLLM)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Prochaines étapes',
+            items: [
+              '<strong>✓ Étape 1 :</strong> Décider : Mac mini (silencieux), Framework (rapide) ou Custom ITX (bon marché)?',
+              '<strong>✓ Étape 2 :</strong> Commander matériel, installer Ollama ou LM Studio',
+              '<strong>✓ Étape 3 :</strong> Télécharger modèle Llama 3.3 70B Q4 (~40 Go)',
+              '<strong>✓ Étape 4 :</strong> Connecter à PromptQuorum pour envoi multi-modèle',
+              '<strong>Essayez PromptQuorum gratuitement :</strong> Pas de carte bancaire, commencez avec modèles locaux aujourd\'hui'
+            ]
+          }
+        ]
+      },
+      ja: {
+        title: 'ローカルLLM向けミニPC 2026：最高ガイド',
+        slides: [
+          {
+            type: 'title',
+            h1: 'ローカルLLM向けミニPC 2026',
+            subtitle: 'Mac mini M4 Pro、Framework Desktop、またはカスタムITXビルドでLlama 3.3 70Bを実行',
+            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: 'ローカルLLM向けミニPCが必要な理由',
+            items: [
+              '<strong>コンパクト：</strong> 5–15L筐体、デスクトップに最適なフォームファクタ',
+              '<strong>静音：</strong> データセンターの騒音なし、冷却の複雑さなし',
+              '<strong>低コスト：</strong> 900–2,300ドルで70Bモデルを本番速度で実行',
+              '<strong>プライバシー：</strong> すべてローカル推論、クラウド依存なし'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Mac Mini M4 Pro性能',
+            columns: ['構成', '7B Q4 tok/s', '70B Q4 tok/s', '価格'],
+            rows: [
+              { '構成': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': '不可', '価格': '$599' },
+              { '構成': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': '不可', '価格': '$1,399' },
+              { '構成': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', '価格': '$1,999' },
+              { '構成': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', '価格': '$2,299' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Mac Mini M4 Pro：長所と短所',
+            items: [
+              '<strong>✓ 長所：</strong> 静音、30W消費電力、Metal GPU加速がすぐに使える',
+              '<strong>✓ 長所：</strong> 5.1×5.1×1.5インチ（最小の70Bオプション）',
+              '<strong>✗ 短所：</strong> RAM非アップグレード（購入時に64 GB選択）',
+              '<strong>✗ 短所：</strong> 10–15 tok/sはRTX 4090（60–80 tok/s）より遅い'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop AMD Ryzen AI Max',
+            items: [
+              '<strong>CPU：</strong> Ryzen AI Max 395+（16コアZen 5）',
+              '<strong>GPU：</strong> Radeon 8060S（40 RDNA CU）',
+              '<strong>メモリ：</strong> 128 GB LPDDR5X統合（アップグレード可）',
+              '<strong>フォーム：</strong> 4.5Lミニ-ITX、モジュール設計',
+              '<strong>電力：</strong> 120W持続、200Wピーク'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Framework Desktopモデル速度',
+            columns: ['モデル', 'tok/s'],
+            rows: [
+              { 'モデル': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'モデル': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
+              { 'モデル': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
+              { 'モデル': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            items: [
+              '<strong>速度：</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s（1.5–2倍高速）',
+              '<strong>メモリ：</strong> Framework 128 GB vs Mac mini 64 GB（2倍容量）',
+              '<strong>アップグレード可：</strong> Frameworkはい、Mac miniいいえ',
+              '<strong>価格：</strong> Framework $1,999 vs Mac mini $2,299（Frameworkが有利）',
+              '<strong>セットアップ：</strong> Framework ROCm必要、Mac miniはすぐに動く'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Mini-ITXGPU互換性',
+            columns: ['GPU', 'VRAM', '最大モデル', '対応？', '価格（2026）'],
+            rows: [
+              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最大モデル': '13B Q4', '対応？': '対応（217mm）', '価格（2026）': '$450–500' },
+              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', '最大モデル': '13B Q4', '対応？': '確認（225mm）', '価格（2026）': '$550–650' },
+              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', '最大モデル': '7B Q4', '対応？': '対応（216mm）', '価格（2026）': '$280–320' },
+              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '最大モデル': '13B Q4', '対応？': '確認要', '価格（2026）': '$250–350 中古' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'プラットフォーム価値比較',
+            columns: ['プラットフォーム', 'GPU選択肢', '総コスト', '最適な用途'],
+            rows: [
+              { 'プラットフォーム': 'Intel NUC 13', 'GPU選択肢': 'RTX 5060 Ti (TB3)', '総コスト': '~$1,300', '最適な用途': '品質重視' },
+              { 'プラットフォーム': 'ASUS PN51/52', 'GPU選択肢': 'RTX 5060 Ti (PCIe)', '総コスト': '~$900', '最適な用途': '最高コスパ' },
+              { 'プラットフォーム': 'Giada/Zotac', 'GPU選択肢': '統合のみ', '総コスト': '~$400', '最適な用途': '3B–7B用' },
+              { 'プラットフォーム': 'Custom ITX', 'GPU選択肢': 'どのGPUでも', '総コスト': '$1,000–1,400', '最適な用途': '最大柔軟性' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '冷却：温度低下の4ステップ',
+            items: [
+              '<strong>1. 監視：</strong> GPU-ZまたはHWiNFO64 — フル負荷時の温度監視',
+              '<strong>2. アンダーボルト：</strong> MSI Afterburner（–50 mV）で5–10°C低下、速度低下なし',
+              '<strong>3. ファン交換：</strong> NoctuaまたはBeQuiet!（$50–80）で騒音10–15 dB削減',
+              '<strong>4. 気流最適化：</strong> 正圧設定= より良い冷却'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '制限事項：動作不可のこと',
+            items: [
+              '<strong>70Bモデル必須：</strong> 最小64 GB（Mac mini M4 Pro 64GB）またはFramework 128 GB',
+              '<strong>RTX 4090限界：</strong> 70B Q4で60–80 tok/s（これ以上加速不可）',
+              '<strong>Mac mini RAMアップグレード不可：</strong> 購入時に64 GB選択；後からアップグレード不可',
+              '<strong>Custom ITX複雑：</strong> ケース加工、ケーブル管理、グリス必要'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'FAQ：よくある質問',
+            items: [
+              '<strong>Q: RTX 4090で70B実行できる？</strong> はい、60–80 tok/s（Framework より遅い）',
+              '<strong>Q: Mac mini M4 Pro vs Framework？</strong> Mac静音+コンパクト（10–15 tok/s）、Framework高速（20–25 tok/s）',
+              '<strong>Q: 最高ミニPC 2026？</strong> ASUS PN51 + RTX 5060 Tiがコスパ最高（~$900）；Frameworkが速度最高',
+              '<strong>Q: どの量子化を使う？</strong> Q4_K_M：速度・品質・VRAMのベストバランス'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '避けるべき一般的なミス',
+            items: [
+              '<strong>1.</strong> 64 GBの代わりに48 GB Mac mini購入（70Bが入らない）',
+              '<strong>2.</strong> ケース深さを測らずにRTX 4070選択（220mm制限）',
+              '<strong>3.</strong> オフロードがVRAM問題を解く（ネイティブGPUより遅い）',
+              '<strong>4.</strong> アンダーボルト未実施（無料で5–10°C低下）',
+              '<strong>5.</strong> 2025年前のGPUドライバ購入（古いFrameworkで不安定）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PromptQuorumがサポート',
+            items: [
+              '<strong>マルチモデルディスパッチ：</strong> プロンプトを最適モデルに送信、最低レイテンシ',
+              '<strong>コンセンサス生成：</strong> 同じプロンプトを2–3モデルで実行、回答を集約',
+              '<strong>コスト追跡：</strong> ローカルモデル全体のトークン支出監視（クラウド請求なし）',
+              '<strong>簡単セットアップ：</strong> 1つのAPI、すべてのローカルLLM（Ollama, LM Studio, vLLM）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '次のステップ',
+            items: [
+              '<strong>✓ ステップ1：</strong> 選択：Mac mini（静音）、Framework（高速）、Custom ITX（安価）？',
+              '<strong>✓ ステップ2：</strong> ハードウェア注文、OllamaまたはLM Studio インストール',
+              '<strong>✓ ステップ3：</strong> Llama 3.3 70B Q4モデル ダウンロード（~40 GB）',
+              '<strong>✓ ステップ4：</strong> PromptQuorumに接続、マルチモデルディスパッチ開始',
+              '<strong>PromptQuorum 無料体験：</strong> クレジットカード不要、今日からローカルモデルを開始'
+            ]
+          }
+        ]
+      },
+      zh: {
+        title: '2026年本地LLM迷你PC推荐',
+        slides: [
+          {
+            type: 'title',
+            h1: '2026年本地LLM迷你PC推荐',
+            subtitle: '在Mac mini M4 Pro、Framework Desktop或自定义ITX上运行Llama 3.3 70B',
+            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '为什么选择迷你PC运行本地LLM?',
+            items: [
+              '<strong>紧凑：</strong> 5–15L机箱，桌面友好的外形',
+              '<strong>静音运行：</strong> 无数据中心噪音，无冷却复杂性',
+              '<strong>成本效益：</strong> $900–2,300可以以生产速度运行70B模型',
+              '<strong>隐私保护：</strong> 所有推理本地运行，无云依赖'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Mac Mini M4 Pro性能',
+            columns: ['配置', '7B Q4 tok/s', '70B Q4 tok/s', '价格'],
+            rows: [
+              { '配置': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': '无法装载', '价格': '$599' },
+              { '配置': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': '无法装载', '价格': '$1,399' },
+              { '配置': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', '价格': '$1,999' },
+              { '配置': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', '价格': '$2,299' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Mac Mini M4 Pro：优缺点',
+            items: [
+              '<strong>✓ 优点：</strong> 静音、30W功耗、开箱即用Metal GPU加速',
+              '<strong>✓ 优点：</strong> 5.1×5.1×1.5英寸（最小的70B选项）',
+              '<strong>✗ 缺点：</strong> 内存不可升级（购买时选择64 GB）',
+              '<strong>✗ 缺点：</strong> 10–15 tok/s比RTX 4090（60–80 tok/s）更慢'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop AMD Ryzen AI Max',
+            items: [
+              '<strong>CPU：</strong> Ryzen AI Max 395+（16核Zen 5）',
+              '<strong>GPU：</strong> Radeon 8060S（40 RDNA CU）',
+              '<strong>内存：</strong> 128 GB LPDDR5X统一（可升级）',
+              '<strong>外形：</strong> 4.5L迷你-ITX，模块化设计',
+              '<strong>功率：</strong> 120W持续，200W峰值'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Framework Desktop模型速度',
+            columns: ['模型', 'tok/s'],
+            rows: [
+              { '模型': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { '模型': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
+              { '模型': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
+              { '模型': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            items: [
+              '<strong>速度：</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s（快1.5–2倍）',
+              '<strong>内存：</strong> Framework 128 GB vs Mac mini 64 GB（容量2倍）',
+              '<strong>可升级：</strong> Framework可以，Mac mini不可以',
+              '<strong>价格：</strong> Framework $1,999 vs Mac mini $2,299（Framework更优）',
+              '<strong>设置：</strong> Framework需要ROCm，Mac mini开箱即用'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Mini-ITX GPU兼容性',
+            columns: ['GPU', 'VRAM', '最大模型', '适配?', '价格（2026）'],
+            rows: [
+              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最大模型': '13B Q4', '适配?': '适配（217mm）', '价格（2026）': '$450–500' },
+              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', '最大模型': '13B Q4', '适配?': '需确认（225mm）', '价格（2026）': '$550–650' },
+              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', '最大模型': '7B Q4', '适配?': '适配（216mm）', '价格（2026）': '$280–320' },
+              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '最大模型': '13B Q4', '适配?': '需确认', '价格（2026）': '$250–350 二手' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: '平台性价比对比',
+            columns: ['平台', 'GPU选项', '总成本', '最适合'],
+            rows: [
+              { '平台': 'Intel NUC 13', 'GPU选项': 'RTX 5060 Ti (TB3)', '总成本': '~$1,300', '最适合': '做工优先' },
+              { '平台': 'ASUS PN51/52', 'GPU选项': 'RTX 5060 Ti (PCIe)', '总成本': '~$900', '最适合': '最佳性价比' },
+              { '平台': 'Giada/Zotac', 'GPU选项': '集成GPU仅', '总成本': '~$400', '最适合': '3B–7B模型' },
+              { '平台': 'Custom ITX', 'GPU选项': '任意GPU', '总成本': '$1,000–1,400', '最适合': '最大灵活性' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '散热：降温4步骤',
+            items: [
+              '<strong>1. 监控：</strong> GPU-Z或HWiNFO64 — 全负荷监控温度',
+              '<strong>2. 降压：</strong> MSI Afterburner（–50 mV）可降5–10°C，无速度损失',
+              '<strong>3. 换风扇：</strong> Noctua或BeQuiet!（$50–80）降噪10–15 dB',
+              '<strong>4. 优化气流：</strong> 正压设置 = 更好冷却'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '限制：不支持的内容',
+            items: [
+              '<strong>70B模型需要：</strong> 最少64 GB（Mac mini M4 Pro 64GB）或128 GB（Framework）',
+              '<strong>RTX 4090上限：</strong> 70B Q4在60–80 tok/s（无法进一步加速）',
+              '<strong>Mac mini内存不可升级：</strong> 购买时选择64 GB；无升级路径',
+              '<strong>Custom ITX复杂性：</strong> 需要机箱改造、线材管理、导热膏'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'FAQ：常见问题',
+            items: [
+              '<strong>Q: 能在RTX 4090上运行70B吗?</strong> 可以，但60–80 tok/s（比Framework慢）',
+              '<strong>Q: Mac mini M4 Pro vs Framework?</strong> Mac静音+紧凑（10–15 tok/s），Framework高速（20–25 tok/s）',
+              '<strong>Q: 2026年最佳迷你PC?</strong> ASUS PN51 + RTX 5060 Ti性价比最高（~$900）；Framework速度最快',
+              '<strong>Q: 使用哪种量化?</strong> Q4_K_M：速度、质量、VRAM的最佳平衡'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '避免的常见错误',
+            items: [
+              '<strong>1.</strong> 买48 GB Mac mini而非64 GB（70B装不下）',
+              '<strong>2.</strong> 不测量机箱深度就选RTX 4070（220mm限制）',
+              '<strong>3.</strong> 认为卸载能解决VRAM（比原生GPU更慢）',
+              '<strong>4.</strong> 不做降压（免费5–10°C无缺点）',
+              '<strong>5.</strong> 买2025年前GPU驱动（旧Framework上ROCm不稳定）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PromptQuorum如何帮助',
+            items: [
+              '<strong>多模型分发：</strong> 将提示发送到最佳模型以降低延迟',
+              '<strong>共识生成：</strong> 在2–3个模型上运行相同提示，聚合答案',
+              '<strong>成本跟踪：</strong> 监控本地模型的令牌支出（无云账单）',
+              '<strong>简单设置：</strong> 一个API，所有本地LLM（Ollama、LM Studio、vLLM）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '后续步骤',
+            items: [
+              '<strong>✓ 第1步：</strong> 决定：Mac mini（静音）、Framework（高速）还是Custom ITX（便宜）？',
+              '<strong>✓ 第2步：</strong> 订购硬件，安装Ollama或LM Studio',
+              '<strong>✓ 第3步：</strong> 下载Llama 3.3 70B Q4模型（~40 GB）',
+              '<strong>✓ 第4步：</strong> 连接到PromptQuorum进行多模型分发',
+              '<strong>免费试用PromptQuorum：</strong> 无需信用卡，立即开始使用本地模型'
+            ]
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}" target="_blank" rel="noopener" style="color: #79747e; text-decoration: none;">${slide.link.split('/').slice(-1)[0]}</a></p>${footerLink}`;
+          break;
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="text-align: left;">';
+          slide.items.forEach(item => html += `<li>${item}</li>`);
+          html += '</ul>' + footerLink;
+          break;
+        case 'table':
+          html = `<h2>${slide.h2}</h2><table><tr>`;
+          slide.columns.forEach(col => html += `<th>${col}</th>`);
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => html += `<td>${row[col]}</td>`);
+            html += '</tr>';
+          });
+          html += '</table>' + footerLink;
+          break;
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2><ol style="text-align: left;">`;
+          slide.items.forEach(item => html += `<li>${item}</li>`);
+          html += '</ol>' + footerLink;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => container.innerHTML += renderSlide(slide));
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      slides.forEach(s => s.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(s => s.style.display = 'flex');
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(s => s.style.removeProperty('display'));
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
