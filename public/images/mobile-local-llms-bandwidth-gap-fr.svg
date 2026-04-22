@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">Pourquoi les LLM mobiles sont 15–50× plus lents : bande passante</text>
+  <text x="400" y="50" font-size="12" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">La vitesse d'inférence LLM est proportionnelle à la bande passante mémoire (Go/sec)</text>
+
+  <!-- Left panel: Mobile -->
+  <rect x="28" y="70" width="340" height="220" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="70" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="100" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle" font-family="system-ui, sans-serif">Mobile (Lent)</text>
+
+  <text x="60" y="135" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">iPhone A18 Pro</text>
+  <text x="310" y="135" font-size="13" font-weight="700" fill="#EA4335" text-anchor="end" font-family="system-ui, sans-serif">~68 GB/sec</text>
+  <line x1="50" y1="145" x2="350" y2="145" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="60" y="170" font-size="13" fill="#49454F" font-family="system-ui, sans-serif">Snapdragon X Elite</text>
+  <text x="310" y="170" font-size="13" font-weight="700" fill="#EA4335" text-anchor="end" font-family="system-ui, sans-serif">~102 GB/sec</text>
+  <line x1="50" y1="180" x2="350" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="60" y="205" font-size="13" fill="#49454F" font-family="system-ui, sans-serif">iPad M4</text>
+  <text x="310" y="205" font-size="13" font-weight="700" fill="#F4B400" text-anchor="end" font-family="system-ui, sans-serif">~120 GB/sec</text>
+  <line x1="50" y1="215" x2="350" y2="215" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="198" y="255" font-size="12" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">Résultat : 3–15 tok/sec</text>
+  <text x="198" y="275" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">Puissance : 1–5 W (efficace)</text>
+
+  <!-- Right panel: Desktop -->
+  <rect x="432" y="70" width="340" height="220" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="70" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="100" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, sans-serif">Bureau (Rapide)</text>
+
+  <text x="464" y="135" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">RTX 4090</text>
+  <text x="714" y="135" font-size="13" font-weight="700" fill="#34A853" text-anchor="end" font-family="system-ui, sans-serif">1,008 GB/sec</text>
+  <line x1="454" y1="145" x2="754" y2="145" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="464" y="170" font-size="13" fill="#49454F" font-family="system-ui, sans-serif">RTX 5060 Ti</text>
+  <text x="714" y="170" font-size="13" font-weight="700" fill="#34A853" text-anchor="end" font-family="system-ui, sans-serif">~288 GB/sec</text>
+  <line x1="454" y1="180" x2="754" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="464" y="205" font-size="13" fill="#49454F" font-family="system-ui, sans-serif">Mac mini M4 Pro</text>
+  <text x="714" y="205" font-size="13" font-weight="700" fill="#34A853" text-anchor="end" font-family="system-ui, sans-serif">~273 GB/sec</text>
+  <line x1="454" y1="215" x2="754" y2="215" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="602" y="255" font-size="12" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">Résultat : 80–150 tok/sec</text>
+  <text x="602" y="275" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">Puissance : 150–600 W (élevée)</text>
+
+  <!-- Divider arrow -->
+  <text x="400" y="185" font-size="28" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, sans-serif">vs</text>
+
+  <!-- Footer -->
+  <text x="400" y="320" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, sans-serif">Le RTX 4090 a 15× la bande passante de l'iPhone A18 — voilà pourquoi le bureau est 15–50× plus rapide.</text>
+  <text x="750" y="340" text-anchor="end" font-size="10" fill="#999" font-family="system-ui, sans-serif">promptquorum.com</text>
+</svg>

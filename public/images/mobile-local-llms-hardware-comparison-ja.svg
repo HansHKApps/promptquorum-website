@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">ローカルLLM用モバイルハードウェア（2026年4月）</text>
+  <text x="400" y="50" font-size="12" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">デバイス別の最大モデルサイズ、推論速度、利用可能メモリ</text>
+
+  <!-- Header -->
+  <text x="40" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">デバイス</text>
+  <text x="300" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">最大モデル</text>
+  <text x="430" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">速度</text>
+  <text x="570" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">メモリ</text>
+  <text x="700" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">評価</text>
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: iPad Pro M4 -->
+  <text x="40" y="115" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">iPad Pro (M4)</text>
+  <text x="300" y="115" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">13B</text>
+  <text x="430" y="115" font-size="12" font-weight="700" fill="#34A853" font-family="system-ui, sans-serif">15トークン/秒</text>
+  <text x="570" y="115" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">16 GB統一</text>
+  <circle cx="730" cy="111" r="14" fill="#34A853"/>
+  <text x="730" y="116" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">最良</text>
+  <line x1="18" y1="128" x2="782" y2="128" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Snapdragon X Elite -->
+  <text x="40" y="155" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Android (Snapdragon X Elite)</text>
+  <text x="300" y="155" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">7B</text>
+  <text x="430" y="155" font-size="12" font-weight="700" fill="#34A853" font-family="system-ui, sans-serif">5トークン/秒</text>
+  <text x="570" y="155" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">8–12 GB</text>
+  <circle cx="730" cy="151" r="14" fill="#34A853"/>
+  <text x="730" y="156" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">良好</text>
+  <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Galaxy S25 Ultra -->
+  <text x="40" y="195" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Samsung Galaxy S25 Ultra</text>
+  <text x="300" y="195" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">7B</text>
+  <text x="430" y="195" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">4トークン/秒</text>
+  <text x="570" y="195" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">12 GB</text>
+  <circle cx="730" cy="191" r="14" fill="#F4B400"/>
+  <text x="730" y="196" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">OK</text>
+  <line x1="18" y1="208" x2="782" y2="208" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: iPhone 16 Pro -->
+  <text x="40" y="235" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">iPhone 16 Pro (A18 Pro)</text>
+  <text x="300" y="235" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">3B</text>
+  <text x="430" y="235" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">4トークン/秒</text>
+  <text x="570" y="235" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">12 GB共有</text>
+  <circle cx="730" cy="231" r="14" fill="#F4B400"/>
+  <text x="730" y="236" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">OK</text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Pixel 9 Pro -->
+  <text x="40" y="275" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Pixel 9 Pro (Tensor G4)</text>
+  <text x="300" y="275" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">3B</text>
+  <text x="430" y="275" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">3トークン/秒</text>
+  <text x="570" y="275" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">16 GB</text>
+  <circle cx="730" cy="271" r="14" fill="#F4B400"/>
+  <text x="730" y="276" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">OK</text>
+  <line x1="18" y1="288" x2="782" y2="288" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: iPhone 16 -->
+  <text x="40" y="315" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">iPhone 16 (A18)</text>
+  <text x="300" y="315" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">3B</text>
+  <text x="430" y="315" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">3トークン/秒</text>
+  <text x="570" y="315" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">8 GB共有</text>
+  <circle cx="730" cy="311" r="14" fill="#EA4335"/>
+  <text x="730" y="316" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">最小</text>
+  <line x1="18" y1="328" x2="782" y2="328" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="400" y="360" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, sans-serif">iPad Pro M4は最良のモバイルLLMデバイス：7Bで15トークン/秒、13Bモデルに対応。</text>
+  <text x="400" y="380" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">promptquorum.com/local-llms/mobile-local-llms</text>
+  <text x="750" y="410" text-anchor="end" font-size="10" fill="#999" font-family="system-ui, sans-serif">promptquorum.com</text>
+</svg>
