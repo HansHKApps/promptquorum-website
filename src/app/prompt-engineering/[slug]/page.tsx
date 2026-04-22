@@ -6,6 +6,7 @@ import { peContent, type PEArticle } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
+import { generateAlternates } from '@/lib/hreflang'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -89,6 +90,9 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = peContent[key][selectedLang] || peContent[key]['en']
+  const translationObj = peContent[key][selectedLang] as any
+  const hasTranslation =
+    Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
 
@@ -115,17 +119,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     ...(isGlossary && {
       keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],
     }),
-    alternates: {
-      canonical: selectedLang === 'en' ? canonicalUrl : `${canonicalUrl}?lang=${selectedLang}`,
-      languages: {
-        'x-default': canonicalUrl,
-        en: canonicalUrl,
-        de: `${canonicalUrl}?lang=de`,
-        fr: `${canonicalUrl}?lang=fr`,
-        ja: `${canonicalUrl}?lang=ja`,
-        zh: `${canonicalUrl}?lang=zh`,
-      },
-    },
+    alternates: generateAlternates(`/prompt-engineering/${slug}`, selectedLang, hasTranslation),
     openGraph: {
       title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : finalTitle,
       description: finalDesc,

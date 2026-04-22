@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { BlogPostClient } from '@/components/BlogPostClient'
 import { blogContent, type Language } from '@/lib/blog/blogContent'
 import { SLUG_TO_POST_ID, type BlogSlug } from '@/lib/blogSlugs'
+import { generateAlternates } from '@/lib/hreflang'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -32,6 +33,9 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
 
   const post = blogContent[postId][selectedLang] || blogContent[postId]['en']
+  const translationObj = blogContent[postId][selectedLang] as any
+  const hasTranslation =
+    Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
   const canonicalUrl = `https://www.promptquorum.com/blog/${slug}`
   const ogImageUrl = post.heroImage || `https://www.promptquorum.com/api/og/blog/${slug}?lang=${selectedLang}`
   const pageTitle = (post as any).seoTitle ?? post.title
@@ -40,17 +44,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   return {
     title: pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle,
     description: metaDesc,
-    alternates: {
-      canonical: selectedLang === 'en' ? canonicalUrl : `${canonicalUrl}?lang=${selectedLang}`,
-      languages: {
-        'x-default': canonicalUrl,
-        'en': canonicalUrl,
-        'de': `${canonicalUrl}?lang=de`,
-        'fr': `${canonicalUrl}?lang=fr`,
-        'ja': `${canonicalUrl}?lang=ja`,
-        'zh': `${canonicalUrl}?lang=zh`,
-      },
-    },
+    alternates: generateAlternates(`/blog/${slug}`, selectedLang, hasTranslation),
     openGraph: {
       title: pageTitle,
       description: metaDesc,

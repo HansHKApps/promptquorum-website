@@ -6,6 +6,7 @@ import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { llmThemes } from '@/lib/local-llms/themes'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
+import { generateAlternates } from '@/lib/hreflang'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -99,6 +100,9 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   if (!article) return notFound()
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
+  const translationObj = llmContent[key][selectedLang] as any
+  const hasTranslation =
+    Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
 
   // Use seoTitle if available for better SERP display, otherwise use article title
   const pageTitle = (article.seoTitle ?? article.title) ?? ''
@@ -108,17 +112,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'x-default': canonicalUrl,
-        en:  canonicalUrl,
-        de:  `${canonicalUrl}?lang=de`,
-        fr:  `${canonicalUrl}?lang=fr`,
-        ja:  `${canonicalUrl}?lang=ja`,
-        zh:  `${canonicalUrl}?lang=zh`,
-      },
-    },
+    alternates: generateAlternates(`/local-llms/${slug}`, selectedLang, hasTranslation),
     openGraph: {
       title: pageTitle,
       description: metaDesc,
