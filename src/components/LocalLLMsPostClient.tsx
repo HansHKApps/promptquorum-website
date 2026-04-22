@@ -104,7 +104,7 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
   de: {
     heading: 'Präsentation',
     description: 'Folien unten ansehen oder als PDF herunterladen.',
-    savePdf: 'Referenzkarte herunterladen (PDF)',
+    savePdf: 'Präsentation herunterladen (PDF)',
     fallbackDescription: 'Interaktive Folien für diesen Artikel.',
   },
   fr: {
