@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Local LLMs 2026: Run AI on iPhone, Android & iPad | PromptQuorum</title>
+    <meta name="description" content="iPhone A18 runs 3B at 3 tok/sec. Snapdragon X Elite runs 7B at 5 tok/sec. iPad M4 runs 13B at 15 tok/sec. Best apps and hardware for mobile local LLMs." />
+    <meta property="og:title" content="Mobile Local LLMs 2026 — PromptQuorum" />
+    <meta property="og:description" content="6 devices compared, 8 apps reviewed, performance benchmarks. Complete guide to running LLMs on phones and tablets." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/mobile-local-llms" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 32px 48px; text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative; }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .slide h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
+        .slide p { font-size: clamp(16px, 1.8vw, 20px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide.title .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+        .slide.title p { font-size: clamp(16px, 1.8vw, 22px); color: #6750a4; font-weight: 500; margin-top: 12px; }
+        .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; transition: all 0.2s; }
+        .slide.title a:hover { color: #7d5260; border-bottom-color: #7d5260; }
+        .slide ul, .slide ol { text-align: left; margin: 12px auto; max-width: 640px; }
+        .slide ul li, .slide ol li { font-size: clamp(14px, 1.5vw, 18px); margin-bottom: 10px; line-height: 1.5; }
+        .slide strong { color: #1c1b1f; font-weight: 700; }
+        table { margin: 12px auto; border-collapse: collapse; font-size: clamp(12px, 1.3vw, 15px); text-align: left; max-width: 90%; }
+        th { background: #6750a4; color: white; padding: 8px 14px; font-weight: 700; border: none; }
+        td { padding: 8px 14px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover td { background: #f7f2fa; }
+        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; transition: color 0.2s; }
+        .header-links a:hover { color: #7d5260; }
+        .content-area { flex: 1; overflow: hidden; }
+        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0; }
+        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+        button:hover { background: #7d5260; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 50px; text-align: center; }
+        @page { size: A4 landscape; margin: 0; }
+        @media print {
+            * { margin: 0; padding: 0; }
+            html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; color: black !important; }
+            .header, .controls { display: none !important; }
+            .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
+            .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
+            .slide { display: flex !important; flex-direction: column; justify-content: center; align-items: center; page-break-after: always; break-after: page; width: 100%; height: 210mm; padding: 20mm 24mm; box-sizing: border-box; overflow: visible !important; margin: 0; background: white; color: #1c1b1f; position: relative; counter-increment: page-counter; }
+            .slide::before { content: "https://www.promptquorum.com/local-llms/mobile-local-llms"; position: absolute; bottom: 15mm; left: 24mm; font-size: 9pt; color: #999; }
+            .slide::after { content: counter(page-counter) " / 12"; position: absolute; bottom: 15mm; right: 24mm; font-size: 9pt; color: #999; font-weight: 600; }
+            .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+            .slide strong { color: #000 !important; font-weight: 700; }
+            table th { background: #6750a4 !important; color: #fff !important; }
+            table td { color: #000 !important; border-color: #ccc !important; }
+            .slide:last-child { page-break-after: avoid; break-after: avoid; }
+        }
+        @media (max-width: 768px) {
+            .slide { padding: 24px; }
+            .slide h1 { font-size: 28px; }
+            .slide h2 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Mobile Local LLMs 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/mobile-local-llms" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+        <div class="content-area" id="slides-container"></div>
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">12</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const ARTICLE_SLUG = 'mobile-local-llms';
+        const ARTICLE_BASE = 'https://www.promptquorum.com/local-llms/' + ARTICLE_SLUG;
+
+        const CONTENT = {
+            en: {
+                title: 'Mobile Local LLMs 2026',
+                backLabel: '← Back to Article',
+                slides: [
+                    { type: 'title', h1: 'Mobile Local LLMs 2026', subtitle: 'Run AI Models on iPhone, Android & iPad — Offline, Private, Free', link: ARTICLE_BASE },
+                    { type: 'list', h2: 'Key Takeaways', items: [
+                        '<strong>iPhone (A18):</strong> 1–3B models, ~3 tok/sec. Llama 3.2 1B is practical.',
+                        '<strong>Android (Snapdragon X):</strong> 7B models, ~5 tok/sec. Practical for chat.',
+                        '<strong>iPad (M4):</strong> 7–13B models, ~15 tok/sec. Best mobile experience.',
+                        '<strong>Why mobile?</strong> Offline inference = privacy, no API costs, no latency.',
+                    ]},
+                    { type: 'table', h2: 'Mobile Hardware for LLMs (2026)', columns: ['Device', 'Max Model', 'Speed', 'Memory'], rows: [
+                        { 'Device': 'iPhone 16 (A18)', 'Max Model': '3B', 'Speed': '3 tok/sec', 'Memory': '8 GB' },
+                        { 'Device': 'iPhone 16 Pro (A18 Pro)', 'Max Model': '3B', 'Speed': '4 tok/sec', 'Memory': '12 GB' },
+                        { 'Device': 'Pixel 9 Pro (Tensor G4)', 'Max Model': '3B', 'Speed': '3 tok/sec', 'Memory': '16 GB' },
+                        { 'Device': 'Galaxy S25 Ultra', 'Max Model': '7B', 'Speed': '4 tok/sec', 'Memory': '12 GB' },
+                        { 'Device': 'Snapdragon X Elite', 'Max Model': '7B', 'Speed': '5 tok/sec', 'Memory': '8–12 GB' },
+                        { 'Device': 'iPad Pro (M4)', 'Max Model': '13B', 'Speed': '15 tok/sec', 'Memory': '16 GB' },
+                    ]},
+                    { type: 'table', h2: 'Best Mobile LLM Apps (April 2026)', columns: ['App', 'Platform', 'Models', 'Cost'], rows: [
+                        { 'App': 'PocketPal AI', 'Platform': 'iOS + Android', 'Models': '1–3B GGUF', 'Cost': 'Free' },
+                        { 'App': 'MLC Chat', 'Platform': 'iOS + Android', 'Models': '1–7B', 'Cost': 'Free' },
+                        { 'App': 'Ollama iOS', 'Platform': 'iPhone/iPad', 'Models': '1–3B', 'Cost': 'Free' },
+                        { 'App': 'Private LLM', 'Platform': 'iOS (iPad)', 'Models': '3–13B', 'Cost': '$5.99' },
+                        { 'App': 'LLaMa Lite', 'Platform': 'Android', 'Models': '3–7B', 'Cost': 'Free' },
+                    ]},
+                    { type: 'comparison', h2: 'Why Mobile Is 15–50× Slower', line1: 'iPhone A18: ~68 GB/sec memory bandwidth', line2: 'RTX 4090: 1,008 GB/sec memory bandwidth', tip: 'LLM speed scales with memory bandwidth. Mobile excels on efficiency (1–5W vs 300–600W), not throughput.' },
+                    { type: 'list', h2: 'Frameworks for Developers', items: [
+                        '<strong>iOS:</strong> Core ML + Metal Performance Shaders + llama.cpp',
+                        '<strong>Android:</strong> TensorFlow Lite + ONNX Runtime + Snapdragon NPE',
+                        '<strong>Cross-platform:</strong> MLC LLM for identical iOS/Android inference',
+                        '<strong>Model formats:</strong> Convert to GGUF or Core ML for mobile optimization',
+                    ]},
+                    { type: 'list', h2: 'Gemini Nano on Pixel', items: [
+                        '<strong>Gemini Nano</strong> runs natively on Pixel 9 Pro via AICore API',
+                        'Powers system features: Magic Compose, Recorder summaries',
+                        '<strong>Not accessible</strong> to third-party apps as of April 2026',
+                        'For user-controlled local LLM: use PocketPal AI or MLC Chat instead',
+                    ]},
+                    { type: 'numbered', h2: 'Common Mistakes', items: [
+                        'Running 7B models on iPhone — max practical is 3B',
+                        'Expecting desktop latency — mobile is 20–50× slower',
+                        'Using cloud APIs as fallback when offline is the goal',
+                        'Not optimizing for battery — limit response length',
+                        'Ignoring shared memory — 12 GB phone has only 6–8 GB for LLM',
+                    ]},
+                    { type: 'faq', h2: 'FAQ (1/2)', faqs: [
+                        { q: 'Can I run LLMs on iPhone?', a: 'Yes, 1–3B models only. A18 Pro runs 3B at ~4 tok/sec. Use PocketPal AI or MLC Chat.' },
+                        { q: 'Which Android devices work?', a: 'Snapdragon X Elite: 7B at 5 tok/sec. Pixel 9 Pro and Galaxy S25 Ultra: 3–7B via MLC Chat.' },
+                        { q: 'iPad vs iPhone?', a: 'iPad Pro M4 is 4× faster: 15 tok/sec on 7B, handles 13B. Best Apple mobile LLM device.' },
+                    ]},
+                    { type: 'faq', h2: 'FAQ (2/2)', faqs: [
+                        { q: 'Best mobile LLM app?', a: 'PocketPal AI (500K+ downloads). MLC Chat for broadest model support.' },
+                        { q: 'Will 2027 phones run 70B?', a: 'No. Expect 7–13B at 15–25 tok/sec. 70B needs iPad Pro M6 or mini PC server.' },
+                        { q: 'Does inference drain battery?', a: 'Yes. iPhone: 2–4 hours. iPad: 4–6 hours. Limit response length to conserve.' },
+                    ]},
+                    { type: 'list', h2: '2027 Outlook', items: [
+                        '<strong>Apple A19 Pro:</strong> 7–13B models at 15–25 tok/sec on phones',
+                        '<strong>Snapdragon X2:</strong> Improved NPU for 7B+ Android inference',
+                        '<strong>70B on mobile?</strong> Not on phones — iPad Pro M6 or Mac mini M5 Pro via Wi-Fi',
+                        '<strong>Apps maturing:</strong> PocketPal AI, MLC Chat improving rapidly',
+                    ]},
+                    { type: 'cta', h2: 'Try PromptQuorum Free', body: 'Compare mobile LLM models, track performance, and optimize your on-device AI workflow.', cta: 'Get Started Free', href: 'https://www.promptquorum.com' },
+                ]
+            },
+            de: {
+                title: 'Mobile lokale LLMs 2026',
+                backLabel: '← Zurück zum Artikel',
+                slides: [
+                    { type: 'title', h1: 'Mobile lokale LLMs 2026', subtitle: 'KI-Modelle auf iPhone, Android & iPad ausführen — Offline, Privat, Kostenlos', link: ARTICLE_BASE + '?lang=de' },
+                    { type: 'list', h2: 'Zusammenfassung', items: [
+                        '<strong>iPhone (A18):</strong> 1–3B-Modelle, ~3 Tok/Sek. Llama 3.2 1B ist praktisch.',
+                        '<strong>Android (Snapdragon X):</strong> 7B-Modelle, ~5 Tok/Sek. Praktisch für Chat.',
+                        '<strong>iPad (M4):</strong> 7–13B-Modelle, ~15 Tok/Sek. Bestes mobiles Erlebnis.',
+                        '<strong>Warum mobil?</strong> Offline-Inferenz = Datenschutz, keine API-Kosten, keine Latenz.',
+                    ]},
+                    { type: 'table', h2: 'Mobile Hardware für LLMs (2026)', columns: ['Gerät', 'Max. Modell', 'Geschwindigkeit', 'Speicher'], rows: [
+                        { 'Gerät': 'iPhone 16 (A18)', 'Max. Modell': '3B', 'Geschwindigkeit': '3 Tok/Sek', 'Speicher': '8 GB' },
+                        { 'Gerät': 'iPhone 16 Pro (A18 Pro)', 'Max. Modell': '3B', 'Geschwindigkeit': '4 Tok/Sek', 'Speicher': '12 GB' },
+                        { 'Gerät': 'Pixel 9 Pro (Tensor G4)', 'Max. Modell': '3B', 'Geschwindigkeit': '3 Tok/Sek', 'Speicher': '16 GB' },
+                        { 'Gerät': 'Galaxy S25 Ultra', 'Max. Modell': '7B', 'Geschwindigkeit': '4 Tok/Sek', 'Speicher': '12 GB' },
+                        { 'Gerät': 'Snapdragon X Elite', 'Max. Modell': '7B', 'Geschwindigkeit': '5 Tok/Sek', 'Speicher': '8–12 GB' },
+                        { 'Gerät': 'iPad Pro (M4)', 'Max. Modell': '13B', 'Geschwindigkeit': '15 Tok/Sek', 'Speicher': '16 GB' },
+                    ]},
+                    { type: 'table', h2: 'Beste mobile LLM-Apps (April 2026)', columns: ['App', 'Plattform', 'Modelle', 'Kosten'], rows: [
+                        { 'App': 'PocketPal AI', 'Plattform': 'iOS + Android', 'Modelle': '1–3B GGUF', 'Kosten': 'Kostenlos' },
+                        { 'App': 'MLC Chat', 'Plattform': 'iOS + Android', 'Modelle': '1–7B', 'Kosten': 'Kostenlos' },
+                        { 'App': 'Ollama iOS', 'Plattform': 'iPhone/iPad', 'Modelle': '1–3B', 'Kosten': 'Kostenlos' },
+                        { 'App': 'Private LLM', 'Plattform': 'iOS (iPad)', 'Modelle': '3–13B', 'Kosten': '5,99 $' },
+                        { 'App': 'LLaMa Lite', 'Plattform': 'Android', 'Modelle': '3–7B', 'Kosten': 'Kostenlos' },
+                    ]},
+                    { type: 'comparison', h2: 'Warum Mobile 15–50× langsamer ist', line1: 'iPhone A18: ~68 GB/Sek Speicherbandbreite', line2: 'RTX 4090: 1.008 GB/Sek Speicherbandbreite', tip: 'LLM-Geschwindigkeit skaliert mit Speicherbandbreite. Mobile glänzt bei Effizienz (1–5 W vs 300–600 W).' },
+                    { type: 'list', h2: 'Frameworks für Entwickler', items: [
+                        '<strong>iOS:</strong> Core ML + Metal Performance Shaders + llama.cpp',
+                        '<strong>Android:</strong> TensorFlow Lite + ONNX Runtime + Snapdragon NPE',
+                        '<strong>Plattformübergreifend:</strong> MLC LLM für identische iOS/Android-Inferenz',
+                        '<strong>Modellformate:</strong> GGUF oder Core ML für Mobiloptimierung',
+                    ]},
+                    { type: 'list', h2: 'Gemini Nano auf Pixel', items: [
+                        '<strong>Gemini Nano</strong> läuft nativ auf Pixel 9 Pro über AICore API',
+                        'Treibt Systemfunktionen an: Magic Compose, Recorder-Zusammenfassungen',
+                        '<strong>Nicht zugänglich</strong> für Drittanbieter-Apps (Stand April 2026)',
+                        'Für nutzergesteuerte LLM: PocketPal AI oder MLC Chat verwenden',
+                    ]},
+                    { type: 'numbered', h2: 'Häufige Fehler', items: [
+                        '7B-Modelle auf iPhone ausführen — max. praktisch ist 3B',
+                        'Desktop-Latenz erwarten — Mobile ist 20–50× langsamer',
+                        'Cloud-APIs als Fallback nutzen wenn Offline das Ziel ist',
+                        'Akku nicht optimieren — Antwortlänge begrenzen',
+                        'Gemeinsamen Speicher ignorieren — 12 GB Telefon hat nur 6–8 GB für LLM',
+                    ]},
+                    { type: 'faq', h2: 'FAQ (1/2)', faqs: [
+                        { q: 'Kann ich LLMs auf dem iPhone ausführen?', a: 'Ja, nur 1–3B. A18 Pro schafft 3B mit ~4 Tok/Sek. PocketPal AI oder MLC Chat nutzen.' },
+                        { q: 'Welche Android-Geräte funktionieren?', a: 'Snapdragon X Elite: 7B mit 5 Tok/Sek. Pixel 9 Pro und Galaxy S25 Ultra: 3–7B über MLC Chat.' },
+                        { q: 'iPad vs iPhone?', a: 'iPad Pro M4 ist 4× schneller: 15 Tok/Sek bei 7B, bewältigt 13B. Bestes Apple-Mobilgerät.' },
+                    ]},
+                    { type: 'faq', h2: 'FAQ (2/2)', faqs: [
+                        { q: 'Beste mobile LLM-App?', a: 'PocketPal AI (500K+ Downloads). MLC Chat für breiteste Modellunterstützung.' },
+                        { q: 'Werden 2027er Smartphones 70B ausführen?', a: 'Nein. 7–13B mit 15–25 Tok/Sek erwartet. 70B benötigt iPad Pro M6 oder Mini-PC-Server.' },
+                        { q: 'Entleert Inferenz den Akku?', a: 'Ja. iPhone: 2–4 Stunden. iPad: 4–6 Stunden. Antwortlänge begrenzen.' },
+                    ]},
+                    { type: 'list', h2: 'Ausblick 2027', items: [
+                        '<strong>Apple A19 Pro:</strong> 7–13B-Modelle mit 15–25 Tok/Sek auf Telefonen',
+                        '<strong>Snapdragon X2:</strong> Verbesserte NPU für 7B+ Android-Inferenz',
+                        '<strong>70B auf Mobilgeräten?</strong> Nicht auf Telefonen — iPad Pro M6 oder Mac mini M5 Pro',
+                        '<strong>Apps reifen:</strong> PocketPal AI, MLC Chat verbessern sich schnell',
+                    ]},
+                    { type: 'cta', h2: 'PromptQuorum kostenlos testen', body: 'Mobile LLM-Modelle vergleichen, Leistung verfolgen und On-Device-KI optimieren.', cta: 'Kostenlos starten', href: 'https://www.promptquorum.com' },
+                ]
+            },
+            fr: {
+                title: 'LLM locaux mobiles 2026',
+                backLabel: '← Retour à l\'article',
+                slides: [
+                    { type: 'title', h1: 'LLM locaux mobiles 2026', subtitle: 'Exécuter l\'IA sur iPhone, Android et iPad — Hors ligne, Privé, Gratuit', link: ARTICLE_BASE + '?lang=fr' },
+                    { type: 'list', h2: 'Points clés', items: [
+                        '<strong>iPhone (A18) :</strong> modèles 1–3B, ~3 tok/sec. Llama 3.2 1B utilisable.',
+                        '<strong>Android (Snapdragon X) :</strong> modèles 7B, ~5 tok/sec. Pratique pour le chat.',
+                        '<strong>iPad (M4) :</strong> modèles 7–13B, ~15 tok/sec. Meilleure expérience mobile.',
+                        '<strong>Pourquoi mobile ?</strong> Inférence hors ligne = confidentialité, zéro coût API.',
+                    ]},
+                    { type: 'table', h2: 'Matériel mobile pour LLM (2026)', columns: ['Appareil', 'Max modèle', 'Vitesse', 'Mémoire'], rows: [
+                        { 'Appareil': 'iPhone 16 (A18)', 'Max modèle': '3B', 'Vitesse': '3 tok/sec', 'Mémoire': '8 Go' },
+                        { 'Appareil': 'iPhone 16 Pro (A18 Pro)', 'Max modèle': '3B', 'Vitesse': '4 tok/sec', 'Mémoire': '12 Go' },
+                        { 'Appareil': 'Pixel 9 Pro (Tensor G4)', 'Max modèle': '3B', 'Vitesse': '3 tok/sec', 'Mémoire': '16 Go' },
+                        { 'Appareil': 'Galaxy S25 Ultra', 'Max modèle': '7B', 'Vitesse': '4 tok/sec', 'Mémoire': '12 Go' },
+                        { 'Appareil': 'Snapdragon X Elite', 'Max modèle': '7B', 'Vitesse': '5 tok/sec', 'Mémoire': '8–12 Go' },
+                        { 'Appareil': 'iPad Pro (M4)', 'Max modèle': '13B', 'Vitesse': '15 tok/sec', 'Mémoire': '16 Go' },
+                    ]},
+                    { type: 'table', h2: 'Meilleures apps LLM mobiles (avril 2026)', columns: ['App', 'Plateforme', 'Modèles', 'Coût'], rows: [
+                        { 'App': 'PocketPal AI', 'Plateforme': 'iOS + Android', 'Modèles': '1–3B GGUF', 'Coût': 'Gratuit' },
+                        { 'App': 'MLC Chat', 'Plateforme': 'iOS + Android', 'Modèles': '1–7B', 'Coût': 'Gratuit' },
+                        { 'App': 'Ollama iOS', 'Plateforme': 'iPhone/iPad', 'Modèles': '1–3B', 'Coût': 'Gratuit' },
+                        { 'App': 'Private LLM', 'Plateforme': 'iOS (iPad)', 'Modèles': '3–13B', 'Coût': '5,99 $' },
+                        { 'App': 'LLaMa Lite', 'Plateforme': 'Android', 'Modèles': '3–7B', 'Coût': 'Gratuit' },
+                    ]},
+                    { type: 'comparison', h2: 'Pourquoi le mobile est 15–50× plus lent', line1: 'iPhone A18 : ~68 Go/sec de bande passante', line2: 'RTX 4090 : 1 008 Go/sec de bande passante', tip: 'La vitesse LLM est proportionnelle à la bande passante. Le mobile excelle en efficacité (1–5 W vs 300–600 W).' },
+                    { type: 'list', h2: 'Frameworks pour développeurs', items: [
+                        '<strong>iOS :</strong> Core ML + Metal Performance Shaders + llama.cpp',
+                        '<strong>Android :</strong> TensorFlow Lite + ONNX Runtime + Snapdragon NPE',
+                        '<strong>Multiplateforme :</strong> MLC LLM pour iOS/Android identique',
+                        '<strong>Formats :</strong> Convertir en GGUF ou Core ML pour mobile',
+                    ]},
+                    { type: 'list', h2: 'Gemini Nano sur Pixel', items: [
+                        '<strong>Gemini Nano</strong> tourne nativement sur Pixel 9 Pro via AICore',
+                        'Alimente les fonctions système : Magic Compose, résumés',
+                        '<strong>Non accessible</strong> aux apps tierces (avril 2026)',
+                        'Pour un LLM contrôlé : PocketPal AI ou MLC Chat',
+                    ]},
+                    { type: 'numbered', h2: 'Erreurs courantes', items: [
+                        'Exécuter des 7B sur iPhone — maximum pratique : 3B',
+                        'Attendre la latence bureau — mobile est 20–50× plus lent',
+                        'Utiliser le cloud comme secours quand l\'objectif est hors ligne',
+                        'Ne pas optimiser la batterie — limiter la longueur des réponses',
+                        'Ignorer la mémoire partagée — 12 Go = 6–8 Go utilisables pour LLM',
+                    ]},
+                    { type: 'faq', h2: 'FAQ (1/2)', faqs: [
+                        { q: 'LLM sur iPhone ?', a: 'Oui, 1–3B uniquement. A18 Pro : 3B à ~4 tok/sec. PocketPal AI ou MLC Chat.' },
+                        { q: 'Quels Android ?', a: 'Snapdragon X Elite : 7B à 5 tok/sec. Pixel 9 Pro et Galaxy S25 Ultra : 3–7B via MLC Chat.' },
+                        { q: 'iPad vs iPhone ?', a: 'iPad Pro M4 : 4× plus rapide, 15 tok/sec sur 7B, gère 13B. Meilleur appareil Apple.' },
+                    ]},
+                    { type: 'faq', h2: 'FAQ (2/2)', faqs: [
+                        { q: 'Meilleure app mobile LLM ?', a: 'PocketPal AI (500K+ téléchargements). MLC Chat pour le plus large support.' },
+                        { q: 'Smartphones 2027 et 70B ?', a: 'Non. 7–13B à 15–25 tok/sec prévu. 70B nécessite iPad Pro M6 ou serveur local.' },
+                        { q: 'Impact batterie ?', a: 'Oui. iPhone : 2–4h. iPad : 4–6h. Limitez les réponses.' },
+                    ]},
+                    { type: 'list', h2: 'Perspectives 2027', items: [
+                        '<strong>Apple A19 Pro :</strong> 7–13B à 15–25 tok/sec sur téléphones',
+                        '<strong>Snapdragon X2 :</strong> NPU amélioré pour Android 7B+',
+                        '<strong>70B mobile ?</strong> Pas sur téléphone — iPad Pro M6 ou Mac mini M5 Pro',
+                        '<strong>Apps en progrès :</strong> PocketPal AI, MLC Chat en amélioration rapide',
+                    ]},
+                    { type: 'cta', h2: 'Essayez PromptQuorum gratuitement', body: 'Comparez les modèles LLM mobiles et optimisez votre workflow IA on-device.', cta: 'Commencer gratuitement', href: 'https://www.promptquorum.com' },
+                ]
+            },
+            ja: {
+                title: 'モバイルローカルLLM 2026',
+                backLabel: '← 記事に戻る',
+                slides: [
+                    { type: 'title', h1: 'モバイルローカルLLM 2026', subtitle: 'iPhone・Android・iPadでAIモデルを実行 — オフライン・プライバシー・無料', link: ARTICLE_BASE + '?lang=ja' },
+                    { type: 'list', h2: '重要ポイント', items: [
+                        '<strong>iPhone (A18)：</strong>1–3Bモデル、約3トークン/秒。Llama 3.2 1Bが実用的。',
+                        '<strong>Android (Snapdragon X)：</strong>7Bモデル、約5トークン/秒。チャットに実用的。',
+                        '<strong>iPad (M4)：</strong>7–13Bモデル、約15トークン/秒。最良のモバイル体験。',
+                        '<strong>なぜモバイル？</strong>オフライン推論 = プライバシー、APIコストゼロ、レイテンシーゼロ。',
+                    ]},
+                    { type: 'table', h2: 'モバイルLLMハードウェア（2026年）', columns: ['デバイス', '最大モデル', '速度', 'メモリ'], rows: [
+                        { 'デバイス': 'iPhone 16 (A18)', '最大モデル': '3B', '速度': '3トークン/秒', 'メモリ': '8 GB' },
+                        { 'デバイス': 'iPhone 16 Pro (A18 Pro)', '最大モデル': '3B', '速度': '4トークン/秒', 'メモリ': '12 GB' },
+                        { 'デバイス': 'Pixel 9 Pro (Tensor G4)', '最大モデル': '3B', '速度': '3トークン/秒', 'メモリ': '16 GB' },
+                        { 'デバイス': 'Galaxy S25 Ultra', '最大モデル': '7B', '速度': '4トークン/秒', 'メモリ': '12 GB' },
+                        { 'デバイス': 'Snapdragon X Elite', '最大モデル': '7B', '速度': '5トークン/秒', 'メモリ': '8–12 GB' },
+                        { 'デバイス': 'iPad Pro (M4)', '最大モデル': '13B', '速度': '15トークン/秒', 'メモリ': '16 GB' },
+                    ]},
+                    { type: 'table', h2: 'モバイルLLMアプリ（2026年4月）', columns: ['アプリ', 'プラットフォーム', 'モデル', '費用'], rows: [
+                        { 'アプリ': 'PocketPal AI', 'プラットフォーム': 'iOS + Android', 'モデル': '1–3B GGUF', '費用': '無料' },
+                        { 'アプリ': 'MLC Chat', 'プラットフォーム': 'iOS + Android', 'モデル': '1–7B', '費用': '無料' },
+                        { 'アプリ': 'Ollama iOS', 'プラットフォーム': 'iPhone/iPad', 'モデル': '1–3B', '費用': '無料' },
+                        { 'アプリ': 'Private LLM', 'プラットフォーム': 'iOS (iPad)', 'モデル': '3–13B', '費用': '$5.99' },
+                        { 'アプリ': 'LLaMa Lite', 'プラットフォーム': 'Android', 'モデル': '3–7B', '費用': '無料' },
+                    ]},
+                    { type: 'comparison', h2: 'なぜモバイルは15–50倍遅いのか', line1: 'iPhone A18：約68 GB/秒メモリ帯域幅', line2: 'RTX 4090：1,008 GB/秒メモリ帯域幅', tip: 'LLM速度はメモリ帯域幅に比例。モバイルは効率（1–5 W vs 300–600 W）に優れます。' },
+                    { type: 'list', h2: '開発者向けフレームワーク', items: [
+                        '<strong>iOS：</strong>Core ML + Metal Performance Shaders + llama.cpp',
+                        '<strong>Android：</strong>TensorFlow Lite + ONNX Runtime + Snapdragon NPE',
+                        '<strong>クロスプラットフォーム：</strong>MLC LLMで同一iOS/Android推論',
+                        '<strong>モデル形式：</strong>GGUFまたはCore MLに変換してモバイル最適化',
+                    ]},
+                    { type: 'list', h2: 'PixelのGemini Nano', items: [
+                        '<strong>Gemini Nano</strong>はPixel 9 ProでAICore API経由でネイティブ実行',
+                        'システム機能を駆動：Magic Compose、録音要約',
+                        '<strong>サードパーティアプリからアクセス不可</strong>（2026年4月時点）',
+                        'ユーザー制御のLLMには：PocketPal AIまたはMLC Chatを使用',
+                    ]},
+                    { type: 'numbered', h2: 'よくある間違い', items: [
+                        'iPhoneで7Bモデルを実行 — 実用最大は3B',
+                        'デスクトップ並みのレイテンシーを期待 — モバイルは20–50倍遅い',
+                        'オフラインが目標なのにクラウドAPIをフォールバックに使用',
+                        'バッテリー最適化を怠る — 応答長を制限',
+                        '共有メモリを無視 — 12 GB電話はLLMに6–8 GBのみ使用可能',
+                    ]},
+                    { type: 'faq', h2: 'FAQ (1/2)', faqs: [
+                        { q: 'iPhoneでLLMを実行できる？', a: 'はい、1–3Bのみ。A18 Proは3Bを約4トークン/秒。PocketPal AIまたはMLC Chat。' },
+                        { q: 'どのAndroidが対応？', a: 'Snapdragon X Elite：7Bで5トークン/秒。Pixel 9 Pro、Galaxy S25 Ultra：MLC Chat経由で3–7B。' },
+                        { q: 'iPad vs iPhone？', a: 'iPad Pro M4は4倍高速：7Bで15トークン/秒、13B対応。最良のAppleモバイルデバイス。' },
+                    ]},
+                    { type: 'faq', h2: 'FAQ (2/2)', faqs: [
+                        { q: '最良のモバイルLLMアプリ？', a: 'PocketPal AI（50万以上ダウンロード）。MLC Chatが最広モデルサポート。' },
+                        { q: '2027年スマートフォンで70B？', a: 'いいえ。7–13Bで15–25トークン/秒の見込み。70BにはiPad Pro M6かミニPCサーバー。' },
+                        { q: 'バッテリーを消耗する？', a: 'はい。iPhone：2–4時間。iPad：4–6時間。応答長制限を推奨。' },
+                    ]},
+                    { type: 'list', h2: '2027年展望', items: [
+                        '<strong>Apple A19 Pro：</strong>電話で7–13Bモデルを15–25トークン/秒',
+                        '<strong>Snapdragon X2：</strong>Android 7B+向け改良NPU',
+                        '<strong>モバイルで70B？</strong>電話では不可 — iPad Pro M6かMac mini M5 Pro',
+                        '<strong>アプリ成熟：</strong>PocketPal AI、MLC Chatが急速に改善中',
+                    ]},
+                    { type: 'cta', h2: 'PromptQuorumを無料で試す', body: 'モバイルLLMモデルの比較、パフォーマンス追跡、オンデバイスAIワークフローの最適化。', cta: '無料で始める', href: 'https://www.promptquorum.com' },
+                ]
+            },
+            zh: {
+                title: '移动端本地LLM 2026',
+                backLabel: '← 返回文章',
+                slides: [
+                    { type: 'title', h1: '移动端本地LLM 2026', subtitle: '在iPhone、Android和iPad上运行AI模型 — 离线、隐私、免费', link: ARTICLE_BASE + '?lang=zh' },
+                    { type: 'list', h2: '核心要点', items: [
+                        '<strong>iPhone (A18)：</strong>1–3B模型，约3令牌/秒。Llama 3.2 1B可实用。',
+                        '<strong>Android (Snapdragon X)：</strong>7B模型，约5令牌/秒。适合聊天。',
+                        '<strong>iPad (M4)：</strong>7–13B模型，约15令牌/秒。最佳移动体验。',
+                        '<strong>为什么选择移动端？</strong>离线推理 = 隐私、零API成本、零延迟。',
+                    ]},
+                    { type: 'table', h2: 'LLM移动硬件（2026年）', columns: ['设备', '最大模型', '速度', '内存'], rows: [
+                        { '设备': 'iPhone 16 (A18)', '最大模型': '3B', '速度': '3令牌/秒', '内存': '8 GB' },
+                        { '设备': 'iPhone 16 Pro (A18 Pro)', '最大模型': '3B', '速度': '4令牌/秒', '内存': '12 GB' },
+                        { '设备': 'Pixel 9 Pro (Tensor G4)', '最大模型': '3B', '速度': '3令牌/秒', '内存': '16 GB' },
+                        { '设备': 'Galaxy S25 Ultra', '最大模型': '7B', '速度': '4令牌/秒', '内存': '12 GB' },
+                        { '设备': 'Snapdragon X Elite', '最大模型': '7B', '速度': '5令牌/秒', '内存': '8–12 GB' },
+                        { '设备': 'iPad Pro (M4)', '最大模型': '13B', '速度': '15令牌/秒', '内存': '16 GB' },
+                    ]},
+                    { type: 'table', h2: '最佳移动端LLM应用（2026年4月）', columns: ['应用', '平台', '模型', '费用'], rows: [
+                        { '应用': 'PocketPal AI', '平台': 'iOS + Android', '模型': '1–3B GGUF', '费用': '免费' },
+                        { '应用': 'MLC Chat', '平台': 'iOS + Android', '模型': '1–7B', '费用': '免费' },
+                        { '应用': 'Ollama iOS', '平台': 'iPhone/iPad', '模型': '1–3B', '费用': '免费' },
+                        { '应用': 'Private LLM', '平台': 'iOS (iPad)', '模型': '3–13B', '费用': '$5.99' },
+                        { '应用': 'LLaMa Lite', '平台': 'Android', '模型': '3–7B', '费用': '免费' },
+                    ]},
+                    { type: 'comparison', h2: '为什么移动端慢15–50倍', line1: 'iPhone A18：约68 GB/秒内存带宽', line2: 'RTX 4090：1,008 GB/秒内存带宽', tip: 'LLM速度与内存带宽成正比。移动端在能效方面占优（1–5 W vs 300–600 W）。' },
+                    { type: 'list', h2: '开发者框架', items: [
+                        '<strong>iOS：</strong>Core ML + Metal Performance Shaders + llama.cpp',
+                        '<strong>Android：</strong>TensorFlow Lite + ONNX Runtime + Snapdragon NPE',
+                        '<strong>跨平台：</strong>MLC LLM实现iOS/Android一致推理',
+                        '<strong>模型格式：</strong>转换为GGUF或Core ML进行移动优化',
+                    ]},
+                    { type: 'list', h2: 'Pixel上的Gemini Nano', items: [
+                        '<strong>Gemini Nano</strong>通过AICore API在Pixel 9 Pro上原生运行',
+                        '驱动系统功能：Magic Compose、录音摘要',
+                        '<strong>第三方应用不可访问</strong>（截至2026年4月）',
+                        '用户控制的LLM请使用PocketPal AI或MLC Chat',
+                    ]},
+                    { type: 'numbered', h2: '常见错误', items: [
+                        '在iPhone上运行7B模型 — 实际最大为3B',
+                        '期望桌面级延迟 — 移动端慢20–50倍',
+                        '离线为目标却使用云API作为备选',
+                        '不优化电池 — 限制响应长度',
+                        '忽视共享内存 — 12 GB手机仅有6–8 GB可用于LLM',
+                    ]},
+                    { type: 'faq', h2: 'FAQ (1/2)', faqs: [
+                        { q: '能在iPhone上运行LLM吗？', a: '可以，仅限1–3B。A18 Pro运行3B约4令牌/秒。使用PocketPal AI或MLC Chat。' },
+                        { q: '哪些Android设备可以？', a: 'Snapdragon X Elite：7B达5令牌/秒。Pixel 9 Pro和Galaxy S25 Ultra通过MLC Chat支持3–7B。' },
+                        { q: 'iPad vs iPhone？', a: 'iPad Pro M4快4倍：7B达15令牌/秒，支持13B。最佳Apple移动设备。' },
+                    ]},
+                    { type: 'faq', h2: 'FAQ (2/2)', faqs: [
+                        { q: '最佳移动端LLM应用？', a: 'PocketPal AI（50万以上下载）。MLC Chat模型支持最广。' },
+                        { q: '2027年手机能运行70B？', a: '不能。预计7–13B达15–25令牌/秒。70B需要iPad Pro M6或迷你PC服务器。' },
+                        { q: '推理消耗电池吗？', a: '是。iPhone：2–4小时。iPad：4–6小时。限制响应长度。' },
+                    ]},
+                    { type: 'list', h2: '2027年展望', items: [
+                        '<strong>Apple A19 Pro：</strong>手机上7–13B模型达15–25令牌/秒',
+                        '<strong>Snapdragon X2：</strong>改进NPU支持Android 7B+推理',
+                        '<strong>移动端70B？</strong>手机不行 — iPad Pro M6或Mac mini M5 Pro',
+                        '<strong>应用成熟：</strong>PocketPal AI、MLC Chat快速改进中',
+                    ]},
+                    { type: 'cta', h2: '免费试用PromptQuorum', body: '比较移动端LLM模型，追踪性能，优化端设备AI工作流。', cta: '免费开始', href: 'https://www.promptquorum.com' },
+                ]
+            },
+        };
+
+        function renderSlide(slide, lang) {
+            const articleUrl = ARTICLE_BASE + (lang !== 'en' ? '?lang=' + lang : '');
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+            let html = '';
+            switch (slide.type) {
+                case 'title':
+                    html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 32px; font-size: 18px; color: #79747e;"><a href="${slide.link}" target="_blank" rel="noopener">${slide.link}</a></p>${footerLink}`;
+                    break;
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="max-width:640px;">${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1em; margin-top: 16px;">';
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += '</ul>' + footerLink;
+                    break;
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table><tr>`;
+                    slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(row => { html += '<tr>'; slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; }); html += '</tr>'; });
+                    html += '</table>' + footerLink;
+                    break;
+                case 'comparison':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 36px; font-size: 1.4em;">${slide.line1}</p><p style="font-size: 1.4em;">${slide.line2}</p><p style="margin-top: 36px; font-size: 1.1em; color: #6750a4; max-width: 600px;">${slide.tip}</p>${footerLink}`;
+                    break;
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2><ol style="font-size: 1em; margin-top: 16px; max-width: 640px;">`;
+                    slide.items.forEach(item => { html += `<li style="margin-bottom:10px;">${item}</li>`; });
+                    html += '</ol>' + footerLink;
+                    break;
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => { html += `<div style="margin-bottom: 16px; text-align: left; max-width: 660px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.9em;">A: ${faq.a}</p></div>`; });
+                    html += footerLink;
+                    break;
+                case 'cta':
+                    html = `<h2>${slide.h2}</h2><p style="max-width: 560px;">${slide.body}</p><a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: 600;">${slide.cta}</a>${footerLink}`;
+                    break;
+            }
+            return `<div class="slide ${slide.type}" style="position:relative;">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = (['en','de','fr','ja','zh'].includes(params.get('lang'))) ? params.get('lang') : 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.textContent = content.backLabel;
+        backLink.target = '_blank';
+        backLink.rel = 'noopener';
+        if (lang !== 'en') backLink.href = ARTICLE_BASE + '?lang=' + lang;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => { container.innerHTML += renderSlide(slide, lang); });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            else currentSlide = n;
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) { showSlide(currentSlide + n); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => { slides.forEach(slide => { slide.style.display = 'flex'; }); });
+        window.addEventListener('afterprint', () => { slides.forEach(slide => { slide.style.removeProperty('display'); }); showSlide(currentSlide); });
+        if (isPrint) { window.addEventListener('load', () => { window.print(); }); }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
