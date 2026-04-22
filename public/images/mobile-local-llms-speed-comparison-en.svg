@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">Mobile vs Desktop LLM Speed (tok/sec)</text>
+  <text x="400" y="50" font-size="12" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">Token throughput comparison — desktop is 15–50x faster (April 2026)</text>
+
+  <!-- Y-axis -->
+  <line x1="100" y1="70" x2="100" y2="320" stroke="#79747E" stroke-width="2"/>
+  <line x1="100" y1="320" x2="750" y2="320" stroke="#79747E" stroke-width="2"/>
+  <text x="90" y="325" text-anchor="end" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">0</text>
+  <text x="90" y="270" text-anchor="end" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">30</text>
+  <text x="90" y="220" text-anchor="end" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">60</text>
+  <text x="90" y="170" text-anchor="end" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">90</text>
+  <text x="90" y="120" text-anchor="end" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">120</text>
+  <text x="90" y="78" text-anchor="end" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">150</text>
+
+  <!-- Grid -->
+  <line x1="100" y1="270" x2="750" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="100" y1="220" x2="750" y2="220" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="100" y1="170" x2="750" y2="170" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="100" y1="120" x2="750" y2="120" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Bar 1: RTX 4090 = 150 tok/sec -->
+  <rect x="130" y="78" width="90" height="242" fill="#6750A4" rx="4"/>
+  <text x="175" y="68" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, sans-serif">150</text>
+  <text x="175" y="340" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">RTX 4090</text>
+  <text x="175" y="354" font-size="10" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">(Desktop)</text>
+
+  <!-- Bar 2: iPad M4 = 15 tok/sec -->
+  <rect x="260" y="295" width="90" height="25" fill="#7C3AED" rx="4"/>
+  <text x="305" y="288" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="middle" font-family="system-ui, sans-serif">15</text>
+  <text x="305" y="340" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">iPad M4</text>
+
+  <!-- Bar 3: Snapdragon X = 5 tok/sec -->
+  <rect x="390" y="312" width="90" height="8" fill="#A78BFA" rx="4"/>
+  <text x="435" y="305" font-size="13" font-weight="700" fill="#A78BFA" text-anchor="middle" font-family="system-ui, sans-serif">5</text>
+  <text x="435" y="340" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">Snapdragon X</text>
+
+  <!-- Bar 4: iPhone 16 Pro = 4 tok/sec -->
+  <rect x="520" y="313" width="90" height="7" fill="#C4B5FD" rx="4"/>
+  <text x="565" y="305" font-size="13" font-weight="700" fill="#A78BFA" text-anchor="middle" font-family="system-ui, sans-serif">4</text>
+  <text x="565" y="340" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">iPhone 16 Pro</text>
+
+  <!-- Bar 5: iPhone 16 = 3 tok/sec -->
+  <rect x="650" y="315" width="90" height="5" fill="#DDD6FE" rx="4"/>
+  <text x="695" y="305" font-size="13" font-weight="700" fill="#A78BFA" text-anchor="middle" font-family="system-ui, sans-serif">3</text>
+  <text x="695" y="340" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">iPhone 16</text>
+
+  <!-- Footer -->
+  <text x="400" y="378" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, sans-serif">Desktop RTX 4090 is 10x faster than iPad M4 and 37x faster than iPhone 16 Pro.</text>
+  <text x="750" y="395" text-anchor="end" font-size="10" fill="#999" font-family="system-ui, sans-serif">promptquorum.com</text>
+</svg>
