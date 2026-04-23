@@ -548,7 +548,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {(article as any).gammaEmbedUrl && (
           <div className="mt-6 pt-8 border-t border-primary/20">
             <h2 className="text-2xl font-bold text-text-primary mb-2">
-              {PRESENTATION_UI[lang]?.heading}: {article.title} (Slide Deck)
+              {PRESENTATION_UI[lang]?.heading}: {article.title}
             </h2>
             <p className="text-text-secondary mb-4 text-sm">
               {(article as any).gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription}

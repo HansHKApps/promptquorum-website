@@ -1161,7 +1161,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {article.gammaEmbedUrl && (
           <section aria-label="Interactive presentation summary" className="my-8">
             <h2 className="text-xl font-semibold text-text-primary mb-2">
-              {PRESENTATION_UI[lang]?.heading ?? PRESENTATION_UI.en.heading}: {article.title} (Slide Deck)
+              {PRESENTATION_UI[lang]?.heading ?? PRESENTATION_UI.en.heading}: {article.title}
             </h2>
             <p className="text-sm text-text-muted mb-4">
               {PRESENTATION_UI[lang]?.description ?? PRESENTATION_UI.en.description}
