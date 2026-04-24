@@ -1,0 +1,78 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">
+    7-Step Fine-Tuning Path
+  </text>
+
+  <!-- Row 1: Steps 1-3 -->
+
+  <!-- Step 1 -->
+  <circle cx="60" cy="100" r="22" fill="#6750A4"/>
+  <text x="60" y="108" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">1</text>
+  <text x="60" y="145" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Collect Data</text>
+  <text x="60" y="162" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">500–5K examples</text>
+  <text x="60" y="175" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">JSON format</text>
+
+  <!-- Arrow 1 -->
+  <text x="115" y="108" font-size="20" fill="#6750A4" font-family="system-ui">→</text>
+
+  <!-- Step 2 -->
+  <circle cx="170" cy="100" r="22" fill="#6750A4"/>
+  <text x="170" y="108" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">2</text>
+  <text x="170" y="145" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Choose Base</text>
+  <text x="170" y="162" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">Llama 3.1 8B</text>
+  <text x="170" y="175" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">or Qwen 7B</text>
+
+  <!-- Arrow 2 -->
+  <text x="225" y="108" font-size="20" fill="#6750A4" font-family="system-ui">→</text>
+
+  <!-- Step 3 -->
+  <circle cx="280" cy="100" r="22" fill="#6750A4"/>
+  <text x="280" y="108" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">3</text>
+  <text x="280" y="145" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Train LoRA</text>
+  <text x="280" y="162" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">3–5 epochs</text>
+  <text x="280" y="175" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">8 GB VRAM</text>
+
+  <!-- Row 2: Steps 4-6 -->
+
+  <!-- Step 4 -->
+  <circle cx="60" cy="260" r="22" fill="#6750A4"/>
+  <text x="60" y="268" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">4</text>
+  <text x="60" y="305" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Evaluate</text>
+  <text x="60" y="322" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">Test accuracy</text>
+
+  <!-- Arrow 4 -->
+  <text x="115" y="268" font-size="20" fill="#6750A4" font-family="system-ui">→</text>
+
+  <!-- Step 5 -->
+  <circle cx="170" cy="260" r="22" fill="#6750A4"/>
+  <text x="170" y="268" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">5</text>
+  <text x="170" y="305" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Merge Adapter</text>
+  <text x="170" y="322" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">Single model file</text>
+
+  <!-- Arrow 5 -->
+  <text x="225" y="268" font-size="20" fill="#6750A4" font-family="system-ui">→</text>
+
+  <!-- Step 6 -->
+  <circle cx="280" cy="260" r="22" fill="#6750A4"/>
+  <text x="280" y="268" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">6</text>
+  <text x="280" y="305" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Convert GGUF</text>
+  <text x="280" y="322" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">Q4_K_M</text>
+
+  <!-- Step 7 (wider) -->
+  <circle cx="400" cy="180" r="22" fill="#6750A4"/>
+  <text x="400" y="188" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">7</text>
+  <text x="400" y="225" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Deploy to Ollama</text>
+  <text x="400" y="242" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">Create Modelfile</text>
+  <text x="400" y="255" font-family="'SF Mono', Monaco" font-size="10" fill="#49454F" text-anchor="middle">OpenAI API compatible</text>
+
+  <!-- Arrows to Step 7 -->
+  <path d="M 302 100 Q 350 140 378 158" stroke="#6750A4" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <path d="M 302 260 Q 350 220 378 202" stroke="#6750A4" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+
+  <!-- Timeline label -->
+  <text x="400" y="330" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui">Total Time: 1–4 hours | Cost: $100–500</text>
+</svg>

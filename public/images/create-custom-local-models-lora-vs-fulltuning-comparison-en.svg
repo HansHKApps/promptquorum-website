@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">
+    LoRA vs Full Fine-Tuning
+  </text>
+
+  <!-- Left Panel: LoRA (Fast) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#6750A4"/>
+
+  <text x="198" y="82" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui">LoRA (Recommended)</text>
+
+  <text x="48" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Speed:</text>
+  <text x="48" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">4× faster</text>
+
+  <text x="48" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">VRAM Required:</text>
+  <text x="48" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">8 GB</text>
+
+  <text x="48" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Weights Updated:</text>
+  <text x="48" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">1–2% of model</text>
+
+  <text x="48" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Accuracy vs Full:</text>
+  <text x="48" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">95–98%</text>
+
+  <text x="48" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Best For:</text>
+  <text x="48" y="298" font-family="system-ui" font-size="11" fill="#49454F">Most projects, limited</text>
+  <text x="48" y="312" font-family="system-ui" font-size="11" fill="#49454F">compute, rapid iteration</text>
+
+  <!-- Right Panel: Full Fine-Tuning (Slow) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#79747E"/>
+
+  <text x="602" y="82" font-size="15" font-weight="700" fill="#79747E" text-anchor="middle" font-family="system-ui">Full Fine-Tuning</text>
+
+  <text x="452" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Speed:</text>
+  <text x="452" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">1× (baseline)</text>
+
+  <text x="452" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">VRAM Required:</text>
+  <text x="452" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">64+ GB</text>
+
+  <text x="452" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Weights Updated:</text>
+  <text x="452" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">100% of model</text>
+
+  <text x="452" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Accuracy vs LoRA:</text>
+  <text x="452" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">+2–5% gain</text>
+
+  <text x="452" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Best For:</text>
+  <text x="452" y="298" font-family="system-ui" font-size="11" fill="#49454F">Large datasets (10K+),</text>
+  <text x="452" y="312" font-family="system-ui" font-size="11" fill="#49454F">unlimited budget</text>
+</svg>

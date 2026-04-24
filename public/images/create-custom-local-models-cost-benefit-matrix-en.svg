@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">
+    When to Fine-Tune vs Pre-Train vs RAG
+  </text>
+
+  <!-- RAG Box (bottom-left) -->
+  <rect x="28" y="55" width="220" height="270" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="220" height="4" rx="0" fill="#7D5260"/>
+  <text x="138" y="82" font-size="13" font-weight="700" fill="#7D5260" text-anchor="middle" font-family="system-ui">RAG (Free)</text>
+  <text x="48" y="105" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">When:</text>
+  <text x="48" y="122" font-size="11" fill="#49454F" font-family="system-ui">• No training data yet</text>
+  <text x="48" y="138" font-size="11" fill="#49454F" font-family="system-ui">• Need fast iteration</text>
+  <text x="48" y="154" font-size="11" fill="#49454F" font-family="system-ui">• Limited resources</text>
+  <text x="48" y="175" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Cost: $0</text>
+  <text x="48" y="195" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Speed: Immediate</text>
+  <text x="48" y="215" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Limitation:</text>
+  <text x="48" y="231" font-size="11" fill="#49454F" font-family="system-ui">Can't learn new</text>
+  <text x="48" y="247" font-size="11" fill="#49454F" font-family="system-ui">patterns, only</text>
+  <text x="48" y="263" font-size="11" fill="#49454F" font-family="system-ui">retrieve existing</text>
+
+  <!-- Fine-Tuning Box (center) -->
+  <rect x="270" y="55" width="220" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="270" y="55" width="220" height="4" rx="0" fill="#34A853"/>
+  <text x="380" y="82" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui">Fine-Tuning ⭐</text>
+  <text x="290" y="105" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">When:</text>
+  <text x="290" y="122" font-size="11" fill="#49454F" font-family="system-ui">• Have 500+ examples</text>
+  <text x="290" y="138" font-size="11" fill="#49454F" font-family="system-ui">• Domain expertise</text>
+  <text x="290" y="154" font-size="11" fill="#49454F" font-family="system-ui">• <$500 budget</text>
+  <text x="290" y="175" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Cost: $100–500</text>
+  <text x="290" y="195" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Speed: 1–4 hours</text>
+  <text x="290" y="215" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Success Rate:</text>
+  <text x="290" y="231" font-size="11" fill="#49454F" font-family="system-ui">5–15% accuracy</text>
+  <text x="290" y="247" font-size="11" fill="#49454F" font-family="system-ui">gain on domain</text>
+  <text x="290" y="263" font-size="11" fill="#49454F" font-family="system-ui">tasks</text>
+
+  <!-- Pre-Training Box (right) -->
+  <rect x="512" y="55" width="260" height="270" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="512" y="55" width="260" height="4" rx="0" fill="#F4B400"/>
+  <text x="642" y="82" font-size="13" font-weight="700" fill="#F4B400" text-anchor="middle" font-family="system-ui">Pre-Training (Rare)</text>
+  <text x="532" y="105" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">When:</text>
+  <text x="532" y="122" font-size="11" fill="#49454F" font-family="system-ui">• 100B+ tokens available</text>
+  <text x="532" y="138" font-size="11" fill="#49454F" font-family="system-ui">• >$50K budget</text>
+  <text x="532" y="154" font-size="11" fill="#49454F" font-family="system-ui">• Need proprietary model</text>
+  <text x="532" y="175" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Cost: $50K–500K</text>
+  <text x="532" y="195" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Speed: Weeks–Months</text>
+  <text x="532" y="215" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Best For:</text>
+  <text x="532" y="231" font-size="11" fill="#49454F" font-family="system-ui">Competitive advantage,</text>
+  <text x="532" y="247" font-size="11" fill="#49454F" font-family="system-ui">major enterprises, VCs</text>
+  <text x="532" y="263" font-size="11" fill="#49454F" font-family="system-ui">backing you</text>
+
+  <!-- Footer -->
+  <text x="400" y="330" font-size="10" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui">Recommended path: Start with fine-tuning (1–4 hours). If accuracy is insufficient, then consider pre-training.</text>
+</svg>
