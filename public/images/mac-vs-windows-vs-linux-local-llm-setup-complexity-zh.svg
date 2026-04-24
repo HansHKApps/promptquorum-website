@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">按OS分类的设置时间和复杂性</text>
+
+  <!-- macOS Panel (Left) — Green -->
+  <rect x="28" y="60" width="240" height="260" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="60" width="240" height="4" rx="0" fill="#34A853"/>
+  <text x="148" y="95" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">macOS</text>
+
+  <text x="48" y="125" font-size="28" font-weight="700" fill="#34A853" text-anchor="start">6分钟</text>
+  <text x="48" y="155" font-size="12" font-weight="600" fill="#1C1B1F">无需终端</text>
+  <text x="48" y="172" font-size="12" font-weight="600" fill="#1C1B1F">仅GUI设置</text>
+  <text x="48" y="189" font-size="11" fill="#49454F">1. 下载Ollama</text>
+  <text x="48" y="205" font-size="11" fill="#49454F">2. 运行应用程序</text>
+  <text x="48" y="221" font-size="11" fill="#49454F">3. 选择模型</text>
+  <text x="48" y="240" font-size="11" font-weight="600" fill="#6750A4">技能: 初学者 ✓</text>
+  <text x="48" y="305" font-size="10" fill="#49454F">最小学习曲线</text>
+
+  <!-- Windows Panel (Middle) — Amber -->
+  <rect x="280" y="60" width="240" height="260" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="280" y="60" width="240" height="4" rx="0" fill="#F4B400"/>
+  <text x="400" y="95" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle">Windows</text>
+
+  <text x="300" y="125" font-size="28" font-weight="700" fill="#F4B400" text-anchor="start">15–20分</text>
+  <text x="300" y="155" font-size="12" font-weight="600" fill="#1C1B1F">GUI、可选终端</text>
+  <text x="300" y="172" font-size="12" font-weight="600" fill="#1C1B1F">NVIDIA驱动必需</text>
+  <text x="300" y="189" font-size="11" fill="#49454F">1. 安装NVIDIA驱动程序</text>
+  <text x="300" y="205" font-size="11" fill="#49454F">2. 下载Ollama/LM Studio</text>
+  <text x="300" y="221" font-size="11" fill="#49454F">3. 选择模型</text>
+  <text x="300" y="240" font-size="11" font-weight="600" fill="#6750A4">技能: 中等 ✓</text>
+  <text x="300" y="305" font-size="10" fill="#49454F">驱动复杂性 +15分钟</text>
+
+  <!-- Linux Panel (Right) — Red -->
+  <rect x="532" y="60" width="240" height="260" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="532" y="60" width="240" height="4" rx="0" fill="#EA4335"/>
+  <text x="652" y="95" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Linux</text>
+
+  <text x="552" y="125" font-size="28" font-weight="700" fill="#EA4335" text-anchor="start">40–70分</text>
+  <text x="552" y="155" font-size="12" font-weight="600" fill="#1C1B1F">需要终端</text>
+  <text x="552" y="172" font-size="12" font-weight="600" fill="#1C1B1F">CUDA/cuDNN设置</text>
+  <text x="552" y="189" font-size="11" fill="#49454F">1. 安装CUDA/cuDNN</text>
+  <text x="552" y="205" font-size="11" fill="#49454F">2. 安装Ollama/vLLM</text>
+  <text x="552" y="221" font-size="11" fill="#49454F">3. 配置systemd</text>
+  <text x="552" y="240" font-size="11" font-weight="600" fill="#6750A4">技能: 高级 ✓</text>
+  <text x="552" y="305" font-size="10" fill="#49454F">最长但最强大</text>
+
+  <text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

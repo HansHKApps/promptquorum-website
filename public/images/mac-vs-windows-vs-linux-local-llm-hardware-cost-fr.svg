@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Coût du matériel pour les LLM locaux par OS</text>
+
+  <!-- Header Row -->
+  <line x1="18" y1="52" x2="782" y2="52" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="72" font-size="12" font-weight="700" fill="#79747E">Matériel</text>
+  <text x="200" y="72" font-size="12" font-weight="700" fill="#79747E">OS</text>
+  <text x="300" y="72" font-size="12" font-weight="700" fill="#79747E">Prix</text>
+  <text x="480" y="72" font-size="12" font-weight="700" fill="#79747E">Capable 70B</text>
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <text x="50" y="108" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Air M5 32GB</text>
+  <text x="200" y="108" font-size="11" fill="#49454F">macOS</text>
+  <text x="300" y="108" font-size="11" fill="#49454F">1 099–1 299 €</text>
+  <circle cx="580" cy="102" r="14" fill="#EA4335"/>
+  <text x="580" y="109" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8B seul.</text>
+  <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="50" y="146" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Pro 64GB</text>
+  <text x="200" y="146" font-size="11" fill="#49454F">macOS</text>
+  <text x="300" y="146" font-size="11" fill="#49454F">2 499–3 199 €</text>
+  <circle cx="580" cy="140" r="14" fill="#F4B400"/>
+  <text x="580" y="147" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">15–20 tok/s</text>
+  <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="50" y="184" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Max 128GB</text>
+  <text x="200" y="184" font-size="11" fill="#49454F">macOS</text>
+  <text x="300" y="184" font-size="11" fill="#49454F">3 499–4 999 €</text>
+  <circle cx="580" cy="178" r="14" fill="#34A853"/>
+  <text x="580" y="185" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">25–35 tok/s</text>
+  <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="50" y="222" font-size="12" font-weight="600" fill="#1C1B1F">RTX 5060 Ti 16GB (nouveau)</text>
+  <text x="200" y="222" font-size="11" fill="#49454F">Windows/Linux</text>
+  <text x="300" y="222" font-size="11" fill="#49454F">450–500 €</text>
+  <circle cx="580" cy="216" r="14" fill="#EA4335"/>
+  <text x="580" y="223" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">13B–24B seul.</text>
+  <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <text x="50" y="260" font-size="12" font-weight="600" fill="#1C1B1F">RTX 5090 32GB (nouveau)</text>
+  <text x="200" y="260" font-size="11" fill="#49454F">Windows/Linux</text>
+  <text x="300" y="260" font-size="11" fill="#49454F">~1 900 €</text>
+  <circle cx="580" cy="254" r="14" fill="#34A853"/>
+  <text x="580" y="261" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">40–50 tok/s</text>
+  <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6 -->
+  <text x="50" y="298" font-size="12" font-weight="600" fill="#1C1B1F">RTX 4090 24GB (occasion)</text>
+  <text x="200" y="298" font-size="11" fill="#49454F">Windows/Linux</text>
+  <text x="300" y="298" font-size="11" fill="#49454F">950–1 330 €</text>
+  <circle cx="580" cy="292" r="14" fill="#34A853"/>
+  <text x="580" y="299" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">70B Q4</text>
+  <line x1="18" y1="308" x2="782" y2="308" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Key insight -->
+  <text x="50" y="350" font-size="11" font-weight="600" fill="#6750A4">💡</text>
+  <text x="70" y="350" font-size="11" font-weight="600" fill="#6750A4">Meilleur rapport qualité-prix :</text>
+  <text x="70" y="368" font-size="11" fill="#49454F">Linux + RTX 5090 (1 900 €) pour l'inférence 70B la plus rapide, ou Mac mini M4 Pro (2 180 €) pour la simplicité.</text>
+
+  <text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

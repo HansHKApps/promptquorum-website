@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">OS对比</text>
+  <rect x="28" y="55" width="240" height="270" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="28" y="55" width="240" height="6" rx="0" fill="#6750A4"/>
+  <text x="148" y="90" font-size="18" font-weight="700" fill="#6750A4" text-anchor="middle">macOS</text>
+  <text x="48" y="125" font-size="12" font-weight="700" fill="#1C1B1F">✓ 隐私优先</text>
+  <text x="48" y="144" font-size="12" font-weight="700" fill="#1C1B1F">✓ 最便携</text>
+  <text x="48" y="170" font-size="11" fill="#49454F">权衡 :</text>
+  <text x="48" y="188" font-size="11" fill="#49454F">比NVIDIA GPU</text>
+  <text x="48" y="203" font-size="11" fill="#49454F">慢20–30%</text>
+  <text x="48" y="230" font-size="12" font-weight="700" fill="#6750A4">$1,099起</text>
+  <text x="48" y="250" font-size="10" fill="#49454F">6分钟设置</text>
+  <text x="48" y="265" font-size="10" fill="#49454F">无需终端</text>
+  <text x="48" y="315" font-size="10" font-weight="600" fill="#49454F">Mac用户最优</text>
+  <rect x="280" y="55" width="240" height="270" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="280" y="55" width="240" height="6" rx="0" fill="#34A853"/>
+  <text x="400" y="90" font-size="18" font-weight="700" fill="#34A853" text-anchor="middle">Windows</text>
+  <text x="300" y="125" font-size="12" font-weight="700" fill="#1C1B1F">✓ 最大GPU速度</text>
+  <text x="300" y="144" font-size="12" font-weight="700" fill="#1C1B1F">✓ NVIDIA CUDA</text>
+  <text x="300" y="170" font-size="11" fill="#49454F">权衡 :</text>
+  <text x="300" y="188" font-size="11" fill="#49454F">驱动程序设置</text>
+  <text x="300" y="203" font-size="11" fill="#49454F">额外15–20分钟</text>
+  <text x="300" y="230" font-size="12" font-weight="700" fill="#34A853">GPU $450起</text>
+  <text x="300" y="250" font-size="10" fill="#49454F">15–20分钟设置</text>
+  <text x="300" y="265" font-size="10" fill="#49454F">初学者到中级</text>
+  <text x="300" y="315" font-size="10" font-weight="600" fill="#49454F">GPU性能优先</text>
+  <rect x="532" y="55" width="240" height="270" rx="8" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="532" y="55" width="240" height="6" rx="0" fill="#F4B400"/>
+  <text x="652" y="90" font-size="18" font-weight="700" fill="#F4B400" text-anchor="middle">Linux</text>
+  <text x="552" y="125" font-size="12" font-weight="700" fill="#1C1B1F">✓ 最低成本</text>
+  <text x="552" y="144" font-size="12" font-weight="700" fill="#1C1B1F">✓ 生产控制</text>
+  <text x="552" y="170" font-size="11" fill="#49454F">权衡 :</text>
+  <text x="552" y="188" font-size="11" fill="#49454F">40–70分钟设置</text>
+  <text x="552" y="203" font-size="11" fill="#49454F">需要终端知识</text>
+  <text x="552" y="230" font-size="12" font-weight="700" fill="#F4B400">$810起（总价）</text>
+  <text x="552" y="250" font-size="10" fill="#49454F">40–70分钟设置</text>
+  <text x="552" y="265" font-size="10" fill="#49454F">高级用户推荐</text>
+  <text x="552" y="315" font-size="10" font-weight="600" fill="#49454F">成本效率优先</text>
+  <text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

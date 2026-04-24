@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">3年間の総所有コスト（TCO）</text>
+  <line x1="18" y1="52" x2="782" y2="52" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="72" font-size="11" font-weight="700" fill="#79747E">構成</text>
+  <text x="280" y="72" font-size="11" font-weight="700" fill="#79747E">1年目</text>
+  <text x="440" y="72" font-size="11" font-weight="700" fill="#79747E">3年合計</text>
+  <text x="620" y="72" font-size="11" font-weight="700" fill="#79747E">最適</text>
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="108" font-size="10" font-weight="600" fill="#1C1B1F">Mac mini M4 Pro 64GB</text>
+  <text x="280" y="108" font-size="10" fill="#49454F">¥376,000</text>
+  <text x="440" y="108" font-size="10" font-weight="600" fill="#1C1B1F">¥379,000</text>
+  <circle cx="715" cy="102" r="12" fill="#34A853"/><text x="715" y="108" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="146" font-size="10" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Pro 64GB</text>
+  <text x="280" y="146" font-size="10" fill="#49454F">¥408,000</text>
+  <text x="440" y="146" font-size="10" font-weight="600" fill="#1C1B1F">¥413,000</text>
+  <circle cx="715" cy="140" r="12" fill="#34A853"/><text x="715" y="146" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="184" font-size="10" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Max 128GB</text>
+  <text x="280" y="184" font-size="10" fill="#49454F">¥572,000</text>
+  <text x="440" y="184" font-size="10" font-weight="600" fill="#1C1B1F">¥577,000</text>
+  <circle cx="715" cy="178" r="12" fill="#34A853"/><text x="715" y="184" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="222" font-size="10" font-weight="600" fill="#1C1B1F">Windows + RTX 5090 32GB</text>
+  <text x="280" y="222" font-size="10" fill="#49454F">¥409,500</text>
+  <text x="440" y="222" font-size="10" font-weight="600" fill="#1C1B1F">¥428,500</text>
+  <circle cx="715" cy="216" r="12" fill="#34A853"/><text x="715" y="222" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="260" font-size="10" font-weight="600" fill="#1C1B1F">Windows + RTX 5060 Ti 16GB</text>
+  <text x="280" y="260" font-size="10" fill="#49454F">¥269,500</text>
+  <text x="440" y="260" font-size="10" font-weight="600" fill="#1C1B1F">¥283,000</text>
+  <circle cx="715" cy="254" r="12" fill="#34A853"/><text x="715" y="260" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="28" y="283" width="752" height="44" fill="#E8DEF8" opacity="0.5" rx="4"/>
+  <text x="50" y="308" font-size="10" font-weight="700" fill="#1C1B1F">Linux + RTX 5060 Ti 16GB</text>
+  <text x="280" y="308" font-size="10" fill="#49454F">¥122,750</text>
+  <text x="440" y="308" font-size="10" font-weight="700" fill="#34A853">¥132,500</text>
+  <circle cx="715" cy="302" r="12" fill="#34A853"/><text x="715" y="308" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">🏆</text>
+  <text x="50" y="346" font-size="10" font-weight="600" fill="#1C1B1F">Linux + RTX 5090 32GB</text>
+  <text x="280" y="346" font-size="10" fill="#49454F">¥229,000</text>
+  <text x="440" y="346" font-size="10" font-weight="600" fill="#1C1B1F">¥245,500</text>
+  <circle cx="715" cy="340" r="12" fill="#34A853"/><text x="715" y="346" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="50" y="385" font-size="11" font-weight="600" fill="#6750A4">💡 最安値：Linux + RTX 5060 Ti ¥132,500。最高値：Linux + RTX 5090 ¥245,500。</text>
+  <text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
