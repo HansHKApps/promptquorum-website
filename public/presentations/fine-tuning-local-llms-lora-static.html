@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoRA Fine-Tuning for Local LLMs | PromptQuorum</title>
+    <meta name="description" content="Interactive 14-slide presentation on LoRA fine-tuning for local LLMs. Learn how to fine-tune Llama 3.1 on 8GB VRAM with Unsloth, QLoRA vs LoRA, and practical training setup." />
+    <meta property="og:title" content="LoRA Fine-Tuning for Local LLMs — PromptQuorum" />
+    <meta property="og:description" content="Fine-tune Llama 3.1 8B on 8GB VRAM with LoRA in 1–2 hours. Learn QLoRA, hyperparameters, common mistakes, and Ollama deployment." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">LoRA Fine-Tuning for Local LLMs</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'LoRA Fine-Tuning for Local LLMs 2026: Unsloth on 8 GB VRAM',
+                prevBtn: '← Prev',
+                nextBtn: 'Next →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'LoRA Fine-Tuning for Local LLMs',
+                        subtitle: 'Adapt Llama 3.1 to your domain on 8 GB VRAM with Unsloth',
+                        link: 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Why LoRA?',
+                        items: [
+                            '<strong>LoRA = add small trainable layers</strong> (0.4% of model weights)',
+                            '<strong>4× faster training</strong> with Unsloth on consumer hardware',
+                            '<strong>Only 8 GB VRAM</strong> for 7B models with QLoRA 4-bit quantization',
+                            '<strong>500+ examples</strong> minimum; 1000-5000 optimal',
+                            '<strong>Production-ready</strong> (Ollama, LM Studio, vLLM support)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How LoRA Works',
+                        items: [
+                            '<strong>Add "adapter" matrices</strong> alongside frozen model weights',
+                            '13B model: 13B weights + 50M trainable params (~0.4%)',
+                            '<strong>Training is 100× faster</strong> than full fine-tuning',
+                            'At inference, merge adapters via matrix multiplication',
+                            '<strong>Result:</strong> domain-specific model on consumer hardware'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'QLoRA vs LoRA',
+                        line1: '<strong>LoRA (16-bit base):</strong> 16 GB VRAM for 7B | ~97% quality',
+                        line2: '<strong>QLoRA (4-bit base):</strong> 8 GB VRAM for 7B | ~95% quality (negligible difference)',
+                        tip: '🏆 QLoRA is the default for consumer hardware. Use LoRA only if you need maximum precision or have 16+ GB VRAM.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'VRAM Requirements by Method',
+                        columns: ['Method', '7B Model', '13B Model', 'Quality'],
+                        rows: [
+                            { 'Method': 'Full fine-tuning', '7B Model': '28 GB', '13B Model': '52 GB', 'Quality': '100%' },
+                            { 'Method': 'LoRA (16-bit)', '7B Model': '16 GB', '13B Model': '30 GB', 'Quality': '97%' },
+                            { 'Method': 'QLoRA (4-bit)', '7B Model': '8 GB', '13B Model': '14 GB', 'Quality': '95%' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Fine-Tuning vs RAG Decision',
+                        columns: ['Criteria', 'Fine-Tuning Best', 'RAG Best'],
+                        rows: [
+                            { 'Criteria': 'Document frequency', 'Fine-Tuning Best': 'Annual or less', 'RAG Best': 'Weekly or more' },
+                            { 'Criteria': 'Knowledge depth', 'Fine-Tuning Best': 'Deep understanding needed', 'RAG Best': 'Retrieval suffices' },
+                            { 'Criteria': 'Training data', 'Fine-Tuning Best': '500+ examples', 'RAG Best': 'Any documents work' },
+                            { 'Criteria': 'Long-term cost', 'Fine-Tuning Best': '$50–200 one-time', 'RAG Best': 'Continuous' },
+                            { 'Criteria': 'Best for', 'Fine-Tuning Best': 'Code, style, writing', 'RAG Best': 'Knowledge bases' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Preparing Training Data',
+                        items: [
+                            '<strong>Minimum 500 examples</strong>, optimal 1000-5000',
+                            '<strong>Quality > Quantity:</strong> 100 good examples beat 1000 poor ones',
+                            '<strong>Format:</strong> JSON/JSONL with input + output pairs',
+                            'Example: {"instruction": "Translate to French", "input": "Hello", "output": "Bonjour"}',
+                            '<strong>Instruction-only format also works:</strong> {"text": "<|user|>Translate\\nHello<|assistant|>Bonjour"}'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Key LoRA Hyperparameters',
+                        columns: ['Parameter', 'Recommended', 'Range', 'Effect'],
+                        rows: [
+                            { 'Parameter': 'learning_rate', 'Recommended': '2e-4', 'Range': '1e-5 to 1e-3', 'Effect': 'Lower = stable, slower' },
+                            { 'Parameter': 'lora_r (rank)', 'Recommended': '16', 'Range': '4 to 64', 'Effect': 'Higher = more expressive' },
+                            { 'Parameter': 'lora_alpha', 'Recommended': '32', 'Range': '8 to 256', 'Effect': 'Higher = stronger LoRA' },
+                            { 'Parameter': 'num_epochs', 'Recommended': '3', 'Range': '1 to 10', 'Effect': 'Risk of overfitting' },
+                            { 'Parameter': 'batch_size', 'Recommended': '4', 'Range': '1 to 32', 'Effect': 'Larger = more VRAM' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Evaluating Fine-Tuned Models',
+                        items: [
+                            '<strong>Training loss</strong> should decrease over epochs',
+                            '<strong>Validation loss</strong> should decrease but stay above training loss',
+                            '<strong>Manual testing</strong> on test examples — compare outputs to expected results',
+                            '<strong>Benchmark tasks</strong> (MMLU, HumanEval) to measure improvement',
+                            '<strong>Prevent overfitting:</strong> Always use separate validation set'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 Most Common Fine-Tuning Mistakes',
+                        items: [
+                            '<strong>Too few examples.</strong> <200 leads to overfitting. Collect at least 500.',
+                            '<strong>Training for too many epochs.</strong> Model memorizes instead of generalizing. Stop at 3–5 max.',
+                            '<strong>Not validating on unseen data.</strong> Always use 80/20 train/validation split.',
+                            '<strong>Evaluating on training data.</strong> Reported accuracy is meaningless on training set.',
+                            '<strong>Not saving checkpoints.</strong> Training takes hours. Save every epoch to recover from crashes.'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '6-Step LoRA Training Workflow',
+                        items: [
+                            '<strong>Install Unsloth and dependencies:</strong> pip install unsloth[colab-new] xformers bitsandbytes',
+                            '<strong>Load base model with LoRA config:</strong> FastLanguageModel.from_pretrained(model_name="unsloth/llama-3.1-8b-bnb-4bit", load_in_4bit=True)',
+                            '<strong>Prepare 500+ training examples in JSONL</strong> format with instruction, input, output',
+                            '<strong>Configure and train with SFTTrainer:</strong> 3 epochs, learning_rate=2e-4, batch_size=4',
+                            '<strong>Merge adapter into base model:</strong> model.merge_and_unload()',
+                            '<strong>Convert to GGUF and deploy on Ollama</strong> with Modelfile'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            {
+                                q: 'How much training data do I need?',
+                                a: 'Minimum 500 examples, optimal 1000–5000. Quality matters more than quantity. 100 high-quality examples beat 1000 low-quality ones.'
+                            },
+                            {
+                                q: 'What is the difference between LoRA and QLoRA?',
+                                a: 'LoRA uses 16-bit base (16 GB VRAM for 7B). QLoRA uses 4-bit base (8 GB for 7B). Quality difference ~2% — negligible for most tasks. QLoRA is default for consumer hardware.'
+                            },
+                            {
+                                q: 'Can I fine-tune on a laptop?',
+                                a: 'Yes, with QLoRA. A 7B model requires 8 GB VRAM. Training takes 1–2 hours on CPU (slow) or 10–15 minutes on GPU.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'When LoRA Is the Right Choice',
+                        items: [
+                            '<strong>LoRA > RAG:</strong> When documents rarely change, deep domain knowledge matters, or you need latency <100ms',
+                            '<strong>LoRA > Full fine-tune:</strong> Always, unless you have 100+ GB VRAM and need 99%+ quality',
+                            '<strong>LoRA + RAG together:</strong> Fine-tune on domain knowledge, use RAG for recent documents',
+                            '<strong>Choose LoRA if:</strong> Cost matters, consumer hardware only, fast iteration needed',
+                            '<strong>Merge and deploy:</strong> Export to GGUF, run locally with Ollama — zero cloud costs'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ready to Fine-Tune Your First Model?',
+                        body: 'Start with Unsloth, a 4× faster LoRA framework for consumer hardware. The full guide includes code examples, hyperparameter tuning, and Ollama deployment.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'LoRA Fine-Tuning für lokale LLMs 2026: Unsloth auf 8 GB VRAM',
+                prevBtn: '← Zurück',
+                nextBtn: 'Weiter →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'LoRA Fine-Tuning für lokale LLMs',
+                        subtitle: 'Passen Sie Llama 3.1 mit Unsloth auf 8 GB VRAM an Ihre Domain an',
+                        link: 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Warum LoRA?',
+                        items: [
+                            '<strong>LoRA = kleine trainierbare Schichten</strong> (0,4 % der Modellgewichte)',
+                            '<strong>4× schnelleres Training</strong> mit Unsloth auf Consumer-Hardware',
+                            '<strong>Nur 8 GB VRAM</strong> für 7B-Modelle mit QLoRA 4-Bit-Quantisierung',
+                            '<strong>500+ Beispiele</strong> mindestens; 1000–5000 optimal',
+                            '<strong>Produktionsreif</strong> (Ollama, LM Studio, vLLM Support)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie LoRA funktioniert',
+                        items: [
+                            '<strong>„Adapter"-Matrizen neben gefrorenen Modellgewichten</strong> hinzufügen',
+                            '13B-Modell: 13B Gewichte + 50M trainierbare Parameter (~0,4 %)',
+                            '<strong>Training ist 100× schneller</strong> als vollständiges Fine-Tuning',
+                            'Bei Inferenz Adapter über Matrizenmultiplikation zusammenführen',
+                            '<strong>Ergebnis:</strong> domänenspezifisches Modell auf Consumer-Hardware'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'QLoRA vs LoRA',
+                        line1: '<strong>LoRA (16-Bit-Basis):</strong> 16 GB VRAM für 7B | ~97 % Qualität',
+                        line2: '<strong>QLoRA (4-Bit-Basis):</strong> 8 GB VRAM für 7B | ~95 % Qualität (vernachlässigbar)',
+                        tip: '🏆 QLoRA ist Standard für Consumer-Hardware. LoRA nur bei maximaler Präzision oder 16+ GB VRAM.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'VRAM-Anforderungen nach Methode',
+                        columns: ['Methode', '7B-Modell', '13B-Modell', 'Qualität'],
+                        rows: [
+                            { 'Methode': 'Vollständiges Fine-Tuning', '7B-Modell': '28 GB', '13B-Modell': '52 GB', 'Qualität': '100 %' },
+                            { 'Methode': 'LoRA (16-Bit)', '7B-Modell': '16 GB', '13B-Modell': '30 GB', 'Qualität': '97 %' },
+                            { 'Methode': 'QLoRA (4-Bit)', '7B-Modell': '8 GB', '13B-Modell': '14 GB', 'Qualität': '95 %' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Fine-Tuning vs RAG Entscheidung',
+                        columns: ['Kriterium', 'Fine-Tuning besser', 'RAG besser'],
+                        rows: [
+                            { 'Kriterium': 'Dokumentfrequenz', 'Fine-Tuning besser': 'Jährlich oder seltener', 'RAG besser': 'Wöchentlich oder häufiger' },
+                            { 'Kriterium': 'Wissenstiefe', 'Fine-Tuning besser': 'Tiefes Verständnis nötig', 'RAG besser': 'Abruf ausreichend' },
+                            { 'Kriterium': 'Trainingsdaten', 'Fine-Tuning besser': '500+ Beispiele', 'RAG besser': 'Beliebige Dokumente' },
+                            { 'Kriterium': 'Langzeitkosten', 'Fine-Tuning besser': '50–200 € einmalig', 'RAG besser': 'Laufend' },
+                            { 'Kriterium': 'Beste für', 'Fine-Tuning besser': 'Code, Stil, Schreiben', 'RAG besser': 'Wissensdatenbanken' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Trainingsdaten vorbereiten',
+                        items: [
+                            '<strong>Mindestens 500 Beispiele</strong>, optimal 1000–5000',
+                            '<strong>Qualität > Quantität:</strong> 100 gute Beispiele schlagen 1000 schlechte',
+                            '<strong>Format:</strong> JSON/JSONL mit Input + Output Paaren',
+                            'Beispiel: {"instruction": "Ins Englische übersetzen", "input": "Hallo", "output": "Hello"}',
+                            '<strong>Instruction-only-Format funktioniert auch:</strong> {"text": "<|user|>Übersetzen\\nHallo<|assistant|>Hello"}'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Wichtige LoRA Hyperparameter',
+                        columns: ['Parameter', 'Empfohlen', 'Bereich', 'Effekt'],
+                        rows: [
+                            { 'Parameter': 'learning_rate', 'Empfohlen': '2e-4', 'Bereich': '1e-5 bis 1e-3', 'Effekt': 'Niedriger = stabil, langsamer' },
+                            { 'Parameter': 'lora_r (Rang)', 'Empfohlen': '16', 'Bereich': '4 bis 64', 'Effekt': 'Höher = ausdrucksstärker' },
+                            { 'Parameter': 'lora_alpha', 'Empfohlen': '32', 'Bereich': '8 bis 256', 'Effekt': 'Höher = stärkerer LoRA' },
+                            { 'Parameter': 'num_epochs', 'Empfohlen': '3', 'Bereich': '1 bis 10', 'Effekt': 'Überfitting-Risiko' },
+                            { 'Parameter': 'batch_size', 'Empfohlen': '4', 'Bereich': '1 bis 32', 'Effekt': 'Größer = mehr VRAM' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Fine-Tuned-Modelle evaluieren',
+                        items: [
+                            '<strong>Trainingsverlust</strong> sollte über Epochen sinken',
+                            '<strong>Validierungsverlust</strong> sollte sinken, aber über Trainingsverlust bleiben',
+                            '<strong>Manuelle Tests</strong> auf Test-Beispiele — Ausgaben mit Erwartungen vergleichen',
+                            '<strong>Benchmark-Aufgaben</strong> (MMLU, HumanEval) zur Verbesserungsmessung',
+                            '<strong>Overfitting verhindern:</strong> Immer separaten Validierungssatz verwenden'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 häufigste Fine-Tuning-Fehler',
+                        items: [
+                            '<strong>Zu wenig Beispiele.</strong> <200 führt zu Overfitting. Sammeln Sie mindestens 500.',
+                            '<strong>Zu viele Epochen trainieren.</strong> Modell merkt statt zu verallgemeinern. Max. 3–5 Epochen.',
+                            '<strong>Nicht auf ungesehenen Daten validieren.</strong> Immer 80/20-Train/Validierungs-Split verwenden.',
+                            '<strong>Auf Trainingsdaten evaluieren.</strong> Genauigkeit auf Trainingsmenge ist bedeutungslos.',
+                            '<strong>Keine Checkpoints speichern.</strong> Training dauert Stunden. Jede Epoche speichern.'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '6-Schritte LoRA Training Workflow',
+                        items: [
+                            '<strong>Unsloth und Dependencies installieren:</strong> pip install unsloth[colab-new] xformers bitsandbytes',
+                            '<strong>Basismodell mit LoRA-Konfiguration laden:</strong> FastLanguageModel.from_pretrained(..., load_in_4bit=True)',
+                            '<strong>500+ Trainingsbeispiele in JSONL vorbereiten</strong> mit instruction, input, output',
+                            '<strong>Mit SFTTrainer konfigurieren und trainieren:</strong> 3 Epochen, learning_rate=2e-4, batch_size=4',
+                            '<strong>Adapter in Basismodell zusammenführen:</strong> model.merge_and_unload()',
+                            '<strong>Zu GGUF konvertieren und auf Ollama mit Modelfile deployen</strong>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            {
+                                q: 'Wie viele Trainingsdaten brauche ich?',
+                                a: 'Mindestens 500 Beispiele, optimal 1000–5000. Qualität ist wichtiger als Quantität. 100 hochwertige schlagen 1000 minderwertige.'
+                            },
+                            {
+                                q: 'Was ist der Unterschied zwischen LoRA und QLoRA?',
+                                a: 'LoRA nutzt 16-Bit-Basis (16 GB VRAM für 7B). QLoRA nutzt 4-Bit-Basis (8 GB für 7B). Qualitätsunterschied ~2% — vernachlässigbar. QLoRA ist Standard für Consumer-Hardware.'
+                            },
+                            {
+                                q: 'Kann ich auf einem Laptop trainieren?',
+                                a: 'Ja, mit QLoRA. Ein 7B-Modell braucht 8 GB VRAM. Training dauert 1–2 Stunden auf CPU (langsam) oder 10–15 Minuten auf GPU.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wann LoRA die richtige Wahl ist',
+                        items: [
+                            '<strong>LoRA > RAG:</strong> Wenn Dokumente selten ändern, tiefes Wissen nötig, oder Latenz <100ms',
+                            '<strong>LoRA > Vollständiges Fine-Tuning:</strong> Immer, es sei denn 100+ GB VRAM und 99%+ Qualität nötig',
+                            '<strong>LoRA + RAG zusammen:</strong> Fine-Tuning auf Domain-Wissen, RAG für aktuelle Dokumente',
+                            '<strong>Wählen Sie LoRA, wenn:</strong> Kosten wichtig, nur Consumer-Hardware, schnelle Iteration nötig',
+                            '<strong>Zusammenführen und deployen:</strong> Zu GGUF exportieren, lokal mit Ollama laufen lassen — keine Cloud-Kosten'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereit, Ihr erstes Modell zu Fine-Tunen?',
+                        body: 'Starten Sie mit Unsloth, einem 4× schnelleren LoRA-Framework für Consumer-Hardware. Der vollständige Leitfaden enthält Code-Beispiele, Hyperparameter-Abstimmung und Ollama-Deployment.',
+                        cta: 'PromptQuorum kostenlos probieren',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Fine-Tuning LoRA pour LLMs locaux 2026 : Unsloth sur 8 Go de VRAM',
+                prevBtn: '← Précédent',
+                nextBtn: 'Suivant →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Fine-Tuning LoRA pour LLMs locaux',
+                        subtitle: 'Adaptez Llama 3.1 à votre domaine avec Unsloth sur 8 Go de VRAM',
+                        link: 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Pourquoi LoRA ?',
+                        items: [
+                            '<strong>LoRA = ajouter de petites couches entraînables</strong> (0,4 % des poids du modèle)',
+                            '<strong>4× plus rapide</strong> avec Unsloth sur matériel grand public',
+                            '<strong>Seulement 8 Go de VRAM</strong> pour les modèles 7B avec quantification 4 bits',
+                            '<strong>500+ exemples</strong> minimum ; 1000–5000 optimal',
+                            '<strong>Prêt pour la production</strong> (support Ollama, LM Studio, vLLM)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment fonctionne LoRA',
+                        items: [
+                            '<strong>Ajouter des matrices « adaptateur »</strong> aux côtés des poids gelés',
+                            'Modèle 13B : 13B poids + 50M paramètres entraînables (~0,4 %)',
+                            '<strong>L\'entraînement est 100× plus rapide</strong> que le fine-tuning complet',
+                            'À l\'inférence, fusionner les adaptateurs via multiplication matricielle',
+                            '<strong>Résultat :</strong> modèle spécifique au domaine sur matériel grand public'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'QLoRA vs LoRA',
+                        line1: '<strong>LoRA (base 16 bits) :</strong> 16 Go VRAM pour 7B | ~97 % qualité',
+                        line2: '<strong>QLoRA (base 4 bits) :</strong> 8 Go VRAM pour 7B | ~95 % qualité (négligeable)',
+                        tip: '🏆 QLoRA est standard pour le matériel grand public. LoRA uniquement pour la précision maximale ou 16+ Go de VRAM.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Exigences VRAM par méthode',
+                        columns: ['Méthode', 'Modèle 7B', 'Modèle 13B', 'Qualité'],
+                        rows: [
+                            { 'Méthode': 'Fine-tuning complet', 'Modèle 7B': '28 Go', 'Modèle 13B': '52 Go', 'Qualité': '100 %' },
+                            { 'Méthode': 'LoRA (16 bits)', 'Modèle 7B': '16 Go', 'Modèle 13B': '30 Go', 'Qualité': '97 %' },
+                            { 'Méthode': 'QLoRA (4 bits)', 'Modèle 7B': '8 Go', 'Modèle 13B': '14 Go', 'Qualité': '95 %' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Décision Fine-Tuning vs RAG',
+                        columns: ['Critère', 'Fine-Tuning meilleur', 'RAG meilleur'],
+                        rows: [
+                            { 'Critère': 'Fréquence de document', 'Fine-Tuning meilleur': 'Annuel ou moins', 'RAG meilleur': 'Hebdomadaire ou plus' },
+                            { 'Critère': 'Profondeur de connaissance', 'Fine-Tuning meilleur': 'Compréhension approfondie', 'RAG meilleur': 'Récupération suffit' },
+                            { 'Critère': 'Données d\'entraînement', 'Fine-Tuning meilleur': '500+ exemples', 'RAG meilleur': 'Tous documents' },
+                            { 'Critère': 'Coût long terme', 'Fine-Tuning meilleur': '50–200 € une seule fois', 'RAG meilleur': 'Continu' },
+                            { 'Critère': 'Meilleur pour', 'Fine-Tuning meilleur': 'Code, style, écriture', 'RAG meilleur': 'Bases de connaissances' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Préparer les données d\'entraînement',
+                        items: [
+                            '<strong>Minimum 500 exemples</strong>, optimal 1000–5000',
+                            '<strong>Qualité > Quantité :</strong> 100 bons exemples battent 1000 mauvais',
+                            '<strong>Format :</strong> JSON/JSONL avec paires entrée + sortie',
+                            'Exemple : {"instruction": "Traduire en français", "input": "Hello", "output": "Bonjour"}',
+                            '<strong>Format instruction uniquement fonctionne aussi :</strong> {"text": "<|user|>Traduire\\nHello<|assistant|>Bonjour"}'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Hyperparamètres LoRA clés',
+                        columns: ['Paramètre', 'Recommandé', 'Plage', 'Effet'],
+                        rows: [
+                            { 'Paramètre': 'learning_rate', 'Recommandé': '2e-4', 'Plage': '1e-5 à 1e-3', 'Effet': 'Bas = stable, lent' },
+                            { 'Paramètre': 'lora_r (rang)', 'Recommandé': '16', 'Plage': '4 à 64', 'Effet': 'Plus haut = plus expressif' },
+                            { 'Paramètre': 'lora_alpha', 'Recommandé': '32', 'Plage': '8 à 256', 'Effet': 'Plus haut = LoRA plus fort' },
+                            { 'Paramètre': 'num_epochs', 'Recommandé': '3', 'Plage': '1 à 10', 'Effet': 'Risque surapprentissage' },
+                            { 'Paramètre': 'batch_size', 'Recommandé': '4', 'Plage': '1 à 32', 'Effet': 'Plus grand = plus VRAM' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Évaluer les modèles fine-tunés',
+                        items: [
+                            '<strong>Perte d\'entraînement</strong> devrait diminuer sur les epochs',
+                            '<strong>Perte de validation</strong> devrait diminuer mais rester au-dessus',
+                            '<strong>Tests manuels</strong> sur des exemples — comparer les sorties',
+                            '<strong>Tâches de référence</strong> (MMLU, HumanEval) pour mesurer',
+                            '<strong>Prévenir le surapprentissage :</strong> Toujours utiliser ensemble de validation séparé'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 erreurs les plus courantes',
+                        items: [
+                            '<strong>Trop peu d\'exemples.</strong> <200 mène au surapprentissage. Collectez au moins 500.',
+                            '<strong>Trop d\'epochs.</strong> Le modèle mémorise au lieu de généraliser. Max 3–5.',
+                            '<strong>Pas de validation sur données inédites.</strong> Toujours split 80/20 train/validation.',
+                            '<strong>Évaluation sur données d\'entraînement.</strong> La précision est inutile sur l\'ensemble.',
+                            '<strong>Pas de sauvegardes.</strong> L\'entraînement dure des heures. Sauvegardez chaque epoch.'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Flux LoRA en 6 étapes',
+                        items: [
+                            '<strong>Installer Unsloth :</strong> pip install unsloth[colab-new] xformers bitsandbytes',
+                            '<strong>Charger le modèle de base :</strong> FastLanguageModel.from_pretrained(..., load_in_4bit=True)',
+                            '<strong>Préparer 500+ exemples en JSONL</strong> avec instruction, input, output',
+                            '<strong>Configurer et entraîner :</strong> 3 epochs, learning_rate=2e-4, batch_size=4',
+                            '<strong>Fusionner l\'adaptateur :</strong> model.merge_and_unload()',
+                            '<strong>Convertir en GGUF et déployer sur Ollama</strong> avec Modelfile'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions fréquemment posées',
+                        faqs: [
+                            {
+                                q: 'Combien de données d\'entraînement ai-je besoin ?',
+                                a: 'Minimum 500 exemples, optimal 1000–5000. La qualité prime sur la quantité. 100 bons battent 1000 mauvais.'
+                            },
+                            {
+                                q: 'Quelle est la différence entre LoRA et QLoRA ?',
+                                a: 'LoRA utilise base 16 bits (16 Go VRAM pour 7B). QLoRA utilise base 4 bits (8 Go pour 7B). Différence ~2% — négligeable. QLoRA est standard.'
+                            },
+                            {
+                                q: 'Puis-je fine-tuner sur un portable ?',
+                                a: 'Oui, avec QLoRA. Un modèle 7B nécessite 8 Go de VRAM. L\'entraînement prend 1–2 heures en CPU (lent) ou 10–15 minutes en GPU.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quand LoRA est le bon choix',
+                        items: [
+                            '<strong>LoRA > RAG :</strong> Quand docs changent rarement, connaissance profonde nécessaire, ou latence <100ms',
+                            '<strong>LoRA > Fine-tuning complet :</strong> Toujours, sauf 100+ Go VRAM et 99%+ qualité',
+                            '<strong>LoRA + RAG ensemble :</strong> Fine-tuning sur domaine, RAG pour docs récents',
+                            '<strong>Choisir LoRA si :</strong> Coûts importants, hardware grand public, itération rapide',
+                            '<strong>Fusionner et déployer :</strong> Exporter en GGUF, lancer localement avec Ollama — zéro frais cloud'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prêt à fine-tuner votre premier modèle ?',
+                        body: 'Commencez avec Unsloth, framework LoRA 4× plus rapide pour matériel grand public. Le guide complet inclut code, hyperparamètres et déploiement Ollama.',
+                        cta: 'Essayer PromptQuorum gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'LoRA ファインチューニング 2026年 : Unsloth 8GB VRAM',
+                prevBtn: '← 戻る',
+                nextBtn: '次へ →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'LoRA ファインチューニング入門',
+                        subtitle: 'Unsloth で Llama 3.1 を 8GB VRAM 上で実行',
+                        link: 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LoRA を選ぶ理由',
+                        items: [
+                            '<strong>LoRA = 小さな学習可能層を追加</strong> (総重量の 0.4%)',
+                            '<strong>4倍高速</strong> コンシューマーハードウェアで Unsloth を使用',
+                            '<strong>8GB VRAM のみ</strong> QLoRA 4ビット量子化での 7B モデル',
+                            '<strong>500+ の例が必須</strong> ; 1000–5000 が最適',
+                            '<strong>本番対応</strong> (Ollama、LM Studio、vLLM サポート)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LoRA の仕組み',
+                        items: [
+                            '<strong>凍結されたモデル重みの横に「アダプター」マトリックス</strong> を追加',
+                            '13B モデル : 130 億の重み + 5000 万の学習可能パラメータ (~0.4%)',
+                            '<strong>トレーニングは 100 倍高速</strong> フルファインチューニングより',
+                            '推論時、アダプター出力を行列乗法で統合',
+                            '<strong>結果 :</strong> コンシューマーハードウェア上の領域固有モデル'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'QLoRA vs LoRA',
+                        line1: '<strong>LoRA (16ビット ベース) :</strong> 7B で 16GB VRAM | ~97% 品質',
+                        line2: '<strong>QLoRA (4ビット ベース) :</strong> 7B で 8GB VRAM | ~95% 品質 (無視できる)',
+                        tip: '🏆 QLoRA はコンシューマーハードウェアの標準。LoRA は最大精度または 16+ GB VRAM 時のみ。'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'メソッド別 VRAM 要件',
+                        columns: ['メソッド', '7B モデル', '13B モデル', '品質'],
+                        rows: [
+                            { 'メソッド': 'フルファインチューニング', '7B モデル': '28GB', '13B モデル': '52GB', '品質': '100%' },
+                            { 'メソッド': 'LoRA (16ビット)', '7B モデル': '16GB', '13B モデル': '30GB', '品質': '97%' },
+                            { 'メソッド': 'QLoRA (4ビット)', '7B モデル': '8GB', '13B モデル': '14GB', '品質': '95%' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'ファインチューニング vs RAG 判定',
+                        columns: ['基準', 'ファインチューニング推奨', 'RAG 推奨'],
+                        rows: [
+                            { '基準': 'ドキュメント更新頻度', 'ファインチューニング推奨': '年 1 回以下', 'RAG 推奨': '毎週以上' },
+                            { '基準': '知識の深さ', 'ファインチューニング推奨': '深い理解必要', 'RAG 推奨': '検索で十分' },
+                            { '基準': 'トレーニングデータ', 'ファインチューニング推奨': '500+ 例', 'RAG 推奨': 'あらゆるドキュメント' },
+                            { '基準': '長期コスト', 'ファインチューニング推奨': '$50–200 一度限り', 'RAG 推奨': '継続的' },
+                            { '基準': '向き', 'ファインチューニング推奨': 'コード、スタイル', 'RAG 推奨': 'ナレッジベース' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'トレーニングデータの準備',
+                        items: [
+                            '<strong>最低 500 の例</strong> ; 最適 1000–5000',
+                            '<strong>質 > 量 :</strong> 100 個の良い例が 1000 個の悪い例に勝つ',
+                            '<strong>フォーマット :</strong> JSON/JSONL with input + output pairs',
+                            '例 : {"instruction": "日本語へ翻訳", "input": "Hello", "output": "こんにちは"}',
+                            '<strong>instruction のみ形式も動作 :</strong> {"text": "<|user|>翻訳\\nHello<|assistant|>こんにちは"}'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LoRA の主要ハイパーパラメータ',
+                        columns: ['パラメータ', '推奨', '範囲', '効果'],
+                        rows: [
+                            { 'パラメータ': 'learning_rate', '推奨': '2e-4', '範囲': '1e-5 ～ 1e-3', '効果': '低 = 安定、遅い' },
+                            { 'パラメータ': 'lora_r (ランク)', '推奨': '16', '範囲': '4 ～ 64', '効果': '高 = より表現力' },
+                            { 'パラメータ': 'lora_alpha', '推奨': '32', '範囲': '8 ～ 256', '効果': '高 = より強い' },
+                            { 'パラメータ': 'num_epochs', '推奨': '3', '範囲': '1 ～ 10', '効果': '過学習リスク' },
+                            { 'パラメータ': 'batch_size', '推奨': '4', '範囲': '1 ～ 32', '効果': '大 = 多 VRAM' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ファインチューニングモデルの評価',
+                        items: [
+                            '<strong>トレーニング損失</strong> はエポック全体で減少すべき',
+                            '<strong>検証損失</strong> は減少するが、トレーニング損失以上',
+                            '<strong>手動テスト</strong> テスト例上で — 出力を期待値と比較',
+                            '<strong>ベンチマークタスク</strong> (MMLU、HumanEval) で改善を測定',
+                            '<strong>過学習防止 :</strong> 常に別個の検証セットを使用'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 つの最も一般的な間違い',
+                        items: [
+                            '<strong>例が少なすぎる。</strong> <200 は過学習につながる。少なくとも 500 を集める。',
+                            '<strong>エポック数が多すぎる。</strong> モデルが一般化の代わりに暗記。最大 3–5。',
+                            '<strong>未知データで検証しない。</strong> 常に 80/20 トレイン / 検証スプリットを使用。',
+                            '<strong>トレーニングデータで評価。</strong> 精度はトレーニングセット上で意味がない。',
+                            '<strong>チェックポイントを保存しない。</strong> トレーニングは数時間。毎エポック保存。'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '6 ステップ LoRA トレーニング',
+                        items: [
+                            '<strong>Unsloth をインストール :</strong> pip install unsloth[colab-new] xformers bitsandbytes',
+                            '<strong>LoRA 設定でベースモデルを読み込む :</strong> FastLanguageModel.from_pretrained(..., load_in_4bit=True)',
+                            '<strong>500+ の例を JSONL で準備</strong> (instruction, input, output)',
+                            '<strong>SFTTrainer で設定・トレーニング :</strong> 3 epochs, learning_rate=2e-4',
+                            '<strong>アダプターをベースモデルに統合 :</strong> model.merge_and_unload()',
+                            '<strong>GGUF に変換して Ollama でデプロイ</strong> (Modelfile で)'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            {
+                                q: 'どのくらいのトレーニングデータが必要ですか？',
+                                a: '最低 500 例、最適 1000–5000。質が量より重要。100 個の良い例が 1000 個の悪い例に勝つ。'
+                            },
+                            {
+                                q: 'LoRA と QLoRA の違いは何ですか？',
+                                a: 'LoRA は 16 ビット ベース (7B で 16GB VRAM)。QLoRA は 4 ビット (8GB)。品質差 ~2% — 無視できる。QLoRA が標準。'
+                            },
+                            {
+                                q: 'ノートパソコンで微調整できますか？',
+                                a: 'はい、QLoRA で。7B モデルは 8GB VRAM が必要。CPU (遅い) では 1–2 時間、GPU では 10–15 分。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LoRA が正しい選択のとき',
+                        items: [
+                            '<strong>LoRA > RAG :</strong> ドキュメント変更稀少、深い知識必要、または遅延 <100ms',
+                            '<strong>LoRA > フル :</strong> 常に、100+ GB VRAM と 99%+ 品質が不要なら',
+                            '<strong>LoRA + RAG :</strong> ドメインで微調整、最新ドキュメントで RAG',
+                            '<strong>LoRA を選ぶ :</strong> コスト重視、コンシューマー機器のみ、高速反復',
+                            '<strong>統合・デプロイ :</strong> GGUF でエクスポート、Ollama でローカル実行 — クラウドコストゼロ'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '最初のモデルを微調整する準備はいいですか？',
+                        body: 'Unsloth で始める、コンシューマーハードウェア向け 4 倍高速 LoRA フレームワーク。完全ガイドにはコード例、ハイパーパラメータ、Ollama デプロイが含まれます。',
+                        cta: 'PromptQuorum を無料で試す',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: 'LoRA 微调本地 LLM 2026：Unsloth 8GB VRAM',
+                prevBtn: '← 返回',
+                nextBtn: '下一个 →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'LoRA 微调本地 LLM',
+                        subtitle: '使用 Unsloth 在 8GB VRAM 上适配 Llama 3.1',
+                        link: 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '为什么选择 LoRA？',
+                        items: [
+                            '<strong>LoRA = 添加小型可训练层</strong> (总权重的 0.4%)',
+                            '<strong>快 4 倍</strong> 使用 Unsloth 的消费级硬件',
+                            '<strong>仅 8GB VRAM</strong> 用于 QLoRA 4 位量化的 7B 模型',
+                            '<strong>500+ 个示例必需</strong> ; 1000–5000 最优',
+                            '<strong>生产就绪</strong> (Ollama、LM Studio、vLLM 支持)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LoRA 如何工作',
+                        items: [
+                            '<strong>在冻结的模型权重旁添加"适配器"矩阵</strong>',
+                            '13B 模型：130 亿权重 + 5000 万可训练参数 (~0.4%)',
+                            '<strong>训练快 100 倍</strong> 相比完全微调',
+                            '在推理时，通过矩阵乘法合并适配器',
+                            '<strong>结果：</strong> 消费级硬件上的特定领域模型'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'QLoRA vs LoRA',
+                        line1: '<strong>LoRA (16 位基础) :</strong> 7B 需要 16GB VRAM | ~97% 质量',
+                        line2: '<strong>QLoRA (4 位基础) :</strong> 7B 需要 8GB VRAM | ~95% 质量 (可忽略)',
+                        tip: '🏆 QLoRA 是消费级硬件的标准。LoRA 仅在需要最大精度或 16+ GB VRAM 时使用。'
+                    },
+                    {
+                        type: 'table',
+                        h2: '按方法分类的 VRAM 需求',
+                        columns: ['方法', '7B 模型', '13B 模型', '质量'],
+                        rows: [
+                            { '方法': '完全微调', '7B 模型': '28GB', '13B 模型': '52GB', '质量': '100%' },
+                            { '方法': 'LoRA (16 位)', '7B 模型': '16GB', '13B 模型': '30GB', '质量': '97%' },
+                            { '方法': 'QLoRA (4 位)', '7B 模型': '8GB', '13B 模型': '14GB', '质量': '95%' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '微调 vs RAG 决策',
+                        columns: ['标准', '微调更好', 'RAG 更好'],
+                        rows: [
+                            { '标准': '文档更新频率', '微调更好': '每年或更少', 'RAG 更好': '每周或更多' },
+                            { '标准': '知识深度', '微调更好': '需要深度理解', 'RAG 更好': '检索就够' },
+                            { '标准': '训练数据', '微调更好': '500+ 个示例', 'RAG 更好': '任何文档' },
+                            { '标准': '长期成本', '微调更好': '$50–200 一次性', 'RAG 更好': '持续' },
+                            { '标准': '最适合', '微调更好': '代码、风格、写作', 'RAG 更好': '知识库' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '准备训练数据',
+                        items: [
+                            '<strong>最少 500 个示例</strong> ，最优 1000–5000',
+                            '<strong>质量 > 数量 :</strong> 100 个好示例击败 1000 个差示例',
+                            '<strong>格式 :</strong> JSON/JSONL with 输入 + 输出对',
+                            '示例 : {"instruction": "翻译成中文", "input": "Hello", "output": "你好"}',
+                            '<strong>instruction 只格式也可行 :</strong> {"text": "<|user|>翻译\\nHello<|assistant|>你好"}'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LoRA 关键超参数',
+                        columns: ['参数', '推荐', '范围', '效果'],
+                        rows: [
+                            { '参数': 'learning_rate', '推荐': '2e-4', '范围': '1e-5 到 1e-3', '效果': '较低 = 稳定、缓慢' },
+                            { '参数': 'lora_r (秩)', '推荐': '16', '范围': '4 到 64', '效果': '较高 = 表现力强' },
+                            { '参数': 'lora_alpha', '推荐': '32', '范围': '8 到 256', '效果': '较高 = LoRA 更强' },
+                            { '参数': 'num_epochs', '推荐': '3', '范围': '1 到 10', '效果': '过拟合风险' },
+                            { '参数': 'batch_size', '推荐': '4', '范围': '1 到 32', '效果': '较大 = 更多 VRAM' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '评估微调模型',
+                        items: [
+                            '<strong>训练损失</strong> 应在各 epoch 内下降',
+                            '<strong>验证损失</strong> 应下降但保持在训练损失之上',
+                            '<strong>手动测试</strong> 在测试示例上 — 将输出与预期比较',
+                            '<strong>基准任务</strong> (MMLU、HumanEval) 以测量改进',
+                            '<strong>防止过拟合 :</strong> 始终使用单独的验证集'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 个最常见的错误',
+                        items: [
+                            '<strong>示例过少。</strong> <200 导致过拟合。至少收集 500 个。',
+                            '<strong>训练 epoch 过多。</strong> 模型会记忆而不是泛化。最多 3–5 个。',
+                            '<strong>未在看不见的数据上验证。</strong> 始终使用 80/20 列车/验证分割。',
+                            '<strong>在训练数据上评估。</strong> 训练集的精度没有意义。',
+                            '<strong>不保存检查点。</strong> 训练要几小时。每个 epoch 都保存。'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '6 步 LoRA 训练工作流',
+                        items: [
+                            '<strong>安装 Unsloth :</strong> pip install unsloth[colab-new] xformers bitsandbytes',
+                            '<strong>使用 LoRA 配置加载基础模型 :</strong> FastLanguageModel.from_pretrained(..., load_in_4bit=True)',
+                            '<strong>准备 500+ 个 JSONL 格式的示例</strong> (instruction、input、output)',
+                            '<strong>使用 SFTTrainer 配置并训练 :</strong> 3 个 epoch，learning_rate=2e-4',
+                            '<strong>将适配器合并到基础模型 :</strong> model.merge_and_unload()',
+                            '<strong>转换为 GGUF 并使用 Modelfile 在 Ollama 上部署</strong>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            {
+                                q: '我需要多少训练数据？',
+                                a: '最少 500 个示例，最优 1000–5000。质量比数量更重要。100 个高质量示例胜过 1000 个低质量示例。'
+                            },
+                            {
+                                q: 'LoRA 和 QLoRA 有什么区别？',
+                                a: 'LoRA 使用 16 位基础 (7B 需要 16GB VRAM)。QLoRA 使用 4 位 (8GB)。质量差异 ~2% — 可忽略。QLoRA 是标准配置。'
+                            },
+                            {
+                                q: '我可以在笔记本电脑上微调吗？',
+                                a: '可以，使用 QLoRA。7B 模型需要 8GB VRAM。在 CPU 上需要 1–2 小时 (慢)，GPU 上 10–15 分钟。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LoRA 是正确选择的时机',
+                        items: [
+                            '<strong>LoRA > RAG :</strong> 当文档变化稀少、需要深度知识或延迟 <100ms',
+                            '<strong>LoRA > 完全微调 :</strong> 总是，除非你有 100+ GB VRAM 并需要 99%+ 质量',
+                            '<strong>LoRA + RAG :</strong> 在领域知识上微调，对最新文档使用 RAG',
+                            '<strong>选择 LoRA 如果 :</strong> 成本重要、仅消费级硬件、需要快速迭代',
+                            '<strong>合并并部署 :</strong> 导出为 GGUF，使用 Ollama 本地运行 — 零云成本'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '准备好微调您的第一个模型了吗？',
+                        body: '从 Unsloth 开始，这是消费级硬件的 4 倍快速 LoRA 框架。完整指南包括代码示例、超参数调整和 Ollama 部署。',
+                        cta: '免费尝试 PromptQuorum',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora?lang=' + lang;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener" style="color: #6750a4; text-decoration: none;">Read the full article →</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 40px; font-size: 1.5em;">${slide.line1}</p>
+                        <p style="font-size: 1.5em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                    `;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach((item, i) => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 20px; text-align: left; margin-top: 12px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+                    });
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 20px; margin-bottom: 20px;">${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">${slide.cta}</a>
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        const baseUrl = 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora';
+        backLink.href = lang && lang !== 'en' ? `${baseUrl}?lang=${lang}` : baseUrl;
+
+        // Render all slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        // Initialize navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+        document.getElementById('prevBtn').textContent = content.prevBtn;
+        document.getElementById('nextBtn').textContent = content.nextBtn;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Print handlers
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
