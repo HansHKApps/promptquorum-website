@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Common On-Premises AI Deployment Mistakes</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/private-local-ai-for-business</dc:source>
+  </metadata>
+
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">Common On-Premises Deployment Mistakes</text>
+
+  <!-- Mistake 1: Infrastructure Costs -->
+  <rect x="40" y="70" width="340" height="180" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <circle cx="70" cy="95" r="18" fill="#FF9800"/>
+  <text x="70" y="104" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">💰</text>
+  <text x="115" y="100" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Infrastructure Costs</text>
+  <text x="60" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">❌ Hardware only: $2k–8k</text>
+  <text x="60" y="142" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">Hidden: Cooling, power draw,</text>
+  <text x="60" y="157" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">networking upgrades</text>
+  <text x="60" y="175" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FF9800">✓ Budget 3–5× hardware</text>
+  <text x="60" y="192" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FF9800">cost over 5 years</text>
+  <text x="60" y="210" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">Total: $10k–40k lifecycle</text>
+
+  <!-- Mistake 2: Poor Scaling -->
+  <rect x="420" y="70" width="340" height="180" rx="8" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <circle cx="450" cy="95" r="18" fill="#9C27B0"/>
+  <text x="450" y="104" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">📈</text>
+  <text x="495" y="100" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Poor Scaling Planning</text>
+  <text x="440" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">❌ Single GPU → bottleneck</text>
+  <text x="440" y="142" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">Cannot handle production</text>
+  <text x="440" y="157" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">traffic growth</text>
+  <text x="440" y="175" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C27B0">✓ Start with multi-GPU</text>
+  <text x="440" y="192" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C27B0">setup (2–4 GPUs)</text>
+  <text x="440" y="210" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">Plan for 5–10x growth</text>
+
+  <!-- Mistake 3: Disaster Recovery -->
+  <rect x="40" y="280" width="340" height="180" rx="8" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <circle cx="70" cy="305" r="18" fill="#E91E63"/>
+  <text x="70" y="314" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">🔥</text>
+  <text x="115" y="310" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Ignoring Disaster Recovery</text>
+  <text x="60" y="335" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">❌ No backups, no replication</text>
+  <text x="60" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">Hardware failure = data loss,</text>
+  <text x="60" y="367" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">outages lasting days/weeks</text>
+  <text x="60" y="385" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#E91E63">✓ Implement replication:</text>
+  <text x="60" y="402" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#E91E63">RAID, backup hardware</text>
+  <text x="60" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">Outages cost $1k–10k/hr</text>
+
+  <!-- Mistake 4: Security -->
+  <rect x="420" y="280" width="340" height="180" rx="8" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+  <circle cx="450" cy="305" r="18" fill="#1976D2"/>
+  <text x="450" y="314" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">🔐</text>
+  <text x="495" y="310" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Poor Security Posture</text>
+  <text x="440" y="335" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">❌ No encryption, weak access</text>
+  <text x="440" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">controls, unmonitored access</text>
+  <text x="440" y="367" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">to sensitive data</text>
+  <text x="440" y="385" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1976D2">✓ Implement AES-256, TLS 1.3,</text>
+  <text x="440" y="402" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1976D2">MFA, audit logging</text>
+  <text x="440" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">Breach cost: $100k–1M+</text>
+
+  <text x="792" y="490" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>
