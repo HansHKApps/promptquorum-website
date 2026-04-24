@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Local AI For Business | PromptQuorum</title>
+  <meta name="description" content="On-premises AI breaks even at 200M tokens/month. GDPR, HIPAA, SOC2 compliant. Deploy Llama 3.3 70B locally." />
+  <meta property="og:title" content="Private Local AI For Business — PromptQuorum" />
+  <meta property="og:description" content="On-premises AI breaks even at 200M tokens/month — $83/month hardware vs $1,000/month cloud API." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/local-llms/private-local-ai-for-business" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      border-bottom: 1px solid #eee;
+      background: white;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 32px;
+    }
+
+    .header-left span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+    }
+
+    .header-links a {
+      color: #666;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 2px;
+    }
+
+    .header-links a:hover {
+      color: #333;
+    }
+
+    .content-area {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 48px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      overflow: hidden;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .slide.title {
+      background: linear-gradient(135deg, #6750a4 0%, #4f378b 100%);
+      color: white;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .slide.title h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide.title p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 40px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slide.title .logo {
+      position: absolute;
+      top: 40px;
+      height: 40px;
+    }
+
+    .slide h2 {
+      font-size: 36px;
+      margin-bottom: 32px;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    .slide.list h2,
+    .slide.numbered h2 {
+      margin-bottom: 24px;
+    }
+
+    .slide ul,
+    .slide ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slide li {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .slide.list li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      color: #6750a4;
+    }
+
+    .slide.numbered ol {
+      counter-reset: item;
+      padding-left: 0;
+    }
+
+    .slide.numbered li {
+      counter-increment: item;
+      padding-left: 32px;
+    }
+
+    .slide.numbered li:before {
+      content: counter(item) ".";
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+      color: #6750a4;
+    }
+
+    .slide table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .slide th {
+      background: #f5f5f5;
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .slide td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      color: #555;
+    }
+
+    .slide.comparison {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .slide.comparison h2 {
+      margin-bottom: 40px;
+    }
+
+    .slide.comparison p {
+      font-size: 22px;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .slide.comparison .tip {
+      font-size: 15px;
+      color: #666;
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .slide.faq {
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+
+    .slide.faq h2 {
+      margin-bottom: 28px;
+    }
+
+    .faq-item {
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .faq-item p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+    }
+
+    .slide.cta {
+      background: linear-gradient(135deg, #6750a4 0%, #4f378b 100%);
+      color: white;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .slide.cta h2 {
+      color: white;
+      margin-bottom: 24px;
+    }
+
+    .slide.cta p {
+      font-size: 18px;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .slide.cta a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: white;
+      color: #6750a4;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    .slide.cta a:hover {
+      transform: scale(1.05);
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      border-top: 1px solid #eee;
+      background: white;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      background: #6750a4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #5541a0;
+    }
+
+    .controls button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .header,
+      .controls {
+        display: none;
+      }
+      .slide {
+        display: flex !important;
+        opacity: 1 !important;
+        page-break-after: always;
+        position: relative !important;
+        height: auto;
+        min-height: 100vh;
+        padding: 40px;
+      }
+      .slide.active {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Private Local AI For Business</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/private-local-ai-for-business" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Private Local AI For Business: On-Premises Deployment Without Cloud',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Private Local AI For Business',
+            subtitle: 'On-Premises Deployment Without Cloud. Break-even at 200M tokens/month.',
+            link: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business'
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>Privacy:</strong> Data never leaves your infrastructure. Critical for HIPAA, GDPR, financial services.',
+              '<strong>Cost:</strong> No per-token API fees. One-time hardware investment ($3k–50k), then free queries.',
+              '<strong>Compliance:</strong> Full audit trails, data residency control, no vendor lock-in.',
+              '<strong>Speed:</strong> 50–150ms latency vs 200–500ms on cloud APIs.',
+              'On-premises AI is economically viable for 100M+ tokens/month processing.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Privacy & Compliance Benefits',
+            items: [
+              '<strong>GDPR (EU):</strong> Data residency control. Infrastructure within EU ensures compliance.',
+              '<strong>HIPAA (Healthcare):</strong> Patient data stays on-premises. AES-256 encryption required.',
+              '<strong>SOC2 (Enterprise):</strong> Audit trails, access controls, incident response. Full control.',
+              '<strong>No vendor lock-in:</strong> Switch models or frameworks anytime. Freedom to adapt.',
+              'Regulated industries (healthcare, finance, government) increasingly mandate on-premises AI.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Cost Break-Even: On-Premises vs Cloud',
+            columns: ['Volume', 'Cloud API/Month', 'On-Premises/Month', 'Savings'],
+            rows: [
+              { 'Volume': '10M tokens/month', 'Cloud API/Month': '$50', 'On-Premises/Month': '$133', 'Savings': 'Cloud cheaper' },
+              { 'Volume': '50M tokens/month', 'Cloud API/Month': '$250', 'On-Premises/Month': '$133', 'Savings': '47% cheaper' },
+              { 'Volume': '200M tokens/month', 'Cloud API/Month': '$1,000', 'On-Premises/Month': '$133', 'Savings': '87% cheaper' },
+              { 'Volume': '500M tokens/month', 'Cloud API/Month': '$2,500', 'On-Premises/Month': '$183', 'Savings': '93% cheaper' },
+              { 'Volume': '1B tokens/month', 'Cloud API/Month': '$5,000', 'On-Premises/Month': '$233', 'Savings': '95% cheaper' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Hardware Requirements by Scale',
+            items: [
+              '<strong>Small teams (5–20 users):</strong> 1× RTX 5090 (32 GB, $2,000) for Llama 3.1 8B.',
+              '<strong>Production (20–100 users):</strong> 2× RTX 5090 (64 GB, $4,000) for Llama 3.3 70B.',
+              '<strong>Enterprise (100+ users):</strong> 4× RTX 5090 or 2× A100 80GB ($8k–$30k).',
+              '<strong>Cloud alternative:</strong> Mac M5 Max ($3,499) runs 70B at 25–35 tok/sec silently.',
+              'Budget for networking, cooling, and redundant power supplies as well.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'On-Premises vs Cloud APIs',
+            items: [
+              '<strong>Data privacy:</strong> Local = never leaves network vs Cloud = sent to servers.',
+              '<strong>Latency:</strong> 50–150ms (local) vs 200–500ms (cloud) first-token latency.',
+              '<strong>Model choice:</strong> Any open model (Llama, Qwen, Mistral) vs GPT-5.x, Claude only.',
+              '<strong>Rate limits:</strong> No limits (hardware constraint) vs 500–10,000 RPM.',
+              '<strong>Compliance:</strong> Full control vs shared responsibility with cloud provider.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Industries & Use Cases',
+            items: [
+              '<strong>Healthcare:</strong> Medical NLP (note summarization) on HIPAA-compliant infrastructure.',
+              '<strong>Finance:</strong> Risk assessment, compliance analysis, without sending data to cloud.',
+              '<strong>Legal:</strong> Document review, contract analysis, with full audit trails.',
+              '<strong>Manufacturing:</strong> Predictive maintenance, quality control on-premises.',
+              '<strong>Government:</strong> Classified document processing in secure facilities.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Architecture: Kubernetes + vLLM',
+            items: [
+              '<strong>Typical stack:</strong> Kubernetes cluster running vLLM inference pods + Qdrant for RAG.',
+              '<strong>Model:</strong> Llama 3.3 70B via tensor parallelism across 2× RTX 5090.',
+              '<strong>Scaling:</strong> vLLM OpenAI-compatible API at localhost:8000.',
+              '<strong>Data:</strong> Qdrant vector database for retrieval-augmented generation.',
+              'Multi-GPU deployment with auto-sharding handles 20–100 concurrent users.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Common Deployment Mistakes',
+            items: [
+              '<strong>Underestimating infrastructure costs.</strong> Budget 3–5× hardware cost over 5 years.',
+              '<strong>Not planning for scaling.</strong> Start small, plan for growth. Single-GPU cannot scale.',
+              '<strong>Ignoring disaster recovery.</strong> Have backup hardware and data replication.',
+              '<strong>Poor security posture.</strong> Network isolation, encryption, access controls critical.',
+              '<strong>Using outdated models.</strong> Retrain or fine-tune regularly as new models emerge.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ: Break-Even Analysis',
+            faqs: [
+              {
+                q: 'When does on-premises AI become cheaper than cloud APIs?',
+                a: 'Break-even occurs at ~200M tokens/month. An RTX 5090 ($2,000) amortized over 36 months costs ~$56/month hardware. Add electricity ($50/month) and cooling ($27/month) = $133/month total. At 200M+ tokens/month, it pays for itself within 1–2 months.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ: Compliance & Hardware',
+            faqs: [
+              {
+                q: 'Does GDPR require local AI?',
+                a: 'GDPR does not require local AI, but requires adequate protection of personal data (Article 28). Regulated sectors in Germany and France increasingly mandate on-premises AI as the safest GDPR compliance path.'
+              },
+              {
+                q: 'What hardware do I need?',
+                a: 'Small teams: 1× RTX 5090 ($2,000). Production: 2× RTX 5090 ($4,000). Enterprise: 4× RTX 5090 or 2× A100 ($8k–$30k). Mac M5 Max ($3,499) runs 70B at 25–35 tok/sec for small teams.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ: HIPAA & Audit Trails',
+            faqs: [
+              {
+                q: 'How do I comply with HIPAA?',
+                a: 'HIPAA requires: (1) AES-256 encryption at rest/in transit, (2) audit logging of all queries, (3) role-based access controls with MFA, (4) Business Associate Agreement (BAA) for third-party services, (5) physical server security.'
+              },
+              {
+                q: 'How do I ensure audit trails?',
+                a: 'Log every query and response to PostgreSQL or Elasticsearch. Include: timestamp, user ID, model, token counts. vLLM supports request logging natively. Retain logs for 7+ years (financial) per regulatory requirements.'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Best Models for Business (2026)',
+            items: [
+              '<strong>Llama 3.3 70B:</strong> Meta\'s Llama Community License — free for commercial use (under 700M users).',
+              '<strong>Qwen2.5 72B:</strong> Alibaba, Apache 2.0 license. Multilingual, strong reasoning.',
+              '<strong>Mistral Small 3.1 24B:</strong> Mistral AI, Apache 2.0. Fast, efficient, cost-effective.',
+              '<strong>For smaller teams:</strong> Llama 3.1 8B, Qwen2.5 7B, Phi-4 Mini 3.8B.',
+              'Always verify license before production deployment.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Ready to Deploy Private Local AI?',
+            body: 'Private on-premises AI eliminates cloud costs, ensures compliance, and keeps data under your control. Start with a single RTX 5090 and scale horizontally. Try PromptQuorum to build and deploy custom models.',
+            cta: 'Get Started with PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Private lokale KI für Unternehmen: On-Premises-Bereitstellung ohne Cloud',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Private lokale KI für Unternehmen',
+            subtitle: 'On-Premises-Bereitstellung ohne Cloud. Break-even bei 200 Millionen Tokens pro Monat.',
+            link: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              '<strong>Datenschutz:</strong> Daten verlassen Ihre Infrastruktur nie. Entscheidend für HIPAA, DSGVO, Finanzdienstleistungen.',
+              '<strong>Kosten:</strong> Keine API-Gebühren pro Token. Einmalige Hardwareinvestition (3.000–50.000 €), dann kostenlose Anfragen.',
+              '<strong>Compliance:</strong> Vollständige Audit-Trails, Kontrolle über Datenresidenz, keine Herstellerbindung.',
+              '<strong>Geschwindigkeit:</strong> 50–150ms Latenz gegenüber 200–500ms bei Cloud-APIs.',
+              'On-Premises-KI ist wirtschaftlich sinnvoll für 100+ Millionen Tokens pro Monat.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'DSGVO & Compliance-Vorteile',
+            items: [
+              '<strong>DSGVO (EU):</strong> Datenspeicherung in der EU. Infrastruktur im EU-Raum gewährleistet Konformität.',
+              '<strong>HIPAA (Gesundheitswesen):</strong> Patientendaten bleiben vor Ort. AES-256-Verschlüsselung erforderlich.',
+              '<strong>SOC2 (Unternehmen):</strong> Audit-Trails, Zugriffskontrollen, Incident Response. Vollständige Kontrolle.',
+              '<strong>Keine Herstellerbindung:</strong> Wechseln Sie jederzeit zwischen Modellen oder Frameworks.',
+              'Regulierte Branchen (Gesundheit, Finanzen, Regierung) schreiben zunehmend On-Premises-KI vor.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Kostenvergleich: On-Premises vs Cloud',
+            columns: ['Volumen', 'Cloud API/Monat', 'On-Premises/Monat', 'Ersparnis'],
+            rows: [
+              { 'Volumen': '10M Tokens/Monat', 'Cloud API/Monat': '50 €', 'On-Premises/Monat': '133 €', 'Ersparnis': 'Cloud billiger' },
+              { 'Volumen': '50M Tokens/Monat', 'Cloud API/Monat': '250 €', 'On-Premises/Monat': '133 €', 'Ersparnis': '47% billiger' },
+              { 'Volumen': '200M Tokens/Monat', 'Cloud API/Monat': '1.000 €', 'On-Premises/Monat': '133 €', 'Ersparnis': '87% billiger' },
+              { 'Volumen': '500M Tokens/Monat', 'Cloud API/Monat': '2.500 €', 'On-Premises/Monat': '183 €', 'Ersparnis': '93% billiger' },
+              { 'Volumen': '1B Tokens/Monat', 'Cloud API/Monat': '5.000 €', 'On-Premises/Monat': '233 €', 'Ersparnis': '95% billiger' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Hardware-Anforderungen nach Skalierung',
+            items: [
+              '<strong>Kleine Teams (5–20 Nutzer):</strong> 1× RTX 5090 (32 GB, 2.000 €) für Llama 3.1 8B.',
+              '<strong>Produktion (20–100 Nutzer):</strong> 2× RTX 5090 (64 GB, 4.000 €) für Llama 3.3 70B.',
+              '<strong>Enterprise (100+ Nutzer):</strong> 4× RTX 5090 oder 2× A100 80GB (8.000–30.000 €).',
+              '<strong>Cloud-Alternative:</strong> Mac M5 Max (3.499 €) führt 70B mit 25–35 tok/s leise aus.',
+              'Budget für Netzwerk, Kühlung und redundante Stromversorgung erforderlich.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'On-Premises vs Cloud-APIs',
+            items: [
+              '<strong>Datenschutz:</strong> Lokal = verlässt Netzwerk nie vs Cloud = an Server gesendet.',
+              '<strong>Latenz:</strong> 50–150ms (lokal) vs 200–500ms (Cloud) First-Token-Latenz.',
+              '<strong>Modellwahl:</strong> Beliebiges offenes Modell vs nur GPT-5.x und Claude.',
+              '<strong>Rate Limits:</strong> Keine Limits (Hardware-Engpässe) vs 500–10.000 RPM.',
+              '<strong>Compliance:</strong> Vollständige Kontrolle vs geteilte Verantwortung mit Cloud-Anbieter.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Branchen & Anwendungsfälle',
+            items: [
+              '<strong>Gesundheitswesen:</strong> Medizinische NLP (Dokumentenzusammenfassung) auf HIPAA-konformer Infrastruktur.',
+              '<strong>Finanzen:</strong> Risikoanalyse, Compliance-Analyse, ohne Datensendung an Cloud.',
+              '<strong>Jura:</strong> Dokumentenüberprüfung, Vertragsanalyse mit vollständiger Prüfung.',
+              '<strong>Fertigung:</strong> Vorausschauende Wartung, Qualitätskontrolle vor Ort.',
+              '<strong>Regierung:</strong> Geheime Dokumentenverarbeitung in sicheren Einrichtungen.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Architektur: Kubernetes + vLLM',
+            items: [
+              '<strong>Typischer Stack:</strong> Kubernetes-Cluster mit vLLM-Pods + Qdrant für RAG.',
+              '<strong>Modell:</strong> Llama 3.3 70B über Tensor-Parallelismus auf 2× RTX 5090.',
+              '<strong>Skalierung:</strong> vLLM OpenAI-kompatible API auf localhost:8000.',
+              '<strong>Daten:</strong> Qdrant-Vektordatenbank für Retrieval-Augmented Generation.',
+              'Multi-GPU-Bereitstellung mit Auto-Sharding unterstützt 20–100 gleichzeitige Nutzer.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Häufige Bereitstellungsfehler',
+            items: [
+              '<strong>Infrastrukturkosten unterschätzen.</strong> Budget 3–5× Hardware-Kosten über 5 Jahre.',
+              '<strong>Skalierung nicht planen.</strong> Klein anfangen, Wachstum planen. Einzelne GPU skaliert nicht.',
+              '<strong>Notfallwiederherstellung ignorieren.</strong> Backup-Hardware und Datenreplikation notwendig.',
+              '<strong>Schwache Sicherheit.</strong> Netzwerk-Isolation, Verschlüsselung, Zugriffskontrolle kritisch.',
+              '<strong>Alte Modelle verwenden.</strong> Regelmäßig neu trainieren, wenn neue Modelle erscheinen.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ: Break-Even-Analyse',
+            faqs: [
+              {
+                q: 'Wann wird On-Premises-KI billiger als Cloud-APIs?',
+                a: 'Break-Even bei ~200 Millionen Tokens pro Monat. Eine RTX 5090 (2.000 €) amortisiert über 36 Monate kostet ~56 €/Monat Hardware. Strom (50 €/Monat) und Kühlung (27 €/Monat) = 133 €/Monat insgesamt. Bei 200+ Millionen Tokens amortisiert sie sich in 1–2 Monaten.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ: Compliance & Hardware',
+            faqs: [
+              {
+                q: 'Erfordert die DSGVO lokale KI?',
+                a: 'Die DSGVO erfordert lokale KI nicht, aber verlangt angemessenen Schutz persönlicher Daten (Artikel 28). Regulierte Sektoren in Deutschland und Frankreich schreiben zunehmend On-Premises-KI als sichersten Compliance-Weg vor.'
+              },
+              {
+                q: 'Welche Hardware brauche ich?',
+                a: 'Kleine Teams: 1× RTX 5090 (2.000 €). Produktion: 2× RTX 5090 (4.000 €). Enterprise: 4× RTX 5090 oder 2× A100 (8.000–30.000 €). Mac M5 Max (3.499 €) läuft 70B mit 25–35 tok/s für kleine Teams.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ: HIPAA & Audit-Trails',
+            faqs: [
+              {
+                q: 'Wie erfülle ich HIPAA-Anforderungen?',
+                a: 'HIPAA erfordert: (1) AES-256-Verschlüsselung, (2) Audit-Logging aller Anfragen, (3) rollenbasierte Zugriffskontrolle mit MFA, (4) Business Associate Agreement (BAA), (5) physische Server-Sicherheit.'
+              },
+              {
+                q: 'Wie stelle ich Audit-Trails sicher?',
+                a: 'Alle Anfragen und Antworten in PostgreSQL oder Elasticsearch protokollieren. Zeitstempel, Nutzer-ID, Modell, Token-Zahl. vLLM unterstützt nativ Anfrage-Logging. Protokolle 7+ Jahre aufbewahren (Finanzen) oder nach Vorgaben.'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Beste Modelle für Unternehmen (2026)',
+            items: [
+              '<strong>Llama 3.3 70B:</strong> Meta Llama Community License — kostenlos kommerziell (unter 700M Nutzer).',
+              '<strong>Qwen2.5 72B:</strong> Alibaba, Apache 2.0. Mehrsprachig, starke Logik.',
+              '<strong>Mistral Small 3.1 24B:</strong> Mistral AI, Apache 2.0. Schnell, effizient, kostengünstig.',
+              '<strong>Für kleine Teams:</strong> Llama 3.1 8B, Qwen2.5 7B, Phi-4 Mini 3.8B.',
+              'Lizenz vor Produktionsbereitstellung immer überprüfen.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Bereit für private lokale KI?',
+            body: 'Private On-Premises-KI eliminiert Cloud-Kosten, gewährleistet Compliance und behält Kontrolle über Daten. Beginnen Sie mit einer RTX 5090 und skalieren Sie horizontal. Probieren Sie PromptQuorum aus.',
+            cta: 'Beginnen Sie mit PromptQuorum',
+            href: 'https://www.promptquorum.com?lang=de'
+          }
+        ]
+      },
+      fr: {
+        title: 'IA Locale Privée pour Entreprises : Déploiement On-Premises sans Cloud',
+        slides: [
+          {
+            type: 'title',
+            h1: 'IA Locale Privée pour Entreprises',
+            subtitle: 'Déploiement On-Premises sans Cloud. Point mort à 200 millions de tokens par mois.',
+            link: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Points Clés',
+            items: [
+              '<strong>Confidentialité :</strong> Les données ne quittent jamais votre infrastructure. Critique pour HIPAA, RGPD, services financiers.',
+              '<strong>Coût :</strong> Pas de frais par token. Investissement matériel unique (3 000–50 000 €), puis requêtes gratuites.',
+              '<strong>Conformité :</strong> Logs d\'audit complets, contrôle de résidence des données, pas de verrouillage.',
+              '<strong>Vitesse :</strong> 50–150 ms de latence vs 200–500 ms sur cloud.',
+              'L\'IA on-premises est économiquement viable pour 100+ millions de tokens par mois.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Avantages RGPD et Conformité',
+            items: [
+              '<strong>RGPD (UE) :</strong> Résidence des données en UE. Infrastructure garantit la conformité.',
+              '<strong>HIPAA (Santé) :</strong> Données patients restent on-premises. Chiffrement AES-256 requis.',
+              '<strong>SOC2 (Entreprise) :</strong> Logs d\'audit, contrôles d\'accès, réponse aux incidents. Contrôle total.',
+              '<strong>Pas de dépendance :</strong> Passez entre modèles ou frameworks à tout moment.',
+              'Les secteurs réglementés (santé, finance, gouvernement) mandatent de plus en plus l\'IA on-premises.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Comparaison Coûts : On-Premises vs Cloud',
+            columns: ['Volume', 'Cloud API/Mois', 'On-Premises/Mois', 'Économies'],
+            rows: [
+              { 'Volume': '10M tokens/mois', 'Cloud API/Mois': '50 €', 'On-Premises/Mois': '133 €', 'Économies': 'Cloud moins cher' },
+              { 'Volume': '50M tokens/mois', 'Cloud API/Mois': '250 €', 'On-Premises/Mois': '133 €', 'Économies': '47% moins cher' },
+              { 'Volume': '200M tokens/mois', 'Cloud API/Mois': '1 000 €', 'On-Premises/Mois': '133 €', 'Économies': '87% moins cher' },
+              { 'Volume': '500M tokens/mois', 'Cloud API/Mois': '2 500 €', 'On-Premises/Mois': '183 €', 'Économies': '93% moins cher' },
+              { 'Volume': '1B tokens/mois', 'Cloud API/Mois': '5 000 €', 'On-Premises/Mois': '233 €', 'Économies': '95% moins cher' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Configuration Matérielle par Échelle',
+            items: [
+              '<strong>Petites équipes (5–20 utilisateurs) :</strong> 1× RTX 5090 (32 GB, 2 000 €) pour Llama 3.1 8B.',
+              '<strong>Production (20–100 utilisateurs) :</strong> 2× RTX 5090 (64 GB, 4 000 €) pour Llama 3.3 70B.',
+              '<strong>Entreprise (100+ utilisateurs) :</strong> 4× RTX 5090 ou 2× A100 80GB (8 000–30 000 €).',
+              '<strong>Alternative cloud :</strong> Mac M5 Max (3 499 €) exécute 70B à 25–35 tok/s silencieusement.',
+              'Budget pour réseau, refroidissement et alimentation redondante également nécessaire.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'On-Premises vs Cloud APIs',
+            items: [
+              '<strong>Confidentialité :</strong> Local = ne quitte jamais vs Cloud = envoyé aux serveurs.',
+              '<strong>Latence :</strong> 50–150 ms (local) vs 200–500 ms (cloud) first-token latency.',
+              '<strong>Choix du modèle :</strong> Tout modèle ouvert vs seulement GPT-5.x, Claude.',
+              '<strong>Rate limits :</strong> Pas de limites (contrainte matérielle) vs 500–10 000 RPM.',
+              '<strong>Conformité :</strong> Contrôle total vs responsabilité partagée avec fournisseur.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Secteurs & Cas d\'Usage',
+            items: [
+              '<strong>Santé :</strong> NLP médical (résumés de notes) sur infrastructure HIPAA-conforme.',
+              '<strong>Finance :</strong> Évaluation des risques, analyse de conformité, sans envoi cloud.',
+              '<strong>Juridique :</strong> Révision documents, analyse contrats avec logs complets.',
+              '<strong>Fabrication :</strong> Maintenance préventive, contrôle qualité on-premises.',
+              '<strong>Gouvernement :</strong> Traitement documents classifiés en lieux sécurisés.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Architecture : Kubernetes + vLLM',
+            items: [
+              '<strong>Stack typique :</strong> Cluster Kubernetes exécutant vLLM pods + Qdrant pour RAG.',
+              '<strong>Modèle :</strong> Llama 3.3 70B via parallélisme tensor sur 2× RTX 5090.',
+              '<strong>Scaling :</strong> API compatible OpenAI vLLM sur localhost:8000.',
+              '<strong>Données :</strong> Base de données vectorielle Qdrant pour retrieval-augmented generation.',
+              'Déploiement multi-GPU avec auto-sharding gère 20–100 utilisateurs concurrents.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Erreurs de Déploiement Courantes',
+            items: [
+              '<strong>Sous-estimer les coûts infra.</strong> Budget 3–5× coûts matériel sur 5 ans.',
+              '<strong>Ne pas planifier scaling.</strong> Commencer petit, planifier croissance. Une GPU ne scale pas.',
+              '<strong>Ignorer récupération après sinistre.</strong> Matériel backup et réplication données nécessaires.',
+              '<strong>Posture de sécurité faible.</strong> Isolation réseau, chiffrement, contrôles accès critiques.',
+              '<strong>Utiliser anciens modèles.</strong> Retrainer régulièrement à mesure que nouveaux émergent.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ : Analyse du Point Mort',
+            faqs: [
+              {
+                q: 'Quand l\'IA on-premises devient-elle moins chère que cloud ?',
+                a: 'Point mort autour de 200 millions tokens/mois. Une RTX 5090 (2 000 €) amortie sur 36 mois coûte ~56 €/mois hardware. Électricité (50 €/mois) et refroidissement (27 €/mois) = 133 €/mois total. À 200+ millions tokens, elle se rembourse en 1–2 mois.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ : Conformité & Matériel',
+            faqs: [
+              {
+                q: 'Le RGPD exige-t-il l\'IA locale ?',
+                a: 'Le RGPD n\'exige pas l\'IA locale, mais exige protection adéquate données personnelles (Article 28). Secteurs régulés en Allemagne et France mandatent de plus en plus on-premises comme voie conformité sûre.'
+              },
+              {
+                q: 'Quel matériel me faut-il ?',
+                a: 'Petites équipes : 1× RTX 5090 (2 000 €). Production : 2× RTX 5090 (4 000 €). Entreprise : 4× RTX 5090 ou 2× A100 (8 000–30 000 €). Mac M5 Max (3 499 €) exécute 70B à 25–35 tok/s pour petites équipes.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ : HIPAA & Logs d\'Audit',
+            faqs: [
+              {
+                q: 'Comment respecter HIPAA ?',
+                a: 'HIPAA exige : (1) Chiffrement AES-256, (2) Logging audit toutes requêtes, (3) Contrôle accès rôles avec MFA, (4) Business Associate Agreement (BAA), (5) Sécurité physique serveurs.'
+              },
+              {
+                q: 'Comment garantir logs d\'audit ?',
+                a: 'Logger chaque requête/réponse dans PostgreSQL ou Elasticsearch. Inclure : timestamp, user ID, modèle, tokens. vLLM supporte logging nativement. Conserver 7+ ans (finances) ou selon exigences réglementaires.'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Meilleurs Modèles Entreprise (2026)',
+            items: [
+              '<strong>Llama 3.3 70B :</strong> Meta Llama Community License — gratuit commercial (< 700M users).',
+              '<strong>Qwen2.5 72B :</strong> Alibaba, Apache 2.0. Multilingue, raisonnement solide.',
+              '<strong>Mistral Small 3.1 24B :</strong> Mistral AI, Apache 2.0. Rapide, efficace, économique.',
+              '<strong>Petites équipes :</strong> Llama 3.1 8B, Qwen2.5 7B, Phi-4 Mini 3.8B.',
+              'Toujours vérifier licence avant déploiement production.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Prêt pour l\'IA Locale Privée ?',
+            body: 'L\'IA privée on-premises élimine coûts cloud, garantit conformité et garde contrôle données. Commencez avec une RTX 5090 et scalisez horizontalement. Essayez PromptQuorum pour construire et déployer modèles custom.',
+            cta: 'Démarrer avec PromptQuorum',
+            href: 'https://www.promptquorum.com?lang=fr'
+          }
+        ]
+      },
+      ja: {
+        title: 'ビジネス向けプライベートローカルAI：クラウドレスなオンプレミス展開',
+        slides: [
+          {
+            type: 'title',
+            h1: 'ビジネス向けプライベートローカルAI',
+            subtitle: 'クラウドレスなオンプレミス展開。200万トークン/月で損益分岐点に。',
+            link: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: '重要なポイント',
+            items: [
+              '<strong>プライバシー:</strong> データはインフラを離れません。HIPAA、GDPR、金融サービスに必須です。',
+              '<strong>コスト:</strong> トークンあたりのAPI料金なし。一度のハードウェア投資（3,000～50,000ドル）の後は無料。',
+              '<strong>コンプライアンス:</strong> 完全な監査ログ、データレジデンシー管理、ベンダーロックインなし。',
+              '<strong>速度:</strong> 50～150msレイテンシー対クラウドAPI 200～500ms。',
+              '月1億トークン以上を処理する組織にはオンプレミスAIが経済的に成立します。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GDPR・コンプライアンスの利点',
+            items: [
+              '<strong>GDPR（EU）:</strong> EU内データレジデンシー。EUインフラが準拠を保証します。',
+              '<strong>HIPAA（医療）:</strong> 患者データはオンプレミスに留まります。AES-256暗号化が必須。',
+              '<strong>SOC2（エンタープライズ）:</strong> 監査ログ、アクセス制御、インシデント対応。完全制御。',
+              '<strong>ベンダーロックインなし:</strong> いつでもモデルやフレームワークを切り替えできます。',
+              '規制対象産業（医療、金融、政府）はますますオンプレミスAIを必須としています。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'コスト比較：オンプレミス対クラウド',
+            columns: ['ボリューム', 'クラウドAPI/月', 'オンプレミス/月', '節約'],
+            rows: [
+              { 'ボリューム': '1000万トークン/月', 'クラウドAPI/月': '$50', 'オンプレミス/月': '$133', '節約': 'クラウド安い' },
+              { 'ボリューム': '5000万トークン/月', 'クラウドAPI/月': '$250', 'オンプレミス/月': '$133', '節約': '47%安い' },
+              { 'ボリューム': '2億トークン/月', 'クラウドAPI/月': '$1,000', 'オンプレミス/月': '$133', '節約': '87%安い' },
+              { 'ボリューム': '5億トークン/月', 'クラウドAPI/月': '$2,500', 'オンプレミス/月': '$183', '節約': '93%安い' },
+              { 'ボリューム': '10億トークン/月', 'クラウドAPI/月': '$5,000', 'オンプレミス/月': '$233', '節約': '95%安い' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'スケール別ハードウェア要件',
+            items: [
+              '<strong>小規模チーム（5～20ユーザー）:</strong> 1× RTX 5090（32GB、$2,000）でLlama 3.1 8B対応。',
+              '<strong>本番環境（20～100ユーザー）:</strong> 2× RTX 5090（64GB、$4,000）でLlama 3.3 70B対応。',
+              '<strong>エンタープライズ（100+ユーザー）:</strong> 4× RTX 5090または2× A100 80GB（$8,000～$30,000）。',
+              '<strong>クラウド代替:</strong> Mac M5 Max（$3,499）は70Bを25～35 tok/s静かに実行。',
+              'ネットワーク、冷却、冗長電源もバジェット化してください。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'オンプレミス対クラウドAPI',
+            items: [
+              '<strong>プライバシー:</strong> ローカル=ネットワークを離れない対クラウド=サーバーに送信。',
+              '<strong>レイテンシー:</strong> 50～150ms（ローカル）対200～500ms（クラウド）初トークン。',
+              '<strong>モデル選択:</strong> あらゆるオープンモデル対GPT-5.xのみ、Claudeのみ。',
+              '<strong>レート制限:</strong> 制限なし（ハードウェア制約）対500～10,000 RPM。',
+              '<strong>コンプライアンス:</strong> 完全制御対クラウドプロバイダとの責任共有。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '産業とユースケース',
+            items: [
+              '<strong>医療:</strong> 医療NLP（ノート要約）、HIPAA準拠インフラ上。',
+              '<strong>金融:</strong> リスク評価、コンプライアンス分析、クラウド送信なし。',
+              '<strong>法務:</strong> 文書レビュー、契約分析、完全監査ログ付き。',
+              '<strong>製造:</strong> 予測保全、品質管理、オンプレミス。',
+              '<strong>政府:</strong> 機密文書処理、セキュアな施設内。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'アーキテクチャ：Kubernetes + vLLM',
+            items: [
+              '<strong>典型的スタック:</strong> vLLMポッド実行中のKubernetesクラスタ + RAG用Qdrant。',
+              '<strong>モデル:</strong> 2× RTX 5090上のテンサー並列処理によるLlama 3.3 70B。',
+              '<strong>スケーリング:</strong> localhost:8000上のvLLM OpenAI互換API。',
+              '<strong>データ:</strong> Retrieval-Augmented Generation用Qdrantベクトルデータベース。',
+              'マルチGPU展開（自動シャーディング）は20～100同時ユーザーに対応。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '一般的な展開ミス',
+            items: [
+              '<strong>インフラコストを過小評価。</strong> 5年間のハードウェアコストの3～5倍をバジェット化。',
+              '<strong>スケーリングを計画しない。</strong> 小さく始めて成長計画。単一GPUではスケールしません。',
+              '<strong>災害復旧を無視。</strong> バックアップハードウェアとデータレプリケーション必須。',
+              '<strong>セキュリティ体制が弱い。</strong> ネットワーク分離、暗号化、アクセス制御が重要。',
+              '<strong>古いモデルを使用。</strong> 新しいモデルが登場したら定期的に再トレーニング。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ：損益分岐点分析',
+            faqs: [
+              {
+                q: 'オンプレミスAIはいつクラウドより安くなりますか？',
+                a: '月2億トークン付近で損益分岐点。RTX 5090（$2,000）を36ヶ月で償却すると~$56/月ハードウェア。電気代（$50/月）と冷却（$27/月）を加えると合計$133/月。2億トークン以上なら1～2ヶ月で回収できます。'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ：コンプライアンス＆ハードウェア',
+            faqs: [
+              {
+                q: 'GDPRはローカルAIを要求しますか？',
+                a: 'GDPRはローカルAIを要求しませんが、個人データの適切な保護を要求します（第28条）。ドイツとフランスの規制対象セクターはますますオンプレミスAIを最も安全なコンプライアンス経路として義務付けています。'
+              },
+              {
+                q: 'どのハードウェアが必要ですか？',
+                a: '小規模チーム：1× RTX 5090（$2,000）。本番：2× RTX 5090（$4,000）。エンタープライズ：4× RTX 5090または2× A100（$8,000～$30,000）。Mac M5 Max（$3,499）は小規模チーム向けに70Bを25～35 tok/s実行。'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ：HIPAA＆監査ログ',
+            faqs: [
+              {
+                q: 'HIPAAに準拠するには？',
+                a: 'HIPAAは以下が必須：(1) AES-256暗号化、(2) すべてのクエリの監査ログ、(3) MFA付きロールベースアクセス制御、(4) ビジネスアソシエート契約（BAA）、(5) 物理的なサーバーセキュリティ。'
+              },
+              {
+                q: '監査ログを確保するには？',
+                a: 'すべてのクエリと応答をPostgreSQLまたはElasticsearchに記録します。タイムスタンプ、ユーザーID、モデル、トークン数を含めます。vLLMはネイティブにリクエスト記録をサポート。規制要件（金融は7年以上）に従い保持。'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ビジネス用ベストモデル（2026）',
+            items: [
+              '<strong>Llama 3.3 70B:</strong> MetaのLlama Community License——商用無料（700M未満ユーザー）。',
+              '<strong>Qwen2.5 72B:</strong> Alibaba、Apache 2.0。多言語対応、強い推論能力。',
+              '<strong>Mistral Small 3.1 24B:</strong> Mistral AI、Apache 2.0。高速、効率的、経済的。',
+              '<strong>小規模チーム用:</strong> Llama 3.1 8B、Qwen2.5 7B、Phi-4 Mini 3.8B。',
+              '本番展開前に必ずライセンスを確認してください。'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'プライベートローカルAIの準備はできていますか？',
+            body: 'プライベートなオンプレミスAIはクラウドコストを排除し、コンプライアンスを保証し、データ管理を維持します。RTX 5090 1台で始めて水平スケーリング。PromptQuorumで試して、カスタムモデルを構築・展開してください。',
+            cta: 'PromptQuorumで開始',
+            href: 'https://www.promptquorum.com?lang=ja'
+          }
+        ]
+      },
+      zh: {
+        title: '商业私有本地AI：无云端的本地部署',
+        slides: [
+          {
+            type: 'title',
+            h1: '商业私有本地AI',
+            subtitle: '无云端的本地部署。月2亿token时成本平衡点。',
+            link: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>隐私:</strong> 数据不离开您的基础设施。HIPAA、GDPR、金融服务必备。',
+              '<strong>成本:</strong> 无按token计费的API成本。一次性硬件投资（3000-50000美元），之后查询免费。',
+              '<strong>合规:</strong> 完整审计日志、数据驻留控制、无供应商锁定。',
+              '<strong>速度:</strong> 首token延迟50-150ms对云API的200-500ms。',
+              '月处理1亿+token的组织采用本地AI在经济上可行。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '隐私与合规优势',
+            items: [
+              '<strong>GDPR（欧盟）:</strong> 数据驻留在EU。EU基础设施确保合规。',
+              '<strong>HIPAA（医疗）:</strong> 患者数据保留在本地。需要AES-256加密。',
+              '<strong>SOC2（企业）:</strong> 审计日志、访问控制、事件响应。完全掌控。',
+              '<strong>无供应商锁定:</strong> 随时切换模型或框架。自由适配。',
+              '受管制行业（医疗、金融、政府）日益强制采用本地AI。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '成本对比：本地 vs 云端',
+            columns: ['数量', '云API/月', '本地/月', '节省'],
+            rows: [
+              { '数量': '1000万token/月', '云API/月': '$50', '本地/月': '$133', '节省': '云端更便宜' },
+              { '数量': '5000万token/月', '云API/月': '$250', '本地/月': '$133', '节省': '便宜47%' },
+              { '数量': '2亿token/月', '云API/月': '$1,000', '本地/月': '$133', '节省': '便宜87%' },
+              { '数量': '5亿token/月', '云API/月': '$2,500', '本地/月': '$183', '节省': '便宜93%' },
+              { '数量': '10亿token/月', '云API/月': '$5,000', '本地/月': '$233', '节省': '便宜95%' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '按规模的硬件需求',
+            items: [
+              '<strong>小团队（5-20用户）:</strong> 1× RTX 5090（32GB、$2,000）运行Llama 3.1 8B。',
+              '<strong>生产环境（20-100用户）:</strong> 2× RTX 5090（64GB、$4,000）运行Llama 3.3 70B。',
+              '<strong>企业级（100+用户）:</strong> 4× RTX 5090或2× A100 80GB（$8,000-$30,000）。',
+              '<strong>云端替代:</strong> Mac M5 Max（$3,499）静默运行70B，25-35 tok/秒。',
+              '也需要预算网络、冷却和冗余电源。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '本地部署 vs 云API',
+            items: [
+              '<strong>隐私:</strong> 本地=不离开网络 vs 云端=发送到服务器。',
+              '<strong>延迟:</strong> 50-150ms（本地）vs 200-500ms（云端）首token延迟。',
+              '<strong>模型选择:</strong> 任何开源模型 vs 仅GPT-5.x、Claude。',
+              '<strong>速率限制:</strong> 无限制（硬件制约）vs 500-10,000 RPM。',
+              '<strong>合规:</strong> 完全掌控 vs 与云提供商共享责任。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '行业与应用场景',
+            items: [
+              '<strong>医疗:</strong> 医学NLP（笔记摘要）基于HIPAA认证基础设施。',
+              '<strong>金融:</strong> 风险评估、合规分析，无云端数据传输。',
+              '<strong>法律:</strong> 文件审查、合同分析，完整审计日志。',
+              '<strong>制造:</strong> 预测维护、质量控制，本地保留。',
+              '<strong>政府:</strong> 机密文件处理，限制在安全设施内。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '架构：Kubernetes + vLLM',
+            items: [
+              '<strong>典型堆栈:</strong> 运行vLLM推理pod的Kubernetes集群 + RAG用Qdrant。',
+              '<strong>模型:</strong> 跨2× RTX 5090的张量并行Llama 3.3 70B。',
+              '<strong>扩展:</strong> localhost:8000上的vLLM OpenAI兼容API。',
+              '<strong>数据:</strong> 用于检索增强生成的Qdrant向量数据库。',
+              '带自动分片的多GPU部署可处理20-100并发用户。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '常见部署错误',
+            items: [
+              '<strong>低估基础设施成本。</strong> 5年内预算硬件成本的3-5倍。',
+              '<strong>未计划扩展。</strong> 小规模开始，规划增长。单个GPU无法扩展。',
+              '<strong>忽视灾难恢复。</strong> 需要备份硬件和数据复制。',
+              '<strong>安全措施不力。</strong> 网络隔离、加密、访问控制至关重要。',
+              '<strong>使用过时模型。</strong> 新模型推出时定期重新训练。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ：成本平衡点分析',
+            faqs: [
+              {
+                q: '本地AI何时比云API更便宜？',
+                a: '在月2亿token附近达到平衡点。RTX 5090（$2,000）在36个月内摊销约$56/月硬件。加上电力（$50/月）和冷却（$27/月）= 总计$133/月。月2亿+ token时，在1-2个月内收回成本。'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ：合规与硬件',
+            faqs: [
+              {
+                q: 'GDPR要求本地AI吗？',
+                a: 'GDPR不要求本地AI，但要求个人数据得到充分保护（第28条）。德国和法国的受管制部门日益将本地AI作为最安全的GDPR合规路径。'
+              },
+              {
+                q: '需要什么硬件？',
+                a: '小团队：1× RTX 5090（$2,000）。生产环境：2× RTX 5090（$4,000）。企业：4× RTX 5090或2× A100（$8,000-$30,000）。Mac M5 Max（$3,499）为小团队运行70B，25-35 tok/秒。'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ：HIPAA与审计日志',
+            faqs: [
+              {
+                q: '如何遵守HIPAA？',
+                a: 'HIPAA要求：(1) AES-256加密、(2) 所有查询的审计日志、(3) MFA的基于角色的访问控制、(4) 商业伙伴协议（BAA）、(5) 物理服务器安全。'
+              },
+              {
+                q: '如何确保审计日志？',
+                a: '将每条查询和响应记录到PostgreSQL或Elasticsearch。包括：时间戳、用户ID、模型、token计数。vLLM原生支持请求日志。根据监管要求（金融7年以上）保留。'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '最佳商业模型（2026）',
+            items: [
+              '<strong>Llama 3.3 70B:</strong> Meta Llama Community License — 商用免费（700M用户以下）。',
+              '<strong>Qwen2.5 72B:</strong> 阿里巴巴、Apache 2.0。多语言、强推理。',
+              '<strong>Mistral Small 3.1 24B:</strong> Mistral AI、Apache 2.0。快速、高效、经济。',
+              '<strong>小团队用:</strong> Llama 3.1 8B、Qwen2.5 7B、Phi-4 Mini 3.8B。',
+              '生产部署前始终验证许可证。'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '准备好采用私有本地AI？',
+            body: '私有本地AI消除云端成本、确保合规、保留数据掌控权。从RTX 5090开始水平扩展。尝试PromptQuorum构建并部署自定义模型。',
+            cta: '通过PromptQuorum开始',
+            href: 'https://www.promptquorum.com?lang=zh'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" style="position: absolute; top: 20px; height: 40px;" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 16px; opacity: 0.8;">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: white; text-decoration: underline;">Read full article on PromptQuorum</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ul style="margin-top: 16px;">';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table style="margin-top: 16px;"><tr>';
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col]}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div class="faq-item"><strong>Q: ${faq.q}</strong><p>A: ${faq.a}</p></div>`;
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="font-size: 18px; margin: 24px 0; line-height: 1.6;">${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; padding: 12px 32px; background: white; color: #6750a4; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 16px;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    let lang = params.get('lang') || 'en';
+    if (!CONTENT[lang]) lang = 'en';
+
+    const content = CONTENT[lang];
+
+    // Update header
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += `?lang=${lang}`;
+
+    // Render all slides
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    // Initialize navigation
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    // Print handlers
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Custom Local LLMs 2026 | PromptQuorum</title>
+  <meta name="description" content="Fine-tune local LLMs with LoRA on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Learn fine-tuning vs pre-training tradeoffs and Ollama deployment." />
+  <meta property="og:title" content="Create Custom Local LLMs 2026 — PromptQuorum" />
+  <meta property="og:description" content="Fine-tune 7B models with LoRA or pre-train from scratch. Decision matrix, Unsloth setup, and Ollama deployment guide." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/local-llms/create-custom-local-models" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; }
+    body { background: #f5f5f5; padding: 16px; }
+    .presentation-container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; min-height: 100vh; }
+    .header { background: #f5f5f5; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0e0e0; }
+    .header-left { display: flex; gap: 12px; align-items: center; }
+    .header-left img { height: 32px; }
+    .header-left span { font-weight: 600; font-size: 14px; color: #333; }
+    .header-links { display: flex; gap: 16px; font-size: 12px; }
+    .header-links a { color: #6750a4; text-decoration: none; }
+    .header-links a:hover { text-decoration: underline; }
+    .content-area { flex: 1; position: relative; min-height: 500px; }
+    .slide { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 48px 64px; font-size: 16px; line-height: 1.6; overflow: hidden; }
+    .slide.active { display: flex; flex-direction: column; justify-content: center; }
+    .slide.title { background: linear-gradient(135deg, #6750a4 0%, #79747e 100%); color: white; text-align: center; }
+    .slide h1 { font-size: clamp(36px, 5vw, 52px); margin-bottom: 20px; font-weight: 700; }
+    .slide h2 { font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 24px; color: #6750a4; }
+    .slide p { font-size: clamp(16px, 2vw, 20px); margin-bottom: 12px; }
+    .slide.title p { font-size: clamp(14px, 1.8vw, 18px); margin-bottom: 8px; }
+    .slide ul { margin-left: 32px; margin-top: 16px; }
+    .slide li { margin-bottom: 12px; }
+    .slide ol { margin-left: 32px; margin-top: 16px; }
+    .slide ol li { margin-bottom: 10px; }
+    .slide table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: clamp(13px, 1.5vw, 16px); }
+    .slide th { background: #f0f0f0; padding: 10px; text-align: left; font-weight: 600; border-bottom: 2px solid #6750a4; }
+    .slide td { padding: 10px; border-bottom: 1px solid #e0e0e0; }
+    .slide.comparison { text-align: center; }
+    .slide.comparison p { font-size: clamp(18px, 2.5vw, 28px); margin-top: 30px; }
+    .slide.cta { text-align: center; }
+    .slide.cta a { display: inline-block; margin-top: 20px; padding: 14px 32px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; }
+    .slide.cta a:hover { background: #5a42a1; }
+    .controls { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; border-top: 1px solid #e0e0e0; background: #f5f5f5; }
+    .controls button { padding: 8px 16px; background: #6750a4; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600; }
+    .controls button:disabled { background: #ccc; cursor: not-allowed; }
+    .controls button:hover:not(:disabled) { background: #5a42a1; }
+    .slide-counter { font-size: 14px; color: #666; font-weight: 500; }
+    .logo { height: 40px; margin-bottom: 20px; }
+    .footer-link { position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999; }
+    .footer-link a { color: #999; text-decoration: none; border-bottom: 1px solid #ddd; }
+    .footer-link a:hover { color: #6750a4; border-bottom: 1px solid #6750a4; }
+    @page { size: A4; margin: 0; }
+    @media print { .header, .controls { display: none; } .slide { display: flex !important; page-break-after: always; position: relative; width: 100%; height: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Create Custom Local LLMs 2026</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/create-custom-local-models" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Create Custom Local LLMs 2026: Fine-Tuning vs Pre-Training with Unsloth and Ollama',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Create Custom Local LLMs 2026',
+            subtitle: 'Fine-Tuning vs Pre-Training with Unsloth and Ollama',
+            link: 'https://www.promptquorum.com/local-llms/create-custom-local-models'
+          },
+          {
+            type: 'list',
+            h2: 'Fine-Tuning: The Practical Path',
+            intro: 'Adapt existing models to your domain in hours, not weeks.',
+            items: [
+              '<strong>8 GB VRAM:</strong> Works on consumer GPUs and laptops',
+              '<strong>500–5,000 examples:</strong> Domain-specific training data',
+              '<strong>1–4 hours:</strong> Training time on a single GPU',
+              '<strong>$100–500:</strong> Total hardware + electricity cost'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'LoRA: The Game-Changer',
+            intro: 'Low-Rank Adaptation makes fine-tuning 4× faster.',
+            items: [
+              '<strong>Fewer parameters:</strong> Update only 1–2% of weights',
+              '<strong>80–90% less VRAM:</strong> Fit on cheaper hardware',
+              '<strong>4× faster training:</strong> Unsloth optimizations',
+              '<strong>99% of quality:</strong> Minimal accuracy loss vs full fine-tuning'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Fine-Tuning vs Pre-Training: The Cost Gap',
+            line1: '⏱ Fine-tuning: 1–4 hours | Pre-training: Weeks–months',
+            line2: '💰 Fine-tuning: $100–500 | Pre-training: $50K–500K',
+            tip: '99% of organizations should fine-tune first. Pre-training is justified only if you have 10B+ unique tokens of proprietary data and fine-tuning consistently fails.'
+          },
+          {
+            type: 'table',
+            h2: 'Decision Matrix: What Path to Choose?',
+            columns: ['Your Situation', 'Recommendation', 'Cost', 'Time'],
+            rows: [
+              { 'Your Situation': 'Need domain expertise on a budget', 'Recommendation': 'Fine-tune Llama 3.1 8B with LoRA', 'Cost': '$100–500', 'Time': '1–4 hours' },
+              { 'Your Situation': '10M+ tokens of proprietary data', 'Recommendation': 'Continued pre-training on domain data', 'Cost': '$5K–50K', 'Time': '2–4 weeks' },
+              { 'Your Situation': '100B+ tokens of unique data', 'Recommendation': 'Full pre-training (rare)', 'Cost': '$50K–500K', 'Time': '4–12 weeks' },
+              { 'Your Situation': 'Just need good responses fast', 'Recommendation': 'Use prompt engineering + RAG', 'Cost': '$0–100', 'Time': 'Hours' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'The 7-Step Fine-Tuning Path',
+            intro: 'Everything from data prep to deployment.',
+            items: [
+              '1. Collect 500–5,000 domain-specific examples (input + expected output)',
+              '2. Choose a base model (Llama 3.1 8B or Qwen2.5 7B recommended)',
+              '3. Set up Unsloth: lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM',
+              '4. Train on your GPU (RTX 4070 Ti: ~2–3 hours)',
+              '5. Evaluate on a held-out test set (accuracy, F1, custom metrics)',
+              '6. Merge LoRA adapter into base model (model.merge_and_unload())',
+              '7. Deploy to production (Ollama, LM Studio, or vLLM)'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Deploy to Ollama in 3 Steps',
+            intro: 'Make your fine-tuned model production-ready.',
+            items: [
+              '<strong>Step 1:</strong> Convert to GGUF format using llama.cpp (required for Ollama)',
+              '<strong>Step 2:</strong> Create Modelfile with your system prompt and parameters',
+              '<strong>Step 3:</strong> Register with Ollama (ollama create my-model -f Modelfile)',
+              'Result: OpenAI-compatible API at localhost:11434'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'When to Consider Pre-Training',
+            intro: 'Only if ALL four conditions are met.',
+            items: [
+              '<strong>Condition 1:</strong> You have 10B+ tokens of proprietary, domain-specific data',
+              '<strong>Condition 2:</strong> Fine-tuning consistently fails to reach your accuracy target (gap >10%)',
+              '<strong>Condition 3:</strong> Budget is $50K+ (realistic cost for enterprise compute)',
+              '<strong>Condition 4:</strong> You need a proprietary model for competitive advantage'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Domain Adaptation Without Full Pre-Training',
+            intro: 'Five strategies to improve on your domain.',
+            items: [
+              '<strong>Continued pre-training:</strong> Train base model on 10B+ tokens of domain data (cheaper than full pre-training)',
+              '<strong>LoRA fine-tuning:</strong> Most practical, 500+ examples, hours to train',
+              '<strong>Prompt engineering:</strong> Free but limited — works best with fine-tuning',
+              '<strong>RAG:</strong> Retrieve documents, provide context — no retraining needed',
+              '<strong>Ensemble:</strong> Combine multiple models for better decisions'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Evaluate Your Custom Model',
+            intro: 'Three dimensions of success.',
+            items: [
+              '<strong>Task-specific metrics:</strong> Accuracy, F1 score, BLEU (for generation), or domain-specific KPIs',
+              '<strong>Benchmark tests:</strong> Run on MMLU, HumanEval, or your own evaluation set vs base model',
+              '<strong>Business metrics:</strong> Does the model actually improve your real-world outcomes?',
+              'Production-ready = 5–10% improvement over base model on your task'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'The 5 Most Common Mistakes',
+            items: [
+              '<strong>Pre-training without data:</strong> <10B tokens = wasted compute. Fine-tune instead.',
+              '<strong>Evaluating only on training loss:</strong> Test on unseen data or you\'ll be fooled.',
+              '<strong>Expecting to match GPT-4o:</strong> 20–30% gap remains between open models and frontier models.',
+              '<strong>Ignoring inference costs:</strong> Larger models = higher per-token costs. Consider the tradeoff.',
+              '<strong>Skipping GGUF conversion:</strong> PyTorch models won\'t run in Ollama. Always convert to GGUF and quantize.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Quick FAQ',
+            faqs: [
+              {
+                q: 'How much data do I need?',
+                a: 'Minimum 500–1,000 examples for a usable model. 5,000+ for production quality. Data quality matters more than quantity.'
+              },
+              {
+                q: 'Can I fine-tune with limited VRAM?',
+                a: 'Yes. LoRA requires 80–90% less VRAM than full fine-tuning. 8 GB is sufficient for most 7B models.'
+              },
+              {
+                q: 'What framework should I use?',
+                a: 'Unsloth (fastest), Axolotl (flexible), or Hugging Face Transformers (official). All support LoRA and Ollama.'
+              },
+              {
+                q: 'How do I know if my model is production-ready?',
+                a: 'Test on 3 dimensions: task-specific metrics, benchmark comparison, and real business outcomes. 5–10% improvement = ready.'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'How PromptQuorum Helps',
+            intro: 'Multi-model consensus for better custom LLMs.',
+            items: [
+              '<strong>Test your fine-tuned model:</strong> Query it alongside GPT-4o and Claude 4.6 for quality assurance',
+              '<strong>Consensus scoring:</strong> PromptQuorum ranks responses from your model + cloud APIs',
+              '<strong>Evaluation at scale:</strong> Test domain-specific prompts across all models simultaneously',
+              '<strong>Cost optimization:</strong> Route simple queries to your fine-tuned model, complex ones to cloud APIs'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Ready to Build Your Custom LLM?',
+            body: 'Use PromptQuorum to evaluate your fine-tuned model against GPT-4o, Claude, and other local models. Get multi-model consensus scoring and cost analytics in one platform.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Benutzerdefinierte lokale LLMs 2026 erstellen: Fine-Tuning vs Pre-Training mit Unsloth und Ollama',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Benutzerdefinierte lokale LLMs 2026',
+            subtitle: 'Fine-Tuning vs Pre-Training mit Unsloth und Ollama',
+            link: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=de'
+          },
+          { type: 'list', h2: 'Fine-Tuning: Der praktische Weg', intro: 'Passen Sie bestehende Modelle in Stunden an.', items: ['<strong>8 GB VRAM:</strong> Funktioniert auf Consumer-GPUs', '<strong>500–5.000 Beispiele:</strong> Domänenspezifische Trainingsdaten', '<strong>1–4 Stunden:</strong> Trainingszeit auf einer GPU', '<strong>100–500 €:</strong> Gesamtkosten'] },
+          { type: 'list', h2: 'LoRA: Das Spiel ändern', intro: 'Low-Rank Adaptation macht Fine-Tuning 4× schneller.', items: ['<strong>Weniger Parameter:</strong> Aktualisiere nur 1–2% der Gewichte', '<strong>80–90% weniger VRAM:</strong> Passt auf günstigere Hardware', '<strong>4× schneller trainieren:</strong> Unsloth-Optimierungen', '<strong>99% Qualität:</strong> Minimaler Genauigkeitsverlust'] },
+          { type: 'comparison', h2: 'Fine-Tuning vs Pre-Training: Die Kostenlücke', line1: '⏱ Fine-Tuning: 1–4 Stunden | Pre-Training: Wochen–Monate', line2: '💰 Fine-Tuning: 100–500 € | Pre-Training: 50K–500K €', tip: '99% der Organisationen sollten zuerst Fine-Tuning verwenden. Pre-Training ist nur gerechtfertigt, wenn Sie 10B+ Token propriet ärer Daten haben.' },
+          { type: 'table', h2: 'Entscheidungsmatrix', columns: ['Situation', 'Empfehlung', 'Kosten', 'Zeit'], rows: [{ 'Situation': 'Domänenwissen mit kleinerem Budget', 'Empfehlung': 'Fine-Tune Llama 3.1 8B mit LoRA', 'Kosten': '100–500 €', 'Zeit': '1–4 h' }, { 'Situation': '10M+ propriet äre Token', 'Empfehlung': 'Continued Pre-Training', 'Kosten': '5K–50K €', 'Zeit': '2–4 Wochen' }, { 'Situation': '100B+ einzigartige Token', 'Empfehlung': 'Vollständiges Pre-Training (selten)', 'Kosten': '50K–500K €', 'Zeit': '4–12 Wochen' }] },
+          { type: 'numbered', h2: 'Der 7-Schritte Fine-Tuning Weg', intro: 'Von der Datenvorbereitung bis zur Bereitstellung.', items: ['1. Sammeln Sie 500–5.000 Beispiele', '2. Wählen Sie ein Basis-Modell (Llama 3.1 8B empfohlen)', '3. Unsloth einrichten (lora_r=16, 3 Epochen)', '4. Trainieren Sie auf Ihrer GPU (2–3 Stunden)', '5. Bewerten Sie auf Test-Set (Genauigkeit, F1)', '6. Zusammenführen Sie LoRA-Adapter', '7. Bereitstellen auf Ollama oder LM Studio'] },
+          { type: 'numbered', h2: 'In 3 Schritten auf Ollama bereitstellen', intro: 'Machen Sie Ihr Fine-Tuned-Modell produktionsreif.', items: ['<strong>Schritt 1:</strong> In GGUF-Format konvertieren (erforderlich für Ollama)', '<strong>Schritt 2:</strong> Modelldatei mit System-Prompt erstellen', '<strong>Schritt 3:</strong> Bei Ollama registrieren', 'Ergebnis: OpenAI-kompatible API auf localhost:11434'] },
+          { type: 'list', h2: 'Wann Pre-Training in Betracht ziehen', intro: 'Nur wenn ALLE vier Bedingungen erfüllt sind.', items: ['<strong>Bedingung 1:</strong> Sie haben 10B+ propriet äre Token', '<strong>Bedingung 2:</strong> Fine-Tuning kann 10%+ Lücke nicht schließen', '<strong>Bedingung 3:</strong> Budget ist 50K+ €', '<strong>Bedingung 4:</strong> Sie brauchen ein propriet äres Modell'] },
+          { type: 'list', h2: 'Domänenenanpassung', intro: 'Fünf Strategien ohne vollständiges Pre-Training.', items: ['<strong>Continued Pre-Training:</strong> Train on 10B+ domain tokens', '<strong>LoRA Fine-Tuning:</strong> 500+ examples, hours to train', '<strong>Prompt Engineering:</strong> Free but limited', '<strong>RAG:</strong> Retrieve documents for context', '<strong>Ensemble:</strong> Kombinieren Sie mehrere Modelle'] },
+          { type: 'list', h2: 'Bewerten Sie Ihr Custom-Modell', intro: 'Drei Erfolgsdimensionen.', items: ['<strong>Aufgabenspezifische Metriken:</strong> Genauigkeit, F1-Wert, BLEU', '<strong>Benchmark-Tests:</strong> MMLU vs Base-Modell', '<strong>Geschäftsmetriken:</strong> Verbessert es echte Ergebnisse?', 'Produktionsreife = 5–10% Verbesserung gegenüber Base-Modell'] },
+          { type: 'numbered', h2: 'Die 5 häufigsten Fehler', items: ['<strong>Pre-Training ohne Daten:</strong> <10B Token = verschwendetes Compute', '<strong>Nur Training Loss evaluieren:</strong> Test auf unsichtbaren Daten', '<strong>GPT-4o-Qualität erwarten:</strong> 20–30% Lücke bleibt bestehen', '<strong>Inferenzkosten ignorieren:</strong> Größere Modelle = höhere Kosten', '<strong>GGUF-Konvertierung überspringen:</strong> PyTorch läuft nicht in Ollama'] },
+          { type: 'faq', h2: 'Häufig gestellte Fragen', faqs: [{ q: 'Wie viele Daten brauche ich?', a: 'Mindestens 500–1.000 Beispiele. 5.000+ für Produktionsqualität. Datenqualität ist wichtiger als Menge.' }, { q: 'Kann ich mit limitiertem VRAM fine-tunen?', a: 'Ja. LoRA benötigt 80–90% weniger VRAM. 8 GB reicht für 7B-Modelle.' }, { q: 'Welches Framework sollte ich nutzen?', a: 'Unsloth (schnell), Axolotl (flexibel) oder Hugging Face. Alle unterstützen LoRA und Ollama.' }] },
+          { type: 'list', h2: 'Wie PromptQuorum hilft', intro: 'Multi-Modell-Konsens für bessere Custom LLMs.', items: ['<strong>Testen Sie Ihr Modell:</strong> Abfragen Sie es neben GPT-4o und Claude 4.6', '<strong>Konsens-Scoring:</strong> PromptQuorum bewertet Antworten von allen Modellen', '<strong>Bewertung im großen Maßstab:</strong> Testen Sie domänenspezifische Prompts', '<strong>Kostenoptimierung:</strong> Route einfache Anfragen zu Ihrem Modell'] },
+          { type: 'cta', h2: 'Bereit, Ihr Custom LLM zu bauen?', body: 'Nutzen Sie PromptQuorum für Multi-Modell-Evaluierung und Kostenanalyse.', cta: 'PromptQuorum kostenlos testen', href: 'https://www.promptquorum.com' }
+        ]
+      },
+      fr: {
+        title: 'Créer des LLMs locaux personnalisés 2026 : Fine-Tuning vs Pré-entraînement avec Unsloth et Ollama',
+        slides: [
+          { type: 'title', h1: 'Créer des LLMs locaux 2026', subtitle: 'Fine-Tuning vs Pré-entraînement avec Unsloth et Ollama', link: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=fr' },
+          { type: 'list', h2: 'Fine-Tuning : Le chemin pratique', intro: 'Adaptez les modèles existants à votre domaine en heures.', items: ['<strong>8 Go VRAM :</strong> Fonctionne sur GPU grand public', '<strong>500–5 000 exemples :</strong> Données d\'entraînement spécifiques au domaine', '<strong>1–4 heures :</strong> Temps d\'entraînement sur une GPU', '<strong>100–500 € :</strong> Coût total'] },
+          { type: 'list', h2: 'LoRA : Le changement de jeu', intro: 'Low-Rank Adaptation rend le fine-tuning 4× plus rapide.', items: ['<strong>Moins de paramètres :</strong> Mettez à jour seulement 1–2% des poids', '<strong>80–90% moins de VRAM :</strong> Adapté au matériel moins cher', '<strong>4× plus rapide :</strong> Optimisations Unsloth', '<strong>99% de qualité :</strong> Perte de précision minimale'] },
+          { type: 'comparison', h2: 'Fine-Tuning vs Pré-entraînement : L\'écart des coûts', line1: '⏱ Fine-Tuning : 1–4 heures | Pré-entraînement : Semaines–mois', line2: '💰 Fine-Tuning : 100–500 € | Pré-entraînement : 50K–500K €', tip: '99% des organisations devraient d\'abord faire du fine-tuning. Le pré-entraînement n\'est justifié que si vous disposez de 10B+ tokens de données propriétaires.' },
+          { type: 'table', h2: 'Matrice de décision', columns: ['Votre situation', 'Recommandation', 'Coût', 'Temps'], rows: [{ 'Votre situation': 'Expertise dans le domaine avec budget limité', 'Recommandation': 'Fine-Tune Llama 3.1 8B avec LoRA', 'Coût': '100–500 €', 'Temps': '1–4 h' }, { 'Votre situation': '10M+ tokens propriétaires', 'Recommandation': 'Pré-entraînement continu', 'Coût': '5K–50K €', 'Temps': '2–4 semaines' }, { 'Votre situation': '100B+ tokens uniques', 'Recommandation': 'Pré-entraînement complet (rare)', 'Coût': '50K–500K €', 'Temps': '4–12 semaines' }] },
+          { type: 'numbered', h2: 'Le chemin du Fine-Tuning en 7 étapes', intro: 'De la préparation des données au déploiement.', items: ['1. Collectez 500–5 000 exemples spécifiques au domaine', '2. Choisissez un modèle de base (Llama 3.1 8B recommandé)', '3. Configurez Unsloth (lora_r=16, 3 epochs)', '4. Entraînez sur votre GPU (2–3 heures)', '5. Évaluez sur l\'ensemble de test (précision, F1)', '6. Fusionnez l\'adaptateur LoRA', '7. Déployez sur Ollama ou LM Studio'] },
+          { type: 'numbered', h2: 'Déployer sur Ollama en 3 étapes', intro: 'Rendez votre modèle fine-tuné prêt pour la production.', items: ['<strong>Étape 1 :</strong> Convertir au format GGUF (requis pour Ollama)', '<strong>Étape 2 :</strong> Créer Modelfile avec votre prompt système', '<strong>Étape 3 :</strong> Enregistrer avec Ollama', 'Résultat : API compatible OpenAI sur localhost:11434'] },
+          { type: 'list', h2: 'Quand envisager le pré-entraînement', intro: 'Seulement si les 4 conditions sont remplies.', items: ['<strong>Condition 1 :</strong> Vous disposez de 10B+ tokens propriétaires', '<strong>Condition 2 :</strong> Le fine-tuning ne ferme pas l\'écart (>10%)', '<strong>Condition 3 :</strong> Budget est 50K+ €', '<strong>Condition 4 :</strong> Vous avez besoin d\'un modèle propriétaire'] },
+          { type: 'list', h2: 'Adaptation au domaine', intro: 'Cinq stratégies sans pré-entraînement complet.', items: ['<strong>Pré-entraînement continu :</strong> Entraînez sur 10B+ tokens de domaine', '<strong>Fine-Tuning LoRA :</strong> 500+ exemples, heures d\'entraînement', '<strong>Prompt Engineering :</strong> Gratuit mais limité', '<strong>RAG :</strong> Récupérez des documents pour le contexte', '<strong>Ensemble :</strong> Combinez plusieurs modèles'] },
+          { type: 'list', h2: 'Évaluez votre modèle personnalisé', intro: 'Trois dimensions de succès.', items: ['<strong>Métriques spécifiques aux tâches :</strong> Précision, score F1, BLEU', '<strong>Tests de benchmark :</strong> MMLU vs modèle de base', '<strong>Métriques commerciales :</strong> Améliore-t-il les résultats réels ?', 'Prêt pour la production = amélioration de 5–10%'] },
+          { type: 'numbered', h2: 'Les 5 erreurs les plus courantes', items: ['<strong>Pré-entraînement sans données :</strong> <10B tokens = compute gaspillé', '<strong>Évaluer uniquement la perte d\'entraînement :</strong> Testez sur des données invisibles', '<strong>S\'attendre à la qualité de GPT-4o :</strong> 20–30% écart reste', '<strong>Ignorer les coûts d\'inférence :</strong> Modèles plus grands = coûts plus élevés', '<strong>Ignorer la conversion GGUF :</strong> PyTorch ne s\'exécute pas dans Ollama'] },
+          { type: 'faq', h2: 'FAQ rapide', faqs: [{ q: 'Combien de données ai-je besoin ?', a: 'Minimum 500–1 000 exemples. 5 000+ pour la qualité production. La qualité importe plus que la quantité.' }, { q: 'Puis-je faire du fine-tuning avec un VRAM limité ?', a: 'Oui. LoRA nécessite 80–90% moins de VRAM. 8 Go suffisent pour les modèles 7B.' }, { q: 'Quel framework devrais-je utiliser ?', a: 'Unsloth (rapide), Axolotl (flexible) ou Hugging Face. Tous supportent LoRA et Ollama.' }] },
+          { type: 'list', h2: 'Comment PromptQuorum aide', intro: 'Consensus multi-modèle pour de meilleurs LLMs personnalisés.', items: ['<strong>Testez votre modèle :</strong> Interrogez-le aux côtés de GPT-4o et Claude 4.6', '<strong>Scoring consensus :</strong> PromptQuorum évalue les réponses de tous les modèles', '<strong>Évaluation à grande échelle :</strong> Testez des prompts spécifiques au domaine', '<strong>Optimisation des coûts :</strong> Routez les requêtes simples vers votre modèle'] },
+          { type: 'cta', h2: 'Prêt à construire votre LLM personnalisé ?', body: 'Utilisez PromptQuorum pour l\'évaluation multi-modèle et l\'analyse des coûts.', cta: 'Essayer PromptQuorum gratuitement', href: 'https://www.promptquorum.com' }
+        ]
+      },
+      ja: {
+        title: 'カスタムローカルLLM作成2026：UnslothとOllamaでのファインチューニング対事前学習',
+        slides: [
+          { type: 'title', h1: 'カスタムローカルLLM 2026を作成', subtitle: 'UnslothとOllamaを使用したファインチューニング対事前学習', link: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=ja' },
+          { type: 'list', h2: 'ファインチューニング：実用的なパス', intro: '数時間で既存モデルをドメインに適応させます。', items: ['<strong>8 GB VRAM：</strong> コンシューマーGPUで動作', '<strong>500～5,000例：</strong> ドメイン固有のトレーニングデータ', '<strong>1～4時間：</strong> 単一GPUのトレーニング時間', '<strong>$100～500：</strong> 総コスト'] },
+          { type: 'list', h2: 'LoRA：ゲームチェンジャー', intro: 'LoRAがファインチューニングを4倍高速化します。', items: ['<strong>パラメータが少ない：</strong> 重みの1～2%のみ更新', '<strong>80～90% VRAMが少ない：</strong> 廉価なハードウェアに対応', '<strong>4倍高速：</strong> Unsloth最適化', '<strong>99%の品質：</strong> 精度低下を最小化'] },
+          { type: 'comparison', h2: 'ファインチューニング対事前学習：コストギャップ', line1: '⏱ ファインチューニング：1～4時間 | 事前学習：数週間～数ヶ月', line2: '💰 ファインチューニング：$100～500 | 事前学習：$50K～500K', tip: '99%の組織は最初にファインチューニングを実施すべきです。事前学習は10B+の専有データがある場合のみ正当化されます。' },
+          { type: 'table', h2: '判断マトリックス', columns: ['状況', '推奨', 'コスト', '時間'], rows: [{ '状況': '予算内でドメイン専門知識が必要', '推奨': 'LoRAでLlama 3.1 8Bをファインチューニング', 'コスト': '$100～500', '時間': '1～4時間' }, { '状況': '10M+の専有トークン', '推奨': '継続事前学習', 'コスト': '$5K～50K', '時間': '2～4週間' }, { '状況': '100B+ユニークトークン', '推奨': '完全事前学習（稀）', 'コスト': '$50K～500K', '時間': '4～12週間' }] },
+          { type: 'numbered', h2: '7ステップのファインチューニングパス', intro: 'データ準備からデプロイメントまで。', items: ['1. 500～5,000個のドメイン固有例を収集', '2. ベースモデルを選択（Llama 3.1 8B推奨）', '3. Unslothをセットアップ（lora_r=16、3エポック）', '4. GPUでトレーニング（2～3時間）', '5. テストセットで評価（精度、F1）', '6. LoRAアダプターをマージ', '7. OllamaまたはLM Studioにデプロイ'] },
+          { type: 'numbered', h2: '3ステップでOllamaにデプロイ', intro: 'ファインチューニングモデルを本番環境対応にします。', items: ['<strong>ステップ1：</strong> GGUFフォーマットに変換（Ollama必須）', '<strong>ステップ2：</strong> システムプロンプト付きModelfileを作成', '<strong>ステップ3：</strong> Ollamaに登録', 'グローバル： localhost:11434のOpenAI互換API'] },
+          { type: 'list', h2: '事前学習を検討する時期', intro: '4つの条件がすべて満たされた場合のみ。', items: ['<strong>条件1：</strong> 10B+の専有トークンがある', '<strong>条件2：</strong> ファインチューニングが10%以上のギャップを閉じることができない', '<strong>条件3：</strong> 予算が$50K+である', '<strong>条件4：</strong> 競争上の優位性のために専有モデルが必要'] },
+          { type: 'list', h2: 'ドメイン適応', intro: '完全な事前学習なしで5つの戦略。', items: ['<strong>継続事前学習：</strong> 10B+ドメイントークンでトレーニング', '<strong>LoRAファインチューニング：</strong> 500+例、数時間', '<strong>プロンプトエンジニアリング：</strong> 無料だが制限あり', '<strong>RAG：</strong> コンテキスト提供用ドキュメント取得', '<strong>アンサンブル：</strong> 複数モデルを結合'] },
+          { type: 'list', h2: 'カスタムモデルを評価', intro: '成功の3つの次元。', items: ['<strong>タスク固有メトリクス：</strong> 精度、F1スコア、BLEU', '<strong>ベンチマークテスト：</strong> ベースモデル対MMU', '<strong>ビジネスメトリクス：</strong> 実際の結果を改善しますか？', '本番環境対応 = 5～10%の改善'] },
+          { type: 'numbered', h2: 'よくある5つの間違い', items: ['<strong>データなしの事前学習：</strong> <10Bトークン=無駄な計算', '<strong>トレーニング損失のみを評価：</strong> 見たことのないデータでテスト', '<strong>GPT-4oの品質を期待：</strong> 20～30%のギャップが残ります', '<strong>推論コストを無視：</strong> 大きいモデル=高いコスト', '<strong>GGUF変換をスキップ：</strong> PyTorchはOllamaで実行されません'] },
+          { type: 'faq', h2: 'よくある質問', faqs: [{ q: 'どのくらいのデータが必要ですか？', a: '最低500～1,000例。本番品質には5,000+。品質が量より重要。' }, { q: 'VRAMが限定的な場合でもファインチューニングできますか？', a: 'はい。LoRAは80～90%少ないVRAMで済みます。8 GBで7Bモデルに十分。' }, { q: 'どのフレームワークを使用すべきですか？', a: 'Unsloth（高速）、Axolotl（柔軟）またはHugging Face。すべてLoRAとOllamaをサポート。' }] },
+          { type: 'list', h2: 'PromptQuorumでの支援方法', intro: 'より良いカスタムLLMのマルチモデルコンセンサス。', items: ['<strong>モデルをテスト：</strong> GPT-4oおよびClaude 4.6と並べて照会', '<strong>コンセンサススコアリング：</strong> すべてのモデルからの応答を評価', '<strong>スケール評価：</strong> ドメイン固有プロンプトをテスト', '<strong>コスト最適化：</strong> 単純なクエリを自分のモデルにルーティング'] },
+          { type: 'cta', h2: 'カスタムLLMを構築する準備はできていますか？', body: 'PromptQuorumを使用してマルチモデル評価とコスト分析を実施します。', cta: 'PromptQuorum無料トライアル', href: 'https://www.promptquorum.com' }
+        ]
+      },
+      zh: {
+        title: '创建自定义本地LLM 2026：使用Unsloth和Ollama进行微调对预训练',
+        slides: [
+          { type: 'title', h1: '创建自定义本地LLM 2026', subtitle: '使用Unsloth和Ollama的微调对预训练', link: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=zh' },
+          { type: 'list', h2: '微调：实用路径', intro: '在几小时内将现有模型适应您的领域。', items: ['<strong>8 GB显存：</strong> 在消费级GPU上工作', '<strong>500–5,000例：</strong> 特定于领域的训练数据', '<strong>1–4小时：</strong> 单个GPU的训练时间', '<strong>¥700–3500：</strong> 总成本'] },
+          { type: 'list', h2: 'LoRA：游戏规则改变者', intro: 'LoRA将微调速度提高4倍。', items: ['<strong>参数更少：</strong> 仅更新1–2%的权重', '<strong>80–90% VRAM更少：</strong> 适应廉价硬件', '<strong>4倍更快：</strong> Unsloth优化', '<strong>99%质量：</strong> 最小精度损失'] },
+          { type: 'comparison', h2: '微调对预训练：成本差距', line1: '⏱ 微调：1–4小时 | 预训练：数周–数月', line2: '💰 微调：¥700–3500 | 预训练：¥35万–350万', tip: '99%的组织应该先进行微调。只有在拥有10B+专有数据令牌时，预训练才是正当的。' },
+          { type: 'table', h2: '决策矩阵', columns: ['情况', '建议', '成本', '时间'], rows: [{ '情况': '预算内需要领域专业知识', '建议': '使用LoRA微调Llama 3.1 8B', '成本': '¥700–3500', '时间': '1–4小时' }, { '情况': '10M+专有令牌', '建议': '继续预训练', '成本': '¥3.5万–35万', '时间': '2–4周' }, { '情况': '100B+唯一令牌', '建议': '完整预训练（罕见）', '成本': '¥35万–350万', '时间': '4–12周' }] },
+          { type: 'numbered', h2: '7步微调路径', intro: '从数据准备到部署。', items: ['1. 收集500–5,000个特定于领域的示例', '2. 选择基础模型（推荐Llama 3.1 8B）', '3. 设置Unsloth（lora_r=16、3个时期）', '4. 在GPU上训练（2–3小时）', '5. 在测试集上评估（精度、F1）', '6. 合并LoRA适配器', '7. 部署到Ollama或LM Studio'] },
+          { type: 'numbered', h2: '3步部署到Ollama', intro: '使您的微调模型生产就绪。', items: ['<strong>步骤1：</strong> 转换为GGUF格式（Ollama必需）', '<strong>步骤2：</strong> 使用系统提示创建Modelfile', '<strong>步骤3：</strong> 向Ollama注册', '结果：localhost:11434的OpenAI兼容API'] },
+          { type: 'list', h2: '何时考虑预训练', intro: '仅在满足4个条件时。', items: ['<strong>条件1：</strong> 您拥有10B+专有令牌', '<strong>条件2：</strong> 微调无法弥补10%以上的差距', '<strong>条件3：</strong> 预算为¥35万+', '<strong>条件4：</strong> 您需要专有模型获得竞争优势'] },
+          { type: 'list', h2: '域适应', intro: '5种不完整预训练的策略。', items: ['<strong>继续预训练：</strong> 在10B+领域令牌上训练', '<strong>LoRA微调：</strong> 500+示例，数小时', '<strong>提示工程：</strong> 免费但有限制', '<strong>RAG：</strong> 检索文档以获取上下文', '<strong>集成：</strong> 结合多个模型'] },
+          { type: 'list', h2: '评估您的自定义模型', intro: '成功的3个维度。', items: ['<strong>特定于任务的指标：</strong> 精度、F1分数、BLEU', '<strong>基准测试：</strong> MMLU对基础模型', '<strong>业务指标：</strong> 改善实际结果吗？', '生产就绪 = 相比基础模型改进5–10%'] },
+          { type: 'numbered', h2: '5个最常见的错误', items: ['<strong>无数据预训练：</strong> <10B令牌=浪费计算', '<strong>仅评估训练损失：</strong> 在看不见的数据上测试', '<strong>期望GPT-4o质量：</strong> 20–30%差距仍然存在', '<strong>忽视推理成本：</strong> 更大的模型=更高的成本', '<strong>跳过GGUF转换：</strong> PyTorch不在Ollama中运行'] },
+          { type: 'faq', h2: '常见问题', faqs: [{ q: '我需要多少数据？', a: '最少500–1,000个示例。5,000+用于生产质量。数据质量比数量更重要。' }, { q: '显存有限时可以微调吗？', a: '是的。LoRA需要80–90%更少的VRAM。8 GB足以用于7B模型。' }, { q: '我应该使用哪个框架？', a: 'Unsloth（快速）、Axolotl（灵活）或Hugging Face。都支持LoRA和Ollama。' }] },
+          { type: 'list', h2: 'PromptQuorum如何帮助', intro: '更好的自定义LLM的多模型共识。', items: ['<strong>测试您的模型：</strong> 与GPT-4o和Claude 4.6并排查询', '<strong>共识评分：</strong> PromptQuorum对所有模型的响应评分', '<strong>规模评估：</strong> 测试特定于领域的提示', '<strong>成本优化：</strong> 将简单查询路由到您的模型'] },
+          { type: 'cta', h2: '准备好构建您的自定义LLM吗？', body: '使用PromptQuorum进行多模型评估和成本分析。', cta: '免费试用PromptQuorum', href: 'https://www.promptquorum.com' }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = `https://www.promptquorum.com/local-llms/create-custom-local-models?lang=${lang}`;
+      const footerLink = `<p class="footer-link"><a href="${articleUrl}" target="_blank" rel="noopener">← Back to Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p style="font-size: clamp(16px, 1.8vw, 20px); margin-top: 20px;">${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 16px; color: #999;">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: #999; text-decoration: none;">promptquorum.com/local-llms/create-custom-local-models</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p style="margin-bottom: 20px; font-size: 16px;">${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+          slide.items.forEach(item => {
+            html += `<li style="margin-bottom: 10px;">${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table style="margin-top: 16px; font-size: 0.95em;"><tr>';
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col]}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 40px; font-size: 1.3em; line-height: 1.8;">${slide.line1}</p>
+            <p style="font-size: 1.3em; line-height: 1.8;">${slide.line2}</p>
+            <p style="margin-top: 40px; font-size: 1em; line-height: 1.6; color: #6750a4;">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p style="margin-bottom: 16px;">${slide.intro}</p>`;
+          html += '<ol style="font-size: 1em; margin-top: 12px;">';
+          slide.items.forEach(item => {
+            html += `<li style="margin-bottom: 8px;">${item}</li>`;
+          });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<div style="margin-top: 16px; font-size: 0.95em;">';
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 14px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; margin-bottom: 0;">A: ${faq.a}</p></div>`;
+          });
+          html += '</div>';
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 24px; font-size: 16px;">${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 24px; padding: 12px 28px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += `?lang=${lang}`;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
