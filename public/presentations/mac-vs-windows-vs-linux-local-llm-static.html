@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac vs Windows vs Linux for Local LLMs 2026 | PromptQuorum</title>
+    <meta name="description" content="Choose the best OS for local LLMs: macOS M5, Windows RTX 5090, or Linux servers. Compare speed, cost, and setup complexity." />
+    <meta property="og:title" content="Mac vs Windows vs Linux for Local LLMs 2026 — PromptQuorum" />
+    <meta property="og:description" content="M5 at 25–35 tok/s, RTX 5090 at 40–50 tok/s, Linux from $810 3-year TCO." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Mac vs Windows vs Linux for Local LLMs</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Mac vs Windows vs Linux for Local LLMs 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Mac vs Windows vs Linux',
+                        subtitle: 'Choose the Right OS for Local LLMs (2026)',
+                        link: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Metrics at a Glance',
+                        items: [
+                            '<strong>macOS M5 Max (128GB):</strong> 70B at 25–35 tok/sec, $3,499, silent',
+                            '<strong>Windows RTX 5090 (32GB):</strong> 70B at 40–50 tok/sec, $2,500, fastest',
+                            '<strong>Linux RTX 5090 (32GB):</strong> 70B at 42–53 tok/sec, 1–5% faster than Windows'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Why Choose Each OS?',
+                        items: [
+                            'macOS: Zero GPU cost, simplest setup (6 min), if you own a Mac',
+                            'Windows: Industry standard GPU support, NVIDIA CUDA ecosystem mature',
+                            'Linux: Lowest cost of ownership ($810 3-year), best for 24/7 servers'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Setup Complexity Comparison',
+                        items: [
+                            'macOS: Download Ollama → select model = 6 minutes, zero terminal',
+                            'Windows: Install drivers → download Ollama = 15–20 minutes, GUI only',
+                            'Linux: SSH → install CUDA → configure systemd = 40–70 min, terminal required'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Inference Speed Breakdown',
+                        items: [
+                            'M5 Pro (64GB): 70B Q4 at 15–20 tok/sec',
+                            'M5 Max (128GB): 70B Q8 at 25–35 tok/sec (4× better than M4 Max)',
+                            'RTX 5090: 70B at 40–50 tok/sec on Windows, 42–53 on Linux'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Hardware Cost Snapshot',
+                        items: [
+                            'MacBook Pro M5 Pro 64GB: $2,499',
+                            'MacBook Pro M5 Max 128GB: $3,499',
+                            'RTX 5090 + base system: $2,500',
+                            'RTX 5060 Ti + base system: $800–1,000'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'M5 Max vs RTX 5090 Trade-off',
+                        line1: 'M5 Max: 4× more memory, silent, turnkey',
+                        line2: 'RTX 5090: 1.3–1.5× faster inference speed',
+                        tip: '💡 Choose M5 for quality + convenience. Choose RTX for raw speed.'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'CUDA, ROCm & Apple Metal',
+                        items: [
+                            'CUDA: Available Windows/Linux only, not macOS. Industry standard.',
+                            'ROCm: AMD support; better on Linux, immature on Windows (3–6 months behind)',
+                            'Apple Metal: macOS only, newer, fewer libraries than CUDA'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Common Questions',
+                        faqs: [
+                            { q: 'Can I run 70B on macOS?', a: 'Yes. M5 Pro (64GB) runs 70B Q4 at 15–20 tok/sec. M5 Max (128GB) runs 70B Q8 at 25–35 tok/sec.' },
+                            { q: 'Does Linux use less power?', a: 'Linux 1–5% faster due to lower OS overhead. M5 draws ~30–40W; RTX 5090 draws ~450W.' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Fine-tuning & Support',
+                        faqs: [
+                            { q: 'Which OS is best for fine-tuning?', a: 'Linux > Windows > macOS. Linux has best CUDA + DeepSpeed support for production.' },
+                            { q: 'Can I use AMD GPUs?', a: 'Linux: Excellent ROCm support. Windows: 3–6 months behind. AMD 10–20% slower than NVIDIA.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Common Mistakes to Avoid',
+                        items: [
+                            'Assuming macOS can\'t run big models. It can — just slower.',
+                            'Buying Windows specifically for LLMs. If you have a Mac, use it; GPU cost dominates.',
+                            'Thinking Linux is only for servers. Linux has lowest 3-year TCO ($810).',
+                            'Forgetting NVIDIA dominance. CUDA is the standard; alternatives are smaller ecosystems.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '3-Year Total Cost of Ownership',
+                        items: [
+                            'Mac mini M4 Pro 64GB: $2,319 (10–15 tok/sec for 70B)',
+                            'Linux + RTX 5060 Ti: $810 (cheapest option)',
+                            'Linux + RTX 5090: $1,500 (fastest Linux option)',
+                            'Windows + RTX 5090: $2,620 (includes drivers, OS overhead)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regional Compliance Notes',
+                        items: [
+                            'EU (GDPR): All three OS support local data processing.',
+                            'Japan (APPI): Apple Silicon Macs handle data locally. Windows/Linux require user consent.',
+                            'Global: Electricity costs vary (EU $0.20–0.30/kWh vs China $0.08–0.12/kWh).'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ready to Choose?',
+                        body: 'Visit the full article for detailed benchmarks, TCO tables, and setup guides for each OS.',
+                        cta: 'Read Full Guide',
+                        href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm'
+                    }
+                ]
+            },
+            de: {
+                title: 'Mac vs Windows vs Linux für lokale LLMs 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Mac vs Windows vs Linux',
+                        subtitle: 'Wählen Sie das richtige Betriebssystem für lokale LLMs (2026)',
+                        link: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtigste Metriken auf einen Blick',
+                        items: [
+                            '<strong>macOS M5 Max (128 GB):</strong> 70B bei 25–35 Token/Sec, 3.499 €, lautlos',
+                            '<strong>Windows RTX 5090 (32 GB):</strong> 70B bei 40–50 Token/Sec, 1.999 €, schnellste',
+                            '<strong>Linux RTX 5090 (32 GB):</strong> 70B bei 42–53 Token/Sec, 1–5% schneller als Windows'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Warum jedes Betriebssystem wählen?',
+                        items: [
+                            'macOS: Null GPU-Kosten, einfachste Einrichtung (6 Min), falls Sie einen Mac haben',
+                            'Windows: Industrie-Standard-GPU-Unterstützung, reifer NVIDIA CUDA-Ökosystem',
+                            'Linux: Niedrigste Gesamtkosten (500 € 3 Jahre), beste für 24/7-Server'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Einrichtungskomplexität',
+                        items: [
+                            'macOS: Ollama herunterladen → Modell auswählen = 6 Minuten, kein Terminal',
+                            'Windows: Treiber installieren → Ollama herunterladen = 15–20 Minuten, nur GUI',
+                            'Linux: SSH → CUDA installieren → systemd konfigurieren = 40–70 Min, Terminal erforderlich'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Inferenzgeschwindigkeit',
+                        items: [
+                            'M5 Pro (64 GB): 70B Q4 bei 15–20 Token/Sec',
+                            'M5 Max (128 GB): 70B Q8 bei 25–35 Token/Sec (4× besser als M4 Max)',
+                            'RTX 5090: 70B bei 40–50 Token/Sec auf Windows, 42–53 auf Linux'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Hardware-Kostenübersicht',
+                        items: [
+                            'MacBook Pro M5 Pro 64 GB: 1.649 €',
+                            'MacBook Pro M5 Max 128 GB: 2.299 €',
+                            'RTX 5090 + Basissystem: 1.666 €',
+                            'RTX 5060 Ti + Basissystem: 533–666 €'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'M5 Max vs RTX 5090 Kompromiss',
+                        line1: 'M5 Max: 4× mehr Speicher, lautlos, schlüsselfertig',
+                        line2: 'RTX 5090: 1,3–1,5× schnellere Inferenzgeschwindigkeit',
+                        tip: '💡 Wählen Sie M5 für Qualität + Komfort. Wählen Sie RTX für pure Geschwindigkeit.'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'CUDA, ROCm & Apple Metal',
+                        items: [
+                            'CUDA: Nur Windows/Linux verfügbar, nicht macOS. Branchenstandard.',
+                            'ROCm: AMD-Unterstützung; besser auf Linux, unreif auf Windows (3–6 Monate hinterher)',
+                            'Apple Metal: Nur macOS, neu, weniger Bibliotheken als CUDA'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            { q: 'Kann ich 70B auf macOS ausführen?', a: 'Ja. M5 Pro (64 GB) führt 70B Q4 bei 15–20 Token/Sec aus. M5 Max (128 GB) führt 70B Q8 bei 25–35 Token/Sec aus.' },
+                            { q: 'Verbraucht Linux weniger Strom?', a: 'Linux 1–5% schneller aufgrund geringerer OS-Overhead. M5 verbraucht ~30–40 W; RTX 5090 verbraucht ~450 W.' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Fine-Tuning & Unterstützung',
+                        faqs: [
+                            { q: 'Welches Betriebssystem ist am besten zum Fine-Tuning?', a: 'Linux > Windows > macOS. Linux hat beste CUDA + DeepSpeed-Unterstützung für Produktion.' },
+                            { q: 'Kann ich AMD-GPUs verwenden?', a: 'Linux: Hervorragende ROCm-Unterstützung. Windows: 3–6 Monate hinterher. AMD 10–20% langsamer als NVIDIA.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Häufige Fehler vermeiden',
+                        items: [
+                            'Annahme, dass macOS große Modelle nicht ausführen kann. Es kann — nur langsamer.',
+                            'Windows speziell für LLMs kaufen. Falls Sie einen Mac haben, verwenden Sie ihn; GPU-Kosten dominieren.',
+                            'Denken Sie, Linux ist nur für Server. Linux hat niedrigste 3-Jahres-TCO (500 €).',
+                            'NVIDIA-Dominanz vergessen. CUDA ist der Standard; Alternativen sind kleinere Ökosysteme.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '3-Jahres-Gesamtkostenanalyse',
+                        items: [
+                            'Mac mini M4 Pro 64 GB: 1.549 € (10–15 Token/Sec für 70B)',
+                            'Linux + RTX 5060 Ti: 500 € (günstigste Option)',
+                            'Linux + RTX 5090: 933 € (schnellste Linux-Option)',
+                            'Windows + RTX 5090: 1.666 € (inkl. Treiber, OS-Overhead)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regionale Compliance-Hinweise',
+                        items: [
+                            'EU (DSGVO): Alle drei Betriebssysteme unterstützen lokale Datenverarbeitung.',
+                            'Japan (APPI): Apple Silicon Macs verarbeiten Daten lokal. Windows/Linux erfordern Benutzerzustimmung.',
+                            'Global: Stromkosten variieren (EU 0,20–0,30 €/kWh vs China 0,08–0,12 €/kWh).'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereit zu wählen?',
+                        body: 'Besuchen Sie den vollständigen Artikel für detaillierte Benchmarks, TCO-Tabellen und Installationsanleitungen für jedes Betriebssystem.',
+                        cta: 'Vollständigen Leitfaden lesen',
+                        href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=de'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Mac vs Windows vs Linux pour les LLM locaux 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Mac vs Windows vs Linux',
+                        subtitle: 'Choisissez le bon système d\'exploitation pour les LLM locaux (2026)',
+                        link: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Métriques clés en un coup d\'œil',
+                        items: [
+                            '<strong>macOS M5 Max (128 Go) :</strong> 70B à 25–35 jetons/s, 2 299 €, silencieux',
+                            '<strong>Windows RTX 5090 (32 Go) :</strong> 70B à 40–50 jetons/s, 1 666 €, plus rapide',
+                            '<strong>Linux RTX 5090 (32 Go) :</strong> 70B à 42–53 jetons/s, 1–5% plus rapide que Windows'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Pourquoi choisir chaque système d\'exploitation ?',
+                        items: [
+                            'macOS : Zéro coût GPU, configuration plus simple (6 min), si vous avez un Mac',
+                            'Windows : Support GPU standard industriel, écosystème NVIDIA CUDA mature',
+                            'Linux : Coût total de possession le plus bas (500 € 3 ans), meilleur pour serveurs 24/7'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Complexité de configuration',
+                        items: [
+                            'macOS : Téléchargez Ollama → sélectionnez modèle = 6 minutes, pas de terminal',
+                            'Windows : Installez pilotes → téléchargez Ollama = 15–20 minutes, GUI uniquement',
+                            'Linux : SSH → installez CUDA → configurez systemd = 40–70 min, terminal requis'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Vitesse d\'inférence',
+                        items: [
+                            'M5 Pro (64 Go) : 70B Q4 à 15–20 jetons/s',
+                            'M5 Max (128 Go) : 70B Q8 à 25–35 jetons/s (4× mieux que M4 Max)',
+                            'RTX 5090 : 70B à 40–50 jetons/s sur Windows, 42–53 sur Linux'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Aperçu des coûts du matériel',
+                        items: [
+                            'MacBook Pro M5 Pro 64 Go : 1 649 €',
+                            'MacBook Pro M5 Max 128 Go : 2 299 €',
+                            'RTX 5090 + système de base : 1 666 €',
+                            'RTX 5060 Ti + système de base : 533–666 €'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Compromis M5 Max vs RTX 5090',
+                        line1: 'M5 Max : 4× plus de mémoire, silencieux, clé en main',
+                        line2: 'RTX 5090 : 1,3–1,5× vitesse d\'inférence plus rapide',
+                        tip: '💡 Choisissez M5 pour qualité + commodité. Choisissez RTX pour pure vitesse.'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'CUDA, ROCm & Apple Metal',
+                        items: [
+                            'CUDA : Windows/Linux uniquement, pas macOS. Standard industriel.',
+                            'ROCm : Support AMD ; meilleur sur Linux, immature sur Windows (3–6 mois en retard)',
+                            'Apple Metal : macOS uniquement, nouveau, moins de bibliothèques que CUDA'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions courantes',
+                        faqs: [
+                            { q: 'Puis-je exécuter 70B sur macOS ?', a: 'Oui. M5 Pro (64 Go) exécute 70B Q4 à 15–20 jetons/s. M5 Max (128 Go) exécute 70B Q8 à 25–35 jetons/s.' },
+                            { q: 'Linux consomme-t-il moins d\'énergie ?', a: 'Linux 1–5% plus rapide en raison d\'une surcharge OS réduite. M5 consomme ~30–40 W ; RTX 5090 consomme ~450 W.' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Fine-tuning & Support',
+                        faqs: [
+                            { q: 'Quel système d\'exploitation est le meilleur pour le fine-tuning ?', a: 'Linux > Windows > macOS. Linux a le meilleur support CUDA + DeepSpeed pour production.' },
+                            { q: 'Puis-je utiliser des GPU AMD ?', a: 'Linux : Excellent support ROCm. Windows : 3–6 mois en retard. AMD 10–20% plus lent que NVIDIA.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs courantes à éviter',
+                        items: [
+                            'Supposer que macOS ne peut pas exécuter de grands modèles. Cela peut — juste plus lentement.',
+                            'Acheter Windows spécifiquement pour les LLM. Si vous avez un Mac, utilisez-le ; les coûts GPU dominent.',
+                            'Penser que Linux est uniquement pour les serveurs. Linux a coût total propriété 3 ans le plus bas (500 €).',
+                            'Oublier la domination NVIDIA. CUDA est la norme ; les alternatives sont des écosystèmes plus petits.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Coût total de propriété 3 ans',
+                        items: [
+                            'Mac mini M4 Pro 64 Go : 1 549 € (10–15 jetons/s pour 70B)',
+                            'Linux + RTX 5060 Ti : 500 € (option la moins chère)',
+                            'Linux + RTX 5090 : 933 € (option Linux la plus rapide)',
+                            'Windows + RTX 5090 : 1 666 € (comprend pilotes, surcharge OS)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Remarques de conformité régionale',
+                        items: [
+                            'UE (RGPD) : Les trois systèmes d\'exploitation prennent en charge le traitement local des données.',
+                            'Japon (APPI) : Les Mac Apple Silicon traitent les données localement. Windows/Linux nécessitent consentement utilisateur.',
+                            'Global : Les coûts électriques varient (UE 0,20–0,30 €/kWh vs Chine 0,08–0,12 €/kWh).'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prêt à choisir ?',
+                        body: 'Visitez l\'article complet pour des benchmarks détaillés, des tableaux TCO et des guides d\'installation pour chaque système d\'exploitation.',
+                        cta: 'Lire le guide complet',
+                        href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=fr'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ローカルLLM用Mac vs Windows vs Linux 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Mac vs Windows vs Linux',
+                        subtitle: 'ローカルLLM向けの適切なOSを選択 (2026)',
+                        link: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: '主要メトリクス一覧',
+                        items: [
+                            '<strong>macOS M5 Max (128GB):</strong> 70B時 25–35 トークン/秒、¥330,000、無音',
+                            '<strong>Windows RTX 5090 (32GB):</strong> 70B時 40–50 トークン/秒、¥265,000、最速',
+                            '<strong>Linux RTX 5090 (32GB):</strong> 70B時 42–53 トークン/秒、Windows比 1–5% 高速'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '各OSを選択する理由',
+                        items: [
+                            'macOS: GPU追加費用ゼロ、最も簡単なセットアップ (6分)、既にMacを所有している場合',
+                            'Windows: 業界標準のGPUサポート、成熟したNVIDIA CUDAエコシステム',
+                            'Linux: 最低3年総所有コスト (¥66,000)、24/7サーバー向けに最適'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'セットアップ複雑性',
+                        items: [
+                            'macOS: Ollama ダウンロード → モデル選択 = 6分、ターミナル不要',
+                            'Windows: ドライバ インストール → Ollama ダウンロード = 15–20分、GUI のみ',
+                            'Linux: SSH → CUDA インストール → systemd 構成 = 40–70分、ターミナル必須'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '推論速度の比較',
+                        items: [
+                            'M5 Pro (64GB): 70B Q4時 15–20 トークン/秒',
+                            'M5 Max (128GB): 70B Q8時 25–35 トークン/秒 (M4 Max比 4倍向上)',
+                            'RTX 5090: Windows時 70B 40–50 トークン/秒、Linux時 42–53 トークン/秒'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ハードウェアコスト',
+                        items: [
+                            'MacBook Pro M5 Pro 64GB: ¥331,600',
+                            'MacBook Pro M5 Max 128GB: ¥463,400',
+                            'RTX 5090 + ベースシステム: ¥277,000',
+                            'RTX 5060 Ti + ベースシステム: ¥88,000–133,000'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'M5 Max vs RTX 5090 トレードオフ',
+                        line1: 'M5 Max: メモリ 4倍、無音、ターンキー',
+                        line2: 'RTX 5090: 推論速度 1.3–1.5倍高速',
+                        tip: '💡 品質+利便性を選ぶなら M5。純粋な速度を選ぶなら RTX。'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'CUDA、ROCm & Apple Metal',
+                        items: [
+                            'CUDA: Windows/Linux のみ、macOS 非対応。業界標準。',
+                            'ROCm: AMD サポート；Linux で優秀、Windows は未熟 (3–6ヶ月遅延)',
+                            'Apple Metal: macOS のみ、新技術、CUDA より少ないライブラリ'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            { q: 'macOS で 70B を実行できますか？', a: 'はい。M5 Pro (64GB) は 70B Q4 を 15–20 トークン/秒で実行。M5 Max (128GB) は 70B Q8 を 25–35 トークン/秒で実行。' },
+                            { q: 'Linux は消費電力が少ない？', a: 'Linux は OS オーバーヘッド減少で 1–5% 高速。M5 は ~30–40W；RTX 5090 は ~450W。' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'ファインチューニング & サポート',
+                        faqs: [
+                            { q: 'ファインチューニング向けに最適な OS は？', a: 'Linux > Windows > macOS。Linux は本番向けに最高の CUDA + DeepSpeed サポート。' },
+                            { q: 'AMD GPU を使用できますか？', a: 'Linux: 優秀な ROCm サポート。Windows: 3–6ヶ月遅延。AMD は NVIDIA 比 10–20% 低速。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '避けるべき一般的な間違い',
+                        items: [
+                            'macOS は大規模モデルを実行できないと思い込む。実行できる — ただし遅い。',
+                            'LLM 用に Windows を購入する。Mac を所持している場合は使用；GPU コストが支配的。',
+                            'Linux はサーバー専用だと思う。Linux は最低 3年総所有コスト (¥66,000)。',
+                            'NVIDIA の市場支配力を忘れる。CUDA が標準；代替手段は小さいエコシステム。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '3年総所有コスト分析',
+                        items: [
+                            'Mac mini M4 Pro 64GB: ¥204,600 (70B時 10–15 トークン/秒)',
+                            'Linux + RTX 5060 Ti: ¥66,000 (最も安い選択肢)',
+                            'Linux + RTX 5090: ¥155,000 (最速 Linux 選択肢)',
+                            'Windows + RTX 5090: ¥277,000 (ドライバ、OS オーバーヘッド含む)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域別コンプライアンス注記',
+                        items: [
+                            'EU (GDPR): 3つすべての OS がローカルデータ処理をサポート。',
+                            'Japan (APPI): Apple Silicon Mac はデータをローカルで処理。Windows/Linux はユーザー同意が必須。',
+                            'グローバル: 電気代は大幅に異なる (EU ¥0.33–0.50/kWh vs 中国 ¥0.13–0.20/kWh)。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '準備完了？',
+                        body: '完全な記事を訪問して、詳細ベンチマーク、TCO テーブル、および各 OS のセットアップガイドを確認してください。',
+                        cta: '完全ガイドを読む',
+                        href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=ja'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地LLM用Mac vs Windows vs Linux 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Mac vs Windows vs Linux',
+                        subtitle: '为本地LLM选择合适的操作系统 (2026)',
+                        link: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '关键指标概览',
+                        items: [
+                            '<strong>macOS M5 Max (128GB):</strong> 70B时 25–35 令牌/秒，$3,499，无声',
+                            '<strong>Windows RTX 5090 (32GB):</strong> 70B时 40–50 令牌/秒，$2,500，最快',
+                            '<strong>Linux RTX 5090 (32GB):</strong> 70B时 42–53 令牌/秒，比Windows快 1–5%'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '为什么选择各个操作系统？',
+                        items: [
+                            'macOS：GPU成本为零、设置最简单 (6分钟)、如果已经拥有Mac',
+                            'Windows：行业标准GPU支持、成熟的NVIDIA CUDA生态系统',
+                            'Linux：3年总拥有成本最低 ($810)、最适合24/7服务器'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '设置复杂性',
+                        items: [
+                            'macOS：下载Ollama → 选择模型 = 6分钟，无需终端',
+                            'Windows：安装驱动程序 → 下载Ollama = 15–20分钟，仅GUI',
+                            'Linux：SSH → 安装CUDA → 配置systemd = 40–70分钟，需要终端'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '推理速度比较',
+                        items: [
+                            'M5 Pro (64GB)：70B Q4时 15–20 令牌/秒',
+                            'M5 Max (128GB)：70B Q8时 25–35 令牌/秒 (比M4 Max快4倍)',
+                            'RTX 5090：Windows时 70B 40–50 令牌/秒，Linux时 42–53 令牌/秒'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '硬件成本概览',
+                        items: [
+                            'MacBook Pro M5 Pro 64GB：$2,499',
+                            'MacBook Pro M5 Max 128GB：$3,499',
+                            'RTX 5090 + 基础系统：$2,500',
+                            'RTX 5060 Ti + 基础系统：$800–1,000'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'M5 Max vs RTX 5090 权衡',
+                        line1: 'M5 Max：内存多4倍、无声、即插即用',
+                        line2: 'RTX 5090：推理速度快 1.3–1.5倍',
+                        tip: '💡 选择M5获得质量+便利。选择RTX获得纯粹速度。'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'CUDA、ROCm & Apple Metal',
+                        items: [
+                            'CUDA：仅Windows/Linux，macOS不支持。行业标准。',
+                            'ROCm：AMD支持；Linux上更好，Windows上不成熟 (落后3–6个月)',
+                            'Apple Metal：仅macOS，较新技术，库比CUDA少'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            { q: '我能在macOS上运行70B吗？', a: '能。M5 Pro (64GB)在15–20令牌/秒下运行70B Q4。M5 Max (128GB)在25–35令牌/秒下运行70B Q8。' },
+                            { q: 'Linux消耗更少的电力吗？', a: 'Linux由于OS开销降低快1–5%。M5消耗~30–40W；RTX 5090消耗~450W。' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '微调和支持',
+                        faqs: [
+                            { q: '哪个操作系统最适合微调？', a: 'Linux > Windows > macOS。Linux拥有最好的生产级CUDA + DeepSpeed支持。' },
+                            { q: '我能使用AMD GPU吗？', a: 'Linux：优秀的ROCm支持。Windows：落后3–6个月。AMD比NVIDIA慢10–20%。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '要避免的常见错误',
+                        items: [
+                            '假设macOS无法运行大型模型。它能 — 只是速度慢。',
+                            '专门为LLM购买Windows。如果你拥有Mac，就使用它；GPU成本占主导。',
+                            '认为Linux仅用于服务器。Linux的3年总拥有成本最低 ($810)。',
+                            '忘记NVIDIA的市场主导地位。CUDA是标准；替代品是较小的生态系统。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '3年总拥有成本分析',
+                        items: [
+                            'Mac mini M4 Pro 64GB：$2,319 (70B时10–15令牌/秒)',
+                            'Linux + RTX 5060 Ti：$810 (最便宜的选择)',
+                            'Linux + RTX 5090：$1,500 (最快的Linux选择)',
+                            'Windows + RTX 5090：$2,620 (包括驱动程序、OS开销)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '区域合规性说明',
+                        items: [
+                            'EU (GDPR)：所有三个操作系统都支持本地数据处理。',
+                            'Japan (APPI)：Apple Silicon Mac本地处理数据。Windows/Linux需要用户同意。',
+                            '全球：电力成本差异很大 (EU $0.20–0.30/kWh vs 中国 $0.08–0.12/kWh)。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '准备好了吗？',
+                        body: '访问完整文章，获取详细的基准测试、TCO表格和每个操作系统的设置指南。',
+                        cta: '阅读完整指南',
+                        href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=zh'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=' + lang;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener">PromptQuorum.com</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 40px; font-size: 1.4em;">${slide.line1}</p>
+                        <p style="font-size: 1.4em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 20px; text-align: left;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p>${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
