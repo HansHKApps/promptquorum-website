@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local LLMs for Coding Workflows | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on local LLMs for code generation, review, and testing. Learn about Qwen2.5-Coder, CodeLlama, and practical coding workflows." />
+    <meta property="og:title" content="Local LLMs for Coding Workflows — PromptQuorum" />
+    <meta property="og:description" content="Master local coding AI with Qwen2.5-Coder 92.7% HumanEval, code generation, review, and testing patterns." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 720px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .slide-footer {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            font-size: 11px;
+            color: #999;
+        }
+
+        .slide-footer a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .slide-footer a:hover {
+            color: #6750a4;
+            border-bottom-color: #6750a4;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+            }
+
+            .slide-footer {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local LLMs for Coding Workflows</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Local LLMs for Coding Workflows',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Local LLMs\nfor Coding Workflows',
+                        subtitle: 'Code Generation, Review & Testing with Qwen2.5-Coder & CodeLlama',
+                        link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Why Local Coding AI?',
+                        items: [
+                            '<strong>Privacy:</strong> Code stays on your machine — no cloud APIs',
+                            '<strong>Cost:</strong> $0/month vs GitHub Copilot $228/year',
+                            '<strong>Accuracy:</strong> Qwen2.5-Coder 32B scores 92.7% HumanEval',
+                            '<strong>Speed:</strong> 2–5 seconds per suggestion (slower than cloud, but privacy wins)',
+                            '<strong>Control:</strong> Fine-tune models on your codebase'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Best Local Coding Models 2026',
+                        columns: ['Model', 'HumanEval', 'VRAM', 'Best For'],
+                        rows: [
+                            { 'Model': 'Qwen2.5-Coder 32B', 'HumanEval': '92.7%', 'VRAM': '22 GB', 'Best For': 'Maximum accuracy' },
+                            { 'Model': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', 'Best For': 'High quality' },
+                            { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Best For': 'Speed/balance' },
+                            { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Best For': 'Tiny, efficient' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code Generation: Best Practice',
+                        items: [
+                            'Provide function signature + docstring',
+                            'Include type hints and expected behavior',
+                            'Model generates implementation (not generic code)',
+                            '<strong>Quality depends on prompt context</strong>',
+                            'Works best for: boilerplate, helpers, patterns'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code Generation: Good vs Bad Prompts',
+                        items: [
+                            '❌ Bad: "Generate code for merging arrays"',
+                            '✅ Good: "Implement merge_sorted_arrays(arr1: List[int], arr2: List[int]) using two-pointer algorithm"',
+                            '',
+                            '<strong>Quality gap:</strong> 40% difference in correctness'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code Review Workflows',
+                        items: [
+                            'Prompt: "Review this code for bugs, security, performance"',
+                            'Model excels at: unused vars, None errors, inefficient loops',
+                            'Model struggles with: architecture, domain logic, design patterns',
+                            '<strong>Use for:</strong> Lint-like checks, not design review',
+                            '<strong>Limitation:</strong> Single-function understanding only'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Test Generation',
+                        items: [
+                            '<strong>Feed function code + prompt for unit tests</strong>',
+                            'Request coverage: normal cases, edge cases, error cases',
+                            'Example: "Write pytest with 3 normal, 3 edge, 2 error cases"',
+                            'Model generates test_* functions with assertions',
+                            'Manual review of edge cases still recommended'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE Integration',
+                        items: [
+                            '<strong>VS Code + Continue.dev</strong> (open source, free)',
+                            'Install extension → point to Ollama (localhost:11434)',
+                            'Inline completions: Ctrl+Shift+\\\\ (VS Code) or Cmd+Shift+\\\\ (Mac)',
+                            '<strong>Cursor editor</strong> (VS Code fork with native Ollama)',
+                            'No extra setup required — just pick your model'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Common Mistakes (Part 1)',
+                        items: [
+                            '1. <strong>Trusting generated code.</strong> Always review for bugs.',
+                            '2. <strong>Using models too small.</strong> Qwen2.5-Coder 7B minimum. 3B models fail.',
+                            '3. <strong>No context in prompts.</strong> Type hints + docstrings = better code.',
+                            '4. <strong>Expecting architecture understanding.</strong> Models only understand functions.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Common Mistakes (Part 2)',
+                        items: [
+                            '5. <strong>Wrong model choice.</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17% gap',
+                            'General models score 15–25% lower than coding models',
+                            'Always use coding-specific models',
+                            'Use: <code>ollama pull qwen2.5-coder:7b</code>',
+                            'NOT: <code>ollama pull llama3.1:8b</code>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92.7% HumanEval (vs Copilot 94%). Speed: local 2–5 sec vs Copilot 300ms. Cost: $0 vs $228/year. Quality near-parity.' },
+                            { q: 'How much VRAM needed?', a: 'Min: 5 GB for Qwen2.5-Coder 7B. Recommended: 8 GB. Premium: 24 GB for 32B model.' },
+                            { q: 'VS Code setup?', a: 'Install Continue.dev extension → point to Ollama localhost:11434 → Tab or Ctrl+Shift+\\\\ for suggestions.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'When to Use Local Coding AI',
+                        items: [
+                            '✅ Boilerplate & repetitive code',
+                            '✅ Function/method generation',
+                            '✅ Test writing (with review)',
+                            '✅ Code review (lint-like checks)',
+                            '✅ Documentation generation',
+                            '❌ Complex architecture decisions',
+                            '❌ Cross-module design patterns'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Get Started with Local Coding AI',
+                        body: 'Try Qwen2.5-Coder 7B today: <code>ollama pull qwen2.5-coder:7b</code> → Use with Continue.dev or Cursor → Generate, review, test code privately.',
+                        cta: 'Learn More at PromptQuorum',
+                        href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows'
+                    }
+                ]
+            },
+            de: {
+                title: 'Lokale LLMs für Programmier-Workflows',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Lokale LLMs\nfür Programmier-Workflows',
+                        subtitle: 'Code-Generierung, Überprüfung und Tests mit Qwen2.5-Coder und CodeLlama',
+                        link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Warum lokale Code-KI?',
+                        items: [
+                            '<strong>Datenschutz:</strong> Code bleibt auf Ihrer Maschine — keine Cloud-APIs',
+                            '<strong>Kosten:</strong> €0/Monat vs GitHub Copilot €19/Monat',
+                            '<strong>Genauigkeit:</strong> Qwen2.5-Coder 32B: 92,7% HumanEval',
+                            '<strong>Geschwindigkeit:</strong> 2–5 Sekunden pro Vorschlag (langsamer, aber Datenschutz gewinnt)',
+                            '<strong>Kontrolle:</strong> Fine-Tune auf Ihrer Codebasis'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Beste lokale Programmiermodelle 2026',
+                        columns: ['Modell', 'HumanEval', 'VRAM', 'Am besten für'],
+                        rows: [
+                            { 'Modell': 'Qwen2.5-Coder 32B', 'HumanEval': '92,7%', 'VRAM': '22 GB', 'Am besten für': 'Maximale Genauigkeit' },
+                            { 'Modell': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', 'Am besten für': 'Hohe Qualität' },
+                            { 'Modell': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Am besten für': 'Geschwindigkeit/Balance' },
+                            { 'Modell': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Am besten für': 'Klein, effizient' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code-Generierung: Best Practice',
+                        items: [
+                            'Funktionssignatur + Docstring bereitstellen',
+                            'Typ-Hinweise und erwartetes Verhalten einschließen',
+                            'Modell generiert Implementierung (kein generischer Code)',
+                            '<strong>Qualität hängt vom Prompt-Kontext ab</strong>',
+                            'Funktioniert am besten für: Boilerplate, Helfer, Muster'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code-Generierung: Gute vs. schlechte Prompts',
+                        items: [
+                            '❌ Schlecht: "Generiere Code zum Zusammenführen von Arrays"',
+                            '✅ Gut: "Implementiere merge_sorted_arrays(arr1: List[int], arr2: List[int]) mit Two-Pointer-Algorithmus"',
+                            '',
+                            '<strong>Qualitätslücke:</strong> 40% Unterschied in der Korrektheit'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code-Review-Workflows',
+                        items: [
+                            'Prompt: "Überprüfe diesen Code auf Bugs, Sicherheit, Performance"',
+                            'Modell glänzt bei: ungenutzte Variablen, None-Fehler, ineffiziente Schleifen',
+                            'Modell kämpft mit: Architektur, Domain-Logik, Design-Muster',
+                            '<strong>Nutze für:</strong> Lint-ähnliche Checks, nicht Design-Review',
+                            '<strong>Limitation:</strong> Nur Verständnis einzelner Funktionen'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Test-Generierung',
+                        items: [
+                            '<strong>Funktionscode + Prompt für Unit-Tests einspeisen</strong>',
+                            'Abdeckung anfordern: normale, Edge-Cases, Fehlerfälle',
+                            'Beispiel: "Schreib pytest mit 3 normal, 3 edge, 2 Fehlerfällen"',
+                            'Modell generiert test_* Funktionen mit Assertions',
+                            'Manuelle Überprüfung von Edge-Cases empfohlen'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE-Integration',
+                        items: [
+                            '<strong>VS Code + Continue.dev</strong> (Open Source, kostenlos)',
+                            'Erweiterung installieren → auf Ollama zeigen (localhost:11434)',
+                            'Inline-Vervollständigungen: Ctrl+Shift+\\\\ (VS Code)',
+                            '<strong>Cursor Editor</strong> (VS Code Fork mit nativem Ollama)',
+                            'Keine zusätzliche Einrichtung erforderlich'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Häufige Fehler (Teil 1)',
+                        items: [
+                            '1. <strong>Vertrau generiertem Code blind.</strong> Immer überprüfen.',
+                            '2. <strong>Zu kleine Modelle.</strong> Qwen2.5-Coder 7B Minimum. 3B-Modelle scheitern.',
+                            '3. <strong>Kein Kontext in Prompts.</strong> Typ-Hinweise + Docstrings = besserer Code.',
+                            '4. <strong>Architektur-Verständnis erwarten.</strong> Modelle verstehen nur Funktionen.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Häufige Fehler (Teil 2)',
+                        items: [
+                            '5. <strong>Falsche Modellwahl.</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17% Lücke',
+                            'Allgemeine Modelle: 15–25% niedriger als Code-Modelle',
+                            'Nutze immer Code-spezifische Modelle',
+                            'Richtig: <code>ollama pull qwen2.5-coder:7b</code>',
+                            'Falsch: <code>ollama pull llama3.1:8b</code>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92,7% HumanEval (vs Copilot 94%). Geschwindigkeit: lokal 2–5 Sek. vs Copilot 300ms. Kosten: €0 vs €228/Jahr. Qualität annähernd gleich.' },
+                            { q: 'Wie viel VRAM wird benötigt?', a: 'Min: 5 GB für Qwen2.5-Coder 7B. Empfohlen: 8 GB. Premium: 24 GB für 32B-Modell.' },
+                            { q: 'VS Code Setup?', a: 'Continue.dev Extension installieren → auf Ollama zeigen localhost:11434 → Tab oder Ctrl+Shift+\\\\ für Vorschläge.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wann sollte man lokale Code-KI nutzen',
+                        items: [
+                            '✅ Boilerplate und repetitiver Code',
+                            '✅ Funktions-/Methodengenerierung',
+                            '✅ Test-Schreiben (mit Überprüfung)',
+                            '✅ Code-Review (Lint-ähnliche Checks)',
+                            '✅ Dokumentation generieren',
+                            '❌ Komplexe Architektur-Entscheidungen',
+                            '❌ Modulübergreifende Design-Muster'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Beginnen Sie mit lokaler Code-KI',
+                        body: 'Probiere Qwen2.5-Coder 7B heute aus: <code>ollama pull qwen2.5-coder:7b</code> → Nutze mit Continue.dev oder Cursor → Generiere, überprüfe und teste Code privat.',
+                        cta: 'Mehr erfahren auf PromptQuorum',
+                        href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=de'
+                    }
+                ]
+            },
+            fr: {
+                title: 'LLMs Locaux pour les Workflows de Programmation',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'LLMs Locaux\npour les Workflows de Programmation',
+                        subtitle: 'Génération de code, examen et tests avec Qwen2.5-Coder et CodeLlama',
+                        link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Pourquoi une IA de code local?',
+                        items: [
+                            '<strong>Confidentialité:</strong> Le code reste sur votre machine — pas d\'APIs cloud',
+                            '<strong>Coût:</strong> €0/mois vs GitHub Copilot €19/mois',
+                            '<strong>Exactitude:</strong> Qwen2.5-Coder 32B : 92,7% HumanEval',
+                            '<strong>Vitesse:</strong> 2–5 secondes par suggestion (plus lent, mais confidentialité)',
+                            '<strong>Contrôle:</strong> Fine-tune sur votre base de code'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Meilleurs modèles de codage locaux 2026',
+                        columns: ['Modèle', 'HumanEval', 'VRAM', 'Meilleur pour'],
+                        rows: [
+                            { 'Modèle': 'Qwen2.5-Coder 32B', 'HumanEval': '92,7%', 'VRAM': '22 GB', 'Meilleur pour': 'Précision maximale' },
+                            { 'Modèle': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', 'Meilleur pour': 'Haute qualité' },
+                            { 'Modèle': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Meilleur pour': 'Vitesse/équilibre' },
+                            { 'Modèle': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Meilleur pour': 'Petit, efficace' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Génération de code: Bonnes pratiques',
+                        items: [
+                            'Fournir signature de fonction + docstring',
+                            'Inclure les indices de type et le comportement attendu',
+                            'Le modèle génère l\'implémentation (pas du code générique)',
+                            '<strong>La qualité dépend du contexte du prompt</strong>',
+                            'Fonctionne mieux pour: boilerplate, helpers, patterns'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Génération de code: Bons vs mauvais prompts',
+                        items: [
+                            '❌ Mauvais: "Générer du code pour fusionner des tableaux"',
+                            '✅ Bon: "Implémenter merge_sorted_arrays(arr1: List[int], arr2: List[int]) avec algorithme deux pointeurs"',
+                            '',
+                            '<strong>Écart de qualité:</strong> 40% de différence en exactitude'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Workflows d\'examen de code',
+                        items: [
+                            'Prompt: "Examiner ce code pour les bugs, la sécurité, les performances"',
+                            'Le modèle excelle: variables inutilisées, erreurs None, boucles inefficaces',
+                            'Le modèle lutte: architecture, logique métier, patterns',
+                            '<strong>Utiliser pour:</strong> Vérifications style lint, pas design review',
+                            '<strong>Limitation:</strong> Compréhension fonction unique seulement'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Génération de tests',
+                        items: [
+                            '<strong>Alimenter code fonction + prompt pour tests unitaires</strong>',
+                            'Demander couverture: cas normaux, cas limites, cas erreur',
+                            'Exemple: "Écrire pytest avec 3 normaux, 3 limites, 2 erreurs"',
+                            'Le modèle génère fonctions test_* avec assertions',
+                            'Révision manuelle des cas limites recommandée'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Intégration IDE',
+                        items: [
+                            '<strong>VS Code + Continue.dev</strong> (open source, gratuit)',
+                            'Installer extension → pointer vers Ollama (localhost:11434)',
+                            'Complétions inline: Ctrl+Shift+\\\\ (VS Code)',
+                            '<strong>Editeur Cursor</strong> (fork VS Code avec Ollama natif)',
+                            'Aucune configuration supplémentaire requise'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs courantes (Partie 1)',
+                        items: [
+                            '1. <strong>Faire confiance au code généré.</strong> Toujours réviser.',
+                            '2. <strong>Utiliser des modèles trop petits.</strong> Minimum Qwen2.5-Coder 7B. Modèles 3B échouent.',
+                            '3. <strong>Pas de contexte dans les prompts.</strong> Indices de type + docstrings = meilleur code.',
+                            '4. <strong>S\'attendre à comprendre l\'architecture.</strong> Modèles comprennent fonctions uniquement.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs courantes (Partie 2)',
+                        items: [
+                            '5. <strong>Choix de modèle erroné.</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = écart 17%',
+                            'Modèles généraux: 15–25% plus bas que modèles code',
+                            'Utiliser toujours des modèles spécifiques au code',
+                            'Correct: <code>ollama pull qwen2.5-coder:7b</code>',
+                            'Incorrect: <code>ollama pull llama3.1:8b</code>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions fréquemment posées',
+                        faqs: [
+                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92,7% HumanEval (vs Copilot 94%). Vitesse: local 2–5 sec vs Copilot 300ms. Coût: €0 vs €228/an. Qualité quasi équivalente.' },
+                            { q: 'Combien de VRAM requis?', a: 'Min: 5 GB pour Qwen2.5-Coder 7B. Recommandé: 8 GB. Premium: 24 GB pour modèle 32B.' },
+                            { q: 'Configuration VS Code?', a: 'Installer extension Continue.dev → pointer vers Ollama localhost:11434 → Tab ou Ctrl+Shift+\\\\ pour suggestions.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quand utiliser l\'IA de code local',
+                        items: [
+                            '✅ Boilerplate et code répétitif',
+                            '✅ Génération fonction/méthode',
+                            '✅ Écriture de tests (avec révision)',
+                            '✅ Examen de code (vérifications lint)',
+                            '✅ Génération de documentation',
+                            '❌ Décisions architecturales complexes',
+                            '❌ Patterns de design multi-modules'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Débuter avec l\'IA de code local',
+                        body: 'Essayez Qwen2.5-Coder 7B dès aujourd\'hui: <code>ollama pull qwen2.5-coder:7b</code> → Utilisez avec Continue.dev ou Cursor → Générez, examinez et testez du code privé.',
+                        cta: 'En savoir plus sur PromptQuorum',
+                        href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=fr'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ローカルLLMsでのコーディングワークフロー',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ローカルLLMs\nでのコーディングワークフロー',
+                        subtitle: 'Qwen2.5-CoderとCodeLlamaを使用したコード生成、レビュー、テスト',
+                        link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'なぜローカルコードAI?',
+                        items: [
+                            '<strong>プライバシー:</strong> コードはあなたのマシン上に留まる — クラウドAPI不要',
+                            '<strong>コスト:</strong> ¥0/月 vs GitHub Copilot ¥2,480/月',
+                            '<strong>精度:</strong> Qwen2.5-Coder 32B: 92.7% HumanEval',
+                            '<strong>速度:</strong> 提案あたり2～5秒（クラウドより遅いが、プライバシーが優先）',
+                            '<strong>制御:</strong> 自分のコードベースでファインチューン'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '2026年のベストローカルコーディングモデル',
+                        columns: ['モデル', 'HumanEval', 'VRAM', '最適用途'],
+                        rows: [
+                            { 'モデル': 'Qwen2.5-Coder 32B', 'HumanEval': '92.7%', 'VRAM': '22 GB', '最適用途': '最大精度' },
+                            { 'モデル': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', '最適用途': '高品質' },
+                            { 'モデル': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '最適用途': '速度/バランス' },
+                            { 'モデル': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', '最適用途': '小型、効率的' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コード生成: ベストプラクティス',
+                        items: [
+                            '関数シグネチャ+ドキュメント文字列を提供',
+                            '型ヒントと期待される動作を含める',
+                            'モデルが実装を生成（一般的なコードではない）',
+                            '<strong>品質はプロンプトコンテキストに依存</strong>',
+                            '最適: ボイラープレート、ヘルパー、パターン'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コード生成: 良いプロンプト vs 悪いプロンプト',
+                        items: [
+                            '❌ 悪い: "配列をマージするコードを生成"',
+                            '✅ 良い: "merge_sorted_arrays(arr1: List[int], arr2: List[int])を2ポインタアルゴリズムで実装"',
+                            '',
+                            '<strong>品質ギャップ:</strong> 正確性で40%の差'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コードレビューワークフロー',
+                        items: [
+                            'プロンプト: "このコードをバグ、セキュリティ、パフォーマンスについてレビュー"',
+                            'モデルが得意: 未使用変数、None エラー、非効率なループ',
+                            'モデルが苦手: アーキテクチャ、ビジネスロジック、設計パターン',
+                            '<strong>用途:</strong> Lint的なチェック、デザインレビューではない',
+                            '<strong>制限:</strong> 単一関数の理解のみ'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'テスト生成',
+                        items: [
+                            '<strong>関数コード+ユニットテストプロンプトを入力</strong>',
+                            'カバレッジをリクエスト: 通常ケース、エッジケース、エラーケース',
+                            '例: "3つ通常、3つエッジ、2つエラーのpytestを記述"',
+                            'モデルがtest_*関数と検証を生成',
+                            'エッジケースの手動レビュー推奨'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE統合',
+                        items: [
+                            '<strong>VS Code + Continue.dev</strong>（オープンソース、無料）',
+                            '拡張機能をインストール → Ollamaを指定（localhost:11434）',
+                            'インライン補完: Ctrl+Shift+\\\\ (VS Code) または Cmd+Shift+\\\\ (Mac)',
+                            '<strong>Cursorエディタ</strong>（ネイティブOllama対応のVSCodeフォーク）',
+                            '追加設定不要'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '一般的な間違い（パート1）',
+                        items: [
+                            '1. <strong>生成されたコードを信頼する。</strong> 常にレビュー',
+                            '2. <strong>モデルが小さすぎる。</strong> 最小Qwen2.5-Coder 7B。3Bモデルは失敗。',
+                            '3. <strong>プロンプトに文脈がない。</strong> 型ヒント+ドキュメント=より良いコード',
+                            '4. <strong>アーキテクチャ理解を期待する。</strong> モデルは関数のみ理解'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '一般的な間違い（パート2）',
+                        items: [
+                            '5. <strong>モデル選択が間違っている。</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17%の差',
+                            '汎用モデル: コードモデルより15～25%低い',
+                            'コード専用モデルを常に使用',
+                            '正: <code>ollama pull qwen2.5-coder:7b</code>',
+                            '誤: <code>ollama pull llama3.1:8b</code>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92.7% HumanEval (vs Copilot 94%)。速度: ローカル2～5秒 vs Copilot 300ms。コスト: ¥0 vs ¥2,480/月。品質はほぼ同等。' },
+                            { q: '必要なVRAMは?', a: '最小: Qwen2.5-Coder 7B で5 GB。推奨: 8 GB。プレミアム: 32Bモデルで24 GB。' },
+                            { q: 'VS Code セットアップ?', a: 'Continue.dev拡張をインストール → Ollama localhost:11434 を指定 → Tab または Ctrl+Shift+\\\\ で提案。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ローカルコードAIをいつ使用するか',
+                        items: [
+                            '✅ ボイラープレートと繰り返しコード',
+                            '✅ 関数/メソッド生成',
+                            '✅ テスト作成（レビュー付き）',
+                            '✅ コードレビュー（Lint的チェック）',
+                            '✅ ドキュメント生成',
+                            '❌ 複雑なアーキテクチャ決定',
+                            '❌ クロスモジュール設計パターン'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'ローカルコードAIを始める',
+                        body: '今日からQwen2.5-Coder 7B を試す: <code>ollama pull qwen2.5-coder:7b</code> → Continue.dev またはCursorで使用 → コードを非公開で生成、レビュー、テスト。',
+                        cta: 'PromptQuorumで詳細を確認',
+                        href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=ja'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地LLMs编程工作流',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '本地LLMs\n编程工作流',
+                        subtitle: '使用Qwen2.5-Coder和CodeLlama进行代码生成、审查和测试',
+                        link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '为什么选择本地代码AI?',
+                        items: [
+                            '<strong>隐私:</strong> 代码保存在您的机器上 — 无需云API',
+                            '<strong>成本:</strong> $0/月 vs GitHub Copilot $228/年',
+                            '<strong>精度:</strong> Qwen2.5-Coder 32B: 92.7% HumanEval',
+                            '<strong>速度:</strong> 每次建议2-5秒（比云服务慢，但隐私优先）',
+                            '<strong>控制:</strong> 在您的代码库上进行微调'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '2026年最佳本地编码模型',
+                        columns: ['模型', 'HumanEval', 'VRAM', '最佳用途'],
+                        rows: [
+                            { '模型': 'Qwen2.5-Coder 32B', 'HumanEval': '92.7%', 'VRAM': '22 GB', '最佳用途': '最高精度' },
+                            { '模型': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', '最佳用途': '高质量' },
+                            { '模型': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '最佳用途': '速度/平衡' },
+                            { '模型': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', '最佳用途': '小型、高效' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代码生成: 最佳实践',
+                        items: [
+                            '提供函数签名+文档字符串',
+                            '包括类型提示和预期行为',
+                            '模型生成实现（非通用代码）',
+                            '<strong>质量取决于提示上下文</strong>',
+                            '最适合: 样板代码、辅助函数、模式'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代码生成: 好提示 vs 坏提示',
+                        items: [
+                            '❌ 差: "生成用于合并数组的代码"',
+                            '✅ 好: "使用两指针算法实现merge_sorted_arrays(arr1: List[int], arr2: List[int])"',
+                            '',
+                            '<strong>质量差异:</strong> 准确性相差40%'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代码审查工作流',
+                        items: [
+                            '提示: "审查此代码中的bug、安全性和性能"',
+                            '模型擅长: 未使用的变量、None错误、低效循环',
+                            '模型困难: 架构、业务逻辑、设计模式',
+                            '<strong>用途:</strong> Lint式检查，不是设计审查',
+                            '<strong>限制:</strong> 只理解单个函数'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '测试生成',
+                        items: [
+                            '<strong>输入函数代码+单元测试提示</strong>',
+                            '要求覆盖: 正常情况、边界情况、错误情况',
+                            '示例: "编写包含3个正常、3个边界、2个错误情况的pytest"',
+                            '模型生成test_*函数和断言',
+                            '建议手动审查边界情况'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE集成',
+                        items: [
+                            '<strong>VS Code + Continue.dev</strong>（开源，免费）',
+                            '安装扩展 → 指向Ollama（localhost:11434）',
+                            '行内补全: Ctrl+Shift+\\\\ (VS Code) 或 Cmd+Shift+\\\\ (Mac)',
+                            '<strong>Cursor编辑器</strong>（具有原生Ollama支持的VS Code分支）',
+                            '无需额外设置'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '常见错误（第1部分）',
+                        items: [
+                            '1. <strong>盲目信任生成的代码。</strong> 始终审查。',
+                            '2. <strong>使用过小的模型。</strong> Qwen2.5-Coder 7B最小。3B模型会失败。',
+                            '3. <strong>提示缺少上下文。</strong> 类型提示+文档字符串=更好的代码。',
+                            '4. <strong>期望架构理解。</strong> 模型仅理解函数。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '常见错误（第2部分）',
+                        items: [
+                            '5. <strong>模型选择错误。</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17%差距',
+                            '通用模型: 比编码模型低15-25%',
+                            '始终使用编码专用模型',
+                            '正确: <code>ollama pull qwen2.5-coder:7b</code>',
+                            '错误: <code>ollama pull llama3.1:8b</code>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92.7% HumanEval (vs Copilot 94%)。速度: 本地2-5秒 vs Copilot 300ms。成本: $0 vs $228/年。质量基本相当。' },
+                            { q: '需要多少VRAM?', a: '最小: Qwen2.5-Coder 7B为5 GB。推荐: 8 GB。高级: 32B模型为24 GB。' },
+                            { q: 'VS Code设置?', a: '安装Continue.dev扩展 → 指向Ollama localhost:11434 → Tab或Ctrl+Shift+\\\\获得建议。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '何时使用本地代码AI',
+                        items: [
+                            '✅ 样板代码和重复代码',
+                            '✅ 函数/方法生成',
+                            '✅ 测试编写（带审查）',
+                            '✅ 代码审查（Lint式检查）',
+                            '✅ 文档生成',
+                            '❌ 复杂的架构决策',
+                            '❌ 跨模块设计模式'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '开始本地代码AI',
+                        body: '立即试用Qwen2.5-Coder 7B: <code>ollama pull qwen2.5-coder:7b</code> → 与Continue.dev或Cursor一起使用 → 私下生成、审查和测试代码。',
+                        cta: '在PromptQuorum了解更多',
+                        href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=zh'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide, lang) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=' + lang;
+            const footerLink = `<div class="slide-footer"><a href="${articleUrl}" target="_blank" rel="noopener">← Article</a></div>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener">promptquorum.com</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        if (item.trim()) html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table style="margin-top: 20px;"><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<div style="text-align: left; max-width: 700px; margin: 20px auto;">';
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 16px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+                    });
+                    html += '</div>';
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 20px; font-size: 1.05em;">${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                            ${slide.cta}
+                        </a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href = `https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=${lang}`;
+        backLink.target = '_blank';
+        backLink.rel = 'noopener';
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide, lang);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
