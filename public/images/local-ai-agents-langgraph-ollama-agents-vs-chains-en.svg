@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Agents vs Chains: Key Differences
+  </text>
+
+  <!-- Left Panel: Chains -->
+  <rect x="28" y="55" width="340" height="265" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Chains (Predetermined)</text>
+
+  <!-- Chain features -->
+  <text x="48" y="110" font-weight="700" fill="#1C1B1F">Decision-making:</text>
+  <text x="48" y="128" font-family="'SF Mono'" font-size="11" fill="#49454F">Fixed sequence</text>
+
+  <text x="48" y="155" font-weight="700" fill="#1C1B1F">Loops:</text>
+  <text x="48" y="173" font-family="'SF Mono'" font-size="11" fill="#49454F">No loops</text>
+
+  <text x="48" y="200" font-weight="700" fill="#1C1B1F">Error recovery:</text>
+  <text x="48" y="218" font-family="'SF Mono'" font-size="11" fill="#49454F">Manual handling</text>
+
+  <text x="48" y="245" font-weight="700" fill="#1C1B1F">Speed:</text>
+  <text x="48" y="263" font-family="'SF Mono'" font-size="11" fill="#34A853">Fast ⚡</text>
+
+  <text x="48" y="290" font-size="11" fill="#EA4335" font-weight="600">Best for: Fixed workflows</text>
+
+  <!-- Right Panel: Agents -->
+  <rect x="432" y="55" width="340" height="265" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Agents (Dynamic)</text>
+
+  <!-- Agent features -->
+  <text x="452" y="110" font-weight="700" fill="#1C1B1F">Decision-making:</text>
+  <text x="452" y="128" font-family="'SF Mono'" font-size="11" fill="#49454F">LLM decides at runtime</text>
+
+  <text x="452" y="155" font-weight="700" fill="#1C1B1F">Loops:</text>
+  <text x="452" y="173" font-family="'SF Mono'" font-size="11" fill="#49454F">Reasoning loop (repeat)</text>
+
+  <text x="452" y="200" font-weight="700" fill="#1C1B1F">Error recovery:</text>
+  <text x="452" y="218" font-family="'SF Mono'" font-size="11" fill="#49454F">LLM self-corrects</text>
+
+  <text x="452" y="245" font-weight="700" fill="#1C1B1F">Speed:</text>
+  <text x="452" y="263" font-family="'SF Mono'" font-size="11" fill="#F4B400">Variable ⏱</text>
+
+  <text x="452" y="290" font-size="11" fill="#34A853" font-weight="600">Best for: Complex reasoning</text>
+
+  <!-- Footer -->
+  <text x="400" y="330" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+    Chains are predictable; agents adapt. Use agents when the task requires reasoning or error recovery.
+  </text>
+</svg>

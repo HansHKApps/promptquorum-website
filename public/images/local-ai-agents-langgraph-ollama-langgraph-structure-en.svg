@@ -1,0 +1,71 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    LangGraph: Nodes, Edges, and State
+  </text>
+
+  <!-- START node -->
+  <circle cx="80" cy="100" r="18" fill="#6750A4"/>
+  <text x="80" y="107" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">START</text>
+
+  <!-- Arrow to reasoning node -->
+  <path d="M 100 100 L 160 100" stroke="#6750A4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Reasoning Node (LLM) -->
+  <rect x="160" y="70" width="120" height="60" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="220" y="95" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">LLM</text>
+  <text x="220" y="110" font-size="10" fill="#49454F" text-anchor="middle" font-weight="600">Reason</text>
+
+  <!-- Arrow branches from reasoning -->
+  <path d="M 280 100 L 340 65" stroke="#6750A4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="310" y="80" font-size="10" fill="#6750A4" font-weight="600">call tool</text>
+
+  <path d="M 280 100 L 340 135" stroke="#34A853" stroke-width="2" fill="none" marker-end="url(#arrowhead-green)"/>
+  <text x="310" y="120" font-size="10" fill="#34A853" font-weight="600">done</text>
+
+  <!-- Tool Execution Node -->
+  <rect x="340" y="35" width="120" height="60" rx="4" fill="#FFF3E0" stroke="#F4B400" stroke-width="2"/>
+  <text x="400" y="60" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle">Tool</text>
+  <text x="400" y="75" font-size="10" fill="#49454F" text-anchor="middle" font-weight="600">Execute</text>
+
+  <!-- Tool back to reasoning -->
+  <path d="M 400 35 Q 400 10 220 10 Q 220 65 220 70" stroke="#6750A4" stroke-width="2" fill="none" stroke-dasharray="4,4" marker-end="url(#arrowhead)"/>
+  <text x="400" y="25" font-size="10" fill="#6750A4" font-weight="600">loop back</text>
+
+  <!-- End Node -->
+  <circle cx="400" cy="155" r="18" fill="#34A853"/>
+  <text x="400" y="162" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">END</text>
+
+  <!-- State representation on the right -->
+  <rect x="560" y="50" width="220" height="260" rx="4" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="670" y="75" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Agent State</text>
+
+  <!-- State fields -->
+  <text x="575" y="105" font-size="11" font-weight="700" fill="#1C1B1F">Context:</text>
+  <text x="575" y="120" font-family="'SF Mono'" font-size="10" fill="#49454F">User task &amp; history</text>
+
+  <text x="575" y="145" font-size="11" font-weight="700" fill="#1C1B1F">Observations:</text>
+  <text x="575" y="160" font-family="'SF Mono'" font-size="10" fill="#49454F">Tool results, step log</text>
+
+  <text x="575" y="185" font-size="11" font-weight="700" fill="#1C1B1F">Decisions:</text>
+  <text x="575" y="200" font-family="'SF Mono'" font-size="10" fill="#49454F">Next tool to call</text>
+
+  <text x="575" y="225" font-size="11" font-weight="700" fill="#1C1B1F">Memory:</text>
+  <text x="575" y="240" font-family="'SF Mono'" font-size="10" fill="#49454F">Conversation history</text>
+
+  <text x="575" y="265" font-size="11" font-weight="700" fill="#1C1B1F">Status:</text>
+  <text x="575" y="280" font-family="'SF Mono'" font-size="10" fill="#49454F">Active / Done / Error</text>
+
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6750A4"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34A853"/>
+    </marker>
+  </defs>
+</svg>

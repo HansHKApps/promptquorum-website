@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Five Local Agent Patterns
+  </text>
+
+  <!-- Pattern 1: Research Agent -->
+  <rect x="28" y="55" width="280" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="168" y="78" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Research Agent</text>
+  <text x="45" y="100" font-size="11" fill="#49454F" font-weight="600">Tasks:</text>
+  <text x="45" y="116" font-family="'SF Mono'" font-size="10" fill="#49454F">• Search web + docs</text>
+  <text x="45" y="130" font-family="'SF Mono'" font-size="10" fill="#49454F">• Synthesize findings</text>
+  <text x="45" y="144" font-family="'SF Mono'" font-size="10" fill="#49454F">• Cite sources</text>
+  <text x="45" y="162" font-size="10" fill="#6750A4" font-weight="600">Best for: Fact-finding, comparisons</text>
+
+  <!-- Pattern 2: Code Agent -->
+  <rect x="316" y="55" width="280" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="456" y="78" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Code Agent</text>
+  <text x="333" y="100" font-size="11" fill="#49454F" font-weight="600">Tasks:</text>
+  <text x="333" y="116" font-family="'SF Mono'" font-size="10" fill="#49454F">• Write and execute code</text>
+  <text x="333" y="130" font-family="'SF Mono'" font-size="10" fill="#49454F">• Debug &amp; iterate</text>
+  <text x="333" y="144" font-family="'SF Mono'" font-size="10" fill="#49454F">• Return results</text>
+  <text x="333" y="162" font-size="10" fill="#6750A4" font-weight="600">Best for: Data analysis, math</text>
+
+  <!-- Pattern 3: Planning Agent -->
+  <rect x="604" y="55" width="168" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="688" y="78" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Planning Agent</text>
+  <text x="621" y="100" font-size="11" fill="#49454F" font-weight="600">Tasks:</text>
+  <text x="621" y="116" font-family="'SF Mono'" font-size="10" fill="#49454F">• Break tasks down</text>
+  <text x="621" y="130" font-family="'SF Mono'" font-size="10" fill="#49454F">• Delegate to others</text>
+  <text x="621" y="144" font-family="'SF Mono'" font-size="10" fill="#49454F">• Orchestrate</text>
+  <text x="621" y="162" font-size="10" fill="#6750A4" font-weight="600">Best for: Complex workflows</text>
+
+  <!-- Pattern 4: Conversational Agent -->
+  <rect x="28" y="195" width="280" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="168" y="218" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Conversational Agent</text>
+  <text x="45" y="240" font-size="11" fill="#49454F" font-weight="600">Tasks:</text>
+  <text x="45" y="256" font-family="'SF Mono'" font-size="10" fill="#49454F">• Maintain conversation memory</text>
+  <text x="45" y="270" font-family="'SF Mono'" font-size="10" fill="#49454F">• Answer questions</text>
+  <text x="45" y="284" font-family="'SF Mono'" font-size="10" fill="#49454F">• Learn from feedback</text>
+  <text x="45" y="302" font-size="10" fill="#6750A4" font-weight="600">Best for: Chatbots, Q&amp;A systems</text>
+
+  <!-- Pattern 5: Workflow Automation -->
+  <rect x="316" y="195" width="456" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="544" y="218" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Workflow Automation Agent</text>
+  <text x="333" y="240" font-size="11" fill="#49454F" font-weight="600">Tasks:</text>
+  <text x="333" y="256" font-family="'SF Mono'" font-size="10" fill="#49454F">• Monitor emails, databases, or APIs</text>
+  <text x="333" y="270" font-family="'SF Mono'" font-size="10" fill="#49454F">• Execute actions autonomously (filter, send, update)</text>
+  <text x="333" y="284" font-family="'SF Mono'" font-size="10" fill="#49454F">• Send confirmations &amp; logs</text>
+  <text x="333" y="302" font-size="10" fill="#6750A4" font-weight="600">Best for: Automation, notification systems, task processing</text>
+
+  <!-- Key insight -->
+  <rect x="28" y="335" width="744" height="70" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="360" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Key Insight: Agent Pattern Selection</text>
+  <text x="400" y="380" font-size="11" fill="#49454F" text-anchor="middle">
+    Choose your pattern based on primary need: reasoning (research), code execution (code agent),
+  </text>
+  <text x="400" y="395" font-size="11" fill="#49454F" text-anchor="middle">
+    planning (planning agent), conversation (conversational), or automation (workflow agent).
+  </text>
+</svg>

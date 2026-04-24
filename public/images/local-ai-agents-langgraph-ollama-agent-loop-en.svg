@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Agent Loop: Observe-Reason-Act
+  </text>
+
+  <!-- Step 1: Observe -->
+  <circle cx="80" cy="120" r="22" fill="#6750A4"/>
+  <text x="80" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="80" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Observe</text>
+  <text x="80" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Context &amp;</text>
+  <text x="80" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">state</text>
+
+  <!-- Arrow 1 -->
+  <text x="140" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 2: Reason -->
+  <circle cx="240" cy="120" r="22" fill="#6750A4"/>
+  <text x="240" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="240" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Reason</text>
+  <text x="240" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">LLM</text>
+  <text x="240" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">decides</text>
+
+  <!-- Arrow 2 -->
+  <text x="300" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 3: Act -->
+  <circle cx="400" cy="120" r="22" fill="#6750A4"/>
+  <text x="400" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="400" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Act</text>
+  <text x="400" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Call</text>
+  <text x="400" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">tool</text>
+
+  <!-- Arrow 3 -->
+  <text x="460" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 4: Observe -->
+  <circle cx="560" cy="120" r="22" fill="#6750A4"/>
+  <text x="560" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="560" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Observe</text>
+  <text x="560" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Tool</text>
+  <text x="560" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">result</text>
+
+  <!-- Arrow 4 -->
+  <text x="620" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 5: Decide -->
+  <circle cx="720" cy="120" r="22" fill="#6750A4"/>
+  <text x="720" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="720" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Decide</text>
+  <text x="720" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Done?</text>
+  <text x="720" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Loop/end</text>
+
+  <!-- Loop-back arrow -->
+  <path d="M 700 142 Q 700 260 80 260 Q 80 142 100 135" stroke="#6750A4" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  <text x="400" y="280" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">Repeat until task complete</text>
+
+  <!-- Footer note -->
+  <text x="400" y="320" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+    Local agents run this loop locally: no API calls, full data control, but slower than cloud
+  </text>
+</svg>

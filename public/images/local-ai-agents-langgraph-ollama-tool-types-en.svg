@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Agent Tools: Types and Use Cases
+  </text>
+
+  <!-- Table Structure -->
+  <!-- Header Row -->
+  <rect x="18" y="48" width="764" height="28" fill="#F7F2FA"/>
+  <text x="35" y="68" font-size="12" font-weight="700" fill="#79747E">Tool Type</text>
+  <text x="240" y="68" font-size="12" font-weight="700" fill="#79747E">Purpose</text>
+  <text x="520" y="68" font-size="12" font-weight="700" fill="#79747E">Latency</text>
+  <text x="680" y="68" font-size="12" font-weight="700" fill="#79747E">Use Case</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Web Search -->
+  <circle cx="35" cy="107" r="8" fill="#6750A4"/>
+  <text x="35" y="111" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="85" y="111" font-size="12" font-weight="600" fill="#1C1B1F">Web Search</text>
+  <text x="240" y="111" font-size="11" fill="#49454F">Find information online</text>
+  <text x="520" y="111" font-size="11" fill="#F4B400">2–5s</text>
+  <text x="680" y="111" font-size="11" fill="#6750A4">Research, fact-check</text>
+  <line x1="18" y1="123" x2="782" y2="123" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Code Execution -->
+  <circle cx="35" cy="150" r="8" fill="#6750A4"/>
+  <text x="35" y="154" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="85" y="154" font-size="12" font-weight="600" fill="#1C1B1F">Code Execution</text>
+  <text x="240" y="154" font-size="11" fill="#49454F">Run Python, compute math</text>
+  <text x="520" y="154" font-size="11" fill="#34A853">100–500ms</text>
+  <text x="680" y="154" font-size="11" fill="#6750A4">Data analysis, calc</text>
+  <line x1="18" y1="166" x2="782" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: File Operations -->
+  <circle cx="35" cy="193" r="8" fill="#6750A4"/>
+  <text x="35" y="197" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="85" y="197" font-size="12" font-weight="600" fill="#1C1B1F">File Operations</text>
+  <text x="240" y="197" font-size="11" fill="#49454F">Read/write/list files</text>
+  <text x="520" y="197" font-size="11" fill="#34A853">50–200ms</text>
+  <text x="680" y="197" font-size="11" fill="#6750A4">Document access</text>
+  <line x1="18" y1="209" x2="782" y2="209" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Database Query -->
+  <circle cx="35" cy="236" r="8" fill="#6750A4"/>
+  <text x="35" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="85" y="240" font-size="12" font-weight="600" fill="#1C1B1F">Database Query</text>
+  <text x="240" y="240" font-size="11" fill="#49454F">Search structured data</text>
+  <text x="520" y="240" font-size="11" fill="#34A853">100–800ms</text>
+  <text x="680" y="240" font-size="11" fill="#6750A4">Data lookup</text>
+  <line x1="18" y1="252" x2="782" y2="252" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: RAG Vector DB -->
+  <circle cx="35" cy="279" r="8" fill="#6750A4"/>
+  <text x="35" y="283" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="85" y="283" font-size="12" font-weight="600" fill="#1C1B1F">Document Retrieval</text>
+  <text x="240" y="283" font-size="11" fill="#49454F">Semantic search (RAG)</text>
+  <text x="520" y="283" font-size="11" fill="#34A853">200–600ms</text>
+  <text x="680" y="283" font-size="11" fill="#6750A4">Knowledge base</text>
+
+  <!-- Footer note -->
+  <text x="400" y="325" font-size="11" fill="#49454F" text-anchor="middle" font-weight="600">
+    Limit agents to 5–10 tools max. Too many tools confuses the LLM and increases latency per step.
+  </text>
+</svg>
