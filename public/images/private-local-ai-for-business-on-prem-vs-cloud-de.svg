@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">On-Premises vs Cloud AI Architektur</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=de</dc:source>
+  </metadata>
+
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <text x="400" y="30" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">On-Premises vs Cloud AI Architektur</text>
+
+  <!-- Left Panel: Cloud APIs (Problem) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+
+  <text x="198" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Cloud APIs (OpenAI, Anthropic)</text>
+
+  <text x="48" y="110" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Datenflusss:</text>
+  <text x="48" y="128" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Anfrage über Internet</text>
+  <text x="48" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Daten beim Anbieter</text>
+  <text x="48" y="158" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Antwort (200–500ms Latenz)</text>
+
+  <text x="48" y="185" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#EA4335">Kosten im großen Maß:</text>
+  <text x="48" y="203" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#EA4335">20.000 €/Jahr</text>
+  <text x="48" y="220" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">(bei 1 Mrd. Tokens/Monat)</text>
+
+  <text x="48" y="245" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Konformität:</text>
+  <text x="48" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ HIPAA riskant</text>
+  <text x="48" y="278" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ DSGVO schwierig</text>
+  <text x="48" y="293" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ Datenspeicherort</text>
+
+  <!-- Right Panel: On-Premises (Goal) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+
+  <text x="602" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">On-Premises Infrastruktur</text>
+
+  <text x="452" y="110" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Datenflusss:</text>
+  <text x="452" y="128" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Anfrage an lokalen vLLM</text>
+  <text x="452" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Daten verlassen Rechenzentrum nicht</text>
+  <text x="452" y="158" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Sofortige Antwort (50–150ms Latenz)</text>
+
+  <text x="452" y="185" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853">Kosten im großen Maß:</text>
+  <text x="452" y="203" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853">5.000 €/Jahr</text>
+  <text x="452" y="220" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">(Hardware + Strom)</text>
+
+  <text x="452" y="245" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Konformität:</text>
+  <text x="452" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✓ HIPAA-konform</text>
+  <text x="452" y="278" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✓ DSGVO-konform</text>
+  <text x="452" y="293" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✓ Vollständige Kontrolle</text>
+
+  <text x="830" y="340" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

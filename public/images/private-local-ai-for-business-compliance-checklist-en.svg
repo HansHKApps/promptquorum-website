@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">On-Premises AI Compliance Checklist</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/private-local-ai-for-business</dc:source>
+  </metadata>
+
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <text x="400" y="30" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Compliance Checklist: GDPR, HIPAA, SOC2</text>
+
+  <!-- GDPR Section -->
+  <rect x="28" y="55" width="220" height="165" rx="6" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="138" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1976D2" text-anchor="middle">GDPR (EU)</text>
+
+  <circle cx="48" cy="110" r="6" fill="#2196F3"/>
+  <text x="64" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Data residency in EU</text>
+
+  <circle cx="48" cy="135" r="6" fill="#2196F3"/>
+  <text x="64" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Data Processing Agreement</text>
+
+  <circle cx="48" cy="160" r="6" fill="#2196F3"/>
+  <text x="64" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Encryption at rest/transit</text>
+
+  <circle cx="48" cy="185" r="6" fill="#2196F3"/>
+  <text x="64" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Right to erasure (local)</text>
+
+  <circle cx="48" cy="210" r="6" fill="#2196F3"/>
+  <text x="64" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Access & portability logs</text>
+
+  <!-- HIPAA Section -->
+  <rect x="290" y="55" width="220" height="165" rx="6" fill="#FCE4EC" stroke="#EA4335" stroke-width="2"/>
+  <text x="400" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#C62828" text-anchor="middle">HIPAA (Healthcare)</text>
+
+  <circle cx="310" cy="110" r="6" fill="#EA4335"/>
+  <text x="326" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">AES-256 encryption</text>
+
+  <circle cx="310" cy="135" r="6" fill="#EA4335"/>
+  <text x="326" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Audit logging (all queries)</text>
+
+  <circle cx="310" cy="160" r="6" fill="#EA4335"/>
+  <text x="326" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Role-based access (RBAC)</text>
+
+  <circle cx="310" cy="185" r="6" fill="#EA4335"/>
+  <text x="326" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Business Associate Agr.</text>
+
+  <circle cx="310" cy="210" r="6" fill="#EA4335"/>
+  <text x="326" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Physical server security</text>
+
+  <!-- SOC2 Section -->
+  <rect x="552" y="55" width="220" height="165" rx="6" fill="#F3E5F5" stroke="#6750A4" stroke-width="2"/>
+  <text x="662" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">SOC2 (Enterprise)</text>
+
+  <circle cx="572" cy="110" r="6" fill="#6750A4"/>
+  <text x="588" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Audit trail (complete)</text>
+
+  <circle cx="572" cy="135" r="6" fill="#6750A4"/>
+  <text x="588" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Access controls (MFA)</text>
+
+  <circle cx="572" cy="160" r="6" fill="#6750A4"/>
+  <text x="588" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Encryption standard</text>
+
+  <circle cx="572" cy="185" r="6" fill="#6750A4"/>
+  <text x="588" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Data retention policy</text>
+
+  <circle cx="572" cy="210" r="6" fill="#6750A4"/>
+  <text x="588" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">Incident response plan</text>
+
+  <!-- Implementation Section -->
+  <rect x="28" y="235" width="744" height="175" rx="6" fill="#FFF3E0" stroke="#F4B400" stroke-width="2"/>
+  <text x="400" y="265" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#F57F17" text-anchor="middle">Implementation: Essential for All Deployments</text>
+
+  <text x="60" y="295" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Security & Encryption:</text>
+  <text x="80" y="313" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• TLS 1.3 for all network communications</text>
+  <text x="80" y="328" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• AES-256 encryption for data at rest (PostgreSQL, S3)</text>
+
+  <text x="60" y="355" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Monitoring & Audit:</text>
+  <text x="80" y="373" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Log every inference request (query, user, response, timestamp, error codes)</text>
+  <text x="80" y="388" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Store logs in tamper-proof format for regulatory review</text>
+
+  <text x="792" y="410" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

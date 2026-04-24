@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">本地部署与云API架构对比</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=zh</dc:source>
+  </metadata>
+
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <text x="400" y="30" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">本地部署与云API架构对比</text>
+
+  <!-- Left Panel: Cloud APIs (Problem) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+
+  <text x="198" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">云API (OpenAI、Anthropic)</text>
+
+  <text x="48" y="110" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">数据流:</text>
+  <text x="48" y="128" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• 通过互联网发送请求</text>
+  <text x="48" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• 数据暴露于供应商服务器</text>
+  <text x="48" y="158" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• 响应 (200–500ms延迟)</text>
+
+  <text x="48" y="185" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#EA4335">规模化成本:</text>
+  <text x="48" y="203" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#EA4335">$20,000/年</text>
+  <text x="48" y="220" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">(月10亿tokens)</text>
+
+  <text x="48" y="245" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">合规性:</text>
+  <text x="48" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ HIPAA风险</text>
+  <text x="48" y="278" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ GDPR困难</text>
+  <text x="48" y="293" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ 数据驻地</text>
+
+  <!-- Right Panel: On-Premises (Goal) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+
+  <text x="602" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">本地部署基础设施</text>
+
+  <text x="452" y="110" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">数据流:</text>
+  <text x="452" y="128" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• 本地vLLM处理请求</text>
+  <text x="452" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• 数据不离开企业</text>
+  <text x="452" y="158" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• 即时响应 (50–150ms)</text>
+
+  <text x="452" y="185" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853">规模化成本:</text>
+  <text x="452" y="203" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853">$5,000/年</text>
+  <text x="452" y="220" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">(硬件+电力)</text>
+
+  <text x="452" y="245" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">合规性:</text>
+  <text x="452" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✓ HIPAA就绪</text>
+  <text x="452" y="278" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✓ GDPR兼容</text>
+  <text x="452" y="293" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✓ 完全控制</text>
+
+  <text x="830" y="340" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>
