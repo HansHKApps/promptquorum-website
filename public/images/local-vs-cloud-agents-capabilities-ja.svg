@@ -1,0 +1,55 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">エージェント機能の比較 (2026年4月)</text>
+
+  <!-- Header -->
+  <text x="40" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">タスク</text>
+  <text x="280" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">クラウド エージェント</text>
+  <text x="550" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">ローカル エージェント</text>
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Multi-step reasoning -->
+  <text x="40" y="115" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">多段階推論</text>
+  <circle cx="310" cy="111" r="10" fill="#34A853"/>
+  <text x="310" y="116" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">✓</text>
+  <text x="550" y="115" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">良好 (13B+)</text>
+  <line x1="18" y1="128" x2="782" y2="128" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Code generation -->
+  <text x="40" y="155" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">コード生成</text>
+  <circle cx="310" cy="151" r="10" fill="#34A853"/>
+  <text x="310" y="156" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">✓</text>
+  <text x="550" y="155" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">良好 (Qwen Coder)</text>
+  <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Web search -->
+  <text x="40" y="195" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Web検索/閲覧</text>
+  <text x="280" y="195" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, sans-serif">ネイティブ</text>
+  <circle cx="620" cy="191" r="10" fill="#F4B400"/>
+  <text x="620" y="196" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">DIY</text>
+  <line x1="18" y1="208" x2="782" y2="208" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Document processing -->
+  <text x="40" y="235" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">ドキュメント処理</text>
+  <circle cx="310" cy="231" r="10" fill="#34A853"/>
+  <text x="310" y="236" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">✓</text>
+  <text x="550" y="235" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">良好 (RAG経由)</text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Function calling -->
+  <text x="40" y="275" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">関数呼び出し/ツール</text>
+  <text x="280" y="275" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, sans-serif">ネイティブ</text>
+  <text x="550" y="275" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">Ollama API経由</text>
+  <line x1="18" y1="288" x2="782" y2="288" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: Long-term memory -->
+  <text x="40" y="315" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">長期記憶</text>
+  <text x="280" y="315" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, sans-serif">制限あり</text>
+  <circle cx="620" cy="311" r="10" fill="#34A853"/>
+  <text x="620" y="316" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">✓</text>
+  <line x1="18" y1="328" x2="782" y2="328" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="400" y="360" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, sans-serif">クラウド エージェントは推論とネイティブ統合に優れている。ローカルはカスタマイズと完全制御を提供。</text>
+  <text x="400" y="380" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">✓ = 優秀/ネイティブ  |  良好 = 機能的だが実装が必要  |  DIY = 手動統合が必要</text>
+  <text x="750" y="410" text-anchor="end" font-size="10" fill="#999" font-family="system-ui, sans-serif">promptquorum.com</text>
+</svg>

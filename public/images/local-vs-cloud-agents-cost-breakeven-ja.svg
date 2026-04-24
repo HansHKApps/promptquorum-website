@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">コスト分析：クラウド vs ローカル エージェント</text>
+  <text x="400" y="48" font-size="12" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">月次トークン量によって、より安価なアプローチが決まります</text>
+
+  <!-- Header -->
+  <text x="40" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">月次量</text>
+  <text x="240" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">クラウドコスト (GPT-4)</text>
+  <text x="480" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">ローカルコスト (償却)</text>
+  <text x="700" y="80" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, sans-serif">より安い</text>
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <text x="40" y="115" font-size="12" fill="#1C1B1F" font-family="system-ui, sans-serif">100万トークン/月</text>
+  <text x="240" y="115" font-size="12" font-weight="600" fill="#34A853" font-family="'SF Mono', Monaco, monospace">$20</text>
+  <text x="480" y="115" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">$50 (ハード)</text>
+  <circle cx="730" cy="111" r="12" fill="#34A853"/>
+  <text x="730" y="116" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">Cloud</text>
+  <line x1="18" y1="128" x2="782" y2="128" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="40" y="155" font-size="12" fill="#1C1B1F" font-family="system-ui, sans-serif">1000万トークン/月</text>
+  <text x="240" y="155" font-size="12" font-weight="600" fill="#34A853" font-family="'SF Mono', Monaco, monospace">$200</text>
+  <text x="480" y="155" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">$50 + 電力</text>
+  <circle cx="730" cy="151" r="12" fill="#34A853"/>
+  <text x="730" y="156" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">Cloud</text>
+  <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Break-even -->
+  <text x="40" y="195" font-size="12" fill="#1C1B1F" font-family="system-ui, sans-serif" font-weight="700">5000万トークン/月</text>
+  <text x="240" y="195" font-size="12" font-weight="700" fill="#F4B400" font-family="'SF Mono', Monaco, monospace">$1,000</text>
+  <text x="480" y="195" font-size="12" font-weight="700" fill="#F4B400" font-family="'SF Mono', Monaco, monospace">$1,000</text>
+  <circle cx="730" cy="191" r="12" fill="#F4B400"/>
+  <text x="730" y="196" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">同等</text>
+  <line x1="18" y1="208" x2="782" y2="208" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="40" y="235" font-size="12" fill="#1C1B1F" font-family="system-ui, sans-serif">1億トークン/月</text>
+  <text x="240" y="235" font-size="12" font-weight="600" fill="#49454F" font-family="'SF Mono', Monaco, monospace">$2,000</text>
+  <text x="480" y="235" font-size="12" fill="#EA4335" font-weight="700" font-family="'SF Mono', Monaco, monospace">$100</text>
+  <circle cx="730" cy="231" r="12" fill="#EA4335"/>
+  <text x="730" y="236" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">Local</text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <text x="40" y="275" font-size="12" fill="#1C1B1F" font-family="system-ui, sans-serif">10億トークン/月</text>
+  <text x="240" y="275" font-size="12" font-weight="600" fill="#49454F" font-family="'SF Mono', Monaco, monospace">$20,000</text>
+  <text x="480" y="275" font-size="12" fill="#EA4335" font-weight="700" font-family="'SF Mono', Monaco, monospace">$300</text>
+  <circle cx="730" cy="271" r="12" fill="#EA4335"/>
+  <text x="730" y="276" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, sans-serif">Local</text>
+  <line x1="18" y1="288" x2="782" y2="288" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Key insight boxes -->
+  <rect x="28" y="320" width="340" height="80" rx="4" fill="#E8F5E9" stroke="#34A853" stroke-width="1"/>
+  <text x="48" y="340" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">クラウドが5000万/月未満で勝利</text>
+  <text x="48" y="360" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">初期コストが低い、ハード不要。</text>
+  <text x="48" y="375" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">最適：スタートアップ、可変負荷。</text>
+  <text x="48" y="390" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">損益分岐点：~5000万トークン/月</text>
+
+  <rect x="432" y="320" width="340" height="80" rx="4" fill="#FFEBEE" stroke="#EA4335" stroke-width="1"/>
+  <text x="452" y="340" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">ローカルが5000万/月以上で勝利</text>
+  <text x="452" y="360" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">大規模で最大20倍安い。</text>
+  <text x="452" y="375" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">最適：エンタープライズ、高量。</text>
+  <text x="452" y="390" font-size="11" fill="#49454F" font-family="system-ui, sans-serif">要件：16–64 GB GPU。</text>
+</svg>
