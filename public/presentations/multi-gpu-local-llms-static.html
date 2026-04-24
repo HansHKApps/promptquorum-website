@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-GPU Local LLMs | PromptQuorum</title>
+    <meta name="description" content="Interactive 14-slide presentation on multi-GPU LLM inference. Learn how dual RTX 4090s run 70B models at 100 tok/sec with vLLM and Ollama." />
+    <meta property="og:title" content="Multi-GPU Local LLMs — PromptQuorum" />
+    <meta property="og:description" content="Run 70B models across dual RTX 4090s at 100 tok/sec with only 5-10% overhead. Learn vLLM tensor parallelism, Ollama auto-split, and when multi-GPU makes sense." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/multi-gpu-local-llms" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/multi-gpu-local-llms?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Multi-GPU Local LLMs</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/multi-gpu-local-llms">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama',
+                prevBtn: '← Prev',
+                nextBtn: 'Next →',
+                readFullArticle: 'Read the full article →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Multi-GPU Local LLMs',
+                        subtitle: 'Dual RTX 4090s: 70B at ~100 tok/sec with only 5-10% overhead',
+                        link: 'https://www.promptquorum.com/local-llms/multi-gpu-local-llms'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Key Takeaways',
+                        items: [
+                            '<strong>Multi-GPU:</strong> Split large models across 2+ GPUs. Example: 70B model across 2× RTX 4090 = 48 GB total VRAM',
+                            '<strong>Speed penalty:</strong> ~5-10% slower than single GPU (GPU-to-GPU communication overhead)',
+                            '<strong>Best for:</strong> 70B models, high-concurrency services (50+ simultaneous users)',
+                            '<strong>Automatic:</strong> Modern tools (vLLM, Ollama, llama.cpp) auto-detect multiple GPUs',
+                            '<strong>Standard in 2026:</strong> Production deployments use multi-GPU by default'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How Layer Splitting Works',
+                        items: [
+                            '<strong>70B Transformer model:</strong> 80 layers total',
+                            '<strong>GPU 1:</strong> Layers 1-40 (first half)',
+                            '<strong>GPU 2:</strong> Layers 41-80 (second half)',
+                            '<strong>One token = one GPU transfer:</strong> Layer 1-40 on GPU1, then layers 41-80 on GPU2, then back for next token',
+                            '<strong>Minimal communication overhead</strong> compared to across-the-board tensor parallelism'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'NVLink vs PCIe',
+                        line1: '<strong>NVLink (900 GB/sec):</strong> Professional GPUs (A100/H100), 3-5% communication overhead',
+                        line2: '<strong>PCIe 4.0 (64 GB/sec):</strong> Consumer RTX cards, 5-10% overhead | PCIe 5.0 (128 GB/sec), 6-7% overhead',
+                        tip: '💡 Consumer RTX uses PCIe; NVLink is unavailable. PCIe 5.0 helps but marginal improvement over 4.0.'
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'vLLM Setup (4 Steps)',
+                        items: [
+                            '<strong>Verify both GPUs are detected:</strong> Run nvidia-smi — both GPUs should appear with available VRAM',
+                            '<strong>Install vLLM:</strong> pip install vllm',
+                            '<strong>Launch vLLM with tensor-parallel-size 2:</strong> vllm serve meta-llama/Llama-3.3-70B --tensor-parallel-size 2 --gpu-memory-utilization 0.95 --port 8000',
+                            '<strong>Verify both GPUs are loaded:</strong> Run nvidia-smi — both GPUs should show memory usage matching ~half the model size'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Ollama Setup (4 Steps)',
+                        items: [
+                            '<strong>Run Ollama normally:</strong> ollama serve',
+                            '<strong>Ollama detects 2+ GPUs automatically:</strong> No configuration needed',
+                            '<strong>Ollama auto-splits models</strong> across detected GPUs',
+                            '<strong>Verify multi-GPU setup:</strong> nvidia-smi should show both GPUs loading with model memory'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Performance with 2 GPUs',
+                        columns: ['Setup', 'Model', 'Speed', 'Cost'],
+                        rows: [
+                            { 'Setup': '1x RTX 4090 (24 GB)', 'Model': '7B', 'Speed': '150 tok/sec', 'Cost': '$1,800' },
+                            { 'Setup': '1x RTX 4090 (24 GB)', 'Model': '70B', 'Speed': 'Cannot fit', 'Cost': '$1,800' },
+                            { 'Setup': '2x RTX 4090 (48 GB)', 'Model': '70B Q4', 'Speed': '100 tok/sec', 'Cost': '$3,600' },
+                            { 'Setup': '2x RTX 4090 (48 GB)', 'Model': '70B Q5', 'Speed': '90 tok/sec', 'Cost': '$3,600' },
+                            { 'Setup': '1x RTX 5090 (32 GB)', 'Model': '70B Q4', 'Speed': '40-50 tok/sec', 'Cost': '$2,000' },
+                            { 'Setup': '2x RTX 5090 (64 GB)', 'Model': '70B Q8', 'Speed': '120 tok/sec', 'Cost': '$4,000' },
+                            { 'Setup': '2x RTX 5090 (64 GB)', 'Model': '405B Q4', 'Speed': '25-35 tok/sec', 'Cost': '$4,000' },
+                            { 'Setup': 'RTX 6000 Ada + RTX 4090', 'Model': '70B FP16', 'Speed': '110 tok/sec', 'Cost': '$6,800' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'RTX 5090 Inflection Point (Jan 2026)',
+                        line1: '<strong>Single RTX 5090 (32 GB):</strong> Runs 70B Q4 at 40-50 tok/sec — eliminates dual-GPU need for 70B Q4',
+                        line2: '<strong>Dual RTX 5090 (64 GB):</strong> 70B Q8 at 120 tok/sec OR 405B Q4 at 25-35 tok/sec — first consumer setup for 405B',
+                        tip: '🎯 RTX 5090 changed the economics: single card now viable for 70B; multi-GPU only for 405B or very high throughput'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'When to Use Multi-GPU',
+                        items: [
+                            '<strong>You need to run 70B+ models</strong> that don\'t fit in a single GPU',
+                            '<strong>You serve 50+ concurrent users</strong> requiring batch processing',
+                            '<strong>You want to run multiple 13B models simultaneously</strong> on different GPUs',
+                            '<strong>You run production services</strong> requiring consistent throughput, not experimentation'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 Common Multi-GPU Mistakes',
+                        items: [
+                            '<strong>Expecting 2× speedup with 2 GPUs.</strong> You get ~90% of single-GPU speed (5-10% overhead).',
+                            '<strong>Assuming GPUs must be identical.</strong> You can mix RTX 4090 + RTX 4080, but slower GPU bottlenecks the pair.',
+                            '<strong>Not using NVLink for communication.</strong> NVLink (900 GB/sec) is faster than PCIe; unavailable on consumer cards.',
+                            '<strong>Forgetting about PCIe bandwidth.</strong> GPU-to-GPU via PCIe is limited (~16 GB/sec on PCIe 4.0).',
+                            '<strong>Buying a second GPU before trying single-GPU options.</strong> First: try Q4 quantization, CPU offload (8-10 tok/s), or RTX 5090 (40-50 tok/s for 70B Q4). Multi-GPU is the last resort.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Top 5 GPU Configurations (Ranked)',
+                        columns: ['Rank', 'Setup', 'Performance', 'Best For'],
+                        rows: [
+                            { 'Rank': '1', 'Setup': '2× RTX 5090 (64 GB)', 'Performance': '70B Q8 @ 120 tok/s', 'Best For': 'Latest consumer, 70B+' },
+                            { 'Rank': '2', 'Setup': '2× RTX 4090 (48 GB)', 'Performance': '70B Q4 @ 100 tok/s', 'Best For': 'Most popular dual-GPU' },
+                            { 'Rank': '3', 'Setup': '1× RTX 5090 (32 GB)', 'Performance': '70B Q4 @ 40-50 tok/s', 'Best For': 'Single-card 70B' },
+                            { 'Rank': '4', 'Setup': 'RTX 6000 Ada + RTX 4090', 'Performance': '70B FP16 @ 110 tok/s', 'Best For': 'Mixed pro + consumer' },
+                            { 'Rank': '5', 'Setup': '4× A100 80GB (320GB)', 'Performance': '405B FP16 w/ NVLink', 'Best For': 'Professional/enterprise' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            {
+                                q: 'When should I use multiple GPUs?',
+                                a: 'Use when a single GPU lacks VRAM. Two RTX 4090s (48 GB) run 70B at 100 tok/sec. Single 4090 + offload only reaches 8-10 tok/sec.'
+                            },
+                            {
+                                q: 'Does NVLink make a big difference for LLM inference?',
+                                a: 'NVLink improves 10-30% vs PCIe. For 70B dual-GPU, reduces overhead 15% → 3-5%. Consumer RTX uses PCIe (sufficient for most).'
+                            },
+                            {
+                                q: 'How many GPUs for 70B and 405B models?',
+                                a: '70B Q4: 2× RTX 4090 (35GB needed, 48GB available). 405B Q4: 4× RTX 4090 (200GB needed, barely fits). Use professional A100 for 405B.'
+                            },
+                            {
+                                q: 'Can I run 70B on a single RTX 5090 without multi-GPU?',
+                                a: 'Yes — RTX 5090 (32 GB GDDR7) runs Llama 70B Q4 at 40-50 tok/sec. Tight fit at 32 GB for long context (32K+); still needs dual GPUs.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Try Single-GPU First',
+                        items: [
+                            '<strong>Before investing in multi-GPU ($3,600+),</strong> try: Q4 quantization (halves VRAM)',
+                            '<strong>CPU offloading via Ollama:</strong> 70B on single RTX 4090 = 8-10 tok/sec (slow but free)',
+                            '<strong>RTX 5090 single-card:</strong> 70B Q4 at 40-50 tok/sec for $2,000 — eliminates multi-GPU for many use cases',
+                            '<strong>Multi-GPU should be last optimization,</strong> not the first. Measure before buying.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ready to Build Your Multi-GPU Setup?',
+                        body: 'Whether dual RTX 4090s, RTX 5090s, or professional A100s, PromptQuorum guides you through tensor parallelism, hardware selection, and production deployment.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Multi-GPU lokale LLMs 2026: Dual RTX 4090 für 70B bei 100 tok/s',
+                prevBtn: '← Zurück',
+                nextBtn: 'Weiter →',
+                readFullArticle: 'Lesen Sie den vollständigen Artikel →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Multi-GPU lokale LLMs',
+                        subtitle: 'Dual RTX 4090: 70B mit nur 5–10% Overhead bei ~100 tok/Sek.',
+                        link: 'https://www.promptquorum.com/local-llms/multi-gpu-local-llms?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Wichtigste Erkenntnisse',
+                        items: [
+                            '<strong>Multi-GPU:</strong> Große Modelle auf 2+ GPUs aufteilen. Beispiel: 70B-Modell auf 2× RTX 4090 = 48 GB VRAM',
+                            '<strong>Speed-Penalty:</strong> ~5–10% langsamer als Single-GPU (GPU-zu-GPU-Kommunikations-Overhead)',
+                            '<strong>Beste für:</strong> 70B-Modelle, High-Concurrency-Services (50+ gleichzeitige Nutzer)',
+                            '<strong>Automatisch:</strong> Moderne Tools (vLLM, Ollama, llama.cpp) erkennen GPUs automatisch',
+                            '<strong>Standard 2026:</strong> Produktionsdeployments nutzen Multi-GPU standardmäßig'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie Layer Splitting funktioniert',
+                        items: [
+                            '<strong>70B Transformer-Modell:</strong> 80 Schichten insgesamt',
+                            '<strong>GPU 1:</strong> Schichten 1–40 (erste Hälfte)',
+                            '<strong>GPU 2:</strong> Schichten 41–80 (zweite Hälfte)',
+                            '<strong>Ein Token = ein GPU-Transfer:</strong> Schichten 1–40 auf GPU1, dann 41–80 auf GPU2, dann zurück für nächsten Token',
+                            '<strong>Minimaler Kommunikations-Overhead</strong> verglichen mit Tensor Parallelism'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'NVLink vs PCIe',
+                        line1: '<strong>NVLink (900 GB/Sek.):</strong> Professionelle GPUs (A100/H100), 3–5% Overhead',
+                        line2: '<strong>PCIe 4.0 (64 GB/Sek.):</strong> Consumer RTX, 5–10% Overhead | PCIe 5.0 (128 GB/Sek.), 6–7% Overhead',
+                        tip: '💡 Consumer RTX verwendet PCIe; NVLink nicht verfügbar. PCIe 5.0 hilft, aber nur marginale Verbesserung.'
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'vLLM Setup (4 Schritte)',
+                        items: [
+                            '<strong>Überprüfe, beide GPUs erkannt:</strong> nvidia-smi ausführen — beide sollten mit VRAM angezeigt werden',
+                            '<strong>Installiere vLLM:</strong> pip install vllm',
+                            '<strong>Starte vLLM mit tensor-parallel-size 2:</strong> vllm serve meta-llama/Llama-3.3-70B --tensor-parallel-size 2 --gpu-memory-utilization 0.95 --port 8000',
+                            '<strong>Überprüfe, beide GPUs geladen:</strong> nvidia-smi — beide sollten Speicher nutzen (jeweils ~Hälfte der Modellgröße)'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Ollama Setup (4 Schritte)',
+                        items: [
+                            '<strong>Starte Ollama normal:</strong> ollama serve',
+                            '<strong>Ollama erkennt 2+ GPUs automatisch:</strong> Keine Konfiguration nötig',
+                            '<strong>Ollama verteilt Modelle</strong> automatisch auf erkannte GPUs',
+                            '<strong>Überprüfe Multi-GPU Setup:</strong> nvidia-smi sollte beide GPUs mit Modellspeicher zeigen'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Performance mit 2 GPUs',
+                        columns: ['Setup', 'Modell', 'Geschwindigkeit', 'Kosten'],
+                        rows: [
+                            { 'Setup': '1× RTX 4090 (24 GB)', 'Modell': '7B', 'Geschwindigkeit': '150 tok/Sek.', 'Kosten': '1.800 €' },
+                            { 'Setup': '1× RTX 4090 (24 GB)', 'Modell': '70B', 'Geschwindigkeit': 'Passt nicht', 'Kosten': '1.800 €' },
+                            { 'Setup': '2× RTX 4090 (48 GB)', 'Modell': '70B Q4', 'Geschwindigkeit': '100 tok/Sek.', 'Kosten': '3.600 €' },
+                            { 'Setup': '2× RTX 4090 (48 GB)', 'Modell': '70B Q5', 'Geschwindigkeit': '90 tok/Sek.', 'Kosten': '3.600 €' },
+                            { 'Setup': '1× RTX 5090 (32 GB)', 'Modell': '70B Q4', 'Geschwindigkeit': '40–50 tok/Sek.', 'Kosten': '2.000 €' },
+                            { 'Setup': '2× RTX 5090 (64 GB)', 'Modell': '70B Q8', 'Geschwindigkeit': '120 tok/Sek.', 'Kosten': '4.000 €' },
+                            { 'Setup': '2× RTX 5090 (64 GB)', 'Modell': '405B Q4', 'Geschwindigkeit': '25–35 tok/Sek.', 'Kosten': '4.000 €' },
+                            { 'Setup': 'RTX 6000 Ada + RTX 4090', 'Modell': '70B FP16', 'Geschwindigkeit': '110 tok/Sek.', 'Kosten': '6.800 €' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'RTX 5090 Wendepunkt (Jan. 2026)',
+                        line1: '<strong>Einzelne RTX 5090 (32 GB):</strong> Läuft 70B Q4 bei 40–50 tok/Sek. — macht Dual-GPU für 70B Q4 überflüssig',
+                        line2: '<strong>Dual RTX 5090 (64 GB):</strong> 70B Q8 bei 120 tok/Sek. ODER 405B Q4 bei 25–35 tok/Sek. — erste Consumer-Option für 405B',
+                        tip: '🎯 RTX 5090 veränderte die Ökonomie: Single-Card jetzt für 70B lebensfähig; Multi-GPU nur für 405B oder sehr hohen Durchsatz'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wann Multi-GPU verwenden',
+                        items: [
+                            '<strong>Sie müssen 70B+-Modelle ausführen,</strong> die nicht in eine Single-GPU passen',
+                            '<strong>Sie bedienen 50+ gleichzeitige Nutzer</strong> und benötigen Batch-Verarbeitung',
+                            '<strong>Sie möchten mehrere 13B-Modelle gleichzeitig</strong> auf verschiedenen GPUs ausführen',
+                            '<strong>Sie betreiben Produktionsservices</strong> mit konsistenter Durchsatzanforderung'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 häufige Multi-GPU-Fehler',
+                        items: [
+                            '<strong>Erwartet 2× Speedup mit 2 GPUs.</strong> Sie erhalten ~90% Single-GPU-Geschwindigkeit (5–10% Overhead).',
+                            '<strong>Nimmt an, GPUs müssen identisch sein.</strong> Sie können RTX 4090 + 4080 mischen, aber langsamere bremst schnellere.',
+                            '<strong>Nutzt NVLink nicht.</strong> NVLink (900 GB/Sek.) schneller als PCIe; nicht auf Consumer-Karten.',
+                            '<strong>Übersieht PCIe-Bandbreite.</strong> GPU-zu-GPU via PCIe begrenzt (~16 GB/Sek. auf PCIe 4.0).',
+                            '<strong>Kauft zweite GPU, bevor Single-GPU-Optionen probiert.</strong> Erst: Q4-Quantisierung, CPU-Offload (8–10 tok/Sek.), RTX 5090 (40–50 tok/Sek. für 70B Q4). Multi-GPU ist letztes Mittel.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Top 5 GPU-Konfigurationen (Rangiert)',
+                        columns: ['Rang', 'Setup', 'Performance', 'Beste für'],
+                        rows: [
+                            { 'Rang': '1', 'Setup': '2× RTX 5090 (64 GB)', 'Performance': '70B Q8 @ 120 tok/Sek.', 'Beste für': 'Neueste Consumer, 70B+' },
+                            { 'Rang': '2', 'Setup': '2× RTX 4090 (48 GB)', 'Performance': '70B Q4 @ 100 tok/Sek.', 'Beste für': 'Beliebteste Dual-GPU' },
+                            { 'Rang': '3', 'Setup': '1× RTX 5090 (32 GB)', 'Performance': '70B Q4 @ 40–50 tok/Sek.', 'Beste für': 'Single-Card 70B' },
+                            { 'Rang': '4', 'Setup': 'RTX 6000 Ada + RTX 4090', 'Performance': '70B FP16 @ 110 tok/Sek.', 'Beste für': 'Gemischt Pro + Consumer' },
+                            { 'Rang': '5', 'Setup': '4× A100 80GB (320GB)', 'Performance': '405B FP16 m/ NVLink', 'Beste für': 'Professional/Enterprise' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            {
+                                q: 'Wann sollte ich mehrere GPUs verwenden?',
+                                a: 'Wenn eine Single-GPU nicht genug VRAM hat. Zwei RTX 4090 (48 GB) laufen 70B bei 100 tok/Sek. Single-GPU + Offload nur 8–10 tok/Sek.'
+                            },
+                            {
+                                q: 'Macht NVLink großen Unterschied bei LLM-Inferenz?',
+                                a: 'NVLink 10–30% besser vs PCIe. Für Dual 70B reduziert Overhead 15% → 3–5%. Consumer RTX nutzt PCIe (ausreichend für meisten).'
+                            },
+                            {
+                                q: 'Wie viele GPUs für 70B und 405B?',
+                                a: '70B Q4: 2× RTX 4090 (35GB nötig, 48GB vorhanden). 405B Q4: 4× RTX 4090 (200GB, kaum Platz). Nutze professionelle A100 für 405B.'
+                            },
+                            {
+                                q: 'Kann ich 70B auf Single RTX 5090 ohne Multi-GPU laufen?',
+                                a: 'Ja — RTX 5090 (32 GB GDDR7) läuft Llama 70B Q4 bei 40–50 tok/Sek. Knapper bei 32 GB für langen Kontext (32K+); braucht immer noch Dual-GPUs dafür.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Versuch Single-GPU zuerst',
+                        items: [
+                            '<strong>Bevor Sie Multi-GPU (3.600+ €) kaufen,</strong> versuchen Sie: Q4-Quantisierung (halbiert VRAM)',
+                            '<strong>CPU-Offloading via Ollama:</strong> 70B auf Single RTX 4090 = 8–10 tok/Sek. (langsam aber kostenlos)',
+                            '<strong>RTX 5090 Single-Card:</strong> 70B Q4 bei 40–50 tok/Sek. für 2.000 € — macht Multi-GPU für viele überflüssig',
+                            '<strong>Multi-GPU sollte letzte Optimierung sein,</strong> nicht die erste. Messen Sie vorher.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereit für Ihr Multi-GPU-Setup?',
+                        body: 'Egal ob Dual RTX 4090, RTX 5090 oder professionelle A100 — PromptQuorum zeigt Tensor Parallelism, Hardware-Auswahl und Production-Deployment.',
+                        cta: 'PromptQuorum kostenlos probieren',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Multi-GPU LLMs locaux 2026 : Dual RTX 4090 pour 70B à 100 tok/s',
+                prevBtn: '← Précédent',
+                nextBtn: 'Suivant →',
+                readFullArticle: 'Lire l\'article complet →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Multi-GPU LLMs locaux',
+                        subtitle: 'Dual RTX 4090 : 70B à ~100 tok/sec avec seulement 5-10% de surcoût',
+                        link: 'https://www.promptquorum.com/local-llms/multi-gpu-local-llms?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Points clés',
+                        items: [
+                            '<strong>Multi-GPU :</strong> Répartir grands modèles sur 2+ GPU. Ex : modèle 70B sur 2× RTX 4090 = 48 Go VRAM',
+                            '<strong>Pénalité de vitesse :</strong> ~5-10% plus lent que single-GPU (surcoût communication)',
+                            '<strong>Meilleur pour :</strong> Modèles 70B, services haute concurrence (50+ utilisateurs simultanés)',
+                            '<strong>Automatique :</strong> Outils modernes (vLLM, Ollama, llama.cpp) détectent GPUs auto',
+                            '<strong>Standard 2026 :</strong> Déploiements production utilisent multi-GPU par défaut'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment fonctionne la répartition des couches',
+                        items: [
+                            '<strong>Modèle 70B Transformer :</strong> 80 couches au total',
+                            '<strong>GPU 1 :</strong> Couches 1-40 (première moitié)',
+                            '<strong>GPU 2 :</strong> Couches 41-80 (deuxième moitié)',
+                            '<strong>Un token = un transfert GPU :</strong> Couches 1-40 sur GPU1, puis 41-80 sur GPU2, puis retour',
+                            '<strong>Surcoût communication minimal</strong> comparé à parallélisme tensoriel'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'NVLink vs PCIe',
+                        line1: '<strong>NVLink (900 Go/sec) :</strong> GPUs pro (A100/H100), 3-5% surcoût',
+                        line2: '<strong>PCIe 4.0 (64 Go/sec) :</strong> RTX grand public, 5-10% surcoût | PCIe 5.0 (128 Go/sec), 6-7%',
+                        tip: '💡 Consumer RTX utilise PCIe ; NVLink indisponible. PCIe 5.0 aide, mais amélioration marginale.'
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Setup vLLM (4 étapes)',
+                        items: [
+                            '<strong>Vérifier les 2 GPU détectées :</strong> Lancer nvidia-smi — les deux devraient apparaître',
+                            '<strong>Installer vLLM :</strong> pip install vllm',
+                            '<strong>Lancer vLLM avec tensor-parallel-size 2 :</strong> vllm serve meta-llama/Llama-3.3-70B --tensor-parallel-size 2 --gpu-memory-utilization 0.95 --port 8000',
+                            '<strong>Vérifier les 2 GPU chargées :</strong> nvidia-smi — les deux devraient montrer usage mémoire (~moitié du modèle)'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Setup Ollama (4 étapes)',
+                        items: [
+                            '<strong>Lancer Ollama normalement :</strong> ollama serve',
+                            '<strong>Ollama détecte 2+ GPU automatiquement :</strong> Aucune configuration nécessaire',
+                            '<strong>Ollama répartit modèles automatiquement</strong> sur GPU détectées',
+                            '<strong>Vérifier setup multi-GPU :</strong> nvidia-smi devrait montrer les deux GPU avec mémoire modèle'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Performance avec 2 GPU',
+                        columns: ['Setup', 'Modèle', 'Vitesse', 'Coût'],
+                        rows: [
+                            { 'Setup': '1× RTX 4090 (24 Go)', 'Modèle': '7B', 'Vitesse': '150 tok/sec', 'Coût': '900 €' },
+                            { 'Setup': '1× RTX 4090 (24 Go)', 'Modèle': '70B', 'Vitesse': 'Ne rentre pas', 'Coût': '900 €' },
+                            { 'Setup': '2× RTX 4090 (48 Go)', 'Modèle': '70B Q4', 'Vitesse': '100 tok/sec', 'Coût': '1 800 €' },
+                            { 'Setup': '2× RTX 4090 (48 Go)', 'Modèle': '70B Q5', 'Vitesse': '90 tok/sec', 'Coût': '1 800 €' },
+                            { 'Setup': '1× RTX 5090 (32 Go)', 'Modèle': '70B Q4', 'Vitesse': '40-50 tok/sec', 'Coût': '1 000 €' },
+                            { 'Setup': '2× RTX 5090 (64 Go)', 'Modèle': '70B Q8', 'Vitesse': '120 tok/sec', 'Coût': '2 000 €' },
+                            { 'Setup': '2× RTX 5090 (64 Go)', 'Modèle': '405B Q4', 'Vitesse': '25-35 tok/sec', 'Coût': '2 000 €' },
+                            { 'Setup': 'RTX 6000 Ada + RTX 4090', 'Modèle': '70B FP16', 'Vitesse': '110 tok/sec', 'Coût': '3 400 €' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Point d\'inflexion RTX 5090 (jan. 2026)',
+                        line1: '<strong>RTX 5090 unique (32 Go) :</strong> Lance 70B Q4 à 40-50 tok/sec — élimine dual-GPU pour 70B Q4',
+                        line2: '<strong>Dual RTX 5090 (64 Go) :</strong> 70B Q8 à 120 tok/sec OU 405B Q4 à 25-35 tok/sec — première option 405B grand public',
+                        tip: '🎯 RTX 5090 a changé l\'économie : single-card maintenant viable pour 70B; multi-GPU pour 405B ou très haut débit'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quand utiliser multi-GPU',
+                        items: [
+                            '<strong>Vous avez besoin de modèles 70B+</strong> qui ne rentrent pas dans une seule GPU',
+                            '<strong>Vous servez 50+ utilisateurs simultanés</strong> avec traitement batch',
+                            '<strong>Vous voulez plusieurs modèles 13B</strong> simultanément sur GPU différentes',
+                            '<strong>Vous exécutez services production</strong> avec débit constant'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5 erreurs courantes multi-GPU',
+                        items: [
+                            '<strong>Attendre 2× speedup avec 2 GPU.</strong> Vous obtenez ~90% vitesse single-GPU (5-10% surcoût).',
+                            '<strong>Supposer GPU doivent être identiques.</strong> Vous pouvez mélanger RTX 4090 + 4080, mais plus lente limite paire.',
+                            '<strong>Pas utiliser NVLink pour communication.</strong> NVLink (900 Go/sec) plus rapide que PCIe; indisponible consumer.',
+                            '<strong>Oublier bande passante PCIe.</strong> GPU-à-GPU via PCIe limité (~16 Go/sec sur PCIe 4.0).',
+                            '<strong>Acheter deuxième GPU avant essayer single-GPU.</strong> D\'abord : quantification Q4, offload CPU (8-10 tok/s), RTX 5090 (40-50 tok/s 70B Q4). Multi-GPU dernier recours.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Top 5 configurations GPU (classées)',
+                        columns: ['Rang', 'Setup', 'Performance', 'Meilleur pour'],
+                        rows: [
+                            { 'Rang': '1', 'Setup': '2× RTX 5090 (64 Go)', 'Performance': '70B Q8 @ 120 tok/sec', 'Meilleur pour': 'Dernier grand public, 70B+' },
+                            { 'Rang': '2', 'Setup': '2× RTX 4090 (48 Go)', 'Performance': '70B Q4 @ 100 tok/sec', 'Meilleur pour': 'Dual-GPU le plus populaire' },
+                            { 'Rang': '3', 'Setup': '1× RTX 5090 (32 Go)', 'Performance': '70B Q4 @ 40-50 tok/sec', 'Meilleur pour': 'Single-card 70B' },
+                            { 'Rang': '4', 'Setup': 'RTX 6000 Ada + RTX 4090', 'Performance': '70B FP16 @ 110 tok/sec', 'Meilleur pour': 'Pro mixte + consumer' },
+                            { 'Rang': '5', 'Setup': '4× A100 80GB (320GB)', 'Performance': '405B FP16 w/ NVLink', 'Meilleur pour': 'Pro/Entreprise' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions fréquemment posées',
+                        faqs: [
+                            {
+                                q: 'Quand utiliser plusieurs GPU ?',
+                                a: 'Quand une seule GPU manque VRAM. Deux RTX 4090 (48 Go) lance 70B à 100 tok/sec. Single 4090 + offload = 8-10 tok/sec.'
+                            },
+                            {
+                                q: 'NVLink fait-il grosse différence pour LLM ?',
+                                a: 'NVLink améliore 10-30% vs PCIe. Pour dual-70B, réduit surcoût 15% → 3-5%. Consumer RTX utilise PCIe (suffisant).'
+                            },
+                            {
+                                q: 'Combien GPU pour 70B et 405B ?',
+                                a: '70B Q4 : 2× RTX 4090 (35Go besoin, 48Go dispo). 405B Q4 : 4× RTX 4090 (200Go). Utilisez pro A100 pour 405B.'
+                            },
+                            {
+                                q: 'Puis-je lancer 70B sur RTX 5090 single sans multi-GPU ?',
+                                a: 'Oui — RTX 5090 (32 Go GDDR7) lance Llama 70B Q4 à 40-50 tok/sec. Serré à 32 Go pour contexte long (32K+); besoin encore dual.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Essayer single-GPU d\'abord',
+                        items: [
+                            '<strong>Avant investir multi-GPU (3.600 €+),</strong> essayer : quantification Q4 (moitié VRAM)',
+                            '<strong>Offload CPU via Ollama :</strong> 70B sur single RTX 4090 = 8-10 tok/sec (lent mais gratuit)',
+                            '<strong>RTX 5090 single-card :</strong> 70B Q4 à 40-50 tok/sec pour 2.000 € — élimine multi-GPU beaucoup cas',
+                            '<strong>Multi-GPU dernière optimization,</strong> pas première. Mesurez avant acheter.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prêt pour votre setup multi-GPU ?',
+                        body: 'Dual RTX 4090, RTX 5090 ou A100 pro — PromptQuorum guide parallélisme tensoriel, sélection matériel, déploiement production.',
+                        cta: 'Essayer PromptQuorum gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'マルチGPU 2026年：デュアル RTX 4090 70B 100トークン/秒',
+                prevBtn: '← 戻る',
+                nextBtn: '次へ →',
+                readFullArticle: '記事全体を読む →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'マルチGPU ローカルLLM',
+                        subtitle: 'デュアル RTX 4090：70B をわずか5～10%のオーバーヘッドで ~100トークン/秒',
+                        link: 'https://www.promptquorum.com/local-llms/multi-gpu-local-llms?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5つの重要なポイント',
+                        items: [
+                            '<strong>マルチGPU :</strong> 大型モデルを 2 個以上の GPU に分割。例：70B モデルを 2× RTX 4090 に分割 = 48GB VRAM',
+                            '<strong>スピード低下 :</strong> シングルGPU 比 ~5～10% 遅い (GPU 間通信オーバーヘッド)',
+                            '<strong>最適用途 :</strong> 70B モデル、高並行サービス (50+ 同時ユーザー)',
+                            '<strong>自動対応 :</strong> 最新ツール (vLLM, Ollama, llama.cpp) は GPU を自動検出',
+                            '<strong>2026 年標準 :</strong> 本番デプロイはデフォルトでマルチGPU'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'レイヤー分割の仕組み',
+                        items: [
+                            '<strong>70B Transformer モデル :</strong> 合計 80 層',
+                            '<strong>GPU 1 :</strong> 層 1～40 (前半)',
+                            '<strong>GPU 2 :</strong> 層 41～80 (後半)',
+                            '<strong>1トークン = 1 GPU 転送 :</strong> 層 1～40 を GPU1 で、41～80 を GPU2 で、次のトークンのため戻す',
+                            '<strong>最小限の通信オーバーヘッド</strong> (テンソル並列処理と比較)'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'NVLink vs PCIe',
+                        line1: '<strong>NVLink (900 GB/秒) :</strong> プロ GPU (A100/H100)、3～5% オーバーヘッド',
+                        line2: '<strong>PCIe 4.0 (64 GB/秒) :</strong> コンシューマー RTX、5～10% | PCIe 5.0 (128 GB/秒)、6～7%',
+                        tip: '💡 コンシューマー RTX は PCIe を使用; NVLink 不可。PCIe 5.0 は役立つが改善は限定的。'
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'vLLM セットアップ (4ステップ)',
+                        items: [
+                            '<strong>両 GPU が検出されることを確認 :</strong> nvidia-smi を実行 — 両方が VRAM で表示されるべき',
+                            '<strong>vLLM をインストール :</strong> pip install vllm',
+                            '<strong>tensor-parallel-size 2 で vLLM を起動 :</strong> vllm serve meta-llama/Llama-3.3-70B --tensor-parallel-size 2 --gpu-memory-utilization 0.95 --port 8000',
+                            '<strong>両 GPU がロードされたことを確認 :</strong> nvidia-smi — 両方がモデルサイズの約半分のメモリを使用'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Ollama セットアップ (4ステップ)',
+                        items: [
+                            '<strong>Ollama を通常通り実行 :</strong> ollama serve',
+                            '<strong>Ollama が 2 個以上の GPU を自動検出 :</strong> 設定不要',
+                            '<strong>Ollama がモデルを検出 GPU に自動分割</strong>',
+                            '<strong>マルチGPU セットアップを確認 :</strong> nvidia-smi は両 GPU がモデルメモリを使用'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '2 GPU でのパフォーマンス',
+                        columns: ['セットアップ', 'モデル', '速度', 'コスト'],
+                        rows: [
+                            { 'セットアップ': '1× RTX 4090 (24 GB)', 'モデル': '7B', '速度': '150 トークン/秒', 'コスト': '¥358,800' },
+                            { 'セットアップ': '1× RTX 4090 (24 GB)', 'モデル': '70B', '速度': '対応不可', 'コスト': '¥358,800' },
+                            { 'セットアップ': '2× RTX 4090 (48 GB)', 'モデル': '70B Q4', '速度': '100 トークン/秒', 'コスト': '¥717,600' },
+                            { 'セットアップ': '2× RTX 4090 (48 GB)', 'モデル': '70B Q5', '速度': '90 トークン/秒', 'コスト': '¥717,600' },
+                            { 'セットアップ': '1× RTX 5090 (32 GB)', 'モデル': '70B Q4', '速度': '40～50 トークン/秒', 'コスト': '¥358,000' },
+                            { 'セットアップ': '2× RTX 5090 (64 GB)', 'モデル': '70B Q8', '速度': '120 トークン/秒', 'コスト': '¥716,000' },
+                            { 'セットアップ': '2× RTX 5090 (64 GB)', 'モデル': '405B Q4', '速度': '25～35 トークン/秒', 'コスト': '¥716,000' },
+                            { 'セットアップ': 'RTX 6000 Ada + RTX 4090', 'モデル': '70B FP16', '速度': '110 トークン/秒', 'コスト': '¥1,358,000' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'RTX 5090 の転換点 (2026年1月)',
+                        line1: '<strong>単一 RTX 5090 (32 GB) :</strong> 70B Q4 を 40～50 トークン/秒で実行 — 70B Q4 でマルチGPU 不要',
+                        line2: '<strong>デュアル RTX 5090 (64 GB) :</strong> 70B Q8 を 120 トークン/秒 または 405B Q4 を 25～35 トークン/秒 — 405B 初の consumer オプション',
+                        tip: '🎯 RTX 5090 が経済構造を変更 : シングルカード now viable for 70B; マルチGPU 405B か超高スループット用のみ'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'マルチGPU をいつ使うか',
+                        items: [
+                            '<strong>70B 以上のモデルを実行する必要がある</strong> (シングルGPU に適合しない)',
+                            '<strong>50 個以上の同時ユーザーをサービス</strong> (バッチ処理が必要)',
+                            '<strong>複数の 13B モデルを同時に</strong> (異なる GPU で実行したい)',
+                            '<strong>一定のスループットが必要な本番サービス</strong> を実行'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5つの一般的なマルチGPU エラー',
+                        items: [
+                            '<strong>2 GPU で 2× スピードアップを期待。</strong> シングルGPU の ~90% (5～10% オーバーヘッド)。',
+                            '<strong>GPU が同じである必要があると考える。</strong> RTX 4090 + 4080 を混合可能だが、遅い方が制限。',
+                            '<strong>NVLink を使用しない通信。</strong> NVLink (900 GB/秒) は PCIe より高速; コンシューマーカードで不可。',
+                            '<strong>PCIe 帯域幅を忘れる。</strong> GPU 間通信は PCIe 経由で制限 (~PCIe 4.0 で 16 GB/秒)。',
+                            '<strong>シングルGPU オプションを試す前に 2 番目 GPU を購入。</strong> まず : Q4 量子化、CPU オフロード (8～10 tok/s)、RTX 5090 (70B Q4 で 40～50)。マルチGPU が最後の手段。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Top 5 GPU 構成 (ランク付け)',
+                        columns: ['ランク', 'セットアップ', 'パフォーマンス', '最適用途'],
+                        rows: [
+                            { 'ランク': '1', 'セットアップ': '2× RTX 5090 (64 GB)', 'パフォーマンス': '70B Q8 @ 120 tok/s', '最適用途': '最新 consumer、70B+' },
+                            { 'ランク': '2', 'セットアップ': '2× RTX 4090 (48 GB)', 'パフォーマンス': '70B Q4 @ 100 tok/s', '最適用途': '最も人気のある dual-GPU' },
+                            { 'ランク': '3', 'セットアップ': '1× RTX 5090 (32 GB)', 'パフォーマンス': '70B Q4 @ 40～50 tok/s', '最適用途': 'シングルカード 70B' },
+                            { 'ランク': '4', 'セットアップ': 'RTX 6000 Ada + RTX 4090', 'パフォーマンス': '70B FP16 @ 110 tok/s', '最適用途': 'Pro + consumer 混合' },
+                            { 'ランク': '5', 'セットアップ': '4× A100 80GB (320GB)', 'パフォーマンス': '405B FP16 w/ NVLink', '最適用途': 'Pro/Enterprise' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            {
+                                q: 'いつ複数 GPU を使うべきですか？',
+                                a: 'シングルGPU が VRAM 不足の場合。2 × RTX 4090 (48 GB) は 70B を 100 tok/sec で実行。Single 4090 + オフロード = 8～10 tok/sec。'
+                            },
+                            {
+                                q: 'NVLink は LLM 推論に大きな差をもたらしますか？',
+                                a: 'NVLink は PCIe より 10～30% 向上。Dual 70B で、オーバーヘッド 15% → 3～5% に削減。Consumer RTX は PCIe (十分)。'
+                            },
+                            {
+                                q: '70B と 405B には何個 GPU が必要ですか？',
+                                a: '70B Q4 : 2 × RTX 4090 (35GB 必要、48GB 有効)。405B Q4 : 4 × RTX 4090 (200GB)。Pro A100 を 405B に使用。'
+                            },
+                            {
+                                q: 'シングル RTX 5090 でマルチGPU なしで 70B を実行できますか？',
+                                a: 'はい — RTX 5090 (32 GB GDDR7) は Llama 70B Q4 を 40～50 tok/sec で実行。長コンテキスト (32K+) で緊迫; デュアル必要。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'シングルGPU を最初に試す',
+                        items: [
+                            '<strong>マルチGPU ($4000+) に投資する前に、</strong> 試す : Q4 量子化 (VRAM 半分)',
+                            '<strong>Ollama 経由 CPU オフロード :</strong> シングルGPU で 70B = 8～10 tok/sec (遅いが無料)',
+                            '<strong>RTX 5090 シングルカード :</strong> 70B Q4 を 40～50 tok/sec で $2000 — 多くの場合マルチGPU 不要',
+                            '<strong>マルチGPU は最後の最適化、</strong> 最初の最適化ではない。購入前に測定。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'マルチGPU セットアップ の準備はいいですか？',
+                        body: 'デュアル RTX 4090、RTX 5090、または pro A100 — PromptQuorum はテンソル並列処理、ハードウェア選定、本番デプロイをガイド。',
+                        cta: 'PromptQuorum を無料で試す',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '多GPU本地LLM 2026：双RTX 4090 70B 100 tok/s',
+                prevBtn: '← 返回',
+                nextBtn: '下一个 →',
+                readFullArticle: '阅读完整文章 →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '多GPU本地LLM',
+                        subtitle: '双RTX 4090：70B 仅5-10%开销，~100 tok/sec',
+                        link: 'https://www.promptquorum.com/local-llms/multi-gpu-local-llms?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5个核心要点',
+                        items: [
+                            '<strong>多GPU：</strong> 将大型模型分割到2个以上GPU。示例：70B模型分割到2×RTX 4090 = 48GB VRAM',
+                            '<strong>速度损失：</strong> 单GPU比7~10%变慢（GPU间通信开销）',
+                            '<strong>最适合：</strong> 70B模型、高并发服务（50+同时用户）',
+                            '<strong>自动检测：</strong> 现代工具（vLLM、Ollama、llama.cpp）自动检测多GPU',
+                            '<strong>2026年标准：</strong> 生产部署默认使用多GPU'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '层分割如何工作',
+                        items: [
+                            '<strong>70B Transformer模型：</strong> 总共80层',
+                            '<strong>GPU 1：</strong> 第1-40层（前半部分）',
+                            '<strong>GPU 2：</strong> 第41-80层（后半部分）',
+                            '<strong>一个token = 一次GPU转移：</strong> 层1-40在GPU1上，然后41-80在GPU2上，然后返回下一个token',
+                            '<strong>通信开销最小</strong>（与张量并行相比）'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'NVLink vs PCIe',
+                        line1: '<strong>NVLink (900 GB/sec)：</strong> 专业GPU（A100/H100），3-5%开销',
+                        line2: '<strong>PCIe 4.0 (64 GB/sec)：</strong> 消费级RTX，5-10% | PCIe 5.0 (128 GB/sec)，6-7%',
+                        tip: '💡 消费级RTX使用PCIe；NVLink不可用。PCIe 5.0有帮助，但改进有限。'
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'vLLM设置（4步）',
+                        items: [
+                            '<strong>验证两个GPU被检测：</strong> 运行nvidia-smi — 两个都应出现可用VRAM',
+                            '<strong>安装vLLM：</strong> pip install vllm',
+                            '<strong>使用tensor-parallel-size 2启动vLLM：</strong> vllm serve meta-llama/Llama-3.3-70B --tensor-parallel-size 2 --gpu-memory-utilization 0.95 --port 8000',
+                            '<strong>验证两个GPU已加载：</strong> nvidia-smi — 两个都应显示内存使用量约为模型大小的一半'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Ollama设置（4步）',
+                        items: [
+                            '<strong>正常运行Ollama：</strong> ollama serve',
+                            '<strong>Ollama自动检测2+个GPU：</strong> 无需配置',
+                            '<strong>Ollama自动将模型分割</strong>到检测到的GPU',
+                            '<strong>验证多GPU设置：</strong> nvidia-smi应显示两个GPU都加载了模型内存'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '2个GPU的性能',
+                        columns: ['配置', '模型', '速度', '成本'],
+                        rows: [
+                            { '配置': '1×RTX 4090 (24GB)', '模型': '7B', '速度': '150 tok/sec', '成本': '$1,800' },
+                            { '配置': '1×RTX 4090 (24GB)', '模型': '70B', '速度': '无法运行', '成本': '$1,800' },
+                            { '配置': '2×RTX 4090 (48GB)', '模型': '70B Q4', '速度': '100 tok/sec', '成本': '$3,600' },
+                            { '配置': '2×RTX 4090 (48GB)', '模型': '70B Q5', '速度': '90 tok/sec', '成本': '$3,600' },
+                            { '配置': '1×RTX 5090 (32GB)', '模型': '70B Q4', '速度': '40-50 tok/sec', '成本': '$2,000' },
+                            { '配置': '2×RTX 5090 (64GB)', '模型': '70B Q8', '速度': '120 tok/sec', '成本': '$4,000' },
+                            { '配置': '2×RTX 5090 (64GB)', '模型': '405B Q4', '速度': '25-35 tok/sec', '成本': '$4,000' },
+                            { '配置': 'RTX 6000 Ada + RTX 4090', '模型': '70B FP16', '速度': '110 tok/sec', '成本': '$6,800' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'RTX 5090转折点（2026年1月）',
+                        line1: '<strong>单个RTX 5090 (32GB)：</strong> 70B Q4运行于40-50 tok/sec — 消除70B Q4对多GPU的需求',
+                        line2: '<strong>双RTX 5090 (64GB)：</strong> 70B Q8于120 tok/sec或405B Q4于25-35 tok/sec — 首个405B消费级选项',
+                        tip: '🎯 RTX 5090改变了经济学：单卡现在对70B可行；多GPU仅用于405B或超高吞吐量'
+                    },
+                    {
+                        type: 'list',
+                        h2: '何时使用多GPU',
+                        items: [
+                            '<strong>需要运行70B+模型</strong>无法装入单个GPU',
+                            '<strong>服务50+个并发用户</strong>需要批处理',
+                            '<strong>想在不同GPU上</strong>同时运行多个13B模型',
+                            '<strong>运行生产服务</strong>需要一致的吞吐量'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5个常见多GPU错误',
+                        items: [
+                            '<strong>期望2个GPU有2倍加速。</strong> 你得到~90%单GPU速度（5-10%开销）。',
+                            '<strong>假设GPU必须相同。</strong> 你可以混合RTX 4090 + 4080，但较慢的限制速度。',
+                            '<strong>不使用NVLink通信。</strong> NVLink (900 GB/sec)比PCIe快；消费卡无法使用。',
+                            '<strong>忽视PCIe带宽。</strong> GPU间通信通过PCIe受限（~PCIe 4.0上16 GB/sec）。',
+                            '<strong>购买第二个GPU前不试单GPU选项。</strong> 首先：Q4量化、CPU卸载（8-10 tok/s）、RTX 5090（70B Q4 40-50）。多GPU是最后手段。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Top 5 GPU配置（排名）',
+                        columns: ['排名', '配置', '性能', '最佳用于'],
+                        rows: [
+                            { '排名': '1', '配置': '2×RTX 5090 (64GB)', '性能': '70B Q8 @ 120 tok/s', '最佳用于': '最新消费级、70B+' },
+                            { '排名': '2', '配置': '2×RTX 4090 (48GB)', '性能': '70B Q4 @ 100 tok/s', '最佳用于': '最受欢迎的双GPU' },
+                            { '排名': '3', '配置': '1×RTX 5090 (32GB)', '性能': '70B Q4 @ 40-50 tok/s', '最佳用于': '单卡70B' },
+                            { '排名': '4', '配置': 'RTX 6000 Ada + RTX 4090', '性能': '70B FP16 @ 110 tok/s', '最佳用于': '专业+消费混合' },
+                            { '排名': '5', '配置': '4×A100 80GB (320GB)', '性能': '405B FP16 w/ NVLink', '最佳用于': '专业/企业' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            {
+                                q: '何时应该使用多个GPU？',
+                                a: '当单GPU VRAM不足时。两个RTX 4090 (48GB)可以以100 tok/sec运行70B。单个4090+卸载仅8-10 tok/sec。'
+                            },
+                            {
+                                q: 'NVLink对LLM推理有大差别吗？',
+                                a: 'NVLink比PCIe提高10-30%。对于70B双GPU，将开销从15%降至3-5%。消费级RTX使用PCIe（足够）。'
+                            },
+                            {
+                                q: '70B和405B需要多少GPU？',
+                                a: '70B Q4: 2×RTX 4090 (需35GB，有48GB)。405B Q4: 4×RTX 4090 (需200GB)。405B用专业A100。'
+                            },
+                            {
+                                q: '我可以在单个RTX 5090上运行70B而不需要多GPU吗？',
+                                a: '可以 — RTX 5090 (32GB GDDR7)以40-50 tok/sec运行Llama 70B Q4。在32GB长上下文紧凑；仍需双GPU。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '先试单GPU',
+                        items: [
+                            '<strong>在投资多GPU ($3600+)之前，</strong> 试试：Q4量化（减半VRAM）',
+                            '<strong>通过Ollama的CPU卸载：</strong> 单RTX 4090上的70B = 8-10 tok/sec（慢但免费）',
+                            '<strong>RTX 5090单卡：</strong> 70B Q4以40-50 tok/sec运行$2000 — 消除很多用例的多GPU需求',
+                            '<strong>多GPU应该是最后优化，</strong> 不是第一个。购买前测量。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '准备好构建多GPU设置？',
+                        body: '无论是双RTX 4090、RTX 5090还是专业A100 — PromptQuorum指导张量并行、硬件选择和生产部署。',
+                        cta: '免费试用PromptQuorum',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/multi-gpu-local-llms?lang=' + lang;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #6750a4;"><a href="${slide.link}" style="color: inherit; text-decoration: none; border-bottom: 2px solid #6750a4;">${slide.link.split('/').pop().replace(/-/g, ' ')}</a></p>
+                    `;
+                    break;
+                case 'list':
+                    html = `<h2>${slide.h2}</h2><ul style="font-size: 1.1em; margin-top: 20px; max-width: 700px;">`;
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table style="margin-top: 20px;"><tr>`;
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+                case 'comparison':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 40px; font-size: 1.3em;">${slide.line1}</p><p style="font-size: 1.3em; margin-bottom: 40px;">${slide.line2}</p><p style="font-size: 1.1em; color: #6750a4;">${slide.tip}</p>`;
+                    break;
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2><ol style="font-size: 1.05em; margin-top: 20px; max-width: 700px; text-align: left;">`;
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    break;
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2><div style="text-align: left; max-width: 700px; margin: 20px auto;">`;
+                    slide.faqs.slice(0, 3).forEach(faq => {
+                        html += `<div style="margin-bottom: 20px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+                    });
+                    html += '</div>';
+                    break;
+                case 'cta':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 20px; margin-bottom: 20px; max-width: 600px;">${slide.body}</p><a href="${slide.href}" target="_blank" style="display: inline-block; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">${slide.cta}</a>`;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        document.getElementById('back-link').href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
