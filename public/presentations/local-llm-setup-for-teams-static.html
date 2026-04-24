@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local LLM Server Setup for Teams | PromptQuorum</title>
+    <meta name="description" content="Deploy a shared local LLM server for 5-20 team members. Multi-user access, cost control, and usage tracking." />
+    <meta property="og:title" content="Local LLM Server Setup for Teams — PromptQuorum" />
+    <meta property="og:description" content="Deploy a shared local LLM server with vLLM, nginx, access control, and usage tracking." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-setup-for-teams" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/local-llm-setup-for-teams?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local LLM Server Setup for Teams</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-setup-for-teams">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Local LLM Server Setup for Business Teams',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Local LLM Server\nfor Business Teams',
+                        subtitle: 'Deploy shared access with cost control & multi-user management',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>Small team (5-10):</strong> Single server (vLLM) + nginx = $3K hardware, $50/mo',
+                            '<strong>Medium team (10-50):</strong> Dual-GPU cluster + load balancer = $6K, $100/mo',
+                            '<strong>Large team (50+):</strong> Enterprise setup with redundancy = custom quote',
+                            '<strong>Cost per user:</strong> $10-100/month (vs. $200-500/month cloud APIs)',
+                            '<strong>Setup time:</strong> Single server = 1 day. Cluster = 1 week. Enterprise = 1 month'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Cost Comparison: Local vs Cloud',
+                        line1: '<strong>Local LLM:</strong> $2,500 hardware + $50/mo electricity = $600/year',
+                        line2: '<strong>Cloud APIs:</strong> $1,000+/month = $12,000+/year',
+                        tip: '💡 Payback period: 2-3 months for active teams'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Architecture Options by Team Size',
+                        columns: ['Team Size', 'Setup', 'Cost', 'Throughput'],
+                        rows: [
+                            { 'Team Size': '5-10 users', 'Setup': '1× RTX 4090 + nginx', 'Cost': '$2,500 + $50/mo', 'Throughput': '10 concurrent' },
+                            { 'Team Size': '10-50 users', 'Setup': '2× RTX 4090 + LB', 'Cost': '$5,000 + $100/mo', 'Throughput': '20 concurrent' },
+                            { 'Team Size': '50+ users', 'Setup': '3-4 GPU cluster', 'Cost': 'Custom', 'Throughput': '50+ concurrent' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Authentication & Access Control',
+                        items: [
+                            '<strong>Simple auth (SMB):</strong> API key per user + Bearer token in header',
+                            '<strong>Enterprise auth:</strong> OAuth 2.0 + SAML via Okta/Azure AD + SSO',
+                            '<strong>Rate limiting:</strong> Token quota per user (e.g., 100K tokens/day)',
+                            '<strong>Audit trail:</strong> Every API call logged with user ID, IP, request size, timestamp'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Usage Metering & Cost Attribution',
+                        items: [
+                            '<strong>Track:</strong> Tokens generated per user per day',
+                            '<strong>Attribution:</strong> Allocate cost proportionally (e.g., 40% usage = 40% bill)',
+                            '<strong>Showback report:</strong> Monthly: tokens used, cloud cost equivalent, internal cost, savings',
+                            '<strong>Tools:</strong> Prometheus metrics + custom billing, or Metered.io'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Scaling Strategy as Team Grows',
+                        items: [
+                            '<strong>5-10 users:</strong> 1× RTX 4090 (acceptable latency spikes)',
+                            '<strong>10-30 users:</strong> 2× RTX 4090 with nginx load balancer (comfortable)',
+                            '<strong>30-100 users:</strong> 3-4 GPU cluster + dedicated load balancer',
+                            '<strong>100+ users:</strong> Enterprise: cloud failover, caching layer, API gateway'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Monitoring & Performance',
+                        items: [
+                            '<strong>Prometheus metrics:</strong> Request latency, tokens/sec, queue length',
+                            '<strong>Grafana dashboard:</strong> Visualize queue depth, latency percentiles (p50, p99), GPU utilization',
+                            '<strong>Alerts:</strong> Page on-call if latency > 2 sec or queue > 10 requests',
+                            '<strong>Logs:</strong> Centralize in ELK Stack, search by user/timestamp/error'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Common Setup Mistakes',
+                        items: [
+                            'Single point of failure (one GPU, no failover) → Use dual-GPU minimum',
+                            'No rate limiting → One user blocks everyone → Implement token quotas',
+                            'No audit logs → Can\'t track access → Logging is mandatory for compliance',
+                            'No hot-swap model updates → Server downtime → Use vLLM hot-swap feature'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            {
+                                q: 'How do I add more users without buying hardware?',
+                                a: 'Up to 20-30 concurrent users per GPU. Beyond that, add an RTX 4090 and rebalance load with nginx.'
+                            },
+                            {
+                                q: 'Should I use Kubernetes for team deployment?',
+                                a: 'No, not needed for <50 users. Docker + docker-compose is simpler. Kubernetes adds overhead without benefit for small teams.'
+                            },
+                            {
+                                q: 'Can I bill team members based on token usage?',
+                                a: 'Yes, using Prometheus metrics. Track tokens per user per day and allocate costs proportionally.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How PromptQuorum Helps',
+                        items: [
+                            '<strong>Multi-model consensus:</strong> Test prompts across 25+ models at once',
+                            '<strong>Cost calculator:</strong> Estimate team savings vs. cloud APIs',
+                            '<strong>Deployment guides:</strong> Step-by-step setup for vLLM clusters',
+                            '<strong>Performance monitoring:</strong> Track inference speed & cost per user'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Deploy Local LLMs for Your Team',
+                        body: 'Save money, control costs, and keep data private with a shared local LLM server.',
+                        cta: 'Start Building',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Lokaler LLM-Server für Business-Teams',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Lokaler LLM-Server\nfür Business-Teams',
+                        subtitle: 'Gemeinsamer Zugriff mit Kostenkontrolle & Multi-User-Management',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtige Erkenntnisse',
+                        items: [
+                            '<strong>Kleines Team (5-10):</strong> Einzelner Server (vLLM) + nginx = 3.000€ Hardware, 50€/Monat',
+                            '<strong>Mittleres Team (10-50):</strong> Dual-GPU-Cluster + Load Balancer = 6.000€, 100€/Monat',
+                            '<strong>Großes Team (50+):</strong> Enterprise-Setup mit Redundanz = benutzerdefiniert',
+                            '<strong>Kosten pro Benutzer:</strong> 10-100€/Monat (vs. 200-500€/Monat Cloud-APIs)',
+                            '<strong>Setup-Zeit:</strong> Einzelner Server = 1 Tag. Cluster = 1 Woche. Enterprise = 1 Monat'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Kostenvergleich: Lokal vs. Cloud',
+                        line1: '<strong>Lokales LLM:</strong> 2.500€ Hardware + 50€/Monat Strom = 600€/Jahr',
+                        line2: '<strong>Cloud-APIs:</strong> 1.000+€/Monat = 12.000+€/Jahr',
+                        tip: '💡 Amortisationszeit: 2-3 Monate für aktive Teams'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Architektur-Optionen nach Team-Größe',
+                        columns: ['Team-Größe', 'Setup', 'Kosten', 'Durchsatz'],
+                        rows: [
+                            { 'Team-Größe': '5-10 Benutzer', 'Setup': '1× RTX 4090 + nginx', 'Kosten': '2.500€ + 50€/Mo', 'Durchsatz': '10 gleichzeitig' },
+                            { 'Team-Größe': '10-50 Benutzer', 'Setup': '2× RTX 4090 + LB', 'Kosten': '5.000€ + 100€/Mo', 'Durchsatz': '20 gleichzeitig' },
+                            { 'Team-Größe': '50+ Benutzer', 'Setup': '3-4 GPU-Cluster', 'Kosten': 'Benutzerdefiniert', 'Durchsatz': '50+ gleichzeitig' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Authentifizierung & Zugriffskontrolle',
+                        items: [
+                            '<strong>Einfache Auth (KMU):</strong> API-Schlüssel pro Benutzer + Bearer-Token im Header',
+                            '<strong>Enterprise-Auth:</strong> OAuth 2.0 + SAML über Okta/Azure AD + SSO',
+                            '<strong>Rate Limiting:</strong> Token-Kontingent pro Benutzer (z. B. 100K Tokens/Tag)',
+                            '<strong>Audit-Trail:</strong> Jeder API-Aufruf protokolliert mit Benutzer-ID, IP, Anfragegröße, Timestamp'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Nutzungsmessung & Kostenattribution',
+                        items: [
+                            '<strong>Verfolgung:</strong> Tokens pro Benutzer pro Tag generiert',
+                            '<strong>Attribution:</strong> Kosten proportional zuweisen (z. B. 40% Nutzung = 40% Rechnung)',
+                            '<strong>Showback-Report:</strong> Monatlich: Tokens verwendet, Cloud-Kostenäquivalent, interne Kosten, Einsparungen',
+                            '<strong>Tools:</strong> Prometheus-Metriken + benutzerdefinierte Abrechnung oder Metered.io'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Skalierungsstrategie mit wachsendem Team',
+                        items: [
+                            '<strong>5-10 Benutzer:</strong> 1× RTX 4090 (akzeptable Latenz-Spitzen)',
+                            '<strong>10-30 Benutzer:</strong> 2× RTX 4090 mit nginx Load Balancer (komfortabel)',
+                            '<strong>30-100 Benutzer:</strong> 3-4 GPU-Cluster + dedizierter Load Balancer',
+                            '<strong>100+ Benutzer:</strong> Enterprise: Cloud-Failover, Caching-Layer, API Gateway'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Überwachung & Leistung',
+                        items: [
+                            '<strong>Prometheus-Metriken:</strong> Anfrageverlatenz, Tokens/Sec, Warteschlangenlänge',
+                            '<strong>Grafana-Dashboard:</strong> Visualisiere Warteschlangentiefe, Latenzpercentile (p50, p99), GPU-Auslastung',
+                            '<strong>Warnungen:</strong> Benachrichtige, wenn Latenz > 2 Sek oder Warteschlange > 10 Anfragen',
+                            '<strong>Logs:</strong> Zentralisiere in ELK Stack, suche nach Benutzer/Zeitstempel/Fehler'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Häufige Setup-Fehler',
+                        items: [
+                            'Einzelner Ausfallpunkt (eine GPU, kein Failover) → Verwende mindestens Dual-GPU',
+                            'Kein Rate Limiting → Ein Benutzer blockiert alle → Implementiere Token-Quoten',
+                            'Keine Audit-Logs → Kann Zugriff nicht verfolgbar machen → Logging ist für Compliance erforderlich',
+                            'Keine Hot-Swap-Modellaktualisierungen → Server-Downtime → Verwende vLLM Hot-Swap-Funktion'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            {
+                                q: 'Wie füge ich mehr Benutzer hinzu, ohne Hardware zu kaufen?',
+                                a: 'Bis zu 20-30 gleichzeitige Benutzer pro GPU. Darüber hinaus: RTX 4090 hinzufügen und Last mit nginx ausgleichen.'
+                            },
+                            {
+                                q: 'Sollte ich Kubernetes für Team-Bereitstellung nutzen?',
+                                a: 'Nein, nicht für <50 Benutzer nötig. Docker + docker-compose ist einfacher. Kubernetes fügt Overhead hinzu ohne Vorteil für kleine Teams.'
+                            },
+                            {
+                                q: 'Kann ich Team-Mitglieder nach Token-Nutzung berechnen?',
+                                a: 'Ja, mit Prometheus-Metriken. Verfolgung von Tokens pro Benutzer pro Tag und proportionale Kostenverteilung.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie PromptQuorum dir hilft',
+                        items: [
+                            '<strong>Multi-Modell-Konsens:</strong> Teste Prompts gleichzeitig über 25+ Modelle',
+                            '<strong>Kosten-Rechner:</strong> Schätze Einsparungen deines Teams vs. Cloud-APIs',
+                            '<strong>Bereitstellungsleitfäden:</strong> Schritt-für-Schritt-Setup für vLLM-Cluster',
+                            '<strong>Leistungsüberwachung:</strong> Verfolgung der Inferenzgeschwindigkeit & Kosten pro Benutzer'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereitstellen von lokalen LLMs für dein Team',
+                        body: 'Sparen Sie Kosten, kontrollieren Sie Ausgaben und schützen Sie Daten mit einem gemeinsamen lokalen LLM-Server.',
+                        cta: 'Jetzt starten',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Serveur LLM local pour équipes professionnelles',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Serveur LLM local\npour équipes professionnelles',
+                        subtitle: 'Accès partagé avec contrôle des coûts et gestion multi-utilisateurs',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points clés',
+                        items: [
+                            '<strong>Petite équipe (5-10):</strong> Serveur unique (vLLM) + nginx = 2 499€ matériel, 50€/mois',
+                            '<strong>Équipe moyenne (10-50):</strong> Cluster dual-GPU + équilibreur = 5 000€, 100€/mois',
+                            '<strong>Grande équipe (50+):</strong> Configuration d\'entreprise avec redondance = devis personnalisé',
+                            '<strong>Coût par utilisateur:</strong> 10-100€/mois (vs. 200-500€/mois APIs cloud)',
+                            '<strong>Temps d\'installation:</strong> Serveur unique = 1 jour. Cluster = 1 semaine. Entreprise = 1 mois'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Comparaison des coûts: Local vs Cloud',
+                        line1: '<strong>LLM local:</strong> 2 499€ matériel + 50€/mois électricité = 600€/an',
+                        line2: '<strong>APIs cloud:</strong> 1 000+€/mois = 12 000+€/an',
+                        tip: '💡 Période de récupération: 2-3 mois pour équipes actives'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Options d\'architecture par taille d\'équipe',
+                        columns: ['Taille équipe', 'Configuration', 'Coût', 'Débit'],
+                        rows: [
+                            { 'Taille équipe': '5-10 utilisateurs', 'Configuration': '1× RTX 4090 + nginx', 'Coût': '2 499€ + 50€/mo', 'Débit': '10 simultanés' },
+                            { 'Taille équipe': '10-50 utilisateurs', 'Configuration': '2× RTX 4090 + LB', 'Coût': '5 000€ + 100€/mo', 'Débit': '20 simultanés' },
+                            { 'Taille équipe': '50+ utilisateurs', 'Configuration': 'Cluster 3-4 GPU', 'Coût': 'Personnalisé', 'Débit': '50+ simultanés' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Authentification et contrôle d\'accès',
+                        items: [
+                            '<strong>Auth simple (PME):</strong> Clé API par utilisateur + token Bearer dans l\'en-tête',
+                            '<strong>Auth d\'entreprise:</strong> OAuth 2.0 + SAML via Okta/Azure AD + SSO',
+                            '<strong>Limitation de débit:</strong> Quota de tokens par utilisateur (par ex. 100K tokens/jour)',
+                            '<strong>Audit trail:</strong> Chaque appel API enregistré avec ID utilisateur, IP, taille requête, timestamp'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Mesure d\'utilisation et attribution des coûts',
+                        items: [
+                            '<strong>Suivi:</strong> Tokens générés par utilisateur par jour',
+                            '<strong>Attribution:</strong> Allouer les coûts proportionnellement (ex. 40% usage = 40% facture)',
+                            '<strong>Rapport showback:</strong> Mensuel: tokens utilisés, équivalent coûts cloud, coûts internes, économies',
+                            '<strong>Outils:</strong> Métriques Prometheus + facturation personnalisée, ou Metered.io'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Stratégie d\'évolutivité à mesure que l\'équipe grandit',
+                        items: [
+                            '<strong>5-10 utilisateurs:</strong> 1× RTX 4090 (pics de latence acceptables)',
+                            '<strong>10-30 utilisateurs:</strong> 2× RTX 4090 avec équilibreur nginx (confortable)',
+                            '<strong>30-100 utilisateurs:</strong> Cluster 3-4 GPU + équilibreur dédié',
+                            '<strong>100+ utilisateurs:</strong> Entreprise: basculement cloud, couche cache, passerelle API'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Surveillance et performance',
+                        items: [
+                            '<strong>Métriques Prometheus:</strong> Latence requête, tokens/sec, longueur file attente',
+                            '<strong>Tableau Grafana:</strong> Visualisez profondeur file, percentiles latence (p50, p99), utilisation GPU',
+                            '<strong>Alertes:</strong> Avertir si latence > 2 sec ou file > 10 requêtes',
+                            '<strong>Logs:</strong> Centralisez dans ELK Stack, cherchez par utilisateur/timestamp/erreur'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs courantes de configuration',
+                        items: [
+                            'Point de défaillance unique (une GPU, pas de basculement) → Utilisez minimum dual-GPU',
+                            'Pas de limitation de débit → Un utilisateur bloque tous → Implémentez quotas tokens',
+                            'Pas de logs d\'audit → Impossible de suivre accès → Logs obligatoires pour conformité',
+                            'Pas de hot-swap modèles → Temps arrêt serveur → Utilisez fonction hot-swap vLLM'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions fréquemment posées',
+                        faqs: [
+                            {
+                                q: 'Comment ajouter plus d\'utilisateurs sans acheter du matériel?',
+                                a: 'Jusqu\'à 20-30 utilisateurs simultanés par GPU. Au-delà: ajouter RTX 4090 et rééquilibrer charge avec nginx.'
+                            },
+                            {
+                                q: 'Dois-je utiliser Kubernetes pour déploiement d\'équipe?',
+                                a: 'Non, pas nécessaire pour <50 utilisateurs. Docker + docker-compose plus simple. Kubernetes ajoute surcharge sans bénéfice pour petites équipes.'
+                            },
+                            {
+                                q: 'Puis-je facturer les membres selon l\'utilisation de tokens?',
+                                a: 'Oui, avec métriques Prometheus. Suivez tokens par utilisateur par jour et distribuez coûts proportionnellement.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment PromptQuorum t\'aide',
+                        items: [
+                            '<strong>Consensus multi-modèle:</strong> Testez prompts sur 25+ modèles simultanément',
+                            '<strong>Calculatrice de coûts:</strong> Estimez économies équipe vs APIs cloud',
+                            '<strong>Guides déploiement:</strong> Configuration étape-par-étape pour clusters vLLM',
+                            '<strong>Surveillance performance:</strong> Suivi vitesse inférence & coûts par utilisateur'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Déployer LLMs locaux pour votre équipe',
+                        body: 'Économisez argent, contrôlez coûts, gardez données privées avec serveur LLM local partagé.',
+                        cta: 'Commencer',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ビジネスチーム向けローカルLLMサーバーセットアップ',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ビジネスチーム向け\nローカルLLMサーバー',
+                        subtitle: 'コスト管理とマルチユーザー管理を備えた共有アクセス',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: '重要ポイント',
+                        items: [
+                            '<strong>小規模チーム (5-10):</strong> 単一サーバー (vLLM) + nginx = ¥358,800 ハードウェア、¥6,500/月',
+                            '<strong>中規模チーム (10-50):</strong> デュアル GPU クラスター + ロードバランサー = ¥717,600、¥13,000/月',
+                            '<strong>大規模チーム (50+):</strong> 冗長性を備えたエンタープライズセットアップ = カスタム見積',
+                            '<strong>ユーザーあたりのコスト:</strong> ¥1,300-13,000/月 (クラウド API は ¥26,000-65,000/月)',
+                            '<strong>セットアップ時間:</strong> 単一サーバー = 1日。クラスター = 1週間。エンタープライズ = 1ヶ月'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'コスト比較: ローカル vs クラウド',
+                        line1: '<strong>ローカル LLM:</strong> ¥358,800 ハードウェア + ¥6,500/月 電気 = ¥156,000/年',
+                        line2: '<strong>クラウド API:</strong> ¥1,300,000+/月 = ¥15,600,000+/年',
+                        tip: '💡 回収期間: アクティブなチームで 2-3 ヶ月'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'チームサイズ別のアーキテクチャオプション',
+                        columns: ['チームサイズ', 'セットアップ', 'コスト', 'スループット'],
+                        rows: [
+                            { 'チームサイズ': '5-10 ユーザー', 'セットアップ': '1× RTX 4090 + nginx', 'コスト': '¥358,800 + ¥6,500/月', 'スループット': '10 同時' },
+                            { 'チームサイズ': '10-50 ユーザー', 'セットアップ': '2× RTX 4090 + LB', 'コスト': '¥717,600 + ¥13,000/月', 'スループット': '20 同時' },
+                            { 'チームサイズ': '50+ ユーザー', 'セットアップ': '3-4 GPU クラスター', 'コスト': 'カスタム', 'スループット': '50+ 同時' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '認証とアクセス制御',
+                        items: [
+                            '<strong>シンプル認証 (SMB):</strong> ユーザーごとの API キー + ヘッダーの Bearer トークン',
+                            '<strong>エンタープライズ認証:</strong> OAuth 2.0 + SAML (Okta/Azure AD経由) + SSO',
+                            '<strong>レート制限:</strong> ユーザーごとのトークンクォータ (例: 100K トークン/日)',
+                            '<strong>監査証跡:</strong> すべての API 呼び出しを記録 (ユーザー ID、IP、リクエストサイズ、タイムスタンプ)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '使用量測定とコスト配分',
+                        items: [
+                            '<strong>追跡:</strong> ユーザーあたりの生成トークン (1日単位)',
+                            '<strong>配分:</strong> コストを按分配分 (例: 40% 使用 = 40% 請求)',
+                            '<strong>ショーバックレポート:</strong> 月次: トークン使用量、クラウド相当コスト、内部コスト、節約額',
+                            '<strong>ツール:</strong> Prometheus メトリクス + カスタム請求、または Metered.io'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'チーム拡大に伴うスケーリング戦略',
+                        items: [
+                            '<strong>5-10 ユーザー:</strong> 1× RTX 4090 (許容範囲のレイテンシスパイク)',
+                            '<strong>10-30 ユーザー:</strong> nginx ロードバランサー付き 2× RTX 4090 (快適)',
+                            '<strong>30-100 ユーザー:</strong> 3-4 GPU クラスター + 専用ロードバランサー',
+                            '<strong>100+ ユーザー:</strong> エンタープライズ: クラウドフェイルオーバー、キャッシング層、API ゲートウェイ'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'モニタリングとパフォーマンス',
+                        items: [
+                            '<strong>Prometheus メトリクス:</strong> リクエストレイテンシ、トークン/秒、キュー長',
+                            '<strong>Grafana ダッシュボード:</strong> キュー深度、レイテンシパーセンタイル (p50、p99)、GPU使用率を可視化',
+                            '<strong>アラート:</strong> レイテンシ > 2 秒またはキュー > 10 リクエストでページ',
+                            '<strong>ログ:</strong> ELK Stack で一元化、ユーザー/タイムスタンプ/エラーで検索'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'よくあるセットアップの間違い',
+                        items: [
+                            '単一障害点 (1 GPU、フェイルオーバーなし) → デュアル GPU 最小構成を使用',
+                            'レート制限なし → 1 ユーザーが全員をブロック → トークンクォータを実装',
+                            '監査ログなし → アクセス追跡不可 → 監査ログはコンプライアンス必須',
+                            'ホットスワップモデル更新なし → サーバーダウン → vLLM ホットスワップ機能を使用'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくあるご質問',
+                        faqs: [
+                            {
+                                q: 'ハードウェアを購入せずにユーザーを追加するには？',
+                                a: 'GPU あたり 20-30 人の同時ユーザーまで対応可能。それ以上: RTX 4090 を追加し、nginx でロードを再バランス。'
+                            },
+                            {
+                                q: 'チームデプロイに Kubernetes を使うべき？',
+                                a: 'いいえ、50 人未満なら不要です。Docker + docker-compose がシンプル。Kubernetes は小規模チームにはオーバーヘッド。'
+                            },
+                            {
+                                q: 'トークン使用量に基づいてチームメンバーに請求できる？',
+                                a: 'はい、Prometheus メトリクスを使用。ユーザーごとのトークン追跡と按分配分で実現可能。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorum がサポートする方法',
+                        items: [
+                            '<strong>マルチモデルコンセンサス:</strong> 25 以上のモデルにプロンプトを同時テスト',
+                            '<strong>コスト計算機:</strong> クラウド API との比較でチームの節約額を推定',
+                            '<strong>デプロイメントガイド:</strong> vLLM クラスターのステップバイステップセットアップ',
+                            '<strong>パフォーマンス監視:</strong> 推論速度とユーザーあたりのコストを追跡'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'チーム向けにローカル LLM をデプロイ',
+                        body: 'コストを節約し、支出をコントロール、共有ローカル LLM サーバーでデータを保護します。',
+                        cta: 'ビルドを開始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '商业团队本地LLM服务器设置',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '商业团队\n本地LLM服务器',
+                        subtitle: '具有成本控制和多用户管理的共享访问',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            '<strong>小型团队 (5-10):</strong> 单个服务器 (vLLM) + nginx = $2,500 硬件，$50/月',
+                            '<strong>中等团队 (10-50):</strong> 双 GPU 集群 + 负载均衡器 = $5,000，$100/月',
+                            '<strong>大型团队 (50+):</strong> 带冗余的企业设置 = 定制报价',
+                            '<strong>每用户成本:</strong> $10-100/月 (vs. $200-500/月云 API)',
+                            '<strong>设置时间:</strong> 单个服务器 = 1 天。集群 = 1 周。企业 = 1 个月'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '成本比较：本地 vs 云端',
+                        line1: '<strong>本地 LLM:</strong> $2,500 硬件 + $50/月电费 = $600/年',
+                        line2: '<strong>云 API:</strong> $1,000+/月 = $12,000+/年',
+                        tip: '💡 回收期：活跃团队 2-3 个月'
+                    },
+                    {
+                        type: 'table',
+                        h2: '按团队规模的架构选项',
+                        columns: ['团队规模', '设置', '成本', '吞吐量'],
+                        rows: [
+                            { '团队规模': '5-10 用户', '设置': '1× RTX 4090 + nginx', '成本': '$2,500 + $50/月', '吞吐量': '10 并发' },
+                            { '团队规模': '10-50 用户', '设置': '2× RTX 4090 + LB', '成本': '$5,000 + $100/月', '吞吐量': '20 并发' },
+                            { '团队规模': '50+ 用户', '设置': '3-4 GPU 集群', '成本': '定制', '吞吐量': '50+ 并发' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '身份验证和访问控制',
+                        items: [
+                            '<strong>简单身份验证 (中小企业):</strong> 每个用户 API 密钥 + 请求头中的 Bearer 令牌',
+                            '<strong>企业身份验证:</strong> OAuth 2.0 + SAML (通过 Okta/Azure AD) + SSO',
+                            '<strong>速率限制:</strong> 每个用户的令牌配额 (例如 100K 令牌/天)',
+                            '<strong>审计日志:</strong> 每个 API 调用记录用户 ID、IP、请求大小、时间戳'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '使用计量和成本分配',
+                        items: [
+                            '<strong>跟踪:</strong> 每个用户每天生成的令牌',
+                            '<strong>分配:</strong> 按比例分配成本 (例如 40% 使用 = 40% 账单)',
+                            '<strong>透明度报告:</strong> 每月：令牌使用、云成本等价、内部成本、节省额',
+                            '<strong>工具:</strong> Prometheus 指标 + 自定义计费，或 Metered.io'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '随着团队增长的扩展策略',
+                        items: [
+                            '<strong>5-10 用户:</strong> 1× RTX 4090 (可接受的延迟尖峰)',
+                            '<strong>10-30 用户:</strong> 2× RTX 4090 带 nginx 负载均衡器 (舒适)',
+                            '<strong>30-100 用户:</strong> 3-4 GPU 集群 + 专用负载均衡器',
+                            '<strong>100+ 用户:</strong> 企业级：云故障转移、缓存层、API 网关'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '监控和性能',
+                        items: [
+                            '<strong>Prometheus 指标:</strong> 请求延迟、令牌/秒、队列长度',
+                            '<strong>Grafana 仪表板:</strong> 可视化队列深度、延迟百分位数 (p50、p99)、GPU 使用率',
+                            '<strong>警报:</strong> 延迟 > 2 秒或队列 > 10 请求时通知',
+                            '<strong>日志:</strong> 集中在 ELK Stack 中，按用户/时间戳/错误搜索'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '常见设置错误',
+                        items: [
+                            '单点故障 (1 个 GPU，无故障转移) → 使用至少双 GPU',
+                            '无速率限制 → 1 个用户阻止所有 → 实现令牌配额',
+                            '无审计日志 → 无法追踪访问 → 审计日志对合规性是强制性的',
+                            '无热交换模型更新 → 服务器停机 → 使用 vLLM 热交换功能'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            {
+                                q: '如何在不购买硬件的情况下添加更多用户？',
+                                a: '每个 GPU 最多 20-30 个并发用户。超过这个数字：添加 RTX 4090 并使用 nginx 重新平衡负载。'
+                            },
+                            {
+                                q: '我应该为团队部署使用 Kubernetes 吗？',
+                                a: '不，对于少于 50 个用户不需要。Docker + docker-compose 更简单。Kubernetes 为小团队增加开销。'
+                            },
+                            {
+                                q: '我能根据令牌使用情况向团队成员收费吗？',
+                                a: '可以，使用 Prometheus 指标。按用户每天跟踪令牌并按比例分配成本。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorum 如何帮助',
+                        items: [
+                            '<strong>多模型共识:</strong> 同时在 25+ 个模型上测试提示',
+                            '<strong>成本计算器:</strong> 估计团队与云 API 的节省',
+                            '<strong>部署指南:</strong> vLLM 集群的分步设置',
+                            '<strong>性能监控:</strong> 追踪推理速度和每用户成本'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '为你的团队部署本地 LLM',
+                        body: '通过共享本地 LLM 服务器节省成本、控制支出并保护数据。',
+                        cta: '开始构建',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 40px; font-size: 1.4em;">${slide.line1}</p>
+                        <p style="font-size: 1.4em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.05em; color: #6750a4;">${slide.tip}</p>
+                    `;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `
+                            <p style="margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                                <strong>Q: ${faq.q}</strong><br/>
+                                A: ${faq.a}
+                            </p>
+                        `;
+                    });
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2 style="color: #6750a4;">${slide.h2}</h2>
+                        <p style="margin-top: 30px; font-size: 1.1em;">${slide.body}</p>
+                        <p style="margin-top: 40px;">
+                            <a href="${slide.href}" style="display: inline-block; padding: 16px 40px; background: #6750a4; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: 700; transition: background 0.2s;">
+                                ${slide.cta}
+                            </a>
+                        </p>
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (isPrint) {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
