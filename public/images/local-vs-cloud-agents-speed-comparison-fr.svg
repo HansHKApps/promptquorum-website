@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">Comparaison de vitesse : Agents Cloud vs Locaux (avril 2026)</text>
+
+  <!-- Left Panel: Cloud Agents (Fast) -->
+  <rect x="28" y="55" width="340" height="260" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, sans-serif">Agents Cloud (rapides)</text>
+  <text x="48" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Par étape :</text>
+  <text x="48" y="130" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853">100–300 ms</text>
+
+  <text x="48" y="160" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Boucle de raisonnement :</text>
+  <text x="48" y="180" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853">1–2 sec</text>
+
+  <text x="48" y="210" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Scalabilité :</text>
+  <text x="48" y="230" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">Illimitée (fournisseur)</text>
+
+  <text x="48" y="260" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Coût :</text>
+  <text x="48" y="280" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">€18/1M jetons</text>
+
+  <!-- Right Panel: Local Agents (Slower) -->
+  <rect x="432" y="55" width="340" height="260" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle" font-family="system-ui, sans-serif">Agents locaux (plus lents)</text>
+  <text x="452" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Par étape :</text>
+  <text x="452" y="130" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#EA4335">2–5 sec</text>
+
+  <text x="452" y="160" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Boucle de raisonnement :</text>
+  <text x="452" y="180" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#EA4335">6–15 sec</text>
+
+  <text x="452" y="210" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Scalabilité :</text>
+  <text x="452" y="230" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">Limitée par le matériel</text>
+
+  <text x="452" y="260" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif">Coût :</text>
+  <text x="452" y="280" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">€0 par jeton</text>
+
+  <line x1="18" y1="320" x2="782" y2="320" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="400" y="340" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">Cloud semble instantané pour l'utilisation interactive. Local est pratique pour l'automatisation et le traitement par lots.</text>
+</svg>

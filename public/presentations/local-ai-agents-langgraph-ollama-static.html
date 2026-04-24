@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local AI Agents With LangGraph and Ollama | PromptQuorum</title>
+    <meta name="description" content="Interactive 14-slide presentation on building autonomous AI agents with LangGraph and Ollama. Learn agent architecture, tools, reasoning, patterns, and deployment strategies." />
+    <meta property="og:title" content="Local AI Agents With LangGraph and Ollama — PromptQuorum" />
+    <meta property="og:description" content="Build autonomous decision-making agents locally. LangGraph + Ollama: no API costs, full data control, and agentic reasoning loops." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local AI Agents With LangGraph and Ollama</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Local AI Agents With LangGraph and Ollama',
+                prevBtn: '← Prev',
+                nextBtn: 'Next →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Local AI Agents With LangGraph and Ollama',
+                        subtitle: 'Build autonomous decision-making systems — no cloud, full control',
+                        link: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How Does an AI Agent Work?',
+                        items: [
+                            '<strong>Agent = LLM + tools + loop.</strong> The LLM observes state, reasons about the best action, executes a tool, observes the result, and repeats until done.',
+                            '<strong>Observation → Reasoning → Action → Repeat</strong> — the agent loop is the core pattern.',
+                            '<strong>Example:</strong> Research agent tasked with "Compare Llama 3.2 vs Qwen 2.5 on coding tasks". It searches for benchmarks, finds HumanEval scores, and synthesizes a comparison.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Agents vs Chains — Key Differences',
+                        items: [
+                            '<strong>Agents make dynamic decisions.</strong> The LLM chooses which tool to call next based on context — flexible, unpredictable.',
+                            '<strong>Chains follow a predetermined path.</strong> Step A → B → C, no decisions. Fast and predictable but inflexible.',
+                            '<strong>When to use agents:</strong> reasoning, research, error recovery, complex tasks.',
+                            '<strong>When to use chains:</strong> summarization, email, fixed workflows with known steps.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Agents vs Chains Comparison',
+                        columns: ['Aspect', 'Agents', 'Chains'],
+                        rows: [
+                            { Aspect: 'Decision-making', Agents: 'Dynamic, LLM decides', Chains: 'Predetermined sequence' },
+                            { Aspect: 'Loops', Agents: 'Reasoning loop (repeat until done)', Chains: 'No loops' },
+                            { Aspect: 'Error recovery', Agents: 'LLM can recover from failures', Chains: 'Manual error handling' },
+                            { Aspect: 'Use case', Agents: 'Complex reasoning (research, automation)', Chains: 'Fixed workflows (summarize → email)' },
+                            { Aspect: 'Speed', Agents: '~3–5 sec per step', Chains: 'Fast, ~1 sec per step' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph Architecture: Nodes, Edges, and State',
+                        items: [
+                            '<strong>State:</strong> Information the agent holds — context, observations, decisions.',
+                            '<strong>Nodes:</strong> Functions that process state — LLM reasoning, tool execution.',
+                            '<strong>Edges:</strong> Transitions between nodes — conditional based on LLM output.',
+                            '<strong>LangGraph is like a flowchart</strong> where the LLM decides which arrow to follow at each decision box.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Tools Can Agents Use? (Part 1)',
+                        items: [
+                            '<strong>Web search:</strong> Search the internet for information (DuckDuckGo, Google, Bing).',
+                            '<strong>Code execution:</strong> Run Python code and return results.',
+                            '<strong>File operations:</strong> Read/write files, list directories.',
+                            '<strong>Database queries:</strong> Query local or remote databases.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Tools Can Agents Use? (Part 2)',
+                        items: [
+                            '<strong>Document retrieval:</strong> Search RAG vector database for documents.',
+                            '<strong>Calculator:</strong> Perform arithmetic and symbolic math.',
+                            '<strong>Email:</strong> Send messages (with caution, verify permissions).',
+                            '<strong>API calls:</strong> Interact with external services. <strong>Limit to 5–10 tools per agent to avoid decision paralysis.</strong>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How Do Agents Reason? Model Size Matters',
+                        items: [
+                            '<strong>Small models (3–7B):</strong> Limited reasoning. Work best with deterministic tasks (tool lookup, classification).',
+                            '<strong>Medium models (13–30B):</strong> Decent reasoning. Can handle 2–3 step reasoning chains.',
+                            '<strong>Large models (70B+):</strong> Strong reasoning. Can solve complex problems with multi-step planning.',
+                            '<strong>Chain-of-Thought (CoT) prompting helps:</strong> Explicit step-by-step reasoning improves tool choice quality.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Local Agent Patterns That Work Best',
+                        items: [
+                            '<strong>Research agent:</strong> Searches documents and web, synthesizes findings.',
+                            '<strong>Code agent:</strong> Writes and executes code to solve problems.',
+                            '<strong>Planning agent:</strong> Breaks complex tasks into subtasks, delegates to other agents.',
+                            '<strong>Conversational agent:</strong> Maintains memory, answers questions, learns from feedback.',
+                            '<strong>Workflow automation:</strong> Reads emails, executes tasks, sends confirmations.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Common Agent Implementation Mistakes',
+                        items: [
+                            '<strong>Too many tools:</strong> Confuses the LLM. Limit to 5–10 relevant tools.',
+                            '<strong>Poor tool descriptions:</strong> LLM won\'t use tools correctly if vague. Write clear, specific descriptions (under 50 words).',
+                            '<strong>Infinite loops:</strong> Agent gets stuck in reasoning loops. Always set max_iterations to 10–20.',
+                            '<strong>No error handling:</strong> Tool calls may fail. Have the agent handle failures gracefully.',
+                            '<strong>Using small models:</strong> 3B models cannot reason well for complex agents. Use 13B+ for autonomous agents.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph vs LangChain: When to Choose LangGraph',
+                        items: [
+                            '<strong>Use LangGraph when:</strong> workflow requires loops, conditional branching, or recovery from tool failures.',
+                            '<strong>Use LangChain when:</strong> workflow is linear (A → B → C) without decision points.',
+                            '<strong>Key difference:</strong> LangGraph adds graph structure (nodes, edges, state) for reliable reasoning loops.',
+                            '<strong>Note:</strong> LangGraph is built on top of LangChain; it\'s specialized for agents and stateful workflows.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Hardware & Latency: What You Need',
+                        items: [
+                            '<strong>Local agent latency:</strong> ~3–5 sec per reasoning step (vs ~1 sec for cloud agents).',
+                            '<strong>Minimum model:</strong> 13B+ parameters for reliable autonomous reasoning.',
+                            '<strong>Minimum hardware:</strong> 16GB RAM + 8GB GPU VRAM for a quantized 13B model.',
+                            '<strong>CPU-only:</strong> Expect 5–15 sec per reasoning step.',
+                            '<strong>Trade-off:</strong> Slower than cloud but private, fully customizable, and zero API costs.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Common Questions',
+                        faqs: [
+                            { q: 'Can local agents access the internet?', a: 'Yes, if you provide a web_search tool. The agent calls it like any other function. DuckDuckGo API or SerpAPI are popular options.' },
+                            { q: 'What is the biggest mistake in agent deployment?', a: 'Deploying without a hard iteration limit. Agents can loop forever. Always set max_iterations to 10–20.' },
+                            { q: 'Why are local agents slower than cloud agents?', a: 'LLM inference takes time on local hardware. Cloud agents: ~1 sec per step. Local agents: ~3–5 sec per step.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regional Compliance & Data Control',
+                        items: [
+                            '<strong>GDPR (EU):</strong> Local agents satisfy data residency requirements without cloud provider agreements.',
+                            '<strong>APPI (Japan):</strong> Local inference satisfies cross-border data transfer restrictions.',
+                            '<strong>PIPL & Data Security Law (China):</strong> Local agents with Qwen or other models keep Chinese user data in-country.',
+                            '<strong>Key benefit:</strong> Full data control, no API dependencies, compliance by design.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Start Building Local Agents Today',
+                        body: 'Learn how to build, test, and deploy autonomous agents with LangGraph and Ollama. No cloud dependencies, full control over data and reasoning.',
+                        cta: 'Read the Full Guide',
+                        href: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama'
+                    }
+                ]
+            },
+            de: {
+                title: 'Lokale KI-Agenten mit LangGraph und Ollama',
+                prevBtn: '← Zurück',
+                nextBtn: 'Weiter →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Lokale KI-Agenten mit LangGraph und Ollama',
+                        subtitle: 'Autonome Entscheidungsfindungssysteme bauen – ohne Cloud, mit vollständiger Kontrolle',
+                        link: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie funktioniert ein KI-Agent?',
+                        items: [
+                            '<strong>Agent = LLM + Tools + Schleife.</strong> Das LLM beobachtet den Zustand, denkt über die beste Aktion nach, führt ein Tool aus, beobachtet das Ergebnis und wiederholt sich, bis es fertig ist.',
+                            '<strong>Beobachtung → Überlegung → Aktion → Wiederholen</strong> — dies ist das Kernmuster einer Agentenschleife.',
+                            '<strong>Beispiel:</strong> Recherche-Agent mit der Aufgabe „Vergleiche Llama 3.2 vs Qwen 2.5 bei Codierungsaufgaben". Er sucht Benchmarks, findet HumanEval-Scores und erstellt einen Vergleich.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Agenten vs. Chains — Wesentliche Unterschiede',
+                        items: [
+                            '<strong>Agenten treffen dynamische Entscheidungen.</strong> Das LLM wählt basierend auf dem Kontext das nächste aufzurufende Tool aus – flexibel, unvorhersehbar.',
+                            '<strong>Chains folgen einem vordefinierten Pfad.</strong> Schritt A → B → C, keine Entscheidungen. Schnell und vorhersehbar, aber unflexibel.',
+                            '<strong>Wann man Agenten einsetzt:</strong> Überlegung, Recherche, Fehlerwiederherstellung, komplexe Aufgaben.',
+                            '<strong>Wann man Chains einsetzt:</strong> Zusammenfassung, E-Mail, feste Workflows mit bekannten Schritten.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Vergleich Agenten vs. Chains',
+                        columns: ['Aspekt', 'Agenten', 'Chains'],
+                        rows: [
+                            { Aspekt: 'Entscheidungsfindung', Agenten: 'Dynamisch, LLM entscheidet', Chains: 'Vordefinierte Reihenfolge' },
+                            { Aspekt: 'Schleifen', Agenten: 'Überlegungsschleife (bis fertig)', Chains: 'Keine Schleifen' },
+                            { Aspekt: 'Fehlerwiederherstellung', Agenten: 'LLM kann sich erholen', Chains: 'Manuelle Fehlerbehandlung' },
+                            { Aspekt: 'Anwendungsfall', Agenten: 'Komplexe Überlegung', Chains: 'Feste Workflows' },
+                            { Aspekt: 'Geschwindigkeit', Agenten: '~3–5 Sek. pro Schritt', Chains: 'Schnell, ~1 Sek.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph-Architektur: Knoten, Kanten und Zustand',
+                        items: [
+                            '<strong>Zustand:</strong> Informationen, die der Agent speichert — Kontext, Beobachtungen, Entscheidungen.',
+                            '<strong>Knoten:</strong> Funktionen, die den Zustand verarbeiten — LLM-Überlegung, Tool-Ausführung.',
+                            '<strong>Kanten:</strong> Übergänge zwischen Knoten — bedingt basierend auf LLM-Ausgabe.',
+                            '<strong>LangGraph ist wie ein Flussdiagramm</strong> — das LLM entscheidet bei jedem Entscheidungsfeld, welcher Pfeil zu folgen ist.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Welche Tools können Agenten verwenden? (Teil 1)',
+                        items: [
+                            '<strong>Websuche:</strong> Internet durchsuchen für Informationen (DuckDuckGo, Google, Bing).',
+                            '<strong>Code-Ausführung:</strong> Python-Code ausführen und Ergebnisse zurückgeben.',
+                            '<strong>Dateioperationen:</strong> Dateien lesen/schreiben, Verzeichnisse auflisten.',
+                            '<strong>Datenbankabfragen:</strong> Lokale oder Remote-Datenbanken abfragen.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Welche Tools können Agenten verwenden? (Teil 2)',
+                        items: [
+                            '<strong>Dokumentenabruf:</strong> RAG-Vektordatenbank durchsuchen.',
+                            '<strong>Taschenrechner:</strong> Arithmetik und symbolische Mathematik.',
+                            '<strong>E-Mail:</strong> Nachrichten senden (mit Vorsicht, Berechtigungen prüfen).',
+                            '<strong>API-Aufrufe:</strong> Mit externen Services interagieren. <strong>Begrenzen Sie auf 5–10 Tools pro Agent.</strong>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie denken Agenten nach? Modellgröße zählt',
+                        items: [
+                            '<strong>Kleine Modelle (3–7B):</strong> Begrenzte Überlegung. Beste für deterministische Aufgaben.',
+                            '<strong>Mittlere Modelle (13–30B):</strong> Anständige Überlegung. Können 2–3 Schritte handhaben.',
+                            '<strong>Große Modelle (70B+):</strong> Starke Überlegung. Können komplexe Probleme mit Multi-Schritt-Planung lösen.',
+                            '<strong>Chain-of-Thought (CoT) hilft:</strong> Explizite schrittweise Überlegung verbessert die Tool-Auswahl.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Lokale Agent-Muster, die funktionieren',
+                        items: [
+                            '<strong>Recherche-Agent:</strong> Durchsucht Dokumente und Web, synthetisiert Ergebnisse.',
+                            '<strong>Code-Agent:</strong> Schreibt und führt Code aus, um Probleme zu lösen.',
+                            '<strong>Planungs-Agent:</strong> Zerlegt komplexe Aufgaben in Untergaben.',
+                            '<strong>Konversations-Agent:</strong> Speichert Gedächtnis, antwortet auf Fragen, lernt aus Feedback.',
+                            '<strong>Workflow-Automatisierung:</strong> Liest E-Mails, führt Aufgaben aus, sendet Bestätigungen.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Häufige Fehler bei Agent-Implementierung',
+                        items: [
+                            '<strong>Zu viele Tools:</strong> Verwirrt das LLM. Begrenzen Sie auf 5–10 relevante Tools.',
+                            '<strong>Schlechte Tool-Beschreibungen:</strong> Das LLM wird Tools nicht korrekt verwenden. Schreiben Sie klare Beschreibungen (unter 50 Wörtern).',
+                            '<strong>Endlosschleifen:</strong> Agent bleibt in Überlegungsschleifen stecken. Setzen Sie immer max_iterations auf 10–20.',
+                            '<strong>Keine Fehlerbehandlung:</strong> Tool-Aufrufe können fehlschlagen. Agent sollte Fehler elegant behandeln.',
+                            '<strong>Kleine Modelle verwenden:</strong> 3B-Modelle können nicht genug für komplexe Agenten überlegen. Verwenden Sie 13B+ für autonome Agenten.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph vs. LangChain: Wann LangGraph wählen',
+                        items: [
+                            '<strong>LangGraph verwenden, wenn:</strong> Workflow erfordert Schleifen, Verzweigungen oder Fehlerwiederherstellung.',
+                            '<strong>LangChain verwenden, wenn:</strong> Workflow ist linear (A → B → C) ohne Entscheidungspunkte.',
+                            '<strong>Hauptunterschied:</strong> LangGraph fügt Graphstruktur (Knoten, Kanten, Zustand) für zuverlässige Überlegungsschleifen hinzu.',
+                            '<strong>Hinweis:</strong> LangGraph baut auf LangChain auf; spezialisiert auf Agenten und zustandsbehaftete Workflows.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Hardware und Latenz: Was Sie brauchen',
+                        items: [
+                            '<strong>Latenz lokaler Agenten:</strong> ~3–5 Sekunden pro Überlegungsschritt (vs. ~1 Sek. für Cloud-Agenten).',
+                            '<strong>Minimalmodell:</strong> 13B+ Parameter für zuverlässiges autonomes Überlegen.',
+                            '<strong>Minimale Hardware:</strong> 16GB RAM + 8GB GPU VRAM für quantisiertes 13B-Modell.',
+                            '<strong>Nur CPU:</strong> Erwarten Sie 5–15 Sekunden pro Schritt.',
+                            '<strong>Trade-off:</strong> Langsamer als Cloud, aber privat, vollständig anpassbar, null API-Kosten.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            { q: 'Können lokale Agenten auf das Internet zugreifen?', a: 'Ja, wenn Sie ein web_search-Tool bereitstellen. Der Agent ruft es wie jedes andere Tool auf. DuckDuckGo-API oder SerpAPI sind beliebte Optionen.' },
+                            { q: 'Was ist der größte Fehler bei Agent-Bereitstellung?', a: 'Bereitstellung ohne Iterationslimit. Agenten können ewig in Schleifen bleiben. Setzen Sie immer max_iterations auf 10–20.' },
+                            { q: 'Warum sind lokale Agenten langsamer als Cloud-Agenten?', a: 'LLM-Inferenz braucht Zeit auf lokaler Hardware. Cloud: ~1 Sek. pro Schritt. Lokal: ~3–5 Sek. pro Schritt.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regionale Compliance und Datenkontrolle',
+                        items: [
+                            '<strong>GDPR (EU):</strong> Lokale Agenten erfüllen Datenschutz-Anforderungen ohne Cloud-Provider-Vereinbarungen.',
+                            '<strong>APPI (Japan):</strong> Lokale Inferenz erfüllt Beschränkungen bei grenzüberschreitenden Datenübertragungen.',
+                            '<strong>PIPL & Datensicherheitsgesetz (China):</strong> Lokale Agenten mit Qwen oder anderen Modellen halten chinesische Benutzerdaten im Land.',
+                            '<strong>Wichtiger Vorteil:</strong> Vollständige Datenkontrolle, keine API-Abhängigkeiten, Compliance by Design.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bauen Sie heute lokale Agenten',
+                        body: 'Erfahren Sie, wie Sie autonome Agenten mit LangGraph und Ollama bauen, testen und bereitstellen. Keine Cloud-Abhängigkeiten, vollständige Kontrolle über Daten und Überlegungen.',
+                        cta: 'Vollständigen Leitfaden lesen',
+                        href: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=de'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Agents IA locaux avec LangGraph et Ollama',
+                prevBtn: '← Précédent',
+                nextBtn: 'Suivant →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Agents IA locaux avec LangGraph et Ollama',
+                        subtitle: 'Construire des systèmes autonomes de prise de décision — sans cloud, contrôle total',
+                        link: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment fonctionne un agent IA ?',
+                        items: [
+                            '<strong>Agent = LLM + outils + boucle.</strong> Le LLM observe l\'état, réfléchit à la meilleure action, exécute un outil, observe le résultat et répète jusqu\'à terminer.',
+                            '<strong>Observation → Raisonnement → Action → Répéter</strong> — c\'est le schéma fondamental d\'une boucle agent.',
+                            '<strong>Exemple :</strong> Agent de recherche chargé de « Comparer Llama 3.2 vs Qwen 2.5 sur les tâches de codage ». Il recherche des benchmarks, trouve les scores HumanEval et synthétise une comparaison.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Agents vs Chaînes — Différences clés',
+                        items: [
+                            '<strong>Les agents prennent des décisions dynamiques.</strong> Le LLM choisit quel outil appeler ensuite selon le contexte — flexible, imprévisible.',
+                            '<strong>Les chaînes suivent un chemin prédéterminé.</strong> Étape A → B → C, pas de décisions. Rapide et prévisible mais inflexible.',
+                            '<strong>Quand utiliser les agents :</strong> raisonnement, recherche, récupération après erreur, tâches complexes.',
+                            '<strong>Quand utiliser les chaînes :</strong> résumé, email, workflows fixes avec étapes connues.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Comparaison agents vs chaînes',
+                        columns: ['Aspect', 'Agents', 'Chaînes'],
+                        rows: [
+                            { Aspect: 'Prise de décision', Agents: 'Dynamique, LLM décide', Chaînes: 'Séquence prédéterminée' },
+                            { Aspect: 'Boucles', Agents: 'Boucle de raisonnement (répéter jusqu\'à terminer)', Chaînes: 'Pas de boucles' },
+                            { Aspect: 'Récupération après erreur', Agents: 'LLM peut récupérer après erreurs', Chaînes: 'Gestion manuelle des erreurs' },
+                            { Aspect: 'Cas d\'usage', Agents: 'Raisonnement complexe (recherche, automatisation)', Chaînes: 'Workflows fixes (résumé → email)' },
+                            { Aspect: 'Vitesse', Agents: '~3–5 sec par étape', Chaînes: 'Rapide, ~1 sec par étape' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Architecture LangGraph : nœuds, arêtes et état',
+                        items: [
+                            '<strong>État :</strong> Information détenue par l\'agent — contexte, observations, décisions.',
+                            '<strong>Nœuds :</strong> Fonctions qui traitent l\'état — raisonnement LLM, exécution d\'outil.',
+                            '<strong>Arêtes :</strong> Transitions entre nœuds — conditionnelles basées sur la sortie LLM.',
+                            '<strong>LangGraph est comme un organigramme</strong> où le LLM décide quelle flèche suivre à chaque boîte de décision.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quels outils les agents peuvent-ils utiliser ? (Partie 1)',
+                        items: [
+                            '<strong>Recherche Web :</strong> Rechercher sur Internet des informations (DuckDuckGo, Google, Bing).',
+                            '<strong>Exécution de code :</strong> Exécuter du code Python et retourner les résultats.',
+                            '<strong>Opérations sur fichiers :</strong> Lire/écrire des fichiers, lister les répertoires.',
+                            '<strong>Requêtes de base de données :</strong> Interroger des bases de données locales ou distantes.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quels outils les agents peuvent-ils utiliser ? (Partie 2)',
+                        items: [
+                            '<strong>Récupération de documents :</strong> Rechercher dans la base de données vectorielle RAG.',
+                            '<strong>Calculatrice :</strong> Effectuer des calculs arithmétiques et mathématiques symboliques.',
+                            '<strong>Email :</strong> Envoyer des messages (avec prudence, vérifier les autorisations).',
+                            '<strong>Appels API :</strong> Interagir avec des services externes. <strong>Limitez à 5–10 outils par agent.</strong>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment les agents raisonnent-ils ? La taille du modèle compte',
+                        items: [
+                            '<strong>Petits modèles (3–7B) :</strong> Raisonnement limité. Mieux pour les tâches déterministes.',
+                            '<strong>Modèles moyens (13–30B) :</strong> Raisonnement décent. Peuvent gérer des chaînes de 2–3 étapes.',
+                            '<strong>Grands modèles (70B+) :</strong> Raisonnement fort. Peuvent résoudre des problèmes complexes avec planification multi-étapes.',
+                            '<strong>Le Chain-of-Thought (CoT) aide :</strong> Le raisonnement étape par étape explicite améliore la qualité du choix d\'outils.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Modèles d\'agents locaux qui fonctionnent',
+                        items: [
+                            '<strong>Agent de recherche :</strong> Recherche dans des documents et le web, synthétise les résultats.',
+                            '<strong>Agent de code :</strong> Écrit et exécute du code pour résoudre des problèmes.',
+                            '<strong>Agent de planification :</strong> Décompose les tâches complexes en sous-tâches.',
+                            '<strong>Agent conversationnel :</strong> Maintient la mémoire, répond aux questions, apprend du feedback.',
+                            '<strong>Automatisation de workflows :</strong> Lit les emails, exécute les tâches, envoie les confirmations.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs courantes dans l\'implémentation d\'agents',
+                        items: [
+                            '<strong>Trop d\'outils :</strong> Confond le LLM. Limitez à 5–10 outils pertinents.',
+                            '<strong>Mauvaises descriptions d\'outils :</strong> Le LLM n\'utilisera pas les outils correctement si vague. Écrivez des descriptions claires (moins de 50 mots).',
+                            '<strong>Boucles infinies :</strong> L\'agent se bloque dans des boucles de raisonnement. Définissez toujours max_iterations sur 10–20.',
+                            '<strong>Pas de gestion d\'erreurs :</strong> Les appels d\'outils peuvent échouer. L\'agent devrait gérer les erreurs gracieusement.',
+                            '<strong>Utiliser de petits modèles :</strong> Les modèles 3B ne peuvent pas assez raisonner pour les agents complexes. Utilisez 13B+ pour les agents autonomes.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph vs LangChain : Quand choisir LangGraph',
+                        items: [
+                            '<strong>Utilisez LangGraph quand :</strong> le workflow nécessite des boucles, des branchements conditionnels ou la récupération après erreurs.',
+                            '<strong>Utilisez LangChain quand :</strong> le workflow est linéaire (A → B → C) sans points de décision.',
+                            '<strong>Différence clé :</strong> LangGraph ajoute une structure graphique (nœuds, arêtes, état) pour des boucles de raisonnement fiables.',
+                            '<strong>Note :</strong> LangGraph s\'appuie sur LangChain; spécialisé pour les agents et les workflows stateful.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Matériel et latence : Ce dont vous avez besoin',
+                        items: [
+                            '<strong>Latence agent local :</strong> ~3–5 sec par étape de raisonnement (vs ~1 sec pour les agents cloud).',
+                            '<strong>Modèle minimum :</strong> 13B+ paramètres pour un raisonnement autonome fiable.',
+                            '<strong>Matériel minimum :</strong> 16GB RAM + 8GB VRAM GPU pour un modèle 13B quantisé.',
+                            '<strong>CPU uniquement :</strong> Attendez-vous à 5–15 sec par étape.',
+                            '<strong>Compromis :</strong> Plus lent que le cloud, mais privé, entièrement personnalisable et zéro coûts API.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions fréquentes',
+                        faqs: [
+                            { q: 'Les agents locaux peuvent-ils accéder à Internet ?', a: 'Oui, si vous fournissez un outil web_search. L\'agent l\'appelle comme tout autre outil. L\'API DuckDuckGo ou SerpAPI sont des options populaires.' },
+                            { q: 'Quelle est la plus grande erreur lors du déploiement d\'agents ?', a: 'Déployer sans limite d\'itération. Les agents peuvent boucler indéfiniment. Définissez toujours max_iterations sur 10–20.' },
+                            { q: 'Pourquoi les agents locaux sont-ils plus lents que les agents cloud ?', a: 'L\'inférence LLM prend du temps sur le matériel local. Cloud : ~1 sec par étape. Local : ~3–5 sec par étape.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Conformité régionale et contrôle des données',
+                        items: [
+                            '<strong>RGPD (UE) :</strong> Les agents locaux satisfont les exigences de résidence des données sans accords avec les fournisseurs cloud.',
+                            '<strong>APPI (Japon) :</strong> L\'inférence locale satisfait les restrictions de transfert transfrontalier de données.',
+                            '<strong>PIPL & Loi sur la sécurité des données (Chine) :</strong> Les agents locaux avec Qwen ou d\'autres modèles gardent les données des utilisateurs chinois dans le pays.',
+                            '<strong>Avantage clé :</strong> Contrôle total des données, pas de dépendances API, conformité par conception.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Commencez à construire des agents locaux',
+                        body: 'Apprenez à construire, tester et déployer des agents autonomes avec LangGraph et Ollama. Pas de dépendances cloud, contrôle total sur les données et le raisonnement.',
+                        cta: 'Lire le guide complet',
+                        href: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=fr'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ローカルAIエージェントとLangGraphとOllama',
+                prevBtn: '← 前へ',
+                nextBtn: '次へ →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ローカルAIエージェントとLangGraphとOllama',
+                        subtitle: '自律的な意思決定システムを構築 — クラウドなし、完全なコントロール',
+                        link: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'AIエージェントはどのように機能しますか？',
+                        items: [
+                            '<strong>エージェント = LLM + ツール + ループ。</strong> LLMが状態を観察し、最良の行動について推論し、ツールを実行し、結果を観察して完了するまで繰り返します。',
+                            '<strong>観察 → 推論 → アクション → 繰り返す</strong> — これがエージェントループの中核パターンです。',
+                            '<strong>例 :</strong> 「Llama 3.2とQwen 2.5のコーディングタスクでの比較」という研究エージェント。ベンチマークを検索し、HumanEvalスコアを見つけて、比較を合成します。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エージェント対チェーン — 主な違い',
+                        items: [
+                            '<strong>エージェントは動的な意思決定を行います。</strong> LLMがコンテキストに基づいて次に呼び出すツールを選択します — 柔軟ですが予測不可能です。',
+                            '<strong>チェーンは所定のパスに従います。</strong> ステップA → B → C、決定なし。高速で予測可能ですが柔軟ではありません。',
+                            '<strong>エージェントを使用する場合:</strong> 推論、リサーチ、エラーリカバリ、複雑なタスク。',
+                            '<strong>チェーンを使用する場合:</strong> 要約、メール、既知のステップを持つ固定ワークフロー。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'エージェント対チェーンの比較',
+                        columns: ['側面', 'エージェント', 'チェーン'],
+                        rows: [
+                            { 側面: '意思決定', エージェント: '動的、LLMが決定', チェーン: '所定の順序' },
+                            { 側面: 'ループ', エージェント: '推論ループ（完了まで繰り返し）', チェーン: 'ループなし' },
+                            { 側面: 'エラー回復', エージェント: 'LLMが回復可能', チェーン: '手動エラー処理' },
+                            { 側面: 'ユースケース', エージェント: '複雑な推論（研究、自動化）', チェーン: '固定ワークフロー（要約→メール）' },
+                            { 側面: '速度', エージェント: '~3–5秒/ステップ', チェーン: '高速、~1秒/ステップ' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraphアーキテクチャ：ノード、エッジ、状態',
+                        items: [
+                            '<strong>状態 :</strong> エージェントが保持する情報 — コンテキスト、観察、決定。',
+                            '<strong>ノード :</strong> 状態を処理する関数 — LLM推論、ツール実行。',
+                            '<strong>エッジ :</strong> ノード間の遷移 — LLM出力に基づいて条件付き。',
+                            '<strong>LangGraphはフローチャートのようです</strong> — LLMが各決定ボックスでどの矢印に従うかを決定します。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エージェントが使用できるツール？（パート1）',
+                        items: [
+                            '<strong>ウェブ検索 :</strong> インターネットで情報を検索（DuckDuckGo、Google、Bing）。',
+                            '<strong>コード実行 :</strong> Pythonコードを実行して結果を返す。',
+                            '<strong>ファイル操作 :</strong> ファイルの読み込み/書き込み、ディレクトリのリスト。',
+                            '<strong>データベースクエリ :</strong> ローカルまたはリモートデータベースをクエリ。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エージェントが使用できるツール？（パート2）',
+                        items: [
+                            '<strong>ドキュメント検索 :</strong> RAGベクターデータベースを検索。',
+                            '<strong>電卓 :</strong> 算術および記号数学を実行。',
+                            '<strong>メール :</strong> メッセージを送信（注意、権限を確認）。',
+                            '<strong>APIコール :</strong> 外部サービスと相互作用。<strong>エージェントあたり5–10ツールに制限。</strong>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エージェントはどのように推論しますか？ モデルサイズは重要',
+                        items: [
+                            '<strong>小規模モデル（3–7B）:</strong> 限定的な推論。決定論的タスク向け。',
+                            '<strong>中規模モデル（13–30B）:</strong> まともな推論。2–3ステップの推論チェーンを処理可能。',
+                            '<strong>大規模モデル（70B+）:</strong> 強力な推論。複数ステップの計画で複雑な問題を解決可能。',
+                            '<strong>Chain-of-Thought（CoT）が役立ちます :</strong> 明示的なステップバイステップの推論がツール選択の品質を向上。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '機能するローカルエージェントパターン',
+                        items: [
+                            '<strong>研究エージェント :</strong> ドキュメントとウェブを検索、結果を合成。',
+                            '<strong>コードエージェント :</strong> コードを作成・実行して問題を解決。',
+                            '<strong>計画エージェント :</strong> 複雑なタスクをサブタスクに分解。',
+                            '<strong>会話型エージェント :</strong> メモリを維持、質問に応答、フィードバックから学習。',
+                            '<strong>ワークフロー自動化 :</strong> メールを読む、タスクを実行、確認を送信。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エージェント実装の一般的な間違い',
+                        items: [
+                            '<strong>ツールが多すぎる :</strong> LLMを混乱させます。5–10個の関連ツールに制限。',
+                            '<strong>不良なツール説明 :</strong> あいまいではLLMがツールを正しく使用しません。明確な説明を作成（50語未満）。',
+                            '<strong>無限ループ :</strong> エージェントが推論ループで停止。常にmax_iterationsを10–20に設定。',
+                            '<strong>エラーハンドリングなし :</strong> ツール呼び出しは失敗する可能性があります。エージェントはエラーを優雅に処理。',
+                            '<strong>小規模モデルの使用 :</strong> 3Bモデルは複雑なエージェント向けに推論不十分。自律型エージェント向けに13B+を使用。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph対LangChain：LangGraphを選択する時',
+                        items: [
+                            '<strong>LangGraphを使用する場合 :</strong> ワークフローがループ、条件分岐、またはエラーリカバリが必要。',
+                            '<strong>LangChainを使用する場合 :</strong> ワークフローが線形（A → B → C）で決定ポイントがない。',
+                            '<strong>主な違い :</strong> LangGraphがグラフ構造（ノード、エッジ、状態）を追加して信頼性の高い推論ループ。',
+                            '<strong>注意 :</strong> LangGraphはLangChainの上に構築; エージェントとステートフルワークフロー用に特化。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ハードウェアとレイテンシ：必要なもの',
+                        items: [
+                            '<strong>ローカルエージェントレイテンシ :</strong> ~3–5秒/推論ステップ（クラウドエージェント対 ~1秒）。',
+                            '<strong>最小モデル :</strong> 信頼性の高い自律推論向けに13B+パラメータ。',
+                            '<strong>最小ハードウェア :</strong> 16GB RAM + 8GB GPU VRAM（量子化13Bモデル向け）。',
+                            '<strong>CPU専用 :</strong> ステップあたり5–15秒を予想。',
+                            '<strong>トレードオフ :</strong> クラウドより遅いが、プライベート、完全にカスタマイズ可能、ゼロAPIコスト。'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            { q: 'ローカルエージェントはインターネットにアクセスできますか？', a: 'はい、web_searchツールを提供する場合。エージェントが他のツールと同じように呼び出します。DuckDuckGo APIまたはSerpAPIが一般的なオプション。' },
+                            { q: 'エージェント展開の最大の間違いは何ですか？', a: 'イテレーション制限なしで展開。エージェントは無限ループする可能性があります。常にmax_iterationsを10–20に設定。' },
+                            { q: 'ローカルエージェントがクラウドエージェントより遅いのはなぜですか？', a: 'ローカルハードウェアでのLLM推論に時間がかかります。クラウド：~1秒/ステップ。ローカル：~3–5秒/ステップ。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域コンプライアンスとデータ管理',
+                        items: [
+                            '<strong>GDPR（EU）:</strong> ローカルエージェントはクラウドプロバイダー契約なしでデータ保存要件を満たす。',
+                            '<strong>APPI（日本）:</strong> ローカル推論が国境を越えたデータ転送制限を満たす。',
+                            '<strong>PIPL&データセキュリティ法（中国）:</strong> Qwenなどのモデルのローカルエージェントが中国ユーザーデータを国内に保持。',
+                            '<strong>主な利点 :</strong> データ管理完全、API依存なし、設計によるコンプライアンス。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'ローカルエージェント構築を開始',
+                        body: 'LangGraphとOllamaで自律エージェントを構築、テスト、展開する方法を学びます。クラウド依存なし、データと推論の完全なコントロール。',
+                        cta: '完全ガイドを読む',
+                        href: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=ja'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地AI代理与LangGraph和Ollama',
+                prevBtn: '← 上一张',
+                nextBtn: '下一张 →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '本地AI代理与LangGraph和Ollama',
+                        subtitle: '构建自主决策系统 — 无需云端，完全控制',
+                        link: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'AI代理如何工作？',
+                        items: [
+                            '<strong>代理 = LLM + 工具 + 循环。</strong> LLM观察状态、对最佳行动进行推理、执行工具、观察结果，然后重复直到完成。',
+                            '<strong>观察 → 推理 → 行动 → 重复</strong> — 这是代理循环的核心模式。',
+                            '<strong>示例 :</strong> 研究代理被任务"比较Llama 3.2与Qwen 2.5在编码任务中的表现"。它搜索基准，找到HumanEval分数并合成比较。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代理与链条 — 关键区别',
+                        items: [
+                            '<strong>代理做出动态决策。</strong> LLM根据上下文选择下一个调用的工具 — 灵活但不可预测。',
+                            '<strong>链条遵循预定路径。</strong> 步骤A → B → C，无决策。快速可预测但不灵活。',
+                            '<strong>何时使用代理 :</strong> 推理、研究、错误恢复、复杂任务。',
+                            '<strong>何时使用链条 :</strong> 总结、电子邮件、已知步骤的固定工作流。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '代理与链条比较',
+                        columns: ['方面', '代理', '链条'],
+                        rows: [
+                            { 方面: '决策制定', 代理: '动态，LLM决定', 链条: '预定顺序' },
+                            { 方面: '循环', 代理: '推理循环（重复直到完成）', 链条: '无循环' },
+                            { 方面: '错误恢复', 代理: 'LLM可以恢复', 链条: '手动错误处理' },
+                            { 方面: '用例', 代理: '复杂推理（研究、自动化）', 链条: '固定工作流（总结→电子邮件）' },
+                            { 方面: '速度', 代理: '~3–5秒/步骤', 链条: '快速，~1秒/步骤' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph架构：节点、边和状态',
+                        items: [
+                            '<strong>状态 :</strong> 代理持有的信息 — 上下文、观察、决策。',
+                            '<strong>节点 :</strong> 处理状态的函数 — LLM推理、工具执行。',
+                            '<strong>边 :</strong> 节点之间的转换 — 基于LLM输出的条件。',
+                            '<strong>LangGraph像一个流程图</strong> — LLM在每个决策框中决定跟随哪个箭头。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代理可以使用哪些工具？（第1部分）',
+                        items: [
+                            '<strong>网络搜索 :</strong> 搜索互联网信息（DuckDuckGo、Google、Bing）。',
+                            '<strong>代码执行 :</strong> 执行Python代码并返回结果。',
+                            '<strong>文件操作 :</strong> 读取/写入文件、列出目录。',
+                            '<strong>数据库查询 :</strong> 查询本地或远程数据库。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代理可以使用哪些工具？（第2部分）',
+                        items: [
+                            '<strong>文档检索 :</strong> 搜索RAG向量数据库中的文档。',
+                            '<strong>计算器 :</strong> 执行算术和符号数学。',
+                            '<strong>电子邮件 :</strong> 发送消息（谨慎，验证权限）。',
+                            '<strong>API调用 :</strong> 与外部服务交互。<strong>限制每个代理5–10个工具。</strong>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代理如何推理？ 模型大小很重要',
+                        items: [
+                            '<strong>小型模型（3–7B）:</strong> 推理能力有限。适合确定性任务。',
+                            '<strong>中等模型（13–30B）:</strong> 推理尚可。可以处理2–3步推理链。',
+                            '<strong>大型模型（70B+）:</strong> 强大的推理。可以用多步规划解决复杂问题。',
+                            '<strong>链式思维（CoT）有帮助 :</strong> 明确的逐步推理改进工具选择质量。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '有效的本地代理模式',
+                        items: [
+                            '<strong>研究代理 :</strong> 搜索文档和网络，合成调查结果。',
+                            '<strong>代码代理 :</strong> 编写和执行代码来解决问题。',
+                            '<strong>规划代理 :</strong> 将复杂任务分解为子任务。',
+                            '<strong>会话代理 :</strong> 保持内存、回答问题、从反馈中学习。',
+                            '<strong>工作流自动化 :</strong> 读取电子邮件、执行任务、发送确认。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代理实现的常见错误',
+                        items: [
+                            '<strong>工具过多 :</strong> 混淆LLM。限制为5–10个相关工具。',
+                            '<strong>工具描述不佳 :</strong> 模糊描述导致LLM无法正确使用工具。编写清晰描述（少于50个词）。',
+                            '<strong>无限循环 :</strong> 代理陷入推理循环。始终将max_iterations设置为10–20。',
+                            '<strong>无错误处理 :</strong> 工具调用可能失败。代理应该优雅地处理错误。',
+                            '<strong>使用小型模型 :</strong> 3B模型对复杂代理推理不足。自主代理使用13B+。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LangGraph与LangChain：何时选择LangGraph',
+                        items: [
+                            '<strong>在以下情况下使用LangGraph :</strong> 工作流需要循环、条件分支或从故障恢复。',
+                            '<strong>在以下情况下使用LangChain :</strong> 工作流是线性（A → B → C）且无决策点。',
+                            '<strong>关键区别 :</strong> LangGraph添加图形结构（节点、边、状态）以实现可靠推理循环。',
+                            '<strong>注意 :</strong> LangGraph建立在LangChain之上；专为代理和有状态工作流而设计。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '硬件和延迟：您需要什么',
+                        items: [
+                            '<strong>本地代理延迟 :</strong> ~3–5秒/推理步骤（对比云代理 ~1秒）。',
+                            '<strong>最小模型 :</strong> 可靠自主推理的13B+参数。',
+                            '<strong>最小硬件 :</strong> 16GB RAM + 8GB GPU VRAM（对于量化13B模型）。',
+                            '<strong>CPU专用 :</strong> 预计每步5–15秒。',
+                            '<strong>权衡 :</strong> 比云端慢，但私密、完全可定制、零API成本。'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            { q: '本地代理可以访问互联网吗？', a: '可以，如果您提供web_search工具。代理像调用任何其他工具一样调用它。DuckDuckGo API或SerpAPI是常见选项。' },
+                            { q: '代理部署的最大错误是什么？', a: '在没有迭代限制的情况下部署。代理可能会无限循环。始终将max_iterations设置为10–20。' },
+                            { q: '为什么本地代理比云代理慢？', a: 'LLM推理在本地硬件上需要时间。云端：~1秒/步骤。本地：~3–5秒/步骤。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地区合规性和数据控制',
+                        items: [
+                            '<strong>GDPR（欧盟）:</strong> 本地代理无需云提供商协议即可满足数据驻留要求。',
+                            '<strong>APPI（日本）:</strong> 本地推理满足跨境数据转移限制。',
+                            '<strong>PIPL和数据安全法（中国）:</strong> 使用Qwen等的本地代理将中国用户数据保留在国内。',
+                            '<strong>关键优势 :</strong> 完全数据控制、无API依赖、通过设计实现合规。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '开始构建本地代理',
+                        body: '学习如何使用LangGraph和Ollama构建、测试和部署自主代理。无云依赖，完全控制数据和推理。',
+                        cta: '阅读完整指南',
+                        href: 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=zh'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama?lang=' + lang;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener" style="color: #6750a4; text-decoration: none;">Read the full article →</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach((item, i) => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 20px; text-align: left; margin-top: 12px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+                    });
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 20px; margin-bottom: 20px;">${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">${slide.cta}</a>
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        const baseUrl = 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama';
+        backLink.href = lang && lang !== 'en' ? `${baseUrl}?lang=${lang}` : baseUrl;
+
+        // Render all slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        // Initialize navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+        document.getElementById('prevBtn').textContent = content.prevBtn;
+        document.getElementById('nextBtn').textContent = content.nextBtn;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Print handlers
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
