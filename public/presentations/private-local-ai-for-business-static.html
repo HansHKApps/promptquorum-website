@@ -389,13 +389,13 @@
           },
           {
             type: 'list',
-            h2: 'Privacy & Compliance Benefits',
+            h2: 'Privacy & Compliance',
             items: [
-              '<strong>GDPR (EU):</strong> Data residency control. Infrastructure within EU ensures compliance.',
-              '<strong>HIPAA (Healthcare):</strong> Patient data stays on-premises. AES-256 encryption required.',
-              '<strong>SOC2 (Enterprise):</strong> Audit trails, access controls, incident response. Full control.',
-              '<strong>No vendor lock-in:</strong> Switch models or frameworks anytime. Freedom to adapt.',
-              'Regulated industries (healthcare, finance, government) increasingly mandate on-premises AI.'
+              '<strong>GDPR:</strong> EU data residency control.',
+              '<strong>HIPAA:</strong> Patient data on-premises, AES-256 encryption.',
+              '<strong>SOC2:</strong> Full audit trails & access controls.',
+              '<strong>No vendor lock-in:</strong> Switch models anytime.',
+              'Regulated sectors increasingly mandate on-premises AI.'
             ]
           },
           {
@@ -414,22 +414,21 @@
             type: 'list',
             h2: 'Hardware Requirements by Scale',
             items: [
-              '<strong>Small teams (5–20 users):</strong> 1× RTX 5090 (32 GB, $2,000) for Llama 3.1 8B.',
-              '<strong>Production (20–100 users):</strong> 2× RTX 5090 (64 GB, $4,000) for Llama 3.3 70B.',
-              '<strong>Enterprise (100+ users):</strong> 4× RTX 5090 or 2× A100 80GB ($8k–$30k).',
-              '<strong>Cloud alternative:</strong> Mac M5 Max ($3,499) runs 70B at 25–35 tok/sec silently.',
-              'Budget for networking, cooling, and redundant power supplies as well.'
+              '<strong>Small:</strong> 1× RTX 5090 ($2,000)',
+              '<strong>Production:</strong> 2× RTX 5090 ($4,000)',
+              '<strong>Enterprise:</strong> 4× RTX 5090 or 2× A100 ($8k–$30k)',
+              '<strong>Mac:</strong> M5 Max ($3,499) at 25–35 tok/sec'
             ]
           },
           {
             type: 'list',
-            h2: 'On-Premises vs Cloud APIs',
+            h2: 'On-Premises vs Cloud',
             items: [
-              '<strong>Data privacy:</strong> Local = never leaves network vs Cloud = sent to servers.',
-              '<strong>Latency:</strong> 50–150ms (local) vs 200–500ms (cloud) first-token latency.',
-              '<strong>Model choice:</strong> Any open model (Llama, Qwen, Mistral) vs GPT-5.x, Claude only.',
-              '<strong>Rate limits:</strong> No limits (hardware constraint) vs 500–10,000 RPM.',
-              '<strong>Compliance:</strong> Full control vs shared responsibility with cloud provider.'
+              '<strong>Privacy:</strong> Local = stays private vs Cloud = sent to servers',
+              '<strong>Latency:</strong> 50–150ms vs 200–500ms',
+              '<strong>Models:</strong> Any open model vs GPT-5/Claude only',
+              '<strong>Rate limits:</strong> No limits vs 500–10k RPM',
+              '<strong>Control:</strong> Full vs shared responsibility'
             ]
           },
           {
@@ -447,31 +446,30 @@
             type: 'list',
             h2: 'Architecture: Kubernetes + vLLM',
             items: [
-              '<strong>Typical stack:</strong> Kubernetes cluster running vLLM inference pods + Qdrant for RAG.',
-              '<strong>Model:</strong> Llama 3.3 70B via tensor parallelism across 2× RTX 5090.',
-              '<strong>Scaling:</strong> vLLM OpenAI-compatible API at localhost:8000.',
-              '<strong>Data:</strong> Qdrant vector database for retrieval-augmented generation.',
-              'Multi-GPU deployment with auto-sharding handles 20–100 concurrent users.'
+              '<strong>Stack:</strong> Kubernetes + vLLM + Qdrant',
+              '<strong>Model:</strong> Llama 3.3 70B on 2× RTX 5090',
+              '<strong>API:</strong> OpenAI-compatible at localhost:8000',
+              '<strong>Handles:</strong> 20–100 concurrent users'
             ]
           },
           {
             type: 'list',
             h2: 'Common Deployment Mistakes',
             items: [
-              '<strong>Underestimating infrastructure costs.</strong> Budget 3–5× hardware cost over 5 years.',
-              '<strong>Not planning for scaling.</strong> Start small, plan for growth. Single-GPU cannot scale.',
-              '<strong>Ignoring disaster recovery.</strong> Have backup hardware and data replication.',
-              '<strong>Poor security posture.</strong> Network isolation, encryption, access controls critical.',
-              '<strong>Using outdated models.</strong> Retrain or fine-tune regularly as new models emerge.'
+              '<strong>Underestimating costs.</strong> Budget 3–5× hardware over 5 years.',
+              '<strong>No scaling plan.</strong> Single-GPU cannot handle production.',
+              '<strong>No disaster recovery.</strong> Need backup hardware & replication.',
+              '<strong>Weak security.</strong> Encryption and access controls critical.',
+              '<strong>Outdated models.</strong> Retrain as new models emerge.'
             ]
           },
           {
             type: 'faq',
-            h2: 'FAQ: Break-Even Analysis',
+            h2: 'FAQ: Break-Even',
             faqs: [
               {
-                q: 'When does on-premises AI become cheaper than cloud APIs?',
-                a: 'Break-even occurs at ~200M tokens/month. An RTX 5090 ($2,000) amortized over 36 months costs ~$56/month hardware. Add electricity ($50/month) and cooling ($27/month) = $133/month total. At 200M+ tokens/month, it pays for itself within 1–2 months.'
+                q: 'When does on-premises become cheaper?',
+                a: 'At ~200M tokens/month. RTX 5090 costs $133/month (amortized + electricity). Cloud: $1,000/month. Pays for itself in 1–2 months.'
               }
             ]
           },
@@ -481,25 +479,25 @@
             faqs: [
               {
                 q: 'Does GDPR require local AI?',
-                a: 'GDPR does not require local AI, but requires adequate protection of personal data (Article 28). Regulated sectors in Germany and France increasingly mandate on-premises AI as the safest GDPR compliance path.'
+                a: 'No, but regulated sectors increasingly mandate it for compliance. Most protective approach.'
               },
               {
                 q: 'What hardware do I need?',
-                a: 'Small teams: 1× RTX 5090 ($2,000). Production: 2× RTX 5090 ($4,000). Enterprise: 4× RTX 5090 or 2× A100 ($8k–$30k). Mac M5 Max ($3,499) runs 70B at 25–35 tok/sec for small teams.'
+                a: 'Small: 1× RTX 5090 ($2k). Prod: 2× RTX 5090 ($4k). Enterprise: 4× RTX 5090 ($8k–$30k).'
               }
             ]
           },
           {
             type: 'faq',
-            h2: 'FAQ: HIPAA & Audit Trails',
+            h2: 'FAQ: HIPAA & Audit',
             faqs: [
               {
                 q: 'How do I comply with HIPAA?',
-                a: 'HIPAA requires: (1) AES-256 encryption at rest/in transit, (2) audit logging of all queries, (3) role-based access controls with MFA, (4) Business Associate Agreement (BAA) for third-party services, (5) physical server security.'
+                a: 'AES-256 encryption, audit logging, MFA, BAA for third-parties, physical security.'
               },
               {
                 q: 'How do I ensure audit trails?',
-                a: 'Log every query and response to PostgreSQL or Elasticsearch. Include: timestamp, user ID, model, token counts. vLLM supports request logging natively. Retain logs for 7+ years (financial) per regulatory requirements.'
+                a: 'Log all queries to PostgreSQL. Include timestamp, user, model, tokens. vLLM native support. Retain 7+ years.'
               }
             ]
           },
@@ -507,11 +505,10 @@
             type: 'list',
             h2: 'Best Models for Business (2026)',
             items: [
-              '<strong>Llama 3.3 70B:</strong> Meta\'s Llama Community License — free for commercial use (under 700M users).',
-              '<strong>Qwen2.5 72B:</strong> Alibaba, Apache 2.0 license. Multilingual, strong reasoning.',
-              '<strong>Mistral Small 3.1 24B:</strong> Mistral AI, Apache 2.0. Fast, efficient, cost-effective.',
-              '<strong>For smaller teams:</strong> Llama 3.1 8B, Qwen2.5 7B, Phi-4 Mini 3.8B.',
-              'Always verify license before production deployment.'
+              '<strong>Llama 3.3 70B:</strong> Free commercial license (< 700M users)',
+              '<strong>Qwen2.5 72B:</strong> Apache 2.0, multilingual',
+              '<strong>Mistral 24B:</strong> Apache 2.0, fast & efficient',
+              '<strong>Smaller teams:</strong> Llama 8B or Qwen2.5 7B'
             ]
           },
           {
