@@ -1,0 +1,76 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Team LLM Authentication Flow</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/local-llm-setup-for-teams</dc:source>
+  </metadata>
+
+  <rect width="900" height="520" fill="#FFFFFF"/>
+
+  <text x="450" y="35" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#1C1B1F" text-anchor="middle">Team LLM Authentication & Access Control</text>
+
+  <!-- TOP ROW: Two authentication methods side-by-side -->
+  <rect x="40" y="70" width="380" height="410" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+
+  <text x="230" y="105" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">Simple Auth (SMB)</text>
+  <text x="230" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Teams < 50 users</text>
+
+  <!-- Simple Auth Flow -->
+  <rect x="70" y="150" width="320" height="50" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="230" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">User Sends API Request</text>
+  <text x="230" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Authorization: Bearer sk_user_abc123</text>
+
+  <path d="M 230 200 L 230 230" stroke="#6750A4" stroke-width="2" fill="none"/>
+
+  <rect x="70" y="230" width="320" height="50" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="230" y="250" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">nginx validates token</text>
+  <text x="230" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Token lookup in database</text>
+
+  <path d="M 230 280 L 230 310" stroke="#6750A4" stroke-width="2" fill="none"/>
+
+  <rect x="70" y="310" width="320" height="50" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="230" y="330" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Log request metadata</text>
+  <text x="230" y="345" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">User ID, timestamp, tokens</text>
+
+  <path d="M 230 360 L 230 390" stroke="#6750A4" stroke-width="2" fill="none"/>
+
+  <rect x="70" y="390" width="320" height="50" rx="4" fill="#E8F5E9" stroke="#34A853" stroke-width="2"/>
+  <text x="230" y="410" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Request forwarded to vLLM</text>
+  <text x="230" y="425" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Rate limit enforced per user</text>
+
+  <!-- Enterprise Auth -->
+  <rect x="480" y="70" width="380" height="410" rx="8" fill="#E8F5E9" stroke="#34A853" stroke-width="2"/>
+
+  <text x="670" y="105" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Enterprise Auth (SSO)</text>
+  <text x="670" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Teams > 50 users</text>
+
+  <!-- Enterprise Auth Flow -->
+  <rect x="510" y="150" width="320" height="50" rx="4" fill="#FFFFFF" stroke="#34A853" stroke-width="1.5"/>
+  <text x="670" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">User authenticates with SSO</text>
+  <text x="670" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Okta / Azure AD / Keycloak</text>
+
+  <path d="M 670 200 L 670 230" stroke="#34A853" stroke-width="2" fill="none"/>
+
+  <rect x="510" y="230" width="320" height="50" rx="4" fill="#FFFFFF" stroke="#34A853" stroke-width="1.5"/>
+  <text x="670" y="250" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">OAuth 2.0 token issued</text>
+  <text x="670" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Valid for 1 hour (SAML 2.0)</text>
+
+  <path d="M 670 280 L 670 310" stroke="#34A853" stroke-width="2" fill="none"/>
+
+  <rect x="510" y="310" width="320" height="50" rx="4" fill="#FFFFFF" stroke="#34A853" stroke-width="1.5"/>
+  <text x="670" y="330" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Automatic group assignment</text>
+  <text x="670" y="345" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Dept quotas, permission levels</text>
+
+  <path d="M 670 360 L 670 390" stroke="#34A853" stroke-width="2" fill="none"/>
+
+  <rect x="510" y="390" width="320" height="50" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+  <text x="670" y="410" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#2E7D32" text-anchor="middle">Request forwarded to vLLM</text>
+  <text x="670" y="425" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Group quota enforced</text>
+
+  <!-- Bottom section: Rate Limiting & Audit -->
+  <rect x="40" y="500" width="820" height="20" rx="4" fill="#FFF3E0" stroke="#F4B400" stroke-width="1"/>
+  <text x="60" y="515" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Rate Limiting: 100K tokens/day per user (SMB) | Group quota (Enterprise) • Audit Trail: Every API call logged with user, IP, tokens, error codes</text>
+
+  <text x="830" y="508" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

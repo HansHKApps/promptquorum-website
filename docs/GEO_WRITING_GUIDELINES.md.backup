@@ -554,7 +554,7 @@ Local LLMs articles must use exact product names, model identifiers, and version
 
 **Hardware names:**
 - NVIDIA RTX 4070 Ti (full product name on first mention)
-- Apple Silicon M4 (not "Apple chip" or "M-series")
+- Apple Silicon M5 (not "Apple chip" or "M-series")
 - Use exact VRAM amounts: "12 GB VRAM" (not "about 12 GB")
 
 **First mention rule for Local LLMs:** On first mention, include parameter count and primary use case:

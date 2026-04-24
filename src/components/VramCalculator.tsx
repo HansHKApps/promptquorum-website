@@ -81,6 +81,7 @@ const GPUS: GPU[] = [
   { name: 'RTX 4070 Ti', vram: 12, price: 700 },
   { name: 'RTX 4080', vram: 16, price: 1200 },
   { name: 'RTX 4090', vram: 24, price: 1800 },
+  { name: 'Mac mini M5 (16 GB)', vram: 16, price: 0 },
   { name: 'Mac mini M4 (16 GB)', vram: 16, price: 0 },
   { name: 'MacBook Pro (24 GB)', vram: 24, price: 0 },
   { name: 'M3 Max (36 GB)', vram: 36, price: 0 },

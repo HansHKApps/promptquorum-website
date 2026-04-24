@@ -7,7 +7,7 @@ const TEXT = '#1C1B1F'
 export function LLMSpeedTiers() {
   const tiers = [
     { label: 'Laptop CPU', min: 15, max: 25, color: '#FFB3BA' },
-    { label: 'Apple M3/M4', min: 50, max: 80, color: PRIMARY },
+    { label: 'Apple M4/M5', min: 50, max: 80, color: PRIMARY },
     { label: 'RTX 4070 Ti', min: 90, max: 130, color: TERTIARY },
   ]
 
