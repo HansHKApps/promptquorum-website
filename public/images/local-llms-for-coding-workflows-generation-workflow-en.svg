@@ -1,0 +1,57 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Code Generation Workflow: Prompt → Model → Code</text>
+  
+  <!-- Step 1: Write Prompt -->
+  <circle cx="80" cy="130" r="24" fill="#6750A4"/>
+  <text x="80" y="140" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="80" y="180" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Write Prompt</text>
+  <text x="80" y="200" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">Function signature</text>
+  <text x="80" y="213" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">+ docstring</text>
+  
+  <!-- Arrow -->
+  <text x="160" y="140" font-size="24" fill="#6750A4" text-anchor="middle">→</text>
+  
+  <!-- Step 2: Local LLM -->
+  <circle cx="240" cy="130" r="24" fill="#6750A4"/>
+  <text x="240" y="140" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="240" y="180" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local LLM</text>
+  <text x="240" y="200" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">Qwen2.5-Coder</text>
+  <text x="240" y="213" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">or CodeLlama</text>
+  
+  <!-- Arrow -->
+  <text x="320" y="140" font-size="24" fill="#6750A4" text-anchor="middle">→</text>
+  
+  <!-- Step 3: Code Output -->
+  <circle cx="400" cy="130" r="24" fill="#6750A4"/>
+  <text x="400" y="140" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="400" y="180" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Code Output</text>
+  <text x="400" y="200" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">Generated</text>
+  <text x="400" y="213" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">implementation</text>
+  
+  <!-- Arrow -->
+  <text x="480" y="140" font-size="24" fill="#6750A4" text-anchor="middle">→</text>
+  
+  <!-- Step 4: Review -->
+  <circle cx="560" cy="130" r="24" fill="#6750A4"/>
+  <text x="560" y="140" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="560" y="180" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Review</text>
+  <text x="560" y="200" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">Always check</text>
+  <text x="560" y="213" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">for bugs</text>
+  
+  <!-- Arrow -->
+  <text x="640" y="140" font-size="24" fill="#6750A4" text-anchor="middle">→</text>
+  
+  <!-- Step 5: Integrate -->
+  <circle cx="720" cy="130" r="24" fill="#6750A4"/>
+  <text x="720" y="140" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="720" y="180" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Integrate</text>
+  <text x="720" y="200" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">Use in app</text>
+  <text x="720" y="213" font-family="'SF Mono'" font-size="10" fill="#49454F" text-anchor="middle">or test suite</text>
+  
+  <!-- Quality tip -->
+  <rect x="40" y="260" width="720" height="70" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="285" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">💡 Code Quality Depends on Prompt Quality</text>
+  <text x="400" y="305" font-size="11" fill="#49454F" text-anchor="middle">Include function signature, type hints, and clear docstrings. Poor prompts</text>
+  <text x="400" y="320" font-size="11" fill="#49454F" text-anchor="middle">result in poor code. Test on small examples first (72% accuracy is good, not perfect).</text>
+</svg>

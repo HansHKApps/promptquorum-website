@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">VRAM Requirements by Model Size & Quantization</text>
+  
+  <line x1="18" y1="50" x2="782" y2="50" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="100" y="70" font-size="12" font-weight="700" fill="#79747E">Model</text>
+  <text x="240" y="70" font-size="12" font-weight="700" fill="#79747E">Q4 (Int4)</text>
+  <text x="380" y="70" font-size="12" font-weight="700" fill="#79747E">Q5 (Int5)</text>
+  <text x="520" y="70" font-size="12" font-weight="700" fill="#79747E">Q8 (Full)</text>
+  <text x="680" y="70" font-size="12" font-weight="700" fill="#79747E">GPU</text>
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="100" y="108" font-size="12" font-weight="600" fill="#1C1B1F">3B (Mistral)</text>
+  <circle cx="240" cy="102" r="12" fill="#34A853"/><text x="240" y="107" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2GB</text>
+  <circle cx="380" cy="102" r="12" fill="#34A853"/><text x="380" y="107" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3GB</text>
+  <circle cx="520" cy="102" r="12" fill="#F4B400"/><text x="520" y="107" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6GB</text>
+  <text x="680" y="108" font-size="11" fill="#49454F">RTX 3060</text>
+  <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="100" y="146" font-size="12" font-weight="600" fill="#1C1B1F">7B (Qwen/Code)</text>
+  <circle cx="240" cy="140" r="12" fill="#34A853"/><text x="240" y="145" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4GB</text>
+  <circle cx="380" cy="140" r="12" fill="#34A853"/><text x="380" y="145" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5GB</text>
+  <circle cx="520" cy="140" r="12" fill="#F4B400"/><text x="520" y="145" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">14GB</text>
+  <text x="680" y="146" font-size="11" fill="#49454F">RTX 4060 Ti</text>
+  <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="100" y="184" font-size="12" font-weight="600" fill="#1C1B1F">13B (Mistral)</text>
+  <circle cx="240" cy="178" r="12" fill="#F4B400"/><text x="240" y="183" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8GB</text>
+  <circle cx="380" cy="178" r="12" fill="#F4B400"/><text x="380" y="183" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">10GB</text>
+  <circle cx="520" cy="178" r="12" fill="#EA4335"/><text x="520" y="183" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">26GB</text>
+  <text x="680" y="184" font-size="11" fill="#49454F">RTX 4070</text>
+  <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="100" y="222" font-size="12" font-weight="600" fill="#1C1B1F">32B (Qwen-Coder)</text>
+  <circle cx="240" cy="216" r="12" fill="#F4B400"/><text x="240" y="221" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">18GB</text>
+  <circle cx="380" cy="216" r="12" fill="#EA4335"/><text x="380" y="221" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">24GB</text>
+  <circle cx="520" cy="216" r="12" fill="#EA4335"/><text x="520" y="221" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">64GB</text>
+  <text x="680" y="222" font-size="11" fill="#49454F">RTX 4090</text>
+  <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="50" y="280" font-size="11" font-weight="600" fill="#6750A4">📌 Legend:</text>
+  <circle cx="75" cy="295" r="8" fill="#34A853"/><text x="90" y="299" font-size="11" fill="#49454F">OK (can run)</text>
+  <circle cx="75" cy="315" r="8" fill="#F4B400"/><text x="90" y="319" font-size="11" fill="#49454F">Tight (OK but slow)</text>
+  <circle cx="75" cy="335" r="8" fill="#EA4335"/><text x="90" y="339" font-size="11" fill="#49454F">Risky (CPU fallback)</text>
+</svg>

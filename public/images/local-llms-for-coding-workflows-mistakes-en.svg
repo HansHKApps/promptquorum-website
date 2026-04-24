@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Common Mistakes: What NOT to Do vs What TO Do</text>
+  
+  <!-- LEFT: Bad Mistakes -->
+  <rect x="28" y="55" width="340" height="340" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="85" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">❌ Common Mistakes</text>
+  
+  <text x="48" y="115" font-size="12" font-weight="700" fill="#1C1B1F">1. Small models (3B)</text>
+  <text x="48" y="135" font-family="'SF Mono'" font-size="11" fill="#EA4335">Llama 3.1 8B scores 55%</text>
+  
+  <text x="48" y="160" font-size="12" font-weight="700" fill="#1C1B1F">2. No prompt context</text>
+  <text x="48" y="180" font-family="'SF Mono'" font-size="11" fill="#EA4335">"Generate code for X"</text>
+  
+  <text x="48" y="205" font-size="12" font-weight="700" fill="#1C1B1F">3. Infinite loops</text>
+  <text x="48" y="225" font-family="'SF Mono'" font-size="11" fill="#EA4335">No max_iterations limit</text>
+  
+  <text x="48" y="250" font-size="12" font-weight="700" fill="#1C1B1F">4. Trust output blindly</text>
+  <text x="48" y="270" font-family="'SF Mono'" font-size="11" fill="#EA4335">No code review step</text>
+  
+  <text x="48" y="295" font-size="12" font-weight="700" fill="#1C1B1F">5. General-purpose models</text>
+  <text x="48" y="315" font-family="'SF Mono'" font-size="11" fill="#EA4335">Use Mistral, not Qwen-code</text>
+  
+  <text x="48" y="340" font-size="11" fill="#EA4335" font-weight="600">Result: Poor code, bugs, crashes</text>
+  
+  <!-- RIGHT: Good Practices -->
+  <rect x="432" y="55" width="340" height="340" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="85" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">✅ Best Practices</text>
+  
+  <text x="452" y="115" font-size="12" font-weight="700" fill="#1C1B1F">1. Coding models (7B+)</text>
+  <text x="452" y="135" font-family="'SF Mono'" font-size="11" fill="#34A853">Qwen2.5-Coder 7B: 72%</text>
+  
+  <text x="452" y="160" font-size="12" font-weight="700" fill="#1C1B1F">2. Detailed prompts</text>
+  <text x="452" y="180" font-family="'SF Mono'" font-size="11" fill="#34A853">Signature + types + docstring</text>
+  
+  <text x="452" y="205" font-size="12" font-weight="700" fill="#1C1B1F">3. Set iteration limits</text>
+  <text x="452" y="225" font-family="'SF Mono'" font-size="11" fill="#34A853">max_iterations = 10-20</text>
+  
+  <text x="452" y="250" font-size="12" font-weight="700" fill="#1C1B1F">4. Always review code</text>
+  <text x="452" y="270" font-family="'SF Mono'" font-size="11" fill="#34A853">72% accuracy ≠ perfect code</text>
+  
+  <text x="452" y="295" font-size="12" font-weight="700" fill="#1C1B1F">5. Code-specialized models</text>
+  <text x="452" y="315" font-family="'SF Mono'" font-size="11" fill="#34A853">Qwen, CodeLlama, DeepSeek</text>
+  
+  <text x="452" y="340" font-size="11" fill="#34A853" font-weight="600">Result: Quality code, tested, production-ready</text>
+</svg>
