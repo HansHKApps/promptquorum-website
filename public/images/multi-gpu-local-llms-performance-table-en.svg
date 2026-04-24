@@ -1,0 +1,100 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">GPU Performance for 70B Models</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/multi-gpu-local-llms</dc:source>
+  </metadata>
+
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPU Setups: Speed vs Cost for 70B Models</text>
+
+  <!-- Header Row -->
+  <text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Setup</text>
+  <text x="220" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Model</text>
+  <text x="380" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Speed</text>
+  <text x="560" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Cost</text>
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <text x="40" y="98" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">1× RTX 4090</text>
+  <text x="220" y="98" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">7B Q4</text>
+  <circle cx="380" cy="88" r="12" fill="#34A853"/>
+  <text x="380" y="98" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">150</text>
+  <text x="430" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">tok/s</text>
+  <text x="560" y="98" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$1,800</text>
+  <line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="40" y="133" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">1× RTX 4090</text>
+  <text x="220" y="133" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">70B Q4</text>
+  <circle cx="380" cy="123" r="12" fill="#EA4335"/>
+  <text x="380" y="133" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="700">✗</text>
+  <text x="430" y="133" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">won't fit</text>
+  <text x="560" y="133" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$1,800</text>
+  <line x1="18" y1="143" x2="782" y2="143" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Highlighted -->
+  <rect x="18" y="143" width="764" height="35" fill="#E8DEF8" opacity="0.4"/>
+  <text x="40" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">2× RTX 4090</text>
+  <text x="220" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">70B Q4</text>
+  <circle cx="380" cy="158" r="12" fill="#34A853"/>
+  <text x="380" y="168" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">100</text>
+  <text x="430" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4">tok/s ⭐</text>
+  <text x="560" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">$3,600</text>
+  <line x1="18" y1="178" x2="782" y2="178" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 4 -->
+  <text x="40" y="203" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">2× RTX 4090</text>
+  <text x="220" y="203" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">70B Q5</text>
+  <circle cx="380" cy="193" r="12" fill="#34A853"/>
+  <text x="380" y="203" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">90</text>
+  <text x="430" y="203" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">tok/s</text>
+  <text x="560" y="203" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$3,600</text>
+  <line x1="18" y1="213" x2="782" y2="213" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <text x="40" y="238" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">1× RTX 5090</text>
+  <text x="220" y="238" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">70B Q4</text>
+  <circle cx="380" cy="228" r="12" fill="#34A853"/>
+  <text x="380" y="238" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">50</text>
+  <text x="430" y="238" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">tok/s</text>
+  <text x="560" y="238" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$2,000</text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6 -->
+  <text x="40" y="273" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">2× RTX 5090</text>
+  <text x="220" y="273" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">70B Q8</text>
+  <circle cx="380" cy="263" r="12" fill="#34A853"/>
+  <text x="380" y="273" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">120</text>
+  <text x="430" y="273" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">tok/s</text>
+  <text x="560" y="273" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$4,000</text>
+  <line x1="18" y1="283" x2="782" y2="283" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 7 -->
+  <text x="40" y="308" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">2× RTX 5090</text>
+  <text x="220" y="308" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">405B Q4</text>
+  <circle cx="380" cy="298" r="12" fill="#F4B400"/>
+  <text x="380" y="308" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">30</text>
+  <text x="430" y="308" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">tok/s</text>
+  <text x="560" y="308" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$4,000</text>
+  <line x1="18" y1="318" x2="782" y2="318" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 8 -->
+  <text x="40" y="343" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">RTX 6000 Ada + RTX 4090</text>
+  <text x="220" y="343" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">70B FP16</text>
+  <circle cx="380" cy="333" r="12" fill="#34A853"/>
+  <text x="380" y="343" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">110</text>
+  <text x="430" y="343" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">tok/s</text>
+  <text x="560" y="343" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">$6,800</text>
+  <line x1="18" y1="353" x2="782" y2="353" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Legend -->
+  <text x="40" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">⭐ = Most cost-effective for 70B in 2026 |</text>
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">Green = Ready to buy | Amber = Cost-prohibitive</text>
+
+  <!-- Corner attribution -->
+  <text x="730" y="408" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

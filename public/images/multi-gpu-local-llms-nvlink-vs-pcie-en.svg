@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">NVLink vs PCIe Bandwidth Comparison</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/multi-gpu-local-llms</dc:source>
+  </metadata>
+
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">NVLink vs PCIe: Communication Speed</text>
+
+  <!-- Left Panel: PCIe (Problem) -->
+  <rect x="28" y="55" width="340" height="260" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+
+  <text x="198" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">PCIe 4.0 (Consumer)</text>
+
+  <text x="48" y="110" font-family="system-ui, sans-serif" font-weight="700" fill="#1C1B1F">Bandwidth:</text>
+  <text x="48" y="130" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#EA4335">64 GB/s</text>
+
+  <text x="48" y="160" font-family="system-ui, sans-serif" font-weight="700" fill="#1C1B1F">Multi-GPU Overhead:</text>
+  <text x="48" y="180" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#EA4335">5–10%</text>
+
+  <text x="48" y="210" font-family="system-ui, sans-serif" font-weight="700" fill="#1C1B1F">Available on:</text>
+  <text x="48" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">✓ RTX 4090, 5090</text>
+  <text x="48" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">✓ All consumer RTX cards</text>
+
+  <!-- Right Panel: NVLink (Goal) -->
+  <rect x="432" y="55" width="340" height="260" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+
+  <text x="602" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">NVLink 4.0 (Professional)</text>
+
+  <text x="452" y="110" font-family="system-ui, sans-serif" font-weight="700" fill="#1C1B1F">Bandwidth:</text>
+  <text x="452" y="130" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853">900 GB/s</text>
+
+  <text x="452" y="160" font-family="system-ui, sans-serif" font-weight="700" fill="#1C1B1F">Multi-GPU Overhead:</text>
+  <text x="452" y="180" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853">3–5%</text>
+
+  <text x="452" y="210" font-family="system-ui, sans-serif" font-weight="700" fill="#1C1B1F">Available on:</text>
+  <text x="452" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">✓ A100, H100 (professional)</text>
+  <text x="452" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">✗ No consumer RTX cards</text>
+
+  <!-- Bottom comparison insight -->
+  <rect x="40" y="325" width="720" height="24" rx="4" fill="#FFF3E0" stroke="#F4B400" stroke-width="1"/>
+  <text x="60" y="343" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">💡 For home use: PCIe is sufficient. 14× bandwidth difference (900÷64) sounds dramatic, but real-world impact is only 5–10% total inference time.</text>
+
+  <!-- Corner attribution -->
+  <text x="730" y="341" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>
