@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">LoRA架构：适配器+冻结权重</text>
+
+  <!-- Left section: Base Model -->
+  <text x="120" y="70" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#49454F" text-anchor="middle">基础模型（冻结）</text>
+  <rect x="40" y="85" width="160" height="200" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Base model layers -->
+  <rect x="55" y="100" width="130" height="25" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="118" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">层1</text>
+
+  <rect x="55" y="135" width="130" height="25" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="153" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">层2</text>
+
+  <rect x="55" y="170" width="130" height="25" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">...</text>
+
+  <rect x="55" y="205" width="130" height="25" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="223" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">层N</text>
+
+  <text x="120" y="280" font-family="system-ui, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">130亿个参数</text>
+  <text x="120" y="295" font-family="system-ui, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">（冻结，无训练）</text>
+
+  <!-- Center: Plus symbol -->
+  <text x="400" y="200" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#6750A4" text-anchor="middle">+</text>
+
+  <!-- Right section: LoRA Adapters -->
+  <text x="680" y="70" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">LoRA适配器（可训练）</text>
+  <rect x="600" y="85" width="160" height="200" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+
+  <!-- Adapter layers -->
+  <rect x="615" y="100" width="130" height="25" fill="#6750A4" stroke="none"/>
+  <text x="680" y="118" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">适配器1</text>
+
+  <rect x="615" y="135" width="130" height="25" fill="#6750A4" stroke="none"/>
+  <text x="680" y="153" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">适配器2</text>
+
+  <rect x="615" y="170" width="130" height="25" fill="#6750A4" stroke="none"/>
+  <text x="680" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">...</text>
+
+  <rect x="615" y="205" width="130" height="25" fill="#6750A4" stroke="none"/>
+  <text x="680" y="223" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">适配器N</text>
+
+  <text x="680" y="280" font-family="system-ui, sans-serif" font-size="10" fill="#6750A4" text-anchor="middle" font-weight="600">5000万个参数</text>
+  <text x="680" y="295" font-family="system-ui, sans-serif" font-size="10" fill="#6750A4" text-anchor="middle" font-weight="600">（基础的0.4%）</text>
+
+  <!-- Equals and Result -->
+  <text x="400" y="330" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">= 微调模型（推理时合并）</text>
+</svg>
