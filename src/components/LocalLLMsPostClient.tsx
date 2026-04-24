@@ -251,6 +251,41 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
         </div>
       )}
 
+      {/* LLM Snippet Blocks — "In One Sentence" / "In Plain Terms" (Rule 12) */}
+      {section.snippetBlocks && (
+        <div className="space-y-3 my-6">
+          {section.snippetBlocks.map((snippet, i) => (
+            <div key={i} className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
+                {snippet.type === 'one-sentence' ? '📍 In One Sentence' : '💬 In Plain Terms'}
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                {renderInlineLinks(snippet.text, lang)}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Prompt Examples — Bad → Good pairs (Rule 15) */}
+      {section.promptExamples && (
+        <div className="space-y-4 my-6">
+          {section.promptExamples.map((example, i) => {
+            const isBad = example.label.toLowerCase().includes('bad') || example.label.includes('❌')
+            return (
+              <div key={i} className={`border rounded-xl p-4 ${isBad ? 'border-red-200 bg-red-50' : 'border-green-200 bg-green-50'}`}>
+                <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${isBad ? 'text-red-600' : 'text-green-600'}`}>
+                  {example.label}
+                </p>
+                <blockquote className={`text-sm leading-relaxed italic ${isBad ? 'text-red-900' : 'text-green-900'}`}>
+                  &ldquo;{renderInlineLinks(example.text, lang)}&rdquo;
+                </blockquote>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
       {/* Component rendering */}
       {section.component === 'VramCalculator' && (
         <div className="my-8">
@@ -511,6 +546,15 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
           </div>
         </div>
+
+        {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
+        {article.leadAnswerBlock && (
+          <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4 mb-6">
+            <p className="text-text-primary font-semibold leading-relaxed">
+              {renderInlineLinks(article.leadAnswerBlock, lang)}
+            </p>
+          </div>
+        )}
 
         {/* Article intro paragraph */}
         {article.intro && (
