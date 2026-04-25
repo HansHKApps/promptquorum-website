@@ -1,21 +1,21 @@
 <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="350" fill="#FFFFFF"/>
-  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">推論速度：モデルとハードウェアの比較</text>
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">推論速度：モデルとハードウェア</text>
   <line x1="18" y1="52" x2="782" y2="52" stroke="#E8DEF8" stroke-width="1.5"/>
-  <text x="50" y="72" font-size="12" font-weight="700" fill="#79747E">構成</text>
+  <text x="50" y="72" font-size="12" font-weight="700" fill="#79747E">セットアップ</text>
   <text x="280" y="72" font-size="12" font-weight="700" fill="#79747E">モデル</text>
   <text x="450" y="72" font-size="12" font-weight="700" fill="#79747E">速度</text>
   <text x="600" y="72" font-size="12" font-weight="700" fill="#79747E">評価</text>
   <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
-  <text x="50" y="108" font-size="11" font-weight="600" fill="#1C1B1F">M5 Pro 64 GB</text>
+  <text x="50" y="108" font-size="11" font-weight="600" fill="#1C1B1F">M5 Pro 64GB</text>
   <text x="280" y="108" font-size="11" fill="#49454F">70B Q4</text>
   <text x="450" y="108" font-size="11" fill="#49454F">15–20 tok/s</text>
-  <rect x="625" y="94" width="110" height="24" rx="3" fill="#F4B400"/><text x="680" y="108" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">良好</text>
+  <rect x="625" y="94" width="110" height="24" rx="3" fill="#F4B400"/><text x="680" y="108" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">中程度</text>
   <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="50" y="146" font-size="11" font-weight="600" fill="#1C1B1F">M5 Max 128 GB</text>
+  <text x="50" y="146" font-size="11" font-weight="600" fill="#1C1B1F">M5 Max 128GB</text>
   <text x="280" y="146" font-size="11" fill="#49454F">70B Q8</text>
   <text x="450" y="146" font-size="11" fill="#49454F">25–35 tok/s</text>
-  <rect x="625" y="132" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="146" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">優秀</text>
+  <rect x="625" y="132" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="146" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">良好</text>
   <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="184" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5090 Win</text>
   <text x="280" y="184" font-size="11" fill="#49454F">70B</text>
@@ -27,17 +27,11 @@
   <text x="450" y="222" font-size="11" fill="#49454F">180+ tok/s</text>
   <rect x="625" y="208" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="222" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最高</text>
   <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="50" y="260" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5060 Ti 16GB</text>
+  <text x="50" y="260" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5090 Linux</text>
   <text x="280" y="260" font-size="11" fill="#49454F">70B</text>
-  <text x="450" y="260" font-size="11" fill="#49454F">非対応</text>
-  <rect x="625" y="246" width="110" height="24" rx="3" fill="#EA4335"/><text x="680" y="260" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">不可</text>
+  <text x="450" y="260" font-size="11" fill="#49454F">42–53 tok/s</text>
+  <rect x="625" y="246" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="260" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最高</text>
   <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="50" y="298" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5090 Linux</text>
-  <text x="280" y="298" font-size="11" fill="#49454F">70B</text>
-  <text x="450" y="298" font-size="11" fill="#49454F">42–53 tok/s</text>
-  <rect x="625" y="284" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="298" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最高</text>
-  <line x1="18" y1="308" x2="782" y2="308" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="50" y="330" font-size="11" font-weight="600" fill="#6750A4">💡</text>
-  <text x="70" y="330" font-size="11" fill="#49454F">RTX 5090は70Bモデルで40–50 tok/sで支配的。M5 Maxは25–35 tok/sに達する。</text>
+  <text x="50" y="295" font-size="10" font-weight="600" fill="#6750A4">💡 RTX 5090：70B時40–50 tok/s。M5 Max：25–35 tok/s。M5 Pro：15–20 tok/s。</text>
   <text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
 </svg>

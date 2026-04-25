@@ -1,41 +1,32 @@
 <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="350" fill="#FFFFFF"/>
-  <text x="400" y="30" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">OSの比較</text>
-  <rect x="28" y="55" width="240" height="270" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
-  <rect x="28" y="55" width="240" height="6" rx="0" fill="#6750A4"/>
-  <text x="148" y="90" font-size="18" font-weight="700" fill="#6750A4" text-anchor="middle">macOS</text>
-  <text x="48" y="125" font-size="12" font-weight="700" fill="#1C1B1F">✓ プライバシー最優先</text>
-  <text x="48" y="144" font-size="12" font-weight="700" fill="#1C1B1F">✓ 最も携帯性高い</text>
-  <text x="48" y="170" font-size="11" fill="#49454F">トレードオフ :</text>
-  <text x="48" y="188" font-size="11" fill="#49454F">NVIDIA GPU より</text>
-  <text x="48" y="203" font-size="11" fill="#49454F">20–30% 遅い</text>
-  <text x="48" y="230" font-size="12" font-weight="700" fill="#6750A4">¥180,000から</text>
-  <text x="48" y="250" font-size="10" fill="#49454F">6分でセットアップ</text>
-  <text x="48" y="265" font-size="10" fill="#49454F">ターミナル不要</text>
-  <text x="48" y="315" font-size="10" font-weight="600" fill="#49454F">Macユーザー向け最適</text>
-  <rect x="280" y="55" width="240" height="270" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
-  <rect x="280" y="55" width="240" height="6" rx="0" fill="#34A853"/>
-  <text x="400" y="90" font-size="18" font-weight="700" fill="#34A853" text-anchor="middle">Windows</text>
-  <text x="300" y="125" font-size="12" font-weight="700" fill="#1C1B1F">✓ 最大GPU速度</text>
-  <text x="300" y="144" font-size="12" font-weight="700" fill="#1C1B1F">✓ NVIDIA CUDA</text>
-  <text x="300" y="170" font-size="11" fill="#49454F">トレードオフ :</text>
-  <text x="300" y="188" font-size="11" fill="#49454F">ドライバセットアップ</text>
-  <text x="300" y="203" font-size="11" fill="#49454F">+15–20分追加</text>
-  <text x="300" y="230" font-size="12" font-weight="700" fill="#34A853">GPU ¥73,000から</text>
-  <text x="300" y="250" font-size="10" fill="#49454F">15–20分でセットアップ</text>
-  <text x="300" y="265" font-size="10" fill="#49454F">初級から中級向け</text>
-  <text x="300" y="315" font-size="10" font-weight="600" fill="#49454F">GPU 性能最優先</text>
-  <rect x="532" y="55" width="240" height="270" rx="8" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
-  <rect x="532" y="55" width="240" height="6" rx="0" fill="#F4B400"/>
-  <text x="652" y="90" font-size="18" font-weight="700" fill="#F4B400" text-anchor="middle">Linux</text>
-  <text x="552" y="125" font-size="12" font-weight="700" fill="#1C1B1F">✓ 最低コスト</text>
-  <text x="552" y="144" font-size="12" font-weight="700" fill="#1C1B1F">✓ 本番制御性</text>
-  <text x="552" y="170" font-size="11" fill="#49454F">トレードオフ :</text>
-  <text x="552" y="188" font-size="11" fill="#49454F">40–70分セットアップ</text>
-  <text x="552" y="203" font-size="11" fill="#49454F">ターミナル知識必要</text>
-  <text x="552" y="230" font-size="12" font-weight="700" fill="#F4B400">¥132,500から合計</text>
-  <text x="552" y="250" font-size="10" fill="#49454F">40–70分でセットアップ</text>
-  <text x="552" y="265" font-size="10" fill="#49454F">上級ユーザー推奨</text>
-  <text x="552" y="315" font-size="10" font-weight="600" fill="#49454F">コスト効率性最優先</text>
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">ローカルLLMのためのmacOS vs Windows vs Linux</text>
+  <rect x="28" y="60" width="230" height="260" fill="#F0F4FF" stroke="#6750A4" stroke-width="2" rx="8"/>
+  <text x="143" y="90" font-size="13" font-weight="700" fill="#6750A4">macOS</text>
+  <text x="143" y="115" font-size="11" font-weight="700" fill="#1C1B1F">最適用途:</text>
+  <text x="143" y="135" font-size="10" fill="#49454F" text-anchor="middle">プライバシー +</text>
+  <text x="143" y="155" font-size="10" fill="#49454F" text-anchor="middle">ポータビリティ</text>
+  <text x="143" y="180" font-size="11" font-weight="700" fill="#1C1B1F">トレードオフ:</text>
+  <text x="143" y="200" font-size="10" fill="#49454F" text-anchor="middle">20–30% 遅い</text>
+  <text x="143" y="220" font-size="10" fill="#49454F" text-anchor="middle">NVIDIA比</text>
+  <text x="143" y="245" font-size="10" font-weight="600" fill="#6750A4">¥175,000から</text>
+  <rect x="284" y="60" width="230" height="260" fill="#FFFDF5" stroke="#F4B400" stroke-width="2" rx="8"/>
+  <text x="399" y="90" font-size="13" font-weight="700" fill="#F4B400">Windows</text>
+  <text x="399" y="115" font-size="11" font-weight="700" fill="#1C1B1F">最適用途:</text>
+  <text x="399" y="135" font-size="10" fill="#49454F" text-anchor="middle">最大GPU</text>
+  <text x="399" y="155" font-size="10" fill="#49454F" text-anchor="middle">パフォーマンス</text>
+  <text x="399" y="180" font-size="11" font-weight="700" fill="#1C1B1F">トレードオフ:</text>
+  <text x="399" y="200" font-size="10" fill="#49454F" text-anchor="middle">ドライバ</text>
+  <text x="399" y="220" font-size="10" fill="#49454F" text-anchor="middle">複雑さ</text>
+  <text x="399" y="245" font-size="10" font-weight="600" fill="#F4B400">GPUは¥72,000から</text>
+  <rect x="540" y="60" width="230" height="260" fill="#F0FFF0" stroke="#34A853" stroke-width="2" rx="8"/>
+  <text x="655" y="90" font-size="13" font-weight="700" fill="#34A853">Linux</text>
+  <text x="655" y="115" font-size="11" font-weight="700" fill="#1C1B1F">最適用途:</text>
+  <text x="655" y="135" font-size="10" fill="#49454F" text-anchor="middle">コスト +</text>
+  <text x="655" y="155" font-size="10" fill="#49454F" text-anchor="middle">コントロール</text>
+  <text x="655" y="180" font-size="11" font-weight="700" fill="#1C1B1F">トレードオフ:</text>
+  <text x="655" y="200" font-size="10" fill="#49454F" text-anchor="middle">40–70分</text>
+  <text x="655" y="220" font-size="10" fill="#49454F" text-anchor="middle">セットアップ</text>
+  <text x="655" y="245" font-size="10" font-weight="600" fill="#34A853">¥129,000合計</text>
   <text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
 </svg>

@@ -1,6 +1,6 @@
 <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="360" fill="#FFFFFF"/>
-  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">OS別のツールとフレームワークサポート</text>
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">OSごとのツールとフレームワークサポート</text>
   <line x1="18" y1="52" x2="782" y2="52" stroke="#E8DEF8" stroke-width="1.5"/>
   <text x="50" y="72" font-size="12" font-weight="700" fill="#79747E">ツール</text>
   <text x="250" y="72" font-size="12" font-weight="700" fill="#79747E">macOS</text>
@@ -27,16 +27,11 @@
   <rect x="420" y="206" width="60" height="20" rx="3" fill="#34A853"/><text x="450" y="221" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <rect x="620" y="206" width="60" height="20" rx="3" fill="#34A853"/><text x="650" y="221" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="50" y="260" font-size="11" font-weight="600" fill="#1C1B1F">PyTorch</text>
-  <rect x="220" y="244" width="60" height="20" rx="3" fill="#F4B400"/><text x="250" y="259" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">🐢</text>
+  <text x="50" y="260" font-size="11" font-weight="600" fill="#1C1B1F">ファインチューニング</text>
+  <rect x="220" y="244" width="60" height="20" rx="3" fill="#EA4335"/><text x="250" y="259" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
   <rect x="420" y="244" width="60" height="20" rx="3" fill="#34A853"/><text x="450" y="259" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
-  <rect x="620" y="244" width="60" height="20" rx="3" fill="#34A853"/><text x="650" y="259" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">⚡</text>
+  <rect x="620" y="244" width="60" height="20" rx="3" fill="#34A853"/><text x="650" y="259" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓✓</text>
   <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="50" y="298" font-size="11" font-weight="600" fill="#1C1B1F">ファインチューニング</text>
-  <rect x="220" y="282" width="60" height="20" rx="3" fill="#EA4335"/><text x="250" y="297" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
-  <rect x="420" y="282" width="60" height="20" rx="3" fill="#34A853"/><text x="450" y="297" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
-  <rect x="620" y="282" width="60" height="20" rx="3" fill="#34A853"/><text x="650" y="297" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓✓</text>
-  <line x1="18" y1="308" x2="782" y2="308" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="50" y="335" font-size="10" font-weight="600" fill="#6750A4">✓=完全  🐳=Dockerのみ  🐢=遅い  ⚡=速い  ✗=利用不可</text>
+  <text x="50" y="298" font-size="10" font-weight="600" fill="#6750A4">✓=完全  🐳=Dockerのみ  ~=制限  ✗=なし</text>
   <text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
 </svg>
