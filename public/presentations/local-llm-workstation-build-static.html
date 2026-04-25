@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local LLM Workstation Build 2026 | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation: Build a $4,000–6,000 professional local LLM workstation with dual RTX 4090 GPUs, Threadripper CPU, and enterprise cooling." />
+    <meta property="og:title" content="Local LLM Workstation Build 2026 — PromptQuorum" />
+    <meta property="og:description" content="Complete guide: dual RTX 4090 (48GB VRAM), Threadripper 7970X, 128GB DDR5, cooling, power, performance benchmarks. Interactive presentation." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-workstation-build">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 48px; text-align: center; overflow: auto; animation: fadeIn 0.5s ease-in; }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .slide h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 700; margin-bottom: 20px; color: #1c1b1f; }
+        .slide p { font-size: clamp(16px, 1.8vw, 20px); margin-bottom: 12px; color: #49454f; line-height: 1.6; }
+        .slide ul { text-align: left; display: inline-block; margin: 16px 0; }
+        .slide li { font-size: clamp(16px, 1.8vw, 20px); margin: 8px 0; color: #49454f; }
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide.title p { color: #6750a4; font-weight: 500; margin-top: 12px; }
+        .slide table { margin: 20px auto; border-collapse: collapse; max-width: 100%; }
+        .slide th, .slide td { padding: 12px; text-align: left; border-bottom: 1px solid #e8def8; }
+        .slide th { background: #f0f0f0; font-weight: 600; }
+        .controls { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: #fafaf8; border-top: 1px solid #e8def8; }
+        .controls button { padding: 8px 16px; background: #6750a4; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600; }
+        .controls button:hover { background: #5a45a0; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 500; }
+        .highlight { color: #6750a4; font-weight: 600; }
+        @media print { .controls { display: none; } .slide { display: flex !important; page-break-after: always; } }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div id="slides-container"></div>
+        <div class="controls">
+            <button id="prevBtn">← Previous</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">12</span></span>
+            <button id="nextBtn">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                slides: [
+                    { type: 'title', title: 'Local LLM Workstation Build 2026', subtitle: 'Professional Setup Guide', description: 'A complete guide to building a $4,000–6,000 inference powerhouse with dual RTX 4090 GPUs, Threadripper CPU, and enterprise-grade cooling.' },
+                    { type: 'text', title: 'Who Is This Build For?', items: ['SMBs & Enterprises: Teams of 5+ running internal LLM APIs', 'AI Researchers: Fine-tuning large models while serving inference', 'MLOps Engineers: Building internal inference clusters', 'Content Studios: Running 24/7 inference without cloud costs'] },
+                    { type: 'table', title: 'Complete Parts List & Cost', columns: ['Component', 'Selection', 'Cost'], rows: [['GPU (×2)', 'RTX 4090 24 GB', '$3,200–3,800'], ['CPU', 'Threadripper 7970X', '$2,000–2,500'], ['Motherboard', 'TRX50 WS Pro', '$600–800'], ['RAM', '128 GB DDR5 ECC', '$400–600'], ['Storage', '4 TB NVMe + 12 TB HDD', '$350–500'], ['PSU', '2000W Platinum', '$300–500'], ['Cooling', 'Custom loop or dual AIO', '$400–800'], ['Case', 'Full-tower EATX', '$150–250'], ['Total', '—', '$4,000–6,000']] },
+                    { type: 'text', title: 'Dual GPU Configuration Options', items: ['Side-by-Side (PCIe): Independent GPU instances, best for multiple models', 'NVLink Bridge: Unified 48GB VRAM pool for single large model', 'Tensor Parallelism: Software sharding via vLLM, highest throughput'] },
+                    { type: 'text', title: 'RTX 5090 vs RTX 4090', items: ['Dual RTX 4090: 48GB VRAM, $3,400 (best value)', 'Single RTX 5090: 32GB VRAM, $2,500 (simpler)', 'Dual RTX 5090: 64GB VRAM, $5,000 (overkill)', '→ Recommendation: Dual RTX 4090 for professional workloads'] },
+                    { type: 'text', title: 'Cooling Solutions: 1,200W of Heat', items: ['🌊 Custom Loop: Best performance, lowest noise, 6–8 hours assembly', '❄️ Dual 360mm AIO: Best balance, modular, simpler than loop', '💨 High-End Air: Budget option, louder, not ideal for office'] },
+                    { type: 'text', title: 'Power Supply & Electrical', items: ['Single 2000W Platinum: Cleaner cables, single point of failure', 'Dual 1200W (Redundant): Hot-swap redundancy for 24/7 uptime', 'Circuit: Minimum 20A dedicated circuit (30A strongly preferred)', 'Draw: ~1,600–1,800W sustained load'] },
+                    { type: 'text', title: 'CPU: Threadripper 7970X', items: ['32 cores enable parallel fine-tuning while serving inference', '88 PCIe 5.0 lanes ensure both GPUs run at full x16 bandwidth', 'Quad-channel DDR5 feeds maximum data to GPU', 'ECC support critical for unattended 24/7 stability'] },
+                    { type: 'text', title: 'Inference Performance Benchmarks', items: ['14 tok/s per user: Sustained throughput on 70B with tensor parallelism', '2–3 concurrent 70B users: Comfortable generation speeds', '8+ concurrent 7B users: Ideal for internal API endpoints', '48GB total VRAM: Full Q8 70B without quantization compromise'] },
+                    { type: 'text', title: 'Common Build Mistakes to Avoid', items: ['❌ Undersized power circuit: Causes breaker trips and hardware damage', '❌ Ignoring PCIe slot spacing: Blocks GPU airflow, kills thermals', '❌ Skipping ECC RAM: Silent memory corruption on training runs', '❌ Misconfigured tensor parallelism: Defaults to single GPU, wastes 50% investment'] },
+                    { type: 'text', title: 'FAQ & Troubleshooting', items: ['Can I start with one GPU and add later? Yes, but buy TRX50 board now', 'Is 128 GB RAM necessary? For inference only: 64 GB. For training: 128 GB', 'What software stack? vLLM (multi-user), Ollama (testing), llama.cpp (hybrid)', 'How loud? Custom loop: 40 dB, AIO: 50 dB, Air: 60+ dB'] },
+                    { type: 'title', title: 'Ready to Build?', subtitle: 'Start with the electrical circuit inspection', description: 'It\'s the most overlooked step and the one most likely to delay your build.' }
+                ]
+            },
+            de: { slides: [] },
+            fr: { slides: [] },
+            ja: { slides: [] },
+            zh: { slides: [] }
+        };
+
+        let currentSlideIndex = 0;
+        let currentLanguage = 'en';
+
+        function renderSlide(slide) {
+            let html = '<div class="slide ';
+            if (slide.type === 'title') html += 'title';
+            html += '">';
+
+            if (slide.type === 'title') {
+                html += `<h1>${slide.title}</h1><p>${slide.subtitle}</p><p>${slide.description}</p>`;
+            } else if (slide.type === 'text') {
+                html += `<h2>${slide.title}</h2>`;
+                if (slide.items) {
+                    html += '<ul>';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                }
+            } else if (slide.type === 'table') {
+                html += `<h2>${slide.title}</h2><table><tr>`;
+                slide.columns.forEach(col => {
+                    html += `<th>${col}</th>`;
+                });
+                html += '</tr>';
+                slide.rows.forEach(row => {
+                    html += '<tr>';
+                    row.forEach(cell => {
+                        html += `<td>${cell}</td>`;
+                    });
+                    html += '</tr>';
+                });
+                html += '</table>';
+            }
+
+            html += '</div>';
+            return html;
+        }
+
+        function updateSlides() {
+            const container = document.getElementById('slides-container');
+            const slides = CONTENT[currentLanguage].slides;
+
+            if (slides.length === 0) {
+                currentLanguage = 'en';
+            }
+
+            const slides_to_render = CONTENT[currentLanguage].slides;
+            container.innerHTML = slides_to_render.map(renderSlide).join('');
+
+            const slideElements = document.querySelectorAll('.slide');
+            slideElements.forEach((slide, index) => {
+                if (index === currentSlideIndex) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+            document.getElementById('totalSlides').textContent = slides_to_render.length;
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            const slides = CONTENT[currentLanguage].slides;
+            if (currentSlideIndex < slides.length - 1) {
+                currentSlideIndex++;
+                updateSlides();
+            }
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                updateSlides();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') document.getElementById('nextBtn').click();
+            if (e.key === 'ArrowLeft') document.getElementById('prevBtn').click();
+        });
+
+        updateSlides();
+    </script>
+</body>
+</html>
