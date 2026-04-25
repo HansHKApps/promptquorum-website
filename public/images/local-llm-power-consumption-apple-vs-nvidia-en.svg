@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">RTX 4090 vs Apple M5 Max: Power Efficiency</text>
+  <line x1="18" y1="46" x2="782" y2="46" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="28" y="58" width="356" height="262" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="58" width="356" height="4" rx="0" fill="#EA4335"/>
+  <text x="206" y="82" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">RTX 4090 System</text>
+  <text x="50" y="115" font-size="11" font-weight="700" fill="#79747E">PEAK POWER</text>
+  <text x="370" y="115" font-size="22" font-weight="700" fill="#EA4335" text-anchor="end">575W</text>
+  <line x1="48" y1="122" x2="368" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="148" font-size="11" font-weight="700" fill="#79747E">MONTHLY COST (24/7)</text>
+  <text x="370" y="148" font-size="22" font-weight="700" fill="#EA4335" text-anchor="end">~$52</text>
+  <line x1="48" y1="155" x2="368" y2="155" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="181" font-size="11" font-weight="700" fill="#79747E">MINIMUM PSU</text>
+  <text x="370" y="181" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="end">1200W+</text>
+  <line x1="48" y1="188" x2="368" y2="188" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="214" font-size="11" font-weight="700" fill="#79747E">7B MODEL SPEED</text>
+  <text x="370" y="214" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="end">~150 tok/s</text>
+  <line x1="48" y1="221" x2="368" y2="221" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="247" font-size="11" font-weight="700" fill="#79747E">EFFICIENCY / TOKEN</text>
+  <text x="370" y="247" font-size="22" font-weight="700" fill="#EA4335" text-anchor="end">1×</text>
+  <line x1="48" y1="254" x2="368" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="280" font-size="11" font-weight="700" fill="#79747E">COOLING</text>
+  <text x="370" y="280" font-size="13" font-weight="600" fill="#49454F" text-anchor="end">Fans + airflow required</text>
+  <rect x="416" y="58" width="356" height="262" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="416" y="58" width="356" height="4" rx="0" fill="#34A853"/>
+  <text x="594" y="82" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Apple M5 Max</text>
+  <text x="436" y="115" font-size="11" font-weight="700" fill="#79747E">PEAK POWER</text>
+  <text x="758" y="115" font-size="22" font-weight="700" fill="#34A853" text-anchor="end">25–35W</text>
+  <line x1="434" y1="122" x2="754" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="436" y="148" font-size="11" font-weight="700" fill="#79747E">MONTHLY COST (24/7)</text>
+  <text x="758" y="148" font-size="22" font-weight="700" fill="#34A853" text-anchor="end">~$2.60</text>
+  <line x1="434" y1="155" x2="754" y2="155" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="436" y="181" font-size="11" font-weight="700" fill="#79747E">MINIMUM PSU</text>
+  <text x="758" y="181" font-size="22" font-weight="700" fill="#34A853" text-anchor="end">Built-in</text>
+  <line x1="434" y1="188" x2="754" y2="188" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="436" y="214" font-size="11" font-weight="700" fill="#79747E">7B MODEL SPEED</text>
+  <text x="758" y="214" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="end">65–85 tok/s</text>
+  <line x1="434" y1="221" x2="754" y2="221" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="436" y="247" font-size="11" font-weight="700" fill="#79747E">EFFICIENCY / TOKEN</text>
+  <text x="758" y="247" font-size="22" font-weight="700" fill="#34A853" text-anchor="end">10×</text>
+  <line x1="434" y1="254" x2="754" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="436" y="280" font-size="11" font-weight="700" fill="#79747E">COOLING</text>
+  <text x="758" y="280" font-size="13" font-weight="600" fill="#34A853" text-anchor="end">Silent, fanless</text>
+  <text x="400" y="340" font-size="10" fill="#79747E" text-anchor="middle">At $0.12/kWh US average. M5 Max uses 10× less electricity per token than RTX 4090.</text>
+  <text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPU Power Draw for Local LLM Inference</text>
+  <line x1="18" y1="46" x2="782" y2="46" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="65" font-size="12" font-weight="700" fill="#79747E">GPU</text>
+  <text x="310" y="65" font-size="12" font-weight="700" fill="#79747E">Peak Power</text>
+  <text x="470" y="65" font-size="12" font-weight="700" fill="#79747E">Idle</text>
+  <text x="620" y="65" font-size="12" font-weight="700" fill="#79747E">Min PSU</text>
+  <line x1="18" y1="73" x2="782" y2="73" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="95" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5090</text>
+  <text x="310" y="95" font-size="11" font-weight="700" fill="#EA4335">575W</text>
+  <text x="470" y="95" font-size="11" fill="#49454F">20W</text>
+  <text x="620" y="95" font-size="11" fill="#49454F">1200W+</text>
+  <line x1="18" y1="105" x2="782" y2="105" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="127" font-size="11" font-weight="600" fill="#1C1B1F">RTX 4090</text>
+  <text x="310" y="127" font-size="11" font-weight="700" fill="#EA4335">450W (575W peak)</text>
+  <text x="470" y="127" font-size="11" fill="#49454F">10W</text>
+  <text x="620" y="127" font-size="11" fill="#49454F">1200W+</text>
+  <line x1="18" y1="137" x2="782" y2="137" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="159" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5080</text>
+  <text x="310" y="159" font-size="11" font-weight="700" fill="#EA4335">360W</text>
+  <text x="470" y="159" font-size="11" fill="#49454F">15W</text>
+  <text x="620" y="159" font-size="11" fill="#49454F">1000W</text>
+  <line x1="18" y1="169" x2="782" y2="169" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="191" font-size="11" font-weight="600" fill="#1C1B1F">AMD RX 7900 XTX</text>
+  <text x="310" y="191" font-size="11" font-weight="700" fill="#EA4335">355W</text>
+  <text x="470" y="191" font-size="11" fill="#49454F">25W</text>
+  <text x="620" y="191" font-size="11" fill="#49454F">850W</text>
+  <line x1="18" y1="201" x2="782" y2="201" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="223" font-size="11" font-weight="600" fill="#1C1B1F">RTX 4080</text>
+  <text x="310" y="223" font-size="11" font-weight="700" fill="#F4B400">320W</text>
+  <text x="470" y="223" font-size="11" fill="#49454F">8W</text>
+  <text x="620" y="223" font-size="11" fill="#49454F">850W+</text>
+  <line x1="18" y1="233" x2="782" y2="233" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="255" font-size="11" font-weight="600" fill="#1C1B1F">RTX 4070 Ti</text>
+  <text x="310" y="255" font-size="11" font-weight="700" fill="#F4B400">285W</text>
+  <text x="470" y="255" font-size="11" fill="#49454F">7W</text>
+  <text x="620" y="255" font-size="11" fill="#49454F">750W+</text>
+  <line x1="18" y1="265" x2="782" y2="265" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="287" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5070</text>
+  <text x="310" y="287" font-size="11" font-weight="700" fill="#F4B400">250W</text>
+  <text x="470" y="287" font-size="11" fill="#49454F">12W</text>
+  <text x="620" y="287" font-size="11" fill="#49454F">800W</text>
+  <line x1="18" y1="297" x2="782" y2="297" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="319" font-size="11" font-weight="600" fill="#1C1B1F">RTX 4070</text>
+  <text x="310" y="319" font-size="11" font-weight="700" fill="#F4B400">200W</text>
+  <text x="470" y="319" font-size="11" fill="#49454F">6W</text>
+  <text x="620" y="319" font-size="11" fill="#49454F">650W</text>
+  <line x1="18" y1="329" x2="782" y2="329" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="28" y="332" width="744" height="28" fill="#E8DEF8" opacity="0.5" rx="3"/>
+  <text x="50" y="351" font-size="11" font-weight="700" fill="#1C1B1F">Apple M5 Max (GPU)</text>
+  <text x="310" y="351" font-size="11" font-weight="700" fill="#34A853">25–35W</text>
+  <text x="470" y="351" font-size="11" fill="#49454F">1W</text>
+  <text x="620" y="351" font-size="11" fill="#49454F">Built-in</text>
+  <line x1="18" y1="361" x2="782" y2="361" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="28" y="364" width="744" height="28" fill="#E8DEF8" opacity="0.5" rx="3"/>
+  <text x="50" y="383" font-size="11" font-weight="700" fill="#1C1B1F">Apple M5 Pro (GPU)</text>
+  <text x="310" y="383" font-size="11" font-weight="700" fill="#34A853">20–28W</text>
+  <text x="470" y="383" font-size="11" fill="#49454F">1W</text>
+  <text x="620" y="383" font-size="11" fill="#49454F">Built-in</text>
+  <circle cx="30" cy="406" r="5" fill="#EA4335"/>
+  <text x="40" y="410" font-size="9" fill="#49454F">High (≥350W)</text>
+  <circle cx="120" cy="406" r="5" fill="#F4B400"/>
+  <text x="130" y="410" font-size="9" fill="#49454F">Medium</text>
+  <circle cx="185" cy="406" r="5" fill="#34A853"/>
+  <text x="195" y="410" font-size="9" fill="#49454F">Efficient</text>
+  <text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

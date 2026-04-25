@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="300" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Cost to Run a Local LLM 24/7</text>
+  <line x1="18" y1="46" x2="782" y2="46" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="65" font-size="12" font-weight="700" fill="#79747E">GPU (avg system load)</text>
+  <text x="340" y="65" font-size="12" font-weight="700" fill="#79747E">Daily</text>
+  <text x="470" y="65" font-size="12" font-weight="700" fill="#79747E">Monthly</text>
+  <text x="620" y="65" font-size="12" font-weight="700" fill="#79747E">Annual</text>
+  <line x1="18" y1="73" x2="782" y2="73" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="100" font-size="11" font-weight="600" fill="#1C1B1F">RTX 4090 (600W avg)</text>
+  <text x="340" y="100" font-size="11" fill="#49454F">$1.73</text>
+  <text x="470" y="100" font-size="11" font-weight="700" fill="#EA4335">$52</text>
+  <text x="620" y="100" font-size="11" fill="#49454F">$625</text>
+  <line x1="18" y1="110" x2="782" y2="110" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="138" font-size="11" font-weight="600" fill="#1C1B1F">RTX 4080 (350W avg)</text>
+  <text x="340" y="138" font-size="11" fill="#49454F">$1.01</text>
+  <text x="470" y="138" font-size="11" font-weight="700" fill="#F4B400">$30</text>
+  <text x="620" y="138" font-size="11" fill="#49454F">$360</text>
+  <line x1="18" y1="148" x2="782" y2="148" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="176" font-size="11" font-weight="600" fill="#1C1B1F">RTX 4070 Ti (300W avg)</text>
+  <text x="340" y="176" font-size="11" fill="#49454F">$0.86</text>
+  <text x="470" y="176" font-size="11" font-weight="700" fill="#F4B400">$26</text>
+  <text x="620" y="176" font-size="11" fill="#49454F">$315</text>
+  <line x1="18" y1="186" x2="782" y2="186" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="28" y="189" width="744" height="30" fill="#E8DEF8" opacity="0.5" rx="3"/>
+  <text x="50" y="209" font-size="11" font-weight="700" fill="#1C1B1F">M5 Max Mac (30W avg)</text>
+  <text x="340" y="209" font-size="11" fill="#49454F">$0.09</text>
+  <text x="470" y="209" font-size="11" font-weight="700" fill="#34A853">$2.60</text>
+  <text x="620" y="209" font-size="11" font-weight="700" fill="#34A853">$32</text>
+  <rect x="657" y="192" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="210" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">🏆 Cheapest</text>
+  <line x1="18" y1="228" x2="782" y2="228" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="50" y="250" font-size="10" fill="#79747E">Assumes $0.12/kWh (US average). RTX 4090 power-limited to 350W → $30/month with ~10% speed loss.</text>
+  <text x="792" y="292" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
