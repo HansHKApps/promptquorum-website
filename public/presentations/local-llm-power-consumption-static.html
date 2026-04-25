@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local LLM Power Consumption and Cooling 2026 | PromptQuorum</title>
+    <meta name="description" content="RTX 4090 draws 575W ($52/month). Apple M5 Max draws 30W — 10× more efficient. GPU power draw, PSU sizing, cooling, and electricity cost tables for every tier." />
+    <meta property="og:title" content="Local LLM Power Consumption and Cooling 2026 — PromptQuorum" />
+    <meta property="og:description" content="RTX 4090: 575W, $52/month. M5 Max: 30W, 10× more efficient. Complete GPU power, PSU, and cooling guide." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-power-consumption" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/local-llm-power-consumption";
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local LLM Power Consumption 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-power-consumption" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides dynamically injected -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const ARTICLE_SLUG = 'local-llm-power-consumption';
+        const ARTICLE_BASE = 'https://www.promptquorum.com/local-llms/' + ARTICLE_SLUG;
+
+        const CONTENT = {
+            en: {
+                title: 'Local LLM Power Consumption and Cooling 2026',
+                backLabel: '← Back to Article',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Local LLM Power Consumption &amp; Cooling 2026',
+                        subtitle: 'RTX 4090: 575W, $52/month. Apple M5 Max: 30W — 10× more efficient.',
+                        link: ARTICLE_BASE
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>RTX 4090:</strong> 575W peak — 1200W PSU required, $52/month at $0.12/kWh',
+                            '<strong>RTX 4080:</strong> 320W — 850W PSU, $30/month',
+                            '<strong>RTX 4070 Ti:</strong> 285W — 750W PSU, $26/month',
+                            '<strong>Apple M5 Max:</strong> 25–35W — $2.60/month, 10× more efficient per token',
+                            '<strong>24/7 cost gap:</strong> RTX 4090 = $52/mo vs M5 Max = $2.60/mo',
+                            '<strong>Cooling critical:</strong> GPU above 83°C triggers throttling — 10–20% speed loss'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'GPU Power Draw for LLM Inference',
+                        columns: ['GPU', 'Power', 'Idle', 'PSU'],
+                        rows: [
+                            { 'GPU': 'RTX 5090', 'Power': '575W', 'Idle': '20W', 'PSU': '1200W+' },
+                            { 'GPU': 'RTX 4090', 'Power': '575W max', 'Idle': '10W', 'PSU': '1200W+' },
+                            { 'GPU': 'RTX 4080', 'Power': '320W', 'Idle': '8W', 'PSU': '850W+' },
+                            { 'GPU': 'RTX 4070 Ti', 'Power': '285W', 'Idle': '7W', 'PSU': '750W+' },
+                            { 'GPU': 'AMD RX 7900 XTX', 'Power': '355W', 'Idle': '25W', 'PSU': '850W' },
+                            { 'GPU': 'Apple M5 Max', 'Power': '25–35W', 'Idle': '1W', 'PSU': 'Built-in' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Apple Silicon vs NVIDIA: Efficiency',
+                        line1: 'M5 Max: 25–35W total — 65–85 tok/sec on 7B models',
+                        line2: 'RTX 4090: 600W system — 150 tok/sec on 7B models',
+                        tip: 'M5 Max uses 10× less power per token — and has 128 GB vs 32 GB VRAM'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Total System Power: RTX 4090 Build',
+                        columns: ['Component', 'Power', 'Notes'],
+                        rows: [
+                            { 'Component': 'GPU (RTX 4090)', 'Power': '575W', 'Notes': '60–65% of total' },
+                            { 'Component': 'CPU (Ryzen 9)', 'Power': '170W', 'Notes': 'Under load' },
+                            { 'Component': 'Mobo + RAM + SSD', 'Power': '100W', 'Notes': 'Typical' },
+                            { 'Component': 'Cooling + overhead', 'Power': '50–100W', 'Notes': 'Safety margin' },
+                            { 'Component': 'Total system', 'Power': '~895–945W', 'Notes': 'Needs 1200W PSU' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Electricity Cost Running 24/7 ($0.12/kWh)',
+                        columns: ['GPU', 'Daily', 'Monthly', 'Annual'],
+                        rows: [
+                            { 'GPU': 'RTX 4090 (600W avg)', 'Daily': '$1.73', 'Monthly': '$52', 'Annual': '$625' },
+                            { 'GPU': 'RTX 4080 (350W avg)', 'Daily': '$1.01', 'Monthly': '$30', 'Annual': '$360' },
+                            { 'GPU': 'RTX 4070 Ti (300W)', 'Daily': '$0.86', 'Monthly': '$26', 'Annual': '$315' },
+                            { 'GPU': 'M5 Max Mac (30W)', 'Daily': '$0.09', 'Monthly': '$2.60', 'Annual': '$32' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Save 40% Electricity Without Losing Speed',
+                        items: [
+                            '<strong>Power-limit RTX 4090 to 350W:</strong> saves 40% electricity, only ~10% speed loss',
+                            '<strong>Command:</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -pl 350</code> (set on every boot)',
+                            '<strong>Work-hours only (8h/day):</strong> cuts monthly cost 67% vs 24/7',
+                            '<strong>Apple Silicon:</strong> no tuning needed — M5 Max is already power-optimized',
+                            '<strong>350W-limited RTX 4090:</strong> $31/month vs $52/month at full power'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Cooling Requirements for LLM Inference',
+                        items: [
+                            '<strong>Airflow layout:</strong> front fans pull cool air in, rear/top fans exhaust hot air',
+                            '<strong>RTX 4090 case:</strong> large case with 3+ fans; good cable management essential',
+                            '<strong>Safe temp:</strong> keep GPU below 83°C — thermal throttling starts here (10–20% slowdown)',
+                            '<strong>Monitor:</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -q -d TEMPERATURE</code> for continuous monitoring',
+                            '<strong>Thermal paste:</strong> replace every 2–3 years for optimal heat transfer'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quick Facts',
+                        items: [
+                            '<strong>RTX 4090 peak draw:</strong> 575W (GPU alone)',
+                            '<strong>Required PSU:</strong> 1200W for full RTX 4090 system',
+                            '<strong>24/7 cost at $0.12/kWh:</strong> ~$52/month (RTX 4090)',
+                            '<strong>Apple M5 Max total draw:</strong> 25–35W',
+                            '<strong>Efficiency ratio:</strong> M5 Max uses ~10× less power per token than RTX 4090',
+                            '<strong>Safe GPU temp:</strong> keep below 83°C for sustained inference'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Common Power &amp; Cooling Mistakes',
+                        items: [
+                            'Undersizing the PSU — RTX 4090 needs 1200W minimum, not 750W',
+                            'Ignoring case airflow — poor ventilation causes 10% performance loss and shorter GPU lifespan',
+                            'Running 24/7 without monitoring costs — RTX 4090 costs $52/month in electricity',
+                            'Not monitoring GPU temperature — cards can silently throttle from thermal stress',
+                            'Forgetting cooling overhead in TCO — hot climates add $200–400/year in extra A/C costs'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Power Costs by Region',
+                        items: [
+                            '<strong>US average:</strong> $0.12/kWh — RTX 4090 = $52/month 24/7',
+                            '<strong>Germany:</strong> €0.35/kWh — RTX 4090 = €150/month (3× more expensive)',
+                            '<strong>France:</strong> €0.25–0.30/kWh — RTX 4090 = €100–130/month',
+                            '<strong>Japan:</strong> ¥27–30/kWh — ~1.5× higher than US average',
+                            '<strong>China (eastern cities):</strong> ¥0.05–0.08/kWh — cheapest for GPU inference'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Power &amp; Cooling FAQ',
+                        faqs: [
+                            { q: 'How much does RTX 4090 cost to run 24/7?', a: '$52/month at $0.12/kWh (US). Germany: ~€150/month. Power-limit to 350W to cut to $31/month with only 10% speed loss.' },
+                            { q: 'What PSU wattage do I need for RTX 4090?', a: '1200W minimum. RTX 4090 peaks at 575W. Add CPU (170W) + mobo/RAM/SSD (100W) + 20% safety margin = ~900W. 750W PSU causes random shutdowns.' },
+                            { q: 'Is Apple Silicon more power-efficient than NVIDIA?', a: 'Yes — 10× more efficient per token. M5 Max: 25–35W for 65–85 tok/sec. RTX 4090: 600W for 150 tok/sec on same model.' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'PSU Sizing Guide',
+                        items: [
+                            'Find your GPU\'s TDP — check NVIDIA\'s spec page or run <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi</code>',
+                            'Add CPU TDP — modern AMD/Intel CPUs draw 125–250W under load',
+                            'Add 100W for motherboard, RAM, and storage',
+                            'Multiply total by 1.2 (20% safety margin for power spikes)',
+                            'Buy from reputable brand: Seasonic, Corsair HX, EVGA SuperNOVA',
+                            'RTX 4090 minimum: 1000W — recommended: 1200W'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Optimize Your Local LLM Setup',
+                        body: 'PromptQuorum compares model performance across local and cloud inference — find the right hardware/model combination for your power budget.',
+                        cta: 'Join the Waitlist — Free',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            de: {
+                title: 'Stromverbrauch lokaler LLMs 2026',
+                backLabel: '← Zurück zum Artikel',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Stromverbrauch &amp; Kühlung lokaler LLMs 2026',
+                        subtitle: 'RTX 4090: 575W, €150/Monat. Apple M5 Max: 30W — 10× effizienter.',
+                        link: ARTICLE_BASE
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtigste Erkenntnisse',
+                        items: [
+                            '<strong>RTX 4090:</strong> 575W — 1200W PSU erforderlich, ~€150/Monat bei €0,35/kWh',
+                            '<strong>RTX 4080:</strong> 320W — 850W PSU, ~€88/Monat',
+                            '<strong>RTX 4070 Ti:</strong> 285W — 750W PSU, ~€76/Monat',
+                            '<strong>Apple M5 Max:</strong> 25–35W — ~€8/Monat, 10× effizienter pro Token',
+                            '<strong>24/7 Kostengefälle:</strong> RTX 4090 = €150/Mo vs M5 Max = €8/Mo',
+                            '<strong>Kühlung kritisch:</strong> GPU über 83°C drosselt — 10–20% Leistungsverlust'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'GPU-Stromverbrauch bei LLM-Inferenz',
+                        columns: ['GPU', 'Stromverbrauch', 'Leerlauf', 'PSU'],
+                        rows: [
+                            { 'GPU': 'RTX 5090', 'Stromverbrauch': '575W', 'Leerlauf': '20W', 'PSU': '1200W+' },
+                            { 'GPU': 'RTX 4090', 'Stromverbrauch': '575W max', 'Leerlauf': '10W', 'PSU': '1200W+' },
+                            { 'GPU': 'RTX 4080', 'Stromverbrauch': '320W', 'Leerlauf': '8W', 'PSU': '850W+' },
+                            { 'GPU': 'RTX 4070 Ti', 'Stromverbrauch': '285W', 'Leerlauf': '7W', 'PSU': '750W+' },
+                            { 'GPU': 'AMD RX 7900 XTX', 'Stromverbrauch': '355W', 'Leerlauf': '25W', 'PSU': '850W' },
+                            { 'GPU': 'Apple M5 Max', 'Stromverbrauch': '25–35W', 'Leerlauf': '1W', 'PSU': 'Eingebaut' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Apple Silicon vs. NVIDIA: Effizienz',
+                        line1: 'M5 Max: 25–35W gesamt — 65–85 Tokens/Sek. für 7B-Modelle',
+                        line2: 'RTX 4090: 600W System — 150 Tokens/Sek. für 7B-Modelle',
+                        tip: 'M5 Max verbraucht 10× weniger Strom pro Token — und hat 128 GB vs. 32 GB VRAM'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Gesamtstromverbrauch: RTX 4090 System',
+                        columns: ['Komponente', 'Stromverbrauch', 'Notizen'],
+                        rows: [
+                            { 'Komponente': 'GPU (RTX 4090)', 'Stromverbrauch': '575W', 'Notizen': '60–65% der Gesamtlast' },
+                            { 'Komponente': 'CPU (Ryzen 9)', 'Stromverbrauch': '170W', 'Notizen': 'Unter Last' },
+                            { 'Komponente': 'Board + RAM + SSD', 'Stromverbrauch': '100W', 'Notizen': 'Typisch' },
+                            { 'Komponente': 'Kühlung + Overhead', 'Stromverbrauch': '50–100W', 'Notizen': 'Sicherheitspuffer' },
+                            { 'Komponente': 'Gesamtsystem', 'Stromverbrauch': '~895–945W', 'Notizen': 'Mindestens 1200W PSU' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Stromkosten 24/7 (€0,35/kWh)',
+                        columns: ['GPU', 'Täglich', 'Monatlich', 'Jährlich'],
+                        rows: [
+                            { 'GPU': 'RTX 4090 (600W Ø)', 'Täglich': '€5,04', 'Monatlich': '€150', 'Jährlich': '€1.800' },
+                            { 'GPU': 'RTX 4080 (350W Ø)', 'Täglich': '€2,94', 'Monatlich': '€88', 'Jährlich': '€1.050' },
+                            { 'GPU': 'RTX 4070 Ti (300W)', 'Täglich': '€2,52', 'Monatlich': '€76', 'Jährlich': '€910' },
+                            { 'GPU': 'M5 Max Mac (30W)', 'Täglich': '€0,25', 'Monatlich': '€8', 'Jährlich': '€91' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '40% Strom sparen ohne Leistungsverlust',
+                        items: [
+                            '<strong>RTX 4090 auf 350W begrenzen:</strong> spart 40% Strom, nur ~10% Leistungsverlust',
+                            '<strong>Befehl:</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -pl 350</code> (beim Start setzen)',
+                            '<strong>Nur Arbeitszeit (8h/Tag):</strong> reduziert monatliche Kosten um 67% vs. 24/7',
+                            '<strong>Apple Silicon:</strong> kein Tuning nötig — M5 Max ist bereits optimiert',
+                            '<strong>350W-begrenzte RTX 4090:</strong> €88/Monat statt €150/Monat bei Volllast'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Kühlungsanforderungen für LLM-Inferenz',
+                        items: [
+                            '<strong>Luftströmung:</strong> Frontlüfter kühle Luft ansaugen, Heck-/Obenable hot Luft ausstoßen',
+                            '<strong>RTX 4090 Gehäuse:</strong> großes Gehäuse mit 3+ Lüftern, gutes Kabelmanagement',
+                            '<strong>Sichere Temperatur:</strong> GPU unter 83°C halten — Drosselung beginnt hier',
+                            '<strong>Überwachung:</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -q -d TEMPERATURE</code>',
+                            '<strong>Wärmeleitpaste:</strong> alle 2–3 Jahre austauschen für optimale Wärmeleitung'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Schnelle Fakten',
+                        items: [
+                            '<strong>RTX 4090 Spitzenlast:</strong> 575W (nur GPU)',
+                            '<strong>Erforderliche PSU:</strong> 1200W für RTX 4090-System',
+                            '<strong>Kosten 24/7 bei €0,35/kWh:</strong> ~€150/Monat (RTX 4090)',
+                            '<strong>Apple M5 Max Gesamtlast:</strong> 25–35W',
+                            '<strong>Effizienzquote:</strong> M5 Max verbraucht ~10× weniger Strom pro Token',
+                            '<strong>Sichere GPU-Temperatur:</strong> unter 83°C für kontinuierliche Inferenz'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Häufige Fehler bei Stromversorgung &amp; Kühlung',
+                        items: [
+                            'PSU unterdimensionieren — RTX 4090 benötigt mindestens 1200W, nicht 750W',
+                            'Gehäubelüftung ignorieren — schlechte Belüftung = 10% Leistungsverlust und kürzere GPU-Lebensdauer',
+                            '24/7 betreiben ohne Kostenplanung — RTX 4090 kostet €150/Monat in Deutschland',
+                            'GPU-Temperatur nicht überwachen — Karten können lautlos durch thermischen Stress drosseln',
+                            'Kühlungsoverhead in TCO vergessen — heiße Klimazonen kosten €200–400/Jahr extra Klimaanlage'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Stromkosten nach Region',
+                        items: [
+                            '<strong>USA:</strong> $0,12/kWh — RTX 4090 = $52/Monat 24/7',
+                            '<strong>Deutschland/DACH:</strong> €0,30–0,40/kWh — RTX 4090 = €150/Monat (3× teurer als USA)',
+                            '<strong>Frankreich:</strong> €0,25–0,30/kWh — RTX 4090 = €100–130/Monat',
+                            '<strong>Japan:</strong> ¥27–30/kWh — ~1,5× höher als US-Durchschnitt',
+                            '<strong>China (Osts tädte):</strong> ¥0,05–0,08/kWh — günstigste Option für GPU-Inferenz'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Fragen &amp; Antworten',
+                        faqs: [
+                            { q: 'Was kostet RTX 4090 24/7 in Deutschland?', a: '~€150/Monat bei €0,35/kWh. Bei 350W Strombegrenzung: ~€88/Monat mit nur 10% Leistungsverlust.' },
+                            { q: 'Welche PSU benötige ich für RTX 4090?', a: 'Mindestens 1200W. Spitze: 575W. CPU (170W) + Board/RAM/SSD (100W) + 20% Reserve = ~900W. 750W PSU führt zu Abstürzen.' },
+                            { q: 'Ist Apple Silicon effizienter als NVIDIA?', a: 'Ja — 10× effizienter pro Token. M5 Max: 25–35W für 65–85 Tokens/Sek. RTX 4090: 600W für 150 Tokens/Sek.' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'PSU-Dimensionierungsanleitung',
+                        items: [
+                            'GPU-TDP prüfen — NVIDIA-Spezifikationsseite oder <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi</code>',
+                            'CPU-TDP addieren — aktuelle AMD/Intel-CPUs: 125–250W unter Last',
+                            '100W für Motherboard, RAM und Speicher hinzufügen',
+                            'Gesamtleistung mit 1,2 multiplizieren (20% Sicherheitsmarge)',
+                            'Von seriöser Marke kaufen: Seasonic, Corsair HX, EVGA SuperNOVA',
+                            'RTX 4090 Minimum: 1000W — Empfehlung: 1200W'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Lokale LLM-Konfiguration optimieren',
+                        body: 'PromptQuorum vergleicht Modellleistung über lokale und Cloud-Inferenz — damit Sie die richtige Hardware/Modell-Kombination für Ihr Strombudget finden.',
+                        cta: 'Jetzt anmelden — Kostenlos',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Consommation électrique des LLMs locaux 2026',
+                backLabel: '← Retour à l\'article',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Consommation électrique &amp; refroidissement des LLMs locaux 2026',
+                        subtitle: 'RTX 4090 : 575W, €130/mois. Apple M5 Max : 30W — 10× plus efficace.',
+                        link: ARTICLE_BASE
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points clés',
+                        items: [
+                            '<strong>RTX 4090 :</strong> 575W — alimentation 1200W requise, ~€130/mois à €0.30/kWh',
+                            '<strong>RTX 4080 :</strong> 320W — alimentation 850W, ~€76/mois',
+                            '<strong>RTX 4070 Ti :</strong> 285W — alimentation 750W, ~€65/mois',
+                            '<strong>Apple M5 Max :</strong> 25–35W — ~€6.50/mois, 10× plus efficace par token',
+                            '<strong>Écart de coût 24/7 :</strong> RTX 4090 = €130/mois vs M5 Max = €6.50/mois',
+                            '<strong>Refroidissement critique :</strong> GPU au-dessus de 83°C déclenche la limitation — 10–20% de perte de vitesse'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Consommation GPU pour l\'inférence LLM',
+                        columns: ['GPU', 'Consommation', 'Veille', 'Alimentation'],
+                        rows: [
+                            { 'GPU': 'RTX 5090', 'Consommation': '575W', 'Veille': '20W', 'Alimentation': '1200W+' },
+                            { 'GPU': 'RTX 4090', 'Consommation': '575W max', 'Veille': '10W', 'Alimentation': '1200W+' },
+                            { 'GPU': 'RTX 4080', 'Consommation': '320W', 'Veille': '8W', 'Alimentation': '850W+' },
+                            { 'GPU': 'RTX 4070 Ti', 'Consommation': '285W', 'Veille': '7W', 'Alimentation': '750W+' },
+                            { 'GPU': 'AMD RX 7900 XTX', 'Consommation': '355W', 'Veille': '25W', 'Alimentation': '850W' },
+                            { 'GPU': 'Apple M5 Max', 'Consommation': '25–35W', 'Veille': '1W', 'Alimentation': 'Intégrée' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Apple Silicon vs NVIDIA : Efficacité',
+                        line1: 'M5 Max : 25–35W total — 65–85 tok/sec sur modèles 7B',
+                        line2: 'RTX 4090 : 600W système — 150 tok/sec sur modèles 7B',
+                        tip: 'M5 Max consomme 10× moins d\'électricité par token — et offre 128 Go vs 32 Go de VRAM'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Puissance totale du système : RTX 4090',
+                        columns: ['Composant', 'Consommation', 'Notes'],
+                        rows: [
+                            { 'Composant': 'GPU (RTX 4090)', 'Consommation': '575W', 'Notes': '60–65% du total' },
+                            { 'Composant': 'CPU (Ryzen 9)', 'Consommation': '170W', 'Notes': 'Sous charge' },
+                            { 'Composant': 'Carte mère + RAM + SSD', 'Consommation': '100W', 'Notes': 'Typique' },
+                            { 'Composant': 'Refroidissement', 'Consommation': '50–100W', 'Notes': 'Marge de sécurité' },
+                            { 'Composant': 'Système total', 'Consommation': '~895–945W', 'Notes': 'Besoin 1200W min' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Coût électricité 24/7 (€0.30/kWh)',
+                        columns: ['GPU', 'Quotidien', 'Mensuel', 'Annuel'],
+                        rows: [
+                            { 'GPU': 'RTX 4090 (600W moy)', 'Quotidien': '€4.32', 'Mensuel': '€130', 'Annuel': '€1 555' },
+                            { 'GPU': 'RTX 4080 (350W moy)', 'Quotidien': '€2.52', 'Mensuel': '€76', 'Annuel': '€907' },
+                            { 'GPU': 'RTX 4070 Ti (300W)', 'Quotidien': '€2.16', 'Mensuel': '€65', 'Annuel': '€778' },
+                            { 'GPU': 'M5 Max Mac (30W)', 'Quotidien': '€0.22', 'Mensuel': '€6.50', 'Annuel': '€78' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Économiser 40% d\'électricité sans perte de vitesse',
+                        items: [
+                            '<strong>Limiter RTX 4090 à 350W :</strong> économise 40% d\'électricité, ~10% de perte de vitesse',
+                            '<strong>Commande :</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -pl 350</code> (définir au démarrage)',
+                            '<strong>Heures de travail (8h/jour) :</strong> réduit le coût mensuel de 67% vs 24/7',
+                            '<strong>Apple Silicon :</strong> aucun réglage nécessaire — M5 Max est déjà optimisé',
+                            '<strong>RTX 4090 limitée à 350W :</strong> €78/mois vs €130/mois à pleine puissance'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Refroidissement pour l\'inférence LLM',
+                        items: [
+                            '<strong>Débit d\'air :</strong> ventilateurs avant aspirent l\'air frais, arrière/haut expulsent la chaleur',
+                            '<strong>Boîtier RTX 4090 :</strong> grand boîtier avec 3+ ventilateurs, bonne gestion des câbles',
+                            '<strong>Température sûre :</strong> GPU sous 83°C — la limitation thermique commence ici',
+                            '<strong>Surveillance :</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -q -d TEMPERATURE</code>',
+                            '<strong>Pâte thermique :</strong> remplacer tous les 2–3 ans pour un transfert thermique optimal'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Faits rapides',
+                        items: [
+                            '<strong>Pic de consommation RTX 4090 :</strong> 575W (GPU seul)',
+                            '<strong>Alimentation requise :</strong> 1200W pour le système RTX 4090',
+                            '<strong>Coût 24/7 à €0.30/kWh :</strong> ~€130/mois (RTX 4090)',
+                            '<strong>Consommation totale Apple M5 Max :</strong> 25–35W',
+                            '<strong>Ratio d\'efficacité :</strong> M5 Max utilise ~10× moins d\'électricité par token',
+                            '<strong>Température GPU sûre :</strong> maintenir sous 83°C pour l\'inférence soutenue'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Erreurs courantes d\'alimentation &amp; refroidissement',
+                        items: [
+                            'Sous-dimensionner l\'alimentation — RTX 4090 nécessite 1200W minimum, pas 750W',
+                            'Ignorer le débit d\'air du boîtier — mauvais débit = 10% de perte de performance',
+                            'Fonctionner 24/7 sans planifier les coûts — RTX 4090 coûte ~€130/mois en France',
+                            'Ne pas surveiller la température GPU — les cartes peuvent silencieusement s\'accélérer thermiquement',
+                            'Oublier l\'overhead de refroidissement dans le TCO — climat chaud = €200–400/an extra'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Coûts d\'électricité par région',
+                        items: [
+                            '<strong>États-Unis :</strong> $0.12/kWh — RTX 4090 = $52/mois 24/7',
+                            '<strong>France :</strong> €0.25–0.30/kWh — RTX 4090 = €100–130/mois',
+                            '<strong>Allemagne :</strong> €0.35–0.40/kWh — RTX 4090 = €150/mois (3× USA)',
+                            '<strong>Japon :</strong> ¥27–30/kWh — ~1.5× la moyenne américaine',
+                            '<strong>Chine (villes est) :</strong> ¥0.05–0.08/kWh — le moins cher pour l\'inférence GPU'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ Alimentation &amp; refroidissement',
+                        faqs: [
+                            { q: 'Combien coûte RTX 4090 24/7 en France ?', a: '~€130/mois à €0.30/kWh. Limitez à 350W : ~€78/mois avec seulement 10% de perte de vitesse.' },
+                            { q: 'Quelle alimentation pour RTX 4090 ?', a: '1200W minimum. RTX 4090 pic : 575W. CPU (170W) + carte mère/RAM/SSD (100W) + marge 20% = ~900W. 750W = arrêts aléatoires.' },
+                            { q: 'Apple Silicon est-il plus efficace que NVIDIA ?', a: 'Oui — 10× plus efficace par token. M5 Max : 25–35W pour 65–85 tok/sec. RTX 4090 : 600W pour 150 tok/sec.' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Guide de dimensionnement PSU',
+                        items: [
+                            'Vérifier le TDP du GPU — page NVIDIA ou <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi</code>',
+                            'Ajouter le TDP CPU — AMD/Intel modernes : 125–250W sous charge',
+                            'Ajouter 100W pour carte mère, RAM et stockage',
+                            'Multiplier le total par 1.2 (marge de sécurité 20%)',
+                            'Acheter d\'une marque réputée : Seasonic, Corsair HX, EVGA SuperNOVA',
+                            'RTX 4090 minimum : 1000W — recommandé : 1200W'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Optimisez votre configuration LLM locale',
+                        body: 'PromptQuorum compare les performances des modèles en inférence locale et cloud — trouvez la bonne combinaison matériel/modèle selon votre budget électrique.',
+                        cta: 'Rejoindre la liste d\'attente — Gratuit',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ローカルLLM消費電力・冷却ガイド2026',
+                backLabel: '← 記事に戻る',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ローカルLLM消費電力・冷却ガイド2026',
+                        subtitle: 'RTX 4090：575W、¥13,000/月。Apple M5 Max：30W — 10倍のエネルギー効率。',
+                        link: ARTICLE_BASE
+                    },
+                    {
+                        type: 'list',
+                        h2: '重要ポイント',
+                        items: [
+                            '<strong>RTX 4090：</strong>575W — 1200W電源必要、¥30/kWhで¥13,000/月',
+                            '<strong>RTX 4080：</strong>320W — 850W電源、¥7,560/月',
+                            '<strong>RTX 4070 Ti：</strong>285W — 750W電源、¥6,480/月',
+                            '<strong>Apple M5 Max：</strong>25～35W — ¥648/月、トークン当たら10倍効率',
+                            '<strong>24時間コスト差：</strong>RTX 4090 = ¥13,000/月 vs M5 Max = ¥648/月',
+                            '<strong>冷却重要：</strong>GPU83°C超えでサーマルスロットリング — 速度10～20%低下'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM推理時のGPU消費電力',
+                        columns: ['GPU', '消費電力', 'アイドル', '電源'],
+                        rows: [
+                            { 'GPU': 'RTX 5090', '消費電力': '575W', 'アイドル': '20W', '電源': '1200W+' },
+                            { 'GPU': 'RTX 4090', '消費電力': '575W max', 'アイドル': '10W', '電源': '1200W+' },
+                            { 'GPU': 'RTX 4080', '消費電力': '320W', 'アイドル': '8W', '電源': '850W+' },
+                            { 'GPU': 'RTX 4070 Ti', '消費電力': '285W', 'アイドル': '7W', '電源': '750W+' },
+                            { 'GPU': 'AMD RX 7900 XTX', '消費電力': '355W', 'アイドル': '25W', '電源': '850W' },
+                            { 'GPU': 'Apple M5 Max', '消費電力': '25～35W', 'アイドル': '1W', '電源': '内蔵' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Apple Silicon vs NVIDIA：効率比較',
+                        line1: 'M5 Max：25～35W合計 — 7Bモデル65～85 tok/sec',
+                        line2: 'RTX 4090：システム600W — 7Bモデル150 tok/sec',
+                        tip: 'M5 Maxはトークン当たら10倍の電力効率 — VRAMも128 GB vs 32 GB'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'システム全体の消費電力：RTX 4090構成',
+                        columns: ['コンポーネント', '消費電力', '備考'],
+                        rows: [
+                            { 'コンポーネント': 'GPU（RTX 4090）', '消費電力': '575W', '備考': '全体の60～65%' },
+                            { 'コンポーネント': 'CPU（Ryzen 9）', '消費電力': '170W', '備考': '負荷時' },
+                            { 'コンポーネント': 'マザーボード+RAM+SSD', '消費電力': '100W', '備考': '標準的' },
+                            { 'コンポーネント': '冷却+オーバーヘッド', '消費電力': '50～100W', '備考': '安全マージン' },
+                            { 'コンポーネント': 'システム合計', '消費電力': '~895～945W', '備考': '1200W電源必須' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '24/7電気代コスト（¥30/kWh）',
+                        columns: ['GPU', '1日', '月額', '年額'],
+                        rows: [
+                            { 'GPU': 'RTX 4090（600W平均）', '1日': '¥432', '月額': '¥12,960', '年額': '¥155,500' },
+                            { 'GPU': 'RTX 4080（350W平均）', '1日': '¥252', '月額': '¥7,560', '年額': '¥90,700' },
+                            { 'GPU': 'RTX 4070 Ti（300W）', '1日': '¥216', '月額': '¥6,480', '年額': '¥77,700' },
+                            { 'GPU': 'M5 Max Mac（30W）', '1日': '¥22', '月額': '¥648', '年額': '¥7,800' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '40%素顔で電力削減する方法',
+                        items: [
+                            '<strong>RTX 4090を350Wに制限：</strong>電力40%削減、速度損失はケ10%のみ',
+                            '<strong>コマンド：</strong><code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -pl 350</code>（起動時に設定）',
+                            '<strong>業務時間のみ（8時間/日）：</strong>24/7から変更で月額67%削減',
+                            '<strong>Apple Silicon：</strong>チューニング不要 — M5 Maxは既に最適化済み',
+                            '<strong>350W制限時：</strong>¥7,780/月（全力時¥12,960の40%削減）'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM推理の冷却要件',
+                        items: [
+                            '<strong>エアフロー：</strong>前面パネルファンが冷気を吸入、背面/上面が排熱',
+                            '<strong>RTX 4090ケース：</strong>3個以上のファンが入る大型ケース、ケーブル整理必須',
+                            '<strong>安全温度：</strong>GPUを常て83°C以下に維持 — ここでスロットリング開始',
+                            '<strong>モニタリング：</strong><code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -q -d TEMPERATURE</code>',
+                            '<strong>サーマルペースト：</strong>2～3年ごとに交換し最適な熱伝導を維持'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'クイックファクト',
+                        items: [
+                            '<strong>RTX 4090ピーク消費電力：</strong>575W（GPU単体）',
+                            '<strong>必要電源：</strong>RTX 4090システムに1200W',
+                            '<strong>24/7コスト（¥30/kWh）：</strong>～¥13,000/月（RTX 4090）',
+                            '<strong>Apple M5 Max總消費電力：</strong>25～35W',
+                            '<strong>効率比：</strong>M5 MaxはRTX 4090の約1/10の電力/トークン',
+                            '<strong>安全GPU温度：</strong>継続推理では83°C以下を維持'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '電力・冷却のよくあるミス',
+                        items: [
+                            'PSUを小さくしすぎる — RTX 4090は最低1200W必要、750W不可',
+                            'ケースエアフローを無視する — 不十分な通気で性能10%低下と寿命短縮',
+                            'コスト確認なく24/7稼働 — RTX 4090は日本で¥13,000/月の電気代',
+                            'GPU温度をモニタリングしない — 様热ストレスで默ってスロットリングする恐れ',
+                            'TCOに冷却コストを忘れる — 暑い地域では年間+¥30,000～50,000のエアコン費用'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域別電力コスト',
+                        items: [
+                            '<strong>米国：</strong>$0.12/kWh — RTX 4090 = $52/月（24/7）',
+                            '<strong>日本：</strong>¥27～30/kWh — RTX 4090 = ¥13,000/月（2024年METI AI効率指針準拠）',
+                            '<strong>ドイツ：</strong>€0.35/kWh — RTX 4090 = €150/月（米国の3倍）',
+                            '<strong>フランス：</strong>€0.25～0.30/kWh — RTX 4090 = €100～130/月',
+                            '<strong>中国（東部都市）：</strong>¥0.05～0.08/kWh — GPU推理に最も安価'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '电力・冷却FAQ',
+                        faqs: [
+                            { q: 'RTX 409024/7稼働のコストは？', a: '¥30/kWhで¥13,000/月。350W制限で¥7,780/月に削減可能（速度損失はケ10%）。' },
+                            { q: 'RTX 4090に必要な電源は？', a: '1200W推奨。RTX 4090ピーク575W + CPU 170W + マザーボード/RAM/SSD 100W + 20%マージン = 約900W。750W電源は継続推理でシャットダウンの原因に。' },
+                            { q: 'Apple SiliconはNVIDIAより省電力？', a: 'はい — トークン当たら10倍効率。M5 Max：25～35Wで第65～85 tok/sec。RTX 4090：600Wで同モデル150 tok/sec。' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'PSU容量選定ガイド',
+                        items: [
+                            'GPUのTDPを確認 — NVIDIA仕様ページまたは<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi</code>',
+                            'CPU TDPを加算 — 最新AMD/Intelは負荷時125～250W',
+                            'マザーボード・RAM・SSD用に100W追加',
+                            '合計に1.2を掛ける（20%安全マージン）',
+                            '信頼できるメーカーを選択：Seasonicv、Corsair HX、EVGA SuperNOVA',
+                            'RTX 4090最低：1000W — 推奨：1200W'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'ローカルLLMセットアップを最適化',
+                        body: 'PromptQuorumはローカル推理とクラウド推理のモデル性能を比較 — 電力予算に合った最適なハードウェア/モデルの組み合わせを見つけます。',
+                        cta: '無料でウェイトリストに登録',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地LLM功耗与冷却指南2026',
+                backLabel: '← 返回文章',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '本地LLM功耗与冷却指南·2026',
+                        subtitle: 'RTX 4090：575W，$52/月。Apple M5 Max：30W — 能效高10倍。',
+                        link: ARTICLE_BASE
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            '<strong>RTX 4090：</strong>575W — 需要 1200W电源，$52/月（$0.12/kWh）',
+                            '<strong>RTX 4080：</strong>320W — 850W电源，$30/月',
+                            '<strong>RTX 4070 Ti：</strong>285W — 750W电源，$26/月',
+                            '<strong>Apple M5 Max：</strong>25～35W — $2.60/月，每 token能效高10倍',
+                            '<strong>24小时运行成本差：</strong>RTX 4090 = $52/月 vs M5 Max = $2.60/月',
+                            '<strong>冷却至关重要：</strong>GPU超过83°C触发热节流 — 速度下降10～20%'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM推理时的GPU功耗',
+                        columns: ['GPU', '功耗', '闲置', '电源'],
+                        rows: [
+                            { 'GPU': 'RTX 5090', '功耗': '575W', '闲置': '20W', '电源': '1200W+' },
+                            { 'GPU': 'RTX 4090', '功耗': '575W max', '闲置': '10W', '电源': '1200W+' },
+                            { 'GPU': 'RTX 4080', '功耗': '320W', '闲置': '8W', '电源': '850W+' },
+                            { 'GPU': 'RTX 4070 Ti', '功耗': '285W', '闲置': '7W', '电源': '750W+' },
+                            { 'GPU': 'AMD RX 7900 XTX', '功耗': '355W', '闲置': '25W', '电源': '850W' },
+                            { 'GPU': 'Apple M5 Max', '功耗': '25～35W', '闲置': '1W', '电源': '内置' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Apple Silicon vs NVIDIA：能效对比',
+                        line1: 'M5 Max：25～35W总功耗 — 7B模型65～85 tok/sec',
+                        line2: 'RTX 4090：系统600W — 7B模型150 tok/sec',
+                        tip: 'M5 Max每 token能耗是RTX 4090的1/10 — VRAM也达128 GB vs 32 GB'
+                    },
+                    {
+                        type: 'table',
+                        h2: '系统总功耗：RTX 4090整机',
+                        columns: ['组件', '功耗', '备注'],
+                        rows: [
+                            { '组件': 'GPU（RTX 4090）', '功耗': '575W', '备注': '占总功耇60～65%' },
+                            { '组件': 'CPU（Ryzen 9）', '功耗': '170W', '备注': '满载时' },
+                            { '组件': '主板+内存+SSD', '功耗': '100W', '备注': '典型值' },
+                            { '组件': '散热+其他', '功耗': '50～100W', '备注': '安全余量' },
+                            { '组件': '系统合计', '功耗': '~895～945W', '备注': '需要 1200W电源' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '24/7电费成本（$0.12/kWh）',
+                        columns: ['GPU', '每日', '每月', '每年'],
+                        rows: [
+                            { 'GPU': 'RTX 4090（600W均值）', '每日': '$1.73', '每月': '$52', '每年': '$625' },
+                            { 'GPU': 'RTX 4080（350W均值）', '每日': '$1.01', '每月': '$30', '每年': '$360' },
+                            { 'GPU': 'RTX 4070 Ti（300W）', '每日': '$0.86', '每月': '$26', '每年': '$315' },
+                            { 'GPU': 'M5 Max Mac（30W）', '每日': '$0.09', '每月': '$2.60', '每年': '$32' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '不降速制40%电费',
+                        items: [
+                            '<strong>RTX 4090限制350W：</strong>节电4 0%电力，速度损失仅约10%',
+                            '<strong>命令：</strong><code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -pl 350</code>（开机时设置）',
+                            '<strong>仅工作时间运行（8小时/天）：</strong>相比24/7节具6 7%月费',
+                            '<strong>Apple Silicon：</strong>无需调整 — M5 Max已经预先优化',
+                            '<strong>350W限制的RTX 4090：</strong>$31/月 vs全功率$52/月'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM推理的冷却要求',
+                        items: [
+                            '<strong>气流布局：</strong>前面风扇吸入冷气，后面/顶部风扇排熱',
+                            '<strong>RTX 4090机笛：</strong>需要大型机笛配化3个以上风扇，整洁走线',
+                            '<strong>安全温度：</strong>GPU保持在83°C以下 — 热节流从这里开始',
+                            '<strong>监控：</strong><code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi -q -d TEMPERATURE</code>',
+                            '<strong>导热硬脂：</strong>每2～3年更换以保持最佳散热效果'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '快速事实',
+                        items: [
+                            '<strong>RTX 4090峰値功耗：</strong>575W（仅GPU）',
+                            '<strong>所需电源：</strong>RTX 4090系统需要 1200W',
+                            '<strong>24/7成本（$0.12/kWh）：</strong>～$52/月（RTX 4090）',
+                            '<strong>Apple M5 Max总功耗：</strong>25～35W',
+                            '<strong>能效比：</strong>M5 Max每 token能怗约为RTX 4090的1/10',
+                            '<strong>安全GPU温度：</strong>持续推理时保持在83°C以下'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '常见功耗与冷却错误',
+                        items: [
+                            '电源容量不足 — RTX 4090需至少 1200W，750W无法胜任',
+                            '忽视机笛气流 — 通风不居导致性能下降10%和GPU寿命缩短',
+                            '不计成本24/7运行 — RTX 4090每月电费$52，个人用途需权衡',
+                            '不监控GPU温度 — 热应力可导致推理速度默默下降',
+                            '忽视TCO中的冷却成本 — 炸热地区每年额外$200～400的空调费'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '各地区电力成本',
+                        items: [
+                            '<strong>美国：</strong>$0.12/kWh — RTX 4090 = $52/月（24/7）',
+                            '<strong>中国（东部城市）：</strong>¥0.05～0.08/kWh — GPU推理成本最低',
+                            '<strong>德国：</strong>€0.35/kWh — RTX 4090 = €150/月（3倍于美国）',
+                            '<strong>日本：</strong>¥27～30/kWh — 比美国高50～70%',
+                            '<strong>合规提示：</strong>数据安全法要求数据本地存储，本地LLM推理满足合规需求'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            { q: 'RTX 409024/7运行成本多少？', a: '$0.12/kWh下约$52/月。350W功率限制可降至$31/月，速度损失仅约10%。' },
+                            { q: 'RTX 4090需要多大电源？', a: '最小 1200W。RTX 4090峰唃575W + CPU 170W + 主板/内存/SSD 100W + 20%余量 = 约900W。750W电源持续推理时随机断电。' },
+                            { q: 'Apple Silicon真的比NVIDIA省电1 0倍？', a: '是的。M5 Max（12 8GB统一内存）在25～35W下运行7B模型达65～85 tok/sec。RTX 4090在600W下相同模型150 tok/sec。' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '电源容量选择指南',
+                        items: [
+                            '确认GPU的TDP — 查看NVIDIA规格页或<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">nvidia-smi</code>',
+                            '加上CPU TDP — 现代AMD/Intel满载125～250W',
+                            '为主板、内存和存储加100W',
+                            '总和乘以1.2（20%安全余量应对功率峰値）',
+                            '选择知名品牌：Seasonic、Corsair HX、EVGA SuperNOVA',
+                            'RTX 4090最小：1000W — 推荐：1200W'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '优化您的本地LLM配置',
+                        body: 'PromptQuorum帮助您比较本地和云端推理的模型性能 — 找到适合您电力预算的最佳硬件/模型组合。',
+                        cta: '免费加入等待列表',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide, lang) {
+            const articleUrl = ARTICLE_BASE + (lang !== 'en' ? '?lang=' + lang : '');
+            const footerLink = '<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>';
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>' + slide.h1 + '</h1><p>' + slide.subtitle + '</p><p style="margin-top: 32px; font-size: 18px; color: #79747e;"><a href="' + slide.link + '" target="_blank" rel="noopener">' + slide.link + '</a></p>' + footerLink;
+                    break;
+
+                case 'list':
+                    html = '<h2>' + slide.h2 + '</h2>';
+                    if (slide.intro) html += '<p style="max-width:640px;">' + slide.intro + '</p>';
+                    html += '<ul style="font-size: 1em; margin-top: 16px;">';
+                    slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = '<h2>' + slide.h2 + '</h2>';
+                    html += '<table><tr>';
+                    slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+                    html += '</tr>';
+                    slide.rows.forEach(function(row) {
+                        html += '<tr>';
+                        slide.columns.forEach(function(col) { html += '<td>' + (row[col] || '') + '</td>'; });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'comparison':
+                    html = '<h2>' + slide.h2 + '</h2><p style="margin-top: 36px; font-size: 1.4em;">' + slide.line1 + '</p><p style="font-size: 1.4em;">' + slide.line2 + '</p><p style="margin-top: 36px; font-size: 1.1em; color: #6750a4; max-width: 600px;">' + slide.tip + '</p>' + footerLink;
+                    break;
+
+                case 'numbered':
+                    html = '<h2>' + slide.h2 + '</h2>';
+                    html += '<ol style="font-size: 1em; margin-top: 16px; max-width: 640px;">';
+                    slide.items.forEach(function(item) { html += '<li style="margin-bottom:10px;">' + item + '</li>'; });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = '<h2>' + slide.h2 + '</h2>';
+                    slide.faqs.forEach(function(faq) {
+                        html += '<div style="margin-bottom: 16px; text-align: left; max-width: 660px;"><strong>Q: ' + faq.q + '</strong><p style="margin-top: 6px; font-size: 0.9em;">A: ' + faq.a + '</p></div>';
+                    });
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = '<h2>' + slide.h2 + '</h2><p style="max-width: 560px;">' + slide.body + '</p><a href="' + slide.href + '" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: 600;">' + slide.cta + '</a>' + footerLink;
+                    break;
+            }
+
+            return '<div class="slide ' + slide.type + '" style="position:relative;">' + html + '</div>';
+        }
+
+        // Language detection
+        var params = new URLSearchParams(window.location.search);
+        var lang = (['en','de','fr','ja','zh'].indexOf(params.get('lang')) !== -1) ? params.get('lang') : 'en';
+        var isPrint = params.get('print') === '1';
+        var content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        var backLink = document.getElementById('back-link');
+        backLink.textContent = content.backLabel;
+        if (lang !== 'en') backLink.href = ARTICLE_BASE + '?lang=' + lang;
+
+        // Render all slides
+        var container = document.getElementById('slides-container');
+        content.slides.forEach(function(slide) {
+            container.innerHTML += renderSlide(slide, lang);
+        });
+
+        // Navigation
+        var currentSlide = 0;
+        var slides = document.querySelectorAll('.slide');
+        var totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            else currentSlide = n;
+            slides.forEach(function(slide) { slide.classList.remove('active'); });
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', function() {
+            slides.forEach(function(slide) { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', function() {
+            slides.forEach(function(slide) { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (isPrint) {
+            window.addEventListener('load', function() { window.print(); });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
