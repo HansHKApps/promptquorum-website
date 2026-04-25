@@ -218,6 +218,48 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
   })
 }
 
+function isMarkdownTable(lines: string[]): boolean {
+  return lines.length >= 2 && lines[0].includes('|') && lines[1].includes('|') && lines[1].includes('-')
+}
+
+function renderMarkdownTable(lines: string[], lang: Language): JSX.Element {
+  const rows = lines.filter(line => line.trim()).map(line =>
+    line.split('|').map(cell => cell.trim()).filter(Boolean)
+  ).filter(row => row.length > 0)
+
+  if (rows.length < 2) return <></>
+
+  const headers = rows[0]
+  const dataRows = rows.slice(2)
+
+  return (
+    <div className="overflow-x-auto my-6">
+      <table className="w-full border-collapse border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100">
+            {headers.map((header, i) => (
+              <th key={i} className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {dataRows.map((row, i) => (
+            <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+              {row.map((cell, j) => (
+                <td key={j} className="border border-gray-300 px-4 py-2 text-text-secondary">
+                  {renderInlineLinks(cell, lang)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language }) {
   return (
     <div className="mt-8" id={id}>
@@ -254,14 +296,20 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
         </blockquote>
       )}
 
-      {/* Regular content paragraphs */}
+      {/* Regular content paragraphs or markdown tables */}
       {section.content && !section.isTldr && (
         <div className="space-y-4">
-          {(Array.isArray(section.content) ? section.content : [section.content]).map((para, i) => (
-            <p key={i} className="text-text-secondary leading-relaxed">
-              {renderInlineLinks(para, lang)}
-            </p>
-          ))}
+          {(() => {
+            const contentArray = Array.isArray(section.content) ? section.content : [section.content]
+            if (isMarkdownTable(contentArray)) {
+              return renderMarkdownTable(contentArray, lang)
+            }
+            return contentArray.map((para, i) => (
+              <p key={i} className="text-text-secondary leading-relaxed">
+                {renderInlineLinks(para, lang)}
+              </p>
+            ))
+          })()}
         </div>
       )}
 

@@ -10,37 +10,37 @@
   <text x="50" y="108" font-size="10" font-weight="600" fill="#1C1B1F">Mac mini M4 Pro 64GB</text>
   <text x="280" y="108" font-size="10" fill="#49454F">$2,299</text>
   <text x="440" y="108" font-size="10" font-weight="600" fill="#1C1B1F">$2,319</text>
-  <circle cx="715" cy="102" r="12" fill="#34A853"/><text x="715" y="108" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <rect x="657" y="90" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="108" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="146" font-size="10" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Pro 64GB</text>
   <text x="280" y="146" font-size="10" fill="#49454F">$2,499</text>
   <text x="440" y="146" font-size="10" font-weight="600" fill="#1C1B1F">$2,529</text>
-  <circle cx="715" cy="140" r="12" fill="#34A853"/><text x="715" y="146" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <rect x="657" y="128" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="146" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="184" font-size="10" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Max 128GB</text>
   <text x="280" y="184" font-size="10" fill="#49454F">$3,499</text>
   <text x="440" y="184" font-size="10" font-weight="600" fill="#1C1B1F">$3,529</text>
-  <circle cx="715" cy="178" r="12" fill="#34A853"/><text x="715" y="184" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <rect x="657" y="166" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="184" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="222" font-size="10" font-weight="600" fill="#1C1B1F">Windows + RTX 5090 32GB</text>
   <text x="280" y="222" font-size="10" fill="#49454F">$2,500</text>
   <text x="440" y="222" font-size="10" font-weight="600" fill="#1C1B1F">$2,620</text>
-  <circle cx="715" cy="216" r="12" fill="#34A853"/><text x="715" y="222" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <rect x="657" y="204" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="222" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="260" font-size="10" font-weight="600" fill="#1C1B1F">Windows + RTX 5060 Ti 16GB</text>
   <text x="280" y="260" font-size="10" fill="#49454F">$1,650</text>
   <text x="440" y="260" font-size="10" font-weight="600" fill="#1C1B1F">$1,730</text>
-  <circle cx="715" cy="254" r="12" fill="#34A853"/><text x="715" y="260" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <rect x="657" y="242" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="260" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
   <rect x="28" y="283" width="752" height="44" fill="#E8DEF8" opacity="0.5" rx="4"/>
   <text x="50" y="308" font-size="10" font-weight="700" fill="#1C1B1F">Linux + RTX 5060 Ti 16GB</text>
   <text x="280" y="308" font-size="10" fill="#49454F">$750</text>
   <text x="440" y="308" font-size="10" font-weight="700" fill="#34A853">$810</text>
-  <circle cx="715" cy="302" r="12" fill="#34A853"/><text x="715" y="308" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">🏆</text>
+  <rect x="657" y="290" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="308" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">🏆</text>
   <text x="50" y="346" font-size="10" font-weight="600" fill="#1C1B1F">Linux + RTX 5090 32GB</text>
   <text x="280" y="346" font-size="10" fill="#49454F">$1,400</text>
   <text x="440" y="346" font-size="10" font-weight="600" fill="#1C1B1F">$1,500</text>
-  <circle cx="715" cy="340" r="12" fill="#34A853"/><text x="715" y="346" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <rect x="657" y="328" width="116" height="24" rx="3" fill="#34A853"/><text x="715" y="346" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <text x="50" y="385" font-size="11" font-weight="600" fill="#6750A4">💡 最便宜：Linux + RTX 5060 Ti $810。最佳价值：Linux + RTX 5090 $1,500。</text>
   <text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
 </svg>

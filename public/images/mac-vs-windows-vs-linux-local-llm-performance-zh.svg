@@ -10,32 +10,32 @@
   <text x="50" y="108" font-size="11" font-weight="600" fill="#1C1B1F">M5 Pro 64 GB</text>
   <text x="280" y="108" font-size="11" fill="#49454F">70B Q4</text>
   <text x="450" y="108" font-size="11" fill="#49454F">15–20 tok/s</text>
-  <circle cx="680" cy="102" r="12" fill="#F4B400"/><text x="680" y="108" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">中等</text>
+  <rect x="625" y="94" width="110" height="24" rx="3" fill="#F4B400"/><text x="680" y="108" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">中等</text>
   <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="146" font-size="11" font-weight="600" fill="#1C1B1F">M5 Max 128 GB</text>
   <text x="280" y="146" font-size="11" fill="#49454F">70B Q8</text>
   <text x="450" y="146" font-size="11" fill="#49454F">25–35 tok/s</text>
-  <circle cx="680" cy="140" r="12" fill="#34A853"/><text x="680" y="146" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">优秀</text>
+  <rect x="625" y="132" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="146" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">优秀</text>
   <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="184" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5090 Win</text>
   <text x="280" y="184" font-size="11" fill="#49454F">70B</text>
   <text x="450" y="184" font-size="11" fill="#49454F">40–50 tok/s</text>
-  <circle cx="680" cy="178" r="12" fill="#34A853"/><text x="680" y="184" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最佳</text>
+  <rect x="625" y="170" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="184" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最佳</text>
   <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="222" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5090 Win</text>
   <text x="280" y="222" font-size="11" fill="#49454F">8B</text>
   <text x="450" y="222" font-size="11" fill="#49454F">180+ tok/s</text>
-  <circle cx="680" cy="216" r="12" fill="#34A853"/><text x="680" y="222" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最佳</text>
+  <rect x="625" y="208" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="222" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最佳</text>
   <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="260" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5060 Ti 16GB</text>
   <text x="280" y="260" font-size="11" fill="#49454F">70B</text>
   <text x="450" y="260" font-size="11" fill="#49454F">无法运行</text>
-  <circle cx="680" cy="254" r="12" fill="#EA4335"/><text x="680" y="260" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">否</text>
+  <rect x="625" y="246" width="110" height="24" rx="3" fill="#EA4335"/><text x="680" y="260" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">否</text>
   <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="298" font-size="11" font-weight="600" fill="#1C1B1F">RTX 5090 Linux</text>
   <text x="280" y="298" font-size="11" fill="#49454F">70B</text>
   <text x="450" y="298" font-size="11" fill="#49454F">42–53 tok/s</text>
-  <circle cx="680" cy="292" r="12" fill="#34A853"/><text x="680" y="298" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最佳</text>
+  <rect x="625" y="284" width="110" height="24" rx="3" fill="#34A853"/><text x="680" y="298" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">最佳</text>
   <line x1="18" y1="308" x2="782" y2="308" stroke="#F7F2FA" stroke-width="1"/>
   <text x="50" y="330" font-size="11" font-weight="600" fill="#6750A4">💡</text>
   <text x="70" y="330" font-size="11" fill="#49454F">RTX 5090在70B模型下以40–50 tok/s领先。M5 Max达到25–35 tok/s。</text>

@@ -15,48 +15,48 @@
   <text x="50" y="108" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Air M5 32GB</text>
   <text x="200" y="108" font-size="11" fill="#49454F">macOS</text>
   <text x="300" y="108" font-size="11" fill="#49454F">$1,099–1,299</text>
-  <circle cx="580" cy="102" r="14" fill="#EA4335"/>
-  <text x="580" y="109" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">仅8B</text>
+  <rect x="530" y="94" width="120" height="28" rx="4" fill="#EA4335"/>
+  <text x="590" y="113" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">仅8B</text>
   <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 2 -->
   <text x="50" y="146" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Pro 64GB</text>
   <text x="200" y="146" font-size="11" fill="#49454F">macOS</text>
   <text x="300" y="146" font-size="11" fill="#49454F">$2,499–3,199</text>
-  <circle cx="580" cy="140" r="14" fill="#F4B400"/>
-  <text x="580" y="147" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">15–20 tok/s</text>
+  <rect x="530" y="132" width="120" height="28" rx="4" fill="#F4B400"/>
+  <text x="590" y="151" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">15–20 tok/s</text>
   <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 3 -->
   <text x="50" y="184" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Max 128GB</text>
   <text x="200" y="184" font-size="11" fill="#49454F">macOS</text>
   <text x="300" y="184" font-size="11" fill="#49454F">$3,499–4,999</text>
-  <circle cx="580" cy="178" r="14" fill="#34A853"/>
-  <text x="580" y="185" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">25–35 tok/s</text>
+  <rect x="530" y="170" width="120" height="28" rx="4" fill="#34A853"/>
+  <text x="590" y="189" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">25–35 tok/s</text>
   <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 4 -->
   <text x="50" y="222" font-size="12" font-weight="600" fill="#1C1B1F">RTX 5060 Ti 16GB (新)</text>
   <text x="200" y="222" font-size="11" fill="#49454F">Windows/Linux</text>
   <text x="300" y="222" font-size="11" fill="#49454F">$450–500</text>
-  <circle cx="580" cy="216" r="14" fill="#EA4335"/>
-  <text x="580" y="223" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">仅13B–24B</text>
+  <rect x="530" y="208" width="120" height="28" rx="4" fill="#EA4335"/>
+  <text x="590" y="227" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">仅13B–24B</text>
   <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 5 -->
   <text x="50" y="260" font-size="12" font-weight="600" fill="#1C1B1F">RTX 5090 32GB (新)</text>
   <text x="200" y="260" font-size="11" fill="#49454F">Windows/Linux</text>
   <text x="300" y="260" font-size="11" fill="#49454F">~$2,000</text>
-  <circle cx="580" cy="254" r="14" fill="#34A853"/>
-  <text x="580" y="261" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">40–50 tok/s</text>
+  <rect x="530" y="246" width="120" height="28" rx="4" fill="#34A853"/>
+  <text x="590" y="265" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">40–50 tok/s</text>
   <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 6 -->
   <text x="50" y="298" font-size="12" font-weight="600" fill="#1C1B1F">RTX 4090 24GB (二手)</text>
   <text x="200" y="298" font-size="11" fill="#49454F">Windows/Linux</text>
   <text x="300" y="298" font-size="11" fill="#49454F">$1,000–1,400</text>
-  <circle cx="580" cy="292" r="14" fill="#34A853"/>
-  <text x="580" y="299" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">70B Q4</text>
+  <rect x="530" y="284" width="120" height="28" rx="4" fill="#34A853"/>
+  <text x="590" y="303" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">70B Q4</text>
   <line x1="18" y1="308" x2="782" y2="308" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Key insight -->
