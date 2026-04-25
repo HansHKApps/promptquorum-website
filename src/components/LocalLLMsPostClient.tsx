@@ -74,6 +74,20 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'ローカルLLM',
     zh: '本地LLM',
   },
+  snippetOneSentence: {
+    en: '📍 In One Sentence',
+    de: '📍 In einem Satz',
+    fr: '📍 En une phrase',
+    ja: '📍 一文で説明',
+    zh: '📍 简单一句话',
+  },
+  snippetPlainTerms: {
+    en: '💬 In Plain Terms',
+    de: '💬 In einfachen Worten',
+    fr: '💬 En termes simples',
+    ja: '💬 簡潔に説明',
+    zh: '💬 简单来说',
+  },
 }
 
 // Map language codes to their locale strings for date formatting
@@ -257,7 +271,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
           {section.snippetBlocks.map((snippet, i) => (
             <div key={i} className="bg-gray-50 border border-gray-200 rounded-xl p-4">
               <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
-                {snippet.type === 'one-sentence' ? '📍 In One Sentence' : '💬 In Plain Terms'}
+                {snippet.type === 'one-sentence' ? POST_UI.snippetOneSentence[lang] : POST_UI.snippetPlainTerms[lang]}
               </p>
               <p className="text-text-secondary text-sm leading-relaxed">
                 {renderInlineLinks(snippet.text, lang)}
