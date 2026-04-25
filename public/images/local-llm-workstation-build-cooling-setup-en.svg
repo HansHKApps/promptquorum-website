@@ -1,0 +1,101 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">© 2026 PromptQuorum</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://www.promptquorum.com/local-llms/local-llm-workstation-build</dc:source>
+  </metadata>
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Heat Dissipation: 1,200W Total</text>
+  <line x1="18" y1="35" x2="782" y2="35" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Heat sources -->
+  <text x="100" y="70" font-size="13" font-weight="700" fill="#1C1B1F">Heat Sources</text>
+
+  <!-- RTX 4090 #1 -->
+  <g filter="url(#shadow)">
+    <rect x="35" y="85" width="100" height="70" rx="4" fill="#FFE8E8" stroke="#EA4335" stroke-width="2"/>
+  </g>
+  <text x="85" y="105" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">RTX 4090 #1</text>
+  <text x="85" y="125" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">450W</text>
+  <text x="85" y="142" font-size="9" fill="#49454F" text-anchor="middle">75°C max</text>
+
+  <!-- RTX 4090 #2 -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="85" width="100" height="70" rx="4" fill="#FFE8E8" stroke="#EA4335" stroke-width="2"/>
+  </g>
+  <text x="200" y="105" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">RTX 4090 #2</text>
+  <text x="200" y="125" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">450W</text>
+  <text x="200" y="142" font-size="9" fill="#49454F" text-anchor="middle">75°C max</text>
+
+  <!-- Threadripper -->
+  <g filter="url(#shadow)">
+    <rect x="265" y="85" width="100" height="70" rx="4" fill="#FFE8E8" stroke="#EA4335" stroke-width="2"/>
+  </g>
+  <text x="315" y="105" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">Threadripper</text>
+  <text x="315" y="125" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">200W</text>
+  <text x="315" y="142" font-size="9" fill="#49454F" text-anchor="middle">80°C max</text>
+
+  <!-- Total -->
+  <g filter="url(#shadow)">
+    <rect x="380" y="85" width="100" height="70" rx="4" fill="#F0F7F4" stroke="#34A853" stroke-width="2"/>
+  </g>
+  <text x="430" y="105" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">Total Heat</text>
+  <text x="430" y="125" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">1,100W</text>
+  <text x="430" y="142" font-size="9" fill="#49454F" text-anchor="middle">1,300W spikes</text>
+
+  <!-- Divider -->
+  <line x1="18" y1="170" x2="782" y2="170" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Cooling solutions -->
+  <text x="100" y="200" font-size="13" font-weight="700" fill="#1C1B1F">Cooling Solutions</text>
+
+  <!-- Option 1: Custom Loop -->
+  <g filter="url(#shadow)">
+    <rect x="35" y="215" width="230" height="110" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+    <rect x="35" y="215" width="230" height="4" rx="0" fill="#6750A4"/>
+  </g>
+  <text x="150" y="240" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Custom Liquid Loop</text>
+  <circle cx="60" cy="270" r="4" fill="#6750A4"/>
+  <text x="72" y="273" font-size="10" fill="#49454F">GPU water blocks (2×)</text>
+  <circle cx="60" cy="290" r="4" fill="#6750A4"/>
+  <text x="72" y="293" font-size="10" fill="#49454F">CPU water block</text>
+  <circle cx="60" cy="310" r="4" fill="#6750A4"/>
+  <text x="72" y="313" font-size="10" fill="#49454F">360mm radiator + pump</text>
+
+  <text x="45" y="335" font-size="9" fill="#6750A4" font-weight="700">Cost: $1,500–2,500</text>
+
+  <!-- Option 2: Dual AIO -->
+  <g filter="url(#shadow)">
+    <rect x="285" y="215" width="230" height="110" rx="4" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+    <rect x="285" y="215" width="230" height="4" rx="0" fill="#F4B400"/>
+  </g>
+  <text x="400" y="240" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle">Dual 360mm AIO</text>
+  <circle cx="310" cy="270" r="4" fill="#F4B400"/>
+  <text x="322" y="273" font-size="10" fill="#49454F">AIO per GPU (360mm)</text>
+  <circle cx="310" cy="290" r="4" fill="#F4B400"/>
+  <text x="322" y="293" font-size="10" fill="#49454F">Separate CPU cooler</text>
+  <circle cx="310" cy="310" r="4" fill="#F4B400"/>
+  <text x="322" y="313" font-size="10" fill="#49454F">More modular, easier</text>
+
+  <text x="295" y="335" font-size="9" fill="#F4B400" font-weight="700">Cost: $600–900</text>
+
+  <!-- Option 3: Air (Not recommended) -->
+  <g filter="url(#shadow)">
+    <rect x="535" y="215" width="230" height="110" rx="4" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+    <rect x="535" y="215" width="230" height="4" rx="0" fill="#EA4335"/>
+  </g>
+  <text x="650" y="240" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle">Air Cooling ✗</text>
+  <circle cx="560" cy="270" r="4" fill="#EA4335"/>
+  <text x="572" y="273" font-size="10" fill="#49454F">Standard case fans</text>
+  <circle cx="560" cy="290" r="4" fill="#EA4335"/>
+  <text x="572" y="293" font-size="10" fill="#49454F">Thermal throttling</text>
+  <circle cx="560" cy="310" r="4" fill="#EA4335"/>
+  <text x="572" y="313" font-size="10" fill="#49454F">30–50% speed loss</text>
+
+  <text x="545" y="335" font-size="9" fill="#EA4335" font-weight="700">Not Viable</text>
+</svg>

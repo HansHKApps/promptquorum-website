@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">© 2026 PromptQuorum</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://www.promptquorum.com/local-llms/local-llm-workstation-build?lang=de</dc:source>
+  </metadata>
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Workstation-Komponentenlayout</text>
+  <line x1="18" y1="35" x2="782" y2="35" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Left Column: Components -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+    <rect x="28" y="55" width="340" height="4" rx="0" fill="#6750A4"/>
+  </g>
+
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">Komponenten (€3.800–5.200)</text>
+
+  <!-- Component items -->
+  <circle cx="50" cy="110" r="5" fill="#6750A4"/>
+  <text x="65" y="115" font-size="12" font-weight="700" fill="#1C1B1F">2× RTX 4090 (48GB)</text>
+  <text x="65" y="130" font-size="11" fill="#49454F">€2.000–2.400</text>
+
+  <circle cx="50" cy="155" r="5" fill="#6750A4"/>
+  <text x="65" y="160" font-size="12" font-weight="700" fill="#1C1B1F">Threadripper 7970X</text>
+  <text x="65" y="175" font-size="11" fill="#49454F">32-Kern, €2.200</text>
+
+  <circle cx="50" cy="200" r="5" fill="#6750A4"/>
+  <text x="65" y="205" font-size="12" font-weight="700" fill="#1C1B1F">128GB DDR5 RAM</text>
+  <text x="65" y="220" font-size="11" fill="#49454F">€550–750</text>
+
+  <circle cx="50" cy="245" r="5" fill="#6750A4"/>
+  <text x="65" y="250" font-size="12" font-weight="700" fill="#1C1B1F">2000W PSU</text>
+  <text x="65" y="265" font-size="11" fill="#49454F">900W konstant</text>
+
+  <circle cx="50" cy="290" r="5" fill="#6750A4"/>
+  <text x="65" y="295" font-size="12" font-weight="700" fill="#1C1B1F">Flüssigkeitskühlung</text>
+  <text x="65" y="310" font-size="11" fill="#49454F">1.200W Wärmeleistung</text>
+
+  <!-- Right Column: Performance -->
+  <g filter="url(#shadow)">
+    <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+    <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  </g>
+
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Leistungsprofil</text>
+
+  <!-- Performance items -->
+  <circle cx="454" cy="110" r="8" fill="#34A853"/>
+  <text x="454" y="116" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="475" y="115" font-size="12" font-weight="700" fill="#1C1B1F">100 Token/Sek (70B Q4)</text>
+
+  <circle cx="454" cy="155" r="8" fill="#34A853"/>
+  <text x="454" y="161" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="475" y="160" font-size="12" font-weight="700" fill="#1C1B1F">2–3 gleichzeitige 70B</text>
+
+  <circle cx="454" cy="200" r="8" fill="#34A853"/>
+  <text x="454" y="206" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="475" y="205" font-size="12" font-weight="700" fill="#1C1B1F">48GB vereinigte VRAM</text>
+
+  <circle cx="454" cy="245" r="8" fill="#34A853"/>
+  <text x="454" y="251" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="475" y="250" font-size="12" font-weight="700" fill="#1C1B1F">Parallel Fine-Tuning + Serve</text>
+
+  <circle cx="454" cy="290" r="8" fill="#34A853"/>
+  <text x="454" y="296" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="475" y="295" font-size="12" font-weight="700" fill="#1C1B1F">TCO: ~€3.800–5.200</text>
+
+  <!-- Footer -->
+  <text x="400" y="340" font-size="10" fill="#79747E" text-anchor="middle">Dual-GPU Workstation mit Enterprise-Kühlung und redundantem Netzteil.</text>
+</svg>

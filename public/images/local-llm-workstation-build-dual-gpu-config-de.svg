@@ -1,0 +1,112 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">© 2026 PromptQuorum</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://www.promptquorum.com/local-llms/local-llm-workstation-build?lang=de</dc:source>
+  </metadata>
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Dual-GPU-Konfigurationsoptionen</text>
+  <line x1="18" y1="35" x2="782" y2="35" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Option 1: Side-by-Side -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="55" width="240" height="290" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+    <rect x="20" y="55" width="240" height="4" rx="0" fill="#6750A4"/>
+  </g>
+  <text x="140" y="80" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Nebeneinander</text>
+
+  <!-- GPU 0 -->
+  <rect x="35" y="100" width="80" height="50" rx="3" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="75" y="115" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPU 0</text>
+  <text x="75" y="132" font-size="10" fill="#49454F" text-anchor="middle">24GB</text>
+
+  <!-- GPU 1 -->
+  <rect x="145" y="100" width="80" height="50" rx="3" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="185" y="115" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPU 1</text>
+  <text x="185" y="132" font-size="10" fill="#49454F" text-anchor="middle">24GB</text>
+
+  <!-- Allocation -->
+  <text x="55" y="170" font-size="10" fill="#49454F">Modell A</text>
+  <text x="55" y="185" font-size="10" fill="#49454F">7B oder 13B</text>
+
+  <text x="165" y="170" font-size="10" fill="#49454F">Modell B</text>
+  <text x="165" y="185" font-size="10" fill="#49454F">70B</text>
+
+  <!-- Benefits -->
+  <text x="35" y="220" font-size="10" font-weight="700" fill="#1C1B1F">Geeignet für:</text>
+  <circle cx="40" cy="240" r="3" fill="#6750A4"/>
+  <text x="50" y="243" font-size="9" fill="#49454F">Heterogene</text>
+  <circle cx="40" cy="255" r="3" fill="#6750A4"/>
+  <text x="50" y="258" font-size="9" fill="#49454F">Workloads</text>
+  <circle cx="40" cy="270" r="3" fill="#6750A4"/>
+  <text x="50" y="273" font-size="9" fill="#49454F">Kein NVLink</text>
+  <circle cx="40" cy="285" r="3" fill="#6750A4"/>
+  <text x="50" y="288" font-size="9" fill="#49454F">Einfaches Setup</text>
+
+  <!-- Option 2: NVLink -->
+  <g filter="url(#shadow)">
+    <rect x="280" y="55" width="240" height="290" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+    <rect x="280" y="55" width="240" height="4" rx="0" fill="#F4B400"/>
+  </g>
+  <text x="400" y="80" font-size="14" font-weight="700" fill="#F4B400" text-anchor="middle">NVLink-Brücke</text>
+
+  <!-- Unified VRAM -->
+  <rect x="295" y="100" width="170" height="50" rx="3" fill="#FFF8E1" stroke="#F4B400" stroke-width="1.5"/>
+  <text x="380" y="115" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Einheitliche VRAM</text>
+  <text x="380" y="132" font-size="10" fill="#49454F" text-anchor="middle">48GB (zusammengefasst)</text>
+
+  <!-- NVLink connection -->
+  <line x1="320" y1="150" x2="440" y2="150" stroke="#F4B400" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="380" y="162" font-size="9" fill="#F4B400" text-anchor="middle">NVLink</text>
+
+  <!-- Benefits -->
+  <text x="295" y="190" font-size="10" font-weight="700" fill="#1C1B1F">Geeignet für:</text>
+  <circle cx="300" cy="210" r="3" fill="#F4B400"/>
+  <text x="310" y="213" font-size="9" fill="#49454F">Großer Kontext</text>
+  <circle cx="300" cy="225" r="3" fill="#F4B400"/>
+  <text x="310" y="228" font-size="9" fill="#49454F">Batch-Größen</text>
+  <circle cx="300" cy="240" r="3" fill="#F4B400"/>
+  <text x="310" y="243" font-size="9" fill="#49454F">Kosten: +€180–270</text>
+  <circle cx="300" cy="255" r="3" fill="#F4B400"/>
+  <text x="310" y="258" font-size="9" fill="#49454F">Setup Komplexität</text>
+
+  <text x="295" y="285" font-size="8" fill="#EA4335">⚠️ Proprietärer Treiber</text>
+
+  <!-- Option 3: Tensor Parallelism -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="55" width="240" height="290" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+    <rect x="540" y="55" width="240" height="4" rx="0" fill="#34A853"/>
+  </g>
+  <text x="660" y="80" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Tensor-Parallelität</text>
+
+  <!-- Single Model sharded -->
+  <rect x="555" y="100" width="170" height="50" rx="3" fill="#F0F7F4" stroke="#34A853" stroke-width="1.5"/>
+  <text x="640" y="115" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Einzelnes 70B Modell</text>
+  <text x="640" y="132" font-size="10" fill="#49454F" text-anchor="middle">Aufgeteilt auf GPUs</text>
+
+  <!-- Split indicator -->
+  <line x1="570" y1="155" x2="590" y2="155" stroke="#34A853" stroke-width="2"/>
+  <line x1="690" y1="155" x2="710" y2="155" stroke="#34A853" stroke-width="2"/>
+  <text x="565" y="170" font-size="9" fill="#34A853" font-weight="700">GPU 0</text>
+  <text x="695" y="170" font-size="9" fill="#34A853" font-weight="700">GPU 1</text>
+
+  <!-- Performance -->
+  <text x="555" y="200" font-size="10" font-weight="700" fill="#1C1B1F">Leistung:</text>
+  <text x="555" y="220" font-size="10" fill="#49454F">28 Token/Sek (doppelt)</text>
+  <text x="555" y="235" font-size="10" fill="#49454F">gleiches Modell</text>
+
+  <circle cx="560" cy="260" r="3" fill="#34A853"/>
+  <text x="570" y="263" font-size="9" fill="#49454F">Beste Durchsatzleistung</text>
+  <circle cx="560" cy="275" r="3" fill="#34A853"/>
+  <text x="570" y="278" font-size="9" fill="#49454F">vLLM erforderlich</text>
+  <circle cx="560" cy="290" r="3" fill="#34A853"/>
+  <text x="570" y="293" font-size="9" fill="#49454F">~2× Geschwindigkeit</text>
+
+  <!-- Footer -->
+  <text x="400" y="355" font-size="9" fill="#79747E" text-anchor="middle">Wählen Sie basierend auf Workload: heterogen (nebeneinander), großer Kontext (NVLink) oder max. Durchsatz (Tensor-Parallelität).</text>
+</svg>

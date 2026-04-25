@@ -1,0 +1,88 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">© 2026 PromptQuorum</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://www.promptquorum.com/local-llms/local-llm-workstation-build?lang=zh</dc:source>
+  </metadata>
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">电源和电气要求</text>
+  <line x1="18" y1="35" x2="782" y2="35" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Section 1: Power Consumption -->
+  <text x="50" y="70" font-size="13" font-weight="700" fill="#1C1B1F">电力消耗</text>
+
+  <!-- RTX 4090 #1 -->
+  <g filter="url(#shadow)">
+    <rect x="35" y="85" width="110" height="60" rx="4" fill="#FFE8E8" stroke="#EA4335" stroke-width="2"/>
+  </g>
+  <text x="90" y="105" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">RTX 4090 #1</text>
+  <text x="90" y="125" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">450W</text>
+
+  <!-- RTX 4090 #2 -->
+  <g filter="url(#shadow)">
+    <rect x="160" y="85" width="110" height="60" rx="4" fill="#FFE8E8" stroke="#EA4335" stroke-width="2"/>
+  </g>
+  <text x="215" y="105" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">RTX 4090 #2</text>
+  <text x="215" y="125" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">450W</text>
+
+  <!-- CPU -->
+  <g filter="url(#shadow)">
+    <rect x="285" y="85" width="110" height="60" rx="4" fill="#FFE8E8" stroke="#EA4335" stroke-width="2"/>
+  </g>
+  <text x="340" y="105" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">Threadripper</text>
+  <text x="340" y="125" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">200W</text>
+
+  <!-- Arrow -->
+  <text x="410" y="115" font-size="24" fill="#6750A4">=</text>
+
+  <!-- Total -->
+  <g filter="url(#shadow)">
+    <rect x="440" y="85" width="120" height="60" rx="4" fill="#F0F7F4" stroke="#34A853" stroke-width="2"/>
+  </g>
+  <text x="500" y="105" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">持续</text>
+  <text x="500" y="125" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">~1,100W</text>
+
+  <!-- Spikes -->
+  <text x="600" y="115" font-size="11" fill="#79747E">峰值：1,300W</text>
+
+  <!-- Divider -->
+  <line x1="18" y1="165" x2="782" y2="165" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Section 2: PSU Options -->
+  <text x="50" y="195" font-size="13" font-weight="700" fill="#1C1B1F">电源配置</text>
+
+  <!-- Option 1: Single 2000W -->
+  <g filter="url(#shadow)">
+    <rect x="35" y="210" width="340" height="110" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+    <rect x="35" y="210" width="340" height="4" rx="0" fill="#6750A4"/>
+  </g>
+  <text x="205" y="235" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">选项 1：单个 2000W PSU</text>
+  <circle cx="60" cy="260" r="4" fill="#6750A4"/>
+  <text x="72" y="263" font-size="10" fill="#49454F">Seasonic、Corsair、EVGA</text>
+  <circle cx="60" cy="278" r="4" fill="#6750A4"/>
+  <text x="72" y="281" font-size="10" fill="#49454F">80+ 铂金推荐</text>
+  <circle cx="60" cy="296" r="4" fill="#6750A4"/>
+  <text x="72" y="299" font-size="10" fill="#49454F">布线更清爽</text>
+
+  <text x="50" y="325" font-size="9" fill="#6750A4" font-weight="700">成本：$1,000–1,500 | 最适合：简洁</text>
+
+  <!-- Option 2: Dual 1200W -->
+  <g filter="url(#shadow)">
+    <rect x="425" y="210" width="340" height="110" rx="4" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+    <rect x="425" y="210" width="340" height="4" rx="0" fill="#F4B400"/>
+  </g>
+  <text x="595" y="235" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle">选项 2：双个 1200W PSU</text>
+  <circle cx="450" cy="260" r="4" fill="#F4B400"/>
+  <text x="462" y="263" font-size="10" fill="#49454F">每个 GPU 一个电源</text>
+  <circle cx="450" cy="278" r="4" fill="#F4B400"/>
+  <text x="462" y="281" font-size="10" fill="#49454F">冗余 (一个故障→50%)</text>
+  <circle cx="450" cy="296" r="4" fill="#F4B400"/>
+  <text x="462" y="299" font-size="10" fill="#49454F">需要复杂配置</text>
+
+  <text x="440" y="325" font-size="9" fill="#F4B400" font-weight="700">成本：$1,200–1,600 | 最适合：冗余</text>
+</svg>
