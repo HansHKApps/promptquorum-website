@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">VRAM erforderlich für Fine-Tuning nach Modellgröße</text>
+  <text x="50" y="70" font-weight="700" fill="#79747E" font-family="system-ui" font-size="12">Modell</text>
+  <text x="180" y="70" font-weight="700" fill="#79747E" font-family="system-ui" font-size="12">FP16</text>
+  <text x="300" y="70" font-weight="700" fill="#79747E" font-family="system-ui" font-size="12">LoRA (8 Go?)</text>
+  <text x="480" y="70" font-weight="700" fill="#79747E" font-family="system-ui" font-size="12">Status</text>
+  <line x1="18" y1="77" x2="782" y2="77" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="105" font-weight="600" fill="#1C1B1F" font-family="'SF Mono', Monaco" font-size="12">3B</text>
+  <text x="180" y="105" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">6 Go</text>
+  <text x="300" y="105" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">✓ Einfach</text>
+  <circle cx="730" cy="93" r="14" fill="#34A853"/><text x="730" y="99" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">✓</text>
+  <line x1="18" y1="113" x2="782" y2="113" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="141" font-weight="600" fill="#1C1B1F" font-family="'SF Mono', Monaco" font-size="12">7B</text>
+  <text x="180" y="141" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">14 Go</text>
+  <text x="300" y="141" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">✓ Ja</text>
+  <circle cx="730" cy="129" r="14" fill="#34A853"/><text x="730" y="135" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">✓</text>
+  <line x1="18" y1="149" x2="782" y2="149" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="177" font-weight="600" fill="#1C1B1F" font-family="'SF Mono', Monaco" font-size="12">8B</text>
+  <text x="180" y="177" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">16 Go</text>
+  <text x="300" y="177" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">✓ Ja</text>
+  <circle cx="730" cy="165" r="14" fill="#34A853"/><text x="730" y="171" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">✓</text>
+  <line x1="18" y1="185" x2="782" y2="185" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="213" font-weight="600" fill="#1C1B1F" font-family="'SF Mono', Monaco" font-size="12">13B</text>
+  <text x="180" y="213" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">26 Go</text>
+  <text x="300" y="213" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">✓ Funktioniert</text>
+  <circle cx="730" cy="201" r="14" fill="#F4B400"/><text x="730" y="207" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">!</text>
+  <line x1="18" y1="221" x2="782" y2="221" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="249" font-weight="600" fill="#1C1B1F" font-family="'SF Mono', Monaco" font-size="12">32B</text>
+  <text x="180" y="249" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">64 Go</text>
+  <text x="300" y="249" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">Eng</text>
+  <circle cx="730" cy="237" r="14" fill="#EA4335"/><text x="730" y="243" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">✗</text>
+  <line x1="18" y1="257" x2="782" y2="257" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="50" y="285" font-weight="600" fill="#1C1B1F" font-family="'SF Mono', Monaco" font-size="12">70B</text>
+  <text x="180" y="285" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">140 Go</text>
+  <text x="300" y="285" font-size="12" fill="#1C1B1F" font-family="'SF Mono', Monaco">Unmöglich</text>
+  <circle cx="730" cy="273" r="14" fill="#EA4335"/><text x="730" y="279" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui">✗</text>
+  <text x="50" y="340" font-size="11" font-weight="600" fill="#79747E" font-family="system-ui">Legende :</text>
+  <circle cx="60" cy="355" r="10" fill="#34A853"/><text x="78" y="360" font-size="11" fill="#49454F" font-family="system-ui">Kompatibel (8 Go)</text>
+  <circle cx="280" cy="355" r="10" fill="#F4B400"/><text x="298" y="360" font-size="11" fill="#49454F" font-family="system-ui">Eng (16+ Go erforderlich)</text>
+  <circle cx="550" cy="355" r="10" fill="#EA4335"/><text x="568" y="360" font-size="11" fill="#49454F" font-family="system-ui">Inkompatibel (>24 Go)</text>
+  <text x="50" y="395" font-size="10" fill="#79747E" font-family="system-ui" font-style="italic">Hinweis : LoRA-Anforderungen setzen Modellquantisierung voraus. Addieren Sie 25 % für Batch-Größe und Kontext.</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter></defs>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="32" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, 'Noto Sans JP'">ファインチューニング vs 事前学習 vs RAG</text>
+  <rect x="28" y="55" width="220" height="270" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="220" height="4" rx="0" fill="#7D5260"/>
+  <text x="138" y="82" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle" font-family="system-ui, 'Noto Sans JP'">RAG（無料）</text>
+  <text x="48" y="105" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">使用時 :</text>
+  <text x="48" y="120" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• トレーニングデータなし</text>
+  <text x="48" y="135" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• 迅速な反復</text>
+  <text x="48" y="150" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• リソース制限</text>
+  <text x="48" y="170" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">コスト : 0 円</text>
+  <text x="48" y="187" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">速度 : 即座</text>
+  <text x="48" y="204" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">制限 :</text>
+  <text x="48" y="219" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">学習なし、</text>
+  <text x="48" y="234" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">既存データの</text>
+  <text x="48" y="249" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">取得のみ</text>
+  <rect x="270" y="55" width="220" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="270" y="55" width="220" height="4" rx="0" fill="#34A853"/>
+  <text x="380" y="82" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, 'Noto Sans JP'">ファインチューニング ⭐</text>
+  <text x="290" y="105" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">使用時 :</text>
+  <text x="290" y="120" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• 500+ 例</text>
+  <text x="290" y="135" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• ドメイン専門知識</text>
+  <text x="290" y="150" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• 予算 <50万円</text>
+  <text x="290" y="170" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">コスト : ¥15–30万</text>
+  <text x="290" y="187" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">速度 : 1–4 時間</text>
+  <text x="290" y="204" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">成功率 :</text>
+  <text x="290" y="219" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">+5–15% 精度</text>
+  <text x="290" y="234" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">ドメイン</text>
+  <text x="290" y="249" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">特化タスク</text>
+  <rect x="512" y="55" width="260" height="270" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="512" y="55" width="260" height="4" rx="0" fill="#F4B400"/>
+  <text x="642" y="82" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle" font-family="system-ui, 'Noto Sans JP'">事前学習（稀）</text>
+  <text x="532" y="105" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">使用時 :</text>
+  <text x="532" y="120" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• 100B+ トークン</text>
+  <text x="532" y="135" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• 予算 >5000万円</text>
+  <text x="532" y="150" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">• 独自企業モデル</text>
+  <text x="532" y="170" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">コスト : ¥6000–60M</text>
+  <text x="532" y="187" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">速度 : 週–月</text>
+  <text x="532" y="204" font-size="10" font-weight="600" fill="#1C1B1F" font-family="system-ui, 'Noto Sans JP'">最適 :</text>
+  <text x="532" y="219" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">競争優位性、</text>
+  <text x="532" y="234" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">大企業、</text>
+  <text x="532" y="249" font-size="10" fill="#49454F" font-family="system-ui, 'Noto Sans JP'">VC 資金調達</text>
+  <text x="400" y="330" font-size="9" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui, 'Noto Sans JP'">推奨 : ファインチューニング (1–4 時間) から開始。精度が不足の場合は事前学習を検討。</text>
+</svg>

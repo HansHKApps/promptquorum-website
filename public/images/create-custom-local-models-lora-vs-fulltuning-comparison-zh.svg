@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter></defs>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="32" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, 'Noto Sans CJK SC'">LoRA vs 完全微调</text>
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#6750A4"/>
+  <text x="198" y="82" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, 'Noto Sans CJK SC'">LoRA（推荐）</text>
+  <text x="48" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">速度 :</text>
+  <text x="48" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">快 4 倍</text>
+  <text x="48" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">所需 VRAM :</text>
+  <text x="48" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">8 GB</text>
+  <text x="48" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">更新权重 :</text>
+  <text x="48" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">1–2 % 模型</text>
+  <text x="48" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">精度 vs 完全 :</text>
+  <text x="48" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">95–98 %</text>
+  <text x="48" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">最适合 :</text>
+  <text x="48" y="298" font-family="system-ui, 'Noto Sans CJK SC'" font-size="11" fill="#49454F">大多数项目、</text>
+  <text x="48" y="312" font-family="system-ui, 'Noto Sans CJK SC'" font-size="11" fill="#49454F">资源有限</text>
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#79747E"/>
+  <text x="602" y="82" font-size="14" font-weight="700" fill="#79747E" text-anchor="middle" font-family="system-ui, 'Noto Sans CJK SC'">完全微调</text>
+  <text x="452" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">速度 :</text>
+  <text x="452" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">1× (基准)</text>
+  <text x="452" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">所需 VRAM :</text>
+  <text x="452" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">64+ GB</text>
+  <text x="452" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">更新权重 :</text>
+  <text x="452" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">100 % 模型</text>
+  <text x="452" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">精度增益 :</text>
+  <text x="452" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">+2–5 %</text>
+  <text x="452" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui, 'Noto Sans CJK SC'" font-size="12">最适合 :</text>
+  <text x="452" y="298" font-family="system-ui, 'Noto Sans CJK SC'" font-size="11" fill="#49454F">大型数据集</text>
+  <text x="452" y="312" font-family="system-ui, 'Noto Sans CJK SC'" font-size="11" fill="#49454F">(10K+)、无限预算</text>
+</svg>

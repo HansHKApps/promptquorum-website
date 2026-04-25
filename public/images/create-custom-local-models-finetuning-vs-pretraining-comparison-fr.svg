@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">
+    Fine-tuning vs Pré-entraînement
+  </text>
+
+  <!-- Left Panel: Fine-tuning (Success) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+
+  <text x="198" y="82" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui">Fine-tuning (Recommandé)</text>
+
+  <text x="48" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Temps d\'entraînement :</text>
+  <text x="48" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#34A853">1–4 heures</text>
+
+  <text x="48" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">VRAM requis :</text>
+  <text x="48" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#34A853">8 Go</text>
+
+  <text x="48" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Données nécessaires :</text>
+  <text x="48" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#34A853">500–5 000 exemples</text>
+
+  <text x="48" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Coût :</text>
+  <text x="48" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#34A853">100–500 €</text>
+
+  <text x="48" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Cas d\'usage :</text>
+  <text x="48" y="298" font-family="system-ui" font-size="11" fill="#49454F">Précision spécifique</text>
+  <text x="48" y="312" font-family="system-ui" font-size="11" fill="#49454F">au domaine</text>
+
+  <!-- Right Panel: Pre-training (Caution) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#F4B400"/>
+
+  <text x="602" y="82" font-size="15" font-weight="700" fill="#F4B400" text-anchor="middle" font-family="system-ui">Pré-entraînement (Rare)</text>
+
+  <text x="452" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Temps d\'entraînement :</text>
+  <text x="452" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#F4B400">Semaines–Mois</text>
+
+  <text x="452" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">VRAM requis :</text>
+  <text x="452" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#F4B400">100+ Go</text>
+
+  <text x="452" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Données nécessaires :</text>
+  <text x="452" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#F4B400">100B+ tokens</text>
+
+  <text x="452" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Coût :</text>
+  <text x="452" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#F4B400">50 000–500 000 €</text>
+
+  <text x="452" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Cas d\'usage :</text>
+  <text x="452" y="298" font-family="system-ui" font-size="11" fill="#49454F">Modèles propriétaires</text>
+  <text x="452" y="312" font-family="system-ui" font-size="11" fill="#49454F">avec budgets massifs</text>
+</svg>

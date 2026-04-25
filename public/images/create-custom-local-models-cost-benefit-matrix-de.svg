@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter></defs>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">Wann Fine-Tuning vs Pre-Training vs RAG</text>
+  <rect x="28" y="55" width="220" height="270" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="220" height="4" rx="0" fill="#7D5260"/>
+  <text x="138" y="82" font-size="13" font-weight="700" fill="#7D5260" text-anchor="middle" font-family="system-ui">RAG (Kostenlos)</text>
+  <text x="48" y="105" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Wann :</text>
+  <text x="48" y="122" font-size="11" fill="#49454F" font-family="system-ui">• Keine Trainingsdaten</text>
+  <text x="48" y="138" font-size="11" fill="#49454F" font-family="system-ui">• Schnelle Iteration</text>
+  <text x="48" y="154" font-size="11" fill="#49454F" font-family="system-ui">• Begrenzte Ressourcen</text>
+  <text x="48" y="175" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Kosten : 0 €</text>
+  <text x="48" y="195" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Geschwindigkeit : Sofort</text>
+  <text x="48" y="215" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Einschränkung :</text>
+  <text x="48" y="231" font-size="11" fill="#49454F" font-family="system-ui">Kein Lernen,</text>
+  <text x="48" y="247" font-size="11" fill="#49454F" font-family="system-ui">nur Abruf</text>
+  <text x="48" y="263" font-size="11" fill="#49454F" font-family="system-ui">vorhandener Daten</text>
+  <rect x="270" y="55" width="220" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="270" y="55" width="220" height="4" rx="0" fill="#34A853"/>
+  <text x="380" y="82" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui">Fine-Tuning ⭐</text>
+  <text x="290" y="105" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Wann :</text>
+  <text x="290" y="122" font-size="11" fill="#49454F" font-family="system-ui">• 500+ Beispiele</text>
+  <text x="290" y="138" font-size="11" fill="#49454F" font-family="system-ui">• Domänenexpertise</text>
+  <text x="290" y="154" font-size="11" fill="#49454F" font-family="system-ui">• Budget <500 €</text>
+  <text x="290" y="175" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Kosten : 100–500 €</text>
+  <text x="290" y="195" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Geschwindigkeit : 1–4 h</text>
+  <text x="290" y="215" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Erfolgsquote :</text>
+  <text x="290" y="231" font-size="11" fill="#49454F" font-family="system-ui">+5–15 % Genauigkeit</text>
+  <text x="290" y="247" font-size="11" fill="#49454F" font-family="system-ui">auf Domäne</text>
+  <text x="290" y="263" font-size="11" fill="#49454F" font-family="system-ui">spezialisiert</text>
+  <rect x="512" y="55" width="260" height="270" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="512" y="55" width="260" height="4" rx="0" fill="#F4B400"/>
+  <text x="642" y="82" font-size="13" font-weight="700" fill="#F4B400" text-anchor="middle" font-family="system-ui">Pre-Training (Selten)</text>
+  <text x="532" y="105" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Wann :</text>
+  <text x="532" y="122" font-size="11" fill="#49454F" font-family="system-ui">• 100B+ Tokens</text>
+  <text x="532" y="138" font-size="11" fill="#49454F" font-family="system-ui">• Budget >50 K€</text>
+  <text x="532" y="154" font-size="11" fill="#49454F" font-family="system-ui">• Proprietäres Modell</text>
+  <text x="532" y="175" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Kosten : 50K–500K €</text>
+  <text x="532" y="195" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Geschwindigkeit : Wo–Mo</text>
+  <text x="532" y="215" font-size="11" font-weight="600" fill="#1C1B1F" font-family="system-ui">Ideal für :</text>
+  <text x="532" y="231" font-size="11" fill="#49454F" font-family="system-ui">Wettbewerbsvorteil,</text>
+  <text x="532" y="247" font-size="11" fill="#49454F" font-family="system-ui">Großunternehmen,</text>
+  <text x="532" y="263" font-size="11" fill="#49454F" font-family="system-ui">VC-Finanzierung</text>
+  <text x="400" y="330" font-size="10" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui">Empfohlen : Beginnen Sie mit Fine-Tuning (1–4 Stunden). Wenn unzureichend, erwägen Sie Pre-Training.</text>
+</svg>
