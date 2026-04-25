@@ -1,68 +1,42 @@
 <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="420" fill="#FFFFFF"/>
-
-  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Hardware Cost for Local LLMs by OS</text>
-
-  <!-- Header Row -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Hardware Cost for Local LLMs</text>
   <line x1="18" y1="52" x2="782" y2="52" stroke="#E8DEF8" stroke-width="1.5"/>
-  <text x="50" y="72" font-size="12" font-weight="700" fill="#79747E">Hardware</text>
-  <text x="200" y="72" font-size="12" font-weight="700" fill="#79747E">OS</text>
-  <text x="300" y="72" font-size="12" font-weight="700" fill="#79747E">Price</text>
-  <text x="550" y="72" font-size="12" font-weight="700" fill="#79747E">70B Support</text>
+  <text x="50" y="72" font-size="11" font-weight="700" fill="#79747E">Hardware</text>
+  <text x="250" y="72" font-size="11" font-weight="700" fill="#79747E">Price (USD)</text>
+  <text x="420" y="72" font-size="11" font-weight="700" fill="#79747E">70B Capable</text>
+  <text x="600" y="72" font-size="11" font-weight="700" fill="#79747E">Speed (tok/s)</text>
   <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
-
-  <!-- Row 1: MacBook Air M5 32GB -->
-  <text x="50" y="108" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Air M5 32GB</text>
-  <text x="200" y="108" font-size="11" fill="#49454F">macOS</text>
-  <text x="300" y="108" font-size="11" fill="#49454F">$1,099–1,299</text>
-  <rect x="530" y="94" width="100" height="28" rx="4" fill="#EA4335"/>
-  <text x="580" y="113" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8B only</text>
+  <text x="50" y="108" font-size="10" font-weight="600" fill="#1C1B1F">MacBook Air M5 32GB</text>
+  <text x="250" y="108" font-size="10" fill="#49454F">$1,099–1,299</text>
+  <rect x="390" y="90" width="60" height="24" rx="3" fill="#EA4335"/><text x="420" y="108" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">No</text>
+  <text x="600" y="108" font-size="10" fill="#49454F">8B only</text>
   <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
-
-  <!-- Row 2: MacBook Pro M5 Pro 64GB -->
-  <text x="50" y="146" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Pro 64GB</text>
-  <text x="200" y="146" font-size="11" fill="#49454F">macOS</text>
-  <text x="300" y="146" font-size="11" fill="#49454F">$2,499–3,199</text>
-  <rect x="530" y="132" width="100" height="28" rx="4" fill="#F4B400"/>
-  <text x="580" y="151" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">15–20 tok/s</text>
+  <text x="50" y="146" font-size="10" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Pro 64GB</text>
+  <text x="250" y="146" font-size="10" fill="#49454F">$2,499–3,199</text>
+  <rect x="390" y="128" width="60" height="24" rx="3" fill="#34A853"/><text x="420" y="146" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="600" y="146" font-size="10" fill="#49454F">15–20</text>
   <line x1="18" y1="156" x2="782" y2="156" stroke="#F7F2FA" stroke-width="1"/>
-
-  <!-- Row 3: MacBook Pro M5 Max 128GB -->
-  <text x="50" y="184" font-size="12" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Max 128GB</text>
-  <text x="200" y="184" font-size="11" fill="#49454F">macOS</text>
-  <text x="300" y="184" font-size="11" fill="#49454F">$3,499–4,999</text>
-  <rect x="530" y="170" width="100" height="28" rx="4" fill="#34A853"/>
-  <text x="580" y="189" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">25–35 tok/s</text>
+  <text x="50" y="184" font-size="10" font-weight="600" fill="#1C1B1F">MacBook Pro M5 Max 128GB</text>
+  <text x="250" y="184" font-size="10" fill="#49454F">$3,499–4,999</text>
+  <rect x="390" y="166" width="60" height="24" rx="3" fill="#34A853"/><text x="420" y="184" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="600" y="184" font-size="10" fill="#49454F">25–35</text>
   <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
-
-  <!-- Row 4: RTX 5060 Ti 16GB -->
-  <text x="50" y="222" font-size="12" font-weight="600" fill="#1C1B1F">RTX 5060 Ti 16GB (new)</text>
-  <text x="200" y="222" font-size="11" fill="#49454F">Windows/Linux</text>
-  <text x="300" y="222" font-size="11" fill="#49454F">$450–500</text>
-  <rect x="530" y="208" width="100" height="28" rx="4" fill="#EA4335"/>
-  <text x="580" y="227" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">13B–24B only</text>
+  <text x="50" y="222" font-size="10" font-weight="600" fill="#1C1B1F">RTX 5060 Ti 16GB</text>
+  <text x="250" y="222" font-size="10" fill="#49454F">$450–500</text>
+  <rect x="390" y="204" width="60" height="24" rx="3" fill="#F4B400"/><text x="420" y="222" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">~</text>
+  <text x="600" y="222" font-size="10" fill="#49454F">13–24B</text>
   <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
-
-  <!-- Row 5: RTX 5090 32GB -->
-  <text x="50" y="260" font-size="12" font-weight="600" fill="#1C1B1F">RTX 5090 32GB (new)</text>
-  <text x="200" y="260" font-size="11" fill="#49454F">Windows/Linux</text>
-  <text x="300" y="260" font-size="11" fill="#49454F">~$2,000</text>
-  <rect x="530" y="246" width="100" height="28" rx="4" fill="#34A853"/>
-  <text x="580" y="265" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">40–50 tok/s</text>
+  <text x="50" y="260" font-size="10" font-weight="600" fill="#1C1B1F">RTX 5090 32GB</text>
+  <text x="250" y="260" font-size="10" fill="#49454F">~$2,000</text>
+  <rect x="390" y="242" width="60" height="24" rx="3" fill="#34A853"/><text x="420" y="260" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="600" y="260" font-size="10" fill="#49454F">40–50</text>
   <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
-
-  <!-- Row 6: Used RTX 4090 24GB -->
-  <text x="50" y="298" font-size="12" font-weight="600" fill="#1C1B1F">Used RTX 4090 24GB</text>
-  <text x="200" y="298" font-size="11" fill="#49454F">Windows/Linux</text>
-  <text x="300" y="298" font-size="11" fill="#49454F">$1,000–1,400</text>
-  <rect x="530" y="284" width="100" height="28" rx="4" fill="#34A853"/>
-  <text x="580" y="303" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">70B Q4</text>
-  <line x1="18" y1="308" x2="782" y2="308" stroke="#F7F2FA" stroke-width="1"/>
-
-  <!-- Key insight -->
-  <text x="50" y="350" font-size="11" font-weight="600" fill="#6750A4">💡</text>
-  <text x="70" y="350" font-size="11" font-weight="600" fill="#6750A4">Best value:</text>
-  <text x="70" y="368" font-size="11" fill="#49454F">Linux + RTX 5090 ($2,000) for fastest 70B inference, or Mac mini M4 Pro ($2,299) for simplicity.</text>
-
+  <rect x="28" y="283" width="752" height="44" fill="#E8DEF8" opacity="0.5" rx="4"/>
+  <text x="50" y="308" font-size="10" font-weight="700" fill="#1C1B1F">Used RTX 4090 24GB</text>
+  <text x="250" y="308" font-size="10" fill="#49454F">$1,000–1,400</text>
+  <rect x="390" y="290" width="60" height="24" rx="3" fill="#34A853"/><text x="420" y="308" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="600" y="308" font-size="10" fill="#49454F">35–45</text>
+  <text x="50" y="346" font-size="10" font-weight="600" fill="#6750A4">✓=Full support  ~=Limited  No=Won't fit</text>
   <text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
 </svg>
