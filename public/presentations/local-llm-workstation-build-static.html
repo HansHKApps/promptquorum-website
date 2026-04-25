@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local LLM Workstation Build 2026 | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation: Build a $4,000–6,000 professional local LLM workstation with dual RTX 4090 GPUs, Threadripper 7970X CPU, and enterprise cooling.">
+    <meta property="og:title" content="Local LLM Workstation Build 2026 — PromptQuorum">
+    <meta property="og:description" content="Complete guide to professional LLM workstation: dual RTX 4090, Threadripper, 128GB DDR5, cooling, power requirements, multi-user performance. 12-slide presentation.">
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-workstation-build">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
+        .content-area { flex: 1; overflow: hidden; }
+        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 48px; text-align: center; overflow: auto; animation: fadeIn 0.5s ease-in; }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .slide h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
+        .slide p { font-size: clamp(16px, 1.8vw, 20px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+        .slide ul { text-align: left; display: inline-block; margin: 16px 0; max-width: 90%; }
+        .slide li { font-size: clamp(16px, 1.8vw, 20px); margin: 8px 0; color: #49454f; }
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide.title p { color: #6750a4; font-weight: 500; margin-top: 12px; }
+        .slide table { margin: 20px auto; border-collapse: collapse; max-width: 95%; }
+        .slide th, .slide td { padding: 12px; text-align: left; border-bottom: 1px solid #e8def8; font-size: clamp(14px, 1.6vw, 18px); }
+        .slide th { background: #6750a4; color: white; font-weight: 600; }
+        .controls { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: #fafaf8; border-top: 1px solid #e8def8; flex-shrink: 0; }
+        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; }
+        button:hover { background: #7d5260; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; }
+        @page { size: A4 landscape; margin: 0; }
+        @media print { * { margin: 0; padding: 0; } html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .presentation-container { display: block !important; height: auto !important; } .content-area { display: block !important; overflow: visible !important; } .slide { display: flex !important; page-break-after: always; width: 100%; height: 210mm; padding: 20mm 24mm; margin: 0; background: white; overflow: visible !important; } .slide::after { content: counter(page-counter) " / 12"; position: absolute; bottom: 15mm; right: 24mm; font-size: 9pt; color: #999; } }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum">
+                <span id="header-title">Local LLM Workstation Build 2026</span>
+            </div>
+            <div class="header-links">
+                <a href="https://www.promptquorum.com/local-llms/local-llm-workstation-build" target="_blank">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank">PromptQuorum.com</a>
+            </div>
+        </div>
+        <div class="content-area" id="slides-container"></div>
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">12</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Local LLM Workstation Build 2026',
+                slides: [
+                    { type: 'title', h1: 'Local LLM Workstation Build 2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48GB VRAM · $4,000–6,000', p: 'A complete professional setup guide for building an inference powerhouse that runs 70B models locally, serves 2–3 concurrent users, and eliminates cloud API costs forever.' },
+                    { type: 'list', h2: 'Who Is This Build For?', items: ['<strong>SMBs & Enterprises:</strong> Teams of 5+ running internal LLM APIs without cloud dependency.', '<strong>AI Researchers:</strong> Fine-tuning large models while simultaneously serving inference to collaborators.', '<strong>MLOps Engineers:</strong> Building internal inference clusters without recurring cloud costs.', '<strong>Content Studios:</strong> Running 24/7 inference workloads for generative content pipelines.'] },
+                    { type: 'table', h2: 'Complete Parts List & Cost Breakdown', columns: ['Component', 'Selection', 'Cost'], rows: [{ Component: 'GPU (×2)', Selection: 'RTX 4090 24 GB', Cost: '$3,200–3,800' }, { Component: 'CPU', Selection: 'Threadripper 7970X (32-core)', Cost: '$2,000–2,500' }, { Component: 'Motherboard', Selection: 'TRX50 WS Pro', Cost: '$600–800' }, { Component: 'RAM', Selection: '128 GB DDR5 ECC', Cost: '$400–600' }, { Component: 'Storage', Selection: '4 TB NVMe + 12 TB HDD', Cost: '$350–500' }, { Component: 'PSU', Selection: '2000W Platinum', Cost: '$300–500' }, { Component: 'Cooling', Selection: 'Custom loop or dual AIO', Cost: '$400–800' }, { Component: 'Case', Selection: 'Full-tower EATX', Cost: '$150–250' }, { Component: 'Total', Selection: '—', Cost: '$4,000–6,000' }] },
+                    { type: 'list', h2: 'Dual GPU Configuration Options', items: ['<strong>Side-by-Side (PCIe):</strong> Each GPU runs independent model instances. Best for serving multiple small models concurrently.', '<strong>NVLink Bridge:</strong> Unifies 48 GB VRAM into a single addressable pool. Essential for models exceeding 24 GB.', '<strong>Tensor Parallelism:</strong> Software-level model sharding via vLLM or llama.cpp. Higher throughput for large batch inference.'] },
+                    { type: 'list', h2: 'RTX 5090 vs RTX 4090: Value Analysis', items: ['<strong>Dual RTX 4090:</strong> 48GB VRAM, $3,400 total, 100+ tok/s (Q4 70B) — best value.', '<strong>Single RTX 5090:</strong> 32GB VRAM, $2,500, 40–50 tok/s — simpler, less VRAM.', '<strong>Dual RTX 5090:</strong> 64GB VRAM, $5,000, 120+ tok/s — overkill for most workloads.', '→ Recommendation: Dual RTX 4090 for professional workloads.'] },
+                    { type: 'list', h2: 'Cooling Solutions: 1,200W of Heat', items: ['<strong>🌊 Custom Loop ($1,500–2,500):</strong> Best performance, lowest noise (40 dB), highest thermal headroom. Requires 6–8 hours assembly.', '<strong>❄️ Dual 360mm AIO ($600–900):</strong> Best balance. One AIO per GPU plus CPU cooler. Modular, easier than custom loop.', '<strong>💨 High-End Air:</strong> Budget option, louder (60+ dB), not ideal for office environments.'] },
+                    { type: 'list', h2: 'Power Supply & Electrical Requirements', items: ['<strong>Single 2000W Platinum:</strong> Cleaner cable management. Corsair AX2000 or Seasonic Prime TX-2000 recommended.', '<strong>Dual 1200W (Redundant):</strong> Hot-swap redundancy for 24/7 uptime. Requires dual PSU adapter bracket.', '<strong>Circuit Requirement:</strong> Minimum 20A dedicated circuit (30A strongly preferred). ~1,600–1,800W sustained draw.', '<strong>Important:</strong> Never share with other high-draw devices.'] },
+                    { type: 'list', h2: 'CPU: Why Threadripper 7970X?', items: ['<strong>32 cores:</strong> Enable parallel fine-tuning while GPUs serve inference simultaneously.', '<strong>88 PCIe 5.0 lanes:</strong> Both GPUs run at full x16 bandwidth — no bottlenecks.', '<strong>Quad-channel DDR5:</strong> Feeds data to GPU at maximum rate.', '<strong>ECC support:</strong> Critical for unattended 24/7 inference stability.'] },
+                    { type: 'list', h2: 'Inference Performance Benchmarks', items: ['<strong>14 tok/s per user:</strong> Sustained throughput per concurrent user on 70B model with tensor parallelism.', '<strong>2–3 concurrent 70B users:</strong> At comfortable generation speeds, running simultaneously.', '<strong>8+ concurrent 7B users:</strong> Ideal for internal API endpoints serving small teams.', '<strong>48GB total VRAM:</strong> Run full Q8 70B without quantization compromise.'] },
+                    { type: 'numbered', h2: '4 Common Build Mistakes to Avoid', items: ['<strong>Undersized power circuit:</strong> Running 1,800W on shared 15A circuit trips breakers. Dedicate a 30A circuit before powering on.', '<strong>Ignoring PCIe slot spacing:</strong> Two RTX 4090s in adjacent slots blocks airflow. Use riser cable or space them apart.', '<strong>Skipping ECC RAM:</strong> Non-ECC silently corrupts training runs. 128GB DDR5 ECC is non-negotiable.', '<strong>Misconfigured tensor parallelism:</strong> Without proper vLLM flags, models default to single GPU. Validate with <code>nvidia-smi</code>.'] },
+                    { type: 'faq', h2: 'FAQ & Troubleshooting', faqs: [{ q: 'Can I start with one GPU and add later?', a: 'Yes — but buy a TRX50 motherboard now. Upgrading the board later is more expensive.' }, { q: 'Is 128 GB RAM really necessary?', a: 'For inference-only: 64 GB is sufficient. 128 GB required when fine-tuning 70B while serving inference.' }, { q: 'What software stack?', a: 'vLLM for multi-user inference. Ollama for quick testing. llama.cpp for CPU+GPU hybrid when VRAM insufficient.' }] },
+                    { type: 'title', h1: 'Ready to Build?', subtitle: 'Start with the electrical circuit inspection', p: 'It\'s the most overlooked step and the one most likely to delay your workstation build.' }
+                ]
+            },
+            de: {
+                title: 'Lokale LLM-Workstation 2026',
+                slides: [
+                    { type: 'title', h1: 'Lokale LLM-Workstation Build 2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48GB VRAM · €4.000–6.000', p: 'Ein umfassender Leitfaden zum Aufbau einer professionellen Inferenz-Workstation, die 70B-Modelle lokal ausführt, 2–3 gleichzeitige Benutzer bedient und Cloud-API-Kosten eliminiert.' },
+                    { type: 'list', h2: 'Für wen ist dieser Build?', items: ['<strong>KMU & Unternehmen:</strong> Teams mit 5+ Mitarbeitern, die interne LLM-APIs ohne Cloud-Abhängigkeit betreiben.', '<strong>AI-Forscher:</strong> Feinabstimmung großer Modelle während gleichzeitiger Inferenzdienste.', '<strong>MLOps-Ingenieure:</strong> Aufbau interner Inferenz-Cluster ohne wiederkehrende Cloud-Kosten.', '<strong>Content-Studios:</strong> 24/7 Inferenzlast für generative Content-Pipelines.'] },
+                    { type: 'table', h2: 'Komplette Teileliste & Kostenaufschlüsselung', columns: ['Komponente', 'Modell', 'Kosten'], rows: [{ Komponente: 'GPU (×2)', Modell: 'RTX 4090 24 GB', Kosten: '€3.000–3.600' }, { Komponente: 'CPU', Modell: 'Threadripper 7970X', Kosten: '€1.900–2.400' }, { Komponente: 'Motherboard', Modell: 'TRX50 WS Pro', Kosten: '€550–750' }, { Komponente: 'RAM', Modell: '128 GB DDR5 ECC', Kosten: '€350–550' }, { Komponente: 'Storage', Modell: '4 TB NVMe + 12 TB HDD', Kosten: '€300–450' }, { Komponente: 'PSU', Modell: '2000W Platinum', Kosten: '€300–500' }, { Komponente: 'Kühlung', Modell: 'Custom Loop oder AIO', Kosten: '€350–750' }, { Komponente: 'Gehäuse', Modell: 'Full-Tower EATX', Kosten: '€150–250' }, { Komponente: 'Gesamt', Modell: '—', Kosten: '€4.000–6.000' }] },
+                    { type: 'list', h2: 'Dual-GPU-Konfigurationsoptionen', items: ['<strong>Nebeneinander (PCIe):</strong> Jede GPU führt unabhängige Modellinstanzen aus. Ideal für mehrere kleine Modelle gleichzeitig.', '<strong>NVLink-Brücke:</strong> Vereinigt 48 GB VRAM in einem einzigen Pool. Erforderlich für Modelle > 24 GB.', '<strong>Tensor-Parallelisierung:</strong> Software-Sharding über vLLM oder llama.cpp. Höherer Durchsatz bei Batch-Inferenz.'] },
+                    { type: 'list', h2: 'RTX 5090 vs RTX 4090: Wertanalyse', items: ['<strong>Dual RTX 4090:</strong> 48GB VRAM, €3.300, 100+ tok/s (Q4 70B) — bestes Preis-Leistungs-Verhältnis.', '<strong>Single RTX 5090:</strong> 32GB VRAM, €2.400, 40–50 tok/s — einfacher, weniger VRAM.', '<strong>Dual RTX 5090:</strong> 64GB VRAM, €4.800, 120+ tok/s — Überdimensioniert für die meisten Workloads.', '→ Empfehlung: Dual RTX 4090 für professionelle Workloads.'] },
+                    { type: 'list', h2: 'Kühlungslösungen: 1.200W Wärmeleistung', items: ['<strong>🌊 Custom Loop (€1.400–2.200):</strong> Beste Leistung, niedrigste Lautstärke (40 dB), maximale Wärmeleistung.', '<strong>❄️ Dual 360mm AIO (€550–800):</strong> Bestes Gleichgewicht. Ein AIO pro GPU plus CPU-Kühler. Modular, einfacher als Custom Loop.', '<strong>💨 High-End-Luftkühlung:</strong> Budget-Option, lauter (60+ dB), nicht ideal für Büroumgebungen.'] },
+                    { type: 'list', h2: 'Stromversorgung & Elektrik-Anforderungen', items: ['<strong>Single 2000W Platinum:</strong> Saubere Kabelführung. Corsair AX2000 oder Seasonic Prime TX-2000 empfohlen.', '<strong>Dual 1200W (redundant):</strong> Hot-Swap-Redundanz für 24/7-Betrieb. Erfordert Dual-PSU-Adapter.', '<strong>Stromkreis-Anforderung:</strong> Mindestens 20A dedizierter Stromkreis (30A dringend empfohlen). ~1.600–1.800W Dauerlast.', '<strong>Wichtig:</strong> Niemals mit anderen Hochlast-Geräten teilen.'] },
+                    { type: 'list', h2: 'CPU: Warum Threadripper 7970X?', items: ['<strong>32 Kerne:</strong> Ermöglichen Parallel-Feinabstimmung während GPUs Inferenz bedienen.', '<strong>88 PCIe 5.0-Lanes:</strong> Beide GPUs laufen mit voller x16-Bandbreite — keine Engpässe.', '<strong>Quad-Channel DDR5:</strong> Speisungsdatenrate GPU maximal.', '<strong>ECC-Unterstützung:</strong> Essentiell für unbeaufsichtigten 24/7-Betrieb.'] },
+                    { type: 'list', h2: 'Inferenz-Performance Benchmarks', items: ['<strong>14 tok/s pro Benutzer:</strong> Nachhaltiger Durchsatz pro gleichzeitigen Benutzer auf 70B-Modell.', '<strong>2–3 gleichzeitige 70B-Benutzer:</strong> Bei komfortabler Generierungsgeschwindigkeit, gleichzeitig laufend.', '<strong>8+ gleichzeitige 7B-Benutzer:</strong> Ideal für interne API-Endpoints für Teams.', '<strong>48GB gesamt VRAM:</strong> Vollständiges Q8 70B ohne Quantisierungskompromiss.'] },
+                    { type: 'numbered', h2: '4 häufige Build-Fehler zum Vermeiden', items: ['<strong>Zu kleine Stromschaltung:</strong> 1.800W auf gemeinsamer 15A-Schaltung unterbrechen Unterbrecher. 30A-Schaltung vor Inbetriebnahme dedizieren.', '<strong>Ignorieren von PCIe-Slot-Abstand:</strong> Zwei RTX 4090s in benachbarten Slots blockieren Luftstrom. Riser-Kabel verwenden oder trennen.', '<strong>ECC-RAM überspringen:</strong> Non-ECC beschädigt Training-Läufe stumm. 128GB DDR5 ECC nicht verhandelbar.', '<strong>Falsch konfigurierte Tensor-Parallelisierung:</strong> Ohne richtige vLLM-Flags standardmäßig Single-GPU. Mit <code>nvidia-smi</code> validieren.'] },
+                    { type: 'faq', h2: 'FAQ & Fehlerbehebung', faqs: [{ q: 'Kann ich mit einer GPU starten und später eine hinzufügen?', a: 'Ja — aber kaufen Sie jetzt ein TRX50-Motherboard. Ein späteren Modul-Upgrade ist teurer.' }, { q: 'Ist 128 GB RAM wirklich notwendig?', a: 'Nur Inferenz: 64 GB ausreichend. 128 GB erforderlich bei Feinabstimmung von 70B während Inferenz.' }, { q: 'Welcher Software-Stack?', a: 'vLLM für Multi-User-Inferenz. Ollama für schnelle Tests. llama.cpp für CPU+GPU-Hybrid.', }] },
+                    { type: 'title', h1: 'Bereit zu bauen?', subtitle: 'Beginnen Sie mit der Stromkreisprüfung', p: 'Es ist der am meisten übersehene Schritt und am wahrscheinlichsten, Ihren Build zu verzögern.' }
+                ]
+            },
+            fr: {
+                title: 'Station de travail LLM local 2026',
+                slides: [
+                    { type: 'title', h1: 'Station de Travail LLM Local 2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48 GB VRAM · 4 000–6 000 €', p: 'Un guide complet pour construire une station de travail d\'inférence professionnelle qui exécute des modèles 70B localement, sert 2–3 utilisateurs concurrents, et élimine les coûts des API cloud.' },
+                    { type: 'list', h2: 'Pour qui ce build?', items: ['<strong>PME & Entreprises :</strong> Équipes de 5+ exécutant des API LLM internes sans dépendance cloud.', '<strong>Chercheurs IA :</strong> Affinement fin de grands modèles tout en servant l\'inférence aux collaborateurs.', '<strong>Ingénieurs MLOps :</strong> Construction de clusters d\'inférence internes sans coûts cloud récurrents.', '<strong>Studios de contenu :</strong> Charges d\'inférence 24/7 pour pipelines de contenu générateur.'] },
+                    { type: 'table', h2: 'Liste complète des pièces & ventilation des coûts', columns: ['Composant', 'Sélection', 'Coût'], rows: [{ Composant: 'GPU (×2)', Sélection: 'RTX 4090 24 GB', Coût: '€3 000–3 600' }, { Composant: 'CPU', Sélection: 'Threadripper 7970X', Coût: '€1 900–2 400' }, { Composant: 'Carte mère', Sélection: 'TRX50 WS Pro', Coût: '€550–750' }, { Composant: 'RAM', Sélection: '128 GB DDR5 ECC', Coût: '€350–550' }, { Composant: 'Stockage', Sélection: '4 TB NVMe + 12 TB HDD', Coût: '€300–450' }, { Composant: 'PSU', Sélection: '2000W Platinum', Coût: '€300–500' }, { Composant: 'Refroidissement', Sélection: 'Boucle personnalisée ou AIO', Coût: '€350–750' }, { Composant: 'Boîtier', Sélection: 'Full-Tower EATX', Coût: '€150–250' }, { Composant: 'Total', Sélection: '—', Coût: '€4 000–6 000' }] },
+                    { type: 'list', h2: 'Options de configuration dual-GPU', items: ['<strong>Côte à côte (PCIe) :</strong> Chaque GPU exécute des instances de modèle indépendantes. Idéal pour servir plusieurs petits modèles simultanément.', '<strong>Pont NVLink :</strong> Unifie 48 GB VRAM dans un pool unique. Essentiel pour les modèles dépassant 24 GB.', '<strong>Parallélisme tensoriel :</strong> Sharding au niveau logiciel via vLLM ou llama.cpp. Débit supérieur pour l\'inférence par lot.'] },
+                    { type: 'list', h2: 'RTX 5090 vs RTX 4090 : Analyse de valeur', items: ['<strong>Dual RTX 4090 :</strong> 48 GB VRAM, €3 300, 100+ tok/s (Q4 70B) — meilleur rapport qualité-prix.', '<strong>Single RTX 5090 :</strong> 32 GB VRAM, €2 400, 40–50 tok/s — plus simple, moins VRAM.', '<strong>Dual RTX 5090 :</strong> 64 GB VRAM, €4 800, 120+ tok/s — surdimensionné pour la plupart des charges.', '→ Recommandation : Dual RTX 4090 pour les charges professionnelles.'] },
+                    { type: 'list', h2: 'Solutions de refroidissement : 1 200 W de chaleur', items: ['<strong>🌊 Boucle personnalisée (€1 400–2 200) :</strong> Meilleure performance, bruit minimal (40 dB), capacité thermique maximale.', '<strong>❄️ Dual 360mm AIO (€550–800) :</strong> Meilleur équilibre. Un AIO par GPU plus refroidisseur CPU. Modulaire, plus simple que boucle personnalisée.', '<strong>💨 Refroidissement haute gamme par air :</strong> Option budget, plus bruyant (60+ dB), non idéal pour environnement bureau.'] },
+                    { type: 'list', h2: 'Alimentation électrique & exigences électriques', items: ['<strong>Single 2000W Platinum :</strong> Acheminement des câbles plus propre. Corsair AX2000 ou Seasonic Prime TX-2000 recommandé.', '<strong>Dual 1200W (Redondant) :</strong> Redondance de swap à chaud pour disponibilité 24/7. Nécessite adaptateur PSU dual.', '<strong>Exigence de circuit :</strong> Circuit dédié minimum 20A (30A fortement recommandé). ~1 600–1 800 W de charge soutenue.', '<strong>Important :</strong> Ne jamais partager avec d\'autres appareils haute puissance.'] },
+                    { type: 'list', h2: 'CPU : Pourquoi Threadripper 7970X?', items: ['<strong>32 cœurs :</strong> Permettent l\'affinement fin parallèle pendant que les GPU servent l\'inférence.', '<strong>88 lanes PCIe 5.0 :</strong> Les deux GPU fonctionnent à bande passante x16 complète — pas d\'goulots.', '<strong>DDR5 quad-canal :</strong> Alimentation des données GPU au débit maximal.', '<strong>Support ECC :</strong> Critique pour stabilité fonctionnement 24/7 sans surveillance.'] },
+                    { type: 'list', h2: 'Benchmarks de performance d\'inférence', items: ['<strong>14 tok/s par utilisateur :</strong> Débit soutenu par utilisateur concurrent sur modèle 70B avec parallélisme tensoriel.', '<strong>2–3 utilisateurs 70B concurrents :</strong> À vitesses de génération confortables, fonctionnant simultanément.', '<strong>8+ utilisateurs 7B concurrents :</strong> Idéal pour endpoints API internes servant les équipes.', '<strong>48 GB VRAM total :</strong> Exécution complète Q8 70B sans compromis de quantification.'] },
+                    { type: 'numbered', h2: '4 erreurs courantes de build à éviter', items: ['<strong>Circuit électrique trop petit :</strong> 1 800 W sur circuit 15A partagé déclenche les disjoncteurs. Dédier circuit 30A avant mise sous tension.', '<strong>Ignorer espacement slots PCIe :</strong> Deux RTX 4090s dans slots adjacents bloquent flux air. Utiliser câble riser ou les espacer.', '<strong>Sauter RAM ECC :</strong> RAM non-ECC corrompt silencieusement exécutions d\'entraînement. 128 GB DDR5 ECC non-négociable.', '<strong>Parallélisme tensoriel mal configuré :</strong> Sans flags vLLM corrects, modèles défaut single-GPU. Valider avec <code>nvidia-smi</code>.'] },
+                    { type: 'faq', h2: 'FAQ & Dépannage', faqs: [{ q: 'Puis-je commencer avec une GPU et en ajouter une plus tard?', a: 'Oui — mais achetez une carte mère TRX50 maintenant. Mise à jour ultérieure est plus coûteuse.' }, { q: 'Les 128 GB de RAM sont-ils vraiment nécessaires?', a: 'Inférence seule: 64 GB suffisant. 128 GB requis lors d\'affinement 70B tout en servant inférence.' }, { q: 'Quel pile logiciel?', a: 'vLLM pour inférence multi-utilisateur. Ollama pour tests rapides. llama.cpp pour hybride CPU+GPU.' }] },
+                    { type: 'title', h1: 'Prêt à construire?', subtitle: 'Commencez par l\'inspection du circuit électrique', p: 'C\'est l\'étape la plus négligée et la plus susceptible de retarder votre build.' }
+                ]
+            },
+            ja: {
+                title: 'ローカルLLMワークステーション構築2026',
+                slides: [
+                    { type: 'title', h1: 'ローカルLLMワークステーション構築2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48GB VRAM · $4,000–6,000', p: '70Bモデルをローカルで実行し、2–3人の同時ユーザーをサーブでき、クラウドAPI コストを排除するプロフェッショナルなワークステーション構築の完全ガイド。' },
+                    { type: 'list', h2: 'このビルドは誰の為か?', items: ['<strong>中小企業 & エンタープライズ :</strong> クラウドに依存せず内部LLM APIを実行する5人以上のチーム。', '<strong>AIリサーチャー :</strong> 大規模モデルの微調整と同時に推論を提供。', '<strong>MLOpsエンジニア :</strong> 繰り返されるクラウドコストなしで内部推論クラスターを構築。', '<strong>コンテンツスタジオ :</strong> 生成コンテンツパイプラインの24/7 推論ワークロード。'] },
+                    { type: 'table', h2: '完全パーツリスト & コスト内訳', columns: ['コンポーネント', '選択', 'コスト'], rows: [{ コンポーネント: 'GPU (×2)', 選択: 'RTX 4090 24 GB', コスト: '¥358,000–423,000' }, { コンポーネント: 'CPU', 選択: 'Threadripper 7970X', コスト: '¥280,000–348,000' }, { コンポーネント: 'マザーボード', 選択: 'TRX50 WS Pro', コスト: '¥77,000–112,000' }, { コンポーネント: 'RAM', 選択: '128 GB DDR5 ECC', コスト: '¥56,000–84,000' }, { コンポーネント: 'ストレージ', 選択: '4 TB NVMe + 12 TB HDD', コスト: '¥42,000–70,000' }, { コンポーネント: 'PSU', 選択: '2000W Platinum', コスト: '¥42,000–70,000' }, { コンポーネント: '冷却', 選択: 'カスタムループ/デュアルAIO', コスト: '¥49,000–105,000' }, { コンポーネント: 'ケース', 選択: 'フルタワーEATX', コスト: '¥21,000–35,000' }, { コンポーネント: '合計', 選択: '—', コスト: '¥561,000–803,000' }] },
+                    { type: 'list', h2: 'デュアルGPU構成オプション', items: ['<strong>サイドバイサイド (PCIe) :</strong> 各GPUは独立したモデルインスタンスを実行。複数の小規模モデルを同時に提供するのに最適。', '<strong>NVLink ブリッジ :</strong> 48GB VRAMを単一のアドレス可能なプールに統合。24GBを超えるモデルに必須。', '<strong>テンソル並列化 :</strong> vLLMまたはllama.cpp経由のソフトウェアレベルのモデルシャーディング。バッチ推論の高いスループット。'] },
+                    { type: 'list', h2: 'RTX 5090 vs RTX 4090 : 価値分析', items: ['<strong>デュアルRTX 4090 :</strong> 48GB VRAM、¥392,000、100+ tok/s (Q4 70B) — 最高の価値。', '<strong>シングルRTX 5090 :</strong> 32GB VRAM、¥280,000、40–50 tok/s — よりシンプル、VRAMが少ない。', '<strong>デュアルRTX 5090 :</strong> 64GB VRAM、¥670,000、120+ tok/s — ほとんどのワークロードに過剰。', '→ 推奨: プロフェッショナルワークロード用デュアルRTX 4090。'] },
+                    { type: 'list', h2: '冷却ソリューション：1,200W の熱', items: ['<strong>🌊 カスタムループ (¥168,000–264,000) :</strong> 最高パフォーマンス、最小ノイズ (40 dB)、最大熱容量。6–8時間の組立が必要。', '<strong>❄️ デュアル360mm AIO (¥84,000–126,000) :</strong> 最高のバランス。GPU あたり1つのAIOと CPU クーラー。モジュール式、カスタムループより簡単。', '<strong>💨 ハイエンド空気冷却 :</strong> 予算オプション、より大きな音 (60+ dB)、オフィス環境には不適切。'] },
+                    { type: 'list', h2: '電源 & 電気要件', items: ['<strong>シングル2000W プラチナ:</strong> より清潔なケーブルルーティング。Corsair AX2000またはSeasonic Prime TX-2000推奨。', '<strong>デュアル1200W (冗長) :</strong> 24/7稼働用のホットスワップ冗長性。デュアルPSUアダプターブラケットが必要。', '<strong>回路要件 :</strong> 最小20A専用回路 (30A強く推奨)。 ~1,600–1,800Wの継続的な消費。', '<strong>重要 :</strong> 他の高消費電力デバイスと決して共有しないこと。'] },
+                    { type: 'list', h2: 'CPU: なぜThreadripper 7970X?', items: ['<strong>32コア :</strong> GPU が推論をサーブする間、並列微調整が可能。', '<strong>88 PCIe 5.0レーン :</strong> 両GPUが完全x16帯域幅で実行 — ボトルネックなし。', '<strong>クアッドチャネルDDR5 :</strong> GPU へのデータフィードを最大レートで。', '<strong>ECC サポート :</strong> 無人24/7推論安定性に重要。'] },
+                    { type: 'list', h2: '推論パフォーマンス ベンチマーク', items: ['<strong>14 tok/s ユーザーあたり :</strong> テンソル並列化により70Bモデル上の同時ユーザーあたりの継続スループット。', '<strong>2–3 同時70Bユーザー :</strong> 快適な生成速度で、同時に実行。', '<strong>8+ 同時7Bユーザー :</strong> チームにサービスを提供する内部APIエンドポイントに最適。', '<strong>48GB合計VRAM :</strong> 量子化の妥協なく完全Q8 70Bを実行。'] },
+                    { type: 'numbered', h2: '回避すべき4つの一般的なビルドエラー', items: ['<strong>電源回路が小さすぎる :</strong> 共有15A回路で1,800W実行でブレーカーが落ちる。電源投入前に30A回路を専用にする。', '<strong>PCIeスロット間隔を無視 :</strong> 隣接したスロット内の2つのRTX 4090sはエアフローをブロック。ライザーケーブルを使用するか離す。', '<strong>ECC RAMをスキップ :</strong> 非ECC RAMはトレーニング実行を暗黙的に破壊。128GB DDR5 ECC は必須。', '<strong>誤って構成されたテンソル並列化 :</strong> 正しいvLLMフラグなしで、モデルはシングルGPUにデフォルト。 <code>nvidia-smi</code> で検証。'] },
+                    { type: 'faq', h2: 'FAQ & トラブルシューティング', faqs: [{ q: '1つのGPUで開始し、後で別のGPUを追加できますか?', a: 'はい — ただし今すぐTRX50マザーボードを購入してください。後での更新はより高額です。' }, { q: '128GB RAMは本当に必要ですか?', a: '推論のみ: 64GBで十分。微調整70B同時推論: 128GB必要。' }, { q: 'どのソフトウェアスタック?', a: 'マルチユーザー推論ではvLLM。 素早いテストではOllama。CPUハイブリッドではllama.cpp。' }] },
+                    { type: 'title', h1: '構築の準備はできていますか?', subtitle: '電気回路の検査から開始', p: 'これは最も見落とされやすく、ビルドを遅延させる可能性が高いステップです。' }
+                ]
+            },
+            zh: {
+                title: '本地LLM工作站构建2026',
+                slides: [
+                    { type: 'title', h1: '本地LLM工作站构建2026', subtitle: '双RTX 4090 · Threadripper 7970X · 48GB显存 · $4,000–6,000', p: '专业工作站构建完整指南，可在本地运行70B模型，同时服务2–3个用户，消除云API成本。' },
+                    { type: 'list', h2: '这个构建适合谁?', items: ['<strong>中小企业 & 企业 :</strong> 5人以上的团队运行内部LLM API，无需云依赖。', '<strong>AI研究人员 :</strong> 微调大型模型同时为协作者提供推理服务。', '<strong>MLOps工程师 :</strong> 构建内部推理集群，无需重复的云成本。', '<strong>内容工作室 :</strong> 24/7推理工作负载用于生成内容管道。'] },
+                    { type: 'table', h2: '完整零件清单 & 成本明细', columns: ['组件', '选择', '成本'], rows: [{ 组件: 'GPU (×2)', 选择: 'RTX 4090 24 GB', 成本: '$3,200–3,800' }, { 组件: 'CPU', 选择: 'Threadripper 7970X', 成本: '$2,000–2,500' }, { 组件: '主板', 选择: 'TRX50 WS Pro', 成本: '$600–800' }, { 组件: 'RAM', 选择: '128 GB DDR5 ECC', 成本: '$400–600' }, { 组件: '存储', 选择: '4 TB NVMe + 12 TB HDD', 成本: '$350–500' }, { 组件: '电源', 选择: '2000W Platinum', 成本: '$300–500' }, { 组件: '散热', 选择: '自定义液冷/双AIO', 成本: '$400–800' }, { 组件: '机箱', 选择: '全塔式EATX', 成本: '$150–250' }, { 组件: '总计', 选择: '—', 成本: '$4,000–6,000' }] },
+                    { type: 'list', h2: '双GPU配置选项', items: ['<strong>并排 (PCIe) :</strong> 每个GPU独立运行模型实例。最适合同时服务多个小模型。', '<strong>NVLink 桥接 :</strong> 将48GB显存统一为单个可寻址池。对于超过24GB的模型必不可少。', '<strong>张量并行化 :</strong> 通过vLLM或llama.cpp进行软件级模型分片。批处理推理的高吞吐量。'] },
+                    { type: 'list', h2: 'RTX 5090 vs RTX 4090: 价值分析', items: ['<strong>双RTX 4090 :</strong> 48GB显存，$3,400，100+ tok/s (Q4 70B) — 最佳价值。', '<strong>单RTX 5090 :</strong> 32GB显存，$2,500，40–50 tok/s — 更简单，显存少。', '<strong>双RTX 5090 :</strong> 64GB显存，$5,000，120+ tok/s — 对大多数工作负载过度配置。', '→ 推荐: 专业工作负载用双RTX 4090。'] },
+                    { type: 'list', h2: '散热方案：1,200W热耗散', items: ['<strong>🌊 自定义液循环 ($1,500–2,500) :</strong> 最佳性能，最低噪音 (40 dB)，最大散热能力。需6–8小时装配。', '<strong>❄️ 双360mm AIO ($600–900) :</strong> 最佳平衡。每个GPU一个AIO加CPU散热器。模块化，比自定义液循环简单。', '<strong>💨 高端风冷 :</strong> 预算选项，更嘈杂 (60+ dB)，不适合办公环境。'] },
+                    { type: 'list', h2: '电源 & 电气要求', items: ['<strong>单2000W铂金 :</strong> 更清洁的布线。推荐Corsair AX2000或Seasonic Prime TX-2000。', '<strong>双1200W (冗余) :</strong> 24/7运行的热交换冗余。需双PSU适配器。', '<strong>电路要求 :</strong> 最少20A专用电路 (强烈推荐30A)。 ~1,600–1,800W持续消耗。', '<strong>重要 :</strong> 永远不要与其他高功耗设备共享。'] },
+                    { type: 'list', h2: 'CPU: 为什么是Threadripper 7970X?', items: ['<strong>32核心 :</strong> 在GPU服务推理的同时启用并行微调。', '<strong>88条PCIe 5.0通道 :</strong> 两个GPU都以完整x16带宽运行 — 无瓶颈。', '<strong>四通道DDR5 :</strong> 向GPU提供最大数据速率。', '<strong>ECC支持 :</strong> 对于无人值守24/7推理稳定性至关重要。'] },
+                    { type: 'list', h2: '推理性能基准', items: ['<strong>每个用户14 tok/s :</strong> 通过张量并行化在70B模型上每个并发用户的持续吞吐量。', '<strong>2–3个并发70B用户 :</strong> 在舒适的生成速度下同时运行。', '<strong>8+个并发7B用户 :</strong> 理想用于为团队服务的内部API端点。', '<strong>总计48GB显存 :</strong> 运行完整Q8 70B，无需量化妥协。'] },
+                    { type: 'numbered', h2: '要避免的4个常见构建错误', items: ['<strong>电源电路过小 :</strong> 在共享15A电路上运行1,800W会跳闸。在通电前专用30A电路。', '<strong>忽视PCIe插槽间距 :</strong> 相邻插槽中的两个RTX 4090会阻挡气流。使用延长线或隔开。', '<strong>跳过ECC RAM :</strong> 非ECC静默破坏训练运行。128GB DDR5 ECC不可协商。', '<strong>张量并行化配置错误 :</strong> 没有正确的vLLM标志，模型默认为单GPU。用<code>nvidia-smi</code>验证。'] },
+                    { type: 'faq', h2: 'FAQ & 故障排除', faqs: [{ q: '我可以从一个GPU开始，稍后添加另一个吗?', a: '可以 — 但现在购买TRX50主板。稍后升级更昂贵。' }, { q: '128GB RAM真的是必需的吗?', a: '仅推理: 64GB足够。微调70B同时推理: 需要128GB。' }, { q: '应该使用什么软件栈?', a: '多用户推理用vLLM。快速测试用Ollama。CPU混合用llama.cpp。' }] },
+                    { type: 'title', h1: '准备好构建了吗?', subtitle: '从电气电路检查开始', p: '这是最容易被忽视的步骤，也是最可能延迟构建的步骤。' }
+                ]
+            }
+        };
+
+        let currentSlideIndex = 0;
+        const params = new URLSearchParams(window.location.search);
+        let currentLanguage = params.get('lang') || 'en';
+        if (!CONTENT[currentLanguage]) currentLanguage = 'en';
+
+        function renderSlide(slide) {
+            let html = '<div class="slide ';
+            if (slide.type === 'title') html += 'title';
+            html += '">';
+
+            if (slide.type === 'title') {
+                html += `<h1>${slide.h1}</h1><p style="color:#6750a4;margin:12px 0">${slide.subtitle}</p><p>${slide.p}</p>`;
+            } else if (slide.type === 'list') {
+                html += `<h2>${slide.h2}</h2><ul>`;
+                slide.items.forEach(item => html += `<li>${item}</li>`);
+                html += '</ul>';
+            } else if (slide.type === 'table') {
+                html += `<h2>${slide.h2}</h2><table><tr>`;
+                slide.columns.forEach(col => html += `<th>${col}</th>`);
+                html += '</tr>';
+                slide.rows.forEach(row => {
+                    html += '<tr>';
+                    slide.columns.forEach(col => html += `<td>${row[col]}</td>`);
+                    html += '</tr>';
+                });
+                html += '</table>';
+            } else if (slide.type === 'numbered') {
+                html += `<h2>${slide.h2}</h2><ol style="text-align:left;display:inline-block;max-width:90%">`;
+                slide.items.forEach(item => html += `<li style="margin:12px 0;font-size:clamp(16px,1.8vw,20px)">${item}</li>`);
+                html += '</ol>';
+            } else if (slide.type === 'faq') {
+                html += `<h2>${slide.h2}</h2>`;
+                slide.faqs.forEach(faq => {
+                    html += `<div style="text-align:left;margin:12px auto;max-width:90%"><strong>${faq.q}</strong><p style="margin-top:8px">${faq.a}</p></div>`;
+                });
+            }
+
+            html += '</div>';
+            return html;
+        }
+
+        function updateSlides() {
+            const container = document.getElementById('slides-container');
+            let slides = CONTENT[currentLanguage]?.slides || CONTENT['en'].slides;
+            
+            container.innerHTML = slides.map(renderSlide).join('');
+            const slideElements = document.querySelectorAll('.slide');
+            slideElements.forEach((slide, index) => {
+                if (index === currentSlideIndex) slide.classList.add('active');
+                else slide.classList.remove('active');
+            });
+
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+            document.getElementById('totalSlides').textContent = slides.length;
+            document.getElementById('header-title').textContent = CONTENT[currentLanguage]?.title || 'Local LLM Workstation Build 2026';
+        }
+
+        function changeSlide(direction) {
+            const slides = CONTENT[currentLanguage]?.slides || CONTENT['en'].slides;
+            currentSlideIndex = Math.max(0, Math.min(currentSlideIndex + direction, slides.length - 1));
+            updateSlides();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+        });
+
+        updateSlides();
+    </script>
+</body>
+</html>
