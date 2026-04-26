@@ -114,7 +114,7 @@ Tasks deferred to post-canary:
 - Fix 34 broken local-llms internal links
 - Add `multimodal-local-llms` to `relatedReading` in adjacent articles (orphan)
 - Reconcile `themes.ts` ↔ articles drift (2 dead keys in `hardware-setups`)
-- Translation backlog: 23 EN-only local-llms articles, 21 incomplete PE articles
+- Translation backlog: 25 incomplete local-llms articles (20 EN-only + 5 partials), 0 incomplete PE articles (100% coverage confirmed via AST audit)
 - Investigate `-en` slug-suffix translation pipeline leak (`local-llm-limitations-setup-time-en`)
 
 ## Hard rules
