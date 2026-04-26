@@ -1,11 +1,13 @@
 # Prompt Engineering Content Audit — 2026-04-26
 
 ## Summary
-- 51 articles defined
-- Total language blocks: 184 (en: 51, de: 37, fr: 33, ja: 32, zh: 31)
-- 21 articles with incomplete language coverage
+- **61 articles defined** (verified via AST)
+- **Total language blocks: 305** — every article has all 5 languages (en/de/fr/ja/zh)
+- **0 articles with incomplete language coverage**
 - 1 cosmetic indent bug (fixed in commit prior to this doc)
 - 2 cosmetic 8-space-indent language blocks (functional, deferred)
+
+> **Note (corrected 2026-04-26):** Initial summary incorrectly claimed 51 articles / 184 language blocks / 21 incomplete articles, based on regex-driven counting that missed 10 articles whose slug keys had non-standard indent. AST audit via ts-morph established the corrected numbers above. See "Regex-missed articles" section below.
 
 ## Architecture
 | File | Lines | Role |
@@ -20,24 +22,27 @@
 | `framework-translations.ts` | 58 | Framework name translations |
 
 ## Type definition note
-Type signature is `Record<string, Record<Language, PEArticle>>` (no Partial). Despite this, 21 articles compile with missing languages — TypeScript inference on object literals this large appears lenient. Post-refactor, per-article files will let TypeScript enforce strict typing properly.
+Type signature is `Record<string, Record<Language, PEArticle>>` (no Partial). AST audit confirms all 61 articles have all 5 language keys, so the type IS being enforced — the original audit's "lenient inference" hypothesis was based on undercounted regex data. Post-refactor, per-article files will let TypeScript enforce richer per-article checks (e.g., schema completeness).
 
-## Translation gaps (21 articles)
+## Regex-missed articles (the 10 that escaped the original audit)
 
-### EN-only (13 articles)
-build-a-prompt-library, prompt-with-images, tokens-costs-limits, write-better-code-with-ai, seo-meets-ai, teaching-with-ai, extract-and-summarise, control-the-output, your-brand-voice-ai, build-quality-checks, specs-framework, how-to-evaluate-prompt-quality, prompt-evaluation-metrics
+These slugs have non-standard indent in source and were missed by the strict 2-space regex used in the original audit. All have full 5-language coverage. They form a coherent "prompt-engineering tools" cluster, likely added in a single batch:
 
-### EN + DE only (3 articles)
-system-prompt-vs-user-prompt, ape-framework, structured-output-json-mode
+- best-prompt-optimization-tools-teams
+- best-prompt-testing-tools
+- best-prompt-management-platforms
+- braintrust-vs-prompthub-vs-vellum
+- promptlayer-vs-mirascope-vs-promptperfect
+- prompt-engineering-vs-fine-tuning
+- prompt-engineering-vs-rag
+- manual-vs-automated-prompt-optimization
+- how-to-test-prompts-across-models
+- best-prompt-engineering-ides
 
-### Missing 2 langs (1 article)
-ai-powered-research (missing ja, zh)
+These should also be checked against `themes.ts` (which appears to omit a "Tools" category — see Architecture section above).
 
-### Missing 1 lang (4 articles)
-- ai-limitations-what-llms-cant-do (missing zh)
-- single-prompt-method (missing ja)
-- prompt-chaining (missing zh)
-- self-consistency-prompting (missing fr)
+## Translation coverage
+**100% across all 61 articles × 5 languages.** No backlog.
 
 ## Cosmetic indent anomalies (8-space language blocks)
 
@@ -60,6 +65,7 @@ Two language blocks are functional but indented at 8 spaces instead of the canon
 
 ## Status
 - Indent fix for `best-pe-tools-2026` slug: applied (prior commit)
-- 21 translation gaps: deferred (cheap to fix post-refactor on split files)
+- Translation coverage: 100% (no backlog — original "21 gaps" claim was wrong; see Summary note)
 - 8-space cosmetic blocks: deferred (parser must handle, no fix needed)
-- Backup file `content.ts.backup.de`: pending deletion
+- Backup file `content.ts.backup.de`: deleted (commit `cd2b9d30`)
+- `themes.ts` Tools category check: deferred to post-refactor
