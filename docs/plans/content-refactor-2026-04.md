@@ -135,3 +135,47 @@ Stop immediately and revert if any of the following occur:
 - Claude Code session caps mid-task with code in undefined state
 
 When aborting: `git checkout main && git branch -D refactor/<branch>`. Audit findings preserved in their respective docs.
+
+---
+
+## Lessons from Pass 1 (PE Refactor — completed 2026-04-26)
+
+Pass 1 succeeded but surfaced methodology improvements worth applying to Pass 2.
+This section captures lessons fresh, before they fade.
+
+### Audit methodology
+- **Skip regex audits entirely. Use AST from the start.** Initial PE audit (regex-based) missed 10 articles using non-canonical 2-space indent. Local-llms regex audit similarly missed 12 language blocks. Numbers in any regex-based audit are unreliable.
+- **AST audit must be Phase 0 step.** Re-verify article counts, language coverage, and orphan slugs before any refactor work. Cost: 5 minutes via ts-morph script.
+- **Numbers in `docs/audits/local-llms-link-audit-2026-04-25.md` are regex-based.** Re-verify via AST before trusting them.
+
+### Tooling
+- **ts-morph parser strategy is proven.** No methodology change. AST traversal handled all PE indent variations cleanly.
+- **Per-article import detection works.** Most articles need only `Language` type. Only 2 of 61 PE articles needed translation helpers.
+- **Snapshot/diff scripts are reusable.** `scripts/snapshot-routes.mjs` and `scripts/diff-snapshots.mjs` work for any PE/local-llms baseline.
+- **macOS curl/xargs silently fails on bulk operations.** The `xargs > file` pattern produced 0 output even with concurrency 8. Switch to Chrome extension iframe-based testing for bulk URL QA.
+- **Vercel preview deployment protection blocks curl-based QA.** Disable as Phase 0 prep, not during QA phase.
+- **Heredoc size cap exists somewhere.** ~30-line chunks always work. Plan multi-section doc creation as multiple appends from the start.
+- **Plan mode in Claude Code is too restrictive.** Sandboxes file writes and forces ExitPlanMode/AskUserQuestion patterns. Stay in auto-edit; the human-in-the-loop chat workflow IS the safety mechanism.
+
+### Local-llms-specific risks (Pass 2)
+
+Local-llms is structurally different from PE in ways that affect parser design:
+
+- **Type signature is `Partial<Record<Language, LLMArticle>>`** — missing languages are valid. PE used strict `Record<Language, PEArticle>`. Parser must emit `Partial<...>` for local-llms files. PE-style strict assertion would fail compilation.
+- **25 incomplete articles** (20 EN-only + 5 partials, per AST audit). Parser must handle missing-language case without inventing empty stubs.
+- **89k lines is at the edge of 1M context.** AST parser loading may be slower than PE. Plan for longer Phase 1.
+- **themes.ts drift already documented**: 86 articleKeys vs 85 articles. Re-verify via AST as Phase 0 step. Likely 2 dead keys in `hardware-setups`.
+- **34 broken internal links + 1 orphan** (`multimodal-local-llms`) already documented in `docs/audits/local-llms-link-audit-2026-04-25.md`. Do NOT fix during refactor — single-variable principle.
+- **Possible `-en` slug-suffix translation pipeline leak** observed (`local-llm-limitations-setup-time-en`). Audit before Pass 2 to verify no leaks add complexity.
+
+### Process
+
+- **Three-system workflow worked well**: claude.ai (planning), Claude Code in VS Code (execution), Chrome extension (browser tasks). Always state which system to use; don't assume context.
+- **AI-side merge buttons are blocked by design.** Both Claude Code and Chrome extension refuse to click merge/destructive actions. Plan for human-click steps in the timeline.
+- **Feature flag rollout was the right safety choice but added friction.** Worked correctly; never invoked rollback. For Pass 2, keep the pattern for consistency — the methodology is now proven.
+- **24h canary acceptable when 48h is too costly.** Token allocation pressure is a legitimate trade-off. 24h covers the high-value observations; 48h adds marginal coverage.
+- **Single-variable principle held throughout.** Refactor commits never mixed in content fixes. All audit findings (broken links, stub articles, i18n bugs) deferred to post-canary cleanup. This kept blast radius understandable.
+- **Pre-existing issues will surface during QA.** PE Pass 1 surfaced 25 stub articles, 19 orphan slugs, zh translation quality issues, dead schema fields. None caused by refactor — all pre-existing. Expect the same pattern in Pass 2; document and defer.
+
+### Pass 2 estimated faster than Pass 1
+Pass 1 took one focused day (audit corrections + methodology development). Pass 2 should be ~half that — methodology proven, scripts written, only the data file changes.
