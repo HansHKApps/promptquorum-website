@@ -51,13 +51,13 @@ Several `?lang=zh` URLs serve English titles instead of localized ones. Examples
 - `5-building-blocks-every-prompt-needs?lang=zh` → "5 Essential Elements for Effective Hints (2026)"
 - `ai-hallucinations-why-ai-makes-things-up?lang=zh` → "AI Illusion 2026: Why Does LLM Generate False Information"
 
-Pattern is uneven — `the-single-step-prompt-method?lang=zh` correctly shows Chinese ("单步提示法2026...").
+Pattern is uneven — `the-single-step-prompt-method?lang=zh` correctly shows Chinese.
 
 ### Glossary falls back to English on all non-en langs
-`prompt-engineering-glossary` shows English title across de/fr/ja/zh. Possible localization-fallback bug specific to this article.
+`prompt-engineering-glossary` shows English title across de/fr/ja/zh.
 
 ### Recommended action
-Audit zh translations for terminology consistency. Translation quality varies by article, suggesting different translators or different generation passes. Consider a glossary-of-terms file to enforce consistent rendering of "Prompt Engineering" across all languages.
+Audit zh translations for terminology consistency. Consider a glossary-of-terms file to enforce consistent rendering of "Prompt Engineering" across all languages.
 
 ## Status
 All findings deferred to post-canary cleanup. Refactor PR #1 unblocked.
