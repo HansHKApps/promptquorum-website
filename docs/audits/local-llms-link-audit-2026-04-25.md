@@ -36,3 +36,6 @@ multimodal-local-llms — add to relatedReading in 2-3 thematically-adjacent art
 
 ## Status
 Deferred until after content.ts refactor (per safety policy: one variable at a time).
+
+## Repository hygiene (added 2026-04-26)
+- 7 npm audit warnings (5 moderate, 2 high) in transitive deps. Address post-refactor. Run `npm audit` to enumerate.
