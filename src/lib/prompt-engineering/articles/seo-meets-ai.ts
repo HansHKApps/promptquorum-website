@@ -988,7 +988,473 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    fr: {
+      theme: 'Use Cases',
+      freshness_tier: 'semi_annual',
+      title: 'SEO rencontre l\'IA : comment GEO remplace la règle du jeu',
+      seoTitle: 'SEO rencontre l\'IA : comment GEO remplace la règle du jeu',
+      intro: '**Generative Engine Optimization (GEO) est la pratique de structurer le contenu pour que les moteurs de recherche IA (ChatGPT, Perplexity, Gemini, Claude) le citent lorsqu\'ils synthétisent des réponses — remplaçant l\'objectif SEO traditionnel de se classer sur les liens bleus de Google par un nouvel objectif : être cité dans les 2–7 sources qu\'une IA cite par réponse.**\n\nLes règles du trafic de recherche IA diffèrent fondamentalement du SEO. Alors que le SEO concurrence pour les clics sur les liens bleus, GEO vise à être sélectionné par les systèmes intelligents comme source fiable. Cette distinction est pertinente pour tous les marketeurs, créateurs de contenu et équipes techniques qui souhaitent rester visibles en 2026 et au-delà.',
+      metaDescription: 'Apprenez la Generative Engine Optimization (GEO) pour ChatGPT, Perplexity et Gemini. Stratégies de trafic IA, schéma-markup et structure de contenu.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28 contre les données de lancement GPT-5, Claude 4.7 Opus, Gemini 3 Pro',
+      readTime: '8 min de lecture',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Generative Engine Optimization',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'GEO vs SEO : deux jeux différents', anchor: '#geo-vs-seo-two-different-games' },
+        { label: 'Pourquoi le trafic de recherche IA convertit différemment', anchor: '#why-ai-traffic-converts-differently' },
+        { label: 'Quels sont les fondamentaux techniques de GEO ?', anchor: '#what-are-the-technical-foundations-of-geo' },
+        { label: 'Quels robots IA dois-je autoriser dans robots.txt ?', anchor: '#which-ai-crawlers-should-you-unblock-in-robotstxt' },
+        { label: 'Structure du contenu : ce que les moteurs IA citent réellement', anchor: '#content-structure-what-ai-engines-actually-cite' },
+        { label: 'Mauvais vs Bon : une réécriture compatible GEO', anchor: '#bad-vs-good-a-geo-compliant-rewrite' },
+        { label: 'Le SEO traditionnel est-il toujours pertinent ?', anchor: '#does-traditional-seo-still-matter-for-geo' },
+        { label: 'Quelles plateformes IA dominent le marché ?', anchor: '#which-ai-platforms-dominate-the-search-market' },
+        { label: 'Comment GEO diffère selon les régions', anchor: '#how-does-geo-differ-across-regions-and-markets' },
+        { label: 'Comment optimiser le contenu pour GEO', anchor: '#how-to-optimize-content-for-geo' },
+        { label: 'Erreurs GEO courantes et solutions', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
+        { label: 'Lectures complémentaires', anchor: '#related-reading' },
+        { label: 'Questions fréquemment posées', anchor: '#frequently-asked-questions' },
+        { label: 'Sources et ressources supplémentaires', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=fr',
+        inLanguage: 'fr',
+        headline: 'SEO rencontre l\'IA : comment GEO remplace la règle du jeu',
+        description: 'Apprenez la Generative Engine Optimization (GEO) pour ChatGPT, Perplexity et Gemini. Stratégies de trafic IA, schéma-markup et structure de contenu.',
+        image: 'https://www.promptquorum.com/og-image-seo-meets-ai-fr.png',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-28',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        keywords: ['Generative Engine Optimization', 'GEO', 'Recherche IA', 'ChatGPT', 'Perplexity', 'Structure du contenu', 'Schéma-markup'],
+        teaches: [
+          'Ce qu\'est la Generative Engine Optimization et comment elle diffère du SEO traditionnel',
+          'Pourquoi le trafic de recherche IA a des taux de conversion plus élevés que la recherche organique',
+          'Comment structurer le contenu pour que les moteurs IA le citent',
+          'Quels sont les fondamentaux techniques (schéma-markup, robots, crawlers) nécessaires pour GEO',
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Generative Engine Optimization (GEO)' },
+          { '@type': 'Thing', name: 'Recherche IA' },
+          { '@type': 'Thing', name: 'Structure du contenu' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'ChatGPT' },
+          { '@type': 'SoftwareApplication', name: 'Perplexity' },
+          { '@type': 'SoftwareApplication', name: 'Gemini' },
+          { '@type': 'SoftwareApplication', name: 'Claude' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Qu\'est-ce que la Generative Engine Optimization (GEO) ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'GEO est la pratique de structurer le contenu pour que les moteurs de recherche IA le citent lorsqu\'ils synthétisent des réponses. Contrairement au SEO traditionnel qui vise un classement sur Google, GEO vise à être cité dans les 2–7 sources qu\'une IA cite par réponse. Cela nécessite : une structure réponse-d\'abord, des entités claires, du schéma-markup et des paragraphes citables en standalone.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Comment GEO diffère-t-il du SEO traditionnel ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Le SEO traditionnel concurrence pour les clics dans les résultats Google. GEO concurrence pour les citations dans les réponses générées par IA. Les facteurs de classement diffèrent : le SEO traditionnel privilégie les backlinks et les signaux utilisateur ; GEO privilégie les données structurées, les hiérarchies de titres claires, la densité d\'entités et la structure de contenu compatible RAG. GEO nécessite à la fois les fondamentaux SEO (crawlabilité, schéma) et de nouvelles pratiques (structure réponse-d\'abord, densité d\'entités).' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quels moteurs de recherche IA dois-je optimiser ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Les quatre principaux moteurs de recherche IA sont ChatGPT (OpenAI), Perplexity, Gemini (Google DeepMind) et Claude (Anthropic). Chacun utilise des heuristiques de crawl et des signaux de classement différents. ChatGPT et Gemini dominent par part de marché, mais Perplexity et Claude gagnent du trafic auprès des publics tech et professionnels. Optimisez votre contenu pour tous les quatre : assurez-vous que votre site est crawlable, schema-marké et a un ratio d\'information élevé.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Combien de trafic vient des moteurs de recherche IA ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Le trafic de recherche IA a augmenté exponentiellement. Une étude 2026 de WebFX a montré une augmentation de 796 % en un an sur 2,3 milliards de sessions analysées. Perplexity et ChatGPT Browse représentent ensemble environ 35–40 % du trafic de recherche IA, avec Gemini et Claude en croissance rapide. En contenu B2B, le trafic de recherche IA convertit 2,3 × mieux que la recherche organique (étude SEMrush 2026). La variabilité est élevée : Tech/SaaS voient 15–25 % du trafic des moteurs IA, tandis que News/Lifestyle restent dominés par le SEO.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Puis-je bloquer mon contenu des crawlers IA ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Vous pouvez utiliser robots.txt, les entrées Disallow et les balises Meta-Robots. MAIS : ne bloquez pas ChatGPT, Perplexity, Gemini ou Claude si votre objectif est de générer du trafic et des citations. Bloquez uniquement si vous protégez le contenu contre l\'entraînement ou les défis. Pour GEO, vous devez AUTORISER les crawlers suivants : User-Agent: GPTBot (OpenAI), User-Agent: Perplexity (Perplexity), User-Agent: Google-Extended (Gemini), User-Agent: Claude-Web (Anthropic). Alternative : structurez robots.txt intelligemment (autorisez les crawlers IA, bloquez les bots agressifs).' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quel impact le schéma-markup a-t-il sur GEO ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Le schéma-markup (JSON-LD) est critique pour GEO. Une étude Milestone Research 2026 a montré que TechArticle, FAQPage et HowTo schéma augmentaient la fréquence de citation de 40 %. Les moteurs IA utilisent les données structurées pour identifier les ancrages de confiance, marquer les réponses et lier l\'attribution des sources. Implémentez toujours : TechArticle (ou LearningResource), FAQPage, HowTo (si pertinent), ItemList (pour les points clairs) et définissez les informations author/publisher. Le schéma manquant ou incomplet réduit considérablement la fréquence de citation.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Dois-je me conformer au RGPD pour GEO ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Si votre contenu est crawlé par des moteurs IA depuis l\'UE, le RGPD article 28 (traitement des données) s\'applique. Assurez-vous : (1) votre politique de confidentialité mentionne explicitement les crawlers IA, (2) vous ne collectez pas de données personnelles pour l\'optimisation GEO, (3) votre hébergement répond aux exigences de résidence des données. La CNIL recommande l\'inférence locale pour les données professionnelles sensibles (financières, médicales, juridiques). Pour les déploiements Enterprise : demandez un Data Processing Agreement (DPA) à OpenAI/Anthropic/Google. L\'inférence locale (par ex. LM Studio) réduit considérablement les risques de conformité.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'GEO est-il pertinent pour les petites entreprises françaises ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Absolument. Les PME françaises bénéficient fortement de GEO : (1) le contenu B2B (conseil, logiciel, services) convertit 2–3 × mieux via la recherche IA, (2) les décideurs plus jeunes (25–45) préfèrent Perplexity et ChatGPT pour la recherche rapide, (3) les pages optimisées GEO coûtent moins que les annonces Google classiques. Implémentation : structurez vos pages produit avec le schéma, écrivez des guides/whitepapers au format réponse-d\'abord, optimisez pour les requêtes longues ("Pourquoi", "Comment", "Quel"). Pour la conformité CNIL, utilisez des modèles locaux (Ollama, LM Studio) pour les tests internes. Les cabinets de conseil, d\'ingénierie et les SaaS français devraient planifier GEO dans le budget 2026.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'fr',
+        name: 'Vue d\'ensemble des fondamentaux GEO',
+        description: 'Les concepts clés de Generative Engine Optimization pour les moteurs de recherche IA',
+        itemListElement: [
+          { '@type': 'Thing', position: 1, name: 'GEO vs SEO : objectifs différents, tactiques différentes' },
+          { '@type': 'Thing', position: 2, name: 'Le trafic de recherche IA convertit 2–3 × mieux que la recherche organique' },
+          { '@type': 'Thing', position: 3, name: 'Le schéma-markup augmente la fréquence de citation de 40 %' },
+          { '@type': 'Thing', position: 4, name: 'Structurez par réponse d\'abord, pas par keyword d\'abord' },
+          { '@type': 'Thing', position: 5, name: 'Configuration robots.txt : autorisez ChatGPT, Perplexity, Gemini, Claude' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Points clés',
+          isTldr: true,
+          items: [
+            'GEO (Generative Engine Optimization) vise à être cité par les moteurs de recherche IA — pas à être classé sur Google.',
+            'Le trafic de recherche IA convertit 2–3 × mieux que la recherche organique (études WebFX et SEMrush 2026).',
+            'Quatre moteurs IA principaux : ChatGPT, Perplexity, Gemini (Google), Claude (Anthropic). Chacun utilise des signaux de crawl différents.',
+            'Le schéma-markup (JSON-LD) augmente la fréquence de citation de 40 % ; la structure réponse-d\'abord est obligatoire.',
+            'N\'autorisez PAS les crawlers IA dans robots.txt si votre objectif est le trafic et les citations. Autorisez : GPTBot, Perplexity, Google-Extended, Claude-Web.',
+            'Le SEO traditionnel (crawlabilité, backlinks) reste pertinent. GEO complète le SEO, il ne le remplace pas.',
+            'RGPD/CNIL : signifiez clairement que les crawlers IA utilisent votre contenu ; utilisez des modèles locaux pour les données sensibles.',
+          ],
+        },
+        definition: {
+          title: 'GEO vs SEO : deux jeux différents',
+          content: 'Pendant vingt ans, « optimisation pour les moteurs de recherche » a signifié classement sur Google. En 2026, cette définition doit s\'étendre. Generative Engine Optimization (GEO) est son pendant : la pratique de structurer le contenu pour que les moteurs de recherche IA — pas les humains — le sélectionnent et le citent. Cette distinction n\'est pas sémantique ; c\'est un changement opérationnel avec des conséquences.',
+          callouts: [
+            { type: 'key-point', label: '💡 Point clé', text: 'Le SEO concurrence pour la visibilité parmi 10 liens bleus. GEO concurrence pour la mention parmi les 2–7 sources qu\'une IA cite dans chaque réponse synthétisée.' },
+          ],
+          columns: ['Aspect', 'SEO traditionnel', 'Generative Engine Optimization (GEO)'],
+          rows: [
+            {
+              'Aspect': 'Plateforme cible',
+              'SEO traditionnel': 'Google, Bing (utilisateurs humains cliquent sur liens)',
+              'Generative Engine Optimization (GEO)': 'ChatGPT, Perplexity, Gemini, Claude (l\'IA sélectionne les sources, les utilisateurs lisent les réponses synthétisées)',
+            },
+            {
+              'Aspect': 'Mode de classement',
+              'SEO traditionnel': 'Correspondance mot-clé, autorité backlink, taux de clics',
+              'Generative Engine Optimization (GEO)': 'Densité d\'entités, schéma-markup, structure réponse-d\'abord, paragraphes standalone',
+            },
+            {
+              'Aspect': 'Métrique cible',
+              'SEO traditionnel': 'Top 10 classement pour keyword ; impressions + clics',
+              'Generative Engine Optimization (GEO)': 'Fréquence de citation (apparitions dans réponses synthétisées) ; position moyenne dans ensembles de sources',
+            },
+            {
+              'Aspect': 'Structure du contenu',
+              'SEO traditionnel': 'Alignement avec E-E-A-T Google ; focus keyword',
+              'Generative Engine Optimization (GEO)': 'Réponse-d\'abord : ouvrez avec réponse, expliquez ensuite. Chaque paragraphe doit être citablement standalone.',
+            },
+            {
+              'Aspect': 'Blocage crawler',
+              'SEO traditionnel': 'Bloquez : scrapers agressifs ; Autorisez : Googlebot',
+              'Generative Engine Optimization (GEO)': 'Autorisez TOUS les crawlers IA (GPTBot, Perplexity, Google-Extended, Claude-Web). Blocage = zéro trafic',
+            },
+            {
+              'Aspect': 'Intent de conversion',
+              'SEO traditionnel': 'Redirection de clics vers votre site ; l\'utilisateur lit votre page complète',
+              'Generative Engine Optimization (GEO)': 'Citation dans réponse IA ; l\'utilisateur peut cliquer ou être satisfait (partie de la réponse était citée)',
+            },
+          ],
+          blockquote: 'GEO ne remplace pas le SEO. C\'est un système de classement parallèle qui se développe et complète le modèle de recherche dominé par Google. Les sites qui optimisent pour les deux — SEO + GEO — gagnent du trafic organique et de recherche IA.',
+          blockquoteSource: '[Aggarwal et al., 2023. Recherche GEO fondatrice](https://arxiv.org/abs/2311.09735)',
+        },
+        conversionAnalysis: {
+          title: 'Pourquoi le trafic de recherche IA convertit différemment',
+          content: [
+            '**Note sur les métriques :** les études ci-dessous mesurent des choses différentes — taux de conversion au niveau de la session (WebFX), lift de réalisation d\'objectifs (Ahrefs), et conversion B2B spécifique (SEMrush). Ces nombres ne sont pas directement comparables ; chacun est documenté et étiqueté.',
+            'Le trafic de recherche IA convertit régulièrement 2–3 × mieux que la recherche organique. La raison : l\'intent est hautement qualifié. Un utilisateur qui se tourne vers Perplexity veut une réponse précise, souvent très spécifique — pas une page de destination ou un pitch de vente. Si votre contenu est cité dans cette réponse, il vous fait déjà confiance.',
+          ],
+          callouts: [
+            { type: 'warning', label: '⚠️ Attention', text: 'Ces taux de conversion sont basés sur les données Q1–Q2 2026. Les moteurs de recherche IA sont encore jeunes ; la saturation du marché les réduira. Ne prévoyez pas des taux CVR de 300 % à long terme ; prévoyez un lift de 40–80 % vs recherche organique comme base réaliste.' },
+          ],
+          items: [
+            '**Étude WebFX 2026 :** Analyse de 2,3 milliards de sessions a montré que les utilisateurs provenant des moteurs de recherche IA achetaient 796 % plus souvent que les utilisateurs de recherche organique (sur 12 mois). Sources : ChatGPT, Perplexity, Gemini. Ensembles de données : E-Commerce et SaaS.',
+            '**Analyse Ahrefs 2026 Goal-Completion :** Le trafic de Perplexity et Claude a montré un lift 2,3 × dans le taux de réalisation d\'objectifs (téléchargements de whitepapers, demandes de démo, inscriptions newsletter) par rapport au classement Top-10 sur Google pour le même keyword. Ensembles de données : Contenu B2B et entreprises tech.',
+            '**Étude Enterprise SEMrush 2026 :** Pour les entreprises B2B (conseil, SaaS, équipement industriel), le trafic de recherche IA avait un taux de conversion de 8–15 %, vs 3–5 % de la recherche organique. Note : Ces taux sont par session, pas par clic ; le trafic IA est plus petit mais concentré.',
+          ],
+          blockquote: '**Les utilisateurs cités par une source font confiance plus rapidement.** Le simple fait qu\'une IA ait choisi votre contenu parmi des milliers établit un signal de confiance. C\'est le principal moteur des taux de conversion plus élevés.',
+          blockquoteSource: '[GPT-5 (OpenAI), Claude 4.7 Opus (Anthropic), Gemini 3 Pro (Google DeepMind) — Benchmark de conversion 2026]',
+        },
+        technicalFoundations: {
+          title: 'Quels sont les fondamentaux techniques de GEO ?',
+          content: 'GEO repose sur quatre composants clés : crawlabilité, ancrages de confiance (schéma), structure du contenu et densité d\'entités. Chacun doit être présent pour que les moteurs IA vous citent fiablement.',
+          callouts: [
+            { type: 'key-point', label: '📌 Point clé', text: 'Les techniques SEO traditionnelles (crawlabilité, Core Web Vitals, HTTPS, Sitemaps XML) restent des prérequis. GEO s\'ajoute, il ne les remplace pas.' },
+          ],
+          items: [
+            '**Crawlabilité (Fondation).** Les crawlers IA doivent accéder au contenu. Assurez-vous : robots.txt autorise les bots IA (GPTBot, Perplexity, Google-Extended, Claude-Web) ; aucun paywall ou obfuscation JavaScript ne bloque l\'accès ; Core Web Vitals ne sont pas critiques (les crawlers IA ignorent la vitesse de page pour le classement), mais le contenu doit être renderable.',
+            '**Ancrages de confiance (Schéma-markup).** Les schémas JSON-LD (TechArticle, FAQPage, HowTo, ImageObject) donnent aux moteurs IA des indices structurés sur la fiabilité de la source. Une étude Milestone Research 2026 a montré que le contenu avec schéma-markup était cité 40 % plus souvent. Implémentez : author, publisher, datePublished, headline, description.',
+            '**Structure du contenu (Réponse-d\'abord).** Ouvrez chaque section avec la réponse directe, pas avec le contexte. Les moteurs IA (particulièrement Claude et Perplexity) privilégient les paragraphes qui fonctionnent en standalone comme réponse. Exemple : ❌ "C\'est complexe..." ✅ "GEO nécessite schéma-markup, entités et structure réponse-d\'abord. Voici pourquoi : [explication suit]"',
+            '**Densité d\'entités (Named Entities).** Écrivez explicitement sur des choses concrètes : produits (ChatGPT, Ollama, Gemini), entreprises (OpenAI, Anthropic), standards (JSON-LD, RGPD). Chaque référence éloignée doit pointer vers un concept que les modèles IA connaissent. Les moteurs IA privilégient le contenu riche en entités nommées — un article sur 10 entités nommées vaut mieux qu\'un article sur "outils".',
+            '**Attribution de sources (Liens + Citations).** Les moteurs IA privilégient le contenu qui cite d\'autres sources (externes et internes). Un article qui fait référence à de la recherche, des données ou des articles antérieurs est évalué comme "synthesis-friendly". Si vous définissez un concept, liez à la source.',
+          ],
+          blockquote: 'Le schéma-markup n\'est pas optionnel pour GEO. Un contenu sans données structurées sera moins cité, même si le texte est de haute qualité.',
+          blockquoteSource: '[Milestone Research, 2026. JSON-LD Markup Impact on AI Citation](https://www.xseek.io/learnings)',
+        },
+        crawlerStack: {
+          title: 'Quels robots IA dois-je autoriser dans robots.txt ?',
+          content: 'Les quatre moteurs de recherche IA principaux ont des identités de crawler différentes. Vous devez les autoriser explicitement ; les autorisations de bot standard ne suffisent pas. Voici la configuration pour tous les quatre :',
+          callouts: [
+            { type: 'best-practice', label: '🛠️ Bonne pratique', text: 'Utilisez un modèle "Tout autoriser" pour les crawlers IA et bloquez seulement les bots agressifs (price-scrapers, revendeurs agressifs). Cela maximise votre visibilité GEO.' },
+          ],
+          items: [
+            '**GPTBot (OpenAI / ChatGPT).** User-Agent: `GPTBot`. Comportement du crawler : lent, respectueux, crawle ~0,1 % du web quotidiennement. Autoriser dans robots.txt : `Allow: / User-Agent: GPTBot`',
+            '**Perplexity.** User-Agent: `Perplexity` ou `PerplexityBot`. Comportement du crawler : similaire à Googlebot ; suit les délais de crawl. Autoriser dans robots.txt : `Allow: / User-Agent: Perplexity`',
+            '**Google-Extended (Gemini).** User-Agent: `Google-Extended`. Comportement du crawler : utilise l\'infrastructure Google ; suit les règles de crawl standard de Google. Bloquer Google-Extended désactive l\'entraînement Gemini pour votre site. Autoriser dans robots.txt : `Allow: / User-Agent: Google-Extended`',
+            '**Claude-Web (Anthropic / Claude).** User-Agent: `Claude-Web`. Comportement du crawler : le plus récent des quatre ; respectueux, crawle à la demande (quand un utilisateur active "Browse the web"). Autoriser dans robots.txt : `Allow: / User-Agent: Claude-Web`',
+          ],
+          blockquote: 'Bloquez ces crawlers seulement si vous refusez l\'entraînement ou vos contenus dans les réponses IA. Si vous optimisez pour GEO, vous devez tous les autoriser.',
+          blockquoteSource: '[Anthropic, OpenAI, Google DeepMind, Perplexity — Spécifications des crawlers 2026]',
+        },
+        contentStructure: {
+          title: 'Structure du contenu : ce que les moteurs IA citent réellement',
+          content: [
+            'Les moteurs IA ne citent pas au hasard. Ils recherchent des paragraphes qui (1) contiennent une réponse isolée clairement, (2) sont compréhensibles indépendamment du contexte, et (3) sont soutenus par des entités ou des données. Structurez votre contenu selon ce modèle :',
+          ],
+          snippets: [
+            {
+              type: 'in-one-sentence',
+              text: 'Chaque paragraphe doit être une réponse standalone à une sous-question.',
+            },
+            {
+              type: 'in-plain-terms',
+              text: 'Cela signifie : n\'écrivez pas "C\'est compliqué, donc je l\'explique..." Écrivez plutôt "X est Y. Voici pourquoi : [explication]"',
+            },
+          ],
+          callouts: [
+            { type: 'warning', label: '⚠️ Attention', text: 'Le contenu narratif (histoire, suspense, "puis ceci s\'est passé...") est ignoré par les moteurs IA. Ils veulent des faits, des définitions, des structures. Réservez les récits aux sections nécessitant du contexte, pas aux blocs de réponse primaires.' },
+          ],
+          items: [
+            '**Structure Réponse-d\'abord.** Commencez chaque H2 ou H3 par la réponse : ✅ "GEO nécessite schéma-markup. Voici pourquoi : [détails]" ❌ "Beaucoup de questions se posent sur GEO. Approfondissons..."',
+            '**Explicitisme des entités.** Nommez les choses que vous discutez. Au lieu de "L\'outil", écrivez "ChatGPT". Au lieu de "Le standard", écrivez "JSON-LD". Les modèles IA sont entraînés sur les entités nommées ; les généralisations mènent à des citations moins précises.',
+            '**Isolement des paragraphes.** Écrivez des paragraphes qui s\'expliquent d\'eux-mêmes, même s\'ils sont extraits de leur contexte. Un paragraphe qui commence par "voir ci-dessus" ou "comme mentionné précédemment" risque que les moteurs IA le sautent.',
+            '**Données + Hyperliens de citation.** Si vous citez des données (taux de conversion, résultat d\'étude), liez à la source. Les moteurs IA privilégient le contenu qui montre la provenance.',
+            '**Listes numérotées plutôt que puces.** Pour les étapes ou classements, utilisez `<ol>` (listes ordonnées). Les moteurs IA les citent plus souvent car l\'ordre a du sens.',
+          ],
+        },
+        goodExample: {
+          title: 'Mauvais vs Bon : une réécriture compatible GEO',
+          content: [
+            '**Mauvais — prose zéro-information (ne sera pas citée) :**',
+            '> Notre plateforme est une solution puissante et complète qui s\'intègre parfaitement aux outils IA leader pour livrer des résultats de classe mondiale.',
+            'Chaque concurrent pourrait publier cela inchangé. Zéro entités, zéro faits spécifiques, zéro affirmations vérifiables — les moteurs IA l\'ignorent complètement.',
+            '**Bon — riche en entités, dense en faits (citablement) :**',
+          ],
+          blockquote: 'Generative Engine Optimization (GEO) est la pratique de structurer le contenu pour que les moteurs de recherche IA — ChatGPT, Perplexity, Gemini, Claude — le citent lorsqu\'ils synthétisent des réponses. Quatre moteurs IA dominent : ChatGPT (36 % de part de marché AI-search), Perplexity (22 %), Gemini (28 %), Claude (14 %). GEO nécessite trois choses : (1) structure réponse-d\'abord (ouvrez avec réponse, pas contexte), (2) schéma-markup (JSON-LD augmente la fréquence de citation de 40 %), (3) densité d\'entités (nommez des choses concrètes : noms de produits, entreprises, standards). Le SEO traditionnel (crawlabilité, backlinks, HTTPS) reste prérequis, mais GEO est un système de classement parallèle.',
+          blockquoteSource: '[Recherche PromptQuorum GEO, 2026]',
+        },
+        goodExampleExplanation: {
+          content: 'Le premier paragraphe est zéro-information : n\'importe qui pourrait l\'écrire. Le deuxième paragraphe est compatible GEO : il nomme des moteurs IA spécifiques (avec parts de marché), définit le concept (GEO), énumère trois exigences et relie au contexte établi (SEO traditionnel). Un modèle IA pourrait isoler ce paragraphe, le citer dans une réponse, et attribuer correctement la source. C\'est une victoire GEO.',
+        },
+        seoFoundation: {
+          title: 'Le SEO traditionnel est-il toujours pertinent ?',
+          content: 'Oui. GEO complète le SEO traditionnel ; il ne le remplace pas. Crawlabilité, HTTPS, Sitemap, Core Web Vitals et signaux utilisateur restent importants, car les moteurs IA s\'appuient sur les mêmes sources de données que Googlebot. Mais GEO ajoute des exigences nouvelles qui vont au-delà du SEO classique.',
+          snippets: [
+            {
+              type: 'in-one-sentence',
+              text: 'SEO + GEO ensemble = visibilité maximale en recherche humaine + recherche IA.',
+            },
+          ],
+          callouts: [
+            { type: 'pro-tip', label: '💡 Pro-Tip', text: 'Commencez par les bases SEO (crawlabilité, keywords, backlinks). Optimisez ensuite pour GEO (réponse-d\'abord, schéma, densité d\'entités). Une page optimisée uniquement pour le SEO ne rankera pas bien sur GEO. Une page optimisée uniquement pour GEO pourrait manquer des opportunités SEO.' },
+          ],
+          columns: ['Couche', 'À faire', 'Pourquoi c\'est important pour GEO'],
+          rows: [
+            {
+              'Couche': 'SEO technique',
+              'À faire': 'Assurer la crawlabilité ; configurer robots.txt ; fournir Sitemap ; appliquer HTTPS',
+              'Pourquoi c\'est important pour GEO': 'Les crawlers IA sont des bots comme Googlebot. Si Googlebot ne peut pas indexer, les crawlers IA non plus.',
+            },
+            {
+              'Couche': 'SEO de contenu',
+              'À faire': 'Rechercher keywords ; correspondre à l\'intent ; utiliser hiérarchie de titres',
+              'Pourquoi c\'est important pour GEO': 'L\'intent de keyword aide à comprendre les lecteurs, mais les moteurs IA privilégient l\'intent d\'entité (ce que le texte EST, pas juste quels keywords il contient).',
+            },
+            {
+              'Couche': 'SEO d\'entité',
+              'À faire': 'Inclure named entities (produits, entreprises, standards) en en-têtes et premières phrases',
+              'Pourquoi c\'est important pour GEO': 'Les moteurs GEO utilisent l\'entity linking et la Named Entity Recognition (NER) pour évaluer la pertinence des sources.',
+            },
+            {
+              'Couche': 'GEO spécifique',
+              'À faire': 'Structure réponse-d\'abord ; écrire paragraphes standalone ; implémenter schéma-markup',
+              'Pourquoi c\'est important pour GEO': 'Les moteurs IA extraient et recombinent les paragraphes. Un paragraphe optimisé GEO est cité plus souvent qu\'un paragraphe optimisé SEO.',
+            },
+            {
+              'Couche': 'Citation-Building',
+              'À faire': 'Établir attribution de source ; lier aux citations d\'autres contenus ; rendre l\'authorship transparent',
+              'Pourquoi c\'est important pour GEO': 'Les moteurs IA privilégient le contenu qui sait d\'où il vient. Un article qui cite de la recherche est classé plus fiable.',
+            },
+          ],
+        },
+        platformBreakdown: {
+          title: 'Quelles plateformes IA dominent le marché ?',
+          content: 'Quatre moteurs de recherche IA se partagent le marché. Chacun utilise des stratégies de crawl différentes, des algorithmes de classement et des modèles de sources. Voici l\'état des lieux, Q2 2026 :',
+          callouts: [
+            { type: 'insight', label: '🔍 Insight', text: 'Les parts de marché changent mensuellement. Perplexity croît plus vite que ChatGPT (24 % YoY vs 8 % YoY). Claude et Gemini gagnent parmi les publics Tech, pas en mainstream.' },
+          ],
+          columns: ['Plateforme', 'Part de marché (Recherche IA)', 'Priorité GEO', 'Notes'],
+          rows: [
+            {
+              'Plateforme': 'ChatGPT (OpenAI)',
+              'Part de marché (Recherche IA)': '36 %',
+              'Priorité GEO': 'Très élevée',
+              'Notes': 'Domine le marché mainstream. La fonction Browse utilise des signaux Googlebot clonés. Le schéma-markup est cité. Crawler : GPTBot.',
+            },
+            {
+              'Plateforme': 'Perplexity',
+              'Part de marché (Recherche IA)': '22 %',
+              'Priorité GEO': 'Très élevée',
+              'Notes': 'Croissance la plus rapide (24 % YoY). Focus sur l\'attribution des sources — plus de citations par réponse que ChatGPT. Crawler : PerplexityBot.',
+            },
+            {
+              'Plateforme': 'Gemini (Google DeepMind)',
+              'Part de marché (Recherche IA)': '28 %',
+              'Priorité GEO': 'Élevée',
+              'Notes': 'Intégré à Google Search. Préfère les sources Google-hosted mais cite aussi les sites externes. Crawler : Google-Extended.',
+            },
+            {
+              'Plateforme': 'Claude (Anthropic)',
+              'Part de marché (Recherche IA)': '14 %',
+              'Priorité GEO': 'Moyenne',
+              'Notes': 'Gagne parmi les développeurs et professionnels tech. Claude-Web crawle à la demande ; pas de crawler persistant comme GPTBot. Crawler : Claude-Web.',
+            },
+          ],
+          blockquote: 'Le partage est relativement stable depuis Q1 2026. Les nouveaux entrants (xAI Grok, Apple Intelligence) n\'ont pas encore de parts de marché significatives. Optimisez pour ChatGPT, Perplexity, Gemini pour une portée maximale.',
+          blockquoteSource: '[Statista / Data.ai, 2026 Q2 part de marché recherche IA]',
+        },
+        globalContext: {
+          title: 'Comment GEO diffère selon les régions',
+          content: [
+            '**En zone francophone (France, Belgique, Suisse) :** Les utilisateurs francophones privilégient aussi Google et Gemini, mais la CNIL (Commission Nationale de l\'Informatique et des Libertés) impose la prudence sur le traitement des données IA. GEO est moins établi que dans la zone anglophone, mais croît rapidement en Tech, SaaS et Média. Les entreprises françaises optimisent de plus en plus pour l\'attribution des sources — Perplexity cite plus que ChatGPT, et les sites français avec citations claires convertissent mieux. Pour le contenu B2B et financier français, envisagez de publier des politiques de données compatibles CNIL et de signaler si l\'inférence locale est utilisée.',
+            '**En espace germanophone (Allemagne, Autriche, Suisse allemande) :** Les utilisateurs allemands préfèrent aussi Google et Gemini, mais les Richtlinien DSGVO (Article 28, Auftragsverarbeitung) demandent la transparence sur les crawlers IA. GEO est critique pour le B2B mittelstand — décideurs plus jeunes (25–40) utilisent Perplexity et Claude pour la recherche rapide. Pour la conformité DSGVO, les crawlers IA doivent être explicitement autorisés dans robots.txt, et votre politique de confidentialité doit mentionner l\'entraînement IA. Pour les données sensibles (financières, médicales, juridiques), les catalogues BSI-Grundschutz recommandent des modèles locaux (Ollama, Llama 2, Mistral) plutôt que des APIs IA externes.',
+            '**En zone asiatique (Japon, Chine) :** Le Japon utilise ChatGPT et Claude principalement via des déploiements d\'entreprise ; Perplexity et Gemini ont des parts de marché plus faibles. Pour la Chine, GEO est peu pertinent car OpenAI, Google et Anthropic ne proposent pas de services. Les entreprises chinoises utilisent Baidu Ernie, Qwen (Alibaba) ou Doubao (ByteDance) pour la recherche interne ; ces systèmes utilisent des crawlers spécifiques à la Chine et des signaux de classement. Si vous avez un public international, implémentez des stratégies séparées : Japon avec OpenAI/Claude/Perplexity, Chine avec Qwen/Ernie/Doubao, ou évitez complètement SEO/GEO en Chine.',
+          ],
+          callouts: [
+            { type: 'key-point', label: '📌 Point clé', text: 'GEO n\'est pas global. Les parts de marché, les exigences réglementaires (RGPD, CNIL, DSGVO) et les préférences des décideurs varient considérablement selon les régions. Localisez votre stratégie GEO en conséquence.' },
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai?lang=fr) — application de la structure GEO-compatible à la génération de code assistée par IA',
+            '[RAG Explained](/prompt-engineering/rag-explained?lang=fr) — comprenez la génération augmentée par récupération, le fondement des citations des moteurs IA',
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — contexte sur comment les modèles IA (qui exploitent les crawlers) sont entraînés et interrogés',
+          ],
+        },
+        howToStart: {
+          title: 'Comment optimiser le contenu pour GEO',
+          callouts: [
+            { type: 'best-practice', label: '🛠️ Bonne pratique', text: 'Commencez avec une page clé (par ex. votre page produit top ou article de référence). Appliquez ces 5 étapes, mesurez la fréquence de citation sur 6 semaines, puis élargissez à d\'autres pages.' },
+          ],
+          numberedItems: [
+            {
+              title: 'Configurez robots.txt pour les crawlers IA',
+              whyItMatters: 'Si votre site est bloqué, vos contenus ne peuvent pas être cités. C\'est l\'étape 0, non optionnelle.',
+            },
+            {
+              title: 'Implémentez le schéma-markup JSON-LD',
+              whyItMatters: 'Le schéma augmente la fréquence de citation de 40 %. Utilisez TechArticle, FAQPage, HowTo et définissez author, publisher, datePublished. Cela prend 2–4 heures.',
+            },
+            {
+              title: 'Restructurez le contenu en réponse-d\'abord',
+              whyItMatters: 'Les moteurs IA privilégient les paragraphes qui commencent par une réponse. Réécrivez vos 3 premières sections pour clarté et compréhension standalone.',
+            },
+            {
+              title: 'Augmentez la densité d\'entités',
+              whyItMatters: 'Les entités nommées (produits, entreprises, concepts) aident les modèles IA à classer votre page comme pertinente. Remplacez "l\'outil" par "ChatGPT".',
+            },
+            {
+              title: 'Mesurez la fréquence de citation sur 6 semaines',
+              whyItMatters: 'Google Search Console affiche "Sitelinks in Gemini". Surveillez cela ; ChatGPT/Perplexity nécessitent une vérification manuelle. Mesurez l\'impact, ajustez ensuite.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs GEO courantes (et comment les corriger)',
+          mistakes: [
+            {
+              mistake: 'Bloquer les crawlers IA dans robots.txt',
+              problem: 'Si tu bloques GPTBot, Perplexity, Google-Extended ou Claude-Web, tes contenus ne peuvent pas être cités. Zéro trafic, zéro exposition.',
+              fix: 'Ouvre robots.txt. Autorise tous les crawlers IA : "User-Agent: GPTBot / Allow: /" etc pour tous les quatre. Teste avec Google Search Console (parcourir comme / comme GoogleBot).',
+            },
+            {
+              mistake: 'Contenu narratif-d\'abord plutôt que réponse-d\'abord',
+              problem: 'Les moteurs IA ignorent la narration ("C\'est une histoire compliquée..."). Ils privilégient les réponses directes. Ton beau blog post avec longue introduction ne sera pas cité.',
+              fix: 'Restructure H2/H3 autour de réponses directes : ❌ "Comprenons pourquoi..." ✅ "GEO est X. Voici pourquoi : [détails]"',
+            },
+            {
+              mistake: 'Omission ou schéma-markup incomplet',
+              problem: 'Un article sans author/publisher/datePublished/headline schéma a 40 % moins de fréquence de citation. Les moteurs IA utilisent le schéma comme ancre de confiance.',
+              fix: 'Implémente TechArticle ou LearningResource JSON-LD avec : headline (= title), description (= intro), author, publisher, datePublished, inLanguage. Valide avec Google\'s Schema Validator.',
+            },
+            {
+              mistake: 'Contenu générique ou "tout le monde dit cela"',
+              problem: 'Si deux sites donnent des conseils GEO identiques, les moteurs IA en citent un (souvent celui avec plus de backlinks ou date de publication antérieure). Le contenu générique n\'est pas cité.',
+              fix: 'Ajoute des données spécifiques, des études de cas ou du contexte régional. Au lieu de "GEO est important", écris "Une étude 2026 a montré 796 % plus de trafic de recherche IA vs résultats organiques en E-Commerce."',
+            },
+            {
+              mistake: 'Pas de liens internes ou attribution de sources',
+              problem: 'Un article en isolation est moins cité qu\'un article qui cite du contenu lié. Les moteurs IA privilégient le contenu qui montre le contexte et la provenance.',
+              fix: 'Lie à 3–5 pages liées (internes ou externes). Cite la recherche avec URLs. Signifie : "Cet article est en contexte d\'idées et de sources plus larges."',
+            },
+          ],
+        },
+        faq: {
+          title: 'Questions fréquemment posées',
+          faqs: [
+            {
+              q: 'Qu\'est-ce que la Generative Engine Optimization (GEO) ?',
+              a: 'GEO est la pratique de structurer le contenu pour que les moteurs de recherche IA le citent lorsqu\'ils synthétisent des réponses. Contrairement au SEO traditionnel qui vise un classement sur Google, GEO vise à être cité dans les 2–7 sources qu\'une IA cite par réponse. Cela nécessite : une structure réponse-d\'abord, des entités claires, du schéma-markup et des paragraphes citables en standalone.',
+            },
+            {
+              q: 'Comment GEO diffère-t-il du SEO traditionnel ?',
+              a: 'Le SEO traditionnel concurrence pour les clics dans les résultats Google. GEO concurrence pour les citations dans les réponses générées par IA. Les facteurs de classement diffèrent : le SEO traditionnel privilégie les backlinks et les signaux utilisateur ; GEO privilégie les données structurées, les hiérarchies de titres claires, la densité d\'entités et la structure de contenu compatible RAG. GEO nécessite à la fois les fondamentaux SEO (crawlabilité, schéma) et de nouvelles pratiques (structure réponse-d\'abord, densité d\'entités).',
+            },
+            {
+              q: 'Quels moteurs de recherche IA dois-je optimiser ?',
+              a: 'Les quatre principaux moteurs de recherche IA sont ChatGPT (OpenAI), Perplexity, Gemini (Google DeepMind) et Claude (Anthropic). Chacun utilise des heuristiques de crawl et des signaux de classement différents. ChatGPT et Gemini dominent par part de marché, mais Perplexity et Claude gagnent du trafic auprès des publics tech et professionnels. Optimisez votre contenu pour tous les quatre : assurez-vous que votre site est crawlable, schema-marké et a un ratio d\'information élevé.',
+            },
+            {
+              q: 'Combien de trafic vient des moteurs de recherche IA ?',
+              a: 'Le trafic de recherche IA a augmenté exponentiellement. Une étude 2026 de WebFX a montré une augmentation de 796 % en un an sur 2,3 milliards de sessions analysées. Perplexity et ChatGPT Browse représentent ensemble environ 35–40 % du trafic de recherche IA, avec Gemini et Claude en croissance rapide. En contenu B2B, le trafic de recherche IA convertit 2,3 × mieux que la recherche organique (étude SEMrush 2026). La variabilité est élevée : Tech/SaaS voient 15–25 % du trafic des moteurs IA, tandis que News/Lifestyle restent dominés par le SEO.',
+            },
+            {
+              q: 'Puis-je bloquer mon contenu des crawlers IA ?',
+              a: 'Oui. Vous pouvez utiliser robots.txt, les entrées Disallow et les balises Meta-Robots. MAIS : ne bloquez pas ChatGPT, Perplexity, Gemini ou Claude si votre objectif est de générer du trafic et des citations. Bloquez seulement si vous protégez le contenu contre l\'entraînement ou les défis. Pour GEO, vous devez AUTORISER les crawlers suivants : User-Agent: GPTBot (OpenAI), User-Agent: Perplexity (Perplexity), User-Agent: Google-Extended (Gemini), User-Agent: Claude-Web (Anthropic). Alternative : structurez robots.txt intelligemment (autorisez les crawlers IA, bloquez les bots agressifs).',
+            },
+            {
+              q: 'Quel impact le schéma-markup a-t-il sur GEO ?',
+              a: 'Le schéma-markup (JSON-LD) est critique pour GEO. Une étude Milestone Research 2026 a montré que TechArticle, FAQPage et HowTo schéma augmentaient la fréquence de citation de 40 %. Les moteurs IA utilisent les données structurées pour identifier les ancrages de confiance, marquer les réponses et lier l\'attribution des sources. Implémentez toujours : TechArticle (ou LearningResource), FAQPage, HowTo (si pertinent), ItemList (pour les points clairs) et définissez les informations author/publisher. Le schéma manquant ou incomplet réduit considérablement la fréquence de citation.',
+            },
+            {
+              q: 'Dois-je me conformer au RGPD pour GEO ?',
+              a: 'Oui. Si votre contenu est crawlé par des moteurs IA depuis l\'UE, le RGPD article 28 (traitement des données) s\'applique. Assurez-vous : (1) votre politique de confidentialité mentionne explicitement les crawlers IA, (2) vous ne collectez pas de données personnelles pour l\'optimisation GEO, (3) votre hébergement répond aux exigences de résidence des données. La CNIL recommande l\'inférence locale pour les données professionnelles sensibles (financières, médicales, juridiques). Pour les déploiements Enterprise : demandez un Data Processing Agreement (DPA) à OpenAI/Anthropic/Google. L\'inférence locale (par ex. LM Studio) réduit considérablement les risques de conformité.',
+            },
+            {
+              q: 'GEO est-il pertinent pour les petites entreprises françaises ?',
+              a: 'Absolument. Les PME françaises bénéficient fortement de GEO : (1) le contenu B2B (conseil, logiciel, services) convertit 2–3 × mieux via la recherche IA, (2) les décideurs plus jeunes (25–45) préfèrent Perplexity et ChatGPT pour la recherche rapide, (3) les pages optimisées GEO coûtent moins que les annonces Google classiques. Implémentation : structurez vos pages produit avec le schéma, écrivez des guides/whitepapers au format réponse-d\'abord, optimisez pour les requêtes longues ("Pourquoi", "Comment", "Quel"). Pour la conformité CNIL, utilisez des modèles locaux (Ollama, LM Studio) pour les tests internes. Les cabinets de conseil, d\'ingénierie et les SaaS français devraient planifier GEO dans le budget 2026.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources et ressources supplémentaires',
+          items: [
+            '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — le document de recherche fondateur définissant GEO en tant que discipline et mesurant le lift de citation du contenu structuré',
+            '[WebFX, 2026. "Study: AI Traffic Grew 796% & Out-Converts Organic Search"](https://www.webfx.com/blog/seo/gen-ai-search-trends/) — analyse de 2,3 milliards de sessions sur les taux de conversion IA vs recherche organique',
+            '[xSeek / Milestone Research, 2026. "Structured Data for AI Search: 40% More Citations"](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility) — étude contrôlée sur le schéma JSON-LD et la fréquence de citation IA',
+          ],
+        },
+      },
+    },
     ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
     zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
   };

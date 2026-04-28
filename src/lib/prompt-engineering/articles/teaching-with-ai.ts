@@ -555,7 +555,600 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    de: {
+      freshness_tier: 'semi_annual',
+      theme: 'Use Cases',
+      title: 'Mit KI unterrichten: Tools, Ergebnisse und Prompts für Lehrkräfte 2026',
+      intro: '**Um 2026 effektiv mit KI zu unterrichten: Verwenden Sie einen strukturierten fünfteiligen Prompt (Rolle, Ziel, Schülerkontext, Einschränkungen, Ausgabeformat), wählen Sie ein Tool, das zur Aufgabe passt (Khanmigo für Nachhilfe, MagicSchool für Unterrichtsplanung, Claude 4.6 Sonnet oder GPT-4o für Inhalterstellung), stellen Sie die Temperatur auf 0,1–0,2 für sachliche Inhalte ein, und — für Schulen in der EU — implementieren Sie vor der Bereitstellung eines hochriskanten Systems Schulungen zur KI-Kompetenz für Lehrkräfte gemäß Artikel 4.** Eine randomisierte kontrollierte Studie der Harvard-Universität aus dem Jahr 2024 stellte fest, dass KI-Nachhilfe Lernzuwächse erzeugte, die mehr als doppelt so hoch waren wie in aktiven Lernklassenzimmern — in 18 % weniger Lernzeit. Im April 2026 nutzten 85 % der US-amerikanischen Lehrkräfte und 86 % der Schüler KI während des Schuljahres — höher als in jeder anderen Branche. Die Herausforderung liegt nicht in der Akzeptanz, sondern in der Struktur: vage Prompts produzieren unbenutzbare Outputs, strukturierte Prompts sparen 5–13 Stunden pro Woche, und EU-Schulen haben nun rechtliche Verpflichtungen gemäß dem AI Act für jedes KI-Tool, das die Schülerbewertung beeinflusst.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      readTime: '10 Min. Lesezeit',
+      seoTitle: 'Mit KI unterrichten: Tools, Ergebnisse & Prompts',
+      metaDescription: 'KI-Nachhilfe verdoppelt Lernergebnisse in 18 % weniger Lernzeit. Vergleichen Sie 6 Lehrkräfte-Tools, Prompt-Vorlagen, Erkennungsgrenzen und EU AI Act-Compliance.',
+      educationalLevel: 'Anfänger',
+      audience: 'Lehrkräfte, Schuladministratoren und Fachleute im Bildungswesen, die KI-Tools nutzen',
+      aboutTopics: ['KI im Bildungswesen', 'Khanmigo', 'EU AI Act'],
+      howToName: 'So unterrichten Sie mit KI',
+      next_refresh_due: '2026-09-23',
+      primaryTerm: 'Mit KI unterrichten',
+      toc: [
+        { label: 'Was KI-Lehrkräfte-Tools wirklich tun', anchor: '#what-ai-teaching-tools-actually-do' },
+        { label: 'Welche KI-Tools sollten Lehrkräfte 2026 nutzen?', anchor: '#which-ai-tools-should-teachers-use-in-2026' },
+        { label: 'Wie schreibe ich Prompts für Unterrichtsaufgaben', anchor: '#how-to-write-prompts-for-teaching-tasks' },
+        { label: 'Der fünfteilige Lehrkräfte-Prompt', anchor: '#the-five-component-teacher-prompt' },
+        { label: 'Wie schreibe ich KI-Prompts für Bewertungsfeedback?', anchor: '#how-do-you-prompt-ai-for-assessment-feedback' },
+        { label: 'Verbessert KI-Nachhilfe wirklich die Lernergebnisse?', anchor: '#does-ai-tutoring-improve-learning-outcomes' },
+        { label: 'Wie erkennbar ist KI-Betrug in Schulen?', anchor: '#how-detectable-is-ai-cheating-in-schools' },
+        { label: 'Wie wirkt sich der EU AI Act auf Schulen aus?', anchor: '#how-does-the-eu-ai-act-affect-schools' },
+        { label: 'Häufige Fehler bei der Verwendung von KI im Bildungswesen', anchor: '#common-mistakes-when-using-ai-in-education' },
+        { label: 'Schritt-für-Schritt-Workflow: Mit KI unterrichten', anchor: '#step-by-step-workflow-teaching-with-ai' },
+        { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+        { label: 'Häufig gestellte Fragen', anchor: '#frequently-asked-questions' },
+        { label: 'Quellen und weitere Ressourcen', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=de',
+        inLanguage: 'de',
+        headline: 'Mit KI unterrichten: Tools, Ergebnisse und Prompts für Lehrkräfte 2026',
+        description: 'KI-Tutorensysteme verdoppeln die Lernergebnisse im Vergleich zu traditionellen Klassenzimmern. Erfahren Sie, wie Lehrkräfte KI für Unterrichtsplanung, Bewertung, Schülernachhilfe einsetzen und warum 85 % der US-amerikanischen Lehrkräfte KI 2026 eingeführt haben.',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-28',
+        proficiencyLevel: 'Anfänger',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          sameAs: 'https://www.promptquorum.com/about',
+        },
+        about: [
+          { '@type': 'Thing', name: 'KI im Bildungswesen' },
+          { '@type': 'SoftwareApplication', name: 'Khanmigo' },
+          { '@type': 'Legislation', name: 'EU AI Act' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        audience: {
+          '@type': 'EducationalAudience',
+          educationalRole: 'Teacher',
+          audienceType: 'Lehrkräfte, Schuladministratoren, Fachleute im Bildungswesen',
+        },
+        educationalLevel: 'K-12, Hochschule',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=de',
+          width: 1200,
+          height: 630,
+        },
+        keywords: ['KI-Nachhilfe', 'KI im Bildungswesen', 'Khanmigo', 'Unterrichtsplanung', 'ChatGPT für Lehrkräfte', 'Claude Bildung', 'Prompt-Engineering Unterricht'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Khanmigo' },
+          { '@type': 'SoftwareApplication', name: 'MagicSchool' },
+          { '@type': 'SoftwareApplication', name: 'ChatGPT' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+          { '@type': 'Organization', name: 'Harvard University' },
+          { '@type': 'Organization', name: 'Khan Academy' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Verbessern KI-Tutoren wirklich die Lernergebnisse?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja — die Evidenz ist stark. Eine randomisierte kontrollierte Studie von Harvard aus dem Jahr 2024 mit 194 Studierenden der Physik stellte fest, dass KI-Nachhilfe Effektstärken von 0,73–1,3 Standardabweichungen über aktiven Lernklassenzimmern produzierte, wobei Studierende höhere Ergebnisse in 49 Minuten gegenüber 60 Minuten Unterrichtszeit erreichten (p < 10−8). Eine systematische Übersicht aus dem Jahr 2025 von 21 Studien zeigt, dass KI-unterstützte Schüler traditionelle Unterrichtsmethoden in Bewertungen um 15–35 % übertreffen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Welches ist das beste KI-Tool für Lehrkräfte 2026?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Die Antwort hängt von der Aufgabe ab. Khanmigo (Khan Academy, betrieben durch GPT-4) ist am stärksten für Schülernachhilfe durch sokratisches Fragen zu 44 US-Dollar pro Jahr. MagicSchool führt bei umfassenden Lehrkräfte-Workflow-Tools (Unterrichtspläne, IEPs, Elternkommunikation). ChatGPT (GPT-4o, OpenAI) bietet die flexibelste universelle Inhalterstellung. Für komplexe Lehrplananalysen behandelt Claude 4.6 Sonnet (Anthropic) 200.000 Token — ungefähr 160 Standardseiten — in einer einzigen Sitzung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie viel Zeit kann KI Lehrkräften pro Woche sparen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Spezifische, kontextreiche Prompts sparen Lehrkräften 5–13 Stunden pro Woche bei Unterrichtsplanung und Verwaltungsaufgaben, wenn sie konsistent verwendet werden. Die häufigsten Zeitersparnis-Anwendungen sind: Recherche und Inhaltssammlung (44 % der Lehrkräfte), Unterrichtsplanerstellung (38 %), Informationszusammenfassung (38 %) und Erstellung von Klassenmaterialien (37 %).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist KI im Bildungswesen rechtlich unter EU-Bestimmungen zulässig?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'KI-Systeme, die Lernbewertung oder Lernpfade beeinflussen, werden im EU AI Act (Annex III) als hochriskant klassifiziert. EU-Schulen müssen Schulungen zur KI-Kompetenz für Lehrkräfte (Artikel 4, gültig ab 2025) durchführen, menschliche Überwachung für KI-beeinflusste Bewertungen aufrechthalten und Audit-Trails für alle KI-Systeme führen, die Schülerergebnisse beeinflussen. Emotionserkennung-KI in Bildungseinrichtungen ist gemäß dem Gesetz komplett verboten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Erkennt KI-Erkennungssoftware zuverlässig akademisches Betrügen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Nein — aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass bis zu 30 von jeweils 100 legitimen Schülereinreichungen fälschlicherweise gekennzeichnet werden können. Nichtmuttersprachler und Studierende, die in strukturierten akademischen Stilen schreiben, werden überproportional höher gekennzeichnet. Universitäten verschieben 2026 von Verbotsrichtlinien zu Offenlegungs- und Zitierrahmen und behandeln KI-Erkennung als einen Input unter mehreren statt als abschließender Beweis des Fehlverhaltens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Welche Temperatureinstellung sollten Lehrkräfte für KI-Unterrichtsplanung verwenden?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Stellen Sie die Temperatur auf 0,1–0,2 für sachliche Unterrichtsinhalte — Unterrichtspläne, Bewertungsrichtlinien, Lehrplanalignment. Dies erzeugt konsistente, niedrig-variierende Outputs. Verwenden Sie 0,7–0,9 nur bei der Erstellung kreativer Aktivitätsideen, bei denen verschiedene Optionen das Ziel sind. Die Standardtemperatur auf den meisten Plattformen (0,7–1,0) ist für kreative Aufgaben ausgelegt und erhöht sachliche Fehler in Unterrichtsinhalten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Können KI-Tools bei differenziertem Unterricht helfen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja — dies ist einer der stärksten Einsatzbereiche von KI im Bildungswesen. LLMs können denselben Inhalt in Sekunden auf mehreren Lesefähigkeitsstufen umschreiben (Flesch-Kincaid Klasse 4, 8 und 12). Prompt-Struktur: „Schreiben Sie diesen Abschnitt auf Klassenstufe [N] um. Bewahren Sie alle sachlichen Inhalte. Ersetzen Sie komplexes Vokabular durch einfachere Entsprechungen. Behalten Sie die gleiche Absatzstruktur bei.\" Claude 4.6 Sonnet produziert die konsistenteste Differenzierung über Lesefähigkeitsstufen hinweg.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie sollten Schulen KI-Kompetenz für Lehrkräfte unter dem EU AI Act handhaben?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Artikel 4 des EU AI Act verlangt, dass KI-Bereitsteller (einschließlich Schulen) ausreichende KI-Kompetenz für alle Mitarbeitenden sicherstellen, die mit KI-Systemen arbeiten — gültig ab 2025. Dies bedeutet Schulungen zu: wie KI Entscheidungen trifft, welche Fehlerraten spezifische Tools haben, wann menschliche Überwachung erforderlich ist, und wie KI-beeinflusste Entscheidungen dokumentiert werden. Schulen sollten diese Schulung für Audit-Zwecke dokumentieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist Khanmigo und wie unterscheidet es sich von ChatGPT für Schüler?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Khanmigo ist der KI-Tutorialassistent der Khan Academy, betrieben durch GPT-4. Sein definierendes Merkmal ist die sokratische Fragestellung — es führt Schüler zu Antworten, anstatt ihnen direkt Antworten zu geben. Wenn ein Schüler „Was ist die Antwort?\" fragt, antwortet Khanmigo mit einer leitenden Frage. Dieses Design fördert Lernbehaltung. ChatGPT liefert standardmäßig direkte Antworten, was effizient ist, aber den kognitiven Aufwand reduziert, der langfristiges Lernen erzeugt. Für schülerfreundliche Nachhilfe ist Khanmigos pädagogisches Design überlegen; für Inhalterstellung durch Lehrkräfte gewinnt ChatGPTs Flexibilität.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie erstelle ich eine KI-Nutzungsrichtlinie für meine Schule?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Eine wirksame Schulrichtlinie zur KI-Nutzung definiert vier Dinge: (1) welche Aufgaben KI erlaubt sind (Brainstorming, Übungsprobleme, Feedbackentwürfe), (2) welche Aufgaben Offenlegung erfordern (KI-assistierte Essays, Präsentationen), (3) welche Aufgaben KI verboten ist (endgültige Prüfungsantworten, Plagiate), (4) wie KI-generierte Inhalte zitiert werden müssen. Die Richtlinie sollte alle 6 Monate überprüft werden, angesichts des rasanten Werkzeugentwicklungstempo. EU-Schulen müssen in jedem Richtliniendokument zusätzlich EU AI Act Artikel 4-Schulungsanforderungen und Annex III-Hochrisikoobligationen adressieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Muss ich bei der Verwendung von KI-Lehrkräfte-Tools die DSGVO beachten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja — wenn Ihre Schule in der EU oder im EWR liegt und KI-Tools Schülerdaten verarbeitet, müssen Sie die DSGVO einhalten. Der kritische Punkt ist Artikel 28: Wenn die KI-Plattform (z. B. ChatGPT, Claude) als Auftragsverarbeiter fungiert, benötigen Sie einen Data Processing Agreement (DPA). Viele kommerziellen LLM-Anbieter bieten DPAs an; überprüfen Sie direkt bei Ihrem Toolanbieter. Für Schulen in Deutschland und der Schweiz: Der Einsatz von lokaler Inferenz (on-premise oder DACH-gehostete Modelle) über Ollama oder LM Studio reduziert das Datenschutzrisiko deutlich. Referenzieren Sie die BSI-Grundschutz-Kataloge für sichere lokale KI-Bereitstellungsarchitekturen im Schulkontext.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist KI-Unterrichtstechnologie für den deutschen Mittelstand geeignet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Absolut — vor allem für kleinere bis mittlere Schulen und Bildungsinstitutionen. KI-Tools wie ChatGPT, Claude und Khanmigo erfordern keine großen IT-Infrastrukturen oder spezialisiertes technisches Personal. Der Schlüssel zum Erfolg im deutschsprachigen Kontext (Deutschland, Österreich, Schweiz) ist: (1) Dokumentation aller KI-Nutzung für BSI- und DSGVO-Compliance, (2) Schulung der Lehrkräfte auf Eine-Stunde-Basis-Level zu Prompt-Strukturierung, (3) lokale oder DACH-gehostete Lösungen für sensible Schülerdaten priorisieren, (4) Führen Sie Audit-Trails für alle KI-beeinflussten Bewertungen. Mittelständische Schulen in Baden-Württemberg, Bayern und der Deutschschweiz benutzen bereits KI erfolgreich, wenn die oben genannten Strukturen vorhanden sind.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'de',
+        name: 'So unterrichten Sie mit KI',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=de',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Definieren Sie Lernziele und Bewertungen, bevor Sie KI einführen',
+            text: 'Geben Sie an, was Schüler wissen müssen und wie Sie es bewerten werden. Entwerfen Sie dann, wo KI den Unterricht verstärkt.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Nutzen Sie KI für personalisierte Übung und sofortiges Feedback, nicht zur Benotung',
+            text: 'KI glänzt bei der Erstellung von Übungsproblemen und der Bereitstellung von sofortigem Feedback. Vermeiden Sie die Verwendung von KI für subjektive Benotung ohne menschliche Überprüfung.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Unterrichten Sie Schüler, wie sie KI-Outputs überprüfen und Halluzinationen erkennen',
+            text: 'Zeigen Sie Schülern Multi-Modell-Validierung und Faktenprüfung gegen primäre Quellen, um kritisches Denken und KI-Kompetenz aufzubauen.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Erstellen Sie eine strukturierte Prompt-Vorlage, die Schüler für alle KI-Interaktionen verwenden',
+            text: 'Nutzen Sie Rolle → Ziel → Umfang → Ausgabeformat → Validierungsmethode. Üben Sie diese Vorlage zusammen, bis Schüler erkennen, wenn vage Prompts vage Antworten produzieren.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Legen Sie klare Richtlinien zur KI-Nutzung für bestimmte Aufgaben fest',
+            text: 'Seien Sie explizit darüber, welche Aufgaben KI erlauben (Brainstorming, Übungsprobleme) und welche nicht (Prüfungsantworten, Code ohne Quellangabe).',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'de',
+        name: 'KI-Tools für Lehrkräfte 2026',
+        description: 'Vergleich von KI-Lehrkräfte-Tools für den Klasseneinsatz',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=de',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Schülernachhilfe durch sokratische Fragestellung. K-12, Khan Academy Ökosystem. 44 US-Dollar pro Jahr.' },
+          { '@type': 'ListItem', position: 2, name: 'MagicSchool', description: 'Unterrichtsplanung und Klassenverwaltung. K-12-Lehrkräfte. Kostenlose begrenzte Version.' },
+          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-4o', description: 'Flexible Inhalterstellung und Entwurf. Jede Ebene, jedes Fach. Kostenlose begrenzte Version.' },
+          { '@type': 'ListItem', position: 4, name: 'Claude 4.6 Sonnet', description: 'Langform-Lehrplandesign, 200.000 Token Kontext. Hochschule und komplexe Aufgaben. Kostenlose begrenzte Version.' },
+          { '@type': 'ListItem', position: 5, name: 'NotebookLM', description: 'Quellengestützte Fragen und Antworten zu hochgeladenen Materialien. Universität und Forschung. Kostenlos.' },
+          { '@type': 'ListItem', position: 6, name: 'Gemini 2.5 Pro', description: 'Große Dokumentenanalyse, 1 Million Token Kontext. Schulverwaltung. Kostenlose begrenzte Version.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Wichtigste Erkenntnisse',
+          isTldr: true,
+          items: [
+            'KI-Tutoren produzierten Lernzuwächse, die mehr als doppelt so hoch waren wie in aktiven Lernklassenzimmern in Harvards randomisierter kontrollierter Studie von 2024 (194 Schüler; Effektstärke 0,73–1,3 SD) in 18 % weniger Lernzeit',
+            '85 % der US-amerikanischen Lehrkräfte und 86 % der Schüler nutzten KI im Schuljahr 2024–25 — die höchste KI-Adoptionsrate jeder Branche weltweit',
+            'Strukturierte Lehrkräfte-Prompts (mit Klassenstufe, Ziel, Schülerkontext und Ausgabeformat) sparen 5–13 Stunden pro Woche im Vergleich zu offenen Prompts',
+            'KI-Erkennungstools haben 15–30 % falsch-positive Raten — sie sind unzureichend als eigenständiges Tool zur Durchsetzung akademischer Integrität',
+            'Der EU AI Act klassifiziert bildungs-KI als hochriskant; EU-Schulen müssen KI-Kompetenzkurs für alle Lehrkräfte durchführen (Artikel 4, gültig ab 2025)',
+            'Schüler, die KI-Tools nutzen, erreichen in 21 empirischen Studien 15–35 % höhere Bewertungsergebnisse; r = 0,781 Korrelation zwischen KI-Tool-Nutzung und Ergebnissen',
+            'Claude 4.6 Sonnet (Anthropic) verarbeitet ~160 akademische Seiten pro Sitzung (200.000 Token); Gemini 2.5 Pro verarbeitet ~800 Seiten (1 Million Token) — Kontextgrenzen bestimmen, welches Modell passt',
+          ],
+        },
+        definition: {
+          title: 'Was KI-Lehrkräfte-Tools wirklich tun',
+          content: [
+            '**Im April 2026 führen KI-Lehrkräfte-Tools vier unterschiedliche Funktionen aus: personalisierte Nachhilfe, Unterrichtsplangenerierung, automatisiertes Bewertungsfeedback und Reduktion von Verwaltungsaufgaben — jedes erfordert ein anderes Tool und eine andere Prompt-Struktur.**',
+            'Intelligente Tutorialsysteme (ITS) — die technische Kategorie für Tools wie Khanmigo — passen Schwierigkeitsgrad an, bieten sofortiges Feedback und führen Schüler durch sokratische Fragestellung, anstatt direkte Antworten zu geben. Universelle LLMs (Large Language Models) wie GPT-4o (OpenAI) und Claude 4.6 Sonnet (Anthropic) bearbeiten Unterrichtsplangenerierung, Rubrik-Erstellung und differenzierte Unterrichtsmaterialien. Verwaltungs-KI-Tools bearbeiten Anwesenheitszusammenfassungen, Elternkommunikationsentwürfe und Fortschrittsberichte — die Aufgaben, die Lehrkräfte als am zeitintensivsten berichten.',
+            'In einem Satz: [KI im Unterricht](/prompt-engineering/what-is-prompt-engineering?lang=de) ist nicht ein Tool — es ist ein Stack, wo jede Schicht eine bestimmte Rolle im Unterrichts-Workflow erfüllt.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'KI-Lehrkräfte-Tools umfassen Tutorialsysteme (Khanmigo), Unterrichtsplaner (ChatGPT, Claude) und Verwaltungsassistenten — jedes optimiert für verschiedene Klassenzimmeraufgaben.' },
+          ],
+        },
+        toolComparison: {
+          title: 'Welche KI-Tools sollten Lehrkräfte 2026 nutzen?',
+          content: [
+            '**Khanmigo (Khan Academy), MagicSchool und ChatGPT (OpenAI) erfüllen jeweils unterschiedliche Klassenzimmerfunktionen — die Wahl des falschen Tools für die Aufgabe verschwendet Zeit und Chancen.**',
+            'Khanmigo ist der KI-Lehrkräfte-Assistent der Khan Academy, betrieben durch GPT-4. Es nutzt sokratische Fragestellung, um Schüler zu Antworten zu führen, anstatt ihnen direkt Antworten zu geben — ein entscheidender Designunterschied für Lernbehaltung. Es integriert sich direkt in Khan Academy-Kurse, was es zur stärksten Option für Schulen macht, die diese Plattform bereits nutzen.',
+            'MagicSchool bietet das umfassendste Lehrkräfte-Toolset — Unterrichtsplanung, Klassenverwaltungsvorlagen, Unterstützung bei der Erstellung von IEPs und Elternkommunikations-Tools. ChatGPT (GPT-4o) bietet die flexibelste universelle Unterstützung mit der höchsten Autonomie, erfordert aber strukturierte Prompts von der Lehrkraft, um classroom-ready Outputs zu produzieren.',
+          ],
+          callouts: [
+            { type: '💡', label: 'Profi-Tipp', text: 'Kein einzelnes Tool macht alles. Die meisten Lehrkräfte nutzen 2–3 Tools zusammen: Khanmigo für Schülernachhilfe, MagicSchool für Planung und ChatGPT für schnelle Inhalterstellung.' },
+          ],
+          columns: ['Tool', 'Am besten für', 'Kontext', 'Kostenlose Version'],
+          rows: [
+            {
+              Tool: 'Khanmigo (Khan Academy)',
+              'Am besten für': 'Schülernachhilfe; sokratisches Lernen',
+              Kontext: 'K-12, Khan Academy Ökosystem',
+              'Kostenlose Version': '44 US-Dollar pro Jahr',
+            },
+            {
+              Tool: 'MagicSchool',
+              'Am besten für': 'Unterrichtsplanung; Klassenverwaltung',
+              Kontext: 'K-12-Lehrkräfte',
+              'Kostenlose Version': 'Ja (begrenzt)',
+            },
+            {
+              Tool: 'ChatGPT / GPT-4o (OpenAI)',
+              'Am besten für': 'Flexible Inhalterstellung; Entwurfserstellung',
+              Kontext: 'Jede Ebene, jedes Fach',
+              'Kostenlose Version': 'Ja (begrenzt)',
+            },
+            {
+              Tool: 'Claude 4.6 Sonnet (Anthropic)',
+              'Am besten für': 'Langform-Lehrplandesign; Dokumentenanalyse',
+              Kontext: 'Hochschule; komplexe Aufgaben',
+              'Kostenlose Version': 'Ja (begrenzt)',
+            },
+            {
+              Tool: 'NotebookLM (Google DeepMind)',
+              'Am besten für': 'Quellengestützte Fragen und Antworten zu hochgeladenen Klassenmaterialien',
+              Kontext: 'Universität; Forschungskontexte',
+              'Kostenlose Version': 'Kostenlos / Plus-Ebene',
+            },
+            {
+              Tool: 'Gemini 2.5 Pro (Google DeepMind)',
+              'Am besten für': 'Große Dokumentenanalyse; Richtlinienüberprüfung',
+              Kontext: 'Schuldistrikt-Administratoren',
+              'Kostenlose Version': 'Ja (begrenzt)',
+            },
+          ],
+        },
+        toolUseCaseMapping: {
+          title: 'KI im Bildungswesen: Einsatzfall zu Tool-Zuordnung',
+          content: [
+            '**Nicht alle Tools passen zu allen Aufgaben. Wählen Sie das richtige Tool für jeden spezifischen Einsatzfall — verschiedene Modelle glänzen bei verschiedenen Einschränkungen (Kontextfenster, Temperatur, Kosten, Geschwindigkeit).**',
+          ],
+          columns: ['Einsatzfall', 'Empfohlenes Tool', 'Temperatur', 'Zeitersparnis'],
+          rows: [
+            {
+              Einsatzfall: 'Unterrichtsplan-Erstellung',
+              'Empfohlenes Tool': 'MagicSchool / GPT-4o',
+              Temperatur: '0,1–0,2',
+              Zeitersparnis: '30–60 Min./Unterricht',
+            },
+            {
+              Einsatzfall: 'Differenzierte Lesefähigkeitsstufen',
+              'Empfohlenes Tool': 'Claude 4.6 Sonnet',
+              Temperatur: '0,1–0,2',
+              Zeitersparnis: '15 Min./Passage',
+            },
+            {
+              Einsatzfall: 'Schülernachhilfe (sokratisch)',
+              'Empfohlenes Tool': 'Khanmigo',
+              Temperatur: 'n/v (voreingestellt)',
+              Zeitersparnis: 'Asynchron',
+            },
+            {
+              Einsatzfall: 'Rubrik-ausgerichtetes Feedback',
+              'Empfohlenes Tool': 'Claude 4.6 Sonnet (200.000 Token Kontext)',
+              Temperatur: '0,2',
+              Zeitersparnis: 'Stunden pro Klassensatz',
+            },
+            {
+              Einsatzfall: 'Elternkommunikations-Entwürfe',
+              'Empfohlenes Tool': 'ChatGPT / GPT-4o',
+              Temperatur: '0,3–0,5',
+              Zeitersparnis: '5–10 Min./Nachricht',
+            },
+            {
+              Einsatzfall: 'Lehrbuch-/Richtlinienüberprüfung',
+              'Empfohlenes Tool': 'Gemini 2.5 Pro (1 Million Token Kontext)',
+              Temperatur: '0,1',
+              Zeitersparnis: 'Stunden pro Dokument',
+            },
+          ],
+        },
+        promptStructure: {
+          title: 'Wie schreibe ich Prompts für Unterrichtsaufgaben',
+          content: [
+            '**Ein strukturierter Lehrkräfte-Prompt — einer, der Klassenstufe, Fach, Lernziel, Vorwissen, Zeitbeschränkungen und Ausgabeformat spezifiziert — erzeugt classroom-ready Materialien ohne Bearbeitung; ein unstrukturierter Prompt erzeugt einen generischen Entwurf, der 30+ Minuten Überarbeitung erfordert.**',
+            '[Prompt-Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de) ist die Praktik der Erstellung präziser, strukturierter Anweisungen, die KI-Output leiten. Für Lehrkräfte ist der Unterschied zwischen einem nutzbaren und unnutzbaren KI-Output fast immer in der Spezifität des Prompts, nicht in der Fähigkeit des Modells.',
+          ],
+          snippets: [
+            { type: 'in-plain-terms', text: 'Denken Sie an KI-Prompts wie an Rezepte: vage Prompts („machen Sie etwas Leckeres\") produzieren inkonsistente Ergebnisse; detaillierte Prompts („backen Sie einen Schokoladenkuchen bei 175°C für 35 Minuten mit Zartbitterschokolade\") produzieren zuverlässige Ergebnisse.' },
+          ],
+        },
+        promptFramework: {
+          title: 'Schlecht vs. Gut: Prompts für Unterrichtsplanung',
+          content: [
+            '**Spezifische, kontextreiche Prompts sparen Lehrkräften 5–13 Stunden pro Woche bei Unterrichtsplanung, wenn konsistent verwendet. Die schlechte Version erfordert 30+ Minuten Überarbeitung; die gute Version erzeugt classroom-ready Output in einem Durchgang.**',
+            'Schlechter Prompt — generischer Output:',
+          ],
+          blockquote: 'Erstelle eine Unterrichtsstunde über Bruchadditionen für Fünftklässler.',
+          items: [
+            'Dies erzeugt einen vagen Überblick ohne Zeitzuordnung, keine Standards-Ausrichtung, keine Differenzierung und kein Abschluss-Ticket. Der meiste Output wird verworfen.',
+          ],
+        },
+        goodExample: {
+          title: 'Der fünfteilige Lehrkräfte-Prompt',
+          content: [
+            'Guter Prompt — fünfteilige Struktur:',
+          ],
+          blockquote: 'Du bist ein erfahrener Mathematik-Lehrer der fünften Klasse. Erstelle eine 45-minütige Unterrichtsstunde über Bruchadditionen mit ungleichen Nennern. Die Schüler verstehen äquivalente Brüche, haben sie aber noch nicht kombiniert. Bitte: einen 10-minütigen Warm-up mit visuellen Modellen, 15 Minuten direkte Unterrichtung mit drei durchgearbeiteten Beispielen, 15 Minuten Partner-Praxis, und ein 5-minütiges Abschluss-Ticket. Ausrichtung an Common Core 5.NF.A.1. Geben Sie nur den Unterrichtsplan mit Abschnittsköpfen, Zeitzuordnungen und einer Materialienliste aus.',
+          items: [
+            'Die strukturierte Version erzeugt ein Dokument mit rubrik-ausgerichteten Abschnitten, zeitgesteuerten Aktivitäten und einer Materialienliste. Einsatzbereit oder zu verfeinern — nicht komplett umzuschreiben.',
+          ],
+          callouts: [
+            { type: '📌', label: 'Wichtiger Punkt', text: 'Die fünf Komponenten sind: (1) Rolle, (2) Ziel, (3) Schülerkontext, (4) Einschränkungen, (5) Ausgabeformat. Die konsistente Verwendung all dieser fünf Komponenten spart 5–13 Stunden pro Woche.' },
+          ],
+        },
+        assessmentPrompt: {
+          title: 'Wie schreibe ich KI-Prompts für Bewertungsfeedback?',
+          content: [
+            '**Für Formativ-Bewertung: Inkludieren Sie Ihre Rubrik-Kriterien direkt im Prompt, damit die KI Ihre Benotungsstandards versteht und sie konsistent über alle Schülereinreichungen anwendet.**',
+            'Claude 4.6 Sonnets 200.000-Token [Kontextfenster](/prompt-engineering/context-windows-explained?lang=de) behandelt vollständige Klassensätze kurzer Essays in einer einzelnen Sitzung — ungefähr 160 Standardseiten — was Batch-Feedback-Generierung für Lehrkräfte mit großen Klassen praktisch macht. GPT-4o behandelt ~100 Seiten pro Sitzung, ausreichend für typische Klassengrößen.',
+          ],
+          blockquote: 'Du bist eine erfahrene Englisch-Lehrerin der siebten Klasse. Analysiere diesen Schüler-Überzeugungsessay unter Verwendung dieser Rubrik: klare These (4 Punkte), drei stützende Argumente mit Belegen (12 Punkte), Anerkennung des Gegenarguments (4 Punkte), formale Übergänge (3 Punkte), Schlussfolgerung, die These verstärkt (3 Punkte). Für jedes Kriterium: geben Sie die Bewertung an, zitieren Sie den relevanten Satz, und schreiben Sie einen spezifischen Verbesserungsvorschlag. Gesamtbewertung von 26 Punkten.',
+          callouts: [
+            { type: '⚠️', label: 'Warnung', text: 'KI kann Stimme, Originalität oder Schreibqualität zuverlässig nicht beurteilen — verwenden Sie KI-Feedback immer für Mechanik und Struktur, nicht für holistischen Rubrik-Scores bei subjektiven Kriterien. Behalten Sie die endgültige Summativ-Bewertung bei Menschen.' },
+          ],
+        },
+        learningOutcomes: {
+          title: 'Verbessert KI-Nachhilfe wirklich die Lernergebnisse?',
+          content: [
+            '**Schüler, die KI-Tutorialsysteme nutzen, überbieten Gleichaltrige in traditionelle Unterrichtung um 15–35 % in standardisierten Bewertungen über 21 empirische Studien hinweg.**',
+            'Die stärkste Evidenz kommt von einer 2024 randomisierten kontrollierten Studie, geleitet von Gregory Kestin und Kelly Miller an der Harvard University, mit 194 Studierenden der Physik. Die Studie nutzte ein Crossover-Design, wo jeder Studierende sowohl KI-Nachhilfe (über „PS2 Pal\", betrieben durch GPT-4) als auch traditionelle aktive Lernmethoden über zwei Themen erlebte. Wichtige Befunde:',
+          ],
+          callouts: [
+            { type: '🔍', label: 'Wussten Sie schon?', text: 'Schüler zeigten höhere Motivation und Engagement in KI-Nachhilfe-Sitzungen. Die Effektstärke (0,73–1,3 SD) ist gleichwertig mit dem Lerngewinn aus der Umstellung von einem typischen Klassenzimmer zu erstklassiger Unterrichtung.' },
+          ],
+          items: [
+            'KI-unterrichtete Schüler erzielen signifikant höhere Ergebnisse bei Nach-Tests — Effektstärke zwischen 0,73 und 1,3 Standardabweichungen',
+            'Mittlere Lernzeit: **49 Minuten** (KI-Gruppe) vs. **60 Minuten** (Klassenzimmer-Gruppe)',
+            'Schüler berichteten über höhere Motivation und Engagement in KI-Sitzungen',
+            'Statistische Signifikanz: p < 10−8',
+            'Eine systematische Überprüfung von 2025 von 21 empirischen Studien zeigt, dass KI-unterstützte Schüler Kontrollgruppen in Bewertungen um 15–35 % überbieten, r = 0,781. Eine Stanford-Studie von 2025 zeigt, dass 2–5 Stunden mit einem intelligenten Tutorialsystem zuverlässig End-of-Year-Testergebnisse vorhersagen.',
+          ],
+        },
+        integrityProblem: {
+          title: 'Wie erkennbar ist KI-Betrug in Schulen?',
+          content: [
+            '**Aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass sie für risikoreiche akademische Integritätsentscheidungen unzuverlässig sind — und viele Schüler nutzen [KI-Halluzinationen](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de) strategisch, um Erkennung zu vermeiden.**',
+            'Akademische Integrität ist die zentrale Herausforderung in KI-unterstützter Bildung. Der Umfang der Adoption hat sowohl Richtlinien als auch Erkennungstechnologie überholt. Schüler-Adoption ist weit verbreitet: Umfragen berichten 60–92 % der Schüler nutzen KI zum Lernen, obwohl institutionelle Richtlinien bezüglich erlaubter Nutzungen stark unterscheiden.',
+            'Das Erkennungsproblem hat drei kritische Schichten:',
+          ],
+          items: [
+            '**Falsch-positive Ergebnisse** — Nichtmuttersprachler werden überproportional höher gekennzeichnet; strukturierte akademische Schreibstile (häufig in technischen Fächern) lösen Erkennungstools konsistent aus',
+            '**Hybrid-Text** — KI-Entwürfe, die von Schülern erheblich bearbeitet wurden, besiegen die meisten Erkennungssysteme',
+            '**Richtlinien-Lücke** — Universitäten verschieben 2026 von absoluten Verboten zu Transparenz- und Offenlegungs-Rahmenbedingungen, die von Schülern KI-Unterstützung erfordern, anstatt sie zu verbieten',
+          ],
+          callouts: [
+            { type: '⚠️', label: 'Warnung', text: 'Nichtmuttersprachler und Schüler mit strukturiertem Schreibstil werden überproportional höher gekennzeichnet. Die Beschuldigung eines Schülers allein auf Basis von KI-Erkennungsoutput hat ein 15–30 % Risiko falsch zu liegen.' },
+          ],
+        },
+        integrityCloser: {
+          content: [
+            'Der entstehende institutionelle Konsens: KI-Erkennungstools sind keine abschließenden Autoritäten. Universitäten fordern zunehmend menschlich-automatisierte Überprüfung auf und erzwingen Offenlegungs-Normen statt Verbots-Normen.',
+          ],
+        },
+        regulatoryContext: {
+          title: 'Wie wirkt sich der EU AI Act auf Schulen aus?',
+          content: [
+            '**Der EU AI Act klassifiziert KI-Systeme im Bildungswesen als „hochriskant\" — das bedeutet, Tools, die Prüfungsbewertung, Lernpfade oder Schülerbewertung beeinflussen, unterliegen obligatorischer Transparenz, menschlicher Überwachung und Verzerrungsvermeidungsanforderungen.**',
+            'Nach Annex III des EU AI Act sind Bildungs-KI-Tools, die Zugang zu Bildung bestimmen oder Lernergebnisse bewerten, als hochriskante Systeme klassifiziert. Schulen und Universitäten, die in der EU betrieben werden, sind als KI-\"Bereitsteller\" unter dem Gesetz betrachtet und tragen rechtliche Verpflichtungen, einschließlich:',
+          ],
+          items: [
+            'Sicherung von KI-Kompetenz des Personals (Artikel 4 Mandat — gültig ab 2025)',
+            'Implementierung menschlicher Überwachung für alle hochriskanten KI-Entscheidungen, die Schüler betreffen',
+            'Verwaltung von Audit-Logs von KI-beeinflussten Bewertungen',
+            'Offenlegung von KI-System-Datenquellen und Modelllogik gegenüber Schülern auf Anfrage',
+          ],
+          callouts: [
+            { type: '📌', label: 'Wichtiger Punkt', text: 'EU-Schulen müssen KI-Kompetenzkurs für alle Lehrkräfte und Administratoren durchführen, die mit KI-Systemen arbeiten (Artikel 4, gültig ab 2025). Nicht-Compliance trägt Strafen bis zu 30 Millionen Euro.' },
+          ],
+        },
+        regulatoryRegionalContext: {
+          title: 'Globale Bildungs-KI-Bestimmungen',
+          content: [
+            'Der EU AI Act verbietet Emotionserkennung-Systeme in Bildungseinrichtungen komplett — direkt wirkend auf Tools, die Schüler-Engagement durch Gesichtsanalyse verfolgen. Chinesische Bildungsinstitutionen setzen KI-Tools unter Chinas Interim-Maßnahmen für generative KI (2023) ein, die verlangen, dass KI-generierte Unterrichtsinhalte als solche gekennzeichnet werden. Japans Bildungsministerium (MEXT) gab 2023 Leitlinien aus, die vor KI-Nutzung in bestimmten Bewertungskontexten warnen, während KI als Kern-Schülerkompetenz anerkennen.',
+          ],
+        },
+        regionalContext: {
+          title: 'Im DACH-Kontext: KI in Schulen und Bildungsinstitutionen',
+          content: [
+            '**Der Einsatz von KI in deutschen, österreichischen und schweizer Schulen und Bildungsinstitutionen erfordert sorgfältige Beachtung von DSGVO-Compliance, BSI-Richtlinien und Dokumentation für Schulbehörden. Die Chancen sind immens — aber Struktur und Compliance sind Voraussetzung.**',
+            'KI im deutschsprachigen Bildungskontext bietet einzigartige Möglichkeiten und Herausforderungen:',
+          ],
+          items: [
+            '**DSGVO-Konformität und Artikel 28:** Wenn eine Schule KI-Plattformen (ChatGPT, Claude, Khanmigo) nutzt, die Schülerdaten verarbeitet, benötigt die Schule einen Data Processing Agreement (DPA) mit dem Anbieter. Prüfen Sie, ob Ihr Tool-Anbieter DPAs für Schulen anbietet. Lokale oder DACH-gehostete Lösungen (Ollama mit lokaler Inferenz, LM Studio) reduzieren Datenschutz-Risiken deutlich.',
+            '**BSI-Grundschutz-Kataloge:** Das Deutsche Bundesamt für Sicherheit in der Informationstechnik (BSI) hat Richtlinien für sichere IT-Systeme in Schulen herausgegeben. KI-Systeme sollten mit BSI-Empfehlungen für Authentifizierung, Datenverschlüsselung und Zugriffskontrolle konform sein. Dokumentieren Sie die Konfiguration Ihrer KI-Tools gegen BSI-Standards.',
+            '**Schulverwaltungs-Dokumentation:** Schulbehörden in Deutschland, Österreich und der Schweiz verlangen zunehmend Dokumentation aller KI-Einsätze. Führen Sie Audit-Trails für alle KI-beeinflussten Bewertungen, speichern Sie Prompts und Settings, und dokumentieren Sie Schulungen zum KI-Einsatz. Dies ist nicht nur für Compliance — es hilft auch bei kontinuierlichen Verbesserungen.',
+            '**Lokale Modelle und Mittelstands-Lösungen:** Für Schulen mit begrenztem Budget oder hohen Datenschutz-Anforderungen sind lokale Open-Source-Modelle (Ollama, LM Studio, llama.cpp) eine praktische Alternative. Diese erfordern Grundkenntnisse in IT, ersparen aber Kosten und vermeiden Datenabfluss außerhalb der EU.',
+            '**Mittelständische Schulen und Gymnasien:** Der deutschsprachige Mittelstand (kleine bis mittlere Schulen, Gymnasien, Berufsschulen) hat erfolgreich KI eingeführt, wenn diese fünf Strukturen vorhanden sind: Lehrkräfte-Schulung (mindestens 4 Stunden pro Jahr), dokumentierte Richtlinien (welche Aufgaben erlaubt sind), DSGVO-DPA mit Tool-Anbietern, regelmäßige Überwachung der Ergebnisse, Eltern-Information zur Transparenz. Schulen in Baden-Württemberg, Bayern, Nordrhein-Westfalen und der Deutschschweiz sind Vorbilder für dieses Modell.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler bei der Verwendung von KI im Bildungswesen',
+          content: [
+            '**Diese fünf Fallstricke kosten Lehrkräften Zeit und können rechtliche oder ethische Probleme erzeugen — alle sind einfach mit dem richtigen Prozess zu beheben.**',
+          ],
+          items: [
+            '**KI als Benotungs-Ersatz statt Feedback-Tool nutzen:** KI generiert plausible Rubrik-Scores, kann aber Originalität, Stimme oder Argumentationsqualität in längeren Schriften nicht zuverlässig bewerten. Verwenden Sie KI für Formativ-Feedback bei niedrig-riskanten Arbeiten; behalten Sie Summativ-Beurteilung als Mensch.',
+            '**Unstrukturierte Prompts für Unterrichtsplanung:** „Erstelle eine Lektion über Photosynthese\" erzeugt einen generischen Output, der mehr Bearbeitungszeit erfordert als von Grund auf zu schreiben. Spezifizieren Sie immer Klassenstufe, Vorwissen, Zeitbeschränkungen und Ausgabeformat.',
+            '**Übervertrauen auf KI-Erkennungstools für akademische Integrität:** Falsch-positive Raten von 15–30 % bedeuten, dass die ausschließliche Beschuldigung eines Schülers auf KI-Erkennungsoutput ein 15–30 % Risiko falsch zu liegen trägt. Nichtmuttersprachler werden überproportional höher gekennzeichnet.',
+            '**EU AI Act-Verpflichtungen für EU-Schulen ignorieren:** Bildungs-KI-Tools, die Lernpfade oder Bewertung beeinflussen, sind hochriskant unter Annex III. EU-Schulen, die diese Tools ohne Artikel 4-Personalkompetenzkurs einsetzen, sind nicht conform.',
+            '**Hohe-Temperatur-Einstellungen für Unterrichtsinhalte verwenden:** Standard-Temperatur auf den meisten KI-Plattformen (0,7–1,0) erhöht Halluzinations-Risiko. Für sachliche Unterrichtsinhalte, Bewertungsrichtlinien und Literaturangaben-Generierung, setzen Sie Temperatur auf 0,1–0,2.',
+          ],
+          callouts: [
+            { type: '🛠️', label: 'Best Practice', text: 'Dokumentieren Sie alle KI-Nutzung: welches Tool, welche Einstellungen (Temperatur, Kontext), und welche Aufgabe. Dies erzeugt eine Audit-Spur für Compliance (EU AI Act Artikel 6) und hilft Ihnen, im Laufe der Zeit zu verbessern.' },
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Was ist Prompt-Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die grundlegenden Prinzipien hinter effektiven KI-Anweisungen',
+            '[Schreiben Sie besseren Code mit KI](/prompt-engineering/write-better-code-with-ai?lang=de) — Strukturierung von KI-generierten Unterrichtsmaterialien und Prompts für Genauigkeit',
+            '[KI-Einschränkungen — Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — warum KI-Halluzination Lehrkräfte-Tools beeinflusst und wie man drumherum entwirft',
+            '[KI-gestützte Forschung](/prompt-engineering/ai-powered-research?lang=de) — Validierungs-Workflows für KI-generierte Inhalte, anwendbar auf Schüler- und Lehrkräfte-Forschungsaufgaben',
+            '[Persona-Prompting](/prompt-engineering/persona-prompting?lang=de) — wie Rollen-Definitionen wie „erfahrener Fünftklasse-Mathematik-Lehrer\" KI-Output-Qualität und Konsistenz ändern',
+            '[Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — die Reasoning-Technik hinter sokratischen KI-Tutoren wie Khanmigo',
+          ],
+        },
+        howToStart: {
+          title: 'Schritt-für-Schritt-Workflow: Mit KI unterrichten',
+          content: [
+            '**Folgen Sie diesen fünf Schritte, um KI in Ihren Unterricht zu integrieren, ohne Lernergebnisse zu stören oder akademische Integritäts-Standards zu verletzen.**',
+          ],
+          numberedItems: [
+            'Definieren Sie Lernziele und Bewertungen, bevor Sie KI einführen.',
+            'Nutzen Sie KI für personalisierte Übung und sofortiges Feedback, nicht für Benotungsurteile.',
+            'Unterrichten Sie Schüler, wie sie KI-Outputs überprüfen und Halluzinationen erkennen.',
+            'Erstellen Sie eine strukturierte Prompt-Vorlage, die Schüler für alle KI-Interaktionen verwenden.',
+            'Legen Sie klare Richtlinien zur KI-Nutzung für bestimmte Aufgaben fest.',
+          ],
+        },
+        faq: {
+          title: 'Häufig gestellte Fragen',
+          items: [],
+          faqs: [
+            {
+              q: 'Verbessern KI-Tutoren wirklich die Lernergebnisse?',
+              a: 'Ja — die Evidenz ist stark. Eine randomisierte kontrollierte Studie von Harvard aus dem Jahr 2024 mit 194 Studierenden der Physik stellte fest, dass KI-Nachhilfe Effektstärken von 0,73–1,3 Standardabweichungen über aktiven Lernklassenzimmern produzierte, wobei Studierende höhere Ergebnisse in 49 Minuten gegenüber 60 Minuten Unterrichtszeit erreichten (p < 10−8). Eine systematische Übersicht aus dem Jahr 2025 von 21 Studien zeigt, dass KI-unterstützte Schüler traditionelle Unterrichtsmethoden in Bewertungen um 15–35 % übertreffen.',
+            },
+            {
+              q: 'Welches ist das beste KI-Tool für Lehrkräfte 2026?',
+              a: 'Die Antwort hängt von der Aufgabe ab. Khanmigo (Khan Academy, betrieben durch GPT-4) ist am stärksten für Schülernachhilfe durch sokratisches Fragen zu 44 US-Dollar pro Jahr. MagicSchool führt bei umfassenden Lehrkräfte-Workflow-Tools (Unterrichtspläne, IEPs, Elternkommunikation). ChatGPT (GPT-4o, OpenAI) bietet die flexibelste universelle Inhalterstellung. Für komplexe Lehrplananalysen behandelt Claude 4.6 Sonnet (Anthropic) 200.000 Token — ungefähr 160 Standardseiten — in einer einzigen Sitzung.',
+            },
+            {
+              q: 'Wie viel Zeit kann KI Lehrkräften pro Woche sparen?',
+              a: 'Spezifische, kontextreiche Prompts sparen Lehrkräften 5–13 Stunden pro Woche bei Unterrichtsplanung und Verwaltungsaufgaben, wenn sie konsistent verwendet werden. Die häufigsten Zeitersparnis-Anwendungen sind: Recherche und Inhaltssammlung (44 % der Lehrkräfte), Unterrichtsplanerstellung (38 %), Informationszusammenfassung (38 %) und Erstellung von Klassenmaterialien (37 %).',
+            },
+            {
+              q: 'Ist KI im Bildungswesen rechtlich unter EU-Bestimmungen zulässig?',
+              a: 'KI-Systeme, die Lernbewertung oder Lernpfade beeinflussen, werden im EU AI Act (Annex III) als hochriskant klassifiziert. EU-Schulen müssen Schulungen zur KI-Kompetenz für Lehrkräfte (Artikel 4, gültig ab 2025) durchführen, menschliche Überwachung für KI-beeinflusste Bewertungen aufrechthalten und Audit-Trails für alle KI-Systeme führen, die Schülerergebnisse beeinflussen. Emotionserkennung-KI in Bildungseinrichtungen ist gemäß dem Gesetz komplett verboten.',
+            },
+            {
+              q: 'Erkennt KI-Erkennungssoftware zuverlässig akademisches Betrügen?',
+              a: 'Nein — aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass bis zu 30 von jeweils 100 legitimen Schülereinreichungen fälschlicherweise gekennzeichnet werden können. Nichtmuttersprachler und Studierende, die in strukturierten akademischen Stilen schreiben, werden überproportional höher gekennzeichnet. Universitäten verschieben 2026 von Verbotsrichtlinien zu Offenlegungs- und Zitierrahmen und behandeln KI-Erkennung als einen Input unter mehreren statt als abschließender Beweis des Fehlverhaltens.',
+            },
+            {
+              q: 'Welche Temperatureinstellung sollten Lehrkräfte für KI-Unterrichtsplanung verwenden?',
+              a: 'Stellen Sie die Temperatur auf 0,1–0,2 für sachliche Unterrichtsinhalte — Unterrichtspläne, Bewertungsrichtlinien, Lehrplanalignment. Dies erzeugt konsistente, niedrig-variierende Outputs. Verwenden Sie 0,7–0,9 nur bei der Erstellung kreativer Aktivitätsideen, bei denen verschiedene Optionen das Ziel sind. Die Standardtemperatur auf den meisten Plattformen (0,7–1,0) ist für kreative Aufgaben ausgelegt und erhöht sachliche Fehler in Unterrichtsinhalten.',
+            },
+            {
+              q: 'Können KI-Tools bei differenziertem Unterricht helfen?',
+              a: 'Ja — dies ist einer der stärksten Einsatzbereiche von KI im Bildungswesen. LLMs können denselben Inhalt in Sekunden auf mehreren Lesefähigkeitsstufen umschreiben (Flesch-Kincaid Klasse 4, 8 und 12). Prompt-Struktur: „Schreiben Sie diesen Abschnitt auf Klassenstufe [N] um. Bewahren Sie alle sachlichen Inhalte. Ersetzen Sie komplexes Vokabular durch einfachere Entsprechungen. Behalten Sie die gleiche Absatzstruktur bei.\" Claude 4.6 Sonnet produziert die konsistenteste Differenzierung über Lesefähigkeitsstufen hinweg.',
+            },
+            {
+              q: 'Wie sollten Schulen KI-Kompetenz für Lehrkräfte unter dem EU AI Act handhaben?',
+              a: 'Artikel 4 des EU AI Act verlangt, dass KI-Bereitsteller (einschließlich Schulen) ausreichende KI-Kompetenz für alle Mitarbeitenden sicherstellen, die mit KI-Systemen arbeiten — gültig ab 2025. Dies bedeutet Schulungen zu: wie KI Entscheidungen trifft, welche Fehlerraten spezifische Tools haben, wann menschliche Überwachung erforderlich ist, und wie KI-beeinflusste Entscheidungen dokumentiert werden. Schulen sollten diese Schulung für Audit-Zwecke dokumentieren.',
+            },
+            {
+              q: 'Was ist Khanmigo und wie unterscheidet es sich von ChatGPT für Schüler?',
+              a: 'Khanmigo ist der KI-Tutorialassistent der Khan Academy, betrieben durch GPT-4. Sein definierendes Merkmal ist die sokratische Fragestellung — es führt Schüler zu Antworten, anstatt ihnen direkt Antworten zu geben. Wenn ein Schüler „Was ist die Antwort?\" fragt, antwortet Khanmigo mit einer leitenden Frage. Dieses Design fördert Lernbehaltung. ChatGPT liefert standardmäßig direkte Antworten, was effizient ist, aber den kognitiven Aufwand reduziert, der langfristiges Lernen erzeugt. Für schülerfreundliche Nachhilfe ist Khanmigos pädagogisches Design überlegen; für Inhalterstellung durch Lehrkräfte gewinnt ChatGPTs Flexibilität.',
+            },
+            {
+              q: 'Wie erstelle ich eine KI-Nutzungsrichtlinie für meine Schule?',
+              a: 'Eine wirksame Schulrichtlinie zur KI-Nutzung definiert vier Dinge: (1) welche Aufgaben KI erlaubt sind (Brainstorming, Übungsprobleme, Feedbackentwürfe), (2) welche Aufgaben Offenlegung erfordern (KI-assistierte Essays, Präsentationen), (3) welche Aufgaben KI verboten ist (endgültige Prüfungsantworten, Plagiate), (4) wie KI-generierte Inhalte zitiert werden müssen. Die Richtlinie sollte alle 6 Monate überprüft werden, angesichts des rasanten Werkzeugentwicklungstempo. EU-Schulen müssen in jedem Richtliniendokument zusätzlich EU AI Act Artikel 4-Schulungsanforderungen und Annex III-Hochrisikoobligationen adressieren.',
+            },
+            {
+              q: 'Muss ich bei der Verwendung von KI-Lehrkräfte-Tools die DSGVO beachten?',
+              a: 'Ja — wenn Ihre Schule in der EU oder im EWR liegt und KI-Tools Schülerdaten verarbeitet, müssen Sie die DSGVO einhalten. Der kritische Punkt ist Artikel 28: Wenn die KI-Plattform (z. B. ChatGPT, Claude) als Auftragsverarbeiter fungiert, benötigen Sie einen Data Processing Agreement (DPA). Viele kommerziellen LLM-Anbieter bieten DPAs an; überprüfen Sie direkt bei Ihrem Toolanbieter. Für Schulen in Deutschland und der Schweiz: Der Einsatz von lokaler Inferenz (on-premise oder DACH-gehostete Modelle) über Ollama oder LM Studio reduziert das Datenschutzrisiko deutlich. Referenzieren Sie die BSI-Grundschutz-Kataloge für sichere lokale KI-Bereitstellungsarchitekturen im Schulkontext.',
+            },
+            {
+              q: 'Ist KI-Unterrichtstechnologie für den deutschen Mittelstand geeignet?',
+              a: 'Absolut — vor allem für kleinere bis mittlere Schulen und Bildungsinstitutionen. KI-Tools wie ChatGPT, Claude und Khanmigo erfordern keine großen IT-Infrastrukturen oder spezialisiertes technisches Personal. Der Schlüssel zum Erfolg im deutschsprachigen Kontext (Deutschland, Österreich, Schweiz) ist: (1) Dokumentation aller KI-Nutzung für BSI- und DSGVO-Compliance, (2) Schulung der Lehrkräfte auf Eine-Stunde-Basis-Level zu Prompt-Strukturierung, (3) lokale oder DACH-gehostete Lösungen für sensible Schülerdaten priorisieren, (4) Führen Sie Audit-Trails für alle KI-beeinflussten Bewertungen. Mittelständische Schulen in Baden-Württemberg, Bayern und der Deutschschweiz benutzen bereits KI erfolgreich, wenn die oben genannten Strukturen vorhanden sind.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Quellen und weitere Ressourcen',
+          content: [
+            '**Alle Statistiken und Befunde in diesem Artikel sind von begutachteter Forschung, amtlicher Regierungsleitlinien und dokumentierten institutionellen Richtlinien beschafft.** Letzte Faktenchecks: 2026-04-28 (gegen aktuelle Claude 4.6 Sonnet, GPT-4o, Gemini 2.5 Pro Modelle; aktuelle Khanmigo-Preise bei Khan Academy; aktuelle EU AI Act Artikel 4-Leitlinien gültig ab 2025).',
+          ],
+          items: [
+            '[Kestin & Miller, 2024. \"AI tutoring outperforms active learning classrooms — Harvard RCT\"](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — randomisierte kontrollierte Studie mit 194 Schülern; Effektstärke 0,73–1,3 SD',
+            '[Kwak, 2025. \"The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes\"](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — systematische Überprüfung von 21 Studien; 15–35 % Leistungsgewinne; r = 0,781',
+            '[EU AI Act, 2024. Annex III — High-Risk AI Systems in Education](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — klassifiziert Bildungs-Bewertungs-KI als hochriskant mit obligatorischen Überwachungsanforderungen',
+          ],
+        },
+      },
+    },
     fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
     ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
     zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },

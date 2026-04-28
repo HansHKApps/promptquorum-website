@@ -57,6 +57,38 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 
 ---
 
+## 1b. Recommended Translation Order
+
+**When translating a full article to all 4 languages, always work in this order:**
+
+1. **German (de)** — First. Most localization complexity: DSGVO/BSI context, +2 FAQs, decimal notation (`.` → `,`), EUR currency conversion, longer prose (+15–20%).
+2. **French (fr)** — Second. Moderate complexity: CNIL context (1 sentence), concise 10–15% shorter, EUR currency conversion, elegance/flow adjustments.
+3. **Japanese (ja)** — Third. High complexity: METI governance, regional restructuring (East Asia), +0 FAQ additions, JPY currency conversion, telegraphic style.
+4. **Chinese (zh)** — Fourth. High complexity: Data Security Law 2021, regional complete rewrite (not translation), +0 FAQ additions, USD kept, benefit-first tone.
+
+**Why this order:**
+- DE has the most schema/FAQ additions → patterns established for FR/JA/ZH
+- FR currency/tone conversions are simpler → faster iteration
+- JA/ZH regional rewrites come last → require less back-and-forth
+- Each commit is atomic and deployable
+
+**Process:**
+```bash
+# Translation session for article [slug]
+/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=de
+# → Review → Commit
+/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=fr
+# → Review → Commit
+/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=ja
+# → Review → Commit
+/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=zh
+# → Review → Commit
+```
+
+After all 4 languages: `git push origin main`
+
+---
+
 ## 2. Field Translation Checklist
 
 ### Always Translate These Fields
