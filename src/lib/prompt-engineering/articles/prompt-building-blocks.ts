@@ -394,29 +394,147 @@ export const article: Record<Language, PEArticle> = {
     },
 
     de: {
+      freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
-      title: 'Die 5 Bausteine jedes Prompts',
-      seoTitle: 'Die 5 Bausteine, die jeder Prompt braucht 2026',
-      intro: 'Die 5 Bausteine jedes Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat.',
-      metaDescription: 'Die 5 unverzichtbaren Komponenten eines guten Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Beschränkungen, Ausgabeformat. Bewährte Struktur.',
+      title: 'Die 5 Bausteine eines jeden Prompts',
+      seoTitle: 'Die 5 Bausteine eines Prompts: KI-Prompts strukturieren (2026)',
+      intro: '**Jeder effektive KI-Prompt benötigt fünf Bausteine: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat — fehlt einer, werden Ergebnisse inkonsistent, falsch formatiert oder halluziniert.**',
+      metaDescription: 'Rolle, Aufgabe, Beispiele, Einschränkungen, Ausgabeformat — 5 Bausteine für zuverlässige KI-Ausgaben. Fehlt einer, werden Ergebnisse inkonsistent.',
       publishDate: '2026-03-01',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Prompt-Struktur',
+      audience: 'Entwickler und Nicht-Techniker, die KI-Prompts schreiben',
+      dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28',
+      next_refresh_due: '2026-09-01',
+      toc: [
+        { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+        { label: 'Was sind die 5 Bausteine?', anchor: '#what-are-the-5-building-blocks' },
+        { label: 'Warum sind diese 5 Bausteine wichtig?', anchor: '#why-building-blocks-matter' },
+        { label: 'Block 1: Rolle & Kontext', anchor: '#block-1-role-context' },
+        { label: 'Block 2: Aufgabe / Anweisung', anchor: '#block-2-task-instruction' },
+        { label: 'Block 3: Eingabe und Beispiele', anchor: '#block-3-input-examples' },
+        { label: 'Block 4: Einschränkungen', anchor: '#block-4-constraints' },
+        { label: 'Block 5: Ausgabeformat', anchor: '#block-5-output-format' },
+        { label: 'Wie kombiniert man alle 5 Bausteine zusammen?', anchor: '#prompt-template' },
+        { label: 'Wie mappen die 5 Bausteine auf CRAFT, CO-STAR und SPECS?', anchor: '#frameworks-and-tools' },
+        { label: 'Häufigste Fehler mit Bausteinstrukturen', anchor: '#common-mistakes' },
+        { label: 'Wie man einen Prompt erstellt (Schritt für Schritt)', anchor: '#how-to-build-a-prompt' },
+        { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Die 5 Bausteine jedes Prompts',
-        description: 'Die 5 Bausteine jedes Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat. Mit diesen fünf Komponenten wird jeder KI-Prompt zuverlässig und wiederholbar.',
+        headline: 'Die 5 Bausteine eines jeden Prompts',
+        description: 'Die 5 Bausteine eines jeden Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat. Mit diesen fünf Komponenten wird jeder KI-Prompt zuverlässig und wiederholbar.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-04-28',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de',
         inLanguage: 'de',
-        keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'GPT-5.5', 'Claude', 'Gemini'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        proficiencyLevel: 'Beginner',
+        keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'GPT-5', 'Claude', 'Gemini'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        mentions: [
+          { '@type': 'Thing', name: 'OpenAI GPT-5' },
+          { '@type': 'Thing', name: 'Anthropic Claude' },
+          { '@type': 'Thing', name: 'Google Gemini' },
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'CO-STAR framework' },
+          { '@type': 'Thing', name: 'CRAFT framework' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'AI Prompt Structure' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Brauche ich wirklich alle 5 Bausteine in jedem Prompt?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Nein. Einfache, eindeutige Aufgaben benötigen oft nur eine Aufgabe / Anweisung und ein Ausgabeformat. Rolle & Kontext hinzufügen, wenn Bereich oder Zielgruppe relevant sind. Einschränkungen hinzufügen, wenn Fehler kostspielig sind. Beispiele hinzufügen, wenn Formatpräzision kritisch ist. Minimal beginnen und Bausteine nur hinzufügen, wenn die Ausgabe den eigenen Standard nicht erfüllt.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist Rolle wichtiger als Kontext oder umgekehrt?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sie funktionieren als Paar – keines reicht allein aus. Rolle ohne Kontext liefert generische Experten-Ausgaben. Kontext ohne Rolle liefert situationsbewusste, aber tonal inkonsistente Ausgaben. Für die meisten Aufgaben funktioniert ein Satz, der beides kombiniert, gut: „Du bist ein [Rolle], der mit [Zielgruppe] an [Domänenaufgabe] arbeitet."' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Kann ich Prompts kurz halten und trotzdem alle 5 Bausteine einschließen?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Jeder Baustein kann in einem einzigen Satz ausgedrückt werden. Ein vollständiger Fünf-Bausteine-Prompt kann unter 100 Wörtern liegen. Kürze ist nicht das Problem – Vagheit ist es. Ein kurzer, präziser Prompt mit allen fünf Elementen übertrifft konsistent einen langen, weitschweifigen ohne keines davon.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist der Unterschied zwischen Kontext und Beispielen?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Kontext beschreibt die Situation, den Bereich und die Zielgruppe – es sind Hintergrundinformationen, die die Aufgabe rahmen. Beispiele sind Muster-Eingabe/Ausgabe-Paare, die dem Modell zeigen, wie eine korrekte Antwort aussieht. Kontext sagt dem Modell, wo es ist; Beispiele zeigen ihm, was es produzieren soll.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wo passen Einschränkungen hin, wenn ich ein Framework wie CRAFT oder CO-STAR verwende?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Jedes wichtige Framework hat ein Feld, das auf Einschränkungen abbildet – „Restrictions" in CRAFT, „Tone & Style" in CO-STAR, „Constraints" in SPECS. Wenn das eigene Framework kein explizites Einschränkungsfeld hat, die Einschränkungen am Ende als separaten „Nicht"-Abschnitt hinzufügen – alle Modelle handhaben dies zuverlässig.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Spielt das Ausgabeformat eine Rolle, wenn ich nur eine einfache Frage stelle?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Bei Gesprächsfragen ist das Festlegen des Formats optional. Für jede Ausgabe, die nachgelagert verwendet wird – in ein Dokument eingefügt, von Code verarbeitet, veröffentlicht oder von Teammitgliedern wiederverwendet – ist das Festlegen des Formats unerlässlich. Es ist der Unterschied zwischen einem Ergebnis und einem nutzbaren Ergebnis.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. PromptQuorum ist DSGVO-konform, insbesondere wenn Sie lokale Inferenzen mit On-Premise-Modellen über Ollama oder LM Studio nutzen. Lokale Modelle halten Ihre Daten in Ihrer Kontrolle und erfüllen Anforderungen nach Datenschutz und BSI-Grundschutz-Katalogen für Mittelstandsunternehmen. Für Cloud-Instanzen — immer Datenverarbeitungsverträge (DPAs) mit dem Provider verhandeln.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. PromptQuorum ist speziell für deutsche Mittelstandsunternehmen entwickelt worden und erfüllt BSI- und IT-Sicherheitsstandards. Mit lokalen Modellen erhalten Sie volle Datensouvränität, Offline-Betrieb, und Anpassung an Branchenstandards (Finanz, Medizin, Recht). Die Kostenstruktur ist auch für KMUs geeignet — skaliert mit Ihren Anforderungen ohne überproportionale Cloud-Ausgaben.' },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'de',
+        name: 'Wie man einen Prompt mit den 5 Bausteinstrukturen erstellt',
+        totalTime: 'PT5M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Rolle & Kontext setzen', text: 'Sagen Sie, wer das Modell ist und wer es unterstützt. Ein Satz: "Du bist ein [rolle] der [audience] hilft."' },
+          { '@type': 'HowToStep', position: 2, name: 'Schreiben Sie die Aufgabe / Anweisung', text: 'Sagen Sie die genaue Aktion, die das Modell durchführen soll, mit einem Verb. "Zusammenfassen", "Klassifizieren", "Übersetzen", "Generieren".' },
+          { '@type': 'HowToStep', position: 3, name: 'Fügen Sie Eingabe & Beispiele hinzu', text: 'Geben Sie die Daten oder Inhalte ein, mit denen das Modell arbeitet. Fügen Sie ein oder zwei Beispiele hinzu, wenn das Format präzise sein muss.' },
+          { '@type': 'HowToStep', position: 4, name: 'Setzen Sie Einschränkungen', text: 'Listen Sie auf, was das Modell nicht tun darf, Längenbeschränkungen und alle Ausgaberegeln.' },
+          { '@type': 'HowToStep', position: 5, name: 'Geben Sie das Ausgabeformat an', text: 'Definieren Sie die exakte Form der Ausgabe: JSON, Aufzählungsliste, Tabelle, Absatz, nummerierte Schritte.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'de',
+        name: '5 Bausteine, die jeder KI-Prompt braucht',
+        description: 'Die fünf Strukturkomponenten, die jeder zuverlässige KI-Prompt enthält: Rolle, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat.',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Baustein 1: Rolle & Kontext', description: 'Teilt dem Modell mit, wer es ist und wer es unterstützt. Setzt Domänen-Expertise und Publikums-Bewusstsein.' },
+          { '@type': 'ListItem', position: 2, name: 'Baustein 2: Aufgabe / Anweisung', description: 'Die explizite Aussage, was das Modell tun muss, mit einem klaren Aktionsverb.' },
+          { '@type': 'ListItem', position: 3, name: 'Baustein 3: Eingabe & Beispiele', description: 'Die Daten oder Inhalte, mit denen das Modell arbeitet, plus optionale Beispiele, die zeigen, wie korrekte Ausgaben aussehen.' },
+          { '@type': 'ListItem', position: 4, name: 'Baustein 4: Einschränkungen', description: 'Regeln, die das Modell befolgen muss — Längenlimits, verbotener Inhalt, Stilbeschränkungen.' },
+          { '@type': 'ListItem', position: 5, name: 'Baustein 5: Ausgabeformat', description: 'Die exakte Struktur der Ausgabe: JSON, Aufzählungsliste, Tabelle, Fließtext-Absatz oder nummerierte Schritte.' },
+        ],
       },
       sections: {
+
         definition: {
+          id: 'what-are-the-5-building-blocks',
           title: 'Was sind die 5 Bausteine eines Prompts?',
           content: [
             '**Die 5 Bausteine, die jeder Prompt benötigt, sind: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat.** Diese fünf Komponenten sind die Mindeststruktur, die einen zuverlässigen, wiederholbaren Prompt von einer vagen Frage unterscheidet, die inkonsistente Ergebnisse liefert.',
@@ -424,28 +542,40 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        badVsGood: {
+          id: 'bad-vs-good-example',
+          content: [
+            '**Ohne die 5 Bausteine (vag):**\n> Fasse diesen Bericht zusammen.',
+            '**Mit allen 5 Bausteinen (vollständig):**\n> Du bist ein leitender Business-Analyst (Rolle). Fasse die wichtigsten Erkenntnisse aus dem Q3-Bericht unten zusammen (Aufgabe). [Berichtstext] (Eingabe). Nutze nur Fakten aus dem Bericht; max. 200 Wörter; formaler Ton (Einschränkungen). Gib 3 Aufzählungspunkte unter "Wichtigste Erkenntnisse" zurück (Ausgabeformat).',
+          ],
+        },
+
         tldr: {
-          title: 'Die wichtigsten Erkenntnisse',
+          id: 'key-takeaways',
+          title: 'Wichtigste Erkenntnisse',
           isTldr: true,
           items: [
             'Rolle & Kontext: Dem Modell sagen, wer es ist und in welchem Bereich es tätig ist',
-            'Aufgabe / Anweisung: Genau angeben, was das Modell produzieren soll – spezifisch und überprüfbar',
+            'Aufgabe / Anweisung: Genau angeben, was das Modell produzieren soll — spezifisch und überprüfbar',
             'Eingabe & Beispiele: Die Rohdaten und Beispiel-Eingabe/Ausgabe-Paare bereitstellen, die das Modell benötigt',
-            'Einschränkungen: Die Regeln festlegen – was das Modell tun muss und was nicht',
-            'Ausgabeformat: Die genaue Form der Antwort festlegen – JSON, Aufzählungspunkte, Tabelle oder Fließtext',
+            'Einschränkungen: Die Regeln festlegen — was das Modell tun muss und was nicht',
+            'Ausgabeformat: Die genaue Form der Antwort festlegen — JSON, Aufzählungspunkte, Tabelle oder Fließtext',
           ],
         },
 
         whyMatters: {
-          title: 'Warum diese 5 Bausteine im Jahr 2026 wichtig sind',
+          id: 'why-building-blocks-matter',
+          title: 'Warum sind diese 5 Bausteine wichtig?',
           content: [
-            'Das Fünf-Bausteine-Modell spiegelt den konvergierten Konsens aus Prompt-Engineering-Anleitungen von OpenAI, Google, Anthropic und unabhängigen Praktikern wider. Rolle, Anweisungen, Beispiele, Einschränkungen und Ausgabeformat erscheinen – unter verschiedenen Namen – in jedem wichtigen Framework, das seit 2023 veröffentlicht wurde. Das ist kein Zufall: Es sind die Mindestinformationen, die ein probabilistisches Modell benötigt, um ein nützliches, konsistentes Ergebnis zu liefern.',
-            'Der geschäftliche Nutzen ist eindeutig. Fehlende Rolle und Kontext liefern generische Antworten, die umgeschrieben werden müssen. Fehlende Einschränkungen erhöhen das Halluzinationsrisiko und erzeugen markenfremde Ausgaben. Fehlendes Ausgabeformat bedeutet Ergebnisse, die nicht direkt verwendet oder kopiert werden können. Das 5-Bausteine-Modell adressiert alle drei Fehlertypen gleichzeitig und gilt gleichermaßen für GPT-4-Klasse-Modelle, Claude, Gemini und lokal betriebene LLMs.',
+            'Das Fünf-Bausteine-Modell spiegelt den konvergierten Konsens aus Prompt-Engineering-Anleitungen von OpenAI, Google, Anthropic und unabhängigen Praktikern wider. Rolle, Anweisungen, Beispiele, Einschränkungen und Ausgabeformat erscheinen — unter verschiedenen Namen — in jedem wichtigen Framework, das seit 2023 veröffentlicht wurde. Das ist kein Zufall: Es sind die Mindestinformationen, die ein probabilistisches Modell benötigt, um ein nützliches, konsistentes Ergebnis zu liefern.',
+            'Der geschäftliche Nutzen ist eindeutig. Fehlende Rolle und Kontext liefern generische Antworten, die umgeschrieben werden müssen. Fehlende Einschränkungen erhöhen das Halluzinationsrisiko und erzeugen markenfremde Ausgaben. Fehlendes Ausgabeformat bedeutet Ergebnisse, die nicht direkt verwendet oder kopiert werden können. Das 5-Bausteine-Modell adressiert alle drei Fehlertypen gleichzeitig und gilt gleichermaßen für GPT-5, Claude 4.7, Gemini 3 Pro und lokal betriebene LLMs.',
+            'Für deutsche Unternehmen unter DSGVO und BSI-Grundschutz-Standards: Lokale Inferenzen mit Ollama oder LM Studio erfüllen Datenschutzanforderungen vollständig, während Sie gleichzeitig die Effizienz dieser strukturierten Prompts nutzen.',
           ],
         },
 
         block1: {
-          title: 'Baustein 1: Rolle & Kontext',
+          id: 'block-1-role-context',
+          title: 'Was macht der Block Rolle & Kontext?',
           content: [
             '**Rolle** sagt dem Modell, welche Persona oder Expertise es annehmen soll. **Kontext** teilt ihm die Situation, den Bereich und die Zielgruppe mit, in der es tätig ist. Sie werden zusammengefasst, weil sie als Paar funktionieren – Rolle ist, wer das Modell ist, und Kontext ist die Umgebung, die definiert, was „gut" für diese Aufgabe bedeutet.',
             'Wenn Rolle und Kontext weggelassen werden, antwortet das Modell aus einer generischen Perspektive – für niemanden im Besonderen nützlich. Mit ihnen wird dasselbe Modell zum erfahrenen Steuerberater, der eine Frage zu Umsatzsteuererklärungen beantwortet, zum Nachwuchs-Texter, der für eine 19-jährige Zielgruppe schreibt, oder zum Datenanalysten, der einen Quartalsbericht zusammenfasst. Die Ausgabe kalibriert sich auf die tatsächliche Situation.',
@@ -459,11 +589,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block1Link: {
-          content: 'Um zu verstehen, wie sich Rollen-Prompting entwickelt hat, als Modelle immer besser darin wurden, Anweisungen zu befolgen, siehe [Fundamentals: From GPT-2 to Today: How Prompt Engineering Evolved].',
+          content: 'Um zu verstehen, wie sich Rollen-Prompting entwickelt hat, als Modelle immer besser darin wurden, Anweisungen zu befolgen, siehe [How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=de).',
         },
 
         block2: {
-          title: 'Baustein 2: Aufgabe / Anweisung',
+          id: 'block-2-task-instruction',
+          title: 'Was ist der Aufgabe / Anweisung Block?',
           content: [
             '**Der Baustein Aufgabe / Anweisung ist die explizite Aussage darüber, was das Modell tun soll.** Es ist der wichtigste Baustein – alle anderen Bausteine unterstützen diesen. Eine klare, spezifische, überprüfbare Anweisung reduziert Mehrdeutigkeit auf nahezu null. Eine vage Anweisung ist die häufigste Ursache für schlechte KI-Ausgaben über alle Modelle und Anwendungsfälle hinweg.',
             'Aktuelle Best-Practice-Empfehlungen betonen, die Aufgabe handlungsorientiert und beobachtbar zu gestalten: ein Verb verwenden, das Ergebnis benennen und wenn möglich ein Erfolgskriterium beschreiben. „Schreibe eine Zusammenfassung" ist eine Aufgabe. „Fasse den folgenden Artikel in 3 Aufzählungspunkten zusammen, jeweils unter 20 Wörtern" ist eine Aufgabe mit einer überprüfbaren Ausgabe. Der Unterschied in der Ausgabequalität ist erheblich.',
@@ -477,11 +608,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block2Link: {
-          content: 'Anweisungen interagieren direkt damit, ob Beispiele bereitgestellt werden – siehe [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] dafür, wann welcher Ansatz am besten funktioniert.',
+          content: 'Anweisungen interagieren direkt damit, ob Beispiele bereitgestellt werden – siehe [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) dafür, wann welcher Ansatz am besten funktioniert.',
         },
 
         block3: {
-          title: 'Baustein 3: Eingabe & Beispiele',
+          id: 'block-3-input-examples',
+          title: 'Wie verbessern Eingabe und Beispiele die Genauigkeit?',
           content: [
             '**Eingabe** sind die tatsächlichen Daten, Texte oder Materialien, mit denen das Modell arbeiten soll. **Beispiele** sind Muster-Eingabe/Ausgabe-Paare, die zeigen, wie eine korrekte Antwort aussieht. Das sind separate Aspekte: Eingabe ist das Rohmaterial für die aktuelle Aufgabe, Beispiele sind das Lernmuster, das die Ausführung durch das Modell prägt.',
             '1–3 Beispiele einzuschließen (Few-Shot-Prompting) ist die zuverlässigste Einzeltechnik, um Ausgabeformat und Ton festzulegen. Wenn man dem Modell zeigt, wie eine gute Antwort aussieht, passt es das Muster an, anstatt es nur aus der Aufgabenbeschreibung abzuleiten. Dies ist am wichtigsten für spezialisierte Formate, konsistenten Ton und strukturierte Ausgaben, bei denen Präzision erforderlich ist.',
@@ -495,11 +627,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block3Link: {
-          content: 'Für eine vollständige Aufschlüsselung, wann Beispiele verwendet werden und wann sie weggelassen werden, siehe [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?].',
+          content: 'Für eine vollständige Aufschlüsselung, wann Beispiele verwendet werden und wann sie weggelassen werden, siehe [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot?lang=de).',
         },
 
         block4: {
-          title: 'Baustein 4: Einschränkungen',
+          id: 'block-4-constraints',
+          title: 'Was sind Einschränkungen und warum brauchen Prompts sie?',
           content: [
             '**Einschränkungen sind die Regeln, die das Modell befolgen muss: was es tun muss und was nicht.** Sie umfassen Längenbeschränkungen, verbotene Themen oder Formulierungen, erforderliche Quellen, Marken-Ton-Regeln, Sicherheitsgrenzen und Formatrestriktionen. Einschränkungen sind der am häufigsten weggelassene Baustein – und ihr Fehlen ist die Hauptursache für halluzinierte Fakten, markenfremde Sprache und Ausgaben im falschen Format.',
             'Das Hinzufügen einer gut abgegrenzten Einschränkung ist oft die wirkungsvollste Änderung an einem bestehenden Prompt. „Erfinde keine Statistiken" senkt das Halluzinationsrisiko erheblich. „Überschreite nie 100 Wörter" erzwingt Knappheit. „Verwende nur Informationen aus dem bereitgestellten Text" verankert die Ausgabe im Quellmaterial und eliminiert Fabrikation für diese Aufgabe vollständig.',
@@ -514,11 +647,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block4Links: {
-          content: 'Für die Technik, Ausschlüsse zur Gestaltung von Ausgaben zu verwenden, siehe [Techniques: Negative Prompting: Tell the AI What NOT to Do]. Warum unkontrollierte Prompts mehr halluzinieren, erklärt [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them].',
+          content: 'Für die Technik, Ausschlüsse zur Gestaltung von Ausgaben zu verwenden, siehe [Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=de). Warum unkontrollierte Prompts mehr halluzinieren, erklärt [AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de).',
         },
 
         block5: {
-          title: 'Baustein 5: Ausgabeformat',
+          id: 'block-5-output-format',
+          title: 'Wie steuert das Ausgabeformat, was man erhält?',
           content: [
             '**Ausgabeformat legt die genaue Form der Antwort fest, die das Modell produzieren soll.** Dies ist der Baustein, der bestimmt, ob die Ausgabe direkt verwendbar ist oder vor der Nutzung umformatiert werden muss. Bei automatisierten Pipelines bedeutet ein nicht festgelegtes Ausgabeformat fragiles, inkonsistentes Parsen. Für GEO ist eine strukturierte Ausgabe eher dazu geeignet, von KI-Suchmaschinen wörtlich zitiert zu werden, da strukturierte Antworten programmatisch leichter zu extrahieren sind.',
             'Der Ausgabeformat-Baustein kann das Dateiformat (JSON, Markdown, CSV), die Struktur (Tabelle, Aufzählungsliste, nummerierte Schritte), die Länge und die Beschriftung von Abschnitten festlegen. Je präziser man es angibt, desto weniger Bearbeitung erfordert die Ausgabe.',
@@ -532,11 +666,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block5Link: {
-          content: 'Für einen vollständigen Leitfaden zu JSON-Modus und strukturierter Ausgabe über verschiedene Modelle hinweg, siehe [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data].',
+          content: 'Für einen vollständigen Leitfaden zu JSON-Modus und strukturierter Ausgabe über verschiedene Modelle hinweg, siehe [Structured Output & JSON Mode: Get AI to Return Usable Data](/prompt-engineering/structured-output-and-json-mode?lang=de).',
         },
 
         template: {
-          title: 'Die 5 Bausteine zusammenfügen: Eine einfache Vorlage',
+          id: 'prompt-template',
+          title: 'Wie kombiniert man alle 5 Bausteine zusammen?',
           content: 'Die folgende Vorlage zeigt alle 5 Bausteine in der Reihenfolge für eine einzige domänenneutrale Aufgabe zusammengestellt. Jeder Teil ist beschriftet, sodass genau erkennbar ist, wo jeder Baustein beginnt und endet. Den Inhalt in jedem Abschnitt ersetzen, um ihn an eine beliebige Domäne anzupassen.',
           items: [
             '**[Rolle & Kontext]** Du bist ein erfahrener Business-Analyst. Die Zielgruppe ist ein nicht-technisches Führungsteam, das einen vierteljährlichen Betriebsbericht überprüft.',
@@ -548,11 +683,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'Diese Vorlage funktioniert auf GPT-5.5, Claude, Gemini und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
+          content: 'Diese Vorlage funktioniert auf GPT-5, Claude 4.7, Gemini 3 Pro und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
         },
 
         frameworks: {
-          title: 'Wie diese Bausteine auf Frameworks und Werkzeuge abbilden',
+          id: 'frameworks-and-tools',
+          title: 'Wie mappen die 5 Bausteine auf CRAFT, CO-STAR und SPECS?',
           content: [
             'Beliebte Prompt-Engineering-Frameworks sind meinungsstarke Wege, dieselben fünf Bausteine unter verschiedenen Namen und in unterschiedlichen Reihenfolgen anzuordnen. CRAFT, CO-STAR und SPECS bilden alle direkt auf dieses Fünf-Bausteine-Modell ab. Die Bausteine zuerst zu verstehen bedeutet, jedes Framework anzuwenden, ohne seine spezifische Terminologie von Grund auf auswendig lernen zu müssen.',
             'Die folgende Tabelle zeigt, wie jeder Baustein dem entsprechenden Feld in drei weit verbreiteten Frameworks zugeordnet wird:',
@@ -568,11 +704,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum enthält 9 eingebaute Frameworks, die diese Bausteine je nach Aufgabentyp in verschiedenen Konfigurationen vorausfüllen. Für framework-spezifische Leitfäden, siehe [Frameworks: Which Prompt Framework Should You Use?], [Frameworks: CRAFT Framework] und [Frameworks: CO-STAR Framework].',
+          content: 'PromptQuorum enthält 9 eingebaute Frameworks, die diese Bausteine je nach Aufgabentyp in verschiedenen Konfigurationen vorausfüllen. Für framework-spezifische Leitfäden, siehe [Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de), [CRAFT Framework](/prompt-engineering/craft-framework?lang=de) und [CO-STAR Framework](/prompt-engineering/co-star-framework?lang=de).',
         },
 
         mistakes: {
-          title: 'Häufige Fehler mit den 5 Bausteinen',
+          id: 'common-mistakes',
+          title: 'Was sind die häufigsten Fehler mit Prompt-Bausteinstrukturen?',
           items: [
             '**Rolle vollständig weglassen:** Das Modell antwortet aus einer generischen Perspektive – Bereich und Expertise-Level angeben, auch wenn es nur ein Satz ist',
             '**Vager Kontext:** „Schreibe für mein Publikum" sagt dem Modell nichts – die Zielgruppe, ihr Wissensniveau und was sie mit der Ausgabe machen werden, benennen',
@@ -584,8 +721,21 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        howToStart: {
+          id: 'how-to-build-a-prompt',
+          title: 'Wie man einen Prompt erstellt (Schritt für Schritt)',
+          numberedItems: [
+            '**Rolle & Kontext setzen:** Öffnen Sie mit wer das Modell ist und die Domäne, in der es tätig ist. Beispiel: „Du bist ein erfahrener Steuerberater, der einen kleinen Geschätsinhaber in Deutschland unterstützt." Ohne dies antwortet das Modell aus einer generischen Perspektive.',
+            '**Schreiben Sie die Aufgabe / Anweisung:** Sagen Sie genau, was produziert werden soll — spezifisch und überprüfbar. „Fasse die wichtigsten Umsatzsteuerpflichten in 200 Wörtern zusammen" ist besser als „erzähle mir von Umsatzsteuer."',
+            '**Fügen Sie Eingabe & Beispiele hinzu:** Geben Sie die Rohdaten an und mindestens ein Beispiel des korrekten Ausgabeformats. Ein gut gewähltes Beispiel reduziert Inkonsistenz mehr als jede andere Einzeltechnik.',
+            '**Definieren Sie Einschränkungen:** Listen Sie auf, was das Modell nicht tun darf, die Längenbegrenzung und die Tonregeln. Beispiel: „Geben Sie keinen Rat für Jurisdiktionen außerhalb Deutschlands. Maximum 200 Wörter. Formaler Ton."',
+            '**Geben Sie das Ausgabeformat an:** Sagen Sie die exakte Form der Antwort — JSON-Objekt, 3-Punkt-Zusammenfassung, Tabelle oder Fließtext-Absatz. Diese wegzulassen ist die häufigste Ursache für nicht nutzbare KI-Ausgaben.',
+          ],
+        },
+
         faq: {
-          title: 'FAQ: Die Bausteine eines Prompts',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             {
               q: 'Brauche ich wirklich alle 5 Bausteine in jedem Prompt?',
@@ -601,7 +751,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Was ist der Unterschied zwischen Kontext und Beispielen?',
-              a: 'Kontext beschreibt die Situation, den Bereich und die Zielgruppe – es sind Hintergrundinformationen, die die Aufgabe rahmen. Beispiele sind Muster-Eingabe/Ausgabe-Paare, die dem Modell zeigen, wie eine korrekte Antwort aussieht. Kontext sagt dem Modell, wo es ist; Beispiele zeigen ihm, was es produzieren soll. Beides ist nützlich, aber sie dienen völlig unterschiedlichen Zwecken.',
+              a: 'Kontext beschreibt die Situation, den Bereich und die Zielgruppe – es sind Hintergrundinformationen, die die Aufgabe rahmen. Beispiele sind Muster-Eingabe/Ausgabe-Paare, die dem Modell zeigen, wie eine korrekte Antwort aussieht. Kontext sagt dem Modell, wo es ist; Beispiele zeigen ihm, was es produzieren soll.',
             },
             {
               q: 'Wo passen Einschränkungen hin, wenn ich ein Framework wie CRAFT oder CO-STAR verwende?',
@@ -611,8 +761,40 @@ export const article: Record<Language, PEArticle> = {
               q: 'Spielt das Ausgabeformat eine Rolle, wenn ich nur eine einfache Frage stelle?',
               a: 'Bei Gesprächsfragen ist das Festlegen des Formats optional. Für jede Ausgabe, die nachgelagert verwendet wird – in ein Dokument eingefügt, von Code verarbeitet, veröffentlicht oder von Teammitgliedern wiederverwendet – ist das Festlegen des Formats unerlässlich. Es ist der Unterschied zwischen einem Ergebnis und einem nutzbaren Ergebnis.',
             },
+            {
+              q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
+              a: 'Ja. PromptQuorum ist DSGVO-konform, insbesondere wenn Sie lokale Inferenzen mit On-Premise-Modellen über Ollama oder LM Studio nutzen. Lokale Modelle halten Ihre Daten in Ihrer Kontrolle und erfüllen Anforderungen nach Datenschutz und BSI-Grundschutz-Katalogen für Mittelstandsunternehmen. Für Cloud-Instanzen — immer Datenverarbeitungsverträge (DPAs) mit dem Provider verhandeln.',
+            },
+            {
+              q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
+              a: 'Ja. PromptQuorum ist speziell für deutsche Mittelstandsunternehmen entwickelt worden und erfüllt BSI- und IT-Sicherheitsstandards. Mit lokalen Modellen erhalten Sie volle Datensouvränität, Offline-Betrieb, und Anpassung an Branchenstandards (Finanz, Medizin, Recht). Die Kostenstruktur ist auch für KMUs geeignet — skaliert mit Ihren Anforderungen ohne überproportionale Cloud-Ausgaben.',
+            },
           ],
         },
+
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=de) — Von frühen Instruction-Following-Modellen zu heutigen Reasoning-fähigen Systemen: wie sich Prompting-Techniken mit Modell-Kapazitäten entwickelt haben.',
+            '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Wann Beispiele verwendet werden und wann sie weggelassen werden: Auswahl des richtigen Prompting-Ansatzes für die Aufgabe.',
+            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=de) — Einschränkungen in Aktion: wie Ausschlüsse Ausgaben zuverlässiger gestalten als Einschlüsse.',
+            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — Warum Einschränkungen und Beispiele wichtig sind: die Grundursachen von Halluzinationen und evidenzbasierte Abwehrmaßnahmen.',
+            '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode?lang=de) — Präzise Ausgabeformate angeben: JSON-Modus, Markdown-Tabellen und andere strukturierte Ansätze über Modelle hinweg.',
+            '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de) — Vergleich von CRAFT, CO-STAR, SPECS und anderen: Wahl eines Frameworks, das zu Ihrem Anwendungsfall passt.',
+          ],
+        },
+
+        sources: {
+          id: 'sources',
+          title: 'Quellenangaben & Weiterführendes',
+          items: [
+            '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Offizielle Prompt-Engineering-Anleitung von OpenAI, einschließlich Best Practices für rollenbasierte und strukturierte Prompts.',
+            '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Sicherheitsimplikationen unstrukturierter Prompts und Empfehlungen für Einschränkungen.',
+            '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Umfassender Katalog von Prompt-Design-Mustern, einschließlich strukturierter und rollenbasierter Techniken, die direkt auf das Fünf-Bausteine-Modell anwendbar sind.',
+          ],
+        },
+
       },
     },
     fr: {
