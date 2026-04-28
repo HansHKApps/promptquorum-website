@@ -20,6 +20,7 @@ export const article: Record<Language, PEArticle> = {
       primaryTerm: 'Prompt Structure',
       audience: 'Developers and non-technical users writing AI prompts',
       dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28',
       next_refresh_due: '2026-09-01',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -142,6 +143,14 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**The 5 building blocks every prompt needs are: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format.** These five components are the minimum structure that separates a reliable, repeatable prompt from a vague question that produces inconsistent results.',
             'Each block solves a different failure mode. Role & Context tells the model who it is and what situation it is in. Task / Instruction tells it exactly what to do. Input & Examples give it the raw material and teaching signal. Constraints set the rules. Output Format specifies the shape of the answer. Together, they leave the model with nothing left to guess.',
+          ],
+        },
+
+        badVsGood: {
+          id: 'bad-vs-good-example',
+          content: [
+            '**Without the 5 blocks (vague):**\n> Summarize this report.',
+            '**With all 5 blocks (complete):**\n> You are a senior business analyst (Role). Summarize the key findings from the Q3 report below (Task). [Report text] (Input). Use only facts from the report; max 200 words; formal tone (Constraints). Return 3 bullet points under "Key Findings" (Output Format).',
           ],
         },
 
