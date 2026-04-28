@@ -14,10 +14,26 @@ export const article: Record<Language, PEArticle> = {
       seoTitle: 'TRACE Framework: Prompts That Show AI Reasoning 2026',
       intro: '**The TRACE Framework turns AI reasoning from a black box into a visible, step-by-step process.** It asks models to Think, Reason, Analyze, Conclude, and Explain — so you can see where the logic holds and where it breaks. PromptQuorum includes the TRACE Framework as a built-in option that any user can select and use directly inside the app.',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-28',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'TRACE Framework',
       metaDescription: 'TRACE Framework (Think, Reason, Analyze, Conclude, Explain) forces AI to show its work. When to use it, how to write TRACE prompts, why transparency matters.',
+      toc: [
+        { anchor: 'key-takeaways', label: 'Key Takeaways' },
+        { anchor: 'what-is-trace', label: 'What the TRACE Framework Is' },
+        { anchor: 'why-trace-matters', label: 'Why the TRACE Framework Matters' },
+        { anchor: 'five-stages', label: 'What Are the Five TRACE Stages?' },
+        { anchor: 'bad-vs-good-example', label: 'Example: Bad vs Good TRACE Prompt' },
+        { anchor: 'when-to-use', label: 'When to Use the TRACE Framework' },
+        { anchor: 'how-to-write', label: 'How to Write a TRACE Prompt' },
+        { anchor: 'how-promptquorum-implements', label: 'How PromptQuorum Implements the TRACE Framework' },
+        { anchor: 'combining-trace', label: 'How Do You Combine TRACE With Other Frameworks?' },
+        { anchor: 'how-to-start', label: 'How to Use the TRACE Framework' },
+        { anchor: 'common-mistakes', label: 'Common Mistakes With TRACE' },
+        { anchor: 'related-reading', label: 'Related Reading' },
+        { anchor: 'faq', label: 'FAQ' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -83,6 +99,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**The TRACE Framework is a reasoning-first prompt pattern that forces large language models to show their working, not just their final answer.** It is designed for tasks where you care about how the model arrived at a result, such as technical analysis, strategy, or complex troubleshooting.',
             'A common interpretation of TRACE is:',
+            'TRACE works on all major models — GPT-5 (OpenAI), Claude 4.7 Opus (Anthropic), Gemini 3 Pro (Google DeepMind), and local models via Ollama or LM Studio — but models follow the five stages with different levels of discipline. Testing the same TRACE prompt across multiple models reveals which provider reasons most transparently for your specific task.',
           ],
           items: [
             'Think: Restate and interpret the problem in your own words.',
@@ -105,7 +122,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         fiveStages: {
-          title: 'The Five TRACE Stages in Detail',
+          title: 'What Are the Five TRACE Stages?',
           content: [
             '**A good TRACE prompt tells the model exactly what to do at each stage so that the reasoning trace is consistent across tasks and models.** You can compress this into one message while still keeping the steps clear. For simpler tasks, [zero-shot prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) is faster; use TRACE when auditability is required.',
             'Typical stage definitions:',
@@ -164,7 +181,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         combiningTRACE: {
-          title: 'Combining TRACE With Other Frameworks',
+          title: 'How Do You Combine TRACE With Other Frameworks?',
           content: [
             '**You should combine the TRACE Framework with other frameworks by aligning each with a phase of your workflow: TRACE for reasoning, others for drafting or formatting.** A practical pattern is:',
           ],
@@ -173,6 +190,14 @@ export const article: Record<Language, PEArticle> = {
             'Switch to TRACE when you need to analyze choices, validate assumptions, or justify a decision.',
             'Use [RISEN](/prompt-engineering/risen-framework) if you need to iteratively improve a draft rather than reason through a new problem.',
             'Optionally finish with a specification-style framework (such as SPECS) if the final result must follow a strict structure or schema.',
+          ],
+          columns: ['Framework', 'Best For', 'Pair With TRACE When'],
+          rows: [
+            { 'Framework': 'CO-STAR', 'Best For': 'Content generation, drafting', 'Pair With TRACE When': 'Draft first, then TRACE to evaluate options' },
+            { 'Framework': 'CRAFT', 'Best For': 'Structured content with constraints', 'Pair With TRACE When': 'Generate content, then TRACE to validate claims' },
+            { 'Framework': 'RISEN', 'Best For': 'Iterative refinement', 'Pair With TRACE When': 'TRACE to analyze, RISEN to improve' },
+            { 'Framework': 'SPECS', 'Best For': 'Strict output schemas', 'Pair With TRACE When': 'TRACE for reasoning, SPECS for final format' },
+            { 'Framework': 'Few-Shot', 'Best For': 'Format consistency', 'Pair With TRACE When': 'Add examples to TRACE stages for complex tasks' },
           ],
         },
 
@@ -184,6 +209,102 @@ export const article: Record<Language, PEArticle> = {
             '**Analyze:** Ask the model to apply its chosen approach step-by-step to the actual data or context you provided. Show numbers or concrete examples where possible. Example: "Apply your preferred approach to the specific situation I gave you. Show each step."',
             '**Conclude:** Ask the model to state the final answer or recommendation directly and clearly in one sentence. Example: "State your recommendation clearly. If relevant, specify which conditions or segments it applies to."',
             '**Explain:** Ask the model to justify the conclusion in plain language that a non-technical stakeholder can follow. Example: "Explain why in 3–5 sentences. Avoid jargon. Write as if explaining to a senior manager with no technical background."',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Common Mistakes With TRACE',
+          mistakes: [
+            {
+              mistake: 'Skipping the Think stage',
+              problem: 'Without restating the problem, the model may misinterpret requirements and proceed confidently down the wrong path.',
+              fix: 'Always ask the model to restate the problem and list key variables before moving to Reason. This catches misunderstandings early.',
+            },
+            {
+              mistake: 'Not constraining the length of each stage',
+              problem: 'Unconstrained TRACE prompts can produce extremely long responses, making it harder to read and more costly.',
+              fix: 'Add length constraints per stage: "Keep each stage to 1–2 sentences" or "Limit Analyze to 3 steps."',
+            },
+            {
+              mistake: 'Using TRACE for routine tasks',
+              problem: 'TRACE adds latency and verbosity. If you just need a quick fact or a simple transformation, TRACE is overkill.',
+              fix: 'Reserve TRACE for decisions, analysis, and complex reasoning. Use zero-shot prompting for straightforward tasks.',
+            },
+            {
+              mistake: 'Treating the five stages as rigid',
+              problem: 'Some tasks don\'t need all five stages, so rigid adherence wastes time and tokens.',
+              fix: 'Adapt TRACE to your task: you might skip Reason for a data analysis task, or combine Analyze and Conclude for brevity.',
+            },
+            {
+              mistake: 'Not comparing TRACE results across models',
+              problem: 'Different models reason differently, so testing only one model misses opportunities to learn which provider is best for your task.',
+              fix: 'Use PromptQuorum or similar dispatch tools to send TRACE prompts to multiple models in parallel and compare their reasoning traces.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          content: [
+            'The TRACE Framework builds on broader reasoning techniques. Here are related guides to deepen your understanding:',
+          ],
+          items: [
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — The foundational technique that asks models to reason step by step.',
+            '[The RISEN Framework](/prompt-engineering/risen-framework) — Use this when you want iterative refinement alongside reasoning.',
+            '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — A complementary framework for drafting and generation tasks.',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) — Understand when TRACE is overkill and simpler techniques suffice.',
+            '[Prompt Engineering Fundamentals](/prompt-engineering/prompt-engineering-fundamentals) — A foundational guide to structuring prompts effectively.',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'What does TRACE stand for in prompt engineering?',
+              a: 'TRACE stands for Think, Reason, Analyze, Conclude, Explain. It is a structured prompt pattern that instructs an AI model to show each stage of its reasoning rather than jumping straight to a final answer.',
+            },
+            {
+              q: 'When should I use the TRACE Framework?',
+              a: 'Use TRACE when reasoning quality and justification matter more than brevity: strategic decisions, technical architecture reviews, complex debugging, and situations where you need to show stakeholders how a conclusion was reached.',
+            },
+            {
+              q: 'How is TRACE different from Chain-of-Thought prompting?',
+              a: 'Chain-of-Thought is a general technique that asks models to reason step by step. TRACE is a specific 5-stage structure (Think, Reason, Analyze, Conclude, Explain) that produces consistent, reproducible reasoning traces across tasks and models.',
+            },
+            {
+              q: 'How is TRACE different from the RISEN Framework?',
+              a: 'TRACE focuses on making the reasoning process explicit so you can audit it. RISEN focuses on iteratively improving an existing draft. Use TRACE to understand how a model thinks; use RISEN to polish output quality.',
+            },
+            {
+              q: 'Can I use TRACE in a single prompt or do I need multiple turns?',
+              a: 'Both work. A single prompt that lists all five stages is faster. Multiple turns let you pause and redirect at each stage if needed. For maximum control, many users send TRACE steps separately.',
+            },
+            {
+              q: 'How do I prevent TRACE from producing overly long responses?',
+              a: 'Add length constraints per stage. For example: "Keep each stage to 1–2 sentences." This forces the model to be concise while still showing its work.',
+            },
+            {
+              q: 'Can TRACE help detect model errors?',
+              a: 'Yes. By making reasoning visible, TRACE lets you spot false assumptions, logical gaps, and incorrect calculations that would be invisible in a final-answer-only response.',
+            },
+            {
+              q: 'How does PromptQuorum support TRACE prompts?',
+              a: 'PromptQuorum includes TRACE as a built-in prompt structure. You fill in task-specific context across structured fields aligned to the five stages. PromptQuorum then sends the composed prompt to multiple models in parallel so you can compare their reasoning traces side by side.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          content: [
+            'This article summarizes current best practices in prompt engineering and AI reasoning. The TRACE Framework pattern has been used in academic research and industry practice for making language model reasoning transparent.',
+          ],
+          items: [
+            'Wei, J., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *arXiv:2201.11903*. [Read on arXiv](https://arxiv.org/abs/2201.11903)',
+            'OpenAI. (2024). "How to use the OpenAI API." [OpenAI API Documentation](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2024). "Prompt Engineering Techniques." [Anthropic Docs](https://docs.anthropic.com/en/docs/build-a-chatbot)',
+            'LM Studio & Ollama. Open-source LLM deployment and reasoning tools.',
           ],
         },
       },
