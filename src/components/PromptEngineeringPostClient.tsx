@@ -108,6 +108,30 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
   },
 }
 
+// Widget UI translations
+const WIDGET_UI: Record<Language, { heading: string; description: string }> = {
+  en: {
+    heading: 'Interactive Audit Guide',
+    description: 'Assess your current readiness with our interactive guide. Answer a few quick questions to get a score, prioritized recommendations, and a downloadable action plan.',
+  },
+  de: {
+    heading: 'Interaktiver Audit-Leitfaden',
+    description: 'Bewerten Sie Ihre aktuelle Bereitschaft mit unserem interaktiven Leitfaden. Beantworten Sie einige schnelle Fragen, um eine Bewertung, priorisierte Empfehlungen und einen herunterladbaren Aktionsplan zu erhalten.',
+  },
+  fr: {
+    heading: 'Guide d\'audit interactif',
+    description: 'Évaluez votre préparation actuelle avec notre guide interactif. Répondez à quelques questions rapides pour obtenir un score, des recommandations priorisées et un plan d\'action téléchargeable.',
+  },
+  ja: {
+    heading: 'インタラクティブ監査ガイド',
+    description: 'インタラクティブガイドで現在の準備状況を評価します。いくつかの簡単な質問に回答して、スコア、優先度付き推奨事項、ダウンロード可能なアクションプランを取得します。',
+  },
+  zh: {
+    heading: '交互式审计指南',
+    description: '使用我们的交互式指南评估您当前的准备状况。回答几个快速问题以获得评分、优先级建议和可下载的行动计划。',
+  },
+}
+
 // Section header translations
 const SECTION_HEADER_LABELS: Record<Language, Record<string, string>> = {
   en: { keyTakeaways: 'Key Takeaways', tableOfContents: 'Contents' },
@@ -1182,6 +1206,30 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               <iframe
                 src={`${article.gammaEmbedUrl}?lang=${lang}`}
                 title={`${article.title} — PromptQuorum`}
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </section>
+        )}
+
+        {/* Widget Embed (Interactive Audit, Assessment, or Decision Guide) */}
+        {(article as any).widgetEmbedUrl && (
+          <section aria-label="Interactive audit guide" className="my-8">
+            <h2 className="text-xl font-semibold text-text-primary mb-2">
+              {WIDGET_UI[lang]?.heading ?? WIDGET_UI.en.heading}
+            </h2>
+            <p className="text-sm text-text-secondary mb-4">
+              {(article as any).widgetDescription ?? WIDGET_UI[lang]?.description ?? WIDGET_UI.en.description}
+            </p>
+            <div
+              className="w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
+              style={{ height: 'min(100vh, max(800px, 80vh))' }}
+            >
+              <iframe
+                src={`${(article as any).widgetEmbedUrl}?lang=${lang}`}
+                title={`${article.title} — Interactive Audit Guide — PromptQuorum`}
                 className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"

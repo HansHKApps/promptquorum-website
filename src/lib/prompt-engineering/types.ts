@@ -48,6 +48,8 @@ export interface PEArticle {
   toc?: { label: string; anchor: string }[]  // Table of contents entries (label + anchor ID)
   gammaEmbedUrl?: string     // Gamma slide presentation embed URL (download URL derived by appending ?print=1)
   gammaDescription?: string  // SEO-optimised description of slide deck contents (2-3 sentences, primary keyword + specific numbers)
+  widgetEmbedUrl?: string    // Interactive widget embed URL (audit guide, calculator, decision tree, etc.)
+  widgetDescription?: string // SEO-optimised description of widget contents (2-3 sentences, explaining what user will learn/achieve)
   freshness_tier?: 'evergreen' | 'semi_annual' | 'annual'
   next_refresh_due?: string
   current_models_mentioned?: string[]

@@ -160,8 +160,6 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Content Structure and AI Citation', 'description': 'How answer-first structure, entity density, and formatting maximize AI citations' },
         ],
       },
-      widgetEmbedUrl: '/widgets/seo-meets-ai-widget.html',
-      widgetDescription: 'Interactive GEO audit guide: Answer 10 quick questions about your content structure, technical SEO, and AI platform readiness. Get a 0–10 readiness score, regional compliance guidance (DSGVO, CNIL, METI, Data Security Law), and a prioritized action plan with effort estimates for optimizing your content to rank and get cited in ChatGPT, Perplexity, Google AI Overviews, and Claude.',
       sections: {
         tldr: {
           title: 'Key Takeaways',
@@ -646,6 +644,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Thing', position: 5, name: 'Robots.txt-Konfiguration: ChatGPT, Perplexity, Gemini, Claude erlauben' },
         ],
       },
+      widgetEmbedUrl: '/widgets/seo-meets-ai-widget.html',
+      widgetDescription: 'Interaktiver GEO-Audit-Leitfaden: Beantworten Sie 10 schnelle Fragen zur Ihrer Content-Struktur, technischen SEO und KI-Plattform-Bereitschaft. Erhalten Sie eine 0–10-Bereitschaftsbewertung, regionale Compliance-Richtlinien (DSGVO, CNIL, METI, Datenschutzgesetz) und einen priorisierten Aktionsplan mit Aufwandsschätzungen zur Optimierung Ihrer Inhalte für ChatGPT, Perplexity, Google AI Overviews und Claude.',
       sections: {
         tldr: {
           title: 'Zusammenfassung',
@@ -1114,6 +1114,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Thing', position: 5, name: 'Configuration robots.txt : autorisez ChatGPT, Perplexity, Gemini, Claude' },
         ],
       },
+      widgetEmbedUrl: '/widgets/seo-meets-ai-widget.html',
+      widgetDescription: 'Guide d\'audit GEO interactif : répondez à 10 questions rapides sur votre structure de contenu, votre SEO technique et votre préparation des plates-formes IA. Obtenez un score de 0–10, des conseils de conformité régionale (DSGVO, CNIL, METI, loi sur la protection des données) et un plan d\'action priorisé avec estimations d\'effort pour optimiser votre contenu pour ChatGPT, Perplexity, Google AI Overviews et Claude.',
       sections: {
         tldr: {
           title: 'Points clés',
@@ -1582,6 +1584,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Thing', position: 5, name: 'robots.txt設定：ChatGPT、Perplexity、Gemini、Claudeを許可します' },
         ],
       },
+      widgetEmbedUrl: '/widgets/seo-meets-ai-widget.html',
+      widgetDescription: '対話型GEO監査ガイド：コンテンツ構造、技術的SEO、AIプラットフォーム準備状況に関する10の簡単な質問に回答します。0～10の準備状況スコア、地域別コンプライアンスガイダンス（METI、日本規制）、および ChatGPT、Perplexity、Google AI Overviews、Claude向けにコンテンツを最適化するための優先度付きアクションプラン（工数見積もり付き）を取得します。',
       sections: {
         tldr: {
           title: '重要ポイント',
@@ -2004,6 +2008,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Thing', position: 5, name: '在robots.txt中允许ChatGPT、Perplexity、Gemini、Claude' },
         ],
       },
+      widgetEmbedUrl: '/widgets/seo-meets-ai-widget.html',
+      widgetDescription: '交互式GEO审计指南：回答关于您的内容结构、技术SEO和AI平台准备情况的10个快速问题。获得0–10准备评分、地区合规指导（数据安全法、中国法规）以及优先级行动计划，其中包括为ChatGPT、Perplexity、Google AI Overviews和Claude优化内容的工作量估计。',
       sections: {
         tldr: {
           title: '核心要点',
