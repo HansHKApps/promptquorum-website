@@ -12,11 +12,12 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'The TRACE Framework',
       seoTitle: 'TRACE Framework: Prompts That Show AI Reasoning 2026',
-      intro: 'The TRACE Framework is a prompt structure that asks models to Think, Reason, Analyze, Conclude, and Explain so their internal decision process becomes visible instead of hidden. PromptQuorum includes the TRACE Framework as a built-in option that any user can select and use directly inside the app.',
+      intro: '**The TRACE Framework turns AI reasoning from a black box into a visible, step-by-step process.** It asks models to Think, Reason, Analyze, Conclude, and Explain — so you can see where the logic holds and where it breaks. PromptQuorum includes the TRACE Framework as a built-in option that any user can select and use directly inside the app.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
-      metaDescription: 'The TRACE Framework (Think, Reason, Analyze, Conclude, Explain) forces AI to show its work. When to use it, how to write TRACE prompts, and why transparency matters.',
+      primaryTerm: 'TRACE Framework',
+      metaDescription: 'TRACE Framework (Think, Reason, Analyze, Conclude, Explain) forces AI to show its work. When to use it, how to write TRACE prompts, why transparency matters.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -25,7 +26,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'The TRACE Framework',
         description: 'How the TRACE Framework (Think, Reason, Analyze, Conclude, Explain) works, when to use it, and how PromptQuorum offers TRACE as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-04-28',
         keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'prompt frameworks', 'prompt engineering', 'reasoning prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -38,7 +39,45 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         ],
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'What does TRACE stand for in prompt engineering?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE stands for Think, Reason, Analyze, Conclude, Explain. It is a structured prompt pattern that instructs an AI model to show each stage of its reasoning rather than jumping straight to a final answer.' } },
+          { '@type': 'Question', 'name': 'When should I use the TRACE Framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Use TRACE when reasoning quality and justification matter more than brevity: strategic decisions, technical architecture reviews, complex debugging, and situations where you need to show stakeholders how a conclusion was reached.' } },
+          { '@type': 'Question', 'name': 'How is TRACE different from Chain-of-Thought prompting?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought is a general technique that asks models to reason step by step. TRACE is a specific 5-stage structure (Think, Reason, Analyze, Conclude, Explain) that produces consistent, reproducible reasoning traces across tasks and models.' } },
+          { '@type': 'Question', 'name': 'How is TRACE different from the RISEN Framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE focuses on making the reasoning process explicit so you can audit it. RISEN focuses on iteratively improving an existing draft. Use TRACE to understand how a model thinks; use RISEN to polish output quality.' } },
+          { '@type': 'Question', 'name': 'Can I use TRACE in a single prompt or do I need multiple turns?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Both work. A single prompt that lists all five stages is faster. Multiple turns let you pause and redirect at each stage if needed. For maximum control, many users send TRACE steps separately.' } },
+          { '@type': 'Question', 'name': 'How do I prevent TRACE from producing overly long responses?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Add length constraints per stage. For example: "Keep each stage to 1–2 sentences." This forces the model to be concise while still showing its work.' } },
+          { '@type': 'Question', 'name': 'Can TRACE help detect model errors?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. By making reasoning visible, TRACE lets you spot false assumptions, logical gaps, and incorrect calculations that would be invisible in a final-answer-only response.' } },
+          { '@type': 'Question', 'name': 'How does PromptQuorum support TRACE prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum includes TRACE as a built-in prompt structure. You fill in task-specific context across structured fields aligned to the five stages. PromptQuorum then sends the composed prompt to multiple models in parallel so you can compare their reasoning traces side by side.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Write a TRACE Prompt',
+        'description': 'A step-by-step guide to structuring prompts using the TRACE Framework (Think, Reason, Analyze, Conclude, Explain) to make AI reasoning transparent and auditable.',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Think', 'text': 'Ask the model to restate the problem in its own words and list key variables and assumptions before attempting an answer.' },
+          { '@type': 'HowToStep', 'name': 'Reason', 'text': 'Ask the model to propose 2–3 possible approaches or hypotheses with trade-offs before committing to one.' },
+          { '@type': 'HowToStep', 'name': 'Analyze', 'text': 'Ask the model to apply its chosen approach step-by-step to the actual data or context you provided, showing numbers or concrete examples.' },
+          { '@type': 'HowToStep', 'name': 'Conclude', 'text': 'Ask the model to state the final answer or recommendation directly and clearly in one sentence.' },
+          { '@type': 'HowToStep', 'name': 'Explain', 'text': 'Ask the model to justify the conclusion in plain language that a non-technical stakeholder can follow.' },
+        ],
+      },
       sections: {
+        keyTakeaways: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'TRACE stands for Think, Reason, Analyze, Conclude, Explain — a 5-stage prompt pattern that forces AI models to show each step of their reasoning.',
+            'Use TRACE when reasoning quality matters more than brevity: strategic decisions, architecture trade-offs, complex debugging, or any output you need to justify to stakeholders.',
+            'TRACE reduces blind trust in model outputs by making false assumptions and logic gaps visible before they affect decisions.',
+            'A TRACE prompt can be one single message with all five stages defined, or sent turn-by-turn for more control.',
+            'PromptQuorum includes TRACE as a built-in structure: fill in your context, send to multiple models in parallel, and compare reasoning traces side by side.',
+          ],
+        },
         whatIsTRACE: {
           title: 'What the TRACE Framework Is',
           content: [
@@ -56,7 +95,7 @@ export const article: Record<Language, PEArticle> = {
         whyTRACEMatters: {
           title: 'Why the TRACE Framework Matters',
           content: [
-            '**The TRACE Framework matters because it reduces blind trust in model outputs by making the reasoning path explicit.** When the model explains each stage, you can spot misread requirements, weak assumptions, or gaps in logic early.',
+            '**The TRACE Framework matters because it reduces blind trust in model outputs by making the reasoning path explicit.** When the model explains each stage, you can spot misread requirements, weak assumptions, or gaps in logic early. This connects to broader [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting) principles — TRACE is a structured, reproducible form of that technique.',
             'This is especially useful when:',
           ],
           items: [
@@ -68,7 +107,7 @@ export const article: Record<Language, PEArticle> = {
         fiveStages: {
           title: 'The Five TRACE Stages in Detail',
           content: [
-            '**A good TRACE prompt tells the model exactly what to do at each stage so that the reasoning trace is consistent across tasks and models.** You can compress this into one message while still keeping the steps clear.',
+            '**A good TRACE prompt tells the model exactly what to do at each stage so that the reasoning trace is consistent across tasks and models.** You can compress this into one message while still keeping the steps clear. For simpler tasks, [zero-shot prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) is faster; use TRACE when auditability is required.',
             'Typical stage definitions:',
           ],
           items: [
@@ -130,8 +169,9 @@ export const article: Record<Language, PEArticle> = {
             '**You should combine the TRACE Framework with other frameworks by aligning each with a phase of your workflow: TRACE for reasoning, others for drafting or formatting.** A practical pattern is:',
           ],
           items: [
-            'Use a generation-oriented framework (for example Single Step, CO-STAR, or CRAFT) to draft content or options.',
+            'Use a generation-oriented framework (for example [CO-STAR](/prompt-engineering/co-star-framework) or CRAFT) to draft content or options.',
             'Switch to TRACE when you need to analyze choices, validate assumptions, or justify a decision.',
+            'Use [RISEN](/prompt-engineering/risen-framework) if you need to iteratively improve a draft rather than reason through a new problem.',
             'Optionally finish with a specification-style framework (such as SPECS) if the final result must follow a strict structure or schema.',
           ],
         },
@@ -152,7 +192,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'Das TRACE Framework',
       seoTitle: 'TRACE Framework: Prompts, die KI-Denken offenbaren 2026',
-      intro: 'Das TRACE Framework ist eine Prompt-Struktur, die Modelle auffordert, zu denken (Think), zu begründen (Reason), zu analysieren (Analyze), zu schlussfolgern (Conclude) und zu erklären (Explain), damit ihr interner Entscheidungsprozess sichtbar wird. Statt nur die finale Antwort zu präsentieren, zwingt TRACE das Modell, seinen Gedankenprozess Schritt für Schritt zu offenbaren. PromptQuorum bietet TRACE als native Option an, die alle Benutzer direkt nutzen können.',
+      intro: '**Das TRACE Framework macht das Reasoning von KI-Modellen sichtbar — statt nur eine Antwort zu liefern, zeigt das Modell jeden Schritt seines Denkprozesses.** Die fünf Stufen Think (Denken), Reason (Begründen), Analyze (Analysieren), Conclude (Schlussfolgern) und Explain (Erklären) geben Ihnen die Möglichkeit, Logikfehler und falsche Annahmen zu erkennen, bevor sie Entscheidungen beeinflussen. PromptQuorum bietet TRACE als native Option an, die alle Benutzer direkt nutzen können.',
       publishDate: '2026-03-24',
       readTime: '8 min Lesezeit',
       educationalLevel: 'Intermediate',
@@ -166,7 +206,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'Das TRACE Framework',
         description: 'Wie das TRACE Framework (Think, Reason, Analyze, Conclude, Explain) funktioniert, wann es sinnvoll ist, und wie PromptQuorum es nativ anbietet.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-04-28',
         keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'Prompt Frameworks', 'Prompt Engineering', 'Reasoning Prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -182,6 +222,17 @@ export const article: Record<Language, PEArticle> = {
         assesses: 'Fähigkeit zur Bewertung von Reasoning-Qualität, Identifikation von logischen Schwächen, Treffen von Entscheidungen basierend auf explizitem Reasoning',
       },
       sections: {
+        keyTakeaways: {
+          title: 'Wichtigste Erkenntnisse',
+          isTldr: true,
+          items: [
+            'TRACE steht für Think, Reason, Analyze, Conclude, Explain — ein 5-stufiges Prompt-Muster, das KI-Modelle dazu zwingt, jeden Denkschritt offenzulegen.',
+            'TRACE eignet sich besonders, wenn Reasoning-Qualität wichtiger ist als Kürze: strategische Entscheidungen, Architektur-Abwägungen, komplexes Debugging.',
+            'Das Framework reduziert blinde Abhängigkeit von Modellantworten, indem falsche Annahmen und Logiklücken sichtbar gemacht werden.',
+            'Ein TRACE-Prompt kann in einer einzigen Nachricht formuliert werden oder schrittweise gesendet werden — je nach gewünschtem Kontrollgrad.',
+            'PromptQuorum integriert TRACE nativ: Kontext eintragen, an mehrere Modelle senden, Reasoning-Spuren direkt vergleichen.',
+          ],
+        },
         whatIsTRACE: {
           title: 'Was das TRACE Framework ist',
           content: [
@@ -301,6 +352,22 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'Wie integriere ich TRACE in meine bestehenden Prompt-Workflows?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum speichert TRACE-Prompts als Templates. Du kannst ein Template für einen bestimmten Workflow erstellen (z.B. „Feature-Trade-off-Review"), es mit deinem Team teilen und es jedes Mal abrufen, wenn du einen ähnlichen Analyse-Prozess durchführen musst. Dies spart Zeit und stellt Konsistenz sicher.' } },
           { '@type': 'Question', 'name': 'Ist TRACE für Anfänger in Prompt Engineering geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Obwohl TRACE für fortgeschrittene Reasoning-Workflows konzipiert wurde, ist die Struktur (Think–Reason–Analyze–Conclude–Explain) intuitiv und anfängerfreundlich. PromptQuorums vorausgefüllte Felder machen es noch einfacher.' } },
           { '@type': 'Question', 'name': 'Welche Compliance-Aspekte gelten bei TRACE-Anwendung in regulierten Umgebungen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'In Banken, Versicherungen und anderen regulierten Branchen macht TRACE KI-Entscheidungen nachvollziehbar—wichtig für Compliance und Audits. Bei DSGVO-Bezug müssen personenbezogene Daten sicher behandelt werden; nutze lokale Modelle (Ollama, LM Studio) statt Cloud-APIs für sensible Daten.' } },
+          { '@type': 'Question', 'name': 'Wofür steht TRACE im Prompt Engineering?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE steht für Think (Denken), Reason (Begründen), Analyze (Analysieren), Conclude (Schlussfolgern), Explain (Erklären). Es ist ein strukturiertes Prompt-Muster, das KI-Modelle anweist, jeden Schritt ihres Denkprozesses zu zeigen, statt nur die Schlussfolgerung zu liefern.' } },
+          { '@type': 'Question', 'name': 'Wie unterscheidet sich TRACE von Chain-of-Thought?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought ist eine allgemeine Technik, die Modelle bittet, schrittweise zu denken. TRACE ist eine spezifische 5-Stufen-Struktur mit klaren Rollen für jede Phase. TRACE ist besser reproduzierbar und für Audit-Zwecke besser geeignet.' } },
+          { '@type': 'Question', 'name': 'Wie verhindere ich, dass TRACE zu langen, unübersichtlichen Antworten führt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Füge pro Stufe eine Längenvorgabe ein, z.B. „Halte jede Stufe auf 1–2 Sätze." Das zwingt das Modell zur Kürze, ohne die Transparenz zu opfern.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Wie man einen TRACE-Prompt schreibt',
+        'description': 'Schritt-für-Schritt-Anleitung für das Schreiben von Prompts mit dem TRACE Framework (Think, Reason, Analyze, Conclude, Explain).',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Think (Denken)', 'text': 'Fordern Sie das Modell auf, das Problem in eigenen Worten zu formulieren und Schlüsselvariablen sowie Annahmen vor dem Beantworten aufzulisten.' },
+          { '@type': 'HowToStep', 'name': 'Reason (Begründen)', 'text': 'Lassen Sie das Modell 2–3 mögliche Ansätze oder Hypothesen mit Abwägungen skizzieren, bevor es sich festlegt.' },
+          { '@type': 'HowToStep', 'name': 'Analyze (Analysieren)', 'text': 'Lassen Sie das Modell den gewählten Ansatz Schritt für Schritt auf die konkrete Datenlage anwenden, mit Zahlen oder Beispielen.' },
+          { '@type': 'HowToStep', 'name': 'Conclude (Schlussfolgern)', 'text': 'Lassen Sie das Modell die finale Antwort oder Empfehlung klar in einem Satz formulieren.' },
+          { '@type': 'HowToStep', 'name': 'Explain (Erklären)', 'text': 'Lassen Sie das Modell die Schlussfolgerung in einfacher Sprache begründen, die ein nicht-technisches Publikum versteht.' },
         ],
       },
     },
@@ -308,12 +375,12 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'Le Framework TRACE',
       seoTitle: 'Framework TRACE : Rendre visible la réflexion de l\'IA 2026',
-      intro: 'Le Framework TRACE demande aux modèles de Think (Réfléchir), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure) et Explain (Expliquer) pour rendre visibles leurs processus de décision. Plutôt que de présenter uniquement une réponse finale, TRACE force le modèle à montrer son raisonnement étape par étape. PromptQuorum propose TRACE comme option directement accessible pour tous les utilisateurs.',
+      intro: '**Le Framework TRACE rend le raisonnement des modèles IA visible — au lieu de donner uniquement une réponse, le modèle détaille chaque étape de sa réflexion.** Les cinq étapes (Réfléchir, Raisonner, Analyser, Conclure, Expliquer) vous permettent de détecter les hypothèses erronées et les failles logiques avant qu\'elles n\'influencent vos décisions. PromptQuorum propose TRACE comme option directement accessible pour tous les utilisateurs.',
       publishDate: '2026-03-24',
       readTime: '7 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Framework TRACE',
-      metaDescription: 'Le Framework TRACE rend la réflexion IA transparente. Think→Reason→Analyze→Conclude→Explain. Quand l\'utiliser, comment l\'écrire, pourquoi la traçabilité importe.',
+      metaDescription: 'Le Framework TRACE rend la réflexion IA transparente. Think→Reason→Analyze→Conclude→Explain. Quand l\'utiliser, comment l\'écrire, pourquoi la traçabilité compte.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -322,7 +389,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'Le Framework TRACE',
         description: 'Comment fonctionne le Framework TRACE (Penser, Raisonner, Analyser, Conclure, Expliquer), quand l\'utiliser, et comment PromptQuorum l\'intègre.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-04-28',
         keywords: ['Framework TRACE', 'raisonnement IA', 'frameworks de prompts', 'ingénierie des prompts', 'PromptQuorum', 'modèles de langage'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -338,6 +405,17 @@ export const article: Record<Language, PEArticle> = {
         assesses: 'Capacité à évaluer la qualité du raisonnement d\'un modèle, identifier les faiblesses logiques, et justifier des décisions basées sur ce raisonnement explicite',
       },
       sections: {
+        keyTakeaways: {
+          title: 'Points clés',
+          isTldr: true,
+          items: [
+            'TRACE signifie Think, Reason, Analyze, Conclude, Explain — un schéma de prompt en 5 étapes qui force les modèles IA à montrer chaque étape de leur raisonnement.',
+            'Utilisez TRACE quand la qualité du raisonnement prime sur la brièveté : décisions stratégiques, choix d\'architecture, débogage complexe.',
+            'Le framework réduit la confiance aveugle envers les modèles en rendant visibles les hypothèses erronées et les lacunes logiques.',
+            'Un prompt TRACE peut tenir en un seul message ou être envoyé en plusieurs tours pour plus de contrôle.',
+            'PromptQuorum intègre TRACE nativement : remplissez le contexte, envoyez à plusieurs modèles en parallèle, comparez les traces de raisonnement côte à côte.',
+          ],
+        },
         whatIsTRACE: {
           title: 'Qu\'est-ce que le Framework TRACE',
           content: [
@@ -443,19 +521,34 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'Comment éviter que TRACE ne rende les réponses trop longues ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Soyez précis dans vos étapes TRACE. Demandez : « Donne chaque étape en 1–2 phrases max. » Cela force le modèle à être concis tout en montrant son travail.' } },
           { '@type': 'Question', 'name': 'TRACE aide-t-il à détecter les erreurs du modèle ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. En rendant le raisonnement explicite, TRACE vous permet de repérer les fausses assomptions, les sauts logiques, ou les calculs incorrects que vous auriez ratés avec une réponse finale seule.' } },
           { '@type': 'Question', 'name': 'Y a-t-il une différence entre TRACE et Chain-of-Thought ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought est une technique générale de montrer le travail. TRACE est une structure spécifique à 5 étapes : Penser, Raisonner, Analyser, Conclure, Expliquer. TRACE est plus guidée et reproductible.' } },
+          { '@type': 'Question', 'name': 'Que signifie TRACE en ingénierie des prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE signifie Think (Réfléchir), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure), Explain (Expliquer). C\'est un schéma de prompt structuré qui demande au modèle de montrer chaque étape de son raisonnement plutôt que de donner directement une réponse finale.' } },
+          { '@type': 'Question', 'name': 'Comment PromptQuorum prend-il en charge les prompts TRACE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum inclut TRACE comme structure de prompt intégrée. Remplissez vos informations de contexte dans des champs alignés sur les cinq étapes. PromptQuorum compose ensuite le prompt et l\'envoie à plusieurs modèles en parallèle pour que vous puissiez comparer leurs traces de raisonnement côte à côte.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Comment écrire un prompt TRACE',
+        'description': 'Guide étape par étape pour structurer des prompts avec le Framework TRACE (Réfléchir, Raisonner, Analyser, Conclure, Expliquer).',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Think (Réfléchir)', 'text': 'Demandez au modèle de reformuler le problème dans ses propres termes et de lister les variables clés et hypothèses avant de tenter une réponse.' },
+          { '@type': 'HowToStep', 'name': 'Reason (Raisonner)', 'text': 'Demandez au modèle de proposer 2–3 approches ou hypothèses possibles avec leurs compromis avant de s\'engager sur l\'une.' },
+          { '@type': 'HowToStep', 'name': 'Analyze (Analyser)', 'text': 'Demandez au modèle d\'appliquer son approche choisie étape par étape aux données réelles que vous avez fournies, avec des chiffres ou exemples concrets.' },
+          { '@type': 'HowToStep', 'name': 'Conclude (Conclure)', 'text': 'Demandez au modèle d\'énoncer la réponse finale ou la recommandation directement et clairement en une phrase.' },
+          { '@type': 'HowToStep', 'name': 'Explain (Expliquer)', 'text': 'Demandez au modèle de justifier la conclusion en langage simple qu\'un non-spécialiste peut comprendre.' },
         ],
       },
     },
     ja: {
       theme: 'Frameworks',
       title: 'TRACEフレームワーク',
-      seoTitle: 'TRACEフレームワーク2026：AIの推論過程を見える化',
-      intro: 'TRACEフレームワークは、モデルの思考プロセスを5つのステップ（考える→推論する→分析する→結論を出す→説明する）で可視化するプロンプト構造です。最終的な答えだけでなく、その過程を詳しく見ることができるため、判断やロジックの信頼性が大幅に向上します。PromptQuorumではTRACEフレームワークをネイティブに統合しており、すべてのユーザーが直接利用できます。',
+      seoTitle: 'TRACEフレームワーク完全ガイド：AIの推論プロセスを5段階で可視化する方法（2026年版）',
+      intro: '**TRACEフレームワークは、AIモデルの推論プロセスを「ブラックボックス」から可視化された段階的な思考へと変えます。** 考える（Think）→推論する（Reason）→分析する（Analyze）→結論を出す（Conclude）→説明する（Explain）の5つのステップにより、論理の欠陥や誤った前提を早期に発見できます。PromptQuorumではTRACEフレームワークをネイティブに統合しており、すべてのユーザーが直接利用できます。',
       publishDate: '2026-03-24',
       readTime: '8分で読める',
       educationalLevel: 'Intermediate',
       primaryTerm: 'TRACEフレームワーク',
-      metaDescription: 'TRACE（考える→推論→分析→結論→説明）でAI思考の全段階を透明化。複雑な判断、戦略分析、信頼度向上の方法。',
+      metaDescription: 'TRACEフレームワーク（考える→推論→分析→結論→説明）でAIの推論プロセスを完全透明化。複雑な意思決定・戦略分析・デバッグへの実践的な活用方法と具体例。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -464,7 +557,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'TRACEフレームワーク',
         description: 'TRACEフレームワーク（考える・推論する・分析する・結論を出す・説明する）の仕組み、活用場面、PromptQuorumでの実装方法。',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-04-28',
         keywords: ['TRACEフレームワーク', 'プロンプトフレームワーク', 'プロンプト・エンジニアリング', '推論', 'PromptQuorum', '大規模言語モデル'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -480,6 +573,17 @@ export const article: Record<Language, PEArticle> = {
         assesses: 'AIモデルの推論品質を評価できる能力、論理的な欠陥を特定する力、推論の妥当性に基づいて判断できる技術',
       },
       sections: {
+        keyTakeaways: {
+          title: '重要なポイント',
+          isTldr: true,
+          items: [
+            'TRACEはThink・Reason・Analyze・Conclude・Explainの頭文字で、AIモデルに思考の各段階を明示させる5段階プロンプト構造です。',
+            '推論の品質と説明責任が重要な場面でTRACEを使用してください。戦略的な意思決定、技術的アーキテクチャのレビュー、複雑なデバッグに適しています。',
+            'このフレームワークは誤った前提や論理的な欠陥を可視化することで、モデル出力への盲目的な信頼を減らします。',
+            'TRACEプロンプトは1つのメッセージにすることも、段階ごとに送ることもできます — 制御の精度に応じて選択できます。',
+            'PromptQuorumはTRACEをネイティブ構造として統合しています。タスクのコンテキストを入力し、複数のモデルに並行送信して、推論トレースを比較できます。',
+          ],
+        },
         whatIsTRACE: {
           title: 'TRACEフレームワークとは',
           content: [
@@ -597,19 +701,34 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'TRACEはモデル間で推論品質の差を見つけるのに役立つ？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。GPT-4o、Claude、Geminiなど同じTRACEプロンプトを複数モデルに送れば、推論スタイルと精度の違いが明確に見えます。' } },
           { '@type': 'Question', 'name': 'TRACEはエラーを検出するのに本当に効果的？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。思考プロセスが見える化されるため、誤った前提や論理的な飛躍を早期に発見できます。最終答だけでは気づかない誤りが露呈します。' } },
           { '@type': 'Question', 'name': '日本の企業で財務判断やコンプライアンス判定にTRACEを使う際の注意点は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'クラウドAPIで機密データを扱う場合は、データ保護方針を確認してください。機密情報はOllama・LM Studioなど自社環境のモデルを使用し、PromptQuorum経由で実行することをお勧めします。' } },
+          { '@type': 'Question', 'name': 'プロンプト・エンジニアリングでTRACEは何を意味しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACEはThink（考える）、Reason（推論する）、Analyze（分析する）、Conclude（結論を出す）、Explain（説明する）の頭文字です。最終的な答えだけでなく、AIモデルに推論の各段階を示させる構造化されたプロンプトパターンです。' } },
+          { '@type': 'Question', 'name': 'TRACEとChain-of-Thoughtの違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thoughtは、モデルにステップバイステップで考えさせる一般的な技術です。TRACEは特定の5段階構造（Think・Reason・Analyze・Conclude・Explain）で、タスクやモデルを超えて一貫した再現可能な推論トレースを生成します。' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'TRACEプロンプトの書き方',
+        'description': 'TRACEフレームワーク（考える・推論する・分析する・結論を出す・説明する）を使ってプロンプトを構造化するためのステップバイステップガイド。',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Think（考える）', 'text': 'モデルに問題を自分の言葉で言い換えさせ、回答を試みる前に主要な変数と前提を列挙させます。' },
+          { '@type': 'HowToStep', 'name': 'Reason（推論する）', 'text': 'モデルに、1つのアプローチに決める前に、2～3の可能なアプローチまたは仮説とそれらのトレードオフをスケッチさせます。' },
+          { '@type': 'HowToStep', 'name': 'Analyze（分析する）', 'text': 'モデルに、提供された実データに対して選んだアプローチを段階的に適用させます。数値や具体的な例を示させます。' },
+          { '@type': 'HowToStep', 'name': 'Conclude（結論を出す）', 'text': 'モデルに最終的な答えまたは推奨事項を1文で直接かつ明確に述べさせます。' },
+          { '@type': 'HowToStep', 'name': 'Explain（説明する）', 'text': 'モデルに結論を、非技術的な関係者が理解できるような平易な言葉で正当化させます。' },
         ],
       },
     },
     zh: {
       theme: 'Frameworks',
       title: 'TRACE框架',
-      seoTitle: 'TRACE框架2026：让AI推理过程完全透明',
-      intro: 'TRACE框架通过5个步骤（思考→推理→分析→结论→解释）强制AI模型展示完整的推理过程，而不是仅给出最终答案。你可以看清模型怎样思考、在哪里可能出错、以及为什么得出这个结论。PromptQuorum原生集成了TRACE框架，所有用户都可以直接使用。',
+      seoTitle: 'TRACE框架完整指南：用5步让AI推理过程全程透明（2026年实战版）',
+      intro: '**TRACE框架将AI模型的推理过程从"黑盒"变成可见的逐步思考。** 通过思考（Think）→推理（Reason）→分析（Analyze）→结论（Conclude）→解释（Explain）5个步骤，你可以在错误影响决策之前发现模型的逻辑漏洞和错误假设。PromptQuorum原生集成了TRACE框架，所有用户都可以直接使用。',
       publishDate: '2026-03-24',
       readTime: '8分钟阅读',
       educationalLevel: 'Intermediate',
       primaryTerm: 'TRACE框架',
-      metaDescription: 'TRACE（思考→推理→分析→结论→解释）让AI推理全程透明。适用复杂决策、战略分析、提高信任度的方法。',
+      metaDescription: 'TRACE框架（思考→推理→分析→结论→解释）让AI推理全程透明化。复杂决策、战略分析、技术审查的实战方法与对比示例，提升可信度和可解释性。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -618,7 +737,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'TRACE框架',
         description: 'TRACE框架（思考、推理、分析、结论、解释）的工作原理、适用场景、以及PromptQuorum中的实现方式。',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-04-28',
         keywords: ['TRACE框架', '提示词框架', '提示词工程', '推理', 'PromptQuorum', '大语言模型'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -634,6 +753,17 @@ export const article: Record<Language, PEArticle> = {
         assesses: '能否评估AI推理的质量、识别逻辑漏洞、基于可解释的推理做出关键决策的能力',
       },
       sections: {
+        keyTakeaways: {
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            'TRACE代表思考（Think）、推理（Reason）、分析（Analyze）、结论（Conclude）、解释（Explain）——一个迫使AI模型展示每步推理的5阶段提示框架。',
+            '当推理质量比速度更重要时使用TRACE：战略决策、技术架构权衡、复杂调试，以及需要向利益相关者展示决策过程的场景。',
+            'TRACE通过让假设错误和逻辑漏洞变得可见，减少对AI输出的盲目信任。',
+            'TRACE提示词可以是一条包含全部5步的完整消息，也可以逐步发送——根据所需控制精度选择。',
+            'PromptQuorum原生集成TRACE：填入任务背景，并行发送给多个模型，对比推理轨迹。',
+          ],
+        },
         whatIsTRACE: {
           title: 'TRACE框架是什么',
           content: [
@@ -754,6 +884,19 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'TRACE能帮助比较不同AI模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。同一个TRACE任务发给通义千问、文心一言、混元，能清楚看到它们推理风格的差异、严密程度、可靠性的区别。' } },
           { '@type': 'Question', 'name': '企业多人协作时，TRACE怎样分工最有效？', 'acceptedAnswer': { '@type': 'Answer', 'text': '思考阶段→初级分析师，推理阶段→资深专家，分析→技术人员，结论→决策者。分工不但提高效率，还能从多角度增进洞察。' } },
           { '@type': 'Question', 'name': 'TRACE和Chain-of-Thought有什么不同？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought是泛指「逐步展示推理」的技术。TRACE是一个结构化的5步框架，更可控、更适合复现。如果你需要标准化和可重复性，TRACE更好。' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何编写TRACE提示词',
+        'description': '使用TRACE框架（思考、推理、分析、结论、解释）构建提示词的逐步指南，让AI推理过程透明可审计。',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Think（思考）', 'text': '让模型用自己的语言重述问题，并在尝试回答前列出关键变量和假设。' },
+          { '@type': 'HowToStep', 'name': 'Reason（推理）', 'text': '让模型在确定方法前列出2～3个可能的方法或假设及其权衡。' },
+          { '@type': 'HowToStep', 'name': 'Analyze（分析）', 'text': '让模型将选定的方法逐步应用到你提供的实际数据或背景中，展示数字或具体例子。' },
+          { '@type': 'HowToStep', 'name': 'Conclude（结论）', 'text': '让模型用一句话直接明确地陈述最终答案或建议。' },
+          { '@type': 'HowToStep', 'name': 'Explain（解释）', 'text': '让模型用非技术受众能理解的平易近人语言为结论正当化。' },
         ],
       },
     },
