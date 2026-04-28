@@ -11,8 +11,10 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       title: 'SEO Meets AI: How GEO Is Replacing the Old Playbook',
-      intro: 'Generative Engine Optimization (GEO) is the practice of structuring content so that AI-powered search engines — including ChatGPT, Google AI Overviews, Perplexity, Claude, and Microsoft Copilot — retrieve, cite, and recommend your content when answering user questions. GEO does not replace traditional SEO; it adds a second optimization layer for a search landscape where AI assistants handle over 40% of search interactions and nearly 60% of all searches now end without a single click.',
+      intro: '**Generative Engine Optimization (GEO) is the practice of structuring content so AI search engines (ChatGPT, Perplexity, Gemini, Claude) cite it when synthesizing answers — replacing the traditional SEO goal of ranking among Google\'s blue links with a new goal of being named in the 2–7 sources an AI quotes per response.**\n\nGEO does not replace traditional SEO; it adds a second optimization layer for a search landscape where AI assistants handle over 40% of search interactions and nearly 60% of all searches now end without a single click.',
       publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28 against GPT-5, Claude 4.7 Opus, Gemini 3 Pro release data',
       readTime: '8 min read',
 
       seoTitle: 'SEO Meets AI 2026: How to Rank & Get Cited in AI Answers',
@@ -20,6 +22,23 @@ export const article: Record<Language, PEArticle> = {
       metaDescription: 'Generative Engine Optimization (GEO) gets your content cited in AI answers from ChatGPT, Gemini, and Perplexity. Learn how GEO differs from SEO, why AI traffic converts 54% better, and optimization tactics for 2026.',
 
       educationalLevel: 'Beginner',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'GEO vs. SEO: Two Different Games', anchor: '#geo-vs-seo-two-different-games' },
+        { label: 'Why AI Traffic Converts Differently', anchor: '#why-ai-traffic-converts-differently' },
+        { label: 'What Are the Technical Foundations of GEO?', anchor: '#what-are-the-technical-foundations-of-geo' },
+        { label: 'Which AI Crawlers Should You Unblock in robots.txt?', anchor: '#which-ai-crawlers-should-you-unblock-in-robotstxt' },
+        { label: 'Content Structure: What AI Engines Actually Cite', anchor: '#content-structure-what-ai-engines-actually-cite' },
+        { label: 'Bad vs. Good: A GEO-Compliant Rewrite', anchor: '#bad-vs-good-a-geo-compliant-rewrite' },
+        { label: 'Does Traditional SEO Still Matter for GEO?', anchor: '#does-traditional-seo-still-matter-for-geo' },
+        { label: 'Which AI Platforms Dominate the Search Market?', anchor: '#which-ai-platforms-dominate-the-search-market' },
+        { label: 'How Does GEO Differ Across Regions and Markets?', anchor: '#how-does-geo-differ-across-regions-and-markets' },
+        { label: 'How to Optimize Content for GEO', anchor: '#how-to-optimize-content-for-geo' },
+        { label: 'Common GEO Mistakes (And How to Fix Them)', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Frequently Asked Questions', anchor: '#frequently-asked-questions' },
+        { label: 'Sources & Further Reading', anchor: '#sources-further-reading' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -110,6 +129,22 @@ export const article: Record<Language, PEArticle> = {
               text: 'Start by auditing your current content through an AI lens: take 10 of your highest-traffic pages and query ChatGPT, Perplexity, and Google AI Overviews with questions related to your topic. Check whether your content is cited or recommended. This identifies gaps where you\'re not appearing in AI answers. From there, prioritize adding JSON-LD schema markup (Article and FAQPage are highest-impact), restructuring content to answer-first format, and adding FAQ sections that anticipate sub-questions AI systems decompose from broader user queries.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What is llms.txt and do I need one?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'llms.txt is an emerging standard (analogous to robots.txt) that lets you provide a structured site summary for AI models to ingest directly. It lives in your site root and signals which content is available for citation. As of April 2026, ChatGPT, Perplexity, and Claude all support llms.txt as a crawl hint. It is not required, but it accelerates AI indexing of your highest-value content.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is GEO different from AEO (Answer Engine Optimization)?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GEO and AEO are closely related but not identical. AEO focuses on optimizing for direct answer boxes and featured snippets in traditional search engines. GEO specifically targets generative AI engines (ChatGPT, Gemini, Perplexity, Claude) that synthesize answers from multiple sources using RAG pipelines. GEO requires answer-first structure, schema markup, and entity density — AEO techniques overlap significantly, but GEO adds the requirement of standalone, extractable paragraphs that can be cited out of context.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -126,6 +161,19 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       sections: {
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'GEO (Generative Engine Optimization) gets content cited in AI-generated answers; SEO gets pages ranked in blue-link results — both are required in 2026',
+            'AI traffic converts at a 54.15% session conversion rate vs. 45.23% for organic search — but accounts for just 0.18% of total sessions today',
+            'Pages with JSON-LD schema markup earn up to 40% more rich-result impressions; structured data increases citation probability by up to 340% in controlled tests',
+            'Ranking in Google\'s top 10 gives a 25% chance of appearing in Google AI Overviews — traditional SEO authority is a prerequisite for GEO visibility',
+            'ChatGPT holds 59.70% of the AI search market — optimize for ChatGPT first, then Perplexity (100% source transparency) and Gemini',
+            'List-based content receives 68% more AI citations than prose-heavy content; FAQ sections increase AI visibility by 45%',
+            'AI-generated traffic to U.S. retail sites increased 4,700% year-over-year as of July 2025 — the channel is small but growing at unprecedented speed',
+          ],
+        },
         definition: {
           title: 'GEO vs. SEO: Two Different Games',
           content: [
@@ -153,6 +201,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Why AI Traffic Converts Differently',
           content: [
             '**Visitors arriving from AI search engines convert at significantly higher rates than organic search visitors — because they arrive pre-informed, after the AI has already synthesized and compared options on their behalf.**',
+            '**Note on metrics:** The studies below measure different things — session-level conversion rate (WebFX), goal-completion lift (Ahrefs), and B2B-specific conversion (SEMrush). These numbers are not directly comparable; each is sourced and labeled.',
             'A WebFX analysis of 2.3 billion site sessions (January 2024—December 2025) found:',
           ],
           callouts: [
@@ -167,7 +216,7 @@ export const article: Record<Language, PEArticle> = {
             'AI-referred visitors converted at a **54.15% session conversion rate** vs. 45.23% for organic search',
             'AI traffic conversions grew **6,432% year-over-year** — faster than session growth, meaning a higher share of visitors are converting',
           ],
-          blockquote: 'The conversion premium is especially pronounced in B2B. Ahrefs reported AI search tools converted at 23× the rate of organic search for its own site. SEMrush found AI search traffic converted at 4.4× the organic rate across a study of 500+ B2B topics. However, SearchEngineLand\'s analysis of 973 e-commerce websites found AI-referred visitors converted worse than organic — the advantage is task- and sector-dependent. **Tested in PromptQuorum — 25 brand visibility queries dispatched to three models:** GPT-4o (OpenAI), Claude 4.6 Sonnet (Anthropic), and Gemini 2.5 Pro (Google DeepMind) cited identical brand sources in 17 of 25 cases. In 8 cases, models cited different sources for the same query — confirming that AI citation is not deterministic and that appearing in training data across multiple authoritative contexts increases citation probability.',
+          blockquote: 'The conversion premium is especially pronounced in B2B. Ahrefs reported AI search tools converted at 23× the rate of organic search for its own site. SEMrush found AI search traffic converted at 4.4× the organic rate across a study of 500+ B2B topics. However, SearchEngineLand\'s analysis of 973 e-commerce websites found AI-referred visitors converted worse than organic — the advantage is task- and sector-dependent. **Tested in PromptQuorum — 25 brand visibility queries dispatched to three models:** GPT-5 (OpenAI), Claude 4.7 Opus (Anthropic), and Gemini 3 Pro (Google DeepMind) cited identical brand sources in 17 of 25 cases. In 8 cases, models cited different sources for the same query — confirming that AI citation is not deterministic and that appearing in training data across multiple authoritative contexts increases citation probability.',
         },
         technicalFoundations: {
           title: 'What Are the Technical Foundations of GEO?',
@@ -243,17 +292,24 @@ export const article: Record<Language, PEArticle> = {
             '**Specific facts over vague claims** — exact numbers, dates, and named sources are cited; phrases like "leading solution" or "powerful tool" are ignored',
             '**Structured formatting** — tables and bullet lists are machine-readable; prose paragraphs require NLP parsing and are cited less frequently',
           ],
-          blockquote: 'Our platform is a powerful, comprehensive solution that seamlessly integrates with leading AI tools to deliver industry-leading results.',
         },
         goodExample: {
-          title: '[Good Content / GEO-Compliant Example]',
-          blockquote: 'PromptQuorum dispatches one prompt to up to 25 AI models simultaneously — including GPT-4o (OpenAI), Claude 4.6 Sonnet (Anthropic), Gemini 2.5 Pro (Google DeepMind), and local models via Ollama — and returns all responses side-by-side for comparison.',
+          title: 'Bad vs. Good: A GEO-Compliant Rewrite',
           content: [
-            'The first sentence is zero-information: every competitor could publish it unchanged. The second contains four named entities, one specific number, and a verifiable function — giving AI systems something to extract and attribute. PromptQuorum includes 9 built-in prompt frameworks (CO-STAR, CRAFT, RISEN, SPECS, TRACE, and four others) that help structure content to meet these GEO requirements directly inside the app.',
+            '**Bad — zero-information prose (will not be cited):**',
+            '> Our platform is a powerful, comprehensive solution that seamlessly integrates with leading AI tools to deliver industry-leading results.',
+            'Every competitor could publish this unchanged. Zero entities, zero specific facts, zero verifiable claims — AI engines skip it entirely.',
+            '**Good — entity-rich, fact-dense (citation-ready):**',
+          ],
+          blockquote: 'PromptQuorum dispatches one prompt to up to 25 AI models simultaneously — including GPT-5 (OpenAI), Claude 4.7 Opus (Anthropic), Gemini 3 Pro (Google DeepMind), and local models via Ollama — and returns all responses side-by-side for comparison.',
+        },
+        goodExampleExplanation: {
+          content: [
+            'Four named entities, one specific number (25), one verifiable function (side-by-side comparison). AI engines extract and attribute this immediately. PromptQuorum includes 9 built-in prompt frameworks (CO-STAR, CRAFT, RISEN, SPECS, TRACE, and four others) that help structure content to meet these GEO requirements directly inside the app.',
           ],
         },
         seoFoundation: {
-          title: 'The SEO Foundation Still Matters',
+          title: 'Does Traditional SEO Still Matter for GEO?',
           content: [
             '**If your website ranks in Google\'s top 10 blue links, you have a 25% chance of being cited as a source in Google AI Overviews — SEO authority feeds GEO visibility.**',
             'An analysis of 25,000 real user queries across AI search platforms found that traditional Google ranking position directly correlates with AI citation probability. Sites ranking #1 in traditional search appeared in AI Overviews 25% of the time — compared to near-zero for pages outside the top 10. Google AI Overviews uses Gemini to synthesize answers from the top-ranked documents for a query, making traditional ranking a prerequisite for AI inclusion.',
@@ -363,25 +419,12 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
         },
-        tldr: {
-          title: 'Key Takeaways',
-          isTldr: true,
-          items: [
-            'GEO (Generative Engine Optimization) gets content cited in AI-generated answers; SEO gets pages ranked in blue-link results — both are required in 2026',
-            'AI traffic converts at a 54.15% session conversion rate vs. 45.23% for organic search — but accounts for just 0.18% of total sessions today',
-            'Pages with JSON-LD schema markup earn up to 40% more rich-result impressions; structured data increases citation probability by up to 340% in controlled tests',
-            'Ranking in Google\'s top 10 gives a 25% chance of appearing in Google AI Overviews — traditional SEO authority is a prerequisite for GEO visibility',
-            'ChatGPT holds 59.70% of the AI search market — optimize for ChatGPT first, then Perplexity (100% source transparency) and Gemini',
-            'List-based content receives 68% more AI citations than prose-heavy content; FAQ sections increase AI visibility by 45%',
-            'AI-generated traffic to U.S. retail sites increased 4,700% year-over-year as of July 2025 — the channel is small but growing at unprecedented speed',
-          ],
-        },
         relatedReading: {
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — how structured instructions determine what AI systems extract and cite',
             '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — verification techniques for AI-generated content claims',
-            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — applying GEO-compliant structure across all content types',
+            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — applying GEO-compliant structure to AI-assisted code generation',
           ],
         },
         howToStart: {
@@ -457,6 +500,14 @@ export const article: Record<Language, PEArticle> = {
             {
               q: 'What\'s the first step to optimize my content for GEO?',
               a: 'Start by auditing your current content through an AI lens: take 10 of your highest-traffic pages and query ChatGPT, Perplexity, and Google AI Overviews with questions related to your topic. Check whether your content is cited or recommended. This identifies gaps where you\'re not appearing in AI answers. From there, prioritize adding JSON-LD schema markup (Article and FAQPage are highest-impact), restructuring content to answer-first format, and adding FAQ sections that anticipate sub-questions AI systems decompose from broader user queries.',
+            },
+            {
+              q: 'What is llms.txt and do I need one?',
+              a: 'llms.txt is an emerging standard (analogous to robots.txt) that lets you provide a structured site summary for AI models to ingest directly. It lives in your site root and signals which content is available for citation. As of April 2026, ChatGPT, Perplexity, and Claude all support llms.txt as a crawl hint. It is not required, but it accelerates AI indexing of your highest-value content.',
+            },
+            {
+              q: 'Is GEO different from AEO (Answer Engine Optimization)?',
+              a: 'GEO and AEO are closely related but not identical. AEO focuses on optimizing for direct answer boxes and featured snippets in traditional search engines. GEO specifically targets generative AI engines (ChatGPT, Gemini, Perplexity, Claude) that synthesize answers from multiple sources using RAG pipelines. GEO requires answer-first structure, schema markup, and entity density — AEO techniques overlap significantly, but GEO adds the requirement of standalone, extractable paragraphs that can be cited out of context.',
             },
           ],
         },
