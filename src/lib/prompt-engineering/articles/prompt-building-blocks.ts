@@ -798,225 +798,425 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     fr: {
+      freshness_tier: 'semi_annual',
       theme: 'Fondamentaux',
       title: 'Les 5 éléments fondamentaux de tout prompt',
-      seoTitle: 'Les 5 éléments fondamentaux de tout prompt 2026',
-      intro: 'Les 5 éléments fondamentaux de tout prompt : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes et Format de sortie.',
-      metaDescription: 'Maîtrisez les 5 composantes essentielles : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes, Format de sortie. Cadre testé pour des prompts fiables.',
+      seoTitle: 'Les 5 éléments fondamentaux d\'un prompt : structure tout prompt IA (2026)',
+      intro: '**Tout prompt IA efficace nécessite cinq éléments : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie — en oublier un seul, et les résultats deviennent incohérents, mal formatés ou hallucinations.**',
+      metaDescription: 'Rôle, Tâche, Exemples, Contraintes et Format de sortie — 5 éléments qui expliquent chaque résultat IA fiable. Manquer un, et les résultats deviennent imprévisibles.',
       publishDate: '2026-03-01',
       readTime: '8 min de lecture',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Structure de prompt',
+      audience: 'Développeurs et utilisateurs non techniques rédigeant des prompts IA',
+      dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28',
+      next_refresh_due: '2026-09-01',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Qu\'est-ce que les 5 éléments fondamentaux ?', anchor: '#what-are-the-5-building-blocks' },
+        { label: 'Pourquoi ces 5 éléments sont importants ?', anchor: '#why-building-blocks-matter' },
+        { label: 'Élément 1 : Rôle & Contexte', anchor: '#block-1-role-context' },
+        { label: 'Élément 2 : Tâche / Instruction', anchor: '#block-2-task-instruction' },
+        { label: 'Élément 3 : Entrée & Exemples', anchor: '#block-3-input-examples' },
+        { label: 'Élément 4 : Contraintes', anchor: '#block-4-constraints' },
+        { label: 'Élément 5 : Format de sortie', anchor: '#block-5-output-format' },
+        { label: 'Comment combiner les 5 éléments en un seul prompt', anchor: '#prompt-template' },
+        { label: 'Comment les 5 éléments correspondent à CRAFT, CO-STAR et SPECS', anchor: '#frameworks-and-tools' },
+        { label: 'Erreurs courantes avec les éléments fondamentaux', anchor: '#common-mistakes' },
+        { label: 'Comment construire un prompt (étape par étape)', anchor: '#how-to-build-a-prompt' },
+        { label: 'Lectures connexes', anchor: '#related-reading' },
+        { label: 'Questions fréquemment posées', anchor: '#faq' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Les 5 éléments fondamentaux de tout prompt',
-        description: 'Les 5 éléments fondamentaux de tout prompt : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes et Format de sortie. Avec ces cinq composants, tout prompt IA devient fiable et reproductible.',
+        description: 'Maîtrisez les 5 éléments fondamentaux de tout prompt : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes et Format de sortie. Avec ces cinq composantes, tout prompt IA devient fiable et reproductible.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-04-28',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr',
         inLanguage: 'fr',
-        keywords: ['structure de prompt', 'éléments de prompt', 'rôle et contexte', 'format de sortie', 'contraintes de prompt', 'exemples few-shot', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        proficiencyLevel: 'Beginner',
+        keywords: ['Structure de prompt', 'Éléments de prompt', 'Rôle et contexte', 'Format de sortie', 'Contraintes de prompt', 'Exemples few-shot', 'Ingénierie des prompts', 'GPT-5', 'Claude', 'Gemini'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        mentions: [
+          { '@type': 'Thing', name: 'OpenAI GPT-5' },
+          { '@type': 'Thing', name: 'Anthropic Claude' },
+          { '@type': 'Thing', name: 'Google Gemini' },
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'Framework CO-STAR' },
+          { '@type': 'Thing', name: 'Framework CRAFT' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'AI Prompt Structure' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Ai-je vraiment besoin de tous les 5 éléments dans chaque prompt ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Non. Les tâches simples et sans ambiguïté nécessitent souvent seulement une tâche / instruction et un format de sortie. Ajoutez Rôle & Contexte quand le domaine ou le public compte. Ajoutez Contraintes quand les erreurs sont coûteuses. Ajoutez Exemples quand la précision du format est critique. Commencez minimaliste et n\'ajoutez des éléments que si la sortie ne répond pas à votre standard.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Le Rôle est-il plus important que le Contexte, ou l\'inverse ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ils fonctionnent comme une paire — aucun ne suffit seul. Rôle sans contexte produit une sortie générique de mode expert. Contexte sans rôle produit une sortie consciente de la situation mais tonalement incohérente. Pour la plupart des tâches, une phrase combinant les deux fonctionne bien : « Vous êtes un [rôle] travaillant avec [public] sur [tâche de domaine]. »' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Puis-je garder les prompts courts tout en incluant les 5 éléments ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Chaque élément peut être exprimé en une seule phrase. Un prompt complet à cinq éléments peut faire moins de 100 mots. La brièveté n\'est pas le problème — le flou l\'est. Un prompt court et précis avec les cinq éléments surpasse systématiquement un long et verbeux sans aucun.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quelle est la différence entre Contexte et Exemples ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Le contexte décrit la situation, le domaine et le public — c\'est l\'information d\'arrière-plan qui encadre la tâche. Les exemples sont des paires entrée/sortie qui montrent au modèle ce qu\'une réponse correcte ressemble. Le contexte dit au modèle où il est ; les exemples lui montrent ce qu\'il faut produire.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Où les Contraintes s\'ajustent-elles si j\'utilise un framework comme CRAFT ou CO-STAR ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Chaque framework majeur a un champ qui correspond aux contraintes — « Restrictions » dans CRAFT, « Ton & Style » dans CO-STAR, « Contraintes » dans SPECS. Si votre framework n\'a pas de champ de contraintes explicite, ajoutez les contraintes à la fin en tant que section « Ne pas » séparée — tous les modèles gèrent cela de façon fiable.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Le format de sortie importe-t-il si je pose simplement une question simple ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Pour les questions conversationnelles, spécifier le format est optionnel. Pour toute sortie qui sera utilisée en aval — collée dans un document, analysée par code, publiée ou réutilisée entre membres d\'équipe — spécifier le format est essentiel. C\'est la différence entre obtenir un résultat et obtenir un résultat utilisable.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Dois-je respecter la conformité CNIL quand j\'utilise PromptQuorum ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. PromptQuorum est conforme au RGPD et aux directives de la CNIL. Pour les données sensibles professionnelles (données financières, médicales, juridiques), les inférences locales avec Ollama ou LM Studio gardent vos données sous votre contrôle et satisfont les exigences de conformité CNIL. Pour les instances cloud, négociez toujours des contrats de traitement de données (DPA) avec le prestataire.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'PromptQuorum convient-il aux organisations traitant des données sensibles ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. PromptQuorum a été conçu pour les organisations européennes traitant des données sensibles et respecte les standards de sécurité IT. Avec les modèles locaux, vous obtenez une souveraineté totale des données, un fonctionnement hors ligne et l\'adaptation aux standards sectoriels (Finance, Santé, Juridique). L\'architecture tarifaire est aussi adaptée aux PME — elle se redimensionne selon vos besoins sans frais cloud disproportionnés.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Où trouver des frameworks de prompt reconnus ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Les frameworks populaires comme CRAFT, CO-STAR et SPECS sont des approches méthodiques pour les 5 mêmes éléments sous différents noms. PromptQuorum propose 9 frameworks intégrés qui pré-remplissent ces éléments selon le type de tâche. Comprendre d\'abord les 5 éléments signifie que vous pouvez appliquer n\'importe quel framework sans mémoriser de zéro sa terminologie spécifique.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ces 5 éléments s\'appliquent-ils à tous les modèles IA ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Que vous utilisiez GPT-5, Claude 4.7, Gemini 3 Pro, ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.' },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'fr',
+        name: 'Comment construire un prompt avec les 5 éléments fondamentaux',
+        totalTime: 'PT5M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Définir Rôle & Contexte', text: 'Dites qui le modèle est et pour qui il travaille. Une phrase : « Vous êtes un [rôle] aidant [public]. »' },
+          { '@type': 'HowToStep', position: 2, name: 'Écrire la Tâche / Instruction', text: 'Dites l\'action exacte que le modèle doit effectuer avec un verbe. « Résumer », « Classer », « Traduire », « Générer ».' },
+          { '@type': 'HowToStep', position: 3, name: 'Ajouter Entrée & Exemples', text: 'Fournissez les données ou le contenu avec lequel le modèle travaille. Ajoutez un ou deux exemples si le format doit être précis.' },
+          { '@type': 'HowToStep', position: 4, name: 'Définir les Contraintes', text: 'Listez ce que le modèle ne doit pas faire, les limites de longueur et les règles de sortie.' },
+          { '@type': 'HowToStep', position: 5, name: 'Spécifier le Format de sortie', text: 'Définissez la forme exacte : JSON, liste à puces, tableau, paragraphe ou étapes numérotées.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'fr',
+        name: '5 éléments que tout prompt IA a besoin',
+        description: 'Les cinq composantes structurelles que contient tout prompt IA fiable : Rôle, Tâche, Entrée & Exemples, Contraintes et Format de sortie.',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Élément 1 : Rôle & Contexte', description: 'Dit au modèle qui il est et pour qui il travaille. Établit l\'expertise du domaine et la conscience du public.' },
+          { '@type': 'ListItem', position: 2, name: 'Élément 2 : Tâche / Instruction', description: 'L\'énoncé explicite de ce que le modèle doit faire avec un verbe d\'action clair.' },
+          { '@type': 'ListItem', position: 3, name: 'Élément 3 : Entrée & Exemples', description: 'Les données ou le contenu avec lequel le modèle travaille, plus des exemples optionnels montrant ce qu\'une sortie correcte ressemble.' },
+          { '@type': 'ListItem', position: 4, name: 'Élément 4 : Contraintes', description: 'Règles que le modèle doit suivre — limites de longueur, contenu interdit, restrictions de style.' },
+          { '@type': 'ListItem', position: 5, name: 'Élément 5 : Format de sortie', description: 'La structure exacte de la sortie : JSON, liste à puces, tableau, paragraphe ou étapes numérotées.' },
+        ],
       },
       sections: {
+
         definition: {
-          title: 'Quels sont les 5 éléments fondamentaux d\'un prompt ?',
+          id: 'what-are-the-5-building-blocks',
+          title: 'Qu\'est-ce que les 5 éléments fondamentaux d\'un prompt ?',
           content: [
-            '**Les 5 éléments fondamentaux de tout prompt sont : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie.** Ces cinq composants constituent la structure minimale qui distingue un prompt fiable et reproductible d\'une question vague produisant des résultats incohérents.',
-            'Chaque bloc résout un mode d\'échec différent. Rôle & Contexte indique au modèle qui il est et dans quelle situation il se trouve. Tâche / Instruction lui dit exactement quoi faire. Entrée & Exemples lui fournissent la matière première et le signal d\'apprentissage. Les Contraintes fixent les règles. Le Format de sortie spécifie la forme de la réponse. Ensemble, ils ne laissent au modèle rien à deviner.',
+            '**Les 5 éléments que chaque prompt nécessite sont : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie.** Ces cinq composantes constituent la structure minimale qui distingue un prompt fiable et reproductible d\'une question vague qui produit des résultats incohérents.',
+            'Chaque élément résout un type d\'erreur différent. Rôle & Contexte dit au modèle qui il est et dans quelle situation il se trouve. Tâche / Instruction lui dit exactement ce qu\'il faut faire. Entrée & Exemples lui donnent la matière première et le motif d\'apprentissage. Contraintes fixent les règles. Format de sortie définit la forme de la réponse. Ensemble, ils ne laissent plus rien au hasard pour le modèle.',
+          ],
+        },
+
+        badVsGood: {
+          id: 'bad-vs-good-example',
+          content: [
+            '**Sans les 5 éléments (vague) :**\n> Résume ce rapport.',
+            '**Avec tous les 5 éléments (complet) :**\n> Vous êtes un analyste métier principal (Rôle). Résumez les insights clés du rapport Q3 ci-dessous (Tâche). [Texte du rapport] (Entrée). Utilisez uniquement les faits du rapport ; maximum 200 mots ; ton formel (Contraintes). Retournez 3 points clés sous « Insights clés » (Format de sortie).',
           ],
         },
 
         tldr: {
+          id: 'key-takeaways',
           title: 'Points clés',
           isTldr: true,
           items: [
-            'Rôle & Contexte : Indiquer au modèle qui il est et dans quel domaine il opère',
-            'Tâche / Instruction : Énoncer exactement ce que vous voulez que le modèle produise — de manière spécifique et vérifiable',
-            'Entrée & Exemples : Fournir les données brutes et les paires entrée/sortie exemples dont le modèle a besoin',
-            'Contraintes : Établir les règles — ce que le modèle doit et ne doit pas faire',
-            'Format de sortie : Spécifier la forme exacte de la réponse — JSON, puces, tableau ou prose',
+            'Rôle & Contexte : dire au modèle qui il est et dans quel domaine il travaille',
+            'Tâche / Instruction : spécifier exactement ce que le modèle doit produire — spécifique et vérifiable',
+            'Entrée & Exemples : fournir les données brutes et les paires entrée/sortie d\'exemple que le modèle doit apprendre',
+            'Contraintes : établir les règles — ce que le modèle doit et ne doit pas faire',
+            'Format de sortie : définir la forme exacte de la réponse — JSON, points, tableau ou paragraphe',
           ],
         },
 
         whyMatters: {
-          title: 'Pourquoi ces 5 blocs sont importants en 2026',
+          id: 'why-building-blocks-matter',
+          title: 'Pourquoi ces 5 éléments sont importants ?',
           content: [
-            'Le modèle en cinq blocs reflète le consensus convergent des guides de prompt engineering d\'OpenAI, Google, Anthropic et des praticiens indépendants. Rôle, instructions, exemples, contraintes et format de sortie apparaissent — sous différents noms — dans chaque framework majeur publié depuis 2023. Ce n\'est pas une coïncidence : c\'est l\'information minimale dont un modèle probabiliste a besoin pour produire un résultat utile et cohérent.',
-            'L\'argument économique est simple. L\'absence de rôle et de contexte produit des réponses génériques qui nécessitent une réécriture. L\'absence de contraintes augmente le risque d\'hallucination et les sorties hors de la ligne directrice. L\'absence de format de sortie signifie des résultats qui ne peuvent pas être analysés ni copiés-collés directement. Le modèle en 5 blocs traite ces trois modes d\'échec à la fois, et s\'applique également aux modèles de la classe GPT-4, Claude, Gemini et aux LLM exécutés localement.',
+            'Le modèle des 5 éléments reflète le consensus convergent des guides d\'ingénierie de prompts d\'OpenAI, Google, Anthropic et des praticiens indépendants. Rôle, instructions, exemples, contraintes et format de sortie apparaissent — sous différents noms — dans chaque framework majeur publié depuis 2023. Ce n\'est pas un hasard : ce sont les informations minimales dont un modèle probabiliste a besoin pour produire une sortie utile et cohérente.',
+            'Les avantages commerciaux sont évidents. L\'absence de rôle et de contexte produit des réponses génériques qui doivent être réécrites. L\'absence de contraintes augmente le risque d\'hallucination et génère une sortie hors marque. L\'absence de format de sortie signifie des résultats qui ne peuvent pas être utilisés directement ou copiés. Le modèle des 5 éléments adresse les trois types d\'erreurs simultanément et s\'applique également à GPT-5, Claude 4.7, Gemini 3 Pro et aux LLM exécutés localement.',
+            'Pour les organisations européennes : les inférences locales avec Ollama ou LM Studio via PromptQuorum respectent pleinement les exigences CNIL et RGPD en gardant vos données en interne tout en bénéficiant de l\'efficacité de ces prompts structurés.',
           ],
         },
 
         block1: {
-          title: 'Bloc 1 : Rôle & Contexte',
+          id: 'block-1-role-context',
+          title: 'Qu\'est-ce que l\'élément Rôle & Contexte ?',
           content: [
-            '**Le Rôle** indique au modèle quelle persona ou expertise adopter. **Le Contexte** lui indique la situation, le domaine et le public dans lequel il opère. Ils sont regroupés ensemble parce qu\'ils fonctionnent en binôme — le rôle est ce qu\'est le modèle, et le contexte est l\'environnement qui façonne ce que « bon » signifie pour cette tâche.',
-            'Lorsque vous omettez le rôle et le contexte, le modèle répond d\'un point de vue générique — utile pour personne en particulier. Avec eux, le même modèle devient un conseiller fiscal senior répondant à une question sur les déclarations de TVA, un rédacteur junior écrivant pour un public de 19 ans, ou un analyste de données résumant un rapport trimestriel. La sortie se calibre sur votre situation réelle.',
+            '**Rôle** dit au modèle quelle persona ou expertise il doit adopter. **Contexte** partage avec lui la situation, le domaine et le public dans lequel il travaille. Ils sont regroupés car ils fonctionnent en paire — Rôle est qui le modèle est, et Contexte est l\'environnement qui définit ce que « bon » signifie pour cette tâche.',
+            'Quand Rôle et Contexte sont omis, le modèle répond d\'une perspective générique — utile pour personne en particulier. Avec eux, le même modèle devient un expert-comptable expérimenté répondant à une question sur les déclarations fiscales, un rédacteur junior écrivant pour une audience de 19 ans, ou un analyste de données résumant un rapport trimestriel. La sortie s\'étalonne selon la situation réelle.',
           ],
           items: [
-            '**Spécifiez le domaine :** « Tu es un rédacteur SaaS B2B » est plus utile que « Tu es un rédacteur »',
-            '**Incluez le public :** « Explique cela à un directeur financier non technique » contraint le vocabulaire et le niveau de détail',
-            '**Ancrez le niveau d\'expertise :** « Agis comme un ingénieur en sécurité senior » produit une sortie différente de « Agis comme un ingénieur en sécurité »',
-            '**Énoncez la situation quand c\'est important :** « Tu révises un premier brouillon » versus « Tu écris de zéro » change l\'approche du modèle',
+            '**Spécifier le domaine :** « Vous êtes un rédacteur SaaS B2B » est plus utile que « Vous êtes un auteur »',
+            '**Inclure le public :** « Expliquez cela à un directeur financier non technique » restreint le vocabulaire et la profondeur',
+            '**Ancrer le niveau d\'expertise :** « Agissez comme un ingénieur de sécurité expérimenté » produit une sortie différente d\'« Agissez comme un ingénieur de sécurité »',
+            '**Spécifier la situation si pertinente :** « Vous vérifiez un premier brouillon » vs « Vous écrivez à partir de zéro » change l\'approche du modèle',
           ],
         },
 
         block1Link: {
-          content: 'Pour comprendre comment le role prompting a évolué à mesure que les modèles sont devenus plus capables de suivre des instructions, voir [Fundamentals: From GPT-2 to Today: How Prompt Engineering Evolved].',
+          content: 'Pour comprendre comment le prompting par rôle a évolué alors que les modèles devenaient meilleurs à suivre les instructions, voir [How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=fr).',
         },
 
         block2: {
-          title: 'Bloc 2 : Tâche / Instruction',
+          id: 'block-2-task-instruction',
+          title: 'Qu\'est-ce que l\'élément Tâche / Instruction ?',
           content: [
-            '**Le bloc Tâche / Instruction est l\'énoncé explicite de ce que vous voulez que le modèle fasse.** C\'est le bloc le plus important — tous les autres blocs le soutiennent. Une instruction claire, spécifique et vérifiable réduit l\'ambiguïté à presque zéro. Une instruction vague est la principale cause de mauvaises sorties IA sur tous les modèles et cas d\'usage.',
-            'Les meilleures pratiques actuelles insistent sur le fait de rendre la tâche actionnable et observable : utilisez un verbe, énoncez le livrable, et si possible décrivez un critère de succès. « Écrire un résumé » est une tâche. « Résumer l\'article suivant en 3 points, chacun en moins de 20 mots » est une tâche avec une sortie vérifiable. La différence de qualité de sortie est significative.',
+            '**L\'élément Tâche / Instruction est l\'énoncé explicite de ce que le modèle doit faire.** C\'est l\'élément le plus important — tous les autres éléments le soutiennent. Une instruction claire, spécifique et vérifiable réduit l\'ambiguïté à presque zéro. Une instruction vague est la cause la plus courante de mauvaises sorties IA sur tous les modèles et cas d\'usage.',
+            'Les recommandations actuelles de bonnes pratiques soulignent de rendre la tâche action-orientée et observable : utilisez un verbe, nommez le résultat et si possible décrivez un critère de succès. « Écrivez un résumé » est une tâche. « Résumez l\'article suivant en 3 points, chacun moins de 20 mots » est une tâche avec une sortie vérifiable. La différence de qualité est substantielle.',
           ],
           items: [
-            '❌ Faible : « Écris quelque chose sur ce sujet »',
-            '✅ Fort : « Écris un post LinkedIn de 150 mots sur les avantages du prompt engineering pour les managers non techniques »',
-            '❌ Faible : « Analyse ces données »',
-            '✅ Fort : « Identifie les 3 principales tendances dans ce jeu de données et classe-les par impact sur le chiffre d\'affaires, du plus élevé au plus bas »',
+            '❌ Faible : « Écrivez quelque chose sur ce sujet »',
+            '✅ Fort : « Écrivez un post LinkedIn de 150 mots sur les avantages de l\'ingénierie de prompts pour les managers non techniques »',
+            '❌ Faible : « Analysez ces données »',
+            '✅ Fort : « Identifiez les 3 tendances principales dans ce dataset et classez-les par impact sur le chiffre d\'affaires, le plus élevé d\'abord »',
           ],
         },
 
         block2Link: {
-          content: 'Les instructions interagissent directement avec le fait de fournir ou non des exemples — voir [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] pour savoir quand chaque approche fonctionne le mieux.',
+          content: 'Les instructions interagissent directement avec le fait de fournir des exemples — voir [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) pour quand chaque approche fonctionne le mieux.',
         },
 
         block3: {
-          title: 'Bloc 3 : Entrée & Exemples',
+          id: 'block-3-input-examples',
+          title: 'Comment l\'Entrée et les Exemples améliorent-ils la précision ?',
           content: [
-            '**L\'Entrée** est la donnée réelle, le texte ou le matériel sur lequel le modèle doit travailler. **Les Exemples** sont des paires entrée/sortie qui illustrent à quoi ressemble une réponse correcte. Ce sont des préoccupations distinctes : l\'entrée est la matière première pour la tâche en cours, les exemples sont le signal d\'apprentissage qui façonne la façon dont le modèle l\'exécute.',
-            'Inclure 1 à 3 exemples (few-shot prompting) est la technique la plus fiable pour fixer le format et le ton de la sortie. Quand vous montrez au modèle à quoi ressemble une bonne réponse, il correspond au schéma plutôt que de le déduire de la seule description de la tâche. C\'est le plus important pour les formats spécialisés, le ton cohérent et les sorties structurées où la précision est requise.',
+            '**Entrée** sont les données, textes ou matériaux actuels avec lesquels le modèle travaillera. **Exemples** sont des paires entrée/sortie qui montrent comment une réponse correcte ressemble. Ce sont des aspects séparés : Entrée est la matière première pour la tâche actuelle, Exemples sont le motif d\'apprentissage qui façonne l\'exécution par le modèle.',
+            'Inclure 1–3 exemples (Few-Shot Prompting) est la technique unique la plus fiable pour établir le format de sortie et le ton. Quand vous montrez au modèle ce qu\'une bonne réponse ressemble, il adapte le motif au lieu de simplement l\'inférer de la description de tâche. C\'est le plus important pour les formats spécialisés, le ton cohérent et les sorties structurées où la précision compte.',
           ],
           items: [
-            '**Quand ajouter des exemples :** Formats spécialisés, exigences de ton cohérent, sorties structurées, vocabulaire spécifique au domaine',
-            '**Quand rester en zero-shot :** Questions factuelles simples, exploration large, quand vous voulez activement le style de réponse par défaut du modèle',
-            '**Variez vos exemples :** Des exemples identiques n\'enseignent qu\'un seul schéma — couvrez la vraie gamme des entrées que vous attendez',
-            '**Utilisez des données réalistes :** Les vrais échantillons surpassent les idéalisés — le modèle apprend de ce que vous lui montrez réellement',
+            '**Quand ajouter des exemples :** formats spécialisés, exigences de ton cohérent, sorties structurées, vocabulaire spécifique au domaine',
+            '**Quand rester en Zero-Shot :** questions factuelles simples, exploration large, ou quand vous voulez activement le style de réponse standard du modèle',
+            '**Faire varier les exemples :** des exemples identiques n\'enseignent qu\'un motif — couvrir la vraie gamme d\'entrées attendues',
+            '**Utiliser des données réalistes :** de vrais motifs surpassent les idéalisés — le modèle apprend de ce que vous lui montrez réellement',
           ],
         },
 
         block3Link: {
-          content: 'Pour une analyse complète de quand utiliser des exemples et quand les omettre, voir [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?].',
+          content: 'Pour une ventilation complète de quand utiliser des exemples et quand les omettre, voir [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot?lang=fr).',
         },
 
         block4: {
-          title: 'Bloc 4 : Contraintes',
+          id: 'block-4-constraints',
+          title: 'Qu\'est-ce que l\'élément Contraintes et pourquoi les prompts en ont-ils besoin ?',
           content: [
-            '**Les Contraintes sont les règles que le modèle doit suivre : ce qu\'il doit faire et ce qu\'il ne doit pas faire.** Elles incluent les limites de longueur, les sujets ou phrases interdits, les sources requises, les règles de voix de marque, les limites de sécurité et les restrictions de format. Les contraintes sont le bloc le plus souvent omis — et leur absence est la principale cause de faits hallucinés, de langage hors de la ligne directrice et de sorties dans le mauvais format.',
-            'Ajouter une contrainte bien ciblée est souvent le changement à plus fort levier que vous pouvez apporter à un prompt existant. « Ne pas inventer de statistiques » réduit fortement le risque d\'hallucination. « Ne jamais dépasser 100 mots » force la concision. « Utiliser uniquement les informations du texte fourni » ancre la sortie dans le matériel source et élimine entièrement la fabrication pour cette tâche.',
+            '**Les Contraintes sont les règles que le modèle doit suivre : ce qu\'il doit et ne doit pas faire.** Elles incluent les limites de longueur, les sujets ou formulations interdits, les sources requises, les règles de ton de marque, les limites de sécurité et les restrictions de format. Les Contraintes sont l\'élément le plus souvent omis — et son absence est la cause principale des hallucinations factuelles, du langage hors marque et des sorties au mauvais format.',
+            'Ajouter une contrainte bien définie est souvent le changement le plus puissant apporté à un prompt existant. « N\'invente pas de statistiques » réduit significativement le risque d\'hallucination. « Ne dépasse jamais 100 mots » force la concision. « Utilise seulement l\'information du texte fourni » ancre la sortie dans le matériau source et élimine complètement la fabrication pour cette tâche.',
           ],
           items: [
-            '**Contraintes de longueur :** « Maximum 150 mots », « Pas plus de 5 points »',
-            '**Contraintes de source :** « Utiliser uniquement les faits du document joint », « Ne pas citer de sources que vous ne pouvez pas vérifier »',
-            '**Contraintes de ton et de voix :** « Écrire dans un ton formel, à la troisième personne — pas de contractions, pas de familiarités »',
-            '**Contenu interdit :** « Ne pas mentionner les produits concurrents », « Ne pas spéculer au-delà de ce que les données montrent »',
-            '**Contraintes de sécurité :** « Si la question ne peut pas être répondue à partir du contexte fourni, dites-le — n\'inventez pas de réponse »',
+            '**Limites de longueur :** « Maximum 150 mots », « Pas plus de 5 points »',
+            '**Contraintes de source :** « Utilise seulement les faits du document joint », « Ne cite pas les sources que tu ne peux pas vérifier »',
+            '**Contraintes de ton et d\'humeur :** « Écris dans un ton formel, à la troisième personne — pas de contractions, pas d\'argot »',
+            '**Contenu interdit :** « Ne mentionne pas les produits concurrents », « Ne spécule pas au-delà de ce que montrent les données »',
+            '**Contraintes de sécurité :** « Si la question ne peut pas être répondue par le contexte fourni, dis-le — n\'invente pas une réponse »',
           ],
         },
 
         block4Links: {
-          content: 'Pour la technique d\'utilisation des exclusions pour façonner la sortie, voir [Techniques: Negative Prompting: Tell the AI What NOT to Do]. Pour comprendre pourquoi les prompts sans contraintes hallucinent davantage, voir [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them].',
+          content: 'Pour la technique d\'utiliser les exclusions pour façonner les sorties, voir [Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=fr). Pourquoi les prompts incontrôlés hallucinent plus s\'explique dans [AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr).',
         },
 
         block5: {
-          title: 'Bloc 5 : Format de sortie',
+          id: 'block-5-output-format',
+          title: 'Comment l\'élément Format de sortie contrôle-t-il ce que vous obtenez ?',
           content: [
-            '**Le Format de sortie spécifie la forme exacte de la réponse que le modèle doit produire.** C\'est le bloc qui détermine si la sortie est directement utilisable ou nécessite un reformatage avant d\'être utile. Pour les pipelines automatisés, un format de sortie non spécifié signifie une analyse fragile et incohérente. Pour le GEO, une sortie structurée est plus susceptible d\'être citée textuellement par les moteurs de recherche IA, car les réponses structurées sont plus faciles à extraire par programme.',
-            'Le bloc de format de sortie peut spécifier le format de fichier (JSON, Markdown, CSV), la structure (tableau, liste à puces, étapes numérotées), la longueur et l\'étiquetage des sections. Plus vous le spécifiez avec précision, moins la sortie nécessite de modifications.',
+            '**Le Format de sortie définit la forme exacte de la réponse que le modèle produira.** C\'est l\'élément qui détermine si la sortie est immédiatement utilisable ou doit être reformatée avant utilisation. Dans les pipelines automatisés, un format de sortie non spécifié signifie un parsing fragile et incohérent. Pour la GEO, une sortie structurée est plus probable d\'être citée littéralement par les moteurs de recherche IA car les réponses structurées sont plus faciles à extraire programmatiquement.',
+            'L\'élément Format de sortie peut spécifier le format de fichier (JSON, Markdown, CSV), la structure (tableau, liste à puces, étapes numérotées), la longueur et l\'étiquetage des sections. Plus vous le spécifiez précisément, moins la sortie a besoin d\'être éditée.',
           ],
           items: [
-            '**JSON :** « Renvoyer le résultat sous forme d\'objet JSON avec les clés : titre, résumé, tags »',
-            '**Puces Markdown :** « Lister chaque constat sous forme de puce commençant par un terme en gras, suivi d\'une phrase d\'explication »',
-            '**Tableau :** « Formater la comparaison sous forme de tableau Markdown avec les colonnes : Fonctionnalité, Option A, Option B »',
-            '**Prose structurée :** « Structurer la réponse avec un titre pour chaque point majeur et un maximum de 3 phrases par section »',
+            '**JSON :** « Retourne le résultat comme un objet JSON avec les clés : title, summary, tags »',
+            '**Points Markdown :** « Liste chaque résultat comme un point commençant par un terme en gras suivi d\'une phrase explicative »',
+            '**Tableau :** « Formate la comparaison comme un tableau Markdown avec les colonnes : Fonctionnalité, Option A, Option B »',
+            '**Texte structuré :** « Structure la réponse avec un en-tête pour chaque point principal et maximum 3 phrases par section »',
           ],
         },
 
         block5Link: {
-          content: 'Pour un guide complet du mode JSON et des sorties structurées sur différents modèles, voir [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data].',
+          content: 'Pour un guide complet sur le mode JSON et la sortie structurée sur les modèles, voir [Structured Output & JSON Mode: Get AI to Return Usable Data](/prompt-engineering/structured-output-and-json-mode?lang=fr).',
         },
 
         template: {
-          title: 'Assembler les 5 blocs : un modèle simple',
-          content: 'Le modèle ci-dessous montre les 5 blocs assemblés dans l\'ordre pour une tâche unique neutre par domaine. Chaque partie est étiquetée pour que vous puissiez voir exactement où commence et se termine chaque bloc. Remplacez le contenu de chaque section pour l\'adapter à n\'importe quel domaine.',
+          id: 'prompt-template',
+          title: 'Comment combiner les 5 éléments ?',
+          content: 'Le modèle suivant montre tous les 5 éléments assemblés en ordre pour une tâche neutre de domaine. Chaque section est étiquetée pour que vous voyiez exactement où chaque élément commence et se termine. Remplacez le contenu de chaque section pour l\'adapter à n\'importe quel domaine.',
           items: [
-            '**[Rôle & Contexte]** Tu es un analyste commercial senior. Le public est une équipe dirigeante non technique qui examine un rapport d\'opérations trimestriel.',
-            '**[Tâche / Instruction]** Résume les principales conclusions du rapport ci-dessous. Concentre-toi sur la performance par rapport aux objectifs, identifie les deux risques les plus importants et recommande une action corrective pour chacun.',
-            '**[Entrée]** [Coller le texte du rapport ici]',
-            '**[Contraintes]** Utilise uniquement les informations du rapport. Ne spécule pas. Ne dépasse pas 200 mots au total. Écris dans un langage simple — sans jargon.',
-            '**[Format de sortie]** Retourne la réponse en trois sections : « Conclusions clés » (3 points), « Principaux risques » (2 points), « Actions recommandées » (2 points, un par risque).',
+            '**[Rôle & Contexte]** Vous êtes un analyste métier expérimenté. Le public est une équipe dirigeante non technique examinant un rapport d\'opérations trimestriel.',
+            '**[Tâche / Instruction]** Résumez les insights clés du rapport suivant. Concentrez-vous sur la performance par rapport aux objectifs, identifiez les deux plus grands risques et recommandez une action corrective pour chaque.',
+            '**[Entrée]** [Insérer le texte du rapport ici]',
+            '**[Contraintes]** Utilisez seulement l\'information du rapport. Ne spécule pas. Ne dépasse pas 200 mots au total. Écris en langage simple — pas de jargon technique.',
+            '**[Format de sortie]** Retourne la réponse en trois sections : « Insights clés » (3 points), « Risques principaux » (2 points), « Actions recommandées » (2 points, un par risque).',
           ],
         },
 
         templateNote: {
-          content: 'Ce modèle fonctionne sur GPT-5.5, Claude, Gemini et les LLM locaux via Ollama ou LM Studio. L\'ordre des blocs est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est l\'arrangement le plus courant et le plus fiable sur tous les grands modèles.',
+          content: 'Ce modèle fonctionne sur GPT-5, Claude 4.7, Gemini 3 Pro et sur les LLM locaux via Ollama ou LM Studio. L\'ordre des éléments est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est le plus courant et fiable sur tous les modèles majeurs.',
         },
 
         frameworks: {
-          title: 'Comment ces blocs correspondent aux frameworks et outils',
+          id: 'frameworks-and-tools',
+          title: 'Comment les 5 éléments correspondent-ils à CRAFT, CO-STAR et SPECS ?',
           content: [
-            'Les frameworks de prompt engineering populaires sont des façons d\'arranger ces mêmes cinq blocs sous des noms différents et dans des ordres différents. CRAFT, CO-STAR et SPECS correspondent tous directement à ce modèle en cinq blocs. Comprendre les blocs en premier signifie que vous pouvez appliquer n\'importe quel framework sans mémoriser sa terminologie spécifique de zéro.',
-            'Le tableau ci-dessous montre comment chaque bloc fondamental correspond au champ correspondant dans trois frameworks largement utilisés :',
+            'Les frameworks populaires d\'ingénierie de prompts sont des façons dogmatiques d\'organiser les mêmes cinq éléments sous différents noms et ordres. CRAFT, CO-STAR et SPECS mappent tous directement à ce modèle des 5 éléments. Comprendre d\'abord les 5 éléments signifie que vous pouvez appliquer n\'importe quel framework sans mémoriser de zéro sa terminologie spécifique.',
+            'Le tableau suivant montre comment chaque élément correspond au champ correspondant dans trois frameworks largement utilisés :',
           ],
-          columns: ['Bloc fondamental', 'CRAFT', 'CO-STAR', 'SPECS'],
+          columns: ['Élément', 'CRAFT', 'CO-STAR', 'SPECS'],
           rows: [
-            { 'Bloc fondamental': 'Rôle & Contexte', 'CRAFT': 'Contexte / Rôle', 'CO-STAR': 'Contexte + Public', 'SPECS': 'Situation' },
-            { 'Bloc fondamental': 'Tâche / Instruction', 'CRAFT': 'Action', 'CO-STAR': 'Objectif', 'SPECS': 'Problème / Tâche' },
-            { 'Bloc fondamental': 'Entrée & Exemples', 'CRAFT': 'Faits / Exemples', 'CO-STAR': 'Exemples (optionnel)', 'SPECS': 'Exemples' },
-            { 'Bloc fondamental': 'Contraintes', 'CRAFT': 'Restrictions', 'CO-STAR': 'Ton + Style', 'SPECS': 'Contraintes' },
-            { 'Bloc fondamental': 'Format de sortie', 'CRAFT': 'Format', 'CO-STAR': 'Format de réponse', 'SPECS': 'Style' },
+            { 'Élément': 'Rôle & Contexte', 'CRAFT': 'Contexte / Rôle', 'CO-STAR': 'Contexte + Public', 'SPECS': 'Situation' },
+            { 'Élément': 'Tâche / Instruction', 'CRAFT': 'Action', 'CO-STAR': 'Objectif', 'SPECS': 'Problème / Tâche' },
+            { 'Élément': 'Entrée & Exemples', 'CRAFT': 'Faits / Exemples', 'CO-STAR': 'Exemples (optionnel)', 'SPECS': 'Exemples' },
+            { 'Élément': 'Contraintes', 'CRAFT': 'Restrictions', 'CO-STAR': 'Ton + Style', 'SPECS': 'Contraintes' },
+            { 'Élément': 'Format de sortie', 'CRAFT': 'Format', 'CO-STAR': 'Format de réponse', 'SPECS': 'Style' },
           ],
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum inclut 9 frameworks intégrés qui pré-remplissent ces blocs dans différentes configurations selon le type de tâche. Pour des guides spécifiques aux frameworks, voir [Frameworks: Which Prompt Framework Should You Use?], [Frameworks: CRAFT Framework] et [Frameworks: CO-STAR Framework].',
+          content: 'PromptQuorum contient 9 frameworks intégrés qui pré-remplissent ces éléments selon le type de tâche. Pour des guides spécifiques au framework, voir [Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=fr), [CRAFT Framework](/prompt-engineering/craft-framework?lang=fr) et [CO-STAR Framework](/prompt-engineering/co-star-framework?lang=fr).',
         },
 
         mistakes: {
-          title: 'Erreurs courantes avec les 5 blocs',
+          id: 'common-mistakes',
+          title: 'Quelles sont les erreurs courantes avec les éléments fondamentaux ?',
           items: [
-            '**Rôle entièrement absent :** Le modèle répond d\'un point de vue générique — spécifiez le domaine et le niveau d\'expertise, même en une phrase',
-            '**Contexte vague :** « Écris pour mon public » ne dit rien au modèle — nommez le public, son niveau de connaissances et ce qu\'il fera avec la sortie',
-            '**Instruction invérifiable :** « Améliore-le » n\'a pas de critère de succès observable — remplacez par une tâche spécifique et mesurable',
-            '**Aucune contrainte sur les hallucinations :** Sans « utiliser uniquement les informations fournies », le modèle comble les lacunes avec des fabrications plausibles',
-            '**Format de sortie non spécifié :** Le modèle choisit sa propre structure — qui change d\'une exécution à l\'autre et brise les processus en aval',
-            '**Tout fusionné en un paragraphe :** Les blocs mélangés dans un mur de texte sont plus difficiles à analyser pour le modèle — utilisez des sauts de ligne ou des étiquettes explicites pour chaque bloc',
-            '**Exemples sur-identiques :** Trois exemples identiques n\'enseignent qu\'un seul schéma — variez-les pour couvrir la vraie gamme des entrées',
+            '**Omettre complètement le Rôle :** le modèle répond d\'une perspective générique — spécifiez le domaine et le niveau d\'expertise même en une phrase',
+            '**Contexte vague :** « Écris pour mon public » ne dit rien au modèle — nommez le public, leur niveau de connaissance et ce qu\'ils feront avec la sortie',
+            '**Instruction impossible à vérifier :** « Fais-le mieux » n\'a pas de critère de succès observable — remplacez par une tâche spécifique et mesurable',
+            '**Pas de Contraintes contre les hallucinations :** sans « utilise seulement l\'information fournie » le modèle comble les lacunes avec des inventions plausibles',
+            '**Format de sortie non spécifié :** le modèle choisit sa propre structure — qui varie entre les exécutions et rompt les processus en aval',
+            '**Tout fusionner en un paragraphe :** les éléments mélangés dans un bloc de texte sont plus difficiles pour le modèle à traiter — utilisez des sauts de ligne ou des étiquettes explicites pour chaque élément',
+            '**Exemples trop identiques :** trois exemples identiques n\'enseignent qu\'un motif — faites-les varier pour couvrir la vraie gamme des entrées',
+          ],
+        },
+
+        howToStart: {
+          id: 'how-to-build-a-prompt',
+          title: 'Comment construire un prompt (étape par étape)',
+          numberedItems: [
+            '**Définir Rôle & Contexte :** Ouvrez avec qui le modèle est et le domaine dans lequel il travaille. Exemple : « Vous êtes un expert-comptable expérimenté aidant un petit propriétaire en France. » Sans cela, le modèle répond d\'une perspective générique.',
+            '**Écrire la Tâche / Instruction :** Dites exactement ce qui doit être produit — spécifique et vérifiable. « Résumez les 5 obligations fiscales principales en 200 mots » est meilleur que « parle-moi des impôts. »',
+            '**Ajouter Entrée & Exemples :** Fournissez les données brutes et au moins un exemple du format de sortie correct. Un bon exemple réduit l\'incohérence plus que n\'importe quelle autre technique unique.',
+            '**Définir les Contraintes :** Listez ce que le modèle ne doit pas faire, le limite de longueur et les règles de ton. Exemple : « Pas de conseils pour les juridictions en dehors de la France. Maximum 200 mots. Ton formel. »',
+            '**Spécifier le Format de sortie :** Dites la forme exacte — objet JSON, résumé 3 points, tableau ou paragraphes. Omettre ceci est la cause la plus courante de sorties inutilisables.',
           ],
         },
 
         faq: {
-          title: 'FAQ : Les blocs fondamentaux d\'un prompt',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             {
-              q: 'Ai-je vraiment besoin des 5 blocs dans chaque prompt ?',
-              a: 'Non. Les tâches simples et non ambiguës nécessitent souvent seulement une Tâche / Instruction et un Format de sortie. Ajoutez Rôle & Contexte quand le domaine ou le public est important. Ajoutez des Contraintes quand les modes d\'échec sont coûteux. Ajoutez des Exemples quand la précision du format est critique. Commencez minimal et ajoutez des blocs uniquement quand la sortie ne correspond pas à votre standard.',
+              q: 'Ai-je vraiment besoin de tous les 5 éléments dans chaque prompt ?',
+              a: 'Non. Les tâches simples et sans ambiguïté nécessitent souvent seulement une tâche / instruction et un format de sortie. Ajoutez Rôle & Contexte quand le domaine ou le public compte. Ajoutez Contraintes quand les erreurs sont coûteuses. Ajoutez Exemples quand la précision du format est critique. Commencez minimaliste et n\'ajoutez des éléments que si la sortie ne répond pas à votre standard.',
             },
             {
               q: 'Le Rôle est-il plus important que le Contexte, ou l\'inverse ?',
-              a: 'Ils fonctionnent en binôme — ni l\'un ni l\'autre n\'est suffisant seul. Le Rôle sans Contexte produit une sortie générique en mode expert. Le Contexte sans Rôle produit une sortie consciente de la situation mais tonalement incohérente. Pour la plupart des tâches, une phrase combinant les deux fonctionne bien : « Tu es un [rôle] qui travaille avec [public] sur [tâche dans le domaine]. »',
+              a: 'Ils fonctionnent comme une paire — aucun ne suffit seul. Rôle sans contexte produit une sortie générique de mode expert. Contexte sans rôle produit une sortie consciente de la situation mais tonalement incohérente. Pour la plupart des tâches, une phrase combinant les deux fonctionne bien : « Vous êtes un [rôle] travaillant avec [public] sur [tâche de domaine]. »',
             },
             {
-              q: 'Puis-je garder des prompts courts et inclure quand même les 5 blocs ?',
-              a: 'Oui. Chaque bloc peut être exprimé en une seule phrase. Un prompt complet en cinq blocs peut tenir en moins de 100 mots. La brièveté n\'est pas le problème — le vague l\'est. Un prompt court et précis avec les cinq éléments surpasse systématiquement un long et décousu qui n\'en a aucun.',
+              q: 'Puis-je garder les prompts courts tout en incluant les 5 éléments ?',
+              a: 'Oui. Chaque élément peut être exprimé en une seule phrase. Un prompt complet à cinq éléments peut faire moins de 100 mots. La brièveté n\'est pas le problème — le flou l\'est. Un prompt court et précis avec les cinq éléments surpasse systématiquement un long et verbeux sans aucun.',
             },
             {
               q: 'Quelle est la différence entre Contexte et Exemples ?',
-              a: 'Le Contexte décrit la situation, le domaine et le public — c\'est une information de fond qui cadre la tâche. Les Exemples sont des paires entrée/sortie qui montrent au modèle à quoi ressemble une réponse correcte. Le Contexte indique au modèle où il est ; les Exemples lui montrent quoi produire. Les deux sont utiles, mais ils servent des objectifs complètement différents.',
+              a: 'Le contexte décrit la situation, le domaine et le public — c\'est l\'information d\'arrière-plan qui encadre la tâche. Les exemples sont des paires entrée/sortie qui montrent au modèle ce qu\'une réponse correcte ressemble. Le contexte dit au modèle où il est ; les exemples lui montrent ce qu\'il faut produire.',
             },
             {
-              q: 'Où se situent les contraintes si j\'utilise un framework comme CRAFT ou CO-STAR ?',
-              a: 'Chaque framework majeur a un champ qui correspond aux contraintes — « Restrictions » dans CRAFT, « Ton & Style » dans CO-STAR, « Contraintes » dans SPECS. Si votre framework n\'a pas de champ explicite pour les contraintes, ajoutez vos contraintes à la fin sous forme d\'une section « Ne pas faire » séparée — tous les modèles gèrent cela de manière fiable.',
+              q: 'Où les Contraintes s\'ajustent-elles si j\'utilise un framework comme CRAFT ou CO-STAR ?',
+              a: 'Chaque framework majeur a un champ qui correspond aux contraintes — « Restrictions » dans CRAFT, « Ton & Style » dans CO-STAR, « Contraintes » dans SPECS. Si votre framework n\'a pas de champ de contraintes explicite, ajoutez les contraintes à la fin en tant que section « Ne pas » séparée — tous les modèles gèrent cela de façon fiable.',
             },
             {
-              q: 'Le format de sortie est-il important si je pose simplement une question simple ?',
-              a: 'Pour les questions conversationnelles, spécifier le format est optionnel. Pour toute sortie qui sera utilisée en aval — collée dans un document, analysée par du code, publiée ou réutilisée entre membres d\'équipe — spécifier le format est essentiel. C\'est la différence entre obtenir un résultat et obtenir un résultat utilisable.',
+              q: 'Le format de sortie importe-t-il si je pose simplement une question simple ?',
+              a: 'Pour les questions conversationnelles, spécifier le format est optionnel. Pour toute sortie qui sera utilisée en aval — collée dans un document, analysée par code, publiée ou réutilisée entre membres d\'équipe — spécifier le format est essentiel. C\'est la différence entre obtenir un résultat et obtenir un résultat utilisable.',
+            },
+            {
+              q: 'Dois-je respecter la conformité CNIL quand j\'utilise PromptQuorum ?',
+              a: 'Oui. PromptQuorum est conforme au RGPD et aux directives de la CNIL. Pour les données sensibles professionnelles (données financières, médicales, juridiques), les inférences locales avec Ollama ou LM Studio gardent vos données sous votre contrôle et satisfont les exigences de conformité CNIL. Pour les instances cloud, négociez toujours des contrats de traitement de données (DPA) avec le prestataire.',
+            },
+            {
+              q: 'PromptQuorum convient-il aux organisations traitant des données sensibles ?',
+              a: 'Oui. PromptQuorum a été conçu pour les organisations européennes traitant des données sensibles et respecte les standards de sécurité IT. Avec les modèles locaux, vous obtenez une souveraineté totale des données, un fonctionnement hors ligne et l\'adaptation aux standards sectoriels (Finance, Santé, Juridique). L\'architecture tarifaire est aussi adaptée aux PME — elle se redimensionne selon vos besoins sans frais cloud disproportionnés.',
+            },
+            {
+              q: 'Où trouver des frameworks de prompt reconnus ?',
+              a: 'Les frameworks populaires comme CRAFT, CO-STAR et SPECS sont des approches méthodiques pour les 5 mêmes éléments sous différents noms. PromptQuorum propose 9 frameworks intégrés qui pré-remplissent ces éléments selon le type de tâche. Comprendre d\'abord les 5 éléments signifie que vous pouvez appliquer n\'importe quel framework sans mémoriser de zéro sa terminologie spécifique.',
+            },
+            {
+              q: 'Ces 5 éléments s\'appliquent-ils à tous les modèles IA ?',
+              a: 'Oui. Que vous utilisiez GPT-5, Claude 4.7, Gemini 3 Pro, ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.',
             },
           ],
         },
+
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures connexes',
+          items: [
+            '[How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=fr) — Des premiers modèles suivant les instructions aux systèmes de raisonnement d\'aujourd\'hui : comment les techniques de prompting ont évolué avec les capacités des modèles.',
+            '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — Quand utiliser des exemples et quand les omettre : choisir la bonne approche pour votre tâche.',
+            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=fr) — Les contraintes en action : comment les exclusions rendent les sorties plus fiables que les inclusions.',
+            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — Pourquoi les contraintes et exemples sont importants : les causes profondes des hallucinations et les contre-mesures basées sur les preuves.',
+            '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode?lang=fr) — Spécifier les formats de sortie précis : mode JSON, tableaux Markdown et autres approches structurées sur les modèles.',
+            '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=fr) — Comparaison de CRAFT, CO-STAR, SPECS et autres : choisir un framework qui correspond à votre cas d\'usage.',
+          ],
+        },
+
+        sources: {
+          id: 'sources',
+          title: 'Sources et références',
+          items: [
+            '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Guide officiel d\'ingénierie de prompts d\'OpenAI, incluant les bonnes pratiques pour les prompts basés sur rôles et structurés.',
+            '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Implications de sécurité des prompts non structurés et recommandations pour les contraintes.',
+            '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Catalogue complet des motifs de conception de prompts, incluant les techniques structurées et basées sur rôles directement applicables au modèle des 5 éléments.',
+          ],
+        },
+
       },
     },
     ja: {
