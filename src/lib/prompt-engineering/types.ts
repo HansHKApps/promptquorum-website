@@ -16,6 +16,9 @@ export interface PESection {
   imagePlaceholder?: boolean
   codeBlock?: string
   codeLanguage?: string
+  callouts?: Array<{ type: string; label: string; text: string }>
+  snippets?: Array<{ type: 'in-one-sentence' | 'in-plain-terms'; text: string }>
+  mistakes?: Array<{ mistake: string; problem: string; fix: string }>
 }
 
 export interface PEArticle {
