@@ -29,6 +29,7 @@ export interface PEArticle {
   metaDescription?: string   // 150–160 char SEO-optimised description for meta tag (falls back to intro if absent)
   publishDate?: string
   dateModified?: string
+  lastFactChecked?: string   // E-E-A-T signal: date and model versions verified against
   readTime?: string
   sections: Record<string, PESection>
   schema?: Record<string, unknown>

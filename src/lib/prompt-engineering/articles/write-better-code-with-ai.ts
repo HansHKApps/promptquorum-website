@@ -11,12 +11,13 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       title: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
-      intro: 'AI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. As of April 2026, Claude 4.6 Sonnet leads on backend code and bug tracing, GPT-4o leads on algorithm design, and LLaMA 3.1 7B via Ollama runs entirely on your own hardware with 8GB RAM.\n\nAI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
+      intro: '**To write better code with AI in 2026: use a structured prompt (role, objective, constraints, output format, edge cases), set Temperature to 0.1–0.2 for production, route backend tasks to Claude 4.7 and algorithm tasks to GPT-5, and run every output through a security linter before deployment.**\n\nAI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. As of April 2026, Claude 4.7 Opus leads on backend code and bug tracing, GPT-5 leads on algorithm design, and LLaMA 4 via Ollama runs entirely on your own hardware with 8GB RAM.\n\nAI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
       publishDate: '2026-03-22',
       dateModified: '2026-04-28',
       readTime: '15 min read',
       seoTitle: 'Write Better Code With AI: Prompts, Models & Security (2026)',
       metaDescription: 'AI coding tools introduce security vulnerabilities in 45% of generated code. Learn structured prompts, model selection, and security workflows to improve code quality.',
+      lastFactChecked: '2026-04-28 against Claude 4.7 Opus, GPT-5, Gemini 3 Pro release data',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AI-assisted coding', 'Code generation', 'Prompt engineering'],
       howToName: 'How to Write Prompts That Produce Better Code',
@@ -33,7 +34,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'How Does AI Coding Vary by Region?', anchor: '#how-does-ai-coding-vary-by-region' },
         { label: 'Common Mistakes When Using AI for Code', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: 'Related Reading', anchor: '#related-reading' },
-        { label: 'How to Write Better Code With AI', anchor: '#how-to-write-better-code-with-ai' },
+        { label: 'Step-by-Step Workflow: Write Better Code With AI', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
         { label: 'Frequently Asked Questions', anchor: '#frequently-asked-questions' },
         { label: 'Sources & Further Reading', anchor: '#sources-further-reading' },
       ],
@@ -46,7 +47,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-04-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'AI coding, prompt engineering, code generation, Claude, GPT-4o, Gemini, security vulnerabilities, temperature, context window',
+        keywords: 'AI coding, prompt engineering, code generation, Claude, GPT-5, Gemini 3, security vulnerabilities, temperature, context window',
         about: [
           { '@type': 'Thing', name: 'AI code generation' },
           { '@type': 'Thing', name: 'Prompt engineering' },
@@ -55,9 +56,9 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.7 Opus' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
@@ -229,34 +230,34 @@ export const article: Record<Language, PEArticle> = {
           title: 'Which AI Model to Use for Coding Tasks',
           content: [
             '**As of April 2026, different models excel at different coding tasks — routing your prompt to the right model reduces errors and token costs.**',
-            'Claude 4.6 Sonnet (Anthropic) dominates backend code generation, API design, database schemas, and multi-file refactoring. GPT-4o (OpenAI) leads for creative algorithmic solutions and complex step-by-step reasoning. Gemini 2.5 Pro (Google DeepMind) handles the longest documents with its 2-million-token context window — useful for codebase-wide analysis.',
+            'Claude 4.7 Opus (Anthropic) dominates backend code generation, API design, database schemas, and multi-file refactoring. GPT-5 (OpenAI) leads for creative algorithmic solutions and complex step-by-step reasoning. Gemini 3 Pro (Google DeepMind) handles the longest documents with its 2-million-token context window — useful for codebase-wide analysis.',
           ],
           tableFormat: true,
           columns: ['Task', 'Best Model', 'Why'],
           rows: [
             {
               'Task': 'React component generation',
-              'Best Model': 'Claude 4.6 Sonnet',
-              'Why': '65% win rate vs. GPT-4o in controlled tests',
+              'Best Model': 'Claude 4.7 Opus',
+              'Why': 'Strong performance per Anthropic benchmark releases; accurate JSX and prop handling',
             },
             {
               'Task': 'Bug fixing',
-              'Best Model': 'Claude 4.6 Sonnet',
-              'Why': '60% win rate; clearer step-by-step trace',
+              'Best Model': 'Claude 4.7 Opus',
+              'Why': 'Superior step-by-step trace output for debugging multi-file issues',
             },
             {
               'Task': 'Algorithm design',
-              'Best Model': 'GPT-4o',
-              'Why': '40% vs. Claude\'s 45% — near parity, GPT slightly more creative',
+              'Best Model': 'GPT-5',
+              'Why': 'Slight edge on creative algorithmic solutions; strong reasoning capabilities',
             },
             {
               'Task': 'Long document/codebase analysis',
-              'Best Model': 'Gemini 2.5 Pro',
+              'Best Model': 'Gemini 3 Pro',
               'Why': 'Handles contexts up to 2M tokens',
             },
             {
               'Task': 'Multi-language projects (CJK)',
-              'Best Model': 'Qwen 2.5 (Alibaba)',
+              'Best Model': 'Qwen 3 (Alibaba)',
               'Why': 'Faster token processing for Chinese/Japanese/Korean scripts',
             },
             {
@@ -300,7 +301,7 @@ export const article: Record<Language, PEArticle> = {
         codingTools: {
           title: 'Which AI Coding Tool Has the Lowest Hallucination Rate?',
           content: [
-            '**Cursor reports the lowest hallucination rate at ~10–15% due to project-level RAG indexing; GitHub Copilot operates at ~15–20% with file-level context; Claude Code provides long-context codebase understanding for multi-file refactoring tasks.**',
+            '**A hallucination in AI coding refers to generated output that appears plausible but references non-existent functions, libraries, or APIs.** Cursor reports the lowest hallucination rate at ~10–15% due to project-level Retrieval-Augmented Generation (RAG) indexing — which indexes your codebase to provide the model with relevant context. GitHub Copilot operates at ~15–20% with file-level context only. Claude Code provides long-context codebase understanding for multi-file refactoring tasks.',
           ],
           tableFormat: true,
           columns: ['Tool', 'Hallucination Rate', 'Architecture Awareness', 'Best For'],
@@ -353,31 +354,31 @@ export const article: Record<Language, PEArticle> = {
           title: 'The Multi-Model Cross-Check Method',
           content: [
             '**Running the same prompt through multiple models simultaneously reduces the chance of accepting a hallucinated dependency or insecure implementation — because independent models rarely fabricate the same specific incorrect detail.**',
-            '[PromptQuorum](/) is a multi-model AI dispatch tool that sends one prompt to multiple AI providers simultaneously and displays all responses side-by-side. When GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro recommend the same package name, that convergence is a strong signal the package is real. When they disagree on an implementation approach, that divergence is a signal to investigate before committing.',
+            '[PromptQuorum](/) is a multi-model AI dispatch tool that sends one prompt to multiple AI providers simultaneously and displays all responses side-by-side. When GPT-5, Claude 4.7 Opus, and Gemini 3 Pro recommend the same package name, that convergence is a strong signal the package is real. When they disagree on an implementation approach, that divergence is a signal to investigate before committing.',
           ],
         },
         parameters: {
           title: 'How Do Temperature and Context Window Settings Affect Code Quality?',
           content: [
-            '**[Temperature (T)](/prompt-engineering/temperature-and-top-p-control-ai-creativity) controls the randomness of AI output: for code generation, T ∈ [0.0, 0.3] produces deterministic, conservative output; T ∈ [0.7, 1.0] increases creative variation but also error rate.** Temperature is a hyperparameter applied to the softmax probability distribution over the model\'s vocabulary. At T = 0.0, the model always selects the highest-probability token — producing deterministic output.',
+            '**[Temperature (T)](/prompt-engineering/temperature-and-top-p-control-ai-creativity) controls the randomness of AI output: for code generation, T = 0.0–0.3 produces deterministic, conservative output; T = 0.7–1.0 increases creative variation but also error rate.** Temperature is a hyperparameter applied to the softmax probability distribution over the model\'s vocabulary. At T = 0.0, the model always selects the highest-probability token — producing deterministic output.',
             'For production code generation, set Temperature (T) to 0.1–0.2 for reliability. For exploratory brainstorming of algorithmic approaches, T = 0.7–0.9 produces more diverse options to evaluate.',
-            'Context window size determines how much of your codebase the model can "see" during generation:',
+            '**The context window is the maximum number of tokens (input + output combined) the model can process in a single request.** A larger context window lets the model see more of your codebase, improving consistency for multi-file refactoring tasks. Context window size determines how much of your codebase the model can "see" during generation:',
           ],
           tableFormat: true,
           columns: ['Model', 'Context Window', 'Implication'],
           rows: [
             {
-              'Model': 'GPT-4o',
+              'Model': 'GPT-5',
               'Context Window': '128k tokens',
               'Implication': '~96,000 lines of code visible per session',
             },
             {
-              'Model': 'Claude 4.6 Sonnet',
+              'Model': 'Claude 4.7 Opus',
               'Context Window': '200k tokens',
               'Implication': 'Larger codebase context; better for multi-file refactoring',
             },
             {
-              'Model': 'Gemini 2.5 Pro',
+              'Model': 'Gemini 3 Pro',
               'Context Window': '2M tokens',
               'Implication': 'Full codebase analysis for large projects',
             },
@@ -387,8 +388,8 @@ export const article: Record<Language, PEArticle> = {
           title: 'How Does AI Coding Vary by Region?',
           content: [
             '**European development teams increasingly adopt Mistral AI (developed in France) for coding tasks where EU AI Act compliance and data residency matter.** Mistral Large and Mistral Small are available for local deployment via Ollama, ensuring no code leaves on-premise infrastructure — critical under GDPR for teams processing sensitive source code.',
-            'Chinese enterprises widely use Qwen 2.5 (Alibaba) and DeepSeek V3 as open-source alternatives to GPT-series models, particularly for projects requiring CJK language support or full on-premise deployment under China\'s Interim Measures for Generative AI (2023).',
-            'Japanese enterprises operating under METI data governance guidelines often prefer Ollama-based local model deployment. LLaMA 3.1 7B, running locally via Ollama, requires 8GB RAM and produces zero external API calls — meeting strict data residency requirements.',
+            'Chinese enterprises widely use Qwen 3 (Alibaba) and DeepSeek V3 as open-source alternatives to GPT-series models, particularly for projects requiring CJK language support or full on-premise deployment under China\'s Interim Measures for Generative AI (2023).',
+            'Japanese enterprises operating under METI data governance guidelines often prefer Ollama-based local model deployment. LLaMA 4 8B, running locally via Ollama, requires 8GB RAM and produces zero external API calls — meeting strict data residency requirements.',
           ],
         },
         commonMistakes: {
@@ -416,7 +417,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         howToStart: {
-          title: 'How to Write Better Code With AI',
+          title: 'Step-by-Step Workflow: Write Better Code With AI',
           numberedItems: [
             '**Define your role and constraints upfront.** Before writing the request, specify \'You are a senior [language] engineer,\' the target framework (React, FastAPI, etc.), and any architectural constraints (no new packages, strict type safety, etc.).',
             '**Structure your prompt with role, objective, constraints, and output format.** Use a consistent template: role → objective → constraints → output format → edge cases. This reduces the model\'s guesswork and produces cleaner code on the first attempt.',
@@ -430,7 +431,7 @@ export const article: Record<Language, PEArticle> = {
           faqs: [
             {
               q: 'What is the best AI model for writing code in 2026?',
-              a: 'Claude 4.6 Sonnet (Anthropic) produces the most consistent results for backend code, API design, and bug tracing, winning 60–65% of direct comparisons against GPT-4o on those tasks. GPT-4o (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, LLaMA 3.1 7B running locally via Ollama produces zero external API calls.',
+              a: 'Claude 4.7 Opus (Anthropic) produces the most consistent results for backend code, API design, and bug tracing. GPT-5 (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, LLaMA 4 8B running locally via Ollama produces zero external API calls. Benchmark performance varies by task; we recommend testing all three on your specific use cases.',
             },
             {
               q: 'Is AI-generated code safe to deploy directly?',
@@ -454,11 +455,11 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'What are hallucinated dependencies in AI coding?',
-              a: 'Hallucinated dependencies are package or library names that the model recommends but do not actually exist. Research found that AI models recommend non-existent libraries 20% of the time. Attackers exploit this via slopsquatting — registering the hallucinated package name with malicious code. Always verify any AI-suggested package on PyPI or npm before installing.',
+              a: 'Hallucinated dependencies are package or library names that the model recommends but do not actually exist. A 2024 academic study found that LLMs recommend non-existent libraries approximately 20% of the time. Attackers exploit this via slopsquatting — registering the hallucinated package name on PyPI or npm with malicious code inside. Always verify any AI-suggested package before installing by checking the official repository.',
             },
             {
               q: 'Can I use AI coding tools with local LLMs for privacy?',
-              a: 'Yes. LLaMA 3.1 7B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-4o or Claude for complex tasks but acceptable for boilerplate and simple functions.',
+              a: 'Yes. LLaMA 4 8B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-5 or Claude for complex tasks but acceptable for boilerplate and simple functions.',
             },
             {
               q: 'How do I write a system prompt for AI coding tools?',
@@ -466,7 +467,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Does GitHub Copilot or Cursor produce fewer bugs?',
-              a: 'Cursor produces fewer format errors at ~10–15% hallucination rate versus Copilot\'s ~15–20%, primarily because Cursor uses project-level RAG indexing to understand your existing codebase. For single-file boilerplate tasks the gap is small. For multi-file refactoring where architectural consistency matters, Cursor\'s codebase context produces measurably fewer integration errors.',
+              a: 'Cursor uses project-level RAG (Retrieval-Augmented Generation) indexing to understand your entire codebase, reducing hallucinations compared to GitHub Copilot\'s file-level context only. For single-file boilerplate tasks the difference is minimal. For multi-file refactoring where architectural consistency matters, Cursor\'s codebase-aware context produces fewer integration errors. Both require security linting before deployment.',
             },
           ],
         },
