@@ -17,7 +17,7 @@ export const article: Record<Language, PEArticle> = {
 
       seoTitle: 'Constrained Prompting: Force AI Output Formats (2026)',
 
-      metaDescription: 'Force AI output into JSON, XML, or structured tables. 5 constraint types for GPT-4o, Claude, and Gemini with real examples and a 5-step implementation guide.',
+      metaDescription: 'Force AI output into JSON, XML, or structured tables. 5 constraint types for GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro with real examples and a 5-step implementation guide.',
 
       educationalLevel: 'Intermediate',
       primaryTerm: 'Constrained Prompting',
@@ -70,8 +70,8 @@ export const article: Record<Language, PEArticle> = {
         mainEntity: [
           { '@type': 'Question', name: 'What is constrained prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Constrained prompting is the practice of adding explicit rules — format, length, content, and safety boundaries — directly into a prompt to make AI output predictable and reusable. Instead of "write a summary," you specify: 150 words, JSON format, no competitor names, must include a call-to-action.' } },
           { '@type': 'Question', name: 'What are the five types of constraints?', acceptedAnswer: { '@type': 'Answer', text: 'The five main constraint types are: (1) Structural — required headings, tables, JSON with specific keys. (2) Content — required sections, banned topics. (3) Style — tone, reading level, terminology. (4) Length — word or character limits. (5) Safety — avoid medical advice, personal data, legal conclusions.' } },
-          { '@type': 'Question', name: 'How do you force a model to output valid JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Provide the exact JSON schema in the prompt: "Return JSON exactly matching: { \\"finding\\": \\"...\\" }". Combine this with "Output only JSON, no other text." GPT-4o also supports a JSON mode via API that enforces valid JSON at the API level.' } },
-          { '@type': 'Question', name: 'Does constrained prompting work on GPT-4o, Claude, and Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — all three support constrained prompting. GPT-4o and Claude 4.6 Sonnet follow hard format constraints (JSON, tables, word limits) at approximately 95% adherence on well-formed prompts. Gemini 2.5 Pro scores similarly but may interpret ambiguous constraints differently. Always test across models.' } },
+          { '@type': 'Question', name: 'How do you force a model to output valid JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Provide the exact JSON schema in the prompt: "Return JSON exactly matching: { \\"finding\\": \\"...\\" }". Combine this with "Output only JSON, no other text." GPT-5.5 also supports a JSON mode via API that enforces valid JSON at the API level.' } },
+          { '@type': 'Question', name: 'Does constrained prompting work on GPT-5.5, Claude, and Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — all three support constrained prompting. GPT-5.5 and Claude Opus 4.7 follow hard format constraints (JSON, tables, word limits) at approximately 95% adherence on well-formed prompts. Gemini 3.1 Pro scores similarly but may interpret ambiguous constraints differently. Always test across models.' } },
           { '@type': 'Question', name: 'What is the difference between constrained prompting and few-shot prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Constrained prompting adds explicit rules in text form (format, length, content restrictions). Few-shot prompting provides worked examples that implicitly show the model what to produce. The two work well together: use a few-shot example to demonstrate the output pattern, then add constraints for stricter enforcement.' } },
           { '@type': 'Question', name: 'When should you NOT use constrained prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Avoid structural constraints on open-ended creative tasks (brainstorming, ideation, fiction). Over-constraining creative prompts produces formulaic, low-quality output. Use tone and style constraints for creative tasks but allow structural freedom.' } },
           { '@type': 'Question', name: 'How many constraints can you stack in one prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Practically, 3–5 constraints work well. Beyond 5–6, models start silently dropping lower-priority constraints without warning. If you need more than 5, list them in priority order and state explicitly: "If constraints conflict, apply them in this order: (1) safety, (2) format, (3) length."' } },
@@ -82,7 +82,7 @@ export const article: Record<Language, PEArticle> = {
         '@type': 'HowTo',
         name: 'How to Use Constrained Prompting',
         inLanguage: 'en',
-        description: 'A 5-step guide to applying output constraints in prompts for GPT-4o, Claude, and Gemini.',
+        description: 'A 5-step guide to applying output constraints in prompts for GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro.',
         step: [
           { '@type': 'HowToStep', position: 1, name: 'Identify output constraints', text: 'Identify constraints relevant to your task: length, format, vocabulary, scope, and safety.' },
           { '@type': 'HowToStep', position: 2, name: 'Use hard constraint language', text: 'State constraints using "must," "must not," and "only" — never "try to" or "aim to."' },
@@ -99,7 +99,7 @@ export const article: Record<Language, PEArticle> = {
             '5 constraint types: structural, content, style, length, and safety — combine them for maximum output control.',
             'Use mandatory language: **"must," "must not," "only."** Soft directives like "try to" are frequently ignored.',
             'Format constraints work best with an example: show the model the exact JSON schema or Markdown structure you need.',
-            'GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro all support constrained prompting but respond differently — test across models.',
+            'GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro all support constrained prompting but respond differently — test across models.',
             'Constrained prompts save review time: outputs that already match your required structure need less human correction.',
             'Use [PromptQuorum](https://www.promptquorum.com/) to test constrained prompts across multiple models side by side.',
           ],
@@ -208,7 +208,7 @@ export const article: Record<Language, PEArticle> = {
             '**Test constrained prompts on edge cases to ensure the model respects all constraints.** Generate 10 outputs. Check: Do all respect the length limit? Do all use the correct format? Are there any violations?',
           ],
           callouts: [
-            { type: 'insight', label: 'Insight', text: 'GPT-4o and Claude 4.6 Sonnet follow hard format constraints (JSON, tables, word limits) at ~95% adherence on well-formed prompts. Gemini 2.5 Pro scores similarly. All three degrade when constraints are vague or contradictory.' },
+            { type: 'insight', label: 'Insight', text: 'GPT-5.5 and Claude Opus 4.7 follow hard format constraints (JSON, tables, word limits) at ~95% adherence on well-formed prompts. Gemini 3.1 Pro scores similarly. All three degrade when constraints are vague or contradictory.' },
           ],
         },
         commonMistakes: {
@@ -236,7 +236,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               mistake: 'Not testing constraints across models',
-              problem: 'GPT-4o, Claude, and Gemini all interpret the same constraint differently. A prompt that works on one may fail on another.',
+              problem: 'GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro all interpret the same constraint differently. A prompt that works on one may fail on another.',
               fix: 'Test your constrained prompt on at least 2 models before deploying. Use [PromptQuorum](https://www.promptquorum.com/) to run parallel comparisons.',
             },
           ],
@@ -257,7 +257,7 @@ export const article: Record<Language, PEArticle> = {
           faqs: [
             { q: 'What is constrained prompting?', a: 'Constrained prompting is the practice of adding explicit rules — format, length, content, and safety boundaries — directly into a prompt to make AI output predictable and reusable. Instead of "write a summary," you specify: 150 words, JSON format, no competitor names, must include a call-to-action.' },
             { q: 'What are the five types of constraints?', a: 'The five main constraint types are: (1) Structural — required headings, tables, JSON with specific keys. (2) Content — required sections, banned topics. (3) Style — tone, reading level, terminology. (4) Length — word or character limits. (5) Safety — avoid medical advice, personal data, legal conclusions.' },
-            { q: 'How do you force a model to output valid JSON?', a: 'Provide the exact JSON schema in the prompt: "Return JSON exactly matching: { \\"finding\\": \\"...\\" }". Combine this with "Output only JSON, no other text." GPT-4o also supports a JSON mode via API that enforces valid JSON at the API level.' },
+            { q: 'How do you force a model to output valid JSON?', a: 'Provide the exact JSON schema in the prompt: "Return JSON exactly matching: { \\"finding\\": \\"...\\" }". Combine this with "Output only JSON, no other text." GPT-5.5 also supports a JSON mode via API that enforces valid JSON at the API level.' },
             { q: 'Does constrained prompting work on GPT-4o, Claude, and Gemini?', a: 'Yes — all three support constrained prompting. GPT-4o and Claude 4.6 Sonnet follow hard format constraints (JSON, tables, word limits) at approximately 95% adherence on well-formed prompts. Gemini 2.5 Pro scores similarly but may interpret ambiguous constraints differently. Always test across models.' },
             { q: 'What is the difference between constrained prompting and few-shot prompting?', a: 'Constrained prompting adds explicit rules in text form (format, length, content restrictions). Few-shot prompting provides worked examples that implicitly show the model what to produce. The two work well together: use a few-shot example to demonstrate the output pattern, then add constraints for stricter enforcement.' },
             { q: 'When should you NOT use constrained prompting?', a: 'Avoid structural constraints on open-ended creative tasks (brainstorming, ideation, fiction). Over-constraining creative prompts produces formulaic, low-quality output. Use tone and style constraints for creative tasks but allow structural freedom.' },
