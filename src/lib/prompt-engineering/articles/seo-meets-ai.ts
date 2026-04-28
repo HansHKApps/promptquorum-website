@@ -626,7 +626,8 @@ export const article: Record<Language, PEArticle> = {
           {
             '@type': 'Question',
             name: 'Ist GEO für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Absolut. Deutsche und österreichische Mittelstandsfirmen profitieren stark von GEO: (1) B2B-Content (Maschinenbau, Consulting, Softwarelösungen) konvertiert über KI-Suche 2–3× besser, (2) Jüngere Entscheidungsträger (25–45) bevorzugen Perplexity und ChatGPT over Google für schnelle Recherche, (3) GEO-optimierte Seiten kosten weniger als klassische Google-Ads. Implementierung: Strukturiere deine Produktseiten mit Schema, schreibe Whitepaper/Guides im Antwort-First-Format, optimiere für long-form Abfragen ("Warum", "Wie", "Welche"). Für DSGVO-Compliance nutze lokale Modelle (Ollama, LM Studio) für interne Tests. Mittelständische Beratung, Engineering und SaaS sollten GEO im 2026 Budget einplanen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Absolut. Deutsche und österreichische Mittelstandsfirmen profitieren stark von GEO: (1) B2B-Content (Maschinenbau, Consulting, Softwarelösungen) konvertiert über KI-Suche 2–3× besser, (2) Jüngere Entscheidungsträger (25–45) bevorzugen Perplexity und ChatGPT über Google für schnelle Recherche, (3) GEO-optimierte Seiten kosten weniger als klassische Google-Ads. Implementierung: Strukturiere deine Produktseiten mit Schema, schreibe Whitepaper/Guides im Antwort-First-Format, optimiere für long-form Abfragen ("Warum", "Wie", "Welche"). Für DSGVO-Compliance nutze lokale Modelle (Ollama, LM Studio) für interne Tests. Mittelständische Beratung, Engineering und SaaS sollten GEO im 2026 Budget einplanen.' },
+          },
         ],
       },
       itemListSchema: {
@@ -981,9 +982,9 @@ export const article: Record<Language, PEArticle> = {
         sources: {
           title: 'Quellen und weiterführende Ressourcen',
           items: [
-            '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — the foundational academic paper defining GEO as a discipline and measuring citation lift from structured content',
-            '[WebFX, 2026. "Study: AI Traffic Grew 796% & Out-Converts Organic Search"](https://www.webfx.com/blog/seo/gen-ai-search-trends/) — analysis of 2.3 billion sessions on AI vs. organic conversion rates',
-            '[xSeek / Milestone Research, 2026. "Structured Data for AI Search: 40% More Citations"](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility) — controlled study on JSON-LD schema and AI citation frequency',
+            '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — das grundlegende akademische Papier, das GEO als Disziplin definiert und den Citation-Lift von strukturiertem Content misst',
+            '[WebFX, 2026. "Study: AI Traffic Grew 796% & Out-Converts Organic Search"](https://www.webfx.com/blog/seo/gen-ai-search-trends/) — Analyse von 2,3 Milliarden Sessions zu KI- vs. organischen Such-Konversionsraten',
+            '[xSeek / Milestone Research, 2026. "Structured Data for AI Search: 40% More Citations"](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility) — kontrollierte Studie zu JSON-LD-Schema und KI-Zitierfrequenz',
           ],
         },
       },
@@ -1094,6 +1095,7 @@ export const article: Record<Language, PEArticle> = {
             '@type': 'Question',
             name: 'GEO est-il pertinent pour les petites entreprises françaises ?',
             acceptedAnswer: { '@type': 'Answer', text: 'Absolument. Les PME françaises bénéficient fortement de GEO : (1) le contenu B2B (conseil, logiciel, services) convertit 2–3 × mieux via la recherche IA, (2) les décideurs plus jeunes (25–45) préfèrent Perplexity et ChatGPT pour la recherche rapide, (3) les pages optimisées GEO coûtent moins que les annonces Google classiques. Implémentation : structurez vos pages produit avec le schéma, écrivez des guides/whitepapers au format réponse-d\'abord, optimisez pour les requêtes longues ("Pourquoi", "Comment", "Quel"). Pour la conformité CNIL, utilisez des modèles locaux (Ollama, LM Studio) pour les tests internes. Les cabinets de conseil, d\'ingénierie et les SaaS français devraient planifier GEO dans le budget 2026.' },
+          },
         ],
       },
       itemListSchema: {
