@@ -2040,6 +2040,9 @@ export const article: Record<Language, PEArticle> = {
         'すべてのAI交互作用向けに生徒が使う構造化プロンプトテンプレートを作成する。',
         '特定タスク向けのAI使用について明確なガイドラインを確立する。',
       ],
+      callouts: [
+        { type: '✨', label: '即座の利益', text: '教師は構造化プロンプト使用で週5～13時間を節約—毎週各生徒に1時間のパーソナルチューター時間を追加するのに十分。' },
+      ],
     },
     relatedReading: {
       title: '関連リソース',
