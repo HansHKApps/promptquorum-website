@@ -2042,7 +2042,7 @@ export const article: Record<Language, PEArticle> = {
       title: '関連リソース',
       items: [
         '[プロンプト工学とは何か](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 効果的なAI指示の背後にある基本的原理',
-        '[AIでより良いコードを書く](/prompt-engineering/write-better-code-with-ai?lang=ja) — AI生成教育内容と精度プロンプト構造化',
+        '[AIでより良いコードを書く](/prompt-engineering/write-better-code-with-ai?lang=ja) — 構造化されたプロンプトが信頼性の高いAI出力を生成する方法 — 授業計画と評価生成に適用可能',
         '[AI制限—LLMができないこと](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — AIハルシネーション教育ツールに影響する理由と計画方法',
         '[AI支援研究](/prompt-engineering/ai-powered-research?lang=ja) — AIで生成コンテンツ検証フロー、生徒と教師研究タスク適用可能',
         '[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja) — 「経験豊かな5年生算数教師」のような役割定義がAI出力品質と一貫性を変える方法',
@@ -2071,9 +2071,9 @@ export const article: Record<Language, PEArticle> = {
         '**この記事内のすべての統計と結論は査読済み研究、政府ガイドラインとドキュメント制度ポリシーから取得されます。** 最終ファクトチェック：2026-04-28（現在Claude 4.6 Sonnet、GPT-4o、Gemini 2.5 Proモデル；Khan AcademyでのKhanmigo現在価格；2025年から有効のEU AI法第4条ガイドライン）。',
       ],
       items: [
-        '[Kestin & Miller, 2024. 「AI tutoring outperforms active learning classrooms — Harvard RCT」](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — 194生徒でのランダム化比較試験；効果量0.73～1.3 SD',
+        '[Kestin & Miller, 2024. 「AIチュータリングが対面アクティブラーニングを上回る — ハーバード大RCT」](https://www.nature.com/articles/s41598-025-97652-6) — 194生徒でのランダム化比較試験；効果量0.73～1.3 SD',
         '[Kwak, 2025. 「The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes」](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — 21研究の体系的レビュー；性能利益15～35%；r = 0.781',
-        '[EU AI法、2024。別紙III—教育における高リスクAIシステム](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — 教育評価AIを高リスクとして分類、強制監督要件付き',
+        '[EU AI法、2024。附属書III — 教育における高リスクAIシステム](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) — 教育評価AIを高リスクとして分類、強制監督要件付き',
       ],
     },
   },
@@ -2103,7 +2103,7 @@ export const article: Record<Language, PEArticle> = {
         { label: '学校的AI作弊检测有多可靠？', anchor: '#how-detectable-is-ai-cheating-in-schools' },
         { label: '中国、亚太和企业的AI监管', anchor: '#how-does-the-eu-ai-act-affect-schools' },
         { label: 'AI在教学中的常见误区', anchor: '#common-mistakes-when-using-ai-in-education' },
-        { label: 'AI教学工作流：从计划到实施', anchor: '#step-by-step-workflow-teaching-with-ai' },
+        { label: '分步指南：将AI融入教学实践', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: '相关资源', anchor: '#related-reading' },
         { label: '常见问题', anchor: '#frequently-asked-questions' },
         { label: '信息来源', anchor: '#sources-further-reading' },
@@ -2256,7 +2256,7 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         inLanguage: 'zh',
-        name: '如何用AI进行教学',
+        name: '如何将AI融入教学实践',
         step: [
           {
             '@type': 'HowToStep',
@@ -2503,7 +2503,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         howToStart: {
-          title: 'AI教学工作流：从计划到实施',
+          title: '分步指南：将AI融入教学实践',
           content: [
             '**开始使用AI进行教学的最快方法：从一个小任务开始，如课程计划或反馈，并扩大。** 这是分步工作流：',
             '1. **明确您的学习目标。** 在向AI询问之前，知道学生需要学什么。AI可以帮助实现目标，但不能替代设定它们。',
@@ -2519,7 +2519,7 @@ export const article: Record<Language, PEArticle> = {
           title: '相关资源',
           items: [
             '[什么是提示词工程](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 有效AI指令背后的基本原理',
-            '[用AI写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) — AI生成的教学内容与精确提示词结构化',
+            '[用AI写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) — 结构化提示词如何产生可靠的AI输出 — 适用于课程规划和评估生成',
             '[AI局限——LLM无法做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — AI幻觉如何影响教学工具以及如何规划',
             '[AI支持的研究](/prompt-engineering/ai-powered-research?lang=zh) — AI生成内容验证工作流，可应用于学生和教师研究任务',
             '[角色提示词](/prompt-engineering/persona-prompting?lang=zh) — 角色定义（如「经验丰富的五年级数学教师」）如何改变AI输出质量和一致性',
@@ -2548,9 +2548,9 @@ export const article: Record<Language, PEArticle> = {
             '**此文章中的所有统计数据和结论均来自同行评审研究、政府指南和机构政策。** 最终事实检查：2026-04-28（当前模型：Claude 4.6 Sonnet、GPT-4o、Gemini 2.5 Pro；Khan Academy上Khanmigo的当前价格；EU AI法第4条指南自2025年起生效）。',
           ],
           items: [
-            '[Kestin & Miller, 2024. 「AI tutoring outperforms active learning classrooms — Harvard RCT」](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — 194名学生的随机对照试验；效果量0.73–1.3 SD',
+            '[Kestin & Miller, 2024. 《AI辅导优于课堂主动学习 — 哈佛随机对照试验》](https://www.nature.com/articles/s41598-025-97652-6) — 194名学生的随机对照试验；效果量0.73–1.3 SD',
             '[Kwak, 2025. 「The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes」](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — 21项研究的系统综述；性能增益15–35%；r = 0.781',
-            '[EU AI法，2024。附件III——教育中的高风险AI系统](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — 将教育评估AI分类为高风险，强制监督要求',
+            '[欧盟AI法案，2024。附件III——教育中的高风险AI系统](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) — 将教育评估AI分类为高风险，强制监督要求',
           ],
         },
       },
