@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       title: 'Teaching With AI: Tools, Outcomes, and Prompts for Educators in 2026',
-      intro: 'A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time. As of April 2026, 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
+      intro: '**To teach effectively with AI in 2026: use a structured five-component prompt (role, objective, student context, constraints, output format), choose a tool matched to the task (Khanmigo for tutoring, MagicSchool for lesson planning, Claude 4.6 Sonnet or GPT-4o for content generation), set temperature to 0.1–0.2 for factual content, and — for EU schools — implement Article 4 staff AI literacy training before deploying any high-risk system.** A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time. As of April 2026, 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
       publishDate: '2026-03-23',
       dateModified: '2026-04-28',
       readTime: '8 min read',
@@ -32,7 +32,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'How Detectable Is AI Cheating in Schools?', anchor: '#how-detectable-is-ai-cheating-in-schools' },
         { label: 'How Does the EU AI Act Affect Schools?', anchor: '#how-does-the-eu-ai-act-affect-schools' },
         { label: 'Common Mistakes When Using AI in Education', anchor: '#common-mistakes-when-using-ai-in-education' },
-        { label: 'How to Teach With AI', anchor: '#how-to-teach-with-ai' },
+        { label: 'Step-by-Step Workflow: Teaching With AI', anchor: '#step-by-step-workflow-teaching-with-ai' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Frequently Asked Questions', anchor: '#frequently-asked-questions' },
         { label: 'Sources & Further Reading', anchor: '#sources-further-reading' },
@@ -96,7 +96,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Do AI tutors actually improve learning outcomes?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes — the evidence is strong. A 2024 Harvard RCT involving 194 undergraduate physics students found AI tutoring produced effect sizes of 0.73—1.3 standard deviations above active learning classrooms, with students reaching higher scores in 49 minutes vs. 60 minutes of classroom time (p < 10−8). A 2025 systematic review of 21 studies found AI-supported students outperform traditional instruction by 15—35% on assessments.',
+              text: 'Yes — the evidence is strong. A 2024 Harvard RCT involving 194 undergraduate physics students found AI tutoring produced effect sizes of 0.73–1.3 standard deviations above active learning classrooms, with students reaching higher scores in 49 minutes vs. 60 minutes of classroom time (p < 10−8). A 2025 systematic review of 21 studies found AI-supported students outperform traditional instruction by 15–35% on assessments.',
             },
           },
           {
@@ -112,7 +112,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'How much time can AI save teachers per week?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Specific, context-rich prompts save teachers 5—13 hours per week on lesson planning and administrative tasks when used consistently. The most common time-saving applications are: research and content gathering (44% of teachers), lesson plan creation (38%), information summarization (38%), and classroom material generation (37%).',
+              text: 'Specific, context-rich prompts save teachers 5–13 hours per week on lesson planning and administrative tasks when used consistently. The most common time-saving applications are: research and content gathering (44% of teachers), lesson plan creation (38%), information summarization (38%), and classroom material generation (37%).',
             },
           },
           {
@@ -128,7 +128,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Does AI detection software reliably catch academic cheating?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No — current AI detection tools have false positive rates of 15—30% in peer-reviewed studies, meaning up to 30 of every 100 legitimate student submissions may be wrongly flagged. Non-native English speakers and students writing in structured academic styles are flagged at disproportionately higher rates. Universities in 2026 are shifting from prohibition policies to disclosure-and-citation frameworks, treating AI detection as one input among several rather than as definitive proof of misconduct.',
+              text: 'No — current AI detection tools have false positive rates of 15–30% in peer-reviewed studies, meaning up to 30 of every 100 legitimate student submissions may be wrongly flagged. Non-native English speakers and students writing in structured academic styles are flagged at disproportionately higher rates. Universities in 2026 are shifting from prohibition policies to disclosure-and-citation frameworks, treating AI detection as one input among several rather than as definitive proof of misconduct.',
             },
           },
           {
@@ -230,12 +230,12 @@ export const article: Record<Language, PEArticle> = {
           title: 'Key Takeaways',
           isTldr: true,
           items: [
-            'AI tutors produced learning gains more than twice those of active learning classrooms in Harvard\'s 2024 RCT (194 students; effect size 0.73—1.3 SD) in 18% less study time',
-            '85% of US teachers and 86% of students used AI in the 2024—25 school year — the highest AI adoption rate of any industry globally',
-            'Structured teacher prompts (with grade level, objective, student context, and output format) save 5—13 hours per week versus open-ended prompts',
-            'AI detection tools have 15—30% false positive rates — they are insufficient as standalone academic integrity enforcement tools',
+            'AI tutors produced learning gains more than twice those of active learning classrooms in Harvard\'s 2024 RCT (194 students; effect size 0.73–1.3 SD) in 18% less study time',
+            '85% of US teachers and 86% of students used AI in the 2024–25 school year — the highest AI adoption rate of any industry globally',
+            'Structured teacher prompts (with grade level, objective, student context, and output format) save 5–13 hours per week versus open-ended prompts',
+            'AI detection tools have 15–30% false positive rates — they are insufficient as standalone academic integrity enforcement tools',
             'EU AI Act classifies educational AI as high-risk; EU schools must implement AI literacy training for all staff (Article 4, effective 2025)',
-            'Students using AI tools achieve 15—35% higher assessment scores across 21 empirical studies; r = 0.781 correlation between AI tool use and outcomes',
+            'Students using AI tools achieve 15–35% higher assessment scores across 21 empirical studies; r = 0.781 correlation between AI tool use and outcomes',
             'Claude 4.6 Sonnet (Anthropic) handles ~160 academic pages per session (200k tokens); Gemini 2.5 Pro handles ~800 pages (1M tokens) — context limits determine which model fits a given task',
           ],
         },
@@ -300,6 +300,51 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
         },
+        toolUseCaseMapping: {
+          title: 'AI in Education: Use Case to Tool Mapping',
+          content: [
+            '**Not all tools fit all tasks. Choose the right tool for each specific use case — different models excel at different constraints (context window, temperature, cost, speed).**',
+          ],
+          columns: ['Use Case', 'Recommended Tool', 'Temperature', 'Time Saved'],
+          rows: [
+            {
+              'Use Case': 'Lesson plan creation',
+              'Recommended Tool': 'MagicSchool / GPT-4o',
+              Temperature: '0.1–0.2',
+              'Time Saved': '30–60 min/lesson',
+            },
+            {
+              'Use Case': 'Differentiated reading levels',
+              'Recommended Tool': 'Claude 4.6 Sonnet',
+              Temperature: '0.1–0.2',
+              'Time Saved': '15 min/passage',
+            },
+            {
+              'Use Case': 'Student tutoring (Socratic)',
+              'Recommended Tool': 'Khanmigo',
+              Temperature: 'n/a (preset)',
+              'Time Saved': 'Asynchronous',
+            },
+            {
+              'Use Case': 'Rubric-aligned feedback',
+              'Recommended Tool': 'Claude 4.6 Sonnet (200k context)',
+              Temperature: '0.2',
+              'Time Saved': 'Hours per class set',
+            },
+            {
+              'Use Case': 'Parent communication drafts',
+              'Recommended Tool': 'ChatGPT / GPT-4o',
+              Temperature: '0.3–0.5',
+              'Time Saved': '5–10 min/message',
+            },
+            {
+              'Use Case': 'Curriculum / policy review',
+              'Recommended Tool': 'Gemini 2.5 Pro (1M context)',
+              Temperature: '0.1',
+              'Time Saved': 'Hours per document',
+            },
+          ],
+        },
         promptStructure: {
           title: 'How to Write Prompts for Teaching Tasks',
           content: [
@@ -311,27 +356,28 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         promptFramework: {
-          title: 'The Five-Component Teacher Prompt',
+          title: 'Bad vs. Good: Lesson Planning Prompts',
           content: [
-            '**Use this structure for all lesson planning and content generation — it turns generic AI output into classroom-ready materials in one pass.**',
+            '**Specific, context-rich prompts save teachers 5–13 hours per week on lesson planning when used consistently. The bad version requires 30+ minutes of revision; the good version produces classroom-ready output in one pass.**',
+            'Bad prompt — generic output:',
           ],
+          blockquote: 'Make a lesson on adding fractions for 5th graders.',
           items: [
-            '**Role** — "You are an experienced 5th-grade mathematics teacher."',
-            '**Objective** — "Create a 45-minute lesson on adding fractions with unlike denominators."',
-            '**Student context** — "Students understand equivalent fractions but have not yet combined them."',
-            '**Constraints** — "Align to Common Core standard 5.NF.A.1. Include a 10-minute warm-up, direct instruction with three examples, partner practice, and an exit ticket."',
-            '**Output format** — "Return a structured lesson plan with section headings, time allocation, and materials list. No prose introduction."',
-          ],
-          callouts: [
-            { type: '📌', label: 'Key Point', text: 'The specificity difference is dramatic: a vague prompt requires 45+ minutes of editing, while a structured prompt produces a draft needing only 5–10 minutes of personalization.' },
+            'This produces a vague outline with no time allocation, no alignment to standards, no differentiation, and no exit ticket. Most of the output gets discarded.',
           ],
         },
         goodExample: {
-          title: '[Good Prompt Example]',
+          title: 'The Five-Component Teacher Prompt',
           content: [
-            '**Specific, context-rich prompts save teachers 5—13 hours per week on lesson planning and administrative tasks when used consistently.** The vague prompt produces a generic output requiring heavy editing; the structured prompt produces a document close to classroom-ready.',
+            'Good prompt — five-component structure:',
           ],
           blockquote: 'You are an experienced 5th-grade math teacher. Create a 45-minute lesson on adding fractions with unlike denominators. Students understand equivalent fractions but have not combined them yet. Include: a 10-minute warm-up using visual models, 15 minutes of direct instruction with three worked examples, 15 minutes of partner practice, and a 5-minute exit ticket. Align to Common Core 5.NF.A.1. Output only the lesson plan with section headers, time allocations, and a materials list.',
+          items: [
+            'The structured version produces a document with rubric-aligned sections, time-boxed activities, and a materials list. Ready to use or refine — not rewrite.',
+          ],
+          callouts: [
+            { type: '📌', label: 'Key Point', text: 'The five components are: (1) Role, (2) Objective, (3) Student context, (4) Constraints, (5) Output format. Using all five consistently saves 5–13 hours per week.' },
+          ],
         },
         assessmentPrompt: {
           title: 'How Do You Prompt AI for Assessment Feedback?',
@@ -347,7 +393,7 @@ export const article: Record<Language, PEArticle> = {
         learningOutcomes: {
           title: 'Does AI Tutoring Improve Learning Outcomes?',
           content: [
-            '**Students using AI tutoring systems outperform peers in traditional instruction by 15—35% on standardized assessments across 21 empirical studies.**',
+            '**Students using AI tutoring systems outperform peers in traditional instruction by 15–35% on standardized assessments across 21 empirical studies.**',
             'The strongest evidence comes from a 2024 randomized controlled trial led by Gregory Kestin and Kelly Miller at Harvard University, involving 194 undergraduate physics students. The study used a crossover design where each student experienced both AI tutoring (via "PS2 Pal," powered by GPT-4) and traditional active learning across two topics. Key findings:',
           ],
           callouts: [
@@ -358,24 +404,28 @@ export const article: Record<Language, PEArticle> = {
             'Median study time: **49 minutes** (AI group) vs. **60 minutes** (classroom group)',
             'Students reported higher engagement and motivation in AI sessions',
             'Statistical significance: p < 10−8',
-            'A 2025 systematic review of 21 empirical studies found AI-supported students outperformed control groups by 15—35% on assessments, r = 0.781. A 2025 Stanford study found 2—5 hours with an intelligent tutoring system reliably predicts end-of-year test performance.',
+            'A 2025 systematic review of 21 empirical studies found AI-supported students outperformed control groups by 15–35% on assessments, r = 0.781. A 2025 Stanford study found 2–5 hours with an intelligent tutoring system reliably predicts end-of-year test performance.',
           ],
         },
         integrityProblem: {
           title: 'How Detectable Is AI Cheating in Schools?',
           content: [
-            '**Current AI detection tools have false positive rates of 15—30% in peer-reviewed studies, meaning they are unreliable for high-stakes academic integrity decisions — and many students use [AI hallucinations](/prompt-engineering/ai-hallucinations-how-to-stop) strategically to evade detection.**',
+            '**Current AI detection tools have false positive rates of 15–30% in peer-reviewed studies, meaning they are unreliable for high-stakes academic integrity decisions — and many students use [AI hallucinations](/prompt-engineering/ai-hallucinations-how-to-stop) strategically to evade detection.**',
             'Academic integrity is the central challenge in AI-assisted education. The scale of adoption has outpaced both policy and detection technology. Student adoption is widespread: surveys report 60–92% of students use AI for studies, though institutional policies vary widely on which uses are permitted.',
             'The detection problem has three critical layers:',
-            'The emerging institutional consensus: AI detection tools are not final authorities. Universities increasingly require human-plus-automated review and enforce disclosure norms rather than prohibition norms.',
-          ],
-          callouts: [
-            { type: '⚠️', label: 'Warning', text: 'Non-native English speakers and students with structured writing styles are flagged at disproportionately higher rates. Accusing a student based solely on AI detection output carries a 15–30% risk of false accusation.' },
           ],
           items: [
             '**False positives** — Non-native English writers are flagged at disproportionately higher rates; structured academic writing styles (common in technical fields) consistently trigger detection tools',
             '**Hybrid text** — AI drafts that are substantially edited by students defeat most detection systems',
             '**Policy gap** — Universities in 2026 are moving from outright bans to transparency-and-disclosure frameworks, requiring students to cite AI assistance rather than prohibiting it',
+          ],
+          callouts: [
+            { type: '⚠️', label: 'Warning', text: 'Non-native English speakers and students with structured writing styles are flagged at disproportionately higher rates. Accusing a student based solely on AI detection output carries a 15–30% risk of false accusation.' },
+          ],
+        },
+        integrityCloser: {
+          content: [
+            'The emerging institutional consensus: AI detection tools are not final authorities. Universities increasingly require human-plus-automated review and enforce disclosure norms rather than prohibition norms.',
           ],
         },
         regulatoryContext: {
@@ -383,16 +433,21 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**The EU AI Act classifies AI systems used in education as "high-risk" — meaning tools that influence exam scoring, learning pathways, or student assessment are subject to mandatory transparency, human oversight, and bias-prevention requirements.**',
             'Under Annex III of the EU AI Act, educational AI tools that determine access to education or assess learning outcomes are classified as high-risk systems. Schools and universities operating within the EU are considered AI "deployers" under the Act, carrying legal obligations including:',
-            'The EU AI Act bans emotion-recognition systems in educational settings outright — directly affecting tools that track student engagement via facial analysis. Chinese educational institutions deploy AI tools under China\'s Interim Measures for Generative AI (2023), which require AI-generated educational content to be labelled as such. Japan\'s Ministry of Education (MEXT) issued guidance in 2023 cautioning against AI use in certain assessment contexts, while acknowledging AI as a core student competency.',
-          ],
-          callouts: [
-            { type: '📌', label: 'Key Point', text: 'EU schools must implement staff AI literacy training (Article 4, effective 2025) for all teachers and administrators working with AI systems. Non-compliance carries fines up to €30 million.' },
           ],
           items: [
             'Ensuring staff AI literacy (Article 4 mandate — effective from 2025)',
             'Implementing human oversight for all high-risk AI decisions affecting students',
             'Maintaining audit logs of AI-influenced assessments',
             'Disclosing AI system data sources and model logic to students upon request',
+          ],
+          callouts: [
+            { type: '📌', label: 'Key Point', text: 'EU schools must implement staff AI literacy training (Article 4, effective 2025) for all teachers and administrators working with AI systems. Non-compliance carries fines up to €30 million.' },
+          ],
+        },
+        regulatoryRegionalContext: {
+          title: 'Global Educational AI Regulations',
+          content: [
+            'The EU AI Act bans emotion-recognition systems in educational settings outright — directly affecting tools that track student engagement via facial analysis. Chinese educational institutions deploy AI tools under China\'s Interim Measures for Generative AI (2023), which require AI-generated educational content to be labelled as such. Japan\'s Ministry of Education (MEXT) issued guidance in 2023 cautioning against AI use in certain assessment contexts, while acknowledging AI as a core student competency.',
           ],
         },
         commonMistakes: {
@@ -423,7 +478,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         howToStart: {
-          title: 'How to Teach With AI',
+          title: 'Step-by-Step Workflow: Teaching With AI',
           content: [
             '**Follow these five steps to integrate AI into your teaching without disrupting learning outcomes or violating academic integrity standards.**',
           ],
@@ -441,7 +496,7 @@ export const article: Record<Language, PEArticle> = {
           faqs: [
             {
               q: 'Do AI tutors actually improve learning outcomes?',
-              a: 'Yes — the evidence is strong. A 2024 Harvard RCT involving 194 undergraduate physics students found AI tutoring produced effect sizes of 0.73—1.3 standard deviations above active learning classrooms, with students reaching higher scores in 49 minutes vs. 60 minutes of classroom time (p < 10−8). A 2025 systematic review of 21 studies found AI-supported students outperform traditional instruction by 15—35% on assessments.',
+              a: 'Yes — the evidence is strong. A 2024 Harvard RCT involving 194 undergraduate physics students found AI tutoring produced effect sizes of 0.73–1.3 standard deviations above active learning classrooms, with students reaching higher scores in 49 minutes vs. 60 minutes of classroom time (p < 10−8). A 2025 systematic review of 21 studies found AI-supported students outperform traditional instruction by 15–35% on assessments.',
             },
             {
               q: 'What is the best AI tool for teachers in 2026?',
@@ -449,7 +504,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'How much time can AI save teachers per week?',
-              a: 'Specific, context-rich prompts save teachers 5—13 hours per week on lesson planning and administrative tasks when used consistently. The most common time-saving applications are: research and content gathering (44% of teachers), lesson plan creation (38%), information summarization (38%), and classroom material generation (37%).',
+              a: 'Specific, context-rich prompts save teachers 5–13 hours per week on lesson planning and administrative tasks when used consistently. The most common time-saving applications are: research and content gathering (44% of teachers), lesson plan creation (38%), information summarization (38%), and classroom material generation (37%).',
             },
             {
               q: 'Is AI in education legal under EU regulations?',
@@ -457,7 +512,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Does AI detection software reliably catch academic cheating?',
-              a: 'No — current AI detection tools have false positive rates of 15—30% in peer-reviewed studies, meaning up to 30 of every 100 legitimate student submissions may be wrongly flagged. Non-native English speakers and students writing in structured academic styles are flagged at disproportionately higher rates. Universities in 2026 are shifting from prohibition policies to disclosure-and-citation frameworks, treating AI detection as one input among several rather than as definitive proof of misconduct.',
+              a: 'No — current AI detection tools have false positive rates of 15–30% in peer-reviewed studies, meaning up to 30 of every 100 legitimate student submissions may be wrongly flagged. Non-native English speakers and students writing in structured academic styles are flagged at disproportionately higher rates. Universities in 2026 are shifting from prohibition policies to disclosure-and-citation frameworks, treating AI detection as one input among several rather than as definitive proof of misconduct.',
             },
             {
               q: 'What temperature setting should teachers use for AI lesson planning?',
@@ -487,8 +542,8 @@ export const article: Record<Language, PEArticle> = {
             '**All statistics and findings in this article are sourced from peer-reviewed research, official government guidance, and publicly-documented institutional policies.**',
           ],
           items: [
-            '[Kestin & Miller, 2024. "AI tutoring outperforms active learning classrooms — Harvard RCT"](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — randomized controlled trial with 194 students; effect size 0.73—1.3 SD',
-            '[Kwak, 2025. "The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes"](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — systematic review of 21 studies; 15—35% performance gains; r = 0.781',
+            '[Kestin & Miller, 2024. "AI tutoring outperforms active learning classrooms — Harvard RCT"](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — randomized controlled trial with 194 students; effect size 0.73–1.3 SD',
+            '[Kwak, 2025. "The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes"](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — systematic review of 21 studies; 15–35% performance gains; r = 0.781',
             '[EU AI Act, 2024. Annex III — High-Risk AI Systems in Education](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — classifies educational assessment AI as high-risk with mandatory oversight requirements',
           ],
         },
