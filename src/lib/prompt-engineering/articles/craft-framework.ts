@@ -16,7 +16,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '7 min read',
       educationalLevel: 'Intermediate',
       seoTitle: 'The CRAFT Framework: Context, Role, Audience 2026',
-      metaDescription: 'The CRAFT prompt framework breaks creative tasks into Context, Role, Audience, Format, Tone for consistent, on-brand outputs. Works with GPT-4o, Claude.',
+      metaDescription: 'The CRAFT prompt framework breaks creative tasks into Context, Role, Audience, Format, Tone for consistent, on-brand outputs. Works with GPT-5.5, Claude.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -36,16 +36,16 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
         ],
       },
       sections: {
         whatIsCRAFT: {
           title: 'What the CRAFT Framework Is',
           content: [
-            '**The CRAFT Framework is a prompt template for creative and marketing tasks that makes large language models specify who they are writing as, who they are writing for, and how the output should look.** Instead of sending a vague request like "write a post about our product," you define each CRAFT element so models such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro can produce consistent, reusable copy. If you\'re new to structured prompting, see [What is Prompt Engineering](/prompt-engineering/what-is-prompt-engineering) for foundational concepts.',
+            '**The CRAFT Framework is a prompt template for creative and marketing tasks that makes large language models specify who they are writing as, who they are writing for, and how the output should look.** Instead of sending a vague request like "write a post about our product," you define each CRAFT element so models such as GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro can produce consistent, reusable copy. If you\'re new to structured prompting, see [What is Prompt Engineering](/prompt-engineering/what-is-prompt-engineering) for foundational concepts.',
             'The acronym typically expands as:',
           ],
           items: [
@@ -114,7 +114,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Fill in Context, Role, Audience, Format, and Tone through structured inputs instead of remembering the pattern manually.',
-            'Apply the same CRAFT-based prompt to multiple models in parallel, comparing how GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models respond to the same creative brief.',
+            'Apply the same CRAFT-based prompt to multiple models in parallel, comparing how GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models respond to the same creative brief.',
             'Save and reuse CRAFT templates for recurring workflows such as "feature launch LinkedIn post," "customer success case study," or "sales outreach email." (For simpler, single-step prompts, consider the [Single Step Framework](/prompt-engineering/the-single-step-prompt-method) instead.)',
           ],
         },
@@ -151,7 +151,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       seoTitle: 'CRAFT-Framework: Kontext, Rolle, Audience 2026',
-      metaDescription: 'Das CRAFT-Framework zerlegt kreative Aufgaben in Kontext, Rolle, Zielgruppe, Format, Ton für konsistente, markengerechte Ausgaben. Mit GPT-4o, Claude, Gemini.',
+      metaDescription: 'Das CRAFT-Framework zerlegt kreative Aufgaben in Kontext, Rolle, Zielgruppe, Format, Ton für konsistente, markengerechte Ausgaben. Mit GPT-5.5, Claude, Gemini.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -169,7 +169,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsCRAFT: {
           title: 'Was das CRAFT-Framework ist',
           content: [
-            '**Das CRAFT-Framework ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die große Sprachmodelle dazu bringt, festzulegen, aus welcher Perspektive sie schreiben, für wen sie schreiben und wie die Ausgabe aussehen soll.** Anstatt eine vage Anfrage wie \"Schreibe einen Beitrag über unser Produkt\" zu stellen, definieren Sie jedes CRAFT-Element, damit Modelle wie GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro konsistente, wiederverwendbare Texte erzeugen können. Wenn Sie neu in strukturiertem Prompting sind, lesen Sie [Was ist Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de), um Grundkonzepte zu verstehen.',
+            '**Das CRAFT-Framework ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die große Sprachmodelle dazu bringt, festzulegen, aus welcher Perspektive sie schreiben, für wen sie schreiben und wie die Ausgabe aussehen soll.** Anstatt eine vage Anfrage wie \"Schreibe einen Beitrag über unser Produkt\" zu stellen, definieren Sie jedes CRAFT-Element, damit Modelle wie GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro konsistente, wiederverwendbare Texte erzeugen können. Wenn Sie neu in strukturiertem Prompting sind, lesen Sie [Was ist Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de), um Grundkonzepte zu verstehen.',
             'Das Akronym wird typischerweise wie folgt ausgedehnt:',
           ],
           items: [
@@ -238,7 +238,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Kontext, Rolle, Zielgruppe, Format und Ton durch strukturierte Eingaben ausfüllen, anstatt das Muster manuell zu merken.',
-            'Den gleichen CRAFT-basierten Prompt parallel auf mehrere Modelle anwenden und vergleichen, wie GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle auf das gleiche Kreativ-Briefing reagieren.',
+            'Den gleichen CRAFT-basierten Prompt parallel auf mehrere Modelle anwenden und vergleichen, wie GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle auf das gleiche Kreativ-Briefing reagieren.',
             'CRAFT-Vorlagen für wiederkehrende Arbeitsabläufe speichern und wiederverwenden, z. B. \"Feature-Launch LinkedIn-Post\", \"Customer-Success-Fallstudie\" oder \"Sales-Outreach-Email\". (Für einfachere, einstufige Prompts, betrachten Sie das [Single-Step-Framework](/prompt-engineering/the-single-step-prompt-method?lang=de).)',
           ],
         },
@@ -274,7 +274,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       seoTitle: 'Framework CRAFT : Contexte, Rôle, Audience 2026',
-      metaDescription: 'Le framework CRAFT décompose les tâches créatives en contexte, rôle, audience, format, ton pour des résultats cohérents et conformes à la marque. GPT-4o, Claude.',
+      metaDescription: 'Le framework CRAFT décompose les tâches créatives en contexte, rôle, audience, format, ton pour des résultats cohérents et conformes à la marque. GPT-5.5, Claude.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -292,7 +292,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsCRAFT: {
           title: 'Qu\'est-ce que le framework CRAFT',
           content: [
-            '**Le CRAFT Framework est un modèle de prompt pour les tâches créatives et marketing qui pousse les grands modèles de langage à définir qui ils sont, pour qui ils écrivent et comment le résultat doit se présenter.** Au lieu d\'envoyer une demande vague comme \"écris un post sur notre produit\", vous définissez chaque élément CRAFT pour que GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro produisent du texte cohérent et réutilisable. Si vous découvrez le prompting structuré, consultez [Qu\'est-ce que le Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=fr) pour les concepts fondamentaux.',
+            '**Le CRAFT Framework est un modèle de prompt pour les tâches créatives et marketing qui pousse les grands modèles de langage à définir qui ils sont, pour qui ils écrivent et comment le résultat doit se présenter.** Au lieu d\'envoyer une demande vague comme \"écris un post sur notre produit\", vous définissez chaque élément CRAFT pour que GPT-5.5, Claude Opus 4.7 et Gemini 3.1 Pro produisent du texte cohérent et réutilisable. Si vous découvrez le prompting structuré, consultez [Qu\'est-ce que le Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=fr) pour les concepts fondamentaux.',
             'L\'acronyme se divise habituellement ainsi :',
           ],
           items: [
@@ -361,7 +361,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Remplir Contexte, Rôle, Audience, Format et Ton par des entrées structurées au lieu de mémoriser le motif.',
-            'Appliquer le même prompt CRAFT à plusieurs modèles en parallèle, comparant comment GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et modèles locaux réagissent au même brief. (Pour les prompts plus simples, considérez le [Framework Single-Step](/prompt-engineering/the-single-step-prompt-method?lang=fr).)',
+            'Appliquer le même prompt CRAFT à plusieurs modèles en parallèle, comparant comment GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et modèles locaux réagissent au même brief. (Pour les prompts plus simples, considérez le [Framework Single-Step](/prompt-engineering/the-single-step-prompt-method?lang=fr).)',
             'Sauvegarder et réutiliser des templates CRAFT pour des workflows récurrents comme \"post LinkedIn de lancement feature\", \"case study customer success\" ou \"email outreach sales\".',
           ],
         },
@@ -415,7 +415,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsCRAFT: {
           title: 'CRAFTフレームワークとは',
           content: [
-            '**CRAFTフレームワークは、クリエイティブおよびマーケティングタスク向けのプロンプトテンプレートです。**大規模言語モデルに対して「誰の視点から書くのか」「誰を対象に書くのか」「出力をどのような形式にするのか」を明確に指示します。「我が社の製品について書いて」といったあいまいなリクエストの代わりに、CRAFTの5つの要素を定義することで、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proが一貫性のある再利用可能なコピーを生成できます。',
+            '**CRAFTフレームワークは、クリエイティブおよびマーケティングタスク向けのプロンプトテンプレートです。**大規模言語モデルに対して「誰の視点から書くのか」「誰を対象に書くのか」「出力をどのような形式にするのか」を明確に指示します。「我が社の製品について書いて」といったあいまいなリクエストの代わりに、CRAFTの5つの要素を定義することで、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proが一貫性のある再利用可能なコピーを生成できます。',
             'プロンプトエンジニアリングが初めての場合は、[プロンプトエンジニアリングとは何か](/prompt-engineering/what-is-prompt-engineering?lang=ja)をご覧ください。',
             'CRAFTの各要素：',
           ],
@@ -486,7 +486,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'パターンを手動で覚える代わりに、構造化された入力でコンテキスト、役割、オーディエンス、フォーマット、トーンを入力できます',
-            '同じCRAFTベースプロンプトを複数のモデルに並行適用し、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、ローカルモデルが同じクリエイティブブリーフにどう応答するかを比較します。(より単純な1ステップのプロンプトには、[シングルステップフレームワーク](/prompt-engineering/the-single-step-prompt-method?lang=ja)を検討してください。)',
+            '同じCRAFTベースプロンプトを複数のモデルに並行適用し、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、ローカルモデルが同じクリエイティブブリーフにどう応答するかを比較します。(より単純な1ステップのプロンプトには、[シングルステップフレームワーク](/prompt-engineering/the-single-step-prompt-method?lang=ja)を検討してください。)',
             'CRAFTテンプレートを繰り返しのワークフロー（「機能ローンチLinkedInポスト」「カスタマーサクセスケーススタディ」「営業アウトリーチメール」など）に保存して再利用できます',
           ],
         },
@@ -522,7 +522,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       seoTitle: 'CRAFT框架：背景·角色·受众 2026',
-      metaDescription: 'CRAFT框架将创意任务分为背景、角色、受众、格式、语气。与GPT-4o、Claude兼容。',
+      metaDescription: 'CRAFT框架将创意任务分为背景、角色、受众、格式、语气。与GPT-5.5、Claude兼容。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -540,7 +540,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsCRAFT: {
           title: 'CRAFT框架是什么',
           content: [
-            '**CRAFT框架是创意和营销任务的提示模板。**它让大语言模型明确：你以谁的身份写作、为谁写作、输出应该什么样子。与其发送模糊指令（如"为产品写一个帖子"），你定义每个CRAFT元素，让GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro生成一致、可复用的文案。',
+            '**CRAFT框架是创意和营销任务的提示模板。**它让大语言模型明确：你以谁的身份写作、为谁写作、输出应该什么样子。与其发送模糊指令（如"为产品写一个帖子"），你定义每个CRAFT元素，让GPT-5.5、Claude Opus 4.7和Gemini 3.1 Pro生成一致、可复用的文案。',
             '如果你刚开始接触结构化提示，请阅读[什么是提示工程](/prompt-engineering/what-is-prompt-engineering?lang=zh)了解基础概念。',
             'CRAFT的5个要素：',
           ],
@@ -611,7 +611,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             '1. 通过结构化输入填写背景、角色、受众、格式和语气，而不是手动记忆',
-            '2. 将同一个CRAFT提示并行应用于多个模型，比较GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和本地模型对同一文案需求的响应。（对于更简单的单步提示，可考虑[单步框架](/prompt-engineering/the-single-step-prompt-method?lang=zh)。）',
+            '2. 将同一个CRAFT提示并行应用于多个模型，比较GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和本地模型对同一文案需求的响应。（对于更简单的单步提示，可考虑[单步框架](/prompt-engineering/the-single-step-prompt-method?lang=zh)。）',
             '3. 为重复工作流保存并重复使用CRAFT模板，如"功能发布LinkedIn帖子""客户成功案例"或"销售外联邮件"',
           ],
         },

@@ -14,7 +14,7 @@ export const article: Record<Language, PEArticle> = {
       intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
       publishDate: '2026-03-26',
       seoTitle: 'Prompt Chaining 2026: Break Complex Tasks Into Steps',
-      metaDescription: 'Learn prompt chaining: break complex tasks into focused sub-prompts and chain outputs. Real examples, best practices for GPT-4o, Claude, local LLMs.',
+      metaDescription: 'Learn prompt chaining: break complex tasks into focused sub-prompts and chain outputs. Real examples, best practices for GPT-5.5, Claude, local LLMs.',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Prompt Chaining',
@@ -129,7 +129,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Use different frameworks at different stages—for example, SPECS for structured extraction, TRACE for reasoning, and CRAFT for final copy.',
-            'Run key steps in parallel across models (such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro) to compare how each handles extraction, planning, or generation.',
+            'Run key steps in parallel across models (such as GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro) to compare how each handles extraction, planning, or generation.',
             'Save each step as a template so that chains are easy to rebuild, modify, or share with your team.',
           ],
         },
@@ -307,7 +307,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Funktioniert Negative Prompting gleich gut mit allen LLM-Anbietern (OpenAI, Anthropic, Ollama)?',
-              a: 'Die Grundlogik funktioniert überall, aber die Effektivität variiert. OpenAI GPT-4o und Anthropic Claude befolgen explizite Negativvorgaben meist konsistent. Kleinere oder lokale Modelle (Ollama, Mistral) können weniger zuverlässig sein. PromptQuorum ermöglicht es Ihnen, denselben Prompt über mehrere Modelle hinweg zu testen – ideal, um zu sehen, wer Ihre Grenzen am besten einhält.',
+              a: 'Die Grundlogik funktioniert überall, aber die Effektivität variiert. OpenAI GPT-5.5 und Anthropic Claude befolgen explizite Negativvorgaben meist konsistent. Kleinere oder lokale Modelle (Ollama, Mistral) können weniger zuverlässig sein. PromptQuorum ermöglicht es Ihnen, denselben Prompt über mehrere Modelle hinweg zu testen – ideal, um zu sehen, wer Ihre Grenzen am besten einhält.',
             },
             {
               q: 'Ist Negative Prompting DSGVO-konform und sicher für regulierte Industrien in Deutschland?',
@@ -327,7 +327,7 @@ export const article: Record<Language, PEArticle> = {
       intro: 'Le chaînage de prompts est une technique où vous décomposez une tâche complexe en plusieurs prompts plus petits et alimentez la sortie d\'une étape dans la suivante. Cela vous permet de construire des workflows fiables multi-étapes au lieu de dépendre d\'un seul prompt excessivement compliqué.',
       publishDate: '2026-03-26',
       seoTitle: 'Chaînage de Prompts 2026: Workflows IA Progressifs',
-      metaDescription: 'Guide complet du chaînage de prompts pour workflows IA multi-étapes. Apprenez techniques, exemples concrets et bonnes pratiques pour GPT-4o et LLaMA.',
+      metaDescription: 'Guide complet du chaînage de prompts pour workflows IA multi-étapes. Apprenez techniques, exemples concrets et bonnes pratiques pour GPT-5.5 et LLaMA.',
       readTime: '6 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Chaînage de Prompts',
@@ -432,7 +432,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Utiliser différents frameworks à différentes étapes—par exemple, SPECS pour l\'extraction structurée, TRACE pour le raisonnement et CRAFT pour la copie finale.',
-            'Exécuter les étapes clés en parallèle sur plusieurs modèles (tels que GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro) pour comparer comment chacun gère l\'extraction, la planification ou la génération.',
+            'Exécuter les étapes clés en parallèle sur plusieurs modèles (tels que GPT-5.5, Claude Opus 4.7 et Gemini 3.1 Pro) pour comparer comment chacun gère l\'extraction, la planification ou la génération.',
             'Enregistrer chaque étape en tant que modèle afin que les chaînes soient faciles à reconstruire, modifier ou partager avec votre équipe.',
           ],
         },
@@ -516,7 +516,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Le chaînage de prompts fonctionne-t-il avec les modèles locaux comme Ollama ou LLaMA 3.1 ?',
-              a: 'Oui. Le chaînage de prompts est indépendant du modèle. Vous pouvez chaîner des prompts sur GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro ou n\'importe quel modèle local qui prend en charge les prompts texte.'
+              a: 'Oui. Le chaînage de prompts est indépendant du modèle. Vous pouvez chaîner des prompts sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro ou n\'importe quel modèle local qui prend en charge les prompts texte.'
             },
           ],
         },
@@ -648,7 +648,7 @@ export const article: Record<Language, PEArticle> = {
             ],
             items: [
               '異なるステージで異なるフレームワークを使用します。例えば、構造化された抽出にはSPECS、推論にはTRACE、最終コピーにはCRAFTを使用します。',
-              'GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proなどのモデル間で主要なステップを並列で実行して、各モデルが抽出、計画、または生成をどのように処理するかを比較します。',
+              'GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proなどのモデル間で主要なステップを並列で実行して、各モデルが抽出、計画、または生成をどのように処理するかを比較します。',
               '各ステップをテンプレートとして保存して、チェーンを簡単に再構築、修正、またはチームと共有できるようにします。',
             ],
           },
@@ -678,7 +678,7 @@ zh: {
       readTime: '8分钟阅读',
       educationalLevel: 'Intermediate',
       seoTitle: '提示词链接完全指南2026: 构建复杂的AI工作流程',
-      metaDescription: '学习提示词链接技术创建强大的多步骤AI工作流程。分解复杂任务，提升准确性。GPT-4o、Claude和本地LLM的实践指南和最佳实践。',
+      metaDescription: '学习提示词链接技术创建强大的多步骤AI工作流程。分解复杂任务，提升准确性。GPT-5.5、Claude和本地LLM的实践指南和最佳实践。',
       primaryTerm: '提示词链接',
       schema: {
         '@context': 'https://schema.org',
@@ -763,7 +763,7 @@ zh: {
           ],
           items: [
             '在不同阶段使用不同的框架——例如，SPECS（规范框架）用于结构化提取，TRACE（追踪框架）用于推理，CRAFT（创意框架）用于最终文案。',
-            '在多个模型上并行运行关键步骤（如GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro），比较每个模型如何处理提取、规划或生成。',
+            '在多个模型上并行运行关键步骤（如GPT-5.5、Claude Opus 4.7和Gemini 3.1 Pro），比较每个模型如何处理提取、规划或生成。',
             '将每个步骤保存为模板，以便链容易重建、修改或与您的团队共享。',
           ],
         },
@@ -781,7 +781,7 @@ zh: {
           title: '常见问题应对 - 中文上下文',
           items: [
             '**中文分词挑战：** 在提取步骤中明确指示模型注意中文词边界。对于企业文档（合同、产品说明书），使用专业术语表作为参考。',
-            '**本地模型与云模型选择：** Mistral和Llama模型的中文支持有限。在PromptQuorum中，使用Claude 4.6 Sonnet或GPT-4o进行关键步骤，使用开源模型进行数据验证。',
+            '**本地模型与云模型选择：** Mistral和Llama模型的中文支持有限。在PromptQuorum中，使用Claude Opus 4.7或GPT-5.5进行关键步骤，使用开源模型进行数据验证。',
             '**多步工作流成本优化：** 对于中国团队，将简单任务（分类、格式化）路由到更快速、成本更低的模型，仅在需要高质量输出时使用高级模型。可以降低40-60%的API成本。',
             '**链条故障恢复：** 在链中添加验证步骤。例如，在生成之后，使用快速验证步骤确认提取的数据完整。这在处理大量中文文本时特别有用。',
           ],
@@ -792,8 +792,8 @@ zh: {
             '**场景：** 跨境电商平台需要将产品从英文转换为中文并针对中国市场优化。',
             '**链条流程：**',
             '步骤1 - 提取（Ollama本地）：从英文产品规格中提取关键特性和益处。',
-            '步骤2 - 本地化分类（GPT-4o）：识别针对中国购物者最相关的特性（物流速度、支付方式、退货政策）。',
-            '步骤3 - 生成（Claude 4.6 Sonnet）：为中国市场编写销售文案，使用有针对性的价值主张。',
+            '步骤2 - 本地化分类（GPT-5.5）：识别针对中国购物者最相关的特性（物流速度、支付方式、退货政策）。',
+            '步骤3 - 生成（Claude Opus 4.7）：为中国市场编写销售文案，使用有针对性的价值主张。',
             '步骤4 - 审查和优化（本地Mistral + 人类审核）：检查语法和文化适当性。',
             '**结果：** 每个产品处理时间从45分钟减少到12分钟。质量一致。通过智能模型选择成本减少了35%。',
           ],

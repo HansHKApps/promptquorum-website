@@ -37,9 +37,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
@@ -48,7 +48,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsSingleStep: {
           title: 'What the Single Step Prompt Method Is',
           content: [
-            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models such as those you run via [Ollama](/local-llms/ollama-installation-guide) or LM Studio.',
+            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models such as those you run via [Ollama](/local-llms/ollama-installation-guide) or LM Studio.',
             'The core idea is to think once, write once, and execute once. You invest effort in designing one precise [prompt](/prompt-engineering/what-is-prompt-engineering), then reuse it across tasks, projects, and models. Because the structure is fixed, you can measure quality, change one parameter at a time, and improve your prompts systematically.',
           ],
         },
@@ -93,7 +93,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Presents clear fields for role, objective, context, constraints, and output format so you do not forget any building block.',
-            'Applies the same structured prompt to multiple models in parallel, including GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models configured through Ollama or LM Studio.',
+            'Applies the same structured prompt to multiple models in parallel, including GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models configured through Ollama or LM Studio.',
             'Lets you save successful single step prompts as reusable templates for future tasks and for your team members.',
           ],
         },
@@ -173,9 +173,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
@@ -185,7 +185,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsSingleStep: {
           title: 'Was die Single Step Prompt Methode ist',
           content: [
-            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/local-llms/ollama-installation-guide?lang=de) oder LM Studio ausführen.',
+            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/local-llms/ollama-installation-guide?lang=de) oder LM Studio ausführen.',
             'Die Kernidee ist: einmal denken, einmal schreiben, einmal ausführen. Sie investieren Aufwand in die Gestaltung eines präzisen [Prompts](/prompt-engineering/what-is-prompt-engineering?lang=de) und verwenden ihn anschließend in verschiedenen Aufgaben, Projekten und Modellen. Da die Struktur fest ist, können Sie die Qualität messen, jeweils einen Parameter ändern und Ihre Prompts systematisch verbessern.',
           ],
         },
@@ -230,7 +230,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Deutliche Felder für Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat, damit Sie keinen Baustein vergessen.',
-            'Wendet den gleichen strukturierten Prompt auf mehrere Modelle parallel an, darunter GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle, die über Ollama oder LM Studio konfiguriert sind.',
+            'Wendet den gleichen strukturierten Prompt auf mehrere Modelle parallel an, darunter GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle, die über Ollama oder LM Studio konfiguriert sind.',
             'Ermöglicht es Ihnen, erfolgreiche Single Step Prompts als wiederverwendbare Vorlagen für zukünftige Aufgaben und für Ihre Teamkollegen zu speichern.',
           ],
         },
@@ -300,7 +300,7 @@ export const article: Record<Language, PEArticle> = {
         mainEntity: [
           { '@type': 'Question', name: 'Wie unterscheidet sich die Single Step Prompt Methode von einfach nur die Anweisung zu stellen?', acceptedAnswer: { '@type': 'Answer', text: 'Mit Single Step erhalten Sie strukturelle Konsistenz. Anstelle einer einmaligen Antwort erhalten Sie immer die gleiche Qualität von Ergebnissen, weil das Modell feste Einschränkungen und das Format eingehalten hat. Dies macht Ergebnisse über Modelle hinweg vergleichbar und über die Zeit reproduzierbar.' } },
           { '@type': 'Question', name: 'Wann sollte ich Single Step statt mehrstufiges Prompting (Chain-of-Thought) verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie Single Step, wenn Ihr Ziel klar und genau definiert ist. Bevorzugen Sie mehrstufiges Prompting bei mehrdeutigen oder explorativen Aufgaben, bei denen Sie den Denkprozess des Modells sehen müssen.' } },
-          { '@type': 'Question', name: 'Kann ich Single Step mit lokalen Modellen wie Ollama oder LM Studio verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, absolut. Die Single Step Prompt Methode funktioniert mit jedem Modell — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro oder lokalen Modellen über Ollama und LM Studio. Die gleiche einzige Struktur gilt über alle Plattformen hinweg.' } },
+          { '@type': 'Question', name: 'Kann ich Single Step mit lokalen Modellen wie Ollama oder LM Studio verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, absolut. Die Single Step Prompt Methode funktioniert mit jedem Modell — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro oder lokalen Modellen über Ollama und LM Studio. Die gleiche einzige Struktur gilt über alle Plattformen hinweg.' } },
           { '@type': 'Question', name: 'Wie lange dauert es, einen guten Single Step Prompt zu schreiben und zu verfeinern?', acceptedAnswer: { '@type': 'Answer', text: 'Üblicherweise 15–30 Minuten für eine solide erste Version. Schreiben Sie einen Entwurf, testen Sie ihn an 3–5 Beispielen, verfeinern Sie die Dinge, die nicht funktionieren, und verwenden Sie dann. Die anfängliche Investition zahlt sich schnell aus, da Sie sie dutzende Male wiederverwenden.' } },
           { '@type': 'Question', name: 'Kann ich meine Single Step Prompts als Vorlagen in PromptQuorum speichern?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Sobald Sie einen Single Step Prompt erstellen, der gut für einen bestimmten Workflow funktioniert (z. B. Code-Reviews, Kundenzusammenfassungen), können Sie ihn als Vorlage in PromptQuorum speichern und mit Ihrem Team teilen.' } },
           { '@type': 'Question', name: 'Was ist, wenn meine Aufgabe zu komplex für Single Step ist?', acceptedAnswer: { '@type': 'Answer', text: 'Wenn Sie feststellen, dass Sie Ihre Aufgabe nicht in einer einzigen Anweisung klar spezifizieren können, oder wenn Sie wirklich mehrere Ansätze des Modells benötigen, wechseln Sie zu APE oder CRAFT.' } },
@@ -378,9 +378,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
@@ -390,7 +390,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsSingleStep: {
           title: 'What the Single Step Prompt Method Is',
           content: [
-            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/local-llms/ollama-installation-guide?lang=fr) ou LM Studio.',
+            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/local-llms/ollama-installation-guide?lang=fr) ou LM Studio.',
             'L\'idée centrale est de réfléchir une seule fois, d\'écrire une seule fois et d\'exécuter une seule fois. Vous investissez l\'effort initial dans la conception d\'un seul [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr) précis, puis le réutilisez dans différentes tâches, projets et modèles. Comme la structure est fixe, vous pouvez mesurer la qualité, modifier un paramètre à la fois et améliorer vos prompts de façon systématique.',
           ],
         },
@@ -435,7 +435,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Présente des champs clairs pour le rôle, l\'objectif, le contexte, les contraintes et le format de sortie afin que vous n\'oubliez aucun élément constitutif.',
-            'Applique le même prompt structuré à plusieurs modèles en parallèle, y compris GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et les modèles locaux configurés via Ollama ou LM Studio.',
+            'Applique le même prompt structuré à plusieurs modèles en parallèle, y compris GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et les modèles locaux configurés via Ollama ou LM Studio.',
             'Vous permet de sauvegarder des prompts single step réussis comme modèles réutilisables pour les tâches futures et pour les membres de votre équipe.',
           ],
         },
@@ -506,7 +506,7 @@ export const article: Record<Language, PEArticle> = {
         mainEntity: [
           { '@type': 'Question', name: 'Comment la Méthode Single Step Prompt diffère-t-elle de simplement demander une réponse au modèle ?', acceptedAnswer: { '@type': 'Answer', text: 'Avec Single Step, vous obtennez une cohérence structurelle. Au lieu d\'une réponse unique, vous reçevez toujours la même qualité de résultat parce que le modèle respecte les contraintes fixes et le format. Cela rend les résultats comparables entre les modèles et reproductibles dans le temps.' } },
           { '@type': 'Question', name: 'Quand dois-je utiliser Single Step au lieu de multi-étapes (Chain-of-Thought) ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez Single Step quand votre objectif est clair et bien défini. Préférez le prompting multi-étapes pour les tâches ambiguës ou exploratoires où vous avez besoin de voir le raisonnement intermédiaire du modèle.' } },
-          { '@type': 'Question', name: 'Puis-je utiliser Single Step avec des modèles locaux comme Ollama ou LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, absolument. La Méthode Single Step Prompt fonctionne avec n\'importe quel modèle — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro ou modèles locaux via Ollama et LM Studio. La même structure unique s\'applique sur toutes les plates-formes.' } },
+          { '@type': 'Question', name: 'Puis-je utiliser Single Step avec des modèles locaux comme Ollama ou LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, absolument. La Méthode Single Step Prompt fonctionne avec n\'importe quel modèle — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro ou modèles locaux via Ollama et LM Studio. La même structure unique s\'applique sur toutes les plates-formes.' } },
           { '@type': 'Question', name: 'Combien de temps faut-il pour écrire et perfectionner un bon Single Step Prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Généralement 15-30 minutes pour une première version solide. Écrivez un brouillon, testez-le sur 3-5 exemples, affinez les éléments qui fonctionnent mal, puis utilisez-le. L\'investissement initial paie rapidement car vous le réutilisez des dizaines de fois.' } },
           { '@type': 'Question', name: 'Puis-je sauvegarder mes Single Step Prompts comme modèles dans PromptQuorum ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Une fois que vous créez un Single Step Prompt qui fonctionne bien pour un workflow particulier (par exemple révisions de code, résumés clients), vous pouvez le sauvegarder comme modèle dans PromptQuorum et le partager avec votre équipe.' } },
           { '@type': 'Question', name: 'Qu\'advient-il si ma tâche est trop complexe pour Single Step ?', acceptedAnswer: { '@type': 'Answer', text: 'Si vous trouvez que vous ne pouvez pas spécifier clairement votre tâche en une seule instruction, ou si vous avez vraiment besoin que le modèle explore plusieurs approches, basculez vers APE ou CRAFT.' } },
@@ -561,7 +561,7 @@ ja: {
   intro: 'Single Step Prompt Methodは、複数ターンの対話を避け、1つのプロンプトにロール・目的・コンテキスト・制約・出力形式のすべてを凝縮するシンプルなフレームワークです。このアプローチにより往復のやり取りが削減され、複数のAIモデル間での結果比較が容易になり、PromptQuorumの新規ユーザー向けデフォルトフレームワークとして採用されています。',
   publishDate: '2026-03-24',
   seoTitle: 'Single Step Prompt Method 2026：1ステップで完結するプロンプト構築法',
-  metaDescription: 'ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトに統合する手法。多ターン対話を削減し、GPT-4o・Claude 4.6 Sonnet・Gemini 2.5 Pro間での結果の直接比較が可能です。',
+  metaDescription: 'ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトに統合する手法。多ターン対話を削減し、GPT-5.5・Claude Opus 4.7・Gemini 3.1 Pro間での結果の直接比較が可能です。',
   readTime: '8分で読める',
   educationalLevel: 'Intermediate',
   schema: {
@@ -583,9 +583,9 @@ ja: {
     ],
     mentions: [
       { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
       { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
     ],
@@ -595,7 +595,7 @@ ja: {
     whatIsSingleStep: {
       title: 'What the Single Step Prompt Method Is',
       content: [
-        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、および[Ollama](/local-llms/ollama-installation-guide?lang=ja)やLM Studioなどのローカルモデルに対応しています。',
+        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、および[Ollama](/local-llms/ollama-installation-guide?lang=ja)やLM Studioなどのローカルモデルに対応しています。',
         '基本的な考え方は「1度考え、1度書き、1度実行する」ことです。1つの精密な[プロンプト](/prompt-engineering/what-is-prompt-engineering?lang=ja)設計に時間をかけ、その後タスク・プロジェクト・モデル全体で再利用します。構造が固定されているため、品質を測定し、1度に1つのパラメータを変更し、プロンプトを体系的に改善できます。',
       ],
     },
@@ -640,7 +640,7 @@ ja: {
       ],
       items: [
         'ロール・目的・コンテキスト・制約・出力形式のための明確なフィールドを提示し、構成要素を忘れないようにします。',
-        '構造化されたプロンプトをGPT-4o・Claude 4.6 Sonnet・Gemini 2.5 Pro、およびOllamaやLM Studioで構成されたローカルモデルを含む複数のモデルに並列的に適用します。',
+        '構造化されたプロンプトをGPT-5.5・Claude Opus 4.7・Gemini 3.1 Pro、およびOllamaやLM Studioで構成されたローカルモデルを含む複数のモデルに並列的に適用します。',
         '成功したSingle Stepプロンプトを再利用可能なテンプレートとして保存し、将来のタスクとチームメンバーが利用できるようにします。',
       ],
     },
@@ -686,7 +686,7 @@ ja: {
         '**テンプレートを作成してから埋める**：まず標準テンプレートを使用して、ロール → 目的 → コンテキスト → 制約 → 出力形式の順序で記入します。その後、チーム全体で再利用できます。',
         '**例を1つ追加**：特に出力形式が複雑な場合、「このようなフォーマットで返してください」という説明だけでなく、実際の例を1つ含めると、モデルの精度が大幅に向上します。',
         '**制約は明確に数値化**：「短い」ではなく「150～200単語」、「プロフェッショナル」ではなく「職場のメール用」など、具体的な数値とコンテキストを提供してください。',
-        '**同じプロンプトを複数モデルで並列テスト**：Single Stepプロンプトの大きな利点は、同じ指示をGPT-4o・Claude 4.6 Sonnet・Gemini 2.5 Proで同時に実行でき、どのモデルがあなたのユースケースに最適かを見ることができることです。',
+        '**同じプロンプトを複数モデルで並列テスト**：Single Stepプロンプトの大きな利点は、同じ指示をGPT-5.5・Claude Opus 4.7・Gemini 3.1 Proで同時に実行でき、どのモデルがあなたのユースケースに最適かを見ることができることです。',
         '**定期的なプロンプト監査**：100個のアイテムを処理した後、失敗したケースを集め、それらを処理するようにプロンプトを更新してください。動的で改善に開かれたプロセスがあれば、時間とともにプロンプトの品質が向上します。',
         '**バージョン管理を実装**：重要なプロンプトについては、変更日時とその理由を記録してください。後で回帰が発生した場合、以前のバージョンに戻ることができます。',
       ],
@@ -802,7 +802,7 @@ ja: {
         name: 'Single Stepプロンプトは複数モデルで同じ結果を出しますか？',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ほぼ同じですが、完全には同一ではありません。GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proはそれぞれ異なる訓練データと推論方法を持つため、微妙な違いが生じます。Single Stepプロンプトを使用する利点は、同じ指示で比較できるため、モデル固有の特性と品質の違いが明確になることです。',
+          text: 'ほぼ同じですが、完全には同一ではありません。GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proはそれぞれ異なる訓練データと推論方法を持つため、微妙な違いが生じます。Single Stepプロンプトを使用する利点は、同じ指示で比較できるため、モデル固有の特性と品質の違いが明確になることです。',
         },
       },
       {
@@ -842,7 +842,7 @@ ja: {
         name: 'Single Stepプロンプトはローカルモデル（Ollama、LM Studio）で動作しますか？',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'はい。Single Stepプロンプトはモデルに依存しない構造なため、GPT-4o、Claude、Gemini、Ollama、LM Studioなど、すべてのLLMで動作します。ただし、より小さなモデルは複雑なプロンプトでパフォーマンスが低下する可能性があるため、制約はシンプルかつ明確に保つことが重要です。',
+          text: 'はい。Single Stepプロンプトはモデルに依存しない構造なため、GPT-5.5、Claude、Gemini、Ollama、LM Studioなど、すべてのLLMで動作します。ただし、より小さなモデルは複雑なプロンプトでパフォーマンスが低下する可能性があるため、制約はシンプルかつ明確に保つことが重要です。',
         },
       },
       {
@@ -870,7 +870,7 @@ ja: {
       intro: '单步提示法是一种高效的提示工程框架，将角色、目标、上下文、约束条件和输出格式整合到一条精确的提示中。这种方法避免了多轮对话的复杂性，使AI模型能够在一次交互中理解完整的任务需求，从而生成更加稳定和可比较的结果。',
       publishDate: '2026-03-24',
       seoTitle: '单步提示法2026：精确定义与一次交互完成任务的方法',
-      metaDescription: '单步提示法将角色、目标、上下文、约束和输出格式合并为一个完整的提示。避免多轮对话，与GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro实现直接比较。适合开发者、产品经理和AI运维人员。',
+      metaDescription: '单步提示法将角色、目标、上下文、约束和输出格式合并为一个完整的提示。避免多轮对话，与GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro实现直接比较。适合开发者、产品经理和AI运维人员。',
       readTime: '阅读约8分钟',
       educationalLevel: 'Intermediate',
       schema: {
@@ -892,9 +892,9 @@ ja: {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
@@ -904,7 +904,7 @@ ja: {
         whatIsSingleStep: {
           title: '什么是单步提示法',
           content: [
-            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro以及通过[Ollama](/local-llms/ollama-installation-guide?lang=zh)或LM Studio等工具运行的本地模型。',
+            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro以及通过[Ollama](/local-llms/ollama-installation-guide?lang=zh)或LM Studio等工具运行的本地模型。',
             '核心理念是"思考一次、编写一次、执行一次"。你投入精力设计一个精确的[提示](/prompt-engineering/what-is-prompt-engineering?lang=zh)，然后在多个任务、项目和模型中重复使用。由于结构固定，你可以衡量质量、每次改变一个参数，并系统地改进提示。',
           ],
         },
@@ -949,7 +949,7 @@ ja: {
           ],
           items: [
             '为角色、目标、上下文、约束条件和输出格式提供明确的字段，确保你不会遗漏任何构建块。',
-            '将同样的结构化提示并行应用于多个模型，包括GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro以及通过Ollama或LM Studio配置的本地模型。',
+            '将同样的结构化提示并行应用于多个模型，包括GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro以及通过Ollama或LM Studio配置的本地模型。',
             '允许你将成功的单步提示保存为可重复使用的模板，用于未来的任务和团队成员。',
           ],
         },
@@ -1050,7 +1050,7 @@ ja: {
             name: '我可以在本地模型（如Ollama或LM Studio）上使用单步提示法吗？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '完全可以。单步提示法与任何模型配合工作——GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro或通过Ollama和LM Studio的本地模型。相同的单一结构在所有平台应用。',
+              text: '完全可以。单步提示法与任何模型配合工作——GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro或通过Ollama和LM Studio的本地模型。相同的单一结构在所有平台应用。',
             },
           },
           {

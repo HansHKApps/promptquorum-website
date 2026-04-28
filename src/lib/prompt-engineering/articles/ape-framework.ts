@@ -16,7 +16,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '7 min read',
       educationalLevel: 'Intermediate',
       seoTitle: 'APE Framework 2026: Analyze, Plan, Execute in 3 Steps',
-      metaDescription: 'The APE prompt framework separates thinking into analysis, planning, and execution for clear, traceable LLM outputs. Works with GPT-4o, Claude, Ollama.',
+      metaDescription: 'The APE prompt framework separates thinking into analysis, planning, and execution for clear, traceable LLM outputs. Works with GPT-5.5, Claude, Ollama.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -37,9 +37,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
@@ -59,7 +59,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsAPE: {
           title: 'What the APE Framework Is',
           content: [
-            '**The APE Framework is a prompt template that forces models like GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to separate their thinking into analysis, planning, and execution.** Instead of getting one undifferentiated answer, you see how the model understood the problem, how it intends to solve it, and the final output. This structure improves reliability because you can inspect each stage.',
+            '**The APE Framework is a prompt template that forces models like GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro to separate their thinking into analysis, planning, and execution.** Instead of getting one undifferentiated answer, you see how the model understood the problem, how it intends to solve it, and the final output. This structure improves reliability because you can inspect each stage.',
             'APE is especially useful when you are dealing with complex or high-stakes tasks. By asking the model to show its reasoning path explicitly, you reduce the chance that hidden assumptions or shortcuts stay invisible. Even when you run local models through tools such as [Ollama](/local-llms/ollama-installation-guide) or LM Studio, the same three-part pattern keeps results consistent.',
           ],
         },
@@ -116,7 +116,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Provides labeled sections for analysis, planning, and execution expectations so you do not have to remember the pattern each time.',
-            'Sends the same APE-structured prompt to multiple models in parallel, making it easy to compare how GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models respond at each stage.',
+            'Sends the same APE-structured prompt to multiple models in parallel, making it easy to compare how GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models respond at each stage.',
             'Can be saved as a template for repeated workflows such as code reviews, strategy memos, or research briefs.',
           ],
         },
@@ -152,7 +152,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', name: 'What does APE stand for?', acceptedAnswer: { '@type': 'Answer', text: 'APE stands for Analyze, Plan, Execute. It\'s a three-step prompt framework that breaks down complex reasoning into three explicit stages: understanding the problem, planning an approach, and executing the solution.' } },
           { '@type': 'Question', name: 'How is APE different from just asking a model for an answer?', acceptedAnswer: { '@type': 'Answer', text: 'With APE, you get visibility into the model\'s thinking process. Instead of a single answer, you see how the model understood your task, what plan it chose, and the final output. This makes errors easier to catch and results more reliable.' } },
           { '@type': 'Question', name: 'When should I use APE instead of the Single Step Prompt Method?', acceptedAnswer: { '@type': 'Answer', text: 'Use APE when reasoning is critical to your task: technical analysis, code reviews, strategy development, or situations where errors are costly. Use Single Step when your objective is clear upfront and you mainly need execution speed.' } },
-          { '@type': 'Question', name: 'Can I use APE with local models like Ollama or LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. APE works with any model—GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, or local models via Ollama and LM Studio. The same three-step structure applies across all platforms.' } },
+          { '@type': 'Question', name: 'Can I use APE with local models like Ollama or LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. APE works with any model—GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, or local models via Ollama and LM Studio. The same three-step structure applies across all platforms.' } },
           { '@type': 'Question', name: 'How long does an APE prompt need to be?', acceptedAnswer: { '@type': 'Answer', text: 'APE prompts can be compact. A single paragraph that mentions Analyze, Plan, and Execute and specifies what you expect in each stage is sufficient. The framework itself is about structure, not length.' } },
           { '@type': 'Question', name: 'Can I save APE prompts as templates in PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Once you create an APE-structured prompt that works well for a particular workflow (e.g., code reviews, customer summaries), you can save it as a template in PromptQuorum and share it with your team.' } },
           { '@type': 'Question', name: 'What if my task is too simple for APE?', acceptedAnswer: { '@type': 'Answer', text: 'If your task is straightforward and doesn\'t require visible reasoning, the Single Step Prompt Method is probably sufficient. APE adds overhead—the value comes from being able to inspect and refine the model\'s reasoning.' } },
@@ -168,7 +168,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '7 min read', 
       educationalLevel: 'Intermediate',
       seoTitle: 'APE-Framework: Analyse, Plan, Ausführung 2026',
-      metaDescription: 'Das APE-Prompt-Framework trennt das Denken in Analyse, Planung und Ausführung für klare, nachverfolgbare LLM-Ausgaben. Funktioniert mit GPT-4o, Claude, Ollama.',
+      metaDescription: 'Das APE-Prompt-Framework trennt das Denken in Analyse, Planung und Ausführung für klare, nachverfolgbare LLM-Ausgaben. Funktioniert mit GPT-5.5, Claude, Ollama.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -192,7 +192,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '7 min read', 
       educationalLevel: 'Intermediate',
       seoTitle: 'Framework APE : Analyse, Plan, Exécution 2026',
-      metaDescription: 'Le framework de prompt APE sépare la réflexion en analyse, planification et exécution pour des résultats LLM clairs et traçables. Compatible GPT-4o, Claude, Ollama.',
+      metaDescription: 'Le framework de prompt APE sépare la réflexion en analyse, planification et exécution pour des résultats LLM clairs et traçables. Compatible GPT-5.5, Claude, Ollama.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -216,7 +216,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '7 min read', 
       educationalLevel: 'Intermediate',
       seoTitle: 'APEフレームワーク：分析・計画・実行 2026',
-      metaDescription: 'APEプロンプトフレームワークは思考を分析・計画・実行に分離。GPT-4o、Claude、Ollama対応。',
+      metaDescription: 'APEプロンプトフレームワークは思考を分析・計画・実行に分離。GPT-5.5、Claude、Ollama対応。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -240,7 +240,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '7 min read', 
       educationalLevel: 'Intermediate',
       seoTitle: 'APE框架：分析·规划·执行 2026',
-      metaDescription: 'APE提示框架将思维分为分析、规划和执行阶段。与GPT-4o、Claude、Ollama兼容。',
+      metaDescription: 'APE提示框架将思维分为分析、规划和执行阶段。与GPT-5.5、Claude、Ollama兼容。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

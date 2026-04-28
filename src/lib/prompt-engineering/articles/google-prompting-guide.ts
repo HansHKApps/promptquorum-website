@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: "Google's Prompting Guide",
-      intro: "Google's Prompting Guide is a set of practical recommendations from Google DeepMind for writing prompts that make models like Gemini 2.5 Pro more reliable, controllable, and useful in real-world applications. PromptQuorum includes Google's Prompting Guide as a framework that users can select and apply directly across all supported models.",
+      intro: "Google's Prompting Guide is a set of practical recommendations from Google DeepMind for writing prompts that make models like Gemini 3.1 Pro more reliable, controllable, and useful in real-world applications. PromptQuorum includes Google's Prompting Guide as a framework that users can select and apply directly across all supported models.",
       publishDate: '2026-03-24',
       readTime: '7 min read',
 
@@ -27,7 +27,7 @@ export const article: Record<Language, PEArticle> = {
         description: "How Google's Prompting Guide works, its core techniques, and how PromptQuorum offers it as a reusable framework across multiple AI models.",
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['Google Prompting Guide', 'prompt best practices', 'Gemini 2.5 Pro', 'prompt frameworks', 'PromptQuorum'],
+        keywords: ['Google Prompting Guide', 'prompt best practices', 'Gemini 3.1 Pro', 'prompt frameworks', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -37,10 +37,10 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
@@ -50,7 +50,7 @@ export const article: Record<Language, PEArticle> = {
           title: "What Google's Prompting Guide Is",
           content: [
             "**Google's Prompting Guide is a collection of patterns and best practices for prompting Gemini and other large language models, focused on specificity, structure, and safety.** The guide translates research from Google DeepMind into concrete rules that non-experts can use. It covers how to define roles, provide context, constrain outputs, and handle tasks such as reasoning, coding, and data extraction.",
-            'In practice, the guide functions like a catalog of prompt recipes. Each recipe shows how to phrase instructions, what to avoid, and how to add examples so that the model\'s behavior becomes more predictable. These patterns work not only for Gemini 2.5 Pro but also for models such as GPT-4o and Claude 4.6 Sonnet, because the underlying principles are general.',
+            'In practice, the guide functions like a catalog of prompt recipes. Each recipe shows how to phrase instructions, what to avoid, and how to add examples so that the model\'s behavior becomes more predictable. These patterns work not only for Gemini 3.1 Pro but also for models such as GPT-5.5 and Claude Opus 4.7, because the underlying principles are general.',
           ],
         },
         corePrinciples: {
@@ -98,7 +98,7 @@ export const article: Record<Language, PEArticle> = {
             'Inside PromptQuorum, you can:',
           ],
           items: [
-            'Fill in guide-aligned fields once and send the resulting prompt to Gemini 2.5 Pro, GPT-4o, Claude 4.6 Sonnet, and local models via Ollama or LM Studio in parallel.',
+            'Fill in guide-aligned fields once and send the resulting prompt to Gemini 3.1 Pro, GPT-5.5, Claude Opus 4.7, and local models via Ollama or LM Studio in parallel.',
             'Save Google-style prompt templates for recurring workflows such as explainers, code reviews, and structured summaries.',
             'Compare how different models respond when guided by the same Google-derived structure, then choose the provider that best fits each task.',
           ],
@@ -131,7 +131,7 @@ export const article: Record<Language, PEArticle> = {
     de: {
       theme: 'Frameworks',
       title: 'Google Prompting Guide',
-      intro: 'Google Prompting Guide ist eine Sammlung praktischer Empfehlungen von Google DeepMind für das Schreiben von Prompts, die Modelle wie Gemini 2.5 Pro zuverlässiger, steuerbarer und hilfreicher in realen Anwendungen machen. Die Anleitung überträgt Forschung in konkrete, nicht-technische Regeln. PromptQuorum bietet diese Anleitung als Framework an, das Benutzer direkt über alle unterstützten Modelle hinweg anwenden können.',
+      intro: 'Google Prompting Guide ist eine Sammlung praktischer Empfehlungen von Google DeepMind für das Schreiben von Prompts, die Modelle wie Gemini 3.1 Pro zuverlässiger, steuerbarer und hilfreicher in realen Anwendungen machen. Die Anleitung überträgt Forschung in konkrete, nicht-technische Regeln. PromptQuorum bietet diese Anleitung als Framework an, das Benutzer direkt über alle unterstützten Modelle hinweg anwenden können.',
       publishDate: '2026-03-24',
       readTime: '6 min Lesezeit',
       educationalLevel: 'Intermediate',
@@ -144,7 +144,7 @@ export const article: Record<Language, PEArticle> = {
         description: 'Wie der Google Prompting Guide funktioniert, seine Kernmethoden, und wie PromptQuorum ihn als wiederverwendbares Framework über mehrere KI-Modelle anbietet.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['Google Prompting Guide', 'Prompt Best Practices', 'Gemini 2.5 Pro', 'Prompt Frameworks', 'PromptQuorum'],
+        keywords: ['Google Prompting Guide', 'Prompt Best Practices', 'Gemini 3.1 Pro', 'Prompt Frameworks', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -154,7 +154,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         ],
         teaches: 'Wie man die 5 Kernprinzipien des Google Prompting Guide (Klarheit, Beschränkungen, Beispiele, Rollen, Struktur) anwendet, um Prompts präzise und wiederholbar zu schreiben',
@@ -165,7 +165,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Was der Google Prompting Guide ist',
           content: [
             '**Der Google Prompting Guide ist eine Sammlung von Mustern und Best Practices zum Prompting von Gemini und anderen großen Sprachmodellen, fokussiert auf Spezifität, Struktur und Sicherheit.** Der Guide übersetzt Forschung von Google DeepMind in konkrete Regeln, die Nicht-Experten verwenden können. Er behandelt, wie man Rollen definiert, Kontext bereitstellt, Outputs einschränkt und mit Tasks wie Reasoning, Coding und Datenextraktion umgeht.',
-            'In der Praxis funktioniert der Guide wie ein Katalog von Prompt-Rezepten. Jedes Rezept zeigt, wie man Anweisungen formuliert, was zu vermeiden ist, und wie man Beispiele hinzufügt, damit das Verhalten des Modells vorhersehbarer wird. Diese Muster funktionieren nicht nur für Gemini 2.5 Pro, sondern auch für Modelle wie GPT-4o und Claude 4.6 Sonnet, weil die zugrunde liegenden Prinzipien generell sind.',
+            'In der Praxis funktioniert der Guide wie ein Katalog von Prompt-Rezepten. Jedes Rezept zeigt, wie man Anweisungen formuliert, was zu vermeiden ist, und wie man Beispiele hinzufügt, damit das Verhalten des Modells vorhersehbarer wird. Diese Muster funktionieren nicht nur für Gemini 3.1 Pro, sondern auch für Modelle wie GPT-5.5 und Claude Opus 4.7, weil die zugrunde liegenden Prinzipien generell sind.',
           ],
         },
         corePrinciples: {
@@ -212,7 +212,7 @@ export const article: Record<Language, PEArticle> = {
             'In PromptQuorum kannst du:',
           ],
           items: [
-            'Guide-ausgerichtete Felder einmal ausfüllen und den resultierenden Prompt an Gemini 2.5 Pro, GPT-4o, Claude 4.6 Sonnet und lokale Modelle via Ollama oder LM Studio parallel senden.',
+            'Guide-ausgerichtete Felder einmal ausfüllen und den resultierenden Prompt an Gemini 3.1 Pro, GPT-5.5, Claude Opus 4.7 und lokale Modelle via Ollama oder LM Studio parallel senden.',
             'Google-Style-Prompt-Templates für wiederkehrende Workflows wie Erklärer, Code-Reviews und strukturierte Zusammenfassungen speichern.',
             'Vergleichen, wie verschiedene Modelle reagieren, wenn sie von derselben Google-abgeleiteten Struktur geleitet werden, dann den Anbieter auswählen, der am besten zu jeder Task passt.',
           ],
@@ -243,7 +243,7 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Ist der Google Guide auf Gemini beschränkt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Die Prinzipien sind generell und funktionieren mit GPT-4o, Claude und allen modernen Modellen. Gemini ist das Primär-Beispiel, aber die Ideen sind universell.' } },
+          { '@type': 'Question', 'name': 'Ist der Google Guide auf Gemini beschränkt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Die Prinzipien sind generell und funktionieren mit GPT-5.5, Claude und allen modernen Modellen. Gemini ist das Primär-Beispiel, aber die Ideen sind universell.' } },
           { '@type': 'Question', 'name': 'Kann ich den Google Guide mit anderen Frameworks kombinieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Absolut, und das ist empfohlen. Nutze ein hochrangiges Framework (CO-STAR, SPECS) um die Struktur zu definieren, dann wende Googles Prompting-Prinzipien darin an.' } },
           { '@type': 'Question', 'name': 'Funktioniert der Google Guide für alle Art von Tasks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Guide passt zu den meisten Tasks, außer den sehr einfachen, die keine Struktur brauchen. Für komplexe, mehrstufige Workflows kombiniere ihn mit umfassenderen Frameworks.' } },
           { '@type': 'Question', 'name': 'Muss ich immer ein Beispiel in meinem Prompt zeigen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht obligatorisch, aber stark empfohlen für komplexe oder kreative Tasks. Für simple Tasks reicht eine klare Beschreibung oft aus.' } },
@@ -254,7 +254,7 @@ export const article: Record<Language, PEArticle> = {
     fr: {
       theme: 'Frameworks',
       title: 'Guide Google pour la Rédaction de Prompts',
-      intro: 'Le Guide Google pour la Rédaction de Prompts propose des pratiques concrètes de Google DeepMind pour écrire des prompts clairs et structurés. Ces principes rendent les modèles comme Gemini 2.5 Pro plus fiables et prévisibles. PromptQuorum intègre ce guide comme framework directement applicable à tous les modèles supportés.',
+      intro: 'Le Guide Google pour la Rédaction de Prompts propose des pratiques concrètes de Google DeepMind pour écrire des prompts clairs et structurés. Ces principes rendent les modèles comme Gemini 3.1 Pro plus fiables et prévisibles. PromptQuorum intègre ce guide comme framework directement applicable à tous les modèles supportés.',
       publishDate: '2026-03-24',
       readTime: '6 min de lecture',
       educationalLevel: 'Intermediate',
@@ -267,7 +267,7 @@ export const article: Record<Language, PEArticle> = {
         description: 'Comprendre le Guide Google, ses principes clés, et comment l\'appliquer systématiquement dans PromptQuorum.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['Guide Google', 'rédaction de prompts', 'bonnes pratiques', 'Gemini 2.5 Pro', 'frameworks de prompts', 'PromptQuorum'],
+        keywords: ['Guide Google', 'rédaction de prompts', 'bonnes pratiques', 'Gemini 3.1 Pro', 'frameworks de prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -277,7 +277,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         ],
         teaches: 'Comment appliquer les principes Google (clarté, contraintes explicites, exemples concrets, rôles) pour rédiger des prompts fiables et prévisibles',
@@ -288,7 +288,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Qu\'est-ce que le Guide Google pour la Rédaction de Prompts',
           content: [
             '**Le Guide Google est un ensemble de règles pratiques pour rédiger des prompts clairs et structure qui fonctionnent avec n\'importe quel modèle.** L\'accent porte sur la clarté, la structure et la sécurité plutôt que sur les formulations « malignes ».',
-            'Ces principes s\'appliquent à Gemini 2.5 Pro comme à GPT-4o et Claude 4.6 Sonnet, car les idées sous-jacentes sont universelles.',
+            'Ces principes s\'appliquent à Gemini 3.1 Pro comme à GPT-5.5 et Claude Opus 4.7, car les idées sous-jacentes sont universelles.',
           ],
         },
         corePrinciples: {
@@ -333,7 +333,7 @@ export const article: Record<Language, PEArticle> = {
             '**PromptQuorum empaquette le Guide Google comme framework réutilisable afin que vous appliquiez ces principes sans les mémoriser.** Quand vous sélectionnez le Guide Google dans PromptQuorum, l\'app expose des champs alignés sur les idées clés du guide.',
           ],
           items: [
-            'Remplissez les champs une seule fois, puis envoyez à Gemini 2.5 Pro, GPT-4o, Claude et modèles locaux en parallèle.',
+            'Remplissez les champs une seule fois, puis envoyez à Gemini 3.1 Pro, GPT-5.5, Claude et modèles locaux en parallèle.',
             'Sauvegardez des templates Google-style pour les workflows récurrents : explications, revues de code, résumés structurés.',
             'Comparez les réponses entre modèles quand guidés par la même structure.',
           ],
@@ -364,7 +364,7 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Le Guide Google est-il limité à Gemini ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Les principes Google sont généraux et fonctionnent avec GPT-4o, Claude, et tous les modèles modernes. Gemini est l\'exemple principal, mais les idées sont universelles.' } },
+          { '@type': 'Question', 'name': 'Le Guide Google est-il limité à Gemini ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Les principes Google sont généraux et fonctionnent avec GPT-5.5, Claude, et tous les modèles modernes. Gemini est l\'exemple principal, mais les idées sont universelles.' } },
           { '@type': 'Question', 'name': 'Puis-je combiner le Guide Google avec d\'autres frameworks ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, c\'est recommandé. Utilisez un framework haut-niveau comme CO-STAR ou SPECS, puis appliquez les principes Google à l\'intérieur.' } },
           { '@type': 'Question', 'name': 'Le Guide Google fonctionne-t-il pour tous les types de tâches ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le Guide Google convient à la plupart des tâches, sauf les très simples qui ne nécessitent pas de structure. Pour les workflows complexes multi-étapes, combinez-le avec un framework plus complet.' } },
           { '@type': 'Question', 'name': 'Faut-il toujours montrer un exemple dans mes prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non, mais fortement recommandé pour les tâches complexes ou créatives. Pour les tâches simples, une description claire suffit.' } },
@@ -375,7 +375,7 @@ export const article: Record<Language, PEArticle> = {
     ja: {
       theme: 'Frameworks',
       title: 'Googleプロンプト作成ガイド',
-      intro: 'GoogleプロンプトガイドはGoogle DeepMindが提唱する、モデルに「何をしてほしいのか」を明確に伝えるための実践的な原則集です。これらの原則に従うことで、Gemini 2.5 ProやGPT-4o、Claudeなど、どのモデルでも予測可能で信頼できる結果が得られます。PromptQuorumではこのガイドをフレームワークとして統合しており、すべてのユーザーが直接活用できます。',
+      intro: 'GoogleプロンプトガイドはGoogle DeepMindが提唱する、モデルに「何をしてほしいのか」を明確に伝えるための実践的な原則集です。これらの原則に従うことで、Gemini 3.1 ProやGPT-5.5、Claudeなど、どのモデルでも予測可能で信頼できる結果が得られます。PromptQuorumではこのガイドをフレームワークとして統合しており、すべてのユーザーが直接活用できます。',
       publishDate: '2026-03-24',
       readTime: '7分で読める',
       educationalLevel: 'Intermediate',
@@ -388,7 +388,7 @@ export const article: Record<Language, PEArticle> = {
         description: 'Googleプロンプト作成ガイドの仕組み、中核原則、PromptQuorumでの活用方法。',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['Googleプロンプトガイド', 'プロンプト作成', 'ベストプラクティス', 'Gemini 2.5 Pro', 'プロンプトフレームワーク', 'PromptQuorum'],
+        keywords: ['Googleプロンプトガイド', 'プロンプト作成', 'ベストプラクティス', 'Gemini 3.1 Pro', 'プロンプトフレームワーク', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -398,7 +398,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         ],
         teaches: 'Googleの原則（明確さ・制約・例・ロール）に基づいてプロンプトを構造化し、AIの出力を予測可能にする方法',
@@ -408,7 +408,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsGoogle: {
           title: 'Googleプロンプト作成ガイドとは',
           content: [
-            '**Googleプロンプト作成ガイドは、モデルに正確に指示を伝えるための実践的な原則集です。** Gemini 2.5 Proを中心に提案されていますが、原則は汎用的で、GPT-4oやClaudeでも同じく有効です。',
+            '**Googleプロンプト作成ガイドは、モデルに正確に指示を伝えるための実践的な原則集です。** Gemini 3.1 Proを中心に提案されていますが、原則は汎用的で、GPT-5.5やClaudeでも同じく有効です。',
             'ガイドはレシピ集のように機能します。タスク、例、制約をどう組み合わせるかを示しており、これに従うことで、モデルの挙動がより予測可能になります。',
           ],
         },
@@ -454,7 +454,7 @@ export const article: Record<Language, PEArticle> = {
             '**PromptQuorumはこのガイドをフレームワークとして統合しており、ユーザーは暗記不要で、これらのベストプラクティスを直接活用できます。** Googleガイドを選ぶと、アプリはガイドの主要な考え方—タスク、ロール、読み手、構造、制約、例—を反映したフィールドを表示します。',
           ],
           items: [
-            '一度フィールドを埋めるだけで、Gemini、GPT-4o、Claude、ローカルモデルに並行送信',
+            '一度フィールドを埋めるだけで、Gemini、GPT-5.5、Claude、ローカルモデルに並行送信',
             'テンプレートを保存して、同じ種類のタスク（説明文、コード審査、構造化要約）に再利用',
             '複数モデルの応答を比較し、各タスクに最適なプロバイダーを選定',
           ],
@@ -485,7 +485,7 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'GoogleガイドはGemini限定？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。原則は普遍的で、GPT-4o、Claude、すべてのモダンモデルで機能します。Geminiは主な例ですが、考え方は共通です。' } },
+          { '@type': 'Question', 'name': 'GoogleガイドはGemini限定？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。原則は普遍的で、GPT-5.5、Claude、すべてのモダンモデルで機能します。Geminiは主な例ですが、考え方は共通です。' } },
           { '@type': 'Question', 'name': 'Googleガイドを他のフレームワークと組み合わせられる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、推奨。高レベルのフレームワーク（CO-STAR、SPECS等）で全体構造を定め、その中でGoogleガイドの原則を適用します。' } },
           { '@type': 'Question', 'name': 'すべてのタスクに適用できる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ほぼ。ただし単純な質問にはオーバーエンジニアリング。複雑で多段階のワークフローには、より完全なフレームワークとの組み合わせが有効。' } },
           { '@type': 'Question', 'name': 'プロンプトに必ず例を含める必要がある？', 'acceptedAnswer': { '@type': 'Answer', 'text': '必須ではありませんが、複雑・創造的なタスクでは強く推奨。単純なタスク（事実質問など）には説明だけで十分な場合も。' } },
@@ -496,7 +496,7 @@ export const article: Record<Language, PEArticle> = {
     zh: {
       theme: 'Frameworks',
       title: 'Google提示词撰写指南',
-      intro: 'Google提示词撰写指南是Google DeepMind总结的实用原则集，教你如何清晰、结构化地指示AI模型。这些原则对Gemini 2.5 Pro、GPT-4o、Claude都同样有效。遵循这些原则，你的提示词会变得更可控、更可重复、结果更可预测。PromptQuorum已将此指南集成为框架，所有用户可直接使用。',
+      intro: 'Google提示词撰写指南是Google DeepMind总结的实用原则集，教你如何清晰、结构化地指示AI模型。这些原则对Gemini 3.1 Pro、GPT-5.5、Claude都同样有效。遵循这些原则，你的提示词会变得更可控、更可重复、结果更可预测。PromptQuorum已将此指南集成为框架，所有用户可直接使用。',
       publishDate: '2026-03-24',
       readTime: '7分钟阅读',
       educationalLevel: 'Intermediate',
@@ -509,7 +509,7 @@ export const article: Record<Language, PEArticle> = {
         description: 'Google提示词撰写指南的核心原则、关键技巧、以及如何在PromptQuorum中应用。',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['Google提示词指南', '提示词撰写', '最佳实践', 'Gemini 2.5 Pro', '提示词框架', 'PromptQuorum'],
+        keywords: ['Google提示词指南', '提示词撰写', '最佳实践', 'Gemini 3.1 Pro', '提示词框架', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -519,7 +519,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         ],
         teaches: '如何应用Google的5大原则（明确性、约束、例子、角色、结构）来撰写高效、可重复的提示词',
@@ -529,7 +529,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsGoogle: {
           title: 'Google提示词撰写指南是什么',
           content: [
-            '**Google指南是一套实用原则，教你如何清晰、结构化地与AI交互。** 原则不是为了Gemini特设的，而是通用的，对GPT-4o、Claude同样有效。',
+            '**Google指南是一套实用原则，教你如何清晰、结构化地与AI交互。** 原则不是为了Gemini特设的，而是通用的，对GPT-5.5、Claude同样有效。',
             '指南像一本「食谱」。每条原则都指导你如何措辞指示、提供什么样的例子、加什么样的约束，使模型行为更可预测。',
           ],
         },
@@ -575,7 +575,7 @@ export const article: Record<Language, PEArticle> = {
             '**PromptQuorum将此指南打包为可复用框架，让你无需记住所有原则，直接应用最佳实践。** 选择Google指南框架后，应用会展开符合指南的字段：任务、角色、读者、结构、约束、例子。',
           ],
           items: [
-            '一次性填充，然后并行发送给Gemini、GPT-4o、Claude和本地模型。',
+            '一次性填充，然后并行发送给Gemini、GPT-5.5、Claude和本地模型。',
             '保存Google风格的模板，用于重复工作：解释文、代码审查、结构化总结。',
             '对比不同模型的回应，选择最适合该任务的提供商。',
           ],
@@ -606,7 +606,7 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Google指南只适用于Gemini吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是。原则是通用的，对GPT-4o、Claude和所有现代模型都有效。Gemini是主要例子，但思想是普遍的。' } },
+          { '@type': 'Question', 'name': 'Google指南只适用于Gemini吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是。原则是通用的，对GPT-5.5、Claude和所有现代模型都有效。Gemini是主要例子，但思想是普遍的。' } },
           { '@type': 'Question', 'name': '能把Google指南和其他框架混合吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '完全可以，而且推荐。用高层框架（CO-STAR、SPECS）定义结构，在其中应用Google的5大原则。' } },
           { '@type': 'Question', 'name': 'Google指南适合所有任务吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '几乎所有。除了极简单的问题可能不需要。复杂多步骤流程建议和更全面的框架结合。' } },
           { '@type': 'Question', 'name': '提示词里一定要给例子吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是必需，但强烈推荐复杂或创意任务。简单查询用文字描述往往就够。' } },

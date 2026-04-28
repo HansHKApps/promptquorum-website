@@ -16,7 +16,7 @@ export const article: Record<Language, PEArticle> = {
       dateModified: '2026-04-28',
       readTime: '15 min read',
       seoTitle: 'Write Better Code With AI: Prompts, Models & Security (2026)',
-      metaDescription: 'AI cuts coding time 30–75% with structured prompts. Compare Claude, GPT-4o, and Gemini for code tasks. 45% of AI code has security flaws — learn safe workflows.',
+      metaDescription: 'AI cuts coding time 30–75% with structured prompts. Compare Claude, GPT-5.5, and Gemini for code tasks. 45% of AI code has security flaws — learn safe workflows.',
       lastFactChecked: '2026-04-28 against Claude 4.7 Opus, GPT-5, Gemini 3 Pro release data',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AI-assisted coding', 'Code generation', 'Prompt engineering'],
@@ -114,7 +114,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'What is the best AI model for writing code in 2026?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude 4.6 Sonnet (Anthropic) produces the most consistent results for backend code, API design, and bug tracing, winning 60–65% of direct comparisons against GPT-4o on those tasks. GPT-4o (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, LLaMA 3.1 7B running locally via Ollama produces zero external API calls.',
+              text: 'Claude Opus 4.7 (Anthropic) produces the most consistent results for backend code, API design, and bug tracing, winning 60–65% of direct comparisons against GPT-5.5 on those tasks. GPT-5.5 (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, LLaMA 3.1 7B running locally via Ollama produces zero external API calls.',
             },
           },
           {
@@ -170,7 +170,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Can I use AI coding tools with local LLMs for privacy?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. LLaMA 3.1 7B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-4o or Claude for complex tasks but acceptable for boilerplate and simple functions.',
+              text: 'Yes. LLaMA 3.1 7B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-5.5 or Claude for complex tasks but acceptable for boilerplate and simple functions.',
             },
           },
           {
@@ -213,7 +213,7 @@ export const article: Record<Language, PEArticle> = {
           isTldr: true,
           items: [
             'AI reduces coding time by 30–75% — but only when prompts are structured with role, objective, constraints, output format, and edge cases',
-            'Claude 4.6 Sonnet (Anthropic) leads on backend code, API design, and bug tracing; GPT-4o (OpenAI) leads on algorithm design and multi-step reasoning',
+            'Claude Opus 4.7 (Anthropic) leads on backend code, API design, and bug tracing; GPT-5.5 (OpenAI) leads on algorithm design and multi-step reasoning',
             'Chain-of-Thought (CoT) prompting — "reason step by step before producing code" — makes the model\'s logic inspectable and reduces debugging errors',
             'AI introduces security vulnerabilities in 45% of generated code; always run security linters before deployment',
             'Set Temperature (T) to 0.1–0.2 for production code; use 0.7–0.9 only for exploratory algorithmic brainstorming',
@@ -223,7 +223,7 @@ export const article: Record<Language, PEArticle> = {
         directAnswer: {
           title: 'The Direct Answer: Prompt Quality Determines Code Quality',
           content: [
-            '**The output of any AI coding session is only as good as the instruction you give — a vague prompt produces vague code, a structured prompt produces production-ready code.** Large Language Models (LLMs) — the class of neural networks behind GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro — do not "understand" your project; they predict the next most likely token based on patterns learned from billions of lines of code.',
+            '**The output of any AI coding session is only as good as the instruction you give — a vague prompt produces vague code, a structured prompt produces production-ready code.** Large Language Models (LLMs) — the class of neural networks behind GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro — do not "understand" your project; they predict the next most likely token based on patterns learned from billions of lines of code.',
             'This means your prompt is an architectural contract, not a casual question. When you specify the programming language, expected inputs/outputs, and edge cases to handle, you consistently receive code closer to production-ready.',
             'In one sentence: The developer\'s job has shifted from writing every line to writing instructions that an AI executes — the skill is prompt engineering, not keyboarding speed.',
           ],
@@ -492,7 +492,7 @@ export const article: Record<Language, PEArticle> = {
       dateModified: '2026-04-28',
       readTime: '15 min Lesedauer',
       seoTitle: 'Besserer Code mit KI: Prompts, Modelle & Sicherheit (2026)',
-      metaDescription: 'KI verkürzt die Entwicklungszeit um 30–75 % mit strukturierten Prompts. Claude, GPT-4o und Gemini im Vergleich. 45 % des KI-Codes hat Sicherheitslücken.',
+      metaDescription: 'KI verkürzt die Entwicklungszeit um 30–75 % mit strukturierten Prompts. Claude, GPT-5.5 und Gemini im Vergleich. 45 % des KI-Codes hat Sicherheitslücken.',
       lastFactChecked: '2026-04-28 gegen Claude 4.7 Opus, GPT-5 und Gemini 3 Pro Release-Daten',
       educationalLevel: 'Intermediate',
       aboutTopics: ['KI-gestützte Programmierung', 'Code-Generierung', 'Prompt Engineering'],
@@ -1008,7 +1008,7 @@ export const article: Record<Language, PEArticle> = {
       dateModified: '2026-04-28',
       readTime: '15 min de lecture',
       seoTitle: 'Coder avec l\'IA : Prompts, Modèles et Sécurité (2026)',
-      metaDescription: 'L\'IA réduit le temps de développement de 30 à 75 % avec des prompts structurés. Claude, GPT-4o et Gemini comparés. 45 % du code IA contient des failles.',
+      metaDescription: 'L\'IA réduit le temps de développement de 30 à 75 % avec des prompts structurés. Claude, GPT-5.5 et Gemini comparés. 45 % du code IA contient des failles.',
       lastFactChecked: '2026-04-28 par rapport aux données de Claude 4.7 Opus, GPT-5 et Gemini 3 Pro',
       educationalLevel: 'Intermediate',
       aboutTopics: ['Codage assisté par l\'IA', 'Génération de code', 'Ingénierie des prompts'],
@@ -1512,7 +1512,7 @@ export const article: Record<Language, PEArticle> = {
       dateModified: '2026-04-28',
       readTime: '15分で読める',
       seoTitle: 'AIでコード品質向上：プロンプト・モデル・セキュリティ（2026）',
-      metaDescription: 'AIは構造化プロンプトで開発時間を30〜75%短縮。Claude・GPT-4o・Geminiのコーディング性能を比較。AI生成コードの45%にセキュリティ脆弱性 — 安全なワークフローを解説。',
+      metaDescription: 'AIは構造化プロンプトで開発時間を30〜75%短縮。Claude・GPT-5.5・Geminiのコーディング性能を比較。AI生成コードの45%にセキュリティ脆弱性 — 安全なワークフローを解説。',
       lastFactChecked: '2026-04-28: Claude 4.7 Opus, GPT-5, Gemini 3 Pro リリースデータに対して検証済み',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AIを活用したコーディング', 'コード生成', 'プロンプトエンジニアリング'],
@@ -1950,7 +1950,7 @@ export const article: Record<Language, PEArticle> = {
       dateModified: '2026-04-28',
       readTime: '15分钟阅读',
       seoTitle: '用AI写出更好的代码：提示词、模型与安全（2026）',
-      metaDescription: 'AI通过结构化提示词将开发时间缩短30–75%。对比Claude、GPT-4o和Gemini的编程能力。45%的AI生成代码存在安全漏洞——掌握安全工作流程。',
+      metaDescription: 'AI通过结构化提示词将开发时间缩短30–75%。对比Claude、GPT-5.5和Gemini的编程能力。45%的AI生成代码存在安全漏洞——掌握安全工作流程。',
       lastFactChecked: '2026-04-28 针对Claude 4.7 Opus、GPT-5、Gemini 3 Pro发布数据',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AI辅助编码', '代码生成', '提示工程'],

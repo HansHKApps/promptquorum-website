@@ -27,7 +27,7 @@ export const llmThemes: LLMTheme[] = [
   {
     id: 'best-models',
     title: 'Models by Use Case',
-    description: 'Model reviews, benchmark comparisons, use-case winners, and quantization guides for Llama 4, Qwen3.5, DeepSeek, Gemma 4, and 70B+ models. Qwen2.5-Coder leads coding benchmarks; Mistral 7B is fastest for RAM-constrained setups. Every review includes exact VRAM requirements and benchmark scores versus GPT-4o.',
+    description: 'Model reviews, benchmark comparisons, use-case winners, and quantization guides for Llama 4, Qwen3.5, DeepSeek, Gemma 4, and 70B+ models. Qwen2.5-Coder leads coding benchmarks; Mistral 7B is fastest for RAM-constrained setups. Every review includes exact VRAM requirements and benchmark scores versus GPT-5.5.',
     articleKeys: [
       'best-local-llms-2026',
       'qwen-vs-llama-vs-mistral',

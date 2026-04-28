@@ -1414,7 +1414,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             { Factor: 'Privacy', 'Local AI': '✅ 100% private, on your machine', 'Cloud AI': '⚠️ Sent to vendor servers' },
             { Factor: 'Cost', 'Local AI': '✅ Free after hardware cost', 'Cloud AI': '💰 Pay per token/API' },
             { Factor: 'Speed', 'Local AI': '✅ Instant (no network lag)', 'Cloud AI': '⚠️ Depends on internet' },
-            { Factor: 'Model Quality', 'Local AI': '⚠️ Open-source (good, not best)', 'Cloud AI': '✅ Frontier models (GPT-4o, Claude 3.5)' },
+            { Factor: 'Model Quality', 'Local AI': '⚠️ Open-source (good, not best)', 'Cloud AI': '✅ Frontier models (GPT-5.5, Claude 3.5)' },
             { Factor: 'Offline', 'Local AI': '✅ Works without internet', 'Cloud AI': '❌ Requires internet connection' },
             { Factor: 'Setup', 'Local AI': '⚠️ Technical setup required', 'Cloud AI': '✅ Just log in' },
             { Factor: 'Compliance', 'Local AI': '✅ GDPR/HIPAA friendly', 'Cloud AI': '⚠️ May violate regulations' },
@@ -1479,7 +1479,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         useCloud: {
           title: '❌ Use Cloud AI if:',
           items: [
-            'You need cutting-edge model quality (GPT-4o, Claude 3.5 Opus)',
+            'You need cutting-edge model quality (GPT-5.5, Claude 3.5 Opus)',
             'You don\'t have technical setup skills',
             'You want the latest models without maintenance',
             'Your prompts aren\'t sensitive',
@@ -1631,7 +1631,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             { Factor: 'Datenschutz', 'Local AI': '✅ 100% privat auf Ihrem Computer', 'Cloud AI': '⚠️ An Anbieterserver gesendet' },
             { Factor: 'Kosten', 'Local AI': '✅ Kostenlos nach Hardwarekosten', 'Cloud AI': '💰 Pro Token/API bezahlen' },
             { Factor: 'Geschwindigkeit', 'Local AI': '✅ Sofort (kein Netzwerklatenz)', 'Cloud AI': '⚠️ Abhängig vom Internet' },
-            { Factor: 'Modellqualität', 'Local AI': '⚠️ Open-Source (gut, nicht das Beste)', 'Cloud AI': '✅ Frontier-Modelle (GPT-4o, Claude 3.5)' },
+            { Factor: 'Modellqualität', 'Local AI': '⚠️ Open-Source (gut, nicht das Beste)', 'Cloud AI': '✅ Frontier-Modelle (GPT-5.5, Claude 3.5)' },
             { Factor: 'Offline', 'Local AI': '✅ Funktioniert ohne Internet', 'Cloud AI': '❌ Erfordert Internetverbindung' },
             { Factor: 'Einrichtung', 'Local AI': '⚠️ Technische Einrichtung erforderlich', 'Cloud AI': '✅ Einfach anmelden' },
             { Factor: 'Compliance', 'Local AI': '✅ GDPR/HIPAA-freundlich', 'Cloud AI': '⚠️ Kann Bestimmungen verletzen' },
@@ -1696,7 +1696,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         useCloud: {
           title: '❌ Verwenden Sie Cloud-KI, wenn:',
           items: [
-            'Sie neueste Modellqualität benötigen (GPT-4o, Claude 3.5 Opus)',
+            'Sie neueste Modellqualität benötigen (GPT-5.5, Claude 3.5 Opus)',
             'Sie nicht über technische Einrichtungsfähigkeiten verfügen',
             'Sie die neuesten Modelle ohne Wartung möchten',
             'Ihre Prompts nicht sensibel sind',
@@ -1794,7 +1794,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             { Factor: 'Confidentialité', 'Local AI': '✅ 100% privé sur votre machine', 'Cloud AI': '⚠️ Envoyé aux serveurs du fournisseur' },
             { Factor: 'Coût', 'Local AI': '✅ Gratuit après coût matériel', 'Cloud AI': '💰 Payer par jeton/API' },
             { Factor: 'Vitesse', 'Local AI': '✅ Instantané (pas de latence réseau)', 'Cloud AI': '⚠️ Dépend de l\'internet' },
-            { Factor: 'Qualité du modèle', 'Local AI': '⚠️ Open-source (bon, pas le meilleur)', 'Cloud AI': '✅ Modèles frontière (GPT-4o, Claude 3.5)' },
+            { Factor: 'Qualité du modèle', 'Local AI': '⚠️ Open-source (bon, pas le meilleur)', 'Cloud AI': '✅ Modèles frontière (GPT-5.5, Claude 3.5)' },
             { Factor: 'Hors ligne', 'Local AI': '✅ Fonctionne sans internet', 'Cloud AI': '❌ Nécessite une connexion Internet' },
             { Factor: 'Configuration', 'Local AI': '⚠️ Configuration technique requise', 'Cloud AI': '✅ Connectez-vous simplement' },
             { Factor: 'Conformité', 'Local AI': '✅ Compatible RGPD/HIPAA', 'Cloud AI': '⚠️ Peut violer les réglementations' },
@@ -1859,7 +1859,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         useCloud: {
           title: '❌ Utilisez l\'IA cloud si :',
           items: [
-            'Vous avez besoin d\'une qualité de modèle de pointe (GPT-4o, Claude 3.5 Opus)',
+            'Vous avez besoin d\'une qualité de modèle de pointe (GPT-5.5, Claude 3.5 Opus)',
             'Vous n\'avez pas de compétences techniques de configuration',
             'Vous voulez les derniers modèles sans maintenance',
             'Vos invites ne sont pas sensibles',
@@ -1957,7 +1957,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             { Factor: 'プライバシー', 'Local AI': '✅ マシン上で100%プライベート', 'Cloud AI': '⚠️ ベンダーサーバーに送信' },
             { Factor: 'コスト', 'Local AI': '✅ ハードウェアコスト後は無料', 'Cloud AI': '💰 トークン/APIごとに支払う' },
             { Factor: '速度', 'Local AI': '✅ 即座（ネットワークレイテンシーなし）', 'Cloud AI': '⚠️ インターネットに依存' },
-            { Factor: 'モデルの品質', 'Local AI': '⚠️ オープンソース（良い、最高ではない）', 'Cloud AI': '✅ フロンティアモデル（GPT-4o、Claude 3.5）' },
+            { Factor: 'モデルの品質', 'Local AI': '⚠️ オープンソース（良い、最高ではない）', 'Cloud AI': '✅ フロンティアモデル（GPT-5.5、Claude 3.5）' },
             { Factor: 'オフライン', 'Local AI': '✅ インターネットなしで動作', 'Cloud AI': '❌ インターネット接続が必要' },
             { Factor: 'セットアップ', 'Local AI': '⚠️ 技術的なセットアップが必要', 'Cloud AI': '✅ ログインするだけ' },
             { Factor: 'コンプライアンス', 'Local AI': '✅ GDPR/HIPAA対応', 'Cloud AI': '⚠️ 規制に違反する可能性' },
@@ -2022,7 +2022,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         useCloud: {
           title: '❌ クラウドAIを使用する場合：',
           items: [
-            '最先端のモデル品質が必要（GPT-4o、Claude 3.5 Opus）',
+            '最先端のモデル品質が必要（GPT-5.5、Claude 3.5 Opus）',
             '技術的なセットアップスキルがない',
             'メンテナンスなしで最新のモデルが必要',
             'プロンプトは機密ではない',
@@ -2120,7 +2120,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             { Factor: '隐私', 'Local AI': '✅ 机器上100%隐私', 'Cloud AI': '⚠️ 发送到供应商服务器' },
             { Factor: '成本', 'Local AI': '✅ 硬件成本后免费', 'Cloud AI': '💰 按令牌/API付费' },
             { Factor: '速度', 'Local AI': '✅ 立即（无网络延迟）', 'Cloud AI': '⚠️ 取决于互联网' },
-            { Factor: '模型质量', 'Local AI': '⚠️ 开源（好的，不是最好的）', 'Cloud AI': '✅ 前沿模型（GPT-4o、Claude 3.5）' },
+            { Factor: '模型质量', 'Local AI': '⚠️ 开源（好的，不是最好的）', 'Cloud AI': '✅ 前沿模型（GPT-5.5、Claude 3.5）' },
             { Factor: '离线', 'Local AI': '✅ 无互联网工作', 'Cloud AI': '❌ 需要互联网连接' },
             { Factor: '设置', 'Local AI': '⚠️ 需要技术设置', 'Cloud AI': '✅ 只需登录' },
             { Factor: '合规性', 'Local AI': '✅ GDPR/HIPAA友好', 'Cloud AI': '⚠️ 可能违反法规' },
@@ -2185,7 +2185,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         useCloud: {
           title: '❌ 使用云AI如果：',
           items: [
-            '您需要尖端的模型质量（GPT-4o、Claude 3.5 Opus）',
+            '您需要尖端的模型质量（GPT-5.5、Claude 3.5 Opus）',
             '您没有技术设置技能',
             '您想要最新的模型而不需要维护',
             '您的提示词不敏感',
@@ -2406,7 +2406,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
         chatgpt: {
           title: '1. ChatGPT (OpenAI)',
-          content: 'The most popular AI model. You\'ve probably used it. Released in 2022, it revolutionized public access to AI. Now in its fourth generation (GPT-4o in 2026).',
+          content: 'The most popular AI model. You\'ve probably used it. Released in 2022, it revolutionized public access to AI. Now in its fourth generation (GPT-5.5 in 2026).',
         },
         chatgptStrengths: {
           title: 'Strengths:',
@@ -5620,13 +5620,13 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         problem: {
           title: 'Why Single-Model Answers Cannot Be Trusted for High-Stakes Decisions',
           content: [
-            'Every major language model hallucinates. GPT-4o, Claude, Gemini, Grok, Mistral — all of them fabricate facts with confident-sounding language. The difference between models is not whether they hallucinate, but which facts they get wrong, and when.',
+            'Every major language model hallucinates. GPT-5.5, Claude, Gemini, Grok, Mistral — all of them fabricate facts with confident-sounding language. The difference between models is not whether they hallucinate, but which facts they get wrong, and when.',
             'This creates a critical problem for anyone relying on AI for research, writing, or decision-making: you cannot tell from a single response whether a specific claim is accurate or invented. The model will present both real facts and fabricated ones in exactly the same way.',
           ],
           items: [
             'Hallucination rates vary from 3–7% for well-documented domains (e.g., major historical events) to 20–30% for niche technical topics, recent events, and specific numerical claims',
             'Models trained on the same internet data share some hallucination patterns — but each model also has unique failure modes based on its training and fine-tuning',
-            'A claim hallucinated by GPT-4o is unlikely to be independently hallucinated by Claude in exactly the same way — making cross-model comparison a powerful signal',
+            'A claim hallucinated by GPT-5.5 is unlikely to be independently hallucinated by Claude in exactly the same way — making cross-model comparison a powerful signal',
             'Chain-of-thought reasoning reduces hallucination rates but does not eliminate them — structured prompting and multi-model verification are complementary, not alternative strategies',
           ],
         },
@@ -5738,12 +5738,12 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         problem: {
           title: 'Warum einzelne Modellantworten für wichtige Entscheidungen nicht vertrauenswürdig sind',
           content: [
-            'Jedes große Sprachmodell halluziniert. GPT-4o, Claude, Gemini, Grok, Mistral — alle erfinden Fakten mit selbstbewusst klingender Sprache. Der Unterschied zwischen Modellen ist nicht ob sie halluzinieren, sondern welche Fakten sie falsch darstellen.',
+            'Jedes große Sprachmodell halluziniert. GPT-5.5, Claude, Gemini, Grok, Mistral — alle erfinden Fakten mit selbstbewusst klingender Sprache. Der Unterschied zwischen Modellen ist nicht ob sie halluzinieren, sondern welche Fakten sie falsch darstellen.',
           ],
           items: [
             'Halluzinationsraten variieren von 3–7% für gut dokumentierte Bereiche bis zu 20–30% für Nischenthemen und aktuelle Ereignisse',
             'Modelle, die auf denselben Internetdaten trainiert wurden, teilen einige Halluzinationsmuster — aber jedes Modell hat auch einzigartige Fehlertypen',
-            'Ein von GPT-4o halluzinierter Anspruch wird wahrscheinlich nicht von Claude auf dieselbe Weise unabhängig halluziniert — was den Modellvergleich zu einem starken Signal macht',
+            'Ein von GPT-5.5 halluzinierter Anspruch wird wahrscheinlich nicht von Claude auf dieselbe Weise unabhängig halluziniert — was den Modellvergleich zu einem starken Signal macht',
           ],
         },
         mechanism: {
@@ -5844,12 +5844,12 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         problem: {
           title: 'Pourquoi les Réponses d\'un Seul Modèle Ne Peuvent Pas Être Entièrement Fiables',
           content: [
-            'Chaque grand modèle de langage hallucine. GPT-4o, Claude, Gemini — tous inventent des faits avec un langage qui sonne confiant. La différence entre les modèles n\'est pas s\'ils hallucinent, mais quels faits ils se trompent et quand.',
+            'Chaque grand modèle de langage hallucine. GPT-5.5, Claude, Gemini — tous inventent des faits avec un langage qui sonne confiant. La différence entre les modèles n\'est pas s\'ils hallucinent, mais quels faits ils se trompent et quand.',
           ],
           items: [
             'Les taux d\'hallucination varient de 3–7% pour les domaines bien documentés à 20–30% pour les sujets de niche',
             'Les modèles entraînés sur les mêmes données partagent certains modèles d\'hallucination — mais chacun a ses propres modes d\'échec uniques',
-            'Une affirmation hallucinée par GPT-4o est peu susceptible d\'être indépendamment hallucinée de la même façon par Claude',
+            'Une affirmation hallucinée par GPT-5.5 est peu susceptible d\'être indépendamment hallucinée de la même façon par Claude',
           ],
         },
         mechanism: {
@@ -5950,12 +5950,12 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         problem: {
           title: '単一モデルの回答が重要な意思決定に信頼できない理由',
           content: [
-            'すべての主要な言語モデルはハルシネートします。GPT-4o、Claude、Gemini — どれも自信ありげな言語で事実を捏造します。モデル間の違いは、ハルシネートするかどうかではなく、どの事実を間違えるか、そしていつかです。',
+            'すべての主要な言語モデルはハルシネートします。GPT-5.5、Claude、Gemini — どれも自信ありげな言語で事実を捏造します。モデル間の違いは、ハルシネートするかどうかではなく、どの事実を間違えるか、そしていつかです。',
           ],
           items: [
             'ハルシネーション率は、よく文書化された領域で3〜7%から、ニッチなトピックや最近の出来事で20〜30%まで変動します',
             '同じインターネットデータでトレーニングされたモデルは、一部のハルシネーションパターンを共有しますが、各モデルは独自の失敗パターンも持っています',
-            'GPT-4oがハルシネートした主張が、まったく同じ方法でClaudeによって独立してハルシネートされる可能性は低い',
+            'GPT-5.5がハルシネートした主張が、まったく同じ方法でClaudeによって独立してハルシネートされる可能性は低い',
           ],
         },
         mechanism: {
@@ -6056,12 +6056,12 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         problem: {
           title: '为什么单个模型的答案不能用于高风险决策',
           content: [
-            '每个主要语言模型都会产生幻觉。GPT-4o、Claude、Gemini——它们都用听起来自信的语言捏造事实。模型之间的区别不是是否产生幻觉，而是哪些事实出错，以及何时出错。',
+            '每个主要语言模型都会产生幻觉。GPT-5.5、Claude、Gemini——它们都用听起来自信的语言捏造事实。模型之间的区别不是是否产生幻觉，而是哪些事实出错，以及何时出错。',
           ],
           items: [
             '幻觉率从有据可查的领域的3-7%变化到利基主题的20-30%',
             '在相同互联网数据上训练的模型共享一些幻觉模式——但每个模型也有独特的失败模式',
-            'GPT-4o幻觉的声明不太可能以完全相同的方式被Claude独立幻觉',
+            'GPT-5.5幻觉的声明不太可能以完全相同的方式被Claude独立幻觉',
           ],
         },
         mechanism: {
@@ -6178,7 +6178,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
         step1: {
           title: 'Step 1 — Parallel Dispatch',
-          content: 'Your prompt is sent simultaneously to 25+ AI models using your own API keys. Models include GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3, DeepSeek, Phi-3, and others depending on which keys you have configured. All calls are made in parallel — total wait time is the response time of the slowest model, not the sum of all models.',
+          content: 'Your prompt is sent simultaneously to 25+ AI models using your own API keys. Models include GPT-5.5, Claude 3.5 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3, DeepSeek, Phi-3, and others depending on which keys you have configured. All calls are made in parallel — total wait time is the response time of the slowest model, not the sum of all models.',
         },
         step2: {
           title: 'Step 2 — Claim Extraction',
@@ -6239,7 +6239,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             'What is consensus scoring in AI? — Consensus scoring is a technique that sends the same prompt to multiple AI models and analyses the pattern of agreement and disagreement across their responses to produce a reliability signal for each claim.',
             'How does PromptQuorum calculate consensus? — PromptQuorum extracts discrete claims from each model response, maps them for agreement across all responses, applies confidence weighting by model capability and domain, and flags claims where models diverge. The result is a Quorum Verdict showing which parts of the answer are high-confidence and which need verification.',
             'Is a high consensus score always correct? — No. High consensus is a reliability signal, not a guarantee. If a false claim appears in the training data of multiple models, all models may confidently repeat it. Consensus scoring reduces hallucination risk — it does not eliminate it. Use it as a filter, not a replacement for primary source verification in high-stakes decisions.',
-            'Which AI models does PromptQuorum use for consensus? — PromptQuorum supports 25+ models including GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3 (via Ollama), DeepSeek, Phi-3, Gemma, and others. You configure which models to include using your own API keys. Local models via Ollama are fully supported and run with no data leaving your device.',
+            'Which AI models does PromptQuorum use for consensus? — PromptQuorum supports 25+ models including GPT-5.5, Claude 3.5 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3 (via Ollama), DeepSeek, Phi-3, Gemma, and others. You configure which models to include using your own API keys. Local models via Ollama are fully supported and run with no data leaving your device.',
           ],
         },
       },
@@ -6253,7 +6253,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         problem: { title: 'Das Problem mit dem Vertrauen in ein einzelnes KI-Modell', content: 'Jedes Sprachmodell produziert Ausgaben basierend auf seinen Trainingsdaten, seiner Architektur und seinen Inferenzparametern. Wenn Sie ein Modell befragen und es eine zuversichtliche Antwort zurückgibt, haben Sie keine Möglichkeit zu wissen, ob diese Antwort auf einem breiten Wissenskonsens basiert oder eine plausibel klingende Erfindung ist.' },
         definition: { title: 'Was ist Konsens-Scoring?', content: 'Konsens-Scoring ist eine Zuverlässigkeitsmessung, die dieselbe Anfrage an mehrere unabhängige KI-Modelle sendet und das Muster ihrer Antworten analysiert. Wenn mehrere Modelle — mit unterschiedlichen Daten trainiert — unabhängig voneinander dieselbe Antwort produzieren, ist diese wahrscheinlicher im realen Wissen verankert.' },
-        faq: { title: 'Häufig gestellte Fragen', items: ['Was ist Konsens-Scoring in der KI? — Eine Technik, die denselben Prompt an mehrere Modelle sendet und Übereinstimmungsmuster analysiert.', 'Wie berechnet PromptQuorum Konsens? — Durch Extraktion einzelner Behauptungen, Zuordnung der Übereinstimmungen und Kennzeichnung von Abweichungen.', 'Ist ein hoher Konsens-Score immer korrekt? — Nein. Hoher Konsens ist ein Zuverlässigkeitssignal, keine Garantie.', 'Welche Modelle verwendet PromptQuorum? — 25+ Modelle darunter GPT-4o, Claude, Gemini, Mistral und lokale Modelle via Ollama.'] },
+        faq: { title: 'Häufig gestellte Fragen', items: ['Was ist Konsens-Scoring in der KI? — Eine Technik, die denselben Prompt an mehrere Modelle sendet und Übereinstimmungsmuster analysiert.', 'Wie berechnet PromptQuorum Konsens? — Durch Extraktion einzelner Behauptungen, Zuordnung der Übereinstimmungen und Kennzeichnung von Abweichungen.', 'Ist ein hoher Konsens-Score immer korrekt? — Nein. Hoher Konsens ist ein Zuverlässigkeitssignal, keine Garantie.', 'Welche Modelle verwendet PromptQuorum? — 25+ Modelle darunter GPT-5.5, Claude, Gemini, Mistral und lokale Modelle via Ollama.'] },
       },
     },
     fr: {
@@ -6265,7 +6265,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         problem: { title: 'Le problème de faire confiance à un seul modèle IA', content: 'Chaque modèle de langage produit des sorties basées sur ses données d\'entraînement, son architecture et ses paramètres d\'inférence. Tous les LLM actuels hallucinent — produisant des affirmations fausses avec la même fluidité que les vraies.' },
         definition: { title: 'Qu\'est-ce que le score de consensus?', content: 'Le score de consensus est une technique qui envoie la même requête à plusieurs modèles indépendants et analyse le schéma de leurs réponses. Si plusieurs modèles produisent indépendamment la même réponse, celle-ci est plus probablement fondée sur des connaissances réelles.' },
-        faq: { title: 'Questions fréquentes', items: ['Qu\'est-ce que le score de consensus IA? — Une technique analysant l\'accord entre plusieurs modèles.', 'Comment PromptQuorum calcule-t-il le consensus? — Par extraction de claims, mappage des accords et signalement des divergences.', 'Un score de consensus élevé est-il toujours correct? — Non. C\'est un signal de fiabilité, pas une garantie.', 'Quels modèles PromptQuorum utilise-t-il? — 25+ modèles dont GPT-4o, Claude, Gemini, Mistral et des modèles locaux via Ollama.'] },
+        faq: { title: 'Questions fréquentes', items: ['Qu\'est-ce que le score de consensus IA? — Une technique analysant l\'accord entre plusieurs modèles.', 'Comment PromptQuorum calcule-t-il le consensus? — Par extraction de claims, mappage des accords et signalement des divergences.', 'Un score de consensus élevé est-il toujours correct? — Non. C\'est un signal de fiabilité, pas une garantie.', 'Quels modèles PromptQuorum utilise-t-il? — 25+ modèles dont GPT-5.5, Claude, Gemini, Mistral et des modèles locaux via Ollama.'] },
       },
     },
     ja: {
@@ -6277,7 +6277,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         problem: { title: '単一のAIモデルを信頼することの問題', content: 'すべての大規模言語モデルはトレーニングデータ、アーキテクチャ、推論パラメータに基づいて出力を生成します。現在のすべてのLLMはハルシネーションを起こします。' },
         definition: { title: 'コンセンサススコアリングとは？', content: 'コンセンサススコアリングは、同じクエリを複数の独立したAIモデルに送信し、回答のパターンを分析する信頼性測定技術です。' },
-        faq: { title: 'よくある質問', items: ['AIにおけるコンセンサススコアリングとは？ — 複数のモデルにプロンプトを送り、合意パターンを分析する技術。', 'PromptQuorumはどのようにコンセンサスを計算しますか？ — クレームを抽出し、合意をマッピングし、乖離をフラグします。', '高いコンセンサススコアは常に正しいですか？ — いいえ。信頼性のシグナルであり、保証ではありません。', 'PromptQuorumはどのモデルを使用しますか？ — GPT-4o、Claude、Gemini、Mistral、Ollamaのローカルモデルを含む25+モデル。'] },
+        faq: { title: 'よくある質問', items: ['AIにおけるコンセンサススコアリングとは？ — 複数のモデルにプロンプトを送り、合意パターンを分析する技術。', 'PromptQuorumはどのようにコンセンサスを計算しますか？ — クレームを抽出し、合意をマッピングし、乖離をフラグします。', '高いコンセンサススコアは常に正しいですか？ — いいえ。信頼性のシグナルであり、保証ではありません。', 'PromptQuorumはどのモデルを使用しますか？ — GPT-5.5、Claude、Gemini、Mistral、Ollamaのローカルモデルを含む25+モデル。'] },
       },
     },
     zh: {
@@ -6289,7 +6289,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         problem: { title: '信任单一AI模型的问题', content: '每个大型语言模型都根据其训练数据、架构和推理参数生成输出。当前所有LLM都会产生幻觉——以与准确陈述相同的流畅度和自信度产生虚假陈述。' },
         definition: { title: '什么是共识评分？', content: '共识评分是一种可靠性测量技术，将同一查询发送给多个独立的AI模型，并分析其回答模式。当多个模型独立产生相同答案时，该答案更可能基于真实知识。' },
-        faq: { title: '常见问题', items: ['什么是AI共识评分？ — 一种向多个模型发送相同提示并分析一致性模式的技术。', 'PromptQuorum如何计算共识？ — 通过提取声明、映射一致性并标记分歧。', '高共识分数总是正确的吗？ — 不是。它是可靠性信号，不是保证。', 'PromptQuorum使用哪些模型？ — 25+模型，包括GPT-4o、Claude、Gemini、Mistral和通过Ollama的本地模型。'] },
+        faq: { title: '常见问题', items: ['什么是AI共识评分？ — 一种向多个模型发送相同提示并分析一致性模式的技术。', 'PromptQuorum如何计算共识？ — 通过提取声明、映射一致性并标记分歧。', '高共识分数总是正确的吗？ — 不是。它是可靠性信号，不是保证。', 'PromptQuorum使用哪些模型？ — 25+模型，包括GPT-5.5、Claude、Gemini、Mistral和通过Ollama的本地模型。'] },
       },
     },
   },
@@ -6675,7 +6675,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           title: 'Group 6: Multi-Model Comparison Platforms',
           content: 'Multi-model comparison platforms allow users to run the same prompt across multiple AI models simultaneously to compare quality, cost, and speed.',
           items: [
-            'Prompts.ai (prompts.ai): AI orchestration platform consolidating access to 35+ large language models — including GPT-4o, Claude, LLaMA, Gemini — into a single interface. Side-by-side performance comparison runs the same prompt on multiple models simultaneously, enabling data-driven model selection. Uses a pay-as-you-go TOKN credit system. Claims 98% cost reduction versus maintaining multiple subscriptions.',
+            'Prompts.ai (prompts.ai): AI orchestration platform consolidating access to 35+ large language models — including GPT-5.5, Claude, LLaMA, Gemini — into a single interface. Side-by-side performance comparison runs the same prompt on multiple models simultaneously, enabling data-driven model selection. Uses a pay-as-you-go TOKN credit system. Claims 98% cost reduction versus maintaining multiple subscriptions.',
           ],
         },
         comparativeTable: {
@@ -6748,10 +6748,10 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       category: 'AI Model Comparison',
       title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond',
       seoTitle: 'Frontier AI Models 2026: GPT-5.x vs Claude 4.6 vs Gemini',
-      intro: 'As of April 2026, frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
+      intro: 'As of April 2026, frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude Opus 4.7, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
       publishDate: 'Published March 24, 2026',
       readTime: '15 min read',
-      metaDescription: 'Compare GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, DeepSeek V4 across reasoning, cost, speed, and multimodal tasks. Includes 170+ evaluation prompts.',
+      metaDescription: 'Compare GPT-5.x, Claude Opus 4.7, Gemini 3 Pro, DeepSeek V4 across reasoning, cost, speed, and multimodal tasks. Includes 170+ evaluation prompts.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -6762,7 +6762,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           ],
           items: [
             'GPT-5.x (OpenAI) — multi-modal reasoning, code, and analysis',
-            'Claude 4.6 Sonnet (Anthropic) — long-context reasoning and safety',
+            'Claude Opus 4.7 (Anthropic) — long-context reasoning and safety',
             'Gemini 3 Pro (Google DeepMind) — multimodal and reasoning tasks',
             'Llama 4 (Meta) — open-source, on-device or cloud deployment',
             'DeepSeek V4 (DeepSeek) — cost-efficient reasoning',
@@ -6802,7 +6802,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           ],
           items: [
             '**GPT-5.x (OpenAI)** — Best for: General-purpose reasoning, code, analysis. Reasoning: Excellent. Context: 200K tokens. Speed: Fast (0.5-2s). Cost: $20/$80 per 1M input/output tokens. Multimodal: Yes (image, video). Real-time: No. Deployment: API only. Safety: Excellent jailbreak resistance.',
-            '**Claude 4.6 Sonnet (Anthropic)** — Best for: Long-form analysis, research, legal review. Reasoning: Excellent. Context: 200K tokens. Speed: Fast (0.8-3s). Cost: $3/$15 per 1M input/output tokens (most cost-effective). Multimodal: Yes (image). Real-time: No. Deployment: API only. Safety: Constitutional AI alignment.',
+            '**Claude Opus 4.7 (Anthropic)** — Best for: Long-form analysis, research, legal review. Reasoning: Excellent. Context: 200K tokens. Speed: Fast (0.8-3s). Cost: $3/$15 per 1M input/output tokens (most cost-effective). Multimodal: Yes (image). Real-time: No. Deployment: API only. Safety: Constitutional AI alignment.',
             '**Gemini 3 Pro (Google DeepMind)** — Best for: Multimodal analysis, reasoning across modalities. Reasoning: Excellent. Context: 2M tokens (largest). Speed: Moderate (1-4s). Cost: $5/$20 per 1M input/output tokens. Multimodal: Yes (image, audio, video). Real-time: Yes (limited). Deployment: API only. Safety: Responsible AI focus.',
             '**Llama 4 (Meta)** — Best for: On-device, cost-sensitive, or privacy-first workflows. Reasoning: Good (not as strong as GPT-5.x or Claude 4.6). Context: 128K tokens. Speed: Varies by hardware. Cost: Free (open-source). Multimodal: Yes (image). Real-time: No. Deployment: Local, cloud, on-premises. Safety: Community-driven alignment.',
             '**DeepSeek V4 (DeepSeek)** — Best for: Cost-optimized reasoning, research in Asia. Reasoning: Very good. Context: 128K tokens. Speed: Fast (0.5-1.5s). Cost: $0.27/$1.1 per 1M input/output tokens (cheapest). Multimodal: Yes (image). Real-time: No. Deployment: API. Safety: Standard safety training.',
@@ -6976,9 +6976,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           title: 'Frequently Asked Questions',
           isTldr: false,
           faqs: [
-            { q: 'What is the best frontier model in March 2026?', a: 'There is no universally "best" model — the choice depends on your task. GPT-5.x excels at reasoning and code. Claude 4.6 Sonnet dominates long-context analysis. Gemini 3 Pro handles multimodal tasks. Use PromptQuorum to test multiple models on your specific task and measure quality, speed, and cost.' },
-            { q: 'Which frontier model is cheapest?', a: 'DeepSeek V4 at $0.27/$1.1 per 1M tokens is 60–70% cheaper than GPT-5.x ($20/$80) and Claude 4.6 Sonnet ($3/$15). Llama 4 is free (open-source, local deployment). Trade-off: lower cost models sometimes have lower quality for specialized reasoning tasks.' },
-            { q: 'What is the difference between GPT-5.x and Claude 4.6 Sonnet?', a: 'GPT-5.x: Excels at reasoning, code, analysis. 200k context. $20/$80 pricing. Multi-modal (image, video). Claude 4.6 Sonnet: Stronger at long-context tasks, research. 200k context. Cheaper at $3/$15. Excellent safety alignment. No video support. For most tasks, test both — results vary by domain.' },
+            { q: 'What is the best frontier model in March 2026?', a: 'There is no universally "best" model — the choice depends on your task. GPT-5.x excels at reasoning and code. Claude Opus 4.7 dominates long-context analysis. Gemini 3 Pro handles multimodal tasks. Use PromptQuorum to test multiple models on your specific task and measure quality, speed, and cost.' },
+            { q: 'Which frontier model is cheapest?', a: 'DeepSeek V4 at $0.27/$1.1 per 1M tokens is 60–70% cheaper than GPT-5.x ($20/$80) and Claude Opus 4.7 ($3/$15). Llama 4 is free (open-source, local deployment). Trade-off: lower cost models sometimes have lower quality for specialized reasoning tasks.' },
+            { q: 'What is the difference between GPT-5.x and Claude Opus 4.7?', a: 'GPT-5.x: Excels at reasoning, code, analysis. 200k context. $20/$80 pricing. Multi-modal (image, video). Claude Opus 4.7: Stronger at long-context tasks, research. 200k context. Cheaper at $3/$15. Excellent safety alignment. No video support. For most tasks, test both — results vary by domain.' },
             { q: 'Which frontier model supports local/offline deployment?', a: 'Llama 4 (open-source, runs via Ollama, LM Studio, Jan AI) supports full local deployment. All other frontier models require cloud API access. If privacy and data residency are critical, Llama 4 is the only frontier option.' },
             { q: 'Should I use the same frontier model for all tasks?', a: 'No — different models excel at different tasks. Use PromptQuorum to dispatch your prompt to multiple frontier models and compare outputs. Cost, speed, and quality all vary by task. Testing your actual workload is more reliable than benchmarks.' },
           ],
@@ -6999,17 +6999,17 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude 4.6 Sonnet — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 4.7 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
         },
       },
     },
-    de: { category: 'KI-Modellvergleich', seoTitle: 'Frontier-KI-Modelle 2026: GPT-5.x, Claude 4.6 und Gemini', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '', metaDescription: 'GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, DeepSeek V4 im Vergleich: Reasoning, Kosten, Geschwindigkeit, Multimodal. Mit 170+ Evaluierungs-Prompts.', sections: {} },
-    fr: { category: 'Comparaison de modèles IA', seoTitle: 'Modèles IA Frontier 2026: GPT-5.x, Claude 4.6, Gemini', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '', metaDescription: 'Comparez GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, DeepSeek V4 : raisonnement, coût, vitesse, multimodal. Inclut 170+ prompts d\'évaluation.', sections: {} },
-    ja: { category: 'AIモデル比較', seoTitle: '2026年フロンティアAIモデル比較：GPT-5.x、Claude 4.6、Gemini', title: '', intro: '', publishDate: '2026年3月公開', readTime: '', metaDescription: 'GPT-5.x、Claude 4.6 Sonnet、Gemini 3 Pro、DeepSeek V4を推論・コスト・速度・マルチモーダル能力で徹底比較。170以上の評価プロンプト付き実践ガイド。2026年4月最新版。', sections: {} },
-    zh: { category: 'AI模型比较', seoTitle: '2026年前沿AI模型对比：GPT-5.x、Claude 4.6与Gemini', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', metaDescription: '对比GPT-5.x、Claude 4.6 Sonnet、Gemini 3 Pro、DeepSeek V4的推理能力、成本、速度与多模态性能。含170+评测提示词的实用对比指南。2026年4月更新。', sections: {} },
+    de: { category: 'KI-Modellvergleich', seoTitle: 'Frontier-KI-Modelle 2026: GPT-5.x, Claude 4.6 und Gemini', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '', metaDescription: 'GPT-5.x, Claude Opus 4.7, Gemini 3 Pro, DeepSeek V4 im Vergleich: Reasoning, Kosten, Geschwindigkeit, Multimodal. Mit 170+ Evaluierungs-Prompts.', sections: {} },
+    fr: { category: 'Comparaison de modèles IA', seoTitle: 'Modèles IA Frontier 2026: GPT-5.x, Claude 4.6, Gemini', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '', metaDescription: 'Comparez GPT-5.x, Claude Opus 4.7, Gemini 3 Pro, DeepSeek V4 : raisonnement, coût, vitesse, multimodal. Inclut 170+ prompts d\'évaluation.', sections: {} },
+    ja: { category: 'AIモデル比較', seoTitle: '2026年フロンティアAIモデル比較：GPT-5.x、Claude 4.6、Gemini', title: '', intro: '', publishDate: '2026年3月公開', readTime: '', metaDescription: 'GPT-5.x、Claude Opus 4.7、Gemini 3 Pro、DeepSeek V4を推論・コスト・速度・マルチモーダル能力で徹底比較。170以上の評価プロンプト付き実践ガイド。2026年4月最新版。', sections: {} },
+    zh: { category: 'AI模型比较', seoTitle: '2026年前沿AI模型对比：GPT-5.x、Claude 4.6与Gemini', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', metaDescription: '对比GPT-5.x、Claude Opus 4.7、Gemini 3 Pro、DeepSeek V4的推理能力、成本、速度与多模态性能。含170+评测提示词的实用对比指南。2026年4月更新。', sections: {} },
   },
   'geopolitics-and-ai': {
     en: {

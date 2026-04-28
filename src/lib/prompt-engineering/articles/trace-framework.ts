@@ -774,7 +774,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             '構造化されたフィールドでTRACEの各段階を入力',
-            '同じプロンプトをGPT-4o、Claude、Gemini等に並行送信して推論を比較',
+            '同じプロンプトをGPT-5.5、Claude、Gemini等に並行送信して推論を比較',
             'TRACEテンプレートを保存して、同じ種類の判断に再利用',
           ],
         },
@@ -819,7 +819,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'TRACEとRISENはどう違う？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACEは思考プロセスを見える化します。RISENは既存の出力を段階的に改善します。論理を理解したい → TRACE、品質を高めたい → RISEN。' } },
           { '@type': 'Question', 'name': 'TRACEで回答が長くなりすぎないようにするには？', 'acceptedAnswer': { '@type': 'Answer', 'text': '各段階を1～2文に制限してください。例：「各ステップを最大2文で答えてください」と指示することで、簡潔さと透明性のバランスが取れます。' } },
           { '@type': 'Question', 'name': 'すべての質問にTRACEを使うべき？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。推論と正当化が重要な複雑な判断に向いています。単純な質問や短い回答が必要な場合、TRACEはオーバーヘッドになります。' } },
-          { '@type': 'Question', 'name': 'TRACEはモデル間で推論品質の差を見つけるのに役立つ？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。GPT-4o、Claude、Geminiなど同じTRACEプロンプトを複数モデルに送れば、推論スタイルと精度の違いが明確に見えます。' } },
+          { '@type': 'Question', 'name': 'TRACEはモデル間で推論品質の差を見つけるのに役立つ？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。GPT-5.5、Claude、Geminiなど同じTRACEプロンプトを複数モデルに送れば、推論スタイルと精度の違いが明確に見えます。' } },
           { '@type': 'Question', 'name': 'TRACEはエラーを検出するのに本当に効果的？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。思考プロセスが見える化されるため、誤った前提や論理的な飛躍を早期に発見できます。最終答だけでは気づかない誤りが露呈します。' } },
           { '@type': 'Question', 'name': '日本の企業で財務判断やコンプライアンス判定にTRACEを使う際の注意点は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'クラウドAPIで機密データを扱う場合は、データ保護方針を確認してください。機密情報はOllama・LM Studioなど自社環境のモデルを使用し、PromptQuorum経由で実行することをお勧めします。' } },
           { '@type': 'Question', 'name': 'プロンプト・エンジニアリングでTRACEは何を意味しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACEはThink（考える）、Reason（推論する）、Analyze（分析する）、Conclude（結論を出す）、Explain（説明する）の頭文字です。最終的な答えだけでなく、AIモデルに推論の各段階を示させる構造化されたプロンプトパターンです。' } },
@@ -967,7 +967,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             '用结构化字段输入TRACE的每个步骤，确保一致性',
-            '同时发送给GPT-4o、Claude、Gemini等模型，看谁推理最可靠',
+            '同时发送给GPT-5.5、Claude、Gemini等模型，看谁推理最可靠',
             '保存TRACE模板，对同类问题快速复用',
           ],
         },

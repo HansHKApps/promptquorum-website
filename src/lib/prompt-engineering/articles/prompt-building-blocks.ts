@@ -48,11 +48,11 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'en',
         proficiencyLevel: 'Beginner',
-        keywords: ['prompt structure', 'prompt building blocks', 'role and context', 'output format', 'prompt constraints', 'few-shot examples', 'prompt engineering', 'GPT-4o', 'Claude', 'Gemini'],
+        keywords: ['prompt structure', 'prompt building blocks', 'role and context', 'output format', 'prompt constraints', 'few-shot examples', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
-          { '@type': 'Thing', name: 'OpenAI GPT-4o' },
+          { '@type': 'Thing', name: 'OpenAI GPT-5.5' },
           { '@type': 'Thing', name: 'Anthropic Claude' },
           { '@type': 'Thing', name: 'Google Gemini' },
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -411,7 +411,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-03-01',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de',
         inLanguage: 'de',
-        keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'GPT-4o', 'Claude', 'Gemini'],
+        keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'GPT-5.5', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       },
@@ -548,7 +548,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'Diese Vorlage funktioniert auf GPT-4o, Claude, Gemini und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
+          content: 'Diese Vorlage funktioniert auf GPT-5.5, Claude, Gemini und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
         },
 
         frameworks: {
@@ -633,7 +633,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-03-01',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr',
         inLanguage: 'fr',
-        keywords: ['structure de prompt', 'éléments de prompt', 'rôle et contexte', 'format de sortie', 'contraintes de prompt', 'exemples few-shot', 'prompt engineering', 'GPT-4o', 'Claude', 'Gemini'],
+        keywords: ['structure de prompt', 'éléments de prompt', 'rôle et contexte', 'format de sortie', 'contraintes de prompt', 'exemples few-shot', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       },
@@ -770,7 +770,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'Ce modèle fonctionne sur GPT-4o, Claude, Gemini et les LLM locaux via Ollama ou LM Studio. L\'ordre des blocs est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est l\'arrangement le plus courant et le plus fiable sur tous les grands modèles.',
+          content: 'Ce modèle fonctionne sur GPT-5.5, Claude, Gemini et les LLM locaux via Ollama ou LM Studio. L\'ordre des blocs est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est l\'arrangement le plus courant et le plus fiable sur tous les grands modèles.',
         },
 
         frameworks: {
@@ -855,7 +855,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-03-01',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja',
         inLanguage: 'ja',
-        keywords: ['プロンプト構造', 'プロンプト要素', 'ロールとコンテキスト', '出力形式', 'プロンプト制約', 'フューショット例', 'プロンプトエンジニアリング', 'GPT-4o', 'Claude', 'Gemini'],
+        keywords: ['プロンプト構造', 'プロンプト要素', 'ロールとコンテキスト', '出力形式', 'プロンプト制約', 'フューショット例', 'プロンプトエンジニアリング', 'GPT-5.5', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       },
@@ -993,13 +993,13 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'このテンプレートはGPT-4o・Claude・Gemini・OllamaやLM Studio経由のローカルLLMで機能します。ブロックの順序は推奨であり、厳格なルールではありません — ただし、役割とコンテキストを最初に、出力形式を最後に配置することが、すべての主要モデルで最も一般的で信頼性の高い配置です。同じプロンプト構造はヨーロッパと中国のオープンソースモデルにも適用されます — Mistral AI、Alibaba Qwen、DeepSeekはすべてこの5ブロック構造に対応しますが、ローカルモデルはローカルモデルに異なる指示フォロー動作があるため、調整された出力形式仕様が必要な場合があります。',
+          content: 'このテンプレートはGPT-5.5・Claude・Gemini・OllamaやLM Studio経由のローカルLLMで機能します。ブロックの順序は推奨であり、厳格なルールではありません — ただし、役割とコンテキストを最初に、出力形式を最後に配置することが、すべての主要モデルで最も一般的で信頼性の高い配置です。同じプロンプト構造はヨーロッパと中国のオープンソースモデルにも適用されます — Mistral AI、Alibaba Qwen、DeepSeekはすべてこの5ブロック構造に対応しますが、ローカルモデルはローカルモデルに異なる指示フォロー動作があるため、調整された出力形式仕様が必要な場合があります。',
         },
 
         pqTest: {
           title: 'PromptQuorum マルチモデルテスト：構造化 vs. 非構造化',
           content: [
-            'PromptQuorumは同じタスク — 「この四半期報告書を要約してください」 — をGPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Proに2つのバージョンで送信しました：1つは非構造化（タスクのみ、ブロックなし）、もう1つは上記の完全な5ブロックテンプレートです。3つのモデル全てで、構造化プロンプトは編集が不要な回答を生成しました。非構造化プロンプトはモデル間で矛盾した結果を生成しました — 異なる長さ、異なる構造、各ケースで異なる詳細レベル。',
+            'PromptQuorumは同じタスク — 「この四半期報告書を要約してください」 — をGPT-5.5、Claude Opus 4.7、Gemini 1.5 Proに2つのバージョンで送信しました：1つは非構造化（タスクのみ、ブロックなし）、もう1つは上記の完全な5ブロックテンプレートです。3つのモデル全てで、構造化プロンプトは編集が不要な回答を生成しました。非構造化プロンプトはモデル間で矛盾した結果を生成しました — 異なる長さ、異なる構造、各ケースで異なる詳細レベル。',
             '実験は5ブロックモデルの主な値を示しています：単一のモデルをより賢くするのではなく、異なるモデル間で、および同じモデルの異なる実行全体で、予測可能で一貫性のある出力を提供することです。',
           ],
         },
@@ -1095,7 +1095,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-03-01',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh',
         inLanguage: 'zh',
-        keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', 'GPT-4o', 'Claude', 'Gemini'],
+        keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', 'GPT-5.5', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       },
@@ -1232,7 +1232,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: '该模板适用于 GPT-4o、Claude、Gemini 以及通过 Ollama 或 LM Studio 运行的本地大型语言模型。模块顺序是建议，而非硬性规定——但将角色与上下文置于首位、输出格式置于末位，是在所有主流模型上最通用且可靠的排列方式。',
+          content: '该模板适用于 GPT-5.5、Claude、Gemini 以及通过 Ollama 或 LM Studio 运行的本地大型语言模型。模块顺序是建议，而非硬性规定——但将角色与上下文置于首位、输出格式置于末位，是在所有主流模型上最通用且可靠的排列方式。',
         },
 
         frameworks: {

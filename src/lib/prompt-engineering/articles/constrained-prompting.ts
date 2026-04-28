@@ -258,7 +258,7 @@ export const article: Record<Language, PEArticle> = {
             { q: 'What is constrained prompting?', a: 'Constrained prompting is the practice of adding explicit rules — format, length, content, and safety boundaries — directly into a prompt to make AI output predictable and reusable. Instead of "write a summary," you specify: 150 words, JSON format, no competitor names, must include a call-to-action.' },
             { q: 'What are the five types of constraints?', a: 'The five main constraint types are: (1) Structural — required headings, tables, JSON with specific keys. (2) Content — required sections, banned topics. (3) Style — tone, reading level, terminology. (4) Length — word or character limits. (5) Safety — avoid medical advice, personal data, legal conclusions.' },
             { q: 'How do you force a model to output valid JSON?', a: 'Provide the exact JSON schema in the prompt: "Return JSON exactly matching: { \\"finding\\": \\"...\\" }". Combine this with "Output only JSON, no other text." GPT-5.5 also supports a JSON mode via API that enforces valid JSON at the API level.' },
-            { q: 'Does constrained prompting work on GPT-4o, Claude, and Gemini?', a: 'Yes — all three support constrained prompting. GPT-4o and Claude 4.6 Sonnet follow hard format constraints (JSON, tables, word limits) at approximately 95% adherence on well-formed prompts. Gemini 2.5 Pro scores similarly but may interpret ambiguous constraints differently. Always test across models.' },
+            { q: 'Does constrained prompting work on GPT-5.5, Claude, and Gemini?', a: 'Yes — all three support constrained prompting. GPT-5.5 and Claude Opus 4.7 follow hard format constraints (JSON, tables, word limits) at approximately 95% adherence on well-formed prompts. Gemini 3.1 Pro scores similarly but may interpret ambiguous constraints differently. Always test across models.' },
             { q: 'What is the difference between constrained prompting and few-shot prompting?', a: 'Constrained prompting adds explicit rules in text form (format, length, content restrictions). Few-shot prompting provides worked examples that implicitly show the model what to produce. The two work well together: use a few-shot example to demonstrate the output pattern, then add constraints for stricter enforcement.' },
             { q: 'When should you NOT use constrained prompting?', a: 'Avoid structural constraints on open-ended creative tasks (brainstorming, ideation, fiction). Over-constraining creative prompts produces formulaic, low-quality output. Use tone and style constraints for creative tasks but allow structural freedom.' },
             { q: 'How many constraints can you stack in one prompt?', a: 'Practically, 3–5 constraints work well. Beyond 5–6, models start silently dropping lower-priority constraints without warning. If you need more than 5, list them in priority order and state explicitly: "If constraints conflict, apply them in this order: (1) safety, (2) format, (3) length."' },
@@ -267,7 +267,7 @@ export const article: Record<Language, PEArticle> = {
         sources: {
           title: 'Sources',
           items: [
-            '**OpenAI. (2024).** "Structured Outputs Guide." https://platform.openai.com/docs/guides/structured-outputs — JSON schema enforcement at the API level for GPT-4o.',
+            '**OpenAI. (2024).** "Structured Outputs Guide." https://platform.openai.com/docs/guides/structured-outputs — JSON schema enforcement at the API level for GPT-5.5.',
             '**Anthropic. (2025).** "Claude Prompt Engineering Guide: Constrained Output." https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering — Claude-specific constraint syntax and adherence behavior.',
             '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." https://arxiv.org/abs/2302.11382 — Academic taxonomy of prompt patterns including constraint-based prompting techniques.',
           ],
@@ -588,7 +588,7 @@ export const article: Record<Language, PEArticle> = {
       ],
       items: [
         '複数の制約を指定する場合、優先順位を明確にしてください（例：「長さが重要ですが、品質を犠牲にしてはいけません」）。',
-        '異なるモデル（GPT-4o、Claude、Gemini）は同じ制約に異なる方法で応答することがあります。テストして検証することが重要です。',
+        '異なるモデル（GPT-5.5、Claude、Gemini）は同じ制約に異なる方法で応答することがあります。テストして検証することが重要です。',
         '制約が厳しすぎると、モデルはそれらすべてを満たすことができず、エラーを返すか、制約の一部を無視することがあります。',
       ],
     },

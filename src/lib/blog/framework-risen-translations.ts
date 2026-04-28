@@ -58,7 +58,7 @@ export const risenFrameworkTranslations = {
         title: 'Wie PromptQuorum den RISEN Framework implementiert',
         content: [
           '**PromptQuorum erkennt RISEN-Prompts automatisch und strukturiert Ihre Eingaben.** Anstatt manuell Role, Instructions, Steps, End Goal und Narrowing zu schreiben, können Sie PromptQuorum die Struktur vorgeben. Das Tool hilft Ihnen, jeden Bereich auszufüllen, und stellt sicher, dass der Prompt in RISEN-Format optimal strukturiert ist.',
-          'Wenn Sie einen RISEN-Prompt mit PromptQuorum ausführen, werden die Ergebnisse an mehreren KI-Modellen (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) parallel getestet. Sie sehen sofort, wie verschiedene Modelle auf dieselbe RISEN-Struktur reagieren. Dies ist unbezahlbar, wenn Sie einen Workflow auf Robustheit prüfen.',
+          'Wenn Sie einen RISEN-Prompt mit PromptQuorum ausführen, werden die Ergebnisse an mehreren KI-Modellen (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro) parallel getestet. Sie sehen sofort, wie verschiedene Modelle auf dieselbe RISEN-Struktur reagieren. Dies ist unbezahlbar, wenn Sie einen Workflow auf Robustheit prüfen.',
           'Das Consensus Scoring in PromptQuorum zeigt Ihnen, wo die Modelle bei den mehrstufigen Ergebnissen übereinstimmen. Dies ist ein starkes Signal, dass Ihr Workflow zuverlässig funktioniert – oder hilfreiche Warnsignale, wo Mehrdeutigkeit entstehen könnte.'
         ],
       },
@@ -142,7 +142,7 @@ export const risenFrameworkTranslations = {
         title: 'Comment PromptQuorum Implémente le Framework RISEN',
         content: [
           '**PromptQuorum reconnaît automatiquement les prompts RISEN et structure vos entrées.** Au lieu de rédiger manuellement Role, Instructions, Steps, End Goal et Narrowing, vous pouvez donner à PromptQuorum la structure. L\'outil vous aide à remplir chaque section et garantit que le prompt est optimalement structuré au format RISEN.',
-          'Lorsque vous exécutez un prompt RISEN avec PromptQuorum, les résultats sont testés en parallèle sur plusieurs modèles IA (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro). Vous voyez immédiatement comment différents modèles répondent à la même structure RISEN. Ceci est inestimable lorsque vous testez la robustesse d\'un workflow.',
+          'Lorsque vous exécutez un prompt RISEN avec PromptQuorum, les résultats sont testés en parallèle sur plusieurs modèles IA (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro). Vous voyez immédiatement comment différents modèles répondent à la même structure RISEN. Ceci est inestimable lorsque vous testez la robustesse d\'un workflow.',
           'Le Consensus Scoring dans PromptQuorum vous montre où les modèles s\'accordent sur les résultats multi-étapes. C\'est un signal puissant que votre workflow fonctionne de manière fiable – ou des signaux d\'alerte utiles sur les endroits où l\'ambiguïté pourrait survenir.'
         ],
       },
@@ -226,7 +226,7 @@ export const risenFrameworkTranslations = {
         title: 'PromptQuorumがRISENフレームワークをどのように実装するか',
         content: [
           '**PromptQuorumはRISENプロンプトを自動的に認識し、入力を構造化します。** Role、Instructions、Steps、End Goal、Narrowingを手動で書く代わりに、PromptQuorumに構造を提供できます。このツールは各セクションに入力するのを支援し、プロンプトがRISEN形式で最適に構造化されていることを確認します。',
-          'PromptQuorumでRISENプロンプトを実行すると、複数のAIモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）で結果が並列にテストされます。異なるモデルが同じRISEN構造にどのように応答するかをすぐに見ることができます。これはワークフローの堅牢性をテストするときに非常に重要です。',
+          'PromptQuorumでRISENプロンプトを実行すると、複数のAIモデル（GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro）で結果が並列にテストされます。異なるモデルが同じRISEN構造にどのように応答するかをすぐに見ることができます。これはワークフローの堅牢性をテストするときに非常に重要です。',
           'PromptQuorumのConsensus Scoringは、複数ステップの結果でモデルが一致する場所を表示します。これはあなたのワークフローが確実に機能していることの強いシグナルです—またはあいまいさが生じる可能性がある場所への有用な警告信号。'
         ],
       },
@@ -310,7 +310,7 @@ export const risenFrameworkTranslations = {
         title: 'PromptQuorum如何实现RISEN框架',
         content: [
           '**PromptQuorum自动识别RISEN提示并构建您的输入。** 而不是手动编写Role、Instructions、Steps、End Goal和Narrowing，您可以给PromptQuorum提供结构。该工具帮助您填写每个部分，并确保提示以RISEN格式最优地结构化。',
-          '当您使用PromptQuorum运行RISEN提示时，结果会在多个AI模型（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）上并行测试。您可以立即看到不同的模型如何对相同的RISEN结构做出响应。当您测试工作流的鲁棒性时，这是无价的。',
+          '当您使用PromptQuorum运行RISEN提示时，结果会在多个AI模型（GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro）上并行测试。您可以立即看到不同的模型如何对相同的RISEN结构做出响应。当您测试工作流的鲁棒性时，这是无价的。',
           'PromptQuorum中的共识评分显示模型在多步骤结果中的一致位置。这是您的工作流可靠运作的有力信号——或有用的警告信号，指出可能出现歧义的地方。'
         ],
       },

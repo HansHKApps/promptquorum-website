@@ -31,7 +31,7 @@ export const article: Record<Language, PEArticle> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'OpenAI GPT-3' },
-          { '@type': 'Thing', name: 'OpenAI GPT-4o' },
+          { '@type': 'Thing', name: 'OpenAI GPT-5.5' },
           { '@type': 'Thing', name: 'Anthropic Claude' },
           { '@type': 'Thing', name: 'Google Brain' },
           { '@type': 'Thing', name: 'ChatGPT' },
@@ -728,7 +728,7 @@ export const article: Record<Language, PEArticle> = {
         pqTest: {
           title: 'PromptQuorum マルチモデルテスト：フレームワークのモデル間での効果',
           content: [
-            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
+            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-5.5、Claude Opus 4.7、Gemini 1.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
             'PromptQuorumは、この期間に正式化された9つのフレームワーク — CO-STAR、CRAFT、RISEN、SPECS、TRACE、その他4つ — を単一のインターフェースに統合し、実践者が毎回ゼロから構築することなく各構造を適用できるようにしています。',
           ],
         },

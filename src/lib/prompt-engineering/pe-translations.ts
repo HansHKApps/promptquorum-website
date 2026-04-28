@@ -26,7 +26,7 @@ export const systemPromptTranslations = {
         items: [
           'System-Prompts definieren die Rolle, Einschränkungen und das Verhalten des Modells für die gesamte Sitzung — einmalig gesetzt, für alle Anfragen genutzt',
           'User-Prompts definieren die spezifische Aufgabe für jede Interaktion — vom Benutzer bereitgestellt, ändern sich mit jeder Anfrage',
-          'System-Prompts machen etwa 70 % der Verhaltenskonsistenz aus basierend auf PromptQuorum-Tests über GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro; User-Prompts formen spezifische Ausgaben',
+          'System-Prompts machen etwa 70 % der Verhaltenskonsistenz aus basierend auf PromptQuorum-Tests über GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro; User-Prompts formen spezifische Ausgaben',
           'Unsichtbare System-Prompts in Apps wie ChatGPT und Claude enthalten versteckte Logik — [PromptQuorum zeigt dir alles](/prompt-engineering/system-prompt-vs-user-prompt)',
           'Lokale LLMs (Ollama, LM Studio) mit versteckten System-Prompts verursachen Debugging-Probleme — gelöst durch Transparenz',
           'Schlechte System-Prompts zwingen User-Prompts, härter zu arbeiten; gute System-Prompts machen jeden User-Prompt besser',
@@ -35,11 +35,11 @@ export const systemPromptTranslations = {
       whereTheyLive: {
         title: 'Wo leben System- und User-Prompts im API-Stack?',
         content: [
-          '**System-Prompts leben in der Anwendungsschicht; User-Prompts leben in der Interaktionsschicht.** Wenn du GPT-4o über die OpenAI-API aufrufst, akzeptiert der Endpoint zwei separate Eingaben: `system` (die persistenten Anweisungen) und `messages` (per-Anfrage-Benutzereingabe). Dasselbe gilt für Claude 4.6 Sonnet über die Anthropic-API, Gemini 2.5 Pro über die Google-API und jedes lokale LLM, das über [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) oder LM Studio läuft.',
+          '**System-Prompts leben in der Anwendungsschicht; User-Prompts leben in der Interaktionsschicht.** Wenn du GPT-5.5 über die OpenAI-API aufrufst, akzeptiert der Endpoint zwei separate Eingaben: `system` (die persistenten Anweisungen) und `messages` (per-Anfrage-Benutzereingabe). Dasselbe gilt für Claude Opus 4.7 über die Anthropic-API, Gemini 3.1 Pro über die Google-API und jedes lokale LLM, das über [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) oder LM Studio läuft.',
           'Alle Modelle unterstützen das System + User-Prompt-Muster:',
         ],
         items: [
-          '**Modell-Schicht:** Das Basis-LLM (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, LLaMA 3.1, Mistral Large) — alle akzeptieren sowohl System- als auch User-Prompts',
+          '**Modell-Schicht:** Das Basis-LLM (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large) — alle akzeptieren sowohl System- als auch User-Prompts',
           '**API-Schicht:** Die Schnittstelle, die Entwickler nutzen — OpenAI API, Anthropic API, Google API, Ollama REST-Endpoint, LM Studio — alle stellen System und User als separate Felder bereit',
           '**Anwendungsschicht:** Das Produkt, das auf der API aufgebaut ist (ChatGPT, Claude.ai, Gemini, PromptQuorum, deine benutzerdefinierte App) — Entwickler entscheiden, welchen System-Prompt sie verwenden',
           '**Benutzerinteraktionsschicht:** Was der Endbenutzer sieht — die Chat-Eingabe, die Aufgabenbeschreibung — dies wird zum User-Prompt',
@@ -122,14 +122,14 @@ export const systemPromptTranslations = {
         ],
         items: [
           '**1. Du kannst Verhalten nicht prüfen oder verifizieren.** Wenn ChatGPT sich weigert, eine Frage zu beantworten, weißt du nicht, ob das eine harte Einschränkung im System-Prompt ist oder eine Limitation des Modells selbst. Du kannst nicht debuggen.',
-          '**2. Du kannst Verhalten nicht über Modelle replizieren.** Wenn du einen System-Prompt-Design entdeckst, der gut für Claude 4.6 Sonnet funktioniert, kannst du ihn nicht zu GPT-4o kopieren, weil du Claudes System-Prompt nie gesehen hast. Du musst ihn reverse-engineern.',
-          '**3. Du kannst konsistentes Verhalten in deiner eigenen App nicht aufbauen.** Wenn du einen Chatbot auf GPT-4o aufbaust, ist dein System-Prompt das EINZIGE, das du kontrollierst. Aber die meisten Entwickler verstehen die Auswirkung von System-Prompts nicht — also schreiben sie schwache und beklagen sich dann, dass das Modell "inkonsistent" oder "unzuverlässig" ist.',
+          '**2. Du kannst Verhalten nicht über Modelle replizieren.** Wenn du einen System-Prompt-Design entdeckst, der gut für Claude Opus 4.7 funktioniert, kannst du ihn nicht zu GPT-5.5 kopieren, weil du Claudes System-Prompt nie gesehen hast. Du musst ihn reverse-engineern.',
+          '**3. Du kannst konsistentes Verhalten in deiner eigenen App nicht aufbauen.** Wenn du einen Chatbot auf GPT-5.5 aufbaust, ist dein System-Prompt das EINZIGE, das du kontrollierst. Aber die meisten Entwickler verstehen die Auswirkung von System-Prompts nicht — also schreiben sie schwache und beklagen sich dann, dass das Modell "inkonsistent" oder "unzuverlässig" ist.',
         ],
       },
       promptquorum: {
         title: 'PromptQuorum: Sieh alle Prompts, vergleiche Verhalten',
         content: [
-          '**PromptQuorum ist das einzige Tool, das dir den System-Prompt UND User-Prompt für jedes Modell nebeneinander zeigt.** Wenn du einen Prompt über PromptQuorum gleichzeitig an GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro sendest, siehst du:',
+          '**PromptQuorum ist das einzige Tool, das dir den System-Prompt UND User-Prompt für jedes Modell nebeneinander zeigt.** Wenn du einen Prompt über PromptQuorum gleichzeitig an GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro sendest, siehst du:',
         ],
         items: [
           '**Den System-Prompt des Modells** (wenn verfügbar) — welche Persönlichkeit und Einschränkungen jedem Modell gegeben wurden',
@@ -143,7 +143,7 @@ export const systemPromptTranslations = {
         items: [
           '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — die grundlegende Definition von Prompt Engineering',
           '[Wie man einen System-Prompt schreibt](/prompt-engineering/how-to-write-a-system-prompt) — Schritt-für-Schritt-Anleitung zur Gestaltung effektiver System-Prompts',
-          '[Prompt-Engineering-Geschichte](/prompt-engineering/prompt-engineering-history) — wie Prompt Engineering sich von GPT-3 zu GPT-4o und Claude 4.6 Sonnet entwickelt hat',
+          '[Prompt-Engineering-Geschichte](/prompt-engineering/prompt-engineering-history) — wie Prompt Engineering sich von GPT-3 zu GPT-5.5 und Claude Opus 4.7 entwickelt hat',
         ],
       },
     },
@@ -168,7 +168,7 @@ export const systemPromptTranslations = {
         items: [
           'Les prompts système définissent le rôle, les contraintes et le comportement du modèle pour toute la session — définis une fois, utilisés pour toutes les demandes',
           'Les prompts utilisateur définissent la tâche spécifique pour chaque interaction — fournis par l\'utilisateur, changent à chaque demande',
-          'Les prompts système représentent environ 70 % de la cohérence comportementale selon les tests PromptQuorum sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro ; les prompts utilisateur façonnent les sorties spécifiques',
+          'Les prompts système représentent environ 70 % de la cohérence comportementale selon les tests PromptQuorum sur GPT-5.5, Claude Opus 4.7 et Gemini 3.1 Pro ; les prompts utilisateur façonnent les sorties spécifiques',
           'Les prompts système invisibles dans des applications comme ChatGPT et Claude contiennent une logique cachée — [PromptQuorum vous montre tout](/prompt-engineering/system-prompt-vs-user-prompt)',
           'Les LLM locaux (Ollama, LM Studio) avec des prompts système cachés causent des problèmes de débogage — résolus par la transparence',
           'Les mauvais prompts système forcent les prompts utilisateur à travailler plus dur ; les bons prompts système rendent chaque prompt utilisateur meilleur',
@@ -177,11 +177,11 @@ export const systemPromptTranslations = {
       whereTheyLive: {
         title: 'Où vivent les prompts système et utilisateur dans la pile API ?',
         content: [
-          '**Les prompts système vivent dans la couche application ; les prompts utilisateur vivent dans la couche interaction.** Lorsque vous appelez GPT-4o via l\'API OpenAI, le point de terminaison accepte deux entrées distinctes : `system` (les instructions persistantes) et `messages` (entrée utilisateur par demande). Il en va de même pour Claude 4.6 Sonnet via l\'API d\'Anthropic, Gemini 2.5 Pro via l\'API Google, et tout LLM local exécuté via [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) ou LM Studio.',
+          '**Les prompts système vivent dans la couche application ; les prompts utilisateur vivent dans la couche interaction.** Lorsque vous appelez GPT-5.5 via l\'API OpenAI, le point de terminaison accepte deux entrées distinctes : `system` (les instructions persistantes) et `messages` (entrée utilisateur par demande). Il en va de même pour Claude Opus 4.7 via l\'API d\'Anthropic, Gemini 3.1 Pro via l\'API Google, et tout LLM local exécuté via [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) ou LM Studio.',
           'Tous les modèles prennent en charge le modèle prompt système + utilisateur :',
         ],
         items: [
-          '**Couche modèle :** Le LLM de base (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, LLaMA 3.1, Mistral Large) — tous acceptent les prompts système et utilisateur',
+          '**Couche modèle :** Le LLM de base (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large) — tous acceptent les prompts système et utilisateur',
           '**Couche API :** L\'interface utilisée par les développeurs — API OpenAI, API Anthropic, API Google, point de terminaison REST Ollama, LM Studio — tous exposent le système et l\'utilisateur comme des champs distincts',
           '**Couche application :** Le produit construit sur l\'API (ChatGPT, Claude.ai, Gemini, PromptQuorum, votre application personnalisée) — les développeurs décident quel prompt système utiliser',
           '**Couche interaction utilisateur :** Ce que l\'utilisateur final voit — l\'entrée de chat, la spécification de tâche — c\'est ce qui devient le prompt utilisateur',
@@ -264,14 +264,14 @@ export const systemPromptTranslations = {
         ],
         items: [
           '**1. Tu ne peux pas vérifier ou valider le comportement.** Si ChatGPT refuse de répondre à une question, tu ne sais pas si c\'est une contrainte stricte dans le prompt système ou une limitation du modèle lui-même. Tu ne peux pas déboguer.',
-          '**2. Tu ne peux pas répliquer le comportement entre les modèles.** Si tu découvres un design de prompt système qui fonctionne bien pour Claude 4.6 Sonnet, tu ne peux pas le copier à GPT-4o parce que tu n\'as jamais vu le prompt système de Claude. Tu dois le rétro-ingéniérer.',
-          '**3. Tu ne peux pas construire un comportement cohérent dans ta propre application.** Si tu construis un chatbot sur GPT-4o, ton prompt système est la SEULE chose que tu contrôles. Mais la plupart des développeurs ne comprennent pas l\'impact des prompts système — alors ils écrivent des prompts faibles et se plaignent ensuite que le modèle est "incohérent" ou "peu fiable".',
+          '**2. Tu ne peux pas répliquer le comportement entre les modèles.** Si tu découvres un design de prompt système qui fonctionne bien pour Claude Opus 4.7, tu ne peux pas le copier à GPT-5.5 parce que tu n\'as jamais vu le prompt système de Claude. Tu dois le rétro-ingéniérer.',
+          '**3. Tu ne peux pas construire un comportement cohérent dans ta propre application.** Si tu construis un chatbot sur GPT-5.5, ton prompt système est la SEULE chose que tu contrôles. Mais la plupart des développeurs ne comprennent pas l\'impact des prompts système — alors ils écrivent des prompts faibles et se plaignent ensuite que le modèle est "incohérent" ou "peu fiable".',
         ],
       },
       promptquorum: {
         title: 'PromptQuorum : Vois tous les prompts, compare les comportements',
         content: [
-          '**PromptQuorum est le seul outil qui te montre le prompt système ET le prompt utilisateur pour chaque modèle côte à côte.** Lorsque tu envoies un prompt via PromptQuorum simultanément à GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro, tu vois :',
+          '**PromptQuorum est le seul outil qui te montre le prompt système ET le prompt utilisateur pour chaque modèle côte à côte.** Lorsque tu envoies un prompt via PromptQuorum simultanément à GPT-5.5, Claude Opus 4.7 et Gemini 3.1 Pro, tu vois :',
         ],
         items: [
           '**Le prompt système du modèle** (si disponible) — quelle personnalité et quelles contraintes ont été données à chaque modèle',
@@ -285,7 +285,7 @@ export const systemPromptTranslations = {
         items: [
           '[Qu\'est-ce que l\'ingénierie des prompts ?](/prompt-engineering/what-is-prompt-engineering) — la définition fondamentale de l\'ingénierie des prompts',
           '[Comment écrire un prompt système](/prompt-engineering/how-to-write-a-system-prompt) — guide étape par étape pour concevoir des prompts système efficaces',
-          '[Histoire de l\'ingénierie des prompts](/prompt-engineering/prompt-engineering-history) — comment l\'ingénierie des prompts a évolué de GPT-3 à GPT-4o et Claude 4.6 Sonnet',
+          '[Histoire de l\'ingénierie des prompts](/prompt-engineering/prompt-engineering-history) — comment l\'ingénierie des prompts a évolué de GPT-3 à GPT-5.5 et Claude Opus 4.7',
         ],
       },
     },
@@ -310,7 +310,7 @@ export const systemPromptTranslations = {
         items: [
           'システムプロンプトはセッション全体でのモデルの役割、制約、動作を定義します—一度設定され、すべてのリクエストに使用されます',
           'ユーザープロンプトは各相互作用の特定のタスクを定義します—ユーザーが提供し、リクエストごとに変わります',
-          'システムプロンプトはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proにおける動作一貫性の約70%を占めます（PromptQuorumテストに基づく）；ユーザープロンプトは特定の出力を形成します',
+          'システムプロンプトはGPT-5.5、Claude Opus 4.7、Gemini 3.1 Proにおける動作一貫性の約70%を占めます（PromptQuorumテストに基づく）；ユーザープロンプトは特定の出力を形成します',
           'ChatGPTやClaudeなどのアプリの非表示システムプロンプトには隠れたロジックが含まれています—[PromptQuorumはすべてを表示します](/prompt-engineering/system-prompt-vs-user-prompt)',
           'Ollama、LM Studioなどのローカルモデルは非表示のシステムプロンプトでデバッグ問題を引き起こします—透明性で解決',
           '悪いシステムプロンプトはユーザープロンプトをより努力させます；良いシステムプロンプトはすべてのユーザープロンプトをより良くします',
@@ -319,11 +319,11 @@ export const systemPromptTranslations = {
       whereTheyLive: {
         title: 'システムプロンプトとユーザープロンプトはAPIスタックのどこに存在するか',
         content: [
-          '**システムプロンプトはアプリケーション層に存在し、ユーザープロンプトはインタラクション層に存在します。** OpenAI APIを通じてGPT-4oを呼び出すと、エンドポイントは2つの別の入力を受け入れます：`system`（永続的な指示）と`messages`（リクエストごとのユーザー入力）。これはAnthropic APIを通じたClaude 4.6 Sonnet、Google APIを通じたGemini 2.5 Pro、[Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets)またはLM Studioで実行されるローカルLLMでも同じです。',
+          '**システムプロンプトはアプリケーション層に存在し、ユーザープロンプトはインタラクション層に存在します。** OpenAI APIを通じてGPT-5.5を呼び出すと、エンドポイントは2つの別の入力を受け入れます：`system`（永続的な指示）と`messages`（リクエストごとのユーザー入力）。これはAnthropic APIを通じたClaude Opus 4.7、Google APIを通じたGemini 3.1 Pro、[Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets)またはLM Studioで実行されるローカルLLMでも同じです。',
           'すべてのモデルはシステム+ユーザープロンプトパターンをサポートしています：',
         ],
         items: [
-          '**モデル層：** ベースLLM（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、LLaMA 3.1、Mistral Large）—すべてシステムとユーザープロンプトを受け入れます',
+          '**モデル層：** ベースLLM（GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、LLaMA 3.1、Mistral Large）—すべてシステムとユーザープロンプトを受け入れます',
           '**API層：** 開発者が使用するインターフェース—OpenAI API、Anthropic API、Google API、Ollama RESTエンドポイント、LM Studio—すべてシステムとユーザーを別フィールドとして公開',
           '**アプリケーション層：** API上に構築されたプロダクト（ChatGPT、Claude.ai、Gemini、PromptQuorum、カスタムアプリ）—開発者が使用するシステムプロンプトを決定',
           '**ユーザーインタラクション層：** エンドユーザーが見るもの—チャット入力、タスク仕様—これがユーザープロンプトになります',
@@ -406,14 +406,14 @@ export const systemPromptTranslations = {
         ],
         items: [
           '**1.動作を検証または確認できません。** ChatGPTが質問に答えることを拒否する場合、それがシステムプロンプトの硬い制約なのか、モデル自体の制限なのかはわかりません。デバッグできません。',
-          '**2.モデル間で動作を複製できません。** Claude 4.6 Sonnetで機能するシステムプロンプト設計を発見した場合、ClaudeのシステムプロンプトをGPT-4oにコピーすることはできません（見たことがないため）。リバースエンジニアリングが必要です。',
-          '**3.独自のアプリで一貫した動作を構築できません。** GPT-4o上にチャットボットを構築する場合、システムプロンプトが唯一のコントロール手段です。しかし、ほとんどの開発者はシステムプロンプトの影響を理解していません—弱いプロンプトを書き、モデルが「矛盾している」または「信頼できない」と不平を言います。',
+          '**2.モデル間で動作を複製できません。** Claude Opus 4.7で機能するシステムプロンプト設計を発見した場合、ClaudeのシステムプロンプトをGPT-5.5にコピーすることはできません（見たことがないため）。リバースエンジニアリングが必要です。',
+          '**3.独自のアプリで一貫した動作を構築できません。** GPT-5.5上にチャットボットを構築する場合、システムプロンプトが唯一のコントロール手段です。しかし、ほとんどの開発者はシステムプロンプトの影響を理解していません—弱いプロンプトを書き、モデルが「矛盾している」または「信頼できない」と不平を言います。',
         ],
       },
       promptquorum: {
         title: 'PromptQuorum：すべてのプロンプトを表示し、動作を比較',
         content: [
-          '**PromptQuorumは、各モデルのシステムプロンプトとユーザープロンプトの両方を並べて表示する唯一のツールです。** PromptQuorumを通じてGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proにプロンプトを同時に送信すると、次が表示されます：',
+          '**PromptQuorumは、各モデルのシステムプロンプトとユーザープロンプトの両方を並べて表示する唯一のツールです。** PromptQuorumを通じてGPT-5.5、Claude Opus 4.7、Gemini 3.1 Proにプロンプトを同時に送信すると、次が表示されます：',
         ],
         items: [
           '**モデルのシステムプロンプト**（利用可能な場合）—各モデルに与えられた個性と制約',
@@ -427,7 +427,7 @@ export const systemPromptTranslations = {
         items: [
           '[プロンプトエンジニアリングとは何か](/prompt-engineering/what-is-prompt-engineering)—プロンプトエンジニアリングの基本定義',
           '[システムプロンプトを書く方法](/prompt-engineering/how-to-write-a-system-prompt)—効果的なシステムプロンプトを設計するステップバイステップガイド',
-          '[プロンプトエンジニアリングの歴史](/prompt-engineering/prompt-engineering-history)—プロンプトエンジニアリングがGPT-3からGPT-4oとClaude 4.6 Sonnetへどのように進化したか',
+          '[プロンプトエンジニアリングの歴史](/prompt-engineering/prompt-engineering-history)—プロンプトエンジニアリングがGPT-3からGPT-5.5とClaude Opus 4.7へどのように進化したか',
         ],
       },
     },
@@ -452,7 +452,7 @@ export const systemPromptTranslations = {
         items: [
           '系统提示为整个会话定义模型的角色、约束和行为——设置一次，用于所有请求',
           '用户提示为每个交互定义特定任务——由用户提供，每个请求都会改变',
-          '根据 PromptQuorum 在 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro 上的测试，系统提示占行为一致性的约 70%；用户提示塑造特定输出',
+          '根据 PromptQuorum 在 GPT-5.5、Claude Opus 4.7 和 Gemini 3.1 Pro 上的测试，系统提示占行为一致性的约 70%；用户提示塑造特定输出',
           'ChatGPT 和 Claude 等应用中的隐藏系统提示包含隐藏逻辑——[PromptQuorum 向您显示所有内容](/prompt-engineering/system-prompt-vs-user-prompt)',
           '具有隐藏系统提示的本地 LLM（Ollama、LM Studio）会导致调试问题——通过透明性解决',
           '糟糕的系统提示使用户提示工作更努力；好的系统提示使每个用户提示更好',
@@ -461,11 +461,11 @@ export const systemPromptTranslations = {
       whereTheyLive: {
         title: '系统和用户提示在 API 堆栈中的位置',
         content: [
-          '**系统提示位于应用层；用户提示位于交互层。** 通过 OpenAI API 调用 GPT-4o 时，端点接受两个独立输入：`system`（持久指令）和 `messages`（每请求用户输入）。Claude 4.6 Sonnet 通过 Anthropic API、Gemini 2.5 Pro 通过 Google API，以及通过 [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) 或 LM Studio 运行的任何本地 LLM 都是如此。',
+          '**系统提示位于应用层；用户提示位于交互层。** 通过 OpenAI API 调用 GPT-5.5 时，端点接受两个独立输入：`system`（持久指令）和 `messages`（每请求用户输入）。Claude Opus 4.7 通过 Anthropic API、Gemini 3.1 Pro 通过 Google API，以及通过 [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) 或 LM Studio 运行的任何本地 LLM 都是如此。',
           '所有模型都支持系统+用户提示模式：',
         ],
         items: [
-          '**模型层：** 基础 LLM（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、LLaMA 3.1、Mistral Large）——所有都接受系统和用户提示',
+          '**模型层：** 基础 LLM（GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、LLaMA 3.1、Mistral Large）——所有都接受系统和用户提示',
           '**API 层：** 开发人员使用的接口——OpenAI API、Anthropic API、Google API、Ollama REST 端点、LM Studio——所有都将系统和用户公开为单独的字段',
           '**应用层：** 在 API 上构建的产品（ChatGPT、Claude.ai、Gemini、PromptQuorum、您的自定义应用）——开发人员决定使用哪个系统提示',
           '**用户交互层：** 最终用户看到的——聊天输入、任务规范——这变成了用户提示',
@@ -548,14 +548,14 @@ export const systemPromptTranslations = {
         ],
         items: [
           '**1. 你无法验证或确认行为。** 如果 ChatGPT 拒绝回答问题，你不知道它是系统提示中的硬性约束还是模型本身的限制。你无法调试。',
-          '**2. 你无法跨模型复制行为。** 如果你发现一个对 Claude 4.6 Sonnet 有效的系统提示设计，你无法将其复制到 GPT-4o，因为你从未看过 Claude 的系统提示。你必须对其进行逆向工程。',
-          '**3. 你无法在自己的应用中构建一致的行为。** 如果你在 GPT-4o 上构建聊天机器人，你的系统提示是你能控制的唯一东西。但大多数开发人员不理解系统提示的影响——所以他们写了弱提示，然后抱怨模型"不一致"或"不可靠"。',
+          '**2. 你无法跨模型复制行为。** 如果你发现一个对 Claude Opus 4.7 有效的系统提示设计，你无法将其复制到 GPT-5.5，因为你从未看过 Claude 的系统提示。你必须对其进行逆向工程。',
+          '**3. 你无法在自己的应用中构建一致的行为。** 如果你在 GPT-5.5 上构建聊天机器人，你的系统提示是你能控制的唯一东西。但大多数开发人员不理解系统提示的影响——所以他们写了弱提示，然后抱怨模型"不一致"或"不可靠"。',
         ],
       },
       promptquorum: {
         title: 'PromptQuorum：查看所有提示，比较行为',
         content: [
-          '**PromptQuorum 是唯一向您并排显示每个模型的系统提示和用户提示的工具。** 当您通过 PromptQuorum 同时向 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro 发送提示时，您会看到：',
+          '**PromptQuorum 是唯一向您并排显示每个模型的系统提示和用户提示的工具。** 当您通过 PromptQuorum 同时向 GPT-5.5、Claude Opus 4.7 和 Gemini 3.1 Pro 发送提示时，您会看到：',
         ],
         items: [
           '**模型的系统提示**（如果可用）——给每个模型的个性和约束',
@@ -569,7 +569,7 @@ export const systemPromptTranslations = {
         items: [
           '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering)——提示工程的基本定义',
           '[如何写系统提示](/prompt-engineering/how-to-write-a-system-prompt)——设计有效系统提示的分步指南',
-          '[提示工程历史](/prompt-engineering/prompt-engineering-history)——提示工程如何从 GPT-3 演变到 GPT-4o 和 Claude 4.6 Sonnet',
+          '[提示工程历史](/prompt-engineering/prompt-engineering-history)——提示工程如何从 GPT-3 演变到 GPT-5.5 和 Claude Opus 4.7',
         ],
       },
     },

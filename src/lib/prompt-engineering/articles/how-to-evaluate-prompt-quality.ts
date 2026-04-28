@@ -55,7 +55,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', name: 'What is instruction-following rate?', acceptedAnswer: { '@type': 'Answer', text: 'Instruction-following rate is the percentage of outputs where the model obeyed every constraint in the prompt: format, length, tone, scope, and prohibited content. A 90% rate means 1 in 10 requests fail in production.' } },
           { '@type': 'Question', name: 'Why does manual spot-checking fail for prompt evaluation?', acceptedAnswer: { '@type': 'Answer', text: 'Manual spot-checking is non-repeatable, selection-biased, and does not scale. Automated test sets produce consistent, comparable results across prompt versions and model updates.' } },
           { '@type': 'Question', name: 'How many test cases does a prompt test set need?', acceptedAnswer: { '@type': 'Answer', text: 'A minimal test set needs 20 cases: 10 happy-path inputs, 5 edge cases, and 5 adversarial inputs. Fewer than 20 cases produces statistically unreliable pass rates.' } },
-          { '@type': 'Question', name: 'Does prompt quality differ between GPT-4o and Claude?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The same prompt regularly scores 10-20 points differently between GPT-4o and Claude 4.6 Sonnet due to instruction-format differences. Always measure pass rate separately on each model you plan to deploy.' } },
+          { '@type': 'Question', name: 'Does prompt quality differ between GPT-5.5 and Claude?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The same prompt regularly scores 10-20 points differently between GPT-5.5 and Claude Opus 4.7 due to instruction-format differences. Always measure pass rate separately on each model you plan to deploy.' } },
         ],
       },
       howToSchema: {
@@ -80,8 +80,8 @@ export const article: Record<Language, PEArticle> = {
             'Manual spot-checking is non-repeatable and misses edge cases — use automated test sets',
             'A minimum viable test set needs 20 cases: happy path, edge cases, and adversarial inputs',
             'Binary pass/fail is the most actionable metric for structured output prompts',
-            'LLM-as-judge (GPT-4o or Claude scoring outputs against a rubric) scales to free-text tasks',
-            'Use PromptQuorum to dispatch the same test set to GPT-4o and Claude 4.6 Sonnet and compare pass rates side-by-side',
+            'LLM-as-judge (GPT-5.5 or Claude scoring outputs against a rubric) scales to free-text tasks',
+            'Use PromptQuorum to dispatch the same test set to GPT-5.5 and Claude Opus 4.7 and compare pass rates side-by-side',
           ],
         },
         definition: {
@@ -109,13 +109,13 @@ export const article: Record<Language, PEArticle> = {
         },
         scoringRubrics: {
           title: 'How Do You Score Prompt Outputs?',
-          content: '**Choose your scoring method based on output type: binary pass/fail for structured outputs, 1-5 rubric for generation tasks, and LLM-as-judge for free-text evaluation.**\n\n**Binary pass/fail** is the most actionable. Use for JSON outputs, classification results, and outputs with a clear correct answer. Pass rate = correct outputs / total test cases.\n\n**1-5 scale rubric** works for generation tasks where partial credit is meaningful. Define each score level before testing: 5 = fully correct, 4 = minor issue, 3 = acceptable with caveats, 2 = significant problem, 1 = wrong or harmful.\n\n**LLM-as-judge** uses GPT-4o or Claude 4.6 Sonnet to score outputs against a rubric. This scales to thousands of test cases. The judge prompt must specify the rubric precisely.',
+          content: '**Choose your scoring method based on output type: binary pass/fail for structured outputs, 1-5 rubric for generation tasks, and LLM-as-judge for free-text evaluation.**\n\n**Binary pass/fail** is the most actionable. Use for JSON outputs, classification results, and outputs with a clear correct answer. Pass rate = correct outputs / total test cases.\n\n**1-5 scale rubric** works for generation tasks where partial credit is meaningful. Define each score level before testing: 5 = fully correct, 4 = minor issue, 3 = acceptable with caveats, 2 = significant problem, 1 = wrong or harmful.\n\n**LLM-as-judge** uses GPT-5.5 or Claude Opus 4.7 to score outputs against a rubric. This scales to thousands of test cases. The judge prompt must specify the rubric precisely.',
           codeBlock: '// LLM-as-judge scoring prompt\nconst judgePrompt = `\nScore this customer support response 1-5:\n5 = Correct, professional, addresses all concerns\n4 = Correct, minor issue\n3 = Partially correct\n2 = Incorrect or missing key info\n1 = Wrong, rude, or harmful\n\nQuestion: {input}\nResponse: {output}\n\nScore (1-5) + one-sentence justification:\n`;',
           codeLanguage: 'typescript',
         },
         multiModel: {
           title: 'Does Prompt Quality Differ Across Models?',
-          content: '**Yes - the same prompt can score 20+ points differently between GPT-4o and Claude 4.6 Sonnet, primarily due to instruction-format sensitivity and system prompt handling.**\n\nQuality gaps are largest for:\n\n- **JSON output formatting:** Claude 4.6 Sonnet follows complex schemas more strictly than GPT-4o\n- **Instruction priority:** GPT-4o weights the most recent instruction; Claude 4.6 Sonnet weights the system prompt\n- **Refusal patterns:** OpenAI and Anthropic models have different thresholds for borderline content\n\nUse PromptQuorum to dispatch the same test set to GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro in one run and compare pass rates side-by-side.',
+          content: '**Yes - the same prompt can score 20+ points differently between GPT-5.5 and Claude Opus 4.7, primarily due to instruction-format sensitivity and system prompt handling.**\n\nQuality gaps are largest for:\n\n- **JSON output formatting:** Claude Opus 4.7 follows complex schemas more strictly than GPT-5.5\n- **Instruction priority:** GPT-5.5 weights the most recent instruction; Claude Opus 4.7 weights the system prompt\n- **Refusal patterns:** OpenAI and Anthropic models have different thresholds for borderline content\n\nUse PromptQuorum to dispatch the same test set to GPT-5.5, Claude Opus 4.7, and Gemini 1.5 Pro in one run and compare pass rates side-by-side.',
         },
         howToStart: {
           title: 'How To Start Evaluating Prompt Quality',
@@ -124,7 +124,7 @@ export const article: Record<Language, PEArticle> = {
             'Collect 20 test inputs: 8 happy-path, 6 edge cases, 6 adversarial. Write expected outputs or pass criteria for each.',
             'Choose a scoring method: binary for structured outputs, 1-5 rubric for generation, LLM-as-judge for free text.',
             'Run all 20 inputs through your current prompt and score each output. Record this pass rate as your baseline.',
-            'Dispatch the same test set to GPT-4o and Claude 4.6 Sonnet via PromptQuorum and compare model-level pass rates.',
+            'Dispatch the same test set to GPT-5.5 and Claude Opus 4.7 via PromptQuorum and compare model-level pass rates.',
             'Set a regression threshold: if a prompt change drops pass rate by more than 5 points, block the deployment.',
           ],
         },
@@ -133,7 +133,7 @@ export const article: Record<Language, PEArticle> = {
           items: [
             '**Mistake: Testing only happy-path inputs.** Fix: At minimum 30% of test inputs should be edge cases or adversarial. Happy-path inputs that always pass tell you nothing about production reliability.',
             '**Mistake: No expected outputs for test cases.** Fix: Every test input needs a pass criterion written before you run the test. Scoring outputs without pre-defined criteria reintroduces subjectivity.',
-            '**Mistake: Using pass rate from one model on another.** Fix: Run the test set separately on each model you plan to deploy. GPT-4o and Claude 4.6 Sonnet regularly differ by 10-20 points on the same prompts.',
+            '**Mistake: Using pass rate from one model on another.** Fix: Run the test set separately on each model you plan to deploy. GPT-5.5 and Claude Opus 4.7 regularly differ by 10-20 points on the same prompts.',
             '**Mistake: No baseline.** Fix: Record the pass rate the first time you evaluate a prompt. Every future change must be compared against that number.',
           ],
         },
@@ -141,7 +141,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Related Reading',
           items: [
             '[Prompt Evaluation Metrics: What to Measure and How](/prompt-engineering/prompt-evaluation-metrics) — Breakdown of pass rate, BLEU, semantic similarity, and LLM-as-judge',
-            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Multi-model evaluation for GPT-4o vs Claude vs Gemini',
+            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Multi-model evaluation for GPT-5.5 vs Claude vs Gemini',
             '[How to Reduce Prompt Brittleness](/prompt-engineering/how-to-reduce-prompt-brittleness) — Output schemas, few-shot anchors, and regression gates',
           ],
         },
@@ -153,7 +153,7 @@ export const article: Record<Language, PEArticle> = {
             { q: 'What is instruction-following rate?', a: 'Instruction-following rate is the percentage of outputs where the model obeyed every constraint: format, length, tone, scope, and prohibited content. A 90% rate means 1 in 10 requests fail.' },
             { q: 'Why does manual spot-checking fail?', a: 'Manual spot-checking is non-repeatable, selection-biased, and does not scale. Automated test sets produce consistent, comparable results across prompt versions.' },
             { q: 'How many test cases does a prompt test set need?', a: 'A minimal test set needs 20 cases: 10 happy-path, 5 edge cases, and 5 adversarial inputs. Fewer than 20 produces statistically unreliable pass rates.' },
-            { q: 'Does prompt quality differ between GPT-4o and Claude?', a: 'Yes. The same prompt regularly scores 10-20 points differently between GPT-4o and Claude 4.6 Sonnet. Always measure pass rate separately on each model you deploy.' },
+            { q: 'Does prompt quality differ between GPT-5.5 and Claude?', a: 'Yes. The same prompt regularly scores 10-20 points differently between GPT-5.5 and Claude Opus 4.7. Always measure pass rate separately on each model you deploy.' },
           ],
         },
         sources: {

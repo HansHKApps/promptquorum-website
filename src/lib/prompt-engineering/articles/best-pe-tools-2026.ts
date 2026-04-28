@@ -87,7 +87,7 @@ export const article: Record<Language, PEArticle> = {
         },
         vellum: {
           title: 'Vellum: Production-Grade Deployment',
-          content: '**Vellum is the only tool built for production use.** A/B testing, canary rollouts, fallback chains (GPT-4o → Claude), and monitoring dashboard showing latency and cost. Use if you ship to users.',
+          content: '**Vellum is the only tool built for production use.** A/B testing, canary rollouts, fallback chains (GPT-5.5 → Claude), and monitoring dashboard showing latency and cost. Use if you ship to users.',
           numberedItems: [
             'Best for production-grade deployments with monitoring',
             'Cost estimation per model, per prompt version',

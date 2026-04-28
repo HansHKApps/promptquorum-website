@@ -32,9 +32,9 @@ export const article: Record<Language, PEArticle> = {
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 630 },
         keywords: ['output control', 'constrained decoding', 'JSON schema', 'structured output', 'temperature', 'top-p', 'sampling parameters', 'prompt engineering'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
@@ -61,7 +61,7 @@ export const article: Record<Language, PEArticle> = {
           {
             '@type': 'Question',
             name: 'What output format should I use for production LLM pipelines?',
-            acceptedAnswer: { '@type': 'Answer', text: 'JSON is the standard for production LLM pipelines because it maps directly to typed API objects and is natively supported by all major providers (OpenAI, Anthropic, Google Gemini). Use JSONL for event streams and batch processing. Use CSV only for legacy system compatibility. Avoid XML as an output format (though it is effective as a prompt structure format for Claude 4.6 Sonnet). The 2026 recommended architecture is: TOON for input token efficiency + JSON with constrained decoding only for Stage 2 output after free-form Stage 1 reasoning.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'JSON is the standard for production LLM pipelines because it maps directly to typed API objects and is natively supported by all major providers (OpenAI, Anthropic, Google Gemini). Use JSONL for event streams and batch processing. Use CSV only for legacy system compatibility. Avoid XML as an output format (though it is effective as a prompt structure format for Claude Opus 4.7). The 2026 recommended architecture is: TOON for input token efficiency + JSON with constrained decoding only for Stage 2 output after free-form Stage 1 reasoning.' },
           },
           {
             '@type': 'Question',
@@ -90,7 +90,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'Output control operates at three distinct levels — prompt-based, schema-based, and constrained decoding — each offering progressively stronger format guarantees at progressively higher trade-offs against reasoning quality.',
             'Prompt-based formatting instructs the model through natural language ("Return JSON with fields: name, email, score"). This works 80–95% of the time but fails silently on edge cases with no type guarantees, requiring error-handling for the 5–20% of malformed responses. Schema-based approaches (function calling / tool use) define output structure formally at 95–99% compliance — but the schema remains a strong hint, not an absolute constraint. Native constrained decoding uses finite state machines to mask invalid tokens at generation time, producing 100% schema-valid output with mathematical certainty.',
-            'The two-stage approach — letting Claude 4.6 Sonnet (Anthropic) or GPT-4o (OpenAI) reason freely in Stage 1, then feeding output into a small specialist structuring model (Osmosis-Structure-0.6B, trained on 500K synthetic unstructured → structured transformations) in Stage 2 — achieves format guarantees without the reasoning quality penalty of constrained decoding.',
+            'The two-stage approach — letting Claude Opus 4.7 (Anthropic) or GPT-5.5 (OpenAI) reason freely in Stage 1, then feeding output into a small specialist structuring model (Osmosis-Structure-0.6B, trained on 500K synthetic unstructured → structured transformations) in Stage 2 — achieves format guarantees without the reasoning quality penalty of constrained decoding.',
             'In one sentence: Match the level of output constraint to the task — use constrained decoding only when format correctness matters more than reasoning depth.',
           ],
           columns: ['Level', 'Compliance Rate', 'Reasoning Impact', 'Best For'],
@@ -106,8 +106,8 @@ export const article: Record<Language, PEArticle> = {
         promptStructure: {
           title: 'Output Format Control via Prompt Engineering',
           content: [
-            'Explicit output schema instructions — placed at the start of the system prompt for Claude 4.6 Sonnet and immediately before user content for GPT-4o — produce structured output compliance rates of 85–95% without the reasoning quality penalty of native constrained decoding.',
-            'Claude 4.6 Sonnet (Anthropic) responds best to output format instructions placed at the beginning of the system prompt using XML-style section labels. GPT-4o (OpenAI) performs best when the schema is placed immediately before user content using numbered format rules. Gemini 2.5 Pro (Google DeepMind) produces the most reliable structured output when the schema is restated at both start and end of the prompt.',
+            'Explicit output schema instructions — placed at the start of the system prompt for Claude Opus 4.7 and immediately before user content for GPT-5.5 — produce structured output compliance rates of 85–95% without the reasoning quality penalty of native constrained decoding.',
+            'Claude Opus 4.7 (Anthropic) responds best to output format instructions placed at the beginning of the system prompt using XML-style section labels. GPT-5.5 (OpenAI) performs best when the schema is placed immediately before user content using numbered format rules. Gemini 3.1 Pro (Google DeepMind) produces the most reliable structured output when the schema is restated at both start and end of the prompt.',
           ],
         },
 
@@ -117,14 +117,14 @@ export const article: Record<Language, PEArticle> = {
         },
 
         goodPrompt: {
-          title: 'Good Prompt — Claude 4.6 Sonnet',
-          content: ['**[Good Prompt — Claude 4.6 Sonnet]**'],
+          title: 'Good Prompt — Claude Opus 4.7',
+          content: ['**[Good Prompt — Claude Opus 4.7]**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
         },
 
         promptOutcome: {
           content: [
-            'The XML-structured prompt anchors the output format contract while preserving free reasoning inside the `<task>` block. No constrained decoding required — Claude 4.6 Sonnet complies in over 93% of production calls with this structure.',
+            'The XML-structured prompt anchors the output format contract while preserving free reasoning inside the `<task>` block. No constrained decoding required — Claude Opus 4.7 complies in over 93% of production calls with this structure.',
           ],
         },
 
@@ -132,9 +132,9 @@ export const article: Record<Language, PEArticle> = {
           title: 'Model-Specific Output Format Rules',
           content: ['Each major LLM has distinct structural preferences for output format compliance:'],
           items: [
-            '**Claude 4.6 Sonnet (Anthropic)** — XML tags (`<output>`, `<format>`, `<constraints>`); schema at the top; "Output only the JSON, nothing else"',
-            '**GPT-4o (OpenAI)** — Numbered format rules; schema placed after the main instruction; "Respond with valid JSON. No markdown fences. No explanation."',
-            '**Gemini 2.5 Pro (Google DeepMind)** — Concise, explicit schema at both start and end; inline one-shot example of desired output format',
+            '**Claude Opus 4.7 (Anthropic)** — XML tags (`<output>`, `<format>`, `<constraints>`); schema at the top; "Output only the JSON, nothing else"',
+            '**GPT-5.5 (OpenAI)** — Numbered format rules; schema placed after the main instruction; "Respond with valid JSON. No markdown fences. No explanation."',
+            '**Gemini 3.1 Pro (Google DeepMind)** — Concise, explicit schema at both start and end; inline one-shot example of desired output format',
             '**Local models via Ollama** (LLaMA 3.1 7B, Mistral) — More sensitive to format drift; one-shot format example embedded directly in the prompt is required for reliable JSON output',
           ],
         },
@@ -170,7 +170,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'Forcing JSON via constrained decoding reduces model accuracy by 2.26 percentage points on function-calling benchmarks — BAML\'s schema-aligned parsing achieved 93.63% accuracy on BFCL vs. 91.37% for OpenAI\'s strict constrained decoding on the same benchmark.',
             'The mechanism: constrained decoding applies a finite state machine that masks tokens incompatible with the current schema position. A model that wants to output `51.7` for a float field is forced to output `51` if the schema specifies integer — producing a technically valid but factually degraded result. Chain-of-Thought (CoT) prompting is incompatible with constrained decoding in this same way: including a reasoning field forces the model to escape newlines, quotes, and special characters within a JSON string — measurably degrading reasoning quality across all tested models.',
-            'The production-grade solution for systems requiring both reasoning depth and format guarantees: (1) **Stage 1** — Send to GPT-4o or Claude 4.6 Sonnet without constraints: "Analyse this, reason step by step, explain your logic." (2) **Stage 2** — Feed Stage 1 output to a small specialist model (Osmosis-Structure-0.6B or GPT-4o-mini with `strict: true`): "Extract the key data from this analysis and return it in this exact JSON schema."',
+            'The production-grade solution for systems requiring both reasoning depth and format guarantees: (1) **Stage 1** — Send to GPT-5.5 or Claude Opus 4.7 without constraints: "Analyse this, reason step by step, explain your logic." (2) **Stage 2** — Feed Stage 1 output to a small specialist model (Osmosis-Structure-0.6B or GPT-5.5-mini with `strict: true`): "Extract the key data from this analysis and return it in this exact JSON schema."',
             'This architecture preserves Stage 1 reasoning quality and achieves 100% format compliance in Stage 2 at a fraction of the cost of running a full frontier model in constrained mode.',
           ],
         },
@@ -178,7 +178,7 @@ export const article: Record<Language, PEArticle> = {
         promptquorumTest: {
           title: 'PromptQuorum Multi-Model Test',
           content: [
-            'Tested in PromptQuorum — 30 output control prompts dispatched across three models: Claude 4.6 Sonnet achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-4o achieved 89% compliance using numbered format rules. Gemini 2.5 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
+            'Tested in PromptQuorum — 30 output control prompts dispatched across three models: Claude Opus 4.7 achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-5.5 achieved 89% compliance using numbered format rules. Gemini 3.1 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
           ],
         },
 
@@ -239,7 +239,7 @@ export const article: Record<Language, PEArticle> = {
             '`frequency_penalty` — [-2.0, 2.0] reduces proportional-to-frequency repetition; `presence_penalty` — [-2.0, 2.0] applies a flat penalty on any previously seen token — both set to 0.3–0.5 for focused factual output',
             'Stop sequences are the only deterministic output termination mechanism — unlike negative constraints in the prompt body, they cannot be overridden by the model',
             'For Temperature: T — [0.0, 0.3] for deterministic factual tasks; T — [0.7, 1.0] for creative tasks; T > 1.2 risks incoherence in production use',
-            'Claude 4.6 Sonnet achieves 93% JSON compliance with XML-tagged format prompts; GPT-4o achieves 89% with numbered format rules — both without constrained decoding',
+            'Claude Opus 4.7 achieves 93% JSON compliance with XML-tagged format prompts; GPT-5.5 achieves 89% with numbered format rules — both without constrained decoding',
           ],
         },
 
@@ -279,7 +279,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'What output format should I use for production LLM pipelines?',
-              a: 'JSON is the standard for production LLM pipelines because it maps directly to typed API objects and is natively supported by all major providers (OpenAI, Anthropic, Google Gemini). Use JSONL for event streams and batch processing. Use CSV only for legacy system compatibility. Avoid XML as an output format (though it is effective as a prompt structure format for Claude 4.6 Sonnet). The 2026 recommended architecture is: TOON for input token efficiency + JSON with constrained decoding only for Stage 2 output after free-form Stage 1 reasoning.',
+              a: 'JSON is the standard for production LLM pipelines because it maps directly to typed API objects and is natively supported by all major providers (OpenAI, Anthropic, Google Gemini). Use JSONL for event streams and batch processing. Use CSV only for legacy system compatibility. Avoid XML as an output format (though it is effective as a prompt structure format for Claude Opus 4.7). The 2026 recommended architecture is: TOON for input token efficiency + JSON with constrained decoding only for Stage 2 output after free-form Stage 1 reasoning.',
             },
             {
               q: 'How do stop sequences differ from negative constraints in prompts?',

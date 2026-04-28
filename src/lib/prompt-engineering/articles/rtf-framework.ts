@@ -37,9 +37,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
@@ -48,7 +48,7 @@ export const article: Record<Language, PEArticle> = {
         whatIsRTF: {
           title: 'What the RTF Framework Is',
           content: [
-            '**The RTF Framework is a three-part prompt pattern that tells the model who it is, what to do, and exactly how the answer should look.** Instead of sending a loose question, you specify Role, Task, and Format explicitly. This works across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models you run via Ollama or LM Studio.',
+            '**The RTF Framework is a three-part prompt pattern that tells the model who it is, what to do, and exactly how the answer should look.** Instead of sending a loose question, you specify Role, Task, and Format explicitly. This works across GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models you run via Ollama or LM Studio.',
             'RTF is intentionally minimal. With only three fields, it is easy to remember, fast to fill in, and flexible enough for many day-to-day tasks. You can treat it as a "default prompt skeleton" whenever you are not sure which specialized framework to use.',
           ],
         },
@@ -107,7 +107,7 @@ export const article: Record<Language, PEArticle> = {
             'In PromptQuorum, the RTF Framework lets you:',
           ],
           items: [
-            'Fill in Role, Task, and Format once and send the same structured prompt to multiple models such as GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models configured through Ollama or LM Studio.',
+            'Fill in Role, Task, and Format once and send the same structured prompt to multiple models such as GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models configured through Ollama or LM Studio.',
             'Save RTF prompts as templates for recurring workflows—for example "weekly status summary," "customer reply draft," or "bug report recap."',
             'Share RTF templates across your team so that even non-experts can create prompts that produce consistent, structured outputs.',
           ],
@@ -163,9 +163,9 @@ export const article: Record<Language, PEArticle> = {
     ],
     mentions: [
       { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
       { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
     ],
@@ -174,7 +174,7 @@ export const article: Record<Language, PEArticle> = {
     whatIsRTF: {
       title: 'Das RTF-Framework verstehen',
       content: [
-        '**Das RTF-Framework ist ein dreiteiliges Prompt-Muster, das dem Modell mitteilt, wer es ist, was es tun soll und wie die Antwort genau aussehen sollte.** Statt eine lockere Frage zu stellen, geben Sie Rolle, Aufgabe und Format explizit an. Dies funktioniert über GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle, die Sie über Ollama oder LM Studio ausführen.',
+        '**Das RTF-Framework ist ein dreiteiliges Prompt-Muster, das dem Modell mitteilt, wer es ist, was es tun soll und wie die Antwort genau aussehen sollte.** Statt eine lockere Frage zu stellen, geben Sie Rolle, Aufgabe und Format explizit an. Dies funktioniert über GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle, die Sie über Ollama oder LM Studio ausführen.',
         'Das RTF-Framework ist bewusst minimal strukturiert. Mit nur drei Feldern ist es leicht zu merken, schnell auszufüllen und flexibel genug für viele tägliche Aufgaben. Sie können es als „Standard-Prompt-Grundgerüst" verwenden, wenn Sie sich nicht sicher sind, welches spezialisierte Framework Sie verwenden sollten.',
       ],
     },
@@ -233,7 +233,7 @@ export const article: Record<Language, PEArticle> = {
         'In PromptQuorum ermöglicht Ihnen das RTF-Framework:',
       ],
       items: [
-        'Rolle, Aufgabe und Format einmal ausfüllen und denselben strukturierten Prompt an mehrere Modelle wie GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle senden, die über Ollama oder LM Studio konfiguriert sind.',
+        'Rolle, Aufgabe und Format einmal ausfüllen und denselben strukturierten Prompt an mehrere Modelle wie GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle senden, die über Ollama oder LM Studio konfiguriert sind.',
         'RTF-Prompts als Vorlagen für wiederkehrende Workflows speichern—zum Beispiel „wöchentliche Status-Zusammenfassung", „Kunden-Antwort-Entwurf" oder „Bug-Bericht-Zusammenfassung".',
         'RTF-Vorlagen über Ihr Team hinweg teilen, sodass auch Nicht-Experten Prompts erstellen können, die konsistente, strukturierte Ausgaben erzeugen.',
       ],
@@ -307,9 +307,9 @@ export const article: Record<Language, PEArticle> = {
     ],
     mentions: [
       { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
       { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
     ],
@@ -318,7 +318,7 @@ export const article: Record<Language, PEArticle> = {
     whatIsRTF: {
       title: 'Ce qu\'est le Framework RTF',
       content: [
-        '**Le Framework RTF est un modèle de prompt en trois parties qui indique au modèle qui il est, ce qu\'il doit faire et comment la réponse doit exactement ressembler.** Au lieu d\'envoyer une question vague, vous spécifiez le Rôle, la Tâche et le Format explicitement. Cela fonctionne sur GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et les modèles locaux exécutés via Ollama ou LM Studio.',
+        '**Le Framework RTF est un modèle de prompt en trois parties qui indique au modèle qui il est, ce qu\'il doit faire et comment la réponse doit exactement ressembler.** Au lieu d\'envoyer une question vague, vous spécifiez le Rôle, la Tâche et le Format explicitement. Cela fonctionne sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et les modèles locaux exécutés via Ollama ou LM Studio.',
         'Le Framework RTF est intentionnellement minimaliste. Avec seulement trois champs, il est facile à retenir, rapide à remplir et flexible pour la plupart des tâches quotidiennes. Vous pouvez l\'utiliser comme « squelette de prompt par défaut » quand vous ne savez pas quel framework spécialisé utiliser.',
       ],
     },
@@ -377,7 +377,7 @@ export const article: Record<Language, PEArticle> = {
         'Dans PromptQuorum, le Framework RTF vous permet :',
       ],
       items: [
-        'Remplir Rôle, Tâche et Format une fois et envoyer le même prompt structuré à plusieurs modèles comme GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et des modèles locaux configurés via Ollama ou LM Studio.',
+        'Remplir Rôle, Tâche et Format une fois et envoyer le même prompt structuré à plusieurs modèles comme GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et des modèles locaux configurés via Ollama ou LM Studio.',
         'Enregistrer les prompts RTF comme modèles pour les flux de travail récurrents—par exemple « résumé de statut hebdomadaire », « brouillon de réponse client » ou « résumé de rapport de bogue ».',
         'Partager les modèles RTF à travers votre équipe afin que même les non-experts puissent créer des prompts qui produisent des résultats cohérents et structurés.',
       ],
@@ -411,7 +411,7 @@ export const article: Record<Language, PEArticle> = {
       ],
       items: [
         'Rédaction de prompt plus rapide : Trois champs seulement, pas de longues sections ou de formats complexes.',
-        'Cohérence cross-modèle : Le même RTF produit des résultats structurés sur GPT-4o, Claude, Gemini et les modèles locaux.',
+        'Cohérence cross-modèle : Le même RTF produit des résultats structurés sur GPT-5.5, Claude, Gemini et les modèles locaux.',
         'Intégration d\'équipe facile : Les collègues non-techniques peuvent apprendre RTF en quelques minutes.',
         'Réutilisabilité : Enregistrez vos meilleurs prompts RTF comme modèles et utilisez-les pour des tâches similaires.',
       ],
@@ -444,9 +444,9 @@ export const article: Record<Language, PEArticle> = {
     ],
     mentions: [
       { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
       { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
     ],
@@ -455,7 +455,7 @@ export const article: Record<Language, PEArticle> = {
     whatIsRTF: {
       title: 'RTFフレームワークとは何か',
       content: [
-        '**RTFフレームワークは、モデルに対して「誰であるか」「何をすべきか」「答えがどのように見えるべきか」を示す3部構成のプロンプトパターンです。** ぼんやりした質問を送る代わりに、ロール、タスク、フォーマットを明示的に指定します。これはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、およびOllamaまたはLM Studioを介して実行するローカルモデルに対して機能します。',
+        '**RTFフレームワークは、モデルに対して「誰であるか」「何をすべきか」「答えがどのように見えるべきか」を示す3部構成のプロンプトパターンです。** ぼんやりした質問を送る代わりに、ロール、タスク、フォーマットを明示的に指定します。これはGPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、およびOllamaまたはLM Studioを介して実行するローカルモデルに対して機能します。',
         'RTFフレームワークは意図的に最小限に設計されています。3つのフィールドだけなので、覚えやすく、素早く入力でき、多くの日常的なタスクに十分な柔軟性があります。特化したフレームワークを使うべきかどうか不明な場合は、「デフォルトプロンプトスケルトン」として使用できます。',
       ],
     },
@@ -520,7 +520,7 @@ export const article: Record<Language, PEArticle> = {
         'PromptQuorumでは、RTFフレームワークは次を可能にします：',
       ],
       items: [
-        'ロール、タスク、フォーマットを一度入力して、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、およびOllamaまたはLM Studioを介して構成されたローカルモデルなどの複数のモデルに同じ構造化されたプロンプトを送信。',
+        'ロール、タスク、フォーマットを一度入力して、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、およびOllamaまたはLM Studioを介して構成されたローカルモデルなどの複数のモデルに同じ構造化されたプロンプトを送信。',
         'RTFプロンプトを定期的なワークフローのテンプレートとして保存（例：「週次ステータスサマリー」、「カスタマーレプライドラフト」、「バグレポートサマリー」）。',
         'チームディメンション全体でRTFテンプレートを共有して、非専門家でも一貫性のある構造化された出力を生成するプロンプトを作成できるようにする。',
       ],
@@ -557,7 +557,7 @@ export const article: Record<Language, PEArticle> = {
         'タスクは明確で測定可能に：「記事を書く」ではなく「SEOブログ記事を書く、1500語、H2見出し3つ以上」。',
         'フォーマットは出力を形作る：モデルはフォーマット指定で出力構造を正確に把握します。',
         'テンプレートを作成して再利用：「顧客対応ドラフト」「週次レポート」「コード要件定義」など、繰り返されるタスク用のRTFテンプレートを作成。',
-        'モデル間で一貫性をテスト：同じRTFプロンプトをGPT-4oとClaudeで実行して、出力が期待どおりであることを確認。',
+        'モデル間で一貫性をテスト：同じRTFプロンプトをGPT-5.5とClaudeで実行して、出力が期待どおりであることを確認。',
       ],
     },
     cautions: {
@@ -600,9 +600,9 @@ export const article: Record<Language, PEArticle> = {
     ],
     mentions: [
       { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
-      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
       { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
     ],
@@ -611,7 +611,7 @@ export const article: Record<Language, PEArticle> = {
     whatIsRTF: {
       title: 'RTF框架是什么',
       content: [
-        '**RTF框架是一个三部分提示词模式，告诉模型它是谁、应该做什么，以及答案应该确切地如何显示。** 不是发送含糊的问题，而是明确指定角色、任务和格式。它在GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和通过Ollama或LM Studio运行的本地模型上都有效。',
+        '**RTF框架是一个三部分提示词模式，告诉模型它是谁、应该做什么，以及答案应该确切地如何显示。** 不是发送含糊的问题，而是明确指定角色、任务和格式。它在GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和通过Ollama或LM Studio运行的本地模型上都有效。',
         'RTF框架设计得有意简洁。只有三个字段，易于记住、快速填写，并且对许多日常任务都足够灵活。当你不确定应使用哪个专门框架时，可以将其作为"默认提示词框架"使用。',
       ],
     },
@@ -676,7 +676,7 @@ export const article: Record<Language, PEArticle> = {
         'PromptQuorum中的RTF框架让你能够：',
       ],
       items: [
-        '一次性填写角色、任务和格式，并将相同的结构化提示词发送到多个模型，如GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和通过Ollama或LM Studio配置的本地模型。',
+        '一次性填写角色、任务和格式，并将相同的结构化提示词发送到多个模型，如GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和通过Ollama或LM Studio配置的本地模型。',
         '将RTF提示词保存为模板以供重复工作流使用—例如"周报状态总结"、"客户回复草稿"或"错误报告摘要"。',
         '在团队中共享RTF模板，使即使是非专家也能创建产生一致、结构化输出的提示词。',
       ],
@@ -713,7 +713,7 @@ export const article: Record<Language, PEArticle> = {
         '任务应该清晰可衡量：不只是"写代码"，而是"用Python写一个递归函数来计算最长子串，带注释和单元测试"。',
         '格式驱动结构：模型会严格遵循格式指定，产生可预测的结构。充分利用这一点。',
         '创建可复用模板：为重复的任务保存RTF模板。"客户支持邮件"、"代码审查反馈"、"项目提案"—建立库。',
-        '跨模型验证：同一RTF提示词在GPT-4o、Claude和Gemini上应该产生类似结构和质量的输出。',
+        '跨模型验证：同一RTF提示词在GPT-5.5、Claude和Gemini上应该产生类似结构和质量的输出。',
       ],
     },
     importantNotes: {
