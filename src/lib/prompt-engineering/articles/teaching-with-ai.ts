@@ -32,7 +32,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'How Detectable Is AI Cheating in Schools?', anchor: '#how-detectable-is-ai-cheating-in-schools' },
         { label: 'How Does the EU AI Act Affect Schools?', anchor: '#how-does-the-eu-ai-act-affect-schools' },
         { label: 'Common Mistakes When Using AI in Education', anchor: '#common-mistakes-when-using-ai-in-education' },
-        { label: 'Step-by-Step Workflow: Teaching With AI', anchor: '#step-by-step-workflow-teaching-with-ai' },
+        { label: 'Step-by-Step: Integrating AI Into Your Teaching', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Frequently Asked Questions', anchor: '#frequently-asked-questions' },
         { label: 'Sources & Further Reading', anchor: '#sources-further-reading' },
@@ -40,6 +40,8 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai',
+        inLanguage: 'en',
         headline: 'Teaching With AI: Tools, Outcomes, and Prompts for Educators in 2026',
         description: 'AI tutoring systems double learning outcomes compared to traditional classrooms. Learn how teachers use AI for lesson planning, assessment, student tutoring, and why 85% of US teachers adopted AI in 2026.',
         datePublished: '2026-03-23',
@@ -96,6 +98,7 @@ export const article: Record<Language, PEArticle> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        inLanguage: 'en',
         mainEntity: [
           {
             '@type': 'Question',
@@ -182,7 +185,8 @@ export const article: Record<Language, PEArticle> = {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'How to Teach With AI',
+        inLanguage: 'en',
+        name: 'How to Integrate AI Into Your Teaching',
         step: [
           {
             '@type': 'HowToStep',
@@ -219,6 +223,7 @@ export const article: Record<Language, PEArticle> = {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
+        inLanguage: 'en',
         'name': 'AI Tools for Teachers 2026',
         'description': 'Comparing AI teaching tools for classroom use',
         'numberOfItems': 6,
@@ -476,7 +481,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational principles behind effective AI instructions',
-            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — structuring AI-generated educational materials and prompts for accuracy',
+            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — how structured prompts produce reliable AI output, applicable to lesson plan and assessment generation',
             '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — why AI hallucination affects educational tools and how to design around it',
             '[AI-Powered Research](/prompt-engineering/ai-powered-research) — verification workflows for AI-generated content applicable to student and teacher research tasks',
             '[Persona Prompting](/prompt-engineering/persona-prompting) — how role definitions like "experienced 5th-grade teacher" change AI output quality and consistency',
@@ -484,7 +489,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         howToStart: {
-          title: 'Step-by-Step Workflow: Teaching With AI',
+          title: 'Step-by-Step: Integrating AI Into Your Teaching',
           content: [
             '**Follow these five steps to integrate AI into your teaching without disrupting learning outcomes or violating academic integrity standards.**',
           ],
@@ -548,9 +553,9 @@ export const article: Record<Language, PEArticle> = {
             '**All statistics and findings in this article are sourced from peer-reviewed research, official government guidance, and publicly-documented institutional policies.** Last fact-checked: 2026-04-28 (against current Claude 4.6 Sonnet, GPT-4o, Gemini 2.5 Pro models; current Khanmigo pricing at Khan Academy; current EU AI Act Article 4 guidance effective 2025).',
           ],
           items: [
-            '[Kestin & Miller, 2024. "AI tutoring outperforms active learning classrooms — Harvard RCT"](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — randomized controlled trial with 194 students; effect size 0.73–1.3 SD',
+            '[Kestin & Miller, 2024. "AI tutoring outperforms in-class active learning: an RCT"](https://www.nature.com/articles/s41598-025-97652-6) — randomized controlled trial with 194 students; effect size 0.73–1.3 SD',
             '[Kwak, 2025. "The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes"](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — systematic review of 21 studies; 15–35% performance gains; r = 0.781',
-            '[EU AI Act, 2024. Annex III — High-Risk AI Systems in Education](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — classifies educational assessment AI as high-risk with mandatory oversight requirements',
+            '[EU AI Act, 2024. Annex III — High-Risk AI Systems in Education](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) — classifies educational assessment AI as high-risk with mandatory oversight requirements',
           ],
         },
       },
