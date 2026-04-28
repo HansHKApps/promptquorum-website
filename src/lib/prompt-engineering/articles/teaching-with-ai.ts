@@ -13,26 +13,29 @@ export const article: Record<Language, PEArticle> = {
       title: 'Teaching With AI: Tools, Outcomes, and Prompts for Educators in 2026',
       intro: 'A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time. As of April 2026, 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
       publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
       readTime: '8 min read',
       seoTitle: 'Teaching With AI: Tools, Outcomes & Prompts (2026)',
-      metaDescription: 'Harvard study: AI tutoring produces 2x faster learning in 18% less time. Compare tools for educators. Structured prompts save 5–13 hours weekly.',
+      metaDescription: 'AI tutoring doubles learning outcomes in 18% less study time. Compare 6 teaching tools, prompt templates, detection limits, and EU AI Act compliance rules.',
       educationalLevel: 'Beginner',
+      audience: 'Teachers, school administrators, and education professionals using AI tools',
       aboutTopics: ['AI in education', 'Khanmigo', 'EU AI Act'],
       howToName: 'How to Teach With AI',
+      next_refresh_due: '2026-09-23',
       toc: [
-        { label: 'What AI Teaching Tools Actually Do', anchor: '#what-they-do' },
-        { label: 'AI Tools for Teachers: Comparison', anchor: '#tools-comparison' },
-        { label: 'How to Write Prompts for Teaching Tasks', anchor: '#prompts' },
-        { label: 'The Five-Component Teacher Prompt', anchor: '#five-component' },
-        { label: 'Prompts for Assessment and Feedback', anchor: '#assessment' },
-        { label: 'The Learning Outcomes Evidence', anchor: '#evidence' },
-        { label: 'The Integrity Problem', anchor: '#integrity' },
-        { label: 'Regulatory Context: EU AI Act in Education', anchor: '#regulatory' },
-        { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'How to Teach With AI', anchor: '#how-to' },
+        { label: 'What AI Teaching Tools Actually Do', anchor: '#what-ai-teaching-tools-actually-do' },
+        { label: 'Which AI Tools Should Teachers Use in 2026?', anchor: '#which-ai-tools-should-teachers-use-in-2026' },
+        { label: 'How to Write Prompts for Teaching Tasks', anchor: '#how-to-write-prompts-for-teaching-tasks' },
+        { label: 'The Five-Component Teacher Prompt', anchor: '#the-five-component-teacher-prompt' },
+        { label: 'How Do You Prompt AI for Assessment Feedback?', anchor: '#how-do-you-prompt-ai-for-assessment-feedback' },
+        { label: 'Does AI Tutoring Improve Learning Outcomes?', anchor: '#does-ai-tutoring-improve-learning-outcomes' },
+        { label: 'How Detectable Is AI Cheating in Schools?', anchor: '#how-detectable-is-ai-cheating-in-schools' },
+        { label: 'How Does the EU AI Act Affect Schools?', anchor: '#how-does-the-eu-ai-act-affect-schools' },
+        { label: 'Common Mistakes When Using AI in Education', anchor: '#common-mistakes-when-using-ai-in-education' },
+        { label: 'How to Teach With AI', anchor: '#how-to-teach-with-ai' },
         { label: 'Related Reading', anchor: '#related-reading' },
-        { label: 'FAQ', anchor: '#faq' },
-        { label: 'Sources', anchor: '#sources' },
+        { label: 'Frequently Asked Questions', anchor: '#frequently-asked-questions' },
+        { label: 'Sources & Further Reading', anchor: '#sources-further-reading' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -40,11 +43,21 @@ export const article: Record<Language, PEArticle> = {
         headline: 'Teaching With AI: Tools, Outcomes, and Prompts for Educators in 2026',
         description: 'AI tutoring systems double learning outcomes compared to traditional classrooms. Learn how teachers use AI for lesson planning, assessment, student tutoring, and why 85% of US teachers adopted AI in 2026.',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-05',
+        dateModified: '2026-04-28',
+        proficiencyLevel: 'Beginner',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
-          url: 'https://www.promptquorum.com/about',
+          sameAs: 'https://www.promptquorum.com/about',
+        },
+        about: [
+          { '@type': 'Thing', name: 'AI in education' },
+          { '@type': 'SoftwareApplication', name: 'Khanmigo' },
+          { '@type': 'Legislation', name: 'EU AI Act' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         publisher: {
           '@type': 'Organization',
@@ -231,14 +244,21 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**As of April 2026, AI teaching tools perform four distinct functions: personalized tutoring, lesson plan generation, automated assessment feedback, and administrative task reduction — each requiring a different tool and a different prompt structure.**',
             'Intelligent Tutoring Systems (ITS) — the technical category for tools like Khanmigo — adapt difficulty, provide immediate feedback, and guide students through Socratic questioning rather than supplying direct answers. General-purpose LLMs (Large Language Models) like GPT-4o (OpenAI) and Claude 4.6 Sonnet (Anthropic) handle lesson plan generation, rubric creation, and differentiated instruction materials. Administrative AI tools handle attendance summaries, parent communication drafts, and progress reports — the tasks teachers report as the most time-consuming.',
-            'In one sentence: AI in education is not one tool — it is a stack, where each layer serves a specific role in the teaching workflow.',
+            'In one sentence: [AI in education](/prompt-engineering/what-is-prompt-engineering) is not one tool — it is a stack, where each layer serves a specific role in the teaching workflow.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI teaching tools include tutoring systems (Khanmigo), lesson planners (ChatGPT, Claude), and administrative assistants — each optimized for different classroom tasks.' },
           ],
         },
         toolComparison: {
-          title: 'AI Tools for Teachers: A Practical Comparison',
+          title: 'Which AI Tools Should Teachers Use in 2026?',
           content: [
             '**Khanmigo (Khan Academy), MagicSchool, and ChatGPT (OpenAI) each serve distinct classroom functions — choosing the wrong tool for the task wastes both time and opportunity.**',
-            'Khanmigo is Khan Academy\'s AI teaching assistant powered by GPT-4. It uses Socratic questioning to guide students toward answers rather than providing them directly — a critical design distinction for learning retention. It integrates directly into Khan Academy courses, making it the strongest option for schools already using that platform. MagicSchool offers the broadest educator toolset — lesson planning, classroom management templates, IEP draft assistance, and parent communication tools. ChatGPT (GPT-4o) provides the most flexible general-purpose assistance with the highest autonomy, but requires structured prompts from the teacher to produce classroom-ready outputs.',
+            'Khanmigo is Khan Academy\'s AI teaching assistant powered by GPT-4. It uses Socratic questioning to guide students toward answers rather than providing them directly — a critical design distinction for learning retention. It integrates directly into Khan Academy courses, making it the strongest option for schools already using that platform.',
+            'MagicSchool offers the broadest educator toolset — lesson planning, classroom management templates, IEP draft assistance, and parent communication tools. ChatGPT (GPT-4o) provides the most flexible general-purpose assistance with the highest autonomy, but requires structured prompts from the teacher to produce classroom-ready outputs.',
+          ],
+          callouts: [
+            { type: '💡', label: 'Pro Tip', text: 'No single tool does everything. Most teachers use 2–3 tools in combination: Khanmigo for student tutoring, MagicSchool for planning, and ChatGPT for quick content generation.' },
           ],
           columns: ['Tool', 'Best For', 'Context', 'Free Tier'],
           rows: [
@@ -284,12 +304,17 @@ export const article: Record<Language, PEArticle> = {
           title: 'How to Write Prompts for Teaching Tasks',
           content: [
             '**A structured teacher prompt — one that specifies grade level, subject, learning objective, prior knowledge, time constraints, and output format — produces classroom-ready materials without editing; an unstructured prompt produces a generic draft that requires 30+ minutes of revision.**',
-            'Prompt engineering is the practice of crafting precise, structured instructions that guide AI output. For teachers, the difference between a usable and unusable AI output is almost always in the specificity of the prompt, not the capability of the model.',
+            '[Prompt engineering](/prompt-engineering/what-is-prompt-engineering) is the practice of crafting precise, structured instructions that guide AI output. For teachers, the difference between a usable and unusable AI output is almost always in the specificity of the prompt, not the capability of the model.',
+          ],
+          snippets: [
+            { type: 'in-plain-terms', text: 'Think of AI prompts like recipes: vague prompts ("make something tasty") produce inconsistent results; detailed prompts ("bake a chocolate cake at 350°F for 35 minutes with dark chocolate") produce reliable outcomes.' },
           ],
         },
         promptFramework: {
           title: 'The Five-Component Teacher Prompt',
-          content: ['Use this structure for all lesson planning and content generation:', '**Bad Prompt**'],
+          content: [
+            '**Use this structure for all lesson planning and content generation — it turns generic AI output into classroom-ready materials in one pass.**',
+          ],
           items: [
             '**Role** — "You are an experienced 5th-grade mathematics teacher."',
             '**Objective** — "Create a 45-minute lesson on adding fractions with unlike denominators."',
@@ -297,29 +322,36 @@ export const article: Record<Language, PEArticle> = {
             '**Constraints** — "Align to Common Core standard 5.NF.A.1. Include a 10-minute warm-up, direct instruction with three examples, partner practice, and an exit ticket."',
             '**Output format** — "Return a structured lesson plan with section headings, time allocation, and materials list. No prose introduction."',
           ],
-          blockquote: 'Create a fractions lesson.',
+          callouts: [
+            { type: '📌', label: 'Key Point', text: 'The specificity difference is dramatic: a vague prompt requires 45+ minutes of editing, while a structured prompt produces a draft needing only 5–10 minutes of personalization.' },
+          ],
         },
         goodExample: {
           title: '[Good Prompt Example]',
           content: [
-            '**Good Prompt**',
-            'Specific, context-rich prompts save teachers 5—13 hours per week on lesson planning and administrative tasks when used consistently. The vague prompt produces a generic output requiring heavy editing; the structured prompt produces a document close to classroom-ready.',
+            '**Specific, context-rich prompts save teachers 5—13 hours per week on lesson planning and administrative tasks when used consistently.** The vague prompt produces a generic output requiring heavy editing; the structured prompt produces a document close to classroom-ready.',
           ],
           blockquote: 'You are an experienced 5th-grade math teacher. Create a 45-minute lesson on adding fractions with unlike denominators. Students understand equivalent fractions but have not combined them yet. Include: a 10-minute warm-up using visual models, 15 minutes of direct instruction with three worked examples, 15 minutes of partner practice, and a 5-minute exit ticket. Align to Common Core 5.NF.A.1. Output only the lesson plan with section headers, time allocations, and a materials list.',
         },
         assessmentPrompt: {
-          title: 'Prompts for Assessment and Feedback',
+          title: 'How Do You Prompt AI for Assessment Feedback?',
           content: [
-            '**Good Prompt — Assessment Feedback**',
-            'For formative assessment, include your rubric criteria directly in the prompt. Claude 4.6 Sonnet\'s 200k-token context window handles full class sets of short essays in a single session — approximately 160 standard pages — making batch feedback generation practical for teachers with large classes.',
+            '**For formative assessment, include your rubric criteria directly in the prompt so the AI understands your grading standards and applies them consistently across all student submissions.**',
+            'Claude 4.6 Sonnet\'s 200k-token [context window](/prompt-engineering/context-windows-explained) handles full class sets of short essays in a single session — approximately 160 standard pages — making batch feedback generation practical for teachers with large classes. GPT-4o handles ~100 pages per session, sufficient for typical class sizes.',
           ],
           blockquote: 'You are an experienced 7th-grade English teacher. Analyze this student argumentative essay using this rubric: clear thesis (4 pts), three supporting arguments with evidence (12 pts), acknowledgment of counterargument (4 pts), formal transitions (3 pts), conclusion that reinforces thesis (3 pts). For each criterion: state the score, quote the relevant sentence, and write one specific improvement suggestion. Total score out of 26.',
+          callouts: [
+            { type: '⚠️', label: 'Warning', text: 'AI can\'t assess voice, originality, or subjective writing quality reliably — always use AI feedback for mechanics and structure, not for holistic rubric scores on subjective criteria. Keep the final summative grade human.' },
+          ],
         },
         learningOutcomes: {
-          title: 'The Learning Outcomes Evidence',
+          title: 'Does AI Tutoring Improve Learning Outcomes?',
           content: [
             '**Students using AI tutoring systems outperform peers in traditional instruction by 15—35% on standardized assessments across 21 empirical studies.**',
             'The strongest evidence comes from a 2024 randomized controlled trial led by Gregory Kestin and Kelly Miller at Harvard University, involving 194 undergraduate physics students. The study used a crossover design where each student experienced both AI tutoring (via "PS2 Pal," powered by GPT-4) and traditional active learning across two topics. Key findings:',
+          ],
+          callouts: [
+            { type: '🔍', label: 'Did You Know?', text: 'Students showed higher engagement and motivation in AI tutoring sessions. The effect size (0.73–1.3 SD) is equivalent to the learning gain from moving from a typical classroom to top-quartile instruction.' },
           ],
           items: [
             'AI-tutored students scored significantly higher on post-tests — effect size between 0.73 and 1.3 standard deviations',
@@ -330,12 +362,15 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         integrityProblem: {
-          title: 'The Integrity Problem: What the Numbers Show',
+          title: 'How Detectable Is AI Cheating in Schools?',
           content: [
-            '**As of April 2026, 92% of students now use AI for studies; 22% admit to using it to complete assignments in ways their institutions prohibit — and 95% of students who cheat with AI are not caught.**',
-            'Academic integrity is the central challenge in AI-assisted education. The scale of adoption has outpaced both policy and detection technology. Current AI detection tools report false positive rates of 15—30% in peer-reviewed studies — meaning that for every 100 legitimate student submissions flagged as AI-generated, 15—30 are false accusations with potentially serious academic consequences.',
-            'The detection problem has three layers:',
+            '**Current AI detection tools have false positive rates of 15—30% in peer-reviewed studies, meaning they are unreliable for high-stakes academic integrity decisions — and many students use [AI hallucinations](/prompt-engineering/ai-hallucinations-how-to-stop) strategically to evade detection.**',
+            'Academic integrity is the central challenge in AI-assisted education. The scale of adoption has outpaced both policy and detection technology. Student adoption is widespread: surveys report 60–92% of students use AI for studies, though institutional policies vary widely on which uses are permitted.',
+            'The detection problem has three critical layers:',
             'The emerging institutional consensus: AI detection tools are not final authorities. Universities increasingly require human-plus-automated review and enforce disclosure norms rather than prohibition norms.',
+          ],
+          callouts: [
+            { type: '⚠️', label: 'Warning', text: 'Non-native English speakers and students with structured writing styles are flagged at disproportionately higher rates. Accusing a student based solely on AI detection output carries a 15–30% risk of false accusation.' },
           ],
           items: [
             '**False positives** — Non-native English writers are flagged at disproportionately higher rates; structured academic writing styles (common in technical fields) consistently trigger detection tools',
@@ -344,11 +379,14 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         regulatoryContext: {
-          title: 'Regulatory Context: EU AI Act in Education',
+          title: 'How Does the EU AI Act Affect Schools?',
           content: [
             '**The EU AI Act classifies AI systems used in education as "high-risk" — meaning tools that influence exam scoring, learning pathways, or student assessment are subject to mandatory transparency, human oversight, and bias-prevention requirements.**',
             'Under Annex III of the EU AI Act, educational AI tools that determine access to education or assess learning outcomes are classified as high-risk systems. Schools and universities operating within the EU are considered AI "deployers" under the Act, carrying legal obligations including:',
             'The EU AI Act bans emotion-recognition systems in educational settings outright — directly affecting tools that track student engagement via facial analysis. Chinese educational institutions deploy AI tools under China\'s Interim Measures for Generative AI (2023), which require AI-generated educational content to be labelled as such. Japan\'s Ministry of Education (MEXT) issued guidance in 2023 cautioning against AI use in certain assessment contexts, while acknowledging AI as a core student competency.',
+          ],
+          callouts: [
+            { type: '📌', label: 'Key Point', text: 'EU schools must implement staff AI literacy training (Article 4, effective 2025) for all teachers and administrators working with AI systems. Non-compliance carries fines up to €30 million.' },
           ],
           items: [
             'Ensuring staff AI literacy (Article 4 mandate — effective from 2025)',
@@ -359,12 +397,18 @@ export const article: Record<Language, PEArticle> = {
         },
         commonMistakes: {
           title: 'Common Mistakes When Using AI in Education',
+          content: [
+            '**These five pitfalls cost teachers time and can create legal or ethical problems — all are easy to fix with the right process.**',
+          ],
           items: [
             '**Using AI as a grading replacement rather than a feedback tool:** AI generates plausible rubric scores but cannot reliably assess originality, voice, or argumentation quality in extended writing. Use AI for formative feedback on low-stakes work; keep summative judgment human.',
             '**Unstructured prompts for lesson planning:** "Make a lesson on photosynthesis" produces a generic output requiring more editing time than writing from scratch. Always specify grade level, prior knowledge, time constraints, and output format.',
             '**Over-relying on AI detection tools for academic integrity:** False positive rates of 15–30% mean that accusing a student based solely on AI detection output carries a 15–30% chance of false accusation. Non-native English writers are flagged at disproportionately higher rates.',
             '**Ignoring EU AI Act obligations for EU schools:** Educational AI tools that influence learning pathways or assessment are high-risk under Annex III. EU schools that deploy these tools without Article 4 staff AI literacy training are non-compliant.',
             '**Using high-temperature settings for educational content:** Default temperature on most AI platforms (0.7–1.0) increases hallucination risk. For factual lesson content, assessment rubrics, and citation generation, set temperature to 0.1–0.2.',
+          ],
+          callouts: [
+            { type: '🛠️', label: 'Best Practice', text: 'Document all AI use: which tool, which settings (temperature, context), and what task. This creates an audit trail for compliance (EU AI Act Article 6) and helps you improve over time.' },
           ],
         },
         relatedReading: {
@@ -380,6 +424,9 @@ export const article: Record<Language, PEArticle> = {
         },
         howToStart: {
           title: 'How to Teach With AI',
+          content: [
+            '**Follow these five steps to integrate AI into your teaching without disrupting learning outcomes or violating academic integrity standards.**',
+          ],
           numberedItems: [
             'Define learning objectives and assessments before introducing AI.',
             'Use AI for personalized practice and immediate feedback, not for grading judgment calls.',
@@ -390,6 +437,7 @@ export const article: Record<Language, PEArticle> = {
         },
         faq: {
           title: 'Frequently Asked Questions',
+          items: [],
           faqs: [
             {
               q: 'Do AI tutors actually improve learning outcomes?',
@@ -435,6 +483,9 @@ export const article: Record<Language, PEArticle> = {
         },
         sources: {
           title: 'Sources & Further Reading',
+          content: [
+            '**All statistics and findings in this article are sourced from peer-reviewed research, official government guidance, and publicly-documented institutional policies.**',
+          ],
           items: [
             '[Kestin & Miller, 2024. "AI tutoring outperforms active learning classrooms — Harvard RCT"](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — randomized controlled trial with 194 students; effect size 0.73—1.3 SD',
             '[Kwak, 2025. "The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes"](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — systematic review of 21 studies; 15—35% performance gains; r = 0.781',
