@@ -1531,7 +1531,7 @@ export const article: Record<Language, PEArticle> = {
       content: [
         'Bon prompt — structure à cinq composants :',
       ],
-      blockquote: 'Tu es un enseignant expérimenté de mathématiques en cinquième année. Crée une leçon de 45 minutes sur l\'addition de fractions avec des dénominateurs différents. Les élèves comprennent les fractions équivalentes mais ne les ont pas encore combinées. Fournis : un échauffement de 10 minutes avec modèles visuels, 15 minutes d\'enseignement direct avec trois exemples travaillés, 15 minutes de pratique en paires, et un billet de sortie de 5 minutes. Alignement Common Core 5.NF.A.1. Donne uniquement le plan de leçon avec en-têtes de section, allocations de temps et une liste de matériaux.',
+      blockquote: 'Tu es un enseignant expérimenté de mathématiques en cinquième année. Crée une leçon de 45 minutes sur l\'addition de fractions avec des dénominateurs différents. Les élèves comprennent les fractions équivalentes mais ne les ont pas encore combinées. Fournis : un échauffement de 10 minutes avec modèles visuels, 15 minutes d\'enseignement direct avec trois exemples travaillés, 15 minutes de pratique en paires, et un billet de sortie de 5 minutes. Alignement programme de CM2, Domaine Nombres et calculs. Donne uniquement le plan de leçon avec en-têtes de section, allocations de temps et une liste de matériaux.',
       items: [
         'La version structurée produit un document avec des sections alignées sur rubrique, des activités chronométrées et une liste de matériaux. Prêt à utiliser ou à affiner — pas complet à réécrire.',
       ],
@@ -1607,7 +1607,7 @@ export const article: Record<Language, PEArticle> = {
     regulatoryRegionalContext: {
       title: 'Réglementations pédagogiques IA mondiales',
       content: [
-        'La Loi IA de l\'UE interdit complètement les systèmes de reconnaissance d\'émotions dans les établissements éducatifs — affectant directement les outils suivant l\'engagement des élèves par analyse faciale. Les établissements éducatifs chinois déploient des outils IA selon les mesures intermédiaires chinoises pour l\'IA générative (2023), exigeant que le contenu pédagogique généré par l\'IA soit étiqueté comme tel. Le ministère japonais de l\'Éducation (MEXT) a publié en 2023 des directives mettant en garde contre l\'utilisation d\'IA dans certains contextes d\'évaluation, tout en reconnaissant l\'IA comme une compétence pédagogique fondamentale.',
+        'La Loi IA de l\'UE interdit complètement les systèmes de reconnaissance d\'émotions dans les établissements éducatifs — affectant directement les outils suivant l\'engagement des élèves par analyse faciale. La CNIL recommande le recours à des solutions d\'IA locales pour le traitement de données professionnelles sensibles (données financières, médicales, juridiques). Les établissements éducatifs chinois déploient des outils IA selon les mesures intermédiaires chinoises pour l\'IA générative (2023), exigeant que le contenu pédagogique généré par l\'IA soit étiqueté comme tel. Le ministère japonais de l\'Éducation (MEXT) a publié en 2023 des directives mettant en garde contre l\'utilisation d\'IA dans certains contextes d\'évaluation, tout en reconnaissant l\'IA comme une compétence pédagogique fondamentale.',
       ],
     },
     commonMistakes: {
@@ -1637,6 +1637,9 @@ export const article: Record<Language, PEArticle> = {
         'Enseignez aux élèves à valider les résultats d\'IA et à reconnaître les hallucinations.',
         'Créez un modèle de prompt structuré que les élèves utilisent pour toutes les interactions IA.',
         'Établissez des directives claires pour l\'utilisation d\'IA sur des tâches spécifiques.',
+      ],
+      callouts: [
+        { type: '✨', label: 'Avantage immédiat', text: 'Les enseignants signalent une économie de 5–13 heures par semaine en utilisant des prompts structurés — suffisant pour ajouter une heure de tutorat personnalisé par élève chaque semaine.' },
       ],
     },
     relatedReading: {
