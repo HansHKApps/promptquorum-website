@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Constrained Prompting',
-      intro: 'Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do, so outputs stay inside clearly defined boundaries. This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
+      intro: '**Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do — using "must," "must not," and "only" language — so outputs stay inside clearly defined boundaries.** This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
 
@@ -22,6 +22,7 @@ export const article: Record<Language, PEArticle> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Constrained Prompting',
       dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28',
       audience: 'Developers, product managers, and teams building LLM-powered workflows',
       next_refresh_due: '2026-09-26',
       aboutTopics: ['Constrained Prompting', 'Structured Output', 'Prompt Engineering'],
@@ -142,6 +143,14 @@ export const article: Record<Language, PEArticle> = {
             'Length constraints: Word or character limits, or a fixed number of bullets or sections.',
             'Safety constraints: Instructions to avoid personal data, medical advice, legal conclusions, or disallowed content categories.',
           ],
+          columns: ['Constraint Type', 'Example', 'When to Use'],
+          rows: [
+            { 'Constraint Type': 'Structural', 'Example': '"Return as JSON: {key: value}"', 'When to Use': 'API integrations, data pipelines' },
+            { 'Constraint Type': 'Content', 'Example': '"Must include risks section; must not mention competitors"', 'When to Use': 'Reports, customer comms' },
+            { 'Constraint Type': 'Style', 'Example': '"Formal tone, no contractions, Grade 8 reading level"', 'When to Use': 'Brand-controlled outputs' },
+            { 'Constraint Type': 'Length', 'Example': '"≤150 words, exactly 5 bullet points"', 'When to Use': 'Templated content, summaries' },
+            { 'Constraint Type': 'Safety', 'Example': '"Must not provide medical diagnoses or legal advice"', 'When to Use': 'Regulated industries, public-facing' },
+          ],
           callouts: [
             { type: 'tip', label: 'Pro Tip', text: 'For JSON output, always provide the exact key names and value types in the prompt. "Return JSON" without a schema produces inconsistent key naming across models.' },
           ],
@@ -156,8 +165,6 @@ export const article: Record<Language, PEArticle> = {
             '"You are a B2B product marketer. Task: Write a summary of our new analytics feature for a product page. Constraints: Length: 120–160 words. Structure: 1 short intro paragraph, then 3 bullet points, then 1 closing sentence. Style: Clear, neutral-professional tone. No hype words like \'revolutionary\' or \'game-changing\'. Content: Mention the main benefit (faster insight into customer behavior) and one concrete example use case. Output format: Valid Markdown with bullet points using `-`."',
             'The constrained version defines length, structure, style, and required content. Output becomes predictable and reusable — suitable for templating across team workflows.',
           ],
-          blockquote: '"Write a summary of our new analytics feature."',
-          blockquoteSource: 'Unconstrained prompt — produces variable length, structure, and tone on every run',
           callouts: [
             { type: 'practice', label: 'Rule', text: 'Every constraint you add reduces the variance in model output. Start with 1–2 constraints, test, then add more. Stacking 5+ constraints at once increases the risk of the model violating one silently.' },
           ],
