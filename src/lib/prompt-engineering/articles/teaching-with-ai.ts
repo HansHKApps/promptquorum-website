@@ -59,6 +59,12 @@ export const article: Record<Language, PEArticle> = {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
         },
+        audience: {
+          '@type': 'EducationalAudience',
+          educationalRole: 'Teacher',
+          audienceType: 'Teachers, school administrators, education professionals',
+        },
+        educationalLevel: 'K-12, Higher Education',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -539,7 +545,7 @@ export const article: Record<Language, PEArticle> = {
         sources: {
           title: 'Sources & Further Reading',
           content: [
-            '**All statistics and findings in this article are sourced from peer-reviewed research, official government guidance, and publicly-documented institutional policies.**',
+            '**All statistics and findings in this article are sourced from peer-reviewed research, official government guidance, and publicly-documented institutional policies.** Last fact-checked: 2026-04-28 (against current Claude 4.6 Sonnet, GPT-4o, Gemini 2.5 Pro models; current Khanmigo pricing at Khan Academy; current EU AI Act Article 4 guidance effective 2025).',
           ],
           items: [
             '[Kestin & Miller, 2024. "AI tutoring outperforms active learning classrooms — Harvard RCT"](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — randomized controlled trial with 194 students; effect size 0.73–1.3 SD',
