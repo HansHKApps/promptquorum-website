@@ -11,24 +11,44 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       title: 'The 5 Building Blocks Every Prompt Needs',
-      seoTitle: 'The 5 Building Blocks Every Prompt Needs in 2026',
+      seoTitle: '5 Prompt Building Blocks: Structure Any AI Prompt (2026)',
       intro: 'The 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. How to use each one.',
-      metaDescription: 'Master the 5 blocks every AI prompt needs: Role, Task, Input & Examples, Constraints, Output Format. Proven framework for reliable, repeatable prompts.',
+      metaDescription: 'Role, Task, Examples, Constraints, and Output Format — 5 building blocks that explain every reliable AI output. Miss one, and results become inconsistent.',
       publishDate: '2026-03-01',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Structure',
+      audience: 'Developers and non-technical users writing AI prompts',
+      dateModified: '2026-04-28',
+      next_refresh_due: '2026-09-01',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Are the 5 Building Blocks?', anchor: '#what-are-the-5-building-blocks' },
+        { label: 'Why Do These 5 Blocks Matter?', anchor: '#why-building-blocks-matter' },
+        { label: 'Block 1: Role & Context', anchor: '#block-1-role-context' },
+        { label: 'Block 2: Task / Instruction', anchor: '#block-2-task-instruction' },
+        { label: 'Block 3: Input & Examples', anchor: '#block-3-input-examples' },
+        { label: 'Block 4: Constraints', anchor: '#block-4-constraints' },
+        { label: 'Block 5: Output Format', anchor: '#block-5-output-format' },
+        { label: 'Putting the 5 Blocks Together', anchor: '#prompt-template' },
+        { label: 'Frameworks & Tools Mapping', anchor: '#frameworks-and-tools' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'How to Build a Prompt (Step by Step)', anchor: '#how-to-build-a-prompt' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Frequently Asked Questions', anchor: '#faq' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The 5 Building Blocks Every Prompt Needs',
         description: 'Master the 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. With these five components, any AI prompt becomes reliable and repeatable.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-04-28',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'en',
+        proficiencyLevel: 'Beginner',
         keywords: ['prompt structure', 'prompt building blocks', 'role and context', 'output format', 'prompt constraints', 'few-shot examples', 'prompt engineering', 'GPT-4o', 'Claude', 'Gemini'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'OpenAI GPT-4o' },
@@ -38,10 +58,86 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Thing', name: 'CO-STAR framework' },
           { '@type': 'Thing', name: 'CRAFT framework' },
         ],
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'AI Prompt Structure' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'en',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Do I really need all 5 blocks in every prompt?',
+            acceptedAnswer: { '@type': 'Answer', text: 'No. Simple, unambiguous tasks often need only a Task / Instruction and an Output Format. Add Role & Context when the domain or audience matters. Add Constraints when failure modes are costly. Add Examples when format precision is critical. Start minimal and add blocks only when the output does not meet your standard.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is Role more important than Context, or the other way around?',
+            acceptedAnswer: { '@type': 'Answer', text: 'They work as a pair — neither is sufficient alone. Role without context produces generic expert-mode output. Context without role produces situationally aware but tonally inconsistent output. For most tasks, one sentence combining both works well: "You are a [role] working with [audience] on [domain task]."' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I keep prompts short and still include all 5 blocks?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Each block can be expressed in a single sentence. A complete five-block prompt can be under 100 words. Brevity is not the problem — vagueness is. A short, precise prompt with all five elements consistently outperforms a long, rambling one with none.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the difference between Context and Examples?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Context describes the situation, domain, and audience — it is background information that frames the task. Examples are sample input/output pairs that show the model what a correct answer looks like. Context tells the model where it is; examples show it what to produce.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Where do constraints fit if I am using a framework like CRAFT or CO-STAR?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Every major framework has a field that maps to constraints — "Restrictions" in CRAFT, "Tone & Style" in CO-STAR, "Constraints" in SPECS. If your framework does not have an explicit constraints field, add your constraints at the end as a separate "Do not" section — all models handle this reliably.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does output format matter if I am just asking a simple question?',
+            acceptedAnswer: { '@type': 'Answer', text: 'For conversational questions, specifying format is optional. For any output that will be used downstream — pasted into a document, parsed by code, published, or reused across team members — specifying the format is essential. It is the difference between getting a result and getting a usable result.' },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'en',
+        name: 'How to Build a Prompt Using the 5 Building Blocks',
+        totalTime: 'PT5M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Set Role & Context', text: 'State who the model is and who it is working for. One sentence: "You are a [role] helping [audience]."' },
+          { '@type': 'HowToStep', position: 2, name: 'Write the Task / Instruction', text: 'State the exact action you want the model to take using a verb. "Summarize", "Classify", "Translate", "Generate".' },
+          { '@type': 'HowToStep', position: 3, name: 'Add Input & Examples', text: 'Insert the data or content the model will work on. Add one or two examples if the format must be precise.' },
+          { '@type': 'HowToStep', position: 4, name: 'Set Constraints', text: 'List what the model must not do, length limits, and any rules for the output.' },
+          { '@type': 'HowToStep', position: 5, name: 'Specify Output Format', text: 'Define the exact shape of the output: JSON, bullet list, table, paragraph, numbered steps.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'en',
+        name: '5 Building Blocks Every AI Prompt Needs',
+        description: 'The five structural components that every reliable AI prompt contains: Role, Task, Input & Examples, Constraints, and Output Format.',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Block 1: Role & Context', description: 'Tells the model who it is and who it is working for. Sets domain expertise and audience awareness.' },
+          { '@type': 'ListItem', position: 2, name: 'Block 2: Task / Instruction', description: 'The explicit statement of what the model must do, using a clear action verb.' },
+          { '@type': 'ListItem', position: 3, name: 'Block 3: Input & Examples', description: 'The data or content the model works on, plus optional examples showing what correct output looks like.' },
+          { '@type': 'ListItem', position: 4, name: 'Block 4: Constraints', description: 'Rules the model must follow — length limits, forbidden content, style restrictions.' },
+          { '@type': 'ListItem', position: 5, name: 'Block 5: Output Format', description: 'The exact structure the output must take: JSON, bullet list, table, prose paragraph, or numbered steps.' },
+        ],
       },
       sections: {
 
         definition: {
+          id: 'what-are-the-5-building-blocks',
           title: 'What Are the 5 Building Blocks of a Prompt?',
           content: [
             '**The 5 building blocks every prompt needs are: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format.** These five components are the minimum structure that separates a reliable, repeatable prompt from a vague question that produces inconsistent results.',
@@ -50,6 +146,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         tldr: {
+          id: 'key-takeaways',
           title: 'Key Takeaways',
           isTldr: true,
           items: [
@@ -62,7 +159,8 @@ export const article: Record<Language, PEArticle> = {
         },
 
         whyMatters: {
-          title: 'Why These 5 Blocks Matter in 2026',
+          id: 'why-building-blocks-matter',
+          title: 'Why Do These 5 Building Blocks Matter?',
           content: [
             'The five-block model reflects the converged consensus across prompt engineering guidance from OpenAI, Google, Anthropic, and independent practitioners. Role, instructions, examples, constraints, and output format appear — under different names — in every major framework published since 2023. This is not coincidence: it is the minimum information a probabilistic model needs to produce a useful, consistent result.',
             'The business case is straightforward. Missing role and context produces generic answers that need rewriting. Missing constraints increases hallucination risk and off-brand output. Missing output format means results that cannot be parsed or copy-pasted directly. The 5-block model addresses all three failure modes at once, and applies equally to GPT-4-class models, Claude, Gemini, and locally-run LLMs.',
@@ -70,7 +168,8 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block1: {
-          title: 'Block 1: Role & Context',
+          id: 'block-1-role-context',
+          title: 'What Does the Role & Context Block Do?',
           content: [
             '**Role** tells the model what persona or expertise to adopt. **Context** tells it the situation, domain, and audience it is operating in. They are grouped together because they work as a pair — role is who the model is, and context is the environment that shapes what "good" means for that task.',
             'When you omit role and context, the model answers from a generic perspective — useful to no one in particular. With them, the same model becomes a senior tax advisor answering a question about VAT returns, a junior copywriter writing for a 19-year-old audience, or a data analyst summarising a quarterly report. The output calibrates to your actual situation.',
@@ -88,7 +187,8 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block2: {
-          title: 'Block 2: Task / Instruction',
+          id: 'block-2-task-instruction',
+          title: 'What Is the Task / Instruction Block?',
           content: [
             '**The Task / Instruction block is the explicit statement of what you want the model to do.** It is the most important block — every other block supports this one. A clear, specific, testable instruction reduces ambiguity to near-zero. A vague instruction is the single biggest cause of poor AI output across all models and use cases.',
             'Current best-practice guidance emphasises making the task actionable and observable: use a verb, state the deliverable, and where possible describe a success criterion. "Write a summary" is a task. "Summarise the following article in 3 bullet points, each under 20 words" is a task with a testable output. The difference in output quality is significant.',
@@ -106,7 +206,8 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block3: {
-          title: 'Block 3: Input & Examples',
+          id: 'block-3-input-examples',
+          title: 'How Do Input and Examples Improve Accuracy?',
           content: [
             '**Input** is the actual data, text, or material the model needs to work on. **Examples** are sample input/output pairs that demonstrate what a correct response looks like. These are separate concerns: input is the raw material for the current task, examples are the teaching signal that shapes how the model performs it.',
             'Including 1–3 examples (few-shot prompting) is the single most reliable technique for locking in output format and tone. When you show the model what a good answer looks like, it matches the pattern rather than inferring it from the task description alone. This matters most for specialised formats, consistent tone, and structured outputs where precision is required.',
@@ -124,7 +225,8 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block4: {
-          title: 'Block 4: Constraints',
+          id: 'block-4-constraints',
+          title: 'What Are Constraints and Why Do Prompts Need Them?',
           content: [
             '**Constraints are the rules the model must follow: what it must do and what it must not do.** They include length limits, forbidden topics or phrases, required sources, brand voice rules, safety boundaries, and format restrictions. Constraints are the most commonly omitted block — and their absence is the primary cause of hallucinated facts, off-brand language, and outputs that arrive in the wrong format.',
             'Adding one well-scoped constraint is often the highest-leverage change you can make to an existing prompt. "Do not make up statistics" cuts hallucination risk sharply. "Never exceed 100 words" forces concision. "Only use information from the text provided" grounds the output in the source material and eliminates fabrication entirely for that task.',
@@ -143,7 +245,8 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block5: {
-          title: 'Block 5: Output Format',
+          id: 'block-5-output-format',
+          title: 'How Does Output Format Control What You Get?',
           content: [
             '**Output Format specifies the exact shape of the answer the model should produce.** This is the block that determines whether the output is directly usable or requires reformatting before it is useful. For automated pipelines, an unspecified output format means brittle, inconsistent parsing. For GEO, a structured output is more likely to be cited verbatim by AI search engines, because structured answers are easier to extract programmatically.',
             'The output format block can specify the file format (JSON, Markdown, CSV), the structure (table, bullet list, numbered steps), the length, and the labelling of sections. The more precisely you specify it, the less editing the output requires.',
@@ -161,6 +264,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         template: {
+          id: 'prompt-template',
           title: 'Putting the 5 Blocks Together: A Simple Template',
           content: 'The template below shows all 5 blocks assembled in order for a single domain-neutral task. Each part is labelled so you can see exactly where each block begins and ends. Replace the content in each section to adapt it to any domain.',
           items: [
@@ -177,6 +281,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         frameworks: {
+          id: 'frameworks-and-tools',
           title: 'How These Blocks Map to Frameworks and Tools',
           content: [
             'Popular prompt engineering frameworks are opinionated ways to arrange the same five building blocks under different names and in different orders. CRAFT, CO-STAR, and SPECS all map directly to this five-block model. Understanding the blocks first means you can apply any framework without memorising its specific terminology from scratch.',
@@ -197,6 +302,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         mistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes with the 5 Blocks',
           items: [
             '**Missing role entirely:** The model answers from a generic perspective — specify domain and expertise level, even in one sentence',
@@ -210,6 +316,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         howToStart: {
+          id: 'how-to-build-a-prompt',
           title: 'How to Build a Prompt Using the 5 Building Blocks',
           numberedItems: [
             '**Set Role & Context:** Open with who the model is and the domain it is operating in. Example: "You are a senior tax advisor helping a small business owner in Germany." Without this, the model answers from a generic perspective.',
@@ -265,6 +372,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'Sources & Further Reading',
           items: [
             '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Official prompt engineering guidance from OpenAI, including best practices for role-based and structured prompts.',
