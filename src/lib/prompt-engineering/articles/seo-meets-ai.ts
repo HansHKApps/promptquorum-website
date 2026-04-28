@@ -160,6 +160,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Content Structure and AI Citation', 'description': 'How answer-first structure, entity density, and formatting maximize AI citations' },
         ],
       },
+      widgetEmbedUrl: '/widgets/seo-meets-ai-widget.html',
+      widgetDescription: 'Interactive GEO audit guide: Answer 10 quick questions about your content structure, technical SEO, and AI platform readiness. Get a 0–10 readiness score, regional compliance guidance (DSGVO, CNIL, METI, Data Security Law), and a prioritized action plan with effort estimates for optimizing your content to rank and get cited in ChatGPT, Perplexity, Google AI Overviews, and Claude.',
       sections: {
         tldr: {
           title: 'Key Takeaways',

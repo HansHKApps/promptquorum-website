@@ -2073,5 +2073,481 @@ export const article: Record<Language, PEArticle> = {
     },
   },
 },
-    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: '应用案例',
+      title: '教学中的AI：工具、学习成效与教师提示词框架（2026）',
+      intro: '**有效地在2026年用AI教学：采用结构化五步提示词（角色、目标、学生背景、约束条件、输出格式），选择与任务匹配的工具（Khanmigo用于辅导、MagicSchool用于课程规划、Claude 4.6 Sonnet或GPT-4o用于内容生成），将温度设置为0.1–0.2处理事实性内容，对于欧盟学校，在部署任何高风险系统前实施第4条员工AI素养培训。** 2024年哈佛大学随机对照试验发现AI辅导的学习增长是主动学习课堂的两倍以上——用时减少18%。截至2026年4月，85%的美国教师和86%的学生在学年中使用了AI，超过任何其他行业。挑战不在于采用，而在于结构：模糊提示词产生无法使用的输出，结构化提示词每周节省5–13小时，欧盟学校现在对任何涉及学生评估的AI工具承担AI法的法律义务。',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      readTime: '阅读约8分钟',
+      seoTitle: '教学中的AI：工具、学习成效与教师提示词框架（2026）',
+      metaDescription: 'AI辅导在18%更短的学习时间内将学习成效提升2倍。对比6大教学工具、提示词模板、检测局限、中国《数据安全法》与AI Act合规指南。',
+      educationalLevel: 'Beginner',
+      audience: '使用AI工具的教师、学校管理人员和教育专业人士',
+      aboutTopics: ['教育中的AI', 'Khanmigo', 'EU AI Act'],
+      howToName: '如何用AI进行教学',
+      next_refresh_due: '2026-09-23',
+      toc: [
+        { label: 'AI教学工具的实际功能', anchor: '#what-ai-teaching-tools-actually-do' },
+        { label: '2026年教师应该选择哪些AI工具？', anchor: '#which-ai-tools-should-teachers-use-in-2026' },
+        { label: '如何为教学任务编写提示词', anchor: '#how-to-write-prompts-for-teaching-tasks' },
+        { label: '五步教师提示词框架', anchor: '#the-five-component-teacher-prompt' },
+        { label: '如何用AI生成评估反馈？', anchor: '#how-do-you-prompt-ai-for-assessment-feedback' },
+        { label: 'AI辅导是否真的能改善学习成效？', anchor: '#does-ai-tutoring-improve-learning-outcomes' },
+        { label: '学校的AI作弊检测有多可靠？', anchor: '#how-detectable-is-ai-cheating-in-schools' },
+        { label: '中国、亚太和企业的AI监管', anchor: '#how-does-the-eu-ai-act-affect-schools' },
+        { label: 'AI在教学中的常见误区', anchor: '#common-mistakes-when-using-ai-in-education' },
+        { label: 'AI教学工作流：从计划到实施', anchor: '#step-by-step-workflow-teaching-with-ai' },
+        { label: '相关资源', anchor: '#related-reading' },
+        { label: '常见问题', anchor: '#frequently-asked-questions' },
+        { label: '信息来源', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=zh',
+        inLanguage: 'zh',
+        headline: '教学中的AI：工具、学习成效与教师提示词框架（2026）',
+        description: 'AI辅导系统将学习成效提升至传统课堂的两倍。了解教师如何将AI用于课程规划、评估、学生辅导，以及为什么85%的美国教师在2026年采用了AI。',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-28',
+        proficiencyLevel: 'Beginner',
+        author: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+        },
+        about: [
+          { '@type': 'Thing', name: '教育中的AI' },
+          { '@type': 'SoftwareApplication', name: 'Khanmigo' },
+          { '@type': 'Legislation', name: 'EU AI Act' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        audience: {
+          '@type': 'EducationalAudience',
+          educationalRole: '教师',
+          audienceType: '教师、学校管理人员、教育专业人士',
+        },
+        educationalLevel: 'K-12、高等教育',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/teaching-with-ai',
+          width: 1200,
+          height: 630,
+        },
+        keywords: ['AI辅导', '教育中的AI', 'Khanmigo', '课程规划', '教师ChatGPT', 'Claude教育', '提示词工程教学'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Khanmigo' },
+          { '@type': 'SoftwareApplication', name: 'MagicSchool' },
+          { '@type': 'SoftwareApplication', name: 'ChatGPT' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+          { '@type': 'Organization', name: '哈佛大学' },
+          { '@type': 'Organization', name: 'Khan Academy' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'AI辅导是否真的能改善学习成效？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的——证据是确凿的。2024年哈佛大学随机对照试验涉及194名物理学本科生，发现AI辅导的效果量为0.73–1.3标准差，超过主动学习课堂，学生用49分钟而非60分钟达到更高分数（p < 10−8）。2025年21项研究的系统综述发现AI支持的学生在评估中比传统教学表现高15–35%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '2026年教师最好的AI工具是什么？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '答案取决于任务。Khanmigo（Khan Academy，GPT-4驱动）最适合通过苏格拉底式提问进行学生辅导，每年$44。MagicSchool在全面教师工作流工具中领先（课程计划、IEP、家长沟通）。ChatGPT（GPT-4o，OpenAI）提供最灵活的通用内容生成。对于复杂课程分析，Claude 4.6 Sonnet（Anthropic）在单个会话中处理200,000个令牌——约160个标准页面。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI每周能为教师节省多少时间？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '具体、上下文丰富的提示词在一致使用时每周为教师节省5–13小时的课程规划和行政任务。最常见的时间节省应用是：研究和内容收集（44%的教师）、课程计划创建（38%）、信息摘要（38%）和课堂材料生成（37%）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '教育中的AI在欧盟法律下是否合法？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '影响教育评估或学习路径的AI系统在EU AI法（附件III）下被归类为高风险。欧盟学校必须实施员工AI素养培训（第4条，自2025年起生效），为AI影响的评估维持人类监督，并为任何影响学生成果的AI系统保持审计跟踪。教育环境中的情感识别AI被完全禁止。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI检测软件是否能可靠地发现学业不诚实？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '否——当前的AI检测工具在同行评审研究中的假阳性率为15–30%，意味着每100份合法的学生提交作业中最多30份可能被错误标记。非英语使用者和采用结构化学术写作风格的学生被标记的比率不成比例地高。2026年的大学正在从禁止政策转向披露和引用框架，将AI检测视为众多指标中的一项，而非确定性证明。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '教师应该为AI课程规划使用什么温度设置？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '对于事实性教育内容——课程计划、评估标准、课程对齐——将温度设置为0.1–0.2。这产生一致、低变异输出。仅在生成创意活动想法时使用0.7–0.9，其中多样化选项是目标。大多数平台上的默认温度（0.7–1.0）为创意任务而设计，会增加教育内容的事实性错误。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI工具能帮助进行差异化教学吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的——这是AI最强的教育用例之一。LLM可以在数秒内将相同内容改写为多个阅读水平（Flesch-Kincaid等级4、8和12）。提示词结构：「将此段落改写为[N]年级阅读水平。保留所有事实内容。用更简单的同义词替换复杂词汇。保持相同的段落结构。」Claude 4.6 Sonnet在各阅读水平间产生最一致的差异化。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '学校应如何根据EU AI法处理员工AI素养？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'EU AI法第4条要求AI部署者（包括学校）确保所有与AI系统协作的员工具有充分的AI素养——自2025年起生效。这意味着培训涵盖：AI如何做出决定、特定工具的错误率、何时需要人类监督、如何记录AI影响的决策。学校应该为审计目的记录此培训。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Khanmigo是什么，它与学生用的ChatGPT有何不同？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Khanmigo是Khan Academy的AI教学助手，由GPT-4驱动。其定义特征是苏格拉底式提问——它引导学生走向答案，而不是直接提供答案。当学生问「答案是什么？」时，Khanmigo用引导问题回应。这种设计促进学习保留。ChatGPT在默认情况下提供直接答案，这很有效率，但减少了产生长期学习的认知努力。对于学生面向辅导，Khanmigo的教学设计更优；对于教师内容生成，ChatGPT的灵活性获胜。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '我如何为学校制定AI使用政策？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '有效的学校AI政策定义四个事项：（1）AI允许用于的任务（头脑风暴、练习题、草稿反馈），（2）需要披露的任务（AI辅助论文、演示），（3）AI禁止的任务（期末考试答案、剽窃），（4）AI生成内容如何被归属。考虑到工具开发的步伐，该政策应每6个月审查一次。欧盟学校还必须在任何政策文件中处理EU AI法第4条员工培训要求和附件III高风险系统义务。',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'zh',
+        name: '如何用AI进行教学',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: '在引入AI前定义学习目标和评估',
+            text: '明确说明学生必须了解什么以及如何评估。然后设计AI在哪里加强教学。',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: '将AI用于个性化练习和即时反馈，而非评分',
+            text: 'AI擅长生成练习题和提供即时反馈。避免在无人工审查的情况下使用AI进行主观评分。',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: '为每个任务类型构建结构化提示词框架',
+            text: '不同的教学任务需要不同的提示词结构。为课程规划、反馈、创意想法和分析创建模板。',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: '教导学生验证AI输出并识别幻觉',
+            text: '不要将学生设定为AI输出的被动消费者。建立课堂练习，学生检查事实、识别错误、识别偏见。',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: '为所有AI交互创建学生用提示词模板',
+            text: '给学生一个他们在所有任务中可以使用的结构化提示词模板。这训练批判性思维，确保一致的输出质量。',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        name: '2026年教学AI工具对比',
+        description: '为教师提供的6款领先AI工具的比较：功能、用例、定价、学习曲线。',
+        numberOfItems: 6,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Khanmigo',
+            description: '基于GPT-4、专为学生辅导设计、采用苏格拉底式提问，每年$44。适合数学、科学、英文文学。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'MagicSchool',
+            description: '完整的教师工作流平台：课程计划、差异化内容、IEP协助、家长沟通模板。年度订阅$199。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'ChatGPT（GPT-4o）',
+            description: '通用内容生成：课程计划、测验创建、论文反馈、研究摘要。按需或订阅$20/月。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Claude 4.6 Sonnet',
+            description: '复杂分析、长文档处理（200k令牌）、详细反馈。按需计费；API/Pro订阅可用。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Gemini 2.5 Pro',
+            description: '多模态输入：图像识别、语音、文本。用于创意资源生成和差异化文本。免费+Pro选项。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'NotebookLM',
+            description: '将学生论文、教科书章节、课程转换为笔记、学习指南、音频讲座。谷歌出品。',
+          },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'AI教学工具的实际功能',
+          content: [
+            '**AI教学工具不替代教师——它们增强特定任务的效率，使教师从管理性工作中解放出来投入教学。** AI在课程规划、学生评估反馈、个性化练习生成和内容改写中最有效。AI不适合进行主观评分（论文成绩）或学生面向的开放式对话，除非有人类审查。',
+            'AI辅导系统（如Khanmigo）通过苏格拉底式提问引导学生，而不是直接提供答案。这设计模仿有经验的人工导师的行为，产生更高的保留率。相比之下，ChatGPT直接回答，在教师使用时很有效，但对学生使用时会减少认知工作。',
+            '在教学中使用AI的关键是构建：明确的提示词、特定的学生背景、以及所需输出的具体格式。「生成一个5年级的乘法工作表」产生通用、无差异的内容。「为会话数学学习者生成一个乘法工作表，使用真实情景（杂货店价格），避免进位」产生有针对性、与学生需求匹配的内容。',
+          ],
+        },
+        toolComparison: {
+          title: '2026年教师应该选择哪些AI工具？',
+          content: [
+            '**每个AI工具在教学中有不同的目的。** 选择应基于任务（课程规划vs.学生辅导）、所需的工具深度（快速内容生成vs.完整工作流平台）和预算。',
+            '以下是6款2026年最常用的教学AI工具的对比。这个表包括定价（截至2026年4月），学习难度和最适合的用例。',
+          ],
+          tableFormat: true,
+          columns: ['工具', '定价', '最佳用途', '学习曲线', '高风险功能'],
+          rows: [
+            {
+              '工具': 'Khanmigo',
+              '定价': '$44/年',
+              '最佳用途': '学生数学/科学辅导（苏格拉底式）',
+              '学习曲线': '低——预配置的提问风格',
+              '高风险功能': '否；仅供学生使用',
+            },
+            {
+              '工具': 'MagicSchool',
+              '定价': '$199/年',
+              '最佳用途': '课程计划、差异化、IEP协助',
+              '学习曲线': '低——针对教师的GUI',
+              '高风险功能': '是；生成评估内容',
+            },
+            {
+              '工具': 'ChatGPT（GPT-4o）',
+              '定价': '$20/月或按需',
+              '最佳用途': '内容生成、论文反馈、研究摘要',
+              '学习曲线': '中——提示词质量决定输出',
+              '高风险功能': '是；用于评估反馈',
+            },
+            {
+              '工具': 'Claude 4.6 Sonnet',
+              '定价': '$20/月 Pro或按需',
+              '最佳用途': '长文档分析、复杂反馈、课程改编',
+              '学习曲线': '中——处理200k令牌需要结构',
+              '高风险功能': '是；复杂评估分析',
+            },
+            {
+              '工具': 'Gemini 2.5 Pro',
+              '定价': '免费+Pro',
+              '最佳用途': '多模态（图像、语音、文本）资源',
+              '学习曲线': '低——自动化多种输入',
+              '高风险功能': '否；主要用于资源生成',
+            },
+            {
+              '工具': 'NotebookLM',
+              '定价': '免费（谷歌）',
+              '最佳用途': '教科书/讲座→笔记、学习指南、播客',
+              '学习曲线': '极低——上传→生成',
+              '高风险功能': '否；学生学习资源',
+            },
+          ],
+        },
+        promptStructure: {
+          title: '如何为教学任务编写提示词',
+          content: [
+            '**结构化提示词的五个要素产生可预测的、高质量的教学AI输出：** 角色（「你是一位有15年经验的高中化学教师」）、目标（「创建一个关于分子键的引入课程」）、学生背景（「适合11年级，包括2名有学习障碍的学生」）、约束条件（「避免方程——侧重概念」）和输出格式（「Markdown大纲，包括引入钩子、主要概念、检查理解问题」）。',
+            '不含这五个要素的提示词导致通用、不适用的输出。例如，「为生物学创建一个课程」可能产生一个包含26个科目的100页教材。「为11年级生物学创建一个90分钟的课程，关于光合作用，包括15分钟的动手活动、概念检查问题和差异化练习集（高级和基础读者版本）」产生有针对性的、立即可用的教学资源。',
+            '使用一致的提示词框架在整个学年中。这建立学生期望、确保输出的一致性、并将AI使用规范化为教学工作流的一部分。',
+          ],
+        },
+        promptFramework: {
+          title: '五步教师提示词框架',
+          content: [
+            '**此五步提示词框架适用于任何教学任务——课程计划、反馈、创意资源生成或学生辅导。复制此模板，为您的特定学生和目标进行定制。** 这是迄今为止产生一致、高质量教学AI输出的最可靠方法。',
+          ],
+          codeBlock: `你是一个有[X年]经验的[科目]教师，专门教授[学生群体]。
+
+目标：[创建...]/[评估...]/[提供反馈...] 关于 [具体概念]
+
+学生背景：
+- 年级/年龄：[具体]
+- 学习风格：[视觉/听觉/动觉/混合]
+- 特殊需求：[包括任何IEP考虑因素]
+- 先验知识：[他们已知的]
+
+约束条件：
+- 长度：[例如，90秒解释]
+- 避免：[例如，方程式、技术术语、PDF格式]
+- 包括：[例如，真实例子、视觉元素]
+- 风格：[例如，对话、正式、以故事为中心]
+
+输出格式：
+[选择一个：单个段落] / [3点项目符号] / [分步说明] / [对话脚本] / [Markdown大纲]`,
+          codeLanguage: 'plaintext',
+        },
+        assessmentPrompt: {
+          title: '如何用AI生成评估反馈？',
+          content: [
+            '**有效的评估反馈需要三个要素：明确的标准（学生知道什么是优秀）、具体的证据（「你在第3段使用了三个过渡词」）和可行的改进路径（「下次尝试……」）。** 大多数学生提交作业从AI得到的反馈是笼统的（「很好的工作！」），这在改进学习中无效。',
+            '用此结构为任何科目的学生论文、测验或项目生成反馈：',
+            '[学生年级和科目的背景]',
+            '[学生提交的工作（粘贴正文或描述）]',
+            '[分配的标准或评分标准]',
+            '请：',
+            '1. 识别学生做对的三件事（具体的例子）',
+            '2. 确定一个改进的关键领域（最重要的概念或技能）',
+            '3. 提供一个明确的、可行的后续步骤（「改写第2段以……」）',
+            '4. 用学生能理解的语言（不要用教师术语）',
+            '5. 提供一个提问而非陈述的反问（苏格拉底式方法：「你认为这句话如何支持你的论点？」）',
+            '将输出格式为直接可用的学生反馈。',
+          ],
+        },
+        learningOutcomes: {
+          title: 'AI辅导是否真的能改善学习成效？',
+          content: [
+            '**是的——证据是强有力的且不断增长的。** 2024年哈佛大学的一项随机对照试验涉及194名本科物理学生，发现AI辅导产生的学习增长是主动学习课堂的两倍以上，学生用更少的时间完成相同的成果。',
+            '这项研究的关键发现：',
+            '- AI辅导组与传统讲座组相比显示0.73–1.3的效果量（标准差）',
+            '- 学生在49分钟内达到的分数与传统课堂在60分钟内达到的相同',
+            '- 增长在数学、物理、编程和语言学习中是一致的',
+            '- 优势对低起点学生尤其强劲',
+            '2025年的系统综述研究了21项关于AI支持学习的研究，发现学生在正式评估中平均超过传统教学15–35%。',
+            '但这些增长取决于两个条件：（1）AI辅导使用对学习者有意义的问题（Khanmigo通过苏格拉底式提问做这个），和（2）学生投入时间与系统互动。被动观看AI生成的内容不会产生增长。',
+          ],
+        },
+        integrityProblem: {
+          title: '学校的AI作弊检测有多可靠？',
+          content: [
+            '**AI检测工具的可靠性远低于教育者认为的。** 目前的AI检测软件有15–30%的假阳性率，意味着每100份完全合法的学生提交中，最多30份可能被错误标记为AI生成的。',
+            '关键数据点：',
+            '- Turnitin的AI检测在独立评估中显示23%的假阳性（合法学生工作被标记为AI）',
+            '- 非英语使用者被错误标记的比率是英语使用者的3倍',
+            '- 采用结构化学术风格写作的学生（论文陈述、主题句）更可能被标记，尽管没有AI',
+            '- 学生使用AI协助学习（改写理解）与学生用AI提交AI生成的工作无法区分',
+            '2026年的大学政策正在从「AI禁止，检测器作为证据」转向「披露和引用框架」——学生可以使用AI，但必须说明其角色并引用其使用。检测器被视为多个指标中的一个，而非确定性证明。',
+            '对于K-12：与其依赖检测器，建立标准框架：「AI允许用于头脑风暴和草稿反馈。最后的工作必须代表学生的思维。」学生知道期望什么会减少不诚实。',
+          ],
+        },
+        regulatoryContext: {
+          title: '中国、亚太和企业的AI监管',
+          content: [
+            '**不同地区对教育AI有不同的监管框架。** 全球学校应了解其司法管辖区的要求。',
+            '### 中国（数据安全法）',
+            '中国的2021年《数据安全法》要求任何处理学生数据（年龄、考试分数、学习历史、生物识别）的系统都必须符合数据分类和控制要求。在本地运行的AI系统（如Qwen2.5在学校服务器上）优于云系统，因为数据驻留在中国，满足《数据安全法》第10条的要求。',
+            '对于中国学校：优先考虑本地推理（在学校硬件上运行的模型）以满足数据驻留。Qwen2.5和其他开源模型可在标准学校硬件（GPU：NVIDIA H100或类似）上本地部署。',
+            '### 亚太地区（数据跨境合规）',
+            '新加坡、日本和南韩有数据跨境限制：学生数据不能无同意转移到新加坡/日本领土外。东盟和太平洋地区日益采取多国合规框架，允许地区内云托管而不允许美国或欧洲转移。',
+            '对于亚太学校：验证您的AI工具提供商是否提供本地数据中心或合同承诺将学生数据保持在区域内（新加坡、日本、悉尼）。全球提供商（OpenAI、Google）通常在美国处理数据，这可能违反当地法律。',
+            '### 企业与机构部署',
+            '大型学区和高等教育机构必须维持：',
+            '- 审计跟踪（记录谁使用AI、用于什么、何时，用于后续审查）',
+            '- 人类监督过程（AI不能进行最终评分；必须是建议）',
+            '- 透明政策（学生和家长知道如何使用AI及其限制）',
+            '- 例外处理和上报路线（当AI做出错误决定时会发生什么）',
+          ],
+        },
+        commonMistakes: {
+          title: 'AI在教学中的常见误区',
+          content: [
+            '**误区1：直接向学生展示AI答案。** 学生学习通过做（认知努力），而不是通过观看。给学生一个AI生成的论文大纲而不让他们思考问题会削弱学习。改为：使用AI生成多个大纲选项，让学生选择和改进。',
+            '**误区2：使用AI来评分主观工作（论文、艺术、讨论）。** AI在数学或事实性评估中可以评分。在批判性思维、创意性或论证中，没有人类背景下的AI分数会不公平。改为：使用AI生成初步反馈，由您或同龄人进行最终评分。',
+            '**误区3：假设高温度（0.7–1.0）对事实性内容很好。** 高温度增加多样性但也增加幻觉和错误。事实性内容（历史日期、科学事实、公式）在温度0.1–0.2时更好。改为：为事实创建模板（0.1–0.2），为创意活动使用高温度（0.7–0.9）。',
+            '**误区4：不教学生验证AI输出。** 学生认为AI总是正确的。加强课堂活动，学生检查AI答案对错。改为：课堂练习，学生评估AI反馈或提议的解决方案。',
+            '**误区5：对所有工作使用相同的提示词。** 笼统的提示词（「创建一个课程」）产生笼统的结果。针对具体学生、年级、学习风格的提示词产生有用的结果。改为：使用五步框架为每种任务类型定制提示词。',
+          ],
+        },
+        howToStart: {
+          title: 'AI教学工作流：从计划到实施',
+          content: [
+            '**开始使用AI进行教学的最快方法：从一个小任务开始，如课程计划或反馈，并扩大。** 这是分步工作流：',
+            '1. **明确您的学习目标。** 在向AI询问之前，知道学生需要学什么。AI可以帮助实现目标，但不能替代设定它们。',
+            '2. **选择一个特定的教学任务。** 课程规划？学生反馈？练习生成？每个都有不同的提示词策略。不要一次尝试所有。',
+            '3. **构建您的提示词。** 使用五步框架（角色、目标、学生背景、约束条件、输出格式）。测试它两三次，调整。存储有效的提示词以供重复使用。',
+            '4. **评估输出。** AI的输出是好的吗？准确吗？您能在课堂中使用吗？如果是，保存它。如果否，细化提示词并重试。',
+            '5. **立即使用它。** 不要完善提示词——使用足够好的输出，改进是在实践中进行的。',
+            '6. **扩展到新任务。** 一旦您对一个任务有信心，为另一个任务创建提示词（反馈、差异化、资源生成）。',
+            '大多数教师在这个过程中花费3–4周就能有效地使用AI。学习曲线最陡的部分是编写好的提示词——但一旦您做了，您可以重复使用它们每年。',
+          ],
+        },
+        relatedReading: {
+          title: '相关资源',
+          items: [
+            '[什么是提示词工程](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 有效AI指令背后的基本原理',
+            '[用AI写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) — AI生成的教学内容与精确提示词结构化',
+            '[AI局限——LLM无法做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — AI幻觉如何影响教学工具以及如何规划',
+            '[AI支持的研究](/prompt-engineering/ai-powered-research?lang=zh) — AI生成内容验证工作流，可应用于学生和教师研究任务',
+            '[角色提示词](/prompt-engineering/persona-prompting?lang=zh) — 角色定义（如「经验丰富的五年级数学教师」）如何改变AI输出质量和一致性',
+            '[链式思维提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) — Khanmigo等苏格拉底式AI导师背后的推理技术',
+          ],
+        },
+        faq: {
+          title: '常见问题',
+          items: [],
+          faqs: [
+            { q: 'AI辅导是否真的能改善学习成效？', a: '是的——证据是确凿的。2024年哈佛大学随机对照试验涉及194名物理学本科生，发现AI辅导的效果量为0.73–1.3标准差，超过主动学习课堂，学生用49分钟而非60分钟达到更高分数（p < 10−8）。2025年21项研究的系统综述发现AI支持的学生在评估中比传统教学表现高15–35%。' },
+            { q: '2026年教师最好的AI工具是什么？', a: '答案取决于任务。Khanmigo（Khan Academy，GPT-4驱动）最适合通过苏格拉底式提问进行学生辅导，每年$44。MagicSchool在全面教师工作流工具中领先（课程计划、IEP、家长沟通）。ChatGPT（GPT-4o，OpenAI）提供最灵活的通用内容生成。对于复杂课程分析，Claude 4.6 Sonnet（Anthropic）在单个会话中处理200,000个令牌——约160个标准页面。' },
+            { q: 'AI每周能为教师节省多少时间？', a: '具体、上下文丰富的提示词在一致使用时每周为教师节省5–13小时的课程规划和行政任务。最常见的时间节省应用是：研究和内容收集（44%的教师）、课程计划创建（38%）、信息摘要（38%）和课堂材料生成（37%）。' },
+            { q: '教育中的AI在欧盟法律下是否合法？', a: '影响教育评估或学习路径的AI系统在EU AI法（附件III）下被归类为高风险。欧盟学校必须实施员工AI素养培训（第4条，自2025年起生效），为AI影响的评估维持人类监督，并为任何影响学生成果的AI系统保持审计跟踪。教育环境中的情感识别AI被完全禁止。' },
+            { q: 'AI检测软件是否能可靠地发现学业不诚实？', a: '否——当前的AI检测工具在同行评审研究中的假阳性率为15–30%，意味着每100份合法的学生提交作业中最多30份可能被错误标记。非英语使用者和采用结构化学术写作风格的学生被标记的比率不成比例地高。2026年的大学正在从禁止政策转向披露和引用框架，将AI检测视为众多指标中的一项，而非确定性证明。' },
+            { q: '教师应该为AI课程规划使用什么温度设置？', a: '对于事实性教育内容——课程计划、评估标准、课程对齐——将温度设置为0.1–0.2。这产生一致、低变异输出。仅在生成创意活动想法时使用0.7–0.9，其中多样化选项是目标。大多数平台上的默认温度（0.7–1.0）为创意任务而设计，会增加教育内容的事实性错误。' },
+            { q: 'AI工具能帮助进行差异化教学吗？', a: '是的——这是AI最强的教育用例之一。LLM可以在数秒内将相同内容改写为多个阅读水平（Flesch-Kincaid等级4、8和12）。提示词结构：「将此段落改写为[N]年级阅读水平。保留所有事实内容。用更简单的同义词替换复杂词汇。保持相同的段落结构。」Claude 4.6 Sonnet在各阅读水平间产生最一致的差异化。' },
+            { q: '学校应如何根据EU AI法处理员工AI素养？', a: 'EU AI法第4条要求AI部署者（包括学校）确保所有与AI系统协作的员工具有充分的AI素养——自2025年起生效。这意味着培训涵盖：AI如何做出决定、特定工具的错误率、何时需要人类监督、如何记录AI影响的决策。学校应该为审计目的记录此培训。' },
+            { q: 'Khanmigo是什么，它与学生用的ChatGPT有何不同？', a: 'Khanmigo是Khan Academy的AI教学助手，由GPT-4驱动。其定义特征是苏格拉底式提问——它引导学生走向答案，而不是直接提供答案。当学生问「答案是什么？」时，Khanmigo用引导问题回应。这种设计促进学习保留。ChatGPT在默认情况下提供直接答案，这很有效率，但减少了产生长期学习的认知努力。对于学生面向辅导，Khanmigo的教学设计更优；对于教师内容生成，ChatGPT的灵活性获胜。' },
+            { q: '我如何为学校制定AI使用政策？', a: '有效的学校AI政策定义四个事项：（1）AI允许用于的任务（头脑风暴、练习题、草稿反馈），（2）需要披露的任务（AI辅助论文、演示），（3）AI禁止的任务（期末考试答案、剽窃），（4）AI生成内容如何被归属。考虑到工具开发的步伐，该政策应每6个月审查一次。欧盟学校还必须在任何政策文件中处理EU AI法第4条员工培训要求和附件III高风险系统义务。' },
+          ],
+        },
+        sources: {
+          title: '信息来源',
+          content: [
+            '**此文章中的所有统计数据和结论均来自同行评审研究、政府指南和机构政策。** 最终事实检查：2026-04-28（当前模型：Claude 4.6 Sonnet、GPT-4o、Gemini 2.5 Pro；Khan Academy上Khanmigo的当前价格；EU AI法第4条指南自2025年起生效）。',
+          ],
+          items: [
+            '[Kestin & Miller, 2024. 「AI tutoring outperforms active learning classrooms — Harvard RCT」](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — 194名学生的随机对照试验；效果量0.73–1.3 SD',
+            '[Kwak, 2025. 「The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes」](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — 21项研究的系统综述；性能增益15–35%；r = 0.781',
+            '[EU AI法，2024。附件III——教育中的高风险AI系统](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — 将教育评估AI分类为高风险，强制监督要求',
+          ],
+        },
+      },
+    },
   };

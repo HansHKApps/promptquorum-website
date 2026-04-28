@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEO Audit Guide | PromptQuorum</title>
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/seo-meets-ai" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #fafafa;
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
+    .widget-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    h1 { font-size: 2em; margin-bottom: 12px; color: #1f1f1f; }
+    .widget-intro {
+      font-size: 1.05em;
+      margin-bottom: 32px;
+      line-height: 1.7;
+      color: #424242;
+    }
+    .language-selector {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .language-selector button {
+      padding: 8px 16px;
+      border: 2px solid #ddd;
+      background: white;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 0.95em;
+      transition: all 0.2s;
+    }
+    .language-selector button.active {
+      background: #6750a4;
+      color: white;
+      border-color: #6750a4;
+    }
+    .language-selector button:hover:not(.active) {
+      border-color: #6750a4;
+      background: #f5f5f5;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #e0e0e0;
+      border-radius: 2px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: #6750a4;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    .question-section {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 20px;
+      border-left: 4px solid #6750a4;
+    }
+    .question-section h3 {
+      margin-bottom: 4px;
+      font-size: 1.05em;
+      color: #1f1f1f;
+    }
+    .question-number {
+      font-size: 0.85em;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .question-item {
+      margin: 16px 0;
+    }
+    .question-item label {
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .question-item label:hover {
+      background: #f5f5f5;
+    }
+    .question-item input[type="radio"],
+    .question-item input[type="checkbox"] {
+      margin-top: 4px;
+      margin-right: 12px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    .question-text {
+      flex: 1;
+      font-size: 0.95em;
+    }
+    .submit-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .submit-button {
+      padding: 14px 32px;
+      background: #6750a4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.05em;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .submit-button:hover {
+      background: #5541a0;
+    }
+    .submit-button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .results-container {
+      display: none;
+      background: white;
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 40px;
+    }
+    .results-container h2 {
+      margin-bottom: 24px;
+      font-size: 1.6em;
+      color: #1f1f1f;
+    }
+    .score-display {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin: 32px 0;
+      padding: 24px;
+      background: #f5f5f5;
+      border-radius: 8px;
+    }
+    .score-number {
+      font-size: 4em;
+      font-weight: bold;
+      color: #6750a4;
+      min-width: 140px;
+    }
+    .score-interpretation {
+      flex: 1;
+    }
+    .score-interpretation h3 {
+      margin-bottom: 8px;
+      font-size: 1.3em;
+    }
+    .score-interpretation p {
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: #424242;
+    }
+    .recommendations-section h3 {
+      margin: 32px 0 16px 0;
+      font-size: 1.2em;
+      color: #1f1f1f;
+    }
+    .recommendation-item {
+      padding: 16px;
+      margin-bottom: 12px;
+      background: #f5f5f5;
+      border-left: 4px solid #6750a4;
+      border-radius: 4px;
+    }
+    .recommendation-item strong {
+      color: #6750a4;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .recommendation-item .effort {
+      font-size: 0.85em;
+      color: #999;
+      margin-top: 8px;
+    }
+    .compliance-note {
+      background: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      padding: 16px;
+      border-radius: 4px;
+      margin: 24px 0;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    .download-section {
+      margin-top: 32px;
+      text-align: center;
+    }
+    .download-button {
+      padding: 12px 28px;
+      background: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 500;
+      transition: background 0.2s;
+      margin: 8px;
+    }
+    .download-button:hover {
+      background: #45a049;
+    }
+    @media (max-width: 600px) {
+      .widget-container { padding: 20px 16px; }
+      h1 { font-size: 1.5em; }
+      .score-display {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .question-section { padding: 16px; }
+    }
+    @media print {
+      .language-selector, .submit-button, .download-button { display: none; }
+      .widget-container { padding: 20px; }
+      .results-container { display: block !important; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="widget-container">
+    <div class="language-selector" id="lang-selector"></div>
+
+    <h1 id="widget-title">GEO Audit Guide</h1>
+    <p class="widget-intro" id="widget-intro">Answer 10 questions about your current GEO implementation. Get a 0–10 readiness score and download a prioritized action plan.</p>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="progress"></div>
+    </div>
+
+    <form id="widget-form">
+      <div id="questions-container"></div>
+      <div class="submit-section">
+        <button type="button" class="submit-button" onclick="calculateScore()" id="calc-button">Calculate GEO Score</button>
+      </div>
+    </form>
+
+    <div class="results-container" id="results-container">
+      <h2 id="results-title">Your GEO Readiness Score</h2>
+
+      <div class="score-display">
+        <div class="score-number"><span id="final-score">0</span>/10</div>
+        <div class="score-interpretation">
+          <h3 id="score-label">Foundation</h3>
+          <p id="score-action">Start with schema basics and content structure.</p>
+        </div>
+      </div>
+
+      <div class="compliance-note" id="compliance-note"></div>
+
+      <div class="recommendations-section">
+        <h3 id="rec-title">Priority Recommendations</h3>
+        <div id="recommendations-container"></div>
+      </div>
+
+      <div class="download-section">
+        <button class="download-button" onclick="downloadPlan('txt')">Download Action Plan (Text)</button>
+        <button class="download-button" onclick="downloadPlan('csv')">Download as CSV</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const WIDGET_DATA = {
+      en: {
+        title: 'GEO Audit Guide: Generative Engine Optimization Readiness',
+        intro: 'Answer 10 quick questions about your current Generative Engine Optimization (GEO) maturity across content structure, technical SEO, and AI platform readiness. Get a 0–10 score and download a prioritized action plan with effort estimates.',
+        questions: [
+          {
+            category: 'Content Structure',
+            q: 'Do you have FAQ schema markup (FAQPage) on your articles?',
+            points: 1,
+            tip: 'FAQ schema increases AI visibility by ~45%'
+          },
+          {
+            category: 'Content Structure',
+            q: 'Is your content structured with answer-first paragraphs (not dense prose)?',
+            points: 1,
+            tip: 'AI systems extract individual paragraphs; answer-first format gets cited 68% more'
+          },
+          {
+            category: 'Technical SEO',
+            q: 'Do your pages rank in Google\'s top 10 for your target keywords?',
+            points: 2,
+            tip: 'Top-10 ranking gives ~25% probability of Google AI Overview citations'
+          },
+          {
+            category: 'Technical SEO',
+            q: 'Have you implemented JSON-LD schema markup (Article, TechArticle, HowTo)?',
+            points: 1,
+            tip: 'Structured data increases citation probability by ~340% in controlled tests'
+          },
+          {
+            category: 'Technical SEO',
+            q: 'Are GPTBot, ClaudeBot, and PerplexityBot unblocked in your robots.txt?',
+            points: 1,
+            tip: 'Blocking AI crawlers prevents your content from being cited'
+          },
+          {
+            category: 'AI Platform Readiness',
+            q: 'Do you monitor where your content is cited in ChatGPT, Perplexity, or Google AI Overviews?',
+            points: 1,
+            tip: 'You can\'t optimize what you don\'t measure'
+          },
+          {
+            category: 'AI Platform Readiness',
+            q: 'Have you optimized for ChatGPT first (59.70% AI search market share)?',
+            points: 1,
+            tip: 'ChatGPT dominates AI search; optimize there before other platforms'
+          },
+          {
+            category: 'Content Structure',
+            q: 'Do your articles include 5–7 named entities (product names, company names, researchers)?',
+            points: 1,
+            tip: 'Entity density signals topical authority to AI systems'
+          },
+          {
+            category: 'Technical SEO',
+            q: 'Have you added a machine-readable llms.txt file to your site root?',
+            points: 0.5,
+            tip: 'llms.txt accelerates AI indexing; not required but recommended'
+          },
+          {
+            category: 'AI Platform Readiness',
+            q: 'Are you tracking and comparing AI-referred conversion rates vs. organic search?',
+            points: 0.5,
+            tip: 'B2B AI traffic converts at 54.15% vs 45.23% organic; measure your own rate'
+          }
+        ],
+        scoreRanges: [
+          { min: 0, max: 2.5, label: 'Foundation', color: '#ef5350', action: 'Start with JSON-LD schema and answer-first structure' },
+          { min: 2.6, max: 5.5, label: 'Developing', color: '#ffa726', action: 'Optimize content structure; unblock AI crawlers' },
+          { min: 5.6, max: 7.5, label: 'Intermediate', color: '#ffb74d', action: 'Expand FAQ sections; monitor AI citations' },
+          { min: 7.6, max: 10, label: 'Optimized', color: '#66bb6a', action: 'Monitor AI citations; test new AI platforms' }
+        ],
+        recommendations: [
+          { score: 0, priority: 'High', text: 'Add JSON-LD schema markup (Article, FAQPage, TechArticle) to all articles', effort: '2–4 hours' },
+          { score: 0, priority: 'High', text: 'Restructure content to answer-first format: direct answer in first sentence of each heading', effort: '3–6 hours per article' },
+          { score: 1, priority: 'High', text: 'Create FAQ sections for 5–7 derived questions (sub-questions AI systems ask)', effort: '1–2 hours per article' },
+          { score: 2, priority: 'High', text: 'Ensure GPTBot, ClaudeBot, PerplexityBot are unblocked in robots.txt', effort: '15 minutes' },
+          { score: 3, priority: 'Medium', text: 'Optimize Core Web Vitals and page speed (SEO foundation for GEO)', effort: '4–8 hours' },
+          { score: 3, priority: 'Medium', text: 'Build llms.txt file listing high-value content topics and data sources', effort: '1–2 hours' },
+          { score: 5, priority: 'Medium', text: 'Audit 10 highest-traffic pages: test citations in ChatGPT, Perplexity, Google AI Overviews', effort: '2–3 hours' },
+          { score: 6, priority: 'Low', text: 'Expand entity mentions (add 5–7 named entities per article)', effort: '1–2 hours per article' },
+          { score: 7, priority: 'Low', text: 'Set up CI/CD to track AI citation metrics monthly', effort: '4–6 hours' },
+          { score: 8, priority: 'Low', text: 'Test optimization for Perplexity (100% transparent citations) and extend to Gemini', effort: '2–3 hours' }
+        ],
+        compliance: {
+          regional: 'Global optimization strategy.',
+          note: 'GEO strategies should account for regional compliance. See related content for DSGVO (Germany), CNIL (France), METI (Japan), and Data Security Law (China) considerations.'
+        },
+        resultsTitles: {
+          resultsTitle: 'Your GEO Audit Results',
+          recTitle: 'Priority Recommendations',
+          complianceTitle: 'Regional & Compliance Considerations'
+        }
+      },
+      de: {
+        title: 'GEO-Audit-Anleitung: Generative Engine Optimization Bereitschaft',
+        intro: 'Beantworten Sie 10 kurze Fragen zu Ihrer aktuellen Generative Engine Optimization (GEO) Reife in den Bereichen Content-Struktur, technische SEO und KI-Plattform-Bereitschaft. Erhalten Sie eine Bewertung von 0–10 und laden Sie einen priorisierten Aktionsplan mit Aufwandsschätzungen herunter.',
+        questions: [
+          {
+            category: 'Content-Struktur',
+            q: 'Haben Sie FAQ-Schema-Markup (FAQPage) auf Ihren Artikeln implementiert?',
+            points: 1,
+            tip: 'FAQ-Schema erhöht die KI-Sichtbarkeit um ~45%'
+          },
+          {
+            category: 'Content-Struktur',
+            q: 'Ist Ihr Inhalt mit antwort-führenden Absätzen strukturiert (keine dichten Prosa)?',
+            points: 1,
+            tip: 'KI-Systeme extrahieren einzelne Absätze; Antwort-First-Format wird 68% häufiger zitiert'
+          },
+          {
+            category: 'Technische SEO',
+            q: 'Rankt Ihre Website in den Top 10 von Google für Ihre Ziel-Keywords?',
+            points: 2,
+            tip: 'Top-10-Ranking gibt ~25% Wahrscheinlichkeit für Google AI Overview Zitate'
+          },
+          {
+            category: 'Technische SEO',
+            q: 'Haben Sie JSON-LD-Schema-Markup implementiert (Article, TechArticle, HowTo)?',
+            points: 1,
+            tip: 'Strukturierte Daten erhöhen die Zitat-Wahrscheinlichkeit um ~340%'
+          },
+          {
+            category: 'Technische SEO',
+            q: 'Sind GPTBot, ClaudeBot und PerplexityBot in Ihrer robots.txt nicht blockiert?',
+            points: 1,
+            tip: 'Das Blockieren von KI-Crawlern verhindert, dass Ihr Inhalt zitiert wird'
+          },
+          {
+            category: 'KI-Plattform-Bereitschaft',
+            q: 'Überwachen Sie, wo Ihr Inhalt in ChatGPT, Perplexity oder Google AI Overviews zitiert wird?',
+            points: 1,
+            tip: 'Sie können nur optimieren, was Sie messen'
+          },
+          {
+            category: 'KI-Plattform-Bereitschaft',
+            q: 'Haben Sie zunächst ChatGPT optimiert (59,70% Marktanteil bei KI-Suche)?',
+            points: 1,
+            tip: 'ChatGPT dominiert die KI-Suche; optimieren Sie dort vor anderen Plattformen'
+          },
+          {
+            category: 'Content-Struktur',
+            q: 'Enthalten Ihre Artikel 5–7 benannte Entitäten (Produktnamen, Unternehmen, Forscher)?',
+            points: 1,
+            tip: 'Entity-Dichte signalisiert Thematische Autorität für KI-Systeme'
+          },
+          {
+            category: 'Technische SEO',
+            q: 'Haben Sie eine maschinenlesbares llms.txt-Datei in Ihrem Site-Root hinzugefügt?',
+            points: 0.5,
+            tip: 'llms.txt beschleunigt KI-Indexierung; nicht erforderlich, aber empfohlen'
+          },
+          {
+            category: 'KI-Plattform-Bereitschaft',
+            q: 'Verfolgen und vergleichen Sie KI-referierte Konversionsraten mit organischer Suche?',
+            points: 0.5,
+            tip: 'B2B KI-Traffic konvertiert zu 54,15% vs 45,23% organisch; messen Sie Ihre Rate'
+          }
+        ],
+        scoreRanges: [
+          { min: 0, max: 2.5, label: 'Grundlagen', color: '#ef5350', action: 'Beginnen Sie mit JSON-LD-Schema und Antwort-First-Struktur' },
+          { min: 2.6, max: 5.5, label: 'Entwicklung', color: '#ffa726', action: 'Optimieren Sie Content-Struktur; geben Sie KI-Crawler frei' },
+          { min: 5.6, max: 7.5, label: 'Fortgeschritten', color: '#ffb74d', action: 'Erweitern Sie FAQ-Abschnitte; überwachen Sie KI-Zitate' },
+          { min: 7.6, max: 10, label: 'Optimiert', color: '#66bb6a', action: 'Überwachen Sie KI-Zitate; testen Sie neue KI-Plattformen' }
+        ],
+        recommendations: [
+          { score: 0, priority: 'Hoch', text: 'Fügen Sie JSON-LD-Schema-Markup (Article, FAQPage, TechArticle) zu allen Artikeln hinzu', effort: '2–4 Stunden' },
+          { score: 0, priority: 'Hoch', text: 'Umstrukturieren Sie Inhalte auf Antwort-First-Format: direkte Antwort im ersten Satz jeder Überschrift', effort: '3–6 Stunden pro Artikel' },
+          { score: 1, priority: 'Hoch', text: 'Erstellen Sie FAQ-Abschnitte für 5–7 abgeleitete Fragen', effort: '1–2 Stunden pro Artikel' },
+          { score: 2, priority: 'Hoch', text: 'Stellen Sie sicher, dass GPTBot, ClaudeBot, PerplexityBot in robots.txt nicht blockiert sind', effort: '15 Minuten' },
+          { score: 3, priority: 'Mittel', text: 'Optimieren Sie Core Web Vitals und Seitengeschwindigkeit (SEO-Grundlage für GEO)', effort: '4–8 Stunden' },
+          { score: 3, priority: 'Mittel', text: 'Erstellen Sie llms.txt-Datei mit hochwertigen Content-Themen', effort: '1–2 Stunden' },
+          { score: 5, priority: 'Mittel', text: 'Überprüfen Sie 10 Traffic-Artikel: testen Sie Zitate in ChatGPT, Perplexity, Google AI Overviews', effort: '2–3 Stunden' },
+          { score: 6, priority: 'Niedrig', text: 'Erweitern Sie Entity-Erwähnungen (5–7 benannte Entitäten pro Artikel)', effort: '1–2 Stunden pro Artikel' },
+          { score: 7, priority: 'Niedrig', text: 'Richten Sie CI/CD ein, um monatliche KI-Zitat-Metriken zu verfolgen', effort: '4–6 Stunden' },
+          { score: 8, priority: 'Niedrig', text: 'Testen Sie Optimierung für Perplexity und erweitern Sie auf Gemini', effort: '2–3 Stunden' }
+        ],
+        compliance: {
+          regional: 'DSGVO und BSI-Grundschutz-Kataloges Compliance für deutschsprachige Märkte.',
+          note: 'GEO-Strategien im deutschsprachigen Raum müssen DSGVO-Konformität und BSI-Sicherheitsstandards beachten. Nutzen Sie lokale Crawlers wie GPTBot, berücksichtigen Sie Datenschutz bei der Contentstrukturierung.'
+        },
+        resultsTitles: {
+          resultsTitle: 'Ihre GEO-Audit-Ergebnisse',
+          recTitle: 'Priorisierte Empfehlungen',
+          complianceTitle: 'Regionale & Compliance-Überlegungen'
+        }
+      },
+      fr: {
+        title: 'Guide d\'Audit GEO : Préparation Generative Engine Optimization',
+        intro: 'Répondez à 10 questions rapides sur votre maturité actuelle en Generative Engine Optimization (GEO) dans les domaines de la structure de contenu, du SEO technique et de la préparation des plates-formes IA. Obtenez un score de 0–10 et téléchargez un plan d\'action priorisé avec estimations d\'effort.',
+        questions: [
+          {
+            category: 'Structure de contenu',
+            q: 'Avez-vous un balisage de schéma FAQ (FAQPage) sur vos articles ?',
+            points: 1,
+            tip: 'Le schéma FAQ augmente la visibilité de l\'IA d\'environ 45 %'
+          },
+          {
+            category: 'Structure de contenu',
+            q: 'Votre contenu est-il structuré avec des paragraphes réponse-d\'abord (pas de prose dense) ?',
+            points: 1,
+            tip: 'Les systèmes IA extraient des paragraphes individuels; le format réponse-d\'abord est cité 68% plus souvent'
+          },
+          {
+            category: 'SEO technique',
+            q: 'Vos pages sont-elles classées dans les 10 premiers résultats Google pour vos mots-clés cibles ?',
+            points: 2,
+            tip: 'Un classement top-10 donne ~25% de probabilité de citations Google AI Overview'
+          },
+          {
+            category: 'SEO technique',
+            q: 'Avez-vous implémenté le balisage de schéma JSON-LD (Article, TechArticle, HowTo) ?',
+            points: 1,
+            tip: 'Les données structurées augmentent la probabilité de citation d\'environ 340 %'
+          },
+          {
+            category: 'SEO technique',
+            q: 'GPTBot, ClaudeBot et PerplexityBot ne sont-ils pas bloqués dans votre robots.txt ?',
+            points: 1,
+            tip: 'Bloquer les crawlers IA empêche votre contenu d\'être cité'
+          },
+          {
+            category: 'Préparation des plates-formes IA',
+            q: 'Surveillez-vous où votre contenu est cité dans ChatGPT, Perplexity ou Google AI Overviews ?',
+            points: 1,
+            tip: 'Vous ne pouvez optimiser que ce que vous mesurez'
+          },
+          {
+            category: 'Préparation des plates-formes IA',
+            q: 'Avez-vous d\'abord optimisé pour ChatGPT (59,70% de part de marché de la recherche IA) ?',
+            points: 1,
+            tip: 'ChatGPT domine la recherche IA; optimisez d\'abord avant les autres plates-formes'
+          },
+          {
+            category: 'Structure de contenu',
+            q: 'Vos articles incluent-ils 5–7 entités nommées (noms de produits, noms d\'entreprises, chercheurs) ?',
+            points: 1,
+            tip: 'La densité d\'entités signale l\'autorité thématique aux systèmes IA'
+          },
+          {
+            category: 'SEO technique',
+            q: 'Avez-vous ajouté un fichier llms.txt lisible par machine à la racine de votre site ?',
+            points: 0.5,
+            tip: 'llms.txt accélère l\'indexation par l\'IA; pas obligatoire mais recommandé'
+          },
+          {
+            category: 'Préparation des plates-formes IA',
+            q: 'Suivez-vous et comparez-vous les taux de conversion référencés par l\'IA par rapport à la recherche organique ?',
+            points: 0.5,
+            tip: 'Le trafic B2B IA se convertit à 54,15% vs 45,23% organique; mesurez votre propre taux'
+          }
+        ],
+        scoreRanges: [
+          { min: 0, max: 2.5, label: 'Fondations', color: '#ef5350', action: 'Commencez par le schéma JSON-LD et la structure réponse-d\'abord' },
+          { min: 2.6, max: 5.5, label: 'En développement', color: '#ffa726', action: 'Optimisez la structure du contenu; débloquez les crawlers IA' },
+          { min: 5.6, max: 7.5, label: 'Intermédiaire', color: '#ffb74d', action: 'Développez les sections FAQ; surveillez les citations de l\'IA' },
+          { min: 7.6, max: 10, label: 'Optimisé', color: '#66bb6a', action: 'Surveillez les citations IA; testez les nouvelles plates-formes IA' }
+        ],
+        recommendations: [
+          { score: 0, priority: 'Élevé', text: 'Ajoutez le balisage de schéma JSON-LD (Article, FAQPage, TechArticle) à tous les articles', effort: '2–4 heures' },
+          { score: 0, priority: 'Élevé', text: 'Restructurez le contenu au format réponse-d\'abord: réponse directe dans la première phrase', effort: '3–6 heures par article' },
+          { score: 1, priority: 'Élevé', text: 'Créez des sections FAQ pour 5–7 questions dérivées', effort: '1–2 heures par article' },
+          { score: 2, priority: 'Élevé', text: 'Assurez-vous que GPTBot, ClaudeBot, PerplexityBot ne sont pas bloqués dans robots.txt', effort: '15 minutes' },
+          { score: 3, priority: 'Moyen', text: 'Optimisez Core Web Vitals et la vitesse des pages (fondation SEO pour GEO)', effort: '4–8 heures' },
+          { score: 3, priority: 'Moyen', text: 'Créez un fichier llms.txt listant les sujets de contenu de haute valeur', effort: '1–2 heures' },
+          { score: 5, priority: 'Moyen', text: 'Auditez 10 pages à fort trafic: testez les citations dans ChatGPT, Perplexity, Google AI Overviews', effort: '2–3 heures' },
+          { score: 6, priority: 'Faible', text: 'Développez les mentions d\'entités (5–7 entités nommées par article)', effort: '1–2 heures par article' },
+          { score: 7, priority: 'Faible', text: 'Configurez CI/CD pour suivre les métriques de citation IA mensuellement', effort: '4–6 heures' },
+          { score: 8, priority: 'Faible', text: 'Testez l\'optimisation pour Perplexity (100% citations transparentes) et étendez à Gemini', effort: '2–3 heures' }
+        ],
+        compliance: {
+          regional: 'Conformité CNIL et RGPD pour les marchés francophones.',
+          note: 'Les stratégies GEO pour les marchés francophones doivent respecter la conformité CNIL et les exigences de protection des données. Assurez-vous que les systèmes d\'IA respectent les règles de transparence et d\'attribution des sources.'
+        },
+        resultsTitles: {
+          resultsTitle: 'Vos Résultats d\'Audit GEO',
+          recTitle: 'Recommandations Priorisées',
+          complianceTitle: 'Considérations Régionales & Conformité'
+        }
+      },
+      ja: {
+        title: 'GEO監査ガイド: 生成エンジン最適化準備状況',
+        intro: 'コンテンツ構造、技術的SEO、AI プラットフォーム準備状況に関する 10 の簡単な質問に回答してください。0–10 のスコアを取得し、優先度付きアクションプランを努力推定値とともにダウンロードします。',
+        questions: [
+          {
+            category: 'コンテンツ構造',
+            q: 'FAQ スキーママークアップ (FAQPage) を記事に実装していますか?',
+            points: 1,
+            tip: 'FAQ スキーマは AI の可視性を約 45% 向上させます'
+          },
+          {
+            category: 'コンテンツ構造',
+            q: 'コンテンツは回答ファーストの段落で構造化されていますか (密集した散文ではなく)?',
+            points: 1,
+            tip: 'AI システムは個別の段落を抽出します; 回答ファースト形式は 68% より多く引用されます'
+          },
+          {
+            category: '技術的SEO',
+            q: 'ターゲット キーワードでサイトが Google の上位 10 位にランクされていますか?',
+            points: 2,
+            tip: 'トップ 10 ランキングは Google AI Overview 引用の約 25% の確率を提供します'
+          },
+          {
+            category: '技術的SEO',
+            q: 'JSON-LD スキーママークアップ (Article、TechArticle、HowTo) を実装していますか?',
+            points: 1,
+            tip: '構造化データは引用確率を約 340% 向上させます'
+          },
+          {
+            category: '技術的SEO',
+            q: 'GPTBot、ClaudeBot、PerplexityBot は robots.txt でブロックされていませんか?',
+            points: 1,
+            tip: 'AI クローラーをブロックするとコンテンツが引用されません'
+          },
+          {
+            category: 'AI プラットフォーム準備',
+            q: 'ChatGPT、Perplexity、Google AI Overviews でコンテンツが引用されている場所を監視していますか?',
+            points: 1,
+            tip: '測定しないものは最適化できません'
+          },
+          {
+            category: 'AI プラットフォーム準備',
+            q: '最初に ChatGPT を最適化していますか (AI 検索市場シェアの 59.70%)?',
+            points: 1,
+            tip: 'ChatGPT が AI 検索を支配します; 他のプラットフォームの前に最適化してください'
+          },
+          {
+            category: 'コンテンツ構造',
+            q: '記事に 5–7 個の名前付きエンティティ (製品名、会社名、研究者) が含まれていますか?',
+            points: 1,
+            tip: 'エンティティ密度は AI システムへの主題的権限を示唆します'
+          },
+          {
+            category: '技術的SEO',
+            q: 'サイト ルートに機械可読の llms.txt ファイルを追加していますか?',
+            points: 0.5,
+            tip: 'llms.txt は AI インデックスを加速します; 必須ではありませんが推奨されます'
+          },
+          {
+            category: 'AI プラットフォーム準備',
+            q: 'AI 参照コンバージョン率とオーガニック検索を追跡・比較していますか?',
+            points: 0.5,
+            tip: 'B2B AI トラフィックは 54.15% vs 45.23% オーガニックに変換されます'
+          }
+        ],
+        scoreRanges: [
+          { min: 0, max: 2.5, label: '基礎', color: '#ef5350', action: 'JSON-LD スキーマと回答ファースト構造から始めてください' },
+          { min: 2.6, max: 5.5, label: '開発中', color: '#ffa726', action: 'コンテンツ構造を最適化; AI クローラーのブロックを解除' },
+          { min: 5.6, max: 7.5, label: '中級', color: '#ffb74d', action: 'FAQ セクションを拡張; AI 引用を監視' },
+          { min: 7.6, max: 10, label: '最適化済み', color: '#66bb6a', action: 'AI 引用を監視; 新しい AI プラットフォームをテスト' }
+        ],
+        recommendations: [
+          { score: 0, priority: '高', text: 'すべての記事に JSON-LD スキーママークアップ (Article、FAQPage、TechArticle) を追加', effort: '2–4 時間' },
+          { score: 0, priority: '高', text: 'コンテンツを回答ファースト形式に再構成: 各見出しの最初の文に直接回答', effort: '記事あたり 3–6 時間' },
+          { score: 1, priority: '高', text: '5–7 つの派生質問に対する FAQ セクションを作成', effort: '記事あたり 1–2 時間' },
+          { score: 2, priority: '高', text: 'GPTBot、ClaudeBot、PerplexityBot が robots.txt でブロックされていないことを確認', effort: '15 分' },
+          { score: 3, priority: '中', text: 'Core Web Vitals とページ速度を最適化 (GEO のための SEO 基礎)', effort: '4–8 時間' },
+          { score: 3, priority: '中', text: '高価値コンテンツ トピックをリストする llms.txt ファイルを構築', effort: '1–2 時間' },
+          { score: 5, priority: '中', text: 'トラフィックが多い 10 ページを監査: ChatGPT、Perplexity、Google AI Overviews で引用をテスト', effort: '2–3 時間' },
+          { score: 6, priority: '低', text: 'エンティティ記述を拡張 (記事あたり 5–7 個の名前付きエンティティ)', effort: '記事あたり 1–2 時間' },
+          { score: 7, priority: '低', text: 'CI/CD をセットアップして月単位で AI 引用メトリクスを追跡', effort: '4–6 時間' },
+          { score: 8, priority: '低', text: 'Perplexity の最適化をテスト (100% 透明引用) し、Gemini に拡張', effort: '2–3 時間' }
+        ],
+        compliance: {
+          regional: '日本企業向け METI AI ガバナンス 2024 年および規制準拠',
+          note: '日本市場向け GEO 戦略は METI AI ガバナンス フレームワークに準拠する必要があります。国内 AI インデックスの最適化と日本の規制要件への対応を優先してください。'
+        },
+        resultsTitles: {
+          resultsTitle: 'GEO 監査結果',
+          recTitle: '優先度付き推奨事項',
+          complianceTitle: '地域別および準拠状況'
+        }
+      },
+      zh: {
+        title: 'GEO 审计指南：生成式引擎优化准备情况',
+        intro: '回答关于当前生成式引擎优化 (GEO) 成熟度的 10 个快速问题，涵盖内容结构、技术 SEO 和 AI 平台准备情况。获得 0–10 的评分并下载包含工作量估计的优先级行动计划。',
+        questions: [
+          {
+            category: '内容结构',
+            q: '您是否在文章上实现了 FAQ 模式标记 (FAQPage)?',
+            points: 1,
+            tip: 'FAQ 模式可将 AI 可见性提高约 45%'
+          },
+          {
+            category: '内容结构',
+            q: '您的内容是否以答案优先的段落结构化（而非密集的散文）?',
+            points: 1,
+            tip: 'AI 系统提取单个段落；答案优先格式的引用率提高 68%'
+          },
+          {
+            category: '技术 SEO',
+            q: '您的网页是否在目标关键词的 Google 前 10 位排名?',
+            points: 2,
+            tip: '前 10 名排名为 Google AI Overview 引用提供约 25% 的概率'
+          },
+          {
+            category: '技术 SEO',
+            q: '您是否实现了 JSON-LD 模式标记 (Article、TechArticle、HowTo)?',
+            points: 1,
+            tip: '结构化数据将引用概率提高约 340%'
+          },
+          {
+            category: '技术 SEO',
+            q: 'GPTBot、ClaudeBot 和 PerplexityBot 是否在您的 robots.txt 中未被阻止?',
+            points: 1,
+            tip: '阻止 AI 爬虫会阻止您的内容被引用'
+          },
+          {
+            category: 'AI 平台准备',
+            q: '您是否监控您的内容在 ChatGPT、Perplexity 或 Google AI Overviews 中的引用位置?',
+            points: 1,
+            tip: '您无法优化未测量的内容'
+          },
+          {
+            category: 'AI 平台准备',
+            q: '您是否首先优化了 ChatGPT (59.70% AI 搜索市场份额)?',
+            points: 1,
+            tip: 'ChatGPT 主导 AI 搜索；在其他平台之前进行优化'
+          },
+          {
+            category: '内容结构',
+            q: '您的文章是否包含 5–7 个命名实体（产品名称、公司名称、研究人员）?',
+            points: 1,
+            tip: '实体密度向 AI 系统表示主题权威'
+          },
+          {
+            category: '技术 SEO',
+            q: '您是否在网站根目录添加了机器可读的 llms.txt 文件?',
+            points: 0.5,
+            tip: 'llms.txt 加速 AI 索引；非必需但建议'
+          },
+          {
+            category: 'AI 平台准备',
+            q: '您是否跟踪和比较 AI 参考转化率与有机搜索的转化率?',
+            points: 0.5,
+            tip: 'B2B AI 流量转化率 54.15% vs 45.23% 有机流量'
+          }
+        ],
+        scoreRanges: [
+          { min: 0, max: 2.5, label: '基础', color: '#ef5350', action: '从 JSON-LD 模式和答案优先结构开始' },
+          { min: 2.6, max: 5.5, label: '开发中', color: '#ffa726', action: '优化内容结构；解除 AI 爬虫阻止' },
+          { min: 5.6, max: 7.5, label: '中级', color: '#ffb74d', action: '扩展 FAQ 部分；监控 AI 引用' },
+          { min: 7.6, max: 10, label: '已优化', color: '#66bb6a', action: '监控 AI 引用；测试新 AI 平台' }
+        ],
+        recommendations: [
+          { score: 0, priority: '高', text: '将 JSON-LD 模式标记 (Article、FAQPage、TechArticle) 添加到所有文章', effort: '2–4 小时' },
+          { score: 0, priority: '高', text: '将内容重构为答案优先格式：每个标题的第一句给出直接答案', effort: '每篇文章 3–6 小时' },
+          { score: 1, priority: '高', text: '为 5–7 个衍生问题创建 FAQ 部分', effort: '每篇文章 1–2 小时' },
+          { score: 2, priority: '高', text: '确保 GPTBot、ClaudeBot、PerplexityBot 在 robots.txt 中未被阻止', effort: '15 分钟' },
+          { score: 3, priority: '中', text: '优化 Core Web Vitals 和页面速度 (GEO 的 SEO 基础)', effort: '4–8 小时' },
+          { score: 3, priority: '中', text: '构建列出高价值内容主题的 llms.txt 文件', effort: '1–2 小时' },
+          { score: 5, priority: '中', text: '审计 10 个高流量页面：在 ChatGPT、Perplexity、Google AI Overviews 中测试引用', effort: '2–3 小时' },
+          { score: 6, priority: '低', text: '扩展实体提及（每篇文章 5–7 个命名实体）', effort: '每篇文章 1–2 小时' },
+          { score: 7, priority: '低', text: '设置 CI/CD 以每月跟踪 AI 引用指标', effort: '4–6 小时' },
+          { score: 8, priority: '低', text: '测试 Perplexity 优化（100% 透明引用）并扩展到 Gemini', effort: '2–3 小时' }
+        ],
+        compliance: {
+          regional: '中国数据安全法 2021 和 AI 治理规定',
+          note: '面向中国市场的 GEO 策略必须遵守数据安全法和中国 AI 治理框架。优先在本地索引中优化并满足监管要求。确保 AI 系统透明地标注内容来源。'
+        },
+        resultsTitles: {
+          resultsTitle: 'GEO 审计结果',
+          recTitle: '优先级建议',
+          complianceTitle: '地区和合规性考量'
+        }
+      }
+    };
+
+    let currentLang = new URLSearchParams(window.location.search).get('lang') || 'en';
+    const data = WIDGET_DATA[currentLang] || WIDGET_DATA.en;
+
+    // Render language selector
+    const langSelector = document.getElementById('lang-selector');
+    ['en', 'de', 'fr', 'ja', 'zh'].forEach(lang => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = { en: 'English', de: 'Deutsch', fr: 'Français', ja: '日本語', zh: '中文' }[lang];
+      btn.className = lang === currentLang ? 'active' : '';
+      btn.onclick = (e) => {
+        e.preventDefault();
+        currentLang = lang;
+        window.location.search = `?lang=${lang}`;
+      };
+      langSelector.appendChild(btn);
+    });
+
+    // Render content
+    document.getElementById('widget-title').textContent = data.title;
+    document.getElementById('widget-intro').textContent = data.intro;
+    document.getElementById('results-title').textContent = data.resultsTitles.resultsTitle;
+    document.getElementById('rec-title').textContent = data.resultsTitles.recTitle;
+
+    // Render questions
+    const container = document.getElementById('questions-container');
+    data.questions.forEach((q, idx) => {
+      const group = document.createElement('div');
+      group.className = 'question-section';
+      group.innerHTML = `
+        <div class="question-number">Question ${idx + 1} of ${data.questions.length}</div>
+        <h3>${q.q}</h3>
+        <div class="question-item">
+          <label>
+            <input type="radio" name="q_${idx}" value="yes" required />
+            <span class="question-text">Yes</span>
+          </label>
+        </div>
+        <div class="question-item">
+          <label>
+            <input type="radio" name="q_${idx}" value="no" />
+            <span class="question-text">No</span>
+          </label>
+        </div>
+        <div style="font-size: 0.85em; color: #999; margin-top: 12px;">${q.tip}</div>
+      `;
+      container.appendChild(group);
+    });
+
+    // Compliance note
+    document.getElementById('compliance-note').innerHTML = `
+      <strong>${data.resultsTitles.complianceTitle}</strong><br/>
+      ${data.compliance.note}
+    `;
+
+    function calculateScore() {
+      let totalScore = 0;
+      const form = document.getElementById('widget-form');
+      const formData = new FormData(form);
+
+      data.questions.forEach((q, idx) => {
+        const answer = formData.get(`q_${idx}`);
+        if (answer === 'yes') {
+          totalScore += q.points;
+        }
+      });
+
+      const score = Math.min(10, totalScore);
+      const range = data.scoreRanges.find(r => score >= r.min && score <= r.max);
+
+      document.getElementById('final-score').textContent = score.toFixed(1);
+      document.getElementById('score-label').textContent = range.label;
+      document.getElementById('score-action').textContent = range.action;
+
+      // Update score display color
+      const scoreDisplay = document.querySelector('.score-display');
+      scoreDisplay.style.borderLeft = `4px solid ${range.color}`;
+
+      // Render recommendations
+      const recsContainer = document.getElementById('recommendations-container');
+      recsContainer.innerHTML = data.recommendations
+        .filter(r => score >= r.score)
+        .sort((a, b) => {
+          const priorityOrder = { 'High': 0, 'Élevé': 0, 'Hoch': 0, '高': 0, 'Medium': 1, 'Moyen': 1, 'Mittel': 1, '中': 1, 'Low': 2, 'Faible': 2, 'Niedrig': 2, '低': 2 };
+          return (priorityOrder[a.priority] || 0) - (priorityOrder[b.priority] || 0);
+        })
+        .map(r => `
+          <div class="recommendation-item">
+            <strong>${r.priority}: ${r.text}</strong>
+            <div class="effort">Effort: ${r.effort}</div>
+          </div>
+        `)
+        .join('');
+
+      document.getElementById('results-container').style.display = 'block';
+      document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function downloadPlan(format) {
+      const score = document.getElementById('final-score').textContent;
+      const recommendations = data.recommendations.filter(r => score >= r.score);
+
+      let content = '';
+      if (format === 'txt') {
+        content = `PromptQuorum GEO Audit Action Plan
+${data.title}
+Date: ${new Date().toLocaleDateString()}
+Language: ${currentLang}
+
+Your Score: ${score}/10
+
+${data.resultsTitles.complianceTitle}:
+${data.compliance.note}
+
+${data.resultsTitles.recTitle}:
+${recommendations.map(r => `- [${r.priority}] ${r.text} (${r.effort})`).join('\n')}
+
+Next Steps:
+1. Implement highest-priority items
+2. Re-audit in 30 days
+3. Monitor AI citations across ChatGPT, Perplexity, Google AI Overviews`;
+      } else if (format === 'csv') {
+        content = `Priority,Recommendation,Effort Estimate,Score Threshold\n`;
+        content += recommendations.map(r => `"${r.priority}","${r.text.replace(/"/g, '""')}","${r.effort}","${r.score}+"`).join('\n');
+      }
+
+      const blob = new Blob([content], { type: format === 'txt' ? 'text/plain' : 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `geo-audit-${currentLang}-${new Date().toISOString().split('T')[0]}.${format === 'txt' ? 'txt' : 'csv'}`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Update progress on input change
+    document.getElementById('widget-form').addEventListener('change', () => {
+      const form = document.getElementById('widget-form');
+      const formData = new FormData(form);
+      let answered = 0;
+      data.questions.forEach((q, idx) => {
+        if (formData.get(`q_${idx}`)) answered++;
+      });
+      const progress = (answered / data.questions.length) * 100;
+      document.getElementById('progress').style.width = progress + '%';
+    });
+  </script>
+</body>
+</html>
