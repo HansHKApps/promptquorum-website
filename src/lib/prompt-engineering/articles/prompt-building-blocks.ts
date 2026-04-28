@@ -12,7 +12,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Fundamentals',
       title: 'The 5 Building Blocks Every Prompt Needs',
       seoTitle: '5 Prompt Building Blocks: Structure Any AI Prompt (2026)',
-      intro: 'The 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. How to use each one.',
+      intro: '**Every effective AI prompt needs five building blocks: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format — miss any one and outputs become inconsistent, off-format, or hallucinated.**',
       metaDescription: 'Role, Task, Examples, Constraints, and Output Format — 5 building blocks that explain every reliable AI output. Miss one, and results become inconsistent.',
       publishDate: '2026-03-01',
       readTime: '8 min read',
@@ -30,9 +30,9 @@ export const article: Record<Language, PEArticle> = {
         { label: 'Block 3: Input & Examples', anchor: '#block-3-input-examples' },
         { label: 'Block 4: Constraints', anchor: '#block-4-constraints' },
         { label: 'Block 5: Output Format', anchor: '#block-5-output-format' },
-        { label: 'Putting the 5 Blocks Together', anchor: '#prompt-template' },
-        { label: 'Frameworks & Tools Mapping', anchor: '#frameworks-and-tools' },
-        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'How to Combine All 5 Blocks in One Prompt', anchor: '#prompt-template' },
+        { label: 'How the 5 Blocks Map to CRAFT, CO-STAR, and SPECS', anchor: '#frameworks-and-tools' },
+        { label: 'Common Mistakes With Prompt Building Blocks', anchor: '#common-mistakes' },
         { label: 'How to Build a Prompt (Step by Step)', anchor: '#how-to-build-a-prompt' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Frequently Asked Questions', anchor: '#faq' },
@@ -163,7 +163,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Why Do These 5 Building Blocks Matter?',
           content: [
             'The five-block model reflects the converged consensus across prompt engineering guidance from OpenAI, Google, Anthropic, and independent practitioners. Role, instructions, examples, constraints, and output format appear — under different names — in every major framework published since 2023. This is not coincidence: it is the minimum information a probabilistic model needs to produce a useful, consistent result.',
-            'The business case is straightforward. Missing role and context produces generic answers that need rewriting. Missing constraints increases hallucination risk and off-brand output. Missing output format means results that cannot be parsed or copy-pasted directly. The 5-block model addresses all three failure modes at once, and applies equally to GPT-4-class models, Claude, Gemini, and locally-run LLMs.',
+            'The business case is straightforward. Missing role and context produces generic answers that need rewriting. Missing constraints increases hallucination risk and off-brand output. Missing output format means results that cannot be parsed or copy-pasted directly. The 5-block model addresses all three failure modes at once, and applies equally to GPT-5, Claude 4.7, Gemini 3 Pro, and locally-run LLMs.',
           ],
         },
 
@@ -265,7 +265,7 @@ export const article: Record<Language, PEArticle> = {
 
         template: {
           id: 'prompt-template',
-          title: 'Putting the 5 Blocks Together: A Simple Template',
+          title: 'How Do You Combine All 5 Blocks in One Prompt?',
           content: 'The template below shows all 5 blocks assembled in order for a single domain-neutral task. Each part is labelled so you can see exactly where each block begins and ends. Replace the content in each section to adapt it to any domain.',
           items: [
             '**[Role & Context]** You are a senior business analyst. The audience is a non-technical executive team reviewing a quarterly operations report.',
@@ -277,12 +277,12 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'This template works on GPT-4o, Claude, Gemini, and local LLMs via Ollama or LM Studio. The block order is a recommendation, not a rigid rule — but placing Role & Context first and Output Format last is the most common and reliable arrangement across all major models.',
+          content: 'This template works on GPT-5, Claude 4.7, Gemini 3 Pro, and local LLMs via Ollama or LM Studio. The block order is a recommendation, not a rigid rule — but placing Role & Context first and Output Format last is the most common and reliable arrangement across all major models.',
         },
 
         frameworks: {
           id: 'frameworks-and-tools',
-          title: 'How These Blocks Map to Frameworks and Tools',
+          title: 'How Do the 5 Blocks Map to CRAFT, CO-STAR, and SPECS?',
           content: [
             'Popular prompt engineering frameworks are opinionated ways to arrange the same five building blocks under different names and in different orders. CRAFT, CO-STAR, and SPECS all map directly to this five-block model. Understanding the blocks first means you can apply any framework without memorising its specific terminology from scratch.',
             'The table below shows how each building block maps to the corresponding field in three widely used frameworks:',
@@ -303,7 +303,7 @@ export const article: Record<Language, PEArticle> = {
 
         mistakes: {
           id: 'common-mistakes',
-          title: 'Common Mistakes with the 5 Blocks',
+          title: 'What Are the Most Common Mistakes With Prompt Building Blocks?',
           items: [
             '**Missing role entirely:** The model answers from a generic perspective — specify domain and expertise level, even in one sentence',
             '**Vague context:** "Write for my audience" tells the model nothing — name the audience, their knowledge level, and what they will do with the output',
@@ -377,7 +377,7 @@ export const article: Record<Language, PEArticle> = {
           items: [
             '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Official prompt engineering guidance from OpenAI, including best practices for role-based and structured prompts.',
             '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Security implications of unstructured prompts and recommendations for constraints.',
-            '[Attention Is All You Need — Vaswani et al., 2017](https://arxiv.org/abs/1706.03762) — Foundational transformer architecture that underlies all modern LLMs and their attention-based reasoning.',
+            '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Comprehensive catalog of prompt design patterns including structured and role-based techniques directly applicable to the 5-block model.',
           ],
         },
 
