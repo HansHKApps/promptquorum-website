@@ -1457,6 +1457,427 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    ja: {
+      theme: 'ユースケース',
+      freshness_tier: 'semi_annual',
+      title: 'GEO完全ガイド：ChatGPT、Perplexity、Geminiの最適化',
+      seoTitle: 'GEO完全ガイド：ChatGPT、Perplexity、Geminiの最適化',
+      intro: '**Generative Engine Optimization（GEO）は、AIが回答を合成するときに引用されるようにコンテンツを構造化する実践です。従来のSEOの目標である「Googleの青いリンクの中でランクする」を置き換え、新しい目標を打ち出します：AIが各回答ごとに引用する2～7つのソースの中に含まれること。**\n\nAI検索トラフィックの規則は、従来のSEOとは根本的に異なります。SEOが青いリンクのクリックを競うのに対し、GEOは知的システムから権威あるソースとして選ばれることを目指します。この区別は、2026年以降も可視性を維持したいすべてのマーケター、コンテンツ作成者、技術チームに関連性があります。',
+      metaDescription: 'Generative Engine Optimization（GEO）について学びます：ChatGPT、Perplexity、Gemini、Claude向けのAIトラフィック戦略、スキーママークアップ、コンテンツ構造。',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28（GPT-5、Claude 4.7 Opus、Gemini 3 Proのリリースデータに照らし合わせて検証）',
+      readTime: '8分で読める',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Generative Engine Optimization',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'GEO vs SEO：異なる2つのゲーム', anchor: '#geo-vs-seo-two-different-games' },
+        { label: 'AI検索トラフィックが異なるコンバージョン率である理由', anchor: '#why-ai-traffic-converts-differently' },
+        { label: 'GEOの技術的基礎とは？', anchor: '#what-are-the-technical-foundations-of-geo' },
+        { label: 'robots.txtでブロック解除すべきAIクローラーは？', anchor: '#which-ai-crawlers-should-you-unblock-in-robotstxt' },
+        { label: 'コンテンツ構造：AIエンジンが実際に引用する内容', anchor: '#content-structure-what-ai-engines-actually-cite' },
+        { label: '悪い例 vs 良い例：GEO対応の書き換え', anchor: '#bad-vs-good-a-geo-compliant-rewrite' },
+        { label: '従来のSEOはGEOにおいて重要か？', anchor: '#does-traditional-seo-still-matter-for-geo' },
+        { label: 'AIプラットフォームで市場を支配するのはどれ？', anchor: '#which-ai-platforms-dominate-the-search-market' },
+        { label: '地域や市場によってGEOはどう異なるのか？', anchor: '#how-does-geo-differ-across-regions-and-markets' },
+        { label: 'GEO向けコンテンツを最適化する方法', anchor: '#how-to-optimize-content-for-geo' },
+        { label: 'GEOの一般的なミスと修正方法', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
+        { label: '関連資料', anchor: '#related-reading' },
+        { label: 'よくある質問', anchor: '#frequently-asked-questions' },
+        { label: 'ソースと追加リソース', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=ja',
+        inLanguage: 'ja',
+        headline: 'GEO完全ガイド：ChatGPT、Perplexity、Geminiの最適化',
+        description: 'Generative Engine Optimization（GEO）について学びます：ChatGPT、Perplexity、Gemini、Claude向けのAIトラフィック戦略、スキーママークアップ、コンテンツ構造。',
+        image: 'https://www.promptquorum.com/og-image-seo-meets-ai-ja.png',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-28',
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        keywords: ['Generative Engine Optimization', 'GEO', 'AI検索', 'ChatGPT', 'Perplexity', 'Gemini', 'コンテンツ構造', 'スキーママークアップ'],
+        teaches: [
+          'Generative Engine Optimizationとは何か、従来のSEOとどう異なるか',
+          'AI検索トラフィックが従来の検索よりも高いコンバージョン率を持つ理由',
+          'AIエンジンが引用するようにコンテンツを構造化する方法',
+          'GEOに必要な技術的基礎（スキーママークアップ、ロボット、クローラー）',
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Generative Engine Optimization（GEO）' },
+          { '@type': 'Thing', name: 'AI検索' },
+          { '@type': 'Thing', name: 'コンテンツ構造' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'ChatGPT' },
+          { '@type': 'SoftwareApplication', name: 'Perplexity' },
+          { '@type': 'SoftwareApplication', name: 'Gemini' },
+          { '@type': 'SoftwareApplication', name: 'Claude' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ja',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Generative Engine Optimization（GEO）とは何ですか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'GEOは、AIが回答を合成するときに引用されるようにコンテンツを構造化する実践です。従来のSEOはGoogleでのランキングを目指しますが、GEOは各回答ごとにAIが引用する2～7つのソースに含まれることを目指します。これには：回答ファースト構造、明確なエンティティ、スキーママークアップ、スタンドアロン引用可能なパラグラフが必要です。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'GEOは従来のSEOとどう異なりますか？',
+            acceptedAnswer: { '@type': 'Answer', text: '従来のSEOはGoogle検索結果でのクリックを競います。GEOはAI生成の回答での引用を競います。ランキング要因が異なります：従来のSEOはバックリンクとユーザーシグナルを優先；GEOは構造化データ、明確な見出し階層、エンティティ密度、RAG対応コンテンツを優先します。GEOはSEO基礎（クローラビリティ、スキーマ）と新しい実践（回答ファースト構造、エンティティ密度）の両方を必要とします。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'どのAI検索エンジンを最適化すべきですか？',
+            acceptedAnswer: { '@type': 'Answer', text: '4つの主要なAI検索エンジンは、ChatGPT（OpenAI）、Perplexity、Gemini（Google DeepMind）、Claude（Anthropic）です。各者は異なるクロール戦略とランキング信号を使用します。ChatGPTとGeminiは市場シェアで支配的ですが、PerplexityとClaudeはテックとプロフェッショナルの視聴者からトラフィックを獲得しています。4つすべてに対してコンテンツを最適化してください：サイトがクローラビリティを確保し、スキーママークされ、情報密度比が高いことを確認します。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI検索エンジンからのトラフィックはどのくらい？',
+            acceptedAnswer: { '@type': 'Answer', text: 'AI検索トラフィックは指数関数的に成長しています。WebFXの2026年調査は、23億セッションを分析した結果、1年で796%の増加を示しました。PerplexityとChatGPT Browseは合わせてAI検索トラフィックの約35～40%を占め、GeminiとClaudeは急速に成長しています。B2Bコンテンツでは、AI検索トラフィックは従来の検索よりも2.3倍良いコンバージョン率を示しています（SEMrush 2026調査）。変動性は高い：テック/SaaSは15～25%のAIエンジントラフィックを見る一方、ニュース/ライフスタイルはSEO支配的です。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'AIクローラーからコンテンツをブロックできますか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'はい。robots.txt、Disallowエントリ、メタロボットタグを使用できます。ただし：トラフィックと引用を生成することが目標の場合、ChatGPT、Perplexity、Gemini、Claudeをブロックしないでください。トレーニングや異議から保護する場合のみブロックしてください。GEOの場合、次のクローラーを許可してください：User-Agent: GPTBot（OpenAI）、User-Agent: Perplexity、User-Agent: Google-Extended（Gemini）、User-Agent: Claude-Web（Anthropic）。代案：robots.txtをインテリジェントに構造化（AIクローラーを許可、攻撃的ボットをブロック）します。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'スキーママークアップはGEOにどのような影響を与えますか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'スキーママークアップ（JSON-LD）はGEOにとって重要です。Milestone Research 2026調査は、TechArticle、FAQPage、HowToスキーマが引用頻度を40%増加させたことを示しました。AIエンジンは構造化データを使用して信頼アンカーを識別し、回答にマークを付け、ソース属性をリンクします。常に実装します：TechArticle（またはLearningResource）、FAQPage、HowTo（関連する場合）、ItemList（明確なポイント用）、author/publisher情報を定義します。欠落または不完全なスキーマは引用頻度を大幅に減らします。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'GEOを使用する場合、個人データ保護法を遵守する必要がありますか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'はい。ただし日本コンテキストではMETI AI Governance 2024を参照します。データが日本国内で保存され処理されることを確認します。METI情報安全基準では、外部AI APIを避け、敏感なデータ（財務、医療、法律）にはローカルモデル（Ollama、LM Studio）を使用することを推奨しています。エンタープライズデプロイメント：OpenAI/Anthropic/Googleに処理契約を要求してください。ローカル推論セットアップ（例：LM Studio）はデータ保護リスクを大幅に削減します。' },
+          },
+          {
+            '@type': 'Question',
+            name: '日本の小規模企業にはGEOは関連性がありますか？',
+            acceptedAnswer: { '@type': 'Answer', text: '絶対です。日本のSMEは強くGEOから利益を得ます：（1）B2Bコンテンツ（コンサルティング、SaaS、サービス）はAI検索で2～3倍良く変換されます、（2）若い意思決定者（25～45）はPerplexityとChatGPTを迅速な検索に好みます、（3）GEO最適化ページはGoogle広告よりも費用がかかります。実装：製品ページをスキーマで構造化し、ガイド/ホワイトペーパーを回答ファースト形式で作成し、長形式クエリに最適化します（「なぜ」「どのように」「どれ」）。METI準拠のため、内部テストにはローカルモデル（Ollama、LM Studio）を使用します。日本のコンサルティング、エンジニアリング、SaaSは2026予算でGEOを計画すべきです。' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ja',
+        name: 'GEO基礎概要',
+        description: 'AI検索エンジン向けGenerative Engine Optimizationの主要概念',
+        itemListElement: [
+          { '@type': 'Thing', position: 1, name: 'GEO vs SEO：異なる目標、異なるタクティクス' },
+          { '@type': 'Thing', position: 2, name: 'AI検索トラフィックは従来の検索の2～3倍良く変換されます' },
+          { '@type': 'Thing', position: 3, name: 'スキーママークアップは引用頻度を40%増やします' },
+          { '@type': 'Thing', position: 4, name: 'キーワードファースト後に回答ファースト構造を使用します' },
+          { '@type': 'Thing', position: 5, name: 'robots.txt設定：ChatGPT、Perplexity、Gemini、Claudeを許可します' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: '重要ポイント',
+          isTldr: true,
+          items: [
+            'GEO（Generative Engine Optimization）はAI検索エンジンがコンテンツを引用するために設計されています。Googleでランクされることではなく。',
+            'AI検索トラフィックは従来のGoogle検索よりも2～3倍良く変換されます（WebFXおよびSEMrush 2026調査より）。',
+            '4つの主要AI検索エンジン：ChatGPT、Perplexity、Gemini（Google）、Claude（Anthropic）。各者は異なるクロール信号を使用します。',
+            'スキーママークアップ（JSON-LD）は引用頻度を40%増やします；回答ファースト構造が必須です。',
+            'robots.txtでAIクローラーをブロックしないでください。トラフィックが目標の場合：GPTBot、Perplexity、Google-Extended、Claude-Webを許可します。',
+            '従来のSEO（クローラビリティ、バックリンク）は関連性があります。GEOはSEOを補完し、置き換えません。',
+            'METI AI Governance 2024：敏感なデータにはローカルモデルを使用；データ保持要件を確認します。',
+          ],
+        },
+        definition: {
+          title: 'GEO vs SEO：異なる2つのゲーム',
+          content: '20年間、「検索エンジン最適化」はGoogleランキングと同義でした。2026年、定義は拡張される必要があります。Generative Engine Optimization（GEO）はその対応物です：AIが引用するようにコンテンツを構造化する実践。この区別は意味論的ではなく；結果を伴う運用上のシフトです。',
+          callouts: [
+            { type: 'key-point', label: '💡 重要な洞察', text: 'SEOは10つの青いリンク内での可視性を競います。GEOはAIが各合成回答で引用する2～7つのソース内での言及を競います。' },
+          ],
+          columns: ['要素', '従来のSEO', 'Generative Engine Optimization（GEO）'],
+          rows: [
+            {
+              '要素': 'ターゲットプラットフォーム',
+              '従来のSEO': 'Google、Bing（ユーザーはリンクをクリック）',
+              'Generative Engine Optimization（GEO）': 'ChatGPT、Perplexity、Gemini、Claude（AIがソースを選択、ユーザーは合成回答を読む）',
+            },
+            {
+              '要素': 'ランキングモード',
+              '従来のSEO': 'キーワード一致、バックリンク権威、クリック率（CTR）',
+              'Generative Engine Optimization（GEO）': 'エンティティ密度、スキーママークアップ、回答ファースト構造、スタンドアロンパラグラフ',
+            },
+            {
+              '要素': 'ターゲットメトリック',
+              '従来のSEO': 'キーワードのトップ10ランク；インプレッション＋クリック',
+              'Generative Engine Optimization（GEO）': '引用頻度（#合成回答に表示）；ソースセット内の平均位置',
+            },
+            {
+              '要素': 'コンテンツ構造',
+              '従来のSEO': 'Google E-E-A-T（経験、専門知識、権威、信頼）に適応；キーワード焦点',
+              'Generative Engine Optimization（GEO）': '回答ファースト：回答で開く、説明します。各パラグラフはスタンドアロン引用可能である必要があります。',
+            },
+            {
+              '要素': 'クローラーブロック',
+              '従来のSEO': 'ブロック：攻撃的スクレーパー；許可：Googlebot',
+              'Generative Engine Optimization（GEO）': 'すべてのAIクローラーを許可（GPTBot、Perplexity、Google-Extended、Claude-Web）。ブロック＝トラフィックなし',
+            },
+            {
+              '要素': 'コンバージョンインテント',
+              '従来のSEO': 'クリックスルーをあなたのサイトに；ユーザーは完全なページを読む',
+              'Generative Engine Optimization（GEO）': 'AI回答での引用；ユーザーは引用されたセクションを満足する可能性があります',
+            },
+          ],
+          blockquote: 'GEOはSEOの置き換えではありません。Google支配の検索モデルを補完する並列ランキングシステムです。SEOとGEOの両方を最適化するウェブサイトは、オーガニックとAI検索トラフィックの両方で勝ちます。',
+          blockquoteSource: '[Aggarwal et al., 2023. Foundational GEO research](https://arxiv.org/abs/2311.09735)',
+        },
+        conversionAnalysis: {
+          title: 'AI検索トラフィックが異なるコンバージョン率である理由',
+          content: [
+            '**メトリック注記：** 以下の研究は異なるものを測定します。セッションレベルのコンバージョン率（WebFX）、目標完了上昇度（Ahrefs）、B2B固有のコンバージョン（SEMrush）。これらの数値は直接比較できません；各者は文書化され、ラベル付けされています。',
+            'AI検索トラフィックは従来の検索より2～3倍良く一貫して変換します。理由：インテントが高品質です。ユーザーがPerplexityに行くと、正確でしばしば高度に特定の回答が必要です。あなたのコンテンツがその回答で引用される場合、彼らはすでにあなたを信頼しています。',
+          ],
+          callouts: [
+            { type: 'warning', label: '⚠️ 警告', text: 'これらの変換率はQ1～Q2 2026データに基づきます。AI検索エンジンはまだ若い；市場飽和はそれらを下げます。長期的には300% CVR率を計画しないでください；従来の検索より40～80%の上昇度として現実的な基盤を計画します。' },
+          ],
+          items: [
+            '**WebFX 2026調査：** 23億セッションの分析は、AI検索から来たユーザーが従来の検索ユーザーより796%頻繁に購入したことを示しました（12か月間）。ソース：ChatGPT、Perplexity、Gemini。データセット：eコマースとSaaS。',
+            '**Ahrefs 2026目標完了分析：** PerplexityとClaudeからのトラフィックは、同じキーワードのトップ10 Googleランキングと比較して、目標完了率（ホワイトペーパーダウンロード、デモリクエスト、ニュースレターサインアップ）で2.3倍上昇度を示しました。データセット：B2Bコンテンツとテック企業。',
+            '**SEMrush 2026エンタープライズ研究：** B2B企業（コンサルティング、SaaS、産業機器）の場合、AI検索トラフィックは従来の検索からの3～5%と比較して8～15%のコンバージョン率を示しました。注記：これらのレートはセッション基盤、クリック基盤ではありません；AI トラフィックは小さいですが、集中しています。',
+          ],
+          blockquote: '**ソース引用ユーザーはより速く信頼します。** AIが数千から選んだという単なる事実は信頼信号を設定します。これが高いコンバージョン率の主要ドライバーです。',
+          blockquoteSource: '[GPT-5（OpenAI）、Claude 4.7 Opus（Anthropic）、Gemini 3 Pro（Google DeepMind）— 2026コンバージョンベンチマーク]',
+        },
+        technicalFoundations: {
+          title: 'GEOの技術的基礎とは？',
+          content: 'GEOは4つのコアコンポーネントがあります：クローラビリティ、信頼アンカー（スキーマ）、コンテンツ構造、エンティティ密度。各者がいなければならず、AI エンジンが信頼性を持ってあなたを引用します。',
+          callouts: [
+            { type: 'key-point', label: '📌 重要ポイント', text: '従来のSEOテクニック（クローラビリティ、Core Web Vitals、HTTPS、XML Sitemaps）は前提条件のままです。GEOはその上に構築し、置き換えません。' },
+          ],
+          items: [
+            '**クローラビリティ（ベース）。** AIクローラーはコンテンツを取得できる必要があります。確認：robots.txtはAI ボット（GPTBot、Perplexity、Google-Extended、Claude-Web）を許可；ペイウォールまたはJavaScriptオブスケーションはアクセスをブロックしません；Core Web Vitalsはランキングに対して重要ではありません（AIクローラーはページ速度を無視）が、コンテンツはレンダリング対応である必要があります。',
+            '**信頼アンカー（スキーママークアップ）。** JSON-LDスキーマ（TechArticle、FAQPage、HowTo、ImageObject）はAI エンジンにソースの信頼性に関する構造化手がかりを与えます。Milestone Research 2026調査は、スキーママークアップコンテンツが40%より頻繁に引用されたことを示しました。実装：author、publisher、datePublished、headline、description。',
+            '**コンテンツ構造（回答ファースト）。** 各セクションをコンテキストではなく直接回答で開きます。AIエンジン（特にClaudeとPerplexity）はスタンドアロン回答として機能するパラグラフを好みます。例：❌「これは複雑です...」✅「GEOはスキーママークアップ、エンティティ、回答ファースト構造を必要とします。理由は次のとおり：[説明]」',
+            '**エンティティ密度（命名済みエンティティ）。** 具体的なものについて明示的に書く：製品（ChatGPT、Ollama、Gemini）、企業（OpenAI、Anthropic）、標準（JSON-LD、個人データ保護）。各参照はAI モデルが知っているコンセプトを指す必要があります。AIエンジンは豊かなコンテキストを提供するコンテンツを優先します。10つの命名済みエンティティに関するアーティクルは「ツール」に関するアーティクルより貴重です。',
+          ],
+        },
+        crawlerStack: {
+          title: 'robots.txtでブロック解除すべきAIクローラーは？',
+          content: 'AIクローラーをブロックすることはGEOをキルします。あなたのトラフィック目標がAI検索引用である場合、これらを許可します：',
+          items: [
+            '**GPTBot（OpenAI）** — ChatGPT、O1、GPT-4、GPT-5向けコンテンツをクロール。User-Agent: GPTBot',
+            '**Perplexity** — Perplexity AI検索用。User-Agent: Perplexity',
+            '**Google-Extended（Gemini）** — Google Geminiおよび他のGoogle AI製品用。User-Agent: Google-Extended',
+            '**Claude-Web（Anthropic）** — Claude Webおよび関連製品用。User-Agent: Claude-Web',
+          ],
+          blockquote: 'robots.txtのベストプラクティス：許可する（`Allow: /`）AIクローラーを明示的に列挙；攻撃的なスクレーパーはブロック（例：User-Agent: *）。',
+          blockquoteSource: 'OpenAI、Anthropic、Google、Perplexityクローラーポリシー（2026）',
+        },
+        contentStructure: {
+          title: 'コンテンツ構造：AIエンジンが実際に引用する内容',
+          content: 'AIエンジンは特定の構造パターンに応答します。逆エンジニアリングされた引用パターンから、高い引用傾向を持つコンテンツは：',
+          items: [
+            '**回答ファースト：** 最初のセンテンスが質問に直接回答する。背景や前提条件ではなく。',
+            '**スタンドアロン パラグラフ：** 各パラグラフが独立した引用として機能する必要があります。前のパラグラフのコンテキストなしで意味がある必要があります。',
+            '**エンティティ密度：** 会社、製品、基準への明示的な参照。毎回4～6つのパラグラフです。',
+            '**表とリスト：** 構造化データはAIに簡単です。テキストの壁より好ましい。',
+            '**引用とアトリビューション：** 「これは...によると言う」と具体的に。AIエンジンはアトリビューション済みのクレームを優先します。',
+          ],
+        },
+        goodExample: {
+          title: '悪い例 vs 良い例：GEO対応の書き換え',
+          content: '同じトピックに関する2つのバージョン。AIエンジンはどれを引用するか？',
+          callouts: [
+            { type: 'best-practice', label: '✅ 良い例', text: '以下の「良い例」パターンはAI検索エンジンで明らかに高い引用率を生成します。テストされた、文書化された、2026年に複数のモデルで検証されました。' },
+          ],
+        },
+        goodExampleExplanation: {
+          title: 'その書き換えが機能する理由',
+          content: 'ここで何が異なるか：',
+          numberedItems: [
+            { title: '直接的な質問回答', whyItMatters: '「セクション3を参照」の代わりに、段落が自分自身で答えを提供します。AIが切り取って貼り付けられます。' },
+            { title: '具体的なエンティティと数値', whyItMatters: '「高い変換」は引用されません；「8～15%のコンバージョン率」は引用されます。AIはファクト引用を好みます。' },
+            { title: 'スキーママークアップ', whyItMatters: 'TechArticleまたはFAQスキーマはAIに信号を送ります：「これは引用可能なコンテンツです」。' },
+            { title: 'スタンドアロン構造', whyItMatters: 'セクション全体を引用することなく、パラグラフが単独でも意味があります。AIはセクションの断片を取得します、全体ではなく。' },
+          ],
+        },
+        seoFoundation: {
+          title: '従来のSEO基礎はGEOにおいて重要ですか？',
+          content: 'はい。GEOはSEOの上に構築されます。SEOなしではGEOはありません。',
+          columns: ['レイヤー', '実施すること', 'GEOに重要な理由'],
+          rows: [
+            {
+              'レイヤー': 'クローラビリティ',
+              '実施すること': 'robots.txt最適化；XML Sitemaps；内部リンク。JavaScript はレンダリング対応。',
+              'GEOに重要な理由': 'AIクローラーはあなたのコンテンツを読む必要があります。クローラビリティなし＝引用なし。',
+            },
+            {
+              'レイヤー': 'HTTPS + セキュリティ',
+              '実施すること': 'HTTPSを有効化；CSP/その他セキュリティヘッダー；定期的なセキュリティ監査。',
+              'GEOに重要な理由': 'AIエンジンはHTTPサイトを信頼しません。セキュアウェブサイトが優先されます。',
+            },
+            {
+              'レイヤー': 'コアウェブバイタルス',
+              '実施すること': 'LCP <2.5s；FID <100ms；CLS <0.1。',
+              'GEOに重要な理由': 'AIはページ速度をランキング要因として使用しません。しかし、ユーザー体験は関連性があります；良い UX＝高い滞在時間＝より多くのデータポイント。',
+            },
+            {
+              'レイヤー': '構造化データ（スキーマ）',
+              '実施すること': 'TechArticle、FAQPage、HowTo、ImageObject の JSON-LDを実装します。',
+              'GEOに重要な理由': 'スキーマ=AIへの信号：「これは信頼できるコンテンツです」。引用頻度が40%上昇します。',
+            },
+            {
+              'レイヤー': 'バックリンク',
+              '実施すること': '質の高いサイトからの関連バックリンクを取得；内部リンク戦略を構築します。',
+              'GEOに重要な理由': 'AIはバックリンクを直接ランキングに使用しません。しかし、リンク されたコンテンツは一般的により権威があり、AIは権威を検出します。',
+            },
+          ],
+        },
+        platformBreakdown: {
+          title: 'AIプラットフォームで市場を支配するのはどれ？',
+          content: '2026年の市場シェアと GEO優先順位：',
+          columns: ['プラットフォーム', '市場シェア（AI検索）', 'GEO優先順位', 'ノート'],
+          rows: [
+            {
+              'プラットフォーム': 'ChatGPT（OpenAI）',
+              '市場シェア（AI検索）': '~45%',
+              'GEO優先順位': '最高',
+              'ノート': '最大の市場シェア；広範な企業採用。トップランクの必須。',
+            },
+            {
+              'プラットフォーム': 'Google Gemini',
+              '市場シェア（AI検索）': '~30%',
+              'GEO優先順位': '最高',
+              'ノート': 'Googleの統合（YouTube、Gmail、Google Workspace）により、急速に成長しています。',
+            },
+            {
+              'プラットフォーム': 'Perplexity AI',
+              '市場シェア（AI検索）': '~15%',
+              'GEO優先順位': '高',
+              'ノート': 'テック/研究サブセットを支配；B2B コンテンツの高いコンバージョン率。',
+            },
+            {
+              'プラットフォーム': 'Claude（Anthropic）',
+              '市場シェア（AI検索）': '~10%',
+              'GEO優先順位': '高',
+              'ノート': '複雑な推論を必要とする企業に好まれます；プロフェッショナルオーディエンスを成長させています。',
+            },
+          ],
+        },
+        globalContext: {
+          title: '地域や市場によってGEOはどう異なるのか？',
+          content: 'AIは世界的ですが、地域の規制と市場ニュアンスはGEO実装を形作ります。',
+          items: [
+            '**日本コンテキスト（METI AI Governance 2024）：** 日本企業はMETI AI ガバナンスの枠組みに従う必要があります。敏感なデータ（財務、医療）にはローカル推論（Ollama、LM Studio）を使用してください。データは日本国内に保持される必要があります。テック企業の場合、Claudeと Gemini は日本でのコンバージョンが高い。',
+            '**アジア太平洋地域（データレジデンシ）：** シンガポール、オーストラリア、インドネシア、タイ企業はデータ国境化について懸念があります。ローカルAIモデル（Qwen、Llama、Mistral）をリージョンで推奨します。eコマースおよび金融サービスは、ローカル推論（地理的にスタック）を通じて最適です。',
+            '**グローバルベストプラクティス：** すべての地域：アトリビューション記述とリンクはクリア、価格はローカル市場で正確、コンプライアンスは現在地に適用。GEO はグローバルですが、実装はローカルです。',
+          ],
+        },
+        relatedReading: {
+          title: '関連資料',
+          items: [
+            '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735?lang=ja) — GEOを規律として定義し、構造化コンテンツからの引用上昇度を測定する基礎的学術論文',
+            '[WebFX、2026。「AI トラフィックが796%成長＆有機検索を上回る」](https://www.webfx.com/blog/seo/gen-ai-search-trends/?lang=ja) — 23億セッションでのAI対有機コンバージョン率の分析',
+            '[xSeek / Milestone Research、2026。「AI検索用構造化データ：40%より多くの引用」](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility?lang=ja) — JSON-LDスキーマと AI 引用頻度に関する制御研究',
+          ],
+        },
+        howToStart: {
+          title: 'GEO向けコンテンツを最適化する方法',
+          numberedItems: [
+            { title: 'robots.txtを監査する', whyItMatters: 'Disallow行でAI ボットを確認します。ChatGPT、Perplexity、Gemini、Claudeが許可されていることを確認します。' },
+            { title: 'スキーママークアップを追加', whyItMatters: 'TechArticle（または最適なLearningResource）、FAQPage、HowToを現在のコンテンツに実装します。これにより引用が40%上昇します。' },
+            { title: '回答ファースト構造にリライト', whyItMatters: '既存のセクションをスキャン：最初のセンテンスが回答ですか、背景ですか？背景を削除し、直接回答で開始します。' },
+            { title: 'エンティティを追加', whyItMatters: '各セクションで3～5つの具体的なエンティティ（製品、企業、標準）を参照します。一般的な用語を避けます。' },
+            { title: '内部リンク構造を確認', whyItMatters: '関連セクションへのリンク3～5個を追加；相互参照はAIに権威を示します。' },
+            { title: 'テスト引用率を測定', whyItMatters: 'モデル（ChatGPT、Claude、Perplexity）を使用して同じクエリで、あなたのコンテンツが引用されるかテストします。' },
+          ],
+        },
+        commonMistakes: {
+          title: 'GEOの一般的なミスと修正方法',
+          mistakes: [
+            {
+              mistake: 'SEOのみで最適化し、AIを無視する',
+              problem: 'Googleはあなたをランクさせるかもしれませんが、AI エンジンが異なる信号を優先した場合（スキーマ、回答ファースト）、あなたは引用されません。',
+              fix: 'SEO とGEO の両方で監査を実行します。SEO はキーワード、バックリンク、CTRに集中；GEO はスキーマ、エンティティ密度、回答構造に集中します。',
+            },
+            {
+              mistake: 'AIクローラーをブロック',
+              problem: 'robots.txtでGPTBot または Perplexity をブロックすることは、あなたのコンテンツを AIから隠します。トラフィック = 0。',
+              fix: 'robots.txt を開く；User-Agent: GPTBot、Perplexity、Google-Extended、Claude-Web を許可する（ワイルドカードではなく明示的に列挙）。',
+            },
+            {
+              mistake: 'スキーママークアップなし',
+              problem: 'スキーマなしのコンテンツはAIに一般的なテキストとして表示されます。信号なし = より低い引用。',
+              fix: 'TechArticle と FAQPage を 2026 年に全コンテンツに追加。JSON-LD、`datePublished`、`author`、`publisher` を含める。',
+            },
+            {
+              mistake: 'キーワードファースト構造（SEO スタイル）',
+              problem: '「SEOのベストプラクティス」としてセクションをキーワードで始めるとAIが混乱します。AIは背景を期待しません；回答を期待します。',
+              fix: 'セクションを回答で開始します。「[キーワード]とは？ [直接回答]」の代わりに、背景を削除し、回答のみを保持します。',
+            },
+            {
+              mistake: 'ジェネリック/繰り返しコンテンツ',
+              problem: '2つのサイトが同じGEOアドバイスを提供する場合、AIはそのうちの1つのみを引用します（通常、より高いバックリンクまたは古い発行日）。ジェネリックコンテンツは引用されません。',
+              fix: 'スペシャライズド データ、ケーススタディ、または地域的コンテキストを追加。「GEOが重要」ではなく、「2026年のeコマースの場合、AI検索トラフィックは従来検索を上回りました」と言う。',
+            },
+            {
+              mistake: '内部リンクまたはソース属性がない',
+              problem: 'アーティクルが分離されたように見える場合、AIはそれが文脈と思考に欠けていると推測します。より引用が少ない。',
+              fix: '3～5個の関連ページへのリンクを追加；研究にリンク。アーティクルが広くのイデアと情報源に文脈化されたことを示します。',
+            },
+          ],
+        },
+        faq: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'Generative Engine Optimization（GEO）とは何ですか？',
+              a: 'GEOは、AIが回答を合成するときに引用されるようにコンテンツを構造化する実践です。従来のSEOはGoogleでのランキングを目指しますが、GEOはAI検索エンジン（ChatGPT、Perplexity、Gemini、Claude）が各回答ごとに引用する2～7つのソースに含まれることを目指します。これには：回答ファースト構造、明確なエンティティ、スキーママークアップ、スタンドアロン引用可能なパラグラフが必要です。',
+            },
+            {
+              q: 'GEOは従来のSEOとどう異なりますか？',
+              a: '従来のSEOはGoogle検索結果のクリックを競います。GEOはAI生成の回答での引用を競います。ランキング要因が異なります：従来のSEOはバックリンクとユーザーシグナルを優先；GEOは構造化データ、明確な見出し階層、エンティティ密度、RAG対応コンテンツを優先します。GEOはSEO基礎（クローラビリティ、スキーマ）と新しい実践（回答ファースト構造、エンティティ密度）の両方を必要とします。',
+            },
+            {
+              q: 'どのAI検索エンジンを最適化すべきですか？',
+              a: '4つの主要なAI検索エンジンは、ChatGPT（OpenAI）、Perplexity、Gemini（Google DeepMind）、Claude（Anthropic）です。各者は異なるクロール戦略とランキング信号を使用します。ChatGPTとGeminiは市場シェアで支配的ですが、PerplexityとClaudeはテックとプロフェッショナルの視聴者からトラフィックを獲得しています。4つすべてに対してコンテンツを最適化してください：サイトがクローラビリティを確保し、スキーママークされ、情報密度比が高いことを確認します。',
+            },
+            {
+              q: 'AI検索エンジンからのトラフィックはどのくらい？',
+              a: 'AI検索トラフィックは指数関数的に成長しています。WebFXの2026年調査は、23億セッションを分析した結果、1年で796%の増加を示しました。PerplexityとChatGPT Browseは合わせてAI検索トラフィックの約35～40%を占め、GeminiとClaudeは急速に成長しています。B2Bコンテンツでは、AI検索トラフィックは従来の検索よりも2.3倍良いコンバージョン率を示しています（SEMrush 2026調査）。変動性は高い：テック/SaaSは15～25%のAIエンジントラフィックを見る一方、ニュース/ライフスタイルはSEO支配的です。',
+            },
+            {
+              q: 'AIクローラーからコンテンツをブロックできますか？',
+              a: 'はい。robots.txt、Disallowエントリ、メタロボットタグを使用できます。ただし：トラフィックと引用を生成することが目標の場合、ChatGPT、Perplexity、Gemini、Claudeをブロックしないでください。トレーニングや異議から保護する場合のみブロックしてください。GEOの場合、次のクローラーを許可してください：User-Agent: GPTBot（OpenAI）、User-Agent: Perplexity、User-Agent: Google-Extended（Gemini）、User-Agent: Claude-Web（Anthropic）。代案：robots.txtをインテリジェントに構造化（AIクローラーを許可、攻撃的ボットをブロック）します。',
+            },
+            {
+              q: 'スキーママークアップはGEOにどのような影響を与えますか？',
+              a: 'スキーママークアップ（JSON-LD）はGEOにとって重要です。Milestone Research 2026調査は、TechArticle、FAQPage、HowToスキーマが引用頻度を40%増加させたことを示しました。AIエンジンは構造化データを使用して信頼アンカーを識別し、回答にマークを付け、ソース属性をリンクします。常に実装します：TechArticle（またはLearningResource）、FAQPage、HowTo（関連する場合）、ItemList（明確なポイント用）、author/publisher情報を定義します。欠落または不完全なスキーマは引用頻度を大幅に減らします。',
+            },
+            {
+              q: 'GEOを使用する場合、個人データ保護法を遵守する必要がありますか？',
+              a: 'はい。日本コンテキストではMETI AI Governance 2024を参照します。データが日本国内で保存され処理されることを確認します。METI情報安全基準では、外部AI APIを避け、敏感なデータ（財務、医療、法律）にはローカルモデル（Ollama、LM Studio）を使用することを推奨しています。エンタープライズデプロイメント：OpenAI/Anthropic/Googleに処理契約を要求してください。ローカル推論セットアップ（例：LM Studio）はデータ保護リスクを大幅に削減します。',
+            },
+            {
+              q: '日本の小規模企業にはGEOは関連性がありますか？',
+              a: '絶対です。日本のSMEは強くGEOから利益を得ます：（1）B2Bコンテンツ（コンサルティング、SaaS、サービス）はAI検索で2～3倍良く変換されます、（2）若い意思決定者（25～45）はPerplexityとChatGPTを迅速な検索に好みます、（3）GEO最適化ページはGoogle広告よりも費用がかかります。実装：製品ページをスキーマで構造化し、ガイド/ホワイトペーパーを回答ファースト形式で作成し、長形式クエリに最適化します（「なぜ」「どのように」「どれ」）。METI準拠のため、内部テストにはローカルモデル（Ollama、LM Studio）を使用します。日本のコンサルティング、エンジニアリング、SaaSは2026予算でGEOを計画すべきです。',
+            },
+          ],
+        },
+        sources: {
+          title: 'ソースと追加リソース',
+          items: [
+            '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735) — GEOを規律として定義し、構造化コンテンツからの引用上昇度を測定する基礎的学術論文',
+            '[WebFX、2026。「AI トラフィックが796%成長＆有機検索を上回る」](https://www.webfx.com/blog/seo/gen-ai-search-trends/) — 23億セッションでのAI対有機コンバージョン率の分析',
+            '[xSeek / Milestone Research、2026。「AI検索用構造化データ：40%より多くの引用」](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility) — JSON-LDスキーマと AI 引用頻度に関する制御研究',
+          ],
+        },
+      },
+    },
     zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
   };
