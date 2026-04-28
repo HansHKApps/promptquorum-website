@@ -1418,132 +1418,459 @@ export const article: Record<Language, PEArticle> = {
   }
 },
     zh: {
-  theme: 'Techniques',
-  title: '受限提示：保持AI输出的可预测性',
-  intro: '受限提示是一种技术，您不仅告诉模型要做什么，还要明确指定它必须和不能做什么，以使输出保持在明确定义的边界内。当您需要可靠的格式、安全内容或严格的内部规则遵守时，这是必不可少的。',
-  publishDate: '2026-03-26',
+  theme: '提示工程技术',
+  title: '受限提示：完整指南',
+  seoTitle: '受限提示：完整指南 2026',
+  intro: '受限提示强制LLM遵守严格规则：特定输出格式、长度限制或预定义架构遵守。在生产环境中需要可靠、可重现的结果时至关重要。',
+  metaDescription: '学习受限提示提升LLM可靠性。严格格式、输出验证、PromptQuorum高级技术。',
+  publishDate: '2026-01-20',
+  dateModified: '2026-04-28',
+  lastFactChecked: '2026-04-28',
   readTime: '阅读约6分钟',
-  metaDescription: '了解受限提示是什么、为什么重要，以及如何在真实工作流中实现可预测和安全的AI输出。',
-  educationalLevel: 'Intermediate',
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-09-26',
+  educationalLevel: 'Advanced',
+  audience: '将LLM集成到生产环境的开发者和企业',
   primaryTerm: '受限提示',
-  schema: {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: '受限提示：保持AI输出的可预测性',
-    description: '受限提示是什么、为什么重要，以及如何在真实工作流中实现可预测和安全的AI输出。',
-    datePublished: '2026-03-26',
-    dateModified: '2026-03-26',
-    keywords: ['受限提示', '提示工程', '结构化提示', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-  },
+  aboutTopics: ['提示工程', 'AI模型可靠性', '输出验证'],
   sections: {
+    tldr: {
+      isTldr: true,
+      title: '核心要点',
+      numberedItems: [
+        '格式约束强制模型生成JSON、XML等结构化输出，而非自由文本',
+        '长度限制和架构减少幻觉和内容偏离',
+        '开源模型（Llama 3.2、Mistral 7B）和商用模型（GPT-4o、Claude）均支持约束，但对应程度有差异',
+        '在系统或用户提示中明确指定约束时效果最佳',
+        'PromptQuorum等工具支持大规模测试和验证约束遵守',
+        '常见错误：约束模糊、规则过度堆积、缺少边界情况测试',
+        '生产环例：数据提取、意图分类、验证内容生成、自动化支持'
+      ]
+    },
     whatIsConstrained: {
       title: '什么是受限提示',
       content: [
-        '**受限提示是指在提示中添加关于内容、结构、长度和行为的明确规则。** 不是像"总结这个"这样的松散指令，您需要指定允许的格式、必需字段、禁止主题和验证规则。',
-        '约束可以包括输出模式（如具有固定键的JSON）、字数限制、语气要求以及安全限制，如"不提供医学诊断"。通过使这些规则成为提示的一部分，您可以减少歧义，使模型更容易集成到生产工作流中。',
+        '受限提示是指明确强制模型输出架构。与其问"你的想法是什么？"，你指定"以JSON返回。字段结构：{ sentiment: "positive"|"negative"|"neutral", confidence: 0–1, reason: string }"。',
+        '约束在三个层级运作：',
+        '1. **格式层**：强制JSON、XML、Markdown、CSV等特定格式',
+        '2. **架构层**：定义精确结构和类型（数字、枚举、嵌套列表）',
+        '3. **语义层**：限制内容（"不超过100字"、"仅使用文档中提到的实体"）'
       ],
+      snippets: [
+        {
+          type: 'in-one-sentence',
+          text: '约束将非结构化模型转换为实质上的API。'
+        },
+        {
+          type: 'in-plain-terms',
+          text: '与其处理自由文本，你获得验证、可解析、可预测的响应。'
+        }
+      ]
     },
     whyItMatters: {
       title: '受限提示为什么重要',
       content: [
-        '**受限提示很重要，因为模型输出会流向依赖可预测行为的人员、流程或其他系统。** 没有约束，同一提示可能在不同运行中产生不同的结构或详细程度。',
-        '明确的约束可以帮助您实现以下目标：',
-      ],
-      items: [
-        '防止破坏下游工具的意外内容或格式。',
-        '直接在提示级别强制执行品牌、法律或安全指南。',
-        '减少审查时间，因为输出已经与您需要的结构相匹配。',
-      ],
+        '没有约束，LLM会生成执行之间格式和内容变化的自由文本。应用无法信任结构或内容。有了约束，模型保持在定义的范围内。',
+        '主要优势：',
+        '• **可靠性**：每个响应遵守架构。无意外结果或缺失字段',
+        '• **可解析性**：有效JSON可被代码无异常处理',
+        '• **可重现性**：相同输入、相同模型、相同约束 → 相同输出格式',
+        '• **链式集成**：LLM生成结构化响应。下一步直接处理',
+        '• **减少幻觉**：严格约束限制模型发明或脱离主题的空间'
+      ]
     },
     typesOfConstraints: {
-      title: '您可以使用的约束类型',
-      content: [
-        '**您可以沿着多个维度约束提示：结构、内容、风格、长度和安全性。** 您越精确，输出就越一致。',
-        '常见的约束类型包括：',
-      ],
-      items: [
-        '结构约束：必需的标题、项目列表、表格或具有特定键的JSON。',
-        '内容约束：必需的部分（如"风险"或"后续步骤"）以及禁止的主题或短语。',
-        '风格约束：语气（"正式"、"中立"、"对话式"）、阅读水平或术语规则。',
-        '长度约束：字数或字符限制，或固定数量的项目或部分。',
-        '安全约束：避免个人数据、医学建议、法律结论或不允许的内容类别的指示。',
-      ],
+      title: '受限提示的类型',
+      content: '约束在严密性和复杂性上有所不同。主要类型如下：',
+      tableFormat: true,
+      columns: ['类型', '描述', '示例'],
+      rows: [
+        {
+          '类型': '固定格式',
+          '描述': 'JSON、XML、YAML、CSV等机器可读格式的输出',
+          '示例': '{ "sentiment": "positive", "score": 0.85 }'
+        },
+        {
+          '类型': '枚举',
+          '描述': '响应限制在有限值集合内',
+          '示例': 'sentiment ∈ ["positive", "negative", "neutral"]'
+        },
+        {
+          '类型': '长度限制',
+          '描述': '最多N个单词、字符或令牌',
+          '示例': '解释不超过100字'
+        },
+        {
+          '类型': '嵌套架构',
+          '描述': '复杂结构含嵌套类型（对象数组、可选对象）',
+          '示例': '{ id: int, label: string, children: [...] } 的数组'
+        },
+        {
+          '类型': '语义约束',
+          '描述': '内容遵守应用逻辑（有效参考、无自引用）',
+          '示例': '仅推荐提供列表中的产品'
+        }
+      ]
     },
     example: {
-      title: '示例：无约束提示 vs 受限提示',
-      content: [
-        '**受限提示的影响最容易通过比较同一任务的无约束和受限提示来看出。** 这里我们起草一个简短的产品摘要。',
-        '**[不好的提示]**',
-        '"为我们的新分析功能写一份摘要。"',
-        '**[好的提示]**',
-        '"您是一名B2B产品营销人员。任务：为产品页面编写我们新分析功能的摘要。约束：长度：120-160字。结构：1个简短的介绍段落，然后是3个项目，然后是1个结束句。风格：清晰、中立专业的语气。不使用"革命性"或"改变游戏规则"之类的宣传词。内容：提及主要优势（更快获得客户行为洞察）和一个具体的使用示例。输出格式：使用`-`进行项目的有效Markdown。"',
-        '受限版本定义了长度、结构、风格和必需内容，这使得输出更容易预测，更容易重复使用。',
-      ],
+      title: '示例：客户支持工单分类',
+      content: '用例：用LLM自动分类客户支持工单。',
+      blockquote: '无约束示例："请分类这个工单。"→ 输出："此工单涉及客户访问请求。似乎很紧急。我的建议是..."',
+      blockquoteSource: '非结构化输出 – 难以解析',
+      items: [
+        '格式：自由文本',
+        '内容：需要手动解析或第二阶段处理',
+        '成本：两次API调用、更多令牌、更多错误'
+      ]
     },
     whenToUse: {
       title: '何时使用受限提示',
       content: [
-        '**当正确性和一致性比最大创意更重要时，您应该使用受限提示。** 这在运营、分析和监管环境中尤其如此。',
-        '典型的使用案例包括：',
+        '受限提示最适合应用依赖可预测输出结构的情况。',
+        '适用用例：'
       ],
-      items: [
-        '生成其他系统将解析的JSON或表格输出。',
-        '在团队中创建标准化的报告、摘要或状态更新。',
-        '起草必须遵循品牌或法律指南的客户通信。',
-        '从非结构化文本中提取结构化数据（问题、实体、指标）。',
-      ],
+      numberedItems: [
+        '文本分类：用有限标签集自动标记电子邮件、工单、文档',
+        '数据提取：从文档中提取名称、日期、价格',
+        '验证内容生成：生成遵守营销架构的产品描述',
+        '会话API：将自由对话转换为结构化命令',
+        '评分：以精确格式生成数值分数和说明',
+        '多模态处理：强制视觉模型按架构描述图像（结构化alt文本）'
+      ]
     },
     howPQSupports: {
       title: 'PromptQuorum如何支持受限提示',
-      content: [
-        '**PromptQuorum是一个多模型AI分发工具，设计用来很好地与受限提示配合，允许您定义、保存和重用结构化提示框架。** 您可以将约束与SPECS、RTF或Google的提示指南等框架相结合，并同时将它们发送给多个模型。',
-        '在PromptQuorum中，您可以：',
-      ],
+      content: 'PromptQuorum包含原生工具用于大规模测试和验证约束：',
       items: [
-        '直接将结构和内容约束编码到框架中，使每次运行都遵循相同的规则。',
-        '在多个模型间测试受限提示，查看哪个提供者最好地遵守您的规范。',
-        '将受限提示另存为模板以供重复使用，确保您的团队始终使用相同的验证模式。',
-      ],
+        '**结构化测试模式**：对多个模型（GPT-4o、Claude、Llama 3.2）测试架构遵守',
+        '**架构验证**：定义JSON架构。检测并报告每个响应的违规',
+        '**多模型分发**：向多个模型发送相同的受限提示。收集结构化响应，检测差异',
+        '**生产监控**：跟踪架构遵守率。哪些模型偏离？哪些字段经常未结构化？',
+        '**交互式调试**：检测到约束违规时，显示具体位置和原因。提供改进建议'
+      ]
     },
     howToStart: {
-      title: '如何使用受限提示',
-      content: [
-        '### 实施步骤',
-      ],
+      title: '受限提示集成：5个步骤',
       numberedItems: [
-        '**确定与您的任务相关的输出约束：长度、格式、词汇、范围、安全性。** 示例："响应必须≤100字、JSON格式、仅使用技术术语、仅涵盖最近发展（2024年+）、不提及竞争对手。"',
-        '**使用"必须"、"禁止"和"仅"语言明确说明约束。** 避免使用"尽量"或"旨在"等软指令。硬约束更可靠。',
-        '**对于格式约束，提供您想要的确切格式的示例。** 向模型显示："返回JSON：{ \"finding\": \"...\", \"confidence\": \"high|medium|low\", \"sources\": [...] }"',
-        '**对于内容约束，明确列出要包含和排除的内容。** 示例："包含：技术细节、性能指标。排除：营销语言、竞争对手名称、定价。"',
-        '**在边界情况下测试受限提示，以确保模型遵守所有约束。** 生成10个输出。检查：所有都遵守长度限制吗？所有都使用正确的格式吗？有任何违规吗？',
-      ],
+        {
+          title: '定义架构',
+          whyItMatters: '编写提示前，明确结构。哪些字段？什么类型？必需vs可选？封闭或开放枚举？'
+        },
+        {
+          title: '明确陈述约束',
+          whyItMatters: '准确告诉模型如何结构化响应。示例："始终以有效JSON返回：{ \"class\": \"urgent\"|\"normal\"|\"low\", \"reason\": string, \"actions\": string[] }"'
+        },
+        {
+          title: '在多个模型上测试',
+          whyItMatters: 'Llama、Mistral、GPT-4o、Claude对约束反应不同。测试每个。测量遵守率。'
+        },
+        {
+          title: '在生产中验证每个响应',
+          whyItMatters: '解析JSON。若无效，记录错误、带反馈重试（"你的响应不是有效JSON：..."），或切换到更可靠的模型。'
+        },
+        {
+          title: '监控违规',
+          whyItMatters: '跟踪架构违规。基于实际违规模式调整提示、模型或约束。'
+        }
+      ]
     },
-    practicalAdvice: {
-      title: '实用建议',
-      content: [
-        '在实施受限提示时应遵循的实用指导和最佳实践。',
-      ],
+    commonMistakes: {
+      title: '受限提示的常见错误',
+      mistakes: [
+        {
+          mistake: '约束过于模糊',
+          problem: '"简洁点"或"结构化"不够具体。模型忽略或误解。',
+          fix: '明确指定："不超过100字"、"JSON：{ field1: type, field2: type }"'
+        },
+        {
+          mistake: '约束过度堆积',
+          problem: '同时指定10个约束令模型混乱。遗漏或矛盾。',
+          fix: '保持2-3个主要约束。独立测试每个。逐步整合。'
+        },
+        {
+          mistake: '缺少边界情况测试',
+          problem: '简单文本成功。Unicode、空列表、极端情况失败。',
+          fix: '测试：零元素、1000元素、特殊字符、非拉丁字符、空输入'
+        },
+        {
+          mistake: '忽视模型间差异',
+          problem: '一个模型完美遵守JSON。另一个添加注释。GPT-4o用```包裹。',
+          fix: '在所有计划使用的模型上测试约束。差异不可接受则固定模型。'
+        },
+        {
+          mistake: '遗漏解析异常处理',
+          problem: '假设JSON总是有效。生产中崩溃。',
+          fix: '用try-catch包裹解析。记录错误。带反馈重试："JSON无效：..."'
+        }
+      ]
+    },
+    relatedReading: {
+      title: '相关阅读',
       items: [
-        '对于更复杂的任务，首先尝试无约束的提示，然后根据结果添加约束。',
-        '使用PromptQuorum在多个模型上测试受限提示的版本，以识别哪个提供者提供最佳性能。',
-        '监控约束是否导致性能问题（延迟、不完整的输出等）。',
-        '定期审查和优化约束，以平衡严格性和输出质量之间的关系。',
-      ],
+        '[LLM文法：强制输出结构](/prompt-engineering/llm-grammars?lang=zh) — 约束之外的形式化方法',
+        '[Chain-of-Thought vs 结构化推理](/prompt-engineering/cot-structured-reasoning?lang=zh) — 何时使用哪种',
+        '[结构化输出微调](/prompt-engineering/fine-tuning-for-structured-output?lang=zh) — 提示工程的替代方案',
+        '[LLM输出验证：架构和测试](/prompt-engineering/llm-output-validation?lang=zh) — 完整验证框架',
+        '[PromptQuorum：多模型分发](/features/multi-model-dispatch?lang=zh) — 大规模测试约束',
+        '[与LLM的会话API](/local-llms/conversational-apis?lang=zh) — 实例：聊天机器人的控制输出'
+      ]
     },
-    commonChallenges: {
-      title: '常见挑战和解决方案',
-      content: [
-        '在应用受限提示时，用户通常会遇到以下挑战：',
-      ],
+    faqSection: {
+      title: '常见问题',
+      faqs: [
+        {
+          q: '约束会减慢LLM响应吗？',
+          a: '略微减慢。严格约束限制搜索空间，有时可加速生成。但明确指示模型"解析为JSON"添加轻微延迟。大多数情况（<100ms）此成本为可靠性而值得。测量你的用例。'
+        },
+        {
+          q: '所有模型都支持约束吗？',
+          a: '最新模型（GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral）很好地支持格式约束和枚举。但约束越复杂（深层嵌套架构、复杂语义逻辑），支持程度越不同。小模型（<7B）可靠性较低。在你的模型和用例上测试。'
+        },
+        {
+          q: '约束应在系统还是用户提示中？',
+          a: '两者都行但有差异。系统提示（指令）整体一致性更高。用户提示（内容）允许每条消息特定约束。最佳实践：一般约束（格式、类型）在系统提示；上下文特定约束（数据、限制）在用户提示。'
+        },
+        {
+          q: '模型忽略约束怎么办？',
+          a: '递进处理：1）更明确："结构化"→"始终以有效JSON返回"。2）添加示例："例：{ sentiment: \'positive\', score: 0.9 }"。3）切换到更强大模型（GPT-4o vs 3.5、Llama 70B vs 8B）。4）微调（高成本，生产中可靠）。'
+        },
+        {
+          q: '约束影响内容质量吗？',
+          a: '是的，但积极影响。设计良好的约束减少噪音，使模型集中。设计不良（过度限制）可降低创意或忽视背景。创意内容（小说、文案）约束轻（长度、语气）。数据工作（提取、分类）约束严格。'
+        },
+        {
+          q: '能结合受限提示和微调吗？',
+          a: '是的，这是最佳实践。微调教会模型你的领域和风格。约束强制每个响应为精确所需格式。合并时可靠性和质量最高。'
+        },
+        {
+          q: '中国企业使用AI约束的法规是什么？',
+          a: '中国《数据安全法》（2021）要求对个人数据和敏感信息严格管理。受限提示可通过限制敏感信息流向来帮助合规。金融、医疗、法律部门需特别注意。建议使用本地推理或对数据处理有严格控制的解决方案。'
+        },
+        {
+          q: '金融机构的约束设计技巧？',
+          a: '金融数据保护需约束排除个人信息和机密数据。示例约束："不输出客户名、账户号、交易额""仅使用批准的账户代码"。生产中必须配合审计日志和数据保护，符合《数据安全法》和内部政策。'
+        },
+        {
+          q: '医疗领域约束示例？',
+          a: '医疗约束示例："不显示诊断结果。不提议治疗。不使用医学术语。相反，建议患者咨询医生"。专业判断由医疗专家而非AI把握。约束中明确医学免责。'
+        },
+        {
+          q: 'PromptQuorum能自动化约束测试吗？',
+          a: '是的。PromptQuorum自动化架构验证、多模型对比测试、生产监控。配置测试套件后，每次对样本集验证约束遵守。自动告警。错误模式跟踪指导改进。'
+        }
+      ]
+    },
+    sources: {
+      title: '来源和参考',
       items: [
-        '过度约束导致模型无法满足所有要求 - 优先考虑最关键的约束。',
-        '约束与创意冲突 - 在创意和结构之间找到平衡。',
-        '不同模型以不同方式解释约束 - 在您计划使用的模型上进行测试。',
-        '约束过于复杂难以理解 - 使用简单清晰的语言制定约束。',
-      ],
-    },
+        '[OpenAI：函数调用和结构化输出](https://platform.openai.com/docs/guides/function-calling) — 官方文档',
+        '[Anthropic：Claude的约束输出](https://docs.anthropic.com) — 约束模式文档',
+        '[Guidance：基于文法的输出控制](https://github.com/guidance-ai/guidance) — 开源文法库'
+      ]
+    }
   },
+  toc: [
+    { label: '核心要点', anchor: 'tldr' },
+    { label: '什么是受限提示', anchor: 'whatIsConstrained' },
+    { label: '受限提示为什么重要', anchor: 'whyItMatters' },
+    { label: '受限提示的类型', anchor: 'typesOfConstraints' },
+    { label: '示例：客户支持工单分类', anchor: 'example' },
+    { label: '何时使用受限提示', anchor: 'whenToUse' },
+    { label: 'PromptQuorum如何支持受限提示', anchor: 'howPQSupports' },
+    { label: '受限提示集成：5个步骤', anchor: 'howToStart' },
+    { label: '受限提示的常见错误', anchor: 'commonMistakes' },
+    { label: '相关阅读', anchor: 'relatedReading' },
+    { label: '常见问题', anchor: 'faqSection' },
+    { label: '来源和参考', anchor: 'sources' }
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    'headline': '受限提示：完整指南',
+    'url': 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=zh',
+    'inLanguage': 'zh',
+    'image': 'https://www.promptquorum.com/og-constrained-prompting-zh.png',
+    'datePublished': '2026-01-20',
+    'dateModified': '2026-04-28',
+    'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+    'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+    'description': '学习受限提示提升LLM可靠性。',
+    'about': [
+      { '@type': 'Thing', 'name': '提示工程' },
+      { '@type': 'Thing', 'name': 'AI模型可靠性' },
+      { '@type': 'Thing', 'name': '输出验证' }
+    ],
+    'mentions': [
+      { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' },
+      { '@type': 'SoftwareApplication', 'name': 'GPT-4o' },
+      { '@type': 'SoftwareApplication', 'name': 'Claude' },
+      { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+      { '@type': 'SoftwareApplication', 'name': 'Mistral' }
+    ],
+    'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.tldr'] }
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'inLanguage': 'zh',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': '约束会减慢LLM响应吗？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '略微减慢。严格约束限制搜索空间，有时可加速生成。但明确指示模型"解析为JSON"添加轻微延迟。大多数情况（<100ms）此成本为可靠性而值得。测量你的用例。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '所有模型都支持约束吗？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '最新模型（GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral）很好地支持格式约束和枚举。但约束越复杂（深层嵌套架构、复杂语义逻辑），支持程度越不同。小模型（<7B）可靠性较低。在你的模型和用例上测试。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '约束应在系统还是用户提示中？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '两者都行但有差异。系统提示（指令）整体一致性更高。用户提示（内容）允许每条消息特定约束。最佳实践：一般约束（格式、类型）在系统提示；上下文特定约束（数据、限制）在用户提示。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '模型忽略约束怎么办？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '递进处理：1）更明确："结构化"→"始终以有效JSON返回"。2）添加示例："例：{ sentiment: \'positive\', score: 0.9 }"。3）切换到更强大模型（GPT-4o vs 3.5、Llama 70B vs 8B）。4）微调（高成本，生产中可靠）。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '约束影响内容质量吗？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '是的，但积极影响。设计良好的约束减少噪音，使模型集中。设计不良（过度限制）可降低创意或忽视背景。创意内容（小说、文案）约束轻（长度、语气）。数据工作（提取、分类）约束严格。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '能结合受限提示和微调吗？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '是的，这是最佳实践。微调教会模型你的领域和风格。约束强制每个响应为精确所需格式。合并时可靠性和质量最高。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '中国企业使用AI约束的法规是什么？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '中国《数据安全法》（2021）要求对个人数据和敏感信息严格管理。受限提示可通过限制敏感信息流向来帮助合规。金融、医疗、法律部门需特别注意。建议使用本地推理或对数据处理有严格控制的解决方案。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '金融机构的约束设计技巧？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '金融数据保护需约束排除个人信息和机密数据。示例约束："不输出客户名、账户号、交易额""仅使用批准的账户代码"。生产中必须配合审计日志和数据保护，符合《数据安全法》和内部政策。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': '医疗领域约束示例？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '医疗约束示例："不显示诊断结果。不提议治疗。不使用医学术语。相反，建议患者咨询医生"。专业判断由医疗专家而非AI把握。约束中明确医学免责。'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'PromptQuorum能自动化约束测试吗？',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': '是的。PromptQuorum自动化架构验证、多模型对比测试、生产监控。配置测试套件后，每次对样本集验证约束遵守。自动告警。错误模式跟踪指导改进。'
+        }
+      }
+    ]
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    'inLanguage': 'zh',
+    'name': '受限提示集成：5个步骤',
+    'step': [
+      {
+        '@type': 'HowToStep',
+        'position': 1,
+        'name': '定义架构',
+        'text': '编写提示前，明确结构。哪些字段？什么类型？必需vs可选？封闭或开放枚举？'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 2,
+        'name': '明确陈述约束',
+        'text': '准确告诉模型如何结构化响应。示例："始终以有效JSON返回：{ \"class\": \"urgent\"|\"normal\"|\"low\", \"reason\": string, \"actions\": string[] }"'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 3,
+        'name': '在多个模型上测试',
+        'text': 'Llama、Mistral、GPT-4o、Claude对约束反应不同。测试每个。测量遵守率。'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 4,
+        'name': '在生产中验证每个响应',
+        'text': '解析JSON。若无效，记录错误、带反馈重试（"你的响应不是有效JSON：..."），或切换到更可靠的模型。'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 5,
+        'name': '监控违规',
+        'text': '跟踪架构违规。基于实际违规模式调整提示、模型或约束。'
+      }
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'inLanguage': 'zh',
+    'name': '受限提示的类型',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': '固定格式',
+        'description': 'JSON、XML、YAML、CSV等机器可读格式的输出'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': '枚举',
+        'description': '响应限制在有限值集合内'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': '长度限制',
+        'description': '最多N个单词、字符或令牌'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 4,
+        'name': '嵌套架构',
+        'description': '复杂结构含嵌套类型（对象数组、可选对象）'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 5,
+        'name': '语义约束',
+        'description': '内容遵守应用逻辑（有效参考、无自引用）'
+      }
+    ]
+  }
 },
   };
