@@ -1206,10 +1206,26 @@ export const article: Record<Language, PEArticle> = {
       seoTitle: 'TRACE框架完整指南：用5步让AI推理过程全程透明（2026年实战版）',
       intro: '**TRACE框架将AI模型的推理过程从"黑盒"变成可见的逐步思考。** 通过思考（Think）→推理（Reason）→分析（Analyze）→结论（Conclude）→解释（Explain）5个步骤，你可以在错误影响决策之前发现模型的逻辑漏洞和错误假设。PromptQuorum原生集成了TRACE框架，所有用户都可以直接使用。',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-28',
       readTime: '8分钟阅读',
       educationalLevel: 'Intermediate',
       primaryTerm: 'TRACE框架',
       metaDescription: 'TRACE框架（思考→推理→分析→结论→解释）让AI推理全程透明化。复杂决策、战略分析、技术审查的实战方法与对比示例，提升可信度和可解释性。',
+      toc: [
+        { anchor: 'key-takeaways', label: '核心要点' },
+        { anchor: 'what-is-trace', label: 'TRACE框架是什么' },
+        { anchor: 'why-trace-matters', label: '为什么TRACE框架很重要' },
+        { anchor: 'five-stages', label: 'TRACE的五个阶段是什么？' },
+        { anchor: 'bad-vs-good-example', label: '示例：差的与好的TRACE提示词' },
+        { anchor: 'when-to-use', label: '何时使用TRACE框架' },
+        { anchor: 'how-to-write', label: '如何编写TRACE提示词' },
+        { anchor: 'how-promptquorum-implements', label: 'PromptQuorum如何实现TRACE框架' },
+        { anchor: 'combining-trace', label: '如何将TRACE与其他框架结合使用？' },
+        { anchor: 'how-to-start', label: '如何使用TRACE框架' },
+        { anchor: 'common-mistakes', label: 'TRACE的常见错误' },
+        { anchor: 'related-reading', label: '延伸阅读' },
+        { anchor: 'faq', label: '常见问题' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1271,7 +1287,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         fiveStages: {
-          title: 'TRACE的5个步骤详解',
+          title: 'TRACE的五个阶段是什么？',
           content: [
             '**好的TRACE提示词会明确定义每个步骤，确保模型的推理过程一致且可复现。** 你可以在一个长提示词中包含所有步骤，也可以分步发送。',
           ],
@@ -1332,7 +1348,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         combineTRACEWithOthers: {
-          title: '和其他框架的搭配',
+          title: '如何将TRACE与其他框架结合使用？',
           content: [
             '**TRACE最好和其他框架组合，形成「生成→验证→定型」的完整工作流。**',
           ],
@@ -1340,6 +1356,14 @@ export const article: Record<Language, PEArticle> = {
             '初稿生成：用Single Step或CO-STAR快速生成初版',
             '逻辑验证：用TRACE深入审视推理是否严密、假设是否合理',
             '最终定型：如果输出需要特定格式（JSON、表格等），用SPECS来标准化',
+          ],
+          columns: ['框架', '最适合', '与TRACE结合使用的时机'],
+          rows: [
+            { '框架': 'CO-STAR', '最适合': '内容生成、起草', '与TRACE结合使用的时机': '先起草，再用TRACE评估选项' },
+            { '框架': 'CRAFT', '最适合': '结构化内容与约束条件', '与TRACE结合使用的时机': '生成内容，再用TRACE验证' },
+            { '框架': 'RISEN', '最适合': '迭代改进', '与TRACE结合使用的时机': '用TRACE分析，用RISEN改进' },
+            { '框架': 'SPECS', '最适合': '严格输出架构', '与TRACE结合使用的时机': 'TRACE用于推理，SPECS用于最终格式' },
+            { '框架': 'Few-Shot', '最适合': '格式一致性', '与TRACE结合使用的时机': '为复杂任务的TRACE步骤添加示例' },
           ],
         },
         howToStart: {
@@ -1350,6 +1374,102 @@ export const article: Record<Language, PEArticle> = {
             '**Analyze（分析）：** 让模型将其选定的方法逐步应用到你提供的实际数据或背景中。尽可能显示数字或具体例子。例：「将你偏好的方法应用到我给出的具体情况中。显示每一步。」',
             '**Conclude（结论）：** 让模型直接明确地陈述最终答案或建议，最好在一句话中完成。例：「清楚地陈述你的建议。如相关，指定它适用的条件或细分市场。」',
             '**Explain（解释）：** 让模型用非技术受众能理解的平易近人的语言为结论正当化。例：「用3～5句话解释为什么。避免行话。用向一位没有技术背景的高管解释一样的方式来写。」',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'TRACE的常见错误',
+          mistakes: [
+            {
+              mistake: '跳过「思考」步骤',
+              problem: '不重述问题直接进入推理，模型容易误解需求并自信地走错方向。',
+              fix: '始终让模型重述问题并列出关键变量，提前发现误解。',
+            },
+            {
+              mistake: '不限制每步的长度',
+              problem: '无限制的TRACE会生成冗长答案，难以阅读且成本高。',
+              fix: '为每步添加长度限制：「每步最多2句话」或「分析部分最多3步」。',
+            },
+            {
+              mistake: '对简单问题用TRACE',
+              problem: 'TRACE增加延迟和冗长。简单查询或转换不适合用TRACE。',
+              fix: '保留TRACE用于决策、分析和复杂推理。简单任务用零样本提示。',
+            },
+            {
+              mistake: '把5个步骤当成硬性规则',
+              problem: '有些任务不需要全部5步，严格遵守会浪费时间和tokens。',
+              fix: '根据任务灵活调整：数据分析可跳过「推理」，简洁性可合并「分析」和「结论」。',
+            },
+            {
+              mistake: '不在模型间比对TRACE结果',
+              problem: '不同模型推理方式不同，只测试一个模型错过了找最佳提供商的机会。',
+              fix: '用PromptQuorum或类似工具并行发送TRACE提示给多个模型，对比推理过程。',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: '延伸阅读',
+          content: [
+            'TRACE框架建立在更广泛的推理技术之上。这里有相关指南帮助你加深理解：',
+          ],
+          items: [
+            '[Chain-of-Thought提示](/prompt-engineering/chain-of-thought-prompting) — 让模型逐步推理的基础技术。',
+            '[RISEN框架](/prompt-engineering/risen-framework) — 当你需要和推理一起迭代改进时使用。',
+            '[CO-STAR框架](/prompt-engineering/co-star-framework) — 用于起草和生成任务的辅助框架。',
+            '[零样本 vs 少样本提示](/prompt-engineering/zero-shot-vs-few-shot-prompting) — 了解什么时候TRACE太重了，更简单的技术就够用。',
+            '[提示工程基础](/prompt-engineering/prompt-engineering-fundamentals) — 有效结构化提示的基础指南。',
+          ],
+        },
+
+        faq: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: '提示工程中TRACE代表什么？',
+              a: 'TRACE是Think（思考）、Reason（推理）、Analyze（分析）、Conclude（结论）、Explain（解释）的首字母。是一个结构化的提示模式，让AI模型展示推理的每一步，而不仅仅是最终答案。',
+            },
+            {
+              q: '什么时候应该使用TRACE框架？',
+              a: '当推理质量和论证比速度更重要时使用TRACE：战略决策、技术评审、复杂调试，以及需要向利益相关者展示如何得出结论的情况。',
+            },
+            {
+              q: 'TRACE与Chain-of-Thought提示有什么不同？',
+              a: 'Chain-of-Thought是笼统的「逐步展示推理」技术。TRACE是具体的5步结构，能在任务和模型间产生一致、可重复的推理迹象。',
+            },
+            {
+              q: 'TRACE与RISEN框架有什么不同？',
+              a: 'TRACE侧重让推理过程明确可审计。RISEN侧重逐步改进现有草稿。要理解模型思考→TRACE，要提高质量→RISEN。',
+            },
+            {
+              q: '能在一个提示词中用TRACE，还是需要多轮提示？',
+              a: '都可以。单个提示词列出全5步更快；多轮可让你在各步停下来调整。要最大化控制，很多用户分步发送各TRACE步骤。',
+            },
+            {
+              q: '怎样防止TRACE生成太长的答案？',
+              a: '为各步设置长度限制。比如：「每步最多2句话」强制模型简洁，同时保持推理透明度。',
+            },
+            {
+              q: 'TRACE能帮助找到模型错误吗？',
+              a: '能。通过可见化推理过程，TRACE让你发现错误假设、逻辑跳跃、计算错误——这些在只看最终答案时看不见。',
+            },
+            {
+              q: 'PromptQuorum怎样支持TRACE提示？',
+              a: 'PromptQuorum把TRACE作为内置提示结构。你在对齐5步的结构化字段中填入任务上下文。PromptQuorum随后把提示并行发给多个模型，让你并排对比推理迹象。',
+            },
+          ],
+        },
+
+        sources: {
+          title: '参考来源',
+          content: [
+            '本文总结了提示工程和AI推理的最新最佳实践。TRACE框架模式已在学术研究和业界实践中用于使语言模型推理透明化。',
+          ],
+          items: [
+            'Wei, J., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *arXiv:2201.11903*. [在arXiv上阅读](https://arxiv.org/abs/2201.11903)',
+            'OpenAI. (2024). "How to use the OpenAI API." [OpenAI API文档](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2024). "Prompt Engineering Techniques." [Anthropic文档](https://docs.anthropic.com/en/docs/build-a-chatbot)',
+            'LM Studio & Ollama. 开源LLM部署与推理工具。',
           ],
         },
       },
