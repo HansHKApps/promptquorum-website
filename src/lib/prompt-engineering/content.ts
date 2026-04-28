@@ -1,13 +1,4 @@
-// Phase 2: Router for content split refactor.
-// Selects the data source based on NEXT_PUBLIC_USE_SPLIT_CONTENT.
-// Both branches must compile so type-checks and tree-shaking work.
-// See docs/plans/content-refactor-2026-04.md for the full rollout plan.
-
-import { peContent as peContentOriginal } from './content.original'
-import { peContent as peContentSplit } from './articles-barrel'
-
-export type { PESection, PEArticle } from './content.original'
-
-const useSplit = process.env.NEXT_PUBLIC_USE_SPLIT_CONTENT === 'true'
-
-export const peContent = useSplit ? peContentSplit : peContentOriginal
+// PE content entry point — re-exports types and the assembled peContent.
+// Post-canary: serves split files exclusively.
+export type { PESection, PEArticle } from './types'
+export { peContent } from './articles-barrel'

@@ -3,7 +3,7 @@
 // Generated: 2026-04-26T09:45:32.245Z
 
 import type { Language } from "@/lib/blog/blogContent";
-import type { PEArticle } from "@/lib/prompt-engineering/content";
+import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 import { article as a_build_a_prompt_library } from "./articles/build-a-prompt-library";
 import { article as a_fundamentals_of_prompt_optimization } from "./articles/fundamentals-of-prompt-optimization";

@@ -4,7 +4,7 @@
 
 import type { Language } from "@/lib/blog/blogContent";
 
-import type { PEArticle } from "@/lib/prompt-engineering/content";
+import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
   en: {

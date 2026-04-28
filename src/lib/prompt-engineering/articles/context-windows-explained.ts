@@ -5,7 +5,7 @@
 import type { Language } from "@/lib/blog/blogContent";
 import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh } from "@/lib/prompt-engineering/contextWindowsTranslations";
 
-import type { PEArticle } from "@/lib/prompt-engineering/content";
+import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
     en: {
