@@ -618,10 +618,26 @@ export const article: Record<Language, PEArticle> = {
       seoTitle: 'Framework TRACE : Rendre visible la réflexion de l\'IA 2026',
       intro: '**Le Framework TRACE rend le raisonnement des modèles IA visible — au lieu de donner uniquement une réponse, le modèle détaille chaque étape de sa réflexion.** Les cinq étapes (Réfléchir, Raisonner, Analyser, Conclure, Expliquer) vous permettent de détecter les hypothèses erronées et les failles logiques avant qu\'elles n\'influencent vos décisions. PromptQuorum propose TRACE comme option directement accessible pour tous les utilisateurs.',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-28',
       readTime: '7 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Framework TRACE',
       metaDescription: 'Le Framework TRACE rend la réflexion IA transparente. Think→Reason→Analyze→Conclude→Explain. Quand l\'utiliser, comment l\'écrire, pourquoi la traçabilité compte.',
+      toc: [
+        { anchor: 'key-takeaways', label: 'Points clés' },
+        { anchor: 'what-is-trace', label: 'Qu\'est-ce que le Framework TRACE' },
+        { anchor: 'why-trace-matters', label: 'Pourquoi le Framework TRACE importe' },
+        { anchor: 'five-stages', label: 'Quelles sont les cinq étapes du Framework TRACE ?' },
+        { anchor: 'bad-vs-good-example', label: 'Exemple : Mauvais vs bon prompt TRACE' },
+        { anchor: 'when-to-use', label: 'Quand utiliser le Framework TRACE' },
+        { anchor: 'how-to-write', label: 'Comment écrire un prompt TRACE' },
+        { anchor: 'how-promptquorum-implements', label: 'Comment PromptQuorum intègre le Framework TRACE' },
+        { anchor: 'combining-trace', label: 'Comment combiner TRACE avec d\'autres frameworks ?' },
+        { anchor: 'how-to-start', label: 'Comment utiliser le Framework TRACE' },
+        { anchor: 'common-mistakes', label: 'Erreurs courantes avec TRACE' },
+        { anchor: 'related-reading', label: 'Lectures complémentaires' },
+        { anchor: 'faq', label: 'FAQ' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -683,7 +699,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         fiveStages: {
-          title: 'Les cinq étapes du Framework TRACE en détail',
+          title: 'Quelles sont les cinq étapes du Framework TRACE ?',
           content: [
             '**Un bon prompt TRACE définit précisément ce que le modèle doit faire à chaque étape.** Vous pouvez regrouper ces étapes en un seul message ou les séparer selon vos besoins.',
           ],
@@ -731,7 +747,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         combiningTRACE: {
-          title: 'Combiner TRACE avec d\'autres frameworks',
+          title: 'Comment combiner TRACE avec d\'autres frameworks ?',
           content: [
             '**Associez TRACE à d\'autres frameworks en alignant chacun à une phase de votre workflow : TRACE pour le raisonnement, autres pour la génération.** Par exemple :',
           ],
@@ -739,6 +755,14 @@ export const article: Record<Language, PEArticle> = {
             'Utiliser Single Step ou CO-STAR pour générer du contenu initial.',
             'Passer à TRACE pour valider la logique et les assomptions.',
             'Finir optionnellement avec SPECS pour formater le résultat selon un schéma strict.',
+          ],
+          columns: ['Framework', 'Idéal pour', 'Combiner avec TRACE quand'],
+          rows: [
+            { 'Framework': 'CO-STAR', 'Idéal pour': 'Génération de contenu, brouillon', 'Combiner avec TRACE quand': 'Brouillon en premier, puis TRACE pour évaluer les options' },
+            { 'Framework': 'CRAFT', 'Idéal pour': 'Contenu structuré avec contraintes', 'Combiner avec TRACE quand': 'Générer du contenu, puis TRACE pour valider les affirmations' },
+            { 'Framework': 'RISEN', 'Idéal pour': 'Raffinement itératif', 'Combiner avec TRACE quand': 'TRACE pour analyser, RISEN pour améliorer' },
+            { 'Framework': 'SPECS', 'Idéal pour': 'Schémas de sortie stricts', 'Combiner avec TRACE quand': 'TRACE pour le raisonnement, SPECS pour le format final' },
+            { 'Framework': 'Few-Shot', 'Idéal pour': 'Cohérence du format', 'Combiner avec TRACE quand': 'Ajouter des exemples aux étapes TRACE pour les tâches complexes' },
           ],
         },
         howToStart: {
@@ -749,6 +773,102 @@ export const article: Record<Language, PEArticle> = {
             '**Analyze (Analyser) :** Demandez au modèle d\'appliquer son approche choisie étape par étape aux données ou au contexte réel que vous avez fourni. Montrez des chiffres ou des exemples concrets si possible. Exemple : « Appliquez votre approche préférée à la situation spécifique que j\'ai décrite. Montrez chaque étape. »',
             '**Conclude (Conclure) :** Demandez au modèle d\'énoncer la réponse finale ou la recommandation directement et clairement en une phrase. Exemple : « Énoncez votre recommandation clairement. Si pertinent, précisez les conditions ou segments auxquels elle s\'applique. »',
             '**Explain (Expliquer) :** Demandez au modèle de justifier la conclusion en langage simple qu\'un non-spécialiste peut comprendre. Exemple : « Expliquez pourquoi en 3–5 phrases. Évitez le jargon. Écrivez comme si vous l\'expliquiez à un cadre senior sans connaissances techniques. »',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Erreurs courantes avec TRACE',
+          mistakes: [
+            {
+              mistake: 'Passer l\'étape Penser',
+              problem: 'Sans reformulation du problème, le modèle peut mal interpréter vos attentes et progresser avec assurance dans la mauvaise direction.',
+              fix: 'Toujours demander au modèle de reformuler le problème et de lister les variables clés avant de passer au Raisonner. Cela détecte les malentendus rapidement.',
+            },
+            {
+              mistake: 'Ne pas limiter la longueur de chaque étape',
+              problem: 'Les prompts TRACE sans limite peuvent générer des réponses très longues, difficiles à lire et coûteuses.',
+              fix: 'Ajouter des contraintes de longueur par étape : « Garde chaque étape à 1–2 phrases » ou « Limite l\'Analyse à 3 étapes. »',
+            },
+            {
+              mistake: 'Utiliser TRACE pour des tâches simples',
+              problem: 'TRACE ajoute latence et verbosité. Si vous avez juste besoin d\'une réponse rapide ou d\'une transformation simple, TRACE est excessif.',
+              fix: 'Réserver TRACE pour les décisions, analyses et raisonnement complexe. Utiliser le prompting zéro-shot pour les tâches directes.',
+            },
+            {
+              mistake: 'Traiter les cinq étapes comme rigides',
+              problem: 'Certaines tâches n\'ont pas besoin des cinq étapes, donc une adhérence rigide gaspille temps et tokens.',
+              fix: 'Adapter TRACE à votre tâche : vous pouvez sauter Raisonner dans une analyse de données, ou combiner Analyser et Conclure pour la brièveté.',
+            },
+            {
+              mistake: 'Ne pas comparer les résultats TRACE entre modèles',
+              problem: 'Différents modèles raisonnent différemment, tester un seul modèle vous fait manquer l\'opportunité d\'apprendre quel fournisseur est meilleur pour votre tâche.',
+              fix: 'Utiliser PromptQuorum ou des outils de dispatch similaires pour envoyer des prompts TRACE à plusieurs modèles en parallèle et comparer leurs traces de raisonnement.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          content: [
+            'Le Framework TRACE s\'appuie sur des techniques de raisonnement plus larges. Voici des guides connexes pour approfondir votre compréhension :',
+          ],
+          items: [
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — La technique fondamentale qui demande aux modèles de raisonner étape par étape.',
+            '[Le Framework RISEN](/prompt-engineering/risen-framework) — À utiliser quand vous voulez l\'amélioration itérative au côté du raisonnement.',
+            '[Le Framework CO-STAR](/prompt-engineering/co-star-framework) — Un framework complémentaire pour les tâches de rédaction et génération.',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) — Comprendre quand TRACE est excessif et les techniques plus simples suffisent.',
+            '[Fondamentaux du Prompt Engineering](/prompt-engineering/prompt-engineering-fundamentals) — Un guide fondateur pour structurer les prompts efficacement.',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'Que signifie TRACE en ingénierie des prompts ?',
+              a: 'TRACE signifie Think (Penser), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure), Explain (Expliquer). C\'est un schéma de prompt structuré qui demande au modèle de montrer chaque étape de son raisonnement plutôt que donner directement une réponse finale.',
+            },
+            {
+              q: 'Quand dois-je utiliser le Framework TRACE ?',
+              a: 'Utilisez TRACE quand la qualité du raisonnement et la justification sont plus importantes que la brièveté : décisions stratégiques, évaluations de technologies, debugging complexe, situations où vous devez montrer aux parties prenantes comment une conclusion a été atteinte.',
+            },
+            {
+              q: 'Comment TRACE est-il différent du prompting Chain-of-Thought ?',
+              a: 'Chain-of-Thought est une technique générale qui demande aux modèles de penser étape par étape. TRACE est une structure spécifique à 5 étapes (Penser, Raisonner, Analyser, Conclure, Expliquer) qui produit des traces de raisonnement cohérentes et reproductibles entre les tâches et les modèles.',
+            },
+            {
+              q: 'Comment TRACE est-il différent du Framework RISEN ?',
+              a: 'TRACE se concentre sur rendre le processus de raisonnement explicite pour l\'auditer. RISEN se concentre sur l\'amélioration itérative d\'un brouillon existant. Utilisez TRACE pour comprendre comment un modèle pense ; utilisez RISEN pour affiner la qualité des résultats.',
+            },
+            {
+              q: 'Puis-je utiliser TRACE dans un seul prompt ou ai-je besoin de plusieurs tours ?',
+              a: 'Les deux fonctionnent. Un prompt unique listant les cinq étapes est plus rapide. Des tours multiples vous permettent de mettre en pause et de rediriger à chaque étape si besoin. Pour le contrôle maximal, beaucoup d\'utilisateurs envoient les étapes TRACE séparément.',
+            },
+            {
+              q: 'Comment empêcher TRACE de produire des réponses trop longues ?',
+              a: 'Ajoutez des contraintes de longueur par étape. Par exemple : « Garde chaque étape à 1–2 phrases. » Cela force le modèle à être concis tout en montrant son travail.',
+            },
+            {
+              q: 'TRACE peut-il aider à détecter les erreurs du modèle ?',
+              a: 'Oui. En rendant le raisonnement visible, TRACE vous permet de repérer les fausses hypothèses, les lacunes logiques et les calculs incorrects qui seraient invisibles dans une réponse finale seule.',
+            },
+            {
+              q: 'Comment PromptQuorum supporte-t-il les prompts TRACE ?',
+              a: 'PromptQuorum inclut TRACE comme structure de prompt intégrée. Vous remplissez le contexte spécifique à la tâche dans les champs alignés sur les cinq étapes. PromptQuorum compose ensuite le prompt et l\'envoie à plusieurs modèles en parallèle pour que vous puissiez comparer leurs traces de raisonnement côte à côte.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          content: [
+            'Cet article résume les meilleures pratiques actuelles en ingénierie des prompts et raisonnement IA. Le schéma Framework TRACE a été utilisé dans la recherche académique et la pratique industrielle pour rendre le raisonnement des modèles de langage transparent.',
+          ],
+          items: [
+            'Wei, J., et al. (2022). « Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. » *arXiv:2201.11903*. [Lire sur arXiv](https://arxiv.org/abs/2201.11903)',
+            'OpenAI. (2024). « How to use the OpenAI API. » [Documentation OpenAI API](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2024). « Prompt Engineering Techniques. » [Anthropic Docs](https://docs.anthropic.com/en/docs/build-a-chatbot)',
+            'LM Studio & Ollama. Outils open-source de déploiement et raisonnement LLM.',
           ],
         },
       },
