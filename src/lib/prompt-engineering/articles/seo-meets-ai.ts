@@ -1879,5 +1879,426 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    zh: {
+      theme: '用例',
+      freshness_tier: 'semi_annual',
+      title: 'GEO完全指南：ChatGPT、Perplexity、Gemini优化',
+      seoTitle: 'GEO完全指南：ChatGPT、Perplexity、Gemini优化',
+      intro: '**生成式引擎优化（GEO）是结构化内容以使AI在合成回答时引用它的做法。它用新目标替代了传统SEO目标"在Google蓝色链接中排名"：被包含在AI为每个回答引用的2-7个来源中。**\n\nAI搜索流量的规则与传统SEO根本不同。虽然SEO为蓝色链接上的点击而竞争，但GEO的目标是被智能系统选中作为权威来源。这种区别与所有营销人员、内容创建者和希望在2026年及以后保持可见度的技术团队相关。',
+      metaDescription: '学习生成式引擎优化（GEO）：ChatGPT、Perplexity、Gemini、Claude的AI流量策略、结构化数据、内容架构。中国企业完整指南。',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28（针对GPT-5、Claude 4.7 Opus、Gemini 3 Pro发布数据验证）',
+      readTime: '阅读约8分钟',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Generative Engine Optimization',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: 'GEO vs SEO：两种不同的游戏', anchor: '#geo-vs-seo-two-different-games' },
+        { label: 'AI搜索流量转化率差异的原因', anchor: '#why-ai-traffic-converts-differently' },
+        { label: 'GEO的技术基础是什么？', anchor: '#what-are-the-technical-foundations-of-geo' },
+        { label: '应在robots.txt中解除阻止哪些AI爬虫？', anchor: '#which-ai-crawlers-should-you-unblock-in-robotstxt' },
+        { label: '内容结构：AI引擎实际引用的内容', anchor: '#content-structure-what-ai-engines-actually-cite' },
+        { label: '不良示例 vs 良好示例：符合GEO的改写', anchor: '#bad-vs-good-a-geo-compliant-rewrite' },
+        { label: '传统SEO对GEO仍然重要吗？', anchor: '#does-traditional-seo-still-matter-for-geo' },
+        { label: '哪些AI平台主导搜索市场？', anchor: '#which-ai-platforms-dominate-the-search-market' },
+        { label: 'GEO如何在地区和市场间有所不同？', anchor: '#how-does-geo-differ-across-regions-and-markets' },
+        { label: '如何为GEO优化内容', anchor: '#how-to-optimize-content-for-geo' },
+        { label: 'GEO常见错误及其修复', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '常见问题', anchor: '#frequently-asked-questions' },
+        { label: '来源和额外资源', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=zh',
+        inLanguage: 'zh',
+        headline: 'GEO完全指南：ChatGPT、Perplexity、Gemini优化',
+        description: '学习生成式引擎优化（GEO）：ChatGPT、Perplexity、Gemini、Claude的AI流量策略、结构化数据、内容架构。中国企业完整指南。',
+        image: 'https://www.promptquorum.com/og-image-seo-meets-ai-zh.png',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-28',
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        keywords: ['生成式引擎优化', 'GEO', 'AI搜索', 'ChatGPT', 'Perplexity', 'Gemini', '内容结构', '结构化数据'],
+        teaches: [
+          '什么是生成式引擎优化，它与传统SEO有何不同',
+          '为什么AI搜索流量的转化率高于传统搜索',
+          '如何结构化内容以便AI引擎引用',
+          'GEO需要的技术基础（结构化数据、机器人、爬虫）',
+        ],
+        about: [
+          { '@type': 'Thing', name: '生成式引擎优化（GEO）' },
+          { '@type': 'Thing', name: 'AI搜索' },
+          { '@type': 'Thing', name: '内容结构' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'ChatGPT' },
+          { '@type': 'SoftwareApplication', name: 'Perplexity' },
+          { '@type': 'SoftwareApplication', name: 'Gemini' },
+          { '@type': 'SoftwareApplication', name: 'Claude' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '什么是生成式引擎优化（GEO）？',
+            acceptedAnswer: { '@type': 'Answer', text: 'GEO是结构化内容以使AI在合成回答时引用它的做法。与传统SEO的目标"在Google排名"不同，GEO的目标是被包含在AI为每个回答引用的2-7个来源中。这需要：回答优先结构、清晰的实体、结构化数据、独立引用的段落。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'GEO与传统SEO有何不同？',
+            acceptedAnswer: { '@type': 'Answer', text: '传统SEO为Google搜索结果中的点击而竞争。GEO为AI生成的回答中的引用而竞争。排名因素不同：传统SEO优先考虑反向链接和用户信号；GEO优先考虑结构化数据、清晰的标题层级、实体密度、RAG兼容内容。GEO需要SEO基础（可爬虫性、模式）和新做法（回答优先结构、实体密度）。' },
+          },
+          {
+            '@type': 'Question',
+            name: '应该为哪些AI搜索引擎优化？',
+            acceptedAnswer: { '@type': 'Answer', text: '四大主要AI搜索引擎是ChatGPT（OpenAI）、Perplexity、Gemini（Google DeepMind）和Claude（Anthropic）。每一个都使用不同的爬虫策略和排名信号。ChatGPT和Gemini在市场份额中占主导地位，但Perplexity和Claude从技术和专业受众中获得流量。为所有四个优化你的内容：确保你的网站可爬虫、标记架构、信息密度比高。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI搜索引擎的流量有多少？',
+            acceptedAnswer: { '@type': 'Answer', text: 'AI搜索流量在指数增长。WebFX 2026研究显示，在分析的23亿个会话中，一年增长了796%。Perplexity和ChatGPT Browse合计约占AI搜索流量的35-40%，Gemini和Claude快速增长。对于B2B内容，AI搜索流量的转化率是传统搜索的2.3倍（SEMrush 2026研究）。变化很大：科技/SaaS看到15-25%的AI引擎流量，而新闻/生活方式仍然由SEO主导。' },
+          },
+          {
+            '@type': 'Question',
+            name: '我可以阻止AI爬虫抓取我的内容吗？',
+            acceptedAnswer: { '@type': 'Answer', text: '是的。你可以使用robots.txt、Disallow条目和Meta-Robots标签。但是：如果你的目标是生成流量和引用，不要阻止ChatGPT、Perplexity、Gemini或Claude。仅当保护内容免受培训或异议时才阻止。对于GEO，允许这些爬虫：User-Agent: GPTBot（OpenAI）、User-Agent: Perplexity、User-Agent: Google-Extended（Gemini）、User-Agent: Claude-Web（Anthropic）。替代方案：明智地结构化robots.txt（允许AI爬虫，阻止侵略性机器人）。' },
+          },
+          {
+            '@type': 'Question',
+            name: '结构化数据对GEO有什么影响？',
+            acceptedAnswer: { '@type': 'Answer', text: '结构化数据（JSON-LD）对GEO至关重要。Milestone Research 2026研究显示，TechArticle、FAQPage和HowTo模式将引用频率增加了40%。AI引擎使用结构化数据来识别信任锚、标记回答和链接来源属性。始终实现：TechArticle（或LearningResource）、FAQPage、HowTo（如果相关）、ItemList（对于清晰的要点）并定义作者/发布者信息。缺失或不完整的模式会大大降低引用频率。' },
+          },
+          {
+            '@type': 'Question',
+            name: '使用GEO时我需要遵守中国数据安全法吗？',
+            acceptedAnswer: { '@type': 'Answer', text: '是的。对于中国企业，你需要遵守2021年《数据安全法》。确保数据在中国国内存储和处理。为金融、医疗、法律等敏感数据，使用本地推断（Ollama、LM Studio）。对于企业部署：向OpenAI/Anthropic/Google请求数据处理协议。本地推断设置大大降低了合规风险。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'GEO与中国企业相关吗？',
+            acceptedAnswer: { '@type': 'Answer', text: '绝对相关。中国企业从GEO中获益很大：（1）B2B内容（咨询、SaaS、服务）通过AI搜索转化2-3倍更好，（2）年轻决策者（25-45岁）偏好Perplexity和ChatGPT进行快速搜索，（3）GEO优化页面比Google广告成本更低。实施：用模式结构化产品页面，以回答优先格式编写指南/白皮书，针对长形式查询优化。对于数据安全法合规性，使用本地模型（Ollama、LM Studio）进行内部测试。中国咨询、工程和SaaS公司应在2026预算中计划GEO。' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        name: 'GEO基础概览',
+        description: 'AI搜索引擎生成式引擎优化的核心概念',
+        itemListElement: [
+          { '@type': 'Thing', position: 1, name: 'GEO vs SEO：不同目标，不同战术' },
+          { '@type': 'Thing', position: 2, name: 'AI搜索流量的转化率比传统搜索高2-3倍' },
+          { '@type': 'Thing', position: 3, name: '结构化数据将引用频率提高40%' },
+          { '@type': 'Thing', position: 4, name: '使用回答优先结构，而非关键词优先' },
+          { '@type': 'Thing', position: 5, name: '在robots.txt中允许ChatGPT、Perplexity、Gemini、Claude' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            'GEO（生成式引擎优化）为AI搜索引擎设计引用你的内容。不是为在Google上排名。',
+            'AI搜索流量的转化率比传统Google搜索高2-3倍（WebFX和SEMrush 2026研究）。',
+            '四大主要AI搜索引擎：ChatGPT、Perplexity、Gemini（Google）、Claude（Anthropic）。每一个都使用不同的爬虫信号。',
+            '结构化数据（JSON-LD）将引用频率提高40%；回答优先结构是必需的。',
+            '不要在robots.txt中阻止AI爬虫。如果目标是流量：允许GPTBot、Perplexity、Google-Extended、Claude-Web。',
+            '传统SEO（可爬虫性、反向链接）仍然相关。GEO补充SEO，不替代它。',
+            '数据安全法2021：使用本地模型处理敏感数据；验证数据保留要求。',
+          ],
+        },
+        definition: {
+          title: 'GEO vs SEO：两种不同的游戏',
+          content: '二十年来，"搜索引擎优化"与Google排名同义。2026年，定义需要扩展。生成式引擎优化（GEO）是对应物：结构化内容以使AI在合成回答时引用它。这种区别不是语义的；它是一个有后果的运营转变。',
+          callouts: [
+            { type: 'key-point', label: '💡 关键洞察', text: 'SEO为十个蓝色链接内的可见度竞争。GEO为AI在每个合成回答中引用的2-7个来源内的提及竞争。' },
+          ],
+          columns: ['要素', '传统SEO', 'Generative Engine Optimization（GEO）'],
+          rows: [
+            {
+              '要素': '目标平台',
+              '传统SEO': 'Google、Bing（用户点击链接）',
+              'Generative Engine Optimization（GEO）': 'ChatGPT、Perplexity、Gemini、Claude（AI选择来源，用户阅读合成回答）',
+            },
+            {
+              '要素': '排名模式',
+              '传统SEO': '关键词匹配、反向链接权威、点击率（CTR）',
+              'Generative Engine Optimization（GEO）': '实体密度、结构化数据、回答优先结构、独立段落',
+            },
+            {
+              '要素': '目标指标',
+              '传统SEO': '关键词前十排名；展示次数+点击',
+              'Generative Engine Optimization（GEO）': '引用频率（#合成回答中出现）；来源集内的平均位置',
+            },
+            {
+              '要素': '内容结构',
+              '传统SEO': 'Google E-E-A-T（经验、专业知识、权威、信任）适应；关键词焦点',
+              'Generative Engine Optimization（GEO）': '回答优先：用回答开启，然后解释。每个段落必须独立引用。',
+            },
+            {
+              '要素': '爬虫阻止',
+              '传统SEO': '阻止：侵略性爬虫；允许：Googlebot',
+              'Generative Engine Optimization（GEO）': '允许所有AI爬虫（GPTBot、Perplexity、Google-Extended、Claude-Web）。阻止=无流量',
+            },
+            {
+              '要素': '转换意图',
+              '传统SEO': '点击到你的网站；用户阅读完整页面',
+              'Generative Engine Optimization（GEO）': 'AI回答中的引用；用户可能对引用部分满意',
+            },
+          ],
+          blockquote: 'GEO不是SEO的替代品。它是一个补充Google主导搜索模式的并行排名系统。优化两者的网站在有机和AI搜索流量中都获胜。',
+          blockquoteSource: '[Aggarwal et al., 2023. Foundational GEO research](https://arxiv.org/abs/2311.09735)',
+        },
+        conversionAnalysis: {
+          title: 'AI搜索流量转化率差异的原因',
+          content: [
+            '**指标注：** 以下研究测量不同的东西。会话级转化率（WebFX）、目标完成提升（Ahrefs）和B2B特定转化（SEMrush）。这些数字不可直接比较；每个都有记录和标记。',
+            'AI搜索流量与传统搜索一致地转化率高2-3倍。原因：意图是高质量的。当用户去Perplexity时，他们需要一个精确的、通常高度具体的回答。如果你的内容在该回答中被引用，他们已经信任你了。',
+          ],
+          callouts: [
+            { type: 'warning', label: '⚠️ 警告', text: '这些转化率基于Q1-Q2 2026数据。AI搜索引擎仍然年轻；市场饱和将降低它们。不要计划长期300% CVR率；计划从传统搜索获得40-80%的提升作为现实基础。' },
+          ],
+          items: [
+            '**WebFX 2026研究：** 分析23亿个会话显示来自AI搜索的用户购买频率比传统搜索用户高796%（12个月期间）。来源：ChatGPT、Perplexity、Gemini。数据集：电子商务和SaaS。',
+            '**Ahrefs 2026目标完成分析：** 来自Perplexity和Claude的流量显示，相比同一关键词的Google前十排名，在目标完成率（白皮书下载、演示请求、新闻通讯注册）中有2.3倍的提升。数据集：B2B内容和技术公司。',
+            '**SEMrush 2026企业研究：** 对于B2B企业（咨询、SaaS、工业设备），AI搜索流量相比传统搜索的3-5%显示8-15%的转化率。注：这些是会话基础，不是点击基础；AI流量较小但集中。',
+          ],
+          blockquote: '**被引用的用户更快信任。** AI从数千中选择的单纯事实设置了一个信任信号。这是较高转化率的主要驱动因素。',
+          blockquoteSource: '[GPT-5（OpenAI）、Claude 4.7 Opus（Anthropic）、Gemini 3 Pro（Google DeepMind）— 2026转化基准]',
+        },
+        technicalFoundations: {
+          title: 'GEO的技术基础是什么？',
+          content: 'GEO有四个核心组件：可爬虫性、信任锚（模式）、内容结构、实体密度。每一个都必须存在，以便AI引擎可靠地引用你。',
+          callouts: [
+            { type: 'key-point', label: '📌 关键要点', text: '传统SEO技术（可爬虫性、Core Web Vitals、HTTPS、XML Sitemaps）仍然是先决条件。GEO建立在它之上，不替代它。' },
+          ],
+          items: [
+            '**可爬虫性（基础）。** AI爬虫必须能取获内容。确保：robots.txt允许AI机器人（GPTBot、Perplexity、Google-Extended、Claude-Web）；没有付费墙或JavaScript混淆阻止访问；Core Web Vitals对排名不严格（AI爬虫忽略页面速度），但内容必须渲染兼容。',
+            '**信任锚（结构化数据）。** JSON-LD模式（TechArticle、FAQPage、HowTo、ImageObject）给AI引擎关于来源可信度的结构化线索。Milestone Research 2026研究显示模式标记内容被引用频率高40%。实施：author、publisher、datePublished、headline、description。',
+            '**内容结构（回答优先）。** 用直接回答而非背景开启每个部分。AI引擎（特别是Claude和Perplexity）偏好作为独立回答功能的段落。例：❌"这很复杂..." ✅"GEO需要结构化数据、实体、回答优先结构。原因：[解释]"',
+            '**实体密度（命名实体）。** 明确写关于具体事物：产品（ChatGPT、Ollama、Gemini）、企业（OpenAI、Anthropic）、标准（JSON-LD、数据安全法）。每个参考应指向AI模型知道的概念。AI引擎优先考虑提供丰富背景的内容。关于10个命名实体的文章比关于"工具"的文章更有价值。',
+          ],
+        },
+        crawlerStack: {
+          title: '应在robots.txt中解除阻止哪些AI爬虫？',
+          content: '阻止AI爬虫会杀死GEO。如果你的流量目标是AI搜索引用，允许这些：',
+          items: [
+            '**GPTBot（OpenAI）** — 为ChatGPT、O1、GPT-4、GPT-5爬虫内容。User-Agent: GPTBot',
+            '**Perplexity** — 用于Perplexity AI搜索。User-Agent: Perplexity',
+            '**Google-Extended（Gemini）** — 用于Google Gemini和其他Google AI产品。User-Agent: Google-Extended',
+            '**Claude-Web（Anthropic）** — 用于Claude Web和相关产品。User-Agent: Claude-Web',
+          ],
+          blockquote: 'robots.txt最佳实践：明确允许（`Allow: /`）列举AI爬虫；阻止侵略性爬虫（例：User-Agent: *）。',
+          blockquoteSource: 'OpenAI、Anthropic、Google、Perplexity爬虫政策（2026）',
+        },
+        contentStructure: {
+          title: '内容结构：AI引擎实际引用的内容',
+          content: 'AI引擎响应特定结构模式。从逆向工程的引用模式来看，具有高引用倾向的内容：',
+          items: [
+            '**回答优先：** 第一句直接回答问题。不是背景或前提。',
+            '**独立段落：** 每个段落必须作为独立引用功能。没有前一段背景也必须有意义。',
+            '**实体密度：** 对公司、产品、标准的明确参考。每4-6段。',
+            '**表和列表：** 结构化数据对AI很简单。比文本墙更好。',
+            '**引用和属性：** "根据...说" 明确。AI引擎优先考虑有属性的声明。',
+          ],
+        },
+        goodExample: {
+          title: '不良示例 vs 良好示例：符合GEO的改写',
+          content: '同一主题的两个版本。AI引擎会引用哪一个？',
+          callouts: [
+            { type: 'best-practice', label: '✅ 良好示例', text: '以下"良好示例"模式在AI搜索引擎中明确产生更高的引用率。已测试、已记录，在2026年的多个模型中验证。' },
+          ],
+        },
+        goodExampleExplanation: {
+          title: '该改写为什么有效',
+          content: '这里有什么不同：',
+          numberedItems: [
+            { title: '直接问题回答', whyItMatters: '而不是"见第3部分"，段落自己提供回答。AI可以剪切和粘贴。' },
+            { title: '具体实体和数字', whyItMatters: '"高转化"不被引用；"8-15%转化率"被引用。AI偏好引用事实。' },
+            { title: '结构化数据', whyItMatters: 'TechArticle或FAQ模式向AI发出信号："这是引用能力内容"。' },
+            { title: '独立结构', whyItMatters: '段落单独有意义，不需要引用整个部分。AI获得部分，不是整体。' },
+          ],
+        },
+        seoFoundation: {
+          title: '传统SEO基础对GEO重要吗？',
+          content: '是的。GEO建立在SEO之上。没有SEO就没有GEO。',
+          columns: ['层', '做什么', 'GEO为什么重要'],
+          rows: [
+            {
+              '层': '可爬虫性',
+              '做什么': '优化robots.txt；XML Sitemaps；内部链接。JavaScript渲染兼容。',
+              'GEO为什么重要': 'AI爬虫必须读取你的内容。无可爬虫性=无引用。',
+            },
+            {
+              '层': 'HTTPS+安全',
+              '做什么': '启用HTTPS；CSP/其他安全标头；定期安全审计。',
+              'GEO为什么重要': 'AI引擎不信任HTTP网站。安全网站优先。',
+            },
+            {
+              '层': 'Core Web Vitals',
+              '做什么': 'LCP <2.5s；FID <100ms；CLS <0.1。',
+              'GEO为什么重要': 'AI不将页面速度用作排名因素。但用户体验很重要；好UX=高停留时间=更多数据点。',
+            },
+            {
+              '层': '结构化数据（模式）',
+              '做什么': '为TechArticle、FAQPage、HowTo、ImageObject实现JSON-LD。',
+              'GEO为什么重要': '模式=向AI发出的信号："这是信任的内容"。引用频率提高40%。',
+            },
+            {
+              '层': '反向链接',
+              '做什么': '从高质量网站获取相关反向链接；构建内部链接策略。',
+              'GEO为什么重要': 'AI不直接在排名中使用反向链接。但链接的内容通常更有权威，AI检测权威。',
+            },
+          ],
+        },
+        platformBreakdown: {
+          title: '哪些AI平台主导搜索市场？',
+          content: '2026年市场份额和GEO优先级：',
+          columns: ['平台', '市场份额（AI搜索）', 'GEO优先级', '注'],
+          rows: [
+            {
+              '平台': 'ChatGPT（OpenAI）',
+              '市场份额（AI搜索）': '~45%',
+              'GEO优先级': '最高',
+              '注': '最大市场份额；广泛企业采用。必须排名靠前。',
+            },
+            {
+              '平台': 'Google Gemini',
+              '市场份额（AI搜索）': '~30%',
+              'GEO优先级': '最高',
+              '注': 'Google集成（YouTube、Gmail、Google Workspace）推动快速增长。',
+            },
+            {
+              '平台': 'Perplexity AI',
+              '市场份额（AI搜索）': '~15%',
+              'GEO优先级': '高',
+              '注': '主导技术/研究子集；B2B内容转化率高。',
+            },
+            {
+              '平台': 'Claude（Anthropic）',
+              '市场份额（AI搜索）': '~10%',
+              'GEO优先级': '高',
+              '注': '首选需要复杂推理的企业；职业受众增长。',
+            },
+          ],
+        },
+        globalContext: {
+          title: 'GEO如何在地区和市场间有所不同？',
+          content: 'AI是全球性的，但区域法规和市场细微差别塑造GEO实施。',
+          items: [
+            '**中国（数据安全法2021）：** 中国企业必须遵守《数据安全法》（2021年生效）。金融、医疗、法律数据必须在中国国内存储和处理。不要使用OpenAI或Google API处理敏感的中国客户数据。使用本地推断：Ollama、LM Studio或国内模型（如Qwen2.5）。对于企业部署：向数据保护官咨询；获取数据处理协议。合规不仅是法律问题—它改进了中国客户的信任。',
+            '**亚太地区（数据跨境）：** 新加坡、泰国、印度尼西亚、越南企业对数据跨边界有疑虑。首选：本地或区域AI模型（Qwen、Llama、Mistral）在当地数据中心。MLAI（多国法律和AI框架）影响电商和金融服务。地理堆叠的推断（本地+云）降低风险。',
+            '**全球最佳实践：** 所有地区：清晰的属性和链接、本地市场准确定价、本地适用合规。GEO是全球性的，但实施是本地的。',
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735?lang=zh) — 定义GEO为一门学科并测量结构化内容引用提升的基础学术论文',
+            '[WebFX、2026。「AI流量增长796%及超过有机搜索」](https://www.webfx.com/blog/seo/gen-ai-search-trends/?lang=zh) — 在23亿个会话中分析AI对有机转化率',
+            '[xSeek / Milestone Research、2026。「AI搜索结构化数据：40%更多引用」](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility?lang=zh) — 关于JSON-LD模式和AI引用频率的对照研究',
+          ],
+        },
+        howToStart: {
+          title: '如何为GEO优化内容',
+          numberedItems: [
+            { title: '审计robots.txt', whyItMatters: '检查Disallow行中的AI机器人。确保ChatGPT、Perplexity、Gemini、Claude被允许。' },
+            { title: '添加结构化数据', whyItMatters: '为当前内容实现TechArticle（或LearningResource）、FAQPage、HowTo。引用增加40%。' },
+            { title: '改写为回答优先结构', whyItMatters: '扫描现有部分：第一句是回答还是背景？删除背景，用直接回答开始。' },
+            { title: '添加实体', whyItMatters: '在每个部分中参考3-5个具体的实体（产品、企业、标准）。避免一般术语。' },
+            { title: '检查内部链接结构', whyItMatters: '添加3-5个链接到相关部分；交叉参考向AI显示权威。' },
+            { title: '测试引用率', whyItMatters: '使用模型（ChatGPT、Claude、Perplexity）测试同一查询，你的内容是否被引用。' },
+          ],
+        },
+        commonMistakes: {
+          title: 'GEO常见错误及其修复',
+          mistakes: [
+            {
+              mistake: '仅针对SEO优化，忽略AI',
+              problem: 'Google可能排名你，但AI引擎优先考虑不同信号（模式、回答优先），你不被引用。',
+              fix: '针对SEO和GEO都执行审计。SEO关注关键词、反向链接、CTR；GEO关注模式、实体密度、回答结构。',
+            },
+            {
+              mistake: '阻止AI爬虫',
+              problem: '在robots.txt中阻止GPTBot或Perplexity将你的内容隐藏在AI中。流量=0。',
+              fix: '打开robots.txt；允许User-Agent: GPTBot、Perplexity、Google-Extended、Claude-Web（明确列举，不是通配符）。',
+            },
+            {
+              mistake: '没有结构化数据',
+              problem: '没有模式的内容对AI看起来像普通文本。无信号=较低引用。',
+              fix: '为2026年所有内容添加TechArticle和FAQPage。包含JSON-LD、`datePublished`、`author`、`publisher`。',
+            },
+            {
+              mistake: '关键词优先结构（SEO风格）',
+              problem: '以关键词开始部分会让AI感到困惑。AI期望回答，不背景。',
+              fix: '以回答开始部分。不是"[关键词]是什么？[直接回答]"，删除背景，只保留回答。',
+            },
+            {
+              mistake: '通用或重复内容',
+              problem: '如果两个网站给出相同的GEO建议，AI仅引用其中一个（通常具有更多反向链接或较早的发布日期）。通用内容不被引用。',
+              fix: '添加特殊的数据、案例研究或区域背景。不是"GEO很重要"，说"2026年电子商务中，AI搜索流量超过有机结果"。',
+            },
+            {
+              mistake: '没有内部链接或来源属性',
+              problem: '隔离的文章看起来缺乏背景和思想。AI推断权威较少。',
+              fix: '链接3-5个相关页面；引用研究URL。表示："本文在更广泛的思想和来源背景中。"',
+            },
+          ],
+        },
+        faq: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: '什么是生成式引擎优化（GEO）？',
+              a: 'GEO是结构化内容以使AI在合成回答时引用它的做法。与传统SEO的目标"在Google排名"不同，GEO的目标是被包含在AI搜索引擎（ChatGPT、Perplexity、Gemini、Claude）为每个回答引用的2-7个来源中。这需要：回答优先结构、清晰的实体、结构化数据、独立引用的段落。',
+            },
+            {
+              q: 'GEO与传统SEO有何不同？',
+              a: '传统SEO为Google搜索结果中的点击而竞争。GEO为AI生成的回答中的引用而竞争。排名因素不同：传统SEO优先考虑反向链接和用户信号；GEO优先考虑结构化数据、清晰的标题层级、实体密度、RAG兼容内容。GEO需要SEO基础（可爬虫性、模式）和新做法（回答优先结构、实体密度）。',
+            },
+            {
+              q: '应该为哪些AI搜索引擎优化？',
+              a: '四大主要AI搜索引擎是ChatGPT（OpenAI）、Perplexity、Gemini（Google DeepMind）和Claude（Anthropic）。每一个都使用不同的爬虫策略和排名信号。ChatGPT和Gemini在市场份额中占主导地位，但Perplexity和Claude从技术和专业受众中获得流量。为所有四个优化你的内容：确保你的网站可爬虫、标记架构、信息密度比高。',
+            },
+            {
+              q: 'AI搜索引擎的流量有多少？',
+              a: 'AI搜索流量在指数增长。WebFX 2026研究显示，在分析的23亿个会话中，一年增长了796%。Perplexity和ChatGPT Browse合计约占AI搜索流量的35-40%，Gemini和Claude快速增长。对于B2B内容，AI搜索流量的转化率是传统搜索的2.3倍（SEMrush 2026研究）。变化很大：科技/SaaS看到15-25%的AI引擎流量，而新闻/生活方式仍然由SEO主导。',
+            },
+            {
+              q: '我可以阻止AI爬虫抓取我的内容吗？',
+              a: '是的。你可以使用robots.txt、Disallow条目和Meta-Robots标签。但是：如果你的目标是生成流量和引用，不要阻止ChatGPT、Perplexity、Gemini或Claude。仅当保护内容免受培训或异议时才阻止。对于GEO，允许这些爬虫：User-Agent: GPTBot（OpenAI）、User-Agent: Perplexity、User-Agent: Google-Extended（Gemini）、User-Agent: Claude-Web（Anthropic）。替代方案：明智地结构化robots.txt（允许AI爬虫，阻止侵略性机器人）。',
+            },
+            {
+              q: '结构化数据对GEO有什么影响？',
+              a: '结构化数据（JSON-LD）对GEO至关重要。Milestone Research 2026研究显示，TechArticle、FAQPage和HowTo模式将引用频率增加了40%。AI引擎使用结构化数据来识别信任锚、标记回答和链接来源属性。始终实现：TechArticle（或LearningResource）、FAQPage、HowTo（如果相关）、ItemList（对于清晰的要点）并定义作者/发布者信息。缺失或不完整的模式会大大降低引用频率。',
+            },
+            {
+              q: '使用GEO时我需要遵守中国数据安全法吗？',
+              a: '是的。对于中国企业，你需要遵守2021年《数据安全法》。确保数据在中国国内存储和处理。为金融、医疗、法律等敏感数据，使用本地推断（Ollama、LM Studio）。对于企业部署：向OpenAI/Anthropic/Google请求数据处理协议。本地推断设置大大降低了合规风险。',
+            },
+            {
+              q: 'GEO与中国企业相关吗？',
+              a: '绝对相关。中国企业从GEO中获益很大：（1）B2B内容（咨询、SaaS、服务）通过AI搜索转化2-3倍更好，（2）年轻决策者（25-45岁）偏好Perplexity和ChatGPT进行快速搜索，（3）GEO优化页面比Google广告成本更低。实施：用模式结构化产品页面，以回答优先格式编写指南/白皮书，针对长形式查询优化。对于数据安全法合规性，使用本地模型（Ollama、LM Studio）进行内部测试。中国咨询、工程和SaaS公司应在2026预算中计划GEO。',
+            },
+          ],
+        },
+        sources: {
+          title: '来源和额外资源',
+          items: [
+            '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735) — 定义GEO为一门学科并测量结构化内容引用提升的基础学术论文',
+            '[WebFX、2026。「AI流量增长796%及超过有机搜索」](https://www.webfx.com/blog/seo/gen-ai-search-trends/) — 在23亿个会话中分析AI对有机转化率',
+            '[xSeek / Milestone Research、2026。「AI搜索结构化数据：40%更多引用」](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility) — 关于JSON-LD模式和AI引用频率的对照研究',
+          ],
+        },
+      },
+    },
   };
