@@ -906,10 +906,26 @@ export const article: Record<Language, PEArticle> = {
       seoTitle: 'TRACEフレームワーク完全ガイド：AIの推論プロセスを5段階で可視化する方法（2026年版）',
       intro: '**TRACEフレームワークは、AIモデルの推論プロセスを「ブラックボックス」から可視化された段階的な思考へと変えます。** 考える（Think）→推論する（Reason）→分析する（Analyze）→結論を出す（Conclude）→説明する（Explain）の5つのステップにより、論理の欠陥や誤った前提を早期に発見できます。PromptQuorumではTRACEフレームワークをネイティブに統合しており、すべてのユーザーが直接利用できます。',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-28',
       readTime: '8分で読める',
       educationalLevel: 'Intermediate',
       primaryTerm: 'TRACEフレームワーク',
       metaDescription: 'TRACEフレームワーク（考える→推論→分析→結論→説明）でAIの推論プロセスを完全透明化。複雑な意思決定・戦略分析・デバッグへの実践的な活用方法と具体例。',
+      toc: [
+        { anchor: 'key-takeaways', label: '重要なポイント' },
+        { anchor: 'what-is-trace', label: 'TRACEフレームワークとは' },
+        { anchor: 'why-trace-matters', label: 'TRACEフレームワークが重要な理由' },
+        { anchor: 'five-stages', label: 'TRACEの5つの段階とは？' },
+        { anchor: 'bad-vs-good-example', label: '例：悪いTRACEプロンプトと良いTRACEプロンプト' },
+        { anchor: 'when-to-use', label: 'TRACEフレームワークをいつ使うか' },
+        { anchor: 'how-to-write', label: 'TRACEプロンプトの書き方' },
+        { anchor: 'how-promptquorum-implements', label: 'PromptQuorumでのTRACEフレームワーク実装' },
+        { anchor: 'combining-trace', label: 'TRACEを他のフレームワークと組み合わせる方法は？' },
+        { anchor: 'how-to-start', label: 'TRACEフレームワークの使い方' },
+        { anchor: 'common-mistakes', label: 'TRACEでよくあるミス' },
+        { anchor: 'related-reading', label: '関連資料' },
+        { anchor: 'faq', label: 'FAQ' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -971,7 +987,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         fiveStages: {
-          title: 'TRACEの5段階を詳しく解説',
+          title: 'TRACEの5つの段階とは？',
           content: [
             '**良いTRACEプロンプトは、各ステップで「何をすべきか」を明確に定義し、モデルが一貫した思考プロセスを辿るようにします。** 一度のメッセージで全ステップを実行させることも、段階ごとに分割することもできます。',
             '各段階の詳細：',
@@ -1031,7 +1047,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         combiningTRACE: {
-          title: '他のフレームワークとの組み合わせ',
+          title: 'TRACEを他のフレームワークと組み合わせる方法は？',
           content: [
             '**TRACEは他の生成型フレームワークと組み合わせることで、初期生成から最終判定まで一貫した品質を確保できます。**',
           ],
@@ -1039,6 +1055,14 @@ export const article: Record<Language, PEArticle> = {
             'Single StepやCO-STARで初期内容を生成 → TRACEで推論を検証',
             'TRACEで判断の根拠を明確化 → SPECSで最終フォーマット統一',
             'RISENで複数回改稿 → TRACEで最終的なロジック検証',
+          ],
+          columns: ['フレームワーク', '最適な用途', 'TRACEと組み合わせる場面'],
+          rows: [
+            { 'フレームワーク': 'CO-STAR', '最適な用途': 'コンテンツ生成、下書き', 'TRACEと組み合わせる場面': 'まず下書き、その後TRACEで選択肢を評価' },
+            { 'フレームワーク': 'CRAFT', '最適な用途': '制約付きの構造化コンテンツ', 'TRACEと組み合わせる場面': 'コンテンツを生成してからTRACEで検証' },
+            { 'フレームワーク': 'RISEN', '最適な用途': '反復的な改善', 'TRACEと組み合わせる場面': 'TRACEで分析、RISENで改善' },
+            { 'フレームワーク': 'SPECS', '最適な用途': '厳密な出力スキーマ', 'TRACEと組み合わせる場面': 'TRACEで推論、SPECSで最終形式' },
+            { 'フレームワーク': 'Few-Shot', '最適な用途': 'フォーマット一貫性', 'TRACEと組み合わせる場面': '複雑なタスク用にTRACE段階に例を追加' },
           ],
         },
         howToStart: {
@@ -1049,6 +1073,102 @@ export const article: Record<Language, PEArticle> = {
             '**Analyze（分析する）：** モデルに、あなたが提供した実データまたは文脈に対して、選んだアプローチを段階的に適用させます。可能な場合は数値または具体例を示させます。例：「あなたの優先アプローチを、私が与えた具体的な状況に適用してください。各ステップを示してください。」',
             '**Conclude（結論を出す）：** モデルに最終的な答え、または推奨事項を直接かつ明確に1文で述べさせます。例：「推奨事項をはっきり述べてください。関連があれば、それが適用される条件またはセグメントを指定してください。」',
             '**Explain（説明する）：** モデルに結論を、非技術的な関係者が理解できるような平易な言葉で正当化させます。例：「3～5文で理由を説明してください。専門用語を避けてください。技術的背景を持たないシニアマネージャーに説明するかのように書いてください。」',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'TRACEでよくあるミス',
+          mistakes: [
+            {
+              mistake: 'Think段階をスキップ',
+              problem: '問題を言い直さずにReason段階に進むと、モデルは要件を誤解し、誤った方向へ進む可能性があります。',
+              fix: 'モデルに常に問題と主要変数を言い直させてからReasonに進めてください。これにより誤解を早期に把握できます。',
+            },
+            {
+              mistake: '各段階の長さを制限しない',
+              problem: '制限のないTRACEプロンプトは、非常に長い回答を生成し、読むのが難しく、コストがかかります。',
+              fix: '段階ごとに長さ制限を追加してください：「各段階を最大2文で」など、または「Analyzeは3ステップまで」。',
+            },
+            {
+              mistake: '単純なタスクにTRACEを使う',
+              problem: 'TRACEはレイテンシーと冗長性を増します。単なる事実検索や簡単な変換が必要な場合、TRACEはやり過ぎです。',
+              fix: 'TRACEは判断、分析、複雑な推論に限定してください。単純なタスクにはゼロショットプロンプティングを使用してください。',
+            },
+            {
+              mistake: '5つのステップを厳密に守る',
+              problem: 'タスクによっては5つのステップすべてが不要なため、厳密な遵守は時間とトークンを無駄にします。',
+              fix: 'TRACEをあなたのタスクに合わせて調整してください：Reasonをデータ分析でスキップしたり、簡潔さのためにAnalyzeとConcludeを組み合わせたりできます。',
+            },
+            {
+              mistake: 'モデル間でTRACE結果を比較しない',
+              problem: '異なるモデルは異なる方法で推論するため、1つのモデルのみをテストすると、あなたのタスクに最適なプロバイダーを見つけるチャンスを逃します。',
+              fix: 'PromptQuorumまたは同様のディスパッチツールを使用して、複数のモデルに同時にTRACEプロンプトを送信し、推論トレースを比較してください。',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: '関連資料',
+          content: [
+            'TRACEフレームワークはより広いレゾナンス技術に基づいています。理解を深めるための関連ガイドをいくつか紹介します：',
+          ],
+          items: [
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — モデルにステップバイステップで推論させる基本的な技術。',
+            '[RISENフレームワーク](/prompt-engineering/risen-framework) — 推論と一緒に反復的な改善が必要な場合に使用します。',
+            '[CO-STARフレームワーク](/prompt-engineering/co-star-framework) — 文章作成と生成タスク用の補完的なフレームワーク。',
+            '[ゼロショット vs ファインショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot-prompting) — TRACEが過剰で、より簡単な技術で十分な場合を理解してください。',
+            '[プロンプト・エンジニアリング基礎](/prompt-engineering/prompt-engineering-fundamentals) — プロンプトを効果的に構造化するための基本的なガイド。',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'プロンプト・エンジニアリングでTRACEは何を意味しますか？',
+              a: 'TRACEはThink（考える）、Reason（推論する）、Analyze（分析する）、Conclude（結論を出す）、Explain（説明する）を意味します。AIモデルに最終答だけでなく、推論の各段階を示させるような構造化されたプロンプトパターンです。',
+            },
+            {
+              q: 'TRACEフレームワークをいつ使うべきですか？',
+              a: '推論の品質と正当化が速度より重要な場合にTRACEを使用してください：戦略的判断、技術的レビュー、複雑なデバッグ、および関係者にどのように結論に到達したかを示す必要があるような状況。',
+            },
+            {
+              q: 'TRACEはChain-of-Thoughtプロンプティングとどう違いますか？',
+              a: 'Chain-of-Thoughtはモデルにステップバイステップで考えさせる一般的な技術です。TRACEは特定の5段階構造（Think、Reason、Analyze、Conclude、Explain）であり、タスクとモデルを超えて一貫した再現可能な推論トレースを生成します。',
+            },
+            {
+              q: 'TRACEはRISENフレームワークとどう違いますか？',
+              a: 'TRACEは推論プロセスを明示的にして、監査可能にします。RISENは既存のドラフトを段階的に改善します。論理を理解したい→TRACE、出力品質を高めたい→RISEN。',
+            },
+            {
+              q: '1つのプロンプトでTRACEを使うか、複数ターンで使うか？',
+              a: '両方が機能します。5つのステップをすべてリストする単一のプロンプトが速く、複数ターンでは各ステップで一時停止して方向を変更することができます。最大の制御のため、多くのユーザーは各TRACEステップを別々に送信します。',
+            },
+            {
+              q: 'TRACEが長すぎる回答を生成するのを防ぐにはどうすればよいですか？',
+              a: '段階ごとに長さ制限を追加してください。例えば：「各段階を最大2文で」このようにするとモデルに簡潔性を強制し、同時に仕事を見せさせることができます。',
+            },
+            {
+              q: 'TRACEはモデルエラーを検出するのに役立ちますか？',
+              a: 'はい。推論を見える化することで、TRACEは最終答だけでは見えない誤った仮定、論理的ギャップ、計算エラーを検出できます。',
+            },
+            {
+              q: 'PromptQuorumはTRACEプロンプトをどのようにサポートしていますか？',
+              a: 'PromptQuorumはTRACEを組み込みプロンプト構造として含んでいます。5つのステップに合わせた構造化フィールドにタスク固有のコンテキストを入力します。PromptQuorumはその後、プロンプトを複数のモデルに並行して送信して、推論トレースを並べて比較できるようにします。',
+            },
+          ],
+        },
+
+        sources: {
+          title: '参考資料',
+          content: [
+            'この記事はプロンプト・エンジニアリングとAI推論における現在のベストプラクティスをまとめています。TRACEフレームワークパターンは、言語モデルの推論を透明にするための学術研究と業界実践で使用されています。',
+          ],
+          items: [
+            'Wei, J., et al. (2022). 「Chain-of-Thought Prompting Elicits Reasoning in Large Language Models」 *arXiv:2201.11903*. [arXivで読む](https://arxiv.org/abs/2201.11903)',
+            'OpenAI. (2024). 「How to use the OpenAI API」 [OpenAI APIドキュメント](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2024). 「Prompt Engineering Techniques」 [Anthropic Docs](https://docs.anthropic.com/en/docs/build-a-chatbot)',
+            'LM Studio & Ollama. オープンソースLLMデプロイメント・推論ツール。',
           ],
         },
       },
