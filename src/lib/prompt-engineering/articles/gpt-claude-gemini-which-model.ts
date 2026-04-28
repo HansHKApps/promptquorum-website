@@ -14,7 +14,7 @@ export const article: Record<Language, PEArticle> = {
       intro: 'No single AI model is best for every task. GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.',
       publishDate: '2026-03-23',
       seoTitle: 'GPT vs Claude vs Gemini 2026: Pick the Right Model',
-      metaDescription: 'Compare GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, ERNIE by task, cost, geography. Decision framework with real-world recipes.',
+      metaDescription: 'GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, and ERNIE each win on different tasks. Compare by task, cost, and geography — with a practical decision framework and 4 real-world recipes.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       schema: {
@@ -26,9 +26,9 @@ export const article: Record<Language, PEArticle> = {
         headline: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
         description: 'A practical guide to choosing between GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE based on your task, budget, and geography.',
         datePublished: '2026-03-23',
-        dateModified: '2026-03-23',
+        dateModified: '2026-04-28',
         keywords: ['GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'AI model comparison', 'model selection', 'prompt engineering'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -186,7 +186,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'When Should You Use GPT-5.5?',
           content: '**GPT-5.5 is OpenAI\'s frontier multimodal model — strongest for tool-heavy agentic workflows with the most extensive third-party integrations and tools.** Use GPT-5.5 when tooling, integrations, and multimodal capabilities matter more than cost.',
           items: [
-            '**Strengths:** Excellent general reasoning and chat across all domains. Strong multimodal capabilities — reliably processes images, audio, and sometimes video. Best-in-class tool calling and integrations (agents, IDE plugins, enterprise stack). Trusted in production by millions of developers.',
+            '**Strengths:** Excellent general reasoning and chat across all domains. Strong multimodal capabilities — reliably processes images, audio, and sometimes video. Strongest tool calling ecosystem — largest third-party integration library of any commercial model (50,000+ integrations on the OpenAI platform). Trusted in production by millions of developers.',
             '**Best use cases:** Multi-step agent workflows. Complex chains where tool calling (APIs, databases, code execution) is required. Tasks needing screenshot or image analysis. OpenAI ecosystem projects (ChatGPT, Assistants API, Codex, fine-tuning).',
             '**Trade-offs:** Premium frontier models cost more per token ($5 input / $15 output per million). Output can be verbose — requires prompt discipline to enforce conciseness.',
             '**Context window:** 128,000 tokens (handles ~100 pages of text).',
@@ -195,7 +195,7 @@ export const article: Record<Language, PEArticle> = {
 
         claudeSection: {
           title: 'When Should You Use Claude Opus 4.7?',
-          content: '**Claude Opus 4.7 from Anthropic excels at careful reasoning, writing quality, and code refactoring — with industry-leading safety.** Use Claude when output quality, clarity, and trustworthiness matter most.',
+          content: '**Claude Opus 4.7 from Anthropic excels at careful reasoning, writing quality, and code refactoring — with Constitutional AI safety training, the strongest safety architecture of any major commercial model.** Use Claude when output quality, clarity, and trustworthiness matter most.',
           items: [
             '**Strengths:** High-quality writing and summarization; outputs are concise, well-structured, and publication-ready. Excellent code understanding, refactoring, and explanation — often catches bugs that other models miss. Good long-context handling for research and document workflows. Strong safety culture; preferred in regulated industries.',
             '**Best use cases:** Reports, analyses, and knowledge work where structure and clarity are critical. Complex codebases and architecture discussions. Enterprise settings with compliance and safety requirements. Content that requires editing minimization.',
@@ -292,7 +292,7 @@ export const article: Record<Language, PEArticle> = {
             '**Cost-effective mid-tier:** Gemini 2.5 Flash ($0.075 input / $0.30 output per million tokens).',
             '**Competitive budget models:** DeepSeek (aggressive pricing), local models via Ollama/LM Studio (free, run on-device).',
             '**Rate limits:** Frontier models often start at 100 req/min; scaled tier can reach 10,000+ req/min. Local models depend on your hardware.',
-            '[See detailed token economics and cost calculations.](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            '[Learn about context windows and how they affect model selection.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
           ],
         },
 
@@ -364,6 +364,37 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing an AI Model',
+          mistakes: [
+            {
+              mistake: 'Choosing based on benchmarks, not your actual task',
+              problem: 'Generic benchmarks (MMLU, HumanEval) measure average performance across hundreds of tasks — your specific task may rank models completely differently.',
+              fix: 'Test your actual prompt on all candidate models using PromptQuorum. Benchmark your task, not the internet\'s task.',
+            },
+            {
+              mistake: 'Using one model for all tasks to simplify your stack',
+              problem: 'Claude may reduce revision rounds on writing tasks by 40% but cost 3× more per token for simple classification tasks you run at 1M/day.',
+              fix: 'Route by task type: budget models for repetitive high-volume tasks ($0.15–3/M tokens), frontier models for complex reasoning.',
+            },
+            {
+              mistake: 'Ignoring geographic constraints until production',
+              problem: 'GPT-5.5 and Claude are restricted or slow (3–10s latency) in mainland China. Discovering this after building requires a full re-architecture.',
+              fix: 'Map your user geography before architecture decisions. If any significant user segment is in mainland China, plan DeepSeek or Baidu ERNIE as primary from day one.',
+            },
+            {
+              mistake: 'Treating model choice as permanent',
+              problem: 'Model capabilities and pricing shift every 3–4 months. A model that was best-value in Q1 2026 may be beaten on cost/quality by Q3.',
+              fix: 'Re-evaluate model choices quarterly. Use PromptQuorum to re-test critical tasks on new model releases without rebuilding your pipeline.',
+            },
+            {
+              mistake: 'Not accounting for vendor lock-in during prompt design',
+              problem: 'Prompts that exploit Claude-specific formatting or GPT-specific tool-call syntax cannot be ported without rewriting.',
+              fix: 'Write prompts using standard structures that work across models. Test portability with PromptQuorum before committing to one provider.',
+            },
+          ],
+        },
+
         faq: {
           title: 'Frequently Asked Questions',
           faqs: [
@@ -385,7 +416,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Where do open-source local models fit into this picture?',
-              a: 'Local models (LLaMA 3.1, Mistral, others via Ollama or LM Studio) are best for: high-volume repetitive tasks (classify, summarize, extract), private data (no API calls), cost-sensitive workloads, and testing before committing to API costs. They do not match frontier models on quality but excel on privacy and cost. Use them for the 80% of tasks that do not need frontier-level reasoning.'
+              a: 'Local models (Llama 3.1, Mistral 7B, others via Ollama or LM Studio) are best for: high-volume repetitive tasks (classify, summarize, extract), private data (no API calls), cost-sensitive workloads, and testing before committing to API costs. They do not match frontier models on quality but excel on privacy and cost. Use them for the 80% of tasks that do not need frontier-level reasoning.'
             },
             {
               q: 'Is Claude better than ChatGPT?',
@@ -424,6 +455,8 @@ export const article: Record<Language, PEArticle> = {
             '[Fundamentals: System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — how system prompts define model behavior across models',
             '[Fundamentals: Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use) — frameworks work across models; choose one that fits your task',
             '[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where different models can handle different steps',
+            '[Fundamentals: Context Windows Explained: Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — how context window size drives model selection for long documents',
+            '[Techniques: Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — technique that works differently across GPT-5.5, Claude, and Gemini',
           ],
         },
       },
@@ -443,8 +476,8 @@ export const article: Record<Language, PEArticle> = {
     inLanguage: 'de',
     headline: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
     datePublished: '2026-03-23',
-    dateModified: '2026-03-23',
-    author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+    dateModified: '2026-04-28',
+    author: { '@type': 'Person', 'name': 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
     publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
   },
