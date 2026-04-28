@@ -542,106 +542,424 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     fr: {
-  theme: 'Techniques',
-  title: 'Constrained Prompting : Des Prompts Structurés pour des Résultats Fiables',
-  intro: 'Le constrained prompting est une technique où vous indiquez au modèle non seulement ce qu\'il doit faire, mais aussi ce qu\'il doit et ne doit absolument pas faire – afin que les résultats restent dans des limites clairement définies. C\'est essentiel quand vous avez besoin de formats fiables, de contenu sûr ou de conformité stricte avec les règles internes.',
-  publishDate: '2026-03-26',
+  theme: 'Technique de Prompting',
+  title: 'Prompting avec Contraintes : Guide Complet',
+  seoTitle: 'Prompting avec Contraintes : Guide Complet 2026',
+  intro: 'Le prompting avec contraintes force les modèles LLM à respecter des règles strictes : format de sortie spécifique, limites de longueur, ou respect de schémas prédéfinis. Découvrez comment utiliser les contraintes pour obtenir des résultats fiables, reproductibles et adaptés à vos applications en production.',
+  metaDescription: 'Apprenez le prompting avec contraintes pour améliorer la fiabilité des LLM. Formats stricts, validation d\'outputs, techniques avancées avec PromptQuorum.',
+  publishDate: '2026-01-20',
+  dateModified: '2026-04-28',
+  lastFactChecked: '2026-04-28',
   readTime: '6 min de lecture',
-  educationalLevel: 'Intermediate',
-  primaryTerm: 'Constrained Prompting',
-  metaDescription: 'Constrained Prompting pour des résultats d\'IA structurés. Comment définir des règles, formats et directives directement dans votre prompt.',
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-09-26',
+  educationalLevel: 'Advanced',
+  audience: 'Développeurs intégrant des LLM en production',
+  primaryTerm: 'Prompting avec contraintes',
+  aboutTopics: ['Ingénierie des prompts', 'Fiabilité des modèles IA', 'Validation des outputs'],
+  sections: {
+    tldr: {
+      isTldr: true,
+      title: 'Points clés',
+      numberedItems: [
+        'Les contraintes de format forcent les modèles à produire du JSON, XML, ou du texte structuré au lieu de contenu libre',
+        'Les limites de longueur et les schémas prédéfinis réduisent les hallucinations et les dérives de contenu',
+        'Les modèles open-source (Llama 3.2, Mistral 7B) et propriétaires (GPT-4o, Claude) supportent les contraintes, avec des variations de compliance',
+        'Le prompting avec contraintes fonctionne mieux quand la contrainte est explicite dans le système ou le prompt utilisateur',
+        'Les outils comme PromptQuorum permettent de tester et de vérifier que les contraintes sont respectées à l\'échelle',
+        'Les erreurs courantes : contraintes trop souples, stacking excessif de règles, absence de tests avec des cas limites',
+        'Les cas d\'usage en production : extraction de données, classification d\'intentions, génération de contenu validé, support automatisé'
+      ]
+    },
+    whatIsConstrained: {
+      title: 'Qu\'est-ce que le prompting avec contraintes ?',
+      content: [
+        'Le prompting avec contraintes signifie indiquer au modèle exactement comment forcer sa réponse dans un schéma prédéfini. Au lieu de demander : « Qu\'en penses-tu ? », vous demandez : « Réponds en JSON avec les champs : { sentiment: "positif"|"négatif"|"neutre", confiance: 0–1, raison: string } ».',
+        'Les contraintes opèrent à trois niveaux :',
+        '1. **Niveau format** : force le modèle à utiliser JSON, XML, Markdown, CSV, ou tout autre format structuré.',
+        '2. **Niveau schéma** : impose une structure précise et des types (nombres, énumérés, listes imbriquées).',
+        '3. **Niveau sémantique** : contraint le contenu : « Ne dépasse pas 100 mots », « Utilise uniquement les entités mentionnées dans ce document ».'
+      ],
+      snippets: [
+        {
+          type: 'in-one-sentence',
+          text: 'Les contraintes transforment un modèle non structuré en véritable API structurée.'
+        },
+        {
+          type: 'in-plain-terms',
+          text: 'Au lieu de gérer du texte libre, vous récupérez des réponses validées, parsables, et prévisibles.'
+        }
+      ]
+    },
+    whyItMatters: {
+      title: 'Pourquoi le prompting avec contraintes est crucial',
+      content: [
+        'Sans contraintes, les LLM génèrent du texte libre qui varie d\'une exécution à l\'autre. Votre application ne peut pas faire confiance à la structure ou au contenu. Avec les contraintes, les modèles restent dans les limites que vous avez définies.',
+        'Les principaux avantages sont :',
+        '• **Fiabilité** : Chaque réponse respecte le schéma. Pas de surprise, pas de champ manquant.',
+        '• **Parsabilité** : Du JSON valide signifie qu\'il peut être traité par du code sans exception.',
+        '• **Reproductibilité** : Les mêmes entrées, le même modèle, les mêmes contraintes → mêmes formats de sortie.',
+        '• **Intégration en chaîne** : Un LLM construit sa réponse structurée. L\'étape suivante la traite directement.',
+        '• **Reduction des hallucinations** : Une contrainte très stricte limite la place pour que le modèle invente ou s\'écarte du sujet.'
+      ]
+    },
+    typesOfConstraints: {
+      title: 'Types de contraintes de prompting',
+      content: 'Les contraintes varient en rigueur et en complexité. Voici les principales :',
+      tableFormat: true,
+      columns: ['Type', 'Description', 'Exemple'],
+      rows: [
+        {
+          'Type': 'Format fixe',
+          'Description': 'Sortie dans un format machine-lisible (JSON, XML, YAML, CSV)',
+          'Exemple': '{ "sentiment": "positif", "score": 0.85 }'
+        },
+        {
+          'Type': 'Énumérations',
+          'Description': 'Réponse limitée à un ensemble fini de valeurs',
+          'Exemple': 'Sentiment ∈ ["positif", "négatif", "neutre"]'
+        },
+        {
+          'Type': 'Limites de longueur',
+          'Description': 'Max N mots, caractères, ou tokens',
+          'Exemple': 'Explication en ≤ 100 mots'
+        },
+        {
+          'Type': 'Schémas imbriqués',
+          'Description': 'Structure complexe avec types imbriqués (listes d\'objets, objets optionnels)',
+          'Exemple': 'Array de { id: int, label: string, children: [...] }'
+        },
+        {
+          'Type': 'Contraintes sémantiques',
+          'Description': 'Le contenu doit répondre à une logique applicative (références valides, pas de self-reference)',
+          'Exemple': 'Ne recommande que les produits de la liste fournie'
+        }
+      ]
+    },
+    example: {
+      title: 'Exemple : Classification avec contraintes',
+      content: 'Considérez ce cas d\'usage : vous avez un ticket client et vous voulez qu\'un LLM le classe automatiquement.',
+      blockquote: 'Exemple de prompt sans contrainte : « Classe ce ticket client. » → Le modèle répond : « Ce ticket parle d\'une demande d\'accès client. Il semble urgent. Voici mes suggestions ... »',
+      blockquoteSource: 'Output non structuré – difficile à parser',
+      items: [
+        'Format : texte libre',
+        'Contenu : vous devez analyser manuellement ou utiliser une seconde étape de parsing',
+        'Coût computationnel : deux appels, plus de tokens, plus d\'erreurs'
+      ]
+    },
+    whenToUse: {
+      title: 'Quand utiliser le prompting avec contraintes',
+      content: [
+        'Le prompting avec contraintes est idéal pour les cas où votre application dépend d\'une structure de sortie prévisible.',
+        'Cas d\'usage appropriés :'
+      ],
+      numberedItems: [
+        'Classification de texte : étiqueter des emails, tickets, documents avec un ensemble fermé d\'étiquettes',
+        'Extraction de données structurées : extraire des noms, des dates, des prix à partir de documents',
+        'Génération de contenu validé : générer des descriptions de produits qui respectent un schéma marketing',
+        'API conversationnelles : transformer une conversation libre en commandes structurées',
+        'Scoring/notation : générer des scores numériques avec explications dans un format précis',
+        'Traitement d\'images et multimodal : forcer un modèle vision à décrire une image selon un schéma (alt-text structuré)'
+      ]
+    },
+    howPQSupports: {
+      title: 'Comment PromptQuorum supporte le prompting avec contraintes',
+      content: 'PromptQuorum inclut des outils natifs pour tester et valider les contraintes à l\'échelle :',
+      items: [
+        '**Mode de test structuré** : Testez votre prompt avec des contraintes contre plusieurs modèles (GPT-4o, Claude, Llama 3.2) et vérifiez que chaque réponse respecte le schéma',
+        '**Validation de schéma** : Définissez un schéma JSON ou une grammaire. PromptQuorum analyse chaque réponse et rapporte les violations',
+        '**Dispatch avec consensus** : Envoyez le même prompt avec contraintes à plusieurs modèles. PromptQuorum collecte les réponses structurées et détecte les divergences',
+        '**Monitoring de compliance** : Trackez en production : combien de réponses respectent le schéma ? Quels modèles divergent ? Quels champs sont souvent mal structurés ?',
+        '**Debugging interactif** : Si une réponse viole la contrainte, PromptQuorum montre exactement où et pourquoi, avec suggestions de correction'
+      ]
+    },
+    howToStart: {
+      title: 'Intégrer le prompting avec contraintes : 5 étapes',
+      numberedItems: [
+        {
+          title: 'Définissez votre schéma',
+          whyItMatters: 'Avant d\'écrire le prompt, clarifiez la structure : quels champs ? Types ? Champs obligatoires vs optionnels ? Énumérés fermés ou ouverts ?'
+        },
+        {
+          title: 'Écrivez le prompt avec la contrainte explicite',
+          whyItMatters: 'Dites au modèle exactement comment structurer la réponse. Exemple : « Réponds toujours en JSON valide avec : { "classe": "urgent"|"normal"|"faible", "raison": string, "actions": string[] } »'
+        },
+        {
+          title: 'Testez avec plusieurs modèles',
+          whyItMatters: 'Llama, Mistral, GPT-4o, Claude réagissent différemment aux contraintes. Testez chacun. Mesurez le taux de compliance (combien de réponses sont valides ?)'
+        },
+        {
+          title: 'Validez chaque réponse en production',
+          whyItMatters: 'Parsez le JSON. Si invalide, loguez l\'erreur, re-invoquez le modèle avec feedback (« Votre réponse n\'était pas du JSON valide : ... »), ou basculez sur un modèle plus fiable'
+        },
+        {
+          title: 'Monitez les violations',
+          whyItMatters: 'Trackez les réponses qui violent le schéma. Ajustez le prompt, le modèle, ou la contrainte basé sur les patterns de violation réels'
+        }
+      ]
+    },
+    commonMistakes: {
+      title: 'Erreurs courantes avec les contraintes',
+      mistakes: [
+        {
+          mistake: 'Contrainte trop vague',
+          problem: 'Dire « Sois bref » ou « Fais attention à la structure » n\'est pas assez précis. Le modèle ignore ou mal interprète.',
+          fix: 'Spécifiez : « Réponse ≤ 100 mots », « JSON avec schéma : { champ1: type, champ2: type } »'
+        },
+        {
+          mistake: 'Stacking excessif de contraintes',
+          problem: 'Ajouter 10 contraintes à la fois rend les instructions incompréhensibles. Le modèle oublie ou entre en conflit.',
+          fix: 'Gardez 2–3 contraintes principales. Testez chacune en isolation. Fusionnez progressivement.'
+        },
+        {
+          mistake: 'Pas de tests avec cas limites',
+          problem: 'Votre contrainte passe avec des textes simples mais échoue avec des Unicode, des listes vides, des cas extrêmes.',
+          fix: 'Testez : zéro éléments, 1000 éléments, caractères spéciaux, langues non-latines, entrées vides'
+        },
+        {
+          mistake: 'Ignorer les divergences entre modèles',
+          problem: 'Un modèle respecte parfaitement le JSON. Un autre ajoute des commentaires. GPT-4o enroule la réponse dans ``` ```.',
+          fix: 'Testez votre contrainte avec tous les modèles que vous utiliserez. Ajustez le prompt ou choisissez un seul modèle si la divergence est inacceptable.'
+        },
+        {
+          mistake: 'Oublier la gestion des erreurs de parsing',
+          problem: 'Vous supposez que JSON est toujours valide. La production le démontre faux. Crash silencieux ou exception.',
+          fix: 'Encapsulez le parsing dans try-catch. Loguez l\'erreur. Relancez avec feedback : « Votre JSON était invalide : ... »'
+        }
+      ]
+    },
+    relatedReading: {
+      title: 'Lectures complémentaires',
+      items: [
+        '[Grammars LLM : Forcer la Structure de Sortie](/prompt-engineering/llm-grammars?lang=fr) — Approches formelles au-delà des contraintes',
+        '[Chain-of-Thought vs. Structured Reasoning](/prompt-engineering/cot-structured-reasoning?lang=fr) — Quand utiliser lequel',
+        '[Fine-Tuning pour la Conformité de Sortie](/prompt-engineering/fine-tuning-for-structured-output?lang=fr) — Alternatives au prompting',
+        '[Validation d\'Outputs LLM : Schémas et Tests](/prompt-engineering/llm-output-validation?lang=fr) — Cadre complet de validation',
+        '[PromptQuorum : Dispatch Multi-Modèle](/features/multi-model-dispatch?lang=fr) — Comment tester les contraintes à l\'échelle',
+        '[API Conversationnelles avec LLM](/local-llms/conversational-apis?lang=fr) — Cas d\'usage réel : structures contrôlées dans les chatbots'
+      ]
+    },
+    faqSection: {
+      title: 'Questions fréquentes',
+      faqs: [
+        {
+          q: 'Les contraintes ralentissent-elles les réponses des LLM ?',
+          a: 'Légèrement. Une contrainte stricte limite l\'espace de recherche du modèle, ce qui peut accélérer la génération. Mais l\'intention explicite du modèle (« Parse this into JSON ») ajoute un peu de latence. Dans la plupart des cas (< 100 ms), ce coût est accepté pour la fiabilité. Mesurez votre cas d\'usage.'
+        },
+        {
+          q: 'Tous les modèles supportent-ils les contraintes ?',
+          a: 'Les modèles modernes (GPT-4o, Claude 3.5 Sonnet, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la compliance varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et cas d\'usage spécifiques.'
+        },
+        {
+          q: 'Dois-je mettre la contrainte dans le prompt système ou utilisateur ?',
+          a: 'Les deux fonctionnent, mais avec des différences : system prompt (instructions) donne une compliance plus cohérente et globale. User prompt (contenu) permet des contraintes spécifiques au message. Meilleure pratique : mettez la contrainte générale (format, type) dans le system prompt ; mettez les contraintes spécifiques au contexte (données, limites) dans le user prompt.'
+        },
+        {
+          q: 'Que faire si le modèle ignore ma contrainte ?',
+          a: 'Escalade graduée : 1) Reformulez la contrainte plus explicitement (au lieu de « Sois structuré », « Réponds TOUJOURS en JSON valide »). 2) Ajouter un exemple au prompt : « Voici un exemple : { sentiment: \'positif\', score: 0.9 } ». 3) Changez de modèle vers un plus performant (GPT-4o au lieu de 3.5, Llama 70B au lieu de 8B). 4) Fine-tuning sur des exemples structurés (coûteux mais fiable à l\'échelle).'
+        },
+        {
+          q: 'Les contraintes affectent-elles la qualité du contenu ?',
+          a: 'Oui, mais positivement : une contrainte bien conçue réduit le bruit et force le modèle à se concentrer. Une contrainte mal conçue (trop restrictive) peut réduire la créativité ou ignorer le contexte. Pour du contenu créatif (fiction, copywriting), gardez les contraintes light (longueur, ton). Pour de la données (extraction, classification), rendez les contraintes strictes.'
+        },
+        {
+          q: 'Puis-je combiner le prompting avec contraintes et le fine-tuning ?',
+          a: 'Absolument, et c\'est une meilleure pratique : fine-tuning prépare le modèle à comprendre votre domaine et votre style. Les contraintes forcent chaque réponse dans le format exact que vous besoin. Ensemble, ils donnent la plus haute fiabilité et qualité.'
+        },
+        {
+          q: 'La CNIL pose-t-elle des restrictions sur les contraintes d\'IA dans les données professionnelles ?',
+          a: 'La CNIL recommande le recours à des solutions d\'IA locales ou contrôlées pour le traitement de données professionnelles sensibles (données financières, médicales, juridiques). Les contraintes de format aident à isoler ou anonymiser les données sensibles dans les prompts, mais elles ne remplacent pas une architecture complète de protection des données. Consultez la CNIL si vous traitez des données sensibles.'
+        }
+      ]
+    },
+    sources: {
+      title: 'Sources et références',
+      items: [
+        '[OpenAI : Function Calling et Structured Outputs](https://platform.openai.com/docs/guides/function-calling) — Official docs',
+        '[Anthropic : Constrained Outputs with Claude](https://docs.anthropic.com) — Constrained modes documentation',
+        '[Guidance : Grammar-based Output Control](https://github.com/guidance-ai/guidance) — Open-source grammar library'
+      ]
+    }
+  },
+  toc: [
+    { label: 'Points clés', anchor: 'tldr' },
+    { label: 'Qu\'est-ce que le prompting avec contraintes ?', anchor: 'whatIsConstrained' },
+    { label: 'Pourquoi le prompting avec contraintes est crucial', anchor: 'whyItMatters' },
+    { label: 'Types de contraintes de prompting', anchor: 'typesOfConstraints' },
+    { label: 'Exemple : Classification avec contraintes', anchor: 'example' },
+    { label: 'Quand utiliser le prompting avec contraintes', anchor: 'whenToUse' },
+    { label: 'Comment PromptQuorum supporte le prompting avec contraintes', anchor: 'howPQSupports' },
+    { label: 'Intégrer le prompting avec contraintes : 5 étapes', anchor: 'howToStart' },
+    { label: 'Erreurs courantes avec les contraintes', anchor: 'commonMistakes' },
+    { label: 'Lectures complémentaires', anchor: 'relatedReading' },
+    { label: 'Questions fréquentes', anchor: 'faqSection' },
+    { label: 'Sources et références', anchor: 'sources' }
+  ],
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    headline: 'Constrained Prompting : Des Prompts Structurés pour des Résultats Fiables',
-    description: 'Ce qu\'est le constrained prompting, pourquoi c\'est important, et comment l\'utiliser pour rendre les résultats d\'IA prévisibles et sûrs dans des workflows réels.',
-    datePublished: '2026-03-26',
-    dateModified: '2026-03-26',
-    keywords: ['constrained prompting', 'prompt engineering', 'prompts structurés', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    'headline': 'Prompting avec Contraintes : Guide Complet',
+    'url': 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=fr',
+    'inLanguage': 'fr',
+    'image': 'https://www.promptquorum.com/og-constrained-prompting-fr.png',
+    'datePublished': '2026-01-20',
+    'dateModified': '2026-04-28',
+    'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+    'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+    'description': 'Apprenez le prompting avec contraintes pour améliorer la fiabilité des LLM.',
+    'about': [
+      { '@type': 'Thing', 'name': 'Ingénierie des prompts' },
+      { '@type': 'Thing', 'name': 'Fiabilité des modèles IA' },
+      { '@type': 'Thing', 'name': 'Validation des outputs' }
+    ],
+    'mentions': [
+      { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' },
+      { '@type': 'SoftwareApplication', 'name': 'GPT-4o' },
+      { '@type': 'SoftwareApplication', 'name': 'Claude' },
+      { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+      { '@type': 'SoftwareApplication', 'name': 'Mistral' }
+    ],
+    'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.tldr'] }
   },
-  sections: {
-    whatIsConstrained: {
-      title: 'Qu\'est-ce que le Constrained Prompting ?',
-      content: [
-        '**Le constrained prompting consiste à ajouter des règles explicites sur le contenu, la structure, la longueur et le comportement directement dans votre prompt.** Au lieu d\'une instruction vague comme « résumez ceci », vous spécifiez les formats autorisés, les champs obligatoires, les sujets interdits et les règles de validation.',
-        'Les contraintes peuvent inclure des schémas de sortie (comme JSON avec des clés fixes), des limites de mots, des exigences de ton et des restrictions de sécurité comme « ne pas fournir de diagnostics médicaux ». En intégrant ces règles au prompt, vous réduisez l\'ambiguïté et simplifiez l\'intégration du modèle dans les workflows de production.',
-      ],
-    },
-    whyItMatters: {
-      title: 'Pourquoi le Constrained Prompting Est Important',
-      content: [
-        '**Le constrained prompting est crucial quand les résultats du modèle alimentent des personnes, des processus ou d\'autres systèmes qui dépendent d\'un comportement prévisible.** Sans contraintes, le même prompt peut produire des structures ou des niveaux de détail différents selon les exécutions.',
-        'Les contraintes claires vous aident à :',
-      ],
-      items: [
-        'Éviter les contenus ou formatages inattendus qui cassent vos outils aval.',
-        'Appliquer les directives de marque, juridiques ou de sécurité directement au niveau du prompt.',
-        'Réduire le temps d\'examen car les résultats correspondent déjà à votre structure requise.',
-      ],
-    },
-    typesOfConstraints: {
-      title: 'Types de Contraintes que Vous Pouvez Utiliser',
-      content: [
-        '**Vous pouvez contraindre vos prompts selon plusieurs dimensions : structure, contenu, style, longueur et sécurité.** Plus vous êtes précis, plus les résultats deviennent cohérents.',
-        'Les types de contraintes courants sont :',
-      ],
-      items: [
-        'Contraintes structurelles : Titres obligatoires, listes à puces, tableaux ou JSON avec des clés spécifiques.',
-        'Contraintes de contenu : Sections obligatoires (comme « Risques » ou « Étapes suivantes ») et sujets ou expressions interdits.',
-        'Contraintes de style : Ton (« formel », « neutre », « conversationnel »), niveau de lecture ou règles de terminologie.',
-        'Contraintes de longueur : Limites de mots ou de caractères, ou un nombre fixe de puces ou de sections.',
-        'Contraintes de sécurité : Instructions pour éviter les données personnelles, les conseils médicaux, les conclusions juridiques ou les catégories de contenu non autorisées.',
-      ],
-    },
-    example: {
-      title: 'Exemple : Prompt Non-Contraint vs Contraint',
-      content: [
-        '**L\'impact du constrained prompting se voit clairement quand on compare un prompt non-contraint à un prompt contraint pour la même tâche.** Ici, nous rédigeons un résumé produit court.',
-        '**[Mauvais Prompt]**',
-        '"Écrivez un résumé de notre nouvelle fonctionnalité d\'analyse."',
-        '**[Bon Prompt]**',
-        '"Vous êtes un responsable produit B2B. Tâche : Rédigez un résumé de notre nouvelle fonctionnalité d\'analyse pour une page produit. Contraintes : Longueur : 120–160 mots. Structure : 1 court paragraphe d\'introduction, puis 3 puces, puis 1 phrase de conclusion. Style : Ton clair et neutre-professionnel. Pas de mots-clés comme \'révolutionnaire\' ou \'transformationnel\'. Contenu : Mentionnez l\'avantage principal (insights plus rapides sur le comportement client) et un cas d\'usage concret. Format de sortie : Markdown valide avec puces utilisant `-`."',
-        'La version contrainte définit longueur, structure, style et contenu requis, ce qui rend le résultat beaucoup plus prévisible et facile à réutiliser.',
-      ],
-    },
-    whenToUse: {
-      title: 'Quand Utiliser le Constrained Prompting',
-      content: [
-        '**Utilisez le constrained prompting quand l\'exactitude et la cohérence importent plus que la créativité maximale.** C\'est particulièrement vrai dans les contextes opérationnels, analytiques et réglementés.',
-        'Les cas d\'usage typiques incluent :',
-      ],
-      items: [
-        'Générer des sorties JSON ou tabulaires que d\'autres systèmes parseront.',
-        'Créer des rapports standardisés, résumés ou mises à jour de statut entre équipes.',
-        'Rédiger des communications client qui doivent suivre les directives de marque ou juridiques.',
-        'Extraire des données structurées (problèmes, entités, métriques) à partir de texte non structuré.',
-      ],
-    },
-    howPQSupports: {
-      title: 'Comment PromptQuorum Soutient le Constrained Prompting',
-      content: [
-        '**PromptQuorum est un outil de dispatch multi-modèles spécialement conçu pour le constrained prompting – permettant de définir, sauvegarder et réutiliser des frameworks de prompts structurés.** Vous combinez les contraintes avec des frameworks comme SPECS, RTF ou le Prompting Guide de Google et les envoyez à plusieurs modèles simultanément.',
-        'Avec PromptQuorum, vous pouvez :',
-      ],
-      items: [
-        'Encoder les contraintes structurelles et de contenu directement dans les frameworks pour que chaque exécution suive les mêmes règles.',
-        'Tester les prompts contraints sur plusieurs modèles côte à côte pour voir quel fournisseur respecte le mieux vos spécifications.',
-        'Sauvegarder les prompts contraints comme modèles pour les tâches récurrentes, en garantissant que votre équipe utilise toujours les mêmes motifs validés.',
-      ],
-    },
-    howToStart: {
-      title: 'Comment Commencer avec le Constrained Prompting',
-      numberedItems: [
-        '**Identifiez les contraintes de sortie pertinentes pour votre tâche : longueur, format, vocabulaire, portée, sécurité.** Exemple : « La réponse doit faire ≤100 mots, format JSON, utiliser uniquement des termes techniques, couvrir uniquement les développements récents (2024+), ne pas mentionner les concurrents. »',
-        '**Énoncez les contraintes explicitement en utilisant un langage « doit », « ne doit pas » et « uniquement ». Évitez les directives douces comme « essayez » ou « visez ». Les contraintes dures sont plus fiables.**',
-        '**Pour les contraintes de format, fournissez un exemple du format exact souhaité.** Montrez au modèle : « Retournez en JSON : { \"finding\": \"...\", \"confidence\": \"high|medium|low\", \"sources\": [...] } »',
-        '**Pour les contraintes de contenu, énumérez explicitement ce qui doit être inclus et exclu.** Exemple : « Inclure : détails techniques, métriques de performance. Exclure : langage marketing, noms de concurrents, tarification. »',
-        '**Testez les prompts contraints sur des cas limites pour vérifier que le modèle respecte toutes les contraintes.** Générez 10 résultats. Vérifiez : Respectent-ils tous la limite de longueur ? Utilisent-ils tous le bon format ? Y a-t-il des violations ?',
-      ],
-    },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'inLanguage': 'fr',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'Les contraintes ralentissent-elles les réponses des LLM ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Légèrement. Une contrainte stricte limite l\'espace de recherche du modèle, ce qui peut accélérer la génération. Mais l\'intention explicite du modèle (« Parse this into JSON ») ajoute un peu de latence. Dans la plupart des cas (< 100 ms), ce coût est accepté pour la fiabilité. Mesurez votre cas d\'usage.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Tous les modèles supportent-ils les contraintes ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Les modèles modernes (GPT-4o, Claude 3.5 Sonnet, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la compliance varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et cas d\'usage spécifiques.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Dois-je mettre la contrainte dans le prompt système ou utilisateur ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Les deux fonctionnent, mais avec des différences : system prompt (instructions) donne une compliance plus cohérente et globale. User prompt (contenu) permet des contraintes spécifiques au message. Meilleure pratique : mettez la contrainte générale (format, type) dans le system prompt ; mettez les contraintes spécifiques au contexte (données, limites) dans le user prompt.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Que faire si le modèle ignore ma contrainte ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Escalade graduée : 1) Reformulez la contrainte plus explicitement (au lieu de « Sois structuré », « Réponds TOUJOURS en JSON valide »). 2) Ajouter un exemple au prompt : « Voici un exemple : { sentiment: \'positif\', score: 0.9 } ». 3) Changez de modèle vers un plus performant (GPT-4o au lieu de 3.5, Llama 70B au lieu de 8B). 4) Fine-tuning sur des exemples structurés (coûteux mais fiable à l\'échelle).'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Les contraintes affectent-elles la qualité du contenu ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Oui, mais positivement : une contrainte bien conçue réduit le bruit et force le modèle à se concentrer. Une contrainte mal conçue (trop restrictive) peut réduire la créativité ou ignorer le contexte. Pour du contenu créatif (fiction, copywriting), gardez les contraintes light (longueur, ton). Pour de la données (extraction, classification), rendez les contraintes strictes.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Puis-je combiner le prompting avec contraintes et le fine-tuning ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Absolument, et c\'est une meilleure pratique : fine-tuning prépare le modèle à comprendre votre domaine et votre style. Les contraintes forcent chaque réponse dans le format exact que vous besoin. Ensemble, ils donnent la plus haute fiabilité et qualité.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'La CNIL pose-t-elle des restrictions sur les contraintes d\'IA dans les données professionnelles ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'La CNIL recommande le recours à des solutions d\'IA locales ou contrôlées pour le traitement de données professionnelles sensibles (données financières, médicales, juridiques). Les contraintes de format aident à isoler ou anonymiser les données sensibles dans les prompts, mais elles ne remplacent pas une architecture complète de protection des données. Consultez la CNIL si vous traitez des données sensibles.'
+        }
+      }
+    ]
   },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    'inLanguage': 'fr',
+    'name': 'Intégrer le prompting avec contraintes : 5 étapes',
+    'step': [
+      {
+        '@type': 'HowToStep',
+        'position': 1,
+        'name': 'Définissez votre schéma',
+        'text': 'Avant d\'écrire le prompt, clarifiez la structure : quels champs ? Types ? Champs obligatoires vs optionnels ? Énumérés fermés ou ouverts ?'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 2,
+        'name': 'Écrivez le prompt avec la contrainte explicite',
+        'text': 'Dites au modèle exactement comment structurer la réponse. Exemple : « Réponds toujours en JSON valide avec : { "classe": "urgent"|"normal"|"faible", "raison": string, "actions": string[] } »'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 3,
+        'name': 'Testez avec plusieurs modèles',
+        'text': 'Llama, Mistral, GPT-4o, Claude réagissent différemment aux contraintes. Testez chacun. Mesurez le taux de compliance (combien de réponses sont valides ?)'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 4,
+        'name': 'Validez chaque réponse en production',
+        'text': 'Parsez le JSON. Si invalide, loguez l\'erreur, re-invoquez le modèle avec feedback (« Votre réponse n\'était pas du JSON valide : ... »), ou basculez sur un modèle plus fiable'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 5,
+        'name': 'Monitez les violations',
+        'text': 'Trackez les réponses qui violent le schéma. Ajustez le prompt, le modèle, ou la contrainte basé sur les patterns de violation réels'
+      }
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'inLanguage': 'fr',
+    'name': 'Types de contraintes de prompting',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Format fixe',
+        'description': 'Sortie dans un format machine-lisible (JSON, XML, YAML, CSV)'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Énumérations',
+        'description': 'Réponse limitée à un ensemble fini de valeurs'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': 'Limites de longueur',
+        'description': 'Max N mots, caractères, ou tokens'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 4,
+        'name': 'Schémas imbriqués',
+        'description': 'Structure complexe avec types imbriqués (listes d\'objets, objets optionnels)'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 5,
+        'name': 'Contraintes sémantiques',
+        'description': 'Le contenu doit répondre à une logique applicative (références valides, pas de self-reference)'
+      }
+    ]
+  }
 },
     ja: {
   theme: 'Techniques',
