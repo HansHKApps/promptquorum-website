@@ -205,6 +205,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': 'Variable hallucination. Local deployment capable. Best for research and full infrastructure control.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: 'The slide deck below covers: 5 structured prompt elements (role, objective, constraints, output format, edge cases), AI model selection (Claude 4.7 Opus vs GPT-5 vs Gemini 3 Pro), Chain-of-Thought prompting for debugging, temperature settings (0.1–0.2 for production), and security vulnerabilities (45% hallucination rate). Download the PDF as an AI Code Generation & Security reference card.',
       sections: {
         tldr: {
           title: 'Key Takeaways',
@@ -700,6 +702,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': 'Variable Halluzination. Lokale Deployment-fähig. Beste für Forschung und vollständige Infrastruktur-Kontrolle.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: 'Die Präsentation behandelt: 5 strukturierte Prompt-Elemente (Rolle, Ziel, Constraints, Ausgabeformat, Grenzfälle), KI-Modellauswahl (Claude 4.7 Opus vs GPT-5 vs Gemini 3 Pro), Chain-of-Thought-Prompting für Debugging, Temperatur-Einstellungen (0,1–0,2 für Produktion) und Sicherheitslücken (45% Halluzinationsrate). Laden Sie das PDF als KI-Code-Generierungs- und Sicherheits-Referenzkarte herunter.',
       sections: {
         tldr: {
           title: 'Schlüsselerkenntnisse',
@@ -1211,6 +1215,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': 'Hallucination variable. Capable de déploiement local. Idéal pour la recherche et le contrôle infrastructure complet.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: 'Le diaporama couvre: 5 éléments de prompts structurés (rôle, objectif, contraintes, format de sortie, cas limites), sélection de modèles IA (Claude 4.7 Opus vs GPT-5 vs Gemini 3 Pro), prompting par chaîne de pensée pour le débogage, paramètres de température (0,1–0,2 pour la production) et vulnérabilités de sécurité (45% taux d\'hallucination). Téléchargez le PDF comme carte de référence de génération de code IA et sécurité.',
       sections: {
         tldr: {
           title: 'Points Clés',
@@ -1705,6 +1711,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': '変動する幻覚。ローカルデプロイが可能。研究に最適。' },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: 'スライドデッキは以下をカバーしています: 5つの構造化プロンプト要素（ロール、目的、制約、出力形式、エッジケース）、AIモデル選択（Claude 4.7 Opus vs GPT-5 vs Gemini 3 Pro）、チェーンオブソート・プロンプティング、温度設定（本番環境では0.1～0.2）、セキュリティ脆弱性（45%の幻覚率）。PDFをAIコード生成およびセキュリティリファレンスカードとしてダウンロードしてください。',
       sections: {
         tldr: {
           title: '主な要点',
@@ -2141,6 +2149,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': '幻觉率可变。本地部署能力。最适合研究和完全基础设施控制。' },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: '幻灯片涵盖：5个结构化提示词元素（角色、目标、约束、输出格式、边界情况）、AI模型选择（Claude 4.7 Opus vs GPT-5 vs Gemini 3 Pro）、思路链提示词用于调试、温度设置（生产环境0.1-0.2）和安全漏洞（45%幻觉率）。将PDF下载为AI代码生成和安全参考卡。',
       sections: {
         tldr: {
           title: '关键要点',

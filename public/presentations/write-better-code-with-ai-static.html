@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Write Better Code With AI | PromptQuorum</title>
+    <meta name="description" content="Learn structured prompts, AI model selection, security workflows, and how to avoid 45% of code vulnerabilities." />
+    <meta property="og:title" content="How to Write Better Code With AI — PromptQuorum" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape with mm dimensions */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">How to Write Better Code With AI</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container"></div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'How to Write Better Code\nWith AI',
+                        subtitle: 'Master structured prompts, model selection, and security workflows',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Structured Prompts: The Foundation',
+                        intro: '5 critical elements produce better code:',
+                        items: [
+                            '<strong>Role:</strong> "You are a senior Python backend engineer"',
+                            '<strong>Objective:</strong> What specific task to perform',
+                            '<strong>Constraints:</strong> Libraries, frameworks, and limitations',
+                            '<strong>Output format:</strong> "Return only code, no explanation"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5-Step Prompt Structure',
+                        intro: '',
+                        items: [
+                            '1. Define your role and expertise level',
+                            '2. State the objective clearly (what to build)',
+                            '3. Specify constraints (frameworks, libraries)',
+                            '4. Define output format (code only, with comments)',
+                            '5. List edge cases to handle (null values, errors)'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Model Comparison for Coding Tasks',
+                        columns: ['Task', 'Best Model', 'Why'],
+                        rows: [
+                            { Task: 'React components', 'Best Model': 'Claude 4.7 Opus', Why: 'Accurate JSX, prop handling' },
+                            { Task: 'Bug fixing', 'Best Model': 'Claude 4.7 Opus', Why: 'Superior step-by-step traces' },
+                            { Task: 'Algorithm design', 'Best Model': 'GPT-5', Why: 'Strong reasoning, creativity' },
+                            { Task: 'Codebase analysis', 'Best Model': 'Gemini 3 Pro', Why: '2M token context' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Temperature Settings for Code',
+                        intro: 'Control randomness strategically:',
+                        items: [
+                            '<strong>Production (T=0.1–0.2):</strong> Deterministic, safe, consistent',
+                            '<strong>Brainstorming (T=0.7–0.9):</strong> Diverse options for exploration',
+                            '<strong>Why matters:</strong> Default 0.7–1.0 wrong for code, right for creative writing'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Context Window by Model',
+                        columns: ['Model', 'Context Window', 'Implication'],
+                        rows: [
+                            { Model: 'GPT-5', 'Context Window': '128k tokens', Implication: '~96,000 lines visible' },
+                            { Model: 'Claude 4.7 Opus', 'Context Window': '200k tokens', Implication: 'Better multi-file context' },
+                            { Model: 'Gemini 3 Pro', 'Context Window': '2M tokens', Implication: 'Full codebase analysis' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Chain-of-Thought for Debugging',
+                        intro: 'Ask the model to reason before answering:',
+                        items: [
+                            'Trace execution step-by-step before producing code',
+                            'Identify exactly where logic breaks down',
+                            'Makes errors correctable, not requiring full regeneration'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'The Security Crisis: 45% Vulnerability Rate',
+                        intro: 'Three critical failure modes:',
+                        items: [
+                            '<strong>Hallucinated dependencies:</strong> 20% of AI code suggests non-existent packages',
+                            '<strong>Insecure implementations:</strong> SQL injection, weak crypto, poor sanitization',
+                            '<strong>Missing edge cases:</strong> No null checks, unhandled exceptions'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code Quality & Security Stats',
+                        intro: 'Critical research findings:',
+                        items: [
+                            '<strong>45% of AI-generated code contains vulnerabilities</strong> (Veracode 2025)',
+                            '20% recommend hallucinated package names (University of Texas, Oklahoma)',
+                            '30–75% faster development — but requires security review before deploy'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Common Mistakes to Avoid',
+                        intro: '',
+                        items: [
+                            '1. Treating AI output as production-ready (always review & lint)',
+                            '2. Vague prompts ("write a login system" vs. detailed JWT+bcrypt spec)',
+                            '3. Ignoring temperature (0.7–1.0 default is wrong for code)',
+                            '4. Accepting hallucinated packages (verify on PyPI/npm first)',
+                            '5. Not providing existing code context (AI needs to see your patterns)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Workflow: Write Better Code',
+                        intro: '5–7 step systematic approach:',
+                        items: [
+                            '1. Define role and constraints upfront (no new packages, strict types)',
+                            '2. Structure prompt: role → objective → constraints → format → edge cases',
+                            '3. Use CoT for debugging: "trace step by step"',
+                            '4. Set T=0.1–0.2 for production code every session',
+                            '5. Run security linter + multi-model cross-check before deploy'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Key FAQs',
+                        faqs: [
+                            {
+                                q: 'What\'s the best AI model for code in 2026?',
+                                a: 'Claude 4.7 Opus (backend, debugging), GPT-5 (algorithms), Gemini 3 Pro (large codebases), LLaMA 4 (local/privacy).'
+                            },
+                            {
+                                q: 'Is AI-generated code safe to deploy?',
+                                a: 'No. 45% contains vulnerabilities. Always review, lint (Bandit/ESLint), and cross-check with multi-model dispatch.'
+                            },
+                            {
+                                q: 'How much faster with AI coding tools?',
+                                a: '126% more projects/week in studies, but task-dependent. Complex integration takes 19% longer; requires discipline.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regional Variations & Compliance',
+                        intro: 'Three key strategies:',
+                        items: [
+                            '<strong>EU (GDPR):</strong> Mistral AI, local Ollama deployment, zero data egress',
+                            '<strong>China (PIPL):</strong> Qwen 3, DeepSeek V3, on-premise only',
+                            '<strong>Japan (METI):</strong> LLaMA 4 8B locally, 8GB RAM, data residency critical'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Try PromptQuorum Free',
+                        body: 'Multi-model dispatch to catch hallucinations and security issues before deployment.',
+                        cta: 'Start Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Besseren Code mit KI schreiben: Prompts, Modelle und Sicherheit 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Besseren Code mit KI\nschreiben',
+                        subtitle: 'Strukturierte Prompts, Modellauswahl und Sicherheitsworkflows',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Strukturierte Prompts: Die Grundlage',
+                        intro: '5 kritische Elemente für besseren Code:',
+                        items: [
+                            '<strong>Rolle:</strong> "Du bist ein erfahrener Python Backend-Engineer"',
+                            '<strong>Ziel:</strong> Welche spezifische Aufgabe auszuführen',
+                            '<strong>Constraints:</strong> Bibliotheken, Frameworks und Grenzen',
+                            '<strong>Output-Format:</strong> "Gib nur Code zurück, keine Erklärung"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5-Schritte-Prompt-Struktur',
+                        intro: '',
+                        items: [
+                            '1. Definiere deine Rolle und Expertise',
+                            '2. Staat das Ziel klar (was zu bauen)',
+                            '3. Spezifiziere Constraints (Frameworks, Bibliotheken)',
+                            '4. Definiere Output-Format (nur Code mit Kommentaren)',
+                            '5. Liste Edge Cases auf (Nullwerte, Fehler)'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Modellvergleich für Programmieraufgaben',
+                        columns: ['Aufgabe', 'Bestes Modell', 'Warum'],
+                        rows: [
+                            { Aufgabe: 'React-Komponenten', 'Bestes Modell': 'Claude 4.7 Opus', Warum: 'Genaue JSX, Props' },
+                            { Aufgabe: 'Bug-Fixes', 'Bestes Modell': 'Claude 4.7 Opus', Warum: 'Beste Traces' },
+                            { Aufgabe: 'Algorithmus-Design', 'Bestes Modell': 'GPT-5', Warum: 'Starkes Reasoning' },
+                            { Aufgabe: 'Codebase-Analyse', 'Bestes Modell': 'Gemini 3 Pro', Warum: '2M Token Kontext' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Temperatur-Einstellungen für Code',
+                        intro: 'Kontrolliere Zufälligkeit strategisch:',
+                        items: [
+                            '<strong>Production (T=0,1–0,2):</strong> Deterministisch, sicher, konsistent',
+                            '<strong>Brainstorming (T=0,7–0,9):</strong> Vielfältige Optionen zur Erkundung',
+                            '<strong>Warum wichtig:</strong> Standard 0,7–1,0 falsch für Code'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Kontext-Fenster pro Modell',
+                        columns: ['Modell', 'Kontext-Fenster', 'Auswirkung'],
+                        rows: [
+                            { Modell: 'GPT-5', 'Kontext-Fenster': '128k Token', Auswirkung: '~96.000 Zeilen sichtbar' },
+                            { Modell: 'Claude 4.7 Opus', 'Kontext-Fenster': '200k Token', Auswirkung: 'Besserer Multi-File-Kontext' },
+                            { Modell: 'Gemini 3 Pro', 'Kontext-Fenster': '2M Token', Auswirkung: 'Vollständige Codebase-Analyse' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Chain-of-Thought für Debugging',
+                        intro: 'Bitte das Modell, vor der Antwort zu denken:',
+                        items: [
+                            'Trace Ausführung Schritt für Schritt vor Code-Produktion',
+                            'Identifiziere genau wo Logik bricht',
+                            'Machen Fehler korrigierbar, nicht komplette Neugenerierung nötig'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Die Sicherheitskrise: 45% Schwachstellen-Quote',
+                        intro: 'Drei kritische Fehlermodi:',
+                        items: [
+                            '<strong>Halluzinierte Abhängigkeiten:</strong> 20% schlagen nicht-existente Pakete vor',
+                            '<strong>Unsichere Implementierungen:</strong> SQL-Injection, schwache Krypto',
+                            '<strong>Fehlende Edge Cases:</strong> Keine Null-Checks, unbehandelte Exceptions'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Code-Qualität & Sicherheits-Statistiken',
+                        intro: 'Kritische Forschungsergebnisse:',
+                        items: [
+                            '<strong>45% des KI-generierten Codes enthält Schwachstellen</strong> (Veracode 2025)',
+                            '20% empfehlen halluzinierte Paketnamen',
+                            '30–75% schneller — aber Sicherheitsüberprüfung vor Deploy erforderlich'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 häufige Fehler zu vermeiden',
+                        intro: '',
+                        items: [
+                            '1. KI-Output als produktionsreif behandeln (immer überprüfen & linten)',
+                            '2. Vage Prompts (spezifische JWT+bcrypt-Spezifikation besser)',
+                            '3. Temperatur ignorieren (0,7–1,0 Standard falsch für Code)',
+                            '4. Halluzinierte Pakete akzeptieren (PyPI/npm erst überprüfen)',
+                            '5. Keinen bestehenden Code-Kontext geben (KI braucht Muster)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Workflow: Besserer Code mit KI',
+                        intro: '5–7 schrittiger systematischer Ansatz:',
+                        items: [
+                            '1. Rolle und Constraints upfront definieren (keine neuen Pakete)',
+                            '2. Prompt strukturieren: Rolle → Ziel → Constraints → Format → Edge Cases',
+                            '3. CoT für Debugging verwenden: "Trace Schritt für Schritt"',
+                            '4. T=0,1–0,2 für Production Code in jeder Session setzen',
+                            '5. Security-Linter + Multi-Modell-Check vor Deploy durchführen'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Wichtige FAQs',
+                        faqs: [
+                            {
+                                q: 'Was ist das beste KI-Modell für Code 2026?',
+                                a: 'Claude 4.7 Opus (Backend, Debugging), GPT-5 (Algorithmen), Gemini 3 Pro (große Codebases), LLaMA 4 (lokal/privat).'
+                            },
+                            {
+                                q: 'Ist KI-generierter Code sicher zum Bereitstellen?',
+                                a: 'Nein. 45% enthält Schwachstellen. Immer überprüfen, linten und mit Multi-Modell-Vergleich prüfen.'
+                            },
+                            {
+                                q: 'Wie viel schneller mit KI-Codierungs-Tools?',
+                                a: '126% mehr Projekte/Woche in Studien, aber aufgaben-abhängig. Komplexe Integration dauert 19% länger.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regionale Variationen & Compliance',
+                        intro: 'Drei Schlüsselstrategien:',
+                        items: [
+                            '<strong>EU (DSGVO):</strong> Mistral AI, lokales Ollama, null Daten-Ausstrom',
+                            '<strong>China (PIPL):</strong> Qwen 3, DeepSeek V3, nur On-Premise',
+                            '<strong>Japan (METI):</strong> LLaMA 4 8B lokal, Datenschutz kritisch'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'PromptQuorum kostenlos testen',
+                        body: 'Multi-Modell-Vergleich um Halluzinationen vor Deploy zu fangen.',
+                        cta: 'Kostenlos starten',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Comment écrire un meilleur code avec l\'IA: Prompts, modèles et sécurité 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Écrire un meilleur code\navec l\'IA',
+                        subtitle: 'Maîtrise des prompts structurés, sélection de modèles et workflows de sécurité',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Prompts structurés: La fondation',
+                        intro: '5 éléments critiques pour un meilleur code:',
+                        items: [
+                            '<strong>Rôle:</strong> "Tu es un ingénieur backend Python senior"',
+                            '<strong>Objectif:</strong> Quelle tâche spécifique accomplir',
+                            '<strong>Contraintes:</strong> Bibliothèques, frameworks et limitations',
+                            '<strong>Format de sortie:</strong> "Retourne seulement du code, pas d\'explication"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Structure de prompt en 5 étapes',
+                        intro: '',
+                        items: [
+                            '1. Définir ton rôle et ton niveau d\'expertise',
+                            '2. Énoncer l\'objectif clairement (ce qu\'il faut construire)',
+                            '3. Spécifier les contraintes (frameworks, bibliothèques)',
+                            '4. Définir le format de sortie (code uniquement avec commentaires)',
+                            '5. Lister les cas limites à traiter (valeurs nulles, erreurs)'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Comparaison des modèles pour les tâches',
+                        columns: ['Tâche', 'Meilleur modèle', 'Pourquoi'],
+                        rows: [
+                            { Tâche: 'Composants React', 'Meilleur modèle': 'Claude 4.7 Opus', Pourquoi: 'JSX précis, props' },
+                            { Tâche: 'Correction de bugs', 'Meilleur modèle': 'Claude 4.7 Opus', Pourquoi: 'Meilleures traces' },
+                            { Tâche: 'Conception d\'algorithme', 'Meilleur modèle': 'GPT-5', Pourquoi: 'Raisonnement fort' },
+                            { Tâche: 'Analyse de codebase', 'Meilleur modèle': 'Gemini 3 Pro', Pourquoi: 'Contexte 2M tokens' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Paramètres de température pour code',
+                        intro: 'Contrôle l\'aléatoire stratégiquement:',
+                        items: [
+                            '<strong>Production (T=0,1–0,2):</strong> Déterministe, sûr, cohérent',
+                            '<strong>Brainstorming (T=0,7–0,9):</strong> Options diverses pour exploration',
+                            '<strong>Pourquoi important:</strong> Défaut 0,7–1,0 mauvais pour code'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Fenêtre de contexte par modèle',
+                        columns: ['Modèle', 'Fenêtre contexte', 'Implication'],
+                        rows: [
+                            { Modèle: 'GPT-5', 'Fenêtre contexte': '128k tokens', Implication: '~96.000 lignes visibles' },
+                            { Modèle: 'Claude 4.7 Opus', 'Fenêtre contexte': '200k tokens', Implication: 'Meilleur contexte multi-fichiers' },
+                            { Modèle: 'Gemini 3 Pro', 'Fenêtre contexte': '2M tokens', Implication: 'Analyse codebase complète' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Chain-of-Thought pour debug',
+                        intro: 'Demande au modèle de réfléchir avant:',
+                        items: [
+                            'Trace exécution étape par étape avant produire code',
+                            'Identifie exactement où la logique échoue',
+                            'Rend les erreurs corrigeables, pas régénération complète'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'La crise de sécurité: 45% vulnérabilités',
+                        intro: 'Trois modes défaillance critiques:',
+                        items: [
+                            '<strong>Dépendances halluccinées:</strong> 20% suggèrent paquets inexistants',
+                            '<strong>Implémentations non sécurisées:</strong> Injection SQL, faible crypto',
+                            '<strong>Cas limites manquants:</strong> Pas de vérifs null, exceptions'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Qualité code & stats sécurité',
+                        intro: 'Résultats recherche critiques:',
+                        items: [
+                            '<strong>45% du code IA contient vulnérabilités</strong> (Veracode 2025)',
+                            '20% recommandent noms paquets halluccinés',
+                            '30–75% plus rapide — mais révision sécurité avant déploiement'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 erreurs courantes à éviter',
+                        intro: '',
+                        items: [
+                            '1. Traiter output IA comme prêt production (toujours vérifier & linter)',
+                            '2. Prompts vagues (spécification JWT+bcrypt mieux)',
+                            '3. Ignorer température (défaut 0,7–1,0 mauvais pour code)',
+                            '4. Accepter paquets halluccinés (vérifier PyPI/npm d\'abord)',
+                            '5. Pas de contexte code existant (IA a besoin de tes patterns)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Workflow: Meilleur code avec IA',
+                        intro: 'Approche systématique 5–7 étapes:',
+                        items: [
+                            '1. Définir rôle et contraintes d\'avance (pas nouveaux paquets)',
+                            '2. Structurer prompt: Rôle → Objectif → Contraintes → Format → Cas limites',
+                            '3. Utiliser CoT pour debug: "Trace étape par étape"',
+                            '4. Définir T=0,1–0,2 pour code production chaque session',
+                            '5. Lancer linter sécurité + vérification multi-modèle avant déploiement'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQs essentielles',
+                        faqs: [
+                            {
+                                q: 'Quel est le meilleur modèle IA pour code 2026?',
+                                a: 'Claude 4.7 Opus (backend, debug), GPT-5 (algorithmes), Gemini 3 Pro (grosses codebases), LLaMA 4 (local/privé).'
+                            },
+                            {
+                                q: 'Le code IA généré est-il sûr à déployer?',
+                                a: 'Non. 45% contient vulnérabilités. Toujours vérifier, linter et vérifier avec comparaison multi-modèle.'
+                            },
+                            {
+                                q: 'Combien plus rapide avec outils IA coding?',
+                                a: '126% plus projets/semaine en études, mais dépend tâche. Intégration complexe 19% plus lente.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Variations régionales & conformité',
+                        intro: 'Trois stratégies clés:',
+                        items: [
+                            '<strong>UE (RGPD):</strong> Mistral AI, Ollama local, sortie données zéro',
+                            '<strong>Chine (PIPL):</strong> Qwen 3, DeepSeek V3, on-premise uniquement',
+                            '<strong>Japon (METI):</strong> LLaMA 4 8B local, résidence données critique'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Essaye PromptQuorum gratuitement',
+                        body: 'Dispatch multi-modèles pour attraper hallucinations avant déploiement.',
+                        cta: 'Commencer gratuit',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'AIでより良いコードを書く方法：プロンプト、モデル、セキュリティ 2026年',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'AIでより良い\nコードを書く',
+                        subtitle: '構造化プロンプト、モデル選択、セキュリティワークフロー',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: '構造化プロンプト：基礎',
+                        intro: 'より良いコードのための5つの重要要素:',
+                        items: [
+                            '<strong>ロール:</strong> 「あなたはシニアPythonバックエンドエンジニア」',
+                            '<strong>目的:</strong> 実行する特定のタスク',
+                            '<strong>制約:</strong> ライブラリ、フレームワーク、制限',
+                            '<strong>出力形式:</strong> 「コードのみを返す、説明なし」'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5段階プロンプト構造',
+                        intro: '',
+                        items: [
+                            '1. ロールと専門知識を定義する',
+                            '2. 目的を明確に述べる（何を構築するか）',
+                            '3. 制約を指定（フレームワーク、ライブラリ）',
+                            '4. 出力形式を定義（コードのみ、コメント付き）',
+                            '5. 処理するエッジケースをリストアップ（null値、エラー）'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'コーディングタスクのモデル比較',
+                        columns: ['タスク', '最適なモデル', '理由'],
+                        rows: [
+                            { タスク: 'React コンポーネント', '最適なモデル': 'Claude 4.7 Opus', 理由: '正確なJSX、プロップ処理' },
+                            { タスク: 'バグ修正', '最適なモデル': 'Claude 4.7 Opus', 理由: '優れたステップトレース' },
+                            { タスク: 'アルゴリズム設計', '最適なモデル': 'GPT-5', 理由: '強力な推論能力' },
+                            { タスク: 'コードベース分析', '最適なモデル': 'Gemini 3 Pro', 理由: '2M トークンコンテキスト' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コード生成の温度設定',
+                        intro: '戦略的にランダム性を制御：',
+                        items: [
+                            '<strong>本番環境（T=0.1–0.2）:</strong> 決定論的、安全、一貫性',
+                            '<strong>ブレーンストーミング（T=0.7–0.9）:</strong> 多様なオプション',
+                            '<strong>重要な理由:</strong> デフォルト0.7–1.0はコード用に間違い'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'モデル別のコンテキストウィンドウ',
+                        columns: ['モデル', 'コンテキストウィンドウ', '意味'],
+                        rows: [
+                            { モデル: 'GPT-5', 'コンテキストウィンドウ': '128k トークン', 意味: '約96,000行表示' },
+                            { モデル: 'Claude 4.7 Opus', 'コンテキストウィンドウ': '200k トークン', 意味: 'マルチファイルコンテキスト' },
+                            { モデル: 'Gemini 3 Pro', 'コンテキストウィンドウ': '2M トークン', 意味: 'コードベース全体分析' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'デバッグ用Chain-of-Thought',
+                        intro: '回答前にモデルに考えさせる：',
+                        items: [
+                            'コード生成前に実行をステップバイステップでトレース',
+                            'ロジックが正確に どこで破綻するかを特定',
+                            'エラーを修正可能にする、完全な再生成は不要'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'セキュリティの危機：45%脆弱性率',
+                        intro: '3つの重大な失敗モード：',
+                        items: [
+                            '<strong>ハルシネーション依存関係:</strong> 20%が存在しないパッケージを提案',
+                            '<strong>不安全な実装:</strong> SQLインジェクション、弱い暗号化',
+                            '<strong>欠落したエッジケース:</strong> nullチェックなし、ハンドルされない例外'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コード品質とセキュリティ統計',
+                        intro: '重要な研究結果：',
+                        items: [
+                            '<strong>AI生成コードの45%に脆弱性を含む</strong> (Veracode 2025)',
+                            '20%がハルシネーション名を推奨',
+                            '30–75%高速化 — ただしデプロイ前にセキュリティ確認が必須'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5つの一般的な誤りを回避',
+                        intro: '',
+                        items: [
+                            '1. AI出力を本番環境対応と扱う（常に確認＆リント）',
+                            '2. 曖昧なプロンプト（詳細なJWT+bcrypt仕様が優先）',
+                            '3. 温度を無視（デフォルト0.7–1.0はコード用に間違い）',
+                            '4. ハルシネーションパッケージを受け入れる（PyPI/npm先に確認）',
+                            '5. 既存コード文脈を提供しない（AIはパターンを見る必要がある）'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ワークフロー：AIでより良いコード',
+                        intro: '5～7ステップの体系的アプローチ：',
+                        items: [
+                            '1. ロールと制約を事前に定義（新しいパッケージなし）',
+                            '2. プロンプト構造化：ロール→目的→制約→形式→エッジケース',
+                            '3. デバッグにCoTを使用：「ステップバイステップでトレース」',
+                            '4. 毎セッションT=0.1–0.2を本番コード用に設定',
+                            '5. セキュリティリント＋マルチモデルチェック実行、デプロイ前'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '重要なFAQ',
+                        faqs: [
+                            {
+                                q: '2026年のコード用最適AIモデルは？',
+                                a: 'Claude 4.7 Opus（バックエンド、デバッグ）、GPT-5（アルゴリズム）、Gemini 3 Pro（大規模コードベース）、LLaMA 4（ローカル/プライベート）。'
+                            },
+                            {
+                                q: 'AI生成コードはデプロイ安全？',
+                                a: 'いいえ。45%に脆弱性。常に確認、リント、マルチモデル検証を実施。'
+                            },
+                            {
+                                q: 'AIコーディングツールはどの程度高速化？',
+                                a: '研究では週あたり126%多くプロジェクト完了。ただしタスク依存。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域別バリエーションとコンプライアンス',
+                        intro: '3つの主要戦略：',
+                        items: [
+                            '<strong>EU（GDPR）:</strong> Mistral AI、ローカルOllama、ゼロデータ流出',
+                            '<strong>中国（PIPL）:</strong> Qwen 3、DeepSeek V3、オンプレミスのみ',
+                            '<strong>日本（METI）:</strong> LLaMA 4 8B ローカル、データレジデンシー重要'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'PromptQuorumを無料で試す',
+                        body: 'マルチモデルディスパッチでハルシネーション検出、デプロイ前。',
+                        cta: '無料開始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '如何用AI写出更好的代码：提示词、模型和安全2026年',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '用AI写出\n更好的代码',
+                        subtitle: '掌握结构化提示词、模型选择和安全工作流',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '结构化提示词：基础',
+                        intro: '更好代码的5个关键要素：',
+                        items: [
+                            '<strong>角色：</strong> "你是资深Python后端工程师"',
+                            '<strong>目标：</strong> 要执行的具体任务',
+                            '<strong>约束：</strong> 库、框架和限制',
+                            '<strong>输出格式：</strong> "仅返回代码，无解释"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5步提示词结构',
+                        intro: '',
+                        items: [
+                            '1. 定义角色和专业水平',
+                            '2. 明确陈述目标（要构建什么）',
+                            '3. 指定约束（框架、库）',
+                            '4. 定义输出格式（仅代码带注释）',
+                            '5. 列出边界情况（null值、错误）'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '编程任务的模型比较',
+                        columns: ['任务', '最优模型', '原因'],
+                        rows: [
+                            { 任务: 'React组件', '最优模型': 'Claude 4.7 Opus', 原因: '精准JSX、Props处理' },
+                            { 任务: 'Bug修复', '最优模型': 'Claude 4.7 Opus', 原因: '优秀的步骤追踪' },
+                            { 任务: '算法设计', '最优模型': 'GPT-5', 原因: '强大推理能力' },
+                            { 任务: '代码库分析', '最优模型': 'Gemini 3 Pro', 原因: '2M token上下文' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代码生成温度设置',
+                        intro: '战略性控制随机性：',
+                        items: [
+                            '<strong>生产环境（T=0.1–0.2）:</strong> 确定性、安全、一致',
+                            '<strong>头脑风暴（T=0.7–0.9）:</strong> 多样化选项供探索',
+                            '<strong>为什么重要：</strong> 默认0.7–1.0对代码错误'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '模型的上下文窗口',
+                        columns: ['模型', '上下文窗口', '意义'],
+                        rows: [
+                            { 模型: 'GPT-5', '上下文窗口': '128k tokens', 意义: '约96,000行可见' },
+                            { 模型: 'Claude 4.7 Opus', '上下文窗口': '200k tokens', 意义: '更好的多文件上下文' },
+                            { 模型: 'Gemini 3 Pro', '上下文窗口': '2M tokens', 意义: '完整代码库分析' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '调试的思路链',
+                        intro: '在回答前让模型思考：',
+                        items: [
+                            '在生成代码前逐步追踪执行',
+                            '精确识别逻辑在哪里破裂',
+                            '使错误可修复，无需完全重新生成'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '安全危机：45%漏洞率',
+                        intro: '三种严重失败模式：',
+                        items: [
+                            '<strong>幻觉依赖：</strong> 20%建议不存在的包',
+                            '<strong>不安全实现：</strong> SQL注入、弱加密',
+                            '<strong>遗漏边界情况：</strong> 无null检查、未处理异常'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '代码质量和安全统计',
+                        intro: '关键研究发现：',
+                        items: [
+                            '<strong>45%的AI生成代码含有漏洞</strong> (Veracode 2025)',
+                            '20%建议虚构包名',
+                            '快30–75% — 但部署前需要安全检查'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5个常见错误要避免',
+                        intro: '',
+                        items: [
+                            '1. 把AI输出当作生产就绪（总是检查和清理）',
+                            '2. 模糊提示词（详细JWT+bcrypt规范更好）',
+                            '3. 忽视温度（默认0.7–1.0对代码错误）',
+                            '4. 接受虚构包（先在PyPI/npm验证）',
+                            '5. 不提供现有代码背景（AI需要看模式）'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '工作流：用AI写更好代码',
+                        intro: '5–7步系统化方法：',
+                        items: [
+                            '1. 提前定义角色和约束（无新包）',
+                            '2. 结构化提示词：角色→目标→约束→格式→边界',
+                            '3. 调试用CoT："逐步追踪"',
+                            '4. 每次设定T=0.1–0.2用于生产代码',
+                            '5. 部署前运行安全清理器+多模型验证'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '关键FAQ',
+                        faqs: [
+                            {
+                                q: '2026年最好的AI代码模型是什么？',
+                                a: 'Claude 4.7 Opus（后端、调试）、GPT-5（算法）、Gemini 3 Pro（大型代码库）、LLaMA 4（本地/隐私）。'
+                            },
+                            {
+                                q: 'AI生成代码能直接部署吗？',
+                                a: '不能。45%含有漏洞。总是检查、清理和多模型验证。'
+                            },
+                            {
+                                q: 'AI编码工具能快多少？',
+                                a: '研究显示每周多完成126%项目。但取决于任务类型。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域差异和合规性',
+                        intro: '三个关键策略：',
+                        items: [
+                            '<strong>欧盟（GDPR）:</strong> Mistral AI、本地Ollama、零数据流出',
+                            '<strong>中国（PIPL）:</strong> Qwen 3、DeepSeek V3、仅本地部署',
+                            '<strong>日本（METI）:</strong> 本地LLaMA 4 8B、数据驻留关键'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '免费试用PromptQuorum',
+                        body: '多模型分发在部署前发现幻觉和漏洞。',
+                        cta: '免费开始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        // Utility: render slide to HTML
+        function renderSlide(slide) {
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.2em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `
+                            <p style="margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                                <strong>Q: ${faq.q}</strong><br/>
+                                A: ${faq.a}
+                            </p>
+                        `;
+                    });
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2 style="color: #6750a4;">${slide.h2}</h2>
+                        <p style="margin-top: 30px; font-size: 1.2em;">${slide.body}</p>
+                        <p style="margin-top: 40px;">
+                            <a href="${slide.href}" style="display: inline-block; padding: 16px 40px; background: #6750a4; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: 700; transition: background 0.2s;">
+                                ${slide.cta}
+                            </a>
+                        </p>
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        // Main script
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        // Render slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        // Initialize slide navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Print handlers
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        // Print trigger
+        if (isPrint) {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
