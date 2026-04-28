@@ -82,6 +82,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'HowToStep', 'name': 'Explain', 'text': 'Ask the model to justify the conclusion in plain language that a non-technical stakeholder can follow.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/trace-framework-static.html',
+      gammaDescription: 'The slide deck below covers: how TRACE (Think, Reason, Analyze, Conclude, Explain) forces AI to show its reasoning step by step, the 5-stage method with bad-vs-good prompt examples, when to pair TRACE with CO-STAR, CRAFT, RISEN, and SPECS, plus 5 common mistakes to avoid. Download the PDF as a TRACE Framework reference card.',
       sections: {
         keyTakeaways: {
           title: 'Key Takeaways',
@@ -611,6 +613,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'HowToStep', 'name': 'Explain (Erklären)', 'text': 'Lassen Sie das Modell die Schlussfolgerung in einfacher Sprache begründen, die ein nicht-technisches Publikum versteht.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/trace-framework-static.html',
+      gammaDescription: 'Die folgende Präsentation erklärt: wie das TRACE Framework KI-Reasoning sichtbar macht (Think→Reason→Analyze→Conclude→Explain), die 5-stufige Methode mit schlechtem und gutem Prompt-Vergleich, wann TRACE mit CO-STAR, CRAFT, RISEN und SPECS kombiniert wird, sowie 5 häufige Fehler. PDF als TRACE-Framework-Referenzkarte herunterladen.',
     },
     fr: {
       theme: 'Frameworks',
@@ -899,6 +903,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'HowToStep', 'name': 'Explain (Expliquer)', 'text': 'Demandez au modèle de justifier la conclusion en langage simple qu\'un non-spécialiste peut comprendre.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/trace-framework-static.html',
+      gammaDescription: 'La présentation ci-dessous couvre : comment TRACE (Think, Reason, Analyze, Conclude, Explain) force l\'IA à montrer son raisonnement, la méthode en 5 étapes avec exemples de bon et mauvais prompt, quand combiner TRACE avec CO-STAR, CRAFT, RISEN et SPECS, et 5 erreurs courantes. Téléchargez le PDF comme fiche de référence TRACE.',
     },
     ja: {
       theme: 'Frameworks',
@@ -1199,6 +1205,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'HowToStep', 'name': 'Explain（説明する）', 'text': 'モデルに結論を、非技術的な関係者が理解できるような平易な言葉で正当化させます。' },
         ],
       },
+      gammaEmbedUrl: '/presentations/trace-framework-static.html',
+      gammaDescription: '以下のスライドでは、TRACEフレームワーク（Think→Reason→Analyze→Conclude→Explain）がAIの推論を可視化する仕組み、5段階メソッドと悪い・良いプロンプトの比較例、CO-STAR・CRAFT・RISEN・SPECSとの組み合わせ方法、よくある5つのミスを解説します。PDFとしてTRACEフレームワーク参照カードをダウンロードできます。',
     },
     zh: {
       theme: 'Frameworks',
@@ -1500,5 +1508,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'HowToStep', 'name': 'Explain（解释）', 'text': '让模型用非技术受众能理解的平易近人语言为结论正当化。' },
         ],
       },
+      gammaEmbedUrl: '/presentations/trace-framework-static.html',
+      gammaDescription: '以下幻灯片涵盖：TRACE框架（Think→Reason→Analyze→Conclude→Explain）如何让AI展示推理过程、5阶段方法与好坏提示词对比示例、何时与CO-STAR、CRAFT、RISEN和SPECS组合使用，以及5个常见错误。下载PDF作为TRACE框架参考卡。',
     },
   };

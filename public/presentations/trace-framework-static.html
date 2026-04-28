@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The TRACE Framework | PromptQuorum</title>
+    <meta name="description" content="Interactive 14-slide presentation on the TRACE Framework for AI reasoning. Learn Think, Reason, Analyze, Conclude, Explain with examples and best practices." />
+    <meta property="og:title" content="The TRACE Framework — PromptQuorum" />
+    <meta property="og:description" content="Make AI reasoning transparent with the TRACE Framework (Think, Reason, Analyze, Conclude, Explain). Interactive slides with examples and comparisons." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/trace-framework" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/prompt-engineering/trace-framework?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 10px;
+            }
+
+            th, td {
+                padding: 6px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">The TRACE Framework</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/trace-framework" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'The TRACE Framework',
+                prevBtn: '← Prev',
+                nextBtn: 'Next →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'The TRACE Framework',
+                        subtitle: 'Think, Reason, Analyze, Conclude, Explain — make AI reasoning transparent and auditable',
+                        link: 'https://www.promptquorum.com/prompt-engineering/trace-framework'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>TRACE</strong> — a 5-stage prompt pattern that forces AI to show each step of reasoning',
+                            'Use when <strong>reasoning quality matters</strong> more than brevity',
+                            '<strong>Reduces blind trust</strong> by making false assumptions and logic gaps visible',
+                            'Can be one single message <strong>or sent turn-by-turn</strong> for more control',
+                            '<strong>PromptQuorum</strong> includes TRACE as a built-in structure for all users'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What the TRACE Framework Is',
+                        items: [
+                            '<strong>Think:</strong> Restate and interpret the problem',
+                            '<strong>Reason:</strong> Explore possible approaches and hypotheses',
+                            '<strong>Analyze:</strong> Apply reasoning to concrete data or situation',
+                            '<strong>Conclude:</strong> State the final answer or recommendation clearly',
+                            '<strong>Explain:</strong> Justify the conclusion in plain language'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Why the TRACE Framework Matters',
+                        items: [
+                            '<strong>Reduces blind trust:</strong> Making reasoning explicit catches misinterpretations early',
+                            '<strong>Audit trail:</strong> Show stakeholders and teammates how conclusions were reached',
+                            '<strong>Model comparison:</strong> Compare how different models reason about the same problem'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'The Five TRACE Stages',
+                        items: [
+                            '<strong>Think:</strong> Clarify the task, list key variables, surface ambiguities',
+                            '<strong>Reason:</strong> Outline methods, trade-offs, or solution paths',
+                            '<strong>Analyze:</strong> Apply the chosen method step by step to actual inputs',
+                            '<strong>Conclude:</strong> Provide a direct answer tied to the question',
+                            '<strong>Explain:</strong> Summarize logic in plain language, focus on the "why"'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Bad vs Good TRACE Prompt',
+                        line1: '<strong>Bad:</strong> "Which of these two pricing plans is better?"',
+                        line2: '<strong>Good:</strong> "You are a SaaS pricing analyst. Use TRACE. Think: Restate the problem and key factors. Reason: Propose 2–3 ways to compare. Analyze: Apply your preferred method to the data. Conclude: State clearly which plan you recommend. Explain: Justify in plain language for a non-technical stakeholder."',
+                        tip: '→ The TRACE version doesn\'t just tell you "Plan A"; it shows how the model thought about trade-offs'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'When to Use the TRACE Framework',
+                        items: [
+                            '<strong>Strategic decisions:</strong> Trade-offs, technical architectures, business choices',
+                            '<strong>Complex debugging:</strong> Code changes, tricky issues, root cause analysis',
+                            '<strong>Analysis:</strong> Research findings, metrics, user feedback, drawing conclusions',
+                            '<strong>Explainability:</strong> Recommendations you can share with managers or clients'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'How to Write a TRACE Prompt',
+                        items: [
+                            'Start with a <strong>role assignment:</strong> "You are [expert role]"',
+                            'Define each <strong>TRACE stage:</strong> Think→Reason→Analyze→Conclude→Explain',
+                            'State <strong>explicit expectations</strong> for each stage (length, detail, format)',
+                            'Provide <strong>context or data</strong> at the end for the model to work with',
+                            'Save as <strong>templates</strong> and reuse for recurring tasks'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How PromptQuorum Implements TRACE',
+                        items: [
+                            'Choose TRACE as a <strong>built-in prompt structure</strong> in the interface',
+                            'Fill in <strong>task-specific context</strong> while the app keeps structure consistent',
+                            '<strong>Send to multiple models</strong> in parallel and compare reasoning traces side by side'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Combining TRACE With Other Frameworks',
+                        columns: ['Framework', 'Best For', 'Pair With TRACE When'],
+                        rows: [
+                            { 'Framework': 'CO-STAR', 'Best For': 'Content generation, drafting', 'Pair With TRACE When': 'Draft first, then TRACE to evaluate' },
+                            { 'Framework': 'CRAFT', 'Best For': 'Structured content with constraints', 'Pair With TRACE When': 'Generate, then TRACE to validate claims' },
+                            { 'Framework': 'RISEN', 'Best For': 'Iterative refinement', 'Pair With TRACE When': 'TRACE to analyze, RISEN to improve' },
+                            { 'Framework': 'SPECS', 'Best For': 'Strict output schemas', 'Pair With TRACE When': 'TRACE for reasoning, SPECS for format' },
+                            { 'Framework': 'Few-Shot', 'Best For': 'Format consistency', 'Pair With TRACE When': 'Add examples to TRACE stages for complexity' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'The Five TRACE Stages (How to Start)',
+                        items: [
+                            '<strong>Think:</strong> Ask the model to restate the problem and list key variables',
+                            '<strong>Reason:</strong> Ask the model to propose 2–3 possible approaches with trade-offs',
+                            '<strong>Analyze:</strong> Ask the model to apply its chosen approach step-by-step to actual data',
+                            '<strong>Conclude:</strong> Ask the model to state the final answer clearly in one sentence',
+                            '<strong>Explain:</strong> Ask the model to justify in plain language for non-technical stakeholders'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Common Mistakes With TRACE',
+                        columns: ['Mistake', 'Problem', 'Fix'],
+                        rows: [
+                            { 'Mistake': 'Skipping Think', 'Problem': 'Model misinterprets requirements', 'Fix': 'Always ask for restatement first' },
+                            { 'Mistake': 'No length constraints', 'Problem': 'Extremely long responses', 'Fix': 'Limit each stage: "1–2 sentences"' },
+                            { 'Mistake': 'Using for routine tasks', 'Problem': 'Unnecessary latency and cost', 'Fix': 'Reserve TRACE for decisions only' },
+                            { 'Mistake': 'Rigid adherence to 5 stages', 'Problem': 'Wastes time and tokens', 'Fix': 'Adapt to your task — skip or combine stages' },
+                            { 'Mistake': 'Not comparing models', 'Problem': 'Miss which provider reasons best', 'Fix': 'Use PromptQuorum to test multiple models' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ',
+                        faqs: [
+                            { q: 'What does TRACE stand for?', a: 'Think, Reason, Analyze, Conclude, Explain — a structured prompt pattern that forces AI to show its reasoning.' },
+                            { q: 'When should I use TRACE?', a: 'Use when reasoning quality matters: strategic decisions, architecture reviews, complex debugging, or outputs you need to justify.' },
+                            { q: 'How is TRACE different from Chain-of-Thought?', a: 'Chain-of-Thought is general. TRACE is a specific 5-stage structure that produces consistent reasoning across tasks and models.' },
+                            { q: 'Can I use TRACE in a single prompt?', a: 'Yes. A single prompt with all five stages is faster. Multiple turns let you pause and redirect at each stage.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Start Prompting Smarter',
+                        body: 'Use the TRACE Framework in PromptQuorum to make AI reasoning transparent, auditable, and reproducible across your team.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Das TRACE Framework',
+                prevBtn: '← Zurück',
+                nextBtn: 'Weiter →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Das TRACE Framework',
+                        subtitle: 'Think, Reason, Analyze, Conclude, Explain — KI-Reasoning transparent und überprüfbar machen',
+                        link: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtigste Erkenntnisse',
+                        items: [
+                            '<strong>TRACE</strong> — ein 5-stufiges Prompt-Muster, das KI zwingt, jeden Schritt des Denkens zu zeigen',
+                            'Verwenden Sie, wenn <strong>Reasoning-Qualität wichtiger ist</strong> als Kürze',
+                            '<strong>Reduziert blindes Vertrauen</strong> durch sichtbar gemachte falsche Annahmen und Logiklücken',
+                            'Kann als <strong>eine einzige Nachricht</strong> oder <strong>Schritt für Schritt</strong> versendet werden',
+                            '<strong>PromptQuorum</strong> bietet TRACE als native Struktur für alle Benutzer'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was das TRACE Framework ist',
+                        items: [
+                            '<strong>Think:</strong> Das Problem neu formulieren und interpretieren',
+                            '<strong>Reason:</strong> Mögliche Ansätze und Hypothesen erkunden',
+                            '<strong>Analyze:</strong> Reasoning auf konkrete Daten anwenden',
+                            '<strong>Conclude:</strong> Die endgültige Antwort klar formulieren',
+                            '<strong>Explain:</strong> Die Schlussfolgerung in verständlicher Sprache rechtfertigen'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Warum das TRACE Framework wichtig ist',
+                        items: [
+                            '<strong>Reduziert blindes Vertrauen:</strong> Explizites Reasoning fängt Missverständnisse früh',
+                            '<strong>Prüfpfad:</strong> Zeigen Sie Stakeholdern, wie Schlussfolgerungen zustande kamen',
+                            '<strong>Modellvergleich:</strong> Vergleichen Sie, wie verschiedene Modelle denken'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was sind die fünf TRACE Schritte?',
+                        items: [
+                            '<strong>Think:</strong> Aufgabe klären, Variablen auflisten, Mehrdeutigkeiten aufdecken',
+                            '<strong>Reason:</strong> Methoden, Trade-offs oder Lösungswege skizzieren',
+                            '<strong>Analyze:</strong> Gewählte Methode Schritt für Schritt auf tatsächliche Eingaben anwenden',
+                            '<strong>Conclude:</strong> Direkte Antwort gebunden an die Frage',
+                            '<strong>Explain:</strong> Logik zusammenfassen, Focus auf das „Warum"'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Beispiel: Schlechter vs. guter TRACE Prompt',
+                        line1: '<strong>Schlecht:</strong> "Welcher dieser beiden Tarife ist besser?"',
+                        line2: '<strong>Gut:</strong> "Sie sind SaaS-Preisanalyst. Nutzen Sie TRACE. Think: Nennen Sie das Problem und Schlüsselfaktoren. Reason: Schlagen Sie 2–3 Vergleichswege vor. Analyze: Wenden Sie Ihre Methode auf Daten an. Conclude: Empfehlen Sie klar einen Tarif. Explain: Begründen Sie in Alltagssprache."',
+                        tip: '→ TRACE zeigt, wie das Modell über Trade-offs nachdenkt, nicht nur „Tarif A"'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wann das TRACE Framework nutzen',
+                        items: [
+                            '<strong>Strategische Entscheidungen:</strong> Trade-offs, technische Architekturen, Geschäftschoices',
+                            '<strong>Komplexes Debugging:</strong> Code-Änderungen, knifflige Probleme, Grundursachenanalyse',
+                            '<strong>Analyse:</strong> Forschungsergebnisse, Metriken, Nutzerfeedback, Schlussfolgerungen',
+                            '<strong>Nachvollziehbarkeit:</strong> Empfehlungen, die Sie mit Managern teilen können'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Wie einen TRACE Prompt schreiben',
+                        items: [
+                            'Beginnen Sie mit <strong>Rollenzuweisung:</strong> "Sie sind [Experte]"',
+                            'Definieren Sie jede <strong>TRACE-Stufe:</strong> Think→Reason→Analyze→Conclude→Explain',
+                            'Nennen Sie <strong>explizite Erwartungen</strong> pro Stufe',
+                            'Geben Sie <strong>Kontext und Daten</strong> am Ende an',
+                            'Speichern als <strong>Vorlagen</strong> und wiederverwenden'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie PromptQuorum das TRACE Framework integriert',
+                        items: [
+                            'Wählen Sie TRACE als <strong>native Prompt-Struktur</strong>',
+                            'Füllen Sie <strong>aufgabenspezifischen Kontext</strong> aus',
+                            '<strong>Senden Sie an mehrere Modelle</strong> parallel und vergleichen Sie Reasoning-Spuren'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Wie kombiniert man TRACE mit anderen Frameworks?',
+                        columns: ['Framework', 'Am besten für', 'TRACE kombinieren wenn'],
+                        rows: [
+                            { 'Framework': 'CO-STAR', 'Am besten für': 'Inhaltserstellung, Entwurf', 'TRACE kombinieren wenn': 'Zuerst entwerfen, dann TRACE zum Bewerten' },
+                            { 'Framework': 'CRAFT', 'Am besten für': 'Strukturierte Inhalte mit Einschränkungen', 'TRACE kombinieren wenn': 'Generieren, dann TRACE zum Validieren' },
+                            { 'Framework': 'RISEN', 'Am besten für': 'Iterative Verbesserung', 'TRACE kombinieren wenn': 'TRACE zum Analysieren, RISEN zum Verbessern' },
+                            { 'Framework': 'SPECS', 'Am besten für': 'Strikte Output-Schemata', 'TRACE kombinieren wenn': 'TRACE zum Reasonen, SPECS für Format' },
+                            { 'Framework': 'Few-Shot', 'Am besten für': 'Format-Konsistenz', 'TRACE kombinieren wenn': 'Beispiele zu TRACE-Stufen hinzufügen' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Wie das TRACE Framework nutzen',
+                        items: [
+                            '<strong>Think:</strong> Bitten Sie das Modell, das Problem neu zu formulieren und Schlüsselvariablen zu nennen',
+                            '<strong>Reason:</strong> Bitten Sie um 2–3 mögliche Ansätze mit Trade-offs',
+                            '<strong>Analyze:</strong> Bitten Sie, die gewählte Methode Schritt für Schritt anzuwenden',
+                            '<strong>Conclude:</strong> Bitten Sie um eine klare Antwort in einem Satz',
+                            '<strong>Explain:</strong> Bitten Sie um Rechtfertigung für Nicht-Techniker'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Häufige Fehler mit TRACE',
+                        columns: ['Fehler', 'Problem', 'Lösung'],
+                        rows: [
+                            { 'Fehler': 'Think-Stufe überspringen', 'Problem': 'Modell missinterpretiert Anforderungen', 'Lösung': 'Immer Neuformulierung anfragen' },
+                            { 'Fehler': 'Keine Längenbeschränkung', 'Problem': 'Extrem lange Antworten', 'Lösung': 'Pro Stufe: „1–2 Sätze"' },
+                            { 'Fehler': 'Für Routine-Aufgaben nutzen', 'Problem': 'Unnötige Latenz und Kosten', 'Lösung': 'TRACE nur für Entscheidungen' },
+                            { 'Fehler': 'Strikte 5-Stufen-Einhaltung', 'Problem': 'Verschwendete Zeit und Tokens', 'Lösung': 'Passen Sie an Ihre Aufgabe an' },
+                            { 'Fehler': 'Modelle nicht vergleichen', 'Problem': 'Verpassen, welcher Provider beste ist', 'Lösung': 'PromptQuorum zum Testen mehrerer nutzen' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ',
+                        faqs: [
+                            { q: 'Wofür steht TRACE?', a: 'Think, Reason, Analyze, Conclude, Explain — ein strukturiertes Prompt-Muster, das KI zwingt, ihr Denken zu zeigen.' },
+                            { q: 'Wann sollte ich TRACE verwenden?', a: 'Wenn Reasoning-Qualität zählt: strategische Entscheidungen, Architektur-Reviews, komplexes Debugging, oder Outputs, die Sie rechtfertigen müssen.' },
+                            { q: 'Wie unterscheidet sich TRACE von Chain-of-Thought?', a: 'Chain-of-Thought ist allgemein. TRACE ist eine spezifische 5-Stufen-Struktur, die konsistentes Reasoning über Aufgaben und Modelle hinweg erzeugt.' },
+                            { q: 'Kann ich TRACE in einem Prompt verwenden?', a: 'Ja. Ein Prompt mit allen fünf Stufen ist schneller. Mehrere Turns ermöglichen, bei jeder Stufe zu pausieren und umzuleiten.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Besser prompting mit TRACE',
+                        body: 'Nutzen Sie das TRACE Framework in PromptQuorum, um KI-Reasoning transparent, überprüfbar und reproduzierbar zu machen.',
+                        cta: 'PromptQuorum kostenlos testen',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Le Framework TRACE',
+                prevBtn: '← Précédent',
+                nextBtn: 'Suivant →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Le Framework TRACE',
+                        subtitle: 'Think, Reason, Analyze, Conclude, Explain — rendre le raisonnement de l\'IA transparent et auditeur',
+                        link: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points clés à retenir',
+                        items: [
+                            '<strong>TRACE</strong> — un motif de prompt en 5 étapes qui force l\'IA à montrer chaque étape de raisonnement',
+                            'À utiliser quand <strong>la qualité du raisonnement compte</strong> plus que la brièveté',
+                            '<strong>Réduit la confiance aveugle</strong> en rendant visibles les fausses hypothèses',
+                            'Peut être <strong>un seul message</strong> ou <strong>envoyé tour par tour</strong> pour plus de contrôle',
+                            '<strong>PromptQuorum</strong> inclut TRACE comme structure native pour tous les utilisateurs'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce qu\'est le Framework TRACE',
+                        items: [
+                            '<strong>Think:</strong> Reformuler et interpréter le problème',
+                            '<strong>Reason:</strong> Explorer les approches et hypothèses possibles',
+                            '<strong>Analyze:</strong> Appliquer le raisonnement aux données concrètes',
+                            '<strong>Conclude:</strong> Énoncer clairement la réponse finale',
+                            '<strong>Explain:</strong> Justifier la conclusion en langage simple'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Pourquoi le Framework TRACE est important',
+                        items: [
+                            '<strong>Réduit la confiance aveugle:</strong> Le raisonnement explicite détecte les malentendus tôt',
+                            '<strong>Traçabilité:</strong> Montrez aux stakeholders comment les conclusions ont été atteintes',
+                            '<strong>Comparaison de modèles:</strong> Comparez comment différents modèles raisonnent'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quelles sont les cinq étapes du Framework TRACE ?',
+                        items: [
+                            '<strong>Think:</strong> Clarifier la tâche, énumérer les variables clés, révéler les ambiguïtés',
+                            '<strong>Reason:</strong> Décrire les méthodes, compromis ou chemins de solution',
+                            '<strong>Analyze:</strong> Appliquer la méthode choisie étape par étape aux entrées réelles',
+                            '<strong>Conclude:</strong> Fournir une réponse directe liée à la question',
+                            '<strong>Explain:</strong> Résumer la logique en langage simple, se concentrer sur le « pourquoi »'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Exemple: Mauvais vs. bon prompt TRACE',
+                        line1: '<strong>Mauvais:</strong> "Lequel de ces deux plans est meilleur?"',
+                        line2: '<strong>Bon:</strong> "Vous êtes un analyste SaaS. Utilisez TRACE. Think: Reformulez et nommez les facteurs clés. Reason: Proposez 2–3 façons de comparer. Analyze: Appliquez votre méthode aux données. Conclude: Recommandez clairement. Explain: Justifiez en langage simple."',
+                        tip: '→ TRACE montre comment le modèle pense aux compromis, pas seulement « Plan A »'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quand utiliser le Framework TRACE',
+                        items: [
+                            '<strong>Décisions stratégiques:</strong> Trade-offs, architectures, choix métier',
+                            '<strong>Débogage complexe:</strong> Changements de code, problèmes difficiles, analyse de cause profonde',
+                            '<strong>Analyse:</strong> Résultats de recherche, métriques, feedback, conclusions',
+                            '<strong>Traçabilité:</strong> Recommandations à partager avec managers ou clients'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Comment rédiger un prompt TRACE',
+                        items: [
+                            'Commencez par <strong>une assignation de rôle:</strong> "Vous êtes [expert]"',
+                            'Définissez chaque <strong>étape TRACE:</strong> Think→Reason→Analyze→Conclude→Explain',
+                            'Énoncez des <strong>attentes explicites</strong> par étape',
+                            'Fournissez <strong>le contexte et les données</strong> à la fin',
+                            'Enregistrez comme <strong>modèles</strong> et réutilisez'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment PromptQuorum implémente le Framework TRACE',
+                        items: [
+                            'Choisissez TRACE comme <strong>structure de prompt native</strong>',
+                            'Remplissez le <strong>contexte spécifique à la tâche</strong>',
+                            '<strong>Envoyez à plusieurs modèles</strong> en parallèle et comparez les traces de raisonnement'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Comment combiner TRACE avec d\'autres frameworks ?',
+                        columns: ['Framework', 'Idéal pour', 'Combiner avec TRACE quand'],
+                        rows: [
+                            { 'Framework': 'CO-STAR', 'Idéal pour': 'Génération de contenu, brouillons', 'Combiner avec TRACE quand': 'Rédigez d\'abord, puis TRACE pour évaluer' },
+                            { 'Framework': 'CRAFT', 'Idéal pour': 'Contenu structuré avec contraintes', 'Combiner avec TRACE quand': 'Générez, puis TRACE pour valider' },
+                            { 'Framework': 'RISEN', 'Idéal pour': 'Amélioration itérative', 'Combiner avec TRACE quand': 'TRACE pour analyser, RISEN pour améliorer' },
+                            { 'Framework': 'SPECS', 'Idéal pour': 'Schémas de sortie stricts', 'Combiner avec TRACE quand': 'TRACE pour raisonner, SPECS pour format' },
+                            { 'Framework': 'Few-Shot', 'Idéal pour': 'Cohérence du format', 'Combiner avec TRACE quand': 'Ajouter des exemples aux étapes TRACE' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Comment utiliser le Framework TRACE',
+                        items: [
+                            '<strong>Think:</strong> Demandez au modèle de reformuler et lister les variables clés',
+                            '<strong>Reason:</strong> Demandez 2–3 approches possibles avec trade-offs',
+                            '<strong>Analyze:</strong> Demandez d\'appliquer la méthode étape par étape',
+                            '<strong>Conclude:</strong> Demandez une réponse claire en une phrase',
+                            '<strong>Explain:</strong> Demandez une justification pour les non-techniciens'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Erreurs courantes avec TRACE',
+                        columns: ['Erreur', 'Problème', 'Solution'],
+                        rows: [
+                            { 'Erreur': 'Ignorer l\'étape Think', 'Problème': 'Le modèle mésinterprète les exigences', 'Solution': 'Toujours demander une reformulation' },
+                            { 'Erreur': 'Pas de limite de longueur', 'Problème': 'Réponses extrêmement longues', 'Solution': 'Par étape: « 1–2 phrases »' },
+                            { 'Erreur': 'Utiliser pour les tâches de routine', 'Problème': 'Latence et coûts inutiles', 'Solution': 'TRACE seulement pour décisions' },
+                            { 'Erreur': 'Adhérence stricte aux 5 étapes', 'Problème': 'Perte de temps et de tokens', 'Solution': 'Adaptez à votre tâche' },
+                            { 'Erreur': 'Ne pas comparer les modèles', 'Problème': 'Rater quel fournisseur est meilleur', 'Solution': 'PromptQuorum pour tester plusieurs' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ',
+                        faqs: [
+                            { q: 'Que signifie TRACE?', a: 'Think, Reason, Analyze, Conclude, Explain — un motif de prompt structuré qui force l\'IA à montrer son raisonnement.' },
+                            { q: 'Quand utiliser TRACE?', a: 'Quand la qualité du raisonnement compte: décisions stratégiques, architectures, débogage ou outputs à justifier.' },
+                            { q: 'Différence avec Chain-of-Thought?', a: 'Chain-of-Thought est général. TRACE est une structure 5 étapes spécifique produisant du raisonnement cohérent.' },
+                            { q: 'Puis-je utiliser TRACE dans un seul prompt?', a: 'Oui. Un prompt avec 5 étapes est plus rapide. Plusieurs tours permettent de faire pause et rediriger.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Commencez avec TRACE',
+                        body: 'Utilisez le Framework TRACE dans PromptQuorum pour rendre le raisonnement de l\'IA transparent, auditable et reproductible.',
+                        cta: 'Essayer PromptQuorum gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'TRACEフレームワーク',
+                prevBtn: '← 前へ',
+                nextBtn: '次へ →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'TRACEフレームワーク',
+                        subtitle: 'Think, Reason, Analyze, Conclude, Explain — AIの推論を透明かつ監査可能に',
+                        link: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'キーポイント',
+                        items: [
+                            '<strong>TRACE</strong> — AIが推論の各ステップを示すよう強制する5段階のプロンプトパターン',
+                            '<strong>推論品質がスピードより重要</strong>な場合に使用',
+                            '<strong>盲目的な信頼を低減</strong>し、誤った仮定とロジックの隙間を可視化',
+                            '<strong>単一メッセージ</strong>または<strong>段階的に送信</strong>可能',
+                            '<strong>PromptQuorum</strong>は全ユーザー向けにTRACEを組み込み機能として提供'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TRACEフレームワークとは',
+                        items: [
+                            '<strong>Think:</strong> 問題を言い直し解釈する',
+                            '<strong>Reason:</strong> 可能なアプローチと仮説を探る',
+                            '<strong>Analyze:</strong> 具体的なデータに推論を適用',
+                            '<strong>Conclude:</strong> 最終的な回答を明確に述べる',
+                            '<strong>Explain:</strong> 結論を平易な言葉で正当化'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TRACEフレームワークが重要な理由',
+                        items: [
+                            '<strong>盲目的信頼を低減:</strong> 明示的な推論は誤解を早期に検出',
+                            '<strong>監査証跡:</strong> 結論がどのように到達されたかをステークホルダーに示す',
+                            '<strong>モデル比較:</strong> 異なるモデルがどのように推論するかを比較'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TRACEの5つの段階とは？',
+                        items: [
+                            '<strong>Think:</strong> タスクを明確化、主要変数をリスト化、曖昧性を表面化',
+                            '<strong>Reason:</strong> メソッド、トレードオフ、またはソリューションパスを概説',
+                            '<strong>Analyze:</strong> 選択されたメソッドを実際の入力に段階的に適用',
+                            '<strong>Conclude:</strong> 質問に結びつく直接的な回答を提供',
+                            '<strong>Explain:</strong> 「なぜ」に焦点を当てた平易な言葉でロジックをまとめる'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '例: 悪い vs 良いTRACEプロンプト',
+                        line1: '<strong>悪い:</strong> "この2つの料金プランのどちらが良いですか?"',
+                        line2: '<strong>良い:</strong> "SaaS価格分析家です。TRACEを使用してください。Think: 問題を言い直し主要因を挙げてください。Reason: 2-3の比較方法を提案してください。Analyze: 選んだ方法をデータに適用してください。Conclude: 明確に推奨してください。Explain: 平易な言葉で正当化してください。"',
+                        tip: '→ TRACEは「プランA」ではなく、モデルがどのようにトレードオフについて考えたかを示す'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TRACEフレームワークを使用すべき時',
+                        items: [
+                            '<strong>戦略的決定:</strong> トレードオフ、技術アーキテクチャ、ビジネス選択肢',
+                            '<strong>複雑なデバッグ:</strong> コード変更、難しい問題、根本原因分析',
+                            '<strong>分析:</strong> 研究結果、メトリクス、ユーザーフィードバック、結論導出',
+                            '<strong>説明責任:</strong> マネージャーやクライアントと共有できる推奨事項'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'TRACEプロンプトの書き方',
+                        items: [
+                            '<strong>ロール割り当てで開始:</strong> "あなたは[専門家]です"',
+                            '各<strong>TRACE段階を定義:</strong> Think→Reason→Analyze→Conclude→Explain',
+                            '段階ごとに<strong>明示的な期待を述べる</strong>',
+                            '<strong>コンテキストとデータ</strong>を最後に提供',
+                            '<strong>テンプレートとして保存</strong>して再利用'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorumがTRACEを実装する方法',
+                        items: [
+                            'TRACEを<strong>ネイティブプロンプト構造</strong>として選択',
+                            '<strong>タスク固有のコンテキスト</strong>を記入',
+                            '<strong>複数モデルに並行送信</strong>して推論トレースを比較'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'TRACEを他のフレームワークと組み合わせる方法は？',
+                        columns: ['フレームワーク', '最適な用途', 'TRACEと組み合わせる場面'],
+                        rows: [
+                            { 'フレームワーク': 'CO-STAR', '最適な用途': 'コンテンツ生成、ドラフト作成', 'TRACEと組み合わせる場面': 'まずドラフト、次にTRACEで評価' },
+                            { 'フレームワーク': 'CRAFT', '最適な用途': '制約のある構造化コンテンツ', 'TRACEと組み合わせる場面': '生成、次にTRACEで検証' },
+                            { 'フレームワーク': 'RISEN', '最適な用途': '反復的改善', 'TRACEと組み合わせる場面': 'TRACEで分析、RISENで改善' },
+                            { 'フレームワーク': 'SPECS', '最適な用途': '厳格な出力スキーマ', 'TRACEと組み合わせる場面': 'TRACEで推論、SPECSでフォーマット' },
+                            { 'フレームワーク': 'Few-Shot', '最適な用途': 'フォーマット一貫性', 'TRACEと組み合わせる場面': 'TRACE段階に例を追加' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'TRACEフレームワークの使い方',
+                        items: [
+                            '<strong>Think:</strong> モデルに問題を言い直させ、主要変数をリストさせる',
+                            '<strong>Reason:</strong> 2-3の可能なアプローチとトレードオフを提案させる',
+                            '<strong>Analyze:</strong> 選んだアプローチを実際のデータに段階的に適用させる',
+                            '<strong>Conclude:</strong> 最終的な回答を1文で明確に述べさせる',
+                            '<strong>Explain:</strong> 非技術的ステークホルダー向けに正当化させる'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'TRACEでよくあるミス',
+                        columns: ['ミス', '問題', 'フィックス'],
+                        rows: [
+                            { 'ミス': 'Think段階をスキップ', '問題': 'モデルが要件を誤解する', 'フィックス': '常に言い直しを要求' },
+                            { 'ミス': '長さ制限がない', '問題': '非常に長い応答', 'フィックス': '段階ごと: 「1-2文」' },
+                            { 'ミス': '定型タスクに使用', '問題': '不要なレイテンシーと費用', 'フィックス': '決定にのみ使用' },
+                            { 'ミス': '5段階に厳密に従う', '問題': '時間とトークン浪費', 'フィックス': 'タスクに合わせて調整' },
+                            { 'ミス': 'モデルを比較しない', '問題': 'どのプロバイダが最良か見落とす', 'フィックス': 'PromptQuorumで複数テスト' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ',
+                        faqs: [
+                            { q: 'TRACEは何の略ですか?', a: 'Think, Reason, Analyze, Conclude, Explain — AIに推論を示すよう強制する構造化プロンプトパターン。' },
+                            { q: 'TRACEをいつ使うべきですか?', a: '推論品質が重要な場合: 戦略的決定、アーキテクチャレビュー、複雑なデバッグ、または正当化が必要な出力。' },
+                            { q: 'Chain-of-Thoughtとの違いは?', a: 'Chain-of-Thoughtは一般的。TRACEは特定の5段階構造で、タスクとモデル間で一貫した推論を生成。' },
+                            { q: '単一プロンプトでTRACEを使用できますか?', a: '可能。5段階すべてを含む単一プロンプトは高速。複数ターンでは各段階で一時停止・リダイレクト可能。' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'TRACEで賢くプロンプティング',
+                        body: 'PromptQuorumでTRACEフレームワークを使用して、AIの推論を透明、監査可能、再現可能にします。',
+                        cta: 'PromptQuorumを無料で試す',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: 'TRACE框架',
+                prevBtn: '← 上一页',
+                nextBtn: '下一页 →',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'TRACE框架',
+                        subtitle: 'Think, Reason, Analyze, Conclude, Explain — 让AI推理透明且可审计',
+                        link: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '要点总结',
+                        items: [
+                            '<strong>TRACE</strong> — 5阶段提示词模式，强制AI展示推理的每个步骤',
+                            '<strong>推理质量比速度更重要</strong>时使用',
+                            '<strong>减少盲目信任</strong>，让虚假假设和逻辑漏洞可见',
+                            '可以是<strong>单条消息</strong>或<strong>分步发送</strong>以获得更多控制',
+                            '<strong>PromptQuorum</strong>为所有用户提供TRACE作为内置结构'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TRACE框架是什么',
+                        items: [
+                            '<strong>Think:</strong> 重新阐述并解释问题',
+                            '<strong>Reason:</strong> 探索可能的方法和假设',
+                            '<strong>Analyze:</strong> 将推理应用于具体数据',
+                            '<strong>Conclude:</strong> 清楚地陈述最终答案',
+                            '<strong>Explain:</strong> 用简洁语言为结论辩护'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TRACE框架为何重要',
+                        items: [
+                            '<strong>减少盲目信任:</strong> 明确的推理可以尽早检测误解',
+                            '<strong>审计跟踪:</strong> 向利益相关者展示如何得出结论',
+                            '<strong>模型比较:</strong> 比较不同模型如何推理同一问题'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TRACE的五个阶段是什么？',
+                        items: [
+                            '<strong>Think:</strong> 澄清任务，列出关键变量，暴露歧义',
+                            '<strong>Reason:</strong> 概述方法、权衡或解决方案路径',
+                            '<strong>Analyze:</strong> 逐步将所选方法应用于实际输入',
+                            '<strong>Conclude:</strong> 提供与问题相关的直接答案',
+                            '<strong>Explain:</strong> 用简洁语言总结逻辑，重点放在「为什么」'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '例：好坏TRACE提示词对比',
+                        line1: '<strong>差的:</strong> "这两个定价方案哪个更好?"',
+                        line2: '<strong>好的:</strong> "你是SaaS定价分析师。使用TRACE。Think: 阐述问题和关键因素。Reason: 提出2-3种比较方法。Analyze: 将选择的方法应用于数据。Conclude: 清楚地推荐。Explain: 用非技术语言证实。"',
+                        tip: '→ TRACE显示模型如何思考权衡，而不仅仅是「方案A」'
+                    },
+                    {
+                        type: 'list',
+                        h2: '何时使用TRACE框架',
+                        items: [
+                            '<strong>战略决策:</strong> 权衡、技术架构、商业选择',
+                            '<strong>复杂调试:</strong> 代码变更、棘手问题、根本原因分析',
+                            '<strong>分析:</strong> 研究发现、指标、用户反馈、得出结论',
+                            '<strong>问责制:</strong> 可与经理或客户分享的推荐'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '如何编写TRACE提示词',
+                        items: [
+                            '<strong>从角色分配开始:</strong> "你是[专家]"',
+                            '<strong>定义每个TRACE阶段:</strong> Think→Reason→Analyze→Conclude→Explain',
+                            '为每个阶段<strong>陈述明确期望</strong>',
+                            '<strong>在末尾提供上下文和数据</strong>',
+                            '保存为<strong>模板</strong>并重用'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorum如何实现TRACE框架',
+                        items: [
+                            '选择TRACE作为<strong>内置提示词结构</strong>',
+                            '填入<strong>特定任务的上下文</strong>',
+                            '<strong>并行发送至多个模型</strong>并比较推理轨迹'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '如何将TRACE与其他框架结合使用？',
+                        columns: ['框架', '最适合', '与TRACE结合使用的时机'],
+                        rows: [
+                            { '框架': 'CO-STAR', '最适合': '内容生成、草稿', '与TRACE结合使用的时机': '先草稿，后TRACE评估' },
+                            { '框架': 'CRAFT', '最适合': '有约束的结构化内容', '与TRACE结合使用的时机': '生成，后TRACE验证' },
+                            { '框架': 'RISEN', '最适合': '迭代改进', '与TRACE结合使用的时机': 'TRACE分析，RISEN改进' },
+                            { '框架': 'SPECS', '最适合': '严格的输出模式', '与TRACE结合使用的时机': 'TRACE推理，SPECS格式' },
+                            { '框架': 'Few-Shot', '最适合': '格式一致性', '与TRACE结合使用的时机': '为TRACE阶段添加示例' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '如何使用TRACE框架',
+                        items: [
+                            '<strong>Think:</strong> 让模型重述问题并列出关键变量',
+                            '<strong>Reason:</strong> 让模型提出2-3种可能方法及其权衡',
+                            '<strong>Analyze:</strong> 让模型逐步将所选方法应用于实际数据',
+                            '<strong>Conclude:</strong> 让模型在一句话内清楚陈述最终答案',
+                            '<strong>Explain:</strong> 让模型为非技术人员解释正当理由'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'TRACE的常见错误',
+                        columns: ['错误', '问题', '修复'],
+                        rows: [
+                            { '错误': '跳过Think阶段', '问题': '模型误解需求', '修复': '总是要求重述' },
+                            { '错误': '没有长度限制', '问题': '非常长的回答', '修复': '每阶段: "1-2句"' },
+                            { '错误': '用于日常任务', '问题': '不必要的延迟和成本', '修复': '仅用于决策' },
+                            { '错误': '严格遵循5阶段', '问题': '浪费时间和令牌', '修复': '根据任务调整' },
+                            { '错误': '不比较模型', '问题': '错过哪个供应商最好', '修复': 'PromptQuorum测试多个' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            { q: 'TRACE代表什么?', a: 'Think, Reason, Analyze, Conclude, Explain — 一个结构化提示词模式，强制AI展示其推理过程。' },
+                            { q: '何时应使用TRACE?', a: '推理质量很重要时: 战略决定、架构评审、复杂调试或需要为其辩护的输出。' },
+                            { q: 'TRACE与Chain-of-Thought有何不同?', a: 'Chain-of-Thought是通用的。TRACE是特定的5阶段结构，在任务和模型间产生一致推理。' },
+                            { q: '我能在单个提示词中使用TRACE吗?', a: '可以。包含所有5阶段的单个提示词更快。多轮允许在每个阶段暂停和重定向。' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '开始更聪明的提示词',
+                        body: '在PromptQuorum中使用TRACE框架，让AI推理透明、可审计且可重复。',
+                        cta: '免费试用PromptQuorum',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = `https://www.promptquorum.com/prompt-engineering/trace-framework?lang=${lang}`;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener" style="color: #6750a4; text-decoration: none;">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2><ul style="font-size: 1.1em; margin-top: 20px;">`;
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += `</ul>${footerLink}`;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table style="margin-top: 20px;"><tr>`;
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col] || ''}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += `</table>${footerLink}`;
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 30px; font-size: 1.3em; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">${slide.line1}</p>
+                        <p style="font-size: 1.3em; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 30px;">${slide.line2}</p>
+                        <p style="font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2><ol style="font-size: 1.05em; margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">`;
+                    slide.items.forEach((item, i) => {
+                        html += `<li style="margin-bottom: 12px;">${item}</li>`;
+                    });
+                    html += `</ol>${footerLink}`;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2><div style="text-align: left; max-width: 700px; margin: 20px auto;">`;
+                    slide.faqs.slice(0, 4).forEach(faq => {
+                        html += `<div style="margin-bottom: 16px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em; color: #49454f;">A: ${faq.a}</p></div>`;
+                    });
+                    html += `</div>${footerLink}`;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 20px; font-size: 1.1em;">${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 30px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; transition: background 0.2s;" onmouseover="this.style.background='#7d5260'" onmouseout="this.style.background='#6750a4'">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        const langSuffix = lang !== 'en' ? `?lang=${lang}` : '';
+        backLink.href = `https://www.promptquorum.com/prompt-engineering/trace-framework${langSuffix}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
