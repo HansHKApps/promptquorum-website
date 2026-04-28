@@ -1,5 +1,6 @@
 
 export interface PESection {
+  id?: string
   title?: string
   content?: string | string[]
   blockquote?: string

@@ -84,7 +84,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block1Link: {
-          content: 'To understand how role prompting evolved as models became more capable of following instructions, see [Fundamentals: From GPT-2 to Today: How Prompt Engineering Evolved].',
+          content: 'To understand how role prompting evolved as models became more capable of following instructions, see [How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved).',
         },
 
         block2: {
@@ -102,7 +102,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block2Link: {
-          content: 'Instructions interact directly with whether you provide examples — see [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] for when each approach works best.',
+          content: 'Instructions interact directly with whether you provide examples — see [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot) for when each approach works best.',
         },
 
         block3: {
@@ -120,7 +120,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block3Link: {
-          content: 'For a full breakdown of when to use examples and when to omit them, see [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?].',
+          content: 'For a full breakdown of when to use examples and when to omit them, see [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot).',
         },
 
         block4: {
@@ -139,7 +139,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block4Links: {
-          content: 'For the technique of using exclusions to shape output, see [Techniques: Negative Prompting: Tell the AI What NOT to Do]. For why unconstrained prompts hallucinate more, see [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them].',
+          content: 'For the technique of using exclusions to shape output, see [Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting). For why unconstrained prompts hallucinate more, see [AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
         },
 
         block5: {
@@ -157,7 +157,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         block5Link: {
-          content: 'For a full guide to JSON mode and structured output across different models, see [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data].',
+          content: 'For a full guide to JSON mode and structured output across different models, see [Structured Output & JSON Mode: Get AI to Return Usable Data](/prompt-engineering/structured-output-and-json-mode).',
         },
 
         template: {
@@ -193,7 +193,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum includes 9 built-in frameworks that pre-fill these blocks in different configurations depending on the task type. For framework-specific guides, see [Frameworks: Which Prompt Framework Should You Use?], [Frameworks: CRAFT Framework], and [Frameworks: CO-STAR Framework].',
+          content: 'PromptQuorum includes 9 built-in frameworks that pre-fill these blocks in different configurations depending on the task type. For framework-specific guides, see [Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use), [CRAFT Framework](/prompt-engineering/craft-framework), and [CO-STAR Framework](/prompt-engineering/co-star-framework).',
         },
 
         mistakes: {
@@ -221,6 +221,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: The Building Blocks of a Prompt',
           faqs: [
             {
@@ -247,6 +248,28 @@ export const article: Record<Language, PEArticle> = {
               q: 'Does output format matter if I am just asking a simple question?',
               a: 'For conversational questions, specifying format is optional. For any output that will be used downstream — pasted into a document, parsed by code, published, or reused across team members — specifying the format is essential. It is the difference between getting a result and getting a usable result.',
             },
+          ],
+        },
+
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Related Reading',
+          items: [
+            '[How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved) — From early instruction-following models to today\'s reasoning-capable systems: how prompting techniques co-evolved with model capabilities.',
+            '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — When to use examples and when to omit them: selecting the right prompting approach for your task.',
+            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting) — Constraints in action: how exclusions shape output more reliably than inclusions.',
+            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Why constraints and examples matter: the root causes of hallucination and evidence-based defenses.',
+            '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — Specifying output format precisely: JSON mode, markdown tables, and other structured approaches across models.',
+            '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use) — Comparing CRAFT, CO-STAR, SPECS, and others: choosing a framework aligned to your use case.',
+          ],
+        },
+
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Official prompt engineering guidance from OpenAI, including best practices for role-based and structured prompts.',
+            '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Security implications of unstructured prompts and recommendations for constraints.',
+            '[Attention Is All You Need — Vaswani et al., 2017](https://arxiv.org/abs/1706.03762) — Foundational transformer architecture that underlies all modern LLMs and their attention-based reasoning.',
           ],
         },
 
