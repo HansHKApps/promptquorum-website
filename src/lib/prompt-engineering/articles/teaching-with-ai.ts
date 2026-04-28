@@ -586,7 +586,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'Wie erkennbar ist KI-Betrug in Schulen?', anchor: '#how-detectable-is-ai-cheating-in-schools' },
         { label: 'Wie wirkt sich der EU AI Act auf Schulen aus?', anchor: '#how-does-the-eu-ai-act-affect-schools' },
         { label: 'Häufige Fehler bei der Verwendung von KI im Bildungswesen', anchor: '#common-mistakes-when-using-ai-in-education' },
-        { label: 'Schritt-für-Schritt-Workflow: Mit KI unterrichten', anchor: '#step-by-step-workflow-teaching-with-ai' },
+        { label: 'Schritt für Schritt: KI in den Unterricht integrieren', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: 'Weiterführende Literatur', anchor: '#related-reading' },
         { label: 'Häufig gestellte Fragen', anchor: '#frequently-asked-questions' },
         { label: 'Quellen und weitere Ressourcen', anchor: '#sources-further-reading' },
@@ -756,7 +756,7 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         inLanguage: 'de',
-        name: 'So unterrichten Sie mit KI',
+        name: 'So integrieren Sie KI in Ihren Unterricht',
         url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=de',
         step: [
           {
@@ -1067,7 +1067,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Weiterführende Literatur',
           items: [
             '[Was ist Prompt-Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die grundlegenden Prinzipien hinter effektiven KI-Anweisungen',
-            '[Schreiben Sie besseren Code mit KI](/prompt-engineering/write-better-code-with-ai?lang=de) — Strukturierung von KI-generierten Unterrichtsmaterialien und Prompts für Genauigkeit',
+            '[Schreiben Sie besseren Code mit KI](/prompt-engineering/write-better-code-with-ai?lang=de) — wie strukturierte Prompts zuverlässige KI-Ausgaben erzeugen — anwendbar auf Unterrichtsplanung und Bewertungsgenerierung',
             '[KI-Einschränkungen — Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — warum KI-Halluzination Lehrkräfte-Tools beeinflusst und wie man drumherum entwirft',
             '[KI-gestützte Forschung](/prompt-engineering/ai-powered-research?lang=de) — Validierungs-Workflows für KI-generierte Inhalte, anwendbar auf Schüler- und Lehrkräfte-Forschungsaufgaben',
             '[Persona-Prompting](/prompt-engineering/persona-prompting?lang=de) — wie Rollen-Definitionen wie „erfahrener Fünftklasse-Mathematik-Lehrer\" KI-Output-Qualität und Konsistenz ändern',
@@ -1075,7 +1075,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         howToStart: {
-          title: 'Schritt-für-Schritt-Workflow: Mit KI unterrichten',
+          title: 'Schritt für Schritt: KI in den Unterricht integrieren',
           content: [
             '**Folgen Sie diesen fünf Schritte, um KI in Ihren Unterricht zu integrieren, ohne Lernergebnisse zu stören oder akademische Integritäts-Standards zu verletzen.**',
           ],
@@ -1147,9 +1147,9 @@ export const article: Record<Language, PEArticle> = {
             '**Alle Statistiken und Befunde in diesem Artikel sind von begutachteter Forschung, amtlicher Regierungsleitlinien und dokumentierten institutionellen Richtlinien beschafft.** Letzte Faktenchecks: 2026-04-28 (gegen aktuelle Claude 4.6 Sonnet, GPT-4o, Gemini 2.5 Pro Modelle; aktuelle Khanmigo-Preise bei Khan Academy; aktuelle EU AI Act Artikel 4-Leitlinien gültig ab 2025).',
           ],
           items: [
-            '[Kestin & Miller, 2024. \"AI tutoring outperforms active learning classrooms — Harvard RCT\"](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — randomisierte kontrollierte Studie mit 194 Schülern; Effektstärke 0,73–1,3 SD',
+            '[Kestin & Miller, 2024. \"KI-Nachhilfe übertrifft aktive Lernklassenzimmer — Harvard RCT\"](https://www.nature.com/articles/s41598-025-97652-6) — randomisierte kontrollierte Studie mit 194 Schülern; Effektstärke 0,73–1,3 SD',
             '[Kwak, 2025. \"The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes\"](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — systematische Überprüfung von 21 Studien; 15–35 % Leistungsgewinne; r = 0,781',
-            '[EU AI Act, 2024. Annex III — High-Risk AI Systems in Education](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — klassifiziert Bildungs-Bewertungs-KI als hochriskant mit obligatorischen Überwachungsanforderungen',
+            '[EU AI Act, 2024. Anhang III — Hochrisiko-KI-Systeme in der Bildung](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) — klassifiziert Bildungs-Bewertungs-KI als hochriskant mit obligatorischen Überwachungsanforderungen',
           ],
         },
       },
@@ -1180,7 +1180,7 @@ export const article: Record<Language, PEArticle> = {
     { label: 'La triche par IA est-elle détectable dans les écoles ?', anchor: '#how-detectable-is-ai-cheating-in-schools' },
     { label: 'Comment la Loi IA de l\'UE affecte-t-elle les écoles ?', anchor: '#how-does-the-eu-ai-act-affect-schools' },
     { label: 'Erreurs courantes dans l\'utilisation de l\'IA en éducation', anchor: '#common-mistakes-when-using-ai-in-education' },
-    { label: 'Flux de travail pas à pas : enseigner avec l\'IA', anchor: '#step-by-step-workflow-teaching-with-ai' },
+    { label: 'Étape par étape : intégrer l\'IA dans l\'enseignement', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
     { label: 'Lectures complémentaires', anchor: '#related-reading' },
     { label: 'Questions fréquemment posées', anchor: '#frequently-asked-questions' },
     { label: 'Sources et ressources supplémentaires', anchor: '#sources-further-reading' },
@@ -1334,7 +1334,7 @@ export const article: Record<Language, PEArticle> = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     inLanguage: 'fr',
-    name: 'Comment enseigner avec l\'IA',
+    name: 'Comment intégrer l\'IA dans l\'enseignement',
     url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=fr',
     step: [
       {
@@ -1627,7 +1627,7 @@ export const article: Record<Language, PEArticle> = {
       ],
     },
     howToStart: {
-      title: 'Flux de travail pas à pas : enseigner avec l\'IA',
+      title: 'Étape par étape : intégrer l\'IA dans l\'enseignement',
       content: [
         '**Suivez ces cinq étapes pour intégrer l\'IA dans votre enseignement sans perturber les résultats d\'apprentissage ni violer les normes d\'intégrité académique.**',
       ],
@@ -1643,7 +1643,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'Lectures complémentaires',
       items: [
         '[Qu\'est-ce que l\'engineering des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — les principes fondamentaux derrière les instructions IA efficaces',
-        '[Écrivez un meilleur code avec l\'IA](/prompt-engineering/write-better-code-with-ai?lang=fr) — structuration du contenu pédagogique généré par IA et prompts pour précision',
+        '[Écrivez un meilleur code avec l\'IA](/prompt-engineering/write-better-code-with-ai?lang=fr) — comment des prompts structurés produisent des résultats IA fiables — applicable à la planification des cours et la génération d\'évaluations',
         '[Limitations de l\'IA — Ce que les LLM ne peuvent pas faire](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — pourquoi l\'hallucination d\'IA affecte les outils pédagogiques et comment en tenir compte',
         '[Recherche assistée par IA](/prompt-engineering/ai-powered-research?lang=fr) — flux de validation pour le contenu généré par IA, applicable aux tâches de recherche des élèves et enseignants',
         '[Prompting par persona](/prompt-engineering/persona-prompting?lang=fr) — comment les définitions de rôle comme « enseignant de mathématiques de cinquième année expérimenté » changent la qualité et la cohérence de la sortie IA',
@@ -1702,9 +1702,9 @@ export const article: Record<Language, PEArticle> = {
         '**Toutes les statistiques et conclusions dans cet article proviennent de recherche examinée par les pairs, de directives gouvernementales officielles et de politiques institutionnelles documentées.** Dernières vérifications factuelles : 2026-04-28 (contre les modèles Claude 4.6 Sonnet, GPT-4o, Gemini 2.5 Pro actuels ; tarifs Khanmigo actuels chez Khan Academy ; directives article 4 de la Loi IA de l\'UE actuelles applicables à partir de 2025).',
       ],
       items: [
-        '[Kestin & Miller, 2024. « AI tutoring outperforms active learning classrooms — Harvard RCT »](https://www.hellopraxis.com/en/praxisnotes/ai-tutors-outperform-traditional-teaching-methods-in-groundbreaking-harvard-study) — étude randomisée contrôlée avec 194 élèves ; taille d\'effet 0,73–1,3 SD',
+        '[Kestin & Miller, 2024. « Le tutorat IA surpasse l\'apprentissage actif en classe — Essai contrôlé randomisé Harvard »](https://www.nature.com/articles/s41598-025-97652-6) — étude randomisée contrôlée avec 194 élèves ; taille d\'effet 0,73–1,3 SD',
         '[Kwak, 2025. « The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes »](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — examen systématique de 21 études ; gains de performance 15–35 % ; r = 0,781',
-        '[Loi IA de l\'UE, 2024. Annexe III — Systèmes IA à Haut Risque en Éducation](https://eaea.org/2025/05/15/artificial-intelligence-and-education-ethics-and-legal-aspects/) — classifie l\'IA d\'évaluation éducative comme haut risque avec obligations de supervision obligatoires',
+        '[Loi IA de l\'UE, 2024. Annexe III — Systèmes IA à Haut Risque en Éducation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) — classifie l\'IA d\'évaluation éducative comme haut risque avec obligations de supervision obligatoires',
       ],
     },
   },
@@ -1735,7 +1735,7 @@ export const article: Record<Language, PEArticle> = {
     { label: '学校におけるAI不正はどの程度検出可能か', anchor: '#how-detectable-is-ai-cheating-in-schools' },
     { label: 'EU AI法が学校にどう影響するか', anchor: '#how-does-the-eu-ai-act-affect-schools' },
     { label: '教育でのAI使用における一般的な落とし穴', anchor: '#common-mistakes-when-using-ai-in-education' },
-    { label: 'ステップバイステップ：AIで教える', anchor: '#step-by-step-workflow-teaching-with-ai' },
+    { label: 'ステップバイステップ：AIを指導に統合する', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
     { label: '関連リソース', anchor: '#related-reading' },
     { label: 'よくある質問', anchor: '#frequently-asked-questions' },
     { label: 'ソースと参考資料', anchor: '#sources-further-reading' },
@@ -1819,7 +1819,7 @@ export const article: Record<Language, PEArticle> = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     inLanguage: 'ja',
-    name: 'AIで教える方法',
+    name: 'AIを指導に統合する方法',
     url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=ja',
     step: [
       { '@type': 'HowToStep', position: 1, name: 'AIを導入する前に学習目標と評価を定義する', text: '生徒が何を知る必要があるか、どう評価するかを指定してください。それからAIが教えを増幅する場所を設計します。' },
@@ -2026,7 +2026,7 @@ export const article: Record<Language, PEArticle> = {
       ],
     },
     howToStart: {
-      title: 'ステップバイステップ：AIで教える',
+      title: 'ステップバイステップ：AIを指導に統合する',
       content: [
         '**これら5つのステップに従い、学習成果を破害または学業不整基準違反なしにAIを指導に統合。**',
       ],
