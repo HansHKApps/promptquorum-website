@@ -9,25 +9,27 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Record<Language, PEArticle> = {
     en: {
       freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-24',
       theme: 'Techniques',
       title: 'Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection',
       intro: 'Before native structured output capabilities existed, models scored below 40% on complex JSON schema compliance; with constrained decoding — used by OpenAI\'s `strict: true` mode and Anthropic\'s Strict Tool Use Mode — JSON Schema compliance reaches 100%, guaranteed at the token level. Output control is the single most important engineering variable between a prototype that works 80% of the time and a production system that works reliably.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
 
-      seoTitle: 'Control AI Output Format 2026: Structured',
+      seoTitle: 'Control AI Output Format: JSON, Constrained Decoding & Format Selection (2026)',
 
-      metaDescription: 'Control LLM output with JSON mode, structured outputs, function calling. Use cases and implementation for all major models 2026.',
+      metaDescription: 'Control LLM output with JSON mode, constrained decoding, and format selection. Achieve 100% schema compliance with zero reasoning degradation using two-stage pipelines. Production guide for GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro.',
 
       educationalLevel: 'Beginner',
+      audience: 'Developers building production LLM pipelines that require structured output',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection',
         description: 'Master output control in LLMs: constrained decoding, prompt-based formatting, sampling parameters, and the reasoning-quality trade-off. Production guide for JSON, JSONL, CSV formats.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        dateModified: '2026-04-29',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 630 },
         keywords: ['output control', 'constrained decoding', 'JSON schema', 'structured output', 'temperature', 'top-p', 'sampling parameters', 'prompt engineering'],
@@ -86,7 +88,7 @@ export const article: Record<Language, PEArticle> = {
       sections: {
 
         definition: {
-          title: 'The Three Levels of Output Control',
+          title: 'What Are the Three Levels of Output Control?',
           content: [
             'Output control operates at three distinct levels — prompt-based, schema-based, and constrained decoding — each offering progressively stronger format guarantees at progressively higher trade-offs against reasoning quality.',
             'Prompt-based formatting instructs the model through natural language ("Return JSON with fields: name, email, score"). This works 80–95% of the time but fails silently on edge cases with no type guarantees, requiring error-handling for the 5–20% of malformed responses. Schema-based approaches (function calling / tool use) define output structure formally at 95–99% compliance — but the schema remains a strong hint, not an absolute constraint. Native constrained decoding uses finite state machines to mask invalid tokens at generation time, producing 100% schema-valid output with mathematical certainty.',
@@ -104,7 +106,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         promptStructure: {
-          title: 'Output Format Control via Prompt Engineering',
+          title: 'How Do You Control Output Format via Prompt Engineering?',
           content: [
             'Explicit output schema instructions — placed at the start of the system prompt for Claude Opus 4.7 and immediately before user content for GPT-5.5 — produce structured output compliance rates of 85–95% without the reasoning quality penalty of native constrained decoding.',
             'Claude Opus 4.7 (Anthropic) responds best to output format instructions placed at the beginning of the system prompt using XML-style section labels. GPT-5.5 (OpenAI) performs best when the schema is placed immediately before user content using numbered format rules. Gemini 3.1 Pro (Google DeepMind) produces the most reliable structured output when the schema is restated at both start and end of the prompt.',
@@ -117,7 +119,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         goodPrompt: {
-          title: 'Good Prompt — Claude Opus 4.7',
+          title: 'What Does a Good Structured Output Prompt Look Like (Claude Opus 4.7)?',
           content: ['**[Good Prompt — Claude Opus 4.7]**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
         },
@@ -129,7 +131,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         modelRules: {
-          title: 'Model-Specific Output Format Rules',
+          title: 'Which Output Format Rules Apply to Each Model?',
           content: ['Each major LLM has distinct structural preferences for output format compliance:'],
           items: [
             '**Claude Opus 4.7 (Anthropic)** — XML tags (`<output>`, `<format>`, `<constraints>`); schema at the top; "Output only the JSON, nothing else"',
@@ -140,7 +142,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         parameters: {
-          title: 'Sampling Parameters That Control Output',
+          title: 'Which Sampling Parameters Control Output Generation?',
           content: [
             'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty, and presence_penalty are six independent parameters that jointly determine output length, randomness, and repetition — and must be set consistently, not in conflict.',
             'Temperature (T) scales the softmax output distribution: at T = 0.0 the model always selects the highest-probability token (deterministic); at T = 2.0 the distribution is nearly flat and output becomes incoherent. Top-P (nucleus sampling) selects from the smallest set of tokens whose cumulative probability reaches P — at Top-P = 0.9 the model considers only the tokens covering the top 90% of the probability mass. Top-K restricts generation to the K highest-probability tokens at each step; Top-K = 1 is equivalent to greedy decoding.',
@@ -166,7 +168,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         reasoningTradeoff: {
-          title: 'The Reasoning-Format Trade-off',
+          title: 'What\'s the Trade-off Between Reasoning Quality and Output Format Guarantees?',
           content: [
             'Forcing JSON via constrained decoding reduces model accuracy by 2.26 percentage points on function-calling benchmarks — BAML\'s schema-aligned parsing achieved 93.63% accuracy on BFCL vs. 91.37% for OpenAI\'s strict constrained decoding on the same benchmark.',
             'The mechanism: constrained decoding applies a finite state machine that masks tokens incompatible with the current schema position. A model that wants to output `51.7` for a float field is forced to output `51` if the schema specifies integer — producing a technically valid but factually degraded result. Chain-of-Thought (CoT) prompting is incompatible with constrained decoding in this same way: including a reasoning field forces the model to escape newlines, quotes, and special characters within a JSON string — measurably degrading reasoning quality across all tested models.',
@@ -176,14 +178,14 @@ export const article: Record<Language, PEArticle> = {
         },
 
         promptquorumTest: {
-          title: 'PromptQuorum Multi-Model Test',
+          title: 'How Do the Top Models Compare on Output Format Control?',
           content: [
             'Tested in PromptQuorum — 30 output control prompts dispatched across three models: Claude Opus 4.7 achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-5.5 achieved 89% compliance using numbered format rules. Gemini 3.1 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
           ],
         },
 
         stopSequences: {
-          title: 'Stop Sequences and Negative Constraints',
+          title: 'How Do Stop Sequences and Negative Constraints Differ?',
           content: [
             'Stop sequences — tokens that immediately terminate model output upon generation — are the most deterministic output control mechanism: the model halts the instant the specified string appears, regardless of remaining context.',
             'Stop sequences are passed as an array of strings in the API call (`stop` parameter in OpenAI, `stop_sequences` in Anthropic). Common production uses:',
@@ -203,7 +205,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         formatChoices: {
-          title: 'Format Choices for Production Pipelines',
+          title: 'Which Output Format Should You Use for Production Pipelines?',
           content: [
             'JSON is the dominant output format for LLM production pipelines because it maps directly to API objects, arrays, and typed data — but forcing JSON via constrained decoding sacrifices 2–10% reasoning quality, making format selection a meaningful architectural decision.',
             'TOON (Token-Optimised Output Notation) has emerged as an efficient input format for long structured prompts — it uses whitespace minimisation and shorthand keys to reduce input token consumption before the model generates output in JSON. For output, the recommended 2026 production architecture is: TOON for input (token efficiency) + JSON with constrained decoding for output (guaranteed format) — applied only after Stage 1 free-form reasoning is complete.',
@@ -221,7 +223,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         globalContext: {
-          title: 'Global and Regional Considerations',
+          title: 'What Are the Global and Regional Considerations for Output Control?',
           content: [
             'European enterprises building LLM pipelines that process personal data must apply GDPR Article 25 (privacy by design) to output schema design — outputs that expose personal data fields in JSON payloads require a legal basis under Article 6 GDPR. The CNIL (France\'s data protection authority) issued guidance in January 2026 that automated decision-making outputs — including structured LLM outputs used in scoring or eligibility workflows — may trigger Article 22 GDPR rights to human review.',
             'For EU teams requiring on-premise inference with structured output control, Mistral AI (France) supports vLLM-based constrained decoding with guided JSON parameters — enabling guaranteed JSON Schema compliance entirely within EU infrastructure, satisfying GDPR data residency requirements under Article 46. Mistral Large runs on-premise with structured output support.',
@@ -249,6 +251,9 @@ export const article: Record<Language, PEArticle> = {
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational principles behind structured AI instruction design',
             '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p) — deep dive into the two primary randomness parameters',
             '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — applying output control techniques in code generation workflows',
+            '[Tool Use and Function Calling](/prompt-engineering/tool-use-and-function-calling) — structured output via tool definitions and function schemas',
+            '[Tokens & Token Economics](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — understanding token costs for constrained decoding and two-stage pipelines',
+            '[Error Handling in LLM Applications](/prompt-engineering/error-handling-llm) — detecting and recovering from malformed output in production systems',
           ],
         },
         howToStart: {
