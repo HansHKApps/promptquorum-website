@@ -761,14 +761,14 @@ export const article: Record<Language, PEArticle> = { en: {
     inLanguage: 'zh',
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.article-intro']
+      cssSelector: ['.article-intro', '.key-takeaways']
     },
     educationalLevel: 'Intermediate',
     proficiencyLevel: 'Intermediate',
     about: [
-      { '@type': 'Thing', 'name': 'Prompt Testing' },
-      { '@type': 'Thing', 'name': 'LLM Evaluation' },
-      { '@type': 'Thing', 'name': 'CI/CD Testing' }
+      { '@type': 'Thing', 'name': '提示词测试' },
+      { '@type': 'Thing', 'name': 'LLM评估' },
+      { '@type': 'Thing', 'name': 'CI/CD测试' }
     ]
   },
   faqSchema: {
@@ -892,6 +892,51 @@ export const article: Record<Language, PEArticle> = { en: {
         position: 5,
         name: 'Phoenix：LLM应用的可观测性',
         url: 'https://arize.com/phoenix'
+      }
+    ]
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    'name': '如何选择您的提示词测试技术栈',
+    'inLanguage': 'zh',
+    'description': '为您的LLM应用程序选择合适的提示词测试工具组合的6步指南。',
+    'step': [
+      {
+        '@type': 'HowToStep',
+        'position': 1,
+        'name': '从Promptfoo开始',
+        'text': '所有人：在CI/CD管道中从Promptfoo（免费）开始。在每次提交时运行测试。这是非协议的。'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 2,
+        'name': '为生产批准添加Braintrust',
+        'text': '发布到生产：在发布前添加Braintrust进行最终批量评估，包括人工批准。'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 3,
+        'name': '为RAG管道添加DeepEval',
+        'text': 'RAG管道：添加DeepEval用于检索特定的RAGAS指标。'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 4,
+        'name': '为多步链添加LangSmith',
+        'text': '多步链：添加LangSmith进行追踪。当Promptfoo检测到回归时，LangSmith显示链中的哪里断裂了。'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 5,
+        'name': '为生产监控添加Phoenix',
+        'text': '生产监控：添加Phoenix用于实时可观测性——延迟、成本和漂移检测。'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 6,
+        'name': '使用PromptQuorum进行模型选择',
+        'text': '模型选择：在构建测试套件前，首先运行PromptQuorum来比较模型在您特定提示词上的性能。'
       }
     ]
   },
