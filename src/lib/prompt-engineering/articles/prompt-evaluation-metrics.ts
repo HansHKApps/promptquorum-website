@@ -12,7 +12,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Techniques',
       title: 'Prompt Evaluation Metrics: What to Measure and How',
       seoTitle: 'Prompt Evaluation Metrics 2026: Pass Rate, BLEU & LLM-as-Judge',
-      metaDescription: 'Prompt evaluation metrics include pass rate, BLEU score, semantic similarity, and LLM-as-judge scoring. Which metric fits depends on output type: structured data, free text, or code.',
+      metaDescription: 'Pass rate, BLEU, and LLM-as-judge target different output types. Picking the wrong metric produces misleading scores. Choose the right one with this guide.',
       intro: '**Prompt evaluation metrics are the quantitative signals that tell you whether a prompt is working across the inputs that matter.** Choosing the wrong metric for your output type produces misleading results: BLEU scores mean nothing for JSON outputs; binary pass/fail tells you nothing about nuanced generation quality.',
       publishDate: '2026-04-10',
       dateModified: '2026-04-10',
@@ -21,6 +21,8 @@ export const article: Record<Language, PEArticle> = {
       audience: 'Developers and teams deploying LLMs in production',
       primaryTerm: 'prompt evaluation metrics',
       aboutTopics: ['pass rate', 'BLEU score', 'LLM-as-judge'],
+      next_refresh_due: '2026-10-10',
+      leadAnswerBlock: '**Prompt evaluation metrics are quantitative signals that measure whether a prompt reliably produces the intended output.** The right metric depends on your output type: pass rate for structured data, BLEU for translation, semantic similarity for paraphrase tasks, and LLM-as-judge for nuanced free text generation.',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Are Prompt Evaluation Metrics?', anchor: '#definition' },
@@ -40,12 +42,21 @@ export const article: Record<Language, PEArticle> = {
         '@type': 'TechArticle',
         headline: 'Prompt Evaluation Metrics: What to Measure and How',
         description: 'Prompt evaluation metrics include pass rate, BLEU score, semantic similarity, and LLM-as-judge scoring.',
-        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-10',
         url: 'https://www.promptquorum.com/prompt-engineering/prompt-evaluation-metrics',
         inLanguage: 'en',
+        proficiencyLevel: 'Intermediate',
+        about: [
+          { '@type': 'Thing', name: 'Pass Rate' },
+          { '@type': 'Thing', name: 'BLEU Score' },
+          { '@type': 'Thing', name: 'LLM-as-Judge' },
+          { '@type': 'Thing', name: 'Semantic Similarity' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        audience: { '@type': 'Audience', audienceType: 'Developers and teams deploying LLMs in production' },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -87,6 +98,13 @@ export const article: Record<Language, PEArticle> = {
         definition: {
           title: 'What Are Prompt Evaluation Metrics?',
           content: '**Prompt evaluation metrics are quantitative signals that tell you whether a prompt reliably produces the intended output across the inputs that matter.** Without metrics, prompt evaluation is subjective: two engineers reviewing the same prompt against different examples will reach different conclusions.\n\nThe right metric depends on what your prompt is supposed to produce. A JSON extraction prompt needs different metrics than a creative writing prompt. Choosing the wrong metric produces misleading scores that tell you nothing about real production quality.',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt evaluation metrics are quantitative signals that measure whether a prompt reliably produces the intended output across a representative test set.' },
+            { type: 'in-plain-terms', text: 'Think of them as unit tests for AI: you define what "correct" looks like, run the prompt on 20+ examples, and score the pass rate. A 95% score means 5% of real user requests will still fail.' }
+          ],
+          callouts: [
+            { type: 'tip', label: '💡 Pro Tip', text: 'Start with pass rate before adding complex metrics. Binary correct/incorrect is often more actionable than a 1–5 rubric.' }
+          ],
         },
         metricTypes: {
           title: 'What Metrics Apply to Structured Output vs Free Text vs Code?',
@@ -100,18 +118,30 @@ export const article: Record<Language, PEArticle> = {
             { 'Output Type': 'Free text / creative', 'Recommended Metric': 'LLM-as-judge', 'Why': 'Nuanced rubric needed, no reference text.' },
             { 'Output Type': 'Code generation', 'Recommended Metric': 'Test pass rate', 'Why': 'Run unit tests against generated code.' },
           ],
+          callouts: [
+            { type: 'key-point', label: '📌 Key Point', text: 'Output type drives metric choice. The most common mistake is applying BLEU to non-translation tasks — it measures word overlap, not format compliance.' }
+          ],
         },
         passRate: {
           title: 'What Is Pass Rate and Why Is It the Most Useful Metric?',
-          content: '**Pass rate is the percentage of test inputs where the prompt output meets the defined success criteria — and it is the most actionable metric because it maps directly to the production failure rate.** A pass rate of 92% means 8% of real user requests will fail.\n\nPass rate = passing outputs / total test cases\n\nFor structured outputs, define "pass" precisely before running tests: valid JSON, required fields present, values within allowed enum, length under the specified limit. For classification, "pass" means the correct label was returned.\n\nTrack pass rate per prompt version. A drop of more than 5 percentage points is a regression. A drop of more than 10 percentage points should block production deployment.',
+          content: '**Pass rate is the percentage of test inputs where the prompt output meets the defined success criteria — and it is the most actionable metric because it maps directly to the production failure rate.** A pass rate of 92% means 8% of real user requests will fail.\n\nPass rate = passing outputs / total test cases\n\nFor structured outputs, define "pass" precisely before running tests: valid JSON, required fields present, values within allowed enum, length under the specified limit. For classification, "pass" means the correct label was returned.\n\nTrack pass rate per prompt version. A drop of more than 5 percentage points is a regression. A drop of more than 10 percentage points should block production deployment. As of April 2026, PromptQuorum observes median pass rates of 88–94% for GPT-5.5 JSON extraction prompts on first deployment.',
+          callouts: [
+            { type: 'warning', label: '⚠️ Warning', text: 'A pass rate of 90% means 10% of real user requests will fail. Set your regression threshold based on production risk tolerance, not what looks good in a dashboard.' }
+          ],
         },
         bleu: {
           title: 'What Is BLEU Score and When Should You Use It?',
           content: '**BLEU (Bilingual Evaluation Understudy) score measures n-gram overlap between a model output and a reference text.** It is the standard metric for machine translation and is appropriate for any task where the output should closely match a reference.\n\nBLEU is misleading for:\n\n- **JSON or structured output:** BLEU scores format tokens, not semantic correctness\n- **Instruction-following:** A prompt that follows all instructions but paraphrases differently will score low on BLEU\n- **Creative generation:** BLEU penalizes lexical variety even when quality is high\n\nWhen BLEU is appropriate: translation tasks where a gold reference exists, summarization against a human-written summary, extractive QA with expected verbatim answers.',
+          callouts: [
+            { type: 'did-you-know', label: '🔍 Did You Know?', text: 'BLEU was designed in 2002 for machine translation. It has known limitations for open-ended generation but remains the standard for MT benchmarks.' }
+          ],
         },
         semanticSimilarity: {
           title: 'What Is Semantic Similarity Scoring?',
           content: '**Semantic similarity measures how close two texts are in meaning by computing the cosine similarity of their embeddings.** It outperforms BLEU for paraphrase and rewriting tasks because it captures meaning rather than word choice.\n\nHow it works: embed the model output and the reference using OpenAI text-embedding-3-small or a local embedding model, then compute cosine similarity. Scores above 0.85 typically indicate semantically equivalent content.\n\nLimitations: semantic similarity does not check factual accuracy, does not detect format violations, and can score hallucinated content highly if the hallucination is semantically similar to the expected answer.',
+          callouts: [
+            { type: 'tip', label: '💡 Pro Tip', text: 'OpenAI text-embedding-3-small is the fastest and cheapest model for similarity scoring. For technical/code content, consider a code-specific embedding model.' }
+          ],
         },
         llmAsJudge: {
           title: 'What Is LLM-as-Judge Evaluation?',
@@ -123,10 +153,24 @@ export const article: Record<Language, PEArticle> = {
             { 'Dimension': 'Consistency', 'Advantage': 'Reproducible scoring', 'Limitation': 'Sensitive to judge prompt wording' },
             { 'Dimension': 'Cost', 'Advantage': 'Cheaper than human review at scale', 'Limitation': 'Expensive for small test sets' },
           ],
+          promptExamples: [
+            {
+              badLabel: 'Vague Rubric',
+              bad: 'Rate the quality of this output on a scale of 1 to 5.',
+              goodLabel: 'Explicit Multi-Dimensional Rubric',
+              good: 'Score this output on 3 dimensions (1–3 each): (1) Factual accuracy — does it match the reference facts? (2) Completeness — are all required fields addressed? (3) Tone — is it appropriately professional? Return JSON: {"accuracy": X, "completeness": X, "tone": X, "total": X, "reason": "..."}'
+            }
+          ],
+          callouts: [
+            { type: 'warning', label: '⚠️ Warning', text: 'LLM-as-judge has a self-bias: models score outputs similar to their own style higher. Use a different model as judge than the one generating outputs.' }
+          ],
         },
         regressionMetrics: {
           title: 'How Do You Detect Metric Regression?',
-          content: '**Track your primary metric per prompt version and alert when it drops more than 5 percentage points from the established baseline.** Run the same test set before and after every prompt change, model update, or temperature adjustment.\n\nA regression detection workflow:\n\n1. Record the current metric score as baseline (e.g., pass rate = 91%)\n2. Make the prompt change\n3. Re-run the full test set\n4. Compare new score against baseline\n5. If drop > 5 points: block the change, investigate, fix\n\nFor automated regression detection in CI/CD, tools like Promptfoo integrate with GitHub Actions and can fail a PR if pass rate drops below a threshold.',
+          content: '**Track your primary metric per prompt version and alert when it drops more than 5 percentage points from the established baseline.** Run the same test set before and after every prompt change, model update, or temperature adjustment.\n\nA regression detection workflow:\n\n1. Record the current metric score as baseline (e.g., pass rate = 91%)\n2. Make the prompt change\n3. Re-run the full test set\n4. Compare new score against baseline\n5. If drop > 5 points: block the change, investigate, fix\n\nFor automated regression detection in CI/CD, tools like [Promptfoo](https://www.promptfoo.dev) integrate with GitHub Actions and can fail a PR if pass rate drops below a threshold.',
+          callouts: [
+            { type: 'best-practice', label: '🛠️ Best Practice', text: 'Integrate Promptfoo with GitHub Actions to auto-fail PRs when pass rate drops below threshold. This prevents prompt regressions from reaching production.' }
+          ],
         },
         howToStart: {
           title: 'How To Start Measuring Prompt Evaluation Metrics',
@@ -138,9 +182,12 @@ export const article: Record<Language, PEArticle> = {
             'Set a regression alert threshold: alert if pass rate drops 5+ points from baseline.',
             'Run the metric automatically on every prompt change using Promptfoo, Braintrust, or PromptQuorum.',
           ],
+          callouts: [
+            { type: 'key-point', label: '📌 Key Point', text: 'Build your test set before writing the prompt, not after. Test cases defined post-hoc tend to match the current prompt rather than the real input distribution.' }
+          ],
         },
         commonMistakes: {
-          title: 'Common Mistakes',
+          title: 'What Mistakes Should You Avoid with Prompt Evaluation Metrics?',
           items: [
             '**Mistake: Using BLEU on JSON or instruction-following prompts.** Fix: BLEU measures n-gram overlap, not format compliance or instruction adherence. Use binary pass/fail for structured outputs.',
             '**Mistake: LLM-as-judge with a vague rubric.** Fix: The judge prompt must define each score level explicitly. Vague rubrics like "score quality 1-5" produce inconsistent scores with no diagnostic value.',
@@ -154,6 +201,9 @@ export const article: Record<Language, PEArticle> = {
             '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — Three-component framework: accuracy, consistency, instruction-following rate',
             '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Running the same test set on GPT-5.5, Claude, and Gemini',
             '[Prompt Audit and Regression Risk](/prompt-engineering/prompt-audit-and-regression-risk) — Automated regression suites and CI/CD gates',
+            '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum) — Comparing dedicated prompt evaluation platforms for teams',
+            '[Best Prompt Testing & Evaluation Tools 2026](/prompt-engineering/best-prompt-testing-tools) — Ranked tools for systematic prompt QA',
+            '[How to Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — Versioning and organizing prompts alongside their evaluation baselines',
           ],
         },
         faq: {
