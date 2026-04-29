@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How To Test Prompts Across Models | PromptQuorum</title>
+    <meta name="description" content="Multi-model prompt testing: dispatch the same prompt to GPT-5.5, Claude, Gemini, and Llama. Find compatibility gaps before production." />
+    <meta property="og:title" content="How To Test Prompts Across Models — PromptQuorum" />
+    <meta property="og:description" content="Multi-model testing finds JSON failures, refusal gaps, and cost trade-offs before production deployment." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(11px, 1.1vw, 13px);
+            text-align: left;
+            max-width: 95%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 10px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .slide-footer {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            font-size: 11px;
+            color: #999;
+        }
+
+        .slide-footer a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide-footer {
+                display: none;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .controls {
+                padding: 8px 12px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">How To Test Prompts Across Models</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically inserted here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'How To Test Prompts Across Models: Multi-Model Evaluation',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'How To Test Prompts Across Models',
+                        subtitle: 'Prompts are model-specific. A prompt that passes on GPT-5.5 may fail silently on Claude Opus 4.7 due to differences in JSON reliability, instruction parsing, and refusal patterns.',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            'Prompts differ on GPT-5.5, Claude, Gemini, Llama: JSON reliability 70%–95%, refusal patterns diverge',
+                            'Test same prompt on all models simultaneously to reveal compatibility gaps',
+                            'Write model-agnostic prompts with explicit JSON, system/user separation, few-shot examples',
+                            'GPT-5.5 leads on JSON; Gemini 1.5 Pro on context (1M tokens); Claude on safety strictness',
+                            'PromptQuorum: 20-case test across 4 models returns in ~15 seconds'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Why Do Prompts Differ Across Models?',
+                        items: [
+                            'Models parse instructions differently. GPT-5.5 is strict; Claude forgiving but strong on refusals.',
+                            'A prompt optimized for one model fails silently on another, returning plausible but incorrect output.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Model Differences (Part 1)',
+                        columns: ['Dimension', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { 'Dimension': 'Instruction Strictness', 'GPT-5.5': 'Very strict', 'Claude 4.7': 'Forgiving', 'Gemini 1.5': 'Moderate', 'Llama 70B': 'Low' },
+                            { 'Dimension': 'JSON Reliability', 'GPT-5.5': '~95%', 'Claude 4.7': '~90%', 'Gemini 1.5': '~92%', 'Llama 70B': '~70%' },
+                            { 'Dimension': 'Refusal Strictness', 'GPT-5.5': 'Moderate', 'Claude 4.7': 'High', 'Gemini 1.5': 'Moderate', 'Llama 70B': 'Low' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Model Differences (Part 2)',
+                        columns: ['Dimension', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { 'Dimension': 'Context Window', 'GPT-5.5': '128K', 'Claude 4.7': '200K', 'Gemini 1.5': '1M', 'Llama 70B': '4K' },
+                            { 'Dimension': 'Input Cost', 'GPT-5.5': '$5/1M', 'Claude 4.7': '$3/1M', 'Gemini 1.5': '$3.50/1M', 'Llama 70B': '$0' },
+                            { 'Dimension': 'Output Cost', 'GPT-5.5': '$15/1M', 'Claude 4.7': '$15/1M', 'Gemini 1.5': '$10.50/1M', 'Llama 70B': '$0' },
+                            { 'Dimension': 'Best For', 'GPT-5.5': 'JSON, code', 'Claude 4.7': 'Safety tasks', 'Gemini 1.5': 'Long docs', 'Llama 70B': 'Local' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'JSON Reliability Gap',
+                        line1: 'GPT-5.5 produces valid JSON ~95% of the time with explicit schema.',
+                        line2: 'Llama 2 70B drops to ~70% — a critical gap for structured output pipelines.',
+                        tip: 'For JSON-heavy workloads, choose GPT-5.5 or Gemini 1.5 Pro as primary models.'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Rules for Model-Agnostic Prompts',
+                        items: [
+                            '1. Explicit output format: JSON schema or XML tags, not "your preferred format"',
+                            '2. Separate system prompt from user message — models treat these differently',
+                            '3. Avoid model-specific phrasing like "As a GPT-4 AI" or "You are Claude"',
+                            '4. Use few-shot examples covering edge cases — patterns override verbal instructions',
+                            '5. Validate JSON output programmatically; never rely on visual inspection'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Cost vs Quality Trade-offs',
+                        items: [
+                            'GPT-5.5: highest JSON reliability (~95%) but highest cost ($5 input)',
+                            'Claude 4.7: 40% cheaper on input ($3) with ~90% JSON reliability — sweet spot',
+                            'Gemini 1.5 Pro: largest context (1M tokens), cheapest output ($10.50/M)',
+                            'Use tier routing: route happy-path to Gemini, reserve GPT-5.5 for edge cases'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How PromptQuorum Simplifies Testing',
+                        items: [
+                            'Write one prompt, dispatch to 4 models simultaneously — no separate API integrations',
+                            '20-case test set returns side-by-side output comparison in ~15 seconds',
+                            'See pass rates per model, spot divergences, export results for deployment',
+                            'Eliminate manual API calls, key management, and response parsing'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'How to Start (Steps 1–7)',
+                        items: [
+                            'Define 10–20 test inputs: 3 happy-path, 4 edge cases, 2 adversarial, 1 constraint violation',
+                            'Write a model-agnostic prompt using explicit JSON schema and system/user separation',
+                            'Create a pass/fail scoring rubric for each test case',
+                            'Sign up for PromptQuorum or configure API keys for OpenAI, Anthropic, Google',
+                            'Upload prompt and test set to PromptQuorum',
+                            'Select target models: GPT-5.5, Claude Opus 4.7, Gemini 1.5 Pro, Llama',
+                            'Run evaluation — results return in ~15 seconds'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Common Mistakes (4 to Avoid)',
+                        items: [
+                            'Testing different prompts on different models — you measure prompt variation, not model differences',
+                            'Using only happy-path test cases — edge cases and adversarial inputs reveal real differences',
+                            'Ignoring inference latency — a 95% model with 5s latency may not meet production SLAs',
+                            'Not validating JSON schema — malformed output passes visual inspection but breaks pipelines'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ (Questions 1–4)',
+                        faqs: [
+                            { q: 'Why test across multiple models?', a: 'Models differ in instruction parsing, JSON reliability, refusal patterns, and context windows. A prompt passing on GPT-5.5 may fail on Claude.' },
+                            { q: 'What\'s the difference between GPT-5.5 and Claude Opus 4.7?', a: 'GPT-5.5 is stricter with JSON (~95% valid). Claude costs 40% less on input ($3 vs $5/M) with ~90% JSON reliability.' },
+                            { q: 'How do you write a prompt that works on all models?', a: 'Use explicit JSON schema, separate system/user messages, avoid model-specific phrasing, and validate output programmatically.' },
+                            { q: 'Which model is most reliable for JSON?', a: 'GPT-5.5 at ~95% with explicit schema, followed by Gemini 1.5 Pro at ~92%. Llama 2 70B drops to ~70%.' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ (Questions 5–8)',
+                        faqs: [
+                            { q: 'How do you test the same prompt on all models at once?', a: 'Build a test set with 10–20 inputs. Use PromptQuorum, LangSmith, or custom code to dispatch all models in parallel. Compare side-by-side.' },
+                            { q: 'What does PromptQuorum do for multi-model testing?', a: 'PromptQuorum dispatches prompt + test set to GPT-5.5, Claude, Gemini, Llama in parallel, returning side-by-side comparison with pass rates per model.' },
+                            { q: 'When should you use Gemini 1.5 Pro instead of GPT-5.5?', a: 'When your prompt requires >128K context. Gemini handles 1M tokens, full documents, codebases, and long conversations.' },
+                            { q: 'How do you optimize costs in multi-model deployment?', a: 'Use tier routing: route happy-path to Gemini or Llama (cheaper), reserve GPT-5.5 and Claude for edge cases and safety-critical paths.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ready to Test Across Models?',
+                        body: 'Multi-model prompt testing finds compatibility gaps before production. Sign up for PromptQuorum Free to test your prompts on GPT-5.5, Claude, Gemini, and Llama in ~15 seconds.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com?waitlist=true'
+                    }
+                ]
+            },
+            de: {
+                title: 'Prompts über mehrere Modelle testen: Multi-Modell-Evaluation',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Prompts über mehrere Modelle testen',
+                        subtitle: 'Prompts sind modellspezifisch. Ein Prompt, der bei GPT-5.5 erfolgreich ist, kann bei Claude Opus 4.7 lautlos scheitern – aufgrund von Unterschieden in JSON-Zuverlässigkeit und Refusal-Mustern.',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtige Punkte',
+                        items: [
+                            'Prompts unterscheiden sich bei GPT-5.5, Claude, Gemini, Llama: JSON-Zuverlässigkeit 70–95 %',
+                            'Denselben Prompt gleichzeitig auf allen Modellen testen, um Kompatibilitätslücken zu erkennen',
+                            'Modellunabhängige Prompts mit explizitem JSON, System/User-Trennung, Few-Shot-Beispielen schreiben',
+                            'GPT-5.5 führt bei JSON; Gemini 1.5 Pro bei Kontextfenster (1 Mio. Tokens); Claude bei Sicherheit',
+                            'PromptQuorum: 20-Fall-Test über 4 Modelle in ~15 Sekunden'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Warum unterscheiden sich Prompts zwischen Modellen?',
+                        items: [
+                            'Modelle verarbeiten Instruktionen unterschiedlich. GPT-5.5 ist streng; Claude tolerant aber streng bei Refusals.',
+                            'Ein für ein Modell optimierter Prompt scheitert bei anderen, liefert plausible aber inkorrekte Ausgaben.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Modellunterschiede (Teil 1)',
+                        columns: ['Dimension', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { 'Dimension': 'Instruktionsstrenge', 'GPT-5.5': 'Sehr streng', 'Claude 4.7': 'Tolerant', 'Gemini 1.5': 'Moderat', 'Llama 70B': 'Niedrig' },
+                            { 'Dimension': 'JSON-Zuverlässigkeit', 'GPT-5.5': '~95 %', 'Claude 4.7': '~90 %', 'Gemini 1.5': '~92 %', 'Llama 70B': '~70 %' },
+                            { 'Dimension': 'Refusal-Strenge', 'GPT-5.5': 'Moderat', 'Claude 4.7': 'Hoch', 'Gemini 1.5': 'Moderat', 'Llama 70B': 'Niedrig' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Modellunterschiede (Teil 2)',
+                        columns: ['Dimension', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { 'Dimension': 'Kontextfenster', 'GPT-5.5': '128K', 'Claude 4.7': '200K', 'Gemini 1.5': '1 Mio.', 'Llama 70B': '4K' },
+                            { 'Dimension': 'Eingabe-Kosten', 'GPT-5.5': '5 $/1 Mio.', 'Claude 4.7': '3 $/1 Mio.', 'Gemini 1.5': '3,50 $/1 Mio.', 'Llama 70B': '0 $' },
+                            { 'Dimension': 'Ausgabe-Kosten', 'GPT-5.5': '15 $/1 Mio.', 'Claude 4.7': '15 $/1 Mio.', 'Gemini 1.5': '10,50 $/1 Mio.', 'Llama 70B': '0 $' },
+                            { 'Dimension': 'Beste für', 'GPT-5.5': 'JSON, Code', 'Claude 4.7': 'Sicherheit', 'Gemini 1.5': 'Langdoks', 'Llama 70B': 'Lokal' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'JSON-Zuverlässigkeitslücke',
+                        line1: 'GPT-5.5 erzeugt mit explizitem Schema ~95 % gültiges JSON.',
+                        line2: 'Llama 2 70B sinkt auf ~70 % – kritisch für strukturierte Output-Pipelines.',
+                        tip: 'Für JSON-lastige Workloads: GPT-5.5 oder Gemini 1.5 Pro als Hauptmodelle wählen.'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Regeln für modellunabhängige Prompts',
+                        items: [
+                            '1. Explizites Ausgabeformat: JSON-Schema oder XML-Tags, nicht „Ihr bevorzugtes Format"',
+                            '2. System-Prompt von User-Message trennen – Modelle behandeln diese unterschiedlich',
+                            '3. Modellspezifische Formulierungen vermeiden wie „Als GPT-4 AI" oder „Du bist Claude"',
+                            '4. Few-Shot-Beispiele verwenden – Muster überschreiben verbale Instruktionen',
+                            '5. JSON-Ausgaben programmatisch validieren, nicht per visueller Inspektion'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Kosten vs. Qualität Trade-offs',
+                        items: [
+                            'GPT-5.5: höchste JSON-Zuverlässigkeit (~95 %), aber höchste Kosten (5 $ Eingabe)',
+                            'Claude 4.7: 40 % günstiger (3 $/1 Mio. Eingabe) mit ~90 % JSON – perfekte Balance',
+                            'Gemini 1.5 Pro: größtes Kontextfenster (1 Mio. Tokens), günstigste Ausgabe (10,50 $/1 Mio.)',
+                            'Tier-Routing: Happy-Path zu Gemini, GPT-5.5 für Edge Cases reservieren'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie PromptQuorum Multi-Modell-Testing vereinfacht',
+                        items: [
+                            'Schreiben Sie einen Prompt, senden Sie ihn an 4 Modelle gleichzeitig – keine separaten API-Integrationen',
+                            '20-Fall-Test liefert Nebeneinander-Vergleich in ~15 Sekunden mit Pass-Raten pro Modell',
+                            'Sehen Sie Divergenzen, exportieren Sie Ergebnisse zum Deployment',
+                            'Eliminieren Sie manuelle API-Aufrufe, Key-Management und Response-Parsing'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Erste Schritte (Schritte 1–7)',
+                        items: [
+                            'Definieren Sie 10–20 Test-Eingaben: 3 Happy-Path, 4 Edge Cases, 2 adversarielle, 1 Constraint Violation',
+                            'Schreiben Sie modellunabhängigen Prompt mit explizitem JSON-Schema und System/User-Trennung',
+                            'Erstellen Sie Pass/Fail-Bewertungsrubrik für jeden Fall',
+                            'Registrieren Sie sich bei PromptQuorum oder konfigurieren Sie API-Keys für OpenAI, Anthropic, Google',
+                            'Laden Sie Prompt und Test-Set bei PromptQuorum hoch',
+                            'Wählen Sie Zielmodelle: GPT-5.5, Claude Opus 4.7, Gemini 1.5 Pro, Llama',
+                            'Starten Sie die Evaluierung – Ergebnisse in ~15 Sekunden'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Häufige Fehler (4 zu vermeiden)',
+                        items: [
+                            'Verschiedene Prompts auf verschiedenen Modellen testen – Sie messen Prompt-Variationen, nicht Unterschiede',
+                            'Nur Happy-Path-Fälle verwenden – Edge Cases und adversarielle Inputs zeigen echte Unterschiede',
+                            'Latenz ignorieren – 95%-Modell mit 5s Latenz erfüllt möglicherweise keine Production-SLAs',
+                            'JSON-Schema nicht validieren – malformierte Ausgabe besteht visuelle Inspektion, bricht aber Pipelines'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ (Fragen 1–4)',
+                        faqs: [
+                            { q: 'Warum müssen Prompts über mehrere Modelle getestet werden?', a: 'Modelle unterscheiden sich in Instruktionsverarbeitung, JSON-Zuverlässigkeit, Refusal-Mustern und Kontextfenstern.' },
+                            { q: 'Was ist der Unterschied zwischen GPT-5.5 und Claude Opus 4.7?', a: 'GPT-5.5 ist strenger (~95 % JSON). Claude 40 % günstiger (3 $ vs 5 $ pro 1 Mio. Eingabe) mit ~90 % JSON.' },
+                            { q: 'Wie schreibt man einen Prompt, der bei allen Modellen funktioniert?', a: 'Explizites JSON-Schema, System/User-Trennung, keine modellspezifischen Formulierungen, programmatische Validierung.' },
+                            { q: 'Welches Modell ist zuverlässigsten für JSON?', a: 'GPT-5.5 mit ~95 % bei explizitem Schema, dann Gemini 1.5 Pro ~92 %. Llama 2 70B nur ~70 %.' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ (Fragen 5–8)',
+                        faqs: [
+                            { q: 'Wie testet man denselben Prompt auf mehreren Modellen gleichzeitig?', a: 'Erstellen Sie Test-Set mit 10–20 Eingaben. Nutzen Sie PromptQuorum, LangSmith oder eigenen Code für parallele Dispatch.' },
+                            { q: 'Was macht PromptQuorum für Multi-Modell-Testing?', a: 'Sendet Prompt + Test-Set parallel an GPT-5.5, Claude, Gemini, Llama und liefert Nebeneinander-Vergleich mit Pass-Raten.' },
+                            { q: 'Wann sollte man Gemini 1.5 Pro statt GPT-5.5 verwenden?', a: 'Wenn der Prompt >128K Kontext benötigt. Gemini handhabt 1 Mio. Tokens, vollständige Dokumente, Codebasen.' },
+                            { q: 'Wie optimiert man Kosten bei Multi-Modell-Deployment?', a: 'Tier-Routing: Happy-Path zu Gemini/Llama (günstiger), GPT-5.5/Claude für Edge Cases und Sicherheit reservieren.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereit zum Multi-Modell-Testen?',
+                        body: 'Multi-Modell-Prompt-Testing zeigt Kompatibilitätslücken vor dem Produktiveinsatz. Melden Sie sich bei PromptQuorum kostenlos an.',
+                        cta: 'PromptQuorum kostenlos testen',
+                        href: 'https://www.promptquorum.com?waitlist=true'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Comment Tester les Prompts sur Plusieurs Modèles : Évaluation Multi-Modèle',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Comment Tester les Prompts sur Plusieurs Modèles',
+                        subtitle: 'Les prompts dépendent du modèle. Un prompt qui fonctionne sur GPT-5.5 peut échouer silencieusement sur Claude Opus 4.7 en raison de différences de fiabilité JSON et de refusals.',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points Clés',
+                        items: [
+                            'Les prompts diffèrent selon GPT-5.5, Claude, Gemini, Llama : fiabilité JSON 70–95 %',
+                            'Testez le même prompt sur tous les modèles simultanément pour identifier les lacunes de compatibilité',
+                            'Écrivez des prompts agnostiques avec JSON explicite, séparation système/utilisateur, exemples few-shot',
+                            'GPT-5.5 excelle en JSON ; Gemini 1.5 Pro en contexte (1 M tokens) ; Claude en sécurité',
+                            'PromptQuorum : test 20 cas sur 4 modèles en ~15 secondes'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Pourquoi les Prompts Diffèrent Entre Modèles',
+                        items: [
+                            'Les modèles traitent les instructions différemment. GPT-5.5 strict ; Claude tolérant mais strict sur les refusals.',
+                            'Un prompt optimisé pour un modèle échoue sur d\'autres, renvoyant des réponses plausibles mais incorrectes.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Différences de Modèles (Partie 1)',
+                        columns: ['Dimension', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { 'Dimension': 'Rigueur', 'GPT-5.5': 'Très stricte', 'Claude 4.7': 'Tolérante', 'Gemini 1.5': 'Modérée', 'Llama 70B': 'Faible' },
+                            { 'Dimension': 'Fiabilité JSON', 'GPT-5.5': '~95 %', 'Claude 4.7': '~90 %', 'Gemini 1.5': '~92 %', 'Llama 70B': '~70 %' },
+                            { 'Dimension': 'Strictesse Refusal', 'GPT-5.5': 'Modérée', 'Claude 4.7': 'Haute', 'Gemini 1.5': 'Modérée', 'Llama 70B': 'Faible' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Différences de Modèles (Partie 2)',
+                        columns: ['Dimension', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { 'Dimension': 'Fenêtre Contexte', 'GPT-5.5': '128K', 'Claude 4.7': '200K', 'Gemini 1.5': '1 M', 'Llama 70B': '4K' },
+                            { 'Dimension': 'Coût Entrée', 'GPT-5.5': '5 $/1 M', 'Claude 4.7': '3 $/1 M', 'Gemini 1.5': '3,50 $/1 M', 'Llama 70B': '0 $' },
+                            { 'Dimension': 'Coût Sortie', 'GPT-5.5': '15 $/1 M', 'Claude 4.7': '15 $/1 M', 'Gemini 1.5': '10,50 $/1 M', 'Llama 70B': '0 $' },
+                            { 'Dimension': 'Idéal pour', 'GPT-5.5': 'JSON, code', 'Claude 4.7': 'Sécurité', 'Gemini 1.5': 'Longs docs', 'Llama 70B': 'Local' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Écart de Fiabilité JSON',
+                        line1: 'GPT-5.5 produit ~95 % de JSON valide avec schéma explicite.',
+                        line2: 'Llama 2 70B baisse à ~70 % — critique pour les pipelines de sortie structurés.',
+                        tip: 'Pour des charges JSON intensives, préférez GPT-5.5 ou Gemini 1.5 Pro.'
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Règles pour Prompts Agnostiques',
+                        items: [
+                            '1. Format de sortie explicite : schéma JSON ou balises XML, pas « votre format préféré »',
+                            '2. Séparez le prompt système du message utilisateur – traitements différents par modèle',
+                            '3. Évitez les formulations modèle-spécifiques : « En tant qu\'IA GPT-4 » ou « Tu es Claude »',
+                            '4. Utilisez des exemples few-shot – les modèles suivent les patterns mieux que les instructions verbales',
+                            '5. Validez la sortie JSON programmatiquement, pas par inspection visuelle'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Trade-offs Coût vs Qualité',
+                        items: [
+                            'GPT-5.5 : fiabilité JSON la plus élevée (~95 %) mais coût aussi (~5 $ entrée)',
+                            'Claude 4.7 : 40 % moins cher (3 $/1 M entrée) avec ~90 % JSON — équilibre optimal',
+                            'Gemini 1.5 Pro : fenêtre contexte la plus grande (1 M tokens), sortie la moins chère',
+                            'Routing par tier : happy-path à Gemini, réservez GPT-5.5 pour edge cases'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment PromptQuorum Simplifie les Tests',
+                        items: [
+                            'Écrivez un prompt, envoyez-le à 4 modèles simultanément – pas d\'intégrations API distinctes',
+                            '20 cas testés en ~15 secondes avec comparaison côte-à-côte et taux de passage par modèle',
+                            'Identifiez les divergences, exportez les résultats pour le déploiement',
+                            'Éliminez les appels API manuels, la gestion des clés et le parsing des réponses'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Comment Commencer (Étapes 1–7)',
+                        items: [
+                            'Définissez 10–20 entrées de test : 3 happy-path, 4 edge cases, 2 adversarial, 1 violation constraint',
+                            'Écrivez un prompt agnostique avec schéma JSON explicite et séparation système/utilisateur',
+                            'Créez une rubrique pass/fail pour chaque cas',
+                            'Inscrivez-vous à PromptQuorum ou configurez les clés API d\'OpenAI, Anthropic, Google',
+                            'Chargez le prompt et les tests dans PromptQuorum',
+                            'Sélectionnez les modèles cibles : GPT-5.5, Claude Opus 4.7, Gemini 1.5 Pro, Llama',
+                            'Lancez l\'évaluation – résultats en ~15 secondes'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Erreurs Courantes (4 à Éviter)',
+                        items: [
+                            'Tester des prompts différents sur des modèles différents – vous mesurez la variation de prompt, pas le modèle',
+                            'Utiliser seulement des cas happy-path – les edge cases révèlent les différences réelles',
+                            'Ignorer la latence – un modèle à 95 % avec 5s de latence peut ne pas respecter les SLA',
+                            'Ne pas valider le schéma JSON – une sortie malformée passe l\'inspection visuelle mais casse les pipelines'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ (Questions 1–4)',
+                        faqs: [
+                            { q: 'Pourquoi tester les prompts sur plusieurs modèles ?', a: 'Les modèles diffèrent dans le parsing des instructions, la fiabilité JSON, les refusals et les fenêtres contexte.' },
+                            { q: 'Quelle est la différence entre GPT-5.5 et Claude Opus 4.7 ?', a: 'GPT-5.5 plus strict (~95 % JSON). Claude 40 % moins cher (3 $ vs 5 $/1 M entrée) avec ~90 % JSON.' },
+                            { q: 'Comment écrire un prompt qui fonctionne sur tous les modèles ?', a: 'Schéma JSON explicite, séparation système/utilisateur, pas de formulations modèle-spécifiques, validation programmatique.' },
+                            { q: 'Quel modèle est le plus fiable pour JSON ?', a: 'GPT-5.5 ~95 % avec schéma, puis Gemini 1.5 Pro ~92 %. Llama 2 70B seulement ~70 %.' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ (Questions 5–8)',
+                        faqs: [
+                            { q: 'Comment tester le même prompt sur plusieurs modèles à la fois ?', a: 'Créez un test-set 10–20 entrées. Utilisez PromptQuorum, LangSmith ou code personnalisé pour dispatch parallèle.' },
+                            { q: 'Que fait PromptQuorum pour les tests multi-modèles ?', a: 'Envoie le prompt + test-set en parallèle à GPT-5.5, Claude, Gemini, Llama ; retourne comparaison côte-à-côte.' },
+                            { q: 'Quand utiliser Gemini 1.5 Pro au lieu de GPT-5.5 ?', a: 'Quand le prompt demande >128K tokens. Gemini gère 1 M tokens, documents complets, codebases.' },
+                            { q: 'Comment optimiser les coûts avec déploiement multi-modèle ?', a: 'Routing par tier : happy-path à Gemini/Llama (moins cher), GPT-5.5/Claude pour edge cases et sécurité.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prêt à Tester sur Plusieurs Modèles ?',
+                        body: 'Les tests multi-modèles identifient les lacunes avant la production. Inscrivez-vous gratuitement à PromptQuorum.',
+                        cta: 'Essayer PromptQuorum Gratuitement',
+                        href: 'https://www.promptquorum.com?waitlist=true'
+                    }
+                ]
+            },
+            ja: {
+                title: '複数モデル間でプロンプトをテストする方法：マルチモデル評価',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '複数モデル間でプロンプトをテストする',
+                        subtitle: 'プロンプトはモデル依存的。GPT-5.5で動作するプロンプトがClaude Opus 4.7で静かに失敗することがあります。',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: '重要ポイント',
+                        items: [
+                            'プロンプトはGPT-5.5、Claude、Gemini、Llamaで異なります：JSON信頼性70～95%',
+                            '同じプロンプトを全モデルで同時テスト、互換性ギャップを検出',
+                            '明示的JSON、システム/ユーザ分離、少数例でモデル非依存プロンプトを作成',
+                            'GPT-5.5はJSON、Gemini 1.5 Proはコンテキスト（1M tokens）、ClaudeはセキュリティNo.1',
+                            'PromptQuorum：20ケーステスト4モデルで約15秒'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'なぜプロンプトはモデル間で異なるのか',
+                        items: [
+                            'モデルは指示を異なる方法で解釈します。GPT-5.5は厳格；Claudeは柔軟だがrefusalは厳しい。',
+                            '1つのモデル向けに最適化されたプロンプトは他で失敗し、もっともらしいが不正確な出力を返します。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'モデルの違い（パート1）',
+                        columns: ['次元', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { '次元': '指示厳格性', 'GPT-5.5': '非常に厳格', 'Claude 4.7': '柔軟', 'Gemini 1.5': '中程度', 'Llama 70B': '低い' },
+                            { '次元': 'JSON信頼性', 'GPT-5.5': '~95%', 'Claude 4.7': '~90%', 'Gemini 1.5': '~92%', 'Llama 70B': '~70%' },
+                            { '次元': 'Refusal厳格性', 'GPT-5.5': '中程度', 'Claude 4.7': '高い', 'Gemini 1.5': '中程度', 'Llama 70B': '低い' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'モデルの違い（パート2）',
+                        columns: ['次元', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { '次元': 'コンテキスト', 'GPT-5.5': '128K', 'Claude 4.7': '200K', 'Gemini 1.5': '1M', 'Llama 70B': '4K' },
+                            { '次元': '入力コスト', 'GPT-5.5': '$5/1M', 'Claude 4.7': '$3/1M', 'Gemini 1.5': '$3.50/1M', 'Llama 70B': '$0' },
+                            { '次元': '出力コスト', 'GPT-5.5': '$15/1M', 'Claude 4.7': '$15/1M', 'Gemini 1.5': '$10.50/1M', 'Llama 70B': '$0' },
+                            { '次元': '最適用途', 'GPT-5.5': 'JSON、コード', 'Claude 4.7': 'セキュリティ', 'Gemini 1.5': '長文', 'Llama 70B': 'ローカル' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'JSON信頼性ギャップ',
+                        line1: 'GPT-5.5は明示的スキーマで約95%の有効JSON生成。',
+                        line2: 'Llama 2 70Bは70%に低下—構造化出力パイプラインでは重大。',
+                        tip: 'JSON集約的な作業：GPT-5.5またはGemini 1.5 Proを主要モデルに。'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'モデル非依存プロンプト5つのルール',
+                        items: [
+                            '1. 明示的出力形式：JSONスキーマまたはXMLタグ、「好みの形式」ではなく',
+                            '2. システムプロンプトとユーザメッセージを分離—モデルは異なる処理を行う',
+                            '3. 「GPT-4 AIとして」「君はClaude」などの指定を避ける',
+                            '4. 少数例を使用—パターンは言葉の指示より強力',
+                            '5. JSON出力をプログラムで検証—視覚的検査に依存しない'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コストと品質のトレードオフ',
+                        items: [
+                            'GPT-5.5：最高のJSON信頼性（~95%）だが最高コスト（$5入力）',
+                            'Claude 4.7：入力で40%安い（$3/1M）、JSON ~90%—最適な平衡',
+                            'Gemini 1.5 Pro：最大コンテキスト（1M tokens）、最安出力',
+                            'ティアルーティング：happy-pathをGeminiへ、GPT-5.5はエッジケース用'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorumがマルチモデルテストを簡素化',
+                        items: [
+                            'プロンプト1つで4モデルに同時送信—別々のAPI統合不要',
+                            '20ケース約15秒で並比較＆モデルごとの合格率',
+                            '相違点を特定、結果をエクスポート、デプロイ準備',
+                            'API手作業呼び出し、キー管理、レスポンスパースを排除'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'はじめ方（ステップ1～7）',
+                        items: [
+                            '10～20入力を定義：happy-path 3、エッジケース4、adversarial 2、制約違反1',
+                            '明示的JSONスキーマとシステム/ユーザ分離でモデル非依存プロンプト作成',
+                            '各ケースの合格/不合格採点基準を作成',
+                            'PromptQuorum登録またはOpenAI、Anthropic、GoogleのAPIキー設定',
+                            'PromptQuorumにプロンプトとテストセットをアップロード',
+                            'ターゲットモデル選択：GPT-5.5、Claude Opus 4.7、Gemini 1.5 Pro、Llama',
+                            '評価実行—約15秒で結果'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '一般的な過ち（4つの注意点）',
+                        items: [
+                            'モデルごとに異なるプロンプトをテスト—プロンプト変動を測定、モデル差ではなく',
+                            'happy-pathケースのみ使用—エッジケースとadversarialで実際の違い出現',
+                            'レイテンシを無視—95%で5s=本番SLA不満足の可能性',
+                            'JSONスキーマ検証なし—不正形式は視覚検査通過でもパイプライン破壊'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ（質問1～4）',
+                        faqs: [
+                            { q: '複数モデルテストが必要な理由は？', a: 'モデルは指示解析、JSON信頼性、refusal、コンテキストで異なります。GPT-5.5で通ったプロンプトはClaudeで失敗します。' },
+                            { q: 'GPT-5.5とClaude Opus 4.7の違いは？', a: 'GPT-5.5はJSONで厳格（~95%）。Claude入力で40%安い（$3 vs $5/1M）、JSON ~90%。' },
+                            { q: '全モデルで動作するプロンプトの書き方？', a: '明示的JSONスキーマ、システム/ユーザ分離、モデル固有表現避ける、プログラム検証。' },
+                            { q: 'JSONで最も信頼できるモデルは？', a: 'GPT-5.5 ~95%明示スキーマで、Gemini 1.5 Pro ~92%。Llama 2 70B ~70%。' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ（質問5～8）',
+                        faqs: [
+                            { q: '同じプロンプトを複数モデルで同時テストする方法？', a: '10～20入力テストセット作成。PromptQuorum、LangSmith、または独自コードで並列dispatch。' },
+                            { q: 'PromptQuorumがマルチモデルテストで何をする？', a: 'プロンプト+テストセットをGPT-5.5、Claude、Gemini、Llamaに並行送信、結果を並比較。' },
+                            { q: 'GPT-5.5の代わりにGemini 1.5 Proを使うべき時は？', a: 'プロンプトが128K超のコンテキスト必要時。Geminiは1Mトークン対応、全文書処理可。' },
+                            { q: 'マルチモデルデプロイのコスト最適化方法？', a: 'ティアルーティング：happy-pathをGemini/Llama（安価）へ、GPT-5.5/Claudeはエッジケース用。' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '複数モデルテスト準備完了？',
+                        body: 'マルチモデルテストは本番前に互換性ギャップを検出。PromptQuorum無料登録開始。',
+                        cta: 'PromptQuorum無料試用',
+                        href: 'https://www.promptquorum.com?waitlist=true'
+                    }
+                ]
+            },
+            zh: {
+                title: '如何跨多个模型测试提示词：多模型评估',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '跨多个模型测试提示词',
+                        subtitle: '提示词是模型特定的。在GPT-5.5上有效的提示词可能在Claude Opus 4.7上静默失败，因为JSON可靠性、指令解析和拒绝模式不同。',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            '提示词在GPT-5.5、Claude、Gemini、Llama上表现不同：JSON可靠性70%–95%',
+                            '在所有模型上同时测试相同提示词，识别兼容性缺口',
+                            '使用明确JSON、系统/用户分离、少样本示例编写模型无关提示词',
+                            'GPT-5.5在JSON领先；Gemini 1.5 Pro在上下文（1M tokens）；Claude在安全性',
+                            'PromptQuorum：20个用例跨4个模型约15秒'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '为什么提示词在模型间存在差异',
+                        items: [
+                            '模型以不同方式解析指令。GPT-5.5严格；Claude宽容但拒绝严格。',
+                            '为一个模型优化的提示词在另一个模型上失败，返回看似正确但实际错误的输出。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '模型差异（第1部分）',
+                        columns: ['维度', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { '维度': '指令严格性', 'GPT-5.5': '非常严格', 'Claude 4.7': '宽容', 'Gemini 1.5': '中等', 'Llama 70B': '低' },
+                            { '维度': 'JSON可靠性', 'GPT-5.5': '~95%', 'Claude 4.7': '~90%', 'Gemini 1.5': '~92%', 'Llama 70B': '~70%' },
+                            { '维度': '拒绝严格性', 'GPT-5.5': '中等', 'Claude 4.7': '高', 'Gemini 1.5': '中等', 'Llama 70B': '低' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '模型差异（第2部分）',
+                        columns: ['维度', 'GPT-5.5', 'Claude 4.7', 'Gemini 1.5', 'Llama 70B'],
+                        rows: [
+                            { '维度': '上下文窗口', 'GPT-5.5': '128K', 'Claude 4.7': '200K', 'Gemini 1.5': '1M', 'Llama 70B': '4K' },
+                            { '维度': '输入成本', 'GPT-5.5': '$5/1M', 'Claude 4.7': '$3/1M', 'Gemini 1.5': '$3.50/1M', 'Llama 70B': '$0' },
+                            { '维度': '输出成本', 'GPT-5.5': '$15/1M', 'Claude 4.7': '$15/1M', 'Gemini 1.5': '$10.50/1M', 'Llama 70B': '$0' },
+                            { '维度': '最佳用途', 'GPT-5.5': 'JSON、代码', 'Claude 4.7': '安全', 'Gemini 1.5': '长文本', 'Llama 70B': '本地' }
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'JSON可靠性缺口',
+                        line1: 'GPT-5.5使用明确模式生成约95%有效JSON。',
+                        line2: 'Llama 2 70B降至70%——对结构化输出管道至关重要。',
+                        tip: '对JSON密集工作负载，选择GPT-5.5或Gemini 1.5 Pro作为主要模型。'
+                    },
+                    {
+                        type: 'list',
+                        h2: '模型无关提示词的5条规则',
+                        items: [
+                            '1. 明确的输出格式：JSON模式或XML标签，而不是"你的首选格式"',
+                            '2. 分离系统提示和用户消息——模型进行不同处理',
+                            '3. 避免模型特定用语如"作为GPT-4 AI"或"你是Claude"',
+                            '4. 使用少样本示例——模型遵循演示的模式而非口头指示',
+                            '5. 以编程方式验证JSON输出；勿依赖视觉检查'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '成本与质量权衡',
+                        items: [
+                            'GPT-5.5：最高JSON可靠性（~95%）但最高成本（$5输入）',
+                            'Claude 4.7：输入便宜40%（$3/1M）且JSON ~90%——最优平衡',
+                            'Gemini 1.5 Pro：最大上下文（1M tokens）、最便宜输出',
+                            '使用分层路由：常规请求到Gemini，GPT-5.5保留用于边界情况'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorum如何简化多模型测试',
+                        items: [
+                            '编写一个提示词，同时发送到4个模型——无需单独API集成',
+                            '20个用例在约15秒内返回并排比较和每个模型的通过率',
+                            '识别分歧、导出结果进行部署',
+                            '消除手工API调用、密钥管理和响应解析'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '开始使用（步骤1–7）',
+                        items: [
+                            '定义10–20测试输入：3个常见路径、4个边界情况、2个对抗性、1个约束违反',
+                            '使用明确的JSON模式和系统/用户分离编写模型无关提示词',
+                            '为每个测试用例创建通过/失败评分标准',
+                            '注册PromptQuorum或配置OpenAI、Anthropic、Google API密钥',
+                            '将提示词和测试集上传到PromptQuorum',
+                            '选择目标模型：GPT-5.5、Claude Opus 4.7、Gemini 1.5 Pro、Llama',
+                            '运行评估——约15秒内返回结果'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '常见错误（4个要避免）',
+                        items: [
+                            '在不同模型上测试不同提示词——测量提示词变化而非模型差异',
+                            '仅使用常见路径测试用例——边界和对抗性输入揭示真正差异',
+                            '忽略推理延迟——95%模型加5秒延迟可能不符合SLA',
+                            '不验证JSON模式——格式错误通过视觉检查但破坏管道'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ（问题1–4）',
+                        faqs: [
+                            { q: '为什么要跨多个模型测试提示词？', a: '模型在指令解析、JSON可靠性、拒绝模式和上下文窗口上不同。在GPT-5.5上通过的提示词可能在Claude失败。' },
+                            { q: 'GPT-5.5和Claude Opus 4.7有什么区别？', a: 'GPT-5.5在JSON上更严格（~95%有效）。Claude输入成本便宜40%（$3vs $5/1M）且JSON ~90%。' },
+                            { q: '如何编写在所有模型上工作的提示词？', a: '使用明确JSON模式、分离系统/用户消息、避免模型特定表达、以编程方式验证输出。' },
+                            { q: '哪个模型对JSON最可靠？', a: 'GPT-5.5在明确模式下约95%，然后是Gemini 1.5 Pro约92%。Llama 2 70B仅约70%。' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ（问题5–8）',
+                        faqs: [
+                            { q: '如何同时在多个模型上测试相同提示词？', a: '创建包含10–20个输入的测试集。使用PromptQuorum、LangSmith或自定义代码进行并行分发。' },
+                            { q: 'PromptQuorum为多模型测试做什么？', a: '将提示词和测试集并行分发到GPT-5.5、Claude、Gemini、Llama，返回并排比较和每个模型的通过率。' },
+                            { q: '何时使用Gemini 1.5 Pro而非GPT-5.5？', a: '当提示词需要超过128K上下文时。Gemini处理1M令牌、完整文档、代码库、长对话历史。' },
+                            { q: '如何优化多模型部署的成本？', a: '使用分层路由：常规请求到Gemini/Llama（便宜），GPT-5.5/Claude保留用于边界情况和安全关键路径。' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '准备好跨模型测试了吗？',
+                        body: '多模型提示词测试在生产部署前发现兼容性缺口。免费注册PromptQuorum开始使用。',
+                        cta: '免费试用PromptQuorum',
+                        href: 'https://www.promptquorum.com?waitlist=true'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=' + lang;
+            const footerLink = `<div class="slide-footer"><a href="${articleUrl}" target="_blank" rel="noopener">← Article</a></div>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ul style="font-size: 1.1em;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table style="margin-top: 20px;"><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 40px; font-size: 1.3em;">${slide.line1}</p>
+                        <p style="font-size: 1.3em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.05em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 12px; text-align: left; font-size: 0.95em;"><strong>Q: ${faq.q}</strong><p style="margin-top: 4px;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p>${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
