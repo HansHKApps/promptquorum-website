@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Tools & Platforms',
       title: 'Best Prompt Engineering Tools 2026: Ranked by Use Case',
       seoTitle: 'Best Prompt Engineering Tools 2026: Ranked by Use Case',
-      metaDescription: 'Compare Braintrust, Vellum, Promptfoo, PromptHub, LangSmith, and PromptQuorum — ranked by evaluation, testing, versioning, deployment, and multi-model dispatch. Pricing from free to $500/mo.',
+      metaDescription: 'Braintrust for evaluation, Vellum for production, Promptfoo for testing (free), PromptHub for versioning, LangSmith for tracing. Side-by-side comparison with pricing.',
       ogTitle: '6 Prompt Engineering Tools Ranked — Which Solves Your Bottleneck?',
       ogDescription: 'Evaluation, testing, versioning, production, multi-model dispatch. One tool per job. Side-by-side comparison table inside.',
       twitterTitle: 'Best Prompt Engineering Tools 2026: Side-by-Side Comparison',
@@ -74,7 +74,9 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', name: 'Do these tools support local models?', acceptedAnswer: { '@type': 'Answer', text: 'Most tools support local models with varying depth. Promptfoo has native support for Ollama and LM Studio via provider configuration with no wrapper needed. Braintrust and Vellum support local models through API wrappers that expose a standard OpenAI-compatible endpoint.' } },
           { '@type': 'Question', name: 'Can I combine multiple prompt engineering tools?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — combining two or three tools is the standard approach in 2026. The most common stack is Promptfoo for CI/CD testing, Vellum for production deployment, and Braintrust for offline eval campaigns. All three integrate via standard REST APIs with no lock-in; avoid buying all five as Braintrust and Promptfoo partially overlap on testing.' } },
           { '@type': 'Question', name: 'What is the typical cost of these tools?', acceptedAnswer: { '@type': 'Answer', text: 'As of April 2026: Braintrust ~$500/month (starter), Vellum $200–500/month by request volume, Promptfoo free (open-source self-hosted), PromptHub $50–300/month by team size, LangSmith free tier with paid plans from $50/month for production. Costs scale with eval volume, API calls, and seat counts.' } },
-          { '@type': 'Question', name: 'Which tool has the best free tier?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted on your infrastructure. PromptHub and LangSmith both offer generous free tiers for small teams. Braintrust and Vellum offer trials only and move quickly to paid plans for teams with meaningful production usage.' } }
+          { '@type': 'Question', name: 'Which tool has the best free tier?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted on your infrastructure. PromptHub and LangSmith both offer generous free tiers for small teams. Braintrust and Vellum offer trials only and move quickly to paid plans for teams with meaningful production usage.' } },
+          { '@type': 'Question', name: 'What is the difference between prompt testing and prompt evaluation?', acceptedAnswer: { '@type': 'Answer', text: 'Testing (Promptfoo) checks whether a prompt produces correct output for defined inputs — it runs automatically in CI/CD and catches regressions. Evaluation (Braintrust) measures output quality — accuracy, tone, factuality — using LLM judges or humans. Testing is fast and automated; evaluation is slower and more nuanced. Most teams need both.' } },
+          { '@type': 'Question', name: 'How do I know when I have outgrown Promptfoo and need Braintrust?', acceptedAnswer: { '@type': 'Answer', text: 'Switch to Braintrust when your team needs to score output quality beyond pass/fail — for example, tone, factual accuracy, or brand adherence. Promptfoo excels at binary correctness tests in CI/CD. Braintrust adds human-in-the-loop scoring, LLM judges, and a ground truth dataset that improves over time. Most teams hit this inflection point when 3–5 people are iterating on prompts daily.' } }
         ]
       },
       itemListSchema: {
@@ -206,11 +208,27 @@ export const article: Record<Language, PEArticle> = {
         commonMistakes: {
           id: 'common-mistakes',
           title: 'What Are the Most Common Mistakes When Choosing PE Tools?',
-          items: [
-            'Buying multiple tools with overlapping features (use 2–3, not all 5)',
-            'Skipping CI/CD testing and jumping to production evals (test fast first, then eval slow)',
-            'Not versioning prompts until governance becomes urgent (add versioning at day 1)',
-            'Using generic LLM observability instead of prompt-specific tools (Vellum or LangSmith, not Datadog)'
+          mistakes: [
+            {
+              mistake: 'Buying all 5 tools because they all seem useful',
+              problem: 'Braintrust and Promptfoo overlap on testing — purchasing both creates duplicate workflows and wasted budget.',
+              fix: 'Start with Promptfoo (free) for CI/CD. Add Braintrust only when you need human-in-the-loop eval campaigns with ground truth datasets.'
+            },
+            {
+              mistake: 'Skipping CI/CD testing and jumping straight to production evals',
+              problem: 'Manual evals miss regressions that happen in edge cases. Production failures are expensive to debug.',
+              fix: 'Set up Promptfoo in CI/CD first — it catches breaking changes before they ship. Add Braintrust for offline eval quality measurement.'
+            },
+            {
+              mistake: 'Not adding prompt versioning until a regression forces it',
+              problem: 'Without versioning you cannot identify which prompt change caused the regression or roll back to a known-good version.',
+              fix: 'Add PromptHub or Vellum versioning at day 1. Treat every prompt change like a code commit: review before merge.'
+            },
+            {
+              mistake: 'Using generic observability (Datadog, New Relic) for AI prompt monitoring',
+              problem: 'Generic tools track latency and errors but not prompt text, model responses, or per-token costs — the signals needed for prompt debugging.',
+              fix: 'Use Vellum for production prompt monitoring or LangSmith if you use LangChain. Both log the full prompt–response pair with cost attribution.'
+            }
           ],
           image: '/images/best-pe-tools-2026-common-mistakes-en.svg',
           imageCaption: '4 mistakes prompt engineering teams make: buying overlapping tools, skipping CI/CD testing, delayed versioning, and using generic observability instead of prompt-specific tools like Vellum or LangSmith.'
@@ -220,7 +238,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Related Reading',
           items: [
             '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — Metrics these tools measure: accuracy, latency, cost',
-            '[Prompt Version Control Workflows](/prompt-engineering/prompt-version-control-workflows) — How to structure Git-based prompt management',
+            '[Best Prompt Management Platforms](/prompt-engineering/best-prompt-management-platforms) — How to version, share, and govern prompts across your team',
             '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — When examples help evals vs hurt them',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — Complex reasoning tasks where eval metrics matter most',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) — Multi-step workflows benefiting from LangSmith tracing',
@@ -238,7 +256,9 @@ export const article: Record<Language, PEArticle> = {
             { q: 'Do these tools support local models?', a: 'Most tools support local models with varying depth. Promptfoo has native support for Ollama and LM Studio via provider configuration with no wrapper needed. Braintrust and Vellum support local models through API wrappers that expose a standard OpenAI-compatible endpoint.' },
             { q: 'Can I combine multiple prompt engineering tools?', a: 'Yes — combining two or three tools is the standard approach in 2026. The most common stack is Promptfoo for CI/CD testing, Vellum for production deployment, and Braintrust for offline eval campaigns. All three integrate via standard REST APIs with no lock-in; avoid buying all five as Braintrust and Promptfoo partially overlap on testing.' },
             { q: 'What is the typical cost of these tools?', a: 'As of April 2026: Braintrust ~$500/month (starter), Vellum $200–500/month by request volume, Promptfoo free (open-source self-hosted), PromptHub $50–300/month by team size, LangSmith free tier with paid plans from $50/month for production. Costs scale with eval volume, API calls, and seat counts.' },
-            { q: 'Which tool has the best free tier?', a: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted on your infrastructure. PromptHub and LangSmith both offer generous free tiers for small teams. Braintrust and Vellum offer trials only and move quickly to paid plans for teams with meaningful production usage.' }
+            { q: 'Which tool has the best free tier?', a: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted on your infrastructure. PromptHub and LangSmith both offer generous free tiers for small teams. Braintrust and Vellum offer trials only and move quickly to paid plans for teams with meaningful production usage.' },
+            { q: 'What is the difference between prompt testing and prompt evaluation?', a: 'Testing (Promptfoo) checks whether a prompt produces correct output for defined inputs — it runs automatically in CI/CD and catches regressions. Evaluation (Braintrust) measures output quality — accuracy, tone, factuality — using LLM judges or humans. Testing is fast and automated; evaluation is slower and more nuanced. Most teams need both.' },
+            { q: 'How do I know when I have outgrown Promptfoo and need Braintrust?', a: 'Switch to Braintrust when your team needs to score output quality beyond pass/fail — for example, tone, factual accuracy, or brand adherence. Promptfoo excels at binary correctness tests in CI/CD. Braintrust adds human-in-the-loop scoring, LLM judges, and a ground truth dataset that improves over time. Most teams hit this inflection point when 3–5 people are iterating on prompts daily.' }
           ]
         },
         sources: {
