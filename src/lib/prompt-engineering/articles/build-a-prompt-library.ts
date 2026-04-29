@@ -1122,7 +1122,559 @@ export const article: Record<Language, PEArticle> = {
   freshness_tier: 'semi_annual',
   next_refresh_due: '2026-09-24',
 },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: {
+  theme: 'Fondamentaux',
+  title: 'Créer une bibliothèque de prompts qui fait gagner du temps',
+  intro: 'Une bibliothèque de prompts est une collection d\'instructions testées avec métadonnées que votre équipe partage et améliore ensemble. Bien construite, elle devient le deuxième cerveau de votre équipe : elle réduit le temps de configuration, accélère l\'intégration et empêche les meilleurs prompts de se perdre dans des notes personnelles. Ce cadre en 12 étapes montre comment construire une bibliothèque que votre équipe utilise réellement.',
+  seoTitle: 'Créer une bibliothèque de prompts : cadre 12 étapes pour les équipes 2026',
+  metaDescription: 'Une bibliothèque de prompts est une collection partagée et consultable de prompts testés avec métadonnées. Les équipes qui en créent une gagnent des heures en configuration et intégration. Voici un cadre éprouvé.',
+  publishDate: '2026-03-24',
+  dateModified: '2026-04-29',
+  readTime: '10 min de lecture',
+  educationalLevel: 'Beginner',
+  audience: 'Responsables d\'équipes et praticiens adoptant les outils IA',
+  leadAnswerBlock: 'Une bibliothèque de prompts est une collection structurée et consultable de prompts avec métadonnées — pas juste une liste. Les équipes qui en créent une gagnent des heures en configuration de prompts et intégration des nouveaux collaborateurs. Ce cadre montre les 12 étapes pour lancer une bibliothèque que votre équipe utilise vraiment.',
+  quickFacts: [
+    'Une bibliothèque de prompts réduit la configuration de nouveaux prompts de plusieurs heures à quelques minutes.',
+    'Chaque prompt a besoin au minimum : titre, contenu, variables d\'entrée, format de sortie attendu, étiquettes, propriétaire, version.',
+    'La meilleure structure : par tâche/fonction (non par modèle) ; les détails du modèle vont dans les métadonnées.',
+    'Une gouvernance légère (Brouillon → Approuvé → Déprécié) prévient la dérive de qualité et garde la bibliothèque utile.',
+    'La versioning est critique : v1.0, v1.1 avec notes de changement ; le retour en arrière doit être possible.',
+  ],
+  toc: [
+    { label: 'Qu\'est-ce qu\'une bibliothèque de prompts ?', anchor: 'what-is-library' },
+    { label: 'Pourquoi votre équipe devrait-elle en créer une ?', anchor: 'why-build-one' },
+    { label: 'Qu\'est-ce qu\'il faut stocker ?', anchor: 'what-to-store' },
+    { label: 'Comment commencer ?', anchor: 'how-to-start' },
+    { label: 'Versioning et contrôle de qualité', anchor: 'versioning' },
+    { label: 'Où stocker ?', anchor: 'where-to-store' },
+    { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+    { label: 'Considérations régionales et conformité', anchor: 'regional-considerations' },
+    { label: 'Questions fréquemment posées', anchor: 'faq-section' },
+    { label: 'Lectures complémentaires', anchor: 'related-reading' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    url: 'https://www.promptquorum.com/prompt-engineering/build-a-prompt-library?lang=fr',
+    inLanguage: 'fr',
+    headline: 'Créer une bibliothèque de prompts qui fait gagner du temps',
+    description: 'Une bibliothèque de prompts est une collection d\'instructions testées avec métadonnées que votre équipe partage et améliore ensemble.',
+    image: 'https://www.promptquorum.com/og-build-a-prompt-library-fr.png',
+    datePublished: '2026-03-24',
+    dateModified: '2026-04-29',
+    author: { '@type': 'Person', name: 'Hans Kuepper' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Bibliothèques de prompts' },
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'Gouvernance IA' },
+    ],
+    mentions: [
+      { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      { '@type': 'SoftwareApplication', name: 'Notion' },
+      { '@type': 'SoftwareApplication', name: 'Airtable' },
+    ],
+    teaches: [
+      'Comment construire une bibliothèque de prompts structurée',
+      'Ce qui doit être inclus dans chaque prompt (métadonnées, versioning, propriétaire)',
+      'Comment organiser les prompts par tâche/fonction',
+      'Processus de gouvernance légère pour le contrôle de qualité',
+      'Outils et plateformes pour la gestion de prompts',
+    ],
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    audience: { '@type': 'Audience', audienceType: 'Responsables d\'équipes et praticiens IA' },
+    keywords: ['bibliothèque de prompts', 'prompt engineering', 'gouvernance IA', 'gestion de prompts', 'versioning', 'collaboration d\'équipe'],
+    primaryTerm: 'bibliothèque de prompts',
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'fr',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Qu\'est-ce qu\'une bibliothèque de prompts ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Une bibliothèque de prompts est une collection structurée et consultable de prompts que votre équipe gère. Elle peut vivre dans un repo Git, une base de données Notion, Airtable, une Google Sheet ou un outil dédié. L\'objectif : standardiser, partager et améliorer les prompts au lieu de les perdre dans des notes personnelles.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Quand une équipe doit-elle utiliser une bibliothèque plutôt que des notes personnelles ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Dès que plus d\'une personne utilise les mêmes prompts. Les notes personnelles fonctionnent pour les individus, mais quand votre équipe se développe, vous perdez les meilleurs prompts et gaspillez du temps en double travail.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Combien de temps faut-il pour créer une bibliothèque de prompts utile ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Une bibliothèque minimale avec 10–15 prompts testés prend 2–4 semaines (selon la taille de l\'équipe). Avec une utilisation active et des examens mensuels, la qualité s\'améliore continuellement. Comptez moins d\'1 heure par semaine de maintenance une fois la structure établie.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Comment amener mon équipe à contribuer réellement à une bibliothèque partagée ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Rendez la contribution aussi simple que possible : un formulaire ou modèle Git, des exigences de métadonnées claires, et des examens mensuels. Le plus important : montrez la valeur — les équipes contribuent quand elles voient que leurs prompts sont utilisés et améliorés.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Une bibliothèque de prompts est-elle la même qu\'un system prompt ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Non. Un system prompt est un ensemble de règles que vous définissez une fois et appliquez à toutes les entrées. Une bibliothèque de prompts est une collection de différents prompts pour différentes tâches — chacun avec ses propres métadonnées et versions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'À quelle fréquence une équipe doit-elle examiner et nettoyer sa bibliothèque ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Mensuellement est idéal. Marquez les prompts peu utilisés comme Dépréciés, promovez les versions améliorées en Approuvé, et créez de nouvelles catégories si l\'utilisation change. Les équipes qui examinent mensuellement ont 20–30 % moins de bloat après 6 mois.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-4o » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir un prompt en Approuvé.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Quelle est la différence entre une bibliothèque de prompts et une plateforme de gestion de prompts ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Une bibliothèque de prompts est une collection d\'entrées de prompts structurées que votre équipe gère — elle peut vivre dans un repo Git, une feuille de calcul ou un outil dédié. Une plateforme de gestion de prompts ajoute l\'exécution, les analyses, le contrôle de version et les fonctionnalités de collaboration en plus du concept de bibliothèque. Commencez avec une bibliothèque simple et mettez à niveau vers une plateforme quand le volume ou la gouvernance le justifie.',
+        },
+      },
+    ],
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    inLanguage: 'fr',
+    name: 'Comment créer une bibliothèque de prompts',
+    description: 'Un cadre en 12 étapes pour construire une bibliothèque de prompts que votre équipe utilise réellement.',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Rassemblez les vrais prompts que votre équipe utilise aujourd\'hui',
+        text: 'Commencez par le bas vers le haut. Demandez à chacun de l\'équipe : « Quels sont les 3 meilleurs prompts que vous utilisez régulièrement ? » Rassemblez les 10–15 prompts réels qui produisent des résultats tangibles. Ceci sera votre bibliothèque fondatrice.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Normalisez chaque prompt dans la même structure',
+        text: 'Ajoutez les métadonnées : titre, contenu (le vrai prompt), variables d\'entrée (comme <CUSTOMER_NAME>), format de sortie attendu, étiquettes, propriétaire, version. Cela prévient le chaos quand la bibliothèque grandit.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Organisez par tâche/fonction, pas par modèle',
+        text: 'Structure : « Résumés de réunion » → v1.0 (Claude), v1.0 (GPT-4o) au lieu de « Prompts Claude » → « Résumés de réunion ». Les détails du modèle vont dans les métadonnées, pas dans la structure des dossiers.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Introduisez une gouvernance légère : Brouillon → Approuvé → Déprécié',
+        text: 'Les nouveaux prompts commencent comme Brouillon. Après test et retour de l\'équipe : Approuvé. Quand obsolète ou remplacé : Déprécié (non supprimé, pour que les références ne cassent pas). Cela empêche les mauvais prompts d\'entrer en production.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Versionnez explicitement : v1.0, v1.1 avec notes de changement',
+        text: 'Chaque changement obtient un numéro de version et une note de changement. Exemple : v1.1 « Réduction améliorée de l\'hallucination avec 3 exemples au lieu de 1 ». Cela rend le retour en arrière facile et aide les équipes à comprendre les améliorations.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 6,
+        name: 'Établissez des cycles de révision mensuels',
+        text: 'Chaque mois : quels prompts sont populaires ? Lesquels n\'ont jamais été utilisés ? Promovez les versions améliorées. Marquez comme Déprécié. Cela garde la bibliothèque utile et mince.',
+      },
+    ],
+  },
+  sections: {
+    tldr: {
+      isTldr: true,
+      items: [
+        'Bibliothèque de prompts = dépôt structuré avec métadonnées, pas juste une liste',
+        'Chaque entrée a besoin : titre, contenu, variables d\'entrée, format de sortie, étiquettes, propriétaire, version',
+        'Construisez de bas en haut : rassemblez d\'abord les vrais prompts, puis normalisez-les en templates',
+        'Organisez par tâche/fonction (pas par modèle) ; les détails du modèle vont dans les métadonnées',
+        'Gouvernance légère (Brouillon → Approuvé → Déprécié) prévient la dérive de qualité',
+        'Versionnez explicitement (v1.0, v1.1) avec notes de changement ; le retour arrière doit être possible',
+        'Examens mensuels : retirer les prompts peu utilisés, promouvoir les versions améliorées',
+      ],
+    },
+    whatIsLibrary: {
+      id: 'what-is-library',
+      title: 'Qu\'est-ce qu\'une bibliothèque de prompts ?',
+      content: [
+        'Une bibliothèque de prompts est une collection structurée et consultable de prompts que votre équipe gère comme une source unique de vérité. Chaque prompt est un enregistrement avec métadonnées (titre, propriétaire, version, étiquettes, modèles testés), pas juste du texte dans un document.',
+        'La bibliothèque vit quelque part — dans un repo Git, une base de données Notion, Airtable, une Google Sheet ou un outil dédié comme PromptQuorum. L\'important : elle est consultable, versionnée et partagée avec l\'accès de l\'équipe.',
+        'L\'objectif : votre équipe gagne du temps (les prompts ne sont pas réinventés), intègre plus vite (les nouveaux arrivants utilisent les meilleurs prompts au lieu de commencer à zéro), et évite la dérive de qualité (les mauvais prompts sont éliminés, les bons sont améliorés).',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Pas juste une liste',
+          text: 'Une collection de prompts dans un message Slack ou un Google Doc est un début — mais pas une vraie bibliothèque. Une bibliothèque est consultable, versionnée et a des métadonnées.',
+        },
+      ],
+    },
+    libraryAsset: {
+      id: 'library-asset',
+      title: 'Pourquoi une bibliothèque de prompts est-elle un atout numérique ?',
+      content: 'Une bibliothèque de prompts éprouvée est comme un dépôt de code — un atout de connaissance qui permet la réutilisation, améliore la qualité et accélère l\'intégration. Si la meilleure personne quitte votre équipe, ses meilleurs prompts ne disparaissent pas avec elle.',
+    },
+    whyBuildOne: {
+      id: 'why-build-one',
+      title: 'Pourquoi votre équipe devrait-elle en créer une ?',
+      items: [
+        'Gagnez du temps : les nouveaux prompts demandent des heures d\'essais et erreurs. Une bibliothèque réduit la configuration de plusieurs heures à quelques minutes.',
+        'Intégrez plus vite : les nouveaux collaborateurs utilisent les meilleurs prompts le premier jour au lieu d\'en inventer.',
+        'Contrôle de qualité : les mauvais prompts sont rejetés, les bons sont améliorés. La qualité s\'améliore continuellement.',
+        'Retenez la connaissance : quand quelqu\'un quitte, ses meilleurs prompts restent.',
+        'Testez A/B : comparez les versions (v1.0 vs v1.1), voyez laquelle fonctionne mieux.',
+        'Simplifiez les expériences : testez le même prompt sur GPT-4o, Claude, Llama 3.1 — suivez quel modèle fonctionne best.',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: 'Sans bibliothèque : le chaos au scale',
+          text: 'Les équipes sans bibliothèque voient : double travail (chacun réinvente le même prompt), dérive de qualité (les mauvais prompts circulent), intégration lente (les nouveaux n\'ont aucun point de départ).',
+        },
+      ],
+    },
+    sharedSystem: {
+      id: 'shared-system',
+      title: 'Une bibliothèque de prompts est un système que l\'équipe partage',
+      content: 'L\'important : ce n\'est pas imposé de haut en bas, c\'est construit de bas en haut. Votre équipe fournit les vrais prompts. Vous les normalisez et les gérez ensemble. La gouvernance est légère — juste assez de structure pour éviter le chaos, pas assez pour que les contributions soient impossibles.',
+    },
+    whatToStore: {
+      id: 'what-to-store',
+      title: 'Qu\'est-ce qu\'il faut stocker dans une bibliothèque de prompts ?',
+      content: 'Pas tous les prompts que quelqu\'un a jamais écrits — uniquement les prompts réutilisables qui génèrent des résultats métier.',
+      items: [
+        'Prompts spécifiques à la tâche : « Résumés de réunion », « Brouillon d\'email », « Code Review », « Q&A Client »',
+        'Prompts testés : le prompt doit être testé en production avec des résultats documentés',
+        'Prompts d\'équipe : ceux qu\'utilisent plus d\'une personne. Les prompts privés ne sont pas nécessaires (ils restent locaux).',
+        'Prompts réutilisables : ceux applicables à différentes entrées (pas un prompt unique pour un seul document).',
+      ],
+    },
+    schemaBreakdown: {
+      id: 'schema-breakdown',
+      title: 'Qu\'est-ce qui doit être dans chaque entrée de bibliothèque ?',
+      items: [
+        '**Titre** : court, descriptif (« Résumé de réunion v1.1 », pas « Mon meilleur prompt »)',
+        '**Contenu du prompt** : le vrai texte du prompt avec variables d\'entrée comme placeholders (<MEETING_TRANSCRIPT>, <TONE>)',
+        '**Variables d\'entrée** : qu\'est-ce qui pourrait changer ? (<LANGUAGE>, <CUSTOMER_TYPE>, <FORMAT>)',
+        '**Format de sortie** : à quoi doit ressembler la sortie ? (JSON, Markdown, Texte brut, Liste?)',
+        '**Propriétaire** : qui l\'a écrit ? Qui est responsable des mises à jour ?',
+        '**Étiquettes** : catégories pour la recherche (« ventes », « support », « légal », « content-gen »)',
+        '**Version** : v1.0, v1.1, v2.0 — avec note de changement (ce qui a changé)',
+        '**Modèles testés** : « Claude 4.6, GPT-4o » (cela aide les équipes à choisir la bonne variante)',
+        '**Statut** : Brouillon, Approuvé, Déprécié (empêche les mauvais prompts en production)',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Stockez les entrées comme placeholders',
+          text: 'Utilisez toujours `<VARIABLE>` et non de vraies données dans le contenu du prompt. Les vraies données ne vont que dans l\'entrée à l\'exécution, pas dans le template.',
+        },
+      ],
+      promptExamples: [
+        {
+          bad: 'Meeting Summary Prompt\n\nMy meeting with Sarah Johnson on March 24 was about Q2 budget planning. Here\'s what happened: ....',
+          good: 'Meeting Summary (v1.1 – Claude)\n\nInput: <MEETING_TRANSCRIPT>\nOutput: JSON with {summary: string, action_items: string[], duration_minutes: number}\n\nPrompt: Résumez la réunion suivante...',
+          badLabel: '❌ Données personnelles dans le contenu, pas de structure, pas de variables',
+          goodLabel: '✅ Placeholders, format clair, versionné, spécifique au modèle',
+        },
+      ],
+    },
+    optionalFields: {
+      id: 'optional-fields',
+      title: 'Champs optionnels (à ajouter plus tard)',
+      content: 'Commencez avec les 9 champs requis ci-dessus. Vous pouvez ajouter plus tard :',
+      items: [
+        '**Notes de coût** : « Ce prompt coûte ~0,02 € par appel avec GPT-4o »',
+        '**Métriques de performance** : « Latence : <2 secondes », « Nombre de tokens : ~500 »',
+        '**Leçons apprises** : « Few-shot testé — n\'améliore pas la précision pour cette tâche »',
+        '**Dépendances** : « Needs retrieval_context input (from RAG system) »',
+      ],
+    },
+    howToStart: {
+      id: 'how-to-start',
+      title: 'Comment commencer : un cadre en 6 étapes',
+      numberedItems: [
+        {
+          title: 'Rassemblez les vrais prompts',
+          whyItMatters: 'Demandez à chacun : « Quels sont les 3 meilleurs prompts que vous utilisez régulièrement ? » Rassemblez 10–15 vrais prompts. C\'est votre bibliothèque fondatrice — pas théorique, mais réelle en production.',
+        },
+        {
+          title: 'Normalisez la structure',
+          whyItMatters: 'Utilisez les 9 champs requis (titre, contenu avec placeholders, variables d\'entrée, format de sortie, étiquettes, propriétaire, version, statut, modèles testés). Tous les prompts doivent avoir la même structure.',
+        },
+        {
+          title: 'Organisez par tâche',
+          whyItMatters: 'Structure : « Ventes » (Brouillon d\'email, Gestion d\'objections, Révision de proposition) au lieu de « Prompts Claude » (chaotique). Les détails du modèle vont dans les métadonnées, pas dans les noms de dossiers.',
+        },
+        {
+          title: 'Introduisez une gouvernance légère',
+          whyItMatters: 'Brouillon → Approuvé → Déprécié. Les nouveaux prompts commencent comme Brouillon. Après test + feedback : Approuvé. Anciens : Déprécié (non supprimés). Cela empêche les mauvais prompts d\'entrer en production.',
+        },
+        {
+          title: 'Versionnez explicitement',
+          whyItMatters: 'Chaque changement obtient v1.0, v1.1, v2.0 avec une note de changement : « v1.1 : réduction améliorée de l\'hallucination avec 3 exemples au lieu de 1 ». Cela rend le retour arrière facile.',
+        },
+        {
+          title: 'Commencez les examens mensuels',
+          whyItMatters: 'Chaque mois : quels prompts sont populaires ? Lesquels n\'ont jamais été utilisés ? Promovez les meilleures versions. Marquez comme Déprécié. Cela garde la bibliothèque utile.',
+        },
+      ],
+      snippets: [
+        {
+          type: 'in-one-sentence',
+          text: 'Construire de bas en haut (rassembler les vrais prompts), normaliser, gouverner légèrement, examiner mensuellement.',
+        },
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Pas trop d\'ingénierie au début',
+          text: 'Une Google Sheet suffit pour 1–20 prompts. Passez à Notion/Airtable/PromptQuorum quand vous avez 30+ prompts ou quand vous avez besoin d\'accès API.',
+        },
+      ],
+    },
+    timelyRefinement: {
+      id: 'timely-refinement',
+      title: 'Amélioration continue : la bibliothèque grandit plus fort si vous l\'utilisez',
+      content: [
+        'La première version de votre bibliothèque est brouillon. La vraie valeur vient de l\'utilisation continue et des améliorations mensuelles.',
+        'Après une semaine : quels prompts l\'équipe utilise le plus ? Quels problèmes sont survenus ? Intégrez ce feedback dans vos prochaines versions.',
+      ],
+    },
+    whereToStore: {
+      id: 'where-to-store',
+      title: 'Où devriez-vous stocker une bibliothèque de prompts ?',
+      content: 'Le choix dépend de la taille de l\'équipe, des exigences de gouvernance et de l\'intégration. Il y a 3 options courantes :',
+    },
+    storageOptions: {
+      id: 'storage-options',
+      items: [
+        '**Markdown dans Git** — meilleur pour équipes <5. Gratuit, versionné, proche du code. Problème : non consultable (sauf grep).',
+        '**Notion ou Airtable** — meilleur pour équipes 5–20. Consultable, belle UI, collaboration facile. Problème : pas natif API (PromptQuorum est API-first).',
+        '**Plateforme dédiée (PromptQuorum)** — meilleur pour équipes >20 ou si vous avez besoin de gouvernance, audit, accès API.',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Commencez petit',
+          text: 'Git suffit la première semaine. Passez à Notion/Airtable/PromptQuorum quand votre équipe >5 ou quand vous avez besoin de consultabilité fréquente.',
+        },
+      ],
+    },
+    structureApproach: {
+      id: 'structure-approach',
+      title: 'Structure organisationnelle',
+      content: 'Où que vous stockiez : la structure doit être par **tâche/fonction**, pas par modèle.',
+      items: [
+        '✅ Correct : Ventes → Brouillon d\'email (v1.0 Claude, v1.0 GPT-4o) → Gestion d\'objections (v1.1 Claude)',
+        '❌ Incorrect : Claude → Prompts de ventes → Brouillon d\'email',
+      ],
+    },
+    structureFlexibility: {
+      id: 'structure-flexibility',
+      title: 'Pourquoi tâche plutôt que modèle ?',
+      content: 'Si vous organisez par modèle, voici ce qui se passe : à un moment donné, vous voudrez tester un prompt sur un modèle différent. Maintenant vous devez copier le fichier prompt, le renommer, garder les deux versions synchrones. C\'est source d\'erreurs et ennuyeux.',
+      items: [
+        'Si vous organisez par tâche : « Brouillon d\'email » a des variantes (Claude v1.0, GPT-4o v1.0) comme des entrées claires. Facile à comparer, facile à mettre à jour.',
+      ],
+    },
+    storageTableNote: {
+      id: 'storage-table-note',
+      title: 'Comparaison des 3 options de stockage',
+      callouts: [
+        {
+          type: 'info',
+          label: 'Tableau ci-dessous',
+          text: 'Choisissez l\'option de stockage en fonction de la taille de l\'équipe, de la consultabilité et du besoin d\'une API.',
+        },
+      ],
+    },
+    storageTable: {
+      id: 'storage-table',
+      tableFormat: true,
+      columns: ['Option', 'Meilleur pour', 'Contrôle de version', 'Recherche', 'Gouvernance'],
+      rows: [
+        {
+          'Option': 'Markdown dans Git',
+          'Meilleur pour': 'Équipes <5, ingénierie-proche',
+          'Contrôle de version': 'Natif (Git)',
+          'Recherche': 'Grep seulement',
+          'Gouvernance': 'Manuel (révision PR)',
+        },
+        {
+          'Option': 'Notion / Airtable',
+          'Meilleur pour': 'Équipes 5–20, accès non-technique important',
+          'Contrôle de version': 'Intégré (mais basique)',
+          'Recherche': 'Natif (Tag/Search)',
+          'Gouvernance': 'Permissions, mais peu d\'audit',
+        },
+        {
+          'Option': 'PromptQuorum (Dédié)',
+          'Meilleur pour': 'Équipes >20, gouvernance/audit requis',
+          'Contrôle de version': 'Complet (Retour, Diffs)',
+          'Recherche': 'Natif + API',
+          'Gouvernance': 'RBAC, Logs d\'audit, Workflows d\'approbation',
+        },
+      ],
+    },
+    versioning: {
+      id: 'versioning',
+      title: 'Comment versioner les prompts et maintenir la qualité',
+      content: 'La versioning est la colonne vertébrale d\'une bibliothèque qui fonctionne. Sans versions explicites, voici ce qui se passe : quelqu\'un change un prompt, casse accidentellement un système de production, et personne ne sait pourquoi.',
+      items: [
+        '**v1.0** : première version stable. Production ready. Résultats testés.',
+        '**v1.1** : amélioration mineure. Même logique, meilleurs résultats (par exemple « v1.1 : +2 exemples pour réduire l\'hallucination »).',
+        '**v2.0** : refonte majeure. Changement de logique, variables d\'entrée, ou format de sortie. Les grandes versions sont rares.',
+        '**Notes de changement** : toujours documenter CE QUI a changé (« Meilleur ton client par ajout d\'un guide de style ») — pas juste « mis à jour ».',
+        '**Retour possible** : gardez les anciennes versions accessibles. Si v1.1 ne fonctionne pas mieux, retournez à v1.0 en 1 clic.',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: 'Pas de « Latest » sans numéro de version',
+          text: 'Si votre système utilise toujours « Latest » et que quelqu\'un change un prompt, tous les systèmes de production cassent. Utilisez toujours des versions explicites (v1.0, v1.1, v2.0).',
+        },
+      ],
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: 'Erreurs courantes et comment les éviter',
+      mistakes: [
+        {
+          mistake: 'Stocker des vraies données dans le contenu du prompt',
+          problem: 'Exemple : « Mon client Sarah Johnson... ». Si ce prompt est partagé ou va dans Git, les vraies données personnelles sont facilement trouvables.',
+          fix: 'Utilisez toujours des placeholders : <CUSTOMER_NAME>. Les vraies données ne vont que dans l\'entrée à l\'exécution.',
+        },
+        {
+          mistake: 'Ne pas définir les variables d\'entrée',
+          problem: 'Quelqu\'un utilise un prompt localement avec « Ma réunion était aujourd\'hui à 10h... » — mais n\'a pas documenté QUELLES variables pourraient changer. Plus tard, d\'autres utilisent le prompt avec des données en dur.',
+          fix: 'Documentez chaque variable : <MEETING_TIME>, <PARTICIPANT_COUNT>, <FOCUS>. Montrez comment les remplacer.',
+        },
+        {
+          mistake: 'Sur-estimer la gouvernance au début',
+          problem: 'Les équipes commencent avec un workflow d\'approbation complexe (3 réviseurs, comités de contrôle). Après 2 semaines : personne ne contribue.',
+          fix: 'Commencez avec Brouillon → Approuvé → Déprécié. C\'est tout. Workflows plus complexes plus tard, si l\'équipe >15.',
+        },
+        {
+          mistake: 'Ne pas marquer les anciens prompts comme Dépréciés',
+          problem: 'Les anciennes versions s\'accumulent. Les équipes sont confuses : « Dois-je utiliser v1.0 ou v1.1 ? » Les systèmes de production finissent avec les mauvaises anciennes versions.',
+          fix: 'Examens mensuels : les prompts jamais utilisés, marquez comme Déprécié (ne supprimez pas — les références dans le code pourraient casser). Avec raison (« remplacé par v1.2 »).',
+        },
+        {
+          mistake: 'Ne jamais examiner, ne jamais améliorer',
+          problem: 'La bibliothèque stagne. Les mauvais prompts ne sont pas corrigés. Les meilleures versions ne sont jamais promues. L\'équipe perd confiance.',
+          fix: 'Examens mensuels d\'1 heure : analysez les prompts les plus utilisés, intégrez le feedback, promovez le mieux en Approuvé. L\'amélioration continue montre que la bibliothèque est vivante.',
+        },
+      ],
+    },
+    regionalConsiderations: {
+      id: 'regional-considerations',
+      title: 'Considérations régionales et conformité',
+      content: [
+        '**La résidence des données et les exigences de conformité affectent où et comment vous stockez les prompts, surtout si les corps de prompts contiennent des données client sensibles comme placeholders.**',
+        'En avril 2026, les principales contraintes par région :',
+      ],
+      items: [
+        '**UE / RGPD** : si les templates de prompts contiennent ou référencent des données personnelles, l\'outil de stockage doit être conforme RGPD. Notion, Airtable et PromptQuorum offrent tous l\'hébergement EU ; vérifiez les paramètres avant d\'activer pour les workflows sensibles. **CNIL** : la CNIL recommande l\'IA locale quand vous traitez des données professionnelles sensibles (données financières, médicales, légales).',
+        '**US SOC 2** : pour les clients d\'entreprise qui exigent la conformité des fournisseurs, choisissez les outils avec certification SOC 2 Type II (Notion, Airtable, PromptQuorum en 2026).',
+        '**Secteurs réglementés (santé, finance, droit)** : les prompts de système contenant des identifiants de patients ou des numéros de dossier financier doivent rester dans votre propre infrastructure. Utilisez le stockage basé sur Git ou une option auto-hébergée — pas un outil SaaS grand public.',
+        '**Conseil** : séparez les prompts sensibles (ceux qui acceptent les PII en entrée) des prompts à usage général. Appliquez un contrôle d\'accès plus strict et une rétention plus courte au groupe sensible.',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: 'Ne stockez JAMAIS les vraies PII dans le contenu du prompt',
+          text: 'Les templates de prompts doivent utiliser des placeholders comme <CUSTOMER_NAME> — jamais les vrais noms, emails ou IDs de dossier. Les vraies données ne vont que dans l\'entrée à l\'exécution, pas dans le template stocké.',
+        },
+      ],
+    },
+    faqSection: {
+      id: 'faq-section',
+      title: 'Questions fréquemment posées',
+      faqs: [
+        {
+          q: 'Qu\'est-ce qu\'une bibliothèque de prompts ?',
+          a: 'Une bibliothèque de prompts est une collection structurée et consultable de prompts que votre équipe gère comme une source unique de vérité. Elle peut vivre dans un repo Git, une base de données Notion, Airtable, une Google Sheet ou un outil dédié. L\'objectif : permettre la réutilisation, améliorer la qualité, intégrer plus vite.',
+        },
+        {
+          q: 'Quand notre équipe devrait-elle utiliser une bibliothèque plutôt que des notes personnelles ?',
+          a: 'Dès que plus d\'une personne utilise les mêmes prompts. Les notes personnelles fonctionnent pour les individus — mais quand votre équipe se développe, vous perdez les meilleurs prompts et gaspillez du temps en double travail.',
+        },
+        {
+          q: 'Combien de temps faut-il pour créer une bibliothèque utilisable ?',
+          a: 'Une bibliothèque minimale avec 10–15 prompts testés prend 2–4 semaines (selon la taille de l\'équipe). Avec une utilisation active et des examens mensuels, la qualité s\'améliore continuellement. Comptez moins d\'1 heure par semaine de maintenance une fois établie.',
+        },
+        {
+          q: 'Comment amener mon équipe à contribuer réellement ?',
+          a: 'Rendez la contribution aussi simple que possible : un formulaire ou modèle Git, des exigences de métadonnées claires, et des examens mensuels. Le plus important : montrez la valeur — les équipes contribuent quand elles voient que leurs prompts sont utilisés et améliorés.',
+        },
+        {
+          q: 'Une bibliothèque de prompts est-elle la même qu\'un system prompt ?',
+          a: 'Non. Un system prompt est un ensemble de règles que vous définissez une fois et appliquez à toutes les entrées. Une bibliothèque de prompts est une collection de différents prompts pour différentes tâches — chacun avec ses propres métadonnées et versions.',
+        },
+        {
+          q: 'À quelle fréquence une équipe doit-elle examiner et nettoyer ?',
+          a: 'Mensuellement est idéal. Marquez les prompts peu utilisés comme Dépréciés, promovez les versions améliorées en Approuvé, et créez de nouvelles catégories si l\'utilisation change. Les équipes qui examinent mensuellement ont 20–30 % moins de bloat après 6 mois.',
+        },
+        {
+          q: 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?',
+          a: 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-4o » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.',
+        },
+        {
+          q: 'Quelle est la différence entre une bibliothèque de prompts et une plateforme de gestion ?',
+          a: 'Une bibliothèque de prompts est une collection d\'entrées structurées que votre équipe gère — elle peut vivre dans un repo Git, une feuille de calcul ou un outil dédié. Une plateforme de gestion ajoute l\'exécution, les analyses, le contrôle de version et les fonctionnalités de collaboration en plus du concept de bibliothèque. Commencez avec une bibliothèque simple et mettez à niveau vers une plateforme quand le volume ou la gouvernance le justifie.',
+        },
+      ],
+    },
+    relatedReading: {
+      id: 'related-reading',
+      title: 'Lectures complémentaires',
+      items: [
+        { title: 'Fondamentaux du Prompt Engineering', url: '/prompt-engineering/fundamentals?lang=fr' },
+        { title: 'Few-Shot Prompting : Mieux prompter avec des exemples', url: '/prompt-engineering/few-shot-prompting?lang=fr' },
+        { title: 'Chain-of-Thought Prompting : Raisonnement étape par étape', url: '/prompt-engineering/chain-of-thought?lang=fr' },
+        { title: 'PromptQuorum : Gestion de prompts simplifiée', url: '/features?lang=fr' },
+        { title: 'System Prompt vs User Prompt : Quelle est la différence ?', url: '/prompt-engineering/system-prompt-vs-user-prompt?lang=fr' },
+        { title: 'Test et optimisation de prompts', url: '/prompt-engineering/prompt-testing?lang=fr' },
+      ],
+    },
+    sources: {
+      id: 'sources',
+      title: 'Sources & Lectures complémentaires',
+      items: [
+        { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
+        { title: 'Anthropic: Prompt Engineering Overview', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
+        { title: 'Lilian Weng: Prompt Engineering (2023)', url: 'https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/' },
+        { title: 'Google DeepMind: Prompting Strategies', url: 'https://ai.google.dev/gemini-api/docs/prompting-strategies' },
+      ],
+    },
+  },
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-09-24',
+},
     ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   };
