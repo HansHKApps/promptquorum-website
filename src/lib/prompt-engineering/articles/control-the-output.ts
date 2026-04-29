@@ -738,7 +738,367 @@ export const article: Record<Language, PEArticle> = {
 
       },
     },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-24',
+      theme: 'Techniques',
+      title: 'Contrôler les sorties IA : conformité au schéma JSON, decoding contraint et sélection de format',
+      intro: '**Le decoding contraint atteint 100 % de conformité au schéma JSON — aucune sortie malformée. Avant cette technologie, les modèles obtenaient moins de 40 % sur les schémas complexes et échouaient silencieusement sur les cas limites. Le contrôle des sorties est la variable d\'ingénierie qui distingue les prototypes (80 % de succès) des systèmes en production (100 % de fiabilité).**',
+      publishDate: '2026-03-24',
+      readTime: '10 min de lecture',
+
+      seoTitle: 'Contrôler les sorties IA : JSON Schema et format (2026)',
+      metaDescription: 'Contrôler les sorties LLM avec JSON Mode et decoding contraint. 100 % de conformité sans perte de qualité de raisonnement. Guide de production pour GPT, Claude et Gemini.',
+
+      educationalLevel: 'Beginner',
+      audience: 'Développeurs construisant des pipelines LLM en production nécessitant des sorties structurées',
+      toc: [
+        { label: 'Quels sont les trois niveaux de contrôle des sorties ?', anchor: 'three-levels' },
+        { label: 'Comment contrôler le format via le prompt engineering ?', anchor: 'prompt-engineering' },
+        { label: 'À quoi ressemble un bon prompt de sortie structurée ?', anchor: 'good-prompt' },
+        { label: 'Quelles règles de format s\'appliquent à chaque modèle ?', anchor: 'model-rules' },
+        { label: 'Quels paramètres d\'échantillonnage contrôlent la génération ?', anchor: 'sampling-parameters' },
+        { label: 'Quel est le compromis entre raisonnement et format ?', anchor: 'reasoning-tradeoff' },
+        { label: 'Comment les meilleurs modèles se comparent-ils ?', anchor: 'model-comparison' },
+        { label: 'Comment stop sequences et contraintes négatives diffèrent-ils ?', anchor: 'stop-sequences' },
+        { label: 'Quel format de sortie utiliser en production ?', anchor: 'production-format' },
+        { label: 'Considérations mondiales et régionales', anchor: 'global-regional' },
+        { label: 'Points clés', anchor: 'key-takeaways' },
+        { label: 'Contrôler le format des sorties IA (étape par étape)', anchor: 'how-to' },
+        { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Contrôler les sorties IA : conformité au schéma JSON, decoding contraint et sélection de format',
+        description: 'Contrôler les sorties LLM avec JSON Mode et decoding contraint. 100 % de conformité sans perte de qualité. Guide de production pour GPT, Claude et Gemini.',
+        url: 'https://www.promptquorum.com/prompt-engineering/control-the-output?lang=fr',
+        inLanguage: 'fr',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-29',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=fr', width: 1200, height: 630 },
+        keywords: ['contrôle des sorties', 'decoding contraint', 'schéma JSON', 'sortie structurée', 'temperature', 'top-p', 'paramètres d\'échantillonnage', 'prompt engineering'],
+        about: [
+          { '@type': 'Thing', name: 'Decoding contraint' },
+          { '@type': 'Thing', name: 'Conformité au schéma JSON' },
+          { '@type': 'Thing', name: 'Paramètres d\'échantillonnage' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'Mistral AI' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Quelle est la différence entre Temperature et Top-P dans les LLM ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Temperature (T) redimensionne la distribution de probabilité softmax des prédictions de tokens : T = 0.0 sélectionne toujours le token de plus haute probabilité (déterministe) ; T = 1.0 conserve la distribution naturelle ; T = 2.0 l\'aplatit vers l\'aléatoire. Top-P (nucleus sampling) sélectionne ensuite parmi le plus petit ensemble de tokens dont la probabilité cumulée atteint P — à Top-P = 0.9, seuls les tokens couvrant 90 % de la masse de probabilité cumulative sont éligibles. Ces deux paramètres contrôlent des aspects différents et ne doivent pas être définis simultanément à des valeurs élevées, car ils amplifient les sorties erratiques.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Forcer la sortie JSON réduit-il la qualité des réponses IA ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui — de façon mesurable. Le benchmark BAML sur BFCL a montré que le parsing libre aligné sur le schéma atteint 93,63 % de précision contre 91,37 % pour le decoding contraint d\'OpenAI — une réduction de 2,26 points. Le mécanisme est le masquage de tokens : le decoding contraint empêche le modèle de sélectionner des tokens qui violeraient le schéma. Pour les tâches de raisonnement complexes, l\'approche en deux étapes (libre → structuration spécialisée) préserve la qualité tout en atteignant 100 % de conformité.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qu\'est-ce que le decoding contraint et comment garantit-il la sortie JSON ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Le decoding contraint applique un automate à états finis (FSM) au processus de génération de tokens. À chaque étape, le FSM évalue quels tokens produiraient une sortie compatible avec le schéma cible — et masque tous les autres à probabilité zéro. OpenAI l\'implémente via `response_format: { type: "json_schema", strict: true }`. Anthropic via le Strict Tool Use Mode. Les deux peuvent s\'exécuter simultanément sur l\'API Anthropic.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quel format de sortie utiliser pour les pipelines LLM en production ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'JSON est le standard pour les pipelines LLM en production car il correspond directement aux objets API typés et est nativement supporté par tous les grands fournisseurs (OpenAI, Anthropic, Google Gemini). JSONL pour les flux d\'événements et le traitement par lots. CSV uniquement pour l\'intégration de systèmes legacy. L\'architecture recommandée 2026 : TOON pour l\'efficacité des tokens d\'entrée + JSON avec decoding contraint uniquement pour la sortie de l\'étape 2 après le raisonnement libre de l\'étape 1.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Comment les stop sequences diffèrent-ils des contraintes négatives dans les prompts ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Les stop sequences sont appliquées au niveau API — le modèle arrête la génération dès que la chaîne spécifiée est produite, sans exception. Les contraintes négatives dans le corps du prompt ("Ne pas inclure d\'explications", "Pas de markdown") instruisent le modèle à éviter certaines sorties mais ne sont pas contraignantes. Utiliser les deux : stop sequences pour les garanties d\'arrêt structurel, contraintes négatives pour la mise en forme du contenu.' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'fr',
+        name: 'Contrôler les sorties IA : thèmes clés',
+        description: 'Concepts fondamentaux pour gérer les sorties structurées des modèles IA',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Les trois niveaux de contrôle des sorties', description: 'Approches par prompt, par schéma et decoding contraint avec leurs compromis' },
+          { '@type': 'ListItem', position: 2, name: 'Contrôle du format de sortie via les prompts', description: 'Techniques spécifiques à chaque modèle pour la conformité JSON sans decoding contraint' },
+          { '@type': 'ListItem', position: 3, name: 'Paramètres d\'échantillonnage', description: 'Temperature, Top-P, Top-K, max_tokens et paramètres de pénalité expliqués' },
+          { '@type': 'ListItem', position: 4, name: 'Le compromis raisonnement-format', description: 'Comprendre la réduction de précision du decoding contraint et les solutions en deux étapes' },
+          { '@type': 'ListItem', position: 5, name: 'Stop sequences et contraintes', description: 'Utiliser les contraintes au niveau API et les instructions négatives pour contrôler les sorties' },
+        ],
+      },
+      sections: {
+
+        definition: {
+          title: 'Quels sont les trois niveaux de contrôle des sorties ?',
+          content: [
+            'Le contrôle des sorties opère à trois niveaux distincts — par prompt, par schéma et decoding contraint — chacun offrant des garanties de format progressivement plus fortes, au prix de compromis progressivement plus élevés sur la qualité du raisonnement.',
+            'Le formatage par prompt instruit le modèle en langage naturel ("Return JSON with fields: name, email, score"). Cela fonctionne dans 80–95 % des cas mais échoue silencieusement sur les cas limites, sans garantie de type, nécessitant une gestion d\'erreurs pour les 5–20 % de réponses malformées. Les approches par schéma (function calling / tool use) définissent formellement la structure de sortie à 95–99 % de conformité — mais le schéma reste une suggestion forte, pas une contrainte absolue. Le decoding contraint natif utilise des automates à états finis pour masquer les tokens invalides lors de la génération, produisant des sorties valides à 100 % avec certitude mathématique.',
+            'L\'approche en deux étapes — laisser Claude Opus 4.7 (Anthropic) ou GPT-5.5 (OpenAI) raisonner librement en étape 1, puis passer la sortie à un petit modèle spécialisé (Osmosis-Structure-0.6B, entraîné sur 500 000 transformations synthétiques non structurées → structurées) en étape 2 — atteint les garanties de format sans la pénalité de qualité du decoding contraint.',
+            'En un mot : adaptez le niveau de contrainte de sortie à la tâche — utilisez le decoding contraint uniquement quand la correction de format importe plus que la profondeur de raisonnement.',
+          ],
+          columns: ['Niveau', 'Taux de conformité', 'Impact sur le raisonnement', 'Idéal pour'],
+          rows: [
+            { 'Niveau': 'Par prompt ("return JSON")', 'Taux de conformité': '80–95 %', 'Impact sur le raisonnement': 'Aucun', 'Idéal pour': 'Prototypage ; pipelines simples' },
+            { 'Niveau': 'Function calling / Tool use', 'Taux de conformité': '95–99 %', 'Impact sur le raisonnement': 'Minimal', 'Idéal pour': 'La plupart des applications en production' },
+            { 'Niveau': 'Decoding contraint natif (strict)', 'Taux de conformité': '100 %', 'Impact sur le raisonnement': 'Réduction de qualité 2–10 %', 'Idéal pour': 'Extraction de données ; pipelines à fort volume' },
+            { 'Niveau': 'Deux étapes (libre → modèle spécialisé)', 'Taux de conformité': '~100 %', 'Impact sur le raisonnement': 'Aucun', 'Idéal pour': 'Raisonnement complexe + format garanti' },
+          ],
+          tableFormat: true,
+        },
+
+        promptStructure: {
+          title: 'Comment contrôler le format des sorties via le prompt engineering ?',
+          content: [
+            'Des instructions de schéma de sortie explicites — placées au début du prompt système pour Claude Opus 4.7 et immédiatement avant le contenu utilisateur pour GPT-5.5 — produisent des taux de conformité de 85–95 % sans la pénalité de qualité du decoding contraint natif.',
+            'Claude Opus 4.7 (Anthropic) répond mieux aux instructions de format placées en début de prompt système avec des balises XML. GPT-5.5 (OpenAI) performe mieux avec le schéma placé juste avant le contenu utilisateur sous forme de règles numérotées. Gemini 3.1 Pro (Google DeepMind) produit les sorties structurées les plus fiables quand le schéma est rappelé en début et en fin de prompt.',
+          ],
+        },
+
+        badPrompt: {
+          content: ['**Mauvais prompt — non structuré, sans spécification de format :**'],
+          blockquote: 'Analyse this customer review and tell me the sentiment, key issues, and urgency.',
+        },
+
+        goodPrompt: {
+          title: 'À quoi ressemble un bon prompt de sortie structurée (Claude Opus 4.7) ?',
+          content: ['**Bon prompt — Claude Opus 4.7**'],
+          blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
+        },
+
+        promptOutcome: {
+          content: [
+            'Le prompt structuré XML ancre le contrat de format de sortie tout en préservant le raisonnement libre dans le bloc `<task>`. Aucun decoding contraint requis — Claude Opus 4.7 se conforme dans plus de 93 % des appels en production avec cette structure.',
+          ],
+        },
+
+        goodPromptGPT: {
+          title: 'À quoi ressemble un bon prompt de sortie structurée (GPT-5.5) ?',
+          content: ['**Bon prompt — GPT-5.5**'],
+          blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
+        },
+
+        modelRules: {
+          title: 'Quelles règles de format de sortie s\'appliquent à chaque modèle ?',
+          content: ['Chaque grand LLM a des préférences structurelles distinctes pour la conformité au format de sortie :'],
+          items: [
+            '**Claude Opus 4.7 (Anthropic)** — Balises XML (`<output>`, `<format>`, `<constraints>`) ; schéma en tête ; "Retourne uniquement le JSON, rien d\'autre"',
+            '**GPT-5.5 (OpenAI)** — Règles de format numérotées ; schéma placé après l\'instruction principale ; "Réponds avec du JSON valide. Pas de markdown. Pas d\'explication."',
+            '**Gemini 3.1 Pro (Google DeepMind)** — Schéma concis et explicite en début et fin ; exemple one-shot du format de sortie souhaité directement dans le prompt',
+            '**Modèles locaux via Ollama** (LLaMA 3.1 7B, Mistral) — Plus sensibles à la dérive de format ; un exemple one-shot intégré directement dans le prompt est nécessaire pour une sortie JSON fiable',
+          ],
+        },
+
+        parameters: {
+          title: 'Quels paramètres d\'échantillonnage contrôlent la génération de sorties ?',
+          content: [
+            'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty et presence_penalty sont six paramètres indépendants qui déterminent conjointement la longueur, l\'aléatoire et la répétition des sorties — et doivent être définis de façon cohérente, sans contradiction.',
+            'Temperature (T) redimensionne la distribution softmax : à T = 0.0, le modèle sélectionne toujours le token de plus haute probabilité (déterministe) ; à T = 2.0, la distribution est quasi-plate et la sortie devient incohérente. Top-P (nucleus sampling) sélectionne parmi le plus petit ensemble de tokens dont la probabilité cumulée atteint P — à Top-P = 0.9, le modèle ne considère que les tokens couvrant les 90 % supérieurs de la masse de probabilité. Top-K restreint la génération aux K tokens de plus haute probabilité à chaque étape ; Top-K = 1 équivaut au décodage glouton.',
+            'Formule softmax avec temperature : P(token) = exp(logit / T) / sum(exp(logits / T)). Quand T tend vers 0, le token au logit le plus élevé tend vers la probabilité 1.0. Quand T tend vers l\'infini, tous les tokens tendent vers une probabilité égale.',
+          ],
+          columns: ['Paramètre', 'Plage de valeurs', 'Focalisé / Factuel', 'Créatif / Diversifié'],
+          rows: [
+            { 'Paramètre': 'Temperature (T)', 'Plage de valeurs': '0.0–2.0', 'Focalisé / Factuel': '0.0–0.3', 'Créatif / Diversifié': '0.7–1.0' },
+            { 'Paramètre': 'Top-P', 'Plage de valeurs': '0.0–1.0', 'Focalisé / Factuel': '0.3–0.5', 'Créatif / Diversifié': '0.9–1.0' },
+            { 'Paramètre': 'Top-K', 'Plage de valeurs': '1–taille du vocabulaire', 'Focalisé / Factuel': '10–20', 'Créatif / Diversifié': '50–100' },
+            { 'Paramètre': 'max_tokens', 'Plage de valeurs': 'selon la tâche', 'Focalisé / Factuel': '256–512', 'Créatif / Diversifié': '2 048–8 192' },
+            { 'Paramètre': 'frequency_penalty', 'Plage de valeurs': '-2.0 à 2.0', 'Focalisé / Factuel': '0.3–0.5 (réduire la répétition)', 'Créatif / Diversifié': '0.0–0.2' },
+            { 'Paramètre': 'presence_penalty', 'Plage de valeurs': '-2.0 à 2.0', 'Focalisé / Factuel': '0.0–0.2', 'Créatif / Diversifié': '0.5–0.8' },
+          ],
+          tableFormat: true,
+        },
+
+        parameterWarning: {
+          content: [
+            '**Règle critique :** Ne définissez pas simultanément Temperature et Top-P à des valeurs élevées. Temperature redimensionne d\'abord la distribution complète ; Top-P échantillonne ensuite depuis la masse de probabilité déjà redimensionnée. Combiner T = 1.5 et Top-P = 0.95 produit des sorties plus erratiques que chaque paramètre seul — les deux paramètres sont conçus comme des alternatives, pas à empiler.',
+            '`frequency_penalty` réduit la probabilité des tokens proportionnellement à leur nombre d\'occurrences — les valeurs positives éliminent les formulations répétitives ; les valeurs négatives encouragent activement la répétition. `presence_penalty` applique une pénalité forfaitaire unique à tout token déjà apparu, indépendamment de la fréquence — il pousse le modèle à introduire nouveau vocabulaire et nouveaux sujets plutôt que répéter les existants.',
+          ],
+        },
+
+        reasoningTradeoff: {
+          title: 'Quel est le compromis entre qualité de raisonnement et garanties de format ?',
+          content: [
+            'Forcer JSON via le decoding contraint réduit la précision du modèle de 2,26 points de pourcentage sur les benchmarks de function calling — le parsing libre aligné sur le schéma de BAML a atteint 93,63 % de précision sur BFCL contre 91,37 % pour le decoding contraint strict d\'OpenAI sur le même benchmark.',
+            'Le mécanisme : le decoding contraint applique un automate qui masque les tokens incompatibles avec la position actuelle dans le schéma. Un modèle qui veut produire `51.7` pour un champ float est contraint de produire `51` si le schéma spécifie un entier — résultat techniquement valide mais factuellement dégradé. Le prompting Chain-of-Thought (CoT) est incompatible avec le decoding contraint de la même façon : inclure un champ de raisonnement force le modèle à échapper les sauts de ligne, guillemets et caractères spéciaux dans une chaîne JSON — ce qui dégrade mesurably la qualité de raisonnement.',
+            'La solution de niveau production pour les systèmes nécessitant profondeur de raisonnement et garanties de format : (1) **Étape 1** — Envoyer à GPT-5.5 ou Claude Opus 4.7 sans contraintes : "Analysez ceci, raisonnez étape par étape, expliquez votre logique." (2) **Étape 2** — Passer la sortie de l\'étape 1 à un petit modèle spécialisé (Osmosis-Structure-0.6B ou GPT-5.5-mini avec `strict: true`) : "Extrayez les données clés de cette analyse et retournez-les dans ce schéma JSON exact."',
+            'Cette architecture préserve la qualité de raisonnement de l\'étape 1 et atteint 100 % de conformité de format en étape 2, à une fraction du coût d\'un modèle frontier complet en mode contraint.',
+          ],
+        },
+
+        promptquorumTest: {
+          title: 'Comment les meilleurs modèles se comparent-ils sur le contrôle des sorties ?',
+          content: [
+            'Testé dans [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de contrôle des sorties répartis sur trois modèles : Claude Opus 4.7 a atteint 93 % de conformité JSON avec des instructions de format balisées XML sans decoding contraint. GPT-5.5 a atteint 89 % de conformité avec des règles de format numérotées. Gemini 3.1 Pro a atteint 91 % de conformité avec le schéma précisé en début et fin. Les trois modèles ont produit des raisonnements plus courts et moins complets quand `strict: true` était activé — cohérent avec la perte de 2,26 points observée sur le benchmark BFCL.',
+          ],
+        },
+
+        stopSequences: {
+          title: 'Comment stop sequences et contraintes négatives diffèrent-ils ?',
+          content: [
+            'Les stop sequences — tokens qui arrêtent immédiatement la génération du modèle — sont le mécanisme de contrôle le plus déterministe : le modèle s\'arrête dès que la chaîne spécifiée apparaît, quel que soit le contexte restant.',
+            'Les stop sequences sont passées comme un tableau de chaînes dans l\'appel API (paramètre `stop` chez OpenAI, `stop_sequences` chez Anthropic). Usages courants en production :',
+          ],
+          items: [
+            '`["###"]` — arrête la génération après un marqueur de section structuré, empêchant la continuation vers du contenu non pertinent',
+            '`["</output>"]` — s\'arrête après une balise XML fermante, garantissant que seul le contenu balisé est retourné',
+            '`["\\n\\n"]` — limite la sortie à un seul paragraphe pour les tâches de classification ou de réponse courte',
+            '`["Human:", "User:"]` — empêche le modèle d\'halluciner une continuation de conversation simulée',
+          ],
+        },
+
+        stopSequencesConclusion: {
+          content: [
+            'Les contraintes négatives dans le corps du prompt — "Ne pas inclure d\'explications", "Pas de markdown", "Ne pas ajouter de phrases d\'introduction" — réduisent les patterns de sortie indésirables mais ne peuvent pas garantir la conformité comme le font les stop sequences. Utiliser les deux : stop sequences pour l\'arrêt structurel, contraintes négatives pour la mise en forme du contenu.',
+          ],
+        },
+
+        formatChoices: {
+          title: 'Quel format de sortie utiliser pour les pipelines en production ?',
+          content: [
+            'JSON est le format de sortie dominant pour les pipelines LLM en production car il correspond directement aux objets API, tableaux et données typées — mais forcer JSON via le decoding contraint sacrifie 2–10 % de qualité de raisonnement, faisant du choix de format une décision architecturale significative.',
+            'TOON (Token-Optimised Output Notation) s\'est imposé comme format d\'entrée efficace pour les prompts structurés longs — il utilise la minimisation des espaces et des clés abrégées pour réduire la consommation de tokens d\'entrée avant que le modèle génère la sortie en JSON. L\'architecture de production recommandée 2026 : TOON pour l\'entrée (efficacité des tokens) + JSON avec decoding contraint pour la sortie (format garanti) — appliqué uniquement après la fin du raisonnement libre en étape 1.',
+          ],
+          columns: ['Format de sortie', "Cas d'usage", 'Notes'],
+          rows: [
+            { 'Format de sortie': 'JSON', "Cas d'usage": 'APIs, pipelines, bases documentaires', 'Notes': 'Support natif des sorties structurées chez tous les grands fournisseurs' },
+            { 'Format de sortie': 'JSONL', "Cas d'usage": 'Flux d\'événements, traitement par lots', 'Notes': 'Un objet JSON par ligne ; adapté au streaming et à la journalisation' },
+            { 'Format de sortie': 'CSV', "Cas d'usage": 'Intégration de systèmes legacy', 'Notes': 'Plus simple mais sans structure imbriquée ; adapté aux données tabulaires' },
+            { 'Format de sortie': 'YAML', "Cas d'usage": 'Artefacts de configuration', 'Notes': 'Lisible par l\'humain ; utilisé en CI/CD et infrastructure' },
+            { 'Format de sortie': 'XML', "Cas d'usage": 'Intégration enterprise', 'Notes': 'Verbeux ; préféré par Claude comme format de structure de prompt, pas de sortie' },
+            { 'Format de sortie': 'Markdown', "Cas d'usage": 'Rapports, documentation lisibles', 'Notes': 'Mauvais pour le traitement en aval ; idéal pour les lecteurs humains' },
+          ],
+          tableFormat: true,
+        },
+
+        globalContext: {
+          title: 'Considérations mondiales et régionales pour le contrôle des sorties',
+          content: [
+            'Les entreprises européennes construisant des pipelines LLM traitant des données personnelles doivent appliquer l\'article 25 du RGPD (protection des données dès la conception) à la conception du schéma de sortie — les sorties exposant des champs de données personnelles dans des charges JSON nécessitent une base légale au titre de l\'article 6 du RGPD. La CNIL a publié en janvier 2026 des orientations selon lesquelles les sorties de décision automatisée — y compris les sorties LLM structurées utilisées dans des workflows de scoring ou d\'éligibilité — peuvent déclencher des droits à l\'examen humain au titre de l\'article 22 du RGPD.',
+            'Pour les équipes UE nécessitant une inférence on-premise avec contrôle des sorties structurées, Mistral AI (France) supporte le decoding contraint basé sur vLLM avec des paramètres JSON guidés — permettant une conformité garantie au schéma JSON entièrement dans l\'infrastructure UE, satisfaisant les exigences de résidence des données du RGPD selon l\'article 46. La CNIL recommande par ailleurs le recours aux modèles d\'inférence locale pour le traitement de données professionnelles sensibles (financières, médicales, juridiques), afin d\'éviter tout risque d\'accès non autorisé lors des appels API externes. Mistral Large s\'exécute on-premise avec support des sorties structurées.',
+            'Les entreprises chinoises utilisent Qwen 2.5 (Alibaba) et DeepSeek V3 (DeepSeek AI) pour les pipelines de production à sorties contrôlées. Les deux modèles supportent le mode JSON et sont déployables localement sur l\'infrastructure enterprise chinoise selon les Mesures provisoires chinoises sur l\'IA générative (2023). Les entreprises japonaises exécutant l\'inférence locale via Ollama — LLaMA 3.1 7B à 8 Go de RAM, LLaMA 3.1 13B à 16 Go — bénéficient d\'Outlines et XGrammar pour le decoding contraint sur les modèles auto-hébergés.',
+          ],
+        },
+
+        tldr: {
+          title: 'Points clés',
+          isTldr: true,
+          items: [
+            'Avant les sorties structurées, les modèles obtenaient moins de 40 % sur les schémas JSON complexes ; `strict: true` d\'OpenAI atteint 100 %',
+            'Le decoding contraint réduit la précision de raisonnement de 2,26 points sur BFCL — utiliser l\'approche en deux étapes (raisonnement libre → modèle spécialisé) pour les tâches complexes',
+            'Ne pas combiner Temperature élevée et Top-P élevé simultanément — ils s\'amplifient pour produire des sorties plus erratiques que chaque paramètre seul',
+            '`frequency_penalty` (plage -2.0 à 2.0) réduit la répétition proportionnelle à la fréquence ; `presence_penalty` (plage -2.0 à 2.0) applique une pénalité forfaitaire sur tout token déjà vu — les deux à 0.3–0.5 pour les sorties factuelles focalisées',
+            'Les stop sequences sont le seul mécanisme d\'arrêt déterministe — contrairement aux contraintes négatives dans le corps du prompt, elles ne peuvent pas être outrepassées par le modèle',
+            'Plages de temperature : T = 0.0–0.3 pour les tâches factuelles déterministes ; T = 0.7–1.0 pour les tâches créatives ; T > 1.2 risque l\'incohérence en production',
+            'Claude Opus 4.7 atteint 93 % de conformité JSON avec des prompts de format XML ; GPT-5.5 atteint 89 % avec des règles numérotées — tous deux sans decoding contraint',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Erreurs courantes avec le contrôle des sorties',
+          mistakes: [
+            {
+              mistake: 'Définir Temperature et Top-P simultanément à des valeurs élevées',
+              problem: 'Ils s\'amplifient — T=1.5 + Top-P=0.95 produit des sorties plus erratiques que chaque paramètre seul.',
+              fix: 'Utilisez l\'un ou l\'autre comme contrôle principal de l\'aléatoire, pas les deux.'
+            },
+            {
+              mistake: 'Forcer JSON sur des tâches de raisonnement complexes',
+              problem: 'Le decoding contraint réduit la précision de 2–10 %. Le modèle sacrifie la qualité de raisonnement pour maintenir la conformité au schéma.',
+              fix: 'Utilisez plutôt l\'approche en deux étapes : raisonnement libre d\'abord, puis extraction structurée.'
+            },
+            {
+              mistake: 'Écrire "return JSON" sans montrer le schéma exact',
+              problem: 'Le modèle devine les noms de champs, les types et l\'imbrication — produisant un JSON invalide ou malformé.',
+              fix: 'Toujours fournir le schéma complet avec les types de champs et les valeurs enum.'
+            },
+            {
+              mistake: 'Se fier aux contraintes négatives du prompt pour le formatage critique',
+              problem: '"Pas de markdown" peut être ignoré par le modèle, surtout avec une Temperature élevée.',
+              fix: 'Utiliser les stop sequences au niveau API — c\'est le seul mécanisme d\'arrêt déterministe.'
+            },
+            {
+              mistake: 'Copier les réglages de Temperature entre modèles',
+              problem: 'T=0.7 sur GPT-5.5 et T=0.7 sur Claude produisent des distributions de probabilité différentes.',
+              fix: 'Tester chaque réglage de paramètre par modèle dans votre pipeline de production.'
+            }
+          ],
+        },
+
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Qu\'est-ce que le prompt engineering ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — principes fondamentaux de la conception d\'instructions IA structurées',
+            '[Temperature et Top-P expliqués](/prompt-engineering/temperature-and-top-p?lang=fr) — analyse approfondie des deux paramètres d\'aléatoire principaux',
+            '[Écrire de meilleur code avec l\'IA](/prompt-engineering/write-better-code-with-ai?lang=fr) — techniques de contrôle des sorties dans les workflows de génération de code',
+            '[Tool Use et Function Calling](/prompt-engineering/tool-use-and-function-calling?lang=fr) — sortie structurée via les définitions de tools et les schémas de fonctions',
+            '[Tokens et économie des tokens](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) — comprendre les coûts en tokens pour le decoding contraint et les pipelines en deux étapes',
+            '[Gestion des erreurs dans les applications LLM](/prompt-engineering/error-handling-llm?lang=fr) — détecter et récupérer les sorties malformées en production',
+          ],
+        },
+
+        howToStart: {
+          title: 'Contrôler le format des sorties IA',
+          numberedItems: [
+            '**Toujours spécifier explicitement le format de sortie souhaité dans le prompt.** Au lieu de "résumez ceci", dites : "Résumez sous forme de liste à puces de 5–7 éléments, 1–2 phrases chacun. Voix active. Pas d\'opinions." Soyez précis sur la structure : puces, tableaux, JSON, markdown, texte brut.',
+            '**Utilisez le schéma JSON pour imposer les sorties structurées quand c\'est disponible (OpenAI, Anthropic).** Pour l\'extraction de données ou la génération de contenu lisible par machine, définissez le schéma : noms de champs, types, champs obligatoires, contraintes enum. Le modèle formatera automatiquement la sortie en conséquence.',
+            '**Fournissez un exemple du format de sortie exact que vous souhaitez.** Montrez au modèle un exemple concret : \'Formater ainsi : { "topic": "...", "key_points": [...], "confidence": "high|medium|low" }.\' Les exemples sont plus puissants que les descriptions seules.',
+            '**Utilisez un langage basé sur les contraintes : "Vous devez X, vous ne devez pas Y, toujours Z."** Évitez le langage mou ("essayez de", "visez à"). Dites : "Retournez exactement 3 étapes, pas plus, pas moins. N\'utilisez pas de jargon technique. Incluez toujours un avertissement si la recommandation a des limites."',
+            '**Testez votre spécification de format de sortie sur un exemple avant de l\'exécuter à grande échelle.** Générez une sortie, vérifiez si elle correspond à votre spécification, ajustez le prompt si nécessaire. Cela évite de découvrir des problèmes de formatage après avoir traité 100 éléments.',
+          ],
+        },
+
+        faq: {
+          title: 'Questions fréquentes',
+          faqs: [
+            {
+              q: 'Quelle est la différence entre Temperature et Top-P dans les LLM ?',
+              a: 'Temperature (T) redimensionne la distribution de probabilité softmax des prédictions de tokens : T = 0.0 sélectionne toujours le token de plus haute probabilité (déterministe) ; T = 1.0 conserve la distribution naturelle ; T = 2.0 l\'aplatit vers l\'aléatoire. Top-P (nucleus sampling) sélectionne ensuite parmi le plus petit ensemble de tokens dont la probabilité cumulée atteint P — à Top-P = 0.9, seuls les tokens couvrant 90 % de la masse de probabilité sont éligibles. Les deux contrôlent des aspects différents et ne doivent pas être définis simultanément à des valeurs élevées.',
+            },
+            {
+              q: 'Forcer la sortie JSON réduit-il la qualité des réponses IA ?',
+              a: 'Oui — de façon mesurable. Le benchmark BAML sur BFCL a montré que le parsing libre aligné sur le schéma atteint 93,63 % de précision contre 91,37 % pour le decoding contraint d\'OpenAI — une réduction de 2,26 points. Le mécanisme est le masquage de tokens. Pour les tâches complexes, l\'approche en deux étapes (libre → structuration spécialisée) préserve la qualité tout en atteignant 100 % de conformité.',
+            },
+            {
+              q: 'Qu\'est-ce que le decoding contraint et comment garantit-il la sortie JSON ?',
+              a: 'Le decoding contraint applique un automate à états finis (FSM) au processus de génération de tokens. À chaque étape, le FSM évalue quels tokens produiraient une sortie schéma-compatible — et masque tous les autres à probabilité zéro. OpenAI l\'implémente via `response_format: { type: "json_schema", strict: true }`. Anthropic via le Strict Tool Use Mode.',
+            },
+            {
+              q: 'Quel format de sortie utiliser pour les pipelines LLM en production ?',
+              a: 'JSON est le standard pour les pipelines en production car il correspond directement aux objets API typés et est nativement supporté par tous les grands fournisseurs (OpenAI, Anthropic, Google Gemini). JSONL pour les flux d\'événements. CSV uniquement pour les systèmes legacy. Architecture recommandée 2026 : TOON pour l\'entrée + JSON avec decoding contraint pour la sortie d\'étape 2 après raisonnement libre en étape 1.',
+            },
+            {
+              q: 'Comment les stop sequences diffèrent-ils des contraintes négatives dans les prompts ?',
+              a: 'Les stop sequences sont appliquées au niveau API — le modèle arrête la génération dès que la chaîne spécifiée est produite, sans exception. Les contraintes négatives dans le corps du prompt instruisent le modèle à éviter certaines sorties mais ne sont pas contraignantes. Utiliser les deux : stop sequences pour les garanties d\'arrêt structurel, contraintes négatives pour la mise en forme du contenu.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources et lectures complémentaires',
+          items: [
+            '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — documentation officielle sur le decoding contraint, le mode JSON strict et les garanties de conformité au schéma',
+            '[BoundaryML / BAML, 2025. "Structured Outputs Create False Confidence"](https://boundaryml.com/blog/structured-outputs-create-false-confidence) — benchmark : 93,63 % vs 91,37 % de précision — parsing libre vs decoding contraint sur BFCL',
+            '[Hannecke, 2025. "Beyond JSON: Picking the Right Format for LLM Pipelines"](https://www.linkedin.com/pulse/beyond-json-picking-right-format-llm-pipelines-michael-hannecke-ftnye) — analyse d\'architecture de production : entrée TOON + sortie JSON contrainte',
+          ],
+        },
+
+      },
+    },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   };
