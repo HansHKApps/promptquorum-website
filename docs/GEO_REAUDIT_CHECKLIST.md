@@ -1027,15 +1027,17 @@ _Initial audit date: April 29, 2026 (~42% compliance). Reaudit completed: April 
 - [x] 🟡 **`schema.audience.audienceType` missing** — fixed: added audience object
 - [x] 🟡 **No date signal "As of April 2026"** — fixed: added to `whatToStore` section
 
-**Remaining gaps (deferred, require PE component work):**
-- [ ] 🟢 **`callouts`** — declared in type but not rendered by `PromptEngineeringPostClient.tsx`; needs renderer
-- [ ] 🟢 **`snippets`** (LLM snippet blocks) — same: declared in type, not rendered
-- [ ] 🟢 **`leadAnswerBlock`** — not in type or component; separate component feature ticket
-- [ ] 🟢 **`promptExamples`** — not in type or component; separate component feature ticket
+**Fixed issues (LOW priority — component work, April 29, ~85% → ~97%):**
+- [x] 🟢 **`callouts`** — renderer added to `PromptEngineeringPostClient.tsx` `SectionBlock`; 8 callouts added across 7 sections in article (Rule 17: 1,501–3,000 words → 8 min ✓)
+- [x] 🟢 **`snippets`** (LLM snippet blocks) — renderer added with "In One Sentence" (📍) and "In Plain Terms" (💬) labels; 2 blocks in article (`whatIsLibrary`, `howToStart`) (Rule 12 ✓)
+- [x] 🟢 **`leadAnswerBlock`** — added to `PEArticle` type + rendered between intro and Key Takeaways; bold lead answer in article (Rule 31 ✓)
+- [x] 🟢 **`promptExamples`** — added to `PESection` type + renderer with Bad (red) / Good (green) blockquote styling; 1 Bad→Good pair in `schemaBreakdown` section (Rule 15 ✓)
+
+**Remaining gaps (deferred):**
 - [ ] 🟢 **Non-English translations (de/fr/ja/zh)** — empty stubs; use `/geo-translation` skill
 
-**Build verification:** ✓ `npm run build` passed (0 errors)
-**Estimated compliance score:** ~85% (up from ~42%)
+**Build verification:** ✓ `npm run build` passed (0 errors, 0 warnings)
+**Estimated compliance score:** ~97% (up from ~42%)
 
 ---
 

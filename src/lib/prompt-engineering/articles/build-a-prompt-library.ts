@@ -377,9 +377,23 @@ export const article: Record<Language, PEArticle> = {
             'Plan for rollback: Always keep the previous version accessible so you can revert if needed.',
             'Retire prompts intentionally: When a prompt is outdated, mark it as Deprecated and explain why, so people know not to use it.',
           ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Model upgrades break prompts silently',
+              text: 'When your team upgrades to a new model version (e.g., from GPT-4o to GPT-4o mini), run your full set of "Approved" prompts against it before switching. Output format and instruction-following behavior shift between versions.',
+            },
+          ],
         },
         commonMistakes: {
           title: 'Common Mistakes When Building a Prompt Library',
+          callouts: [
+            {
+              type: 'practice',
+              label: 'Retiring a prompt? Test it one last time.',
+              text: 'Before marking a prompt Deprecated, run it with a recent input. If it still fails: deprecate with a reason. If it passes: the prompt just needs updating, not retiring.',
+            },
+          ],
           mistakes: [
             {
               mistake: 'Storing prompts in personal notes or private chat logs.',
