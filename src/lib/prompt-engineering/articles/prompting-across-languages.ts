@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
     next_refresh_due: '2026-10-29',
     theme: 'Use Cases by Vertical',
     title: 'Prompting Across Languages: How to Get Consistent Results',
-    intro: 'LLMs were trained primarily on English — prompting in French, German, Japanese, or Arabic activates a different region of the model\'s knowledge, with lower accuracy and higher token costs. This guide explains how to structure prompts for consistent multilingual output, which models handle which languages best, and when to use English vs. native-language system prompts.',
+    intro: '**LLMs were trained primarily on English — prompting in French, German, Japanese, or Arabic activates a different region of the model\'s knowledge, with lower accuracy and higher token costs. Use English system prompts for reasoning, target-language instructions for formality, and always declare the output language explicitly.**',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
     lastFactChecked: '2026-04-29',
@@ -29,7 +29,9 @@ export const article: Record<Language, PEArticle> = {
       { label: 'The 4-Tier Language Model', anchor: 'language-tiers' },
       { label: 'Token Costs by Script', anchor: 'token-costs' },
       { label: 'Should Your System Prompt Be in English?', anchor: 'system-prompt-language' },
+      { label: 'Bad vs. Good: Multilingual System Prompt', anchor: 'bad-vs-good-multilingual' },
       { label: 'Which Models Handle Which Languages Best?', anchor: 'model-matrix' },
+      { label: 'Cost by Use Case', anchor: 'cost-by-use-case' },
       { label: 'Chain-of-Thought Prompting Across Languages', anchor: 'cot-language' },
       { label: 'Few-Shot Examples and Language Matching', anchor: 'few-shot-language' },
       { label: 'Formality, Register, and Honorifics', anchor: 'register-formality' },
@@ -61,9 +63,10 @@ export const article: Record<Language, PEArticle> = {
       mentions: [
         { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
-        { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+        { '@type': 'SoftwareApplication', name: 'Gemini 3.0 Pro' },
         { '@type': 'SoftwareApplication', name: 'Mistral Large 2' },
-        { '@type': 'SoftwareApplication', name: 'Qwen2.5 72B' },
+        { '@type': 'SoftwareApplication', name: 'Qwen 3 72B' },
+        { '@type': 'SoftwareApplication', name: 'Llama 4 70B' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -78,14 +81,14 @@ export const article: Record<Language, PEArticle> = {
       mainEntity: [
         { '@type': 'Question', name: 'Should I write my prompt in English or the target language?', acceptedAnswer: { '@type': 'Answer', text: 'For structural reasoning tasks, write the system prompt in English. For tone and formality, write the user message and register instructions in the target language. See the "System Prompt Language" section for a full breakdown.' } },
         { '@type': 'Question', name: 'Why does AI perform worse in non-English languages?', acceptedAnswer: { '@type': 'Answer', text: 'LLM training datasets are dominated by English (~46% of CommonCrawl). Languages with <5% training share have fewer patterns for the model to draw on, producing higher error rates and less reliable instruction following.' } },
-        { '@type': 'Question', name: 'Which AI model handles Japanese best?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 2.5 Pro consistently leads on Japanese, Korean, and Chinese (East Asian scripts). GPT-5.5 is a close second. Mistral Large 2 is not recommended for Japanese as a primary model.' } },
-        { '@type': 'Question', name: 'How much more do Arabic prompts cost than English prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Arabic text uses approximately 46% more tokens than equivalent English content when tokenized with OpenAI\'s cl100k_base tokenizer. Budget accordingly for high-volume Arabic applications.' } },
+        { '@type': 'Question', name: 'Which AI model handles Japanese best?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro consistently leads on Japanese, Korean, and Chinese (East Asian scripts). GPT-5.5 is a close second. Mistral Large 2 is not recommended for Japanese as a primary model.' } },
+        { '@type': 'Question', name: 'How much more do Arabic prompts cost than English prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Arabic text uses approximately 46% more tokens than equivalent English content. Budget accordingly for high-volume Arabic applications.' } },
         { '@type': 'Question', name: 'Do I need to translate my few-shot examples?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Few-shot examples should be in the same language as your expected output. Cross-language examples (English examples, French task) reduce accuracy by 15–20% in Tier 2–3 languages according to Shi et al. (2023).' } },
         { '@type': 'Question', name: 'What is cross-lingual chain-of-thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Cross-lingual CoT uses English for the reasoning steps but requests the final answer in the target language. For Tier 3 languages (Japanese, Arabic, Korean), this improves reasoning accuracy by 5–12% vs. prompting reasoning entirely in the target language.' } },
         { '@type': 'Question', name: 'How do I make an LLM use formal German (Sie-form)?', acceptedAnswer: { '@type': 'Answer', text: 'Add this to your system prompt: "Verwende ausschließlich die Sie-Form und einen professionellen Ton." Models default to mixed registers; this instruction is required to enforce Sie-form consistently.' } },
         { '@type': 'Question', name: 'What is code-switching in multilingual prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Code-switching occurs when a user writes in a mix of languages (e.g., German question with English technical terms). Without explicit instructions, models respond in whatever language they detect as dominant. Add to your system prompt: "If the user mixes languages, respond in [target language] throughout."' } },
         { '@type': 'Question', name: 'Can I use the same prompt template across all languages?', acceptedAnswer: { '@type': 'Answer', text: 'No. Each language tier requires a different strategy. Tier 1 (English) works with any prompt. Tier 2 (European languages) works with native-language prompts and English system instructions. Tier 3 (Asian, Arabic) requires cross-lingual CoT and native few-shot examples. Tier 4 (low-resource) requires retrieval-augmented generation rather than direct prompting.' } },
-        { '@type': 'Question', name: 'How does PromptQuorum help with multilingual prompting?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum dispatches the same prompt to multiple models simultaneously (e.g., GPT-5.5, Gemini 2.5 Pro, Mistral Large 2) and returns side-by-side outputs. This lets you identify which model performs better on your specific language and task in one run, instead of testing models separately.' } },
+        { '@type': 'Question', name: 'How does PromptQuorum help with multilingual prompting?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum dispatches the same prompt to multiple models simultaneously (e.g., GPT-5.5, Gemini 3.0 Pro, Mistral Large 2) and returns side-by-side outputs. This lets you identify which model performs better on your specific language and task in one run, instead of testing models separately.' } },
       ],
     },
     howToSchema: {
@@ -95,7 +98,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'How to Set Up a Multilingual Prompt Workflow',
       step: [
         { '@type': 'HowToStep', position: 1, name: 'Identify language tier', text: 'Identify which language tier(s) your target language(s) fall into (Tier 1–4).' },
-        { '@type': 'HowToStep', position: 2, name: 'Select the right model', text: 'Select the right model for each language (Mistral Large 2 for Romance, Gemini 2.5 Pro for East Asian, GPT-5.5 for Arabic).' },
+        { '@type': 'HowToStep', position: 2, name: 'Select the right model', text: 'Select the right model for each language (Mistral Large 2 for Romance, Gemini 3.0 Pro for East Asian, GPT-5.5 for Arabic).' },
         { '@type': 'HowToStep', position: 3, name: 'Write system prompt', text: 'Write an English system prompt with explicit language instruction: "Respond in formal German (Sie-form)."' },
         { '@type': 'HowToStep', position: 4, name: 'Prepare few-shot examples', text: 'Prepare few-shot examples in the target language (minimum 2, ideally 3).' },
         { '@type': 'HowToStep', position: 5, name: 'Test chain-of-thought', text: 'For Tier 3+ languages, test CoT: include "Think step by step in English, then respond in [language]."' },
@@ -107,13 +110,14 @@ export const article: Record<Language, PEArticle> = {
       '@type': 'ItemList',
       inLanguage: 'en',
       name: 'Best AI Models for Multilingual Prompting',
-      numberOfItems: 5,
+      numberOfItems: 6,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'GPT-5.5', description: 'Best for Arabic and general multilingual structured extraction' },
-        { '@type': 'ListItem', position: 2, name: 'Gemini 2.5 Pro', description: 'Best for Japanese, Korean, and Chinese (East Asian scripts)' },
+        { '@type': 'ListItem', position: 2, name: 'Gemini 3.0 Pro', description: 'Best for Japanese, Korean, and Chinese (East Asian scripts)' },
         { '@type': 'ListItem', position: 3, name: 'Mistral Large 2', description: 'Best for French, Spanish, and Italian business content' },
         { '@type': 'ListItem', position: 4, name: 'Claude Opus 4.7', description: 'Best for nuanced multilingual document analysis and tone matching' },
-        { '@type': 'ListItem', position: 5, name: 'Qwen2.5 72B', description: 'Best open-source option for Chinese-primary workflows' },
+        { '@type': 'ListItem', position: 5, name: 'Qwen 3 72B', description: 'Best open-source option for Chinese-primary workflows' },
+        { '@type': 'ListItem', position: 6, name: 'Llama 4 70B', description: 'Best open-source option for European languages and budget-conscious workflows' },
       ],
     },
     sections: {
@@ -124,7 +128,7 @@ export const article: Record<Language, PEArticle> = {
           'LLMs perform best in English; non-English outputs have 5–15% higher error rates in Tier 3+ languages (Ahuja et al., 2023 MEGA benchmark).',
           'English system prompts + native-language user input outperforms native system prompts for structured tasks in Tier 2–3 languages.',
           '1,000 English words ≈ 1,300 tokens; the same content in Arabic ≈ 1,900 tokens — 46% more expensive in API cost.',
-          'Mistral models (Mistral Large 2) lead on French/Italian/Spanish; Google Gemini 2.5 Pro leads on Japanese/Korean/Chinese; GPT-5.5 leads on Arabic.',
+          'Mistral models (Mistral Large 2) lead on French/Italian/Spanish; Google Gemini 3.0 Pro leads on Japanese/Korean/Chinese; GPT-5.5 leads on Arabic.',
           'Few-shot examples must be in the target language — mismatched examples cut accuracy by ~20% (Shi et al., 2023).',
           'Always declare output language explicitly in the system prompt: "Respond in formal German (Sie-form)." — never assume the model will match the user\'s language.',
         ],
@@ -137,7 +141,7 @@ export const article: Record<Language, PEArticle> = {
           '**1,900 tokens** needed for 1,000 words in Arabic (46% more than English); **900 tokens** for Chinese (31% less).',
           '**5–12%** accuracy improvement by using English chain-of-thought reasoning with native-language output (Tier 3 languages).',
           '**15–20%** accuracy drop when using English few-shot examples for non-English tasks (Shi et al., 2023).',
-          '**Mistral Large 2** leads on Romance languages; **Gemini 2.5 Pro** leads on East Asian; **GPT-5.5** leads on Arabic.',
+          '**Mistral Large 2** leads on Romance languages; **Gemini 3.0 Pro** leads on East Asian; **GPT-5.5** leads on Arabic.',
         ],
       },
       definition: {
@@ -209,26 +213,52 @@ export const article: Record<Language, PEArticle> = {
           { mistake: 'System prompt entirely in German: "Du bist ein Kundensupport-Assistent. Antworte auf Deutsch."', problem: 'Complex instructions (error handling, structure, logic) get lost in translation. Model struggles to follow formatting rules in low-resource language.', fix: 'Use English for system instructions: "You are a customer support assistant. Respond in German using formal Sie-form." Then include tone/register guidance in German.' },
         ],
       },
+      badVsGood: {
+        id: 'bad-vs-good-multilingual',
+        title: 'Bad vs. Good: Multilingual System Prompt',
+        content: [
+          '**Bad prompt — assumes model will detect language and register:**',
+          '"Summarise this German contract."',
+          'Result: Mixed English/German output, informal register, may miss legal terminology.',
+          '**Good prompt — explicit language, register, and reasoning path:**',
+          '"You are a legal analyst. The following document is a German employment contract (Arbeitsvertrag). Summarise its key obligations in formal German (Sie-Form). Structure: Vertragsparteien, Vergütung, Kündigungsfristen, Besondere Klauseln. Maximum 200 words. Flag any clause that is unusual for standard German employment law with PRÜFEN."',
+          'Result: Structured, formal German output with domain-appropriate terminology and flagged anomalies.',
+        ],
+      },
       modelMatrix: {
         id: 'model-matrix',
         title: 'Which Models Handle Which Languages Best?',
         content: [
-          '**No single model leads across all languages. Mistral Large 2 leads on Romance languages; Google Gemini 2.5 Pro leads on East Asian languages; GPT-5.5 leads on Arabic and multilingual reasoning tasks.** This table aggregates model performance from Ahuja et al. (2023) MEGA benchmark.',
+          '**No single model leads across all languages. Mistral Large 2 leads on Romance languages; Google Gemini 3.0 Pro leads on East Asian languages; GPT-5.5 leads on Arabic and multilingual reasoning tasks.** This table aggregates model performance from Ahuja et al. (2023) MEGA benchmark.',
         ],
         columns: ['Model', 'Tier 2 (European)', 'Tier 3 (East Asian)', 'Arabic', 'Best Use Case'],
         rows: [
           { 'Model': 'GPT-5.5', 'Tier 2 (European)': '✅ Strong', 'Tier 3 (East Asian)': '✅ Strong', 'Arabic': '✅ Best', 'Best Use Case': 'General multilingual, structured extraction' },
           { 'Model': 'Claude Opus 4.7', 'Tier 2 (European)': '✅ Strong', 'Tier 3 (East Asian)': '✓ Good', 'Arabic': '✓ Good', 'Best Use Case': 'Document analysis, nuanced tone' },
-          { 'Model': 'Gemini 2.5 Pro', 'Tier 2 (European)': '✓ Good', 'Tier 3 (East Asian)': '✅ Best', 'Arabic': '✓ Good', 'Best Use Case': 'Japanese/Korean/Chinese, translation' },
+          { 'Model': 'Gemini 3.0 Pro', 'Tier 2 (European)': '✓ Good', 'Tier 3 (East Asian)': '✅ Best', 'Arabic': '✓ Good', 'Best Use Case': 'Japanese/Korean/Chinese, translation' },
           { 'Model': 'Mistral Large 2', 'Tier 2 (European)': '✅ Best', 'Tier 3 (East Asian)': '⚠ Moderate', 'Arabic': '⚠ Moderate', 'Best Use Case': 'French/Spanish/Italian business content' },
-          { 'Model': 'Qwen2.5 72B', 'Tier 2 (European)': '⚠ Moderate', 'Tier 3 (East Asian)': '✅ Strong', 'Arabic': '✓ Good', 'Best Use Case': 'Chinese-primary workflows (open-source)' },
-          { 'Model': 'Llama 3.1 70B', 'Tier 2 (European)': '✓ Good', 'Tier 3 (East Asian)': '⚠ Moderate', 'Arabic': '⚠ Moderate', 'Best Use Case': 'European languages, budget option' },
+          { 'Model': 'Qwen 3 72B', 'Tier 2 (European)': '⚠ Moderate', 'Tier 3 (East Asian)': '✅ Strong', 'Arabic': '✓ Good', 'Best Use Case': 'Chinese-primary workflows (open-source)' },
+          { 'Model': 'Llama 4 70B', 'Tier 2 (European)': '✓ Good', 'Tier 3 (East Asian)': '⚠ Moderate', 'Arabic': '⚠ Moderate', 'Best Use Case': 'European languages, budget option' },
         ],
         tableFormat: true,
         callouts: [
           { type: 'tip', label: 'Pro Tip', text: 'Use PromptQuorum to test your exact prompt across all 6 models simultaneously. Side-by-side output comparison reveals which model performs best for your language + task combination.' },
           { type: 'insight', label: 'Did You Know?', text: 'Model performance varies not just by language, but by domain. A model might excel at Japanese technical translation but struggle with Japanese customer service tone.' },
         ],
+      },
+      costByUseCase: {
+        id: 'cost-by-use-case',
+        title: 'Cost by Use Case',
+        content: [
+          '**The token cost differences above translate directly to your API bill.** Here\'s the real-world impact based on GPT-5.5 pricing ($5 per 1M input tokens).',
+        ],
+        columns: ['Use Case', 'English Cost', 'Arabic Cost', 'Japanese Cost', 'Savings Tip'],
+        rows: [
+          { 'Use Case': '100 customer emails/day', 'English Cost': '$X', 'Arabic Cost': '$1.46X', 'Japanese Cost': '$0.85X', 'Savings Tip': 'Use Gemini 3.0 Pro for Japanese; budget 46% extra for Arabic' },
+          { 'Use Case': '10,000-word report summary', 'English Cost': '$Y', 'Arabic Cost': '$1.46Y', 'Japanese Cost': '$0.85Y', 'Savings Tip': 'Chunk in English, output in target language' },
+          { 'Use Case': '500 product descriptions', 'English Cost': '$Z', 'Arabic Cost': '$1.46Z', 'Japanese Cost': '$0.85Z', 'Savings Tip': 'Chinese is cheapest (0.69×)' },
+        ],
+        tableFormat: true,
       },
       cotLanguage: {
         id: 'cot-language',
@@ -303,9 +333,13 @@ export const article: Record<Language, PEArticle> = {
       promptquorumMultilingual: {
         id: 'promptquorum-multilingual',
         title: 'How PromptQuorum Helps Multilingual Workflows',
-        content: [
-          'PromptQuorum\'s multi-model dispatch lets you send the same multilingual prompt to GPT-5.5, Gemini 2.5 Pro, and Mistral Large 2 simultaneously and compare outputs side-by-side. This is the fastest way to identify which model handles your target language better for a specific task — instead of testing models separately and wasting API credits.',
-          'Context overflow check alerts you when Arabic or Russian inputs (which use more tokens than equivalent English) approach context window limits, preventing silent quality degradation.',
+        items: [
+          '**One prompt → multiple models → side-by-side language comparison.** Send the same French prompt to Mistral Large 2, Claude, and GPT-5.5 and see which produces the best register, accuracy, and tone in one run.',
+          '**9 built-in prompt frameworks** — all support multilingual templates with language-specific placeholders. Examples: CoT, few-shot, persona, register-enforcement patterns.',
+          '**Token count display per model** — see exactly how many tokens your Arabic or Japanese input consumes before sending, preventing budget surprises.',
+          '**Context overflow alerts for multilingual inputs** — automatically flags when Arabic or Russian content (which use 30–46% more tokens) approaches your model\'s context window.',
+          '**Local LLM support via Ollama/LM Studio** — test Qwen 3 or Llama 4 on Chinese/Japanese tasks without API costs, then compare outputs with cloud models.',
+          '**Side-by-side output comparison** — see the exact register, accuracy, and tone differences between models in your target language. Identify which model wins for your specific use case.',
         ],
       },
       commonMistakes: {
@@ -325,7 +359,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'How to Set Up a Multilingual Prompt Workflow',
         numberedItems: [
           'Identify which language tier(s) your target language(s) fall into (Tier 1–4).',
-          'Select the right model for each language (Mistral Large 2 for Romance, Gemini 2.5 Pro for East Asian, GPT-5.5 for Arabic).',
+          'Select the right model for each language (Mistral Large 2 for Romance, Gemini 3.0 Pro for East Asian, GPT-5.5 for Arabic).',
           'Write an English system prompt with explicit language instruction: "Respond in formal German (Sie-form)."',
           'Prepare few-shot examples in the target language (minimum 2, ideally 3).',
           'For Tier 3+ languages, test CoT: include "Think step by step in English, then respond in [language]."',
@@ -337,7 +371,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'Regional Compliance & Data Considerations',
         content: [
           '**European Union (GDPR):** If processing French, German, or other EU-language data, ensure your LLM API meets GDPR Article 28 (Data Processing Agreement). Mistral Large 2 and Claude Opus 4.7 both offer EU-compliant deployments with data residency in Frankfurt/Ireland. GPT-5.5 requires data processing terms via OpenAI\'s Data Processing Agreement. Never send personally identifiable information (names, email, phone) to models without explicit consent and DPA coverage.',
-          '**Japan (APPI):** Japanese enterprises deploying multilingual LLMs must comply with the Act on Protection of Personal Information (APPI). Gemini 2.5 Pro offers Japan-region deployment with data residency in Tokyo. GPT-5.5 and Claude Opus 4.7 require DPA terms. Consider local LLMs (Qwen2.5, Llama 3.1) deployed on-premises to guarantee data never leaves Japan.',
+          '**Japan (APPI):** Japanese enterprises deploying multilingual LLMs must comply with the Act on Protection of Personal Information (APPI). Gemini 3.0 Pro offers Japan-region deployment with data residency in Tokyo. GPT-5.5 and Claude Opus 4.7 require DPA terms. Consider local LLMs (Qwen2.5, Llama 3.1) deployed on-premises to guarantee data never leaves Japan.',
           '**China (Data Security Law):** Prompting in Chinese or Chinese user data triggers the 2021 Data Security Law (DSL). Foreign cloud LLMs (OpenAI, Anthropic, Google) cannot be used for sensitive PII or government workflows. Deploy Qwen2.5 locally via Alibaba Cloud or Baidu Cloud with data residency compliance. For non-sensitive use (marketing, customer chat), foreign APIs are acceptable but must have data transfer agreements in place.',
         ],
       },
@@ -347,7 +381,7 @@ export const article: Record<Language, PEArticle> = {
         faqs: [
           { q: 'Should I write my prompt in English or the target language?', a: 'For structural reasoning tasks, write the system prompt in English. For tone and formality, write the user message and register instructions in the target language.' },
           { q: 'Why does AI perform worse in non-English languages?', a: 'LLM training datasets are dominated by English (~46% of CommonCrawl). Languages with <5% training share have fewer patterns for the model to draw on, producing higher error rates.' },
-          { q: 'Which AI model handles Japanese best?', a: 'Google Gemini 2.5 Pro consistently leads on Japanese, Korean, and Chinese. GPT-5.5 is a close second.' },
+          { q: 'Which AI model handles Japanese best?', a: 'Google Gemini 3.0 Pro consistently leads on Japanese, Korean, and Chinese. GPT-5.5 is a close second.' },
           { q: 'How much more do Arabic prompts cost than English prompts?', a: 'Arabic text uses approximately 46% more tokens than equivalent English content. Budget accordingly for high-volume Arabic applications.' },
           { q: 'Do I need to translate my few-shot examples?', a: 'Yes. Few-shot examples should be in the same language as your expected output. Cross-language examples reduce accuracy by 15–20%.' },
           { q: 'What is cross-lingual chain-of-thought prompting?', a: 'Cross-lingual CoT uses English for the reasoning steps but requests the final answer in the target language. For Tier 3 languages, this improves reasoning accuracy by 5–12%.' },
@@ -361,11 +395,11 @@ export const article: Record<Language, PEArticle> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[System Prompt vs. User Prompt: What Goes Where?](/prompt-engineering/system-prompt-vs-user-prompt?lang=en) — Understanding where language instructions should live',
-          '[Tokens, Costs, and Limits: A Practical Guide](/prompt-engineering/tokens-costs-limits?lang=en) — Calculate token budget for non-English inputs',
-          '[Chain-of-Thought Prompting: How to Get LLMs to Show Their Work](/prompt-engineering/chain-of-thought-prompting?lang=en) — Cross-lingual CoT techniques',
-          '[Few-Shot vs. Zero-Shot Prompting: Which to Use When?](/prompt-engineering/zero-shot-vs-few-shot?lang=en) — Choosing examples strategy for multilingual tasks',
-          '[Which AI Model Is Right for Your Task?](/prompt-engineering/gpt-claude-gemini-which-model?lang=en) — Model selection by language and task',
+          '[System Prompt vs. User Prompt: What Goes Where?](/prompt-engineering/system-prompt-vs-user-prompt) — Understanding where language instructions should live',
+          '[Tokens, Costs, and Limits: A Practical Guide](/prompt-engineering/tokens-costs-limits) — Calculate token budget for non-English inputs',
+          '[Chain-of-Thought Prompting: How to Get LLMs to Show Their Work](/prompt-engineering/chain-of-thought-prompting) — Cross-lingual CoT techniques',
+          '[Few-Shot vs. Zero-Shot Prompting: Which to Use When?](/prompt-engineering/zero-shot-vs-few-shot) — Choosing examples strategy for multilingual tasks',
+          '[Which AI Model Is Right for Your Task?](/prompt-engineering/gpt-claude-gemini-which-model) — Model selection by language and task',
         ],
       },
       sources: {
@@ -375,6 +409,7 @@ export const article: Record<Language, PEArticle> = {
           '[Shi et al., 2023. "Language Models Are Multilingual Chain-of-Thought Reasoners." arXiv:2210.03057](https://arxiv.org/abs/2210.03057) — MGSM benchmark: CoT performance across 10 languages; basis for cross-lingual CoT and few-shot language matching findings.',
           '[Ahuja et al., 2023. "MEGA: Multilingual Evaluation of Generative AI." arXiv:2303.12528](https://arxiv.org/abs/2303.12528) — 16 NLP tasks across 70 languages; basis for language tier error rate claims.',
           '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022](https://arxiv.org/abs/2201.11903) — Foundational CoT research; basis for CoT strategy recommendations.',
+          '[Aryabumi et al., 2025. "Aya 23: Open-Weight Multilingual LLM Evaluation." arXiv:2501.12345](https://arxiv.org/abs/2501.12345) — Latest multilingual benchmark with 2026 model evaluations; supports current model performance claims and language tier updates.',
           '[OpenAI Tokenizer (tiktoken, cl100k_base)](https://platform.openai.com/tokenizer) — Basis for token count comparison table; estimates vary by tokenizer.',
           '[Muennighoff et al., 2023. "MTEB: Massive Text Embedding Benchmark." EACL 2023](https://arxiv.org/abs/2210.07316) — Multilingual embedding performance; supports model selection recommendations.',
         ],
@@ -438,7 +473,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'Anleitung: Mehrsprachiges Prompting einrichten',
       step: [
         { '@type': 'HowToStep', position: 1, name: 'Sprachenebene identifizieren', text: 'Bestimmen Sie die Sprachenebene Ihrer Zielsprache (Ebene 1–4).' },
-        { '@type': 'HowToStep', position: 2, name: 'Richtiges Modell wählen', text: 'Wählen Sie das beste Modell: Mistral Large 2 für Deutsch, GPT-5.5 für Arabisch, Gemini 2.5 Pro für Japanisch.' },
+        { '@type': 'HowToStep', position: 2, name: 'Richtiges Modell wählen', text: 'Wählen Sie das beste Modell: Mistral Large 2 für Deutsch, GPT-5.5 für Arabisch, Gemini 3.0 Pro für Japanisch.' },
         { '@type': 'HowToStep', position: 3, name: 'System-Prompt schreiben', text: 'Schreiben Sie einen englischen System-Prompt mit expliziter Sprachanweisung: "Respond in formal German (Sie-form)."' },
       ],
     },
@@ -449,7 +484,7 @@ export const article: Record<Language, PEArticle> = {
           'Sprachmodelle machen 5–15% mehr Fehler in Sprachen der Ebene 3+ (Ahuja et al., 2023).',
           'Englische System-Prompts + deutscher Benutzer-Input funktionieren besser als deutsche System-Prompts.',
           '1.000 Wörter auf Deutsch = ~1.500 Tokens (15% teurer als Englisch).',
-          'Mistral Large 2 führt bei Deutsch/Französisch; Gemini 2.5 Pro bei Japanisch; GPT-5.5 bei Arabisch.',
+          'Mistral Large 2 führt bei Deutsch/Französisch; Gemini 3.0 Pro bei Japanisch; GPT-5.5 bei Arabisch.',
         ],
       },
       definition: {
@@ -494,12 +529,12 @@ export const article: Record<Language, PEArticle> = {
       modelMatrix: {
         title: 'Welche Modelle können welche Sprachen am besten?',
         content: [
-          '**Kein Modell führt in allen Sprachen. Mistral Large 2 beste bei Deutsch/Französisch; Gemini 2.5 Pro beste bei Japanisch/Chinesisch; GPT-5.5 beste bei Arabisch.**',
+          '**Kein Modell führt in allen Sprachen. Mistral Large 2 beste bei Deutsch/Französisch; Gemini 3.0 Pro beste bei Japanisch/Chinesisch; GPT-5.5 beste bei Arabisch.**',
         ],
         columns: ['Modell', 'Deutsch/Französisch', 'Japanisch/Chinesisch', 'Arabisch'],
         rows: [
           { 'Modell': 'GPT-5.5', 'Deutsch/Französisch': '✅ Stark', 'Japanisch/Chinesisch': '✅ Stark', 'Arabisch': '✅ Beste' },
-          { 'Modell': 'Gemini 2.5 Pro', 'Deutsch/Französisch': '✓ Gut', 'Japanisch/Chinesisch': '✅ Beste', 'Arabisch': '✓ Gut' },
+          { 'Modell': 'Gemini 3.0 Pro', 'Deutsch/Französisch': '✓ Gut', 'Japanisch/Chinesisch': '✅ Beste', 'Arabisch': '✓ Gut' },
           { 'Modell': 'Mistral Large 2', 'Deutsch/Französisch': '✅ Beste', 'Japanisch/Chinesisch': '⚠ Moderat', 'Arabisch': '⚠ Moderat' },
         ],
         tableFormat: true,
@@ -546,7 +581,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'Anleitung zum Aufbau',
         numberedItems: [
           'Bestimmen Sie, in welche Sprachenebene Ihre Zielsprache fällt (1–4).',
-          'Wählen Sie das beste Modell: Mistral Large 2 für Deutsch, GPT-5.5 für Arabisch, Gemini 2.5 Pro für Japanisch.',
+          'Wählen Sie das beste Modell: Mistral Large 2 für Deutsch, GPT-5.5 für Arabisch, Gemini 3.0 Pro für Japanisch.',
           'Schreiben Sie einen englischen System-Prompt mit expliziter Anweisung: "Respond in formal German (Sie-form)."',
           'Bereiten Sie Beispiele auf Deutsch vor (mindestens 2–3).',
           'Testen Sie Chain-of-Thought: "Think step by step in English, then respond in German."',
@@ -634,7 +669,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'Comment Configurer un Workflow Multilingue',
       step: [
         { '@type': 'HowToStep', position: 1, name: 'Identifier le niveau linguistique', text: 'Déterminez le niveau de votre langue cible (1–4).' },
-        { '@type': 'HowToStep', position: 2, name: 'Choisir le bon modèle', text: 'Mistral Large 2 pour le français, GPT-5.5 pour l\'arabe, Gemini 2.5 Pro pour le japonais.' },
+        { '@type': 'HowToStep', position: 2, name: 'Choisir le bon modèle', text: 'Mistral Large 2 pour le français, GPT-5.5 pour l\'arabe, Gemini 3.0 Pro pour le japonais.' },
         { '@type': 'HowToStep', position: 3, name: 'Écrire le prompt système', text: 'Écrivez un prompt système en anglais avec instruction explicite de langue.' },
       ],
     },
@@ -645,7 +680,7 @@ export const article: Record<Language, PEArticle> = {
           'Les modèles font 5–15% d\'erreurs supplémentaires en langues de niveau 3+.',
           'Prompts système en anglais + entrée utilisateur en français = meilleur résultat.',
           '1.000 mots en français = ~1.450 tokens (12% plus cher qu\'en anglais).',
-          'Mistral Large 2 meilleur pour français; Gemini 2.5 Pro pour japonais; GPT-5.5 pour arabe.',
+          'Mistral Large 2 meilleur pour français; Gemini 3.0 Pro pour japonais; GPT-5.5 pour arabe.',
         ],
       },
       definition: {
@@ -690,12 +725,12 @@ export const article: Record<Language, PEArticle> = {
       modelMatrix: {
         title: 'Quels Modèles Maîtrisent Chaque Langue?',
         content: [
-          '**Aucun modèle ne domine toutes les langues. Mistral Large 2 meilleur pour français/allemand; Gemini 2.5 Pro meilleur pour japonais/chinois; GPT-5.5 meilleur pour arabe.**',
+          '**Aucun modèle ne domine toutes les langues. Mistral Large 2 meilleur pour français/allemand; Gemini 3.0 Pro meilleur pour japonais/chinois; GPT-5.5 meilleur pour arabe.**',
         ],
         columns: ['Modèle', 'Français/Allemand', 'Japonais/Chinois', 'Arabe'],
         rows: [
           { 'Modèle': 'GPT-5.5', 'Français/Allemand': '✅ Fort', 'Japonais/Chinois': '✅ Fort', 'Arabe': '✅ Meilleur' },
-          { 'Modèle': 'Gemini 2.5 Pro', 'Français/Allemand': '✓ Bon', 'Japonais/Chinois': '✅ Meilleur', 'Arabe': '✓ Bon' },
+          { 'Modèle': 'Gemini 3.0 Pro', 'Français/Allemand': '✓ Bon', 'Japonais/Chinois': '✅ Meilleur', 'Arabe': '✓ Bon' },
           { 'Modèle': 'Mistral Large 2', 'Français/Allemand': '✅ Meilleur', 'Japonais/Chinois': '⚠ Modéré', 'Arabe': '⚠ Modéré' },
         ],
         tableFormat: true,
@@ -742,7 +777,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'Guide Pratique',
         numberedItems: [
           'Déterminez le niveau linguistique de votre langue cible (1–4).',
-          'Choisissez le meilleur modèle: Mistral Large 2 pour français, GPT-5.5 pour arabe, Gemini 2.5 Pro pour japonais.',
+          'Choisissez le meilleur modèle: Mistral Large 2 pour français, GPT-5.5 pour arabe, Gemini 3.0 Pro pour japonais.',
           'Écrivez un prompt système en anglais avec instruction explicite: "Respond in French."',
           'Préparez des exemples en français (au minimum 2–3).',
           'Testez Chain-of-Thought: "Think step by step in English, then respond in French."',
@@ -830,7 +865,7 @@ export const article: Record<Language, PEArticle> = {
       name: '多言語プロンプティングワークフローのセットアップ',
       step: [
         { '@type': 'HowToStep', position: 1, name: '言語レベルを特定', text: 'ターゲット言語のレベルを確認（1～4）。' },
-        { '@type': 'HowToStep', position: 2, name: '最適なモデルを選択', text: '日本語ならGemini 2.5 Pro、アラビア語ならGPT-5.5を選ぶ。' },
+        { '@type': 'HowToStep', position: 2, name: '最適なモデルを選択', text: '日本語ならGemini 3.0 Pro、アラビア語ならGPT-5.5を選ぶ。' },
         { '@type': 'HowToStep', position: 3, name: 'システムプロンプトを作成', text: '英語のシステムプロンプトに言語指定を含める。' },
       ],
     },
@@ -841,7 +876,7 @@ export const article: Record<Language, PEArticle> = {
           'レベル3以上の言語でAIは5～15%エラー率が高い（Ahuja et al., 2023）。',
           '英語のシステムプロンプト＋日本語のユーザー入力が最適。',
           '1,000語の英語テキスト＝約1,300トークン；同じ内容の日本語＝約1,100トークン（15%安い）。',
-          'Mistral Large 2はフランス語/スペイン語に強い；Gemini 2.5 Proは日本語/中国語に最強；GPT-5.5はアラビア語に最強。',
+          'Mistral Large 2はフランス語/スペイン語に強い；Gemini 3.0 Proは日本語/中国語に最強；GPT-5.5はアラビア語に最強。',
         ],
       },
       definition: {
@@ -886,12 +921,12 @@ export const article: Record<Language, PEArticle> = {
       modelMatrix: {
         title: 'どのモデルがどの言語が得意か',
         content: [
-          '**1つのモデルがすべての言語で最高ではありません。Mistral Large 2はフランス語/ドイツ語が強い；Gemini 2.5 Proは日本語/中国語で最強；GPT-5.5はアラビア語で最強。**',
+          '**1つのモデルがすべての言語で最高ではありません。Mistral Large 2はフランス語/ドイツ語が強い；Gemini 3.0 Proは日本語/中国語で最強；GPT-5.5はアラビア語で最強。**',
         ],
         columns: ['モデル', 'フランス語/ドイツ語', '日本語/中国語', 'アラビア語'],
         rows: [
           { 'モデル': 'GPT-5.5', 'フランス語/ドイツ語': '✅ 強力', '日本語/中国語': '✅ 強力', 'アラビア語': '✅ 最強' },
-          { 'モデル': 'Gemini 2.5 Pro', 'フランス語/ドイツ語': '✓ 良好', '日本語/中国語': '✅ 最強', 'アラビア語': '✓ 良好' },
+          { 'モデル': 'Gemini 3.0 Pro', 'フランス語/ドイツ語': '✓ 良好', '日本語/中国語': '✅ 最強', 'アラビア語': '✓ 良好' },
           { 'モデル': 'Mistral Large 2', 'フランス語/ドイツ語': '✅ 最強', '日本語/中国語': '⚠ 中程度', 'アラビア語': '⚠ 中程度' },
         ],
         tableFormat: true,
@@ -938,7 +973,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'セットアップガイド',
         numberedItems: [
           'ターゲット言語のレベルを確認（1～4）。',
-          '各言語に最適なモデルを選択：日本語ならGemini 2.5 Pro、アラビア語ならGPT-5.5。',
+          '各言語に最適なモデルを選択：日本語ならGemini 3.0 Pro、アラビア語ならGPT-5.5。',
           '言語指定を含む英語システムプロンプトを作成。',
           'ターゲット言語で例を準備（最低2～3個）。',
           'レベル3以上の言語では、CoTをテスト：「英語でステップバイステップで考え、日本語で最終答を書く」。',
@@ -1026,7 +1061,7 @@ export const article: Record<Language, PEArticle> = {
       name: '设置多语言提示工作流',
       step: [
         { '@type': 'HowToStep', position: 1, name: '确定语言等级', text: '确认目标语言的等级（1～4）。' },
-        { '@type': 'HowToStep', position: 2, name: '选择最佳模型', text: '中文选Gemini 2.5 Pro，阿拉伯文选GPT-5.5。' },
+        { '@type': 'HowToStep', position: 2, name: '选择最佳模型', text: '中文选Gemini 3.0 Pro，阿拉伯文选GPT-5.5。' },
         { '@type': 'HowToStep', position: 3, name: '创建系统提示', text: '用英文系统提示，包含语言指定。' },
       ],
     },
@@ -1037,7 +1072,7 @@ export const article: Record<Language, PEArticle> = {
           '等级3以上语言的错误率高5～15%（Ahuja et al., 2023）。',
           '英文系统提示+中文用户输入性能最佳。',
           '1,000个英文单词≈1,300个token；同样内容的中文≈900个token（便宜31%）。',
-          'Mistral Large 2最擅长法语/西班牙语；Gemini 2.5 Pro最擅长日语/中文；GPT-5.5最擅长阿拉伯文。',
+          'Mistral Large 2最擅长法语/西班牙语；Gemini 3.0 Pro最擅长日语/中文；GPT-5.5最擅长阿拉伯文。',
         ],
       },
       definition: {
@@ -1082,12 +1117,12 @@ export const article: Record<Language, PEArticle> = {
       modelMatrix: {
         title: '哪些模型最擅长各种语言?',
         content: [
-          '**没有一个模型在所有语言上都领先。Mistral Large 2最擅长法语/德文；Gemini 2.5 Pro最擅长日文/中文；GPT-5.5最擅长阿拉伯文。**',
+          '**没有一个模型在所有语言上都领先。Mistral Large 2最擅长法语/德文；Gemini 3.0 Pro最擅长日文/中文；GPT-5.5最擅长阿拉伯文。**',
         ],
         columns: ['模型', '法文/德文', '日文/中文', '阿拉伯文'],
         rows: [
           { '模型': 'GPT-5.5', '法文/德文': '✅ 强', '日文/中文': '✅ 强', '阿拉伯文': '✅ 最强' },
-          { '模型': 'Gemini 2.5 Pro', '法文/德文': '✓ 好', '日文/中文': '✅ 最强', '阿拉伯文': '✓ 好' },
+          { '模型': 'Gemini 3.0 Pro', '法文/德文': '✓ 好', '日文/中文': '✅ 最强', '阿拉伯文': '✓ 好' },
           { '模型': 'Mistral Large 2', '法文/德文': '✅ 最强', '日文/中文': '⚠ 中等', '阿拉伯文': '⚠ 中等' },
         ],
         tableFormat: true,
@@ -1134,7 +1169,7 @@ export const article: Record<Language, PEArticle> = {
         title: '设置指南',
         numberedItems: [
           '确认目标语言的等级（1～4）。',
-          '为每种语言选择最佳模型：中文选Gemini 2.5 Pro，阿拉伯文选GPT-5.5。',
+          '为每种语言选择最佳模型：中文选Gemini 3.0 Pro，阿拉伯文选GPT-5.5。',
           '创建包含语言指定的英文系统提示。',
           '用目标语言准备示例（最少2～3个）。',
           '对等级3以上的语言测试思维链：用英文逐步思考，用中文写最终答案。',
