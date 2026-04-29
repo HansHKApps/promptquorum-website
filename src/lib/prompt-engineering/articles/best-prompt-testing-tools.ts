@@ -222,6 +222,51 @@ export const article: Record<Language, PEArticle> = { en: {
       }
     ]
   },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    'name': 'Wie Sie Ihren Prompt-Testing-Stack wählen',
+    'inLanguage': 'de',
+    'description': 'Ein 6-Schritte-Leitfaden zur Auswahl der richtigen Kombination von Prompt-Testing-Tools für Ihre LLM-Anwendung.',
+    'step': [
+      {
+        '@type': 'HowToStep',
+        'position': 1,
+        'name': 'Mit Promptfoo beginnen',
+        'text': 'Jeder: Starten Sie mit Promptfoo (kostenlos) in Ihrer CI/CD-Pipeline. Führen Sie Tests bei jedem Commit aus. Das ist unverzichtbar.'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 2,
+        'name': 'Braintrust für Production-Freigabe hinzufügen',
+        'text': 'Versand in Production: Ergänzen Sie Braintrust für finale Batch-Evaluierung mit menschlicher Freigabe vor Release.'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 3,
+        'name': 'DeepEval für RAG-Pipelines hinzufügen',
+        'text': 'RAG-Pipelines: Ergänzen Sie DeepEval für abruf-spezifische RAGAS-Metriken.'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 4,
+        'name': 'LangSmith für mehrstufige Chains hinzufügen',
+        'text': 'Mehrstufige Chains: Ergänzen Sie LangSmith für Tracing. Wenn Promptfoo eine Regression kennzeichnet, zeigt LangSmith, wo in der Chain es brach.'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 5,
+        'name': 'Phoenix für Production-Monitoring hinzufügen',
+        'text': 'Production-Überwachung: Ergänzen Sie Phoenix für Echtzeit-Observability – Latenz, Kosten und Drift-Erkennung.'
+      },
+      {
+        '@type': 'HowToStep',
+        'position': 6,
+        'name': 'PromptQuorum für Modellauswahl nutzen',
+        'text': 'Modellauswahl: Führen Sie PromptQuorum zuerst aus, um Modelle auf Ihren spezifischen Prompts zu vergleichen, bevor Sie Test-Suites aufbauen.'
+      }
+    ]
+  },
   sections: {
     keyTakeaways: {
       isTldr: true,
