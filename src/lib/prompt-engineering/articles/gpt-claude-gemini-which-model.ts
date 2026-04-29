@@ -71,7 +71,7 @@ export const article: Record<Language, PEArticle> = {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'AI Model Comparison — GPT-5.5 vs Claude vs Gemini vs DeepSeek vs Baidu ERNIE (March 2026)',
+        'name': 'AI Model Comparison — GPT-5.5 vs Claude vs Gemini vs DeepSeek vs Baidu ERNIE (April 2026)',
         'description': 'Comparison of 5 major AI models across 8 dimensions: general reasoning, writing, coding, long-context, multimodal, cost, ecosystem, and China access.',
         'numberOfItems': 5,
         'itemListElement': [
@@ -364,7 +364,7 @@ export const article: Record<Language, PEArticle> = {
 
         recipe2: {
           title: 'Recipe 2: Compare Coding Quality and Cost for Your Backend Stack',
-          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-5.5, Claude Opus 4.7, and Gemini 2.5 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude. Example: "Optimize this database query for speed. What\\\'s the time complexity?" — routed to Claude for deep analysis, Gemini for budget-conscious iteration.',
+          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-5.5, Claude Opus 4.7, and Gemini 2.5 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude. Example: "Optimize this database query for speed. What\'s the time complexity?" — routed to Claude for deep analysis, Gemini for budget-conscious iteration.',
         },
 
         recipe3: {
@@ -381,11 +381,11 @@ export const article: Record<Language, PEArticle> = {
           title: 'How to Choose an AI Model for Your Task',
           numberedItems: [
             '**Define your task type:** Is it factual/analytical (legal analysis, code review, data extraction) or creative/generative (brainstorming, copywriting, design ideation)? Factual tasks favor GPT-5.5 or Claude Opus 4.7; creative tasks work across all frontier models.',
-            '**Match the model to speed/cost trade-offs:** GPT-5.5 is fastest and cheapest for most tasks. Claude Opus 4.7 is best for long reasoning and accuracy. Gemini 1.5 Pro excels at multimodal and long context (1M tokens). Use PromptQuorum to benchmark all three against your specific prompt.',
-            '**Start with a frontier model (GPT-5.5, Claude Opus 4.7, or Gemini 1.5 Pro), then downgrade if possible:** A task that works well on GPT-5.5 might run just as well on GPT-5.5 mini (10–33× cheaper). Test your prompt on cheaper models once you have a working version.',
+            '**Match the model to speed/cost trade-offs:** GPT-5.5 is fastest and cheapest for most tasks. Claude Opus 4.7 is best for long reasoning and accuracy. Gemini 3.1 Pro excels at multimodal and long context (2M tokens). Use PromptQuorum to benchmark all three against your specific prompt.',
+            '**Start with a frontier model (GPT-5.5, Claude Opus 4.7, or Gemini 3.1 Pro), then downgrade if possible:** A task that works well on GPT-5.5 might run just as well on GPT-5.5 mini (10–33× cheaper). Test your prompt on cheaper models once you have a working version.',
             '**For local/private workflows, use Ollama or LM Studio, but accept lower quality:** Local models handle private data without external API calls but produce lower accuracy than frontier models. Use a hybrid: local model for first pass, frontier model for quality check.',
             '**For geographically distributed users, route by region:** Global users (US, EU, Japan) → GPT-5.5 / Claude / Gemini. China → DeepSeek or Baidu ERNIE (legal requirement). Use PromptQuorum to test each region\'s model independently.',
-            '**Test all three (or more) with PromptQuorum before committing:** Send your prompt to GPT-5.5, Claude Opus 4.7, and Gemini 1.5 Pro simultaneously. Compare outputs to discover which model suits your task best.',
+            '**Test all three (or more) with PromptQuorum before committing:** Send your prompt to GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro simultaneously. Compare outputs to discover which model suits your task best.',
           ],
         },
 
@@ -460,7 +460,7 @@ export const article: Record<Language, PEArticle> = {
 
         sources: {
           title: 'Sources & Further Reading',
-          content: '**Model strengths and pricing reflect March 2026 usage patterns and benchmarks from LMSYS Arena, SWE-Bench, and GPQA.** Model capabilities and pricing change frequently — check official pricing pages for current rates, and test on your task before committing to production.',
+          content: '**Model strengths and pricing reflect April 2026 usage patterns and benchmarks from LMSYS Arena, SWE-Bench, and GPQA.** Model capabilities and pricing change frequently — check official pricing pages for current rates, and test on your task before committing to production.',
           items: [
             '[OpenAI — GPT-5.5 and model overview](https://platform.openai.com/docs/models)',
             '[Anthropic — Claude models overview](https://docs.anthropic.com/en/docs/models-overview)',
@@ -1429,7 +1429,7 @@ export const article: Record<Language, PEArticle> = {
 
       sources: {
         title: 'ソースと参考文献',
-        content: '**モデルの強みと価格はMarch 2026の使用パターンとLMSYS Arena、SWE-Bench、GPQAのベンチマークを反映します。** モデルの機能と価格は頻繁に変わります—最新レートの公式価格ページを確認し、本番提供に先立ってタスクでテストしてください。',
+        content: '**モデルの強みと価格はApril 2026の使用パターンとLMSYS Arena、SWE-Bench、GPQAのベンチマークを反映します。** モデルの機能と価格は頻繁に変わります—最新レートの公式価格ページを確認し、本番提供に先立ってタスクでテストしてください。',
         items: [
           '[OpenAI — GPT-5.5とモデル概要](https://platform.openai.com/docs/models)',
           '[Anthropic — Claudeモデル概要](https://docs.anthropic.com/en/docs/models-overview)',
