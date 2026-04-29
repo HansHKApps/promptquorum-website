@@ -25,6 +25,7 @@ export const article: Record<Language, PEArticle> = {
     aboutTopics: ['Prompt Management', 'LLM Evaluation', 'Prompt Versioning'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-27',
+    lastFactChecked: '2026-04-28',
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'What Do These 4 Tools Actually Do?', anchor: '#what-is' },
@@ -62,7 +63,7 @@ export const article: Record<Language, PEArticle> = {
         content: [
           '**Braintrust, PromptHub, Vellum, and Promptfoo solve different prompt team problems.** Braintrust is an evaluation platform (score outputs). PromptHub is a version control system (organize and share prompts). Vellum is a deployment platform with A/B testing (run experiments on real traffic). Promptfoo is a test automation tool (catch regressions in CI/CD). They overlap but do not replace each other.',
           'The reason teams struggle to pick one: all four claim to "optimize prompts," but they optimize at different stages. Braintrust optimizes by measuring; Vellum optimizes by splitting traffic; Promptfoo optimizes by catching regressions; PromptHub optimizes by organizing. A team might use Braintrust to discover a better prompt, Promptfoo to test it in CI/CD, and Vellum to deploy it.',
-          'This guide helps you skip the single-tool trap and build a practical two-tool stack that matches your team\'s workflow. For a broader comparison of all prompt tools, see [Best Prompt Optimization Tools for Teams](/prompt-engineering/best-prompt-optimization-tools-teams).',
+          'This guide is a head-to-head comparison of four specific tools. For a broader ranking of all prompt engineering tools, see [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026). For team optimization features including DSPy and Helicone, see [Best Prompt Optimization Tools for Teams](/prompt-engineering/best-prompt-optimization-tools-for-teams).',
         ],
       },
       evaluationCriteria: {
@@ -141,8 +142,8 @@ export const article: Record<Language, PEArticle> = {
         codeBlock: `prompts:
   - "Summarize in 3 bullets: {{text}}"
 providers:
-  - openai:gpt-4-turbo
-  - anthropic:claude-opus-4.1
+  - openai:gpt-5.5
+  - anthropic:claude-opus-4-7
 tests:
   - vars:
       text: "Long document..."
@@ -159,6 +160,13 @@ tests:
         content: [
           '**Before committing to Braintrust, Vellum, PromptHub, or Promptfoo for a specific LLM provider, use PromptQuorum to dispatch one prompt to 25+ models simultaneously and see which performs best — a model-agnostic first step.** Free tier available.',
           'Unlike the four tools above (which optimize for a single model at a time), PromptQuorum answers "which model handles this prompt best?" in one run. After you discover the optimal model with PromptQuorum, then route to Braintrust for deeper evaluation, Vellum for production A/B testing, or Promptfoo for CI/CD regression prevention.',
+        ],
+        items: [
+          '25+ models including GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models via Ollama and LM Studio',
+          '9 built-in prompt frameworks — TRACE, CO-STAR, CRAFT, and more',
+          'Side-by-side response comparison with consensus scoring',
+          'Token count per model — see cost differences before committing',
+          'Free tier — no engineering setup required',
         ],
       },
       comparisonTable: {
@@ -200,6 +208,14 @@ tests:
             'CI/CD': '✅ GitHub Actions',
             Pricing: 'Free',
             'Best For': 'DevOps teams',
+          },
+          {
+            Tool: 'PromptQuorum',
+            'Primary Use': 'Cross-model comparison',
+            Collaboration: '✓ Shared workspace',
+            'CI/CD': '✗ None',
+            Pricing: 'Free + credits',
+            'Best For': 'Model selection',
           },
         ],
       },
@@ -308,9 +324,8 @@ tests:
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Best Prompt Optimization Tools for Teams: 2026 Rankings](/prompt-engineering/best-prompt-optimization-tools-teams) — compares seven tools including Helicone and DSPy',
+          '[Best Prompt Optimization Tools for Teams: 2026 Rankings](/prompt-engineering/best-prompt-optimization-tools-for-teams) — compares seven tools including Helicone and DSPy',
           '[How to Evaluate Prompt Quality Systematically](/prompt-engineering/how-to-evaluate-prompt-quality) — frameworks for measuring outputs',
-          '[Best Prompt Testing Tools: Free and Paid](/prompt-engineering/best-prompt-testing-tools) — automated testing alternatives',
           '[Manual vs Automated Prompt Optimization](/prompt-engineering/manual-vs-automated-prompt-optimization) — when to hand-tune vs automate',
           '[Prompt Evaluation Metrics: Accuracy, Relevance, Latency](/prompt-engineering/prompt-evaluation-metrics) — specific quality metrics for LLMs',
         ],
@@ -319,11 +334,11 @@ tests:
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Braintrust — AI Evaluation Platform](https://braintrust.dev) — official documentation and pricing',
-          '[PromptHub — Prompt Version Control](https://prompthub.ai) — product homepage and team plan pricing',
-          '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — pricing and product overview',
-          '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub repository and documentation',
-          '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — model comparison and benchmarking',
+          '[Braintrust — AI Evaluation Platform](https://braintrust.dev) — official documentation; basis for scoring function, experiment dashboard, and ~$500/month Team plan claims',
+          '[PromptHub — Prompt Version Control](https://prompthub.ai) — product homepage; basis for version control, web UI, and $50–200/month pricing claims',
+          '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — product overview and pricing page; basis for traffic splitting, approval workflow, and $200–500/month claims',
+          '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub repository and documentation; basis for MIT license, YAML config, and GitHub Actions integration claims',
+          '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — multi-model comparison tool; basis for 25+ model dispatch and cross-model comparison claims',
         ],
       },
     },
@@ -421,7 +436,7 @@ tests:
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Braintrust vs PromptHub vs Vellum vs Promptfoo Comparison',
-      numberOfItems: 4,
+      numberOfItems: 5,
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -446,6 +461,12 @@ tests:
           position: 4,
           name: 'Promptfoo',
           description: 'Free open-source CLI for automated prompt regression testing in CI/CD pipelines. Best for DevOps and platform teams.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'PromptQuorum',
+          description: 'Cross-model comparison platform that dispatches one prompt to 25+ models simultaneously. Free tier available. Best for selecting optimal model before optimization.',
         },
       ],
       inLanguage: 'en',
