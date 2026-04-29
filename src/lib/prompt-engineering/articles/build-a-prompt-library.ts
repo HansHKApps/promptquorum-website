@@ -12,7 +12,7 @@ export const article: Record<Language, PEArticle> = {
       next_refresh_due: '2026-09-24',
       theme: 'Fundamentals',
       title: 'Build a Prompt Library That Saves Hours',
-      intro: 'A prompt library is a central, searchable collection of tested prompts with clear metadata so your team can reuse what works instead of reinventing instructions in every chat. Done well, it behaves like a shared "AI playbook": people grab a proven template for a task, adapt a few inputs, and get consistent results across models and projects.',
+      intro: 'A prompt library is a team-wide collection of tested instructions. Done well, each entry works like a small tool: pick it up, adapt the inputs, and get consistent results.',
       publishDate: '2026-03-24',
       dateModified: '2026-04-29',
       readTime: '10 min read',
@@ -21,6 +21,25 @@ export const article: Record<Language, PEArticle> = {
       educationalLevel: 'Beginner',
       audience: 'Team leads and practitioners adopting AI tools',
       leadAnswerBlock: '**A prompt library is a shared collection of tested prompts with structured metadata — title, inputs, expected output format, owner, and version — so your team can reuse working instructions instead of starting from scratch every time.**',
+      quickFacts: [
+        '8 metadata fields recommended per prompt entry (title, goal, body, inputs, model guidance, output format, tags, owner/version)',
+        'Start with 5–10 real prompts from everyday work — 1 to 2 weeks of collection',
+        'Monthly review cadence to retire unused prompts; teams typically retire 20–30%',
+        'Teams with 10+ approved prompts report 40–60% faster task setup',
+        'Draft → Approved → Deprecated: 3-status lifecycle keeps quality high',
+      ],
+      toc: [
+        { label: 'What Is a Prompt Library?', anchor: '#what-is-a-prompt-library' },
+        { label: 'Why Build a Prompt Library?', anchor: '#why-build-a-prompt-library' },
+        { label: 'What to Store for Each Prompt', anchor: '#what-to-store' },
+        { label: 'How to Build Step by Step', anchor: '#how-to-build' },
+        { label: 'Where to Store It', anchor: '#where-to-store' },
+        { label: 'How Do Storage Options Compare?', anchor: '#storage-options-comparison' },
+        { label: 'Versioning & Quality', anchor: '#versioning' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Regional Considerations', anchor: '#regional-considerations' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -95,6 +114,22 @@ export const article: Record<Language, PEArticle> = {
               text: 'Monthly at minimum. Look for prompts nobody uses, prompts that people keep editing ad-hoc, and opportunities to consolidate. Mark unused prompts as Deprecated; remove them from default views after 3 months of inactivity. Teams running monthly review cycles typically retire 20–30% of stored prompts as model defaults improve.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'How do you handle prompts that work on one model but not another?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Claude" and "Meeting summary – GPT-4o" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the difference between a prompt library and a prompt management platform?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A prompt library is a collection of structured prompt records your team maintains — it can live in a Git repo, a spreadsheet, or a dedicated tool. A prompt management platform adds execution, analytics, version control, and collaboration features on top of the library concept. Start with a simple library and upgrade to a platform when volume or governance needs justify it.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -155,7 +190,8 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         whatIsLibrary: {
-          title: 'What a Prompt Library Is (and Is Not)',
+          id: 'what-is-a-prompt-library',
+          title: 'What Is a Prompt Library (and What Is It Not)?',
           content: [
             '**A prompt library is a structured repository of prompts, each with a defined purpose, inputs, and expected output; it is not just a long list of cool prompts copied from the internet.**',
             'Each entry should read more like a small tool than a snippet of text. Think of it like a recipe card: one person tests the [prompt template](/prompt-engineering/fundamentals-of-prompt-optimization) with 3–5 real inputs, documents what works, and publishes it to the team. A useful prompt record typically includes:',
@@ -190,6 +226,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         whyBuildOne: {
+          id: 'why-build-a-prompt-library',
           title: 'Why Should Your Team Build a Prompt Library?',
           content: [
             '**A prompt library saves time, reduces variability between people, and gives you a safe place to refine prompts instead of losing them in private chat logs.**',
@@ -216,7 +253,8 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         whatToStore: {
-          title: 'What to Store for Each Prompt',
+          id: 'what-to-store',
+          title: 'What Should You Store for Each Prompt?',
           content: [
             '**Every prompt should capture enough context that another person can reproduce your results reliably, even months later.** As of April 2026, teams that document prompts with these 8 fields report 40–60% faster onboarding when new colleagues join.',
             'A practical schema:',
@@ -258,7 +296,8 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         howToStart: {
-          title: 'How to Build Your Library Step by Step',
+          id: 'how-to-build',
+          title: 'How Do You Build a Prompt Library Step by Step?',
           content: [
             '**The fastest way to build a usable prompt library is to harvest real prompts from everyday work, normalize them into a common template, and then add light governance.**',
             'A practical approach:',
@@ -291,7 +330,8 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         whereToStore: {
-          title: 'Where to Store It and How to Structure It',
+          id: 'where-to-store',
+          title: 'Where Should You Store a Prompt Library?',
           content: [
             '**You can implement a prompt library in anything from a Git repo to a shared list; the important part is searchable fields, easy editing, and some history of changes.**',
             'When evaluating options, use the same criteria you would for [selecting between any AI tools](/prompt-engineering/open-source-vs-proprietary-llms): accessibility, governance, and fit for your team\'s workflow. Dedicated prompt management tools such as [PromptQuorum](/how-it-works) add one-click multi-model execution, per-prompt analytics, and draft approval workflows.',
@@ -337,7 +377,8 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         storageTable: {
-          title: 'Comparing Storage Options: Pros and Cons',
+          id: 'storage-options-comparison',
+          title: 'How Do Storage Options Compare?',
           columns: ['Tool/Format', 'Best for', 'Version control', 'Search', 'Governance'],
           rows: [
             {
@@ -365,10 +406,11 @@ export const article: Record<Language, PEArticle> = {
           tableFormat: true,
         },
         versioning: {
+          id: 'versioning',
           title: 'How Do You Version Prompts and Maintain Quality?',
           content: [
             '**Without versioning and basic testing, a prompt library turns into a junk drawer; with light governance, it becomes a reliable internal product.**',
-            'Practical habits:',
+            'Most major AI models updated their instruction-following behavior in late 2025 and early 2026, which means prompts written for GPT-4 may need adjustment for GPT-4o or newer. As of April 2026, Anthropic\'s Claude 3.5 and 4 series handle system prompts differently than earlier versions — always version-tag when you retest against a new model. Practical habits:',
           ],
           items: [
             'Version prompts explicitly: Use a simple scheme like v1.0 – v1.1. Add a one-line change note (e.g., "v1.1 – added JSON output format; reduced hallucinations for dates").',
@@ -386,7 +428,8 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         commonMistakes: {
-          title: 'Common Mistakes When Building a Prompt Library',
+          id: 'common-mistakes',
+          title: 'What Are Common Mistakes When Building a Prompt Library?',
           callouts: [
             {
               type: 'practice',
@@ -422,6 +465,27 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
         },
+        regionalConsiderations: {
+          id: 'regional-considerations',
+          title: 'Are There Regional or Compliance Considerations?',
+          content: [
+            '**Data residency and compliance requirements affect where and how you store prompts, especially when prompt bodies include sensitive customer data as placeholders.**',
+            'As of April 2026, the main constraints by region:',
+          ],
+          items: [
+            'EU / GDPR: If prompt templates include or reference personal data, the storage tool must meet GDPR requirements. Notion, Airtable, and most SaaS platforms offer EU data residency; verify before enabling for sensitive workflows.',
+            'US SOC 2: For enterprise customers that require vendor compliance, choose tools with SOC 2 Type II certification (Notion, Airtable, PromptQuorum all qualify as of April 2026).',
+            'Regulated industries (healthcare, finance, legal): System prompts that include patient identifiers or financial records need to stay in your own infrastructure. Use Git-based storage or a self-hosted option, not a consumer SaaS tool.',
+            'Tip: Separate sensitive prompts (those that accept PII as inputs) from general-purpose prompts. Apply stricter access controls and shorter retention to the sensitive group.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Never store real PII in a prompt body',
+              text: 'Prompt templates should use placeholders like <CUSTOMER_NAME> — never real names, emails, or record IDs. Real data belongs only in the runtime input, not in the stored template.',
+            },
+          ],
+        },
         faqSection: {
           title: 'Frequently Asked Questions',
           faqs: [
@@ -449,6 +513,14 @@ export const article: Record<Language, PEArticle> = {
               q: 'How often should we review and prune a prompt library?',
               a: 'Monthly at minimum. Look for: prompts nobody uses, prompts that drift (people keep editing the same one ad-hoc), and opportunities to consolidate. Mark unused prompts as Deprecated; retire them after 3 months of no activity. Actively used prompts stay fresh and useful.',
             },
+            {
+              q: 'How do you handle prompts that work on one model but not another?',
+              a: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Claude" and "Meeting summary – GPT-4o" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
+            },
+            {
+              q: 'What is the difference between a prompt library and a prompt management platform?',
+              a: 'A prompt library is a collection of structured prompt records your team maintains — it can live in a Git repo, a spreadsheet, or a dedicated tool. A prompt management platform adds execution, analytics, version control, and collaboration features on top of the library concept. Start with a simple library and upgrade to a platform when volume or governance needs justify it.',
+            },
           ],
         },
         relatedReading: {
@@ -466,8 +538,9 @@ export const article: Record<Language, PEArticle> = {
           title: 'Sources & Further Reading',
           items: [
             { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
-            { title: 'Anthropic: Using Claude Effectively', url: 'https://docs.anthropic.com/en/docs/build-a-bot' },
-            { title: 'Knowledge Management and Organizational Learning', url: 'https://scholar.google.com/scholar?q=knowledge+management+organizational+learning' },
+            { title: 'Anthropic: Prompt Engineering Overview', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
+            { title: 'Lilian Weng: Prompt Engineering (2023)', url: 'https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/' },
+            { title: 'Google DeepMind: Prompting Strategies', url: 'https://ai.google.dev/gemini-api/docs/prompting-strategies' },
           ],
         },
       },
