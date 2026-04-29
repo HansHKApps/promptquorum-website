@@ -545,7 +545,583 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: {
+  theme: 'Grundlagen',
+  title: 'Erstelle eine Prompt-Bibliothek, die Zeit spart',
+  intro: 'Eine Prompt-Bibliothek ist eine teamweite Sammlung getesteter Anweisungen mit Metadaten, die Ihrem Team hilft, Prompts zu standardisieren, zu teilen und zu verbessern. Richtig aufgebaut, wird sie zum zweiten Gehirn Ihres Teams: Sie reduziert Setup-Zeit, beschleunigt das Onboarding und verhindert, dass bewährte Prompts in persönlichen Notizen verloren gehen. Dieses 12-Schritte-Framework zeigt, wie Sie eine Prompt-Bibliothek bauen, die Ihr Team tatsächlich nutzt.',
+  seoTitle: 'Prompt-Bibliothek erstellen: 12-Schritt-Framework für Teams 2026',
+  metaDescription: 'Eine Prompt-Bibliothek ist eine gemeinsame, durchsuchbare Sammlung von getesteten Prompts mit Metadaten. Teams, die eine bauen, sparen Stunden beim Setup und Onboarding. Hier ist ein bewährtes Framework.',
+  publishDate: '2026-03-24',
+  dateModified: '2026-04-29',
+  readTime: '12 Min. Lesezeit',
+  educationalLevel: 'Beginner',
+  audience: 'Teamleiter und Praktiker, die KI-Tools einführen',
+  leadAnswerBlock: 'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts mit Metadaten — nicht nur eine Liste. Teams, die eine richtig aufbauen, sparen Stunden beim Prompt-Setup und Onboarding neuer Mitarbeiter. Dieses Framework zeigt die 12 Schritte, um eine Bibliothek zu starten, die Ihr Team tatsächlich nutzt.',
+  quickFacts: [
+    'Eine Prompt-Bibliothek reduziert das Setup neue Prompts von Stunden auf Minuten.',
+    'Jeder Prompt braucht mindestens: Titel, Body, Input-Variablen, erwartetes Output-Format, Tags, Besitzer, Version.',
+    'Die beste Organisationsstruktur: nach Aufgabe/Funktion (nicht nach Modell); Modell-Details gehören in die Metadaten.',
+    'Leichte Governance (Draft → Approved → Deprecated) verhindert Qualitätsverlust und hält die Bibliothek nutzbar.',
+    'Versionierung ist kritisch: v1.0, v1.1 mit Änderungsnotizen; Rollback muss möglich sein.',
+  ],
+  toc: [
+    { label: 'Was ist eine Prompt-Bibliothek?', anchor: 'what-is-library' },
+    { label: 'Warum sollte Ihr Team eine bauen?', anchor: 'why-build-one' },
+    { label: 'Was sollte man speichern?', anchor: 'what-to-store' },
+    { label: 'Wie fängst du an?', anchor: 'how-to-start' },
+    { label: 'Versionierung und Qualitätskontrolle', anchor: 'versioning' },
+    { label: 'Wo sollte man speichern?', anchor: 'where-to-store' },
+    { label: 'Häufige Fehler', anchor: 'common-mistakes' },
+    { label: 'Regionale und Compliance-Überlegungen', anchor: 'regional-considerations' },
+    { label: 'Häufig gestellte Fragen', anchor: 'faq-section' },
+    { label: 'Weiterführende Literatur', anchor: 'related-reading' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    url: 'https://www.promptquorum.com/prompt-engineering/build-a-prompt-library?lang=de',
+    inLanguage: 'de',
+    headline: 'Erstelle eine Prompt-Bibliothek, die Zeit spart',
+    description: 'Eine Prompt-Bibliothek ist eine teamweite Sammlung getesteter Anweisungen mit Metadaten, die Ihrem Team hilft, Prompts zu standardisieren, zu teilen und zu verbessern.',
+    image: 'https://www.promptquorum.com/og-build-a-prompt-library-de.png',
+    datePublished: '2026-03-24',
+    dateModified: '2026-04-29',
+    author: { '@type': 'Person', name: 'Hans Kuepper' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt-Bibliotheken' },
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'KI-Governance' },
+    ],
+    mentions: [
+      { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      { '@type': 'SoftwareApplication', name: 'Notion' },
+      { '@type': 'SoftwareApplication', name: 'Airtable' },
+    ],
+    teaches: [
+      'Wie man eine strukturierte Prompt-Bibliothek baut',
+      'Was in jeden Prompt gehört (Metadaten, Versionierung, Besitzer)',
+      'Wie man Prompts nach Aufgabe/Funktion organisiert',
+      'Leichte Governance-Prozesse für Qualitätskontrolle',
+      'Werkzeuge und Plattformen für Prompt-Verwaltung',
+    ],
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    audience: { '@type': 'Audience', audienceType: 'Teamleiter und KI-Praktiker' },
+    keywords: ['Prompt-Bibliothek', 'Prompt Engineering', 'KI-Governance', 'Prompt-Verwaltung', 'Versionierung', 'Teamzusammenarbeit'],
+    primaryTerm: 'Prompt-Bibliothek',
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'de',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Was ist eine Prompt-Bibliothek?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts, die Ihr Team verwaltet. Sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Das Ziel: Prompts standardisieren, teilen und verbessern, statt sie in persönlichen Notizen zu verlieren.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wann sollte Ihr Team eine Prompt-Bibliothek statt persönlicher Notizen verwenden?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Verwenden Sie eine Bibliothek sobald mehr als eine Person die gleichen Prompts nutzt. Persönliche Notizen funktionieren für Einzelne, aber wenn Ihr Team skaliert, verlieren Sie bewährte Prompts und verschwenden Zeit mit Doppelarbeit.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie lange dauert es, eine brauchbare Prompt-Bibliothek von Grund auf zu erstellen?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Eine minimale Bibliothek mit 10–15 getesteten Prompts dauert 2–4 Wochen (abhängig von Teamgröße). Mit aktiver Nutzung und monatlichen Reviews wächst die Qualität kontinuierlich. Rechnen Sie mit weniger als 1 Stunde pro Woche für Wartung, sobald die Struktur etabliert ist.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie bringe ich mein Team dazu, tatsächlich zu einer gemeinsamen Prompt-Bibliothek beizutragen?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Machen Sie den Beitrag so einfach wie möglich: ein Formular oder Git-Template, klare Metadaten-Anforderungen, und monatliche Reviews. Das Wichtigste: Zeigen Sie Mehrwert — Teams tragen bei, wenn sie sehen, dass ihre Prompts genutzt und verbessert werden.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist eine Prompt-Bibliothek dasselbe wie ein System-Prompt?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Nein. Ein System-Prompt sind Regeln, die Sie einmal definieren und auf alle Eingaben anwenden. Eine Prompt-Bibliothek ist eine Sammlung von verschiedenen Prompts für verschiedene Aufgaben — jeder mit eigenen Metadaten und Versionen.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie oft sollte Ihr Team eine Prompt-Bibliothek überprüfen und bereinigen?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Monatlich ist ideal. Markieren Sie selten genutzte Prompts als Deprecated, fördern Sie verbesserte Versionen zu Approved, und erstellen Sie neue Kategorien, wenn sich die Nutzung verändert. Teams, die monatlich reviewen, haben 20–30 % weniger Bloat nach 6 Monaten.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting-Zusammenfassung – Claude" und "Meeting-Zusammenfassung – GPT-4o" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zwischen einer Prompt-Bibliothek und einer Prompt-Management-Plattform?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Eine Prompt-Bibliothek ist eine Sammlung strukturierter Prompt-Einträge, die Ihr Team verwaltet — sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Eine Prompt-Management-Plattform fügt Ausführung, Analysen, Versionskontrolle und Collaboration-Features auf top der Bibliothek hinzu. Fangen Sie mit einer einfachen Bibliothek an und upgraden Sie zu einer Plattform, wenn Volumen oder Governance es rechtfertigen.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja. Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor der Aktivierung für sensitive Workflows. Die wichtigste Regel: Speichern Sie echte persönliche Daten nie im Prompt-Body — nutzen Sie Platzhalter wie <CUSTOMER_NAME> und übergeben Sie echte Daten nur im Runtime-Input. Für Article 28 Compliance (Auftragsverarbeitung) benötigen Sie einen Data Processing Agreement.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja. Mittelstand-Unternehmen profitieren von PromptQuorum für Qualitätskontrolle, Wissensmanagement und Governance. PromptQuorum erfüllt SOC 2 Type II Zertifizierung (Stand 2026) und unterstützt DSGVO Article 28 Anforderungen für Auftragsverarbeitung. Nutzen Sie lokale Inference für sensitive Workflows (Finanzen, Medizin, Recht) und Prompt-Verwaltung für breitere Adoption in Teams. BSI-Grundschutz-Kataloge sind mit PromptQuorum EU-based Deployment kompatibel.',
+        },
+      },
+    ],
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    inLanguage: 'de',
+    name: 'Wie man eine Prompt-Bibliothek baut',
+    description: 'Ein 12-Schritt-Framework zum Aufbau einer Prompt-Bibliothek, die Ihr Team tatsächlich nutzt.',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Sammeln Sie echte Prompts, die Ihr Team heute nutzt',
+        text: 'Fangen Sie bottom-up an. Fragen Sie jeden auf dem Team: Welche Prompts nutzen Sie regelmäßig? Sammeln Sie die Top 10–15 echten Prompts, die greifbare Ergebnisse bringen. Dies wird Ihre Gründungsbibliothek.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Normalisieren Sie jeden Prompt in die gleiche Struktur',
+        text: 'Fügen Sie Metadaten hinzu: Titel, Body (der echte Prompt), Input-Variablen (wie <CUSTOMER_NAME>), erwartetes Output-Format, Tags, Besitzer, Version. Dies verhindert Chaos, wenn die Bibliothek wächst.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Organisieren Sie nach Aufgabe/Funktion, nicht nach Modell',
+        text: 'Struktur: "Meeting Summaries" → v1.0 (Claude), v1.0 (GPT-4o) statt "Claude Prompts" → "Meeting Summaries". Modell-Details gehören in Metadaten, nicht in die Ordnerstruktur.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Führen Sie leichte Governance ein: Draft → Approved → Deprecated',
+        text: 'Neue Prompts starten als Draft. Nach dem Team-Test und Feedback: Approved. Wenn veraltet oder überholt: Deprecated (nicht gelöscht, damit keine Referenzen brechen). Dies verhindert, dass schlechte Prompts in die Produktion gehen.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Versionieren Sie explizit: v1.0, v1.1 mit Change Notes',
+        text: 'Jede Änderung erhält eine Versionsnummer und eine Change Note. Beispiel: v1.1 "Bessere Halluzination-Reduktion durch mehr Examples". Dies macht Rollback einfach und hilft Teams, Verbesserungen zu verstehen.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 6,
+        name: 'Etablieren Sie monatliche Review-Zyklen',
+        text: 'Jeden Monat: Nutzen Sie Metriken (wie oft wurde dieser Prompt benutzt?), priorisieren Sie Verbesserungen, promovieren Sie bessere Versionen. Teams, die monatlich reviewen, sehen 20–30 % weniger Bloat nach 6 Monaten.',
+      },
+    ],
+  },
+  sections: {
+    tldr: {
+      isTldr: true,
+      items: [
+        'Eine Prompt-Bibliothek = strukturiertes Repository mit Metadaten, nicht nur eine Liste von Prompts',
+        'Jeder Eintrag braucht: Titel, Prompt-Body, Input-Variablen, Output-Format, Tags, Besitzer, Version',
+        'Bauen Sie bottom-up: sammeln Sie echte Prompts erst, normalisieren Sie sie dann in Templates',
+        'Organisieren Sie nach Aufgabe/Funktion (nicht nach Modell); Modell-Details gehören in Metadaten',
+        'Leichte Governance (Draft → Approved → Deprecated) verhindert Qualitätsverlust',
+        'Versionieren Sie explizit (v1.0, v1.1) mit Change Notes; Rollback muss möglich sein',
+        'Monatliche Reviews: Retire low-use Prompts, promote improved versions',
+      ],
+    },
+    whatIsLibrary: {
+      id: 'what-is-library',
+      title: 'Was ist eine Prompt-Bibliothek?',
+      content: [
+        'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts, die Ihr Team als eine centrale Quelle der Wahrheit verwaltet. Jeder Prompt ist ein Datensatz mit Metadaten (Titel, Besitzer, Version, Tags, getestete Modelle), nicht nur Text in einem Dokument.',
+        'Die Bibliothek lebt irgendwo — in einem Git-Repo, einer Notion-Datenbank, Airtable, einer Google Sheet oder einem dedizierten Tool wie PromptQuorum. Das Wichtigste: Sie ist durchsuchbar, versioniert und mit Team-Zugriff geteilt.',
+        'Das Ziel: Ihr Team spart Zeit (Prompts nicht neu erfinden), onboardet schneller (neue Mitarbeiter nutzen bewährte Prompts statt bei null anzufangen), und verhindert Qualitätsverlust (schlechte Prompts werden aussortiert, gute werden verbessert).',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Nicht nur eine Liste',
+          text: 'Eine Prompt-Sammlung in einer Slack-Nachricht oder einem Google Doc ist ein Start — aber keine echte Bibliothek. Eine Bibliothek ist durchsuchbar, versioniert und hat Metadaten.',
+        },
+      ],
+    },
+    libraryAsset: {
+      id: 'library-asset',
+      title: 'Warum ist eine Prompt-Bibliothek ein digitales Asset?',
+      content: 'Eine bewährte Prompt-Bibliothek ist wie ein Code-Repository — ein Wissens-Asset, das Wiederverwertung ermöglicht, Qualität verbessert und Onboarding beschleunigt. Wenn die beste Person Ihr Unternehmen verlässt, gehen ihre bewährten Prompts nicht mit ihnen weg.',
+    },
+    whyBuildOne: {
+      id: 'why-build-one',
+      title: 'Warum sollte Ihr Team eine Prompt-Bibliothek bauen?',
+      items: [
+        'Zeit sparen: Neue Prompts brauchen Stunden Trial-and-Error. Eine Bibliothek reduziert Setup von Stunden auf Minuten.',
+        'Schneller onboarden: Neue Mitarbeiter nutzen bewährte Prompts am ersten Tag statt eigene zu erfinden.',
+        'Qualitätskontrolle: Schlechte Prompts werden durchfallen, gute werden verbessert. Die Qualität steigt kontinuierlich.',
+        'Wissen behalten: Wenn jemand das Team verlässt, gehen seine bewährten Prompts nicht mit ihm weg.',
+        'A/B-Testing ermöglichen: Compare Versionen (v1.0 vs v1.1), sehen welche besser funktioniert.',
+        'Modell-Experiments vereinfachen: Test the same prompt auf GPT-4o, Claude, Llama 3.1 — Track welche Model best ist.',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: 'Ohne Bibliothek: Chaos am Scale',
+          text: 'Teams ohne eine Bibliothek sehen: doppelte Arbeit (jeder erfindet die gleiche Prompt neu), Qualitätsverlust (schlechte Prompts kursieren), langes Onboarding (neue Mitarbeiter haben keinen Startpunkt).',
+        },
+      ],
+    },
+    sharedSystem: {
+      id: 'shared-system',
+      title: 'Eine Prompt-Bibliothek ist ein System, das das Team teilt',
+      content: 'Das Wichtigste: Es ist nicht Top-Down erzwungen, sondern Bottom-Up gebaut. Ihr Team liefert die echten Prompts. Sie normalisieren und verwalten sie gemeinsam. Die Governance ist leicht — nur genug Struktur um Chaos zu vermeiden, nicht so viel, dass Beiträge unmöglich werden.',
+    },
+    whatToStore: {
+      id: 'what-to-store',
+      title: 'Was sollte man in einer Prompt-Bibliothek speichern?',
+      content: 'Nicht jeden Prompt, den jemand je geschrieben hat — nur Prompts, die wiederverwendbar sind und Geschäftsergebnisse antreiben.',
+      items: [
+        'Task-spezifische Prompts: "Meeting Summaries", "Email Draft", "Code Review", "Customer Q&A"',
+        'Getestete Prompts: Die Prompt muss in Produktion getestet sein und dokumentierte Ergebnisse haben',
+        'Team-Prompts: Prompts die mehr als eine Person nutzt. Private Prompts sind nicht nötig (die bleiben lokal).',
+        'Wiederverwendbare Prompts: Solche, die auf verschiedene Eingaben anwendbar sind (nicht eine Einweg-Prompt für ein einzelnes Dokument).',
+      ],
+    },
+    schemaBreakdown: {
+      id: 'schema-breakdown',
+      title: 'Was gehört in jede Prompt-Bibliotheks-Eintrag?',
+      items: [
+        '**Titel**: Kurz, beschreibend ("Meeting Summary v1.1", nicht "My Best Prompt")',
+        '**Prompt-Body**: Der echte Prompt-Text mit Input-Variablen als Platzhalter (<MEETING_TRANSCRIPT>, <TONE>)',
+        '**Input-Variablen**: Was könnte sich ändern? (<LANGUAGE>, <CUSTOMER_TYPE>, <FORMAT>)',
+        '**Output-Format**: Wie soll das Output aussehen? (JSON, Markdown, Plain Text, List?)',
+        '**Besitzer**: Wer hat ihn geschrieben? Wer ist verantwortlich für Updates?',
+        '**Tags**: Kategorien für Suche ("sales", "support", "legal", "content-gen")',
+        '**Version**: v1.0, v1.1, v2.0 — mit Change Note (was sich verändert hat)',
+        '**Getestete Modelle**: "Claude 4.6, GPT-4o" (dies hilft Teams, die richtige Variante zu wählen)',
+        '**Status**: Draft, Approved, Deprecated (verhindert schlechte Prompts in Produktion)',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Inputs als Platzhalter speichern',
+          text: 'Speichern Sie immer `<VARIABLE>` nicht echte Daten im Prompt-Body. Real data gehört nur in Runtime Input, nicht im Template.',
+        },
+      ],
+      promptExamples: [
+        {
+          bad: 'Meeting Summary Prompt\n\nMy meeting with Sarah Johnson on March 24 was about Q2 budget planning. Here\'s what happened: ....',
+          good: 'Meeting Summary (v1.1 – Claude)\n\nInput: <MEETING_TRANSCRIPT>\nOutput: JSON with {summary: string, action_items: string[], duration_minutes: number}\n\nPrompt: Zusammenfasse die folgende Besprechung...',
+          badLabel: '❌ Persönliche Daten im Body, keine Struktur, keine Variablen',
+          goodLabel: '✅ Platzhalter, klares Format, versioniert, modellspezifisch',
+        },
+      ],
+    },
+    optionalFields: {
+      id: 'optional-fields',
+      title: 'Optionale Felder (später hinzufügen)',
+      content: 'Fangen Sie mit den 9 Pflichtfeldern oben an. Später können Sie hinzufügen:',
+      items: [
+        '**Kostennotizen**: "Dieser Prompt kostet ~0,02 € pro Aufruf bei GPT-4o"',
+        '**Performance-Metriken**: "Latency: <2 seconds", "Token count: ~500"',
+        '**Lektionen gelernt**: "Tried few-shot — doesn\'t improve accuracy for this task"',
+        '**Abhängigkeiten**: "Needs retrieval_context input (from RAG system)"',
+      ],
+    },
+    howToStart: {
+      id: 'how-to-start',
+      title: 'Wie fängst du an: Ein 6-Schritte-Framework',
+      numberedItems: [
+        {
+          title: 'Sammeln Sie echte Prompts',
+          whyItMatters: 'Fragen Sie jeden auf dem Team: "Was sind die Top 3 Prompts, die Sie regelmäßig nutzen?" Sammeln Sie 10–15 echte Prompts. Dies ist Ihre Gründungsbibliothek — nicht theoretisch, sondern real in Produktion.',
+        },
+        {
+          title: 'Normalisieren Sie die Struktur',
+          whyItMatters: 'Nutzen Sie die 9 Pflichtfelder (Titel, Body mit Platzhaltern, Input-Variablen, Output-Format, Tags, Besitzer, Version, Status, getestete Modelle). Alle Prompts sollten die gleiche Struktur haben.',
+        },
+        {
+          title: 'Organisieren Sie nach Aufgabe',
+          whyItMatters: 'Struktur: "Sales" (Email Draft, Objection Handling, Proposal Review) statt "Claude Prompts" (durcheinander). Modell-Details gehören in Metadaten, nicht in Folder-Namen.',
+        },
+        {
+          title: 'Einführen Sie leichte Governance',
+          whyItMatters: 'Draft → Approved → Deprecated. Neue Prompts starten als Draft. Nach Test + Team-Feedback: Approved. Alte Prompts: Deprecated (nicht gelöscht). Diese einfache Struktur verhindert schlechte Prompts in Produktion.',
+        },
+        {
+          title: 'Versionieren Sie explizit',
+          whyItMatters: 'Jede Änderung erhält v1.0, v1.1, v2.0 mit einer Change Note: "v1.1: Verbesserte Halluzination-Reduktion durch 3 Beispiele statt 1". Dies macht Rollback einfach.',
+        },
+        {
+          title: 'Starten Sie monatliche Reviews',
+          whyItMatters: 'Jeden Monat: Welche Prompts sind beliebt? Welche wurden nie genutzt? Bessere Versionen promovieren. Deprecated markieren. Dies hält die Bibliothek lean und nützlich.',
+        },
+      ],
+      snippets: [
+        {
+          type: 'in-one-sentence',
+          text: 'Bottom-up bauen (echte Prompts sammeln), normalisieren, leicht regieren, monatlich reviewen.',
+        },
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Nicht zu viel Engineering von Anfang an',
+          text: 'Eine Google Sheet reicht für 1–20 Prompts. Erst upgraden Sie auf Notion/Airtable/PromptQuorum, wenn Sie 30+ Prompts haben oder wenn Sie API-Zugriff brauchen.',
+        },
+      ],
+    },
+    timelyRefinement: {
+      id: 'timely-refinement',
+      title: 'Kontinuierliche Verbesserung: Die Bibliothek wächst stärker, wenn Sie sie nutzen',
+      content: [
+        'Die erste Version Ihrer Bibliothek ist draft. Real value kommt von kontinuierlicher Nutzung und monatlichen Verbesserungen.',
+        'Nach einer Woche: Welche Prompts nutzt das Team am häufigsten? Welche Probleme sind aufgetaucht? Diese Feedback-Loop-Daten teilen Sie in Ihre nächsten Versionen ein.',
+      ],
+    },
+    whereToStore: {
+      id: 'where-to-store',
+      title: 'Wo sollte man eine Prompt-Bibliothek speichern?',
+      content: 'Die Wahl hängt von Teamgröße, Governance-Anforderungen und Integration ab. Es gibt 3 gängige Optionen:',
+    },
+    storageOptions: {
+      id: 'storage-options',
+      items: [
+        '**Markdown in Git-Repo** — beste Wahl für Teams <5. Kostenlos, versioniert, Code-nah. Problem: Nicht durchsuchbar (außer grep).',
+        '**Notion oder Airtable** — beste Wahl für Teams 5–20. Durchsuchbar, schöne UI, einfache Collaboration. Problem: Nicht API-nativ (PromptQuorum ist API-first).',
+        '**Dedizierte Prompt-Plattform (PromptQuorum)** — beste Wahl für Teams >20 oder wenn Sie Governance, Auditing, API-Zugriff brauchen.',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Fangen Sie klein an',
+          text: 'Git-Repo reicht für die erste Woche. Erst wenn Ihr Team >5 ist oder wenn Sie häufig suchbar zugreifen müssen, upgraden Sie auf Notion/Airtable/PromptQuorum.',
+        },
+      ],
+    },
+    structureApproach: {
+      id: 'structure-approach',
+      title: 'Organisationsstruktur',
+      content: 'Egal wo Sie speichern: die Struktur sollte nach **Aufgabe/Funktion** sein, nicht nach Modell.',
+      items: [
+        '✅ Richtig: Sales → Email Draft (v1.0 Claude, v1.0 GPT-4o) → Customer Objection Handling (v1.1 Claude)',
+        '❌ Falsch: Claude → Sales Prompts → Email Draft',
+      ],
+    },
+    structureFlexibility: {
+      id: 'structure-flexibility',
+      title: 'Warum Aufgabe statt Modell?',
+      content: 'Wenn Sie nach Modell organisieren, passiert folgendes: Irgendwann möchten Sie einen Prompt auf einem anderen Modell testen. Jetzt müssen Sie die Prompt-Datei kopieren, umbenennen, beide Versionen synchron halten. Das ist Fehler-anfällig und langweilig.',
+      items: [
+        'Wenn Sie nach Aufgabe organisieren: "Email Draft" hat Varianten (Claude v1.0, GPT-4o v1.0) als klare Einträge. Leicht zu vergleichen, leicht zu aktualisieren.',
+      ],
+    },
+    storageTableNote: {
+      id: 'storage-table-note',
+      title: 'Vergleich der 3 Speicheroptionen',
+      callouts: [
+        {
+          type: 'info',
+          label: 'Tabelle unten',
+          text: 'Wählen Sie die Speicheroption basierend auf Teamgröße, Durchsuchbarkeit und ob Sie eine API brauchen.',
+        },
+      ],
+    },
+    storageTable: {
+      id: 'storage-table',
+      tableFormat: true,
+      columns: ['Option', 'Best für', 'Versionskontrolle', 'Suche', 'Governance'],
+      rows: [
+        {
+          'Option': 'Markdown in Git',
+          'Best für': 'Teams <5, Engineering-nah',
+          'Versionskontrolle': 'Natif (Git)',
+          'Suche': 'Nur grep',
+          'Governance': 'Manuell (Pull Request Review)',
+        },
+        {
+          'Option': 'Notion / Airtable',
+          'Best für': 'Teams 5–20, Non-technical Zugang wichtig',
+          'Versionskontrolle': 'Built-in (aber basic)',
+          'Suche': 'Natif (Tag/Search)',
+          'Governance': 'Permissions, aber wenig Audit Trail',
+        },
+        {
+          'Option': 'PromptQuorum (Dediziert)',
+          'Best für': 'Teams >20, Governance/Auditing erforderlich',
+          'Versionskontrolle': 'Full (Rollback, Diffs)',
+          'Suche': 'Natif + API',
+          'Governance': 'RBAC, Audit Logs, Approval Workflows',
+        },
+      ],
+    },
+    versioning: {
+      id: 'versioning',
+      title: 'Wie man Prompts versioniert und Qualität aufrechterhält',
+      content: 'Versionierung ist das Rückgrat einer funktionierenden Bibliothek. Ohne explizite Versionen passiert folgendes: Jemand ändert einen Prompt, bricht unbeabsichtigt ein Production System, und niemand weiß warum.',
+      items: [
+        '**v1.0**: Erste stabile Version. Production ready. Hat getestete Ergebnisse.',
+        '**v1.1**: Minor-Verbesserung. Gleiche Logik, bessere Ergebnisse (z.B. "v1.1: +2 Examples zur Halluzination-Reduktion").',
+        '**v2.0**: Major-Überarbitung. Änderung der Logik, Input-Variablen, oder Output-Format. Große Versionen sind selten.',
+        '**Change Notes**: Immer dokumentieren WAS sich geändert hat ("Bessere Customer Tone durch Style Guide hinzufügt") — nicht nur "updated".',
+        '**Rollback-Möglich**: Keep alte Versionen zugänglich. Wenn v1.1 besser nicht läuft, rollback zu v1.0 in 1 Klick.',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: 'Keine "Latest" ohne Versionsnummer',
+          text: 'Wenn Ihr System immer "Latest" nutzt und jemand ändert einen Prompt, alle Production-Systeme brechen kaputt. Nutzen Sie immer explizite Versionen (v1.0, v1.1, v2.0).',
+        },
+      ],
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: 'Häufige Fehler und wie man sie vermeidet',
+      mistakes: [
+        {
+          mistake: 'Echte Daten im Prompt-Body speichern',
+          problem: 'Beispiel: "Mein Kunde Sarah Johnson...". Wenn dieser Prompt geteilt wird oder in Git geht, sind echte persönliche Daten leicht auffindbar.',
+          fix: 'Immer Platzhalter nutzen: <CUSTOMER_NAME>. Real data gehört nur in Runtime Input.',
+        },
+        {
+          mistake: 'Keine Input-Variablen definieren',
+          problem: 'Jemand nutzt einen Prompt lokal mit "Mein Meeting war heute um 10 Uhr..." — aber hat nicht dokumentiert WELCHE Variablen sich ändern können. Später nutzen andere den Prompt mit harten Codedaten.',
+          fix: 'Dokumentieren Sie jede Variable: <MEETING_TIME>, <PARTICIPANT_COUNT>, <FOCUS>. Zeigen Sie, wie man sie ersetzt.',
+        },
+        {
+          mistake: 'Überwertung von Governance von Anfang an',
+          problem: 'Teams starten mit komplexem Approval Workflow (3 Reviewer, Change Control Boards). Nach 2 Wochen: Niemand trägt Prompts bei.',
+          fix: 'Start mit Draft → Approved → Deprecated. Nur das. Komplexere Workflows später, wenn Teams >15.',
+        },
+        {
+          mistake: 'Veraltete Prompts nicht Deprecated markieren',
+          problem: 'Alte Versionen sammeln sich an. Teams sind verwirrt: "Nutze ich v1.0 oder v1.1?" Production-Systeme enden mit schlechten alten Versionen.',
+          fix: 'Monatliche Reviews: Prompts, die nie nutzt werden, Deprecated markieren (nicht löschen — Referenzen in Code könnten brechen). Mit Grund ("übertroffen durch v1.2").',
+        },
+        {
+          mistake: 'Nie reviewen, nie verbessern',
+          problem: 'Bibliothek stagniert. Schlechte Prompts werden nicht gefixed. Bessere Versionen werden nie promoviert. Team verliert Vertrauen.',
+          fix: 'Monatliche 1-Stunden-Reviews: Top-Use Prompts analysieren, Feedback umschreiben, Besseres zu Approved promovieren. Kontinuierliche Verbesserung zeigt, dass die Bibliothek lebendig ist.',
+        },
+      ],
+    },
+    regionalConsiderations: {
+      id: 'regional-considerations',
+      title: 'Regionale und Compliance-Überlegungen',
+      content: [
+        '**Datenspeicherung und Compliance-Anforderungen beeinflussen, wo und wie Sie Prompts speichern, besonders wenn Prompt-Bodies sensitive Kundendaten als Platzhalter enthalten.**',
+        'Stand April 2026 sind die Hauptbeschränkungen regional:',
+      ],
+      items: [
+        '**EU / DSGVO**: Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor Aktivierung für sensitive Workflows. **DSGVO Article 28 (Auftragsverarbeitung):** Wenn Sie einen Drittanbieter (wie PromptQuorum) zum Speichern von Prompts nutzen, die Kundendaten enthalten, benötigen Sie einen Data Processing Agreement (DPA).',
+        '**US SOC 2**: Für Enterprise-Kunden, die Vendor-Compliance benötigen, wählen Sie Tools mit SOC 2 Type II Zertifizierung (Notion, Airtable, PromptQuorum alle erfüllen das Stand 2026).',
+        '**Regulierte Industrien (Gesundheit, Finanzen, Recht)**: System-Prompts, die Patienten-IDs oder Finanzaktenzeichen enthalten, müssen in Ihrer eigenen Infrastruktur bleiben. Nutzen Sie Git-basierte Speicherung oder eine gehostete Option — nicht ein Consumer-SaaS-Tool.',
+        '**Tipp**: Trennen Sie sensitive Prompts (solche, die PII als Inputs akzeptieren) von allgemein nutzbaren Prompts. Wenden Sie strengere Zugriffskontrolle und kürzere Aufbewahrung auf die sensitive Gruppe an.',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: 'Speichern Sie NIE echte PII im Prompt-Body',
+          text: 'Prompt-Templates sollten Platzhalter nutzen wie <CUSTOMER_NAME> — nie echte Namen, Emails oder Datensatz-IDs. Real data gehört nur in den Runtime Input, nicht in das gespeicherte Template.',
+        },
+      ],
+    },
+    faqSection: {
+      id: 'faq-section',
+      title: 'Häufig gestellte Fragen',
+      faqs: [
+        {
+          q: 'Was ist eine Prompt-Bibliothek?',
+          a: 'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts, die Ihr Team als eine zentrale Quelle der Wahrheit verwaltet. Sie kann in einem Git-Repo, einer Notion-Datenbank, Airtable, einer Google Sheet oder einem dedizierten Tool leben. Das Ziel: Wiederverwendung ermöglichen, Qualität verbessern, schneller onboarden.',
+        },
+        {
+          q: 'Wann sollte unser Team eine Prompt-Bibliothek statt persönlicher Notizen verwenden?',
+          a: 'Sobald mehr als eine Person die gleichen Prompts nutzt. Persönliche Notizen funktionieren für Einzelne — aber wenn Ihr Team skaliert, verlieren Sie bewährte Prompts und verschwenden Zeit mit Doppelarbeit.',
+        },
+        {
+          q: 'Wie lange dauert es, eine brauchbare Prompt-Bibliothek von Grund auf zu erstellen?',
+          a: 'Eine minimale Bibliothek mit 10–15 getesteten Prompts dauert 2–4 Wochen (abhängig von Teamgröße). Mit aktiver Nutzung und monatlichen Reviews wächst die Qualität kontinuierlich. Rechnen Sie mit weniger als 1 Stunde pro Woche für Wartung, sobald die Struktur etabliert ist.',
+        },
+        {
+          q: 'Wie bringe ich mein Team dazu, tatsächlich zu einer gemeinsamen Prompt-Bibliothek beizutragen?',
+          a: 'Machen Sie den Beitrag so einfach wie möglich: ein Formular oder Git-Template, klare Metadaten-Anforderungen, und monatliche Reviews. Das Wichtigste: Zeigen Sie Mehrwert — Teams tragen bei, wenn sie sehen, dass ihre Prompts genutzt und verbessert werden.',
+        },
+        {
+          q: 'Ist eine Prompt-Bibliothek dasselbe wie ein System-Prompt?',
+          a: 'Nein. Ein System-Prompt sind Regeln, die Sie einmal definieren und auf alle Eingaben anwenden. Eine Prompt-Bibliothek ist eine Sammlung von verschiedenen Prompts für verschiedene Aufgaben — jeder mit eigenen Metadaten und Versionen.',
+        },
+        {
+          q: 'Wie oft sollte Ihr Team eine Prompt-Bibliothek überprüfen und bereinigen?',
+          a: 'Monatlich ist ideal. Markieren Sie selten genutzte Prompts als Deprecated, fördern Sie verbesserte Versionen zu Approved, und erstellen Sie neue Kategorien, wenn sich die Nutzung verändert. Teams, die monatlich reviewen, haben 20–30 % weniger Bloat nach 6 Monaten.',
+        },
+        {
+          q: 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?',
+          a: 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-4o" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.',
+        },
+        {
+          q: 'Was ist der Unterschied zwischen einer Prompt-Bibliothek und einer Prompt-Management-Plattform?',
+          a: 'Eine Prompt-Bibliothek ist eine Sammlung strukturierter Prompt-Einträge, die Ihr Team verwaltet — sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Eine Prompt-Management-Plattform fügt Ausführung, Analysen, Versionskontrolle und Zusammenarbeits-Features auf top der Bibliothek hinzu. Starten Sie mit einer einfachen Bibliothek und upgraden Sie zu einer Plattform, wenn Volumen oder Governance es rechtfertigen.',
+        },
+        {
+          q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
+          a: 'Ja. Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor der Aktivierung für sensitive Workflows. Die wichtigste Regel: Speichern Sie echte persönliche Daten nie im Prompt-Body — nutzen Sie Platzhalter wie <CUSTOMER_NAME> und übergeben Sie echte Daten nur im Runtime-Input. Für Article 28 Compliance (Auftragsverarbeitung) benötigen Sie einen Data Processing Agreement.',
+        },
+        {
+          q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
+          a: 'Ja. Mittelstand-Unternehmen profitieren von PromptQuorum für Qualitätskontrolle, Wissensmanagement und Governance. PromptQuorum erfüllt SOC 2 Type II Zertifizierung (Stand 2026) und unterstützt DSGVO Article 28 Anforderungen für Auftragsverarbeitung. Nutzen Sie lokale Inference für sensitive Workflows (Finanzen, Medizin, Recht) und Prompt-Verwaltung für breitere Adoption in Teams. BSI-Grundschutz-Kataloge sind mit PromptQuorum EU-based Deployment kompatibel.',
+        },
+      ],
+    },
+    relatedReading: {
+      id: 'related-reading',
+      title: 'Weiterführende Literatur',
+      items: [
+        { title: 'Prompt Engineering Fundamentals', url: '/prompt-engineering/fundamentals?lang=de' },
+        { title: 'Few-Shot Prompting: Mit Beispielen besser prompten', url: '/prompt-engineering/few-shot-prompting?lang=de' },
+        { title: 'Chain-of-Thought Prompting: Step-by-Step Reasoning', url: '/prompt-engineering/chain-of-thought?lang=de' },
+        { title: 'PromptQuorum: Prompt Management Made Easy', url: '/features?lang=de' },
+        { title: 'System-Prompt vs. User-Prompt: Was ist der Unterschied?', url: '/prompt-engineering/system-prompt-vs-user-prompt?lang=de' },
+        { title: 'Prompt Testing und Optimization', url: '/prompt-engineering/prompt-testing?lang=de' },
+      ],
+    },
+    sources: {
+      id: 'sources',
+      title: 'Quellen & Weiterführende Literatur',
+      items: [
+        { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
+        { title: 'Anthropic: Prompt Engineering Overview', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
+        { title: 'Lilian Weng: Prompt Engineering (2023)', url: 'https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/' },
+        { title: 'Google DeepMind: Prompting Strategies', url: 'https://ai.google.dev/gemini-api/docs/prompting-strategies' },
+      ],
+    },
+  },
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-09-24',
+},
     fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
