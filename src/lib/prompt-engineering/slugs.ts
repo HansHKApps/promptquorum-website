@@ -78,7 +78,7 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'prompt-evaluation-metrics': 'prompt-evaluation-metrics',
   'how-to-test-prompts-across-models': 'how-to-test-prompts-across-models',
   'how-to-reduce-prompt-brittleness': 'how-to-reduce-prompt-brittleness',
-  'prompt-review-workflow-for-teams': 'prompt-review-workflow-teams',
+  'prompt-review-workflow-for-teams': 'prompt-review-workflow-for-teams',
 
   // Team Operations & Governance
   'prompt-version-control-workflows': 'prompt-version-control',
