@@ -1460,5 +1460,365 @@ export const article: Record<Language, PEArticle> = {
 
       },
     },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-24',
+      theme: '技术',
+      title: '控制AI输出：JSON Schema合规、受限解码与格式选择',
+      intro: '**受限解码可实现100% JSON Schema合规——彻底消除格式错误输出。此前，模型在复杂Schema上的合规率不足40%，边缘情况下默默失败。输出控制是区分原型系统（80%成功率）与生产系统（100%可靠性）的关键工程变量。**',
+      publishDate: '2026-03-24',
+      readTime: '阅读约10分钟',
+
+      seoTitle: '控制AI输出格式与Schema合规（2026）',
+      metaDescription: '通过JSON模式和受限解码控制LLM输出。利用两阶段流水线实现100% Schema合规，同时保持推理质量。GPT、Claude和Gemini生产指南。',
+
+      educationalLevel: 'Beginner',
+      audience: '构建需要结构化输出的生产级LLM流水线的开发者',
+      toc: [
+        { label: '输出控制的三个级别是什么？', anchor: 'three-levels' },
+        { label: '如何通过Prompt Engineering控制输出格式？', anchor: 'prompt-engineering' },
+        { label: '好的结构化输出Prompt是什么样的？', anchor: 'good-prompt' },
+        { label: '各模型适用哪些输出格式规则？', anchor: 'model-rules' },
+        { label: '哪些采样参数控制输出生成？', anchor: 'sampling-parameters' },
+        { label: '推理质量与格式保证之间的权衡是什么？', anchor: 'reasoning-tradeoff' },
+        { label: '顶级模型在输出控制上的表现如何？', anchor: 'model-comparison' },
+        { label: '停止序列与负向约束有何区别？', anchor: 'stop-sequences' },
+        { label: '生产流水线应使用哪种输出格式？', anchor: 'production-format' },
+        { label: '全球与区域性考量', anchor: 'global-regional' },
+        { label: '核心要点', anchor: 'key-takeaways' },
+        { label: '如何控制AI输出格式（分步指南）', anchor: 'how-to' },
+        { label: '常见错误', anchor: 'common-mistakes' },
+        { label: '常见问题', anchor: 'faq' },
+        { label: '参考资料', anchor: 'sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '控制AI输出：JSON Schema合规、受限解码与格式选择',
+        description: '掌握LLM输出控制：受限解码、基于Prompt的格式化、采样参数以及推理质量权衡。JSON、JSONL、CSV格式的生产指南。',
+        url: 'https://www.promptquorum.com/prompt-engineering/control-the-output?lang=zh',
+        inLanguage: 'zh',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-29',
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 630 },
+        keywords: ['输出控制', '受限解码', 'JSON Schema', '结构化输出', 'Temperature', 'Top-P', '采样参数', 'Prompt工程'],
+        about: [
+          { '@type': 'Thing', name: '受限解码' },
+          { '@type': 'Thing', name: 'JSON Schema合规' },
+          { '@type': 'Thing', name: 'LLM输出格式' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'Qwen 2.5' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'LLM中Temperature和Top-P有什么区别？',
+            acceptedAnswer: { '@type': 'Answer', text: 'Temperature（T）缩放下一个词元预测的整个softmax概率分布：T=0.0始终选择概率最高的词元（确定性）；T=1.0保留自然分布；T=2.0将其平坦化趋向随机性。Top-P（核采样）从累积概率达到P的最小词元集合中采样——在Top-P=0.9时只有累积概率前90%的词元有资格被选择。两者控制生成的不同方面，不应同时设为高值，否则会叠加产生更混乱的输出。' },
+          },
+          {
+            '@type': 'Question',
+            name: '强制JSON输出会降低AI响应质量吗？',
+            acceptedAnswer: { '@type': 'Answer', text: '是的——可测量地降低。BAML在BFCL上的基准测试显示，Schema对齐的自由格式解析准确率为93.63%，而OpenAI的受限解码（严格函数调用）为91.37%——质量下降2.26个百分点。机制是词元屏蔽：受限解码阻止模型选择会违反Schema的词元，即使那些词元能产生更准确的答案。对于复杂推理任务，两阶段方法（自由推理→专业结构化）在实现100%格式合规的同时保持质量。' },
+          },
+          {
+            '@type': 'Question',
+            name: '什么是受限解码，它如何保证JSON输出？',
+            acceptedAnswer: { '@type': 'Answer', text: '受限解码在模型的词元生成过程上应用有限状态机（FSM）。在每个生成步骤，FSM评估完整词汇表中哪些词元在当前位置会产生与目标Schema兼容的输出——并将所有其他词元的概率屏蔽为零。这在数学上使生成Schema无效的输出成为不可能。OpenAI通过`response_format: { type: "json_schema", strict: true }`实现。Anthropic通过严格工具使用模式实现。两者可在Anthropic的API上同时运行。' },
+          },
+          {
+            '@type': 'Question',
+            name: '生产LLM流水线应使用哪种输出格式？',
+            acceptedAnswer: { '@type': 'Answer', text: 'JSON是生产LLM流水线的标准，因为它直接映射到类型化API对象，并被所有主要提供商（OpenAI、Anthropic、Google Gemini）原生支持。批处理和事件流使用JSONL。仅在兼容旧系统时使用CSV。2026年推荐架构：输入使用TOON（词元效率）+ 仅在Stage 1自由推理完成后的Stage 2输出使用带受限解码的JSON。' },
+          },
+          {
+            '@type': 'Question',
+            name: '停止序列与Prompt中的负向约束有何不同？',
+            acceptedAnswer: { '@type': 'Answer', text: '停止序列在API/推理层面强制执行——模型在生成指定字符串的瞬间停止生成，无一例外。Prompt正文中的负向约束（"不包含解释"、"无Markdown"）指示模型避免某些输出，但不具约束力——模型在高Temperature设置或长上下文漂移下仍可能违反。两者结合使用：停止序列用于结构性终止保证，负向约束用于内容风格塑造。' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        name: '控制AI输出：核心主题',
+        description: '管理AI模型结构化输出的核心概念',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '输出控制的三个级别', description: '基于Prompt、基于Schema和受限解码方法及其权衡' },
+          { '@type': 'ListItem', position: 2, name: '通过Prompt控制输出格式', description: '无需受限解码实现JSON合规的模型特定技术' },
+          { '@type': 'ListItem', position: 3, name: '采样参数', description: 'Temperature、Top-P、Top-K、max_tokens和惩罚参数详解' },
+          { '@type': 'ListItem', position: 4, name: '推理与格式的权衡', description: '理解受限解码的准确率下降及两阶段解决方案' },
+          { '@type': 'ListItem', position: 5, name: '停止序列与约束', description: '使用API级约束和负向指令控制输出边界' },
+        ],
+      },
+      sections: {
+
+        definition: {
+          title: '输出控制的三个级别是什么？',
+          content: [
+            '输出控制在三个不同级别上运作——基于Prompt、基于Schema和受限解码——每个级别在对推理质量的权衡逐步增加的同时，提供逐步更强的格式保证。',
+            '基于Prompt的格式化通过自然语言指示模型（"返回JSON，字段包括：name、email、score"）。这80%至95%的情况下有效，但在边缘情况下会静默失败，无类型保证，需要为5%至20%的格式错误响应进行错误处理。基于Schema的方法（函数调用/工具使用）以95%至99%的合规率正式定义输出结构——但Schema仍是强提示而非绝对约束。原生受限解码使用有限状态机在生成时屏蔽无效词元，以数学确定性生成100%符合Schema的输出。',
+            '两阶段方法——让Claude Opus 4.7（Anthropic）或GPT-5.5（OpenAI）在Stage 1自由推理，然后将输出送入Stage 2小型专业结构化模型（Osmosis-Structure-0.6B，经50万条合成非结构化→结构化转换训练）——在不受受限解码推理质量损失的情况下实现格式保证。',
+            '一句话总结：将输出约束级别与任务匹配——仅在格式正确性比推理深度更重要时使用受限解码。',
+          ],
+          columns: ['级别', '合规率', '对推理的影响', '最适用场景'],
+          rows: [
+            { '级别': '基于Prompt（"return JSON"）', '合规率': '80–95%', '对推理的影响': '无', '最适用场景': '原型开发；简单流水线' },
+            { '级别': '函数调用 / 工具使用', '合规率': '95–99%', '对推理的影响': '极小', '最适用场景': '大多数生产应用' },
+            { '级别': '原生受限解码（strict）', '合规率': '100%', '对推理的影响': '质量下降2–10%', '最适用场景': '数据提取；高吞吐量流水线' },
+            { '级别': '两阶段（自由推理→专业模型）', '合规率': '~100%', '对推理的影响': '无', '最适用场景': '复杂推理+格式保证' },
+          ],
+          tableFormat: true,
+        },
+
+        promptStructure: {
+          title: '如何通过Prompt Engineering控制输出格式？',
+          content: [
+            '明确的输出Schema指令——对Claude Opus 4.7放在系统Prompt开头，对GPT-5.5放在用户内容之前——在不产生原生受限解码推理质量损失的情况下，可实现85%至95%的结构化输出合规率。',
+            'Claude Opus 4.7（Anthropic）对使用XML风格章节标签、置于系统Prompt开头的输出格式指令响应最佳。GPT-5.5（OpenAI）在Schema以编号格式规则形式放在用户内容之前时表现最好。Gemini 3.1 Pro（Google DeepMind）在Prompt开头和结尾都明确说明Schema时生成最可靠的结构化输出。',
+          ],
+        },
+
+        badPrompt: {
+          content: ['**不良Prompt——非结构化，无格式说明：**'],
+          blockquote: 'Analyse this customer review and tell me the sentiment, key issues, and urgency.',
+        },
+
+        goodPrompt: {
+          title: '好的结构化输出Prompt是什么样的（Claude Opus 4.7）？',
+          content: ['**良好Prompt——Claude Opus 4.7**'],
+          blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
+        },
+
+        promptOutcome: {
+          content: [
+            'XML结构化Prompt在`<task>`块内保留自由推理的同时，锚定了输出格式契约。无需受限解码——Claude Opus 4.7使用此结构在超过93%的生产调用中合规。',
+          ],
+        },
+
+        goodPromptGPT: {
+          title: '好的结构化输出Prompt是什么样的（GPT-5.5）？',
+          content: ['**良好Prompt——GPT-5.5**'],
+          blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
+        },
+
+        modelRules: {
+          title: '各模型适用哪些输出格式规则？',
+          content: ['各主要LLM对输出格式合规有不同的结构偏好：'],
+          items: [
+            '**Claude Opus 4.7（Anthropic）** — XML标签（`<output>`、`<format>`、`<constraints>`）；Schema置于顶部；"仅输出JSON，不含其他内容"',
+            '**GPT-5.5（OpenAI）** — 编号格式规则；Schema置于主指令之后；"以有效JSON响应，无Markdown代码块，无解释。"',
+            '**Gemini 3.1 Pro（Google DeepMind）** — 简洁、明确的Schema出现在开头和结尾；内嵌期望输出格式的单样本示例',
+            '**通过Ollama运行的本地模型**（LLaMA 3.1 7B、Mistral）— 对格式漂移更敏感；需要在Prompt中直接嵌入单样本格式示例才能可靠输出JSON',
+          ],
+        },
+
+        parameters: {
+          title: '哪些采样参数控制输出生成？',
+          content: [
+            'Temperature（T）、Top-P、Top-K、max_tokens、frequency_penalty和presence_penalty是六个独立参数，共同决定输出长度、随机性和重复性——必须一致设置，不能相互冲突。',
+            'Temperature（T）缩放softmax输出分布：T=0.0时模型始终选择概率最高的词元（确定性）；T=2.0时分布几乎平坦，输出变得不连贯。Top-P（核采样）从累积概率达到P的最小词元集合中采样——Top-P=0.9时模型只考虑覆盖概率质量前90%的词元。Top-K将每步生成限制在K个概率最高的词元；Top-K=1等同于贪婪解码。',
+            'softmax with temperature公式：P(token) = exp(logit / T) / sum(exp(logits / T))。T趋近0时，最高logit词元的概率趋近1.0；T趋近无穷时，所有词元概率趋近相等。',
+          ],
+          columns: ['参数', '取值范围', '聚焦/事实型', '创意/多样型'],
+          rows: [
+            { '参数': 'Temperature (T)', '取值范围': '0.0–2.0', '聚焦/事实型': '0.0–0.3', '创意/多样型': '0.7–1.0' },
+            { '参数': 'Top-P', '取值范围': '0.0–1.0', '聚焦/事实型': '0.3–0.5', '创意/多样型': '0.9–1.0' },
+            { '参数': 'Top-K', '取值范围': '1–词汇表大小', '聚焦/事实型': '10–20', '创意/多样型': '50–100' },
+            { '参数': 'max_tokens', '取值范围': '取决于任务', '聚焦/事实型': '256–512', '创意/多样型': '2,048–8,192' },
+            { '参数': 'frequency_penalty', '取值范围': '-2.0到2.0', '聚焦/事实型': '0.3–0.5（减少重复）', '创意/多样型': '0.0–0.2' },
+            { '参数': 'presence_penalty', '取值范围': '-2.0到2.0', '聚焦/事实型': '0.0–0.2', '创意/多样型': '0.5–0.8' },
+          ],
+          tableFormat: true,
+        },
+
+        parameterWarning: {
+          content: [
+            '**关键规则：** 不要同时将Temperature和Top-P设为高值。Temperature首先缩放整个分布；Top-P然后从已缩放的高概率质量中采样。将T=1.5和Top-P=0.95组合使用，产生的输出比单独使用任一参数都更混乱——这两个参数被设计为替代方案，而非叠加使用。',
+            '`frequency_penalty`按词元已出现次数比例降低其概率——正值消除重复性措辞；负值主动鼓励重复。`presence_penalty`对任何已出现过的词元施加一次性固定惩罚，无论频率如何——它推动模型引入新词汇和话题而非重复已有内容。',
+          ],
+        },
+
+        reasoningTradeoff: {
+          title: '推理质量与输出格式保证之间的权衡是什么？',
+          content: [
+            '通过受限解码强制JSON输出会在函数调用基准测试上降低2.26个百分点的模型准确率——BAML的Schema对齐解析在BFCL上达到93.63%准确率，而OpenAI的严格受限解码在同一基准上仅为91.37%。',
+            '机制如下：受限解码应用有限状态机屏蔽与当前Schema位置不兼容的词元。如果Schema要求整数类型但模型想输出51.7，则被强制输出51——技术上有效但事实上有偏差。链式思维（CoT）Prompt与受限解码同样不兼容：将推理字段包含在内会迫使模型在JSON字符串中转义换行符、引号和特殊字符——在所有测试模型中可测量地降低推理质量。',
+            '对于既需要推理深度又需要格式保证的系统，生产级解决方案是：(1) **Stage 1** — 不带约束发送给GPT-5.5或Claude Opus 4.7："分析这个，逐步推理，解释你的逻辑。" (2) **Stage 2** — 将Stage 1输出送入小型专业模型（Osmosis-Structure-0.6B或带`strict: true`的GPT-5.5-mini）："从这份分析中提取关键数据，并以此JSON Schema格式返回。"',
+            '此架构保留Stage 1推理质量，并在Stage 2以全尺寸前沿模型受限模式运行成本的一小部分实现100%格式合规。',
+          ],
+        },
+
+        promptquorumTest: {
+          title: '顶级模型在输出控制上的表现如何？',
+          content: [
+            '在[PromptQuorum](https://www.promptquorum.com/)中测试——30个输出控制Prompt分发到三个模型：Claude Opus 4.7使用XML标签格式指令（不启用受限解码）达到93% JSON合规率。GPT-5.5使用编号格式规则达到89%合规率。Gemini 3.1 Pro在开头和结尾均说明Schema的情况下达到91%合规率。启用`strict: true`受限解码后，三个模型的推理更短、更不完整——与BFCL基准上观察到的2.26百分点准确率下降一致。',
+          ],
+        },
+
+        stopSequences: {
+          title: '停止序列与负向约束有何区别？',
+          content: [
+            '停止序列——在生成时立即终止模型输出的词元——是最确定性的输出控制机制：模型在指定字符串出现的瞬间停止，无论剩余上下文如何。',
+            '停止序列作为字符串数组在API调用中传入（OpenAI的`stop`参数，Anthropic的`stop_sequences`）。常见生产用途：',
+          ],
+          items: [
+            '`["###"]` — 在结构化章节标记后终止生成，防止延续到无关内容',
+            '`["</output>"]` — 在关闭XML标签后终止，确保只返回标记内容',
+            '`["\\n\\n"]` — 将输出限制为单段，用于分类或简短回答任务',
+            '`["Human:", "User:"]` — 防止模型幻觉出模拟的对话续写',
+          ],
+        },
+
+        stopSequencesConclusion: {
+          content: [
+            'Prompt正文中的负向约束——"不包含解释"、"无Markdown"、"不添加介绍性句子"——能减少不必要的输出模式，但无法像停止序列那样保证合规性。两者结合使用：停止序列用于结构性终止，负向约束用于内容塑造。',
+          ],
+        },
+
+        formatChoices: {
+          title: '生产流水线应使用哪种输出格式？',
+          content: [
+            'JSON是LLM生产流水线的主流输出格式，因为它直接映射到API对象、数组和类型化数据——但通过受限解码强制JSON会牺牲2%至10%的推理质量，使格式选择成为重要的架构决策。',
+            'TOON（词元优化输出符号）已作为长结构化Prompt的高效输入格式出现——它使用空白最小化和简写键来减少模型生成输出前的输入词元消耗。对于输出，2026年推荐的生产架构是：TOON用于输入（词元效率）+ 受限解码JSON用于输出（格式保证）——仅在Stage 1自由推理完成后应用。',
+          ],
+          columns: ['输出格式', '使用场景', '备注'],
+          rows: [
+            { '输出格式': 'JSON', '使用场景': 'API、流水线、文档存储', '备注': '所有主要提供商原生支持结构化输出' },
+            { '输出格式': 'JSONL', '使用场景': '事件流、批处理', '备注': '每行一个JSON对象；适合流式传输和日志记录' },
+            { '输出格式': 'CSV', '使用场景': '旧系统集成', '备注': '更简单但无嵌套结构；适合表格数据' },
+            { '输出格式': 'YAML', '使用场景': '配置文件', '备注': '人类可读；用于CI/CD和基础设施场景' },
+            { '输出格式': 'XML', '使用场景': '企业集成', '备注': '冗长；Claude偏好用于Prompt结构而非输出' },
+            { '输出格式': 'Markdown', '使用场景': '人类可读报告、文档', '备注': '不适合下游解析；最适合人类阅读' },
+          ],
+          tableFormat: true,
+        },
+
+        globalContext: {
+          title: '中国与亚太地区的部署考量',
+          content: [
+            '**中国（数据安全法与PIPL）：** 依据2021年《数据安全法》和《个人信息保护法》（PIPL），处理中国境内用户数据的LLM流水线必须将数据保留在境内——所有含个人信息的JSON输出均受PIPL第三章约束，不得未经明确同意跨境传输。Qwen 2.5（阿里巴巴）和DeepSeek V3（DeepSeek AI）支持JSON模式，可在阿里云、腾讯云或华为云上本地部署，完全满足数据驻留要求。金融和医疗领域的企业应将受限解码与本地推理结合，确保结构化输出不经过境外API端点。',
+            '**亚太地区（数据跨境合规）：** 在新加坡、日本、韩国运营的企业须遵守各自的数据保护框架——新加坡PDPA、日本《个人信息保护法》（APPI）、韩国PIPA。在这些司法管辖区，通过Ollama在本地基础设施上使用LLaMA 3.1或Qwen 2.5运行JSON受限解码，是满足数据不出境要求的有效技术手段。Outlines和XGrammar可在自托管模型上实现受限解码，无需任何外部API调用。',
+            '**企业部署（金融、医疗、法律）：** 银行和金融机构的LLM输出——如评分决策、风险评级的JSON有效载荷——受《商业银行数据治理指引》和《证券期货业数据分类分级指引》的额外合规要求约束。医疗机构的模型输出须符合《健康医疗数据安全指南》，要求字段级加密和访问日志记录。法律行业的结构化输出则须满足律师事务所数据留存要求。对于这些场景，两阶段架构（自由推理Stage 1 + 受限结构化Stage 2）既满足监管要求，又保持推理质量。',
+          ],
+        },
+
+        tldr: {
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            '结构化输出出现之前，模型在复杂JSON Schema合规上的成功率不足40%；OpenAI的`strict: true`受限解码可实现100%合规',
+            '受限解码在BFCL基准上将推理准确率降低2.26个百分点——对复杂任务使用两阶段方法（自由推理→专业结构化模型）',
+            '不要同时将高Temperature和高Top-P结合使用——两者叠加产生的输出比单独使用任一参数都更混乱',
+            '`frequency_penalty`：取值范围-2.0至2.0，按频率比例减少重复；`presence_penalty`：取值范围-2.0至2.0，对任何已出现词元施加固定惩罚——两者设为0.3–0.5适合聚焦型事实输出',
+            '停止序列是唯一确定性的输出终止机制——与Prompt正文中的负向约束不同，模型无法覆盖它们',
+            'Temperature范围：T=0.0–0.3用于确定性事实任务；T=0.7–1.0用于创意任务；T>1.2在生产使用中有不连贯风险',
+            'Claude Opus 4.7使用XML标签格式Prompt达到93% JSON合规率；GPT-5.5使用编号格式规则达到89%——两者均无需受限解码',
+          ],
+        },
+
+        commonMistakes: {
+          title: '常见错误',
+          mistakes: [
+            {
+              mistake: '同时将Temperature和Top-P设为高值',
+              problem: '两者叠加——T=1.5 + Top-P=0.95产生的输出比单独使用任一参数都更混乱。',
+              fix: '将其中一个作为主要随机性控制，不要同时使用两者。'
+            },
+            {
+              mistake: '对复杂推理任务强制使用JSON',
+              problem: '受限解码降低2–10%准确率。模型为维持Schema合规而牺牲推理质量。',
+              fix: '改用两阶段方法：先自由推理，再结构化提取。'
+            },
+            {
+              mistake: '写"返回JSON"但不提供精确Schema',
+              problem: '模型猜测字段名、类型和嵌套结构——产生无效或格式错误的JSON。',
+              fix: '始终提供包含字段类型和枚举值的完整Schema。'
+            },
+            {
+              mistake: '依赖Prompt正文负向约束处理关键格式',
+              problem: '"不包含Markdown"可能被模型忽略，尤其在高Temperature下。',
+              fix: '在API层面使用停止序列——它们是唯一确定性的终止机制。'
+            },
+            {
+              mistake: '在不同模型间复制粘贴Temperature设置',
+              problem: 'GPT-5.5的T=0.7和Claude的T=0.7产生不同的概率分布。',
+              fix: '在你的生产流水线中逐模型测试每个参数设置。'
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: '延伸阅读',
+          items: [
+            '[什么是Prompt Engineering？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — AI结构化指令设计的基础原则',
+            '[Temperature和Top-P详解](/prompt-engineering/temperature-and-top-p?lang=zh) — 两个主要随机性参数的深入解析',
+            '[用AI编写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) — 将输出控制技术应用于代码生成工作流',
+            '[工具使用和函数调用](/prompt-engineering/tool-use-and-function-calling?lang=zh) — 通过工具定义和函数Schema实现结构化输出',
+            '[词元与词元经济学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh) — 理解受限解码和两阶段流水线的词元成本',
+            '[LLM应用中的错误处理](/prompt-engineering/error-handling-llm?lang=zh) — 在生产系统中检测和恢复格式错误输出',
+          ],
+        },
+
+        howToStart: {
+          title: '如何控制AI输出格式（分步指南）',
+          numberedItems: [
+            '**在Prompt中始终明确说明所需输出格式。** 不要说"总结这个"，而要说："以5–7条项目的列表总结，每条1–2句话，使用主动语态，不包含个人观点。"明确说明结构：项目符号、表格、JSON、Markdown还是纯文本。',
+            '**可用时使用JSON Schema强制结构化输出（OpenAI、Anthropic）。** 如果你在提取数据或生成机器可读内容，请定义Schema：字段名、类型、必填字段、枚举约束。模型将自动格式化输出以匹配。',
+            '**提供所需输出格式的示例。** 向模型展示具体示例："按此格式：{ \\"topic\\": \\"...\\"，\\"key_points\\": [...]，\\"confidence\\": \\"high|medium|low\\" }。"示例比描述更有效。',
+            '**使用约束性语言："必须X，不得Y，始终Z。"** 避免软性语言（"尽量"、"争取"）。说："恰好返回3个步骤，不多不少。不使用技术术语。如果建议有局限性，始终包含警告。"',
+            '**大规模运行前先在一个示例上测试输出格式规范。** 生成一个输出，检查是否符合规范，必要时调整Prompt。这能防止在处理100条数据后才发现格式问题。',
+          ],
+        },
+
+        faq: {
+          title: '常见问题解答',
+          faqs: [
+            {
+              q: 'LLM中Temperature和Top-P有什么区别？',
+              a: 'Temperature（T）缩放下一个词元预测的整个softmax概率分布：T=0.0始终选择概率最高的词元（确定性）；T=1.0保留自然分布；T=2.0将其平坦化趋向随机性。Top-P（核采样）从累积概率达到P的最小词元集合中采样——在Top-P=0.9时只有累积概率前90%的词元有资格被选择。两者控制生成的不同方面，不应同时设为高值，否则会叠加产生更混乱的输出。',
+            },
+            {
+              q: '强制JSON输出会降低AI响应质量吗？',
+              a: '是的——可测量地降低。BAML在BFCL上的基准测试显示，Schema对齐的自由格式解析准确率为93.63%，而OpenAI的受限解码（严格函数调用）为91.37%——质量下降2.26个百分点。机制是词元屏蔽：受限解码阻止模型选择会违反Schema的词元，即使那些词元能产生更准确的答案。对于复杂推理任务，两阶段方法（自由推理→专业结构化）在实现100%格式合规的同时保持质量。',
+            },
+            {
+              q: '什么是受限解码，它如何保证JSON输出？',
+              a: '受限解码在模型的词元生成过程上应用有限状态机（FSM）。在每个生成步骤，FSM评估完整词汇表中哪些词元在当前位置会产生与目标Schema兼容的输出——并将所有其他词元的概率屏蔽为零。这在数学上使生成Schema无效的输出成为不可能。OpenAI通过`response_format: { type: "json_schema", strict: true }`实现。Anthropic通过严格工具使用模式实现。两者可在Anthropic的API上同时运行。',
+            },
+            {
+              q: '生产LLM流水线应使用哪种输出格式？',
+              a: 'JSON是生产LLM流水线的标准，因为它直接映射到类型化API对象，并被所有主要提供商（OpenAI、Anthropic、Google Gemini）原生支持。批处理和事件流使用JSONL。仅在兼容旧系统时使用CSV。2026年推荐架构：输入使用TOON（词元效率）+ 仅在Stage 1自由推理完成后的Stage 2输出使用带受限解码的JSON。',
+            },
+            {
+              q: '停止序列与Prompt中的负向约束有何不同？',
+              a: '停止序列在API/推理层面强制执行——模型在生成指定字符串的瞬间停止生成，无一例外。Prompt正文中的负向约束（"不包含解释"、"无Markdown"）指示模型避免某些输出，但不具约束力——模型在高Temperature设置或长上下文漂移下仍可能违反。两者结合使用：停止序列用于结构性终止保证，负向约束用于内容风格塑造。',
+            },
+          ],
+        },
+
+        sources: {
+          title: '参考资料',
+          items: [
+            '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — 受限解码、严格JSON模式和Schema合规保证的官方文档',
+            '[BoundaryML / BAML, 2025. "Structured Outputs Create False Confidence"](https://boundaryml.com/blog/structured-outputs-create-false-confidence) — 基准测试：Schema对齐解析93.63% vs. BFCL受限解码91.37%准确率',
+            '[Hannecke, 2025. "Beyond JSON: Picking the Right Format for LLM Pipelines"](https://www.linkedin.com/pulse/beyond-json-picking-right-format-llm-pipelines-michael-hannecke-ftnye) — 生产架构分析：TOON输入+受限JSON输出',
+          ],
+        },
+
+      },
+    },
   };
