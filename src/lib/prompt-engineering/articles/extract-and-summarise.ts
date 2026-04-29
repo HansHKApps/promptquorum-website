@@ -13,23 +13,42 @@ export const article: Record<Language, PEArticle> = {
       title: 'Extract and Summarise With AI',
       intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
+      dateModified: '2026-04-29',
       seoTitle: 'How to Extract and Summarize Documents with AI Prompts 2026',
-      metaDescription: 'Best prompting techniques for accurate document extraction and summarization using local LLMs and cloud models.',
+      metaDescription: 'AI summarisation achieves 0.7% hallucination rates on grounded tasks. Compare NotebookLM, Claude, GPT-5.5 — with prompts that keep outputs faithful to source.',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'AI Document Summarisation',
+      audience: 'Researchers, analysts, and developers processing large document corpora with AI',
       aboutTopics: ['Document summarisation', 'NotebookLM', 'LLM hallucination'],
       howToName: 'How to Use Iterative Summarisation',
+      next_refresh_due: '2026-09-23',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Extractive vs Abstractive: Which to Use?', anchor: '#two-summarisation-types' },
+        { label: 'Which Model Has the Lowest Hallucination Rate?', anchor: '#which-model-for-summarisation' },
+        { label: 'Summarisation Tool Comparison', anchor: '#tool-comparison' },
+        { label: 'How to Write Extraction Prompts', anchor: '#extraction-prompt-structure' },
+        { label: 'The 5-Component Extraction Prompt', anchor: '#five-component-prompt' },
+        { label: 'Chunking Long Documents', anchor: '#chunking-long-documents' },
+        { label: 'Iterative Summarisation', anchor: '#iterative-summarisation' },
+        { label: 'Why Do AI Models Still Hallucinate?', anchor: '#hallucination-analysis' },
+        { label: 'Evaluation Metrics: ROUGE, BERTScore, HHEM', anchor: '#evaluation-metrics' },
+        { label: 'Global and Regional Context', anchor: '#global-context' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Frequently Asked Questions', anchor: '#faq' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Extract and Summarise With AI',
         description: 'AI document summarisation cuts review time by 60—80% with 0.7% hallucination rates. Learn extractive vs abstractive approaches, which models to use, and how to structure prompts for faithful outputs.',
         datePublished: '2026-03-23',
-        dateModified: '2026-03-23',
+        dateModified: '2026-04-29',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
-          url: 'https://www.promptquorum.com/about',
+          sameAs: 'https://www.promptquorum.com/about',
         },
         publisher: {
           '@type': 'Organization',
@@ -45,6 +64,16 @@ export const article: Record<Language, PEArticle> = {
           url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
           width: 1200,
           height: 630,
+        },
+        proficiencyLevel: 'Intermediate',
+        about: [
+          { '@type': 'Thing', name: 'Document Summarisation' },
+          { '@type': 'Thing', name: 'LLM Hallucination' },
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         keywords: ['AI summarisation', 'document extraction', 'abstractive summarisation', 'extractive summarisation', 'NotebookLM', 'Claude', 'hallucination rates', 'prompt engineering'],
         mentions: [
@@ -101,6 +130,30 @@ export const article: Record<Language, PEArticle> = {
               text: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0—0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Opus 4.7 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What is document chunking and when should I use it?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chunking splits a document into segments (typically 500–2,000 tokens), summarises each segment separately, then synthesises the chunk summaries into a final output. Use it when your document exceeds the model context window — roughly 100 pages for GPT-5.5 (128k tokens), 160 pages for Claude Opus 4.7 (200k tokens), or 800 pages for Gemini 3.1 Pro (1M tokens). For structured documents (legal contracts, annual reports), thematic chunking by section headings produces the most coherent final synthesis. For unstructured text, paragraph-based chunking at 500-token intervals is the recommended default.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What are ROUGE and BERTScore, and which metric should I use to evaluate AI summaries?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ROUGE measures n-gram overlap between a generated summary and a reference — useful for benchmarking but blind to semantic meaning and factual accuracy. BERTScore uses cosine similarity between BERT embeddings, capturing semantic similarity rather than exact word matches. For production document workflows, neither is sufficient alone: use faithfulness metrics such as HHEM (Vectara) or FaithJudge to measure whether the summary contains only claims supported by the source document. Combine HHEM faithfulness scoring with a completeness check for the most reliable quality signal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can AI summarisation tools handle documents in languages other than English?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, with important caveats. Mistral AI models handle French and European languages natively and can be deployed locally for GDPR compliance. Qwen 2.5 (Alibaba) tokenises Chinese characters at roughly 40% fewer tokens than GPT-5.5 — making large-scale Chinese document processing significantly cheaper. LLaMA 3.1 models deployed via Ollama support multilingual summarisation while keeping data fully on-premise, satisfying data residency requirements for Japanese enterprises under METI guidelines. English-first models also handle multilingual documents but with slightly higher error rates on non-Latin scripts.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -116,9 +169,37 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Tools and Workflows', 'description': 'Using NotebookLM, Scholarcy, Elicit, and custom extraction pipelines' },
         ],
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'en',
+        name: 'How to Extract and Summarise Documents with AI',
+        totalTime: 'PT15M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Choose your tool based on source type', text: 'Use NotebookLM for PDFs and documents, Elicit for academic papers with structured fields (methodology, sample size, outcomes), and Perplexity for real-time web summarization.' },
+          { '@type': 'HowToStep', position: 2, name: 'Define your extraction schema upfront', text: 'Tell the model exactly what columns or fields you need and the data type for each. Example: Return as JSON array with keys: author (string), year (integer), finding (text max 200 chars), confidence (enum: high/medium/low).' },
+          { '@type': 'HowToStep', position: 3, name: 'Set Temperature to 0.1–0.3', text: 'Lower temperatures produce more deterministic, consistent outputs. Reserve higher temperatures only for brainstorming alternative interpretations of ambiguous source material.' },
+          { '@type': 'HowToStep', position: 4, name: 'Break large documents into multiple passes', text: 'For 100-page+ PDFs, extract sections 25 pages at a time, storing results in a structured format. This prevents context window overflow and makes errors easier to spot and correct.' },
+          { '@type': 'HowToStep', position: 5, name: 'Cross-check key extractions with the source', text: 'Spot-check 10–20% of extracted data against the original document. AI models can hallucinate or misread structured data, especially from tables with merged cells or unclear formatting.' },
+        ],
+      },
       sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Use extractive summarisation for legal, compliance, and exact-wording documents; use abstractive LLM summarisation for research synthesis and executive outputs',
+            'Gemini-2.0-Flash-001 achieves 0.7% hallucination rate on grounded summarisation — the best-performing model on Vectara\'s HHEM benchmark across 831 documents',
+            'NotebookLM (Google DeepMind) provides the most reliable source-grounded summarisation with clickable inline citations; Claude Opus 4.7 leads for cross-document synthesis and complex analysis',
+            'Grounded summarisation hallucination rates fell 96% from 2021 to 2025 — but a 2025 mathematical proof confirmed hallucinations cannot be fully eliminated under current LLM architectures',
+            'For documents exceeding context window limits, thematic chunking (by section/topic) produces the most coherent final synthesis',
+            'Claude Opus 4.7 handles ~160 pages per session (200k tokens); Gemini 3.1 Pro handles ~800 pages (1M tokens) — context limits determine which model is practical for large document sets',
+          ],
+        },
         definition: {
-          title: 'The Two Summarisation Types: Which One to Use',
+          id: 'two-summarisation-types',
+          title: 'What Are the Two AI Summarisation Types and When to Use Each?',
           content: [
             '**Extractive summarisation copies sentences directly from the source; abstractive summarisation generates new sentences that paraphrase and condense — the two approaches trade factual precision against readability and compression.**',
             'Extractive summarisation — used by tools like Scholarcy — ranks sentences by keyword frequency, position, and information density, then reproduces the top-scoring sentences without modification. Because no new text is generated, factual errors are structurally impossible: the output is always a subset of the source. Abstractive summarisation — used by GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) — generates new text that synthesises and paraphrases, producing more readable output at the cost of a higher hallucination risk.',
@@ -147,11 +228,12 @@ export const article: Record<Language, PEArticle> = {
           blockquote: 'A 2025 arXiv study benchmarking summarisation approaches across financial news articles found that extractive methods (Lead-1, MatchSum) establish strong baselines for short, well-structured texts — but abstractive LLMs outperform them for complex financial documents when fine-tuned on domain-specific data. Fine-tuned GPT-5.5-mini achieved a BERTScore of 0.619 vs. Lead-1\'s 0.588 on the same benchmark. In one sentence: Use extractive summarisation when you cannot afford a factual error; use abstractive summarisation when you need the output to be readable and usable without further editing.',
         },
         toolComparison: {
-          title: 'Which AI Model to Use for Summarisation',
+          id: 'which-model-for-summarisation',
+          title: 'Which AI Model Has the Lowest Hallucination Rate for Summarisation?',
           content: [
             '**NotebookLM (Google DeepMind) leads for source-grounded, cited summarisation of uploaded documents; Claude Opus 4.7 (Anthropic) leads for synthesis, cross-document analysis, and complex reasoning; GPT-5.5 (OpenAI) leads for fast, flexible general-purpose summarisation.**',
             'On Vectara\'s Hughes Hallucination Evaluation Model (HHEM) — the standard benchmark for document summarisation faithfulness, tested across 831 documents per model — the top performers in 2025 were:',
-            'These rates represent a 96% improvement from 2021, when the best models scored 21.8% hallucination rates on the same task. However, these numbers apply only to grounded summarisation — where the model is anchored to a source document. Open-domain factual recall produces hallucination rates of 3—33% across the same models.',
+            'These rates represent a 96% improvement from 2021, when the top models scored 21.8% hallucination rates on the same task. However, these numbers apply only to grounded summarisation — where the model is anchored to a source document. Open-domain factual recall produces hallucination rates of 3—33% across the same models.',
           ],
           items: [
             '**Gemini-2.0-Flash-001 (Google DeepMind):** 0.7% hallucination rate — lowest recorded on the benchmark',
@@ -160,7 +242,8 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         toolTable: {
-          title: 'Summarisation Tool Comparison',
+          id: 'tool-comparison',
+          title: 'How Do NotebookLM, Claude, GPT-5.5, and Gemini Compare Side-by-Side?',
           columns: ['Tool', 'Context Limit', 'Citation Quality', 'Best Use Case'],
           rows: [
             {
@@ -199,14 +282,16 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         promptStructure: {
+          id: 'extraction-prompt-structure',
           title: 'How to Write Extraction and Summarisation Prompts',
           content: [
             '**A structured summarisation prompt — one that specifies the document type, output format, length constraint, and explicit instruction to flag unverifiable claims — produces directly usable outputs; an unstructured prompt produces a generic paragraph that misses critical information.**',
-            'The most common prompt engineering failure in summarisation is treating "summarise this" as a complete instruction. Every assumption the model makes about length, format, perspective, and level of detail is a potential mismatch with what you actually need.',
+            'The most common [prompt engineering](/prompt-engineering/what-is-prompt-engineering) failure in summarisation is treating "summarise this" as a complete instruction. Every assumption the model makes about length, format, perspective, and level of detail is a potential mismatch with what you actually need. The [5-block prompt structure](/prompt-engineering/5-building-blocks-every-prompt-needs) — Role, Task, Input, Constraints, Output Format — applies directly to extraction tasks.',
           ],
         },
         promptFramework: {
-          title: 'The Five-Component Extraction Prompt',
+          id: 'five-component-prompt',
+          title: 'What Are the 5 Components of an Effective Extraction Prompt?',
           items: [
             '**Role** — "You are an analyst specialising in [domain]."',
             '**Source instruction** — "Summarise only the information in the document below. Do not add external knowledge."',
@@ -217,14 +302,16 @@ export const article: Record<Language, PEArticle> = {
           blockquote: 'Summarise this report.',
         },
         goodExample: {
-          title: '[Good Prompt Example]',
+          id: 'good-prompt-example',
+          title: 'What Does a Well-Structured Summarisation Prompt Look Like?',
           blockquote: 'You are a financial analyst. Summarise the attached Q3 earnings report using only information in the document — do not add external context. Structure the output as: [Revenue & Margins], [Segment Performance], [Guidance Changes], [Key Risks]. Maximum 250 words. Flag any figure that contradicts an earlier statement in the same document with [DISCREPANCY].',
           content: [
             'The structured prompt produces a document directly usable in a briefing. The open prompt produces a narrative paragraph that omits segment data, buries guidance changes, and requires 30 minutes of restructuring.',
           ],
         },
         chunking: {
-          title: 'Chunking for Long Documents',
+          id: 'chunking-long-documents',
+          title: 'How Do You Handle Documents That Exceed the Context Window?',
           content: [
             '**For documents exceeding the model\'s context window, chunking — splitting the document into segments of 500—2,000 tokens, summarising each chunk, then synthesising the chunk summaries — preserves information that would otherwise be truncated or degraded.**',
             'The four chunking methods, ordered by reliability for structured documents:',
@@ -238,9 +325,11 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         iterativeSummarisation: {
-          title: 'Iterative Summarisation for Accuracy',
+          id: 'iterative-summarisation',
+          title: 'How Does Iterative Summarisation Reduce Omissions?',
           content: [
-            'Iterative summarisation — generating an initial summary, then refining it with a second targeted prompt — improves factual completeness and reduces omissions. The two-step structure:',
+            '**Iterative summarisation — generating an initial summary, then refining it with a second targeted prompt — improves factual completeness and reduces omissions compared to single-pass generation.**',
+            'Iterative summarisation generates an initial summary, then applies a second prompt to catch missing claims. The two-step structure:',
           ],
           numberedItems: [
             '**Initial prompt:** "Summarise the key arguments, data points, and conclusions from the document. Flag anything you are uncertain about."',
@@ -248,10 +337,11 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         hallucinationAnalysis: {
-          title: 'Hallucination in Summarisation: What the Numbers Show',
+          id: 'hallucination-analysis',
+          title: 'Why Do AI Models Still Hallucinate in Summaries, and How Often?',
           content: [
-            '**Grounded summarisation hallucination rates have dropped 96% since 2021 — from 21.8% to 0.7% for the best models — but a 2025 mathematical proof confirmed that hallucinations cannot be fully eliminated under current LLM architectures.**',
-            'The architecture reason is fundamental: LLMs generate statistically probable next tokens based on pattern matching across training data, not by retrieving verified facts. Even when given a source document, a model occasionally "blends" source content with training knowledge in a way that produces a plausible but unfaithful sentence — what researchers call a "mixed context hallucination."',
+            '**Grounded summarisation hallucination rates have dropped 96% since 2021 — from 21.8% to 0.7% for the top models — but a 2025 mathematical proof confirmed that hallucinations cannot be fully eliminated under current LLM architectures.**',
+            'The architecture reason is fundamental: LLMs generate statistically probable next tokens based on pattern matching across training data, not by retrieving verified facts. Even when given a source document, a model occasionally "blends" source content with training knowledge in a way that produces a plausible but unfaithful sentence — what researchers call a "mixed context hallucination." This is one of the core [AI limitations](/prompt-engineering/ai-limitations-what-llms-cant-do) that grounded summarisation workflows must account for.',
             'The failure modes in AI summarisation, ordered by frequency:',
           ],
           items: [
@@ -263,7 +353,8 @@ export const article: Record<Language, PEArticle> = {
           blockquote: 'A 2025 Nature-published framework (Liu et al.) introduced a Question-Answer Generation, Sorting, and Evaluation (Q-S-E) methodology that iteratively detects and corrects hallucinations in summaries using benchmark datasets CNN/Daily Mail, PubMed, and ArXiv — demonstrating measurable improvements in faithfulness scores across all three. PromptQuorum\'s multi-model dispatch addresses this directly: sending the same document to GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic), and Gemini 3.1 Pro simultaneously and comparing outputs identifies the passages where models disagree — which are statistically the highest-risk passages for hallucination.',
         },
         evaluationMetrics: {
-          title: 'Summarisation Evaluation Metrics',
+          id: 'evaluation-metrics',
+          title: 'Which Metric Measures AI Summarisation Quality: ROUGE, BERTScore, or HHEM?',
           content: [
             '**ROUGE (Recall-Oriented Understudy for Gisting Evaluation), BERTScore, and faithfulness metrics measure different and non-overlapping dimensions of summary quality — no single metric is sufficient to evaluate whether an AI summary is trustworthy.**',
             'ROUGE measures n-gram overlap between a generated summary and a reference summary — useful for benchmarking but blind to semantic meaning and factual accuracy. BERTScore uses cosine similarity between BERT embeddings of the generated and reference summaries, capturing semantic similarity rather than exact word matches. Faithfulness metrics (HHEM, FaithJudge) measure whether the summary contains only claims supported by the source document — the most relevant metric for production summarisation use cases.',
@@ -299,34 +390,39 @@ export const article: Record<Language, PEArticle> = {
           blockquote: 'For production document pipelines, combining HHEM faithfulness scoring with a completeness check (does the summary mention all key claims from the source?) produces the most reliable quality signal.',
         },
         globalContext: {
-          title: 'Global and Regional Context',
+          id: 'global-context',
+          title: 'How Do GDPR, Chinese Law, and METI Guidelines Affect AI Summarisation?',
           content: [
             'European enterprises processing documents under GDPR cannot send sensitive content to external API endpoints without compliance review. Mistral AI (France) provides locally deployable models — Mistral Large and Mistral Small — that perform abstractive summarisation entirely on-premise, with zero data leaving the organisation\'s infrastructure, satisfying EU data residency requirements under Article 46 of GDPR.',
             'Chinese enterprises increasingly use **Qwen 2.5** (Alibaba) and **DeepSeek V3** for document extraction tasks across Chinese-language corpora. Both models tokenise Chinese characters (CJK scripts) at a more efficient ratio than Western-trained models — a 10,000-character Chinese document consumes roughly 40% fewer tokens in Qwen 2.5 than in GPT-5.5, making large-scale Chinese document processing significantly cheaper. China\'s Interim Measures for Generative AI (2023) require AI-generated summaries used in official contexts to be labelled as AI-generated.',
             'Japanese enterprises operating under METI data governance guidelines frequently deploy **Ollama** with LLaMA 3.1 models for local document summarisation. LLaMA 3.1 7B requires 8GB RAM for local inference and produces zero external API calls — meeting strict data residency requirements for sensitive legal and financial documents.',
           ],
         },
-        tldr: {
-          title: 'Key Takeaways',
-          isTldr: true,
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'What Are the Most Common Mistakes in AI Summarisation?',
           items: [
-            'Use extractive summarisation for legal, compliance, and exact-wording documents; use abstractive LLM summarisation for research synthesis and executive outputs',
-            'Gemini-2.0-Flash-001 achieves 0.7% hallucination rate on grounded summarisation — the best-performing model on Vectara\'s HHEM benchmark across 831 documents',
-            'NotebookLM (Google DeepMind) provides the most reliable source-grounded summarisation with clickable inline citations; Claude Opus 4.7 leads for cross-document synthesis and complex analysis',
-            'Grounded summarisation hallucination rates fell 96% from 2021 to 2025 — but a 2025 mathematical proof confirmed hallucinations cannot be fully eliminated under current LLM architectures',
-            'For documents exceeding context window limits, thematic chunking (by section/topic) produces the most coherent final synthesis',
-            'Claude Opus 4.7 handles ~160 pages per session (200k tokens); Gemini 3.1 Pro handles ~800 pages (1M tokens) — context limits determine which model is practical for large document sets',
+            'Using open-ended prompts ("Summarise this") without format constraints — produces generic paragraphs that omit key data points and require 30+ minutes of manual restructuring',
+            'Trusting summaries without spot-checking — AI models hallucinate structured data (tables, numbers, dates) at higher rates than prose; always verify 10–20% of extracted figures against the original',
+            'Setting Temperature above 0.3 for extraction tasks — temperatures above 0.3 measurably increase hallucination frequency; use 0.0–0.1 for maximum determinism on grounded tasks',
+            'Not specifying the document type in the prompt — without context, the model applies wrong summarisation heuristics (e.g., treating a legal contract like a news article, omitting critical clause language)',
+            'Skipping chunking for documents over 50 pages — context window overflow silently truncates content; the model summarises only the available portion without warning that it missed anything',
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational principles behind structured AI instructions',
             '[AI-Powered Research](/prompt-engineering/ai-powered-research) — how to combine extraction tools with multi-source verification workflows',
             '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — specific techniques for grounding AI outputs in verified source content',
+            '[5 Building Blocks Every AI Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structured prompt components that directly improve extraction accuracy',
+            '[Temperature and Top-P: How to Control AI Output](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — set Temperature to 0.0–0.1 for deterministic, hallucination-resistant summarisation',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning that improves faithfulness in complex multi-document analysis',
           ],
         },
         howToStart: {
+          id: 'how-to-extract-and-summarise',
           title: 'How to Extract Data and Summarize With AI',
           numberedItems: [
             '**Choose your tool based on the source type and extraction structure.** Use NotebookLM for your own PDFs or documents, Elicit for academic papers with structured fields (methodology, sample size, outcomes), and Perplexity for real-time web summarization. Text-to-table extractions work best with systems designed for it (Elicit) rather than general chat models.',
@@ -337,6 +433,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -374,6 +471,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources & Further Reading',
           items: [
             '[Liu et al., 2025. "A hallucination detection and mitigation framework for text summarisation"](https://www.nature.com/articles/s41598-025-31075-1) — introduces Q-S-E methodology for iterative hallucination correction across CNN/DailyMail, PubMed, and ArXiv benchmarks',
