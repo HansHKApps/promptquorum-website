@@ -12,13 +12,13 @@ export const article: Record<Language, PEArticle> = {
       next_refresh_due: '2026-09-24',
       theme: 'Techniques',
       title: 'Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection',
-      intro: '**Before native structured output capabilities existed, models scored below 40% on complex JSON schema compliance; with constrained decoding — used by OpenAI\'s `strict: true` mode and Anthropic\'s Strict Tool Use Mode — JSON Schema compliance reaches 100%, guaranteed at the token level. Output control is the single most important engineering variable between a prototype that works 80% of the time and a production system that works reliably.**',
+      intro: '**Constrained decoding reaches 100% JSON schema compliance — no malformed output, ever. Before this technology, models scored below 40% on complex schemas, failing silently on edge cases. Output control is the engineering variable that separates prototypes (80% success) from production systems (100% reliability).**',
       publishDate: '2026-03-24',
       readTime: '10 min read',
 
-      seoTitle: 'Control AI Output Format: JSON, Constrained Decoding & Format Selection (2026)',
+      seoTitle: 'Control AI Output Format & Schema Compliance (2026)',
 
-      metaDescription: 'Control LLM output with JSON mode, constrained decoding, and format selection. Achieve 100% schema compliance with zero reasoning degradation using two-stage pipelines. Production guide for GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro.',
+      metaDescription: 'Control LLM output with JSON mode and constrained decoding. Achieve 100% schema compliance using two-stage pipelines without sacrificing reasoning quality. Production guide for GPT, Claude, and Gemini.',
 
       educationalLevel: 'Beginner',
       audience: 'Developers building production LLM pipelines that require structured output',

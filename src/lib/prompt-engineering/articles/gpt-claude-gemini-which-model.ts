@@ -14,7 +14,7 @@ export const article: Record<Language, PEArticle> = {
       intro: '**No single AI model is best for every task. GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.**',
       publishDate: '2026-03-23',
       seoTitle: 'GPT vs Claude vs Gemini 2026: How to Pick the Right AI Model',
-      metaDescription: 'No single AI model wins every task. GPT-5.5 leads on tool integration, Claude Opus 4.7 on writing and code quality, Gemini 3.1 Pro on long context and cost. Decision matrix, pricing, and routing guide.',
+      metaDescription: 'No single AI model wins every task. GPT-5.5 leads on tool integration, Claude on writing quality, Gemini on cost-efficiency. Decision matrix and routing guide.',
       ogTitle: 'GPT, Claude, or Gemini — Which AI Model Wins for YOUR Task?',
       ogDescription: 'Claude for writing. Gemini for long docs. GPT for agents. DeepSeek for China. Decision matrix inside.',
       twitterTitle: 'GPT vs Claude vs Gemini: Pick the Right Model (2026)',
