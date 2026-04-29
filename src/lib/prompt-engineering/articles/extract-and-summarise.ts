@@ -1025,7 +1025,528 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    fr: {
+      freshness_tier: 'semi_annual',
+      theme: 'Techniques',
+      title: 'Extraire et résumer avec l\'IA',
+      intro: 'L\'extraction et le résumé assistés par IA réduisent le temps d\'examen des documents de 60–80 % en atteignant des taux d\'hallucination de seulement 0.7 % pour les tâches de résumé ancrées à la source — la clé réside dans le choix du type de résumé, du modèle et de la structure de prompt appropriés à chaque catégorie de document.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-29',
+      seoTitle: 'Extraire et résumer des documents avec l\'IA en 2026',
+      metaDescription: 'Le résumé par IA atteint 0.7 % de taux d\'hallucination sur textes sources. NotebookLM, Claude, GPT-5.5 comparés — avec des prompts pour des résumés fidèles.',
+      readTime: '8 min de lecture',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Résumé de documents par IA',
+      audience: 'Chercheurs, analystes et développeurs traitant de grandes collections de documents avec l\'IA',
+      next_refresh_due: '2026-09-23',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Résumé extractif vs abstrait : lequel choisir ?', anchor: '#two-summarisation-types' },
+        { label: 'Quel modèle IA hallucine le moins ?', anchor: '#which-model-for-summarisation' },
+        { label: 'Comparaison d\'outils de résumé', anchor: '#tool-comparison' },
+        { label: 'Comment rédiger des prompts d\'extraction', anchor: '#extraction-prompt-structure' },
+        { label: 'Les 5 composants d\'un prompt d\'extraction efficace', anchor: '#five-component-prompt' },
+        { label: 'Traiter les documents longs par chunking', anchor: '#chunking-long-documents' },
+        { label: 'Résumé itératif', anchor: '#iterative-summarisation' },
+        { label: 'Pourquoi les modèles IA hallucinisent-ils encore ?', anchor: '#hallucination-analysis' },
+        { label: 'Métriques d\'évaluation : ROUGE, BERTScore, HHEM', anchor: '#evaluation-metrics' },
+        { label: 'Contexte mondial et régional', anchor: '#global-context' },
+        { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+        { label: 'Questions fréquemment posées', anchor: '#faq' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Extraire et résumer avec l\'IA',
+        description: 'Le résumé de documents par IA réduit le temps d\'examen de 60–80 % avec 0.7 % d\'hallucinations. Approches extractives vs abstraites, comparaison de modèles et structure de prompts pour des résumés fidèles.',
+        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=fr',
+        inLanguage: 'fr',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-29',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          sameAs: 'https://www.promptquorum.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
+          width: 1200,
+          height: 630,
+        },
+        proficiencyLevel: 'Intermediate',
+        about: [
+          { '@type': 'Thing', name: 'Résumé de documents' },
+          { '@type': 'Thing', name: 'Hallucination des LLM' },
+          { '@type': 'Thing', name: 'Ingénierie des prompts' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        keywords: ['résumé par IA', 'extraction de documents', 'résumé abstrait', 'résumé extractif', 'NotebookLM', 'Claude', 'taux d\'hallucination', 'ingénierie des prompts'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Elicit' },
+          { '@type': 'SoftwareApplication', name: 'Scholarcy' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Quelle est la différence entre le résumé extractif et abstrait par IA ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Le résumé extractif copie les phrases directement du document source sans modification — les erreurs factuelles sont structurellement impossibles car aucun nouveau texte n\'est généré. Le résumé abstrait utilise des LLM pour générer de nouvelles phrases paraphrasées qui condensent l\'information — produisant une sortie plus lisible mais avec des taux d\'hallucination de 0.7–14 % selon le modèle et la tâche. Extractif pour les documents juridiques et de conformité ; abstrait pour les synthèses de recherche et les résumés exécutifs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quel modèle IA hallucine le moins lors de la résumé de documents ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sur le benchmark HHEM de Vectara — le test standard de fidélité de résumé sur 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) a atteint le taux d\'hallucination le plus bas de 0.7 % en 2025. Ces taux ne s\'appliquent qu\'aux tâches ancrées à la source ; le rappel de faits en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Combien de pages les outils de résumé par IA peuvent-ils traiter à la fois ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-5.5 (OpenAI) traite environ 100 pages standard par session (limite de 128 000 jetons). Claude Opus 4.7 (Anthropic) traite environ 160 pages (200 000 jetons). Gemini 3.1 Pro (Google DeepMind) traite environ 800 pages (1 million de jetons). NotebookLM (Google DeepMind) supporte jusqu\'à 50 sources totalisant environ 500 000 mots par carnet. Pour les corpus plus importants, le chunking de documents est nécessaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'NotebookLM ou Claude est-il meilleur pour la résumé de documents ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Les deux répondent à des besoins différents. NotebookLM (Google DeepMind) offre un ancrage à la source plus strict avec des citations inline cliquables — il hallucine moins sur les sources téléchargées et excelle à représenter fidèlement ce que les documents disent. Claude Opus 4.7 (Anthropic) produit une analyse plus nuancée, excelle à synthétiser plusieurs documents et identifie les connexions non évidentes — mais mélange occasionnellement le contenu source avec les connaissances d\'entraînement de manière subtile. NotebookLM pour la précision ; Claude pour l\'insight.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Comment empêcher l\'IA de halluciner dans mes résumés ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Quatre techniques réduisent l\'hallucination dans les tâches de résumé : (1) instruire explicitement — « résumez uniquement le document ci-dessous ; n\'ajoutez pas de connaissances externes » ; (2) définir la température (T) à 0.0–0.1 pour le déterminisme maximal ; (3) faire un contrôle de fidélité — demander au modèle de lister chaque affirmation dans son résumé et d\'identifier sa phrase source ; (4) faire une vérification croisée avec un deuxième modèle — quand GPT-5.5 et Claude Opus 4.7 s\'accordent sur un fait spécifique, la probabilité d\'hallucination partagée est statistiquement quasi nulle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qu\'est-ce que le chunking de documents et quand devrais-je l\'utiliser ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Le chunking divise un document en segments (généralement 500–2 000 jetons), résume chaque segment séparément, puis synthétise les résumés de chunks en une sortie finale. Utilisez-le quand votre document dépasse la fenêtre de contexte du modèle — environ 100 pages pour GPT-5.5 (128 000 jetons), 160 pages pour Claude Opus 4.7 (200 000 jetons) ou 800 pages pour Gemini 3.1 Pro (1 million de jetons). Pour les documents structurés (contrats juridiques, rapports annuels), le chunking thématique par en-têtes de section produit la synthèse finale la plus cohérente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Que sont ROUGE et BERTScore, et quelle métrique devrais-je utiliser pour évaluer les résumés IA ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ROUGE mesure le chevauchement de n-grammes entre un résumé généré et une référence — utile pour les benchmarks mais aveugle au sens sémantique et à la précision factuelle. BERTScore utilise la similarité cosinus entre les embeddings BERT, capturant la similarité sémantique plutôt que les correspondances de mots exacts. Pour les workflows de production, la combinaison du scoring HHEM de fidélité avec une vérification de complétude fournit le signal de qualité le plus fiable.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Les outils de résumé par IA peuvent-ils traiter des documents dans d\'autres langues que l\'anglais ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui, avec des avertissements importants. Les modèles Mistral AI (France) supportent nativement le français et les langues européennes et peuvent être déployés localement pour la conformité RGPD. Qwen 3 (Alibaba) tokenise les caractères chinois avec environ 40 % moins de jetons que GPT-5.5. Les modèles LLaMA 4 via Ollama permettent la résumé multilingue entièrement local sans appels API externes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Dois-je respecter le RGPD en utilisant les outils de résumé par IA ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui. Si vous envoyez des données à caractère personnel à des points de terminaison API externes (par ex. OpenAI, Anthropic), l\'article 28 du RGPD s\'applique : un contrat de traitement des données (DPA) doit être conclu et les données ne peuvent être utilisées que pour l\'objectif convenu. L\'alternative pour la conformité RGPD est le déploiement local — par exemple Mistral Large via Ollama ou LLaMA 4 sur site — évitant que les données ne quittent le réseau de l\'entreprise. Pour les documents particulièrement sensibles (santé, finances, droit), les experts juridiques RGPD recommandent l\'inférence entièrement locale.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'La résumé de documents assistée par IA est-elle appropriée pour les entreprises françaises ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui, à condition de choisir la bonne infrastructure. Les entreprises françaises bénéficient particulièrement de NotebookLM pour les rapports internes et l\'analyse de contrats, ainsi que des modèles déployés localement pour les documents sensibles. La CNIL recommande, pour les données sensibles en santé, finances ou droit, de privilégier l\'inférence locale ou un prestataire certifié avec un DPA. Cas d\'usage typiques : résumé automatisé des contrats fournisseurs, condensation de procès-verbaux de réunions, extraction de clauses pertinentes pour la conformité.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'fr',
+        name: 'Extraire et résumer avec l\'IA : sujets clés',
+        description: 'Concepts fondamentaux pour l\'extraction et le résumé de documents assistés par IA',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Résumé extractif vs abstrait', description: 'Comprendre les compromis entre précision factuelle et lisibilité' },
+          { '@type': 'ListItem', position: 2, name: 'Quel modèle IA choisir', description: 'Comparaison de NotebookLM, Claude, GPT-5.5 et Gemini pour les tâches de résumé' },
+          { '@type': 'ListItem', position: 3, name: 'Structure du prompt pour l\'extraction', description: 'Comment rédiger des prompts structurés qui préviennent l\'hallucination' },
+          { '@type': 'ListItem', position: 4, name: 'Réduire les hallucinations de l\'IA', description: 'Paramètres de température, vérifications de fidélité et vérification multi-modèles' },
+          { '@type': 'ListItem', position: 5, name: 'Outils et workflows', description: 'Utiliser NotebookLM, Scholarcy, Elicit et des pipelines d\'extraction personnalisés' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'fr',
+        name: 'Comment extraire et résumer des documents avec l\'IA',
+        totalTime: 'PT15M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Choisir l\'outil selon le type de source et la structure d\'extraction', text: 'Utiliser NotebookLM pour vos propres fichiers PDF et documents, Elicit pour les articles académiques avec des champs structurés (méthodologie, taille d\'échantillon, résultats) et Perplexity pour la résumé web en temps réel.' },
+          { '@type': 'HowToStep', position: 2, name: 'Définir le schéma d\'extraction à l\'avance (JSON, tableau, liste à puces)', text: 'Indiquer au modèle exactement quelles colonnes ou champs vous avez besoin et le type de données pour chacun. Exemple : « Renvoyer un tableau JSON avec les clés : author (texte), year (nombre), finding (texte max 200 caractères), confidence (haute/moyenne/basse). »' },
+          { '@type': 'HowToStep', position: 3, name: 'Définir la température (T) à 0.1–0.3', text: 'Les températures plus basses produisent des résultats plus déterministes et cohérents. Réserver les températures plus élevées uniquement pour le brainstorming d\'interprétations alternatives de matériel source ambigu.' },
+          { '@type': 'HowToStep', position: 4, name: 'Pour les grands documents, extraire en plusieurs passages avec points de contrôle', text: 'Pour les fichiers PDF de 100+ pages, extraire les sections 1–25, puis 26–50, etc., en stockant les résultats dans un format structuré. Cela prévient le débordement de fenêtre de contexte et facilite la détection et la correction des erreurs.' },
+          { '@type': 'HowToStep', position: 5, name: 'Vérifier les extractions clés avec le document source', text: 'Vérifier toujours 10–20 % des données extraites par rapport à l\'original. Les modèles IA peuvent halluciner ou mal lire les données structurées, particulièrement des tableaux avec des cellules fusionnées ou une mise en forme peu claire.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Points clés',
+          isTldr: true,
+          items: [
+            'Utiliser le résumé extractif pour les documents juridiques, de conformité et exigeant une exactitude mot-pour-mot ; utiliser le résumé abstrait par LLM pour la synthèse de recherche et les résumés exécutifs',
+            'Gemini-2.0-Flash-001 atteint un taux d\'hallucination de 0.7 % pour la résumé ancrée à la source — la meilleure performance du benchmark HHEM de Vectara sur 831 documents',
+            'NotebookLM (Google DeepMind) offre la résumé ancrée la plus fiable avec des citations inline cliquables ; Claude Opus 4.7 excelle en synthèse multi-documents et analyse complexe',
+            'Les taux d\'hallucination de la résumé ancrée ont baissé de 96 % de 2021 à 2025 — mais une preuve mathématique (2025) confirme que l\'hallucination ne peut pas être entièrement éliminée sous les architectures LLM actuelles',
+            'Pour les documents dépassant la fenêtre de contexte, le chunking thématique (par section/sujet) produit la synthèse finale la plus cohérente',
+            'Claude Opus 4.7 traite environ 160 pages par session (200 000 jetons) ; Gemini 3.1 Pro environ 800 pages (1 million de jetons) — les limites de contexte détermine quel modèle est pratique pour les grands ensembles de documents',
+          ],
+        },
+        definition: {
+          id: 'two-summarisation-types',
+          title: 'Quels sont les deux types de résumé par IA et quand utiliser chacun ?',
+          content: [
+            '**Le résumé extractif copie les phrases directement de la source ; le résumé abstrait génère de nouvelles phrases qui paraphrasent et condensent — les deux approches échangent la précision factuelle contre la lisibilité et la compression.**',
+            'Le résumé extractif — utilisé par des outils comme Scholarcy — classe les phrases par fréquence de mots-clés, position et densité d\'information, puis reproduit les phrases les mieux classées sans modification. Puisqu\'aucun nouveau texte n\'est généré, les erreurs factuelles sont structurellement impossibles : la sortie est toujours un sous-ensemble de la source. Le résumé abstrait — utilisé par GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) — génère du texte nouveau qui synthétise et paraphrase, produisant une sortie plus lisible au prix d\'un risque d\'hallucination plus élevé.',
+          ],
+          columns: ['Méthode', 'Risque hallucination', 'Lisibilité', 'Approprié pour'],
+          rows: [
+            {
+              Méthode: 'Extractif',
+              'Risque hallucination': 'Quasi nul (copie source)',
+              Lisibilité: 'Inférieur — peut être décousu',
+              'Approprié pour': 'Documents juridiques, conformité, exigences de formulation exacte',
+            },
+            {
+              Méthode: 'Abstrait (LLM)',
+              'Risque hallucination': '0.7–14 % selon modèle et tâche',
+              Lisibilité: 'Élevée — prose naturelle',
+              'Approprié pour': 'Synthèse de recherche, résumés exécutifs, rapports',
+            },
+            {
+              Méthode: 'Hybride (extractif → abstrait)',
+              'Risque hallucination': 'Faible',
+              Lisibilité: 'Élevée',
+              'Approprié pour': 'Rapports financiers, littérature académique, documentation technique',
+            },
+          ],
+          blockquote: 'Une étude arXiv (2025) sur les approches de résumé pour les articles de presse financière a montré que les méthodes extractives (Lead-1, MatchSum) établissent de solides références pour les textes courts bien structurés — mais les LLM abstraits les surpassent pour les documents financiers complexes s\'ils sont ajustés sur des données spécifiques au domaine. En une phrase : extractif si l\'erreur factuelle n\'est pas tolérée ; abstrait si la sortie doit être lisible et utilisable sans édition supplémentaire.',
+        },
+        toolComparison: {
+          id: 'which-model-for-summarisation',
+          title: 'Quel modèle IA a le taux d\'hallucination le plus bas pour la résumé ?',
+          content: [
+            '**NotebookLM (Google DeepMind) excelle pour la résumé ancrée à la source avec citations de documents téléchargés ; Claude Opus 4.7 (Anthropic) excelle pour la synthèse, l\'analyse multi-documents et le raisonnement complexe ; GPT-5.5 (OpenAI) excelle pour la résumé généraliste rapide et flexible.**',
+            'Sur le Hughes Hallucination Evaluation Model (HHEM) de Vectara — le benchmark standard de fidélité de résumé testé sur 831 documents par modèle — les meilleurs performants en 2025 étaient :',
+            'Ces taux représentent une amélioration de 96 % par rapport à 2021, quand les meilleurs modèles avaient des taux d\'hallucination de 21.8 % sur la même tâche. Cependant, ces chiffres s\'appliquent uniquement à la résumé ancrée à la source — le rappel factuel en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
+          ],
+          items: [
+            '**Gemini-2.0-Flash-001 (Google DeepMind) :** taux d\'hallucination de 0.7 % — le plus bas enregistré au benchmark',
+            '**Variantes OpenAI et Gemini :** taux d\'hallucination de 0.8–1.5 %',
+            '**Au total :** 4 modèles atteignent maintenant des taux sub-1 % pour les tâches de résumé ancrées à la source',
+          ],
+        },
+        toolTable: {
+          id: 'tool-comparison',
+          title: 'Comment NotebookLM, Claude, GPT-5.5 et Gemini se comparent-ils côte à côte ?',
+          columns: ['Outil', 'Limite de contexte', 'Qualité des citations', 'Meilleur cas d\'usage'],
+          rows: [
+            {
+              Outil: 'NotebookLM (Google DeepMind)',
+              'Limite de contexte': 'env. 500K mots / 50 sources',
+              'Qualité des citations': 'Citations inline numérotées, cliquables',
+              'Meilleur cas d\'usage': 'Examen de recherche structuré, Q&A ancrée à la source',
+            },
+            {
+              Outil: 'Claude Projects (Anthropic)',
+              'Limite de contexte': 'env. 200K jetons (env. 160 pages)',
+              'Qualité des citations': 'Incohérente par défaut ; fiable avec prompts',
+              'Meilleur cas d\'usage': 'Synthèse inter-sources, raisonnement complexe, construction d\'arguments',
+            },
+            {
+              Outil: 'GPT-5.5 (OpenAI)',
+              'Limite de contexte': '128K jetons (env. 100 pages)',
+              'Qualité des citations': 'Modérée ; nécessite une instruction explicite',
+              'Meilleur cas d\'usage': 'Documents généraux, résumés rapides',
+            },
+            {
+              Outil: 'Gemini 3.1 Pro (Google DeepMind)',
+              'Limite de contexte': '1M jetons (env. 800 pages)',
+              'Qualité des citations': 'Modérée',
+              'Meilleur cas d\'usage': 'Analyse complète de code ou de grand corpus',
+            },
+            {
+              Outil: 'Elicit',
+              'Limite de contexte': '138M+ articles académiques',
+              'Qualité des citations': 'Extraction académique structurée',
+              'Meilleur cas d\'usage': 'Revues systématiques de littérature',
+            },
+          ],
+          content: [
+            '**Testé chez PromptQuorum — 25 prompts de résumé de documents distribués sur trois modèles :** Claude Opus 4.7 a produit les résumés analytiquement les plus complets dans 20 des 25 cas (identifiant implications et connexions entre documents). GPT-5.5 a produit les résumés les plus concis et immédiatement utilisables dans 18 des 25 cas. Gemini 3.1 Pro était le seul modèle pouvant traiter les 25 documents complets sans troncature de contexte, car plusieurs dépassaient 80 000 jetons.',
+          ],
+        },
+        promptStructure: {
+          id: 'extraction-prompt-structure',
+          title: 'Comment rédiger des prompts d\'extraction et de résumé ?',
+          content: [
+            '**Un prompt de résumé structuré — celui qui spécifie le type de document, le format de sortie, la limite de longueur et l\'instruction explicite de signaler les affirmations non vérifiables — produit des résultats directement utilisables ; un prompt non structuré produit un paragraphe générique qui manque les informations critiques.**',
+            'L\'erreur [d\'ingénierie des prompts](/prompt-engineering/what-is-prompt-engineering?lang=fr) la plus courante en résumé est de traiter « résumez ceci » comme une instruction complète. Chaque hypothèse du modèle sur la longueur, le format, la perspective et le niveau de détail est un décalage potentiel avec ce que vous avez réellement besoin. La [structure en 5 blocs](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — Rôle, Tâche, Entrée, Contraintes, Format de sortie — s\'applique directement aux tâches d\'extraction.',
+          ],
+        },
+        promptFramework: {
+          id: 'five-component-prompt',
+          title: 'Quels sont les 5 composants d\'un prompt d\'extraction efficace ?',
+          content: '**Mauvais prompt — non structuré, produit une sortie générique inutilisable :**',
+          items: [
+            '**Rôle** — « Vous êtes un analyste spécialisé en [domaine]. »',
+            '**Instruction source** — « Résumez uniquement les informations du document ci-dessous. N\'ajoutez pas de connaissances externes. »',
+            '**Format de sortie** — « Rendez un résumé structuré avec ces sections : [Découvertes clés], [Méthodologie], [Limites], [Actions recommandées]. »',
+            '**Limite de longueur** — « Maximum 300 mots au total. »',
+            '**Instruction d\'incertitude** — « Si une affirmation dans le document est ambiguë ou contredite par un autre passage, signalez-la avec [À VÉRIFIER]. »',
+          ],
+          blockquote: 'Résumez ce rapport.',
+        },
+        goodExample: {
+          id: 'good-prompt-example',
+          title: 'À quoi ressemble un prompt de résumé bien structuré ?',
+          blockquote: 'Vous êtes un analyste financier. Résumez le rapport de résultats Q3 ci-joint en utilisant uniquement les informations du document — n\'ajoutez pas de contexte externe. Structurez la sortie comme suit : [Chiffre d\'affaires & Marges], [Performance par segment], [Changements de prévision], [Risques clés]. Maximum 250 mots. Signalez tout chiffre qui contredit une affirmation antérieure dans le même document avec [DISCORDANCE].',
+          content: [
+            'Le prompt structuré produit un document directement utilisable dans une présentation. Le prompt ouvert produit un paragraphe narratif qui omet les données de segment, cache les changements de prévision et nécessite 30 minutes de restructuration.',
+          ],
+        },
+        chunking: {
+          id: 'chunking-long-documents',
+          title: 'Comment gérer les documents dépassant la fenêtre de contexte ?',
+          content: [
+            '**Pour les documents dépassant la fenêtre de contexte du modèle, le chunking — diviser le document en segments de 500–2 000 jetons, résumer chaque chunk, puis synthétiser — préserve l\'information qui serait autrement tronquée ou dégradée.**',
+            'Pour les documents avec une structure de section claire (contrats juridiques, rapports annuels, articles académiques), le chunking thématique produit la synthèse finale la plus cohérente. Pour les documents non structurés (discussions par email, transcriptions), le chunking basé sur les paragraphes à intervalles de 500 jetons est le standard recommandé.',
+          ],
+          columns: ['Méthode', 'Cohérence', 'Approprié pour', 'Compromis'],
+          rows: [
+            {
+              Méthode: 'Thématique (par section)',
+              Cohérence: 'Maximale',
+              'Approprié pour': 'Rapports, contrats, articles académiques',
+              Compromis: 'Requiert des en-têtes clairs dans la source',
+            },
+            {
+              Méthode: 'Basé sur les paragraphes',
+              Cohérence: 'Élevée',
+              'Approprié pour': 'La plupart des types de documents',
+              Compromis: 'Peut séparer les idées étroitement liées',
+            },
+            {
+              Méthode: 'Limite de jetons fixe',
+              Cohérence: 'Moyenne',
+              'Approprié pour': 'Texte non structuré',
+              Compromis: 'Sépare les arguments à des points arbitraires',
+            },
+            {
+              Méthode: 'Basé sur les phrases',
+              Cohérence: 'Faible',
+              'Approprié pour': 'Granularité maximale',
+              Compromis: 'Coût de calcul le plus élevé ; fragmente le contexte',
+            },
+          ],
+        },
+        iterativeSummarisation: {
+          id: 'iterative-summarisation',
+          title: 'Comment la résumé itérative réduit-elle les omissions ?',
+          content: [
+            '**Le résumé itératif — générer un résumé initial, puis l\'affiner avec un deuxième prompt ciblé — améliore la complétude factuelle et réduit les omissions par rapport à la génération en un seul passage.**',
+            'Le résumé itératif génère un résumé initial, puis applique un deuxième prompt pour attraper les affirmations manquantes. La structure en deux étapes :',
+          ],
+          numberedItems: [
+            '**Prompt initial :** « Résumez les arguments clés, les points de données et les conclusions du document. Signalez tout ce dont vous n\'êtes pas certain. »',
+            '**Prompt d\'affinage :** « Examinze votre résumé. Identifiez toute affirmation énoncée dans le document mais absente de votre résumé. Ajoutez maintenant ces affirmations. »',
+          ],
+        },
+        hallucinationAnalysis: {
+          id: 'hallucination-analysis',
+          title: 'Pourquoi les modèles IA hallucinisent-ils encore dans les résumés et à quelle fréquence ?',
+          content: [
+            '**Les taux d\'hallucination de la résumé ancrée à la source ont baissé de 96 % depuis 2021 — de 21.8 % à 0.7 % pour les meilleurs modèles — mais une preuve mathématique (2025) a confirmé que l\'hallucination ne peut pas être complètement éliminée sous les architectures LLM actuelles.**',
+            'La raison architecturale est fondamentale : les LLM génèrent des jetons statistiquement probables basés sur la reconnaissance de motifs sur les données d\'entraînement, pas en récupérant les faits vérifiés. Même avec un document source fourni, un modèle « mélange » occasionnellement le contenu source avec les connaissances d\'entraînement de manière à produire une phrase plausible mais infidèle — ce que les chercheurs appellent « hallucination de contexte mixte ». C\'est l\'une des [limites fondamentales de l\'IA](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) que les workflows de résumé ancré doivent gérer.',
+            'Les modes de défaillance en résumé par IA, par ordre de fréquence :',
+          ],
+          items: [
+            '**Hallucination de contexte mixte** — le modèle combine les faits de la source avec les faits des données d\'entraînement, produisant une phrase partiellement correcte et partiellement inventée',
+            '**Information manquante** — le modèle omet les affirmations clés de la source qui se trouvaient en positions moins proéminentes',
+            '**Incohérence factuelle** — le modèle contredit un chiffre ou une date spécifique du document source',
+            '**Information non pertinente** — le modèle ajoute du contexte des données d\'entraînement non présentes dans la source',
+          ],
+          blockquote: 'Un framework publié dans Nature en 2025 (Liu et al.) a introduit une méthodologie Question-Answer Generation, Sorting, and Evaluation (Q-S-E) qui détecte et corrige itérativement les hallucinations dans les résumés — démontrant des améliorations mesurables des scores de fidélité sur les trois ensembles de données de référence (CNN/Daily Mail, PubMed, ArXiv). Le dispatch multi-modèles de PromptQuorum aborde cela directement : envoyer le même document simultanément à GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) et Gemini 3.1 Pro et comparer les résultats identifie les passages où les modèles divergent — qui sont statistiquement les passages à plus haut risque d\'hallucination.',
+        },
+        evaluationMetrics: {
+          id: 'evaluation-metrics',
+          title: 'Quelle métrique mesure la qualité du résumé par IA : ROUGE, BERTScore ou HHEM ?',
+          content: [
+            '**ROUGE, BERTScore et les métriques de fidélité mesurent des dimensions différentes et non chevauchantes de la qualité du résumé — aucune métrique unique ne suffit à déterminer si un résumé par IA est digne de confiance.**',
+            'ROUGE mesure le chevauchement de n-grammes entre un résumé généré et une résumé de référence — utile pour les benchmarks mais aveugle au sens sémantique et à la précision factuelle. BERTScore utilise la similarité cosinus entre les embeddings BERT du résumé généré et de référence, capturant la similarité sémantique plutôt que les correspondances de mots exactes. Les métriques de fidélité (HHEM, FaithJudge) mesurent si le résumé ne contient que les affirmations soutenues par le document source — la métrique la plus pertinente pour les cas d\'usage de résumé de production.',
+          ],
+          columns: ['Métrique', 'Ce qu\'elle mesure', 'Limitation'],
+          rows: [
+            {
+              Métrique: 'ROUGE',
+              'Ce qu\'elle mesure': 'Chevauchement de n-grammes avec référence',
+              Limitation: 'Aveugle au sens sémantique ; récompense la similarité lexicale',
+            },
+            {
+              Métrique: 'BLEU',
+              'Ce qu\'elle mesure': 'Précision du chevauchement de n-grammes',
+              Limitation: 'Conçu pour la traduction ; pauvre fit pour la résumé',
+            },
+            {
+              Métrique: 'BERTScore',
+              'Ce qu\'elle mesure': 'Similarité sémantique via les embeddings',
+              Limitation: 'Nécessite un résumé de référence ; coûteux en calcul',
+            },
+            {
+              Métrique: 'Fidélité (HHEM)',
+              'Ce qu\'elle mesure': 'Cohérence factuelle avec la source',
+              Limitation: 'Ne mesure pas la complétude ou l\'utilité',
+            },
+            {
+              Métrique: 'G-Eval',
+              'Ce qu\'elle mesure': 'Multi-dimensionnel : couverture, pertinence, fluidité',
+              Limitation: 'Standard le plus récent ; pas encore universellement adopté',
+            },
+          ],
+          blockquote: 'Pour les pipelines de documents de production, combiner le scoring HHEM de fidélité avec une vérification de complétude (le résumé mentionne-t-il tous les affirmations clés de la source ?) produit le signal de qualité le plus fiable.',
+        },
+        globalContext: {
+          id: 'global-context',
+          title: 'Comment le RGPD, le droit chinois et les directives METI affectent-ils la résumé par IA ?',
+          content: [
+            'Les entreprises européennes traitant des documents en vertu du RGPD ne peuvent pas envoyer du contenu sensible à des points de terminaison API externes sans examen de conformité. Mistral AI (France) fournit des modèles déployables localement — Mistral Large et Mistral Small — qui effectuent la résumé abstraite entièrement sur site, sans que les données ne quittent l\'infrastructure de l\'organisation, satisfaisant les exigences de résidence des données de l\'UE en vertu de l\'article 46 du RGPD. La CNIL recommande, pour les données sensibles en santé, finances ou droit, de privilégier l\'inférence locale ou un prestataire certifié.',
+            'Les entreprises chinoises utilisent de plus en plus **Qwen 3** (Alibaba) et **DeepSeek V3-0324** pour les tâches d\'extraction de documents sur les corpus en langue chinoise. Les deux modèles tokenisent les caractères chinois (scripts CJK) plus efficacement que les modèles entraînés en Occident — un document chinois de 10 000 caractères consomme environ 40 % moins de jetons dans Qwen 3 que dans GPT-5.5, rendant le traitement à grande échelle de documents chinois nettement moins cher. Les mesures intérimaires chinoises pour l\'IA générative (2023) exigent que les résumés générés par IA utilisés dans les contextes officiels soient étiquetés comme générés par IA.',
+            'Les entreprises japonaises exploitant les directives de gouvernance des données METI déploient fréquemment **Ollama** avec les modèles LLaMA 4 pour la résumé locale de documents. LLaMA 4 7B nécessite 8 GB de RAM pour l\'inférence locale et produit zéro appels API externes — satisfaisant les exigences strictes de résidence des données pour les documents juridiques et financiers sensibles.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Quelles sont les erreurs les plus courantes en résumé par IA ?',
+          items: [
+            'Utiliser des prompts ouverts (« résumez ceci ») sans contraintes de format — produit des paragraphes génériques qui oublient les points de données clés et demandent 30+ minutes de restructuration manuelle',
+            'Faire confiance aux résumés sans vérification par sondage — les modèles IA hallucinent les données structurées (tableaux, chiffres, dates) à des taux plus élevés que le texte en prose ; toujours vérifier 10–20 % des chiffres extraits dans l\'original',
+            'Définir la température au-dessus de 0.3 pour les tâches d\'extraction — les températures au-dessus de 0.3 augmentent mesurément la fréquence d\'hallucination ; utiliser 0.0–0.1 pour le déterminisme maximal sur les tâches ancrées',
+            'Ne pas spécifier le type de document dans le prompt — sans contexte, le modèle applique les mauvaises heuristiques de résumé (par exemple traiter un contrat juridique comme un article d\'actualité, omettant le langage critique des clauses)',
+            'Ignorer le chunking pour les documents dépassant 50 pages — le débordement de fenêtre de contexte tronque silencieusement le contenu ; le modèle résume uniquement la portion disponible sans avertir qu\'il a manqué quelque chose',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecture complémentaire',
+          items: [
+            '[Qu\'est-ce que l\'ingénierie des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — les principes fondamentaux derrière les instructions IA structurées',
+            '[Recherche assistée par IA](/prompt-engineering/ai-powered-research?lang=fr) — comment combiner les outils d\'extraction avec les workflows de vérification multi-sources',
+            '[Pourquoi l\'IA hallucine et comment l\'arrêter](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — comprendre les causes profondes de l\'hallucination et les stratégies d\'atténuation prouvées',
+            '[Limites de l\'IA — Ce que les LLM ne peuvent pas faire](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — techniques spécifiques pour ancrer les résultats de l\'IA dans le contenu source vérifié',
+            '[5 composants que chaque prompt IA doit avoir](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — composants de prompt structurés qui améliorent directement la précision d\'extraction',
+            '[Température et Top-P : contrôler la sortie IA](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — définir la température à 0.0–0.1 pour la résumé déterministe et résistante aux hallucinations',
+            '[Chaînage de pensée](/prompt-engineering/chain-of-thought-prompting?lang=fr) — raisonnement étape par étape qui améliore la fidélité dans l\'analyse complexe multi-sources',
+          ],
+        },
+        howToStart: {
+          id: 'how-to-extract-and-summarise',
+          title: 'Comment extraire et résumer avec l\'IA',
+          numberedItems: [
+            '**Choisir l\'outil selon le type de source et la structure d\'extraction.** Utiliser NotebookLM pour vos propres fichiers PDF ou documents, Elicit pour les articles académiques avec des champs structurés (méthodologie, taille d\'échantillon, résultats) et Perplexity pour la résumé web en temps réel. Les extractions texte-vers-tableau fonctionnent mieux avec les systèmes spécialisés (Elicit) qu\'avec les modèles de chat généraux.',
+            '**Définir le schéma d\'extraction à l\'avance (JSON, tableau, liste à puces).** Indiquer au modèle exactement quelles colonnes ou champs vous avez besoin et le type de données pour chacun. Exemple : « Renvoyer un tableau JSON avec les clés : author (texte), year (nombre), finding (texte max 200 caractères), confidence (enum : high/medium/low). »',
+            '**Définir la température (T) à 0.1–0.3 pour l\'extraction et la résumé.** Les températures plus basses produisent des résultats plus déterministes et cohérents. Réserver les températures plus élevées uniquement pour le brainstorming d\'interprétations alternatives du matériel source ambigu.',
+            '**Pour les grands documents, extraire en plusieurs passages avec points de contrôle intermédiaires.** Si vous avez des fichiers PDF de 100+ pages, extraire les sections 1–25, puis 26–50, etc., en stockant les résultats dans un format structuré. Cela prévient le débordement de fenêtre de contexte et facilite la détection et la correction des erreurs.',
+            '**Vérifier les extractions clés avec le document source.** Vérifier toujours 10–20 % des données extraites par rapport à l\'original. Les modèles IA peuvent halluciner ou mal lire les données structurées, particulièrement des tableaux avec des cellules fusionnées ou une mise en forme peu claire.',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: 'Questions fréquemment posées',
+          faqs: [
+            {
+              q: 'Quelle est la différence entre le résumé extractif et abstrait par IA ?',
+              a: 'Le résumé extractif copie les phrases directement du document source sans modification — les erreurs factuelles sont structurellement impossibles car aucun nouveau texte n\'est généré. Le résumé abstrait utilise les LLM pour générer de nouvelles phrases paraphrasées — produisant une sortie plus lisible mais avec des taux d\'hallucination de 0.7–14 % selon le modèle et la tâche. Extractif pour les documents juridiques et de conformité ; abstrait pour les résumés exécutifs et synthèses de recherche.',
+            },
+            {
+              q: 'Quel modèle IA hallucine le moins lors de la résumé de documents ?',
+              a: 'Sur le benchmark HHEM de Vectara — le test standard de fidélité de résumé sur 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) a atteint le taux d\'hallucination le plus bas de 0.7 % en 2025. Ces taux s\'appliquent uniquement aux tâches ancrées à la source ; le rappel factuel en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
+            },
+            {
+              q: 'Combien de pages les outils de résumé par IA peuvent-ils traiter à la fois ?',
+              a: 'GPT-5.5 (OpenAI) traite environ 100 pages standard par session (128 000 jetons). Claude Opus 4.7 (Anthropic) traite environ 160 pages (200 000 jetons). Gemini 3.1 Pro (Google DeepMind) traite environ 800 pages (1 million de jetons). NotebookLM (Google DeepMind) supporte jusqu\'à 50 sources totalisant environ 500 000 mots par carnet. Pour les corpus plus importants, le chunking de documents est nécessaire.',
+            },
+            {
+              q: 'NotebookLM ou Claude est-il meilleur pour la résumé de documents ?',
+              a: 'Ils répondent à des besoins différents. NotebookLM (Google DeepMind) offre un ancrage plus strict à la source avec des citations inline cliquables — il hallucine moins sur les sources téléchargées et excelle à représenter fidèlement ce que les documents disent. Claude Opus 4.7 (Anthropic) produit une analyse plus nuancée, excelle à synthétiser plusieurs documents et identifie les connexions non évidentes — mais mélange parfois le contenu source avec les connaissances d\'entraînement de manière subtile. NotebookLM pour la précision ; Claude pour l\'insight.',
+            },
+            {
+              q: 'Comment empêcher l\'IA de halluciner dans mes résumés ?',
+              a: 'Quatre techniques réduisent l\'hallucination : (1) donner des instructions explicites — « résumez uniquement le document ci-dessous ; n\'ajoutez pas de connaissances externes » ; (2) définir la température (T) à 0.0–0.1 pour le déterminisme maximal ; (3) effectuer une vérification de fidélité — demander au modèle de lister chaque affirmation et d\'identifier sa phrase source ; (4) faire une vérification croisée avec un deuxième modèle — quand GPT-5.5 et Claude Opus 4.7 s\'accordent sur un fait, la probabilité d\'hallucination partagée est statistiquement quasi nulle.',
+            },
+            {
+              q: 'Qu\'est-ce que le chunking de documents et quand devrais-je l\'utiliser ?',
+              a: 'Le chunking divise un document en segments (généralement 500–2 000 jetons), résume chaque segment séparément, puis synthétise les résumés des chunks. Utilisez-le quand votre document dépasse la fenêtre de contexte du modèle — environ 100 pages pour GPT-5.5 (128 000 jetons), 160 pages pour Claude Opus 4.7 (200 000 jetons) ou 800 pages pour Gemini 3.1 Pro (1 million de jetons). Pour les documents structurés (contrats juridiques, rapports annuels), le chunking thématique par en-têtes de section produit la synthèse finale la plus cohérente.',
+            },
+            {
+              q: 'Que sont ROUGE et BERTScore, et quelle métrique devrais-je utiliser pour évaluer les résumés IA ?',
+              a: 'ROUGE mesure le chevauchement de n-grammes entre un résumé généré et une référence — utile pour les benchmarks mais aveugle au sens sémantique et à la précision factuelle. BERTScore utilise la similarité cosinus entre les embeddings BERT, capturant la similarité sémantique plutôt que les correspondances de mots exacts. Pour les workflows de production, la combinaison du scoring HHEM de fidélité avec une vérification de complétude fournit le signal de qualité le plus fiable.',
+            },
+            {
+              q: 'Les outils de résumé par IA peuvent-ils traiter des documents dans d\'autres langues que l\'anglais ?',
+              a: 'Oui, avec d\'importantes mises en garde. Les modèles Mistral AI (France) supportent nativement le français et les langues européennes et peuvent être déployés localement pour la conformité RGPD. Qwen 3 (Alibaba) tokenise les caractères chinois environ 40 % plus efficacement que GPT-5.5. Les modèles LLaMA 4 via Ollama permettent la résumé multilingue entièrement locale sans appels API externes.',
+            },
+            {
+              q: 'Dois-je respecter le RGPD en utilisant les outils de résumé par IA ?',
+              a: 'Oui. Si vous envoyez des données à caractère personnel à des points de terminaison API externes (par exemple OpenAI, Anthropic), l\'article 28 du RGPD s\'applique : un contrat de traitement (DPA) doit être conclu. L\'alternative pour la conformité RGPD est le déploiement local — par exemple Mistral Large via Ollama ou LLaMA 4 sur site. La CNIL recommande, pour les données sensibles en santé, finances ou droit, de privilégier l\'inférence locale.',
+            },
+            {
+              q: 'La résumé de documents assistée par IA est-elle appropriée pour les entreprises françaises ?',
+              a: 'Oui, à condition de choisir la bonne infrastructure. Les entreprises françaises bénéficient particulièrement de NotebookLM pour les rapports internes et l\'analyse de contrats, ainsi que des modèles déployés localement pour les documents sensibles. La CNIL recommande pour les données en santé, finances ou droit une analyse de risque avant l\'utilisation d\'API cloud. Cas d\'usage typiques : résumé automatisé de contrats fournisseurs, condensation de procès-verbaux de réunions, extraction de clauses de conformité.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources et lecture complémentaire',
+          items: [
+            '[Liu et al., 2025. « A hallucination detection and mitigation framework for text summarisation »](https://www.nature.com/articles/s41598-025-31075-1) — introduit la méthodologie Q-S-E pour la correction itérative des hallucinations sur CNN/DailyMail, PubMed et ArXiv',
+            '[Vectara HHEM Leaderboard, 2025. « Hughes Hallucination Evaluation Model — Document Summarisation Faithfulness Rankings »](https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/) — 100+ LLM testés sur 831 documents ; Gemini-2.0-Flash à 0.7 % hallucination',
+            '[SEI/CMU, 2025. « Evaluating LLMs for Text Summarisation: An Introduction »](https://www.sei.cmu.edu/blog/evaluating-llms-for-text-summarization-introduction/) — framework pour l\'évaluation de la précision, fidélité, compression et efficacité',
+          ],
+        },
+      },
+    },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
   };
