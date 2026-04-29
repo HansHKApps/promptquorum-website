@@ -98,7 +98,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   // Use seoTitle if available for better SERP display, otherwise use article title
   const pageTitle = (article as PEArticle & { seoTitle?: string }).seoTitle ?? article.title ?? ''
-  // Use metaDescription for OG/Twitter when available, otherwise fall back to intro
+  // Use metaDescription for base metadata when available, otherwise fall back to intro
   const metaDesc = (article as PEArticle & { metaDescription?: string }).metaDescription ?? article.intro
 
   // Glossary-specific overrides for maximum CTR + keyword density
@@ -113,6 +113,12 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     ? 'Prompt Engineering Glossary: 100 Terms Defined for 2026'
     : pageTitle
 
+  // Per-surface metadata: og and twitter can have distinct values
+  const ogTitle = (article as PEArticle & { ogTitle?: string }).ogTitle ?? finalTitle
+  const ogDesc = (article as PEArticle & { ogDescription?: string }).ogDescription ?? finalDesc
+  const twTitle = (article as PEArticle & { twitterTitle?: string }).twitterTitle ?? ogTitle
+  const twDesc = (article as PEArticle & { twitterDescription?: string }).twitterDescription ?? ogDesc
+
   return {
     title: finalTitle.length <= 45 ? `${finalTitle} | PromptQuorum` : finalTitle,
     description: finalDesc,
@@ -121,8 +127,8 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     }),
     alternates: generateAlternates(`/prompt-engineering/${slug}`, selectedLang, hasTranslation),
     openGraph: {
-      title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : finalTitle,
-      description: finalDesc,
+      title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : ogTitle,
+      description: isGlossary ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.' : ogDesc,
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
@@ -133,8 +139,8 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     twitter: {
       card: 'summary_large_image',
       site: '@promptquorum',
-      title: isGlossary ? 'Prompt Engineering Glossary (100 Terms)' : finalTitle,
-      description: isGlossary ? 'Chain-of-Thought • RAG • Few-shot • Agents • Temperature • Token Limits. 100 searchable, cited, expert definitions.' : finalDesc,
+      title: isGlossary ? 'Prompt Engineering Glossary (100 Terms)' : twTitle,
+      description: isGlossary ? 'Chain-of-Thought • RAG • Few-shot • Agents • Temperature • Token Limits. 100 searchable, cited, expert definitions.' : twDesc,
     },
   }
 }

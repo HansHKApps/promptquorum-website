@@ -28,6 +28,10 @@ export interface PEArticle {
   intro?: string
   seoTitle?: string          // Overrides title in <title> tag for SERP CTR optimisation
   metaDescription?: string   // 150–160 char SEO-optimised description for meta tag (falls back to intro if absent)
+  ogTitle?: string           // Overrides og:title (falls back to seoTitle → title)
+  ogDescription?: string     // Overrides og:description (falls back to metaDescription → intro)
+  twitterTitle?: string      // Overrides twitter:title (falls back to ogTitle → seoTitle → title)
+  twitterDescription?: string // Overrides twitter:description (falls back to ogDescription → metaDescription → intro)
   publishDate?: string
   dateModified?: string
   lastFactChecked?: string   // E-E-A-T signal: date and model versions verified against
