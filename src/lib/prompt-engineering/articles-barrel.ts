@@ -135,6 +135,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "how-to-reduce-prompt-brittleness": a_how_to_reduce_prompt_brittleness,
   "best-prompt-engineering-ides": a_best_prompt_engineering_ides,
   "prompting-across-languages": a_prompting_across_languages,
-  "prompt-review-workflow-teams": a_prompt_review_workflow_for_teams,
+  "prompt-review-workflow-for-teams": a_prompt_review_workflow_for_teams,
   "pe-setup-small-teams": a_prompt_engineering_setup_small_teams,
 };

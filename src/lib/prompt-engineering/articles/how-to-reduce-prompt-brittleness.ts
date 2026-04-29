@@ -7,8 +7,8 @@ export const article: Record<Language, PEArticle> = {
     theme: 'Evaluation & Reliability',
     title: 'How to Reduce Prompt Brittleness',
     intro: 'Prompt brittleness causes silent production failures. Learn 7 techniques — structured output, defensive instructions, regression testing — to make prompts reliable across input variations and model updates.',
-    seoTitle: 'How to Reduce Prompt Brittleness: 7 Techniques',
-    metaDescription: 'Prompt brittleness causes production failures that are invisible in testing. Learn 7 techniques — structured output, defensive instructions, regression suites — to make prompts reliable.',
+    seoTitle: 'How to Reduce Prompt Brittleness: 7 Techniques (2026)',
+    metaDescription: 'Prompt brittleness causes silent failures on input changes. Apply 7 fixes: structured output, defensive instructions, regression testing, and version pinning.',
     ogTitle: 'How to Reduce Prompt Brittleness: 7 Techniques',
     ogDescription: 'A prompt that passes every internal test can produce wrong outputs the moment a real user phrases the request differently — or the model updates without warning. Learn how to fix it.',
     twitterTitle: 'How to Reduce Prompt Brittleness',
@@ -21,15 +21,22 @@ export const article: Record<Language, PEArticle> = {
     primaryTerm: 'prompt brittleness',
     aboutTopics: ['Prompt Engineering', 'LLM Reliability', 'Prompt Testing'],
     leadAnswerBlock: '**Prompt brittleness is the tendency of a prompt to fail silently when input phrasing, model version, or context changes slightly. Reducing brittleness requires format enforcement, defensive instructions, and a regression test set built before deployment.**',
+    quickFacts: [
+      'Minimum viable test set: 20 cases (10 typical + 5 paraphrase + 5 edge)',
+      '7 techniques: structured output, few-shot examples, defensive instructions, input parameterization, regression testing, model version pinning, output validation',
+      '5 root causes: implicit format expectations, happy-path testing, model version sensitivity, context contamination, over-specific phrasing',
+      'Temperature range for brittleness testing: 0.0, 0.5, and 1.0',
+      'Model version aliases (e.g., `gpt-4o`) update silently; always pin a dated identifier in production',
+    ],
     toc: [
       { label: 'What Is Prompt Brittleness?', anchor: 'what-is-prompt-brittleness' },
       { label: 'What Causes Prompt Brittleness?', anchor: 'causes-of-prompt-brittleness' },
       { label: 'How Do You Reduce Prompt Brittleness?', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: 'Brittle vs. Robust Prompt Examples', anchor: 'prompt-examples' },
+      { label: 'What Do Brittle vs. Robust Prompts Look Like?', anchor: 'prompt-examples' },
       { label: 'How Do You Test Prompts for Brittleness?', anchor: 'how-to-test-for-brittleness' },
-      { label: 'Common Mistakes That Create Brittle Prompts', anchor: 'common-mistakes' },
-      { label: 'How to Start Reducing Brittleness Today', anchor: 'how-to-start' },
-      { label: 'FAQs', anchor: 'faq' },
+      { label: 'What Are the Most Common Mistakes?', anchor: 'common-mistakes' },
+      { label: 'How Do You Start Reducing Prompt Brittleness?', anchor: 'how-to-start' },
+      { label: 'Frequently Asked Questions', anchor: 'faq' },
     ],
     sections: {
       tldr: {
@@ -64,7 +71,7 @@ export const article: Record<Language, PEArticle> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'What Causes Prompt Brittleness?',
-        content: 'Most brittleness comes from five patterns in how prompts are written and tested.',
+        content: '**Most prompt brittleness comes from five patterns in how prompts are written and tested.** The two most common — implicit format expectations and happy-path-only testing — account for the majority of production failures. Understanding these causes is the first step toward [evaluating and improving your prompt quality](/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Implicit format expectations** — The prompt asks for a specific output format (JSON, bullet list, yes/no) without enforcing it. Any input variation that causes the model to add a preamble or rephrase breaks downstream parsing.',
           '**Happy-path-only testing** — Prompts are validated on 3–5 manually curated examples that always work. Edge cases — empty inputs, very long text, ambiguous phrasing — are never tested.',
@@ -79,10 +86,10 @@ export const article: Record<Language, PEArticle> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: 'How Do You Reduce Prompt Brittleness?',
-        content: 'Seven techniques address the five root causes above. Apply them in order — the earlier techniques cover the most common failure modes.',
+        content: '**Seven techniques address the five root causes above and cover the full failure-mode surface.** Apply them in order — earlier techniques address the most common failures. In production codebases, format-related brittleness — prompts that parse free text expecting a specific shape — accounts for the majority of silent failures in classification and extraction tasks. Structured output enforcement (Technique 1) addresses this class entirely.',
         numberedItems: [
-          '**Enforce structured output** — Use JSON mode or native structured output APIs instead of asking the model to "respond in JSON". Format enforcement moves the reliability burden from the prompt to the API layer.',
-          '**Add explicit few-shot examples** — Include 2–3 input/output pairs that demonstrate correct behavior, including one edge case. Examples anchor the model\'s behavior more reliably than instruction-only prompts.',
+          '**Enforce structured output** — Use [JSON mode or native structured output APIs](/prompt-engineering/structured-output-json-mode) instead of asking the model to "respond in JSON". Format enforcement moves the reliability burden from the prompt to the API layer.',
+          '**Add explicit few-shot examples** — Include 2–3 input/output pairs that demonstrate correct behavior, including one edge case. Examples anchor the model\'s behavior more reliably than instruction-only prompts. See [zero-shot vs. few-shot prompting](/prompt-engineering/zero-shot-vs-few-shot) for more guidance.',
           '**Write defensive instructions** — Specify what the model should do when the input is missing, ambiguous, or outside scope. Example: "If no date is found, return `null`. Do not guess." Without this, the model fills gaps with plausible-sounding defaults.',
           '**Parameterise inputs** — Replace hardcoded values and inline examples with named variables (`{{customer_name}}`, `{{document_text}}`). Parameterised prompts are easier to test systematically and prevent accidental over-fitting to example values.',
           '**Build a regression test set before deploying** — Assemble 20+ test cases covering the expected distribution plus 5+ edge cases. Run the test set before every model upgrade or prompt change.',
@@ -95,8 +102,8 @@ export const article: Record<Language, PEArticle> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: 'Brittle vs. Robust Prompt Examples',
-        content: 'These before/after examples show how each source of brittleness can be addressed.',
+        title: 'What Do Brittle vs. Robust Prompts Look Like?',
+        content: '**The three examples below show how each source of brittleness is eliminated by applying a specific technique.** Each pair demonstrates a brittle prompt on the left (producing inconsistent or incorrect output) and a robust equivalent on the right (enforcing format, handling edge cases, or anchoring behavior).',
         promptExamples: [
           {
             bad: 'Classify this support ticket as urgent or routine: {{ticket}}',
@@ -117,11 +124,14 @@ export const article: Record<Language, PEArticle> = {
             goodLabel: 'Robust: few-shot anchors format',
           },
         ],
+        callouts: [
+          { type: 'Key Point', label: 'What to copy', text: 'The JSON enforcement pattern in Example 1 and the null-return pattern in Example 2 are copy-pasteable into any extraction or classification prompt without further modification.' },
+        ],
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
         title: 'How Do You Test Prompts for Brittleness?',
-        content: 'Testing for brittleness means deliberately stressing the prompt beyond its happy path. Five testing patterns cover the most common failure modes.',
+        content: '**Testing for brittleness means deliberately stressing the prompt beyond its happy path.** Five patterns cover the most common failure modes and can be run before every deployment.',
         items: [
           '**Paraphrase testing** — Restate 5–10 test inputs using different wording and measure whether outputs stay consistent. Brittle prompts show high variance across paraphrases.',
           '**Edge case testing** — Test empty inputs, maximum-length inputs, non-English text, special characters, and inputs that are in-scope but unusual. These expose implicit assumptions.',
@@ -135,7 +145,8 @@ export const article: Record<Language, PEArticle> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'Common Mistakes That Create Brittle Prompts',
+        title: 'What Are the Most Common Mistakes That Create Brittle Prompts?',
+        content: '**The four mistakes below are the most common causes of silent production failures in prompt-based systems.** Each one is preventable with a single design principle.',
         mistakes: [
           {
             mistake: 'Testing only the happy path',
@@ -158,10 +169,14 @@ export const article: Record<Language, PEArticle> = {
             fix: 'Every extraction or classification prompt must include a `null` or `N/A` return path with an explicit instruction: "If not found, return null."',
           },
         ],
+        callouts: [
+          { type: 'Warning', label: 'String matching is the #1 silent failure', text: '`if "Yes" in response` is the most common brittle parsing pattern in production codebases. It breaks on "Yes," or "Yes." without raising any exception.' },
+        ],
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'How to Start Reducing Brittleness Today',
+        title: 'How Do You Start Reducing Prompt Brittleness?',
+        content: '**Start with the three highest-risk prompts in production — this gives the highest return on the first hour of work.** The following 8-step process can be completed in a single afternoon.',
         numberedItems: [
           'Identify your three highest-traffic or highest-risk prompts in production',
           'For each prompt, write 5 paraphrase variants of a typical input and run them — compare outputs for consistency',
@@ -172,10 +187,14 @@ export const article: Record<Language, PEArticle> = {
           'Set up a CI step that runs the test suite before any prompt or model change is deployed',
           'Pin the model version identifier in your production config and document the version the prompt was tuned on',
         ],
+        callouts: [
+          { type: 'Pro Tip', label: 'Start small', text: 'Auditing 3 prompts completely takes less than 2 hours. A partial audit of 10 prompts misses the edge cases that matter. Depth over breadth.' },
+        ],
       },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
+        content: '**The questions below cover the most common points of confusion around prompt brittleness, testing cadence, and when to pin model versions.**',
         faqs: [
           {
             q: 'What is a brittle prompt?',
@@ -218,8 +237,18 @@ export const article: Record<Language, PEArticle> = {
           { title: 'How to evaluate prompt quality', url: '/prompt-engineering/how-to-evaluate-prompt-quality?lang=en' },
           { title: 'How to test prompts across models', url: '/prompt-engineering/how-to-test-prompts-across-models?lang=en' },
           { title: 'Prompt evaluation metrics', url: '/prompt-engineering/prompt-evaluation-metrics?lang=en' },
-          { title: 'Structured output and JSON mode', url: '/prompt-engineering/structured-output-and-json-mode?lang=en' },
+          { title: 'Structured output and JSON mode', url: '/prompt-engineering/structured-output-json-mode?lang=en' },
           { title: 'Zero-shot vs. few-shot prompting', url: '/prompt-engineering/zero-shot-vs-few-shot?lang=en' },
+          { title: 'Prompt injection and security', url: '/prompt-engineering/prompt-injection-and-security?lang=en' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources & Further Reading',
+        items: [
+          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'OpenAI: Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
+          { title: 'arXiv: Towards a Unified Evaluation Framework for Prompt Robustness', url: 'https://arxiv.org/abs/2310.14873' },
         ],
       },
     },
@@ -228,7 +257,7 @@ export const article: Record<Language, PEArticle> = {
       '@type': 'TechArticle',
       headline: 'How to Reduce Prompt Brittleness',
       description: 'Prompt brittleness causes production failures that are invisible in testing. Learn 7 techniques — structured output, defensive instructions, regression suites — to make prompts reliable.',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
@@ -243,7 +272,7 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'JSON mode' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     howToSchema: {
