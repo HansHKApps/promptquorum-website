@@ -348,8 +348,6 @@ export const article: Record<Language, PEArticle> = {
         promptquorumVisual: {
           title: 'PromptQuorum Dashboard: See All Models at Once',
           content: '**Send one prompt, see outputs from GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE — all in one view.** Side-by-side comparison eliminates the pain of manual model switching.',
-          imagePlaceholder: true,
-          imageCaption: '[Coming soon: Live screenshot of PromptQuorum dashboard showing parallel outputs from 5 AI models on the same prompt task — displays reasoning, cost, latency, and quality scores side-by-side]',
         },
 
         practicalRecipes: {
@@ -364,7 +362,7 @@ export const article: Record<Language, PEArticle> = {
 
         recipe2: {
           title: 'Recipe 2: Compare Coding Quality and Cost for Your Backend Stack',
-          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-5.5, Claude Opus 4.7, and Gemini 2.5 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude. Example: "Optimize this database query for speed. What\'s the time complexity?" — routed to Claude for deep analysis, Gemini for budget-conscious iteration.',
+          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-5.5, Claude Opus 4.7, and Gemini 2.5 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude. Example: "Optimize this database query for speed. What's the time complexity?" — routed to Claude for deep analysis, Gemini for budget-conscious iteration.',
         },
 
         recipe3: {
@@ -477,7 +475,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Related Reading',
           items: [
             '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — understand token pricing, rate limits, and cost optimization',
-            '[Fundamentals: System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — how system prompts define model behavior across models',
+            '[Fundamentals: System Prompt vs User Prompt: What's the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — how system prompts define model behavior across models',
             '[Fundamentals: Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use) — frameworks work across models; choose one that fits your task',
             '[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where different models can handle different steps',
             '[Fundamentals: Context Windows Explained: Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — how context window size drives model selection for long documents',
