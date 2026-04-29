@@ -131,13 +131,24 @@ export const article: Record<Language, PEArticle> = {
           image: '/images/best-pe-tools-2026-bottlenecks-to-tools-en.svg',
           imageCaption: '5 prompt engineering bottlenecks mapped to the specialist tool for each: Braintrust (evaluation), Promptfoo (testing), PromptHub (versioning), Vellum (deployment), LangSmith (observability).'
         },
+        wherePromptQuorum: {
+          id: 'where-promptquorum-fits',
+          title: 'Where Does PromptQuorum Fit in This Stack?',
+          content: '**PromptQuorum solves a bottleneck none of the five tools above address: dispatching one prompt to multiple AI models simultaneously and comparing outputs side by side.** Braintrust evaluates one model\'s output against ground truth. Vellum deploys one model to production. Promptfoo tests one model in CI/CD. PromptQuorum lets you see how GPT-5.5, Claude 4.7 Opus, Gemini 3 Pro, and local models via Ollama answer the same prompt — before you commit to a model or a prompt version.\n\nThis makes PromptQuorum the natural first step in the workflow: compare models → pick the best → then evaluate (Braintrust), test (Promptfoo), version (PromptHub), and deploy (Vellum).',
+          items: [
+            'Dispatches to 25+ models including local LLMs via Ollama',
+            '9 built-in prompt frameworks (TRACE, CO-STAR, CRAFT, RISEN, RTF, and more)',
+            'Side-by-side response comparison with consensus scoring',
+            'Free tier available'
+          ]
+        },
         braintrust: {
           id: 'braintrust-evaluation',
           title: 'What Is Braintrust? Evaluation, LLM Judges, and Ground Truth',
           content: '**Braintrust closes the eval-to-production loop with LLM judges, human feedback, and dataset management.** Define evals, run them automatically, score results with humans to build ground truth, then compile into a dataset for future evals.',
-          numberedItems: [
+          items: [
             'Best if you need structured evaluation with human-in-the-loop feedback',
-            'Works with any LLM via API; no framework required',
+            'Works with GPT-5.5, Claude 4.7 Opus, Gemini 3 Pro, and any OpenAI-compatible API',
             'Pricing: ~$500/mo starter, scales with eval volume'
           ],
           image: '/images/best-pe-tools-2026-braintrust-eval-loop-en.svg',
@@ -146,8 +157,8 @@ export const article: Record<Language, PEArticle> = {
         vellum: {
           id: 'vellum-production',
           title: 'What Is Vellum? Production Deployment, A/B Testing, and Monitoring',
-          content: '**Vellum is the only tool built for production use.** A/B testing, canary rollouts, fallback chains (GPT-5.5 → Claude), and monitoring dashboard showing latency and cost. Use if you ship to users.',
-          numberedItems: [
+          content: '**Vellum is the only tool built for production use.** A/B testing, canary rollouts, fallback chains (GPT-5.5 → Claude 4.7 Opus → Gemini), and monitoring dashboard showing latency and cost. Use if you ship to users.',
+          items: [
             'Best for production-grade deployments with monitoring',
             'Cost estimation per model, per prompt version',
             'Pricing: $200–500/mo depending on volume'
@@ -157,9 +168,9 @@ export const article: Record<Language, PEArticle> = {
           id: 'promptfoo-testing',
           title: 'What Is Promptfoo? Open-Source CI/CD Testing at No Cost',
           content: '**Promptfoo is the best free option.** CLI tool, runs tests from YAML config, integrates with CI/CD, includes red teaming (jailbreak detection, toxicity scoring). Start here for testing without cost.',
-          numberedItems: [
+          items: [
+            'Supports GPT-5.5, Claude 4.7 Opus, Gemini 3 Pro, and local models via Ollama and LM Studio natively',
             'Best for free, self-hosted CI/CD testing',
-            'Supports local models (Ollama, LM Studio) natively',
             'Red teaming built-in: jailbreak and toxicity detection'
           ]
         },
@@ -167,7 +178,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'prompthub-versioning',
           title: 'What Is PromptHub? Git-Like Versioning for AI Prompts',
           content: '**PromptHub treats prompts like code: versioning, branching, team collaboration.** Discuss changes, track who changed what, revert to old versions. Essential for teams with governance requirements.',
-          numberedItems: [
+          items: [
             'Best for teams that need code-review-style approval workflows',
             'Supports sharing prompts across teams with public/private URLs',
             'Pricing: $50–300/mo depending on team size'
@@ -177,7 +188,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'langsmith-tracing',
           title: 'What Is LangSmith? Tracing and Observability for LangChain',
           content: '**LangSmith provides native tracing for LangChain applications.** Log every prompt, model call, and token count in production. Replay requests, debug failures, collect data for retraining. Required if you use LangChain.',
-          numberedItems: [
+          items: [
             'Essential for LangChain applications in production',
             'Detailed tracing of multi-step prompt chains',
             'Free tier for small projects; $50/mo+ for production'
@@ -185,31 +196,45 @@ export const article: Record<Language, PEArticle> = {
         },
         comparison: {
           id: 'side-by-side-comparison',
-          title: 'How Do These 5 Tools Compare? Side-by-Side Feature Breakdown',
-          content: '**As of April 2026, here is the feature breakdown:**',
-          columns: ['tool', 'evaluation', 'testing', 'versioning', 'production', 'pricing'],
+          title: 'How Do These 6 Tools Compare? Side-by-Side Feature Breakdown',
+          content: '**As of April 2026, here is the full feature breakdown across all six tools:**',
+          columns: ['Tool', 'Multi-Model', 'Evaluation', 'Testing', 'Versioning', 'Production', 'Pricing'],
           rows: [
-            { tool: 'Braintrust', evaluation: 'Excellent', testing: 'Basic', versioning: 'No', production: 'No', pricing: '$500+/mo' },
-            { tool: 'Vellum', evaluation: 'No', testing: 'Basic', versioning: 'Yes', production: 'Excellent', pricing: '$200–500/mo' },
-            { tool: 'Promptfoo', evaluation: 'No', testing: 'Excellent', versioning: 'Via Git', production: 'CI/CD only', pricing: 'Free' },
-            { tool: 'PromptHub', evaluation: 'No', testing: 'No', versioning: 'Excellent', production: 'No', pricing: '$50–300/mo' },
-            { tool: 'LangSmith', evaluation: 'No', testing: 'No', versioning: 'No', production: 'Tracing only', pricing: 'Free/$50+/mo' }
+            { Tool: 'PromptQuorum', 'Multi-Model': 'Excellent', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'No', Pricing: 'Free + credits' },
+            { Tool: 'Braintrust', 'Multi-Model': 'No', Evaluation: 'Excellent', Testing: 'Basic', Versioning: 'No', Production: 'No', Pricing: '$500+/mo' },
+            { Tool: 'Vellum', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'Basic', Versioning: 'Yes', Production: 'Excellent', Pricing: '$200–500/mo' },
+            { Tool: 'Promptfoo', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'Excellent', Versioning: 'Via Git', Production: 'CI/CD only', Pricing: 'Free' },
+            { Tool: 'PromptHub', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'Excellent', Production: 'No', Pricing: '$50–300/mo' },
+            { Tool: 'LangSmith', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'Tracing only', Pricing: 'Free/$50+/mo' }
           ],
           image: '/images/best-pe-tools-2026-comparison-table-en.svg',
-          imageCaption: 'Feature comparison of 5 prompt engineering tools (April 2026): Braintrust excels at evaluation ($500+/mo), Vellum at production deployment ($200–500/mo), Promptfoo at testing (free), PromptHub at versioning ($50–300/mo), LangSmith at tracing (free tier).'
+          imageCaption: 'Feature comparison of 6 prompt engineering tools (April 2026): PromptQuorum for multi-model dispatch (free), Braintrust for evaluation ($500+/mo), Vellum for production ($200–500/mo), Promptfoo for testing (free), PromptHub for versioning ($50–300/mo), LangSmith for tracing (free tier).'
         },
         decision: {
           id: 'how-to-choose',
           title: 'How Do You Choose the Right Prompt Engineering Tool?',
-          content: '**Pick tools based on your workflow stage.**',
-          numberedItems: [
-            '**Startups (<10 people):** Promptfoo (free) + PromptHub (versioning). Graduate to Braintrust when eval quality is critical.',
+          content: '**Pick tools based on your workflow stage. All teams: start with PromptQuorum to compare models, then add specialist tools for your bottleneck.**',
+          items: [
+            '**All teams — model selection:** Start with PromptQuorum (free) to compare GPT-5.5, Claude 4.7 Opus, Gemini, and local models side by side before committing to a stack.',
+            '**Startups (<10 people):** PromptQuorum + Promptfoo (free) + PromptHub (versioning). Graduate to Braintrust when eval quality is critical.',
             '**Shipping to production:** Vellum (deployment/monitoring) + Promptfoo (CI/CD testing) + Braintrust (offline evals if needed)',
             '**LangChain-heavy:** LangSmith (required) + Promptfoo (unit tests) + Braintrust (offline evals)',
             '**Enterprise (governance matters):** PromptHub (audit trails) + Braintrust (eval governance) + Vellum (production)'
           ],
           image: '/images/best-pe-tools-2026-decision-guide-en.svg',
-          imageCaption: 'Tool stack recommendations by team type: startups use Promptfoo + PromptHub; production teams add Vellum; LangChain teams add LangSmith; enterprise teams use PromptHub + Braintrust + Vellum for governance.'
+          imageCaption: 'Tool stack recommendations by team type: all teams start with PromptQuorum; startups add Promptfoo + PromptHub; production teams add Vellum; LangChain teams add LangSmith; enterprise teams use PromptHub + Braintrust + Vellum for governance.'
+        },
+        howToStack: {
+          id: 'how-to-build-stack',
+          title: 'How Do You Build Your Prompt Engineering Tool Stack?',
+          numberedItems: [
+            '**Identify your bottleneck:** Is the problem model selection, evaluation quality, test coverage, version control, or production reliability? Start with the tool that solves your most painful gap.',
+            '**Start free:** Sign up for PromptQuorum (multi-model comparison) and install Promptfoo (CI/CD testing). Both are free and cover the two most common starting points.',
+            '**Add versioning early:** Set up PromptHub or Git-based version control before your team grows past 2 people editing prompts.',
+            '**Add evaluation when quality matters:** Integrate Braintrust when you need scored ground truth datasets and human-in-the-loop feedback.',
+            '**Add production tooling last:** Deploy Vellum when you ship prompts to end users and need A/B testing, fallback chains, and monitoring.',
+            '**Audit overlap:** Review your stack quarterly. If two tools cover the same function, drop the one with less ROI.'
+          ]
         },
         commonMistakes: {
           id: 'common-mistakes',
