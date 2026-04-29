@@ -16,7 +16,7 @@ export const article: Record<Language, PEArticle> = {
     dateModified: '2026-04-29',
     lastFactChecked: '2026-04-29',
     seoTitle: 'Multilingual Prompting: Get Consistent AI Results in Any Language',
-    metaDescription: 'LLMs trained mostly on English underperform in French, German, Japanese and Arabic. Learn which models handle which languages best and how to write multilingual prompts that work.',
+    metaDescription: 'LLMs trained on ~46% English underperform in French, German, Japanese, Arabic. Learn which models handle each language best and how to write multilingual prompts.',
     readTime: '12 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers building multilingual LLM applications and prompt engineers working with non-English content',
@@ -24,6 +24,7 @@ export const article: Record<Language, PEArticle> = {
     aboutTopics: ['Multilingual Prompting', 'Cross-Lingual AI', 'Language-Specific Model Performance'],
     toc: [
       { label: 'Key Takeaways', anchor: 'key-takeaways' },
+      { label: 'Quick Facts', anchor: 'quick-facts' },
       { label: 'Why Language Matters More Than You Think', anchor: 'why-language-matters' },
       { label: 'The 4-Tier Language Model', anchor: 'language-tiers' },
       { label: 'Token Costs by Script', anchor: 'token-costs' },
@@ -126,12 +127,25 @@ export const article: Record<Language, PEArticle> = {
           'Always declare output language explicitly in the system prompt: "Respond in formal German (Sie-form)." — never assume the model will match the user\'s language.',
         ],
       },
+      quickFacts: {
+        title: 'Quick Facts',
+        items: [
+          '**46%** of CommonCrawl training data is English; only 3% is Chinese, 5% is French, 6% is German.',
+          '**1,900 tokens** needed for 1,000 words in Arabic (46% more than English); **900 tokens** for Chinese (31% less).',
+          '**5–12%** accuracy improvement by using English chain-of-thought reasoning with native-language output (Tier 3 languages).',
+          '**15–20%** accuracy drop when using English few-shot examples for non-English tasks (Shi et al., 2023).',
+          '**Mistral Large 2** leads on Romance languages; **Gemini 2.5 Pro** leads on East Asian; **GPT-5.5** leads on Arabic.',
+        ],
+      },
       definition: {
         title: 'Why Language Matters More Than You Think',
         content: [
           '**Multilingual prompting is not translation — it is activating a different part of the model\'s learned distribution.** LLMs tokenise and represent text in a shared embedding space, but training data is skewed: CommonCrawl (used to train most LLMs) is ~46% English, ~6% German, ~5% French, ~3% Chinese. Languages with <1% training share (e.g., most African languages, many South Asian languages) behave unpredictably.',
           'When you prompt in French, the model relies on patterns from French training data. Since French data is only ~5% of the training corpus, the model has fewer learned associations to draw from compared to English prompts. This manifests as: lower reasoning accuracy, inconsistent instruction following, higher hallucination rates, and unpredictable output quality.',
           'For a deeper dive into how LLMs actually learn language patterns, see [how LLMs actually work](/prompt-engineering/how-llms-actually-work).',
+        ],
+        snippets: [
+          { type: 'in-plain-terms', text: 'Think of it this way: LLMs learned English from billions of books, websites, and articles. They learned French from millions. When you ask a question in French, the model has fewer examples to draw from, so it makes more mistakes — just like you would solving math problems in a language you\'ve only studied for a few weeks versus one you\'ve spoken your whole life.' },
         ],
       },
       languageTiers: {
@@ -147,6 +161,9 @@ export const article: Record<Language, PEArticle> = {
           { 'Tier': 'Tier 4', 'Languages': 'Most other languages', 'Training Share (approx.)': '<1%', 'Recommended Strategy': 'Use RAG with pre-verified content; avoid generative outputs without human review' },
         ],
         tableFormat: true,
+        snippets: [
+          { type: 'in-one-sentence', text: 'Higher training data share = more learned patterns = more reliable outputs; Tier 1 (English) is ~46% of training, Tier 2 (European) is ~5–8%, Tier 3 (Asian/Arabic) is ~2–4%, Tier 4 (<1%) requires retrieval-augmented generation.' },
+        ],
       },
       tokenCosts: {
         title: 'Token Costs by Script',
@@ -177,6 +194,13 @@ export const article: Record<Language, PEArticle> = {
           '**Decision tree:** Complex reasoning/formatting rules → English system prompt. Formality register (Sie, Vous, keigo) → target language. Persona definition → English + one target-language sample. Output language specification → always explicit in system prompt: "Respond in formal Japanese (丁寧語 / です・ます体)."',
           'For the full breakdown, see [system prompt vs. user prompt](/prompt-engineering/system-prompt-vs-user-prompt).',
         ],
+        callouts: [
+          { type: 'warning', label: 'Common Mistake', text: 'Writing both system prompt AND user instructions in the target language often reduces reasoning accuracy. Use English for logic, target language for tone.' },
+          { type: 'tip', label: 'Pro Tip', text: 'Test both approaches (English system + English reasoning vs. English system + native reasoning) on your exact use case. Model behavior varies by language tier.' },
+        ],
+        mistakes: [
+          { mistake: 'System prompt entirely in German: "Du bist ein Kundensupport-Assistent. Antworte auf Deutsch."', problem: 'Complex instructions (error handling, structure, logic) get lost in translation. Model struggles to follow formatting rules in low-resource language.', fix: 'Use English for system instructions: "You are a customer support assistant. Respond in German using formal Sie-form." Then include tone/register guidance in German.' },
+        ],
       },
       modelMatrix: {
         title: 'Which Models Handle Which Languages Best?',
@@ -193,6 +217,10 @@ export const article: Record<Language, PEArticle> = {
           { 'Model': 'Llama 3.1 70B', 'Tier 2 (European)': '✓ Good', 'Tier 3 (East Asian)': '⚠ Moderate', 'Arabic': '⚠ Moderate', 'Best Use Case': 'European languages, budget option' },
         ],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', label: 'Pro Tip', text: 'Use PromptQuorum to test your exact prompt across all 6 models simultaneously. Side-by-side output comparison reveals which model performs best for your language + task combination.' },
+          { type: 'insight', label: 'Did You Know?', text: 'Model performance varies not just by language, but by domain. A model might excel at Japanese technical translation but struggle with Japanese customer service tone.' },
+        ],
       },
       cotLanguage: {
         title: 'Chain-of-Thought Prompting Across Languages',
@@ -203,6 +231,10 @@ export const article: Record<Language, PEArticle> = {
           '**Decision:** Use English CoT when → task requires multi-step reasoning, target language is Tier 3+, accuracy matters more than latency. Use native-language CoT when → tone and register matter more than reasoning depth, target language is Tier 1–2.',
           'Deep dive: [Chain-of-thought prompting: how to get LLMs to show their work](/prompt-engineering/chain-of-thought-prompting).',
         ],
+        callouts: [
+          { type: 'warning', label: 'Caution', text: 'Cross-lingual CoT works for Tier 3 languages but may confuse models in Tier 4 languages. Always test on a small sample before committing to the approach.' },
+          { type: 'practice', label: 'Best Practice', text: 'For maximum accuracy, combine cross-lingual CoT with few-shot examples: show the model a full example (English reasoning → Japanese answer) before giving it a new task.' },
+        ],
       },
       fewShotLanguage: {
         title: 'Few-Shot Examples and Language Matching',
@@ -210,6 +242,9 @@ export const article: Record<Language, PEArticle> = {
           '**Few-shot examples must be in the same language as the task — cross-language few-shot examples reduce output accuracy by 15–20% in Tier 2–3 languages (Shi et al., 2023).** Few-shot examples teach the model format, tone, and pattern. When examples are in English but the task is in French, the model receives conflicting signals.',
           '**Two strategies:** (1) Native few-shot — all examples in target language (best for quality). (2) Zero-shot + explicit instructions — no examples, but clear style/format rules in English (best when native examples are unavailable). Avoid mixing: English examples + French task = worst of both.',
           'See [few-shot vs. zero-shot prompting](/prompt-engineering/zero-shot-vs-few-shot) for the full decision framework.',
+        ],
+        callouts: [
+          { type: 'insight', label: 'Key Point', text: 'Source language mismatch matters: English examples train the model on English formatting, then it must simultaneously switch languages and infer format — a dual cognitive load that degrades output.' },
         ],
       },
       registerFormality: {
@@ -226,12 +261,18 @@ export const article: Record<Language, PEArticle> = {
           { 'Language': 'Korean', 'LLM Default': 'Mixed formal/informal', 'Formal Override': 'Use formal 합쇼체 throughout.', 'Informal Override': 'Use informal 해요체.' },
         ],
         tableFormat: true,
+        callouts: [
+          { type: 'practice', label: 'Best Practice', text: 'Test register enforcement on 3–5 sample outputs before deploying. Some models may drift to informal mid-response even with explicit instructions; if so, add a reminder: "Do not switch to informal register under any circumstances."' },
+        ],
       },
       codeSwitching: {
         title: 'Code-Switching: When Users Mix Languages',
         content: [
           '**When users mix languages in a prompt (e.g., English question with a German brand name or French code comment), most models respond in the dominant language of the query — but this is unreliable without explicit instruction.** Code-switching is common in multilingual workplaces where technical terms stay in English but surrounding prose is in another language.',
           '**Recommended handling:** (1) In system prompt: "When the user writes in mixed languages, respond in [target language] unless the question is explicitly in English." (2) Detect language programmatically (langdetect, FastText, lingua-rs) before routing to the model, rather than relying on the model to detect it. (3) For production multilingual apps: implement a language detection step before the LLM call to route to the correct prompt template.',
+        ],
+        callouts: [
+          { type: 'warning', label: 'Warning', text: 'Do not rely on models to auto-detect the user\'s intended output language when code-switching occurs. Always include explicit language declaration in the system prompt or detect programmatically.' },
         ],
       },
       promptTemplates: {
