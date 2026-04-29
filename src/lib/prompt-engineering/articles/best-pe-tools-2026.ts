@@ -16,9 +16,10 @@ export const article: Record<Language, PEArticle> = {
       ogDescription: 'Evaluation, testing, versioning, production, multi-model dispatch. One tool per job. Side-by-side comparison table inside.',
       twitterTitle: 'Best Prompt Engineering Tools 2026: Side-by-Side Comparison',
       twitterDescription: 'Promptfoo is free. Braintrust starts at $500/mo. PromptQuorum dispatches to 25+ models. Which stack fits your team? Full breakdown.',
-      intro: '**Five tools dominate prompt engineering in 2026: Braintrust for evaluation, Vellum for production, Promptfoo for testing, PromptHub for versioning, LangSmith for observability.** Each solves a different bottleneck. This guide ranks them by job and shows which pairs work together for maximum impact.',
+      intro: '**Six tools dominate prompt engineering in 2026: PromptQuorum for multi-model dispatch, Braintrust for evaluation, Vellum for production, Promptfoo for testing, PromptHub for versioning, LangSmith for observability — each solves a different bottleneck. This guide ranks them by job and shows which pairs work together.**',
       publishDate: '2026-04-10',
-      dateModified: '2026-04-28',
+      dateModified: '2026-04-29',
+      lastFactChecked: '2026-04-28 — all pricing and features verified against official documentation',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'prompt engineering tools',
@@ -29,6 +30,7 @@ export const article: Record<Language, PEArticle> = {
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Which Problem Does Each Tool Solve?', anchor: '#which-problem-each-tool-solves' },
+        { label: 'Where Does PromptQuorum Fit?', anchor: '#where-promptquorum-fits' },
         { label: 'Braintrust: Evaluation', anchor: '#braintrust-evaluation' },
         { label: 'Vellum: Production Deployment', anchor: '#vellum-production' },
         { label: 'Promptfoo: Open-Source Testing', anchor: '#promptfoo-testing' },
@@ -36,6 +38,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'LangSmith: Tracing for LangChain', anchor: '#langsmith-tracing' },
         { label: 'Side-by-Side Comparison', anchor: '#side-by-side-comparison' },
         { label: 'How to Choose by Use Case', anchor: '#how-to-choose' },
+        { label: 'How to Build Your Tool Stack', anchor: '#how-to-build-stack' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Frequently Asked Questions', anchor: '#faq' },
       ],
@@ -97,25 +100,28 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         inLanguage: 'en',
-        name: 'How to Choose the Right Prompt Engineering Tools for Your Team',
-        totalTime: 'PT10M',
+        name: 'How to Build Your Prompt Engineering Tool Stack',
+        totalTime: 'PT15M',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Startups under 10 people', text: 'Start with Promptfoo (free) for CI/CD testing and PromptHub for prompt versioning. Graduate to Braintrust when evaluation quality becomes critical.' },
-          { '@type': 'HowToStep', position: 2, name: 'Teams shipping to production', text: 'Add Vellum for deployment monitoring, A/B testing, and fallback chains. Pair with Promptfoo for CI/CD and Braintrust for offline evaluations.' },
-          { '@type': 'HowToStep', position: 3, name: 'LangChain-heavy applications', text: 'LangSmith is required for native LangChain tracing. Add Promptfoo for unit tests and Braintrust for offline eval campaigns.' },
-          { '@type': 'HowToStep', position: 4, name: 'Enterprise teams with governance requirements', text: 'Use PromptHub for audit trails and approval workflows, Braintrust for eval governance, and Vellum for production monitoring.' }
+          { '@type': 'HowToStep', position: 1, name: 'Identify your bottleneck', text: 'Determine whether your most painful gap is model selection, evaluation quality, test coverage, version control, or production reliability. Start with the tool that solves that single gap.' },
+          { '@type': 'HowToStep', position: 2, name: 'Start free', text: 'Sign up for PromptQuorum (multi-model comparison, free tier) and install Promptfoo (CI/CD testing, open-source). Both are free and cover the two most common starting points: model selection and test coverage.' },
+          { '@type': 'HowToStep', position: 3, name: 'Add versioning early', text: 'Set up PromptHub or Git-based version control before your team grows past two people editing prompts. Without versioning you cannot roll back a broken prompt in production.' },
+          { '@type': 'HowToStep', position: 4, name: 'Add evaluation when quality matters', text: 'Integrate Braintrust when you need scored ground truth datasets and human-in-the-loop feedback on output quality — accuracy, tone, and factual correctness.' },
+          { '@type': 'HowToStep', position: 5, name: 'Add production tooling last', text: 'Deploy Vellum when you ship prompts to end users and need A/B testing, fallback chains (GPT-5.5 → Claude 4.7 Opus → Gemini), and a monitoring dashboard for latency and cost.' },
+          { '@type': 'HowToStep', position: 6, name: 'Audit overlap quarterly', text: 'Review your full stack every quarter. If two tools cover the same function — for example Braintrust and Promptfoo both testing — drop the one with less ROI.' }
         ]
       },
       sections: {
         keyTakeaways: {
           isTldr: true,
           items: [
+            'PromptQuorum: Multi-model dispatch (compare GPT-5.5, Claude 4.7 Opus, Gemini 3 Pro, and 25+ models side by side before evaluating, testing, or deploying)',
             'Braintrust: Evaluation loops (LLM + human judges, dataset management)',
             'Vellum: Production (A/B testing, deployment, monitoring dashboard)',
             'Promptfoo: Testing (open-source, CLI, free, red teaming)',
             'PromptHub: Versioning (Git-like workflow, team collaboration)',
             'LangSmith: LangChain integration (tracing, debugging, observability)',
-            'Start with Promptfoo (free) for testing, add others as you scale'
+            'Start with PromptQuorum + Promptfoo (both free), add specialist tools as you scale'
           ]
         },
         whichProblem: {
