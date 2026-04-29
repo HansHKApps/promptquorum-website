@@ -499,7 +499,421 @@ export const article: Record<Language, PEArticle> = {
       },
     },
 
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-24',
+      theme: 'Fundamentals',
+      title: 'KI-Build-Quality-Checks: Halluzinationen und gefälschte Abhängigkeiten erkennen',
+      seoTitle: 'KI-Build-Checks: Halluzinationen im CI/CD erkennen (2026)',
+      metaDescription: 'KI-generierter Code halluziniert APIs, erfindet Pakete und bricht Anforderungen lautlos. Klassische Lint- und Test-Gates erkennen keines davon. So schließen Sie die Lücke.',
+      ogTitle: '3 Wege, wie KI-generierter Code Ihre CI/CD-Pipeline bricht – und wie Sie es beheben',
+      ogDescription: 'KI erfindet Paketnamen, fälscht APIs und verletzt Anforderungen ohne Fehlermeldung. Diese 5 Gates erkennen Halluzinationen vor dem Merge.',
+      twitterTitle: 'Ihre CI/CD erkennt keine KI-Halluzinationen. Das sollten Sie hinzufügen',
+      twitterDescription: 'KI schreibt Code, der kompiliert, den Lint besteht und trotzdem in der Produktion versagt. Abhängigkeitsprüfungen, API-Realitätschecks und SAST-Gates sind die Lösung.',
+      intro: '**KI-generierter Code scheitert an herkömmlichen Qualitätsgates im großen Maßstab: Studien und Branchenberichte stellen konsistent fest, dass KI-geschriebene Programme deutlich häufiger ausnutzbare Schwachstellen enthalten als manuell geprüfter Code – und ein messbarer Anteil der vorgeschlagenen Pakete oder APIs existiert schlicht nicht.** Um diese Halluzinationen aus der Produktion fernzuhalten, müssen Build-Quality-Checks von generischen „Tests + Coverage"-Gates zu KI-bewussten Pipelines weiterentwickelt werden, die unwirkliche APIs, gefälschte Abhängigkeiten und zuversichtlich-aber-falschen Code vor dem Merge erkennen.',
+      publishDate: '2026-03-24',
+      dateModified: '2026-04-29',
+      readTime: '10 Min. Lesezeit',
+      educationalLevel: 'Intermediate',
+      audience: 'Entwicklungsleiter und DevOps-Ingenieure, die KI-Coding-Assistenten in produktive CI/CD-Pipelines integrieren',
+      primaryTerm: 'KI-Build-Quality-Checks',
+      aboutTopics: ['CI/CD-Sicherheit', 'KI-Code-Halluzinationen', 'Abhängigkeitsvalidierung'],
+      toc: [
+        { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+        { label: 'Was ändert sich, wenn KI Ihren Code schreibt?', anchor: '#what-changes' },
+        { label: 'Welche Halluzinationstypen muss Ihre Pipeline erkennen?', anchor: '#hallucination-types' },
+        { label: 'Wie sieht eine KI-bewusste CI/CD-Gate-Architektur aus?', anchor: '#architecture' },
+        { label: 'Welche konkreten Prüfungen sollten Sie hinzufügen?', anchor: '#concrete-checks' },
+        { label: 'Wie behandeln Sie Halluzinationen explizit in der Pipeline?', anchor: '#hallucination-handling' },
+        { label: 'Wie gestalten Sie KI-Qualitätsprüfungen entwicklerfreundlich?', anchor: '#developer-friendly' },
+        { label: 'Beispiel: Erweiterung eines klassischen Gates für KI-Code', anchor: '#example' },
+        { label: 'Schritt für Schritt: KI-bewusste Qualitätsprüfungen einrichten', anchor: '#how-to-start' },
+        { label: 'Häufige Fehler vermeiden', anchor: '#common-mistakes' },
+        { label: 'Regionale Überlegungen', anchor: '#regional-context' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+        { label: 'Quellen', anchor: '#sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'KI-Build-Quality-Checks: Halluzinationen und gefälschte Abhängigkeiten erkennen',
+        description: 'CI/CD-Qualitätsgates für KI-generierten Code entwerfen. Mit Halluzinationserkennung, Abhängigkeitsvalidierung, Sicherheitsgates und entwicklerfreundlichen Praktiken.',
+        url: 'https://www.promptquorum.com/prompt-engineering/build-quality-checks?lang=de',
+        inLanguage: 'de',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-29',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=de', width: 1200, height: 630 },
+        keywords: ['Qualitätsgates', 'CI/CD', 'KI-Halluzinationen', 'Code-Review', 'Sicherheitsscanning', 'Abhängigkeitsvalidierung', 'Build-Prüfungen'],
+        proficiencyLevel: 'Intermediate',
+        audience: { '@type': 'Audience', audienceType: 'Entwicklungsleiter und DevOps-Ingenieure, die KI-Coding-Assistenten integrieren' },
+        about: [
+          { '@type': 'Thing', name: 'KI-Code-Qualität' },
+          { '@type': 'Thing', name: 'CI/CD-Pipelines' },
+          { '@type': 'Thing', name: 'Halluzinationserkennung' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'SAST' },
+          { '@type': 'SoftwareApplication', name: 'DAST' },
+          { '@type': 'SoftwareApplication', name: 'Snyk' },
+          { '@type': 'SoftwareApplication', name: 'Bandit' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Was ist ein KI-bewusster Build-Quality-Check?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ein KI-bewusster Build-Quality-Check ist ein CI/CD-Gate, das speziell für Fehlerarten konzipiert wurde, die bei KI-generiertem Code auftreten: halluzinierte APIs, erfundene Paketnamen und Logikfehler, die zwar kompilieren, aber Anforderungen verletzen. Im Gegensatz zu herkömmlichen Lint- und Coverage-Gates überprüfen diese Checks, ob referenzierte Pakete tatsächlich existieren und ob aufgerufene APIs mit Ihrer tatsächlichen SDK- oder Service-Definition übereinstimmen.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie unterscheidet sich KI-generierter Code in Bezug auf Qualitätsrisiken von menschlich geschriebenem Code?',
+            acceptedAnswer: { '@type': 'Answer', text: 'KI-generierter Code weist strukturelle Fehlermuster auf, die bei menschlich geschriebenem Code kaum vorkommen: erfundene Paketnamen, die in keiner Registry existieren, Methodenaufrufe, die in Ihrer SDK-Version fehlen, und Code, der oberflächliche Tests besteht, aber Anforderungen lautlos falsch implementiert. Herkömmliche Gates erkennen Syntaxfehler und Coverage-Lücken, wurden aber nicht für zuversichtliche Halluzinationen entwickelt.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie erkenne ich halluzinierte Paketnamen in meiner CI/CD-Pipeline?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Fügen Sie einen Abhängigkeitsvalidierungsschritt hinzu, der prüft, ob jedes importierte Paket tatsächlich in Ihrer Ziel-Registry (npm, PyPI, Maven usw.) vorhanden ist – bevor Tests ausgeführt werden. Implementieren Sie ihn als Pre-Commit-Hook oder als CI-Job, der die Registry-API aufruft. Pakete, die nicht aufgelöst werden können oder keine Veröffentlichungshistorie haben, sollten den Build sofort zum Scheitern bringen.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Welche Sicherheitsprüfungen sollte ich für KI-generierten Code hinzufügen?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Führen Sie SAST-Tools wie Bandit (Python), ESLint-Security (JavaScript) oder Snyk für jede geänderte Datei aus. Verlangen Sie null neue kritische Findings auf KI-modifizierten Codepfaden. Schreiben Sie manuelle Sicherheitsreviews für KI-generierten Code vor, der Authentifizierung, Zahlungen, Admin-Funktionen oder personenbezogene Daten berührt.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist eine halluzinierte API dasselbe wie ein Laufzeitfehler?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Eine halluzinierte API ist subtiler als ein einfacher Laufzeitfehler. Sie bezeichnet eine Methode, einen Parameter oder eine Konfigurationsoption, die ein Modell erfunden hat und die im tatsächlichen SDK oder Service nicht existiert – Code, der korrekt erscheint und die Kompilierung besteht, aber zur Laufzeit eine Exception wirft oder das Verhalten still beeinträchtigt. Laufzeitfehler sind Symptome; Halluzinationserkennung trifft die Ursache früher in der Pipeline.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Kann ich KI-Tools nutzen, um KI-generierten Code zu überprüfen?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Multi-Modell-Kreuzprüfung ist ein effektives Muster: Ein Modell generiert Code, ein anderes überprüft ihn. Stellen, an denen das prüfende Modell Unsicherheit zeigt oder dem generierenden widerspricht, können für menschliche Aufmerksamkeit markiert werden. Dies funktioniert am besten auf risikokritischen Pfaden wie Authentifizierung, Zahlungsverarbeitung oder Infrastrukturkonfiguration.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie führe ich KI-bewusste Qualitätsprüfungen ein, ohne mein Team zu verlangsamen?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Starten Sie alle neuen Regeln im Warnungsmodus, um Daten zu sammeln, bevor Merges blockiert werden. Erklären Sie Fehlergründe klar in Fehlermeldungen mit Links zur Dokumentation. Erlauben Sie dokumentierte Ausnahmen, damit Teams bei ungewöhnlichen, aber gültigen Fällen fortfahren können, während ein Audit-Trail erhalten bleibt. Verfolgen Sie False-Positive-Raten pro Gate und passen Sie Schwellenwerte an, wo die Reibung den Nutzen übersteigt.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist Slopsquatting und warum ist es gefährlich für KI-gestützte Entwicklung?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Slopsquatting tritt auf, wenn ein KI-Modell einen plausibel klingenden Paketnamen erfindet, der in keiner Registry existiert. Wenn ein Angreifer diesen Namen später mit schädlichem Code registriert, führt jeder Entwickler, der ihn via npm install oder pip install installiert, den Payload des Angreifers aus. Das Risiko ist bei KI-gestützter Entwicklung besonders hoch, da Entwickler vorgeschlagene Pakete oft nicht einzeln gegen offizielle Registries prüfen.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Welche DSGVO-Anforderungen gelten für die Verwendung von KI-Code-Generierung?',
+            acceptedAnswer: { '@type': 'Answer', text: 'DSGVO Artikel 25 (Datenschutz durch Technikgestaltung) schreibt vor, dass Code, der personenbezogene Daten verarbeitet, vor der Produktivsetzung überprüft und validiert wird. Für Betreiber kritischer Infrastrukturen kommt über die NIS2-Richtlinie die Pflicht zur Lieferkettensicherheit hinzu, die die Abhängigkeitsvalidierung abdeckt. Das BSI empfiehlt über die BSI-Grundschutz-Kataloge zusätzlich die Dokumentation von KI-spezifischen Risikominderungsmaßnahmen. NIS2-Enforcement begann im Oktober 2024.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist der Einsatz von KI-Code-Generierung im deutschen Mittelstand sinnvoll – und was sind die besonderen Risiken?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja, KI-Coding-Assistenten bieten auch mittelständischen Entwicklungsteams erhebliche Effizienzgewinne. Die besondere Herausforderung im Mittelstand: Oft fehlen spezialisierte DevSecOps-Teams, die Halluzinationen und Sicherheitslücken systematisch abfangen. Empfehlenswert ist ein schrittweiser Rollout – beginnend mit Abhängigkeitsvalidierung und SAST-Integration –, bevor weitere KI-spezifische Gates eingeführt werden. Das BSI-Grundschutz-Kompendium bietet praxisgerechte Leitlinien, die auch ohne große Sicherheitsabteilung umsetzbar sind.' },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Wie man KI-bewusste Build-Quality-Checks einrichtet',
+        inLanguage: 'de',
+        step: [
+          { '@type': 'HowToStep', name: 'Abhängigkeitsvalidierungsschritt hinzufügen', text: 'Prüfen Sie, ob alle importierten Pakete tatsächlich in Ihrem Paketmanager existieren. Verifizieren Sie, dass jede import- oder require-Anweisung zu einem echten Paket in npm, pip, PyPI oder Ihrer internen Registry aufgelöst wird.' },
+          { '@type': 'HowToStep', name: 'Auf Halluzinationsmuster scannen', text: 'Führen Sie einen Linter oder ein benutzerdefiniertes Skript aus, das jeden API-Aufruf gegen die tatsächliche SDK- oder Service-Dokumentation prüft. Markieren Sie Aufrufe zu Methoden oder Endpunkten, die in Ihrer Codebasis oder SDK-Versionen nicht existieren.' },
+          { '@type': 'HowToStep', name: 'Sicherheitsfokussiertes Gate hinzufügen', text: 'Führen Sie SAST-Tools wie Bandit (Python), ESLint-Security (JavaScript) oder Snyk auf geänderten Dateien aus. Scannen Sie auf SQL-Injection-Muster, zu offene CORS-Regeln, hartcodierte Zugangsdaten und unsichere Deserialisierung.' },
+          { '@type': 'HowToStep', name: 'Multi-Modell-Validierung für kritische Pfade einsetzen', text: 'Führen Sie Code, der Authentifizierung, Zahlungen oder Infrastruktur berührt, durch mehrere KI-Modelle und fragen Sie, ob er der beabsichtigten Logik entspricht und ob Sicherheitsrisiken bestehen.' },
+          { '@type': 'HowToStep', name: 'Menschliches Code-Review mit Fokus auf Logik vorschreiben', text: 'Automatisierte Gates fangen offensichtliche Halluzinationen ab. Code-Reviewer sollten prüfen: Tut dieser Code das, was beabsichtigt war? Sind Randfälle berücksichtigt? Ist der Ansatz für den Anwendungsfall geeignet?' },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Wichtigste Erkenntnisse',
+          isTldr: true,
+          items: [
+            'KI-generierter Code führt neue Fehlerklassen ein – halluzinierte APIs, gefälschte Abhängigkeiten und anforderungsbrechende Logik –, die herkömmliche Qualitätsgates nicht erkennen.',
+            'Behandeln Sie Halluzinationen als strukturelles Risiko: Gehen Sie davon aus, dass sie überall auftreten, wo KI Code schreiben oder refaktorieren darf, und entwerfen Sie Tests und Richtlinien für deren Erkennung.',
+            'Eine KI-bewusste Gate-Architektur schichtet Pre-Commit-Prüfungen, PR-Richtlinien, tiefere CI-Analyse, Sicherheits- und Abhängigkeitsgates sowie Laufzeit-Feedback.',
+            'Konkrete KI-spezifische Prüfungen umfassen Abhängigkeitsexistenzprüfungen, API-Realitätschecks, höhere Coverage-Schwellenwerte für neuen Code und striktere Sicherheitsgates für KI-berührte Dateien.',
+            'Entwicklerfreundliche Gates erklären Fehler klar, unterscheiden Warnungen von harten Blockierungen, unterstützen dokumentierte Ausnahmen und sind auf minimale False Positives abgestimmt.',
+          ],
+        },
+        definition: {
+          id: 'what-changes',
+          title: 'Was ändert sich, wenn KI Ihren Code schreibt?',
+          content: [
+            '**Wenn KI Code schreibt, müssen Qualitätsgates eine neue Klasse von Problemen abwehren: halluzinierte APIs, gefälschte Abhängigkeiten und Muster, die korrekt aussehen, aber zur Laufzeit oder unter Angriffen versagen.** Das unterscheidet sich strukturell von dem, was Lint und Unit-Tests erkennen sollten.',
+            'Stand Q2 2026 werden diese Probleme konsistent über Sprachen und Modelle hinweg berichtet. Beobachtete Probleme mit [KI-generiertem Code](/prompt-engineering/write-better-code-with-ai?lang=de) umfassen:',
+          ],
+          items: [
+            '**Sicherheitslücken:** Studien und Branchenberichte stellen konsistent fest, dass KI-generierte Lösungen für gängige Programmierprobleme häufiger ausnutzbare Fehler enthalten als manuell geprüfter Code – insbesondere bei Eingabevalidierung, Authentifizierung und Kryptografie.',
+            '**Gefälschte Pakete:** Sprachmodelle empfehlen manchmal Bibliotheken oder Paketnamen, die im Ökosystem nicht existieren, und öffnen damit die Tür für Typosquatting-/Slopsquatting-Angriffe, wenn Angreifer diese Namen später registrieren.',
+            '**Halluzinierte APIs und Funktionen:** Modelle können Methoden, Parameter oder Konfigurationsflags erfinden, die plausibel erscheinen, aber in Ihren tatsächlichen SDKs oder internen Services fehlen.',
+            '**Anforderungsverletzende Logik:** Code, der kompiliert und oberflächliche Tests besteht, aber im Vergleich zu den ursprünglichen Anforderungen das Falsche tut (zum Beispiel `fälligerBetrag` und `bezahlterBetrag` vertauscht).',
+            '**Unsichere Standardwerte:** Verwendung unsicherer Muster wie offene CORS-Regeln, permissive JWT-Validierung, schwache Passwortrichtlinien oder Debug-Logging sensibler Daten.',
+          ],
+          callouts: [
+            { type: 'key-point', label: 'Quick Facts', text: '≥80 % Coverage-Schwellenwert empfohlen für KI-generierte Zeilen. 5-stufige Gate-Architektur: Pre-Commit → PR-Review → CI → Sicherheit → Laufzeit-Monitoring. Null neue kritische Findings auf geänderten Dateien erforderlich.' },
+            { type: 'warning', label: 'Slopsquatting-Risiko', text: 'Wenn ein KI-Modell einen Paketnamen erfindet, können Angreifer diesen Namen mit schädlichem Code registrieren. Sobald Ihr Team npm install oder pip install darauf ausführt, wird beliebiger Code in Ihrer Build-Umgebung ausgeführt. Siehe auch: [Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de).' },
+          ],
+        },
+        definitionConclusion: {
+          content: [
+            'Herkömmliche Prüfungen (Lint, Unit-Tests, Coverage-Schwellenwerte) fangen einen Teil davon ab, wurden aber nicht für zuversichtlich halluziniertes Verhalten entwickelt.',
+          ],
+        },
+        hallucinations: {
+          id: 'hallucination-types',
+          title: 'Welche Halluzinationstypen muss Ihre Pipeline erkennen?',
+          content: [
+            '**Code-Halluzinationen sind nicht nur Syntaxfehler; sie umfassen logische, strukturelle und abhängigkeitsbezogene Fälschungen, die oberflächliche Prüfungen oft bestehen.** Effektive Gates zu entwerfen erfordert das Verständnis jeder Kategorie. Techniken zur Reduzierung auf Prompt-Ebene finden Sie unter [KI-Halluzinationen: So stoppen Sie sie](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de).',
+            'Häufige Kategorien, auf die Sie Ihre Gates ausrichten sollten:',
+          ],
+          items: [
+            '**Logik-Halluzinationen:** falsche Algorithmen, fehlende Randfall-Behandlung, „Happy-Path-only"-Code, der bei echten Daten versagt.',
+            '**Zuordnungs-/Typfehler:** falsche Annahmen über Typen oder Zuordnungen zwischen Domänenobjekten, die zu subtiler Datenbeschädigung führen.',
+            '**Namensverwirrung:** Variablen- oder Funktionsnamen vertauscht oder falsch verwendet auf eine Art, die noch kompiliert, aber Domänenregeln verletzt.',
+            '**Ressourcen-Halluzinationen:** unbegrenzte Speicher- oder CPU-Nutzung (zum Beispiel ganze Tabellen in den Speicher laden), die Performance-Constraints ignoriert.',
+            '**API-/Bibliotheks-Halluzinationen:** Aufrufe von Methoden, Endpunkten oder Konfigurationsoptionen, die in Ihren Versionen der Bibliotheken oder Services nicht vorhanden sind.',
+            '**Sicherheits-Halluzinationen:** Code, der strukturiert und „sicher" aussieht, aber wichtige Prüfungen wie Autorisierung, Bereinigung oder Rate-Limiting stillschweigend weglässt.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'Eine Code-Halluzination ist jede KI-generierte Ausgabe – ein Paketname, eine API-Methode, ein Konfigurationsflag oder ein Algorithmus –, die nichts entspricht, was in Ihrer Umgebung tatsächlich existiert oder funktioniert.' },
+            { type: 'in-plain-terms', text: 'Stellen Sie es sich vor wie eine KI, die Ihnen selbstsicher den Weg zu einer Straße beschreibt, die nicht existiert. Die Beschreibung klingt plausibel, führt aber nirgendwohin – oder zu etwas Gefährlichem.' },
+          ],
+          callouts: [
+            { type: 'key-point', label: 'Strukturell vs. syntaktisch', text: 'Ein halluzinierter API-Aufruf kompiliert sauber und besteht die statische Analyse. Nur die Laufzeitausführung oder SDK-bewusstes Linten fängt ihn ab. Deshalb sind zusätzliche Ebenen über Lint und Unit-Tests hinaus notwendig.' },
+          ],
+        },
+        hallucinationsConclusion: {
+          content: [
+            'Ein robustes Build-System sollte davon ausgehen, dass diese Fehler überall auftreten, wo KI Code schreiben oder refaktorieren darf.',
+          ],
+        },
+        architecture: {
+          id: 'architecture',
+          title: 'Wie sieht eine KI-bewusste CI/CD-Gate-Architektur aus?',
+          content: [
+            '**KI-bewusste Build-Quality-Checks sollten ein mehrstufiges Gate bilden: Pre-Commit-Filter, PR-Richtlinienprüfungen, tiefere Analyse im CI und Post-Deployment-Monitoring.** Keine einzelne Stufe fängt alle Fehlerarten ab.',
+            'Eine praktische Architektur:',
+          ],
+          items: [
+            '**Pre-Commit / lokale Hooks** — Grundlegendes Formatting und Linting erzwingen. Optional: direktes Committen großer KI-generierter Diffs ohne kurze menschliche Zusammenfassung der Änderungen verbieten.',
+            '**Pull-Request-Qualitätsgate** — KI-spezifische Prüfungen auf gewöhnliche aufsetzen: Unit-Tests, Coverage-Schwellenwerte, Style, konventionelle statische Analyse, plus KI-bewusste Checks (unbekannte oder nicht existierende Pakete erkennen, referenzierte APIs überprüfen, neue Endpunkte ohne Tests markieren).',
+            '**Tiefere CI-Analyse** — Erweiterte Testsuiten und Property-based Tests für KI-berührten Code ausführen. [Sicherheits-Scanner (SAST/DAST)](/prompt-engineering/ai-code-review?lang=de) mit Fokus auf neu geänderte Codepfade einsetzen. Komplexität und potenzielle Performance-Hotspots analysieren.',
+            '**Muster- und Drift-Erkennung** — Neuen Code mit etablierten Projektmustern vergleichen: Architektur, Fehlerbehandlung, Logging. Code markieren, der stark von den üblichen Idiomen abweicht.',
+            '**Sicherheits- und Abhängigkeitsgates** — „Keine neuen kritischen Schwachstellen" aus Ihren Sicherheits-Tools auf geänderten Zeilen verlangen. Builds blockieren, wenn neue Abhängigkeiten nicht genehmigt, nicht gepinnt oder aus verdächtigen Quellen stammen.',
+            '**Laufzeit-Monitoring und Feedback** — Fehlerraten, Latenz und Ressourcennutzung für Endpunkte verfolgen, die durch KI-gestützte Änderungen kürzlich modifiziert wurden. Vorfälle in Prompts und Qualitätsregeln zurückführen, um Gates über die Zeit zu härten.',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Mit Abhängigkeitsvalidierung beginnen', text: 'Implementieren Sie zuerst Abhängigkeitsexistenzprüfungen – höchster ROI, am einfachsten hinzuzufügen und null False Positives. Jedes nachfolgende Gate sollte messbar und anpassbar sein, bevor das nächste eingeführt wird.' },
+          ],
+        },
+        architectureConclusion: {
+          content: [
+            'Dieser geschichtete Ansatz behandelt KI-generierten Code als erstklassige Risikokategorie und nicht nur als „mehr Code".',
+          ],
+        },
+        concreteChecks: {
+          id: 'concrete-checks',
+          title: 'Welche konkreten Prüfungen sollten Sie für KI-generierten Code hinzufügen?',
+          content: [
+            '**Um Qualitätsgates KI-bewusst zu machen, fügen Sie explizite Prüfungen für Halluzinationen, Abhängigkeitsfälschungen und unsichere Standardwerte zu Ihren bestehenden Test- und Coverage-Regeln hinzu.** Diese lassen sich in jedem CI/CD-System als Policy-as-Code integrieren.',
+            'Beispiele für durchsetzbare Richtlinien:',
+          ],
+          items: [
+            '**Tests und Coverage** — Mindest-Coverage für neue oder geänderte Zeilen (zum Beispiel ≥80 %). Pflichthafte Tests für alle neuen öffentlichen Endpunkte, Background-Jobs oder exportierten Funktionen.',
+            '**Sicherheitsgates** — Keine neuen kritischen Findings von SAST oder Abhängigkeits-Scannern auf geändertem Code. Manuelle Reviews für KI-generierten Code verlangen, der Authentifizierung, Zahlungen, Admin-Funktionen oder personenbezogene Daten berührt. Empfehlung: [KI-Code-Review: Tools und Verfahren](/prompt-engineering/ai-code-review?lang=de).',
+            '**Abhängigkeitssanitätsprüfungen** — Neue Pakete müssen in der Ziel-Registry existieren und Mindest-Reifesignale erfüllen (Downloads, Stars, letztes Veröffentlichungsdatum), sofern nicht explizit auf der Whitelist. Bekannte Typosquats brechen den Build sofort ab.',
+            '**API-Realitätschecks** — Statische Analyse, die sicherstellt, dass alle aufgerufenen Methoden und Endpunkte in Ihrer Codebasis oder dokumentierten SDK vorhanden sind. Optional: Verwendung auf eine Whitelist genehmigter APIs in sensiblen Bereichen beschränken.',
+            '**Muster- und Performance-Prüfungen** — Standard-Fehlerbehandlungs- und Logging-Wrapper erzwingen. Neu hinzugefügte Funktionen mit ungewöhnlich hoher Komplexität oder offensichtlichen O(n²)/O(n³)-Mustern auf großen Datenpfaden markieren.',
+          ],
+          callouts: [
+            { type: 'best-practice', label: 'Coverage-Schwellenwert', text: 'Wenden Sie einen strengeren Coverage-Schwellenwert auf KI-generierte Zeilen an als auf Legacy-Code. Legacy-Code mit 60 % Coverage kann akzeptabel sein; neu KI-generierter Code sollte vor dem Merge ≥80 % erreichen.' },
+          ],
+        },
+        concreteChecksConclusion: {
+          content: [
+            'Viele davon können als „Policy as Code" in Ihrem CI-System, benutzerdefinierten Lintern oder spezialisierten Plugins implementiert werden.',
+          ],
+        },
+        hallucinationHandling: {
+          id: 'hallucination-handling',
+          title: 'Wie behandeln Sie Halluzinationen explizit in der Pipeline?',
+          content: [
+            '**Halluzinationen sind eine strukturelle Fehlerklasse und keine temporären Bugs; Ihr Build-System sollte davon ausgehen, dass sie vorkommen, und sich auf Erkennung und Eindämmung konzentrieren.** Diese Denkweise bestimmt, welche Tools und Tests Sie priorisieren.',
+            'Praktische Strategien:',
+          ],
+          items: [
+            '**Ausführungsbasierte Verifikation** — Verlassen Sie sich nicht allein auf die Kompilierung. Führen Sie gezielte Tests durch, die KI-generierten Code mit Randfällen, ungültigen Eingaben und zufälligen Daten belasten. Property-based Tests sind besonders effektiv beim Aufdecken von Logik- und Zuordnungsfehlern.',
+            '**Verankerung mit echtem Kontext** — Wenn Sie KI zur Ausarbeitung von Änderungen einsetzen, liefern Sie echte Schemas, API-Spezifikationen und Konfigurationsdateien als Kontext. Dies reduziert die Chance erfundener Funktionen und Parameter und erleichtert die Erkennung, wenn generierter Code von der Realität abweicht.',
+            '**Hybrid aus statischer und KI-Analyse** — Kombinieren Sie konventionelle statische Analyse mit KI-basiertem Review. Statische Tools sind gut bei Datenfluss- und Taint-Analyse; KI-Reviewer sind gut beim Lesen von Absichten und Erkennen von Anforderungsabweichungen auf höherer Ebene.',
+            '**Multi-Modell-Kreuzprüfung** — Lassen Sie bei wichtigen Änderungen ein Modell den Code generieren und ein anderes ihn überprüfen. Stellen, an denen Reviewer nicht übereinstimmen oder geringe Konfidenz zeigen, können für menschliche Aufmerksamkeit markiert werden.',
+            '**Halluzinations-Blacklists und Regeln** — Wenn Sie wiederkehrende halluzinierte Muster entdecken – gefälschte Paketnamen, erfundene Flags, erfundene Endpunkte – codieren Sie diese als explizite Regeln. Zukünftige Vorkommen verursachen dann automatisch einen Build-Fehler oder eine starke Warnung.',
+          ],
+          callouts: [
+            { type: 'warning', label: 'Kompilierung ≠ Korrektheit', text: 'Eine KI-generierte Funktion kann sauber kompilieren, alle bestehenden Tests bestehen und trotzdem eine Anforderung still falsch implementieren. Testen Sie neue Codepfade immer mit mindestens einem Test, der scheitern würde, wenn die Logik umgekehrt oder subtil falsch wäre.' },
+          ],
+        },
+        hallucinationHandlingConclusion: {
+          content: [
+            'Indem Sie Halluzinationen als erwartete Fehlerklasse behandeln, können Sie Tests und Gates entwickeln, die sie zuverlässig abfangen.',
+          ],
+        },
+        developerFriendly: {
+          id: 'developer-friendly',
+          title: 'Wie gestalten Sie KI-Qualitätsprüfungen entwicklerfreundlich?',
+          content: [
+            '**Qualitätsgates funktionieren nur, wenn Entwickler ihnen vertrauen; KI-bewusste Prüfungen sollten transparent sein, Fehler klar erklären und laute False Positives vermeiden.** Hohe False-Positive-Raten veranlassen Teams, Gates vollständig zu deaktivieren oder zu umgehen.',
+            'Leitlinien:',
+          ],
+          items: [
+            '**Das „Warum" für jeden Fehler erklären** — Fehlermeldungen sollten genau zeigen, welche Zeile oder welches Paket gegen welche Regel verstoßen hat, und idealerweise auf Dokumentation verlinken, wie man es behebt oder übergeht.',
+            '**Harte Blockierungen von Warnungen unterscheiden** — Für neue Regeln im „Warnungs"-Modus beginnen, um Daten zu sammeln und Frustration zu reduzieren; erst auf „blockierend" hochstufen, wenn das Signal-Rausch-Verhältnis akzeptabel ist.',
+            '**Dokumentierte Ausnahmen ermöglichen** — Einige KI-generierte Änderungen werden bewusst riskant oder ungewöhnlich sein. Einen dokumentierten Ausnahme-Mechanismus bereitstellen (zum Beispiel ein beschrifteter Kommentar plus Ticket-Link), damit Teams bei Bedarf fortfahren können, während ein Audit-Trail erhalten bleibt.',
+            '**False Positives messen und iterieren** — Verfolgen, wie oft ein Gate gültige Änderungen blockiert oder unnötige Arbeit erzwingt. Schwellenwerte anpassen, Regeln verfeinern oder den Geltungsbereich einengen, wo dies nötig ist.',
+            '**KI-spezifische Dashboards bereitstellen** — Zeigen, wie viele Probleme im Zusammenhang mit KI-generiertem Code abgefangen wurden, wie viele Schwachstellen vermieden wurden und wie oft halluzinierte Abhängigkeiten blockiert wurden. Dies schafft Vertrauen, dass die zusätzlichen Gates die Reibung wert sind.',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Warning-First-Rollout', text: 'Führen Sie ein neues Gate immer mindestens einen Sprint lang im Warnungsmodus ein, bevor Sie es blockierend machen. So können Sie Signal-Rausch-Verhältnis messen und Entwicklervertrauen aufbauen, bevor es Builds abbricht.' },
+          ],
+        },
+        developerFriendlyConclusion: {
+          content: [
+            'Eine gute KI-bewusste Pipeline fühlt sich wie ein Sicherheitsnetz an, nicht wie ein willkürlicher Hindernisparcours.',
+          ],
+        },
+        example: {
+          id: 'example',
+          title: 'Beispiel: Erweiterung eines klassischen Gates für KI-generierten Code',
+          content: [
+            '**Sie können ein bestehendes „Tests + Coverage + Lint"-Gate zu einem KI-bewussten Gate weiterentwickeln, indem Sie gezielte Prüfungen aufsetzen.** Kein vollständiger Pipeline-Neuaufbau erforderlich.',
+            'Basis-Gate:',
+          ],
+          items: [
+            'Unit-Tests ausführen.',
+            'Mindest-Gesamt-Coverage erzwingen.',
+            'Linter und Formatter ausführen.',
+          ],
+        },
+        exampleExtension: {
+          content: ['KI-bewusste Erweiterung:'],
+          items: [
+            '**Coverage für neuen/geänderten Code:** für neue Zeilen einen höheren Coverage-Schwellenwert als für Legacy-Code verlangen.',
+            '**Abhängigkeitsprüfung:** Scheitern, wenn ein neues Paket unbekannt, nicht genehmigt oder offensichtlich verdächtig ist.',
+            '**API-Realitätscheck:** nach Aufrufen von Funktionen oder Endpunkten scannen, die in Ihrer Codebasis oder den offiziellen SDK-Versionen nicht existieren.',
+            '**Sicherheits-Scan:** null kritische Findings auf geänderten Dateien verlangen.',
+            '**Manuelles-Review-Label:** wenn KI in einer Datei mehr als N Zeilen beigetragen hat, explizite menschliche Genehmigung eines Senior-Entwicklers vor dem Merge verlangen.',
+          ],
+        },
+        exampleConclusion: {
+          content: [
+            'Dieser Ansatz vermeidet einen vollständigen Umbau Ihres Prozesses und zielt direkt auf KI-spezifische Risiken ab.',
+          ],
+        },
+        howToStart: {
+          id: 'how-to-start',
+          title: 'Schritt für Schritt: Wie richten Sie KI-bewusste Qualitätsprüfungen ein?',
+          numberedItems: [
+            '**Abhängigkeitsvalidierungsschritt hinzufügen: prüfen, ob alle importierten Pakete tatsächlich in Ihrem Paketmanager existieren.** Verifizieren Sie vor dem Ausführen von Tests, dass jedes Paket in `import`- oder `require`-Anweisungen in npm, pip, PyPI oder Ihrer internen Registry vorhanden ist. KI-Halluzinationen erfinden oft plausibel klingende Paketnamen.',
+            '**Auf häufige Halluzinationsmuster scannen: nicht existierende APIs, Funktionen mit falschen Signaturen und erfundene Konfigurationsflags.** Einen Linter oder ein benutzerdefiniertes Skript ausführen, das prüft, ob jeder API-Aufruf mit der tatsächlichen SDK- oder Service-Dokumentation übereinstimmt. Aufrufe zu nicht existierenden Methoden markieren.',
+            '**Sicherheitsfokussiertes Gate hinzufügen: SAST plus explizite Prüfungen für häufige KI-generierte Schwachstellen.** Tools wie Bandit (Python), ESLint-Security (JavaScript) oder Snyk einsetzen. Außerdem scannen auf: SQL-Injection-Muster, zu offene CORS-Regeln, hartcodierte Zugangsdaten, unsichere Deserialisierung.',
+            '**Multi-Modell-Code-Validierung für kritische Pfade (Auth, Zahlungen, Infrastruktur) einsetzen.** Vor dem Merge den Code durch mehrere KI-Modelle laufen lassen und fragen: „Entspricht dieser Code der beabsichtigten Logik? Gibt es Sicherheitsrisiken?" Abweichungen markieren.',
+            '**Menschliches Code-Review mit Fokus auf Logik vs. Syntax vorschreiben.** Automatisierte Gates fangen offensichtliche Halluzinationen ab. Code-Reviewer sollten prüfen: Tut dieser Code das, was beabsichtigt war? Sind Randfälle berücksichtigt? Ist der Ansatz für den Anwendungsfall geeignet?',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Häufige Fehler vermeiden',
+          mistakes: [
+            {
+              mistake: 'KI-generierten Code in Bezug auf Qualitätsrisiken als gleichwertig mit menschlich geschriebenem Code behandeln',
+              problem: 'Standard-Lint- und Unit-Test-Schwellenwerte sind für manuell geschriebenen und geprüften Code kalibriert. KI-generierter Code kann alle herkömmlichen Gates bestehen, während er halluzinierte APIs, gefälschte Pakete und still falschen Code enthält.',
+              fix: 'Eine separate Risikostufe für KI-generierten oder KI-modifizierten Code anwenden. Strengere Coverage-Schwellenwerte (≥80 % für neue Zeilen), Sicherheits-Scans auf allen KI-berührten Dateien und Abhängigkeitsexistenzprüfungen vorschreiben.',
+            },
+            {
+              mistake: 'Die Kompilierung als Korrektheitsbeweis akzeptieren',
+              problem: 'KI-generierter Code kompiliert sauber, auch wenn er Methoden aufruft, die nicht existieren, Pakete importiert, die nicht registriert sind, oder Logik implementiert, die Anforderungen verletzt.',
+              fix: 'Laufzeitvalidierung hinzufügen: Property-based Tests, Randfall-Tests und Integrationstests, die scheitern würden, wenn die Logik subtil falsch wäre. SDK-bewusstes Linten, das Methodensignaturen verifiziert, ist effektiver als Type-Checking allein.',
+            },
+            {
+              mistake: 'Nicht prüfen, ob vorgeschlagene Pakete tatsächlich in der Registry existieren',
+              problem: 'Sprachmodelle erfinden häufig plausible Paketnamen, wenn sie den korrekten nicht kennen. Entwickler, die npm install oder pip install auf einem halluzinierten Paketnamen ausführen, können ein schädliches Paket installieren, das ein Angreifer später registriert hat (Slopsquatting).',
+              fix: 'Einen Abhängigkeitsvalidierungsschritt ausführen, der die npm/PyPI/Maven-Registry-API für jeden neuen Paket-Import aufruft. Den Build scheitern lassen, wenn das Paket nicht auflösbar ist oder keine Veröffentlichungshistorie hat.',
+            },
+            {
+              mistake: 'Neue Gates ohne Daten im blockierenden Modus starten',
+              problem: 'Ein neues Gate, das als harter Blocker eingeführt wird, wird auf False Positives stoßen, Reibung erzeugen und das Entwicklervertrauen untergraben. Teams werden Umgehungen suchen oder beantragen, das Gate zu entfernen.',
+              fix: 'Jedes neue Gate mindestens einen Sprint im Warnungsmodus ausführen. Signal-Rausch-Verhältnis messen, False Positives beheben und erst auf blockierend hochstufen, wenn das Gate nachweislich zuverlässig ist.',
+            },
+            {
+              mistake: 'KI-spezifische Dashboards und Metriken weglassen',
+              problem: 'Ohne Sichtbarkeit darüber, wie viele halluzinationsbezogene Probleme abgefangen wurden, können Teams den Overhead von KI-bewussten Gates nicht rechtfertigen oder sie effektiv anpassen.',
+              fix: 'Ihr CI instrumentieren, um Probleme nach Kategorie zu kennzeichnen (Abhängigkeits-Halluzination, API-Halluzination, Sicherheitsfinding, Logik-Markierung). Eine wöchentliche Zusammenfassung der abgefangenen Probleme pro Kategorie bereitstellen.',
+            },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Regionale Überlegungen für KI-Code-Qualität',
+          content: [
+            '**Regulatorische Anforderungen bestimmen, welche KI-bewussten Qualitätsprüfungen je nach Deployment-Region verpflichtend oder empfohlen sind.** Die folgenden Unterscheidungen gelten ab 2026.',
+          ],
+          items: [
+            '**EU (DSGVO / NIS2):** DSGVO Artikel 25 (Datenschutz durch Technikgestaltung) verlangt, dass Code, der personenbezogene Daten verarbeitet, vor dem Deployment überprüft und validiert wird. Die NIS2-Richtlinie schreibt für Betreiber kritischer Infrastrukturen Lieferkettensicherheitskontrollen vor, die die Abhängigkeitsvalidierung abdecken. NIS2-Enforcement begann im Oktober 2024.',
+            '**Deutschland / DACH (BSI-Grundschutz):** Das BSI empfiehlt über die BSI-Grundschutz-Kataloge die Dokumentation von KI-spezifischen Risikominderungsmaßnahmen als Teil des Änderungsmanagements. Für den Mittelstand bietet das IT-Grundschutz-Kompendium praxisgerechte Leitlinien, die auch ohne spezialisierte DevSecOps-Teams umsetzbar sind.',
+            '**Vereinigte Staaten (SOC 2 / FedRAMP):** SOC 2 Type II-Audits verlangen dokumentierte Change-Management-Prozesse. KI-generierter Code, der ohne nachverfolgbares menschliches Review gemergt wird, kann Audit-Findings erzeugen. FedRAMP-autorisierte Systeme müssen SAST-Scans bestehen und alle Drittanbieter-Abhängigkeiten dokumentieren.',
+            '**Japan (METI KI-Governance-Richtlinien 2024):** METI-Richtlinien empfehlen risikobasierte KI-Governance einschließlich Qualitätssicherungsprozessen für KI-generierten Code. Enterprise-Deployments sollten Halluzinationserkennung als Teil der KI-Governance-Dokumentation erfassen.',
+            '**China (Cybersicherheitsgesetz / Datensicherheitsgesetz 2021):** Entwicklungs-Pipelines für Systeme, die Daten chinesischer Nutzer verarbeiten, müssen Sicherheitsüberprüfungspflichten einhalten. KI-generierter Code, der personenbezogene Informationen berührt, unterliegt einer Überprüfung nach PIPL.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Was ist ein KI-bewusster Build-Quality-Check?', a: 'Ein KI-bewusster Build-Quality-Check ist ein CI/CD-Gate, das speziell für Fehlerarten konzipiert wurde, die bei KI-generiertem Code auftreten: halluzinierte APIs, erfundene Paketnamen und Logikfehler, die zwar kompilieren, aber Anforderungen verletzen. Im Gegensatz zu herkömmlichen Lint- und Coverage-Gates überprüfen diese Checks, ob referenzierte Pakete tatsächlich existieren und ob aufgerufene APIs mit Ihrer tatsächlichen SDK- oder Service-Definition übereinstimmen.' },
+            { q: 'Wie unterscheidet sich KI-generierter Code in Bezug auf Qualitätsrisiken von menschlich geschriebenem Code?', a: 'KI-generierter Code weist strukturelle Fehlermuster auf, die bei menschlich geschriebenem Code kaum vorkommen: erfundene Paketnamen, die in keiner Registry existieren, Methodenaufrufe, die in Ihrer SDK-Version fehlen, und Code, der oberflächliche Tests besteht, aber Anforderungen lautlos falsch implementiert. Herkömmliche Gates erkennen Syntaxfehler und Coverage-Lücken, wurden aber nicht für zuversichtliche Halluzinationen entwickelt.' },
+            { q: 'Wie erkenne ich halluzinierte Paketnamen in meiner CI/CD-Pipeline?', a: 'Fügen Sie einen Abhängigkeitsvalidierungsschritt hinzu, der prüft, ob jedes importierte Paket tatsächlich in Ihrer Ziel-Registry (npm, PyPI, Maven usw.) vorhanden ist – bevor Tests ausgeführt werden. Implementieren Sie ihn als Pre-Commit-Hook oder als CI-Job, der die Registry-API aufruft. Pakete, die nicht aufgelöst werden können oder keine Veröffentlichungshistorie haben, sollten den Build sofort zum Scheitern bringen.' },
+            { q: 'Welche Sicherheitsprüfungen sollte ich für KI-generierten Code hinzufügen?', a: 'Führen Sie SAST-Tools wie Bandit (Python), ESLint-Security (JavaScript) oder Snyk für jede geänderte Datei aus. Verlangen Sie null neue kritische Findings auf KI-modifizierten Codepfaden. Schreiben Sie manuelle Sicherheitsreviews für KI-generierten Code vor, der Authentifizierung, Zahlungen, Admin-Funktionen oder personenbezogene Daten berührt.' },
+            { q: 'Ist eine halluzinierte API dasselbe wie ein Laufzeitfehler?', a: 'Eine halluzinierte API ist subtiler als ein einfacher Laufzeitfehler. Sie bezeichnet eine Methode, einen Parameter oder eine Konfigurationsoption, die ein Modell erfunden hat und die im tatsächlichen SDK oder Service nicht existiert – Code, der korrekt erscheint und die Kompilierung besteht, aber zur Laufzeit eine Exception wirft oder das Verhalten still beeinträchtigt. Laufzeitfehler sind Symptome; Halluzinationserkennung trifft die Ursache früher in der Pipeline.' },
+            { q: 'Kann ich KI-Tools nutzen, um KI-generierten Code zu überprüfen?', a: 'Ja. Multi-Modell-Kreuzprüfung ist ein effektives Muster: Ein Modell generiert Code, ein anderes überprüft ihn. Stellen, an denen das prüfende Modell Unsicherheit zeigt oder dem generierenden widerspricht, können für menschliche Aufmerksamkeit markiert werden. Dies funktioniert am besten auf risikokritischen Pfaden wie Authentifizierung, Zahlungsverarbeitung oder Infrastrukturkonfiguration.' },
+            { q: 'Wie führe ich KI-bewusste Qualitätsprüfungen ein, ohne mein Team zu verlangsamen?', a: 'Starten Sie alle neuen Regeln im Warnungsmodus, um Daten zu sammeln, bevor Merges blockiert werden. Erklären Sie Fehlergründe klar in Fehlermeldungen mit Links zur Dokumentation. Erlauben Sie dokumentierte Ausnahmen, damit Teams bei ungewöhnlichen, aber gültigen Fällen fortfahren können, während ein Audit-Trail erhalten bleibt. Verfolgen Sie False-Positive-Raten pro Gate und passen Sie Schwellenwerte an, wo die Reibung den Nutzen übersteigt.' },
+            { q: 'Was ist Slopsquatting und warum ist es gefährlich für KI-gestützte Entwicklung?', a: 'Slopsquatting tritt auf, wenn ein KI-Modell einen plausibel klingenden Paketnamen erfindet, der in keiner Registry existiert. Wenn ein Angreifer diesen Namen später mit schädlichem Code registriert, führt jeder Entwickler, der ihn via npm install oder pip install installiert, den Payload des Angreifers aus. Das Risiko ist bei KI-gestützter Entwicklung besonders hoch, da Entwickler vorgeschlagene Pakete oft nicht einzeln gegen offizielle Registries prüfen.' },
+            { q: 'Welche DSGVO-Anforderungen gelten für die Verwendung von KI-Code-Generierung?', a: 'DSGVO Artikel 25 (Datenschutz durch Technikgestaltung) schreibt vor, dass Code, der personenbezogene Daten verarbeitet, vor der Produktivsetzung überprüft und validiert wird. Für Betreiber kritischer Infrastrukturen kommt über die NIS2-Richtlinie die Pflicht zur Lieferkettensicherheit hinzu, die die Abhängigkeitsvalidierung abdeckt. Das BSI empfiehlt über die BSI-Grundschutz-Kataloge die Dokumentation von KI-spezifischen Risikominderungsmaßnahmen. NIS2-Enforcement begann im Oktober 2024.' },
+            { q: 'Ist der Einsatz von KI-Code-Generierung im deutschen Mittelstand sinnvoll – und was sind die besonderen Risiken?', a: 'Ja, KI-Coding-Assistenten bieten auch mittelständischen Entwicklungsteams erhebliche Effizienzgewinne. Die besondere Herausforderung im Mittelstand: Oft fehlen spezialisierte DevSecOps-Teams, die Halluzinationen und Sicherheitslücken systematisch abfangen. Empfehlenswert ist ein schrittweiser Rollout – beginnend mit Abhängigkeitsvalidierung und SAST-Integration –, bevor weitere KI-spezifische Gates eingeführt werden. Das BSI-Grundschutz-Kompendium bietet praxisgerechte Leitlinien, die auch ohne große Sicherheitsabteilung umsetzbar sind.' },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Besseren Code mit KI schreiben](/prompt-engineering/write-better-code-with-ai?lang=de) — wie man Prompts für die Code-Generierung strukturiert, die überprüfbaren Output produzieren',
+            '[KI-Code-Review: Tools und Verfahren](/prompt-engineering/ai-code-review?lang=de) — KI für Code-Qualität und Sicherheitsüberprüfung einsetzen',
+            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — grundlegende Prinzipien für zuverlässige KI-Ausgaben',
+            '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Angriffsmuster, die KI-gestützte Entwicklungs-Pipelines betreffen',
+            '[KI-Halluzinationen: So stoppen Sie sie](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de) — Techniken zur Reduzierung von Halluzinationen in KI-generierten Ausgaben',
+            '[Wie man Prompt-Qualität bewertet](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Bewertungsrahmen für Code-Generierungsqualität',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            '[OWASP Top 10 für LLM-Anwendungen](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — OWASP, 2025. Sicherheitsrisiken für LLM-generierten Code und KI-gestützte Entwicklung.',
+            '[GitHub CodeQL-Dokumentation](https://codeql.github.com/docs/) — GitHub. Static-Analysis-Engine für Sicherheits-Scanning von KI-modifizierten Codepfaden.',
+            '[Snyk State of Open Source Security Report](https://snyk.io/reports/state-of-open-source-security/) — Snyk, 2024–2025. Jahresbericht über Abhängigkeitsschwachstellen und Supply-Chain-Risiken.',
+            '[NIST AI Risk Management Framework (AI RMF 1.0)](https://airc.nist.gov/Home) — NIST, 2023. Rahmenwerk für das Management von Risiken aus KI-Systemen einschließlich Code-Qualität und Governance.',
+          ],
+        },
+      },
+    },
     fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
