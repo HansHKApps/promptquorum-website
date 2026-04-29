@@ -2068,5 +2068,528 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: '技术',
+      title: 'AI文档提取与总结',
+      intro: 'AI驱动的提取和总结功能将文档审查时间减少60–80%，同时在有根据的总结任务上实现0.7%的幻觉率——关键是为每种文档类型选择正确的总结方法、正确的模型和正确的提示词结构。',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-29',
+      seoTitle: 'AI文档提取和总结方法 2026年',
+      metaDescription: 'AI总结在有根据的任务上实现0.7%的幻觉率。NotebookLM、Claude、GPT-5.5对比——配合忠实源文本的提示词。',
+      readTime: '阅读约8分钟',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'AI文档总结',
+      audience: '处理大规模文档集合的研究人员、分析师和开发人员',
+      aboutTopics: ['文档总结', 'NotebookLM', 'LLM幻觉'],
+      howToName: '如何使用迭代总结',
+      next_refresh_due: '2026-09-23',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '抽取式与抽象式：选择哪种？', anchor: '#two-summarisation-types' },
+        { label: '哪个模型的幻觉率最低？', anchor: '#which-model-for-summarisation' },
+        { label: '总结工具对比', anchor: '#tool-comparison' },
+        { label: '如何撰写提取提示词', anchor: '#extraction-prompt-structure' },
+        { label: '有效提取提示词的5个要素', anchor: '#five-component-prompt' },
+        { label: '处理超长文档的分块方法', anchor: '#chunking-long-documents' },
+        { label: '迭代总结如何减少遗漏', anchor: '#iterative-summarisation' },
+        { label: 'AI模型为什么仍会产生幻觉？', anchor: '#hallucination-analysis' },
+        { label: '评估指标：ROUGE、BERTScore、HHEM', anchor: '#evaluation-metrics' },
+        { label: '全球和区域合规背景', anchor: '#global-context' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '常见问题', anchor: '#faq' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'AI文档提取与总结',
+        description: 'AI文档总结将审查时间减少60–80%，幻觉率为0.7%。对比抽取式与抽象式方法、模型选择和确保输出忠实于源文本的提示词结构。',
+        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=zh',
+        inLanguage: 'zh',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-29',
+        author: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
+          width: 1200,
+          height: 630,
+        },
+        proficiencyLevel: 'Intermediate',
+        about: [
+          { '@type': 'Thing', name: '文档总结' },
+          { '@type': 'Thing', name: 'LLM幻觉' },
+          { '@type': 'Thing', name: '提示词工程' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        keywords: ['AI总结', '文档提取', '抽象式总结', '抽取式总结', 'NotebookLM', 'Claude', '幻觉率', '提示词工程'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Elicit' },
+          { '@type': 'SoftwareApplication', name: 'Scholarcy' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '抽取式和抽象式AI总结有什么区别？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '抽取式总结直接从源文档复制句子而无需修改——由于没有生成新文本，事实性错误在结构上是不可能的。抽象式总结使用LLM生成新的释义句子进行压缩——产生更具可读性的输出，但根据模型和任务，幻觉率为0.7–14%。对于法律和合规文件使用抽取式；对于研究综述和执行总结使用抽象式。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '哪个AI模型在总结文件时的幻觉最少？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '在Vectara的HHEM基准上——该基准是跨831份文档的文档总结忠实度标准测试——Google DeepMind的Gemini-2.0-Flash-001在2025年实现了0.7%的最低幻觉率。现在有四个模型在有根据的总结上实现了低于1%的速率。这些速率仅适用于源有根据的任务；开放域事实回忆在相同模型中产生3–33%的速率。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI总结工具一次最多可以处理多少页？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '这取决于模型的上下文窗口。OpenAI的GPT-5.5每个会话大约处理100页（128k token限制）。Anthropic的Claude Opus 4.7大约处理160页（200k tokens）。Google DeepMind的Gemini 3.1 Pro大约处理800页（1M tokens）。Google DeepMind的NotebookLM支持最多50个源，总计约500,000字。对于更大的语料库，需要文档分块。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'NotebookLM或Claude哪个更适合文档总结？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '它们服务于不同的需求。Google DeepMind的NotebookLM提供更严格的源有根据性和可点击的内联引文——对上传源的幻觉较少，更好地忠实表示文件内容。Anthropic的Claude Opus 4.7产生更细致的分析，善于跨多个文档进行综合，并识别非显而易见的联系——但有时会以微妙的误导方式混合源内容和常规训练知识。使用NotebookLM来追求精确；使用Claude来获得洞察。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '如何防止AI在总结中产生幻觉？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '四种技术可以减少总结任务中的幻觉：(1)明确指示模型——"仅从下面的文档总结；不添加外部知识"；(2)将温度(T)设置为0.0–0.1以实现最大确定性；(3)使用忠实度检查——要求模型列出其总结中的每一项声明及其源句子；(4)与第二个模型交叉检查——当GPT-5.5和Claude Opus 4.7对特定事实达成一致时，共享幻觉的概率在统计上接近零。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '什么是文档分块，我何时应该使用它？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '分块将文档分成片段（通常500–2,000 tokens），分别总结每个片段，然后将片段总结综合为最终输出。当文档超过模型上下文窗口时使用——对于GPT-5.5约100页（128k tokens），对于Claude Opus 4.7约160页（200k tokens），对于Gemini 3.1 Pro约800页（1M tokens）。对于具有明确结构的文档（法律合同、年度报告），按节标题进行主题分块可产生最连贯的最终综合。对于非结构化文本（电子邮件线程、记录），按段落进行分块，在500-token间隔处为推荐默认值。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '什么是ROUGE和BERTScore，我应该使用哪个指标来评估AI总结？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ROUGE测量生成的总结与参考之间的n-gram重叠——对基准测试有用，但对语义意义和事实准确性视而不见。BERTScore使用BERT嵌入之间的余弦相似性，捕捉语义相似性而非精确词匹配。对于生产文档工作流，单独使用都不够：使用忠实度指标如HHEM（Vectara）或FaithJudge来衡量总结是否仅包含源文档支持的声明。结合HHEM忠实度评分和完整性检查以获得最可靠的质量信号。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI总结工具能处理英文以外的文档吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '可以，但需要注意。Mistral AI模型原生处理法语和欧洲语言，可本地部署以实现GDPR合规。Alibaba的Qwen 3对中文字符进行标记，比GPT-5.5少大约40%的tokens——使大规模中文文档处理显著更便宜。通过Ollama部署的LLaMA 4模型支持多语言总结，同时保持数据完全在本地，满足METI指南下日本企业的严格数据驻留要求。英文优先模型也可处理多语言文档，但在非拉丁字符上的错误率略高。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '中国企业处理文件总结时需要满足哪些数据法规？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '根据《数据安全法》（2021）和PIPL（个人信息保护法），AI生成的总结必须标记为AI生成，且中国用户的个人数据必须驻留在中国。Qwen 3和DeepSeek V3专为中文优化，可本地部署以满足数据驻留要求。金融、医疗和法律部门使用本地推理部署（Ollama + LLaMA）来完全避免跨境数据传输。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '亚太地区企业如何选择合适的总结工具？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '数据驻留框架因地区而异。日本企业通常选择Ollama本地部署以满足METI指南。新加坡和澳大利亚可使用Claude或GPT-5.5进行常规工作流程。东南亚企业应优先考虑本地可部署的模型（Mistral、Qwen）以最大化数据隐私。选择取决于数据敏感性、合规要求和处理规模。',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        'name': 'AI文档提取与总结：核心主题',
+        'description': 'AI驱动的文档提取和总结的核心概念',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '抽取式与抽象式总结', 'description': '理解事实精确性和可读性之间的权衡' },
+          { '@type': 'ListItem', 'position': 2, 'name': '选择合适的AI模型', 'description': '对比NotebookLM、Claude、GPT-5.5和Gemini的总结能力' },
+          { '@type': 'ListItem', 'position': 3, 'name': '提取的提示词结构', 'description': '撰写结构化提示词来防止幻觉并确保准确性' },
+          { '@type': 'ListItem', 'position': 4, 'name': '减少AI幻觉', 'description': '温度设置、忠实度检查和多模型验证' },
+          { '@type': 'ListItem', 'position': 5, 'name': '工具和工作流程', 'description': '使用NotebookLM、Scholarcy、Elicit和自定义提取管道' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'zh',
+        name: '如何使用AI提取和总结文档',
+        totalTime: 'PT15M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: '根据源类型选择工具', text: '对于PDF和文档使用NotebookLM，对于具有结构化字段（方法论、样本量、结果）的学术论文使用Elicit，对于实时网络总结使用Perplexity。' },
+          { '@type': 'HowToStep', position: 2, name: '预先定义提取架构', text: '明确告诉模型需要哪些列或字段以及每个字段的数据类型。示例：返回JSON数组，键为：作者（字符串）、年份（整数）、发现（最多200字符文本）、置信度（高/中/低）。' },
+          { '@type': 'HowToStep', position: 3, name: '设置温度为0.1–0.3', text: '较低的温度产生更确定性的一致输出。将较高的温度仅用于对模糊源材料的替代解释进行头脑风暴。' },
+          { '@type': 'HowToStep', position: 4, name: '将大型文档分解为多个通过', text: '对于100页以上的PDF，每次提取25页，将结果存储在结构化格式中。这可防止上下文窗口溢出，并使错误更容易发现和更正。' },
+          { '@type': 'HowToStep', position: 5, name: '用源文档交叉检查关键提取', text: '点检10–20%的提取数据是否与原始文档一致。AI模型可能会产生幻觉或误读结构化数据，特别是来自合并单元格或格式不清楚的表格。' },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            '对于法律、合规和精确措辞的文档使用抽取式总结；对于研究综述和执行输出使用抽象式LLM总结',
+            'Gemini-2.0-Flash-001在有根据的总结上实现0.7%的幻觉率——这是Vectara的HHEM基准上跨831份文档的最佳表现',
+            'NotebookLM（Google DeepMind）为源有根据的总结和可点击的内联引文提供了最可靠的功能；Claude Opus 4.7在跨文档综合和复杂分析中领先',
+            '有根据总结的幻觉率从2021年到2025年下降了96%——但2025年的数学证明确认在当前LLM架构下无法完全消除幻觉',
+            '对于超过上下文窗口限制的文档，按主题进行分块（按节/主题）可产生最连贯的最终综合',
+            'Claude Opus 4.7每个会话可处理约160页（200k tokens）；Gemini 3.1 Pro可处理约800页（1M tokens）——上下文限制决定了哪个模型对大型文档集实际可行',
+          ],
+        },
+        definition: {
+          id: 'two-summarisation-types',
+          title: '两种AI总结类型和何时使用各种？',
+          content: [
+            '**抽取式总结直接从源文档复制句子；抽象式总结生成新的释义和压缩句子——两种方法在事实精确性和可读性之间进行权衡。**',
+            '抽取式总结——由Scholarcy等工具使用——根据关键词频率、位置和信息密度对句子进行排名，然后再现最高评分的句子而无需修改。由于没有生成新文本，事实错误在结构上是不可能的：输出始终是源的子集。抽象式总结——由GPT-5.5（OpenAI）、Claude Opus 4.7（Anthropic）和Gemini 3.1 Pro（Google DeepMind）使用——生成综合和释义的新文本，以更高的幻觉风险为代价生成更可读的输出。',
+          ],
+          columns: ['方法', '幻觉风险', '可读性', '最佳用途'],
+          rows: [
+            {
+              '方法': '抽取式',
+              '幻觉风险': '接近零（复制源）',
+              '可读性': '较低——可能不连贯',
+              '最佳用途': '法律文件、合规、精确措辞要求',
+            },
+            {
+              '方法': '抽象式（LLM）',
+              '幻觉风险': '0.7–14%，取决于模型和任务',
+              '可读性': '高——自然文本',
+              '最佳用途': '研究综述、执行总结、报告',
+            },
+            {
+              '方法': '混合（抽取→抽象）',
+              '幻觉风险': '低',
+              '可读性': '高',
+              '最佳用途': '财务报告、学术文献、技术文档',
+            },
+          ],
+          blockquote: '2025年arXiv研究对金融新闻文章的总结方法进行了基准测试，发现抽取式方法（Lead-1、MatchSum）为短格式、结构良好的文本建立了强大的基线——但当在领域特定数据上进行微调时，抽象式LLM对复杂金融文档的表现优于它们。微调的GPT-5.5-mini在同一基准上实现了0.619的BERTScore，而Lead-1的为0.588。简而言之：当您不能承受事实性错误时使用抽取式总结；当您需要输出具有可读性并可直接使用而无需进一步编辑时使用抽象式总结。',
+        },
+        toolComparison: {
+          id: 'which-model-for-summarisation',
+          title: '哪个AI模型在总结中的幻觉率最低？',
+          content: [
+            '**NotebookLM（Google DeepMind）在源有根据的已上传文档总结中领先；Claude Opus 4.7（Anthropic）在综合、跨文档分析和复杂推理中领先；GPT-5.5（OpenAI）在快速、灵活的通用总结中领先。**',
+            '在Vectara的Hughes幻觉评估模型（HHEM）——文档总结忠实度的标准基准，在831份文档上进行了测试——2025年的顶级表现者是：',
+            '这些速率代表从2021年的改进，当时顶级模型在同一任务上的幻觉率为21.8%。然而，这些数字仅适用于有根据的总结——模型锚定于源文档。开放域事实回忆在相同模型中产生3–33%的幻觉率。',
+          ],
+          items: [
+            '**Gemini-2.0-Flash-001（Google DeepMind）：** 0.7%幻觉率——基准上记录的最低值',
+            '**OpenAI和Gemini变体：** 0.8–1.5%幻觉率集群',
+            '**整体顶级模型：** 现在有4个模型在有根据的总结任务上实现了低于1%的速率',
+          ],
+        },
+        toolTable: {
+          id: 'tool-comparison',
+          title: 'NotebookLM、Claude、GPT-5.5和Gemini如何并排对比？',
+          columns: ['工具', '上下文限制', '引文质量', '最佳用途'],
+          rows: [
+            {
+              '工具': 'NotebookLM（Google DeepMind）',
+              '上下文限制': '约500K字/50个源',
+              '引文质量': '内联编号引文，可点击',
+              '最佳用途': '结构化研究审查、源忠实问答',
+            },
+            {
+              '工具': 'Claude Projects（Anthropic）',
+              '上下文限制': '约200K tokens（约160页）',
+              '引文质量': '默认不一致；使用提示词可靠',
+              '最佳用途': '跨源综合、复杂推理、论证构建',
+            },
+            {
+              '工具': 'GPT-5.5（OpenAI）',
+              '上下文限制': '128K tokens（约100页）',
+              '引文质量': '中等；需要明确指示',
+              '最佳用途': '常规文件、快速总结',
+            },
+            {
+              '工具': 'Gemini 3.1 Pro（Google DeepMind）',
+              '上下文限制': '1M tokens（约800页）',
+              '引文质量': '中等',
+              '最佳用途': '完整代码库或大型语料库分析',
+            },
+            {
+              '工具': 'Elicit',
+              '上下文限制': '138M+学术论文',
+              '引文质量': '结构化学术提取',
+              '最佳用途': '系统的文献综述',
+            },
+          ],
+          content: [
+            '**在PromptQuorum测试——25个文档总结提示词分配到三个模型：** Claude Opus 4.7在20个案例中产生了分析最完整的总结（识别文档之间的含义和联系）。GPT-5.5在18个案例中产生了最简洁、立即可用的总结。Gemini 3.1 Pro是唯一能够处理所有25份文档的模型，无需上下文截断，因为其中一些超过80,000 tokens。',
+          ],
+        },
+        promptStructure: {
+          id: 'extraction-prompt-structure',
+          title: '如何撰写提取和总结提示词',
+          content: [
+            '**结构化总结提示词——指定文档类型、输出格式、长度限制和明确指示来标记无法验证的声明——产生直接可用的输出；非结构化提示词产生遗漏关键信息的通用段落。**',
+            '总结中最常见的[提示词工程](/prompt-engineering/what-is-prompt-engineering?lang=zh)失败是将"总结一下"作为完整指示。模型对长度、格式、视角和细节级别所做的每一个假设都是与您实际需要的潜在不匹配。[5块提示词结构](/prompt-engineering/prompt-building-blocks?lang=zh)——角色、任务、输入、约束、输出格式——直接适用于提取任务。',
+          ],
+        },
+        promptFramework: {
+          id: 'five-component-prompt',
+          title: '有效提取提示词的5个要素是什么？',
+          content: '**不好的提示词——非结构化、产生通用无法使用的输出：**',
+          items: [
+            '**角色** —— "你是专门从事[领域]的分析师。"',
+            '**源指示** —— "仅总结下面文档中的信息。不添加外部知识。"',
+            '**输出格式** —— "返回具有这些部分的结构化总结：[关键发现]、[方法论]、[限制]、[推荐行动]。"',
+            '**长度限制** —— "最多300字。"',
+            '**不确定性指示** —— "如果文档中的声明模糊或与另一段落相矛盾，用[验证]标记。"',
+          ],
+          blockquote: '总结一下这份报告。',
+        },
+        goodExample: {
+          id: 'good-prompt-example',
+          title: '结构良好的总结提示词是什么样的？',
+          blockquote: '你是财务分析师。仅使用文档中的信息总结附加的第三季度收益报告——不添加外部背景。将输出结构为：[收入和利润率]、[部门表现]、[指导变化]、[主要风险]。最多250字。用[差异]标记任何与同一文档中前面语句相矛盾的数字。',
+          content: [
+            '结构化提示词产生可直接用于简报的文档。开放式提示词产生一个包含段落，省略了部分数据，埋没了指导变化，需要30分钟的重新结构化。',
+          ],
+        },
+        chunking: {
+          id: 'chunking-long-documents',
+          title: '如何处理超过上下文窗口的文档？',
+          content: [
+            '**对于超过模型上下文窗口的文档，分块——将文档分成500–2,000 token的片段，分别总结每个片段，然后综合片段总结——保留否则会被截断或降级的信息。**',
+            '对于具有明确部分结构的文档（法律合同、年度报告、学术论文），按主题分块可产生最连贯的最终综合。对于非结构化文档（电子邮件线程、记录），按段落进行分块，间隔为500-token是推荐的默认值。',
+          ],
+          columns: ['方法', '连贯性', '最佳用途', '权衡'],
+          rows: [
+            {
+              '方法': '按节主题分块',
+              '连贯性': '最高',
+              '最佳用途': '报告、合同、学术论文',
+              '权衡': '要求源中有明确的标题',
+            },
+            {
+              '方法': '基于段落',
+              '连贯性': '高',
+              '最佳用途': '大多数文件类型',
+              '权衡': '可能会分割密切相关的想法',
+            },
+            {
+              '方法': '固定token限制',
+              '连贯性': '中',
+              '最佳用途': '非结构化文本',
+              '权衡': '在任意点中途分割参数',
+            },
+            {
+              '方法': '基于句子',
+              '连贯性': '低',
+              '最佳用途': '最大粒度',
+              '权衡': '最高计算成本；碎裂上下文',
+            },
+          ],
+        },
+        iterativeSummarisation: {
+          id: 'iterative-summarisation',
+          title: '迭代总结如何减少遗漏？',
+          content: [
+            '**迭代总结——生成初始总结，然后用第二个有针对性的提示词进行细化——相比单通道生成改进了事实完整性并减少了遗漏。**',
+            '迭代总结生成初始总结，然后应用第二个提示词来捕捉遗漏的声明。两步结构：',
+          ],
+          numberedItems: [
+            '**初始提示词：** "总结文档中的关键论点、数据点和结论。标记任何您不确定的内容。"',
+            '**细化提示词：** "审查您的总结。确定文档中陈述但从您的总结中遗漏的任何声明。现在添加这些声明。"',
+          ],
+        },
+        hallucinationAnalysis: {
+          id: 'hallucination-analysis',
+          title: '为什么AI模型在总结中仍会产生幻觉？',
+          content: [
+            '**有根据的总结幻觉率自2021年以来下降了96%——从顶级模型的21.8%降至0.7%——但2025年的数学证明确认在当前LLM架构下无法完全消除幻觉。**',
+            '架构原因是基本的：LLM基于训练数据中的模式匹配生成统计概率最高的下一个token，而不是通过检索已验证的事实。即使给定源文档，模型有时也会"混合"源内容与训练知识，以一种产生似乎合理但不忠实的句子的方式——研究人员称之为"混合上下文幻觉"。这是有根据总结工作流程必须考虑的核心[AI限制](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh)之一。',
+            'AI总结中按频率排序的失败模式：',
+          ],
+          items: [
+            '**混合上下文幻觉** —— 模型将源中的事实与训练数据中的事实相结合，产生部分正确和部分虚构的句子',
+            '**信息缺失** —— 模型忽略源中位置不明显的关键声明',
+            '**事实不一致** —— 模型与源文档中的特定数字或日期相矛盾',
+            '**无关信息** —— 模型添加源中不存在的训练数据背景',
+          ],
+          blockquote: '2025年Nature发表的框架（Liu等人）引入了问答生成、排序和评估（Q-S-E）方法论，使用基准数据集CNN/Daily Mail、PubMed和ArXiv迭代检测和纠正总结中的幻觉——证明了跨所有三个数据集的忠实度分数的可测量改进。PromptQuorum的多模型分发直接解决了这个问题：同时向GPT-5.5（OpenAI）、Claude Opus 4.7（Anthropic）和Gemini 3.1 Pro发送相同的文档并比较输出，识别模型不同意的段落——这在统计上是幻觉的最高风险段落。',
+        },
+        evaluationMetrics: {
+          id: 'evaluation-metrics',
+          title: '哪个指标衡量AI总结质量：ROUGE、BERTScore还是HHEM？',
+          content: [
+            '**ROUGE（回忆导向的拟制评估下级）、BERTScore和忠实度指标衡量总结质量的不同且不重叠的维度——没有单个指标足以评估AI总结是否值得信赖。**',
+            'ROUGE衡量生成的总结与参考总结之间的n-gram重叠——对基准测试有用，但对语义意义和事实准确性视而不见。BERTScore使用生成的总结和参考总结的BERT嵌入之间的余弦相似性，捕捉语义相似性而非精确词匹配。忠实度指标（HHEM、FaithJudge）衡量总结是否仅包含源文档支持的声明——对生产总结用途最相关的指标。',
+          ],
+          columns: ['指标', '测量内容', '限制'],
+          rows: [
+            {
+              '指标': 'ROUGE',
+              '测量内容': '与参考的N-gram重叠',
+              '限制': '对语义意义视而不见；奖励词汇相似性',
+            },
+            {
+              '指标': 'BLEU',
+              '测量内容': 'N-gram重叠精度',
+              '限制': '为翻译设计；不适合总结',
+            },
+            {
+              '指标': 'BERTScore',
+              '测量内容': '通过嵌入的语义相似性',
+              '限制': '需要参考总结；计算成本高',
+            },
+            {
+              '指标': '忠实度（HHEM）',
+              '测量内容': '与源的事实一致性',
+              '限制': '不衡量完整性或有用性',
+            },
+            {
+              '指标': 'G-Eval',
+              '测量内容': '多维度：覆盖、相关性、流畅性',
+              '限制': '最新标准；尚未通用采用',
+            },
+          ],
+          blockquote: '对于生产文档管道，将HHEM忠实度评分与完整性检查（总结是否提及源中的所有关键声明？）相结合可产生最可靠的质量信号。',
+        },
+        globalContext: {
+          id: 'global-context',
+          title: '中国法规、亚太地区和企业部署如何影响AI总结？',
+          content: [
+            '**中国（数据安全法）**：《数据安全法》（2021）和《个人信息保护法》（PIPL）要求将中国用户的个人数据保留在中国。所有AI生成的总结必须标记为"由AI生成"。Qwen 3（阿里巴巴）和DeepSeek V3对中文字符进行优化编码，比GPT-5.5少消耗约40%的tokens——使大规模中文文档处理成本显著降低。对于金融、医疗和法律部门，本地部署（Ollama + LLaMA）完全避免了跨境数据传输，符合中国监管要求。',
+            '**亚太地区（数据跨境）**：数据驻留框架因地区而异。日本企业通常通过Ollama运行LLaMA 4进行本地文档总结，满足METI数据治理指南的严格要求。新加坡和澳大利亚可使用Claude或GPT-5.5进行常规工作流程。东南亚企业应优先考虑本地可部署的模型（Mistral、Qwen）以最大化数据隐私。选择应根据数据敏感性、合规要求和处理规模进行评估。',
+            '**企业部署**：大型组织（银行、医院、律师事务所）在财务、医疗和法律部门应使用本地可部署模型来处理敏感内容。Ollama + LLaMA 4或Mistral提供零外部API调用的选项，完全满足数据驻留要求。对于合规环境，选择本地部署而非云API可以快速符合PIPL、PDPA、数据保护和行业特定的法规。',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'AI总结中最常见的错误是什么？',
+          items: [
+            '使用开放式提示词（"总结一下"）而无格式限制——产生遗漏关键数据点的通用段落，需要30多分钟的手动重新结构化',
+            '信任总结而不进行点检——AI模型在结构化数据（表格、数字、日期）上的幻觉率高于散文；始终验证10–20%的提取数字是否与原始结果一致',
+            '对提取任务设置温度高于0.3——高于0.3的温度会明显增加幻觉频率；对有根据的任务使用0.0–0.1以实现最大确定性',
+            '未在提示词中指定文档类型——没有背景，模型应用错误的总结启发式方法（例如，将法律合同视为新闻文章，省略关键条款措辞）',
+            '跳过50页以上文档的分块——上下文窗口溢出会无声地截断内容；模型仅总结可用部分而无警告已遗漏任何内容',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[什么是提示词工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) —— 结构化AI指示背后的基础原则',
+            '[AI驱动的研究](/prompt-engineering/ai-powered-research?lang=zh) —— 如何将提取工具与多源验证工作流程相结合',
+            '[AI为什么会幻觉及如何阻止](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh) —— 理解幻觉的根本原因和经过验证的缓解策略',
+            '[AI限制——LLM不能做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) —— 将AI输出根植于已验证源内容的具体技术',
+            '[每个AI提示词需要的5个构建块](/prompt-engineering/prompt-building-blocks?lang=zh) —— 直接改进提取准确性的结构化提示词组件',
+            '[温度和Top-P：如何控制AI输出](/prompt-engineering/temperature-and-top-p?lang=zh) —— 将温度设置为0.0–0.1以实现确定性、抗幻觉总结',
+            '[思路链式提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) —— 改进复杂多文档分析中忠实度的分步推理',
+          ],
+        },
+        howToStart: {
+          id: 'how-to-extract-and-summarise',
+          title: '如何使用AI提取数据和总结',
+          numberedItems: [
+            '**根据源类型和提取结构选择工具。** 对您自己的PDF或文件使用NotebookLM，对具有结构化字段的学术论文（方法论、样本量、结果）使用Elicit，对实时网络总结使用Perplexity。文本到表格提取最适合为此设计的系统（Elicit），而不是通用聊天模型。',
+            '**预先定义提取架构（JSON、表格、项目列表）。** 明确告诉模型需要哪些列或字段以及每个字段的数据类型。示例：\'返回JSON数组，键为：作者（字符串）、年份（整数）、发现（最多200字符文本）、置信度（高/中/低）。\'',
+            '**为提取和总结将温度(T)设置为0.1–0.3。** 较低的温度产生更确定性的一致输出。将较高的温度仅保留用于对模糊源材料的替代解释进行头脑风暴。',
+            '**对于大型文档，将提取分解为多个通过，中间有检查点。** 如果您有100页以上的PDF，分别提取第1–25、26–50等部分，将结果存储在结构化格式中。这可防止上下文窗口溢出，并使错误更容易发现和更正。',
+            '**用源文档交叉检查关键提取。** 始终点检10–20%的提取数据是否与原始结果一致。AI模型可能会产生幻觉或误读结构化数据，特别是来自合并单元格或格式不清楚的表格。',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: '常见问题',
+          faqs: [
+            {
+              q: '抽取式和抽象式AI总结有什么区别？',
+              a: '抽取式总结直接从源文档复制句子而无需修改——由于没有生成新文本，事实性错误在结构上是不可能的。抽象式总结使用LLM生成新的释义句子进行压缩——产生更具可读性的输出，但根据模型和任务，幻觉率为0.7–14%。对于法律和合规文件使用抽取式；对于研究综述和执行总结使用抽象式。',
+            },
+            {
+              q: '哪个AI模型在总结文件时的幻觉最少？',
+              a: '在Vectara的HHEM基准上——该基准是跨831份文档的文档总结忠实度标准测试——Google DeepMind的Gemini-2.0-Flash-001在2025年实现了0.7%的最低幻觉率。现在有四个模型在有根据的总结上实现了低于1%的速率。这些速率仅适用于源有根据的任务；开放域事实回忆在相同模型中产生3–33%的速率。',
+            },
+            {
+              q: 'AI总结工具一次最多可以处理多少页？',
+              a: '这取决于模型的上下文窗口。OpenAI的GPT-5.5每个会话大约处理100页（128k token限制）。Anthropic的Claude Opus 4.7大约处理160页（200k tokens）。Google DeepMind的Gemini 3.1 Pro大约处理800页（1M tokens）。Google DeepMind的NotebookLM支持最多50个源，总计约500,000字。对于更大的语料库，需要文档分块。',
+            },
+            {
+              q: 'NotebookLM或Claude哪个更适合文档总结？',
+              a: '它们服务于不同的需求。Google DeepMind的NotebookLM提供更严格的源有根据性和可点击的内联引文——对上传源的幻觉较少，更好地忠实表示文件内容。Anthropic的Claude Opus 4.7产生更细致的分析，善于跨多个文档进行综合，并识别非显而易见的联系——但有时会以微妙的误导方式混合源内容和常规训练知识。使用NotebookLM来追求精确；使用Claude来获得洞察。',
+            },
+            {
+              q: '如何防止AI在总结中产生幻觉？',
+              a: '四种技术可以减少总结任务中的幻觉：(1)明确指示模型——"仅从下面的文档总结；不添加外部知识"；(2)将温度(T)设置为0.0–0.1以实现最大确定性；(3)使用忠实度检查——要求模型列出其总结中的每一项声明及其源句子；(4)与第二个模型交叉检查——当GPT-5.5和Claude Opus 4.7对特定事实达成一致时，共享幻觉的概率在统计上接近零。',
+            },
+            {
+              q: '什么是文档分块，我何时应该使用它？',
+              a: '分块将文档分成片段（通常500–2,000 tokens），分别总结每个片段，然后将片段总结综合为最终输出。当文档超过模型上下文窗口时使用——对于GPT-5.5约100页（128k tokens），对于Claude Opus 4.7约160页（200k tokens），对于Gemini 3.1 Pro约800页（1M tokens）。对于具有明确结构的文档（法律合同、年度报告），按节标题进行主题分块可产生最连贯的最终综合。对于非结构化文本（电子邮件线程、记录），按段落进行分块，在500-token间隔处为推荐默认值。',
+            },
+            {
+              q: '什么是ROUGE和BERTScore，我应该使用哪个指标来评估AI总结？',
+              a: 'ROUGE测量生成的总结与参考之间的n-gram重叠——对基准测试有用，但对语义意义和事实准确性视而不见。BERTScore使用BERT嵌入之间的余弦相似性，捕捉语义相似性而非精确词匹配。对于生产文档工作流，单独使用都不够：使用忠实度指标如HHEM（Vectara）或FaithJudge来衡量总结是否仅包含源文档支持的声明。结合HHEM忠实度评分和完整性检查以获得最可靠的质量信号。',
+            },
+            {
+              q: 'AI总结工具能处理英文以外的文档吗？',
+              a: '可以，但需要注意。Mistral AI模型原生处理法语和欧洲语言，可本地部署以实现GDPR合规。Alibaba的Qwen 3对中文字符进行标记，比GPT-5.5少大约40%的tokens——使大规模中文文档处理显著更便宜。通过Ollama部署的LLaMA 4模型支持多语言总结，同时保持数据完全在本地，满足METI指南下日本企业的严格数据驻留要求。英文优先模型也可处理多语言文档，但在非拉丁字符上的错误率略高。',
+            },
+            {
+              q: '中国企业处理文件总结时需要满足哪些数据法规？',
+              a: '根据《数据安全法》（2021）和PIPL（个人信息保护法），AI生成的总结必须标记为AI生成，且中国用户的个人数据必须驻留在中国。Qwen 3和DeepSeek V3专为中文优化，可本地部署以满足数据驻留要求。金融、医疗和法律部门使用本地推理部署（Ollama + LLaMA）来完全避免跨境数据传输。',
+            },
+            {
+              q: '亚太地区企业如何选择合适的总结工具？',
+              a: '数据驻留框架因地区而异。日本企业通常选择Ollama本地部署以满足METI指南。新加坡和澳大利亚可使用Claude或GPT-5.5进行常规工作流程。东南亚企业应优先考虑本地可部署的模型（Mistral、Qwen）以最大化数据隐私。选择取决于数据敏感性、合规要求和处理规模。',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '来源和延伸阅读',
+          items: [
+            '[Liu等，2025。"文本总结中的幻觉检测和缓解框架"](https://www.nature.com/articles/s41598-025-31075-1) —— 引入Q-S-E方法论，用于跨CNN/DailyMail、PubMed和ArXiv基准的迭代幻觉纠正',
+            '[Vectara HHEM排行榜，2025。"Hughes幻觉评估模型——文档总结忠实度排名"](https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/) —— 在831份文档上测试100多个LLM；Gemini-2.0-Flash的幻觉率为0.7%',
+            '[SEI/CMU，2025。"评估LLM进行文本总结：简介"](https://www.sei.cmu.edu/blog/evaluating-llms-for-text-summarization-introduction/) —— 准确性、忠实度、压缩和效率评估框架',
+          ],
+        },
+      },
+    },
   };
+
