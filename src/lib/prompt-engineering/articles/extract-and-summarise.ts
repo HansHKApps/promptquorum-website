@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Extract and Summarise With AI',
-      intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
+      intro: 'AI-powered extraction and summarisation reduces document review time by 60–80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
       dateModified: '2026-04-29',
       seoTitle: 'How to Extract and Summarize Documents with AI Prompts 2026',
@@ -42,7 +42,7 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Extract and Summarise With AI',
-        description: 'AI document summarisation cuts review time by 60—80% with 0.7% hallucination rates. Learn extractive vs abstractive approaches, which models to use, and how to structure prompts for faithful outputs.',
+        description: 'AI document summarisation cuts review time by 60–80% with 0.7% hallucination rates. Learn extractive vs abstractive approaches, which models to use, and how to structure prompts for faithful outputs.',
         datePublished: '2026-03-23',
         dateModified: '2026-04-29',
         author: {
@@ -95,7 +95,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'What is the difference between extractive and abstractive AI summarisation?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Extractive summarisation copies sentences directly from the source document without modification — factual errors are structurally impossible because no new text is generated. Abstractive summarisation uses LLMs to generate new paraphrased sentences that condense information — producing more readable output but with hallucination rates of 0.7—14% depending on the model and task. Use extractive for legal and compliance documents; use abstractive for executive summaries and research synthesis.',
+              text: 'Extractive summarisation copies sentences directly from the source document without modification — factual errors are structurally impossible because no new text is generated. Abstractive summarisation uses LLMs to generate new paraphrased sentences that condense information — producing more readable output but with hallucination rates of 0.7–14% depending on the model and task. Use extractive for legal and compliance documents; use abstractive for executive summaries and research synthesis.',
             },
           },
           {
@@ -103,7 +103,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Which AI model hallucinates least when summarising documents?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3—33% across the same models.',
+              text: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3–33% across the same models.',
             },
           },
           {
@@ -127,7 +127,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'How do I prevent AI from hallucinating in my summaries?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0—0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Opus 4.7 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
+              text: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0–0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Opus 4.7 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
             },
           },
           {
@@ -151,7 +151,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Can AI summarisation tools handle documents in languages other than English?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes, with important caveats. Mistral AI models handle French and European languages natively and can be deployed locally for GDPR compliance. Qwen 2.5 (Alibaba) tokenises Chinese characters at roughly 40% fewer tokens than GPT-5.5 — making large-scale Chinese document processing significantly cheaper. LLaMA 3.1 models deployed via Ollama support multilingual summarisation while keeping data fully on-premise, satisfying data residency requirements for Japanese enterprises under METI guidelines. English-first models also handle multilingual documents but with slightly higher error rates on non-Latin scripts.',
+              text: 'Yes, with important caveats. Mistral AI models handle French and European languages natively and can be deployed locally for GDPR compliance. Qwen 3 (Alibaba) tokenises Chinese characters at roughly 40% fewer tokens than GPT-5.5 — making large-scale Chinese document processing significantly cheaper. LLaMA 4 models deployed via Ollama support multilingual summarisation while keeping data fully on-premise, satisfying data residency requirements for Japanese enterprises under METI guidelines. English-first models also handle multilingual documents but with slightly higher error rates on non-Latin scripts.',
             },
           },
         ],
@@ -214,7 +214,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               Method: 'Abstractive (LLM)',
-              'Hallucination Risk': '0.7—14% depending on model and task',
+              'Hallucination Risk': '0.7–14% depending on model and task',
               Readability: 'High — natural prose',
               'Best For': 'Research synthesis, executive summaries, reports',
             },
@@ -233,11 +233,11 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**NotebookLM (Google DeepMind) leads for source-grounded, cited summarisation of uploaded documents; Claude Opus 4.7 (Anthropic) leads for synthesis, cross-document analysis, and complex reasoning; GPT-5.5 (OpenAI) leads for fast, flexible general-purpose summarisation.**',
             'On Vectara\'s Hughes Hallucination Evaluation Model (HHEM) — the standard benchmark for document summarisation faithfulness, tested across 831 documents per model — the top performers in 2025 were:',
-            'These rates represent a 96% improvement from 2021, when the top models scored 21.8% hallucination rates on the same task. However, these numbers apply only to grounded summarisation — where the model is anchored to a source document. Open-domain factual recall produces hallucination rates of 3—33% across the same models.',
+            'These rates represent a 96% improvement from 2021, when the top models scored 21.8% hallucination rates on the same task. However, these numbers apply only to grounded summarisation — where the model is anchored to a source document. Open-domain factual recall produces hallucination rates of 3–33% across the same models.',
           ],
           items: [
             '**Gemini-2.0-Flash-001 (Google DeepMind):** 0.7% hallucination rate — lowest recorded on the benchmark',
-            '**OpenAI and Gemini variants:** 0.8—1.5% hallucination rate cluster',
+            '**OpenAI and Gemini variants:** 0.8–1.5% hallucination rate cluster',
             '**Overall top models:** 4 models now achieve sub-1% rates on grounded summarisation tasks',
           ],
         },
@@ -292,6 +292,7 @@ export const article: Record<Language, PEArticle> = {
         promptFramework: {
           id: 'five-component-prompt',
           title: 'What Are the 5 Components of an Effective Extraction Prompt?',
+          content: '**Bad prompt — unstructured, produces generic unusable output:**',
           items: [
             '**Role** — "You are an analyst specialising in [domain]."',
             '**Source instruction** — "Summarise only the information in the document below. Do not add external knowledge."',
@@ -313,15 +314,35 @@ export const article: Record<Language, PEArticle> = {
           id: 'chunking-long-documents',
           title: 'How Do You Handle Documents That Exceed the Context Window?',
           content: [
-            '**For documents exceeding the model\'s context window, chunking — splitting the document into segments of 500—2,000 tokens, summarising each chunk, then synthesising the chunk summaries — preserves information that would otherwise be truncated or degraded.**',
-            'The four chunking methods, ordered by reliability for structured documents:',
+            '**For documents exceeding the model\'s context window, chunking — splitting the document into segments of 500–2,000 tokens, summarising each chunk, then synthesising the chunk summaries — preserves information that would otherwise be truncated or degraded.**',
             'For documents with clear section structures (legal contracts, annual reports, academic papers), thematic chunking produces the most coherent final synthesis. For unstructured documents (email threads, transcripts), paragraph-based chunking at 500-token intervals is the recommended default.',
           ],
-          items: [
-            '**Thematic chunking** — divide by section headings or topic breaks; highest semantic coherence per chunk',
-            '**Paragraph-based chunking** — split at paragraph boundaries; preserves context better than sentence splitting',
-            '**Fixed token limit** — chunks at a defined token count (e.g., every 1,000 tokens); consistent but may split mid-argument',
-            '**Sentence-based chunking** — maximum granularity; most computationally intensive',
+          columns: ['Method', 'Coherence', 'Best For', 'Trade-off'],
+          rows: [
+            {
+              Method: 'Thematic (by section)',
+              Coherence: 'Highest',
+              'Best For': 'Reports, contracts, academic papers',
+              'Trade-off': 'Requires clear headings in source',
+            },
+            {
+              Method: 'Paragraph-based',
+              Coherence: 'High',
+              'Best For': 'Most document types',
+              'Trade-off': 'May split closely related ideas',
+            },
+            {
+              Method: 'Fixed token limit',
+              Coherence: 'Medium',
+              'Best For': 'Unstructured text',
+              'Trade-off': 'Splits mid-argument at arbitrary points',
+            },
+            {
+              Method: 'Sentence-based',
+              Coherence: 'Low',
+              'Best For': 'Maximum granularity',
+              'Trade-off': 'Highest compute cost; fragments context',
+            },
           ],
         },
         iterativeSummarisation: {
@@ -394,8 +415,8 @@ export const article: Record<Language, PEArticle> = {
           title: 'How Do GDPR, Chinese Law, and METI Guidelines Affect AI Summarisation?',
           content: [
             'European enterprises processing documents under GDPR cannot send sensitive content to external API endpoints without compliance review. Mistral AI (France) provides locally deployable models — Mistral Large and Mistral Small — that perform abstractive summarisation entirely on-premise, with zero data leaving the organisation\'s infrastructure, satisfying EU data residency requirements under Article 46 of GDPR.',
-            'Chinese enterprises increasingly use **Qwen 2.5** (Alibaba) and **DeepSeek V3** for document extraction tasks across Chinese-language corpora. Both models tokenise Chinese characters (CJK scripts) at a more efficient ratio than Western-trained models — a 10,000-character Chinese document consumes roughly 40% fewer tokens in Qwen 2.5 than in GPT-5.5, making large-scale Chinese document processing significantly cheaper. China\'s Interim Measures for Generative AI (2023) require AI-generated summaries used in official contexts to be labelled as AI-generated.',
-            'Japanese enterprises operating under METI data governance guidelines frequently deploy **Ollama** with LLaMA 3.1 models for local document summarisation. LLaMA 3.1 7B requires 8GB RAM for local inference and produces zero external API calls — meeting strict data residency requirements for sensitive legal and financial documents.',
+            'Chinese enterprises increasingly use **Qwen 3** (Alibaba) and **DeepSeek V3** for document extraction tasks across Chinese-language corpora. Both models tokenise Chinese characters (CJK scripts) at a more efficient ratio than Western-trained models — a 10,000-character Chinese document consumes roughly 40% fewer tokens in Qwen 3 than in GPT-5.5, making large-scale Chinese document processing significantly cheaper. China\'s Interim Measures for Generative AI (2023) require AI-generated summaries used in official contexts to be labelled as AI-generated.',
+            'Japanese enterprises operating under METI data governance guidelines frequently deploy **Ollama** with LLaMA 4 models for local document summarisation. LLaMA 4 7B requires 8GB RAM for local inference and produces zero external API calls — meeting strict data residency requirements for sensitive legal and financial documents.',
           ],
         },
         commonMistakes: {
@@ -415,6 +436,7 @@ export const article: Record<Language, PEArticle> = {
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational principles behind structured AI instructions',
             '[AI-Powered Research](/prompt-engineering/ai-powered-research) — how to combine extraction tools with multi-source verification workflows',
+            '[Why AI Hallucinates and How to Stop It](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — understanding the root causes of hallucination and proven mitigation strategies',
             '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — specific techniques for grounding AI outputs in verified source content',
             '[5 Building Blocks Every AI Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structured prompt components that directly improve extraction accuracy',
             '[Temperature and Top-P: How to Control AI Output](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — set Temperature to 0.0–0.1 for deterministic, hallucination-resistant summarisation',
@@ -438,11 +460,11 @@ export const article: Record<Language, PEArticle> = {
           faqs: [
             {
               q: 'What is the difference between extractive and abstractive AI summarisation?',
-              a: 'Extractive summarisation copies sentences directly from the source document without modification — factual errors are structurally impossible because no new text is generated. Abstractive summarisation uses LLMs to generate new paraphrased sentences that condense information — producing more readable output but with hallucination rates of 0.7—14% depending on the model and task. Use extractive for legal and compliance documents; use abstractive for executive summaries and research synthesis.',
+              a: 'Extractive summarisation copies sentences directly from the source document without modification — factual errors are structurally impossible because no new text is generated. Abstractive summarisation uses LLMs to generate new paraphrased sentences that condense information — producing more readable output but with hallucination rates of 0.7–14% depending on the model and task. Use extractive for legal and compliance documents; use abstractive for executive summaries and research synthesis.',
             },
             {
               q: 'Which AI model hallucinates least when summarising documents?',
-              a: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3—33% across the same models.',
+              a: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3–33% across the same models.',
             },
             {
               q: 'How many pages can AI summarisation tools process at once?',
@@ -454,7 +476,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'How do I prevent AI from hallucinating in my summaries?',
-              a: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0—0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Opus 4.7 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
+              a: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0–0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Opus 4.7 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
             },
             {
               q: 'What is document chunking and when should I use it?',
@@ -466,7 +488,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Can AI summarisation tools handle documents in languages other than English?',
-              a: 'Yes, with important caveats. Mistral AI models (France) handle French and European languages natively and can be deployed locally for GDPR compliance. Qwen 2.5 (Alibaba) tokenises Chinese characters at roughly 40% fewer tokens than GPT-5.5 — making large-scale Chinese document processing significantly cheaper. LLaMA 3.1 models deployed via Ollama support multilingual summarisation while keeping data fully on-premise, satisfying data residency requirements for Japanese enterprises under METI guidelines. English-first models (GPT-5.5, Claude Opus 4.7) also handle multilingual documents but with slightly higher error rates on non-Latin scripts.',
+              a: 'Yes, with important caveats. Mistral AI models (France) handle French and European languages natively and can be deployed locally for GDPR compliance. Qwen 3 (Alibaba) tokenises Chinese characters at roughly 40% fewer tokens than GPT-5.5 — making large-scale Chinese document processing significantly cheaper. LLaMA 4 models deployed via Ollama support multilingual summarisation while keeping data fully on-premise, satisfying data residency requirements for Japanese enterprises under METI guidelines. English-first models (GPT-5.5, Claude Opus 4.7) also handle multilingual documents but with slightly higher error rates on non-Latin scripts.',
             },
           ],
         },
