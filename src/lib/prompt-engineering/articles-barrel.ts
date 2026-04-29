@@ -65,6 +65,7 @@ import { article as a_manual_vs_automated_prompt_optimization } from "./articles
 import { article as a_how_to_evaluate_prompt_quality } from "./articles/how-to-evaluate-prompt-quality";
 import { article as a_prompt_evaluation_metrics } from "./articles/prompt-evaluation-metrics";
 import { article as a_how_to_test_prompts_across_models } from "./articles/how-to-test-prompts-across-models";
+import { article as a_how_to_reduce_prompt_brittleness } from "./articles/how-to-reduce-prompt-brittleness";
 import { article as a_best_prompt_engineering_ides } from "./articles/best-prompt-engineering-ides";
 import { article as a_prompting_across_languages } from "./articles/prompting-across-languages";
 import { article as a_prompt_review_workflow_for_teams } from "./articles/prompt-review-workflow-for-teams";
@@ -130,6 +131,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "how-to-evaluate-prompt-quality": a_how_to_evaluate_prompt_quality,
   "prompt-evaluation-metrics": a_prompt_evaluation_metrics,
   "how-to-test-prompts-across-models": a_how_to_test_prompts_across_models,
+  "how-to-reduce-prompt-brittleness": a_how_to_reduce_prompt_brittleness,
   "best-prompt-engineering-ides": a_best_prompt_engineering_ides,
   "prompting-across-languages": a_prompting_across_languages,
   "prompt-review-workflow-for-teams": a_prompt_review_workflow_for_teams,
