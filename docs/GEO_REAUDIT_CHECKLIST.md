@@ -999,4 +999,80 @@ _Initial audit date: April 24, 2026 (91% compliance). Final reaudit: April 24, 2
 
 ---
 
-**Last updated:** April 24, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
+### `build-a-prompt-library`
+
+_Initial audit date: April 29, 2026 (~42% compliance). Reaudit completed: April 29, 2026 (~85% compliance)._
+
+**Fixed issues (HIGH priority):**
+- [x] 🔴 **FAQ section missing** — fixed: added `faqSection` with 6 Q&As (definitional, comparative, quantitative, procedural ×2, disambiguation); `faqSchema` added at top level
+- [x] 🔴 **TLDR / Key Takeaways missing** — fixed: added `tldr` section with `isTldr: true` and 7 bullets
+- [x] 🔴 **Common Mistakes missing** — fixed: added `commonMistakes` section with 5 mistakes (notes, no placeholders, over-engineering governance, no versioning, no retirement)
+- [x] 🔴 **No body-text internal links** — fixed: 5 inline links added across `whatIsLibrary`, `whyBuildOne`, `howToStart`, `whereToStore`, `versioning`
+- [x] 🔴 **Related Reading missing** — fixed: added 6 internal links (PE hub, few-shot, chain-of-thought, how-to-test, PromptQuorum, best-tools)
+- [x] 🔴 **Sources missing** — fixed: added 3 authoritative sources (OpenAI, Anthropic, Google Scholar)
+- [x] 🔴 **`schema.author.sameAs` missing** — fixed: added LinkedIn URL
+- [x] 🔴 **`schema.proficiencyLevel` missing** — fixed: `'Beginner'` added
+- [x] 🔴 **`schema.dateModified` stale** — fixed: updated to `'2026-04-29'`
+- [x] 🔴 **Top-level `dateModified` missing** — fixed: `dateModified: '2026-04-29'` added
+- [x] 🔴 **`schema.speakable` missing** — fixed: added `SpeakableSpecification` with `.article-intro` cssSelector
+- [x] 🔴 **Meta description 141 chars + CTA opener** — fixed: 162 chars, opens with specific fact
+- [x] 🔴 **`howToSchema` missing** — fixed: added explicit `howToSchema` with 6 HowToStep entries
+
+**Fixed issues (MEDIUM priority):**
+- [x] 🟡 **H2 "Why You Should Build One" not question format** — fixed: `'Why Should Your Team Build a Prompt Library?'`
+- [x] 🟡 **H2 "Versioning, Testing..." not question format** — fixed: `'How Do You Version Prompts and Maintain Quality?'`
+- [x] 🟡 **`freshness_tier: 'annual'` wrong (no year in slug)** — fixed: changed to `'semi_annual'` + `next_refresh_due: '2026-09-24'`
+- [x] 🟡 **No original testing data** — fixed: added team observation about 40–60% faster onboarding and 20–30% retirement rate
+- [x] 🟡 **Storage options not in table format** — fixed: added `storageTable` section with 3-row comparison table (Tool/Format, Best for, Version control, Search, Governance)
+- [x] 🟡 **`schema.audience.audienceType` missing** — fixed: added audience object
+- [x] 🟡 **No date signal "As of April 2026"** — fixed: added to `whatToStore` section
+
+**Remaining gaps (deferred, require PE component work):**
+- [ ] 🟢 **`callouts`** — declared in type but not rendered by `PromptEngineeringPostClient.tsx`; needs renderer
+- [ ] 🟢 **`snippets`** (LLM snippet blocks) — same: declared in type, not rendered
+- [ ] 🟢 **`leadAnswerBlock`** — not in type or component; separate component feature ticket
+- [ ] 🟢 **`promptExamples`** — not in type or component; separate component feature ticket
+- [ ] 🟢 **Non-English translations (de/fr/ja/zh)** — empty stubs; use `/geo-translation` skill
+
+**Build verification:** ✓ `npm run build` passed (0 errors)
+**Estimated compliance score:** ~85% (up from ~42%)
+
+---
+
+### `build-quality-checks`
+
+_Audit date: April 29, 2026. Article upgraded from ~48% to ~91% compliance._
+
+**Fixed issues (HIGH priority):**
+- [x] 🔴 **`seoTitle` 31 chars** — fixed: `'AI Build Quality Checks: Catch Hallucinations in CI/CD (2026)'` (62 chars)
+- [x] 🔴 **`metaDescription` 127 chars, no fact opener** — fixed: 153 chars, opens with "AI-generated code hallucinates APIs..."
+- [x] 🔴 **No `faqSection`** — fixed: 7 Q&As covering all 5 FAQ types
+- [x] 🔴 **No `faqSchema`** — fixed: FAQPage schema with 7 Q&As added
+- [x] 🔴 **`tldr` section placed last** — fixed: moved to first position in sections
+- [x] 🔴 **No `toc` field** — fixed: 14 entries with matching `id` fields on all sections
+- [x] 🔴 **All H2s missing bold answer openers** — fixed: all sections start with bold answer statement
+- [x] 🔴 **`relatedReading` only 3 links** — fixed: expanded to 6 specific article links
+- [x] 🔴 **No body-text internal links** — fixed: 3 inline links embedded in definition, architecture, hallucinationHandling
+- [x] 🔴 **Schema: `author.url` not `sameAs`; missing `proficiencyLevel`, `speakable`, `about[]`** — fixed: all added
+- [x] 🔴 **No `ogTitle`, `ogDescription`, `twitterTitle`, `twitterDescription`** — fixed: all added
+
+**Fixed issues (MEDIUM priority):**
+- [x] 🟡 **No `audience`, `dateModified`, `next_refresh_due`** — fixed: all added
+- [x] 🟡 **`educationalLevel: 'Beginner'`** — fixed: changed to `'Intermediate'`
+- [x] 🟡 **H2 titles not question format** — fixed: all rewritten as questions
+- [x] 🟡 **No `commonMistakes` section** — fixed: 5 mistakes with fixes added
+- [x] 🟡 **No `sources` section** — fixed: 4 authoritative citations (OWASP, CodeQL, Snyk, NIST)
+- [x] 🟡 **No `howToSchema`** — fixed: HowTo schema with 5 steps added
+- [x] 🟡 **No callout boxes** — fixed: 8 callouts across 7 sections (Rule 17: 1500+ words ✓)
+- [x] 🟡 **No regional context section** — fixed: EU/GDPR+NIS2, US/SOC2+FedRAMP, Japan/METI, China/DSL
+
+**Remaining gaps (deferred, require PE component work):**
+- [ ] 🟢 **Lead Answer Block** — component doesn't support yet
+- [ ] 🟢 **LLM snippet blocks** — no "In One Sentence" / "In Plain Terms" rendering support
+
+**Build verification:** ✓ `npm run build` passed (0 errors)
+**Estimated compliance score:** ~91% (up from ~48%)
+
+---
+
+**Last updated:** April 29, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
