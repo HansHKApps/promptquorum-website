@@ -2251,5 +2251,580 @@ export const article: Record<Language, PEArticle> = {
   freshness_tier: 'semi_annual',
   next_refresh_due: '2026-09-24',
 },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: {
+  theme: '基础知识',
+  title: '构建提示词库，节省时间',
+  intro: '提示词库是一个包含元数据的、经过测试的指令集合，您的团队可以共享和改进。构建得当，它成为团队的第二大脑：减少设置时间、加速新员工入职、防止优质提示词丢失。本指南提供了12步框架，帮助您构建团队真正会使用的提示词库。',
+  seoTitle: '构建提示词库：团队12步框架（2026版）',
+  metaDescription: '提示词库是包含元数据的共享可搜索提示词集合。构建提示词库的团队能节省数小时的设置时间并加速入职。这是一个经验证的框架。',
+  publishDate: '2026-03-24',
+  dateModified: '2026-04-29',
+  readTime: '阅读约10分钟',
+  educationalLevel: 'Beginner',
+  audience: '采用AI工具的团队负责人和从业者',
+  leadAnswerBlock: '提示词库是包含元数据的结构化、可搜索的提示词集合——不仅仅是一个列表。构建得当的提示词库能为团队节省数小时的提示词设置时间，并加快新员工入职。本指南涵盖构建团队真正使用的提示词库的12个关键步骤。',
+  quickFacts: [
+    '提示词库将新提示词的设置时间从多小时缩短至几分钟。',
+    '每个提示词至少需要：标题、内容、输入变量、输出格式、标签、所有者、版本。',
+    '最优组织方式：按任务/功能（不按模型）；模型详情在元数据中。',
+    '轻量级治理（草稿→已批准→已弃用）防止质量下降，保持库的可用性。',
+    '版本控制至关重要：v1.0、v1.1 附带更改说明；必须支持回滚。',
+  ],
+  toc: [
+    { label: '什么是提示词库？', anchor: 'what-is-library' },
+    { label: '团队为什么要构建？', anchor: 'why-build-one' },
+    { label: '应该存储什么？', anchor: 'what-to-store' },
+    { label: '如何开始？', anchor: 'how-to-start' },
+    { label: '版本控制和质量管理', anchor: 'versioning' },
+    { label: '存储位置选择', anchor: 'where-to-store' },
+    { label: '常见错误', anchor: 'common-mistakes' },
+    { label: '地区和合规考虑', anchor: 'regional-considerations' },
+    { label: '常见问题', anchor: 'faq-section' },
+    { label: '延伸阅读', anchor: 'related-reading' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    url: 'https://www.promptquorum.com/prompt-engineering/build-a-prompt-library?lang=zh',
+    inLanguage: 'zh',
+    headline: '构建提示词库，节省时间',
+    description: '提示词库是您的团队共享和改进的经过测试的指令集合，包含元数据。',
+    datePublished: '2026-03-24',
+    dateModified: '2026-04-29',
+    author: { '@type': 'Organization', name: 'PromptQuorum' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: '提示词库' },
+      { '@type': 'Thing', name: '提示词工程' },
+      { '@type': 'Thing', name: 'AI治理' },
+    ],
+    mentions: [
+      { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      { '@type': 'SoftwareApplication', name: 'Notion' },
+      { '@type': 'SoftwareApplication', name: 'Airtable' },
+    ],
+    teaches: [
+      '如何为团队构建结构化的提示词库',
+      '每个提示词必须包含的信息（元数据、版本、所有者）',
+      '如何按任务/功能组织提示词',
+      '质量管理的轻量级治理流程',
+      '提示词管理工具和平台',
+    ],
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    audience: { '@type': 'Audience', audienceType: '团队负责人和AI从业者' },
+    keywords: ['提示词库', '提示词工程', 'AI治理', '提示词管理', '版本管理', '团队协作'],
+    primaryTerm: '提示词库',
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'zh',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: '什么是提示词库？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '提示词库是您的团队作为唯一信息源管理的结构化、可搜索的提示词集合。它可以存储在Git仓库、Notion、Airtable、Google Sheet或PromptQuorum等专用工具中。目标是标准化、共享和改进提示词。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '什么时候应该使用库而不是个人笔记？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '一旦多个人使用相同的提示词。个人笔记适合个人工作，但当团队增长时，优质提示词会丢失，团队会浪费时间重复工作。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '从零开始构建可用的提示词库需要多长时间？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '含10-15个经过测试的提示词的最小库需要2-4周（取决于团队规模）。通过持续使用和月度审查，质量会不断提高。一旦建立，维护每周只需不到1小时。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '如何让团队真正为共享库做贡献？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '让贡献尽可能简单：表单或Git模板、清晰的元数据要求、月度审查。最重要的是：展示价值——当团队看到他们的提示词被使用和改进时，他们会贡献。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '提示词库与系统提示词相同吗？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '不相同。系统提示词是一次定义然后应用于所有输入的规则。提示词库是针对不同任务的不同提示词的集合——每个都有自己的元数据和版本。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '团队应该多久审查和整理一次库？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '每月一次为宜。标记使用少的提示词为已弃用，将改进版本升级为已批准，在使用方式改变时创建新类别。月度审查的团队6个月内可减少20-30%的冗余。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '如何处理在一个模型上有效但在另一个模型上无效的提示词？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-4o"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '提示词库和提示词管理平台有什么区别？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '提示词库是您的团队管理的结构化提示词记录的集合——可以存储在Git仓库、电子表格或专用工具中。提示词管理平台在库的基础上增加了执行、分析、版本控制和协作功能。从简单库开始，当需要更多治理时升级到平台。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '使用PromptQuorum时需要遵守数据安全法吗？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '是的。根据2021年的数据安全法，如果提示词模板包含或涉及敏感数据，存储工具必须符合数据安全法要求。PromptQuorum提供中国地区部署选项，并支持本地推论以满足数据驻留和处理要求。对于金融、医疗、法律等受管制行业，使用本地推论确保敏感工作流的合规性。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '企业合规下如何实现本地推论？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '结合本地推论（LM Studio、Ollama等）和PromptQuorum，可以在自有基础设施中管理敏感提示词。混合方法：在PromptQuorum中管理元数据和标准化，在本地环境中执行。这既确保数据主权，又能享受库的优势。',
+        },
+      },
+    ],
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    inLanguage: 'zh',
+    name: '如何构建提示词库',
+    description: '构建团队真正使用的提示词库的12步框架。',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: '收集团队现在使用的真实提示词',
+        text: '从基层开始。询问每个团队成员："您经常使用的三个最佳提示词是什么？"收集10-15个产生实际结果的真实提示词。这将成为您的基础库。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: '将每个提示词标准化为相同结构',
+        text: '添加元数据：标题、正文（提示词）、输入变量（如<CUSTOMER_NAME>）、预期输出格式、标签、所有者、版本。这防止库增长时的混乱。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: '按任务/功能而非模型组织',
+        text: '结构：「会议总结」→ v1.0 (Claude)、v1.0 (GPT-4o)，而不是「Claude提示词」→「会议总结」。模型详情属于元数据，不是文件夹结构。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: '实施轻量级治理：草稿→已批准→已弃用',
+        text: '新提示词以草稿开始。测试和反馈后变为已批准。过时或被替代的变为已弃用（不删除，防止参考断裂）。这防止坏提示词进入生产。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: '明确版本控制：v1.0、v1.1带更改说明',
+        text: '每个更改都获得版本号和更改说明。示例：v1.1「通过3个例子减少幻觉」。这使回滚简单，团队能理解改进。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 6,
+        name: '建立月度审查周期',
+        text: '每月：哪些提示词受欢迎？哪些从未使用？提升改进的版本、标记已弃用。这保持库的实用性。',
+      },
+    ],
+  },
+  sections: {
+    tldr: {
+      isTldr: true,
+      items: [
+        '提示词库 = 有元数据的结构化库，不仅仅是列表',
+        '每个条目需要：标题、正文、输入变量、输出格式、标签、所有者、版本',
+        '自下而上构建：先收集真实提示词，再标准化为模板',
+        '按任务/功能组织（不按模型）；模型详情在元数据中',
+        '轻量级治理（草稿→已批准→已弃用）防止质量下降',
+        '明确版本管理（v1.0、v1.1）附带更改说明；支持回滚',
+        '月度审查：淘汰低使用提示词，升级改进版本',
+      ],
+    },
+    whatIsLibrary: {
+      id: 'what-is-library',
+      title: '什么是提示词库？',
+      content: [
+        '提示词库是您的团队作为唯一信息源管理的结构化、可搜索的提示词集合。每个提示词都是带有元数据（标题、所有者、版本、标签、已测试模型）的记录，不只是文档中的文本。',
+        '库可以存储在任何地方——Git仓库、Notion、Airtable、Google Sheet或PromptQuorum等专用工具。关键：它是可搜索的、有版本管理的、团队可访问的。',
+        '目标：团队节省时间（不重新发明提示词）、快速入职（新员工使用已验证的提示词而不是从零开始）、防止质量下降（坏提示词被排除，好的被改进）。',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: '不仅仅是列表',
+          text: 'Slack消息或Google Doc中的提示词集合是开始——但不是真正的库。真正的库是可搜索的、有版本管理的、带有元数据的。',
+        },
+      ],
+    },
+    libraryAsset: {
+      id: 'library-asset',
+      title: '为什么提示词库是数字资产？',
+      content: '一个经过验证的提示词库就像代码库——它是一个知识资产，支持重用、提高质量、加速入职。当最优秀的人离开时，他们经过测试的提示词不会随之消失。',
+    },
+    whyBuildOne: {
+      id: 'why-build-one',
+      title: '团队为什么要构建？',
+      items: [
+        '节省时间：新提示词需要数小时试错。库将设置从小时缩短到分钟。',
+        '快速入职：新员工第一天就用验证的提示词，不用从头开始。',
+        '质量控制：坏提示词被过滤，好的被持续改进。质量不断上升。',
+        '保留知识：当人离开时，他们验证的提示词保留在库中。',
+        'A/B测试：比较版本（v1.0 vs v1.1），看哪个效果更好。',
+        '简化模型实验：在GPT-4o、Claude、Llama 3.1上测试同一提示词——追踪哪个最佳。',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: '无库时的扩展混乱',
+          text: '无库的团队遭遇：重复工作（每人重新发明相同提示词）、质量下降（坏提示词流传）、缓慢入职（新员工无起点）。',
+        },
+      ],
+    },
+    sharedSystem: {
+      id: 'shared-system',
+      title: '提示词库是团队共享的系统',
+      content: '关键：不是自上而下强制，而是自下而上构建。您的团队提供真实提示词。您一起标准化和管理它们。治理很轻——足够的结构防止混乱，但不会使贡献不可能。',
+    },
+    whatToStore: {
+      id: 'what-to-store',
+      title: '提示词库中应该存储什么？',
+      content: '不是任何人曾经写过的每个提示词——只是可重用的、驱动业务成果的提示词。',
+      items: [
+        '特定任务提示词：「会议总结」「邮件草稿」「代码审查」「客户Q&A」',
+        '已测试提示词：在生产环境中验证过，有文档记录的结果',
+        '团队提示词：多人使用的。个人提示词无需保存（保持本地）',
+        '可重用提示词：适用于不同输入的（不是针对单个文档的一次性提示词）',
+      ],
+    },
+    schemaBreakdown: {
+      id: 'schema-breakdown',
+      title: '每个条目应该包含什么？',
+      items: [
+        '**标题**：简洁、描述性（「会议总结v1.1」，不是「我的最佳提示词」）',
+        '**提示词正文**：带占位符的真实提示词（<MEETING_TRANSCRIPT>、<TONE>）',
+        '**输入变量**：什么可能改变？（<LANGUAGE>、<CUSTOMER_TYPE>、<FORMAT>）',
+        '**输出格式**：期望输出是什么？（JSON、Markdown、纯文本、列表？）',
+        '**所有者**：谁写的？谁负责更新？',
+        '**标签**：搜索类别（「销售」「支持」「法律」「内容生成」）',
+        '**版本**：v1.0、v1.1、v2.0——附带更改说明',
+        '**已测试模型**：「Claude 4.6、GPT-4o」（帮助团队选择正确变体）',
+        '**状态**：草稿、已批准、已弃用（防止坏提示词进入生产）',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: '将输入存储为占位符',
+          text: '在提示词正文中始终使用`<VARIABLE>`，不用真实数据。真实数据仅在运行时输入，不在模板中。',
+        },
+      ],
+      promptExamples: [
+        {
+          bad: 'Meeting Summary Prompt\n\nMy meeting with Sarah Johnson on March 24 was about Q2 budget planning. Here\'s what happened: ....',
+          good: 'Meeting Summary (v1.1 – Claude)\n\nInput: <MEETING_TRANSCRIPT>\nOutput: JSON with {summary: string, action_items: string[], duration_minutes: number}\n\nPrompt: 总结以下会议...',
+          badLabel: '❌ 正文中个人数据、无结构、无变量',
+          goodLabel: '✅ 占位符、清晰格式、版本控制、模型特定',
+        },
+      ],
+    },
+    optionalFields: {
+      id: 'optional-fields',
+      title: '可选字段（后来添加）',
+      content: '从上面的9个必要字段开始。您可以稍后添加：',
+      items: [
+        '**成本说明**：「此提示词在GPT-4o上成本约0.02美元/调用」',
+        '**性能指标**：「延迟：<2秒」「令牌计数：~500」',
+        '**学到的教训**：「尝试少样本——不改进此任务的准确性」',
+        '**依赖关系**：「需要retrieval_context输入（来自RAG系统）」',
+      ],
+    },
+    howToStart: {
+      id: 'how-to-start',
+      title: '开始方式：6步框架',
+      numberedItems: [
+        {
+          title: '收集真实提示词',
+          whyItMatters: '问每个人："您定期使用的3个最佳提示词是什么？"收集10-15个真实提示词。这成为您的基础库——不是理论性的，而是生产中实际使用的。',
+        },
+        {
+          title: '标准化结构',
+          whyItMatters: '使用9个必要字段（标题、带占位符的正文、输入变量、输出格式、标签、所有者、版本、状态、已测试模型）。所有提示词应有相同结构。',
+        },
+        {
+          title: '按任务组织',
+          whyItMatters: '结构：「销售」（邮件草稿、异议处理、提议审查）而不是「Claude提示词」（混乱）。模型详情在元数据中，不在文件夹名称中。',
+        },
+        {
+          title: '引入轻量级治理',
+          whyItMatters: '草稿→已批准→已弃用。新提示词从草稿开始。测试+反馈后变为已批准。旧的变为已弃用（不删除）。这防止坏提示词进入生产。',
+        },
+        {
+          title: '明确版本',
+          whyItMatters: 'v1.0、v1.1、v2.0附带更改说明。示例：v1.1「通过3个例子减少幻觉」。回滚容易，改进清晰。',
+        },
+        {
+          title: '启动月度审查',
+          whyItMatters: '每月：哪些提示词受欢迎？哪些未使用？升级改进版本、标记已弃用。这保持库精瘦且有用。',
+        },
+      ],
+      snippets: [
+        {
+          type: 'in-one-sentence',
+          text: '自下而上构建（收集真实提示词）→标准化→轻量级治理→月度审查。',
+        },
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: '初期不要过度工程化',
+          text: 'Google Sheet适用于1-20个提示词。当您有30+个或需要API访问时，升级到Notion/Airtable/PromptQuorum。',
+        },
+      ],
+    },
+    timelyRefinement: {
+      id: 'timely-refinement',
+      title: '持续改进：库通过使用而增长更强',
+      content: [
+        '您库的第一版是草稿。真正的价值来自持续使用和月度改进。',
+        '一周后：团队最常用什么？出现了什么问题？将该反馈融入下一版本。',
+      ],
+    },
+    whereToStore: {
+      id: 'where-to-store',
+      title: '应该在哪里存储？',
+      content: '选择取决于团队规模、治理要求和集成。有3个常见选项：',
+    },
+    storageOptions: {
+      id: 'storage-options',
+      items: [
+        '**Git中的Markdown** ——最适合<5人团队。免费、有版本、接近代码。问题：不可搜索（除了grep）。',
+        '**Notion或Airtable** ——最适合5-20人团队。可搜索、美观UI、易协作。问题：不是API原生（PromptQuorum是API优先）。',
+        '**专用平台（PromptQuorum）** ——最适合>20人团队或需要治理、审计、API访问时。',
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: '小规模开始',
+          text: 'Git第一周足够。当团队>5或需要频繁搜索时，升级到Notion/Airtable/PromptQuorum。',
+        },
+      ],
+    },
+    structureApproach: {
+      id: 'structure-approach',
+      title: '组织结构',
+      content: '无论存储在哪里：结构应按**任务/功能**，不是按模型。',
+      items: [
+        '✅ 正确：销售→邮件草稿(v1.0 Claude、v1.0 GPT-4o)→异议处理(v1.1 Claude)',
+        '❌ 错误：Claude→销售提示词→邮件草稿',
+      ],
+    },
+    structureFlexibility: {
+      id: 'structure-flexibility',
+      title: '为什么按任务而非模型？',
+      content: '如果按模型组织，会发生这种情况：您想在另一模型上测试提示词。现在您需要复制、重命名、保持两个版本同步。这容易出错且乏味。',
+      items: [
+        '按任务：「邮件草稿」有变体（Claude v1.0、GPT-4o v1.0）作为清晰条目。易于比较、易于更新。',
+      ],
+    },
+    storageTableNote: {
+      id: 'storage-table-note',
+      title: '3个存储选项比较',
+      callouts: [
+        {
+          type: 'info',
+          label: '下表',
+          text: '根据团队大小、可搜索性、API需求选择选项。',
+        },
+      ],
+    },
+    storageTable: {
+      id: 'storage-table',
+      tableFormat: true,
+      columns: ['选项', '最适合', '版本控制', '搜索', '治理'],
+      rows: [
+        {
+          '选项': 'Git中的Markdown',
+          '最适合': '<5人团队、工程导向',
+          '版本控制': '原生(Git)',
+          '搜索': '仅grep',
+          '治理': '手动(PR审查)',
+        },
+        {
+          '选项': 'Notion / Airtable',
+          '最适合': '5-20人团队、非技术访问重要',
+          '版本控制': '内置(基本)',
+          '搜索': '原生(标签/搜索)',
+          '治理': '权限但审计少',
+        },
+        {
+          '选项': 'PromptQuorum(专用)',
+          '最适合': '>20人团队、治理/审计必需',
+          '版本控制': '完整(回滚、Diffs)',
+          '搜索': '原生 + API',
+          '治理': 'RBAC、审计日志、批准工作流',
+        },
+      ],
+    },
+    versioning: {
+      id: 'versioning',
+      title: '版本控制和质量维持',
+      content: '版本控制是运作良好的库的支柱。没有明确版本会发生这种情况：有人改提示词→生产系统破裂→没人知道为什么。',
+      items: [
+        '**v1.0**：首个稳定版。生产就绪。测试过的结果。',
+        '**v1.1**：小改进。同样逻辑、更好结果（如「v1.1：+2示例减少幻觉」）。',
+        '**v2.0**：大重写。逻辑、输入变量或输出格式改变。大版本罕见。',
+        '**更改说明**：总是记录改了什么（「通过添加风格指南改进客户语气」）——不只是「更新」。',
+        '**回滚可能**：保持旧版本可访问。如果v1.1不如预期，1次点击回到v1.0。',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: '无版本的「最新」不行',
+          text: '如果系统总是用「最新」且有人改提示词，所有生产系统破裂。始终用明确版本(v1.0、v1.1、v2.0)。',
+        },
+      ],
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: '常见错误和回避方法',
+      mistakes: [
+        {
+          mistake: '在提示词正文中存储真实数据',
+          problem: '例子：「Sarah Johnson的会议...」。分享或Git上传时，真实个人数据容易暴露。',
+          fix: '始终用占位符：<CUSTOMER_NAME>。真实数据仅在运行时输入。',
+        },
+        {
+          mistake: '不定义输入变量',
+          problem: '某人用「我今天10点的会议...」——但未记录什么可能改变。其他人用硬编码数据用提示词。',
+          fix: '记录每个变量：<MEETING_TIME>、<PARTICIPANT_COUNT>、<FOCUS>。显示如何替换。',
+        },
+        {
+          mistake: '初期过度治理',
+          problem: '从复杂批准工作流（3审查人、控制委员会）开始。2周后：没人贡献。',
+          fix: '从草稿→已批准→已弃用开始。仅此。复杂工作流后来，如果团队>15。',
+        },
+        {
+          mistake: '不标记旧提示词为已弃用',
+          problem: '旧版本堆积。团队困惑：「用v1.0还是v1.1？」生产用旧的坏版本。',
+          fix: '月度审查：未使用的标记为已弃用(不删除——代码中的引用可能破裂)。附带理由。',
+        },
+        {
+          mistake: '从不审查、从不改进',
+          problem: '库停滞。坏提示词未修复。好版本未升级。团队失信。',
+          fix: '月度1小时审查：分析最用的提示词、整合反馈、升级最佳为已批准。改进显示库活跃。',
+        },
+      ],
+    },
+    regionalConsiderations: {
+      id: 'regional-considerations',
+      title: '地区和合规考虑',
+      content: [
+        '**数据驻留和合规要求影响您存储提示词的位置和方式，特别是当提示词正文包含敏感客户数据作为占位符时。**',
+        '2026年4月，主要地区约束：',
+      ],
+      items: [
+        '**中国 / 数据安全法**：2021年数据安全法要求敏感数据（含金融、医疗、法律记录标识符的提示词）需本地基础设施。使用本地推论（LM Studio、Ollama）或自托管选项——不是消费级SaaS。本地推论 + PromptQuorum元数据管理的混合方法满足合规需求。',
+        '**US SOC 2**：需要供应商合规的企业客户应选择SOC 2Type II认证工具（Notion、Airtable、PromptQuorum 2026版都符合）。',
+        '**跨境数据**：根据PIPL，包含个人数据的提示词模板需本地存储。使用本地推论确保数据驻留合规。',
+        '**建议**：分离敏感提示词（接受PII作为输入）和通用提示词。对敏感组应用更强访问控制和更短保留期。',
+      ],
+      callouts: [
+        {
+          type: 'warning',
+          label: '绝不在提示词正文中存储真实PII',
+          text: '模板应用占位符如<CUSTOMER_NAME>——绝不用真实名称、邮件、ID。真实数据仅在运行时输入，不在存储的模板中。',
+        },
+      ],
+    },
+    faqSection: {
+      id: 'faq-section',
+      title: '常见问题',
+      faqs: [
+        {
+          q: '什么是提示词库？',
+          a: '提示词库是您的团队作为唯一信息源管理的结构化、可搜索的提示词集合。可以存储在Git仓库、Notion、Airtable、Google Sheet或专用工具中。目标是重用、改进质量、加快入职。',
+        },
+        {
+          q: '何时用库而不是个人笔记？',
+          a: '一旦多个人使用相同提示词。个人笔记对个人有效——但团队增长时丢失优质提示词，浪费时间重复工作。',
+        },
+        {
+          q: '从零构建可用库需多久？',
+          a: '含10-15个经测试提示词的最小库需2-4周(按团队规模)。持续使用和月审查时质量持续提高。一旦建立，维护每周<1小时。',
+        },
+        {
+          q: '如何让团队真实贡献？',
+          a: '让贡献尽简单：表单或Git模板、清晰元数据要求、月审查。最重要：显示价值——团队看到提示词被用和改进时会贡献。',
+        },
+        {
+          q: '库与系统提示词相同吗？',
+          a: '不同。系统提示词是一次定义应用到全部输入的规则。库是不同任务的不同提示词集合——各有元数据和版本。',
+        },
+        {
+          q: '多久审查和整理一次库？',
+          a: '每月为宜。标记少用提示词为已弃用、升级改进版本为已批准、使用改变时创建新类别。月审查团队6个月内减少20-30%冗余。',
+        },
+        {
+          q: '一个模型有效但另一个无效的提示词如何处理？',
+          a: '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-4o」）而不强制一个提示词处处工作。多模型工具升级前比较输出。',
+        },
+        {
+          q: '库和管理平台有何区别？',
+          a: '库是团队管理的结构化提示词记录集合(可在Git、表格、专用工具中)。平台在库基础加执行、分析、版本管理、协作。从简单库开始，需要时升级到平台。',
+        },
+        {
+          q: '使用PromptQuorum需遵守数据安全法吗？',
+          a: '是的。按数据安全法，敏感数据相关提示词工具必须符合法律。PromptQuorum提供中国部署选项且支持本地推论满足驻留和处理要求。受管制行业用本地推论确保敏感工作流合规。',
+        },
+        {
+          q: '企业合规下如何用本地推论？',
+          a: '结合本地推论(LM Studio、Ollama等)和PromptQuorum可在自有基础设施管理敏感提示词。混合：在PromptQuorum管理元数据和标准化，在本地环境执行。既保数据主权又享库优势。',
+        },
+      ],
+    },
+    relatedReading: {
+      id: 'related-reading',
+      title: '延伸阅读',
+      items: [
+        { title: '提示词工程基础', url: '/prompt-engineering/fundamentals?lang=zh' },
+        { title: '少样本提示词：用示例更好地提示', url: '/prompt-engineering/few-shot-prompting?lang=zh' },
+        { title: '思路链提示词：逐步推理', url: '/prompt-engineering/chain-of-thought?lang=zh' },
+        { title: 'PromptQuorum：简化提示词管理', url: '/features?lang=zh' },
+        { title: '系统提示词 vs 用户提示词：有何区别？', url: '/prompt-engineering/system-prompt-vs-user-prompt?lang=zh' },
+        { title: '提示词测试和优化', url: '/prompt-engineering/prompt-testing?lang=zh' },
+      ],
+    },
+    sources: {
+      id: 'sources',
+      title: '来源和延伸阅读',
+      items: [
+        { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
+        { title: 'Anthropic: Prompt Engineering Overview', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
+        { title: 'Lilian Weng: Prompt Engineering (2023)', url: 'https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/' },
+        { title: 'Google DeepMind: Prompting Strategies', url: 'https://ai.google.dev/gemini-api/docs/prompting-strategies' },
+      ],
+    },
+  },
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-09-24',
+},
   };
