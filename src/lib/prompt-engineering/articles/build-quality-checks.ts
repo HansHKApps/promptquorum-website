@@ -18,7 +18,7 @@ export const article: Record<Language, PEArticle> = {
       ogDescription: 'AI invents package names, fakes APIs, and silently misimplements requirements. These 5 gates catch hallucinations before merge.',
       twitterTitle: 'Your CI/CD Can\'t Catch AI Hallucinations. Here\'s What to Add',
       twitterDescription: 'AI writes code that compiles, passes lint, and still breaks in production. Dependency checks, API reality checks, and SAST gates are the fix.',
-      intro: 'AI-generated code fails traditional quality gates at scale: studies and industry reports consistently find that AI-written programs contain exploitable vulnerabilities at significantly higher rates than human-reviewed code, and a measurable fraction of AI-suggested packages or APIs simply do not exist. To keep these hallucinations and AI-specific failure modes out of production, build quality checks must evolve from generic "tests + coverage" gates into AI-aware pipelines that detect unreal APIs, fake dependencies, and confident-but-wrong logic before merge.',
+      intro: '**AI-generated code fails traditional quality gates at scale: studies and industry reports consistently find that AI-written programs contain exploitable vulnerabilities at significantly higher rates than human-reviewed code, and a measurable fraction of AI-suggested packages or APIs simply do not exist.** To keep these hallucinations out of production, build quality checks must evolve from generic "tests + coverage" gates into AI-aware pipelines that detect unreal APIs, fake dependencies, and confident-but-wrong logic before merge.',
       publishDate: '2026-03-24',
       dateModified: '2026-04-29',
       readTime: '10 min read',
@@ -35,7 +35,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'How Do You Handle Hallucinations in the Pipeline?', anchor: '#hallucination-handling' },
         { label: 'How Do You Make AI Quality Checks Developer-Friendly?', anchor: '#developer-friendly' },
         { label: 'Example: Extending a Classic Gate for AI Code', anchor: '#example' },
-        { label: 'How to Build AI-Aware Quality Checks', anchor: '#how-to-start' },
+        { label: 'Step-by-Step: How Do You Set Up AI-Aware Quality Checks?', anchor: '#how-to-start' },
         { label: 'Common Mistakes to Avoid', anchor: '#common-mistakes' },
         { label: 'Regional Considerations', anchor: '#regional-context' },
         { label: 'FAQ', anchor: '#faq' },
@@ -129,6 +129,14 @@ export const article: Record<Language, PEArticle> = {
               text: 'Start all new rules in warning mode to gather data before blocking merges. Explain failure reasons clearly in error messages with links to documentation. Allow documented overrides so teams can proceed on unusual but valid cases while leaving an audit trail. Track false-positive rates per gate and adjust thresholds where friction exceeds value.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What is slopsquatting and why is it dangerous for AI-assisted development?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Slopsquatting occurs when an AI model invents a plausible-sounding package name that does not actually exist in a registry. If an attacker later registers that invented name with malicious code, any developer who runs npm install or pip install on it executes the attacker\'s payload. The risk is particularly high with AI-assisted development because developers may not verify each suggested package individually before installing.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -184,7 +192,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'What Changes When AI Writes Your Code?',
           content: [
             '**When AI writes code, quality gates must defend against a new class of problems: hallucinated APIs, fabricated dependencies, and patterns that look correct but fail at runtime or under attack.** This is structurally different from what lint and unit tests were designed to detect.',
-            'Observed issues with [AI-generated code](/prompt-engineering/write-better-code-with-ai) include:',
+            'As of Q2 2026, these issues are consistently reported across languages and models. Observed problems with [AI-generated code](/prompt-engineering/write-better-code-with-ai) include:',
           ],
           items: [
             '**Security vulnerabilities:** studies and industry reports consistently find that AI-generated solutions to common programming problems contain exploitable bugs at higher rates than human-reviewed code, especially around input validation, authentication, and cryptography.',
@@ -194,7 +202,8 @@ export const article: Record<Language, PEArticle> = {
             '**Unsafe defaults:** use of insecure patterns such as broad CORS rules, permissive JWT validation, weak password policies, or debug logging of sensitive data.',
           ],
           callouts: [
-            { type: 'warning', label: 'Slopsquatting Risk', text: 'When an AI model invents a package name, attackers can register that name with malicious code. Once your team runs npm install or pip install on it, the package executes arbitrary code in your build environment.' },
+            { type: 'key-point', label: 'Quick Facts', text: '≥80% coverage threshold recommended for AI-generated lines. 5-stage gate architecture: pre-commit → PR review → CI → security → runtime monitoring. Zero new high/critical findings required on changed files.' },
+            { type: 'warning', label: 'Slopsquatting Risk', text: 'When an AI model invents a package name, attackers can register that name with malicious code. Once your team runs npm install or pip install on it, the package executes arbitrary code in your build environment. See also: [Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security).' },
           ],
         },
 
@@ -208,7 +217,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'hallucination-types',
           title: 'Which Hallucination Types Must Your Gates Catch?',
           content: [
-            '**Code hallucinations are not only syntax errors; they include logical, structural, and dependency-level fabrications that often pass superficial checks.** Designing effective gates requires understanding each category.',
+            '**Code hallucinations are not only syntax errors; they include logical, structural, and dependency-level fabrications that often pass superficial checks.** Designing effective gates requires understanding each category. For techniques to reduce them at the prompt level, see [AI Hallucinations: How to Stop Them](/prompt-engineering/ai-hallucinations-how-to-stop).',
             'Common categories to design around:',
           ],
           items: [
@@ -218,6 +227,10 @@ export const article: Record<Language, PEArticle> = {
             '**Resource hallucinations:** unbounded memory or CPU usage (for example, loading entire tables into memory), ignoring performance constraints.',
             '**API / library hallucinations:** calls to methods, endpoints, or configuration options that are not present in your versions of libraries or services.',
             '**Security hallucinations:** code that looks structured and "secure-ish" but quietly omits essential checks such as authorization, sanitisation, or rate limiting.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'A code hallucination is any AI-generated output — a package name, API method, config flag, or algorithm — that does not correspond to anything that actually exists or works in your environment.' },
+            { type: 'in-plain-terms', text: 'Think of it like an AI confidently giving you directions to a street that doesn\'t exist. The directions look plausible, but following them leads nowhere — or somewhere dangerous.' },
           ],
           callouts: [
             { type: 'key-point', label: 'Structural vs Syntax', text: 'A hallucinated API call compiles cleanly and passes static analysis. Only runtime execution or SDK-aware linting catches it. This is why extra layers beyond lint and unit tests are necessary.' },
@@ -265,7 +278,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             '**Tests and coverage** — Minimum coverage for new or changed lines (for example, ≥80%). Mandatory tests for all new public endpoints, background jobs, or exported functions.',
-            '**Security gates** — No new high/critical findings from SAST or dependency scanners on changed code. Require manual review for AI-generated code that touches authentication, payments, admin features, or personal data.',
+            '**Security gates** — No new high/critical findings from SAST or dependency scanners on changed code. Require manual review for AI-generated code that touches authentication, payments, admin features, or personal data. Tooling guidance: [AI Code Review: Tools and Verification](/prompt-engineering/ai-code-review).',
             '**Dependency sanity checks** — New packages must exist in the target registry and meet minimum maturity signals (downloads, stars, last publish date) unless explicitly whitelisted. Known typosquats fail the build immediately.',
             '**API reality checks** — Static analysis to ensure all invoked methods and endpoints exist in your codebase or documented SDK. Optional: restrict usage to an allowlist of approved APIs in sensitive areas.',
             '**Pattern and performance checks** — Enforce standard error-handling and logging wrappers. Flag newly added functions with unusually high complexity or obvious O(n²)/O(n³) patterns on large data paths.',
@@ -364,7 +377,7 @@ export const article: Record<Language, PEArticle> = {
 
         howToStart: {
           id: 'how-to-start',
-          title: 'How to Build AI-Aware Quality Checks',
+          title: 'Step-by-Step: How Do You Set Up AI-Aware Quality Checks?',
           numberedItems: [
             '**Add a dependency validation step: check that all imported packages actually exist in your package manager.** Before running tests, verify that every package mentioned in `import` or `require` statements exists in npm, pip, PyPI, or your internal registry. AI hallucinations often invent plausible-sounding package names.',
             '**Scan for common hallucination patterns: non-existent APIs, functions with wrong signatures, and fabricated config flags.** Run a linter or custom script checking if every API call matches the actual SDK or service documentation. Flag calls to methods that don\'t exist.',
@@ -451,6 +464,10 @@ export const article: Record<Language, PEArticle> = {
             {
               q: 'How do I introduce AI-aware quality checks without slowing my team down?',
               a: 'Start all new rules in warning mode to gather data before blocking merges. Explain failure reasons clearly in error messages with links to documentation. Allow documented overrides so teams can proceed on unusual but valid cases while leaving an audit trail. Track false-positive rates per gate and adjust thresholds where friction exceeds value.',
+            },
+            {
+              q: 'What is slopsquatting and why is it dangerous for AI-assisted development?',
+              a: 'Slopsquatting occurs when an AI model invents a plausible-sounding package name that does not actually exist in any registry. If an attacker later registers that name with malicious code, any developer who installs it via npm install or pip install executes the attacker\'s payload. The risk is highest in AI-assisted development because developers often install suggested packages without individually verifying them against official registries.',
             },
           ],
         },
