@@ -20,6 +20,11 @@ export const article: Record<Language, PEArticle> = {
 
       metaDescription: 'Control LLM output with JSON mode and constrained decoding. Achieve 100% schema compliance using two-stage pipelines without sacrificing reasoning quality. Production guide for GPT, Claude, and Gemini.',
 
+      ogTitle: 'From 40% to 100% JSON Compliance — Constrained Decoding Changes Everything',
+      ogDescription: 'Prompt-only formatting fails 60% of the time. Strict mode guarantees schema compliance at the token level. Full settings guide.',
+      twitterTitle: 'Control AI Output: JSON, Temperature & Stop Sequences (2026)',
+      twitterDescription: 'Constrained decoding = 100% schema compliance but 2–10% accuracy drop. Temperature 0.0–0.1 for production JSON. The trade-offs no one tells you.',
+
       educationalLevel: 'Beginner',
       audience: 'Developers building production LLM pipelines that require structured output',
       toc: [
@@ -370,6 +375,11 @@ export const article: Record<Language, PEArticle> = {
 
       seoTitle: 'KI-Ausgabe kontrollieren: JSON-Schema & Decoding (2026)',
       metaDescription: 'LLM-Ausgaben mit JSON-Mode und Constrained Decoding kontrollieren. 100 % Schema-Compliance, kein Qualitätsverlust. Praxisguide für GPT, Claude und Gemini.',
+
+      ogTitle: 'Von 40 % auf 100 % JSON-Konformität — Constrained Decoding ändert alles',
+      ogDescription: 'Prompt-basierte Formatierung scheitert in 60 % der Fälle. Strict Mode garantiert Schema-Konformität auf Token-Ebene.',
+      twitterTitle: 'KI-Ausgabe kontrollieren: JSON, Temperatur & Stop-Sequenzen (2026)',
+      twitterDescription: 'Constrained Decoding = 100 % Schema-Konformität, aber 2–10 % Genauigkeitsverlust. Temperatur 0,0–0,1 für Produktions-JSON. Die Abwägungen im Detail.',
 
       educationalLevel: 'Beginner',
       audience: 'Entwickler, die produktive LLM-Pipelines mit strukturierten Ausgaben aufbauen',
@@ -750,6 +760,11 @@ export const article: Record<Language, PEArticle> = {
       seoTitle: 'Contrôler les sorties IA : JSON Schema et format (2026)',
       metaDescription: 'Contrôler les sorties LLM avec JSON Mode et decoding contraint. 100 % de conformité sans perte de qualité de raisonnement. Guide de production pour GPT, Claude et Gemini.',
 
+      ogTitle: 'De 40 % à 100 % de conformité JSON — le décodage contraint change tout',
+      ogDescription: 'Le formatage par prompt échoue 60 % du temps. Le mode strict garantit la conformité au niveau du token.',
+      twitterTitle: 'Contrôler la sortie IA : JSON, température et stop sequences (2026)',
+      twitterDescription: 'Décodage contraint = 100 % conformité mais 2–10 % de perte de précision. Température 0,0–0,1 pour le JSON en production. Les compromis expliqués.',
+
       educationalLevel: 'Beginner',
       audience: 'Développeurs construisant des pipelines LLM en production nécessitant des sorties structurées',
       toc: [
@@ -1111,6 +1126,11 @@ export const article: Record<Language, PEArticle> = {
       seoTitle: 'AI出力制御：JSONスキーマ準拠とデコード（2026年）',
       metaDescription: 'LLM出力をJSONモードと制約デコードで制御する方法。品質を損なわず100%スキーマ準拠を実現する2段階パイプライン。GPT、Claude、Gemini向けのプロダクションガイド。',
 
+      ogTitle: 'JSON準拠率40%→100%——制約付きデコードが全てを変える',
+      ogDescription: 'プロンプトだけのフォーマット指定は60%失敗する。Strictモードはトークンレベルでスキーマ準拠を保証。',
+      twitterTitle: 'AI出力の制御：JSON・温度・ストップシーケンス（2026）',
+      twitterDescription: '制約付きデコード＝100%準拠だが精度2〜10%低下。本番JSONにはTemperature 0.0〜0.1。誰も語らないトレードオフ。',
+
       educationalLevel: 'Beginner',
       audience: '構造化出力を必要とする本番LLMパイプラインを構築する開発者',
       toc: [
@@ -1471,6 +1491,11 @@ export const article: Record<Language, PEArticle> = {
 
       seoTitle: '控制AI输出格式与Schema合规（2026）',
       metaDescription: '通过JSON模式和受限解码控制LLM输出。利用两阶段流水线实现100% Schema合规，同时保持推理质量。GPT、Claude和Gemini生产指南。',
+
+      ogTitle: 'JSON合规率从40%到100%——约束解码改变一切',
+      ogDescription: '纯提示词格式化60%会失败。Strict模式在Token级别保证Schema合规。完整设置指南。',
+      twitterTitle: '控制AI输出：JSON、温度与停止序列（2026）',
+      twitterDescription: '约束解码＝100%合规但精度下降2–10%。生产环境JSON用Temperature 0.0–0.1。没人告诉你的权衡取舍。',
 
       educationalLevel: 'Beginner',
       audience: '构建需要结构化输出的生产级LLM流水线的开发者',
