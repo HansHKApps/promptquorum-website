@@ -813,7 +813,74 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
             <div key={i} className="border border-border rounded-lg p-4">
               <p className="font-semibold text-text-primary mb-1">❌ {item.mistake}</p>
               <p className="text-sm text-text-secondary mb-2"><strong>Why it hurts:</strong> {item.problem}</p>
-              <p className="text-sm text-green-700 dark:text-green-400"><strong>Fix:</strong> {item.fix}</p>
+              <p className="text-sm text-green-700 dark:text-green-400"><strong>Fix:</strong> {renderInlineLinks(item.fix, lang)}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Callout boxes (Rule 17) */}
+      {section.callouts && section.callouts.length > 0 && (
+        <div className="space-y-3 mt-4">
+          {section.callouts.map((callout, i) => {
+            const CALLOUT_STYLES: Record<string, { border: string; bg: string; text: string; icon: string }> = {
+              warning:  { border: 'border-amber-300',  bg: 'bg-amber-50',   text: 'text-amber-800',  icon: '⚠️' },
+              tip:      { border: 'border-blue-300',   bg: 'bg-blue-50',    text: 'text-blue-800',   icon: '💡' },
+              note:     { border: 'border-gray-300',   bg: 'bg-gray-50',    text: 'text-gray-700',   icon: '🔍' },
+              insight:  { border: 'border-purple-300', bg: 'bg-purple-50',  text: 'text-purple-800', icon: '📌' },
+              practice: { border: 'border-green-300',  bg: 'bg-green-50',   text: 'text-green-800',  icon: '🛠️' },
+            }
+            const style = CALLOUT_STYLES[callout.type] ?? CALLOUT_STYLES.note
+            return (
+              <div key={i} className={`border ${style.border} ${style.bg} rounded-lg px-4 py-3 ${style.text}`}>
+                <p className="text-sm font-semibold mb-1">{style.icon} {callout.label}</p>
+                <p className="text-sm leading-relaxed">{renderInlineLinks(callout.text, lang)}</p>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
+      {/* LLM Snippet blocks — "In One Sentence" / "In Plain Terms" (Rule 12) */}
+      {section.snippets && section.snippets.length > 0 && (
+        <div className="space-y-3 mt-4">
+          {section.snippets.map((snippet, i) => {
+            const isOneSentence = snippet.type === 'in-one-sentence'
+            return (
+              <div key={i} className={`border-l-4 rounded-r-lg px-5 py-4 ${isOneSentence ? 'border-primary bg-primary/5' : 'border-emerald-400 bg-emerald-50'}`}>
+                <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${isOneSentence ? 'text-primary' : 'text-emerald-700'}`}>
+                  {isOneSentence ? '📍 In One Sentence' : '💬 In Plain Terms'}
+                </p>
+                <p className={`text-sm leading-relaxed font-medium ${isOneSentence ? 'text-text-primary' : 'text-emerald-900'}`}>
+                  {renderInlineLinks(snippet.text, lang)}
+                </p>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
+      {/* Prompt examples — Bad → Good pairs (Rule 15) */}
+      {section.promptExamples && section.promptExamples.length > 0 && (
+        <div className="space-y-6 mt-6">
+          {section.promptExamples.map((example, i) => (
+            <div key={i} className="space-y-3">
+              <div className="border border-red-200 bg-red-50 rounded-lg p-4">
+                <p className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2">
+                  ❌ {example.badLabel ?? 'Bad Prompt'}
+                </p>
+                <blockquote className="text-sm text-red-900 font-mono whitespace-pre-wrap leading-relaxed border-l-2 border-red-300 pl-3">
+                  {example.bad}
+                </blockquote>
+              </div>
+              <div className="border border-green-200 bg-green-50 rounded-lg p-4">
+                <p className="text-xs font-bold text-green-700 uppercase tracking-widest mb-2">
+                  ✅ {example.goodLabel ?? 'Good Prompt'}
+                </p>
+                <blockquote className="text-sm text-green-900 font-mono whitespace-pre-wrap leading-relaxed border-l-2 border-green-300 pl-3">
+                  {example.good}
+                </blockquote>
+              </div>
             </div>
           ))}
         </div>
@@ -960,6 +1027,15 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           <p className="text-lg text-text-secondary leading-relaxed mb-4 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>
+        )}
+
+        {/* Lead Answer Block — canonical bold definition, 25–50 words (Rule 31) */}
+        {(article as any).leadAnswerBlock && (
+          <div className="border-l-4 border-primary bg-primary/5 rounded-r-xl px-5 py-4 my-6 max-w-2xl">
+            <p className="text-sm font-bold text-text-primary leading-relaxed">
+              {renderInlineLinks((article as any).leadAnswerBlock, lang)}
+            </p>
+          </div>
         )}
 
         {/* Audience & difficulty signal (Rule 29) */}

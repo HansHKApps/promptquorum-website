@@ -20,6 +20,7 @@ export interface PESection {
   callouts?: Array<{ type: string; label: string; text: string }>
   snippets?: Array<{ type: 'in-one-sentence' | 'in-plain-terms'; text: string }>
   mistakes?: Array<{ mistake: string; problem: string; fix: string }>
+  promptExamples?: Array<{ bad: string; good: string; badLabel?: string; goodLabel?: string }>
 }
 
 export interface PEArticle {
@@ -51,6 +52,7 @@ export interface PEArticle {
   aboutTopics?: string[]     // 3 topic entities for TechArticle schema about[] array
   howToName?: string         // Custom HowTo schema name (overrides section title)
   toc?: { label: string; anchor: string }[]  // Table of contents entries (label + anchor ID)
+  leadAnswerBlock?: string    // Bold 25–50 word answer to the H1, rendered between intro and Key Takeaways (Rule 31)
   gammaEmbedUrl?: string     // Gamma slide presentation embed URL (download URL derived by appending ?print=1)
   gammaDescription?: string  // SEO-optimised description of slide deck contents (2-3 sentences, primary keyword + specific numbers)
   widgetEmbedUrl?: string    // Interactive widget embed URL (audit guide, calculator, decision tree, etc.)
