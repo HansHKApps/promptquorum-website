@@ -1124,5 +1124,321 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-04-10', readTime: '', educationalLevel: 'Intermediate', sections: {} },
+    zh: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-10-10',
+      theme: 'Techniques',
+      title: '提示词质量评估方法：实践框架',
+      seoTitle: '提示词质量评估：测试集与评分框架 (2026年版)',
+      metaDescription: '使用测试集、Pass/Fail评分和LLM-as-Judge评估提示词质量。测量精度、一致性、指令遵守率。分步指南。2026年4月版。',
+      ogDescription: '大多数团队用几个手工选择的例子测试提示词，然后声称"已验证"。这样做会漏掉90%的失败场景。一个20个案例的测试集能捕捉到手动审查无法发现的问题。',
+      twitterDescription: '提示词质量 = 精度 + 一致性 + 指令遵守。20案例测试集、LLM-as-Judge评分、回归测试关卡。完整框架。',
+      intro: '**提示词质量是指提示词在各种输入、模型和条件下可靠地生成预期输出的能力。** 大多数团队依赖手动抽查，这种方法无法发现边界情况、无法扩展，且无法在工程师或提示词版本间重现结果。',
+      leadAnswerBlock: '**提示词质量是指提示词在各种输入和条件下可靠地生成预期输出的能力。** 三个可测量的维度：精度（输出与意图匹配）、一致性（相同输入产生相同范围的输出）、指令遵守率（遵守所有约束）。使用20案例测试集进行测试，并将通过率作为基准追踪。',
+      publishDate: '2026-04-10',
+      dateModified: '2026-04-29',
+      readTime: '阅读约7分钟',
+      educationalLevel: 'Intermediate',
+      audience: '在生产环境中部署LLM的开发者和团队',
+      primaryTerm: '提示词质量评估',
+      aboutTopics: ['提示词评估', '测试集', 'LLM评分'],
+      quickFacts: [
+        '最小可行测试集：20个案例 — 10个正常路径、5个边界情况、5个对抗性输入',
+        '二进制Pass/Fail评分最适合有明确正确答案的结构化输出',
+        'GPT-5.5和Claude Opus 4.7在同一提示词上的评分平均差异10-20分',
+        'LLM-as-Judge评分可无需人工审查地扩展到数千个测试案例',
+        '90%的指令遵守率意味着生产请求中有1/10会违反约束',
+      ],
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '什么是提示词质量？', anchor: '#what-is-prompt-quality' },
+        { label: '提示词质量的三个要素是什么？', anchor: '#three-components' },
+        { label: '为什么手动检查会失败？', anchor: '#manual-vs-systematic' },
+        { label: '如何构建提示词测试集？', anchor: '#test-sets' },
+        { label: '如何为提示词输出评分？', anchor: '#scoring-rubrics' },
+        { label: '提示词质量在模型间有差异吗？', anchor: '#multi-model' },
+        { label: '如何开始评估提示词质量', anchor: '#how-to-start' },
+        { label: '最常见的提示词评估错误', anchor: '#common-mistakes' },
+        { label: '哪些地区规则影响提示词评估？', anchor: '#regional-considerations' },
+        { label: '常见问题', anchor: '#faq' },
+        { label: '参考资料', anchor: '#sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh',
+        inLanguage: 'zh',
+        headline: '提示词质量评估方法：实践框架',
+        description: '使用测试集、Pass/Fail评分和LLM-as-Judge评估提示词质量。测量精度、一致性、指令遵守率。分步指南。2026年4月版。',
+        image: 'https://www.promptquorum.com/og-how-to-evaluate-prompt-quality.png',
+        datePublished: '2026-04-10',
+        dateModified: '2026-04-29',
+        author: { '@type': 'Organization', 'name': 'PromptQuorum' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', 'name': '提示词评估' },
+          { '@type': 'Thing', 'name': '测试集' },
+          { '@type': 'Thing', 'name': 'LLM评分' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: '如何评估提示词质量',
+        inLanguage: 'zh',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: '定义评估框架',
+            text: '确定精度、一致性和指令遵守率三个维度。'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: '构建测试集',
+            text: '准备20个案例：10个正常路径、5个边界情况、5个对抗性输入。'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: '设置评分标准',
+            text: '选择二进制Pass/Fail或Likert量表。'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: '执行测试并记录结果',
+            text: '在每个模型和每个提示词版本上运行测试集，记录评分。'
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '提示词质量和测试质量有什么区别？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '提示词质量测量输出的精度和一致性。测试质量测量测试集本身的有效性（覆盖范围、代表性）。好的提示词在坏的测试下也能得高分，坏的提示词在好的测试下会得低分。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'LLM-as-Judge总是提供准确的评估吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '不是。LLM-as-Judge一致但可能引入偏见。建议使用回归测试（Pass/Fail统计漂移追踪），并每月让人工审查多个样本与LLM评估对比。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '测试集应该多大？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '最小值是20个案例（10正常、5边界、5对抗）。生产环境通常为100-500个案例。更大的集合能捕捉更多失败模式，但维护成本增加。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '为什么不同模型的分数差异很大？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '每个模型的基础训练数据、对齐方法和分词不同，因此对同一提示词有不同响应。这意味着需要特定于模型的测试集或模型特定的评分标准。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '评估框架多久更新一次？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '初期阶段每周审查。稳定后建议每月定期审查。当出现新用例、用户反馈或模型更新时需要额外审查。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '应该合并多个评估指标还是使用单一指标？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '追踪多个指标（精度、一致性、延迟）但报告单一指标（例如总体通过率）。多个指标有助于调试，单一指标为利益相关者澄清决策。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '如何高效比较不同的提示词版本？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '对所有版本运行相同的测试集，并行追踪各版本的通过率。A/B测试在验证单一改进时有效。完整测试集清晰显示各版本的总体性能。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '如何组织和存储提示词评估结果？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '使用Google Sheets、Notion或专业评估工具（如Humanloop）记录测试案例、评分、时间戳和模型版本。在Git中版本控制结果，追踪提示词变更的影响。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '如何在多个团队间共享评估框架？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '将测试集、评分标准和结果存储在团队Wiki或Git仓库中。这确保一致性，新团队成员可快速采用。每月同步会议分享最佳实践。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '评估提示词需要多长时间？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '运行20个案例测试集大约30分钟（包括LLM API调用）。多个模型和版本需要1-2小时的人工时间。自动化（Python脚本、API）可将时间减少80%。'
+            }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        name: '提示词质量的三个要素',
+        itemListElement: [
+          {
+            '@type': 'Thing',
+            position: 1,
+            name: '精度',
+            description: '提示词输出与预期结果匹配的比例'
+          },
+          {
+            '@type': 'Thing',
+            position: 2,
+            name: '一致性',
+            description: '提示词对相同输入返回相同范围输出的可靠性'
+          },
+          {
+            '@type': 'Thing',
+            position: 3,
+            name: '指令遵守率',
+            description: '提示词输出遵守所有指定约束和格式要求的比例'
+          },
+        ],
+      },
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '核心要点',
+          items: [
+            '提示词质量通过精度、一致性和指令遵守率三个维度测量',
+            '20个案例的测试集（10正常、5边界、5对抗）是有效评估的最小值',
+            '二进制Pass/Fail评分最适合有明确答案的结构化输出',
+            'LLM-as-Judge评估应每月通过人工审查验证，以监控偏见',
+            '版本控制测试结果，追踪提示词改进的影响',
+          ],
+        },
+        definition: {
+          title: '什么是提示词质量？',
+          content: '提示词质量指提示词在各种输入、条件和模型环境下可靠地生成预期输出的能力。这不仅仅是"有效"，而是产生可预测、可测量、可重现的结果。\n\n大多数团队用2-3个例子测试提示词，然后判断"看起来不错"。这遗漏了失败模式的90%，导致生产中出现意外行为和质量下降。\n\n提示词质量框架提供了定量测量这种风险、追踪版本改进和验证多模型兼容性的结构。',
+        },
+        threeComponents: {
+          title: '提示词质量的三个要素是什么？',
+          content: '提示词质量有三个可测量的维度：\n\n**精度** — 提示词输出与预期结果匹配的比例。例如，"客户问题分类"提示词应95%准确地分类。\n\n**一致性** — 提示词对相同输入返回相同范围输出的可靠性。例如，支持代理提示词对同一客户支持问题提供语气、长度、结构相似的回答。\n\n**指令遵守率** — 提示词输出遵守所有指定约束和格式要求的比例。例如，"JSON格式、最多500字符、必须包含key"提示词必须100%遵守这些规则。\n\n测量所有三个维度提供完整的提示词整体可靠性图景。',
+        },
+        manualVsSystematic: {
+          title: '为什么手动检查会失败？',
+          content: '许多团队依赖手动抽查（"我试了5个输入"），这有严重缺陷：\n\n**代表性不足** — 手工选择的5个例子受确认偏见影响，几乎绝不包括边界情况或对抗场景。\n\n**无法扩展** — 在处理1000请求/天的生产系统上，用5个例子测试就像起飞前只检查一次轮胎。\n\n**不可重现** — "看起来不错"的主观判断在工程师间不同，随时间在相同版本上变化。\n\n**遗漏隐藏模式** — 失败通常出现在意外的角落情况。手动测试很少发现它们。\n\n结构化测试集解决所有这些问题。',
+        },
+        testSets: {
+          title: '如何构建提示词测试集？',
+          content: '有效的测试集包含20个案例（最小值）：\n\n**10个正常路径** — 提示词应成功的场景。例如"客户问题分类"，包含10个实际支持请求。\n\n**5个边界情况** — 正常但意外的场景。包含非常长的输入、数值边界、特殊字符、混合语言。\n\n**5个对抗性输入** — 提示词失败或意外行为的有意尝试。模拟矛盾指令、有害查询、提示词注入攻击。\n\n构建测试集的步骤：\n\n1. **从真实数据开始** — 从用户反馈、支持工单、日志收集50-100个实例\n2. **识别失败** — 记录提示词失败或低分的案例\n3. **分析模式** — 找到失败的共同模式，将其添加到测试集\n4. **定期更新** — 每月添加新失败案例，让测试集进化\n\n测试集不是静态的，需要与提示词处理的真实数据并行增长。',
+        },
+        scoringRubrics: {
+          title: '如何为提示词输出评分？',
+          content: '有两种主要评分方法：\n\n**二进制Pass/Fail** — 最简单最适当的方法。判定输出是否满足标准（Pass）或不满足（Fail）。例如：\n- "客户问题分类"：分类准确则Pass，否则Fail\n- "邮件生成"：输出为JSON格式且包含所有必需字段则Pass\n\n二进制方法优点：\n- 谁评估评分都相同（客观）\n- 易于聚合（总Pass数/测试总数）\n- 最适合自动化\n\n**Likert量表（1-5评分）** — 用于创意任务（文章写作、设计描述）。5=完美、4=仅需小编辑、3=需要大编辑、2=无法使用、1=完全错误。\n\n注意：Likert量表更主观，LLM-as-Judge使用时人工评估者间不一致。尽可能使用二进制。\n\n**LLM-as-Judge评分** — 让LLM（如Claude）评估输出。例如：\n\n```\n提示词：评估以下客户分类是否准确。标准是[criteria]。用Pass或Fail回答。\n\n输入：\"我的账单有问题\"\n提示词输出：\"Billing Issue\"\n```\n\nLLM-as-Judge优缺点：\n- ✅ 数百案例在秒内处理\n- ✅ 二进制评分可自动化\n- ⚠️ 可能引入LLM本身的偏见\n- ⚠️ 每月人工抽查多个案例\n\n实现评分标准：\n\n```\n[案例#1]\n输入：\"payment failed\"\n预期：Billing Issue\n提示词输出：Billing Issue\n评分：PASS\n原因：分类完全匹配\n\n[案例#2]\n输入：\"how do i reset password\"\n预期：Account Access\n提示词输出：Technical Issue\n评分：FAIL\n原因：应选更具体的类别\n```',
+        },
+        multiModel: {
+          title: '提示词质量在模型间有差异吗？',
+          content: '是的。相同提示词在模型间通过率大幅不同。\n\n实例："总结客户支持回复"提示词\n- Claude Opus 4.7: 92%通过率\n- GPT-5.5: 78%通过率\n- Llama 3.2 70B: 65%通过率\n\n为什么不同：\n- **训练数据不同** — 各模型用不同数据集训练，有独特偏见和优势\n- **分词不同** — 语言处理方法不同，相同提示词文本被不同方式解析\n- **对齐方法不同** — 安全和指导方法不同，影响对提示词的响应\n\n实务影响：\n\n1. **模型特定测试集** — 生产用多模型时，为各模型创建单独测试集或共享最小核心集\n2. **模型特定阈值** — 为Claude设定90%通过率，Llama 75%可能可接受\n3. **可靠性排名** — 基于评分，排列模型在生产中的使用频率\n4. **分阶段部署** — 新模型小规模测试，直到评分足够高才完整部署\n\n不要期望相同提示词在所有模型上表现相同。测量各模型评分并调整部署策略。',
+        },
+        howToStart: {
+          title: '如何开始评估提示词质量',
+          content: '分步实施指南：\n\n**第1周：定义框架**\n- 与团队开15分钟头脑风暴会议\n- 定义精度、一致性、指令遵守率三个维度\n- 选择二进制Pass/Fail评分（初期避免Likert量表）\n- 例子："客户分类提示词" → 关注精度和指令遵守率\n\n**第2周：构建测试集**\n- 从真实用户数据收集50-100个案例（支持工单、日志）\n- 选择20个案例（10正常、5边界、5对抗）\n- 在Google Sheets记录：\n  - A列：输入\n  - B列：预期输出\n  - C列：实际提示词输出\n  - D列：Pass/Fail\n  - E列：理由\n\n**第3周：运行测试**\n- 对提示词运行20个案例\n- 记录各结果，计算评分（总Pass/20）\n- 分析失败模式\n\n**第4周：改进并迭代**\n- 基于测试改进提示词\n- 用改进版重新运行相同测试集\n- 追踪评分改进\n\n**长期维护（每月）**\n- 从生产失败添加5-10个新输入案例\n- 扩展测试集到30个案例\n- 在多模型上运行测试\n- 创建评分趋势图表\n\n工具：\n- **Google Sheets** （简单、可共享）\n- **Notion** （更整洁的界面）\n- **Humanloop** （专业评估平台）\n- **Python脚本** （通过API自动运行）',
+        },
+        commonMistakes: {
+          title: '最常见的提示词评估错误',
+          mistakes: [
+            {
+              mistake: '静态测试集',
+              problem: '"创建后就完成"的测试集。真实用户数据在进化，测试集也需要进化。',
+              fix: '每月添加5-10个生产失败案例到测试集。确保提示词继续应对真实场景。'
+            },
+            {
+              mistake: '无条件信任LLM评分',
+              problem: 'LLM-as-Judge便利但引入自己的偏见。例如可能偏好某种风格。',
+              fix: '每月人工验证多个实际案例（5-10个），与LLM评分比较。如有差异，调整LLM评分标准。'
+            },
+            {
+              mistake: '测试集太小',
+              problem: '用3-5个案例测试在统计上没有意义。不能预测生产性能。',
+              fix: '最少从20个案例开始（10正常、5边界、5对抗）。生产环境目标100-500个案例。'
+            },
+            {
+              mistake: '被多个指标分散',
+              problem: '精度、延迟、令牌使用、一致性……追踪所有内容时信号丢失。',
+              fix: '记录多个指标但报告单一"总体通过率"。详细指标用于调试。'
+            },
+            {
+              mistake: '直接比较模型间评分',
+              problem: 'Claude 95%时判定Llama 75%为"失败"。模型强度不同。',
+              fix: '为各模型设置期望值。Claude 90%以上、Llama 75%以上等。'
+            },
+          ],
+        },
+        regionalConsiderations: {
+          title: '哪些地区规则影响提示词评估？',
+          content: '提示词评估框架可能受地区数据规制限制。以下是主要区域：\n\n**中国（数据安全法）**\n\n中国2021年《数据安全法》要求处理敏感数据的企业确保：\n- 建立提示词评估审计日志，每年审查\n- 若使用LLM评估，须保持人工监督日志\n- 保持提示词版本历史完整可追踪\n- 对客户、财务、医疗数据的评估需额外许可\n\n中国实施：记录评估日志到加密的云存储，定期备份。对受控数据使用本地部署LLM。\n\n**亚太地区（数据跨境）**\n\n新加坡、日本、韩国、澳大利亚等国家：\n- 需要审计跟踪来证明数据在区域内处理\n- LLM评估标准需每6个月审查\n- 包含生产数据的测试集必须加密\n- APAC合规框架（PDPA、APPI、POPIA）需遵守\n\n亚太实施：评估数据保持在区域云中，访问日志记录。\n\n**全球**\n\n许多国家无特定规制，遵循行业标准：\n- 每年发布AI透明度报告（如何评估、结果使用）\n- 公开提示词评估检查清单\n- 提供误分类和失败报告机制\n\n规制环境在快速变化。定期检查地区指南，调整评估框架。',
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[如何构建提示词库](/prompt-engineering/build-a-prompt-library?lang=zh) — 在团队间共享经过测试的提示词。评估框架和测试集通过版本控制。',
+            '[减少LLM幻觉](/prompt-engineering/reducing-llm-hallucinations?lang=zh) — 幻觉是评估框架的常见失败类别。本指南说明如何检测和减少幻觉。',
+            '[提示词优化框架](/prompt-engineering/prompt-optimization-guide?lang=zh) — 使用评估框架逐步改进提示词。',
+          ],
+        },
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            { q: '提示词质量和测试质量有什么区别？', a: '提示词质量测量输出的精度和一致性。测试质量测量测试集本身的有效性（覆盖范围、代表性）。好的提示词在坏的测试下也能得高分，坏的提示词在好的测试下会得低分。' },
+            { q: 'LLM-as-Judge总是提供准确的评估吗？', a: '不是。LLM-as-Judge一致但可能引入偏见。建议使用回归测试（Pass/Fail统计漂移追踪），并每月让人工审查多个样本与LLM评估对比。' },
+            { q: '测试集应该多大？', a: '最小值是20个案例（10正常、5边界、5对抗）。生产环境通常为100-500个案例。更大的集合能捕捉更多失败模式，但维护成本增加。' },
+            { q: '为什么不同模型的分数差异很大？', a: '每个模型的基础训练数据、对齐方法和分词不同，因此对同一提示词有不同响应。这意味着需要特定于模型的测试集或模型特定的评分标准。' },
+            { q: '评估框架多久更新一次？', a: '初期阶段每周审查。稳定后建议每月定期审查。当出现新用例、用户反馈或模型更新时需要额外审查。' },
+            { q: '应该合并多个评估指标还是使用单一指标？', a: '追踪多个指标（精度、一致性、延迟）但报告单一指标（例如总体通过率）。多个指标有助于调试，单一指标为利益相关者澄清决策。' },
+            { q: '如何高效比较不同的提示词版本？', a: '对所有版本运行相同的测试集，并行追踪各版本的通过率。A/B测试在验证单一改进时有效。完整测试集清晰显示各版本的总体性能。' },
+            { q: '如何组织和存储提示词评估结果？', a: '使用Google Sheets、Notion或专业评估工具（如Humanloop）记录测试案例、评分、时间戳和模型版本。在Git中版本控制结果，追踪提示词变更的影响。' },
+            { q: '如何在多个团队间共享评估框架？', a: '将测试集、评分标准和结果存储在团队Wiki或Git仓库中。这确保一致性，新团队成员可快速采用。每月同步会议分享最佳实践。' },
+            { q: '评估提示词需要多长时间？', a: '运行20个案例测试集大约30分钟（包括LLM API调用）。多个模型和版本需要1-2小时的人工时间。自动化（Python脚本、API）可将时间减少80%。' },
+          ],
+        },
+        sources: {
+          title: '参考资料',
+          items: [
+            '[中国数据安全法（2021）](https://www.legislation.gov.cn/) — 中国关于敏感数据处理和跨境数据传输的规定',
+            '[提示词评估最佳实践（Anthropic）](https://docs.anthropic.com/) — 大型语言模型评估和优化文档',
+            '[LLM评估手册（Hugging Face）](https://huggingface.co/) — 开源LLM的评估框架和标准',
+            '[LLM提示词的测试驱动开发（GitHub）](https://github.com/) — 提示词评估最佳实践和示例',
+            '[提示词工程指南（OpenAI）](https://platform.openai.com/docs/guides/prompt-engineering) — OpenAI的提示词工程和评估指南',
+          ],
+        },
+      },
+    },
   };
