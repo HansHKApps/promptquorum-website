@@ -987,5 +987,308 @@ export const article: Record<Language, PEArticle> = {
     }
   }
 },
-    zh: { theme: 'Tools & Platforms', title: 'Best Tools', seoTitle: '2026最佳提示词工程工具：按用途排名', metaDescription: '对比Braintrust、Vellum、Promptfoo、PromptHub、LangSmith和PromptQuorum——按评估、测试、版本管理、部署和多模型分发排名。价格从免费到500美元/月。', ogTitle: '6款提示词工程工具对比——哪个能解决你的瓶颈？', ogDescription: '评估、测试、版本管理、生产部署、多模型分发。每项任务一个工具。内含对比表。', twitterTitle: '2026最佳提示词工程工具：全面对比', twitterDescription: 'Promptfoo免费开源。Braintrust起价500美元/月。PromptQuorum可同时向25+模型分发。哪个技术栈适合你？', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '9 min', educationalLevel: 'Intermediate', gammaEmbedUrl: '/presentations/best-prompt-engineering-tools-2026-static.html', gammaDescription: '以下幻灯片涵盖：按用例排名的5个提示工程工具（Braintrust用于评估、Vellum用于生产、Promptfoo用于测试、PromptHub用于版本管理、LangSmith用于可观察性）、对比表格及按团队规模的选择指南。下载PDF作为参考卡。', sections: { whichProblem: { image: '/images/best-pe-tools-2026-bottlenecks-to-tools-zh.svg', imageCaption: '5个瓶颈与专用工具：Braintrust用于评估、Promptfoo用于测试、PromptHub用于版本管理、Vellum用于部署、LangSmith用于可观测性。' }, braintrust: { image: '/images/best-pe-tools-2026-braintrust-eval-loop-zh.svg', imageCaption: 'Braintrust的4步评估循环：定义evals→自动运行→人工评分→编译数据集。LLM评委和人工反馈为未来评估建立基础真值。' }, comparison: { image: '/images/best-pe-tools-2026-comparison-table-zh.svg', imageCaption: '5个工具对比（2026年4月）：Braintrust评估优秀（$500+/月）、Vellum生产部署（$200–500/月）、Promptfoo免费测试、PromptHub版本管理（$50–300/月）、LangSmith追踪。' }, decision: { image: '/images/best-pe-tools-2026-decision-guide-zh.svg', imageCaption: '按团队类型推荐：初创用Promptfoo+PromptHub、生产团队加Vellum、LangChain团队加LangSmith、企业用PromptHub+Braintrust+Vellum治理。' }, commonMistakes: { image: '/images/best-pe-tools-2026-common-mistakes-zh.svg', imageCaption: '4个常见错误：购买重叠工具、跳过CI/CD测试、延迟版本管理、用通用Datadog而非Vellum/LangSmith。' } } }
+    zh: {
+  theme: '工具与平台',
+  title: '2026年最佳提示词工程工具：按使用场景排名',
+  seoTitle: '2026年最佳提示词工程工具：按使用场景排名',
+  metaDescription: '对比Braintrust（评估）、Vellum（生产）、Promptfoo（测试·免费）、PromptHub（版本管理）、LangSmith（追踪）。从免费到$500/月。',
+  ogTitle: '6款提示词工程工具对比——哪个解决你的瓶颈？',
+  ogDescription: '评估、测试、版本管理、生产部署、多模型分发。每项任务一个工具。含对比表。',
+  twitterTitle: '2026年最佳提示词工程工具：全面对比',
+  twitterDescription: 'Promptfoo免费开源。Braintrust起价$500/月。PromptQuorum可向25+模型分发。哪个堆栈适合你的团队？',
+  intro: '**2026年，6款工具主导提示词工程领域：PromptQuorum用于多模型分发、Braintrust用于评估、Vellum用于生产、Promptfoo用于测试、PromptHub用于版本管理、LangSmith用于可观测性——各工具各司其职，解决不同的系统瓶颈。本指南按实际使用场景对它们排名，展示哪些工具组合协作最有效。**',
+  publishDate: '2026-04-10',
+  dateModified: '2026-04-29',
+  lastFactChecked: '2026-04-28 — 所有价格和功能已对照官方文档验证',
+  readTime: '阅读约9分钟',
+  educationalLevel: 'Intermediate',
+  primaryTerm: '提示词工程工具',
+  aboutTopics: ['提示词工程工具', '提示词评估', '提示词管理'],
+  audience: '管理AI提示词管道的开发者和产品团队',
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-10-10',
+  gammaEmbedUrl: '/presentations/best-prompt-engineering-tools-2026-static.html',
+  gammaDescription: '幻灯片涵盖：按使用场景排名的5款提示词工程工具（Braintrust用于评估、Vellum用于生产、Promptfoo用于测试、PromptHub用于版本管理、LangSmith用于可观测性）、功能对比表、按团队规模的工具选择指南。下载PDF作为参考卡。',
+  toc: [
+    { label: '核心要点', anchor: '#key-takeaways' },
+    { label: '各工具解决什么问题？', anchor: '#which-problem-each-tool-solves' },
+    { label: 'PromptQuorum在这个堆栈中的位置', anchor: '#where-promptquorum-fits' },
+    { label: 'Braintrust：评估', anchor: '#braintrust-evaluation' },
+    { label: 'Vellum：生产部署', anchor: '#vellum-production' },
+    { label: 'Promptfoo：开源测试', anchor: '#promptfoo-testing' },
+    { label: 'PromptHub：Git式版本管理', anchor: '#prompthub-versioning' },
+    { label: 'LangSmith：LangChain追踪', anchor: '#langsmith-tracing' },
+    { label: '6款工具对比', anchor: '#side-by-side-comparison' },
+    { label: '如何选择工具', anchor: '#how-to-choose' },
+    { label: '如何构建工具堆栈', anchor: '#how-to-build-stack' },
+    { label: '常见错误', anchor: '#common-mistakes' },
+    { label: '中国企业的应用方案', anchor: '#china-context' },
+    { label: '常见问题', anchor: '#faq' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: '2026年最佳提示词工程工具：按使用场景排名',
+    description: '2026年顶级PE工具对比：Braintrust（评估）、Vellum（生产）、Promptfoo（测试）、PromptHub（版本管理）、LangSmith（追踪）。大多数团队仅需2-3款工具。',
+    author: { '@type': 'Organization', name: 'PromptQuorum' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    datePublished: '2026-04-10',
+    dateModified: '2026-04-29',
+    url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh',
+    inLanguage: 'zh',
+    proficiencyLevel: 'Intermediate',
+    about: [
+      { '@type': 'Thing', name: '提示词工程工具' },
+      { '@type': 'Thing', name: '大语言模型评估' },
+      { '@type': 'Thing', name: '提示词管理' },
+    ],
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.article-intro', '.key-takeaways'],
+    },
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '2026年最好的提示词工程工具是什么？', acceptedAnswer: { '@type': 'Answer', text: '2026年使用最广泛的5款PE工具是：Braintrust（用于评估）、Vellum（用于生产部署）、Promptfoo（用于开源CI/CD测试）、PromptHub（用于版本管理）和LangSmith（用于LangChain可观测性）。每款工具解决不同的瓶颈。大多数团队只需要其中2-3款，而非全部5款。' } },
+      { '@type': 'Question', name: '评估提示词质量的最佳工具是哪个？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust是最强大的评估工具，支持LLM评判、人工反馈循环和用于构建真实标注数据的数据集管理。团队可以定义评估、自动运行、由人工标注评分，最后编译成可复用的评估数据集。Promptfoo是进行CI/CD自动化测试评估的免费替代方案。' } },
+      { '@type': 'Question', name: 'Promptfoo还是Braintrust用于测试？', acceptedAnswer: { '@type': 'Answer', text: 'CI/CD测试用Promptfoo——免费、开源、从YAML配置运行、与GitHub Actions集成。当需要离线评估和人工反馈来构建标注数据集时，使用Braintrust。许多团队同时使用两者：Promptfoo把关部署，Braintrust衡量输出质量。' } },
+      { '@type': 'Question', name: '提示词版本管理对团队必要吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。一旦超过一个人编辑提示词，版本管理就很关键。没有版本管理，无法追踪哪个版本已上线、无法在回归后回滚、无法审计谁在什么时候改了什么。PromptHub和Vellum都提供版本管理；PromptHub为治理要求高的团队提供最Git化的工作流。' } },
+      { '@type': 'Question', name: '这些工具支持本地模型（如Ollama）吗？', acceptedAnswer: { '@type': 'Answer', text: '大多数工具都以不同程度支持本地模型。Promptfoo通过提供商配置原生支持Ollama和LM Studio，无需包装层。Braintrust和Vellum通过API包装层支持本地模型，暴露标准的OpenAI兼容端点。' } },
+      { '@type': 'Question', name: '能否同时使用多个提示词工程工具？', acceptedAnswer: { '@type': 'Answer', text: '可以——2026年的标准做法是结合2-3个工具。最常见的堆栈是：Promptfoo（CI/CD测试）+ Vellum（生产部署）+ Braintrust（离线评估活动）。三款工具均通过标准REST API集成，无锁定；避免购买全部5款，因为Braintrust和Promptfoo在测试上有部分重叠。' } },
+      { '@type': 'Question', name: '这些工具的典型成本是多少？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月：Braintrust约$500/月（初始版）、Vellum $200-500/月（按请求量）、Promptfoo免费（开源自托管）、PromptHub $50-300/月（按团队规模）、LangSmith免费层加$50/月起的付费计划。成本按评估量、API调用和座位数缩放。' } },
+      { '@type': 'Question', name: '哪个工具有最好的免费层？', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo完全免费开源——无座位限制、无使用上限、在你的基础设施上自托管。PromptHub和LangSmith都为小团队提供慷慨的免费层。Braintrust和Vellum仅提供试用，对于有真实生产使用的团队会很快升级到付费计划。' } },
+      { '@type': 'Question', name: '提示词测试和评估有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '测试（Promptfoo）检查提示词是否为定义的输入产生正确输出——在CI/CD中自动运行、捕捉回归。评估（Braintrust）衡量输出质量——准确性、语调、事实性——使用LLM评判或人工评判。测试快速自动；评估慢且更细致。大多数团队需要两者。' } },
+      { '@type': 'Question', name: '如何知道何时从Promptfoo升级到Braintrust？', acceptedAnswer: { '@type': 'Answer', text: '当团队需要在二元判决之外对输出质量评分时切换到Braintrust——例如语调、事实准确性或品牌一致性。Promptfoo擅长CI/CD中的二元正确性测试。Braintrust增加人工环路评分、LLM评判和不断改进的标注数据集。大多数团队在3-5人每天迭代提示词时达到这个临界点。' } }
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: '2026年最佳提示词工程工具',
+    description: '2026年5款主要提示词工程工具，各自专注于不同的工作流瓶颈。',
+    numberOfItems: 5,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '以评估为中心的工具，配备LLM评判、人工反馈循环和数据集管理。最适合构建标注真实数据集。价格：约$500/月。' },
+      { '@type': 'ListItem', position: 2, name: 'Vellum', description: '生产级提示词部署，配备A/B测试、金丝雀发布和监控仪表板。最适合向用户交付。价格：$200-500/月。' },
+      { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: '开源CLI工具，用于CI/CD提示词测试，原生支持Ollama和LM Studio。价格：免费。' },
+      { '@type': 'ListItem', position: 4, name: 'PromptHub', description: '类Git的提示词版本管理，支持分支、团队协作和审计日志。价格：$50-300/月。' },
+      { '@type': 'ListItem', position: 5, name: 'LangSmith', description: 'LangChain应用的原生追踪和可观测性。记录生产环境中的每个提示词、模型调用和令牌计数。提供免费层。' }
+    ]
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    inLanguage: 'zh',
+    name: '如何构建提示词工程工具堆栈',
+    totalTime: 'PT15M',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: '确定你的瓶颈', text: '模型选择、评估质量、测试覆盖、版本管理还是生产可靠性哪个最痛？从解决这个单一缺口的工具开始。' },
+      { '@type': 'HowToStep', position: 2, name: '免费开始', text: '注册PromptQuorum（多模型比较）并安装Promptfoo（CI/CD测试）。两者都免费，覆盖最常见的两个起点。' },
+      { '@type': 'HowToStep', position: 3, name: '尽早添加版本管理', text: '在团队超过2人编辑提示词之前，设置PromptHub或Git版本管理。没有版本管理，无法在回归后回滚。' },
+      { '@type': 'HowToStep', position: 4, name: '当质量重要时添加评估', text: '当需要标注数据集和人工反馈来评价输出质量时，集成Braintrust。' },
+      { '@type': 'HowToStep', position: 5, name: '最后添加生产工具', text: '向用户交付提示词并需要A/B测试、降级链和监控时，部署Vellum。' },
+      { '@type': 'HowToStep', position: 6, name: '每季度审计重叠', text: '每三个月回顾完整堆栈。如果两个工具功能重叠，删除ROI较低的那个。' }
+    ]
+  },
+  sections: {
+    keyTakeaways: {
+      isTldr: true,
+      items: [
+        'PromptQuorum：多模型分发（在评估、测试或部署前并排比较GPT-5.5、Claude 4.7 Opus、Gemini 3 Pro和25+模型）',
+        'Braintrust：评估循环（LLM和人工评判、数据集管理）',
+        'Vellum：生产部署（A/B测试、部署、监控仪表板）',
+        'Promptfoo：测试（开源、CLI、免费、红队测试）',
+        'PromptHub：版本管理（Git式工作流、团队协作）',
+        'LangSmith：LangChain集成（追踪、调试、可观测性）',
+        '从PromptQuorum + Promptfoo开始（两者免费），随着扩展添加专业工具'
+      ]
+    },
+    whichProblem: {
+      id: 'which-problem-each-tool-solves',
+      title: '各工具解决什么问题？',
+      content: '**提示词工程团队被5个瓶颈堵住：** 评估（有效吗？）、测试（会坏吗？）、版本管理（哪个版本上线了？）、部署（如何提供？）、可观测性（为什么失败？）。每个工具专注1-2个。',
+      image: '/images/best-pe-tools-2026-bottlenecks-to-tools-en.svg',
+      imageCaption: '5个提示词工程瓶颈映射到专业工具：Braintrust（评估）、Promptfoo（测试）、PromptHub（版本管理）、Vellum（部署）、LangSmith（可观测性）。'
+    },
+    wherePromptQuorum: {
+      id: 'where-promptquorum-fits',
+      title: 'PromptQuorum在这个堆栈中的位置',
+      content: '**PromptQuorum解决上述5个工具都不涉及的瓶颈：向多个AI模型分发一个提示词并并排比较输出。** Braintrust评估一个模型的输出。Vellum向生产部署一个模型。Promptfoo在CI/CD中测试一个模型。PromptQuorum让你看到GPT-5.5、Claude 4.7 Opus、Gemini 3 Pro和通过Ollama的本地模型如何回答同一个提示词——在你承诺模型或提示词版本之前。\n\n这使PromptQuorum成为工作流的自然第一步：比较模型 → 选最好的 → 然后评估（Braintrust）、测试（Promptfoo）、版本（PromptHub）、部署（Vellum）。',
+      items: [
+        '向包括Ollama本地LLM在内的25+模型分发',
+        '9个内置提示词框架（TRACE、CO-STAR、CRAFT、RISEN、RTF等）',
+        '含共识评分的并排响应比较',
+        '免费层可用'
+      ]
+    },
+    braintrust: {
+      id: 'braintrust-evaluation',
+      title: 'Braintrust是什么？评估、LLM评判、真实数据集',
+      content: '**Braintrust用LLM评判、人工反馈和数据集管理关闭评估到生产的循环。** 定义评估、自动运行、由人工标注评分构建真实数据集，然后编译成可复用数据集进行未来评估。',
+      items: [
+        '最适合需要人工环路反馈的结构化评估',
+        '可与GPT-5.5、Claude 4.7 Opus、Gemini 3 Pro和任何OpenAI兼容API配合',
+        '价格：约$500/月初始，按评估量缩放'
+      ],
+      image: '/images/best-pe-tools-2026-braintrust-eval-loop-en.svg',
+      imageCaption: 'Braintrust的4步评估循环：定义评估 → 自动运行 → 人工评分 → 编译为数据集。LLM评判+人工反馈为未来评估运行构建真实数据集。'
+    },
+    vellum: {
+      id: 'vellum-production',
+      title: 'Vellum是什么？生产部署、A/B测试、监控',
+      content: '**Vellum是唯一为生产设计的工具。** A/B测试、金丝雀发布、降级链（GPT-5.5 → Claude 4.7 Opus → Gemini）和显示延迟和成本的监控仪表板。如果向用户交付提示词时使用。',
+      items: [
+        '最适合带监控的生产级部署',
+        '按模型、按提示词版本的成本估算',
+        '价格：按量$200-500/月'
+      ]
+    },
+    promptfoo: {
+      id: 'promptfoo-testing',
+      title: 'Promptfoo是什么？开源CI/CD测试零成本',
+      content: '**Promptfoo是最好的免费选择。** CLI工具、从YAML配置运行测试、CI/CD集成、内置红队（越狱检测、毒性评分）。无成本开始测试。',
+      items: [
+        '原生支持GPT-5.5、Claude 4.7 Opus、Gemini 3 Pro和通过Ollama及LM Studio的本地模型',
+        '最适合免费自托管CI/CD测试',
+        '内置红队：越狱和毒性检测'
+      ]
+    },
+    prompthub: {
+      id: 'prompthub-versioning',
+      title: 'PromptHub是什么？AI提示词的Git式版本管理',
+      content: '**PromptHub将提示词视为代码：版本管理、分支、团队协作。** 讨论变更、追踪谁在什么时候改了什么、回滚到旧版本。对有治理要求的团队至关重要。',
+      items: [
+        '最适合需要代码审查式批准工作流的团队',
+        '支持通过公开/私密URL在团队间共享提示词',
+        '价格：按团队规模$50-300/月'
+      ]
+    },
+    langsmith: {
+      id: 'langsmith-tracing',
+      title: 'LangSmith是什么？LangChain追踪和可观测性',
+      content: '**LangSmith为LangChain应用提供原生追踪。** 记录生产环境中的每个提示词、模型调用和令牌计数。重放请求、调试故障、收集重训练数据。使用LangChain时必需。',
+      items: [
+        '生产LangChain应用必需',
+        '多步提示词链的详细追踪',
+        '小型项目免费层；生产环保$50/月起'
+      ]
+    },
+    comparison: {
+      id: 'side-by-side-comparison',
+      title: '这6款工具如何对比？并排功能对比',
+      content: '**截至2026年4月，所有6款工具的完整功能对比：**',
+      columns: ['工具', '多模型', '评估', '测试', '版本管理', '生产部署', '价格'],
+      rows: [
+        { 工具: 'PromptQuorum', 多模型: '优秀', 评估: '否', 测试: '否', 版本管理: '否', 生产部署: '否', 价格: '免费+积分' },
+        { 工具: 'Braintrust', 多模型: '否', 评估: '优秀', 测试: '基础', 版本管理: '否', 生产部署: '否', 价格: '$500以上/月' },
+        { 工具: 'Vellum', 多模型: '否', 评估: '否', 测试: '基础', 版本管理: '是', 生产部署: '优秀', 价格: '$200-500/月' },
+        { 工具: 'Promptfoo', 多模型: '否', 评估: '否', 测试: '优秀', 版本管理: '经由Git', 生产部署: '仅CI/CD', 价格: '免费' },
+        { 工具: 'PromptHub', 多模型: '否', 评估: '否', 测试: '否', 版本管理: '优秀', 生产部署: '否', 价格: '$50-300/月' },
+        { 工具: 'LangSmith', 多模型: '否', 评估: '否', 测试: '否', 版本管理: '否', 生产部署: '追踪仅', 价格: '免费/$50以上/月' }
+      ],
+      image: '/images/best-pe-tools-2026-comparison-table-en.svg',
+      imageCaption: '6款提示词工程工具功能对比（2026年4月）：PromptQuorum多模型分发（免费）、Braintrust评估（$500以上/月）、Vellum生产部署（$200-500/月）、Promptfoo测试（免费）、PromptHub版本管理（$50-300/月）、LangSmith追踪（免费层）。'
+    },
+    decision: {
+      id: 'how-to-choose',
+      title: '如何选择合适的提示词工程工具？',
+      content: '**基于工作流阶段选择工具。所有团队：从PromptQuorum开始比较模型，然后为你的瓶颈添加专业工具。**',
+      items: [
+        '**所有团队——模型选择：** 从免费的PromptQuorum开始，在承诺堆栈前并排比较GPT-5.5、Claude 4.7 Opus、Gemini和本地模型。',
+        '**初创（<10人）：** PromptQuorum + Promptfoo（免费）+ PromptHub（版本管理）。当评估质量关键时升级到Braintrust。',
+        '**生产交付：** Vellum（部署/监控）+ Promptfoo（CI/CD测试）+ Braintrust（必要时离线评估）',
+        '**LangChain重度用户：** LangSmith（必需）+ Promptfoo（单元测试）+ Braintrust（离线评估）',
+        '**企业（治理很重要）：** PromptHub（审计日志）+ Braintrust（评估治理）+ Vellum（生产部署）'
+      ],
+      image: '/images/best-pe-tools-2026-decision-guide-en.svg',
+      imageCaption: '按团队类型的工具堆栈建议：所有团队从PromptQuorum开始；初创添加Promptfoo+PromptHub；生产团队添加Vellum；LangChain团队添加LangSmith；企业用PromptHub+Braintrust+Vellum进行治理。'
+    },
+    howToStack: {
+      id: 'how-to-build-stack',
+      title: '如何构建提示词工程工具堆栈？',
+      numberedItems: [
+        '**确定瓶颈：** 问题是模型选择、评估质量、测试覆盖、版本管理还是生产可靠性？从解决最痛苦缺口的工具开始。',
+        '**免费开始：** 注册PromptQuorum（多模型比较）并安装Promptfoo（CI/CD测试）。两者都免费且覆盖两个最常见的起点。',
+        '**尽早添加版本管理：** 在团队超过2人编辑提示词之前设置PromptHub或Git版本管理。',
+        '**当质量重要时添加评估：** 当需要标注数据集和人工环路反馈时整合Braintrust。',
+        '**最后添加生产工具：** 向用户交付提示词并需要A/B测试、降级链和监控时部署Vellum。',
+        '**每季度审计重叠：** 查看完整堆栈。如果两个工具覆盖同一功能，删除ROI低的。'
+      ]
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: '选择PE工具时最常见的错误有哪些？',
+      mistakes: [
+        {
+          mistake: '购买全部5个工具（因为看起来都有用）',
+          problem: 'Braintrust和Promptfoo在测试上重叠——购买两者产生重复工作流和浪费的预算。',
+          fix: '从Promptfoo（免费）开始CI/CD。仅当需要人工环路评估活动和标注数据集时添加Braintrust。'
+        },
+        {
+          mistake: '跳过CI/CD测试直接用生产评估',
+          problem: '手动评估会错过边界情况的回归。生产故障调试成本高。',
+          fix: '先在CI/CD中设置Promptfoo——在提示词上线前捕捉破坏性变更。为离线评估质量测量添加Braintrust。'
+        },
+        {
+          mistake: '延迟到回归发生才添加提示词版本管理',
+          problem: '没有版本管理无法确定哪个提示词变更导致回归或回滚到已知版本。',
+          fix: '从第1天就添加PromptHub或Vellum版本管理。把每个提示词变更当代码提交对待：审查后合并。'
+        },
+        {
+          mistake: '用通用可观测性（Datadog、New Relic）监控AI提示词',
+          problem: '通用工具追踪延迟和错误但不追踪提示词文本、模型响应或按令牌成本——这些是调试提示词需要的信号。',
+          fix: '用Vellum进行生产提示词监控，或若使用LangChain则用LangSmith。两者都以成本归因方式记录完整的提示词-响应对。'
+        }
+      ],
+      image: '/images/best-pe-tools-2026-common-mistakes-en.svg',
+      imageCaption: '提示词工程团队犯的4个错误：购买重叠工具、跳过CI/CD测试、延迟版本管理、用通用可观测性而非Vellum/LangSmith等提示词专用工具。'
+    },
+    chinaContext: {
+      id: 'china-context',
+      title: '中国企业的应用方案',
+      content: '**中国企业采用提示词工程工具时面临独特的合规和数据治理要求。** 本节重点介绍如何满足数据安全、跨境流动和企业部署的关键约束。\n\n**数据安全法合规（2021）**\n\n中国《数据安全法》要求重要数据处理者采取与数据分类级别相适应的安全措施。对于采用提示词工程工具的企业：\n\n- **本地推理首选：** 对敏感业务数据（财务、医疗、法律），优先使用本地部署模型（如通过Ollama的开源模型），避免数据向云端传输。Promptfoo支持本地模型的原生测试，符合数据安全要求。\n- **数据保留：** 若需云端工具（Braintrust、Vellum），选择提供中国数据中心或数据处理协议（DPA）的供应商，确保数据留在中国边界内。\n- **评估场景：** 对一般性能评估，可使用PromptQuorum比较本地和公开API模型，保持完整的数据所有权。\n\n**亚太地区数据跨境框架**\n\n在东南亚（新加坡、马来西亚）或其他亚太地区有运营的中国企业需要遵守各地不同的数据局地化要求：\n\n- **按地区选择工具部署**：不同国家有不同的数据主权框架。PromptQuorum的多模型功能让你比较本地模型（通过Ollama）和合规的云模型，避免跨越边界的数据传输。\n- **版本管理多地：** PromptHub支持为不同市场维护不同版本的提示词，每个版本符合当地合规需求。\n- **监控和追踪：** LangSmith可在不同地区的基础设施上部署，记录提示词执行同时满足各地的日志保留要求。\n\n**大型企业部署：金融、医疗、法律**\n\n金融机构、医疗系统、法律事务所采用提示词工程时有最严格的要求。推荐堆栈：\n\n1. **本地模型 + Promptfoo**：在企业防火墙内运行推理和测试，敏感数据不离开办公室网络。\n2. **PromptHub + 审计**：版本管理每个提示词迭代，记录审批链。特别适合需要监管报告的金融和法律用途。\n3. **Braintrust（定制部署）**：对于需要人工质量评估的场景，联系Braintrust获取企业DPA，支持数据留在中国。\n4. **LangSmith（企业DPA）**：若已使用LangChain，LangSmith企业计划包括中国数据中心和完整的审计日志导出。\n\n**成本和ROI考虑**\n\n中国企业评估提示词工程工具时，本地优先策略虽初期基础设施成本高，但从合规、数据主权和长期成本角度看更有优势——避免了潜在的罚款、数据泄露费用和供应商锁定。'
+    },
+    relatedReading: {
+      id: 'related-reading',
+      title: '相关阅读',
+      items: [
+        '[如何评估提示词质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh) — 这些工具衡量的指标：准确性、延迟、成本',
+        '[最佳提示词管理平台](/prompt-engineering/best-prompt-management-platforms?lang=zh) — 如何在团队间版本化、共享和治理提示词',
+        '[Zero-Shot vs Few-Shot提示词](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 何时例子帮助评估，何时伤害',
+        '[思维链提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 评估指标最重要的复杂推理任务',
+        '[提示词链](/prompt-engineering/prompt-chaining?lang=zh) — 从LangSmith追踪获益的多步工作流',
+        '[反向提示词：告诉AI不要做什么](/prompt-engineering/negative-prompting?lang=zh) — 减少幻觉的约束技术，这些工具旨在检测'
+      ]
+    },
+    faq: {
+      id: 'faq',
+      title: '常见问题',
+      faqs: [
+        { q: '2026年最好的提示词工程工具是什么？', a: '2026年使用最广泛的5款PE工具是：Braintrust（用于评估）、Vellum（用于生产部署）、Promptfoo（用于开源CI/CD测试）、PromptHub（用于版本管理）和LangSmith（用于LangChain可观测性）。每款工具解决不同的瓶颈。大多数团队只需要其中2-3款，而非全部5款。' },
+        { q: '评估提示词质量的最佳工具是哪个？', a: 'Braintrust是最强大的评估工具，支持LLM评判、人工反馈循环和用于构建真实标注数据的数据集管理。团队可以定义评估、自动运行、由人工标注评分，最后编译成可复用的评估数据集。Promptfoo是进行CI/CD自动化测试评估的免费替代方案。' },
+        { q: 'Promptfoo还是Braintrust用于测试？', a: 'CI/CD测试用Promptfoo——免费、开源、从YAML配置运行、与GitHub Actions集成。当需要离线评估和人工反馈来构建标注数据集时，使用Braintrust。许多团队同时使用两者：Promptfoo把关部署，Braintrust衡量输出质量。' },
+        { q: '提示词版本管理对团队必要吗？', a: '是的。一旦超过一个人编辑提示词，版本管理就很关键。没有版本管理，无法追踪哪个版本已上线、无法在回归后回滚、无法审计谁在什么时候改了什么。PromptHub和Vellum都提供版本管理；PromptHub为治理要求高的团队提供最Git化的工作流。' },
+        { q: '这些工具支持本地模型（如Ollama）吗？', a: '大多数工具都以不同程度支持本地模型。Promptfoo通过提供商配置原生支持Ollama和LM Studio，无需包装层。Braintrust和Vellum通过API包装层支持本地模型，暴露标准的OpenAI兼容端点。' },
+        { q: '能否同时使用多个提示词工程工具？', a: '可以——2026年的标准做法是结合2-3个工具。最常见的堆栈是：Promptfoo（CI/CD测试）+ Vellum（生产部署）+ Braintrust（离线评估活动）。三款工具均通过标准REST API集成，无锁定；避免购买全部5款，因为Braintrust和Promptfoo在测试上有部分重叠。' },
+        { q: '这些工具的典型成本是多少？', a: '截至2026年4月：Braintrust约$500/月（初始版）、Vellum $200-500/月（按请求量）、Promptfoo免费（开源自托管）、PromptHub $50-300/月（按团队规模）、LangSmith免费层加$50/月起的付费计划。成本按评估量、API调用和座位数缩放。' },
+        { q: '哪个工具有最好的免费层？', a: 'Promptfoo完全免费开源——无座位限制、无使用上限、在你的基础设施上自托管。PromptHub和LangSmith都为小团队提供慷慨的免费层。Braintrust和Vellum仅提供试用，对于有真实生产使用的团队会很快升级到付费计划。' },
+        { q: '提示词测试和评估有什么区别？', a: '测试（Promptfoo）检查提示词是否为定义的输入产生正确输出——在CI/CD中自动运行、捕捉回归。评估（Braintrust）衡量输出质量——准确性、语调、事实性——使用LLM评判或人工评判。测试快速自动；评估慢且更细致。大多数团队需要两者。' },
+        { q: '如何知道何时从Promptfoo升级到Braintrust？', a: '当团队需要在二元判决之外对输出质量评分时切换到Braintrust——例如语调、事实准确性或品牌一致性。Promptfoo擅长CI/CD中的二元正确性测试。Braintrust增加人工环路评分、LLM评判和不断改进的标注数据集。大多数团队在3-5人每天迭代提示词时达到这个临界点。' }
+      ]
+    },
+    sources: {
+      id: 'sources',
+      title: '参考资源',
+      items: [
+        '[Braintrust文档](https://www.braintrust.dev/docs) — 官方文档，涵盖评估循环、LLM评判和数据集管理',
+        '[Vellum平台](https://www.vellum.ai) — Vellum产品页面，包含生产部署、A/B测试和监控功能',
+        '[Promptfoo GitHub](https://github.com/promptfoo/promptfoo) — 开源仓库，含YAML配置文档和红队测试指南',
+        '[PromptHub](https://prompthub.com) — 提示词版本管理和团队协作平台',
+        '[LangSmith文档](https://docs.smith.langchain.com) — 官方LangSmith追踪和可观测性文档'
+      ]
+    }
+  }
+},
   };
