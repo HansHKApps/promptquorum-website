@@ -38,6 +38,7 @@ export const article: Record<Language, PEArticle> = {
       { label: 'How PromptQuorum Helps Multilingual Workflows', anchor: 'promptquorum-multilingual' },
       { label: 'Common Mistakes', anchor: 'common-mistakes' },
       { label: 'How to Set Up a Multilingual Prompt Workflow', anchor: 'how-to-start' },
+      { label: 'Regional Compliance & Data Considerations', anchor: 'regional-context' },
       { label: 'FAQ', anchor: 'faq' },
       { label: 'Related Reading', anchor: 'related-reading' },
       { label: 'Sources', anchor: 'sources' },
@@ -117,6 +118,7 @@ export const article: Record<Language, PEArticle> = {
     },
     sections: {
       tldr: {
+        id: 'key-takeaways',
         isTldr: true,
         items: [
           'LLMs perform best in English; non-English outputs have 5–15% higher error rates in Tier 3+ languages (Ahuja et al., 2023 MEGA benchmark).',
@@ -128,6 +130,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       quickFacts: {
+        id: 'quick-facts',
         title: 'Quick Facts',
         items: [
           '**46%** of CommonCrawl training data is English; only 3% is Chinese, 5% is French, 6% is German.',
@@ -138,6 +141,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       definition: {
+        id: 'why-language-matters',
         title: 'Why Language Matters More Than You Think',
         content: [
           '**Multilingual prompting is not translation — it is activating a different part of the model\'s learned distribution.** LLMs tokenise and represent text in a shared embedding space, but training data is skewed: CommonCrawl (used to train most LLMs) is ~46% English, ~6% German, ~5% French, ~3% Chinese. Languages with <1% training share (e.g., most African languages, many South Asian languages) behave unpredictably.',
@@ -149,6 +153,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       languageTiers: {
+        id: 'language-tiers',
         title: 'The 4-Tier Language Model',
         content: [
           '**Language performance in LLMs follows a four-tier hierarchy based on training data share, with Tier 1 (English) performing near-perfectly and Tier 4 (low-resource languages) producing unreliable outputs.** Use the tier system to decide which strategies apply to your target language.',
@@ -166,6 +171,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       tokenCosts: {
+        id: 'token-costs',
         title: 'Token Costs by Script',
         content: [
           '**The same 1,000-word piece of content costs 46% more tokens in Arabic than in English, and 30% more in Japanese — directly increasing your API bill.** Token efficiency varies dramatically by script and language family. This affects both API costs and context window budgeting.',
@@ -186,6 +192,7 @@ export const article: Record<Language, PEArticle> = {
         tableFormat: true,
       },
       systemPromptLanguage: {
+        id: 'system-prompt-language',
         title: 'Should Your System Prompt Be in English or the Target Language?',
         content: [
           '**For structural and reasoning tasks, English system prompts outperform native-language system prompts in Tier 2–3 languages. For tone and formality, native-language system prompts perform better.** This is the single most important decision in multilingual prompting — get it wrong and your outputs suffer.',
@@ -203,6 +210,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       modelMatrix: {
+        id: 'model-matrix',
         title: 'Which Models Handle Which Languages Best?',
         content: [
           '**No single model leads across all languages. Mistral Large 2 leads on Romance languages; Google Gemini 2.5 Pro leads on East Asian languages; GPT-5.5 leads on Arabic and multilingual reasoning tasks.** This table aggregates model performance from Ahuja et al. (2023) MEGA benchmark.',
@@ -223,6 +231,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       cotLanguage: {
+        id: 'cot-language',
         title: 'Chain-of-Thought Prompting Across Languages',
         content: [
           '**For Tier 3 languages, writing your chain-of-thought instruction in English but requesting the final answer in the target language improves reasoning accuracy by 5–12% (Shi et al., 2023).** This cross-lingual CoT technique exploits the model\'s English reasoning strength while preserving output quality in your target language.',
@@ -237,6 +246,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       fewShotLanguage: {
+        id: 'few-shot-language',
         title: 'Few-Shot Examples and Language Matching',
         content: [
           '**Few-shot examples must be in the same language as the task — cross-language few-shot examples reduce output accuracy by 15–20% in Tier 2–3 languages (Shi et al., 2023).** Few-shot examples teach the model format, tone, and pattern. When examples are in English but the task is in French, the model receives conflicting signals.',
@@ -248,6 +258,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       registerFormality: {
+        id: 'register-formality',
         title: 'Formality, Register, and Honorifics',
         content: [
           '**LLMs default to informal registers in most languages. If your use case requires formal German (Sie-form), formal Japanese (丁寧語), or French Vous-form, you must explicitly declare the register in your system prompt — models will not infer it from context.** This is often overlooked and causes outputs to sound wrong to native speakers.',
@@ -266,6 +277,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       codeSwitching: {
+        id: 'code-switching',
         title: 'Code-Switching: When Users Mix Languages',
         content: [
           '**When users mix languages in a prompt (e.g., English question with a German brand name or French code comment), most models respond in the dominant language of the query — but this is unreliable without explicit instruction.** Code-switching is common in multilingual workplaces where technical terms stay in English but surrounding prose is in another language.',
@@ -276,6 +288,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       promptTemplates: {
+        id: 'prompt-templates',
         title: 'Reusable Multilingual Prompt Templates',
         content: [
           'Four template patterns you can adapt for your own multilingual workflows. Copy and customize the [target language] placeholders for your use case.',
@@ -288,6 +301,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       promptquorumMultilingual: {
+        id: 'promptquorum-multilingual',
         title: 'How PromptQuorum Helps Multilingual Workflows',
         content: [
           'PromptQuorum\'s multi-model dispatch lets you send the same multilingual prompt to GPT-5.5, Gemini 2.5 Pro, and Mistral Large 2 simultaneously and compare outputs side-by-side. This is the fastest way to identify which model handles your target language better for a specific task — instead of testing models separately and wasting API credits.',
@@ -295,6 +309,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'Common Mistakes',
         items: [
           '**Assuming English prompt → native language output works without adjustment:** "Just translate your prompt" produces lower-quality results than rewriting it for the target language. Translated prompts often contain awkward phrasing that confuses the model.',
@@ -306,6 +321,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       howToStart: {
+        id: 'how-to-start',
         title: 'How to Set Up a Multilingual Prompt Workflow',
         numberedItems: [
           'Identify which language tier(s) your target language(s) fall into (Tier 1–4).',
@@ -316,7 +332,17 @@ export const article: Record<Language, PEArticle> = {
           'Run PromptQuorum multi-model dispatch to compare model outputs on your specific language task before committing to one model.',
         ],
       },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Regional Compliance & Data Considerations',
+        content: [
+          '**European Union (GDPR):** If processing French, German, or other EU-language data, ensure your LLM API meets GDPR Article 28 (Data Processing Agreement). Mistral Large 2 and Claude Opus 4.7 both offer EU-compliant deployments with data residency in Frankfurt/Ireland. GPT-5.5 requires data processing terms via OpenAI\'s Data Processing Agreement. Never send personally identifiable information (names, email, phone) to models without explicit consent and DPA coverage.',
+          '**Japan (APPI):** Japanese enterprises deploying multilingual LLMs must comply with the Act on Protection of Personal Information (APPI). Gemini 2.5 Pro offers Japan-region deployment with data residency in Tokyo. GPT-5.5 and Claude Opus 4.7 require DPA terms. Consider local LLMs (Qwen2.5, Llama 3.1) deployed on-premises to guarantee data never leaves Japan.',
+          '**China (Data Security Law):** Prompting in Chinese or Chinese user data triggers the 2021 Data Security Law (DSL). Foreign cloud LLMs (OpenAI, Anthropic, Google) cannot be used for sensitive PII or government workflows. Deploy Qwen2.5 locally via Alibaba Cloud or Baidu Cloud with data residency compliance. For non-sensitive use (marketing, customer chat), foreign APIs are acceptable but must have data transfer agreements in place.',
+        ],
+      },
       faq: {
+        id: 'faq',
         title: 'FAQ',
         faqs: [
           { q: 'Should I write my prompt in English or the target language?', a: 'For structural reasoning tasks, write the system prompt in English. For tone and formality, write the user message and register instructions in the target language.' },
@@ -332,6 +358,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Related Reading',
         items: [
           '[System Prompt vs. User Prompt: What Goes Where?](/prompt-engineering/system-prompt-vs-user-prompt?lang=en) — Understanding where language instructions should live',
@@ -342,6 +369,7 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Sources',
         items: [
           '[Shi et al., 2023. "Language Models Are Multilingual Chain-of-Thought Reasoners." arXiv:2210.03057](https://arxiv.org/abs/2210.03057) — MGSM benchmark: CoT performance across 10 languages; basis for cross-lingual CoT and few-shot language matching findings.',
