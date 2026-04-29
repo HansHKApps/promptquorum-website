@@ -503,7 +503,528 @@ export const article: Record<Language, PEArticle> = {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    de: {
+      freshness_tier: 'semi_annual',
+      theme: 'Techniken',
+      title: 'Mit KI extrahieren und zusammenfassen',
+      intro: 'KI-gestützte Extraktion und Zusammenfassung reduziert die Zeit für die Dokumentenprüfung um 60–80 % und erreicht Halluzinationsraten von nur 0,7 % bei quelltreuen Zusammenfassungsaufgaben — entscheidend ist die Wahl des richtigen Zusammenfassungstyps, des richtigen Modells und der richtigen Promptstruktur für jede Dokumentenkategorie.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-29',
+      seoTitle: 'Dokumente mit KI zusammenfassen und extrahieren 2026',
+      metaDescription: 'KI-Zusammenfassung erreicht 0,7 % Halluzinationsrate auf Quelltexten. NotebookLM, Claude, GPT-5.5 im Vergleich — mit Prompts für quelltreue Ausgaben.',
+      readTime: '8 Min. Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'KI-Dokumentenzusammenfassung',
+      audience: 'Forscher, Analysten und Entwickler, die umfangreiche Dokumentensammlungen mit KI verarbeiten',
+      next_refresh_due: '2026-09-23',
+      toc: [
+        { label: 'Wichtige Erkenntnisse', anchor: '#key-takeaways' },
+        { label: 'Extraktiv vs. Abstraktiv: Was ist besser geeignet?', anchor: '#two-summarisation-types' },
+        { label: 'Welches Modell hat die niedrigste Halluzinationsrate?', anchor: '#which-model-for-summarisation' },
+        { label: 'Tool-Vergleich Zusammenfassung', anchor: '#tool-comparison' },
+        { label: 'Wie Sie Extraktionsprompts schreiben', anchor: '#extraction-prompt-structure' },
+        { label: 'Der 5-Komponenten-Extraktionsprompt', anchor: '#five-component-prompt' },
+        { label: 'Chunking langer Dokumente', anchor: '#chunking-long-documents' },
+        { label: 'Iterative Zusammenfassung', anchor: '#iterative-summarisation' },
+        { label: 'Warum halluzinieren KI-Modelle noch immer?', anchor: '#hallucination-analysis' },
+        { label: 'Evaluierungsmetriken: ROUGE, BERTScore, HHEM', anchor: '#evaluation-metrics' },
+        { label: 'Globaler und regionaler Kontext', anchor: '#global-context' },
+        { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Mit KI extrahieren und zusammenfassen',
+        description: 'KI-Dokumentenzusammenfassung reduziert die Prüfzeit um 60–80 % bei 0,7 % Halluzinationsrate. Extraktive vs. abstraktive Ansätze, Modellvergleich und Promptstruktur für quelltreue Ausgaben.',
+        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=de',
+        inLanguage: 'de',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-29',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          sameAs: 'https://www.promptquorum.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
+          width: 1200,
+          height: 630,
+        },
+        proficiencyLevel: 'Intermediate',
+        about: [
+          { '@type': 'Thing', name: 'Dokumentenzusammenfassung' },
+          { '@type': 'Thing', name: 'LLM-Halluzination' },
+          { '@type': 'Thing', name: 'Prompt-Engineering' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        keywords: ['KI-Zusammenfassung', 'Dokumentenextraktion', 'abstraktive Zusammenfassung', 'extraktive Zusammenfassung', 'NotebookLM', 'Claude', 'Halluzinationsraten', 'Prompt-Engineering'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Elicit' },
+          { '@type': 'SoftwareApplication', name: 'Scholarcy' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Was ist der Unterschied zwischen extraktiver und abstraktiver KI-Zusammenfassung?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Extraktive Zusammenfassung kopiert Sätze direkt aus dem Quelldokument ohne Modifikation — faktische Fehler sind strukturell ausgeschlossen, da kein neuer Text generiert wird. Abstraktive Zusammenfassung verwendet LLMs, um neue paraphrasierte Sätze zu generieren — was lesbarere Ausgaben erzeugt, aber mit Halluzinationsraten von 0,7–14 % je nach Modell und Aufgabe. Extraktiv für Rechts- und Compliance-Dokumente; abstraktiv für Forschungssynthesen und Executive Summaries.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Welches KI-Modell halluziniert am wenigsten bei der Dokumentenzusammenfassung?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Im Vectara HHEM-Benchmark — dem Standardtest für Zusammenfassungstreue über 831 Dokumente — erzielte Gemini-2.0-Flash-001 (Google DeepMind) mit 0,7 % die niedrigste Halluzinationsrate (Stand 2025). Diese Raten gelten nur für quelltreue Aufgaben; offene Faktabrückfragen ergeben Raten von 3–33 % bei denselben Modellen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie viele Seiten können KI-Zusammenfassungstools auf einmal verarbeiten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-5.5 (OpenAI) verarbeitet ca. 100 Standardseiten pro Sitzung (128.000 Token). Claude Opus 4.7 (Anthropic) verarbeitet ca. 160 Seiten (200.000 Token). Gemini 3.1 Pro (Google DeepMind) verarbeitet ca. 800 Seiten (1 Mio. Token). NotebookLM (Google DeepMind) unterstützt bis zu 50 Quellen mit insgesamt ca. 500.000 Wörtern pro Notizbuch. Bei größeren Korpora ist Document Chunking erforderlich.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist NotebookLM oder Claude besser für die Dokumentenzusammenfassung?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Beide Produkte erfüllen unterschiedliche Anforderungen. NotebookLM (Google DeepMind) bietet strengere Quellenverankerung mit anklickbaren Inline-Zitaten und ist besser für die quelltreue Wiedergabe von Dokumentinhalten. Claude Opus 4.7 (Anthropic) liefert tiefere Analysen, ist führend bei der Synthese mehrerer Dokumente und erkennt nicht offensichtliche Verbindungen — kann aber Quellinhalte gelegentlich mit Trainingswissen vermischen. NotebookLM für Präzision; Claude für Erkenntnisgewinnung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie verhindere ich KI-Halluzinationen in meinen Zusammenfassungen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Vier Techniken reduzieren Halluzinationen: (1) explizit anweisen — „Fasse nur aus dem folgenden Dokument zusammen; füge kein externes Wissen hinzu"; (2) Temperature (T) auf 0,0–0,1 setzen für maximalen Determinismus; (3) Treuecheck durchführen — das Modell auffordern, jede Aussage in der Zusammenfassung ihrer Quellpassage zuzuordnen; (4) Gegencheck mit einem zweiten Modell — wenn GPT-5.5 und Claude Opus 4.7 einem Sachverhalt übereinstimmen, ist die Wahrscheinlichkeit gemeinsamer Halluzination statistisch nahezu null.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist Document Chunking und wann sollte ich es nutzen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chunking teilt ein Dokument in Segmente (typischerweise 500–2.000 Token), fasst jedes Segment separat zusammen und synthetisiert die Teilergebnisse zu einer Gesamtausgabe. Nutzen Sie es, wenn Ihr Dokument das Kontextfenster des Modells überschreitet — ca. 100 Seiten bei GPT-5.5 (128.000 Token), 160 Seiten bei Claude Opus 4.7 (200.000 Token) oder 800 Seiten bei Gemini 3.1 Pro (1 Mio. Token). Für strukturierte Dokumente wie Rechtsverträge und Jahresberichte liefert thematisches Chunking nach Abschnittsüberschriften die kohärentesten Ergebnisse.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was sind ROUGE und BERTScore, und welche Metrik eignet sich für die Evaluierung von KI-Zusammenfassungen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ROUGE misst N-Gramm-Überlappung zwischen generierter Zusammenfassung und Referenz — nützlich für Benchmarks, jedoch blind gegenüber Semantik und Faktentreue. BERTScore verwendet Kosinus-Ähnlichkeit zwischen BERT-Embeddings und erfasst semantische Ähnlichkeit statt exakter Wortübereinstimmung. Für Produktions-Workflows empfiehlt sich die Kombination aus HHEM-Treue-Score und einem Vollständigkeitscheck.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Können KI-Zusammenfassungstools auch nicht-englische Dokumente verarbeiten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja, mit wichtigen Einschränkungen. Mistral AI-Modelle (Frankreich) unterstützen Französisch und europäische Sprachen nativ und können lokal für DSGVO-Konformität bereitgestellt werden. Qwen 3 (Alibaba) tokenisiert chinesische Schriftzeichen mit ca. 40 % weniger Token als GPT-5.5. LLaMA 4-Modelle über Ollama ermöglichen mehrsprachige Zusammenfassung komplett lokal ohne externe API-Aufrufe.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Muss ich bei der Verwendung von KI-Zusammenfassungstools die DSGVO beachten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja. Werden personenbezogene Daten an externe API-Endpunkte gesendet (z. B. OpenAI, Anthropic), gilt Artikel 28 DSGVO: Es muss ein Auftragsverarbeitungsvertrag (AVV) geschlossen werden und die Daten dürfen nur für den vereinbarten Zweck genutzt werden. Die Alternative nach BSI-Grundschutz-Katalogen ist die lokale Bereitstellung — z. B. Mistral Large via Ollama oder LLaMA 4 on-premises — wodurch keine Daten das Unternehmensnetz verlassen. Für besonders sensible Dokumente (Gesundheit, Finanzen, Recht) empfehlen DACH-Rechtsexperten ausschließlich lokale Inferenz.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist KI-gestützte Dokumentenzusammenfassung für den deutschen Mittelstand geeignet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja, sofern die richtige Infrastruktur gewählt wird. Mittelständische Unternehmen profitieren besonders von NotebookLM für interne Berichte und Vertragsanalysen sowie von lokal bereitgestellten Modellen (LLaMA 4 via Ollama) für datenschutzkritische Dokumente. Der BSI-Grundschutz empfiehlt für KMU eine Risikoanalyse vor der Cloud-API-Nutzung. Typische Anwendungsfälle: automatische Zusammenfassung von Lieferantenverträgen, Protokollkondensierung aus Meetings, Extraktion von Compliance-relevanten Klauseln aus AGBs.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'de',
+        name: 'Mit KI extrahieren und zusammenfassen: Kernthemen',
+        description: 'Grundlegende Konzepte für KI-gestützte Dokumentenextraktion und -zusammenfassung',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Extraktive vs. abstraktive Zusammenfassung', description: 'Trade-offs zwischen faktischer Präzision und Lesbarkeit verstehen' },
+          { '@type': 'ListItem', position: 2, name: 'Welches KI-Modell eignet sich?', description: 'NotebookLM, Claude, GPT-5.5 und Gemini für Zusammenfassungsaufgaben im Vergleich' },
+          { '@type': 'ListItem', position: 3, name: 'Promptstruktur für Extraktion', description: 'Wie man strukturierte Prompts schreibt, die Halluzinationen verhindern' },
+          { '@type': 'ListItem', position: 4, name: 'KI-Halluzinationen reduzieren', description: 'Temperature-Einstellungen, Treu-Checks und Multi-Modell-Verifikation' },
+          { '@type': 'ListItem', position: 5, name: 'Tools und Workflows', description: 'NotebookLM, Scholarcy, Elicit und benutzerdefinierte Extraktions-Pipelines nutzen' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'de',
+        name: 'Wie man Dokumente mit KI extrahiert und zusammenfasst',
+        totalTime: 'PT15M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Tool je nach Quellentyp und Extraktionsstruktur auswählen', text: 'NotebookLM für eigene PDFs und Dokumente verwenden, Elicit für wissenschaftliche Artikel mit strukturierten Feldern (Methodik, Stichprobengröße, Ergebnisse) und Perplexity für Echtzeit-Web-Zusammenfassungen.' },
+          { '@type': 'HowToStep', position: 2, name: 'Extraktionsschema vorab definieren (JSON, Tabelle, Aufzählungsliste)', text: 'Dem Modell genau die benötigten Spalten oder Felder und deren Datentyp mitteilen. Beispiel: „Gib ein JSON-Array zurück mit den Schlüsseln: author (string), year (integer), finding (text max. 200 Zeichen), confidence (enum: high/medium/low)."' },
+          { '@type': 'HowToStep', position: 3, name: 'Temperature (T) auf 0,1–0,3 setzen', text: 'Niedrigere Temperaturen erzeugen deterministischere, konsistentere Ausgaben. Höhere Temperaturen nur für das Brainstorming alternativer Interpretationen bei mehrdeutigem Quellmaterial reservieren.' },
+          { '@type': 'HowToStep', position: 4, name: 'Große Dokumente in mehreren Durchläufen mit Zwischenspeicherung extrahieren', text: 'Bei 100-seitigen PDFs die Abschnitte 1–25, dann 26–50 usw. extrahieren und die Ergebnisse strukturiert ablegen. Verhindert Kontextfensterüberschreitung und erleichtert die Fehlerkorrektur.' },
+          { '@type': 'HowToStep', position: 5, name: 'Wichtige Extraktionen mit dem Quelldokument gegenchecken', text: '10–20 % der extrahierten Daten stichprobenartig mit dem Original abgleichen. KI-Modelle können strukturierte Daten halluzinieren, insbesondere aus Tabellen mit verbundenen Zellen oder unklarer Formatierung.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Zusammenfassung',
+          isTldr: true,
+          items: [
+            'Extraktive Zusammenfassung für juristische, Compliance- und wortgenaue Dokumente verwenden; abstraktive LLM-Zusammenfassung für Forschungssynthesen und Executive Outputs',
+            'Gemini-2.0-Flash-001 erreicht 0,7 % Halluzinationsrate bei quelltreuer Zusammenfassung — das beste Ergebnis im Vectara HHEM-Benchmark über 831 Dokumente',
+            'NotebookLM (Google DeepMind) bietet die zuverlässigste quelltreue Zusammenfassung mit anklickbaren Inline-Zitaten; Claude Opus 4.7 führt bei dokumentübergreifender Synthese und komplexer Analyse',
+            'Die Halluzinationsraten bei quelltreuer Zusammenfassung sanken von 2021 bis 2025 um 96 % — ein mathematischer Beweis (2025) bestätigt jedoch, dass Halluzinationen unter aktuellen LLM-Architekturen nicht vollständig eliminierbar sind',
+            'Für Dokumente, die das Kontextfenster überschreiten, liefert thematisches Chunking (nach Abschnitt/Thema) die kohärenteste Gesamtsynthese',
+            'Claude Opus 4.7 verarbeitet ca. 160 Seiten pro Sitzung (200.000 Token); Gemini 3.1 Pro ca. 800 Seiten (1 Mio. Token) — die Kontextlimits bestimmen, welches Modell für große Dokumentenmengen praktisch ist',
+          ],
+        },
+        definition: {
+          id: 'two-summarisation-types',
+          title: 'Was sind die zwei KI-Zusammenfassungstypen und wann ist welcher zu verwenden?',
+          content: [
+            '**Extraktive Zusammenfassung kopiert Sätze direkt aus der Quelle; abstraktive Zusammenfassung generiert neue Sätze, die paraphrasieren und verdichten — die zwei Ansätze tauschen faktische Präzision gegen Lesbarkeit und Kompression.**',
+            'Extraktive Zusammenfassung — eingesetzt von Tools wie Scholarcy — bewertet Sätze nach Schlüsselworthäufigkeit, Position und Informationsdichte und reproduziert die am höchsten bewerteten Sätze ohne Modifikation. Da kein neuer Text generiert wird, sind faktische Fehler strukturell ausgeschlossen: Die Ausgabe ist stets ein Teilmenge der Quelle. Abstraktive Zusammenfassung — eingesetzt von GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) — generiert neuen Text, der synthetisiert und paraphrasiert, und liefert lesbarere Ausgaben auf Kosten eines höheren Halluzinationsrisikos.',
+          ],
+          columns: ['Methode', 'Halluzinationsrisiko', 'Lesbarkeit', 'Geeignet für'],
+          rows: [
+            {
+              Methode: 'Extraktiv',
+              Halluzinationsrisiko: 'Nahe null (kopiert Quelle)',
+              Lesbarkeit: 'Geringer — kann unzusammenhängend wirken',
+              'Geeignet für': 'Rechtsdokumente, Compliance, wortgenaue Anforderungen',
+            },
+            {
+              Methode: 'Abstraktiv (LLM)',
+              Halluzinationsrisiko: '0,7–14 % je nach Modell und Aufgabe',
+              Lesbarkeit: 'Hoch — natürliche Prosa',
+              'Geeignet für': 'Forschungssynthesen, Executive Summaries, Berichte',
+            },
+            {
+              Methode: 'Hybrid (extraktiv → abstraktiv)',
+              Halluzinationsrisiko: 'Niedrig',
+              Lesbarkeit: 'Hoch',
+              'Geeignet für': 'Finanzberichte, wissenschaftliche Literatur, technische Dokumentation',
+            },
+          ],
+          blockquote: 'Eine arXiv-Studie (2025) zum Benchmarking von Zusammenfassungsansätzen bei Finanz-Nachrichten-Artikeln ergab, dass extraktive Methoden (Lead-1, MatchSum) starke Baselines für kurze, gut strukturierte Texte liefern — abstraktive LLMs schneiden bei komplexen Finanzdokumenten jedoch besser ab, wenn sie auf domänenspezifischen Daten feinabgestimmt sind. In einem Satz: Extraktiv, wenn kein faktischer Fehler tolerierbar ist; abstraktiv, wenn die Ausgabe ohne weitere Nachbearbeitung lesbar und nutzbar sein muss.',
+        },
+        toolComparison: {
+          id: 'which-model-for-summarisation',
+          title: 'Welches KI-Modell hat die niedrigste Halluzinationsrate für Zusammenfassungen?',
+          content: [
+            '**NotebookLM (Google DeepMind) führt bei quelltreuer, zitierter Zusammenfassung hochgeladener Dokumente; Claude Opus 4.7 (Anthropic) führt bei Synthese, dokumentübergreifender Analyse und komplexem Denken; GPT-5.5 (OpenAI) führt bei schneller, flexibler Allzweck-Zusammenfassung.**',
+            'Im Vectara Hughes Hallucination Evaluation Model (HHEM) — dem Standard-Benchmark für Zusammenfassungstreue, getestet über 831 Dokumente pro Modell — zählten 2025 folgende Modelle zu den Spitzenreitern:',
+            'Diese Raten stellen eine Verbesserung von 96 % gegenüber 2021 dar, als Spitzenmodelle auf derselben Aufgabe 21,8 % Halluzinationsraten erzielten. Diese Zahlen gelten jedoch nur für quelltreue Zusammenfassungen — offene faktische Fragen ergeben 3–33 % Halluzinationsraten bei denselben Modellen.',
+          ],
+          items: [
+            '**Gemini-2.0-Flash-001 (Google DeepMind):** 0,7 % Halluzinationsrate — niedrigste gemessene Rate im Benchmark',
+            '**OpenAI- und Gemini-Varianten:** 0,8–1,5 % Halluzinationsraten-Cluster',
+            '**Insgesamt:** 4 Modelle erreichen nun sub-1%-Raten bei quelltreuen Zusammenfassungsaufgaben',
+          ],
+        },
+        toolTable: {
+          id: 'tool-comparison',
+          title: 'Wie schneiden NotebookLM, Claude, GPT-5.5 und Gemini im direkten Vergleich ab?',
+          columns: ['Tool', 'Kontextlimit', 'Qualität der Quellenangaben', 'Bester Anwendungsfall'],
+          rows: [
+            {
+              Tool: 'NotebookLM (Google DeepMind)',
+              Kontextlimit: 'ca. 500.000 Wörter / 50 Quellen',
+              'Qualität der Quellenangaben': 'Nummerierte Inline-Zitate, anklickbar',
+              'Bester Anwendungsfall': 'Strukturierte Forschungsauswertung, quelltreue Fragen',
+            },
+            {
+              Tool: 'Claude Projects (Anthropic)',
+              Kontextlimit: 'ca. 200.000 Token (ca. 160 Seiten)',
+              'Qualität der Quellenangaben': 'Inkonsistent per default; zuverlässig mit Prompts',
+              'Bester Anwendungsfall': 'Quellenübergreifende Synthese, komplexes Denken, Argumentationsaufbau',
+            },
+            {
+              Tool: 'GPT-5.5 (OpenAI)',
+              Kontextlimit: '128.000 Token (ca. 100 Seiten)',
+              'Qualität der Quellenangaben': 'Moderat; erfordert explizite Anweisung',
+              'Bester Anwendungsfall': 'Allgemeine Dokumente, schnelle Zusammenfassungen',
+            },
+            {
+              Tool: 'Gemini 3.1 Pro (Google DeepMind)',
+              Kontextlimit: '1 Mio. Token (ca. 800 Seiten)',
+              'Qualität der Quellenangaben': 'Moderat',
+              'Bester Anwendungsfall': 'Vollständige Codebase- oder Großkorpus-Analyse',
+            },
+            {
+              Tool: 'Elicit',
+              Kontextlimit: '138 Mio.+ wissenschaftliche Artikel',
+              'Qualität der Quellenangaben': 'Strukturierte akademische Extraktion',
+              'Bester Anwendungsfall': 'Systematische Literaturreviews',
+            },
+          ],
+          content: [
+            '**In PromptQuorum getestet — 25 Dokumentenzusammenfassungs-Prompts über drei Modelle verteilt:** Claude Opus 4.7 lieferte in 20 von 25 Fällen die analytisch vollständigsten Zusammenfassungen (erkannte Implikationen und Verbindungen zwischen Dokumenten). GPT-5.5 lieferte in 18 von 25 Fällen die prägnantesten, sofort verwendbaren Zusammenfassungen. Gemini 3.1 Pro war das einzige Modell, das alle 25 Dokumente vollständig ohne Kontext-Kürzung verarbeiten konnte, da mehrere 80.000 Token überschritten.',
+          ],
+        },
+        promptStructure: {
+          id: 'extraction-prompt-structure',
+          title: 'Wie schreibt man Extraktions- und Zusammenfassungsprompts?',
+          content: [
+            '**Ein strukturierter Zusammenfassungsprompt — der Dokumenttyp, Ausgabeformat, Längenbeschränkung und explizite Anweisung zur Kennzeichnung nicht überprüfbarer Aussagen angibt — liefert direkt verwendbare Ausgaben; ein unstrukturierter Prompt liefert einen allgemeinen Absatz, der kritische Informationen auslässt.**',
+            'Der häufigste [Prompt-Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de)-Fehler bei Zusammenfassungen ist die Behandlung von „Fasse das zusammen" als vollständige Anweisung. Jede Annahme des Modells über Länge, Format, Perspektive und Detailgrad ist ein potenzieller Mismatch mit dem tatsächlichen Bedarf. Die [5-Bausteine-Promptstruktur](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — Rolle, Aufgabe, Eingabe, Einschränkungen, Ausgabeformat — gilt direkt für Extraktionsaufgaben.',
+          ],
+        },
+        promptFramework: {
+          id: 'five-component-prompt',
+          title: 'Was sind die 5 Komponenten eines effektiven Extraktionsprompts?',
+          content: '**Schlechter Prompt — unstrukturiert, erzeugt generische, nicht verwendbare Ausgaben:**',
+          items: [
+            '**Rolle** — „Du bist ein auf [Fachgebiet] spezialisierter Analyst."',
+            '**Quellenanweisung** — „Fasse nur die Informationen aus dem folgenden Dokument zusammen. Füge kein externes Wissen hinzu."',
+            '**Ausgabeformat** — „Erstelle eine strukturierte Zusammenfassung mit diesen Abschnitten: [Wichtige Erkenntnisse], [Methodik], [Einschränkungen], [Empfohlene Maßnahmen]."',
+            '**Längenbeschränkung** — „Maximal 300 Wörter insgesamt."',
+            '**Unsicherheitsanweisung** — „Wenn eine Aussage im Dokument mehrdeutig ist oder einer anderen Passage widerspricht, kennzeichne sie mit [PRÜFEN]."',
+          ],
+          blockquote: 'Fasse diesen Bericht zusammen.',
+        },
+        goodExample: {
+          id: 'good-prompt-example',
+          title: 'Wie sieht ein gut strukturierter Zusammenfassungsprompt aus?',
+          blockquote: 'Du bist ein Finanzanalyst. Fasse den beigefügten Q3-Ertragsbericht ausschließlich auf Basis des Dokuments zusammen — füge keinen externen Kontext hinzu. Strukturiere die Ausgabe wie folgt: [Umsatz & Margen], [Segmentleistung], [Prognoseanpassungen], [Wesentliche Risiken]. Maximal 250 Wörter. Kennzeichne jede Zahl, die einer früheren Aussage im selben Dokument widerspricht, mit [DISKREPANZ].',
+          content: [
+            'Der strukturierte Prompt liefert ein Dokument, das direkt in einem Briefing verwendet werden kann. Der offene Prompt liefert einen Erzählabsatz, der Segmentdaten auslässt, Prognoseanpassungen verbirgt und 30 Minuten Nachbearbeitung erfordert.',
+          ],
+        },
+        chunking: {
+          id: 'chunking-long-documents',
+          title: 'Wie verarbeitet man Dokumente, die das Kontextfenster übersteigen?',
+          content: [
+            '**Bei Dokumenten, die das Kontextfenster des Modells überschreiten, bewahrt Chunking — das Aufteilen des Dokuments in Segmente von 500–2.000 Token, das separate Zusammenfassen jedes Chunks und die anschließende Synthese — Informationen, die sonst abgeschnitten oder beeinträchtigt würden.**',
+            'Für Dokumente mit klarer Abschnittsstruktur (Rechtsverträge, Jahresberichte, wissenschaftliche Artikel) liefert thematisches Chunking die kohärenteste Gesamtsynthese. Für unstrukturierte Dokumente (E-Mail-Threads, Transkripte) ist paragraphenbasiertes Chunking in 500-Token-Abständen der empfohlene Standard.',
+          ],
+          columns: ['Methode', 'Kohärenz', 'Geeignet für', 'Kompromiss'],
+          rows: [
+            {
+              Methode: 'Thematisch (nach Abschnitt)',
+              Kohärenz: 'Höchste',
+              'Geeignet für': 'Berichte, Verträge, wissenschaftliche Artikel',
+              Kompromiss: 'Erfordert klare Überschriften in der Quelle',
+            },
+            {
+              Methode: 'Paragraphenbasiert',
+              Kohärenz: 'Hoch',
+              'Geeignet für': 'Die meisten Dokumenttypen',
+              Kompromiss: 'Kann eng verwandte Ideen trennen',
+            },
+            {
+              Methode: 'Festes Token-Limit',
+              Kohärenz: 'Mittel',
+              'Geeignet für': 'Unstrukturierter Text',
+              Kompromiss: 'Trennt Argumente an beliebigen Stellen',
+            },
+            {
+              Methode: 'Satzbasiert',
+              Kohärenz: 'Niedrig',
+              'Geeignet für': 'Maximale Granularität',
+              Kompromiss: 'Höchste Rechenkosten; fragmentiert Kontext',
+            },
+          ],
+        },
+        iterativeSummarisation: {
+          id: 'iterative-summarisation',
+          title: 'Wie reduziert iterative Zusammenfassung Auslassungen?',
+          content: [
+            '**Iterative Zusammenfassung — eine initiale Zusammenfassung generieren und sie mit einem zweiten gezielten Prompt verfeinern — verbessert die faktische Vollständigkeit und reduziert Auslassungen im Vergleich zur Einpass-Generierung.**',
+            'Iterative Zusammenfassung generiert eine initiale Zusammenfassung und wendet dann einen zweiten Prompt an, um fehlende Aussagen zu finden. Die zweistufige Struktur:',
+          ],
+          numberedItems: [
+            '**Initialer Prompt:** „Fasse die Hauptargumente, Datenpunkte und Schlussfolgerungen des Dokuments zusammen. Kennzeichne alles, bei dem du unsicher bist."',
+            '**Verfeinerungsprompt:** „Überprüfe deine Zusammenfassung. Identifiziere alle Aussagen, die im Dokument enthalten, aber in deiner Zusammenfassung fehlen. Ergänze diese Aussagen jetzt."',
+          ],
+        },
+        hallucinationAnalysis: {
+          id: 'hallucination-analysis',
+          title: 'Warum halluzinieren KI-Modelle in Zusammenfassungen noch immer und wie häufig?',
+          content: [
+            '**Die Halluzinationsraten bei quelltreuer Zusammenfassung sanken seit 2021 um 96 % — von 21,8 % auf 0,7 % bei den besten Modellen — aber ein mathematischer Beweis (2025) bestätigte, dass Halluzinationen unter aktuellen LLM-Architekturen nicht vollständig eliminierbar sind.**',
+            'Der architekturelle Grund ist fundamental: LLMs generieren statistisch wahrscheinliche nächste Token auf Basis von Mustererkennung über Trainingsdaten, nicht durch Abruf verifizierter Fakten. Selbst bei Angabe eines Quelldokuments „vermischt" ein Modell gelegentlich Quellinhalte mit Trainingswissen auf eine Weise, die einen plausiblen, aber ungetreuen Satz ergibt — was Forscher als „Mixed-Context-Halluzination" bezeichnen. Dies ist eine der grundlegenden [KI-Grenzen](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de), die quelltreue Zusammenfassungs-Workflows berücksichtigen müssen.',
+            'Die Fehlermodi bei KI-Zusammenfassungen, nach Häufigkeit geordnet:',
+          ],
+          items: [
+            '**Mixed-Context-Halluzination** — Modell kombiniert Fakten aus der Quelle mit Fakten aus den Trainingsdaten und erzeugt einen Satz, der teilweise korrekt und teilweise erfunden ist',
+            '**Fehlende Informationen** — Modell lässt wichtige Aussagen aus der Quelle aus, die sich an weniger prominenten Stellen befanden',
+            '**Faktische Inkonsistenz** — Modell widerspricht einer bestimmten Zahl oder einem Datum aus dem Quelldokument',
+            '**Irrelevante Informationen** — Modell fügt Kontext aus Trainingsdaten hinzu, der nicht in der Quelle vorhanden ist',
+          ],
+          blockquote: 'Ein 2025 in Nature veröffentlichtes Framework (Liu et al.) führte eine Question-Answer Generation, Sorting, and Evaluation (Q-S-E)-Methodik ein, die Halluzinationen in Zusammenfassungen iterativ erkennt und korrigiert — und messbare Verbesserungen der Treue-Scores über alle drei Benchmark-Datensätze (CNN/Daily Mail, PubMed, ArXiv) demonstrierte. Der Multi-Modell-Dispatch von PromptQuorum adressiert dies direkt: dasselbe Dokument gleichzeitig an GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) und Gemini 3.1 Pro zu senden und Ausgaben zu vergleichen, identifiziert Passagen, bei denen Modelle abweichen — statistisch die risikoreichsten Passagen für Halluzination.',
+        },
+        evaluationMetrics: {
+          id: 'evaluation-metrics',
+          title: 'Welche Metrik misst KI-Zusammenfassungsqualität: ROUGE, BERTScore oder HHEM?',
+          content: [
+            '**ROUGE, BERTScore und Treue-Metriken messen unterschiedliche und nicht überlappende Dimensionen der Zusammenfassungsqualität — keine einzelne Metrik reicht aus, um zu beurteilen, ob eine KI-Zusammenfassung vertrauenswürdig ist.**',
+            'ROUGE misst N-Gramm-Überlappung zwischen einer generierten Zusammenfassung und einer Referenz — nützlich für Benchmarks, aber blind gegenüber semantischer Bedeutung und faktischer Genauigkeit. BERTScore verwendet Kosinus-Ähnlichkeit zwischen BERT-Embeddings der generierten und der Referenz-Zusammenfassung und erfasst semantische Ähnlichkeit statt exakter Wortübereinstimmung. Treue-Metriken (HHEM, FaithJudge) messen, ob die Zusammenfassung nur Aussagen enthält, die durch das Quelldokument gestützt werden — die relevanteste Metrik für Produktions-Zusammenfassungsanwendungen.',
+          ],
+          columns: ['Metrik', 'Was gemessen wird', 'Einschränkung'],
+          rows: [
+            {
+              Metrik: 'ROUGE',
+              'Was gemessen wird': 'N-Gramm-Überlappung mit Referenz',
+              Einschränkung: 'Blind für Semantik; belohnt lexikalische Ähnlichkeit',
+            },
+            {
+              Metrik: 'BLEU',
+              'Was gemessen wird': 'Präzision der N-Gramm-Überlappung',
+              Einschränkung: 'Für Übersetzung entwickelt; schlecht geeignet für Zusammenfassung',
+            },
+            {
+              Metrik: 'BERTScore',
+              'Was gemessen wird': 'Semantische Ähnlichkeit via Embeddings',
+              Einschränkung: 'Erfordert Referenzzusammenfassung; rechenintensiv',
+            },
+            {
+              Metrik: 'Treue (HHEM)',
+              'Was gemessen wird': 'Faktenkonsistenz mit Quelle',
+              Einschränkung: 'Misst keine Vollständigkeit oder Nützlichkeit',
+            },
+            {
+              Metrik: 'G-Eval',
+              'Was gemessen wird': 'Mehrdimensional: Abdeckung, Relevanz, Flüssigkeit',
+              Einschränkung: 'Neuester Standard; noch nicht universell angewandt',
+            },
+          ],
+          blockquote: 'Für Produktions-Dokumenten-Pipelines liefert die Kombination aus HHEM-Treue-Scoring und einem Vollständigkeitscheck (enthält die Zusammenfassung alle wesentlichen Aussagen der Quelle?) das zuverlässigste Qualitätssignal.',
+        },
+        globalContext: {
+          id: 'global-context',
+          title: 'Wie beeinflussen DSGVO, chinesisches Recht und METI-Leitlinien die KI-Zusammenfassung?',
+          content: [
+            'Europäische Unternehmen, die Dokumente unter der DSGVO verarbeiten, können sensible Inhalte nicht ohne Compliance-Prüfung an externe API-Endpunkte senden. Mistral AI (Frankreich) bietet lokal bereitstellbare Modelle — Mistral Large und Mistral Small — die abstraktive Zusammenfassung vollständig on-premises durchführen, ohne dass Daten das Unternehmensnetz verlassen, und damit die EU-Datenhaltungsanforderungen gemäß DSGVO Artikel 46 erfüllen. Nach BSI-Grundschutz-Katalogen (IT-Grundschutz-Kompendium) wird für besonders schutzbedürftige Informationen (Schutzklasse 2/3) die lokale Verarbeitung oder zumindest ein geprüfter Auftragsverarbeiter mit AVV nach Art. 28 DSGVO gefordert.',
+            'Chinesische Unternehmen setzen zunehmend **Qwen 3** (Alibaba) und **DeepSeek V3-0324** für Dokumentextraktionsaufgaben bei chinesischsprachigen Korpora ein. Beide Modelle tokenisieren chinesische Schriftzeichen (CJK-Skripte) effizienter als westlich trainierte Modelle — ein chinesisches Dokument mit 10.000 Zeichen benötigt in Qwen 3 ca. 40 % weniger Token als in GPT-5.5, was die Kosten für die Verarbeitung umfangreicher chinesischer Dokumente erheblich senkt. Chinas Interim-Maßnahmen für generative KI (2023) verlangen, dass KI-generierte Zusammenfassungen in offiziellen Kontexten als KI-generiert gekennzeichnet werden.',
+            'Japanische Unternehmen, die unter METI-Datenschutz-Leitlinien operieren, setzen häufig **Ollama** mit LLaMA 4-Modellen für lokale Dokumentenzusammenfassung ein. LLaMA 4 7B benötigt 8 GB RAM für lokale Inferenz und erzeugt keine externen API-Aufrufe — erfüllt strenge Datenhaltungsanforderungen für sensible Rechts- und Finanzdokumente.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Was sind die häufigsten Fehler bei der KI-Zusammenfassung?',
+          items: [
+            'Offene Prompts verwenden („Fasse das zusammen") ohne Formatvorgaben — liefert generische Absätze, die wichtige Datenpunkte auslassen und 30+ Minuten manuelle Nachbearbeitung erfordern',
+            'Zusammenfassungen ohne Stichprobenprüfung vertrauen — KI-Modelle halluzinieren strukturierte Daten (Tabellen, Zahlen, Daten) häufiger als Fließtext; immer 10–20 % der extrahierten Zahlen mit dem Original abgleichen',
+            'Temperature über 0,3 für Extraktionsaufgaben setzen — Temperaturen über 0,3 erhöhen die Halluzinationshäufigkeit messbar; 0,0–0,1 für maximale Determinismus bei quelltreuen Aufgaben verwenden',
+            'Dokumenttyp im Prompt nicht angeben — ohne Kontext wendet das Modell falsche Zusammenfassungsheuristiken an (z. B. behandelt einen Rechtsvertrag wie einen Nachrichtenartikel und lässt kritische Klauselformulierungen aus)',
+            'Chunking für Dokumente über 50 Seiten überspringen — Kontextfensterüberschreitung kürzt Inhalte still ab; das Modell fasst nur den verfügbaren Teil zusammen, ohne zu warnen, dass es etwas übersehen hat',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Lektüre',
+          items: [
+            '[Was ist Prompt-Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die Grundprinzipien strukturierter KI-Anweisungen',
+            '[KI-gestützte Recherche](/prompt-engineering/ai-powered-research?lang=de) — wie man Extraktionstools mit Mehrquellen-Verifizierungs-Workflows kombiniert',
+            '[Warum KI halluziniert und wie man es stoppt](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — die Ursachen von Halluzinationen und bewährte Gegenmaßnahmen',
+            '[KI-Grenzen — Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — spezifische Techniken zur Verankerung von KI-Ausgaben in verifizierten Quellinhalten',
+            '[5 Bausteine, die jeder KI-Prompt benötigt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — strukturierte Prompt-Komponenten, die die Extraktionsgenauigkeit direkt verbessern',
+            '[Temperature und Top-P: KI-Ausgabe kontrollieren](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) — Temperature auf 0,0–0,1 setzen für deterministische, halluzinationsresistente Zusammenfassung',
+            '[Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — schrittweises Denken, das die Treue bei komplexen Mehrquellen-Analysen verbessert',
+          ],
+        },
+        howToStart: {
+          id: 'how-to-extract-and-summarise',
+          title: 'Wie man mit KI Daten extrahiert und zusammenfasst',
+          numberedItems: [
+            '**Tool je nach Quellentyp und Extraktionsstruktur auswählen.** NotebookLM für eigene PDFs oder Dokumente verwenden, Elicit für wissenschaftliche Artikel mit strukturierten Feldern (Methodik, Stichprobengröße, Ergebnisse) und Perplexity für Echtzeit-Web-Zusammenfassungen. Text-zu-Tabelle-Extraktionen funktionieren am besten mit darauf ausgerichteten Systemen (Elicit) statt mit allgemeinen Chat-Modellen.',
+            '**Extraktionsschema vorab definieren (JSON, Tabelle, Aufzählungsliste).** Dem Modell genau die benötigten Spalten oder Felder und deren Datentyp mitteilen. Beispiel: „Gib ein JSON-Array zurück mit den Schlüsseln: author (string), year (integer), finding (text max. 200 Zeichen), confidence (enum: high/medium/low)."',
+            '**Temperature (T) für Extraktion und Zusammenfassung auf 0,1–0,3 setzen.** Niedrigere Temperaturen erzeugen deterministischere, konsistentere Ausgaben. Höhere Temperaturen nur für das Brainstorming alternativer Interpretationen bei mehrdeutigem Quellmaterial reservieren.',
+            '**Große Dokumente in mehreren Durchläufen mit Zwischenspeicherung extrahieren.** Bei 100-seitigen PDFs die Abschnitte 1–25, dann 26–50 usw. extrahieren und die Ergebnisse strukturiert ablegen. Verhindert Kontextfensterüberschreitung und erleichtert die Fehlererkennung und -korrektur.',
+            '**Wichtige Extraktionen mit dem Quelldokument gegenchecken.** Immer 10–20 % der extrahierten Daten stichprobenartig mit dem Original abgleichen. KI-Modelle können strukturierte Daten halluzinieren, insbesondere aus Tabellen mit verbundenen Zellen oder unklarer Formatierung.',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Was ist der Unterschied zwischen extraktiver und abstraktiver KI-Zusammenfassung?',
+              a: 'Extraktive Zusammenfassung kopiert Sätze direkt aus dem Quelldokument ohne Modifikation — faktische Fehler sind strukturell ausgeschlossen, da kein neuer Text generiert wird. Abstraktive Zusammenfassung verwendet LLMs, um neue paraphrasierte Sätze zu generieren — was lesbarere Ausgaben erzeugt, aber mit Halluzinationsraten von 0,7–14 % je nach Modell und Aufgabe. Extraktiv für Rechts- und Compliance-Dokumente; abstraktiv für Executive Summaries und Forschungssynthesen.',
+            },
+            {
+              q: 'Welches KI-Modell halluziniert am wenigsten bei der Dokumentenzusammenfassung?',
+              a: 'Im Vectara HHEM-Benchmark — dem Standardtest für Zusammenfassungstreue über 831 Dokumente — erzielte Gemini-2.0-Flash-001 (Google DeepMind) mit 0,7 % die niedrigste Halluzinationsrate (Stand 2025). Diese Raten gelten nur für quelltreue Aufgaben; offene Faktabrückfragen ergeben Raten von 3–33 % bei denselben Modellen.',
+            },
+            {
+              q: 'Wie viele Seiten können KI-Zusammenfassungstools auf einmal verarbeiten?',
+              a: 'GPT-5.5 (OpenAI) verarbeitet ca. 100 Standardseiten pro Sitzung (128.000 Token). Claude Opus 4.7 (Anthropic) verarbeitet ca. 160 Seiten (200.000 Token). Gemini 3.1 Pro (Google DeepMind) verarbeitet ca. 800 Seiten (1 Mio. Token). NotebookLM (Google DeepMind) unterstützt bis zu 50 Quellen mit insgesamt ca. 500.000 Wörtern pro Notizbuch. Bei größeren Korpora ist Document Chunking erforderlich.',
+            },
+            {
+              q: 'Ist NotebookLM oder Claude besser für die Dokumentenzusammenfassung?',
+              a: 'Beide Produkte erfüllen unterschiedliche Anforderungen. NotebookLM (Google DeepMind) bietet strengere Quellenverankerung mit anklickbaren Inline-Zitaten und ist besser für die quelltreue Wiedergabe von Dokumentinhalten. Claude Opus 4.7 (Anthropic) liefert tiefere Analysen, ist führend bei der Synthese mehrerer Dokumente und erkennt nicht offensichtliche Verbindungen — kann aber Quellinhalte gelegentlich mit Trainingswissen vermischen. NotebookLM für Präzision; Claude für Erkenntnisgewinnung.',
+            },
+            {
+              q: 'Wie verhindere ich KI-Halluzinationen in meinen Zusammenfassungen?',
+              a: 'Vier Techniken reduzieren Halluzinationen: (1) explizit anweisen — „Fasse nur aus dem folgenden Dokument zusammen; füge kein externes Wissen hinzu"; (2) Temperature (T) auf 0,0–0,1 setzen für maximalen Determinismus; (3) Treuecheck durchführen — das Modell auffordern, jede Aussage in der Zusammenfassung ihrer Quellpassage zuzuordnen; (4) Gegencheck mit einem zweiten Modell — wenn GPT-5.5 und Claude Opus 4.7 einem Sachverhalt übereinstimmen, ist die Wahrscheinlichkeit gemeinsamer Halluzination statistisch nahezu null.',
+            },
+            {
+              q: 'Was ist Document Chunking und wann sollte ich es nutzen?',
+              a: 'Chunking teilt ein Dokument in Segmente (typischerweise 500–2.000 Token), fasst jedes Segment separat zusammen und synthetisiert die Teilergebnisse zu einer Gesamtausgabe. Nutzen Sie es, wenn Ihr Dokument das Kontextfenster des Modells überschreitet — ca. 100 Seiten bei GPT-5.5 (128.000 Token), 160 Seiten bei Claude Opus 4.7 (200.000 Token) oder 800 Seiten bei Gemini 3.1 Pro (1 Mio. Token). Für strukturierte Dokumente (Rechtsverträge, Jahresberichte) liefert thematisches Chunking nach Abschnittsüberschriften die kohärentesten Ergebnisse.',
+            },
+            {
+              q: 'Was sind ROUGE und BERTScore, und welche Metrik eignet sich für die Evaluierung von KI-Zusammenfassungen?',
+              a: 'ROUGE misst N-Gramm-Überlappung zwischen generierter Zusammenfassung und Referenz — nützlich für Benchmarks, jedoch blind gegenüber Semantik und Faktentreue. BERTScore verwendet Kosinus-Ähnlichkeit zwischen BERT-Embeddings und erfasst semantische Ähnlichkeit statt exakter Wortübereinstimmung. Für Produktions-Workflows empfiehlt sich die Kombination aus HHEM-Treue-Score und einem Vollständigkeitscheck.',
+            },
+            {
+              q: 'Können KI-Zusammenfassungstools auch nicht-englische Dokumente verarbeiten?',
+              a: 'Ja, mit wichtigen Einschränkungen. Mistral AI-Modelle (Frankreich) unterstützen Französisch und europäische Sprachen nativ und können lokal für DSGVO-Konformität bereitgestellt werden. Qwen 3 (Alibaba) tokenisiert chinesische Schriftzeichen mit ca. 40 % weniger Token als GPT-5.5. LLaMA 4-Modelle über Ollama ermöglichen mehrsprachige Zusammenfassung komplett lokal ohne externe API-Aufrufe.',
+            },
+            {
+              q: 'Muss ich bei der Verwendung von KI-Zusammenfassungstools die DSGVO beachten?',
+              a: 'Ja. Werden personenbezogene Daten an externe API-Endpunkte gesendet (z. B. OpenAI, Anthropic), gilt Artikel 28 DSGVO: Es muss ein Auftragsverarbeitungsvertrag (AVV) geschlossen werden und die Daten dürfen nur für den vereinbarten Zweck genutzt werden. Die Alternative nach BSI-Grundschutz-Katalogen ist die lokale Bereitstellung — z. B. Mistral Large via Ollama oder LLaMA 4 on-premises — wodurch keine Daten das Unternehmensnetz verlassen. Für besonders sensible Dokumente (Gesundheit, Finanzen, Recht) empfehlen DACH-Rechtsexperten ausschließlich lokale Inferenz.',
+            },
+            {
+              q: 'Ist KI-gestützte Dokumentenzusammenfassung für den deutschen Mittelstand geeignet?',
+              a: 'Ja, sofern die richtige Infrastruktur gewählt wird. Mittelständische Unternehmen profitieren besonders von NotebookLM für interne Berichte und Vertragsanalysen sowie von lokal bereitgestellten Modellen (LLaMA 4 via Ollama) für datenschutzkritische Dokumente. Der BSI-Grundschutz empfiehlt für KMU eine Risikoanalyse vor der Cloud-API-Nutzung. Typische Anwendungsfälle: automatische Zusammenfassung von Lieferantenverträgen, Protokollkondensierung aus Meetings, Extraktion von Compliance-relevanten Klauseln aus AGBs.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen & Weiterführende Literatur',
+          items: [
+            '[Liu et al., 2025. „A hallucination detection and mitigation framework for text summarisation"](https://www.nature.com/articles/s41598-025-31075-1) — führt Q-S-E-Methodik für iterative Halluzinationskorrektur über CNN/DailyMail, PubMed und ArXiv ein',
+            '[Vectara HHEM Leaderboard, 2025. „Hughes Hallucination Evaluation Model — Document Summarisation Faithfulness Rankings"](https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/) — 100+ LLMs über 831 Dokumente getestet; Gemini-2.0-Flash bei 0,7 % Halluzinationsrate',
+            '[SEI/CMU, 2025. „Evaluating LLMs for Text Summarisation: An Introduction"](https://www.sei.cmu.edu/blog/evaluating-llms-for-text-summarization-introduction/) — Framework für Genauigkeits-, Treue-, Komprimierungs- und Effizienzauswertung',
+          ],
+        },
+      },
+    },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
