@@ -631,6 +631,25 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
         </h2>
       )}
 
+      {/* LLM Snippet blocks — rendered right after H2 title, before body (Rule 12) */}
+      {!section.isTldr && section.snippets && section.snippets.length > 0 && (
+        <div className="space-y-3 mb-4">
+          {section.snippets.map((snippet, i) => {
+            const isOneSentence = snippet.type === 'in-one-sentence'
+            return (
+              <div key={i} className={`border-l-4 rounded-r-lg px-5 py-4 ${isOneSentence ? 'border-primary bg-primary/5' : 'border-emerald-400 bg-emerald-50'}`}>
+                <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${isOneSentence ? 'text-primary' : 'text-emerald-700'}`}>
+                  {isOneSentence ? '📍 In One Sentence' : '💬 In Plain Terms'}
+                </p>
+                <p className={`text-sm leading-relaxed font-medium ${isOneSentence ? 'text-text-primary' : 'text-emerald-900'}`}>
+                  {renderInlineLinks(snippet.text, lang)}
+                </p>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
       {/* TL;DR block */}
       {section.isTldr && section.items && (
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
@@ -835,25 +854,6 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
               <div key={i} className={`border ${style.border} ${style.bg} rounded-lg px-4 py-3 ${style.text}`}>
                 <p className="text-sm font-semibold mb-1">{style.icon} {callout.label}</p>
                 <p className="text-sm leading-relaxed">{renderInlineLinks(callout.text, lang)}</p>
-              </div>
-            )
-          })}
-        </div>
-      )}
-
-      {/* LLM Snippet blocks — "In One Sentence" / "In Plain Terms" (Rule 12) */}
-      {section.snippets && section.snippets.length > 0 && (
-        <div className="space-y-3 mt-4">
-          {section.snippets.map((snippet, i) => {
-            const isOneSentence = snippet.type === 'in-one-sentence'
-            return (
-              <div key={i} className={`border-l-4 rounded-r-lg px-5 py-4 ${isOneSentence ? 'border-primary bg-primary/5' : 'border-emerald-400 bg-emerald-50'}`}>
-                <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${isOneSentence ? 'text-primary' : 'text-emerald-700'}`}>
-                  {isOneSentence ? '📍 In One Sentence' : '💬 In Plain Terms'}
-                </p>
-                <p className={`text-sm leading-relaxed font-medium ${isOneSentence ? 'text-text-primary' : 'text-emerald-900'}`}>
-                  {renderInlineLinks(snippet.text, lang)}
-                </p>
               </div>
             )
           })}
@@ -1269,6 +1269,21 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           const sectionId = 'key-takeaways'
           return <SectionBlock key={tldrKey} section={tldrSection} colors={colors} id={sectionId} lang={lang} />
         })()}
+
+        {/* Quick Facts block — numeric highlights, rendered between Key Takeaways and TOC (Rule 27) */}
+        {(article as any).quickFacts && (article as any).quickFacts.length > 0 && (
+          <div className="border border-primary/20 bg-primary/3 rounded-xl p-5 my-6">
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">⚡ Quick Facts</p>
+            <ul className="space-y-1.5">
+              {((article as any).quickFacts as string[]).map((fact: string, i: number) => (
+                <li key={i} className="flex gap-3 text-sm text-text-secondary">
+                  <span className="flex-shrink-0 text-primary font-bold">·</span>
+                  <span>{renderInlineLinks(fact, lang)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Gamma Presentation Embed (SEO/AEO/GEO optimized) */}
         {article.gammaEmbedUrl && (
