@@ -1099,6 +1099,366 @@ export const article: Record<Language, PEArticle> = {
 
       },
     },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-24',
+      theme: 'テクニック',
+      title: 'AI出力の制御：JSONスキーマ準拠、制約デコード、フォーマット選択',
+      intro: '**制約デコードはJSONスキーマ準拠率100%を実現します — 不正な出力はゼロです。この技術が登場する前、モデルは複雑なスキーマで40%未満のスコアしか出せず、エッジケースでサイレントに失敗していました。出力制御こそが、プロトタイプ（成功率80%）と本番システム（信頼性100%）を分けるエンジニアリング変数です。**',
+      publishDate: '2026-03-24',
+      readTime: '10分で読める',
+
+      seoTitle: 'AI出力制御：JSONスキーマ準拠とデコード（2026年）',
+      metaDescription: 'LLM出力をJSONモードと制約デコードで制御する方法。品質を損なわず100%スキーマ準拠を実現する2段階パイプライン。GPT、Claude、Gemini向けのプロダクションガイド。',
+
+      educationalLevel: 'Beginner',
+      audience: '構造化出力を必要とする本番LLMパイプラインを構築する開発者',
+      toc: [
+        { label: '出力制御の3つのレベルとは？', anchor: 'three-levels' },
+        { label: 'プロンプトエンジニアリングで出力形式を制御するには？', anchor: 'prompt-engineering' },
+        { label: '優れた構造化出力プロンプトとは？', anchor: 'good-prompt' },
+        { label: '各モデルに適用される出力形式ルールとは？', anchor: 'model-rules' },
+        { label: '出力生成を制御するサンプリングパラメータとは？', anchor: 'sampling-parameters' },
+        { label: '推論品質とフォーマット保証のトレードオフとは？', anchor: 'reasoning-tradeoff' },
+        { label: 'トップモデルの出力制御比較', anchor: 'model-comparison' },
+        { label: 'ストップシーケンスとネガティブ制約の違いとは？', anchor: 'stop-sequences' },
+        { label: '本番環境に適した出力形式とは？', anchor: 'production-format' },
+        { label: 'グローバル・地域別の考慮事項', anchor: 'global-regional' },
+        { label: '重要ポイント', anchor: 'key-takeaways' },
+        { label: 'AI出力形式の制御方法（ステップバイステップ）', anchor: 'how-to' },
+        { label: 'よくあるミス', anchor: 'common-mistakes' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'AI出力の制御：JSONスキーマ準拠、制約デコード、フォーマット選択',
+        description: 'LLM出力をJSONモードと制約デコードで制御する方法。品質を損なわず100%スキーマ準拠を実現する2段階パイプライン。GPT、Claude、Gemini向けのプロダクションガイド。',
+        url: 'https://www.promptquorum.com/prompt-engineering/control-the-output?lang=ja',
+        inLanguage: 'ja',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-29',
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=ja', width: 1200, height: 630 },
+        keywords: ['出力制御', '制約デコード', 'JSONスキーマ', '構造化出力', 'Temperature', 'Top-P', 'サンプリングパラメータ', 'プロンプトエンジニアリング'],
+        about: [
+          { '@type': 'Thing', name: '制約デコード' },
+          { '@type': 'Thing', name: 'JSONスキーマ準拠' },
+          { '@type': 'Thing', name: 'サンプリングパラメータ' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'Mistral AI' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ja',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'LLMにおけるTemperatureとTop-Pの違いは何ですか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'Temperature (T) は次トークン予測のsoftmax確率分布全体をスケールします：T = 0.0では常に最も確率の高いトークンを選択（決定論的）；T = 1.0は自然な分布を維持；T = 2.0はランダム性に向けてフラット化します。Top-P（ニュークリアスサンプリング）は、累積確率がPに達する最小のトークンセットから選択します — Top-P = 0.9では累積確率上位90%のトークンのみが対象です。この2つは生成の異なる側面を制御し、同時に高い値に設定すると不規則な出力を増幅するため、同時に高く設定すべきではありません。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'JSON出力の強制はAIの応答品質を低下させますか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'はい — 測定可能に。BAMLのBFCLベンチマークでは、スキーマ整合フリーテキスト解析が93.63%の精度を達成した一方、OpenAIの制約デコード（厳密なFunction Calling）は91.37%にとどまり、2.26ポイントの品質低下が生じました。メカニズムはトークンマスキングです。複雑な推論タスクでは、2段階アプローチ（自由記述→専門構造化）で品質を維持しながら100%フォーマット準拠を達成できます。' },
+          },
+          {
+            '@type': 'Question',
+            name: '制約デコードとは何か、どのようにJSON出力を保証しますか？',
+            acceptedAnswer: { '@type': 'Answer', text: '制約デコードはモデルのトークン生成プロセスに有限状態機械（FSM）を適用します。各生成ステップで、FSMは現在位置のターゲットスキーマと互換性のある出力を生成するトークンを評価し、それ以外のすべてのトークンを確率ゼロにマスクします。OpenAIは`response_format: { type: "json_schema", strict: true }`で実装。AnthropicはStrict Tool Use Modeで実装しています。' },
+          },
+          {
+            '@type': 'Question',
+            name: '本番LLMパイプラインにはどの出力形式を使用すべきですか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'JSONは型付きAPIオブジェクトに直接マッピングされ、主要プロバイダ（OpenAI、Anthropic、Google Gemini）でネイティブサポートされているため、本番LLMパイプラインの標準です。イベントストリームとバッチ処理にはJSONL。レガシーシステム連携にのみCSV。2026年推奨アーキテクチャ：入力トークン効率のためのTOON + Stage 1自由推論後のStage 2出力にのみ制約デコード付きJSON。' },
+          },
+          {
+            '@type': 'Question',
+            name: 'ストップシーケンスとプロンプトのネガティブ制約の違いは何ですか？',
+            acceptedAnswer: { '@type': 'Answer', text: 'ストップシーケンスはAPI/推論レベルで強制されます — モデルは指定された文字列が生成された瞬間に生成を停止し、例外はありません。プロンプト本文のネガティブ制約（「説明を含めないこと」、「Markdownなし」）はモデルに特定の出力を避けるよう指示しますが、拘束力はありません。両方を使用してください：ストップシーケンスは構造的な終了保証に、ネガティブ制約はコンテンツのスタイル形成に。' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ja',
+        name: 'AI出力の制御：主要トピック',
+        description: 'AIモデルからの構造化出力を管理するための核心概念',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '出力制御の3つのレベル', description: 'プロンプトベース、スキーマベース、制約デコードのアプローチとそのトレードオフ' },
+          { '@type': 'ListItem', position: 2, name: 'プロンプトによる出力形式制御', description: '制約デコードなしでJSON準拠を達成するモデル固有テクニック' },
+          { '@type': 'ListItem', position: 3, name: 'サンプリングパラメータ', description: 'Temperature、Top-P、Top-K、max_tokens、ペナルティパラメータの解説' },
+          { '@type': 'ListItem', position: 4, name: '推論とフォーマットのトレードオフ', description: '制約デコードによる精度低下と2段階ソリューションの理解' },
+          { '@type': 'ListItem', position: 5, name: 'ストップシーケンスと制約', description: 'APIレベルの制約とネガティブ指示による出力境界の制御' },
+        ],
+      },
+      sections: {
+
+        definition: {
+          title: '出力制御の3つのレベルとは？',
+          content: [
+            '出力制御はプロンプトベース、スキーマベース、制約デコードの3つの異なるレベルで機能します。各レベルは推論品質とのトレードオフを高めながら、段階的に強固なフォーマット保証を提供します。',
+            'プロンプトベースのフォーマットは自然言語でモデルに指示します（"Return JSON with fields: name, email, score"）。これは80〜95%の確率で機能しますが、型保証がなくエッジケースでサイレントに失敗し、不正なレスポンスの5〜20%にエラー処理が必要です。スキーマベースアプローチ（function calling / tool use）は95〜99%のコンプライアンスでフォーマット構造を正式に定義しますが、スキーマは絶対的な制約ではなく強力なヒントにとどまります。ネイティブ制約デコードは有限状態機械を使用して生成時に無効なトークンをマスクし、数学的確実性で100%スキーマ準拠の出力を生成します。',
+            '2段階アプローチ — Claude Opus 4.7（Anthropic）またはGPT-5.5（OpenAI）をStage 1で自由に推論させた後、出力をStage 2の小型専門構造化モデル（Osmosis-Structure-0.6B、50万件の合成非構造化→構造化変換でトレーニング済み）に渡す — は制約デコードの推論品質ペナルティなしにフォーマット保証を実現します。',
+            '一言で言えば：出力制約のレベルをタスクに合わせてください — フォーマット正確性が推論の深さより重要な場合のみ制約デコードを使用してください。',
+          ],
+          columns: ['レベル', 'コンプライアンス率', '推論への影響', '最適な用途'],
+          rows: [
+            { 'レベル': 'プロンプトベース（"return JSON"）', 'コンプライアンス率': '80〜95%', '推論への影響': 'なし', '最適な用途': 'プロトタイピング；シンプルなパイプライン' },
+            { 'レベル': 'Function calling / Tool use', 'コンプライアンス率': '95〜99%', '推論への影響': '最小限', '最適な用途': 'ほとんどの本番アプリケーション' },
+            { 'レベル': 'ネイティブ制約デコード（strict）', 'コンプライアンス率': '100%', '推論への影響': '品質低下2〜10%', '最適な用途': 'データ抽出；大量処理パイプライン' },
+            { 'レベル': '2段階（自由記述→専門モデル）', 'コンプライアンス率': '〜100%', '推論への影響': 'なし', '最適な用途': '複雑な推論＋フォーマット保証' },
+          ],
+          tableFormat: true,
+        },
+
+        promptStructure: {
+          title: 'プロンプトエンジニアリングで出力形式を制御するには？',
+          content: [
+            '明示的な出力スキーマ指示 — Claude Opus 4.7ではシステムプロンプトの冒頭、GPT-5.5ではユーザーコンテンツの直前に配置 — を使用すると、ネイティブ制約デコードの推論品質ペナルティなしに85〜95%の構造化出力コンプライアンス率を達成できます。',
+            'Claude Opus 4.7（Anthropic）は、XMLスタイルのセクションラベルを使用してシステムプロンプトの冒頭に配置された出力形式指示に最も効果的に応答します。GPT-5.5（OpenAI）は、ユーザーコンテンツの直前に番号付きフォーマットルールとしてスキーマを配置すると最良の結果を出します。Gemini 3.1 Pro（Google DeepMind）は、プロンプトの冒頭と末尾の両方にスキーマを明示的に記述すると最も信頼性の高い構造化出力を生成します。',
+          ],
+        },
+
+        badPrompt: {
+          content: ['**悪いプロンプト — 非構造化、フォーマット指定なし：**'],
+          blockquote: 'Analyse this customer review and tell me the sentiment, key issues, and urgency.',
+        },
+
+        goodPrompt: {
+          title: '優れた構造化出力プロンプトとは（Claude Opus 4.7）？',
+          content: ['**良いプロンプト — Claude Opus 4.7**'],
+          blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
+        },
+
+        promptOutcome: {
+          content: [
+            'XML構造化プロンプトは出力フォーマット契約を固定しながら、`<task>`ブロック内での自由な推論を保持します。制約デコード不要 — Claude Opus 4.7はこの構造で93%以上の本番呼び出しで準拠します。',
+          ],
+        },
+
+        goodPromptGPT: {
+          title: '優れた構造化出力プロンプトとは（GPT-5.5）？',
+          content: ['**良いプロンプト — GPT-5.5**'],
+          blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
+        },
+
+        modelRules: {
+          title: '各モデルに適用される出力形式ルールとは？',
+          content: ['主要LLMはそれぞれ、出力フォーマット準拠に固有の構造的優先事項があります：'],
+          items: [
+            '**Claude Opus 4.7（Anthropic）** — XMLタグ（`<output>`、`<format>`、`<constraints>`）；スキーマを先頭に；「JSONのみを出力し、他は何も含めないこと」',
+            '**GPT-5.5（OpenAI）** — 番号付きフォーマットルール；メイン指示の後にスキーマ；「有効なJSONで応答してください。Markdownフェンスなし。説明なし。」',
+            '**Gemini 3.1 Pro（Google DeepMind）** — プロンプトの冒頭と末尾に簡潔で明示的なスキーマ；プロンプト内に希望する出力形式のone-shotサンプル',
+            '**Ollama経由のローカルモデル**（LLaMA 3.1 7B、Mistral）— フォーマットドリフトに敏感；信頼性の高いJSON出力にはプロンプトに直接one-shotフォーマットサンプルが必要',
+          ],
+        },
+
+        parameters: {
+          title: '出力生成を制御するサンプリングパラメータとは？',
+          content: [
+            'Temperature (T)、Top-P、Top-K、max_tokens、frequency_penalty、presence_penaltyの6つの独立したパラメータが、出力の長さ、ランダム性、繰り返しを共同で決定します。矛盾なく一貫して設定する必要があります。',
+            'Temperature (T) はsoftmax出力分布をスケールします：T = 0.0ではモデルは常に最も確率の高いトークンを選択（決定論的）；T = 2.0では分布がほぼフラットになり出力が不整合になります。Top-P（ニュークリアスサンプリング）は累積確率がPに達する最小のトークンセットから選択します — Top-P = 0.9ではモデルは確率質量の上位90%をカバーするトークンのみを考慮します。Top-Kは各ステップで最も確率の高いKトークンに生成を制限します；Top-K = 1はグリーディデコードと同等です。',
+            'Temperature付きsoftmax式：P(トークン) = exp(logit / T) / sum(exp(logits / T))。TがゼロLに近づくほど、最高logitのトークンの確率が1.0に近づきます。Tが無限大に近づくほど、すべてのトークンが等確率に近づきます。',
+          ],
+          columns: ['パラメータ', '値の範囲', 'フォーカス / ファクト', 'クリエイティブ / 多様'],
+          rows: [
+            { 'パラメータ': 'Temperature (T)', '値の範囲': '0.0–2.0', 'フォーカス / ファクト': '0.0–0.3', 'クリエイティブ / 多様': '0.7–1.0' },
+            { 'パラメータ': 'Top-P', '値の範囲': '0.0–1.0', 'フォーカス / ファクト': '0.3–0.5', 'クリエイティブ / 多様': '0.9–1.0' },
+            { 'パラメータ': 'Top-K', '値の範囲': '1–語彙サイズ', 'フォーカス / ファクト': '10–20', 'クリエイティブ / 多様': '50–100' },
+            { 'パラメータ': 'max_tokens', '値の範囲': 'タスク依存', 'フォーカス / ファクト': '256–512', 'クリエイティブ / 多様': '2,048–8,192' },
+            { 'パラメータ': 'frequency_penalty', '値の範囲': '-2.0〜2.0', 'フォーカス / ファクト': '0.3–0.5（繰り返し削減）', 'クリエイティブ / 多様': '0.0–0.2' },
+            { 'パラメータ': 'presence_penalty', '値の範囲': '-2.0〜2.0', 'フォーカス / ファクト': '0.0–0.2', 'クリエイティブ / 多様': '0.5–0.8' },
+          ],
+          tableFormat: true,
+        },
+
+        parameterWarning: {
+          content: [
+            '**重要ルール：** TemperatureとTop-Pを同時に高い値に設定しないでください。Temperatureはまず分布全体をスケールし、次にTop-Pがすでにスケールされた上位確率質量からサンプリングします。T = 1.5とTop-P = 0.95の組み合わせは、どちらかのパラメータ単独よりも不規則な出力を生成します — この2つのパラメータは積み重ねるのではなく、代替として使用するよう設計されています。',
+            '`frequency_penalty`はこれまでの出現回数に比例してトークンの確率を減少させます — 正の値は繰り返しの表現を排除；負の値は繰り返しを積極的に促進します。`presence_penalty`は頻度に関係なく、これまでに出現したトークンに一回限りのフラットペナルティを適用します — モデルが既存のものを繰り返すのではなく、新しい語彙とトピックを導入するよう促します。',
+          ],
+        },
+
+        reasoningTradeoff: {
+          title: '推論品質とフォーマット保証のトレードオフとは？',
+          content: [
+            '制約デコードによるJSONの強制は、Function Callingベンチマークでモデルの精度を2.26ポイント低下させます — BAMLのスキーマ整合解析はBFCLで93.63%の精度を達成した一方、OpenAIの厳密な制約デコードは同じベンチマークで91.37%にとどまりました。',
+            'メカニズム：制約デコードは現在のスキーマ位置と互換性のないトークンをマスクする有限状態機械を適用します。スキーマがintegerを指定している場合、floatフィールドに`51.7`を出力したいモデルは`51`を出力するよう強制されます — 技術的には有効だが事実的に劣化した結果です。Chain-of-Thought（CoT）プロンプティングも同様に制約デコードと互換性がありません：推論フィールドを含めると、モデルはJSONストリング内の改行、クォート、特殊文字をエスケープするよう強制され、すべてのテストモデルで推論品質が測定可能なほど低下します。',
+            '推論の深さとフォーマット保証の両方を必要とするシステムの本番グレードソリューション：(1) **Stage 1** — 制約なしでGPT-5.5またはClaude Opus 4.7に送信：「これを分析し、ステップバイステップで推論し、ロジックを説明してください。」(2) **Stage 2** — Stage 1の出力を小型専門モデル（Osmosis-Structure-0.6BまたはGPT-5.5-mini、`strict: true`）に渡す：「この分析から主要データを抽出し、この正確なJSONスキーマで返してください。」',
+            'このアーキテクチャはStage 1の推論品質を保持し、Stage 2で100%フォーマット準拠を達成します。制約モードでフロンティアモデル全体を実行するコストの何分の一かで実現できます。',
+          ],
+        },
+
+        promptquorumTest: {
+          title: 'トップモデルの出力制御比較',
+          content: [
+            '[PromptQuorum](https://www.promptquorum.com/)でテスト済み — 30件の出力制御プロンプトを3モデルに分散：Claude Opus 4.7は制約デコードなしのXMLタグ付きフォーマット指示で93%のJSON準拠を達成。GPT-5.5は番号付きフォーマットルールで89%の準拠を達成。Gemini 3.1 Proはスキーマを冒頭と末尾の両方に指定すると91%の準拠を達成。`strict: true`の制約デコードが有効な場合、3モデルすべてがより短く完全性の低い推論を生成しました — BFCLベンチマークで観察された2.26ポイントの精度低下と一致します。',
+          ],
+        },
+
+        stopSequences: {
+          title: 'ストップシーケンスとネガティブ制約の違いとは？',
+          content: [
+            'ストップシーケンス — 生成時にモデル出力を即座に終了させるトークン — は最も決定論的な出力制御メカニズムです：モデルは指定された文字列が出現した瞬間に停止し、残りのコンテキストに関係なく機能します。',
+            'ストップシーケンスはAPIコールの文字列配列として渡します（OpenAIでは`stop`パラメータ、Anthropicでは`stop_sequences`）。一般的な本番ユースケース：',
+          ],
+          items: [
+            '`["###"]` — 構造化セクションマーカーの後で生成を終了し、不要なコンテンツへの継続を防止',
+            '`["</output>"]` — 閉じXMLタグの後で終了し、タグ付きコンテンツのみが返されることを保証',
+            '`["\\n\\n"]` — 分類や短答タスクで出力を単一段落に制限',
+            '`["Human:", "User:"]` — モデルが模擬会話の継続を幻覚することを防止',
+          ],
+        },
+
+        stopSequencesConclusion: {
+          content: [
+            'プロンプト本文のネガティブ制約 — 「説明を含めないこと」、「Markdownなし」、「導入文を加えないこと」 — は不要な出力パターンを削減しますが、ストップシーケンスのような準拠保証はできません。両方を使用してください：ストップシーケンスは構造的な終了に、ネガティブ制約はコンテンツのスタイル形成に。',
+          ],
+        },
+
+        formatChoices: {
+          title: '本番パイプラインに適した出力形式とは？',
+          content: [
+            'JSONはAPIオブジェクト、配列、型付きデータに直接マッピングされるため、LLM本番パイプラインの支配的な出力形式です — しかし制約デコードによるJSONの強制は推論品質の2〜10%を犠牲にするため、フォーマット選択は重要なアーキテクチャ上の決定となります。',
+            'TOON（Token-Optimised Output Notation）は長い構造化プロンプトの効率的な入力形式として登場しました — ホワイトスペース最小化と短縮キーを使用して、モデルがJSONで出力を生成する前の入力トークン消費を削減します。2026年の推奨本番アーキテクチャ：入力にTOON（トークン効率）+ 出力に制約デコード付きJSON（フォーマット保証）— Stage 1の自由推論完了後にのみ適用。',
+          ],
+          columns: ['出力フォーマット', 'ユースケース', '備考'],
+          rows: [
+            { '出力フォーマット': 'JSON', 'ユースケース': 'API、パイプライン、ドキュメントストア', '備考': '主要プロバイダ全てでネイティブ構造化出力サポート' },
+            { '出力フォーマット': 'JSONL', 'ユースケース': 'イベントストリーム、バッチ処理', '備考': '1行1JSONオブジェクト；ストリーミングとロギングに適合' },
+            { '出力フォーマット': 'CSV', 'ユースケース': 'レガシーシステム連携', '備考': 'シンプルだがネスト構造なし；表形式データに適合' },
+            { '出力フォーマット': 'YAML', 'ユースケース': '設定ファイル', '備考': '人間が読みやすい；CI/CDとインフラのコンテキストで使用' },
+            { '出力フォーマット': 'XML', 'ユースケース': 'エンタープライズ統合', '備考': '冗長；Claudeではプロンプト構造として有効、出力には不向き' },
+            { '出力フォーマット': 'Markdown', 'ユースケース': '人間向けレポート、ドキュメント', '備考': 'ダウンストリーム解析には不向き；人間向けコンテンツに最適' },
+          ],
+          tableFormat: true,
+        },
+
+        globalContext: {
+          title: 'グローバル・地域別の考慮事項',
+          content: [
+            '日本企業がLLMパイプラインを構築する際、経済産業省（METI）の「AI原則実践のためのガバナンス・ガイドライン（2024年版）」に準拠することが推奨されます。個人情報を処理するLLMパイプラインには、JSONスキーマ設計に個人情報保護法（APPI）のデータ最小化原則を適用する必要があります。on-premise推論とvLLMベースの制約デコード（Mistral Largeなど）は、データがローカルインフラ内に留まるため、APPI準拠に適しています。METIガイドラインは特に、医療・金融・法律分野での高リスクAI出力に対してStep-by-Stepの透明性確保を推奨しています。',
+            'アジア太平洋地域では、中国企業がQwen 2.5（アリババ）およびDeepSeek V3（DeepSeek AI）を構造化出力パイプラインに使用しています。両モデルはJSONモードをサポートし、中国の「生成AIサービス暫定弁法（2023年）」に準じたローカルデプロイが可能です。越境データ転送フレームワークへの対応として、OllamaとXGrammarを使った自己ホスト型モデルでの制約デコードが有効な選択肢です — LLaMA 3.1 7Bは8GB RAM、LLaMA 3.1 13Bは16GB RAMで動作します。',
+            'グローバルな本番パイプライン全体において、JSONモード + 2段階アプローチ（Stage 1：自由推論、Stage 2：専門構造化モデル）が100%フォーマット準拠と推論品質を両立するベストプラクティスです。ストップシーケンスと制約デコードを組み合わせることで、言語やリージョンに関係なく出力の確実性が最大化されます。',
+          ],
+        },
+
+        tldr: {
+          title: '重要ポイント',
+          isTldr: true,
+          items: [
+            '構造化出力が登場する前、モデルは複雑なJSONスキーマ準拠で40%未満しか達成できませんでした；OpenAIの`strict: true`制約デコードは100%を実現します',
+            '制約デコードはBFCLベンチマークで推論精度を2.26ポイント低下させます — 複雑なタスクでは2段階アプローチ（自由推論→専門モデル）を使用してください',
+            'TemperatureとTop-Pを同時に高い値に設定しないこと — どちらか一方のパラメータよりも不規則な出力に増幅されます',
+            '`frequency_penalty`：範囲 -2.0〜2.0 で頻度比例繰り返しを削減；`presence_penalty`：範囲 -2.0〜2.0 で既出トークンにフラットペナルティを適用 — フォーカスした事実出力には両方を0.3〜0.5に設定',
+            'ストップシーケンスは唯一の決定論的出力終了メカニズムです — プロンプト本文のネガティブ制約とは異なり、モデルはストップシーケンスをオーバーライドできません',
+            'Temperatureの範囲：T = 0.0〜0.3は決定論的な事実タスク；T = 0.7〜1.0はクリエイティブタスク；T > 1.2は本番使用で不整合のリスクがあります',
+            'Claude Opus 4.7はXMLタグ付きフォーマットプロンプトで93%のJSON準拠を達成；GPT-5.5は番号付きフォーマットルールで89% — どちらも制約デコードなし',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'よくあるミス',
+          mistakes: [
+            {
+              mistake: 'TemperatureとTop-Pを同時に高い値に設定する',
+              problem: '相互に増幅されます — T=1.5 + Top-P=0.95はどちらかのパラメータ単独より不規則な出力を生成します。',
+              fix: 'ランダム性の主要制御としてどちらか一方を使用し、両方は使わないでください。'
+            },
+            {
+              mistake: '複雑な推論タスクでJSONを強制する',
+              problem: '制約デコードは精度を2〜10%低下させます。モデルはスキーマ準拠を維持するために推論品質を犠牲にします。',
+              fix: '代わりに2段階アプローチを使用してください：最初に自由推論、次に構造化抽出。'
+            },
+            {
+              mistake: '正確なスキーマを示さずに"return JSON"と記述する',
+              problem: 'モデルはフィールド名、型、ネスト構造を推測し、無効または不正なJSONを生成します。',
+              fix: 'フィールド型とenum値を含む完全なスキーマを必ず提供してください。'
+            },
+            {
+              mistake: '重要なフォーマットにプロンプト本文のネガティブ制約のみに頼る',
+              problem: '「Markdownなし」はモデルに無視される場合があります。特に高いTemperature設定時。',
+              fix: 'APIレベルでストップシーケンスを使用してください — 唯一の決定論的終了メカニズムです。'
+            },
+            {
+              mistake: 'モデル間でTemperature設定をコピーする',
+              problem: 'GPT-5.5のT=0.7とClaudeのT=0.7は異なる確率分布を生成します。',
+              fix: '本番パイプラインで各モデルごとにパラメータ設定をテストしてください。'
+            }
+          ],
+        },
+
+        relatedReading: {
+          title: '関連記事',
+          items: [
+            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 構造化されたAI指示設計の基本原則',
+            '[TemperatureとTop-Pの解説](/prompt-engineering/temperature-and-top-p?lang=ja) — 2つの主要なランダム性パラメータの詳細解説',
+            '[AIでより良いコードを書く](/prompt-engineering/write-better-code-with-ai?lang=ja) — コード生成ワークフローにおける出力制御テクニック',
+            '[Tool UseとFunction Calling](/prompt-engineering/tool-use-and-function-calling?lang=ja) — ツール定義と関数スキーマによる構造化出力',
+            '[トークンとトークンエコノミクス](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja) — 制約デコードと2段階パイプラインのトークンコスト理解',
+            '[LLMアプリケーションのエラー処理](/prompt-engineering/error-handling-llm?lang=ja) — 本番システムで不正な出力を検出・回復する方法',
+          ],
+        },
+
+        howToStart: {
+          title: 'AI出力形式の制御方法',
+          numberedItems: [
+            '**出力形式を常にプロンプトで明示的に指定してください。**「これを要約してください」の代わりに「5〜7項目の箇条書きリストで要約してください。各項目は1〜2文。能動態を使用。意見を含めないこと。」構造を具体的に記述してください：箇条書き、表、JSON、Markdown、プレーンテキストなど。',
+            '**利用可能な場合はJSONスキーマを使用して構造化出力を強制してください（OpenAI、Anthropic）。**データ抽出や機械可読コンテンツを生成する場合はスキーマを定義します：フィールド名、型、必須フィールド、enum制約。モデルは自動的に出力をフォーマットします。',
+            '**希望する出力形式の具体的な例を提示してください。**モデルに具体例を見せます：「次の形式でフォーマットしてください：{ "topic": "...", "key_points": [...], "confidence": "high|medium|low" }。」例示は説明だけより強力です。',
+            '**制約ベースの言語を使用してください：「必ずXにすること、Yしてはいけない、常にZすること。」**曖昧な表現（「〜してみてください」）を避けてください。「正確に3ステップを返すこと、それ以上もそれ以下も不可。専門用語を使わないこと。推奨事項に制限がある場合は必ず警告を含めること。」',
+            '**大規模に実行する前に1つの例で出力形式仕様をテストしてください。**1つの出力を生成し、仕様に合っているか確認し、必要に応じてプロンプトを調整します。100件処理した後にフォーマットの問題を発見することを防げます。',
+          ],
+        },
+
+        faq: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'LLMにおけるTemperatureとTop-Pの違いは何ですか？',
+              a: 'Temperature (T) は次トークン予測のsoftmax確率分布全体をスケールします：T = 0.0では常に最も確率の高いトークンを選択（決定論的）；T = 1.0は自然な分布を維持；T = 2.0はランダム性に向けてフラット化します。Top-P（ニュークリアスサンプリング）は累積確率がPに達する最小のトークンセットから選択します。この2つは生成の異なる側面を制御し、同時に高い値に設定すると不規則な出力を増幅します。',
+            },
+            {
+              q: 'JSON出力の強制はAIの応答品質を低下させますか？',
+              a: 'はい — 測定可能に。BAMLのBFCLベンチマークでは、スキーマ整合フリーテキスト解析が93.63%の精度を達成した一方、OpenAIの制約デコードは91.37%にとどまり、2.26ポイントの品質低下が生じました。複雑な推論タスクでは、2段階アプローチ（自由記述→専門構造化）で品質を維持しながら100%フォーマット準拠を達成できます。',
+            },
+            {
+              q: '制約デコードとは何か、どのようにJSON出力を保証しますか？',
+              a: '制約デコードはモデルのトークン生成プロセスに有限状態機械（FSM）を適用します。各生成ステップで、FSMは現在位置のターゲットスキーマと互換性のあるトークンを評価し、それ以外のすべてを確率ゼロにマスクします。OpenAIは`response_format: { type: "json_schema", strict: true }`で実装。AnthropicはStrict Tool Use Modeで実装しています。',
+            },
+            {
+              q: '本番LLMパイプラインにはどの出力形式を使用すべきですか？',
+              a: 'JSONは型付きAPIオブジェクトに直接マッピングされ、主要プロバイダ（OpenAI、Anthropic、Google Gemini）でネイティブサポートされているため、本番LLMパイプラインの標準です。イベントストリームとバッチ処理にはJSONL。レガシーシステム連携にのみCSV。2026年推奨アーキテクチャ：入力トークン効率のためのTOON + Stage 1自由推論後のStage 2出力にのみ制約デコード付きJSON。',
+            },
+            {
+              q: 'ストップシーケンスとプロンプトのネガティブ制約の違いは何ですか？',
+              a: 'ストップシーケンスはAPI/推論レベルで強制されます — モデルは指定された文字列が生成された瞬間に生成を停止し、例外はありません。プロンプト本文のネガティブ制約は拘束力がなく、高いTemperature設定や長いコンテキストドリフトでは違反することがあります。両方を使用してください：ストップシーケンスは構造的な終了保証に、ネガティブ制約はコンテンツのスタイル形成に。',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'ソースと参考資料',
+          items: [
+            '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — 制約デコード、厳密JSONモード、スキーマ準拠保証に関する公式ドキュメント',
+            '[BoundaryML / BAML, 2025. "Structured Outputs Create False Confidence"](https://boundaryml.com/blog/structured-outputs-create-false-confidence) — ベンチマーク：93.63% vs. 91.37%の精度 — スキーマ整合解析vs.制約デコード（BFCL）',
+            '[Hannecke, 2025. "Beyond JSON: Picking the Right Format for LLM Pipelines"](https://www.linkedin.com/pulse/beyond-json-picking-right-format-llm-pipelines-michael-hannecke-ftnye) — 本番アーキテクチャ分析：TOON入力＋制約JSON出力',
+          ],
+        },
+
+      },
+    },
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   };
