@@ -69,6 +69,7 @@ import { article as a_how_to_reduce_prompt_brittleness } from "./articles/how-to
 import { article as a_best_prompt_engineering_ides } from "./articles/best-prompt-engineering-ides";
 import { article as a_prompting_across_languages } from "./articles/prompting-across-languages";
 import { article as a_prompt_review_workflow_for_teams } from "./articles/prompt-review-workflow-for-teams";
+import { article as a_prompt_engineering_setup_small_teams } from "./articles/prompt-engineering-setup-small-teams";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -135,4 +136,5 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "best-prompt-engineering-ides": a_best_prompt_engineering_ides,
   "prompting-across-languages": a_prompting_across_languages,
   "prompt-review-workflow-for-teams": a_prompt_review_workflow_for_teams,
+  "prompt-engineering-setup-small-teams": a_prompt_engineering_setup_small_teams,
 };
