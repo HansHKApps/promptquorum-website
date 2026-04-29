@@ -1878,14 +1878,505 @@ tests:
     },
   },
   zh: {
-    theme: 'Tools & Platforms',
-    title: 'Best Prompt Optimization Tools for Teams',
-    seoTitle: 'Tools for Teams',
-    metaDescription: 'Team tools.',
-    intro: '[Translation coming soon](/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=en).',
+    theme: '工具与平台',
+    title: '2026年团队提示优化最佳工具',
+    seoTitle: '2026年团队提示优化最佳工具',
+    intro: '**团队提示优化需要四个核心能力：版本化存储、A/B变体测试、输出评分、协作审查。没有单一工具能覆盖全部四个能力。本指南根据团队类型、价格和工作流适配，对七个专业工具进行排名 — 加上PromptQuorum的跨模型对比。**',
+    metaDescription: '7个团队提示优化工具对比：Braintrust、DSPy、PromptPerfect、Vellum、Promptfoo、Helicone、PromptQuorum。按A/B测试、协作和价格比较。',
     publishDate: '2026-04-10',
+    dateModified: '2026-04-29',
     readTime: '阅读约10分钟',
     educationalLevel: 'Intermediate',
-    sections: {},
+    audience: '构建多人LLM工作流的工程经理和提示工程师',
+    primaryTerm: '团队提示优化工具',
+    aboutTopics: ['提示优化', '团队协作', 'LLM评估'],
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-10',
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '什么是团队提示优化?', anchor: '#what-is-prompt-optimization' },
+      { label: '我们如何评估这些工具', anchor: '#evaluation-criteria' },
+      { label: 'Braintrust: 评估优先协作', anchor: '#braintrust' },
+      { label: 'DSPy: 自动化提示编程', anchor: '#dspy' },
+      { label: 'PromptPerfect: 基于UI的优化', anchor: '#promptperfect' },
+      { label: 'Vellum: 生产A/B测试', anchor: '#vellum' },
+      { label: 'Promptfoo: 开源CI/CD测试', anchor: '#promptfoo' },
+      { label: 'Helicone: 可观测性+实验', anchor: '#helicone' },
+      { label: 'PromptQuorum: 多模型调度对比', anchor: '#promptquorum' },
+      { label: '并排比较表', anchor: '#comparison-table' },
+      { label: '选择哪个工具', anchor: '#which-tool' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '如何选择提示优化堆栈', anchor: '#how-to-choose' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related-reading' },
+      { label: '来源', anchor: '#sources' },
+    ],
+    sections: {
+      keyTakeaways: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '团队提示优化需要四个能力：版本化存储、A/B变体测试、输出评分、协作审查 — 没有单一工具覆盖全部四个。',
+          'Braintrust领先评估驱动团队；Vellum领先生产A/B测试；DSPy领先自动化优化；Promptfoo领先CI/CD集成。',
+          '开源选项(DSPy、Promptfoo)免费但需要工程设置 — 预计需要1–2天配置才能团队采纳。',
+          '每周手动调整提示超过5小时的团队应采纳系统化A/B测试；Vellum的实验模块或Promptfoo可将其减少至1小时以内。',
+          'PromptQuorum: 多模型调度 — 在优化前对比同一提示在25+个模型上的表现。',
+          '避免单工具陷阱：大多数团队需要2个工具 — 一个用于评估(Braintrust或Promptfoo)，一个用于部署/版本管理(Vellum或PromptHub)。',
+          '价格从免费(DSPy、Promptfoo)到$200–600/月(Vellum、Braintrust) — 团队规模和API调用量是主要成本驱动因素。',
+        ],
+      },
+      whatIsPromptOptimization: {
+        id: 'what-is-prompt-optimization',
+        title: '什么是团队提示优化?',
+        content: [
+          '**提示优化是通过结构化迭代、变体测试和输出测量来系统性改进AI提示的过程 — 不同于一次性提示编写。** 当一个工程师调整提示并口头分享时，改进无法重现或对比。当团队采纳系统化优化时，所有工程师编辑同一提示库、针对同一测试数据集对比变体、跟踪哪些变化真正改善质量。',
+          '团队优化与个人工作的区别：多个工程师同时编辑的共享提示库、防止未授权更改生产提示的审查工作流、衡量真实影响的A/B实验、合规性审计日志。个人提示调整速度快但脆弱；团队优化初期设置慢但可扩展。',
+          '本指南区分提示优化(使提示更好)、提示管理(组织和部署提示)和提示评估(测量质量)。大多数团队需要这三个类别的工具。',
+          '如需更宽泛的所有提示工程工具对比(非仅优化工具)，请参阅[2026年最佳提示工程工具：按使用场景排名](/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh)。该指南涵盖发现、研究和通用工具。',
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: '我们如何评估这些工具',
+        content: [
+          '**我们根据五个标准评估六个工具：团队协作功能、A/B测试能力、评估/评分支持、CI/CD集成、价格透明度。** 每个标准反映团队提示工作流中的真实瓶颈。',
+        ],
+        columns: ['标准', '对团队为什么重要', '最低门槛'],
+        rows: [
+          {
+            '标准': '团队协作',
+            '对团队为什么重要': '多个工程师编辑提示而不互相覆盖',
+            '最低门槛': '基于角色的访问权限或分支/版本管理',
+          },
+          {
+            '标准': 'A/B变体测试',
+            '对团队为什么重要': '在同一输入集上对比提示变体',
+            '最低门槛': '带评分的并排输出对比',
+          },
+          {
+            '标准': '评估支持',
+            '对团队为什么重要': '测量输出质量，而不仅查看输出',
+            '最低门槛': '自定义指标，非仅手动审查',
+          },
+          {
+            '标准': 'CI/CD集成',
+            '对团队为什么重要': '在部署前捕获提示回归',
+            '最低门槛': '在管道中运行的CLI或API',
+          },
+          {
+            '标准': '价格透明度',
+            '对团队为什么重要': '3–10人团队的预算可预测性',
+            '最低门槛': '公开价格页面；非仅"联系销售"',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: 评估优先协作',
+        content: [
+          '**Braintrust是AI评估平台，让团队根据自定义指标评分LLM输出、记录所有生产调用、分享实验结果 — 最适合系统性测量输出质量的团队。** Braintrust不是提示生成器或版本控制系统；它是共享实验室，团队设计自定义评分函数、记录每个API调用、运行实验。',
+          '团队计划约$500/月。日志记录代理支持OpenAI、Anthropic、Google API而无需代码更改。评分函数用TypeScript或Python编写。GitHub集成让你与代码一起对提示进行版本管理。权衡：需要工程专业知识来设置和维护自定义评分。',
+          '团队功能包括共享实验仪表板(所有成员实时看到相同的评估结果)、基于角色的访问(管理员/成员/查看者)、通过git风格提交历史的提示版本管理、生产日志记录(每个API调用都记录输入、输出、评分)。',
+        ],
+        items: [
+          '共享实验仪表板：所有团队成员实时看到评估结果',
+          '基于角色的访问：管理员/成员/查看者角色',
+          '通过git风格提交历史的提示版本管理',
+          '生产日志记录：每个API调用都记录输入/输出/评分',
+        ],
+      },
+      dspy: {
+        id: 'dspy',
+        title: 'DSPy: 自动化提示编程',
+        content: [
+          '**DSPy(斯坦福NLP小组，2023)用可学习模块替换手写提示，使用输入/输出示例训练集自动优化指令 — 最适合熟悉Python的工程团队。** DSPy是开源(Apache 2.0)且免费。与其手写提示不同，你在DSPy中定义任务，它从示例中学习最优指令。',
+          '需要Python 3.9+。通过LiteLLM后端兼容任何LLM。通常20–50个标记示例足以优化。BootstrapFewShot优化器最友好(无需GPU，无复杂数学)。团队友好的标准Git工作流 — 无SaaS依赖、无月费。权衡：无UI；需要工程设置(团队采纳前1–2天)。',
+          '最适合有标记数据集且想要可重现、版本控制的提示优化的研究和机器学习团队。',
+        ],
+      },
+      promptperfect: {
+        id: 'promptperfect',
+        title: 'PromptPerfect: 基于UI的优化',
+        content: [
+          '**PromptPerfect是SaaS提示优化器，带可视化界面 — 团队粘贴提示、选择模型、接收优化变体和质量评分，无需编写代码。** 为非技术用户(内容、营销、产品团队)设计，他们需要提示改进而无需学习DSPy或工程工具。',
+          '启动计划$9.99/月；团队计划~$49.99/月(最多5个用户)。支持GPT-4o、Claude、Gemini、Stable Diffusion。UI输出优化提示+对更改的普通英文解释。最适合大多数成员非工程的团队。权衡：比DSPy控制更少；无CI/CD集成；限于预设优化策略。',
+        ],
+        items: [
+          '无代码UI：粘贴提示、选择模型、接收优化变体',
+          '更改解释：每个优化的普通语言理由',
+          '多模型支持：GPT-4o、Claude、Gemini、Stable Diffusion',
+        ],
+      },
+      vellum: {
+        id: 'vellum',
+        title: 'Vellum: 生产A/B测试',
+        content: [
+          '**Vellum是提示部署平台，带内置A/B测试，在生产流量和输出质量之间路由变体并测量真实影响 — 最适合在生产中运行LLM功能的团队。** Vellum不仅是测试工具；它是在提示变体之间分割真实用户流量并测量性能的生产控制平面。',
+          '启动$200/月；增长$500/月；企业自定义。A/B测试按百分比在提示变体之间分割流量。评估在测试数据集上对比变体。团队功能：共享工作区、PR风格提示审查、部署审批工作流。权衡：最昂贵选项；对尚未处理真实流量的前期生产团队过度配置。',
+          '最适合具有实时LLM功能、想在真实用户流量上对比变体而无需管理单独部署的产品团队。',
+        ],
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: 开源CI/CD测试',
+        content: [
+          '**Promptfoo是开源CLI工具，针对多个模型运行自动化提示测试套件 — 团队将其集成到CI/CD管道以在部署前捕获提示回归。** 在YAML中定义你的提示测试用例、提交到Git，Promptfoo在每个PR上针对所有配置的模型运行它们。',
+          '免费(MIT许可证)。CLI优先、基于YAML的配置。运行提示测试套件：你提供输入、预期输出模式和自定义基于LLM的断言(如"响应必须包含3个要点")。支持40+个LLM提供商。GitHub Actions集成可用。团队友好：测试配置提交到Git、在CI中运行、无账户需要。权衡：无UI；仅工程师。',
+        ],
+        codeBlock: `prompts:
+  - "Summarize this in 3 bullet points: {{text}}"
+providers:
+  - openai:gpt-4-turbo
+  - anthropic:claude-opus-4.1
+tests:
+  - vars:
+      text: "Long document text here"
+    assert:
+      - type: contains
+        value: "•"
+      - type: llm-rubric
+        value: "Response has exactly 3 bullet points"`,
+        codeLanguage: 'yaml',
+      },
+      helicone: {
+        id: 'helicone',
+        title: 'Helicone: 可观测性+实验',
+        content: [
+          '**Helicone是LLM可观测性平台，记录所有API调用、追踪每个提示的成本/延迟、支持A/B实验 — 最适合需要实时成本可见性和质量监控的团队。** Helicone不是提示生成器；它是坐在应用和LLM API之间的代理，记录每个调用。',
+          '免费层(10万请求/月)；Pro $20/月；增长$200/月。一行集成：在OpenAI客户端中将`baseURL`改为指向Helicone。自定义属性通过提示版本、用户或功能标记请求。实验模块在生产流量上对比提示变体。共享团队仪表板显示支出、错误、延迟、实验结果。最适合初创和成本意识的团队。',
+        ],
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: 多模型调度对比',
+        content: [
+          '**PromptQuorum同时将一个提示调度到25+个AI模型并返回并排输出 — 在提交模型或版本前对比提示变体在不同模型上的表现的最快方式。** 不同于上述评估工具(一次测试一个模型)，PromptQuorum回答"哪个模型最适合这个提示?"仅一次运行。',
+          '在路由到Braintrust进行更深层评估或Vellum进行生产A/B测试之前，使用PromptQuorum作为第一步。免费层可用 — 无需工程设置。支持25+个模型，包括通过Ollama和LM Studio的本地LLM。内置提示框架和模板支持。带共识评分的并排响应对比。',
+          '最适合评估是否为特定模型提供商优化、或想同时对比同一提示在多个LLM选项上表现的团队。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '并排比较表',
+        content: [
+          '**没有单一工具在全部五个标准上表现优异。Braintrust领先评估深度；Vellum领先生产A/B测试；Promptfoo领先CI/CD集成；DSPy领先自动化优化。**',
+        ],
+        columns: ['工具', 'A/B测试', '协作', 'CI/CD', '价格', '最适合'],
+        rows: [
+          {
+            '工具': 'Braintrust',
+            'A/B测试': '✅ 实验',
+            '协作': '✅ 角色+仪表板',
+            'CI/CD': '✓ API',
+            '价格': '~$500/月',
+            '最适合': '评估驱动团队',
+          },
+          {
+            '工具': 'DSPy',
+            'A/B测试': '✅ 自动化',
+            '协作': 'Git基础',
+            'CI/CD': '✅ 原生',
+            '价格': '免费',
+            '最适合': '工程密集团队',
+          },
+          {
+            '工具': 'PromptPerfect',
+            'A/B测试': '⚠️ 变体仅',
+            '协作': '✓ 团队计划',
+            'CI/CD': '✗ 无',
+            '价格': '$50/月',
+            '最适合': '非工程用户',
+          },
+          {
+            '工具': 'Vellum',
+            'A/B测试': '✅ 流量分割',
+            '协作': '✅ PR审查',
+            'CI/CD': '✓ Webhooks',
+            '价格': '$200–500/月',
+            '最适合': '生产部署',
+          },
+          {
+            '工具': 'Promptfoo',
+            'A/B测试': '✅ 多模型',
+            '协作': 'Git基础',
+            'CI/CD': '✅ GitHub Actions',
+            '价格': '免费',
+            '最适合': 'CI/CD聚焦团队',
+          },
+          {
+            '工具': 'Helicone',
+            'A/B测试': '✓ 实验',
+            '协作': '✅ 共享仪表板',
+            'CI/CD': '✓ API',
+            '价格': '免费–$200/月',
+            '最适合': '成本意识团队',
+          },
+          {
+            '工具': 'PromptQuorum',
+            'A/B测试': '✅ 多模型',
+            '协作': '✓ 共享工作区',
+            'CI/CD': '✗ 无CI/CD',
+            '价格': '免费+积分',
+            '最适合': '跨模型对比',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: '选择哪个工具',
+        content: [
+          '**根据团队的瓶颈匹配工具：评估质量 → Braintrust；自动化优化 → DSPy；生产A/B测试 → Vellum；CI/CD回归防止 → Promptfoo；成本监控+实验 → Helicone；跨模型对比 → PromptQuorum。**',
+        ],
+        numberedItems: [
+          {
+            title: '研究/ML团队 → DSPy',
+            whyItMatters:
+              '在标记数据集上自动化优化；Git原生工作流；无SaaS依赖。',
+          },
+          {
+            title: '产品+工程团队 → Vellum',
+            whyItMatters:
+              '生产流量分割、审批工作流、PM审查的非技术UI。',
+          },
+          {
+            title: '内容/营销团队 → PromptPerfect',
+            whyItMatters:
+              '无代码UI、可分享的优化提示、多模型支持。',
+          },
+          {
+            title: 'DevOps/平台团队 → Promptfoo',
+            whyItMatters:
+              '基于YAML的测试套件、GitHub Actions、在CI中捕获回归。',
+          },
+          {
+            title: '监控支出的初创 → Helicone',
+            whyItMatters:
+              '免费层处理10万请求/月；从第一天就有每个提示的成本可见性。',
+          },
+          {
+            title: '所有团队(第一步) → PromptQuorum',
+            whyItMatters:
+              '在投资模型特定优化工具前对比模型在特定提示上的性能。',
+          },
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '中国和亚太合规环境',
+        content: [
+          '**中国(数据安全法2021)。** 中国的《数据安全法》(2021)和网络安全审查要求对LLM应用的数据处理、跨境传输和算法透明度施加严格规定。本地推理(本地LLM部署)满足数据驻留要求，消除对云API的跨境调用。Qwen2.5等中文本地模型适合金融、医疗、法律实体、满足行业数据保护义务。团队应选择支持本地部署或私有云的工具(DSPy、Promptfoo、PromptQuorum本地推理选项)。',
+          '**亚太地区(跨境数据框架)。** 东南亚各国APAC数据驻留政策各异。新加坡、日本、澳大利亚允许云处理，但需记录。越南、泰国、印度尼西亚更严格，偏好本地存储。多国团队应使用支持跨多个地区本地推理的工具，或使用带透明地理位置记录的代理(Helicone)。',
+          '**企业部署(金融/医疗/法律)。** 金融机构必须符合《反洗钱法》和风险管理规定。医疗实体必须加密患者数据并维护审计日志。法律事务所需要客户保密。这些行业应选择强评估(Braintrust)和可观测性(Helicone)、支持自定义合规检查的工具。Promptfoo的自定义断言支持合规验证(如"响应不包含PHI"医疗应用中)。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        mistakes: [
+          {
+            mistake: '将优化视为一次性任务',
+            problem: '随着模型更新和数据漂移，提示性能下降。',
+            fix: '每月使用同一测试数据集重新评估。Promptfoo的YAML配置使其可重现。',
+          },
+          {
+            mistake: '在构建评估数据集前购买SaaS工具',
+            problem: '没有20–50个标记输入/输出示例，无法测量新提示是否更好。',
+            fix: '先构建评估数据集。这是所有优化工作的基础。',
+          },
+          {
+            mistake: '使用单个模型作为评判者',
+            problem:
+              '用GPT-4o评估GPT-4o输出会将评分夸大10–20%(模型作为评判者偏见)。',
+            fix: '使用不同模型评分，或使用人工评估作为真实标准。',
+          },
+          {
+            mistake: '对比变体时忽视token成本',
+            problem:
+              '评分高5%但token使用增加40%的提示可能成本更高。',
+            fix: '使用Helicone或Braintrust的成本追踪同时追踪质量和成本。',
+          },
+          {
+            mistake: '在定义质量指标前采纳工具',
+            problem:
+              '未定义"好输出"而购买Vellum或Braintrust的团队会在第一个月争论评分。',
+            fix: '在加载任何工具前定义3–5个具体质量标准。',
+          },
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '如何选择提示优化堆栈',
+        numberedItems: [
+          '定义主要瓶颈：是输出质量、成本、延迟还是团队速度?',
+          '评估技术深度：仅工程师团队 → DSPy或Promptfoo；混合团队 → Vellum或Braintrust。',
+          '在评估任何工具前构建标记评估数据集(20–50输入/输出对)。',
+          '从一个免费工具(Promptfoo或Helicone)开始以建立基线指标。',
+          '在为SaaS平台付费前对团队的实际提示运行2周试用。',
+          '规划两个工具：一个用于评估(Braintrust、Promptfoo)+一个用于部署/版本管理(Vellum、PromptHub)。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '什么是团队提示优化?',
+            a: '团队提示优化是通过结构化A/B测试、输出评分、协作审查系统性改进LLM提示的实践。不同于单独提示编写，团队优化需要版本化共享工具、基于角色的访问、可重现测试套件。',
+          },
+          {
+            q: '提示优化和提示管理的区别?',
+            a: '提示管理涵盖存储、版本化、部署提示(PromptHub、Vellum)。提示优化通过变体测试和评分主动改进提示质量。大多数团队需要两者：管理用于组织提示，优化用于逐时间改进。',
+          },
+          {
+            q: '5人团队的提示优化堆栈成本多少?',
+            a: '根据工具选择预算$0–$700/月。免费堆栈(DSPy+Promptfoo+Helicone免费层)覆盖大多数用例。带Vellum或Braintrust的SaaS堆栈运行$200–700/月。成本随API调用量和团队规模扩展。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          {
+            title: '提示优化基础：实践指南',
+            url: '/prompt-engineering/fundamentals-of-prompt-optimization?lang=zh',
+          },
+          {
+            title: '如何评估提示质量：指标和方法',
+            url: '/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh',
+          },
+          {
+            title: '手动vs.自动化提示优化：何时使用',
+            url: '/prompt-engineering/manual-vs-automated-prompt-optimization?lang=zh',
+          },
+          {
+            title: '2026年最佳提示工程工具：按使用场景排名',
+            url: '/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh',
+          },
+          {
+            title: '2026年最佳提示管理平台',
+            url: '/prompt-engineering/best-prompt-management-platforms?lang=zh',
+          },
+          {
+            title: '如何跨模型测试提示',
+            url: '/prompt-engineering/how-to-test-prompts-across-models?lang=zh',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        content: [
+          '最后事实检查：2026-04-29 — 所有价格、功能、集成针对官方文档验证。'
+        ],
+        items: [
+          '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — DSPy基础论文；自动化提示优化能力声明的基础。',
+          '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — 模型作为评判者偏见发现；常见错误中10–20%膨胀声明的基础。',
+          '[Braintrust定价页面 — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust $500/月团队层声明的基础。',
+          '[Promptfoo GitHub存储库 — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — 开源CI/CD提示测试框架；Promptfoo功能声明的基础。',
+          '[Vellum平台 — vellum.ai](https://www.vellum.ai/) — 生产部署平台；A/B测试和审批工作流声明的基础。',
+          '[Helicone文档 — docs.helicone.ai](https://docs.helicone.ai/) — 可观测性平台；代理集成和实验功能声明的基础。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026年团队提示优化最佳工具',
+      description:
+        '7个团队提示优化工具对比：按A/B测试、协作功能、CI/CD集成、价格比较。',
+      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=zh',
+      inLanguage: 'zh',
+      datePublished: '2026-04-10',
+      dateModified: '2026-04-29',
+      author: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: '提示优化' },
+        { '@type': 'Thing', name: '团队协作' },
+        { '@type': 'Thing', name: 'LLM评估' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'DSPy' },
+        { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
+        { '@type': 'SoftwareApplication', name: 'Vellum' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+        { '@type': 'SoftwareApplication', name: 'Helicone' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      ],
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=zh', width: 1200, height: 630 },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '什么是团队提示优化?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '团队提示优化是通过结构化A/B测试、输出评分、协作审查系统性改进LLM提示的实践。不同于单独提示编写，团队优化需要版本化共享工具、基于角色的访问、可重现测试套件。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '提示优化和提示管理的区别?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '提示管理涵盖存储、版本化、部署提示(PromptHub、Vellum)。提示优化通过变体测试和评分主动改进提示质量。大多数团队需要两者：管理用于组织提示，优化用于逐时间改进。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '5人团队的提示优化堆栈成本多少?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '根据工具选择预算$0–$700/月。免费堆栈(DSPy+Promptfoo+Helicone免费层)覆盖大多数用例。带Vellum或Braintrust的SaaS堆栈运行$200–700/月。成本随API调用量和团队规模扩展。',
+          },
+        },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      inLanguage: 'zh',
+      name: '如何选择提示优化堆栈',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: '定义主要瓶颈', text: '是输出质量、成本、延迟还是团队速度?' },
+        { '@type': 'HowToStep', position: 2, name: '评估技术深度', text: '仅工程师 → DSPy/Promptfoo；混合 → Vellum/Braintrust' },
+        { '@type': 'HowToStep', position: 3, name: '构建标记评估数据集', text: '评估工具前20–50输入/输出对' },
+        { '@type': 'HowToStep', position: 4, name: '从免费工具开始', text: 'Promptfoo/Helicone建立基线指标' },
+        { '@type': 'HowToStep', position: 5, name: '运行2周试用', text: '付费SaaS前对团队实际提示' },
+        { '@type': 'HowToStep', position: 6, name: '规划两个工具', text: '1个用于评估(Braintrust/Promptfoo)+1个用于部署(Vellum/PromptHub)' },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'zh',
+      name: '2026年团队提示优化最佳工具',
+      numberOfItems: 7,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'AI评估平台、共享仪表板、自定义评分、生产日志记录 — 工程团队' },
+        { '@type': 'ListItem', position: 2, name: 'DSPy', description: '开源自动化提示编程框架；用学习模块替换手写提示' },
+        { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: '无代码UI优化器；非工程师用户的最优选择' },
+        { '@type': 'ListItem', position: 4, name: 'Vellum', description: '生产A/B测试平台 — 流量分割、PR风格审批工作流' },
+        { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: '开源CLI工具 — CI/CD提示回归测试' },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: 'LLM可观测性平台、成本追踪、A/B实验支持' },
+        { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: '多模型对比平台；同一提示对25+个模型并排测试' },
+      ],
+    },
   },
 };
