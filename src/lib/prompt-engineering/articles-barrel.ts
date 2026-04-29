@@ -67,6 +67,7 @@ import { article as a_prompt_evaluation_metrics } from "./articles/prompt-evalua
 import { article as a_how_to_test_prompts_across_models } from "./articles/how-to-test-prompts-across-models";
 import { article as a_best_prompt_engineering_ides } from "./articles/best-prompt-engineering-ides";
 import { article as a_prompting_across_languages } from "./articles/prompting-across-languages";
+import { article as a_prompt_review_workflow_for_teams } from "./articles/prompt-review-workflow-for-teams";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -131,4 +132,5 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "how-to-test-prompts-across-models": a_how_to_test_prompts_across_models,
   "best-prompt-engineering-ides": a_best_prompt_engineering_ides,
   "prompting-across-languages": a_prompting_across_languages,
+  "prompt-review-workflow-for-teams": a_prompt_review_workflow_for_teams,
 };
