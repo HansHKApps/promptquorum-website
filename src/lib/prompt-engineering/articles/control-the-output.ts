@@ -12,7 +12,7 @@ export const article: Record<Language, PEArticle> = {
       next_refresh_due: '2026-09-24',
       theme: 'Techniques',
       title: 'Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection',
-      intro: 'Before native structured output capabilities existed, models scored below 40% on complex JSON schema compliance; with constrained decoding — used by OpenAI\'s `strict: true` mode and Anthropic\'s Strict Tool Use Mode — JSON Schema compliance reaches 100%, guaranteed at the token level. Output control is the single most important engineering variable between a prototype that works 80% of the time and a production system that works reliably.',
+      intro: '**Before native structured output capabilities existed, models scored below 40% on complex JSON schema compliance; with constrained decoding — used by OpenAI\'s `strict: true` mode and Anthropic\'s Strict Tool Use Mode — JSON Schema compliance reaches 100%, guaranteed at the token level. Output control is the single most important engineering variable between a prototype that works 80% of the time and a production system that works reliably.**',
       publishDate: '2026-03-24',
       readTime: '10 min read',
 
@@ -22,6 +22,23 @@ export const article: Record<Language, PEArticle> = {
 
       educationalLevel: 'Beginner',
       audience: 'Developers building production LLM pipelines that require structured output',
+      toc: [
+        { label: 'What Are the Three Levels of Output Control?', anchor: 'three-levels' },
+        { label: 'How Do You Control Output Format via Prompt Engineering?', anchor: 'prompt-engineering' },
+        { label: 'What Does a Good Structured Output Prompt Look Like?', anchor: 'good-prompt' },
+        { label: 'Which Output Format Rules Apply to Each Model?', anchor: 'model-rules' },
+        { label: 'Which Sampling Parameters Control Output Generation?', anchor: 'sampling-parameters' },
+        { label: 'What\'s the Trade-off Between Reasoning and Format?', anchor: 'reasoning-tradeoff' },
+        { label: 'How Do the Top Models Compare on Output Format Control?', anchor: 'model-comparison' },
+        { label: 'How Do Stop Sequences and Negative Constraints Differ?', anchor: 'stop-sequences' },
+        { label: 'Which Output Format Should You Use for Production?', anchor: 'production-format' },
+        { label: 'What Are the Global and Regional Considerations?', anchor: 'global-regional' },
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'How to Control AI Output Format (Step by Step)', anchor: 'how-to' },
+        { label: 'Common Mistakes', anchor: 'common-mistakes' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -114,13 +131,13 @@ export const article: Record<Language, PEArticle> = {
         },
 
         badPrompt: {
-          content: ['**[Bad Prompt]**'],
+          content: ['**Bad Prompt — unstructured, no format specification:**'],
           blockquote: 'Analyse this customer review and tell me the sentiment, key issues, and urgency.',
         },
 
         goodPrompt: {
           title: 'What Does a Good Structured Output Prompt Look Like (Claude Opus 4.7)?',
-          content: ['**[Good Prompt — Claude Opus 4.7]**'],
+          content: ['**Good Prompt — Claude Opus 4.7**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
         },
 
@@ -128,6 +145,12 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'The XML-structured prompt anchors the output format contract while preserving free reasoning inside the `<task>` block. No constrained decoding required — Claude Opus 4.7 complies in over 93% of production calls with this structure.',
           ],
+        },
+
+        goodPromptGPT: {
+          title: 'What Does a Good Structured Output Prompt Look Like (GPT-5.5)?',
+          content: ['**Good Prompt — GPT-5.5**'],
+          blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
 
         modelRules: {
@@ -180,7 +203,7 @@ export const article: Record<Language, PEArticle> = {
         promptquorumTest: {
           title: 'How Do the Top Models Compare on Output Format Control?',
           content: [
-            'Tested in PromptQuorum — 30 output control prompts dispatched across three models: Claude Opus 4.7 achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-5.5 achieved 89% compliance using numbered format rules. Gemini 3.1 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
+            'Tested in [PromptQuorum](https://www.promptquorum.com/) — 30 output control prompts dispatched across three models: Claude Opus 4.7 achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-5.5 achieved 89% compliance using numbered format rules. Gemini 3.1 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
           ],
         },
 
@@ -238,10 +261,41 @@ export const article: Record<Language, PEArticle> = {
             'Before structured output existed, models scored below 40% on complex JSON schema compliance; OpenAI\'s `strict: true` constrained decoding achieves 100%',
             'Constrained decoding reduces reasoning accuracy by 2.26 percentage points on BFCL benchmarks — use the two-stage approach (free-form reasoning → specialist structuring model) for complex tasks',
             'Do not combine high Temperature and high Top-P simultaneously — they compound to produce output more erratic than either parameter alone',
-            '`frequency_penalty` — [-2.0, 2.0] reduces proportional-to-frequency repetition; `presence_penalty` — [-2.0, 2.0] applies a flat penalty on any previously seen token — both set to 0.3–0.5 for focused factual output',
+            '`frequency_penalty`: range -2.0 to 2.0 reduces proportional-to-frequency repetition; `presence_penalty`: range -2.0 to 2.0 applies a flat penalty on any previously seen token — both set to 0.3–0.5 for focused factual output',
             'Stop sequences are the only deterministic output termination mechanism — unlike negative constraints in the prompt body, they cannot be overridden by the model',
-            'For Temperature: T — [0.0, 0.3] for deterministic factual tasks; T — [0.7, 1.0] for creative tasks; T > 1.2 risks incoherence in production use',
+            'Temperature ranges: T = 0.0–0.3 for deterministic factual tasks; T = 0.7–1.0 for creative tasks; T > 1.2 risks incoherence in production use',
             'Claude Opus 4.7 achieves 93% JSON compliance with XML-tagged format prompts; GPT-5.5 achieves 89% with numbered format rules — both without constrained decoding',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Common Mistakes With Output Control',
+          mistakes: [
+            {
+              mistake: 'Setting both Temperature and Top-P to high values',
+              problem: 'They compound — T=1.5 + Top-P=0.95 produces more erratic output than either alone.',
+              fix: 'Use one or the other as your primary randomness control, not both.'
+            },
+            {
+              mistake: 'Forcing JSON on complex reasoning tasks',
+              problem: 'Constrained decoding drops accuracy 2–10%. The model sacrifices reasoning quality to maintain schema compliance.',
+              fix: 'Use the two-stage approach instead: free-form reasoning first, then structured extraction.'
+            },
+            {
+              mistake: 'Writing "return JSON" without showing the exact schema',
+              problem: 'The model guesses field names, types, and nesting — producing invalid or malformed JSON.',
+              fix: 'Always provide the complete schema with field types and enum values.'
+            },
+            {
+              mistake: 'Relying on prompt-body negative constraints for critical formatting',
+              problem: '"Do not include markdown" can be ignored by the model, especially under high Temperature.',
+              fix: 'Use stop sequences at the API level — they are the only deterministic termination mechanism.'
+            },
+            {
+              mistake: 'Copy-pasting Temperature settings between models',
+              problem: 'T=0.7 on GPT-5.5 and T=0.7 on Claude produce different probability distributions.',
+              fix: 'Test each parameter setting per model in your production pipeline.'
+            }
           ],
         },
 
@@ -261,7 +315,7 @@ export const article: Record<Language, PEArticle> = {
           numberedItems: [
             '**Always specify your desired output format explicitly in the prompt.** Instead of \'summarize this\', say: \'Summarize as a bulleted list of 5–7 items, each 1–2 sentences. Use active voice. Do not include opinions.\' Be specific about structure: bullets, tables, JSON, markdown, plain text.',
             '**Use JSON schema to enforce structured output when available (OpenAI, Anthropic).** If you\'re extracting data or generating machine-readable content, define the schema: field names, types, required fields, enum constraints. The model will format output to match automatically.',
-            '**Provide an example of the exact output format you want.** Show the model a concrete example: \'Format like this: { \"topic\": \"...\", \"key_points\": [...], \"confidence\": \"high|medium|low\" }.\' Examples are more powerful than descriptions alone.',
+            '**Provide an example of the exact output format you want.** Show the model a concrete example: \'Format like this: { "topic": "...", "key_points": [...], "confidence": "high|medium|low" }.\' Examples are more powerful than descriptions alone.',
             '**Use constraint-based language: \'You must X, you must not Y, always Z.\'** Avoid soft language (\'try to\', \'aim to\'). Say: \'Return exactly 3 steps, no more, no fewer. Do not use technical jargon. Always include a warning if the recommendation has limitations.\'',
             '**Test your output format specification on one example before running it at scale.** Generate one output, check if it matches your spec, adjust the prompt if needed. This prevents discovering formatting problems after processing 100 items.',
           ],
