@@ -211,11 +211,41 @@ export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Plat
     },
     whyTestPrompts: {
       title: 'Warum Prompts testen?',
-      content: '**Diese Anleitung konzentriert sich auf Test- und Evaluierungstools.** Eine umfassende Übersicht finden Sie unter [Beste Prompt-Engineering-Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de). Für Team-Kollaborationsfunktionen siehe [Beste Prompt-Optimierungs-Tools für Teams](/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=de).\n\n**Prompt-Änderungen brechen Production.** Eine einzelne Umformulierung kann die Genauigkeit um 5–10 % senken, Edgecases verpassen oder den Ton ändern. Seitdem April 2026 testen die meisten Unternehmen Prompts überhaupt nicht, sondern verschiffen Änderungen ad-hoc. Testing fängt Regressionen, bevor sie Nutzer erreichen. Es gibt zwei Workflows: schnelle Unit-Tests in [CI/CD](/prompt-engineering/ci-cd-for-prompts?lang=de) (Sekunden, automatisiert) und langsame Batch-Evaluierungen offline (Minuten bis Stunden, menschliche Prüfung). Ohne Testing können Sie nicht sicher iterieren.'
+      content: '**Diese Anleitung konzentriert sich auf Test- und Evaluierungstools.** Eine umfassende Übersicht finden Sie unter [Beste Prompt-Engineering-Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de). Für Team-Kollaborationsfunktionen siehe [Beste Prompt-Optimierungs-Tools für Teams](/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=de).\n\n**Prompt-Änderungen brechen Production.** Eine einzelne Umformulierung kann die Genauigkeit um 5–10 % senken, Edgecases verpassen oder den Ton ändern. Seitdem April 2026 testen die meisten Unternehmen Prompts überhaupt nicht, sondern verschiffen Änderungen ad-hoc. Testing fängt Regressionen, bevor sie Nutzer erreichen. Es gibt zwei Workflows: schnelle Unit-Tests in [CI/CD](/prompt-engineering/ci-cd-for-prompts?lang=de) (Sekunden, automatisiert) und langsame Batch-Evaluierungen offline (Minuten bis Stunden, menschliche Prüfung). Ohne Testing können Sie nicht sicher iterieren.',
+      snippets: [
+        {
+          type: 'in-one-sentence',
+          text: 'Prompt-Testing ist automatisierte Überprüfung, dass LLM-Ausgaben einen Qualitätsschwellenwert erfüllen, bevor sie zur Produktion gehen.'
+        },
+        {
+          type: 'in-plain-terms',
+          text: 'Stellen Sie sich Prompt-Testing wie Unit-Tests für Ihre Prompts vor: Sie definieren, was „richtig" aussieht, dann führen Sie jeden Commit durch diese Schwelle.'
+        }
+      ],
+      callouts: [
+        {
+          type: 'Warning',
+          label: 'Testing nicht auslassen',
+          text: 'Ohne Prompt-Tests entdecken Teams Regressionen von Nutzern, nicht von CI. Schon 5 Test-Cases pro Prompt fangen 80% der häufigen Regressionen.'
+        }
+      ]
     },
     promptfoo: {
       title: 'Promptfoo: Schnelles CI/CD-Testing',
       content: '**Promptfoo ist Open-Source, CLI-first und für CI/CD-Pipelines optimiert.** Es läuft in Sekunden, fängt Regressionen bei jedem Commit und lässt den Build fehlschlagen, wenn Scores fallen. Schreiben Sie eine YAML-Konfiguration mit Prompts und Test-Cases, führen Sie promptfoo eval aus und erhalten einen Score. Promptfoo unterstützt String-Ähnlichkeit, Regex, [LLM-as-Judge](/prompt-engineering/llm-as-judge-evaluation?lang=de) und benutzerdefinierte Grader.',
+      snippets: [
+        {
+          type: 'in-one-sentence',
+          text: 'Promptfoo ist ein kostenloses, quelloffenes CLI-Tool, das Prompt-Regressionstests in CI/CD-Pipelines in Sekunden durchführt.'
+        }
+      ],
+      callouts: [
+        {
+          type: 'Pro Tip',
+          label: 'Schneller Start',
+          text: 'Promptfoo ist der schnellste Weg zu CI/CD-Prompt-Testing: eine YAML-Datei, ein CLI-Befehl. Integration in eine bestehende GitHub-Actions-Pipeline dauert ~15 Minuten.'
+        }
+      ],
       numberedItems: [
         'Nutzen Sie Promptfoo, wenn Sie häufig verschiffen (täglich/wöchentlich)',
         'Beste Option für kleine Test-Sets (100–500 Cases)',
@@ -225,6 +255,13 @@ export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Plat
     braintrust: {
       title: 'Braintrust: Langsame Batch-Evaluierungen',
       content: '**Nutzen Sie Braintrust, wenn Sie menschliche Prüfung und Baseline-Tracking vor Production benötigen.** Es läuft langsamer (5–30 Minuten für 1.000 Test-Cases, 4+ Stunden mit vollständiger menschlicher Prüfung), unterstützt aber umfassende Evaluierung: protokolliert jeden LLM-Aufruf, ermöglicht Side-by-Side-Vergleich und verfolgt Baseline-Regressionen. Integration mit LangChain, LLamaIndex und benutzerdefiniertem Code.',
+      callouts: [
+        {
+          type: 'Key Point',
+          label: 'Mensch vs. LLM Bewertung',
+          text: 'LLM-as-Judge ist 3–5× schneller, aber erhöht die Scores 10–20% im Vergleich zur menschlichen Bewertung. Nutzen Sie menschliche Prüfer zur Grundlagen-Kalibrierung, LLM-Prüfer für Skalierung.'
+        }
+      ],
       numberedItems: [
         'Nutzen Sie Braintrust für finale Freigabe vor Release',
         'Beste Option für große Test-Sets (1.000+) und menschliche Prüfung',
@@ -234,6 +271,13 @@ export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Plat
     deepeval: {
       title: 'DeepEval: RAGAS für RAG-Pipelines',
       content: '**Nutzen Sie DeepEval, wenn Sie [RAG-Pipelines](/local-llms/rag-retrieval-augmented-generation?lang=de) bauen und separate Scores für Abruf- und Erzeugungsqualität benötigen.** DeepEval ist eine Python-Bibliothek, die RAG-Qualität mit RAGAS-Metriken misst und Erfolg in drei Dimensionen aufschlüsselt: Abrufsqualität, Kontextrelevanz und Antwortgenauigkeit. Läuft als Python-Code oder über Web-Dashboard.',
+      callouts: [
+        {
+          type: 'Did You Know?',
+          label: 'RAGAS-Ursprung',
+          text: 'RAGAS (Retrieval-Augmented Generation Assessment) wurde als referenzfreies Evaluierungs-Framework entwickelt – es kann RAG-Ausgabenqualität ohne menschlich gekennzeichnete Gold-Standards bewerten.'
+        }
+      ],
       numberedItems: [
         'Nutzen Sie DeepEval, wenn Sie RAG-Architekturen verwenden',
         'Misst Abruf + Synthese separat',
@@ -243,6 +287,13 @@ export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Plat
     langsmith: {
       title: 'LangSmith: Tracing für mehrstufige Chains',
       content: '**Nutzen Sie LangSmith, wenn Sie mehrstufige Chains debuggen und Fehlerquellen finden müssen.** LangSmith verfolgt jeden LLM-Aufruf, misst Latenz und Kosten und lässt Sie in jeden Schritt hineinbohren, um Engpässe zu identifizieren. Wenn Promptfoo eine Regression kennzeichnet, zeigt LangSmith genau, wo in Ihrer Chain (Abruf → Synthese → Ranking) der Fehler auftrat. Native Integration mit [LangChain](/local-llms/langchain-tutorial?lang=de).',
+      callouts: [
+        {
+          type: 'Warning',
+          label: 'Datenschutz',
+          text: 'LangSmith sendet Traces zu Arize-AI-Cloud-Servern. Wenn Ihre Prompts PII oder proprietäre Daten enthalten, überprüfen Sie LangSmith-Datenschutzoptionen oder nutzen Sie deren selbst gehostete Enterprise-Version.'
+        }
+      ],
       numberedItems: [
         'Nutzen Sie LangSmith zum Debuggen mehrstufiger Chains',
         'Essentiell, wenn Sie LangChain verwenden',
@@ -252,6 +303,13 @@ export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Plat
     phoenix: {
       title: 'Phoenix: Observability für LLM-Apps',
       content: '**Nutzen Sie Phoenix, wenn Sie Production-Observability benötigen: Überwachung der Prompt-Performance in Echtzeit.** Phoenix (von Arize AI) protokolliert Prompts, Antworten, Embeddings und Latenz. Open-Source und selbst-gehostet. Empfohlenes Komplement zu Promptfoo (Testing) und Braintrust (Evaluierungen).',
+      callouts: [
+        {
+          type: 'Pro Tip',
+          label: 'Selbst-Hosting zuerst',
+          text: 'Phoenix ist vollständig Open-Source und selbst-gehostet. Führen Sie es lokal mit `docker run -p 6006:6006 arizephoenix/phoenix` aus – keine Anmeldung, keine Daten verlassen Ihre Infrastruktur.'
+        }
+      ],
       numberedItems: [
         'Nutzen Sie Phoenix für Production-Observability',
         'Open-Source und kostenlos (Apache 2.0)',
@@ -322,11 +380,25 @@ export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Plat
           'Menschliche Prüfung': '✓ Side-by-Side',
           'Preis': 'Kostenlos + Credits'
         }
+      ],
+      callouts: [
+        {
+          type: 'Best Practice',
+          label: 'Stack, kein einzelnes Tool',
+          text: 'Kein einzelnes Tool deckt alle Testing-Szenarien ab. Der produktionsreife Stack ist: Promptfoo (CI/CD) + Braintrust (Freigabe) + LangSmith (Debugging) + Phoenix (Monitoring).'
+        }
       ]
     },
     howToChoose: {
       id: 'how-to-choose',
       title: 'Wie Sie Ihren Testing-Stack wählen',
+      callouts: [
+        {
+          type: 'Key Point',
+          label: 'Schrittweise starten',
+          text: 'Ergänzen Sie Tools nacheinander. Promptfoo allein deckt 80% der Testing-Anforderungen ab. Ergänzen Sie das nächste Tool nur, wenn Sie eine konkrete Lücke haben, die Promptfoo nicht füllen kann.'
+        }
+      ],
       numberedItems: [
         'Jeder: Starten Sie mit Promptfoo (kostenlos) in Ihrer CI/CD-Pipeline. Führen Sie Tests bei jedem Commit aus. Das ist unverzichtbar.',
         'Versand in Production: Ergänzen Sie Braintrust für finale Batch-Evaluierung mit menschlicher Freigabe vor Release.',
@@ -339,6 +411,13 @@ export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Plat
     commonMistakes: {
       id: 'common-mistakes',
       title: 'Warum Prompt-Tests fehlschlagen',
+      callouts: [
+        {
+          type: 'Warning',
+          label: 'Selbstbewertung-Bias',
+          text: 'Verwenden Sie nie das gleiche Modell zur Bewertung seiner eigenen Ausgabe. Selbstbewertung bläht Scores 10–20 % auf. Nutzen Sie ein anderes Modell als Prüfer, oder verwenden Sie menschliche Prüfung für Ground Truth Kalibrierung.'
+        }
+      ],
       mistakes: [
         {
           mistake: 'Testen nur des Happy Path',
