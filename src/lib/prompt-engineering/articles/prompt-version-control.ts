@@ -5,7 +5,7 @@ export const article: Record<Language, PEArticle> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
-    title: 'Prompt Version Control: Tracking, Rollback & Team Workflows',
+    title: 'Prompt Version Control: Tracking, Rollback & Team Workflows (2026)',
     intro: '**Prompt version control tracks every change to an AI prompt using semantic versioning (MAJOR.MINOR.PATCH) and git workflows.** It enables instant rollback, team collaboration, and regression detection — the same discipline applied to code, applied to prompts. This guide covers semantic versioning schemes, git branch workflows, changelog format, rollback strategies, and automated testing patterns for production prompt systems.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
@@ -14,29 +14,28 @@ export const article: Record<Language, PEArticle> = {
     audience: 'Developers managing LLM prompts in production, prompt engineers, engineering team leads',
     primaryTerm: 'Prompt Version Control',
     toc: [
-      { label: 'Key Takeaways', anchor: 'tldr' },
-      { label: 'Why Prompt Version Control Prevents Silent Regressions', anchor: 'why-version-control' },
-      { label: 'How Semantic Versioning Works for AI Prompts', anchor: 'semantic-versioning' },
-      { label: 'How to Set Up a Git Workflow for Prompt Changes', anchor: 'git-workflow' },
-      { label: 'What Every Prompt Changelog Entry Must Include', anchor: 'changelog' },
-      { label: 'When and How to Roll Back a Prompt to a Previous Version', anchor: 'rollback' },
-      { label: 'How Teams Collaborate on Prompt Changes Without Conflicts', anchor: 'team-collaboration' },
-      { label: 'What Automated Tests Catch Before a Prompt Change Ships', anchor: 'automated-testing' },
+      { label: 'Silent Regressions and Why Version Control Prevents Them', anchor: 'why-version-control' },
+      { label: 'Semantic Versioning for AI Prompts', anchor: 'semantic-versioning' },
+      { label: 'Git Workflow for Prompt Changes', anchor: 'git-workflow' },
+      { label: 'Required Changelog Fields', anchor: 'changelog' },
+      { label: 'Rollback Strategies', anchor: 'rollback' },
+      { label: 'Team Collaboration and Ownership', anchor: 'team-collaboration' },
+      { label: 'Automated Testing Before Merge', anchor: 'automated-testing' },
       { label: 'Common Mistakes in Prompt Version Control', anchor: 'mistakes' },
       { label: 'Compliance and Audit Requirements for Prompt Changes', anchor: 'regional-considerations' },
       { label: 'FAQ', anchor: 'faq' },
       { label: 'Related Reading', anchor: 'related-reading' },
       { label: 'Sources', anchor: 'sources' },
     ],
-    seoTitle: 'Prompt Version Control: Git Workflows & Rollback',
-    metaDescription: 'Unversioned prompts fail silently — no history means no rollback. Apply MAJOR.MINOR.PATCH versioning, git branch workflows, and automated regression tests to every prompt change.',
-    ogDescription: 'Prompt version control: tracking changes with semantic versioning (MAJOR.MINOR.PATCH), git workflows for teams, rollback strategies, and automated regression testing. Complete guide.',
-    twitterDescription: 'Unversioned prompts = silent failures. Version control prompts with MAJOR.MINOR.PATCH, git branches, changelogs, and automated tests. Team workflows included.',
+    seoTitle: 'Prompt Version Control: Semantic Versioning, Git & Rollback (2026)',
+    metaDescription: 'Learn prompt version control with MAJOR.MINOR.PATCH, git workflows, changelogs, rollback strategies, and automated regression testing. Full production workflow.',
+    ogDescription: 'Version control prompts like code: semantic versioning, git branching, 5-field changelogs, instant rollback, and CI/CD test gates. Compare versions with PromptQuorum.',
+    twitterDescription: 'Prompts are code — version them like code. MAJOR.MINOR.PATCH, git workflows, changelogs, rollback in seconds, and automated regression tests.',
     readTime: '10 min read',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Prompt Version Control: Tracking, Rollback & Team Workflows',
+      headline: 'Prompt Version Control: Tracking, Rollback & Team Workflows (2026)',
       description: 'Unversioned prompts fail silently — no history means no rollback. Apply MAJOR.MINOR.PATCH versioning, git branch workflows, and automated regression tests to every prompt change.',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
@@ -134,7 +133,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'ListItem', position: 3, name: 'Environment Variable', description: 'Instant (seconds), medium risk, simple to implement. Best for hotfixes.' },
       ],
     },
-    leadAnswerBlock: '**Prompt version control tracks every change to an AI prompt using semantic versioning (MAJOR.MINOR.PATCH) and git workflows. It enables instant rollback, team collaboration, and regression detection — the same discipline applied to code, applied to prompts.**',
     quickFacts: [
       'Semantic versioning for prompts: MAJOR bumps on breaking output format changes, MINOR on quality improvements, PATCH on typo/clarification fixes',
       'A git revert on a prompt takes seconds; re-testing without version history takes hours',
@@ -162,9 +160,9 @@ export const article: Record<Language, PEArticle> = {
 
       whyVersionControl: {
         id: 'why-version-control',
-        title: 'Why Prompt Version Control Prevents Silent Regressions',
+        title: 'Silent Regressions and Why Version Control Prevents Them',
         content: [
-          '**Unversioned prompts fail silently — when output quality degrades, there\'s no history to show what changed or when.** In software, a runtime error throws an exception. In prompts, output quality degrades gradually: reasoning becomes less coherent, hallucinations increase, format compliance breaks. Without version history, the regression is undetectable until it reaches production and damages user experience.',
+          '**Unversioned prompts fail silently — when output quality degrades, there\'s no history to show what changed or when.** In software, a runtime error throws an exception. In prompts, output quality degrades gradually: reasoning becomes less coherent, hallucinations increase, format compliance breaks. Without version history, the regression is undetectable until it reaches production and damages user experience. See [how to detect and prevent AI hallucinations](/prompt-engineering/ai-hallucinations-how-to-stop) for detection strategies.',
           'Three failure modes occur without version control: (1) **Silent quality drop** — a synonym change that seemed harmless actually harms reasoning. No error log. No alert. Quality metrics slowly degrade and no one realizes a prompt change caused it. (2) **Format break** — output changes from JSON to markdown and downstream parsers fail silently. (3) **Collaboration conflicts** — two engineers edit the same prompt simultaneously, one overwrites the other\'s changes without noticing.',
           'Version control solves all three by recording every change, enabling instant rollback, and enforcing review gates. When regression occurs, you can diff the prompt against the previous version in seconds and identify the exact change that broke it.'
         ],
@@ -180,7 +178,7 @@ export const article: Record<Language, PEArticle> = {
 
       semanticVersioning: {
         id: 'semantic-versioning',
-        title: 'How Semantic Versioning Works for AI Prompts',
+        title: 'Semantic Versioning for AI Prompts',
         content: [
           '**Prompt semantic versioning uses MAJOR.MINOR.PATCH — a breaking output format change bumps MAJOR, a quality improvement bumps MINOR, and a typo fix bumps PATCH.** The scheme is identical to semantic versioning for code, but applied to prompt text instead of software versions.',
           'The versioning rule is simple: if a downstream system (a parser, an API, or a user expecting a specific format) would break, bump MAJOR. If output improves but remains compatible, bump MINOR. If the change is transparent to users (fixing a typo, clarifying intent), bump PATCH.',
@@ -193,7 +191,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         tableFormat: true,
         callouts: [
-          { type: 'Key Point', label: 'MAJOR Triggers', text: 'Bump MAJOR if downstream systems parsing output would break: format change (markdown → JSON), structure change (single string → array), or semantic change (instruction meaning changes).' },
+          { type: 'Key Point', label: 'MAJOR Triggers', text: 'Bump MAJOR if downstream systems parsing output would break: format change (markdown → JSON), structure change (single string → array), or semantic change (instruction meaning changes). For enforcing schema compliance, see [structured output and JSON mode](/prompt-engineering/structured-output-json-mode).' },
           { type: 'Pro Tip', label: 'Tag Releases in Git', text: 'After merging a prompt change, tag the version: git tag v2.1.0 -m "Improved date reasoning via few-shot examples". Reference the tag in changelogs and deployment docs.' },
         ],
         snippets: [
@@ -203,7 +201,7 @@ export const article: Record<Language, PEArticle> = {
 
       gitWorkflow: {
         id: 'git-workflow',
-        title: 'How to Set Up a Git Workflow for Prompt Changes',
+        title: 'Git Workflow for Prompt Changes',
         content: [
           '**A complete git workflow for prompts follows the same 5 steps as code: feature branch → edit & test → PR → review → merge → tag release.** The workflow prevents silent regressions, enables collaboration, and documents every change.',
         ],
@@ -211,7 +209,7 @@ export const article: Record<Language, PEArticle> = {
           'Create a feature branch: `git checkout -b feature/add-json-output` or `fix/date-hallucination`. Use descriptive names.',
           'Edit the prompt file. Update the version number in a header comment: v1.0.0 → v2.0.0 (if MAJOR change). Add test cases to /prompts/tests/.',
           'Run automated regression tests: `npm run test:prompts`. Must pass format validation, golden set comparison, and hallucination checks. ≥10 test cases required.',
-          'Open a pull request. Reviewers verify: clarity (is intent unambiguous?), hallucination risk (any factual claims without sources?), format compliance (does output match schema?), security (injection vectors?).',
+          'Open a pull request. Reviewers verify: clarity (is intent unambiguous?), hallucination risk (any factual claims without sources?), format compliance (does output match schema?), security (injection vectors?). Use the [7-point prompt review checklist](/prompt-engineering/prompt-review-workflow-for-teams) for standardized criteria.',
           'After approval from 2+ reviewers, merge to main. Tag the release: `git tag v2.0.0 -m "Improved date handling via few-shot examples"`. Deploy automatically via CI/CD.',
         ],
         codeBlock: `name: Prompt Regression Tests
@@ -237,7 +235,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
-        title: 'What Every Prompt Changelog Entry Must Include',
+        title: 'Required Changelog Fields',
         content: [
           '**A prompt changelog records every version change, when it happened, who made it, and why.** A changelog entry requires 5 fields: version number, release date, author, change type (MAJOR/MINOR/PATCH), and a summary of the expected output delta.',
         ],
@@ -274,7 +272,7 @@ jobs:
 
       rollback: {
         id: 'rollback',
-        title: 'When and How to Roll Back a Prompt to a Previous Version',
+        title: 'Rollback Strategies',
         content: [
           '**Git revert is the default rollback method — it takes seconds and has zero risk.** Know the 3 triggers for rollback: production quality drop (hallucination rate spikes), security issue discovered, or model compatibility break (new model doesn\'t work with this prompt).',
         ],
@@ -302,13 +300,13 @@ jobs:
 
       teamCollaboration: {
         id: 'team-collaboration',
-        title: 'How Teams Collaborate on Prompt Changes Without Conflicts',
+        title: 'Team Collaboration and Ownership',
         content: [
           '**A prompt ownership model prevents merge conflicts and enforces clear responsibility.** Assign one prompt owner per feature area; all changes go through that owner\'s review. For large teams, separate repos prevent concurrent editing of the same prompt.',
         ],
         items: [
           'Monorepo (recommended for <50 prompts): Single git repo, one /prompts/ directory. Each prompt owner has veto power over changes to their prompts. Enables tight coupling with code.',
-          'Separate prompt repo (recommended for 50+ prompts): Dedicated repo for all prompts. Multiple teams manage different prompt sets independently. Release cycles decouple from application code.',
+          'Separate prompt repo (recommended for 50+ prompts): Dedicated repo for all prompts. Multiple teams manage different prompt sets independently. Release cycles decouple from application code. For the full ownership model, see [prompt engineering setup for small teams](/prompt-engineering/prompt-engineering-setup-small-teams).',
           'Ownership rules: One engineer per prompt (primary owner). Secondary reviewer role (cross-check). No merge to main without primary owner approval. Changes to another engineer\'s prompt require explicit permission.',
           'Conflict prevention: different engineers own different prompts. If two engineers need to change the same prompt, coordinate offline first or assign single owner.',
         ],
@@ -320,13 +318,13 @@ jobs:
 
       automatedTesting: {
         id: 'automated-testing',
-        title: 'What Automated Tests Catch Before a Prompt Change Ships',
+        title: 'Automated Testing Before Merge',
         content: [
           '**Automated tests validate format, quality, and latency before a prompt PR is reviewed by humans.** Four test types catch different failure classes: format validation (JSON compliance), golden set comparison (output match), hallucination flags (factual claims), and latency checks (speed regression).',
         ],
         items: [
           'Format validation: parse output as JSON, validate schema, ensure all required fields present. Catches breaking format changes (MAJOR version bumps). Runs in <1 second.',
-          'Golden set comparison: run prompt against 10-20 representative test inputs. Compare output against known-good answers. Catches quality regressions (reasoning degradation, accuracy drop). Runs in 5-10 seconds.',
+          'Golden set comparison: run prompt against 10-20 representative test inputs. Compare output against known-good answers. Catches quality regressions (reasoning degradation, accuracy drop). See [prompt evaluation metrics](/prompt-engineering/prompt-evaluation-metrics) for scoring methods beyond binary pass/fail. Runs in 5-10 seconds.',
           'Hallucination detection: flag any factual claims (dates, numbers, product names) without providing source material. Catches unintended hallucination risks. Runs in <1 second.',
           'Latency check: measure prompt response time. Alert if latency spikes >10% above baseline. Catches performance regressions from added reasoning steps. Runs in real-time.',
         ],
@@ -433,6 +431,7 @@ jobs:
       sources: {
         title: 'Sources',
         items: [
+          '[NIST AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Federal governance framework covering AI system traceability and change management',
           '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — official Git documentation for reverting commits',
           '[Semantic Versioning Specification](https://semver.org/) — official MAJOR.MINOR.PATCH specification',
           '[Braintrust: Prompt Versioning and A/B Testing](https://www.braintrust.dev/) — specialized tool for prompt management and testing',
@@ -445,20 +444,20 @@ jobs:
   de: {
     freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
-    title: 'Prompt-Versionskontrolle: Nachverfolgung, Rollback & Team-Workflows',
+    title: 'Prompt-Versionskontrolle: Semantic Versioning, Git & Rollback (2026)',
     intro: 'Prompt-Versionskontrolle verfolgt jede Änderung an einem KI-Prompt unter Verwendung von semantischer Versionierung (MAJOR.MINOR.PATCH) und Git-Workflows. Sie ermöglicht sofortiges Rollback, Team-Zusammenarbeit und Regressionserkennung — die gleiche Disziplin, die auf Code angewendet wird, auf Prompts angewendet.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die KI-Prompts in der Produktion verwalten, Prompt Engineers, Team Leads',
-    seoTitle: 'Prompt-Versionskontrolle: Git-Workflows & Rollback',
-    metaDescription: 'Ungeprüfte Prompts scheitern 3-mal öfter. Prompt-Versionskontrolle mit MAJOR.MINOR.PATCH, Git-Workflows und automatisierten Regressionstests für jede Änderung.',
+    seoTitle: 'Prompt-Versionskontrolle: Semantic Versioning, Git & Rollback (2026)',
+    metaDescription: 'Prompt-Versionskontrolle mit MAJOR.MINOR.PATCH, Git-Workflows, Changelogs, Rollback-Strategien und automatisierten Regressionstests. Vollständiger Produktions-Workflow.',
     readTime: '10 Min. Lesezeit',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Prompt-Versionskontrolle: Nachverfolgung, Rollback & Team-Workflows',
-      description: 'Ungeprüfte Prompts scheitern 3-mal öfter. Prompt-Versionskontrolle mit MAJOR.MINOR.PATCH, Git-Workflows und automatisierten Regressionstests für jede Änderung.',
+      headline: 'Prompt-Versionskontrolle: Semantic Versioning, Git & Rollback (2026)',
+      description: 'Prompt-Versionskontrolle mit MAJOR.MINOR.PATCH, Git-Workflows, Changelogs, Rollback-Strategien und automatisierten Regressionstests. Vollständiger Produktions-Workflow.',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
       inLanguage: 'de',
@@ -473,20 +472,20 @@ jobs:
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
-    title: 'Contrôle de version des Prompts : Suivi, Restauration & Workflows Collectifs',
+    title: 'Versionner ses Prompts : Versioning Sémantique, Git & Rollback (2026)',
     intro: 'Le contrôle de version des prompts suit chaque modification d\'un prompt IA en utilisant le versioning sémantique (MAJOR.MINOR.PATCH) et les workflows Git. Il permet une restauration instantanée, la collaboration d\'équipe et la détection de régressions — la même discipline appliquée au code, appliquée aux prompts.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
     audience: 'Développeurs gérant les prompts LLM en production, ingénieurs en prompte, chefs d\'équipe technique',
-    seoTitle: 'Contrôle de version des Prompts : Workflows Git & Restauration',
-    metaDescription: 'Les prompts non vérifiés échouent 3× plus souvent. Contrôlez la version des prompts avec MAJOR.MINOR.PATCH, workflows Git et tests de régression automatisés.',
+    seoTitle: 'Versionner ses Prompts : Versioning Sémantique, Git & Rollback (2026)',
+    metaDescription: 'Versioning de prompts avec MAJOR.MINOR.PATCH, workflows Git, changelogs, stratégies de rollback et tests de régression automatisés. Workflow production complet.',
     readTime: '10 min de lecture',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Contrôle de version des Prompts : Suivi, Restauration & Workflows Collectifs',
-      description: 'Les prompts non vérifiés échouent 3× plus souvent. Contrôlez la version des prompts avec MAJOR.MINOR.PATCH, workflows Git et tests de régression automatisés.',
+      headline: 'Versionner ses Prompts : Versioning Sémantique, Git & Rollback (2026)',
+      description: 'Versioning de prompts avec MAJOR.MINOR.PATCH, workflows Git, changelogs, stratégies de rollback et tests de régression automatisés. Workflow production complet.',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
       inLanguage: 'fr',
@@ -501,20 +500,20 @@ jobs:
   ja: {
     freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
-    title: 'プロンプトバージョン管理：追跡、ロールバック & チームワークフロー',
+    title: 'プロンプトのバージョン管理：セマンティックバージョニング・Git・ロールバック（2026年）',
     intro: 'プロンプトバージョン管理は、セマンティックバージョニング（MAJOR.MINOR.PATCH）とGitワークフローを使用してAIプロンプトのすべての変更を追跡します。これにより、即座のロールバック、チーム協業、回帰検出が可能になります。',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
     audience: '本番環境でLLMプロンプトを管理する開発者、プロンプトエンジニア、チームリード',
-    seoTitle: 'プロンプトバージョン管理：Gitワークフロー & ロールバック',
-    metaDescription: 'レビュー未済のプロンプトは3倍以上失敗します。MAJOR.MINOR.PATCH、Gitワークフロー、自動回帰テストでプロンプト管理。',
+    seoTitle: 'プロンプトのバージョン管理：セマンティックバージョニング・Git・ロールバック（2026年）',
+    metaDescription: 'MAJOR.MINOR.PATCHによるプロンプトバージョン管理、Gitワークフロー、変更ログ、ロールバック戦略、自動回帰テスト。本番運用の完全ガイド。',
     readTime: '10分で読める',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'プロンプトバージョン管理：追跡、ロールバック & チームワークフロー',
-      description: 'レビュー未済のプロンプトは3倍以上失敗します。MAJOR.MINOR.PATCH、Gitワークフロー、自動回帰テストでプロンプト管理。',
+      headline: 'プロンプトのバージョン管理：セマンティックバージョニング・Git・ロールバック（2026年）',
+      description: 'MAJOR.MINOR.PATCHによるプロンプトバージョン管理、Gitワークフロー、変更ログ、ロールバック戦略、自動回帰テスト。本番運用の完全ガイド。',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
       inLanguage: 'ja',
@@ -529,20 +528,20 @@ jobs:
   zh: {
     freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
-    title: 'Prompt 版本控制：追踪、回滚 & 团队工作流',
+    title: 'Prompt版本控制：语义化版本、Git与回滚策略（2026）',
     intro: '使用语义版本控制（MAJOR.MINOR.PATCH）和 Git 工作流追踪 AI Prompt 的每项变更。实现即时回滚、团队协作和回归检测——应用于代码的同一纪律，现在应用于 Prompt。',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
     audience: '在生产环境管理 LLM Prompt 的开发者、Prompt 工程师、技术主管',
-    seoTitle: 'Prompt 版本控制：Git 工作流 & 回滚',
-    metaDescription: '未审查的 Prompt 失败率高 3 倍。使用 MAJOR.MINOR.PATCH、Git 工作流和自动回归测试管理 Prompt。',
+    seoTitle: 'Prompt版本控制：语义化版本、Git与回滚策略（2026）',
+    metaDescription: '用MAJOR.MINOR.PATCH管理Prompt版本：Git工作流、变更日志、回滚策略和自动化回归测试。完整生产环境工作流指南。',
     readTime: '阅读约 10 分钟',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Prompt 版本控制：追踪、回滚 & 团队工作流',
-      description: '未审查的 Prompt 失败率高 3 倍。使用 MAJOR.MINOR.PATCH、Git 工作流和自动回归测试管理 Prompt。',
+      headline: 'Prompt版本控制：语义化版本、Git与回滚策略（2026）',
+      description: '用MAJOR.MINOR.PATCH管理Prompt版本：Git工作流、变更日志、回滚策略和自动化回归测试。完整生产环境工作流指南。',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
       inLanguage: 'zh',
