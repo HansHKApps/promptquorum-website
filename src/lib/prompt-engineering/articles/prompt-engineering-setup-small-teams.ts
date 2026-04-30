@@ -181,6 +181,7 @@ export const article: Record<Language, PEArticle> = {
         tableFormat: true,
         snippets: [
           { type: 'in-one-sentence', text: 'A prompt engineering setup for small teams is the shared storage, version history, test coverage, and ownership model that lets multiple people work on prompts without breaking each other\'s work.' },
+          { type: 'in-plain-terms', text: 'Think of it like a shared Google Doc for code: instead of everyone keeping their own version of a prompt in a personal notes app, the team keeps one authoritative copy in a shared location, tracks who changed what, and tests it before using it in production.' },
         ],
         callouts: [
           { type: 'key-point', label: 'Solo developers', text: 'If you work alone, you only need a prompt library — skip the versioning and governance sections. This guide is for teams of 2+ where coordination becomes the constraint.' },
@@ -265,7 +266,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'How Do Small Teams Choose Which AI Models to Use for Their Prompts?',
         content: [
           '**Start with GPT-4o and Claude 4.6 Sonnet for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
-          'GPT-4o (OpenAI) and Claude 4.6 Sonnet (Anthropic) are the two most widely used frontier models for production prompt engineering as of April 2026. For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-4o mini.',
+          'GPT-4o (OpenAI) and Claude 4.6 Sonnet (Anthropic) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-4o mini.',
         ],
         columns: ['Task type', 'Recommended model', 'Why'],
         rows: [
@@ -342,13 +343,14 @@ export const article: Record<Language, PEArticle> = {
           {
             mistake: 'Adding enterprise-grade tooling to a team of 3',
             problem: 'Overhead exceeds benefit — teams spend more time maintaining the tool stack than building features that use prompts',
-            fix: 'Start with Git + YAML. Add prompt management platforms (Braintrust, PromptHub, Vellum) only when Git\'s limitations become a real constraint — typically at 10+ people or 50+ production prompts.',
+            fix: 'Start with Git + YAML. Add [prompt management platforms](/prompt-engineering/best-prompt-management-platforms) (Braintrust, PromptHub, Vellum) only when Git\'s limitations become a real constraint — typically at 10+ people or 50+ production prompts.',
           },
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
+        content: '**The most common questions from small teams cover the minimum viable setup, Git vs dedicated tooling, model choice, and how to prevent silent regressions when models update.** Each answer includes a concrete threshold or action.',
         faqs: [
           {
             q: 'Do small teams need a dedicated prompt engineer?',
@@ -393,6 +395,7 @@ export const article: Record<Language, PEArticle> = {
           '[How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — running the same prompt against GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to find the best performer per task',
           '[Best Prompt Management Platforms (2026)](/prompt-engineering/best-prompt-management-platforms) — when you outgrow Git: Braintrust, PromptHub, and Vellum compared for growing teams',
           '[GPT-4o vs Claude vs Gemini: Which Model?](/prompt-engineering/gpt-claude-gemini-which-model) — model selection by task type, latency, cost, and context window',
+          '[Best Prompt Engineering IDEs (2026)](/prompt-engineering/best-prompt-engineering-ides) — configuring VS Code and Cursor for YAML prompt file editing with syntax highlighting and team-shared snippets',
         ],
       },
       sources: {
