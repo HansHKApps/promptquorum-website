@@ -1784,19 +1784,357 @@ require_code_owner_reviews: true`,
   },
 
   zh: {
-    theme: 'Use Cases',
-    title: '团队Prompt审查工作流：检查清单与CI/CD门控（2026）',
-    intro: '未经审查的提示词在生产环境中导致3倍以上的故障。结构化的团队工作流可防止幻觉、检测安全漏洞并确保跨模型的一致性。本指南涵盖完整工作流：审查门控、团队组成、质量检查和自动化。',
+    freshness_tier: 'evergreen',
+    theme: '应用案例',
+    title: '团队 Prompt 审查工作流：7 项检查清单 & CI/CD 门控',
+    intro: '**未经审查的 Prompt 在生产环境中导致故障率高 3 倍。** 结构化的团队审查工作流可防止模型幻觉、检测安全漏洞、确保模型间一致性，并满足中国数据合规要求。本指南涵盖完整流程：审查门控设计、团队角色分工、自动化检查、手动审查和部署把控。',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
+    lastFactChecked: '2026-04-30 — GPT-4o、Claude、Braintrust、GitHub Actions、GitLab CI 已验证',
     educationalLevel: 'Intermediate',
-    audience: '使用LLM开发的工程师、提示词工程师、团队负责人',
-    seoTitle: '团队Prompt审查工作流：检查清单与CI/CD门控（2026）',
-    metaDescription: '构建Prompt审查工作流：7项检查清单、3个审查角色和CI/CD门控。70%自动化检查，30%人工审查。',
-    ogDescription: '团队Prompt审查：7项检查清单、自动安全扫描和需要2+审批的CI/CD门控。通过PromptQuorum实现部署前验证。',
-    twitterDescription: '未审查的Prompt故障率高3倍。审查工作流：7项清单、CI/CD门控、70/30自动与人工分配。',
-    readTime: '阅读约8分钟',
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', inLanguage: 'zh', url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams?lang=zh', author: { '@type': 'Organization', name: 'PromptQuorum' } },
-    sections: {},
+    audience: '使用 LLM 开发的工程师、Prompt 工程师、团队负责人',
+    toc: [
+      { label: '核心要点', anchor: 'tldr' },
+      { label: 'Prompt 审查的重要性', anchor: 'why-review' },
+      { label: '5 阶段工作流', anchor: 'workflow-overview' },
+      { label: '7 项检查清单', anchor: 'checklist' },
+      { label: '审查团队角色', anchor: 'team-roles' },
+      { label: '自动化 vs. 手动审查', anchor: 'automated-vs-manual' },
+      { label: 'CI/CD 审查门控', anchor: 'cicd-gates' },
+      { label: '常见错误', anchor: 'mistakes' },
+      { label: '中国企业的合规方案', anchor: 'regional-considerations' },
+      { label: '关联阅读', anchor: 'related-reading' },
+      { label: '常见问题', anchor: 'faq' },
+      { label: '参考资料', anchor: 'sources' },
+    ],
+    seoTitle: '团队 Prompt 审查工作流：7 项清单 & CI/CD 门控',
+    metaDescription: '构建安全的团队 Prompt 审查工作流：7 项检查清单、3 个审查角色、CI/CD 门控。70% 自动化、30% 人工审查。符合数据安全法要求。',
+    ogDescription: '团队 Prompt 审查工作流：7 项检查清单、自动安全扫描、双重审批 CI/CD 门控。符合中国数据合规要求。通过 PromptQuorum 实现。',
+    twitterDescription: '未审查 Prompt 故障率高 3 倍。7 项清单、CI/CD 门控、70/30 自动与人工分配的完整审查工作流。',
+    readTime: '阅读约 8 分钟',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '团队 Prompt 审查工作流：7 项检查清单 & CI/CD 门控',
+      description: '构建安全的团队 Prompt 审查工作流：7 项检查清单、3 个审查角色、CI/CD 门控。70% 自动化、30% 人工审查。符合数据安全法要求。',
+      datePublished: '2026-04-29',
+      dateModified: '2026-04-29',
+      inLanguage: 'zh',
+      proficiencyLevel: 'Intermediate',
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com/about' },
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams?lang=zh',
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=zh', width: 1200, height: 630 },
+      keywords: ['Prompt 审查', '团队工作流', '质量保证', 'CI/CD 门控', 'Prompt 治理', 'LLM 测试', '幻觉防止', '数据安全'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+        { '@type': 'SoftwareApplication', name: 'GitHub' },
+        { '@type': 'SoftwareApplication', name: 'GitLab' },
+      ],
+      about: [
+        { '@type': 'Thing', name: 'Prompt 审查工作流', description: '部署前验证、测试和批准 AI Prompt 的结构化团队流程，确保合规性和安全性' },
+        { '@type': 'Thing', name: 'Prompt 质量检查清单', description: '评估 Prompt 清晰性、上下文完整性、输出格式和幻觉风险的标准化检查标准' },
+        { '@type': 'Thing', name: 'Prompt 审查门控', description: 'CI/CD 管道中的自动检查和批准要求，在合并 Prompt 变更前强制执行质量标准' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways']
+      }
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '实现 Prompt 审查工作流的方法',
+      inLanguage: 'zh',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: '使用检查清单定义审查通过的标准和评估要点' },
+        { '@type': 'HowToStep', position: 2, name: '设置自动检查以验证安全性、幻觉风险和格式合规性' },
+        { '@type': 'HowToStep', position: 3, name: '分配审查角色：领域专家、安全负责人、质量保证工程师' },
+        { '@type': 'HowToStep', position: 4, name: '将审查门控集成到 CI/CD 中，防止未批准的 Prompt 部署' },
+        { '@type': 'HowToStep', position: 5, name: '在版本控制中记录所有决策，保持完整审计跟踪' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Prompt 审查检查清单应包含哪些内容？',
+          acceptedAnswer: { '@type': 'Answer', text: 'Prompt 审查检查清单必须涵盖：（1）清晰性 — 指令是否明确无歧义？（2）上下文 — 是否提供足够的信息让模型正确推理？（3）输出格式 — 是否指定预期的输出结构（JSON、Markdown 等）？（4）幻觉风险 — 是否存在要求模型生成事实声明的部分，但未提供来源？（5）安全性 — 是否存在 Prompt 注入漏洞？（6）一致性 — Prompt 是否与代码库中的现有模式保持一致？（7）模型适配性 — Prompt 是否针对目标模型（GPT-4o、Claude、Llama 等）优化？' },
+        },
+        {
+          '@type': 'Question',
+          name: '团队中谁应该审查 Prompt？',
+          acceptedAnswer: { '@type': 'Answer', text: '至少需要三个角色参与：（1）领域专家 — 理解业务逻辑，检测语义错误和需求遗漏。（2）安全负责人 — 审查安全漏洞、数据泄露风险和合规问题。（3）质量/测试工程师 — 针对测试用例验证，检查输出格式合规性。对于金融、医疗等关键系统，应增加第四个角色：合规/法务审查人员。10 人以下的小团队可以合并角色（例如一人兼任领域专家和测试），但 20 人以上的大团队应该完全分离。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Prompt 审查应该自动化还是手动进行？',
+          acceptedAnswer: { '@type': 'Answer', text: '两者都需要。自动检查处理重复任务：静态分析（变量一致性、格式验证）、安全扫描（注入模式）、幻觉风险检测（标记事实声明）。由领域专家进行的手动审查可以检测自动化工具遗漏的语义错误、业务逻辑错误和边界情况。推荐分配：70% 自动化 + 30% 手动。自动化处理格式、安全和一致性检查，保留人工判断来验证意图和正确性。' },
+        },
+        {
+          '@type': 'Question',
+          name: '如何将 Prompt 审查集成到 CI/CD 中？',
+          acceptedAnswer: { '@type': 'Answer', text: '在 CI/CD 管道中添加审查门控：（1）PR 创建时，运行自动检查（安全、格式、幻觉风险）。（2）自动检查通过后，请求指定审查人员进行手动审查。（3）在合并前，需要至少 1 位领域专家和 1 位安全审查人员的批准。（4）批准后，针对测试套件运行回归测试。（5）所有门控通过后才能部署 Prompt。GitHub Actions、GitLab CI 和 Braintrust 均支持此工作流的策略执行。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Prompt 的幻觉检查清单项目是什么？',
+          acceptedAnswer: { '@type': 'Answer', text: '审查 Prompt 时，标记任何要求模型做出事实声明（日期、统计数据、产品详情、企业名称）但未提供源资料的部分。例如：要求"按采用率列出 5 大 JavaScript 框架"但不提供数据会导致幻觉。修复方法：添加上下文（如"基于 2025 年 JavaScript 调查"）或重新表述为意见（"列出可能使用的流行框架"）。这单项检查可防止生产环境 30～40% 的幻觉。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Prompt 审查期间审查人员意见不一致时怎么办？',
+          acceptedAnswer: { '@type': 'Answer', text: '建立明确的决策规则：（1）安全问题是阻塞性的 — 任何安全顾虑都会停止批准。（2）质量问题需要质量和领域审查人员达成共识。（3）风格问题仅作为建议 — 记录但不阻止。使用明确的批准/拒绝原因的审查模板。如果审查人员对质量问题意见不一致，将两个版本都针对测试套件进行测试 — 得分更高的版本被批准。在版本控制中记录决策。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Prompt 审查和 Prompt 测试有什么区别？',
+          acceptedAnswer: { '@type': 'Answer', text: '审查评估意图和结构（指令是否清晰？是否指定格式？）。测试根据数据评估正确性（Prompt 是否针对测试用例返回正确答案？延迟是否可接受？）。审查在测试前捕获明显错误，测试捕获审查遗漏的边界情况。两者都必需。审查速度快（5～15 分钟）。测试更慢（30 分钟以上）但更全面。自动化测试，保持审查主要为手动。' },
+        },
+        {
+          '@type': 'Question',
+          name: '应该多频繁地审查现有的 Prompt？',
+          acceptedAnswer: { '@type': 'Answer', text: '在这些触发条件下审查 Prompt：（1）每个变更（代码审查风格）。（2）部署到新模型时（如从 GPT-4o 迁移到 Claude）。（3）使用场景变化时（如 Prompt 从面向客户改为内部使用）。（4）发生生产事件后（幻觉、错误输出）。不要求对仅文档或仅测试的变更进行审查。' },
+        },
+        {
+          '@type': 'Question',
+          name: '哪些工具可以帮助自动化 Prompt 审查？',
+          acceptedAnswer: { '@type': 'Answer', text: 'Braintrust、Promptlayer 和 Vellum 具有内置审查门控和批准工作流。GitHub Actions 和 GitLab CI 可以强制执行审查策略。安全扫描专用工具（如基于正则表达式的注入检测）和幻觉检测工具（如标记事实声明）可集成到 CI 管道。PromptQuorum 支持多模型比较，帮助审查人员验证正确性：针对 3+ 模型运行 Prompt 并比较输出，检测发散。' },
+        },
+        {
+          '@type': 'Question',
+          name: '单个审查人员可以批准 Prompt 吗？',
+          acceptedAnswer: { '@type': 'Answer', text: '不推荐。单个审查人员会遗漏盲点 — 领域专家遗漏安全问题；安全审查人员遗漏业务逻辑错误。需要至少 2 位审查人员（最少：1 位领域专家 + 1 位安全审查人员）。对于关键系统（金融、医疗、面向客户），需要 3 位（领域 + 安全 + 合规）。虽然增加时间（5～15 分钟），但可防止 80% 的生产故障。' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Prompt 审查工作流的关键要素',
+      inLanguage: 'zh',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '检查清单', description: '用于评估清晰性、上下文、输出格式、幻觉风险和安全性的标准化标准' },
+        { '@type': 'ListItem', position: 2, name: '审查人员', description: '在部署前批准 Prompt 的领域专家、安全负责人和质量工程师' },
+        { '@type': 'ListItem', position: 3, name: '自动检查', description: '在每个 Prompt 变更上运行的静态分析和安全扫描' },
+        { '@type': 'ListItem', position: 4, name: 'CI/CD 门控', description: '管道中的批准要求，防止未批准的 Prompt 部署' },
+        { '@type': 'ListItem', position: 5, name: '测试套件', description: '针对已知正确输出验证 Prompt 行为的回归测试' },
+      ],
+    },
+    leadAnswerBlock: '**Prompt 审查工作流通过 7 项检查清单（清晰性、上下文、格式、幻觉风险、安全性、一致性、模型适配性）在部署前验证 AI Prompt。团队运行自动检查加上领域、安全和质量审查人员的手动批准 — 防止生产故障率提高 3 倍，确保符合中国数据合规要求。**',
+    quickFacts: [
+      '未审查的 Prompt 在生产环境中故障率高 3 倍',
+      '审查检查清单涵盖 7 个标准：清晰性、上下文、输出格式、幻觉风险、安全性、一致性、模型适配性',
+      '推荐分配：70% 自动化检查 + 30% 手动审查',
+      '手动审查时间：每个 Prompt 5～15 分钟',
+      '审查门控要求合并前至少 2 位审查人员批准',
+      '单项幻觉检查清单可防止生产幻觉的 30～40%',
+    ],
+    sections: {
+      tldr: {
+        title: '核心要点',
+        isTldr: true,
+        content: [
+          '**要点总结：** Prompt 审查工作流通过 7 项检查清单（清晰性、上下文、格式、幻觉风险、安全性、一致性、模型适配性）在部署前验证 Prompt。自动化 70% 的检查（格式、安全、幻觉标记），保留 30% 为手动（意图、边界情况）。通过 CI/CD 门控要求 2+ 审查人员批准后合并。将 Prompt 和审查决策存储在版本控制中。',
+        ],
+        items: [
+          '未审查的 Prompt 在生产环境中导致 3 倍以上的故障 — 实现包含质量检查清单、角色分工和 CI/CD 门控的工作流',
+          '审查检查清单必须涵盖：清晰性、上下文完整性、输出格式、幻觉风险、安全漏洞、一致性和模型兼容性',
+          '审查团队需要至少 3 个角色：领域专家（语义正确性）、安全负责人（注入/合规）、质量工程师（测试验证）',
+          '自动化 70%（格式、安全、幻觉检测），保留 30% 手动（意图、边界情况、正确性）',
+          '构建 CI/CD 门控阻止部署直到自动检查通过且手动审查人员批准',
+          '单项幻觉检查清单（标记无来源的事实声明）可防止生产故障的 30～40%',
+          '在版本控制中记录所有审查决策，分歧由测试套件性能而非观点解决',
+        ],
+      },
+
+      whyReview: {
+        id: 'why-review',
+        title: 'Prompt 审查为什么对团队至关重要',
+        content: [
+          '**未审查的 Prompt 在生产环境中故障率高 3 倍。** 在隔离环境中运行良好的 Prompt，当部署到 API、在实时数据上运行或扩展到生产流量时就会失败。手动代码审查捕获语法错误，Prompt 审查捕获逻辑错误、缺失的上下文和[自动测试无法检测到的来自 Prompt 的幻觉](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh)。',
+          '在软件开发中，代码审查在合并前是强制性的。Prompt 审查应该同样强制 — Prompt 是可执行代码，对客户结果的影响与 Python 函数一样大。区别在于 Prompt 会无声地失败：它们返回听起来合理但错误的答案，而不是抛出错误。',
+          '审查防止的三种故障模式：（1）幻觉 — 模型编造训练数据中不存在的事实（例如声称不存在的工具功能）。（2）指令遵循失败 — 由于上下文不完整，模型误解了意图（例如要求 JSON 输出但未指定 schema）。（3）安全绕过 — Prompt 容易受[Prompt 注入攻击](/prompt-engineering/prompt-injection-and-security?lang=zh)（例如用户输入可操纵中途执行的指令）。',
+        ],
+        callouts: [
+          { type: 'Warning', label: '无声故障', text: 'Prompt 无声地失败 — 返回听起来合理但错误的答案而不是抛出错误。错误日志无法检测到这些。' },
+          { type: 'Did You Know', label: '幻觉统计', text: '要求模型生成事实声明（统计、名称、日期）但未提供源数据，是生产幻觉的 30～40% 原因。' },
+        ],
+      },
+
+      workflowOverview: {
+        id: 'workflow-overview',
+        title: '5 阶段 Prompt 审查工作流',
+        content: [
+          '**完整的 Prompt 审查工作流包含 5 个阶段：定义、提交、自动检查、手动审查、部署。**',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'Prompt 审查工作流是一个门控流程，要求 AI Prompt 通过自动质量检查，并从领域、安全和质量审查人员获得明确批准后才能部署。'
+          },
+          {
+            type: 'in-plain-terms',
+            text: '把它看作是 AI 指令的代码审查 — 没有人部署未测试的代码，所以也不应有人部署未审查的 Prompt。'
+          },
+        ],
+        items: [
+          '**阶段 1: 定义** — 明确"这个 Prompt 应该做什么"和"审查何时算完成"。创建检查清单（见下文）。',
+          '**阶段 2: 提交** — 开发者作为 PR 提交 Prompt 变更（如代码审查）。描述变更：模型、意图、预期输出。',
+          '**阶段 3: 自动检查** — CI/CD 针对格式、安全、幻觉风险运行检查（见下文）。2～3 分钟完成。',
+          '**阶段 4: 手动审查** — PR 通过自动检查后流向专家审查。讨论、问题、批准需 5～15 分钟。',
+          '**阶段 5: 部署** — 所有门控通过后合并并部署 Prompt。在测试套件和生产环境中监控。',
+        ],
+      },
+
+      checklist: {
+        id: 'checklist',
+        title: '7 项 Prompt 审查检查清单',
+        content: [
+          '使用以下 7 项检查清单来判断"这个 Prompt 审查完成了吗？"。审查人员不会批准，直到所有检查框都是"是"。',
+        ],
+        items: [
+          '**清晰性（Clarity）** — 指令是否明确无歧义、简明扼要、易理解？审查人员能否误解意图？是 = 需要修复。',
+          '**上下文（Context）** — 是否提供足够背景信息让模型准确推理？是否缺少关键细节？是 = 添加上下文。',
+          '**输出格式（Output Format）** — 是否指定预期的输出结构（JSON schema、Markdown 表等）？无 schema = 需要修复。',
+          '**幻觉风险（Hallucination Risk）** — Prompt 是否促使模型做出事实声明（统计、日期、企业名称）？无源数据 = 风险。修复 Prompt 或在输出上标记。',
+          '**安全性（Security）** — 用户输入是否直接插入 Prompt？是 = 注入漏洞风险。清理输入或从系统 Prompt 分离问题。',
+          '**一致性（Consistency）** — 这个 Prompt 是否与代码库中的其他 Prompt 使用相同风格、变量命名和输出格式？不一致 = 修复。',
+          '**模型适配性（Model Fit）** — 这个 Prompt 是否为目标模型（GPT-4o、Claude 4.6 Sonnet、Llama 3.3）优化？未测试 = 测试后修复。',
+        ],
+      },
+
+      teamRoles: {
+        id: 'team-roles',
+        title: '审查团队的 3 个必需角色',
+        content: [
+          'Prompt 审查不能由一个人完成。领域专家会遗漏安全缺陷，安全人员会遗漏业务逻辑错误。需要一个有至少 3 个角色的团队。',
+        ],
+        items: [
+          '**领域专家（Domain Expert）** — 验证"这个 Prompt 是否正确实现了业务逻辑？"。检测语义错误、遗漏需求、不适当的输出格式。金融、医疗、法律领域必需。',
+          '**安全负责人（Security Lead）** — 验证"用户输入能否操纵 Prompt？"、"是否存在数据泄露、Prompt 注入、未授权数据访问的风险？"。包括合规性（GDPR、等）。',
+          '**质量/测试工程师（QA Engineer）** — 针对测试用例套件运行 Prompt，验证获得预期输出。验证延迟、token 数、错误率。',
+        ],
+        callouts: [
+          { type: 'Pro Tip', label: '小型团队', text: '10 人以下团队可合并角色。例如：领域专家 + QA 工程师。但安全审查人员应始终单独。' },
+          { type: 'Compliance', label: '关键系统', text: '金融、医疗、政府系统添加第四角色：合规/法务审查人员。需要审计记录。' },
+        ],
+      },
+
+      automatedVsManual: {
+        id: 'automated-vs-manual',
+        title: '自动化检查 vs. 手动审查',
+        content: [
+          '不是"全部自动化？"而是"自动化什么，为人工保留什么？"。推荐分配是 **70% 自动化 + 30% 手动**。',
+        ],
+        items: [
+          '**应自动化（机器擅长）：** 格式一致性（JSON schema、Markdown 表）、安全模式（用户输入直接注入、SQL 注入式模式）、幻觉风险（标记事实声明）、变量一致性（相同名称、类型）。运行时间：2～3 分钟。',
+          '**应手动审查（人类擅长）：** 语义正确性（"这实际上在做什么？"）、业务逻辑（"这个输出能解决问题吗？"）、边界情况（"如果用户做 X 怎么办？"）、模型兼容性测试。运行时间：5～15 分钟。',
+        ],
+        numberedItems: [
+          '**自动检查工具栈设置：**',
+          '基于正则表达式的安全扫描：确认用户输入不直接传递给 API',
+          '格式验证：检查 JSON schema、必需字段、最大 token 长度',
+          '幻觉标记：自动标记包含事实声明（数字、名字、日期）的 Prompt',
+          '一致性检查：验证相同变量名称和命名规范',
+        ],
+      },
+
+      cicdGates: {
+        id: 'cicd-gates',
+        title: 'CI/CD 管道中的审查门控',
+        content: [
+          'CI/CD 管道中的自动审查门控确保未审查的 Prompt 无法到达生产。GitHub Actions、GitLab CI、Braintrust 的例子：',
+        ],
+        numberedItems: [
+          '**PR 打开时：** 运行自动扫描（安全、格式、幻觉），2～3 分钟内报告结果。"自动检查成功"则进行下一步。"失败"则请求开发者修复。',
+          '**自动检查通过时：** 使用 GitHub "Request Review" 功能通知领域专家和安全负责人。显示提交的 Prompt 和 CI 报告。',
+          '**审查人员批准时：** 要求至少 2 位批准（1 领域 + 1 安全）。通过分支保护规则强制执行，阻止合并。',
+          '**批准后：** 针对回归测试套件自动测试，确认无已知问题重现。全部通过后部署。',
+        ],
+      },
+
+      mistakes: {
+        id: 'mistakes',
+        title: 'Prompt 审查中的常见错误',
+        content: [
+          '避免这 5 个陷阱。',
+        ],
+        items: [
+          '**单人审查** — "将审查分配给一个人"永远不会成功。领域专家遗漏安全问题。安全人员遗漏业务逻辑问题。总是至少使用 2 人。',
+          '**仅测试无审查** — 测试检测边界情况。审查检测明显错误。两者都需要。测试 = 质量检查（正确性）。审查 = 意图检查（设计）。',
+          '**遗漏幻觉** — 如果 Prompt 要求"提供统计、日期、企业名称"但无源数据，必须上报。生产环境会失败。',
+          '**无安全扫描** — 用户输入直接注入、Prompt 注入、数据泄露很难手动检测。使用静态分析工具（正则表达式扫描）。',
+          '**反馈无结构** — 不用"Prompt 看起来很糟"或"似乎缺少什么"，而是明确引用检查清单项。"#3 输出格式检查 — 未指定 JSON schema"。',
+        ],
+      },
+
+      regionalConsiderations: {
+        id: 'regional-considerations',
+        title: '中国企业的 Prompt 审查工作流',
+        content: [
+          'Prompt 审查的基本原则是通用的，但中国企业环境具有独特的合规要求、数据主权期望和技术栈。',
+        ],
+        items: [
+          '**数据安全法 2021 合规** — 中国《数据安全法 2021》要求敏感数据（个人信息、金融记录、医疗记录）保留在中国。安全审查人员必须验证 Prompt 不将机密数据发送到外部 API。本地推理（LM Studio、Ollama）是实现数据主权的必需部分。完整的合规堆栈 = Prompt 审查工作流 + 本地推理。',
+          '**企业部署实践** — 中国的大型企业（阿里巴巴、腾讯、字节跳动、百度、华为）要求 AI 系统的完整审计日志。Prompt 审查工作流在版本控制中记录所有决策，满足这个要求。对于金融（银行）、医疗（医院）、法律服务，审查必须包括合规检查。',
+          '**CAC 网络安全审查** — 对于涉及用户数据流向海外的系统，网络安全审查委员会（CAC）可能需要提前批准。本地 AI 部署 + Prompt 审查工作流 = 降低 CAC 审查风险。',
+        ],
+        blockquote: '中国优先：Prompt 审查工作流 + 本地推理 = 数据安全法合规企业 AI。',
+        blockquoteSource: '[中国数据安全法 2021](http://www.npc.gov.cn/) — 全国人大',
+      },
+
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '应该如何记录 Prompt 审查文档？',
+            a: '在版本控制（Git、GitHub、GitLab）中保存所有审查决策。审查人员在 PR 评论中写下批准或拒绝的原因。自动化审查工具（Braintrust、Vellum）会自动记录历史。稍后当被问"为什么这个 Prompt 这样设计"时，有 PR 历史作证。',
+          },
+          {
+            q: 'Prompt 审查需要多长时间？',
+            a: '典型耗时：（1）自动检查：2～3 分钟。（2）手动审查：5～15 分钟。（3）测试套件：5～10 分钟。总计：15～30 分钟。大型变更（新模型、重大语义改动）可能需要 1 小时。小型修复（1～2 行）可能 5 分钟完成。',
+          },
+          {
+            q: '迁移到新模型时是否需要审查？',
+            a: '是的，总是必需的。从 GPT-4o 迁移到 Claude 4.6 Sonnet 需要修改 Prompt，因为新模型对指令有不同的解释方式（更详细或更简洁）。运行完整审查循环（检查清单、测试、批准）。PromptQuorum 的多模型比较帮助检测输出差异。',
+          },
+          {
+            q: '审查人员意见不一致时怎么办？',
+            a: '明确决策规则：（1）安全问题是阻塞性的 — 一个安全顾虑停止批准。（2）质量问题需要共识 — 领域专家和质量工程师必须同意。（3）风格问题是建议性的 — 记录但不阻止。对于分歧的质量问题，针对测试套件测试两个版本，批准得分更高的。',
+          },
+          {
+            q: '是否可以将 Prompt 审查与我们的堆栈（Slack、Teams、Jira 等）集成？',
+            a: '可以。GitHub Actions、GitLab CI、Braintrust 都支持聊天机器人集成（Slack 通知）、Jira 票证自动创建和其他 CI/CD 工具集成。使用自动化脚本将审查结果发送到 Slack，创建 Jira 票证或构建自定义仪表板。',
+          },
+        ],
+      },
+
+      relatedReading: {
+        id: 'related-reading',
+        title: '关联阅读',
+        items: [
+          '[如何防御 Prompt 注入攻击](/prompt-engineering/prompt-injection-and-security?lang=zh) — 安全审查人员的详细指南',
+          '[AI 幻觉：原因和防止方法](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh) — 应用幻觉检查清单项',
+          '[Prompt 优化基础](/prompt-engineering/fundamentals-of-prompt-optimization?lang=zh) — 编写更好 Prompt 的基础',
+          '[系统 Prompt vs 用户 Prompt：区别是什么](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=zh) — Prompt 设计详解',
+        ],
+      },
+
+      sources: {
+        id: 'sources',
+        items: [
+          '[GitHub - 将 Prompt 安全集成到 CI/CD](https://docs.github.com/zh/actions) — 使用 GitHub Actions 自动化审查门控',
+          '[GitLab CI/CD 文档](https://docs.gitlab.com/ee/ci/) — GitLab 管道中的策略实施',
+          '[Braintrust - Prompt 评估指南](https://www.braintrust.dev/docs/guides/evals) — 自动测试和 CI/CD 集成',
+          '[中国数据安全法 2021](http://www.npc.gov.cn/) — 中国企业 AI 合规指南',
+        ],
+      },
+    },
   },
 };
