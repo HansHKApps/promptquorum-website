@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
     theme: 'Workflows',
     title: 'Prompt Engineering Setup for Small Teams (2026)',
     seoTitle: 'Prompt Engineering for Small Teams: Tools & Workflow (2026)',
-    metaDescription: 'Learn how to set up prompt engineering for small teams: shared YAML library, Git versioning, 20-case test set, and ownership rules. Full setup in one week.',
+    metaDescription: 'Small teams manage prompts in Slack threads, facing duplicate work, silent regressions, and no cross-model test data. A YAML library, Git versioning, and 20-case test harness solves all three in one week.',
     ogDescription: 'Small team prompt engineering setup: shared prompt library, Git versioning, multi-model testing with PromptQuorum, and ownership rules. Operational in one week.',
     twitterDescription: 'Prompt chaos → structured setup in one week. YAML library, Git versioning, 20-case test set, and named owners. For teams of 2–15.',
     intro: '**Small teams that manage prompts in Slack threads, personal notebooks, and copy-paste chains face the same three problems: duplicated work, undocumented regressions, and no way to compare which model performs best on their tasks.** A structured prompt engineering setup solves all three with a shared library, versioning, and a test harness. This guide shows you how to build it in one week.',
@@ -30,15 +30,16 @@ export const article: Record<Language, PEArticle> = {
       'Teams of 2–5 can implement the full setup in this guide using only free tools: Git, VS Code, and a shared API key',
     ],
     toc: [
-      { label: 'What a Prompt Engineering Setup Includes',            anchor: '#what-is-prompt-setup' },
-      { label: 'Setup Levels by Team Size',                           anchor: '#team-size' },
-      { label: 'Tool Stack for Small Team Prompt Engineering',        anchor: '#tool-stack' },
-      { label: 'Building a Shared Prompt Library',                   anchor: '#shared-library' },
-      { label: 'Versioning and Testing Prompts',                     anchor: '#versioning-testing' },
-      { label: 'Choosing AI Models for Your Prompts',                anchor: '#model-selection' },
-      { label: 'Ownership and Review Rules',                         anchor: '#governance' },
-      { label: 'One-Week Setup Plan',                                anchor: '#how-to-start' },
-      { label: 'Common Prompt Engineering Mistakes',                 anchor: '#common-mistakes' },
+      { label: 'Key Takeaways',                                      anchor: '#key-takeaways' },
+      { label: 'Prompt Engineering Setup for Small Teams: 4 Required Components',  anchor: '#what-is-prompt-setup' },
+      { label: 'Team Size Determines Your Required Setup Level',     anchor: '#team-size' },
+      { label: 'Small Teams Need 3 Core Tools: Git, VS Code, and PromptQuorum',  anchor: '#tool-stack' },
+      { label: 'Start a Shared Prompt Library With YAML Files in Git', anchor: '#shared-library' },
+      { label: 'Version Prompts Semantically and Test Across 2 Models', anchor: '#versioning-testing' },
+      { label: 'Choose GPT-4o for Structured Output, Claude 4.6 Sonnet for Nuance', anchor: '#model-selection' },
+      { label: 'Assign One Named Owner to Every Prompt',             anchor: '#governance' },
+      { label: 'Set Up Prompt Engineering in One Week: 6-Step Plan', anchor: '#how-to-start' },
+      { label: '5 Common Prompt Engineering Mistakes Small Teams Make', anchor: '#common-mistakes' },
       { label: 'Frequently Asked Questions',                         anchor: '#faq' },
       { label: 'Related Reading',                                    anchor: '#related-reading' },
       { label: 'Sources',                                            anchor: '#sources' },
@@ -170,7 +171,7 @@ export const article: Record<Language, PEArticle> = {
       },
       whatIs: {
         id: 'what-is-prompt-setup',
-        title: 'What a Prompt Engineering Setup Includes',
+        title: 'Prompt Engineering Setup for Small Teams: 4 Required Components',
         content: [
           '**A prompt engineering setup for small teams is the combination of four systems: a shared prompt library, a version control workflow, a test harness, and ownership rules.** Together, these four prevent the most common failure mode — multiple people editing the same prompts without coordination, leading to silent regressions.',
           'Most small teams skip the setup entirely until something breaks in production. By then, the damage is done: prompts that worked last week fail silently, nobody knows who changed what, and debugging requires reconstructing history from memory.',
@@ -193,7 +194,7 @@ export const article: Record<Language, PEArticle> = {
       },
       teamSize: {
         id: 'team-size',
-        title: 'Setup Levels by Team Size',
+        title: 'Team Size Determines Your Required Setup Level',
         content: '**The right level of process depends directly on team size — too little and prompts break silently, too much and your team spends more time on process than building.** Match your setup to your headcount and adjust as the team grows.',
         columns: ['Team size', 'Recommended setup', 'Skip for now'],
         rows: [
@@ -209,7 +210,7 @@ export const article: Record<Language, PEArticle> = {
       },
       toolStack: {
         id: 'tool-stack',
-        title: 'Tool Stack for Small Team Prompt Engineering',
+        title: 'Small Teams Need 3 Core Tools: Git, VS Code, and PromptQuorum',
         content: [
           '**Most small teams need only three tools: a code editor for writing prompts, Git for version control, and a multi-model testing platform for comparing outputs.** Everything else is optional until a specific constraint makes it necessary.',
           'The table below lists the tools most commonly used by teams of 2–15 people. Start with the first three and add others only when you hit their specific limitations.',

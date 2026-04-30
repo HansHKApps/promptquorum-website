@@ -444,29 +444,455 @@ jobs:
   de: {
     freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
-    title: 'Prompt-Versionskontrolle: Semantic Versioning, Git & Rollback (2026)',
-    intro: 'Prompt-Versionskontrolle verfolgt jede Änderung an einem KI-Prompt unter Verwendung von semantischer Versionierung (MAJOR.MINOR.PATCH) und Git-Workflows. Sie ermöglicht sofortiges Rollback, Team-Zusammenarbeit und Regressionserkennung — die gleiche Disziplin, die auf Code angewendet wird, auf Prompts angewendet.',
+    title: 'Prompt-Versionskontrolle: Semantische Versionierung, Git & Rollback (2026)',
+    intro: '**Prompt-Versionskontrolle verfolgt jede Änderung an einem KI-Prompt unter Verwendung von semantischer Versionierung (MAJOR.MINOR.PATCH) und Git-Workflows.** Sie ermöglicht sofortiges Rollback, Team-Zusammenarbeit und Regressionserkennung — die gleiche Disziplin, die auf Code angewendet wird, auf Prompts angewendet. Dieser Leitfaden behandelt semantische Versionierungsschemas, Git-Branch-Workflows, Changelog-Format, Rollback-Strategien und automatisierte Testmuster für produktive Prompt-Systeme.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
-    audience: 'Entwickler, die KI-Prompts in der Produktion verwalten, Prompt Engineers, Team Leads',
-    seoTitle: 'Prompt-Versionskontrolle: Semantic Versioning, Git & Rollback (2026)',
+    audience: 'Entwickler, die KI-Prompts in der Produktion verwalten, Prompt Engineers, Engineering Team Leads',
+    primaryTerm: 'Prompt-Versionskontrolle',
+    toc: [
+      { label: 'Stille Regressionen und warum Versionskontrolle sie verhindert', anchor: 'why-version-control' },
+      { label: 'Semantische Versionierung für KI-Prompts', anchor: 'semantic-versioning' },
+      { label: 'Git-Workflow für Prompt-Änderungen', anchor: 'git-workflow' },
+      { label: 'Erforderliche Changelog-Felder', anchor: 'changelog' },
+      { label: 'Rollback-Strategien', anchor: 'rollback' },
+      { label: 'Team-Zusammenarbeit und Ownership', anchor: 'team-collaboration' },
+      { label: 'Automatisiertes Testen vor dem Merge', anchor: 'automated-testing' },
+      { label: 'Häufige Fehler bei der Prompt-Versionskontrolle', anchor: 'mistakes' },
+      { label: 'Compliance- und Audit-Anforderungen für Prompt-Änderungen', anchor: 'regional-considerations' },
+      { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+      { label: 'Weiterführende Literatur', anchor: 'related-reading' },
+      { label: 'Quellen', anchor: 'sources' },
+    ],
+    seoTitle: 'Prompt-Versionskontrolle: Semantische Versionierung, Git & Rollback',
     metaDescription: 'Prompt-Versionskontrolle mit MAJOR.MINOR.PATCH, Git-Workflows, Changelogs, Rollback-Strategien und automatisierten Regressionstests. Vollständiger Produktions-Workflow.',
     readTime: '10 Min. Lesezeit',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Prompt-Versionskontrolle: Semantic Versioning, Git & Rollback (2026)',
-      description: 'Prompt-Versionskontrolle mit MAJOR.MINOR.PATCH, Git-Workflows, Changelogs, Rollback-Strategien und automatisierten Regressionstests. Vollständiger Produktions-Workflow.',
+      headline: 'Prompt-Versionskontrolle: Semantische Versionierung, Git & Rollback (2026)',
+      description: 'Versionskontrollierte Prompts verhindern stille Regressionen — kein Verlauf bedeutet kein Rollback. Wenden Sie MAJOR.MINOR.PATCH-Versionierung, Git-Branch-Workflows und automatisierte Regressionstests auf jede Prompt-Änderung an.',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
       inLanguage: 'de',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows?lang=de',
-      publisher: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      keywords: ['Prompt-Versionskontrolle', 'Prompt-Versionierung', 'Git-Workflow', 'semantische Versionierung', 'Prompt-Rollback', 'Changelog', 'Regressionstests'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Git' },
+        { '@type': 'SoftwareApplication', name: 'GitHub' },
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+      ],
+      about: [
+        { '@type': 'Thing', name: 'Prompt-Versionskontrolle', description: 'Ein System, das jede Änderung an einem KI-Prompt mit MAJOR.MINOR.PATCH-Versionierung verfolgt, Rollback zu jeder vorherigen Version ermöglicht und Autor sowie Änderungsgrund dokumentiert.' },
+        { '@type': 'Thing', name: 'Git-Workflow für Prompts', description: 'Eine Branching- und Review-Strategie, die Entwicklungspraktiken nachahmt — Feature Branches, Pull Requests, automatisierte Tests und Multi-Reviewer-Genehmigungstore.' },
+        { '@type': 'Thing', name: 'Prompt-Rollback-Strategie', description: 'Ein Deployment-Mechanismus, der einen Prompt sofort über git revert, Feature Flags oder Umgebungsvariablen auf eine vorherige Version zurückführt.' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways']
+      }
     },
-    toc: [],
-    sections: {},
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'So richten Sie einen Git-Workflow für Prompt-Änderungen ein',
+      inLanguage: 'de',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Erstellen Sie einen Feature Branch für Ihre Prompt-Änderung mit git checkout -b feature/description' },
+        { '@type': 'HowToStep', position: 2, name: 'Bearbeiten Sie die Prompt-Datei und erhöhen Sie die Versionsnummer in der Header-Notiz (MAJOR.MINOR.PATCH)' },
+        { '@type': 'HowToStep', position: 3, name: 'Führen Sie automatisierte Regressionstests gegen einen Golden Test Set mit mindestens 10 repräsentativen Eingaben durch' },
+        { '@type': 'HowToStep', position: 4, name: 'Öffnen Sie einen Pull Request zur Überprüfung; Reviewer prüfen Klarheit, Halluzinationsrisiko, Ausgabeformat und Sicherheit' },
+        { '@type': 'HowToStep', position: 5, name: 'Nach Genehmigung in main mergen und das Release mit git tag v2.0.0 -m description taggen' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Was ist Prompt-Versionskontrolle?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Versionskontrolle ist ein System, das jede Änderung an einem KI-Prompt mit semantischer Versionierung (MAJOR.MINOR.PATCH) verfolgt, sofortiges Rollback zu jeder vorherigen Version ermöglicht und dokumentiert, wer was geändert hat und warum. Es wendet Disziplin der Softwareentwicklung auf Prompt-Verwaltung an — behandelt Prompts als produktiven Code, der überprüft, getestet und versioniert werden muss.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Benötige ich ein separates Git-Repository für Prompts oder kann ich mein bestehendes App-Repository verwenden?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Beides funktioniert. Verwenden Sie ein Monorepo (einzelnes Repository), wenn Sie weniger als 50 Prompts haben und enge Kopplung zwischen Code und Prompts. Verwenden Sie ein separates Repository, wenn Sie 50+ Prompts haben, unabhängige Release-Zyklen wünschen oder mehrere Teams verschiedene Prompt-Mengen verwalten. Das Wichtigste ist, dass Prompts in einem dedizierten /prompts/ Verzeichnis mit einer Versionsdatei, Changelog und Test-Fixtures daneben leben — die Struktur ist wichtiger als die Repository-Wahl.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Wie unterscheidet sich Prompt-Versionierung von Modell-Versionierung?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Modell-Versionierung (GPT-4o vs Claude 4.6 Sonnet) handelt davon, welches zugrunde liegende KI-System Sie verwenden. Prompt-Versionierung handelt davon, Änderungen innerhalb eines einzelnen Prompt-Textes zu verfolgen — Formulierung, Struktur, Beispiele, Einschränkungen. Sie können beide unabhängig versionieren: Ein Prompt v2.1 kann gegen Modell GPT-4o bereitgestellt werden und später auf GPT-4o + Claude 4.6 Sonnet aktualisiert werden, ohne die Prompt-Versionsnummer zu ändern.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Welche minimale Größe eines Test-Sets ist gut für einen produktiven Prompt?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Minimum 10 Golden Test Cases pro Prompt — eine Mischung aus erwarteten Happy Paths (4-5 Fälle), Edge Cases (3-4 Fälle) und Fehlermodi (2-3 Fälle). Größere Prompts, die komplexe Aufgaben verarbeiten, sollten 20+ Fälle haben. Jeder Fall umfasst: Eingabe, erwartetes Ausgabeformat und erwartetes Verhalten (z. B. „sollte Halluzinationsrisiko kennzeichnen, wenn das Modell sachliche Ansprüche macht").' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Wie handhabe ich Versionierung, wenn derselbe Prompt über verschiedene Modelle verwendet wird?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie eine einzelne Prompt-Versionsnummer, aber testen Sie gegen alle Zielmodelle während der PR-Review-Phase. Die Version spiegelt Prompt-Änderungen wider, nicht Modell-Änderungen. Wenn ein Prompt identisch über GPT-4o und Claude 4.6 Sonnet funktioniert, ist es v1.0. Wenn Sie später Claude-spezifische Syntax hinzufügen (Thinking Blocks), erhöhen Sie auf v2.0. Verfolgen Sie Modell-Kompatibilität separat von Prompt-Versionen.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Sollte jede Formulierungsänderung die Version erhöhen?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Nicht unbedingt. Verwenden Sie die Regel: PATCH-Versionserhöhungen für Klarstellungen und Tippfehler, die Ausgabeverhalten nicht ändern. MINOR-Erhöhungen für Qualitätsverbesserungen (besseres Reasoning, weniger Halluzinationen, schnellere Antwort), die rückwärtskompatibel sind. MAJOR-Erhöhungen nur wenn Ausgabeformat, Struktur oder Semantik das Downstream-Parsing brechen. Ein Synonym-Austausch ist ein PATCH; ein Ton-Shift, der Verhalten beeinflusst, ist MINOR.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Welche Tools unterstützen Prompt-Versionskontrolle nativ?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Git unterstützt nativ Prompt-Versionierung, wenn Sie Prompts als Textdateien speichern. Spezialisierte Tools wie Braintrust, Promptlayer und Vellum fügen integrierte Versionierung, Vergleich und A/B-Testing hinzu. PromptQuorum unterstützt Multi-Modell-Vergleich, der beim Identifizieren von Breaking Changes hilft. Wählen Sie basierend auf Ihrem Workflow: reines Git, wenn Sie starke Entwicklungspraktiken haben; ein Tool, wenn Sie integrierte Rollback-UI und Version-Branching wünschen.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Wie führe ich ein Prompt-Rollback durch, wenn ich kein Git verwende?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie Feature Flags (einfachste Methode): neuen Prompt hinter einem Flag bereitstellen, in Produktion testen, Flag umschalten zum Rollback in Sekunden. Verwenden Sie Umgebungsvariablen: Prompt in einer Env-Variable speichern, Werte zum Zurücksetzen austauschen. Verwenden Sie eine Datenbank: Prompt-Versionen in einer Datenbanktabelle speichern, nach Versionsnummer abfragen. Die langsamste Methode ist erneutes Bereitstellen von altem Code, was Minuten dauert. Feature Flags oder Umgebungsvariablen werden empfohlen — Rollback sollte Sekunden dauern.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Muss ich bei der Verwendung von Prompt-Versionskontrolle die DSGVO beachten?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die DSGVO Artikel 28 erfordert Rechenschaftspflicht bei der Verarbeitung personenbezogener Daten. Prompt-Versionskontrolle erfüllt diese Anforderung durch: (1) vollständige Audit-Trail aller Änderungen (wer, wann, was); (2) lokale Datenspeicherung durch Verwendung dedizierter Repositories; (3) Einhaltung von BSI-Grundschutz-Katalogen für IT-Sicherheit. Die Versionskontrolle selbst ist ein Compliance-Control — zeigen Sie Auditorén die Git-Historie und Sie erfüllen DSGVO-Anforderungen an Traceability und Dokumentation.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ist Prompt-Versionskontrolle für den deutschen Mittelstand geeignet?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Absolut. Mittelstand-Unternehmen profitieren besonders: (1) IT-Sicherheit ohne zusätzliche Kosten durch Git-basierte Kontrollen und Audit-Trails; (2) BSI-Grundschutz-Konformität durch dedizierte Prompt-Repositories und Versionshistorie; (3) schnelles Rollback bei Problemen — kritisch für kleine IT-Teams ohne 24/7-Support. Empfehlung: beginnen Sie mit einem Monorepo (einfacher Setup), implementieren Sie 2+ Reviewer-Approval Gates, automatisieren Sie Tests. Für größere Mittelstand-Betriebe (50+ Prompts) wechseln Sie zu einem separaten Prompt-Repository.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Prompt-Rollback-Methoden',
+      inLanguage: 'de',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Git Revert', description: 'Sofort (Sekunden), keine Ausfallzeit, erfordert git-basierte Bereitstellung. Am besten für die meisten Teams.' },
+        { '@type': 'ListItem', position: 2, name: 'Feature Flag', description: 'Sofort (Sekunden), keine Ausfallzeit, erfordert aber Flag-Infrastruktur. Am besten, wenn Flags bereits bereitgestellt sind.' },
+        { '@type': 'ListItem', position: 3, name: 'Umgebungsvariable', description: 'Sofort (Sekunden), mittleres Risiko, einfach zu implementieren. Am besten für Hotfixes.' },
+      ],
+    },
+    quickFacts: [
+      'Semantische Versionierung für Prompts: MAJOR bei Breaking Output Format Änderungen, MINOR bei Qualitätsverbesserungen, PATCH bei Tippfehler/Klarstellungen',
+      'Ein Git Revert auf einen Prompt dauert Sekunden; erneutes Testen ohne Versionshistorie dauert Stunden',
+      'Prompt Changelogs erfordern 5 Felder: Version, Datum, Autor, Änderungstyp (MAJOR/MINOR/PATCH) und erwartetes Output Delta',
+      'Führen Sie automatisierte Regressionstests gegen ≥10 Golden Test Cases vor dem manuellen Review durch',
+      'Drei Branching-Muster für Prompts: feature/ (neue Fähigkeit), fix/ (Regression), experiment/ (A/B Test)',
+    ],
+    sections: {
+      tldr: {
+        title: 'Zusammenfassung',
+        isTldr: true,
+        content: [
+          '**TL;DR:** Versionskontrollierte Prompts verhindern stille Regressionen — wenn Ausgabequalität sinkt, gibt es keine Historie, um zu zeigen, was sich geändert hat. Versionieren Sie Prompts mit MAJOR.MINOR.PATCH-Semantik. Bereitstellen über Git: Feature Branch → PR → automatisierte Regressionstests → manuelle Überprüfung → Merge. Erfordern Sie 2+ Reviewer. Taggen Sie Releases: `git tag v2.0.0`. Ermöglichen Sie sofortiges Rollback über Git Revert (Sekunden) statt erneutes Testen (Stunden).',
+        ],
+        items: [
+          'Versionskontrollierte Prompts verursachen stille Regressionen — Ausgabequalität sinkt, aber kein Error Log zeichnet die Änderung auf; Versionshistorie löst dies.',
+          'Semantisches Versionierungsschema: MAJOR für Breaking Output Format Änderungen (JSON → Markdown), MINOR für Qualitätsverbesserungen (besseres Reasoning), PATCH für Tippfehler.',
+          'Speichern Sie Prompts in einem dedizierten /prompts/ Verzeichnis mit Versionsdateien, Test-Fixtures und Changelogs daneben.',
+          'Git-Workflow: Feature Branch → Prompt bearbeiten + Version erhöhen → automatisierte Tests (≥10 Golden Cases) → PR öffnen → 2+ Reviewer-Genehmigung → Merge + Tag Release.',
+          'Automatisierte Regressionstests müssen validieren: Ausgabeformat (JSON-Konformität), Qualität (Halluzinations-Flags) und Latenz (Response Time unter Schwellwert).',
+          'Drei Rollback-Methoden: Git Revert (sofort, bevorzugt), Feature Flags (keine Ausfallzeit, wenn bereitgestellt), Umgebungsvariablen (einfach, aber mittleres Risiko).',
+          'Team-Muster: einen Prompt-Owner pro Feature-Bereich zuordnen; alle Änderungen erfordern die Genehmigung des Owners; Monorepo für enge Kopplung, separates Repository für 50+ Prompts.',
+        ],
+      },
+
+      whyVersionControl: {
+        id: 'why-version-control',
+        title: 'Stille Regressionen und warum Versionskontrolle sie verhindert',
+        content: [
+          '**Versionskontrollierte Prompts verhindern stille Regressionen — wenn Ausgabequalität sinkt, gibt es keine Historie, um zu zeigen, was sich geändert hat.** In Software wirft ein Laufzeitfehler eine Exception aus. Bei Prompts sinkt die Ausgabequalität allmählich: Reasoning wird weniger kohärent, Halluzinationen nehmen zu, Format-Konformität bricht. Ohne Versionshistorie ist die Regression nicht erkennbar, bis sie Produktion erreicht und Nutzererlebnis beschädigt. Siehe [Halluzinationen erkennen und verhindern](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de) für Erkennungsstrategien.',
+          'Drei Fehlermodi treten ohne Versionskontrolle auf: (1) **Stille Qualitätsabnahme** — eine Synonym-Änderung, die harmlos wirkte, schadet tatsächlich dem Reasoning. Kein Error Log. Keine Benachrichtigung. Qualitätsmetriken sinken allmählich und niemand bemerkt, dass eine Prompt-Änderung dies verursachte. (2) **Format-Bruch** — Ausgabe ändert sich von JSON zu Markdown und Downstream-Parser scheitern stillschweigend. (3) **Kollaborationskonflikte** — zwei Ingenieure bearbeiten gleichzeitig denselben Prompt, einer überschreibt die Änderungen des anderen, ohne es zu bemerken.',
+          'Versionskontrolle löst alle drei, indem sie jede Änderung dokumentiert, sofortiges Rollback ermöglicht und Review-Gates durchsetzt. Wenn eine Regression auftritt, können Sie den Prompt gegen die vorherige Version in Sekunden vergleichen und die genaue Änderung identifizieren, die es brach.'
+        ],
+        callouts: [
+          { type: 'Warning', label: 'Stille Fehler', text: 'Prompts scheitern still. Kein Error Log, keine Exception. Ausgabequalitäts-Degradation ist unsichtbar, bis sie das Nutzererlebnis in Produktion beschädigt. Git-Log ist Ihre einzige Audit-Trail.' },
+          { type: 'Did You Know', label: 'Synonym-Risiko', text: 'Die Änderung von „wichtigster Grund" zu „Primärfaktor" kann Reasoning-Qualität für 5-10% der Eingaben verändern. Ein Synonym-Austausch, der sicher wirkte, brach Produktion — Versionshistorie enthüllte es in Minuten.' },
+        ],
+        snippets: [
+          { type: 'in-one-sentence', text: 'Prompt-Versionskontrolle ist ein System, das jede Änderung an einem KI-Prompt verfolgt, Rollback zu jeder vorherigen Version ermöglicht und den Autor sowie den Grund für jede Änderung dokumentiert.' },
+          { type: 'in-plain-terms', text: 'Behandeln Sie Prompts wie Code: jede Änderung durchläuft einen PR, wird getestet, erfordert Genehmigung und wird mit einer Versionsnummer getaggt. Wenn etwas kaputtgeht, Git Revert in Sekunden statt erneutes Testen für Stunden.' },
+        ],
+      },
+
+      semanticVersioning: {
+        id: 'semantic-versioning',
+        title: 'Semantische Versionierung für KI-Prompts',
+        content: [
+          '**Prompt-Semantische Versionierung verwendet MAJOR.MINOR.PATCH — eine Breaking Output Format Änderung erhöht MAJOR, eine Qualitätsverbesserung erhöht MINOR und ein Tippfehler-Fix erhöht PATCH.** Das Schema ist identisch mit semantischer Versionierung für Code, aber angewendet auf Prompt-Text statt Software-Versionen.',
+          'Die Versionierungsregel ist einfach: Wenn ein Downstream-System (ein Parser, eine API oder ein Nutzer, der ein bestimmtes Format erwartet) brechen würde, erhöhen Sie MAJOR. Wenn Ausgabe verbessert sich, bleibt aber kompatibel, erhöhen Sie MINOR. Wenn die Änderung für Nutzer transparent ist (Tippfehler-Fix, Absicht klarstellen), erhöhen Sie PATCH.',
+        ],
+        columns: ['Änderungstyp', 'Wann erhöhen', 'Beispiel', 'Rückwärtskompatibel?'],
+        rows: [
+          { 'Änderungstyp': 'MAJOR', 'Wann erhöhen': 'Breaking Output Format Änderung', 'Beispiel': 'Ausgabe von „F: ... A: ..." zu JSON {„frage": „...", „antwort": „..."} ändern', 'Rückwärtskompatibel?': 'Nein' },
+          { 'Änderungstyp': 'MINOR', 'Wann erhöhen': 'Qualitätsverbesserung (besseres Reasoning, weniger Halluzinationen, schnellere Latenz)', 'Beispiel': 'Few-Shot-Beispiele hinzufügen, um Halluzinationen zu reduzieren, ohne Format zu ändern', 'Rückwärtskompatibel?': 'Ja' },
+          { 'Änderungstyp': 'PATCH', 'Wann erhöhen': 'Tippfehler-Fixes, Klarstellungen, Formulierungsänderungen, die Verhalten nicht beeinflussen', 'Beispiel': 'Ändern von „kurz zusammenfassen" zu „in 2-3 Sätzen zusammenfassen"', 'Rückwärtskompatibel?': 'Ja' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'Key Point', label: 'MAJOR-Trigger', text: 'Erhöhen Sie MAJOR, wenn Downstream-Systeme, die Ausgabe analysieren, brechen würden: Format-Änderung (Markdown → JSON), Struktur-Änderung (einzelne Zeichenkette → Array) oder semantische Änderung (Anweisung ändert Bedeutung). Zur Durchsetzung von Schema-Konformität siehe [strukturierte Ausgabe und JSON Mode](/prompt-engineering/structured-output-json-mode?lang=de).' },
+          { type: 'Pro Tip', label: 'Releases in Git taggen', text: 'Nach dem Merge einer Prompt-Änderung, taggen Sie die Version: git tag v2.1.0 -m „Verbessertes Datum Reasoning via Few-Shot-Beispiele". Referenzieren Sie das Tag in Changelogs und Deployment-Docs.' },
+        ],
+        snippets: [
+          { type: 'in-plain-terms', text: 'MAJOR = Kunden bemerken es und ihre Systeme brechen. MINOR = Kunden bemerken es, bleiben aber kompatibel. PATCH = Kunden bemerken es nicht.' },
+        ],
+      },
+
+      gitWorkflow: {
+        id: 'git-workflow',
+        title: 'Git-Workflow für Prompt-Änderungen',
+        content: [
+          '**Ein kompletter Git-Workflow für Prompts folgt den gleichen 5 Schritten wie Code: Feature Branch → bearbeiten & testen → PR → Überprüfung → Merge → Tag Release.** Der Workflow verhindert stille Regressionen, ermöglicht Zusammenarbeit und dokumentiert jede Änderung.',
+        ],
+        numberedItems: [
+          'Erstellen Sie einen Feature Branch: `git checkout -b feature/add-json-output` oder `fix/date-hallucination`. Verwenden Sie beschreibende Namen.',
+          'Bearbeiten Sie die Prompt-Datei. Aktualisieren Sie die Versionsnummer in einer Header-Notiz: v1.0.0 → v2.0.0 (wenn MAJOR-Änderung). Fügen Sie Test Cases zu /prompts/tests/ hinzu.',
+          'Führen Sie automatisierte Regressionstests aus: `npm run test:prompts`. Muss Format-Validierung, Golden-Set-Vergleich und Halluzinations-Checks bestehen. ≥10 Test Cases erforderlich.',
+          'Öffnen Sie einen Pull Request. Reviewer prüfen: Klarheit (ist die Absicht eindeutig?), Halluzinations-Risiko (sachliche Ansprüche ohne Quellen?), Format-Konformität (passt Ausgabe zu Schema?), Sicherheit (Injection-Vektoren?). Verwenden Sie die [7-Punkt Prompt-Review-Checkliste](/prompt-engineering/prompt-review-workflow-for-teams?lang=de) für standardisierte Kriterien.',
+          'Nach Genehmigung von 2+ Reviewern, mergen Sie zu main. Taggen Sie das Release: `git tag v2.0.0 -m „Verbessertes Date Handling via Few-Shot-Beispiele"`. Bereitstellen automatisch via CI/CD.',
+        ],
+        codeBlock: `name: Prompt Regression Tests
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run prompt tests
+        run: npm run test:prompts -- --coverage
+      - name: Validate format
+        run: npm run test:format -- prompts/
+      - name: Check hallucination flags
+        run: npm run test:hallucination -- prompts/`,
+        codeLanguage: 'yaml',
+        callouts: [
+          { type: 'Pro Tip', label: 'Verzeichnisstruktur', text: 'Speichern Sie Prompts in /prompts/ mit Test-Fixtures daneben: /prompts/my-prompt.txt, /prompts/tests/my-prompt.golden.json, /prompts/CHANGELOG.md. Halten Sie Version in Notiz oben in der Prompt-Datei.' },
+          { type: 'Best Practice', label: 'Approval Gates', text: 'Erfordern Sie 2+ Genehmigungen für produktive Prompts: eine vom Domain Expert (versteht Absicht) und eine vom Test Engineer (validiert Test-Abdeckung). Verwenden Sie Branch Protection Rules in GitHub.' },
+        ],
+      },
+
+      changelog: {
+        id: 'changelog',
+        title: 'Erforderliche Changelog-Felder',
+        content: [
+          '**Ein Prompt Changelog dokumentiert jede Versionsänderung, wann sie passierte, wer sie machte und warum.** Ein Changelog-Eintrag erfordert 5 Felder: Versionsnummer, Release-Datum, Autor, Änderungstyp (MAJOR/MINOR/PATCH) und eine Zusammenfassung des erwarteten Output Delta.',
+        ],
+        columns: ['Feld', 'Erforderlich', 'Beispiel'],
+        rows: [
+          { 'Feld': 'version', 'Erforderlich': 'Ja', 'Beispiel': 'v2.1.0' },
+          { 'Feld': 'date', 'Erforderlich': 'Ja', 'Beispiel': '2026-04-30' },
+          { 'Feld': 'author', 'Erforderlich': 'Ja', 'Beispiel': 'alice@company.com' },
+          { 'Feld': 'change_type', 'Erforderlich': 'Ja', 'Beispiel': 'MINOR (Qualitätsverbesserung)' },
+          { 'Feld': 'summary', 'Erforderlich': 'Ja', 'Beispiel': '3 Few-Shot-Beispiele hinzugefügt, um Halluzinationen bei datumbasierten Fragen zu reduzieren. Ausgabeformat unverändert.' },
+        ],
+        tableFormat: true,
+        codeBlock: `# Changelog
+
+## v2.1.0 — 2026-04-30 (alice@company.com) — MINOR
+
+**Änderung:** 3 Few-Shot-Beispiele hinzugefügt, um Halluzinationen bei datumbasierten Fragen zu reduzieren.
+**Output Delta:** Format unverändert (immer noch JSON). Qualitätsverbesserung: Halluzinations-Rate sank von 8% auf 2% bei Date-Parsing Test Set.
+**Rückwärtskompatibel:** Ja. Bestehende Systeme nicht betroffen.
+**PR:** #1427
+
+## v2.0.0 — 2026-04-28 (bob@company.com) — MAJOR
+
+**Änderung:** Output-Format von Markdown („F: ... A: ...") zu JSON ({„frage": „...", „antwort": „..."}) gewechselt.
+**Output Delta:** Format GEÄNDERT. Alle Downstream Parser müssen aktualisiert werden.
+**Rückwärtskompatibel:** Nein. Erfordert Deployment-Koordination.
+**PR:** #1425`,
+        codeLanguage: 'markdown',
+        callouts: [
+          { type: 'Best Practice', label: 'Changelog VOR Prompt-Änderung schreiben', text: 'Schreiben Sie den CHANGELOG.md-Eintrag zuerst — dies erzwingt Klarheit. Wenn Sie in 2 Sätzen nicht erklären können, warum diese Änderung wichtig ist, ist die Änderung selbst wahrscheinlich unnötig. Changelog-Klarheit = Code-Klarheit.' },
+          { type: 'Key Point', label: '5-Feld Minimum', text: 'Jeder Changelog-Eintrag muss alle 5 Felder enthalten. Wenn Sie es nicht dokumentieren können, stellen Sie es nicht bereit.' },
+        ],
+      },
+
+      rollback: {
+        id: 'rollback',
+        title: 'Rollback-Strategien',
+        content: [
+          '**Git Revert ist die Standard-Rollback-Methode — es dauert Sekunden und hat null Risiko.** Kennen Sie die 3 Trigger für Rollback: Produktions-Qualitätsabfall (Halluzinations-Rate spikt), Sicherheitsproblem entdeckt oder Modell-Inkompatibilität (neues Modell funktioniert nicht mit diesem Prompt).',
+        ],
+        items: [
+          'Trigger: Produktions-Halluzinations-Rate springt von 2% auf 8% nach v2.1 Bereitstellung',
+          'Trigger: v2.0 Output-Format bricht Downstream Parser (5% der Requests scheitern)',
+          'Trigger: Sicherheits-Bug gefunden — Prompt ist anfällig für Injection-Angriff',
+          'Trigger: neues Modell (Claude 5.0) inkompatibel mit Prompt-Struktur; Revert und Überarbeiten',
+        ],
+        columns: ['Rollback-Methode', 'Geschwindigkeit', 'Risiko', 'Wann verwenden'],
+        rows: [
+          { 'Rollback-Methode': 'git revert v2.1.0', 'Geschwindigkeit': 'Sekunden (sofort)', 'Risiko': 'Niedrig (committed ein Revert Commit)', 'Wann verwenden': 'Standard für alle Rollbacks. Erfordert git-basierte Bereitstellung.' },
+          { 'Rollback-Methode': 'Feature Flag OFF', 'Geschwindigkeit': 'Sekunden (Flag umschalten)', 'Risiko': 'Null (keine Bereitstellung erforderlich)', 'Wann verwenden': 'Wenn Feature Flags bereits bereitgestellt. Am besten für null Ausfallzeit Rollback.' },
+          { 'Rollback-Methode': 'Umgebungsvariable austauschen', 'Geschwindigkeit': 'Sekunden (Env neu bereitstellen)', 'Risiko': 'Mittel (Konfigurationsfehlrisiko)', 'Wann verwenden': 'Hotfix, wenn Flag-Infrastruktur nicht verfügbar. Nicht für Produktion empfohlen.' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'Warning', label: 'Vor Rollback testen', text: 'Vor dem Revert, immer Regressionstests gegen das Golden Set durchführen. Rollback könnte einen vorher behobenen Bug reintroduzieren, wenn Sie nicht vorsichtig sind. Ein Rollback ist genauso riskant wie ein Deploy, wenn ungetestet.' },
+          { type: 'Pro Tip', label: 'Rollback-Entscheidung automatisieren', text: 'Richten Sie automatisierte Rollback-Trigger ein: wenn Halluzinations-Rate >50% über Baseline spikt, automatisch Git Revert triggern und das Team benachrichtigen. Nicht auf manuelle Entscheidung warten.' },
+        ],
+        snippets: [
+          { type: 'in-one-sentence', text: 'Rollback ist Git Revert: ein neuer Commit, der einen vorherigen Commit rückgängig macht. Null Ausfallzeit, sofort, immer sicher, wenn die vorherige Version getestet war.' },
+        ],
+      },
+
+      teamCollaboration: {
+        id: 'team-collaboration',
+        title: 'Team-Zusammenarbeit und Ownership',
+        content: [
+          '**Ein Prompt-Ownership-Modell verhindert Merge Konflikte und setzt klare Verantwortung durch.** Ordnen Sie einen Prompt-Owner pro Feature-Bereich zu; alle Änderungen gehen durch die Überprüfung dieses Owners. Für große Teams verhindern separate Repos gleichzeitiges Bearbeiten desselben Prompts.',
+        ],
+        items: [
+          'Monorepo (empfohlen für <50 Prompts): einzelnes Git Repo, ein /prompts/ Verzeichnis. Jeder Prompt-Owner hat Vetorecht über Änderungen an seinen Prompts. Ermöglicht enge Kopplung mit Code.',
+          'Separates Prompt-Repository (empfohlen für 50+ Prompts): dediziertes Repo für alle Prompts. Mehrere Teams verwalten verschiedene Prompt-Mengen unabhängig. Release-Zyklen entkoppeln sich vom Anwendungscode. Für das vollständige Ownership-Modell siehe [Prompt Engineering Setup für kleine Teams](/prompt-engineering/prompt-engineering-setup-small-teams?lang=de).',
+          'Ownership-Regeln: ein Ingenieur pro Prompt (Primary Owner). Secondary Reviewer Rolle (Querkontrolle). Kein Merge zu main ohne Primary Owner Genehmigung. Änderungen am Prompt eines anderen Ingenieurs erfordern explizite Erlaubnis.',
+          'Konflikt-Prävention: verschiedene Ingenieure besitzen verschiedene Prompts. Wenn zwei Ingenieure denselben Prompt ändern müssen, koordinieren Sie offline zuerst oder ordnen Sie einen Single Owner zu.',
+        ],
+        callouts: [
+          { type: 'Best Practice', label: 'Ownership zuordnen', text: 'Deklarieren Sie Prompt-Ownership in Code-Kommentaren: „# Owner: alice@company.com" oben in jedem Prompt. Auto-Tag den Owner auf PRs. Ownership = Verantwortung.' },
+          { type: 'Key Point', label: 'Vermeiden Sie gemeinsames Ownership', text: 'Zwei Ingenieure besitzen einen Prompt = Merge Konflikte und Fingerpointing. Ordnen Sie einen Owner pro Prompt zu, auch wenn dies bedeutet, dass jemand ein neues Gebiet lernen muss.' },
+        ],
+      },
+
+      automatedTesting: {
+        id: 'automated-testing',
+        title: 'Automatisiertes Testen vor dem Merge',
+        content: [
+          '**Automatisierte Tests validieren Format, Qualität und Latenz, bevor ein Prompt PR von Menschen überprüft wird.** Vier Test-Typen fangen verschiedene Fehlerklassen: Format-Validierung (JSON-Konformität), Golden Set Vergleich (Output Übereinstimmung), Halluzinations-Flags (sachliche Ansprüche) und Latenz-Checks (Geschwindigkeits-Regression).',
+        ],
+        items: [
+          'Format-Validierung: Output als JSON analysieren, Schema validieren, alle erforderlichen Felder vorhanden. Fängt Breaking Format Änderungen (MAJOR Versionsbumps). Läuft in <1 Sekunde.',
+          'Golden Set Vergleich: Prompt gegen 10-20 repräsentative Test-Eingaben laufen. Output gegen bekannt-gute Antworten vergleichen. Fängt Qualitäts-Regressionen (Reasoning Degradation, Accuracy Drop). Siehe [Prompt Evaluation Metrics](/prompt-engineering/prompt-evaluation-metrics?lang=de) für Bewertungsmethoden über binären Pass/Fail hinaus. Läuft in 5-10 Sekunden.',
+          'Halluzinations-Erkennung: alle sachlichen Ansprüche (Daten, Zahlen, Produktnamen) ohne Bereitstellung von Quellmaterial kennzeichnen. Fängt unbeabsichtigte Halluzinations-Risiken. Läuft in <1 Sekunde.',
+          'Latenz-Check: Prompt-Response-Time messen. Benachrichtigung wenn Latenz >10% über Baseline spikt. Fängt Performance-Regressionen von hinzugefügten Reasoning-Schritten. Läuft in Echtzeit.',
+        ],
+        callouts: [
+          { type: 'Key Point', label: 'Minimum Test-Abdeckung', text: 'Ein Golden Test Set von 10–20 repräsentativen Eingaben ist das absolute Minimum. Größere Prompts, die komplexe Aufgaben verarbeiten, sollten 20-50+ Fälle haben. Jeder Fall umfasst Eingabe, erwartetes Format und erwartetes Verhalten.' },
+          { type: 'Pro Tip', label: 'Use LLM-as-Judge', text: 'Für Qualitäts-Bewertung, verwenden Sie ein anderes LLM, um zu beurteilen, ob Output Erwartungen erfüllt (z. B. „beantwortet dies die Frage genau?"). Robuster als Keyword-Matching.' },
+        ],
+      },
+
+      mistakes: {
+        id: 'mistakes',
+        title: 'Häufige Fehler bei der Prompt-Versionskontrolle',
+        content: [],
+        mistakes: [
+          {
+            mistake: 'Kein Versionierungsschema — Prompts ändern sich, aber Versionen bleiben gleich',
+            problem: 'Stille Breaking Changes. Wenn Output-Format Downstream Parser bricht, wissen Sie nicht, welche Version den Bug einführte. Rollback ist unmöglich ohne manuelle Tests jeder früheren Version.',
+            fix: 'Adoptieren Sie MAJOR.MINOR.PATCH von Tag eins. Taggen Sie jedes Release: git tag v1.0.0. Aktualisieren Sie Version in Prompt-Datei Header bei jeder Änderung. Changelog-Eintrag ist vor dem Merge erforderlich.',
+          },
+          {
+            mistake: 'Speichern von Prompts in Anwendungscode (Inline-Strings)',
+            problem: 'Können Prompts nicht separat überprüfen. Änderungen in Code PRs begraben. Keine Versionshistorie. Kann Prompt nicht zurückrollen ohne Neubereitstellung von Code. Team-Zusammenarbeit unmöglich.',
+            fix: 'Verschieben Sie Prompts zu dedizierten /prompts/ Verzeichnis. Speichern Sie als Textdateien. Importieren Sie in Code. Separate Git-Historien für Prompts und Code. Ermöglicht unabhängige Überprüfung und Versionierung.',
+          },
+          {
+            mistake: 'Kein Changelog — Versionsnummer bumpt aber kein Datensatz was sich geändert hat',
+            problem: 'Sie haben v2.0 vor einer Woche freigegeben. Output ist jetzt kaputt. War es die Format-Änderung oder die Few-Shot-Beispiele? Keine Möglichkeit zu wissen ohne jede Version gegen die nächste zu vergleichen.',
+            fix: 'Erfordern Sie CHANGELOG.md Eintrag für jeden PR. 5 Felder Minimum: Version, Datum, Autor, Änderungstyp, Zusammenfassung. Schreiben Sie es vor der Prompt-Änderung — erzwingt Klarheit der Absicht.',
+          },
+          {
+            mistake: 'Testen nur des Happy Path — keine Edge Cases',
+            problem: 'Golden Test Set hat 3 Fälle: Happy Path (funktioniert fein). Freigabe v2.0. In Produktion, 5% der Eingaben treffen Edge Cases und Output-Format bricht. Jetzt zurückgerollt. Wasted a day.',
+            fix: 'Minimum 10 Golden Test Cases: 4-5 Happy Paths, 3-4 Edge Cases, 2-3 Failure Modes (z. B. „was wenn die Antwort unbekannt ist?"). Decken Sie 80% der realen Input-Verteilung ab.',
+          },
+          {
+            mistake: 'Rollback ohne Testen — alte Version zurückrollen ohne Regressions-Validierung',
+            problem: 'v2.0 ist kaputt. Revert zu v1.5. Aber v1.5 hatte einen Halluzinations-Bug, der in v1.6 behoben wurde, dann wieder in v2.0 eingeführt wurde. Jetzt sehen Nutzer den alten Halluzinations-Bug. Bad Rollback.',
+            fix: 'Führen Sie immer das Golden Test Suite vor dem Merge eines Rollbacks aus. Ein Rollback ist ein Deploy wie jedes andere — behandeln Sie es so. Nicht Testen überspringen, weil es sich „sicher" anfühlt.',
+          },
+        ],
+      },
+
+      regionalConsiderations: {
+        id: 'regional-considerations',
+        title: 'Compliance- und Audit-Anforderungen für Prompt-Änderungen',
+        content: [
+          'Versionskontrolle und Changelogs erfüllen regulatorische Audit-Anforderungen. Die DSGVO erfordert Rechenschaftspflicht bei der Verarbeitung personenbezogener Daten — Versionshistorie und Changelog bieten einen vollständigen Audit-Trail. Artikel 22 DSGVO gilt für Prompts, die automatisierte Entscheidungen treffen (Kreditentscheidungen, Content Moderation); vollständige Versionshistorie ist für 12+ Monate erforderlich.',
+          'Gesundheitswesen und Finanzen: alle Prompt-Versionen und Changelogs müssen für 7+ Jahre (Gesundheitswesen) oder unbegrenzt (regulierte Finanzen) aufbewahrt werden. Verwenden Sie Git + CHANGELOG.md, um jede Änderung zu dokumentieren. Wenn Auditors fragen „wann haben Sie diesen Prompt geändert und warum?" können Sie den genauen Commit, Datum, Autor und Begründung in Sekunden zeigen.',
+          'Sensitive Bereiche: erwägen Sie Code-Signing von Prompts (GPG signieren Sie jeden Git Commit). Ermöglicht kryptographischen Beweis der Urheberschaft. Erfüllt Non-Repudiation-Anforderungen für regulierte Industrien. BSI-Grundschutz-Kataloge und Mittelstand-Konformität: Die Aufrechterhaltung einer kompletten Audit-Trail mit Git-Versionskontrolle und Changelogs ist ein wesentliches Sicherheits-Control, das BSI-Grundschutz erfüllt. Besonders für deutsche Mittelstand-Unternehmen ist dies eine kostengünstige Weise, IT-Compliance ohne teure externe Tools zu demonstrieren.',
+        ],
+      },
+
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Was ist Prompt-Versionskontrolle?',
+            a: 'Prompt-Versionskontrolle ist ein System, das jede Änderung an einem KI-Prompt mit semantischer Versionierung (MAJOR.MINOR.PATCH) verfolgt, sofortiges Rollback zu jeder vorherigen Version ermöglicht und dokumentiert, wer was geändert hat und warum. Es wendet Disziplin der Softwareentwicklung auf Prompt-Verwaltung an — behandelt Prompts als produktiven Code, der überprüft, getestet und versioniert werden muss.',
+          },
+          {
+            q: 'Benötige ich ein separates Git-Repository für Prompts oder kann ich mein bestehendes App-Repository verwenden?',
+            a: 'Beides funktioniert. Verwenden Sie ein Monorepo (einzelnes Repository), wenn Sie weniger als 50 Prompts haben und enge Kopplung zwischen Code und Prompts. Verwenden Sie ein separates Repository, wenn Sie 50+ Prompts haben, unabhängige Release-Zyklen wünschen oder mehrere Teams verschiedene Prompt-Mengen verwalten. Das Wichtigste ist, dass Prompts in einem dedizierten /prompts/ Verzeichnis mit Versionsdatei, Changelog und Test-Fixtures daneben leben — die Struktur ist wichtiger als die Repository-Wahl.',
+          },
+          {
+            q: 'Wie unterscheidet sich Prompt-Versionierung von Modell-Versionierung?',
+            a: 'Modell-Versionierung (GPT-4o vs Claude 4.6 Sonnet) handelt davon, welches zugrunde liegende KI-System Sie verwenden. Prompt-Versionierung handelt davon, Änderungen innerhalb eines einzelnen Prompt-Textes zu verfolgen — Formulierung, Struktur, Beispiele, Einschränkungen. Sie können beide unabhängig versionieren: ein Prompt v2.1 kann gegen Modell GPT-4o bereitgestellt werden und später auf GPT-4o + Claude 4.6 Sonnet aktualisiert werden, ohne die Prompt-Versionsnummer zu ändern.',
+          },
+          {
+            q: 'Welche minimale Größe eines Test-Sets ist gut für einen produktiven Prompt?',
+            a: 'Minimum 10 Golden Test Cases pro Prompt — eine Mischung aus erwarteten Happy Paths (4-5 Fälle), Edge Cases (3-4 Fälle) und Failure Modes (2-3 Fälle). Größere Prompts, die komplexe Aufgaben verarbeiten, sollten 20+ Fälle haben. Jeder Fall umfasst: Eingabe, erwartetes Ausgabeformat und erwartetes Verhalten (z. B. „sollte Halluzinationsrisiko kennzeichnen, wenn das Modell sachliche Ansprüche macht").',
+          },
+          {
+            q: 'Wie handhabe ich Versionierung, wenn derselbe Prompt über verschiedene Modelle verwendet wird?',
+            a: 'Verwenden Sie eine einzelne Prompt-Versionsnummer, aber testen Sie gegen alle Zielmodelle während der PR-Review-Phase. Die Version spiegelt Prompt-Änderungen wider, nicht Modell-Änderungen. Wenn ein Prompt identisch über GPT-4o und Claude 4.6 Sonnet funktioniert, ist es v1.0. Wenn Sie später Claude-spezifische Syntax hinzufügen (Thinking Blocks), erhöhen Sie auf v2.0. Verfolgen Sie Modell-Kompatibilität separat von Prompt-Versionen.',
+          },
+          {
+            q: 'Sollte jede Formulierungsänderung die Version erhöhen?',
+            a: 'Nicht unbedingt. Verwenden Sie die Regel: PATCH-Versionsbumps für Klarstellungen und Tippfehler, die Ausgabeverhalten nicht ändern. MINOR-Bumps für Qualitätsverbesserungen (besseres Reasoning, weniger Halluzinationen, schnellere Response), die rückwärtskompatibel sind. MAJOR-Bumps nur wenn Ausgabeformat, Struktur oder Semantik das Downstream-Parsing brechen. Ein Synonym-Austausch ist ein PATCH; ein Ton-Shift, der Verhalten beeinflusst, ist MINOR.',
+          },
+          {
+            q: 'Welche Tools unterstützen Prompt-Versionskontrolle nativ?',
+            a: 'Git unterstützt nativ Prompt-Versionierung, wenn Sie Prompts als Textdateien speichern. Spezialisierte Tools wie Braintrust, Promptlayer und Vellum fügen integrierte Versionierung, Vergleich und A/B-Testing hinzu. PromptQuorum unterstützt Multi-Modell-Vergleich, der bei der Identifizierung von Breaking Changes hilft. Wählen Sie basierend auf Ihrem Workflow: reines Git, wenn Sie starke Entwicklungspraktiken haben; ein Tool, wenn Sie integrierte Rollback-UI und Version-Branching wünschen.',
+          },
+          {
+            q: 'Wie führe ich ein Prompt-Rollback durch, wenn ich kein Git verwende?',
+            a: 'Verwenden Sie Feature Flags (einfachste Methode): neuen Prompt hinter einem Flag bereitstellen, in Produktion testen, Flag umschalten zum Rollback in Sekunden. Verwenden Sie Umgebungsvariablen: Prompt in einer Env-Variable speichern, Werte zum Zurücksetzen austauschen. Verwenden Sie eine Datenbank: Prompt-Versionen in einer Datenbanktabelle speichern, nach Versionsnummer abfragen. Die langsamste Methode ist Neubereitstellung von altem Code, was Minuten dauert. Feature Flags oder Env-Variablen werden empfohlen — Rollback sollte Sekunden dauern.',
+          },
+          {
+            q: 'Muss ich bei der Verwendung von Prompt-Versionskontrolle die DSGVO beachten?',
+            a: 'Ja. Die DSGVO Artikel 28 erfordert Rechenschaftspflicht bei der Verarbeitung personenbezogener Daten. Prompt-Versionskontrolle erfüllt diese Anforderung durch: (1) vollständige Audit-Trail aller Änderungen (wer, wann, was); (2) lokale Datenspeicherung durch Verwendung dedizierter Repositories; (3) Einhaltung von BSI-Grundschutz-Katalogen für IT-Sicherheit. Die Versionskontrolle selbst ist ein Compliance-Control — zeigen Sie Auditors die Git-Historie und Sie erfüllen DSGVO-Anforderungen an Traceability und Dokumentation.',
+          },
+          {
+            q: 'Ist Prompt-Versionskontrolle für den deutschen Mittelstand geeignet?',
+            a: 'Absolut. Mittelstand-Unternehmen profitieren besonders: (1) IT-Sicherheit ohne zusätzliche Kosten durch Git-basierte Kontrollen und Audit-Trails; (2) BSI-Grundschutz-Konformität durch dedizierte Prompt-Repositories und Versionshistorie; (3) schnelles Rollback bei Problemen — kritisch für kleine IT-Teams ohne 24/7-Support. Empfehlung: beginnen Sie mit einem Monorepo (einfacherer Setup), implementieren Sie 2+ Reviewer-Approval Gates, automatisieren Sie Tests. Für größere Mittelstand-Betriebe (50+ Prompts) wechseln Sie zu einem separaten Prompt-Repository.',
+          },
+        ],
+      },
+
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Literatur',
+        items: [
+          '[So überprüfen Teams Prompts: 7-Punkt-Checkliste & CI/CD Gates](/prompt-engineering/prompt-review-workflow-for-teams?lang=de) — Prompt-Review-Workflow mit automatisierten Qualitäts-Gates',
+          '[Prompt Injection Schwachstellen und wie man sie stoppt](/prompt-engineering/prompt-injection-and-security?lang=de) — Sicherheitschecks während Prompt-PR-Überprüfung',
+          '[Qualitäts-Checks für Prompt-Ausgabe erstellen](/prompt-engineering/build-quality-checks?lang=de) — automatisierte Regressionstests für Prompts',
+          '[Halluzinationen erkennen und verhindern](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de) — Halluzinationen während Regressions-Testen erkennen',
+          '[RTF Framework: Strukturiertes Prompt-Format](/prompt-engineering/rtf-framework?lang=de) — strukturiertes Format, das Versionierung und Parsing vereinfacht',
+        ],
+      },
+
+      sources: {
+        title: 'Quellen',
+        items: [
+          '[NIST AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Bundesrichtlinienrahmen für AI-Systemverfolgbarkeit und Änderungsverwaltung',
+          '[Git Dokumentation: git revert](https://git-scm.com/docs/git-revert) — offizielle Git-Dokumentation zum Zurücksetzen von Commits',
+          '[Semantic Versioning Specification](https://semver.org/) — offizielle MAJOR.MINOR.PATCH Spezifikation',
+          '[Braintrust: Prompt Versioning and A/B Testing](https://www.braintrust.dev/) — spezialisiertes Tool für Prompt-Verwaltung und Tests',
+          '[Promptlayer: Version Control for Prompts](https://www.promptlayer.com/) — Plattform mit integrierter Prompt-Versionierung und Vergleich',
+        ],
+      },
+    },
   },
 
   fr: {
