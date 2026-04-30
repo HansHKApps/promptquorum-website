@@ -236,7 +236,7 @@ export const article: Record<Language, PEArticle> = {
       },
       sharedLibrary: {
         id: 'shared-library',
-        title: 'Building a Shared Prompt Library',
+        title: 'Start a Shared Prompt Library With YAML Files in Git',
         content: [
           '**A shared prompt library is a folder of YAML files in a Git repository, where each file represents one prompt with its metadata, template string, and test set path.** This format is readable by both developers and non-technical teammates, requires no additional tooling, and provides full version history for free.',
           'The minimum viable prompt record needs six fields: `name` (unique identifier), `version` (semantic, e.g. `1.2.0`), `owner` (GitHub username or email), `model` (target model), `template` (the prompt string with `{{variable}}` placeholders), and `last_tested` (ISO date). Add a `test_set_path` field once you have a test set for the prompt.',
@@ -255,7 +255,7 @@ export const article: Record<Language, PEArticle> = {
       },
       versioningTesting: {
         id: 'versioning-testing',
-        title: 'Versioning and Testing Prompts',
+        title: 'Version Prompts Semantically and Test Across 2 Models',
         content: [
           '**Version prompts with semantic version numbers in the YAML file and Git commits for history; test with a 20-case test set scored binary pass/fail before every deploy.** These two practices together catch the majority of prompt regressions before they reach users.',
           'Semantic versioning (`1.0.0 → 1.1.0 → 2.0.0`) makes the impact of changes immediately readable: a minor bump means a wording tweak; a major bump means the output format or task intent changed. Record the reason in the Git commit message alongside the file change.',
@@ -268,7 +268,7 @@ export const article: Record<Language, PEArticle> = {
       },
       modelSelection: {
         id: 'model-selection',
-        title: 'Choosing AI Models for Your Prompts',
+        title: 'Choose GPT-4o for Structured Output, Claude 4.6 Sonnet for Nuance',
         content: [
           '**Start with GPT-4o and Claude 4.6 Sonnet for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
           'GPT-4o (OpenAI) and Claude 4.6 Sonnet (Anthropic) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-4o mini.',
@@ -288,7 +288,7 @@ export const article: Record<Language, PEArticle> = {
       },
       governance: {
         id: 'governance',
-        title: 'Ownership and Review Rules',
+        title: 'Assign One Named Owner to Every Prompt',
         content: [
           '**For teams under 5 people: one named owner per prompt file, changes noted in Git commit messages, no formal review step required. For teams of 5–15: add a pull request review before merging any change to a prompt used in production.** These two tiers cover the governance needs of most small teams without adding unnecessary overhead.',
           'The most common governance failure in small teams is not too little process — it is "everyone owns everything." When nobody is individually accountable for a prompt, regressions stay unfixed because everyone assumes someone else will handle it.',
@@ -306,7 +306,7 @@ export const article: Record<Language, PEArticle> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'One-Week Setup Plan',
+        title: 'Set Up Prompt Engineering in One Week: 6-Step Plan',
         content: '**The fastest path from prompt chaos to a functional team setup is six steps over five working days.** Each step has one concrete deliverable — no partial progress, no "we will finish it next sprint."',
         numberedItems: [
           '**Day 1 — Audit and assign ownership.** List every prompt your team uses. For each, record: where it lives, who wrote it, which model it runs on. Assign one named owner to each prompt. This takes 1–2 hours and immediately exposes prompt sprawl — most teams discover they have 30–50% more prompts than they thought.',
@@ -322,7 +322,7 @@ export const article: Record<Language, PEArticle> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'Common Prompt Engineering Mistakes',
+        title: '5 Common Prompt Engineering Mistakes Small Teams Make',
         content: '**Most small team prompt failures trace back to five repeatable mistakes, each preventable with the components described in this guide.**',
         mistakes: [
           {
