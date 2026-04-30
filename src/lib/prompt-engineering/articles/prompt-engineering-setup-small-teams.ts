@@ -9,11 +9,11 @@ export const article: Record<Language, PEArticle> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-29',
     theme: 'Workflows',
-    title: 'Prompt Engineering Setup for Small Teams: Tools, Workflow & Governance',
-    seoTitle: 'Prompt Engineering for Small Teams: Setup Guide (2026)',
-    metaDescription: 'Set up prompt engineering for a team of 2–15: shared library, Git versioning, multi-model testing, and ownership rules. Step-by-step guide. April 2026.',
-    ogDescription: 'Most small teams manage prompts in Slack threads and scattered docs. A shared library, Git versioning, and a 20-case test harness takes one week to set up. Here is how.',
-    twitterDescription: 'Small team prompt setup in 5 days: shared library, versioning, multi-model tests, clear ownership. No enterprise budget needed.',
+    title: 'Prompt Engineering Setup for Small Teams (2026)',
+    seoTitle: 'Prompt Engineering for Small Teams: Tools & Workflow (2026)',
+    metaDescription: 'Learn how to set up prompt engineering for small teams: shared YAML library, Git versioning, 20-case test set, and ownership rules. Full setup in one week.',
+    ogDescription: 'Small team prompt engineering setup: shared prompt library, Git versioning, multi-model testing with PromptQuorum, and ownership rules. Operational in one week.',
+    twitterDescription: 'Prompt chaos → structured setup in one week. YAML library, Git versioning, 20-case test set, and named owners. For teams of 2–15.',
     intro: '**Small teams that manage prompts in Slack threads, personal notebooks, and copy-paste chains face the same three problems: duplicated work, undocumented regressions, and no way to compare which model performs best on their tasks.** A structured prompt engineering setup solves all three with a shared library, versioning, and a test harness. This guide shows you how to build it in one week.',
     leadAnswerBlock: '**A prompt engineering setup for small teams needs four things: a shared prompt library, version control, a test harness, and clear ownership rules.** Teams of 2–15 can be fully operational in one week using free tools and a multi-model testing platform.',
     publishDate: '2026-04-29',
@@ -30,16 +30,15 @@ export const article: Record<Language, PEArticle> = {
       'Teams of 2–5 can implement the full setup in this guide using only free tools: Git, VS Code, and a shared API key',
     ],
     toc: [
-      { label: 'Key Takeaways',                                       anchor: '#key-takeaways' },
-      { label: 'What Does a Prompt Engineering Setup Include?',       anchor: '#what-is-prompt-setup' },
-      { label: 'Which Setup Level Matches Your Team Size?',           anchor: '#team-size' },
-      { label: 'Which Tools Does a Small Team Need?',                 anchor: '#tool-stack' },
-      { label: 'How Do You Build a Shared Prompt Library?',          anchor: '#shared-library' },
-      { label: 'How Should Small Teams Version and Test Prompts?',   anchor: '#versioning-testing' },
-      { label: 'How Do Small Teams Choose AI Models?',               anchor: '#model-selection' },
-      { label: 'What Ownership Rules Does a Small Team Need?',       anchor: '#governance' },
-      { label: 'How To Set Up Prompt Engineering in One Week',       anchor: '#how-to-start' },
-      { label: 'What Are the Most Common Mistakes?',                 anchor: '#common-mistakes' },
+      { label: 'What a Prompt Engineering Setup Includes',            anchor: '#what-is-prompt-setup' },
+      { label: 'Setup Levels by Team Size',                           anchor: '#team-size' },
+      { label: 'Tool Stack for Small Team Prompt Engineering',        anchor: '#tool-stack' },
+      { label: 'Building a Shared Prompt Library',                   anchor: '#shared-library' },
+      { label: 'Versioning and Testing Prompts',                     anchor: '#versioning-testing' },
+      { label: 'Choosing AI Models for Your Prompts',                anchor: '#model-selection' },
+      { label: 'Ownership and Review Rules',                         anchor: '#governance' },
+      { label: 'One-Week Setup Plan',                                anchor: '#how-to-start' },
+      { label: 'Common Prompt Engineering Mistakes',                 anchor: '#common-mistakes' },
       { label: 'Frequently Asked Questions',                         anchor: '#faq' },
       { label: 'Related Reading',                                    anchor: '#related-reading' },
       { label: 'Sources',                                            anchor: '#sources' },
@@ -47,8 +46,8 @@ export const article: Record<Language, PEArticle> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Prompt Engineering Setup for Small Teams: Tools, Workflow & Governance',
-      description: 'Set up prompt engineering for a team of 2–15: shared library, versioning, multi-model testing, and ownership rules. Step-by-step guide. April 2026.',
+      headline: 'Prompt Engineering Setup for Small Teams (2026)',
+      description: 'Learn how to set up prompt engineering for small teams: shared YAML library, Git versioning, 20-case test set, and ownership rules. Full setup in one week.',
       author:    { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
@@ -150,6 +149,11 @@ export const article: Record<Language, PEArticle> = {
       ],
     },
     sections: {
+      tldrCallout: {
+        callouts: [
+          { type: 'tldr', label: 'TL;DR', text: 'A small team prompt engineering setup needs four things: a shared YAML prompt library in Git, version control with semantic versioning, a 20-case test set with binary pass/fail scoring, and one named owner per prompt. Teams of 2–4 can skip formal review; teams of 5–15 add PR reviews. Run every production prompt against GPT-4o and Claude before deploying. Full setup takes one week.' },
+        ],
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -166,7 +170,7 @@ export const article: Record<Language, PEArticle> = {
       },
       whatIs: {
         id: 'what-is-prompt-setup',
-        title: 'What Does a Prompt Engineering Setup for Small Teams Include?',
+        title: 'What a Prompt Engineering Setup Includes',
         content: [
           '**A prompt engineering setup for small teams is the combination of four systems: a shared prompt library, a version control workflow, a test harness, and ownership rules.** Together, these four prevent the most common failure mode — multiple people editing the same prompts without coordination, leading to silent regressions.',
           'Most small teams skip the setup entirely until something breaks in production. By then, the damage is done: prompts that worked last week fail silently, nobody knows who changed what, and debugging requires reconstructing history from memory.',
@@ -189,7 +193,7 @@ export const article: Record<Language, PEArticle> = {
       },
       teamSize: {
         id: 'team-size',
-        title: 'Which Setup Level Matches Your Team Size?',
+        title: 'Setup Levels by Team Size',
         content: '**The right level of process depends directly on team size — too little and prompts break silently, too much and your team spends more time on process than building.** Match your setup to your headcount and adjust as the team grows.',
         columns: ['Team size', 'Recommended setup', 'Skip for now'],
         rows: [
@@ -205,7 +209,7 @@ export const article: Record<Language, PEArticle> = {
       },
       toolStack: {
         id: 'tool-stack',
-        title: 'Which Tools Does a Small Team Need for Prompt Engineering?',
+        title: 'Tool Stack for Small Team Prompt Engineering',
         content: [
           '**Most small teams need only three tools: a code editor for writing prompts, Git for version control, and a multi-model testing platform for comparing outputs.** Everything else is optional until a specific constraint makes it necessary.',
           'The table below lists the tools most commonly used by teams of 2–15 people. Start with the first three and add others only when you hit their specific limitations.',
@@ -231,7 +235,7 @@ export const article: Record<Language, PEArticle> = {
       },
       sharedLibrary: {
         id: 'shared-library',
-        title: 'How Do You Build a Shared Prompt Library for a Small Team?',
+        title: 'Building a Shared Prompt Library',
         content: [
           '**A shared prompt library is a folder of YAML files in a Git repository, where each file represents one prompt with its metadata, template string, and test set path.** This format is readable by both developers and non-technical teammates, requires no additional tooling, and provides full version history for free.',
           'The minimum viable prompt record needs six fields: `name` (unique identifier), `version` (semantic, e.g. `1.2.0`), `owner` (GitHub username or email), `model` (target model), `template` (the prompt string with `{{variable}}` placeholders), and `last_tested` (ISO date). Add a `test_set_path` field once you have a test set for the prompt.',
@@ -250,7 +254,7 @@ export const article: Record<Language, PEArticle> = {
       },
       versioningTesting: {
         id: 'versioning-testing',
-        title: 'How Should a Small Team Version and Test Prompts?',
+        title: 'Versioning and Testing Prompts',
         content: [
           '**Version prompts with semantic version numbers in the YAML file and Git commits for history; test with a 20-case test set scored binary pass/fail before every deploy.** These two practices together catch the majority of prompt regressions before they reach users.',
           'Semantic versioning (`1.0.0 → 1.1.0 → 2.0.0`) makes the impact of changes immediately readable: a minor bump means a wording tweak; a major bump means the output format or task intent changed. Record the reason in the Git commit message alongside the file change.',
@@ -263,7 +267,7 @@ export const article: Record<Language, PEArticle> = {
       },
       modelSelection: {
         id: 'model-selection',
-        title: 'How Do Small Teams Choose Which AI Models to Use for Their Prompts?',
+        title: 'Choosing AI Models for Your Prompts',
         content: [
           '**Start with GPT-4o and Claude 4.6 Sonnet for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
           'GPT-4o (OpenAI) and Claude 4.6 Sonnet (Anthropic) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-4o mini.',
@@ -283,7 +287,7 @@ export const article: Record<Language, PEArticle> = {
       },
       governance: {
         id: 'governance',
-        title: 'What Ownership and Review Rules Does a Small Team Need for Prompts?',
+        title: 'Ownership and Review Rules',
         content: [
           '**For teams under 5 people: one named owner per prompt file, changes noted in Git commit messages, no formal review step required. For teams of 5–15: add a pull request review before merging any change to a prompt used in production.** These two tiers cover the governance needs of most small teams without adding unnecessary overhead.',
           'The most common governance failure in small teams is not too little process — it is "everyone owns everything." When nobody is individually accountable for a prompt, regressions stay unfixed because everyone assumes someone else will handle it.',
@@ -301,7 +305,7 @@ export const article: Record<Language, PEArticle> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'How To Set Up Prompt Engineering for Your Team in One Week',
+        title: 'One-Week Setup Plan',
         content: '**The fastest path from prompt chaos to a functional team setup is six steps over five working days.** Each step has one concrete deliverable — no partial progress, no "we will finish it next sprint."',
         numberedItems: [
           '**Day 1 — Audit and assign ownership.** List every prompt your team uses. For each, record: where it lives, who wrote it, which model it runs on. Assign one named owner to each prompt. This takes 1–2 hours and immediately exposes prompt sprawl — most teams discover they have 30–50% more prompts than they thought.',
@@ -317,7 +321,7 @@ export const article: Record<Language, PEArticle> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'What Are the Most Common Team Prompt Engineering Mistakes?',
+        title: 'Common Prompt Engineering Mistakes',
         content: '**Most small team prompt failures trace back to five repeatable mistakes, each preventable with the components described in this guide.**',
         mistakes: [
           {
@@ -405,12 +409,46 @@ export const article: Record<Language, PEArticle> = {
           '[OpenAI API Pricing (April 2026)](https://openai.com/api/pricing) — GPT-4o and GPT-4o mini input/output token rates used for cost estimates in this article',
           '[Anthropic API Pricing (April 2026)](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet and Claude 4.5 Haiku token rates',
           '[Google Gemini API Pricing (April 2026)](https://ai.google.dev/pricing) — Gemini 2.5 Pro context window and token rates',
+          '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Principles of shared code ownership and governance applicable to shared prompt libraries',
+          '[NIST AI Risk Management Framework (AI RMF)](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Governance principles for AI systems in organisations of all sizes',
         ],
       },
     },
   },
-  de: { theme: 'Workflows', sections: {} },
-  fr: { theme: 'Workflows', sections: {} },
-  ja: { theme: 'Workflows', sections: {} },
-  zh: { theme: 'Workflows', sections: {} },
+  de: {
+    theme: 'Workflows',
+    title: 'Prompt-Engineering-Setup für kleine Teams (2026)',
+    seoTitle: 'Prompt-Engineering-Setup für kleine Teams: Tools & Workflow (2026)',
+    metaDescription: 'Prompt-Engineering für kleine Teams einrichten: YAML-Bibliothek, Git-Versionierung, 20-Testfälle und Ownership-Regeln. Komplett in einer Woche.',
+    ogDescription: 'Prompt-Engineering-Setup für Teams von 2–15: Shared Library, Git-Versionierung, Multi-Modell-Tests mit PromptQuorum und klare Ownership. In einer Woche einsatzbereit.',
+    twitterDescription: 'Vom Prompt-Chaos zum strukturierten Setup in einer Woche. YAML-Library, Git, 20-Testfälle, Named Owners. Für Teams von 2–15.',
+    sections: {},
+  },
+  fr: {
+    theme: 'Workflows',
+    title: 'Setup Prompt Engineering pour Petites Équipes (2026)',
+    seoTitle: 'Setup Prompt Engineering pour Petites Équipes : Outils & Workflow (2026)',
+    metaDescription: 'Mettre en place le prompt engineering pour petites équipes : bibliothèque YAML, versioning Git, 20 cas de test et règles d\'ownership. Setup complet en une semaine.',
+    ogDescription: 'Setup prompt engineering pour équipes de 2–15 : bibliothèque partagée, versioning Git, tests multi-modèles avec PromptQuorum et ownership. Opérationnel en une semaine.',
+    twitterDescription: 'Du chaos de prompts à un setup structuré en une semaine. Bibliothèque YAML, Git, 20 cas de test, owners désignés. Équipes de 2–15.',
+    sections: {},
+  },
+  ja: {
+    theme: 'Workflows',
+    title: '小規模チーム向けプロンプトエンジニアリングセットアップ（2026年）',
+    seoTitle: '小規模チーム向けプロンプトエンジニアリング：ツールとワークフロー（2026年）',
+    metaDescription: '小規模チームのプロンプトエンジニアリング構築：YAML共有ライブラリ、Gitバージョン管理、20件テストセット、オーナーシップルール。1週間で完了。',
+    ogDescription: '2〜15人チーム向けプロンプトエンジニアリング：共有ライブラリ、Gitバージョン管理、PromptQuorumでマルチモデルテスト。1週間で運用開始。',
+    twitterDescription: 'プロンプトの混乱から1週間で構造化セットアップへ。YAMLライブラリ、Git、20テストケース、オーナー指定。2〜15人チーム向け。',
+    sections: {},
+  },
+  zh: {
+    theme: 'Workflows',
+    title: '小团队Prompt工程设置（2026）',
+    seoTitle: '小团队Prompt工程设置：工具与工作流（2026）',
+    metaDescription: '小团队Prompt工程搭建：YAML共享库、Git版本控制、20条测试集和Ownership规则。一周内完成全部设置。',
+    ogDescription: '2–15人团队Prompt工程：共享库、Git版本控制、PromptQuorum多模型测试和Ownership规则。一周内投入运营。',
+    twitterDescription: '从Prompt混乱到结构化设置，仅需一周。YAML库、Git、20条测试集、指定Owner。适合2–15人团队。',
+    sections: {},
+  },
 };
