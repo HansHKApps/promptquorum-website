@@ -1771,27 +1771,434 @@ jobs:
     freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
     title: 'Prompt版本控制：语义化版本、Git与回滚策略（2026）',
-    intro: '使用语义版本控制（MAJOR.MINOR.PATCH）和 Git 工作流追踪 AI Prompt 的每项变更。实现即时回滚、团队协作和回归检测——应用于代码的同一纪律，现在应用于 Prompt。',
+    intro: '**使用语义版本控制（MAJOR.MINOR.PATCH）和Git工作流追踪AI Prompt的每项变更。** 实现即时回滚、团队协作和回归检测——应用于代码的同一纪律，现在应用于Prompt。本指南涵盖语义版本控制方案、Git分支工作流、变更日志格式、回滚策略和生产Prompt系统的自动化测试模式。',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
-    audience: '在生产环境管理 LLM Prompt 的开发者、Prompt 工程师、技术主管',
-    seoTitle: 'Prompt版本控制：语义化版本、Git与回滚策略（2026）',
-    metaDescription: '用MAJOR.MINOR.PATCH管理Prompt版本：Git工作流、变更日志、回滚策略和自动化回归测试。完整生产环境工作流指南。',
+    audience: '在生产环境管理LLM Prompt的开发者、Prompt工程师、工程团队主管',
+    primaryTerm: 'Prompt版本控制',
+    toc: [
+      { label: '静默回归与为什么版本控制可以防止它们', anchor: 'why-version-control' },
+      { label: 'AI提示的语义版本控制', anchor: 'semantic-versioning' },
+      { label: '提示变更的Git工作流', anchor: 'git-workflow' },
+      { label: '必需的变更日志字段', anchor: 'changelog' },
+      { label: '回滚策略', anchor: 'rollback' },
+      { label: '团队协作和所有权', anchor: 'team-collaboration' },
+      { label: '合并前的自动化测试', anchor: 'automated-testing' },
+      { label: 'Prompt版本控制的常见错误', anchor: 'mistakes' },
+      { label: 'Prompt变更的合规性和审计要求', anchor: 'regional-considerations' },
+      { label: '常见问题', anchor: 'faq' },
+      { label: '相关阅读', anchor: 'related-reading' },
+      { label: '参考资源', anchor: 'sources' },
+    ],
+    seoTitle: 'Prompt版本控制：语义版本、Git与回滚',
+    metaDescription: 'Prompt版本管理指南：MAJOR.MINOR.PATCH版本控制、Git工作流、变更日志、回滚策略和自动化测试。生产环境完整方案。',
     readTime: '阅读约 10 分钟',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Prompt版本控制：语义化版本、Git与回滚策略（2026）',
-      description: '用MAJOR.MINOR.PATCH管理Prompt版本：Git工作流、变更日志、回滚策略和自动化回归测试。完整生产环境工作流指南。',
+      description: '无版本的Prompt会无声地失败——没有历史就没有回滚。将MAJOR.MINOR.PATCH版本控制、Git分支工作流和自动化回归测试应用到每项Prompt变更。',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
       inLanguage: 'zh',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com/about' },
       url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows?lang=zh',
-      publisher: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      keywords: ['Prompt版本控制', 'Prompt管理', 'Git工作流', '语义版本控制', '回滚', '变更日志', '回归测试'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Git' },
+        { '@type': 'SoftwareApplication', name: 'GitHub' },
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+      ],
+      about: [
+        { '@type': 'Thing', name: 'Prompt版本控制', description: '使用MAJOR.MINOR.PATCH语义版本控制追踪AI Prompt的每项变更、支持即时回滚到任何之前版本、记录作者和修改理由的系统。' },
+        { '@type': 'Thing', name: 'Prompt Git工作流', description: '镜像代码开发实践的分支和审查策略——功能分支、拉取请求、自动化测试和多评审人批准门控。' },
+        { '@type': 'Thing', name: 'Prompt回滚策略', description: '通过git revert、功能标志或环境变量将Prompt即时恢复到先前版本的部署机制。' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways']
+      }
     },
-    toc: [],
-    sections: {},
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '如何为Prompt变更设置Git工作流',
+      inLanguage: 'zh',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: '为您的Prompt变更创建功能分支：git checkout -b feature/description' },
+        { '@type': 'HowToStep', position: 2, name: '编辑Prompt文件并在头注释中更新版本号（MAJOR.MINOR.PATCH）' },
+        { '@type': 'HowToStep', position: 3, name: '针对至少10个代表性输入的Golden Test Set运行自动化回归测试' },
+        { '@type': 'HowToStep', position: 4, name: '打开拉取请求进行审查；审查人检查清晰度、幻觉风险、输出格式和安全性' },
+        { '@type': 'HowToStep', position: 5, name: '获得2个以上审查人批准后，合并到main；标记版本：git tag v2.0.0 -m 描述' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '什么是Prompt版本控制？',
+          acceptedAnswer: { '@type': 'Answer', text: 'Prompt版本控制是一种系统，使用语义版本控制（MAJOR.MINOR.PATCH）追踪AI Prompt的每项变更、支持即时回滚到任何之前版本、记录谁做了什么更改以及为什么。它将软件开发的纪律应用于Prompt管理——将Prompt视为必须经过审查、测试和版本控制的生产代码。' },
+        },
+        {
+          '@type': 'Question',
+          name: '我需要为Prompt创建独立的git仓库还是可以使用现有的应用仓库？',
+          acceptedAnswer: { '@type': 'Answer', text: '两者都可以。如果Prompt数量少于50且代码与Prompt紧密耦合，使用单一仓库（Monorepo）。如果Prompt数量50+、需要独立发布周期或多个团队管理不同的Prompt集合，使用独立仓库。关键是Prompt位于专用的/prompts/目录中，旁边有版本文件、变更日志和测试装置——结构比仓库选择更重要。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Prompt版本控制和模型版本控制有何不同？',
+          acceptedAnswer: { '@type': 'Answer', text: '模型版本控制（GPT-4o vs Claude 4.6 Sonnet）涉及使用的底层AI系统。Prompt版本控制涉及追踪单个Prompt文本内的变更——措辞、结构、例子、约束。两者可独立版本控制：Prompt v2.1可能针对GPT-4o部署，后来升级到GPT-4o + Claude 4.6 Sonnet而无需更改Prompt版本号。' },
+        },
+        {
+          '@type': 'Question',
+          name: '生产Prompt的好的最小测试套件大小是多少？',
+          acceptedAnswer: { '@type': 'Answer', text: '每个Prompt最少10个Golden Test Case——期望的成功路径（4-5个）、边界情况（3-4个）和失败模式（2-3个）的混合。处理复杂任务的较大Prompt应该有20+个案例。每个案例包括：输入、期望输出格式和期望行为（例如"如果模型做出事实声称应标记幻觉风险"）。' },
+        },
+        {
+          '@type': 'Question',
+          name: '当同一Prompt用于不同模型时如何处理版本控制？',
+          acceptedAnswer: { '@type': 'Answer', text: '使用单一Prompt版本号，但在PR审查阶段针对所有目标模型进行测试。版本反映Prompt变更，而非模型变更。如果Prompt在GPT-4o和Claude 4.6 Sonnet上功能相同则为v1.0。如果之后添加Claude特定语法（thinking blocks）则升级到v2.0。单独追踪模型兼容性与Prompt版本。' },
+        },
+        {
+          '@type': 'Question',
+          name: '是否应该每个措辞变更都提升版本？',
+          acceptedAnswer: { '@type': 'Answer', text: '不一定。规则：不改变输出行为的澄清和修正拼写错误是PATCH。改进品质但保持向后兼容（更好的推理、更少幻觉、更快响应）是MINOR。只有输出格式、结构或语义破坏下游解析时才是MAJOR。同义词交换是PATCH；影响行为的语气转变是MINOR。' },
+        },
+        {
+          '@type': 'Question',
+          name: '哪些工具本地支持Prompt版本控制？',
+          acceptedAnswer: { '@type': 'Answer', text: '如果将Prompt存储为文本文件，Git本地支持Prompt版本控制。Braintrust、Promptlayer和Vellum等专门工具添加内置版本控制、比较和A/B测试。PromptQuorum支持多模型比较，有助于识别破坏性变更。根据工作流选择：如果有强大的开发实践则纯Git；如果需要内置回滚UI和版本分支则用工具。' },
+        },
+        {
+          '@type': 'Question',
+          name: '不使用Git时如何回滚Prompt？',
+          acceptedAnswer: { '@type': 'Answer', text: '使用功能标志（最简单）：在标志后部署新Prompt、在生产中测试、切换标志以在秒内回滚。使用环境变量：在env变量中存储Prompt、交换值以恢复。使用数据库：在数据库表中存储Prompt版本、按版本号查询。最慢的方法是重新部署旧代码，需要数分钟。推荐功能标志或环境变量——回滚应该在秒内完成。' },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Prompt回滚方法',
+      inLanguage: 'zh',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Git Revert', description: '即时（秒）、零停机时间、需要基于git的部署。适用于大多数团队。' },
+        { '@type': 'ListItem', position: 2, name: '功能标志', description: '即时（秒）、零停机时间，但需要标志基础设施。如果标志已部署则最佳。' },
+        { '@type': 'ListItem', position: 3, name: '环境变量', description: '即时（秒）、中等风险、易于实现。适用于紧急修复。' },
+      ],
+    },
+    quickFacts: [
+      'Prompt语义版本控制：破坏性输出格式变更时MAJOR、品质改进时MINOR、拼写修复时PATCH',
+      'Prompt上的git revert耗时秒数；无版本历史的重新测试耗时小时',
+      'Prompt变更日志需要5个字段：版本、日期、作者、变更类型（MAJOR/MINOR/PATCH）和期望输出增量',
+      '在手动审查前对≥10个Golden Test Case运行自动化回归测试',
+      'Prompt的三种分支模式：feature/（新功能）、fix/（回归）、experiment/（A/B测试）',
+    ],
+    sections: {
+      tldr: {
+        title: '核心要点',
+        isTldr: true,
+        content: [
+          '**速览：** 无版本的Prompt会无声地失败——当输出质量下降时，没有历史来显示变更内容。使用MAJOR.MINOR.PATCH进行版本控制。通过Git部署：功能分支→PR→自动化回归测试→手动审查→合并。需要2个以上批准。标记版本：`git tag v2.0.0`。通过git revert（秒）实现即时回滚，而不是重新测试（小时）。',
+        ],
+        items: [
+          '无版本的Prompt导致无声回归——输出质量下降但error log不记录变更；版本历史解决这一问题。',
+          '语义版本控制方案：破坏性输出格式变更时MAJOR（JSON→markdown）、品质改进时MINOR（更好的推理）、拼写错误时PATCH。',
+          '在专用的/prompts/目录中存储Prompt，旁边有版本文件、测试装置和变更日志。',
+          'Git工作流：功能分支→编辑Prompt+提升版本→自动化测试（≥10个Golden Cases）→打开PR→2个以上审查人批准→合并+标记版本。',
+          '自动化回归测试必须验证：输出格式（JSON合规）、质量（幻觉标志）和延迟（响应时间低于阈值）。',
+          '三种回滚方法：git revert（即时、首选）、功能标志（如已部署则零停机）、环境变量（简单但中等风险）。',
+          '团队模式：按功能领域分配一名Prompt所有者；所有变更均需所有者批准；紧密耦合时用单一仓库，50+个Prompt时用独立仓库。',
+        ],
+      },
+
+      whyVersionControl: {
+        id: 'why-version-control',
+        title: '静默回归与为什么版本控制可以防止它们',
+        content: [
+          '**无版本的Prompt会无声地失败——当输出质量下降时，没有历史来显示变更内容。** 在软件中，运行时错误会抛出异常。对于Prompt，输出质量逐渐下降：推理变得不连贯、幻觉增加、格式合规性破坏。没有版本历史，回归是不可检测的，直到它到达生产并损害用户体验。请参阅[如何检测和防止AI幻觉](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh)了解检测策略。',
+          '在没有版本控制的情况下会发生三种失败模式：(1) **无声质量下降** ——一个看起来无害的同义词变更实际上损害了推理。没有error log。没有警报。质量指标缓慢下降，没有人意识到Prompt变更导致了这一点。(2) **格式破坏** ——输出从JSON变为markdown，下游解析器无声失败。(3) **协作冲突** ——两名工程师同时编辑相同的Prompt，一人覆盖另一人的变更而不注意。',
+          '版本控制通过记录每项变更、启用即时回滚和强制执行审查门控来解决所有三个问题。当回归发生时，您可以在几秒内将Prompt与先前版本进行比较，并识别破坏它的确切变更。',
+        ],
+        callouts: [
+          { type: 'Warning', label: '无声失败', text: 'Prompt无声失败。没有error log，没有异常。输出质量下降对用户来说是不可见的，直到它在生产中损害体验。Git log是您唯一的审计线索。' },
+          { type: 'Did You Know', label: '同义词风险', text: '将"最重要的原因"改为"主要因素"可以改变5-10%输入的推理质量。一个看起来安全的同义词交换破坏了生产——版本历史在几分钟内曝露了它。' },
+        ],
+        snippets: [
+          { type: 'in-one-sentence', text: 'Prompt版本控制是一种系统，追踪AI Prompt的每项变更、支持回滚到任何先前版本，并记录作者和每次修改的理由。' },
+          { type: 'in-plain-terms', text: '像对待代码一样对待Prompt：每项变更都经过PR、经过测试、需要批准并用版本号标记。当出现问题时，git revert能在秒内解决，而不是花费小时重新测试。' },
+        ],
+      },
+
+      semanticVersioning: {
+        id: 'semantic-versioning',
+        title: 'AI提示的语义版本控制',
+        content: [
+          '**Prompt语义版本控制使用MAJOR.MINOR.PATCH——破坏性输出格式变更会升高MAJOR，质量改进会升高MINOR，拼写修复会升高PATCH。** 该方案与代码的语义版本控制相同，但适用于Prompt文本而非软件版本。',
+          '版本控制规则很简单：如果下游系统（解析器、API或期望特定格式的用户）会破坏，升高MAJOR。如果输出改进但保持兼容，升高MINOR。如果对用户透明（拼写修复、澄清意图），升高PATCH。',
+        ],
+        columns: ['变更类型', '何时升高', '示例', '向后兼容？'],
+        rows: [
+          { '变更类型': 'MAJOR', '何时升高': '破坏性输出格式变更', '示例': '将输出从"Q: ... A: ..."改为JSON {"question": "...", "answer": "..."}', '向后兼容？': '否' },
+          { '变更类型': 'MINOR', '何时升高': '品质改进（更好的推理、更少幻觉、更快延迟）', '示例': '添加少样本示例以减少幻觉而不改变格式', '向后兼容？': '是' },
+          { '变更类型': 'PATCH', '何时升高': '拼写修复、澄清、不影响行为的措辞变更', '示例': '将"简要总结"改为"用2-3句话总结"', '向后兼容？': '是' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'Key Point', label: 'MAJOR触发', text: '如果解析输出的下游系统会破坏，升高MAJOR：格式变更（markdown→JSON）、结构变更（单字符串→数组）或语义变更（指令含义变更）。有关实施schema合规性，请参阅[结构化输出和JSON模式](/prompt-engineering/structured-output-json-mode?lang=zh)。' },
+          { type: 'Pro Tip', label: '在Git中标记版本', text: '合并Prompt变更后，标记版本：git tag v2.1.0 -m "通过少样本示例改进日期推理"。在变更日志和部署文档中参考该标记。' },
+        ],
+        snippets: [
+          { type: 'in-plain-terms', text: 'MAJOR = 用户注意到系统破坏。MINOR = 用户注意到但保持兼容。PATCH = 用户不注意到。' },
+        ],
+      },
+
+      gitWorkflow: {
+        id: 'git-workflow',
+        title: '提示变更的Git工作流',
+        content: [
+          '**Prompt的完整Git工作流遵循与代码相同的5个步骤：功能分支→编辑和测试→PR→审查→合并→标记版本。** 该工作流防止无声回归、实现协作并记录每项变更。',
+        ],
+        numberedItems: [
+          '创建功能分支：`git checkout -b feature/add-json-output`或`fix/date-hallucination`。使用描述性名称。',
+          '编辑Prompt文件。在头注释中更新版本号：v1.0.0→v2.0.0（如果是MAJOR变更）。向/prompts/tests/添加测试用例。',
+          '运行自动化回归测试：`npm run test:prompts`。必须通过格式验证、golden set比较和幻觉检查。需要≥10个测试用例。',
+          '打开拉取请求。审查人验证：清晰度（意图是否明确？）、幻觉风险（事实声称是否有来源？）、格式合规性（输出是否符合schema？）、安全性（注入向量？）。使用[7点Prompt审查检查表](/prompt-engineering/prompt-review-workflow-for-teams?lang=zh)获取标准化标准。',
+          '获得2个以上审查人批准后，合并到main。标记版本：`git tag v2.0.0 -m "通过少样本示例改进日期处理"`。通过CI/CD自动部署。',
+        ],
+        codeBlock: `name: Prompt Regression Tests
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run prompt tests
+        run: npm run test:prompts -- --coverage
+      - name: Validate format
+        run: npm run test:format -- prompts/
+      - name: Check hallucination flags
+        run: npm run test:hallucination -- prompts/`,
+        codeLanguage: 'yaml',
+        callouts: [
+          { type: 'Pro Tip', label: '目录结构', text: '在/prompts/中存储Prompt，test fixtures放在旁边：/prompts/my-prompt.txt、/prompts/tests/my-prompt.golden.json、/prompts/CHANGELOG.md。将版本保留在Prompt文件顶部的注释中。' },
+          { type: 'Best Practice', label: '批准门控', text: '生产Prompt需要2个以上批准：领域专家（理解意图）和测试工程师（验证测试覆盖）。在GitHub中使用分支保护规则。' },
+        ],
+      },
+
+      changelog: {
+        id: 'changelog',
+        title: '必需的变更日志字段',
+        content: [
+          '**Prompt变更日志记录每项版本变更、何时发生、由谁发起以及原因。** 变更日志条目需要5个字段：版本号、发布日期、作者、变更类型（MAJOR/MINOR/PATCH）和期望输出增量的摘要。',
+        ],
+        columns: ['字段', '必需', '示例'],
+        rows: [
+          { '字段': 'version', '必需': '是', '示例': 'v2.1.0' },
+          { '字段': 'date', '必需': '是', '示例': '2026-04-30' },
+          { '字段': 'author', '必需': '是', '示例': 'alice@company.com' },
+          { '字段': 'change_type', '必需': '是', '示例': 'MINOR（质量改进）' },
+          { '字段': 'summary', '必需': '是', '示例': '添加3个少样本示例以减少基于日期问题的幻觉。输出格式未改变。' },
+        ],
+        tableFormat: true,
+        codeBlock: `# 变更日志
+
+## v2.1.0 — 2026-04-30 (alice@company.com) — MINOR
+
+**变更：** 添加3个少样本示例以减少基于日期问题的幻觉。
+**输出增量：** 格式未改变（仍为JSON）。质量改进：幻觉率在日期解析测试集上从8%降至2%。
+**向后兼容：** 是。现有系统不受影响。
+**PR：** #1427
+
+## v2.0.0 — 2026-04-28 (bob@company.com) — MAJOR
+
+**变更：** 将输出格式从markdown（"Q: ... A: ..."）改为JSON（{"question": "...", "answer": "..."}）。
+**输出增量：** 格式已更改。所有下游解析器必须更新。
+**向后兼容：** 否。需要部署协调。
+**PR：** #1425`,
+        codeLanguage: 'markdown',
+        callouts: [
+          { type: 'Best Practice', label: '在做变更BEFORE写变更日志', text: '首先编写CHANGELOG.md条目——这强制了清晰性。如果您无法用2句话解释为什么这项变更很重要，那么该变更本身可能是不必要的。变更日志清晰度 = 代码清晰度。' },
+          { type: 'Key Point', label: '5字段最低', text: '每条变更日志条目必须包含所有5个字段。如果您无法记录它，请不要部署它。' },
+        ],
+      },
+
+      rollback: {
+        id: 'rollback',
+        title: '回滚策略',
+        content: [
+          '**Git Revert是默认的回滚方法——耗时秒数，零风险。** 了解3个回滚触发因素：生产质量下降（幻觉率飙升）、发现安全问题或模型兼容性破坏（新模型不适配此Prompt）。',
+        ],
+        items: [
+          '触发：v2.1部署后，生产幻觉率从2%飙升到8%',
+          '触发：v2.0输出格式破坏下游解析器（5%的请求失败）',
+          '触发：发现安全错误——Prompt易受注入攻击',
+          '触发：新模型（Claude 5.0）与Prompt结构不兼容；回滚并重构',
+        ],
+        columns: ['回滚方法', '速度', '风险', '何时使用'],
+        rows: [
+          { '回滚方法': 'git revert v2.1.0', '速度': '秒（即时）', '风险': '低（提交回滚提交）', '何时使用': '所有回滚的标准。需要基于git的部署。' },
+          { '回滚方法': '功能标志 OFF', '速度': '秒（切换标志）', '风险': '零（不需要部署）', '何时使用': '如果功能标志已部署。零停机时间回滚的最佳选择。' },
+          { '回滚方法': '环境变量交换', '速度': '秒（重新部署env）', '风险': '中（配置错误风险）', '何时使用': '标志基础设施不可用时的紧急修复。不建议用于生产。' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'Warning', label: '回滚前测试', text: '回滚前，始终针对golden set运行回归测试。回滚可能会重新引入之前修复的错误（如果您不小心）。回滚与部署一样有风险（如果未经测试）。' },
+          { type: 'Pro Tip', label: '自动化回滚决策', text: '设置自动化回滚触发：如果幻觉率超过基线50%以上，自动触发git revert并提醒团队。不要等待手动决策。' },
+        ],
+        snippets: [
+          { type: 'in-one-sentence', text: '回滚是Git Revert：撤销先前提交的新提交。零停机时间、即时、如果先前版本经过测试则始终安全。' },
+        ],
+      },
+
+      teamCollaboration: {
+        id: 'team-collaboration',
+        title: '团队协作和所有权',
+        content: [
+          '**Prompt所有权模型防止合并冲突并强制执行清晰的责任。** 按功能领域分配一名Prompt所有者；所有变更都通过该所有者的审查。对于大型团队，独立仓库防止同一Prompt的并发编辑。',
+        ],
+        items: [
+          'Monorepo（<50个Prompt推荐）：单一git仓库，一个/prompts/目录。每个Prompt所有者对其Prompt的变更拥有否决权。启用代码的紧密耦合。',
+          '独立Prompt仓库（50+个Prompt推荐）：所有Prompt的专用仓库。多个团队独立管理不同的Prompt集合。发布周期与应用程序代码分离。有关完整所有权模型，请参阅[小团队Prompt工程设置](/prompt-engineering/prompt-engineering-setup-small-teams?lang=zh)。',
+          '所有权规则：每个Prompt一名工程师（主要所有者）。次要审查人角色（交叉检查）。未获得主要所有者批准，不允许合并到main。对另一名工程师的Prompt的变更需要明确权限。',
+          '冲突预防：不同工程师拥有不同的Prompt。如果两名工程师需要变更同一Prompt，先离线协调或分配单一所有者。',
+        ],
+        callouts: [
+          { type: 'Best Practice', label: '声明所有权', text: '在代码注释中声明Prompt所有权：在每个Prompt的顶部声明"# Owner: alice@company.com"。在PR上自动标记所有者。所有权 = 责任。' },
+          { type: 'Key Point', label: '避免共有所有权', text: '两名工程师拥有一个Prompt = 合并冲突和互相指责。为每个Prompt分配一名所有者，即使这意味着某人需要学习新领域。' },
+        ],
+      },
+
+      automatedTesting: {
+        id: 'automated-testing',
+        title: '合并前的自动化测试',
+        content: [
+          '**自动化测试在人工审查Prompt PR之前验证格式、质量和延迟。** 四种测试类型捕捉不同的失败类别：格式验证（JSON合规）、golden set比较（输出匹配）、幻觉标志（事实声称）和延迟检查（速度回归）。',
+        ],
+        items: [
+          '格式验证：将输出解析为JSON、验证schema、确保所有必需字段存在。捕捉破坏性格式变更（MAJOR版本升高）。<1秒运行。',
+          'Golden set比较：针对10-20个代表性测试输入运行Prompt。将输出与已知的良好答案进行比较。捕捉质量回归（推理下降、准确度下降）。请参阅[Prompt评估指标](/prompt-engineering/prompt-evaluation-metrics?lang=zh)获取超越二进制通过/失败的评分方法。5-10秒运行。',
+          '幻觉检测：标记任何事实声称（日期、数字、产品名称）而不提供源材料。捕捉无意的幻觉风险。<1秒运行。',
+          '延迟检查：测量Prompt响应时间。如果延迟超过基线10%以上则警报。捕捉来自添加推理步骤的性能回归。实时运行。',
+        ],
+        callouts: [
+          { type: 'Key Point', label: '最小测试覆盖', text: '10-20个代表性输入的golden test set是绝对最小值。处理复杂任务的较大Prompt应该有20-50+个案例。每个案例包括输入、期望格式和期望行为。' },
+          { type: 'Pro Tip', label: '使用LLM作为评委', text: '用于质量评估，使用另一个LLM来判断输出是否满足期望（例如"这个答案是否准确回答了问题？"）。比关键字匹配更稳健。' },
+        ],
+      },
+
+      mistakes: {
+        id: 'mistakes',
+        title: 'Prompt版本控制的常见错误',
+        content: [],
+        mistakes: [
+          {
+            mistake: '无版本方案——Prompt变更但版本保持不变',
+            problem: '无声破坏性变更。当输出格式破坏下游解析器时，您不知道哪个版本引入了错误。没有手动测试每个先前版本的情况下回滚是不可能的。',
+            fix: '从第一天开始采用MAJOR.MINOR.PATCH。标记每个版本：git tag v1.0.0。在每次变更时更新Prompt文件头中的版本。合并前需要变更日志条目。',
+          },
+          {
+            mistake: '在应用程序代码中存储Prompt（内联字符串）',
+            problem: '无法单独审查Prompt。变更埋藏在代码PR中。无版本历史。无法回滚Prompt而不重新部署代码。团队协作不可能。',
+            fix: '将Prompt移至专用的/prompts/目录。存储为文本文件。导入到代码中。Prompt和代码的git历史分开。启用独立审查和版本控制。',
+          },
+          {
+            mistake: '无变更日志——版本号升高但没有记录变更内容',
+            problem: '您一周前发布了v2.0。现在输出破坏了。是格式变更还是少样本示例？无法知道，除非比较每个版本与下一个。',
+            fix: '对每个PR需要CHANGELOG.md条目。最少5个字段：版本、日期、作者、变更类型、摘要。在做Prompt变更BEFORE写——强制意图清晰。',
+          },
+          {
+            mistake: '仅测试成功路径——无边界情况',
+            problem: 'Golden test set有3个案例：成功路径（正常）。发布v2.0。在生产中，5%的输入触及边界情况，输出格式破坏。现在回滚。浪费时间。',
+            fix: '最少10个golden test case：4-5个成功路径、3-4个边界情况、2-3个失败模式（例如"答案未知时会发生什么？"）。覆盖80%的真实世界输入分布。',
+          },
+          {
+            mistake: '回滚而不测试——回滚到旧版本而不回归验证',
+            problem: 'v2.0破坏。回滚到v1.5。但v1.5有一个幻觉错误，在v1.6中修复，在v2.0中重新引入。现在用户看到旧幻觉错误。坏回滚。',
+            fix: '在合并回滚前始终运行golden test suite。回滚就像任何其他部署一样——这样对待。不要因为感觉"安全"就跳过测试。',
+          },
+        ],
+      },
+
+      regionalConsiderations: {
+        id: 'regional-considerations',
+        title: 'Prompt变更的合规性和审计要求',
+        content: [
+          '【中国（数据安全法）】 版本控制和变更日志满足中国2021年《数据安全法》的透明性和可追溯性要求。Prompt版本历史启用"何时、谁、为什么"的证明。对于在金融、医疗或法律部门处理敏感数据的企业，完整的Prompt版本历史是监管合规的关键——证明了每项变更都经过审查、测试和记录。',
+          '【亚太地区（数据跨境）】 许多亚太国家要求个人数据的国内驻留（泰国PDPA、越南法律等）。Prompt版本控制和本地git仓库确保数据保留和访问控制的透明性——审计时可证明每个Prompt版本及其输出的位置和时间。',
+          '【企业部署】 大型金融、医疗和法律企业越来越多地强制实施Prompt版本+变更日志的12个月以上保留。在监管审计时，"这个Prompt算法何时如此变更？"git log和CHANGELOG能在秒内应答——无需搜索邮件或重建历史。',
+        ],
+      },
+
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '什么是Prompt版本控制？',
+            a: 'Prompt版本控制是一种系统，使用语义版本控制（MAJOR.MINOR.PATCH）追踪AI Prompt的每项变更、支持即时回滚到任何之前版本、记录谁做了什么更改以及为什么。它将软件开发的纪律应用于Prompt管理——将Prompt视为必须经过审查、测试和版本控制的生产代码。',
+          },
+          {
+            q: '我需要为Prompt创建独立的git仓库还是可以使用现有的应用仓库？',
+            a: '两者都可以。如果Prompt数量少于50且代码与Prompt紧密耦合，使用单一仓库（Monorepo）。如果Prompt数量50+、需要独立发布周期或多个团队管理不同的Prompt集合，使用独立仓库。关键是Prompt位于专用的/prompts/目录中，旁边有版本文件、变更日志和测试装置——结构比仓库选择更重要。',
+          },
+          {
+            q: 'Prompt版本控制和模型版本控制有何不同？',
+            a: '模型版本控制（GPT-4o vs Claude 4.6 Sonnet）涉及使用的底层AI系统。Prompt版本控制涉及追踪单个Prompt文本内的变更——措辞、结构、例子、约束。两者可独立版本控制：Prompt v2.1可能针对GPT-4o部署，后来升级到GPT-4o + Claude 4.6 Sonnet而无需更改Prompt版本号。',
+          },
+          {
+            q: '生产Prompt的好的最小测试套件大小是多少？',
+            a: '每个Prompt最少10个Golden Test Case——期望的成功路径（4-5个）、边界情况（3-4个）和失败模式（2-3个）的混合。处理复杂任务的较大Prompt应该有20+个案例。每个案例包括：输入、期望输出格式和期望行为（例如"如果模型做出事实声称应标记幻觉风险"）。',
+          },
+          {
+            q: '当同一Prompt用于不同模型时如何处理版本控制？',
+            a: '使用单一Prompt版本号，但在PR审查阶段针对所有目标模型进行测试。版本反映Prompt变更，而非模型变更。如果Prompt在GPT-4o和Claude 4.6 Sonnet上功能相同则为v1.0。如果之后添加Claude特定语法（thinking blocks）则升级到v2.0。单独追踪模型兼容性与Prompt版本。',
+          },
+          {
+            q: '是否应该每个措辞变更都提升版本？',
+            a: '不一定。规则：不改变输出行为的澄清和修正拼写错误是PATCH。改进品质但保持向后兼容（更好的推理、更少幻觉、更快响应）是MINOR。只有输出格式、结构或语义破坏下游解析时才是MAJOR。同义词交换是PATCH；影响行为的语气转变是MINOR。',
+          },
+          {
+            q: '哪些工具本地支持Prompt版本控制？',
+            a: '如果将Prompt存储为文本文件，Git本地支持Prompt版本控制。Braintrust、Promptlayer和Vellum等专门工具添加内置版本控制、比较和A/B测试。PromptQuorum支持多模型比较，有助于识别破坏性变更。根据工作流选择：如果有强大的开发实践则纯Git；如果需要内置回滚UI和版本分支则用工具。',
+          },
+          {
+            q: '不使用Git时如何回滚Prompt？',
+            a: '使用功能标志（最简单）：在标志后部署新Prompt、在生产中测试、切换标志以在秒内回滚。使用环境变量：在env变量中存储Prompt、交换值以恢复。使用数据库：在数据库表中存储Prompt版本、按版本号查询。最慢的方法是重新部署旧代码，需要数分钟。推荐功能标志或环境变量——回滚应该在秒内完成。',
+          },
+        ],
+      },
+
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[团队如何审查Prompt：7点检查表和CI/CD门控](/prompt-engineering/prompt-review-workflow-for-teams?lang=zh) — 带自动化质量门控的Prompt审查工作流',
+          '[Prompt注入漏洞及其防止方法](/prompt-engineering/prompt-injection-and-security?lang=zh) — Prompt PR审查期间的安全检查',
+          '[为Prompt输出构建质量检查](/prompt-engineering/build-quality-checks?lang=zh) — Prompt自动化回归测试',
+          '[如何检测和防止AI幻觉](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh) — 回归测试期间的幻觉检测',
+          '[RTF框架：结构化Prompt格式](/prompt-engineering/rtf-framework?lang=zh) — 简化版本控制和解析的结构化格式',
+        ],
+      },
+
+      sources: {
+        title: '参考资源',
+        items: [
+          '[NIST AI风险管理框架](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — 涵盖AI系统可追踪性和变更管理的联邦治理框架',
+          '[Git文档：git revert](https://git-scm.com/docs/git-revert) — 用于撤销提交的官方Git文档',
+          '[语义版本控制规范](https://semver.org/) — 官方MAJOR.MINOR.PATCH规范',
+          '[Braintrust：Prompt版本控制和A/B测试](https://www.braintrust.dev/) — Prompt管理和测试的专门工具',
+          '[Promptlayer：Prompt版本控制](https://www.promptlayer.com/) — 带有内置Prompt版本控制和比较的平台',
+        ],
+      },
+    },
   },
 };
