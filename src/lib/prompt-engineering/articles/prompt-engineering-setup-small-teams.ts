@@ -1265,13 +1265,415 @@ export const article: Record<Language, PEArticle> = {
     },
   },
   ja: {
-    theme: 'Workflows',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-29',
+    theme: 'ワークフロー',
     title: '小規模チーム向けプロンプトエンジニアリングセットアップ（2026年）',
     seoTitle: '小規模チーム向けプロンプトエンジニアリング：ツールとワークフロー（2026年）',
-    metaDescription: '小規模チームのプロンプトエンジニアリング構築：YAML共有ライブラリ、Gitバージョン管理、20件テストセット、オーナーシップルール。1週間で完了。',
+    metaDescription: '2〜15人チームのプロンプトエンジニアリング構築：YAML共有ライブラリ、Gitバージョン管理、20件テストセット、オーナーシップルール。1週間で運用開始できます。',
     ogDescription: '2〜15人チーム向けプロンプトエンジニアリング：共有ライブラリ、Gitバージョン管理、PromptQuorumでマルチモデルテスト。1週間で運用開始。',
     twitterDescription: 'プロンプトの混乱から1週間で構造化セットアップへ。YAMLライブラリ、Git、20テストケース、オーナー指定。2〜15人チーム向け。',
-    sections: {},
+    intro: '**SlackスレッドやメモアプリのコピーペーストでPromptを管理している小規模チームは、同じ3つの問題に直面しています：重複作業、未記録のリグレッション、そしてどのモデルが最適かを比較できない問題です。** 構造化されたプロンプトエンジニアリングセットアップは、共有ライブラリ・バージョン管理・テスト環境の3つでこれらを解決します。このガイドでは、1週間で構築する方法を説明します。',
+    leadAnswerBlock: '**小規模チーム向けプロンプトエンジニアリングセットアップに必要なものは4つです：共有プロンプトライブラリ、バージョン管理、テスト環境、明確なオーナーシップルール。** 2〜15人のチームは無料ツールとマルチモデルテストプラットフォームを使って1週間で運用開始できます。',
+    publishDate: '2026-04-29',
+    dateModified: '2026-04-29',
+    readTime: '8分で読める',
+    educationalLevel: 'Intermediate',
+    audience: 'LLM APIを使ってプロダクトを開発する小規模開発チーム（2〜15人）',
+    primaryTerm: 'prompt engineering setup for small teams',
+    aboutTopics: ['プロンプトライブラリ管理', 'チームプロンプトワークフロー', 'マルチモデルプロンプトテスト'],
+    quickFacts: [
+      'GPT-4oとClaude 4.6 Sonnetで50件のテスト実行にかかるコストは、2026年4月のAPIレートで2ドル未満です（GPT-4o：入力100万トークンあたり5ドル、Claude 4.6 Sonnet：3ドル）',
+      'GitはPromptのバージョン履歴を追加ツールなしで管理できます — 15人以下のチームには共有リポジトリのフラットなYAMLファイルで十分です',
+      'GPT-4oとClaude 4.6 Sonnetは、クリエイティブ・要約・曖昧な指示のタスクで意味のある違いがある出力を生成します — ユーザーへの影響前に差異を検出するにはマルチモデルテストが必要です',
+      '2〜5人のチームは無料ツールのみ（Git、VS Code、共有APIキー）でこのガイドの全セットアップを実装できます',
+    ],
+    toc: [
+      { label: 'プロンプトエンジニアリングセットアップに含まれるもの',  anchor: '#what-is-prompt-setup' },
+      { label: 'チーム規模別セットアップレベル',                    anchor: '#team-size' },
+      { label: '小規模チームのツールスタック',                     anchor: '#tool-stack' },
+      { label: '共有プロンプトライブラリの構築',                    anchor: '#shared-library' },
+      { label: 'プロンプトのバージョン管理とテスト',                 anchor: '#versioning-testing' },
+      { label: 'プロンプトに使うAIモデルの選び方',                   anchor: '#model-selection' },
+      { label: '所有権とレビュールール',                           anchor: '#governance' },
+      { label: '1週間でのセットアップ計画',                        anchor: '#how-to-start' },
+      { label: 'プロンプトエンジニアリングのよくある失敗',            anchor: '#common-mistakes' },
+      { label: 'よくある質問',                                    anchor: '#faq' },
+      { label: '関連記事',                                       anchor: '#related-reading' },
+      { label: '参考資料',                                       anchor: '#sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '小規模チーム向けプロンプトエンジニアリングセットアップ（2026年）',
+      description: '2〜15人チームのプロンプトエンジニアリング構築：YAML共有ライブラリ、Gitバージョン管理、20件テストセット、オーナーシップルール。1週間で運用開始できます。',
+      author:    { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-04-29',
+      dateModified:  '2026-04-29',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams?lang=ja',
+      inLanguage:       'ja',
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'プロンプトライブラリ管理' },
+        { '@type': 'Thing', name: 'チームプロンプトワークフロー' },
+        { '@type': 'Thing', name: 'マルチモデルプロンプトテスト' },
+      ],
+      audience:  { '@type': 'Audience', audienceType: 'LLM APIを使ってプロダクトを開発する小規模開発チーム' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '小規模チームのプロンプトエンジニアリングセットアップを1週間で構築する方法',
+      inLanguage: 'ja',
+      step: [
+        {
+          '@type': 'HowToStep',
+          name: 'プロンプトの棚卸しとオーナーシップの割り当て',
+          text: 'チームが使用しているすべてのPromptをリストアップします。各Promptについて、保存場所、作成者、使用モデルを記録してください。各Promptに1人の担当オーナーを割り当てます。この作業は1〜2時間で完了し、Promptの乱立をすぐに把握できます。',
+        },
+        {
+          '@type': 'HowToStep',
+          name: '共有Promptリポジトリの作成',
+          text: '既存のコードリポジトリまたは新しい専用Gitリポジトリに/promptsフォルダを作成します。必須のメタデータテンプレート（名前、バージョン、オーナー、モデル）を含むREADME.mdを追加します。',
+        },
+        {
+          '@type': 'HowToStep',
+          name: '最重要Promptを3つYAMLファイルに移行する',
+          text: '最もよく使う本番Prompt3つを完全なメタデータテンプレート付きのYAMLファイルとして書き直します。説明的なメッセージとともに共有リポジトリにコミットします。この3ファイルがライブラリの基盤となります。',
+        },
+        {
+          '@type': 'HowToStep',
+          name: '最重要Promptに対して20件のテストセットを作成する',
+          text: '最も重要なPromptに対して20件のテスト入力を作成します：Happy Pathが10件、Edge Caseが5件（特殊フォーマット、長い入力、必須フィールドの欠落）、Adversarial Inputが5件。各ケースにpass/failの二値基準を定義します。',
+        },
+        {
+          '@type': 'HowToStep',
+          name: '少なくとも2つのモデルでテストセットを実行する',
+          text: 'GPT-4oとClaude 4.6 Sonnetの両方で20件のテストを実行します。各モデルの合格率を記録します。このベースラインが最重要指標です — 今後のPrompt変更はすべてこの数値を維持または上回る必要があります。',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'ライブラリを拡張してレビュープロセスを追加する',
+          text: '次の重要Prompt5つをYAMLファイルに移行します。チームが5人以上の場合は、本番Promptへの変更をマージする前にPRレビューステップを追加します。mainへのマージのたびにCIで全テストセットを実行します。',
+        },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '小規模チームには専任のPromptエンジニアが必要ですか？',
+          acceptedAnswer: { '@type': 'Answer', text: '不要です。ほとんどの小規模チームは、そのPromptを使う機能を開発した人（通常は開発者またはプロダクトマネージャー）にオーナーシップを割り当てます。専任のPromptエンジニアが費用対効果を発揮するのは、本番Promptが20件を超え、Prompt品質が直接収益に影響する場合のみです。' },
+        },
+        {
+          '@type': 'Question',
+          name: '小規模チームに最低限必要なセットアップは何ですか？',
+          acceptedAnswer: { '@type': 'Answer', text: '共有GitリポジトリのYAMLファイルに4つのフィールド（名前、バージョン、オーナー、モデル）が含まれた/promptsフォルダです。テストセット、監視、レビュープロセスなどはすべて、Promptの範囲が拡大するにつれて段階的に追加します。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Prompt管理プラットフォームを使うべきですか、それともGitだけで十分ですか？',
+          acceptedAnswer: { '@type': 'Answer', text: '本番Promptが50件未満の15人以下のチームにはGitで十分です。Braintrust、PromptHub、VellumなどのPrompt管理プラットフォームは、非技術系ステークホルダー向けのUI編集、CIでの自動評価実行、開発環境からステージング・本番への多環境プロモーションが必要になった時点で価値を発揮します。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'モデルのアップデート時にPromptが壊れないようにするにはどうすればよいですか？',
+          acceptedAnswer: { '@type': 'Answer', text: 'OpenAIやAnthropicからモデルアップデートの通知を受け取ったら、テストセットを実行します。20件のテストセットはPromptQuorumまたは簡単なAPIスクリプトでGPT-4oとClaude 4.6 Sonnetの両方に対して60秒以内に実行できます。合格率の閾値を設定し、ベースラインを下回った場合はデプロイ前に調査してください。' },
+        },
+        {
+          '@type': 'Question',
+          name: '小規模チームはどのAIモデルに統一すべきですか？',
+          acceptedAnswer: { '@type': 'Answer', text: '1つのモデルに統一しないでください。最も重要なPromptをGPT-4oとClaude 4.6 Sonnetの両方で実行し、タスクの種類ごとに選択してください。GPT-4oはJSONや分類などの構造化された出力に信頼性が高いです。Claude 4.6 Sonnetは複数制約の指示を文字通りの解釈エラーが少なく処理します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-4o miniを使用してください。' },
+        },
+        {
+          '@type': 'Question',
+          name: '共有ライブラリを構築する価値があるのは何件からですか？',
+          acceptedAnswer: { '@type': 'Answer', text: '5件以上からです。本番Promptが5件未満の場合は共有ドキュメントで十分です。5件以上になると、分散したストレージの調整コストがGitのYAMLライブラリのセットアップコスト（約1時間）を超えます。' },
+        },
+        {
+          '@type': 'Question',
+          name: '本番Promptのテストセットの適切なサイズはどれくらいですか？',
+          acceptedAnswer: { '@type': 'Answer', text: '20件が最低限です：Happy Pathが10件、Edge Caseが5件（特殊フォーマット、長い入力、必須フィールドの欠落）、Adversarial Inputが5件。50件を超えると、ほとんどの本番Promptでカバレッジの限界効果が逓減します。' },
+        },
+        {
+          '@type': 'Question',
+          name: '非技術系チームメンバーのためのPromptエンジニアリングをどのように管理しますか？',
+          acceptedAnswer: { '@type': 'Answer', text: '非技術系ステークホルダーがPromptの内容をドラフトするための共有NotionまたはGoogle Docを使用し、開発者がYAMLファイルとして構造化してテストを実行する責任を持ちます。PromptQuorumはAPIアクセスなしでPromptを実行・比較できるノーコードインターフェースを提供しており、プロダクトマネージャーやデザイナーも使用できます。' },
+        },
+      ],
+    },
+    sections: {
+      tldrCallout: {
+        callouts: [
+          { type: 'tldr', label: 'まとめ', text: '小規模チームのプロンプトエンジニアリングセットアップには4つの要素が必要です：GitのYAMLライブラリ、セマンティックバージョニング、二値pass/failスコアリングによる20件テストセット、Promptごとの担当オーナー。2〜4人のチームは正式なレビュー不要。5〜15人はPRレビューを追加します。本番Promptは毎回GPT-4oとClaudeで実行してからデプロイします。全セットアップは1週間で完了します。' },
+        ],
+      },
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        title: '重要ポイント',
+        items: [
+          '小規模チームには4つのコンポーネントが必要です：共有Promptライブラリ、Gitバージョン管理、20件テストセット、Promptごとの担当オーナー',
+          '2〜4人のチーム：GitのフラットなYAMLファイルで十分 — 正式なレビューステップは不要',
+          '5〜15人のチーム：本番で使用しているPromptへの変更をマージする前にPRレビューを追加する',
+          '新規・変更したPromptはデプロイ前に少なくともGPT-4oとClaude 4.6 Sonnetで実行する — 曖昧なタスクではモデルごとに意味のある違いがあります',
+          '最低限のテストセットは20件：Happy Pathが10件、Edge Caseが5件、Adversarial Inputが5件',
+          'Promptごとに担当オーナーを指定する — 明確な責任がなければリグレッションは誰かが対応すると思い込んで放置されます',
+          'PromptQuorumは1つのPromptを複数のモデルに同時送信し、合格率を並べて表示します',
+        ],
+      },
+      whatIs: {
+        id: 'what-is-prompt-setup',
+        title: 'プロンプトエンジニアリングセットアップに含まれるもの',
+        content: [
+          '**小規模チーム向けプロンプトエンジニアリングセットアップとは、4つのシステムを組み合わせたものです：共有Promptライブラリ、バージョン管理ワークフロー、テスト環境、オーナーシップルール。** これら4つが協調することで最も一般的な障害パターンを防ぎます — 複数の人が調整なしに同じPromptを編集し、サイレントリグレッションが発生するという問題です。',
+          'ほとんどの小規模チームは、本番で何かが壊れるまでセットアップをスキップします。その時点でダメージはすでに発生しています：先週は動いていたPromptがサイレントに失敗し、誰が何を変えたかわからず、デバッグには記憶から履歴を再構成する必要があります。',
+        ],
+        columns: ['コンポーネント', '防ぐ問題', '最小限の形'],
+        rows: [
+          { 'コンポーネント': '共有Promptライブラリ', '防ぐ問題': 'Promptの重複、「どのバージョンが正しいか？」', '最小限の形': 'GitリポジトリのYAMLファイル' },
+          { 'コンポーネント': 'バージョン管理', '防ぐ問題': 'Prompt変更時のサイレントリグレッション', '最小限の形': '1行の変更メモ付きGitコミット' },
+          { 'コンポーネント': 'テスト環境', '防ぐ問題': '壊れたPromptを未検出でデプロイ', '最小限の形': '二値pass/failスコアリングの20件テストセット' },
+          { 'コンポーネント': 'オーナーシップルール', '防ぐ問題': 'レビューなしのPrompt更新', '最小限の形': 'Prompt YAMLファイルごとの担当オーナーフィールド' },
+        ],
+        tableFormat: true,
+        snippets: [
+          { type: 'in-one-sentence', text: '小規模チーム向けプロンプトエンジニアリングセットアップとは、複数の人が互いの作業を壊さずにPromptに取り組めるようにする共有ストレージ、バージョン履歴、テストカバレッジ、オーナーシップモデルの組み合わせです。' },
+          { type: 'in-plain-terms', text: 'コード用の共有Google Docのようなものです：各自がメモアプリに自分のバージョンのPromptを保管する代わりに、チームが共有の場所に1つの正式なコピーを保管し、誰が何を変えたかを追跡し、本番使用前にテストします。' },
+        ],
+        callouts: [
+          { type: 'key-point', label: '一人で開発している場合', text: '一人で作業している場合はPromptライブラリだけで十分です — バージョン管理とガバナンスのセクションはスキップしてください。このガイドは、調整が制約要因になる2人以上のチーム向けです。' },
+        ],
+      },
+      teamSize: {
+        id: 'team-size',
+        title: 'チーム規模別セットアップレベル',
+        content: '**適切なプロセスレベルはチームの規模に直接依存します — 少なすぎるとPromptがサイレントに壊れ、多すぎるとチームが開発よりプロセスに時間を費やします。** 人数に合わせてセットアップを選び、チームの成長に応じて調整してください。',
+        columns: ['チーム規模', '推奨セットアップ', '後回しでよいもの'],
+        rows: [
+          { 'チーム規模': '1〜2人', '推奨セットアップ': 'GitのYAML共有、Promptごとに1人のオーナー、レビューステップなし', '後回しでよいもの': 'テスト環境（ユーザーにデプロイするタイミングで追加）' },
+          { 'チーム規模': '3〜5人', '推奨セットアップ': 'ライブラリ + Git + 主要Promptの20件テストセット', '後回しでよいもの': '正式なPRレビュー（Slackでの承認で十分）' },
+          { 'チーム規模': '6〜10人', '推奨セットアップ': '完全セットアップ：ライブラリ + バージョン管理 + マージ時のCIテスト実行', '後回しでよいもの': '外部Prompt管理ツール（この規模ではGitで十分）' },
+          { 'チーム規模': '11〜15人', '推奨セットアップ': '完全セットアップ + PRレビューポリシー + 製品エリアごとのPromptオーナー', '後回しでよいもの': 'カスタムツール（PromptQuorumを使用）' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'warning', label: 'オーバーエンジニアリングのリスク', text: '正式なPRレビュー、変更ログ、CIテスト実行を追加した2人チームは、構築するよりシステム維持に多くの時間を費やします。Git + YAMLから始めてください。チームの規模やPromptの障害が必要とする場合にのみプロセスを追加します。' },
+        ],
+      },
+      toolStack: {
+        id: 'tool-stack',
+        title: '小規模チームのツールスタック',
+        content: [
+          '**ほとんどの小規模チームに必要なツールは3つだけです：Promptを書くコードエディタ、バージョン管理のためのGit、出力を比較するためのマルチモデルテストプラットフォーム。** その他はすべて、特定の制約が必要にするまでオプションです。',
+          '以下の表は、2〜15人のチームで最もよく使われるツールをまとめたものです。最初の3つから始め、それらの具体的な限界に達した場合にのみ他を追加してください。',
+        ],
+        columns: ['ツール', '用途', 'コスト', '最適なケース'],
+        rows: [
+          { 'ツール': 'Git + GitHub/GitLab', '用途': 'Promptのバージョン管理と変更履歴', 'コスト': '無料', '最適なケース': 'すべてのチーム規模' },
+          { 'ツール': 'VS CodeまたはCursor', '用途': 'Prompt YAMLファイルの作成・編集・プレビュー', 'コスト': '無料', '最適なケース': 'すべてのチーム規模' },
+          { 'ツール': 'PromptQuorum', '用途': '1つのPromptをGPT-4o、Claude、Geminiに同時送信して合格率を並べて比較', 'コスト': '無料プランあり', '最適なケース': '複数モデルでPromptをテストするチーム' },
+          { 'ツール': 'LangfuseまたはPhoenix', '用途': '本番Promptの監視とオブザーバビリティ', 'コスト': '無料プランあり', '最適なケース': '実際のユーザーに本番Promptをサービス提供しているチーム' },
+          { 'ツール': 'NotionまたはLinear', '用途': '非技術系ステークホルダー向けの軽量Prompt変更追跡', 'コスト': '無料プランあり', '最適なケース': '非開発者もPromptを管理するチーム' },
+        ],
+        tableFormat: true,
+        items: [
+          'チームがターミナルまたはGitHub/GitLabのWeb UIを使えるならGitを使用 — 追加ツールは不要',
+          '複数モデルでPromptを比較するならPromptQuorumを使用 — モデルごとのAPI比較コードを書く必要がなくなります',
+          '実際のユーザーに本番Promptをサービス提供するようになってからLangfuseまたはPhoenixを追加',
+          'NotionはYAMLファイルを使えない非技術系チームメンバーのためのセカンダリインターフェースとしてのみ使用 — 正式バージョンはGitに保管',
+        ],
+        callouts: [
+          { type: 'pro-tip', label: '最速のスタート', text: '機能的なセットアップへの最短経路：Git + VS Code + PromptQuorum。3つすべて無料で30分以内にインストールできます。実際のボトルネックを把握した上で、20件以上の本番Promptができてから複雑なツールを評価してください。' },
+        ],
+      },
+      sharedLibrary: {
+        id: 'shared-library',
+        title: '共有プロンプトライブラリの構築',
+        content: [
+          '**共有Promptライブラリとは、GitリポジトリのYAMLファイルのフォルダで、各ファイルがPromptをメタデータ・テンプレート文字列・テストセットパスとともに表現したものです。** このフォーマットは開発者と非技術系チームメンバーの両方が読め、追加ツールが不要で、バージョン履歴が無料で完全に得られます。',
+          '最小限のPromptレコードには6つのフィールドが必要です：`name`（一意の識別子）、`version`（セマンティック、例：`1.2.0`）、`owner`（GitHubユーザー名またはメール）、`model`（対象モデル）、`template`（`{{変数}}`プレースホルダー付きのPrompt文字列）、`last_tested`（ISO日付）。テストセットができたら`test_set_path`フィールドを追加します。',
+        ],
+        promptExamples: [
+          {
+            bad: 'Slackに保管：「これ使って：\'{{text}}をプロダクトマネージャー向けに要約してください\' — GPT-4oでうまく動きます」',
+            good: 'name: pm-muke-yoyaku\nversion: 1.2.0\nowner: hans.kuepper@company.co.jp\nmodel: gpt-4o\ntemplate: |\n  以下のテキストをプロダクトマネージャー向けに3〜5項目の箇条書きで要約してください。\n  背景ではなく、必要な意思決定に焦点を当ててください。\n  テキスト：{{text}}\nlast_tested: 2026-04-29\ntest_set_path: tests/pm-muke-yoyaku.json',
+            badLabel: '分散（Slackメッセージ）',
+            goodLabel: 'ライブラリエントリ（prompts/pm-muke-yoyaku.yaml）',
+          },
+        ],
+        callouts: [
+          { type: 'pro-tip', label: '3つのPromptから始める', text: '今日、最もよく使う3つのPromptをYAMLファイルに移行しましょう。完全性は後から来ます — 最初に重要なPromptをカバーすることが大切です。20件以上への拡張については完全なライブラリセットアップガイドを参照してください。' },
+        ],
+      },
+      versioningTesting: {
+        id: 'versioning-testing',
+        title: 'プロンプトのバージョン管理とテスト',
+        content: [
+          '**YAMLファイルのセマンティックバージョン番号とGitコミットで履歴を管理し、毎デプロイ前に二値pass/failスコアリングによる20件テストセットでテストします。** この2つの実践を組み合わせることで、ユーザーに届く前にPromptリグレッションの大部分を検出できます。',
+          'セマンティックバージョニング（`1.0.0 → 1.1.0 → 2.0.0`）により変更の影響が即座にわかります：マイナーバンプは文言の調整、メジャーバンプは出力フォーマットまたはタスクの意図が変わったことを意味します。ファイル変更とともにGitコミットメッセージに理由を記録します。',
+          '最小限のテストセットは20件です。各ケースについて、入力と1つの二値基準を定義します — 「pass」は出力が基準を満たすこと、「fail」は満たさないことを意味します。経時的なPrompt品質指標として合格率を追跡します。',
+        ],
+        callouts: [
+          { type: 'key-point', label: 'テストセットの最小サイズ', text: '20件が最低ラインです — それより少ないとEdge Caseが多く見落とされます。50件を超えると、ほとんどの小規模チームの本番Promptではカバレッジの限界効果が逓減します。20件から始めて、カバーすべき特定の失敗カテゴリを特定した場合にのみ拡張します。' },
+          { type: 'pro-tip', label: 'マルチモデルベースライン', text: 'デプロイ前に毎回GPT-4oとClaude 4.6 Sonnetに対してテストセットを実行します。モデルは予告なくアップデートされます — バージョンバンプにより特定のタスクでの合格率がサイレントに変わることがあります。完全な比較ワークフローについては[複数モデルでのPromptテスト方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja)を参照してください。' },
+        ],
+      },
+      modelSelection: {
+        id: 'model-selection',
+        title: 'プロンプトに使うAIモデルの選び方',
+        content: [
+          '**ほとんどのタスクはGPT-4oとClaude 4.6 Sonnetから始めてください — 1つのモデルに絞る前に、両方を実行して特定のユースケースでの合格率を比較します。** 適切なモデルはタスクの種類に依存します。一般的なリーダーボードランキングではありません。',
+          'GPT-4o（OpenAI）とClaude 4.6 Sonnet（Anthropic）は、[2026年4月時点で](/prompt-engineering/gpt-claude-gemini-which-model?lang=ja)本番プロンプトエンジニアリングで最も広く使われている2つのフロンティアモデルです。100kトークンを超えるドキュメントにはGemini 2.5 Proを追加します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-4o miniを使用します。',
+        ],
+        columns: ['タスクの種類', '推奨モデル', '理由'],
+        rows: [
+          { 'タスクの種類': '構造化出力（JSON、分類）', '推奨モデル': 'GPT-4o', '理由': '信頼性の高いJSONモード、制約された出力フォーマットへの一貫した指示遵守' },
+          { 'タスクの種類': '長文生成、ニュアンスのある指示', '推奨モデル': 'Claude 4.6 Sonnet', '理由': '文字通りの解釈エラーが少なく複数制約の指示を処理' },
+          { 'タスクの種類': 'コード生成とレビュー', '推奨モデル': 'GPT-4oまたはClaude 4.6 Sonnet', '理由': '両方とも高性能 — 特定のコードベースと言語で両方を実行して比較' },
+          { 'タスクの種類': '100kトークン超えのドキュメント', '推奨モデル': 'Gemini 2.5 Pro', '理由': '100万トークンのコンテキストウィンドウ；GPT-4oとClaude 4.6 Sonnetは両方とも200kトークンが上限' },
+          { 'タスクの種類': 'コスト重視の大量タスク', '推奨モデル': 'Claude 4.5 HaikuまたはGPT-4o mini', '理由': '多くの本番タスクで十分な品質で、フラッグシップモデルより10〜20倍安い' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'key-point', label: 'PromptQuorumでモデル比較', text: 'PromptQuorumは設定されたすべてのモデルに1つのPromptを同時送信し、合格率追跡付きで1つのビューにすべての回答を返します — モデルごとのAPIコードを書かずに特定のタスクに最適なモデルを決定する最短経路です。' },
+        ],
+      },
+      governance: {
+        id: 'governance',
+        title: '所有権とレビュールール',
+        content: [
+          '**5人未満のチーム：Promptファイルごとに1人の担当オーナー、Gitコミットメッセージに変更を記録、正式なレビューステップは不要。5〜15人のチーム：本番で使用しているPromptへの変更をマージする前にPRレビューを追加します。** この2段階が、ほとんどの小規模チームのガバナンスニーズを不要なオーバーヘッドなしにカバーします。',
+          '小規模チームで最も多いガバナンスの失敗は、プロセスが少なすぎることではなく「全員が全てを所有する」状態です。誰もPromptに対して個人的に責任を持たない場合、全員が誰かが対応すると思い込むのでリグレッションは修正されないままになります。',
+          '日本の企業向け注記：経済産業省（METI）の「AI事業者ガイドライン（第1.0版）」（2024年）は、個人情報を含む業務処理については情報セキュリティ管理体制の確立を求めています。企業のAI利用においては、プロンプトYAMLの`data_classification:`フィールドに処理するデータの種別を明示し、機密データには社内展開のモデルを検討することが推奨されます。',
+        ],
+        items: [
+          'Prompt YAMLファイルごとに担当`owner:`フィールド（GitHubユーザー名またはメールアドレス）を記載',
+          '他の誰かがPromptを変更したとき、オーナーに通知（GitHub/GitLab）が届く',
+          '`template:`文字列への変更は、軽微な文言変更であってもバージョン番号を更新する必要がある',
+          '本番Promptは変更をmainにマージする前にテストセットにパスする必要がある',
+          'PromptのスコープやSuccess Criteriaが変わった場合、オーナーがテストセットを最新の状態に保つ責任を持つ',
+        ],
+        callouts: [
+          { type: 'warning', label: '正式なレビューが不要な場合', text: '毎日直接コミュニケーションを取っている2〜3人のチームはPrompt変更にPRレビューは必要ありません。Slackメッセージ — 「pm-muke-yoyakuをv1.3.0に更新、理由：GPT-4oが箇条書きフォーマットの処理を変更」— でもこの規模には十分なガバナンスです。' },
+        ],
+      },
+      howToStart: {
+        id: 'how-to-start',
+        title: '1週間でのセットアップ計画',
+        content: '**Promptの混乱から機能的なチームセットアップへの最短経路は、5営業日で6ステップです。** 各ステップに具体的な成果物があります — 部分的な進捗や「次のスプリントで完了する」は許しません。',
+        numberedItems: [
+          '**Day 1 — 棚卸しとオーナーシップの割り当て。** チームが使用するすべてのPromptをリストアップします。それぞれについて：保存場所、作成者、使用モデルを記録します。各Promptに担当オーナーを割り当てます。1〜2時間でPromptの乱立がすぐに明らかになります — ほとんどのチームが想定より30〜50%多くのPromptを発見します。',
+          '**Day 2 — 共有Promptリポジトリの作成。** 既存のコードリポジトリに`/prompts`フォルダを作るか、新しい専用Gitリポジトリを作成します。必須フィールド（name、version、owner、model、template、last_tested）を含む`README.md`を追加します。',
+          '**Day 3 — 最重要Promptを3つYAMLファイルに移行。** 完全なメタデータテンプレートで記述します。`feat(prompts): pm-muke-yoyakuをライブラリv1.0.0に移行`のようなメッセージとともに共有リポジトリにコミットします。この3ファイルがライブラリの基盤です。',
+          '**Day 4 — 最重要Promptの20件テストセット作成。** Happy Pathが10件、Edge Caseが5件（特殊フォーマット、長い入力、必須フィールドの欠落）、Adversarial Inputが5件（Promptの指示を上書きしようとする入力）。各ケースのpass/fail二値基準を定義します。スコアリングフレームワークについては[Prompt品質の評価方法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)を参照してください。',
+          '**Day 5 — 少なくとも2つのモデルでテストセットを実行。** PromptQuorumまたは独自のAPIコールを使って20件をGPT-4oとClaude 4.6 Sonnetに対して実行します。各モデルの合格率を記録します。このベースラインがチームが追跡する最も重要な数値です — 今後のPrompt変更はすべてこれを維持または上回る必要があります。',
+          '**Week 2以降 — ライブラリを拡張してレビューを追加。** 次の重要Prompt5つをYAMLファイルに移行します。チームが5人以上の場合は`/prompts`フォルダへのPRレビューを追加します。mainへのマージのたびにCIで全テストセットを実行します。20件以上へのスケールアップについては[Promptライブラリの構築](/prompt-engineering/build-a-prompt-library?lang=ja)を参照してください。',
+        ],
+        callouts: [
+          { type: 'key-point', label: '最も重要な1つのステップ', text: 'このガイドから1つだけ実行するなら、Day 5です：最も重要なPromptのマルチモデルベースライン合格率を確立します。この1つの数値が、モデルアップデート・文言変更・新しいEdge Caseが何かを壊したとき、すぐに教えてくれます。' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'プロンプトエンジニアリングのよくある失敗',
+        content: '**小規模チームのPromptの障害のほとんどは、このガイドで説明したコンポーネントで防げる5つの繰り返しパターンに起因します。**',
+        mistakes: [
+          {
+            mistake: 'Slack、メール、個人メモにPromptを保管する',
+            problem: 'バージョン履歴なし、共有アクセスなし、本番で何かが壊れたときに何が変わったかを監査する方法がない',
+            fix: 'Day 2のセットアップで共有GitリポジトリのYAMLファイルに移行します。すべてのPromptを含む1つのフラットファイルでもSlackスレッドよりはるかに優れています。',
+          },
+          {
+            mistake: '1人がすべてのPromptを所有する',
+            problem: '単一障害点を生む — その人がボトルネックになり、不在時にPromptが古くなる',
+            fix: 'ユースケースまたは製品エリア別にオーナーシップを割り当て、個人ではなく担当する。機能エリアで2〜3人のオーナーに分散するのがほとんどの小規模チームに適したモデルです。',
+          },
+          {
+            mistake: '元のPromptを作成したモデルでのみテストする',
+            problem: 'モデル固有の失敗を見落とし、モデルを切り替えたとき、または元のモデルがウェイトを更新したときサイレントに壊れる',
+            fix: 'デプロイ前に毎回、少なくともGPT-4oとClaude 4.6 Sonnetに対して本番Promptを実行します。PromptQuorumを使って両方を1ステップで同時に実行します。',
+          },
+          {
+            mistake: '何かが壊れるまでバージョン管理をオプション扱いにする',
+            problem: 'リグレッションが発生したとき、何が変わったかの再構成にGitログではなく記憶が必要 — デバッグが数分ではなく数時間かかる',
+            fix: 'Promptへの変更をセマンティックバージョンバンプと1行の変更メモとともにコミットします。習慣は30秒で身につき、デバッグ時の見返りは数時間分になります。',
+          },
+          {
+            mistake: '3人チームにエンタープライズ向けツールを追加する',
+            problem: 'オーバーヘッドがメリットを上回る — Promptを使う機能の構築よりツールスタックの維持に時間を費やす',
+            fix: 'Git + YAMLから始めます。Gitの限界が実際のボトルネックになった場合（通常10人以上または50件以上の本番Promptの時点）にのみ[Prompt管理プラットフォーム](/prompt-engineering/best-prompt-management-platforms?lang=ja)（Braintrust、PromptHub、Vellum）を追加します。',
+          },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        content: '**小規模チームからの最もよくある質問は、最小限のセットアップ、GitとDedicatedツールの比較、モデルの選択、モデル更新時のサイレントリグレッション防止についてです。** 各回答には具体的な閾値またはアクションが含まれています。',
+        faqs: [
+          {
+            q: '小規模チームには専任のPromptエンジニアが必要ですか？',
+            a: '不要です。ほとんどの小規模チームは、そのPromptを使う機能を開発した人（通常は開発者またはプロダクトマネージャー）にオーナーシップを割り当てます。専任のPromptエンジニアが費用対効果を発揮するのは、本番Promptが20件を超え、Prompt品質が直接収益に影響する場合のみです。',
+          },
+          {
+            q: '小規模チームに最低限必要なセットアップは何ですか？',
+            a: '共有GitリポジトリのYAMLファイルに4つのフィールド（名前、バージョン、オーナー、モデル）が含まれた/promptsフォルダです。テストセット、監視、レビュープロセスなどはすべて、Promptの範囲が拡大するにつれて段階的に追加します。',
+          },
+          {
+            q: 'Prompt管理プラットフォームを使うべきですか、それともGitだけで十分ですか？',
+            a: '本番Promptが50件未満の15人以下のチームにはGitで十分です。Braintrust、PromptHub、VellumなどのPrompt管理プラットフォームは、非技術系ステークホルダー向けのUI編集、CIでの自動評価実行、開発環境からステージング・本番への多環境プロモーションが必要になった時点で価値を発揮します。',
+          },
+          {
+            q: 'モデルのアップデート時にPromptが壊れないようにするにはどうすればよいですか？',
+            a: 'OpenAIやAnthropicからモデルアップデートの通知を受け取ったら、テストセットを実行します。20件のテストセットはPromptQuorumまたは簡単なAPIスクリプトでGPT-4oとClaude 4.6 Sonnetの両方に対して60秒以内に実行できます。合格率の閾値を設定し、ベースラインを下回った場合はデプロイ前に調査してください。',
+          },
+          {
+            q: '小規模チームはどのAIモデルに統一すべきですか？',
+            a: '1つのモデルに統一しないでください。最も重要なPromptをGPT-4oとClaude 4.6 Sonnetの両方で実行し、タスクの種類ごとに選択してください。GPT-4oはJSONや分類などの構造化された出力に信頼性が高いです。Claude 4.6 Sonnetは複数制約の指示を文字通りの解釈エラーが少なく処理します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-4o miniを使用してください。',
+          },
+          {
+            q: '共有ライブラリを構築する価値があるのは何件からですか？',
+            a: '5件以上からです。本番Promptが5件未満の場合は共有ドキュメントで十分です。5件以上になると、分散したストレージの調整コストがGitのYAMLライブラリのセットアップコスト（約1時間）を超えます。',
+          },
+          {
+            q: '本番Promptのテストセットの適切なサイズはどれくらいですか？',
+            a: '20件が最低限です：Happy Pathが10件、Edge Caseが5件（特殊フォーマット、長い入力、必須フィールドの欠落）、Adversarial Inputが5件。50件を超えると、ほとんどの本番Promptでカバレッジの限界効果が逓減します。',
+          },
+          {
+            q: '非技術系チームメンバーのためのPromptエンジニアリングをどのように管理しますか？',
+            a: '非技術系ステークホルダーがPromptの内容をドラフトするための共有NotionまたはGoogle Docを使用し、開発者がYAMLファイルとして構造化してテストを実行する責任を持ちます。PromptQuorumはAPIアクセスなしでPromptを実行・比較できるノーコードインターフェースを提供しており、プロダクトマネージャーやデザイナーも使用できます。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[チームのためのPromptライブラリの構築](/prompt-engineering/build-a-prompt-library?lang=ja) — メタデータ構造、フォルダ構成、50件以上へのガバナンスのスケール',
+          '[Prompt品質の評価方法：メトリクス、テスト、チェックリスト](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — 20件テストセットの構築、二値pass/failスコアリング、LLM-as-Judgeルーブリック',
+          '[複数モデルでのPromptテスト方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — タスクごとのベストパフォーマーを見つけるためにGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで同じPromptを実行',
+          '[ベストPrompt管理プラットフォーム（2026年）](/prompt-engineering/best-prompt-management-platforms?lang=ja) — Gitを超えたとき：成長するチームのためのBraintrust、PromptHub、Vellumの比較',
+          '[GPT-4o vs Claude vs Gemini：どのモデルを選ぶ？](/prompt-engineering/gpt-claude-gemini-which-model?lang=ja) — タスクの種類、レイテンシ、コスト、コンテキストウィンドウによるモデル選択',
+          '[ベストPromptエンジニアリングIDE（2026年）](/prompt-engineering/best-prompt-engineering-ides?lang=ja) — シンタックスハイライトとチーム共有スニペット付きYAML Promptファイル編集のためのVS CodeとCursorの設定',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考資料',
+        items: [
+          '[OpenAI APIの料金（2026年4月）](https://openai.com/api/pricing) — この記事のコスト試算に使用したGPT-4oおよびGPT-4o miniの入出力トークンレート',
+          '[Anthropic APIの料金（2026年4月）](https://www.anthropic.com/pricing) — Claude 4.6 SonnetおよびClaude 4.5 Haikuのトークンレート',
+          '[Google Gemini APIの料金（2026年4月）](https://ai.google.dev/pricing) — Gemini 2.5 Proのコンテキストウィンドウとトークンレート',
+          '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — 共有Promptライブラリに適用できるコードの共有所有権とガバナンスの原則',
+          '[NIST AI Risk Management Framework (AI RMF)](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — あらゆる規模の組織におけるAIシステムのガバナンス原則',
+        ],
+      },
+    },
   },
   zh: {
     theme: 'Workflows',
