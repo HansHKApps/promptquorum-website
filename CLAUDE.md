@@ -189,7 +189,8 @@ Before writing or substantially editing any article, ask:
 1. **"What is the core purpose of this page in one sentence?"** — Clarify scope before classifying.
 
 2. **Apply 3-tier test:**
-   - **evergreen**: Timeless concept, no year/model/hardware refs. Examples: "What is prompt engineering?", "How does an LLM work?", "Guide to fine-tuning fundamentals". → Add `freshness_tier: 'evergreen'`
+   - **evergreen**: Timeless concept, no year/model/hardware refs. Examples: "What is prompt engineering?", "How does an LLM work?", "Guide to fine-tuning fundamentals", **"Prompt review workflow for teams"**, **"Guide to CI/CD gates for LLMs"**. → Add `freshness_tier: 'evergreen'`
+     - **Note:** A workflow/process/checklist article is evergreen even if it mentions specific tools (GitHub Actions, GPT-4o, Braintrust) as *illustrative examples*. Reserve `semi_annual` for articles whose PRIMARY subject is a specific versioned model, hardware spec, or ranked list with a year in the title.
    - **semi_annual**: Specific models, hardware, pricing, or "best-of" recommendations with year in title. Examples: "Best Llama 3.2 Models 2026", "RTX 4090 Performance Benchmark 2026", "Top Open-Source LLMs in 2026". → Add `freshness_tier: 'semi_annual'` + set `next_refresh_due` to 6 months from publish date
    - **annual**: Year-specific event, ranking, or timeline with year in slug URL. Examples: "/2026-ai-model-releases/", "/2026-gpu-price-rankings/". → Add `freshness_tier: 'annual'` + set `specific_year: 2026`
 
