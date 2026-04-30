@@ -11,7 +11,7 @@ export const article: Record<Language, PEArticle> = {
     theme: 'Workflows',
     title: 'Prompt Engineering Setup for Small Teams: Tools, Workflow & Governance',
     seoTitle: 'Prompt Engineering for Small Teams: Setup Guide (2026)',
-    metaDescription: 'Set up prompt engineering for a team of 2–15: shared library, versioning, multi-model testing, and ownership rules. Step-by-step guide. April 2026.',
+    metaDescription: 'Set up prompt engineering for a team of 2–15: shared library, Git versioning, multi-model testing, and ownership rules. Step-by-step guide. April 2026.',
     ogDescription: 'Most small teams manage prompts in Slack threads and scattered docs. A shared library, Git versioning, and a 20-case test harness takes one week to set up. Here is how.',
     twitterDescription: 'Small team prompt setup in 5 days: shared library, versioning, multi-model tests, clear ownership. No enterprise budget needed.',
     intro: '**Small teams that manage prompts in Slack threads, personal notebooks, and copy-paste chains face the same three problems: duplicated work, undocumented regressions, and no way to compare which model performs best on their tasks.** A structured prompt engineering setup solves all three with a shared library, versioning, and a test harness. This guide shows you how to build it in one week.',
@@ -257,7 +257,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         callouts: [
           { type: 'key-point', label: 'Minimum test set size', text: '20 cases is the floor — fewer misses too many edge cases. Beyond 50 cases, marginal coverage gains diminish for most small-team production prompts. Start at 20 and expand only when you identify specific failure categories you need to cover.' },
-          { type: 'pro-tip', label: 'Multi-model baseline', text: 'Run your test set against both GPT-4o and Claude 4.6 Sonnet before every deploy. Models update without warning — a version bump can silently change pass rates on your specific tasks. See How To Test Prompts Across Models for the full comparison workflow.' },
+          { type: 'pro-tip', label: 'Multi-model baseline', text: 'Run your test set against both GPT-4o and Claude 4.6 Sonnet before every deploy. Models update without warning — a version bump can silently change pass rates on your specific tasks. See [How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) for the full comparison workflow.' },
         ],
       },
       modelSelection: {

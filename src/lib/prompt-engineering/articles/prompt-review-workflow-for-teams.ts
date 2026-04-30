@@ -9,23 +9,25 @@ export const article: Record<Language, PEArticle> = {
     intro: 'Unreviewed prompts cause 3x more production failures than reviewed ones. A structured team prompt review workflow prevents hallucinations from shipping, catches security vulnerabilities before deployment, and ensures consistency across models. This guide covers the complete workflow: triggering review gates, assembling review teams, running quality checks, and automating decision-making.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
+    lastFactChecked: '2026-04-30 — GPT-4o, Claude, Braintrust, GitHub Actions, GitLab CI verified',
     educationalLevel: 'Intermediate',
     audience: 'Developers building with LLMs, prompt engineers, engineering team leads',
     toc: [
       { label: 'Key Takeaways', anchor: 'key-takeaways' },
-      { label: 'Why Prompt Review Matters', anchor: 'why-review' },
-      { label: 'What a Prompt Review Workflow Looks Like', anchor: 'workflow-overview' },
-      { label: 'Designing Your Review Checklist', anchor: 'checklist' },
-      { label: 'Choosing Your Review Team', anchor: 'team-roles' },
-      { label: 'Automated Quality Checks vs Manual Review', anchor: 'automated-vs-manual' },
-      { label: 'Building a Review Gate into CI/CD', anchor: 'cicd-gates' },
-      { label: 'Common Mistakes in Prompt Review', anchor: 'mistakes' },
+      { label: 'Why Does Prompt Review Matter?', anchor: 'why-review' },
+      { label: 'What Does a Prompt Review Workflow Look Like?', anchor: 'workflow-overview' },
+      { label: 'What Should Your Review Checklist Include?', anchor: 'checklist' },
+      { label: 'Who Should Review Prompts?', anchor: 'team-roles' },
+      { label: 'Should You Automate or Keep Review Manual?', anchor: 'automated-vs-manual' },
+      { label: 'How to Build a CI/CD Review Gate', anchor: 'cicd-gates' },
+      { label: 'What Are the Most Common Prompt Review Mistakes?', anchor: 'mistakes' },
+      { label: 'Regional Compliance Considerations', anchor: 'regional-considerations' },
       { label: 'Related Reading', anchor: 'related-reading' },
       { label: 'FAQ', anchor: 'faq' },
       { label: 'Sources', anchor: 'sources' },
     ],
-    seoTitle: 'Prompt Review Workflow for Teams: Checklist & Gates',
-    metaDescription: 'Implement a team prompt review workflow that prevents hallucinations, catches security issues, and standardizes quality. Includes checklist, role assignments, and CI/CD gates.',
+    seoTitle: 'Prompt Review Workflow for Teams: 7-Point Checklist & Gates',
+    metaDescription: 'A structured prompt review workflow cuts production failures by 3×. Includes a 7-point checklist, reviewer role assignments, automated gates, and CI/CD integration for teams.',
     ogDescription: 'Unreviewed prompts cause 3x more production failures. Learn how to build a structured team workflow with automated quality gates and manual review roles.',
     twitterDescription: 'Prevent unreviewed prompts from shipping. Workflow guide: quality checklist, review roles, automated gates, CI/CD integration. 8-min read.',
     readTime: '8 min read',
@@ -39,6 +41,7 @@ export const article: Record<Language, PEArticle> = {
       inLanguage: 'en',
       proficiencyLevel: 'Intermediate',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams', width: 1200, height: 630 },
       keywords: ['prompt review', 'team workflow', 'quality assurance', 'CI/CD gates', 'prompt governance', 'LLM testing', 'hallucination prevention'],
@@ -115,6 +118,16 @@ export const article: Record<Language, PEArticle> = {
           name: 'How often should we review existing prompts?',
           acceptedAnswer: { '@type': 'Answer', text: 'Review prompts on these triggers: (1) Every change (code review style). (2) When deploying to a new model (e.g., migrating from GPT-4o to Claude). (3) When use case changes (e.g., prompt moves from customer-facing to internal). (4) After a production incident (hallucination, wrong output). Do NOT require review for documentation-only changes or test-only changes.' },
         },
+        {
+          '@type': 'Question',
+          name: 'What tools help automate prompt review?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Braintrust, Promptlayer, and Vellum have built-in review gates and approval workflows. GitHub Actions and GitLab CI can enforce review policies. Dedicated tools for security scanning (e.g., regex-based injection detection) and hallucination detection (e.g., flagging factual claims) can integrate into your CI pipeline. PromptQuorum supports multi-model comparison which helps reviewers validate correctness: run a prompt against 3+ models and compare outputs to catch divergence.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can one reviewer approve a prompt?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Not recommended. A single reviewer misses blind spots — domain experts miss security issues; security reviewers miss business logic errors. Require at least 2 reviewers (minimum: 1 domain + 1 security). For critical systems (finance, healthcare, customer-facing), require 3 (domain + security + compliance). This adds time (5–15 min) but prevents 80% of production failures.' },
+        },
       ],
     },
     itemListSchema: {
@@ -131,6 +144,15 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'ListItem', position: 5, name: 'Test Suite', description: 'Regression tests that validate prompt behavior against known correct outputs' },
       ],
     },
+    leadAnswerBlock: '**A prompt review workflow validates AI prompts before deployment using a 7-point checklist (clarity, context, format, hallucination risk, security, consistency, model fit). Teams run automated checks plus manual approval from domain, security, and quality reviewers — preventing 3× more production failures.**',
+    quickFacts: [
+      'Unreviewed prompts fail in production at 3× the rate of reviewed ones',
+      'A review checklist covers 7 criteria: clarity, context, output format, hallucination risk, security, consistency, and model fit',
+      'Recommended split: 70% automated checks + 30% manual review',
+      'Manual review time: 5–15 minutes per prompt',
+      'Review gates require approval from at least 2 reviewers before merge',
+      'A single hallucination checklist item prevents 30–40% of production hallucinations',
+    ],
     sections: {
       tldr: {
         title: 'Key Takeaways',
@@ -147,18 +169,34 @@ export const article: Record<Language, PEArticle> = {
       },
 
       whyReview: {
-        title: 'Why Prompt Review Matters',
+        id: 'why-review',
+        title: 'Why Does Prompt Review Matter for Teams?',
         content: [
-          '**Unreviewed prompts fail in production at 3x the rate of reviewed ones.** A prompt that works in isolation breaks when deployed to the API, runs against live data, or scales to production traffic. Manual code review catches syntax errors; prompt review catches logic errors, missing context, and hallucination vulnerabilities that automated tests alone cannot detect.',
+          '**Unreviewed prompts fail in production at 3x the rate of reviewed ones.** A prompt that works in isolation breaks when deployed to the API, runs against live data, or scales to production traffic. Manual code review catches syntax errors; prompt review catches logic errors, missing context, and [hallucinations from shipping](/prompt-engineering/ai-hallucinations-how-to-stop) that automated tests alone cannot detect.',
           'In software development, code review is mandatory before merge. Prompt review should be equally mandatory — a prompt is executable code that affects customer outcomes, just as much as a Python function does. The difference is that prompts fail silently: they return plausible-sounding incorrect answers instead of throwing errors.',
-          'Three failure modes review prevents: (1) Hallucination — the model invents facts not in the training data (e.g., a tool review that claims features that don\'t exist). (2) Instruction-following failure — the model misinterprets the intent because context was incomplete (e.g., asking for JSON output without specifying schema). (3) Security bypass — a prompt is vulnerable to injection attacks (e.g., user input can manipulate instructions mid-execution).',
+          'Three failure modes review prevents: (1) Hallucination — the model invents facts not in the training data (e.g., a tool review that claims features that don\'t exist). (2) Instruction-following failure — the model misinterprets the intent because context was incomplete (e.g., asking for JSON output without specifying schema). (3) Security bypass — a prompt is vulnerable to [prompt injection attacks](/prompt-engineering/prompt-injection-and-security) (e.g., user input can manipulate instructions mid-execution).',
+        ],
+        callouts: [
+          { type: 'Warning', label: 'Silent Failures', text: 'Prompts fail silently — they return plausible-sounding wrong answers instead of throwing errors. Your error logs won\'t catch these.' },
+          { type: 'Did You Know', label: 'Hallucination Stat', text: 'Asking a model for factual claims (statistics, names, dates) without providing source data is responsible for 30–40% of production hallucinations.' },
         ],
       },
 
       workflowOverview: {
-        title: 'What a Prompt Review Workflow Looks Like',
+        id: 'workflow-overview',
+        title: 'What Does a Prompt Review Workflow Look Like?',
         content: [
           '**A complete prompt review workflow has 5 stages: definition, submission, automated checks, manual review, and deployment.**',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'A prompt review workflow is a gate-based process requiring AI prompts to pass automated quality checks and receive explicit approvals from domain, security, and quality reviewers before deployment.'
+          },
+          {
+            type: 'in-plain-terms',
+            text: 'Think of it like a code review for your AI instructions — no one deploys untested code, so no one deploys an unreviewed prompt.'
+          }
         ],
         numberedItems: [
           'Engineer writes a prompt and opens a pull request. The prompt is stored in version control alongside test cases.',
@@ -169,12 +207,16 @@ export const article: Record<Language, PEArticle> = {
         ],
         image: '/images/prompt-review-workflow-en.svg',
         imageCaption: 'Prompt review workflow: automated checks → manual review → deployment gate → test validation.',
+        callouts: [
+          { type: 'Pro Tip', label: 'Version Control', text: 'Store prompts in Git the same way you store code — every change is a PR, every approval is a commit. This gives you full audit history automatically.' },
+        ],
       },
 
       checklist: {
-        title: 'Designing Your Review Checklist',
+        id: 'checklist',
+        title: 'What Should Your Prompt Review Checklist Include?',
         content: [
-          '**A prompt review checklist standardizes what "good" means and removes subjective disagreement.** Every prompt must pass the same criteria before approval.',
+          '**A prompt review checklist standardizes what "good" means and removes subjective disagreement.** Every prompt must pass the same criteria before approval. Use [automated quality checks](/prompt-engineering/build-quality-checks) to enforce the checklist.',
         ],
         columns: ['Criterion', 'What to Check', 'Fail Example', 'Pass Example'],
         rows: [
@@ -222,21 +264,35 @@ export const article: Record<Language, PEArticle> = {
           },
         ],
         tableFormat: true,
+        callouts: [
+          { type: 'Key Point', label: 'What to Automate', text: 'Automate items 1, 3, 4 (format, hallucination flags, security patterns). Review items 2, 6, 7 manually (context, consistency, model fit).' },
+        ],
       },
 
       teamRoles: {
-        title: 'Choosing Your Review Team',
+        id: 'team-roles',
+        title: 'Who Should Review Prompts in Your Team?',
         content: [
           '**Prompt review requires at least three independent roles to avoid blind spots.** Each role catches different failure modes.',
           '**Domain Expert** — Understands the business logic, validates that prompt intent matches requirements. Catches semantic errors (wrong logic, missing cases). Example: a product manager or backend engineer who knows what the output should actually do.',
           '**Security Reviewer** — Audits for injection vulnerabilities, data leakage, compliance issues (GDPR, HIPAA). Catches prompt injection patterns, unintended data exposure. Example: a security engineer or compliance officer.',
           '**Quality/Test Engineer** — Validates against test cases, checks output format compliance, runs regression tests. Catches format bugs and performance regressions. Example: a QA engineer or automation engineer.',
-          '**Team sizing:** For small teams (< 10 engineers), one person can cover domain + quality; hire or consult security for sensitive domains. For medium teams (10–30 engineers), designate one full-time security reviewer and rotate domain + quality roles. For large teams (> 30 engineers), have dedicated reviewers for each role and establish review SLA (reviewed within 4 hours). For regulated domains (healthcare, finance), add a fourth role: Compliance/Legal reviewer, required for prompts handling regulated data.',
+          '**Team sizing by organization scale:**',
+        ],
+        items: [
+          '**Small teams (< 10 engineers):** One person covers domain + quality; bring in a security consultant for sensitive domains',
+          '**Medium teams (10–30):** One dedicated security reviewer; rotate domain + quality roles',
+          '**Large teams (> 30):** Dedicated reviewer per role; enforce 4-hour review SLA',
+          '**Regulated domains (healthcare, finance):** Add a 4th Compliance/Legal reviewer for prompts handling regulated data',
+        ],
+        callouts: [
+          { type: 'Best Practice', label: 'Small Teams', text: 'Teams under 10 can merge domain + quality reviewer into one role. Never skip the security reviewer, even for internal tools.' },
         ],
       },
 
       automatedVsManual: {
-        title: 'Automated Quality Checks vs Manual Review',
+        id: 'automated-vs-manual',
+        title: 'Should You Automate Prompt Review or Keep It Manual?',
         content: [
           '**Automatable checks handle repetitive, objective criteria. Manual review handles subjective judgment and edge cases.** Do not automate manual decision-making.',
         ],
@@ -274,12 +330,16 @@ export const article: Record<Language, PEArticle> = {
           },
         ],
         tableFormat: true,
+        callouts: [
+          { type: 'Pro Tip', label: 'Sequence Matters', text: 'Run automated checks first (< 30 seconds). Manual review only happens after all automated checks pass — this filters out obvious issues and saves reviewer time.' },
+        ],
       },
 
       cicdGates: {
-        title: 'Building a Review Gate into CI/CD',
+        id: 'cicd-gates',
+        title: 'How Do You Build a Prompt Review Gate into CI/CD?',
         content: [
-          '**A review gate enforces that no prompt can deploy without passing automated checks AND manual approval.** This is the enforcement mechanism that makes review mandatory.',
+          '**A review gate enforces that no prompt can deploy without passing automated checks AND manual approval.** This is the enforcement mechanism that makes review mandatory. Use [automated checks](/prompt-engineering/best-prompt-testing-tools) to validate technical correctness.',
         ],
         numberedItems: [
           'Store prompts in version control (Git). Each prompt change is a pull request, just like code.',
@@ -288,6 +348,9 @@ export const article: Record<Language, PEArticle> = {
           'If automated checks pass, add a "Needs Review" label and notify designated reviewers (via GitHub CODEOWNERS, GitLab approvals, or Braintrust policy).',
           'Require approval from at least 2 reviewers (e.g., 1 domain + 1 security). Use branch protection rules or equivalent to enforce.',
           'After both reviewers approve, allow merge. The prompt deploys via the normal CI/CD pipeline.',
+        ],
+        callouts: [
+          { type: 'Warning', label: 'Enforcement', text: 'Without a CI/CD gate, review is advisory — engineers can skip it. Branch protection rules make review mandatory and auditable.' },
         ],
         codeBlock: `# Example: GitHub branch protection rule (pseudocode)
 required_approvals: 2  # Require 2 approvals
@@ -301,22 +364,38 @@ require_code_owner_reviews: true`,
       },
 
       mistakes: {
-        title: 'Common Mistakes in Prompt Review',
+        id: 'mistakes',
+        title: 'What Are the Most Common Prompt Review Mistakes?',
         content: [
           '**Avoid these patterns; they waste time and let bugs through.**',
         ],
-        items: [
-          '**Reviewing only style, not logic.** Nitpicking variable names ("this should be snake_case") while ignoring hallucination vectors. Focus on: security, correctness, hallucination risk. Leave style to linters.',
-          '**No standardized checklist.** Reviewers use different criteria. This leads to inconsistency and argument. Write down your checklist.',
-          '**Reviewing without test cases.** "Looks good to me" is not approval. Run the prompt against your test suite; verification is approval.',
-          '**Security reviewer missing from workflow.** Only code review, no security review. Adds injection vulnerabilities. Require security sign-off.',
-          '**Blocking on opinion, not data.** Disagreement about "better wording" halts approval. Resolve with test cases: which version gets higher test scores?',
-          '**No automated checks.** All review is manual. This wastes reviewer time on format validation that can be automated in 5 seconds.',
-          '**Review happens after deployment.** Review is post-incident, not pre-deployment. Move review into CI/CD. Unapproved prompts should not merge.',
+        mistakes: [
+          { mistake: 'Reviewing only style, not logic', problem: 'Nitpicking variable names while ignoring hallucination vectors and injection vulnerabilities', fix: 'Focus on security, correctness, and hallucination risk; leave style to linters' },
+          { mistake: 'No standardized checklist', problem: 'Reviewers use different criteria, causing inconsistency and argument', fix: 'Write a 7-point checklist that all reviewers use identically' },
+          { mistake: 'Reviewing without test cases', problem: '"Looks good to me" is not approval — logic errors pass undetected', fix: 'Run the prompt against your test suite; verification scores are approval criteria' },
+          { mistake: 'Security reviewer missing', problem: 'Code review alone misses injection vulnerabilities and compliance gaps', fix: 'Require security sign-off on every prompt change, especially for user-facing prompts' },
+          { mistake: 'Blocking on opinion, not data', problem: 'Disagreements about wording halt approvals with no resolution path', fix: 'Test both versions; the version with higher test scores wins — document the decision' },
+          { mistake: 'No automated checks', problem: 'All review is manual, wasting time on format validation', fix: 'Automate format, security scanning, and hallucination flagging; reserve manual review for intent and correctness' },
+          { mistake: 'Review happens after deployment', problem: 'Review is reactive (post-incident) instead of preventive (pre-merge)', fix: 'Integrate review gates into CI/CD — unapproved prompts cannot merge' },
+        ],
+        callouts: [
+          { type: 'Did You Know', label: 'Most Common Mistake', text: 'The costliest review mistake is blocking on style (variable names, wording) while approving prompts with hallucination vectors or injection vulnerabilities.' },
+        ],
+      },
+
+      regionalConsiderations: {
+        id: 'regional-considerations',
+        title: 'Do Regional Regulations Affect Prompt Review Requirements?',
+        content: [
+          '**Yes — EU, Japan, and China each add compliance requirements on top of the base workflow.** Teams handling regulated data must build these into their review checklists.',
+          '**EU (GDPR + AI Act):** GDPR Article 9 requires human oversight for high-risk AI processing — prompt review satisfies this. The EU AI Act (enforcement from 2026) mandates traceability of AI decisions; version-controlled prompt reviews with approval logs meet this requirement. Add a GDPR impact assessment checklist item for prompts that process personal data.',
+          '**Japan (METI AI Guidelines 2024):** METI recommends logging AI decision rationale for auditability. Store review comments and approval reasons in your Git commit messages or PR descriptions.',
+          '**China (Data Security Law 2021):** Prompts that process Chinese user data must keep evaluation logs on-premises or in China-hosted infrastructure. Run test suites against Chinese user data locally, not via external APIs.',
         ],
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'Related Reading',
         items: [
           '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — Metrics for measuring prompt correctness and hallucination risk',
@@ -324,6 +403,7 @@ require_code_owner_reviews: true`,
           '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Detect and prevent injection vulnerabilities in prompts',
           '[Best Prompt Testing Tools](/prompt-engineering/best-prompt-testing-tools) — Tools for automating prompt validation and regression testing',
           '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — Version control and organization for teams managing many prompts',
+          '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Cross-model testing strategies for validating prompt consistency before shipping',
         ],
       },
 

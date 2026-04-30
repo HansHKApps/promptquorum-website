@@ -39,14 +39,14 @@ const STATIC_PAGES: Page[] = [
 ]
 
 const PE_PAGES: Page[] = [
-  { path: '/prompt-engineering', priority: 0.9, changefreq: 'weekly', lastmod: '2026-03-16' },
+  { path: '/prompt-engineering', priority: 0.9, changefreq: 'weekly', lastmod: '2026-04-30' },
   ...Object.keys(PE_SLUG_TO_KEY)
     .filter(slug => hasRealContent(peContent, PE_SLUG_TO_KEY[slug]))
     .map(slug => ({
       path: `/prompt-engineering/${slug}`,
       priority: 0.8,
       changefreq: 'monthly' as const,
-      lastmod: '2026-03-16',
+      lastmod: '2026-04-30',
     })),
 ]
 
