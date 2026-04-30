@@ -1880,6 +1880,7 @@ jobs:
           '@type': 'Question',
           name: '不使用Git时如何回滚Prompt？',
           acceptedAnswer: { '@type': 'Answer', text: '使用功能标志（最简单）：在标志后部署新Prompt、在生产中测试、切换标志以在秒内回滚。使用环境变量：在env变量中存储Prompt、交换值以恢复。使用数据库：在数据库表中存储Prompt版本、按版本号查询。最慢的方法是重新部署旧代码，需要数分钟。推荐功能标志或环境变量——回滚应该在秒内完成。' },
+        },
       ],
     },
     itemListSchema: {
