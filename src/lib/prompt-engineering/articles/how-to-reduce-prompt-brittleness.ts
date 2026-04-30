@@ -38,6 +38,8 @@ export const article: Record<Language, PEArticle> = {
       { label: 'How Do You Start Reducing Prompt Brittleness?', anchor: 'how-to-start' },
       { label: 'Frequently Asked Questions', anchor: 'faq' },
     ],
+    gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
+    gammaDescription: 'The slide deck below covers: 7 techniques to reduce prompt brittleness (structured output, few-shot examples, defensive instructions, input parameterization, regression testing, model version pinning, and output validation), root causes of brittleness, and how to test prompts for reliability. Download the PDF as a Prompt Brittleness Reduction reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -384,6 +386,8 @@ export const article: Record<Language, PEArticle> = {
       { label: 'Wie startet man die Reduktion von Prompt-Brittleness?', anchor: 'how-to-start' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
     ],
+    gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
+    gammaDescription: 'Das Foliendeck deckt ab: 7 Techniken zur Reduzierung von Prompt-Brittleness (strukturierte Ausgabe, Few-Shot-Beispiele, defensive Anweisungen, Eingabeparametrisierung, Regressionstests, Modellversionierung und Output-Validierung), Grundursachen und Teststrategien. Laden Sie die PDF als Brittleness-Reduktion-Referenzkarte herunter.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -750,6 +754,8 @@ export const article: Record<Language, PEArticle> = {
       { label: 'Comment commencer à réduire la fragilité ?', anchor: 'how-to-start' },
       { label: 'Foire aux questions', anchor: 'faq' },
     ],
+    gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
+    gammaDescription: 'Le diaporama couvre : 7 techniques pour réduire la fragilité des prompts (output structuré, exemples few-shot, instructions défensives, paramétrisation des entrées, tests de régression, verrouillage de version et validation de sortie), causes racines et stratégies de test. Téléchargez le PDF comme fiche de référence sur la réduction de la fragilité.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1116,6 +1122,8 @@ export const article: Record<Language, PEArticle> = {
       { label: 'プロンプト脆弱性の低減を開始するには？', anchor: 'how-to-start' },
       { label: 'よくあるご質問', anchor: 'faq' },
     ],
+    gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
+    gammaDescription: 'スライドデッキは以下をカバーしています：Prompt脆弱性を低減する7つのテクニック（構造化出力、Few-Shot例、防御的指示、入力パラメータ化、回帰テスト、モデルバージョン固定、出力検証）、根本原因、およびテスト戦略。PDFを脆弱性低減の参考カードとしてダウンロード。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1464,6 +1472,8 @@ export const article: Record<Language, PEArticle> = {
       { label: '如何开始减少Prompt脆弱性？', anchor: 'how-to-start' },
       { label: '常见问题', anchor: 'faq' },
     ],
+    gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
+    gammaDescription: '幻灯片涵盖：减少Prompt脆弱性的7项技术（结构化输出、Few-Shot示例、防御性指令、输入参数化、回归测试、模型版本固定、输出验证）、根本原因和测试策略。以Prompt脆弱性减少参考卡的形式下载PDF。',
     sections: {
       tldr: {
         id: 'key-takeaways',

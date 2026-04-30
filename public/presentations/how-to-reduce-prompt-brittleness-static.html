@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Reduce Prompt Brittleness: 7 Techniques for Reliable Prompts (2026) | PromptQuorum</title>
+  <meta name="description" content="Prompt brittleness causes silent production failures. Learn 7 techniques — structured output, defensive instructions, regression testing — to make prompts reliable." />
+  <meta property="og:title" content="How to Reduce Prompt Brittleness: 7 Techniques — PromptQuorum" />
+  <meta property="og:description" content="Learn 7 techniques to reduce prompt brittleness: structured output, defensive instructions, regression testing, and more." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: #fafafa;
+      color: #202124;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      z-index: 10;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 24px;
+      width: auto;
+    }
+
+    .header-left span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #5f6368;
+      max-width: 400px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+    }
+
+    .header-links a {
+      color: #5f6368;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .header-links a:hover {
+      background: #f0f0f0;
+      color: #202124;
+    }
+
+    .content-area {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 48px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .slide h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.2;
+      margin: 16px 0;
+      color: #202124;
+    }
+
+    .slide h2 {
+      font-size: clamp(26px, 3.5vw, 38px);
+      line-height: 1.3;
+      margin-bottom: 24px;
+      color: #202124;
+    }
+
+    .slide p {
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.6;
+      margin: 12px 0;
+      color: #5f6368;
+      max-width: 90%;
+    }
+
+    .slide ul {
+      text-align: left;
+      font-size: 1.1em;
+      line-height: 1.8;
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .slide ul li {
+      margin: 12px 0;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .slide ul li:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #6750a4;
+      font-weight: bold;
+    }
+
+    .slide ol {
+      text-align: left;
+      font-size: 1.05em;
+      line-height: 1.8;
+      margin: 20px 0;
+      padding-left: 24px;
+    }
+
+    .slide ol li {
+      margin: 10px 0;
+    }
+
+    .slide table {
+      width: 100%;
+      max-width: 90%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    .slide table th {
+      background: #f0f0f0;
+      padding: 12px 8px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    .slide table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .slide table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .slide.title {
+      background: linear-gradient(135deg, #6750a4 0%, #7d61c4 100%);
+      color: white;
+    }
+
+    .slide.title h1 {
+      color: white;
+      font-size: clamp(36px, 5vw, 52px);
+    }
+
+    .slide.title p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(18px, 2.5vw, 24px);
+    }
+
+    .slide.title .logo {
+      height: 40px;
+      width: auto;
+      margin-bottom: 16px;
+      filter: brightness(0) invert(1);
+    }
+
+    .slide.cta {
+      background: linear-gradient(135deg, #4a3f85 0%, #6750a4 100%);
+      color: white;
+    }
+
+    .slide.cta h2 {
+      color: white;
+    }
+
+    .slide.cta p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .slide.cta a {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 28px;
+      background: white;
+      color: #6750a4;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .slide.cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: #f8f9fa;
+      border-top: 1px solid #e0e0e0;
+      z-index: 10;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      background: #6750a4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #5540a0;
+    }
+
+    .controls button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 14px;
+      color: #5f6368;
+      font-weight: 500;
+    }
+
+    @media print {
+      .header, .controls {
+        display: none;
+      }
+
+      .content-area {
+        overflow: visible;
+        page-break-after: avoid;
+      }
+
+      .slide {
+        position: static;
+        page-break-after: always;
+        display: flex !important;
+        opacity: 1 !important;
+        break-inside: avoid;
+      }
+
+      .slide p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">How to Reduce Prompt Brittleness</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'How to Reduce Prompt Brittleness: 7 Techniques for Reliable Prompts (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'How to Reduce Prompt Brittleness',
+            subtitle: '7 Techniques for Reliable Prompts (2026)',
+            link: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness'
+          },
+          {
+            type: 'list',
+            h2: 'What Is Prompt Brittleness?',
+            items: [
+              'Prompts produce correct output on test inputs but fail silently when phrasing, model, or context changes',
+              'Failures are silent — the model returns plausible-sounding wrong answers',
+              'Teams discover brittleness only when users report incorrect outputs weeks after deployment'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Root Causes of Brittleness',
+            items: [
+              '<strong>Implicit format assumptions</strong> — expecting JSON without enforcing it',
+              '<strong>Happy-path testing</strong> — validating against 3–5 curated examples only',
+              '<strong>Model version sensitivity</strong> — providers update silently, changing behavior',
+              '<strong>Context contamination</strong> — system prompts and injections override instructions',
+              '<strong>Over-specific phrasing</strong> — prompts that depend on exact wording'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'The 7 Techniques',
+            items: [
+              '1. <strong>Enforce structured output</strong> — Use JSON mode at the API level',
+              '2. <strong>Add few-shot examples</strong> — Include 2–3 input/output pairs',
+              '3. <strong>Write defensive instructions</strong> — Specify null/fallback behavior',
+              '4. <strong>Parameterize inputs</strong> — Replace hardcoded values with variables',
+              '5. <strong>Build regression test set</strong> — Test 20+ cases before deployment',
+              '6. <strong>Pin model versions</strong> — Use dated identifiers like gpt-4o-2024-08-06',
+              '7. <strong>Add output validation</strong> — Check type, schema, and field presence'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Technique 1 & 7: Format + Validation',
+            items: [
+              '<strong>Structured output (Technique 1)</strong> prevents format-mismatch brittleness at the API layer',
+              '<strong>Output validation (Technique 7)</strong> catches residual failures where JSON is valid but field values are wrong',
+              'Using both together gives complete production protection'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Brittle vs. Robust Prompts',
+            items: [
+              '<strong>Brittle:</strong> "Classify this ticket as urgent or routine: {{ticket}}"',
+              '<strong>Robust:</strong> "Return one JSON object: {\"priority\": \"urgent\"} or {\"priority\": \"routine\"}. No explanation."',
+              '',
+              '<strong>Brittle:</strong> "Extract the email: {{message}}"',
+              '<strong>Robust:</strong> "Return {\"email\": \"<addr>\"} or {\"email\": null}. Do not guess."'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Testing for Brittleness',
+            items: [
+              '<strong>Paraphrase testing:</strong> Reword 5–10 inputs, check consistency',
+              '<strong>Edge case testing:</strong> Empty inputs, max-length text, non-English, special chars',
+              '<strong>Temperature variation:</strong> Run at 0.0, 0.5, 1.0 — robust prompts stay consistent',
+              '<strong>Model swap:</strong> Test on GPT, Claude, Gemini — outputs should not diverge',
+              '<strong>Regression runs:</strong> Full test set before every model upgrade or prompt change'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'The Minimum Viable Test Set',
+            items: [
+              '10 typical inputs covering expected distribution',
+              '5 paraphrase variants (e.g., rephrased versions of 2–3 inputs)',
+              '5 edge cases (empty, max-length, non-English, missing field, special chars)',
+              '= 20 cases total, catches majority of production failures'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Common Mistakes to Avoid',
+            items: [
+              '<strong>#1 String matching:</strong> if "Yes" in response breaks on "Yes," or "Yes." — use JSON instead',
+              '<strong>#2 No null case:</strong> extraction prompt without "return null if not found" → model hallucinate data',
+              '<strong>#3 No version pinning:</strong> using gpt-4o alias means silent behavioral drift after updates',
+              '<strong>#4 Happy-path testing only:</strong> validating 3–5 examples then deploying → failures in production'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'How to Start (8 Steps)',
+            items: [
+              '1. Identify 3 highest-traffic/risk prompts in production',
+              '2. Rephrase 5 typical inputs, compare outputs for consistency',
+              '3. Add 5 edge cases: empty, max-length, non-English, missing field, special chars',
+              '4. If parsing free-text, switch to JSON mode in next deploy',
+              '5. Add defensive instructions for gaps and null cases',
+              '6. Commit test cases to version control as prompt specification',
+              '7. Set up CI step to run tests before deploying any prompt or model change',
+              '8. Pin model version identifier and document which version the prompt was tuned on'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'FAQs',
+            items: [
+              '<strong>Q: How many test cases do I need?</strong> A: Minimum 20 (10 typical + 5 paraphrase + 5 edge) catches majority of failures.',
+              '<strong>Q: Is JSON mode enough?</strong> A: It prevents format errors but not content errors. Add output validation for complete protection.',
+              '<strong>Q: How often test for regression?</strong> A: On every prompt change, model version upgrade, and system prompt update.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Why PromptQuorum Helps',
+            items: [
+              'Test prompts simultaneously across GPT, Claude, Gemini with pass-rate comparison',
+              'Built-in regression test management and version control',
+              'Real-time monitoring of prompt behavior across model updates',
+              'Collaborative prompt review workflow for teams'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Reliable Prompts Start Here',
+            body: 'Stop silent failures in production. Test, version, and monitor prompts with PromptQuorum.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Prompt-Brittleness reduzieren: 7 Techniken für zuverlässige Prompts (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Prompt-Brittleness Reduzieren',
+            subtitle: '7 Techniken für zuverlässige Prompts (2026)',
+            link: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Was ist Prompt-Brittleness?',
+            items: [
+              'Prompts liefern korrekte Ausgaben bei Testeingaben, scheitern aber stillschweigend, wenn Formulierung, Modell oder Kontext sich ändern',
+              'Fehler sind stillschweigend — das Modell gibt plausible falsche Antworten zurück',
+              'Teams entdecken Brittleness nur, wenn Nutzer falsche Ausgaben Wochen nach Bereitstellung melden'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Grundursachen der Brittleness',
+            items: [
+              '<strong>Implizite Formaterwartungen</strong> — Erwartung von JSON ohne Durchsetzung',
+              '<strong>Happy-Path-Tests</strong> — Validierung nur gegen 3–5 handverlesene Beispiele',
+              '<strong>Modellversionsempfindlichkeit</strong> — Provider aktualisieren stillschweigend',
+              '<strong>Kontextkontamination</strong> — System-Prompts und Injektionen setzen Anweisungen außer Kraft',
+              '<strong>Zu spezifische Formulierungen</strong> — Prompts, die von exakter Wortwahl abhängen'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Die 7 Techniken',
+            items: [
+              '1. <strong>Strukturierte Ausgabe erzwingen</strong> — JSON-Modus auf API-Ebene nutzen',
+              '2. <strong>Few-Shot-Beispiele hinzufügen</strong> — 2–3 Input/Output-Paare einbeziehen',
+              '3. <strong>Defensive Anweisungen schreiben</strong> — Null/Fallback-Verhalten angeben',
+              '4. <strong>Eingaben parametrisieren</strong> — Hartcodierte Werte durch Variablen ersetzen',
+              '5. <strong>Regressions-Testsatz erstellen</strong> — 20+ Fälle vor Bereitstellung testen',
+              '6. <strong>Modellversionen pinnen</strong> — Datierte Identifikatoren wie gpt-4o-2024-08-06 nutzen',
+              '7. <strong>Output-Validierung hinzufügen</strong> — Typ, Schema und Feldpräsenz prüfen'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Technik 1 & 7: Format + Validierung',
+            items: [
+              '<strong>Strukturierte Ausgabe (Technik 1)</strong> verhindert Format-Mismatch-Brittleness auf API-Ebene',
+              '<strong>Output-Validierung (Technik 7)</strong> fängt Residualfehler ab, wo JSON gültig ist aber Feldwerte falsch',
+              'Die Verwendung beider zusammen bietet vollständigen Produktionsschutz'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Spröde vs. robuste Prompts',
+            items: [
+              '<strong>Spröde:</strong> "Klassifiziere dieses Ticket als dringend oder routinemäßig: {{ticket}}"',
+              '<strong>Robust:</strong> "Geben Sie ein JSON-Objekt zurück: {\"priority\": \"urgent\"} oder {\"priority\": \"routine\"}. Keine Erklärung."',
+              '',
+              '<strong>Spröde:</strong> "Extrahiere die E-Mail: {{message}}"',
+              '<strong>Robust:</strong> "Geben Sie {\"email\": \"<addr>\"} oder {\"email\": null} zurück. Nicht raten."'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Testen auf Brittleness',
+            items: [
+              '<strong>Umformulierungstests:</strong> 5–10 Eingaben umformulieren, Konsistenz überprüfen',
+              '<strong>Edge-Case-Tests:</strong> Leere Eingaben, maximale Länge, nicht-englischer Text, Sonderzeichen',
+              '<strong>Temperaturvariation:</strong> Bei 0,0, 0,5, 1,0 ausführen — robuste Prompts bleiben konsistent',
+              '<strong>Modellwechsel:</strong> Auf GPT, Claude, Gemini testen — Ausgaben sollten nicht divergieren',
+              '<strong>Regressionsdurchläufe:</strong> Vollständiger Testsatz vor jeder Modell-Upgrade oder Prompt-Änderung'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Der minimale praktische Testsatz',
+            items: [
+              '10 typische Eingaben für erwartete Verteilung',
+              '5 Umformulierungsvarianten (z. B. umgeformulierte Versionen von 2–3 Eingaben)',
+              '5 Grenzfälle (leer, maximale Länge, nicht-englisch, fehlendes Feld, Sonderzeichen)',
+              '= 20 Fälle insgesamt, fängt Mehrheit der Produktionsfehler'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Häufige Fehler zu vermeiden',
+            items: [
+              '<strong>#1 String-Matching:</strong> if "Ja" in response scheitert bei "Ja," oder "Ja." — nutze JSON',
+              '<strong>#2 Kein Null-Fall:</strong> Extraktions-Prompt ohne "return null if not found" → Modell halluziniert Daten',
+              '<strong>#3 Kein Version-Pinning:</strong> gpt-4o Alias nutzen bedeutet stilles Verhaltens-Drift nach Updates',
+              '<strong>#4 Nur Happy-Path-Tests:</strong> 3–5 Beispiele validieren, dann deployen → Fehler in Produktion'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'So starten Sie (8 Schritte)',
+            items: [
+              '1. Identifizieren Sie 3 höchsten Traffic/Risiko-Prompts in Produktion',
+              '2. Formulieren Sie 5 typische Eingaben um, vergleichen Sie Ausgaben auf Konsistenz',
+              '3. Fügen Sie 5 Grenzfälle hinzu: leer, max-Länge, nicht-englisch, fehlendes Feld, Sonderzeichen',
+              '4. Wenn Freitext analysiert wird, wechseln Sie beim nächsten Deploy zu JSON-Modus',
+              '5. Fügen Sie defensive Anweisungen für Lücken und Null-Fälle hinzu',
+              '6. Verpflichten Sie Testfälle zur Versionskontrolle als Prompt-Spezifikation',
+              '7. Richten Sie CI-Schritt ein, um Tests vor dem Deploying von Prompt- oder Modelländerung auszuführen',
+              '8. Pinnen Sie Modellversionsidentifikator und dokumentieren Sie, auf welcher Version der Prompt abgestimmt ist'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Häufig gestellte Fragen',
+            items: [
+              '<strong>F: Wie viele Testfälle benötige ich?</strong> A: Minimum 20 (10 typisch + 5 Umformulierung + 5 Grenzfall) fängt Mehrheit.',
+              '<strong>F: Ist JSON-Modus genug?</strong> A: Es verhindert Formatfehler, aber nicht Inhaltsfehler. Fügen Sie Validierung hinzu.',
+              '<strong>F: Wie oft auf Regression testen?</strong> A: Bei jeder Prompt-Änderung, Modell-Upgrade und System-Prompt-Änderung.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Warum PromptQuorum hilft',
+            items: [
+              'Testen Sie Prompts gleichzeitig über GPT, Claude, Gemini mit Pass-Rate-Vergleich',
+              'Integrierte Regressions-Testsatz-Verwaltung und Versionskontrolle',
+              'Echtzeit-Überwachung des Prompt-Verhaltens über Modell-Updates hinweg',
+              'Kollaborative Prompt-Review-Workflow für Teams'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Zuverlässige Prompts beginnen hier',
+            body: 'Stoppen Sie stille Fehler in der Produktion. Testen, versionieren und überwachen Sie Prompts mit PromptQuorum.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Réduire la Fragilité des Prompts : 7 Techniques (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Réduire la Fragilité des Prompts',
+            subtitle: '7 Techniques pour des Prompts Fiables (2026)',
+            link: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Qu\'est-ce que la Fragilité des Prompts ?',
+            items: [
+              'Les prompts produisent des résultats corrects sur les entrées de test mais échouent silencieusement si la formulation, le modèle ou le contexte change',
+              'Les défaillances sont silencieuses — le modèle retourne des réponses plausibles mais erronées',
+              'Les équipes découvrent la fragilité uniquement quand les utilisateurs signalent des sorties incorrectes semaines après le déploiement'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Causes Racines de la Fragilité',
+            items: [
+              '<strong>Attentes de format implicites</strong> — attendre JSON sans le forcer',
+              '<strong>Tests happy-path uniquement</strong> — validation contre 3–5 exemples triés sur le volet',
+              '<strong>Sensibilité aux versions de modèle</strong> — les fournisseurs mettent à jour silencieusement',
+              '<strong>Contamination du contexte</strong> — les prompts système et injections annulent les instructions',
+              '<strong>Formulations trop spécifiques</strong> — prompts qui dépendent de la formulation exacte'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Les 7 Techniques',
+            items: [
+              '1. <strong>Forcer la sortie structurée</strong> — Utiliser le mode JSON au niveau API',
+              '2. <strong>Ajouter des exemples few-shot</strong> — Inclure 2–3 paires d\'entrée/sortie',
+              '3. <strong>Écrire des instructions défensives</strong> — Spécifier le comportement null/fallback',
+              '4. <strong>Paramétrer les entrées</strong> — Remplacer les valeurs codées en dur par des variables',
+              '5. <strong>Construire un ensemble de tests de régression</strong> — Tester 20+ cas avant déploiement',
+              '6. <strong>Épingler les versions de modèle</strong> — Utiliser des identifiants datés comme gpt-4o-2024-08-06',
+              '7. <strong>Ajouter une validation de sortie</strong> — Vérifier le type, le schéma et la présence de champs'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Technique 1 & 7 : Format + Validation',
+            items: [
+              '<strong>Sortie structurée (Technique 1)</strong> prévient la fragilité de non-correspondance de format au niveau API',
+              '<strong>Validation de sortie (Technique 7)</strong> détecte les défaillances résiduelles où JSON est valide mais les valeurs de champ sont erronées',
+              'L\'utilisation de ces deux ensemble offre une protection complète en production'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Prompts Fragiles vs Robustes',
+            items: [
+              '<strong>Fragile :</strong> "Classifiez ce ticket comme urgent ou routinier : {{ticket}}"',
+              '<strong>Robuste :</strong> "Retournez un objet JSON : {\"priority\": \"urgent\"} ou {\"priority\": \"routine\"}. Pas d\'explication."',
+              '',
+              '<strong>Fragile :</strong> "Extrayez l\'email : {{message}}"',
+              '<strong>Robuste :</strong> "Retournez {\"email\": \"<addr>\"} ou {\"email\": null}. Ne devinez pas."'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Tester la Fragilité',
+            items: [
+              '<strong>Tests de paraphrase :</strong> Reformulez 5–10 entrées, vérifiez la cohérence',
+              '<strong>Tests de cas limites :</strong> Entrées vides, longueur maximale, texte non-anglais, caractères spéciaux',
+              '<strong>Variation de température :</strong> Exécutez à 0,0, 0,5, 1,0 — les prompts robustes restent cohérents',
+              '<strong>Swap de modèle :</strong> Testez sur GPT, Claude, Gemini — les sorties ne doivent pas diverger',
+              '<strong>Exécutions de régression :</strong> Suite complète de tests avant chaque mise à niveau de modèle ou changement de prompt'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'L\'ensemble de Tests Minimum Viable',
+            items: [
+              '10 entrées typiques couvrant la distribution attendue',
+              '5 variantes de paraphrase (p. ex., versions reformulées de 2–3 entrées)',
+              '5 cas limites (vides, longueur maximale, non-anglais, champ manquant, caractères spéciaux)',
+              '= 20 cas au total, détecte la majorité des défaillances en production'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Erreurs Courantes à Éviter',
+            items: [
+              '<strong>#1 Correspondance de chaîne :</strong> if "Oui" in response échoue sur "Oui," ou "Oui." — utilisez JSON',
+              '<strong>#2 Pas de cas null :</strong> prompt d\'extraction sans "retournez null si introuvable" → modèle hallucine données',
+              '<strong>#3 Pas d\'épinglage de version :</strong> utiliser l\'alias gpt-4o signifie dérive comportementale silencieuse après mise à jour',
+              '<strong>#4 Tests happy-path uniquement :</strong> valider 3–5 exemples puis déployer → défaillances en production'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Comment Commencer (8 Étapes)',
+            items: [
+              '1. Identifiez les 3 prompts les plus critiques en production',
+              '2. Reformulez 5 entrées typiques, comparez les sorties pour la cohérence',
+              '3. Ajoutez 5 cas limites : vides, longueur maximale, non-anglais, champ manquant, caractères spéciaux',
+              '4. Si analyse de texte libre, passez au mode JSON lors du prochain déploiement',
+              '5. Ajoutez des instructions défensives pour les lacunes et cas null',
+              '6. Validez les cas de test dans le contrôle de version comme spécification de prompt',
+              '7. Configurez une étape CI pour exécuter les tests avant de déployer tout changement de prompt ou de modèle',
+              '8. Épinglez l\'identifiant de version de modèle et documentez la version sur laquelle le prompt a été ajusté'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Questions Fréquemment Posées',
+            items: [
+              '<strong>Q: Combien de cas de test me faut-il ?</strong> R: Minimum 20 (10 typiques + 5 paraphrase + 5 limites) détecte la majorité.',
+              '<strong>Q: Le mode JSON est-il suffisant ?</strong> R: Il prévient les erreurs de format mais pas les erreurs de contenu. Ajoutez validation.',
+              '<strong>Q: À quelle fréquence tester la régression ?</strong> R: À chaque changement de prompt, mise à niveau de modèle et changement de prompt système.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Pourquoi PromptQuorum Aide',
+            items: [
+              'Testez les prompts simultanément sur GPT, Claude, Gemini avec comparaison de taux de réussite',
+              'Gestion intégrée des ensembles de tests de régression et contrôle de version',
+              'Surveillance en temps réel du comportement des prompts à travers les mises à jour de modèle',
+              'Flux d\'examen collaboratif des prompts pour les équipes'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Les Prompts Fiables Commencent Ici',
+            body: 'Arrêtez les défaillances silencieuses en production. Testez, versionnez et surveillez les prompts avec PromptQuorum.',
+            cta: 'Essayer PromptQuorum Gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'プロンプト脆弱性を低減する7つのテクニック（2026年）',
+        slides: [
+          {
+            type: 'title',
+            h1: 'プロンプト脆弱性を低減する',
+            subtitle: '7つのテクニック（2026年）',
+            link: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: 'プロンプト脆弱性とは？',
+            items: [
+              'プロンプトはテスト入力で正しい出力を提供しますが、言い回し、モデル、またはコンテキストが変わると静かに失敗します',
+              '失敗は静かです — モデルはもっともらしく聞こえる間違った答えを返します',
+              'チームは、エンドユーザーが不正な出力を報告するまで脆弱性を発見しません。これはデプロイ数週間後に発生する可能性があります'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '脆弱性の根本原因',
+            items: [
+              '<strong>暗黙的な形式の期待</strong> — JSONを期待しますが、強制しません',
+              '<strong>ハッピーパステストのみ</strong> — 3〜5個の手選び例に対してのみ検証',
+              '<strong>モデルバージョンの感度</strong> — プロバイダーは静かに更新します',
+              '<strong>コンテキスト汚染</strong> — システムプロンプトと注入が指示をオーバーライドします',
+              '<strong>過度に特定の言い回し</strong> — 正確な言い回しに依存するプロンプト'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '7つのテクニック',
+            items: [
+              '1. <strong>構造化出力を強制する</strong> — APIレベルでJSONモードを使用',
+              '2. <strong>Few-Shot例を追加する</strong> — 2〜3個の入出力ペアを含める',
+              '3. <strong>防御的指示を書く</strong> — null/フォールバック動作を指定',
+              '4. <strong>入力をパラメータ化する</strong> — ハードコード値を変数に置き換える',
+              '5. <strong>回帰テストセットを構築する</strong> — デプロイ前に20以上のケースをテスト',
+              '6. <strong>モデルバージョンをピンする</strong> — gpt-4o-2024-08-06などの日付付き識別子を使用',
+              '7. <strong>出力検証を追加する</strong> — タイプ、スキーマ、フィールドの存在を確認'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'テクニック1と7：形式+検証',
+            items: [
+              '<strong>構造化出力（テクニック1）</strong> APIレベルで形式不一致脆弱性を防ぎます',
+              '<strong>出力検証（テクニック7）</strong> JSONが有効だが値が間違っている残余失敗をキャッチします',
+              'この両方を使用することで完全なプロダクション保護が得られます'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '脆弱 vs 堅牢なプロンプト',
+            items: [
+              '<strong>脆弱：</strong> "このチケットを緊急または定期的として分類します：{{ticket}}"',
+              '<strong>堅牢：</strong> "JSONオブジェクトを返します：{\"priority\": \"urgent\"} または {\"priority\": \"routine\"}。説明なし。"',
+              '',
+              '<strong>脆弱：</strong> "メールを抽出します：{{message}}"',
+              '<strong>堅牢：</strong> "{\"email\": \"<addr>\"} または {\"email\": null} を返します。推測しないでください。"'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '脆弱性をテストする',
+            items: [
+              '<strong>言い換えテスト：</strong> 5〜10個の入力を言い換えて、一貫性を確認',
+              '<strong>エッジケーステスト：</strong> 空の入力、最大長、英語以外、特殊文字',
+              '<strong>温度変化：</strong> 0.0、0.5、1.0で実行 — 堅牢なプロンプトは一貫性を保つ',
+              '<strong>モデルスワップ：</strong> GPT、Claude、Geminiでテスト — 出力が発散してはいけません',
+              '<strong>回帰実行：</strong> モデルのアップグレードやプロンプトの変更の前に完全なテストセットを実行'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '最小実行可能なテストセット',
+            items: [
+              '10個の標準的な入力で期待される分布をカバー',
+              '5個の言い換えバリアント（例：2〜3個の入力の言い換えバージョン）',
+              '5個のエッジケース（空、最大長、英語以外、欠落フィールド、特殊文字）',
+              '= 合計20ケース、本番環境の失敗の大部分をキャッチ'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '避けるべき一般的な間違い',
+            items: [
+              '<strong>#1文字列マッチング：</strong> if \"Yes\" in response は \"Yes,\" または \"Yes.\" で失敗します — JSON を使用してください',
+              '<strong>#2nullケースなし：</strong> 「見つからない場合はnullを返す」というプロンプトなしで抽出 → モデルが幻覚データ',
+              '<strong>#3バージョンピンなし：</strong> gpt-4oエイリアスを使用することはアップデート後の無声行動ドリフトを意味します',
+              '<strong>#4ハッピーパステストのみ：</strong> 3〜5個の例を検証してからデプロイ → 本番環境での失敗'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '開始方法（8ステップ）',
+            items: [
+              '1. 本番環境で最高のトラフィック/リスクプロンプト3つを特定',
+              '2. 5つの標準的な入力を言い換えて、出力の一貫性を比較',
+              '3. 5つのエッジケースを追加：空、最大長、英語以外、欠落フィールド、特殊文字',
+              '4. フリーテキストを解析している場合は、次のデプロイでJSONモードに切り替える',
+              '5. ギャップとnullケースに防御的指示を追加',
+              '6. テストケースをバージョン管理にコミットしてプロンプト仕様として',
+              '7. プロンプトまたはモデルの変更をデプロイする前にテストを実行するCI ステップを設定',
+              '8. モデルバージョン識別子をピンしてプロンプトが調整されたバージョンをドキュメント化'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'よくあるご質問',
+            items: [
+              '<strong>Q: いくつのテストケースが必要ですか？</strong> A: 最低20個（10標準+5言い換え+5エッジ）が大部分をキャッチ。',
+              '<strong>Q: JSONモードで十分？</strong> A: 形式エラーを防ぎますが、内容エラーは防ぎません。検証を追加してください。',
+              '<strong>Q: 回帰テスト頻度は？</strong> A: プロンプト変更、モデルアップグレード、システムプロンプト更新のたびに。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PromptQuorumが役立つ理由',
+            items: [
+              'GPT、Claude、Gemini全体でプロンプトを同時にテストし、合格率を比較',
+              '統合された回帰テストセット管理とバージョン管理',
+              'モデルアップデート全体にわたるプロンプト動作のリアルタイム監視',
+              'チーム向けの協力的なプロンプトレビューワークフロー'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '信頼性の高いプロンプトはここから始まります',
+            body: '本番環境での静かな失敗を停止。PromptQuorumでプロンプトをテスト、バージョン管理、監視します。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '减少Prompt脆弱性：7种可靠Prompt技术（2026）',
+        slides: [
+          {
+            type: 'title',
+            h1: '减少Prompt脆弱性',
+            subtitle: '7种可靠Prompt技术（2026）',
+            link: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '什么是Prompt脆弱性？',
+            items: [
+              'Prompt在测试输入上提供正确输出，但当措辞、模型或上下文改变时静默失败',
+              '失败是静默的 — 模型返回看似合理的错误答案',
+              '团队只有在最终用户报告不正确的输出时才发现脆弱性，这可能在部署数周后发生'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '脆弱性的根本原因',
+            items: [
+              '<strong>隐含的格式期望</strong> — 期望JSON但不强制',
+              '<strong>仅正常路径测试</strong> — 仅针对3-5个精选示例验证',
+              '<strong>模型版本敏感性</strong> — 提供商静默更新',
+              '<strong>上下文污染</strong> — 系统Prompt和注入覆盖指令',
+              '<strong>过度特定的措辞</strong> — 依赖精确措辞的Prompt'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '7种技术',
+            items: [
+              '1. <strong>强制结构化输出</strong> — 在API级别使用JSON模式',
+              '2. <strong>添加Few-Shot示例</strong> — 包括2-3个输入/输出对',
+              '3. <strong>编写防御性指令</strong> — 指定null/回退行为',
+              '4. <strong>参数化输入</strong> — 用变量替换硬编码值',
+              '5. <strong>构建回归测试集</strong> — 部署前测试20+个案例',
+              '6. <strong>固定模型版本</strong> — 使用日期标识符如gpt-4o-2024-08-06',
+              '7. <strong>添加输出验证</strong> — 检查类型、架构和字段存在'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '技术1和7：格式+验证',
+            items: [
+              '<strong>结构化输出（技术1）</strong>在API级别防止格式不匹配脆弱性',
+              '<strong>输出验证（技术7）</strong>捕获JSON有效但字段值错误的残余失败',
+              '一起使用这两种技术提供完整的生产保护'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '脆弱 vs 健壮的Prompt',
+            items: [
+              '<strong>脆弱：</strong> "将此支持票证分类为紧急或常规：{{ticket}}"',
+              '<strong>健壮：</strong> "返回一个JSON对象：{\"priority\": \"urgent\"} 或 {\"priority\": \"routine\"}。无说明。"',
+              '',
+              '<strong>脆弱：</strong> "从此消息中提取电子邮件：{{message}}"',
+              '<strong>健壮：</strong> "返回 {\"email\": \"<addr>\"} 或 {\"email\": null}。不要猜测。"'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '测试脆弱性',
+            items: [
+              '<strong>改写测试：</strong> 改写5-10个输入，检查一致性',
+              '<strong>边界情况测试：</strong> 空输入、最大长度、非英文、特殊字符',
+              '<strong>温度变化：</strong> 在0.0、0.5、1.0下运行 — 健壮的Prompt保持一致',
+              '<strong>模型交换测试：</strong> 在GPT、Claude、Gemini上测试 — 输出不应发散',
+              '<strong>回归运行：</strong> 在每个模型升级或Prompt更改前运行完整测试集'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '最小可行测试集',
+            items: [
+              '10个典型输入覆盖期望分布',
+              '5个改写变体（例如2-3个输入的改写版本）',
+              '5个边界情况（空、最大长度、非英文、缺失字段、特殊字符）',
+              '= 总共20个案例，捕获大部分生产失败'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '要避免的常见错误',
+            items: [
+              '<strong>#1字符串匹配：</strong> if \"是\" in response 在 \"是，\" 或 \"是。\" 上失败 — 使用JSON',
+              '<strong>#2没有null情况：</strong> 没有"找不到时返回null"的提取Prompt → 模型幻觉数据',
+              '<strong>#3没有版本固定：</strong> 使用gpt-4o别名意味着更新后的无声行为漂移',
+              '<strong>#4仅正常路径测试：</strong> 验证3-5个示例然后部署 → 生产环境中的失败'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '如何开始（8步）',
+            items: [
+              '1. 在生产环境中识别3个最高流量/风险Prompt',
+              '2. 改写5个典型输入，比较输出的一致性',
+              '3. 添加5个边界情况：空、最大长度、非英文、缺失字段、特殊字符',
+              '4. 如果解析自由文本，在下次部署时切换到JSON模式',
+              '5. 为缺口和null情况添加防御性指令',
+              '6. 将测试用例提交到版本控制作为Prompt规范',
+              '7. 设置CI步骤在部署任何Prompt或模型更改前运行测试',
+              '8. 固定模型版本标识符并记录Prompt调整所用的版本'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '常见问题',
+            items: [
+              '<strong>问：我需要多少个测试用例？</strong> 答：最少20个（10个标准+5个改写+5个边界）捕获大部分。',
+              '<strong>问：JSON模式足够了吗？</strong> 答：它防止格式错误，但不防止内容错误。添加验证。',
+              '<strong>问：应该多频繁地进行回归测试？</strong> 答：在每次Prompt更改、模型升级和系统Prompt更新时。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PromptQuorum如何帮助',
+            items: [
+              '同时在GPT、Claude和Gemini上测试Prompt，比较通过率',
+              '集成的回归测试集管理和版本控制',
+              '跨模型更新的Prompt行为实时监控',
+              '团队的协作Prompt审查工作流'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '可靠的Prompt从这里开始',
+            body: '停止生产环境中的无声失败。使用PromptQuorum测试、版本管理和监控Prompt。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" style="height: 40px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1);" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 18px; color: rgba(255, 255, 255, 0.8);">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 20px;">';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 30px; font-size: 1.1em;">${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 30px; padding: 14px 28px; background: white; color: #6750a4; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.2s; cursor: pointer;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += (backLink.href.includes('?') ? '&' : '?') + 'lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
