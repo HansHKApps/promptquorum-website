@@ -6,8 +6,8 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
   en: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-10-30',
+    freshness_tier: 'annual',
+    specific_year: 2026,
     theme: 'Techniques',
     title: 'Prompts for Reliable Structured Data: 3 Techniques (2026)',
     seoTitle: 'Prompts for Reliable Structured Data: 3 Techniques (2026)',
