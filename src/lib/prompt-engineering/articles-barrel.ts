@@ -70,6 +70,7 @@ import { article as a_best_tools_structured_output } from "./articles/best-tools
 import { article as a_best_prompt_engineering_ides } from "./articles/best-prompt-engineering-ides";
 import { article as a_prompting_across_languages } from "./articles/prompting-across-languages";
 import { article as a_prompt_review_workflow_for_teams } from "./articles/prompt-review-workflow-for-teams";
+import { article as a_prompt_version_control } from "./articles/prompt-version-control";
 import { article as a_prompt_engineering_setup_small_teams } from "./articles/prompt-engineering-setup-small-teams";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
@@ -138,5 +139,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "best-prompt-engineering-ides": a_best_prompt_engineering_ides,
   "prompting-across-languages": a_prompting_across_languages,
   "prompt-review-workflow-for-teams": a_prompt_review_workflow_for_teams,
+  "prompt-version-control": a_prompt_version_control,
   "pe-setup-small-teams": a_prompt_engineering_setup_small_teams,
 };
