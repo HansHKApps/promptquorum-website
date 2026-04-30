@@ -72,6 +72,7 @@ import { article as a_prompting_across_languages } from "./articles/prompting-ac
 import { article as a_prompt_review_workflow_for_teams } from "./articles/prompt-review-workflow-for-teams";
 import { article as a_prompt_version_control } from "./articles/prompt-version-control";
 import { article as a_prompt_engineering_setup_small_teams } from "./articles/prompt-engineering-setup-small-teams";
+import { article as a_prompts_for_reliable_structured_data } from "./articles/prompts-for-reliable-structured-data";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -141,4 +142,5 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "prompt-review-workflow-for-teams": a_prompt_review_workflow_for_teams,
   "prompt-version-control": a_prompt_version_control,
   "pe-setup-small-teams": a_prompt_engineering_setup_small_teams,
+  "prompts-for-reliable-structured-data": a_prompts_for_reliable_structured_data,
 };
