@@ -6,7 +6,7 @@ export const article: Record<Language, PEArticle> = {
     theme: 'Tools & Platforms',
     title: 'Best Tools for Structured Output and JSON Mode (2026)',
     seoTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
-    metaDescription: '6 structured output tools compared: Instructor, Outlines, Pydantic AI, LangChain, Marvin, and PromptQuorum. Side-by-side table with pricing and local model support.',
+    metaDescription: '6 structured output tools compared: Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum. Side-by-side table: pricing, local model support.',
     ogTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
     ogDescription: '6 tools for LLM structured output compared: Instructor for retries, Outlines for constrained decoding, Pydantic AI for agents. Test consistency with PromptQuorum.',
     twitterTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
@@ -364,7 +364,7 @@ export const article: Record<Language, PEArticle> = {
     theme: 'Tools & Plattformen',
     title: 'Beste Tools für Structured Output und JSON Mode (2026)',
     seoTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
-    metaDescription: '6 Structured-Output-Tools im Vergleich: Instructor, Outlines, Pydantic AI, LangChain, Marvin und PromptQuorum. Vergleichstabelle mit Pricing und Local-Model-Support.',
+    metaDescription: '6 Structured-Output-Tools 2026 verglichen: Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum. Tabelle mit Pricing und lokalen Modellen.',
     ogTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
     ogDescription: '6 Tools für LLM Structured Output: Instructor für Retries, Outlines für Constrained Decoding, Pydantic AI für Agents. Konsistenz testen mit PromptQuorum.',
     twitterTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
@@ -421,6 +421,22 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Question', name: 'Welches Tool hat die beste Dokumentation?', acceptedAnswer: { '@type': 'Answer', text: 'LangChain und Pydantic AI haben die umfangreichste Dokumentation wegen ihrer Unternehmensmittel. Instructor hat hervorragende Tutorials und Beispiele trotz Community-Wartung. Outlines-Dokumentation ist technisch, aber gründlich. Marvin hat Schnellstart-Leitfäden.' } },
         { '@type': 'Question', name: 'Brauche ich alle sechs Tools oder nur einen?', acceptedAnswer: { '@type': 'Answer', text: 'Beginnen Sie mit einem. Python-Entwickler sollten Instructor oder Pydantic AI ausprobieren. Teams mit lokalen Modellen sollten Outlines versuchen. LangChain-Benutzer sollten LangChain\'s with_structured_output() versuchen. Verwenden Sie PromptQuorum, um die Konsistenz über alle Modelle hinweg zu überprüfen. Die meisten Teams verwenden ein Tool + PromptQuorum zum Testen.' } },
         { '@type': 'Question', name: 'Müssen wir Structured Output für DSGVO-Compliance verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Structured Output hilft bei DSGVO, indem es unerwartete Datenextraktion verhindert. Mit definierten Schemas kann ein LLM keine nicht geplanten Datenfelder generieren. Dies reduziert das Risiko unerwarteter Datenverarbeitung. Verwenden Sie Instructor oder Outlines mit strikten Schemas für Datenschutz-kritische Workflows.' } }
+      ]
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Beste Tools für LLM Structured Output (2026)',
+      description: 'Sechs führende Bibliotheken zur Durchsetzung strukturierter Ausgaben von Sprachmodellen.',
+      numberOfItems: 6,
+      inLanguage: 'de',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Python/TypeScript-Bibliothek für Pydantic-basierte Extraktion aus jedem LLM. Apache 2.0 Open-Source.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Constrained-Decoding-Bibliothek für garantierte Schema-Konformität auf lokalen Modellen.' },
+        { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Typsicheres Agent-Framework mit integrierter Structured Output-Validierung.' },
+        { '@type': 'ListItem', position: 4, name: 'LangChain', description: 'Einheitliche API-Schicht für Structured Output über OpenAI, Anthropic, Google und lokale Modelle.' },
+        { '@type': 'ListItem', position: 5, name: 'Marvin', description: 'Dekorator-basiertes Framework, das Python-Funktionssignaturen in typisierte LLM-Aufrufe umwandelt.' },
+        { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: 'Cross-Model-Testplattform zur Validierung der Structured Output-Konsistenz über GPT, Claude und Gemini.' }
       ]
     },
     sections: {
@@ -693,8 +709,8 @@ export const article: Record<Language, PEArticle> = {
   fr: {
     theme: 'Outils & Plateformes',
     title: 'Meilleurs outils pour Structured Output et JSON Mode (2026)',
-    seoTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
-    metaDescription: 'Comparaison de 6 outils de structured output : Instructor, Outlines, Pydantic AI, LangChain, Marvin et PromptQuorum. Tableau comparatif avec pricing et support local.',
+    seoTitle: 'Meilleurs outils Structured Output et JSON Mode 2026',
+    metaDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin : quel outil choisir ? Tableau comparatif 2026 avec pricing et support de modèles locaux.',
     ogTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
     ogDescription: '6 outils de structured output LLM comparés : Instructor pour retries, Outlines pour décodage contraint, Pydantic AI pour agents. Testez avec PromptQuorum.',
     twitterTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
@@ -750,6 +766,22 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Question', name: 'Puis-je utiliser Structured Output sans bibliothèques?', acceptedAnswer: { '@type': 'Answer', text: 'Techniquement oui — vous pouvez inviter le modèle à retourner du JSON et l\'analyser vous-même. Mais la validation échouera sur les hallucinations. Les six outils résolvent ceci par validation avec tentatives (Instructor, Marvin), application au moment du décodage (Outlines), ou enveloppe des APIs de fournisseurs (LangChain, Pydantic AI).' } },
         { '@type': 'Question', name: 'Quel outil a la meilleure documentation?', acceptedAnswer: { '@type': 'Answer', text: 'LangChain et Pydantic AI ont la documentation la plus complète en raison de leurs ressources d\'entreprise. Instructor a d\'excellents tutoriels et exemples malgré la maintenance communautaire. La documentation Outlines est technique mais approfondie. Marvin a des guides de démarrage rapide.' } },
         { '@type': 'Question', name: 'Ai-je besoin des six outils ou juste un?', acceptedAnswer: { '@type': 'Answer', text: 'Commencez par un. Les développeurs Python devraient essayer Instructor ou Pydantic AI. Les équipes avec modèles locaux devraient essayer Outlines. Les utilisateurs de LangChain devraient essayer with_structured_output() de LangChain. Utilisez PromptQuorum pour valider la cohérence sur tous les modèles. La plupart des équipes utilisent un outil + PromptQuorum pour les tests.' } }
+      ]
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Meilleurs Outils pour Structured Output LLM (2026)',
+      description: 'Six bibliothèques principales pour appliquer la sortie structurée des modèles de langage.',
+      numberOfItems: 6,
+      inLanguage: 'fr',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Bibliothèque Python/TypeScript pour l\'extraction basée sur Pydantic depuis n\'importe quel LLM. Open-source Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Bibliothèque de décodage contraint pour la conformité garantie du schéma sur les modèles locaux.' },
+        { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Framework d\'agents type-safe avec validation Structured Output intégrée.' },
+        { '@type': 'ListItem', position: 4, name: 'LangChain', description: 'Couche API unifiée pour Structured Output sur OpenAI, Anthropic, Google et modèles locaux.' },
+        { '@type': 'ListItem', position: 5, name: 'Marvin', description: 'Framework basé sur les décorateurs transformant les signatures de fonctions Python en appels LLM typés.' },
+        { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: 'Plateforme de tests cross-modèles pour valider la cohérence Structured Output sur GPT, Claude et Gemini.' }
       ]
     },
     sections: {
@@ -1067,6 +1099,22 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Question', name: 'ライブラリなしで使用できる？', acceptedAnswer: { '@type': 'Answer', text: '技術的には可能ですが、検証は幻覚で失敗します。6つのツールすべてが再試行検証、デコード時強制、またはAPI-Wrapで解決します。' } },
         { '@type': 'Question', name: 'ドキュメントが最も充実しているツールは？', acceptedAnswer: { '@type': 'Answer', text: 'LangChainとPydantic AIが企業支援のため最も充実しています。Instructorはコミュニティ保守ながら優れたチュートリアルがあります。Outlinesは技術的で徹底しています。' } },
         { '@type': 'Question', name: '6つすべて必要か、1つでいい？', acceptedAnswer: { '@type': 'Answer', text: '1つから始めてください。Python開発者はInstructorかPydantic AIを試してください。ローカルモデルはOutlinesを試してください。LangChainユーザーはwith_structured_output()を試してください。PromptQuorumで全モデル検証を。' } }
+      ]
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'LLM Structured Outputのベストツール（2026年）',
+      description: '言語モデルからの構造化出力を強制する6つの主要ライブラリ。',
+      numberOfItems: 6,
+      inLanguage: 'ja',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'あらゆるLLMからのPydanticベース抽出のためのPython/TypeScriptライブラリ。Apache 2.0オープンソース。' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'ローカルモデルのスキーマ準拠を保証する制約付きデコードライブラリ。' },
+        { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: '組み込みStructured Output検証を持つ型安全なエージェントフレームワーク。' },
+        { '@type': 'ListItem', position: 4, name: 'LangChain', description: 'OpenAI、Anthropic、Google、ローカルモデルの統一API層。' },
+        { '@type': 'ListItem', position: 5, name: 'Marvin', description: 'Python関数シグネチャを型付きLLM呼び出しに変換するデコレータベースフレームワーク。' },
+        { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: 'GPT、Claude、Gemini全体でStructured Outputの一貫性を検証するクロスモデルテストプラットフォーム。' }
       ]
     },
     sections: {
@@ -1392,6 +1440,22 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Question', name: '我可以不用任何库使用Structured Output吗？', acceptedAnswer: { '@type': 'Answer', text: '从技术上讲可以，但验证会因幻觉而失败。6个工具都通过重试验证、解码强制或API包装来解决。' } },
         { '@type': 'Question', name: '哪个工具的文档最好？', acceptedAnswer: { '@type': 'Answer', text: 'LangChain和Pydantic AI因为企业支持有最全面的文档。Instructor虽然是社区维护但有很好的教程。Outlines的文档很技术性但很全面。' } },
         { '@type': 'Question', name: '我需要全部6个工具还是只需要一个？', acceptedAnswer: { '@type': 'Answer', text: '从一个开始。Python开发者试试Instructor或Pydantic AI。本地模型团队试试Outlines。LangChain用户试试LangChain的with_structured_output()。用PromptQuorum验证跨模型一致性。' } }
+      ]
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'LLM结构化输出最佳工具（2026）',
+      description: '六个用于强制语言模型结构化输出的主要库。',
+      numberOfItems: 6,
+      inLanguage: 'zh',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Instructor', description: '用于从任何LLM进行基于Pydantic提取的Python/TypeScript库。Apache 2.0开源。' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: '用于本地模型保证模式合规性的约束解码库。' },
+        { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: '具有内置Structured Output验证的类型安全Agent框架。' },
+        { '@type': 'ListItem', position: 4, name: 'LangChain', description: 'OpenAI、Anthropic、Google和本地模型的统一API层。' },
+        { '@type': 'ListItem', position: 5, name: 'Marvin', description: '将Python函数签名转换为类型化LLM调用的装饰器框架。' },
+        { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: '用于验证GPT、Claude和Gemini之间结构化输出一致性的跨模型测试平台。' }
       ]
     },
     sections: {
