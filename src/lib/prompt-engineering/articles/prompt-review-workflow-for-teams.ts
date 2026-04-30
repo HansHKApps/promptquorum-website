@@ -5,7 +5,7 @@ export const article: Record<Language, PEArticle> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Use Cases',
-    title: 'Prompt Review Workflow for Teams: Process, Checklists, and Tools',
+    title: 'Prompt Review Workflow for Teams: Checklist & CI/CD Gates (2026)',
     intro: 'Unreviewed prompts cause 3x more production failures than reviewed ones. A structured team prompt review workflow prevents hallucinations from shipping, catches security vulnerabilities before deployment, and ensures consistency across models. This guide covers the complete workflow: triggering review gates, assembling review teams, running quality checks, and automating decision-making.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
@@ -13,29 +13,28 @@ export const article: Record<Language, PEArticle> = {
     educationalLevel: 'Intermediate',
     audience: 'Developers building with LLMs, prompt engineers, engineering team leads',
     toc: [
-      { label: 'Key Takeaways', anchor: 'key-takeaways' },
-      { label: 'Why Does Prompt Review Matter?', anchor: 'why-review' },
-      { label: 'What Does a Prompt Review Workflow Look Like?', anchor: 'workflow-overview' },
-      { label: 'What Should Your Review Checklist Include?', anchor: 'checklist' },
-      { label: 'Who Should Review Prompts?', anchor: 'team-roles' },
-      { label: 'Should You Automate or Keep Review Manual?', anchor: 'automated-vs-manual' },
-      { label: 'How to Build a CI/CD Review Gate', anchor: 'cicd-gates' },
-      { label: 'What Are the Most Common Prompt Review Mistakes?', anchor: 'mistakes' },
-      { label: 'Regional Compliance Considerations', anchor: 'regional-considerations' },
+      { label: 'Why Prompt Review Matters', anchor: 'why-review' },
+      { label: 'The 5-Stage Workflow', anchor: 'workflow-overview' },
+      { label: 'The 7-Point Checklist', anchor: 'checklist' },
+      { label: 'Review Team Roles', anchor: 'team-roles' },
+      { label: 'Automated vs. Manual', anchor: 'automated-vs-manual' },
+      { label: 'CI/CD Review Gate', anchor: 'cicd-gates' },
+      { label: 'Common Mistakes', anchor: 'mistakes' },
+      { label: 'Regional Compliance', anchor: 'regional-considerations' },
       { label: 'Related Reading', anchor: 'related-reading' },
       { label: 'FAQ', anchor: 'faq' },
       { label: 'Sources', anchor: 'sources' },
     ],
     seoTitle: 'Prompt Review Workflow for Teams: 7-Point Checklist & Gates',
-    metaDescription: 'A structured prompt review workflow cuts production failures by 3×. Includes a 7-point checklist, reviewer role assignments, automated gates, and CI/CD integration for teams.',
-    ogDescription: 'Unreviewed prompts cause 3x more production failures. Learn how to build a structured team workflow with automated quality gates and manual review roles.',
-    twitterDescription: 'Prevent unreviewed prompts from shipping. Workflow guide: quality checklist, review roles, automated gates, CI/CD integration. 8-min read.',
+    metaDescription: 'Learn how to build a prompt review workflow with a 7-point checklist, 3 reviewer roles, and CI/CD gates. Automate 70% of checks, keep 30% manual.',
+    ogDescription: 'Prompt review workflow for teams: 7-point checklist, automated security scans, and CI/CD gates requiring 2+ approvals before deployment. With PromptQuorum.',
+    twitterDescription: 'Unreviewed prompts fail 3× more often. Build a review workflow: 7-point checklist, CI/CD gates, and 70/30 automated-to-manual split.',
     readTime: '8 min read',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Prompt Review Workflow for Teams: Process, Checklists, and Tools',
-      description: 'How to build a structured team prompt review workflow that prevents hallucinations and ensures quality before deployment. Includes checklists, role assignments, and CI/CD integration.',
+      headline: 'Prompt Review Workflow for Teams: Checklist & CI/CD Gates (2026)',
+      description: 'Learn how to build a prompt review workflow with a 7-point checklist, 3 reviewer roles, and CI/CD gates. Automate 70% of checks, keep 30% manual.',
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
       inLanguage: 'en',
@@ -157,6 +156,9 @@ export const article: Record<Language, PEArticle> = {
       tldr: {
         title: 'Key Takeaways',
         isTldr: true,
+        content: [
+          '**TL;DR:** A prompt review workflow validates prompts before deployment using a 7-point checklist (clarity, context, format, hallucination risk, security, consistency, model fit). Automate 70% of checks (format, security, hallucination flags); keep 30% manual (intent, edge cases). Require 2+ reviewer approvals via CI/CD gate before merge. Store prompts and review decisions in version control.',
+        ],
         items: [
           'Unreviewed prompts cause 3x more production failures — implement a workflow with quality checklist, role assignment, and CI/CD gates',
           'A review checklist must cover: clarity, context completeness, output format, hallucination risk, security vulnerabilities, consistency, and model compatibility',
@@ -170,7 +172,7 @@ export const article: Record<Language, PEArticle> = {
 
       whyReview: {
         id: 'why-review',
-        title: 'Why Does Prompt Review Matter for Teams?',
+        title: 'Why Prompt Review Matters for Teams',
         content: [
           '**Unreviewed prompts fail in production at 3x the rate of reviewed ones.** A prompt that works in isolation breaks when deployed to the API, runs against live data, or scales to production traffic. Manual code review catches syntax errors; prompt review catches logic errors, missing context, and [hallucinations from shipping](/prompt-engineering/ai-hallucinations-how-to-stop) that automated tests alone cannot detect.',
           'In software development, code review is mandatory before merge. Prompt review should be equally mandatory — a prompt is executable code that affects customer outcomes, just as much as a Python function does. The difference is that prompts fail silently: they return plausible-sounding incorrect answers instead of throwing errors.',
@@ -184,7 +186,7 @@ export const article: Record<Language, PEArticle> = {
 
       workflowOverview: {
         id: 'workflow-overview',
-        title: 'What Does a Prompt Review Workflow Look Like?',
+        title: 'The 5-Stage Prompt Review Workflow',
         content: [
           '**A complete prompt review workflow has 5 stages: definition, submission, automated checks, manual review, and deployment.**',
         ],
@@ -205,8 +207,6 @@ export const article: Record<Language, PEArticle> = {
           'Manual review: domain expert, security lead, and quality engineer review the prompt against a standardized checklist. Review takes 5–15 minutes per prompt.',
           'Reviewers approve or request changes. After approval, the prompt is merged and deployed via the normal CI/CD pipeline.',
         ],
-        image: '/images/prompt-review-workflow-en.svg',
-        imageCaption: 'Prompt review workflow: automated checks → manual review → deployment gate → test validation.',
         callouts: [
           { type: 'Pro Tip', label: 'Version Control', text: 'Store prompts in Git the same way you store code — every change is a PR, every approval is a commit. This gives you full audit history automatically.' },
         ],
@@ -214,7 +214,7 @@ export const article: Record<Language, PEArticle> = {
 
       checklist: {
         id: 'checklist',
-        title: 'What Should Your Prompt Review Checklist Include?',
+        title: 'The 7-Point Prompt Review Checklist',
         content: [
           '**A prompt review checklist standardizes what "good" means and removes subjective disagreement.** Every prompt must pass the same criteria before approval. Use [automated quality checks](/prompt-engineering/build-quality-checks) to enforce the checklist.',
         ],
@@ -236,7 +236,7 @@ export const article: Record<Language, PEArticle> = {
             'Criterion': 'Output Format',
             'What to Check': 'Is the expected output format explicit and parseable?',
             'Fail Example': '"Return a list of risks." (String list? JSON array? Markdown bullets?)',
-            'Pass Example': '"Return a JSON array: [{"risk": "...", "severity": "high|medium|low"}]" '
+            'Pass Example': '"Return a JSON array: [{\'risk\': \'...\', \'severity\': \'high|medium|low\'}]" '
           },
           {
             'Criterion': 'Hallucination Risk',
@@ -271,7 +271,7 @@ export const article: Record<Language, PEArticle> = {
 
       teamRoles: {
         id: 'team-roles',
-        title: 'Who Should Review Prompts in Your Team?',
+        title: 'Prompt Review Team Roles and Sizing',
         content: [
           '**Prompt review requires at least three independent roles to avoid blind spots.** Each role catches different failure modes.',
           '**Domain Expert** — Understands the business logic, validates that prompt intent matches requirements. Catches semantic errors (wrong logic, missing cases). Example: a product manager or backend engineer who knows what the output should actually do.',
@@ -292,7 +292,7 @@ export const article: Record<Language, PEArticle> = {
 
       automatedVsManual: {
         id: 'automated-vs-manual',
-        title: 'Should You Automate Prompt Review or Keep It Manual?',
+        title: 'Automated vs. Manual Prompt Review',
         content: [
           '**Automatable checks handle repetitive, objective criteria. Manual review handles subjective judgment and edge cases.** Do not automate manual decision-making.',
         ],
@@ -337,7 +337,7 @@ export const article: Record<Language, PEArticle> = {
 
       cicdGates: {
         id: 'cicd-gates',
-        title: 'How Do You Build a Prompt Review Gate into CI/CD?',
+        title: 'Building a Prompt Review Gate in CI/CD',
         content: [
           '**A review gate enforces that no prompt can deploy without passing automated checks AND manual approval.** This is the enforcement mechanism that makes review mandatory. Use [automated checks](/prompt-engineering/best-prompt-testing-tools) to validate technical correctness.',
         ],
@@ -365,7 +365,7 @@ require_code_owner_reviews: true`,
 
       mistakes: {
         id: 'mistakes',
-        title: 'What Are the Most Common Prompt Review Mistakes?',
+        title: 'Common Prompt Review Mistakes',
         content: [
           '**Avoid these patterns; they waste time and let bugs through.**',
         ],
@@ -385,7 +385,7 @@ require_code_owner_reviews: true`,
 
       regionalConsiderations: {
         id: 'regional-considerations',
-        title: 'Do Regional Regulations Affect Prompt Review Requirements?',
+        title: 'Regional Compliance for Prompt Review',
         content: [
           '**Yes — EU, Japan, and China each add compliance requirements on top of the base workflow.** Teams handling regulated data must build these into their review checklists.',
           '**EU (GDPR + AI Act):** GDPR Article 9 requires human oversight for high-risk AI processing — prompt review satisfies this. The EU AI Act (enforcement from 2026) mandates traceability of AI decisions; version-controlled prompt reviews with approval logs meet this requirement. Add a GDPR impact assessment checklist item for prompts that process personal data.',
@@ -456,10 +456,11 @@ require_code_owner_reviews: true`,
       sources: {
         title: 'Sources',
         items: [
-          '[GitHub Best Practices for Code Review](https://github.blog/developer-skills/code-review/code-review-best-practices/) — Best practices guide for peer code review; concepts apply equally to prompt review workflows',
-          '[Prompt Evaluation Metrics: Pass Rate, BLEU & LLM-as-Judge](/prompt-engineering/prompt-evaluation-metrics?lang=en) — Metrics for measuring prompt correctness and hallucination risk',
-          '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality?lang=en) — Comprehensive guide to prompt quality evaluation frameworks and decision-making criteria',
-          '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security?lang=en) — Technical guide to detecting and preventing injection vulnerabilities in AI prompts',
+          '[GitHub Best Practices for Code Review](https://github.blog/developer-skills/code-review/code-review-best-practices/) — Peer review principles applicable to prompt review workflows',
+          '[Google: Responsible AI Practices](https://ai.google/responsibility/responsible-ai-practices/) — Framework for AI quality assurance and human oversight in deployment',
+          '[NIST AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Federal guidelines on AI risk governance, testing, and validation',
+          '[EU AI Act Summary (Future of Life Institute)](https://artificialintelligenceact.eu/) — Compliance requirements for high-risk AI systems including human oversight mandates',
+          '[Braintrust: Prompt Evaluation Guide](https://www.braintrust.dev/docs/guides/evals) — Technical guide to automated prompt testing and CI/CD integration',
         ],
       },
     },
@@ -467,16 +468,16 @@ require_code_owner_reviews: true`,
 
   de: {
     theme: 'Use Cases',
-    title: 'Prompt-Review-Workflow für Teams: Prozess, Checklisten und Werkzeuge',
+    title: 'Prompt-Review-Workflow für Teams: Checkliste & CI/CD-Gates (2026)',
     intro: 'Nicht überprüfte Prompts verursachen 3x mehr Produktionsfehler. Ein strukturierter Team-Workflow verhindert Halluzinationen, fängt Sicherheitslücken ab und gewährleistet Konsistenz über Modelle hinweg. Dieser Leitfaden behandelt den vollständigen Workflow: Review-Gates, Team-Zusammensetzung, Qualitätsprüfungen und Automatisierung.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die mit LLMs arbeiten; Prompt Engineers; Teamleiter',
-    seoTitle: 'Prompt-Review-Workflow für Teams: Checklisten & Gates',
-    metaDescription: 'Implementieren Sie einen Team-Prompt-Review-Workflow, der Halluzinationen verhindert und die Qualität vor dem Deployment sichert.',
-    ogDescription: 'Nicht überprüfte Prompts verursachen 3x mehr Fehler. Lernen Sie den strukturierten Workflow mit automatisierten Quality Gates.',
-    twitterDescription: 'Verhindern Sie nicht überprüfte Prompts in der Produktion. Workflow-Anleitung mit Checkliste, Review-Rollen und CI/CD-Integration.',
+    seoTitle: 'Prompt-Review-Workflow für Teams: Checkliste & CI/CD-Gates (2026)',
+    metaDescription: 'Prompt-Review-Workflow mit 7-Punkte-Checkliste, 3 Reviewer-Rollen und CI/CD-Gates aufbauen. 70 % automatisiert, 30 % manuelle Prüfung.',
+    ogDescription: 'Prompt-Review für Teams: 7-Punkte-Checkliste, automatisierte Security-Scans und CI/CD-Gates mit 2+ Freigaben vor Deployment. Mit PromptQuorum.',
+    twitterDescription: 'Ungeprüfte Prompts scheitern 3× häufiger. Review-Workflow: 7-Punkte-Checkliste, CI/CD-Gates und 70/30-Automatisierungssplit.',
     readTime: '8 Min. Lesezeit',
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', inLanguage: 'de', url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams?lang=de', author: { '@type': 'Person', name: 'Hans Kuepper' } },
     sections: {},
@@ -484,16 +485,16 @@ require_code_owner_reviews: true`,
 
   fr: {
     theme: 'Use Cases',
-    title: 'Flux de révision de prompts pour les équipes : Processus, checklists et outils',
+    title: 'Workflow de Revue de Prompts : Checklist & Gates CI/CD (2026)',
     intro: 'Les prompts non révisés causent 3x plus d\'échecs en production. Un workflow structuré empêche les hallucinations, détecte les failles de sécurité et assure la cohérence. Ce guide couvre le workflow complet : review gates, rôles, vérifications automatisées et CI/CD.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs travaillant avec des LLMs; Prompt Engineers; Responsables d\'équipe',
-    seoTitle: 'Flux de révision de prompts pour équipes : Checklists & Gates',
-    metaDescription: 'Implémentez un workflow de révision structuré qui empêche les hallucinations et sécurise la qualité avant le déploiement.',
-    ogDescription: 'Les prompts non révisés causent 3x plus d\'erreurs. Apprenez le workflow structuré avec gates automatisées.',
-    twitterDescription: 'Empêchez les prompts non révisés d\'atteindre la production. Guide complet : checklist, rôles, gates CI/CD.',
+    seoTitle: 'Workflow de Revue de Prompts : Checklist & Gates CI/CD (2026)',
+    metaDescription: 'Construire un workflow de revue de prompts : checklist en 7 points, 3 rôles de reviewers et gates CI/CD. 70 % automatisé, 30 % revue manuelle.',
+    ogDescription: 'Revue de prompts pour équipes : checklist 7 points, scans de sécurité automatisés et gates CI/CD avec 2+ approbations avant déploiement. Avec PromptQuorum.',
+    twitterDescription: 'Les prompts non révisés échouent 3× plus souvent. Workflow de revue : checklist 7 points, gates CI/CD, split 70/30 automatique/manuel.',
     readTime: '8 min de lecture',
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', inLanguage: 'fr', url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams?lang=fr', author: { '@type': 'Person', name: 'Hans Kuepper' } },
     sections: {},
@@ -501,16 +502,16 @@ require_code_owner_reviews: true`,
 
   ja: {
     theme: 'Use Cases',
-    title: 'チームのプロンプトレビューワークフロー：プロセス、チェックリスト、ツール',
+    title: 'チーム向けプロンプトレビューワークフロー：チェックリストとCI/CDゲート（2026年）',
     intro: 'レビューなしのプロンプトは本番で3倍多くの障害を引き起こします。構造化されたチームワークフローは幻覚を防ぎ、セキュリティの脆弱性を検出し、モデル全体の一貫性を確保します。このガイドでは、レビューゲート、チーム構成、品質チェック、自動化について説明します。',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
     educationalLevel: 'Intermediate',
     audience: 'LLMで開発するエンジニア、プロンプトエンジニア、チームリード',
-    seoTitle: 'チームのプロンプトレビューワークフロー：チェックリスト＆ゲート',
-    metaDescription: '幻覚を防ぎ、デプロイ前に品質を確保するチームレビューワークフローを実装します。',
-    ogDescription: 'レビューなしのプロンプトは3倍多くエラーが発生します。自動化ゲート付きの構造化ワークフローを学びます。',
-    twitterDescription: 'レビューなしのプロンプトの本番デプロイを防ぎます。チェックリスト、レビュー役割、CI/CDゲート。',
+    seoTitle: 'チーム向けプロンプトレビューワークフロー：チェックリストとCI/CDゲート（2026年）',
+    metaDescription: '7項目チェックリスト、3つのレビュアー役割、CI/CDゲートによるプロンプトレビューワークフローの構築方法。70%自動化、30%手動レビュー。',
+    ogDescription: 'チーム向けプロンプトレビュー：7項目チェックリスト、自動セキュリティスキャン、2名以上の承認が必要なCI/CDゲート。PromptQuorumで実現。',
+    twitterDescription: '未レビューのプロンプトは3倍失敗する。7項目チェックリスト、CI/CDゲート、70/30自動・手動分割のワークフロー。',
     readTime: '8分で読める',
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', inLanguage: 'ja', url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams?lang=ja', author: { '@type': 'Organization', name: 'PromptQuorum' } },
     sections: {},
@@ -518,16 +519,16 @@ require_code_owner_reviews: true`,
 
   zh: {
     theme: 'Use Cases',
-    title: '团队提示词审查工作流：流程、检查清单和工具',
+    title: '团队Prompt审查工作流：检查清单与CI/CD门控（2026）',
     intro: '未经审查的提示词在生产环境中导致3倍以上的故障。结构化的团队工作流可防止幻觉、检测安全漏洞并确保跨模型的一致性。本指南涵盖完整工作流：审查门控、团队组成、质量检查和自动化。',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
     educationalLevel: 'Intermediate',
     audience: '使用LLM开发的工程师、提示词工程师、团队负责人',
-    seoTitle: '团队提示词审查工作流：检查清单＆门控',
-    metaDescription: '实施团队审查工作流，防止幻觉并在部署前确保质量。',
-    ogDescription: '未审查的提示词导致3倍错误。学习具有自动化门控的结构化工作流。',
-    twitterDescription: '防止未审查的提示词进入生产。完整指南：检查清单、审查角色、CI/CD门控。',
+    seoTitle: '团队Prompt审查工作流：检查清单与CI/CD门控（2026）',
+    metaDescription: '构建Prompt审查工作流：7项检查清单、3个审查角色和CI/CD门控。70%自动化检查，30%人工审查。',
+    ogDescription: '团队Prompt审查：7项检查清单、自动安全扫描和需要2+审批的CI/CD门控。通过PromptQuorum实现部署前验证。',
+    twitterDescription: '未审查的Prompt故障率高3倍。审查工作流：7项清单、CI/CD门控、70/30自动与人工分配。',
     readTime: '阅读约8分钟',
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', inLanguage: 'zh', url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams?lang=zh', author: { '@type': 'Organization', name: 'PromptQuorum' } },
     sections: {},
