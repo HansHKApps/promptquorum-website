@@ -5,12 +5,12 @@ export const article: Record<Language, PEArticle> = {
   en: {
     theme: 'Tools & Platforms',
     title: 'Best Tools for Structured Output and JSON Mode (2026)',
-    seoTitle: 'Best Tools for LLM Structured Output & Validation (2026)',
-    metaDescription: 'Instructor, Outlines, Pydantic AI, LangChain, Marvin compared for LLM structured output—ranked by schema enforcement and local model support. Choose your tool.',
-    ogTitle: 'Best Tools for LLM Structured Output & Validation (2026)',
-    ogDescription: 'Instructor, Outlines, Pydantic AI, LangChain, Marvin compared for LLM structured output—ranked by schema enforcement and local model support. Choose your tool.',
-    twitterTitle: 'Best Tools for LLM Structured Output & Validation (2026)',
-    twitterDescription: 'Instructor, Outlines, Pydantic AI, LangChain, Marvin compared for LLM structured output—ranked by schema enforcement and local model support. Choose your tool.',
+    seoTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
+    metaDescription: '6 structured output tools compared: Instructor, Outlines, Pydantic AI, LangChain, Marvin, and PromptQuorum. Side-by-side table with pricing and local model support.',
+    ogTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
+    ogDescription: '6 tools for LLM structured output compared: Instructor for retries, Outlines for constrained decoding, Pydantic AI for agents. Test consistency with PromptQuorum.',
+    twitterTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
+    twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin — which structured output tool fits your stack? Side-by-side comparison (2026).',
     intro: '**Six tools dominate structured output in 2026: Instructor for Pydantic extraction, Outlines for constrained decoding, Pydantic AI for type-safe agents, LangChain for unified APIs, Marvin for decorator-based extraction, and PromptQuorum for cross-model testing. Each solves a different workflow bottleneck.**',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
@@ -23,8 +23,7 @@ export const article: Record<Language, PEArticle> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-30',
     toc: [
-      { label: 'Key Takeaways', anchor: '#key-takeaways' },
-      { label: 'Which Problem Does Each Tool Solve?', anchor: '#which-problem-each-tool-solves' },
+      { label: 'Problems Each Tool Solves', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor: Pydantic Extraction', anchor: '#instructor' },
       { label: 'Outlines: Constrained Decoding', anchor: '#outlines' },
       { label: 'Pydantic AI: Type-Safe Agents', anchor: '#pydantic-ai' },
@@ -32,12 +31,12 @@ export const article: Record<Language, PEArticle> = {
       { label: 'Marvin: Decorator-Based Extraction', anchor: '#marvin' },
       { label: 'PromptQuorum: Cross-Model Testing', anchor: '#promptquorum' },
       { label: 'Side-by-Side Comparison', anchor: '#side-by-side-comparison' },
-      { label: 'How to Choose Your Tool', anchor: '#how-to-choose' },
-      { label: 'How to Add Structured Output', anchor: '#how-to-add-structured-output' },
-      { label: 'What Are the Most Common Structured Output Mistakes?', anchor: '#common-mistakes' },
+      { label: 'Choosing the Right Tool', anchor: '#how-to-choose' },
+      { label: 'Adding Structured Output Step-by-Step', anchor: '#how-to-add-structured-output' },
+      { label: 'Common Structured Output Mistakes', anchor: '#common-mistakes' },
       { label: 'Frequently Asked Questions', anchor: '#faq' },
     ],
-    leadAnswerBlock: '**Six libraries dominate LLM structured output in 2026: Instructor (Pydantic extraction), Outlines (constrained decoding for local models), Pydantic AI (type-safe agents), LangChain (unified APIs), Marvin (decorators), PromptQuorum (cross-model testing).**',
+    leadAnswerBlock: '**Choose based on where your models run: Instructor and Pydantic AI for API-first workflows with retries and type safety; Outlines for guaranteed schema compliance on local models; LangChain for teams already using chains or agents; Marvin for rapid decorator-based prototyping; PromptQuorum for consistency testing across GPT, Claude, and Gemini before production.**',
     quickFacts: [
       'Instructor supports 20+ LLM providers (OpenAI, Anthropic, Google, Ollama, vLLM)',
       'Outlines guarantees schema compliance at token generation time (0% hallucination)',
@@ -116,6 +115,13 @@ export const article: Record<Language, PEArticle> = {
     sections: {
       keyTakeaways: {
         isTldr: true,
+        callouts: [
+          {
+            type: 'tip',
+            label: 'TL;DR',
+            text: 'Use Instructor for Python API extraction with retries. Use Outlines for guaranteed schema compliance on local models. Use Pydantic AI for type-safe multi-turn agents. Use LangChain if you\'re already in that ecosystem. Use Marvin for rapid prototyping. Use PromptQuorum to test structured output consistency across all models before production.'
+          }
+        ],
         items: [
           '**Instructor** is the most popular Python choice — Pydantic schemas, automatic retries, supports any LLM API',
           '**Outlines** guarantees schema compliance on local models via constrained decoding — zero hallucination risk',
@@ -127,7 +133,7 @@ export const article: Record<Language, PEArticle> = {
       },
       whichProblem: {
         id: 'which-problem-each-tool-solves',
-        title: 'Which Problem Does Each Tool Solve?',
+        title: 'Problems Each Tool Solves',
         content: '**Structured output requires solving three interdependent problems: schema definition, API enforcement, and validation.** Different tools attack these problems differently. Instructor handles all three in Python with retries. Outlines eliminates the validation step via constrained decoding. Pydantic AI adds type safety for agents. LangChain wraps provider APIs. Marvin prioritizes developer speed. PromptQuorum validates consistency across all models.',
         columns: ['Problem', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -147,7 +153,9 @@ export const article: Record<Language, PEArticle> = {
           'Works in Python and TypeScript (via Node.js adapter)',
           'Apache 2.0 open-source, actively maintained',
           'Pricing: Free (no additional cost beyond LLM API calls)'
-        ]
+        ],
+        codeLanguage: 'python',
+        codeBlock: 'import instructor\nfrom pydantic import BaseModel\nfrom openai import OpenAI\n\nclass User(BaseModel):\n    name: str\n    age: int\n\nclient = instructor.from_openai(OpenAI())\nuser = client.chat.completions.create(\n    model="gpt-4o",\n    response_model=User,\n    messages=[{"role": "user", "content": "Extract: John is 25 years old"}]\n)\n# user.name == "John", user.age == 25'
       },
       outlines: {
         id: 'outlines',
@@ -229,7 +237,7 @@ export const article: Record<Language, PEArticle> = {
       },
       decision: {
         id: 'how-to-choose',
-        title: 'How to Choose Your Tool',
+        title: 'Choosing the Right Tool',
         content: 'Start by answering three questions: (1) Do you use LangChain already? (2) Do you need local model support? (3) How much validation complexity do you have?',
         items: [
           '**Use Instructor if:** You\'re building Python APIs and need automatic retries on validation failure. Best general-purpose choice.',
@@ -242,7 +250,7 @@ export const article: Record<Language, PEArticle> = {
       },
       howToIntegrate: {
         id: 'how-to-add-structured-output',
-        title: 'How to Add Structured Output',
+        title: 'Adding Structured Output Step-by-Step',
         numberedItems: [
           '**Define your output schema** — Create a Pydantic model (Python), TypeScript interface, or JSON Schema describing the fields, types, and constraints you want the LLM to return.',
           '**Choose a library** — Instructor for Python APIs, Outlines for local models, Pydantic AI for agents, LangChain if already in use, Marvin for speed.',
@@ -253,7 +261,7 @@ export const article: Record<Language, PEArticle> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'What Are the Most Common Structured Output Mistakes?',
+        title: 'Common Structured Output Mistakes',
         mistakes: [
           {
             mistake: 'Using JSON mode without validation',
@@ -284,13 +292,14 @@ export const article: Record<Language, PEArticle> = {
       },
       relatedReading: {
         id: 'related-reading',
+        title: 'Related Reading',
         items: [
-          '[Structured Output and JSON Mode](/prompt-engineering/structured-output-json-mode?lang=en) — How JSON mode works on OpenAI, Anthropic, and Google APIs; when to use format enforcement vs. schema validation.',
-          '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security?lang=en) — Risks when accepting user input to structured prompts; sanitization strategies.',
-          '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality?lang=en) — Measure accuracy, consistency, and instruction-following on your structured output schemas.',
-          '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models?lang=en) — Run the same test set on GPT, Claude, and Gemini; compare pass rates.',
-          '[Prompt Engineering vs Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=en) — When structured prompting is enough vs. when you need model fine-tuning.',
-          '[LangChain Best Practices](/prompt-engineering/prompt-engineering-setup-small-teams?lang=en) — Building workflows with agents and chains that output structured data reliably.'
+          '[Structured Output and JSON Mode](/prompt-engineering/structured-output-json-mode) — How JSON mode works on OpenAI, Anthropic, and Google APIs; when to use format enforcement vs. schema validation.',
+          '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Risks when accepting user input to structured prompts; sanitization strategies.',
+          '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — Measure accuracy, consistency, and instruction-following on your structured output schemas.',
+          '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Run the same test set on GPT, Claude, and Gemini; compare pass rates.',
+          '[Prompt Engineering vs Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning) — When structured prompting is enough vs. when you need model fine-tuning.',
+          '[Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams) — Building workflows with structured data output for teams of 2–15.'
         ]
       },
       faq: {
@@ -340,6 +349,7 @@ export const article: Record<Language, PEArticle> = {
       },
       sources: {
         id: 'sources',
+        title: 'Sources',
         items: [
           '[Instructor GitHub Repository](https://github.com/jxnl/instructor) — Official repository and docs for Instructor library',
           '[Outlines Documentation](https://outlines-dev.github.io/) — Constrained decoding for guaranteed schema compliance',
@@ -353,12 +363,12 @@ export const article: Record<Language, PEArticle> = {
   de: {
     theme: 'Tools & Plattformen',
     title: 'Beste Tools für Structured Output und JSON Mode (2026)',
-    seoTitle: 'Beste Tools für Structured Output (2026)',
-    metaDescription: 'Instructor, Outlines, Pydantic AI, LangChain und Marvin im Vergleich für strukturierte LLM-Ausgaben — gerankt nach Schema-Durchsetzung, Sprachunterstützung und lokalen Modellen.',
-    ogTitle: 'Beste Tools für Structured Output (2026)',
-    ogDescription: 'Instructor, Outlines, Pydantic AI, LangChain und Marvin im Vergleich für strukturierte LLM-Ausgaben — gerankt nach Schema-Durchsetzung, Sprachunterstützung und lokalen Modellen.',
-    twitterTitle: 'Beste Tools für Structured Output (2026)',
-    twitterDescription: 'Instructor, Outlines, Pydantic AI, LangChain und Marvin im Vergleich für strukturierte LLM-Ausgaben — gerankt nach Schema-Durchsetzung, Sprachunterstützung und lokalen Modellen.',
+    seoTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
+    metaDescription: '6 Structured-Output-Tools im Vergleich: Instructor, Outlines, Pydantic AI, LangChain, Marvin und PromptQuorum. Vergleichstabelle mit Pricing und Local-Model-Support.',
+    ogTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
+    ogDescription: '6 Tools für LLM Structured Output: Instructor für Retries, Outlines für Constrained Decoding, Pydantic AI für Agents. Konsistenz testen mit PromptQuorum.',
+    twitterTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
+    twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin — welches Structured-Output-Tool passt? Vergleich 2026.',
     intro: '**Sechs Tools dominieren Structured Output 2026: Instructor für Pydantic-Extraktion, Outlines für Constrained Decoding, Pydantic AI für typsichere Agents, LangChain für einheitliche APIs, Marvin für Decorator-basierte Extraktion und PromptQuorum für modellübergreifendes Testen. Jedes löst einen anderen Workflow-Engpass.**',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
@@ -418,12 +428,12 @@ export const article: Record<Language, PEArticle> = {
   fr: {
     theme: 'Outils & Plateformes',
     title: 'Meilleurs outils pour Structured Output et JSON Mode (2026)',
-    seoTitle: 'Meilleurs outils Structured Output (2026)',
-    metaDescription: 'Comparez Instructor, Outlines, Pydantic AI, LangChain et Marvin pour structured output — classés par application de schéma, support de langues et compatibilité des modèles locaux.',
-    ogTitle: 'Meilleurs outils Structured Output (2026)',
-    ogDescription: 'Comparez Instructor, Outlines, Pydantic AI, LangChain et Marvin pour structured output — classés par application de schéma, support de langues et compatibilité des modèles locaux.',
-    twitterTitle: 'Meilleurs outils Structured Output (2026)',
-    twitterDescription: 'Comparez Instructor, Outlines, Pydantic AI, LangChain et Marvin pour structured output — classés par application de schéma, support de langues et compatibilité des modèles locaux.',
+    seoTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
+    metaDescription: 'Comparaison de 6 outils de structured output : Instructor, Outlines, Pydantic AI, LangChain, Marvin et PromptQuorum. Tableau comparatif avec pricing et support local.',
+    ogTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
+    ogDescription: '6 outils de structured output LLM comparés : Instructor pour retries, Outlines pour décodage contraint, Pydantic AI pour agents. Testez avec PromptQuorum.',
+    twitterTitle: 'Meilleurs Outils pour Structured Output et JSON Mode (2026)',
+    twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin — quel outil de structured output choisir ? Comparaison 2026.',
     intro: '**Six outils dominent le Structured Output en 2026 : Instructor pour l\'extraction Pydantic, Outlines pour le décodage contraint, Pydantic AI pour les agents type-safe, LangChain pour les APIs unifiées, Marvin pour l\'extraction basée sur décorateurs et PromptQuorum pour les tests multi-modèles. Chacun résout un goulot d\'étranglement différent.**',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
@@ -482,12 +492,12 @@ export const article: Record<Language, PEArticle> = {
   ja: {
     theme: 'ツール＆プラットフォーム',
     title: 'Structured Output対応ツール2026：用途別ランキング',
-    seoTitle: 'Structured Output対応ツール2026：比較',
-    metaDescription: 'Instructor、Outlines、Pydantic AI、LangChain、Marvinを比較。スキーマ強制方法、言語サポート、ローカルモデル対応、料金で評価。',
-    ogTitle: 'Structured Output対応ツール2026：比較',
-    ogDescription: 'Instructor、Outlines、Pydantic AI、LangChain、Marvinを比較。スキーマ強制方法、言語サポート、ローカルモデル対応、料金で評価。',
-    twitterTitle: 'Structured Output対応ツール2026：比較',
-    twitterDescription: 'Instructor、Outlines、Pydantic AI、LangChain、Marvinを比較。スキーマ強制方法、言語サポート、ローカルモデル対応、料金で評価。',
+    seoTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
+    metaDescription: '構造化出力ツール6選を比較：Instructor、Outlines、Pydantic AI、LangChain、Marvin、PromptQuorum。価格・ローカルモデル対応・ユースケース別比較表。',
+    ogTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
+    ogDescription: 'LLM構造化出力ツール6選：Instructorのリトライ、Outlinesの制約デコード、Pydantic AIのエージェント対応。PromptQuorumで一貫性テスト。',
+    twitterTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
+    twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin — 構造化出力ツールの選び方。2026年比較ガイド。',
     intro: '**Structured Output 2026年の主流6つのツール：Instructor（Pydantic抽出）、Outlines（制約付きデコーディング）、Pydantic AI（型安全エージェント）、LangChain（統一API）、Marvin（デコレータベース）、PromptQuorum（クロスモデルテスト）。各ツールは異なるボトルネックを解きます。**',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
@@ -542,12 +552,12 @@ export const article: Record<Language, PEArticle> = {
   zh: {
     theme: '工具与平台',
     title: '2026年Structured Output最佳工具：用途排名',
-    seoTitle: 'Structured Output最佳工具2026',
-    metaDescription: '对比Instructor、Outlines、Pydantic AI、LangChain和Marvin的Structured Output工具——按模式强制、语言支持、本地模型兼容性排名。',
-    ogTitle: 'Structured Output最佳工具2026',
-    ogDescription: '对比Instructor、Outlines、Pydantic AI、LangChain和Marvin的Structured Output工具——按模式强制、语言支持、本地模型兼容性排名。',
-    twitterTitle: 'Structured Output最佳工具2026',
-    twitterDescription: '对比Instructor、Outlines、Pydantic AI、LangChain和Marvin的Structured Output工具——按模式强制、语言支持、本地模型兼容性排名。',
+    seoTitle: '结构化输出与JSON模式最佳工具对比（2026）',
+    metaDescription: '6款结构化输出工具对比：Instructor、Outlines、Pydantic AI、LangChain、Marvin和PromptQuorum。含价格、本地模型支持和使用场景对比表。',
+    ogTitle: '结构化输出与JSON模式最佳工具对比（2026）',
+    ogDescription: '6款LLM结构化输出工具：Instructor重试机制、Outlines约束解码、Pydantic AI类型安全Agent。用PromptQuorum测试一致性。',
+    twitterTitle: '结构化输出与JSON模式最佳工具对比（2026）',
+    twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin——哪款结构化输出工具适合你？2026年对比指南。',
     intro: '**2026年Structured Output的6大工具：Instructor（Pydantic提取）、Outlines（约束解码）、Pydantic AI（类型安全代理）、LangChain（统一API）、Marvin（装饰器提取）和PromptQuorum（跨模型测试）。每个工具解决不同的系统瓶颈。**',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
