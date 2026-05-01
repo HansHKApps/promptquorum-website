@@ -1877,28 +1877,457 @@ export const article: Record<Language, PEArticle> = {
   zh: {
     theme: '工具与平台',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-    metaDescription: 'PromptLayer（$20/月）记录LLM调用，Mirascope（免费）是Python SDK，PromptPerfect（$10/月）优化提示词。三款工具各解决不同问题，按需选择。',
-    intro: '[Translation coming soon](/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=en).',
+    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 对比 2026',
+    metaDescription: 'PromptLayer（$49/月）记录 LLM 调用，Mirascope（免费）构建 Python 应用，PromptPerfect（$19.99/月）改写提示词。三款工具解决不同问题，按需选择一款。',
+    intro: '**PromptLayer 记录并版本化 LLM 调用（免费至小型团队 $49/月）。Mirascope 是免费的 Python SDK，用于构建类型安全的 LLM 应用。PromptPerfect 自动改写提示词以获得更好的结果（$0–$19.99/月）。这三款工具解决不同的问题 — 根据您的瓶颈选择其中一款。**',
     publishDate: '2026-04-10',
     dateModified: '2026-05-01',
     readTime: '阅读约8分钟',
     educationalLevel: 'Intermediate',
+    audience: '正在评估 PromptLayer、Mirascope 和 PromptPerfect 的提示词工程师和开发者',
+    primaryTerm: 'PromptLayer vs Mirascope vs PromptPerfect',
+    aboutTopics: ['Prompt Management', 'LLM Observability', 'Prompt Optimization'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
+    lastFactChecked: '2026-05-01',
+    toc: [
+      { label: 'PromptLayer、Mirascope 和 PromptPerfect 各自的功能', anchor: '#what-is' },
+      { label: '评估方法', anchor: '#evaluation-criteria' },
+      { label: 'PromptLayer：LLM 可观测性与提示词版本管理', anchor: '#promptlayer' },
+      { label: 'Mirascope：类型安全的 Python LLM 库', anchor: '#mirascope' },
+      { label: 'PromptPerfect：自动提示词改写', anchor: '#promptperfect' },
+      { label: '三工具横向对比', anchor: '#comparison-table' },
+      { label: '按使用场景选择工具', anchor: '#which-tool' },
+      { label: '地区合规注意事项', anchor: '#regional-context' },
+      { label: '常见误区', anchor: '#common-mistakes' },
+      { label: '如何选择', anchor: '#how-to-choose' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+      { label: '参考资料', anchor: '#sources' },
+    ],
+    quickFacts: [
+      'PromptLayer 免费套餐：2,500 次请求/月，10 个提示词模板，5 个用户；Pro 套餐 $49/月',
+      'PromptLayer Team 套餐：$500/月 — 25 个用户，100,000+ 次请求/月',
+      'Mirascope 开源 Apache 2.0 — 无 SaaS 费用，支持 20 多个 LLM 提供商',
+      'PromptPerfect 免费套餐：10 次/天；Pro 套餐 $19.99/月（500 次/天），Pro Max $99.99/月（1,500 次/天）',
+      'PromptLayer 原生支持 OpenAI、Anthropic、Cohere、Azure OpenAI 及 10 多个提供商',
+      'PromptPerfect 支持文本模型（GPT-4、Claude）和图像模型（Midjourney、Stable Diffusion）',
+    ],
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        items: [
+          '三款工具中，只有 PromptLayer 专为生产环境 LLM 可观测性而设计 — 实时记录每个提示词版本的成本、延迟和使用情况。',
+          'Mirascope 免费且开源 — 适合希望在无 SaaS 平台和月费的情况下编写类型安全 LLM 代码的 Python 开发者。',
+          'PromptPerfect 面向非开发者：通过 Web 界面改写提示词，无需代码，$0 至 $19.99/月（Pro）或 $99.99/月（Pro Max）。',
+          '这三款工具并不竞争 — 它们解决不同的瓶颈问题。您几乎不会同时需要三款。',
+          '需要记录生产 LLM 调用：PromptLayer。需要构建 Python 应用：Mirascope。需要无代码改写提示词：PromptPerfect。',
+          '这三款工具均不能系统性地评估输出质量 — 如需系统性评估，请使用 Braintrust 或 Promptfoo。',
+        ],
+      },
+      whatIs: {
+        id: 'what-is',
+        title: 'PromptLayer、Mirascope 和 PromptPerfect 各自的功能',
+        content: [
+          '**PromptLayer、Mirascope 和 PromptPerfect 分别解决三个不同的工作流问题，极少重叠。** PromptLayer 为您的 LLM 调用增加可观测性：记录每次请求，追踪成本和延迟，并对提示词模板进行版本管理。Mirascope 是一个 Python 库，使 LLM 调用具备类型安全、可测试且与提供商无关的特性。PromptPerfect 以提示词作为输入，返回改进后的版本 — 无需代码。',
+          '开发者混淆这三款工具的原因在于：三者都声称能改进提示词，但所处阶段和目标用户各不相同。PromptLayer 通过展示哪个版本在生产环境中表现最佳来改进提示词。Mirascope 通过将提示词实现为结构化、可测试的 Python 函数来改进提示词。PromptPerfect 通过针对特定模型改写提示词来改进提示词。',
+          '如需更全面的提示词工程工具对比，请参阅 [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh)。如需评估和 CI/CD 工具，请参阅 [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=zh)。',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'PromptLayer 记录生产调用，Mirascope 构建 Python 代码结构，PromptPerfect 改写提示词 — 三个不同阶段，三类不同用户。',
+          },
+          {
+            type: 'in-plain-terms',
+            text: '可以把它们理解为三种不同职能：PromptLayer 是监控仪表板（生产环境发生了什么？），Mirascope 是代码框架（如何编写整洁的 LLM 代码？），PromptPerfect 是写作助手（如何更好地表达这个提示词？）。',
+          },
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: '评估方法',
+        content: [
+          '**本节从五个维度评估三款工具，这些维度反映了团队的实际决策过程：主要用途、集成方式、LLM 提供商支持、可观测性能力和价格。**',
+          '需要生产日志就选 PromptLayer；需要类型安全的 Python 代码就选 Mirascope；需要无代码改写提示词就选 PromptPerfect。',
+        ],
+        columns: ['评估维度', '衡量内容', '重要原因'],
+        rows: [
+          {
+            '评估维度': '主要用途',
+            '衡量内容': '工具解决的核心工作流问题',
+            '重要原因': '这些工具解决不同的问题 — 选错工具会浪费预算和部署时间',
+          },
+          {
+            '评估维度': '集成方式',
+            '衡量内容': 'SDK 封装层、Python 库还是 Web 界面',
+            '重要原因': '决定团队中谁能使用它，以及需要多少配置工作',
+          },
+          {
+            '评估维度': 'LLM 提供商支持',
+            '衡量内容': '原生支持哪些模型和 API',
+            '重要原因': '需要切换提供商或使用多个模型的团队需要广泛的支持',
+          },
+          {
+            '评估维度': '可观测性',
+            '衡量内容': '工具是否记录调用、追踪成本并暴露生产错误',
+            '重要原因': '生产环境调试和成本控制需要对 LLM 调用的实时可见性',
+          },
+          {
+            '评估维度': '价格',
+            '衡量内容': '免费套餐限制和付费套餐起始成本',
+            '重要原因': '小型团队的预算可预测性；免费套餐决定何时需要升级',
+          },
+        ],
+      },
+      promptlayer: {
+        id: 'promptlayer',
+        title: 'PromptLayer：LLM 可观测性与提示词版本管理',
+        content: [
+          '**PromptLayer 是一个提示词管理和可观测性平台，封装您的 LLM API 调用并将每次请求记录到仪表板。** 集成方式是一个薄 SDK 层：将 `openai.chat.completions.create(...)` 替换为 `promptlayer.openai.chat.completions.create(...)`，所有调用即可自动记录。无需修改提示词逻辑。',
+          '仪表板显示请求历史、提示词版本、Token 用量、每次调用的成本、延迟分布和错误率。团队用它来调试提示词在生产环境中失败的原因，按功能追踪 LLM 成本，以及在生产流量上同时对比两个提示词版本的表现。',
+          'PromptLayer 的提示词模板按名称和版本存储。当前 SDK 通过 `client.run(prompt_name="support-reply", input_variables={...})` 获取并运行模板 — 非工程师可在 PromptLayer 界面中编辑模板，无需代码部署。这是 PromptLayer 区别于 Mirascope 和 PromptPerfect 的核心功能。',
+        ],
+        items: [
+          '免费：$0 — 5 个用户，2,500 次请求/月，10 个提示词模板，每日 10 次 Playground 运行',
+          'Pro：$49/月 — 5 个用户，2,500+ 次请求（按需付费 $0.003/次），无限模板',
+          'Team：$500/月 — 25 个用户，100,000+ 次请求（超额 $0.002/次），Webhook 和部署审批',
+          'Enterprise：定制价格 — HIPAA/BAA、SSO、RBAC、EU 云托管或在 GCP/AWS/Azure 上自托管',
+          '支持提供商：OpenAI、Anthropic、Cohere、Azure OpenAI 及 10 多个其他提供商',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: '需要 SDK 封装',
+            text: 'PromptLayer 需要将原生 LLM SDK 调用替换为 PromptLayer 封装版本。如果您使用原始 HTTP 请求而非官方 SDK，则需要自定义日志层。在承诺付费套餐前，请先验证您的集成方式。',
+          },
+        ],
+      },
+      mirascope: {
+        id: 'mirascope',
+        title: 'Mirascope：类型安全的 Python LLM 库',
+        content: [
+          '**Mirascope 是一个开源 Python 库，将 LLM 交互定义为类型化函数，实现 IDE 自动补全、静态分析和基于 Pydantic 的输出验证。** 无需手动构建提示词字符串，只需用 `@prompt_template` 装饰器修饰 Python 函数，像调用普通函数一样调用它。返回类型通过 Pydantic 模型进行验证。',
+          '该库通过统一接口支持 20 多个提供商（OpenAI、Anthropic、Google Gemini、Mistral、Cohere、Groq 等）。切换提供商只需更改函数装饰器中的一个参数，无需修改提示词逻辑。这对于评估多个模型或将不同类型的请求路由到不同提供商以控制成本的团队非常有价值。',
+          'Mirascope 没有仪表板、日志平台或 SaaS 订阅。它是一个开发者工具 — 提升编写 LLM 代码的开发体验，而非运行时的可观测性。需要在 Mirascope 基础上进行生产日志记录的团队，通常会另外添加 PromptLayer 或自定义日志层。',
+        ],
+        items: [
+          '许可证：Apache 2.0 开源 — 不限团队规模，无使用限制，$0',
+          '支持提供商：OpenAI、Anthropic、Gemini、Mistral、Groq、Cohere、Together AI 及其他 15 个以上',
+          '输出验证：原生 Pydantic 集成，用于结构化提取和类型检查',
+          '无仪表板、无日志、无托管平台 — 纯粹的开发者库',
+          '开箱即用支持异步、流式、工具调用和多轮对话',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: '零月费',
+            text: 'Mirascope 采用 Apache 许可证，无付费套餐或使用限制。唯一的成本是底层 LLM API 调用费用（OpenAI、Anthropic 等）。对于预算有限的 Python 团队，这是结构化 LLM 开发摩擦最小的起点。',
+          },
+        ],
+      },
+      promptperfect: {
+        id: 'promptperfect',
+        title: 'PromptPerfect：自动提示词改写',
+        content: [
+          '**PromptPerfect 接受一个提示词作为输入，返回专为特定模型优化的改写版本。** 将提示词粘贴到 Web 界面，选择目标模型（GPT-4、Claude、Midjourney、Stable Diffusion 等），点击优化。输出是改写后的提示词，以及每处修改的说明。',
+          '该工具面向不想通过反复试验来迭代提示词的非开发者。内容创作者用它优化图像生成提示词（Midjourney、DALL-E）。客服团队用它改进面向客户的回复模板。营销人员用它为内容工作流起草 ChatGPT 提示词。',
+          'PromptPerfect 也提供 API 以支持程序化使用，但它并非为 CI/CD 流水线或自动化测试设计 — 优化结果是非确定性的，也不包含质量指标。如需自动化提示词测试，请使用 Promptfoo 或 Braintrust。',
+        ],
+        items: [
+          '免费：10 次优化/天，仅限 Web 界面，无 API 访问',
+          'Pro：$19.99/月 — 500 次优化/天（Autotune + Interactive 优化器），含 API 访问',
+          'Pro Max：$99.99/月 — 1,500 次优化/天，优先处理',
+          '支持模型：GPT-4、Claude、Gemini（文本）；Midjourney、Stable Diffusion、DALL-E（图像）',
+          '输出：改写后的提示词 + 每处修改说明',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: '非确定性输出',
+            text: 'PromptPerfect 的优化结果因每次运行而异 — 相同的输入提示词可能返回不同的改写结果。请勿在 CI/CD 流水线或自动化测试工作流中使用。它专为手动、人工参与的提示词改进设计，不适用于可重现的自动化场景。',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '三工具横向对比',
+        content: [
+          '**三款工具在团队采用的每个关键维度上都存在差异：使用者、集成方式、成本以及解决的问题。**',
+        ],
+        columns: ['特征', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        rows: [
+          {
+            '特征': '主要用途',
+            'PromptLayer': '生产环境可观测性',
+            'Mirascope': 'Python 应用开发',
+            'PromptPerfect': '提示词改写',
+          },
+          {
+            '特征': '集成方式',
+            'PromptLayer': 'SDK 封装（Python、Node.js）',
+            'Mirascope': 'Python 库',
+            'PromptPerfect': 'Web 界面 + API',
+          },
+          {
+            '特征': '目标用户',
+            'PromptLayer': '工程和产品团队',
+            'Mirascope': 'Python 开发者',
+            'PromptPerfect': '非开发者、内容创作者',
+          },
+          {
+            '特征': 'LLM 提供商支持',
+            'PromptLayer': '10+（OpenAI、Anthropic、Cohere）',
+            'Mirascope': '20+（所有主流提供商）',
+            'PromptPerfect': 'GPT-4、Claude、Midjourney、SD',
+          },
+          {
+            '特征': '生产日志',
+            'PromptLayer': '有 — 核心功能',
+            'Mirascope': '无',
+            'PromptPerfect': '无',
+          },
+          {
+            '特征': '免费套餐',
+            'PromptLayer': '2,500 次请求/月，10 个模板',
+            'Mirascope': '无限制（开源）',
+            'PromptPerfect': '10 次优化/天',
+          },
+          {
+            '特征': '付费套餐起始价格',
+            'PromptLayer': '$49/月（Pro）',
+            'Mirascope': '$0（无付费套餐）',
+            'PromptPerfect': '$19.99/月（Pro）',
+          },
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: '单工具原则',
+            text: '这三款工具很少共存于同一个团队的技术栈中，因为它们服务于不同的用户和阶段。Python 工程团队通常选择 Mirascope（库）加 PromptLayer（可观测性）。非开发者团队选择 PromptPerfect。同时购买三款只会增加成本，而不会带来功能上的叠加效益。',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: '按使用场景选择工具',
+        content: [
+          '**如果您的团队需要在生产环境中监控 LLM 调用、按功能追踪成本，或在不进行代码部署的情况下对真实流量比较提示词版本，请选择 PromptLayer。**',
+          '**如果您正在构建调用 LLM 的 Python 应用，并希望以零 SaaS 成本实现类型安全、可测试、与提供商无关的代码，请选择 Mirascope。**',
+          '**如果您需要在不编写代码的情况下快速改进特定提示词 — 尤其是图像生成或内容创作工作流 — 请选择 PromptPerfect。**',
+          '如果您尚未上线且没有需要记录的实时流量，请勿使用 PromptLayer — 可观测性功能在没有生产数据的情况下毫无价值。如果您的团队不使用 Python，Mirascope 不是一个选项 — 它是纯 Python 库，没有 Web 界面。如果您需要自动化、可重现的提示词测试，请勿使用 PromptPerfect — 其非确定性输出不适合 CI/CD 质量门禁。',
+          '关于包含提示词审查所有权和 CI/CD 门禁的完整团队配置工作流，请参阅 [小团队提示词工程配置](/prompt-engineering/prompt-engineering-setup-small-teams?lang=zh)。',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '地区合规注意事项',
+        content: [
+          '**中国（数据安全法）：** 2021 年《数据安全法》和网信办（CAC）法规要求在中国境内处理的数据留存在境内。Mirascope 配合国内模型端点（阿里云通义千问 2.5、百度文心一言）是企业的标准合规方案 — Mirascope 作为本地 Python 库运行，不向任何第三方平台发送数据。PromptLayer Enterprise 支持满足此要求的自托管部署。PromptPerfect 将所有提示词数据发送至 Jina AI 的境外基础设施，不适用于受 CAC 监管的场景。',
+          '**亚太地区（数据跨境）：** 韩国（个人信息保护法）、台湾（个人资料保护法）和新加坡（PDPA）等地区的数据保护法规对个人数据的跨境传输设有限制。Mirascope 在本地运行，数据不经过任何第三方平台，默认满足数据驻留要求。PromptLayer Enterprise 在各区域数据中心支持自托管。在受监管的亚太地区使用 PromptPerfect 处理敏感数据（医疗记录、法律文件、个人信息）前，必须核实 Jina AI 的数据处理协议和服务器所在地。',
+          '**企业合规部署：** 金融机构、医院和律所等受严格监管的企业，通常要求数据处理完全在其控制范围内。Mirascope 配合私有化部署的模型端点（私有云或本地推理服务器）是风险最低的选择，数据从不离开企业基础设施。PromptLayer Enterprise 的自托管方案可满足需要可观测性仪表板的合规团队。PromptPerfect 的 SaaS 架构决定了其不适合对数据主权要求严格的企业用例。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见误区',
+        content: [
+          '最常见的误区是为尚不存在的问题购买工具。PromptLayer 在上线前没有价值；PromptPerfect 在自动化流水线中没有价值；Mirascope 对非 Python 团队没有价值。',
+        ],
+        numberedItems: [
+          '在上线前就引入 PromptLayer。其核心价值 — 请求日志、成本追踪、A/B 测试 — 需要真实流量。在开发阶段引入会得到空仪表板，并为用不上的套餐付费。',
+          '将 PromptPerfect 用于自动化提示词流水线。PromptPerfect 专为手动、一次性优化设计。其输出每次运行结果不同，与可重现的 CI/CD 测试套件或回归检查不兼容。',
+          '将 Mirascope 当作可观测性工具的替代品。Mirascope 提升代码质量和可测试性，但不向任何仪表板记录任何内容。切换到 Mirascope 后期望看到请求历史的团队会大失所望 — 需要单独添加 PromptLayer 以实现可观测性。',
+          '为非 Python 团队选择 Mirascope。Mirascope 仅支持 Python。使用 Node.js、Go 或其他语言的团队应评估官方 OpenAI 或 Anthropic SDK，或者 LangChain.js。',
+          '忽视 PromptPerfect 对图像模型的支持。大多数团队只针对文本模型（GPT-4、Claude）评估 PromptPerfect，但对于创意团队来说，最强大的用例往往是 Midjourney 和 Stable Diffusion 提示词优化。',
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '如何选择',
+        content: [
+          '**回答三个问题即可确定正确的工具：您已经上线了吗？您的团队编写 Python 吗？您需要无代码的提示词改进吗？**',
+        ],
+        numberedItems: [
+          '确认是否有实时流量。有的话且需要调试成本或故障：选 PromptLayer。没有的话，上线前跳过 PromptLayer — 没有生产数据，价值为零。',
+          '确认团队是否编写 Python。是的话且希望有整洁的类型安全 LLM 代码：选 Mirascope。否的话，Mirascope 不是选项 — 没有 Web 界面，也没有非 Python SDK。',
+          '确认团队中是否有需要在不编写代码的情况下改进提示词的成员。有的话：选 PromptPerfect。全员都是工程师的话：PromptPerfect 通常不是最佳选择。',
+          '确认是否需要系统性质量评估 — 指标、评分、回归测试。需要的话：这三款工具都无法覆盖。请改为添加 Braintrust 或 Promptfoo 进行评估。',
+          '大多数工程团队的默认路径：从 Mirascope（免费，代码质量）开始，上线后添加 PromptLayer（约 $49/月），除非有非开发者提示词作者，否则跳过 PromptPerfect。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: '从免费开始的路径',
+            text: '从 Mirascope（开源，$0）开始构建 LLM 代码结构。有实时流量后，添加 PromptLayer 的免费套餐（2,500 次请求/月）。两者都不会产生费用，直到您超出免费限制。PromptPerfect 的免费套餐（10 次/天）足以评估它是否适合您的工作流，再决定是否订阅 $19.99/月的 Pro 套餐。',
+          },
+        ],
+      },
+      faq: {
+        title: '常见问题',
+        faqs: [
+          {
+            q: 'PromptLayer 主要用于什么？',
+            a: 'PromptLayer 将每次 LLM API 调用连同请求历史、成本、延迟和提示词版本追踪记录到仪表板。团队用它调试生产环境 LLM 故障、按功能追踪 API 成本，以及在不进行代码部署的情况下对真实流量比较提示词版本。',
+          },
+          {
+            q: 'Mirascope 比 LangChain 更好吗？',
+            a: '两者解决不同的问题。Mirascope 专注于使用 Pydantic 验证的类型安全、与提供商无关的 LLM 函数调用。LangChain 是更广泛的编排框架，包含 Chain、Agent 和内存。希望获得整洁 LLM 函数调用而不需要 LangChain 抽象开销的团队应选择 Mirascope；复杂的 Agent 工作流则选 LangChain。',
+          },
+          {
+            q: 'PromptPerfect 的价格是多少？',
+            a: 'PromptPerfect 提供每天 10 次优化的免费套餐。Pro 套餐每月 $19.99，含每天 500 次优化和 API 访问。Pro Max 套餐每月 $99.99，含每天 1,500 次优化和优先处理。购买前请在 promptperfect.jina.ai 核实最新价格。',
+          },
+          {
+            q: '应该选择 PromptLayer 还是 Mirascope？',
+            a: '两者做的事情不同，大多数团队要么都需要，要么都不需要。PromptLayer 是可观测性平台 — 有实时流量且需要监控成本和调试故障时使用。Mirascope 是 Python 开发者库 — 构建 LLM 应用且需要类型安全、可测试代码时使用。两者互不替代。',
+          },
+          {
+            q: 'Mirascope 支持多少个 LLM 提供商？',
+            a: 'Mirascope 支持 20 多个提供商，包括 OpenAI、Anthropic（Claude）、Google Gemini、Mistral、Groq、Cohere、Together AI 等。切换提供商只需更改函数装饰器中的一个参数，无需修改提示词逻辑。',
+          },
+          {
+            q: 'PromptLayer 和提示词版本管理工具是一样的吗？',
+            a: 'PromptLayer 包含提示词版本管理（按名称和版本存储模板，通过 API 获取），但其主要价值是可观测性 — 记录每次生产 LLM 调用的成本、延迟和错误数据。如果只需要版本管理而不需要可观测性，PromptHub 是更轻量的替代方案。',
+          },
+          {
+            q: 'PromptPerfect 可以用于图像生成提示词吗？',
+            a: '可以。PromptPerfect 除支持 GPT-4 和 Claude 等文本模型外，还支持 Midjourney 和 Stable Diffusion。对于使用图像生成工作流的团队，图像提示词优化往往是比文本提示词改写更有价值的用例。',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '延伸阅读',
+        items: [
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 涵盖评估、CI/CD、A/B 测试和版本管理的四工具对比](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=zh)',
+          '[Best Prompt Engineering Tools 2026 — 涵盖所有提示词工作流类别的 10 多款工具排名概述](/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh)',
+          '[小团队提示词工程配置 — 2 至 10 人团队的角色、审查工作流和工具决策](/prompt-engineering/prompt-engineering-setup-small-teams?lang=zh)',
+          '[如何评估提示词质量 — 衡量 LLM 输出准确性和相关性的指标、评分函数和框架](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)',
+        ],
+      },
+      sources: {
+        title: '参考资料',
+        items: [
+          '[PromptLayer 文档](https://docs.promptlayer.com) — 官方文档，涵盖 SDK 设置、提示词版本管理、A/B 测试和仪表板分析。',
+          '[Mirascope GitHub 仓库](https://github.com/Mirascope/mirascope) — Apache 2.0 源代码、提供商集成指南和使用示例。',
+          '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — 官方产品页面，含价格套餐、支持模型和 API 文档。',
+          '[PromptLayer 价格页面](https://promptlayer.com/pricing) — 当前价格套餐；购买前请核实，套餐可能已有变动。',
+        ],
+      },
+    },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-      description: 'PromptLayer记录LLM调用，Mirascope是Python SDK，PromptPerfect自动优化提示词。三款工具解决三个不同问题。',
+      description: 'PromptLayer 记录并版本化 LLM 调用，Mirascope 是构建类型安全 Python LLM 应用的免费库，PromptPerfect 自动改写提示词。三款工具，三个不同的问题。',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
-      author: { '@type': 'Organization', 'name': 'PromptQuorum' },
-      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=zh',
       inLanguage: 'zh',
-      speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      about: [
+        { '@type': 'Thing', name: '提示词管理' },
+        { '@type': 'Thing', name: 'LLM 可观测性' },
+        { '@type': 'SoftwareApplication', name: 'PromptLayer' },
+        { '@type': 'SoftwareApplication', name: 'Mirascope' },
+        { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
-    sections: {},
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'PromptLayer 主要用于什么？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptLayer 将每次 LLM API 调用连同请求历史、成本、延迟和提示词版本追踪记录到仪表板。团队用它调试生产环境 LLM 故障、按功能追踪 API 成本，以及在不进行代码部署的情况下对真实流量比较提示词版本。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Mirascope 比 LangChain 更好吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '两者解决不同的问题。Mirascope 专注于使用 Pydantic 验证的类型安全、与提供商无关的 LLM 函数调用。LangChain 是更广泛的编排框架，包含 Chain、Agent 和内存。希望获得整洁 LLM 函数调用而不需要 LangChain 抽象开销的团队应选择 Mirascope；复杂的 Agent 工作流则选 LangChain。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'PromptPerfect 的价格是多少？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptPerfect 提供每天 10 次优化的免费套餐。Pro 套餐每月 $19.99，含每天 500 次优化和 API 访问。Pro Max 套餐每月 $99.99，含每天 1,500 次优化和优先处理。购买前请在 promptperfect.jina.ai 核实最新价格。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '应该选择 PromptLayer 还是 Mirascope？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '两者做的事情不同，大多数团队要么都需要，要么都不需要。PromptLayer 是可观测性平台 — 有实时流量且需要监控成本和调试故障时使用。Mirascope 是 Python 开发者库 — 构建 LLM 应用且需要类型安全、可测试代码时使用。两者互不替代。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Mirascope 支持多少个 LLM 提供商？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Mirascope 支持 20 多个提供商，包括 OpenAI、Anthropic（Claude）、Google Gemini、Mistral、Groq、Cohere、Together AI 等。切换提供商只需更改函数装饰器中的一个参数，无需修改提示词逻辑。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'PromptLayer 和提示词版本管理工具是一样的吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptLayer 包含提示词版本管理（按名称和版本存储模板，通过 API 获取），但其主要价值是可观测性 — 记录每次生产 LLM 调用的成本、延迟和错误数据。如果只需要版本管理而不需要可观测性，PromptHub 是更轻量的替代方案。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'PromptPerfect 可以用于图像生成提示词吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '可以。PromptPerfect 除支持 GPT-4 和 Claude 等文本模型外，还支持 Midjourney 和 Stable Diffusion。对于使用图像生成工作流的团队，图像提示词优化往往是比文本提示词改写更有价值的用例。',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'PromptLayer vs Mirascope vs PromptPerfect：工具对比',
+      inLanguage: 'zh',
+      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=zh',
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'PromptLayer',
+          description: '生产环境 LLM 可观测性和提示词版本管理平台，支持调用日志、成本追踪和提示词版本间的 A/B 测试',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Mirascope',
+          description: '用于构建类型安全、与提供商无关的 LLM 应用的开源 Python 库，原生支持 Pydantic 输出验证',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'PromptPerfect',
+          description: 'AI 驱动的提示词优化工具，自动改写提示词以在文本和图像生成模型上获得更好的性能',
+        },
+      ],
+    },
   },
 };
