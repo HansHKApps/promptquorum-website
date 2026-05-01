@@ -89,7 +89,7 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
 
   // Workflows & Automation — Block 5
   'best-tools-structured-output-json': 'best-tools-structured-output',
-  'prompts-for-reliable-structured-data': 'prompts-reliable-structured-data',
+  'prompts-for-reliable-structured-data': 'prompts-for-reliable-structured-data',
   'multi-model-prompt-testing-workflows': 'multi-model-prompt-testing',
   'prompt-library-management-for-teams': 'prompt-library-team-management',
   'prompts-to-repeatable-workflows': 'prompts-to-repeatable-workflows',

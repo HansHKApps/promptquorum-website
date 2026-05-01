@@ -83,7 +83,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 answers on prompt optimization, multi-model consensus, 9 frameworks, local LLM support (Ollama, LM Studio), BYOM privacy and free tier",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt Engineering Hub 2026: 80 Guides | PromptQuorum",
+    promptEngineeringHubTitle: "Prompt Engineering Guide 2026: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, and team workflows for developers.",
     localLlmsHubTitle: "Best Local LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide",
     localLlmsHubDescription: "Best local LLMs April 2026 – latest Ollama models, LM Studio vs Jan.ai comparison, VRAM/GPU requirements for RTX 3060 & more. Pull commands, beginner guides & hardware recommendations.",
