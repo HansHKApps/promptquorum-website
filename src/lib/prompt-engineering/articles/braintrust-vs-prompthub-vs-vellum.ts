@@ -9,15 +9,15 @@ export const article: Record<Language, PEArticle> = {
   en: {
     theme: 'Tools & Platforms',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo',
-    seoTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026 Comparison) | PromptQuorum',
-    intro: '**Four tools dominate prompt management for teams: Braintrust for output evaluation, PromptHub for version control, Vellum for production A/B testing, and Promptfoo for CI/CD regression prevention. This comparison ranks them on collaboration features, testing capability, pricing, and team fit.**',
-    metaDescription: 'Head-to-head: Braintrust for eval scoring ($500/mo), Vellum for production A/B ($200–500/mo), Promptfoo for free CI/CD, PromptHub for versioning ($50/mo). Most teams need exactly 2 — not all 4.',
+    seoTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
+    intro: '**Four tools dominate prompt management for teams: Braintrust for output evaluation, PromptHub for version control, Vellum for production A/B testing, and Promptfoo for CI/CD regression prevention.** Most teams buy all four and waste $1,000+/month. The right stack is always exactly two tools — one for evaluation, one for deployment.',
+    metaDescription: 'Braintrust ($500/mo), Vellum ($200–500/mo), Promptfoo (free), PromptHub ($50/mo) each solve a different problem. Most teams need exactly 2 — not all 4. Comparison table inside.',
     ogTitle: 'Buying All 4 Prompt Tools Wastes $1,000+/mo. Here\'s the 2-Tool Stack',
     ogDescription: 'Braintrust scores. Vellum splits traffic. Promptfoo catches regressions. PromptHub versions. Pick 2. Comparison table inside.',
     twitterTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo: Which 2 to Pick',
     twitterDescription: 'Promptfoo is free. Vellum starts at $200/mo. Braintrust at $500/mo. PromptHub at $50/mo. You need exactly 2 — eval + deployment. Decision matrix inside.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-05-01',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'Prompt engineers and engineering managers choosing a prompt management stack',
@@ -28,15 +28,15 @@ export const article: Record<Language, PEArticle> = {
     lastFactChecked: '2026-04-28',
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
-      { label: 'What Do These 4 Tools Actually Do?', anchor: '#what-is' },
+      { label: 'What Braintrust, PromptHub, Vellum, and Promptfoo Each Do', anchor: '#what-is' },
       { label: 'How We Compared These Tools', anchor: '#evaluation-criteria' },
-      { label: 'Braintrust: Best for Output Quality Scoring?', anchor: '#braintrust' },
-      { label: 'PromptHub: Best for Prompt Version Control?', anchor: '#prompthub' },
-      { label: 'Vellum: Best for Production A/B Testing?', anchor: '#vellum' },
-      { label: 'Promptfoo: Best Free CI/CD Option?', anchor: '#promptfoo' },
+      { label: 'Braintrust: Evaluation Depth at ~$500/Month', anchor: '#braintrust' },
+      { label: 'PromptHub: Version Control at $50–200/Month', anchor: '#prompthub' },
+      { label: 'Vellum: Production Traffic Splitting at $200–500/Month', anchor: '#vellum' },
+      { label: 'Promptfoo: Free Open-Source CI/CD Testing', anchor: '#promptfoo' },
       { label: 'PromptQuorum: Cross-Model Comparison Before Optimization', anchor: '#promptquorum' },
       { label: 'Head-to-Head: All 4 Tools Compared', anchor: '#comparison-table' },
-      { label: 'Which Tool Fits Your Team?', anchor: '#which-tool' },
+      { label: 'Tool Selection by Team Type', anchor: '#which-tool' },
       { label: 'Common Mistakes', anchor: '#common-mistakes' },
       { label: 'How to Choose Between These 4 Tools', anchor: '#how-to-choose' },
       { label: 'FAQ', anchor: '#faq' },
@@ -59,7 +59,7 @@ export const article: Record<Language, PEArticle> = {
       },
       whatIs: {
         id: 'what-is',
-        title: 'What Do These 4 Tools Actually Do?',
+        title: 'What Braintrust, PromptHub, Vellum, and Promptfoo Each Do',
         content: [
           '**Braintrust, PromptHub, Vellum, and Promptfoo solve different prompt team problems.** Braintrust is an evaluation platform (score outputs). PromptHub is a version control system (organize and share prompts). Vellum is a deployment platform with A/B testing (run experiments on real traffic). Promptfoo is a test automation tool (catch regressions in CI/CD). They overlap but do not replace each other.',
           'The reason teams struggle to pick one: all four claim to "optimize prompts," but they optimize at different stages. Braintrust optimizes by measuring; Vellum optimizes by splitting traffic; Promptfoo optimizes by catching regressions; PromptHub optimizes by organizing. A team might use Braintrust to discover a better prompt, Promptfoo to test it in CI/CD, and Vellum to deploy it.',
@@ -103,7 +103,7 @@ export const article: Record<Language, PEArticle> = {
       },
       braintrust: {
         id: 'braintrust',
-        title: 'Braintrust: Best for Output Quality Scoring?',
+        title: 'Braintrust: Evaluation Depth at ~$500/Month',
         content: [
           '**Braintrust is an AI evaluation platform that logs every API call, scores outputs with custom metrics, and runs A/B experiments in a shared lab — best for teams that measure output quality systematically.** Braintrust is not a prompt builder or version control system; it is a shared evaluation laboratory.',
           'Team plan ~$500/month. The logging proxy integrates with OpenAI, Anthropic, and Google APIs without code changes. You define custom scoring functions in TypeScript or Python. GitHub integration lets you version prompts alongside code. Tradeoff: requires engineering expertise to design and maintain scoring functions; overkill if your team is not yet evaluating quality.',
@@ -118,7 +118,7 @@ export const article: Record<Language, PEArticle> = {
       },
       prompthub: {
         id: 'prompthub',
-        title: 'PromptHub: Best for Prompt Version Control?',
+        title: 'PromptHub: Version Control at $50–200/Month',
         content: [
           '**PromptHub is a prompt version control and sharing platform — teams store prompts in a central library, tag versions, and share across the organization without juggling spreadsheets or Slack messages.** Simplest to onboard of the four.',
           'Starter ~$50/month; Pro ~$200/month. Web UI for non-technical users. Version history for each prompt, tags for organization, deployment workflows. Supports OpenAI, Anthropic, and custom APIs. Tradeoff: no custom evaluation scoring; limited to built-in quality checks; not suitable for teams running live A/B experiments.',
@@ -126,7 +126,7 @@ export const article: Record<Language, PEArticle> = {
       },
       vellum: {
         id: 'vellum',
-        title: 'Vellum: Best for Production A/B Testing?',
+        title: 'Vellum: Production Traffic Splitting at $200–500/Month',
         content: [
           '**Vellum is a prompt deployment platform with built-in A/B testing that splits real production traffic between prompt variants and measures real-world output quality — best for teams running live LLM features.** Vellum is a control plane, not a testing tool.',
           'Starter $200/month; Growth $500/month; Enterprise custom. Routes production traffic by percentage between variants. Evaluation compares variants on test datasets. Team features: shared workspace, PR-style prompt reviews, deployment approval workflows. Tradeoff: most expensive option; overkill for pre-production teams or teams not yet handling real user traffic.',
@@ -134,7 +134,7 @@ export const article: Record<Language, PEArticle> = {
       },
       promptfoo: {
         id: 'promptfoo',
-        title: 'Promptfoo: Best Free CI/CD Option?',
+        title: 'Promptfoo: Free Open-Source CI/CD Testing',
         content: [
           '**Promptfoo is an open-source CLI tool that runs automated prompt test suites against multiple LLMs — teams integrate it into CI/CD pipelines to catch prompt regressions before deployment.** Free (MIT license). Define test cases in YAML, commit to Git, and Promptfoo runs them on every PR.',
           'Supports 40+ LLM providers. GitHub Actions integration available. You provide inputs, expected output patterns, and custom LLM-based assertions. Team-friendly: test configs committed to Git, run in CI, no account or monthly bills. Tradeoff: no UI; engineers only; no built-in collaboration features beyond Git.',
@@ -221,9 +221,10 @@ tests:
       },
       whichTool: {
         id: 'which-tool',
-        title: 'Which Tool Fits Your Team?',
+        title: 'Tool Selection by Team Type',
         content: [
           '**Match the tool to your team\'s primary bottleneck and technical depth.**',
+          'Do not use Braintrust if your team cannot write custom scoring functions — it will sit unused. Do not use Vellum if you have no live users yet — buy it after reaching production. Do not use PromptHub alone if you need to measure output quality — it organizes prompts but cannot score them.',
         ],
         numberedItems: [
           {
@@ -348,7 +349,7 @@ tests:
       headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
       description: 'Braintrust excels at eval ($500/mo), Vellum at production A/B testing ($200/mo), Promptfoo at free CI/CD, PromptHub at version control. Head-to-head on 5 criteria.',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: {
         '@type': 'Organization',
