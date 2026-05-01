@@ -360,7 +360,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
       }
       // Internal links: use Next.js Link with lang parameter injection
       let finalUrl = url
-      if (lang !== 'en' && url.startsWith('/prompt-engineering/') && !url.includes('?lang=')) {
+      if (lang !== 'en' && url.startsWith('/') && !url.includes('?lang=')) {
         // Insert ?lang= before anchor fragment (#) if present
         if (url.includes('#')) {
           const [basePath, anchor] = url.split('#')
@@ -996,9 +996,9 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {/* Breadcrumb + language */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
-            <a href="/" className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
+            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
-            <a href="/prompt-engineering" className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Prompt Engineering'}</a>
+            <a href={lang === 'en' ? '/prompt-engineering' : `/prompt-engineering?lang=${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Prompt Engineering'}</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{article.title}</span>
           </div>
@@ -1448,7 +1448,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         </div>
 
         <p className="text-center mt-8">
-          <a href="/prompt-engineering" className="text-primary hover:text-primary/80 text-sm">
+          <a href={lang === 'en' ? '/prompt-engineering' : `/prompt-engineering?lang=${lang}`} className="text-primary hover:text-primary/80 text-sm">
             {POST_UI.backLink[lang] ?? POST_UI.backLink['en']}
           </a>
         </p>

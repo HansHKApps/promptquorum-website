@@ -40,9 +40,9 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
         {/* Breadcrumb + Language Switcher */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary">
-            <a href="/" className="hover:text-primary">Home</a>
+            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">Home</a>
             <span>/</span>
-            <a href="/#blog" className="hover:text-primary">Blog</a>
+            <a href={lang === 'en' ? '/#blog' : `/?lang=${lang}#blog`} className="hover:text-primary">Blog</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{metadata?.title || post.title}</span>
           </div>
@@ -243,7 +243,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
         {/* Back to blog */}
         <p className="text-center mt-8">
-          <a href="/blog" className="text-primary hover:text-primary/80">
+          <a href={lang === 'en' ? '/blog' : `/blog?lang=${lang}`} className="text-primary hover:text-primary/80">
             ← Back to Blog
           </a>
         </p>
