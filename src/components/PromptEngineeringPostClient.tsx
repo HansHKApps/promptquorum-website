@@ -794,6 +794,8 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
             src={section.image}
             alt={section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram')}
             className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm"
+            width={800}
+            height={450}
           />
           {section.imageCaption && (
             <figcaption className="text-sm text-text-secondary italic mt-3 text-center max-w-2xl">

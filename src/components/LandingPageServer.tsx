@@ -450,7 +450,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="PromptQuorum" className="w-8 h-8" />
+              <img src="/logo.svg" alt="PromptQuorum" className="w-8 h-8" width={32} height={32} />
               <span className="font-semibold text-text-primary">PromptQuorum</span>
             </div>
 

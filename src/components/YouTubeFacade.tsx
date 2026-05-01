@@ -30,6 +30,8 @@ export function YouTubeFacade() {
         alt="PromptQuorum demo video thumbnail"
         className="w-full h-full object-cover"
         loading="lazy"
+        width={1280}
+        height={720}
       />
       {/* Play button overlay */}
       <span className="absolute inset-0 flex items-center justify-center">
