@@ -233,7 +233,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
           </p>
           <div className="text-center">
             <a
-              href="/"
+              href={lang === 'en' ? '/' : `/?lang=${lang}`}
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Get Started

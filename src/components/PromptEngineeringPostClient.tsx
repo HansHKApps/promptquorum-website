@@ -1201,7 +1201,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
                         <li key={rank} className="flex gap-4 items-start p-4 border border-border rounded-xl hover:border-primary/30 transition-colors">
                           <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">{rank}</span>
                           <div>
-                            <a href={`/prompt-engineering/prompt-engineering-glossary#${anchor}`} className="font-semibold text-text-primary hover:text-primary transition-colors">
+                            <a href={lang === 'en' ? `/prompt-engineering/prompt-engineering-glossary#${anchor}` : `/prompt-engineering/prompt-engineering-glossary?lang=${lang}#${anchor}`} className="font-semibold text-text-primary hover:text-primary transition-colors">
                               {term}
                             </a>
                             <p className="text-sm text-text-secondary mt-0.5">{reason}</p>
@@ -1440,7 +1440,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             {POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
-            href="/"
+            href={lang === 'en' ? '/' : `/?lang=${lang}`}
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             {POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}

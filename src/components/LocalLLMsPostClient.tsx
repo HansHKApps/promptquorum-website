@@ -717,7 +717,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             {POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
-            href="/"
+            href={lang === 'en' ? '/' : `/?lang=${lang}`}
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             {POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}
