@@ -14,8 +14,8 @@ export const article: Record<Language, PEArticle> = {
     audience: 'Developers managing LLM prompts in production, prompt engineers, engineering team leads',
     primaryTerm: 'Prompt Version Control',
     readTime: '10 min read',
-    seoTitle: 'Prompt Version Control: Git Workflows & Rollback',
-    metaDescription: 'Unversioned prompts fail silently — no history means no rollback. Apply MAJOR.MINOR.PATCH versioning, git branch workflows, and automated regression tests to every prompt change.',
+    seoTitle: 'Prompt Version Control: Git, Semver & Rollback Guide',
+    metaDescription: 'Unversioned prompts fail silently — no rollback without change history. Apply MAJOR.MINOR.PATCH versioning and git branch workflows to every prompt change.',
     toc: [
       { label: 'Why Version Control', anchor: 'why-version-control' },
       { label: 'Semantic Versioning for Prompts', anchor: 'semantic-versioning' },
@@ -142,6 +142,16 @@ export const article: Record<Language, PEArticle> = {
       ],
     },
     sections: {
+      tldrCallout: {
+        callouts: [
+          {
+            type: 'tldr',
+            label: 'TL;DR',
+            text: 'Apply MAJOR.MINOR.PATCH versioning and git workflows to every prompt. Every change opens a PR, every PR runs automated regression tests, and every merge is tagged. Rollback is `git revert` — seconds to execute, full audit history preserved.',
+          },
+        ],
+      },
+
       tldr: {
         title: 'Key Takeaways',
         isTldr: true,
@@ -337,7 +347,7 @@ jobs:
         id: 'regional-considerations',
         title: 'Compliance and Audit Requirements for Prompt Changes',
         content: [
-          'The EU AI Act (in force from August 2026 for high-risk systems) requires traceability for AI outputs in regulated domains including healthcare, finance, HR, and critical infrastructure. A version-controlled prompt history with author, date, change type, and approval records satisfies the traceability requirement without additional tooling.',
+          'The EU AI Act, which applies to high-risk systems in healthcare, finance, HR, and critical infrastructure, requires traceability for AI outputs in regulated domains. A version-controlled prompt history with author, date, change type, and approval records satisfies the traceability requirement without additional tooling.',
           'GDPR Article 22 applies to prompts that make or support automated decisions affecting individuals. Version control and audit logs demonstrate human oversight — a git log with signed commits provides this evidence. Healthcare and finance teams operating under sector-specific regulations (MiFID II, HIPAA, MDR) typically require 12+ months of prompt version history with tamper-evident storage.',
         ],
       },
@@ -421,7 +431,7 @@ jobs:
       dateModified: '2026-04-30',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows?lang=de',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -444,7 +454,7 @@ jobs:
       dateModified: '2026-04-30',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows?lang=fr',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -456,7 +466,7 @@ jobs:
     theme: 'Team Operations & Governance',
     title: 'プロンプトのバージョン管理：追跡、ロールバック、チームワークフロー',
     intro: 'バージョン管理されていないプロンプトはサイレントに失敗します。変更履歴がなければ、プロンプトの更新で出力品質が低下した場合のロールバックパスがありません。セマンティックバージョニング（MAJOR.MINOR.PATCH）、Gitブランチワークフロー、自動回帰テストにより、ソフトウェアチームがコードに用いる規律をプロンプト管理にも適用できます。',
-    seoTitle: 'プロンプトのバージョン管理：GitワークフローとロールバックのComplete Guide',
+    seoTitle: 'プロンプトのバージョン管理：Gitワークフロー・ロールバック・自動テストの実践ガイド',
     metaDescription: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式、Gitブランチワークフロー、自動回帰テストをすべてのプロンプト変更に適用してください。',
     schema: {
       '@context': 'https://schema.org',
@@ -467,7 +477,7 @@ jobs:
       dateModified: '2026-04-30',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows?lang=ja',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -490,7 +500,7 @@ jobs:
       dateModified: '2026-04-30',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows?lang=zh',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
