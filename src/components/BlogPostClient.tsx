@@ -134,7 +134,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                     {section.items.map((item, idx) => (
                       <li key={idx} className="text-text-secondary flex gap-3">
                         <span className="text-primary font-bold flex-shrink-0">•</span>
-                        <span>{item}</span>
+                        <span dangerouslySetInnerHTML={{ __html: item.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:text-primary/80 underline">$1</a>') }} />
                       </li>
                     ))}
                   </ul>
