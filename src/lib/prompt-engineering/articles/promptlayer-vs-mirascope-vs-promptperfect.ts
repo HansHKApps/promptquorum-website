@@ -1420,7 +1420,7 @@ export const article: Record<Language, PEArticle> = {
   ja: {
     theme: 'ツール & プラットフォーム',
     title: 'PromptLayer vs Mirascope vs PromptPerfect（2026年）',
-    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026年比較',
+    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026年：1つを選ぶ',
     metaDescription: 'PromptLayer（$49/月）はLLMコールを記録、Mirascope（無料）はPython SDK、PromptPerfect（$19.99/月）はプロンプトを自動最適化。3ツールは異なる問題を解決 — 1つを選択。',
     intro: '**PromptLayerはLLMコールをログ・バージョン管理します（無料〜小規模チーム向け$49/月）。MirascopeはPython SDKで型安全なLLMアプリを構築できます（無料）。PromptPerfectはプロンプトを自動的に書き換えて精度を向上させます（$0〜$19.99/月）。この3つのツールは異なる問題を解決するものです — ボトルネックに合わせて1つだけ選択してください。**',
     publishDate: '2026-04-10',
@@ -1877,7 +1877,7 @@ export const article: Record<Language, PEArticle> = {
   zh: {
     theme: '工具与平台',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 对比 2026',
+    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 对比 2026：选一款',
     metaDescription: 'PromptLayer（$49/月）记录 LLM 调用，Mirascope（免费）构建 Python 应用，PromptPerfect（$19.99/月）改写提示词。三款工具解决不同问题，按需选择一款。',
     intro: '**PromptLayer 记录并版本化 LLM 调用（免费至小型团队 $49/月）。Mirascope 是免费的 Python SDK，用于构建类型安全的 LLM 应用。PromptPerfect 自动改写提示词以获得更好的结果（$0–$19.99/月）。这三款工具解决不同的问题 — 根据您的瓶颈选择其中一款。**',
     publishDate: '2026-04-10',
