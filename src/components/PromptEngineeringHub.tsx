@@ -35,6 +35,14 @@ const HUB_CTA_TEXT: Record<string, string> = {
   zh: 'PromptQuorum自动优化您的提示词，并同时在25+个AI模型中进行测试。',
 }
 
+const HUB_QUICK_FACTS: Record<string, string[]> = {
+  en: ['80 articles across 9 topic areas', 'Covers GPT-4o, Claude 4.6, and Gemini 2.5 Pro', '5–20 min per article', 'Updated April 2026'],
+  de: ['80 Artikel in 9 Themenbereichen', 'Behandelt GPT-4o, Claude 4.6 und Gemini 2.5 Pro', '5–20 Min. pro Artikel', 'Aktualisiert April 2026'],
+  fr: ['80 articles dans 9 domaines', 'Couvre GPT-4o, Claude 4.6 et Gemini 2.5 Pro', '5–20 min par article', 'Mis à jour avril 2026'],
+  ja: ['9テーマ領域の80記事', 'GPT-4o、Claude 4.6、Gemini 2.5 Pro対応', '記事あたり5〜20分', '2026年4月更新'],
+  zh: ['9个主题领域80篇文章', '涵盖GPT-4o、Claude 4.6和Gemini 2.5 Pro', '每篇5-20分钟', '2026年4月更新'],
+}
+
 const HUB_CTA_BUTTON: Record<string, string> = {
   en: 'Try PromptQuorum free →',
   de: 'PromptQuorum kostenlos testen →',
@@ -258,9 +266,17 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             {HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
           </h1>
-          <p className="text-xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="text-xl text-text-secondary leading-relaxed max-w-3xl hub-hero-desc">
             {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 mt-5">
+            {(HUB_QUICK_FACTS[lang] ?? HUB_QUICK_FACTS['en']).map((fact, i) => (
+              <li key={i} className="text-sm text-text-secondary flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                <strong className="text-text-primary font-medium">{fact}</strong>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Theme sections */}
