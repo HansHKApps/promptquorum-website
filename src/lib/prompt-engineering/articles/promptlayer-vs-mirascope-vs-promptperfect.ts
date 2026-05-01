@@ -9,7 +9,7 @@ export const article: Record<Language, PEArticle> = {
   en: {
     theme: 'Tools & Platforms',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
+    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: Pick One',
     metaDescription: 'PromptLayer ($49/mo) logs LLM calls, Mirascope (free) builds Python apps, PromptPerfect ($20/mo) rewrites prompts. Different problems — pick exactly one.',
     intro: '**PromptLayer logs and versions LLM calls (free–$49/mo for small teams). Mirascope is a free Python SDK for type-safe LLM apps. PromptPerfect auto-rewrites prompts for better results ($0–$20/mo). These three tools solve different problems — pick exactly one based on your bottleneck.**',
     publishDate: '2026-04-10',
@@ -361,7 +361,7 @@ export const article: Record<Language, PEArticle> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
+      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=en',
       inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'Prompt Management' },
@@ -443,7 +443,7 @@ export const article: Record<Language, PEArticle> = {
       '@type': 'ItemList',
       name: 'PromptLayer vs Mirascope vs PromptPerfect: Tool Comparison',
       inLanguage: 'en',
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
+      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=en',
       numberOfItems: 3,
       itemListElement: [
         {
