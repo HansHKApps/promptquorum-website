@@ -1168,7 +1168,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
             src={`/presentations/local-llms-hub-static.html?lang=${lang}`}
             title={HUB_PRESENTATION_HEADING[lang] ?? HUB_PRESENTATION_HEADING['en']}
             className="w-full rounded-xl border border-primary/15"
-            style={{ height: '560px' }}
+            style={{ height: 'min(80vh, max(520px, 56.25vw))' }}
             loading="lazy"
           />
         </section>
