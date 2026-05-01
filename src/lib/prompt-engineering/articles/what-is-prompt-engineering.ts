@@ -252,6 +252,7 @@ export const article: Record<Language, PEArticle> = {
             '[Fundamentals: AI Hallucinations — Why AI Makes Things Up] — understanding a core limitation of LLMs',
             '[Techniques: Chain-of-Thought Prompting — Make AI Show Its Reasoning] — the step-by-step technique that improves accuracy',
             '[Frameworks: CO-STAR Framework] — a structured template that organizes the fundamentals into a proven sequence',
+            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
           ],
         },
 

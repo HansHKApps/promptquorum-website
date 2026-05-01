@@ -389,6 +389,7 @@ export const article: Record<Language, PEArticle> = {
             '[Fundamentals: Context Windows Explained — Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — deep dive into context window limits and retrieval strategies',
             '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — token pricing, rate limits, and cost optimization across GPT-5.5, Claude, and Gemini',
             '[Fundamentals: AI Hallucinations Explained — Why LLMs Make Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — how token prediction and the lack of fact retrieval lead to confidence errors',
+            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
           ],
         },
         howToStart: {

@@ -45,5 +45,33 @@
     ],
     "reason": "Incorporate dominant GSC keyword pattern: 74% of impressions on queries starting with 'current'",
     "baseline": null
+  },
+  {
+    "id": "87fbd1cd-6060-4f5f-b3b8-696181589fcd",
+    "slug": "ai-limitations-what-llms-cant-do",
+    "date": "2026-05-01T10:51:04.384Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Current LLM Limitations 2026: 8 Hard Limits Explained",
+        "new": "What LLMs Still Can't Do in 2026: 8 Structural Limits"
+      }
+    ],
+    "reason": "GSC 'still/current' keyword signal — 74% impressions from 'current limitations' queries; 'Still' retains that signal while adding CTR-boosting numbered format",
+    "baseline": null
+  },
+  {
+    "id": "d645c9a8-8722-4156-a0df-65fc3f797fe9",
+    "slug": "ai-limitations-what-llms-cant-do",
+    "date": "2026-05-01T10:51:09.522Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Current LLM limitations: no real-time data, hallucination, weak reasoning. 8 hard limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — with workarounds.",
+        "new": "LLMs can't access real-time data, verify outputs, or reason reliably. 8 structural limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — with workarounds."
+      }
+    ],
+    "reason": "Front-load 3 concrete failure modes as statement (not topic list) — stronger snippet hook and matches 'can LLMs verify' long-tail queries",
+    "baseline": null
   }
 ]

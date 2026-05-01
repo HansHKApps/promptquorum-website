@@ -314,6 +314,7 @@ export const article: Record<Language, PEArticle> = {
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational concepts behind structuring prompts',
             '[Multi-Model Consensus Scoring](/prompt-engineering/consensus-scoring) — how comparing models detects disagreements and unreliability',
             '[Self-Critique Prompting Techniques](/prompt-engineering/self-critique-prompting) — how to get models to catch their own errors',
+            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
           ],
         },
 
