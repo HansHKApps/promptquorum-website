@@ -83,7 +83,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 answers on prompt optimization, multi-model consensus, 9 frameworks, local LLM support (Ollama, LM Studio), BYOM privacy and free tier",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt Engineering Guide 2026: 80 Guides | PromptQuorum",
+    promptEngineeringHubTitle: "Prompt Engineering Mastery 2026: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, and team workflows for developers.",
     localLlmsHubTitle: "Best Local LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide",
     localLlmsHubDescription: "Best local LLMs April 2026 – latest Ollama models, LM Studio vs Jan.ai comparison, VRAM/GPU requirements for RTX 3060 & more. Pull commands, beginner guides & hardware recommendations.",
@@ -330,8 +330,8 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 Antworten zu Optimierung, Multi-Model-Consensus, 9 Frameworks, lokalem LLM-Support (Ollama, LM Studio), BYOM-Datenschutz und Zugang.",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt-Engineering-Hub 2026: 80 Leitfäden | PromptQuorum",
-    promptEngineeringHubDescription: "80 forschungsbasierte Artikel zu Prompt-Engineering-Techniken, Frameworks (CO-STAR, CRAFT, RISEN), Tools, Bewertung und Workflows für Entwickler.",
+    promptEngineeringHubTitle: "Prompt Engineering 2026: Alle 80 Leitfäden | PromptQuorum",
+    promptEngineeringHubDescription: "80 forschungsbasierte Artikel zu Prompt-Engineering-Techniken, Frameworks (CO-STAR, CRAFT, RISEN), Tools, Bewertung und Prozessen für Entwickler.",
     localLlmsHubTitle: "Beste Lokale LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide",
     localLlmsHubDescription: "Beste lokale LLMs April 2026: aktuelle Ollama-Modelle, LM Studio vs Jan.ai Vergleich, VRAM- & GPU-Anforderungen (RTX 3060 etc.), Pull-Befehle und Hardware-Empfehlungen.",
     compareMetaTitle: "PromptQuorum vs. Konkurrenz: Funktionsvergleich 2026",
@@ -578,7 +578,7 @@ export const translations = {
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Ingénierie de prompts 2026: 80 guides | PromptQuorum",
-    promptEngineeringHubDescription: "80 articles basés sur la recherche sur les techniques d'ingénierie des prompts, frameworks (CO-STAR, CRAFT, RISEN), outils, évaluation et workflows.",
+    promptEngineeringHubDescription: "80 articles basés sur la recherche sur les techniques d'ingénierie des prompts, frameworks (CO-STAR, CRAFT, RISEN), outils, évaluation et flux de travail.",
     localLlmsHubTitle: "Meilleurs LLMs Locaux Avril 2026 : Ollama, LM Studio & Guide VRAM",
     localLlmsHubDescription: "Meilleurs LLMs locaux avril 2026 : modèles Ollama les plus récents, comparaison LM Studio vs Jan.ai, exigences VRAM/GPU (RTX 3060 inclus), commandes pull et guides complets.",
     compareMetaTitle: "PromptQuorum vs Poe, LM Arena : fonctionnalités 2026",
@@ -1071,8 +1071,8 @@ export const translations = {
     faqMetaDescription: "PromptQuorum常见问题：涵盖26个关键问答 - 包括提示词优化、多模型共识评分、9个提示框架、Ollama本地模型部署、LM Studio支持、BYOM隐私设计、API接口集成、免费试用计划、完整中文文档、多语言用户界面、专业技术支持、企业解决方案、价格对比、安全保障、用户案例。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "提示工程完整指南 2026：CO-STAR、CRAFT等80篇研究文章 | PromptQuorum",
-    promptEngineeringHubDescription: "80篇研究级别的提示工程文章，包括GPT-4o和Claude 4.6 Sonnet实测验证的CO-STAR、CRAFT、RISEN、TRACE等完整框架详解，温度与Top-P参数精细调优、思维链提示技术、few-shot学习方法以及提示词质量评估实践方案。适合开发者和AI工程师。",
+    promptEngineeringHubTitle: "提示工程技术手册 2026：CO-STAR、CRAFT等80篇研究文章 | PromptQuorum",
+    promptEngineeringHubDescription: "80篇研究级别的提示工程文章，包括GPT-4o和Claude 4.6 Sonnet实测验证的CO-STAR、CRAFT、RISEN、TRACE等完整框架详解，温度与Top-P参数精细调优、思维链提示技术、few-shot学习方法以及提示词质量评估实践方案。适合开发者、AI工程师和企业团队。",
     localLlmsHubTitle: "2026年4月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南",
     localLlmsHubDescription: "2026年4月最佳本地LLM：最新Ollama模型、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。",
     compareMetaTitle: "PromptQuorum vs 竞争对手: 功能对比 (2026)",
