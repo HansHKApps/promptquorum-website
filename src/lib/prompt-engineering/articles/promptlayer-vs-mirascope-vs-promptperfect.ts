@@ -471,29 +471,488 @@ export const article: Record<Language, PEArticle> = {
   de: {
     theme: 'Tools & Plattformen',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-    metaDescription: 'PromptLayer ($20/Mo.), Mirascope (kostenlos) und PromptPerfect ($10/Mo.) lösen drei verschiedene Probleme. Vergleichstabelle mit Preisen und Use Cases.',
-    intro: '[Translation coming soon](/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=en).',
+    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect: Vergleich 2026',
+    metaDescription: 'PromptLayer ($49/Mo.) loggt LLM-Aufrufe, Mirascope (kostenlos) baut Python-Apps, PromptPerfect ($20/Mo.) schreibt Prompts — drei Probleme, ein Tool wählen.',
+    intro: '**PromptLayer protokolliert und versioniert LLM-Aufrufe (kostenlos bis $49/Monat für kleine Teams). Mirascope ist ein kostenloses Python-SDK für typsichere LLM-Apps. PromptPerfect schreibt Prompts automatisch für bessere Ergebnisse um ($0–$19,99/Monat). Diese drei Tools lösen unterschiedliche Probleme — wählen Sie genau eines basierend auf Ihrem Engpass.**',
     publishDate: '2026-04-10',
     dateModified: '2026-05-01',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
+    audience: 'Prompt-Engineers und Entwickler, die zwischen PromptLayer, Mirascope und PromptPerfect wählen',
+    primaryTerm: 'PromptLayer vs Mirascope vs PromptPerfect',
+    aboutTopics: ['Prompt Management', 'LLM Observability', 'Prompt Optimization'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
+    lastFactChecked: '2026-05-01',
+    toc: [
+      { label: 'Was PromptLayer, Mirascope und PromptPerfect jeweils können', anchor: '#what-is' },
+      { label: 'Wie wir diese Tools verglichen haben', anchor: '#evaluation-criteria' },
+      { label: 'PromptLayer: LLM-Observability und Prompt-Versionierung', anchor: '#promptlayer' },
+      { label: 'Mirascope: Type-Safe Python-SDK für LLM-Apps', anchor: '#mirascope' },
+      { label: 'PromptPerfect: Automatisches Prompt-Umschreiben', anchor: '#promptperfect' },
+      { label: 'Direktvergleich: Alle 3 Tools auf einen Blick', anchor: '#comparison-table' },
+      { label: 'Tool-Auswahl nach Anwendungsfall', anchor: '#which-tool' },
+      { label: 'Regionale Hinweise', anchor: '#regional-context' },
+      { label: 'Typische Fehler', anchor: '#common-mistakes' },
+      { label: 'Wie Sie das richtige Tool wählen', anchor: '#how-to-choose' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Links', anchor: '#related-reading' },
+      { label: 'Quellen', anchor: '#sources' },
+    ],
+    quickFacts: [
+      'PromptLayer Free-Tarif: 2.500 Anfragen/Monat, 10 Prompt-Templates, 5 Nutzer; Pro-Plan $49/Monat',
+      'PromptLayer Team-Plan: $500/Monat — 25 Nutzer, 100.000+ Anfragen/Monat',
+      'Mirascope ist Open-Source (Apache 2.0) ohne SaaS-Kosten — unterstützt über 20 LLM-Provider',
+      'PromptPerfect Free-Tarif: 10 Optimierungen/Tag; Pro-Plan $19,99/Monat (500/Tag), Pro Max $99,99/Monat (1.500/Tag)',
+      'PromptLayer unterstützt OpenAI, Anthropic, Cohere, Azure OpenAI und 10+ Provider nativ',
+      'PromptPerfect unterstützt Textmodelle (GPT-4, Claude) und Bildmodelle (Midjourney, Stable Diffusion)',
+    ],
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        items: [
+          'PromptLayer ist das einzige der drei Tools, das für die Observability von LLM-Aufrufen in der Produktion entwickelt wurde — es protokolliert Kosten, Latenz und Nutzung je Prompt-Version in Echtzeit.',
+          'Mirascope ist kostenlos und Open-Source — die richtige Wahl für Python-Entwickler, die typsichere LLM-Aufrufe ohne SaaS-Plattform oder monatliche Gebühr benötigen.',
+          'PromptPerfect richtet sich an Nicht-Entwickler: Es schreibt Prompts über eine Web-Oberfläche um, ohne Code, von $0 bis $19,99/Monat (Pro) oder $99,99/Monat (Pro Max).',
+          'Diese drei Tools konkurrieren nicht miteinander — sie lösen unterschiedliche Engpässe. Sie werden nicht alle drei benötigen.',
+          'LLM-Aufrufe in der Produktion protokollieren: PromptLayer. Python-Apps entwickeln: Mirascope. Prompts manuell verbessern: PromptPerfect.',
+          'Keines dieser Tools evaluiert die Ausgabequalität systematisch — für systematische Evaluation eignen sich Braintrust oder Promptfoo.',
+        ],
+      },
+      whatIs: {
+        id: 'what-is',
+        title: 'Was PromptLayer, Mirascope und PromptPerfect jeweils können',
+        content: [
+          '**PromptLayer, Mirascope und PromptPerfect lösen drei unterschiedliche Workflow-Probleme, die sich selten überschneiden.** PromptLayer ergänzt Ihre LLM-Aufrufe um Observability: Es protokolliert jede Anfrage, verfolgt Kosten und Latenz und ermöglicht die Versionierung von Prompt-Templates. Mirascope ist eine Python-Bibliothek, die LLM-Aufrufe typsicher, testbar und provider-agnostisch macht. PromptPerfect nimmt einen Prompt entgegen und gibt eine verbesserte Version zurück — ohne Code.',
+          'Der Grund, warum Entwickler diese Tools verwechseln: Alle drei behaupten, Prompts zu verbessern — jedoch in unterschiedlichen Phasen und für unterschiedliche Nutzer. PromptLayer verbessert Prompts, indem es zeigt, welche Version in der Produktion am besten abschneidet. Mirascope verbessert Prompts, indem es sie zu strukturierten, testbaren Python-Funktionen macht. PromptPerfect verbessert Prompts, indem es sie für ein bestimmtes Modell umschreibt.',
+          'Für eine umfassendere Übersicht der Prompt-Engineering-Tools siehe [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de). Für Evaluation und CI/CD-Tools siehe [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=de).',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'PromptLayer protokolliert Produktions-Calls, Mirascope strukturiert Python-Code, PromptPerfect schreibt Prompts um — drei verschiedene Phasen, drei verschiedene Nutzer.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: 'Stellen Sie sich drei verschiedene Aufgaben vor: PromptLayer ist das Monitoring-Dashboard (Was ist in der Produktion passiert?), Mirascope ist das Code-Framework (Wie schreibe ich sauberen LLM-Code?) und PromptPerfect ist der Schreibassistent (Wie formuliere ich diesen Prompt besser?).',
+          },
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: 'Wie wir diese Tools verglichen haben',
+        content: [
+          '**Wir haben die drei Tools anhand von fünf Kriterien bewertet, die reale Team-Entscheidungen widerspiegeln: primärer Anwendungsfall, Integrationsmethode, LLM-Provider-Unterstützung, Observability-Funktionen und Preisgestaltung.**',
+          'PromptLayer ist die richtige Wahl, wenn Sie Produktions-Logging benötigen. Mirascope ist die richtige Wahl, wenn Sie typsicheren Python-Code benötigen. PromptPerfect ist die richtige Wahl, wenn Sie Prompts ohne Code umschreiben möchten.',
+        ],
+        columns: ['Kriterium', 'Was gemessen wird', 'Warum es wichtig ist'],
+        rows: [
+          {
+            'Kriterium': 'Primärer Anwendungsfall',
+            'Was gemessen wird': 'Das zentrale Workflow-Problem, das das Tool löst',
+            'Warum es wichtig ist': 'Diese Tools lösen unterschiedliche Probleme — das falsche Tool zu kaufen verschwendet Budget und Einrichtungszeit',
+          },
+          {
+            'Kriterium': 'Integrationsmethode',
+            'Was gemessen wird': 'SDK-Wrapper, Python-Bibliothek oder Web-Oberfläche',
+            'Warum es wichtig ist': 'Bestimmt, wer im Team es nutzen kann und wie viel Einrichtungsaufwand erforderlich ist',
+          },
+          {
+            'Kriterium': 'LLM-Provider-Unterstützung',
+            'Was gemessen wird': 'Welche Modelle und APIs nativ unterstützt werden',
+            'Warum es wichtig ist': 'Teams, die Provider wechseln oder mehrere Modelle nutzen, benötigen breite Unterstützung',
+          },
+          {
+            'Kriterium': 'Observability',
+            'Was gemessen wird': 'Ob das Tool Aufrufe protokolliert, Kosten verfolgt und Produktionsfehler anzeigt',
+            'Warum es wichtig ist': 'Debugging und Kostenkontrolle in der Produktion erfordern Echtzeit-Einblick in LLM-Aufrufe',
+          },
+          {
+            'Kriterium': 'Preisgestaltung',
+            'Was gemessen wird': 'Limits des kostenlosen Tarifs und Einstiegskosten der bezahlten Pläne',
+            'Warum es wichtig ist': 'Budgetsicherheit für kleine Teams; kostenlose Tarife bestimmen, wann ein Upgrade erforderlich ist',
+          },
+        ],
+      },
+      promptlayer: {
+        id: 'promptlayer',
+        title: 'PromptLayer: LLM-Observability und Prompt-Versionierung',
+        content: [
+          '**PromptLayer ist eine Prompt-Management- und Observability-Plattform, die Ihre LLM-API-Aufrufe umhüllt und jede Anfrage in einem Dashboard protokolliert.** Die Integration erfolgt als schlanke SDK-Schicht: Sie ersetzen `openai.chat.completions.create(...)` durch `promptlayer.openai.chat.completions.create(...)`, und jeder Aufruf wird automatisch protokolliert. Keine Änderungen an der Prompt-Logik erforderlich.',
+          'Das Dashboard zeigt den Verlauf der Anfragen, Prompt-Versionen, Token-Nutzung, Kosten je Aufruf, Latenzverteilungen und Fehlerraten. Teams nutzen dies, um zu debuggen, warum ein Prompt in der Produktion fehlschlägt, LLM-Kosten pro Feature zu verfolgen und zwei gleichzeitig auf dem Produktions-Traffic laufende Prompt-Versionen zu vergleichen.',
+          'PromptLayer-Prompt-Templates werden nach Name und Version gespeichert. Das aktuelle SDK lädt und führt sie mit `client.run(prompt_name="support-reply", input_variables={...})` aus — Nicht-Entwickler können Templates in der PromptLayer-Oberfläche bearbeiten, ohne ein Code-Deployment durchführen zu müssen. Dies ist das entscheidende Merkmal, das PromptLayer von Mirascope und PromptPerfect unterscheidet.',
+        ],
+        items: [
+          'Free: $0 — 5 Nutzer, 2.500 Anfragen/Monat, 10 Prompt-Templates, 10 Playground-Läufe/Tag',
+          'Pro: $49/Monat — 5 Nutzer, 2.500+ Anfragen (Pay-as-you-go $0,003/Anfrage), unbegrenzte Templates',
+          'Team: $500/Monat — 25 Nutzer, 100.000+ Anfragen ($0,002/Anfrage Überschreitung), Webhooks, Deployment-Genehmigungen',
+          'Enterprise: individueller Preis — HIPAA/BAA, SSO, RBAC, EU-Cloud-Hosting oder Self-Hosted auf GCP/AWS/Azure',
+          'Unterstützt: OpenAI, Anthropic, Cohere, Azure OpenAI und 10+ weitere Provider',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'SDK-Wrapper erforderlich',
+            text: 'PromptLayer erfordert das Ersetzen nativer LLM-SDK-Aufrufe durch PromptLayer-umhüllte Äquivalente. Wenn Sie Raw-HTTP-Anfragen statt offizieller SDKs verwenden, ist für die Einrichtung eine benutzerdefinierte Logging-Schicht erforderlich. Überprüfen Sie Ihre Integrationsmethode, bevor Sie sich für einen bezahlten Plan entscheiden.',
+          },
+        ],
+      },
+      mirascope: {
+        id: 'mirascope',
+        title: 'Mirascope: Type-Safe Python-SDK für LLM-Apps',
+        content: [
+          '**Mirascope ist eine Open-Source-Python-Bibliothek, die LLM-Interaktionen als typisierte Funktionen definiert und so IDE-Vervollständigung, statische Analyse und Pydantic-basierte Ausgabevalidierung ermöglicht.** Anstatt Prompt-Strings manuell aufzubauen, dekorieren Sie eine Python-Funktion mit `@prompt_template` und rufen sie wie jede andere Funktion auf. Der Rückgabetyp wird gegen ein Pydantic-Modell validiert.',
+          'Die Bibliothek unterstützt über 20 Provider (OpenAI, Anthropic, Google Gemini, Mistral, Cohere, Groq und andere) über eine einheitliche Schnittstelle. Das Wechseln von Providern ändert einen Parameter — nicht die gesamte Funktion. Dies ist wertvoll für Teams, die mehrere Modelle evaluieren oder verschiedene Anfrage-Typen an verschiedene Provider weiterleiten, um Kosten zu optimieren.',
+          'Mirascope hat kein Dashboard, keine Logging-Plattform und kein SaaS-Abonnement. Es ist ein Entwickler-Tool — es verbessert die Entwicklungserfahrung beim Schreiben von LLM-Code, nicht die Observability beim Ausführen. Für Produktions-Logging ergänzen Teams typischerweise PromptLayer oder eine eigene Logging-Schicht.',
+        ],
+        items: [
+          'Lizenz: Apache 2.0 Open-Source — $0 für jede Teamgröße, keine Nutzungsbeschränkungen',
+          'Unterstützte Provider: OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI und 15+ weitere',
+          'Ausgabevalidierung: native Pydantic-Integration für strukturierte Extraktion und Typprüfung',
+          'Kein Dashboard, kein Logging, keine gehostete Plattform — reine Entwicklerbibliothek',
+          'Unterstützt Async, Streaming, Tool-Calls und mehrstufige Konversationen out of the box',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: 'Keine monatlichen Kosten',
+            text: 'Mirascope ist Apache-lizenziertes Open-Source ohne bezahlten Tarif oder Nutzungsbeschränkungen. Die einzigen Kosten sind die zugrunde liegenden LLM-API-Aufrufe (OpenAI, Anthropic usw.). Für Python-Teams mit knappem Budget ist dies der reibungsloseste Einstieg in die strukturierte LLM-Entwicklung.',
+          },
+        ],
+      },
+      promptperfect: {
+        id: 'promptperfect',
+        title: 'PromptPerfect: Automatisches Prompt-Umschreiben',
+        content: [
+          '**PromptPerfect nimmt einen Prompt entgegen und gibt eine automatisch umgeschriebene Version zurück, die für ein bestimmtes Modell besser abschneiden soll.** Sie fügen einen Prompt in die Web-Oberfläche ein, wählen ein Zielmodell (GPT-4, Claude, Midjourney, Stable Diffusion usw.) und klicken auf „Optimieren". Die Ausgabe ist ein umgeschriebener Prompt mit einer Erklärung, was geändert wurde und warum.',
+          'Das Tool richtet sich an Nicht-Entwickler, die bessere Prompts ohne Trial-and-Error-Iteration möchten. Content-Creator nutzen es für Bildgenerierungs-Prompts (Midjourney, DALL-E). Support-Teams nutzen es, um kundenseitige Antwort-Templates zu verbessern. Marketer nutzen es, um ChatGPT-Prompts für Content-Workflows zu entwerfen.',
+          'PromptPerfect verfügt auch über eine API für die programmatische Nutzung, ist jedoch nicht für CI/CD-Pipelines oder automatisierte Tests ausgelegt — die Optimierung ist nicht-deterministisch und enthält keine Qualitätsmetriken. Für automatisierte Prompt-Tests eignen sich Promptfoo oder Braintrust.',
+        ],
+        items: [
+          'Free: 10 Optimierungen/Tag, nur Web-Oberfläche, kein API-Zugang',
+          'Pro: $19,99/Monat — 500 Optimierungen/Tag (Autotune + Interaktiver Optimierer), API-Zugang inklusive',
+          'Pro Max: $99,99/Monat — 1.500 Optimierungen/Tag, priorisierte Verarbeitung',
+          'Unterstützte Modelle: GPT-4, Claude, Gemini (Text); Midjourney, Stable Diffusion, DALL-E (Bild)',
+          'Ausgabe: umgeschriebener Prompt + Erklärung jeder vorgenommenen Änderung',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'Nicht-deterministische Ausgabe',
+            text: 'PromptPerfect-Optimierungen variieren bei jedem Durchlauf — derselbe Eingabe-Prompt kann unterschiedliche Umschreibungen erzeugen. Verwenden Sie es nicht in CI/CD-Pipelines oder automatisierten Test-Workflows. Es ist für manuelle, menschlich kontrollierte Prompt-Verbesserungen ausgelegt, nicht für reproduzierbare Automatisierung.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Direktvergleich: Alle 3 Tools auf einen Blick',
+        content: [
+          '**Die drei Tools unterscheiden sich in jeder Dimension, die für die Team-Einführung relevant ist: wer sie nutzt, wie sie integriert werden, was sie kosten und welche Probleme sie lösen.**',
+        ],
+        columns: ['Merkmal', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        rows: [
+          {
+            'Merkmal': 'Primärer Anwendungsfall',
+            'PromptLayer': 'Produktions-Observability',
+            'Mirascope': 'Python-App-Entwicklung',
+            'PromptPerfect': 'Prompt-Umschreiben',
+          },
+          {
+            'Merkmal': 'Integrationsmethode',
+            'PromptLayer': 'SDK-Wrapper (Python, Node.js)',
+            'Mirascope': 'Python-Bibliothek',
+            'PromptPerfect': 'Web-Oberfläche + API',
+          },
+          {
+            'Merkmal': 'Zielnutzer',
+            'PromptLayer': 'Engineering- und Produkt-Teams',
+            'Mirascope': 'Python-Entwickler',
+            'PromptPerfect': 'Nicht-Entwickler, Creator',
+          },
+          {
+            'Merkmal': 'LLM-Provider-Unterstützung',
+            'PromptLayer': '10+ (OpenAI, Anthropic, Cohere)',
+            'Mirascope': '20+ (alle wichtigen Provider)',
+            'PromptPerfect': 'GPT-4, Claude, Midjourney, SD',
+          },
+          {
+            'Merkmal': 'Produktions-Logging',
+            'PromptLayer': 'Ja — Kernfunktion',
+            'Mirascope': 'Nein',
+            'PromptPerfect': 'Nein',
+          },
+          {
+            'Merkmal': 'Kostenloser Tarif',
+            'PromptLayer': '2.500 Anfragen/Monat, 10 Templates',
+            'Mirascope': 'Unbegrenzt (Open-Source)',
+            'PromptPerfect': '10 Optimierungen/Tag',
+          },
+          {
+            'Merkmal': 'Bezahlter Einstiegspreis',
+            'PromptLayer': '$49/Monat (Pro)',
+            'Mirascope': '$0 (kein bezahlter Tarif)',
+            'PromptPerfect': '$19,99/Monat (Pro)',
+          },
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: 'Ein-Tool-Regel',
+            text: 'Diese drei Tools existieren selten gleichzeitig in einem Team-Stack, da sie unterschiedliche Nutzer und Phasen bedienen. Ein Python-Engineering-Team wählt typischerweise Mirascope (Bibliothek) plus PromptLayer (Observability). Ein Nicht-Entwickler-Team wählt PromptPerfect. Alle drei zu kaufen erhöht die Kosten, ohne Funktionsüberschneidungen hinzuzufügen.',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: 'Tool-Auswahl nach Anwendungsfall',
+        content: [
+          '**Wählen Sie PromptLayer, wenn Ihr Team LLM-Aufrufe in der Produktion überwachen, Kosten pro Feature verfolgen oder Prompt-Versionen auf echtem Traffic vergleichen muss — ohne ein Code-Deployment.**',
+          '**Wählen Sie Mirascope, wenn Sie Python-Anwendungen entwickeln, die LLMs aufrufen, und typsicheren, testbaren, provider-agnostischen Code ohne SaaS-Kosten möchten.**',
+          '**Wählen Sie PromptPerfect, wenn Sie bestimmte Prompts schnell ohne Code verbessern müssen — insbesondere für Bildgenerierungs- oder Content-Creation-Workflows.**',
+          'Verwenden Sie PromptLayer nicht, wenn Sie noch vor der Produktion sind und keinen Live-Traffic zum Protokollieren haben — seine Observability-Funktionen haben ohne Produktionsdaten keinen Wert. Verwenden Sie Mirascope nicht, wenn Ihr Team kein Python schreibt — es ist eine reine Python-Bibliothek ohne Web-Oberfläche. Verwenden Sie PromptPerfect nicht, wenn Sie automatisierte, reproduzierbare Prompt-Tests benötigen — seine nicht-deterministische Ausgabe macht es für CI/CD-Gates ungeeignet.',
+          'Für einen vollständigen Team-Setup-Workflow mit Prompt-Review-Zuständigkeiten und CI/CD-Gates siehe [Prompt Engineering Setup für kleine Teams](/prompt-engineering/prompt-engineering-setup-small-teams?lang=de).',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Regionale Hinweise zu PromptLayer, Mirascope und PromptPerfect',
+        content: [
+          '**Für EU-Teams, die der DSGVO unterliegen, hängt die Wahl des richtigen Tools davon ab, wo Daten verarbeitet werden.** PromptLayer wird in der Cloud in den USA gehostet (Free, Pro und Team-Pläne); EU-Hosting und Self-Hosted-Optionen sind nur im Enterprise-Plan verfügbar. PromptLayer verfügt über SOC2 Typ 2-, DSGVO- und HIPAA-Zertifizierungen. Mirascope ist eine lokale Python-Bibliothek — keine LLM-Call-Daten gelangen an eine Drittanbieter-Plattform, was es zur DSGVO-konformen Standardwahl für Teams macht, die kein gehostetes Observability-Dashboard benötigen.',
+          '**PromptPerfect sendet jeden Prompt zur Verarbeitung an die Server von Jina AI.** Für EU-Teams, die sensible Daten verarbeiten (personenbezogene Daten, medizinische Aufzeichnungen, juristische Dokumente), entsteht dadurch eine Datentransfer-Verpflichtung gemäß DSGVO Artikel 44–49. Überprüfen Sie den Auftragsverarbeitungsvertrag von Jina AI und die Server-Standorte, bevor Sie PromptPerfect mit sensiblen Prompts verwenden.',
+          '**Für DACH-Unternehmen (Deutschland, Österreich, Schweiz), die nach BSI-Grundschutz-Katalogen arbeiten, ist lokale Verarbeitung sensibler Daten die Standardempfehlung.** Mirascope, das gegen einen lokalen oder EU-basierten API-Endpunkt betrieben wird, erfüllt diese Anforderung ohne zusätzliche Konfiguration. PromptLayer Enterprise unterstützt EU-Cloud-Hosting auf GCP/AWS/Azure, erfordert jedoch einen individuellen Vertrag. PromptPerfect erfüllt die BSI-Anforderungen für sensible Daten nicht, da alle Prompts an externe Server übermittelt werden.',
+          '**Für Japan empfehlen die KI-Governance-Richtlinien des METI (2024) für Unternehmenseinsatz On-Premises- oder Domestic-Cloud-Deployments.** Mirascope, das gegen einen inländischen API-Endpunkt betrieben wird (Azure Japan East, AWS ap-northeast-1), erfüllt diese Anforderung. PromptLayer Enterprise unterstützt Deployments auf GCP/AWS/Azure, einschließlich japanischer Rechenzentrumsregionen. PromptPerfect bietet keine Japan-spezifische Hosting-Option.',
+          '**Für China erfordern das Datensicherheitsgesetz (数据安全法) und CAC-Vorschriften, dass inländisch verarbeitete Daten im Land verbleiben.** Mirascope in Kombination mit einem inländischen Modell-Endpunkt (Qwen2,5 über Alibaba Cloud, Baidu ERNIE) ist der Standard-Enterprise-Ansatz. PromptLayer Enterprise unterstützt Self-Hosted-Deployments, die diese Anforderung erfüllen können. PromptPerfect sendet Daten an die Nicht-China-Infrastruktur von Jina AI und ist für CAC-regulierte Anwendungsfälle nicht geeignet.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Typische Fehler',
+        content: [
+          'Der häufigste Fehler ist, ein Tool für ein Problem zu kaufen, das noch nicht existiert. PromptLayer hat vor der Produktion keinen Wert; PromptPerfect hat in automatisierten Pipelines keinen Wert; Mirascope hat für Nicht-Python-Teams keinen Wert.',
+        ],
+        numberedItems: [
+          'PromptLayer vor dem Go-Live einführen. Sein Kernwert — Request-Logs, Kostenverfolgung, A/B-Tests — erfordert Live-Traffic. Teams, die es in der Entwicklung einführen, erhalten Dashboards ohne Daten und zahlen für einen Tarif, den sie noch nicht nutzen können.',
+          'PromptPerfect für automatisierte Prompt-Pipelines verwenden. PromptPerfect ist für manuelle, einmalige Optimierungen ausgelegt. Seine Ausgabe variiert bei jedem Durchlauf, was es mit reproduzierbaren CI/CD-Test-Suites oder Regressionsprüfungen unvereinbar macht.',
+          'Mirascope als Ersatz für ein Observability-Tool betrachten. Mirascope verbessert Codequalität und Testbarkeit, protokolliert jedoch nichts in einem Dashboard. Teams, die zu Mirascope wechseln und den Anfrageverlauf einsehen möchten, werden überrascht sein — fügen Sie PromptLayer separat für Observability hinzu.',
+          'Mirascope für ein Nicht-Python-Team wählen. Mirascope ist ausschließlich für Python. Teams, die Node.js, Go oder andere Sprachen verwenden, sollten stattdessen die offiziellen OpenAI- oder Anthropic-SDKs oder LangChain.js evaluieren.',
+          'Die Bildmodell-Unterstützung von PromptPerfect übersehen. Die meisten Teams evaluieren PromptPerfect nur für Textmodelle (GPT-4, Claude), aber der stärkste Anwendungsfall für kreative Teams ist die Optimierung von Midjourney- und Stable-Diffusion-Prompts.',
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: 'Wie Sie das richtige Tool wählen',
+        content: [
+          '**Beantworten Sie drei Fragen, um das richtige Tool zu identifizieren: Sind Sie bereits in der Produktion? Schreibt Ihr Team Python? Benötigen Sie codefreie Prompt-Verbesserung?**',
+        ],
+        numberedItems: [
+          'Prüfen Sie, ob Sie Live-Traffic haben. Falls ja und Sie Kosten oder Fehler debuggen müssen: PromptLayer. Falls nein, überspringen Sie PromptLayer bis zum Launch — sein Wert ist ohne Produktionsdaten gleich null.',
+          'Prüfen Sie, ob Ihr Team Python schreibt. Falls ja und Sie sauberen, typsicheren LLM-Code möchten: Mirascope. Falls nein, ist Mirascope keine Option — es hat keine Web-Oberfläche und kein Nicht-Python-SDK.',
+          'Prüfen Sie, ob jemand in Ihrem Team Prompts ohne Code verbessern muss. Falls ja: PromptPerfect. Wenn das Team ausschließlich aus Entwicklern besteht, ist PromptPerfect selten die beste Wahl.',
+          'Prüfen Sie, ob Sie eine systematische Qualitätsevaluation benötigen — Metriken, Scoring, Regressionstests. Falls ja: Keines dieser drei Tools deckt das ab. Fügen Sie Braintrust oder Promptfoo für die Evaluation hinzu.',
+          'Standardpfad für die meisten Engineering-Teams: Beginnen Sie mit Mirascope (kostenlos, Codequalität), fügen Sie PromptLayer nach dem Launch hinzu (~$49/Monat), und überspringen Sie PromptPerfect, es sei denn, Sie haben Nicht-Entwickler, die Prompts erstellen.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: 'Free-First-Pfad',
+            text: 'Beginnen Sie mit Mirascope (Open-Source, $0), um Ihren LLM-Code zu strukturieren. Fügen Sie den kostenlosen Tarif von PromptLayer (2.500 Anfragen/Monat) hinzu, sobald Sie Live-Traffic haben. Keines kostet etwas, bis Sie die kostenlosen Limits überschreiten. Der kostenlose Tarif von PromptPerfect (10/Tag) reicht aus, um zu evaluieren, ob es in Ihren Workflow passt, bevor Sie sich für den Pro-Plan ($19,99/Monat) entscheiden.',
+          },
+        ],
+      },
+      faq: {
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Wofür wird PromptLayer verwendet?',
+            a: 'PromptLayer protokolliert jeden LLM-API-Aufruf in einem Dashboard mit Verlauf, Kosten, Latenz und Prompt-Versionsverfolgung. Teams nutzen es, um Produktions-LLM-Fehler zu debuggen, API-Kosten pro Feature zu verfolgen und Prompt-Versionen auf echtem Traffic zu vergleichen, ohne ein Code-Deployment.',
+          },
+          {
+            q: 'Ist Mirascope besser als LangChain?',
+            a: 'Sie lösen unterschiedliche Probleme. Mirascope konzentriert sich auf typsichere, provider-agnostische LLM-Funktionsaufrufe mit Pydantic-Validierung. LangChain ist ein umfangreicheres Orchestrierungs-Framework mit Chains, Agents und Memory. Mirascope ist die bessere Wahl für Teams, die saubere LLM-Funktionsaufrufe ohne Abstraktions-Overhead möchten; LangChain ist besser für komplexe Agent-Workflows.',
+          },
+          {
+            q: 'Was kostet PromptPerfect?',
+            a: 'PromptPerfect bietet einen kostenlosen Tarif mit 10 Optimierungen pro Tag. Der Pro-Plan kostet $19,99/Monat für 500 Optimierungen/Tag mit API-Zugang. Der Pro-Max-Plan kostet $99,99/Monat für 1.500 Optimierungen/Tag mit priorisierter Verarbeitung. Überprüfen Sie die aktuellen Preise auf promptperfect.jina.ai vor dem Kauf.',
+          },
+          {
+            q: 'Soll ich PromptLayer oder Mirascope wählen?',
+            a: 'Sie tun unterschiedliche Dinge, und die meisten Teams benötigen beide oder keines. PromptLayer ist eine Observability-Plattform — verwenden Sie es, wenn Sie Live-Traffic haben und Kosten überwachen sowie Fehler debuggen müssen. Mirascope ist eine Python-Entwicklerbibliothek — verwenden Sie es, wenn Sie LLM-Anwendungen schreiben und typsicheren, testbaren Code möchten. Sie sind keine Alternativen füreinander.',
+          },
+          {
+            q: 'Wie viele LLM-Provider unterstützt Mirascope?',
+            a: 'Mirascope unterstützt über 20 Provider, darunter OpenAI, Anthropic (Claude), Google Gemini, Mistral, Groq, Cohere, Together AI und andere. Das Wechseln von Providern erfordert das Ändern eines Parameters im Funktions-Decorator — keine Änderungen an der Prompt-Logik.',
+          },
+          {
+            q: 'Ist PromptLayer dasselbe wie ein Prompt-Versionierungstool?',
+            a: 'PromptLayer enthält Prompt-Versionierung (Templates nach Name und Version speichern, über API abrufen), aber sein primärer Wert ist Observability — das Protokollieren jedes Produktions-LLM-Aufrufs mit Kosten, Latenz und Fehlerdaten. Wenn Sie nur Versionskontrolle ohne Observability benötigen, ist PromptHub eine schlankere Alternative.',
+          },
+          {
+            q: 'Kann PromptPerfect für Bildgenerierungs-Prompts verwendet werden?',
+            a: 'Ja. PromptPerfect unterstützt Midjourney und Stable Diffusion zusätzlich zu Textmodellen wie GPT-4 und Claude. Für Teams mit Bildgenerierungs-Workflows ist die Bildprompt-Optimierung oft der stärkste Anwendungsfall — wirkungsvoller als Text-Prompt-Umschreiben.',
+          },
+          {
+            q: 'Muss ich bei der Verwendung von PromptLayer und PromptPerfect die DSGVO beachten?',
+            a: 'Ja. PromptLayer (Free, Pro, Team) verarbeitet Daten auf US-amerikanischen Servern — für EU-Teams mit personenbezogenen Daten in Prompts ist gemäß DSGVO Artikel 28 ein Auftragsverarbeitungsvertrag (AVV) erforderlich. EU-Hosting ist erst ab dem Enterprise-Plan verfügbar. PromptPerfect sendet Prompts an Jina-AI-Server und unterliegt denselben DSGVO-Anforderungen gemäß Artikel 44–49 für Datentransfers in Drittländer. Mirascope verarbeitet keine Daten auf Drittanbieterservern und ist damit die DSGVO-konforme Standardwahl für sensible Daten. Die BSI-Grundschutz-Kataloge empfehlen für kritische Anwendungen lokale Verarbeitung.',
+          },
+          {
+            q: 'Ist PromptLayer für den deutschen Mittelstand geeignet?',
+            a: 'PromptLayer ist für kleine Teams (Pro: $49/Monat, bis 5 Nutzer) und mittelgroße Teams (Team: $500/Monat, bis 25 Nutzer) geeignet. Für BSI-Grundschutz-konforme Deployments im Mittelstand ist der Enterprise-Plan mit EU-Hosting erforderlich. Mirascope (Apache 2.0, kostenlos) ist die bevorzugte Wahl für Mittelstandsunternehmen, die DSGVO-Konformität ohne SaaS-Kosten benötigen. PromptPerfect eignet sich für kreative Mittelstandsteams ohne regulatorische Anforderungen, aber nicht für regulierte Branchen.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: 'Weiterführende Links',
+        items: [
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 4-Tool-Vergleich für Evaluation, CI/CD, A/B-Tests und Versionskontrolle](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=de)',
+          '[Best Prompt Engineering Tools 2026 — gerankte Übersicht über 10+ Tools in allen Prompt-Workflow-Kategorien](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de)',
+          '[Prompt Engineering Setup für kleine Teams — Rollen, Review-Workflows und Tooling-Entscheidungen für 2–10-Personen-Teams](/prompt-engineering/prompt-engineering-setup-small-teams?lang=de)',
+          '[Wie Sie Prompt-Qualität evaluieren — Metriken, Scoring-Funktionen und Frameworks für die Messung von LLM-Ausgabegenauigkeit und Relevanz](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de)',
+        ],
+      },
+      sources: {
+        title: 'Quellen',
+        items: [
+          '[PromptLayer-Dokumentation](https://docs.promptlayer.com) — offizielle Dokumentation zu SDK-Setup, Prompt-Versionierung, A/B-Tests und Dashboard-Analyse.',
+          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — Apache-2.0-Quellcode, Provider-Integrations-Leitfäden und Nutzungsbeispiele.',
+          '[PromptPerfect von Jina AI](https://promptperfect.jina.ai) — offizielle Produktseite mit Preistarifen, unterstützten Modellen und API-Dokumentation.',
+          '[PromptLayer Pricing](https://promptlayer.com/pricing) — aktuelle Preistariife; vor dem Kauf überprüfen, da sich Pläne möglicherweise geändert haben.',
+        ],
+      },
+    },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-      description: 'PromptLayer protokolliert LLM-Aufrufe, Mirascope ist ein Python-SDK, PromptPerfect optimiert Prompts automatisch. Drei Tools für drei Probleme.',
+      description: 'PromptLayer protokolliert und versioniert LLM-Aufrufe, Mirascope ist ein kostenloses Python-SDK für typsichere LLM-Apps, PromptPerfect schreibt Prompts automatisch um. Drei Tools für drei verschiedene Probleme — je eines auswählen.',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
-      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
-      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
       url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=de',
       inLanguage: 'de',
-      speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      about: [
+        { '@type': 'Thing', name: 'Prompt Management' },
+        { '@type': 'Thing', name: 'LLM Observability' },
+        { '@type': 'SoftwareApplication', name: 'PromptLayer' },
+        { '@type': 'SoftwareApplication', name: 'Mirascope' },
+        { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
-    sections: {},
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Wofür wird PromptLayer verwendet?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptLayer protokolliert jeden LLM-API-Aufruf in einem Dashboard mit Verlauf, Kosten, Latenz und Prompt-Versionsverfolgung. Teams nutzen es, um Produktions-LLM-Fehler zu debuggen, API-Kosten pro Feature zu verfolgen und Prompt-Versionen auf echtem Traffic zu vergleichen, ohne ein Code-Deployment.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ist Mirascope besser als LangChain?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sie lösen unterschiedliche Probleme. Mirascope konzentriert sich auf typsichere, provider-agnostische LLM-Funktionsaufrufe mit Pydantic-Validierung. LangChain ist ein umfangreicheres Orchestrierungs-Framework mit Chains, Agents und Memory. Mirascope ist besser für Teams, die saubere LLM-Funktionsaufrufe ohne Abstraktions-Overhead möchten; LangChain ist besser für komplexe Agent-Workflows.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Was kostet PromptPerfect?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptPerfect bietet einen kostenlosen Tarif mit 10 Optimierungen pro Tag. Der Pro-Plan kostet $19,99/Monat für 500 Optimierungen/Tag mit API-Zugang. Der Pro-Max-Plan kostet $99,99/Monat für 1.500 Optimierungen/Tag mit priorisierter Verarbeitung. Aktuelle Preise auf promptperfect.jina.ai prüfen.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Soll ich PromptLayer oder Mirascope wählen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sie tun unterschiedliche Dinge, und die meisten Teams benötigen beide oder keines. PromptLayer ist eine Observability-Plattform — verwenden Sie es bei Live-Traffic und Bedarf an Kosten-Monitoring und Fehler-Debugging. Mirascope ist eine Python-Entwicklerbibliothek — verwenden Sie es beim Schreiben von LLM-Anwendungen mit typsicherem, testbarem Code. Sie sind keine Alternativen füreinander.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Wie viele LLM-Provider unterstützt Mirascope?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Mirascope unterstützt über 20 Provider, darunter OpenAI, Anthropic (Claude), Google Gemini, Mistral, Groq, Cohere, Together AI und andere. Das Wechseln von Providern erfordert das Ändern eines Parameters im Funktions-Decorator — keine Änderungen an der Prompt-Logik.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ist PromptLayer dasselbe wie ein Prompt-Versionierungstool?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptLayer enthält Prompt-Versionierung (Templates nach Name und Version speichern), aber sein primärer Wert ist Observability — das Protokollieren jedes Produktions-LLM-Aufrufs mit Kosten, Latenz und Fehlerdaten. Für reine Versionskontrolle ohne Observability ist PromptHub eine schlankere Alternative.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kann PromptPerfect für Bildgenerierungs-Prompts verwendet werden?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ja. PromptPerfect unterstützt Midjourney und Stable Diffusion zusätzlich zu Textmodellen wie GPT-4 und Claude. Für Teams mit Bildgenerierungs-Workflows ist die Bildprompt-Optimierung oft der stärkste Anwendungsfall — wirkungsvoller als Text-Prompt-Umschreiben.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Muss ich bei der Verwendung von PromptLayer und PromptPerfect die DSGVO beachten?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ja. PromptLayer (Free, Pro, Team) verarbeitet Daten auf US-amerikanischen Servern — für EU-Teams mit personenbezogenen Daten in Prompts ist gemäß DSGVO Artikel 28 ein Auftragsverarbeitungsvertrag erforderlich. EU-Hosting ist erst ab dem Enterprise-Plan verfügbar. PromptPerfect sendet Prompts an Jina-AI-Server und unterliegt denselben Datentransfer-Anforderungen gemäß DSGVO Artikel 44–49. Mirascope verarbeitet keine Daten auf Drittanbieterservern und ist die DSGVO-konforme Standardwahl für sensible Daten.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ist PromptLayer für den deutschen Mittelstand geeignet?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptLayer ist für kleine Teams (Pro: $49/Monat, bis 5 Nutzer) und mittelgroße Teams (Team: $500/Monat, bis 25 Nutzer) geeignet. Für BSI-Grundschutz-konforme Deployments ist der Enterprise-Plan mit EU-Hosting erforderlich. Mirascope (Apache 2.0, kostenlos) ist die bevorzugte Wahl für Mittelstandsunternehmen, die DSGVO-Konformität ohne SaaS-Kosten benötigen.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'PromptLayer vs Mirascope vs PromptPerfect: Tool-Vergleich',
+      inLanguage: 'de',
+      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=de',
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'PromptLayer',
+          description: 'LLM-Observability- und Prompt-Versionierungsplattform mit Produktions-Logging, Kostenverfolgung und A/B-Tests zwischen Prompt-Versionen',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Mirascope',
+          description: 'Open-Source-Python-Bibliothek für typsichere, provider-agnostische LLM-Anwendungsentwicklung mit Pydantic-Ausgabevalidierung',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'PromptPerfect',
+          description: 'KI-gestütztes Prompt-Optimierungstool, das Prompts für bessere Leistung bei Text- und Bildgenerierungsmodellen umschreibt',
+        },
+      ],
+    },
   },
 
   fr: {
