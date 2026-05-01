@@ -358,7 +358,7 @@ export const article: Record<Language, PEArticle> = {
     theme: 'Tools & Plattformen',
     title: 'Beste Prompt-Engineering-IDEs und Editoren (2026)',
     seoTitle: 'Beste Prompt-Engineering-IDEs und Editoren 2026: Leitfaden',
-    metaDescription: '6 Prompt-Engineering-IDEs im Vergleich: Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio, LM Studio. Feature-Matrix nach Persona.',
+    metaDescription: '6 Prompt-Engineering-IDEs im Test: Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio, LM Studio. Feature-Matrix nach Persona.',
     ogTitle: 'Beste Prompt-Engineering-IDEs 2026: 6 Tools im Vergleich',
     ogDescription: '6 Prompt-IDEs verglichen: Cursor für Entwicklung, Playground für API-Tests, LM Studio für Offline-Arbeit. Feature-Matrix mit Preisen und Modell-Support.',
     twitterTitle: 'Beste Prompt-Engineering-IDEs 2026: 6 Tools verglichen',
@@ -717,8 +717,8 @@ export const article: Record<Language, PEArticle> = {
   fr: {
     theme: 'Outils et plateformes',
     title: 'Meilleurs IDE et Éditeurs de Prompt Engineering (2026)',
-    seoTitle: 'Meilleurs IDE de Prompt Engineering 2026 : Guide en 6 outils',
-    metaDescription: 'Comparaison de 6 IDE de prompt engineering : Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio, LM Studio. Matrice par persona.',
+    seoTitle: 'Meilleurs IDE Prompt Engineering 2026 : Guide en 6 outils',
+    metaDescription: 'Comparaison de 6 IDE de prompt engineering : Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio. Matrice par persona.',
     ogTitle: 'Meilleurs IDE de Prompt Engineering 2026 : 6 outils comparés',
     ogDescription: '6 IDE de prompt comparés : Cursor pour le développement, Playground pour l\'API, LM Studio pour le travail offline. Matrice de fonctionnalités et prix.',
     twitterTitle: 'Meilleurs IDE de Prompt Engineering 2026 : 6 outils',
@@ -1353,7 +1353,7 @@ export const article: Record<Language, PEArticle> = {
       commonMistakes: {
         id: 'common-mistakes',
         title: 'よくある失敗と対処法',
-        content: 'これらの失敗はAPIコストの無駄遣い、不安定な出力、プロダクションデプロイの問題につながります。PlaygroundのプロンプトをプロダクションにデプロイBefore、[専用のプロンプトテストツール](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=ja)を使用してください。',
+        content: 'これらの失敗はAPIコストの無駄遣い、不安定な出力、プロダクションデプロイの問題につながります。Playgroundのプロンプトをプロダクションにデプロイする前に、[専用のプロンプトテストツール](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=ja)を使用してください。',
         items: [
           'プロダクションテストにPlaygroundを使う — PlaygroundはプロンプトのDesignとExplorationのためのツールです。**Fix：** プロダクションではエラー処理、レート制限、リトライ、フォールバックロジックを持つAPIを直接呼び出してください。',
           'IDEを頻繁に変える — 各IDEには学習コスト（キーボードショートカット、エクスポート形式、モデル選択パターン）があります。**Fix：** 一つのメインIDEを選んで少なくとも2週間使い続けてから代替を検討してください。操作の流暢さはフィーチャーリストより重要です。',
