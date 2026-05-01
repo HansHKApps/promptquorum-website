@@ -36,10 +36,12 @@ export const article: Record<Language, PEArticle> = {
         { label: 'Promptfoo: Open-Source Testing', anchor: '#promptfoo-testing' },
         { label: 'PromptHub: Git-Like Versioning', anchor: '#prompthub-versioning' },
         { label: 'LangSmith: Tracing for LangChain', anchor: '#langsmith-tracing' },
+        { label: 'Confident AI: Evaluation Alternative', anchor: '#confident-ai-evaluation' },
         { label: 'Side-by-Side Comparison', anchor: '#side-by-side-comparison' },
         { label: 'How to Choose by Use Case', anchor: '#how-to-choose' },
         { label: 'How to Build Your Tool Stack', anchor: '#how-to-build-stack' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Regional & Compliance Notes', anchor: '#regional-considerations' },
         { label: 'Frequently Asked Questions', anchor: '#faq' },
       ],
       schema: {
@@ -77,8 +79,8 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', name: 'Is prompt versioning necessary for teams?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, prompt versioning is essential as soon as more than one person edits prompts. Without it, teams cannot track which version shipped, cannot roll back after a regression, and cannot audit who changed what and when. PromptHub and Vellum both offer version control; PromptHub has the most Git-like workflow for governance-heavy teams.' } },
           { '@type': 'Question', name: 'Do these tools support local models?', acceptedAnswer: { '@type': 'Answer', text: 'Most tools support local models with varying depth. Promptfoo has native support for Ollama and LM Studio via provider configuration with no wrapper needed. Braintrust and Vellum support local models through API wrappers that expose a standard OpenAI-compatible endpoint.' } },
           { '@type': 'Question', name: 'Can I combine multiple prompt engineering tools?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — combining two or three tools is the standard approach in 2026. The most common stack is Promptfoo for CI/CD testing, Vellum for production deployment, and Braintrust for offline eval campaigns. All three integrate via standard REST APIs with no lock-in; avoid buying all five as Braintrust and Promptfoo partially overlap on testing.' } },
-          { '@type': 'Question', name: 'What is the typical cost of these tools?', acceptedAnswer: { '@type': 'Answer', text: 'As of April 2026: Braintrust ~$500/month (starter), Vellum $200–500/month by request volume, Promptfoo free (open-source self-hosted), PromptHub $50–300/month by team size, LangSmith free tier with paid plans from $50/month for production. Costs scale with eval volume, API calls, and seat counts.' } },
-          { '@type': 'Question', name: 'Which tool has the best free tier?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted on your infrastructure. PromptHub and LangSmith both offer generous free tiers for small teams. Braintrust and Vellum offer trials only and move quickly to paid plans for teams with meaningful production usage.' } },
+          { '@type': 'Question', name: 'What is the typical cost of these tools?', acceptedAnswer: { '@type': 'Answer', text: 'As of May 2026: Braintrust has a permanent free tier (1M traces, 10k scores, unlimited users) and Pro at $249/month; Vellum has a free tier and Pro at $500/month; Promptfoo is entirely free (open-source self-hosted); PromptHub is free and $20/user/month (Team); LangSmith Developer is $0/seat (5k traces/month) and Plus is $39/seat/month; Confident AI is free (5 test runs/week) and $19.99/user/month (Starter). Costs scale with eval volume, API calls, and seat counts.' } },
+          { '@type': 'Question', name: 'Which tool has the best free tier?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted. Braintrust has a permanent free tier: 1M trace spans, 10k scores, and unlimited users. Confident AI free tier includes unlimited trace spans with 5 test runs/week. LangSmith Developer is $0/seat with 5k traces/month. PromptHub is free for public prompts with unlimited team members.' } },
           { '@type': 'Question', name: 'What is the difference between prompt testing and prompt evaluation?', acceptedAnswer: { '@type': 'Answer', text: 'Testing (Promptfoo) checks whether a prompt produces correct output for defined inputs — it runs automatically in CI/CD and catches regressions. Evaluation (Braintrust) measures output quality — accuracy, tone, factuality — using LLM judges or humans. Testing is fast and automated; evaluation is slower and more nuanced. Most teams need both.' } },
           { '@type': 'Question', name: 'How do I know when I have outgrown Promptfoo and need Braintrust?', acceptedAnswer: { '@type': 'Answer', text: 'Switch to Braintrust when your team needs to score output quality beyond pass/fail — for example, tone, factual accuracy, or brand adherence. Promptfoo excels at binary correctness tests in CI/CD. Braintrust adds human-in-the-loop scoring, LLM judges, and a ground truth dataset that improves over time. Most teams hit this inflection point when 3–5 people are iterating on prompts daily.' } }
         ]
@@ -87,15 +89,16 @@ export const article: Record<Language, PEArticle> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'Best Prompt Engineering Tools 2026',
-        description: 'The five leading prompt engineering tools in 2026, each specializing in a different workflow bottleneck.',
-        numberOfItems: 5,
+        description: 'The six leading prompt engineering tools in 2026, each specializing in a different workflow bottleneck.',
+        numberOfItems: 6,
         inLanguage: 'en',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Evaluation-first tool with LLM judges, human feedback loops, and dataset management. Best for ground truth eval datasets. Pricing: ~$500/month.' },
-          { '@type': 'ListItem', position: 2, name: 'Vellum', description: 'Production-grade prompt deployment with A/B testing, canary rollouts, and monitoring dashboard. Best for teams shipping to users. Pricing: $200–500/month.' },
-          { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: 'Open-source CLI tool for CI/CD prompt testing with native Ollama and LM Studio support. Pricing: free.' },
-          { '@type': 'ListItem', position: 4, name: 'PromptHub', description: 'Git-like prompt versioning with branching, team collaboration, and audit trails. Pricing: $50–300/month.' },
-          { '@type': 'ListItem', position: 5, name: 'LangSmith', description: 'Native tracing and observability for LangChain applications. Logs every prompt, model call, and token count in production. Free tier available.' }
+          { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Evaluation + observability platform with LLM judges, human feedback, production tracing, and CI/CD gates. Free tier; Pro $249/month.' },
+          { '@type': 'ListItem', position: 2, name: 'Confident AI', description: 'Automated evaluation with 50+ built-in metrics, multi-turn testing, and OWASP red teaming. Free; Starter $19.99/user/month.' },
+          { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'Production deployment with workflow builder, A/B testing, RAG integration, and monitoring dashboard. Free tier; Pro $500/month.' },
+          { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'Open-source CLI for CI/CD prompt testing with native Ollama and LM Studio support. Entirely free.' },
+          { '@type': 'ListItem', position: 5, name: 'PromptHub', description: 'Git-like prompt versioning with branching, team collaboration, and audit trails. Free; Team $20/user/month.' },
+          { '@type': 'ListItem', position: 6, name: 'LangSmith', description: 'Native tracing and observability for LangChain applications. Developer $0/seat; Plus $39/seat/month.' }
         ]
       },
       howToSchema: {
@@ -114,11 +117,25 @@ export const article: Record<Language, PEArticle> = {
         ]
       },
       sections: {
+        quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ Quick Facts',
+          items: [
+            '**PromptQuorum** — dispatches one prompt to 25+ models simultaneously; best for model selection before committing to a stack (free)',
+            '**Braintrust** — evaluation + observability; LLM judges, human feedback, production tracing; Free / $249/mo Pro',
+            '**Confident AI** — 50+ built-in eval metrics and red teaming; Braintrust alternative with lower tracing cost; $19.99/user/mo Starter',
+            '**Vellum** — production deployment with workflow builder, A/B testing, RAG, and monitoring; Free / $500/mo Pro',
+            '**Promptfoo** — open-source CI/CD testing; YAML config, GitHub Actions integration; entirely free',
+            '**PromptHub** — Git-style prompt versioning; branching, review workflows, team collaboration; Free / $20/user/mo',
+            '**LangSmith** — native tracing for LangChain apps; logs every chain step, model call, and cost; Developer free / Plus $39/seat/mo'
+          ]
+        },
         keyTakeaways: {
           isTldr: true,
           items: [
             'PromptQuorum: Multi-model dispatch (compare GPT-5.5, Claude 4.7 Opus, Gemini 3 Pro, and 25+ models side by side before evaluating, testing, or deploying)',
-            'Braintrust: Evaluation loops (LLM + human judges, dataset management)',
+            'Braintrust: Evaluation + observability platform (LLM judges, human feedback, production tracing, CI/CD gates) — Free / $249/mo Pro',
+            'Confident AI: Automated evaluation with 50+ built-in metrics and red teaming — $19.99/user/mo Starter',
             'Vellum: Production (A/B testing, deployment, monitoring dashboard)',
             'Promptfoo: Testing (open-source, CLI, free, red teaming)',
             'PromptHub: Versioning (Git-like workflow, team collaboration)',
@@ -146,24 +163,26 @@ export const article: Record<Language, PEArticle> = {
         },
         braintrust: {
           id: 'braintrust-evaluation',
-          title: 'What Is Braintrust? Evaluation, LLM Judges, and Ground Truth',
-          content: '**Braintrust closes the eval-to-production loop with LLM judges, human feedback, and dataset management.** Define evals, run them automatically, score results with humans to build ground truth, then compile into a dataset for future evals.',
+          title: 'What Is Braintrust? Evaluation, Observability, and Ground Truth',
+          content: '**Braintrust has grown into a full observability + evaluation platform following its $80M Series B (Feb 2026, $800M valuation).** It now covers: production tracing (spans, latency, cost), LLM-as-judge and human feedback loops, CI/CD quality gates, MCP server integration, and a Playground for side-by-side model comparison. The core eval loop — define evals, run automatically, score with humans, build a ground truth dataset — remains its strongest differentiator.',
           items: [
-            'Best if you need structured evaluation with human-in-the-loop feedback',
-            'Works with GPT-5.5, Claude 4.7 Opus, Gemini 3 Pro, and any OpenAI-compatible API',
-            'Pricing: ~$500/mo starter, scales with eval volume'
+            'Best for structured evaluation with human-in-the-loop feedback and reusable ground truth datasets',
+            'Production tracing: logs every span, latency, and cost alongside eval results',
+            'Side-by-side model comparison via Playground; MCP server integration',
+            'Pricing: Free (1M traces, 10k scores, unlimited users); Pro $249/month; Enterprise custom'
           ],
           image: '/images/best-pe-tools-2026-braintrust-eval-loop-en.svg',
           imageCaption: 'Braintrust\'s 4-step eval loop: define evals → run automatically → score with human feedback → compile into dataset. LLM judges + human feedback build ground truth for future evaluation runs.'
         },
         vellum: {
           id: 'vellum-production',
-          title: 'What Is Vellum? Production Deployment, A/B Testing, and Monitoring',
-          content: '**Vellum is the only tool built for production use.** A/B testing, canary rollouts, fallback chains (GPT-5.5 → Claude 4.7 Opus → Gemini), and monitoring dashboard showing latency and cost. Use if you ship to users.',
+          title: 'What Is Vellum? Production Deployment, Workflow Builder, and Monitoring',
+          content: '**Vellum has expanded beyond production deployment into a full LLM development platform.** Core: A/B testing, canary rollouts, fallback chains (GPT-5.5 → Claude 4.7 Opus → Gemini), and a monitoring dashboard for latency and cost. Additions: drag-and-drop visual workflow builder, Python SDK for code-defined pipelines, document retrieval and RAG integration, LLM Leaderboard for model benchmarking, and AWS Marketplace listing for enterprise procurement.',
           items: [
-            'Best for production-grade deployments with monitoring',
-            'Cost estimation per model, per prompt version',
-            'Pricing: $200–500/mo depending on volume'
+            'Best for production deployment — A/B testing, canary rollouts, monitoring',
+            'Visual workflow builder: drag-and-drop agent construction without writing pipeline code',
+            'RAG integration: built-in document retrieval for grounded prompt pipelines',
+            'Pricing: Free tier; Pro $500/month; Enterprise custom (contact sales)'
           ]
         },
         promptfoo: {
@@ -183,7 +202,7 @@ export const article: Record<Language, PEArticle> = {
           items: [
             'Best for teams that need code-review-style approval workflows',
             'Supports sharing prompts across teams with public/private URLs',
-            'Pricing: $50–300/mo depending on team size'
+            'Pricing: Free (public prompts, unlimited members); Pro $12/month (solo, private prompts); Team $20/user/month'
           ]
         },
         langsmith: {
@@ -193,7 +212,18 @@ export const article: Record<Language, PEArticle> = {
           items: [
             'Essential for LangChain applications in production',
             'Detailed tracing of multi-step prompt chains',
-            'Free tier for small projects; $50/mo+ for production'
+            'Pricing: Developer $0/seat (5k traces/month, pay-as-you-go); Plus $39/seat/month; Enterprise custom'
+          ]
+        },
+        confidentAI: {
+          id: 'confident-ai-evaluation',
+          title: 'What Is Confident AI? Automated Evaluation and LLM Red Teaming',
+          content: '**Confident AI (built on the open-source DeepEval framework) is the leading alternative to Braintrust for automated evaluation.** Where Braintrust centers on human-in-the-loop feedback and dataset accumulation, Confident AI emphasizes pre-built metrics: 50+ built-in scorers (factuality, answer relevancy, hallucination, toxicity, G-Eval, and more) with no custom scorer setup needed. Used by Panasonic, Amazon, and BCG. Tracing is priced at $1/GB-month vs Braintrust\'s $3/GB on Pro.',
+          items: [
+            '50+ built-in evaluation metrics — no custom scorer configuration required',
+            'Multi-turn conversation simulation and end-to-end HTTP pipeline testing',
+            'Red teaming built-in: OWASP Top 10 for LLMs, NIST AI RMF alignment, jailbreak detection',
+            'Pricing: Free (5 test runs/week, 2 seats); Starter $19.99/user/month; Premium $49/user/month; Enterprise custom'
           ]
         },
         comparison: {
@@ -203,14 +233,13 @@ export const article: Record<Language, PEArticle> = {
           columns: ['Tool', 'Multi-Model', 'Evaluation', 'Testing', 'Versioning', 'Production', 'Pricing'],
           rows: [
             { Tool: 'PromptQuorum', 'Multi-Model': 'Excellent', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'No', Pricing: 'Free + credits' },
-            { Tool: 'Braintrust', 'Multi-Model': 'No', Evaluation: 'Excellent', Testing: 'Basic', Versioning: 'No', Production: 'No', Pricing: '$500+/mo' },
-            { Tool: 'Vellum', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'Basic', Versioning: 'Yes', Production: 'Excellent', Pricing: '$200–500/mo' },
+            { Tool: 'Braintrust', 'Multi-Model': 'Basic', Evaluation: 'Excellent', Testing: 'Basic', Versioning: 'No', Production: 'Basic', Pricing: 'Free / $249/mo' },
+            { Tool: 'Confident AI', 'Multi-Model': 'No', Evaluation: 'Excellent', Testing: 'Excellent', Versioning: 'Basic', Production: 'No', Pricing: '$19.99/user/mo' },
+            { Tool: 'Vellum', 'Multi-Model': 'Basic', Evaluation: 'No', Testing: 'Basic', Versioning: 'Yes', Production: 'Excellent', Pricing: 'Free / $500/mo' },
             { Tool: 'Promptfoo', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'Excellent', Versioning: 'Via Git', Production: 'CI/CD only', Pricing: 'Free' },
-            { Tool: 'PromptHub', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'Excellent', Production: 'No', Pricing: '$50–300/mo' },
-            { Tool: 'LangSmith', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'Tracing only', Pricing: 'Free/$50+/mo' }
-          ],
-          image: '/images/best-pe-tools-2026-comparison-table-en.svg',
-          imageCaption: 'Feature comparison of 6 prompt engineering tools (April 2026): PromptQuorum for multi-model dispatch (free), Braintrust for evaluation ($500+/mo), Vellum for production ($200–500/mo), Promptfoo for testing (free), PromptHub for versioning ($50–300/mo), LangSmith for tracing (free tier).'
+            { Tool: 'PromptHub', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'Excellent', Production: 'No', Pricing: 'Free / $20/user/mo' },
+            { Tool: 'LangSmith', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'Tracing only', Pricing: 'Free / $39/seat/mo' }
+          ]
         },
         decision: {
           id: 'how-to-choose',
@@ -219,9 +248,9 @@ export const article: Record<Language, PEArticle> = {
           items: [
             '**All teams — model selection:** Start with PromptQuorum (free) to compare GPT-5.5, Claude 4.7 Opus, Gemini, and local models side by side before committing to a stack.',
             '**Startups (<10 people):** PromptQuorum + Promptfoo (free) + PromptHub (versioning). Graduate to Braintrust when eval quality is critical.',
-            '**Shipping to production:** Vellum (deployment/monitoring) + Promptfoo (CI/CD testing) + Braintrust (offline evals if needed)',
-            '**LangChain-heavy:** LangSmith (required) + Promptfoo (unit tests) + Braintrust (offline evals)',
-            '**Enterprise (governance matters):** PromptHub (audit trails) + Braintrust (eval governance) + Vellum (production)'
+            '**Shipping to production:** Vellum (deployment/monitoring) + Promptfoo (CI/CD testing) + Braintrust or Confident AI (offline evals)',
+            '**LangChain-heavy:** LangSmith (required for chain tracing) + Promptfoo (unit tests) + Confident AI or Braintrust (offline evals)',
+            '**Enterprise (governance matters):** PromptHub (audit trails) + Braintrust or Confident AI (eval governance) + Vellum (production monitoring)'
           ],
           image: '/images/best-pe-tools-2026-decision-guide-en.svg',
           imageCaption: 'Tool stack recommendations by team type: all teams start with PromptQuorum; startups add Promptfoo + PromptHub; production teams add Vellum; LangChain teams add LangSmith; enterprise teams use PromptHub + Braintrust + Vellum for governance.'
@@ -266,6 +295,19 @@ export const article: Record<Language, PEArticle> = {
           image: '/images/best-pe-tools-2026-common-mistakes-en.svg',
           imageCaption: '4 mistakes prompt engineering teams make: buying overlapping tools, skipping CI/CD testing, delayed versioning, and using generic observability instead of prompt-specific tools like Vellum or LangSmith.'
         },
+        regionalConsiderations: {
+          id: 'regional-considerations',
+          title: 'Regional Compliance and Data Residency',
+          content: '**Data residency requirements affect which tools are viable for EU, healthcare, financial, and regulated-industry teams.** Review these before selecting a paid plan.',
+          items: [
+            '**Braintrust:** SOC 2 Type II certified. HIPAA Business Associate Agreement (BAA) available on Enterprise. Data stored in US by default; self-hosted deployment available on Enterprise.',
+            '**Vellum:** Available on AWS Marketplace for enterprise procurement. Enterprise plan supports self-hosted and custom deployment.',
+            '**Promptfoo:** Fully self-hosted — data never leaves your infrastructure. Best option for GDPR and regulated-industry teams that cannot share prompt data with SaaS providers.',
+            '**LangSmith:** Data stored in GCP us-central-1. Enterprise plan supports self-hosted and BYOC (Bring Your Own Cloud) on AWS, GCP, or Azure.',
+            '**Confident AI:** Self-hosted deployment available on Enterprise plan for teams with strict data residency requirements.',
+            '**PromptQuorum:** EU-hosted, GDPR-compliant. Founded in Germany; all data processed within EU infrastructure.'
+          ]
+        },
         relatedReading: {
           id: 'related-reading',
           title: 'Related Reading',
@@ -288,8 +330,8 @@ export const article: Record<Language, PEArticle> = {
             { q: 'Is prompt versioning necessary for teams?', a: 'Yes, prompt versioning is essential as soon as more than one person edits prompts. Without it, teams cannot track which version shipped, cannot roll back after a regression, and cannot audit who changed what and when. PromptHub and Vellum both offer version control; PromptHub has the most Git-like workflow for governance-heavy teams.' },
             { q: 'Do these tools support local models?', a: 'Most tools support local models with varying depth. Promptfoo has native support for Ollama and LM Studio via provider configuration with no wrapper needed. Braintrust and Vellum support local models through API wrappers that expose a standard OpenAI-compatible endpoint.' },
             { q: 'Can I combine multiple prompt engineering tools?', a: 'Yes — combining two or three tools is the standard approach in 2026. The most common stack is Promptfoo for CI/CD testing, Vellum for production deployment, and Braintrust for offline eval campaigns. All three integrate via standard REST APIs with no lock-in; avoid buying all five as Braintrust and Promptfoo partially overlap on testing.' },
-            { q: 'What is the typical cost of these tools?', a: 'As of April 2026: Braintrust ~$500/month (starter), Vellum $200–500/month by request volume, Promptfoo free (open-source self-hosted), PromptHub $50–300/month by team size, LangSmith free tier with paid plans from $50/month for production. Costs scale with eval volume, API calls, and seat counts.' },
-            { q: 'Which tool has the best free tier?', a: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted on your infrastructure. PromptHub and LangSmith both offer generous free tiers for small teams. Braintrust and Vellum offer trials only and move quickly to paid plans for teams with meaningful production usage.' },
+            { q: 'What is the typical cost of these tools?', a: 'As of May 2026: Braintrust has a free tier (1M traces, 10k scores, unlimited users) and Pro at $249/month; Vellum has a free tier and Pro at $500/month; Promptfoo is entirely free (open-source); PromptHub is free and $20/user/month (Team); LangSmith Developer is $0/seat (5k traces/month) and Plus is $39/seat/month; Confident AI is free (limited) and $19.99/user/month (Starter). Costs scale with eval volume, API calls, and seat counts.' },
+            { q: 'Which tool has the best free tier?', a: 'Promptfoo is entirely free and open-source — no seat limits, no usage caps, self-hosted on your infrastructure. Braintrust now has a generous permanent free tier: 1M trace spans, 10k scores, and unlimited users with no time limit. Confident AI\'s free tier includes unlimited trace spans with 5 test runs/week. LangSmith Developer is $0/seat with 5k traces/month. PromptHub is free for public prompts with unlimited team members.' },
             { q: 'What is the difference between prompt testing and prompt evaluation?', a: 'Testing (Promptfoo) checks whether a prompt produces correct output for defined inputs — it runs automatically in CI/CD and catches regressions. Evaluation (Braintrust) measures output quality — accuracy, tone, factuality — using LLM judges or humans. Testing is fast and automated; evaluation is slower and more nuanced. Most teams need both.' },
             { q: 'How do I know when I have outgrown Promptfoo and need Braintrust?', a: 'Switch to Braintrust when your team needs to score output quality beyond pass/fail — for example, tone, factual accuracy, or brand adherence. Promptfoo excels at binary correctness tests in CI/CD. Braintrust adds human-in-the-loop scoring, LLM judges, and a ground truth dataset that improves over time. Most teams hit this inflection point when 3–5 people are iterating on prompts daily.' }
           ]
@@ -302,7 +344,8 @@ export const article: Record<Language, PEArticle> = {
             '[Vellum Platform](https://www.vellum.ai) — Vellum product page with production deployment, A/B testing, and monitoring features',
             '[Promptfoo GitHub](https://github.com/promptfoo/promptfoo) — Open-source repository with YAML config docs and red teaming guides',
             '[PromptHub](https://prompthub.com) — Prompt versioning and team collaboration platform',
-            '[LangSmith Documentation](https://docs.smith.langchain.com) — Official LangSmith tracing and observability docs for LangChain'
+            '[LangSmith Documentation](https://docs.smith.langchain.com) — Official LangSmith tracing and observability docs for LangChain',
+            '[Confident AI](https://www.confident-ai.com) — DeepEval-based evaluation and red teaming platform with 50+ built-in metrics'
           ]
         }
       }
