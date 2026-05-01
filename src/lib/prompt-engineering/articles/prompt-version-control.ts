@@ -424,7 +424,7 @@ jobs:
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die LLM-Prompts in der Produktion verwalten, Prompt-Engineers, Engineering-Team-Leads',
-    primaryTerm: 'Prompt Version Control',
+    primaryTerm: 'Prompt-Versionskontrolle',
     readTime: '10 Min. Lesezeit',
     seoTitle: 'Prompt-Versionskontrolle: Git-Workflow & Rollback',
     metaDescription: 'Unveersionierte Prompts schlagen lautlos fehl. MAJOR.MINOR.PATCH-Versioning und Git-Workflows auf jeden Prompt-Change anwenden – Rollback in Sekunden.',
@@ -780,7 +780,7 @@ jobs:
     dateModified: '2026-04-30',
     educationalLevel: 'Advanced',
     audience: 'Développeurs qui gèrent des prompts LLM en production, ingénieurs prompt, responsables d\'équipes techniques',
-    primaryTerm: 'Prompt Version Control',
+    primaryTerm: 'Gestion de versions des prompts',
     readTime: '10 min de lecture',
     seoTitle: 'Gestion des versions de prompts IA : Git & rollback',
     metaDescription: 'Prompts non versionnés : aucun rollback possible sans historique. Appliquez MAJOR.MINOR.PATCH et des workflows git à chaque modification de prompt.',
@@ -1123,25 +1123,393 @@ jobs:
 
   ja: {
     freshness_tier: 'evergreen',
-    theme: 'Team Operations & Governance',
-    title: 'プロンプトのバージョン管理：追跡、ロールバック、チームワークフロー',
-    intro: 'バージョン管理されていないプロンプトはサイレントに失敗します。変更履歴がなければ、プロンプトの更新で出力品質が低下した場合のロールバックパスがありません。セマンティックバージョニング（MAJOR.MINOR.PATCH）、Gitブランチワークフロー、自動回帰テストにより、ソフトウェアチームがコードに用いる規律をプロンプト管理にも適用できます。',
+    theme: 'チーム運用 & ガバナンス',
+    title: 'プロンプトのバージョン管理：追跡・ロールバック・チームワークフロー',
+    intro: 'バージョン管理のないプロンプトはサイレントに失敗します。変更履歴がなければ、プロンプト更新で出力品質が低下した際のロールバック手段がありません。セマンティックバージョニング（MAJOR.MINOR.PATCH）・Gitブランチワークフロー・自動回帰テストにより、ソフトウェア開発チームがコードに適用する規律をプロンプト管理にも実現できます。',
+    publishDate: '2026-04-30',
+    dateModified: '2026-04-30',
+    educationalLevel: 'Advanced',
+    audience: 'プロダクション環境でLLMプロンプトを管理する開発者、プロンプトエンジニア、エンジニアリングチームリード',
+    primaryTerm: 'プロンプトのバージョン管理',
+    readTime: '10分で読める',
     seoTitle: 'プロンプトのバージョン管理：Gitワークフロー・ロールバック・自動テストの実践ガイド',
-    metaDescription: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式、Gitブランチワークフロー、自動回帰テストをすべてのプロンプト変更に適用してください。',
+    metaDescription: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式・Gitブランチワークフロー・自動回帰テストをすべてのプロンプト変更に適用し、品質低下を即座に検出・ロールバックしてください。',
+    leadAnswerBlock: '**プロンプトのバージョン管理は、セマンティックバージョニング（MAJOR.MINOR.PATCH）とGitワークフローを使い、AIプロンプトへのすべての変更を追跡します。即時ロールバック・チーム協業・回帰検出を可能にし、コードに適用されてきた規律をプロンプトにも実現します。**',
+    quickFacts: [
+      'プロンプトのセマンティックバージョニング：出力フォーマット変更はMAJOR、品質改善はMINOR、誤字修正はPATCH',
+      'プロンプトの `git revert` は数秒で完了。バージョン履歴なしの再テストは数時間かかる',
+      'プロンプトのchangelogに必要な5フィールド：バージョン・日付・作成者・変更タイプ（MAJOR/MINOR/PATCH）・期待される出力デルタ',
+      '各プロンプトPRで、手動レビュー前に≥10個のゴールデンテストケースに対して自動回帰テストを実行する',
+      'プロンプト用の3つのブランチパターン：feature/（新機能）・fix/（回帰修正）・experiment/（A/Bテスト）',
+    ],
+    toc: [
+      { label: 'なぜバージョン管理が必要か', anchor: 'why-version-control' },
+      { label: 'プロンプトのセマンティックバージョニング', anchor: 'semantic-versioning' },
+      { label: 'Gitワークフローの設定手順', anchor: 'git-workflow' },
+      { label: 'Changelogの要件', anchor: 'changelog' },
+      { label: 'ロールバック戦略', anchor: 'rollback' },
+      { label: 'チーム協業', anchor: 'team-collaboration' },
+      { label: '自動テスト', anchor: 'automated-testing' },
+      { label: 'よくある失敗', anchor: 'mistakes' },
+      { label: 'コンプライアンス & 監査', anchor: 'regional-considerations' },
+      { label: 'よくある質問', anchor: 'faq' },
+      { label: '関連資料', anchor: 'related-reading' },
+      { label: '参考文献', anchor: 'sources' },
+    ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'プロンプトのバージョン管理：追跡、ロールバック、チームワークフロー',
-      description: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式、Gitブランチワークフロー、自動回帰テストをすべてのプロンプト変更に適用してください。',
+      headline: 'プロンプトのバージョン管理：追跡・ロールバック・チームワークフロー',
+      description: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式・Gitブランチワークフロー・自動回帰テストをすべてのプロンプト変更に適用し、品質低下を即座に検出・ロールバックしてください。',
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
       inLanguage: 'ja',
+      proficiencyLevel: 'Advanced',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows?lang=ja',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows?lang=ja', width: 1200, height: 630 },
+      keywords: ['プロンプトバージョン管理', 'プロンプト管理ワークフロー', 'Gitプロンプト管理', 'プロンプト変更管理', 'AIプロンプトのバージョン管理方法'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'git' },
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'PromptLayer' },
+        { '@type': 'SoftwareApplication', name: 'GitHub Actions' },
+      ],
+      about: [
+        { '@type': 'Thing', name: 'プロンプトのバージョン管理', description: 'AIプロンプトへのすべての変更を追跡し、任意の以前のバージョンへのロールバックを可能にし、各変更の作成者と理由を記録するシステム' },
+        { '@type': 'Thing', name: 'プロンプトのセマンティックバージョニング', description: 'AIプロンプトへのMAJOR.MINOR.PATCHバージョニングの適用：出力フォーマット変更はMAJOR、品質改善はMINOR、誤字修正はPATCH' },
+        { '@type': 'Thing', name: 'プロンプトのロールバック', description: 'git revert・フィーチャーフラグ・環境変数オーバーライドを使用して、AIプロンプトを以前に承認されたバージョンに戻すプロセス' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
-    sections: {},
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'プロンプト変更のGitワークフロー設定手順',
+      inLanguage: 'ja',
+      totalTime: 'PT30M',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'プロンプト変更用のfeatureブランチを作成する', text: '`git checkout -b feature/add-json-output` を実行して変更をmainから分離します。feature/（新機能）・fix/（回帰修正）・experiment/（A/Bテスト）のプレフィックスを使用してください。' },
+        { '@type': 'HowToStep', position: 2, name: 'プロンプトファイルを編集しヘッダーコメントのバージョンを更新する', text: 'プロンプトファイル先頭のSEMVERコメントを変更タイプ（MAJOR・MINOR・PATCH）に合わせて更新します。' },
+        { '@type': 'HowToStep', position: 3, name: 'ゴールデンテストセットに対して自動回帰テストを実行する', text: 'フォーマット検証・出力比較・ハルシネーション検出・レイテンシを含む最低10件の代表的なテストケースを実行します。' },
+        { '@type': 'HowToStep', position: 4, name: 'プルリクエストを作成してレビューチェックリストを完了する', text: 'レビュアーが確認する項目：指示の明確さ・ハルシネーションリスク・出力フォーマット仕様・セキュリティ上の問題・モデル互換性。' },
+        { '@type': 'HowToStep', position: 5, name: 'mainにマージしてリリースをタグ付けする', text: '承認後にmainにマージしてタグ付けします：`git tag v2.0.0 -m "JSON output形式 — MAJOR"` 、続けて `git push origin v2.0.0` を実行します。' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        { '@type': 'Question', name: 'プロンプトのバージョン管理とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトのバージョン管理とは、AIプロンプトへのすべての変更を追跡し、任意の以前のバージョンへのロールバックを可能にし、各変更の作成者と理由を記録するシステムです。プロンプトにセマンティックバージョニング（MAJOR.MINOR.PATCH）を適用します：出力フォーマット変更はMAJOR、品質改善はMINOR、誤字修正はPATCH。プロンプトはGitにテキストファイルとして保存され、変更はPRレビューを経て、リリースにはタグが付けられます。' } },
+        { '@type': 'Question', name: 'プロンプト専用のGitリポジトリは必要ですか？', acceptedAnswer: { '@type': 'Answer', text: '5名未満のチームまたは20件未満のプロンプトの場合：既存のアプリリポジトリの/prompts/ディレクトリを使用してください。より大規模なチームや複数サービスでプロンプトを共有する場合：専用のプロンプトリポジトリの方が所有権・独立したバージョニング・アクセス制御が明確になります。プロンプトがアプリロジックと密結合している場合はアプリリポジトリを、複数サービスにまたがる場合は専用リポジトリを使用してください。' } },
+        { '@type': 'Question', name: 'プロンプトのバージョン管理とモデルのバージョン管理の違いは？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトのバージョン管理は、モデルに送信するテキスト指示への変更を追跡します。モデルのバージョン管理は、アプリケーションが呼び出すAIバージョン（GPT-4o・Claude 3.7・Llama 4）を追跡します。両方に別個のバージョン管理が必要です。対象モデルを変更する場合、プロンプトテキストが同一でもMAJORバンプとして扱ってください。異なるモデルは同じプロンプトに対して異なる応答を返します。' } },
+        { '@type': 'Question', name: 'プロダクション用プロンプトの最小テストスイートサイズは？', acceptedAnswer: { '@type': 'Answer', text: '10〜20件のゴールデンテストケースが最小です。ハッピーパス・エッジケース（空の入力・非常に長い入力）・敵対的な入力（指示の上書き試行）・既知の失敗パターンをカバーしてください。10件未満ではエッジケースが不十分、50件超はメンテナンスコストが高く費用対効果が低下します。' } },
+        { '@type': 'Question', name: '同じプロンプトを複数のモデルで使用する場合のバージョン管理は？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプト＋モデルの組み合わせごとに別個のバージョン履歴を管理してください。プロンプトファイルにメタデータヘッダーを使用します：`# version: 2.1.0 | model: gpt-4o`。新しいモデルにデプロイする際は既存ファイルを上書きせず、新しいバリアントファイルを作成します。昇格前にすべてのモデルバリアントに対してゴールデンテストスイートを実行してください。' } },
+        { '@type': 'Question', name: '文言の変更ごとにバージョンを上げる必要がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい——すべての変更は何らかのレベルでバージョンを上げます。誤字修正：PATCH。フォーマット変更のない品質改善：MINOR。下流のパーサーを壊すフォーマット・構造変更：MAJOR。バージョンバンプを省略しないでください。微小な文言変更でもモデルの動作に予期しない影響を与える可能性があり、バージョン管理のない変更はロールバックできません。' } },
+        { '@type': 'Question', name: 'プロンプトのバージョン管理をネイティブにサポートするツールは？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust・PromptLayer・Vellumは、バージョン比較・評価実行・差分履歴表示のUIダッシュボードを持つネイティブのプロンプトバージョニングを提供します。LangSmithはそのハブにプロンプトバージョン追跡機能を内蔵しています。よりシンプルな設定には、/prompts/ディレクトリを使ったgitが有効です。プロンプトはテキストファイルであり、gitが差分・履歴・ロールバックをネイティブに処理します。' } },
+        { '@type': 'Question', name: 'gitを使用していない場合のプロンプトのロールバック方法は？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプト管理プラットフォーム（Braintrust・Vellum・PromptLayer）を使用している場合は、組み込みのバージョン履歴を使って以前の承認済みバージョンに戻します。環境変数でプロンプトを保存している場合は、変更前にバックアップを保持し、デプロイパイプライン経由で復元します。今後のためにCHANGELOG.mdを最低限追加してください——gitがなくてもロールバックの参照になります。' } },
+        { '@type': 'Question', name: 'プロンプトのバージョン管理にMETI AIガバナンスガイドラインはどう関係しますか？', acceptedAnswer: { '@type': 'Answer', text: '経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、AI利用事業者に対してAI利用の記録・変更履歴の管理を推奨しています。プロンプトバージョン管理の変更履歴・作成者記録・承認ログは、このガイドラインが求めるトレーサビリティを満たします。医療・金融・インフラ分野では、12ヶ月以上の変更履歴の保持が求められる場合があります。' } },
+        { '@type': 'Question', name: '日本のエンタープライズ環境でプロンプト管理を導入するポイントは？', acceptedAnswer: { '@type': 'Answer', text: '日本の大企業では、プロンプト変更に対するドキュメント化・承認プロセスが重要視されます。具体的な導入ポイント：（1）プロンプトリポジトリをGitHub Enterpriseなど社内システムで管理、（2）変更はすべてPRレビュー必須で承認者を明記、（3）変更ログにビジネス要件との関連付けを記録、（4）四半期ごとのプロンプト監査を実施。セキュリティ要件が厳しい場合はBraintrust・VellumのオンプレミスオプションでDSGVO相当のデータ管理を確保してください。' } },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'プロンプトのロールバック方法',
+      inLanguage: 'ja',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'git revert', description: '標準的なロールバック：問題のある変更を取り消す新しいコミットを作成します。即時実行・低リスク・完全な監査証跡。緊急でないロールバックにはこの方法を推奨します。' },
+        { '@type': 'ListItem', position: 2, name: 'フィーチャーフラグの切り替え', description: 'デプロイなしでフラグを以前のプロンプトバージョンに切り替えます。ゼロダウンタイム・実行数秒。事前にフィーチャーフラグのデプロイが必要です。' },
+        { '@type': 'ListItem', position: 3, name: '環境変数オーバーライド', description: 'コードデプロイなしに環境変数でプロンプトをオーバーライドします。最速のホットフィックス手段。通常のレビューフローをバイパスするため中リスクです。' },
+      ],
+    },
+    sections: {
+      tldrCallout: {
+        callouts: [
+          {
+            type: 'tldr',
+            label: 'TL;DR',
+            text: 'すべてのプロンプトにMAJOR.MINOR.PATCHバージョニングとGitワークフローを適用します。変更ごとにPRを作成し、PRごとに自動回帰テストを実行し、マージごとにタグを付けます。ロールバックは `git revert` で——数秒で完了し、完全な監査履歴が保持されます。',
+          },
+        ],
+      },
+
+      tldr: {
+        title: '重要ポイント',
+        isTldr: true,
+        content: [
+          '**要約：** プロンプトのバージョン管理は、セマンティックバージョニング（MAJOR.MINOR.PATCH）とGitワークフローをAIプロンプトに適用します。変更ごとにPRを作成し、PRごとに自動回帰テストを実行し、マージごとにバージョンタグを付けます。ロールバックは `git revert` 一発です。バージョン管理なしでは、プロダクション品質の低下は検知も復旧もできません。',
+        ],
+        items: [
+          'プロンプトにMAJOR.MINOR.PATCHを適用：出力フォーマット変更はMAJOR、品質改善はMINOR、誤字修正はPATCH',
+          'プロンプトはGitの `/prompts/` ディレクトリに保管——コードと同じ扱いで、設定ではなくコードとして管理する',
+          'プロンプト変更はすべてPRを作成。手動レビュー前に自動回帰テストを実行',
+          'プロンプトchangelogの5フィールド：バージョン・日付・作成者・変更タイプ・期待される出力デルタ',
+          'ロールバック方法：`git revert`（標準）・フィーチャーフラグ（ゼロダウンタイム）・環境変数オーバーライド（ホットフィックス）',
+          '機能エリアごとに1名のプロンプトオーナーを割り当て、マージコンフリクトと責任の曖昧さを防ぐ',
+          'プロダクション用プロンプトの最小ゴールデンテストセットは10〜20件',
+        ],
+      },
+
+      whyVersionControl: {
+        id: 'why-version-control',
+        title: 'プロンプトにバージョン管理が必要な理由：サイレント回帰を防ぐ',
+        content: [
+          '**バージョン管理なしのプロンプト変更は品質低下を残さない——エラーログも差分も、ロールバックパスも存在しません。** モデルは例外をスローする代わりに、もっともらしい誤った回答を返します。品質低下に気付くまでに（ユーザーのクレーム・精度指標・下流パースエラー経由で）、元のプロンプトが消えていることがあります。',
+          'バージョン管理が防ぐ3つの失敗パターン：（1）サイレント回帰——文言変更がモデルの動作を微妙に変化させ、誰かが気付く前に数千リクエストにわたって品質が低下する。（2）ロールバック不能——履歴なしでは、以前のプロンプトを記憶や古いデプロイログから復元するしかない。（3）協業時のコンフリクト——2名のエンジニアが同じプロンプトを独立して編集し、後からのマージが前の変更を上書きして記録が残らない。',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'プロンプトのバージョン管理とは、AIプロンプトへのすべての変更を追跡し、任意の以前のバージョンへのロールバックを可能にし、各変更の作成者と理由を記録するシステムです。',
+          },
+        ],
+        callouts: [
+          { type: 'Warning', label: 'サイレント回帰', text: 'プロンプトはサイレントに失敗します——エラーではなく、もっともらしい誤った回答を返します。エラーログは品質低下を検知しません。ゴールデンテストセットに対する回帰テストだけが検出できます。' },
+        ],
+      },
+
+      semanticVersioning: {
+        id: 'semantic-versioning',
+        title: 'AIプロンプトへのセマンティックバージョニングの適用方法',
+        content: [
+          '**MAJOR.MINOR.PATCHバージョニングは、プロンプト変更が下流コードの再テストなしに安全に採用できるかどうかをすべての呼び出し元に伝えます。** MAJORは出力フォーマットが変わった（下流パーサーが壊れる）ことを意味します。MINORは品質が向上したがフォーマットは安定していることを意味します。PATCHは動作への影響なしに文言や明確さのみ変更されたことを意味します。',
+        ],
+        columns: ['変更タイプ', 'バンプのタイミング', '例', '後方互換性'],
+        rows: [
+          { '変更タイプ': 'MAJOR', 'バンプのタイミング': '出力フォーマット変更——JSONからmarkdown、新規必須フィールド、フィールド削除', '例': 'v1.2.0 → v2.0.0', '後方互換性': 'なし——すべての呼び出し元を更新する必要がある' },
+          { '変更タイプ': 'MINOR', 'バンプのタイミング': '品質改善・レイテンシ最適化・指示遵守の向上', '例': 'v1.2.0 → v1.3.0', '後方互換性': 'あり——安全に採用可能' },
+          { '変更タイプ': 'PATCH', 'バンプのタイミング': '誤字修正・明確化・モデルの動作を変えない軽微な文言変更', '例': 'v1.2.0 → v1.2.1', '後方互換性': 'あり——動作変更なし' },
+        ],
+        callouts: [
+          { type: 'Key Point', label: 'MAJORのトリガー', text: 'プロンプトの出力を解析する下流コードが壊れる場合は常にMAJORをバンプします。出力がJSON配列からmarkdownリストに変わった場合、内容が同一でもMAJORバンプです。' },
+          { type: 'Pro Tip', label: 'gitでタグ付け', text: 'マージ後に毎回バージョンをタグ付けします：`git tag v2.1.0 -m "抽出プロンプトの日付推論を改善"` 。ロールバック用の永続的な参照が作成されます。' },
+        ],
+      },
+
+      gitWorkflow: {
+        id: 'git-workflow',
+        title: 'プロンプト変更のGitワークフロー設定手順',
+        content: [
+          '**標準ワークフローは：ブランチ作成 → プロンプト編集 → 回帰テスト → PR作成 → マージ＆タグ付け。** すべてのステップがソフトウェアコードの変更と同じです——プロンプトはコードだからです。',
+        ],
+        numberedItems: [
+          'featureブランチを作成：`git checkout -b feature/add-json-output`。`feature/`（新機能）・`fix/`（回帰修正）・`experiment/`（A/Bテスト）のプレフィックスを使用。',
+          '`/prompts/[name].txt` のプロンプトファイルを編集。先頭のバージョンコメントを更新：`# version: 2.0.0 | changed: JSON出力形式 | author: jane`。',
+          'ゴールデンテストセットに対して自動回帰スイートを実行（最低10件）。フォーマット検証・ゴールデン回答との出力比較・ハルシネーションフラグ・レイテンシをカバーします。PR作成前にすべてのテストがパスする必要があります。',
+          '変更内容・理由・バージョンバンプ（MAJOR/MINOR/PATCH）・期待される出力デルタを記載したPRを作成。レビュアーが確認する項目：明確さ・ハルシネーションリスク・出力フォーマット・セキュリティ。',
+          '承認後、mainにマージしてリリースをタグ付け：`git tag v2.0.0 -m "JSON出力形式 — MAJOR"` 、続けて `git push origin v2.0.0`。',
+        ],
+        codeBlock: `# .github/workflows/prompt-regression.yml
+name: Prompt Regression Tests
+on:
+  pull_request:
+    paths:
+      - 'prompts/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run prompt regression tests
+        run: npm run test:prompts
+        env:
+          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}`,
+        codeLanguage: 'yaml',
+        callouts: [
+          { type: 'Pro Tip', label: 'ディレクトリ構成', text: 'プロンプトは `/prompts/` に、テストフィクスチャは `/prompts/tests/` に保管します。プロンプトファイルをアプリコードと分離しつつ同一リポジトリに置き、独立したアーティファクトとしてレビュー可能にします。' },
+        ],
+      },
+
+      changelog: {
+        id: 'changelog',
+        title: 'プロンプトChangelogエントリに必須の記録項目',
+        content: [
+          '**プロンプトchangelogエントリには5つのフィールドが必要です：バージョン・日付・作成者・変更タイプ・期待される出力デルタ。** 出力デルタが最も重要なフィールドです。変更後のモデルレスポンスの違いを説明することで、下流の呼び出し元が何を更新すべきか把握できます。',
+        ],
+        columns: ['フィールド', '必須', '例'],
+        rows: [
+          { 'フィールド': 'version', '必須': 'はい', '例': '`v2.1.0`' },
+          { 'フィールド': 'date', '必須': 'はい', '例': '`2026-04-30`' },
+          { 'フィールド': 'author', '必須': 'はい', '例': '`jane.smith@company.com`' },
+          { 'フィールド': 'change type', '必須': 'はい', '例': '`MINOR — 日付抽出の推論を改善`' },
+          { 'フィールド': 'expected output delta', '必須': 'はい', '例': '`日付フィールドがISO 8601（YYYY-MM-DD）で一貫して出力されるようになります。以前：エッジケースの約30%でMM/DD/YYYYが返される。`' },
+        ],
+        codeBlock: `## [v2.1.0] — 2026-04-30
+
+**Author:** jane.smith@company.com
+**Change type:** MINOR — improved date extraction reasoning
+**Expected output delta:** Date fields now consistently use ISO 8601 format (YYYY-MM-DD).
+  Previous behavior: returned MM/DD/YYYY in ~30% of edge cases.
+  Backwards-compatible — parsers accepting ISO 8601 require no update.
+
+**Test results:** 18/18 golden test cases passed (previously 15/18).`,
+        codeLanguage: 'markdown',
+        callouts: [
+          { type: 'Best Practice', label: '変更前にchangelogを書く', text: 'プロンプト変更を書く前にchangelogエントリを書きます——意図を明確にする強制力になります。期待される出力デルタを説明できないなら、変更の内容をまだ理解していません。' },
+        ],
+      },
+
+      rollback: {
+        id: 'rollback',
+        title: 'プロンプトを以前のバージョンにロールバックするタイミングと方法',
+        content: [
+          '**`git revert` が標準のロールバックパスです——履歴を消さずに問題のある変更を取り消す新しいコミットを作成します。** ロールバックのトリガーを把握し、緊急度に応じた方法を選択してください。',
+          'ロールバックのトリガー：（1）精度指標やユーザー報告でプロダクション品質の低下を検知。（2）デプロイ済みプロンプトにセキュリティ上の問題が発見された。（3）モデルバージョン更新で既存プロンプトとの互換性が壊れた。（4）ビジネスロジック変更により以前の出力フォーマットが不正確になった。',
+        ],
+        columns: ['ロールバック方法', '速度', 'リスク', '使用タイミング'],
+        rows: [
+          { 'ロールバック方法': '`git revert <commit>`', '速度': 'コミット作成は数秒、デプロイは数分', 'リスク': '低——ドキュメント化されたrevertコミットを作成', '使用タイミング': '標準の非緊急ロールバック。完全な監査履歴を保持' },
+          { 'ロールバック方法': 'フィーチャーフラグ切り替え', '速度': '数秒——デプロイ不要', 'リスク': '低——フラグが事前デプロイ済みならゼロダウンタイム', '使用タイミング': 'プロンプト選択がすでにフラグ管理下にあり、フラグシステムが稼働中の場合' },
+          { 'ロールバック方法': '環境変数オーバーライド', '速度': '数秒——コードデプロイ不要', 'リスク': '中——通常のレビューフローをバイパス', '使用タイミング': '緊急ホットフィックスのみ。直後に正式な `git revert` PRで対応する' },
+        ],
+        callouts: [
+          { type: 'Warning', label: 'ロールバック前にテスト', text: '回帰テストなしでロールバックしないでください——以前に修正したバグを再導入する可能性があります。ロールバックするバージョンが修正していたバグが、回避したい回帰より深刻かもしれません。' },
+        ],
+      },
+
+      teamCollaboration: {
+        id: 'team-collaboration',
+        title: 'チームでのプロンプト変更管理とコンフリクト防止',
+        content: [
+          '**所有権がマージコンフリクトを防ぎます：機能エリアごとに1名のプロンプトオーナーを割り当て、そのプロンプトへのすべての変更にオーナーのレビューを必須とします。** 明確な所有権がなければ、2名のエンジニアが同じプロンプトを並行して編集し、後からのマージが前の変更を上書きします。',
+          'チームに適した2つのリポジトリパターン：（1）`/prompts/` ディレクトリを含むモノリポ——プロンプトが単一サービスと密結合していて、プロンプト変更をアプリと一緒にデプロイする必要がある場合に最適。（2）専用プロンプトリポジトリまたはパッケージ——プロンプトを複数サービスで共有する場合や、アプリリポジトリアクセスなしにプロンプトエンジニアが独立したレビューサイクルを必要とする場合に最適。',
+        ],
+        callouts: [
+          { type: 'Best Practice', label: 'オーナーシップモデル', text: '機能エリアごとに1名のプロンプトオーナーを割り当てます（例：抽出プロンプトオーナー、分類プロンプトオーナー）。そのプロンプトへのすべての変更はそのオーナーのレビューを経ます——例外なし。' },
+        ],
+      },
+
+      automatedTesting: {
+        id: 'automated-testing',
+        title: 'プロンプト変更リリース前に自動テストが検出する問題',
+        content: [
+          '**回帰テストはフォーマット崩れを検出し、LLM-as-judgeは品質低下を検出します。** 4種類のテストで、プロンプト変更がプロダクションに到達する前の主要な失敗モードをカバーします。',
+          '4種類のテスト：（1）フォーマット検証——出力が期待されるスキーマ（JSON構造・必須フィールド・データ型）に一致することをアサート。ミリ秒で実行され、破壊的変更の60〜70%を検出。（2）ゴールデンセット比較——10〜20件の代表的な入力に対してマニュアル検証済みの正解と出力を比較。LLM-as-judgeまたは文字列類似度指標でスコアリング。（3）ハルシネーションフラグ——提供されたコンテキストに基づかない出力内の事実主張を検出。入力にない事実を断言した応答にフラグを立てる。（4）レイテンシチェック——中央値のレスポンス時間が許容範囲内（例：p95 ≤ 3秒）であることをアサート。過剰なモデル計算を引き起こすプロンプトを検出。',
+        ],
+        callouts: [
+          { type: 'Key Point', label: '最小テストセット', text: 'プロダクション用プロンプトの最小ゴールデンテストセットは10〜20件です。ハッピーパス・エッジケース（空または非常に長い入力）・敵対的入力・既知の失敗パターンをカバーしてください。' },
+        ],
+      },
+
+      mistakes: {
+        id: 'mistakes',
+        title: 'プロンプトバージョン管理でよくある失敗',
+        mistakes: [
+          {
+            mistake: '初日からバージョニング体系を設定しない',
+            problem: 'チームが成長して複数のエンジニアが共有のバージョニング規約なしにプロンプトを編集すると、サイレントな破壊的変更がリリースされる',
+            fix: 'プロダクションの最初のプロンプトからMAJOR.MINOR.PATCHを採用する——今日1名のエンジニアだけがプロンプトを書いていても、次の採用者はそのシステムを引き継ぐ',
+          },
+          {
+            mistake: 'プロンプトをアプリケーションコード内に保管する',
+            problem: 'アプリコードに埋め込まれたプロンプトは独立してレビュー・テスト・バージョン管理できない——アプリのデプロイのたびに変更される',
+            fix: 'すべてのプロンプトを `/prompts/` に、テストフィクスチャを `/prompts/tests/` に移動する。アプリコードに触れずに独立したアーティファクトとしてレビュー可能になる',
+          },
+          {
+            mistake: 'PRごとにchangelogを必須にしない',
+            problem: '数週間後に回帰が発生しても、何が・いつ・なぜ変わったかの記録がなく、gitログの時間のかかる調査を強いられる',
+            fix: 'CHANGELOG.mdエントリをCIチェックでPRの必須要件にする——変更されたプロンプトファイルのchangelogエントリがなければPRが失敗する',
+          },
+          {
+            mistake: 'ハッピーパスのみをテストする',
+            problem: '以前のバージョンで機能していたエッジケースがプロンプト変更後にサイレントに壊れ、ユーザーのクレームや下流のパースエラーでのみ検出される',
+            fix: '最低10件のゴールデンテストケースを必須とし、少なくとも2件のエッジケースと1件の敵対的入力を含める——テストスイートが全パスしなければPRはマージできない',
+          },
+          {
+            mistake: '回帰テストなしでロールバックする',
+            problem: 'ロールバックしたバージョンが、今ロールバックした変更で修正されていたバグを再導入し、最初の回帰に加えて2番目の回帰が発生する',
+            fix: 'revert PRをマージする前に必ず完全な回帰スイートを実行する——ロールバックコミットをフォワード変更と同じテストゲートが必要なプロダクション変更として扱う',
+          },
+        ],
+      },
+
+      regionalConsiderations: {
+        id: 'regional-considerations',
+        title: 'プロンプト変更のコンプライアンスと監査要件',
+        content: [
+          '**日本（METI AIガバナンス）：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年3月）は、高リスクAIシステムに対してAI利用の記録・変更履歴の管理を推奨しています。プロンプトバージョン管理の作成者記録・変更タイプ・承認ログはこのガイドラインのトレーサビリティ要件を満たします。医療・金融・重要インフラ分野では、12ヶ月以上のプロンプトバージョン履歴と改ざん防止ストレージが求められる場合があります。',
+          '**東アジア・アジア太平洋地域（データ主権）：** 日本（改正個人情報保護法）・韓国（PIPA）・シンガポール（PDPA）・マレーシア（PDPA）はデータの越境転送に関する規制を強化しています。プロンプトが個人データを処理する場合、バージョン管理済みのプロンプトリポジトリをオンプレミスまたはローカルクラウドリージョンに保持することで越境転送リスクを軽減できます。',
+          '**グローバル展開する企業向け（EU AI法）：** EU AI法は医療・金融・HR・重要インフラの高リスクシステムに対してAI出力のトレーサビリティを要求します。バージョン管理済みプロンプト履歴（作成者・日付・変更タイプ・承認記録）は追加ツールなしでこのトレーサビリティ要件を満たします。',
+        ],
+      },
+
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'プロンプトのバージョン管理とは何ですか？',
+            a: 'プロンプトのバージョン管理とは、AIプロンプトへのすべての変更を追跡し、任意の以前のバージョンへのロールバックを可能にし、各変更の作成者と理由を記録するシステムです。プロンプトにセマンティックバージョニング（MAJOR.MINOR.PATCH）を適用します：出力フォーマット変更はMAJOR、品質改善はMINOR、誤字修正はPATCH。プロンプトはGitにテキストファイルとして保存され、変更はPRレビューを経て、リリースにはタグが付けられます。',
+          },
+          {
+            q: 'プロンプト専用のGitリポジトリは必要ですか？既存のアプリのリポジトリで管理できますか？',
+            a: '5名未満のチームまたは20件未満のプロンプトの場合：既存のアプリリポジトリの/prompts/ディレクトリを使用してください。より大規模なチームや複数サービスでプロンプトを共有する場合：専用のプロンプトリポジトリの方が所有権・独立したバージョニング・アクセス制御が明確になります。プロンプトがアプリロジックと密結合している場合はアプリリポジトリを、複数サービスやチームにまたがる場合は専用リポジトリを使用してください。',
+          },
+          {
+            q: 'プロンプトのバージョン管理とモデルのバージョン管理の違いは何ですか？',
+            a: 'プロンプトのバージョン管理は、モデルに送信するテキスト指示への変更を追跡します。モデルのバージョン管理は、アプリケーションが呼び出すAIのバージョン（GPT-4o・Claude 3.7・Llama 4）を追跡します。両方に別個のバージョン管理が必要です。対象モデルを変更する場合、プロンプトテキストが同一でもMAJORバンプとして扱ってください。異なるモデルは同じプロンプトに対して異なる応答を返します。',
+          },
+          {
+            q: 'プロダクション用プロンプトの最小テストスイートサイズは？',
+            a: '10〜20件のゴールデンテストケースが最小です。ハッピーパス・エッジケース（空の入力・非常に長い入力）・敵対的な入力（指示の上書き試行）・既知の失敗パターンをカバーしてください。10件未満ではエッジケースが不十分、50件超はメンテナンスコストが高く費用対効果が低下します。',
+          },
+          {
+            q: '同じプロンプトを複数のモデルで使用する場合のバージョン管理は？',
+            a: 'プロンプト＋モデルの組み合わせごとに別個のバージョン履歴を管理してください。プロンプトファイルにメタデータヘッダーを使用します：`# version: 2.1.0 | model: gpt-4o`。新しいモデルにデプロイする際は既存ファイルを上書きせず、新しいバリアントファイルを作成します。昇格前にすべてのモデルバリアントに対してゴールデンテストスイートを実行してください。',
+          },
+          {
+            q: '文言の変更ごとにバージョンを上げる必要がありますか？',
+            a: 'はい——すべての変更は何らかのレベルでバージョンを上げます。誤字修正：PATCH。フォーマット変更のない品質改善：MINOR。下流のパーサーを壊すフォーマット・構造変更：MAJOR。バージョンバンプを省略しないでください。微小な文言変更でもモデルの動作に予期しない影響を与える可能性があり、バージョン管理のない変更はロールバックできません。',
+          },
+          {
+            q: 'プロンプトのバージョン管理をネイティブにサポートするツールは？',
+            a: 'Braintrust・PromptLayer・Vellumは、バージョン比較・評価実行・差分履歴表示のUIダッシュボードを持つネイティブのプロンプトバージョニングを提供します。LangSmithはそのハブにプロンプトバージョン追跡機能を内蔵しています。よりシンプルな設定には、/prompts/ディレクトリを使ったgitが有効です。プロンプトはテキストファイルであり、gitが差分・履歴・ロールバックをネイティブに処理します。',
+          },
+          {
+            q: 'gitを使用していない場合のプロンプトのロールバック方法は？',
+            a: 'プロンプト管理プラットフォーム（Braintrust・Vellum・PromptLayer）を使用している場合は、組み込みのバージョン履歴を使って以前の承認済みバージョンに戻します。環境変数でプロンプトを保存している場合は、変更前にバックアップを保持し、デプロイパイプライン経由で復元します。今後のためにCHANGELOG.mdファイルを最低限追加してください——gitがなくてもロールバックの参照になります。',
+          },
+          {
+            q: 'プロンプトのバージョン管理にMETI AIガバナンスガイドラインはどう関係しますか？',
+            a: '経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、AI利用事業者に対してAI利用の記録・変更履歴の管理を推奨しています。プロンプトバージョン管理の変更履歴・作成者記録・承認ログは、このガイドラインが求めるトレーサビリティを満たします。医療・金融・インフラ分野では、さらに厳密な記録保持（12ヶ月以上）が求められる場合があります。',
+          },
+          {
+            q: '日本のエンタープライズ環境でプロンプト管理を導入するポイントは？',
+            a: '日本の大企業では、プロンプト変更に対するドキュメント化・承認プロセスが重要視されます。具体的な導入ポイント：（1）プロンプトリポジトリをGitHub Enterpriseなど社内システムで管理、（2）変更はすべてPRレビュー必須で承認者を明記、（3）変更ログにビジネス要件との関連付けを記録、（4）四半期ごとのプロンプト監査を実施。セキュリティ要件が厳しい場合はBraintrust・VellumのオンプレミスオプションでGDPR相当のデータ管理を確保してください。',
+          },
+        ],
+      },
+
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[チームのためのプロンプトレビューワークフロー](/prompt-engineering/prompt-review-workflow-for-teams?lang=ja) — プロンプト変更をデプロイ前にレビューするための7点チェックリストとCI/CDゲート',
+          '[LLM出力のビルド品質チェック](/prompt-engineering/build-quality-checks?lang=ja) — プロンプトPRゲートの一部として実行する自動品質チェック',
+          '[モデル横断でのプロンプトテスト方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — リリース前のプロンプト一貫性を検証するクロスモデル回帰テスト',
+          '[AIハルシネーションを止める方法](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — バージョン管理ワークフローの自動テストステップ向けハルシネーション検出技術',
+          '[RTFプロンプトフレームワーク](/prompt-engineering/rtf-framework?lang=ja) — 出力フォーマットを明示することでバージョン管理を簡素化する構造化プロンプト形式（Role・Task・Format）',
+        ],
+      },
+
+      sources: {
+        id: 'sources',
+        title: '参考文献',
+        items: [
+          '[Semantic Versioning仕様（semver.org）](https://semver.org/) — MAJOR.MINOR.PATCHの標準仕様。プロンプトバージョニングに直接適用可能',
+          '[Gitドキュメント：git revert](https://git-scm.com/docs/git-revert) — プロンプトバージョン管理ワークフローで使用する主要ロールバックメカニズムの公式リファレンス',
+          '[Braintrust：プロンプト評価・バージョニングガイド](https://www.braintrust.dev/docs/guides/evals) — 専用ツールを使ったプロンプトバージョニング・自動テスト・CI/CD統合の技術ガイド',
+        ],
+      },
+    },
   },
 
   zh: {
