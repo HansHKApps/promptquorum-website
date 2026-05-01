@@ -64,6 +64,8 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       { q: 'Ist Prompt Engineering im Jahr 2026 noch relevant?', a: 'Ja — trotz verbesserter Modelllogik bleibt Prompt Engineering unverzichtbar. Chain-of-Thought-Prompting verbessert die Genauigkeit bei komplexem Denken um 30–40%. Mit besseren Modellen verschiebt sich Prompt Engineering vom Korrigieren von Schwächen hin zum Freischalten von Fähigkeiten.' },
       { q: 'Was ist der Unterschied zwischen Prompt Engineering und Fine-Tuning?', a: 'Prompt Engineering gestaltet das Modellverhalten durch Eingabedesign ohne Modellgewichte zu ändern — schnell (Minuten) und modell-agnostisch. Fine-Tuning trainiert ein Modell auf neuen Daten und erfordert Datensätze und Stunden. Nutzen Sie zuerst Prompt Engineering; Fine-Tuning nur, wenn Prompts konsistent nicht ausreichen.' },
       { q: 'Welche Tools verwenden Prompt Engineers?', a: 'Der Kern-Stack: eine Prompt-IDE (Cursor oder VS Code mit Continue.dev), ein Testframework (Braintrust oder Promptfoo), ein Versionskontrollsystem (PromptHub oder Git) und eine Multi-Modell-Testplattform (PromptQuorum für gleichzeitige Vergleiche). Fortgeschrittene Teams fügen Vellum für Produktions-Traffic-Management hinzu.' },
+      { q: 'Muss ich bei der Nutzung von KI-Tools die DSGVO beachten?', a: 'Ja — bei der Verarbeitung personenbezogener Daten über KI-APIs gilt DSGVO Artikel 28 (Auftragsverarbeitung). Lokale Inferenz oder DSGVO-konforme EU-Anbieter reduzieren das Datenschutzrisiko erheblich. Für den deutschen Mittelstand empfehlen die BSI-Grundschutz-Kataloge klare Richtlinien zur KI-Datenverarbeitung.' },
+      { q: 'Ist Prompt Engineering für den deutschen Mittelstand geeignet?', a: 'Ja — Mittelstandsunternehmen nutzen Prompt Engineering besonders für Kundenservice-Automatisierung, Dokumentenverarbeitung und interne Wissensverwaltung. Standardisierte Frameworks (CO-STAR, CRAFT) kombiniert mit EU-gehosteten Modellen erfüllen typische BSI-Sicherheitsanforderungen ohne Investitionen in Fine-Tuning.' },
     ],
     fr: [
       { q: "Qu'est-ce que le prompt engineering ?", a: "Le prompt engineering est la pratique qui consiste à structurer les requêtes adressées aux modèles d'IA pour obtenir des sorties meilleures et plus cohérentes. Il implique l'utilisation de frameworks, de formats, d'exemples et de contraintes pour guider le comportement du modèle." },
@@ -84,6 +86,8 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       { q: 'プロンプトエンジニアリングは2026年も重要ですか？', a: 'はい — モデルの推論能力が向上しても依然不可欠です。チェーン・オブ・ソート・プロンプティングはベンチマークで複雑な推論精度を30〜40%向上させます。モデルが改善するにつれて、プロンプトエンジニアリングは弱点の修正から能力の解放へとシフトしています。' },
       { q: 'プロンプトエンジニアリングとファインチューニングの違いは何ですか？', a: 'プロンプトエンジニアリングはモデルの重みを変えずに入力設計でモデルの動作を形成します（分単位・モデル非依存）。ファインチューニングは新しいデータでモデルを訓練し、データセットと時間が必要です。まずプロンプトエンジニアリングを試し、一貫して解決できない場合のみファインチューニングを使用してください。' },
       { q: 'プロンプトエンジニアはどんなツールを使いますか？', a: 'コアスタック：プロンプトIDE（CursorまたはContinue.dev付きVS Code）、テストフレームワーク（BraintrustまたはPromptfoo）、バージョン管理（PromptHubまたはGit）、マルチモデルテストプラットフォーム（PromptQuorum）。上級チームはプロダクショントラフィック管理にVellumも追加します。' },
+      { q: 'METIのAIガバナンスガイドラインはプロンプトエンジニアリングにどう関係しますか？', a: '経済産業省（METI）の2024年AIガバナンスガイドラインでは、AIシステムの決定を追跡可能にすることを推奨しています。プロンプトのバージョン管理と承認ワークフローを導入することで、この要件を満たしつつ、変更履歴を監査証跡として保持できます。' },
+      { q: 'エンタープライズ環境でプロンプトエンジニアリングを安全に運用するには？', a: 'CI/CDゲートによる自動テスト、セキュリティレビュアーによる承認フロー、インジェクション脆弱性スキャンの3層防御が推奨されます。日本の規制業界（金融・医療・法律）では、本番デプロイ前に必ずコンプライアンスレビューを実施しています。' },
     ],
     zh: [
       { q: '什么是提示词工程？', a: '提示词工程是通过结构化对AI模型的请求来获得更好、更一致输出的实践。它涉及使用框架、格式、示例和约束来指导模型行为。' },
@@ -94,6 +98,8 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       { q: '2026年提示词工程还重要吗？', a: '是的——尽管模型推理能力不断提升，提示词工程依然必不可少。思维链提示在基准测试中将复杂推理精度提高30-40%。随着模型改进，提示词工程从纠正弱点转向释放能力。' },
       { q: '提示词工程和微调有什么区别？', a: '提示词工程通过输入设计塑造模型行为而不改变模型权重——速度快（分钟级）且与模型无关。微调在新数据上训练模型，需要数据集和数小时的时间。先使用提示词工程；仅在提示词始终无法解决任务时才进行微调。' },
       { q: '提示词工程师使用哪些工具？', a: '核心工具栈：提示词IDE（Cursor或带Continue.dev的VS Code）、测试框架（Braintrust或Promptfoo）、版本控制（PromptHub或Git）以及多模型测试平台（PromptQuorum用于同时比较GPT-4o、Claude和Gemini的输出）。高级团队还会添加Vellum用于生产流量管理。' },
+      { q: '使用AI工具需要遵守中国数据安全法吗？', a: '是的——中国《数据安全法》（2021年）和《个人信息保护法》（PIPL）要求中国用户的数据在境内存储和处理。对于处理敏感数据的企业，本地部署模型或阿里云、腾讯云等国内云服务商的AI接口可满足数据安全合规要求。' },
+      { q: '如何为企业级生产环境搭建安全的提示词工程体系？', a: '企业级体系需要三层保障：自动化测试（格式验证、安全扫描、幻觉检测）、人工审核（领域专家 + 安全审查员）以及CI/CD门控（未审批提示词无法合并）。金融、医疗、法律行业还需额外的合规审查，建议使用Git进行版本控制并保留完整审计记录。' },
     ],
   }
 
@@ -164,6 +170,63 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
     ja: 'プロンプトエンジニアリング', zh: '提示词工程',
   }
 
+  const BREADCRUMB_HOME: Record<string, string> = {
+    en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页',
+  }
+
+  const ITEM_LIST_NAMES: Record<string, string[]> = {
+    en: [
+      'What Is Prompt Engineering?',
+      'Chain-of-Thought Prompting',
+      'Zero-Shot vs. Few-Shot Prompting',
+      'Temperature and Top-P',
+      'System Prompt vs. User Prompt',
+      'CO-STAR Framework',
+      'RAG Explained',
+      'Prompt Chaining',
+    ],
+    de: [
+      'Was ist Prompt Engineering?',
+      'Chain-of-Thought-Prompting',
+      'Zero-Shot vs. Few-Shot-Prompting',
+      'Temperatur und Top-P',
+      'System-Prompt vs. Benutzer-Prompt',
+      'CO-STAR-Framework',
+      'RAG erklärt',
+      'Prompt-Chaining',
+    ],
+    fr: [
+      "Qu'est-ce que le prompt engineering ?",
+      'Chain-of-Thought Prompting',
+      'Zero-Shot vs. Few-Shot Prompting',
+      'Température et Top-P',
+      'Prompt système vs. Prompt utilisateur',
+      'Framework CO-STAR',
+      'RAG expliqué',
+      'Chaînage de prompts',
+    ],
+    ja: [
+      'プロンプトエンジニアリングとは何か',
+      'チェーン・オブ・ソート・プロンプティング',
+      'ゼロショットvsフューショット',
+      '温度とTop-P',
+      'システムプロンプトvsユーザープロンプト',
+      'CO-STARフレームワーク',
+      'RAG解説',
+      'プロンプトチェーニング',
+    ],
+    zh: [
+      '什么是提示词工程？',
+      '思维链提示',
+      '零样本与少样本提示',
+      '温度与Top-P',
+      '系统提示与用户提示',
+      'CO-STAR框架',
+      'RAG解析',
+      '提示词链',
+    ],
+  }
+
   const jsonLdSchemas = [
     {
       '@context': 'https://schema.org',
@@ -194,7 +257,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@type': 'BreadcrumbList',
       'inLanguage': selectedLang,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', 'position': 1, 'name': BREADCRUMB_HOME[selectedLang] ?? 'Home', 'item': 'https://www.promptquorum.com' },
         { '@type': 'ListItem', 'position': 2, 'name': BREADCRUMB_LABELS[selectedLang] ?? 'Prompt Engineering', 'item': `https://www.promptquorum.com/prompt-engineering${langSuffix}` },
       ],
     },
@@ -226,16 +289,25 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       'name': t.promptEngineeringHubTitle,
       'inLanguage': selectedLang,
       'numberOfItems': 8,
-      'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'url': `https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering${langSuffix}`, 'name': 'What Is Prompt Engineering?' },
-        { '@type': 'ListItem', 'position': 2, 'url': `https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting${langSuffix}`, 'name': 'Chain-of-Thought Prompting' },
-        { '@type': 'ListItem', 'position': 3, 'url': `https://www.promptquorum.com/prompt-engineering/zero-shot-vs-few-shot${langSuffix}`, 'name': 'Zero-Shot vs. Few-Shot Prompting' },
-        { '@type': 'ListItem', 'position': 4, 'url': `https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity${langSuffix}`, 'name': 'Temperature and Top-P' },
-        { '@type': 'ListItem', 'position': 5, 'url': `https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference${langSuffix}`, 'name': 'System Prompt vs. User Prompt' },
-        { '@type': 'ListItem', 'position': 6, 'url': `https://www.promptquorum.com/prompt-engineering/co-star-framework${langSuffix}`, 'name': 'CO-STAR Framework' },
-        { '@type': 'ListItem', 'position': 7, 'url': `https://www.promptquorum.com/prompt-engineering/rag-explained${langSuffix}`, 'name': 'RAG Explained' },
-        { '@type': 'ListItem', 'position': 8, 'url': `https://www.promptquorum.com/prompt-engineering/prompt-chaining${langSuffix}`, 'name': 'Prompt Chaining' },
-      ],
+      'itemListElement': (() => {
+        const names = ITEM_LIST_NAMES[selectedLang] ?? ITEM_LIST_NAMES['en']
+        const slugs = [
+          'what-is-prompt-engineering',
+          'chain-of-thought-prompting',
+          'zero-shot-vs-few-shot',
+          'temperature-and-top-p-control-ai-creativity',
+          'system-prompt-vs-user-prompt-whats-the-difference',
+          'co-star-framework',
+          'rag-explained',
+          'prompt-chaining',
+        ]
+        return slugs.map((slug, i) => ({
+          '@type': 'ListItem',
+          'position': i + 1,
+          'url': `https://www.promptquorum.com/prompt-engineering/${slug}${langSuffix}`,
+          'name': names[i],
+        }))
+      })(),
     },
   ]
 

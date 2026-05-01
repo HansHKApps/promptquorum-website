@@ -122,21 +122,21 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   'evaluation-reliability': {
     en: 'Systematic methods to evaluate prompt quality, test across models, and build reliable prompts for production. Untested prompts fail silently — they return plausible-sounding wrong answers instead of throwing errors, meaning quality issues go undetected until production. These guides cover prompt evaluation metrics (accuracy, consistency, latency), regression testing to catch breaking changes, brittleness reduction strategies, cross-model consistency testing, and building automated review gates into CI/CD pipelines.',
     de: 'Systematische Methoden zur Bewertung der Prompt-Qualität, zum Testen über Modelle hinweg und zum Erstellen zuverlässiger Prompts für die Produktion. Ungetestete Prompts scheitern lautlos. Diese Leitfäden decken Bewertungsmetriken, Regressionstests, Sprödigkeitsreduzierung, Modell-übergreifende Konsistenz und CI/CD-Review-Gates ab.',
-    fr: 'Méthodes systématiques pour évaluer la qualité des prompts, tester sur plusieurs modèles et créer des prompts fiables pour la production. Les prompts non testés échouent silencieusement. Ces guides couvrent les métriques d\'évaluation, les tests de régression, la réduction de la fragilité, la cohérence multi-modèles et les gates de revue CI/CD.',
+    fr: 'Méthodes systématiques pour évaluer la qualité des prompts, tester sur plusieurs modèles et créer des prompts fiables pour la production. Les prompts non testés échouent silencieusement. Ces guides couvrent les métriques d\'évaluation, les tests de régression, la réduction de la fragilité, la cohérence multi-modèles et les contrôles de revue CI/CD.',
     ja: 'プロンプト品質を評価し、複数のモデル間でテストし、本番環境向けに信頼性の高いプロンプトを構築するための体系的な方法。テストされていないプロンプトはサイレントに失敗します。評価指標、回帰テスト、脆弱性低減、クロスモデル一貫性テスト、CI/CDへのレビューゲート統合をカバーします。',
     zh: '评估提示词质量、跨模型测试以及为生产环境构建可靠提示词的系统化方法。未经测试的提示词会悄无声息地失败。这些指南涵盖评估指标、回归测试、脆弱性降低策略、跨模型一致性测试，以及将自动化审查门禁集成到CI/CD流水线中。',
   },
   'team-governance': {
     en: 'Establish version control, documentation, governance, and security workflows for team-based prompt engineering. As AI becomes a core engineering function, teams need repeatable processes: Git-based prompt versioning (every prompt change is a PR), standardized documentation templates, approval workflows with domain and security reviewers, injection-vulnerability scanning, and full audit trails for compliance. These guides explain how to operationalize prompt engineering at team scale without adding workflow overhead.',
     de: 'Etablieren Sie Versionskontrolle, Dokumentation, Governance und Sicherheits-Workflows für teambasiertes Prompt Engineering. Teams benötigen reproduzierbare Prozesse: Git-basierte Prompt-Versionierung, standardisierte Dokumentationsvorlagen, Genehmigungs-Workflows, Injection-Schwachstellen-Scans und vollständige Audit-Trails.',
-    fr: 'Établissez le contrôle de version, la documentation, la gouvernance et les workflows de sécurité pour le prompt engineering en équipe. Les équipes ont besoin de processus reproductibles : versioning Git des prompts, templates de documentation standardisés, workflows d\'approbation, scan des vulnérabilités d\'injection et pistes d\'audit complètes.',
+    fr: 'Établissez le contrôle de version, la documentation, la gouvernance et les processus de sécurité pour le prompt engineering en équipe. Les équipes ont besoin de processus reproductibles : versioning Git des prompts, templates de documentation standardisés, processus d\'approbation, scan des vulnérabilités d\'injection et pistes d\'audit complètes.',
     ja: 'チームベースのプロンプトエンジニアリングのためのバージョン管理、ドキュメント、ガバナンス、セキュリティワークフローを確立します。Gitベースのプロンプトバージョニング、標準化されたドキュメントテンプレート、承認ワークフロー、インジェクション脆弱性スキャン、完全な監査証跡が必要です。',
     zh: '为基于团队的提示词工程建立版本控制、文档、治理和安全工作流。团队需要可重复的流程：基于Git的提示词版本控制、标准化文档模板、审批工作流、注入漏洞扫描和完整审计跟踪。',
   },
   'workflows-automation': {
     en: 'Build structured outputs, automate prompt workflows, and design repeatable processes for teams and use cases. These guides cover JSON mode and structured extraction (Instructor, Outlines, Pydantic AI), prompt chaining into multi-step workflows, cross-model testing pipelines, and how to configure prompt engineering workflows for developers, content teams, and support operations. Each guide includes practical patterns deployable in days, not months.',
     de: 'Erstellen Sie strukturierte Ausgaben, automatisieren Sie Prompt-Workflows und entwerfen Sie wiederholbare Prozesse. Diese Leitfäden decken JSON-Mode (Instructor, Outlines, Pydantic AI), Prompt-Chaining in mehrstufigen Workflows und Prompt-Engineering-Setups für Entwickler, Content-Teams und Support-Operationen ab.',
-    fr: 'Créez des sorties structurées, automatisez les workflows de prompts et concevez des processus reproductibles. Ces guides couvrent le mode JSON (Instructor, Outlines), le prompt chaining en workflows multi-étapes, et la configuration de workflows pour développeurs, équipes contenu et opérations de support.',
+    fr: 'Créez des sorties structurées, automatisez les flux de travail de prompts et concevez des processus reproductibles. Ces guides couvrent le mode JSON (Instructor, Outlines), le prompt chaining en flux de travail multi-étapes, et la configuration des flux de travail pour développeurs, équipes contenu et opérations de support.',
     ja: '構造化された出力を構築し、プロンプトワークフローを自動化し、チームとユースケース向けの反復可能なプロセスを設計します。JSONモードと構造化抽出（Instructor、Outlines、Pydantic AI）、マルチステップワークフロー、開発者・コンテンツチーム・サポートオペレーション向けのワークフロー設定を網羅します。',
     zh: '构建结构化输出、自动化提示词工作流，以及为团队和用例设计可重复的流程。这些指南涵盖JSON模式和结构化提取（Instructor、Outlines、Pydantic AI）、多步骤工作流的提示词链，以及为开发者、内容团队和支持运营配置提示词工程工作流。',
   },
@@ -341,6 +341,8 @@ const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
     { q: 'Ist Prompt Engineering im Jahr 2026 noch relevant?', a: 'Ja — trotz verbesserter Modelllogik bleibt Prompt Engineering unverzichtbar. Chain-of-Thought-Prompting verbessert die Genauigkeit bei komplexem Denken um 30–40%. Mit besseren Modellen verschiebt sich Prompt Engineering vom Korrigieren von Schwächen hin zum Freischalten von Fähigkeiten.' },
     { q: 'Was ist der Unterschied zwischen Prompt Engineering und Fine-Tuning?', a: 'Prompt Engineering gestaltet das Modellverhalten durch Eingabedesign ohne Modellgewichte zu ändern — schnell und modell-agnostisch. Fine-Tuning trainiert ein Modell auf neuen Daten und erfordert Datensätze und Stunden. Nutzen Sie zuerst Prompt Engineering.' },
     { q: 'Welche Tools verwenden Prompt Engineers?', a: 'Der Kern-Stack: eine Prompt-IDE (Cursor oder VS Code mit Continue.dev), ein Testframework (Braintrust oder Promptfoo), ein Versionskontrollsystem (PromptHub oder Git) und PromptQuorum für Multi-Modell-Vergleiche. Fortgeschrittene Teams fügen Vellum für Produktions-Traffic hinzu.' },
+    { q: 'Muss ich bei der Nutzung von KI-Tools die DSGVO beachten?', a: 'Ja — bei der Verarbeitung personenbezogener Daten über KI-APIs gilt DSGVO Artikel 28 (Auftragsverarbeitung). Lokale Inferenz oder DSGVO-konforme EU-Anbieter reduzieren das Datenschutzrisiko erheblich. Für den deutschen Mittelstand empfehlen die BSI-Grundschutz-Kataloge klare Richtlinien zur KI-Datenverarbeitung.' },
+    { q: 'Ist Prompt Engineering für den deutschen Mittelstand geeignet?', a: 'Ja — Mittelstandsunternehmen nutzen Prompt Engineering besonders für Kundenservice-Automatisierung, Dokumentenverarbeitung und interne Wissensverwaltung. Standardisierte Frameworks (CO-STAR, CRAFT) kombiniert mit EU-gehosteten Modellen erfüllen typische BSI-Sicherheitsanforderungen ohne Investitionen in Fine-Tuning.' },
   ],
   fr: [
     { q: "Qu'est-ce que le prompt engineering ?", a: "Le prompt engineering est la pratique qui consiste à structurer les requêtes adressées aux modèles d'IA pour obtenir des sorties meilleures et plus cohérentes. Il implique l'utilisation de frameworks, de formats, d'exemples et de contraintes pour guider le comportement du modèle." },
@@ -361,6 +363,8 @@ const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
     { q: 'プロンプトエンジニアリングは2026年も重要ですか？', a: 'はい — モデルの推論能力が向上しても依然不可欠です。チェーン・オブ・ソート・プロンプティングはベンチマークで複雑な推論精度を30〜40%向上させます。モデルが改善するにつれて、弱点の修正から能力の解放へとシフトしています。' },
     { q: 'プロンプトエンジニアリングとファインチューニングの違いは何ですか？', a: 'プロンプトエンジニアリングはモデルの重みを変えずに入力設計でモデルの動作を形成します（分単位・モデル非依存）。ファインチューニングは新しいデータでモデルを訓練し、データセットと時間が必要です。' },
     { q: 'プロンプトエンジニアはどんなツールを使いますか？', a: 'コアスタック：プロンプトIDE（CursorまたはContinue.dev付きVS Code）、テストフレームワーク（BraintrustまたはPromptfoo）、バージョン管理（PromptHubまたはGit）、マルチモデルテストプラットフォーム（PromptQuorum）。' },
+    { q: 'METIのAIガバナンスガイドラインはプロンプトエンジニアリングにどう関係しますか？', a: '経済産業省（METI）の2024年AIガバナンスガイドラインでは、AIシステムの決定を追跡可能にすることを推奨しています。プロンプトのバージョン管理と承認ワークフローを導入することで、この要件を満たしつつ、変更履歴を監査証跡として保持できます。' },
+    { q: 'エンタープライズ環境でプロンプトエンジニアリングを安全に運用するには？', a: 'CI/CDゲートによる自動テスト、セキュリティレビュアーによる承認フロー、インジェクション脆弱性スキャンの3層防御が推奨されます。日本の規制業界（金融・医療・法律）では、本番デプロイ前に必ずコンプライアンスレビューを実施しています。' },
   ],
   zh: [
     { q: '什么是提示词工程？', a: '提示词工程是通过结构化对AI模型的请求来获得更好、更一致输出的实践。它涉及使用框架、格式、示例和约束来指导模型行为，将模糊的AI响应转化为准确的专家级输出。' },
@@ -371,6 +375,8 @@ const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
     { q: '2026年提示词工程还重要吗？', a: '是的——尽管模型推理能力不断提升，提示词工程依然必不可少。思维链提示在基准测试中将复杂推理精度提高30-40%。随着模型改进，提示词工程从纠正弱点转向释放能力。' },
     { q: '提示词工程和微调有什么区别？', a: '提示词工程通过输入设计塑造模型行为而不改变模型权重——速度快（分钟级）且与模型无关。微调在新数据上训练模型，需要数据集和数小时的时间。先使用提示词工程，仅在必要时才进行微调。' },
     { q: '提示词工程师使用哪些工具？', a: '核心工具栈：提示词IDE（Cursor或带Continue.dev的VS Code）、测试框架（Braintrust或Promptfoo）、版本控制（PromptHub或Git）以及多模型测试平台（PromptQuorum用于同时比较GPT-4o、Claude和Gemini）。' },
+    { q: '使用AI工具需要遵守中国数据安全法吗？', a: '是的——中国《数据安全法》（2021年）和《个人信息保护法》（PIPL）要求中国用户的数据在境内存储和处理。对于处理敏感数据的企业，本地部署模型或阿里云、腾讯云等国内云服务商的AI接口可满足数据安全合规要求。' },
+    { q: '如何为企业级生产环境搭建安全的提示词工程体系？', a: '企业级体系需要三层保障：自动化测试（格式验证、安全扫描、幻觉检测）、人工审核（领域专家 + 安全审查员）以及CI/CD门控（未审批提示词无法合并）。金融、医疗、法律行业还需额外的合规审查，建议使用Git进行版本控制并保留完整审计记录。' },
   ],
 }
 
