@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Record<Language, PEArticle> = {
   en: {
     theme: 'Tools & Platforms',
-    title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo',
+    title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     intro: '**Four tools dominate prompt management for teams: Braintrust for output evaluation, PromptHub for version control, Vellum for production A/B testing, and Promptfoo for CI/CD regression prevention.** Most teams buy all four and waste $1,000+/month. The right stack is always exactly two tools — one for evaluation, one for deployment.',
     metaDescription: 'Braintrust ($500/mo), Vellum ($200–500/mo), Promptfoo (free), PromptHub ($50/mo) each solve a different problem. Most teams need exactly 2 — not all 4. Comparison table inside.',
@@ -27,7 +27,6 @@ export const article: Record<Language, PEArticle> = {
     next_refresh_due: '2026-10-27',
     lastFactChecked: '2026-04-28',
     toc: [
-      { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'What Braintrust, PromptHub, Vellum, and Promptfoo Each Do', anchor: '#what-is' },
       { label: 'How We Compared These Tools', anchor: '#evaluation-criteria' },
       { label: 'Braintrust: Evaluation Depth at ~$500/Month', anchor: '#braintrust' },
@@ -42,6 +41,14 @@ export const article: Record<Language, PEArticle> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
       { label: 'Sources', anchor: '#sources' },
+    ],
+    quickFacts: [
+      'Promptfoo is the only free tool (MIT license, no paid tier) — best for teams that want CI/CD with zero SaaS cost',
+      'Braintrust Team plan runs ~$500/month; Vellum ranges $200–500/month; PromptHub runs $50–200/month',
+      'A typical two-tool stack (evaluation + deployment) costs $250–700/month for a 5-person team',
+      'Only Vellum supports real production traffic splitting (A/B tests on live users)',
+      'All four tools support OpenAI and Anthropic APIs; only Promptfoo supports 40+ providers natively',
+      'PromptQuorum adds a model-agnostic first step: dispatch one prompt to 25+ models before committing to a provider',
     ],
     sections: {
       keyTakeaways: {
@@ -64,6 +71,16 @@ export const article: Record<Language, PEArticle> = {
           '**Braintrust, PromptHub, Vellum, and Promptfoo solve different prompt team problems.** Braintrust is an evaluation platform (score outputs). PromptHub is a version control system (organize and share prompts). Vellum is a deployment platform with A/B testing (run experiments on real traffic). Promptfoo is a test automation tool (catch regressions in CI/CD). They overlap but do not replace each other.',
           'The reason teams struggle to pick one: all four claim to "optimize prompts," but they optimize at different stages. Braintrust optimizes by measuring; Vellum optimizes by splitting traffic; Promptfoo optimizes by catching regressions; PromptHub optimizes by organizing. A team might use Braintrust to discover a better prompt, Promptfoo to test it in CI/CD, and Vellum to deploy it.',
           'This guide is a head-to-head comparison of four specific tools. For a broader ranking of all prompt engineering tools, see [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026). For team optimization features including DSPy and Helicone, see [Best Prompt Optimization Tools for Teams](/prompt-engineering/best-prompt-optimization-tools-for-teams).',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'Braintrust scores, PromptHub versions, Vellum A/B tests, Promptfoo regression-tests — four prompt tools that overlap but don\'t replace each other.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: 'Think of it like building software: you need a test framework (Promptfoo), a quality dashboard (Braintrust), a deployment pipeline (Vellum), and a code repository (PromptHub). Most teams need two of these, not all four.',
+          },
         ],
       },
       evaluationCriteria: {
@@ -108,12 +125,20 @@ export const article: Record<Language, PEArticle> = {
           '**Braintrust is an AI evaluation platform that logs every API call, scores outputs with custom metrics, and runs A/B experiments in a shared lab — best for teams that measure output quality systematically.** Braintrust is not a prompt builder or version control system; it is a shared evaluation laboratory.',
           'Team plan ~$500/month. The logging proxy integrates with OpenAI, Anthropic, and Google APIs without code changes. You define custom scoring functions in TypeScript or Python. GitHub integration lets you version prompts alongside code. Tradeoff: requires engineering expertise to design and maintain scoring functions; overkill if your team is not yet evaluating quality.',
           'Best team features: shared experiment dashboards (all members see eval results in real time), role-based access (admin/member/viewer), git-like commit history for prompts, and production logging (every API call logged with inputs, outputs, and scores).',
+          'For the metrics behind custom scoring, see [Prompt Evaluation Metrics: Accuracy, Relevance, Latency](/prompt-engineering/prompt-evaluation-metrics).',
         ],
         items: [
           'Shared experiment dashboards: all team members see eval results live',
           'Role-based access: admin/member/viewer roles',
           'Prompt versioning via git-like commit history',
           'Production logging: every API call logged with inputs/outputs/scores',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'Scoring Function Complexity',
+            text: 'Braintrust custom scorers require TypeScript or Python. If no one on your team writes scoring functions, Braintrust\'s main differentiator is unusable. Check team capability before buying.',
+          },
         ],
       },
       prompthub: {
@@ -130,6 +155,7 @@ export const article: Record<Language, PEArticle> = {
         content: [
           '**Vellum is a prompt deployment platform with built-in A/B testing that splits real production traffic between prompt variants and measures real-world output quality — best for teams running live LLM features.** Vellum is a control plane, not a testing tool.',
           'Starter $200/month; Growth $500/month; Enterprise custom. Routes production traffic by percentage between variants. Evaluation compares variants on test datasets. Team features: shared workspace, PR-style prompt reviews, deployment approval workflows. Tradeoff: most expensive option; overkill for pre-production teams or teams not yet handling real user traffic.',
+          'For understanding when A/B testing adds value vs. manual optimization, see [Manual vs Automated Prompt Optimization](/prompt-engineering/manual-vs-automated-prompt-optimization).',
         ],
       },
       promptfoo: {
@@ -153,6 +179,13 @@ tests:
       - type: llm-rubric
         value: "Exactly 3 bullets"`,
         codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'tip',
+            label: 'Promptfoo + GitHub Actions',
+            text: 'Promptfoo YAML test configs commit directly to Git. On every PR, GitHub Actions runs the test suite against all configured models and blocks merge on failure. Zero monthly cost, full CI/CD integration.',
+          },
+        ],
       },
       promptquorum: {
         id: 'promptquorum',
@@ -216,6 +249,13 @@ tests:
             'CI/CD': '✗ None',
             Pricing: 'Free + credits',
             'Best For': 'Model selection',
+          },
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: 'Two-Tool Stack Rule',
+            text: 'Most teams waste money on 3–4 tools. The optimal stack is two: one for evaluation (Braintrust or Promptfoo) and one for deployment/versioning (Vellum or PromptHub). Total spend: $250–700/month instead of $1,000+.',
           },
         ],
       },

@@ -78,6 +78,21 @@ function validateFreshnessTier() {
   })
 }
 
+function generateSeoRegistry() {
+  return new Promise((resolve) => {
+    console.log('\n📊 Generating SEO registry...\n')
+    const child = spawn('npx', ['tsx', 'scripts/generate-seo-registry.ts'], { stdio: 'inherit' })
+    child.on('close', (code) => {
+      if (code !== 0) console.warn('⚠ SEO registry generation failed (non-fatal)')
+      resolve()
+    })
+    child.on('error', (err) => {
+      console.warn('⚠ SEO registry generation error (non-fatal):', err.message)
+      resolve()
+    })
+  })
+}
+
 async function main() {
   console.log('Starting build with validator fix...\n')
 
@@ -94,6 +109,8 @@ async function main() {
     console.error('\n❌ Freshness tier validation failed. Please fix errors before building.\n')
     process.exit(1)
   }
+
+  await generateSeoRegistry()
 
   let maxAttempts = 5
   let attempt = 1

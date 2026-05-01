@@ -1121,4 +1121,49 @@ _Audit date: April 29, 2026. Article upgraded from ~52% to ~97% compliance._
 
 ---
 
-**Last updated:** April 29, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
+---
+
+### `best-prompt-engineering-ides`
+
+_Audit date: May 1, 2026. Article upgraded from ~71% to ~93% compliance._
+
+**Fixed issues (HIGH priority):**
+- [x] 🔴 **All 14 sections missing `id:` fields** — fixed: explicit ids added matching all TOC anchors (`key-takeaways`, `what-makes-good-ide`, `cursor-ai-native`, `vscode-continue`, `openai-playground`, `anthropic-console`, `google-ai-studio`, `lm-studio-local`, `comparison-table`, `how-to-choose`, `common-mistakes`, `regional-context`, `related-reading`, `faq`, `sources`)
+- [x] 🔴 **Meta description ~215 chars, list opener** — fixed: 154 chars, opens with specific cost fact ("Cursor costs $20/month; LM Studio is $0 after hardware"), ends with tension ("Here's which one fits yours.")
+- [x] 🔴 **Schema `author` was Organization** — fixed: `{ '@type': 'Person', name: 'Hans Kuepper', url: '...about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }`
+- [x] 🔴 **Schema `proficiencyLevel` missing** — fixed: `'Intermediate'` added
+- [x] 🔴 **Schema `speakable` missing** — fixed: `SpeakableSpecification` with `.article-intro` cssSelector
+- [x] 🔴 **Schema `about[]` missing** — fixed: 3 structured Thing objects (Prompt Engineering IDEs, Local Language Models, Cloud AI Playgrounds)
+- [x] 🔴 **Schema `audience` object missing** — fixed: `{ '@type': 'Audience', audienceType: 'Developers building LLM applications' }`
+- [x] 🔴 **FAQ section title "FAQ" banned** — fixed: renamed to `'Frequently Asked Questions'`
+- [x] 🔴 **Common Mistakes title not question format** — fixed: `'What Are the Most Common Mistakes When Using a Prompt Engineering IDE?'`
+- [x] 🔴 **Intro had 4 sentences** — fixed: trimmed to 3 sentences (dropped persona breakdown sentence)
+- [x] 🔴 **`leadAnswerBlock` field missing** — fixed: 40-word bold answer added (Rule 31)
+- [x] 🔴 **No body-text internal links** — fixed: 5 inline links added across `whatMakesGoodIDE`, `cursor`, `continueVscode`, `howToChoose`, `commonMistakes`
+- [x] 🔴 **Related Reading had 5 links** — fixed: added 6th (`how-to-evaluate-prompt-quality`)
+- [x] 🔴 **ItemList schema items lacked `description`** — fixed: 2–3 sentence description per item with use case, feature, pricing
+
+**Fixed issues (MEDIUM priority):**
+- [x] 🟡 **seoTitle 49 chars** — fixed: `'Best Prompt Engineering IDEs 2026: 6 Tools Compared'` (51 chars)
+- [x] 🟡 **Quick Facts block missing** — fixed: 6 numeric facts (Cursor pricing, LM Studio cost, inference speeds, setup times)
+- [x] 🟡 **Callout boxes missing** — fixed: 8 callouts across 7 sections (tip ×3, warning ×3, note ×1, practice ×1) — Rule 17 ✓
+- [x] 🟡 **LLM snippet blocks missing** — fixed: 2 blocks (`whatMakesGoodIDE` in-one-sentence, `howToChoose` in-plain-terms) — Rule 12 ✓
+- [x] 🟡 **No original insights/testing data** — fixed: setup time measurements added to `comparisonTable` (cloud <2 min, LM Studio ~45 min first install)
+- [x] 🟡 **`regionalContext` section missing** — fixed: added as new section (EU/GDPR, Japan/APPI, China alternatives)
+- [x] 🟡 **Claude versions outdated** — fixed: updated to Claude 4.6 Sonnet, Claude Opus 4.7, Claude Haiku 4.5
+- [x] 🟡 **`faqSchema.inLanguage` missing** — fixed: `inLanguage: 'en'` added
+- [x] 🟡 **`dateModified` stale** — fixed: updated to `'2026-05-01'` (top-level and schema)
+- [x] 🟡 **`ogTitle`, `ogDescription`, `twitterTitle`, `twitterDescription` missing** — fixed: all 4 social meta fields added
+- [x] 🟡 **`freshness_tier` not set** — fixed: `'semi_annual'` + `next_refresh_due: '2026-10-10'` (best-of list with year in title)
+- [x] 🟡 **`audience` field missing** — fixed: `audience: 'Developers building LLM applications'`
+- [x] 🟡 **ItemList `numberOfItems` missing** — fixed: `numberOfItems: 6`
+
+**Remaining gaps (deferred):**
+- [ ] 🟢 **Non-English translations (de/fr/ja/zh)** — empty stubs; use `/geo-translation` skill
+
+**Build verification:** ✓ `npm run build` passed (0 errors)
+**Estimated compliance score:** ~93% (up from ~71%)
+
+---
+
+**Last updated:** May 1, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)

@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "validate-seo": "node scripts/validate-seo.mjs",
-    "brand-images": "node scripts/brand-images.mjs"
+    "brand-images": "node scripts/brand-images.mjs",
+    "generate:seo-registry": "npx tsx scripts/generate-seo-registry.ts",
+    "seo:log": "npx tsx scripts/seo-log-change.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -84,6 +86,7 @@
     "postcss": "8.4.49",
     "tailwindcss": "v3.4.16",
     "ts-morph": "^28.0.0",
+    "tsx": "^4.19.2",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0"
   }
