@@ -9,9 +9,10 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Record<Language, PEArticle> = {
     en: {
       freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-10-02',
       theme: 'Fundamentals',
       title: 'How to Optimize Prompts: Prompt Optimization Techniques & Best Practices',
-      seoTitle: 'How to Optimize Prompts: 6 Levers + 6-Step Process [2026]',
+      seoTitle: 'How to Optimize Prompts in 2026: 6 Levers + 6-Step Process',
       intro: '**Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy.** This comprehensive guide teaches prompt optimization techniques and fundamentals: the 6 core levers, a proven 6-step optimization process, before/after examples for GPT-5.5, Claude, and Gemini, and the 7 most common mistakes to avoid when optimizing prompts.',
       metaDescription: 'Improve AI output quality by 20–40% using 6 levers and a 6-step process. Before/after examples for GPT-5.5, Claude, and Gemini — works on all major models.',
       publishDate: '2026-04-02',
@@ -47,7 +48,7 @@ export const article: Record<Language, PEArticle> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
-        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization',
+        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=en',
         inLanguage: 'en',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },

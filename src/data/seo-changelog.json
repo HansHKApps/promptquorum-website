@@ -17,5 +17,19 @@
     ],
     "reason": "geo-meta-optimizer: fix DE metaDescription (168→150 chars), fix JA metaDescription (74→94 chars, below 80-char min)",
     "baseline": null
+  },
+  {
+    "id": "5ae9366f-8b16-4595-99a8-3cc87cced4c2",
+    "slug": "fundamentals-of-prompt-optimization",
+    "date": "2026-05-01T09:58:19.158Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "How to Optimize Prompts: 6 Levers + 6-Step Process [2026]",
+        "new": "How to Optimize Prompts in 2026: 6 Levers + 6-Step Process"
+      }
+    ],
+    "reason": "Inline year for natural SERP flow",
+    "baseline": null
   }
 ]
