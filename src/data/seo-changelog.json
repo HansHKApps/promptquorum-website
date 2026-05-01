@@ -31,5 +31,19 @@
     ],
     "reason": "Inline year for natural SERP flow",
     "baseline": null
+  },
+  {
+    "id": "0abc2606-a1d2-4252-954e-3f25ade3e787",
+    "slug": "ai-limitations-what-llms-cant-do",
+    "date": "2026-05-01T10:21:21.050Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AI Limitations: What LLMs Can't Do in 2026 (8 Hard Limits)",
+        "new": "Current LLM Limitations 2026: 8 Hard Limits Explained"
+      }
+    ],
+    "reason": "Incorporate dominant GSC keyword pattern: 74% of impressions on queries starting with 'current'",
+    "baseline": null
   }
 ]
