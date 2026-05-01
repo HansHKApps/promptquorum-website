@@ -3382,11 +3382,400 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     },
     ja: {
       category: 'AIモデル比較',
-      title: 'ChatGPT vs Claude vs Gemini：2026年にAIモデルを横並びで比較',
-      intro: '適切なAIモデルを選択するための完全なガイド。 長所、短所、コスト、それぞれをいつ使用するかを学びます。',
+      title: 'ChatGPT vs Claude vs Gemini：2026年AIモデル徹底比較',
+      intro: 'GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proを推論・速度・コンテキストウィンドウ・価格・マルチモーダル能力で比較。どのモデルをいつ使うべきか、そして3つすべてを活用する方法を解説します。',
       publishDate: '2026年3月14日公開',
-      readTime: '12分で読む',
-      sections: {},
+      readTime: '12分で読める',
+      seoTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.5・Claude Opus 4.7・Gemini 3.1 Proを推論・速度・価格・コンテキストで徹底比較。2026年最新版：どのAIモデルを選ぶべきか、用途別ガイド。',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'クリエイティブライティングに最適なAIモデルはどれですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-5.5（ChatGPT）はクリエイティブライティング、ブレインストーミング、汎用タスクに優れています。速くてアクセスしやすいのが特徴です。Claude Opus 4.7はより深いリーズニングやクリエイティブ作品の分析に向いています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'コーディングに最適なモデルはどれですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Claude Opus 4.7はコード品質とデバッグでリードしており、HumanEvalベンチマークで約94%を記録しています。GPT-5.5（約92%）はより高速です。重要な作業では両方を比較することをお勧めします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '2026年のコスト比較を教えてください。',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-5.5：入力約$5/100万トークン、出力約$15/100万トークン。Claude Opus 4.7：入力約$15、出力約$75。Gemini 3.1 Pro：入力約$3.5、出力約$10.5。3つすべてに月額約$20のコンシューマープランがあります。最新価格は各プロバイダーでご確認ください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'マルチモーダルタスクに最も優れているモデルはどれですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Gemini 3.1 Proは画像、動画、音声、文書理解で最も優れています。GPT-5.5はテキストと画像に対応。Claude Opus 4.7はテキストと画像に対応していますが、動画には非対応です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '3つのモデルすべてに無料プランはありますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい。ChatGPT、Claude.ai、Geminiはいずれも日次使用制限付きの無料プランを提供しています。3つすべてに月額約$20のPro/Plusプランもあります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '同じワークフローで複数のモデルを使用できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい。PromptQuorumを使えば、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proなど複数のモデルに同じプロンプトを同時に送信し、結果を並べて比較できます。重要な作業ではこのアプローチを推奨します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'METI AIガバナンスガイドラインとこれらのモデルの関係は？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '経済産業省（METI）の「AI事業者ガイドライン（2024年版）」では、AIシステムの透明性・安全性・信頼性の確保を求めています。Claude Opus 4.7はConstitutional AIによる透明性の高い推論、OpenAIとGoogleはAI安全に関する報告書を公開しています。機密データを扱う企業では、データ処理契約（DPA）の締結とローカルモデルの活用検討を推奨します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '日本企業がこれらのAIモデルを導入する際の注意点は？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '個人情報保護法（個人情報の保護に関する法律）に基づき、個人データをクラウドAIサービスに送信する場合は、データ処理契約の確認が必要です。金融・医療・法律分野では特に注意が必要です。高い機密性が求められる場合は、LLaMA 3.1やMistralなどのローカルモデルが適切な選択肢となります。',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'inLanguage': 'ja',
+        name: 'AIモデルを並べて比較する方法',
+        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=ja',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'テストプロンプトを作成する',
+            text: '実際のユースケースを表す明確で具体的なプロンプトを作成します。コンテキスト、制約、希望する出力形式を含めてください。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'ChatGPT（GPT-5.5）でテストする',
+            text: 'ChatGPTにプロンプトを送信し、回答を記録します。応答品質、時間、幻覚やエラーの有無を確認してください。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Claude Opus 4.7でテストする',
+            text: '同じプロンプトをClaudeに送信します。推論の深さ、正確性、推論の透明性を比較してください。複雑なタスクではExtended Thinkingモードを有効にしてください。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Gemini 3.1 Proでテストする',
+            text: 'Geminiにプロンプトを送信します。マルチモーダル機能、Google Search統合、全体的な応答品質を評価してください。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: '分析して比較する',
+            text: '比較マトリクスを作成します：応答品質、推論品質、事実の正確性、速度、トークンあたりのコスト。ユースケースに最適なモデルを特定してください。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: '選択または組み合わせる',
+            text: 'そのタスクに最適なモデルを使用するか、ハイブリッドアプローチを採用してください：各モデルが得意な部分で使用し、結果を統合します。PromptQuorumはこの比較を自動化します。',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'ja',
+        name: 'AIモデル比較2026：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro',
+        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=ja',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'ChatGPT（OpenAIのGPT-5.5）',
+            description: '汎用タスク、クリエイティブライティング、速度に最適。最も人気のあるモデル。無料プランあり。128Kコンテキストウィンドウ。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Claude Opus 4.7（Anthropic）',
+            description: '複雑な推論、コード品質、長文分析に最適。1Mトークンのコンテキストウィンドウ。最高HumanEvalスコア（約94%）。無料プランあり。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Gemini 3.1 Pro（Google）',
+            description: 'マルチモーダルタスク、画像・動画理解、Google Search統合に最適。最大のコンテキストウィンドウ（2Mトークン）。最低API料金。無料プランあり。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: '推論品質',
+            description: '1. Claude Opus 4.7（約91% MMLU-Pro、推論を表示）。2. GPT-5.5（約90%）。3. Gemini 3.1 Pro（約89%）。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: '速度',
+            description: '1. GPT-5.5（最速）。2. Gemini 3.1 Pro（高速）。3. Claude Opus 4.7（中程度 — より徹底的）。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'API料金（入力100万トークンあたり）',
+            description: 'Gemini 3.1 Pro（約$3.5）< GPT-5.5（約$5）< Claude Opus 4.7（約$15）。最新価格は各プロバイダーでご確認ください。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: 'マルチモーダル機能',
+            description: 'Gemini 3.1 Pro（テキスト、画像、動画、音声）> GPT-5.5（テキスト、画像）> Claude Opus 4.7（テキスト、画像）。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            name: 'ベストプラクティス',
+            description: '重要なタスクでは3つすべてに同じプロンプトを送信し、最良の回答を選択してください。PromptQuorumはマルチモデル比較を自動化します。',
+          },
+        ],
+      },
+      sections: {
+        why: {
+          title: 'なぜAIモデルを比較するのか',
+          content: [
+            '**結論から言うと：** GPT-5.5は速度とクリエイティブな出力でリード。Claude Opus 4.7は推論精度と長文書分析（1Mトークンコンテキスト）でリード。Gemini 3.1 Proはマルチモーダルタスクと最大のコンテキストウィンドウ（2Mトークン）でリード。重要な作業では3つすべてに同じプロンプトを送信してください — 1つのモデルだけに依存すると精度を犠牲にすることになります。',
+            'AIモデルはそれぞれ異なるタスクで優れています。ChatGPT（GPT-5.5）は最も速く汎用性が高いモデルです。Claude（Opus 4.7）は推論とコードのベンチマークで最高スコアを記録しています。Gemini（3.1 Pro）はマルチモーダルタスクとリアルタイムWebアクセスで最も優れています。',
+            'このガイドでは2026年時点の3つのフロンティアモデルを比較します：強み、コンテキストウィンドウ、料金、そして各モデルが勝るタスクについて解説します。',
+          ],
+        },
+        chatgptSection: {
+          title: 'ChatGPT（OpenAI）— GPT-5.5',
+          content: [
+            '最も広く使われているAIモデルです。GPT-5.5は2026年において速度とクリエイティブな汎用性の標準を設定しており、サードパーティ統合のエコシステムが最も充実しています。',
+            '**強み：** ライティング、コーディング、分析、ブレインストーミングなど、ほぼすべてのタスクタイプに対応。3つのモデルの中で最速の推論。最大のプラグイン・統合エコシステム。無料プラン利用可能。リアルタイム情報のためのWebブラウジングモード。',
+            '**弱み：** 作業過程を示さずに論理的な飛躍をすることがある — 推論の透明性はClaudeより低い。大規模ではGeminiよりAPIコストが高い。3つの中で最小のコンテキストウィンドウ（128Kトークン）。',
+            '**最適な用途：** クリエイティブライティング、ブレインストーミング、クイックアンサー、コンテンツ生成、ラピッドプロトタイピング、速度が重要な日常的な汎用タスク。',
+          ],
+          items: [
+            '無料プラン：利用制限あり（ChatGPT.com）',
+            'ChatGPT Plus：月額約$20 — 優先アクセス、Advanced Voice Mode、GPT-5.5アクセス',
+            'API：入力約$5/100万トークン、出力約$15/100万トークン（GPT-5.5）',
+            'Enterprise：大規模導入向けカスタム料金',
+          ],
+        },
+        claudeSection: {
+          title: 'Claude（Anthropic）— Opus 4.7',
+          content: [
+            '推論特化型モデルです。Claude Opus 4.7は正確性、論理的な深さ、長文書分析に最適化されています。Extended ThinkingモードはMMLU-Pro（約91%）とAIMEベンチマークでフロンティアモデルの中で最高スコアを達成しています（2025年時点）。',
+            '**強み：** 優れたステップバイステップの推論 — 一貫して作業過程を示します。競合より幻覚率が低い。長文書やコードベース向けに1Mトークンのコンテキストウィンドウ。安全性の透明性のためのConstitutional AIトレーニング。クラス最高のコードレビュー（約94% HumanEval）。無料プランあり。',
+            '**弱み：** GPT-5.5やGemini 3.1 Proより推論が遅い。高度にクリエイティブなタスクでは保守的。3つの中で最も高いAPIコスト。ChatGPTよりサードパーティ統合が少ない。',
+            '**最適な用途：** 技術分析、コードレビュー、論理的推論、文書分析、調査、複雑な問題解決 — 速度より精度が重要なあらゆるタスク。',
+          ],
+          items: [
+            '無料プラン：1日の利用制限あり（Claude.ai）',
+            'Claude.ai Pro：月額約$20 — 利用制限が高め',
+            'API：入力約$15/100万トークン、出力約$75/100万トークン（Opus 4.7）',
+            'Enterprise：SLA付きカスタム料金',
+          ],
+        },
+        geminiSection: {
+          title: 'Gemini（Google）— 3.1 Pro',
+          content: [
+            'Googleのマルチモーダルフラッグシップモデルです。Gemini 3.1 Proは視覚的理解、Google検索によるリアルタイムWebアクセス、そしてあらゆるフロンティアモデルの中で最大の2Mトークンというコンテキストウィンドウでリードしています。',
+            '**強み：** 最優秀のマルチモーダル機能 — 画像、動画、音声、文書をネイティブに処理。リアルタイム情報のためのネイティブGoogle Search統合。GPT-5.5と競合する高速推論。最大のコンテキストウィンドウ（2Mトークン）。3つの中で最低のAPIコスト。無料プランあり。',
+            '**弱み：** ステップバイステップの論理推論はClaude Opus 4.7より弱い（MMLU-Pro約89% vs Claudeの約91%）。Googleのデフォルトのデータ共有慣行はより広範。ChatGPTよりサードパーティ統合エコシステムが小さい。',
+            '**最適な用途：** 画像分析、動画理解、リアルタイムWebデータが必要なタスク、Google Workspace統合、コスト意識の高いAPIユーザー、非常に長い文書の処理。',
+          ],
+          items: [
+            '無料プラン：利用可能（Gemini.google.com）',
+            'Google One AI Premium：月額約$20 — Gemini Advanced + Googleサービスバンドル',
+            'API：入力約$3.5/100万トークン、出力約$10.5/100万トークン（Gemini 3.1 Pro）',
+            'Enterprise：専任サポート付きカスタム料金',
+          ],
+        },
+        quickFacts: {
+          title: '⚡ 重要ポイント',
+          isTldr: true,
+          items: [
+            '3つすべてに無料プランあり — Pro/Plusプランは全て月額約$20',
+            'GPT-5.5：128Kトークン | Claude Opus 4.7：1Mトークン | Gemini 3.1 Pro：2Mトークン',
+            'Claude Opus 4.7 Extended ThinkingはMMLU-Pro（約91%）とAIME推論ベンチマークで最高スコア',
+            'Gemini 3.1 Proは2Mコンテキストを持つ唯一のモデル — コードベース全体、書籍、法的書類全体を処理可能',
+            '3つすべてがTool Use、Function Calling、RAG統合を本番環境でサポート',
+          ],
+        },
+        comparisonTable: {
+          title: '直接比較（2026年）',
+          content: '',
+          columns: ['比較項目', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+          rows: [
+            { '比較項目': 'コンテキストウィンドウ', 'GPT-5.5': '128Kトークン', 'Claude Opus 4.7': '1Mトークン', 'Gemini 3.1 Pro': '2Mトークン' },
+            { '比較項目': '推論（MMLU-Pro）', 'GPT-5.5': '約90%', 'Claude Opus 4.7': '約91%', 'Gemini 3.1 Pro': '約89%' },
+            { '比較項目': 'コード（HumanEval）', 'GPT-5.5': '約92%', 'Claude Opus 4.7': '約94%', 'Gemini 3.1 Pro': '約88%' },
+            { '比較項目': 'マルチモーダル', 'GPT-5.5': 'テキスト＋画像', 'Claude Opus 4.7': 'テキスト＋画像', 'Gemini 3.1 Pro': 'テキスト、画像、動画、音声' },
+            { '比較項目': '速度', 'GPT-5.5': '高速', 'Claude Opus 4.7': '中程度', 'Gemini 3.1 Pro': '高速' },
+            { '比較項目': 'API料金（入力/100万トークン）', 'GPT-5.5': '約$5', 'Claude Opus 4.7': '約$15', 'Gemini 3.1 Pro': '約$3.5' },
+            { '比較項目': '無料プラン', 'GPT-5.5': '✅ あり', 'Claude Opus 4.7': '✅ あり（制限付き）', 'Gemini 3.1 Pro': '✅ あり' },
+            { '比較項目': '拡張思考モード', 'GPT-5.5': 'o3/o4-mini', 'Claude Opus 4.7': '組み込み済み', 'Gemini 3.1 Pro': 'Flash Thinking' },
+          ],
+        },
+        contentCreation: {
+          title: 'コンテンツ制作',
+          content: 'GPT-5.5は純粋なクリエイティブ出力で優位 — 最も多才で高速、ブレインストーミングとテキスト生成に最適です。ブログ投稿、SNS、マーケティングコピー、クリエイティブなアイデア出しにGPT-5.5を使用してください。',
+        },
+        codeReview: {
+          title: 'コードレビュー・デバッグ',
+          content: 'Claude Opus 4.7が優位 — 最高のHumanEvalスコア（約94%）、コードのステップバイステップ説明、バグ発見、セキュリティ問題の特定が最も優れています。推論を明確に示します。速度が重要な場合はGPT-5.5（約92%）が有力な代替手段です。',
+        },
+        dataAnalysis: {
+          title: 'データ分析・調査',
+          content: 'Claude Opus 4.7が優位 — 優れた精度、長い文書やデータセットの分析のための1Mトークンコンテキストウィンドウ、厳密な推論。非常に長い文書（書籍、完全なコードベース）にはGemini 3.1 Proの2Mコンテキストがより適しています。',
+        },
+        imageAnalysis: {
+          title: '画像分析',
+          content: 'Gemini 3.1 Proが優位 — 画像、動画、音声、文書にわたる最高のマルチモーダル理解。画像の説明、グラフの分析、視覚的文書の処理、PDFからのテキスト抽出が可能です。',
+        },
+        generalQA: {
+          title: '一般的なQ&A',
+          content: 'Gemini 3.1 ProまたはGPT-5.5 — どちらも強力です。GeminiはリアルタイムのGoogle Search統合があります。GPT-5.5は最大のユーザーベースとプラグインエコシステムを持っています。時間的に敏感な事実確認クエリでは、Geminiのウェブ統合が優位です。',
+        },
+        summarization: {
+          title: '文書要約',
+          content: 'Claude Opus 4.7またはGemini 3.1 Pro — どちらも大きなコンテキストウィンドウ（それぞれ1Mと2Mトークン）を持っています。Claude Opus 4.7は明確な推論を伴うより構造化された要約を生成します。Gemini 3.1 Proは最も長い文書を処理します。',
+        },
+        budgetConscious: {
+          title: 'コスト重視のユーザー向け',
+          content: 'Gemini 3.1 ProはAPIコストで優位（入力約$3.5/100万トークン）。3つすべてに無料プランがあります。APIではGeminiが最安、GPT-5.5が中間、Claude Opus 4.7が最高価格 — ただし精度が重要なタスクでは品質差がプレミアム価格を正当化します。',
+        },
+        strategy: {
+          title: 'スマートな戦略：3つすべてを活用する',
+          content: [
+            'プロのAIユーザーは1つのモデルにこだわりません。同じプロンプトを3つすべてに送信し、最良の回答を選びます：',
+            '1. GPT-5.5：素早いブレインストーミングとクリエイティブな探索',
+            '2. Claude Opus 4.7：深い分析、推論の検証、コードレビュー',
+            '3. Gemini 3.1 Pro：リアルタイム情報、マルチモーダルタスク、非常に長い文書',
+            'これにより速度（GPT-5.5）、精度（Claude Opus 4.7）、最新性＋コンテキスト（Gemini 3.1 Pro）が得られます。PromptQuorumはこれを自動化します：同じ最適化プロンプトを3つすべてに送信し、結果を並べて比較できます。',
+          ],
+        },
+        currentTrends: {
+          title: '2026年AIモデルの最新トレンド',
+          content: ['3つのフロンティアモデルはベンチマーク性能で大幅に収束しています — 2023年に存在していたギャップは、現在ほとんどの標準ベンチマークで一桁台のパーセントポイントで測定されます。'],
+          items: [
+            'Extended Thinkingモードが標準化：3つすべてが複雑な推論タスクのための推論時コンピュートスケーリングを提供',
+            'マルチモーダル機能は当然の要件：GPT-5.5とClaude Opus 4.7はどちらも画像をサポート；Gemini 3.1 Proは動画と音声でリード',
+            'コンテキストウィンドウが急速に拡大：4K（GPT-3）から2M（Gemini 3.1 Pro）まで3年未満で達成',
+            'オープンソースモデルが能力差を縮小：LLaMA 3.1 70BとQwen2.5がほとんどのベンチマークでGPT-4レベルに到達',
+            'Tool UseとFunction Callingが普遍的：3つすべてが本番環境で構造化出力、コード実行、外部API呼び出しをサポート',
+          ],
+        },
+        localAlternatives: {
+          title: 'ローカル・オープンソースの代替モデル',
+          content: ['プライバシーに敏感なワークロードやオフライン展開には、オープンソースモデルが能力差を大幅に縮小しています。LLaMA 3.1（Meta）、Qwen2.5（Alibaba）、Mistralは8〜16GB VRAMのコンシューマーハードウェアで動作します。'],
+          items: [
+            'LLaMA 3.1 70B：推論ベンチマークでGPT-4oと競合；約40GB VRAMまたは量子化で8〜16GB必要',
+            'Qwen2.5 14B：2025年時点でコード生成で最も強力なオープンソースモデル',
+            'Mistral 7B：コンシューマーハードウェアで最速の推論；レイテンシが重要なアプリケーションに最適',
+            '[ローカルLLMハブ](/local-llms?lang=ja) — Mac、Windows、LinuxでのOllama、LM Studio、llama.cppのセットアップガイド',
+          ],
+        },
+        nextSteps: {
+          title: '次のステップ',
+          content: [
+            '1つのモデルにこだわらず、実際のユースケースで3つすべてをテストしてください：',
+            '1. ChatGPT（GPT-5.5）の無料プランをクリエイティブタスクとブレインストーミングに使用する',
+            '2. Claude Opus 4.7を分析作業とコードレビューで試す',
+            '3. Gemini 3.1 Proを画像分析とリアルタイムWebデータで実験する',
+            '4. 3つすべてに同じプロンプトを送信して回答を比較する',
+            '5. 特定のタスクタイプで最良の結果を出すモデルを特定する',
+            'PromptQuorumを使えば、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、その他のモデルに同じ最適化プロンプトを同時に送信し、タスクに対して最良の結果を出したモデルを比較できます。',
+          ],
+        },
+        tldr: {
+          title: '重要ポイント',
+          isTldr: true,
+          items: [
+            'GPT-5.5：速度、汎用性、クリエイティブライティングに最適。最速の推論。128Kコンテキスト。',
+            'Claude Opus 4.7：推論（約91% MMLU-Pro）、コード（約94% HumanEval）、長文分析に最適。1Mコンテキスト。',
+            'Gemini 3.1 Pro：マルチモーダル（画像、動画、音声）に最適。リアルタイムWebアクセス。最大コンテキスト（2M）。最低APIコスト。',
+            '3つすべてに無料プランと月額約$20のProプランがあります。',
+            '推論：Claude Opus 4.7 > GPT-5.5 > Gemini 3.1 Pro。',
+            '速度：GPT-5.5 ≈ Gemini 3.1 Pro > Claude Opus 4.7。',
+            'APIコスト：Gemini 3.1 Pro（約$3.5/1M）< GPT-5.5（約$5/1M）< Claude Opus 4.7（約$15/1M）。',
+            'ベストプラクティス：重要なタスクでは3つすべてに同じプロンプトを送信し、最良の回答を選択してください。',
+          ],
+        },
+        japanContext: {
+          title: '日本ユーザーのための活用ポイント',
+          content: [
+            'このセクションでは、日本企業・個人ユーザーがAIモデルを活用する際の規制上の注意点と実践的なアドバイスをまとめます。',
+            '経済産業省（METI）は2024年に「AI事業者ガイドライン」を策定し、AIシステムの透明性・安全性・信頼性の確保を求めています。クラウドAIサービスを企業利用する際は、個人情報保護法に基づくデータ処理契約の確認が必要です。',
+          ],
+          items: [
+            'METI AIガバナンス：経済産業省のAI事業者ガイドライン（2024年版）に基づき、AIシステムの透明性と安全性の確保が求められます。Claude Opus 4.7のConstitutional AIは推論プロセスの透明性において特に評価されています。',
+            '個人情報保護法：個人データをクラウドAIサービスに送信する場合は、各プロバイダーとのデータ処理契約（DPA）の確認が必要です。金融・医療・法律分野では特に注意が必要です。',
+            'アジア太平洋地域：日本・シンガポール・韓国・マレーシアなどのデータ越境移転規制に対応するため、機密データにはローカルモデルの活用を検討してください。',
+            '推奨：高い機密性が求められるデータには、LLaMA 3.1やMistralなどのローカルオープンソースモデルがデータ主権を確保する最適な選択肢です。',
+          ],
+        },
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            { q: 'クリエイティブライティングに最適なAIモデルはどれですか？', a: 'GPT-5.5（ChatGPT）はクリエイティブライティング、ブレインストーミング、汎用タスクに優れています。速くてアクセスしやすいのが特徴です。Claude Opus 4.7はより深いリーズニングやクリエイティブ作品の分析に向いています。' },
+            { q: 'コーディングに最適なモデルはどれですか？', a: 'Claude Opus 4.7はコード品質とデバッグでリードしており、HumanEvalで約94%を記録しています。GPT-5.5（約92%）はより高速です。重要な作業では両方のコード提案を比較することをお勧めします。' },
+            { q: '2026年のコスト比較を教えてください。', a: 'GPT-5.5：入力約$5/100万トークン、出力約$15。Claude Opus 4.7：入力約$15、出力約$75。Gemini 3.1 Pro：入力約$3.5、出力約$10.5。3つすべてに月額約$20のコンシューマープランがあります。最新価格は各プロバイダーでご確認ください。' },
+            { q: 'マルチモーダルタスクに最も優れているモデルはどれですか？', a: 'Gemini 3.1 Proは画像、動画、音声、文書理解で最も優れています。GPT-5.5はテキストと画像に対応。Claude Opus 4.7はテキストと画像に対応していますが、動画には非対応です。' },
+            { q: '3つのモデルすべてに無料プランはありますか？', a: 'はい。ChatGPT、Claude.ai、Geminiはいずれも日次使用制限付きの無料プランを提供しています。3つすべてに月額約$20のPro/Plusプランもあります。' },
+            { q: '同じワークフローで複数のモデルを使用できますか？', a: 'はい。PromptQuorumを使えば、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proなど複数のモデルに同じプロンプトを同時に送信し、結果を並べて比較できます。重要な作業ではこのアプローチを推奨します。' },
+            { q: 'METI AIガバナンスガイドラインとこれらのモデルの関係は？', a: '経済産業省（METI）の「AI事業者ガイドライン（2024年版）」では、AIシステムの透明性・安全性・信頼性の確保を求めています。Claude Opus 4.7はConstitutional AIによる透明性の高い推論、OpenAIとGoogleはAI安全に関する報告書を公開しています。機密データを扱う企業では、データ処理契約（DPA）の締結とローカルモデルの活用検討を推奨します。' },
+            { q: '日本企業がこれらのAIモデルを導入する際の注意点は？', a: '個人情報保護法（個人情報の保護に関する法律）に基づき、個人データをクラウドAIサービスに送信する場合は、データ処理契約の確認が必要です。金融・医療・法律分野では特に注意が必要です。高い機密性が求められる場合は、LLaMA 3.1やMistralなどのローカルモデルが適切な選択肢となります。' },
+          ],
+        },
+        commonMistakes: {
+          title: 'よくある間違い',
+          items: [
+            '間違い1：1つのモデルを選んで比較しない。各モデルには明確な強みがあります。コミットする前に必ず特定のタスクでテストしてください。',
+            '間違い2：最も高価なモデルが最良と思い込む。Gemini 3.1 ProはAPIコストが最安でマルチモーダルタスクで優位です。価格ではなくタスクにモデルを合わせてください。',
+            '間違い3：コンテキストウィンドウの制限を無視する。Gemini 3.1 Pro（2Mトークン）とClaude Opus 4.7（1Mトークン）は長い文書を処理します。GPT-5.5（128K）は大きな入力を切り捨てる場合があります。',
+            '間違い4：知識のカットオフを確認しない。Webに接続したモデル（Google SearchのGemini 3.1 Pro、ブラウジングのGPT-5.5）は最新の情報を持っています。ベースAPIコールはトレーニングのカットオフデータを使用する場合があります。',
+            '間違い5：すべてのモデルに同じプロンプトを使用する。各モデルは異なるプロンプトスタイルに対してより良く応答します。プロンプトを適応させてください — Claudeは明示的なステップバイステップの指示から恩恵を受け、Geminiはマルチモーダルなコンテキストから恩恵を受けます。',
+          ],
+        },
+        relatedReading: {
+          title: '関連資料',
+          items: [
+            '[LLMの実際の仕組み](/prompt-engineering/how-llms-actually-work?lang=ja) — トランスフォーマーアーキテクチャ、アテンション、モデルが幻覚を起こす理由',
+            '[AIの限界：LLMができないこと](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — すべてのモデルが共有する8つの構造的制約',
+            '[オープンソース vs プロプライエタリLLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=ja) — ローカルモデルとクラウドAPIの使い分け',
+            '[AI幻覚：AIがなぜ事実を作り上げるのか](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — モデル間で幻覚を検出・削減する方法',
+          ],
+        },
+        sources: {
+          title: '出典・参考文献',
+          items: [
+            'OpenAI GPT-5.5 モデル仕様 — openai.com/models',
+            'Anthropic Claude Opus 4.7 ドキュメント — docs.anthropic.com',
+            'Google Gemini 3.1 Pro 仕様 — gemini.google.com',
+            'LMSYS Chatbot Arena リーダーボード — arena.lmsys.org',
+            'Papers With Code — MMLU ベンチマーク結果 — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
+          ],
+        },
+      },
     },
     zh: {
       category: 'AI模型比较',
