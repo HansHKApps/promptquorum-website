@@ -81,7 +81,7 @@ function validateFreshnessTier() {
 function generateSeoRegistry() {
   return new Promise((resolve) => {
     console.log('\n📊 Generating SEO registry...\n')
-    const child = spawn('npx', ['tsx', 'scripts/generate-seo-registry.ts'], { stdio: 'inherit' })
+    const child = spawn('node', ['scripts/generate-seo-registry.mjs'], { stdio: 'inherit' })
     child.on('close', (code) => {
       if (code !== 0) console.warn('⚠ SEO registry generation failed (non-fatal)')
       resolve()
