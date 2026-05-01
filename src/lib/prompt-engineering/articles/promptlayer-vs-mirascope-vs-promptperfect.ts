@@ -10,8 +10,8 @@ export const article: Record<Language, PEArticle> = {
     theme: 'Tools & Platforms',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-    metaDescription: 'PromptLayer ($20/mo) logs LLM calls, Mirascope (free) builds Python apps, PromptPerfect ($10/mo) rewrites prompts. Different problems — pick exactly one.',
-    intro: '**PromptLayer logs and versions LLM calls (free–$99/mo). Mirascope is a free Python SDK for type-safe LLM apps. PromptPerfect auto-rewrites prompts for better results ($0–$30/mo). These three tools solve different problems — pick exactly one based on your bottleneck.**',
+    metaDescription: 'PromptLayer ($49/mo) logs LLM calls, Mirascope (free) builds Python apps, PromptPerfect ($20/mo) rewrites prompts. Different problems — pick exactly one.',
+    intro: '**PromptLayer logs and versions LLM calls (free–$49/mo for small teams). Mirascope is a free Python SDK for type-safe LLM apps. PromptPerfect auto-rewrites prompts for better results ($0–$20/mo). These three tools solve different problems — pick exactly one based on your bottleneck.**',
     publishDate: '2026-04-10',
     dateModified: '2026-05-01',
     readTime: '8 min read',
@@ -30,6 +30,7 @@ export const article: Record<Language, PEArticle> = {
       { label: 'PromptPerfect: Automated Prompt Rewriting', anchor: '#promptperfect' },
       { label: 'Head-to-Head: All 3 Tools Compared', anchor: '#comparison-table' },
       { label: 'Tool Selection by Use Case', anchor: '#which-tool' },
+      { label: 'Regional Considerations', anchor: '#regional-context' },
       { label: 'Common Mistakes', anchor: '#common-mistakes' },
       { label: 'How to Choose', anchor: '#how-to-choose' },
       { label: 'FAQ', anchor: '#faq' },
@@ -37,9 +38,10 @@ export const article: Record<Language, PEArticle> = {
       { label: 'Sources', anchor: '#sources' },
     ],
     quickFacts: [
-      'PromptLayer free tier: 1,000 logged requests/month; paid plans start at ~$20/month',
+      'PromptLayer free tier: 2,500 requests/month, 10 prompt templates, 5 users; Pro plan $49/month',
+      'PromptLayer Team plan: $500/month — 25 users, 100,000+ requests/month',
       'Mirascope is open-source (Apache 2.0) with zero SaaS cost — supports 20+ LLM providers',
-      'PromptPerfect free tier: 10 prompt optimizations/day; paid from ~$9.99/month',
+      'PromptPerfect free tier: 10 optimizations/day; Pro plan $19.99/month (500/day), Pro Max $99.99/month (1,500/day)',
       'PromptLayer supports OpenAI, Anthropic, Cohere, Azure OpenAI, and 10+ providers natively',
       'PromptPerfect supports text models (GPT-4, Claude) and image models (Midjourney, Stable Diffusion)',
     ],
@@ -49,7 +51,7 @@ export const article: Record<Language, PEArticle> = {
         items: [
           'PromptLayer is the only tool of the three built for production LLM observability — logging cost, latency, and usage per prompt version in real time.',
           'Mirascope is free and open-source — the right choice for Python developers who want type-safe LLM calls without a SaaS platform or monthly fee.',
-          'PromptPerfect targets non-developers: it rewrites prompts via a web UI, no code required, from $0 to $30/month.',
+          'PromptPerfect targets non-developers: it rewrites prompts via a web UI, no code required, from $0 to $20/month (Pro) or $100/month (Pro Max).',
           'These three tools do not compete — they solve different bottlenecks. You will not need all three.',
           'If you are logging production LLM calls: PromptLayer. Building Python apps: Mirascope. Improving prompts manually: PromptPerfect.',
           'None of these tools evaluate output quality systematically — for systematic eval, use Braintrust or Promptfoo.',
@@ -79,6 +81,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'How We Compared These Tools',
         content: [
           '**We evaluated the three tools on five criteria that reflect real team decisions: primary use case, integration method, LLM provider support, observability capabilities, and pricing.**',
+          'PromptLayer is the right choice if you need production logging. Mirascope is the right choice if you need type-safe Python code. PromptPerfect is the right choice if you need prompt rewriting without code.',
         ],
         columns: ['Criterion', 'What It Measures', 'Why It Matters'],
         rows: [
@@ -115,14 +118,14 @@ export const article: Record<Language, PEArticle> = {
         content: [
           '**PromptLayer is a prompt management and observability platform that wraps your LLM API calls and logs every request to a dashboard.** The integration is a thin SDK layer: you replace `openai.chat.completions.create(...)` with `promptlayer.openai.chat.completions.create(...)` and every call is logged automatically. No changes to prompt logic required.',
           'The dashboard shows request history, prompt versions, token usage, cost per call, latency distributions, and error rates. Teams use this to debug why a prompt fails in production, track LLM cost by feature, and compare two prompt versions running simultaneously on production traffic.',
-          'PromptLayer prompt templates are stored by name and version: `PromptLayer.get_prompt("support-reply", version=4)` fetches the stored template. Non-engineers can edit prompt templates in the PromptLayer UI without a code deployment. This is the key feature that separates PromptLayer from Mirascope and PromptPerfect.',
+          'PromptLayer prompt templates are stored by name and version. The current SDK fetches and runs them with `client.run(prompt_name="support-reply", input_variables={...})` — non-engineers can edit templates in the PromptLayer UI without a code deployment. This is the key feature that separates PromptLayer from Mirascope and PromptPerfect.',
         ],
         items: [
-          'Free tier: 1,000 logged requests/month, 3 prompt templates',
-          'Starter: ~$20/month — 10,000 requests, 10 templates, 1 team member',
-          'Teams: ~$99/month — 100,000 requests, unlimited templates, 5 team members',
+          'Free: $0 — 5 users, 2,500 requests/month, 10 prompt templates, 10 playground runs/day',
+          'Pro: $49/month — 5 users, 2,500+ requests (pay-as-you-go $0.003/request), unlimited templates',
+          'Team: $500/month — 25 users, 100,000+ requests ($0.002/request overage), webhooks, deployment approvals',
+          'Enterprise: custom pricing — HIPAA/BAA, SSO, RBAC, EU cloud hosting or self-hosted on GCP/AWS/Azure',
           'Supports: OpenAI, Anthropic, Cohere, Azure OpenAI, and 10+ other providers',
-          'A/B testing: route X% of production traffic to prompt version A, remainder to version B',
         ],
         callouts: [
           {
@@ -164,9 +167,9 @@ export const article: Record<Language, PEArticle> = {
           'PromptPerfect also has an API for programmatic use, but it is not designed for CI/CD pipelines or automated testing — the optimization is non-deterministic and does not include quality metrics. For automated prompt testing, use Promptfoo or Braintrust instead.',
         ],
         items: [
-          'Free tier: 10 optimizations/day, web UI only, no API access',
-          'Basic: ~$9.99/month — 100 optimizations/day, API access included',
-          'Pro: ~$29.99/month — unlimited optimizations, priority processing',
+          'Free: 10 optimizations/day, web UI only, no API access',
+          'Pro: $19.99/month — 500 optimizations/day (Autotune + Interactive optimizer), API access included',
+          'Pro Max: $99.99/month — 1,500 optimizations/day, priority processing',
           'Supported models: GPT-4, Claude, Gemini (text); Midjourney, Stable Diffusion, DALL-E (image)',
           'Output: rewritten prompt + explanation of each change made',
         ],
@@ -218,15 +221,15 @@ export const article: Record<Language, PEArticle> = {
           },
           {
             'Feature': 'Free tier',
-            'PromptLayer': '1,000 requests/month',
+            'PromptLayer': '2,500 requests/month, 10 templates',
             'Mirascope': 'Unlimited (open-source)',
             'PromptPerfect': '10 optimizations/day',
           },
           {
             'Feature': 'Paid starting price',
-            'PromptLayer': '~$20/month',
+            'PromptLayer': '$49/month (Pro)',
             'Mirascope': '$0 (no paid tier)',
-            'PromptPerfect': '~$9.99/month',
+            'PromptPerfect': '$19.99/month (Pro)',
           },
         ],
         callouts: [
@@ -248,9 +251,22 @@ export const article: Record<Language, PEArticle> = {
           'For a full team setup workflow with prompt review ownership and CI/CD gates, see [Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams).',
         ],
       },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Regional Considerations for PromptLayer, Mirascope, and PromptPerfect',
+        content: [
+          '**For EU teams subject to GDPR, the right tool choice depends on where data is processed.** PromptLayer is cloud-hosted in the US on Free, Pro, and Team plans; EU hosting and self-hosted options are available only on Enterprise. PromptLayer holds SOC2 Type 2, GDPR, and HIPAA certifications. Mirascope is a local Python library — no LLM call data ever reaches a third-party platform, making it the default GDPR-safe choice for teams that do not need a hosted observability dashboard.',
+          '**PromptPerfect sends every prompt to Jina AI servers for processing.** For EU teams handling sensitive data (personal data, medical records, legal documents), this creates a data transfer obligation under GDPR Articles 44–49. Verify Jina AI\'s data processing agreement and server locations before using PromptPerfect with sensitive prompts.',
+          '**For Japan, METI\'s AI governance guidelines (2024) favor on-premises or domestic-cloud AI deployment for enterprise use.** Mirascope running against a domestic API endpoint (Azure Japan East, AWS ap-northeast-1) satisfies this requirement. PromptLayer Enterprise supports deployment on GCP/AWS/Azure, including Japanese data center regions. PromptPerfect has no Japan-specific hosting option.',
+          '**For China, the Data Security Law (数据安全法) and CAC regulations require that data processed domestically stays within the country.** Mirascope paired with a domestic model endpoint (Qwen2.5 via Alibaba Cloud, Baidu ERNIE) is the standard enterprise approach. PromptLayer Enterprise supports self-hosted deployments that can satisfy this requirement. PromptPerfect sends data to Jina AI\'s non-China infrastructure and is not appropriate for CAC-regulated use cases.',
+        ],
+      },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Common Mistakes',
+        content: [
+          'The most common mistake is buying a tool for a problem you do not have yet. PromptLayer has no value before production; PromptPerfect has no value in automated pipelines; Mirascope has no value for non-Python teams.',
+        ],
         numberedItems: [
           'Adding PromptLayer before going to production. Its core value — request logs, cost tracking, A/B tests — requires live traffic. Teams that add it during development get dashboards with no data and pay for a tier they cannot use yet.',
           'Using PromptPerfect for automated prompt pipelines. PromptPerfect is designed for manual, one-shot optimization. Its output varies on each run, making it incompatible with reproducible CI/CD test suites or regression checks.',
@@ -276,7 +292,7 @@ export const article: Record<Language, PEArticle> = {
           {
             type: 'tip',
             label: 'Free-First Path',
-            text: 'Start with Mirascope (open-source, $0) to structure your LLM code. Add PromptLayer\'s free tier (1,000 requests/month) once you have live traffic. Neither costs anything until you scale past free limits. PromptPerfect\'s free tier (10/day) is enough to evaluate whether it fits your workflow before committing to a paid plan.',
+            text: 'Start with Mirascope (open-source, $0) to structure your LLM code. Add PromptLayer\'s free tier (2,500 requests/month) once you have live traffic. Neither costs anything until you scale past free limits. PromptPerfect\'s free tier (10/day) is enough to evaluate whether it fits your workflow before committing to the $19.99/month Pro plan.',
           },
         ],
       },
@@ -293,7 +309,7 @@ export const article: Record<Language, PEArticle> = {
           },
           {
             q: 'How much does PromptPerfect cost?',
-            a: 'PromptPerfect offers a free tier with 10 optimizations per day. The Basic plan costs approximately $9.99/month for 100 optimizations/day with API access. The Pro plan costs approximately $29.99/month for unlimited optimizations. Verify current pricing at promptperfect.jina.ai before purchasing.',
+            a: 'PromptPerfect offers a free tier with 10 optimizations per day. The Pro plan costs $19.99/month for 500 optimizations/day with API access. The Pro Max plan costs $99.99/month for 1,500 optimizations/day with priority processing. Verify current pricing at promptperfect.jina.ai before purchasing.',
           },
           {
             q: 'Should I choose PromptLayer or Mirascope?',
@@ -385,7 +401,7 @@ export const article: Record<Language, PEArticle> = {
           name: 'How much does PromptPerfect cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'PromptPerfect has a free tier with 10 optimizations per day. The Basic plan costs approximately $9.99/month for 100 optimizations/day with API access. The Pro plan costs approximately $29.99/month for unlimited optimizations. Verify current pricing at promptperfect.jina.ai.',
+            text: 'PromptPerfect has a free tier with 10 optimizations per day. The Pro plan costs $19.99/month for 500 optimizations/day with API access. The Pro Max plan costs $99.99/month for 1,500 optimizations/day with priority processing. Verify current pricing at promptperfect.jina.ai.',
           },
         },
         {
