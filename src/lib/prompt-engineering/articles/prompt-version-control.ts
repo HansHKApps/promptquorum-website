@@ -426,8 +426,8 @@ jobs:
     audience: 'Entwickler, die LLM-Prompts in der Produktion verwalten, Prompt-Engineers, Engineering-Team-Leads',
     primaryTerm: 'Prompt-Versionskontrolle',
     readTime: '10 Min. Lesezeit',
-    seoTitle: 'Prompt-Versionskontrolle: Git-Workflow & Rollback',
-    metaDescription: 'Unveersionierte Prompts schlagen lautlos fehl. MAJOR.MINOR.PATCH-Versioning und Git-Workflows auf jeden Prompt-Change anwenden – Rollback in Sekunden.',
+    seoTitle: 'Prompt-Versionskontrolle: Git-Workflow & Rollback-Guide',
+    metaDescription: 'Unversionierte Prompts schlagen lautlos fehl. MAJOR.MINOR.PATCH-Versioning und Git-Workflows auf jeden Prompt-Change anwenden – Rollback in Sekunden.',
     leadAnswerBlock: '**Prompt-Versionskontrolle erfasst jede Änderung an einem KI-Prompt mithilfe von semantischem Versioning (MAJOR.MINOR.PATCH) und Git-Workflows. Sie ermöglicht sofortigen Rollback, Team-Zusammenarbeit und Regressionserkennung — dieselbe Disziplin, die für Code gilt, auf Prompts angewendet.**',
     quickFacts: [
       'Semantisches Versioning für Prompts: MAJOR bei brechenden Ausgabeformat-Änderungen, MINOR bei Qualitätsverbesserungen, PATCH bei Tippfehler-/Klärungskorrekturen',
@@ -1523,8 +1523,8 @@ jobs:
     audience: '管理生产环境 LLM Prompt 的开发者、Prompt 工程师、工程团队负责人',
     primaryTerm: 'Prompt 版本控制',
     readTime: '阅读约10分钟',
-    seoTitle: 'Prompt 版本控制：Git 工作流与回滚策略完全指南',
-    metaDescription: '未版本化的 Prompt 会静默失败。运用 MAJOR.MINOR.PATCH 语义化版本控制、Git 分支工作流和自动化回归测试，管理每一次 Prompt 变更，实现快速回滚。',
+    seoTitle: 'Prompt 版本控制：用 Git 工作流与语义化版本防止静默失败',
+    metaDescription: '未版本化的 Prompt 会静默失败——无变更历史，质量下降无法回滚。对每次 Prompt 变更应用 MAJOR.MINOR.PATCH 语义化版本控制和 Git 分支工作流，每个 PR 自动回归测试，每次合并打版本标签，回滚只需 git revert。',
     leadAnswerBlock: '**Prompt 版本控制使用语义化版本控制（MAJOR.MINOR.PATCH）和 Git 工作流追踪每次 AI Prompt 的变更。它实现即时回滚、团队协作和回归检测——将代码管理的规范同等应用于 Prompt 管理。**',
     quickFacts: [
       'Prompt 语义化版本控制：输出格式变更升级 MAJOR，质量改善升级 MINOR，修复错别字升级 PATCH',
