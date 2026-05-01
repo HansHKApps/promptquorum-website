@@ -3779,11 +3779,400 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     },
     zh: {
       category: 'AI模型比较',
-      title: 'ChatGPT vs Claude vs Gemini：2026年并排比较AI模型',
-      intro: '选择正确AI模型的完整指南。 优点、缺点、成本以及何时使用每个模型。',
+      title: 'ChatGPT vs Claude vs Gemini：2026年AI模型全面对比',
+      intro: 'GPT-5.5、Claude Opus 4.7与Gemini 3.1 Pro在推理能力、速度、上下文窗口、定价和多模态能力方面的全面比较。何时使用每个模型——以及何时同时使用三者。',
       publishDate: '发布于2026年3月14日',
-      readTime: '12分钟阅读',
-      sections: {},
+      readTime: '阅读约12分钟',
+      seoTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.5、Claude Opus 4.7与Gemini 3.1 Pro深度对比：速度、推理、价格与上下文窗口。2026年最新AI模型选型指南，助您做出最优决策。',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '哪款AI模型最适合创意写作？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-5.5（ChatGPT）在创意写作、头脑风暴和通用任务方面表现出色——速度快且易于使用。Claude Opus 4.7更擅长深度推理和创意内容分析。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '哪款模型最适合编程？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Claude Opus 4.7在代码质量和调试方面领先，HumanEval基准得分约94%。GPT-5.5（约92%）速度更快。关键任务建议对比两者的代码建议。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '2026年的价格对比如何？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-5.5：输入约$5/百万token，输出约$15。Claude Opus 4.7：输入约$15，输出约$75。Gemini 3.1 Pro：输入约$3.5，输出约$10.5。三款均提供月费约$20的消费者套餐。请向各服务商确认最新价格。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '哪款模型最擅长多模态任务？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Gemini 3.1 Pro在图像、视频、音频和文档理解方面最为出色。GPT-5.5支持文本和图像。Claude Opus 4.7支持文本和图像，但不支持视频。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '三款模型都有免费套餐吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的。ChatGPT、Claude.ai和Gemini均提供有每日使用限制的免费套餐。三者均提供月费约$20的Pro/Plus套餐，具有更高的使用限额。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '可以在同一工作流中使用多个模型吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '可以。PromptQuorum支持将同一提示词同时发送给GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro及其他模型，然后并排比较结果。这是关键任务的推荐方式。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '使用这些AI模型需要遵守中国数据安全法吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的。根据中国《数据安全法》（2021年）和《个人信息保护法》（PIPL），将重要数据发送至境外云服务须进行合规评估。对于涉及敏感数据的企业应用，建议使用Qwen2.5等本地化模型或在境内服务器部署的解决方案。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '本地推理如何满足企业合规要求？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '本地部署的开源模型（如LLaMA 3.1、Qwen2.5、Mistral）可完全满足数据不出境的合规要求，适用于金融、医疗、法律等敏感行业。数据全程在本地处理，无需向第三方云服务发送任何信息。',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'inLanguage': 'zh',
+        name: '如何并排比较AI模型',
+        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=zh',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: '创建测试提示词',
+            text: '编写一个清晰、具体的提示词，代表您的实际使用场景。包含背景信息、约束条件和期望的输出格式。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: '在ChatGPT（GPT-5.5）上测试',
+            text: '将提示词发送给ChatGPT并记录回复。注意回复质量、响应时间以及是否存在幻觉或错误。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: '在Claude Opus 4.7上测试',
+            text: '将相同提示词发送给Claude。比较推理深度、准确性和推理透明度。对于复杂任务，启用Extended Thinking模式。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: '在Gemini 3.1 Pro上测试',
+            text: '将提示词发送给Gemini。评估多模态能力、Google Search集成和整体回复质量。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: '分析与比较',
+            text: '创建比较矩阵：回复质量、推理质量、事实准确性、速度、每token成本。确定最适合您使用场景的模型。',
+          },
+          {
+            '@type': 'HowToStep',
+            name: '选择或组合使用',
+            text: '使用最适合该任务的模型，或采用混合方式：在每个模型擅长的地方使用它，然后综合结果。PromptQuorum可自动完成此比较。',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'zh',
+        name: '2026年AI模型对比：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro',
+        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=zh',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'ChatGPT（OpenAI GPT-5.5）',
+            description: '最适合通用任务、创意写作和快速响应。最受欢迎的模型。提供免费套餐。128K上下文窗口。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Claude Opus 4.7（Anthropic）',
+            description: '最适合复杂推理、代码质量和长篇分析。1M token上下文窗口。HumanEval最高分（约94%）。提供免费套餐。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Gemini 3.1 Pro（Google）',
+            description: '最适合多模态任务、图像/视频理解和Google Search集成。最大上下文窗口（2M token）。API成本最低。提供免费套餐。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: '推理质量',
+            description: '1. Claude Opus 4.7（约91% MMLU-Pro，展示推理过程）。2. GPT-5.5（约90%）。3. Gemini 3.1 Pro（约89%）。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: '速度',
+            description: '1. GPT-5.5（最快）。2. Gemini 3.1 Pro（快速）。3. Claude Opus 4.7（中等——更为深入）。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'API成本（每百万token输入）',
+            description: 'Gemini 3.1 Pro（约$3.5）< GPT-5.5（约$5）< Claude Opus 4.7（约$15）。请向各服务商确认最新价格。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: '多模态能力',
+            description: 'Gemini 3.1 Pro（文本、图像、视频、音频）> GPT-5.5（文本、图像）> Claude Opus 4.7（文本、图像）。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            name: '最佳实践',
+            description: '关键任务建议将同一提示词发送给三款模型，选择最佳回答。PromptQuorum可自动完成多模型比较。',
+          },
+        ],
+      },
+      sections: {
+        why: {
+          title: '为什么要比较AI模型？',
+          content: [
+            '**核心结论：** GPT-5.5在速度和创意输出方面领先。Claude Opus 4.7在推理准确性和长文档分析（1M token上下文）方面领先。Gemini 3.1 Pro在多模态任务方面领先，且拥有最大的上下文窗口（2M token）。对于关键工作，建议将同一提示词发送给三款模型——依赖单一模型会损失准确性。',
+            '不同的AI模型在不同任务上表现各异。ChatGPT（GPT-5.5）速度最快、通用性最强。Claude（Opus 4.7）在推理和代码基准测试中得分最高。Gemini（3.1 Pro）在多模态任务和实时网络访问方面最为出色。了解哪个模型适合哪类任务，意味着更好的结果和更低的成本。',
+            '本指南对比2026年三大前沿模型：优势、上下文窗口、定价，以及每款模型的适用场景。',
+          ],
+        },
+        chatgptSection: {
+          title: 'ChatGPT（OpenAI）— GPT-5.5',
+          content: [
+            '使用最广泛的AI模型。GPT-5.5在2026年树立了速度和创意多功能性的标准，拥有最丰富的第三方集成生态系统。',
+            '**优势：** 几乎适用于所有任务类型——写作、编程、分析、头脑风暴。三款中推理速度最快。插件和集成生态系统最为完善。提供免费套餐。支持网页浏览模式获取实时信息。',
+            '**局限：** 可能在不展示推理过程的情况下做出逻辑跳跃——推理透明度不如Claude。大规模使用时API成本高于Gemini。三款中上下文窗口最小，仅128K token。',
+            '**最适合：** 创意写作、头脑风暴、快速问答、内容生成、快速原型开发，以及速度至关重要的日常通用任务。',
+          ],
+          items: [
+            '免费套餐：有限使用（ChatGPT.com）',
+            'ChatGPT Plus：约$20/月——优先访问、Advanced Voice Mode、GPT-5.5访问权限',
+            'API：输入约$5/百万token，输出约$15/百万token（GPT-5.5）',
+            '企业版：大规模部署定制定价',
+          ],
+        },
+        claudeSection: {
+          title: 'Claude（Anthropic）— Opus 4.7',
+          content: [
+            '以推理为核心的模型。Claude Opus 4.7针对准确性、逻辑深度和长文档分析进行了优化。Extended Thinking模式在2025年前沿模型中，MMLU-Pro（约91%）和AIME基准测试上取得最高分。',
+            '**优势：** 卓越的逐步推理能力——持续展示推理过程。幻觉率低于竞争对手。1M token上下文窗口，适合长文档和代码库。Constitutional AI训练确保安全透明度。最佳代码审查能力（约94% HumanEval）。提供免费套餐。',
+            '**局限：** 推理速度慢于GPT-5.5和Gemini 3.1 Pro。在高度创意任务上较为保守。三款中API成本最高。第三方集成少于ChatGPT。',
+            '**最适合：** 技术分析、代码审查、逻辑推理、文档分析、研究和复杂问题解决——任何精度优先于速度的任务。',
+          ],
+          items: [
+            '免费套餐：每日使用限制（Claude.ai）',
+            'Claude.ai Pro：约$20/月——更高使用限额',
+            'API：输入约$15/百万token，输出约$75/百万token（Opus 4.7）',
+            '企业版：含SLA的定制定价',
+          ],
+        },
+        geminiSection: {
+          title: 'Gemini（Google）— 3.1 Pro',
+          content: [
+            'Google的多模态旗舰模型。Gemini 3.1 Pro在视觉理解、通过Google Search实现实时网络访问，以及所有前沿模型中最大的2M token上下文窗口方面领先。',
+            '**优势：** 最强的多模态能力——原生支持图像、视频、音频和文档。原生Google Search集成获取实时信息。推理速度快，可与GPT-5.5媲美。最大上下文窗口（2M token）。三款中API成本最低。提供免费套餐。',
+            '**局限：** 逐步逻辑推理不如Claude Opus 4.7（MMLU-Pro约89% vs Claude的约91%）。Google默认数据共享范围较广。第三方集成生态系统小于ChatGPT。',
+            '**最适合：** 图像分析、视频理解、需要实时网络数据的任务、Google Workspace集成、注重成本的API用户，以及超长文档处理。',
+          ],
+          items: [
+            '免费套餐：可用（Gemini.google.com）',
+            'Google One AI Premium：约$20/月——Gemini Advanced + Google服务套餐',
+            'API：输入约$3.5/百万token，输出约$10.5/百万token（Gemini 3.1 Pro）',
+            '企业版：含专属支持的定制定价',
+          ],
+        },
+        quickFacts: {
+          title: '⚡ 核心要点',
+          isTldr: true,
+          items: [
+            '三款模型均提供免费消费者套餐——Pro/Plus套餐均约$20/月',
+            'GPT-5.5：128K token | Claude Opus 4.7：1M token | Gemini 3.1 Pro：2M token',
+            'Claude Opus 4.7 Extended Thinking在MMLU-Pro（约91%）和AIME推理基准上得分最高',
+            'Gemini 3.1 Pro是唯一拥有2M上下文的模型——可容纳整个代码库、书籍或法律文件',
+            '三款均在生产环境中支持Tool Use、Function Calling和RAG集成',
+          ],
+        },
+        comparisonTable: {
+          title: '直接对比（2026年）',
+          content: '',
+          columns: ['对比维度', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+          rows: [
+            { '对比维度': '上下文窗口', 'GPT-5.5': '128K token', 'Claude Opus 4.7': '1M token', 'Gemini 3.1 Pro': '2M token' },
+            { '对比维度': '推理能力（MMLU-Pro）', 'GPT-5.5': '约90%', 'Claude Opus 4.7': '约91%', 'Gemini 3.1 Pro': '约89%' },
+            { '对比维度': '代码能力（HumanEval）', 'GPT-5.5': '约92%', 'Claude Opus 4.7': '约94%', 'Gemini 3.1 Pro': '约88%' },
+            { '对比维度': '多模态', 'GPT-5.5': '文本+图像', 'Claude Opus 4.7': '文本+图像', 'Gemini 3.1 Pro': '文本、图像、视频、音频' },
+            { '对比维度': '速度', 'GPT-5.5': '快速', 'Claude Opus 4.7': '中等', 'Gemini 3.1 Pro': '快速' },
+            { '对比维度': 'API成本（输入/百万token）', 'GPT-5.5': '约$5', 'Claude Opus 4.7': '约$15', 'Gemini 3.1 Pro': '约$3.5' },
+            { '对比维度': '免费套餐', 'GPT-5.5': '✅ 有', 'Claude Opus 4.7': '✅ 有（受限）', 'Gemini 3.1 Pro': '✅ 有' },
+            { '对比维度': '深度思考模式', 'GPT-5.5': 'o3/o4-mini', 'Claude Opus 4.7': '内置', 'Gemini 3.1 Pro': 'Flash Thinking' },
+          ],
+        },
+        contentCreation: {
+          title: '内容创作',
+          content: 'GPT-5.5在纯创意输出方面胜出——最为多才多艺且速度最快，是头脑风暴和文字生成的首选。博客文章、社交媒体、营销文案和创意构思，GPT-5.5是最优选择。',
+        },
+        codeReview: {
+          title: '代码审查与调试',
+          content: 'Claude Opus 4.7胜出——HumanEval得分最高（约94%），最擅长逐步解释代码、发现bug和安全问题，推理过程清晰透明。GPT-5.5（约92%）在速度优先时是有力替代选择。',
+        },
+        dataAnalysis: {
+          title: '数据分析与研究',
+          content: 'Claude Opus 4.7胜出——精度卓越，1M token上下文窗口支持长文档和数据集分析，推理严谨。对于超长文档（书籍、完整代码库），Gemini 3.1 Pro的2M上下文更为合适。',
+        },
+        imageAnalysis: {
+          title: '图像分析',
+          content: 'Gemini 3.1 Pro胜出——在图像、视频、音频和文档方面拥有最强的多模态理解能力。描述图像、分析图表、处理视觉文档或从PDF中提取文本，Gemini 3.1 Pro是首选。',
+        },
+        generalQA: {
+          title: '通用问答',
+          content: 'Gemini 3.1 Pro或GPT-5.5——两者均表现出色。Gemini原生集成Google Search，支持实时信息获取。GPT-5.5拥有最大的用户群和插件生态系统。对于时效性较强的事实查询，Gemini的网络集成具有优势。',
+        },
+        summarization: {
+          title: '文档摘要',
+          content: 'Claude Opus 4.7或Gemini 3.1 Pro——两者均拥有大型上下文窗口（分别为1M和2M token）。Claude Opus 4.7能生成结构更清晰、推理更明确的摘要。Gemini 3.1 Pro可处理篇幅最长的文档。',
+        },
+        budgetConscious: {
+          title: '注重成本的用户',
+          content: 'Gemini 3.1 Pro在API成本方面胜出（输入约$3.5/百万token）。三款模型均提供免费消费者套餐。API方面，Gemini最便宜，GPT-5.5居中，Claude Opus 4.7最贵——但对于精度要求高的任务，质量差异可以证明溢价的合理性。',
+        },
+        strategy: {
+          title: '智慧策略：同时使用三款模型',
+          content: [
+            '专业AI用户不会只依赖一款模型。他们将相同的提示词发送给三款模型，选择最佳回答：',
+            '1. GPT-5.5：快速头脑风暴和创意探索',
+            '2. Claude Opus 4.7：深度分析、推理验证、代码审查',
+            '3. Gemini 3.1 Pro：实时信息、多模态任务、超长文档',
+            '这样您就能获得速度（GPT-5.5）、精度（Claude Opus 4.7）以及时效性+上下文（Gemini 3.1 Pro）。PromptQuorum自动化了这一流程：将同一优化提示词发送给三款模型，并排比较结果。',
+          ],
+        },
+        currentTrends: {
+          title: '2026年AI模型最新趋势',
+          content: ['三大前沿模型在基准性能上已大幅收敛——2023年存在的差距，如今在大多数标准基准测试中已缩小到个位数百分点。'],
+          items: [
+            '深度思考模式已成标配：三款均为复杂推理任务提供推理时计算扩展能力',
+            '多模态能力已是基本要求：GPT-5.5和Claude Opus 4.7均支持图像；Gemini 3.1 Pro在视频和音频方面领先',
+            '上下文窗口快速扩展：从4K（GPT-3）到2M（Gemini 3.1 Pro），不到三年实现跨越式增长',
+            '开源模型正在缩小能力差距：LLaMA 3.1 70B和Qwen2.5在大多数基准测试上已达到GPT-4水平',
+            'Tool Use和Function Calling已普及：三款均在生产环境中支持结构化输出、代码执行和外部API调用',
+          ],
+        },
+        localAlternatives: {
+          title: '本地化与开源替代方案',
+          content: ['对于隐私敏感型工作负载或离线部署，开源模型已大幅缩小能力差距。LLaMA 3.1（Meta）、Qwen2.5（阿里巴巴）和Mistral可在8-16GB VRAM的消费级硬件上运行。'],
+          items: [
+            'LLaMA 3.1 70B：在推理基准测试中与GPT-4o竞争；需要约40GB VRAM或量化后8-16GB',
+            'Qwen2.5 14B：2025年代码生成能力最强的开源模型，对中文支持出色',
+            'Mistral 7B：消费级硬件上推理最快；最适合延迟敏感型应用',
+            '[本地LLM中心](/local-llms?lang=zh) — Mac、Windows和Linux上的Ollama、LM Studio和llama.cpp安装指南',
+          ],
+        },
+        nextSteps: {
+          title: '下一步行动',
+          content: [
+            '不要局限于一款模型——用您的实际使用场景测试三款：',
+            '1. 使用ChatGPT（GPT-5.5）免费套餐完成创意任务和头脑风暴',
+            '2. 尝试Claude Opus 4.7进行分析工作和代码审查',
+            '3. 用Gemini 3.1 Pro实验图像分析和实时网络数据',
+            '4. 将同一提示词发送给三款，比较回复结果',
+            '5. 确定哪款模型在您特定任务类型上表现最佳',
+            'PromptQuorum支持将同一优化提示词同时发送给GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro及其他模型——然后比较哪款为您的任务提供了最佳结果。',
+          ],
+        },
+        tldr: {
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            'GPT-5.5：最适合速度、通用性和创意写作。推理最快。128K上下文。',
+            'Claude Opus 4.7：最适合推理（约91% MMLU-Pro）、代码（约94% HumanEval）、长篇分析。1M上下文。',
+            'Gemini 3.1 Pro：最适合多模态（图像、视频、音频）。实时网络访问。最大上下文（2M）。API成本最低。',
+            '三款均提供免费消费者套餐和约$20/月的Pro套餐。',
+            '推理能力：Claude Opus 4.7 > GPT-5.5 > Gemini 3.1 Pro。',
+            '速度：GPT-5.5 ≈ Gemini 3.1 Pro > Claude Opus 4.7。',
+            'API成本：Gemini 3.1 Pro（约$3.5/M）< GPT-5.5（约$5/M）< Claude Opus 4.7（约$15/M）。',
+            '最佳实践：关键任务将同一提示词发送给三款——选择最佳回答。',
+          ],
+        },
+        chinaContext: {
+          title: '中国企业的应用方案',
+          content: [
+            '对于在中国境内运营的企业，使用境外云AI服务涉及《数据安全法》（2021年）、《个人信息保护法》（PIPL，2021年）及《网络安全法》等多项合规要求。',
+            '境外云AI服务（包括ChatGPT、Claude、Gemini）的API调用通常需要经过跨境数据传输安全评估。对于金融、医疗、法律等涉及重要数据的行业，建议优先考虑本地化部署方案。',
+          ],
+          items: [
+            '数据安全法合规：向境外发送重要数据须通过国家互联网信息办公室（CAC）的安全评估。建议法律团队在生产部署前审查合规要求。',
+            '推荐本地化模型：Qwen2.5（阿里巴巴）是专为中文优化的高性能开源模型，支持本地部署，完全满足数据不出境要求。LLaMA 3.1和Mistral亦可本地部署。',
+            '亚太数据跨境合规：新加坡、日本、韩国、马来西亚等地均有数据跨境传输法规。跨境业务建议采用本地化AI基础设施或具备亚太区域数据中心的服务商。',
+            '企业部署建议：金融机构、医疗机构和律所等处理敏感数据的企业，应首选本地部署方案以满足监管要求并保障数据主权。',
+          ],
+        },
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            { q: '哪款AI模型最适合创意写作？', a: 'GPT-5.5（ChatGPT）在创意写作、头脑风暴和通用任务方面表现出色——速度快且易于使用。Claude Opus 4.7更擅长深度推理和创意内容的分析工作。' },
+            { q: '哪款模型最适合编程？', a: 'Claude Opus 4.7在代码质量和调试方面领先，HumanEval得分约94%。GPT-5.5（约92%）速度更快。关键任务建议对比两者的代码建议。' },
+            { q: '2026年的价格对比如何？', a: 'GPT-5.5：输入约$5/百万token，输出约$15。Claude Opus 4.7：输入约$15，输出约$75。Gemini 3.1 Pro：输入约$3.5，输出约$10.5。三款均提供月费约$20的消费者套餐。请向各服务商确认最新价格。' },
+            { q: '哪款模型最擅长多模态任务？', a: 'Gemini 3.1 Pro在图像、视频、音频和文档理解方面最为出色。GPT-5.5支持文本和图像。Claude Opus 4.7支持文本和图像，但不支持视频。' },
+            { q: '三款模型都有免费套餐吗？', a: '是的。ChatGPT、Claude.ai和Gemini均提供有每日使用限制的免费套餐。三者均提供月费约$20的Pro/Plus套餐，具有更高的使用限额。' },
+            { q: '可以在同一工作流中使用多个模型吗？', a: '可以。PromptQuorum支持将同一提示词同时发送给GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro及其他模型，然后并排比较结果。这是关键任务的推荐方式。' },
+            { q: '使用这些AI模型需要遵守中国数据安全法吗？', a: '是的。根据《数据安全法》（2021年）和《个人信息保护法》（PIPL），将重要数据发送至境外云服务须进行合规评估。对于涉及敏感数据的企业应用，建议使用Qwen2.5等本地化模型或境内服务器部署方案。' },
+            { q: '本地推理如何满足企业合规要求？', a: '本地部署的开源模型（如LLaMA 3.1、Qwen2.5、Mistral）可完全满足数据不出境的合规要求，适用于金融、医疗、法律等敏感行业。数据全程在本地处理，无需向第三方云服务发送任何信息。' },
+          ],
+        },
+        commonMistakes: {
+          title: '常见错误',
+          items: [
+            '错误1：只选一款模型从不比较。每款模型都有独特优势。在确定使用前，务必用您的具体任务进行测试。',
+            '错误2：认为最贵的模型就是最好的。Gemini 3.1 Pro是API成本最低的选项，且在多模态任务上胜出。应根据任务而非价格来匹配模型。',
+            '错误3：忽略上下文窗口限制。Gemini 3.1 Pro（2M token）和Claude Opus 4.7（1M token）可处理长文档。GPT-5.5（128K）可能会截断大型输入。',
+            '错误4：不核查知识截止日期。接入网络的模型（Gemini 3.1 Pro通过Search、GPT-5.5通过浏览）拥有实时信息。基础API调用可能使用训练截止日期前的数据。',
+            '错误5：对所有模型使用相同的提示词。每款模型对不同提示风格的响应效果不同。请灵活调整提示词——Claude受益于明确的逐步指示；Gemini受益于多模态上下文。',
+          ],
+        },
+        relatedReading: {
+          title: '延伸阅读',
+          items: [
+            '[LLM的实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh) — Transformer架构、注意力机制及模型产生幻觉的原因',
+            '[AI的局限性：LLM做不到什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 所有模型共有的八项结构性限制',
+            '[开源vs专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh) — 何时使用本地模型vs云端API',
+            '[AI幻觉：为什么AI会编造信息](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh) — 如何在各模型间检测和减少幻觉',
+          ],
+        },
+        sources: {
+          title: '来源与参考文献',
+          items: [
+            'OpenAI GPT-5.5模型规格 — openai.com/models',
+            'Anthropic Claude Opus 4.7文档 — docs.anthropic.com',
+            'Google Gemini 3.1 Pro规格 — gemini.google.com',
+            'LMSYS Chatbot Arena排行榜 — arena.lmsys.org',
+            'Papers With Code — MMLU基准测试结果 — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
+          ],
+        },
+      },
     },
   },
   quorum: {
