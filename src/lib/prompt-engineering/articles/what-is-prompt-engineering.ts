@@ -1160,6 +1160,37 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Thing', name: 'Gemini' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '提示词工程框架',
+        inLanguage: 'zh',
+        numberOfItems: 5,
+        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=zh',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Single-Line', description: '速度比精确度更重要的快速单行任务。' },
+          { '@type': 'ListItem', position: 2, name: 'CRAFT', description: '具有明确声音风格的营销、文案和创意内容。' },
+          { '@type': 'ListItem', position: 3, name: 'SPECS', description: '研究、分析和结构化事实输出。' },
+          { '@type': 'ListItem', position: 4, name: 'CO-STAR', description: '需要完整上下文、明确受众和分步指令的复杂任务。' },
+          { '@type': 'ListItem', position: 5, name: 'RISEN', description: '说明性写作、培训材料和教育内容。' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          { '@type': 'Question', name: '提示词工程对更新的 AI 模型仍然有用吗？', acceptedAnswer: { '@type': 'Answer', text: '是的——而且更加有用。能力更强的模型更善于遵循精确指令，结构良好的提示词的回报也在增加。结构化提示词仍然是首次尝试就获得专业级输出的最可靠方式。' } },
+          { '@type': 'Question', name: '学习提示词工程需要会编程吗？', acceptedAnswer: { '@type': 'Answer', text: '不需要。提示词工程主要是一种语言和逻辑技能——能够精确陈述任务、预见失效模式，并明确指定你需要什么。绝大多数提示词工程工作根本不需要任何编程。' } },
+          { '@type': 'Question', name: '提示词工程与传统编程有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '传统编程向计算机提供确定性指令，在相同输入下每次产生相同的输出。提示词工程向概率模型提供结构化引导，以提高产出有用结果的可能性——但无法保证。' } },
+          { '@type': 'Question', name: '提示词工程技术与框架有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '技术是应用于实现特定输出质量的具体模式——思维链（Chain-of-Thought）提示能提高推理准确性。框架是组织提示词所有要素的结构化模板——CO-STAR 定义了指定上下文、目标、风格、语气、受众和响应格式的顺序。' } },
+          { '@type': 'Question', name: '提示词工程在未来还会重要吗？', acceptedAnswer: { '@type': 'Answer', text: '所有现有证据都指向肯定的答案。大型语言模型尚不能仅凭非结构化的自然语言稳定产出专业级输出。好的提示词的底层原则仍然是有用和无用 AI 响应之间的关键差异。' } },
+          { '@type': 'Question', name: '提示词工程与微调有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '提示词工程在不改变模型本身的情况下塑造现有模型的输出——在推理时运作，不需要训练。微调通过训练永久改变模型的权重。提示词工程更快、更便宜，不需要机器学习专业知识。' } },
+          { '@type': 'Question', name: 'PromptQuorum 这样的工具与提示词工程有什么关系？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum 是一个围绕提示词工程原则构建的多模型 AI 调度工具。它内置9个提示词框架、一个 AI 驱动的提示词优化器，以及将一个提示词同时发送给多个模型并排比较结果的功能。' } },
+          { '@type': 'Question', name: '现在AI智能体已经存在，提示词工程还有意义吗？', acceptedAnswer: { '@type': 'Answer', text: '有。AI智能体——自主规划和执行多步骤任务的系统——建立在提示词工程之上。每个智能体都有一个系统提示词，定义其角色、约束条件和可用工具。提示词工程是使智能体可控和可预测的基础。' } },
+          { '@type': 'Question', name: '用户提示词和系统提示词有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '系统提示词是应用于整个会话的持久指令集——在用户说任何话之前，它定义模型的角色、约束条件和默认行为。用户提示词是每次请求的输入——该交互的特定任务或问题。' } },
+        ],
+      },
       sections: {
         definition: {
           title: '什么是提示词工程？',

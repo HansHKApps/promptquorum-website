@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "df9332da-6135-4f79-8f97-33a4ff8fb39a",
+    "slug": "/prompt-engineering/what-is-prompt-engineering",
+    "date": "2026-05-01T09:44:04.030Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Prompt Engineering 2026: die Technik, die Qualität Ihrer KI-Ausgaben bestimmt. Lernen Sie Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
+        "new": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama."
+      },
+      {
+        "field": "metaDescription",
+        "old": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。基礎を10分で学べます。",
+        "new": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: fix DE metaDescription (168→150 chars), fix JA metaDescription (74→94 chars, below 80-char min)",
+    "baseline": null
+  }
+]
