@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { generateAlternates } from '@/lib/hreflang'
+import { peContent } from '@/lib/prompt-engineering/content'
+import type { Language } from '@/translations'
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
@@ -167,6 +169,16 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
 
   const howToForLang = HOWTO_TRANSLATIONS[selectedLang] ?? HOWTO_TRANSLATIONS['en']
 
+  // Extract article titles from peContent to pass as prop (keeps full article content server-side)
+  const titlesMap: Record<string, Partial<Record<Language, string>>> = Object.fromEntries(
+    Object.entries(peContent).map(([key, langMap]) => [
+      key,
+      Object.fromEntries(
+        Object.entries(langMap).map(([lang, article]) => [lang, article.title])
+      ),
+    ])
+  )
+
   const BREADCRUMB_LABELS: Record<string, string> = {
     en: 'Prompt Engineering', de: 'Prompt Engineering', fr: 'Ingénierie de prompts',
     ja: 'プロンプトエンジニアリング', zh: '提示词工程',
@@ -321,7 +333,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
           __html: JSON.stringify(jsonLdSchemas),
         }}
       />
-      <PromptEngineeringHub initialLang={selectedLang as any} />
+      <PromptEngineeringHub initialLang={selectedLang as Language} titlesMap={titlesMap} />
     </>
   )
 }

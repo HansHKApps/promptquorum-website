@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { themes, type PETheme } from '@/lib/prompt-engineering/themes'
-import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
@@ -579,14 +578,14 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   'workflows-automation': { badge: 'bg-green-50 text-green-700 border-green-200', dot: 'bg-green-400' },
 }
 
-// Get translated article title — checks content, then fallback titles, then formats slug
-function getArticleTitle(articleKey: string, lang: Language): string {
+// Get translated article title — checks titles map, then fallback titles, then formats slug
+function getArticleTitle(articleKey: string, lang: Language, titlesMap: Record<string, Partial<Record<Language, string>>>): string {
   const contentKey = PE_SLUG_TO_KEY[articleKey]
-  if (contentKey && peContent[contentKey]?.[lang]?.title) {
-    return peContent[contentKey][lang].title
+  if (contentKey && titlesMap[contentKey]?.[lang]) {
+    return titlesMap[contentKey][lang]!
   }
-  if (contentKey && peContent[contentKey]?.en?.title) {
-    return peContent[contentKey].en.title
+  if (contentKey && titlesMap[contentKey]?.en) {
+    return titlesMap[contentKey].en!
   }
   // Use fallback titles for articles without content yet
   if (FALLBACK_TITLES[articleKey]?.[lang]) {
@@ -598,8 +597,8 @@ function getArticleTitle(articleKey: string, lang: Language): string {
   return articleKey.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
 
-function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: Language }) {
-  const title = getArticleTitle(articleKey, lang)
+function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string; dot: string; lang: Language; titlesMap: Record<string, Partial<Record<Language, string>>> }) {
+  const title = getArticleTitle(articleKey, lang, titlesMap)
   const href = navHref(`/prompt-engineering/${articleKey}`, lang)
 
   return (
@@ -613,7 +612,7 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   )
 }
 
-function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+function PromptEngineeringHubContent({ initialLang, titlesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>> }) {
   const lang = useLang(initialLang)
 
   return (
@@ -721,7 +720,7 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
                 {theme.articleKeys && (
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {theme.articleKeys.map((key) => (
-                      <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
+                      <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
                     ))}
                   </div>
                 )}
@@ -736,7 +735,7 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
                         </h3>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                           {sub.articleKeys.map((key) => (
-                            <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
+                            <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
                           ))}
                         </div>
                       </div>
@@ -838,6 +837,6 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
   )
 }
 
-export function PromptEngineeringHub({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
-  return <PromptEngineeringHubContent initialLang={initialLang} />
+export function PromptEngineeringHub({ initialLang, titlesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>> }) {
+  return <PromptEngineeringHubContent initialLang={initialLang} titlesMap={titlesMap} />
 }
