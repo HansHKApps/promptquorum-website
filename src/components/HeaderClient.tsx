@@ -113,7 +113,10 @@ function HeaderInner() {
 
         {/* Language Switcher + Mobile Menu */}
         <div className="flex items-center gap-3">
-          <LanguageSwitcherWrapper initialLang={lang as Language} />
+          {/* Hide language switcher on screens below sm (640px), show on sm+ */}
+          <div className="hidden sm:block">
+            <LanguageSwitcherWrapper initialLang={lang as Language} />
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -133,6 +136,33 @@ function HeaderInner() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md px-4 py-3 space-y-2">
+          {/* Language Selector in Mobile Menu */}
+          <div className="sm:hidden mb-2 pb-2 border-b border-gray-200">
+            <div className="text-xs font-semibold text-gray-500 px-4 py-1 mb-2">Language</div>
+            <div className="flex gap-2 px-2">
+              {[
+                { code: 'en', name: 'English', flag: '🇺🇸' },
+                { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+                { code: 'fr', name: 'Français', flag: '🇫🇷' },
+                { code: 'ja', name: '日本語', flag: '🇯🇵' },
+                { code: 'zh', name: '中文', flag: '🇨🇳' },
+              ].map(l => (
+                <a
+                  key={l.code}
+                  href={l.code === 'en' ? '/' : `/?lang=${l.code}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex-1 px-3 py-2 text-center rounded-lg text-sm transition-colors ${
+                    lang === l.code
+                      ? 'bg-purple-600 text-white font-semibold'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  <span className="text-base">{l.flag}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <Link
             href={navHref('/compare', lang)}
             className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
