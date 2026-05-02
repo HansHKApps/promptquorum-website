@@ -1198,6 +1198,40 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           </div>
         </section>
 
+        {/* Cross-link: Prompt Engineering */}
+        <div className="mb-16 bg-primary/5 border border-primary/20 rounded-2xl px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex-1">
+            <p className="text-sm font-semibold text-text-primary mb-1">
+              {lang === 'de' ? 'Verwandte Themen: Prompt Engineering'
+                : lang === 'fr' ? 'Connexe : Guide de Prompt Engineering'
+                : lang === 'ja' ? '関連：プロンプトエンジニアリングガイド'
+                : lang === 'zh' ? '相关推荐：Prompt工程指南'
+                : 'Related: Prompt Engineering Guide'}
+            </p>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              {lang === 'de'
+                ? 'Ein lokales Modell auszuführen ist Schritt eins. Großartige Ausgaben zu erzielen ist Schritt zwei. Der Prompt-Engineering-Guide deckt 80 Techniken in 9 Themen ab — von Grundlagen wie Temperatur und Kontextfenster bis zu fortgeschrittenen Methoden wie Chain-of-Thought, RAG und Team-Governance. Jede Technik funktioniert mit lokalen Modellen.'
+                : lang === 'fr'
+                ? 'Faire tourner un modèle local est la première étape. En obtenir d\'excellentes sorties est la deuxième. Le guide de prompt engineering couvre 80 techniques dans 9 domaines — des fondamentaux comme la température et les fenêtres de contexte aux méthodes avancées comme la chain-of-thought, le RAG et la gouvernance d\'équipe. Chaque technique fonctionne avec les modèles locaux.'
+                : lang === 'ja'
+                ? 'ローカルモデルを動かすことがステップ1です。そこから優れた出力を得ることがステップ2です。プロンプトエンジニアリングガイドは、温度やコンテキストウィンドウなどの基礎から、Chain-of-Thought・RAG・チームガバナンスなどの高度な手法まで、9つのトピックにわたる80のテクニックを解説しています。すべてのテクニックはローカルモデルで使用できます。'
+                : lang === 'zh'
+                ? '运行本地模型是第一步，从中获取出色输出是第二步。Prompt工程指南涵盖9个主题的80项技术——从温度和上下文窗口等基础知识，到思维链、RAG和团队治理等高级方法。每项技术都适用于本地模型。'
+                : 'Running a local model is step one. Getting great output from it is step two. The Prompt Engineering guide covers 80 techniques across 9 topics — from fundamentals like temperature and context windows to advanced methods like chain-of-thought, RAG, and team governance. Every technique works with local models.'}
+            </p>
+          </div>
+          <Link
+            href={navHref('/prompt-engineering', lang)}
+            className="flex-shrink-0 inline-flex items-center px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
+          >
+            {lang === 'de' ? 'Zum Prompt-Engineering-Guide →'
+              : lang === 'fr' ? 'Explorer le Guide de Prompt Engineering →'
+              : lang === 'ja' ? 'プロンプトエンジニアリングガイドを見る →'
+              : lang === 'zh' ? '探索Prompt工程指南 →'
+              : 'Explore the Prompt Engineering Guide →'}
+          </Link>
+        </div>
+
         {/* Back nav */}
         <div className="pt-8 border-t border-primary/20">
           <Link href={navHref('/', lang)} className="text-sm text-text-secondary hover:text-primary transition-colors">

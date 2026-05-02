@@ -16,7 +16,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
     alternates: generateAlternates('/prompt-engineering', selectedLang),
     openGraph: {
       title: t.promptEngineeringHubTitle,
-      description: t.promptEngineeringHubDescription,
+      description: t.promptEngineeringHubOgDescription ?? t.promptEngineeringHubDescription,
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
@@ -24,7 +24,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
     twitter: {
       card: 'summary_large_image',
       title: t.promptEngineeringHubTitle,
-      description: t.promptEngineeringHubDescription,
+      description: t.promptEngineeringHubTwitterDescription ?? t.promptEngineeringHubDescription,
     },
   }
 }
@@ -54,6 +54,8 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       { q: 'Is prompt engineering still relevant in 2026?', a: 'Yes — despite improvements in model reasoning, prompt engineering remains essential. Models still produce significantly better outputs with structured inputs. Chain-of-thought prompting improves complex reasoning accuracy by 30–40% in benchmarks. As models improve, prompt engineering shifts from correcting weaknesses to unlocking capabilities.' },
       { q: 'What\'s the difference between prompt engineering and fine-tuning?', a: 'Prompt engineering shapes model behavior through input design without changing model weights — it\'s fast (minutes) and model-agnostic. Fine-tuning trains a model on new data to change its baseline behavior — it takes hours, requires datasets, and produces a specialized model. Use prompt engineering first; fine-tune only when prompts consistently can\'t solve the task.' },
       { q: 'What tools do prompt engineers use?', a: 'The core stack: a prompt IDE (Cursor or VS Code with Continue.dev), a testing framework (Braintrust or Promptfoo for evaluation and CI/CD), a version control system (PromptHub or Git), and a multi-model testing platform (PromptQuorum to compare outputs across GPT-4o, Claude, and Gemini simultaneously). Advanced teams add Vellum for production traffic management.' },
+      { q: 'How many AI models should I test my prompts on?', a: 'Test on at least 2–3 models before deploying a prompt. The minimum useful set is GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Flash — these cover the three major providers with different training approaches. For production prompts, add an open-source model (Llama 3 or Mistral) for baseline coverage. Testing on one model and assuming the result generalizes is the most common source of prompt fragility in production.' },
+      { q: 'What is the difference between prompt engineering and prompt management?', a: 'Prompt engineering is the craft of writing effective prompts; prompt management is the operational system for storing, versioning, reviewing, and deploying them. A team can have strong prompt engineering but poor management — prompts scattered across code, no version history, no rollback capability. Both are required for production: engineering determines prompt quality, management determines reliability and maintainability.' },
     ],
     de: [
       { q: 'Was ist Prompt Engineering?', a: 'Prompt Engineering ist die Praxis, Anfragen an KI-Modelle so zu strukturieren, dass bessere und konsistentere Ausgaben erzielt werden. Es umfasst den Einsatz von Frameworks, Formatierungen, Beispielen und Einschränkungen zur Steuerung des Modellverhaltens.' },

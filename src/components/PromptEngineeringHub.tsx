@@ -12,11 +12,11 @@ function navHref(path: string, lang: string) {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'The complete guide to writing better AI prompts.',
-  de: 'Der vollständige Leitfaden für bessere KI-Prompts.',
-  fr: 'Le guide complet pour écrire de meilleurs prompts IA.',
-  ja: 'より良いAIプロンプトを書くための完全ガイド。',
-  zh: '编写更好AI提示词的完整指南。',
+  en: 'Prompt Engineering Guide: 80 Articles Across 9 Topics (2026)',
+  de: 'Prompt Engineering Guide: 80 Artikel in 9 Themenbereichen (2026)',
+  fr: 'Guide Prompt Engineering : 80 Articles en 9 Thématiques (2026)',
+  ja: 'プロンプトエンジニアリングガイド：9テーマ80記事（2026年）',
+  zh: 'Prompt工程指南：9大主题80篇文章（2026）',
 }
 
 const HUB_LEAD_ANSWER: Record<string, string> = {
@@ -27,12 +27,44 @@ const HUB_LEAD_ANSWER: Record<string, string> = {
   zh: '提示词工程是设计AI语言模型输入的实践——指定角色、上下文、约束条件、输出格式和示例——以产生准确、一致的结果。2026年，随着25个以上模型的可用，提示词设计是从AI获取可靠价值的最高效技能。',
 }
 
+const HUB_IN_ONE_SENTENCE: Record<string, string> = {
+  en: 'Prompt engineering is designing inputs to AI models — role, context, constraints, format, examples — to get accurate, consistent, production-grade results.',
+  de: 'Prompt Engineering ist das Gestalten von Eingaben für KI-Modelle — Rolle, Kontext, Einschränkungen, Format, Beispiele — um genaue, konsistente, produktionsreife Ergebnisse zu erzielen.',
+  fr: 'Le prompt engineering consiste à concevoir les entrées pour les modèles IA — rôle, contexte, contraintes, format, exemples — pour obtenir des résultats précis, cohérents et prêts pour la production.',
+  ja: 'プロンプトエンジニアリングとは、AIモデルへの入力（役割・コンテキスト・制約・フォーマット・例）を設計し、正確で一貫した本番環境品質の結果を得ることです。',
+  zh: '提示词工程是为AI模型设计输入——角色、上下文、约束、格式、示例——以获得准确、一致、生产级的结果。',
+}
+
+const HUB_IN_PLAIN_TERMS: Record<string, string> = {
+  en: 'Instead of typing "write me an email" and hoping, you tell the AI exactly what role to play, what context it has, what format to use, and what good output looks like — and it performs 3-5× better.',
+  de: 'Statt „schreib mir eine E-Mail" einzutippen, teilen Sie der KI genau mit, welche Rolle sie spielen soll, welchen Kontext sie hat, welches Format zu verwenden ist und wie gute Ausgabe aussieht — die Ergebnisse sind 3–5× besser.',
+  fr: "Au lieu de taper \"écris-moi un email\" en espérant, vous indiquez à l'IA exactement quel rôle jouer, quel contexte elle a, quel format utiliser, et à quoi ressemble une bonne sortie — les performances sont 3 à 5× meilleures.",
+  ja: '「メールを書いて」とだけ入力して期待する代わりに、AIにどの役割を果たすべきか、どのコンテキストを持つか、どのフォーマットを使うか、良い出力とはどのようなものかを正確に伝えると、パフォーマンスが3〜5倍向上します。',
+  zh: '不再只是输入"帮我写封邮件"然后祈祷，而是告诉AI确切需要扮演什么角色、拥有什么上下文、使用什么格式以及好的输出是什么样子——性能提升3-5倍。',
+}
+
+const HUB_IN_ONE_SENTENCE_LABEL: Record<string, string> = {
+  en: '📍 In One Sentence', de: '📍 Kurzfassung', fr: '📍 En une phrase', ja: '📍 一言で', zh: '📍 一句话概括',
+}
+
+const HUB_IN_PLAIN_TERMS_LABEL: Record<string, string> = {
+  en: '💬 In Plain Terms', de: '💬 Einfach erklärt', fr: '💬 En termes simples', ja: '💬 わかりやすく言うと', zh: '💬 通俗来说',
+}
+
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Prompt engineering determines whether an AI model gives you a useful answer or a vague one. A well-engineered prompt specifies the task clearly, provides the right context, sets format constraints, and uses examples to calibrate model behavior — transforming generic AI responses into expert-quality, predictable outputs. These 80 guides cover the complete prompt engineering stack: fundamentals (tokens, context windows, temperature, model selection), proven frameworks (CO-STAR, CRAFT, RTF, APE, RISEN), advanced techniques (chain-of-thought, RAG, self-consistency, few-shot learning), team workflows (version control, governance, CI/CD review gates), evaluation methods (metrics, regression testing, cross-model testing), and tool comparisons (Braintrust, PromptHub, Cursor). Whether you\'re building production AI features, optimizing prompts for GPT-4o, Claude Opus 4.7, or Gemini 2.5 Pro, or scaling prompt engineering across a team, these research-backed guides give you the patterns that work.',
-  de: 'Prompt Engineering entscheidet, ob ein KI-Modell eine nützliche oder eine vage Antwort liefert. Ein gut engineerter Prompt spezifiziert die Aufgabe klar, liefert den richtigen Kontext, setzt Formatbeschränkungen und verwendet Beispiele zur Kalibrierung des Modellverhaltens. Diese 80 Leitfäden decken das vollständige Spektrum ab: Grundlagen (Tokens, Kontextfenster, Temperatur), bewährte Frameworks (CO-STAR, CRAFT, RTF, APE), fortgeschrittene Techniken (Chain-of-Thought, RAG, Few-Shot), Team-Prozesse (Versionskontrolle, Steuerung, CI/CD-Kontrollen), Evaluierungsmethoden und Tool-Vergleiche für GPT-4o, Claude Opus 4.7 und Gemini 2.5 Pro.',
-  fr: 'Le prompt engineering détermine si un modèle d\'IA vous donne une réponse utile ou vague. Un prompt bien conçu spécifie clairement la tâche, fournit le bon contexte, définit des contraintes de format et utilise des exemples pour calibrer le comportement du modèle. Ces 80 guides couvrent l\'ensemble de l\'écosystème prompt engineering : fondamentaux (tokens, fenêtres de contexte, température), frameworks éprouvés (CO-STAR, CRAFT, RTF, APE), techniques avancées (chain-of-thought, RAG, few-shot), processus d\'équipe, méthodes d\'évaluation et comparatifs d\'outils pour GPT-4o, Claude Opus 4.7 et Gemini 2.5 Pro.',
-  ja: 'プロンプトエンジニアリングは、AIモデルが有用な回答を返すか曖昧な回答を返すかを決定します。適切に設計されたプロンプトは、タスクを明確に指定し、適切なコンテキストを提供し、フォーマット制約を設定し、例を用いてモデルの動作を調整します。これらの80本のガイドは、基礎知識（トークン、コンテキストウィンドウ、温度）、実証済みフレームワーク（CO-STAR、CRAFT、RTF）、高度な技術（チェーン・オブ・ソート、RAG、フューショット）、チームワークフロー、評価手法、GPT-4oとClaude Opus 4.7向けのツール比較を網羅します。',
-  zh: '提示词工程决定了AI模型是给出有用答案还是模糊答案。精心设计的提示词明确指定任务、提供正确上下文、设置格式约束并使用示例校准模型行为。这80篇指南涵盖完整的提示词工程体系：基础知识（词元、上下文窗口、温度）、成熟框架（CO-STAR、CRAFT、RTF）、高级技术（思维链、RAG、少样本学习）、团队工作流程、评估方法，以及GPT-4o、Claude Opus 4.7和Gemini 2.5 Pro的工具比较。',
+  en: 'Prompt engineering determines whether an AI model gives you a useful answer or a vague one. A well-engineered prompt specifies the task clearly, provides the right context, sets format constraints, and uses examples to calibrate model behavior — transforming generic AI responses into expert-quality, predictable outputs. These 80 guides cover the complete prompt engineering stack: fundamentals (tokens, context windows, temperature, model selection), proven frameworks (CO-STAR, CRAFT, RTF, APE, RISEN), advanced techniques (chain-of-thought, RAG, self-consistency, few-shot learning), team workflows (version control, governance, CI/CD review gates), evaluation methods (metrics, regression testing, cross-model testing), and tool comparisons (Braintrust, PromptHub, Cursor). Whether you\'re building production AI features, optimizing prompts for GPT-4o, Claude 4.6 Opus, or Gemini 2.5 Pro, or scaling prompt engineering across a team, these research-backed guides give you the patterns that work.',
+  de: 'Prompt Engineering entscheidet, ob ein KI-Modell eine nützliche oder eine vage Antwort liefert. Ein gut engineerter Prompt spezifiziert die Aufgabe klar, liefert den richtigen Kontext, setzt Formatbeschränkungen und verwendet Beispiele zur Kalibrierung des Modellverhaltens. Diese 80 Leitfäden decken das vollständige Spektrum ab: Grundlagen (Tokens, Kontextfenster, Temperatur), bewährte Frameworks (CO-STAR, CRAFT, RTF, APE), fortgeschrittene Techniken (Chain-of-Thought, RAG, Few-Shot), Team-Prozesse (Versionskontrolle, Steuerung, CI/CD-Kontrollen), Evaluierungsmethoden und Tool-Vergleiche für GPT-4o, Claude 4.6 Opus und Gemini 2.5 Pro.',
+  fr: 'Le prompt engineering détermine si un modèle d\'IA vous donne une réponse utile ou vague. Un prompt bien conçu spécifie clairement la tâche, fournit le bon contexte, définit des contraintes de format et utilise des exemples pour calibrer le comportement du modèle. Ces 80 guides couvrent l\'ensemble de l\'écosystème prompt engineering : fondamentaux (tokens, fenêtres de contexte, température), frameworks éprouvés (CO-STAR, CRAFT, RTF, APE), techniques avancées (chain-of-thought, RAG, few-shot), processus d\'équipe, méthodes d\'évaluation et comparatifs d\'outils pour GPT-4o, Claude 4.6 Opus et Gemini 2.5 Pro.',
+  ja: 'プロンプトエンジニアリングは、AIモデルが有用な回答を返すか曖昧な回答を返すかを決定します。適切に設計されたプロンプトは、タスクを明確に指定し、適切なコンテキストを提供し、フォーマット制約を設定し、例を用いてモデルの動作を調整します。これらの80本のガイドは、基礎知識（トークン、コンテキストウィンドウ、温度）、実証済みフレームワーク（CO-STAR、CRAFT、RTF）、高度な技術（チェーン・オブ・ソート、RAG、フューショット）、チームワークフロー、評価手法、GPT-4oとClaude 4.6 Opus向けのツール比較を網羅します。',
+  zh: '提示词工程决定了AI模型是给出有用答案还是模糊答案。精心设计的提示词明确指定任务、提供正确上下文、设置格式约束并使用示例校准模型行为。这80篇指南涵盖完整的提示词工程体系：基础知识（词元、上下文窗口、温度）、成熟框架（CO-STAR、CRAFT、RTF）、高级技术（思维链、RAG、少样本学习）、团队工作流程、评估方法，以及GPT-4o、Claude 4.6 Opus和Gemini 2.5 Pro的工具比较。',
+}
+
+const HUB_TLDR: Record<string, string> = {
+  en: '80 prompt engineering guides organised by skill level: start with Fundamentals (tokens, temperature, model selection), learn Frameworks (CO-STAR, CRAFT, RTF), apply Techniques (chain-of-thought, RAG, few-shot), set up Team Governance (version control, CI/CD gates), and pick the right Tools (Braintrust, Promptfoo, Cursor). Updated May 2026 for GPT-4o, Claude, and Gemini.',
+  de: '80 Prompt-Engineering-Leitfäden nach Schwierigkeitsgrad: beginnen Sie mit Grundlagen (Tokens, Temperatur, Modellauswahl), lernen Sie Frameworks (CO-STAR, CRAFT, RTF), wenden Sie Techniken an (Chain-of-Thought, RAG, Few-Shot), richten Sie Team Governance ein (Versionskontrolle, CI/CD-Gates) und wählen Sie die richtigen Tools (Braintrust, Promptfoo, Cursor). Aktualisiert Mai 2026 für GPT-4o, Claude und Gemini.',
+  fr: '80 guides de prompt engineering organisés par niveau : débutez par les Fondamentaux (tokens, température, sélection de modèles), apprenez les Frameworks (CO-STAR, CRAFT, RTF), appliquez les Techniques (chain-of-thought, RAG, few-shot), mettez en place la Gouvernance d\'équipe (contrôle de version, CI/CD), et choisissez les bons Outils (Braintrust, Promptfoo, Cursor). Mis à jour mai 2026 pour GPT-4o, Claude et Gemini.',
+  ja: 'スキルレベル別の80本のプロンプトエンジニアリングガイド：基礎（トークン、温度、モデル選択）から始め、フレームワーク（CO-STAR、CRAFT、RTF）を学び、テクニック（チェーン・オブ・ソート、RAG、フューショット）を適用し、チームガバナンス（バージョン管理、CI/CDゲート）を設定し、適切なツール（Braintrust、Promptfoo、Cursor）を選択してください。2026年5月にGPT-4o、Claude、Gemini向けに更新済み。',
+  zh: '按技能水平整理的80篇Prompt工程指南：从基础开始（词元、温度、模型选择），学习框架（CO-STAR、CRAFT、RTF），应用技术（思维链、RAG、少样本），建立团队治理（版本控制、CI/CD门控），并选择合适的工具（Braintrust、Promptfoo、Cursor）。已更新至2026年5月，适用于GPT-4o、Claude和Gemini。',
 }
 
 const HUB_CTA_TEXT: Record<string, string> = {
@@ -44,11 +76,58 @@ const HUB_CTA_TEXT: Record<string, string> = {
 }
 
 const HUB_QUICK_FACTS: Record<string, string[]> = {
-  en: ['80 articles across 9 topic areas', 'Covers GPT-4o, Claude Opus 4.7, and Gemini 2.5 Pro', '5–20 min per article', 'Updated May 2026'],
-  de: ['80 Artikel in 9 Themenbereichen', 'Behandelt GPT-4o, Claude Opus 4.7 und Gemini 2.5 Pro', '5–20 Min. pro Artikel', 'Aktualisiert Mai 2026'],
-  fr: ['80 articles dans 9 domaines', 'Couvre GPT-4o, Claude Opus 4.7 et Gemini 2.5 Pro', '5–20 min par article', 'Mis à jour mai 2026'],
-  ja: ['9テーマ領域の80記事', 'GPT-4o、Claude Opus 4.7、Gemini 2.5 Pro対応', '記事あたり5〜20分', '2026年5月更新'],
-  zh: ['9个主题领域80篇文章', '涵盖GPT-4o、Claude Opus 4.7和Gemini 2.5 Pro', '每篇5-20分钟', '2026年5月更新'],
+  en: ['80 articles across 9 topic areas', 'Covers GPT-4o, Claude 4.6 Opus, and Gemini 2.5 Pro', '5–20 min per article', 'Updated May 2026'],
+  de: ['80 Artikel in 9 Themenbereichen', 'Behandelt GPT-4o, Claude 4.6 Opus und Gemini 2.5 Pro', '5–20 Min. pro Artikel', 'Aktualisiert Mai 2026'],
+  fr: ['80 articles dans 9 domaines', 'Couvre GPT-4o, Claude 4.6 Opus et Gemini 2.5 Pro', '5–20 min par article', 'Mis à jour mai 2026'],
+  ja: ['9テーマ領域の80記事', 'GPT-4o、Claude 4.6 Opus、Gemini 2.5 Pro対応', '記事あたり5〜20分', '2026年5月更新'],
+  zh: ['9个主题领域80篇文章', '涵盖GPT-4o、Claude 4.6 Opus和Gemini 2.5 Pro', '每篇5-20分钟', '2026年5月更新'],
+}
+
+const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
+  en: [
+    '80 articles across 9 topic areas, updated May 2026',
+    'Covers GPT-4o, Claude 4.6 Opus/Sonnet, Gemini 2.5 Pro, and 20+ open-source models',
+    '5–20 min per article, each with Key Takeaways, FAQ, and Sources',
+    'Chain-of-thought prompting improves complex reasoning accuracy by 30–40%',
+    'Most production teams need exactly 2 prompt tools: one for evaluation, one for deployment',
+    'Start with Fundamentals if new; jump to Evaluation & Reliability or Team Governance if experienced',
+  ],
+  de: [
+    '80 Artikel in 9 Themenbereichen, aktualisiert Mai 2026',
+    'Behandelt GPT-4o, Claude 4.6 Opus/Sonnet, Gemini 2.5 Pro und 20+ Open-Source-Modelle',
+    '5–20 Min. pro Artikel, jeweils mit Wichtigsten Erkenntnissen, FAQ und Quellen',
+    'Chain-of-Thought-Prompting verbessert die Genauigkeit komplexer Schlussfolgerungen um 30–40 %',
+    'Die meisten Produktionsteams brauchen genau 2 Tools: eines für Evaluation, eines für Deployment',
+    'Einsteiger starten mit Grundlagen; Fortgeschrittene springen zu Evaluierung & Zuverlässigkeit oder Team-Steuerung',
+  ],
+  fr: [
+    '80 articles dans 9 domaines, mis à jour mai 2026',
+    'Couvre GPT-4o, Claude 4.6 Opus/Sonnet, Gemini 2.5 Pro et 20+ modèles open source',
+    '5–20 min par article, chacun avec Points clés, FAQ et Sources',
+    'Le chain-of-thought prompting améliore la précision du raisonnement complexe de 30–40%',
+    "La plupart des équipes en production n'ont besoin que de 2 outils : un pour l'évaluation, un pour le déploiement",
+    'Débutants : commencez par les Fondamentaux ; expérimentés : allez directement à Évaluation & Fiabilité ou Gouvernance d\'équipe',
+  ],
+  ja: [
+    '9テーマ領域の80記事、2026年5月更新',
+    'GPT-4o、Claude 4.6 Opus/Sonnet、Gemini 2.5 Pro、20以上のオープンソースモデル対応',
+    '記事あたり5〜20分、各記事に重要なポイント・FAQ・出典付き',
+    'チェーン・オブ・ソートプロンプティングで複雑な推論の精度が30〜40%向上',
+    'ほとんどの本番チームに必要なツールは2つだけ：評価用1つとデプロイ用1つ',
+    '初心者は基礎から始め、経験者は評価と信頼性またはチームガバナンスへ直進',
+  ],
+  zh: [
+    '9大主题80篇文章，2026年5月更新',
+    '涵盖GPT-4o、Claude 4.6 Opus/Sonnet、Gemini 2.5 Pro及20+开源模型',
+    '每篇5-20分钟，含关键要点、FAQ和参考来源',
+    '思维链提示将复杂推理准确性提高30-40%',
+    '大多数生产团队只需2个工具：一个用于评估，一个用于部署',
+    '新手从基础开始；有经验者直接跳至评估与可靠性或团队治理',
+  ],
+}
+
+const HUB_QUICK_FACTS_HEADER: Record<string, string> = {
+  en: '⚡ Quick Facts', de: '⚡ Schnellfakten', fr: '⚡ En bref', ja: '⚡ クイックファクト', zh: '⚡ 快速事实',
 }
 
 const HUB_CTA_BUTTON: Record<string, string> = {
@@ -76,13 +155,83 @@ const GUIDES_LABEL: Record<string, string> = {
   en: 'guides', de: 'Leitfäden', fr: 'guides', ja: 'ガイド', zh: '篇指南',
 }
 
+const GUIDE_LABEL_SINGULAR: Record<string, string> = {
+  en: 'guide', de: 'Leitfaden', fr: 'guide', ja: 'ガイド', zh: '篇指南',
+}
+
+const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
+  fundamentals: {
+    en: 'What Do You Actually Need to Know?',
+    de: 'Was müssen Sie wirklich wissen?',
+    fr: 'Que faut-il vraiment savoir ?',
+    ja: '本当に必要な知識とは？',
+    zh: '你真正需要了解什么？',
+  },
+  frameworks: {
+    en: 'Which Template Gets the Best Results?',
+    de: 'Welches Template liefert die besten Ergebnisse?',
+    fr: 'Quel modèle donne les meilleurs résultats ?',
+    ja: '最高の結果を出すテンプレートは？',
+    zh: '哪个模板效果最好？',
+  },
+  techniques: {
+    en: 'What Separates Good Prompts from Great Ones?',
+    de: 'Was unterscheidet gute von großartigen Prompts?',
+    fr: "Qu'est-ce qui distingue les bons prompts des excellents ?",
+    ja: '良いプロンプトと優れたプロンプトの違いは？',
+    zh: '好提示词与优秀提示词的区别是什么？',
+  },
+  'use-topics': {
+    en: 'How Do You Prompt for Your Specific Job?',
+    de: 'Wie prompten Sie für Ihren Job?',
+    fr: 'Comment prompter pour votre métier ?',
+    ja: 'あなたの仕事に合ったプロンプトとは？',
+    zh: '如何针对你的工作提示？',
+  },
+  policy: {
+    en: 'What Do AI Regulations Mean for Your Organization?',
+    de: 'Was bedeuten KI-Regulierungen für Ihre Organisation?',
+    fr: 'Que signifient les régulations IA pour votre organisation ?',
+    ja: 'AI規制はあなたの組織に何を意味するのか？',
+    zh: 'AI法规对您的组织意味着什么？',
+  },
+  'tools-platforms': {
+    en: 'Which Tool Fits Your Workflow?',
+    de: 'Welches Tool passt zu Ihrem Arbeitsablauf?',
+    fr: 'Quel outil correspond à votre flux de travail ?',
+    ja: 'どのツールがあなたのワークフローに合うのか？',
+    zh: '哪个工具适合您的工作流程？',
+  },
+  'evaluation-reliability': {
+    en: 'How Do You Know Your Prompts Work?',
+    de: 'Wie wissen Sie, dass Ihre Prompts funktionieren?',
+    fr: 'Comment savez-vous que vos prompts fonctionnent ?',
+    ja: 'プロンプトが機能していることをどのように確認しますか？',
+    zh: '您如何知道提示词是否有效？',
+  },
+  'team-governance': {
+    en: 'How Do You Manage Prompts at Scale?',
+    de: 'Wie verwalten Sie Prompts in großem Maßstab?',
+    fr: 'Comment gérez-vous les prompts à grande échelle ?',
+    ja: '規模を拡大してプロンプトをどのように管理しますか？',
+    zh: '如何大规模管理提示词？',
+  },
+  'workflows-automation': {
+    en: 'How Do You Scale Prompts into Systems?',
+    de: 'Wie skalieren Sie Prompts zu Systemen?',
+    fr: 'Comment transformez-vous les prompts en systèmes ?',
+    ja: 'プロンプトをどのようにシステムにスケーリングしますか？',
+    zh: '如何将提示词扩展为系统？',
+  },
+}
+
 const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   fundamentals: {
-    en: 'Core concepts every prompt engineer needs to understand — how LLMs work, what tokens are, and why prompt structure determines output quality. These articles explain how temperature controls randomness, why context windows cause AI to "forget," and how different models (GPT-4o, Claude Opus 4.7, Gemini 2.5 Pro) interpret instructions differently. Start here if you\'re new to prompt engineering, or use these guides as a reference for the mechanics behind every advanced technique.',
+    en: 'Core concepts every prompt engineer needs to understand — how LLMs work, what tokens are, and why prompt structure determines output quality. These articles explain how temperature controls randomness, why context windows cause AI to "forget," and how different models (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro) interpret instructions differently. Start here if you\'re new to prompt engineering, or use these guides as a reference for the mechanics behind every advanced technique.',
     de: 'Grundkonzepte, die jeder Prompt Engineer verstehen muss — wie LLMs funktionieren, was Tokens sind und warum die Prompt-Struktur die Ausgabequalität bestimmt. Diese Artikel erklären, wie die Temperatur die Zufälligkeit steuert, warum Kontextfenster dazu führen, dass KI "vergisst", und wie verschiedene Modelle Anweisungen unterschiedlich interpretieren. Beginnen Sie hier, wenn Sie neu im Prompt Engineering sind.',
     fr: 'Concepts fondamentaux que tout prompt engineer doit comprendre — comment fonctionnent les LLMs, ce que sont les tokens et pourquoi la structure du prompt détermine la qualité de la sortie. Ces articles expliquent comment la température contrôle l\'aléatoire, pourquoi les fenêtres de contexte font "oublier" à l\'IA, et comment différents modèles interprètent les instructions. Commencez ici si vous débutez en prompt engineering.',
     ja: 'すべてのプロンプトエンジニアが理解すべき基本概念 — LLMの仕組み、トークンとは何か、プロンプトの構造が出力品質を決定する理由。温度がどのようにランダム性を制御するか、なぜコンテキストウィンドウがAIに「忘れさせる」のか、異なるモデルが指示をどのように解釈するかを説明します。プロンプトエンジニアリング初心者はここから始めてください。',
-    zh: '每位提示词工程师需要理解的核心概念——LLM的工作原理、词元是什么，以及为什么提示词结构决定输出质量。这些文章解释温度如何控制随机性、为什么上下文窗口会导致AI"遗忘"，以及GPT-4o、Claude Opus 4.7等不同模型如何以不同方式解释指令。提示词工程新手请从这里开始。',
+    zh: '每位提示词工程师需要理解的核心概念——LLM的工作原理、词元是什么，以及为什么提示词结构决定输出质量。这些文章解释温度如何控制随机性、为什么上下文窗口会导致AI"遗忘"，以及GPT-4o、Claude 4.6 Opus等不同模型如何以不同方式解释指令。提示词工程新手请从这里开始。',
   },
   frameworks: {
     en: 'Structured templates for building reliable, repeatable prompts across different tasks — marketing, coding, research, and more. Frameworks like CO-STAR, CRAFT, RTF, and APE break down prompts into components (role, context, constraints, output format) to eliminate guesswork and produce consistent results regardless of who writes the prompt. Use these guides to find the right framework for your use case, compare frameworks head-to-head, or build a custom framework tailored to your team\'s specific needs.',
@@ -161,69 +310,105 @@ const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
 
 const THEME_LABELS: Record<string, Record<string, string>> = {
   fundamentals: {
-    en: 'Fundamentals: What Do You Actually Need to Know?',
-    de: 'Grundlagen: Was müssen Sie wirklich wissen?',
-    fr: 'Fondamentaux : Que faut-il vraiment savoir ?',
-    ja: '基礎：本当に必要な知識とは？',
-    zh: '基础知识：你真正需要了解什么？',
+    en: 'Fundamentals',
+    de: 'Grundlagen',
+    fr: 'Fondamentaux',
+    ja: '基礎',
+    zh: '基础知识',
   },
   frameworks: {
-    en: 'Frameworks: Which Template Gets the Best Results?',
-    de: 'Frameworks: Welches Template liefert die besten Ergebnisse?',
-    fr: 'Frameworks : Quel modèle donne les meilleurs résultats ?',
-    ja: 'フレームワーク：最高の結果を出すテンプレートは？',
-    zh: '框架：哪个模板效果最好？',
+    en: 'Frameworks',
+    de: 'Frameworks',
+    fr: 'Frameworks',
+    ja: 'フレームワーク',
+    zh: '框架',
   },
   techniques: {
-    en: 'Techniques: What Separates Good Prompts from Great Ones?',
-    de: 'Techniken: Was unterscheidet gute von großartigen Prompts?',
-    fr: 'Techniques : Qu\'est-ce qui distingue les bons prompts des excellents ?',
-    ja: 'テクニック：良いプロンプトと優れたプロンプトの違いは？',
-    zh: '技术：好提示词与优秀提示词的区别是什么？',
+    en: 'Techniques',
+    de: 'Techniken',
+    fr: 'Techniques',
+    ja: 'テクニック',
+    zh: '技术',
   },
   'use-topics': {
-    en: 'Use Topics: How Do You Prompt for Your Specific Job?',
-    de: 'Anwendungsthemen: Wie prompten Sie für Ihren Job?',
-    fr: 'Sujets d\'usage : Comment prompter pour votre métier ?',
-    ja: '活用テーマ：あなたの仕事に合ったプロンプトとは？',
-    zh: '应用主题：如何针对你的工作提示？',
+    en: 'Use Cases & Output Engineering',
+    de: 'Anwendungsfälle & Ausgabe-Engineering',
+    fr: "Cas d'usage et Ingénierie de sortie",
+    ja: 'ユースケースと出力エンジニアリング',
+    zh: '用例与输出工程',
   },
   policy: {
-    en: 'Policy & Compliance: What Do AI Regulations Mean for Your Organization?',
-    de: 'Politik & Compliance: Was bedeuten KI-Regulierungen für Ihre Organisation?',
-    fr: 'Politique & Conformité : Que signifient les régulations IA pour votre organisation ?',
-    ja: 'ポリシーとコンプライアンス：AI規制はあなたの組織に何を意味するのか？',
-    zh: '政策与合规：AI法规对您的组织意味着什么？',
+    en: 'Policy & Compliance',
+    de: 'Politik & Compliance',
+    fr: 'Politique & Conformité',
+    ja: 'ポリシーとコンプライアンス',
+    zh: '政策与合规',
   },
   'tools-platforms': {
-    en: 'Tools & Platforms: Which Tool Fits Your Workflow?',
-    de: 'Tools & Plattformen: Welches Tool passt zu Ihrem Arbeitsablauf?',
-    fr: 'Outils & Plateformes : Quel outil correspond à votre flux de travail ?',
-    ja: 'ツール＆プラットフォーム：どのツールがあなたのワークフローに合うのか？',
-    zh: '工具与平台：哪个工具适合您的工作流程？',
+    en: 'Tools & Platforms',
+    de: 'Tools & Plattformen',
+    fr: 'Outils & Plateformes',
+    ja: 'ツール＆プラットフォーム',
+    zh: '工具与平台',
   },
   'evaluation-reliability': {
-    en: 'Evaluation & Reliability: How Do You Know Your Prompts Work?',
-    de: 'Evaluierung & Zuverlässigkeit: Wie wissen Sie, dass Ihre Prompts funktionieren?',
-    fr: 'Évaluation & Fiabilité : Comment savez-vous que vos prompts fonctionnent ?',
-    ja: '評価と信頼性：プロンプトが機能していることをどのように確認しますか？',
-    zh: '评估与可靠性：您如何知道提示词是否有效？',
+    en: 'Evaluation & Reliability',
+    de: 'Evaluierung & Zuverlässigkeit',
+    fr: 'Évaluation & Fiabilité',
+    ja: '評価と信頼性',
+    zh: '评估与可靠性',
   },
   'team-governance': {
-    en: 'Team Governance: How Do You Manage Prompts at Scale?',
-    de: 'Team-Steuerung: Wie verwalten Sie Prompts in großem Maßstab?',
-    fr: 'Gouvernance d\'équipe : Comment gérez-vous les prompts à grande échelle ?',
-    ja: 'チームガバナンス：規模を拡大してプロンプトをどのように管理しますか？',
-    zh: '团队治理：如何大规模管理提示词？',
+    en: 'Team Governance',
+    de: 'Team-Steuerung',
+    fr: "Gouvernance d'équipe",
+    ja: 'チームガバナンス',
+    zh: '团队治理',
   },
   'workflows-automation': {
-    en: 'Workflows & Automation: How Do You Scale Prompts into Systems?',
-    de: 'Prozesse & Automatisierung: Wie skalieren Sie Prompts zu Systemen?',
-    fr: 'Processus & Automatisation : Comment transformez-vous les prompts en systèmes ?',
-    ja: 'ワークフロー＆オートメーション：プロンプトをどのようにシステムにスケーリングしますか？',
-    zh: '工作流程与自动化：如何将提示词扩展为系统？',
+    en: 'Workflows & Automation',
+    de: 'Prozesse & Automatisierung',
+    fr: 'Processus & Automatisation',
+    ja: 'ワークフロー＆オートメーション',
+    zh: '工作流程与自动化',
   },
 }
+
+const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: string; text: string }>> = {
+  fundamentals: {
+    en: { icon: '🔍', title: 'Where to Start', text: 'If you read only 3 articles, read: "What Is Prompt Engineering," "Chain-of-Thought Prompting," and "How to Evaluate Prompt Quality." These three cover 80% of what you need.' },
+    de: { icon: '🔍', title: 'Wo anfangen', text: 'Wenn Sie nur 3 Artikel lesen: „Was ist Prompt Engineering", „Chain-of-Thought-Prompting" und „Prompt-Qualität bewerten". Diese drei decken 80% ab.' },
+    fr: { icon: '🔍', title: 'Par où commencer', text: "Si vous ne lisez que 3 articles : « Qu'est-ce que le prompt engineering », « Chain-of-Thought Prompting » et « Évaluer la qualité des prompts ». Ces trois couvrent 80% de ce dont vous avez besoin." },
+    ja: { icon: '🔍', title: 'どこから始めるか', text: '3記事だけ読むなら：「プロンプトエンジニアリングとは」「チェーン・オブ・ソートプロンプティング」「プロンプト品質の評価方法」。この3つで必要な知識の80%がカバーされます。' },
+    zh: { icon: '🔍', title: '从哪里开始', text: '如果只读3篇文章：《什么是Prompt工程》《思维链提示》《如何评估Prompt质量》。这三篇涵盖了你所需知识的80%。' },
+  },
+  'tools-platforms': {
+    en: { icon: '🔍', title: 'Two-Tool Stack', text: 'Most teams waste money on 3-4 tools. The optimal stack: one for evaluation (Braintrust or Promptfoo) and one for deployment (Vellum or PromptHub). Start with free tools (Promptfoo + PromptQuorum) before paying.' },
+    de: { icon: '🔍', title: 'Zwei-Tool-Stack', text: 'Die meisten Teams verschwenden Geld mit 3–4 Tools. Der optimale Stack: eines für die Evaluation (Braintrust oder Promptfoo) und eines für das Deployment (Vellum oder PromptHub). Starten Sie mit kostenlosen Tools (Promptfoo + PromptQuorum) bevor Sie bezahlen.' },
+    fr: { icon: '🔍', title: 'Stack deux outils', text: "La plupart des équipes gaspillent de l'argent sur 3-4 outils. Le stack optimal : un pour l'évaluation (Braintrust ou Promptfoo) et un pour le déploiement (Vellum ou PromptHub). Commencez avec des outils gratuits (Promptfoo + PromptQuorum) avant de payer." },
+    ja: { icon: '🔍', title: '2ツールスタック', text: 'ほとんどのチームが3〜4つのツールに無駄なお金を使っています。最適なスタック：評価用（BraintrustまたはPromptfoo）とデプロイ用（VellumまたはPromptHub）の2つ。有料ツールを使う前に無料ツール（Promptfoo + PromptQuorum）から始めましょう。' },
+    zh: { icon: '🔍', title: '双工具组合', text: '大多数团队在3-4个工具上浪费金钱。最优工具栈：一个用于评估（Braintrust或Promptfoo），一个用于部署（Vellum或PromptHub）。付费前先用免费工具（Promptfoo + PromptQuorum）。' },
+  },
+  'evaluation-reliability': {
+    en: { icon: '🔍', title: 'Silent Failures', text: 'Prompts fail silently — no error log, no exception. Output quality degrades but nothing breaks visibly. Evaluation and regression testing are the only way to catch this.' },
+    de: { icon: '🔍', title: 'Stille Fehler', text: 'Prompts scheitern lautlos — kein Fehlerprotokoll, keine Ausnahme. Die Ausgabequalität sinkt, aber nichts bricht sichtbar. Evaluierung und Regressionstests sind der einzige Weg, dies zu erkennen.' },
+    fr: { icon: '🔍', title: 'Échecs silencieux', text: "Les prompts échouent silencieusement — pas de log d'erreur, pas d'exception. La qualité des sorties se dégrade mais rien ne casse visiblement. L'évaluation et les tests de régression sont le seul moyen de détecter cela." },
+    ja: { icon: '🔍', title: 'サイレント障害', text: 'プロンプトはサイレントに失敗します — エラーログも例外も出ません。出力品質は低下しますが、表面的には何も壊れません。評価と回帰テストだけがこれを検出する方法です。' },
+    zh: { icon: '🔍', title: '静默失败', text: 'Prompt悄无声息地失败——没有错误日志，没有异常。输出质量下降，但表面上什么都没有断裂。评估和回归测试是唯一能发现这个问题的方法。' },
+  },
+}
+
+const HUB_SOURCES_HEADER: Record<string, string> = {
+  en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '参考来源',
+}
+
+const HUB_SOURCES_DATA: Array<{ title: string; url: string; desc: string }> = [
+  { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering', desc: 'Official OpenAI prompting best practices' },
+  { title: 'Anthropic Prompt Engineering Documentation', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering', desc: 'Official Anthropic prompting guide for Claude' },
+  { title: 'Google Gemini Prompting Guide', url: 'https://ai.google.dev/gemini-api/docs/prompting-intro', desc: 'Official Google prompting strategies for Gemini' },
+  { title: 'NIST AI Risk Management Framework', url: 'https://www.nist.gov/artificial-intelligence/ai-risk-management-framework', desc: 'Federal governance framework for AI systems' },
+  { title: 'EU AI Act Summary', url: 'https://artificialintelligenceact.eu/', desc: 'Regulatory requirements for AI systems in the European Union' },
+]
 
 // Proper titles for articles that don't yet have full content (fallback to avoid slug-formatted display)
 const FALLBACK_TITLES: Record<string, Record<string, string>> = {
@@ -331,6 +516,8 @@ const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
     { q: 'Is prompt engineering still relevant in 2026?', a: 'Yes — despite improvements in model reasoning, prompt engineering remains essential. Models still produce significantly better outputs with structured inputs. Chain-of-thought prompting improves complex reasoning accuracy by 30–40% in benchmarks. As models improve, prompt engineering shifts from correcting weaknesses to unlocking capabilities.' },
     { q: "What's the difference between prompt engineering and fine-tuning?", a: "Prompt engineering shapes model behavior through input design without changing model weights — it's fast (minutes) and model-agnostic. Fine-tuning trains a model on new data to change its baseline behavior — it takes hours, requires datasets, and produces a specialized model. Use prompt engineering first; fine-tune only when prompts consistently can't solve the task." },
     { q: 'What tools do prompt engineers use?', a: 'The core stack: a prompt IDE (Cursor or VS Code with Continue.dev), a testing framework (Braintrust or Promptfoo for evaluation and CI/CD), a version control system (PromptHub or Git), and a multi-model testing platform (PromptQuorum to compare outputs across GPT-4o, Claude, and Gemini simultaneously). Advanced teams add Vellum for production traffic management.' },
+    { q: 'How many AI models should I test my prompts on?', a: 'At minimum, test on two models from different providers — for example GPT-4o and Claude 4.6 Sonnet. Production prompts should be tested on three or more. Use PromptQuorum to dispatch to 25+ models in one run and compare outputs, pass rates, and latency side-by-side.' },
+    { q: 'What is the difference between prompt engineering and prompt management?', a: 'Prompt engineering is designing individual prompts — choosing the right role, context, format, and examples. Prompt management is the operational layer: version control, team collaboration, testing pipelines, deployment workflows, and audit trails. Small teams start with engineering; growing teams add management.' },
   ],
   de: [
     { q: 'Was ist Prompt Engineering?', a: 'Prompt Engineering ist die Praxis, Anfragen an KI-Modelle so zu strukturieren, dass bessere und konsistentere Ausgaben erzielt werden. Es umfasst den Einsatz von Frameworks, Formatierungen, Beispielen und Einschränkungen zur Steuerung des Modellverhaltens.' },
@@ -442,9 +629,34 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
           <p className="text-lg font-semibold text-text-primary leading-relaxed max-w-3xl mb-4 key-takeaways">
             {HUB_LEAD_ANSWER[lang] ?? HUB_LEAD_ANSWER['en']}
           </p>
+
+          {/* In One Sentence / In Plain Terms */}
+          <div className="grid sm:grid-cols-2 gap-4 my-5 max-w-3xl">
+            <div className="border border-primary/15 rounded-xl p-4 bg-card">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">
+                {HUB_IN_ONE_SENTENCE_LABEL[lang] ?? HUB_IN_ONE_SENTENCE_LABEL['en']}
+              </p>
+              <p className="text-sm text-text-secondary">{HUB_IN_ONE_SENTENCE[lang] ?? HUB_IN_ONE_SENTENCE['en']}</p>
+            </div>
+            <div className="border border-primary/15 rounded-xl p-4 bg-card">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">
+                {HUB_IN_PLAIN_TERMS_LABEL[lang] ?? HUB_IN_PLAIN_TERMS_LABEL['en']}
+              </p>
+              <p className="text-sm text-text-secondary">{HUB_IN_PLAIN_TERMS[lang] ?? HUB_IN_PLAIN_TERMS['en']}</p>
+            </div>
+          </div>
+
           <p className="text-lg text-text-secondary leading-relaxed max-w-3xl hub-hero-desc">
             {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
+
+          {/* TL;DR */}
+          <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-4 my-5 max-w-2xl">
+            <p className="text-sm font-semibold text-primary mb-1">TL;DR</p>
+            <p className="text-sm text-text-secondary leading-relaxed">{HUB_TLDR[lang] ?? HUB_TLDR['en']}</p>
+          </div>
+
+          {/* Stats line */}
           <ul className="flex flex-wrap gap-x-6 gap-y-2 mt-5">
             {(HUB_QUICK_FACTS[lang] ?? HUB_QUICK_FACTS['en']).map((fact, i) => (
               <li key={i} className="text-sm text-text-secondary flex items-center gap-1.5">
@@ -453,6 +665,21 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
               </li>
             ))}
           </ul>
+
+          {/* Quick Facts detailed */}
+          <div className="mt-6 bg-card border border-primary/15 rounded-xl p-5 max-w-2xl">
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">
+              {HUB_QUICK_FACTS_HEADER[lang] ?? HUB_QUICK_FACTS_HEADER['en']}
+            </p>
+            <ul className="space-y-2">
+              {(HUB_QUICK_FACTS_DETAILED[lang] ?? HUB_QUICK_FACTS_DETAILED['en']).map((fact, i) => (
+                <li key={i} className="text-sm text-text-secondary flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-1.5" />
+                  <span>{fact}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Theme sections */}
@@ -462,6 +689,9 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
             const colors = THEME_COLORS[theme.id]
             const articleKeys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
             const count = articleKeys.length
+            const descLead = THEME_DESCRIPTION_LEADS[theme.id]?.[lang] ?? THEME_DESCRIPTION_LEADS[theme.id]?.['en']
+            const desc = THEME_DESCRIPTIONS[theme.id]?.[lang] ?? THEME_DESCRIPTIONS[theme.id]?.['en'] ?? theme.description
+            const callout = THEME_CALLOUTS[theme.id]?.[lang] ?? THEME_CALLOUTS[theme.id]?.['en']
 
             return (
               <section key={theme.id} id={theme.id}>
@@ -470,12 +700,21 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
                   <div className="flex items-baseline gap-3 mb-2">
                     <h2 className="text-2xl font-bold text-text-primary">{label}</h2>
                     <span className="text-sm text-text-secondary font-normal shrink-0">
-                      {count} {GUIDES_LABEL[lang] ?? GUIDES_LABEL['en']}
+                      {count} {count === 1
+                        ? (GUIDE_LABEL_SINGULAR[lang] ?? GUIDE_LABEL_SINGULAR['en'])
+                        : (GUIDES_LABEL[lang] ?? GUIDES_LABEL['en'])}
                     </span>
                   </div>
                   <p className="text-text-secondary leading-relaxed max-w-2xl">
-                    {THEME_DESCRIPTIONS[theme.id]?.[lang] ?? THEME_DESCRIPTIONS[theme.id]?.['en'] ?? theme.description}
+                    {descLead && <strong className="text-text-primary font-semibold">{descLead} </strong>}
+                    {desc}
                   </p>
+                  {callout && (
+                    <div className="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4 max-w-2xl">
+                      <p className="text-sm font-semibold text-amber-800 mb-1">{callout.icon} {callout.title}</p>
+                      <p className="text-sm text-amber-700 leading-relaxed">{callout.text}</p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Flat article grid (most themes) */}
@@ -509,6 +748,40 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
           })}
         </div>
 
+        {/* Cross-link: Local LLMs */}
+        <div className="mt-16 bg-primary/5 border border-primary/20 rounded-2xl px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex-1">
+            <p className="text-sm font-semibold text-text-primary mb-1">
+              {lang === 'de' ? '🔍 Lokale Modelle ausführen?'
+                : lang === 'fr' ? '🔍 Vous utilisez des modèles locaux ?'
+                : lang === 'ja' ? '🔍 ローカルモデルを実行中ですか？'
+                : lang === 'zh' ? '🔍 正在运行本地模型？'
+                : '🔍 Running Local Models?'}
+            </p>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              {lang === 'de'
+                ? 'Wenn Sie lokale LLMs mit Ollama, LM Studio oder llama.cpp betreiben, gilt jede Technik in diesem Guide auch für Sie. Sehen Sie sich den Abschnitt Lokale LLMs für Hardware-Guides, Modellvergleiche und Einrichtungsanleitungen an.'
+                : lang === 'fr'
+                ? 'Si vous exécutez des LLM locaux avec Ollama, LM Studio ou llama.cpp, chaque technique de ce guide s\'applique. Consultez la section LLMs locaux pour les guides matériels, les comparaisons de modèles et les instructions d\'installation.'
+                : lang === 'ja'
+                ? 'Ollama、LM Studio、またはllama.cppでローカルLLMを実行している場合、このガイドのすべてのテクニックが適用されます。ハードウェアガイド・モデル比較・セットアップ手順についてはローカルLLMセクションをご覧ください。'
+                : lang === 'zh'
+                ? '如果你正在使用Ollama、LM Studio或llama.cpp运行本地LLM，本指南中的每项技术都适用。请查看本地LLMs板块获取硬件指南、模型比较和安装说明。'
+                : 'If you\'re running local LLMs with Ollama, LM Studio, or llama.cpp, every technique in this guide applies. See the Local LLMs section for hardware guides, model comparisons, and setup instructions — then come back here for prompting techniques.'}
+            </p>
+          </div>
+          <Link
+            href={navHref('/local-llms', lang)}
+            className="flex-shrink-0 inline-flex items-center px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
+          >
+            {lang === 'de' ? 'Lokale LLMs entdecken →'
+              : lang === 'fr' ? 'Explorer les LLMs locaux →'
+              : lang === 'ja' ? 'ローカルLLMを見る →'
+              : lang === 'zh' ? '探索本地LLMs →'
+              : 'Explore Local LLMs →'}
+          </Link>
+        </div>
+
         {/* CTA */}
         <div className="mt-20 pt-12 border-t border-primary/20 text-center">
           <p className="text-text-secondary mb-6 max-w-xl mx-auto">
@@ -520,6 +793,21 @@ function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/
           >
             {HUB_CTA_BUTTON[lang] ?? HUB_CTA_BUTTON['en']}
           </Link>
+        </div>
+
+        {/* Sources */}
+        <div className="mt-20 pt-12 border-t border-primary/20" id="sources">
+          <h2 className="text-2xl font-bold text-text-primary mb-6">
+            {HUB_SOURCES_HEADER[lang] ?? HUB_SOURCES_HEADER['en']}
+          </h2>
+          <ul className="space-y-3">
+            {HUB_SOURCES_DATA.map((s, i) => (
+              <li key={i} className="text-sm">
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="font-medium text-primary hover:underline">{s.title}</a>
+                <span className="text-text-secondary"> — {s.desc}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* FAQ Section */}
