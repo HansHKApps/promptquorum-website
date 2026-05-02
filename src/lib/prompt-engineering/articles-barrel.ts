@@ -81,6 +81,8 @@ import { article as a_prompt_audit_regression } from "./articles/prompt-audit-re
 import { article as a_prompt_library_team_management } from "./articles/prompt-library-team-management";
 import { article as a_prompt_security_tools } from "./articles/prompt-security-tools";
 import { article as a_prompts_to_repeatable_workflows } from "./articles/prompts-to-repeatable-workflows";
+import { article as a_pe_for_content_teams } from "./articles/pe-for-content-teams";
+import { article as a_pe_for_developers_workflow } from "./articles/pe-for-developers-workflow";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -159,4 +161,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "prompt-library-management": a_prompt_library_team_management,
   "prompt-security-tools": a_prompt_security_tools,
   "prompts-to-repeatable-workflows": a_prompts_to_repeatable_workflows,
+  "pe-for-content-teams": a_pe_for_content_teams,
+  "pe-for-developers-workflow": a_pe_for_developers_workflow,
 };
