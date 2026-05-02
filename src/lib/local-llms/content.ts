@@ -18220,6 +18220,7 @@ schema: {
             '**Expecting code models to replace full IDEs:** Local coding models excel at function-level generation, bug explanation, and refactoring suggestions. They do not replace LSP (language server protocol) for real-time error detection or type checking. Use Continue.dev or Cursor to combine local model generation with full IDE tooling.',
             '**Using Q3_K_S on coding models to save RAM:** Quantization below Q4_K_M noticeably degrades code generation accuracy -- logical errors and syntax mistakes increase. For coding tasks, use Q4_K_M minimum. If RAM is tight, choose a smaller model at Q4_K_M over a larger model at Q3_K_S.',
             "**Pulling qwen2.5-coder without specifying size:** `ollama pull qwen2.5-coder` defaults to the smallest available variant. Specify explicitly: `ollama pull qwen2.5-coder:7b` for 8 GB machines, `ollama pull qwen2.5-coder:32b` for 24+ GB. The default pull may give you a model that does not match your hardware.",
+            '**Prompt engineering determines output quality regardless of model:** Specifying language, constraints, test cases, and error handling in your prompt dramatically reduces hallucinated code. See [how to write better code with AI](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai) for production-tested patterns.',
           ],
           callouts: [
             { type: 'warning', text: 'Never use quantization below Q4_K_M for coding models. Q3_K_S saves RAM but introduces syntax errors and logical bugs. This is not a worthwhile tradeoff for code generation -- either use Q4_K_M or choose a smaller model at full precision.' },
@@ -18595,6 +18596,7 @@ schema: {
             '**Erwarten, dass Modelle vollständige IDEs ersetzen:** Lokale Programmiermodelle zeichnen sich durch Funktions-Level-Generierung, Bug-Erklärung und Refactoring-Vorschläge aus. Sie ersetzen LSP (Language Server Protocol) nicht für Echtzeit-Fehlererkennung oder Typenkontrolle. Verwende Continue.dev oder Cursor, um lokale Modellerzeugung mit vollständiger IDE-Werkzeugausrüstung zu kombinieren.',
             '**Q3_K_S bei Programmiermodellen verwenden, um RAM zu sparen:** Quantisierung unter Q4_K_M beeinträchtigt merklich die Code-Generierungsgenauigkeit -- logische Fehler und Syntaxfehler nehmen zu. Für Programmier-Aufgaben verwende Q4_K_M-Minimum. Wenn RAM knapp ist, wähle ein kleineres Modell bei Q4_K_M anstelle eines größeren Modells bei Q3_K_S.',
             '**qwen2.5-coder ohne Größenangabe abrufen:** `ollama pull qwen2.5-coder` defaults zur kleinsten verfügbaren Variante. Gib explizit an: `ollama pull qwen2.5-coder:7b` für 8-GB-Maschinen, `ollama pull qwen2.5-coder:32b` für 24+ GB. Der Standard-Pull kann dir ein Modell geben, das nicht zu deiner Hardware passt.',
+            '**Prompt Engineering bestimmt die Ausgabequalität unabhängig vom Modell:** Programmiersprache, Einschränkungen, Testfälle und Fehlerbehandlung im Prompt anzugeben reduziert halluzinierten Code erheblich. Siehe [KI-gestütztes Code-Schreiben verbessern](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai) für praxiserprobte Muster.',
           ],
           callouts: [
             { type: 'warning', text: 'Verwende niemals Quantisierung unter Q4_K_M für Programmiermodelle. Q3_K_S spart RAM, führt aber zu Syntaxfehlern und logischen Bugs ein. Dies ist kein würdiger Kompromiss für Code-Generierung -- verwende entweder Q4_K_M oder wähle ein kleineres Modell bei voller Präzision.' },
@@ -18974,6 +18976,7 @@ schema: {
             '**Attendre que les modèles remplacent les IDEs complets** : Les modèles de programmation locaux excellent à la génération au niveau des fonctions, l\'explication des bugs et les suggestions de refactorisation. Ils ne remplacent pas LSP (Language Server Protocol) pour la détection d\'erreurs en temps réel ou la vérification de type. Utilisez Continue.dev ou Cursor pour combiner la génération de modèle local avec l\'outillage IDE complet.',
             '**Utiliser Q3_K_S sur les modèles de programmation pour économiser RAM** : La quantification en dessous de Q4_K_M dégrade notablement la précision de génération de code — les erreurs logiques et les erreurs de syntaxe augmentent. Pour les tâches de programmation, utilisez Q4_K_M minimum. Si la RAM est serrée, choisissez un modèle plus petit à Q4_K_M plutôt qu\'un modèle plus grand à Q3_K_S.',
             '**Extraire qwen2.5-coder sans spécifier la taille** : `ollama pull qwen2.5-coder` par défaut à la plus petite variante disponible. Spécifiez explicitement : `ollama pull qwen2.5-coder:7b` pour les machines 8 GB, `ollama pull qwen2.5-coder:32b` pour 24+ GB. L\'extraction par défaut peut vous donner un modèle qui ne correspond pas à votre matériel.',
+            '**Le prompt engineering détermine la qualité du code indépendamment du modèle :** Spécifier le langage, les contraintes, les cas de test et la gestion des erreurs dans votre prompt réduit considérablement le code halluciné. Voir [comment mieux écrire du code avec l\'IA](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai) pour des patterns éprouvés en production.',
           ],
           callouts: [
             { type: 'warning', text: 'N\'utilisez jamais de quantification inférieure à Q4_K_M pour les modèles de programmation. Q3_K_S économise RAM mais introduit des erreurs de syntaxe et des bugs logiques. Ce n\'est pas un compromis judicieux pour la génération de code — utilisez soit Q4_K_M soit choisissez un modèle plus petit à précision complète.' },
@@ -19296,6 +19299,7 @@ schema: {
             '**オフラインテスト不実施**：ネット接続前提で開発。Ollama設定ネット不要確認せず。Ollama is offline――設定確認必須。',
             '**単一モデル過信**：87% HumanEvalでも100%成功せず。複雑タスクは複数世代実行・投票ロジック必須。',
             '**CPU性能過大評価**：M1/M2でも7Bは15～25 tok/s。「速い」は相対的。待機時間心理的許容確認。',
+            '**プロンプト設計がコード品質を左右**：言語・制約・テストケース・エラー処理をプロンプトで指定するとハルシネーションを大幅に削減。[AIを使ったコードの書き方](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai)で実績あるパターンを確認。',
           ],
         },
         relatedReading: {
@@ -19601,6 +19605,7 @@ schema: {
             '**离线测试缺失**：网络连接前提。Ollama离线验证未做。Ollama offline——配置确认必须。',
             '**单一模型过信**：87% HumanEval不是100%成功。复杂任务多代生成、投票逻辑必需。',
             '**CPU性能过估**：M1/M2亦7B是15～25 tok/s。"快"相对。等待时间心理容限确认。',
+            '**提示词设计决定代码质量**：在提示词中指定语言、约束、测试用例和错误处理，可大幅减少代码幻觉。参见[用AI写出更好的代码](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai)，获取经生产验证的模式。',
           ],
         },
         relatedReading: {
@@ -23029,6 +23034,7 @@ schema: {
             '**GPU with 24+ GB VRAM**: Q8_0 or Q6_K at the model sizes that fit in VRAM.',
             '**Batch processing / overnight tasks**: Q4_K_M -- maximizes throughput and model size per available RAM.',
             '**Coding or math tasks specifically**: use Q5_K_M or higher -- quantization effects are most visible on precise numerical and algorithmic reasoning.',
+            '**Quantization affects precision; temperature affects randomness:** A Q4 model at temperature 0.3 produces more deterministic output than a full-precision model at temperature 1.0. For tuning these parameters independently, see [temperature and top-p: control AI creativity](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
           ],
         },
         offloading: {
@@ -23481,6 +23487,7 @@ schema: {
             '**GPU mit 24+ GB VRAM**: Q8_0 oder Q6_K bei den Modellgrößen, die in VRAM passen.',
             '**Batch-Verarbeitung / nächtliche Aufgaben**: Q4_K_M -- maximiert Durchsatz und Modellgröße pro verfügbarem RAM.',
             '**Coding- oder Mathe-Aufgaben speziell**: Q5_K_M oder höher verwenden -- Quantisierungseffekte sind am sichtbarsten bei präzisen numerischen und algorithmischen Überlegungen.',
+            '**Quantisierung beeinflusst Präzision; Temperatur beeinflusst Zufälligkeit:** Ein Q4-Modell mit Temperatur 0,3 liefert deterministischere Ausgaben als ein nicht-quantisiertes Modell mit Temperatur 1,0. Zur unabhängigen Einstellung beider Parameter: [Temperatur und Top-p: KI-Kreativität steuern](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
           ],
         },
         offloading: {
@@ -23937,6 +23944,7 @@ schema: {
             '**GPU avec 24+ GB de VRAM** : Q8_0 ou Q6_K aux tailles de modèles qui s\'adaptent au VRAM.',
             '**Traitement par lots / tâches nocturnes** : Q4_K_M -- maximise le débit et la taille du modèle par RAM disponible.',
             '**Tâches de codage ou mathématiques spécifiquement** : utilisez Q5_K_M ou supérieur -- les effets de quantification sont plus visibles sur le raisonnement numérique et algorithmique précis.',
+            '**La quantisation affecte la précision ; la température affecte l\'aléatoire :** Un modèle Q4 à température 0,3 produit des sorties plus déterministes qu\'un modèle pleine précision à température 1,0. Pour ajuster ces paramètres indépendamment, voir [température et top-p : contrôler la créativité de l\'IA](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
           ],
         },
         offloading: {
@@ -24375,6 +24383,7 @@ schema: {
             '**24GB以上のVRAMを搭載したGPU**：Q8_0またはQ6_K（VRAMに適合するモデルサイズ）。',
             '**バッチ処理/夜間タスク**：Q4_K_M -- 利用可能なRAMあたりのスループットとモデルサイズを最大化します。',
             '**コーディングまたは数学タスク専用**：Q5_K_M以上を使用 -- 量子化の影響は正確な数値および算法的推論で最も顕著です。',
+            '**量子化は精度に、温度はランダム性に影響**：温度0.3のQ4モデルは、温度1.0のフル精度モデルよりも決定論的な出力を生成します。これらのパラメータを独立して調整するには[温度とTop-p：AIの創造性を制御する](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)をご覧ください。',
           ],
         },
         offloading: {
@@ -24812,6 +24821,7 @@ schema: {
             '**24GB+VRAM的GPU**：Q8_0或Q6_K（适合VRAM的模型大小）。',
             '**批处理/夜间任务**：Q4_K_M----在可用RAM上最大化吞吐量和模型大小。',
             '**专门用于编码或数学任务**：使用Q5_K_M或更高----量化影响在精确数值和算法推理上最为明显。',
+            '**量化影响精度，温度影响随机性**：温度为0.3的Q4模型比温度为1.0的全精度模型产生更确定性的输出。要独立调整这两个参数，请参阅[温度和Top-p：控制AI创造力](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)。',
           ],
         },
         offloading: {
@@ -27055,7 +27065,7 @@ schema: {
         contextSettings: {
           id: 'set-context-ollama',
           title: 'How Do You Set Context Length in Ollama?',
-          content: 'Ollama defaults to 2048 tokens of context unless configured otherwise. To use a model\'s full context window:',
+          content: ['Ollama defaults to 2048 tokens of context unless configured otherwise. To use a model\'s full context window:', 'Context window size determines how much text a model can process, but prompt structure determines how effectively it uses that context. For a deep dive into why models lose track of earlier input and strategies to mitigate it, see [context windows explained: why AI forgets](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets).'],
           codeBlock: '# Set context length at runtime\nollama run llama3.2 --ctx 32768\n\n# Or create a custom model with a Modelfile\ncat << EOF > Modelfile\nFROM llama3.1:8b\nPARAMETER num_ctx 32768\nEOF\nollama create llama3.1-32k -f Modelfile\nollama run llama3.1-32k',
           codeLanguage: 'bash',
           image: '/images/ollama-context-modelfile-en.svg',
@@ -27239,7 +27249,7 @@ schema: {
         contextSettings: {
           id: 'set-context-ollama',
           title: '如何在Ollama中设置上下文长度？',
-          content: '除非另行配置，Ollama默认使用2048标记的上下文。要使用模型的完整上下文窗口：',
+          content: ['除非另行配置，Ollama默认使用2048标记的上下文。要使用模型的完整上下文窗口：', '上下文窗口大小决定了模型可以处理多少文本，但提示词结构决定了它能多有效地利用这些上下文。深入了解模型为何会遗忘早期输入以及应对策略，请参阅[上下文窗口详解：AI为何会忘记](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets)。'],
           codeBlock: '# 在运行时设置上下文长度\nollama run llama3.2 --ctx 32768\n\n# 或使用Modelfile创建自定义模型\ncat << EOF > Modelfile\nFROM llama3.1:8b\nPARAMETER num_ctx 32768\nEOF\nollama create llama3.1-32k -f Modelfile\nollama run llama3.1-32k',
           codeLanguage: 'bash',
         },
