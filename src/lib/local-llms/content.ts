@@ -12718,6 +12718,7 @@ schema: {
             '**The most significant limitation of local LLMs is output quality on complex tasks.** Frontier cloud models -- OpenAI GPT-5.5, Anthropic Claude 4.6 Opus, Google Gemini 3.1 Pro -- are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model. Open-weight alternatives like Llama 3.3, Qwen2.5, and Mistral (deployed via Ollama, LM Studio, or llama.cpp) cannot match this scale.',
             'On MMLU (general knowledge), HumanEval (Python coding), and MATH benchmarks, frontier models score 85-92%. The best locally-runnable 70B models (Llama 3.3 70B, Qwen2.5 72B) score 75-85%. Consumer-friendly 7B models score 55-70%.',
             'The quality gap is task-dependent. For summarization, simple Q&A, translation, and code explanation, a 7B model produces results that are difficult to distinguish from GPT-5.5 in blind evaluations. The gap is widest on: complex multi-step reasoning, advanced mathematics, nuanced long-form writing, and tasks requiring current world knowledge.',
+            'Local model limitations overlap with broader LLM constraints — hallucinations, reasoning failures, and knowledge cutoffs affect all models regardless of deployment. For the complete picture of what LLMs still cannot do reliably, see [AI limitations: what LLMs can\'t do](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).',
           ],
           image: '/images/local-llm-limitations-quality-benchmarks-en.svg',
           imageCaption: 'Quality Gap: Benchmark Scores — Local 7B models score 10–20 points lower on reasoning and coding than GPT-5.5',
@@ -13359,7 +13360,7 @@ schema: {
         },
         qualityGap: {
           title: 'Grenze 2: Qualitätslücke — Lokale Modelle erreichen GPT-5.5 nicht',
-          content: 'Lokale 7B-Modelle liegen bei Standard-Benchmarks (MMLU, HumanEval) 10–20 Punkte unter GPT-5.5. Das klingt nicht viel, bedeutet in der Praxis aber: schwächeres Reasoning, häufigere Fehler bei Code und Mathe, weniger Nuancenverständnis.',
+          content: ['Lokale 7B-Modelle liegen bei Standard-Benchmarks (MMLU, HumanEval) 10–20 Punkte unter GPT-5.5. Das klingt nicht viel, bedeutet in der Praxis aber: schwächeres Reasoning, häufigere Fehler bei Code und Mathe, weniger Nuancenverständnis.', 'Einschränkungen lokaler Modelle überschneiden sich mit allgemeinen LLM-Grenzen — Halluzinationen, Reasoning-Fehler und Wissens-Cutoffs betreffen alle Modelle unabhängig vom Deployment. Das vollständige Bild über das, was LLMs noch immer nicht zuverlässig können, bietet [KI-Einschränkungen: Was LLMs nicht können](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
           image: '/images/local-llm-limitations-quality-benchmarks-de.svg',
           columns: ['Modell', 'MMLU (allgemeines Wissen)', 'HumanEval (Python-Coding)'],
           rows: [
@@ -13993,7 +13994,7 @@ schema: {
         },
         qualityGap: {
           title: 'Limitation 2 : écart de qualité — modèles locaux n\'atteignent pas GPT-5.5',
-          content: 'Modèles locaux 7B score 10–20 points sous GPT-5.5 sur benchmarks standard (MMLU, HumanEval). Cela semble peu, mais en pratique : raisonnement plus faible, erreurs plus fréquentes code et maths, compréhension moins nuancée.',
+          content: ['Modèles locaux 7B score 10–20 points sous GPT-5.5 sur benchmarks standard (MMLU, HumanEval). Cela semble peu, mais en pratique : raisonnement plus faible, erreurs plus fréquentes code et maths, compréhension moins nuancée.', 'Les limitations des modèles locaux recoupent les contraintes générales des LLM — hallucinations, échecs de raisonnement et coupures de connaissances affectent tous les modèles quel que soit le déploiement. Pour le tableau complet de ce que les LLM ne peuvent toujours pas faire de manière fiable, voir [limites de l\'IA : ce que les LLM ne peuvent pas faire](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
           image: '/images/local-llm-limitations-quality-benchmarks-fr.svg',
           columns: ['Modèle', 'MMLU (connaissance générale)', 'HumanEval (code Python)'],
           rows: [
@@ -14628,7 +14629,7 @@ schema: {
         },
         qualityGap: {
           title: '限界2：品質ギャップ — ローカルモデルは GPT-5.5 に及びません',
-          content: 'ローカルの 7Bモデルは標準ベンチマーク（MMLU、HumanEval）で GPT-5.5 から10–20ポイント低い。少なく見えますが実際は ： 弱い推論、コード・数学エラー多い、微妙さの理解不足。',
+          content: ['ローカルの 7Bモデルは標準ベンチマーク（MMLU、HumanEval）で GPT-5.5 から10–20ポイント低い。少なく見えますが実際は ： 弱い推論、コード・数学エラー多い、微妙さの理解不足。', 'ローカルモデルの制約はより広いLLMの限界と重なります——ハルシネーション、推論の失敗、知識カットオフはデプロイ方法に関わらずすべてのモデルに影響します。LLMがいまだに確実にできないことの全体像は[AI制限：LLMにできないこと](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)をご覧ください。'],
           image: '/images/local-llm-limitations-quality-benchmarks-ja.svg',
           columns: ['モデル', 'MMLU（一般知識）', 'HumanEval（Python コード）'],
           rows: [
@@ -15163,7 +15164,7 @@ schema: {
         },
         qualityGap: {
           title: '限制2：质量差距——本地模型赶不上GPT-5.5',
-          content: '本地7B模型在标准基准（MMLU、HumanEval）上比GPT-5.5低10–20分。听起来不多，但实际上：推理弱、代码和数学错误多、细微理解不足。',
+          content: ['本地7B模型在标准基准（MMLU、HumanEval）上比GPT-5.5低10–20分。听起来不多，但实际上：推理弱、代码和数学错误多、细微理解不足。', '本地模型的限制与更广泛的LLM约束重叠——幻觉、推理失败和知识截止影响所有模型，无论如何部署。了解LLM至今仍无法可靠完成的完整内容，请参阅[AI局限性：LLM不能做什么](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)。'],
           image: '/images/local-llm-limitations-quality-benchmarks-zh.svg',
           columns: ['模型', 'MMLU（一般知识）', 'HumanEval（Python编码）'],
           rows: [
@@ -16630,6 +16631,7 @@ schema: {
             '**7B-8B class**: Qwen2.5 7B and Llama 3.1 8B both significantly outperform Mistral 7B v0.3. Qwen2.5 7B leads on [coding](/local-llms/best-local-llms-for-coding); Llama 3.1 8B leads on English instruction-following.',
             '**14B-24B class**: Qwen2.5 14B and Mistral Small 3.1 24B are the primary options. Mistral Small 3.1 is stronger overall despite requiring more RAM. Qwen2.5 14B is better for coding and multilingual at lower RAM.',
             '**70B-72B class**: Llama 3.3 70B and Qwen2.5 72B are the best locally-runnable models in 2026. Choose Qwen2.5 72B for coding and multilingual; choose Llama 3.3 70B for English-first general tasks.',
+            'Qwen, Llama, and Mistral cover the open-source landscape. For a comparison that includes commercial alternatives — GPT-4o, Claude, and Gemini — and when to choose proprietary over open-source, see [how to pick the right AI model](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
           image: '/images/qwen-vs-llama-vs-mistral-size-classes-en.svg',
           imageCaption: 'Four local LLM size classes: 3-4B (Llama 3.2 3B, ~2 GB RAM), 7-8B (Qwen2.5 7B, ~4.7 GB), 14-24B (Mistral Small 3.1, ~14 GB), 70-72B (Qwen2.5 72B, ~43 GB) -- all runnable via Ollama.',
@@ -16944,6 +16946,7 @@ schema: {
             '**7B-8B Klasse**: Qwen2.5 7B und Llama 3.1 8B übertrumpfen beide Mistral 7B v0.3 deutlich. Qwen2.5 7B führt beim Coding; Llama 3.1 8B führt bei englischer Instruktions-Befolgung.',
             '**14B-24B Klasse**: Qwen2.5 14B und Mistral Small 3.1 24B sind die Hauptoptionen. Mistral Small 3.1 ist insgesamt stärker, erfordert aber mehr RAM. Qwen2.5 14B ist besser für Coding und mehrsprachig bei niedrigerem RAM.',
             '**70B-72B Klasse**: Llama 3.3 70B und Qwen2.5 72B sind die besten lokal laufenden Modelle in 2026. Wählen Sie Qwen2.5 72B für Coding und Mehrsprachigkeit; wählen Sie Llama 3.3 70B für englisch-fokussierte allgemeine Aufgaben.',
+            'Qwen, Llama und Mistral decken die Open-Source-Landschaft ab. Für einen Vergleich der kommerziellen Alternativen — GPT-4o, Claude und Gemini — und wann proprietäre Modelle die bessere Wahl sind, siehe [das richtige KI-Modell auswählen](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
           image: '/images/qwen-vs-llama-vs-mistral-size-classes-de.svg',
           imageCaption: 'Vier lokale LLM-Größenklassen: 3-4B (Llama 3.2 3B, ~2 GB RAM), 7-8B (Qwen2.5 7B, ~4,7 GB), 14-24B (Mistral Small 3.1, ~14 GB), 70-72B (Qwen2.5 72B, ~43 GB) -- alle via Ollama.',
@@ -17223,6 +17226,7 @@ schema: {
             '**Classe 7B-8B** : Qwen2.5 7B et Llama 3.1 8B surpassent tous deux Mistral 7B v0.3 considérablement. Qwen2.5 7B domine le codage ; Llama 3.1 8B domine le suivi des instructions en anglais.',
             '**Classe 14B-24B** : Qwen2.5 14B et Mistral Small 3.1 24B sont les options principales. Mistral Small 3.1 est plus fort au global malgré un besoin de plus de RAM. Qwen2.5 14B est meilleur pour codage et multilingue avec RAM inférieure.',
             '**Classe 70B-72B** : Llama 3.3 70B et Qwen2.5 72B sont les meilleurs modèles exécutables localement en 2026. Choisissez Qwen2.5 72B pour codage et multilingue ; choisissez Llama 3.3 70B pour tâches générales orientées anglais.',
+            'Qwen, Llama et Mistral couvrent le paysage open-source. Pour une comparaison incluant les alternatives commerciales — GPT-4o, Claude et Gemini — et quand choisir le propriétaire plutôt que l\'open-source, voir [comment choisir le bon modèle IA](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
           image: '/images/qwen-vs-llama-vs-mistral-size-classes-fr.svg',
           imageCaption: 'Quatre classes de taille LLM local : 3-4B (Llama 3.2 3B, ~2 Go RAM), 7-8B (Qwen2.5 7B, ~4,7 Go), 14-24B (Mistral Small 3.1, ~14 Go), 70-72B (Qwen2.5 72B, ~43 Go) -- tous via Ollama.',
@@ -17497,6 +17501,7 @@ schema: {
             '**7B～8Bクラス**：Qwen2.5 7BおよびLlama 3.1 8Bの両方がMistral 7B v0.3を大幅に上回る。Qwen2.5 7Bはコーディングで先導；Llama 3.1 8Bは英語指示追従で先導。',
             '**14B～24Bクラス**：Qwen2.5 14BとMistral Small 3.1 24Bが主な選択肢。Mistral Small 3.1は全体的により強いですがより多くのRAMが必要。Qwen2.5 14Bはより低いRAMでコーディングと多言語に優れている。',
             '**70B～72Bクラス**：Llama 3.3 70BとQwen2.5 72Bは2026年で最高のローカル実行可能なモデル。コーディングと多言語にはQwen2.5 72Bを選択；英語優先の一般的なタスクにはLlama 3.3 70Bを選択。',
+            'Qwen・Llama・Mistralはオープンソース領域をカバーしています。GPT-4o・Claude・Geminiなどの商用代替品との比較や、オープンソースよりプロプライエタリを選ぶべき場面については[適切なAIモデルの選び方](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)をご覧ください。',
           ],
           image: '/images/qwen-vs-llama-vs-mistral-size-classes-ja.svg',
           imageCaption: '4つのローカルLLMサイズクラス：3-4B（Llama 3.2 3B、約2GB RAM）、7-8B（Qwen2.5 7B、約4.7GB）、14-24B（Mistral Small 3.1、約14GB）、70-72B（Qwen2.5 72B、約43GB）。',
@@ -17771,6 +17776,7 @@ schema: {
             '**7B-8B级**：Qwen2.5 7B和Llama 3.1 8B都显著超越Mistral 7B v0.3。Qwen2.5 7B在编码上领先；Llama 3.1 8B在英文指导遵循上领先。',
             '**14B-24B级**：Qwen2.5 14B和Mistral Small 3.1 24B是主要选项。Mistral Small 3.1总体更强，尽管需要更多RAM。Qwen2.5 14B在较低RAM处更好的编码和多语言。',
             '**70B-72B级**：Llama 3.3 70B和Qwen2.5 72B是2026年最佳本地可运行模型。对于编码和多语言选择Qwen2.5 72B；对于英文优先的一般任务选择Llama 3.3 70B。',
+            'Qwen、Llama和Mistral涵盖了开源领域。要了解包括商业替代品的比较——GPT-4o、Claude和Gemini——以及何时选择专有模型而非开源模型，请参阅[如何选择合适的AI模型](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。',
           ],
           image: '/images/qwen-vs-llama-vs-mistral-size-classes-zh.svg',
           imageCaption: '四种本地LLM规模类别：3-4B（Llama 3.2 3B，约2GB内存）、7-8B（Qwen2.5 7B，约4.7GB）、14-24B（Mistral Small 3.1，约14GB）、70-72B（Qwen2.5 72B，约43GB）。',
@@ -31941,6 +31947,7 @@ schema: {
             '**Ollama exposes a fully OpenAI-compatible REST API at `http://localhost:11434`.** This means you can use any OpenAI SDK (Python, Node.js, Go, etc.) by simply changing the base URL and running a local model. This is production-ready and widely used in enterprise deployments.',
             '**Example: using Ollama API from Python:**',
             'LM Studio also exposes an OpenAI-compatible API (in beta as of April 2026), accessible at `http://localhost:1234`. However, it is less documented and less widely tested in production than Ollama. If you need API reliability for a production application, Ollama is the safer choice.',
+            'Both Ollama and LM Studio can also serve as prompt development environments. For a broader comparison that includes Cursor, VS Code + Continue, and cloud playgrounds, see [best prompt engineering IDEs and editors](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides).',
           ],
           codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama",  # dummy key, unused locally\n)\n\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
@@ -32162,6 +32169,7 @@ schema: {
             '**Ollama API**: Verfügbar auf `http://localhost:11434/api`. OpenAI-kompatibel. Sie können Tools wie [Continue.dev](/local-llms/local-llms-with-vscode-cursor) (VS Code), [LM Studio Plugin für Cursor](/local-llms/local-llms-with-vscode-cursor) oder jede OpenAI-kompatible Bibliothek verwenden. In Python: `client = OpenAI(base_url="http://localhost:11434/v1")` + Standard OpenAI SDK.',
             '**LM Studio API**: Auch OpenAI-kompatibel (Port 1234 oder anders konfigurierbar). Stand April 2026 ist die API noch in Beta und nicht produktionsreif. Verwenden Sie Ollama für produktionskrische API-abhängige Arbeitslasten.',
             '**Integrationen**: Beide unterstützen RAG (Retrieval-Augmented Generation), LangChain, LlamaIndex und andere Framework. Ollama ist bei RAG-Deployments häufiger, weil die API stabiler ist.',
+            'Sowohl Ollama als auch LM Studio können auch als Prompt-Entwicklungsumgebungen dienen. Für einen breiteren Vergleich mit Cursor, VS Code + Continue und Cloud-Playgrounds: [beste Prompt-Engineering-IDEs und Editoren](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides).',
           ],
         },
         whenOllama: {
@@ -32441,6 +32449,7 @@ schema: {
             '**API Ollama** : Disponible sur `http://localhost:11434/api`. Compatible OpenAI. Vous pouvez utiliser des outils comme [Continue.dev](/local-llms/local-llms-with-vscode-cursor?lang=fr) (VS Code), ou toute bibliothèque compatible OpenAI. En Python : `client = OpenAI(base_url="http://localhost:11434/v1")` + SDK OpenAI standard.',
             '**API LM Studio** : Aussi compatible OpenAI (port 1234 ou configurable autrement). Depuis avril 2026, l\'API est encore en bêta et non recommandée pour la production. Utilisez Ollama pour les charges de travail sensibles en production.',
             '**Intégrations** : Les deux supportent RAG (Retrieval-Augmented Generation), LangChain, LlamaIndex et d\'autres frameworks. Ollama est plus courant dans les déploiements RAG parce que l\'API est plus stable.',
+            'Ollama et LM Studio peuvent également servir d\'environnements de développement de prompts. Pour une comparaison plus large incluant Cursor, VS Code + Continue et les playgrounds cloud, voir [meilleures IDEs et éditeurs pour le prompt engineering](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides).',
           ],
         },
         whenOllama: {
@@ -32710,6 +32719,7 @@ schema: {
             '**Ollama API**: `http://localhost:11434/api` で利用可。OpenAI 互換。[Continue.dev](/local-llms/local-llms-with-vscode-cursor?lang=ja) (VS Code) や OpenAI 互換ライブラリ使用可。Python: `client = OpenAI(base_url="http://localhost:11434/v1")` + 標準 SDK。',
             '**LM Studio API**: OpenAI 互換 (ポート 1234 またはカスタム)。2026 年 4 月時点でベータ、本番環境非推奨。本番 API 依存の負荷は Ollama 使用。',
             '**統合**: 両者 RAG (検索拡張生成)、LangChain、LlamaIndex 対応。Ollama は RAG デプロイで広く使用、API 安定性高。',
+            'OllamaとLM Studioはどちらもプロンプト開発環境としても活用できます。Cursor・VS Code + Continue・クラウドプレイグラウンドを含む広範な比較については[プロンプトエンジニアリング向け最良IDEとエディタ](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides)をご覧ください。',
           ],
         },
         whenOllama: {
@@ -32979,6 +32989,7 @@ schema: {
             '**Ollama API**: 在 `http://localhost:11434/api` 可用。OpenAI 兼容。您可以使用 [Continue.dev](/local-llms/local-llms-with-vscode-cursor?lang=zh) (VS Code) 或任何 OpenAI 兼容库。Python: `client = OpenAI(base_url="http://localhost:11434/v1")` + 标准 SDK。',
             '**LM Studio API**: 也是 OpenAI 兼容 (端口 1234 或可配置)。截至 2026 年 4 月，API 仍处于测试版，不建议用于生产。对于生产 API 相关的工作负载，请使用 Ollama。',
             '**集成**: 两者都支持 RAG (检索增强生成)、LangChain、LlamaIndex 等框架。Ollama 在 RAG 部署中更常见，因为其 API 更稳定。',
+            'Ollama和LM Studio也都可以作为提示词开发环境使用。要了解包括Cursor、VS Code + Continue和云端Playground在内的更广泛比较，请参阅[最佳Prompt工程IDE和编辑器](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides)。',
           ],
         },
         whenOllama: {
