@@ -554,16 +554,53 @@ export const article: Record<Language, PEArticle> = {
             text: 'Quatre défenses : (1) Filtrage des entrées — valider et sanitiser le contenu récupéré avant de l\'inclure dans le prompt. (2) Validation du schéma de sortie — définir un format de sortie strict et valider chaque sortie du modèle. (3) Séparation des privilèges — limiter les capacités du LLM à la tâche spécifique. (4) Isolation des instructions — utiliser des délimiteurs clairs entre les instructions système et les données récupérées.',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'Qu\'est-ce que l\'OWASP LLM01 ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'L\'OWASP LLM01 est le premier élément de l\'OWASP LLM Top 10 (2025) : l\'injection de prompt. Il couvre l\'injection directe (entrée utilisateur contrôlée par l\'attaquant) et l\'injection indirecte (instructions malveillantes dans le contenu récupéré ou les sorties des outils). Il est classé en premier car c\'est la vulnérabilité LLM la plus courante et la plus impactante.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Combien de schémas d\'attaque Garak teste-t-il ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Garak (version 0.9+) inclut plus de 40 sondes d\'attaque couvrant l\'injection de prompt, les jailbreaks, l\'extraction de données, l\'élicitation d\'hallucinations et le contournement de toxicité. Exécutez `garak --list-probes` pour voir la liste complète. Garak est open source et gratuit.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quelle est la différence entre Garak et PyRIT ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Garak est un scanner automatisé qui exécute une bibliothèque fixe de sondes d\'attaque et rapporte les résultats pass/fail. PyRIT (Python Risk Identification Toolkit de Microsoft) est un orchestrateur de red-teaming multi-tour qui simule un attaquant conversant avec le modèle sur plusieurs tours pour trouver des vulnérabilités que les sondes single-tour manquent. Utilisez Garak pour la couverture systématique ; PyRIT pour la profondeur.',
+          },
+        },
       ],
     },
     sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'En résumé',
+        isTldr: true,
+        content: 'L\'injection de prompt est OWASP LLM01 — le risque de sécurité LLM #1. Testez l\'injection directe (l\'attaquant contrôle l\'entrée utilisateur) et l\'injection indirecte (l\'attaquant empoisonne les sources de données comme les documents RAG). Utilisez Garak pour la couverture automatisée de 40+ schémas d\'attaque et PyRIT pour le red-teaming multi-tour. La défense nécessite 4 couches : filtrage des entrées, validation du schéma de sortie, séparation des privilèges et isolation des instructions. Utilisez PromptQuorum pour les tests d\'attaque cross-modèles.',
+      },
       what_is_injection: {
         id: 'what-is-injection',
-        title: 'Qu\'est-ce que l\'injection de prompt ?',
+        title: 'Ce qu\'est l\'injection de prompt',
+        snippets: [
+          { type: 'in-one-sentence', text: 'L\'injection de prompt est une attaque où un adversaire insère des instructions dans les entrées fournies par l\'utilisateur pour contourner le prompt système et modifier le comportement du modèle.' },
+          { type: 'in-plain-terms', text: 'Imaginez donner à quelqu\'un un formulaire à remplir, mais il écrit des instructions en marge pour ignorer tout le reste. L\'injection de prompt fait la même chose aux LLMs : un attaquant glisse des commandes dans l\'entrée utilisateur (ou dans des documents que le LLM lit) pour remplacer le comportement prévu.' },
+        ],
         content: [
           '**L\'injection de prompt est une attaque où un adversaire insère des instructions dans les entrées utilisateur pour contourner le prompt système et modifier le comportement du modèle.** L\'OWASP la classe comme LLM01 — le risque le plus élevé de l\'OWASP LLM Top 10.',
           'Il existe deux catégories : l\'injection directe, où l\'attaquant contrôle le champ de saisie utilisateur et insère directement des instructions de contournement, et l\'injection indirecte, où l\'attaquant empoisonne une source de données que le LLM lit.',
           'Décision : tester les deux types d\'injection sur tout prompt qui traite des entrées externes — tout prompt qui lit du texte utilisateur, des documents récupérés ou du contenu web est une surface d\'attaque potentielle.',
+        ],
+        callouts: [
+          { type: 'warning', label: 'OWASP LLM Top 10 #1', text: 'L\'injection de prompt est LLM01 — classée première car c\'est la vulnérabilité la plus courante et la plus impactante dans les applications LLM. Toute application LLM qui accepte des entrées externes est exposée.' },
         ],
       },
       direct_injection: {
@@ -593,6 +630,9 @@ export const article: Record<Language, PEArticle> = {
           'PyRIT (Python Risk Identification Toolkit) est le framework open source de red-teaming de Microsoft avec une orchestration d\'attaques structurée et des adaptateurs cibles pour différentes API LLM. Utilisez PyRIT pour les séquences d\'attaques multi-tours.',
           'PromptQuorum exécute les mêmes sondes d\'attaque sur plusieurs modèles (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) simultanément pour identifier lesquels sont plus susceptibles à des schémas d\'attaque spécifiques.',
         ],
+        callouts: [
+          { type: 'tip', label: 'Garak vs PyRIT', text: 'Utilisez Garak pour une couverture automatisée large de 40+ schémas d\'attaque connus. Utilisez PyRIT pour la profondeur — des conversations adversariales multi-tours simulées que les scanners single-tour manquent.' },
+        ],
       },
       defenses: {
         id: 'defenses',
@@ -602,17 +642,62 @@ export const article: Record<Language, PEArticle> = {
           'Filtrage des entrées : bloquer les schémas d\'injection connus avant qu\'ils n\'atteignent le prompt. Maintenir une liste de blocage des phrases de contournement courantes et rejeter ou sanitiser les entrées correspondantes.',
           'Validation du schéma de sortie : définir un format de sortie strict et valider chaque sortie du modèle. Séparation des privilèges : limiter les capacités du LLM à exactement ce que la tâche requiert. Isolation des instructions : utiliser des délimiteurs explicites entre les instructions système et les données récupérées.',
         ],
+        callouts: [
+          { type: 'insight', label: 'La défense en profondeur est obligatoire', text: 'Aucune couche seule n\'arrête l\'injection de prompt. Une liste de blocage seule est contournée par la paraphrase ; la validation de schéma seule ne prévient pas l\'exfiltration de données. Les quatre couches doivent être actives simultanément.' },
+        ],
+      },
+      common_mistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes dans les tests de sécurité des prompts',
+        mistakes: [
+          { mistake: 'Tester uniquement l\'injection directe', problem: 'L\'injection indirecte via les documents récupérés est plus courante en production et n\'est pas testée', fix: 'Tester les chemins d\'injection indirecte : documents RAG, réponses API, champs de métadonnées contrôlés par l\'utilisateur' },
+          { mistake: 'Pas de validation du schéma de sortie', problem: 'Une sortie non structurée crée une surface d\'injection illimitée', fix: 'Appliquer des schémas de sortie (mode JSON, validation Zod/Pydantic) pour tous les pipelines automatisés' },
+          { mistake: 'Liste de blocage statique uniquement', problem: 'Les listes de blocage manquent les nouveaux schémas et sont contournées par des variations d\'encodage', fix: 'Combiner les listes de blocage avec la détection sémantique d\'intention et la séparation des privilèges' },
+          { mistake: 'Pas de séparation des privilèges', problem: 'Si le modèle a un accès en écriture/exécution, une injection réussie peut causer des dommages irréversibles', fix: 'Appliquer le moindre privilège : lecture seule pour les modèles de récupération, environnements d\'exécution séparés pour les modèles utilisant des outils' },
+        ],
       },
       key_takeaways: {
         id: 'key-takeaways',
         title: 'Points clés',
-        isTldr: true,
         items: [
           'L\'injection de prompt est LLM01 dans l\'OWASP LLM Top 10 — le risque de sécurité prioritaire pour les applications LLM.',
           'Tester les deux types d\'injection : directe (l\'attaquant contrôle l\'entrée utilisateur) et indirecte (l\'attaquant empoisonne une source de données).',
           'Garak (open source, gratuit) fournit une couverture automatisée de 40+ schémas d\'attaque connus. PyRIT (Microsoft, open source, gratuit) fournit une orchestration d\'attaques multi-tours structurée.',
           'PromptQuorum exécute des sondes d\'attaque sur plusieurs modèles pour identifier lesquels sont plus susceptibles à des schémas d\'attaque spécifiques.',
           'La défense requiert quatre couches : filtrage des entrées, validation du schéma de sortie, séparation des privilèges et isolation des instructions.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Questions fréquentes',
+        faqs: [
+          { q: 'Qu\'est-ce que l\'injection de prompt ?', a: 'L\'injection de prompt est une attaque où un adversaire insère des instructions dans les entrées utilisateur pour contourner le prompt système et modifier le comportement du modèle. Elle est classifiée comme LLM01 dans l\'OWASP LLM Top 10.' },
+          { q: 'Quelle est la différence entre l\'injection directe et l\'injection indirecte ?', a: 'Injection directe : l\'attaquant contrôle le champ de saisie utilisateur et insère directement des instructions de contournement. Injection indirecte : l\'attaquant empoisonne une source de données que le LLM lit et les instructions malveillantes sont récupérées lors de l\'exécution.' },
+          { q: 'Quels outils sont disponibles pour les tests de sécurité des prompts ?', a: 'Garak est une bibliothèque open source de sondes adversariales, gratuite et couvrant des dizaines de schémas d\'attaque. PyRIT est le toolkit open source de red-teaming de Microsoft. PromptQuorum exécute les mêmes sondes sur plusieurs modèles.' },
+          { q: 'Comment prévenir l\'injection indirecte dans les pipelines RAG ?', a: 'Quatre défenses : (1) Filtrage des entrées. (2) Validation du schéma de sortie. (3) Séparation des privilèges. (4) Isolation des instructions entre les commandes système et les données récupérées.' },
+          { q: 'Qu\'est-ce que l\'OWASP LLM01 ?', a: 'L\'OWASP LLM01 est le premier élément de l\'OWASP LLM Top 10 (2025) : l\'injection de prompt. Il couvre l\'injection directe et indirecte et est classé en premier car c\'est la vulnérabilité LLM la plus courante.' },
+          { q: 'Combien de schémas d\'attaque Garak teste-t-il ?', a: 'Garak (version 0.9+) inclut plus de 40 sondes d\'attaque. Exécutez `garak --list-probes` pour la liste complète. Garak est open source et gratuit.' },
+          { q: 'Quelle est la différence entre Garak et PyRIT ?', a: 'Garak est un scanner automatisé pour les schémas d\'attaque connus. PyRIT est un orchestrateur de red-teaming multi-tour qui simule un attaquant sur plusieurs tours. Garak pour la couverture systématique ; PyRIT pour la profondeur.' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          { title: 'Injection de prompt et sécurité', url: '/prompt-engineering/prompt-injection-and-security' },
+          { title: 'Gouvernance des prompts en production', url: '/prompt-engineering/prompt-governance-in-production' },
+          { title: 'Audit de prompts et risque de régression', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
+          { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
+          { title: 'Sortie structurée et mode JSON', url: '/prompt-engineering/structured-output-json-mode' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          { title: 'OWASP LLM Top 10 (2025 Edition)', url: 'https://owasp.org/www-project-top-10-for-large-language-model-applications/' },
+          { title: 'Garak: LLM Vulnerability Scanner (GitHub)', url: 'https://github.com/NVIDIA/garak' },
+          { title: 'PyRIT: Python Risk Identification Toolkit (GitHub)', url: 'https://github.com/Azure/PyRIT' },
         ],
       },
     },
@@ -623,15 +708,34 @@ export const article: Record<Language, PEArticle> = {
     theme: 'チームガバナンス',
     title: 'プロンプトセキュリティテスト：インジェクション脆弱性を検出するためのツールと方法',
     seoTitle: 'プロンプトセキュリティテスト：インジェクション脆弱性を検出する',
-    metaDescription: 'プロンプトインジェクションテスト：直接vs間接インジェクション、ツール（Garak、PyRIT、PromptQuorum）、入力のサニタイズ、出力の検証、OWASP LLMトップ10カバレッジ。',
-    ogDescription: 'セキュリティ脆弱性に対するプロンプトのテスト方法 — 直接および間接インジェクション、自動化ツール（Garak、PyRIT）、手動レッドチーミング、OWASP LLMトップ10カバレッジ。',
-    twitterDescription: 'プロンプトインジェクションテスト：直接vs間接、GarakとPyRITツール、入力サニタイズパターン。OWASP LLMトップ10カバレッジ。',
+    metaDescription: 'Garakで40以上の攻撃パターンをテストし、PyRITでマルチターンオーケストレーション。4層防御：入力フィルタリング、スキーマ、特権、分離。',
+    ogDescription: 'プロンプトインジェクション脆弱性を検出：直接および間接攻撃、GarakとPyRITツール、4層防御スタック。PromptQuorumでクロスモデルテスト。',
+    twitterDescription: 'プロンプトインジェクションはOWASP LLM01 — #1セキュリティリスク。Garakで自動テスト、PyRITでレッドチーミング、4層防御スタック。',
     publishDate: '2026-05-02',
     readTime: '11分で読める',
     educationalLevel: '上級',
     primaryTerm: 'プロンプトインジェクション',
     intro: '**プロンプトインジェクションはLLMアプリケーションで最も一般的なセキュリティ脆弱性であり、OWASP LLMトップ10でLLM01として最高優先度のリスクに分類されています。** これは唯一、完全に入力駆動型の脆弱性です。',
     leadAnswerBlock: '**プロンプトインジェクションとは、攻撃者がユーザー提供の入力に指示を挿入してシステムプロンプトを上書きし、モデルの動作を変更する攻撃です。** LLMアプリケーションで最も一般的なセキュリティ脆弱性であり、完全に入力駆動型の唯一の脆弱性です。',
+    quickFacts: [
+      'プロンプトインジェクションはOWASP LLM01 — OWASP LLMトップ10（2025年）で最高優先度のセキュリティリスク。',
+      'Garak（バージョン0.9+）は40以上の攻撃プローブを含み、インジェクション、ジェイルブレイク、データ抽出、毒性回避をカバー。',
+      'RAGドキュメントによる間接インジェクションは、直接ユーザー入力インジェクションよりも本番環境でより一般的。',
+      '防御には4つの層が必要：入力フィルタリング、出力スキーマ強制、特権分離、指示の分離。',
+      'PyRIT（Microsoft）はシングルターンスキャナーでは再現できないマルチターンレッドチーミングを可能にする。',
+      'PromptQuorumはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで同じ攻撃プローブを実行し、モデル固有の脆弱性を検出。',
+    ],
+    toc: [
+      { label: 'プロンプトインジェクションとは何か', anchor: 'what_is_injection' },
+      { label: '直接インジェクション：パターンと検出', anchor: 'direct_injection' },
+      { label: '間接インジェクション：データが攻撃である場合', anchor: 'indirect_injection' },
+      { label: 'プロンプトセキュリティテストのツール', anchor: 'tools' },
+      { label: '入力サニタイズと出力検証パターン', anchor: 'defenses' },
+      { label: 'よくある間違い', anchor: 'common_mistakes' },
+      { label: 'よくある質問', anchor: 'faq' },
+      { label: '関連リソース', anchor: 'related_reading' },
+      { label: '出典', anchor: 'sources' },
+    ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -680,16 +784,53 @@ export const article: Record<Language, PEArticle> = {
             text: '4つの防御策：(1) 入力フィルタリング — プロンプトに含める前に取得したコンテンツを検証してサニタイズする。(2) 出力スキーマ強制 — 厳格な出力形式を定義し、すべてのモデル出力を検証する。(3) 特権分離 — LLMの機能を特定のタスクに必要なものに限定する。(4) 指示の分離 — システム指示と取得データの間に明確な区切り文字を使用する。',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'OWASP LLM01とは何ですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'OWASP LLM01はOWASP LLMトップ10（2025年）の最初のエントリです：プロンプトインジェクション。直接インジェクション（攻撃者が制御するユーザー入力）と間接インジェクション（取得されたコンテンツやツール出力の悪意ある指示）をカバーします。最も一般的で最も影響の大きいLLM脆弱性であるため、第1位にランクされています。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Garakはいくつの攻撃パターンをテストしますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Garak（バージョン0.9+）は、プロンプトインジェクション、ジェイルブレイク、データ抽出、ハルシネーション誘発、毒性回避をカバーする40以上の攻撃プローブを含んでいます。`garak --list-probes`を実行して全リストを確認できます。GarakはオープンソースでCLI経由で任意のLLM APIエンドポイントに対して実行できます。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'GarakとPyRITの違いは何ですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Garakは固定された攻撃プローブライブラリを実行し、合格/失敗結果を報告する自動スキャナーです。PyRIT（MicrosoftのPython Risk Identification Toolkit）は、シングルターンプローブでは見逃す脆弱性を見つけるために、攻撃者がモデルと複数のターンにわたって会話するマルチターンレッドチーミングオーケストレーターです。体系的なカバレッジにはGarak、深さにはPyRITを使用してください。',
+          },
+        },
       ],
     },
     sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要約',
+        isTldr: true,
+        content: 'プロンプトインジェクションはOWASP LLM01 — LLMセキュリティリスク第1位。直接インジェクション（攻撃者がユーザー入力を制御）と間接インジェクション（攻撃者がRAGドキュメントなどのデータソースを汚染）の両方をテストします。40以上の攻撃パターンの自動カバレッジにはGarak、マルチターンレッドチーミングにはPyRITを使用します。防御には4つの層が必要：入力フィルタリング、出力スキーマ強制、特権分離、指示の分離。クロスモデルの攻撃テストにはPromptQuorumを使用します。',
+      },
       what_is_injection: {
         id: 'what-is-injection',
         title: 'プロンプトインジェクションとは何か',
+        snippets: [
+          { type: 'in-one-sentence', text: 'プロンプトインジェクションとは、攻撃者がユーザー提供の入力に指示を挿入してシステムプロンプトを上書きし、モデルの動作を変更する攻撃です。' },
+          { type: 'in-plain-terms', text: '誰かにフォームを渡したとして、その人が余白に「他のすべてを無視してください」と指示を書いた場合を想像してください。プロンプトインジェクションはLLMに対して同じことをします：攻撃者がユーザー入力（またはLLMが読み取るドキュメント）にコマンドを忍ばせて、意図した動作を上書きします。' },
+        ],
         content: [
           '**プロンプトインジェクションとは、攻撃者がユーザー提供の入力に指示を挿入してシステムプロンプトを上書きし、モデルの動作を変更する攻撃です。** OWASPはこれをLLM01として分類しており、OWASP LLMトップ10で最高のリスクです。',
           '2つのカテゴリがあります：直接インジェクション（攻撃者がユーザー入力フィールドを制御してオーバーライド指示を直接挿入する）と間接インジェクション（攻撃者がLLMが読み取るデータソースを汚染する）。',
           '決定：外部入力を処理するすべてのプロンプトに対して両方のタイプのインジェクションをテストします — ユーザーテキスト、取得したドキュメント、またはWebコンテンツを読み取るプロンプトはすべて潜在的な攻撃面です。',
+        ],
+        callouts: [
+          { type: 'warning', label: 'OWASP LLMトップ10 #1', text: 'プロンプトインジェクションはLLM01 — LLMアプリケーションで最も一般的で最も影響が大きい脆弱性であるため、第1位にランクされています。外部入力を受け付けるすべてのLLMアプリケーションが露出しています。' },
         ],
       },
       direct_injection: {
@@ -719,6 +860,9 @@ export const article: Record<Language, PEArticle> = {
           'PyRIT（Python Risk Identification Toolkit）はMicrosoftのオープンソースレッドチーミングフレームワークです。構造化された攻撃オーケストレーション、さまざまなLLM APIのターゲットアダプターを提供します。マルチターン攻撃シーケンスにはPyRITを使用します。',
           'PromptQuorumは複数のモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）で同じ攻撃プローブを実行し、どのモデルが特定の攻撃パターンに対してより脆弱かを特定します。',
         ],
+        callouts: [
+          { type: 'tip', label: 'GarakとPyRITの使い分け', text: 'Garakで40以上の既知の攻撃パターンの広範な自動カバレッジ。PyRITで深さ — シングルターンスキャナーでは見逃すマルチターンの模擬敵対的会話。' },
+        ],
       },
       defenses: {
         id: 'defenses',
@@ -728,17 +872,62 @@ export const article: Record<Language, PEArticle> = {
           '入力フィルタリング：既知のインジェクションパターンがプロンプトに到達する前にブロックします。一般的なオーバーライドフレーズのブロックリストを維持し、一致する入力を拒否またはサニタイズします。出力スキーマ強制：厳格な出力形式を定義し、すべてのモデル出力を検証します。',
           '特権分離：LLMのツールアクセスと機能を、タスクが要求するものに正確に限定します。指示の分離：システム指示と取得データの間に明示的な区切り文字を使用し、オーバーライド試みに対してシステムプロンプトを強化します。',
         ],
+        callouts: [
+          { type: 'insight', label: '多層防御は必須', text: '単一の層ではプロンプトインジェクションを止められません。ブロックリストだけでは言い換えで回避され、スキーマ検証だけではデータ漏洩を防げません。4つの層すべてを同時に有効にする必要があります。' },
+        ],
+      },
+      common_mistakes: {
+        id: 'common-mistakes',
+        title: 'プロンプトセキュリティテストでよくある間違い',
+        mistakes: [
+          { mistake: '直接インジェクションのみテストする', problem: '取得されたドキュメントによる間接インジェクションは本番環境でより一般的で、テストされていない', fix: '間接インジェクションパスをテストする：RAGドキュメント、APIレスポンス、ユーザーが制御するメタデータフィールド' },
+          { mistake: '出力スキーマ強制なし', problem: '非構造化出力は無制限のインジェクション面を作り出す', fix: 'すべての自動パイプラインに出力スキーマを強制する（JSONモード、Zod/Pydantic検証）' },
+          { mistake: '静的ブロックリストのみ', problem: 'ブロックリストは新しいパターンを見逃し、エンコーディングバリエーションで回避される', fix: 'ブロックリストとセマンティックインテント検出および特権分離を組み合わせる' },
+          { mistake: '特権分離なし', problem: 'モデルに書き込み/実行アクセスがある場合、インジェクション成功で回復不能なダメージが発生する', fix: '最小特権を適用：取得モデルには読み取り専用、ツール使用モデルには別の実行環境' },
+        ],
       },
       key_takeaways: {
         id: 'key-takeaways',
         title: '重要なポイント',
-        isTldr: true,
         items: [
           'プロンプトインジェクションはOWASP LLMトップ10でLLM01 — LLMアプリケーションの最高優先度のセキュリティリスクです。',
           '直接インジェクション（攻撃者がユーザー入力を制御）と間接インジェクション（攻撃者がデータソースを汚染）の両方をテストします。',
           'Garak（オープンソース、無料）は40以上の既知の攻撃パターンの自動カバレッジを提供します。PyRIT（Microsoft、オープンソース、無料）は構造化されたマルチターン攻撃オーケストレーションを提供します。',
           'PromptQuorumは複数のモデルで攻撃プローブを実行し、どのモデルが特定の攻撃パターンに対してより脆弱かを特定します。',
           '防御には4つの層が必要です：入力フィルタリング、出力スキーマ強制、特権分離、指示の分離。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'プロンプトインジェクションとは何ですか？', a: 'プロンプトインジェクションとは、攻撃者がユーザー提供の入力に指示を挿入してシステムプロンプトを上書きし、モデルの動作を変更する攻撃です。OWASP LLMトップ10でLLM01として分類されており、LLMアプリケーションの最高優先度のリスクです。' },
+          { q: '直接インジェクションと間接インジェクションの違いは何ですか？', a: '直接インジェクション：攻撃者がユーザー入力フィールドを制御し、オーバーライド指示を直接挿入します。間接インジェクション：攻撃者がLLMが読み取るデータソース（Webページ、ドキュメント、データベースレコード）を汚染し、プロンプト実行中に悪意のある指示が取得されます。' },
+          { q: 'プロンプトセキュリティテストに使用できるツールは何ですか？', a: 'GarakはLLM向けのオープンソースの敵対的プローブライブラリで、無料で数十の攻撃パターンをカバー。PyRITはMicrosoftのオープンソースレッドチーミングツールキット。PromptQuorumは複数のモデルで同じ攻撃プローブを実行します。' },
+          { q: 'RAGパイプラインにおける間接インジェクションを防ぐにはどうすればよいですか？', a: '4つの防御策：(1) 入力フィルタリング。(2) 出力スキーマ強制。(3) 特権分離。(4) 指示の分離。' },
+          { q: 'OWASP LLM01とは何ですか？', a: 'OWASP LLM01はOWASP LLMトップ10（2025年）の最初のエントリです：プロンプトインジェクション。直接インジェクションと間接インジェクションをカバーし、最も一般的で最も影響の大きいLLM脆弱性であるため第1位です。' },
+          { q: 'Garakはいくつの攻撃パターンをテストしますか？', a: 'Garak（バージョン0.9+）は40以上の攻撃プローブを含んでいます。`garak --list-probes`で全リストを確認。GarakはオープンソースでCLIから実行できます。' },
+          { q: 'GarakとPyRITの違いは何ですか？', a: 'Garakは固定された攻撃プローブライブラリを実行する自動スキャナーです。PyRITはマルチターンレッドチーミングオーケストレーターで、シングルターンプローブでは見逃す脆弱性を見つけます。体系的なカバレッジにはGarak、深さにはPyRITを使用してください。' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: '関連リソース',
+        items: [
+          { title: 'プロンプトインジェクションとセキュリティ', url: '/prompt-engineering/prompt-injection-and-security' },
+          { title: '本番環境でのプロンプトガバナンス', url: '/prompt-engineering/prompt-governance-in-production' },
+          { title: 'プロンプト監査と回帰リスク', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
+          { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
+          { title: '構造化出力とJSONモード', url: '/prompt-engineering/structured-output-json-mode' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        items: [
+          { title: 'OWASP LLM Top 10 (2025 Edition)', url: 'https://owasp.org/www-project-top-10-for-large-language-model-applications/' },
+          { title: 'Garak: LLM Vulnerability Scanner (GitHub)', url: 'https://github.com/NVIDIA/garak' },
+          { title: 'PyRIT: Python Risk Identification Toolkit (GitHub)', url: 'https://github.com/Azure/PyRIT' },
         ],
       },
     },
@@ -749,15 +938,34 @@ export const article: Record<Language, PEArticle> = {
     theme: '团队治理',
     title: '提示词安全测试：检测注入漏洞的工具和方法',
     seoTitle: '提示词安全测试：检测注入漏洞',
-    metaDescription: '提示词注入测试：直接vs间接注入、工具（Garak、PyRIT、PromptQuorum）、输入清理、输出验证和OWASP LLM Top 10覆盖。',
-    ogDescription: '如何测试提示词的安全漏洞 — 直接和间接注入、自动化工具（Garak、PyRIT）、手动红队测试和OWASP LLM Top 10覆盖。',
-    twitterDescription: '提示词注入测试：直接vs间接，Garak和PyRIT工具，输入清理模式。OWASP LLM Top 10覆盖。',
+    metaDescription: '使用Garak（40+攻击模式）和PyRIT（多轮编排）测试提示词注入。4层防御：输入过滤、模式、权限、隔离。',
+    ogDescription: '检测提示词注入漏洞：直接和间接攻击、Garak和PyRIT工具、4层防御栈。使用PromptQuorum进行跨模型测试。',
+    twitterDescription: '提示词注入是OWASP LLM01 — #1安全风险。Garak用于自动化测试，PyRIT用于红队测试，4层防御栈。',
     publishDate: '2026-05-02',
     readTime: '11分钟阅读',
     educationalLevel: '高级',
     primaryTerm: '提示词注入',
     intro: '**提示词注入是LLM应用中最常见的安全漏洞，在OWASP LLM Top 10中被列为LLM01最高优先级风险。** 在中国，《数据安全法》和《网络安全法》对AI系统的安全测试提出了明确要求，提示词安全测试是合规的关键环节。',
     leadAnswerBlock: '**提示词注入是一种攻击，攻击者在用户提供的输入中插入指令以覆盖系统提示词并改变模型行为。** 这是LLM应用中最常见的安全漏洞，也是唯一完全由输入驱动的漏洞。',
+    quickFacts: [
+      '提示词注入是OWASP LLM01 — OWASP LLM Top 10（2025年）中最高优先级的安全风险。',
+      'Garak（版本0.9+）包含40多个攻击探针，涵盖注入、越狱、数据提取和毒性绕过。',
+      '通过RAG文档的间接注入在生产环境中比直接用户输入注入更常见。',
+      '防御需要4层：输入过滤、输出模式强制、特权分离和指令隔离。',
+      'PyRIT（微软）支持单轮扫描器无法复制的多轮红队测试。',
+      'PromptQuorum在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro上运行相同的攻击探针，检测特定模型漏洞。',
+    ],
+    toc: [
+      { label: '什么是提示词注入', anchor: 'what_is_injection' },
+      { label: '直接注入：模式和检测', anchor: 'direct_injection' },
+      { label: '间接注入：当数据本身是攻击时', anchor: 'indirect_injection' },
+      { label: '提示词安全测试工具', anchor: 'tools' },
+      { label: '输入清理和输出验证模式', anchor: 'defenses' },
+      { label: '常见错误', anchor: 'common_mistakes' },
+      { label: '常见问题', anchor: 'faq' },
+      { label: '相关阅读', anchor: 'related_reading' },
+      { label: '来源', anchor: 'sources' },
+    ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -806,16 +1014,53 @@ export const article: Record<Language, PEArticle> = {
             text: '四种防御措施：(1) 输入过滤 — 在将检索到的内容包含在提示词中之前进行验证和清理。(2) 输出模式强制 — 定义严格的输出格式并验证每个模型输出。(3) 特权分离 — 将LLM的功能限制在任务要求的范围内。(4) 指令隔离 — 在系统指令和检索数据之间使用明确的分隔符。',
           },
         },
+        {
+          '@type': 'Question',
+          name: '什么是OWASP LLM01？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'OWASP LLM01是OWASP LLM Top 10（2025年）的首要条目：提示词注入。它涵盖直接注入（攻击者控制的用户输入）和间接注入（检索内容或工具输出中的恶意指令）。它排名第一，因为它是最常见、影响最大的LLM漏洞。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Garak测试多少种攻击模式？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Garak（版本0.9+）包含40多个攻击探针，涵盖提示词注入、越狱、数据提取、幻觉诱发和毒性绕过。运行`garak --list-probes`查看完整列表。Garak是开源免费的，通过CLI对任何LLM API端点运行。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Garak和PyRIT有什么区别？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Garak是运行固定攻击探针库并报告通过/失败结果的自动扫描器。PyRIT（微软的Python风险识别工具包）是多轮红队测试编排器，模拟攻击者与模型进行多轮对话，发现单轮探针遗漏的漏洞。Garak用于系统覆盖；PyRIT用于深度测试。',
+          },
+        },
       ],
     },
     sections: {
+      tldr: {
+        id: 'tldr',
+        title: '摘要',
+        isTldr: true,
+        content: '提示词注入是OWASP LLM01 — LLM安全风险第1位。测试直接注入（攻击者控制用户输入）和间接注入（攻击者污染RAG文档等数据源）。使用Garak进行40+攻击模式的自动覆盖，使用PyRIT进行多轮红队测试。防御需要4层：输入过滤、输出模式强制、特权分离和指令隔离。使用PromptQuorum进行跨模型攻击测试。',
+      },
       what_is_injection: {
         id: 'what-is-injection',
-        title: '什么是提示词注入？',
+        title: '什么是提示词注入',
+        snippets: [
+          { type: 'in-one-sentence', text: '提示词注入是攻击者在用户提供的输入中插入指令以覆盖系统提示词并改变模型行为的攻击。' },
+          { type: 'in-plain-terms', text: '想象你给某人一张表单填写，但他们在空白处写下"忽略其他所有内容"的指令。提示词注入对LLM做同样的事：攻击者将命令潜入用户输入（或LLM读取的文档）以覆盖预期的行为。' },
+        ],
         content: [
           '**提示词注入是一种攻击，攻击者在用户输入中插入指令以覆盖系统提示词并改变模型行为。** OWASP将其列为LLM01 — OWASP LLM Top 10中最高的风险。',
           '有两类：直接注入（攻击者控制用户输入字段并直接插入覆盖指令）和间接注入（攻击者污染LLM读取的数据源）。',
           '决定：对处理外部输入的任何提示词测试两种类型的注入 — 读取用户文本、检索文档或网络内容的任何提示词都是潜在的攻击面。',
+        ],
+        callouts: [
+          { type: 'warning', label: 'OWASP LLM Top 10 #1', text: '提示词注入是LLM01 — 排名第一，因为它是LLM应用中最常见、影响最大的漏洞。每一个接受外部输入的LLM应用都面临风险。' },
         ],
       },
       direct_injection: {
@@ -845,6 +1090,9 @@ export const article: Record<Language, PEArticle> = {
           'PyRIT（Python风险识别工具包）是微软的开源红队测试框架，具有结构化攻击编排和针对不同LLM API的目标适配器。对于多轮攻击序列使用PyRIT。',
           'PromptQuorum在多个模型（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）上同时运行相同的攻击探针，识别哪些模型对特定攻击模式更容易受到攻击。',
         ],
+        callouts: [
+          { type: 'tip', label: 'Garak与PyRIT', text: '使用Garak进行40+已知攻击模式的广泛自动覆盖。使用PyRIT进行深度测试 — 单轮扫描器遗漏的多轮模拟对抗性对话。' },
+        ],
       },
       defenses: {
         id: 'defenses',
@@ -854,17 +1102,62 @@ export const article: Record<Language, PEArticle> = {
           '输入过滤：在已知注入模式到达提示词之前阻止它们。维护常见覆盖短语的黑名单，拒绝或清理匹配的输入。输出模式强制：定义严格的输出格式并验证每个模型输出。',
           '特权分离：将LLM的工具访问和功能限制在任务要求的范围内。指令隔离：在系统指令和检索数据之间使用明确的分隔符，并通过明确的反覆盖指令强化系统提示词。',
         ],
+        callouts: [
+          { type: 'insight', label: '纵深防御是必须的', text: '没有单一层次能阻止提示词注入。仅靠黑名单会被释义绕过；仅靠模式验证无法防止数据泄露。所有四层必须同时激活。' },
+        ],
+      },
+      common_mistakes: {
+        id: 'common-mistakes',
+        title: '提示词安全测试中的常见错误',
+        mistakes: [
+          { mistake: '只测试直接注入', problem: '通过检索文档的间接注入在生产环境中更常见，但未被测试', fix: '测试间接注入路径：RAG文档、API响应、用户控制的元数据字段' },
+          { mistake: '没有输出模式强制', problem: '非结构化输出创建了无限的注入面', fix: '对所有自动化管道强制执行输出模式（JSON模式、Zod/Pydantic验证）' },
+          { mistake: '只有静态黑名单', problem: '黑名单遗漏新模式，并被编码变体绕过', fix: '将黑名单与语义意图检测和特权分离结合使用' },
+          { mistake: '没有特权分离', problem: '如果模型具有写入/执行访问权限，成功的注入可能造成不可逆的损害', fix: '应用最小特权：检索模型只读访问，工具使用模型使用独立的执行环境' },
+        ],
       },
       key_takeaways: {
         id: 'key-takeaways',
         title: '关键要点',
-        isTldr: true,
         items: [
           '提示词注入是OWASP LLM Top 10中的LLM01 — LLM应用的最高优先级安全风险。',
           '测试两种类型的注入：直接注入（攻击者控制用户输入）和间接注入（攻击者污染数据源）。',
           'Garak（开源，免费）提供40多种已知攻击模式的自动覆盖。PyRIT（微软，开源，免费）提供结构化的多轮攻击编排。',
           'PromptQuorum在多个模型上运行攻击探针，以识别哪些模型对特定攻击模式更容易受到攻击。',
           '防御需要四个层次：输入过滤、输出模式强制、特权分离和指令隔离。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: '什么是提示词注入？', a: '提示词注入是攻击者在用户提供的输入中插入指令以覆盖系统提示词并改变模型行为的攻击。它在OWASP LLM Top 10中被列为LLM01 — LLM应用的最高优先级风险。' },
+          { q: '直接注入和间接注入有什么区别？', a: '直接注入：攻击者控制用户输入字段并直接插入覆盖指令。间接注入：攻击者污染LLM读取的数据源（网页、文档或数据库记录），在提示词执行期间检索恶意指令。' },
+          { q: '有哪些可用于提示词安全测试的工具？', a: 'Garak是开源的LLM对抗性探针库，免费，涵盖数十种攻击模式。PyRIT是微软的开源红队测试工具包。PromptQuorum在多个模型上运行相同的攻击探针。' },
+          { q: '如何防止RAG管道中的间接注入？', a: '四种防御措施：(1) 输入过滤。(2) 输出模式强制。(3) 特权分离。(4) 系统指令和检索数据之间的指令隔离。' },
+          { q: '什么是OWASP LLM01？', a: 'OWASP LLM01是OWASP LLM Top 10（2025年）的首要条目：提示词注入。它涵盖直接注入和间接注入，排名第一因为它是最常见、影响最大的LLM漏洞。' },
+          { q: 'Garak测试多少种攻击模式？', a: 'Garak（版本0.9+）包含40多个攻击探针。运行`garak --list-probes`查看完整列表。Garak是开源免费的。' },
+          { q: 'Garak和PyRIT有什么区别？', a: 'Garak是运行固定攻击探针库的自动扫描器。PyRIT是多轮红队测试编排器，模拟攻击者进行多轮对话，发现单轮探针遗漏的漏洞。系统覆盖用Garak；深度测试用PyRIT。' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          { title: '提示词注入与安全', url: '/prompt-engineering/prompt-injection-and-security' },
+          { title: '生产环境中的提示词治理', url: '/prompt-engineering/prompt-governance-in-production' },
+          { title: '提示词审计与回归风险', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
+          { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
+          { title: '结构化输出与JSON模式', url: '/prompt-engineering/structured-output-json-mode' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          { title: 'OWASP LLM Top 10 (2025 Edition)', url: 'https://owasp.org/www-project-top-10-for-large-language-model-applications/' },
+          { title: 'Garak: LLM Vulnerability Scanner (GitHub)', url: 'https://github.com/NVIDIA/garak' },
+          { title: 'PyRIT: Python Risk Identification Toolkit (GitHub)', url: 'https://github.com/Azure/PyRIT' },
         ],
       },
     },

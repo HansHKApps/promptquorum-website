@@ -28,6 +28,25 @@
     .controls { padding: 16px 24px; border-top: 1px solid #e0e0e0; display: flex; justify-content: space-between; background: white; }
     .controls button { padding: 8px 16px; background: #6750a4; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; }
     .controls button:disabled { opacity: 0.5; cursor: not-allowed; }
+    
+    @media (max-width: 640px) {
+      .slide { padding: 20px 16px; }
+      .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+      .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+      .slide p { font-size: 14px; margin-bottom: 10px; }
+      .slide ul { font-size: 1em; margin: 10px 0; }
+      .slide ul li { margin-bottom: 8px; }
+      .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+      .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
+      .header { padding: 10px 12px; }
+      .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-links { gap: 8px; font-size: 11px; }
+      .subtitle { font-size: 14px; }
+      .logo { height: 24px; margin-bottom: 12px; }
+      .controls { padding: 10px 12px; }
+      .controls button { padding: 6px 12px; font-size: 12px; }
+    }
+
     @media print { .header, .controls { display: none; } .slide { page-break-after: always; display: flex !important; opacity: 1; position: relative; }  }
   </style>
 </head>
