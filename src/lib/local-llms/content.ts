@@ -18095,6 +18095,7 @@ schema: {
         },
         whichCodingModel: {
           title: 'Which Local Coding LLM Should You Use?',
+          content: 'The model you choose matters, but how you prompt it matters more for code quality. Structured prompting techniques — specifying language, constraints, test cases, and output format — dramatically improve code generation accuracy. The [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers 80 techniques across fundamentals, frameworks, and evaluation methods.',
           items: [
             '**8 GB RAM, coding focus**: `ollama run qwen2.5-coder:7b` -- best HumanEval per GB of RAM.',
             '**16 GB RAM**: `ollama run deepseek-coder-v2:16b` -- 81% HumanEval at only 10 GB RAM.',
@@ -18470,6 +18471,7 @@ schema: {
         },
         whichCodingModel: {
           title: 'Welches lokales Programmiermodell solltest du verwenden?',
+          content: 'Das Modell, das Sie wählen, ist wichtig — aber wie Sie es prompten, ist für die Code-Qualität noch entscheidender. Strukturierte Prompt-Techniken — Sprache, Einschränkungen, Testfälle und Ausgabeformat angeben — verbessern die Genauigkeit der Code-Generierung erheblich. Der [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) deckt 80 Techniken in den Bereichen Grundlagen, Frameworks und Evaluierungsmethoden ab.',
           items: [
             '**8 GB RAM, Programmier-Fokus**: `ollama run qwen2.5-coder:7b` -- beste HumanEval pro GB RAM.',
             '**16 GB RAM**: `ollama run deepseek-coder-v2:16b` -- 81% HumanEval mit nur 10 GB RAM.',
@@ -18852,6 +18854,7 @@ schema: {
         },
         whichCodingModel: {
           title: 'Quel modèle de programmation local utiliser?',
+          content: 'Le modèle que vous choisissez est important, mais la façon dont vous le promptez l\'est encore plus pour la qualité du code. Les techniques de prompting structuré — spécifier le langage, les contraintes, les cas de test et le format de sortie — améliorent considérablement la précision de la génération de code. Le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering) couvre 80 techniques dans les domaines des fondamentaux, des frameworks et des méthodes d\'évaluation.',
           items: [
             '**8 GB RAM, focus programmation** : `ollama run qwen2.5-coder:7b` — meilleur HumanEval par GB RAM.',
             '**16 GB RAM** : `ollama run deepseek-coder-v2:16b` — 81% HumanEval avec seulement 10 GB RAM.',
@@ -19191,6 +19194,7 @@ schema: {
             '2. 16 GB → DeepSeek-Coder V2 Lite または Qwen2.5-Coder 7B',
             '3. 8 GB → Qwen2.5-Coder 7B',
             '4. IDE自動補完必須 → Starcoder2 15B（いずれのRAMレベル）',
+            '選ぶモデルも重要ですが、コードの品質においてはプロンプトの方法がさらに重要です。言語・制約・テストケース・出力フォーマットを指定する構造化プロンプト技術は、コード生成の精度を大幅に向上させます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)では、基礎・フレームワーク・評価手法にわたる80のテクニックを解説しています。',
           ],
           image: '/images/best-local-llms-for-coding-hardware-selection-ja.svg',
           imageCaption: 'ハードウェア別モデル選択：8 GB RAM → Qwen2.5-Coder 7B（72% HumanEval、4.7 GB使用）；16 GB RAM → DeepSeek-Coder V2 16B（81% HumanEval、10 GB使用）；20+ GB RAM → Qwen2.5-Coder 32B（87% HumanEval、最高品質）。',
@@ -19495,6 +19499,7 @@ schema: {
             '2. 16 GB → DeepSeek-Coder V2 Lite 或 Qwen2.5-Coder 7B',
             '3. 8 GB → Qwen2.5-Coder 7B',
             '4. IDE自动补全必需 → Starcoder2 15B（任何RAM级别）',
+            '你选择的模型很重要，但对于代码质量来说，提示方式更重要。结构化提示技术——指定编程语言、约束条件、测试用例和输出格式——可以显著提高代码生成的准确性。[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)涵盖了基础知识、框架和评估方法等80项技术。',
           ],
           image: '/images/best-local-llms-for-coding-hardware-selection-zh.svg',
           imageCaption: '按硬件的模型选择：8 GB RAM → Qwen2.5-Coder 7B（72% HumanEval、4.7 GB占用）；16 GB RAM → DeepSeek-Coder V2 16B（81% HumanEval、10 GB占用）；20+ GB RAM → Qwen2.5-Coder 32B（87% HumanEval、最高质量）。',
@@ -22959,6 +22964,7 @@ schema: {
           title: 'How Much Quality Do You Actually Lose with Quantization?',
           content: [
             '**Q4_K_M loses 1-3% on MMLU benchmarks vs FP16 -- imperceptible in most practical tasks. Q3_K_S loses 5-10% and is noticeable on math and reasoning.** Quality loss from quantization is measured by comparing benchmark scores between full-precision and quantized versions. As of April 2026, the established findings are:',
+            'Quantization reduces memory usage but can degrade output quality. Well-engineered prompts compensate: techniques like few-shot examples and explicit output constraints help quantized models maintain accuracy. See [prompt engineering techniques](https://www.promptquorum.com/prompt-engineering) for methods that work at any quantization level.',
           ],
           items: [
             '**Q4_K_M vs FP16**: 1-3% degradation on MMLU. On a 7B model scoring 73% at FP16, Q4_K_M scores 71-72%. In practical tasks, this difference is imperceptible.',
@@ -23410,6 +23416,7 @@ schema: {
           title: 'Wie viel Qualität verlieren Sie tatsächlich durch Quantisierung?',
           content: [
             '**Qualitätsverlust durch Quantisierung wird gemessen, indem man die gleichen Benchmarks auf dem vollständig präzisierten Modell und der quantisierten Version ausführt und die Scores vergleicht.** Ab April 2026 sind die etablierten Erkenntnisse:',
+            'Quantisierung reduziert den Speicherverbrauch, kann aber die Ausgabequalität verschlechtern. Gut konstruierte Prompts gleichen dies aus: Techniken wie Few-Shot-Beispiele und explizite Output-Einschränkungen helfen quantisierten Modellen, ihre Genauigkeit zu halten. Unter [Prompt-Engineering-Techniken](https://www.promptquorum.com/prompt-engineering) finden Sie Methoden, die bei jedem Quantisierungsniveau funktionieren.',
           ],
           items: [
             '**Q4_K_M vs. FP16**: 1-3% Abbau bei MMLU. Bei einem 7B-Modell, das bei FP16 73% erreicht, erreicht Q4_K_M 71-72%. Bei praktischen Aufgaben ist dieser Unterschied kaum wahrnehmbar.',
@@ -23865,6 +23872,7 @@ schema: {
           title: 'Quelle qualité perdez-vous vraiment avec la quantification ?',
           content: [
             '**La perte de qualité de la quantification est mesurée en exécutant les mêmes benchmarks sur le modèle en précision complète et la version quantifiée, puis en comparant les scores.** En avril 2026, les conclusions établies sont :',
+            'La quantisation réduit l\'utilisation de la mémoire mais peut dégrader la qualité des sorties. Des prompts bien conçus compensent : les techniques comme les exemples few-shot et les contraintes de sortie explicites aident les modèles quantisés à maintenir leur précision. Consultez les [techniques de prompt engineering](https://www.promptquorum.com/prompt-engineering) pour des méthodes qui fonctionnent à tout niveau de quantisation.',
           ],
           items: [
             '**Q4_K_M vs FP16** : dégradation de 1-3% sur MMLU. Sur un modèle 7B marquant 73% en FP16, Q4_K_M marque 71-72%. Dans les tâches pratiques, cette différence est imperceptible.',
@@ -24302,6 +24310,7 @@ schema: {
           title: '実際にどの程度の品質が低下するのか',
           content: [
             '**量子化による品質低下は、完全精度モデルと量子化バージョンで同じベンチマークを実行し、スコアを比較することで測定されます。** 2026年4月の時点で、確立された知見は以下の通りです：',
+            '量子化はメモリ使用量を削減しますが、出力品質を低下させることがあります。適切に設計されたプロンプトがそれを補います：Few-Shot例や明示的な出力制約などのテクニックは、量子化モデルの精度維持に役立ちます。どの量子化レベルでも機能する手法については[プロンプトエンジニアリングテクニック](https://www.promptquorum.com/prompt-engineering)をご覧ください。',
           ],
           items: [
             '**Q4_K_M対FP16**：MMULで1～3%の低下。FP16で73%のスコアを達成する7Bモデルは、Q4_K_Mで71～72%を達成します。実際のタスクでは、この差はほぼ無視できます。',
@@ -24738,6 +24747,7 @@ schema: {
           title: '实际会损失多少质量',
           content: [
             '**量化导致的质量损失通过在完全精度模型和量化版本上运行相同基准并比较分数来衡量。** 截至2026年4月，既定的发现是：',
+            '量化减少了内存使用，但可能降低输出质量。设计良好的提示词可以弥补这一点：少样本示例和明确的输出约束等技术有助于量化模型保持精度。查看[Prompt工程技术](https://www.promptquorum.com/prompt-engineering)，了解适用于任何量化级别的方法。',
           ],
           items: [
             '**Q4_K_M对FP16**：MMLU上1～3%的性能下降。在FP16上得分73%的7B模型，在Q4_K_M上得分71～72%。在实际任务中，此差异难以察觉。',
@@ -27494,6 +27504,7 @@ schema: {
         byCategory: {
           id: 'top-models-by-category',
           title: 'Which Ollama Models Work Best for Your Use Case?',
+          content: 'The quality of a model\'s output depends heavily on how you prompt it. For structured techniques that work across all local models — including chain-of-thought, few-shot examples, and output formatting — see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering).',
           items: [
             '**General chat (beginner)**: `ollama run llama3.2:3b` -- most documentation, best-supported first model.',
             '**General chat (quality)**: `ollama run llama3.2` -- best balance of quality and RAM for 8 GB machines.',
@@ -27863,6 +27874,7 @@ schema: {
         byCategory: {
           id: 'by-category',
           title: 'Top-Modelle nach Kategorie',
+          content: 'Die Qualität der Modellausgabe hängt stark davon ab, wie Sie prompten. Für strukturierte Techniken, die mit allen lokalen Modellen funktionieren — darunter Chain-of-Thought, Few-Shot-Beispiele und Output-Formatierung — siehe den [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering).',
           items: [
             '**Anfänger (unter 15 min Einrichtungszeit)**: Llama 3.1 8B. Einmal mit `ollama run llama3.2` starten, kopieren Sie Code-Schnipsel in Ihr Systemprompt, und Sie erhalten einen lokalen ChatGPT-Ersatz.',
             '**Codierung und technische Aufgaben**: Qwen2.5 7B oder Mistral 7B. Beide übertreffen Llama 3.1 8B bei HumanEval (Code-Synthese-Benchmarks) um 7-9 Punkte.',
@@ -28219,6 +28231,7 @@ schema: {
         },
         byCategory: {
           title: 'Meilleurs modèles par catégorie',
+          content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering).',
           items: [
             '**Débutants (moins de 15 min de configuration)** : Llama 3.1 8B. Lancez-le une fois avec `ollama run llama3.2`, copiez les snippets de code dans votre prompt système, et vous obtenez un ChatGPT local.',
             '**Codage et tâches techniques** : Qwen2.5 7B ou Mistral 7B. Les deux surpassent Llama 3.1 8B sur HumanEval (benchmarks de synthèse de code) de 7-9 points.',
@@ -28570,6 +28583,7 @@ schema: {
         },
         byCategory: {
           title: 'カテゴリ別トップモデル',
+          content: 'モデルの出力品質はプロンプトの設計に大きく左右されます。Chain-of-Thought、Few-Shot例、出力フォーマットなど、すべてのローカルモデルで使える構造化テクニックについては[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)をご覧ください。',
           items: [
             '**初心者向け（セットアップ15分以下）**：Llama 3.1 8B。`ollama run llama3.2`で起動。プロンプト調整でローカルChatGPT。',
             '**コード・技術タスク**：Qwen2.5 7BまたはMistral 7B。HumanEval（コード合成ベンチ）でLlama 3.1 8Bを7-9ポイント上回る。',
@@ -28928,6 +28942,7 @@ schema: {
         },
         byCategory: {
           title: '按用途分类',
+          content: '模型的输出质量在很大程度上取决于你的提示方式。关于适用于所有本地模型的结构化技术——包括思维链、Few-Shot示例和输出格式化——请参阅[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)。',
           items: [
             '**通用助手**：Llama 3.1 8B（最万能）、Qwen2.5 7B（中文最优）',
             '**代码生成**：Qwen2.5 7B（HumanEval 90%，超Llama）、Mistral 7B（欧洲标准）',
@@ -40486,7 +40501,10 @@ schema: {
         vramTiers: {
           id: 'vram-tiers',
           title: 'Best Local LLMs by VRAM Tier (April 2026)',
-          content: ['**Use this as a quick lookup by your GPU\'s VRAM tier:**'],
+          content: [
+            '**Use this as a quick lookup by your GPU\'s VRAM tier:**',
+            'Hardware determines which models you can run; prompt engineering determines how well they perform. A well-structured prompt on a 7B model often outperforms a lazy prompt on a 70B model. See the [complete prompt engineering guide](https://www.promptquorum.com/prompt-engineering) for techniques that maximise output quality at any parameter count.',
+          ],
           items: [
             '**8 GB VRAM (RTX 4060, RTX 5060 Ti, Intel B580):** Llama 3.1 8B Q4_K_M (4.7 GB, ~70 tok/s) -- recommended. Qwen2.5 7B (4.7 GB, best multilingual). Phi-4 Mini 3.8B (2.3 GB, fastest, coding). Gemma 2 9B (5.5 GB, fits with care). Avoid 13B+ models.',
             '**12 GB VRAM (RTX 4070 Ti, RTX 5070, Intel B770):** Qwen2.5 14B Q4_K_M (9 GB, best overall). Llama 3.1 8B (4.7 GB, fast with headroom). DeepSeek-R1 8B (5 GB, best reasoning). Mistral 7B v0.3 (4.5 GB, reliable). Can run 13B at Q4_K_M (7.9 GB). Avoid 30B+.',
@@ -40974,7 +40992,7 @@ schema: {
         },
         gpuRecommendations: {
           title: 'Welche GPU sollten Sie kaufen?',
-          content: 'Ab April 2026 dominiert NVIDIA die Local LLM-Performance. Hier sind Tier-Empfehlungen:',
+          content: ['Ab April 2026 dominiert NVIDIA die Local LLM-Performance. Hier sind Tier-Empfehlungen:', 'Hardware bestimmt, welche Modelle Sie ausführen können; Prompt Engineering bestimmt, wie gut sie performen. Ein gut strukturierter Prompt bei einem 7B-Modell übertrifft oft einen schlecht konzipierten Prompt bei einem 70B-Modell. Im [vollständigen Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) finden Sie Techniken, die die Ausgabequalität bei jeder Parameterzahl maximieren.'],
           rows: [
             { 'Tier': 'Budget (600 €)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best für': '7-13B Modelle', 'Leistung': 'Schnell (80 tokens/sec)' },
             { 'Tier': 'Mittelklasse (1200 €)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best für': '13-30B Modelle', 'Leistung': 'Sehr schnell (120 tokens/sec)' },
@@ -41241,7 +41259,7 @@ schema: {
         },
         gpuRecommendations: {
           title: 'Quelle GPU acheter?',
-          content: 'En avril 2026, NVIDIA domine les performances local LLM. Voici les recommandations par tier:',
+          content: ['En avril 2026, NVIDIA domine les performances local LLM. Voici les recommandations par tier:', 'Le matériel détermine quels modèles vous pouvez exécuter ; le prompt engineering détermine à quel point ils performent. Un prompt bien structuré sur un modèle 7B surpasse souvent un prompt mal conçu sur un modèle 70B. Consultez le [guide complet de prompt engineering](https://www.promptquorum.com/prompt-engineering) pour des techniques qui maximisent la qualité des sorties quelle que soit la taille du modèle.'],
           rows: [
             { 'Tier': 'Budget (600 €)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Meilleur pour': 'Modèles 7-13B', 'Performance': 'Rapide (80 tokens/sec)' },
             { 'Tier': 'Mid (1200 €)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Meilleur pour': 'Modèles 13-30B', 'Performance': 'Très rapide (120 tokens/sec)' },
@@ -41508,7 +41526,7 @@ schema: {
         },
         gpuRecommendations: {
           title: 'どのGPUを購入すべきか?',
-          content: '2026年4月現在、NVIDIAはローカルLLMパフォーマンスを支配しています。レコメンデーション:',
+          content: ['2026年4月現在、NVIDIAはローカルLLMパフォーマンスを支配しています。レコメンデーション:', 'ハードウェアは実行できるモデルを決定し、プロンプトエンジニアリングはそのパフォーマンスを決定します。7Bモデルへの適切なプロンプトは、70Bモデルへの雑なプロンプトを上回ることがよくあります。どのパラメータ数でも出力品質を最大化するテクニックについては、[プロンプトエンジニアリングガイド完全版](https://www.promptquorum.com/prompt-engineering)をご覧ください。'],
           rows: [
             { 'ティア': '予算 (¥95,000)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', '最適用途': '7-13B モデル', 'パフォーマンス': '高速 (80 トークン/秒)' },
             { 'ティア': '中級 (¥180,000)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', '最適用途': '13-30B モデル', 'パフォーマンス': '非常に高速 (120 トークン/秒)' },
@@ -41775,7 +41793,7 @@ schema: {
         },
         gpuRecommendations: {
           title: '应该购买哪个GPU？',
-          content: '截至2026年4月，NVIDIA主导本地LLM性能。以下是分层建议：',
+          content: ['截至2026年4月，NVIDIA主导本地LLM性能。以下是分层建议：', '硬件决定你能运行哪些模型，提示词工程决定它们的表现。一个结构良好的提示词作用于7B模型，通常优于粗糙的提示词作用于70B模型。请查看[完整的Prompt工程指南](https://www.promptquorum.com/prompt-engineering)，了解在任何参数量下最大化输出质量的技术。'],
           rows: [
             { '层级': '预算 ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', '最佳适用': '7-13B 模型', '性能': '快速 (80 token/sec)' },
             { '层级': '中端 ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', '最佳适用': '13-30B 模型', '性能': '非常快速 (120 token/sec)' },
@@ -68283,6 +68301,7 @@ schema: {
             '- **Q4** (4-bit): 1 parameter = 0.5 bytes. ~1% accuracy loss. 87.5% VRAM savings.',
             'For most users, Q4 is the sweet spot: imperceptible accuracy loss, 87% smaller VRAM footprint.',
             'As of April 2026, Q4 is standard. Q5 and Q8 are available if you have extra VRAM and want marginal quality gains.',
+            'VRAM determines model size, but prompt design determines output quality. Techniques like chain-of-thought and few-shot prompting can close the quality gap between smaller and larger models. Explore the full [prompt engineering toolkit](https://www.promptquorum.com/prompt-engineering) to get more from the models your hardware supports.',
           ],
         },
         'batch-size': {
@@ -68551,6 +68570,7 @@ schema: {
             '**En termes simples**: La quantification ressemble à prendre une photo haute résolution et la réduire en résolution inférieure -- vous perdez quelques détails, mais la taille du fichier diminue considérablement. La quantification Q4 rétrécit VRAM de 87% tout en gardant pratiquement toute l\'intelligence intacte.',
             '',
             '💡 **Conseil Pro**: Q4 est le juste équilibre pour l\'inférence locale des LLM. Tout ce qui est inférieur à Q4 (comme Q2 ou Q3) commence à dégrader notablement la qualité du modèle. Tout ce qui est supérieur (Q5+) gaspille VRAM et ralentit l\'inférence pour des gains de qualité marginaux.',
+            'La VRAM détermine la taille du modèle, mais la conception du prompt détermine la qualité des sorties. Les techniques comme la chain-of-thought et le few-shot prompting peuvent combler l\'écart de qualité entre les modèles plus petits et plus grands. Explorez la [boîte à outils complète de prompt engineering](https://www.promptquorum.com/prompt-engineering) pour tirer le meilleur parti des modèles que votre matériel prend en charge.',
           ],
         },
         batchSize: {
@@ -68720,7 +68740,7 @@ schema: {
  isTldr: true, title: 'Zusammenfassung', items: ['7B-Modelle: Minimum 8 GB (Q4), komfortabel 10 GB (Q5), vollständig 14 GB.', '13B-Modelle: Minimum 12 GB (Q4), komfortabel 16 GB (Q5).', '70B-Modelle: Minimum 35-40 GB (Q4) -- erfordert 2× RTX 4090 oder A100.', 'Q4-Quantisierung: Reduziert VRAM um 87% gegenüber vollständiger Präzision, unter 1% Qualitätsverlust.', 'Apple Silicon: Einheitlicher Speicher ist vollständig für LLM-Inferenz verfügbar -- MacBook Pro M3 18 GB kann Llama3 13B Q4 ausführen.', 'RTX 4060 Ti 8 GB: 7B Q4 ist machbar, aber der Cache ist eng. RTX 4070 12 GB ist sicherer.', 'CPU-Inferenz: Möglich, aber GPU ist 20-40× schneller -- praktisch wird ein GPU mit mindestens 8 GB empfohlen.'] },
         formula: { title: 'VRAM-Berechnungsformel für lokale LLMs', content: ['VRAM erforderlich = (Modellparameter in Milliarden × Bits pro Gewicht) ÷ 8 + (KV-Cache + Laufzeit-Overhead)', 'Beispiel: Llama3 7B Q4 = (7 × 4) ÷ 8 + 1,5 GB = 3,5 + 1,5 = 5 GB', 'Q4: 32-Bit-Werte werden auf 4 Bits komprimiert (8× Reduktion).', 'Q8: 32-Bit → 8-Bit (4× Reduktion), nahezu vollständige Präzision.', 'FP32: Keine Kompression, vollständige Präzision, VRAM-intensiv.', 'KV-Cache: Proportional zur Sequenzlänge -- 128-Token-Ausgabe +1-2 GB, 2048-Token +5 GB.'] },
         'by-model-size': { title: 'VRAM nach Modellgröße', columns: ['Modellgröße', 'FP32', 'Q8', 'Q5', 'Q4', 'Empfohlene GPU'], rows: [{ 'Modellgröße': '3B', 'FP32': '12 GB', 'Q8': '3 GB', 'Q5': '2 GB', 'Q4': '1,5 GB', 'Empfohlene GPU': 'CPU oder RTX 3060 (3GB)' }, { 'Modellgröße': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '4,5 GB', 'Q4': '3,5 GB', 'Empfohlene GPU': 'RTX 4060 Ti (8GB), RTX 4070 (12GB)' }, { 'Modellgröße': '13B', 'FP32': '52 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB', 'Empfohlene GPU': 'RTX 4080 (16GB), RTX 6800 XT (16GB)' }, { 'Modellgröße': '70B', 'FP32': '280 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35-40 GB', 'Empfohlene GPU': 'Zwei RTX 4090 (24GB×2) oder A100 (80GB)' }, { 'Modellgröße': 'Kontext (KV-Cache)', 'FP32': '+40 GB @ 2048 Token', 'Q8': '+10 GB @ 2048 Token', 'Q5': '+6 GB @ 2048 Token', 'Q4': '+3-5 GB @ 2048 Token', 'Empfohlene GPU': 'Durch Ollama-Kontextlänge und top_k verwaltet' }] },
-        quantization: { title: 'Wie reduziert Quantisierung VRAM-Anforderungen?', content: ['Quantisierung komprimiert Modellgewichte zu niedriger Präzision. Die Umwandlung von FP32 (32-Bit) auf Q4 (4-Bit) reduziert Werte um 87%.', '', '**Q4 (4-Bit)**: Standard für Consumer-GPUs. VRAM: 3,5× Reduktion. Qualität: Unter 1% Verlust. Für fast alle Aufgaben empfohlen.', '**Q5 (5-Bit)**: Ähnlich wie Q4, aber 2% bessere Genauigkeit. VRAM: 25% mehr, minimale Qualitätsverbesserung. Nur für fortgeschrittene Anwendungsfälle.', '**Q8 (8-Bit)**: Nahezu vollständige Präzision (<0,5% Verlust). VRAM-Reduktion: 4×. RTX 4080+ empfohlen.', '**FP32 (Vollständige Präzision)**: Alle Gewichte werden mit 32 Bit gespeichert. Auf Consumer-GPUs nicht praktikabel -- 70B FP32 benötigt 280 GB VRAM.'] },
+        quantization: { title: 'Wie reduziert Quantisierung VRAM-Anforderungen?', content: ['Quantisierung komprimiert Modellgewichte zu niedriger Präzision. Die Umwandlung von FP32 (32-Bit) auf Q4 (4-Bit) reduziert Werte um 87%.', '', '**Q4 (4-Bit)**: Standard für Consumer-GPUs. VRAM: 3,5× Reduktion. Qualität: Unter 1% Verlust. Für fast alle Aufgaben empfohlen.', '**Q5 (5-Bit)**: Ähnlich wie Q4, aber 2% bessere Genauigkeit. VRAM: 25% mehr, minimale Qualitätsverbesserung. Nur für fortgeschrittene Anwendungsfälle.', '**Q8 (8-Bit)**: Nahezu vollständige Präzision (<0,5% Verlust). VRAM-Reduktion: 4×. RTX 4080+ empfohlen.', '**FP32 (Vollständige Präzision)**: Alle Gewichte werden mit 32 Bit gespeichert. Auf Consumer-GPUs nicht praktikabel -- 70B FP32 benötigt 280 GB VRAM.', 'VRAM bestimmt die Modellgröße, aber das Prompt-Design bestimmt die Ausgabequalität. Techniken wie Chain-of-Thought und Few-Shot-Prompting können die Qualitätslücke zwischen kleineren und größeren Modellen schließen. Entdecken Sie das vollständige [Prompt-Engineering-Toolkit](https://www.promptquorum.com/prompt-engineering), um mehr aus den Modellen herauszuholen, die Ihre Hardware unterstützt.'] },
         'batch-size': { title: 'Batch-Größe und Multi-User-Inferenz', content: ['Batch-Größe ist die Anzahl der Text-Eingaben, die in einer Ausführung verarbeitet werden.', '', '**Single-User-Inferenz (batch=1)**: Eine Eingabeaufforderung auf einer GPU. VRAM: Nur Modellgröße + KV-Cache.', 'Beispiel: Llama3 7B Q4 = 3,5 GB (Modell) + 1,5 GB (KV-Cache) = 5 GB.', '', '**Batch-Verarbeitung (batch=4, 8, 16)**: Mehrere Eingaben gleichzeitig verarbeiten. VRAM: Linear steigend.', 'batch=4: ×4 VRAM (= 20 GB für 7B Q4). Durchsatz: ×3-3,5 (Parallelisierungsgewinn).', '', 'Batch-Inferenz ist wichtig für Multi-User-Server (3-5 Personen, gleichzeitige Anfragen). Für Single-User/Entwicklung nicht erforderlich.', '', 'KV-Cache (abhängig von Sequenzlänge):'] },
         overhead: { title: 'VRAM-Overhead: Mehr als nur Modellgröße', content: ['Die Parametergröße des Modells ist nicht das gesamte VRAM-Anforderungs-Bild. Zusätzlicher Speicher ist erforderlich:', '', '**KV-Cache (Key-Value Cache)**: Das Modell muss vorherige Token „merken". Nebenprodukt des Transformer-Aufmerksamkeitsmechanismus.', '- Proportional zur Eingabe-Ausgabe-Länge.', '- 7B-Modell, 2048-Token-Kontext, batch=1: +2-4 GB.', '', '**Aktivierungen**: Zwischenrechenergebnisse während der Inferenz.', '- Typischerweise 10-15% der Modellgröße.', '- 7B: +0,7-1,5 GB.', '', '**Laufzeit-Overhead**: CUDA-Speicherpool, Framebuffer, OS-Reservierungen.', '- Typischerweise 0,5-1,5 GB.'] },
         mistakes: { title: 'Häufige Fehler', content: ['**Missverständnis 1: „VRAM erforderlich = Modellgröße"**', 'VRAM ist immer größer als die Modellgröße. 3,5 GB-Modell benötigt mindestens 5 GB. RTX 4060 Ti 8 GB ist sicher, aber RTX 3060 6 GB birgt Risiken.', '', '**Missverständnis 2: „Apple Silicon (M3) Speicher ist nicht das gleiche wie GPU VRAM"**', 'Apple Silicon verwendet Unified Memory -- CPU und GPU teilen einen Speicherpool. M3 18 GB entspricht 18 GB GPU VRAM. Llama3 13B Q4 (~7 GB) kann auf M3 16 GB ausgeführt werden.', '', '**Missverständnis 3: „Quantisierung verlangsamt die Inferenz"**', 'Tatsächlich: Q4 ist schneller als Q5/Q8. Niedrigere Speicherbandbreite, effizienterer Cache. Ollama: Q4 ist einige Prozentpunkte schneller.'] },
@@ -68763,7 +68783,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
  isTldr: true, title: 'ポイント', items: ['7Bモデル: 最小8 GB (Q4)、快適な10 GB (Q5)。', '13Bモデル: 最小12 GB (Q4)、快適な16 GB (Q5)。', '70Bモデル: 最小35-40 GB (Q4)。', 'Q4量子化: 完全精度比87%削減。'] },
         formula: { title: 'VRAM計算式', content: ['VRAM = (十億パラメータ × 重みあたりビット) ÷ 8 + KVキャッシュ + オーバーヘッド', 'Q4: 32ビット→4ビット (8倍削減)。', 'Q8: 32ビット→8ビット (4倍削減)、ほぼ完全精度。'] },
         'by-model-size': { title: 'モデルサイズ別VRAM', columns: ['モデルサイズ', 'FP32', 'Q8', 'Q5', 'Q4', '推奨GPU'], rows: [{ 'モデルサイズ': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '4.5 GB', 'Q4': '3.5 GB', '推奨GPU': 'RTX 4070 (12GB)' }, { 'モデルサイズ': '13B', 'FP32': '52 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB', '推奨GPU': 'RTX 4080 (16GB)' }, { 'モデルサイズ': '70B', 'FP32': '280 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35-40 GB', '推奨GPU': 'デュアルRTX 4090' }] },
-        quantization: { title: '量子化', content: ['量子化はモデル重みを低精度に圧縮します。Q4が標準。'] },
+        quantization: { title: '量子化', content: ['量子化はモデル重みを低精度に圧縮します。Q4が標準。', 'VRAMはモデルサイズを決定しますが、プロンプトの設計が出力品質を決定します。Chain-of-ThoughtやFew-Shotプロンプティングなどのテクニックは、小さなモデルと大きなモデルの品質差を縮めることができます。お使いのハードウェアがサポートするモデルから最大限を引き出すには、[プロンプトエンジニアリング完全ツールキット](https://www.promptquorum.com/prompt-engineering)をご覧ください。'] },
         'batch-size': { title: 'バッチサイズ', content: ['シングルユーザー推論はbatch=1です。'] },
         overhead: { title: 'オーバーヘッド', content: ['KVキャッシュ、アクティベーション、ランタイムが追加メモリを消費。'] },
         'regional-context': { title: '地域的背景', content: ['日本 (METI): ローカルLLM推論は主権データ管理として重要。'] },
@@ -68845,7 +68865,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
  isTldr: true, title: '关键要点', items: ['7B模型: 最少8 GB (Q4)、舒适10 GB (Q5)。', '13B模型: 最少12 GB (Q4)、舒适16 GB (Q5)。', '70B模型: 最少35-40 GB (Q4)。', 'Q4量子化: 减少显存需求87%。'] },
         formula: { title: '显存计算公式', content: ['显存 = (十亿参数 × 每权重位数) ÷ 8 + KV缓存 + 开销', 'Q4: 32位→4位 (8倍减少)。', 'Q8: 32位→8位 (4倍减少),几乎完全精度。'] },
         'by-model-size': { title: '按模型大小的显存', columns: ['模型大小', 'FP32', 'Q8', 'Q5', 'Q4', '推荐GPU'], rows: [{ '模型大小': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '4.5 GB', 'Q4': '3.5 GB', '推荐GPU': 'RTX 4070 (12GB)' }, { '模型大小': '13B', 'FP32': '52 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB', '推荐GPU': 'RTX 4080 (16GB)' }, { '模型大小': '70B', 'FP32': '280 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35-40 GB', '推荐GPU': '双RTX 4090' }] },
-        quantization: { title: '量子化', content: ['量子化将权重压缩至低精度。Q4为消费级GPU标准。'] },
+        quantization: { title: '量子化', content: ['量子化将权重压缩至低精度。Q4为消费级GPU标准。', 'VRAM决定模型大小，但提示词设计决定输出质量。思维链和少样本提示等技术可以缩小大小模型之间的质量差距。探索完整的[Prompt工程工具箱](https://www.promptquorum.com/prompt-engineering)，从你的硬件所支持的模型中获取更多。'] },
         'batch-size': { title: '批大小', content: ['单用户推理总是batch=1。批处理仅有助吞吐量。'] },
         overhead: { title: '显存开销', content: ['KV缓存、激活、运行时开销占额外5 GB。'] },
         'regional-context': { title: '地区背景', content: ['中国 (CAC): 本地LLM推理用于数据主权。Qwen2.5 72B在双RTX 4090上是首选。'] },
