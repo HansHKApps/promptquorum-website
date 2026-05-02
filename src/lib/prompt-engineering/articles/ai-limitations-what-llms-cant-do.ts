@@ -23,7 +23,7 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'en',
         headline: 'AI Limitations — What LLMs Can\'t Do',
         description: 'The eight structural limits of large language models: knowledge cutoffs, hallucination, no real-time data, context windows, no persistent memory, bias, and inability to verify outputs.',

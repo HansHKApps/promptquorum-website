@@ -45,7 +45,7 @@ export const article: Record<Language, PEArticle> = {
         name: 'Prompt Engineering Frameworks',
         inLanguage: 'en',
         numberOfItems: 5,
-        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Single-Line', description: 'Quick one-line tasks where speed matters more than precision.' },
           { '@type': 'ListItem', position: 2, name: 'CRAFT', description: 'Marketing, copywriting, and creative content with a defined voice.' },

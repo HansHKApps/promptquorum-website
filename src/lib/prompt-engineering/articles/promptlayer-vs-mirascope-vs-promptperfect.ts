@@ -361,7 +361,7 @@ export const article: Record<Language, PEArticle> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=en',
+      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'Prompt Management' },
@@ -443,7 +443,7 @@ export const article: Record<Language, PEArticle> = {
       '@type': 'ItemList',
       name: 'PromptLayer vs Mirascope vs PromptPerfect: Tool Comparison',
       inLanguage: 'en',
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=en',
+      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       numberOfItems: 3,
       itemListElement: [
         {

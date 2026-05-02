@@ -275,7 +275,7 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=en',
+      url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },

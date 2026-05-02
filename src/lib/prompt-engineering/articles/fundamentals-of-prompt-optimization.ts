@@ -48,7 +48,7 @@ export const article: Record<Language, PEArticle> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
-        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'en',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },

@@ -54,7 +54,7 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json?lang=en',
+      url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
       about: [
