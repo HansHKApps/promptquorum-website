@@ -4639,7 +4639,10 @@ schema: {
         nextSteps: {
           id: 'how-to-download',
           title: 'How Do You Download and Run These Models?',
-          content: '**All five models install with a single Ollama command -- no manual configuration required.** See [How to Install Ollama](/local-llms/how-to-install-ollama) for setup, then [Run Your First Local LLM](/local-llms/run-first-local-llm) for a step-by-step first-run walkthrough. If you are running on a laptop with limited RAM, [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) covers quantization and performance tuning for constrained hardware.',
+          content: [
+            '**All five models install with a single Ollama command -- no manual configuration required.** See [How to Install Ollama](/local-llms/how-to-install-ollama) for setup, then [Run Your First Local LLM](/local-llms/run-first-local-llm) for a step-by-step first-run walkthrough. If you are running on a laptop with limited RAM, [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) covers quantization and performance tuning for constrained hardware.',
+            'Once your first model is running, the next step is learning how to prompt it effectively. Start with the [prompt engineering fundamentals](https://www.promptquorum.com/prompt-engineering) — 16 guides covering the building blocks every prompt needs, from temperature settings to output formatting.',
+          ],
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -4984,7 +4987,10 @@ schema: {
         nextSteps: {
           id: 'how-to-download',
           title: 'Wie lädt man diese Modelle herunter und startet sie?',
-          content: '**Alle fünf Modelle installieren sich mit einem einzigen Ollama-Befehl – keine manuelle Konfiguration erforderlich.** Siehe [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) für die Einrichtung, dann [Erstes lokales LLM starten](/local-llms/run-first-local-llm?lang=de) für eine schrittweise Anleitung. Wenn Sie auf einem Laptop mit begrenztem RAM arbeiten, finden Sie unter [Lokale LLMs auf dem Laptop ausführen](/local-llms/local-llm-on-laptop?lang=de) Informationen zur Quantisierung und Leistungsoptimierung für eingeschränkte Hardware.',
+          content: [
+            '**Alle fünf Modelle installieren sich mit einem einzigen Ollama-Befehl – keine manuelle Konfiguration erforderlich.** Siehe [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) für die Einrichtung, dann [Erstes lokales LLM starten](/local-llms/run-first-local-llm?lang=de) für eine schrittweise Anleitung. Wenn Sie auf einem Laptop mit begrenztem RAM arbeiten, finden Sie unter [Lokale LLMs auf dem Laptop ausführen](/local-llms/local-llm-on-laptop?lang=de) Informationen zur Quantisierung und Leistungsoptimierung für eingeschränkte Hardware.',
+            'Sobald Ihr erstes Modell läuft, ist der nächste Schritt, es effektiv zu prompten. Beginnen Sie mit den [Prompt-Engineering-Grundlagen](https://www.promptquorum.com/prompt-engineering) — 16 Guides, die die Bausteine jedes Prompts abdecken, von Temperatureinstellungen bis zur Output-Formatierung.',
+          ],
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -5338,7 +5344,10 @@ schema: {
         nextSteps: {
           id: 'how-to-download',
           title: 'Comment télécharger et exécuter ces modèles ?',
-          content: '**Les cinq modèles s\'installent avec une seule commande Ollama — sans configuration manuelle.** Consultez [Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) pour la configuration, puis [Lancer votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) pour un guide pas à pas. Sur un laptop avec peu de RAM, [Exécuter des LLM locaux sur laptop](/local-llms/local-llm-on-laptop?lang=fr) couvre la quantification et l\'optimisation des performances.',
+          content: [
+            '**Les cinq modèles s\'installent avec une seule commande Ollama — sans configuration manuelle.** Consultez [Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) pour la configuration, puis [Lancer votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) pour un guide pas à pas. Sur un laptop avec peu de RAM, [Exécuter des LLM locaux sur laptop](/local-llms/local-llm-on-laptop?lang=fr) couvre la quantification et l\'optimisation des performances.',
+            'Une fois votre premier modèle lancé, l\'étape suivante est d\'apprendre à le prompter efficacement. Commencez par les [fondamentaux du prompt engineering](https://www.promptquorum.com/prompt-engineering) — 16 guides couvrant les éléments de base de tout prompt, des réglages de température au formatage des sorties.',
+          ],
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -5682,7 +5691,10 @@ schema: {
         nextSteps: {
           id: 'how-to-download',
           title: 'これらのモデルをどうやってダウンロード・実行するか？',
-          content: '**5つのモデルすべてがOllamaコマンド1つでインストールできます——手動設定は不要です。** セットアップは[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja)を参照し、初回実行の手順は[初めてのローカルLLM実行](/local-llms/run-first-local-llm?lang=ja)をご覧ください。RAMが限られたノートPCで実行する場合は、[ノートPCでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja)で量子化と制約されたハードウェアのパフォーマンスチューニングを参照。',
+          content: [
+            '**5つのモデルすべてがOllamaコマンド1つでインストールできます——手動設定は不要です。** セットアップは[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja)を参照し、初回実行の手順は[初めてのローカルLLM実行](/local-llms/run-first-local-llm?lang=ja)をご覧ください。RAMが限られたノートPCで実行する場合は、[ノートPCでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja)で量子化と制約されたハードウェアのパフォーマンスチューニングを参照。',
+            '最初のモデルが動いたら、次のステップは効果的なプロンプトの作り方を学ぶことです。[プロンプトエンジニアリングの基礎](https://www.promptquorum.com/prompt-engineering)から始めましょう——温度設定から出力フォーマットまで、すべてのプロンプトに必要な基本要素を16のガイドで解説しています。',
+          ],
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -6026,7 +6038,10 @@ schema: {
         nextSteps: {
           id: 'how-to-download',
           title: '如何下载和运行这些模型？',
-          content: '**所有五款模型均可通过单条Ollama命令安装——无需手动配置。** 安装步骤请参见[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh)，然后查看[运行您的第一个本地LLM](/local-llms/run-first-local-llm?lang=zh)获取分步首次运行指南。如果您在内存有限的笔记本电脑上运行，[如何在笔记本电脑上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)涵盖了受限硬件的量化和性能调优。',
+          content: [
+            '**所有五款模型均可通过单条Ollama命令安装——无需手动配置。** 安装步骤请参见[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh)，然后查看[运行您的第一个本地LLM](/local-llms/run-first-local-llm?lang=zh)获取分步首次运行指南。如果您在内存有限的笔记本电脑上运行，[如何在笔记本电脑上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)涵盖了受限硬件的量化和性能调优。',
+            '一旦你的第一个模型运行起来，下一步就是学习如何有效地提示它。从[Prompt工程基础](https://www.promptquorum.com/prompt-engineering)开始——16篇指南涵盖每个提示词所需的构建块，从温度设置到输出格式化。',
+          ],
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -9201,6 +9216,9 @@ schema: {
         bestSetup: {
           id: 'best-setup',
           title: '🏆 Best Local LLM Setup for Laptops',
+          content: [
+            'Laptop hardware limits model size, but prompt engineering removes the ceiling on output quality. A 7B model with structured prompts consistently outperforms a poorly prompted 13B model. See the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) for techniques optimised for smaller models.',
+          ],
           items: [
             '🥇 **Best overall:** [Ollama](/local-llms/how-to-install-ollama) — fastest setup, wide model support',
             '🥈 **Best for beginners:** [LM Studio](/local-llms/how-to-install-lm-studio) — GUI, no terminal needed',
@@ -9646,6 +9664,9 @@ schema: {
         bestSetup: {
           id: 'beste-einrichtung',
           title: '🏆 Beste Local LLM-Einrichtung für Laptops',
+          content: [
+            'Laptop-Hardware begrenzt die Modellgröße, aber Prompt Engineering hebt die Decke für die Ausgabequalität an. Ein 7B-Modell mit strukturierten Prompts übertrifft konsequent ein schlecht gepromptetes 13B-Modell. Im [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) finden Sie Techniken, die für kleinere Modelle optimiert sind.',
+          ],
           items: [
             '🥇 **Insgesamt beste:** [Ollama](/local-llms/how-to-install-ollama) — schnellstes Setup, breite Modellunterstützung',
             '🥈 **Beste für Anfänger:** [LM Studio](/local-llms/how-to-install-lm-studio) — GUI, kein Terminal erforderlich',
@@ -10006,6 +10027,9 @@ schema: {
         bestSetup: {
           id: 'meilleure-configuration',
           title: '🏆 Meilleure configuration Local LLM pour ordinateurs portables',
+          content: [
+            'Le matériel d\'un ordinateur portable limite la taille des modèles, mais le prompt engineering supprime le plafond de qualité des sorties. Un modèle 7B avec des prompts structurés surpasse régulièrement un modèle 13B mal prompté. Consultez le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering) pour des techniques optimisées pour les modèles plus petits.',
+          ],
           items: [
             '🥇 **Meilleur au global:** [Ollama](/local-llms/how-to-install-ollama) — setup le plus rapide, large support de modèles',
             '🥈 **Meilleur pour débutants:** [LM Studio](/local-llms/how-to-install-lm-studio) — GUI, pas besoin de terminal',
@@ -10364,6 +10388,9 @@ schema: {
         bestSetup: {
           id: 'saiko-setup',
           title: '🏆 ノートパソコン向けベストローカルLLM構成',
+          content: [
+            'ノートPC向けハードウェアはモデルサイズを制限しますが、プロンプトエンジニアリングは出力品質の上限を取り除きます。構造化プロンプトを使った7Bモデルは、プロンプトが貧弱な13Bモデルを一貫して上回ります。小型モデルに最適化されたテクニックは[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)をご覧ください。',
+          ],
           items: [
             '🥇 **総合ベスト:** [Ollama](/local-llms/how-to-install-ollama) — 最速セットアップ、幅広いモデルサポート',
             '🥈 **初心者向けベスト:** [LM Studio](/local-llms/how-to-install-lm-studio) — GUI、ターミナル不要',
@@ -10722,6 +10749,9 @@ schema: {
         bestSetup: {
           id: 'zuijia-setup',
           title: '🏆 笔记本电脑最佳本地LLM配置',
+          content: [
+            '笔记本电脑硬件限制了模型大小，但提示词工程消除了输出质量的上限。使用结构化提示词的7B模型持续优于提示词粗糙的13B模型。请参阅[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)，了解针对小型模型优化的技术。',
+          ],
           items: [
             '🥇 **总体最佳:** [Ollama](/local-llms/how-to-install-ollama) — 最快的设置，广泛的模型支持',
             '🥈 **初学者最佳:** [LM Studio](/local-llms/how-to-install-lm-studio) — GUI，无需终端',
@@ -16588,6 +16618,9 @@ schema: {
           columns: ['Task', 'Winner', 'Why'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-en.svg',
           imageCaption: 'Task winner matrix: Qwen2.5 wins coding (87% HumanEval) and multilingual tasks; Llama 3.x wins English creative writing; Mistral Small 3.1 leads in quality per GB of RAM.',
+          content: [
+            'Model choice is step one; prompt design is step two. The same prompt can produce vastly different results across Qwen, Llama, and Mistral. For systematic techniques to get consistent results from any model family, see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering).',
+          ],
         },
         sizeBySizeComparison: {
           id: 'size-for-size-comparison',
@@ -16899,6 +16932,9 @@ schema: {
           columns: ['Task', 'Gewinner', 'Warum'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-de.svg',
           imageCaption: 'Aufgaben-Gewinner-Tabelle: Qwen2.5 gewinnt beim Coding (87% HumanEval) und mehrsprachigen Aufgaben; Llama 3.x gewinnt bei englischem kreativem Schreiben; Mistral Small 3.1 führt bei Qualität pro GB RAM.',
+          content: [
+            'Die Modellauswahl ist Schritt eins; das Prompt-Design ist Schritt zwei. Derselbe Prompt kann bei Qwen, Llama und Mistral sehr unterschiedliche Ergebnisse liefern. Für systematische Techniken, die bei jeder Modellfamilie zu konsistenten Ergebnissen führen, siehe den [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering).',
+          ],
         },
         sizeBySizeComparison: {
           id: 'size-for-size-comparison',
@@ -17176,6 +17212,9 @@ schema: {
           columns: ['Tâche', 'Gagnant', 'Pourquoi'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-fr.svg',
           imageCaption: 'Tableau des gagnants par tâche : Qwen2.5 gagne en codage (87% HumanEval) et tâches multilingues ; Llama 3.x gagne en écriture créative anglaise ; Mistral Small 3.1 mène en qualité par Go de RAM.',
+          content: [
+            'Le choix du modèle est la première étape ; la conception du prompt est la deuxième. Le même prompt peut produire des résultats très différents selon Qwen, Llama et Mistral. Pour des techniques systématiques permettant d\'obtenir des résultats cohérents avec n\'importe quelle famille de modèles, consultez le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering).',
+          ],
         },
         sizeBySizeComparison: {
           title: 'Comparaison taille par taille : Quelle famille est meilleure à chaque échelle ?',
@@ -17447,6 +17486,9 @@ schema: {
           columns: ['タスク', '勝者', '理由'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-ja.svg',
           imageCaption: 'タスク別勝者表：Qwen2.5がコーディング（87% HumanEval）と多言語タスクで優位；Llama 3.xが英語創作で優位；Mistral Small 3.1がRAM当たり品質で最高。',
+          content: [
+            'モデルの選択はステップ1、プロンプトの設計はステップ2です。同じプロンプトでも、Qwen・Llama・Mistralでは全く異なる結果が生じることがあります。どのモデルファミリーからも一貫した結果を得るための体系的テクニックについては、[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)をご覧ください。',
+          ],
         },
         sizeBySizeComparison: {
           title: 'サイズ別比較：どのファミリーが各スケールで優れているか？',
@@ -17718,6 +17760,9 @@ schema: {
           columns: ['任务', '获胜者', '原因'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-zh.svg',
           imageCaption: '按任务获胜者矩阵：Qwen2.5在编程（87% HumanEval）和多语言任务中胜出；Llama 3.x在英文创意写作中胜出；Mistral Small 3.1在每GB内存质量中领先。',
+          content: [
+            '模型选择是第一步，提示词设计是第二步。同一个提示词在Qwen、Llama和Mistral上可能产生截然不同的结果。要了解从任何模型系列获得一致结果的系统化技术，请参阅[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)。',
+          ],
         },
         sizeBySizeComparison: {
           title: '大小对大小比较：每个规模上哪个族更好？',
@@ -27002,6 +27047,7 @@ schema: {
             '**LLMs trained with RoPE positional encodings (used by Llama, Qwen, Mistral) can technically process tokens up to their maximum context length, but quality degrades in a known pattern called the "lost in the middle" effect.**',
             'Research shows that language models are best at using information at the beginning and end of the context window. Information placed in the middle of a very long context is retrieved less reliably. In practice, this means a model with a 128K context window may reliably answer questions about content in the first 32K tokens and last 16K tokens, but miss details from the 40K-80K token range.',
             'For local models specifically, the practical reliable limit scales with model size: 3B models ≈ 8K-16K reliable; 7B-8B models ≈ 16K-32K reliable; 70B models ≈ 64K reliable. These are approximate -- the actual limit depends on the specific task and how "important" the retrieved information is.',
+            'Long context windows enable more input, but prompt structure determines whether the model uses that context effectively. Techniques like RAG, prompt chaining, and context window management strategies are covered in the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering).',
           ],
           image: '/images/lost-in-the-middle-effect-en.svg',
           imageCaption: 'The "lost in the middle" effect: LLMs reliably recall content at start and end of the context window but miss the 40K-80K token range.',
@@ -27187,6 +27233,7 @@ schema: {
             '**使用RoPE位置编码（Llama、Qwen、Mistral使用）训练的LLM在技术上可以处理到最大上下文长度的标记，但质量会以一种称为"中间迷失"效应的已知模式下降。**',
             '研究表明，语言模型最善于利用上下文窗口开头和结尾的信息。放置在很长上下文中间的信息检索可靠性较低。实际上，这意味着拥有128K上下文窗口的模型可能可靠地回答前32K标记和后16K标记内容的问题，但会错过40K-80K标记范围内的细节。',
             '对于本地模型，实际可靠上限随模型大小扩展：3B模型约8K-16K可靠；7B-8B模型约16K-32K可靠；70B模型约64K可靠。这些是近似值----实际上限取决于具体任务和检索信息的"重要性"。',
+            '长上下文窗口可以输入更多内容，但提示词结构决定了模型是否能有效利用这些上下文。RAG、提示词链和上下文窗口管理策略等技术在[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)中均有介绍。',
           ],
         },
         contextSettings: {
@@ -67008,6 +67055,7 @@ schema: {
           title: 'Best Models by Use Case on RTX 3060',
           content: [
             '**Pick your model based on what you actually need, not parameter count.** Here are the best choices for each use case on RTX 3060 12GB:',
+            'Budget hardware runs smaller models — but skilled prompting closes the quality gap. The [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers techniques like chain-of-thought and structured output that help smaller models punch above their weight.',
           ],
           items: [
             '**Chat / Q&A:** `ollama run llama3.2:7b` — Best all-around. 15–20 tok/sec. 128K context. Handles conversation, summarization, and general knowledge well.',
@@ -67304,6 +67352,7 @@ schema: {
           title: 'Beste Modelle nach Anwendungsfall auf RTX 3060',
           content: [
             '**Wählen Sie Ihr Modell basierend auf Ihrem Bedarf, nicht nach Parameterzahl:**',
+            'Budget-Hardware läuft kleinere Modelle — aber gezieltes Prompting schließt die Qualitätslücke. Der [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) deckt Techniken wie Chain-of-Thought und strukturierte Ausgaben ab, die kleineren Modellen helfen, über ihrem Gewicht zu boxen.',
           ],
           items: [
             '**Chat / Frage-Antwort:** `ollama run llama3.2:7b` — Bester Allrounder. 15–20 Tok/Sek. 128K Kontext.',
@@ -67496,6 +67545,7 @@ schema: {
           title: 'Meilleurs modèles par usage sur RTX 3060',
           content: [
             '**Choisissez votre modèle selon votre besoin, pas le nombre de paramètres :**',
+            'Le matériel d\'entrée de gamme fait tourner des modèles plus petits — mais un prompting habile comble l\'écart de qualité. Le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering) couvre des techniques comme la chain-of-thought et les sorties structurées qui aident les modèles plus petits à performer au-delà de leur taille.',
           ],
           items: [
             '**Chat / Q&R :** `ollama run llama3.2:7b` — Meilleur polyvalent. 15–20 tok/sec. 128K contexte.',
@@ -67558,7 +67608,7 @@ schema: {
         'rtx-3060-6gb': { id: 'rtx-3060-6gb', title: 'RTX 3060 6GBで何が動く？', content: ['**6GB版は大幅に制限されています。** 3Bモデルのみ快適に動作。7BモデルのQ4は~7GB必要で、容量不足です。'], items: ['**Phi-4 Mini 3.8B（Q4）：** ~3GB VRAM、20–25トークン/秒。このサイズでの最良推論。', '**Llama 3.2 3B（Q4）：** ~2.5GB VRAM、25–35トークン/秒。最速オプション。', '**Gemma 2 2B（Q4）：** ~1.7GB VRAM、35–45トークン/秒。最軽量モデル。', '**7Bオフローディング：** 可能だが遅い。Llama 7BのCPUオフロード = ~5–8トークン/秒。', '**推奨：** 6GBカードをお持ちなら、12GB中古（$200–250）にアップグレードを。'] },
         'which-budget-gpus': { title: 'RTX 3060 vs 他のバジェットGPU', columns: ['GPU', 'VRAM', '価格（中古）', '7B速度', '最大モデル', '評価'], rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥30,000–38,000', '7B速度': '15–20トークン/秒', '最大モデル': '13B（Q4）', '評価': '最良バジェット' }, { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '価格（中古）': '¥38,000–45,000', '7B速度': '20–25トークン/秒', '最大モデル': '7B（Q5最大）', '評価': '高速だがVRAM少' }, { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '価格（中古）': '¥27,000–35,000', '7B速度': '12–15トークン/秒', '最大モデル': '13B（Q5）', '評価': 'VRAM/円最良' }, { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', '価格（中古）': '¥60,000–68,000', '7B速度': '25–30トークン/秒', '最大モデル': '13B（Q5）', '評価': '高速だが2倍の価格' }, { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', '価格（中古）': '¥23,000–30,000', '7B速度': '10–14トークン/秒', '最大モデル': '13B（Q4）', '評価': '最安、AMDの手間' }], note: 'RTX 3060 12GBが価格性能比で勝利：¥30,000–38,000の12GB VRAMですべての7Bとほとんどの13Bを実行。' },
         'vram-7b': { title: '7Bモデルに必要なVRAMは？', content: ['Q4（4ビット）で量子化された7Bモデルは**6～8GB VRAM**を必要とし、Q5（5ビット）は**8～10GB**、Q8（8ビット）は**14～16GB**を必要とします。', '実際には：**8GBは最低限**で、Q4で7Bモデルでの快適な推論とバッチ処理用のスペースがあります。', '6GBカード（RTX 2060）は技術的に機能しますがアグレッシブな最適化が必要で、より高いバッチに余裕がありません。'] },
-        'best-by-use-case': { id: 'best-by-use-case', title: 'RTX 3060でのユースケース別最適モデル', content: ['**パラメータ数ではなく、実際のニーズに基づいてモデルを選択してください：**'], items: ['**チャット / Q&A：** `ollama run llama3.2:7b` — 最良の万能モデル。15–20トークン/秒。128Kコンテキスト。', '**コーディング：** `ollama run qwen2.5-coder:7b` — 72% HumanEval。16トークン/秒。Python、JavaScript、SQL。', '**推論 / 数学：** `ollama run deepseek-r1:7b` — Chain-of-Thought。10–12トークン/秒。', '**ライティング / クリエイティブ：** `ollama run mistral:7b` — 最良の指示従行。18トークン/秒。', '**ビジョン / 画像：** `ollama run gemma4:9b` — マルチモーダル。12–15トークン/秒。~8GB VRAM。', '**プライバシー / オフライン：** 上記すべて。100%ローカル。データは外部送信されません。'] },
+        'best-by-use-case': { id: 'best-by-use-case', title: 'RTX 3060でのユースケース別最適モデル', content: ['**パラメータ数ではなく、実際のニーズに基づいてモデルを選択してください：**', 'バジェットハードウェアは小さなモデルを実行しますが、巧みなプロンプティングが品質差を縮めます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)では、Chain-of-Thoughtや構造化出力など、小さなモデルの実力を引き出すテクニックを解説しています。'], items: ['**チャット / Q&A：** `ollama run llama3.2:7b` — 最良の万能モデル。15–20トークン/秒。128Kコンテキスト。', '**コーディング：** `ollama run qwen2.5-coder:7b` — 72% HumanEval。16トークン/秒。Python、JavaScript、SQL。', '**推論 / 数学：** `ollama run deepseek-r1:7b` — Chain-of-Thought。10–12トークン/秒。', '**ライティング / クリエイティブ：** `ollama run mistral:7b` — 最良の指示従行。18トークン/秒。', '**ビジョン / 画像：** `ollama run gemma4:9b` — マルチモーダル。12–15トークン/秒。~8GB VRAM。', '**プライバシー / オフライン：** 上記すべて。100%ローカル。データは外部送信されません。'] },
         'used-vs-new': { title: '中古 vs 新品：どこで買う？', items: ['**中古（50～100ドル安い）**：eBay、Facebook Marketplace、Craigslist、地元のコンピュータ修理店。死んだカードまたは不良VRAMのリスクが高い。確約する前に常にテストしてください。', '**新品（280～400ドル）**：Newegg、Amazon、Best Buy、Microcenter。保証付き。驚きなし。価格安定。リスク回避買い手に最適。', '**マイニングカード（暗号、超安い）**：極端なリスク。VRAM劣化は一般的。その場で完全にベンチテストできる場合のみ購入してください。'] },
         'mistakes': { title: 'よくあるバジェットGPUの間違い', items: ['4GB RTX 2060を購入してスムーズな7B推論を期待する。常にメモリ不足エラーが発生します。', '250ドルのGPUを30ドルのPSU（電源）と組み合わせます。電圧サグは安定性を殺します。80+ Gold認定、650W最小をバジェット化してください。', 'DDR5 RAMとi9 CPUがLLM推論を高速化すると想定する。それらは高速化しません。GPU VRAMバンド幅は推論速度に影響する唯一のボトルネックです。'] },
         'faqSection': { title: 'FAQ', faqs: [{ q: 'RTX 3060 12GBは2026年でもまだ価値があるか？', a: 'はい。4年以上前ですが12GB VRAMは時代遅れではありません。Llama 3.3 8Bとよりすぐに実行します。中古で250ドル未満で見つけたら最適。' }, { q: 'ローカルLLM用にRTX 4060またはRTX 4060 Tiを購入すべきか？', a: 'RTX 4060 Ti。ベース4060（8GB）と4070（12GB）は悪い価値です。TiはLLM作業に最適な価格のRTX 40シリーズカードです。' }, { q: 'AMD RX 6700または6800 XTを代わりに使用できるか？', a: 'はい、ただしAMD上のONNX RuntimeのドライバサポートはNVIDIA + CUDAより弱い。セットアップの摩擦を増します。RTXはバジェットにより安全です。' }, { q: '12GB VRAM 13Bモデルに十分か？', a: 'かろうじて、Q4量子化で。Q5またはQ8はOOMエラーを起こします。13Bの快適さが必要な場合は16GBを目指してください。' }, { q: 'RTX A4000などの中古企業GPUを購入すべきか？', a: 'はい、利用可能な場合。16GB VRAM、プロフェッショナルグレード冷却、通常180～230ドルで中古。RTX 3060より若干遅いですがVRAMクッションの価値があります。' }, { q: '250ドルGPUで購入するPSU電力はいくらか？', a: '650W、80+ Gold最小。250ドルGPU + CPU + マザーボード400W以下ですがスパイク用に余裕が必要。' }, { q: '200ドルのバジェットGPUでOllamaを実行できるか？', a: 'はい。Ollamaは軽量です。4年前のRTX 3060にOllamaはMistral 7Bを10～15トークン/秒で実行します。完全に使用可能。' }, { q: 'エンタープライズでのGDPR準拠ローカル推論に推奨GPUは？', a: 'Llama 3.3 13B Q4で最大50ユーザーにはRTX 3060 12GBまたはA4000 16GB最小。ECC GPUはエラー検出に推奨。ファームウェア/物理セキュリティはGPUメモリダンプを防止します。' }, { q: '中小企業のチームサーバーに推奨GPUは？', a: '1～50従業員にはRTX 3060 12GBまたはA4000。50～200従業員にはRTX 4070 SuperまたはA6000。RTX 3060はLlama 3.3 13B Q4 + vLLMを3～5同時要求で実行可能。より大規模なチームはA100エンタープライズクラスタリングが必要。' }, { q: 'RTX 3060と4060 Tiのパフォーマンス差は？', a: 'RTX 4060 Tiは約15～20%高速ですが、RTX 3060は4GB追加VRAMがあります。7Bモデルでは両方が快適な推論を提供します。バジェットで選択してください。' }, { q: 'マイニングカードはローカルLLMで安全か？', a: 'リスクあり。VRAMは集約的な運用年後に劣化します。確約前に完全にその場でストレステストできる場合のみ購入してください。' }] },
@@ -67672,6 +67722,7 @@ schema: {
           title: 'RTX 3060按用途选最佳模型',
           content: [
             '**根据实际需求选择模型，而非参数量：**',
+            '预算硬件只能运行较小的模型——但熟练的提示词技巧可以弥补质量差距。[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)涵盖了思维链和结构化输出等技术，帮助小模型超越其规模发挥。',
           ],
           items: [
             '**聊天 / 问答：** `ollama run llama3.2:7b` — 最佳全能型。15–20令牌/秒。128K上下文。',
