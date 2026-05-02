@@ -83,6 +83,8 @@ import { article as a_prompt_security_tools } from "./articles/prompt-security-t
 import { article as a_prompts_to_repeatable_workflows } from "./articles/prompts-to-repeatable-workflows";
 import { article as a_pe_for_content_teams } from "./articles/pe-for-content-teams";
 import { article as a_pe_for_developers_workflow } from "./articles/pe-for-developers-workflow";
+import { article as a_prompt_framework_for_teams } from "./articles/prompt-framework-for-teams";
+import { article as a_pe_for_support_operations } from "./articles/pe-for-support-operations";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -158,9 +160,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "prompt-documentation-templates": a_prompt_documentation_templates,
   "multi-model-prompt-testing": a_multi_model_prompt_testing,
   "prompt-audit-regression": a_prompt_audit_regression,
-  "prompt-library-management": a_prompt_library_team_management,
+  "prompt-library-team-management": a_prompt_library_team_management,
   "prompt-security-tools": a_prompt_security_tools,
   "prompts-to-repeatable-workflows": a_prompts_to_repeatable_workflows,
   "pe-for-content-teams": a_pe_for_content_teams,
   "pe-for-developers-workflow": a_pe_for_developers_workflow,
+  "prompt-framework-for-teams": a_prompt_framework_for_teams,
+  "pe-for-support-operations": a_pe_for_support_operations,
 };
