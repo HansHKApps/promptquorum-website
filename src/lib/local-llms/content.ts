@@ -11132,7 +11132,10 @@ schema: {
         threatModel: {
           id: 'threat-model',
           title: 'What threat model should you assume?',
-          content: '**Assume your local LLM environment can leak data through tools, plugins, or misconfiguration. Treat the model as untrusted — design your setup so that even if the model is compromised, sensitive data cannot be accessed or transmitted. This means isolating the inference tool from the internet, disabling telemetry, and restricting file system access.**',
+          content: [
+            '**Assume your local LLM environment can leak data through tools, plugins, or misconfiguration. Treat the model as untrusted — design your setup so that even if the model is compromised, sensitive data cannot be accessed or transmitted. This means isolating the inference tool from the internet, disabling telemetry, and restricting file system access.**',
+            'Security is not just about data privacy — prompt injection is a separate attack vector where malicious input manipulates model behavior. For injection defence techniques that apply to both local and cloud models, see [prompt injection and security](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security).',
+          ],
         },
         faqSection: {
           id: 'faq',
@@ -11470,7 +11473,10 @@ schema: {
       threatModel: {
         id: 'threat-model',
         title: 'Welches Threat Model sollten Sie annehmen?',
-        content: '**Gehen Sie davon aus, dass Ihre lokale LLM-Umgebung über Tools, Plugins oder Fehlkonfiguration Daten preisgeben kann. Behandeln Sie das Modell als nicht vertrauenswürdig und entwerfen Sie Ihre Infrastruktur so, dass selbst bei einer Kompromittierung des Modells sensible Daten nicht zugänglich oder übertragbar sind. Dies bedeutet Isolation des Inference-Tools vom Internet, Deaktivierung der Telemetrie und Einschränkung des Dateisystemzugriffs.**',
+        content: [
+          '**Gehen Sie davon aus, dass Ihre lokale LLM-Umgebung über Tools, Plugins oder Fehlkonfiguration Daten preisgeben kann. Behandeln Sie das Modell als nicht vertrauenswürdig und entwerfen Sie Ihre Infrastruktur so, dass selbst bei einer Kompromittierung des Modells sensible Daten nicht zugänglich oder übertragbar sind. Dies bedeutet Isolation des Inference-Tools vom Internet, Deaktivierung der Telemetrie und Einschränkung des Dateisystemzugriffs.**',
+          'Sicherheit ist nicht nur Datenschutz — Prompt-Injection ist ein eigenständiger Angriffsvektor, bei dem schädliche Eingaben das Modellverhalten manipulieren. Injection-Abwehrtechniken, die für lokale und Cloud-Modelle gelten, finden Sie unter [Prompt-Injection und Sicherheit](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security?lang=de).',
+        ],
       },
       faqSection: {
         title: 'Was sind häufige Sicherheitsfragen zu lokalen LLMs?',
@@ -11789,7 +11795,10 @@ schema: {
       threatModel: {
         id: 'threat-model',
         title: 'Quel modèle de menace devez-vous supposer ?',
-        content: '**Supposez que votre environnement LLM local peut fuir des données par le biais d\'outils, de plugins ou d\'erreurs de configuration. Traitez le modèle comme non approuvé — concevez votre configuration de sorte que même si le modèle est compromis, les données sensibles ne puissent pas être accessibles ou transmises. Cela signifie isoler l\'outil d\'inférence d\'Internet, désactiver la télémétrie et limiter l\'accès au système de fichiers.**',
+        content: [
+          '**Supposez que votre environnement LLM local peut fuir des données par le biais d\'outils, de plugins ou d\'erreurs de configuration. Traitez le modèle comme non approuvé — concevez votre configuration de sorte que même si le modèle est compromis, les données sensibles ne puissent pas être accessibles ou transmises. Cela signifie isoler l\'outil d\'inférence d\'Internet, désactiver la télémétrie et limiter l\'accès au système de fichiers.**',
+          'La sécurité ne se limite pas à la confidentialité des données — l\'injection de prompts est un vecteur d\'attaque distinct où des entrées malveillantes manipulent le comportement du modèle. Pour les techniques de défense contre les injections applicables aux modèles locaux et cloud, consultez [injection de prompts et sécurité](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security?lang=fr).',
+        ],
       },
       faqSection: {
         title: 'Quelles sont les questions courantes sur la sécurité ?',
@@ -12058,7 +12067,10 @@ schema: {
       threatModel: {
         id: 'threat-model',
         title: 'どのような脅威モデルを想定すべきですか？',
-        content: '**ローカルLLM環境は、ツール、プラグイン、または設定ミスによってデータが漏洩する可能性があると想定してください。モデルを信頼できないものとして扱い、モデルが侵害された場合でも機密データにアクセスまたは転送できないように設定を設計してください。これはインファレンスツールをインターネットから隔離し、テレメトリを無効化し、ファイルシステムアクセスを制限することを意味します。**',
+        content: [
+          '**ローカルLLM環境は、ツール、プラグイン、または設定ミスによってデータが漏洩する可能性があると想定してください。モデルを信頼できないものとして扱い、モデルが侵害された場合でも機密データにアクセスまたは転送できないように設定を設計してください。これはインファレンスツールをインターネットから隔離し、テレメトリを無効化し、ファイルシステムアクセスを制限することを意味します。**',
+          'セキュリティはデータプライバシーだけに限りません——プロンプトインジェクションは悪意のある入力がモデルの動作を操作する独立した攻撃ベクトルです。ローカルモデルとクラウドモデルの両方に適用される注入防御技術については、[プロンプトインジェクションとセキュリティ](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security?lang=ja)をご覧ください。',
+        ],
       },
       faqSection: {
         title: 'ローカルLLMについてのよくあるセキュリティ質問',
@@ -12340,7 +12352,10 @@ schema: {
       threatModel: {
         id: 'threat-model',
         title: '您应该假设什么样的威胁模型？',
-        content: '**假设您的本地LLM环境可能通过工具、插件或配置错误泄露数据。将模型视为不可信的——设计您的设置，使得即使模型被攻击，敏感数据也无法被访问或传输。这意味着将推理工具与互联网隔离、禁用遥测并限制文件系统访问。**',
+        content: [
+          '**假设您的本地LLM环境可能通过工具、插件或配置错误泄露数据。将模型视为不可信的——设计您的设置，使得即使模型被攻击，敏感数据也无法被访问或传输。这意味着将推理工具与互联网隔离、禁用遥测并限制文件系统访问。**',
+          '安全不仅仅是数据隐私问题——提示词注入是一种独立的攻击向量，恶意输入会操纵模型的行为。关于适用于本地和云模型的注入防御技术，请参阅[提示词注入与安全](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security?lang=zh)。',
+        ],
       },
       faqSection: {
         title: '关于本地LLM的常见安全问题',
@@ -36557,6 +36572,7 @@ schema: {
           content: [
             '**Yes, as of April 2026, function calling works with local models via the OpenAI API.** You define a function schema, and the model can respond with arguments to pass to your function. This enables [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) to integrate with your tool ecosystem.',
             'Function calling support depends on the model. Llama 3.1 8B, Qwen2.5 7B, and most recent models support it. Smaller models (3B) may not reliably use it.',
+            'When using OpenAI-compatible APIs locally, structured output and JSON mode work the same way as with cloud APIs. For enforcing schema compliance and format control across local and cloud models, see [structured output and JSON mode](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -37014,6 +37030,7 @@ schema: {
           content: [
             '**Oui, depuis avril 2026, les appels de fonctions fonctionnent avec les modèles locaux via l\'API OpenAI.** Vous définissez un schéma de fonction et le modèle peut répondre avec des arguments. Cela permet aux [Meilleurs LLM locaux pour le code](/local-llms/best-local-llms-for-coding?lang=fr) de s\'intégrer à votre écosystème d\'outils.',
             'La prise en charge des appels de fonctions dépend du modèle. Llama 3.1 8B, Qwen2.5 7B et la plupart des modèles récents la supportent. Les modèles plus petits (3B) peuvent ne pas l\'utiliser de manière fiable.',
+            'Lors de l\'utilisation d\'API compatibles OpenAI localement, les sorties structurées et le mode JSON fonctionnent de la même manière qu\'avec les API cloud. Pour contrôler la conformité des schémas et le format sur les modèles locaux et cloud, consultez [sorties structurées et mode JSON](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode?lang=fr).',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -37307,6 +37324,7 @@ schema: {
           content: [
             '**はい、2026年4月現在、Function CallingがOpenAI APIを通じてローカルモデルで動作します。** 関数スキーマを定義すると、モデルはその関数に渡す引数でレスポンスを返せます。これにより[コーディング向けベストローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja)をツールエコシステムと統合できます。',
             'Function Callingのサポートはモデルによります。Llama 3.1 8B、Qwen2.5 7B、最新の多くのモデルがサポートしています。小さいモデル（3B）は信頼性が低い場合があります。',
+            'ローカルでOpenAI互換APIを使用する場合、構造化出力とJSONモードはクラウドAPIと同じように機能します。ローカルおよびクラウドモデル全体のスキーマ準拠とフォーマット制御については、[構造化出力とJSONモード](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode?lang=ja)をご覧ください。',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -37564,6 +37582,7 @@ schema: {
           content: [
             '**是的，截至2026年4月，函数调用通过OpenAI API在本地模型上可用。** 您定义函数schema，模型可以返回传递给函数的参数。这使[最佳本地LLM编程助手](/local-llms/best-local-llms-for-coding?lang=zh)能够集成到您的工具生态系统中。',
             '函数调用支持取决于模型。Llama 3.1 8B、Qwen2.5 7B和大多数近期模型支持它。较小的模型（3B）可能不可靠。',
+            '在本地使用OpenAI兼容API时，结构化输出和JSON模式的工作方式与云端API相同。关于在本地和云模型中强制执行schema合规性和格式控制，请参阅[结构化输出和JSON模式](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode?lang=zh)。',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -52766,7 +52785,10 @@ schema: {
         },
         finetuningVsRag: {
           title: 'Should You Fine-Tune or Use RAG?',
-          content: 'Decision matrix:',
+          content: [
+            'Decision matrix:',
+            'Before investing in LoRA fine-tuning, verify that better prompting cannot solve the problem first — prompt engineering is faster, reversible, and model-agnostic. For the full decision framework, see [prompt engineering vs fine-tuning: how to decide](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning).',
+          ],
           rows: [
             { 'Criteria': 'Documents change frequency', 'Fine-Tuning': 'Annual or less', 'RAG': 'Weekly or more' },
             { 'Criteria': 'Knowledge requirements', 'Fine-Tuning': 'Model needs deep understanding', 'RAG': 'Retrieval suffices' },
@@ -53122,7 +53144,10 @@ schema: {
         },
         finetuningVsRag: {
           title: 'Fine-Tuning oder RAG?',
-          content: 'Entscheidungsmatrix:',
+          content: [
+            'Entscheidungsmatrix:',
+            'Stellen Sie vor einer LoRA-Feinabstimmung sicher, dass besseres Prompting das Problem nicht zuerst lösen kann — Prompt Engineering ist schneller, reversibel und modellunabhängig. Das vollständige Entscheidungs-Framework finden Sie unter [Prompt Engineering vs. Fine-Tuning: Wie Sie entscheiden](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=de).',
+          ],
           rows: [
             { 'Kriterium': 'Dokumentenänderungshäufigkeit', 'Fine-Tuning': 'Jährlich oder seltener', 'RAG': 'Wöchentlich oder häufiger' },
             { 'Kriterium': 'Wissenserfordernisse', 'Fine-Tuning': 'Modell braucht tiefes Verständnis', 'RAG': 'Abruf genügt' },
@@ -53504,7 +53529,10 @@ schema: {
         },
         finetuningVsRag: {
           title: 'Fine-tuning ou RAG ?',
-          content: 'Matrice de décision :',
+          content: [
+            'Matrice de décision :',
+            'Avant d\'investir dans le fine-tuning LoRA, vérifiez que de meilleurs prompts ne peuvent pas d\'abord résoudre le problème — le prompt engineering est plus rapide, réversible et agnostique au modèle. Pour le cadre de décision complet, voir [prompt engineering vs fine-tuning : comment décider](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=fr).',
+          ],
           rows: [
             { 'Critère': 'Fréquence de changement des documents', 'Fine-tuning': 'Annuel ou moins', 'RAG': 'Hebdomadaire ou plus' },
             { 'Critère': 'Besoins en connaissances', 'Fine-tuning': 'Compréhension profonde', 'RAG': 'La récupération suffit' },
@@ -53846,7 +53874,10 @@ schema: {
         },
         finetuningVsRag: {
           title: 'ファインチューニング vs RAG',
-          content: '決定マトリックス：',
+          content: [
+            '決定マトリックス：',
+            'LoRAファインチューニングに投資する前に、より良いプロンプティングで問題が解決できないか確認してください——プロンプトエンジニアリングはより速く、可逆的で、モデルに依存しません。完全な意思決定フレームワークについては、[プロンプトエンジニアリング vs ファインチューニング：決め方](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=ja)をご覧ください。',
+          ],
           rows: [
             { '基準': 'ドキュメント変更頻度', 'ファインチューニング': '年1回以下', 'RAG': '週1回以上' },
             { '基準': '知識要件', 'ファインチューニング': 'モデルが深い理解を必要とする', 'RAG': '検索で十分' },
@@ -54188,7 +54219,10 @@ schema: {
         },
         finetuningVsRag: {
           title: '微调还是 RAG？',
-          content: '决策矩阵：',
+          content: [
+            '决策矩阵：',
+            '在投资LoRA微调之前，请先确认更好的提示词工程是否无法解决问题——提示词工程更快速、可逆且与模型无关。完整的决策框架请参阅[提示词工程 vs 微调：如何决定](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=zh)。',
+          ],
           rows: [
             { '标准': '文档变化频率', '微调': '每年或更少', 'RAG': '每周或更多' },
             { '标准': '知识需求', '微调': '模型需要深度理解', 'RAG': '检索即可' },
@@ -67069,6 +67103,7 @@ schema: {
             'In practice: **8GB is the bare minimum** for comfortable inference on 7B models at Q4 with room for batch processing.',
             '6GB cards (RTX 2060) technically work but require aggressive optimization and leave no headroom for higher batches.',
             'If you\'re stuck with less than 8 GB VRAM, you can still run local LLMs effectively — **[see speed-optimized models for 4–8 GB hardware](/local-llms/fastest-local-llms-low-end-pcs)**.',
+            'GPU cost is one side of the economics; token cost is the other. Local inference eliminates per-token API fees, but prompt length still affects latency and throughput. For the full cost picture — tokens, pricing tiers, and optimisation strategies — see [tokens, costs and limits: the economics of AI prompting](https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
           ],
         },
         'best-by-use-case': {
@@ -67366,6 +67401,7 @@ schema: {
             '**7B-Modelle, quantisiert bei Q4 (4-bit), benötigen 6-8GB VRAM; Q5 (5-bit) benötigt 8-10GB; Q8 (8-bit) benötigt 14-16GB.**',
             'In der Praxis: **8GB ist das Minimum** für komfortable Inferenz auf 7B-Modellen bei Q4 mit Platz für Batch-Verarbeitung.',
             '6GB-Karten (RTX 2060) funktionieren technisch, erfordern aber aggressive Optimierung und lassen keinen Spielraum für höhere Batches.',
+            'GPU-Kosten sind eine Seite der Wirtschaftlichkeit; Token-Kosten die andere. Lokale Inferenz eliminiert API-Kosten pro Token, aber die Prompt-Länge beeinflusst weiterhin Latenz und Durchsatz. Das vollständige Kostenbild — Tokens, Preisstufen und Optimierungsstrategien — finden Sie unter [Tokens, Kosten und Grenzen: die Wirtschaftlichkeit von KI-Prompting](https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de).',
           ],
         },
         'best-by-use-case': {
@@ -67560,7 +67596,7 @@ schema: {
         'best-for-each-use': { title: 'Quel modèle est le meilleur pour chaque cas d\'usage?', content: ['**Codage (Qwen 2.5 7B)**: Qwen 2.5 7B excelle à la génération de code et au raisonnement. Nécessite RTX 3060 12GB ou RTX 4060 Ti 8GB. Idéal sur les cartes enterprise RTX A6000 si disponibles pour les modèles 32B+.', '**Raisonnement Anglais (Llama 3.3)**: Llama 3.3 est le meilleur modèle polyvalent pour le raisonnement factuel. Llama 3.3 70B nécessite 48GB VRAM (RTX 6000 ou A100). La version 7B tient sur n\'importe quel GPU 8GB+.', '**Utilisation locale légère (Mistral 7B)**: Mistral 7B est le modèle haut de gamme le plus léger. S\'exécute confortablement sur RTX 3060 12GB ou RTX 4060 Ti 8GB. Parfait pour l\'inférence portative.'] },
         'quick-answer': { title: 'Quels modèles gagnent par cas d\'usage?', content: ['✅ **Meilleur au global:** Llama 3.3 (ouvert, capable, largement optimisé)', '✅ **Meilleur pour le codage:** Qwen 2.5 (compréhension de code spécialisée)', '✅ **Meilleur léger:** Mistral 7B (VRAM minimal, inférence rapide)', '✅ **Meilleur GPU budget:** RTX 3060 12GB (200-250 € d\'occasion)'] },
         'model-comparison': { title: 'Comparaison des modèles: Quel modèle gagne?', columns: ['Modèle', 'Meilleur pour', 'Force', 'Faiblesse', 'Min VRAM (Q4)'], rows: [{ 'Modèle': 'Qwen 2.5 7B', 'Meilleur pour': 'Codage', 'Force': 'Excellente précision de code, raisonnement multilingue', 'Faiblesse': 'Plus faible au raisonnement anglais pur vs Llama', 'Min VRAM (Q4)': '6-8 GB' }, { 'Modèle': 'Llama 3.3 8B', 'Meilleur pour': 'Raisonnement', 'Force': 'Polyvalent fort, raisonnement factuel', 'Faiblesse': 'Plus lourd que Mistral, plus de VRAM requis', 'Min VRAM (Q4)': '8-10 GB' }, { 'Modèle': 'Mistral 7B', 'Meilleur pour': 'Efficacité', 'Force': 'Inférence la plus rapide, VRAM minimal, léger', 'Faiblesse': 'Moins capable que Llama/Qwen aux tâches complexes', 'Min VRAM (Q4)': '6-8 GB' }], tableFormat: true },
-        'vram-7b': { title: 'Combien de VRAM avez-vous besoin pour les modèles 7B?', content: ['Les modèles 7B quantifiés à Q4 (4-bit) nécessitent **6-8GB VRAM**; Q5 (5-bit) nécessite **8-10GB**; Q8 (8-bit) nécessite **14-16GB**.', 'En pratique: **8GB est le minimum absolu** pour une inférence confortable sur les modèles 7B à Q4 avec espace pour le traitement par lot.', 'Les cartes 6GB (RTX 2060) fonctionnent techniquement mais nécessitent une optimisation agressive et ne laissent pas de place pour des lots plus élevés.'] },
+        'vram-7b': { title: 'Combien de VRAM avez-vous besoin pour les modèles 7B?', content: ['Les modèles 7B quantifiés à Q4 (4-bit) nécessitent **6-8GB VRAM**; Q5 (5-bit) nécessite **8-10GB**; Q8 (8-bit) nécessite **14-16GB**.', 'En pratique: **8GB est le minimum absolu** pour une inférence confortable sur les modèles 7B à Q4 avec espace pour le traitement par lot.', 'Les cartes 6GB (RTX 2060) fonctionnent techniquement mais nécessitent une optimisation agressive et ne laissent pas de place pour des lots plus élevés.', 'Le coût GPU est un côté de l\'économie ; le coût des tokens en est l\'autre. L\'inférence locale élimine les frais API par token, mais la longueur du prompt affecte toujours la latence et le débit. Pour le tableau complet des coûts — tokens, niveaux de tarification et stratégies d\'optimisation — voir [tokens, coûts et limites : l\'économie du prompting IA](https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr).'] },
         'best-by-use-case': {
           id: 'best-by-use-case',
           title: 'Meilleurs modèles par usage sur RTX 3060',
@@ -67628,7 +67664,7 @@ schema: {
         'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'RTX 3060 12GBで何が動く？', content: ['**RTX 3060 12GBは2026年のローカルLLM用最良バジェットGPUです。** 12GB VRAMはQ4/Q5のすべての7Bモデルと、Q4のほとんどの13Bモデルに対応：'], columns: ['モデル', 'サイズ', '量子化', 'VRAM使用', '速度', '最適用途'], rows: [{ 'モデル': 'Llama 3.2 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '15–20トークン/秒', '最適用途': 'チャット、Q&A' }, { 'モデル': 'Mistral 7B v0.3', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '18トークン/秒', '最適用途': '指示従行' }, { 'モデル': 'Qwen2.5-Coder 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '16トークン/秒', '最適用途': 'コーディング（72% HumanEval）' }, { 'モデル': 'DeepSeek-R1 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '10–12トークン/秒', '最適用途': '推論、数学' }, { 'モデル': 'Gemma 4 9B', 'サイズ': '9B', '量子化': 'Q4_K_M', 'VRAM使用': '~8 GB', '速度': '12–15トークン/秒', '最適用途': 'ビジョン、マルチモーダル' }, { 'モデル': 'Llama 3.2 13B', 'サイズ': '13B', '量子化': 'Q4_K_M', 'VRAM使用': '~11 GB', '速度': '8–10トークン/秒', '最適用途': '高品質チャット' }], note: 'すべての速度はOllama、RTX 3060 12GB、16GBシステムRAM、Ryzen 7 7700Xで計測。Q4_K_M量子化。速度は±15%変動。' },
         'rtx-3060-6gb': { id: 'rtx-3060-6gb', title: 'RTX 3060 6GBで何が動く？', content: ['**6GB版は大幅に制限されています。** 3Bモデルのみ快適に動作。7BモデルのQ4は~7GB必要で、容量不足です。'], items: ['**Phi-4 Mini 3.8B（Q4）：** ~3GB VRAM、20–25トークン/秒。このサイズでの最良推論。', '**Llama 3.2 3B（Q4）：** ~2.5GB VRAM、25–35トークン/秒。最速オプション。', '**Gemma 2 2B（Q4）：** ~1.7GB VRAM、35–45トークン/秒。最軽量モデル。', '**7Bオフローディング：** 可能だが遅い。Llama 7BのCPUオフロード = ~5–8トークン/秒。', '**推奨：** 6GBカードをお持ちなら、12GB中古（$200–250）にアップグレードを。'] },
         'which-budget-gpus': { title: 'RTX 3060 vs 他のバジェットGPU', columns: ['GPU', 'VRAM', '価格（中古）', '7B速度', '最大モデル', '評価'], rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥30,000–38,000', '7B速度': '15–20トークン/秒', '最大モデル': '13B（Q4）', '評価': '最良バジェット' }, { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '価格（中古）': '¥38,000–45,000', '7B速度': '20–25トークン/秒', '最大モデル': '7B（Q5最大）', '評価': '高速だがVRAM少' }, { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '価格（中古）': '¥27,000–35,000', '7B速度': '12–15トークン/秒', '最大モデル': '13B（Q5）', '評価': 'VRAM/円最良' }, { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', '価格（中古）': '¥60,000–68,000', '7B速度': '25–30トークン/秒', '最大モデル': '13B（Q5）', '評価': '高速だが2倍の価格' }, { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', '価格（中古）': '¥23,000–30,000', '7B速度': '10–14トークン/秒', '最大モデル': '13B（Q4）', '評価': '最安、AMDの手間' }], note: 'RTX 3060 12GBが価格性能比で勝利：¥30,000–38,000の12GB VRAMですべての7Bとほとんどの13Bを実行。' },
-        'vram-7b': { title: '7Bモデルに必要なVRAMは？', content: ['Q4（4ビット）で量子化された7Bモデルは**6～8GB VRAM**を必要とし、Q5（5ビット）は**8～10GB**、Q8（8ビット）は**14～16GB**を必要とします。', '実際には：**8GBは最低限**で、Q4で7Bモデルでの快適な推論とバッチ処理用のスペースがあります。', '6GBカード（RTX 2060）は技術的に機能しますがアグレッシブな最適化が必要で、より高いバッチに余裕がありません。'] },
+        'vram-7b': { title: '7Bモデルに必要なVRAMは？', content: ['Q4（4ビット）で量子化された7Bモデルは**6～8GB VRAM**を必要とし、Q5（5ビット）は**8～10GB**、Q8（8ビット）は**14～16GB**を必要とします。', '実際には：**8GBは最低限**で、Q4で7Bモデルでの快適な推論とバッチ処理用のスペースがあります。', '6GBカード（RTX 2060）は技術的に機能しますがアグレッシブな最適化が必要で、より高いバッチに余裕がありません。', 'GPUコストは経済性の一面であり、トークンコストはもう一面です。ローカル推論はAPIのトークン課金を排除しますが、プロンプト長は依然としてレイテンシとスループットに影響します。トークン、価格体系、最適化戦略を含むコスト全体像については、[トークン、コスト、制限：AIプロンプティングの経済学](https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)をご覧ください。'] },
         'best-by-use-case': { id: 'best-by-use-case', title: 'RTX 3060でのユースケース別最適モデル', content: ['**パラメータ数ではなく、実際のニーズに基づいてモデルを選択してください：**', 'バジェットハードウェアは小さなモデルを実行しますが、巧みなプロンプティングが品質差を縮めます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)では、Chain-of-Thoughtや構造化出力など、小さなモデルの実力を引き出すテクニックを解説しています。'], items: ['**チャット / Q&A：** `ollama run llama3.2:7b` — 最良の万能モデル。15–20トークン/秒。128Kコンテキスト。', '**コーディング：** `ollama run qwen2.5-coder:7b` — 72% HumanEval。16トークン/秒。Python、JavaScript、SQL。', '**推論 / 数学：** `ollama run deepseek-r1:7b` — Chain-of-Thought。10–12トークン/秒。', '**ライティング / クリエイティブ：** `ollama run mistral:7b` — 最良の指示従行。18トークン/秒。', '**ビジョン / 画像：** `ollama run gemma4:9b` — マルチモーダル。12–15トークン/秒。~8GB VRAM。', '**プライバシー / オフライン：** 上記すべて。100%ローカル。データは外部送信されません。'] },
         'used-vs-new': { title: '中古 vs 新品：どこで買う？', items: ['**中古（50～100ドル安い）**：eBay、Facebook Marketplace、Craigslist、地元のコンピュータ修理店。死んだカードまたは不良VRAMのリスクが高い。確約する前に常にテストしてください。', '**新品（280～400ドル）**：Newegg、Amazon、Best Buy、Microcenter。保証付き。驚きなし。価格安定。リスク回避買い手に最適。', '**マイニングカード（暗号、超安い）**：極端なリスク。VRAM劣化は一般的。その場で完全にベンチテストできる場合のみ購入してください。'] },
         'mistakes': { title: 'よくあるバジェットGPUの間違い', items: ['4GB RTX 2060を購入してスムーズな7B推論を期待する。常にメモリ不足エラーが発生します。', '250ドルのGPUを30ドルのPSU（電源）と組み合わせます。電圧サグは安定性を殺します。80+ Gold認定、650W最小をバジェット化してください。', 'DDR5 RAMとi9 CPUがLLM推論を高速化すると想定する。それらは高速化しません。GPU VRAMバンド幅は推論速度に影響する唯一のボトルネックです。'] },
@@ -67736,6 +67772,7 @@ schema: {
             '**7B模型在Q4（4位）量化时需要**6-8GB VRAM**；Q5（5位）需要**8-10GB**；Q8（8位）需要**14-16GB**。**',
             '实际上：**8GB是最低限度**，在Q4的7B模型上舒适推理，有批处理空间。',
             '6GB显卡（RTX 2060）在技术上可行但需要积极优化，无法支持更高的批大小。',
+            'GPU成本是经济性的一面；token成本是另一面。本地推理消除了按token计费的API费用，但提示词长度仍然影响延迟和吞吐量。完整的成本图景——token、定价层级和优化策略——请参阅[token、成本与限制：AI提示词经济学](https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)。',
           ],
         },
         'best-by-use-case': {
