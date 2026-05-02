@@ -13004,10 +13004,10 @@ schema: {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Understand what local LLMs are and how they run on your hardware](/local-llms/what-are-local-llms?lang=en) -- Core concepts, architecture, and key differences from cloud models',
-            '[Compare local LLMs vs cloud APIs: when to use each approach](/local-llms/local-llms-vs-cloud-apis?lang=en) -- Trade-off analysis, cost comparison, and decision guidance',
-            '[Find the best beginner-friendly local LLM models for limited hardware](/local-llms/best-beginner-local-llm-models?lang=en) -- Model recommendations, VRAM requirements, and setup options',
-            '[Explore the best local LLMs available in 2026](/local-llms/best-local-llms-2026?lang=en) -- Top models, benchmark scores, and performance comparisons',
+            '[Understand what local LLMs are and how they run on your hardware](/local-llms/what-are-local-llms) -- Core concepts, architecture, and key differences from cloud models',
+            '[Compare local LLMs vs cloud APIs: when to use each approach](/local-llms/local-llms-vs-cloud-apis) -- Trade-off analysis, cost comparison, and decision guidance',
+            '[Find the best beginner-friendly local LLM models for limited hardware](/local-llms/best-beginner-local-llm-models) -- Model recommendations, VRAM requirements, and setup options',
+            '[Explore the best local LLMs available in 2026](/local-llms/best-local-llms-2026) -- Top models, benchmark scores, and performance comparisons',
           ],
         },
       },
@@ -16695,7 +16695,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Qwen2.5 vs Llama 3.3 vs Mistral in 2026: Full Benchmark Comparison',
         'description': 'Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Compare on benchmarks, VRAM, coding, multilingual support.',
-        'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral?lang=en',
+        'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral',
         'inLanguage': 'en',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'datePublished': '2026-04-04',
@@ -50703,7 +50703,7 @@ schema: {
           id: 'hardware',
           title: 'What Mobile Hardware Runs Local LLMs in 2026?',
           content: [
-            '**iPhone 16 Pro (A18 Pro) is the minimum practical iPhone for local LLMs** — 12 GB shared RAM runs [Llama 3.2 3B](/local-llms/top-open-source-models-ollama?lang=en) at 4 tok/sec. Standard iPhone 16 (8 GB) handles 1B models only.',
+            '**iPhone 16 Pro (A18 Pro) is the minimum practical iPhone for local LLMs** — 12 GB shared RAM runs [Llama 3.2 3B](/local-llms/top-open-source-models-ollama) at 4 tok/sec. Standard iPhone 16 (8 GB) handles 1B models only.',
           ],
           columns: ['Device', 'Max Model Size', 'Speed', 'Memory'],
           rows: [
@@ -59734,7 +59734,7 @@ schema: {
           id: 'ide-integration',
           title: 'How Do You Set Up IDE Integration?',
           content: [
-            '**Use [VS Code with Continue.dev](/local-llms/local-llms-with-vscode-cursor?lang=en) or switch to the Cursor editor for native local LLM support. Both allow inline code suggestions triggered by keyboard shortcuts.**',
+            '**Use [VS Code with Continue.dev](/local-llms/local-llms-with-vscode-cursor) or switch to the Cursor editor for native local LLM support. Both allow inline code suggestions triggered by keyboard shortcuts.**',
           ],
           callouts: [
             { type: 'note', text: '📌 **Note:** Continue.dev requires running Ollama locally. Cursor editor (based on VS Code) has built-in Ollama support — no extra setup needed.' },
@@ -59802,12 +59802,12 @@ schema: {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Local LLMs With VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor?lang=en) — Detailed setup guide for both IDEs',
-            '[Prompt Engineering Guide](/prompt-engineering?lang=en) — Master prompting techniques to improve code generation',
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=en) — Detailed benchmarks and model comparisons',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=en) — GPU requirements and cost analysis',
-            '[Local RAG for Code Search](/local-llms/local-rag-2026?lang=en) — Search existing code with semantic understanding',
-            '[Private Local AI For Business](/local-llms/private-local-ai-for-business?lang=en) — Enterprise deployment and compliance',
+            '[Local LLMs With VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Detailed setup guide for both IDEs',
+            '[Prompt Engineering Guide](/prompt-engineering) — Master prompting techniques to improve code generation',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Detailed benchmarks and model comparisons',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — GPU requirements and cost analysis',
+            '[Local RAG for Code Search](/local-llms/local-rag-2026) — Search existing code with semantic understanding',
+            '[Private Local AI For Business](/local-llms/private-local-ai-for-business) — Enterprise deployment and compliance',
           ],
         },
         sources: {
