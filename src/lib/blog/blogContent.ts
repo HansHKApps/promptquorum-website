@@ -248,7 +248,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
         comparison: {
           title: 'Which Framework Should You Use?',
-          content: '',
+          content: 'For the complete decision framework — when to use CO-STAR vs CRAFT vs RTF vs APE — with side-by-side scoring for each use case, see [which prompt framework should you use?](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use)',
           rows: [
             { Framework: 'APE', 'Best For': 'Quick, simple requests', Complexity: '⭐ Low' },
             { Framework: 'CRAFT', 'Best For': 'Marketing, copywriting', Complexity: '⭐⭐ Medium' },
@@ -482,7 +482,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
         comparison: {
           title: 'Welches Framework sollten Sie verwenden?',
-          content: '',
+          content: 'Das vollständige Entscheidungs-Framework — wann CO-STAR vs CRAFT vs RTF vs APE verwenden — mit Seite-an-Seite-Bewertung für jeden Anwendungsfall finden Sie unter [Welches Prompt-Framework sollten Sie verwenden?](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=de)',
           rows: [
             { Framework: 'APE', 'Best For': 'Schnelle, einfache Anfragen', Complexity: '⭐ Niedrig' },
             { Framework: 'CRAFT', 'Best For': 'Marketing, Copywriting', Complexity: '⭐⭐ Mittel' },
@@ -716,7 +716,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
         comparison: {
           title: 'Quel framework devriez-vous utiliser ?',
-          content: '',
+          content: 'Pour le cadre de décision complet — quand utiliser CO-STAR vs CRAFT vs RTF vs APE — avec une notation côte à côte pour chaque cas d\'usage, voir [quel framework de prompt devriez-vous utiliser ?](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=fr)',
           rows: [
             { Framework: 'APE', 'Best For': 'Demandes rapides et simples', Complexity: '⭐ Faible' },
             { Framework: 'CRAFT', 'Best For': 'Marketing, copywriting', Complexity: '⭐⭐ Moyen' },
@@ -950,7 +950,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
         comparison: {
           title: 'どのフレームワークを使うべき？',
-          content: '',
+          content: '完全な意思決定フレームワーク — CO-STAR vs CRAFT vs RTF vs APEをいつ使うか — 各ユースケースの並べて評価については、[どのプロンプトフレームワークを使うべきか](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=ja)をご覧ください。',
           rows: [
             { Framework: 'APE', 'Best For': 'クイックで簡単なリクエスト', Complexity: '⭐ 低' },
             { Framework: 'CRAFT', 'Best For': 'マーケティング、コピーライティング', Complexity: '⭐⭐ 中' },
@@ -1184,7 +1184,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
         comparison: {
           title: '您应该使用哪个框架？',
-          content: '',
+          content: '关于完整的决策框架——何时使用CO-STAR vs CRAFT vs RTF vs APE——以及每个用例的并排评分，请参阅[您应该使用哪个提示词框架？](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=zh)',
           rows: [
             { Framework: 'APE', 'Best For': '快速、简单的请求', Complexity: '⭐ 低' },
             { Framework: 'CRAFT', 'Best For': '营销、文案写作', Complexity: '⭐⭐ 中等' },
@@ -2404,6 +2404,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '**Bottom line:** GPT-5.5 leads on speed and creative output. Claude Opus 4.7 leads on reasoning accuracy and long-document analysis (1M token context). Gemini 3.1 Pro leads on multimodal tasks and has the largest context window (2M tokens). For critical work, run the same prompt across all three — single-model reliance leaves accuracy on the table.',
             'Different AI models excel at different tasks. ChatGPT (GPT-5.5) is the fastest and most versatile. Claude (Opus 4.7) scores highest on reasoning and code benchmarks. Gemini (3.1 Pro) is strongest on multimodal tasks and real-time web access. Knowing which model fits your task means better results and lower costs.',
             'This guide compares all three frontier models as of 2026: strengths, context windows, pricing, and the tasks where each one wins.',
+            'For a systematic approach to model selection — including when to choose open-source vs commercial — see [how to pick the right AI model: GPT, Claude, or Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
         },
         chatgptSection: {
@@ -2786,6 +2787,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '**Kurzantwort:** GPT-5.5 führt bei Geschwindigkeit und kreativer Ausgabe. Claude Opus 4.7 führt bei Reasoning-Genauigkeit und Langdokumentenanalyse (1 Mio. Tokens Kontext). Gemini 3.1 Pro führt bei multimodalen Aufgaben und verfügt über das größte Kontextfenster (2 Mio. Tokens). Für kritische Aufgaben sollten Sie denselben Prompt an alle drei Modelle senden — wer sich auf ein einziges Modell verlässt, verschenkt Genauigkeit.',
             'Unterschiedliche KI-Modelle sind für unterschiedliche Aufgaben optimiert. ChatGPT (GPT-5.5) ist das schnellste und vielseitigste Modell. Claude (Opus 4.7) erzielt die höchsten Werte bei Reasoning- und Code-Benchmarks. Gemini (3.1 Pro) ist bei multimodalen Aufgaben und dem Zugriff auf Echtzeitinformationen am stärksten. Wer weiß, welches Modell zu welcher Aufgabe passt, erzielt bessere Ergebnisse bei geringeren Kosten.',
             'Dieser Leitfaden vergleicht alle drei Frontier-Modelle Stand 2026: Stärken, Kontextfenster, Preise und die Aufgaben, bei denen jedes Modell gewinnt.',
+            'Für einen systematischen Ansatz zur Modellauswahl — einschließlich der Entscheidung zwischen Open-Source und kommerziellen Modellen — siehe [das richtige KI-Modell auswählen: GPT, Claude oder Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de).',
           ],
         },
         chatgptSection: {
@@ -3167,6 +3169,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '**En résumé :** GPT-5.5 domine en vitesse et en créativité. Claude Opus 4.7 domine en précision de raisonnement et en analyse de longs documents (contexte 1M tokens). Gemini 3.1 Pro domine sur les tâches multimodales avec la plus grande fenêtre de contexte (2M tokens). Pour les travaux critiques, envoyez le même prompt aux trois — se limiter à un seul modèle, c\'est laisser de la précision sur la table.',
             'Chaque modèle d\'IA excelle dans des domaines différents. ChatGPT (GPT-5.5) est le plus rapide et le plus polyvalent. Claude (Opus 4.7) obtient les meilleurs scores sur les benchmarks de raisonnement et de code. Gemini (3.1 Pro) est le plus fort sur les tâches multimodales et l\'accès aux données en temps réel.',
             'Ce guide compare les trois modèles frontier en 2026 : points forts, fenêtres de contexte, tarifs et cas d\'usage où chacun s\'impose.',
+            'Pour une approche systématique de la sélection de modèle — y compris quand choisir open-source plutôt que commercial — voir [comment choisir le bon modèle d\'IA : GPT, Claude ou Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr).',
           ],
         },
         chatgptSection: {
@@ -3562,6 +3565,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '**結論から言うと：** GPT-5.5は速度とクリエイティブな出力でリード。Claude Opus 4.7は推論精度と長文書分析（1Mトークンコンテキスト）でリード。Gemini 3.1 Proはマルチモーダルタスクと最大のコンテキストウィンドウ（2Mトークン）でリード。重要な作業では3つすべてに同じプロンプトを送信してください — 1つのモデルだけに依存すると精度を犠牲にすることになります。',
             'AIモデルはそれぞれ異なるタスクで優れています。ChatGPT（GPT-5.5）は最も速く汎用性が高いモデルです。Claude（Opus 4.7）は推論とコードのベンチマークで最高スコアを記録しています。Gemini（3.1 Pro）はマルチモーダルタスクとリアルタイムWebアクセスで最も優れています。',
             'このガイドでは2026年時点の3つのフロンティアモデルを比較します：強み、コンテキストウィンドウ、料金、そして各モデルが勝るタスクについて解説します。',
+            'モデル選択への体系的なアプローチ — オープンソースと商用モデルの選び方を含む — については、[適切なAIモデルの選び方：GPT、Claude、またはGemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)をご覧ください。',
           ],
         },
         chatgptSection: {
@@ -3959,6 +3963,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '**核心结论：** GPT-5.5在速度和创意输出方面领先。Claude Opus 4.7在推理准确性和长文档分析（1M token上下文）方面领先。Gemini 3.1 Pro在多模态任务方面领先，且拥有最大的上下文窗口（2M token）。对于关键工作，建议将同一提示词发送给三款模型——依赖单一模型会损失准确性。',
             '不同的AI模型在不同任务上表现各异。ChatGPT（GPT-5.5）速度最快、通用性最强。Claude（Opus 4.7）在推理和代码基准测试中得分最高。Gemini（3.1 Pro）在多模态任务和实时网络访问方面最为出色。了解哪个模型适合哪类任务，意味着更好的结果和更低的成本。',
             '本指南对比2026年三大前沿模型：优势、上下文窗口、定价，以及每款模型的适用场景。',
+            '关于模型选择的系统方法——包括何时选择开源与商业模型——请参阅[如何选择正确的AI模型：GPT、Claude还是Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)。',
           ],
         },
         chatgptSection: {
@@ -6003,6 +6008,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             'Most people write prompts once and send them without optimization. The time cost is significant: 20-30 minutes to manually rewrite, test, evaluate, and refine a single prompt. The quality cost is worse: poor initial prompts require 5 or more iterations to produce acceptable results.',
             'Manual optimization is also inconsistent. Your prompts vary in quality depending on time available, energy level, and experience with the specific task. An expert prompter can produce a 75% quality prompt; a novice might produce a 35% quality prompt for the same task.',
             'The fundamental issue: there is no standard method for manually optimizing prompts. People guess about what makes prompts work (clarity, structure, role definition, success criteria) and apply those principles inconsistently.',
+            'For the full optimization guide covering cost reduction, latency tuning, and multi-model testing, see [fundamentals of prompt optimization](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization).',
           ],
         },
         whatIsAutoOptimization: {
@@ -6401,7 +6407,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         theProblem: {
           title: 'Das Problem: Warum manuelle Optimierung scheitert',
-          content: ['Wie oft haben Sie einen Prompt geschrieben und ein mittelmäßiges Ergebnis erhalten?', 'Die Kosten für schlechte Prompts sind real: schlechte Ergebnisse, verschwendete Zeit.', 'Ein strukturierter Prompt funktioniert beim ersten Versuch. Ein schlechter braucht 5 Versuche.'],
+          content: ['Wie oft haben Sie einen Prompt geschrieben und ein mittelmäßiges Ergebnis erhalten?', 'Die Kosten für schlechte Prompts sind real: schlechte Ergebnisse, verschwendete Zeit.', 'Ein strukturierter Prompt funktioniert beim ersten Versuch. Ein schlechter braucht 5 Versuche.', 'Den vollständigen Optimierungsleitfaden — mit Kostensenkung, Latenztuning und Multi-Modell-Tests — finden Sie unter [Grundlagen der Prompt-Optimierung](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=de).'],
         },
         conclusion: {
           title: 'Zukunft',
@@ -6420,7 +6426,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         theProblem: {
           title: 'Le Problème',
-          content: ['Combien de fois avez-vous écrit un prompt et obtenu un résultat médiocre?', 'Le coût des mauvais prompts est réel : mauvais résultats, temps gaspillé.', 'Un prompt bien structuré fonctionne au premier essai. Un mauvais en a besoin de 5.'],
+          content: ['Combien de fois avez-vous écrit un prompt et obtenu un résultat médiocre?', 'Le coût des mauvais prompts est réel : mauvais résultats, temps gaspillé.', 'Un prompt bien structuré fonctionne au premier essai. Un mauvais en a besoin de 5.', 'Pour le guide complet d\'optimisation couvrant la réduction des coûts, le réglage de latence et les tests multi-modèles, voir [fondamentaux de l\'optimisation des prompts](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=fr).'],
         },
         conclusion: {
           title: 'Avenir',
@@ -6439,7 +6445,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         theProblem: {
           title: '問題',
-          content: ['プロンプトを書いて平凡な結果を得たことがありますか?', '不十分なプロンプトのコストは実質的です：悪い結果、無駄な時間。', '構造化されたプロンプトは最初の試みで機能します。悪いものは5回必要です。'],
+          content: ['プロンプトを書いて平凡な結果を得たことがありますか?', '不十分なプロンプトのコストは実質的です：悪い結果、無駄な時間。', '構造化されたプロンプトは最初の試みで機能します。悪いものは5回必要です。', 'コスト削減、レイテンシ調整、マルチモデルテストを網羅した完全な最適化ガイドについては、[プロンプト最適化の基礎](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=ja)をご覧ください。'],
         },
         conclusion: {
           title: '未来',
@@ -6458,7 +6464,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {
         theProblem: {
           title: '问题',
-          content: ['你写过提示词却得到平庸结果吗?', '不好的提示词成本很高：糟糕结果、浪费时间。', '结构化提示词第一次就能工作。糟糕的需要5次。'],
+          content: ['你写过提示词却得到平庸结果吗?', '不好的提示词成本很高：糟糕结果、浪费时间。', '结构化提示词第一次就能工作。糟糕的需要5次。', '关于涵盖降本、延迟调优和多模型测试的完整优化指南，请参阅[提示词优化基础](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=zh)。'],
         },
         conclusion: {
           title: '未来',
@@ -7098,6 +7104,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             'AI consensus scoring is a method for evaluating the reliability of AI-generated information by measuring agreement across multiple independent language models. When you send the same prompt to five or more AI models and analyse where their responses converge and diverge, you get a statistical signal about which claims are likely accurate and which are potentially hallucinated.',
             'The underlying principle comes from ensemble methods in statistics: independent sources that arrive at the same conclusion are more likely to be correct than a single source, even if that single source is highly capable. This holds for AI models just as it does for human experts.',
             'Consensus scoring assigns a confidence level to each claim in a set of AI responses based on how many models independently agreed on it. High consensus = high reliability. Low consensus = investigate further.',
+            'Consensus scoring works best when combined with systematic prompt evaluation. For the framework covering accuracy, consistency, and instruction-following metrics, see [how to evaluate prompt quality](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality).',
           ],
         },
         problem: {
@@ -7216,6 +7223,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             'KI-Konsens-Scoring ist eine Methode zur Bewertung der Zuverlässigkeit von KI-generierten Informationen, indem die Übereinstimmung mehrerer unabhängiger Sprachmodelle gemessen wird. Wenn Sie denselben Prompt an fünf oder mehr KI-Modelle senden und analysieren, wo ihre Antworten übereinstimmen und divergieren, erhalten Sie ein statistisches Signal darüber, welche Aussagen wahrscheinlich korrekt sind.',
             'Das zugrunde liegende Prinzip stammt aus Ensemble-Methoden der Statistik: Unabhängige Quellen, die zum gleichen Schluss kommen, sind wahrscheinlicher korrekt als eine einzelne Quelle — selbst wenn diese einzelne Quelle sehr leistungsfähig ist.',
             'Konsens-Scoring weist jeder Aussage in einem Satz von KI-Antworten ein Konfidenzniveau zu, basierend darauf, wie viele Modelle unabhängig voneinander zugestimmt haben. Hoher Konsens = hohe Zuverlässigkeit. Niedriger Konsens = genauer untersuchen.',
+            'Konsens-Scoring entfaltet die stärkste Wirkung in Kombination mit systematischer Prompt-Evaluation. Das Framework für Genauigkeits-, Konsistenz- und Instruction-Following-Metriken finden Sie unter [Wie man die Qualität von Prompts bewertet](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=de).',
           ],
         },
         problem: {
@@ -7322,6 +7330,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           content: [
             'Le score de consensus IA est une méthode d\'évaluation de la fiabilité des informations générées par l\'IA en mesurant l\'accord entre plusieurs modèles de langage indépendants. Lorsque vous envoyez le même prompt à cinq modèles ou plus et analysez où leurs réponses convergent et divergent, vous obtenez un signal statistique sur les affirmations probablement exactes.',
             'Le principe sous-jacent vient des méthodes d\'ensemble en statistique : des sources indépendantes qui arrivent à la même conclusion ont plus de chances d\'être correctes qu\'une seule source.',
+            'Le score de consensus est plus efficace combiné à une évaluation systématique des prompts. Pour le cadre couvrant précision, cohérence et suivi des instructions, voir [comment évaluer la qualité des prompts](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr).',
           ],
         },
         problem: {
@@ -7428,6 +7437,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           content: [
             'AIコンセンサススコアリングは、複数の独立した言語モデル間の一致度を測定することで、AIが生成した情報の信頼性を評価する方法です。同じプロンプトを5つ以上のAIモデルに送信し、回答が収束する箇所と分岐する箇所を分析することで、どの主張が正確でどれが潜在的にハルシネートされているかについての統計的シグナルが得られます。',
             'コンセンサススコアリングは、同意したモデルの数に基づいて各主張に信頼度レベルを割り当てます。高いコンセンサス＝高い信頼性。低いコンセンサス＝さらに調査が必要。',
+            'コンセンサススコアリングは、体系的なプロンプト評価と組み合わせることで最大の効果を発揮します。精度・一貫性・指示追従メトリクスのフレームワークについては、[プロンプト品質の評価方法](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)をご覧ください。',
           ],
         },
         problem: {
@@ -7534,6 +7544,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           content: [
             'AI共识评分是一种通过测量多个独立语言模型之间的一致性来评估AI生成信息可靠性的方法。当您将相同的提示词发送给五个或更多AI模型，并分析它们的回答在哪里收敛和发散时，您会获得关于哪些主张可能准确、哪些可能被幻觉的统计信号。',
             '共识评分基于每个声明有多少模型独立同意，为每个声明分配一个置信度级别。高共识=高可靠性。低共识=进一步调查。',
+            '共识评分与系统性提示词评估结合使用效果最佳。关于涵盖准确性、一致性和指令遵循指标的框架，请参阅[如何评估提示词质量](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)。',
           ],
         },
         problem: {
@@ -8242,6 +8253,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           content: [
             'Frontier AI models are the most advanced large language models available as of March 2026. They represent the technical frontier of natural language understanding, reasoning, and generation — continually advancing in performance, speed, and capability.',
             'The main frontier models as of March 2026 are:',
+            'For a practical guide to building and maintaining a team prompt library — including version control, ownership, and testing — see [build a prompt library that saves hours](https://www.promptquorum.com/prompt-engineering/build-a-prompt-library).',
           ],
           items: [
             'GPT-5.x (OpenAI) — multi-modal reasoning, code, and analysis',
