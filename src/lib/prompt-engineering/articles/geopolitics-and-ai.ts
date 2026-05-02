@@ -537,6 +537,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**For organizations deploying AI, geopolitical competition translates into four concrete operational decisions: which AI tools are permissible, where data can be stored, what compliance documentation is required, and how quickly regulations will change.** These decisions differ significantly depending on whether the organization is based in the EU, operates in EU markets, or uses US or Chinese AI providers.',
             'PromptQuorum supports compliance-conscious model selection — dispatch prompts across EU-compliant models (Mistral, local Ollama) and US frontier models simultaneously, letting you benchmark EU AI Act compliant options against proprietary alternatives without separate infrastructure.',
+            'The geopolitical dynamics shaping model availability make the open-source vs proprietary question especially relevant. For a complete comparison of when open-source wins and when proprietary models are worth the cost, see [open source vs proprietary LLMs](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms).',
           ],
           items: [
             '**EU-based organizations:** Must comply with the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) directly. High-risk AI systems (HR, credit, healthcare, public services) require conformity assessments, human oversight documentation, and registration in the [EU AI database](https://digital-strategy.ec.europa.eu/en/policies/ai-office) before August 2026. All AI handling personal data must comply with GDPR — including AI training pipelines and output processing.',
@@ -1112,6 +1113,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**Für Organisationen, die KI deployen, transliert geopolitischer Wettbewerb sich in vier konkrete operative Entscheidungen: welche KI-Tools zulässig sind, wo Daten gespeichert werden können, welche Compliance-Dokumentation erforderlich ist und wie schnell sich Regulierungen ändern.** Diese Entscheidungen unterscheiden sich signifikant abhängig davon, ob die Organisation in der EU ansässig ist, in EU-Märkten funktioniert oder US- oder chinesische KI-Anbieter nutzt.',
             'PromptQuorum unterstützt compliance-bewusste Modell-Auswahl — dispatch Prompts über EU-konforme Modelle (Mistral, lokal Ollama) und US Frontier-Modelle gleichzeitig, erlaubend, dass Sie EU AI Act konforme Optionen gegen proprietäre Alternativen ohne separate Infrastruktur Benchmark.',
+            'Die geopolitischen Dynamiken, die die Modell-Verfügbarkeit gestalten, machen die Open-Source vs. proprietäre Frage besonders relevant. Einen vollständigen Vergleich, wann Open-Source gewinnt und wann proprietäre Modelle den Aufwand wert sind, finden Sie unter [Open Source vs. proprietäre LLMs](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=de).',
           ],
           items: [
             '**EU-basierte Organisationen:** Müssen den EU AI Act direkt befolgen. Hochrisiko-KI-Systeme (HR, Kredit, Gesundheitswesen, öffentliche Services) verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. Alle KI, die personenbezogene Daten behandelt, muss GDPR befolgen — einschließlich KI-Trainings-Pipelines und Output-Verarbeitung.',
@@ -1778,6 +1780,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'Si vous déployez l\'IA globalement, vous naviguez trois régimes complètement différents :',
             'Stratégie recommandée : trois piles tech distinctes (EU stack, US stack, China stack) ou abstraction complète via API cloud (moins de contrôle mais moins de risque réglementaire).',
+            'Les dynamiques géopolitiques qui façonnent la disponibilité des modèles rendent la question open-source vs propriétaire particulièrement pertinente. Pour une comparaison complète de quand l\'open-source gagne et quand les modèles propriétaires valent leur coût, voir [LLMs open source vs propriétaires](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=fr).',
           ],
           items: [
             '**En UE** : conformité obligatoire, audits, documentation, tests de non-discrimination. Coût : 20-30% du budget IA. Bénéfice : légal et éthique.',
@@ -2153,6 +2156,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'ジオポリティクスがプロンプト最適化を変える方法：国ごと',
           content: [
             '**あなたのAI出力が消費される場所は、プロンプトが何をする必要があるか、そして何を避ける必要があるかを決定する。** 言語はモデルパフォーマンスに直接影響を与える：英語で書かれたプロンプトを中国のモデル（ERNIE 4.0、Qwen）に送信することは、同じプロンプトを中国語で書いて送信するより悪い。法律はプロンプト設計に構造的に影響を与える：EU AI法の開示要件、米国セクター規制、中国の CAC コンテンツフィルターはそれぞれ異なる制約を課す、プロンプトをどのように書くことができるか、何の出力が生成できるか、アプリケーションが回答にどのように反応する必要があるかについて。',
+            'モデルの可用性を形成する地政学的ダイナミクスは、オープンソース対プロプライエタリの問いを特に重要にします。オープンソースが勝つ場合とプロプライエタリモデルがコストに見合う場合の完全な比較については、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=ja)をご覧ください。',
           ],
           tableFormat: true,
           columns: ['地域', 'プロンプトの法的制限', '言語最適化', '推奨モデル'],
@@ -2701,6 +2705,7 @@ export const article: Record<Language, PEArticle> = {
             '**合规风险：** 三个矛盾的监管框架（EU AI法案、美国部门法、中国CAC）可能无法同时满足。',
             '**供应链风险：** 芯片（TSMC台湾）、顶级模型（OpenAI美国）、数据（地理分布）的依赖性。中美冲突可能会中断供应链。',
             '**内容审查风险：** 在中国运营意味着接受CAC内容过滤。在欧盟运营意味着接受AI Act披露。在美国运营意味着分散的部门监管。',
+            '塑造模型可用性的地缘政治动态使开源与专有的问题尤为重要。关于开源何时胜出以及专有模型何时物有所值的完整比较，请参阅[开源与专有LLM](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=zh)。',
           ],
         },
 

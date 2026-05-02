@@ -1064,6 +1064,27 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
           </div>
         </section>
 
+        {/* PE hub cross-link */}
+        <section className="mt-16 border-t pt-12 text-center">
+          <p className="text-gray-700 mb-4">
+            {lang === 'de' ? 'Vergleichen ist Schritt eins. Die richtigen Ergebnisse zu erzielen ist Schritt zwei.' :
+             lang === 'fr' ? "Comparer est la première étape. Obtenir d'excellents résultats est la deuxième." :
+             lang === 'ja' ? '比較はステップ1。最高の成果を出すことがステップ2です。' :
+             lang === 'zh' ? '比较是第一步，获得出色结果是第二步。' :
+             'Comparing is step one. Getting great results from each model is step two.'}
+          </p>
+          <Link
+            href={lang === 'en' ? '/prompt-engineering' : `/prompt-engineering?lang=${lang}`}
+            className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+          >
+            {lang === 'de' ? 'Zum Prompt-Engineering-Guide →' :
+             lang === 'fr' ? 'Explorer le Guide de Prompt Engineering →' :
+             lang === 'ja' ? 'プロンプトエンジニアリングガイドを見る →' :
+             lang === 'zh' ? '探索Prompt工程指南 →' :
+             'Explore the Prompt Engineering Guide →'}
+          </Link>
+        </section>
+
         {/* CTA */}
         <div className="mt-14 bg-gradient-to-br from-primary to-primary/70 rounded-2xl p-10 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">{t.ctaH2}</h2>

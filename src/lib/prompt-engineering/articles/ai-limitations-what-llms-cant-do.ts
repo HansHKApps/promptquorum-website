@@ -324,6 +324,7 @@ export const article: Record<Language, PEArticle> = {
         },
         howToStart: {
           title: 'How to Design Prompts That Account for LLM Limitations',
+          content: ['Two of the most effective techniques for compensating for these limitations are chain-of-thought prompting — which externalises reasoning steps and reduces errors — and RAG, which compensates for knowledge cutoffs by retrieving fresh context. See [chain-of-thought prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting) and [RAG explained](https://www.promptquorum.com/prompt-engineering/rag-explained).'],
           numberedItems: [
             '**Identify which limitation applies to your task before writing the prompt.** Factual lookups → knowledge cutoff and hallucination. Multi-step problems → reasoning limitation. Long documents → context window. Cross-session work → memory limitation.',
             '**Provide grounding context explicitly.** Paste in the relevant facts, documents, or data the model needs. Never assume the model has current, accurate, or domain-specific knowledge.',
@@ -703,6 +704,7 @@ export const article: Record<Language, PEArticle> = {
         },
         howToStart: {
           title: 'Wie man Prompts entwirft, die LLM-Einschränkungen berücksichtigen',
+          content: ['Zwei der effektivsten Techniken zur Kompensation dieser Einschränkungen sind Chain-of-Thought-Prompting — das Schlussfolgerungsschritte externalisiert und Fehler reduziert — und RAG, das Wissens-Cutoffs durch das Abrufen aktueller Kontexte kompensiert. Siehe [Chain-of-Thought-Prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de) und [RAG erklärt](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=de).'],
           numberedItems: [
             '**Identifizieren Sie, welche Einschränkung auf Ihre Aufgabe zutrifft, bevor Sie den Prompt schreiben.** Faktenabfragen → Wissens-Cutoff und Halluzination. Mehrstufige Probleme → Schlussfolgerungs-Einschränkung. Lange Dokumente → Kontextfenster. Sitzungsübergreifende Arbeit → Gedächtnis-Einschränkung.',
             '**Stellen Sie explizit Erdungskontext bereit.** Fügen Sie die relevanten Fakten, Dokumente oder Daten ein, die das Modell benötigt. Gehen Sie niemals davon aus, dass das Modell aktuelles, genaues oder domänenspezifisches Wissen hat.',
@@ -1082,6 +1084,7 @@ export const article: Record<Language, PEArticle> = {
         },
         howToStart: {
           title: 'Comment concevoir des prompts tenant compte des limitations des LLMs',
+          content: ['Deux des techniques les plus efficaces pour compenser ces limitations sont le prompting chaîne-de-pensée — qui externalise les étapes de raisonnement et réduit les erreurs — et la RAG, qui compense les coupures de connaissances en récupérant du contexte frais. Voir [prompting chaîne-de-pensée](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=fr) et [RAG expliqué](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=fr).'],
           numberedItems: [
             '**Identifiez quelle limitation s\'applique à votre tâche avant d\'écrire le prompt.** Recherches de faits → coupure de connaissance et hallucination. Problèmes multi-étapes → limitation du raisonnement. Longs documents → fenêtre de contexte. Travail inter-sessions → limitation de mémoire.',
             '**Fournissez explicitement un contexte d\'ancrage.** Collez les faits, documents ou données dont le modèle a besoin. Ne supposez jamais que le modèle dispose de connaissances actuelles, précises ou spécifiques au domaine.',
@@ -1461,6 +1464,7 @@ export const article: Record<Language, PEArticle> = {
     },
     howToStart: {
       title: 'LLM制限を考慮したプロンプトの設計方法',
+      content: ['これらの制限を補う最も効果的な2つの技術は、推論ステップを外部化してエラーを減らすchain-of-thoughtプロンプティングと、新鮮なコンテキストを取得して知識カットオフを補うRAGです。[chain-of-thoughtプロンプティング](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=ja)と[RAG解説](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=ja)をご覧ください。'],
       numberedItems: [
         '**プロンプトを書く前に、タスクに適用される制限を特定します。** 事実検索 → 知識カットオフと幻覚。複数ステップの問題 → 推論制限。長いドキュメント → コンテキストウィンドウ。クロスセッションワーク → メモリ制限。',
         '**グラウンディングコンテキストを明示的に提供します。** モデルが必要とする関連する事実、ドキュメント、またはデータを貼り付けます。モデルが現在、正確、またはドメイン固有の知識を持っていると仮定しないこと。',
@@ -1840,6 +1844,7 @@ zh: {
         },
         howToStart: {
           title: '如何设计考虑大语言模型限制的提示词',
+          content: ['补偿这些限制最有效的两种技术是思维链提示词——它将推理步骤外部化并减少错误——以及RAG，通过检索新鲜上下文来补偿知识截断。请参阅[思维链提示词](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=zh)和[RAG解析](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=zh)。'],
           numberedItems: [
             '**在编写提示词之前识别哪个限制适用于您的任务。** 事实查找 → 知识截断和幻觉。多步问题 → 推理限制。长文档 → 上下文窗口。跨会话工作 → 内存限制。',
             '**明确提供基础上下文。** 粘贴模型需要的相关事实、文档或数据。永远不要假设模型具有当前、准确或特定域知识。',
