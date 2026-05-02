@@ -73,6 +73,9 @@ import { article as a_prompt_review_workflow_for_teams } from "./articles/prompt
 import { article as a_prompt_version_control } from "./articles/prompt-version-control";
 import { article as a_prompt_engineering_setup_small_teams } from "./articles/prompt-engineering-setup-small-teams";
 import { article as a_prompts_for_reliable_structured_data } from "./articles/prompts-for-reliable-structured-data";
+import { article as a_build_your_own_framework } from "./articles/build-your-own-framework";
+import { article as a_prompt_governance_production } from "./articles/prompt-governance-production";
+import { article as a_prompt_documentation_templates } from "./articles/prompt-documentation-templates";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -143,4 +146,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "prompt-version-control": a_prompt_version_control,
   "pe-setup-small-teams": a_prompt_engineering_setup_small_teams,
   "prompts-for-reliable-structured-data": a_prompts_for_reliable_structured_data,
+  "build-your-own-framework": a_build_your_own_framework,
+  "prompt-governance-production": a_prompt_governance_production,
+  "prompt-documentation-templates": a_prompt_documentation_templates,
 };
