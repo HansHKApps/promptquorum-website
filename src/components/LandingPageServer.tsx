@@ -483,13 +483,13 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
               <span>•</span>
               <span>{t.langs}</span>
             </div>
-            <div className="flex items-center justify-center gap-4 text-xs">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
               <a href="/about" className="hover:text-primary transition-colors">About</a>
-              <span>•</span>
+              <span aria-hidden="true">•</span>
               <a href="/frameworks" className="hover:text-primary transition-colors">Frameworks</a>
-              <span>•</span>
+              <span aria-hidden="true">•</span>
               <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <span>•</span>
+              <span aria-hidden="true">•</span>
               <a href="mailto:hello@promptquorum.com" className="hover:text-primary transition-colors">hello@promptquorum.com</a>
             </div>
           </div>

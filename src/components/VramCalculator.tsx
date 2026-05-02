@@ -239,9 +239,9 @@ export function VramCalculator() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* Model Size */}
-        <div>
+        <div className="relative">
           <div className="block mb-2">
             <LabelWithInfo name="Model Size" tooltipKey="modelSize" />
           </div>
@@ -264,12 +264,12 @@ export function VramCalculator() {
         </div>
 
         {/* Quantization */}
-        <div>
+        <div className="relative">
           <div className="block mb-2">
             <LabelWithInfo name="Quantization" tooltipKey="quantization" />
           </div>
           {activeTooltip === 'quantization' && (
-            <div className="absolute top-12 left-80 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg max-w-xs text-xs">
+            <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
               <p className="font-semibold mb-1">{TOOLTIPS.quantization.title}</p>
               <p>{TOOLTIPS.quantization.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
@@ -287,12 +287,12 @@ export function VramCalculator() {
         </div>
 
         {/* Context Length */}
-        <div>
+        <div className="relative">
           <div className="block mb-2">
             <LabelWithInfo name="Context" tooltipKey="context" />
           </div>
           {activeTooltip === 'context' && (
-            <div className="absolute top-12 left-96 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg max-w-xs text-xs">
+            <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
               <p className="font-semibold mb-1">{TOOLTIPS.context.title}</p>
               <p>{TOOLTIPS.context.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
@@ -310,12 +310,12 @@ export function VramCalculator() {
         </div>
 
         {/* Batch Size */}
-        <div>
+        <div className="relative">
           <div className="block mb-2">
             <LabelWithInfo name="Batch Size" tooltipKey="batchSize" />
           </div>
           {activeTooltip === 'batchSize' && (
-            <div className="absolute top-12 left-1/2 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg max-w-xs text-xs">
+            <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
               <p className="font-semibold mb-1">{TOOLTIPS.batchSize.title}</p>
               <p>{TOOLTIPS.batchSize.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
@@ -333,12 +333,12 @@ export function VramCalculator() {
         </div>
 
         {/* Use Case */}
-        <div>
+        <div className="relative">
           <div className="block mb-2">
             <LabelWithInfo name="Use Case" tooltipKey="useCase" />
           </div>
           {activeTooltip === 'useCase' && (
-            <div className="absolute top-12 right-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg max-w-xs text-xs">
+            <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
               <p className="font-semibold mb-1">{TOOLTIPS.useCase.title}</p>
               <p>{TOOLTIPS.useCase.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
