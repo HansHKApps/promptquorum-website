@@ -76,6 +76,11 @@ import { article as a_prompts_for_reliable_structured_data } from "./articles/pr
 import { article as a_build_your_own_framework } from "./articles/build-your-own-framework";
 import { article as a_prompt_governance_production } from "./articles/prompt-governance-production";
 import { article as a_prompt_documentation_templates } from "./articles/prompt-documentation-templates";
+import { article as a_multi_model_prompt_testing } from "./articles/multi-model-prompt-testing";
+import { article as a_prompt_audit_regression } from "./articles/prompt-audit-regression";
+import { article as a_prompt_library_team_management } from "./articles/prompt-library-team-management";
+import { article as a_prompt_security_tools } from "./articles/prompt-security-tools";
+import { article as a_prompts_to_repeatable_workflows } from "./articles/prompts-to-repeatable-workflows";
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -149,4 +154,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "build-your-own-framework": a_build_your_own_framework,
   "prompt-governance-production": a_prompt_governance_production,
   "prompt-documentation-templates": a_prompt_documentation_templates,
+  "multi-model-prompt-testing": a_multi_model_prompt_testing,
+  "prompt-audit-regression": a_prompt_audit_regression,
+  "prompt-library-management": a_prompt_library_team_management,
+  "prompt-security-tools": a_prompt_security_tools,
+  "prompts-to-repeatable-workflows": a_prompts_to_repeatable_workflows,
 };
