@@ -3403,8 +3403,8 @@ schema: {
             'LM Studio. (2026). « Documentation de LM Studio et notes de publication. » lmstudio.ai. https://lmstudio.ai/docs -- Guides d\'installation officiels, documentation API et informations de compatibilité matérielle.',
             'Hugging Face. (2026). « Hub de modèles GGUF. » https://huggingface.co/models?library=gguf -- Répertoire complet des modèles quantifiés GGUF compatibles avec le navigateur de modèles de LM Studio.',
             'Contributeurs llama.cpp. (2026). « llama.cpp -- Moteur d\'inférence CPU/GPU. » https://github.com/ggerganov/llama.cpp -- Backend d\'inférence utilisé par LM Studio, avec données de compatibilité matérielle et de performance.',
-          ,
-            'LM Studio est installé et votre premier modèle est chargé. L'étape suivante : apprendre à le promter efficacement. Commencez par les [fondamentaux du prompt engineering](https://www.promptquorum.com/prompt-engineering) — 16 guides couvrant les éléments que chaque invite doit avoir, des paramètres de température à la mise en forme.'],
+            'LM Studio est installé et votre premier modèle est chargé. L\'étape suivante : apprendre à le promter efficacement. Commencez par les [fondamentaux du prompt engineering](https://www.promptquorum.com/prompt-engineering) — 16 guides couvrant les éléments que chaque invite doit avoir, des paramètres de température à la mise en forme.',
+          ],
         },
       },
 schema: {
