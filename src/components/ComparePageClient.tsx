@@ -878,61 +878,62 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
         <section className="pt-14 pb-14 border-b border-gray-100" id="comparison-table">
           <h2 className="text-2xl font-bold text-text-primary mb-2 tracking-tight">{t.tableH2}</h2>
           <p className="text-text-secondary mb-6">{t.tablePara}</p>
-          <div className="overflow-x-auto rounded-xl border border-gray-200">
+          <div className="relative overflow-x-auto rounded-xl border border-gray-200">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="text-left py-3 px-4 text-text-primary font-semibold text-xs uppercase tracking-wider">{t.tableToolCol}</th>
-                  <th className="text-left py-3 px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableDispatchCol}</th>
-                  <th className="text-left py-3 px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableConsensusCol}</th>
-                  <th className="text-left py-3 px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableLocalCol}</th>
-                  <th className="text-left py-3 px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableApiCol}</th>
-                  <th className="text-left py-3 px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider">{t.tablePriceCol}</th>
+                  <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-semibold text-xs uppercase tracking-wider sticky left-0 z-10 bg-gray-50">{t.tableToolCol}</th>
+                  <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableDispatchCol}</th>
+                  <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableConsensusCol}</th>
+                  <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableLocalCol}</th>
+                  <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{t.tableApiCol}</th>
+                  <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider">{t.tablePriceCol}</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-primary/5 border-b border-primary/10">
-                  <td className="py-3 px-4 text-primary font-semibold">PromptQuorum</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Quorum Verdict</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Ollama + LM Studio</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Your keys</td>
-                  <td className="py-3 px-4 text-text-secondary">Free beta</td>
+                <tr className="bg-primary/5 border-b border-primary/10 group">
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-primary font-semibold sticky left-0 z-10 bg-primary/5 group-hover:bg-primary/5 transition-colors">PromptQuorum</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Quorum Verdict</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Ollama + LM Studio</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Your keys</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free beta</td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-4 text-text-primary font-medium">Poe (Quora)</td>
-                  <td className="py-3 px-4 text-amber-500">~ Sequential / limited</td>
-                  <td className="py-3 px-4 text-red-400">✗ No</td>
-                  <td className="py-3 px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-3 px-4 text-amber-500">~ Limited</td>
-                  <td className="py-3 px-4 text-text-secondary">Free / $19.99/mo</td>
+                <tr className="border-b border-gray-100 group">
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">Poe (Quora)</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Sequential / limited</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Limited</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free / $19.99/mo</td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-4 text-text-primary font-medium">LM Arena</td>
-                  <td className="py-3 px-4 text-amber-500">~ 2 models only</td>
-                  <td className="py-3 px-4 text-amber-500">~ Human voting only</td>
-                  <td className="py-3 px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-3 px-4 text-red-400">✗ No</td>
-                  <td className="py-3 px-4 text-text-secondary">Free</td>
+                <tr className="border-b border-gray-100 group">
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">LM Arena</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ 2 models only</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Human voting only</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free</td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-4 text-text-primary font-medium">OpenMark</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Parallel</td>
-                  <td className="py-3 px-4 text-amber-500">~ Deterministic scoring</td>
-                  <td className="py-3 px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-3 px-4 text-text-secondary">Free tier / credits</td>
+                <tr className="border-b border-gray-100 group">
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">OpenMark</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Parallel</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Deterministic scoring</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free tier / credits</td>
                 </tr>
-                <tr>
-                  <td className="py-3 px-4 text-text-primary font-medium">AiZolo</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-3 px-4 text-red-400">✗ No</td>
-                  <td className="py-3 px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-3 px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-3 px-4 text-text-secondary">From $9.90/mo</td>
+                <tr className="group">
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">AiZolo</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">From $9.90/mo</td>
                 </tr>
               </tbody>
             </table>
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
           </div>
           <p className="text-xs font-mono text-text-secondary mt-3">{t.tableFootnote}</p>
         </section>

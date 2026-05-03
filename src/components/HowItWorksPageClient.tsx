@@ -596,25 +596,26 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
             <h2 className="text-3xl font-bold text-text-primary mb-3">{t.frameworksH2}</h2>
             <p className="text-text-secondary max-w-2xl mx-auto">{t.frameworksDesc}</p>
           </div>
-          <div className="overflow-x-auto">
+          <div className="relative overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-primary/20">
-                  <th className="text-left py-3 pr-6 font-semibold text-text-primary">{t.frameworkCol}</th>
-                  <th className="text-left py-3 pr-6 font-semibold text-text-primary hidden md:table-cell">{t.fieldsCol}</th>
-                  <th className="text-left py-3 font-semibold text-text-primary">{t.bestCol}</th>
+                  <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary sticky left-0 z-10 bg-white">{t.frameworkCol}</th>
+                  <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary hidden md:table-cell">{t.fieldsCol}</th>
+                  <th className="text-left py-2 sm:py-3 font-semibold text-text-primary">{t.bestCol}</th>
                 </tr>
               </thead>
               <tbody>
                 {t.frameworks.map((f, i) => (
-                  <tr key={i} className="border-b border-primary/10 hover:bg-surface transition-colors">
-                    <td className="py-3 pr-6 font-semibold text-primary whitespace-nowrap">{f.name}</td>
-                    <td className="py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">{f.fields || '—'}</td>
-                    <td className="py-3 text-text-secondary">{f.best}</td>
+                  <tr key={i} className="border-b border-primary/10 hover:bg-surface transition-colors group">
+                    <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap sticky left-0 z-10 bg-white group-hover:bg-surface transition-colors">{f.name}</td>
+                    <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">{f.fields || '—'}</td>
+                    <td className="py-2 sm:py-3 text-text-secondary">{f.best}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
           </div>
         </div>
       </div>

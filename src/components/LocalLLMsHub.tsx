@@ -1012,26 +1012,27 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           <h2 className="text-2xl font-bold text-text-primary mb-6">
             {HUB_NEW_APRIL_HEADING[lang] ?? HUB_NEW_APRIL_HEADING['en']}
           </h2>
-          <div className="overflow-x-auto">
+          <div className="relative overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-primary/20">
-                  {(HUB_NEW_APRIL_COLS[lang] ?? HUB_NEW_APRIL_COLS['en']).map((col) => (
-                    <th key={col} className="text-left py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide">{col}</th>
+                  {(HUB_NEW_APRIL_COLS[lang] ?? HUB_NEW_APRIL_COLS['en']).map((col, colIdx) => (
+                    <th key={col} className={`text-left py-1.5 sm:py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide${colIdx === 0 ? ' sticky left-0 z-10 bg-white' : ''}`}>{col}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {(HUB_NEW_APRIL_MODELS[lang] ?? HUB_NEW_APRIL_MODELS['en']).map((row, i) => (
-                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/3">
-                    <td className="py-2.5 pr-4 font-medium text-text-primary">{row.name}</td>
-                    <td className="py-2.5 pr-4 font-mono text-xs text-text-secondary bg-primary/5 px-2 rounded">{row.pull}</td>
-                    <td className="py-2.5 pr-4 text-text-secondary">{row.vram}</td>
-                    <td className="py-2.5 text-text-secondary">{row.note}</td>
+                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/3 group">
+                    <td className={`py-1.5 sm:py-2.5 pr-4 font-medium text-text-primary${i % 2 === 0 ? ' bg-white' : ''} sticky left-0 z-10 group-hover:bg-primary/3 transition-colors`}>{row.name}</td>
+                    <td className="py-1.5 sm:py-2.5 pr-4 font-mono text-xs text-text-secondary bg-primary/5 px-2 rounded">{row.pull}</td>
+                    <td className="py-1.5 sm:py-2.5 pr-4 text-text-secondary">{row.vram}</td>
+                    <td className="py-1.5 sm:py-2.5 text-text-secondary">{row.note}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
           </div>
         </section>
 
@@ -1040,26 +1041,27 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           <h2 className="text-2xl font-bold text-text-primary mb-6">
             {HUB_COMPARISON_HEADING[lang] ?? HUB_COMPARISON_HEADING['en']}
           </h2>
-          <div className="overflow-x-auto">
+          <div className="relative overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-primary/20">
-                  {(HUB_COMPARISON_COLS[lang] ?? HUB_COMPARISON_COLS['en']).map((col) => (
-                    <th key={col} className="text-left py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide">{col}</th>
+                  {(HUB_COMPARISON_COLS[lang] ?? HUB_COMPARISON_COLS['en']).map((col, colIdx) => (
+                    <th key={col} className={`text-left py-1.5 sm:py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide${colIdx === 0 ? ' sticky left-0 z-10 bg-white' : ''}`}>{col}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {(HUB_COMPARISON_ROWS[lang] ?? HUB_COMPARISON_ROWS['en']).map((row, i) => (
-                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/3">
-                    <td className="py-2.5 pr-4 font-medium text-text-primary">{row.feature}</td>
-                    <td className="py-2.5 pr-4 text-text-secondary">{row.ollama}</td>
-                    <td className="py-2.5 pr-4 text-text-secondary">{row.lmstudio}</td>
-                    <td className="py-2.5 text-text-secondary">{row.janai}</td>
+                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/3 group">
+                    <td className={`py-1.5 sm:py-2.5 pr-4 font-medium text-text-primary${i % 2 === 0 ? ' bg-white' : ''} sticky left-0 z-10 group-hover:bg-primary/3 transition-colors`}>{row.feature}</td>
+                    <td className="py-1.5 sm:py-2.5 pr-4 text-text-secondary">{row.ollama}</td>
+                    <td className="py-1.5 sm:py-2.5 pr-4 text-text-secondary">{row.lmstudio}</td>
+                    <td className="py-1.5 sm:py-2.5 text-text-secondary">{row.janai}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
           </div>
         </section>
 

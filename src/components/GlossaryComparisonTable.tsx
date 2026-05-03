@@ -73,30 +73,31 @@ export function GlossaryComparisonTable() {
     <section className="my-10">
       <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-2">Commonly Confused AI Terms</h2>
       <p className="text-text-secondary text-sm mb-6">Quick reference for 10 term pairs that are frequently misunderstood or used interchangeably.</p>
-      <div className="overflow-x-auto rounded-xl border border-primary/20">
+      <div className="relative overflow-x-auto rounded-xl border border-primary/20">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="border-b border-primary/20 bg-primary/5">
-              <th className="px-4 py-3 text-left font-bold text-text-primary text-xs uppercase tracking-wider">Category</th>
-              <th className="px-4 py-3 text-left font-bold text-primary text-xs uppercase tracking-wider">Term A</th>
-              <th className="px-4 py-3 text-left font-bold text-primary text-xs uppercase tracking-wider">Term B</th>
-              <th className="px-4 py-3 text-left font-bold text-text-primary text-xs uppercase tracking-wider">Key Difference</th>
+              <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-bold text-text-primary text-xs uppercase tracking-wider sticky left-0 z-10 bg-primary/5">Category</th>
+              <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-bold text-primary text-xs uppercase tracking-wider">Term A</th>
+              <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-bold text-primary text-xs uppercase tracking-wider">Term B</th>
+              <th className="px-2 sm:px-4 py-2 sm:py-3 text-left font-bold text-text-primary text-xs uppercase tracking-wider">Key Difference</th>
             </tr>
           </thead>
           <tbody>
             {CONFUSED_PAIRS.map((row, idx) => (
               <tr
                 key={idx}
-                className={`border-b border-primary/10 transition-colors hover:bg-primary/5 ${idx % 2 === 0 ? 'bg-white' : 'bg-surface/50'}`}
+                className={`border-b border-primary/10 transition-colors hover:bg-primary/5 group ${idx % 2 === 0 ? 'bg-white' : 'bg-surface/50'}`}
               >
-                <td className="px-4 py-3 text-xs text-text-secondary font-medium whitespace-nowrap">{row.category}</td>
-                <td className="px-4 py-3 font-semibold text-primary whitespace-nowrap">{row.termA}</td>
-                <td className="px-4 py-3 font-semibold text-primary whitespace-nowrap">{row.termB}</td>
-                <td className="px-4 py-3 text-text-secondary leading-relaxed">{row.difference}</td>
+                <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs text-text-secondary font-medium whitespace-nowrap sticky left-0 z-10 group-hover:bg-primary/5 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-surface/50'}">{row.category}</td>
+                <td className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-primary whitespace-nowrap">{row.termA}</td>
+                <td className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-primary whitespace-nowrap">{row.termB}</td>
+                <td className="px-2 sm:px-4 py-2 sm:py-3 text-text-secondary leading-relaxed">{row.difference}</td>
               </tr>
             ))}
           </tbody>
         </table>
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
       </div>
     </section>
   )
