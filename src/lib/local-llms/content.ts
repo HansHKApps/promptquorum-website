@@ -22234,9 +22234,7 @@ schema: {
       ],
     },
   },
-}
-
-    fr: {
+  fr: {
   theme: 'Meilleurs modèles',
   title: 'Comment exécuter un modèle LLM 70B local sur du matériel grand public en 2026',
   seoTitle: 'Modèles 70B sur Matériel Grand Public 2026: Guide',
@@ -22735,9 +22733,7 @@ schema: {
       ],
     },
   },
-}
-
-    zh: {
+  zh: {
   theme: '最佳模型',
   title: '如何在消费级硬件上运行 70B 本地大模型 (2026)',
   seoTitle: '2026消费级硬件运行70B完整指南',
@@ -23066,8 +23062,6 @@ schema: {
       },
     ],
   },
-}
-
   },
 
   'llm-quantization-explained': {
