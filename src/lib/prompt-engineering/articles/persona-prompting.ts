@@ -829,21 +829,26 @@ export const article: Record<Language, PEArticle> = {
     },
 
     fr: {
+      freshness_tier: 'evergreen',
       theme: 'Techniques',
       title: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
       intro: 'Le persona prompting est la pratique structurée d\'attribuer une IA à un rôle clair, une vision du monde et des comportements prédéfinis pour qu\'elle réponde de manière fiable et cohérente comme un expert spécifique ou un professionnel.',
+      seoTitle: 'Persona Prompting : Débloquez un Comportement IA Stable',
       publishDate: '2026-03-26',
-      readTime: '9 min de lecture',
+      readTime: '13 min de lecture',
       educationalLevel: 'Intermediate',
-      metaDescription: 'Persona Prompting : Créez des rôles stables pour GPT-5.5, Claude, Gemini et renforcez la cohérence des réponses IA sans entraînement.',
+      audience: 'Ingénieurs logiciels, chefs de produit, équipes déployant des assistants IA à l\'échelle',
+      metaDescription: 'Maîtrisez le persona prompting pour créer des IA stables et fiables sans fine-tuning. Apprenez les 7 éléments clés, les modèles pratiques et les stratégies de test multi-modèles.',
       primaryTerm: 'Persona Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=fr',
+        'inLanguage': 'fr',
         headline: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
         description: 'Créer des personas stables pour contrôler le comportement de l\'IA, les sept éléments clés, des exemples pratiques et comment tester les personas sur plusieurs modèles.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-05-03',
         keywords: ['persona prompting', 'prompt engineering', 'comportement IA', 'prompting basé sur rôles', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -854,6 +859,29 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Points clés',
+          numberedItems: [
+            'Le persona prompting verrouille le comportement de l\'IA en définissant rôle, domaine d\'expertise et règles de décision avant votre tâche — rendant les réponses prévisibles entre sessions et modèles.',
+            'Les sept éléments sont : rôle (qui), champ d\'expertise (quoi), objectifs (priorités), contraintes (limites), style d\'interaction (comment), exemples (bon/mauvais) et gestion de l\'incertitude (quand hésitant).',
+            'Les personas réduisent les hallucinations en restreignant la logique du modèle à une « identité » cohérente plutôt que d\'improviser un nouveau style à chaque requête.',
+            'Testez les personas sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et Mistral Large pour voir quel modèle adhère le mieux — aucun modèle ne suit tous les personas de manière égale.',
+            'Le persona prompting est réversible en secondes et fonctionne entre fournisseurs, le rendant portable et moins cher que le fine-tuning pour les changements de comportement.',
+            'Utilisez des seuils numériques (confiance %, limites de tokens, niveau de lecture) pour aider les modèles à suivre les règles ; les modèles comme GPT-5.5 cartographient ceux-ci directement sur les paramètres de décodage interne.',
+          ],
+        },
+        quickFacts: {
+          title: 'Faits rapides',
+          items: [
+            'Technique centrale : Ajouter rôle, domaine et contraintes au message système avant votre tâche.',
+            'Éléments clés : 7 composants (rôle, scope, objectifs, constraints, style, exemples, gestion incertitude) rendent les personas lisibles par machines.',
+            'Impact comportemental : Les personas réduisent les erreurs de format de >50% et augmentent la conformité aux contraintes par rapport aux prompts génériques.',
+            'Avantage multi-modèles : Un même persona se comporte différemment sur GPT-5.5, Claude et Gemini — nécessite des tests intentionnels.',
+            'Réutilisabilité : Les personas compacts (400–600 tokens) sont partageables au sein des équipes et entre projets.',
+            'Aucun entraînement requis : Contrairement au fine-tuning, les personas fonctionnent chez tout fournisseur sans retreinement du modèle.',
+          ],
+        },
         whatIsPersonaPrompting: {
           title: 'Qu\'est-ce que le Persona Prompting',
           content: [
@@ -991,23 +1019,28 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     ja: {
+      freshness_tier: 'evergreen',
       theme: 'Techniques',
       title: 'ペルソナプロンプティング：AIに役割を与えて性能を飛躍させる',
       intro: 'ペルソナプロンプティングとは、AIモデルに対して明確な役割、世界観、行動パターンを定義する手法です。これにより、複数のプロンプトやセッションにわたって、特定の専門家やキャラクターのように一貫した回答を得られます。',
+      seoTitle: 'ペルソナプロンプティング：安定したAI専門家を解放する',
       publishDate: '2026-03-26',
-      readTime: '10分で読める',
+      readTime: '13分で読める',
       educationalLevel: 'Intermediate',
-      metaDescription: 'ペルソナプロンプティングの実践ガイド。役割定義、建築ブロック、実例を通じて、AIモデルの動作を安定させ、正確な回答を引き出す方法を解説します。',
+      audience: 'ソフトウェアエンジニア、プロダクトマネージャー、スケール規模でAIアシスタントを展開するチーム',
+      metaDescription: 'ペルソナプロンプティングをマスターし、ファインチューニングなしで安定した信頼性の高いAI専門家を作成します。7つの主要要素、実践的なテンプレート、マルチモデルテスト戦略を学んでください。',
       primaryTerm: 'ペルソナプロンプティング',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=ja',
+        'inLanguage': 'ja',
         headline: 'ペルソナプロンプティング：AIに役割を与えて性能を飛躍させる',
         description: 'ペルソナプロンプティングとは何か、なぜ重要か、中核となる構築要素、実践的な例、複数のAIモデルでのテスト方法を解説します。',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-05-03',
         keywords: ['ペルソナプロンプティング', 'プロンプトエンジニアリング', 'AI動作制御', '役割ベースプロンプティング', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
@@ -1016,6 +1049,29 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       sections: {
+        tldr: {
+          isTldr: true,
+          title: '重要ポイント',
+          numberedItems: [
+            'ペルソナプロンプティングは、タスクの前にロール、専門分野、意思決定ルールを定義することで、AI動作をロックします。これにより、セッション全体とモデル全体で応答が予測可能になります。',
+            '7つの要素は：ロール（誰）、分野範囲（何）、目標（優先順位）、制約（制限）、相互作用スタイル（どのように）、例（良い/悪い）、不確実性の取り扱い（躊躇時）です。',
+            'ペルソナは、モデルの推論を一貫した「アイデンティティ」に制限することで幻覚を減らします。毎回新しいスタイルを創作する代わりにです。',
+            'GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、Mistral Largeでペルソナをテストして、どのモデルが最もよく従うかを確認してください。単一モデルが全ペルソナに等しく従うわけではありません。',
+            'ペルソナプロンプティングは数秒で可逆で、プロバイダー全体で機能し、動作変更の際にファインチューニングより安価です。',
+            '数値しきい値（信頼度％、トークン制限、読書レベル）を使用してモデルがルールに従うのを支援します。GPT-5.5などのモデルはこれを内部デコーディング パラメータに直接マップします。',
+          ],
+        },
+        quickFacts: {
+          title: 'クイック ファクト',
+          items: [
+            'コア技術：システムメッセージにロール、ドメイン、制約を追加してからタスクを実行します。',
+            'ビルディングブロック：7つのコンポーネント（ロール、スコープ、目標、制約、スタイル、例、不確実性処理）がペルソナを機械読み取り可能にします。',
+            '動作への影響：ペルソナは汎用プロンプトと比較してフォーマットエラーを50%以上削減し、制約遵守を増加させます。',
+            'マルチモデルの利点：同じペルソナはGPT-5.5、Claude、Geminで異なった動作をします。意図的なテストが必要です。',
+            '再利用性：コンパクトペルソナ（400～600トークン）はチーム内およびプロジェクト全体で共有可能です。',
+            'トレーニング不要：ファインチューニングとは異なり、ペルソナはすべてのプロバイダーでモデル再トレーニングなしで機能します。',
+          ],
+        },
         whatIsPersonaPrompting: {
           title: 'ペルソナプロンプティングとは何か',
           content: [
@@ -1178,23 +1234,28 @@ export const article: Record<Language, PEArticle> = {
     },
 
     zh: {
+      freshness_tier: 'evergreen',
       theme: 'Techniques',
       title: '人物角色提示：给AI分配角色，提升工作效率',
       intro: '人物角色提示是一种为AI模型定义明确角色、世界观和行为模式的方法。这样可以确保在多个提示和会话中，AI能够像特定的专家或角色一样一致地回答问题。',
+      seoTitle: '人物角色提示：解锁稳定的AI专家',
       publishDate: '2026-03-26',
-      readTime: '阅读约10分钟',
+      readTime: '阅读约13分钟',
       educationalLevel: 'Intermediate',
-      metaDescription: '人物角色提示实践指南。通过角色定义、核心构建块和实际案例，学习如何稳定AI模型的输出并获得更准确的答案。',
+      audience: '软件工程师、产品经理、大规模部署AI助手的团队',
+      metaDescription: '掌握人物角色提示，无需微调即可创建稳定可靠的AI专家。学习7个关键要素、实用模板和多模型测试策略。',
       primaryTerm: '人物角色提示',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=zh',
+        'inLanguage': 'zh',
         headline: '人物角色提示：给AI分配角色，提升工作效率',
         description: '了解什么是人物角色提示、为何重要、核心构建块、实际示例以及如何在多个AI模型上进行测试。',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-05-03',
         keywords: ['人物角色提示', '提示工程', 'AI行为控制', '基于角色的提示', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: '提示工程' },
@@ -1203,6 +1264,29 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       sections: {
+        tldr: {
+          isTldr: true,
+          title: '核心要点',
+          numberedItems: [
+            '人物角色提示通过定义角色、专业领域和决策规则来锁定AI行为，使响应在会话和模型中可预测。',
+            '七个要素包括：角色（谁）、领域范围（什么）、目标（优先级）、限制（边界）、交互风格（如何）、示例（好/坏）和不确定性处理（当不确定时）。',
+            '人物角色通过将模型的推理限制在一致的"身份"上而减少幻觉，而不是每次创造新风格。',
+            '在GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和Mistral Large上测试人物角色，看哪个模型最好地遵循——没有单一模型在所有人物角色上表现相同。',
+            '人物角色提示在数秒内可逆，跨提供商工作，使其便携且成本低于改变行为的微调。',
+            '使用数值阈值（置信度％、令牌限制、阅读水平）帮助模型遵循规则；GPT-5.5等模型将这些直接映射到内部解码参数。',
+          ],
+        },
+        quickFacts: {
+          title: '快速事实',
+          items: [
+            '核心技术：在提出任务之前，向系统消息添加角色、领域和限制。',
+            '构建块：7个组件（角色、范围、目标、限制、风格、示例、不确定性处理）使人物角色机器可读。',
+            '行为影响：与通用提示相比，人物角色减少>50%的格式错误并增加约束遵守。',
+            '多模型优势：相同的人物角色在GPT-5.5、Claude和Gemini上表现不同——需要有意的测试。',
+            '可重用性：紧凑的人物角色（400–600令牌）可在团队和项目中共享。',
+            '无需训练：与微调不同，人物角色在所有提供商上无模型再训练即可工作。',
+          ],
+        },
         whatIsPersonaPrompting: {
           title: '什么是人物角色提示',
           content: [
