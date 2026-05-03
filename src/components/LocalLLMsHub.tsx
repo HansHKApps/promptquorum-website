@@ -305,6 +305,50 @@ const HUB_COMING_SOON: Record<string, string> = {
   zh: '更多指南即将推出。',
 }
 
+const HUB_PE_SIDEBAR_TITLE: Record<string, string> = {
+  en: 'Improve Your Results',
+  de: 'Verbessern Sie Ihre Ergebnisse',
+  fr: 'Améliorez Vos Résultats',
+  ja: '結果を改善する',
+  zh: '改进您的结果',
+}
+
+const HUB_PE_SIDEBAR_BODY: Record<string, string> = {
+  en: 'Running a local model? Your output quality depends on how you prompt it. Learn systematic techniques to get better answers from any local LLM.',
+  de: 'Führen Sie ein lokales Modell aus? Die Ausgabequalität hängt davon ab, wie Sie es prompten. Lernen Sie systematische Techniken, um bessere Antworten von jedem lokalen LLM zu erhalten.',
+  fr: 'Vous utilisez un modèle local ? La qualité de sortie dépend de la manière dont vous le promptez. Apprenez des techniques systématiques pour obtenir de meilleures réponses de n\'importe quel LLM local.',
+  ja: 'ローカルモデルを実行していますか？出力品質はプロンプト作成方法に依存します。ローカルLLMからより良い答えを得るための体系的な技法を学びます。',
+  zh: '运行本地模型？输出质量取决于您如何提示它。学习系统化技术以从任何本地LLM获得更好的答案。',
+}
+
+const HUB_PE_SIDEBAR_LINKS: Record<string, { label: string; href: string }[]> = {
+  en: [
+    { label: 'Prompt Engineering Guide', href: 'https://www.promptquorum.com/prompt-engineering' },
+    { label: 'What Is Prompt Engineering?', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
+    { label: 'Chain-of-Thought Prompting', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
+  ],
+  de: [
+    { label: 'Prompt Engineering Leitfaden', href: 'https://www.promptquorum.com/prompt-engineering' },
+    { label: 'Was ist Prompt Engineering?', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
+    { label: 'Chain-of-Thought-Prompting', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
+  ],
+  fr: [
+    { label: 'Guide du Prompt Engineering', href: 'https://www.promptquorum.com/prompt-engineering' },
+    { label: 'Qu\'est-ce que le Prompt Engineering?', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
+    { label: 'Chain-of-Thought Prompting', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
+  ],
+  ja: [
+    { label: 'プロンプトエンジニアリングガイド', href: 'https://www.promptquorum.com/prompt-engineering' },
+    { label: 'プロンプトエンジニアリングとは', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
+    { label: 'チェーン・オブ・ソート・プロンプティング', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
+  ],
+  zh: [
+    { label: '提示词工程指南', href: 'https://www.promptquorum.com/prompt-engineering' },
+    { label: '什么是提示词工程', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
+    { label: '链式推理提示词', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
+  ],
+}
+
 const HUB_GETTING_STARTED_LINK: Record<string, string> = {
   en: 'Start with Getting Started',
   de: 'Mit „Erste Schritte" beginnen',
@@ -960,6 +1004,25 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* PE Sidebar */}
+          <div className="mb-10 bg-blue-950/20 border border-blue-900/30 rounded-xl p-6">
+            <h3 className="text-lg font-bold text-blue-100 mb-2">
+              {HUB_PE_SIDEBAR_TITLE[lang] ?? HUB_PE_SIDEBAR_TITLE['en']}
+            </h3>
+            <p className="text-sm text-blue-200 mb-4">
+              {HUB_PE_SIDEBAR_BODY[lang] ?? HUB_PE_SIDEBAR_BODY['en']}
+            </p>
+            <div className="space-y-2">
+              {(HUB_PE_SIDEBAR_LINKS[lang] ?? HUB_PE_SIDEBAR_LINKS['en']).map((link, i) => (
+                <div key={i}>
+                  <Link href={link.href} className="text-blue-300 hover:text-blue-200 text-sm font-medium transition-colors">
+                    → {link.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Image 1: VRAM Requirements */}
