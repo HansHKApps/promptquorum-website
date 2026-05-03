@@ -1042,6 +1042,44 @@ export const article: Record<Language, PEArticle> = {
           '**共识方法：** PromptQuorum的共识评分对模型输出取平均值或使用投票机制——当准确性至关重要且没有单一模型足够可靠时很有用。',
         ],
       },
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        content: '多模型提示词测试在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Flash等2个或以上AI模型上运行相同提示词，并根据格式、冗长性、准确性、指令遵守和语气比较输出。使用10-20个测试用例和1/2/3评分标准构建测试矩阵，以定量依据选择最适合部署的模型。低于最高分数80%的模型应在选择前修复提示词。使用PromptQuorum进行免费的并排比较，或使用Promptfoo进行基于YAML配置的测试自动化和CI/CD集成。对于在中国、东南亚或日本部署的企业应用，在多模型测试中包括数据主权验证（中国《数据安全法》、PDPA、METI AI治理）。',
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: '什么是多模型提示词测试？', a: '多模型提示词测试是在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Flash等两个或更多AI模型上运行相同提示词，并根据格式合规性、详细程度、事实准确性和指令遵守等定义标准比较输出的实践方法。' },
+          { q: '为什么相同提示词在不同模型上产生不同输出？', a: '每个模型在不同的数据分布上训练，具有不同的RLHF偏好，导致详细程度、语气、格式合规性和指令遵守方面有不同的默认值。' },
+          { q: '多模型测试矩阵需要多少测试用例？', a: '获得可靠信号至少需要10个测试用例。建议15至20个，覆盖典型输入、边缘情况和对抗性输入。' },
+          { q: '哪些工具支持多模型提示词测试？', a: 'PromptQuorum可同时将一个提示词发送到所有模型，免费显示并排比较。Promptfoo是开源的基于配置文件的工具，支持GPT-4o、Claude、Gemini和Llama 3.2等本地模型。' },
+          { q: '中国《数据安全法》对多模型测试有什么要求？', a: '中国《数据安全法》（2021年）要求敏感数据处理和跨境传输必须获得许可。在多模型选择时，验证每个模型是否支持本地化部署、数据不出境，或是否需要与国内云供应商（阿里、腾讯、华为）的本地API对接。Qwen 2.5等国产大模型自动符合中国数据驻留要求。' },
+          { q: '亚太地区（东南亚、日本、印度）多模型部署的最佳实践是什么？', a: '亚太地区有严格的数据主权要求。日本METI AI治理框架2024要求模型审计日志和可解释性文档。东南亚PDPA标准（泰国、新加坡、越南、印度尼西亚）要求数据驻留验证。在多模型测试中，为每个目标市场验证合规性：日本选择支持日语和METI合规性的模型；东南亚确认本地化部署选项；印度验证数据驻留政策。' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: '相关资料',
+        items: [
+          { title: '如何评估和比较LLM模型', url: '/prompt-engineering/evaluate-compare-llm-models?lang=zh' },
+          { title: '提示词测试和验证：LLM自动化测试套件', url: '/prompt-engineering/prompt-testing-validation?lang=zh' },
+          { title: 'Promptfoo入门：本地和CI/CD中的提示词测试', url: '/prompt-engineering/promptfoo-testing?lang=zh' },
+          { title: '何时在多个模型间使用共识评分', url: '/prompt-engineering/consensus-scoring-llm?lang=zh' },
+          { title: '成本优化：GPT-4o、Claude、Gemini选择指南', url: '/prompt-engineering/cost-optimization-model-selection?lang=zh' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          { title: 'PromptQuorum多模型比较工具', url: 'https://www.promptquorum.com/features' },
+          { title: 'Promptfoo：开源LLM评估框架', url: 'https://www.promptfoo.dev/' },
+          { title: 'Braintrust：数据集驱动的提示词评估', url: 'https://www.braintrust.dev/' },
+        ],
+      },
     },
     quickFacts: [
       '多模型测试在相同提示词中识别5个持续不同的维度：格式、冗长性、准确性、指令遵守、语气。',
@@ -1062,43 +1100,5 @@ export const article: Record<Language, PEArticle> = {
       { label: '相关资料', anchor: 'related-reading' },
       { label: '来源', anchor: 'sources' },
     ],
-    tldr: {
-      id: 'tldr',
-      title: 'TL;DR',
-      isTldr: true,
-      content: '多模型提示词测试在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Flash等2个或以上AI模型上运行相同提示词，并根据格式、冗长性、准确性、指令遵守和语气比较输出。使用10-20个测试用例和1/2/3评分标准构建测试矩阵，以定量依据选择最适合部署的模型。低于最高分数80%的模型应在选择前修复提示词。使用PromptQuorum进行免费的并排比较，或使用Promptfoo进行基于YAML配置的测试自动化和CI/CD集成。对于在中国、东南亚或日本部署的企业应用，在多模型测试中包括数据主权验证（中国《数据安全法》、PDPA、METI AI治理）。',
-    },
-    faq: {
-      id: 'faq',
-      title: '常见问题',
-      faqs: [
-        { q: '什么是多模型提示词测试？', a: '多模型提示词测试是在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Flash等两个或更多AI模型上运行相同提示词，并根据格式合规性、详细程度、事实准确性和指令遵守等定义标准比较输出的实践方法。' },
-        { q: '为什么相同提示词在不同模型上产生不同输出？', a: '每个模型在不同的数据分布上训练，具有不同的RLHF偏好，导致详细程度、语气、格式合规性和指令遵守方面有不同的默认值。' },
-        { q: '多模型测试矩阵需要多少测试用例？', a: '获得可靠信号至少需要10个测试用例。建议15至20个，覆盖典型输入、边缘情况和对抗性输入。' },
-        { q: '哪些工具支持多模型提示词测试？', a: 'PromptQuorum可同时将一个提示词发送到所有模型，免费显示并排比较。Promptfoo是开源的基于配置文件的工具，支持GPT-4o、Claude、Gemini和Llama 3.2等本地模型。' },
-        { q: '中国《数据安全法》对多模型测试有什么要求？', a: '中国《数据安全法》（2021年）要求敏感数据处理和跨境传输必须获得许可。在多模型选择时，验证每个模型是否支持本地化部署、数据不出境，或是否需要与国内云供应商（阿里、腾讯、华为）的本地API对接。Qwen 2.5等国产大模型自动符合中国数据驻留要求。' },
-        { q: '亚太地区（东南亚、日本、印度）多模型部署的最佳实践是什么？', a: '亚太地区有严格的数据主权要求。日本METI AI治理框架2024要求模型审计日志和可解释性文档。东南亚PDPA标准（泰国、新加坡、越南、印度尼西亚）要求数据驻留验证。在多模型测试中，为每个目标市场验证合规性：日本选择支持日语和METI合规性的模型；东南亚确认本地化部署选项；印度验证数据驻留政策。' },
-      ],
-    },
-    related_reading: {
-      id: 'related-reading',
-      title: '相关资料',
-      items: [
-        { title: '如何评估和比较LLM模型', url: '/prompt-engineering/evaluate-compare-llm-models?lang=zh' },
-        { title: '提示词测试和验证：LLM自动化测试套件', url: '/prompt-engineering/prompt-testing-validation?lang=zh' },
-        { title: 'Promptfoo入门：本地和CI/CD中的提示词测试', url: '/prompt-engineering/promptfoo-testing?lang=zh' },
-        { title: '何时在多个模型间使用共识评分', url: '/prompt-engineering/consensus-scoring-llm?lang=zh' },
-        { title: '成本优化：GPT-4o、Claude、Gemini选择指南', url: '/prompt-engineering/cost-optimization-model-selection?lang=zh' },
-      ],
-    },
-    sources: {
-      id: 'sources',
-      title: '来源',
-      items: [
-        { title: 'PromptQuorum多模型比较工具', url: 'https://www.promptquorum.com/features' },
-        { title: 'Promptfoo：开源LLM评估框架', url: 'https://www.promptfoo.dev/' },
-        { title: 'Braintrust：数据集驱动的提示词评估', url: 'https://www.braintrust.dev/' },
-      ],
-    },
   },
 };
