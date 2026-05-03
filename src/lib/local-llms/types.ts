@@ -1,4 +1,3 @@
-import type { Language } from '@/lib/blog/blogContent'
 
 // ─── Section & Article types (mirrors PESection / PEArticle) ─────────────────
 
