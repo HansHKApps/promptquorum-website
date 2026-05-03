@@ -12,32 +12,83 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Techniques',
       title: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
       intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. This makes complex decisions easier to audit, debug, and improve over time.',
+      leadAnswerBlock: '**Chain-of-thought (CoT) prompting instructs an AI model to show its reasoning step by step before giving a final answer.** This improves accuracy on math, logic, and multi-step tasks. In 2026, frontier models like Claude Opus 4.7 and OpenAI o3 have built-in reasoning modes that automate CoT internally — but prompt-level CoT remains valuable on smaller and non-reasoning models where it\'s the primary way to elicit structured thinking.',
       publishDate: '2026-03-26',
-      readTime: '7 min read',
-
+      dateModified: '2026-05-03',
+      lastFactChecked: '2026-05-03',
+      readTime: '13 min read',
       seoTitle: 'Chain-of-Thought Prompting 2026: Reasoning',
-
-      metaDescription: 'Chain-of-Thought improves reasoning by 10-40% on math and logic. How it works, when to use, best practices with examples.',
-
+      metaDescription: 'Chain-of-Thought improves reasoning by 10-40% on math and logic. 2026 comparison: prompt-level CoT vs reasoning models (o3, Claude extended thinking, Gemini Deep Think).',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Chain-of-Thought Prompting',
+      audience: 'Developers, data scientists, and teams building with GPT-5.5, Claude, Gemini, or local LLMs',
+      next_refresh_due: '2026-11-03',
+      aboutTopics: ['Chain-of-Thought Prompting', 'Structured Reasoning', 'Prompt Engineering', 'Reasoning Models'],
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Quick Facts', anchor: '#quick-facts' },
+        { label: 'What Is Chain-of-Thought Prompting?', anchor: '#what-is-chain-of-thought' },
+        { label: 'Why It Matters', anchor: '#why-it-matters' },
+        { label: 'When It Helps (and When It Doesn\'t)', anchor: '#when-it-helps' },
+        { label: 'Example: Without vs With CoT', anchor: '#example-without-vs-with' },
+        { label: 'Math Example: Revenue Calculation', anchor: '#math-example' },
+        { label: 'How to Write Effective Prompts', anchor: '#how-to-write' },
+        { label: 'Chain-of-Thought in PromptQuorum', anchor: '#in-promptquorum' },
+        { label: 'How to Use CoT Prompting', anchor: '#how-to-start' },
+        { label: 'CoT vs Built-In Reasoning Models', anchor: '#reasoning-models' },
+        { label: 'Chain-of-Thought Variants', anchor: '#cot-variants' },
+        { label: 'Model Comparison', anchor: '#model-comparison' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=en',
+        inLanguage: 'en',
         headline: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
         description: 'What chain-of-thought prompting is, when it helps, and how to structure prompts so models show their reasoning clearly.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['chain-of-thought prompting', 'step-by-step reasoning', 'prompt engineering', 'PromptQuorum'],
+        dateModified: '2026-05-03',
+        keywords: ['chain-of-thought prompting', 'step-by-step reasoning', 'prompt engineering', 'reasoning models', 'extended thinking'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
-          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Chain-of-Thought Prompting' },
           { '@type': 'Thing', name: 'Large Language Models' },
           { '@type': 'Thing', name: 'Reasoning' },
+          { '@type': 'Thing', name: 'Structured Output' },
         ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
       },
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          numberedItems: [
+            '**Chain-of-thought prompting asks models to show reasoning steps before giving a final answer**, improving accuracy on math, logic, and multi-step tasks.',
+            'Zero-shot CoT ("think step by step") works on most models. Few-shot CoT (with worked examples) is more reliable.',
+            'In 2026, frontier models like Claude Opus 4.7 and OpenAI o3 have **built-in reasoning modes** that subsume prompt-level CoT — you don\'t need to say "think step by step" on these models.',
+            'CoT increases output tokens and therefore cost. Built-in reasoning modes add separate thinking token budgets with their own billing.',
+            'Use prompt-level CoT on non-reasoning models (Haiku, Flash, LLaMA 4) for cost-effective reasoning. Use built-in reasoning modes on frontier models for maximum accuracy.',
+            'CoT is most valuable for math, logic, planning, and root-cause analysis. Skip it for simple classification, short answers, and quick copywriting.',
+          ]
+        },
+        quickFacts: {
+          title: 'Quick Facts',
+          numberedItems: [
+            '**Coined:** Wei et al. (2022), Google Brain — NeurIPS 2022 foundational paper',
+            '**Key result:** Zero-shot CoT raised PaLM 540B accuracy from 17.7% → 78.7% on MultiArith',
+            '**Trigger phrase:** "Let\'s think step by step" (zero-shot) or worked examples (few-shot)',
+            '**2026 evolution:** Built-in reasoning modes (o3, Claude extended thinking) now automate CoT internally',
+            '**Cost impact:** Prompt-level CoT = more output tokens; reasoning modes = separate thinking token budget',
+            '**Best models for prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, Gemini Flash, GPT-5.5 mini, LLaMA 4 Scout)',
+          ]
+        },
         whatIsChainOfThought: {
           title: 'What Chain-of-Thought Prompting Is',
           content: [
@@ -134,6 +185,236 @@ export const article: Record<Language, PEArticle> = {
             '**Combine CoT with verifiable outputs: ask the model to show its work so you can audit it.** \'Explain your reasoning at each step. If you make a mistake, I should be able to spot it from your shown work.\'',
           ],
         },
+        mathExample: {
+          title: 'Math Example: Revenue Calculation',
+          content: [
+            '**Without CoT, a model might give a single final answer. With CoT, the model shows calculations step by step.**',
+            '**Without CoT:**',
+            '"A customer buys 50 units at $15 each, but gets a 10% discount. What do they pay?"',
+            'Model: "$675"',
+            '**With CoT:**',
+            '"A customer buys 50 units at $15 each, but gets a 10% discount. Work through this step by step: 1) Calculate the subtotal. 2) Calculate the discount amount. 3) Subtract the discount from the subtotal to get the final price."',
+            'Model: "1) Subtotal = 50 × $15 = $750. 2) Discount = 10% of $750 = $75. 3) Final price = $750 − $75 = $675."',
+            'Both give the same answer, but the CoT version lets you see the math and catch errors (e.g., if someone miscalculates 10% of $750).',
+          ],
+        },
+        reasoningModels: {
+          title: 'CoT vs Built-In Reasoning Models (2026)',
+          content: [
+            '**In 2026, the frontier models—Claude Opus 4.7, OpenAI o3, Gemini Deep Think—have built-in reasoning modes that internalize chain-of-thought automatically.** You do not need to add "think step by step" instructions on these models.',
+            '**When to use prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), local LLMs, or when you want to avoid the extra cost of reasoning token budgets.',
+            '**When to use built-in reasoning modes:** Maximum accuracy on frontier models, math-heavy tasks, complex analysis. These models bill reasoning tokens separately (usually higher rate than output tokens).',
+          ],
+          columns: ['Approach', 'Best For', 'Cost', 'Transparency', 'Models'],
+          rows: [
+            { 'Approach': 'Prompt-level CoT ("think step by step")', 'Best For': 'Small models, local LLMs, cost-sensitive tasks', 'Cost': 'Increases output tokens', 'Transparency': 'Full: visible steps in output', 'Models': 'Haiku, Flash, LLaMA, Qwen' },
+            { 'Approach': 'Claude extended thinking (Opus 4.7, Sonnet 4.6)', 'Best For': 'Complex analysis, maximum accuracy', 'Cost': 'Separate thinking token budget (input rate)', 'Transparency': 'Inspector trace via API', 'Models': 'Claude Opus 4.7, Claude Sonnet 4.6' },
+            { 'Approach': 'OpenAI o3', 'Best For': 'Hardest problems (math, coding, competition)', 'Cost': 'Reasoning token budget (higher tier)', 'Transparency': 'Hidden reasoning, visible output', 'Models': 'OpenAI o3' },
+            { 'Approach': 'Gemini Deep Think', 'Best For': 'Google Cloud integration, Gemini ecosystem', 'Cost': 'Thinking tokens separate from output', 'Transparency': 'thinking_level parameter (LOW, MEDIUM, HIGH)', 'Models': 'Gemini 3.1 Pro' },
+            { 'Approach': 'DeepSeek R1', 'Best For': 'Open-weights option, on-device reasoning', 'Cost': 'Visible reasoning streamed as output text', 'Transparency': 'Full: inline CoT in output', 'Models': 'DeepSeek R1' },
+          ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'Pro Tip',
+              text: 'If you\'re building for cost, use prompt-level CoT on smaller models. If you\'re building for accuracy on hard problems, use o3 or Claude extended thinking and let the model handle reasoning internally.'
+            }
+          ],
+        },
+        cotVariants: {
+          title: 'Chain-of-Thought Variants and Extensions',
+          content: [
+            '**Beyond the basic "think step by step" pattern, researchers have developed several CoT variants, each optimized for different problem types.**',
+          ],
+          items: [
+            '**Zero-shot CoT:** Ask "Let\'s think step by step" with no examples. Works on most models and is the simplest to implement. Boost: ~10–20% accuracy improvement on reasoning tasks.',
+            '**Few-shot CoT:** Show 2–5 worked examples where the reasoning is explicit, then ask the model to apply the same pattern to a new problem. More reliable than zero-shot but requires manual example creation. Boost: ~20–40% accuracy.',
+            '**Self-consistency (Wang et al., 2023):** Generate multiple CoT reasoning paths independently, then take a majority vote on the final answer. Significantly more robust to errors. Boost: ~30–50% on hard tasks.',
+            '**Tree of Thought (ToT):** Instead of a linear chain, explore multiple reasoning branches and prune poor ones. Use when there are many possible solution paths (planning, game-playing, creative tasks).',
+            '**ReAct (Reasoning + Acting):** Interleave reasoning with external actions—call APIs, search databases, or run code—and incorporate the results back into the next reasoning step. Best for real-world tasks that need live data or verification.',
+          ],
+        },
+        modelComparison: {
+          title: 'Model Comparison: How Models Handle CoT Prompting (2026)',
+          columns: ['Model', 'Prompt-Level CoT', 'Built-In Reasoning', 'Best Use Case', 'Cost (approx.)'],
+          rows: [
+            { 'Model': 'Claude Opus 4.7', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Extended thinking (inspect trace via API)', 'Best Use Case': 'Maximum accuracy analysis', 'Cost (approx.)': 'Higher (input + output + thinking tokens)' },
+            { 'Model': 'Claude Sonnet 4.6', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Extended thinking', 'Best Use Case': 'Balanced accuracy/cost', 'Cost (approx.)': 'Medium' },
+            { 'Model': 'Claude Haiku 4.5', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Fast, cost-effective reasoning', 'Cost (approx.)': 'Low' },
+            { 'Model': 'OpenAI o3', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Effort levels (low, medium, high, xhigh)', 'Best Use Case': 'Competition-level problems', 'Cost (approx.)': 'Very high (reasoning token tier)' },
+            { 'Model': 'GPT-4o mini', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Budget-conscious deployment', 'Cost (approx.)': 'Very low' },
+            { 'Model': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Works', 'Built-In Reasoning': 'Deep Think (thinking_level param)', 'Best Use Case': 'Google Cloud integration', 'Cost (approx.)': 'Medium-high' },
+            { 'Model': 'Gemini Flash', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Fast responses', 'Cost (approx.)': 'Low' },
+            { 'Model': 'DeepSeek R1', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Inline reasoning in output', 'Best Use Case': 'Open-weights, on-device', 'Cost (approx.)': 'Free (open source)' },
+            { 'Model': 'Llama 4', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Local deployment, privacy', 'Cost (approx.)': 'Self-hosted (compute-dependent)' },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering? A Complete Guide 2026](/prompt-engineering/what-is-prompt-engineering?lang=en)',
+            '[Structured Output & JSON Schema Prompting](/prompt-engineering/structured-output?lang=en)',
+            '[How to Reduce AI Hallucination](/prompt-engineering/reducing-hallucination?lang=en)',
+            '[Constrained Prompting: Limit Model Outputs](/prompt-engineering/constrained-prompting?lang=en)',
+            '[How to Build a Multi-Model Dispatch System](/prompt-engineering/multi-model-dispatch?lang=en)',
+            '[Prompt Testing & Evaluation Framework](/prompt-engineering/prompt-testing?lang=en)',
+          ],
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Does chain-of-thought work on all models?',
+              a: 'Chain-of-thought works on most models with 7B+ parameters, but the benefit varies. It\'s most effective on mid-size and smaller models (Haiku, Flash, Llama 4). On frontier models (Claude Opus 4.7, o3), built-in reasoning modes are often more efficient than prompt-level CoT.'
+            },
+            {
+              q: 'Does chain-of-thought increase cost?',
+              a: 'Yes, prompt-level CoT increases the number of output tokens (since the model writes out reasoning before the final answer). Built-in reasoning modes (Claude extended thinking, OpenAI o3) use separate thinking token budgets that may have different billing rates. Test both on your use case to compare cost vs accuracy tradeoff.'
+            },
+            {
+              q: 'When should I use few-shot CoT instead of zero-shot?',
+              a: 'Use zero-shot CoT first—it\'s simpler and works in most cases. Move to few-shot (with 2–5 examples) if zero-shot is unreliable or if your domain requires specific reasoning patterns (e.g., financial analysis with standard line-item structure).'
+            },
+            {
+              q: 'Can I combine chain-of-thought with structured output (JSON)?',
+              a: 'Yes. You can ask the model to show its reasoning in plain text first, then output a JSON object with the final answer. Combine instructions: "Think step by step. Then output your result as valid JSON." This is common in production systems.'
+            },
+            {
+              q: 'What\'s the difference between chain-of-thought and tree-of-thought?',
+              a: 'Chain-of-thought is a linear sequence: step 1 → step 2 → ... → conclusion. Tree-of-thought explores multiple branches (alternative reasoning paths) and prunes weaker ones before arriving at the answer. Tree-of-thought is more powerful but more expensive (requires multiple model calls).'
+            },
+            {
+              q: 'Does OpenAI o3 require chain-of-thought prompting?',
+              a: 'No. OpenAI o3 has built-in reasoning that activates automatically. You do not need to add "think step by step" instructions. Just give o3 the problem and set the effort level (low/medium/high/xhigh) to control how much reasoning budget to spend.'
+            },
+            {
+              q: 'Can I audit the reasoning of built-in reasoning models?',
+              a: 'Yes, but it depends on the model. Claude extended thinking reasoning traces are inspectable via API. OpenAI o3 reasoning is hidden by default (for competitive advantage). Gemini Deep Think reasoning is also hidden. For full auditability, use prompt-level CoT or DeepSeek R1.'
+            },
+            {
+              q: 'Is chain-of-thought prompting suitable for real-time applications?',
+              a: 'Prompt-level CoT adds latency (more output tokens = slower generation). For real-time use cases, either use smaller models with minimal reasoning, or use stream endpoints to show tokens as they arrive. Built-in reasoning modes may add even more latency; benchmark your specific use case.'
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
+            'Kojima, T., Gu, S. S., Reid, M., Matsuo, Y., & Iwasawa, Y. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS 2022. arXiv:2205.11916',
+            'Wang, X., Wei, J., Schuurmans, D., et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171',
+            'Anthropic. (2024). "Extended Thinking in Claude." Technical documentation on Claude Opus 4.7 and Sonnet 4.6 reasoning capabilities.',
+            'OpenAI. (2026). "OpenAI o3: Reasoning Models for Competition-Level Problem Solving." OpenAI documentation and research announcements.',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Does chain-of-thought work on all models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chain-of-thought works on most models with 7B+ parameters, but the benefit varies. It\'s most effective on mid-size and smaller models (Haiku, Flash, Llama 4). On frontier models (Claude Opus 4.7, o3), built-in reasoning modes are often more efficient than prompt-level CoT.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Does chain-of-thought increase cost?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, prompt-level CoT increases the number of output tokens (since the model writes out reasoning before the final answer). Built-in reasoning modes (Claude extended thinking, OpenAI o3) use separate thinking token budgets that may have different billing rates. Test both on your use case to compare cost vs accuracy tradeoff.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use few-shot CoT instead of zero-shot?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use zero-shot CoT first—it\'s simpler and works in most cases. Move to few-shot (with 2–5 examples) if zero-shot is unreliable or if your domain requires specific reasoning patterns (e.g., financial analysis with standard line-item structure).'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I combine chain-of-thought with structured output (JSON)?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. You can ask the model to show its reasoning in plain text first, then output a JSON object with the final answer. Combine instructions: "Think step by step. Then output your result as valid JSON." This is common in production systems.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What\'s the difference between chain-of-thought and tree-of-thought?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chain-of-thought is a linear sequence: step 1 → step 2 → ... → conclusion. Tree-of-thought explores multiple branches (alternative reasoning paths) and prunes weaker ones before arriving at the answer. Tree-of-thought is more powerful but more expensive (requires multiple model calls).'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Does OpenAI o3 require chain-of-thought prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. OpenAI o3 has built-in reasoning that activates automatically. You do not need to add "think step by step" instructions. Just give o3 the problem and set the effort level (low/medium/high/xhigh) to control how much reasoning budget to spend.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I audit the reasoning of built-in reasoning models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, but it depends on the model. Claude extended thinking reasoning traces are inspectable via API. OpenAI o3 reasoning is hidden by default (for competitive advantage). Gemini Deep Think reasoning is also hidden. For full auditability, use prompt-level CoT or DeepSeek R1.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Is chain-of-thought prompting suitable for real-time applications?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Prompt-level CoT adds latency (more output tokens = slower generation). For real-time use cases, either use smaller models with minimal reasoning, or use stream endpoints to show tokens as they arrive. Built-in reasoning modes may add even more latency; benchmark your specific use case.'
+            }
+          },
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Chain-of-Thought Variants',
+        numberOfItems: 5,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Zero-shot CoT',
+            description: 'Ask "Let\'s think step by step" with no examples. Works on most models and is the simplest to implement. Boost: ~10–20% accuracy improvement.'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Few-shot CoT',
+            description: 'Show 2–5 worked examples with explicit reasoning, then apply to a new problem. More reliable than zero-shot. Boost: ~20–40% accuracy.'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Self-consistency',
+            description: 'Generate multiple independent reasoning paths, take a majority vote on the answer. Significantly more robust. Boost: ~30–50% on hard tasks.'
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Tree of Thought',
+            description: 'Explore multiple reasoning branches and prune poor ones. Best for planning and game-playing tasks with many solution paths.'
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'ReAct',
+            description: 'Interleave reasoning with external actions (API calls, searches, code execution). Best for real-world tasks needing live data or verification.'
+          },
+        ]
       },
     },
     de: {
