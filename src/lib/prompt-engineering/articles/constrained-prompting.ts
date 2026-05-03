@@ -999,6 +999,7 @@ export const article: Record<Language, PEArticle> = {
   seoTitle: '制約付きプロンプティング：完全ガイド 2026',
   intro: '制約付きプロンプティングとは、LLMに厳格なルールを強制する技法です。特定の出力形式、長さの制限、事前定義されたスキーマの遵守を指示します。本番環境で信頼性が高く、再現可能な結果を得たいときに有効です。',
   metaDescription: 'LLMの信頼性を高める制約付きプロンプティングを学びます。厳格なフォーマット、アウトプット検証、PromptQuorumを使った高度な技法。',
+  leadAnswerBlock: '制約付きプロンプティングは、LLMが特定の形式・内容・長さで応答するよう強制する技法です。JSONスキーマを指定することで、解析可能で予測可能な出力を保証し、本番環境での信頼性と再現性を大幅に向上させます。金融、医療、法務などの規制環境でも安全性が確保でき、データ抽出や分類タスクを自動化するのに最適な方法です。',
   publishDate: '2026-01-20',
   dateModified: '2026-04-28',
   lastFactChecked: '2026-04-28',
@@ -1021,6 +1022,17 @@ export const article: Record<Language, PEArticle> = {
         'PromptQuorumなどのツールで、制約遵守を大規模にテストし検証できます',
         '一般的なミス：制約が曖昧、ルールの過度な積み重ね、エッジケースのテスト不足',
         '本番環境の活用例：データ抽出、意図分類、検証済みコンテンツ生成、自動サポート'
+      ]
+    },
+    quickFacts: {
+      title: 'クイックファクト',
+      numberedItems: [
+        '制約の種類：フォーマット（JSON/XML）、列挙型（限定値）、長さ制限、ネストされたスキーマ、セマンティック',
+        'モデルの対応：GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral はすべて制約に対応。対応レベルは異なる',
+        'ベストプラクティス：システムプロンプトに一般的制約を配置。ユーザープロンプトにコンテキスト固有制約を配置',
+        'JSON出力の一貫性：適切に設計された制約により、実行ごとに有効でスキーマ準拠のJSONが保証される',
+        'テスト方法：単一モデルで5回テスト。その後、別モデルで検証。エッジケース（空リスト、Unicode）をテスト',
+        'セットアップ時間：5分で基本的な制約。30分で本番対応な検証スイート'
       ]
     },
     whatIsConstrained: {
@@ -1150,6 +1162,31 @@ export const article: Record<Language, PEArticle> = {
         }
       ]
     },
+    apiLevelEnforcement: {
+      title: 'APIレベルの制約強制',
+      content: '多くのLLM APIプロバイダーは、プロンプトレベルの制約に加えて、APIレベルでの制約強制もサポートしています。これらは、プロバイダーのシステム側でスキーマ準拠を検証し、無効な応答を拒否します。',
+      items: [
+        '**OpenAI：関数呼び出しと構造化出力**：JSON Schema を定義。モデルはスキーマに準拠した構造化出力を生成。無効な応答は関数呼び出しレイヤーで検証。https://platform.openai.com/docs/guides/function-calling',
+        '**Anthropic Claude：制約付き出力**：JSON スキーマまたは XML タグで形式を指定。モデルは絶対に指定形式から逸脱しません。https://docs.anthropic.com',
+        '**Google Generative AI：Structured Output**：スキーマを API リクエストに含める。モデルは常にスキーマに準拠した JSON を返す。https://ai.google.dev/docs'
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'ベストプラクティス',
+          text: 'API レベルの制約は、プロンプトレベルの制約と組み合わせる。プロンプトは意図を明確にし、APIスキーマは厳格に強制。2 層防御で、信頼性と透明性を最大化。'
+        }
+      ]
+    },
+    regionalContext: {
+      title: '規制環境での制約付きプロンプティング',
+      content: '制約付きプロンプティングは、データ保護と規制コンプライアンスが必須の環境で特に価値があります。日本およびアジア太平洋地域では以下が重要です。',
+      items: [
+        '**日本：METI AI 統治ガイドライン (2024)**：経済産業省（METI）は、エンタープライズ AI 導入におけるフレームワークを提示。制約付きプロンプティングは、本番環境での AI 安全性とアウトプット検証を確保するのに有効。金融、医療、法務機関は METI ガイドラインに従う。',
+        '**アジア太平洋地域：データ越境と保護**：各国（シンガポール、オーストラリア、韓国）でデータ保護法が施行。制約によって個人情報や機密データをプロンプトとアウトプットから除外できる。ローカル推論とデータ残存要件の遵守。',
+        '**企業コンプライアンス：監査と説明責任**：規制業界では、AI の決定を監査可能にし、説明責任が必須。制約により、モデル出力を一貫性のある、検証可能な形式に保つことができる。'
+      ]
+    },
     commonMistakes: {
       title: '制約付きプロンプティングの一般的なミス',
       mistakes: [
@@ -1246,18 +1283,21 @@ export const article: Record<Language, PEArticle> = {
     }
   },
   toc: [
-    { label: '重要ポイント', anchor: 'tldr' },
-    { label: '制約付きプロンプティングとは', anchor: 'whatIsConstrained' },
-    { label: 'なぜ制約付きプロンプティングが重要か', anchor: 'whyItMatters' },
-    { label: '制約付きプロンプティングの種類', anchor: 'typesOfConstraints' },
-    { label: '例：制約ありのサポートチケット分類', anchor: 'example' },
-    { label: 'いつ制約付きプロンプティングを使うか', anchor: 'whenToUse' },
-    { label: 'PromptQuorumが制約付きプロンプティングをサポートする方法', anchor: 'howPQSupports' },
-    { label: '制約付きプロンプティング統合：5ステップ', anchor: 'howToStart' },
-    { label: '制約付きプロンプティングの一般的なミス', anchor: 'commonMistakes' },
-    { label: '参考資料', anchor: 'relatedReading' },
-    { label: 'よくある質問', anchor: 'faqSection' },
-    { label: 'ソースと参考文献', anchor: 'sources' }
+    { label: '重要ポイント', anchor: '#tldr' },
+    { label: 'クイックファクト', anchor: '#quick-facts' },
+    { label: '制約付きプロンプティングとは', anchor: '#what-is-constrained-prompting' },
+    { label: 'なぜ制約付きプロンプティングが重要か', anchor: '#why-does-constrained-prompting-matter' },
+    { label: 'どの種類の制約が使えるか', anchor: '#which-constraint-types-can-you-use' },
+    { label: '例：制約ありのサポートチケット分類', anchor: '#unconstrained-vs-constrained-prompt-an-example' },
+    { label: 'いつ制約付きプロンプティングを使うか', anchor: '#when-should-you-use-constrained-prompting' },
+    { label: 'PromptQuorumが制約付きプロンプティングをサポートする方法', anchor: '#how-does-promptquorum-support-constrained-prompting' },
+    { label: '制約付きプロンプティング統合：5ステップ', anchor: '#how-to-use-constrained-prompting' },
+    { label: 'APIレベルの制約強制', anchor: '#api-level-constraint-enforcement' },
+    { label: '規制環境での制約付きプロンプティング', anchor: '#constrained-prompting-in-regulated-environments' },
+    { label: '制約付きプロンプティングの一般的なミス', anchor: '#common-mistakes' },
+    { label: '参考資料', anchor: '#related-reading' },
+    { label: 'よくある質問', anchor: '#frequently-asked-questions' },
+    { label: 'ソースと参考文献', anchor: '#sources' }
   ],
   schema: {
     '@context': 'https://schema.org',
