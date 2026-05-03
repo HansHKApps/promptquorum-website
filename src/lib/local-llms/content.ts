@@ -47347,8 +47347,8 @@ schema: {
             '[Spécifications de puissance GPU NVIDIA](https://www.nvidia.com/en-us/geforce/)',
             '[Tarifs d\'électricité français — RTE Éco2mix](https://www.rte-france.com/)',
             '[Surveillance de la température du GPU avec nvidia-smi](https://developer.nvidia.com/nvidia-system-management-interface)',
-          ,
-            'L'efficacité énergétique gagne de la vitesse, mais la vitesse ne garantit pas la qualité. Les paramètres de température et d'échantillonnage peuvent compenser la consommation avec de meilleurs résultats : [température et top-p](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity) explique comment ces paramètres font des compromis.'],
+            'L\'efficacité énergétique gagne de la vitesse, mais la vitesse ne garantit pas la qualité. Les paramètres de température et d\'échantillonnage peuvent compenser la consommation avec de meilleurs résultats : [température et top-p](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity) explique comment ces paramètres font des compromis.',
+          ],
         },
       },
 schema: {
