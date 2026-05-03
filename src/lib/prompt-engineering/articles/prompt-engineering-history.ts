@@ -96,6 +96,30 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', name: 'What is the difference between prompt engineering and fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering changes how you talk to a model without modifying its weights. Fine-tuning retrains a model on new data to change its behaviour permanently. Prompt engineering is faster, cheaper, and reversible — you can iterate in minutes. Fine-tuning is better when the target behaviour is consistent, high-volume, or impossible to describe reliably in a prompt. Most teams start with prompting and fine-tune only when prompting approaches a ceiling on their specific task.' } },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Prompt Engineering Evolution Timeline: 2018-2026',
+        description: 'A chronological timeline of key milestones, research papers, and model releases that shaped the evolution of prompt engineering from 2018 to 2026.',
+        url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved?lang=en#timeline',
+        inLanguage: 'en',
+        numberOfItems: 13,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'BERT and GPT-2 Released (2018–2019)', description: 'Demonstrated transformer models could be guided by input phrasing — but no formal discipline yet' },
+          { '@type': 'ListItem', position: 2, name: 'GPT-3 Few-Shot Learning (2020)', description: 'Established few-shot prompting as a paradigm: rewriting the prompt changes the model\'s behaviour without retraining' },
+          { '@type': 'ListItem', position: 3, name: 'InstructGPT and RLHF (January 2022)', description: 'Models trained to follow instructions — made prompt quality far more consequential' },
+          { '@type': 'ListItem', position: 4, name: 'Chain-of-Thought Prompting (May 2022)', description: 'Proved that prompt structure could elicit step-by-step reasoning — turned prompting into a cognitive scaffold' },
+          { '@type': 'ListItem', position: 5, name: 'ChatGPT Launch (November 2022)', description: 'Brought prompt engineering into mainstream awareness; millions began experimenting overnight' },
+          { '@type': 'ListItem', position: 6, name: 'Prompt Engineer as Job Title (Q1 2023)', description: 'Defined prompt engineering as a recognised profession and named skill' },
+          { '@type': 'ListItem', position: 7, name: 'GPT-4 and Multimodal Prompting (March 2023)', description: 'Extended prompt engineering beyond text to visual inputs and large context windows' },
+          { '@type': 'ListItem', position: 8, name: 'Prompt Engineering Frameworks (2023)', description: 'Turned prompt engineering from personal craft into teachable, shareable practice' },
+          { '@type': 'ListItem', position: 9, name: 'Automated Prompt Optimization (2023–2024)', description: 'LLMs shown to write prompts as well as humans; automated prompt optimisation became practical' },
+          { '@type': 'ListItem', position: 10, name: 'Open-Weights Models and 1M Context (2024)', description: 'Open-source LLMs for private deployment; massive context shifted focus to context engineering' },
+          { '@type': 'ListItem', position: 11, name: 'Extended Thinking and Reasoning Modes (Q1–Q2 2025)', description: 'Models internalize step-by-step reasoning; prompt-level CoT becomes optional on frontier models' },
+          { '@type': 'ListItem', position: 12, name: 'LLaMA 4 MoE and 10M Context (Q3–Q4 2025)', description: 'Open-weights models reach near-frontier quality; MoE architecture reduces compute costs for self-hosting' },
+          { '@type': 'ListItem', position: 13, name: 'Context Design as Standard Practice (2026)', description: 'Prompting becomes one layer in a composed context — system-level thinking required; prompt engineering skill embedded in all AI-using roles' },
+        ],
+      },
       sections: {
 
         definition: {
@@ -239,7 +263,9 @@ export const article: Record<Language, PEArticle> = {
             { 'Year': '2023', 'Milestone': 'Frameworks formalised: CRAFT, CO-STAR, SPECS, RISEN; official guides from OpenAI and Google', 'Why It Matters': 'Turned prompt engineering from personal craft into teachable, shareable practice' },
             { 'Year': '2023–2024', 'Milestone': 'APE paper (Zhou et al.) and DSPy framework — AI-optimised prompts', 'Why It Matters': 'LLMs shown to write prompts as well as humans; automated prompt optimisation became practical' },
             { 'Year': '2024', 'Milestone': 'Llama 3-class models; context windows exceed 1M tokens (Gemini 1.5 Pro)', 'Why It Matters': 'Open-source LLMs for private deployment; massive context shifted focus to context engineering' },
-            { 'Year': '2025–2026', 'Milestone': 'Context design and multi-agent orchestration replace simple prompt tweaking', 'Why It Matters': 'Prompting becomes one layer in a composed context — system-level thinking required' },
+            { 'Year': '2025 (Q1–Q2)', 'Milestone': 'Extended thinking / reasoning modes: Claude 4.7 Sonnet, OpenAI o3, DeepSeek R1, Gemini Deep Think', 'Why It Matters': 'Models internalize step-by-step reasoning; prompt-level CoT becomes optional on frontier models' },
+            { 'Year': '2025 (Q3–Q4)', 'Milestone': 'LLaMA 4 (MoE); context windows reach 10M tokens on some models', 'Why It Matters': 'Open-weights models reach near-frontier quality; MoE architecture reduces compute costs for self-hosting' },
+            { 'Year': '2026', 'Milestone': 'Context design and multi-agent orchestration replace simple prompt tweaking', 'Why It Matters': 'Prompting becomes one layer in a composed context — system-level thinking required; prompt engineering skill embedded in all AI-using roles' },
           ],
         },
 
