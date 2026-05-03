@@ -6617,6 +6617,7 @@ schema: {
             '**Wählen Sie Jan AI**, wenn Datenschutz Ihre höchste Priorität ist -- keine Telemetrie, vollständig offline, vollständig Open Source.',
             '**Wählen Sie GPT4All**, wenn Sie die einfachstmögliche Erfahrung ohne Terminal-Befehle wünschen, oder wenn Sie eingebauten Dokumenten-Chat (LocalDocs) ohne zusätzliche Konfiguration möchten.',
             'Stand April 2026 können alle vier Tools auf der gleichen Maschine koexistieren -- sie verwenden unterschiedliche Standard-Ports (11434, 1234, 1337, 4891) und separate Model-Speicherverzeichnisse. Models im GGUF-Format können zwischen ihnen geteilt werden.',
+            'Die Installation eines Modells ist Schritt eins. Das Schreiben von Eingabeaufforderungen, die gute Ergebnisse liefern, ist Schritt zwei. Wenn Sie neu in der Arbeit mit KI-Modellen sind, beginnen Sie mit [was ist Prompt Engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) — es behandelt die Grundlagen in verständlicher Sprache.',
           ],
         },
         regionalContext: {
