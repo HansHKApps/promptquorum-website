@@ -20,7 +20,7 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary',
+        url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=en',
         inLanguage: 'en',
         headline: 'Prompt Engineering Glossary: 500 Key Terms',
         datePublished: '2026-03-28',
