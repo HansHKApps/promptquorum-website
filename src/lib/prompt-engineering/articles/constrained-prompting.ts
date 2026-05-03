@@ -12,12 +12,13 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Techniques',
       title: 'Constrained Prompting',
       intro: '**Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do — using "must," "must not," and "only" language — so outputs stay inside clearly defined boundaries.** This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
+      leadAnswerBlock: '**Constrained prompting is the practice of adding explicit rules — format, length, content, and safety boundaries — directly into a prompt to make AI output predictable and reusable.** Instead of "write a summary," you specify exact structure, allowed content, and validation rules.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
 
       seoTitle: 'Constrained Prompting: Force AI Output Formats (2026)',
 
-      metaDescription: 'Force AI output into JSON, XML, or structured tables. 5 constraint types for GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro with real examples and a 5-step implementation guide.',
+      metaDescription: 'Force AI output into JSON, XML, or structured tables. 5 constraint types for GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro with real examples.',
 
       educationalLevel: 'Intermediate',
       primaryTerm: 'Constrained Prompting',
@@ -28,6 +29,7 @@ export const article: Record<Language, PEArticle> = {
       aboutTopics: ['Constrained Prompting', 'Structured Output', 'Prompt Engineering'],
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Quick Facts', anchor: '#quick-facts' },
         { label: 'What Is Constrained Prompting?', anchor: '#what-is-constrained-prompting' },
         { label: 'Why Does Constrained Prompting Matter?', anchor: '#why-does-constrained-prompting-matter' },
         { label: 'Which Constraint Types Can You Use?', anchor: '#which-constraint-types-can-you-use' },
@@ -35,6 +37,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'When Should You Use Constrained Prompting?', anchor: '#when-should-you-use-constrained-prompting' },
         { label: 'How Does PromptQuorum Support Constrained Prompting?', anchor: '#how-does-promptquorum-support-constrained-prompting' },
         { label: 'How to Use Constrained Prompting', anchor: '#how-to-use-constrained-prompting' },
+        { label: 'Constrained Prompting in Regulated Environments', anchor: '#constrained-prompting-in-regulated-environments' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'FAQ', anchor: '#frequently-asked-questions' },
@@ -104,6 +107,18 @@ export const article: Record<Language, PEArticle> = {
             'Use [PromptQuorum](https://www.promptquorum.com/) to test constrained prompts across multiple models side by side.',
           ],
         },
+        quickFacts: {
+          id: 'quick-facts',
+          title: 'Quick Facts',
+          items: [
+            '**5 constraint types:** Structural, Content, Style, Length, Safety',
+            '**Model adherence:** GPT-5.5 and Claude Opus 4.7 follow hard constraints at ~95% on well-formed prompts',
+            '**Optimal stacking:** 3–5 constraints work well; beyond 5–6, models drop lower-priority constraints silently',
+            '**JSON output consistency:** Without a schema example, models produce inconsistent key names across runs',
+            '**Test methodology:** Generate 10 outputs to verify all respect length, format, and content boundaries',
+            '**Setup time:** First-run constraint validation adds 10–15 minutes; reusable templates save 30+ minutes per task',
+          ],
+        },
         whatIsConstrained: {
           title: 'What Is Constrained Prompting?',
           content: [
@@ -128,6 +143,9 @@ export const article: Record<Language, PEArticle> = {
             'Prevent unexpected content or formatting that breaks downstream tools.',
             'Enforce brand, legal, or safety guidelines directly at the prompt level.',
             'Reduce review time because outputs already match your required structure.',
+          ],
+          callouts: [
+            { type: 'tip', label: 'Key Point', text: 'Unconstrained outputs vary widely: same prompt, different structures, different lengths, different tone. Constraints eliminate that variance and make output production-ready.' },
           ],
         },
         typesOfConstraints: {
@@ -196,6 +214,9 @@ export const article: Record<Language, PEArticle> = {
             'Test constrained prompts across multiple models side by side to see which provider adheres best to your specifications.',
             'Save constrained prompts as templates for recurring tasks, ensuring your team always uses the same validated patterns.',
           ],
+          callouts: [
+            { type: 'practice', label: 'Best Practice', text: 'Always test your constrained prompt against at least 2 models before deploying. Different models (GPT-5.5 vs Claude vs Gemini) interpret constraints differently. A 95% adherence rate on GPT-5.5 may drop to 80% on Gemini.' },
+          ],
         },
 
         howToStart: {
@@ -209,6 +230,23 @@ export const article: Record<Language, PEArticle> = {
           ],
           callouts: [
             { type: 'insight', label: 'Insight', text: 'GPT-5.5 and Claude Opus 4.7 follow hard format constraints (JSON, tables, word limits) at ~95% adherence on well-formed prompts. Gemini 3.1 Pro scores similarly. All three degrade when constraints are vague or contradictory.' },
+          ],
+        },
+        regionalContext: {
+          id: 'constrained-prompting-in-regulated-environments',
+          title: 'Constrained Prompting in Regulated Environments',
+          content: [
+            '**In regulated industries, constrained prompting is not optional — it is a compliance requirement.** Healthcare providers, financial institutions, and law firms depend on constraints to prevent outputs that violate HIPAA, GDPR, SOX, or other regulatory frameworks.',
+            'Regional and industry considerations:',
+          ],
+          items: [
+            '**EU (GDPR):** Safety constraints that exclude personal data, financial information, and medical history are mandatory. Prompts must explicitly state: "Do not include personal data, financial details, or health information."',
+            '**US (SOX/HIPAA):** Regulated firms in finance and healthcare require audit trails and signed agreements. Constrained prompts lock output format to make audit logs complete and verifiable.',
+            '**Japan (APPI):** Data residency and consent constraints are critical. Prompts must specify: "Process only Japanese-resident user data" and "Do not transfer data outside Japan."',
+            '**China (Data Security Law):** Constrained output to structured tables (no free-form text) and format restrictions ensure outputs stay within approved data handling pathways.',
+          ],
+          callouts: [
+            { type: 'warning', label: 'Compliance', text: 'In regulated industries, always pair constrained prompting with documentation. Write down every constraint, test all constraint combinations, and log results. Regulators expect to see proof that constraints were validated.' },
           ],
         },
         commonMistakes: {
@@ -245,11 +283,11 @@ export const article: Record<Language, PEArticle> = {
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundations before applying constraints.',
+            '[Structured Output: JSON Mode](/prompt-engineering/structured-output-json-mode) — API-level enforcement of output schemas.',
             '[RTF Framework](/prompt-engineering/rtf-framework) — Role-Task-Format: a structured framework that pairs naturally with constrained prompting.',
             '[Few-Shot Prompting](/prompt-engineering/few-shot-prompting) — Providing examples is a form of implicit constraint.',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — When you want reasoning steps, not just constrained output.',
-            '[AI Hallucinations: How to Stop Them](/prompt-engineering/ai-hallucinations-how-to-stop) — Constraints that reduce hallucination risk.',
-            '[Prompt Engineering Fundamentals](/prompt-engineering/fundamentals-of-prompt-optimization) — Optimization techniques that extend constrained prompting.',
+            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Validate constrained prompts on multiple LLMs.',
+            '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Safety constraints defend against adversarial input.',
           ],
         },
         faqSection: {
