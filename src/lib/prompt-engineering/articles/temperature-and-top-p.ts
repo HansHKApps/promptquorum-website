@@ -48,6 +48,13 @@ export const article: Record<Language, PEArticle> = {
             '**Top-p (nucleus sampling) controls how many likely word options the model considers at each step.** Instead of "how random," think of it as "how many plausible choices." At top-p 0.1, the model only considers the very top options until they reach 10% cumulative probability—narrow and safe. At top-p 0.9, it considers a much wider set of possible words—looser and more varied.',
             'In plain terms: temperature controls "how adventurous," and top-p controls "how many options to consider." Both affect output variety, but in different ways.',
           ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Works with local models',
+              text: 'Temperature and top-p settings are available in all [local LLM tools](https://www.promptquorum.com/local-llms). Same parameters, same effect.'
+            }
+          ],
         },
 
         tldr: {

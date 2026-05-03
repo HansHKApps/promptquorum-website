@@ -79,6 +79,13 @@ export const article: Record<Language, PEArticle> = {
             'Today, prompt engineering is a structured discipline with named techniques, reusable frameworks, and measurable outcomes. It is not about tricking AI systems or finding hidden commands — it is about giving a probabilistic model the clearest possible signal of what you need. A well-engineered prompt consistently produces usable output on the first attempt.',
             'Prompt engineering basics start with understanding that LLMs are pattern-completion engines. They generate output based on the statistical likelihood of what should follow your input. The more precisely you specify the task, context, constraints, and desired format, the less the model has to guess — and the better the result.',
           ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Works with local models',
+              text: 'Every technique in this guide works with Ollama, LM Studio, and other [local LLMs](https://www.promptquorum.com/local-llms). No API key required.'
+            }
+          ],
         },
 
         tldr: {

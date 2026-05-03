@@ -51,6 +51,13 @@ export const article: Record<Language, PEArticle> = {
             '**Chain-of-thought prompting matters because it makes model behavior more transparent on tasks that involve multi-step reasoning.** When you see each step, you can spot misinterpretations, missing assumptions, or arithmetic errors.',
             'This is especially valuable in domains like analytics, planning, and troubleshooting. Instead of a single opaque output, you get a narrative that can be checked, corrected, or reused as documentation.',
           ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Works with local models',
+              text: 'Chain-of-thought works on any model with 7B+ parameters. Test it locally with [Ollama or LM Studio](https://www.promptquorum.com/local-llms).'
+            }
+          ],
         },
         whenItHelps: {
           title: 'When Chain-of-Thought Helps (and When It Doesn\'t)',
