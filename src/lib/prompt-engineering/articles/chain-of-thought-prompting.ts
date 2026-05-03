@@ -175,6 +175,13 @@ export const article: Record<Language, PEArticle> = {
         '**Chain-of-Thought Prompting ist wichtig, weil es das Verhalten von Modellen bei mehrstufigen Denkaufgaben transparenter macht.** Wenn Sie jeden Schritt sehen, können Sie Missinterpretationen, fehlende Annahmen oder Rechenfehler erkennen.',
         'Dies ist besonders wertvoll in Bereichen wie Analytik, Planung und Fehlerbehebung. Statt einer einzigen undurchsichtigen Ausgabe erhalten Sie eine Erzählung, die überprüft, korrigiert oder als Dokumentation wiederverwendet werden kann.',
       ],
+      callouts: [
+        {
+          type: 'info',
+          label: 'Funktioniert mit lokalen Modellen',
+          text: 'Chain-of-Thought funktioniert auf jedem Modell mit 7B+ Parametern. Testen Sie es lokal mit [Ollama oder LM Studio](https://www.promptquorum.com/local-llms).'
+        }
+      ],
     },
     whenItHelps: {
       title: 'Wann Chain-of-Thought hilft (und wann nicht)',
@@ -291,6 +298,13 @@ export const article: Record<Language, PEArticle> = {
         '**Le Chain-of-Thought Prompting importe car il rend le comportement des modèles plus transparent sur les tâches multi-étapes.** En voyant chaque étape, vous pouvez repérer les malinterprétations, les hypothèses manquantes ou les erreurs de calcul.',
         'Cet avantage est particulièrement précieux en analyse, planification et dépannage. Au lieu d\'une sortie unique et opaque, vous obtenez un récit vérifiable et documentable.',
       ],
+      callouts: [
+        {
+          type: 'info',
+          label: 'Fonctionne avec les modèles locaux',
+          text: 'Le Chain-of-Thought fonctionne sur n\'importe quel modèle avec 7B+ paramètres. Testez-le localement avec [Ollama ou LM Studio](https://www.promptquorum.com/local-llms).'
+        }
+      ],
     },
     whenItHelps: {
       title: 'Quand le Chain-of-Thought aide',
@@ -406,6 +420,13 @@ export const article: Record<Language, PEArticle> = {
       content: [
         '**Chain-of-Thoughtプロンプティングが重要なのは、複数ステップの推論を伴うタスクで、モデルの動作をより透明にするためです。** 各ステップを見ることで、誤った解釈、欠落した仮定、または計算エラーを特定できます。',
         'これは分析、計画、トラブルシューティングなどの領域で特に価値があります。単一の不透明な出力ではなく、チェック、修正、またはドキュメントとして再利用できるナラティブが得られます。',
+      ],
+      callouts: [
+        {
+          type: 'info',
+          label: 'ローカルモデルで動作',
+          text: 'Chain-of-Thoughtは7B以上のパラメータを持つ任意のモデルで機能します。[OllamaまたはLM Studio](https://www.promptquorum.com/local-llms)でローカルテストしてください。'
+        }
       ],
     },
     whenItHelps: {
@@ -525,6 +546,13 @@ export const article: Record<Language, PEArticle> = {
       content: [
         '**链式思维提示词很重要，因为它在涉及多步推理的任务上提高了模型行为的透明度。** 看到每个步骤，你能发现误解、缺失的假设或算术错误。',
         '这在分析、规划和故障排查等领域特别有价值。你获得的不是单一的不透明输出，而是可以检查、纠正或重复使用为文档的推理过程。',
+      ],
+      callouts: [
+        {
+          type: 'info',
+          label: '适用于本地模型',
+          text: '链式思维在任何具有 7B+ 参数的模型上都能工作。用 [Ollama 或 LM Studio](https://www.promptquorum.com/local-llms) 在本地测试它。'
+        }
       ],
     },
     whenItHelps: {

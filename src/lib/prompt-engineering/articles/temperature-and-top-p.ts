@@ -296,6 +296,13 @@ export const article: Record<Language, PEArticle> = {
             '**Top-P (Nucleus Sampling) kontrolliert, wie viele wahrscheinliche Wortoptionen das Modell bei jedem Schritt berücksichtigt.** Statt „wie zufällig" denke „wie viele plausible Wahlen." Bei Top-P 0.1 berücksichtigt das Modell nur die Top-Optionen, bis sie 10% kumulative Wahrscheinlichkeit erreichen – eng und sicher. Bei Top-P 0.9 berücksichtigt es einen viel größeren Satz möglicher Wörter – lockerer und vielfältiger.',
             'Kurz gesagt: Temperatur kontrolliert „wie abenteuerlich", und Top-P kontrolliert „wie viele Optionen zu berücksichtigen sind". Beide beeinflussen die Ausgangsvielfalt, aber auf unterschiedliche Weise.',
           ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Funktioniert mit lokalen Modellen',
+              text: 'Temperatur- und Top-P-Einstellungen sind in allen [lokalen LLM-Tools](https://www.promptquorum.com/local-llms) verfügbar. Gleiche Parameter, gleiche Auswirkung.'
+            }
+          ],
         },
         tldr: {
           title: 'Wichtigste Erkenntnisse',
@@ -470,6 +477,13 @@ export const article: Record<Language, PEArticle> = {
             '**La température est un curseur qui rend la sortie du modèle plus aléatoire (supérieure) ou plus déterministe (inférieure).** À une température de 0.0, le modèle choisit toujours le mot suivant le plus probable — produisant une sortie identique à chaque exécution. À une température de 1.0+, le modèle envisage des alternatives plus risquées, produisant du texte surprenant et varié.',
             '**Top-P (l\'échantillonnage nucléaire) contrôle combien d\'options de mots probables le modèle envisage à chaque étape.** Au lieu de « comment aléatoire », pense à « combien de choix plausibles ». À top-p 0.1, le modèle ne considère que les meilleures options jusqu\'à ce qu\'elles atteigne 10% de probabilité cumulative — étroit et sûr. À top-p 0.9, il envisage un ensemble beaucoup plus large de mots possibles — plus lâche et varié.',
             'En termes simples : la température contrôle « comment aventureux », et top-p contrôle « combien d\'options à considérer ». Tous deux affectent la variété des résultats, mais de façons différentes.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Fonctionne avec les modèles locaux',
+              text: 'Les paramètres de température et top-p sont disponibles dans tous les [outils LLM locaux](https://www.promptquorum.com/local-llms). Mêmes paramètres, même effet.'
+            }
           ],
         },
         tldr: {
@@ -646,6 +660,13 @@ export const article: Record<Language, PEArticle> = {
             '**Top-P（核サンプリング）は、各ステップでモデルが考慮する可能性のある単語オプションの数を制御します。** 「どの程度無作為か」ではなく、「どの程度の妥当な選択肢があるか」と考えてください。Top-P 0.1では、モデルはわずかな累積確率10%に達するまで最もよい選択肢だけを考慮します。Top-P 0.9では、はるかに広い範囲の可能な単語を考慮します。',
             '簡潔に言えば：温度は「どの程度冒険的か」を制御し、Top-Pは「どの程度の選択肢を考慮するか」を制御します。どちらも出力の多様性に影響しますが、異なる方法で機能します。',
           ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'ローカルモデルで動作',
+              text: '温度およびTop-P設定は、すべての[ローカルLLMツール](https://www.promptquorum.com/local-llms)で利用可能です。同じパラメータ、同じ効果です。'
+            }
+          ],
         },
         tldr: {
           title: '重要なポイント',
@@ -820,6 +841,13 @@ export const article: Record<Language, PEArticle> = {
             '**温度是一个旋钮，使模型的输出更加随机（更高）或更具确定性（更低）。** 在温度0.0下，模型总是选择最有可能的下一个单词——每次运行都会产生相同的输出。在温度1.0+时，模型会考虑更多风险较高的替代方案，产生令人惊讶和多样化的文本。',
             '**Top-P（核抽样）控制模型在每一步考虑多少个可能的单词选项。** 与其说"有多随机"，不如说"有多少合理的选择"。在Top-P 0.1时，模型仅考虑顶部选项直到达到10%的累积概率——狭隘且安全。在Top-P 0.9时，它考虑了更广泛的可能单词集——更宽松和多样化。',
             '简而言之：温度控制"有多冒险"，Top-P控制"要考虑多少选项"。两者都影响输出的多样性，但方式不同。',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: '适用于本地模型',
+              text: '温度和Top-P设置在所有[本地LLM工具](https://www.promptquorum.com/local-llms)中可用。相同的参数，相同的效果。'
+            }
           ],
         },
         tldr: {

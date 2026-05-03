@@ -382,6 +382,13 @@ export const article: Record<Language, PEArticle> = {
             'Heute ist Prompt Engineering eine strukturierte Disziplin mit benannten Techniken, wiederverwendbaren Frameworks und messbaren Ergebnissen. Es geht nicht darum, KI-Systeme zu überlisten oder versteckte Befehle zu finden – es geht darum, einem probabilistischen Modell das klarstmögliche Signal zu geben, was man benötigt. Ein gut entwickelter Prompt liefert konsistent nutzbare Ergebnisse beim ersten Versuch.',
             'Die Grundlagen des Prompt Engineerings beginnen mit dem Verständnis, dass LLMs Mustervervollständigungs-Engines sind. Sie erzeugen Ausgaben auf Basis der statistischen Wahrscheinlichkeit, was auf die Eingabe folgen sollte. Je präziser man Aufgabe, Kontext, Einschränkungen und gewünschtes Format angibt, desto weniger muss das Modell raten – und desto besser das Ergebnis.',
           ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Funktioniert mit lokalen Modellen',
+              text: 'Alle Techniken in diesem Leitfaden funktionieren mit Ollama, LM Studio und anderen [lokalen LLMs](https://www.promptquorum.com/local-llms). Kein API-Schlüssel erforderlich.'
+            }
+          ],
         },
 
         tldr: {
@@ -665,6 +672,13 @@ export const article: Record<Language, PEArticle> = {
             '**Le prompt engineering est la pratique qui consiste à concevoir et à structurer des entrées textuelles — appelées prompts — pour obtenir des résultats précis, utiles et reproductibles des grands modèles de langage (LLM).** Il s\'applique à GPT-5.5, Claude, Gemini et aux modèles exécutés localement via Ollama ou LM Studio. La différence entre le prompt engineering et le simple fait de « poser une question à une IA » est la même qu\'entre une demande vague et une instruction précise avec un objectif défini, un contexte et un format de sortie.',
             'Aujourd\'hui, le prompt engineering est une discipline structurée avec des techniques nommées, des frameworks réutilisables et des résultats mesurables. Il ne s\'agit pas de tromper les systèmes d\'IA ni de trouver des commandes cachées — il s\'agit de donner à un modèle probabiliste le signal le plus clair possible de ce dont vous avez besoin. Un prompt bien conçu produit de manière constante un résultat utilisable dès la première tentative.',
             'Les bases du prompt engineering commencent par la compréhension du fait que les LLM sont des moteurs de complétion de schémas. Ils génèrent des sorties en fonction de la probabilité statistique de ce qui doit suivre votre entrée. Plus vous spécifiez précisément la tâche, le contexte, les contraintes et le format souhaité, moins le modèle doit deviner — et meilleur est le résultat.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Fonctionne avec les modèles locaux',
+              text: 'Toutes les techniques de ce guide fonctionnent avec Ollama, LM Studio et autres [LLMs locaux](https://www.promptquorum.com/local-llms). Aucune clé API requise.'
+            }
           ],
         },
 
@@ -951,6 +965,13 @@ export const article: Record<Language, PEArticle> = {
             '現在、プロンプトエンジニアリングは、名前の付いたテクニック・再利用可能なフレームワーク・測定可能な成果を持つ体系的な分野として確立されています。AIシステムを騙したり、隠しコマンドを探したりするものではなく、確率的なモデルに対して、必要なものを可能な限り明確に伝えることが目的です。よく設計されたプロンプトは、初回の試みで一貫して使用可能な出力を生成します。',
             'プロンプトエンジニアリングの基礎は、LLMがパターン補完エンジンであるという理解から始まります。モデルは、入力の後に続くべき内容の統計的確率に基づいて出力を生成します。タスク・コンテキスト・制約・希望する形式を正確に指定するほど、モデルが推測する必要がなくなり、結果も向上します。',
           ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'ローカルモデルで動作',
+              text: 'このガイドのすべてのテクニックは、Ollama、LM Studio、その他の[ローカルLLM](https://www.promptquorum.com/local-llms)で機能します。APIキーは不要です。'
+            }
+          ],
         },
 
         tldr: {
@@ -1206,6 +1227,13 @@ export const article: Record<Language, PEArticle> = {
             '**提示词工程是设计和构建文本输入——称为提示词——的实践，目的是从大型语言模型（LLM）中获得准确、有用且可重复的输出。** 它适用于 GPT-5.5、Claude、Gemini，以及通过 Ollama 或 LM Studio 在本地运行的模型。提示词工程与"随便问 AI 一个问题"的区别，就在于模糊请求与精确指令之间的差距——后者具有明确的目标、上下文和输出格式。',
             '如今，提示词工程已发展为一门具有命名技术、可复用框架和可量化成果的结构化学科。它并非关于欺骗 AI 系统或寻找隐藏指令，而是为概率模型提供尽可能清晰的信号，告知其你需要什么。一个精心设计的提示词能在首次尝试时稳定产出可用的结果。',
             '提示词工程的基础始于理解一件事：大型语言模型是模式补全引擎。它们根据你的输入内容之后最有可能跟随什么内容来生成输出。你对任务、上下文、约束和期望格式的描述越精确，模型需要猜测的就越少——结果也就越好。',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: '适用于本地模型',
+              text: '本指南中的所有技术都可用于 Ollama、LM Studio 和其他[本地 LLM](https://www.promptquorum.com/local-llms)。无需 API 密钥。'
+            }
           ],
         },
 
