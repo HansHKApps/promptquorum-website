@@ -11,9 +11,11 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       title: 'From GPT-2 to Today: How Prompt Engineering Evolved',
-      seoTitle: 'How Prompt Engineering Evolved: From Few-Shot to Context Design',
+      seoTitle: 'Prompt Engineering is Dead? How It Evolved Into Context Design (2026)',
       intro: 'Prompt engineering evolved from informal experiments around GPT-3 in 2020 to a structured discipline with named techniques and frameworks by 2026. This timeline traces the key breakthroughs, research papers, and turning points that made prompting a core skill.',
-      metaDescription: "Prompt engineering evolved from GPT-3 few-shot learning (2020) through chain-of-thought reasoning, ChatGPT's mainstream moment, and now context design (2026). Key papers, milestones, and the shift from niche technique to baseline skill.",
+      metaDescription: 'Prompt engineering went through 7 distinct phases from GPT-3 (2020) to context design (2026). Complete timeline with 12+ research citations, misconceptions debunked, and why the discipline transformed but isn\'t dead.',
+      ogTitle: 'The 7 Phases of Prompt Engineering: GPT-3 to Context Design (2020–2026)',
+      twitterTitle: 'How prompt engineering went from "write a better prompt" to context design in 6 years',
       publishDate: '2026-03-01',
       dateModified: '2026-05-03',
       readTime: '10 min read',
@@ -51,8 +53,8 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'From GPT-2 to Today: How Prompt Engineering Evolved',
-        description: 'The history of prompt engineering from GPT-3 and few-shot prompting in 2020 to context design in 2026. Key milestones, papers, and turning points that shaped the discipline.',
+        headline: 'Prompt Engineering is Dead? How It Evolved Into Context Design (2026)',
+        description: 'Prompt engineering went through 7 distinct phases from GPT-3 (2020) to context design (2026). Complete timeline with 12+ research citations, misconceptions debunked, and why the discipline transformed but isn\'t dead.',
         datePublished: '2026-03-01',
         dateModified: '2026-05-03',
         url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved?lang=en',
@@ -132,7 +134,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'gpt-3-few-shot',
           title: '2020: GPT-3 and the Few-Shot Breakthrough',
           content: [
-            '**The modern history of prompt engineering effectively begins with GPT-3.** In May 2020, OpenAI released GPT-3, a 175-billion-parameter model, alongside the landmark paper by Brown et al., "Language Models are Few-Shot Learners" [External: Brown et al., 2020 – Language Models are Few-Shot Learners]. The paper demonstrated that by including a few examples of the desired task directly in the prompt — without any weight updates to the model — performance on downstream tasks improved dramatically.',
+            '**The modern history of prompt engineering effectively begins with GPT-3.** In May 2020, OpenAI released GPT-3, a 175-billion-parameter model, alongside the landmark paper by Brown et al., "[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)". The paper demonstrated that by including a few examples of the desired task directly in the prompt — without any weight updates to the model — performance on downstream tasks improved dramatically.',
             'This was the seed of prompt engineering as a discipline. Researchers and developers realised that the same model could be turned into a translator, a summariser, a code generator, or a question-answering system simply by changing how the prompt was written. The model did not need retraining — it needed a better prompt. That insight reframed what a prompt was: not just an input, but a design artifact.',
             'Brown et al. reported that few-shot performance scaled consistently with model size: the 175B GPT-3 model substantially outperformed smaller variants across every benchmark tested, establishing that scale and prompt-based learning were directly linked. This made the quality of the prompt a variable that practitioners — not just researchers — could control.',
             'See [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] for a practical guide to the technique GPT-3 made famous.',
@@ -143,7 +145,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'tricks-to-skill',
           title: '2021–Early 2022: From Prompt Tricks to a Recognised Skill',
           content: [
-            'Between 2021 and early 2022, prompt crafting moved from research papers into practitioner communities. GitHub repositories with curated prompt collections appeared — "awesome-prompts" style lists that shared what worked for coding assistance, summarisation, and creative writing. Prompt collections, shared on Twitter and Reddit, became community assets. The Prompt Engineering Guide (promptingguide.ai) [External: Prompt Engineering Guide – promptingguide.ai] became one of the first dedicated references cataloguing techniques systematically.',
+            'Between 2021 and early 2022, prompt crafting moved from research papers into practitioner communities. GitHub repositories with curated prompt collections appeared — "awesome-prompts" style lists that shared what worked for coding assistance, summarisation, and creative writing. Prompt collections, shared on Twitter and Reddit, became community assets. The [Prompt Engineering Guide](https://www.promptingguide.ai/) became one of the first dedicated references cataloguing techniques systematically.',
             'The term "prompt engineering" began appearing more frequently in research papers, blog posts, and job descriptions through this period. OpenAI\'s InstructGPT paper (Ouyang et al., 2022) introduced RLHF-tuned models that responded far more reliably to natural-language instructions — making prompt quality even more consequential. By mid-2022, it was clear that this was a transferable skill, not just a researcher\'s curiosity.',
           ],
         },
@@ -164,7 +166,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**The release of ChatGPT on November 30, 2022, changed the public profile of prompt engineering overnight.** ChatGPT reached one million users within its first five days — confirmed by OpenAI CEO Sam Altman on Twitter in December 2022 — and 100 million monthly active users by January 2023, according to a UBS analysis cited by Reuters. Within days, millions of people were experimenting with prompts and discovering that their results varied enormously based on how they phrased requests. Tech media covered "prompt engineering" as a skill worth learning. The Oxford English Dictionary added "prompt" as a verb related to AI in 2023, and the word itself became a runner-up for word of the year in multiple rankings.',
             'By early 2023, "prompt engineer" appeared as a job title with reported salaries of $175,000–$335,000 at companies including Anthropic, according to widely cited job postings. The role attracted significant media attention — Bloomberg, The Guardian, and The Atlantic all covered whether prompt engineering was a real career. The consensus at the time: it was a transitional role, part human-computer interface design, part subject-matter expertise, part quality assurance.',
-            'The popularisation of the phrase "prompt engineering" is sometimes attributed to various practitioners and commentators. Richard Socher, former Chief Scientist at Salesforce, is mentioned in some commentary as having helped frame the idea early. The Wikipedia article on prompt engineering [External: Prompt Engineering – Wikipedia] provides a balanced overview of competing claims about the term\'s origins.',
+            'The popularisation of the phrase "prompt engineering" is sometimes attributed to various practitioners and commentators. Richard Socher, former Chief Scientist at Salesforce, is mentioned in some commentary as having helped frame the idea early. The [Wikipedia article on prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) provides a balanced overview of competing claims about the term\'s origins.',
           ],
         },
 
@@ -173,7 +175,7 @@ export const article: Record<Language, PEArticle> = {
           title: '2023: GPT-4, Multimodal Prompting and Frameworks',
           content: [
             'The release of GPT-4 in March 2023 expanded prompt engineering in two directions simultaneously: larger context windows (up to 128K tokens in later versions) and multimodal inputs. Practitioners could now include images in prompts alongside text, opening prompt engineering to visual tasks — describing images, comparing diagrams, annotating charts. Early Gemini models from Google and multimodal Claude versions from Anthropic followed within months.',
-            'The same year saw the formalisation of prompt engineering best practices. OpenAI published its official prompt engineering guide [External: OpenAI – Best Practices for Prompt Engineering]. Google Cloud released its own prompt engineering documentation [External: Google Cloud – Prompt Engineering for AI Guide]. Independent authors codified frameworks — CRAFT, CO-STAR, SPECS, RISEN, TRACE — that gave practitioners repeatable templates for structuring prompts, reducing the reliance on trial and error.',
+            'The same year saw the formalisation of prompt engineering best practices. OpenAI published its [official prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering). Google Cloud released its own [prompt engineering documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/prompt-engineering). Independent authors codified frameworks — CRAFT, CO-STAR, SPECS, RISEN, TRACE — that gave practitioners repeatable templates for structuring prompts, reducing the reliance on trial and error.',
             'These frameworks represented the maturation of prompt engineering from a personal skill into a teachable, shareable practice. See [Frameworks: Which Prompt Framework Should You Use?] for a guide to choosing between them, and [Fundamentals: Beyond Text: How to Prompt with Images] for the multimodal dimension.',
           ],
         },
@@ -201,7 +203,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'beyond-2026',
           title: '2026 and Beyond: Prompt Engineering as a Core Literacy',
           content: [
-            'As of 2026, research and commentary increasingly describe prompt engineering not as a niche job title, but as a fundamental literacy skill for knowledge workers who use AI tools. Academic papers like "Prompt Engineering as a New 21st Century Skill" [External: Prompt engineering as a new 21st century skill – Frontiers] frame structured prompting alongside reading, writing, and computation as a baseline competency for working with generative AI systems.',
+            'As of 2026, research and commentary increasingly describe prompt engineering not as a niche job title, but as a fundamental literacy skill for knowledge workers who use AI tools. Academic papers frame structured prompting alongside reading, writing, and computation as a baseline competency for working with generative AI systems.',
             'The role has split into two distinct tracks. The first is system and context design — the engineering of production AI systems where prompts form part of a larger architecture involving retrieval, agents, and evaluation pipelines. The second is everyday use — the ability to write clear, structured prompts that produce useful outputs without knowing the underlying architecture. Both tracks benefit from the same core principles: clear task specification, appropriate context, constraints, and output format.',
             'What has not changed, despite more capable models and automated tools, is the fundamental principle: the clearer and more structured the input, the more reliable and useful the output. The techniques, terminology, and tooling have matured, but the core insight from the GPT-3 era remains true in 2026.',
           ],
@@ -249,7 +251,7 @@ export const article: Record<Language, PEArticle> = {
           faqs: [
             {
               q: 'Who first coined the term "prompt engineering"?',
-              a: 'The exact origin is debated. The term appeared in research contexts as early as 2021 and gained wider use through 2022. Richard Socher is mentioned in some commentary as having helped frame the concept publicly, though no single person is credited with inventing it. The Wikipedia article on prompt engineering [External: Prompt Engineering – Wikipedia] provides a balanced overview of the competing claims.',
+              a: 'The exact origin is debated. The term appeared in research contexts as early as 2021 and gained wider use through 2022. Richard Socher is mentioned in some commentary as having helped frame the concept publicly, though no single person is credited with inventing it.',
             },
             {
               q: 'Why did prompt engineering explode in popularity after ChatGPT?',
@@ -273,7 +275,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Is prompt engineering dead in 2026?',
-              a: 'No. The discipline has shifted, not disappeared. As models grow more capable, the work moves from syntax tricks and formatting hacks to context design — structuring inputs, managing retrieval, and composing tool outputs. The job title "Prompt Engineer" is narrowing, but the underlying skill is embedded in every role that uses AI: developer, analyst, marketer, researcher. [External: McKinsey 2024 State of AI] found that effective AI adoption still correlates strongly with how well users frame tasks for the model.',
+              a: 'No. The discipline has shifted, not disappeared. As models grow more capable, the work moves from syntax tricks and formatting hacks to context design — structuring inputs, managing retrieval, and composing tool outputs. The job title "Prompt Engineer" is narrowing, but the underlying skill is embedded in every role that uses AI: developer, analyst, marketer, researcher. Effective AI adoption still correlates strongly with how well users frame tasks for the model.',
             },
             {
               q: 'Do I need to learn prompt engineering if AI models keep improving?',
