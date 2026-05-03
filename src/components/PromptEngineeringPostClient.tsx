@@ -9,6 +9,7 @@ import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, DOMAIN_TO_PATH, LEVEL_TO_PATHS, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { GlossaryComparisonTable } from '@/components/GlossaryComparisonTable'
+import { ImageLightbox } from '@/components/ImageLightbox'
 
 interface Props {
   slug: string
@@ -622,7 +623,15 @@ function LearningPathCard({ path }: { path: LearningPath }) {
   )
 }
 
+interface LightboxImage {
+  src: string
+  alt: string
+  caption?: string
+}
+
 function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; isGlossary?: boolean; termPathMap?: Map<string, string[]> }) {
+  const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
+
   return (
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
@@ -743,12 +752,12 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
       ) : (
         /* Regular table for non-glossary content */
         section.rows && section.columns && (
-          <div className="overflow-x-auto my-6">
+          <div className="relative overflow-x-auto my-6">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b-2 border-primary/20">
-                  {section.columns.map((col) => (
-                    <th key={col} className="text-left p-3 font-bold text-text-primary bg-primary/5">
+                  {section.columns.map((col, colIdx) => (
+                    <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
                       {col}
                     </th>
                   ))}
@@ -756,9 +765,9 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
               </thead>
               <tbody>
                 {section.rows.map((row, i) => (
-                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors">
-                    {section.columns!.map((col) => (
-                      <td key={col} className="p-3 text-text-secondary">
+                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
+                    {section.columns!.map((col, colIdx) => (
+                      <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
                         {renderInlineLinks(row[col] ?? '—', lang)}
                       </td>
                     ))}
@@ -766,6 +775,7 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
                 ))}
               </tbody>
             </table>
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
           </div>
         )
       )}
@@ -789,11 +799,15 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
 
       {/* Image with caption */}
       {section.image && (
-        <figure className="my-8 flex flex-col items-center">
+        <figure className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
+          src: section.image!,
+          alt: section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram'),
+          caption: section.imageCaption,
+        })}>
           <img
             src={section.image}
             alt={section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram')}
-            className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm"
+            className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm hover:shadow-md transition-shadow"
             width={800}
             height={450}
           />
@@ -803,6 +817,16 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
             </figcaption>
           )}
         </figure>
+      )}
+
+      {/* Lightbox component */}
+      {lightboxImage && (
+        <ImageLightbox
+          src={lightboxImage.src}
+          alt={lightboxImage.alt}
+          caption={lightboxImage.caption}
+          onClose={() => setLightboxImage(null)}
+        />
       )}
 
       {/* Image placeholder */}

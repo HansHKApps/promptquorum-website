@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/_next/static/', '/api/og/'],
       },
       // AI crawlers: explicit allow for discovery files and blog content
       {

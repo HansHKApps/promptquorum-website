@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
@@ -8,6 +9,8 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
+import { QuickAnswer } from '@/components/QuickAnswer'
+import { ImageLightbox } from '@/components/ImageLightbox'
 
 interface Props {
   slug: string
@@ -260,7 +263,15 @@ function renderMarkdownTable(lines: string[], lang: Language): JSX.Element {
   )
 }
 
+interface LightboxImage {
+  src: string
+  alt: string
+  caption?: string
+}
+
 function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language }) {
+  const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
+
   return (
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
@@ -443,12 +454,12 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
 
       {/* Table */}
       {section.rows && section.columns && (
-        <div className="overflow-x-auto my-6">
+        <div className="relative overflow-x-auto my-6">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="border-b-2 border-primary/20">
-                {section.columns.map((col) => (
-                  <th key={col} className="text-left p-3 font-bold text-text-primary bg-primary/5">
+                {section.columns.map((col, colIdx) => (
+                  <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
                     {col}
                   </th>
                 ))}
@@ -456,9 +467,9 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
             </thead>
             <tbody>
               {section.rows.map((row, i) => (
-                <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors">
-                  {section.columns!.map((col) => (
-                    <td key={col} className="p-3 text-text-secondary">
+                <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
+                  {section.columns!.map((col, colIdx) => (
+                    <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
                       {renderInlineLinks(row[col] ?? '—', lang)}
                     </td>
                   ))}
@@ -466,6 +477,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
               ))}
             </tbody>
           </table>
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
           {section.note && (
             <p className="text-sm text-text-secondary leading-relaxed mt-4 italic">
               {renderInlineLinks(section.note, lang)}
@@ -493,11 +505,15 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
 
       {/* Image with caption */}
       {section.image && (
-        <figure className="my-8 flex flex-col items-center">
+        <figure className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
+          src: section.image!,
+          alt: section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram'),
+          caption: section.imageCaption,
+        })}>
           <img
             src={section.image}
             alt={section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram')}
-            className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm"
+            className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm hover:shadow-md transition-shadow"
           />
           {section.imageCaption && (
             <figcaption className="text-sm text-text-secondary italic mt-3 text-center max-w-2xl">
@@ -505,6 +521,16 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
             </figcaption>
           )}
         </figure>
+      )}
+
+      {/* Lightbox component */}
+      {lightboxImage && (
+        <ImageLightbox
+          src={lightboxImage.src}
+          alt={lightboxImage.alt}
+          caption={lightboxImage.caption}
+          onClose={() => setLightboxImage(null)}
+        />
       )}
 
       {/* Image placeholder */}
@@ -623,6 +649,17 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>
+        )}
+
+        {/* Quick Answer Block — Top of page for featured snippet */}
+        {(article as any).quickAnswerTop && (article as any).quickAnswerTop[lang] && (
+          <QuickAnswer
+            lang={lang}
+            question={(article as any).quickAnswerTop[lang].question}
+            answer={(article as any).quickAnswerTop[lang].answer}
+            bullets={(article as any).quickAnswerTop[lang].bullets}
+            updatedDate={(article as any).quickAnswerTop[lang].updatedDate}
+          />
         )}
 
         {/* Quick Answer Block — AI-crawler-optimized featured snippet */}

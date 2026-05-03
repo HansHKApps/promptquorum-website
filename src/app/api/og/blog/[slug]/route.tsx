@@ -109,6 +109,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
       headers: {
         'Content-Type': 'image/png',
         'Cache-Control': 'public, max-age=86400, immutable',
+        'X-Robots-Tag': 'noindex, nofollow',
       },
     },
   )

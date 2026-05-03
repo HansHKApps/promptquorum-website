@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
@@ -7,6 +8,7 @@ import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { FrameworkWheel } from '@/components/FrameworkWheel'
+import { ImageLightbox } from '@/components/ImageLightbox'
 
 // Helper to convert "Published Month DD, YYYY" to ISO date format "YYYY-MM-DD"
 function getDateISO(dateStr: string): string {
@@ -27,8 +29,15 @@ interface BlogPostClientProps {
   initialLang?: Language
 }
 
+interface LightboxImage {
+  src: string
+  alt: string
+  caption?: string
+}
+
 function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps) {
   const lang = useLang(initialLang) as Language
+  const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
 
   // Get translated metadata
   const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
@@ -114,11 +123,15 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
                 {/* Image with caption */}
                 {section.image && (
-                  <figure className="my-8">
+                  <figure className="my-8 cursor-zoom-in" onClick={() => setLightboxImage({
+                    src: section.image!,
+                    alt: section.imageCaption || 'Article illustration',
+                    caption: section.imageCaption,
+                  })}>
                     <img
                       src={section.image}
                       alt={section.imageCaption || 'Article illustration'}
-                      className="w-full rounded-lg border border-primary/20 shadow-sm"
+                      className="w-full rounded-lg border border-primary/20 shadow-sm hover:shadow-md transition-shadow"
                     />
                     {section.imageCaption && (
                       <figcaption className="text-sm text-text-secondary mt-3 text-center italic">
@@ -126,6 +139,16 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                       </figcaption>
                     )}
                   </figure>
+                )}
+
+                {/* Lightbox component */}
+                {lightboxImage && (
+                  <ImageLightbox
+                    src={lightboxImage.src}
+                    alt={lightboxImage.alt}
+                    caption={lightboxImage.caption}
+                    onClose={() => setLightboxImage(null)}
+                  />
                 )}
 
                 {/* Items: bullet list */}
@@ -142,14 +165,14 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
                 {/* Table: rows with columns */}
                 {section.rows && section.rows.length > 0 && section.columns && (
-                  <div className="overflow-x-auto my-6">
+                  <div className="relative overflow-x-auto my-6">
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="border-b border-text-tertiary">
-                          {section.columns.map((col) => (
+                          {section.columns.map((col, colIdx) => (
                             <th
                               key={col}
-                              className="text-left p-3 font-bold text-text-primary bg-primary/5"
+                              className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}
                             >
                               {col}
                             </th>
@@ -158,9 +181,9 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                       </thead>
                       <tbody>
                         {section.rows.map((row, idx) => (
-                          <tr key={idx} className="border-b border-text-tertiary hover:bg-primary/5">
-                            {section.columns?.map((col) => (
-                              <td key={`${idx}-${col}`} className="p-3 text-text-secondary">
+                          <tr key={idx} className="border-b border-text-tertiary hover:bg-primary/5 group">
+                            {section.columns?.map((col, colIdx) => (
+                              <td key={`${idx}-${col}`} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
                                 {row[col] || '—'}
                               </td>
                             ))}
@@ -168,6 +191,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                         ))}
                       </tbody>
                     </table>
+                    <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
                   </div>
                 )}
 
