@@ -4511,7 +4511,9 @@ schema: {
             'Best 7B all-rounder: **Mistral 7B v0.3** -- reliable, function calling support, and Apache 2.0 licence. As of April 2026, Qwen2.5 7B outperforms it on coding and Llama 3.1 8B leads on English reasoning at the same RAM tier.',
             'Best for multilingual and coding: **Qwen2.5 7B** -- outperforms Mistral 7B on coding benchmarks and supports 29 languages natively.',
             '👉 **Not sure if local is right for you?** Read [Local LLM vs Cloud Comparison](/local-llms/local-llm-limitations) before choosing — covers speed, quality, and cost trade-offs.',
-          ],
+          ,
+            'Votre premier LLM local s'exécute. Maintenant, apprenez comment le promter efficacement : [qu'est-ce que le prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) enseigne les fondamentaux.',
+            'あなたの最初のローカルLLMが実行されています。今、それを効果的にプロンプトする方法を学びます：[プロンプトエンジニアリングとは](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering)は基礎を教えます。'],
         },
         beginnerChecklist: {
           id: 'beginner-checklist',
@@ -38994,7 +38996,9 @@ schema: {
             '`ollama serve` -- Start the Ollama API server (runs automatically on Mac/Windows).',
             '`ollama create <name> -f <modelfile>` -- Build a custom model from a Modelfile.',
             'As of April 2026, these commands are stable and cover all common use cases.',
-          ],
+          ,
+            '高度なモデルパラメータは複雑なタスクに重要です。複数のステップにわたる構造化推論について、[Chain-of-Thought Prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting)を参照してください — 推論をステップバイステップの出力に分割します。',
+            '高级模型参数对于复杂任务很重要。对于多步骤的结构化推理，请参阅[思维链提示](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting)——将推理分解为逐步输出。'],
         },
         essentialCommands: {
           id: 'essential-commands',
