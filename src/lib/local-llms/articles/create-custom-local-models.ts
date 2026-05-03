@@ -1,0 +1,1948 @@
+// Auto-generated from src/lib/local-llms/content.ts
+// Slug: create-custom-local-models
+// Generated: 2026-05-03T11:33:08.370Z
+
+import type { Language } from "@/lib/blog/blogContent";
+
+import type { LLMArticle } from "@/lib/local-llms/types";
+
+export const article: Partial<Record<Language, LLMArticle>> = {
+    en: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: 'Create Custom Local LLMs 2026: Fine-Tuning vs Pre-Training with Unsloth and Ollama',
+      seoTitle: 'Create Custom Local LLMs 2026: Fine-Tune for $500 vs $50K Pre-Train',
+      intro: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to Ollama.',
+      metaDescription: 'Fine-tune Llama 3.1 8B with LoRA: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training: 10B+ tokens, weeks, $50K–500K. Decision matrix and Ollama deployment guide.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to Ollama.',
+      audience: 'Engineers deploying local LLMs in production or enterprise environments',
+      readTime: '12 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'model creation',
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Create Custom Local LLMs 2026: Fine-Tuning vs Pre-Training with Unsloth',
+        description: 'Fine-tune a 7B model with LoRA: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training: 10B+ tokens, $50K–500K. Decision matrix, Unsloth setup, and Ollama deployment included.',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          url: 'https://www.promptquorum.com/about',
+        },
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-24',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+        },
+        proficiencyLevel: 'Advanced',
+        about: [
+          { '@type': 'Thing', 'name': 'Custom LLM fine-tuning' },
+          { '@type': 'Thing', 'name': 'LoRA domain adaptation' },
+          { '@type': 'Thing', 'name': 'Unsloth fine-tuning' },
+          { '@type': 'Thing', 'name': 'Pre-training vs fine-tuning cost' },
+          { '@type': 'Thing', 'name': 'GGUF Ollama deployment' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Can fine-tuning match pre-trained model quality?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Fine-tuned models can exceed base model performance on your specific domain, but they won\'t match the breadth of knowledge in a larger pre-trained model. Llama 3.1 8B fine-tuned on legal documents will outperform Llama 3.1 70B on legal tasks, but underperform on general knowledge. Fine-tune when domain-specific accuracy matters more than breadth.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How much data do I need to fine-tune effectively?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Minimum 500–1,000 examples for a usable model; 5,000+ for production quality. Data quality matters more than quantity — 1,000 high-quality examples beat 50,000 low-quality ones. Use LoRA for small datasets (500–2,000 examples) and full fine-tuning only with 10,000+ examples.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What\'s the difference between LoRA and full fine-tuning?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'LoRA (Low-Rank Adaptation) updates only a small fraction of weights (~1–2% of model size), making it 4× faster and requiring 80–90% less VRAM. Full fine-tuning updates all weights and gives marginally better results (~2–5% accuracy improvement) but requires significant compute. Use LoRA for most projects; full fine-tuning only when you have the budget.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I consider pre-training instead of fine-tuning?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Only if: (1) you have >10 billion tokens of unique data, (2) fine-tuning consistently fails to reach your accuracy target, (3) budget is >$50,000, and (4) you need a proprietary model for competitive advantage. For 99% of organizations, fine-tuning is the right choice.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I evaluate if my custom model is production-ready?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Test on 3 dimensions: (1) Task-specific metrics (accuracy, F1, BLEU), (2) Benchmark comparison (run on MMLU or HumanEval to compare against base model), (3) Business metrics (does it improve actual outcomes?). If your fine-tuned model outperforms the base model by 5–10% on your task, it\'s production-ready.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I combine fine-tuning with prompt engineering for better results?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes — this is best practice. Fine-tuning handles structural changes (domain language, format); prompt engineering handles specific use cases. A fine-tuned legal model + good prompt engineering will outperform either alone. Start with prompt optimization (free), then fine-tune if needed.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What framework should I use for fine-tuning?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Unsloth (fastest), Axolotl (flexible), and Hugging Face Transformers (official, most documented) are the main options. Unsloth is recommended for speed; Axolotl for multi-GPU setups. All support LoRA and work with Ollama for deployment.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I know if pre-training is worth the cost?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Do this math: (1) Estimate fine-tuning quality gap on your task (e.g., fine-tuning reaches 85%, pre-training might reach 92%). (2) Quantify business value per accuracy point (e.g., +1% accuracy = $10k revenue). (3) If ($50k pre-training cost) < (value of 7% improvement), then pre-train. If not, fine-tune.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Create and Deploy a Custom Local LLM',
+        totalTime: 'PT3H',
+        step: [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Collect 500–5,000 domain-specific examples', 'text': 'Each example = input + expected output in JSON/JSONL format' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choose base model (Llama 3.1 8B or Qwen2.5 7B)', 'text': 'Use instruction-tuned variant for best results' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Train with LoRA using Unsloth (4× faster)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Evaluate on held-out test set', 'text': 'Measure accuracy, F1, or task-specific metrics on unseen data' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Merge LoRA adapter into base model', 'text': 'model.merge_and_unload() creates single model file' },
+          { '@type': 'HowToStep', 'position': 6, 'name': 'Convert to GGUF and quantize', 'text': 'python convert_hf_to_gguf.py --outtype q4_k_m' },
+          { '@type': 'HowToStep', 'position': 7, 'name': 'Deploy to Ollama', 'text': 'Create Modelfile with FROM ./model.gguf, then ollama create my-model -f Modelfile' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Custom LLM Approaches: Decision Matrix',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Fine-Tuning (Recommended)',
+            description: 'Fine-tune an existing model with 500–5,000 domain-specific examples. Cost: $100–500, Time: 1–4 hours, VRAM: 8 GB. Best for 99% of organizations with domain-specific data.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'RAG (Free)',
+            description: 'Retrieval-Augmented Generation: no training required. Cost: $0, Time: immediate, VRAM: minimal. Best for rapid iteration and organizations with no labeled training data.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Pre-Training (Rare)',
+            description: 'Train from scratch on 100B+ tokens of raw data. Cost: $50K–500K, Time: weeks–months, VRAM: 100+ GB. Only justified for proprietary models with massive budgets.',
+          },
+        ],
+      },
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Fine-Tuning vs Pre-Training', anchor: '#finetuning-vs-pretraining' },
+        { label: 'Fine-Tuning Path', anchor: '#finetuning-path' },
+        { label: 'LoRA vs Full Fine-Tuning', anchor: '#lora-vs-full-finetuning' },
+        { label: 'VRAM Requirements', anchor: '#vram-requirements-finetuning' },
+        { label: 'Ollama Deployment', anchor: '#ollama-deployment' },
+        { label: 'Pre-Training Basics', anchor: '#pretraining-basics' },
+        { label: 'Decision Matrix', anchor: '#decision-matrix' },
+        { label: 'Domain Adaptation Strategies', anchor: '#domain-adaptation' },
+        { label: 'Evaluation Metrics', anchor: '#evaluation' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      gammaEmbedUrl: '/presentations/create-custom-local-models-static.html',
+      gammaDescription: 'The slide deck covers: fine-tuning vs pre-training analysis, 7-step Unsloth path, GGUF deployment, and production readiness metrics. Download as custom LLM fine-tuning reference card.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            '**Fine-tuning (recommended):** 8 GB VRAM, 500+ training examples, 1-4 hours. Cost: $100-500.',
+            '**Pre-training:** 8+ GPUs, 100B+ tokens, weeks of training. Cost: $50k-500k.',
+            'Most organizations should fine-tune, not pre-train. Diminishing returns for custom pre-training.',
+            'Best approach: Start with fine-tuning on your domain data, then evaluate if pre-training is justified.',
+            'As of April 2026, pre-training is rarely justified unless you need proprietary model.',
+          ],
+        },
+        ftVsPt: {
+          id: 'finetuning-vs-pretraining',
+          title: 'Fine-Tuning vs Pre-Training',
+          rows: [
+            { 'Aspect': 'Training time', 'Fine-Tuning': '1-4 hours', 'Pre-Training': 'Weeks-months' },
+            { 'Aspect': 'VRAM required', 'Fine-Tuning': '8 GB', 'Pre-Training': '100+ GB (multi-GPU)' },
+            { 'Aspect': 'Data required', 'Fine-Tuning': '500-5k examples', 'Pre-Training': '100B+ tokens' },
+            { 'Aspect': 'Cost', 'Fine-Tuning': '$100-500', 'Pre-Training': '$50k-500k' },
+            { 'Aspect': 'Customization', 'Fine-Tuning': 'Domain knowledge', 'Pre-Training': 'Proprietary model' },
+            { 'Aspect': 'When to use', 'Fine-Tuning': '99% of cases', 'Pre-Training': 'Rare, specialized needs' },
+          ],
+          columns: ['Aspect', 'Fine-Tuning', 'Pre-Training'],
+          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-en.svg',
+          imageCaption: 'Fine-tuning (1–4 hours, $100–500, 8 GB VRAM) vs pre-training (weeks–months, $50K–500K, 100+ GB): comparison of training time, cost, data requirements, and when to use each approach.',
+        },
+        finetuningPath: {
+          id: 'finetuning-path',
+          title: 'Fine-Tuning Path (Recommended)',
+          numberedItems: [
+            'Collect 500-5000 domain-specific examples (high quality matters).',
+            'Choose base model (Llama 3.1 8B, Qwen 7B, etc.).',
+            'Use LoRA for efficient training (4× faster, same quality).',
+            'Train for 3-5 epochs on GPU.',
+            'Evaluate on test set (precision, recall, custom metrics).',
+            'Merge LoRA adapter into base model.',
+            'Deploy as production model.',
+          ],
+          image: '/images/create-custom-local-models-7step-finetuning-path-en.svg',
+          imageCaption: '7-step fine-tuning workflow: collect data → choose base model → train with LoRA (3–5 epochs, 8 GB VRAM) → evaluate → merge → convert to GGUF → deploy to Ollama. Total time: 1–4 hours.',
+        },
+        loraVsFull: {
+          id: 'lora-vs-full-finetuning',
+          title: 'LoRA vs Full Fine-Tuning: Which to Choose?',
+          content: [
+            'LoRA (Low-Rank Adaptation) updates only 1–2% of model weights, making it 4× faster and requiring 80–90% less VRAM than full fine-tuning. Full fine-tuning updates all weights and gives marginally better results (2–5% accuracy improvement) but requires 64+ GB VRAM and significant compute.',
+          ],
+          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-en.svg',
+          imageCaption: 'LoRA (4× faster, 8 GB VRAM, 95–98% accuracy) vs full fine-tuning (baseline speed, 64+ GB VRAM, +2–5% gain): speed-accuracy tradeoff and VRAM requirements comparison.',
+        },
+        vramRequirements: {
+          id: 'vram-requirements-finetuning',
+          title: 'VRAM Requirements by Model Size',
+          content: [
+            'Not all models fit in 8 GB VRAM for LoRA fine-tuning. Here\'s what you can run:',
+          ],
+          image: '/images/create-custom-local-models-vram-by-model-en.svg',
+          imageCaption: 'Fine-tuning VRAM compatibility: 3B–8B models ✓ work on 8 GB, 13B ✓ works but tight, 32B requires 64+ GB, 70B not feasible. LoRA adds ~25% overhead for batch training.',
+        },
+        ollamaDeployment: {
+          id: 'ollama-deployment',
+          title: 'Deploying Your Custom Model to Ollama',
+          content: [
+            'After merging the LoRA adapter, deploy to Ollama in 3 steps:',
+          ],
+          numberedItems: [
+            '**Step 1 — Export to GGUF:** Use llama.cpp\'s convert script to convert your merged model from PyTorch/safetensors format to GGUF. This is essential for Ollama and llama.cpp compatibility.\n```bash\npython convert_hf_to_gguf.py \\\n  --model ./merged-model \\\n  --outfile ./my-custom-model.gguf \\\n  --outtype q4_k_m\n```',
+            '**Step 2 — Create Ollama Modelfile:** Define your model\'s system prompt, parameters, and inference settings.\n```\nFROM ./my-custom-model.gguf\nSYSTEM "You are a [your domain] expert..."\nPARAMETER temperature 0.4\nPARAMETER num_ctx 4096\n```',
+            '**Step 3 — Register and run:** Load your model into Ollama for local or API access.\n```bash\nollama create my-custom-model -f Modelfile\nollama run my-custom-model\n```\n\nYour fine-tuned model is now accessible via Ollama\'s OpenAI-compatible API at localhost:11434 — identical to any standard Ollama model. Use with Continue.dev, Open WebUI, or your own application via the Python/Node.js OpenAI SDK.',
+          ],
+        },
+        pretraining: {
+          id: 'pretraining-basics',
+          title: 'Pre-Training: When and Why',
+          content: [
+            '**Pre-training means learning from raw data (books, documents, code).** Only justified if:',
+            '1. You have >10 billion tokens of unique, valuable data.',
+            '2. Pre-trained models consistently fail on your domain.',
+            '3. Budget is >$50k (realistic cost).',
+            '4. You need proprietary model (competitive advantage).',
+            'Example: A genomics company with 500GB of private research data might justify custom pre-training.',
+          ],
+        },
+        decisionMatrix: {
+          id: 'decision-matrix',
+          title: 'Decision Matrix: Which Approach to Use?',
+          content: [
+            'Three main approaches exist for custom models. Choose based on your data, budget, and timeline:',
+          ],
+          image: '/images/create-custom-local-models-cost-benefit-matrix-en.svg',
+          imageCaption: 'Decision matrix: use RAG if you have no training data ($0), fine-tuning if you have 500+ examples ($100–500, 1–4 hours), or pre-training if you have 100B+ tokens ($50K–500K, weeks–months).',
+        },
+        domainAdaptation: {
+          id: 'domain-adaptation',
+          title: 'Domain Adaptation Strategies',
+          content: [
+            '**Without full pre-training, improve model performance on your domain:**',
+          ],
+          items: [
+            '**Continued pre-training:** Take base model, train on your domain data (10B+ tokens). Cheaper than full pre-training.',
+            '**LoRA fine-tuning:** Most practical. Tune on 500+ examples.',
+            '**Prompt engineering:** Craft good prompts. Free, but limited.',
+            '**RAG:** Retrieve documents, provide context. Works without retraining.',
+            '**Ensemble:** Combine multiple models.',
+          ],
+        },
+        evaluation: {
+          id: 'evaluation',
+          title: 'Evaluation Metrics',
+          content: [
+            'Measure model quality:',
+          ],
+          items: [
+            '**Task-specific metrics:** Accuracy, F1 score, BLEU (for text generation).',
+            '**Benchmark tests:** Run on standard benchmarks (MMLU, HumanEval).',
+            '**Human evaluation:** Manual scoring (time-consuming but accurate).',
+            '**Business metrics:** Does model improve actual business outcomes?',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Common Mistakes',
+          items: [
+            '**Pre-training without sufficient data.** <10B tokens is wasted compute. Fine-tune instead.',
+            '**Not evaluating properly.** Only training loss is misleading. Test on unseen data.',
+            '**Expecting custom model to match GPT-4.** Gap between open models and frontier models is large.',
+            '**Ignoring inference costs.** Larger custom models = higher inference costs. Consider trade-off.',
+            '**Skipping the GGUF conversion step.** After fine-tuning with Unsloth or HuggingFace, your model is in PyTorch/safetensors format. Ollama and llama.cpp require GGUF. Use llama.cpp\'s `convert_hf_to_gguf.py` to convert. Without this step, your fine-tuned model cannot run in Ollama, LM Studio, or any GGUF-based inference engine. Always quantize during conversion (Q4_K_M recommended) to reduce file size 3–4×.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Can fine-tuning match pre-trained model quality?',
+              a: 'Fine-tuned models can exceed base model performance on your specific domain, but they won\'t match the breadth of knowledge in a larger pre-trained model. Llama 3.1 8B fine-tuned on legal documents will outperform Llama 3.1 70B on legal tasks, but underperform on general knowledge. Fine-tune when domain-specific accuracy matters more than breadth.',
+            },
+            {
+              q: 'How much data do I need to fine-tune effectively?',
+              a: 'Minimum 500–1,000 examples for a usable model; 5,000+ for production quality. Data quality matters more than quantity — 1,000 high-quality examples beat 50,000 low-quality ones. Use LoRA for small datasets (500–2,000 examples) and full fine-tuning only with 10,000+ examples.',
+            },
+            {
+              q: 'What\'s the difference between LoRA and full fine-tuning?',
+              a: 'LoRA (Low-Rank Adaptation) updates only a small fraction of weights (~1–2% of model size), making it 4× faster and requiring 80–90% less VRAM. Full fine-tuning updates all weights and gives marginally better results (~2–5% accuracy improvement) but requires significant compute. Use LoRA for most projects; full fine-tuning only when you have the budget.',
+            },
+            {
+              q: 'When should I consider pre-training instead of fine-tuning?',
+              a: 'Only if: (1) you have >10 billion tokens of unique data, (2) fine-tuning consistently fails to reach your accuracy target, (3) budget is >$50,000, and (4) you need a proprietary model for competitive advantage. For 99% of organizations, fine-tuning is the right choice.',
+            },
+            {
+              q: 'How do I evaluate if my custom model is production-ready?',
+              a: 'Test on 3 dimensions: (1) Task-specific metrics (accuracy, F1, BLEU), (2) Benchmark comparison (run on MMLU or HumanEval to compare against base model), (3) Business metrics (does it improve actual outcomes?). If your fine-tuned model outperforms the base model by 5–10% on your task, it\'s production-ready.',
+            },
+            {
+              q: 'Can I combine fine-tuning with prompt engineering for better results?',
+              a: 'Yes — this is best practice. Fine-tuning handles structural changes (domain language, format); prompt engineering handles specific use cases. A fine-tuned legal model + good prompt engineering will outperform either alone. Start with prompt optimization (free), then fine-tune if needed.',
+            },
+            {
+              q: 'What framework should I use for fine-tuning?',
+              a: 'Unsloth (fastest), Axolotl (flexible), and Hugging Face Transformers (official, most documented) are the main options. Unsloth is recommended for speed; Axolotl for multi-GPU setups. All support LoRA and work with Ollama for deployment.',
+            },
+            {
+              q: 'How do I know if pre-training is worth the cost?',
+              a: 'Do this math: (1) Estimate fine-tuning quality gap on your task (e.g., fine-tuning reaches 85%, pre-training might reach 92%). (2) Quantify business value per accuracy point (e.g., +1% accuracy = $10k revenue). (3) If ($50k pre-training cost) < (value of 7% improvement), then pre-train. If not, fine-tune.',
+            },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Regional Considerations for Custom Models',
+          content: [
+            '**Custom models present data privacy and regulatory implications that vary by region. Before deploying a fine-tuned or pre-trained model, understand regional compliance requirements:**',
+          ],
+          items: [
+            '**Europe (GDPR):** Fine-tuning your model on personal data requires data subject consent and documented processing agreements. GDPR Article 5 (data minimization) suggests fine-tuning on anonymized or synthetic data when possible. Pre-trained models on non-EU data may require additional governance before deployment in EU regions.',
+            '**Japan (APPI):** Japan\'s Personal Information Protection Act requires explicit consent for training on personal data. Custom models for healthcare or financial services require data residency (processing must occur within Japan). Consider on-premises fine-tuning and deployment.',
+            '**China (DSL + CAC):** China\'s Data Security Law and Cyberspace Administration rules require local processing for personal and industrial data. Custom models trained on Chinese data must be trained on Chinese infrastructure. Pre-training models for deployment in China require CAC registration.',
+            '**United States:** No federal LLM regulation (as of April 2026). State-level rules vary; California\'s laws focus on algorithmic transparency. For financial/healthcare models, regulatory bodies (SEC, FDA, CMS) may impose documentation requirements. Consider audit trails for model changes.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Related Reading',
+          items: [
+            '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora) -- Step-by-step guide to efficient fine-tuning.',
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- Recommended base models for fine-tuning.',
+            '[Quantization for Local Models](/local-llms/quantization-explained) -- Reduce model size without losing quality.',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU, Apple Silicon, and CPU requirements.',
+            '[How to Evaluate Local LLMs](/local-llms/how-to-evaluate-local-llms) -- Benchmarking and testing frameworks.',
+            '[Prompt Engineering Guide](/prompt-engineering) -- Alternative approach without retraining models.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            '[Chinchilla Scaling Laws](https://arxiv.org/abs/2203.15556) -- Optimal compute allocation for training and inference.',
+            '[Instruction Tuning Survey](https://arxiv.org/abs/2308.10792) -- Comprehensive review of fine-tuning approaches.',
+            '[LoRA: Low-Rank Adaptation](https://arxiv.org/abs/2106.09685) -- Efficient fine-tuning method.',
+            '[Hugging Face Fine-Tuning Guide](https://huggingface.co/docs/transformers/training) -- Official fine-tuning documentation.',
+          ],
+        },
+      },
+    },
+    de: {
+      freshness_tier: 'semi_annual',
+      theme: 'Fortgeschrittene Techniken',
+      title: 'Eigene lokale LLMs erstellen 2026: Fine-Tuning vs. Pre-Training mit Unsloth und Ollama',
+      seoTitle: 'Eigene lokale LLMs erstellen 2026: Fine-Tuning $500 vs Pre-Training $50K',
+      intro: 'Eigene lokale LLMs erstellen bedeutet, ein bestehendes Modell zu Fine-Tuning oder von Grund auf zu pre-trainieren. Im April 2026 ist Fine-Tuning mit LoRA auf Consumer-Hardware praktikabel: 500 Beispiele, 8 GB VRAM, 1–2 Stunden, 100–500 €. Pre-Training kostet 50.000–500.000 € und benötigt 10 Milliarden+ Tokens – begründet nur für seltene proprietäre Bedürfnisse. Dieser Leitfaden behandelt beide Ansätze: den 7-Schritt-Fine-Tuning-Pfad mit Unsloth, die Entscheidungsmatrix für Fine-Tuning vs. Pre-Training vs. RAG und die Bereitstellung auf Ollama.',
+      metaDescription: 'Llama 3.1 8B mit LoRA fine-tunen: 500 Beispiele, 8 GB VRAM, 1–2 Stunden, 100–500 €. Pre-Training: 10B+ Tokens, Wochen, 50.000–500.000 €. Entscheidungsmatrix + Ollama-Deployment.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: 'Eigene lokale LLMs erstellen bedeutet, ein bestehendes Modell zu Fine-Tuning oder von Grund auf zu pre-trainieren. Im April 2026 ist Fine-Tuning mit LoRA auf Consumer-Hardware praktikabel: 500 Beispiele, 8 GB VRAM, 1–2 Stunden, 100–500 €. Pre-Training kostet 50.000–500.000 € und benötigt 10 Milliarden+ Tokens – begründet nur für seltene proprietäre Bedürfnisse. Dieser Leitfaden behandelt beide Ansätze: den 7-Schritt-Fine-Tuning-Pfad mit Unsloth, die Entscheidungsmatrix für Fine-Tuning vs. Pre-Training vs. RAG und die Bereitstellung auf Ollama.',
+      audience: 'Ingenieure, die lokale LLMs in Produktion oder Enterprise-Umgebungen einsetzen',
+      readTime: '12 Min. Lesezeit',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'Modellerstellung',
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        inLanguage: 'de',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=de',
+        headline: 'Eigene lokale LLMs erstellen 2026: Fine-Tuning vs. Pre-Training mit Unsloth und Ollama',
+        description: 'Fine-Tune ein 7B-Modell mit LoRA: 500 Beispiele, 8 GB VRAM, 1–2 Stunden, 100–500 €. Pre-Training: 10B+ Tokens, 50.000–500.000 €. Entscheidungsmatrix, Unsloth-Setup und Ollama-Bereitstellung enthalten.',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          url: 'https://www.promptquorum.com/about',
+        },
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-24',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+        },
+        proficiencyLevel: 'Advanced',
+        about: [
+          { '@type': 'Thing', 'name': 'Benutzerdefiniertes LLM Fine-Tuning' },
+          { '@type': 'Thing', 'name': 'LoRA Domänenanpassung' },
+          { '@type': 'Thing', 'name': 'Unsloth Fine-Tuning' },
+          { '@type': 'Thing', 'name': 'Pre-Training vs Fine-Tuning Kostenvergleich' },
+          { '@type': 'Thing', 'name': 'GGUF Ollama Bereitstellung' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Kann Fine-Tuning die Qualität eines vortrainierten Modells erreichen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Fine-Tuned-Modelle können die Leistung des Basismodells in Ihrer spezifischen Domäne übertreffen, entsprechen aber nicht der Breite des Wissensinhalts eines größeren vortrainierten Modells. Llama 3.1 8B, das auf juristische Dokumente fine-tuned ist, wird Llama 3.1 70B bei juristischen Aufgaben übertreffen, aber bei allgemeinem Wissen unterlegen sein. Fine-Tune, wenn domänenspezifische Genauigkeit wichtiger ist als Breite.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie viele Daten brauche ich für effektives Fine-Tuning?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Mindestens 500–1.000 Beispiele für ein nutzbares Modell; 5.000+ für Produktionsqualität. Datenqualität ist wichtiger als Menge – 1.000 hochwertige Beispiele schlagen 50.000 minderwertige. Verwenden Sie LoRA für kleine Datensätze (500–2.000 Beispiele) und vollständiges Fine-Tuning nur mit 10.000+ Beispielen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist der Unterschied zwischen LoRA und vollständigem Fine-Tuning?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'LoRA (Low-Rank Adaptation) aktualisiert nur einen kleinen Bruchteil der Gewichte (~1–2% der Modellgröße), macht es 4× schneller und benötigt 80–90% weniger VRAM. Vollständiges Fine-Tuning aktualisiert alle Gewichte und liefert marginal bessere Ergebnisse (~2–5% Genauigkeitsverbesserung), erfordert aber erhebliche Rechenressourcen. Verwenden Sie LoRA für die meisten Projekte; vollständiges Fine-Tuning nur, wenn Sie das Budget haben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wann sollte ich Pre-Training statt Fine-Tuning in Betracht ziehen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Nur wenn: (1) Sie >10 Milliarden Tokens eindeutiger Daten haben, (2) Fine-Tuning konsistent Ihr Genauigkeitsziel nicht erreicht, (3) Budget >50.000 € ist und (4) Sie ein proprietäres Modell für Wettbewerbsvorteil benötigen. Für 99% der Organisationen ist Fine-Tuning die richtige Wahl.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie beurteile ich, ob mein benutzerdefiniertes Modell produktionsreif ist?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Testen Sie in 3 Dimensionen: (1) aufgabenspezifische Metriken (Genauigkeit, F1, BLEU), (2) Benchmark-Vergleich (auf MMLU oder HumanEval laufen, um mit Basismodell zu vergleichen), (3) Geschäftsmetriken (verbessert es tatsächliche Ergebnisse?). Wenn Ihr Fine-Tuned-Modell das Basismodell bei Ihrer Aufgabe um 5–10% übertrifft, ist es produktionsreif.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Kann ich Fine-Tuning mit Prompt-Engineering kombinieren?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja – das ist Best Practice. Fine-Tuning behandelt strukturelle Änderungen (Domänensprache, Format); Prompt-Engineering behandelt spezifische Anwendungsfälle. Ein Fine-Tuned Legal-Modell + gutes Prompt-Engineering wird beide zusammen übertreffen. Starten Sie mit Prompt-Optimierung (kostenlos), dann Fine-Tune, falls nötig.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Welches Framework sollte ich zum Fine-Tuning verwenden?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Unsloth (schnellste), Axolotl (flexibel) und Hugging Face Transformers (offiziell, umfassend dokumentiert) sind die Hauptoptionen. Unsloth empfohlen für Geschwindigkeit; Axolotl für Multi-GPU-Setups. Alle unterstützen LoRA und funktionieren mit Ollama zur Bereitstellung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie weiß ich, ob Pre-Training die Kosten wert ist?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Machen Sie diese Berechnung: (1) Schätzen Sie die Fine-Tuning-Qualitätslücke bei Ihrer Aufgabe (z.B. Fine-Tuning erreicht 85%, Pre-Training könnte 92% erreichen). (2) Quantifizieren Sie Geschäftswert pro Genauigkeitspunkt (z.B. +1% Genauigkeit = €10k Umsatz). (3) Wenn (€50k Pre-Training-Kosten) < (Wert von 7% Verbesserung), dann Pre-Train. Falls nicht, Fine-Tune.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Muss ich bei der Verwendung von Unsloth die DSGVO beachten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja. DSGVO Artikel 28 erfordert Verarbeitungsverträge wenn Unsloth als Dienstleister handelt. Lokales Fine-Tuning auf Ihrer Infrastruktur erfüllt Datenschutz-Anforderungen besser. Bei Fine-Tuning mit personenbezogenen Daten: anonymisieren Sie wo möglich, dokumentieren Sie Verarbeitungszwecke, und führen Sie Datenschutz-Folgeabschätzungen durch. BSI-Grundschutz fordert Audits für ML-Systeme in Kritischen Infrastrukturen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist Fine-Tuning für den deutschen Mittelstand geeignet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja, sehr. Fine-Tuning kostet 100–500 € und 1–4 Stunden—ideal für KMUs. Viele Mittelständler haben fachspezifische Daten (Verträge, Kundeninteraktionen, Qualitätskontrolle), die Fine-Tuning rentabel machen. IT-Sicherheitsstandards (BSI-Grundschutz) werden durch lokales Fine-Tuning erfüllt. Deutsche Unternehmen in Finanz-, Rechts- und Ingenieurwesen profitieren besonders.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'de',
+        name: 'Wie man ein benutzerdefiniertes lokales LLM erstellt und bereitstellt',
+        totalTime: 'PT3H',
+        step: [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Sammeln Sie 500–5.000 domänenspezifische Beispiele', 'text': 'Jedes Beispiel = Eingabe + erwartete Ausgabe in JSON/JSONL-Format' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Wählen Sie Basismodell (Llama 3.1 8B oder Qwen 7B)', 'text': 'Verwenden Sie Instruction-Tuned-Variante für beste Ergebnisse' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Trainieren Sie mit LoRA mit Unsloth (4× schneller)', 'text': 'lora_r=16, learning_rate=2e-4, 3 Epochen, 8 GB VRAM' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Evaluieren Sie auf Hold-Out Test-Set', 'text': 'Genauigkeit, F1 oder aufgabenspezifische Metriken auf unsichtbaren Daten messen' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Zusammenführen von LoRA-Adapter mit Basismodell', 'text': 'model.merge_and_unload() erstellt einzelne Modelldatei' },
+          { '@type': 'HowToStep', 'position': 6, 'name': 'In GGUF konvertieren und quantisieren', 'text': 'python convert_hf_to_gguf.py --outtype q4_k_m' },
+          { '@type': 'HowToStep', 'position': 7, 'name': 'Auf Ollama bereitstellen', 'text': 'Erstellen Sie Modelfile mit FROM ./model.gguf, dann ollama create my-model -f Modelfile' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'de',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=de',
+        name: 'Benutzerdefinierte LLM-Ansätze: Entscheidungsmatrix',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Fine-Tuning (Empfohlen)',
+            description: 'Fine-Tune ein bestehendes Modell mit 500–5.000 domänenspezifischen Beispielen. Kosten: 100–500 €, Zeit: 1–4 Stunden, VRAM: 8 GB. Beste Option für 99% der Organisationen mit domänenspezifischen Daten.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'RAG (Kostenlos)',
+            description: 'Retrieval-Augmented Generation: Keine Schulung erforderlich. Kosten: 0 €, Zeit: sofort, VRAM: minimal. Beste Option für schnelle Iteration und Organisationen ohne gekennzeichnete Trainingsdaten.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Pre-Training (Selten)',
+            description: 'Von Grund auf auf 100B+ Token roher Daten trainieren. Kosten: 50.000–500.000 €, Zeit: Wochen–Monate, VRAM: 100+ GB. Nur gerechtfertigt für proprietäre Modelle mit massiven Budgets.',
+          },
+        ],
+      },
+      toc: [
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+        { label: 'Fine-Tuning vs. Pre-Training', anchor: '#finetuning-vs-pretraining' },
+        { label: 'Fine-Tuning-Pfad', anchor: '#finetuning-path' },
+        { label: 'LoRA vs. vollständiges Fine-Tuning', anchor: '#lora-vs-full-finetuning' },
+        { label: 'VRAM-Anforderungen', anchor: '#vram-requirements-finetuning' },
+        { label: 'Ollama-Bereitstellung', anchor: '#ollama-deployment' },
+        { label: 'Pre-Training Grundlagen', anchor: '#pretraining-basics' },
+        { label: 'Entscheidungsmatrix', anchor: '#decision-matrix' },
+        { label: 'Domänenanpassungsstrategien', anchor: '#domain-adaptation' },
+        { label: 'Evaluierungsmetriken', anchor: '#evaluation' },
+        { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Rechtliche Erwägungen', anchor: '#regional-context' },
+        { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
+        { label: 'Quellen', anchor: '#sources' },
+      ],
+      gammaEmbedUrl: '/presentations/create-custom-local-models-static.html',
+      gammaDescription: 'Die Präsentationsfolien behandeln: Fine-Tuning vs. Pre-Training Analyse, 7-Schritt-Unsloth-Pfad, GGUF-Bereitstellung und Produktionsreife-Metriken. Als Referenzkarte zum Custom-LLM-Fine-Tuning herunterladen.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Fine-Tuning (empfohlen):** 8 GB VRAM, 500+ Trainingsbeispiele, 1–4 Stunden. Kosten: 100–500 €.',
+            '**Pre-Training:** 8+ GPUs, 100B+ Tokens, Wochen Training. Kosten: 50.000–500.000 €.',
+            'Die meisten Organisationen sollten Fine-Tunen, nicht Pre-Trainieren. Sinkende Erträge für Custom Pre-Training.',
+            'Beste Methode: Beginnen Sie mit Fine-Tuning auf Ihren Domänendaten, evaluieren Sie dann, ob Pre-Training begründet ist.',
+            'Ab April 2026 ist Pre-Training selten begründet, außer Sie benötigen proprietäres Modell.',
+          ],
+        },
+        ftVsPt: {
+          id: 'finetuning-vs-pretraining',
+          title: 'Fine-Tuning vs. Pre-Training',
+          rows: [
+            { 'Aspekt': 'Trainingszeit', 'Fine-Tuning': '1–4 Stunden', 'Pre-Training': 'Wochen–Monate' },
+            { 'Aspekt': 'VRAM erforderlich', 'Fine-Tuning': '8 GB', 'Pre-Training': '100+ GB (Multi-GPU)' },
+            { 'Aspekt': 'Daten erforderlich', 'Fine-Tuning': '500–5.000 Beispiele', 'Pre-Training': '100B+ Tokens' },
+            { 'Aspekt': 'Kosten', 'Fine-Tuning': '100–500 €', 'Pre-Training': '50.000–500.000 €' },
+            { 'Aspekt': 'Anpassung', 'Fine-Tuning': 'Fachwissen', 'Pre-Training': 'Proprietäres Modell' },
+            { 'Aspekt': 'Wann verwenden', 'Fine-Tuning': '99% der Fälle', 'Pre-Training': 'Seltene, spezialisierte Bedürfnisse' },
+          ],
+          columns: ['Aspekt', 'Fine-Tuning', 'Pre-Training'],
+          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-de.svg',
+          imageCaption: 'Fine-Tuning (1–4 Stunden, 100–500 €, 8 GB VRAM) vs. Pre-Training (Wochen–Monate, 50.000–500.000 €, 100+ GB): Vergleich von Trainingszeit, Kosten, Datenanforderungen und Anwendungsfall.',
+        },
+        finetuningPath: {
+          id: 'finetuning-path',
+          title: 'Fine-Tuning-Pfad (Empfohlen)',
+          numberedItems: [
+            'Sammeln Sie 500–5.000 domänenspezifische Beispiele (Qualität ist wichtig).',
+            'Wählen Sie Basismodell (Llama 3.1 8B, Qwen 7B, etc.).',
+            'Verwenden Sie LoRA für effizientes Training (4× schneller, gleiche Qualität).',
+            'Trainieren Sie 3–5 Epochen auf GPU.',
+            'Evaluieren Sie auf Test-Set (Genauigkeit, Recall, benutzerdefinierte Metriken).',
+            'Zusammenführen von LoRA-Adapter mit Basismodell.',
+            'Bereitstellung als Produktionsmodell.',
+          ],
+          image: '/images/create-custom-local-models-7step-finetuning-path-de.svg',
+          imageCaption: '7-Schritt-Fine-Tuning-Workflow: Daten sammeln → Basismodell wählen → mit LoRA trainieren (3–5 Epochen, 8 GB VRAM) → evaluieren → zusammenführen → in GGUF konvertieren → auf Ollama bereitstellen. Gesamtzeit: 1–4 Stunden.',
+        },
+        loraVsFull: {
+          id: 'lora-vs-full-finetuning',
+          title: 'LoRA vs. vollständiges Fine-Tuning: Welches wählen?',
+          content: [
+            'LoRA (Low-Rank Adaptation) aktualisiert nur 1–2% der Modellgewichte, macht es 4× schneller und benötigt 80–90% weniger VRAM als vollständiges Fine-Tuning. Vollständiges Fine-Tuning aktualisiert alle Gewichte und liefert marginal bessere Ergebnisse (2–5% Genauigkeitsverbesserung), erfordert aber 64+ GB VRAM und erhebliche Rechenressourcen.',
+          ],
+          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-de.svg',
+          imageCaption: 'LoRA (4× schneller, 8 GB VRAM, 95–98% Genauigkeit) vs. vollständiges Fine-Tuning (Basisgeschwindigkeit, 64+ GB VRAM, +2–5% Gewinn): Geschwindigkeit-Genauigkeit Trade-off und VRAM-Anforderungsvergleich.',
+        },
+        vramRequirements: {
+          id: 'vram-requirements-finetuning',
+          title: 'VRAM-Anforderungen nach Modellgröße',
+          content: [
+            'Nicht alle Modelle passen in 8 GB VRAM zum LoRA Fine-Tuning. Hier ist, was Sie ausführen können:',
+          ],
+          image: '/images/create-custom-local-models-vram-by-model-de.svg',
+          imageCaption: 'Fine-Tuning VRAM-Kompatibilität: 3B–8B Modelle ✓ funktionieren auf 8 GB, 13B ✓ funktioniert aber eng, 32B benötigt 64+ GB, 70B nicht durchführbar. LoRA addiert ~25% Overhead für Batch-Training.',
+        },
+        ollamaDeployment: {
+          id: 'ollama-deployment',
+          title: 'Bereitstellung Ihres benutzerdefinierten Modells auf Ollama',
+          content: [
+            'Nach Zusammenführung des LoRA-Adapters, Bereitstellung auf Ollama in 3 Schritten:',
+          ],
+          numberedItems: [
+            '**Schritt 1 – In GGUF exportieren:** Verwenden Sie llama.cpp-Konvertierungsskript, um Ihr zusammengeführtes Modell von PyTorch/Safetensors-Format in GGUF zu konvertieren. Dies ist wesentlich für Ollama- und llama.cpp-Kompatibilität.\n```bash\npython convert_hf_to_gguf.py \\\n  --model ./merged-model \\\n  --outfile ./my-custom-model.gguf \\\n  --outtype q4_k_m\n```',
+            '**Schritt 2 – Ollama Modelfile erstellen:** Definieren Sie System-Prompt, Parameter und Inferenz-Einstellungen Ihres Modells.\n```\nFROM ./my-custom-model.gguf\nSYSTEM "Sie sind ein [Ihre Domäne] Experte..."\nPARAMETER temperature 0,4\nPARAMETER num_ctx 4096\n```',
+            '**Schritt 3 – Registrieren und ausführen:** Laden Sie Ihr Modell in Ollama für lokale oder API-Zugriff.\n```bash\nollama create my-custom-model -f Modelfile\nollama run my-custom-model\n```\n\nIhr Fine-Tuned-Modell ist nun über Ollamas OpenAI-kompatible API unter localhost:11434 zugänglich – identisch mit jedem Standard-Ollama-Modell. Verwenden Sie es mit Continue.dev, Open WebUI oder Ihrer eigenen Anwendung über das Python/Node.js OpenAI SDK.',
+          ],
+        },
+        pretraining: {
+          id: 'pretraining-basics',
+          title: 'Pre-Training: Wann und warum',
+          content: [
+            '**Pre-Training bedeutet Lernen aus Rohdaten (Bücher, Dokumente, Code).** Nur begründet, wenn:',
+            '1. Sie >10 Milliarden Tokens eindeutiger, wertvoller Daten haben.',
+            '2. Vortrainierte Modelle konsistent bei Ihrer Domäne versagen.',
+            '3. Budget ist >50.000 € (realistisch).',
+            '4. Sie benötigen proprietäres Modell (Wettbewerbsvorteil).',
+            'Beispiel: Ein Genomics-Unternehmen mit 500 GB privater Forschungsdaten könnte custom Pre-Training begründen.',
+          ],
+        },
+        decisionMatrix: {
+          id: 'decision-matrix',
+          title: 'Entscheidungsmatrix: Welcher Ansatz?',
+          content: [
+            'Drei Hauptansätze für benutzerdefinierte Modelle. Wählen Sie basierend auf Ihren Daten, Budget und Zeitrahmen:',
+          ],
+          image: '/images/create-custom-local-models-cost-benefit-matrix-de.svg',
+          imageCaption: 'Entscheidungsmatrix: Verwenden Sie RAG, wenn Sie keine Trainingsdaten haben (€0), Fine-Tuning, wenn Sie 500+ Beispiele haben (€100–500, 1–4 Stunden), oder Pre-Training, wenn Sie 100B+ Tokens haben (€50.000–500.000, Wochen–Monate).',
+        },
+        domainAdaptation: {
+          id: 'domain-adaptation',
+          title: 'Domänenanpassungsstrategien',
+          content: [
+            '**Verbessern Sie Modellleistung auf Ihrer Domäne, ohne vollständiges Pre-Training:**',
+          ],
+          items: [
+            '**Fortgesetztes Pre-Training:** Basismodell, trainiert auf Ihren Domänendaten (10B+ Tokens). Günstiger als vollständiges Pre-Training.',
+            '**LoRA Fine-Tuning:** Praktischste. Abstimmung auf 500+ Beispiele.',
+            '**Prompt-Engineering:** Verfassen Sie gute Prompts. Kostenlos, aber begrenzt.',
+            '**RAG:** Abrufen von Dokumenten, Bereitstellung von Kontext. Funktioniert ohne Umschulung.',
+            '**Ensemble:** Kombination mehrerer Modelle.',
+          ],
+        },
+        evaluation: {
+          id: 'evaluation',
+          title: 'Evaluierungsmetriken',
+          content: [
+            'Modellqualität messen:',
+          ],
+          items: [
+            '**Aufgabenspezifische Metriken:** Genauigkeit, F1-Score, BLEU (für Textgenerierung).',
+            '**Benchmark-Tests:** Ausführen auf Standardbenchmarks (MMLU, HumanEval).',
+            '**Menschliche Evaluierung:** Manuelle Bewertung (zeitaufwändig aber genau).',
+            '**Geschäftsmetriken:** Verbessert Modell tatsächliche Geschäftsergebnisse?',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Häufige Fehler',
+          items: [
+            '**Pre-Training ohne ausreichend Daten.** <10B Tokens ist verschwendete Rechenleistung. Fine-Tune stattdessen.',
+            '**Keine ordentliche Evaluierung.** Nur Trainingsverlust ist irreführend. Test auf unsichtbaren Daten.',
+            '**Erwartet, dass benutzerdefiniertes Modell GPT-4 passt.** Lücke zwischen offenen und Frontier-Modellen ist groß.',
+            '**Inferenzkosten ignorieren.** Größere benutzerdefinierte Modelle = höhere Inferenzkosten. Trade-off bedenken.',
+            '**GGUF-Konvertierungsschritt überspringen.** Nach Fine-Tuning mit Unsloth oder HuggingFace ist Ihr Modell in PyTorch/Safetensors-Format. Ollama und llama.cpp benötigen GGUF. Verwenden Sie llama.cpp `convert_hf_to_gguf.py` zum Konvertieren. Ohne diesen Schritt kann Ihr Fine-Tuned-Modell nicht in Ollama, LM Studio oder einem GGUF-basierten Inference-Engine ausgeführt werden. Immer während Konvertierung quantisieren (Q4_K_M empfohlen), um Dateigröße 3–4× zu reduzieren.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Kann Fine-Tuning die Qualität eines vortrainierten Modells erreichen?',
+              a: 'Fine-Tuned-Modelle können die Leistung des Basismodells in Ihrer spezifischen Domäne übertreffen, entsprechen aber nicht der Breite des Wissensinhalts eines größeren vortrainierten Modells. Llama 3.1 8B, das auf juristische Dokumente fine-tuned ist, wird Llama 3.1 70B bei juristischen Aufgaben übertreffen, aber bei allgemeinem Wissen unterlegen sein. Fine-Tune, wenn domänenspezifische Genauigkeit wichtiger ist als Breite.',
+            },
+            {
+              q: 'Wie viele Daten brauche ich für effektives Fine-Tuning?',
+              a: 'Mindestens 500–1.000 Beispiele für ein nutzbares Modell; 5.000+ für Produktionsqualität. Datenqualität ist wichtiger als Menge – 1.000 hochwertige Beispiele schlagen 50.000 minderwertige. Verwenden Sie LoRA für kleine Datensätze (500–2.000 Beispiele) und vollständiges Fine-Tuning nur mit 10.000+ Beispielen.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen LoRA und vollständigem Fine-Tuning?',
+              a: 'LoRA (Low-Rank Adaptation) aktualisiert nur einen kleinen Bruchteil der Gewichte (~1–2% der Modellgröße), macht es 4× schneller und benötigt 80–90% weniger VRAM. Vollständiges Fine-Tuning aktualisiert alle Gewichte und liefert marginal bessere Ergebnisse (~2–5% Genauigkeitsverbesserung), erfordert aber erhebliche Rechenressourcen. Verwenden Sie LoRA für die meisten Projekte; vollständiges Fine-Tuning nur, wenn Sie das Budget haben.',
+            },
+            {
+              q: 'Wann sollte ich Pre-Training statt Fine-Tuning in Betracht ziehen?',
+              a: 'Nur wenn: (1) Sie >10 Milliarden Tokens eindeutiger Daten haben, (2) Fine-Tuning konsistent Ihr Genauigkeitsziel nicht erreicht, (3) Budget >50.000 € ist und (4) Sie ein proprietäres Modell für Wettbewerbsvorteil benötigen. Für 99% der Organisationen ist Fine-Tuning die richtige Wahl.',
+            },
+            {
+              q: 'Wie beurteile ich, ob mein benutzerdefiniertes Modell produktionsreif ist?',
+              a: 'Testen Sie in 3 Dimensionen: (1) aufgabenspezifische Metriken (Genauigkeit, F1, BLEU), (2) Benchmark-Vergleich (auf MMLU oder HumanEval laufen, um mit Basismodell zu vergleichen), (3) Geschäftsmetriken (verbessert es tatsächliche Ergebnisse?). Wenn Ihr Fine-Tuned-Modell das Basismodell bei Ihrer Aufgabe um 5–10% übertrifft, ist es produktionsreif.',
+            },
+            {
+              q: 'Kann ich Fine-Tuning mit Prompt-Engineering kombinieren?',
+              a: 'Ja – das ist Best Practice. Fine-Tuning behandelt strukturelle Änderungen (Domänensprache, Format); Prompt-Engineering behandelt spezifische Anwendungsfälle. Ein Fine-Tuned Legal-Modell + gutes Prompt-Engineering wird beide zusammen übertreffen. Starten Sie mit Prompt-Optimierung (kostenlos), dann Fine-Tune, falls nötig.',
+            },
+            {
+              q: 'Welches Framework sollte ich zum Fine-Tuning verwenden?',
+              a: 'Unsloth (schnellste), Axolotl (flexibel) und Hugging Face Transformers (offiziell, umfassend dokumentiert) sind die Hauptoptionen. Unsloth empfohlen für Geschwindigkeit; Axolotl für Multi-GPU-Setups. Alle unterstützen LoRA und funktionieren mit Ollama zur Bereitstellung.',
+            },
+            {
+              q: 'Wie weiß ich, ob Pre-Training die Kosten wert ist?',
+              a: 'Machen Sie diese Berechnung: (1) Schätzen Sie die Fine-Tuning-Qualitätslücke bei Ihrer Aufgabe (z.B. Fine-Tuning erreicht 85%, Pre-Training könnte 92% erreichen). (2) Quantifizieren Sie Geschäftswert pro Genauigkeitspunkt (z.B. +1% Genauigkeit = €10k Umsatz). (3) Wenn (€50k Pre-Training-Kosten) < (Wert von 7% Verbesserung), dann Pre-Train. Falls nicht, Fine-Tune.',
+            },
+            {
+              q: 'Muss ich bei der Verwendung von Unsloth die DSGVO beachten?',
+              a: 'Ja. DSGVO Artikel 28 erfordert Verarbeitungsverträge, wenn Unsloth als Dienstleister handelt. Lokales Fine-Tuning auf Ihrer Infrastruktur erfüllt Datenschutz-Anforderungen besser. Bei Fine-Tuning mit personenbezogenen Daten: anonymisieren Sie wo möglich, dokumentieren Sie Verarbeitungszwecke, und führen Sie Datenschutz-Folgeabschätzungen durch. BSI-Grundschutz fordert Audits für ML-Systeme in Kritischen Infrastrukturen.',
+            },
+            {
+              q: 'Ist Fine-Tuning für den deutschen Mittelstand geeignet?',
+              a: 'Ja, sehr. Fine-Tuning kostet 100–500 € und 1–4 Stunden – ideal für KMUs. Viele Mittelständler haben fachspezifische Daten (Verträge, Kundeninteraktionen, Qualitätskontrolle), die Fine-Tuning rentabel machen. IT-Sicherheitsstandards (BSI-Grundschutz) werden durch lokales Fine-Tuning erfüllt. Deutsche Unternehmen in Finanz-, Rechts- und Ingenieurwesen profitieren besonders.',
+            },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Rechtliche und regulatorische Erwägungen',
+          content: [
+            '**Benutzerdefinierte Modelle präsentieren Datenschutz- und regulatorische Auswirkungen, die nach Region variieren. Verstehen Sie vor Bereitstellung eines Fine-Tuned oder vortrainierten Modells Ihre regionalen Compliance-Anforderungen:**',
+          ],
+          items: [
+            '**DSGVO & Datenschutz (Europa):** DSGVO Artikel 28 fordert Verarbeitungsverträge bei Verwendung von Diensten wie Unsloth in der Cloud. Lokales Fine-Tuning auf Ihrer Infrastruktur erfüllt Datenschutz-Anforderungen besser. Artikel 5 (Dateminimierung) rät zum Fine-Tuning auf anonymisierten oder synthetischen Daten, wenn möglich. Führen Sie Datenschutz-Folgeabschätzungen durch. Dokumentieren Sie Verarbeitungszwecke und Aufbewahrungsrichtlinien.',
+            '**BSI-Grundschutz & Kritische Infrastrukturen (Deutschland/DACH):** BSI-Grundschutz fordert für IT-Systeme in Kritischen Infrastrukturen (Energie, Wasser, Gesundheit, Finanz) Sicherheitscertifizierungen. Custom LLMs, die für diese Sektoren entwickelt werden, erfordern: (1) Audits des Fine-Tuning-Prozesses, (2) Versionskontrolle und Modellverzeichnis, (3) sichere Speicherung von Trainingsdaten, (4) regelmäßige Audits. Lokales Fine-Tuning ist bevorzugt.',
+            '**Mittelstand & KMU-Besonderheiten:** Kleine Unternehmen haben oft weniger Ressourcen für Compliance. Empfehlungen: Fine-Tune auf anonymisierten Kundendaten (wenn möglich), halten Sie Audit-Logs, verwenden Sie lokale Infra für Datensensitive Modelle, und dokumentieren Sie Modellversionen.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Fine-Tuning lokaler LLMs mit LoRA](/local-llms/fine-tuning-local-llms-lora?lang=de) -- Schritt-für-Schritt-Leitfaden zum effizienten Fine-Tuning.',
+            '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) -- Empfohlene Basismodelle zum Fine-Tuning.',
+            '[Quantisierung für lokale Modelle](/local-llms/quantization-explained?lang=de) -- Modellgröße ohne Qualitätsverlust reduzieren.',
+            '[Lokales LLM Hardware-Handbuch 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) -- GPU-, Apple-Silicon- und CPU-Anforderungen.',
+            '[Wie man lokale LLMs evaluiert](/local-llms/how-to-evaluate-local-llms?lang=de) -- Benchmarking- und Test-Frameworks.',
+            '[Prompt-Engineering-Leitfaden](/prompt-engineering?lang=de) -- Alternativer Ansatz ohne Modell-Umschulung.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            '[Chinchilla Scaling Laws](https://arxiv.org/abs/2203.15556) -- Optimale Compute-Zuteilung für Training und Inferenz.',
+            '[Instruction Tuning Übersicht](https://arxiv.org/abs/2308.10792) -- Umfassende Überprüfung von Fine-Tuning-Ansätzen.',
+            '[LoRA: Low-Rank Adaptation](https://arxiv.org/abs/2106.09685) -- Effiziente Fine-Tuning-Methode.',
+            '[Hugging Face Fine-Tuning-Leitfaden](https://huggingface.co/docs/transformers/training) -- Offizielle Fine-Tuning-Dokumentation.',
+          ],
+        },
+      },
+    },
+    fr: {
+      freshness_tier: 'semi_annual',
+      theme: 'Techniques avancées',
+      title: 'Créer des LLMs locaux personnalisés en 2026 : Fine-tuning vs. Pre-training avec Unsloth et Ollama',
+      seoTitle: 'Créer des LLMs locaux 2026 : Fine-Tuning 500 $ vs Pré-entraînement 50K $',
+      intro: 'Créer des LLMs locaux personnalisés signifie affiner un modèle existant ou pré-entraîner à partir de zéro. En avril 2026, le fine-tuning avec LoRA est pratique sur du matériel grand public : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €. Le pré-entraînement coûte 50 000–500 000 € et nécessite 10 milliards+ tokens — justifié uniquement pour les besoins propriétaires rares. Ce guide couvre les deux approches : le chemin de fine-tuning en 7 étapes avec Unsloth, la matrice de décision fine-tuning vs. pré-entraînement vs. RAG, et le déploiement sur Ollama.',
+      metaDescription: 'Fine-tuner Llama 3.1 8B avec LoRA : 500 exemples, 8 Go VRAM, 1–2h, 100–500 $. Pré-entraînement : 10B+ tokens, semaines, 50K–500K $. Matrice de décision + Ollama.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: 'Créer des LLMs locaux personnalisés signifie affiner un modèle existant ou pré-entraîner à partir de zéro. En avril 2026, le fine-tuning avec LoRA est pratique sur du matériel grand public : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €.',
+      audience: 'Ingénieurs déployant des LLMs locaux en production ou environnements d\'entreprise',
+      readTime: '12 min de lecture',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'création de modèle',
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Créer des LLMs locaux personnalisés en 2026 : Fine-tuning vs. Pre-training',
+        description: 'Fine-tuner un modèle 7B avec LoRA : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €. Pre-training : 10B+ tokens, 50 000–500 000 €.',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          url: 'https://www.promptquorum.com/about',
+        },
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-24',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+        },
+        inLanguage: 'fr',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=fr',
+        proficiencyLevel: 'Advanced',
+        about: [
+          { '@type': 'Thing', 'name': 'Fine-tuning LLM personnalisé' },
+          { '@type': 'Thing', 'name': 'Adaptation domaine LoRA' },
+          { '@type': 'Thing', 'name': 'Fine-tuning Unsloth' },
+          { '@type': 'Thing', 'name': 'Coût pre-training vs fine-tuning' },
+          { '@type': 'Thing', 'name': 'Déploiement GGUF Ollama' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Les modèles fine-tunés peuvent dépasser les performances du modèle de base sur votre domaine spécifique, mais ne correspondent pas à la largeur de connaissance d\'un modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur des documents juridiques surpassera Llama 3.1 70B sur les tâches juridiques, mais sous-performera sur les connaissances générales. Fine-tuner quand la précision spécifique au domaine compte plus que l\'étendue.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Combien de données dois-je utiliser pour fine-tuner efficacement ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Minimum 500–1 000 exemples pour un modèle utilisable ; 5 000+ pour qualité production. La qualité des données compte plus que la quantité — 1 000 exemples de haute qualité dépassent 50 000 de faible qualité. Utilisez LoRA pour petits ensembles (500–2 000 exemples) et fine-tuning complet seulement avec 10 000+ exemples.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quelle est la différence entre LoRA et le fine-tuning complet ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'LoRA (Low-Rank Adaptation) met à jour seulement 1–2% des poids du modèle, le rendant 4× plus rapide et nécessitant 80–90% moins de VRAM. Le fine-tuning complet met à jour tous les poids et offre de meilleurs résultats marginaux (~2–5% amélioration) mais nécessite beaucoup de puissance calcul. Utilisez LoRA pour la plupart des projets ; fine-tuning complet seulement avec budget.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quand devrais-je considérer le pre-training au lieu du fine-tuning ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Seulement si : (1) vous avez >10 milliards tokens de données uniques, (2) fine-tuning échoue régulièrement atteindre votre cible précision, (3) budget >50 000 €, (4) vous avez besoin d\'un modèle propriétaire avantage compétitif. Pour 99% organisations, fine-tuning est le bon choix.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Comment évaluer si mon modèle personnalisé est prêt production ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Testez sur 3 dimensions : (1) Métriques spécifiques tâche (précision, F1, BLEU), (2) Comparaison benchmark (exécutez sur MMLU ou HumanEval), (3) Métriques métier (améliore-t-il vraiment les résultats ?). Si votre modèle fine-tuné surpasse base modèle 5–10% sur votre tâche, c\'est prêt production.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Puis-je combiner fine-tuning et prompt engineering meilleurs résultats ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui — c\'est une meilleure pratique. Fine-tuning gère changements structurels (langage domaine, format) ; prompt engineering gère cas spécifiques. Modèle juridique fine-tuné + bonne ingénierie prompt surpassera l\'un ou l\'autre seul. Commencez optimisation prompt (gratuit), puis fine-tuning si nécessaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quel framework devrais-je utiliser pour fine-tuning ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Unsloth (plus rapide), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Comment savoir si pre-training vaut le coût ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Faites ce calcul : (1) Estimez écart qualité fine-tuning sur votre tâche (ex. fine-tuning atteint 85%, pre-training pourrait 92%). (2) Quantifiez valeur métier par point précision (ex. +1% = 10k€ revenue). (3) Si (50k€ coût) < (valeur 7% amélioration), pré-entraîner. Sinon, fine-tuner.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Comment créer et déployer un LLM local personnalisé',
+        inLanguage: 'fr',
+        totalTime: 'PT3H',
+        step: [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Collectez 500–5 000 exemples spécifiques au domaine', 'text': 'Chaque exemple = entrée + sortie attendue au format JSON/JSONL' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choisissez modèle base (Llama 3.1 8B ou Qwen2.5 7B)', 'text': 'Utilisez variante instruction-tuned meilleurs résultats' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Entraînez avec LoRA via Unsloth (4× plus rapide)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Évaluez sur ensemble test détenu', 'text': 'Mesurez précision, F1, ou métriques spécifiques tâche sur données non vues' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Fusionnez adaptateur LoRA dans modèle base', 'text': 'model.merge_and_unload() crée fichier modèle unique' },
+          { '@type': 'HowToStep', 'position': 6, 'name': 'Convertissez en GGUF et quantifiez', 'text': 'python convert_hf_to_gguf.py --outtype q4_k_m' },
+          { '@type': 'HowToStep', 'position': 7, 'name': 'Déployez sur Ollama', 'text': 'Créez Modelfile avec FROM ./model.gguf, puis ollama create my-model -f Modelfile' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'fr',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=fr',
+        name: 'Approches LLM Personnalisées : Matrice de Décision',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Fine-Tuning (Recommandé)',
+            description: 'Affinez un modèle existant avec 500–5 000 exemples spécifiques au domaine. Coût : 100–500 €, Temps : 1–4 heures, VRAM : 8 GB. La meilleure option pour 99% des organisations avec données domaines.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'RAG (Gratuit)',
+            description: 'Retrieval-Augmented Generation : aucun entraînement requis. Coût : 0 €, Temps : immédiat, VRAM : minimal. Meilleur pour itération rapide et organisations sans données d\'entraînement étiquetées.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Pré-Entraînement (Rare)',
+            description: 'Entraîner de zéro sur 100B+ tokens données brutes. Coût : 50 000–500 000 €, Temps : semaines–mois, VRAM : 100+ GB. Uniquement justifié pour modèles propriétaires budgets massifs.',
+          },
+        ],
+      },
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Fine-Tuning vs Pre-Training', anchor: '#finetuning-vs-pretraining' },
+        { label: 'Chemin Fine-Tuning', anchor: '#finetuning-path' },
+        { label: 'LoRA vs Fine-Tuning Complet', anchor: '#lora-vs-full-finetuning' },
+        { label: 'Exigences VRAM', anchor: '#vram-requirements-finetuning' },
+        { label: 'Déploiement Ollama', anchor: '#ollama-deployment' },
+        { label: 'Bases Pre-Training', anchor: '#pretraining-basics' },
+        { label: 'Matrice de Décision', anchor: '#decision-matrix' },
+        { label: 'Stratégies Adaptation Domaine', anchor: '#domain-adaptation' },
+        { label: 'Métriques Évaluation', anchor: '#evaluation' },
+        { label: 'Erreurs Courantes', anchor: '#common-mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Lectures Connexes', anchor: '#related-reading' },
+      ],
+      gammaEmbedUrl: '/presentations/create-custom-local-models-static.html',
+      gammaDescription: 'Le diaporama couvre : analyse fine-tuning vs pre-training, chemin 7 étapes Unsloth, déploiement GGUF, métriques prêt production. Téléchargez comme carte référence fine-tuning LLM personnalisé.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Fine-tuning (recommandé) :** 8 GB VRAM, 500+ exemples d\'entraînement, 1-4 heures. Coût : 100-500 €.',
+            '**Pre-training :** 8+ GPUs, 100B+ tokens, semaines d\'entraînement. Coût : 50 000-500 000 €.',
+            'Plupart organisations devraient fine-tuner, pas pre-trainer. Rendements décroissants pre-training personnalisé.',
+            'Meilleure approche : Commencez fine-tuning données domaine, puis évaluez si pre-training justifié.',
+            'Avril 2026, pre-training rarement justifié sauf si vous avez besoin modèle propriétaire.',
+          ],
+        },
+        ftVsPt: {
+          id: 'finetuning-vs-pretraining',
+          title: 'Fine-Tuning vs Pre-Training',
+          rows: [
+            { 'Aspect': 'Temps entraînement', 'Fine-Tuning': '1-4 heures', 'Pre-Training': 'Semaines-mois' },
+            { 'Aspect': 'VRAM requis', 'Fine-Tuning': '8 GB', 'Pre-Training': '100+ GB (multi-GPU)' },
+            { 'Aspect': 'Données requises', 'Fine-Tuning': '500-5k exemples', 'Pre-Training': '100B+ tokens' },
+            { 'Aspect': 'Coût', 'Fine-Tuning': '100-500 €', 'Pre-Training': '50 000-500 000 €' },
+            { 'Aspect': 'Personnalisation', 'Fine-Tuning': 'Connaissance domaine', 'Pre-Training': 'Modèle propriétaire' },
+            { 'Aspect': 'Quand l\'utiliser', 'Fine-Tuning': '99% cas', 'Pre-Training': 'Besoins spécialisés rares' },
+          ],
+          columns: ['Aspect', 'Fine-Tuning', 'Pre-Training'],
+          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-fr.svg',
+          imageCaption: 'Fine-tuning (1–4 heures, 100–500 €, 8 GB VRAM) vs pre-training (semaines–mois, 50 000–500 000 €, 100+ GB) : comparaison temps, coût, exigences données et quand utiliser chaque approche.',
+        },
+        finetuningPath: {
+          id: 'finetuning-path',
+          title: 'Chemin Fine-Tuning (Recommandé)',
+          numberedItems: [
+            'Collectez 500-5 000 exemples spécifiques domaine (qualité importe).',
+            'Choisissez modèle base (Llama 3.1 8B, Qwen 7B, etc.).',
+            'Utilisez LoRA entraînement efficace (4× plus rapide, même qualité).',
+            'Entraînez 3-5 epochs sur GPU.',
+            'Évaluez sur ensemble test (précision, rappel, métriques personnalisées).',
+            'Fusionnez adaptateur LoRA dans modèle base.',
+            'Déployez comme modèle production.',
+          ],
+          image: '/images/create-custom-local-models-7step-finetuning-path-fr.svg',
+          imageCaption: 'Workflow fine-tuning 7 étapes : collecter données → choisir modèle base → entraîner LoRA (3–5 epochs, 8 GB VRAM) → évaluer → fusionner → convertir GGUF → déployer Ollama. Temps total : 1–4 heures.',
+        },
+        loraVsFull: {
+          id: 'lora-vs-full-finetuning',
+          title: 'LoRA vs Fine-Tuning Complet : Lequel Choisir ?',
+          content: [
+            'LoRA (Low-Rank Adaptation) met à jour seulement 1–2% poids modèle, le rendant 4× plus rapide et nécessitant 80–90% moins VRAM que fine-tuning complet. Fine-tuning complet met à jour tous poids et offre meilleurs résultats marginaux (2–5% amélioration précision) mais nécessite 64+ GB VRAM compute significatif.',
+          ],
+          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-fr.svg',
+          imageCaption: 'LoRA (4× plus rapide, 8 GB VRAM, 95–98% précision) vs fine-tuning complet (vitesse baseline, 64+ GB VRAM, +2–5% gain) : tradeoff vitesse-précision exigences VRAM comparaison.',
+        },
+        vramRequirements: {
+          id: 'vram-requirements-finetuning',
+          title: 'Exigences VRAM par Taille Modèle',
+          content: [
+            'Pas tous modèles correspondent 8 GB VRAM pour LoRA fine-tuning. Voici ce que vous pouvez exécuter :',
+          ],
+          image: '/images/create-custom-local-models-vram-by-model-fr.svg',
+          imageCaption: 'Compatibilité VRAM fine-tuning : modèles 3B–8B ✓ travaillent sur 8 GB, 13B ✓ travaille mais serré, 32B nécessite 64+ GB, 70B non faisable. LoRA ajoute ~25% surcharge entraînement batch.',
+        },
+        ollamaDeployment: {
+          id: 'ollama-deployment',
+          title: 'Déployez Votre Modèle Personnalisé sur Ollama',
+          content: [
+            'Après fusionner adaptateur LoRA, déployez sur Ollama en 3 étapes :',
+          ],
+          numberedItems: [
+            '**Étape 1 — Exportez vers GGUF :** Utilisez script conversion llama.cpp pour convertir modèle fusionné format PyTorch/safetensors vers GGUF. Essentiel compatibilité Ollama llama.cpp.\n```bash\npython convert_hf_to_gguf.py \\\n  --model ./merged-model \\\n  --outfile ./my-custom-model.gguf \\\n  --outtype q4_k_m\n```',
+            '**Étape 2 — Créez Ollama Modelfile :** Définissez system prompt, paramètres, settings inférence modèle.\n```\nFROM ./my-custom-model.gguf\nSYSTEM "Vous êtes expert [votre domaine]..."\nPARAMETER temperature 0.4\nPARAMETER num_ctx 4096\n```',
+            '**Étape 3 — Enregistrez exécutez :** Chargez votre modèle Ollama accès local ou API.\n```bash\nollama create my-custom-model -f Modelfile\nollama run my-custom-model\n```\n\nVotre modèle fine-tuné maintenant accessible via API compatible OpenAI Ollama localhost:11434 — identique tout modèle Ollama standard. Utilisez avec Continue.dev, Open WebUI, ou votre application via SDK OpenAI Python/Node.js.',
+          ],
+        },
+        pretraining: {
+          id: 'pretraining-basics',
+          title: 'Pre-Training : Quand et Pourquoi',
+          content: [
+            '**Pre-training signifie apprendre données brutes (livres, documents, code).** Justifié seulement si :',
+            '1. Vous avez >10 milliards tokens données uniques, précieuses.',
+            '2. Modèles pré-entraînés échouent régulièrement votre domaine.',
+            '3. Budget >50 000 € (coût réaliste).',
+            '4. Vous avez besoin modèle propriétaire (avantage compétitif).',
+            'Exemple : Entreprise génomique avec 500GB données recherche privées pourrait justifier pre-training personnalisé.',
+          ],
+        },
+        decisionMatrix: {
+          id: 'decision-matrix',
+          title: 'Matrice Décision : Quelle Approche Utiliser ?',
+          content: [
+            'Trois approches principales existent modèles personnalisés. Choisissez selon vos données, budget, timeline :',
+          ],
+          image: '/images/create-custom-local-models-cost-benefit-matrix-fr.svg',
+          imageCaption: 'Matrice décision : utilisez RAG pas données entraînement (0 €), fine-tuning si 500+ exemples (100–500 €, 1–4 heures), ou pre-training si 100B+ tokens (50 000–500 000 €, semaines–mois).',
+        },
+        domainAdaptation: {
+          id: 'domain-adaptation',
+          title: 'Stratégies Adaptation Domaine',
+          content: [
+            '**Sans pre-training complet, améliorez performance modèle votre domaine :**',
+          ],
+          items: [
+            '**Pre-training continuée :** Prenez modèle base, entraînez données domaine (10B+ tokens). Moins cher que pre-training complet.',
+            '**LoRA fine-tuning :** Plus pratique. Tune sur 500+ exemples.',
+            '**Prompt engineering :** Créez prompts. Gratuit, mais limité.',
+            '**RAG :** Récupérez documents, fournissez contexte. Travaille sans retraining.',
+            '**Ensemble :** Combinez modèles multiples.',
+          ],
+        },
+        evaluation: {
+          id: 'evaluation',
+          title: 'Métriques Évaluation',
+          content: [
+            'Mesurez qualité modèle :',
+          ],
+          items: [
+            '**Métriques spécifiques tâche :** Précision, score F1, BLEU (génération texte).',
+            '**Tests benchmark :** Exécutez sur benchmarks standards (MMLU, HumanEval).',
+            '**Évaluation humaine :** Scoring manuel (consomme temps mais précis).',
+            '**Métriques métier :** Le modèle améliore-t-il vraiment résultats métier ?',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erreurs Courantes',
+          items: [
+            '**Pre-training données insuffisantes.** <10B tokens compute gaspillé. Fine-tuner plutôt.',
+            '**Pas évaluer correctement.** Loss entraînement seul trompeur. Testez données non vues.',
+            '**Attendre modèle personnalisé correspondre GPT-4.** Écart modèles ouverts vs frontier models grand.',
+            '**Ignorer coûts inférence.** Plus grands modèles personnalisés = coûts inférence plus élevés. Considérez tradeoff.',
+            '**Sauter étape conversion GGUF.** Après fine-tuning Unsloth ou HuggingFace, modèle format PyTorch/safetensors. Ollama llama.cpp requièrent GGUF. Utilisez llama.cpp `convert_hf_to_gguf.py` convertir. Sans cette étape, modèle fine-tuné ne peut pas exécuter Ollama, LM Studio, ou moteur inférence basé GGUF. Toujours quantifiez pendant conversion (Q4_K_M recommandé) réduire taille fichier 3–4×.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Questions Fréquemment Posées',
+          faqs: [
+            {
+              q: 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?',
+              a: 'Les modèles fine-tunés peuvent surpasser modèle base votre domaine spécifique, mais ne correspondent pas largeur connaissance modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur documents juridiques surpassera Llama 3.1 70B sur tâches juridiques, mais sous-performera sur connaissances générales. Fine-tuner quand précision domaine compte plus que largeur.',
+            },
+            {
+              q: 'Combien de données me dois-je utiliser pour fine-tuner efficacement ?',
+              a: 'Minimum 500–1 000 exemples modèle utilisable ; 5 000+ qualité production. Qualité données compte plus quantité — 1 000 exemples haute qualité dépassent 50 000 faible qualité. Utilisez LoRA petits ensembles (500–2 000 exemples) et fine-tuning complet seulement 10 000+ exemples.',
+            },
+            {
+              q: 'Quelle est la différence entre LoRA et le fine-tuning complet ?',
+              a: 'LoRA (Low-Rank Adaptation) met à jour seulement 1–2% poids modèle, le rendant 4× plus rapide et nécessitant 80–90% moins VRAM. Fine-tuning complet met à jour tous poids et offre meilleurs résultats marginaux (~2–5% amélioration) mais nécessite calcul significatif. Utilisez LoRA plupart projets ; fine-tuning complet seulement budget.',
+            },
+            {
+              q: 'Quand devrais-je considérer le pre-training au lieu du fine-tuning ?',
+              a: 'Seulement si : (1) vous avez >10 milliards tokens données uniques, (2) fine-tuning échoue régulièrement atteindre votre cible précision, (3) budget >50 000 €, (4) vous avez besoin modèle propriétaire avantage compétitif. Pour 99% organisations, fine-tuning est le bon choix.',
+            },
+            {
+              q: 'Comment évaluer si mon modèle personnalisé est prêt production ?',
+              a: 'Testez sur 3 dimensions : (1) Métriques spécifiques tâche (précision, F1, BLEU), (2) Comparaison benchmark (exécutez sur MMLU ou HumanEval pour comparer modèle base), (3) Métriques métier (améliore-t-il vraiment résultats ?). Si votre modèle fine-tuné surpasse modèle base 5–10% votre tâche, c\'est prêt production.',
+            },
+            {
+              q: 'Puis-je combiner fine-tuning et prompt engineering pour meilleurs résultats ?',
+              a: 'Oui — c\'est meilleure pratique. Fine-tuning gère changements structurels (langage domaine, format) ; prompt engineering gère cas spécifiques. Modèle juridique fine-tuné + bonne ingénierie prompt surpassera l\'un ou l\'autre seul. Commencez optimisation prompt (gratuit), puis fine-tuning si nécessaire.',
+            },
+            {
+              q: 'Quel framework devrais-je utiliser pour fine-tuning ?',
+              a: 'Unsloth (plus rapide), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
+            },
+            {
+              q: 'Comment savoir si pre-training vaut le coût ?',
+              a: 'Faites ce calcul : (1) Estimez écart qualité fine-tuning votre tâche (ex. fine-tuning atteint 85%, pre-training pourrait 92%). (2) Quantifiez valeur métier par point précision (ex. +1% = 10 000€ revenue). (3) Si (50 000€ coût pre-training) < (valeur 7% amélioration), pré-entraîner. Sinon, fine-tuner.',
+            },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Considérations Régionales pour Modèles Personnalisés',
+          content: [
+            '**Modèles personnalisés présentent implications privacy données et conformité réglementaire varient par région. Avant déployer modèle fine-tuné ou pré-entraîné, comprenez exigences conformité régionale :**',
+          ],
+          items: [
+            '**Europe (RGPD) :** Fine-tuning modèle données personnelles requiert consentement sujets données et accords traitement documentés. RGPD Article 5 (minimisation données) suggère fine-tuning données anonymisées ou synthétiques si possible. Modèles pré-entraînés données non-UE peuvent requérir gouvernance supplémentaire avant déploiement régions UE.',
+            '**Japon (APPI) :** Loi Protection Informations Personnelles Japon requiert consentement explicite pour entraînement données personnelles. Modèles personnalisés services santé ou financiers requièrent résidence données (traitement doit occurrence au Japon). Considérez fine-tuning on-premises et déploiement.',
+            '**Chine (DSL + CAC) :** Loi Sécurité Données Chine et règles Administration Cyberespace requièrent traitement local données personnelles et industrielles. Modèles personnalisés entraînés données chinoises doivent entraînés infrastructure chinoise. Modèles pré-entraînement pour déploiement Chine requièrent enregistrement CAC.',
+            '**États-Unis :** Pas régulation LLM fédérale (avril 2026). Règles niveau état varient ; lois Californie focus transparence algorithmique. Pour modèles finance/santé, organismes réglementaires (SEC, FDA, CMS) peuvent imposer exigences documentation. Considérez pistes audit pour changements modèle.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures Connexes',
+          items: [
+            '[Fine-Tuning LLMs Locaux LoRA](/local-llms/fine-tuning-local-llms-lora?lang=fr) -- Guide étape par étape fine-tuning efficace.',
+            '[Meilleurs LLMs Locaux 2026](/local-llms/best-local-llms-2026?lang=fr) -- Modèles base recommandés fine-tuning.',
+            '[Quantification Modèles Locaux](/local-llms/quantization-explained?lang=fr) -- Réduisez taille modèle sans perdre qualité.',
+            '[Guide Matériel LLM Local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) -- GPU, Apple Silicon, exigences CPU.',
+            '[Comment Évaluer LLMs Locaux](/local-llms/how-to-evaluate-local-llms?lang=fr) -- Benchmarking frameworks test.',
+            '[Guide Prompt Engineering](/prompt-engineering?lang=fr) -- Approche alternative sans retraining modèles.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            '[Chinchilla Scaling Laws](https://arxiv.org/abs/2203.15556) -- Allocation calcul optimale entraînement inférence.',
+            '[Instruction Tuning Survey](https://arxiv.org/abs/2308.10792) -- Revue exhaustive approches fine-tuning.',
+            '[LoRA: Low-Rank Adaptation](https://arxiv.org/abs/2106.09685) -- Méthode fine-tuning efficace.',
+            '[Guide Fine-Tuning Hugging Face](https://huggingface.co/docs/transformers/training) -- Documentation fine-tuning officielle.',
+          ],
+        },
+      },
+    },
+    ja: {
+      freshness_tier: 'semi_annual',
+      theme: '高度な技術',
+      title: 'カスタム ローカル LLM を構築する 2026 年版：Unsloth と Ollama による Fine-tuning vs. Pre-training',
+      seoTitle: 'カスタムローカルLLM作成2026：Fine-Tuning $500 vs 事前訓練 $50K',
+      intro: 'カスタム ローカル LLM を構築するとは、既存モデルを fine-tune するか、ゼロから pre-train することを意味します。2026 年 4 月現在、LoRA による fine-tuning はコンシューマー ハードウェアで実用的です：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。Pre-training には ¥6,000,000～60,000,000 かかり、100 億+ トークンが必要です—稀な独自ニーズのみ正当化されます。このガイドは両方のアプローチをカバーしています：Unsloth を使用した 7 ステップ fine-tuning パス、fine-tuning vs. pre-training vs. RAG の決定マトリックス、および Ollama への デプロイメント。',
+      metaDescription: 'Llama 3.1 8BをLoRAで微調整：500例、8GB VRAM、1–2時間、$100–500。事前訓練：10B+トークン、数週間、$50K–500K。判断マトリクスとOllamaデプロイ手順付き。',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: 'カスタム ローカル LLM を構築するとは、既存モデルを fine-tune するか、ゼロから pre-train することを意味します。2026 年 4 月現在、LoRA による fine-tuning はコンシューマー ハードウェアで実用的です：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。',
+      audience: 'エンタープライズ環境でローカル LLM をデプロイするエンジニア',
+      readTime: '12分で読める',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'モデル作成',
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'カスタム ローカル LLM を構築する 2026 年版：Fine-tuning vs. Pre-training',
+        description: '7B モデルを LoRA で Fine-tune：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。Pre-training：100 億+ トークン、¥6,000,000～60,000,000。決定マトリックス、Unsloth セットアップ、Ollama デプロイメント含む。',
+        author: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+        },
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-24',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+        },
+        inLanguage: 'ja',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=ja',
+        proficiencyLevel: 'Advanced',
+        about: [
+          { '@type': 'Thing', 'name': 'カスタム LLM fine-tuning' },
+          { '@type': 'Thing', 'name': 'LoRA ドメイン適応' },
+          { '@type': 'Thing', 'name': 'Unsloth fine-tuning' },
+          { '@type': 'Thing', 'name': 'Pre-training vs fine-tuning コスト' },
+          { '@type': 'Thing', 'name': 'GGUF Ollama デプロイメント' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ja',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Fine-tune モデルは特定ドメインでベースモデルパフォーマンスを上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.1 70B を上回りますが、一般知識では下回ります。ドメイン固有の精度が幅より重要な場合、fine-tune してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '効果的に fine-tune するにはどのくらいデータが必要ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '最小 500～1,000 サンプルで使用可能なモデル；5,000+ は本番品質。データ品質は数量より重要です—1,000 高品質サンプルは 50,000 低品質サンプルに勝ります。小さいデータセット (500～2,000 サンプル) では LoRA、10,000+ サンプルでのみ完全な fine-tuning を使用します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'LoRA と完全な fine-tuning の違いは何ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'LoRA (Low-Rank Adaptation) はモデルウェイトの 1～2% のみ更新し、4 倍高速で 80～90% 少ない VRAM が必要です。完全な fine-tuning はすべてのウェイトを更新し、わずかに良い結果 (~2～5% 精度向上) を与えますが、大量の計算が必要です。ほとんどのプロジェクトでは LoRA、予算がある場合のみ完全な fine-tuning を使用します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'fine-tuning ではなく pre-training を検討すべきですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '次の場合のみ：(1) 100 億以上トークン固有データがある、(2) fine-tuning が精度目標に達しない、(3) 予算が 50,000 ドル以上、(4) 競争上の優位性が必要。99% の組織では fine-tuning が正しい選択です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'カスタムモデルが本番で準備完了かどうかを評価するにはどうすればよいですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '3 つの次元でテストします：(1) タスク固有メトリクス (精度、F1、BLEU)、(2) ベンチマーク比較 (MMLU または HumanEval で実行)、(3) ビジネスメトリクス (実際の結果を改善していますか?)。Fine-tune モデルがベースモデルをタスク上で 5～10% 上回っている場合、本番準備完了です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Fine-tuning とプロンプトエンジニアリングを組み合わせてより良い結果を得ることができますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい—これはベストプラクティスです。Fine-tuning は構造的変更 (ドメイン言語、形式) を処理します；プロンプトエンジニアリングは特定のユースケースを処理します。Fine-tune 法的モデル + 優れたプロンプトエンジニアリングはどちらか単独より優れています。プロンプト最適化 (無料) で始め、必要に応じて fine-tune します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Fine-tuning に使用すべきフレームワークは何ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Unsloth (最速)、Axolotl (柔軟)、および Hugging Face Transformers (公式、最も文書化) が主要オプションです。Unsloth は速度、Axolotl はマルチ GPU セットアップに推奨。すべて LoRA をサポートし、Ollama デプロイメントで機能します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Pre-training がコスト価値があるかどうかを知るにはどうすればよいですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'この計算を実行します：(1) タスク上の fine-tuning 品質ギャップを推定（例えば、fine-tuning は 85% に達し、pre-training は 92% に達する可能性があります）。(2) 精度ポイントごとのビジネス価値を定量化（例えば、+1% = $10k 収入）。(3) ($50k pre-training コスト) < (7% 改善の価値) の場合、pre-train。そうでない場合は fine-tune。',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'カスタムローカル LLM を作成してデプロイする方法',
+        inLanguage: 'ja',
+        totalTime: 'PT3H',
+        step: [
+          { '@type': 'HowToStep', 'position': 1, 'name': '500～5,000 ドメイン固有例を収集', 'text': '各例 = JSON/JSONL 形式の入力 + 期待される出力' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'ベースモデルを選択（Llama 3.1 8B または Qwen2.5 7B）', 'text': '最良の結果には命令チューン版を使用' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Unsloth を使用した LoRA でトレーニング（4 倍高速）', 'text': 'lora_r=16、learning_rate=2e-4、3 epochs、8 GB VRAM' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'ホールドアウトテストセットで評価', 'text': '見ていないデータで精度、F1、またはタスク固有メトリクスを測定' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'LoRA アダプターをベースモデルにマージ', 'text': 'model.merge_and_unload() は単一モデルファイルを作成' },
+          { '@type': 'HowToStep', 'position': 6, 'name': 'GGUF に変換して量子化', 'text': 'python convert_hf_to_gguf.py --outtype q4_k_m' },
+          { '@type': 'HowToStep', 'position': 7, 'name': 'Ollama にデプロイ', 'text': '`FROM ./model.gguf` で Modelfile を作成し、`ollama create my-model -f Modelfile` を実行' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ja',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=ja',
+        name: 'カスタム LLM アプローチ：決定マトリックス',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Fine-Tuning（推奨）',
+            description: '500～5,000 個のドメイン固有の例を使用して既存モデルを fine-tune します。コスト：¥15,000～30,000、時間：1～4 時間、VRAM：8 GB。ドメイン データを持つ 99% の組織に最適です。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'RAG（無料）',
+            description: 'Retrieval-Augmented Generation：トレーニングは不要です。コスト：¥0、時間：即時、VRAM：最小限。迅速なイテレーションとラベル付きトレーニング データがない組織に最適です。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Pre-Training（稀）',
+            description: '100B+ トークンの生データからゼロからトレーニングします。コスト：¥6,000,000～60,000,000、時間：数週間～数ヶ月、VRAM：100+ GB。大規模な予算を持つ独自モデルでのみ正当化されます。',
+          },
+        ],
+      },
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'Fine-Tuning と Pre-Training', anchor: '#finetuning-vs-pretraining' },
+        { label: 'Fine-Tuning パス', anchor: '#finetuning-path' },
+        { label: 'LoRA と完全な Fine-Tuning', anchor: '#lora-vs-full-finetuning' },
+        { label: 'VRAM 要件', anchor: '#vram-requirements-finetuning' },
+        { label: 'Ollama デプロイメント', anchor: '#ollama-deployment' },
+        { label: 'Pre-Training 基礎', anchor: '#pretraining-basics' },
+        { label: '決定マトリックス', anchor: '#decision-matrix' },
+        { label: 'ドメイン適応戦略', anchor: '#domain-adaptation' },
+        { label: '評価メトリクス', anchor: '#evaluation' },
+        { label: '一般的なミス', anchor: '#common-mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: '関連読書', anchor: '#related-reading' },
+      ],
+      gammaEmbedUrl: '/presentations/create-custom-local-models-static.html',
+      gammaDescription: 'スライドデッキは以下をカバーしています：fine-tuning vs pre-training コスト分析、Unsloth 7 ステップパス、GGUF デプロイメント、本番対応性メトリクス。カスタム LLM fine-tuning リファレンスカードとしてダウンロード。',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Fine-tuning（推奨）：** 8 GB VRAM、500+ トレーニング例、1-4 時間。コスト：¥15,000-30,000。',
+            '**Pre-training：** 8+ GPU、100B+ トークン、数週間のトレーニング。コスト：¥6,000,000-60,000,000。',
+            'ほとんどの組織は pre-train ではなく fine-tune すべき。カスタム pre-training で収益逓減。',
+            'ベストアプローチ：ドメインデータで fine-tuning を開始してから、pre-training が正当化されるかどうかを評価します。',
+            '2026 年 4 月時点では、proprietary モデルが必要でない限り pre-training はほぼ正当化されません。',
+          ],
+        },
+        ftVsPt: {
+          id: 'finetuning-vs-pretraining',
+          title: 'Fine-Tuning と Pre-Training',
+          rows: [
+            { 'Aspect': 'トレーニング時間', 'Fine-Tuning': '1-4 時間', 'Pre-Training': '数週間-数ヶ月' },
+            { 'Aspect': '必要 VRAM', 'Fine-Tuning': '8 GB', 'Pre-Training': '100+ GB（マルチ GPU）' },
+            { 'Aspect': '必要データ', 'Fine-Tuning': '500-5k 例', 'Pre-Training': '100B+ トークン' },
+            { 'Aspect': 'コスト', 'Fine-Tuning': '¥15,000-30,000', 'Pre-Training': '¥6,000,000-60,000,000' },
+            { 'Aspect': 'カスタマイズ', 'Fine-Tuning': 'ドメイン知識', 'Pre-Training': 'Proprietary モデル' },
+            { 'Aspect': '使用する時', 'Fine-Tuning': '99% ケース', 'Pre-Training': 'レア、専門的ニーズ' },
+          ],
+          columns: ['Aspect', 'Fine-Tuning', 'Pre-Training'],
+          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-ja.svg',
+          imageCaption: 'Fine-tuning（1～4 時間、¥15,000-30,000、8 GB VRAM）vs pre-training（数週間-数ヶ月、¥6,000,000-60,000,000、100+ GB）：トレーニング時間、コスト、データ要件、各アプローチを使用する時期の比較。',
+        },
+        finetuningPath: {
+          id: 'finetuning-path',
+          title: 'Fine-Tuning パス（推奨）',
+          numberedItems: [
+            '500-5000 ドメイン固有サンプルを収集（高品質が重要）。',
+            'ベースモデルを選択（Llama 3.1 8B、Qwen 7B など）。',
+            '効率的なトレーニングに LoRA を使用（4 倍高速、同じ品質）。',
+            'GPU で 3-5 epoch トレーニング。',
+            'テストセットで評価（精度、再現率、カスタムメトリクス）。',
+            'LoRA アダプターをベースモデルにマージ。',
+            '本番モデルとしてデプロイ。',
+          ],
+          image: '/images/create-custom-local-models-7step-finetuning-path-ja.svg',
+          imageCaption: '7 ステップ fine-tuning ワークフロー：データ収集→ベースモデル選択→LoRA トレーニング（3～5 epoch、8 GB VRAM）→評価→マージ→GGUF 変換→Ollama デプロイ。総時間：1～4 時間。',
+        },
+        loraVsFull: {
+          id: 'lora-vs-full-finetuning',
+          title: 'LoRA と完全な Fine-Tuning：どちらを選ぶ？',
+          content: [
+            'LoRA（Low-Rank Adaptation）はモデルウェイトの 1～2% のみ更新し、4 倍高速で完全な fine-tuning より 80～90% 少ない VRAM を必要とします。完全な fine-tuning はすべてのウェイトを更新し、わずかに良い結果（2～5% 精度向上）を与えますが、64+ GB VRAM と大量の計算が必要です。',
+          ],
+          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-ja.svg',
+          imageCaption: 'LoRA（4 倍高速、8 GB VRAM、95-98% 精度）vs 完全な fine-tuning（ベース速度、64+ GB VRAM、+2-5% ゲイン）：速度-精度トレードオフ VRAM 要件比較。',
+        },
+        vramRequirements: {
+          id: 'vram-requirements-finetuning',
+          title: 'モデルサイズ別 VRAM 要件',
+          content: [
+            'すべてのモデルが LoRA fine-tuning で 8 GB VRAM に収まるわけではありません。実行できるものは以下の通りです：',
+          ],
+          image: '/images/create-custom-local-models-vram-by-model-ja.svg',
+          imageCaption: 'Fine-tuning VRAM 互換性：3B-8B モデル ✓ 8 GB で動作、13B ✓ 動作するがきつい、32B には 64+ GB が必要、70B は不可能。LoRA はバッチトレーニングに ~25% オーバーヘッドを追加。',
+        },
+        ollamaDeployment: {
+          id: 'ollama-deployment',
+          title: 'カスタムモデルを Ollama にデプロイ',
+          content: [
+            'LoRA アダプターをマージした後、3 ステップで Ollama にデプロイ：',
+          ],
+          numberedItems: [
+            '**ステップ 1 — GGUF にエクスポート：** llama.cpp の変換スクリプトを使用してマージモデルを PyTorch/safetensors 形式から GGUF に変換します。Ollama と llama.cpp の互換性に不可欠です。\n```bash\npython convert_hf_to_gguf.py \\\n  --model ./merged-model \\\n  --outfile ./my-custom-model.gguf \\\n  --outtype q4_k_m\n```',
+            '**ステップ 2 — Ollama Modelfile を作成：** モデルのシステムプロンプト、パラメーター、推論設定を定義します。\n```\nFROM ./my-custom-model.gguf\nSYSTEM "あなたは[ドメイン]エキスパート..."\nPARAMETER temperature 0.4\nPARAMETER num_ctx 4096\n```',
+            '**ステップ 3 — 登録して実行：** モデルをローカルまたは API アクセス用に Ollama にロード。\n```bash\nollama create my-custom-model -f Modelfile\nollama run my-custom-model\n```\n\nFine-tune モデルは localhost:11434 で Ollama の OpenAI 互換 API 経由でアクセス可能—標準 Ollama モデルと同じ。Python/Node.js OpenAI SDK を使用して Continue.dev、Open WebUI、またはアプリで使用。',
+          ],
+        },
+        pretraining: {
+          id: 'pretraining-basics',
+          title: 'Pre-Training：いつ、なぜ',
+          content: [
+            '**Pre-training はraw データ（書籍、ドキュメント、コード）から学習を意味します。** 次の場合のみ正当化されます：',
+            '1. 100 億以上トークンのユニークで貴重なデータがある。',
+            '2. Pre-train モデルがドメイン上で定期的に失敗する。',
+            '3. 予算が 50,000 ドル以上（現実的コスト）。',
+            '4. 競争上の優位性のための proprietary モデルが必要。',
+            'こんにちは：ゲノミクス企業 500GB 私有研究データがカスタム pre-training を正当化するかもしれません。',
+          ],
+        },
+        decisionMatrix: {
+          id: 'decision-matrix',
+          title: '決定マトリックス：どのアプローチを使用するか？',
+          content: [
+            'カスタムモデルには 3 つの主要なアプローチが存在します。データ、予算、スケジュールに基づいて選択：',
+          ],
+          image: '/images/create-custom-local-models-cost-benefit-matrix-ja.svg',
+          imageCaption: '決定マトリックス：トレーニングデータがない場合は RAG（0 円）を使用、500+ サンプルがある場合は fine-tuning（¥15,000-30,000、1～4 時間）、100B+ トークンがある場合は pre-training（¥6,000,000-60,000,000、数週間-数ヶ月）。',
+        },
+        domainAdaptation: {
+          id: 'domain-adaptation',
+          title: 'ドメイン適応戦略',
+          content: [
+            '**完全な pre-training なしで、ドメイン上のモデルパフォーマンスを改善：**',
+          ],
+          items: [
+            '**継続 pre-training：** ベースモデルを取り、ドメインデータでトレーニング（10B+ トークン）。完全な pre-training より安価。',
+            '**LoRA fine-tuning：** 最も実用的。500+ サンプルで微調整。',
+            '**Prompt engineering：** 優れたプロンプトを作成。無料ですが制限される。',
+            '**RAG：** ドキュメントを取得、コンテキストを提供。リトレーニングなしで動作。',
+            '**Ensemble：** 複数のモデルを組み合わせる。',
+          ],
+        },
+        evaluation: {
+          id: 'evaluation',
+          title: '評価メトリクス',
+          content: [
+            'モデル品質を測定：',
+          ],
+          items: [
+            '**タスク固有メトリクス：** 精度、F1 スコア、BLEU（テキスト生成）。',
+            '**ベンチマークテスト：** 標準ベンチマーク（MMLU、HumanEval）で実行。',
+            '**人間評価：** 手動スコアリング（時間消費するが正確）。',
+            '**ビジネスメトリクス：** モデルは実際のビジネス結果を改善していますか？',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '一般的なミス',
+          items: [
+            '**データ不足での pre-training。** <10B トークンは計算が無駄。代わりに fine-tune。',
+            '**正しく評価しない。** トレーニング loss だけでは誤解。見ていないデータでテスト。',
+            '**カスタムモデルが GPT-4 に匹敵することを期待。** Open モデルとフロンティアモデル間のギャップは大きい。',
+            '**推論コストを無視。** より大きいカスタムモデル = より高い推論コスト。トレードオフを検討。',
+            '**GGUF 変換ステップをスキップ。** Unsloth または HuggingFace での fine-tuning 後、モデルは PyTorch/safetensors 形式。Ollama と llama.cpp は GGUF が必要。llama.cpp の `convert_hf_to_gguf.py` を使用して変換。このステップなしでは、fine-tune モデルは Ollama、LM Studio、または GGUF ベースの推論エンジンで実行できません。変換中に常に量子化（Q4_K_M 推奨）してファイルサイズを 3-4 倍削減。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？',
+              a: 'Fine-tune モデルは特定ドメインでベースモデル機能を上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.1 70B を上回りますが、一般知識では下回ります。ドメイン固有精度が幅より重要な場合、fine-tune してください。',
+            },
+            {
+              q: '効果的に fine-tune するにはどのくらいデータが必要ですか？',
+              a: '最小 500～1,000 サンプルで使用可能なモデル；5,000+ は本番品質。データ品質は量より重要—1,000 高品質サンプルは 50,000 低品質サンプルに勝ります。小さいデータセット（500～2,000 サンプル）では LoRA、10,000+ サンプルでのみ完全な fine-tuning を使用。',
+            },
+            {
+              q: 'LoRA と完全な fine-tuning の違いは何ですか？',
+              a: 'LoRA（Low-Rank Adaptation）はモデルウェイトの 1～2% のみ更新し、4 倍高速で 80～90% 少ない VRAM が必要。完全な fine-tuning はすべてのウェイトを更新し、わずかに良い結果（~2～5% 精度向上）を与えますが大量計算が必要。ほとんどのプロジェクトでは LoRA；完全な fine-tuning は予算がある場合のみ。',
+            },
+            {
+              q: 'fine-tuning ではなく pre-training を検討すべきですか？',
+              a: '次の場合のみ：(1) 100 億以上ユニークトークンがある、(2) fine-tuning が精度目標に達しない、(3) 予算が 50,000 ドル以上、(4) 競争上の優位性が必要。99% の組織では fine-tuning が正しい選択。',
+            },
+            {
+              q: 'カスタムモデルが本番対応かどうかを評価するにはどうすればよいですか？',
+              a: '3 つの次元でテスト：(1) タスク固有メトリクス（精度、F1、BLEU）、(2) ベンチマーク比較（MMLU または HumanEval で実行）、(3) ビジネスメトリクス（実際の結果を改善していますか？）。Fine-tune モデルがベースモデルを 5-10% 上回る場合、本番対応。',
+            },
+            {
+              q: 'Fine-tuning とプロンプトエンジニアリングを組み合わせてより良い結果を得ることができますか？',
+              a: 'はい—ベストプラクティス。Fine-tuning は構造的変更（ドメイン言語、形式）を処理；プロンプトエンジニアリングは特定ユースケース処理。Fine-tune 法的モデル + 優れたプロンプトエンジニアリングはどちらか単独より優れています。プロンプト最適化（無料）で始め、必要に応じて fine-tune。',
+            },
+            {
+              q: 'Fine-tuning に使用すべきフレームワークは何ですか？',
+              a: 'Unsloth（最速）、Axolotl（柔軟）、Hugging Face Transformers（公式、最も文書化）が主要オプション。速度なら Unsloth；マルチ GPU セットアップなら Axolotl 推奨。すべて LoRA サポート、Ollama デプロイメント対応。',
+            },
+            {
+              q: 'Pre-training がコスト価値があるかどうかを知るにはどうすればよいですか？',
+              a: 'この計算を実行：(1) タスク上の fine-tuning 品質ギャップを推定（ex. fine-tuning は 85%、pre-training は 92%）。(2) 精度ポイントごとのビジネス価値を定量化（ex. +1% = $10k 収入）。(3) ($50k pre-training コスト) < (7% 改善価値) なら pre-train。そうでなければ fine-tune。',
+            },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'カスタムモデルの地域別考慮事項',
+          content: [
+            '**カスタムモデルはデータプライバシーと規制上の影響が地域によって異なります。Fine-tune またはプレトレーニングモデルをデプロイする前に、地域別のコンプライアンス要件を理解してください：**',
+          ],
+          items: [
+            '**日本（APPI）：** 日本の個人情報保護法は個人データの訓練に明示的な同意を要求します。医療または金融サービス用カスタムモデルはデータレジデンシーを要求します（処理は日本で行う必要があります）。オンプレミス fine-tuning とデプロイメントを検討。',
+            '**アジア太平洋（データ跨域）：** ASEAN/APAC データレジデンシーフレームワーク、MLAI（マルチ ASEAN/APAC）コンプライアンスパターン。',
+            '**中国（DSL + CAC）：** 中国のデータセキュリティ法とサイバースペース規制は個人および産業データの地元処理を要求。中国データで訓練したカスタムモデルは中国インフラで訓練される必要があります。中国へのデプロイ用プレトレーニングモデルは CAC 登録が必要。',
+            '**米国：** 連邦 LLM 規制なし（2026 年 4 月現在）。州レベルのルールは異なります；カリフォルニア法は アルゴリズム透明性に焦点。金融/医療モデルについては、規制機関（SEC、FDA、CMS）がドキュメンテーション要件を課す可能性。モデル変更の監査証跡を検討。',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連読書',
+          items: [
+            '[LoRA を使用したローカル LLM の Fine-Tuning](/local-llms/fine-tuning-local-llms-lora?lang=ja) -- 効率的な fine-tuning のステップバイステップガイド。',
+            '[ベストローカル LLM 2026](/local-llms/best-local-llms-2026?lang=ja) -- Fine-tuning 向けの推奨ベースモデル。',
+            '[ローカルモデルの量子化](/local-llms/quantization-explained?lang=ja) -- 品質を失わないモデルサイズ削減。',
+            '[ローカル LLM ハードウェアガイド 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- GPU、Apple Silicon、CPU 要件。',
+            '[ローカル LLM を評価する方法](/local-llms/how-to-evaluate-local-llms?lang=ja) -- ベンチマークとテストフレームワーク。',
+            '[Prompt Engineering ガイド](/prompt-engineering?lang=ja) -- モデルをリトレーニングしない代替アプローチ。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'ソース',
+          items: [
+            '[Chinchilla Scaling Laws](https://arxiv.org/abs/2203.15556) -- 訓練と推論のための最適な計算配分。',
+            '[Instruction Tuning Survey](https://arxiv.org/abs/2308.10792) -- Fine-tuning アプローチの包括的レビュー。',
+            '[LoRA: Low-Rank Adaptation](https://arxiv.org/abs/2106.09685) -- 効率的な fine-tuning 方法。',
+            '[Hugging Face Fine-Tuning ガイド](https://huggingface.co/docs/transformers/training) -- 公式 fine-tuning ドキュメント。',
+          ],
+        },
+      },
+    },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: '高级技术',
+      title: '创建自定义本地 LLM 2026：使用 Unsloth 和 Ollama 进行微调与预训练',
+      seoTitle: '创建自定义本地LLM 2026：微调$500对比预训练$50K',
+      intro: '创建自定义本地 LLM 意味着微调现有模型或从零开始预训练。截至 2026 年 4 月，使用 LoRA 的微调在消费级硬件上可行：500 个样本、8GB VRAM、1-2 小时、$100-500。预训练成本为 $50,000-500,000，需要 100 亿+ tokens——仅对罕见的专有需求合理。本指南涵盖两种方法：使用 Unsloth 的 7 步微调路径、微调 vs. 预训练 vs. RAG 决策矩阵以及 Ollama 部署。',
+      metaDescription: '用LoRA微调Llama 3.1 8B：500个样本，8GB显存，1–2小时，$100–500。预训练：10B+令牌，数周，$50K–500K。含决策矩阵与Ollama部署指南。',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: '创建自定义本地 LLM 意味着微调现有模型或从零开始预训练。截至 2026 年 4 月，使用 LoRA 的微调在消费级硬件上可行：500 个样本、8GB VRAM、1-2 小时、$100-500。',
+      audience: '在生产或企业环境中部署本地 LLM 的工程师',
+      readTime: '阅读约 12 分钟',
+      educationalLevel: 'Advanced',
+      primaryTerm: '模型创建',
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        inLanguage: 'zh',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=zh',
+        headline: '创建自定义本地 LLM 2026：使用 Unsloth 和 Ollama 进行微调与预训练',
+        description: '使用 LoRA 微调 7B 模型：500 个样本、8GB VRAM、1-2 小时、$100-500。预训练：100 亿+ tokens、$50,000-500,000。包括决策矩阵、Unsloth 设置和 Ollama 部署。',
+        author: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+        },
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-24',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+        },
+        proficiencyLevel: 'Advanced',
+        about: [
+          { '@type': 'Thing', 'name': '自定义 LLM 微调' },
+          { '@type': 'Thing', 'name': 'LoRA 领域适配' },
+          { '@type': 'Thing', 'name': 'Unsloth 微调' },
+          { '@type': 'Thing', 'name': '预训练 vs 微调成本' },
+          { '@type': 'Thing', 'name': 'GGUF Ollama 部署' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '微调能否匹配预训练模型的质量？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '经过微调的模型在您的特定领域可能超过基础模型的性能，但不会达到更大预训练模型的知识广度。在法律文件上微调的 Llama 3.1 8B 会在法律任务上优于 Llama 3.1 70B，但在一般知识上表现不佳。当领域特定的准确性比广度更重要时，选择微调。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '有效微调需要多少数据？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '可用模型最少需要 500-1,000 个样本；生产质量需要 5,000+。数据质量比数量更重要——1,000 个高质量样本优于 50,000 个低质量样本。对于小数据集（500-2,000 个样本），使用 LoRA；仅当有 10,000+ 个样本时才进行完整微调。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'LoRA 和完整微调有什么区别？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'LoRA（低秩适配）仅更新约 1-2% 的模型权重，使其速度快 4 倍，VRAM 需求少 80-90%。完整微调更新所有权重，精度提升边际（约 2-5%），但需要大量计算资源。大多数项目使用 LoRA；仅当有预算时才进行完整微调。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '何时应考虑预训练而不是微调？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '仅当：(1) 有超过 100 亿个 tokens 的独特数据，(2) 微调未能持续达到准确性目标，(3) 预算超过 $50,000，(4) 需要专有模型获得竞争优势时。对于 99% 的组织，微调才是正确选择。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '如何评估自定义模型是否可用于生产？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '在 3 个维度上测试：(1) 任务特定指标（准确性、F1、BLEU），(2) 基准对比（在 MMLU 或 HumanEval 上运行与基础模型比较），(3) 业务指标（是否改进实际成果？）。如果微调模型在您的任务上比基础模型性能提升 5-10%，则可用于生产。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '能否结合微调和提示工程获得更好的结果？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的——这是最佳实践。微调处理结构性变化（领域语言、格式）；提示工程处理特定用例。经过微调的法律模型加上良好的提示工程会优于单独使用任何一种。从提示优化开始（免费），然后根据需要进行微调。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '微调应使用哪个框架？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Unsloth（最快）、Axolotl（灵活）和 Hugging Face Transformers（官方、文档最全）是主要选择。Unsloth 推荐用于速度；Axolotl 推荐用于多 GPU 设置。所有都支持 LoRA 并可与 Ollama 集成进行部署。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '如何判断预训练成本是否值得？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '计算：(1) 估计微调与预训练在您任务上的质量差距（例如微调达到 85%，预训练可能达到 92%），(2) 量化精度点的业务价值（例如 +1% 准确性 = $10,000 收入），(3) 如果（$50,000 预训练成本）<（7% 改进的价值），则预训练。否则，微调。',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'zh',
+        name: '如何创建和部署自定义本地 LLM',
+        totalTime: 'PT3H',
+        step: [
+          { '@type': 'HowToStep', 'position': 1, 'name': '收集 500-5,000 个领域特定样本', 'text': '每个样本 = JSON/JSONL 格式的输入 + 预期输出' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '选择基础模型（Llama 3.1 8B 或 Qwen2.5 7B）', 'text': '使用指令调优变体以获得最佳结果' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '使用 Unsloth 通过 LoRA 训练（快 4 倍）', 'text': 'lora_r=16, learning_rate=2e-4, 3 个 epoch, 8GB VRAM' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '在保留的测试集上评估', 'text': '在未见过的数据上测量准确性、F1 或特定任务指标' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '将 LoRA 适配器合并到基础模型中', 'text': 'model.merge_and_unload() 创建单个模型文件' },
+          { '@type': 'HowToStep', 'position': 6, 'name': '转换为 GGUF 并量化', 'text': 'python convert_hf_to_gguf.py --outtype q4_k_m' },
+          { '@type': 'HowToStep', 'position': 7, 'name': '部署到 Ollama', 'text': '创建带有 FROM ./model.gguf 的 Modelfile，然后运行 ollama create my-model -f Modelfile' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        url: 'https://www.promptquorum.com/local-llms/create-custom-local-models?lang=zh',
+        name: '自定义 LLM 方法：决策矩阵',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '微调（推荐）',
+            description: '用 500～5,000 个特定领域的样本微调现有模型。成本：$100-500，时间：1-4 小时，VRAM：8GB。适合 99% 拥有领域数据的组织。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'RAG（免费）',
+            description: '检索增强生成：无需培训。成本：$0，时间：即时，VRAM：最小。适合快速迭代和没有标记训练数据的组织。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: '预训练（罕见）',
+            description: '从头开始在 100B+ token 原始数据上训练。成本：$50,000-500,000，时间：数周-数月，VRAM：100+ GB。仅适用于拥有大量预算的专有模型。',
+          },
+        ],
+      },
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '微调与预训练', anchor: '#finetuning-vs-pretraining' },
+        { label: '微调路径', anchor: '#finetuning-path' },
+        { label: 'LoRA 对比完整微调', anchor: '#lora-vs-full-finetuning' },
+        { label: 'VRAM 需求', anchor: '#vram-requirements-finetuning' },
+        { label: 'Ollama 部署', anchor: '#ollama-deployment' },
+        { label: '预训练基础', anchor: '#pretraining-basics' },
+        { label: '决策矩阵', anchor: '#decision-matrix' },
+        { label: '领域适配策略', anchor: '#domain-adaptation' },
+        { label: '评估指标', anchor: '#evaluation' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '常见问题', anchor: '#faq' },
+        { label: '相关阅读', anchor: '#related-reading' },
+      ],
+      gammaEmbedUrl: '/presentations/create-custom-local-models-static.html',
+      gammaDescription: '幻灯片涵盖微调与预训练成本分析、Unsloth 7 步路径、GGUF 量化和 Ollama 部署步骤。下载为自定义 LLM 微调参考卡。',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**微调（推荐）：** 8GB VRAM、500+ 样本、1-4 小时。成本：$100-500。',
+            '**预训练：** 8+ GPU、100B+ tokens、数周。成本：$50,000-500,000。',
+            '大多数组织应该微调，不应预训练。自定义预训练的收益递减。',
+            '最佳方法：先在领域数据上进行微调，然后评估预训练是否合理。',
+            '截至 2026 年 4 月，除非需要专有模型，否则预训练很少正当。',
+          ],
+        },
+        ftVsPt: {
+          id: 'finetuning-vs-pretraining',
+          title: '微调与预训练对比',
+          columns: ['方面', '微调', '预训练'],
+          rows: [
+            { '方面': '训练时间', '微调': '1-4 小时', '预训练': '数周-数月' },
+            { '方面': 'VRAM 需求', '微调': '8GB', '预训练': '100+ GB（多 GPU）' },
+            { '方面': '数据需求', '微调': '500-5k 个样本', '预训练': '100B+ tokens' },
+            { '方面': '成本', '微调': '$100-500', '预训练': '$50,000-500,000' },
+            { '方面': '定制化', '微调': '领域知识', '预训练': '专有模型' },
+            { '方面': '适用时机', '微调': '99% 的情况', '预训练': '罕见、特殊需求' },
+          ],
+          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-zh.svg',
+          imageCaption: '微调（1-4 小时、$100-500、8GB VRAM）vs 预训练（数周-数月、$50,000-500,000、100+ GB）：训练时间、成本、数据需求和适用场景对比。',
+        },
+        finetuningPath: {
+          id: 'finetuning-path',
+          title: '微调路径（推荐）',
+          numberedItems: [
+            '收集 500-5,000 个高质量领域特定样本。',
+            '选择基础模型（Llama 3.1 8B、Qwen 7B 等）。',
+            '使用 LoRA 进行高效训练（快 4 倍，质量相同）。',
+            '在 GPU 上训练 3-5 个 epoch。',
+            '在测试集上评估（精确率、召回率、自定义指标）。',
+            '将 LoRA 适配器合并到基础模型中。',
+            '部署为生产模型。',
+          ],
+          image: '/images/create-custom-local-models-7step-finetuning-path-zh.svg',
+          imageCaption: '7 步微调工作流：收集数据 → 选择基础模型 → 使用 LoRA 训练（3-5 epoch、8GB VRAM）→ 评估 → 合并 → 转换为 GGUF → 部署到 Ollama。总时间：1-4 小时。',
+        },
+        loraVsFull: {
+          id: 'lora-vs-full-finetuning',
+          title: 'LoRA 与完整微调：选择哪个？',
+          content: [
+            'LoRA（低秩适配）仅更新 1-2% 的模型权重，使其速度快 4 倍，VRAM 需求少 80-90%。完整微调更新所有权重，精度略有提升（2-5% 改进），但需要 64+ GB VRAM 和大量计算资源。',
+          ],
+          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-zh.svg',
+          imageCaption: 'LoRA（快 4 倍、8GB VRAM、95-98% 准确率）vs 完整微调（基线速度、64+ GB VRAM、+2-5% 增益）：速度-精度权衡和 VRAM 需求对比。',
+        },
+        vramRequirements: {
+          id: 'vram-requirements-finetuning',
+          title: '按模型大小的 VRAM 需求',
+          content: [
+            '并非所有模型都能在 8GB VRAM 上进行 LoRA 微调。以下是您可以运行的：',
+          ],
+          image: '/images/create-custom-local-models-vram-by-model-zh.svg',
+          imageCaption: '微调 VRAM 兼容性：3B-8B 模型 ✓ 在 8GB 上运行、13B ✓ 运行但紧张、32B 需要 64+ GB、70B 不可行。LoRA 批量训练增加约 25% 开销。',
+        },
+        ollamaDeployment: {
+          id: 'ollama-deployment',
+          title: '将自定义模型部署到 Ollama',
+          content: [
+            '合并 LoRA 适配器后，分 3 步部署到 Ollama：',
+          ],
+          numberedItems: [
+            '**第 1 步——导出为 GGUF：** 使用 llama.cpp 的转换脚本将合并的模型从 PyTorch/safetensors 格式转换为 GGUF。这对 Ollama 和 llama.cpp 兼容性至关重要。\n```bash\npython convert_hf_to_gguf.py \\\n  --model ./merged-model \\\n  --outfile ./my-custom-model.gguf \\\n  --outtype q4_k_m\n```',
+            '**第 2 步——创建 Ollama Modelfile：** 定义模型的系统提示、参数和推理设置。\n```\nFROM ./my-custom-model.gguf\nSYSTEM "You are a [your domain] expert..."\nPARAMETER temperature 0.4\nPARAMETER num_ctx 4096\n```',
+            '**第 3 步——注册和运行：** 将模型加载到 Ollama 以供本地或 API 访问。\n```bash\nollama create my-custom-model -f Modelfile\nollama run my-custom-model\n```\n\n您的微调模型现在可通过位于 localhost:11434 的 Ollama OpenAI 兼容 API 访问——与任何标准 Ollama 模型相同。与 Continue.dev、Open WebUI 或通过 Python/Node.js OpenAI SDK 的自定义应用配合使用。',
+          ],
+        },
+        pretraining: {
+          id: 'pretraining-basics',
+          title: '预训练：何时以及为什么',
+          content: [
+            '**预训练是指从原始数据（书籍、文件、代码）中学习。** 仅在以下情况下合理：',
+            '1. 拥有超过 100 亿个 tokens 的独特有价值数据。',
+            '2. 预训练模型在您的领域中表现不佳。',
+            '3. 预算超过 $50,000（现实成本）。',
+            '4. 需要专有模型（竞争优势）。',
+            '示例：拥有 500GB 私有研究数据的基因组公司可能需要自定义预训练。',
+          ],
+        },
+        decisionMatrix: {
+          id: 'decision-matrix',
+          title: '决策矩阵：选择哪种方法？',
+          content: [
+            '存在三种主要的自定义模型方法。根据您的数据、预算和时间表选择：',
+          ],
+          image: '/images/create-custom-local-models-cost-benefit-matrix-zh.svg',
+          imageCaption: '决策矩阵：无训练数据时使用 RAG（$0）、有 500+ 样本时使用微调（$100-500、1-4 小时）、有 100B+ tokens 时使用预训练（$50,000-500,000、数周-数月）。',
+        },
+        domainAdaptation: {
+          id: 'domain-adaptation',
+          title: '领域适配策略',
+          content: [
+            '**不进行完整预训练的情况下，改进模型在您领域的性能：**',
+          ],
+          items: [
+            '**继续预训练：** 获取基础模型，在领域数据上训练（10B+ tokens）。比完整预训练更便宜。',
+            '**LoRA 微调：** 最实用。在 500+ 样本上调优。',
+            '**提示工程：** 精心设计提示。免费，但有局限。',
+            '**RAG：** 检索文档，提供上下文。无需重训就能工作。',
+            '**集合：** 组合多个模型。',
+          ],
+        },
+        evaluation: {
+          id: 'evaluation',
+          title: '评估指标',
+          content: [
+            '衡量模型质量：',
+          ],
+          items: [
+            '**任务特定指标：** 准确性、F1 分数、BLEU（文本生成）。',
+            '**基准测试：** 在标准基准上运行（MMLU、HumanEval）。',
+            '**人工评估：** 手动评分（耗时但准确）。',
+            '**业务指标：** 模型是否改进实际业务成果？',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '常见错误',
+          items: [
+            '**数据不足的预训练。** <10B tokens 会浪费计算。改用微调。',
+            '**评估不充分。** 仅看训练损失会误导。在未见过的数据上测试。',
+            '**期望自定义模型与 GPT-4 相当。** 开源模型与前沿模型之间的差距很大。',
+            '**忽视推理成本。** 更大的自定义模型 = 更高的推理成本。考虑权衡。',
+            '**跳过 GGUF 转换步骤。** 使用 Unsloth 或 HuggingFace 微调后，模型为 PyTorch/safetensors 格式。Ollama 和 llama.cpp 需要 GGUF。使用 llama.cpp 的 `convert_hf_to_gguf.py` 进行转换。没有此步骤，微调模型无法在 Ollama、LM Studio 或任何基于 GGUF 的推理引擎中运行。始终在转换时量化（推荐 Q4_K_M）以将文件大小减少 3-4 倍。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '常见问题',
+          faqs: [
+            {
+              q: '微调能否匹配预训练模型的质量？',
+              a: '经过微调的模型在您的特定领域可能超过基础模型的性能，但不会达到更大预训练模型的知识广度。在法律文件上微调的 Llama 3.1 8B 会在法律任务上优于 Llama 3.1 70B，但在一般知识上表现不佳。当领域特定的准确性比广度更重要时，选择微调。',
+            },
+            {
+              q: '有效微调需要多少数据？',
+              a: '可用模型最少需要 500-1,000 个样本；生产质量需要 5,000+。数据质量比数量更重要——1,000 个高质量样本优于 50,000 个低质量样本。对于小数据集（500-2,000 个样本），使用 LoRA；仅当有 10,000+ 个样本时才进行完整微调。',
+            },
+            {
+              q: 'LoRA 和完整微调有什么区别？',
+              a: 'LoRA（低秩适配）仅更新约 1-2% 的模型权重，使其速度快 4 倍，VRAM 需求少 80-90%。完整微调更新所有权重，精度提升边际（约 2-5%），但需要大量计算资源。大多数项目使用 LoRA；仅当有预算时才进行完整微调。',
+            },
+            {
+              q: '何时应考虑预训练而不是微调？',
+              a: '仅当：(1) 有超过 100 亿个 tokens 的独特数据，(2) 微调未能持续达到准确性目标，(3) 预算超过 $50,000，(4) 需要专有模型获得竞争优势时。对于 99% 的组织，微调才是正确选择。',
+            },
+            {
+              q: '如何评估自定义模型是否可用于生产？',
+              a: '在 3 个维度上测试：(1) 任务特定指标（准确性、F1、BLEU），(2) 基准对比（在 MMLU 或 HumanEval 上运行与基础模型比较），(3) 业务指标（是否改进实际成果？）。如果微调模型在您的任务上比基础模型性能提升 5-10%，则可用于生产。',
+            },
+            {
+              q: '能否结合微调和提示工程获得更好的结果？',
+              a: '是的——这是最佳实践。微调处理结构性变化（领域语言、格式）；提示工程处理特定用例。经过微调的法律模型加上良好的提示工程会优于单独使用任何一种。从提示优化开始（免费），然后根据需要进行微调。',
+            },
+            {
+              q: '微调应使用哪个框架？',
+              a: 'Unsloth（最快）、Axolotl（灵活）和 Hugging Face Transformers（官方、文档最全）是主要选择。Unsloth 推荐用于速度；Axolotl 推荐用于多 GPU 设置。所有都支持 LoRA 并可与 Ollama 集成进行部署。',
+            },
+            {
+              q: '如何判断预训练成本是否值得？',
+              a: '计算：(1) 估计微调与预训练在您任务上的质量差距（例如微调达到 85%，预训练可能达到 92%），(2) 量化精度点的业务价值（例如 +1% 准确性 = $10,000 收入），(3) 如果（$50,000 预训练成本）<（7% 改进的价值），则预训练。否则，微调。',
+            },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '地区考虑事项',
+          content: [
+            '**自定义模型涉及因地区而异的数据隐私和监管影响。在部署微调或预训练模型之前，理解地区合规要求至关重要。**',
+          ],
+          items: [
+            '**中国（数据安全法、网络空间管理）：** 中国《数据安全法》和网络空间管理规则要求对个人和工业数据进行本地处理。在中国数据上训练的自定义模型必须在中国基础设施上训练。为在中国部署的预训练模型需要网络空间管理注册。考虑在华本地微调和部署。',
+            '**亚太地区（数据跨境）：** 新加坡、韩国和澳大利亚等地有数据驻留框架。自定义模型在多个 APAC 国家部署需要评估各自的数据本地化义务。一些国家（泰国、菲律宾）要求个人数据由当地运营商处理。设计支持地区部署的模型管道。',
+            '**企业部署（金融/医疗/法律）：** 部署在受管制行业（银行、医疗、律师事务所）的微调模型需要审计跟踪和模型变更文档。许多企业使用本地推理来满足数据驻留和客户隐私要求。实施模型版本控制、评估日志和访问控制。',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[使用 LoRA 微调本地 LLM](/local-llms/fine-tuning-local-llms-lora?lang=zh) -- 高效微调的分步指南。',
+            '[2026 年最佳本地 LLM](/local-llms/best-local-llms-2026?lang=zh) -- 推荐用于微调的基础模型。',
+            '[本地模型量化](/local-llms/quantization-explained?lang=zh) -- 在不损失质量的情况下减小模型大小。',
+            '[本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- GPU、Apple Silicon 和 CPU 需求。',
+            '[如何评估本地 LLM](/local-llms/how-to-evaluate-local-llms?lang=zh) -- 基准和测试框架。',
+            '[提示工程指南](/prompt-engineering?lang=zh) -- 无需重训模型的替代方法。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '参考资源',
+          items: [
+            '[Chinchilla 缩放规律](https://arxiv.org/abs/2203.15556) -- 训练和推理的最优计算分配。',
+            '[指令调优综述](https://arxiv.org/abs/2308.10792) -- 微调方法的综合评述。',
+            '[LoRA：低秩适配](https://arxiv.org/abs/2106.09685) -- 高效的微调方法。',
+            '[Hugging Face 微调指南](https://huggingface.co/docs/transformers/training) -- 官方微调文档。',
+          ],
+        },
+      },
+    },
+  };
