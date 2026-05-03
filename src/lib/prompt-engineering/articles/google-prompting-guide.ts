@@ -179,6 +179,7 @@ export const article: Record<Language, PEArticle> = {
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Common Mistakes When Applying Google\'s Prompting Guide',
+        content: 'When applying Google\'s Prompting Guide, teams often stumble on a few predictable mistakes. Here are the most common—and how to avoid them:',
         mistakes: [
           {
             mistake: 'Assuming examples aren\'t necessary for simple tasks.',
