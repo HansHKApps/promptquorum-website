@@ -8,12 +8,12 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'evergreen',
       theme: 'Fundamentals',
       title: 'Prompt Engineering Glossary: 500 Key Terms',
       intro: 'Concise definitions of the 500 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
       publishDate: '2026-03-28',
-      seoTitle: 'Prompt Engineering Glossary 2026: 500+ Terms',
+      seoTitle: 'AI Prompt Glossary: 500+ Terms Defined',
       metaDescription: '500 prompt engineering terms defined: tokens, CoT, RAG, agents, safety, and evaluation metrics. A–Z reference for developers and AI practitioners.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
@@ -224,8 +224,8 @@ export const article: Record<Language, PEArticle> = {
   title: 'Prompt Engineering Glossar: 500 Essenzielle Begriffe für Entwickler & KI-Teams',
   intro: 'Ihr umfassendes Nachschlagewerk mit über 500 Definitionen – von Tokens und Kontextfenstern bis zur intelligenten Agent-Orchestrierung, RAG-Systemen und modernen Evaluierungsmetriken.',
   publishDate: '2026-03-28',
-  seoTitle: 'Prompt Engineering Glossar 2026: 500 Begriffe erklärt',
-  metaDescription: '500 Prompt-Engineering-Begriffe klar definiert — mit DSGVO-Hinweisen für die DACH-Region. A–Z-Referenz für Entwickler, KI-Teams und Unternehmen.',
+  seoTitle: 'Prompt-Engineering-Glossar: 500+ Begriffe erklärt',
+  metaDescription: '500 Prompt-Engineering-Begriffe definiert: Tokens, CoT, RAG, Agenten, Sicherheit, Evaluation. A–Z-Referenz für Entwickler, KI-Teams und Unternehmen.',
   readTime: '15 min Lesezeit',
   schema: {
     '@context': 'https://schema.org',
@@ -354,8 +354,8 @@ export const article: Record<Language, PEArticle> = {
   title: 'Glossaire de l\'ingénierie de prompt : 500 termes essentiels',
   intro: 'Référence complète des 500 termes les plus importants en ingénierie de prompt — de la théorie des tokens aux architectures d\'agents et métriques d\'évaluation — rédigée pour développeurs et praticiens IA francophones.',
   publishDate: '2026-03-28',
-  seoTitle: 'Glossaire prompt engineering 2026 : 500 termes définis',
-  metaDescription: '500 termes d\'ingénierie de prompt définis en français : tokens, CoT, RAG, agents, sécurité et évaluation. Glossaire A–Z pour développeurs et praticiens.',
+  seoTitle: 'Glossaire Ingénierie de Prompt : 500 Termes',
+  metaDescription: 'Glossaire de 500 termes d\'ingénierie de prompt : tokens, CoT, RAG, agents, sécurité, évaluation. Référence A–Z pour développeurs et praticiens.',
   readTime: '12 min de lecture',
   schema: {
     '@context': 'https://schema.org',
@@ -578,8 +578,8 @@ export const article: Record<Language, PEArticle> = {
   title: 'プロンプトエンジニアリング用語集：500の必須用語',
   intro: '日本の開発チームと企業向けに、プロンプトエンジニアリングの基礎から実践まで、500の重要用語を精選し解説。トークンとコンテキストウィンドウの理論から、マルチエージェント・オーケストレーション、RAG、評価指標まで網羅。',
   publishDate: '2026-03-28',
-  seoTitle: 'プロンプトエンジニアリング用語集 2026：500+ 日本語による完全解説',
-  metaDescription: 'プロンプトエンジニアリング用語集2026。500のキーワードをトークン・CoT・RAG・エージェント・安全性・評価メトリクスの6カテゴリーに整理。開発者・PM・データサイエンティスト向けリファレンス。',
+  seoTitle: 'プロンプトエンジニアリング用語集：500+ 用語解説',
+  metaDescription: 'プロンプトエンジニアリング用語集。500のキーワードをトークン・CoT・RAG・エージェント・安全性・評価メトリクスの6カテゴリーに整理。開発者・PM・データサイエンティスト向け。',
   readTime: '12分で読める',
   schema: {
     '@context': 'https://schema.org',
@@ -855,8 +855,8 @@ export const article: Record<Language, PEArticle> = {
       title: '提示工程词汇表：500个必备术语',
       intro: '为中国开发者精心编选的完整提示工程词汇表。涵盖从令牌（Token）和上下文窗口（Context Window）的基础概念，到多代理编排（Multi-Agent Orchestration）、检索增强生成（RAG）和评估指标等实战应用——500个术语，一本全书。',
       publishDate: '2026-03-28',
-      seoTitle: '提示工程中文词汇表 2026：500+ 术语定义、用法与最佳实践',
-      metaDescription: '本词汇表精选500个提示工程核心术语，分为核心概念、智能体、安全对齐、评估测试、高级技术和生产指标6大类。每条目附定义、用例及参考资料，面向开发者、产品经理与企业AI团队。',
+      seoTitle: '提示工程词汇表：500+ 术语完整解释',
+      metaDescription: '精选500个提示工程核心术语，分为核心概念、智能体、安全对齐、评估测试、高级技术和生产指标。开发者、产品经理与企业AI团队的完整参考词汇表。',
       readTime: '12分钟阅读',
       schema: {
         '@context': 'https://schema.org',
