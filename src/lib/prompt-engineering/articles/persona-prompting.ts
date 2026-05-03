@@ -1273,11 +1273,309 @@ export const article: Record<Language, PEArticle> = {
   ja: {
     freshness_tier: 'evergreen',
     theme: 'Techniques',
-    title: 'ペルソナプロンプティング',
-    intro: '',
+    title: 'ペルソナプロンプティング：AIに一貫性のある役割を与える',
+    intro: 'ペルソナプロンプティングは、AIモデルに明確な役割、世界観、行動を定義して、複数のプロンプトやセッションにわたって特定の専門家やキャラクターのように一貫して回答させる実践です。',
+    seoTitle: 'ペルソナプロンプティング：AIエキスパートの一貫性を引き出す',
+    metaDescription: 'ペルソナプロンプティングを習得し、ファインチューニングなしで安定したAIエキスパートを実現。7つの基本要素、実践的なテンプレート、複数モデルテスト戦略を学びます。',
     publishDate: '2026-03-26',
+    dateModified: '2026-05-03',
     readTime: '13分で読める',
-    sections: {},
+    educationalLevel: 'Intermediate',
+    audience: 'AI組み込みを行うソフトウェアエンジニア、プロダクトマネージャー、スケール環境でAIアシスタントを展開するチーム',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=ja',
+      'inLanguage': 'ja',
+      headline: 'ペルソナプロンプティング：AIに一貫性のある役割を与える',
+      description: 'ペルソナプロンプティングの概要、重要性、7つの基本構成要素、実践的な例、複数のAIモデル間でのペルソナテスト方法。',
+      datePublished: '2026-03-26',
+      dateModified: '2026-05-03',
+      keywords: ['ペルソナプロンプティング', 'プロンプトエンジニアリング', 'AI行動', 'ロールベースプロンプト', 'PromptQuorum'],
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
+        { '@type': 'Thing', name: '大規模言語モデル' },
+        { '@type': 'Thing', name: 'ペルソナ設計' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'ja',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'ペルソナプロンプトの長さはどのくらいが目安ですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '最も効果的なペルソナは200～600トークンです。役割、領域、目的、1～2個の制約を含む200～300トークンから始めてください。複雑さに応じて、例と不確実性の扱いを追加できます。1000トークンを超えるペルソナはモデルを混乱させることが多いため、簡潔でテスト可能な状態に保ってください。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ペルソナプロンプティングはすべてのモデルで機能しますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、Mistral Large、LLaMA 3.1やQwen 2.5などのローカルモデルで機能します。ただし、モデルによってペルソナの追従方法は異なります：GPT-5.5は制約を優先し、Claudeは明確化の質問を行い、Geminiは密度の濃い要約を生成します。複数のモデルでペルソナをテストしてください。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ファインチューニングされたモデルでペルソナを使用できますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'はい、使用できます。ペルソナはファインチューニングされたモデルの上層テキストとして機能します。ファインチューニングされたモデルは既にドメイン知識とスタイルをエンコードしており、ペルソナプロンプトは特定のタスクのためにその動作を精緻化またはリダイレクトできます。両者は相補的に機能します。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ペルソナが機能しているか確認するにはどうすればよいですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptQuorumを使用してテストします：ペルソナを使用して同じタスクをGPT-5.5、Claude、Geminiに送信します。モデルがルールを破った回数をカウントします（例：トークン制限を超える、マーケティング用語を使用する、個人的なアドバイスを提供する）。失敗に基づいてペルソナを改善します。10～20回繰り返します。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ペルソナがユーザーのタスク指示と矛盾する場合はどうなりますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '通常、タスク指示が優先されます。ペルソナが「最大3文」と言っていても、ユーザーが1000語を要求する場合、モデルは通常ユーザーの明示的なリクエストに従います。これを避けるために、ペルソナを柔軟にしてください：「タスクが明示的に別の要求をしない限り、段落ごとに3文を目指してください」',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ペルソナは幻覚を減らすのに役立ちますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '部分的に役立ちます。「出典を引用し、信頼度が80%未満の場合は不確実性を認め、仮定にラベルを付ける」と言うペルソナは、モデルに明示的なルールを与えることで幻覚を減らします。ただし、ペルソナはモデルの根本的な確率的性質を覆すことはできません。最大の信頼性のためにRAGまたはファクトチェックと組み合わせてください。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ペルソナは英語以外の言語で効果的ですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '注意点はありますが、効果的です。GPT-5.5やClaudeなどのモデルはドイツ語、フランス語、日本語、中国語のペルソナをうまく処理しますが、パフォーマンスは異なります。ターゲット言語でペルソナをテストしてください。Qwen 2.5などの一部のモデルは特定の言語に最適化されており、ローカライズされたペルソナをより確実に追従します。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ペルソナをチームと共有し、バージョン管理するにはどうすればよいですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'ペルソナを共有ドキュメント（Markdown、JSON、またはPromptQuorumライブラリ）にバージョン履歴付きで保存してください。例：「v2.1：シニアクラウドアーキテクト—ゼロトラスト制約を追加、推測的主張ルールを削除」。制約の変更と理由の変更をバージョン管理します。どのペルソナバージョンをどのモデルでテストしたかを追跡してください。',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'ja',
+      numberOfItems: 5,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'ペルソナプロンプティング',
+          description: '入力テキストのみを変更します。すべてのベンダーで機能します。数秒で可逆的です。複数ドメインの役割とテストに最適です。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'ファインチューニング',
+          description: 'モデルの重みを変更します。ベンダー固有です。変更にはリトレーニングが必要です。特化した独有のスタイルに最適です。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'システムプロンプト',
+          description: 'API レベルの構成です。ベンダー固有です。スコープは限定的です。すべてのリクエストに適用されるグローバルルールに最適です。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'RAG（検索拡張生成）',
+          description: 'モデルに依存しない検索層です。インフラストラクチャが必要です。事実グラウンディングとナレッジヘビーなタスクに最適です。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'システムプロンプト + ペルソナ',
+          description: 'システムレベルのルールとタスク固有のペルソナを組み合わせます。ハイブリッドアプローチです。ガバナンスと柔軟性の両方が必要なエンタープライズに最適です。',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: '重要ポイント',
+        id: 'key-takeaways',
+        items: [
+          'ペルソナプロンプティングは、AIモデルに特定の役割、スタイル、制約を与えるテキストベースのテクニックです。ファインチューニング不要で、複数モデルで機能します。',
+          'ペルソナはモデルの出力の一貫性を高めます。「シニアエンジニア」「弁護士」「マーケター」などの役割を定義すると、モデルはその視点から応答するようになります。',
+          'ペルソナは約200～600トークンが最適です。役割、領域、目的、制約から始めて、テストして改善します。',
+          'GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、LLaMA 3.1、Qwen 2.5で機能します。モデルごとにテストして、最適なペルソナ形式を見つけてください。',
+          'ペルソナはファインチューニングの代替ではなく、補完です。両者を組み合わせれば、より強力で柔軟なAIシステムを構築できます。',
+          'PromptQuorumを使用して、複数モデル間でペルソナをA/Bテストします。同じタスクを複数のモデルで実行して、ペルソナの遵守率を比較します。',
+          'ペルソナプロンプティングは、AI開発チーム全体で低コストで導入でき、数秒でイテレーションできます。',
+        ],
+      },
+      whatIsPersonaPrompting: {
+        id: 'what-is-persona-prompting',
+        title: 'ペルソナプロンプティングとは',
+        content: 'ペルソナプロンプティングは、AIモデルに特定の役割、スタイル、行動パターン、制約を与えるテキストベースのテクニックです。モデルにシステムプロンプト内（またはプロンプトの冒頭）で「あなたはシニアクラウドアーキテクトです」と言うだけで、その視点から一貫して応答するようになります。ファインチューニングとは異なり、ペルソナプロンプティングはモデル自体を変更しません。入力テキストを通じてモデルの出力を形成するだけです。',
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'ペルソナプロンプティングは、テキストを通じてAIに役割を割り当てることで、一貫した回答を引き出すテクニックです。',
+          },
+          {
+            type: 'in-plain-terms',
+            text: '俳優が異なる役を演じるように、AIモデルに「あなたはこの専門家です」と指示することで、その専門家としての視点で応答させることです。',
+          },
+        ],
+      },
+      whyItMatters: {
+        id: 'why-it-matters',
+        title: 'なぜ重要なのか',
+        content: 'ペルソナプロンプティングは、複数のタスクやセッション間でAIの行動を一貫させるための最も簡単で効率的な方法です。ファインチューニングは高価で時間がかかりますが、ペルソナは数分で設計・テスト・更新できます。チームがAIアシスタント、顧客サービスボット、内部ツール、教育プラットフォームを構築する場合、ペルソナプロンプティングはスケーラビリティ、保守性、テスト可能性を提供します。',
+      },
+      buildingBlocks: {
+        id: 'building-blocks',
+        title: 'ペルソナの7つの基本要素',
+        content: 'すべてのペルソナに必要な7つの構成要素：',
+        numberedItems: [
+          { title: '役割（Role）', whyItMatters: '「シニアエンジニア」「弁護士」「医師」など、モデルが果たすべき職業や立場を定義します。' },
+          { title: '領域（Domain）', whyItMatters: 'その役割に関連する専門分野や業界。例：「クラウドインフラストラクチャ」「企業法」「腫瘍学」。' },
+          { title: '目的（Goals）', whyItMatters: 'ペルソナが何を達成するかを定義します。例：「セキュリティリスクを特定する」「複雑な概念を簡潔に説明する」。' },
+          { title: '制約（Constraints）', whyItMatters: '遵守すべき制限や禁止。例：「マーケティング用語を使わない」「回答は200トークン以内」「推測は避ける」。' },
+          { title: '例（Examples）', whyItMatters: 'ペルソナの期待される行動を示す具体例。数例で十分で、複数の例があるとモデルはより正確に追従します。' },
+          { title: '不確実性の扱い（Uncertainty Handling）', whyItMatters: 'ペルソナが信頼度の低い回答にどう対処すべきか。例：「信頼度が80%未満の場合は「確認が必要」と明記する」。' },
+          { title: '出力形式（Output Format）', whyItMatters: 'JSON、リスト、段落など、期待される形式を指定します。形式を明確にするとモデルの一貫性が向上します。' },
+        ],
+      },
+      practicalExample: {
+        id: 'practical-example',
+        title: '実践的な例：Senior Cloud Architect ペルソナ',
+        content: '以下は実際のペルソナプロンプトの例です：',
+        codeBlock: `You are a Senior Cloud Architect at a Fortune 500 company. Your expertise spans AWS, Azure, GCP, and hybrid architectures. You specialize in cost optimization, security hardening, and zero-trust design patterns.
+
+**Goals:**
+- Identify security risks in proposed infrastructure
+- Recommend cost-reduction strategies
+- Ensure compliance with SOC 2 and ISO 27001
+
+**Constraints:**
+- Cite concrete AWS/Azure/GCP services, not generic concepts
+- If confidence < 80%, state "This requires verification in your environment"
+- Do not recommend bleeding-edge services; stick to proven, 2+ years in production
+- Respond in 300–500 tokens
+
+**Example response tone:**
+"Your RDS instance lacks Multi-AZ failover. I'd recommend enabling it immediately for production. Cost is ~15% higher, but downtime risk drops from hours to minutes. Alternative: DynamoDB with DynamoDB Streams (higher cost, better automation)."`,
+        codeLanguage: 'text',
+      },
+      howToBuild: {
+        id: 'how-to-build-persona',
+        title: 'ペルソナを構築する方法',
+        numberedItems: [
+          '役割を明確に定義する。「シニア」と「ジュニア」では大きく異なります。',
+          '領域と専門知識を指定する。一般的な「エンジニア」ではなく、「クラウドセキュリティエンジニア」を目指す。',
+          '具体的な目的を書く。「良いアドバイスをする」ではなく、「X分以内にリスクを特定する」など。',
+          '制約を厳しく設定する。言語の使用、長さ、形式、確実性の基準などを含める。',
+          'モデルが期待通りに応答する例を3～5つ含める。',
+          'テストプロンプトで検証する。PromptQuorumを使用して、複数モデルでペルソナをテストする。',
+          '失敗に基づいてペルソナを改良する。制約が明確でない場合、モデルはルールを破る傾向があります。',
+        ],
+      },
+      vsFineTuning: {
+        id: 'persona-vs-fine-tuning',
+        title: 'ペルソナプロンプティング vs ファインチューニング',
+        content: 'ペルソナとファインチューニングはしばしば比較されます。主な違いは以下の通りです：n**ペルソナプロンプティング：** テキストベース、可逆的、数分で更新可能、すべてのモデルで機能、コスト低い。ただし、複雑な専門スタイルのエンコーディングには限界があります。\n\n**ファインチューニング：** モデルの重みを変更するため、より深く、より複雑な行動パターンをエンコードできます。ただし、高価で時間がかかり、ベンダー固有で、検証とロールバックが難しい。',
+        tableFormat: true,
+        columns: ['要素', 'ペルソナプロンプティング', 'ファインチューニング'],
+        rows: [
+          { '要素': 'コスト', 'ペルソナプロンプティング': '無料～低コスト', 'ファインチューニング': '数百～数千ドル' },
+          { '要素': 'セットアップ時間', 'ペルソナプロンプティング': '数分～数時間', 'ファインチューニング': '数日～数週間' },
+          { '要素': 'ベンダー依存', 'ペルソナプロンプティング': 'すべてのモデルで機能', 'ファインチューニング': 'ベンダー固有' },
+          { '要素': '更新可能性', 'ペルソナプロンプティング': 'リアルタイム', 'ファインチューニング': '再トレーニング必要' },
+          { '要素': 'エンコーディング深度', 'ペルソナプロンプティング': 'テキストレベル', 'ファインチューニング': 'モデル重みレベル' },
+          { '要素': '最適用途', 'ペルソナプロンプティング': '多様な役割、テスト重視', 'ファインチューニング': '単一専門スタイル、本番環境' },
+        ],
+      },
+      enterpriseContext: {
+        id: 'enterprise-context',
+        title: 'エンタープライズと規制の観点',
+        content: 'METI AI Governance 2024に準拠するため、金融サービス、医療、法律部門を扱う組織はペルソナに「コンプライアンスモード」を含めるべきです。例えば、金融機関は「あなたは監査済みのリスク評価担当者です。すべての推奨事項は独立した検証が必要です」というペルソナを定義できます。医療提供者は「あなたは医療スクリーニング支援者です。診断は下しません。患者には常に医師の診察を勧めます」と規定します。これらの制約は法的責任を軽減し、規制遵守を確保します。',
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — ペルソナプロンプティングの基礎となるコンセプト',
+          '[チェーン・オブ・ソート（Chain-of-Thought）プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — 段階的推論テクニック',
+          '[ファウショット・プロンプティング](/prompt-engineering/few-shot-prompting?lang=ja) — ペルソナに例を含める方法',
+          '[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — ペルソナとセキュリティ考慮事項',
+          '[GPT、Claude、Gemini：適切なモデルの選択](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — モデルによるペルソナ追従の違い',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        isTldr: false,
+        faqs: [
+          {
+            q: 'ペルソナプロンプトの長さはどのくらいが目安ですか？',
+            a: '最も効果的なペルソナは200～600トークンです。役割、領域、目的、1～2個の制約を含む200～300トークンから始めてください。複雑さに応じて、例と不確実性の扱いを追加できます。1000トークンを超えるペルソナはモデルを混乱させることが多いため、簡潔でテスト可能な状態に保ってください。',
+          },
+          {
+            q: 'ペルソナプロンプティングはすべてのモデルで機能しますか？',
+            a: 'GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、Mistral Large、LLaMA 3.1やQwen 2.5などのローカルモデルで機能します。ただし、モデルによってペルソナの追従方法は異なります：GPT-5.5は制約を優先し、Claudeは明確化の質問を行い、Geminiは密度の濃い要約を生成します。複数のモデルでペルソナをテストしてください。',
+          },
+          {
+            q: 'ファインチューニングされたモデルでペルソナを使用できますか？',
+            a: 'はい、使用できます。ペルソナはファインチューニングされたモデルの上層テキストとして機能します。ファインチューニングされたモデルは既にドメイン知識とスタイルをエンコードしており、ペルソナプロンプトは特定のタスクのためにその動作を精緻化またはリダイレクトできます。両者は相補的に機能します。',
+          },
+          {
+            q: 'ペルソナが機能しているか確認するにはどうすればよいですか？',
+            a: 'PromptQuorumを使用してテストします：ペルソナを使用して同じタスクをGPT-5.5、Claude、Geminiに送信します。モデルがルールを破った回数をカウントします（例：トークン制限を超える、マーケティング用語を使用する、個人的なアドバイスを提供する）。失敗に基づいてペルソナを改善します。10～20回繰り返します。',
+          },
+          {
+            q: 'ペルソナがユーザーのタスク指示と矛盾する場合はどうなりますか？',
+            a: '通常、タスク指示が優先されます。ペルソナが「最大3文」と言っていても、ユーザーが1000語を要求する場合、モデルは通常ユーザーの明示的なリクエストに従います。これを避けるために、ペルソナを柔軟にしてください：「タスクが明示的に別の要求をしない限り、段落ごとに3文を目指してください」',
+          },
+          {
+            q: 'ペルソナは幻覚を減らすのに役立ちますか？',
+            a: '部分的に役立ちます。「出典を引用し、信頼度が80%未満の場合は不確実性を認め、仮定にラベルを付ける」と言うペルソナは、モデルに明示的なルールを与えることで幻覚を減らします。ただし、ペルソナはモデルの根本的な確率的性質を覆すことはできません。最大の信頼性のためにRAGまたはファクトチェックと組み合わせてください。',
+          },
+          {
+            q: 'ペルソナは英語以外の言語で効果的ですか？',
+            a: '注意点はありますが、効果的です。GPT-5.5やClaudeなどのモデルはドイツ語、フランス語、日本語、中国語のペルソナをうまく処理しますが、パフォーマンスは異なります。ターゲット言語でペルソナをテストしてください。Qwen 2.5などの一部のモデルは特定の言語に最適化されており、ローカライズされたペルソナをより確実に追従します。',
+          },
+          {
+            q: 'ペルソナをチームと共有し、バージョン管理するにはどうすればよいですか？',
+            a: 'ペルソナを共有ドキュメント（Markdown、JSON、またはPromptQuorumライブラリ）にバージョン履歴付きで保存してください。例：「v2.1：シニアクラウドアーキテクト—ゼロトラスト制約を追加、推測的主張ルールを削除」。制約の変更と理由の変更をバージョン管理します。どのペルソナバージョンをどのモデルでテストしたかを追跡してください。',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考資料',
+        items: [
+          'Brown et al. (2020). "In-Context Learning in Large Language Models." OpenAI. https://arxiv.org/abs/2005.14165',
+          'Wei et al. (2021). "Finetuned Language Models are Zero-Shot Learners." Google. https://arxiv.org/abs/2109.01652',
+          'Kojima et al. (2023). "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916',
+          'METI (2024). "AI Governance Framework 2024." Ministry of Economy, Trade and Industry, Japan.',
+          'Anthropic. (2026). "Prompt Engineering Guide." https://www.anthropic.com/research',
+          'OpenAI. (2026). "Best Practices for Prompt Engineering." https://platform.openai.com/docs/guides/prompt-engineering',
+        ],
+      },
+    },
   },
   zh: {
     freshness_tier: 'evergreen',
