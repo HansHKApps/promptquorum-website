@@ -163,6 +163,13 @@ export const article: Record<Language, PEArticle> = {
         chatgpt: {
           id: 'chatgpt-moment',
           title: 'Late 2022–2023: The ChatGPT Moment and the Prompt Engineer Job Title',
+          callouts: [
+            {
+              type: 'did-you-know',
+              label: 'Did You Know',
+              text: 'ChatGPT reached 100 million monthly active users in January 2023 — just two months after launch. For comparison, it took TikTok 9 months and Instagram 2.5 years to reach the same milestone. This speed of adoption is why prompt engineering went from research concept to mainstream skill almost overnight.',
+            },
+          ],
           content: [
             '**The release of ChatGPT on November 30, 2022, changed the public profile of prompt engineering overnight.** ChatGPT reached one million users within its first five days — confirmed by OpenAI CEO Sam Altman on Twitter in December 2022 — and 100 million monthly active users by January 2023, according to a UBS analysis cited by Reuters. Within days, millions of people were experimenting with prompts and discovering that their results varied enormously based on how they phrased requests. Tech media covered "prompt engineering" as a skill worth learning. The Oxford English Dictionary added "prompt" as a verb related to AI in 2023, and the word itself became a runner-up for word of the year in multiple rankings.',
             'By early 2023, "prompt engineer" appeared as a job title with reported salaries of $175,000–$335,000 at companies including Anthropic, according to widely cited job postings. The role attracted significant media attention — Bloomberg, The Guardian, and The Atlantic all covered whether prompt engineering was a real career. The consensus at the time: it was a transitional role, part human-computer interface design, part subject-matter expertise, part quality assurance.',
@@ -202,6 +209,13 @@ export const article: Record<Language, PEArticle> = {
         beyond2026: {
           id: 'beyond-2026',
           title: '2026 and Beyond: Prompt Engineering as a Core Literacy',
+          callouts: [
+            {
+              type: 'pro-tip',
+              label: 'Pro Tip',
+              text: 'The shift from "prompt engineering" to "context design" isn\'t just terminology — it changes what you optimize. Instead of tweaking the wording of your instruction, you design what goes into the context window: system prompt, retrieved documents, conversation history, tool outputs, and user input. The prompt is one layer, not the whole thing.',
+            },
+          ],
           content: [
             'As of 2026, research and commentary increasingly describe prompt engineering not as a niche job title, but as a fundamental literacy skill for knowledge workers who use AI tools. Academic papers frame structured prompting alongside reading, writing, and computation as a baseline competency for working with generative AI systems.',
             'The role has split into two distinct tracks. The first is system and context design — the engineering of production AI systems where prompts form part of a larger architecture involving retrieval, agents, and evaluation pipelines. The second is everyday use — the ability to write clear, structured prompts that produce useful outputs without knowing the underlying architecture. Both tracks benefit from the same core principles: clear task specification, appropriate context, constraints, and output format.',
