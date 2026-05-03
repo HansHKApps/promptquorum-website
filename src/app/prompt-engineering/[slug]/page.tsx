@@ -119,13 +119,20 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const twTitle = (article as PEArticle & { twitterTitle?: string }).twitterTitle ?? ogTitle
   const twDesc = (article as PEArticle & { twitterDescription?: string }).twitterDescription ?? ogDesc
 
+  // Compute available languages for this article (only include langs with actual translations)
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh'] as const
+  const availableLangsForMeta = VALID_LANGS_META.filter(lang => {
+    const c = peContent[key]?.[lang]
+    return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
+  })
+
   return {
     title: finalTitle.length <= 45 ? `${finalTitle} | PromptQuorum` : finalTitle,
     description: finalDesc,
     ...(isGlossary && {
       keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],
     }),
-    alternates: generateAlternates(`/prompt-engineering/${slug}`, selectedLang, hasTranslation),
+    alternates: generateAlternates(`/prompt-engineering/${slug}`, selectedLang, hasTranslation, availableLangsForMeta),
     openGraph: {
       title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : ogTitle,
       description: isGlossary ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.' : ogDesc,

@@ -98,6 +98,14 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   const article = llmContent[key][selectedLang] ?? llmContent[key]['en']
   if (!article) return notFound()
+
+  // Compute available languages for this article (only include langs with actual translations)
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh'] as const
+  const availableLangsForMeta = VALID_LANGS_META.filter(lang => {
+    const c = llmContent[key]?.[lang]
+    return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
+  })
+
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
   const translationObj = llmContent[key][selectedLang] as any
@@ -112,7 +120,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/local-llms/${slug}`, selectedLang, hasTranslation),
+    alternates: generateAlternates(`/local-llms/${slug}`, selectedLang, hasTranslation, availableLangsForMeta),
     openGraph: {
       title: pageTitle,
       description: metaDesc,
@@ -192,6 +200,8 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = (llmContent[key][selectedLang] ?? llmContent[key]['en'])!
+  const translationObj = llmContent[key][selectedLang] as any
+  const hasTranslation = Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
 
   // Map educationalLevel → TechArticle proficiencyLevel

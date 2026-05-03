@@ -17,9 +17,12 @@ export function generateAlternates(
   path: string,
   selectedLang: string = 'en',
   hasTranslation: boolean = true,
+  availableLangs?: string[],
 ) {
   const BASE = 'https://www.promptquorum.com'
-  const LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const
+  const LANGS = availableLangs && availableLangs.length > 0
+    ? (['en', ...availableLangs.filter((l: string) => l !== 'en')] as const)
+    : (['en', 'de', 'fr', 'ja', 'zh'] as const)
   const canonical =
     selectedLang === 'en' || !hasTranslation
       ? `${BASE}${path}`
