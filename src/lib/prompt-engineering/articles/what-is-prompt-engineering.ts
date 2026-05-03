@@ -445,6 +445,13 @@ export const article: Record<Language, PEArticle> = {
             'Dasselbe KI-Modell liefert dramatisch unterschiedliche Ausgaben, je nachdem wie eine Frage formuliert wird. Ein vager Prompt liefert eine vage Antwort. Ein strukturierter Prompt mit klarem Ziel, relevantem Kontext, expliziten Einschränkungen und einem festgelegten Ausgabeformat liefert ein Ergebnis, das keine Nachbearbeitung erfordert.',
             'Dies sind die wichtigsten Vorteile von konsequent angewandten Prompt-Engineering-Grundlagen:',
           ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Vage Prompts sind teuer',
+              text: 'Jede fehlgeschlagene Ausgabe beim ersten Versuch verbraucht Token und erfordert Wiederholungen. Ein strukturierter Prompt eliminiert Hin-und-her-Klärungen und reduziert verschwendete API-Kosten um durchschnittlich 40–60 %.'
+            }
+          ],
         },
 
         whyMattersList: {
@@ -475,6 +482,13 @@ export const article: Record<Language, PEArticle> = {
             '**Ausgabeformat:** Wie die Antwort strukturiert sein soll – Aufzählungsliste, JSON-Objekt, Markdown-Tabelle, nummerierte Schritte, einfacher Absatz',
             '**Rolle / Persona:** Eine definierte Expertise oder Perspektive, die das Modell einnehmen soll – „Agiere als erfahrener Datenanalyst" oder „Du bist ein prägnanter technischer Autor"',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'Sie benötigen nicht alle sieben',
+              text: 'Einfache Aufgaben benötigen oft nur 2–3 Bausteine (Ziel + Kontext + Format). Komplexe mehrstufige Aufgaben benötigen alle sieben. Beginnen Sie mit dem Minimum und fügen Sie nur das hinzu, was die Aufgabe erfordert.'
+            }
+          ],
         },
 
         pqConsensusTest: {
@@ -482,6 +496,13 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'PromptQuorum entsendete denselben unstrukturierten Prompt ("fassen Sie diesen Text zusammen") an GPT-5.5, Claude Opus 4.7 und Gemini 1.5 Pro. Die Ergebnisse unterschieden sich in Länge, Detail und Struktur auf allen drei Modellen. Als dieselbe Aufgabe mit den fünf Bausteinen oben umgeschrieben wurde, erzeugten alle drei Modelle konsistente, formatgerechte Antworten beim ersten Versuch.',
             'Dieser Konsenseffekt — bei dem strukturierte Prompts identisches Verhalten über verschiedene Modelle hinweg erzeugen — ist die Kernidee des Prompt Engineering. Die fünf Bausteine funktionieren, weil sie ausnutzen, wie alle großen LLMs Anweisungen identisch verarbeiten.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Wussten Sie? Der Konsenseffekt',
+              text: '92,5 % Konsistenzverbesserung (37→40 von 40) ergibt sich allein aus der Struktur, nicht aus modellspezifischen Parameterungen. Das bedeutet, dass ein gut gestalteter Prompt über alle Anbieter hinweg funktioniert, ohne dass Änderungen erforderlich sind.'
+            }
           ],
         },
 
@@ -503,6 +524,13 @@ export const article: Record<Language, PEArticle> = {
             '| RAG (Retrieval-Augmented Generation) | Grundlegung in Fakten | Anhängen von aktuellen Dokumenten vor dem Prompting |',
             '| Persona-basiert | Unterschiedliche Kommunikationsstile | „Erklären Sie mir wie einem 10-Jährigen" |',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'Best Practice: Techniken kombinieren',
+              text: 'Die meisten effektiven Prompts verwenden 2–3 Techniken zusammen. Beispiel: Rollen- (Persona) + Chain-of-Thought (Technik) + einschränkungsbasiert (Format). Beginnen Sie mit einer Technik, fügen Sie weitere hinzu, wenn die Ausgabe an Qualität mangelt.'
+            }
+          ],
         },
 
         frameworks: {
@@ -518,6 +546,13 @@ export const article: Record<Language, PEArticle> = {
             { 'Framework': 'SPECS', 'Am besten für': 'Recherche, Analyse und strukturierte faktenbasierte Ausgaben' },
             { 'Framework': 'CO-STAR', 'Am besten für': 'Komplexe Aufgaben, die vollständigen Kontext, eine definierte Zielgruppe und schrittweise Anweisungen erfordern' },
             { 'Framework': 'RISEN', 'Am besten für': 'Anleitungsschreiben, Schulungsmaterial und Bildungsinhalte' },
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Merksatz: Framework vs. Technik',
+              text: 'Ein Framework ist die Struktur (welche Blöcke auszufüllen sind und in welcher Reihenfolge). Eine Technik ist eine Methode zum Ausfüllen dieser Blöcke. Verwenden Sie ein Framework, um Ihren Prompt zu organisieren; verwenden Sie Techniken, um jeden Abschnitt zu verfeinern.'
+            }
           ],
         },
 
@@ -736,6 +771,13 @@ export const article: Record<Language, PEArticle> = {
             'Le même modèle d\'IA produit des résultats radicalement différents selon la façon dont une question est formulée. Un prompt vague donne une réponse vague. Un prompt structuré avec un objectif clair, un contexte pertinent, des contraintes explicites et un format de sortie spécifié produit un résultat qui ne nécessite aucune modification.',
             'Voici les principaux avantages des bases du prompt engineering appliquées de manière cohérente :',
           ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Les prompts vagues sont coûteux',
+              text: 'Un prompt mal formulé oblige le modèle à deviner votre intention, ce qui entraîne plusieurs tentatives, réessais et filtrage manuel des résultats. Cela multiplie les appels API et le temps de l\'équipe. Un prompt clair coûte moins en tokens, en latence et en efforts de révision.'
+            }
+          ],
         },
 
         whyMattersList: {
@@ -766,6 +808,13 @@ export const article: Record<Language, PEArticle> = {
             '**Format de sortie :** Comment la réponse doit être structurée — liste à puces, objet JSON, tableau Markdown, étapes numérotées, paragraphe simple',
             '**Rôle / persona :** Une expertise ou une perspective définie que le modèle doit adopter — « Agis comme un analyste de données senior » ou « Tu es un rédacteur technique concis »',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'Vous n\'avez pas besoin des sept éléments',
+              text: 'Commencez par les trois éléments essentiels : objectif, contexte et format de sortie. Ajoutez les autres (exemples, contraintes, rôle) si vos résultats manquent de qualité. Les prompts compacts utilisent moins de tokens et sont plus faciles à maintenir.'
+            }
+          ],
         },
 
         pqConsensusTest: {
@@ -773,6 +822,13 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'PromptQuorum a envoyé le même prompt non structuré ("résumez ce texte") à GPT-5.5, Claude Opus 4.7 et Gemini 1.5 Pro. Les résultats variaient en longueur, détail et structure sur tous les trois modèles. Lorsque la même tâche a été réécrite à l\'aide des cinq blocs de construction ci-dessus, les trois modèles ont produit des réponses cohérentes et formatées correctement au premier essai.',
             'Cet effet de consensus — où les prompts structurés produisent un comportement identique entre différents modèles — est l\'idée centrale du prompt engineering. Les cinq blocs de construction fonctionnent parce qu\'ils exploitent la manière dont tous les principaux LLM traitent les instructions de manière identique.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Saviez-vous ? L\'effet de consensus',
+              text: 'Une amélioration de la cohérence de 92,5 % (37→40 sur 40) provient uniquement de la structure, pas des paramétrisations spécifiques aux modèles. Cela signifie qu\'un prompt bien conçu fonctionne sur tous les fournisseurs sans nécessiter de modifications.'
+            }
           ],
         },
 
@@ -794,6 +850,13 @@ export const article: Record<Language, PEArticle> = {
             '| RAG (Retrieval-Augmented Generation) | Ancrage dans les faits | Joindre des documents récents avant de faire une demande |',
             '| Persona-based | Styles de communication différents | « Explique comme si j\'avais 10 ans » |',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'Bonne pratique : Combiner les techniques',
+              text: 'Les prompts les plus efficaces utilisent 2–3 techniques ensemble. Par exemple : rôle (persona) + chain-of-thought (technique) + contraintes (format). Commencez par une technique, puis ajoutez les autres si la qualité de sortie se dégrade.'
+            }
+          ],
         },
 
         frameworks: {
@@ -809,6 +872,13 @@ export const article: Record<Language, PEArticle> = {
             { 'Framework': 'SPECS', 'Idéal pour': 'La recherche, l\'analyse et les sorties structurées basées sur les faits' },
             { 'Framework': 'CO-STAR', 'Idéal pour': 'Les tâches complexes nécessitant un contexte complet, un public défini et des instructions pas à pas' },
             { 'Framework': 'RISEN', 'Idéal pour': 'La rédaction pédagogique, le matériel de formation et le contenu éducatif' },
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Point clé : Framework vs technique',
+              text: 'Un framework est la structure (quels blocs remplir et dans quel ordre). Une technique est une méthode pour remplir ces blocs. Utilisez un framework pour organiser votre prompt ; utilisez des techniques pour affiner chaque section.'
+            }
           ],
         },
 
@@ -1028,6 +1098,13 @@ export const article: Record<Language, PEArticle> = {
             '同じAIモデルでも、質問の組み立て方によって出力は劇的に異なります。漠然としたプロンプトは漠然とした回答を返します。明確な目標・関連するコンテキスト・明示的な制約・指定された出力形式を持つ構造化されたプロンプトは、編集不要な結果を生み出します。',
             'プロンプトエンジニアリングの基礎を一貫して適用することで得られる主なメリットは以下のとおりです。',
           ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '曖昧なプロンプトはコストがかかる',
+              text: '構造化されていないプロンプトは、モデルに意図を推測させることになり、複数の試行・リトライ・手動でのフィルタリングが必要になります。これはAPI呼び出しを増やし、チームの時間を消費します。明確なプロンプトはトークン数・レイテンシ・校正の手間を削減します。'
+            }
+          ],
         },
 
         whyMattersList: {
@@ -1058,6 +1135,13 @@ export const article: Record<Language, PEArticle> = {
             '**出力形式：** 回答の構造の指定 — 箇条書き、JSONオブジェクト、Markdownテーブル、番号付きステップ、通常の段落',
             '**役割 / ペルソナ：** モデルが採用する専門知識や視点 — 「シニアデータアナリストとして行動する」や「簡潔なテクニカルライターです」など',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: '7つすべてが必要というわけではありません',
+              text: '3つの必須要素（目標・コンテキスト・出力形式）から始めてください。品質が不足している場合にのみ、他の要素（例・制約・役割）を追加します。コンパクトなプロンプトはトークン数が少なく、保守しやすいです。'
+            }
+          ],
         },
 
         techniques: {
@@ -1076,6 +1160,13 @@ export const article: Record<Language, PEArticle> = {
             '**RAG（検索拡張生成）：** 取得したドキュメントやデータをプロンプトのコンテキストに直接注入して、回答を実際のソースに根拠付ける → [Techniques: RAG Explained: How to Ground AI Answers in Real Data]',
             '**構造化出力 / JSONモード：** モデルが機械可読な出力（JSON、Markdownテーブル、CSVなど）を返すよう指示する — 下流処理に活用 → [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data]',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'ベストプラクティス：複数の技法を組み合わせる',
+              text: '最も効果的なプロンプトは2〜3つの技法を組み合わせて使用します。例えば、ペルソナ（役割）+ Chain-of-Thought（技法）+ 制約（形式）を組み合わせます。1つから始めて、品質が不足している場合のみ他の技法を追加してください。'
+            }
+          ],
         },
 
         frameworks: {
@@ -1091,6 +1182,13 @@ export const article: Record<Language, PEArticle> = {
             { 'フレームワーク': 'SPECS', '最適な用途': 'リサーチ・分析・構造化された事実に基づく出力' },
             { 'フレームワーク': 'CO-STAR', '最適な用途': '完全なコンテキスト・定義された対象者・ステップバイステップの指示が必要な複雑なタスク' },
             { 'フレームワーク': 'RISEN', '最適な用途': '教材・トレーニング素材・教育コンテンツの作成' },
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: '重要なポイント：フレームワークと技法',
+              text: 'フレームワークは構造（どのブロックを埋めるか、どの順序か）です。技法はそれらのブロックを埋める方法です。フレームワークを使ってプロンプトを整理し、技法を使って各セクションを洗練させます。'
+            }
           ],
         },
 
