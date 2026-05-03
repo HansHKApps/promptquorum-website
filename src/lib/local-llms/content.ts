@@ -83861,6 +83861,7 @@ schema: {
             '**速度への影響：** Q2はメモリ帯域幅削減によりQ4より約30%速い（計算ではない）。',
             '戦略：小型モデル（TinyLlama）より大型モデルを量子化（Mistral 7B Q2）。',
             'Mistral 7B Q2 > TinyLlama 1.1B Q4（速度・品質ともに）。',
+            '高速モデルは品質と引き換えに速度を得ていますが、温度とtop-pを調整することで多くの品質を回復できます。高速モデルに低い温度（0.1～0.3）を設定することで、デフォルト設定より一貫性のある出力が得られます。[温度とtop-pについて](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)で正確な設定を確認してください。',
           ],
         },
         'cpu-tricks': {
@@ -84215,6 +84216,7 @@ schema: {
             '**速度影响：** Q2比Q4快约30%，因为内存带宽更少，而非计算量减少。',
             '策略：对大模型量化（Mistral 7B Q2）优于使用小模型（TinyLlama）。',
             'Mistral 7B Q2在速度和质量上均优于TinyLlama 1.1B Q4。',
+            '快速模型以牺牲质量来换取速度——但通过调整温度和top-p，您可以恢复大部分质量。在快速模型上使用较低的温度（0.1-0.3）会产生比默认设置更一致的输出。参阅[温度和top-p解析](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)了解确切设置。',
           ],
         },
         'cpu-tricks': {
