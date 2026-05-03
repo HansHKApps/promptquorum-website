@@ -42961,8 +42961,7 @@ schema: {
           { '@type': 'Thing', name: 'GPUメモリ' },
           { '@type': 'Thing', name: 'Llamaモデル' },
           { '@type': 'Thing', name: '量子化' }
-        ,
-            'Votre VRAM limite la taille du modèle, mais ce n'est pas la seule limite de la qualité. De plus grandes fenêtres de contexte permettent de meilleures réponses : [fenêtres de contexte expliquées](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) couvre comment fonctionner dans les contraintes.'],
+        ],
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways']
