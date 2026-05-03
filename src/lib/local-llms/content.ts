@@ -1774,7 +1774,7 @@ schema: {
             '[Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr) -- Outils alternatifs à Ollama',
             '[Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Alternative GUI pour les débutants',
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Comparaison détaillée des approches CLI vs GUI',
-            'Ollama est maintenant installé et prêt. Le défi suivant : écrire des invites qui donnent de bons résultats. Commencez ici : [qu'est-ce que le prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) couvre les fondamentaux en langage simple.',
+            'Ollama est maintenant installé et prêt. Le défi suivant : écrire des invites qui donnent de bons résultats. Commencez ici : [qu\'est-ce que le prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) couvre les fondamentaux en langage simple.',
           ],
         },
         faq: {
