@@ -32380,6 +32380,7 @@ schema: {
             '**LM Studio API**: Auch OpenAI-kompatibel (Port 1234 oder anders konfigurierbar). Stand April 2026 ist die API noch in Beta und nicht produktionsreif. Verwenden Sie Ollama für produktionskrische API-abhängige Arbeitslasten.',
             '**Integrationen**: Beide unterstützen RAG (Retrieval-Augmented Generation), LangChain, LlamaIndex und andere Framework. Ollama ist bei RAG-Deployments häufiger, weil die API stabiler ist.',
             'Sowohl Ollama als auch LM Studio können auch als Prompt-Entwicklungsumgebungen dienen. Für einen breiteren Vergleich mit Cursor, VS Code + Continue und Cloud-Playgrounds: [beste Prompt-Engineering-IDEs und Editoren](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides).',
+            'Beide Tools führen die gleichen Modelle aus — der Unterschied in der Ausgabequalität ergibt sich aus Ihrer Prompt-Gestaltung. Für 80 Techniken zu Prompt-Engineering-Grundlagen, Frameworks und Evaluierung siehe den [Prompt-Engineering-Leitfaden](https://www.promptquorum.com/prompt-engineering).',
           ],
         },
         whenOllama: {
@@ -32660,6 +32661,7 @@ schema: {
             '**API LM Studio** : Aussi compatible OpenAI (port 1234 ou configurable autrement). Depuis avril 2026, l\'API est encore en bêta et non recommandée pour la production. Utilisez Ollama pour les charges de travail sensibles en production.',
             '**Intégrations** : Les deux supportent RAG (Retrieval-Augmented Generation), LangChain, LlamaIndex et d\'autres frameworks. Ollama est plus courant dans les déploiements RAG parce que l\'API est plus stable.',
             'Ollama et LM Studio peuvent également servir d\'environnements de développement de prompts. Pour une comparaison plus large incluant Cursor, VS Code + Continue et les playgrounds cloud, voir [meilleures IDEs et éditeurs pour le prompt engineering](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides).',
+            'Les deux outils exécutent les mêmes modèles — la différence de qualité de sortie provient de la manière dont vous les invitez. Pour 80 techniques couvrant les fondamentaux du prompt engineering, les frameworks et l\'évaluation, consultez le [guide du prompt engineering](https://www.promptquorum.com/prompt-engineering).',
           ],
         },
         whenOllama: {
@@ -32930,6 +32932,7 @@ schema: {
             '**LM Studio API**: OpenAI 互換 (ポート 1234 またはカスタム)。2026 年 4 月時点でベータ、本番環境非推奨。本番 API 依存の負荷は Ollama 使用。',
             '**統合**: 両者 RAG (検索拡張生成)、LangChain、LlamaIndex 対応。Ollama は RAG デプロイで広く使用、API 安定性高。',
             'OllamaとLM Studioはどちらもプロンプト開発環境としても活用できます。Cursor・VS Code + Continue・クラウドプレイグラウンドを含む広範な比較については[プロンプトエンジニアリング向け最良IDEとエディタ](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides)をご覧ください。',
+            'どちらのツールも同じモデルを実行します — 出力品質の違いはプロンプト作成方法に由来します。プロンプトエンジニアリングの基礎、フレームワーク、評価をカバーする80の技法については、[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)を参照してください。',
           ],
         },
         whenOllama: {
@@ -33200,6 +33203,7 @@ schema: {
             '**LM Studio API**: 也是 OpenAI 兼容 (端口 1234 或可配置)。截至 2026 年 4 月，API 仍处于测试版，不建议用于生产。对于生产 API 相关的工作负载，请使用 Ollama。',
             '**集成**: 两者都支持 RAG (检索增强生成)、LangChain、LlamaIndex 等框架。Ollama 在 RAG 部署中更常见，因为其 API 更稳定。',
             'Ollama和LM Studio也都可以作为提示词开发环境使用。要了解包括Cursor、VS Code + Continue和云端Playground在内的更广泛比较，请参阅[最佳Prompt工程IDE和编辑器](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides)。',
+            '两种工具运行相同的模型——输出质量的差异来自您如何提示它们。有关涵盖提示词工程基础、框架和评估的80种技术，请参阅[提示词工程指南](https://www.promptquorum.com/prompt-engineering)。',
           ],
         },
         whenOllama: {
@@ -37227,6 +37231,7 @@ schema: {
             '**Oui, depuis avril 2026, les appels de fonctions fonctionnent avec les modèles locaux via l\'API OpenAI.** Vous définissez un schéma de fonction et le modèle peut répondre avec des arguments. Cela permet aux [Meilleurs LLM locaux pour le code](/local-llms/best-local-llms-for-coding?lang=fr) de s\'intégrer à votre écosystème d\'outils.',
             'La prise en charge des appels de fonctions dépend du modèle. Llama 3.1 8B, Qwen2.5 7B et la plupart des modèles récents la supportent. Les modèles plus petits (3B) peuvent ne pas l\'utiliser de manière fiable.',
             'Lors de l\'utilisation d\'API compatibles OpenAI localement, les sorties structurées et le mode JSON fonctionnent de la même manière qu\'avec les API cloud. Pour contrôler la conformité des schémas et le format sur les modèles locaux et cloud, consultez [sorties structurées et mode JSON](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode?lang=fr).',
+            'Les APIs compatibles avec OpenAI acceptent les mêmes formats de prompt que les versions cloud — messages système, messages utilisateur et sortie structurée. La bibliothèque complète des [techniques de prompt engineering](https://www.promptquorum.com/prompt-engineering) s\'applique directement aux appels d\'API locaux.',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -37521,6 +37526,7 @@ schema: {
             '**はい、2026年4月現在、Function CallingがOpenAI APIを通じてローカルモデルで動作します。** 関数スキーマを定義すると、モデルはその関数に渡す引数でレスポンスを返せます。これにより[コーディング向けベストローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja)をツールエコシステムと統合できます。',
             'Function Callingのサポートはモデルによります。Llama 3.1 8B、Qwen2.5 7B、最新の多くのモデルがサポートしています。小さいモデル（3B）は信頼性が低い場合があります。',
             'ローカルでOpenAI互換APIを使用する場合、構造化出力とJSONモードはクラウドAPIと同じように機能します。ローカルおよびクラウドモデル全体のスキーマ準拠とフォーマット制御については、[構造化出力とJSONモード](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode?lang=ja)をご覧ください。',
+            'OpenAI互換APIはクラウド版と同じプロンプト形式を受け入れます — システムメッセージ、ユーザーメッセージ、構造化出力。[プロンプトエンジニアリング技法](https://www.promptquorum.com/prompt-engineering)の完全なライブラリがローカルAPI呼び出しに直接適用されます。',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -37779,6 +37785,7 @@ schema: {
             '**是的，截至2026年4月，函数调用通过OpenAI API在本地模型上可用。** 您定义函数schema，模型可以返回传递给函数的参数。这使[最佳本地LLM编程助手](/local-llms/best-local-llms-for-coding?lang=zh)能够集成到您的工具生态系统中。',
             '函数调用支持取决于模型。Llama 3.1 8B、Qwen2.5 7B和大多数近期模型支持它。较小的模型（3B）可能不可靠。',
             '在本地使用OpenAI兼容API时，结构化输出和JSON模式的工作方式与云端API相同。关于在本地和云模型中强制执行schema合规性和格式控制，请参阅[结构化输出和JSON模式](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode?lang=zh)。',
+            '与OpenAI兼容的API接受与云版本相同的提示词格式——系统消息、用户消息和结构化输出。完整的[提示词工程技术](https://www.promptquorum.com/prompt-engineering)库直接适用于本地API调用。',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -72425,6 +72432,7 @@ schema: {
             '**Upgrade-Pfad:** Begrenzt. GPU-Tausch kann Gehäusemodifikation erfordern. RAM meist nachrüstbar.',
             '**Multi-GPU:** Unmöglich in Mini-ITX. Kein Platz für eine zweite dedizierte Grafikkarte.',
             '**Langlebigkeit:** Mini-PC-Gehäuse für Bürolas ten ausgelegt, nicht für 24/7-Inferenz. Staubfilter jährlich reinigen.',
+            'Mini-PC-Hardware limitiert die Modellgröße, aber die Modellgröße ist nicht die einzige Einschränkung. Selbst die größten Modelle haben grundlegende Einschränkungen — Halluzinationen, Reasoning-Fehler und Wissenslücken. Siehe [was LLMs nicht können](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do) für das vollständige Bild.',
           ],
         },
         regionalContext: {
@@ -72689,7 +72697,8 @@ schema: {
             '**Taille de modèle maximale (traditionnel) :** 13B confortablement. 70B nécessite un déchargement CPU avec une pénalité de 3–5× en vitesse.',
             '**Évolutivité :** Limitée. L’échange de GPU peut nécessiter une modification du boîtier. RAM généralement évolutive.',
             '**Multi-GPU :** Impossible en Mini-ITX. Pas de place pour une deuxième carte discrète.',
-            '**Longévité :** Les boîtiers Mini PC sont conçus pour des charges de bureau, pas pour une inférence 24/7. Nettoyer les filtres à poussière chaque année.',
+            '**Longévité :** Les boîtiers Mini PC sont conçus pour des charges de bureau, pas pour une inférence 24/7. Nettoyer les filtres à poussière chaque année.',,
+            'Le matériel des mini PC contraint la taille du modèle, mais la taille du modèle n\'est pas la seule limite. Même les plus grands modèles ont des limitations fondamentales — hallucinations, défaillances du raisonnement et lacunes de connaissances. Consultez [ce que les LLM ne peuvent pas faire](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do) pour une vue complète.'
           ],
         },
         regionalContext: {
