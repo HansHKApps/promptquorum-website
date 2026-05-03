@@ -1580,10 +1580,308 @@ export const article: Record<Language, PEArticle> = {
   zh: {
     freshness_tier: 'evergreen',
     theme: 'Techniques',
-    title: '人物角色提示',
-    intro: '',
+    title: '人物角色提示：引导AI表现出一致的专家行为',
+    intro: '人物角色提示是一种定义明确的角色、世界观和行为的做法，使AI模型在多个提示和会话中能够像特定专家或角色一样一致地回答问题。',
+    seoTitle: '人物角色提示：释放AI专家行为的一致性',
+    metaDescription: '掌握人物角色提示，无需微调即可实现稳定可靠的AI专家。学习7个基本构成要素、实践模板和跨模型测试策略。',
     publishDate: '2026-03-26',
+    dateModified: '2026-05-03',
     readTime: '阅读约13分钟',
-    sections: {},
+    educationalLevel: 'Intermediate',
+    audience: '构建AI应用的软件工程师、产品经理、大规模部署AI助手的团队',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=zh',
+      'inLanguage': 'zh',
+      headline: '人物角色提示：引导AI表现出一致的专家行为',
+      description: '人物角色提示是什么、为什么重要、7个核心构成要素、实践例子以及如何跨多个AI模型测试人物角色。',
+      datePublished: '2026-03-26',
+      dateModified: '2026-05-03',
+      keywords: ['人物角色提示', '提示工程', 'AI行为', '基于角色的提示', 'PromptQuorum'],
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: '提示工程' },
+        { '@type': 'Thing', name: '大型语言模型' },
+        { '@type': 'Thing', name: '人物角色设计' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'zh',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '人物角色提示应该多长？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '最有效的人物角色是200～600个代币。从包含角色、领域、目标和1～2个约束的200～300个代币开始。如果复杂度需要，可以添加例子和不确定性处理。超过1000个代币的人物角色往往会让模型感到困惑；保持简洁和可测试。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '人物角色提示是否适用于所有模型？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '它适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、Mistral Large以及LLaMA 3.1和Qwen 2.5等本地模型。然而，不同的模型遵循人物角色的方式不同：GPT-5.5优先考虑约束，Claude提出澄清问题，Gemini生成密集的摘要。在多个模型上测试你的人物角色。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '我可以将人物角色与微调模型一起使用吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '可以。人物角色充当微调模型的文本层。微调模型已经编码了领域知识和风格；人物角色提示可以为特定任务精化或重定向该行为。两者相辅相成。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '我如何测试人物角色是否有效？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '使用PromptQuorum进行测试：使用你的人物角色将相同的任务发送给GPT-5.5、Claude和Gemini。计算模型违反规则的次数（例如，超过代币限制、使用营销语言、提供个人建议）。根据失败情况改进人物角色。重复10～20次。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '如果人物角色与用户的任务指示冲突怎么办？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '任务指示通常会优先。如果人物角色说"最多3句"但用户要求1000个单词，模型通常会遵循用户的明确请求。为了避免这种情况，使人物角色灵活：「除非任务明确要求另外说明，否则每段力求3句。」',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '人物角色能帮助减少幻觉吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '部分有效。一个说「引用来源，当信心<80%时承认不确定性，给假设贴标签」的人物角色通过给模型明确的规则来减少幻觉。然而，人物角色无法克服模型的基本概率性质。结合RAG或事实检查以获得最大可靠性。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '人物角色对非英语语言有效吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '有效，但有注意事项。GPT-5.5和Claude等模型能很好地处理德语、法语、日语和中文的人物角色，但性能会有所不同。在目标语言中测试人物角色；某些模型（如Qwen 2.5）针对特定语言进行了优化，能更可靠地遵循本地化人物角色。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '我如何与团队共享和版本控制人物角色？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '将人物角色存储在共享文档（Markdown、JSON或PromptQuorum库）中，带有版本历史。例如：「v2.1：高级云架构师—添加了零信任约束，移除了推测性声明规则。」对约束和理由变更进行版本控制。追踪在哪个模型上测试了哪个人物角色版本。',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'zh',
+      numberOfItems: 5,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '人物角色提示',
+          description: '仅更改输入文本；适用于所有供应商；几秒内可逆；最适合多域角色和测试。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: '微调',
+          description: '改变模型权重；供应商特定；变更需要重新训练；最适合专业化、专有风格。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: '系统提示',
+          description: 'API级配置；供应商特定；范围有限；最适合应用于所有请求的全局规则。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'RAG（检索增强生成）',
+          description: '模型无关的检索层；需要基础设施；最适合事实基础和知识密集型任务。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: '系统提示 + 人物角色',
+          description: '结合系统级规则和任务特定的人物角色；混合方法；最适合需要治理和灵活性的企业。',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: '核心要点',
+        id: 'key-takeaways',
+        items: [
+          '人物角色提示是一种基于文本的技术，赋予AI模型特定的角色、风格、约束。无需微调，适用于多个模型。',
+          '人物角色提高了模型输出的一致性。定义「高级工程师」、「律师」或「营销人员」等角色会使模型从该视角进行回应。',
+          '最优的人物角色约为200～600个代币。从角色、领域、目标和约束开始，然后测试和改进。',
+          '适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、LLaMA 3.1和Qwen 2.5。在模型间测试，找到最佳人物角色格式。',
+          '人物角色不是微调的替代品，而是补充。两者结合可以构建更强大、更灵活的AI系统。',
+          '使用PromptQuorum跨模型对人物角色进行A/B测试。在多个模型上执行相同任务，比较人物角色遵守率。',
+          '人物角色提示成本低，可在整个AI开发团队部署，并可在几秒内迭代。',
+        ],
+      },
+      whatIsPersonaPrompting: {
+        id: 'what-is-persona-prompting',
+        title: '什么是人物角色提示',
+        content: '人物角色提示是一种基于文本的技术，赋予AI模型特定的角色、风格、行为模式和约束。只需在系统提示内（或提示开头）告诉模型「你是一名高级云架构师」，它就会从该视角一致地做出回应。与微调不同，人物角色提示不改变模型本身。它仅通过输入文本来塑造模型的输出。',
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: '人物角色提示是通过文本赋予AI特定角色来引发一致回应的技术。',
+          },
+          {
+            type: 'in-plain-terms',
+            text: '就像演员扮演不同角色一样，通过告诉AI「你是这位专家」来使其从该专家的角度回应。',
+          },
+        ],
+      },
+      whyItMatters: {
+        id: 'why-it-matters',
+        title: '为什么重要',
+        content: '人物角色提示是在多个任务和会话中保持AI行为一致的最简单、最高效的方法。微调成本高昂且耗时，但人物角色可在几分钟内设计、测试和更新。对于构建AI助手、客户服务机器人、内部工具或教育平台的团队，人物角色提示提供了可扩展性、可维护性和可测试性。',
+      },
+      buildingBlocks: {
+        id: 'building-blocks',
+        title: '人物角色的7个基本构成要素',
+        content: '每个人物角色都需要这7个核心要素：',
+        numberedItems: [
+          { title: '角色（Role）', whyItMatters: "定义模型应扮演的职业或职位。例：「高级工程师」、「律师」、「医生」。" },
+          { title: '领域（Domain）', whyItMatters: "与该角色相关的专业领域或行业。例：「云基础设施」、「公司法」、「肿瘤学」。" },
+          { title: '目标（Goals）', whyItMatters: "定义人物角色应达成的目标。例：「识别安全风险」、「用简洁方式解释复杂概念」。" },
+          { title: '约束（Constraints）', whyItMatters: "应遵守的限制或禁止。例：「避免营销术语」、「回复不超过200代币」、「避免猜测」。" },
+          { title: '示例（Examples）', whyItMatters: "展示人物角色的预期行为。几个示例足够，多个示例可使模型更精确地遵循。" },
+          { title: '不确定性处理（Uncertainty Handling）', whyItMatters: "定义人物角色如何处理低信心回复。例：「信心<80%时标记为'需要验证'」。" },
+          { title: '输出格式（Output Format）', whyItMatters: "指定预期格式：JSON、列表、段落等。清晰的格式规范提高了模型的一致性。" },
+        ],
+      },
+      practicalExample: {
+        id: 'practical-example',
+        title: '实践例子：高级云架构师人物角色',
+        content: '这是实际人物角色提示的例子：',
+        codeBlock: `You are a Senior Cloud Architect at a Fortune 500 company. Your expertise spans AWS, Azure, GCP, and hybrid architectures. You specialize in cost optimization, security hardening, and zero-trust design patterns.
+
+**Goals:**
+- Identify security risks in proposed infrastructure
+- Recommend cost-reduction strategies
+- Ensure compliance with SOC 2 and ISO 27001
+
+**Constraints:**
+- Cite concrete AWS/Azure/GCP services, not generic concepts
+- If confidence < 80%, state "This requires verification in your environment"
+- Do not recommend bleeding-edge services; stick to proven, 2+ years in production
+- Respond in 300–500 tokens
+
+**Example response tone:**
+"Your RDS instance lacks Multi-AZ failover. I'd recommend enabling it immediately for production. Cost is ~15% higher, but downtime risk drops from hours to minutes. Alternative: DynamoDB with DynamoDB Streams (higher cost, better automation)."`,
+        codeLanguage: 'text',
+      },
+      howToBuild: {
+        id: 'how-to-build-persona',
+        title: '如何构建人物角色',
+        numberedItems: [
+          '清晰地定义角色。「高级」和「初级」差异很大。',
+          '指定领域和专业知识。目标是「云安全工程师」而非笼统的「工程师」。',
+          '明确写出具体目标。不要只说「提供好建议」，要说「在X分钟内识别风险」。',
+          '严格制定约束。包括语言使用、长度、格式和确定性标准。',
+          '包含3～5个模型应如何回应的例子。',
+          '用测试提示进行验证。使用PromptQuorum跨多个模型测试你的人物角色。',
+          '根据失败进行改进。约束不清晰时，模型倾向于违反规则。',
+        ],
+      },
+      vsFineTuning: {
+        id: 'persona-vs-fine-tuning',
+        title: '人物角色提示 vs 微调',
+        content: '人物角色和微调经常被比较。主要区别如下：\n\n**人物角色提示：** 基于文本、可逆、可在几分钟内更新、适用于所有模型、成本低。但对于复杂的专业风格编码有限制。\n\n**微调：** 改变模型权重，可编码更深层、更复杂的行为模式。但成本高、耗时、供应商特定、验证和回滚困难。',
+        tableFormat: true,
+        columns: ['维度', '人物角色提示', '微调'],
+        rows: [
+          { '维度': '成本', '人物角色提示': '免费～低成本', '微调': '数百～数千美元' },
+          { '维度': '设置时间', '人物角色提示': '数分钟～数小时', '微调': '数天～数周' },
+          { '维度': '供应商依赖', '人物角色提示': '适用于所有模型', '微调': '供应商特定' },
+          { '维度': '可更新性', '人物角色提示': '实时', '微调': '需要重新训练' },
+          { '维度': '编码深度', '人物角色提示': '文本层面', '微调': '模型权重层面' },
+          { '维度': '最优用途', '人物角色提示': '多样角色、测试重点', '微调': '单一专业风格、生产环境' },
+        ],
+      },
+      enterpriseContext: {
+        id: 'enterprise-context',
+        title: '企业部署与监管',
+        content: '对于在金融服务、医疗和法律部门工作的组织，人物角色应包含「合规模式」。例如，金融机构可定义「你是经过审计的风险评估员。所有建议都需独立验证」的人物角色。医疗提供者可规定「你是医疗筛查助手。你不进行诊断。始终建议患者看医生」。这些约束减轻了法律责任并确保监管合规。大型企业（银行、医院、律师事务所）应将人物角色纳入其AI治理框架，将角色版本与模型测试结果绑定。',
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 人物角色提示的基础概念',
+          '[链式思维（Chain-of-Thought）提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 逐步推理技术',
+          '[少样本提示](/prompt-engineering/few-shot-prompting?lang=zh) — 如何在人物角色中包含示例',
+          '[提示注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 人物角色和安全考虑',
+          '[GPT、Claude、Gemini：选择正确的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — 模型间人物角色遵守差异',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        isTldr: false,
+        faqs: [
+          {
+            q: '人物角色提示应该多长？',
+            a: '最有效的人物角色是200～600个代币。从包含角色、领域、目标和1～2个约束的200～300个代币开始。如果复杂度需要，可以添加例子和不确定性处理。超过1000个代币的人物角色往往会让模型感到困惑；保持简洁和可测试。',
+          },
+          {
+            q: '人物角色提示是否适用于所有模型？',
+            a: '它适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、Mistral Large以及LLaMA 3.1和Qwen 2.5等本地模型。然而，不同的模型遵循人物角色的方式不同：GPT-5.5优先考虑约束，Claude提出澄清问题，Gemini生成密集的摘要。在多个模型上测试你的人物角色。',
+          },
+          {
+            q: '我可以将人物角色与微调模型一起使用吗？',
+            a: '可以。人物角色充当微调模型的文本层。微调模型已经编码了领域知识和风格；人物角色提示可以为特定任务精化或重定向该行为。两者相辅相成。',
+          },
+          {
+            q: '我如何测试人物角色是否有效？',
+            a: '使用PromptQuorum进行测试：使用你的人物角色将相同的任务发送给GPT-5.5、Claude和Gemini。计算模型违反规则的次数（例如，超过代币限制、使用营销语言、提供个人建议）。根据失败情况改进人物角色。重复10～20次。',
+          },
+          {
+            q: '如果人物角色与用户的任务指示冲突怎么办？',
+            a: '任务指示通常会优先。如果人物角色说「最多3句」但用户要求1000个单词，模型通常会遵循用户的明确请求。为了避免这种情况，使人物角色灵活：「除非任务明确要求另外说明，否则每段力求3句。」',
+          },
+          {
+            q: '人物角色能帮助减少幻觉吗？',
+            a: '部分有效。一个说「引用来源，当信心<80%时承认不确定性，给假设贴标签」的人物角色通过给模型明确的规则来减少幻觉。然而，人物角色无法克服模型的基本概率性质。结合RAG或事实检查以获得最大可靠性。',
+          },
+          {
+            q: '人物角色对非英语语言有效吗？',
+            a: '有效，但有注意事项。GPT-5.5和Claude等模型能很好地处理德语、法语、日语和中文的人物角色，但性能会有所不同。在目标语言中测试人物角色；某些模型（如Qwen 2.5）针对特定语言进行了优化，能更可靠地遵循本地化人物角色。',
+          },
+          {
+            q: '我如何与团队共享和版本控制人物角色？',
+            a: '将人物角色存储在共享文档（Markdown、JSON或PromptQuorum库）中，带有版本历史。例如：「v2.1：高级云架构师—添加了零信任约束，移除了推测性声明规则。」对约束和理由变更进行版本控制。追踪在哪个模型上测试了哪个人物角色版本。',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考资料',
+        items: [
+          'Brown et al. (2020). "In-Context Learning in Large Language Models." OpenAI. https://arxiv.org/abs/2005.14165',
+          'Wei et al. (2021). "Finetuned Language Models are Zero-Shot Learners." Google. https://arxiv.org/abs/2109.01652',
+          'Kojima et al. (2023). "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916',
+          'Anthropic. (2026). "Prompt Engineering Guide." https://www.anthropic.com/research',
+          'OpenAI. (2026). "Best Practices for Prompt Engineering." https://platform.openai.com/docs/guides/prompt-engineering',
+          'PromptQuorum. (2026). "Multi-Model Prompt Testing." https://www.promptquorum.com',
+        ],
+      },
+    },
   },
 };
