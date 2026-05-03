@@ -44322,8 +44322,8 @@ schema: {
             '[Spécifications GPU NVIDIA](https://www.nvidia.com/en-us/geforce/) — Spécifications GPU série RTX 40/50, VRAM, bande passante mémoire.',
             '[Performance Apple M3](https://www.apple.com/mac/m3/) — Architecture mémoire unifiée M5 Max et performances d\'inférence.',
             '[Benchmarks vLLM](https://github.com/vllm-project/vllm/tree/main/benchmarks) — Benchmarks de débit d\'inférence LLM production.',
-          ,
-            'Différents matériels produisent différentes vitesses de tokens, mais toute inférence bénéficie d'un meilleur prompting. Pour les techniques d'amélioration avec le matériel que vous avez : [fenêtres de contexte expliquées](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) enseigne comment structurer les entrées dans les limites mémoire.'],
+            'Différents matériels produisent différentes vitesses de tokens, mais toute inférence bénéficie d\'un meilleur prompting. Pour les techniques d\'amélioration avec le matériel que vous avez : [fenêtres de contexte expliquées](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) enseigne comment structurer les entrées dans les limites mémoire.',
+          ],
         },
       },
 schema: {
