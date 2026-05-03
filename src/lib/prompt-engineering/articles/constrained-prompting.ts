@@ -16,9 +16,9 @@ export const article: Record<Language, PEArticle> = {
       publishDate: '2026-03-26',
       readTime: '6 min read',
 
-      seoTitle: 'Constrained Prompting: Force AI Output Formats (2026)',
+      seoTitle: 'Constrained Prompting: Structured AI Outputs',
 
-      metaDescription: 'Force AI output into JSON, XML, or structured tables. 5 constraint types for GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro with real examples.',
+      metaDescription: 'Master constrained prompting to force AI into JSON, XML, and structured formats. 5 techniques with real-world examples for GPT-5.5, Claude, and Gemini.',
 
       educationalLevel: 'Intermediate',
       primaryTerm: 'Constrained Prompting',
@@ -47,7 +47,7 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/constrained-prompting',
+        url: 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=en',
         inLanguage: 'en',
         headline: 'Constrained Prompting: Force AI Output Formats (2026)',
         description: 'What constrained prompting is, why it matters, and how to use it to make AI outputs predictable and safe in real workflows.',
@@ -351,7 +351,7 @@ export const article: Record<Language, PEArticle> = {
       leadAnswerBlock: '**Constrained Prompting ist die Praxis, explizite Regeln – Format, Länge, Inhalt und Sicherheitsgrenzen – direkt in einen Prompt zu integrieren, um KI-Ausgaben vorhersehbar und wiederverwendbar zu machen.** Statt „schreibe eine Zusammenfassung" geben Sie vor: 150 Wörter, JSON-Format, keine Konkurrenten-Namen, muss einen Call-to-Action enthalten.',
       publishDate: '2026-03-26',
       readTime: '6 Min. Lesezeit',
-      seoTitle: 'Constrained Prompting: KI-Ausgaben strukturieren (2026)',
+      seoTitle: 'Constrained Prompting: KI-Ausgaben strukturieren',
       metaDescription: 'Constrained Prompting für strukturierte KI-Ausgaben. Wie Sie Regeln, Formate und Inhaltsrichtlinien direkt im Prompt definieren. Für GPT-5.5, Claude Sonnet 4.6 und Gemini 3.1 Pro.',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Constrained Prompting',
@@ -677,7 +677,7 @@ export const article: Record<Language, PEArticle> = {
   leadAnswerBlock: '**Le prompting avec contraintes est la pratique d\'ajouter des règles explicites — format, longueur, contenu et limites de sécurité — directement dans un prompt pour rendre les outputs IA prévisibles et réutilisables.** Au lieu de « rédige un résumé », vous spécifiez : 150 mots, format JSON, pas de noms concurrents, doit inclure un appel à l\'action.',
   publishDate: '2026-03-26',
   readTime: '6 min de lecture',
-  seoTitle: 'Prompting avec Contraintes 2026: Structures Fiables pour LLM',
+  seoTitle: 'Prompting avec Contraintes: Structures Fiables',
   metaDescription: 'Prompting avec contraintes pour outputs LLM prévisibles. Formats stricts, validation de schémas JSON, API-level enforcement avec GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro.',
   educationalLevel: 'Intermediate',
   primaryTerm: 'Prompting avec contraintes',
@@ -996,9 +996,9 @@ export const article: Record<Language, PEArticle> = {
   ja: {
   theme: 'プロンプティング技法',
   title: '制約付きプロンプティング：完全ガイド',
-  seoTitle: '制約付きプロンプティング：完全ガイド 2026',
+  seoTitle: '制約付きプロンプティング：構造化AIの完全ガイド',
   intro: '制約付きプロンプティングとは、LLMに厳格なルールを強制する技法です。特定の出力形式、長さの制限、事前定義されたスキーマの遵守を指示します。本番環境で信頼性が高く、再現可能な結果を得たいときに有効です。',
-  metaDescription: 'LLMの信頼性を高める制約付きプロンプティングを学びます。厳格なフォーマット、アウトプット検証、PromptQuorumを使った高度な技法。',
+  metaDescription: '制約付きプロンプティングでLLM出力を制御。JSONフォーマット強制、スキーマ検証、本番環境での信頼性確保。GPT-5.5、Claude、Geminiに対応。',
   leadAnswerBlock: '制約付きプロンプティングは、LLMが特定の形式・内容・長さで応答するよう強制する技法です。JSONスキーマを指定することで、解析可能で予測可能な出力を保証し、本番環境での信頼性と再現性を大幅に向上させます。金融、医療、法務などの規制環境でも安全性が確保でき、データ抽出や分類タスクを自動化するのに最適な方法です。',
   publishDate: '2026-01-20',
   dateModified: '2026-04-28',
@@ -1492,9 +1492,9 @@ export const article: Record<Language, PEArticle> = {
     zh: {
   theme: '提示工程技术',
   title: '受限提示：完整指南',
-  seoTitle: '受限提示2026：LLM输出结构化与安全指南',
+  seoTitle: '受限提示：结构化输出完整指南',
   intro: '受限提示强制LLM遵守严格规则：特定输出格式、长度限制或预定义架构遵守。在生产环境中需要可靠、可重现的结果时至关重要。',
-  metaDescription: '学习如何使用受限提示确保LLM输出的可靠性和安全性。JSON格式强制、架构验证、企业级合规。API级别约束与生产环境最佳实践。',
+  metaDescription: '学习受限提示强制LLM输出为JSON、XML等结构化格式。5种约束技术、API级别强制、生产环境实例。适配GPT-5.5、Claude、Gemini。',
   leadAnswerBlock: '受限提示是强制LLM生成符合特定结构、格式和内容要求的响应的技术。通过指定JSON架构、枚举值或长度限制，你可以确保每次输出都是有效的、可解析的、符合预期的。这在金融、医疗和法律等受管制行业尤为关键，可确保合规性、数据安全和生产工作流的可靠性。',
   publishDate: '2026-01-20',
   dateModified: '2026-05-03',
