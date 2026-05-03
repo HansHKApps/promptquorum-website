@@ -1492,13 +1492,14 @@ export const article: Record<Language, PEArticle> = {
     zh: {
   theme: '提示工程技术',
   title: '受限提示：完整指南',
-  seoTitle: '受限提示：完整指南 2026',
+  seoTitle: '受限提示2026：LLM输出结构化与安全指南',
   intro: '受限提示强制LLM遵守严格规则：特定输出格式、长度限制或预定义架构遵守。在生产环境中需要可靠、可重现的结果时至关重要。',
-  metaDescription: '学习受限提示提升LLM可靠性。严格格式、输出验证、PromptQuorum高级技术。',
+  metaDescription: '学习如何使用受限提示确保LLM输出的可靠性和安全性。JSON格式强制、架构验证、企业级合规。API级别约束与生产环境最佳实践。',
+  leadAnswerBlock: '受限提示是强制LLM生成符合特定结构、格式和内容要求的响应的技术。通过指定JSON架构、枚举值或长度限制，你可以确保每次输出都是有效的、可解析的、符合预期的。这在金融、医疗和法律等受管制行业尤为关键，可确保合规性、数据安全和生产工作流的可靠性。',
   publishDate: '2026-01-20',
-  dateModified: '2026-04-28',
-  lastFactChecked: '2026-04-28',
-  readTime: '阅读约6分钟',
+  dateModified: '2026-05-03',
+  lastFactChecked: '2026-05-03',
+  readTime: '阅读约7分钟',
   freshness_tier: 'semi_annual',
   next_refresh_due: '2026-09-26',
   educationalLevel: 'Advanced',
@@ -1517,6 +1518,17 @@ export const article: Record<Language, PEArticle> = {
         'PromptQuorum等工具支持大规模测试和验证约束遵守',
         '常见错误：约束模糊、规则过度堆积、缺少边界情况测试',
         '生产环例：数据提取、意图分类、验证内容生成、自动化支持'
+      ]
+    },
+    quickFacts: {
+      title: '快速事实',
+      numberedItems: [
+        '约束类型：格式（JSON/XML）、枚举（限制值）、长度限制、嵌套架构、语义约束',
+        '模型支持：GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral 均支持约束。支持程度各异',
+        '最佳实践：系统提示放一般约束。用户提示放上下文特定约束',
+        'JSON一致性：设计良好的约束保证每次执行返回有效、符合架构的JSON',
+        '测试方法：单模型测试5次。跨模型验证。测试边界情况（空列表、Unicode）',
+        '部署时间：基础约束5分钟。生产级验证套件30分钟'
       ]
     },
     whatIsConstrained: {
@@ -1646,6 +1658,31 @@ export const article: Record<Language, PEArticle> = {
         }
       ]
     },
+    apiLevelEnforcement: {
+      title: 'API级别的约束强制',
+      content: '许多LLM API提供商除了提示级约束外，还支持API级约束强制。这些在提供商系统层验证架构遵守，拒绝无效响应。',
+      items: [
+        '**OpenAI：函数调用和结构化输出**：定义JSON Schema。模型生成符合架构的结构化输出。无效响应在函数调用层被拒绝。https://platform.openai.com/docs/guides/function-calling',
+        '**Anthropic Claude：约束输出**：用JSON Schema或XML标签指定格式。模型绝不偏离指定格式。https://docs.anthropic.com',
+        '**Google Generative AI：结构化输出**：在API请求中包含架构。模型始终返回符合架构的JSON。https://ai.google.dev/docs'
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: '最佳实践',
+          text: '组合提示级和API级约束。提示澄清意图，API架构严格执行。两层防护最大化可靠性和透明度。'
+        }
+      ]
+    },
+    regionalContext: {
+      title: '企业和合规环境',
+      content: '受限提示在数据保护和法规合规必须的环境中特别有价值。对于亚太地区企业来说，以下至关重要。',
+      items: [
+        '**中国数据安全法（2021）**：要求对个人数据和敏感信息严格管理。受限提示通过限制敏感数据在提示和响应中的流动来帮助合规。金融、医疗、法律部门特别受关注。建议使用本地推理或对数据处理有严格控制的解决方案。',
+        '**亚太地区：数据跨境和保护**：各国（新加坡、澳大利亚、韩国）有数据保护法。约束可将个人和机密数据排除在提示和响应外。支持数据本地化和保留要求。',
+        '**企业合规：审计和问责**：受管制行业需AI决策可审计、可解释。约束使模型输出保持一致、可验证的格式。'
+      ]
+    },
     commonMistakes: {
       title: '受限提示的常见错误',
       mistakes: [
@@ -1742,18 +1779,21 @@ export const article: Record<Language, PEArticle> = {
     }
   },
   toc: [
-    { label: '核心要点', anchor: 'tldr' },
-    { label: '什么是受限提示', anchor: 'whatIsConstrained' },
-    { label: '受限提示为什么重要', anchor: 'whyItMatters' },
-    { label: '受限提示的类型', anchor: 'typesOfConstraints' },
-    { label: '示例：客户支持工单分类', anchor: 'example' },
-    { label: '何时使用受限提示', anchor: 'whenToUse' },
-    { label: 'PromptQuorum如何支持受限提示', anchor: 'howPQSupports' },
-    { label: '受限提示集成：5个步骤', anchor: 'howToStart' },
-    { label: '受限提示的常见错误', anchor: 'commonMistakes' },
-    { label: '相关阅读', anchor: 'relatedReading' },
-    { label: '常见问题', anchor: 'faqSection' },
-    { label: '来源和参考', anchor: 'sources' }
+    { label: '核心要点', anchor: '#tldr' },
+    { label: '快速事实', anchor: '#quick-facts' },
+    { label: '什么是受限提示', anchor: '#what-is-constrained-prompting' },
+    { label: '受限提示为什么重要', anchor: '#why-does-constrained-prompting-matter' },
+    { label: '受限提示的类型', anchor: '#which-constraint-types-can-you-use' },
+    { label: '示例：客户支持工单分类', anchor: '#unconstrained-vs-constrained-prompt-an-example' },
+    { label: '何时使用受限提示', anchor: '#when-should-you-use-constrained-prompting' },
+    { label: 'PromptQuorum如何支持受限提示', anchor: '#how-does-promptquorum-support-constrained-prompting' },
+    { label: '受限提示集成：5个步骤', anchor: '#how-to-use-constrained-prompting' },
+    { label: 'API级别的约束强制', anchor: '#api-level-constraint-enforcement' },
+    { label: '企业和合规环境', anchor: '#constrained-prompting-in-regulated-environments' },
+    { label: '受限提示的常见错误', anchor: '#common-mistakes' },
+    { label: '相关阅读', anchor: '#related-reading' },
+    { label: '常见问题', anchor: '#frequently-asked-questions' },
+    { label: '来源和参考', anchor: '#sources' }
   ],
   schema: {
     '@context': 'https://schema.org',
