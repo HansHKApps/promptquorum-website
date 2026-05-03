@@ -53982,8 +53982,8 @@ schema: {
             'Dettmers, T. et al. (2023). "QLoRA: Efficient Finetuning of Quantized LLMs." https://arxiv.org/abs/2305.14314 — Article QLoRA : modèle de base quantisé 4 bits + adaptateurs LoRA 16 bits réduit VRAM de moitié.',
             'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Framework LoRA le plus rapide, supporte Llama 3.x, Qwen2.5, Mistral avec 4× speedup.',
             'Hugging Face. (2025). "TRL: Transformer Reinforcement Learning." https://github.com/huggingface/trl — SFTTrainer pour fine-tuning supervisé avec support adaptateur LoRA.',
-          ,
-            'Le fine-tuning fonctionne mieux quand la base est solide. Avant d'investir du temps dans LoRA, assurez-vous que vos prompts de base sont optimisés : [guide du prompt engineering](https://www.promptquorum.com/prompt-engineering) couvre 80 techniques qui améliorent la qualité sur les modèles non entraînés.'],
+            'Le fine-tuning fonctionne mieux quand la base est solide. Avant d\'investir du temps dans LoRA, assurez-vous que vos prompts de base sont optimisés : [guide du prompt engineering](https://www.promptquorum.com/prompt-engineering) couvre 80 techniques qui améliorent la qualité sur les modèles non entraînés.',
+          ],
         },
       },
 schema: {
