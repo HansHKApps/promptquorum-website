@@ -844,11 +844,431 @@ export const article: Record<Language, PEArticle> = {
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Techniques',
-    title: 'Persona Prompting',
-    intro: '',
+    title: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
+    intro: 'Le persona prompting est la pratique de définir un rôle clair, une vision du monde et un comportement pour un modèle d\'IA, afin qu\'il réponde de façon cohérente comme un expert spécifique ou un professionnel particulier, sur plusieurs prompts et sessions.',
+    seoTitle: 'Persona Prompting : Débloquez un Comportement IA Stable',
+    metaDescription: 'Maîtrisez le persona prompting pour créer des IA stables sans fine-tuning. Découvrez les 7 éléments clés, modèles pratiques et stratégies de test multi-modèles.',
     publishDate: '2026-03-26',
     readTime: '13 min de lecture',
-    sections: {},
+    educationalLevel: 'Intermediate',
+    audience: 'Ingénieurs logiciels, chefs de produit, équipes déployant des assistants IA à l\'échelle',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=fr',
+      'inLanguage': 'fr',
+      headline: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
+      description: 'Ce qu\'est le persona prompting, pourquoi c\'est important, éléments clés, exemples pratiques et comment tester les personas sur plusieurs modèles IA.',
+      datePublished: '2026-03-26',
+      dateModified: '2026-05-03',
+      keywords: ['persona prompting', 'prompt engineering', 'comportement IA', 'prompting basé sur rôles', 'PromptQuorum'],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Prompt Engineering' },
+        { '@type': 'Thing', name: 'Grands Modèles de Langage' },
+        { '@type': 'Thing', name: 'Conception de Personas' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'fr',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Quelle est la longueur idéale d\'un persona prompt?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Les personas les plus efficaces font 200–600 tokens. Commencez avec 200–300 tokens couvrant rôle, domaine, objectifs et 1–2 contraintes. Ajoutez exemples et gestion de l\'incertitude si nécessaire. Les personas >1000 tokens confondent souvent les modèles; restez concis et testable.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Le persona prompting fonctionne-t-il sur tous les modèles?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Il fonctionne sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Mistral Large et modèles locaux comme LLaMA 3.1 et Qwen 2.5. Cependant, les modèles suivent les personas différemment: GPT-5.5 priorise les contraintes, Claude pose des questions de clarification, Gemini produit des résumés denses. Testez votre persona sur plusieurs modèles.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Puis-je utiliser des personas avec des modèles fine-tunés?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui. Les personas fonctionnent comme une couche texte au-dessus des modèles fine-tunés. Un modèle fine-tuné encode déjà les connaissances de domaine et le style; un prompt persona peut affiner ou rediriger ce comportement pour des tâches spécifiques. Les deux se complètent.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Comment tester si un persona fonctionne?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Testez avec PromptQuorum: envoyez la même tâche à GPT-5.5, Claude et Gemini avec votre persona. Comptez combien de fois le modèle viole une règle (ex: dépasse la limite de tokens, utilise le langage marketing, donne des conseils personnalisés). Affinez le persona en fonction des échecs. Répétez 10–20 fois.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Que se passe-t-il si un persona entre en conflit avec les instructions de l\'utilisateur?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Les instructions de tâche gagnent généralement. Si un persona dit «max 3 phrases» mais l\'utilisateur demande 1000 mots, les modèles suivent typiquement la demande explicite. Pour éviter cela, rendez les personas flexibles: «Visez 3 phrases par paragraphe, sauf si la tâche demande explicitement autrement.»',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Les personas peuvent-ils réduire les hallucinations?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Partiellement. Un persona qui dit «citez les sources, reconnaissez l\'incertitude si confiance <80%, étiquetez les hypothèses» réduit les hallucinations en donnant des règles explicites au modèle. Cependant, les personas ne peuvent pas dépasser la nature probabiliste fondamentale du modèle. Combinez avec RAG ou vérification de faits pour fiabilité maximale.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Les personas sont-ils efficaces pour les langues non-anglaises?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui, mais avec des nuances. Les modèles comme GPT-5.5 et Claude gèrent bien les personas en allemand, français, japonais et chinois, mais les performances varient. Testez les personas dans votre langue cible; certains modèles (ex: Qwen 2.5) sont optimisés pour des langues spécifiques et suivent les personas localisés plus fiablement.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Comment versionniser et partager les personas avec mon équipe?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Stockez les personas dans un document partagé (Markdown, JSON ou bibliothèque PromptQuorum) avec historique de versions. Exemple: «v2.1: Senior Cloud Architect—ajouté contrainte zéro trust, supprimé règle de réclamations spéculatives.» Suivez quelles versions de personas ont été testées sur quels modèles.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Dois-je respecter la CNIL lors de l\'utilisation du persona prompting?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui. Selon la CNIL et RGPD, le persona prompting implique un traitement de données. Assurez-vous que vos prompts persona ne contiennent pas données personnelles sensibles (noms, adresses, données de santé). L\'inférence IA locale (ex: Ollama sur matériel local) satisfait les exigences de résidentialité des données et conformité CNIL.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Le persona prompting est-il adapté aux données sensibles professionnelles?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui, particulièrement pour les secteurs financier, médical et juridique. La CNIL recommande l\'IA locale quand vous manipulez des données professionnelles sensibles. Les personas permettent de définir des règles explicites de confidentialité: «N\'accédez jamais à des données client en dehors de [domaine]». Combinés avec l\'inférence locale, ils satisfont conformité RGPD.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'fr',
+      numberOfItems: 5,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Persona Prompting',
+          description: 'Change uniquement le texte d\'entrée; fonctionne sur tous les fournisseurs; réversible en secondes; idéal pour rôles multi-domaines et tests.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Fine-Tuning',
+          description: 'Change les poids du modèle; spécifique au fournisseur; nécessite réentraînement; idéal pour styles spécialisés et propriétaires.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Prompt Système',
+          description: 'Configuration au niveau API; spécifique au fournisseur; portée limitée; idéal pour règles globales appliquées à toutes les requêtes.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'RAG (Retrieval-Augmented Generation)',
+          description: 'Couche d\'extraction agnostique aux modèles; nécessite infrastructure; idéal pour ancrage de faits et tâches gourmandes en connaissances.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Prompt Système + Persona',
+          description: 'Combine règles système avec persona spécifique aux tâches; approche hybride; idéal pour entreprises nécessitant gouvernance et flexibilité.',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: 'Points clés',
+        numberedItems: [
+          'Le persona prompting verrouille le comportement IA en définissant rôle, domaine et règles de décision avant votre tâche—rendant les réponses prévisibles sur les sessions et modèles.',
+          'Les sept éléments sont: rôle (qui), domaine (quoi), objectifs (priorités), contraintes (limites), style d\'interaction (comment), exemples (bon/mauvais) et gestion de l\'incertitude (quand incertain).',
+          'Les personas réduisent les hallucinations en restreignant le raisonnement du modèle à une «identité» cohérente plutôt que d\'improviser un nouveau style à chaque requête.',
+          'Testez les personas sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et Mistral Large pour voir quel modèle adhère le mieux—aucun modèle ne suit tous les personas également.',
+          'Le persona prompting est réversible en secondes et fonctionne sur les fournisseurs, le rendant portable et moins cher que le fine-tuning pour les changements de comportement.',
+          'Utilisez des seuils numériques (confiance %, limites de tokens, niveau de lecture) pour aider les modèles à suivre les règles; les modèles comme GPT-5.5 les mappent directement à des paramètres de décodage internes.',
+        ],
+      },
+      quickFacts: {
+        title: 'Faits rapides',
+        items: [
+          'Technique cœur: Ajoutez rôle, domaine et contraintes au message système avant la tâche.',
+          'Éléments constitutifs: 7 composants (rôle, portée, objectifs, contraintes, style, exemples, gestion de l\'incertitude) rendent les personas lisibles par machine.',
+          'Impact comportemental: Les personas réduisent les erreurs de format >50% et augmentent l\'adhérence aux contraintes comparé aux prompts génériques.',
+          'Avantage multi-modèles: Même persona se comporte différemment sur GPT-5.5, Claude, Gemini—nécessitant des tests intentionnels.',
+          'Réutilisabilité: Les personas compacts (400–600 tokens) sont partageables au sein des équipes et sur les projets.',
+          'Aucune formation requise: Contrairement au fine-tuning, les personas fonctionnent sur n\'importe quel fournisseur sans réentraînement du modèle.',
+        ],
+      },
+      whatIsPersonaPrompting: {
+        title: 'Ce qu\'est réellement le Persona Prompting',
+        content: [
+          '**Le persona prompting est une méthode structurée pour dire à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro ou d\'autres modèles qui ils doivent prétendre être, comment penser et quelles contraintes suivre avant de voir votre tâche réelle.** Un prompt persona inclut typiquement description de rôle, expertise de domaine, ton, règles de décision et limitations explicites, afin que le modèle se comporte de manière prévisible au lieu d\'improviser un nouveau style chaque fois. Quand bien fait, le persona prompting réduit les hallucinations car l\'IA filtre les décisions par une «identité» cohérente avec objectifs et garde-fous définis.',
+          '**En une phrase:** Le persona prompting transforme un modèle de langage général-usage en un spécialiste virtuel répétable en fixant son rôle, objectifs et limites avant vos questions.',
+          'Le persona prompting diffère des simples «prompts de style» comme «réponds comme un professeur amical.» Un vrai prompt persona définit non seulement le ton mais aussi la portée des connaissances (ex: finance, cybersécurité ou droit EU), les priorités décisionnelles (atténuation de risque, créativité, rapidité) et comment gérer l\'incertitude. Cette structure rend les personas particulièrement utiles dans des domaines comme l\'architecture IT, gestion de portefeuille ou workflows de conformité où les réponses incohérentes coûtent cher.',
+          'PromptQuorum est un outil de dispatch IA multi-modèles qui vous permet de tester le même prompt persona simultanément avec GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Mistral Large et modèles locaux via Ollama ou LM Studio pour voir quel modèle suit la persona le plus fiablement.',
+        ],
+      },
+      whyItMatters: {
+        title: 'Pourquoi le Persona Prompting est Important pour le Travail Réel',
+        content: [
+          '**Le persona prompting est important car il donne un comportement stable de modèles inhéremment probabilistes, crucial pour l\'ingénierie logicielle, analyse financière et workflows de gouvernance.** Les grands modèles de langage comme GPT-5.5 et LLaMA 3.1 génèrent des formulations différentes à chaque exécution, mais un persona solide restreint leur comportement à une perspective cohérente et un style décisionnel. Cela rend les sorties plus dignes de confiance, documentables et passibles d\'examen en équipes.',
+          '**En termes simples:** Sans persona, vous parlez «au modèle» et espérez qu\'il se comporte; avec persona, vous parlez «au même expert» chaque jour et savez à peu près comment il répondra.',
+          'Pour le travail IT et logiciel, le persona prompting vous permet de créer des agents distincts comme «examinateur de code sécurisé», «SRE DevOps» ou «assistant d\'enregistrement de décisions architecturales», chacun avec règles explicites sur frameworks, logging et standards de documentation. En finance, les personas peuvent imposer hypothèses conservatrices, divulgations de risque claires et contraintes jurisdictionnelles pour marchés EU, US ou chinois. Cette séparation aide aussi dans environnements régulés où auditeurs veulent voir les règles explicites qui gouvernaient les sorties assistées par IA.',
+          'D\'une perspective GEO (Générative Engine Optimization), les prompts persona sont des entités précieuses en elles-mêmes: les systèmes de recherche IA peuvent reconnaître «persona analyste SEO», «persona conformité loi IA EU» ou «persona trader macro» comme outils distincts s\'ils sont décrits précisément et consistamment sur les pages.',
+        ],
+      },
+      buildingBlocks: {
+        title: 'Éléments Constitutifs Essentiels d\'un Prompt Persona Solide',
+        content: [
+          '**Un prompt persona solide inclut toujours au moins cinq éléments: rôle, portée de connaissances, objectifs, contraintes et règles d\'interaction.** L\'ajout d\'exemples explicites et comportement d\'erreur (quoi faire quand incertain) améliore davantage la fiabilité. Ces composants rendent la persona lisible par humains et machines pour outils comme PromptQuorum et pipelines RAG.',
+          'Les sept éléments d\'un persona prompt sont: rôle, portée de domaine, objectifs, contraintes, style d\'interaction, exemples et gestion de l\'incertitude.',
+          'Voici ce que chaque élément fait en pratique:',
+        ],
+        items: [
+          'Rôle: «Vous êtes un architecte cloud senior avec 10+ ans d\'expérience en Kubernetes et networking zéro trust.»',
+          'Portée de domaine: «Concentrez-vous sur AWS, Azure et Google Cloud; ignorez mainframes on-prem sauf mention explicite.»',
+          'Objectifs: «Optimisez pour sécurité et maintenabilité d\'abord, coût deuxième, performance troisième.»',
+          'Contraintes: «Pas de réclamations spéculatives, pas de conseils légaux ou médicaux, énoncez toujours hypothèses et limitations.»',
+          'Style d\'interaction: «Étapes numérotées courtes, pas de langage marketing, pas d\'emojis, max 3 phrases par paragraphe.»',
+          'Exemples: Une ou deux réponses d\'exemple concrètes montrant la profondeur et structure souhaitées.',
+          'Gestion de l\'incertitude: «Si vous êtes <80% confiant, posez des questions de clarification avant de répondre.»',
+        ],
+      },
+      numericThresholds: {
+        content: [
+          'Les prompts persona qui encodent des seuils numériques (ex: «80% de confiance», «jamais dépasser 300 tokens dans une réponse» ou «expliquez au niveau anglais B1») sont plus faciles à suivre par les modèles que les instructions purement qualitatives. Les modèles comme GPT-5.5 et Claude Opus 4.7 répondent particulièrement bien aux limites explicites de tokens, température et longueur car ils se mappent directement à paramètres de décodage internes comme température, Top-P et limites de tokens.',
+          'PromptQuorum supporte l\'attachement du même bloc persona à plusieurs prompts sur fournisseurs, afin que vous puissiez réutiliser un unique persona «analyste financier averse au risque» quand interrogeant GPT-5.5, Gemini 3.1 Pro et LLaMA 3.1 sans copy-paste.',
+        ],
+      },
+      techExample: {
+        title: 'Exemple: Persona Technique pour IT et Finance',
+        content: [
+          '**Un persona pratique pour travail IT et finance définit un profil de risque conservateur, limites claires de stack technique et règles strictes pour citation de sources ou hypothèses.** Ce type de persona est utile si vous analysez investissements infrastructure, protocoles crypto ou risques macro et voulez l\'IA factuelle et prudente. La même structure fonctionne pour perspectives transfrontalières couvrant marchés EU, Russie, Chine et US où régulation et disponibilité de données diffèrent.',
+          '**[Mauvais Prompt Persona]**',
+          '"Vous êtes une IA utile. Expliquez tech et finance simplement et soyez amical."',
+          '**[Bon Prompt Persona]**',
+          '"Vous êtes un analyste IT et finance senior avec 15+ ans d\'expérience en architecture logiciel, marchés de capitaux et trading de commodités. Concentrez-vous sur analyse factuelle, évitez hype, séparez toujours données d\'interprétation. Utilisez français clair, max 3 phrases par paragraphe, pas d\'emojis. Quand preuve est faible ou >12 mois ancien, étiquetez explicitement comme «ancien» et proposez quelles données nouvelles seraient nécessaires. Privilégiez perspectives EU, russes et allemandes quand discutant régulation; mentionnez Chine et US où pertinent. Ne donnez jamais conseils d\'investissement personnalisés; à la place, décrivez scénarios, mécanismes et facteurs de risque."',
+        ],
+      },
+      techExampleBreakdown: {
+        content: [
+          'Ce persona encode:',
+        ],
+        items: [
+          'Expertise multi-domaine (logiciel, marchés, commodités).',
+          'Focus régional (EU, Russie, Allemagne, plus Chine et USA).',
+          'Règles comportementales (étiquetez données anciennes, évitez hype, pas d\'emojis).',
+          'Frontière de conformité (pas de conseils d\'investissement personnalisés).',
+        ],
+      },
+      techExampleTest: {
+        content: [
+          'PromptQuorum peut envoyer ce persona plus une tâche concrète (ex: «analysez impact loi IA EU sur LLMs hébergés cloud») à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et Mistral Large en un clic et montrer quel modèle respecte les contraintes le mieux.',
+          '**Test multi-modèles PromptQuorum:** Dans expérience interne PromptQuorum avec 40 prompts persona IT-finance sur GPT-5.5, Claude Opus 4.7 et Gemini 3.1 Pro, GPT-5.5 suivait contraintes longueur et région le plus strictement dans 26 sur 40 tâches, Claude Opus 4.7 posait le plus de questions de clarification dans 21 sur 40 tâches, et Gemini 3.1 Pro produisait les résumés numériques les plus denses dans 18 sur 40 tâches.',
+        ],
+      },
+      howToBuild: {
+        title: 'Comment Créer Votre Propre Persona Étape par Étape',
+        content: [
+          '**Vous pouvez construire un persona robuste en cinq étapes: définissez le travail, choisissez contraintes, ajoutez exemples, testez sur modèles et affinez basé sur échecs.** Traitez conception de persona comme processus itératif: vous commencez avec simple description de rôle et la renforcez chaque fois que l\'IA se comporte inopinément. Sur une semaine d\'usage réel, cet affinage produit typiquement un persona compact et réutilisable sous 400–600 tokens que votre équipe peut partager.',
+          'Étapes de construction persona:',
+        ],
+        numberedItems: [
+          'Définissez le travail: «Ce persona est pour cas d\'usage X: ex examen de code multi-modèles, planning scénarios macroéconomiques ou résumé d\'actualités conscient du risque.»',
+          'Sélectionnez portée de domaine: «Incluez ou excluez explicitement certains frameworks, classes d\'actifs ou juridictions.»',
+          'Choisissez contraintes: «Décidez sur ton, longueur paragraphe, attentes de citation et seuils de confiance.»',
+          'Créez deux interactions d\'exemple: «Montrez une réponse idéale et un échec à éviter.»',
+          'Testez et affinez: «Exécutez au moins 10–20 prompts réels et modifiez le persona quand le modèle viole une règle.»',
+        ],
+      },
+      buildNote: {
+        content: [
+          'Pratique d\'ingénierie de prompts montre que exemples concrets améliorent significativement l\'adhérence aux instructions complexes, particulièrement avec modèles comme GPT-5.5 où in-context learning peut émuler nouveaux comportements sans fine-tuning. En pratique, ajouter juste un bloc de contraste «mauvaise réponse vs bonne réponse» réduit souvent erreurs de format >50% dans workflows quotidiens.',
+          'Vue côte-à-côte de PromptQuorum aide affiner personas plus rapidement car vous voyez, en un écran, comment différents modèles interprètent même persona. Si Claude Opus 4.7 pose continuellement questions de suivi tandis que GPT-5.5 répond immédiatement, cela signale vous devez peut-être ajuster gestion d\'incertitude ou ajouter règle sur quand poser questions de clarification.',
+        ],
+      },
+      vsFineTuning: {
+        title: 'Persona Prompting vs Fine-Tuning vs Prompts Système',
+        content: [
+          '**Le persona prompting est une alternative légère au fine-tuning et configuration système-niveau quand vous voulez changements de comportement sans entraîner votre propre modèle.** Au lieu de modifier poids ou construire wrapper API personnalisé, vous encodez comportement dans texte pouvant s\'exécuter sur n\'importe quel fournisseur: OpenAI, Anthropic, Google DeepMind, Mistral AI ou déploiements locaux via Ollama et LM Studio. Cela rend personas portables sur fournisseurs et pérennes tandis que modèles comme LLaMA 3.1 ou Qwen 2.5 évoluent.',
+          'Persona prompting vs autres approches:',
+        ],
+        items: [
+          'Persona prompting change texte d\'entrée; fine-tuning change paramètres de modèle.',
+          'Persona prompting fonctionne sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro et Mistral Large sans réentraînement; fine-tuning est généralement spécifique au fournisseur.',
+          'Persona prompting est réversible en secondes; vous pouvez échanger personas par tâche ou région (EU vs Chine vs USA) sans changements infrastructure.',
+        ],
+      },
+      regionalApproaches: {
+        content: [
+          'Les entreprises EU préfèrent souvent persona prompting combiné avec modèles locaux comme Mistral Large ou LLaMA 3.1 hébergés on-premise pour satisfaire loi IA EU et exigences résidentialité données sans partager prompts avec APIs externes. En Chine, entreprises appliquent increasingly persona prompting à modèles comme Qwen 2.5 ou DeepSeek V3 pour correspondre guidance régulière locale et normes de langage où tokenization et efficacité context-window diffèrent de modèles centrés anglais. Les organisations japonaises combinent fréquemment modèles on-premise avec personas stricts et documentés pour conformer règles gouvernance de données METI tout en enabling workflows assistés IA.',
+        ],
+      },
+      pqBridges: {
+        content: [
+          'PromptQuorum relie les trois stratégies en vous permettant de:',
+        ],
+        items: [
+          'Utiliser persona prompting dans message système ou assistant pour chaque fournisseur.',
+          'Comparer personas contre modèles fine-tunés où disponible.',
+          'Router prompts sensibles à modèles locaux via Ollama ou LM Studio tout gardant même texte persona.',
+        ],
+      },
+      keySnippets: {
+        title: 'Blocs Snippet Clés pour Réutilisation',
+        content: [
+          '**En une phrase:** Un prompt persona est spécification réutilisable de rôle, valeurs, contraintes et style rendant les grands modèles de langage se comportant comme experts virtuels cohérents au lieu de chatbots génériques.',
+          'Persona prompting vs fine-tuning:',
+        ],
+        items: [
+          'Persona prompting change uniquement instructions, donc c\'est bon marché et réversible.',
+          'Fine-tuning change le modèle lui-même et nécessite datasets, exécutions d\'entraînement et évaluation.',
+          'Configuration système-niveau dans APIs se situe entre eux, mais bénéficie encore d\'une spécification persona claire.',
+        ],
+      },
+      sevenBlocks: {
+        content: [
+          'Les sept éléments d\'une persona prompt sont: rôle, portée de domaine, objectifs, contraintes, style d\'interaction, exemples et gestion de l\'incertitude.',
+        ],
+      },
+      howToStart: {
+        title: 'Comment Utiliser le Persona Prompting Basé sur les Rôles',
+        numberedItems: [
+          '**Choisissez un persona correspondant votre style de sortie souhaité.** Pour copy marketing: «Vous êtes un copywriter créatif.» Pour documentation technique: «Vous êtes un ingénieur principal.» Pour accessibilité: «Vous écrivez pour utilisateurs non-techniques.»',
+          '**Décrivez la persona avec traits pertinents à votre tâche.** Au lieu de «amical», dites: «Vous expliquez concepts techniques avec analogies, utilisez phrases courtes, évitez jargon et privilégiez clarté sur exhaustivité.»',
+          '**Combinez persona avec clarté de tâche.** Exemple: «Vous êtes auteur technique expérimenté rendant systèmes complexes accessibles à non-experts. Écrivez explication 500 mots comment API rate-limiting fonctionne.»',
+          '**Utilisez personas pour contrôler ton et style sans micromanaging chaque détail.** Une persona apporte conventions implicites et priorités. «Architecte logiciel» suggère pensée structurée; «journaliste» suggère narration factuelle.',
+          '**Testez choix persona exécutant même prompt avec personas différents et comparant sorties.** Générez même contenu comme «casual marketer» vs «professional consultant.» Voyez quel ton correspond mieux votre marque ou cas d\'usage.',
+        ],
+      },
+      personaComparison: {
+        title: 'Persona Prompting vs Autres Méthodes de Contrôle IA',
+        columns: ['Aspect', 'Persona Prompting', 'Fine-Tuning', 'Prompt Système', 'RAG (Retrieval-Augmented)'],
+        rows: [
+          {
+            'Aspect': 'Temps setup',
+            'Persona Prompting': 'Minutes (écrire texte)',
+            'Fine-Tuning': 'Heures/jours (collecter données, entraîner)',
+            'Prompt Système': 'Minutes (config niveau API)',
+            'RAG (Retrieval-Augmented)': 'Heures (construire corpus, embeddings)',
+          },
+          {
+            'Aspect': 'Coût',
+            'Persona Prompting': 'Gratuit (tokens seulement)',
+            'Fine-Tuning': '$100–$10,000+ par modèle',
+            'Prompt Système': 'Gratuit (feature API)',
+            'RAG (Retrieval-Augmented)': '$100–$1,000+ (infrastructure)',
+          },
+          {
+            'Aspect': 'Portabilité sur modèles',
+            'Persona Prompting': 'Fonctionne sur GPT, Claude, Gemini, local',
+            'Fine-Tuning': 'Spécifique fournisseur, spécifique modèle',
+            'Prompt Système': 'Spécifique fournisseur, portée limitée',
+            'RAG (Retrieval-Augmented)': 'Agnostique modèles, nécessite intégration',
+          },
+          {
+            'Aspect': 'Réversibilité',
+            'Persona Prompting': 'Changement en secondes',
+            'Fine-Tuning': 'Réentraînement nécessaire (jours)',
+            'Prompt Système': 'Changement en minutes',
+            'RAG (Retrieval-Augmented)': 'Mettre à jour corpus, redéployer',
+          },
+          {
+            'Aspect': 'Meilleur pour',
+            'Persona Prompting': 'Rôles multi-domaines, tests',
+            'Fine-Tuning': 'Tâches spécialisées, style propriétaire',
+            'Prompt Système': 'Règles globales, contraintes toute-requête',
+            'RAG (Retrieval-Augmented)': 'Ancrage faits, tâches gourmandes en connaissances',
+          },
+        ],
+      },
+      faqSection: {
+        title: 'Questions Fréquemment Posées',
+        faqs: [
+          {
+            q: 'Quelle est la longueur idéale d\'un persona prompt?',
+            a: 'Les personas les plus efficaces font 200–600 tokens. Commencez avec 200–300 tokens couvrant rôle, domaine, objectifs et 1–2 contraintes. Ajoutez exemples et gestion de l\'incertitude si la complexité le nécessite. Les personas >1000 tokens confondent souvent les modèles; restez concis et testable.',
+          },
+          {
+            q: 'Le persona prompting fonctionne-t-il sur tous les modèles?',
+            a: 'Il fonctionne sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Mistral Large et modèles locaux comme LLaMA 3.1 et Qwen 2.5. Cependant, les modèles suivent les personas différemment: GPT-5.5 priorise les contraintes, Claude pose des questions de clarification, Gemini produit des résumés denses. Testez votre persona sur plusieurs modèles.',
+          },
+          {
+            q: 'Puis-je utiliser des personas avec des modèles fine-tunés?',
+            a: 'Oui. Les personas fonctionnent comme une couche texte au-dessus des modèles fine-tunés. Un modèle fine-tuné encode déjà les connaissances de domaine et le style; un prompt persona peut affiner ou rediriger ce comportement pour des tâches spécifiques. Les deux se complètent.',
+          },
+          {
+            q: 'Comment tester si un persona fonctionne?',
+            a: 'Testez avec PromptQuorum: envoyez la même tâche à GPT-5.5, Claude et Gemini avec votre persona. Comptez combien de fois le modèle viole une règle (ex: dépasse la limite de tokens, utilise le langage marketing, donne des conseils personnalisés). Affinez le persona en fonction des échecs. Répétez 10–20 fois.',
+          },
+          {
+            q: 'Que se passe-t-il si un persona entre en conflit avec les instructions de l\'utilisateur?',
+            a: 'Les instructions de tâche gagnent généralement. Si un persona dit «max 3 phrases» mais l\'utilisateur demande 1000 mots, les modèles suivent typiquement la demande explicite de l\'utilisateur. Pour éviter cela, rendez les personas flexibles: «Visez 3 phrases par paragraphe, sauf si la tâche demande explicitement autrement.»',
+          },
+          {
+            q: 'Les personas peuvent-ils réduire les hallucinations?',
+            a: 'Partiellement. Un persona qui dit «citez les sources, reconnaissez l\'incertitude si confiance <80%, étiquetez les hypothèses» réduit les hallucinations en donnant des règles explicites au modèle. Cependant, les personas ne peuvent pas dépasser la nature probabiliste fondamentale du modèle. Combinez avec RAG ou vérification de faits pour fiabilité maximale.',
+          },
+          {
+            q: 'Les personas sont-ils efficaces pour les langues non-anglaises?',
+            a: 'Oui, mais avec des nuances. Les modèles comme GPT-5.5 et Claude gèrent bien les personas en allemand, français, japonais et chinois, mais les performances varient. Testez les personas dans votre langue cible; certains modèles (ex: Qwen 2.5) sont optimisés pour des langues spécifiques et suivent les personas localisés plus fiablement.',
+          },
+          {
+            q: 'Comment versionniser et partager les personas avec mon équipe?',
+            a: 'Stockez les personas dans un document partagé (Markdown, JSON ou bibliothèque PromptQuorum) avec historique de versions. Exemple: «v2.1: Senior Cloud Architect—ajouté contrainte zéro trust, supprimé règle de réclamations spéculatives.» Suivez quelles versions de personas ont été testées sur quels modèles.',
+          },
+          {
+            q: 'Dois-je respecter la CNIL lors de l\'utilisation du persona prompting?',
+            a: 'Oui. Selon la CNIL et RGPD, le persona prompting implique un traitement de données. Assurez-vous que vos prompts persona ne contiennent pas données personnelles sensibles (noms, adresses, données de santé). L\'inférence IA locale (ex: Ollama sur matériel local) satisfait les exigences de résidentialité des données et conformité CNIL.',
+          },
+          {
+            q: 'Le persona prompting est-il adapté aux données sensibles professionnelles?',
+            a: 'Oui, particulièrement pour les secteurs financier, médical et juridique. La CNIL recommande l\'IA locale quand vous manipulez des données professionnelles sensibles. Les personas permettent de définir des règles explicites de confidentialité: «N\'accédez jamais à des données client en dehors de [domaine]». Combinés avec l\'inférence locale, ils satisfont conformité RGPD.',
+          },
+        ],
+      },
+      sources: {
+        title: 'Sources et Lectures Complémentaires',
+        items: [
+          '[Wei et al. (2022). « Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. » NeurIPS.](https://arxiv.org/abs/2201.11903)',
+          '[Kojima et al. (2022). « Large Language Models are Zero-Shot Reasoners. » NeurIPS.](https://arxiv.org/abs/2205.11916)',
+          '[Brown et al. (2020). « Language Models are Few-Shot Learners. » OpenAI.](https://arxiv.org/abs/2005.14165)',
+          '[Touvron et al. (2023). « LLaMA: Open and Efficient Foundation Language Models. » arXiv.](https://arxiv.org/abs/2302.13971)',
+          '[Documentation PromptQuorum: Test Persona Multi-Modèles.](https://www.promptquorum.com/docs/multi-model-testing)',
+        ],
+      },
+      relatedReading: {
+        title: 'Articles Connexes',
+        items: [
+          '[Comment Écrire des Prompts Clairs pour l\'IA](/prompt-engineering/how-to-write-clear-prompts?lang=fr) — Maîtrisez les fondamentaux avant d\'avancer vers les personas.',
+          '[Negative Prompting: Dites à l\'IA ce qu\'elle NE doit PAS faire](/prompt-engineering/negative-prompting?lang=fr) — Combinez personas avec contraintes explicites pour meilleur contrôle.',
+          '[Frameworks de Prompts: Chain-of-Thought et Au-delà](/prompt-engineering/chain-of-thought-prompting?lang=fr) — Apprenez techniques de raisonnement structuré qui fonctionnent avec personas.',
+          '[Prompts Système: La Fondation du Comportement IA](/prompt-engineering/system-prompts?lang=fr) — Comprenez comment personas s\'intègrent à l\'architecture système plus large.',
+          '[Fine-Tuning vs Prompt Engineering: Quand Utiliser Chacun](/prompt-engineering/fine-tuning-vs-prompting?lang=fr) — Décidez si personas ou fine-tuning convient à votre cas d\'usage.',
+          '[Tester les Modèles IA sur les Fournisseurs](/prompt-engineering/testing-ai-models?lang=fr) — Apprenez à comparer systématiquement la performance des personas.',
+        ],
+      },
+    },
   },
   ja: {
     freshness_tier: 'evergreen',
