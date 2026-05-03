@@ -13,7 +13,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'From GPT-2 to Today: How Prompt Engineering Evolved',
       seoTitle: 'How Prompt Engineering Evolved: From Few-Shot to Context Design',
       intro: 'Prompt engineering evolved from informal experiments around GPT-3 in 2020 to a structured discipline with named techniques and frameworks by 2026. This timeline traces the key breakthroughs, research papers, and turning points that made prompting a core skill.',
-      metaDescription: 'Prompt engineering evolved from GPT-3 few-shot learning (2020) through chain-of-thought reasoning, ChatGPT\'s mainstream moment, and now context design (2026). Key papers, milestones, and the shift from niche technique to baseline skill.',
+      metaDescription: "Prompt engineering evolved from GPT-3 few-shot learning (2020) through chain-of-thought reasoning, ChatGPT's mainstream moment, and now context design (2026). Key papers, milestones, and the shift from niche technique to baseline skill.",
       publishDate: '2026-03-01',
       dateModified: '2026-05-03',
       readTime: '10 min read',
