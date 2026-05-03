@@ -418,31 +418,87 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     de: {
+  freshness_tier: 'semi_annual',
   theme: 'Techniques',
   title: 'Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen',
   intro: 'Chain-of-Thought Prompting ist eine Technik, bei der Sie die KI explizit auffordern, ihre Denkschritte zu zeigen, statt direkt zur Antwort zu springen. Dies macht komplexe Entscheidungen leichter nachvollziehbar, debugbar und im Laufe der Zeit verbesserbar.',
+  leadAnswerBlock: '**Chain-of-Thought (CoT) Prompting fordert ein KI-Modell auf, seine Denkschritte Schritt für Schritt zu zeigen, bevor es eine abschließende Antwort gibt.** Dies verbessert die Genauigkeit bei Mathe-, Logik- und mehrstufigen Aufgaben. 2026 haben Modelle wie Claude Opus 4.7 und OpenAI o3 integrierte Denkfunktionen, die CoT intern automatisieren – aber Prompt-Level CoT bleibt wertvoll bei kleineren und nicht-denkfähigen Modellen, wo es der Hauptweg ist, um strukturiertes Denken hervorzurufen.',
   publishDate: '2026-03-26',
-  readTime: '7 min Lesezeit',
+  dateModified: '2026-05-03',
+  lastFactChecked: '2026-05-03',
+  readTime: '13 Min. Lesezeit',
+  seoTitle: 'Chain-of-Thought Prompting 2026: Reasoning',
+  metaDescription: 'Chain-of-Thought verbessert die Genauigkeit um 10–40 % bei Mathematik und Logik. 2026 Vergleich: Prompt-Level CoT vs. Reasoning Models (o3, Claude Extended Thinking, Gemini Deep Think).',
   educationalLevel: 'Intermediate',
   primaryTerm: 'Chain-of-Thought Prompting',
-  metaDescription: 'Chain-of-Thought Prompting erklärt: Wie Sie Sprachmodelle dazu bringen, Schritt für Schritt zu denken. Praktische Beispiele und Strategien für bessere KI-Ergebnisse.',
+  audience: 'Entwickler, Datenwissenschaftler und Teams, die mit Claude, Gemini oder lokalen LLMs arbeiten',
+  next_refresh_due: '2026-11-03',
+  aboutTopics: ['Chain-of-Thought Prompting', 'Strukturiertes Denken', 'Prompt Engineering', 'Reasoning Models'],
+  toc: [
+    { label: 'Zusammenfassung', anchor: '#zusammenfassung' },
+    { label: 'Schnellübersicht', anchor: '#schnellubersicht' },
+    { label: 'Was ist Chain-of-Thought Prompting?', anchor: '#was-ist-chain-of-thought' },
+    { label: 'Warum es wichtig ist', anchor: '#warum-wichtig' },
+    { label: 'Wann es hilft (und wann nicht)', anchor: '#wann-es-hilft' },
+    { label: 'Beispiel: Mit und ohne Chain of Thought', anchor: '#beispiel' },
+    { label: 'Mathe-Beispiel: Umsatzberechnung', anchor: '#mathe-beispiel' },
+    { label: 'Effektive Prompts schreiben', anchor: '#prompts-schreiben' },
+    { label: 'Chain-of-Thought in PromptQuorum', anchor: '#in-promptquorum' },
+    { label: 'Wie Sie CoT nutzen', anchor: '#wie-nutzen' },
+    { label: 'CoT vs. integrierte Reasoning-Modelle', anchor: '#reasoning-modelle' },
+    { label: 'Chain-of-Thought Varianten', anchor: '#cot-varianten' },
+    { label: 'Modellvergleich', anchor: '#modellvergleich' },
+    { label: 'Weiterführende Literatur', anchor: '#literatur' },
+    { label: 'FAQ', anchor: '#faq' },
+    { label: 'Quellen', anchor: '#quellen' },
+  ],
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
+    url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de',
+    inLanguage: 'de',
     headline: 'Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen',
     description: 'Was Chain-of-Thought Prompting ist, wann es hilft und wie Sie Prompts strukturieren, damit Modelle ihr Denken klar darstellen.',
     datePublished: '2026-03-26',
-    dateModified: '2026-03-26',
-    keywords: ['Chain-of-Thought Prompting', 'Schrittweise Argumentation', 'Prompt Engineering', 'PromptQuorum'],
+    dateModified: '2026-05-03',
+    keywords: ['Chain-of-Thought Prompting', 'Schrittweise Argumentation', 'Prompt Engineering', 'Reasoning Modelle', 'Extended Thinking'],
     author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
-      { '@type': 'Thing', name: 'Prompt Engineering' },
-      { '@type': 'Thing', name: 'Large Language Models' },
-      { '@type': 'Thing', name: 'Argumentation' },
+      { '@type': 'Thing', name: 'Chain-of-Thought Prompting' },
+      { '@type': 'Thing', name: 'Sprachmodelle' },
+      { '@type': 'Thing', name: 'Denken' },
+      { '@type': 'Thing', name: 'Strukturierte Ausgabe' },
     ],
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.article-intro', '.key-takeaways'],
+    },
   },
   sections: {
+    tldr: {
+      isTldr: true,
+      title: 'Zusammenfassung',
+      numberedItems: [
+        '**Chain-of-Thought Prompting fordert Modelle auf, ihre Denkschritte vor der abschließenden Antwort zu zeigen**, verbessert die Genauigkeit bei Mathe-, Logik- und mehrstufigen Aufgaben.',
+        'Zero-shot CoT („denk Schritt für Schritt") funktioniert auf den meisten Modellen. Few-shot CoT (mit Beispielen) ist zuverlässiger.',
+        '2026 haben Modelle wie Claude Opus 4.7 und OpenAI o3 **integrierte Thinking-Modi**, die Prompt-Level CoT ersetzen – Sie müssen nicht „denk Schritt für Schritt" sagen.',
+        'CoT erhöht die Output-Token und damit die Kosten. Integrierte Thinking-Modi haben separate Thinking-Token-Budgets mit eigenem Billing.',
+        'Nutzen Sie Prompt-Level CoT bei kleineren Modellen (Haiku, Flash, LLaMA 4) kostengünstig. Nutzen Sie integrierte Thinking-Modi bei Frontier-Modellen für maximale Genauigkeit.',
+        'CoT ist wertvoll für Mathe, Logik, Planung und Ursachenanalyse. Überspringen Sie es bei einfacher Klassifizierung, kurzen Antworten und schneller Werbetexterstellung.',
+      ]
+    },
+    quickFacts: {
+      title: 'Schnellübersicht',
+      numberedItems: [
+        '**Geprägt:** Wei et al. (2022), Google Brain – NeurIPS 2022 Grundlagenpaper',
+        '**Schlüsselergebnis:** Zero-shot CoT erhöhte PaLM 540B Genauigkeit von 17,7 % → 78,7 % auf MultiArith',
+        '**Auslösephrase:** „Denken wir Schritt für Schritt" (Zero-shot) oder Beispiele (Few-shot)',
+        '**2026 Evolution:** Integrierte Thinking-Modi (o3, Claude Extended Thinking) automatisieren CoT intern',
+        '**Kostenfolge:** Prompt-Level CoT = mehr Output-Token; Thinking-Modi = separates Thinking-Token-Budget',
+        '**Best für Prompt-Level CoT:** Nicht-Thinking-Modelle (Claude Haiku 4.5, Gemini Flash, GPT-4o mini, LLaMA 4 Scout)',
+      ]
+    },
     whatIsChainOfThought: {
       title: 'Was Chain-of-Thought Prompting ist',
       content: [
@@ -538,6 +594,236 @@ export const article: Record<Language, PEArticle> = {
         '**Kombinieren Sie CoT mit überprüfbaren Ausgaben: Bitten Sie das Modell, seine Arbeit zu zeigen, damit Sie sie überprüfen können.** „Erklären Sie Ihr Denken bei jedem Schritt. Wenn Sie einen Fehler machen, sollte ich ihn aus Ihrer gezeigten Arbeit erkennen können."',
       ],
     },
+    mathExample: {
+      title: 'Mathe-Beispiel: Umsatzberechnung',
+      content: [
+        '**Ohne CoT gibt das Modell möglicherweise nur eine abschließende Antwort. Mit CoT zeigt das Modell Berechnungen schrittweise.**',
+        '**Ohne CoT:**',
+        '„Ein Kunde kauft 50 Einheiten zu 15 € je Stück und erhält einen 10 %-Rabatt. Wie viel zahlt der Kunde?"',
+        'Modell: „675 €"',
+        '**Mit CoT:**',
+        '„Ein Kunde kauft 50 Einheiten zu 15 € je Stück und erhält einen 10 %-Rabatt. Arbeite die einzelnen Schritte durch: 1) Berechne die Zwischensumme. 2) Berechne den Rabattbetrag. 3) Ziehe den Rabatt von der Zwischensumme ab, um den Endpreis zu erhalten."',
+        'Modell: „1) Zwischensumme = 50 × 15 € = 750 €. 2) Rabatt = 10 % von 750 € = 75 €. 3) Endpreis = 750 € − 75 € = 675 €."',
+        'Beide geben die gleiche Antwort, aber die CoT-Version zeigt die Mathematik und ermöglicht es, Fehler zu erkennen (z. B. wenn jemand 10 % von 750 € falsch berechnet).',
+      ],
+    },
+    reasoningModels: {
+      title: 'CoT vs. integrierte Reasoning-Modelle (2026)',
+      content: [
+        '**2026 haben die Frontier-Modelle – Claude Opus 4.7, OpenAI o3, Gemini Deep Think – integrierte Denkmodi, die Chain-of-Thought automatisch internalisieren.** Sie müssen keine „denk Schritt für Schritt"-Anweisungen auf diesen Modellen hinzufügen.',
+        '**Wann Prompt-Level CoT verwenden:** Nicht-Thinking-Modelle (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), lokale LLMs oder wenn Sie die zusätzlichen Kosten für Thinking-Token-Budgets vermeiden möchten.',
+        '**Wann integrierte Thinking-Modi verwenden:** Maximale Genauigkeit auf Frontier-Modellen, mathematiklastige Aufgaben, komplexe Analysen. Diese Modelle berechnen Thinking-Token separat (üblicherweise höherer Satz als Output-Token).',
+      ],
+      columns: ['Ansatz', 'Am besten für', 'Kosten', 'Transparenz', 'Modelle'],
+      rows: [
+        { 'Ansatz': 'Prompt-Level CoT („denk Schritt für Schritt")', 'Am besten für': 'Kleine Modelle, lokale LLMs, kostensensitive Aufgaben', 'Kosten': 'Erhöht Output-Token', 'Transparenz': 'Vollständig: sichtbare Schritte in der Ausgabe', 'Modelle': 'Haiku, Flash, LLaMA, Qwen' },
+        { 'Ansatz': 'Claude Extended Thinking (Opus 4.7, Sonnet 4.6)', 'Am besten für': 'Komplexe Analysen, maximale Genauigkeit', 'Kosten': 'Separates Thinking-Token-Budget (Input-Satz)', 'Transparenz': 'Inspector-Trace via API', 'Modelle': 'Claude Opus 4.7, Claude Sonnet 4.6' },
+        { 'Ansatz': 'OpenAI o3', 'Am besten für': 'Schwierigste Probleme (Mathe, Coding, Wettbewerbe)', 'Kosten': 'Thinking-Token-Budget (höherer Tier)', 'Transparenz': 'Verstecktes Denken, sichtbare Ausgabe', 'Modelle': 'OpenAI o3' },
+        { 'Ansatz': 'Gemini Deep Think', 'Am besten für': 'Google Cloud Integration, Gemini-Ökosystem', 'Kosten': 'Thinking-Token separat von Ausgabe', 'Transparenz': 'thinking_level Parameter (LOW, MEDIUM, HIGH)', 'Modelle': 'Gemini 3.1 Pro' },
+        { 'Ansatz': 'DeepSeek R1', 'Am besten für': 'Open-Weights-Option, On-Device Reasoning', 'Kosten': 'Sichtbares Denken in Ausgabetext gestreamt', 'Transparenz': 'Vollständig: inline CoT in Ausgabe', 'Modelle': 'DeepSeek R1' },
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Tipp',
+          text: 'Verwenden Sie für kostenbewusste Systeme Prompt-Level CoT auf kleineren Modellen. Für maximale Genauigkeit bei schwierigen Problemen nutzen Sie o3 oder Claude Extended Thinking und lassen das Modell das Denken intern handhaben.'
+        }
+      ],
+    },
+    cotVariants: {
+      title: 'Chain-of-Thought Varianten und Erweiterungen',
+      content: [
+        '**Über das grundlegende „denk Schritt für Schritt"-Muster hinaus haben Forscher mehrere CoT-Varianten entwickelt, die jeweils für verschiedene Problemtypen optimiert sind.**',
+      ],
+      items: [
+        '**Zero-shot CoT:** Fragen Sie „Denken wir Schritt für Schritt" ohne Beispiele. Funktioniert auf den meisten Modellen und ist am einfachsten zu implementieren. Boost: ~10–20 % Genauigkeitsverbesserung bei Denkaufgaben.',
+        '**Few-shot CoT:** Zeigen Sie 2–5 durchgearbeitete Beispiele mit expliziter Argumentation, dann fragen Sie das Modell, das gleiche Muster auf ein neues Problem anzuwenden. Zuverlässiger als Zero-shot, erfordert aber manuelle Beispielenerstellung. Boost: ~20–40 % Genauigkeit.',
+        '**Self-Consistency (Wang et al., 2023):** Generieren Sie mehrere unabhängige CoT-Argumentationspfade, dann nehmen Sie eine Mehrheitsentscheidung bei der abschließenden Antwort. Deutlich robuster gegen Fehler. Boost: ~30–50 % bei schwierigen Aufgaben.',
+        '**Tree of Thought (ToT):** Anstelle einer linearen Kette erkunden Sie mehrere Argumentationszweige und reduzieren schwache aus. Verwenden Sie, wenn es viele mögliche Lösungswege gibt (Planung, Spielaufgaben, kreative Aufgaben).',
+        '**ReAct (Reasoning + Acting):** Verflechten Sie Argumentation mit externen Aktionen – rufen Sie APIs auf, durchsuchen Datenbanken oder führen Code aus – und integrieren Sie die Ergebnisse zurück in den nächsten Argumentationsschritt. Am besten für reale Aufgaben, die aktuelle Daten oder Verifikation benötigen.',
+      ],
+    },
+    modelComparison: {
+      title: 'Modellvergleich: Wie Modelle CoT Prompting handhaben (2026)',
+      columns: ['Modell', 'Prompt-Level CoT', 'Integriertes Thinking', 'Bester Anwendungsfall', 'Kosten (ca.)'],
+      rows: [
+        { 'Modell': 'Claude Opus 4.7', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Extended Thinking (Trace inspizierbar via API)', 'Bester Anwendungsfall': 'Maximale Genauigkeit bei Analysen', 'Kosten (ca.)': 'Höher (Input + Output + Thinking-Token)' },
+        { 'Modell': 'Claude Sonnet 4.6', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Extended Thinking', 'Bester Anwendungsfall': 'Ausgeglichenes Kosten/Genauigkeit-Verhältnis', 'Kosten (ca.)': 'Mittel' },
+        { 'Modell': 'Claude Haiku 4.5', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Schnelle, kostengünstige Argumentation', 'Kosten (ca.)': 'Niedrig' },
+        { 'Modell': 'OpenAI o3', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Effort-Levels (low, medium, high, xhigh)', 'Bester Anwendungsfall': 'Probleme auf Wettbewerbsniveau', 'Kosten (ca.)': 'Sehr hoch (Thinking-Token Tier)' },
+        { 'Modell': 'GPT-4o mini', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Budgetbewusste Bereitstellung', 'Kosten (ca.)': 'Sehr niedrig' },
+        { 'Modell': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Funktioniert', 'Integriertes Thinking': 'Deep Think (thinking_level Param)', 'Bester Anwendungsfall': 'Google Cloud Integration', 'Kosten (ca.)': 'Mittel-Hoch' },
+        { 'Modell': 'Gemini Flash', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Schnelle Antworten', 'Kosten (ca.)': 'Niedrig' },
+        { 'Modell': 'DeepSeek R1', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Inline Reasoning in Ausgabe', 'Bester Anwendungsfall': 'Open-Weights, On-Device', 'Kosten (ca.)': 'Kostenlos (Open Source)' },
+        { 'Modell': 'Llama 4', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Lokale Bereitstellung, Datenschutz', 'Kosten (ca.)': 'Self-Hosted (Compute-abhängig)' },
+      ],
+    },
+    relatedReading: {
+      title: 'Weiterführende Literatur',
+      items: [
+        '[Was ist Prompt Engineering? Ein kompletter Leitfaden 2026](/prompt-engineering/what-is-prompt-engineering?lang=de)',
+        '[Strukturierte Ausgaben & JSON Schema Prompting](/prompt-engineering/structured-output?lang=de)',
+        '[So reduzieren Sie AI Hallucination](/prompt-engineering/reducing-hallucination?lang=de)',
+        '[Constrained Prompting: Modellausgaben begrenzen](/prompt-engineering/constrained-prompting?lang=de)',
+        '[Wie Sie ein Multi-Model Dispatch System bauen](/prompt-engineering/multi-model-dispatch?lang=de)',
+        '[Prompt Testing & Evaluierungs-Framework](/prompt-engineering/prompt-testing?lang=de)',
+      ],
+    },
+    faqSection: {
+      title: 'Häufig gestellte Fragen',
+      faqs: [
+        {
+          q: 'Funktioniert Chain-of-Thought auf allen Modellen?',
+          a: 'Chain-of-Thought funktioniert auf den meisten Modellen mit 7B+ Parametern, aber der Nutzen variiert. Es ist am wirksamsten auf mittleren und kleineren Modellen (Haiku, Flash, Llama 4). Bei Frontier-Modellen (Claude Opus 4.7, o3) sind integrierte Thinking-Modi oft effizienter als Prompt-Level CoT.'
+        },
+        {
+          q: 'Erhöht Chain-of-Thought die Kosten?',
+          a: 'Ja, Prompt-Level CoT erhöht die Anzahl der Output-Token (da das Modell die Argumentation vor der abschließenden Antwort schreibt). Integrierte Thinking-Modi (Claude Extended Thinking, OpenAI o3) nutzen separate Thinking-Token-Budgets, die unterschiedliche Abrechnungssätze haben können. Testen Sie beide in Ihrem Anwendungsfall, um den Kompromiss zwischen Kosten und Genauigkeit zu vergleichen.'
+        },
+        {
+          q: 'Wann sollte ich Few-shot CoT statt Zero-shot verwenden?',
+          a: 'Verwenden Sie zunächst Zero-shot CoT – es ist einfacher und funktioniert in den meisten Fällen. Wechseln Sie zu Few-shot (mit 2–5 Beispielen), wenn Zero-shot unzuverlässig ist oder wenn Ihre Domäne spezifische Argumentationsmuster erfordert (z. B. Finanzanalyse mit standardisierter Zeilenstruktur).'
+        },
+        {
+          q: 'Kann ich Chain-of-Thought mit strukturierter Ausgabe (JSON) kombinieren?',
+          a: 'Ja. Sie können das Modell auffordern, sein Denken zunächst in Klartext zu zeigen, dann ein JSON-Objekt mit der abschließenden Antwort auszugeben. Kombinieren Sie die Anweisungen: „Denk Schritt für Schritt. Geben Sie dann Ihr Ergebnis als gültiges JSON aus." Dies ist häufig in Produktionssystemen.'
+        },
+        {
+          q: 'Was ist der Unterschied zwischen Chain-of-Thought und Tree-of-Thought?',
+          a: 'Chain-of-Thought ist eine lineare Abfolge: Schritt 1 → Schritt 2 → ... → Conclusion. Tree-of-Thought erkundet mehrere Zweige (alternative Argumentationspfade) und reduziert schwächere aus, bevor die Antwort erreicht wird. Tree-of-Thought ist mächtiger, aber teurer (benötigt mehrere Modellaufrufe).'
+        },
+        {
+          q: 'Muss ich bei OpenAI o3 Chain-of-Thought Prompting verwenden?',
+          a: 'Nein. OpenAI o3 hat integriertes Thinking, das automatisch aktiviert wird. Sie müssen keine „denk Schritt für Schritt"-Anweisungen hinzufügen. Geben Sie o3 einfach das Problem und stellen Sie das Effort Level (low/medium/high/xhigh) ein, um zu steuern, wie viel Thinking-Budget ausgegeben wird.'
+        },
+        {
+          q: 'Muss ich bei der Verwendung von Sprachmodellen in der EU die DSGVO beachten?',
+          a: 'Ja. Lokale LLMs mit Chain-of-Thought ermöglichen Datenresidenz und verringern die Abhängigkeit von Cloudanbietern. Bei der Nutzung von API-basierten Modellen müssen Sie Datenverarbeitungsverträge (Data Processing Agreements) prüfen und sicherstellen, dass Sie keine sensiblen Daten ohne Zustimmung an externe Server senden. BSI-Grundschutz-Kataloge empfehlen On-Premise-Lösungen für hochsensible Daten.'
+        },
+        {
+          q: 'Ist Chain-of-Thought für den deutschen Mittelstand geeignet?',
+          a: 'Ja, besonders wenn Sie lokale oder selbstgehostete Modelle einsetzen. Kleine und mittlere Unternehmen profitieren von den Transparenz- und Audit-Vorteilen von Chain-of-Thought (auditable Denkprozesse für Compliance). Mit Tools wie Ollama oder LM Studio können Sie CoT kostengünstig auf Standardhardware einsetzen.'
+        },
+      ],
+    },
+    sources: {
+      title: 'Quellen und weiterführende Literatur',
+      items: [
+        'Wei, J., Wang, X., Schuurmans, D., et al. (2022). „Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
+        'Kojima, T., Gu, S. S., Reid, M., Matsuo, Y., & Iwasawa, Y. (2022). „Large Language Models are Zero-Shot Reasoners." NeurIPS 2022. arXiv:2205.11916',
+        'Wang, X., Wei, J., Schuurmans, D., et al. (2023). „Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171',
+        'Anthropic. (2024). „Extended Thinking in Claude." Technische Dokumentation zu Claude Opus 4.7 und Sonnet 4.6 Thinking-Fähigkeiten.',
+        'OpenAI. (2026). „OpenAI o3: Reasoning Models for Competition-Level Problem Solving." OpenAI Dokumentation und Forschungsankündigungen.',
+      ],
+    },
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Funktioniert Chain-of-Thought auf allen Modellen?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Chain-of-Thought funktioniert auf den meisten Modellen mit 7B+ Parametern, aber der Nutzen variiert. Es ist am wirksamsten auf mittleren und kleineren Modellen (Haiku, Flash, Llama 4). Bei Frontier-Modellen (Claude Opus 4.7, o3) sind integrierte Thinking-Modi oft effizienter als Prompt-Level CoT.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Erhöht Chain-of-Thought die Kosten?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja, Prompt-Level CoT erhöht die Anzahl der Output-Token (da das Modell die Argumentation vor der abschließenden Antwort schreibt). Integrierte Thinking-Modi (Claude Extended Thinking, OpenAI o3) nutzen separate Thinking-Token-Budgets, die unterschiedliche Abrechnungssätze haben können. Testen Sie beide in Ihrem Anwendungsfall, um den Kompromiss zwischen Kosten und Genauigkeit zu vergleichen.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Wann sollte ich Few-shot CoT statt Zero-shot verwenden?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Verwenden Sie zunächst Zero-shot CoT – es ist einfacher und funktioniert in den meisten Fällen. Wechseln Sie zu Few-shot (mit 2–5 Beispielen), wenn Zero-shot unzuverlässig ist oder wenn Ihre Domäne spezifische Argumentationsmuster erfordert (z. B. Finanzanalyse mit standardisierter Zeilenstruktur).'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Kann ich Chain-of-Thought mit strukturierter Ausgabe (JSON) kombinieren?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja. Sie können das Modell auffordern, sein Denken zunächst in Klartext zu zeigen, dann ein JSON-Objekt mit der abschließenden Antwort auszugeben. Kombinieren Sie die Anweisungen: „Denk Schritt für Schritt. Geben Sie dann Ihr Ergebnis als gültiges JSON aus." Dies ist häufig in Produktionssystemen.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Was ist der Unterschied zwischen Chain-of-Thought und Tree-of-Thought?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Chain-of-Thought ist eine lineare Abfolge: Schritt 1 → Schritt 2 → ... → Conclusion. Tree-of-Thought erkundet mehrere Zweige (alternative Argumentationspfade) und reduziert schwächere aus, bevor die Antwort erreicht wird. Tree-of-Thought ist mächtiger, aber teurer (benötigt mehrere Modellaufrufe).'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Muss ich bei OpenAI o3 Chain-of-Thought Prompting verwenden?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Nein. OpenAI o3 hat integriertes Thinking, das automatisch aktiviert wird. Sie müssen keine „denk Schritt für Schritt"-Anweisungen hinzufügen. Geben Sie o3 einfach das Problem und stellen Sie das Effort Level (low/medium/high/xhigh) ein, um zu steuern, wie viel Thinking-Budget ausgegeben wird.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Muss ich bei der Verwendung von Sprachmodellen in der EU die DSGVO beachten?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja. Lokale LLMs mit Chain-of-Thought ermöglichen Datenresidenz und verringern die Abhängigkeit von Cloudanbietern. Bei der Nutzung von API-basierten Modellen müssen Sie Datenverarbeitungsverträge (Data Processing Agreements) prüfen und sicherstellen, dass Sie keine sensiblen Daten ohne Zustimmung an externe Server senden. BSI-Grundschutz-Kataloge empfehlen On-Premise-Lösungen für hochsensible Daten.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist Chain-of-Thought für den deutschen Mittelstand geeignet?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja, besonders wenn Sie lokale oder selbstgehostete Modelle einsetzen. Kleine und mittlere Unternehmen profitieren von den Transparenz- und Audit-Vorteilen von Chain-of-Thought (auditable Denkprozesse für Compliance). Mit Tools wie Ollama oder LM Studio können Sie CoT kostengünstig auf Standardhardware einsetzen.'
+        }
+      },
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Chain-of-Thought Varianten',
+    numberOfItems: 5,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Zero-shot CoT',
+        description: 'Fragen Sie „Denken wir Schritt für Schritt" ohne Beispiele. Funktioniert auf den meisten Modellen und ist am einfachsten. Boost: ~10–20 % Genauigkeitsverbesserung.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Few-shot CoT',
+        description: 'Zeigen Sie 2–5 durchgearbeitete Beispiele mit expliziter Argumentation, dann wenden Sie auf ein neues Problem an. Zuverlässiger als Zero-shot. Boost: ~20–40 % Genauigkeit.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Self-Consistency',
+        description: 'Generieren Sie mehrere unabhängige Argumentationspfade, nehmen Sie eine Mehrheitsentscheidung. Deutlich robuster. Boost: ~30–50 % bei schwierigen Aufgaben.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Tree of Thought',
+        description: 'Erkunden Sie mehrere Argumentationszweige und reduzieren schwache aus. Am besten für Planungs- und Spielaufgaben mit vielen Lösungswegen.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 5,
+        name: 'ReAct',
+        description: 'Verflechten Sie Argumentation mit externen Aktionen (API-Aufrufe, Suchen, Code-Ausführung). Am besten für reale Aufgaben mit aktuellen Daten oder Verifikation.'
+      },
+    ]
   },
 },
     fr: {
