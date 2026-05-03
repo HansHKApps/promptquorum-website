@@ -4511,8 +4511,7 @@ schema: {
             'Best 7B all-rounder: **Mistral 7B v0.3** -- reliable, function calling support, and Apache 2.0 licence. As of April 2026, Qwen2.5 7B outperforms it on coding and Llama 3.1 8B leads on English reasoning at the same RAM tier.',
             'Best for multilingual and coding: **Qwen2.5 7B** -- outperforms Mistral 7B on coding benchmarks and supports 29 languages natively.',
             '👉 **Not sure if local is right for you?** Read [Local LLM vs Cloud Comparison](/local-llms/local-llm-limitations) before choosing — covers speed, quality, and cost trade-offs.',
-          ,
-            'Votre premier LLM local s'exécute. Maintenant, apprenez comment le promter efficacement : [qu'est-ce que le prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) enseigne les fondamentaux.',
+            'Votre premier LLM local s\'exécute. Maintenant, apprenez comment le promter efficacement : [qu\'est-ce que le prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) enseigne les fondamentaux.',
             'あなたの最初のローカルLLMが実行されています。今、それを効果的にプロンプトする方法を学びます：[プロンプトエンジニアリングとは](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering)は基礎を教えます。'],
         },
         beginnerChecklist: {
