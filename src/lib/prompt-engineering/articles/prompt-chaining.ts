@@ -167,32 +167,26 @@ export const article: Record<Language, PEArticle> = {
         },
         commonMistakes: {
           title: 'Common Prompt Chaining Mistakes',
-          items: [
-            {
-              mistake: 'Over-chaining (too many steps)',
-              problem: 'Adding more steps than necessary increases latency, multiplies hallucination risk, and makes debugging harder. Each step is an opportunity for the model to make an error.',
-              fix: 'Start with 3–5 steps maximum. Ask yourself: Can this step be merged with the previous one? Will removing it break the output quality? If no, remove it. Chains should be lean, not comprehensive.',
-            },
-            {
-              mistake: 'Unclear output format between steps',
-              problem: 'If step 1 outputs "a list of ideas" and step 2 expects "structured JSON with fields X, Y, Z", the chain breaks because the model doesn\'t know what format to produce.',
-              fix: 'Be explicit: "Output as JSON with keys: idea, category, reasoning." Include an example output format for step 1, so step 2 knows exactly what to expect.',
-            },
-            {
-              mistake: 'No human review checkpoints',
-              problem: 'Errors accumulate downstream. If step 1 produces a bad outline, step 2 writes bad content, and step 3 amplifies the problem. By then, you\'ve wasted tokens and time.',
-              fix: 'Add manual review after steps where errors would be costly (e.g., after fact-checking). Use intermediate checkpoints: Step 1 → Human Review → Step 2 → Step 3.',
-            },
-            {
-              mistake: 'Not testing each step independently',
-              problem: 'You implement all 5 steps, run the chain, and fail. Now you don\'t know which step is broken. Is it step 2? Step 4? Both?',
-              fix: 'Test each prompt individually with real data before chaining. Run "Step 1 in isolation" with 10 test inputs. Verify the outputs before moving to step 2. This makes failures obvious and fixable.',
-            },
-            {
-              mistake: 'Poor error handling and recovery',
-              problem: 'If step 3 fails (e.g., JSON parse error), the whole chain stops with no fallback. Users see a broken result instead of a graceful degradation.',
-              fix: 'Add validation after each step: "If JSON parsing fails, re-prompt the model with the format requirement." Implement fallbacks: If step 3 fails, use a simpler version of step 2 output instead.',
-            },
+          content: [
+            '**Mistake 1: Over-chaining (too many steps)**',
+            'Problem: Adding more steps than necessary increases latency, multiplies hallucination risk, and makes debugging harder. Each step is an opportunity for the model to make an error.',
+            'Fix: Start with 3–5 steps maximum. Ask yourself: Can this step be merged with the previous one? Will removing it break the output quality? If no, remove it. Chains should be lean, not comprehensive.',
+            '',
+            '**Mistake 2: Unclear output format between steps**',
+            'Problem: If step 1 outputs "a list of ideas" and step 2 expects "structured JSON with fields X, Y, Z", the chain breaks because the model doesn\'t know what format to produce.',
+            'Fix: Be explicit: "Output as JSON with keys: idea, category, reasoning." Include an example output format for step 1, so step 2 knows exactly what to expect.',
+            '',
+            '**Mistake 3: No human review checkpoints**',
+            'Problem: Errors accumulate downstream. If step 1 produces a bad outline, step 2 writes bad content, and step 3 amplifies the problem. By then, you\'ve wasted tokens and time.',
+            'Fix: Add manual review after steps where errors would be costly (e.g., after fact-checking). Use intermediate checkpoints: Step 1 → Human Review → Step 2 → Step 3.',
+            '',
+            '**Mistake 4: Not testing each step independently**',
+            'Problem: You implement all 5 steps, run the chain, and fail. Now you don\'t know which step is broken. Is it step 2? Step 4? Both?',
+            'Fix: Test each prompt individually with real data before chaining. Run "Step 1 in isolation" with 10 test inputs. Verify the outputs before moving to step 2. This makes failures obvious and fixable.',
+            '',
+            '**Mistake 5: Poor error handling and recovery**',
+            'Problem: If step 3 fails (e.g., JSON parse error), the whole chain stops with no fallback. Users see a broken result instead of a graceful degradation.',
+            'Fix: Add validation after each step: "If JSON parsing fails, re-prompt the model with the format requirement." Implement fallbacks: If step 3 fails, use a simpler version of step 2 output instead.',
           ],
         },
         testingInsights: {
