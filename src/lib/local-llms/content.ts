@@ -83506,6 +83506,7 @@ schema: {
             '**Impact vitesse :** Q2 est ~30 % plus rapide que Q4 par réduction de la bande passante mémoire, pas des calculs.',
             'Stratégie : Quantifier les grands modèles (Mistral 7B Q2) plutôt qu\'utiliser des modèles minuscules (TinyLlama).',
             'Mistral 7B Q2 > TinyLlama 1.1B Q4 en vitesse et en qualité.',
+            'Les modèles plus rapides sacrifient la qualité pour la vitesse — mais en réglant la température et le top-p, vous pouvez récupérer beaucoup de cette qualité. Une température plus basse (0,1–0,3) sur les modèles rapides produit une sortie plus cohérente que les paramètres par défaut. Consultez [température et top-p expliqués](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity) pour les paramètres exacts.',
           ],
         },
         'cpu-tricks': {
