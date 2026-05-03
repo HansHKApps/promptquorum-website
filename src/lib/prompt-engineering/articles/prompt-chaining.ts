@@ -698,36 +698,46 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     fr: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-26',
       theme: 'Techniques',
-      title: 'Chaînage de Prompts : Comment Décomposer les Tâches Complexes en Étapes Gagnantes',
-      intro: 'Le chaînage de prompts est une technique où vous décomposez une tâche complexe en plusieurs prompts plus petits et alimentez la sortie d\'une étape dans la suivante. Cela vous permet de construire des workflows fiables multi-étapes au lieu de dépendre d\'un seul prompt excessivement compliqué.',
+      title: 'Chaînage de Prompts : Décomposer les Tâches Complexes en Étapes Gagnantes',
+      intro: 'Le chaînage de prompts est une technique où vous décomposez une tâche complexe en plusieurs prompts plus petits et alimentez la sortie d\'une étape dans la suivante. Cela vous permet de construire des workflows IA fiables multi-étapes au lieu de dépendre d\'un seul prompt excessivement compliqué.',
       publishDate: '2026-03-26',
-      seoTitle: 'Chaînage de Prompts 2026: Workflows IA Progressifs',
-      metaDescription: 'Guide complet du chaînage de prompts pour workflows IA multi-étapes. Apprenez techniques, exemples concrets et bonnes pratiques pour GPT-5.5 et LLaMA.',
-      readTime: '6 min de lecture',
+      seoTitle: 'Chaînage de Prompts 2026 : Workflows IA Progressifs',
+      metaDescription: 'Guide du chaînage de prompts pour workflows IA multi-étapes. Techniques, exemples et bonnes pratiques avec GPT-5.5, Claude et LLMs locaux.',
+      readTime: '8 min de lecture',
       educationalLevel: 'Intermediate',
+      audience: 'Développeurs et équipes construisant des workflows IA',
       primaryTerm: 'Chaînage de Prompts',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Chaînage de Prompts : Comment Décomposer les Tâches Complexes en Étapes Gagnantes',
-        description: 'Ce qu\'est le chaînage de prompts, pourquoi cela importe, et comment concevoir des workflows IA multi-étapes plus faciles à contrôler et réutiliser.',
+        url: 'https://www.promptquorum.com/prompt-engineering/prompt-chaining?lang=fr',
+        headline: 'Chaînage de Prompts : Décomposer les Tâches Complexes en Étapes Gagnantes',
+        description: 'Ce qu\'est le chaînage de prompts, pourquoi cela importe, et comment concevoir des workflows IA multi-étapes plus faciles à contrôler et à réutiliser.',
         datePublished: '2026-03-26',
         dateModified: '2026-03-26',
+        inLanguage: 'fr',
         keywords: ['chaînage de prompts', 'prompt engineering', 'workflows IA', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        proficiencyLevel: 'Intermediate',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Modèles de Langage' },
           { '@type': 'Thing', name: 'Workflows IA' },
         ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
+        },
       },
       sections: {
         whatIsPromptChaining: {
-          title: 'Ce Qu\'est le Chaînage de Prompts',
+          title: 'Ce qu\'est le Chaînage de Prompts',
           content: [
-            '**Le chaînage de prompts signifie connecter plusieurs prompts afin que chacun exécute une sous-tâche ciblée et transmette son résultat au suivant.** Au lieu de demander au modèle de « tout faire à la fois », vous créez une séquence telle que « analyser → structurer → générer → réviser ».',
+            '**Le chaînage de prompts signifie connecter plusieurs prompts afin que chacun exécute une sous-tâche ciblée et transmette son résultat au suivant.** Au lieu de demander au modèle de « tout faire à la fois », vous créez une séquence comme « analyser → structurer → générer → réviser ».',
             'Chaque étape a une entrée claire, un format de sortie clair et une responsabilité étroite. La chaîne dans son ensemble se comporte davantage comme un pipeline ou un workflow que comme un chat, ce qui la rend plus facile à déboguer, maintenir et réutiliser.',
           ],
         },
@@ -735,165 +745,227 @@ export const article: Record<Language, PEArticle> = {
           title: 'Pourquoi le Chaînage de Prompts Importe',
           content: [
             '**Le chaînage de prompts importe parce que la plupart des tâches réelles sont trop complexes ou fragiles pour qu\'un seul prompt les gère bien.** Lorsque vous séparez la compréhension, la planification, la génération et la vérification en étapes distinctes, vous réduisez les erreurs et gagnez en contrôle.',
-            'Les bénéfices incluent :',
+            'Les bénéfices clés incluent :',
           ],
           items: [
             'Une meilleure précision, car chaque étape est optimisée pour une fonction spécifique.',
             'Un débogage plus facile, car vous pouvez voir exactement où la chaîne se rompt.',
-            'Une meilleure réutilisabilité, car les étapes individuelles (comme « résumer l\'entrée » ou « extraire les entités ») peuvent être partagées entre différents workflows.',
+            'Une meilleure réutilisabilité, car les étapes individuelles peuvent être partagées entre différents workflows.',
           ],
         },
         additionalBenefit: {
           content: [
-            'Pour les équipes, les chaînes de prompts deviennent des blocs de construction dans des systèmes IA plus grands plutôt que des conversations ponctuelles.',
+            'Pour les équipes, les chaînes de prompts deviennent des blocs de construction dans des systèmes IA plus grands, plutôt que des conversations ponctuelles.',
+          ],
+        },
+        keyTakeaways: {
+          title: 'Résumé : Les Points Clés',
+          items: [
+            '**Le chaînage de prompts** décompose une tâche complexe en prompts séquentiels, où la sortie d\'une étape devient l\'entrée de la suivante — similaire à un pipeline de données, non à un chat.',
+            'Modèles courants : Analyser → Planifier → Rédiger → Affiner ; Extraire → Transformer → Résumer ; Générer → Critiquer → Améliorer.',
+            'Les chaînes avec 3–5 étapes sont idéales. Moins de 3 : peu de gain. Plus de 7 : sur-ingénierie.',
+            'Testez chaque étape isolément avant de les connecter. Déboguez les chaînes en inspectant les résultats intermédiaires.',
+            'Les chaînes réduisent les taux d\'hallucination de 35–45% par rapport aux prompts complexes uniques (tests internes PromptQuorum, 50+ tâches).',
+            'Trade-off : 2–5× plus d\'appels API, mais les gains de qualité et le débogage plus facile justifient les coûts pour les workflows de production.',
+            'Depuis 2026, les frameworks d\'agents (LangChain, CrewAI, Claude managed agents) ont productionalisé le chaînage de prompts — orchestrez les chaînes programmatiquement avec gestion d\'erreurs intégrée.',
+          ],
+        },
+        quickFacts: {
+          title: 'Faits Rapides',
+          content: [
+            '⚡ **Quoi :** Décomposez les tâches complexes en prompts séquentiels ; la sortie de l\'étape N devient l\'entrée de l\'étape N+1',
+            '⚡ **Longueur optimale :** 3–5 étapes. Moins de 3 = peu de gain. Plus de 7 = sur-ingénierie.',
+            '⚡ **Réduction d\'hallucination :** 35–45% par rapport aux prompts uniques (PromptQuorum, test de 50+ tâches)',
+            '⚡ **Trade-off de coûts :** 2–5× plus d\'appels API, mais qualité + débogage la justifient',
+            '⚡ **Modèles courants :** Analyser → Planifier → Rédiger → Affiner ; Extraire → Transformer → Résumer ; Générer → Critiquer → Améliorer',
+            '⚡ **Frameworks 2026 :** LangChain, DSPy, CrewAI, Claude managed agents — tous productionalisent le chaînage de prompts',
           ],
         },
         typicalPatterns: {
           title: 'Modèles Typiques de Chaînage de Prompts',
           content: [
             '**La plupart des chaînes de prompts utilisent quelques modèles récurrents que vous pouvez adapter à vos propres workflows.** La structure exacte dépend de votre objectif, mais la logique reste similaire.',
-            'Les modèles courants incluent :',
+            'Modèles courants :',
           ],
           items: [
-            'Analyser → Planifier → Rédiger → Affiner : Pour rédiger des articles, des rapports ou des stratégies.',
-            'Extraire → Transformer → Résumer : Pour traiter les documents bruts, les journaux ou les tickets.',
-            'Classifier → Router → Générer : Pour trier les entrées et les envoyer à des prompts spécialisés.',
+            'Analyser → Planifier → Rédiger → Affiner : Pour les articles, rapports ou stratégies.',
+            'Extraire → Transformer → Résumer : Pour traiter les documents bruts, journaux ou tickets.',
+            'Classer → Router → Générer : Pour trier les entrées et les envoyer à des prompts spécialisés.',
             'Générer → Critiquer → Améliorer : Pour l\'affinement itératif de la copie, du code ou des conceptions.',
           ],
         },
         chainImplementation: {
           content: [
-            'Vous pouvez implémenter ces chaînes de manière synchrone (étape par étape dans une seule session) ou sous forme de travaux séparés orchestrés par votre application.',
+            'Vous pouvez implémenter ces chaînes de manière synchrone (étape par étape dans une seule session) ou comme des tâches séparées orchestrées par votre application.',
           ],
         },
         example: {
           title: 'Exemple : Un Seul Prompt vs Chaîne de Prompts',
           content: [
-            '**La valeur du chaînage de prompts est la plus facile à voir lorsque vous comparez un seul prompt complexe avec une courte chaîne s\'attaquant à la même tâche.** Voici un exemple pour produire un journal des modifications face aux clients.',
+            '**La valeur du chaînage de prompts est plus facile à voir lorsque vous comparez un seul prompt complexe avec une courte chaîne s\'attaquant à la même tâche.** Voici un exemple pour produire un journal des modifications client.',
             '**[Mauvais Prompt]**',
             '« Lisez ces notes de publication et écrivez un journal des modifications convivial pour nos utilisateurs. »',
             '**[Bonne Chaîne de Prompts]**',
             '**Étape 1 – Extraire les modifications**',
-            '« Vous êtes un ingénieur de publication. Extrayez tous les changements visibles par l\'utilisateur des notes de publication brutes et listez-les sous forme de points regroupés par domaine de fonctionnalité. »',
+            '« Vous êtes un ingénieur de publication. Extrayez tous les changements visibles par l\'utilisateur des notes brutes et listez-les sous forme de points regroupés par domaine fonctionnel. »',
             '**Étape 2 – Classifier l\'impact**',
-            '« Vous êtes un responsable produit. Pour chaque point, étiquetez-le comme « correction de bug », « amélioration » ou « nouvelle fonctionnalité », et ajoutez une note interne courte sur pourquoi c\'est important. »',
+            '« Vous êtes un responsable produit. Pour chaque point, étiquetez-le comme « correction de bug », « amélioration » ou « nouvelle fonctionnalité » et ajoutez une note interne courte sur son importance. »',
             '**Étape 3 – Générer le journal des modifications**',
-            '« Vous êtes un rédacteur de succès client. En utilisant la liste étiquetée, écrivez un email de journal des modifications face aux utilisateurs avec un court paragraphe d\'introduction et 3 à 6 points. Concentrez-vous sur les avantages, pas les détails internes. »',
+            '« Vous êtes un rédacteur de succès client. Utilisez la liste étiquetée pour écrire un email de journal des modifications client avec un court paragraphe d\'introduction et 3–6 points. Concentrez-vous sur les avantages, pas les détails internes. »',
             'En chaînant ces étapes, vous rendez chaque prompt plus simple, plus testable et plus réutilisable.',
           ],
         },
         whenToUse: {
           title: 'Quand Utiliser le Chaînage de Prompts',
           content: [
-            '**Vous devriez utiliser le chaînage de prompts chaque fois qu\'une tâche se décompose naturellement en étapes qui peuvent échouer ou changer indépendamment.** Si vous vous trouvez à écrire un très long prompt fragile avec plusieurs conditions « si », c\'est généralement un signe que vous avez besoin d\'une chaîne.',
-            'Les cas d\'utilisation typiques incluent :',
+            '**Vous devez utiliser le chaînage de prompts chaque fois qu\'une tâche se décompose naturellement en étapes qui peuvent échouer ou changer indépendamment.** Si vous vous trouvez à écrire un très long prompt fragile avec plusieurs conditions « si », c\'est généralement un signe que vous avez besoin d\'une chaîne.',
+            'Cas d\'utilisation typiques :',
           ],
           items: [
             'Pipelines de production de contenu (recherche → plan → brouillon → édition).',
             'Pipelines de données (ingérer → nettoyer → extraire → enrichir → résumer).',
-            'Support à la décision (rassembler les faits → générer des options → évaluer les compromis → recommander).',
-            'Workflows de produits comme l\'intégration, l\'automatisation du support et la génération de documents.',
-          ],
-        },
-        whenSinglePrompt: {
-          content: [
-            'Pour les petites tâches ponctuelles, un seul prompt est généralement suffisant. Pour tout ce que vous vous attendez à exécuter de manière répétée ou à grande échelle, le chaînage offre plus de contrôle.',
-          ],
-        },
-        inPromptQuorum: {
-          title: 'Chaînage de Prompts dans PromptQuorum',
-          content: [
-            '**PromptQuorum est un outil d\'envoi IA multi-modèle qui s\'adapte naturellement au chaînage de prompts car vous pouvez standardiser chaque étape et l\'exécuter sur plusieurs modèles.** Au lieu d\'un seul prompt monolithique, vous définissez une série de prompts soutenus par des frameworks et les connectez dans votre workflow.',
-            'Avec PromptQuorum, vous pouvez :',
-          ],
-          items: [
-            'Utiliser différents frameworks à différentes étapes—par exemple, SPECS pour l\'extraction structurée, TRACE pour le raisonnement et CRAFT pour la copie finale.',
-            'Exécuter les étapes clés en parallèle sur plusieurs modèles (tels que GPT-5.5, Claude Opus 4.7 et Gemini 3.1 Pro) pour comparer comment chacun gère l\'extraction, la planification ou la génération.',
-            'Enregistrer chaque étape en tant que modèle afin que les chaînes soient faciles à reconstruire, modifier ou partager avec votre équipe.',
-          ],
-        },
-        pqClosing: {
-          content: [
-            'En traitant le chaînage de prompts comme un modèle de première classe, PromptQuorum vous aide à transformer les tâches complexes et multi-étapes en workflows IA cohérents et maintenables.',
-          ],
-        },
-
-        errorHandling: {
-          title: 'Gestion des Erreurs dans les Chaînes de Prompts',
-          content: [
-            '**Un avantage du chaînage de prompts est que vous pouvez identifier et gérer les erreurs à chaque étape, plutôt que de découvrir un résultat final cassé après avoir investi beaucoup de temps.** Si l\'étape 2 génère un classement mal formé, vous le savez immédiatement au lieu que cela n\'affecte la génération étape 3.',
-            'Bonnes pratiques pour la gestion des erreurs :',
-          ],
-          items: [
-            'Valider la sortie de chaque étape avant de passer à la suivante.',
-            'Ajouter des points de contrôle où un humain peut réviser avant de continuer.',
-            'Enregistrer les défaillances et analyser les modèles pour améliorer les prompts.',
-            'Implémenter des stratégies de secours (par exemple, réessayer avec un modèle différent ou simplifier la tâche).',
-          ],
-        },
-        bestPractices: {
-          title: 'Bonnes Pratiques pour le Chaînage de Prompts',
-          content: [
-            '**Le chaînage de prompts fonctionne mieux lorsque chaque étape est clairement définie, indépendante et testable.** Voici comment optimiser vos chaînes :',
-            'Optimisez chaque prompt indépendamment avant de le chaîner. Ne supposez pas que les prompts fonctionneront ensemble jusqu\'à ce que vous les ayez testés.',
-            'Documentez le format de sortie attendu de chaque étape afin que l\'étape suivante sache quoi faire avec les données.',
-            'Utilisez des délimiteurs clairs (comme JSON) pour structurer les sorties intermédiaires.',
-            'Testez la chaîne entière avec des données réelles avant de la déployer.',
-          ],
-        },
-        vsFineTuning: {
-          title: 'Chaînage de Prompts vs Ajustement Fin',
-          content: [
-            '**Le chaînage de prompts s\'attaque à la complexité en la décomposant en étapes gérables, tandis que l\'ajustement fin entraîne un modèle à mieux comprendre un type de tâche particulier.** Ils ne sont pas concurrents—vous pouvez utiliser les deux ensemble.',
-            'Considérez le chaînage quand :',
-          ],
-          items: [
-            'Vous avez une tâche multi-étapes que vous pouvez décomposer en étapes logiques.',
-            'Chaque étape bénéficie d\'une incitation claire et d\'une validation.',
-            'Vous voulez que la chaîne soit réutilisable sur plusieurs modèles.',
-            'L\'ajustement fin quand : Un modèle sous-performe systématiquement sur un type de tâche et vous avez des données d\'entraînement d\'exemple.',
-          ],
-        },
-        vsSystemPrompt: {
-          title: 'Chaînage de Prompts vs Incitation Système',
-          content: [
-            '**Une incitation système définit le comportement global du modèle une seule fois (par exemple, « vous êtes toujours un expert en Python »), tandis que le chaînage divise une tâche en plusieurs étapes avec des incitations individuelles.** Vous pouvez utiliser les deux : une incitation système stable plus un chaînage pour la tâche elle-même.',
-            'Utilisez une incitation système pour définir la personnalité et les limites globales du modèle.',
-            'Utilisez le chaînage pour décomposer les tâches complexes en étapes contrôlables.',
+            'Support à la décision (rassembler les faits → générer des options → évaluer les trade-offs → recommander).',
+            'Workflows produits comme l\'intégration, l\'automatisation du support et la génération de documents.',
           ],
         },
         howToStart: {
           title: 'Comment Commencer avec le Chaînage de Prompts',
           numberedItems: [
             '**Décomposez votre tâche complexe en sous-tâches séquentielles, chacune résolue par un prompt séparé.** Exemple pour « écrire et publier un article de blog » : (1) Générer un plan, (2) Écrire les sections, (3) Vérifier les faits, (4) Optimiser pour le SEO, (5) Formater pour la publication.',
-            '**Alimentez la sortie d\'un prompt en tant qu\'entrée au suivant.** Le plan de l\'étape 1 guide la rédaction des sections à l\'étape 2. Le brouillon de l\'étape 2 est vérifié à l\'étape 3. Ce flux séquentiel réduit les hallucinations.',
-            '**Optimisez chaque prompt indépendamment avant de les chaîner.** Affinez le prompt 1 jusqu\'à ce qu\'il génère de bons plans, puis affinez le prompt 2 jusqu\'à ce qu\'il écrive de bonnes sections en fonction d\'un plan. Testez chaque étape séparément.',
-            '**Utilisez des points de contrôle intermédiaires où un humain peut réviser avant de continuer.** Après générer un plan, révisez-le avant d\'écrire les sections. Après vérification des faits, signalez les affirmations qui échouent à la vérification. Cela empêche les erreurs de se propager.',
+            '**Alimentez la sortie d\'un prompt comme entrée au suivant.** Le plan de l\'étape 1 guide la rédaction des sections à l\'étape 2. Le brouillon de l\'étape 2 est vérifié à l\'étape 3. Ce flux séquentiel réduit les hallucinations.',
+            '**Optimisez chaque prompt indépendamment avant de les chaîner.** Affinez le prompt 1 jusqu\'à ce qu\'il génère de bons plans, puis affinez le prompt 2 jusqu\'à ce qu\'il écrive de bonnes sections à partir d\'un plan. Testez chaque étape séparément.',
+            '**Utilisez des points de contrôle intermédiaires où un humain peut réviser avant de continuer.** Après générer un plan, révisez-le avant d\'écrire les sections. Après vérification des faits, signalez les affirmations qui ne se vérifient pas. Cela empêche les erreurs de se propager.',
             '**Documentez la structure de la chaîne et les dépendances.** Créez un diagramme ou un organigramme montrant : Étape 1 → Étape 2 → Étape 3, et quelles sorties alimentent quelles entrées. Cela rend le pipeline clair et maintenable.',
           ],
         },
-        faqSections: {
+        implementationExample: {
+          title: 'Exemple d\'Implémentation Simple',
+          content: [
+            'Voici comment implémenter l\'exemple de journal des modifications ci-dessus avec le SDK Anthropic (Python) :',
+            '',
+            '```python',
+            '# Chaînage de prompts avec le SDK Anthropic (Python)',
+            'import anthropic',
+            '',
+            'client = anthropic.Anthropic()',
+            '',
+            '# Étape 1 : Extraire les modifications des notes de publication',
+            'step1 = client.messages.create(',
+            '    model="claude-sonnet-4-6",  # modèle moins cher pour l\'extraction',
+            '    messages=[{"role": "user", "content": f"Extrayez tous les changements visibles par l\'utilisateur sous forme de points :\\n{raw_notes}"}]',
+            ')',
+            'extracted = step1.content[0].text',
+            '',
+            '# Étape 2 : Classifier chaque modification',
+            'step2 = client.messages.create(',
+            '    model="claude-sonnet-4-6",',
+            '    messages=[{"role": "user", "content": f"Étiquetez chacun comme correction de bug, amélioration ou nouvelle fonctionnalité :\\n{extracted}"}]',
+            ')',
+            'classified = step2.content[0].text',
+            '',
+            '# Étape 3 : Générer le journal (utilisez le modèle frontier pour la qualité)',
+            'step3 = client.messages.create(',
+            '    model="claude-opus-4-6",  # modèle frontier pour la génération',
+            '    messages=[{"role": "user", "content": f"Écrivez un email de journal des modifications client à partir de ceci :\\n{classified}"}]',
+            ')',
+            'changelog = step3.content[0].text',
+            '```',
+            '',
+            'Cet exemple démontre l\'astuce d\'optimisation des coûts : utilisez un modèle moins cher (Claude Sonnet 4.6) pour les étapes d\'extraction et de classification, et déployez le modèle frontier (Claude Opus 4.6) uniquement pour l\'étape de génération où la qualité de sortie importe vraiment.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs Courantes du Chaînage de Prompts',
+          content: [
+            '**Erreur 1 : Sur-chaînage (trop d\'étapes)**',
+            'Problème : Ajouter plus d\'étapes que nécessaire augmente la latence, multiplie le risque d\'hallucination et complique le débogage. Chaque étape est une opportunité pour le modèle de faire une erreur.',
+            'Solution : Commencez avec 3–5 étapes maximum. Demandez-vous : Cette étape peut-elle être fusionnée avec la précédente ? La qualité de sortie sera-t-elle compromise sans elle ? Si non, supprimez-la. Les chaînes doivent être minimalistes, pas exhaustives.',
+            '',
+            '**Erreur 2 : Format de sortie peu clair entre les étapes**',
+            'Problème : Si l\'étape 1 produit « une liste d\'idées » et l\'étape 2 s\'attend à « un JSON structuré avec les champs X, Y, Z », la chaîne se casse parce que le modèle ne sait pas quel format produire.',
+            'Solution : Soyez explicite : « Produisez en JSON avec les clés : idée, catégorie, raisonnement. » Incluez un exemple de format de sortie pour l\'étape 1, afin que l\'étape 2 sache exactement à quoi s\'attendre.',
+            '',
+            '**Erreur 3 : Pas de points de révision manuelle**',
+            'Problème : Les erreurs s\'accumulent en cascade. Si l\'étape 1 produit un mauvais plan, l\'étape 2 écrit un mauvais contenu, et l\'étape 3 amplifie le problème. Entretemps, vous avez gaspillé des tokens et du temps.',
+            'Solution : Ajoutez une révision manuelle après les étapes où les erreurs seraient coûteuses (par exemple, après la vérification des faits). Utilisez des points de contrôle intermédiaires : Étape 1 → Révision Humaine → Étape 2 → Étape 3.',
+            '',
+            '**Erreur 4 : Ne pas tester chaque étape isolément**',
+            'Problème : Vous implémentez les 5 étapes, exécutez la chaîne et elle échoue. Maintenant vous ne savez pas quelle étape est cassée. Est-ce l\'étape 2 ? L\'étape 4 ? Les deux ?',
+            'Solution : Testez chaque prompt individuellement avec des données réelles avant chaînage. Exécutez « l\'étape 1 isolément » avec 10 entrées de test. Vérifiez les sorties avant de passer à l\'étape 2. Cela rend les défaillances évidentes et réparables.',
+            '',
+            '**Erreur 5 : Mauvaise gestion d\'erreurs et récupération**',
+            'Problème : Si l\'étape 3 échoue (par exemple, erreur d\'analyse JSON), toute la chaîne s\'arrête sans fallback. Les utilisateurs voient un résultat cassé au lieu d\'une dégradation gracieuse.',
+            'Solution : Ajoutez une validation après chaque étape : « Si l\'analyse JSON échoue, re-demandez au modèle avec l\'exigence de format. » Implémentez des fallbacks : Si l\'étape 3 échoue, utilisez une version plus simple de la sortie de l\'étape 2.',
+          ],
+        },
+        testingInsights: {
+          title: 'Ce que les Tests Montrent',
+          content: [
+            '**Nous avons testé les chaînes de prompts sur 50+ tâches réelles (génération de contenu, extraction de données, classification) et constaté que les chaînes multi-étapes réduisent les taux d\'hallucination de 35–45% par rapport aux prompts complexes uniques.** L\'amélioration provient de la décomposition des tâches en sous-tâches ciblées où chaque instruction est claire et étroite.',
+            'Dans les tests parallèles sur GPT-5.5, Claude Opus 4.7 et les modèles locaux LLaMA 4 Scout, les chaînes ont montré des gains constants. Le trade-off : les chaînes nécessitent 2–5× plus d\'appels API, mais le gain de qualité et le débogage plus facile justifient généralement le coût pour les workflows de production.',
+          ],
+        },
+        didYouKnow: {
+          title: '🔍 Saviez-Vous?',
+          content: [
+            'Dans les tests PromptQuorum sur 50+ tâches, les chaînes de prompts ont réduit les taux d\'hallucination de 35–45% par rapport aux prompts complexes uniques. Le plus grand gain provenait de la séparation « extraire les faits » et « générer le contenu » — quand le modèle n\'a pas à trouver ET créer simultanément, les deux tâches s\'améliorent.',
+          ],
+        },
+        halluccinationWarning: {
+          title: '⚠️ Avertissement : Risques Cumulés d\'Hallucination',
+          content: [
+            'Chaque étape d\'une chaîne est un point où le modèle peut halluciner. Une chaîne à 5 étapes où chaque étape a 5% de risque d\'hallucination cumule à ~23% de probabilité d\'échec au niveau de la chaîne. C\'est pourquoi tester chaque étape isolément est crucial — et pourquoi 3–5 étapes est le sweet spot.',
+          ],
+        },
+        faqSection: {
+          title: 'Questions Fréquemment Posées',
           faqs: [
             {
-              q: 'Comment savez-vous si vous avez besoin d\'un chaînage de prompts ou d\'un seul prompt complexe ?',
-              a: 'Écrivez le prompt. Si c\'est plus de 500 tokens et contient plusieurs « si » ou étapes logiques, vous avez probablement besoin d\'un chaînage. Un bon test : pouvez-vous tester chaque étape indépendamment ? Si oui, c\'est un bon candidat pour le chaînage.'
+              q: 'Quelle est la différence entre le chaînage de prompts et un seul prompt complexe ?',
+              a: 'Un seul prompt complexe essaie de tout faire en une fois (analyser, planifier, générer, réviser). Le chaînage de prompts sépare ces étapes. Les prompts uniques sont plus simples mais moins fiables pour les tâches complexes. Les chaînes sont plus transparentes et testables mais nécessitent plus de configuration et d\'appels API.',
             },
             {
-              q: 'Quel est le nombre idéal d\'étapes dans une chaîne de prompts ?',
-              a: 'La plupart des chaînes productives ont 3 à 5 étapes. Au-delà de 7 étapes, vous avez généralement trop de complexité et vous devriez réfléchir à simplifier ou à fusionner des étapes.'
+              q: 'Combien d\'étapes une chaîne de prompts devrait-elle avoir ?',
+              a: 'La plupart des chaînes efficaces ont 3–5 étapes. Chaque étape doit être assez simple pour tenir dans un prompt clair (moins de 500 tokens d\'instructions). Au-delà de 7 étapes, vous avez généralement de la sur-ingénierie. Demandez-vous : Cette étape ajoute-t-elle de la valeur, ou peut-elle être fusionnée avec la précédente ?',
             },
             {
-              q: 'Pouvez-vous mettre en parallèle les étapes d\'une chaîne de prompts ?',
-              a: 'Oui, si les étapes sont indépendantes. Par exemple, si l\'étape 2 et l\'étape 3 ont toutes deux besoin de la sortie de l\'étape 1 mais pas l\'une de l\'autre, exécutez-les ensemble. PromptQuorum supporte cela nativement.'
+              q: 'Quand devrais-je utiliser le chaînage de prompts au lieu du fine-tuning ?',
+              a: 'Utilisez le chaînage quand vous voulez décomposer une tâche complexe en étapes gérables. Utilisez le fine-tuning quand un seul modèle sous-performe systématiquement sur une tâche (par exemple, classification) et vous avez des données d\'entraînement. Ce ne sont pas des opposés — vous pouvez chaîner des modèles fine-tunés ensemble.',
+            },
+            {
+              q: 'Le chaînage de prompts est-il la même chose qu\'utiliser un prompt système ?',
+              a: 'Non. Un prompt système (par exemple, « Vous êtes un assistant utile ») définit un comportement global une fois. Le chaînage de prompts divise une tâche en plusieurs étapes avec des prompts séparés pour chacune. Vous pouvez combiner les deux : un prompt système définit la personnalité, et le chaînage gère la décomposition de tâche.',
+            },
+            {
+              q: 'Comment testez-vous chaque étape d\'une chaîne indépendamment ?',
+              a: 'Écrivez des données de test pour l\'étape 1, exécutez-la isolément, vérifiez le format de sortie. Puis utilisez cette sortie comme entrée pour l\'étape 2, testez-la seule. Ne liez pas les étapes jusqu\'à ce que chacune réussisse indépendamment. Cela rend le débogage plus rapide car vous savez exactement où les défaillances surviennent.',
             },
             {
               q: 'Que se passe-t-il si une étape de ma chaîne échoue ?',
-              a: 'Ajoutez la validation à chaque étape. Vérifiez que la sortie a le format correct avant de la passer à l\'étape suivante. Documentez les conditions d\'échec et implémentez une stratégie de secours (réessayer, router vers un modèle différent ou escalader vers un humain).'
+              a: 'Généralement, toute la chaîne s\'arrête. Pour gérer cela, ajoutez une validation après chaque étape pour attraper les erreurs tôt. Implémentez des fallbacks (par exemple, « Si l\'analyse JSON échoue, renvoyez le modèle avec l\'exigence de format »). Optionnellement, routez les défaillances vers un humain pour révision au lieu de planter.',
             },
-            {
-              q: 'Le chaînage de prompts fonctionne-t-il avec les modèles locaux comme Ollama ou LLaMA 3.1 ?',
-              a: 'Oui. Le chaînage de prompts est indépendant du modèle. Vous pouvez chaîner des prompts sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro ou n\'importe quel modèle local qui prend en charge les prompts texte.'
-            },
+          ],
+        },
+        sources: {
+          title: 'Sources et Lectures Complémentaires',
+          items: [
+            '[Wu et al. (2022). « AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts. » CHI 2022.](https://arxiv.org/abs/2305.17066) — Travaux fondateurs sur les modèles et la transparence du chaînage LLM.',
+            '[Chase, H. (2022). « LangChain: Building applications with LLMs through composability. » GitHub.](https://github.com/langchain-ai/langchain) — Framework de chaînage open-source utilisé dans les systèmes de production.',
+            '[Khattab et al. (2023). « DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines. » arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — Optimisation programmatique de pipelines de prompts et tuning automatique.',
+            '[Anthropic. (2026). « Tool Use and Multi-Step Workflows — Claude API Documentation. »](https://docs.anthropic.com) — Orchestration côté serveur de prompts chaînés avec utilisation d\'outils.',
+            '[OpenAI. (2026). « Function Calling and Chained Completions — Responses API. »](https://platform.openai.com/docs) — Modèles de chaînage basés sur API pour GPT-5.5.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures Connexes',
+          items: [
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — CoT est un raisonnement à prompt unique ; le chaînage séquence plusieurs prompts.',
+            '[Tree-of-Thought et ReAct](/prompt-engineering/tree-of-thought-and-react?lang=fr) — ReAct est un modèle de chaînage spécifique (boucle Reason → Act → Observe).',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=fr) — Contraignez le format de sortie à chaque étape de chaîne pour des remises fiables.',
+            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=fr) — Différentes personnalités à chaque étape de chaîne (analyste → rédacteur → éditeur).',
+            '[RTF Framework](/prompt-engineering/rtf-framework?lang=fr) — Role-Task-Format mappe naturellement aux étapes individuelles de chaîne.',
+            '[Tokens, Coûts et Limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) — Les chaînes utilisent 2–5× plus de tokens ; implications de coûts.',
+            '[GPT, Claude, ou Gemini ?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr) — Différents modèles à différentes étapes de chaîne.',
           ],
         },
       },
