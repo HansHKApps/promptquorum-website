@@ -540,6 +540,388 @@ export const article: Record<Language, PEArticle> = {
     },
   },
 
+  de: {
+    freshness_tier: 'evergreen',
+    theme: 'Workflows & Automation',
+    title: 'Prompt Engineering für Support-Operationen: Konsistente, genaue Response-Templates',
+    seoTitle: 'Prompt Engineering für Support-Teams: Response-Templates',
+    metaDescription: 'Prompt Engineering für Support-Teams: Triage-Templates, Eskalationslogik, Ton-Kontrollen, Richtlinien-Compliance-Guardrails, Edge-Case-Tests und Human-Handoff-Muster.',
+    ogDescription: 'Wie Support-Teams Prompt Engineering nutzen: Triage- und Eskalations-Templates, Ton- und Empathie-Kontrollen, Richtlinien-Compliance-Guardrails, Edge-Case-Tests und wann an Menschen übergeben.',
+    twitterDescription: 'PE für Support-Ops: Triage-Templates, Eskalationslogik, Ton-Kontrollen, Richtlinien-Guardrails. Konsistente Antworten ohne menschlichen Touch zu verlieren.',
+    intro: 'Support-Teams sehen sich einer Prompt-Herausforderung gegenüber, die für die meisten anderen Use-Cases nicht zutrifft: Die Kosten einer schlechten Ausgabe sind nicht kosmetisch — sie sind eine Kundenbeziehung, Richtlinienverletzung oder rechtliche Haftung. Prompt Engineering für Support-Operationen bedeutet Design mit Genauigkeit, Konsistenz und korrekter Eskalation als primäre Ziele.',
+    leadAnswerBlock: '**Support-Prompts brauchen strengere Constraints als die meisten Prompt-Typen, weil Fehler kundenorientiert, richtliniensensitiv und oft rechtlich bedeutsam sind.** Die Design-Priorität ist nicht Kreativität — es ist Genauigkeit, Konsistenz und korrekte Eskalation, wenn die KI eine Anfrage nicht bearbeiten sollte.',
+    quickFacts: [
+      'Support-Prompt-Fehler sind kundenorientiert und rechtlich bedeutsam — Genauigkeit, Konsistenz und korrekte Eskalation sind die Design-Prioritäten, nicht Kreativität',
+      'Triage-Prompts routen Issues zum richtigen Team: Level 1 (sofortige Lösung), Level 2 (Untersuchung erforderlich), Level 3 (Human-Eskalation) — Entscheidungsregeln präzise definieren',
+      'Support-Ton muss empathisch und on-brand sein ohne insincere zu wirken — 3–5 Ton-Samples kodieren und über Modelle auf Konsistenz testen',
+      'Richtlinien-Compliance-Guardrails verhindern halluzinierte Richtlinien, falsche Rückerstattungsbeträge oder nicht autorisierte Zusagen — Referenz-Dokumente und Decision-Trees im Prompt bereitstellen',
+      'Support Edge-Cases (Abrechnungsdispute, Produktmängel, Beschwerden) divergieren zwischen Modellen — alle Kandidaten-Modelle auf 15+ Edge-Cases vor Deployment testen',
+      'Human-Handoff-Muster klären, wann die KI ablehnen und an eine Person routen sollte — 3–5 Eskalations-Trigger definieren und Support-Team trainieren, sie zu erkennen',
+    ],
+    toc: [
+      { label: 'Warum Support-Prompting anders ist als allgemeines Prompt Engineering', anchor: 'support-prompting-difference' },
+      { label: 'Triage-Prompt-Template: Issues zum richtigen Team routen', anchor: 'triage-template' },
+      { label: 'Support-Ton und Empathie-Kontrollen', anchor: 'tone-controls' },
+      { label: 'Richtlinien-Compliance-Guardrails', anchor: 'policy-guardrails' },
+      { label: 'Eskalations- und Human-Handoff-Muster', anchor: 'escalation-patterns' },
+      { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+      { label: 'Weiterführende Ressourcen', anchor: 'related-reading' },
+      { label: 'Quellen', anchor: 'sources' },
+    ],
+    publishDate: '2026-05-02',
+    readTime: '9 Min. Lesezeit',
+    educationalLevel: 'Mittelstufe',
+    primaryTerm: 'Prompt Engineering für Support-Operationen',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/prompt-engineering/pe-for-support-operations?lang=de',
+      headline: 'Prompt Engineering für Support-Operationen: Konsistente, genaue Response-Templates',
+      description: 'Wie Support-Teams Prompts für Triage, Eskalation, Lösung und Follow-up designen — einschließlich Ton-Kontrollen, Richtlinien-Compliance-Guardrails und Human-Handoff-Muster.',
+      datePublished: '2026-05-02',
+      inLanguage: 'de',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-support-operations?lang=de', width: 1200, height: 630 },
+      keywords: ['Prompt Engineering', 'Support-Operationen', 'Kundenservice', 'Triage-Templates', 'Eskalationslogik', 'Richtlinien-Compliance'],
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'Support Operations' },
+        { '@type': 'Thing', name: 'Customer Service AI' },
+        { '@type': 'Thing', name: 'Escalation Management' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Warum brauchen Support-Prompts zusätzliche Constraints im Vergleich zu anderen Prompt-Typen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Support-Prompts sind kundenorientiert, richtliniensensitiv und oft rechtlich bedeutsam. Eine falsche Antwort im Support ist kein ästhetisches Problem — es kann eine Richtlinienverletzung, Haftung oder Verlust einer Kundenbeziehung sein. Dies bedeutet, dass Genauigkeit, Konsistenz und korrekte Eskalation in die Prompt-Struktur designt werden müssen, nicht in Modell-Standards verlassen werden.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Welche Eskalations-Trigger sollten immer in einem Support-Prompt sein?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Jeder Support-Prompt sollte mindestens 5 Eskalations-Trigger enthalten: rechtliche Sprache (Drohungen, Anwalts-Referenzen), Kontolöschungs-Anfragen, Datensicherheits-Erwähnungen, wiederholte P1-Tickets für das gleiche Problem und explizite Kundenanfragen nach einem menschlichen Agenten. Wenn eine dieser Bedingungen erkannt wird, sollte die KI bestätigen, den Kontext zusammenfassen, das Ticket kennzeichnen und weiterleiten — nicht versuchen, das Problem selbst zu lösen.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Wie testet man einen Support-Prompt auf Richtlinien-Compliance?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Testen Sie einen Support-Prompt, indem Sie ihn gegen 10 schwierige Ticket-Beispiele laufen lassen, die Edge-Cases enthalten: ein Kunde mit rechtlicher Sprache, eine Anfrage für Preisgestaltung, die Ihre Richtlinie verbietet, eine medizinische Frage und ein wiederholtes P1-Problem. Bewerten Sie jede Ausgabe danach, ob sie die korrekte Eskalation auslöst oder das Topic-Constraint respektiert. Jede Ausgabe, die auf ein eingeschränktes Topic antwortet oder eine Trigger-Bedingung nicht eskaliert, ist ein Richtlinien-Fehler.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Sollte sich die KI entschuldigen, wenn sie an einen menschlichen Agenten übergeben wird?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Nein. Eine Handoff-Entschuldigung impliziert, dass die KI den Kunden enttäuscht hat, was das Handoff negativ rahmt. Das korrekte Handoff-Muster ist: das Problem bestätigen, Kontext für den menschlichen Agenten zusammenfassen, das Ticket mit dem Eskalations-Grund kennzeichnen und zum richtigen Team weiterleiten. Die Nachricht zum Kunden sollte neutral und professionell sein — nicht entschuldigend.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Wann sollte ein Support-KI an einen menschlichen Agenten übergeben?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Fünf Bedingungen erfordern sofortige Human-Eskalation: (1) Rechtliche Sprache (Anwalt, Klage, etc.); (2) Kontolöschungs-Anfragen; (3) Datensicherheits-Bedenken; (4) Wiederholte P1-Issues im gleichen Ticket; (5) Explizite Kundenanfrage nach einem Menschen. Definieren Sie diese Trigger explizit im Prompt und trainieren Sie Support-Teams, die Handoff-Signale der KI zu erkennen.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Welche zusätzlichen Anforderungen gibt es für Support-Teams in Deutschland?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Deutsche Support-Teams müssen DSGVO- und lokale Datenschutzbestimmungen beachten. Führen Sie auf einer Basis vor Eskalation durch: (1) Keine persönlichen Daten an KI-Systeme übergeben, die außerhalb der EU laufen; (2) KI-Antworten dokumentieren zur Compliance-Überprüfung; (3) Eskalations-Muster für datensensitive Anfragen definieren; (4) Support-Team schulen auf DSGVO-Anforderungen beim Umgang mit KI-generierten Responses.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Wie skalieren Support-Teams KI-Prompts über mehrere Sprachen und Regionen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Testen Sie Support-Prompts auf lokale Unterschiede in Ton, Eskalations-Regeln und Richtlinien-Compliance. Was in den USA als "Customer retention best practice" gilt, kann in Deutschland gegen Datenschutzregeln verstoßen. Definieren Sie sprachspezifische Eskalations-Trigger und genehmigen Sie Prompts pro Region mit lokalem Compliance-Team vor Deployment.',
+          },
+        },
+      ],
+    },
+    sections: {
+      key_takeaways: {
+        title: 'Wichtigste Erkenntnisse',
+        isTldr: true,
+        items: [
+          'Support-Prompts sind kundenorientiert und rechtlich bedeutsam — Design für Genauigkeit, Konsistenz und korrekte Eskalation, nicht für Kreativität.',
+          'Triage-Prompts müssen Issues klar zum richtigen Level routen: Level 1 (solorution via AI), Level 2 (Recherche erforderlich), Level 3 (Human-Eskalation).',
+          'Triage-Prompts müssen Issues klar zum richtigen Level routen: Level 1 (Lösung via KI), Level 2 (Recherche erforderlich), Level 3 (Human-Eskalation). Definieren Sie Entscheidungsregeln präzise.',
+          'Support-Ton muss empathisch bleiben ohne insincere zu wirken — 3–5 Ton-Samples kodieren und über alle Kandidaten-Modelle auf Konsistenz testen vor Deployment.',
+          'Richtlinien-Compliance-Guardrails sind nicht optional — referenz-Dokumente, Decision-Trees und Escalation-Regeln müssen explizit im Prompt kodiert sein.',
+          'Human-Handoff muss klar sein: Definieren Sie 3–5 Eskalations-Trigger und trainieren Sie das Support-Team, KI-Handoff-Signale zu erkennen.',
+        ],
+      },
+      support_prompting_difference: {
+        id: 'support-prompting-difference',
+        title: 'Warum Support-Prompting anders ist als allgemeines Prompt Engineering',
+        content: [
+          '**Support-Prompting unterscheidet sich fundamental, weil Fehler kundenorientiert, richtliniensensitiv und oft rechtlich bedeutsam sind.** Ein Fehler in einem Content-Prompt ist ein ästhetisches Problem. Ein Fehler in einem Support-Prompt kann Kundenvertrauen zerstören, Haftung verursachen oder Richtlinien brechen.',
+        ],
+        items: [
+          '**Genauigkeit über Kreativität:** Support-Prompts sollten präzise, konservativ und nicht halluzinierbar sein. Falsche Informationen über Rückerstattungspolitik, Versandkosten oder Datenschutz sind nicht akzeptabel.',
+          '**Eskalation ist ein Feature, nicht ein Bug:** Ein Support-Prompt muss wissen, *wann nicht zu antworten* und *wie an einen Menschen zu escalieren*. Dies ist genauso wichtig wie die Probleme, die es löst.',
+          '**Richtlinien-Compliance muss explizit sein:** Vaghe Anweisungen führen zu halluzinierten Richtlinien, falschen Zusagen und nicht autorisierten Refunds. Jede Richtlinie muss im Prompt kodiert sein.',
+        ],
+        callouts: [
+          {
+            type: 'key-point',
+            label: 'Design-Priorität',
+            text: 'Für Support-Prompts ist die Priorität: Eskalation vor Versuchen zu helfen. Eine korrekt eskalierte schwierige Frage ist ein Erfolg. Ein schlecht gehandhabtes Edge-Case, das unzufriedenen Kunden hinterlässt, ist ein Fehler.',
+          },
+        ],
+      },
+      triage_template: {
+        id: 'triage-template',
+        title: 'Triage-Prompt-Template: Issues zum richtigen Team routen',
+        content: [
+          '**Ein Triage-Prompt klassifiziert eingehende Support-Anfragen und routed sie zum richtigen Team: Level 1 (KI kann es lösen), Level 2 (Recherche erforderlich), Level 3 (Human-Eskalation).** Ein guter Triage-Prompt kombiniert Entscheidungsregeln mit Edge-Case-Handling.',
+        ],
+        numberedItems: [
+          'Definieren Sie 3 eindeutige Triage-Level: Level 1 = häufige Fragen (Passwort-Reset, Rechnung-FAQ), Level 2 = untersuchungsbedürftig (Refund-Antrag, technisches Problem), Level 3 = Human-Eskalation (Bedrohung, Kontolöschung, rechtliche Anfrage).',
+          'Klassifizieren Sie die Anfrage basierend auf Schlüsselwörtern und Mustern: Suchen Sie nach bestimmten Trigger-Wörtern ("Lawyer", "Klage", "Personal Data", "Cancel Account").',
+          'Geben Sie für jedes Level spezifische Anweisungen: Level 1 Prompts sollten direkt antworten; Level 2 Prompts sollten den Kunden informieren, dass ein Spezialist sich in Kürze meldet; Level 3 Prompts sollten bestätigen und an ein menschliches Team escalieren.',
+          'Testen Sie Triage-Genauigkeit auf 20+ Beispiel-Anfragen einschließlich Edge-Cases vor Deployment. Ein Triage-Fehler führt zu fehlgeleiteten oder zu lange verweilenden Anfragen.',
+        ],
+      },
+      tone_controls: {
+        id: 'tone-controls',
+        title: 'Support-Ton und Empathie-Kontrollen',
+        content: [
+          '**Support-Ton ist ein Output-Constraint wie Format oder Zeichenzahl.** Ein zu formaler Ton wirkt unempathisch. Ein zu infomaler Ton wirkt nicht vertrauenswürdig. Kodieren Sie Ton explizit mit Samples und Anweisungen.',
+        ],
+        items: [
+          '**3–5 Ton-Samples kodieren:** Fügen Sie genehmigte Support-Antworten ein, die den Ziel-Ton demonstrieren. Der Prompt sollte Muster sehen, nicht Ton-Adjektive interpretieren.',
+          '**Empathie-Trigger definieren:** Bestimmte Anfrage-Typen erfordern empathische Antworten — Beschwerden, Rückerstattungs-Anfragen, technische Fehler des Kunden. Kodieren Sie explizit, welche Anfrage-Typen zusätzliche Empathie erfordern.',
+          '**Modell-Unterschiede testen:** Claude ist standhaft empathisch. GPT-4o ist präziser und kürzer. Testen Sie den gleichen Support-Prompt über 2–3 Modelle und vergleichen Sie den Ton vor Deployment.',
+        ],
+      },
+      policy_guardrails: {
+        id: 'policy-guardrails',
+        title: 'Richtlinien-Compliance-Guardrails',
+        content: [
+          '**Richtlinien-Guardrails verhindern, dass die KI halluzinierte Richtlinien, falsche Rückerstattungs-Beträge oder nicht autorisierte Zusagen macht.** Sie sind nicht optional — sie sind ein wesentlicher Support-Prompt-Bestandteil.',
+        ],
+        items: [
+          '**Referenz-Dokumente bereitstellen:** Pasten Sie die Zusammenfassung Ihrer Rückerstattungs-, Versand- und Datenschutz-Richtlinien direkt in den Prompt. Inline-Referenzen verhindern Halluzinationen besser als generische Anweisungen.',
+          '**Verbotene Topics definieren:** Spezifizieren Sie, welche Anfrage-Typen die KI *nicht beantworten darf*: medizinische Ratschläge, finanzielle Anlageberatung, rechtliche Beratung. Für jedes verbotene Topic sollte der Prompt klar eskalieren.',
+          '**Entscheidungs-Bäume für häufige Policies:** Für Rückerstattungs-Anfragen, erstellen Sie einen Decision-Tree: Ist der Bestellstatus "delivered"? Ist es länger als 30 Tage? Basierend darauf — genehmigen oder eskalieren.',
+        ],
+      },
+      escalation_patterns: {
+        id: 'escalation-patterns',
+        title: 'Eskalations- und Human-Handoff-Muster',
+        content: [
+          '**Human-Handoff muss klar strukturiert sein.** Ein schlecht durchgeführtes Handoff verwirrt den Kunden und den menschlichen Agenten. Definieren Sie die Trigger, das Format und das Message-Pattern.',
+        ],
+        items: [
+          '**5 universelle Eskalations-Trigger:** (1) Rechtliche Sprache (Anwalt, Klage, rechtliche Aktion); (2) Konto-Löschungs-Anfrage; (3) Datensicherheits-Bedenken; (4) Wiederholte P1 für das gleiche Problem; (5) Explizite Anfrage nach einem Menschen.',
+          '**Kein apologetisches Handoff:** Ein Handoff sollte nicht "Es tut mir leid, ich kann nicht helfen" sagen. Stattdessen: "Ich leite Sie an einen Spezialisten weiter, der Ihre Anfrage besser bearbeiten kann." Das ist professionell, nicht defensiv.',
+          '**Kontext für den menschlichen Agenten:** Das Handoff-Nachricht sollte den menschlichen Agenten mit zusammengefasstem Kontext, Anfrage-History und dem Grund für Eskalation versorgen. Menschliche Agenten arbeiten schneller mit gutem Kontext.',
+        ],
+      },
+    },
+  },
+
+  fr: {
+    freshness_tier: 'evergreen',
+    theme: 'Workflows & Automatisation',
+    title: 'Prompt Engineering pour les opérations de support : templates de réponses cohérents et précis',
+    seoTitle: 'Prompt Engineering pour équipes support : templates de réponses',
+    metaDescription: 'Prompt engineering pour équipes support : templates de triage, logique d\'escalade, contrôles de ton, guardrails de conformité politique, tests de cas limites et patterns de transfert humain.',
+    ogDescription: 'Comment les équipes support utilisent le prompt engineering : templates de triage et d\'escalade, contrôles de ton et d\'empathie, guardrails de conformité politique, tests de cas limites et quand passer à l\'humain.',
+    twitterDescription: 'PE pour support ops : templates de triage, logique d\'escalade, contrôles de ton, guardrails politiques. Réponses cohérentes sans perdre le contact humain.',
+    intro: 'Les équipes support font face à un défi de prompting que la plupart des autres cas d\'usage n\'ont pas : le coût d\'une mauvaise sortie n\'est pas esthétique — c\'est une relation client, une violation politique ou une exposition légale. Le prompt engineering pour opérations support signifie concevoir la précision, la cohérence et l\'escalade correcte comme objectifs principaux.',
+    leadAnswerBlock: '**Les prompts support ont besoin de contraintes plus strictes que la plupart des types de prompts parce que les erreurs sont orientées client, sensibles aux politiques et souvent légalement significatives.** La priorité de conception n\'est pas la créativité — c\'est la précision, la cohérence et l\'escalade correcte quand l\'IA ne doit pas gérer une demande.',
+    quickFacts: [
+      'Les erreurs de prompts support sont orientées client et légalement significatives — précision, cohérence et escalade correcte sont les priorités de conception, pas la créativité',
+      'Les prompts de triage routent les problèmes vers la bonne équipe : niveau 1 (résolution immédiate), niveau 2 (investigation requise), niveau 3 (escalade humaine) — définir les règles de décision précisément',
+      'Le ton support doit être empathique et aligné à la marque sans être insincère — encoder 3–5 exemples de ton et tester la cohérence entre les modèles',
+      'Les guardrails de conformité politique empêchent les hallucinations de politiques, les montants de remboursement incorrects ou les engagements non autorisés — fournir des documents de référence et des arbres de décision dans le prompt',
+      'Les cas limites support (litiges de facturation, défauts produits, plaintes) divergent entre les modèles — tester tous les modèles candidats sur 15+ cas limites avant déploiement',
+      'Les patterns de transfert humain clarifient quand l\'IA doit refuser et router vers une personne — définir 3–5 déclencheurs d\'escalade et former l\'équipe support à les reconnaître',
+    ],
+    toc: [
+      { label: 'Pourquoi le prompting support diffère du prompt engineering général', anchor: 'support-prompting-difference' },
+      { label: 'Template de prompt de triage : router les problèmes à la bonne équipe', anchor: 'triage-template' },
+      { label: 'Contrôles de ton et d\'empathie support', anchor: 'tone-controls' },
+      { label: 'Guardrails de conformité politique', anchor: 'policy-guardrails' },
+      { label: 'Patterns d\'escalade et de transfert humain', anchor: 'escalation-patterns' },
+      { label: 'FAQ', anchor: 'faq' },
+      { label: 'Lectures recommandées', anchor: 'related-reading' },
+      { label: 'Sources', anchor: 'sources' },
+    ],
+    publishDate: '2026-05-02',
+    readTime: '9 min de lecture',
+    educationalLevel: 'Intermédiaire',
+    primaryTerm: 'Prompt Engineering pour opérations support',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/prompt-engineering/pe-for-support-operations?lang=fr',
+      headline: 'Prompt Engineering pour les opérations de support : templates de réponses cohérents et précis',
+      description: 'Comment les équipes support conçoivent les prompts pour triage, escalade, résolution et suivi — incluant les contrôles de ton, les guardrails de conformité politique et les patterns de transfert humain.',
+      datePublished: '2026-05-02',
+      inLanguage: 'fr',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-support-operations?lang=fr', width: 1200, height: 630 },
+      keywords: ['prompt engineering', 'opérations support', 'service client', 'templates triage', 'logique escalade', 'conformité politique'],
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'Support Operations' },
+        { '@type': 'Thing', name: 'Customer Service AI' },
+        { '@type': 'Thing', name: 'Escalation Management' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Pourquoi les prompts support ont-ils besoin de constraints supplémentaires comparés à d\'autres types de prompts ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Les prompts support sont orientés client, sensibles aux politiques et souvent légalement significatifs. Une mauvaise réponse en support n\'est pas un problème esthétique — c\'est une violation politique, une responsabilité ou la perte d\'une relation client. Cela signifie que la précision, la cohérence et l\'escalade correcte doivent être conçues dans la structure du prompt, pas laissées aux défauts du modèle.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quels déclencheurs d\'escalade doivent toujours être dans un prompt support ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Chaque prompt support devrait inclure au moins 5 déclencheurs d\'escalade : langage légal (menaces, références à litige), demandes d\'annulation de compte, mentions d\'exposition de données, tickets P1 répétés pour le même problème et demandes explicites d\'agent humain. Quand l\'une de ces conditions est détectée, l\'IA doit reconnaître, résumer le contexte, signaler le ticket et router — pas essayer de résoudre le problème elle-même.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Comment testez-vous un prompt support pour la conformité politique ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Testez un prompt support en l\'exécutant contre 10 exemples de tickets difficiles incluant les cas limites : un client utilisant langage légal, une demande de tarification interdite par politique, une question médicale et un problème P1 répété. Évaluez chaque sortie sur si elle déclenche la bonne escalade ou le bon constraint. Toute sortie qui répond à un sujet restreint ou échoue à escalader une condition d\'escalade est un échec politique.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'L\'IA devrait-elle s\'excuser quand elle transfert à un agent humain ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Non. Une excuses de transfert implique que l\'IA a échoué le client, ce qui encadre le transfert négativement. Le pattern de transfert correct est : reconnaître le problème, résumer le contexte pour l\'agent humain, signaler le ticket avec la raison d\'escalade et router vers la bonne équipe. Le message au client doit être neutre et professionnel — pas d\'excuses.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quand une IA support doit-elle transfert à un agent humain ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Cinq conditions exigent escalade humaine immédiate : (1) Langage légal (avocat, procès, etc.) ; (2) Demandes d\'annulation de compte ; (3) Préoccupations d\'exposition de données ; (4) Problèmes P1 répétés sur le même ticket ; (5) Demande explicite du client pour une personne. Définir ces déclencheurs explicitement dans le prompt et former les équipes support à reconnaître les signaux de transfert de l\'IA.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Y a-t-il des exigences supplémentaires pour les équipes support en France ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Les équipes support françaises doivent respecter les exigences RGPD/CNIL lors de l\'utilisation de l\'IA. Vérifier avant escalade : (1) Ne pas transmettre les données personnelles à des systèmes IA opérant en dehors de l\'UE ; (2) Documenter les réponses générées par l\'IA pour examen de conformité ; (3) Définir les patterns d\'escalade pour demandes sensibles aux données ; (4) Former l\'équipe support aux exigences CNIL lors du traitement des réponses générées par l\'IA.',
+          },
+        },
+      ],
+    },
+    sections: {
+      key_takeaways: {
+        title: 'Points clés',
+        isTldr: true,
+        items: [
+          'Les prompts support sont orientés client et légalement significatifs — concevoir la précision, cohérence et escalade correcte, pas créativité.',
+          'Les prompts de triage doivent router clairement les problèmes au bon niveau : niveau 1 (solution via IA), niveau 2 (recherche requise), niveau 3 (escalade humaine). Définir les règles de décision précisément.',
+          'Le ton support doit rester empathique sans être insincère — coder 3–5 exemples de ton et tester la cohérence sur tous les modèles candidats avant déploiement.',
+          'Les guardrails de conformité politique ne sont pas optionnels — documents de référence, arbres de décision et règles d\'escalade doivent être explicitement codés dans le prompt.',
+          'Le transfert humain doit être clair : définir 3–5 déclencheurs d\'escalade et former l\'équipe support à reconnaître les signaux de transfert de l\'IA.',
+        ],
+      },
+      support_prompting_difference: {
+        id: 'support-prompting-difference',
+        title: 'Pourquoi le prompting support diffère du prompt engineering général',
+        content: [
+          '**Le prompting support diffère fondamentalement parce que les erreurs sont orientées client, sensibles aux politiques et souvent légalement significatives.** Une erreur dans un prompt contenu est un problème esthétique. Une erreur dans un prompt support peut détruire la confiance client, causer responsabilité ou violer politiques.',
+        ],
+        items: [
+          '**Précision sur créativité :** Les prompts support doivent être précis, conservateurs et non-hallucinations. Des informations fausses sur politique remboursement, frais shipping ou confidentialité ne sont pas acceptables.',
+          '**L\'escalade est une feature, pas un bug :** Un prompt support doit savoir *quand ne pas répondre* et *comment escalader vers un humain*. C\'est aussi important que les problèmes qu\'il résout.',
+          '**La conformité politique doit être explicite :** Les instructions vagues mènent à hallucinations de politiques, fausses promesses et remboursements non-autorisés. Chaque politique doit être codée dans le prompt.',
+        ],
+      },
+      triage_template: {
+        id: 'triage-template',
+        title: 'Template de prompt de triage : router les problèmes à la bonne équipe',
+        content: [
+          '**Un prompt de triage classifie les demandes support entrantes et les route vers la bonne équipe : niveau 1 (l\'IA peut le résoudre), niveau 2 (recherche requise), niveau 3 (escalade humaine).** Un bon prompt de triage combine règles de décision avec gestion des cas limites.',
+        ],
+        numberedItems: [
+          'Définir 3 niveaux de triage clairs : niveau 1 = questions fréquentes (réinitialisation mot de passe, FAQ facturation), niveau 2 = require investigation (demande remboursement, problème technique), niveau 3 = escalade humaine (menace, annulation compte, demande légale).',
+          'Classifier la demande basée sur mots-clés et patterns : chercher pour mots-clés spécifiques ("avocat", "procès", "données personnelles", "annuler compte").',
+          'Fournir instructions spécifiques pour chaque niveau : les prompts niveau 1 doivent répondre directement ; les prompts niveau 2 doivent informer le client qu\'un spécialiste répondra bientôt ; les prompts niveau 3 doivent confirmer et escalader vers équipe humaine.',
+          'Tester précision de triage sur 20+ exemples de demandes incluant cas limites avant déploiement. Une erreur de triage mène à demandes mal-routées ou qui traînent trop longtemps.',
+        ],
+      },
+      tone_controls: {
+        id: 'tone-controls',
+        title: 'Contrôles de ton et d\'empathie support',
+        content: [
+          '**Le ton support est un output-constraint comme format ou limite de caractères.** Un ton trop formel semble non-empathique. Un ton trop informel semble non-digne de confiance. Coder le ton explicitement avec exemples et instructions.',
+        ],
+        items: [
+          '**Coder 3–5 exemples de ton :** Inclure des réponses support approuvées qui démontrent le ton cible. Le prompt doit voir des patterns, pas interpréter des adjectifs de ton.',
+          '**Définir déclencheurs d\'empathie :** Certains types de demande requièrent réponses empathiques — plaintes, demandes remboursement, erreurs techniques du client. Coder explicitement quels types de demande requièrent empathie supplémentaire.',
+          '**Tester différences entre modèles :** Claude est inévitablement empathique. GPT-4o est plus précis et bref. Tester le même prompt support sur 2–3 modèles et comparer ton avant déploiement.',
+        ],
+      },
+      policy_guardrails: {
+        id: 'policy-guardrails',
+        title: 'Guardrails de conformité politique',
+        content: [
+          '**Les guardrails de conformité politique empêchent l\'IA d\'halluciner des politiques, faire fausses promesses de remboursement ou faire engagements non-autorisés.** Ils ne sont pas optionnels — ils sont essentiels pour un prompt support.',
+        ],
+        items: [
+          '**Fournir documents de référence :** Coller résumé de vos politiques remboursement, shipping et confidentialité directement dans le prompt. Les références inline préviennent hallucinations mieux que instructions génériques.',
+          '**Définir sujets interdits :** Spécifier les types de demande que l\'IA *ne doit pas répondre* : conseils médicaux, conseils financiers, conseils légaux. Pour chaque sujet interdit, le prompt doit escalader clairement.',
+          '**Arbres de décision pour politiques communes :** Pour demandes remboursement, créer un arbre de décision : statut commande "livrée" ? Plus de 30 jours ? Basé là-dessus — approuver ou escalader.',
+        ],
+      },
+      escalation_patterns: {
+        id: 'escalation-patterns',
+        title: 'Patterns d\'escalade et de transfert humain',
+        content: [
+          '**Le transfert humain doit être clairement structuré.** Un transfert mal fait confond le client et l\'agent humain. Définir les déclencheurs, le format et le pattern de message.',
+        ],
+        items: [
+          '**5 déclencheurs d\'escalade universels :** (1) Langage légal (avocat, procès, action légale) ; (2) Demande annulation compte ; (3) Préoccupations de sécurité données ; (4) P1 répété pour même problème ; (5) Demande explicite pour personne.',
+          '**Pas d\'excuses apologétiques :** Un transfert ne doit pas dire "Désolé, je ne peux pas aider". À la place : "Je vous transfère à un spécialiste qui peut mieux gérer votre demande." C\'est professionnel, pas défensif.',
+          '**Contexte pour agent humain :** Le message de transfert doit fournir l\'agent humain avec contexte résumé, historique de demande et raison d\'escalade. Les agents humains travaillent plus vite avec bon contexte.',
+        ],
+      },
+    },
+  },
+
   ja: {
     freshness_tier: 'evergreen',
     theme: 'ワークフローと自動化',
