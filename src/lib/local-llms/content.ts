@@ -16514,7 +16514,7 @@ schema: {
       publishDate: '2026-04-04',
       dateModified: '2026-04-20',
       leadAnswerBlock: '**Qwen2.5, Meta Llama 3.3, and Mistral are the three dominant open-weight model families for local inference. As of April 2026: Qwen2.5 72B leads on coding (87% HumanEval) and math (83% MATH).**',
-      quickAnswerTop: {
+      quickAnswer: {
         en: {
           question: 'Qwen vs Llama vs Mistral — which local LLM should I use in 2026?',
           answer: 'In 2026: Llama 3.3 70B is best for general tasks and reasoning. Qwen2.5 is best for coding and multilingual use. Mistral 7B is best for speed on limited hardware. All three run via Ollama.',
@@ -18008,7 +18008,7 @@ schema: {
       metaDescription: 'Which local LLM is best for coding? Compare Qwen2.5-Coder, DeepSeek-Coder, and Llama 3.1 with HumanEval scores, RAM needs, and real 2026 performance.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**The best local LLMs for coding are Qwen2.5-Coder 32B (87% HumanEval, ~20 GB RAM), DeepSeek-Coder V2 Lite (81% HumanEval, ~10 GB RAM), and Qwen2.5-Coder 7B (72% HumanEval, 4.7 GB RAM, 20–35 tokens/sec).** These run locally via Ollama for private, offline code generation without API costs, but trade accuracy vs. GPT-5.5 or Claude.',
-      quickAnswerTop: {
+      quickAnswer: {
         en: {
           question: 'What is the best local LLM for coding in 2026?',
           answer: 'The best local LLM for coding in 2026 is Qwen2.5-Coder 32B — it outperforms GPT-4o on the HumanEval benchmark and runs locally via Ollama. For lower VRAM, Qwen2.5-Coder 7B is the best sub-8 GB option.',
@@ -27663,7 +27663,7 @@ schema: {
       metaDescription: 'Looking for new Ollama models? See the latest May 2026 releases, what\'s new, and which models are worth using for chat, coding, and reasoning.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**The most downloaded models on Ollama in 2026 are Llama 3.x (most popular overall), Qwen2.5 (fastest growing, best coding), Mistral (most efficient), Gemma 3 (best image understanding), and DeepSeek-R1.**',
-      quickAnswerTop: {
+      quickAnswer: {
         en: {
           question: 'What are the best open source models for Ollama in 2026?',
           answer: 'The top open source Ollama models in 2026 are Llama 3.3 (best overall), Qwen2.5-Coder (coding), Mistral 7B (speed on modest hardware), Phi-4 Mini (best for 4-8 GB VRAM), and Gemma 3 (multilingual). Install any with: ollama pull <model-name>',
@@ -40668,7 +40668,7 @@ schema: {
       ],
       primaryTerm: 'LLM hardware requirements',
       leadAnswerBlock: '**Local LLM hardware requirements depend primarily on VRAM: 7B models need 8 GB, 13B models need 12-16 GB, and 70B models need 35-48 GB depending on quantization. GPU choice matters 10× more than CPU for inference speed.**',
-      quickAnswerTop: {
+      quickAnswer: {
         en: {
           question: 'What hardware do I need to run a local LLM in 2026?',
           answer: 'To run a local LLM in 2026 you need at minimum an 8 GB VRAM GPU (NVIDIA RTX 3060 or Apple M2) for 7B models, 24 GB VRAM for 13B models, and 48 GB+ for 70B models. Apple Silicon (M3/M4) is the best value for most users due to unified memory.',
