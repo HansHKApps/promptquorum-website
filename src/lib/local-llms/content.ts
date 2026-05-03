@@ -7741,7 +7741,6 @@ sections: {
             'NVIDIA. (2024). "CUDA Toolkit Release Notes." https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/ — Official CUDA driver version requirements per release.',
             'Ollama. (2026). "Ollama Troubleshooting." https://github.com/ollama/ollama/blob/main/docs/troubleshooting.md — Official Ollama documentation for common errors.',
             'AMD. (2024). "ROCm Installation Guide." https://rocm.docs.amd.com/projects/install-on-linux/en/latest/ — Official AMD ROCm installation and Linux GPU support.',
-            'If output quality is inconsistent or disappointing, the problem is often not your hardware but how you\\'re asking the model. Before troubleshooting further, learn what LLM limitations mean: [what LLMs can\\'t do](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do) explains hallucinations, reasoning gaps, and knowledge boundaries.',
           ],
         },
       },
