@@ -1389,6 +1389,13 @@ export const article: Record<Language, PEArticle> = {
             '同一个 AI 模型会因问题的表述方式不同而产生截然不同的输出。模糊的提示词返回模糊的答案。而一个具有清晰目标、相关上下文、明确约束和指定输出格式的结构化提示词，则能产出无需编辑即可直接使用的结果。',
             '以下是持续运用提示词工程基础知识所带来的主要好处：',
           ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '模糊的提示词代价很高',
+              text: '未结构化的提示词迫使模型猜测您的意图，导致多次尝试、重试和手动筛选结果。这会增加 API 调用次数并消耗团队时间。清晰的提示词可减少每次任务的词元数、降低延迟并降低审核成本。'
+            }
+          ],
         },
 
         whyMattersList: {
@@ -1419,6 +1426,13 @@ export const article: Record<Language, PEArticle> = {
             '**输出格式：** 答案应如何组织——项目符号列表、JSON 对象、Markdown 表格、编号步骤、纯段落',
             '**角色/人设：** 为模型设定的特定专业方向或视角——"扮演一位资深数据分析师"或"你是一位简洁的技术写作者"',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: '你不需要全部七个元素',
+              text: '从三个基本元素开始：目标、上下文和输出格式。只有在质量不足时才添加其他元素（示例、约束、角色）。简洁的提示词使用更少的词元，更容易维护。'
+            }
+          ],
         },
 
         pqConsensusTest: {
@@ -1426,6 +1440,13 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'PromptQuorum 将相同的非结构化提示（"总结这段文本"）发送到 GPT-5.5、Claude Opus 4.7 和 Gemini 1.5 Pro。结果在所有三个模型上的长度、细节和结构都有所不同。当使用上述五个构建块重新编写相同的任务时，所有三个模型都在第一次尝试时生成了一致的、格式正确的响应。',
             '这种共识效应——结构化提示在不同模型间产生相同行为——是提示工程的核心洞察。五个构建块之所以有效，是因为它们利用了所有主要大语言模型相同的指令处理方式。',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: '你知道吗？共识效应',
+              text: '一致性提高了92.5%（37→40满分40），这完全来自结构，与特定于模型的参数设置无关。这意味着精心设计的提示词可在所有供应商中使用，无需修改。'
+            }
           ],
         },
 
@@ -1445,6 +1466,13 @@ export const article: Record<Language, PEArticle> = {
             '**RAG（检索增强生成）：** 将检索到的文档或数据直接注入提示词上下文，使答案以真实来源为依据 → [Techniques: RAG Explained: How to Ground AI Answers in Real Data]',
             '**结构化输出 / JSON 模式：** 指示模型返回机器可读的输出——JSON、Markdown 表格或 CSV——以供下游处理 → [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data]',
           ],
+          callouts: [
+            {
+              type: 'tip',
+              label: '最佳实践：组合多种技术',
+              text: '最有效的提示词通常组合了2-3种技术。例如：角色（人设）+ 思维链（技术）+ 约束（格式）。从一种技术开始，只有在质量不足时才添加其他技术。'
+            }
+          ],
         },
 
         frameworks: {
@@ -1460,6 +1488,13 @@ export const article: Record<Language, PEArticle> = {
             { '框架': 'SPECS', '最适合的场景': '研究、分析和结构化事实输出' },
             { '框架': 'CO-STAR', '最适合的场景': '需要完整上下文、明确受众和分步指令的复杂任务' },
             { '框架': 'RISEN', '最适合的场景': '说明性写作、培训材料和教育内容' },
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: '关键点：框架与技术',
+              text: '框架是结构（要填充哪些块及其顺序）。技术是填充这些块的方法。使用框架组织提示词，使用技术来优化每个部分。'
+            }
           ],
         },
 
