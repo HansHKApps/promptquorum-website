@@ -6353,6 +6353,7 @@ schema: {
             '**Choose Jan AI** if data privacy is your highest priority -- no telemetry, fully offline, fully open source.',
             '**Choose GPT4All** if you want the simplest possible experience with no terminal commands, or if you want built-in document chat (LocalDocs) without additional configuration.',
             'All four tools can coexist on the same machine. Models in GGUF format can be shared between them. The choice of installer does not lock you into a specific model set.',
+            'Installing a model is step one. Writing prompts that get good results is step two. If you\'re new to working with AI models, start with [what is prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) — it covers the fundamentals in plain language.',
           ],
         },
         regionalContext: {
@@ -32155,6 +32156,7 @@ schema: {
             '**Example: using Ollama API from Python:**',
             'LM Studio also exposes an OpenAI-compatible API (in beta as of April 2026), accessible at `http://localhost:1234`. However, it is less documented and less widely tested in production than Ollama. If you need API reliability for a production application, Ollama is the safer choice.',
             'Both Ollama and LM Studio can also serve as prompt development environments. For a broader comparison that includes Cursor, VS Code + Continue, and cloud playgrounds, see [best prompt engineering IDEs and editors](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides).',
+            'Both tools run the same models — the difference in output quality comes from how you prompt them. For 80 techniques covering prompting fundamentals, frameworks, and evaluation, see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering).',
           ],
           codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama",  # dummy key, unused locally\n)\n\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
@@ -36765,6 +36767,7 @@ schema: {
             '**Yes, as of April 2026, function calling works with local models via the OpenAI API.** You define a function schema, and the model can respond with arguments to pass to your function. This enables [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) to integrate with your tool ecosystem.',
             'Function calling support depends on the model. Llama 3.1 8B, Qwen2.5 7B, and most recent models support it. Smaller models (3B) may not reliably use it.',
             'When using OpenAI-compatible APIs locally, structured output and JSON mode work the same way as with cloud APIs. For enforcing schema compliance and format control across local and cloud models, see [structured output and JSON mode](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
+            'OpenAI-compatible APIs accept the same prompt formats as the cloud versions — system messages, user messages, and structured output. The full library of [prompt engineering techniques](https://www.promptquorum.com/prompt-engineering) applies directly to local API calls.',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
@@ -72152,6 +72155,7 @@ schema: {
             '**Upgrade path:** Limited. GPU swap may require case modification. RAM usually upgradeable.',
             '**Multi-GPU:** Impossible in mini-ITX. No room for a second discrete card.',
             '**Longevity:** Mini PC cases designed for office workloads, not 24/7 inference. Clean dust filters yearly.',
+            'Mini PC hardware constrains model size, but model size isn\'t the only limit. Even the largest models have fundamental limitations — hallucinations, reasoning failures, and knowledge gaps. See [what LLMs can\'t do](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do) for the full picture.',
           ],
         },
         regionalContext: {
@@ -82802,6 +82806,7 @@ schema: {
             '**Speed impact:** Q2 is ~30% faster than Q4 due to less memory bandwidth, not computation.',
             'Strategy: Quantize larger models (Mistral 7B Q2) rather than use tiny models (TinyLlama).',
             'Mistral 7B Q2 > TinyLlama 1.1B Q4 in both speed and quality.',
+            'Faster models trade quality for speed — but tuning temperature and top-p recovers much of that quality loss. Lower temperature (0.1–0.3) on fast models produces more consistent output than default settings. See [temperature and top-p explained](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity) for the exact settings.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-en.svg',
           imageCaption: 'Quantization trade-offs for local LLMs: Q4 (1% quality loss, 50% VRAM savings, 4.5 GB for Mistral 7B) is the standard. Q2 is 30% faster but 10% quality drop. Avoid Q8 — 2× VRAM cost with minimal gain.',
@@ -83152,6 +83157,7 @@ schema: {
             '**Geschwindigkeitsauswirkung:** Q2 ist ~30 % schneller als Q4 durch geringere Speicherbandbreite, nicht durch Berechnung.',
             'Strategie: Größere Modelle quantisieren (Mistral 7B Q2) statt kleine Modelle verwenden (TinyLlama).',
             'Mistral 7B Q2 > TinyLlama 1,1B Q4 in Geschwindigkeit und Qualität.',
+            'Schnellere Modelle opfern Qualität für Geschwindigkeit — aber durch Anpassen von Temperatur und top-p lässt sich viel dieser Qualität zurückgewinnen. Niedrigere Temperatur (0,1–0,3) bei schnellen Modellen erzeugt konsistentere Ausgabe als Standardeinstellungen. Siehe [Temperature und top-p erklärt](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity) für die genauen Einstellungen.',
           ],
         },
         'cpu-tricks': {
