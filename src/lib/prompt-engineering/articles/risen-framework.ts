@@ -1770,12 +1770,10 @@ export const article: Record<Language, PEArticle> = {
           id: 'bad-vs-good',
           promptExamples: [
             {
-              label: '❌ 糟糕 — 模糊且无Inspect',
-              prompt: 'Please improve this article.',
-            },
-            {
-              label: '✅ 优秀 — 完整的RISEN循环',
-              prompt: `请按照RISEN框架改进这篇文章。
+              badLabel: '❌ 糟糕 — 模糊且无Inspect',
+              bad: 'Please improve this article.',
+              goodLabel: '✅ 优秀 — 完整的RISEN循环',
+              good: `请按照RISEN框架改进这篇文章。
 
 **Refine:** 改进以下文章。重点是清晰度、结构和简洁性。重写任何冗长或不清楚的句子。
 
@@ -1795,27 +1793,12 @@ export const article: Record<Language, PEArticle> = {
         howToWrite: {
           title: '如何编写RISEN Prompt',
           id: 'how-to-write',
-          items: [
-            {
-              heading: '1. 陈述您的改进目标',
-              content: '在Refine部分中清楚地说明您想改进什么。例如："改进这个客户电子邮件的语调；使其更友好但仍然专业。"',
-            },
-            {
-              heading: '2. 要求具体的变更列表',
-              content: '在Inspect部分中，要求模型列出5-7个具体的改动。这强制透明性和跟踪。',
-            },
-            {
-              heading: '3. 要求元级总结',
-              content: '在Summarize部分中，不要求重复内容，要求对改进后的版本现在做什么或说什么的一行解释。',
-            },
-            {
-              heading: '4. 设置具体的评估标准',
-              content: '在Evaluate部分中，给出3-5个标准（清晰度、准确性、专业度等）和一个数字比例（1-5）。',
-            },
-            {
-              heading: '5. 计划下一次迭代',
-              content: '在Next Steps部分中，要求3个建议，然后您可以在下一个循环中处理。这使循环可持续。',
-            },
+          numberedItems: [
+            '**陈述问题和预期成果。** "您是[角色]。您的任务是使用RISEN过程改进[材料类型]。"',
+            '**明确定义Refine目标。** "改进[具体标准：清晰度、准确性、简洁性、语调、受众对齐]。目标[长度或格式]。"',
+            '**要求具体的Inspect输出。** "列出5-7个具体的编辑。对每一个，说明您更改了什么以及为什么。"',
+            '**指定Evaluate标准。** "在[3-5个命名维度，如清晰度、准确性、说服力]上评分（1-5）。用一句话解释每个评分。"',
+            '**要求可行的Next Steps。** "建议3个下一次迭代的重点改进。"',
           ],
         },
 
