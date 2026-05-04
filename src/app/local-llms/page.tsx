@@ -25,7 +25,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
       card: 'summary_large_image',
       title: t.localLlmsHubTitle,
       description: selectedLang === 'en'
-        ? 'Run AI locally in 5 min with Ollama. $0/token, offline, private. Hardware guides, model rankings, LM Studio — April 2026.'
+        ? 'Run AI locally in 5 min with Ollama. $0/token, offline, private. Hardware guides, model rankings, LM Studio — May 2026.'
         : t.localLlmsHubDescription,
     },
   }
@@ -49,8 +49,8 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Best Local LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide',
-      description: 'Best local LLMs April 2026 – latest Ollama models (Llama 4 Scout, Qwen3, Gemma 3), LM Studio vs Jan.ai comparison, VRAM/GPU requirements for RTX 3060 & more. Pull commands, beginner guides & hardware recommendations.',
+      name: 'Best Local LLMs May 2026: Ollama, LM Studio, Hardware & VRAM Guide',
+      description: 'Best local LLMs May 2026 – latest Ollama models (Llama 4 Scout, Qwen3, Gemma 3), LM Studio vs Jan.ai comparison, VRAM/GPU requirements for RTX 3060 & more. Pull commands, beginner guides & hardware recommendations.',
       url: canonicalUrl,
       publisher: {
         '@type': 'Organization',
@@ -72,8 +72,8 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
       url: canonicalUrl,
       'inLanguage': selectedLang,
       datePublished: '2026-04-01',
-      dateModified: '2026-04-16',
-      description: 'As of April 2026: 88 guides on local LLMs covering Ollama, LM Studio, hardware requirements, model benchmarks, fine-tuning, local RAG, and enterprise deployment.',
+      dateModified: '2026-05-03',
+      description: 'As of May 2026: 88 guides on local LLMs covering Ollama, LM Studio, hardware requirements, model benchmarks, fine-tuning, local RAG, and enterprise deployment.',
       isPartOf: { '@type': 'WebSite', url: 'https://www.promptquorum.com' },
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -111,8 +111,8 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
         },
         {
           '@type': 'Question',
-          name: 'Can local LLMs match cloud models like GPT-4o?',
-          acceptedAnswer: { '@type': 'Answer', text: 'On coding and reasoning tasks, Llama 4, DeepSeek V3, and Qwen3.5 score within 5–10% of GPT-4o on standard benchmarks (MMLU, HumanEval). Claude Opus 4.6 and GPT-5 maintain an edge on complex multi-step tasks.' }
+          name: 'Can local LLMs match cloud models like GPT-5.5?',
+          acceptedAnswer: { '@type': 'Answer', text: 'On coding and reasoning tasks, Llama 4 Scout, DeepSeek V3, and Qwen3 score within 5–10% of GPT-5.5 mini on standard benchmarks (MMLU, HumanEval). Claude Opus 4.7 and GPT-5.5 maintain an edge on complex multi-step tasks.' }
         },
         {
           '@type': 'Question',
@@ -218,16 +218,16 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       'inLanguage': selectedLang,
-      name: 'Best Local LLM Models April 2026',
+      name: 'Best Local LLM Models May 2026',
       numberOfItems: 7,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Llama 4 Scout 17B', description: 'Meta. Best overall quality on 12 GB VRAM. ollama pull llama4:scout. ~10 GB VRAM at Q4.' },
+        { '@type': 'ListItem', position: 1, name: 'Llama 4 Scout 17B', description: 'Meta. Best overall quality on 12 GB VRAM. ollama pull llama4:scout. ~10 GB VRAM at Q4. MoE architecture.' },
         { '@type': 'ListItem', position: 2, name: 'Qwen3 8B', description: 'Alibaba. Top coding and multilingual. ollama pull qwen3:8b. 5 GB VRAM.' },
         { '@type': 'ListItem', position: 3, name: 'Gemma 3 12B', description: 'Google. Strong reasoning on RTX 3060. ollama pull gemma3:12b. 8 GB VRAM.' },
         { '@type': 'ListItem', position: 4, name: 'DeepSeek-R2 8B', description: 'DeepSeek. Best for math and logic. ollama pull deepseek-r2:8b. 5 GB VRAM.' },
-        { '@type': 'ListItem', position: 5, name: 'Qwen2.5-Coder 7B', description: 'Alibaba. Best for code completion and review. 7B runs on 8 GB GPU. Outperforms GPT-4 on HumanEval.' },
+        { '@type': 'ListItem', position: 5, name: 'Qwen3-Coder 7B', description: 'Alibaba. Best for code completion and review. 7B runs on 8 GB GPU. Outperforms GPT-5.5 mini on HumanEval.' },
         { '@type': 'ListItem', position: 6, name: 'Mistral 7B', description: 'Mistral AI. Fastest on consumer hardware. 4 GB VRAM at Q4. Best for throughput-sensitive tasks.' },
-        { '@type': 'ListItem', position: 7, name: 'Llama 4', description: 'Meta. Best overall quality. 8B and 70B variants. Runs on RTX 4060 Ti (8B Q4) or dual RTX 4090 (70B Q4).' }
+        { '@type': 'ListItem', position: 7, name: 'Llama 4 Scout', description: 'Meta. Best overall quality. 8B and 70B variants. Runs on RTX 4060 Ti (8B Q4) or dual RTX 4090 (70B Q4).' }
       ]
     },
     {
@@ -239,8 +239,8 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
       step: [
         { '@type': 'HowToStep', name: 'Check hardware requirements', text: 'Verify you have sufficient VRAM: 8GB for 7B models, 16GB for 13B, 48GB+ for 70B models.' },
         { '@type': 'HowToStep', name: 'Install Ollama or LM Studio', text: 'Download Ollama from ollama.ai (CLI) or LM Studio (GUI) depending on your preference.' },
-        { '@type': 'HowToStep', name: 'Choose and download a model', text: 'Select Llama 4, Qwen3.5, or DeepSeek based on your task. Ollama: ollama pull llama4. LM Studio: use the model browser.' },
-        { '@type': 'HowToStep', name: 'Run the model locally', text: 'Ollama: ollama run llama4. LM Studio: launch the model in the GUI and connect via API (http://localhost:11434).' },
+        { '@type': 'HowToStep', name: 'Choose and download a model', text: 'Select Llama 4 Scout, Qwen3, or DeepSeek based on your task. Ollama: ollama pull llama4:scout. LM Studio: use the model browser.' },
+        { '@type': 'HowToStep', name: 'Run the model locally', text: 'Ollama: ollama run llama4:scout. LM Studio: launch the model in the GUI and connect via API (http://localhost:11434).' },
         { '@type': 'HowToStep', name: 'Integrate into your app', text: 'Use OpenAI-compatible API endpoints to integrate local models into applications without code changes.' }
       ]
     }

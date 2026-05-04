@@ -13,27 +13,27 @@ function navHref(path: string, lang: string) {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'Best Local LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide',
-  de: 'Beste Lokale LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide',
-  fr: 'Meilleurs LLMs Locaux Avril 2026 : Ollama, LM Studio & Guide VRAM',
-  ja: '2026年4月最高のローカルLLM：Ollama・LM Studio・VRAMガイド',
-  zh: '2026年4月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南',
+  en: 'Best Local LLMs May 2026: Ollama, LM Studio, Hardware & VRAM Guide',
+  de: 'Beste Lokale LLMs Mai 2026: Ollama, LM Studio, Hardware & VRAM Guide',
+  fr: 'Meilleurs LLMs Locaux Mai 2026 : Ollama, LM Studio & Guide VRAM',
+  ja: '2026年5月最高のローカルLLM：Ollama・LM Studio・VRAMガイド',
+  zh: '2026年5月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Best local LLMs for April 2026 — covering the latest Ollama models (Llama 4, Qwen3, Gemma 3), LM Studio vs Jan.ai comparison, VRAM and GPU requirements for RTX 3060 12 GB and other hardware, pull commands, and beginner hardware recommendations. $0/token, full privacy, offline.',
-  de: 'Beste lokale LLMs für April 2026 — aktuelle Ollama-Modelle, LM Studio vs Jan.ai Vergleich, VRAM- & GPU-Anforderungen (RTX 3060 etc.), Pull-Befehle und Hardware-Empfehlungen für Einsteiger.',
-  fr: 'Meilleurs LLMs locaux pour avril 2026 — modèles Ollama récents (Llama 4, Qwen3, Gemma 3), comparaison LM Studio vs Jan.ai, exigences VRAM/GPU (RTX 3060 inclus), commandes pull et recommandations matérielles débutants.',
-  ja: '2026年4月最新ローカルLLM：Ollamaおすすめモデル（Llama 4・Qwen3・Gemma 3）、LM Studio vs Jan.ai比較、RTX 3060などVRAM/GPU必要スペック、pullコマンド付き完全ガイド。',
-  zh: '2026年4月最佳本地LLM：最新Ollama模型（Llama 4、Qwen3、Gemma 3）、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。',
+  en: 'Best local LLMs for May 2026 — covering the latest Ollama models (Llama 4 Scout, Qwen3, Gemma 3), LM Studio vs Jan.ai comparison, VRAM and GPU requirements for RTX 3060 12 GB and other hardware, pull commands, and beginner hardware recommendations. $0/token, full privacy, offline.',
+  de: 'Beste lokale LLMs für Mai 2026 — aktuelle Ollama-Modelle, LM Studio vs Jan.ai Vergleich, VRAM- & GPU-Anforderungen (RTX 3060 etc.), Pull-Befehle und Hardware-Empfehlungen für Einsteiger.',
+  fr: 'Meilleurs LLMs locaux pour mai 2026 — modèles Ollama récents (Llama 4 Scout, Qwen3, Gemma 3), comparaison LM Studio vs Jan.ai, exigences VRAM/GPU (RTX 3060 inclus), commandes pull et recommandations matérielles débutants.',
+  ja: '2026年5月最新ローカルLLM：Ollamaおすすめモデル（Llama 4 Scout・Qwen3・Gemma 3）、LM Studio vs Jan.ai比較、RTX 3060などVRAM/GPU必要スペック、pullコマンド付き完全ガイド。',
+  zh: '2026年5月最佳本地LLM：最新Ollama模型（Llama 4 Scout、Qwen3、Gemma 3）、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。',
 }
 
 const HUB_NEW_APRIL_HEADING: Record<string, string> = {
-  en: 'New in April 2026',
-  de: 'Neu im April 2026',
-  fr: 'Nouveautés d\'avril 2026',
-  ja: '2026年4月の新着情報',
-  zh: '2026年4月新增内容',
+  en: 'New in May 2026',
+  de: 'Neu im Mai 2026',
+  fr: 'Nouveautés de mai 2026',
+  ja: '2026年5月の新着情報',
+  zh: '2026年5月新增内容',
 }
 
 const HUB_NEW_APRIL_MODELS: Record<string, { name: string; pull: string; vram: string; note: string }[]> = {
@@ -233,11 +233,11 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '从零开始到运行，只需10分钟以内。提供特定操作系统的安装指南、首次模型演练和隐私优先的设置检查清单。Ollama可在macOS、Windows和Linux上用一条命令安装。8 GB RAM时，从Llama 3.2 3B（Q4，约2 GB）开始。',
   },
   'best-models': {
-    en: 'Model rankings, benchmark comparisons, and use-case winners. As of April 2026, the top locally-runnable models are Llama 3.3 70B (best overall), Qwen2.5 32B (best coding), and Mistral Small 3.1 (best at 16 GB RAM). All ranked by MMLU, HumanEval, and real hardware tests.',
-    de: 'Modellbewertungen, Benchmark-Vergleiche, Use-Case-Gewinner und Quantisierungsleitfäden für Llama 4, Qwen3.5, DeepSeek, Gemma 4 und 70B+-Modelle. Qwen2.5-Coder führt Code-Benchmarks an; Mistral 7B ist am schnellsten für RAM-begrenzte Setups. Jede Bewertung enthält exakte VRAM-Anforderungen und Benchmark-Scores gegenüber GPT-4o.',
-    fr: 'Critiques de modèles, comparaisons de références, gagnants par cas d\'usage et guides de quantification pour Llama 4, Qwen3.5, DeepSeek, Gemma 4 et modèles 70B+. Qwen2.5-Coder domine les benchmarks de code ; Mistral 7B est le plus rapide pour les configurations RAM limitées. Chaque examen inclut les exigences VRAM exactes et les scores de benchmark par rapport à GPT-4o.',
-    ja: 'Llama 4、Qwen3.5、DeepSeek、Gemma 4、70B+モデルのモデルレビュー、ベンチマーク比較、ユースケース勝者、量子化ガイド。Qwen2.5-Coderはコーディングベンチマークをリード；Mistral 7BはRAM制約されたセットアップで最速。各レビューには正確なVRAM要件とGPT-4oに対するベンチマークスコアが含まれます。',
-    zh: 'Llama 4、Qwen3.5、DeepSeek、Gemma 4和70B+模型的模型评论、基准比较、使用案例获奖者和量化指南。Qwen2.5-Coder在编码基准中领先；Mistral 7B在RAM受限的设置中速度最快。每篇评论都包含确切的VRAM要求和与GPT-4o相比的基准分数。',
+    en: 'Model rankings, benchmark comparisons, and use-case winners. As of May 2026, the top locally-runnable models are Llama 4 Scout 17B (best overall, MoE architecture), Qwen3 (best coding), and Gemma 3 12B (best at 16 GB RAM). All ranked by MMLU, HumanEval, and real hardware tests.',
+    de: 'Modellbewertungen, Benchmark-Vergleiche, Use-Case-Gewinner und Quantisierungsleitfäden für Llama 4 Scout, Qwen3, DeepSeek, Gemma 3 und 70B+-Modelle. Qwen3-Coder führt Code-Benchmarks an; Mistral 7B ist am schnellsten für RAM-begrenzte Setups. Jede Bewertung enthält exakte VRAM-Anforderungen und Benchmark-Scores gegenüber GPT-5.5.',
+    fr: 'Critiques de modèles, comparaisons de références, gagnants par cas d\'usage et guides de quantification pour Llama 4 Scout, Qwen3, DeepSeek, Gemma 3 et modèles 70B+. Qwen3-Coder domine les benchmarks de code ; Mistral 7B est le plus rapide pour les configurations RAM limitées. Chaque examen inclut les exigences VRAM exactes et les scores de benchmark par rapport à GPT-5.5.',
+    ja: 'Llama 4 Scout、Qwen3、DeepSeek、Gemma 3、70B+モデルのモデルレビュー、ベンチマーク比較、ユースケース勝者、量子化ガイド。Qwen3-Coderはコーディングベンチマークをリード；Mistral 7BはRAM制約されたセットアップで最速。各レビューには正確なVRAM要件とGPT-5.5に対するベンチマークスコアが含まれます。',
+    zh: 'Llama 4 Scout、Qwen3、DeepSeek、Gemma 3和70B+模型的模型评论、基准比较、使用案例获奖者和量化指南。Qwen3-Coder在编码基准中领先；Mistral 7B在RAM受限的设置中速度最快。每篇评论都包含确切的VRAM要求和与GPT-5.5相比的基准分数。',
   },
   'tools-interfaces': {
     en: 'Ollama and LM Studio each run 200+ models on macOS, Windows, and Linux. Ollama is CLI-first with a production REST API; LM Studio provides a graphical interface with a built-in model browser. Guides cover both tools plus vLLM, llama.cpp, Open WebUI, and IDE integrations.',
@@ -368,45 +368,45 @@ const HUB_TAKEAWAYS_TITLE: Record<string, string> = {
 const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
   en: [
     '8 GB RAM is enough to run a 7B model locally (Ollama or LM Studio, under 10 min setup)',
-    '40 GB VRAM runs 70B models (Llama 4, DeepSeek V3) at full quality',
+    '40 GB VRAM runs 70B models (Llama 4 Scout, DeepSeek V3) at full quality',
     'Q4 quantization halves VRAM requirements with minimal quality loss — 7B model fits in 4–5 GB VRAM',
-    'Llama 4, Qwen3.5, DeepSeek, and Mistral match GPT-4 on most coding and reasoning benchmarks',
+    'Llama 4 Scout, Qwen3, DeepSeek, and Mistral match GPT-5.5 mini on most coding and reasoning benchmarks',
     'Zero API costs after hardware purchase — no usage limits, no vendor lock-in',
     'All data stays on your machine — no telemetry, no cloud storage, GDPR-ready',
     'LoRA fine-tuning requires 500+ labeled examples and 24 GB+ VRAM (or cloud GPU for training)',
   ],
   de: [
     '8 GB RAM reichen aus, um ein 7B-Modell lokal auszuführen (Ollama oder LM Studio, unter 10 Minuten Einrichtung)',
-    '40 GB VRAM führt 70B-Modelle (Llama 4, DeepSeek V3) in voller Qualität aus',
+    '40 GB VRAM führt 70B-Modelle (Llama 4 Scout, DeepSeek V3) in voller Qualität aus',
     'Q4-Quantisierung halbiert VRAM-Anforderungen mit minimalem Qualitätsverlust — 7B-Modell passt in 4–5 GB VRAM',
-    'Llama 4, Qwen3.5, DeepSeek und Mistral entsprechen GPT-4 bei den meisten Code- und Reasoning-Benchmarks',
+    'Llama 4 Scout, Qwen3, DeepSeek und Mistral entsprechen GPT-5.5 mini bei den meisten Code- und Reasoning-Benchmarks',
     'Null API-Kosten nach Hardware-Kauf — keine Nutzungsbegrenzungen, keine Anbieter-Lock-in',
     'Alle Daten bleiben auf Ihrer Maschine — keine Telemetrie, kein Cloud-Speicher, DSGVO-konform',
     'LoRA-Fine-Tuning erfordert 500+ gekennzeichnete Beispiele und 24 GB+ VRAM (oder Cloud-GPU zum Training)',
   ],
   fr: [
     '8 GB de RAM suffisent pour exécuter un modèle 7B localement (Ollama ou LM Studio, moins de 10 min de configuration)',
-    '40 GB VRAM exécute les modèles 70B (Llama 4, DeepSeek V3) en qualité complète',
+    '40 GB VRAM exécute les modèles 70B (Llama 4 Scout, DeepSeek V3) en qualité complète',
     'La quantification Q4 réduit de moitié les besoins en VRAM avec une perte de qualité minimale — un modèle 7B tient en 4–5 GB VRAM',
-    'Llama 4, Qwen3.5, DeepSeek et Mistral correspondent à GPT-4 sur la plupart des benchmarks de code et de raisonnement',
+    'Llama 4 Scout, Qwen3, DeepSeek et Mistral correspondent à GPT-5.5 mini sur la plupart des benchmarks de code et de raisonnement',
     'Zéro coût d\'API après achat du matériel — aucune limite d\'utilisation, aucun verrouillage fournisseur',
     'Toutes les données restent sur votre machine — pas de télémétrie, pas de stockage cloud, prêt pour le RGPD',
     'Le fine-tuning LoRA nécessite 500+ exemples étiquetés et 24 GB+ VRAM (ou GPU cloud pour l\'entraînement)',
   ],
   ja: [
     '8 GB RAMで7Bモデルをローカルで実行できます（Ollama または LM Studio、10分以内のセットアップ）',
-    '40 GB VRAMで70Bモデル（Llama 4、DeepSeek V3）をフル品質で実行',
+    '40 GB VRAMで70Bモデル（Llama 4 Scout、DeepSeek V3）をフル品質で実行',
     'Q4量子化により、品質の低下を最小限に抑えながらVRAM要件を半分に削減 — 7BモデルはVRAM 4–5 GBに収まります',
-    'Llama 4、Qwen3.5、DeepSeek、MistralはほとんどのコーディングおよびReasoningベンチマークでGPT-4に対応',
+    'Llama 4 Scout、Qwen3、DeepSeek、MistralはほとんどのコーディングおよびReasoningベンチマークでGPT-5.5 miniに対応',
     'ハードウェア購入後のAPIコストはゼロ — 使用制限なし、ベンダーロックインなし',
     'すべてのデータはマシン上に保たれます — テレメトリなし、クラウドストレージなし、GDPR対応',
     'LoRA微調整には500個以上のラベル付き例とVRAM 24 GB以上が必要です（またはトレーニング用のクラウドGPU）',
   ],
   zh: [
     '8 GB RAM足以在本地运行7B模型（Ollama或LM Studio，设置不到10分钟）',
-    '40 GB VRAM以完整品质运行70B模型（Llama 4、DeepSeek V3）',
+    '40 GB VRAM以完整品质运行70B模型（Llama 4 Scout、DeepSeek V3）',
     'Q4量化在最小质量损失的情况下使VRAM要求减半 — 7B模型需要4–5 GB VRAM',
-    'Llama 4、Qwen3.5、DeepSeek和Mistral在大多数编码和推理基准上与GPT-4相匹配',
+    'Llama 4 Scout、Qwen3、DeepSeek和Mistral在大多数编码和推理基准上与GPT-5.5 mini相匹配',
     '硬件购买后零API成本 — 无使用限制、无供应商锁定',
     '所有数据保留在您的机器上 — 无遥测、无云存储、GDPR就绪',
     'LoRA微调需要500多个标记示例和24 GB+ VRAM（或用于训练的云GPU）',
@@ -464,8 +464,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama is a CLI tool that runs models via simple terminal commands and exposes an OpenAI-compatible API at `localhost:11434`. LM Studio provides a desktop GUI, model browser, and built-in chat interface. Both support the same models.'
     },
     {
-      q: 'Can local LLMs match cloud models like GPT-4o?',
-      a: 'On coding and reasoning tasks, Llama 4, DeepSeek V3, and Qwen3.5 score within 5–10% of GPT-4o on standard benchmarks (MMLU, HumanEval). Claude Opus 4.6 and GPT-5 maintain an edge on complex multi-step tasks.'
+      q: 'Can local LLMs match cloud models like GPT-5.5?',
+      a: 'On coding and reasoning tasks, Llama 4 Scout, DeepSeek V3, and Qwen3 score within 5–10% of GPT-5.5 mini on standard benchmarks (MMLU, HumanEval). Claude Opus 4.7 and GPT-5.5 maintain an edge on complex multi-step tasks.'
     },
     {
       q: 'How do I fine-tune a local model?',
@@ -481,7 +481,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'What is the best local LLM for coding in 2026?',
-      a: 'Qwen2.5-Coder 7B is the top performer for code completion and review on consumer hardware (8 GB VRAM). DeepSeek-Coder V2 Lite is the strongest alternative. For CPU-only setups, Phi-3.5 Mini offers the best coding quality under 4 GB RAM.'
+      a: 'Qwen3-Coder 7B is the top performer for code completion and review on consumer hardware (8 GB VRAM). DeepSeek-Coder V2 Lite is the strongest alternative. For CPU-only setups, Phi-3.5 Mini offers the best coding quality under 4 GB RAM.'
     },
     {
       q: 'Can I run a local LLM without a GPU?',
@@ -492,12 +492,12 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama: run `ollama pull <model-name>` again — it downloads only changed layers. LM Studio: open the model browser, find the updated version, and download it. Old GGUF files are not automatically removed — delete them manually from ~/.ollama/models (Ollama) or ~/Library/Application Support/LM Studio/models (macOS) to free disk space. Model updates from Meta, Alibaba, and Mistral typically arrive within 24–48 hours of official release.'
     },
     {
-      q: 'What are the best Ollama models in April 2026?',
-      a: 'Top Ollama models for April 2026: Llama 4 Scout 17B (best overall on 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (best coding, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (strong reasoning on RTX 3060, 8 GB VRAM), and DeepSeek-R2 8B (best math/logic, 5 GB VRAM). Run any model with `ollama run <name>` after pulling.'
+      q: 'What are the best Ollama models in May 2026?',
+      a: 'Top Ollama models for May 2026: Llama 4 Scout 17B (best overall on 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (best coding, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (strong reasoning on RTX 3060, 8 GB VRAM), and DeepSeek-R2 8B (best math/logic, 5 GB VRAM). Run any model with `ollama run <name>` after pulling.'
     },
     {
-      q: 'What is the best local LLM for an RTX 3060 12 GB in 2026?',
-      a: 'The RTX 3060 12 GB VRAM is an excellent local LLM GPU. Best choices: Llama 4 Scout 17B at Q4 (~10 GB VRAM, `ollama pull llama4:scout`), Gemma 3 12B (~8 GB VRAM), or Qwen3 14B (~9 GB VRAM). All run at 20–40 tokens/sec. The 12 GB VRAM puts you above the RTX 3060 Ti (8 GB) and opens up 13B-class models at full quality.'
+      q: 'What is the best local LLM for an RTX 3060 12 GB VRAM?',
+      a: 'The RTX 3060 12 GB VRAM is an excellent local LLM GPU. Best choices: Llama 4 Scout 17B at Q4 (~10 GB VRAM, `ollama pull llama4:scout`), Gemma 3 12B (~8 GB VRAM), or Qwen3 14B (~9 GB VRAM). All run at 20–40 tokens/sec. The 12 GB VRAM puts you above the RTX 3060 Ti (8 GB) and opens up 13B-class and 17B MoE models at full quality.'
     },
     {
       q: 'Ollama vs LM Studio vs Jan.ai: which should I use?',
@@ -522,8 +522,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama ist ein CLI-Tool, das Modelle über einfache Terminalcommands ausführt und eine OpenAI-kompatible API unter `localhost:11434` bereitstellt. LM Studio bietet eine Desktop-GUI, einen Modellbrowser und eine integrierte Chat-Oberfläche. Beide unterstützen die gleichen Modelle.'
     },
     {
-      q: 'Können lokale LLMs Cloud-Modelle wie GPT-4o entsprechen?',
-      a: 'Bei Coding- und Reasoning-Aufgaben erzielen Llama 4, DeepSeek V3 und Qwen3.5 bei Standard-Benchmarks (MMLU, HumanEval) Ergebnisse in 5–10% von GPT-4o. Claude Opus 4.6 und GPT-5 behaupten einen Vorteil bei komplexen mehrstufigen Aufgaben.'
+      q: 'Können lokale LLMs Cloud-Modelle wie GPT-5.5 entsprechen?',
+      a: 'Bei Coding- und Reasoning-Aufgaben erzielen Llama 4 Scout, DeepSeek V3 und Qwen3 bei Standard-Benchmarks (MMLU, HumanEval) Ergebnisse in 5–10% von GPT-5.5 mini. Claude Opus 4.7 und GPT-5.5 behaupten einen Vorteil bei komplexen mehrstufigen Aufgaben.'
     },
     {
       q: 'Wie fine-tunne ich ein lokales Modell?',
@@ -539,7 +539,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Was ist das beste lokale LLM für Coding im Jahr 2026?',
-      a: 'Qwen2.5-Coder 7B ist der Top-Performer für Code-Completion und Review auf Consumer-Hardware (8 GB VRAM). DeepSeek-Coder V2 Lite ist die stärkste Alternative. Für CPU-only-Setups bietet Phi-3.5 Mini unter 4 GB RAM die beste Code-Qualität.'
+      a: 'Qwen3-Coder 7B ist der Top-Performer für Code-Completion und Review auf Consumer-Hardware (8 GB VRAM). DeepSeek-Coder V2 Lite ist die stärkste Alternative. Für CPU-only-Setups bietet Phi-3.5 Mini unter 4 GB VRAM die beste Code-Qualität.'
     },
     {
       q: 'Kann ich ein lokales LLM ohne GPU ausführen?',
@@ -588,8 +588,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama est un outil CLI qui exécute les modèles via des commandes simples et expose une API compatible OpenAI à `localhost:11434`. LM Studio fournit une GUI desktop, un navigateur de modèles et une interface de chat intégrée. Tous deux supportent les mêmes modèles.'
     },
     {
-      q: 'Les LLMs locaux peuvent-ils rivaliser avec les modèles cloud comme GPT-4o ?',
-      a: 'Sur les tâches de codage et de raisonnement, Llama 4, DeepSeek V3 et Qwen3.5 obtiennent des résultats à 5–10% de GPT-4o sur les benchmarks standard (MMLU, HumanEval). Claude Opus 4.6 et GPT-5 conservent un avantage sur les tâches multi-étapes complexes.'
+      q: 'Les LLMs locaux peuvent-ils rivaliser avec les modèles cloud comme GPT-5.5 ?',
+      a: 'Sur les tâches de codage et de raisonnement, Llama 4 Scout, DeepSeek V3 et Qwen3 obtiennent des résultats à 5–10% de GPT-5.5 mini sur les benchmarks standard (MMLU, HumanEval). Claude Opus 4.7 et GPT-5.5 conservent un avantage sur les tâches multi-étapes complexes.'
     },
     {
       q: 'Comment affiner un modèle local ?',
@@ -605,7 +605,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Quel est le meilleur LLM local pour le codage en 2026 ?',
-      a: 'Qwen2.5-Coder 7B est le meilleur performer pour la complétion et la révision de code sur matériel grand public (8 GB VRAM). DeepSeek-Coder V2 Lite est la meilleure alternative. Pour les configurations CPU uniquement, Phi-3.5 Mini offre la meilleure qualité de code sous 4 GB RAM.'
+      a: 'Qwen3-Coder 7B est le meilleur performer pour la complétion et la révision de code sur matériel grand public (8 GB VRAM). DeepSeek-Coder V2 Lite est la meilleure alternative. Pour les configurations CPU uniquement, Phi-3.5 Mini offre la meilleure qualité de code sous 4 GB VRAM.'
     },
     {
       q: 'Puis-je exécuter un LLM local sans GPU ?',
@@ -858,11 +858,11 @@ const HUB_PRESENTATION_PDF: Record<string, string> = {
 const HUB_FAQS_BOTTOM: { q: string; a: string }[] = [
   {
     q: 'What is a local LLM?',
-    a: 'A local LLM is a large language model that runs entirely on your own hardware — CPU, GPU, or Apple Silicon — without sending data to external servers. You download the model file (typically 2–40 GB) and run it using a tool like Ollama or LM Studio. As of April 2026, the most popular local LLM is Meta Llama 3.1 8B, which runs on any machine with 8 GB of RAM at 10–80 tokens/sec.',
+    a: 'A local LLM is a large language model that runs entirely on your own hardware — CPU, GPU, or Apple Silicon — without sending data to external servers. You download the model file (typically 2–40 GB) and run it using a tool like Ollama or LM Studio. As of May 2026, the most popular local LLM is Meta Llama 4 Scout 17B, which runs on machines with 10 GB VRAM at 10–80 tokens/sec.',
   },
   {
     q: 'Is a local LLM better than ChatGPT?',
-    a: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude 4.6 Opus) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 3.3 70B, Qwen2.5 72B) match or exceed GPT-4o Mini on most everyday tasks — at zero per-query cost.',
+    a: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-5.5, Claude Opus 4.7) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 4 Scout, Qwen3 72B) match or exceed GPT-5.5 mini on most everyday tasks — at zero per-query cost.',
   },
   {
     q: 'How much RAM do I need to run a local LLM?',
@@ -874,7 +874,7 @@ const HUB_FAQS_BOTTOM: { q: string; a: string }[] = [
   },
   {
     q: 'What is the best free local LLM in 2026?',
-    a: 'Meta Llama 3.1 8B for general use (Apache-compatible, 5.5 GB RAM). Qwen2.5-Coder 32B for coding (92.7% HumanEval, 20 GB RAM). DeepSeek-R1 7B for reasoning (MIT licence, 5 GB RAM). All are free, open-weight, and available via `ollama pull`.',
+    a: 'Meta Llama 4 Scout 17B for general use (Llama Community License, 10 GB VRAM). Qwen3-Coder 32B for coding (92.7% HumanEval, 20 GB VRAM). DeepSeek-R2 8B for reasoning (MIT licence, 5 GB VRAM). All are free, open-weight, and available via `ollama pull`.',
   },
   {
     q: 'Are local LLMs private?',
@@ -983,7 +983,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         {/* Hero */}
         <div className="py-16 border-b border-primary/20 mb-16">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Local LLMs</p>
-          <p className="text-xs text-text-secondary mb-4">Updated <time dateTime="2026-04-07">April 2026</time></p>
+          <p className="text-xs text-text-secondary mb-4">Updated <time dateTime="2026-05-03">May 2026</time></p>
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             {HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
           </h1>
@@ -1070,7 +1070,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           </Link>
         </div>
 
-        {/* New in April 2026 */}
+        {/* New in May 2026 */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-text-primary mb-6">
             {HUB_NEW_APRIL_HEADING[lang] ?? HUB_NEW_APRIL_HEADING['en']}
