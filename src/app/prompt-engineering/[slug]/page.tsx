@@ -407,7 +407,8 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       }
     : null
 
-  const faqSectionData = Object.values(article.sections).find((s) => s.faqs && s.faqs.length > 0)
+  // Only auto-generate faqSchema from sections if article doesn't already define faqSchema
+  const faqSectionData = !article.faqSchema && Object.values(article.sections).find((s) => s.faqs && s.faqs.length > 0)
   const faqSchema = faqSectionData
     ? {
         '@context': 'https://schema.org',
