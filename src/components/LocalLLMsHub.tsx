@@ -635,7 +635,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
   ja: [
     {
       q: 'ローカルLLMとは何ですか？',
-      a: 'クラウドAPIではなく、自分のハードウェア上で実行される大型言語モデル（例：Llama 4、Qwen3.5、DeepSeek）です。完全なプライバシー、オフライン機能、使用制限なし、およびハードウェア購入後のゼロAPIコストが得られます。'
+      a: 'クラウドAPIではなく、自分のハードウェア上で実行される大型言語モデル（例：Llama 4 Scout、Qwen3、DeepSeek）です。完全なプライバシー、オフライン機能、使用制限なし、およびハードウェア購入後のゼロAPIコストが得られます。'
     },
     {
       q: 'ローカルLLMにはどの程度のVRAMが必要ですか？',
@@ -646,8 +646,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollamaはシンプルなターミナルコマンドでモデルを実行するCLIツールで、`localhost:11434`でOpenAI互換APIを公開します。LM Studioはデスクトップ GUI、モデルブラウザ、組み込みチャットインターフェースを提供します。どちらも同じモデルをサポートします。'
     },
     {
-      q: 'ローカルLLMはGPT-4oなどのクラウドモデルに対抗できますか？',
-      a: 'コーディングと推論タスクでは、Llama 4、DeepSeek V3、Qwen3.5は標準ベンチマーク（MMLU、HumanEval）でGPT-4oの5–10%以内のスコアを取得します。Claude Opus 4.6とGPT-5は複雑なマルチステップタスクで優位性を保っています。'
+      q: 'ローカルLLMはGPT-5.5などのクラウドモデルに対抗できますか？',
+      a: 'コーディングと推論タスクでは、Llama 4 Scout、DeepSeek V3、Qwen3は標準ベンチマーク（MMLU、HumanEval）でGPT-5.5 miniの5–10%以内のスコアを取得します。Claude Opus 4.7とGPT-5.5は複雑なマルチステップタスクで優位性を保っています。'
     },
     {
       q: 'ローカルモデルはどのようにファインチューニングしますか？',
@@ -663,7 +663,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '2026年のコーディング向けベストローカルLLMは何ですか？',
-      a: 'Qwen2.5-Coder 7Bはコンシューマハードウェア（8 GB VRAM）でのコード補完とレビューのトップパフォーマーです。DeepSeek-Coder V2 Liteが最有力な代替案です。CPUのみのセットアップの場合、Phi-3.5 Miniは4 GB RAM未満で最高のコーディング品質を提供します。'
+      a: 'Qwen3-Coder 7Bはコンシューマハードウェア（8 GB VRAM）でのコード補完とレビューのトップパフォーマーです。DeepSeek-Coder V2 Liteが最有力な代替案です。CPUのみのセットアップの場合、Phi-3.5 Miniは4 GB VRAM未満で最高のコーディング品質を提供します。'
     },
     {
       q: 'GPUなしでローカルLLMを実行できますか？',
@@ -693,7 +693,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
   zh: [
     {
       q: '什么是本地LLM？',
-      a: '在您自己的硬件上运行而不是云API的大型语言模型（例如Llama 4、Qwen3.5、DeepSeek）。您获得完整隐私、离线功能、无使用限制和硬件购买后零API成本。'
+      a: '在您自己的硬件上运行而不是云API的大型语言模型（例如Llama 4 Scout、Qwen3、DeepSeek）。您获得完整隐私、离线功能、无使用限制和硬件购买后零API成本。'
     },
     {
       q: '本地LLM需要多少VRAM？',
@@ -704,8 +704,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama是一个CLI工具，通过简单的终端命令运行模型，并在`localhost:11434`公开OpenAI兼容的API。LM Studio提供桌面GUI、模型浏览器和内置聊天界面。两者都支持相同的模型。'
     },
     {
-      q: '本地LLM能否与GPT-4o等云模型相匹敌？',
-      a: '在编码和推理任务上，Llama 4、DeepSeek V3和Qwen3.5在标准基准（MMLU、HumanEval）上的得分在GPT-4o的5–10%以内。Claude Opus 4.6和GPT-5在复杂的多步任务上保持优势。'
+      q: '本地LLM能否与GPT-5.5等云模型相匹敌？',
+      a: '在编码和推理任务上，Llama 4 Scout、DeepSeek V3和Qwen3在标准基准（MMLU、HumanEval）上的得分在GPT-5.5 mini的5–10%以内。Claude Opus 4.7和GPT-5.5在复杂的多步任务上保持优势。'
     },
     {
       q: '如何微调本地模型？',
@@ -721,7 +721,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '2026年最佳编码本地LLM是什么？',
-      a: 'Qwen2.5-Coder 7B是消费级硬件（8 GB VRAM）上代码补全和审查的顶级表现者。DeepSeek-Coder V2 Lite是最强的替代方案。对于仅CPU设置，Phi-3.5 Mini在4 GB RAM以内提供最佳编码质量。'
+      a: 'Qwen3-Coder 7B是消费级硬件（8 GB VRAM）上代码补全和审查的顶级表现者。DeepSeek-Coder V2 Lite是最强的替代方案。对于仅CPU设置，Phi-3.5 Mini在4 GB VRAM以内提供最佳编码质量。'
     },
     {
       q: '没有GPU可以运行本地LLM吗？',
