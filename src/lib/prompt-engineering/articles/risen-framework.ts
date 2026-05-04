@@ -1868,13 +1868,13 @@ export const article: Record<Language, PEArticle> = {
             '**RISEN + 受限Prompt：** 在Evaluate步骤中添加具体的输出约束（长度、格式、技术水平）来强制质量。',
           ],
         },
-      },
 
-      faqSection: {
-        id: 'faq',
-        items: [
-          {
-            q: 'RISEN代表什么？',
+        faqSection: {
+          title: '常见问题',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'RISEN代表什么？',
             a: 'RISEN代表Refine、Inspect、Summarize、Evaluate、Next Steps。这是一个5步框架，用于通过多个改进循环来改进现有的草稿、文档或分析。',
           },
           {
@@ -1913,27 +1913,31 @@ export const article: Record<Language, PEArticle> = {
             q: 'RISEN对多人团队评审有帮助吗？',
             a: '是的。您可以让初始作者做Refine，高级评审者做Inspect，决策者做Evaluate。这种分工增加了客观性。',
           },
-        ],
-      },
+          ],
+        },
 
-      relatedReading: {
-        title: '相关阅读',
-        items: [
-          { title: '链式思维提示词', url: '/prompt-engineering/chain-of-thought-prompting?lang=zh' },
-          { title: '什么是Prompt工程？', url: '/prompt-engineering/what-is-prompt-engineering?lang=zh' },
-          { title: '少样本Prompt', url: '/prompt-engineering/few-shot-prompting?lang=zh' },
-          { title: '受限Prompt', url: '/prompt-engineering/constrained-prompting?lang=zh' },
-          { title: 'GPT、Claude还是Gemini？选择合适的模型', url: '/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh' },
-          { title: 'Prompt注入和安全', url: '/prompt-engineering/prompt-injection-and-security?lang=zh' },
-        ],
-      },
+        relatedReading: {
+          title: '相关阅读',
+          id: 'related-reading',
+          items: [
+            { title: '链式思维提示词', url: '/prompt-engineering/chain-of-thought-prompting?lang=zh' },
+            { title: '什么是Prompt工程？', url: '/prompt-engineering/what-is-prompt-engineering?lang=zh' },
+            { title: '少样本Prompt', url: '/prompt-engineering/few-shot-prompting?lang=zh' },
+            { title: '受限Prompt', url: '/prompt-engineering/constrained-prompting?lang=zh' },
+            { title: 'GPT、Claude还是Gemini？选择合适的模型', url: '/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh' },
+            { title: 'Prompt注入和安全', url: '/prompt-engineering/prompt-injection-and-security?lang=zh' },
+          ],
+        },
 
-      sources: {
-        items: [
-          'Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., & Narasimhan, K. (2023). "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." arXiv:2305.10601',
-          'Wei, J., Wang, X., Schuurmans, D., Bosma, M., Xia, F., Chi, E., ... & Zhou, D. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
-          'Anthropic. (2026). "Prompt Engineering Guide." https://www.anthropic.com',
-        ],
+        sources: {
+          title: '信息来源',
+          id: 'sources',
+          items: [
+            'Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., & Narasimhan, K. (2023). "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." arXiv:2305.10601',
+            'Wei, J., Wang, X., Schuurmans, D., Bosma, M., Xia, F., Chi, E., ... & Zhou, D. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
+            'Anthropic. (2026). "Prompt Engineering Guide." https://www.anthropic.com',
+          ],
+        },
       },
 
       schema: {
