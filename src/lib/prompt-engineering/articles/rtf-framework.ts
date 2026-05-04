@@ -1238,13 +1238,16 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'RTFフレームワーク：Role・Task・Formatのプロンプト構造（2026年）',
-      intro: '​RTFフレームワークは軽量な3要素プロンプト構造です。Role（モデルの役割）、Task（実行するタスク）、Format（出力形式）。GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、ローカルモデルで動作します。日常的なタスク（要約、コードレビュー、メール、レポート）に標準として使用し、より多くの構造が必要な場合のみCO-STARやSPECSにアップグレードしてください。',
+      intro: 'RTFフレームワークは軽量な3要素プロンプト構造です。Role（モデルの役割）、Task（実行するタスク）、Format（出力形式）。GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、ローカルモデルで動作します。日常的なタスク（要約、コードレビュー、メール、レポート）に標準として使用し、より多くの構造が必要な場合のみCO-STARやSPECSにアップグレードしてください。',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '6分で読める',
       seoTitle: 'RTFフレームワーク：Role・Task・Formatのプロンプト構造（2026）',
       metaDescription: 'RTFプロンプトフレームワーク：Role（誰）、Task（何を）、Format（どう出力）。3要素でルーティンタスクに対応。CO-STAR/SPECS/TRACEとの比較表付き。',
       educationalLevel: 'Intermediate',
+      audience: 'LLMアプリケーション構築するデベロッパー、AIワークフロー設計するプロダクトマネージャー、AI駆動ツール開発するチーム',
+      primaryTerm: 'RTFフレームワーク',
+      aboutTopics: ['RTFプロンプティング', 'プロンプトフレームワーク', 'プロンプトエンジニアリング'],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1254,7 +1257,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-05-04',
         url: 'https://www.promptquorum.com/prompt-engineering/rtf-framework?lang=ja',
         inLanguage: 'ja',
-        keywords: ['RTFフレームワーク', 'Role Task Format', 'プロンプトフレームワーク', 'プロンプトエンジニアリング', 'PromptQuorum'],
+        keywords: ['RTFフレームワーク', 'Role Task Format', 'プロンプトフレームワーク', 'プロンプトエンジニアリング', 'PromptQuorum', 'LLMプロンプティング'],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -1267,13 +1270,364 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
-      sections: {},
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'RTFフレームワークとは何ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF = Role、Task、Format。3要素のプロンプト構造です。Roleはモデルの役割（例：「シニアデータアナリスト」）、Taskは実行内容、Formatは出力形式を指定します。すべての主要LLMモデルで動作します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTFをCO-STARやSPECSの代わりに使うべき場合は？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ルーティン的で反復可能なタスク（要約、コードレビュー、メール、レポート）にRTFを使用します。トーンやオーディエンスが重要ならCO-STAR、厳密なスキーマが必要ならSPECS、推論の透明性が重要ならTRACEに切り替えます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTFは「単にモデルに何をするか言うこと」と同じですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'いいえ。RTFは3つのことを明示的に指定します：モデルが誰なのか（Role）、どんなタスクを解くのか、出力をどう構造化するか（Format）。この構造は曖昧性をなくし、モデル間や実行間の一貫性を高めます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTFはChain-of-Thoughtとどう違いますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chain-of-Thoughtは「ステップバイステップ考えて」と促すことで推論を改善します。RTFは出力フォーマットとロールを構造化します。相補的です。両方組み合わせられます：RTFでロール・フォーマットを定義し、複雑なタスクに「ステップバイステップ」を追加します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'OllamaのようなローカルモデルでRTFを使えますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい。RTFはすべてのLLMで動作します。OllamaやLM Studioで実行するローカルモデルも含まれます。シンプルなモデルは複雑なFormat設定では一貫性が低いかもしれませんが、RTFはなお出力品質を改善します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTFの最も一般的なミスは何ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Formatを曖昧または暗黙的にすること。明示的なFormat指定（例：「各3ポイント、最大50語」）がないと、モデルはデフォルトで散文段落を出力します。常にFormatを指定してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTFはどう一貫性を高めますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Role、Task、Formatを明示的に指定することで、モデルの曖昧性が減ります。結果として、複数モデル、複数実行、チームメンバー再利用での出力の一貫性が向上します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTFプロンプトを保存すべきですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい。定期的なタスク（週次サマリー、コードレビュー、メール下書き）のRTFプロンプトはテンプレートとして保存・再利用すべきです。毎回ゼロから書くより大きな利点です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTFはJSON出力のような厳密なConstraintを強制できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ある程度。Format フィールドで「JSONフォーマット」をリクエストでき、最新モデル（GPT-5.5、Claude）は通常対応します。100%の厳密スキーマ強制にはSPECSまたは構造化出力APIを使用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'PromptQuorumはRTFをどう使用していますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorumはRTFを組み込みフレームワークテンプレートとして含みます。ユーザーはRole、Task、Formatフィールドを入力し、PromptQuorumは同じプロンプトを25+のモデルにディスパッチして比較・A/Bテストします。',
+            },
+          },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '重要ポイント',
+          isTldr: true,
+          items: [
+            'RTF = Role（モデルの役割）、Task（何をするか）、Format（どう出力するか）。3つのシンプル要素。',
+            'ルーティンタスク（要約、コードレビュー、メール、レポート、会議メモ）に標準として使用します。',
+            'Format フィールドはRTFの力。明示的な構造は劇的に一貫性の高い出力を生成します。',
+            'RTFは日常的なLLMタスク80%に対応。CO-STAR（トーン/オーディエンス）、SPECS（constraints）、TRACE（推論）へはRTFが限界に達した場合のみ。',
+            '良いRTFプロンプトは再利用可能なテンプレート。毎週ゼロから書き直す代わりに、年間52回再利用します。',
+            'GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、ローカルモデル（Ollama、LM Studio）で動作。',
+            'PromptQuorumで複数モデルを並べてRTFプロンプトをテストします。',
+          ],
+        },
+        whatIsRTFFramework: {
+          id: 'what-is-rtf-framework',
+          title: 'RTFフレームワークとは',
+          snippets: [
+            { type: 'in-one-sentence', text: 'RTFは3つの部分のプロンプトスケルトン（Role、Task、Format）で、より大きなフレームワークのオーバーヘッドなしにルーティンタスクに適度な構造を提供します。' },
+            { type: 'in-plain-terms', text: 'AIに誰になるか（Role）、何をするか（Task）、答えをどう形式化するか（Format）を伝える。それだけ。3つのこと。日常タスク80%で機能。それ以上が必要になったらCO-STARやSPECSに移行します。' },
+          ],
+          content: [
+            '**RTFフレームワークは3つの部分のプロンプトパターンで、モデルに誰なのか、何をするのか、答えがどう見えるべきかを正確に伝えます。** ぼんやりした質問を送る代わりに、Role、Task、Formatを明示的に指定します。これはGPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、OllamaやLM Studioで実行するローカルモデルで動作します。',
+            'RTFは意図的に最小化されています。3つのフィールドだけなので、覚えやすく、埋めるのが速く、多くの日常タスクに柔軟。どのスペシャライズドフレームワークを使うか分からない時の「デフォルトプロンプトスケルトン」として機能します。',
+          ],
+        },
+        threeComponents: {
+          id: 'three-components',
+          title: '3つのRTFコンポーネント',
+          content: [
+            '**強いRTFプロンプトは3つの要素を明確に定義し、モデルが自分の仕事について曖昧さを感じません。** ラベル付きの行として、または3つの部分すべてを含む1文として書けます。',
+            '典型的な定義：',
+          ],
+          items: [
+            'Role：モデルが採用すべき視点または専門知識（例：「シニアデータアナリスト」）。',
+            'Task：望む具体的なアクション、1～2文で説明。',
+            'Format：出力の構造、長さ、スタイル（例：「3ポイント＋2文のサマリー」）。',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Formatが実力',
+              text: 'RoleとTaskは明白です。ほとんどの人はすでに何をしたいか言っています。Formatが真の価値を追加します。「3ポイント、各最大50語、Markdown」は「要約をください」より劇的に一貫性の高い出力を生成します。FormatフィールドはRTFの秘密兵器。',
+            },
+          ],
+        },
+        whyRTFUseful: {
+          id: 'why-rtf-useful',
+          title: 'RTFが役立つ理由',
+          content: [
+            '**RTFフレームワークは有用です。複雑なフレームワークのメリットをほぼすべて、オーバーヘッドなしで提供するからです。** 3つの決定（誰、何、どう）をプロンプト送信前に強制します。',
+            '実用的なメリット：',
+          ],
+          items: [
+            'ルーティン作業ではマルチセクションフレームワークより速いプロンプト作成。',
+            'フォーマットが常に明示的なので、モデル・実行間での一貫性向上。',
+            'チームメンバーは数分でRTFを学べて、どこでも再利用できます。',
+          ],
+        },
+        badVsGood: {
+          id: 'bad-vs-good',
+          title: '例：悪いRTFプロンプト vs 良いRTFプロンプト',
+          promptExamples: [
+            {
+              bad: 'このミーティングを要約してください。',
+              good: 'Role：プロジェクト進捗ミーティングを経営陣向けに要約するOperationsマネージャー。Task：記録を読み、ミーティングで議論された重要な決定、オープンなリスク、次のステップを識別。Format：Markdown、3セクション（決定、リスク、次のステップ）、各セクション3～5ポイント、総250語以下。',
+              badLabel: '非構造化リクエスト',
+              goodLabel: 'RTFプロンプト',
+            },
+          ],
+          content: [
+            'RTF版はコンテンツについてどう考えるか、結果を他の人がすぐ使える形でパッケージ化する方法をモデルに正確に伝えます。',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: 'RTFをいつ使うか',
+          content: [
+            '**RTFフレームワークを使うべきは、シンプルで再利用可能だが、明確さと構造を強制するパターンが必要な時です。** 長い仕様や多ステップの推論トレースが不要な時の強い標準選択肢です。',
+            '典型的なユースケース：',
+          ],
+          items: [
+            'メール・チャット向けの短いレポート、要約、概要。',
+            '明確な構造での顧客・内部ステークホルダー向けレスポンス起案。',
+            '指定された出力フォーマットでの小規模コードスニペット・リファクタリング生成。',
+            '製品説明、FAQ項目、シンプルなチェックリストのような高速コンテンツ。',
+          ],
+        },
+        whenNotToUse: {
+          id: 'when-not-to-use',
+          title: 'RTFが適切でない場合',
+          tableFormat: true,
+          columns: ['シナリオ', 'RTF制限', '代わりに使用'],
+          rows: [
+            { 'シナリオ': '顧客向けコンテンツでトーン・オーディエンスが重要', 'RTF制限': '明示的なAudience・Toneフィールドがない', '代わりに使用': 'CO-STAR（Style、Audience、Toneを含む）またはCRAFT（Constraints、Role、Audience、Format、Tone）' },
+            { 'シナリオ': '厳密なデータ構造またはスキーマ強制が必要', 'RTF制限': 'FormatフィールドはJSONをリクエストできるが制約構文がない', '代わりに使用': 'SPECS（明示的なConstraintsフィールド）' },
+            { 'シナリオ': 'マルチステップの推論または決定ロジックが必要', 'RTF制限': 'ステップバイステップ推論フィールドがない', '代わりに使用': 'TRACE（Trigger、Response、Action、Consequence、Evaluation）' },
+            { 'シナリオ': '条件ロジック付き複雑なワークフロー', 'RTF制限': 'プロンプトあたりRole/Task/Format単一', '代わりに使用': 'APE（Action、Process、Examples）またはカスタムマルチターンワークフロー' },
+          ],
+        },
+        comparisonTables: {
+          id: 'comparison-tables',
+          title: '比較表',
+          content: [
+            '**RTFが他の主要フレームワークとどう比較するか：**',
+          ],
+        },
+        dimensionComparison: {
+          title: '次元別比較',
+          tableFormat: true,
+          columns: ['次元', 'RTF', 'CO-STAR', 'SPECS', 'TRACE'],
+          rows: [
+            { '次元': 'フィールド数', 'RTF': '3（Role、Task、Format）', 'CO-STAR': '6（Context、Objective、Style、Audience、Response、Tone）', 'SPECS': '5（Settings、Person、Examples、Pattern、Constraints）', 'TRACE': '5（Trigger、Response、Action、Consequence、Evaluation）' },
+            { '次元': 'セットアップ時間', 'RTF': '30秒', 'CO-STAR': '2～3分', 'SPECS': '3～5分', 'TRACE': '2～3分' },
+            { '次元': '最良用途', 'RTF': 'ルーティン・反復タスク', 'CO-STAR': 'トーン・オーディエンス制御', 'SPECS': '厳密スキーマ・constraints', 'TRACE': '明示的推論ステップ' },
+            { '次元': '出力一貫性', 'RTF': '良好', 'CO-STAR': '優秀', 'SPECS': '優秀', 'TRACE': '良好' },
+            { '次元': '例が必要？', 'RTF': 'いいえ', 'CO-STAR': 'オプション', 'SPECS': 'はい（強力なパターン）', 'TRACE': 'いいえ' },
+          ],
+        },
+        pairwiseComparison: {
+          title: 'ペアワイズ比較（RTF vs その他）',
+          tableFormat: true,
+          columns: ['比較', 'リーダー', '理由'],
+          rows: [
+            { '比較': 'RTF vs CO-STAR', 'リーダー': 'CO-STAR（オーディエンスが重要な場合）', '理由': 'CO-STARは明示的なAudience・Toneフィールドを持ちます。RTFはトーンをRoleまたはFormatに押し込むと複雑化。声が重要でなければRTFが速い。' },
+            { '比較': 'RTF vs SPECS', 'リーダー': 'SPECS（厳密な制約が必要）', '理由': 'SPECSは専用Constraintsフィールド・例の期待。RTFはFormatで制約をリクエストできるが構造構文がない。SPECS勝利：JSON、CSV、構造化データ。' },
+            { '比較': 'RTF vs TRACE', 'リーダー': 'TRACE（推論が重要）', '理由': 'TRACEは因果関係を明示的にモデル化（Trigger→Response→Action→Consequence）。RTFに推論ステップフィールドなし。複雑ロジックはTRACE、シンプル出力はRTF。' },
+            { '比較': 'RTF vs Chain-of-Thought', 'リーダー': '相補的', '理由': 'RTFはロール・出力フォーマットを定義。CoTは推論を改善。組み合わせられます：RTFでプロンプト構造化、複雑な数学・ロジックに「ステップバイステップ」を追加。' },
+          ],
+        },
+        howToWrite: {
+          id: 'how-to-write',
+          title: 'RTFプロンプトの書き方',
+          numberedItems: [
+            '**Role：AIが演じる人を定義。** 具体的なロール勝利。悪い：「役に立つ」。良い：「パフォーマンス回帰をレビューするシニアバックエンドエンジニア」。ロールが具体的なほど、出力が一貫性。',
+            '**Task：何をするか述べる。** 具体的に。悪い：「これを要約」。良い：「議論された3つの重要な決定、オープンなリスク、次のステップを特定」。',
+            '**Format：構造、長さ、スタイル指定。** ここでRTFが価値を追加。悪い：（Formatなし）。良い：「3ポイント、各最大50語、Markdown、総200語以下」。',
+            '**TaskとFormatを分離。** ペースト状にするとどちらも十分な特異性を得られません。分離を保つ。',
+            '**Formatは明白に思えてもいつも含める。** 明示的なFormatフィールドなしでモデルは散文段落がデフォルト。',
+          ],
+        },
+        fiveExamples: {
+          id: 'five-examples',
+          title: '5つの実世界RTF例',
+          content: ['一般的なワークフロー用の5つのプロダクション対応RTFプロンプト：'],
+        },
+        example1: {
+          title: '例1：週次ステータスサマリー',
+          content: [
+            '**Role :** 経営陣向けに週次ステータスサマリーを書くOperationsマネージャー。',
+            '**Task :** 今週のプロジェクト進捗、重要な決定、特定されたリスク、来週の優先事項を要約。',
+            '**Format :** Markdown、4セクション（サマリー、決定、リスク、来週）、セクションあたり3～5ポイント、300語最大。',
+          ],
+        },
+        example2: {
+          title: '例2：コードレビューフィードバック',
+          content: [
+            '**Role :** メンテナビリティ、パフォーマンス、セキュリティをレビューするシニアバックエンドエンジニア。',
+            '**Task :** このコードブロックレビュー、問題を特定、改善を提案、全体品質を評価。',
+            '**Format :** Markdown、3セクション（見つかった問題、改善、品質評価1～5）、コード例用コードブロック。',
+          ],
+        },
+        example3: {
+          title: '例3：顧客メール下書き',
+          content: [
+            '**Role :** 顧客苦情への専門的で共感的な返答を書くカスタマーサクセスマネージャー。',
+            '**Task :** 懸念に対応、適切に謝罪、解決を説明、信頼を復元。',
+            '**Format :** メール形式（挨拶、2～3段落、締めくくり）、プロフェッショナルトーン、150～250語。',
+          ],
+        },
+        example4: {
+          title: '例4：ミーティングメモからアクション項目',
+          content: [
+            '**Role :** 生メモからアクション項目を抽出するプロジェクトコーディネーター。',
+            '**Task :** 決定、議論されたリスク、所有者と期限付き次のステップを特定。',
+            '**Format :** Markdown、3セクション（決定、リスク、アクション項目）、チェックボックスリスト形式、所有者と期限付き。',
+          ],
+        },
+        example5: {
+          title: '例5：非技術ユーザー向け製品ドキュメント',
+          content: [
+            '**Role :** 機能をシンプル言語で非技術ユーザーに説明するテクニカルライター。',
+            '**Task :** 機能の説明、ユーザーが使う理由、3シンプルステップで使い方を説明。',
+            '**Format :** 1文イントロ、3数字ステップと例、1文結論。ジャルゴン回避。',
+          ],
+        },
+        combiningRTF: {
+          id: 'combining-rtf',
+          title: 'RTFと他のフレームワークを組み合わせる',
+          content: [
+            '**RTFフレームワークは他と組み合わせるべき。RTFをライト標準として扱い、制約が増すとヘビーフレームワークに切り替える。** 実用的パターン：',
+          ],
+          items: [
+            '大多数の新タスクはRTFから開始。すぐに明確な構造が必要。',
+            '厳密なスキーマ、例、constraintsが必要ならSPECSに移行。',
+            '最終答前に明示的推論ステップが必要ならTRACEまたはAPEを使用。',
+            'オーディエンス・トーンが中心ならCRAFTのようなクリエイティブフレームワークを使用。',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'よくあるRTFの間違い',
+          mistakes: [
+            {
+              mistake: '曖昧なRole ——「役に立つアシスタント」',
+              problem: '「役に立つ」はデフォルト。何も追加しません。曖昧なロール＝モデルが自分の視点を選ぶ、実行ごとに変わります。',
+              fix: '具体的に：「シニアバックエンドエンジニア」または「CFOを標的にするB2Bマーケティングマネージャー」。ロールが具体的なほど、出力が一貫性。',
+            },
+            {
+              mistake: 'TaskとFormatがペースト状',
+              problem: '「このミーティングをポイントで要約」はTaskとFormatを混ぜます。混ぜると、どちらも十分な特異性を得られません。',
+              fix: '分離：Task = 「決定、リスク、次のステップを特定」。Format = 「Markdown、3セクション、3～5ポイント各、250語以下」。',
+            },
+            {
+              mistake: 'Format完全に省略',
+              problem: '明示的なFormat指定なし＝モデルは散文段落がデフォルト。必ずしも何を必要としているか。「AIが壁のようなテキストをくれた」の#1原因。',
+              fix: 'Format指定は常に。「3ポイント」さえ、何もないより良い。',
+            },
+            {
+              mistake: 'トーン・オーディエンス制御が必要なタスクにRTF使用',
+              problem: 'RTFに明示的AudienceまたはToneフィールドなし。顧客向けコンテンツ、声重要な場合、RTFはトーンをRoleまたはFormatに押し込む、複雑になります。',
+              fix: '声重要ならCRAFT（明示的なAudience・Toneフィールド）またはCO-STAR（Style・Audienceを分離）に切り替え。',
+            },
+            {
+              mistake: 'RTFプロンプトをテンプレートとして保存しない',
+              problem: '毎週ゼロから「ミーティングサマリー」RTFプロンプト書き直し＝時間浪費・一貫性低下。',
+              fix: 'ワークするRTFプロンプトはPromptQuorumで名前付きテンプレートとして保存。入力データ交換して再利用。',
+            },
+          ],
+        },
+        promptquorumImplementation: {
+          id: 'promptquorum-implementation',
+          title: 'PromptQuorumがRTFを実装する方法',
+          content: [
+            '**PromptQuorumはマルチモデルAIディスパッチツールで、RTFフレームワークを組み込みプロンプト構造として含み、ユーザーがRole–Task–Format プロンプティングを一貫的に適用できます。** PromptQuorumでRTFオプションを選択すると、インタフェースはRole、Task、Formatのフィールドを公開し、単一の整形式指示に組み立てます。',
+            'PromptQuorumではRTFは可能にします：',
+          ],
+          items: [
+            'Role、Task、Formatを一度埋めて、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、OllamaやLM Studioで設定したローカルモデルのような25+モデルに同じ構造化プロンプトを送信。',
+            'RTFプロンプトをテンプレートで保存、反復ワークフロー用 —— 例：「週次ステータスサマリー」、「顧客返答下書き」、「バグレポート要約」。',
+            'RTFテンプレートをチーム全体で共有、非エキスパートも一貫性・構造化出力を作成するプロンプトを作れます。',
+            '複数モデル並べて同じRTFプロンプトをテスト、ユースケースに最良のものを見つける。',
+          ],
+        },
+        relatedReading: {
+          items: [
+            { title: 'Chain-of-Thoughtプロンプティング', url: '/prompt-engineering/chain-of-thought-prompting?lang=ja' },
+            { title: 'プロンプトエンジニアリングとは？', url: '/prompt-engineering/what-is-prompt-engineering?lang=ja' },
+            { title: 'Zero-Shot vs Few-Shotプロンプティング', url: '/prompt-engineering/zero-shot-vs-few-shot?lang=ja' },
+            { title: '制約付きプロンプティング', url: '/prompt-engineering/constrained-prompting?lang=ja' },
+            { title: '正しいモデルの選び方：GPT-5.5 vs Claude vs Gemini', url: '/prompt-engineering/gpt-claude-gemini-which-model?lang=ja' },
+            { title: 'CO-STARフレームワーク', url: '/prompt-engineering/co-star-framework?lang=ja' },
+          ],
+        },
+        sources: {
+          items: [
+            'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
+            'Brown, T. B., et al. (2020). 「Language Models are Few-Shot Learners.」OpenAI. arXiv:2005.14165',
+            'OpenAI. (2026). Prompt Engineering Best Practices. [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2026). Prompt Engineering — Claude API Documentation. [https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)',
+          ],
+        },
+      },
     },
     zh: {
       freshness_tier: 'semi_annual',
