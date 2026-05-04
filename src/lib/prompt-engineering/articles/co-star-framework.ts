@@ -328,23 +328,316 @@ export const article: Record<Language, PEArticle> = {
     de: {
       freshness_tier: 'evergreen',
       theme: 'Frameworks',
-      title: 'The CO-STAR Framework',
-      seoTitle: 'CO-STAR-Framework: Kontext, Ziel, Stil & Ton',
-      metaDescription: 'CO-STAR-Framework zerlegt komplexe Prompts: Kontext, Ziel, Stil, Ton, Zielgruppe, Response. Mit allen großen Sprachmodellen. PromptQuorum-unterstützt.',
+      title: 'CO-STAR-Prompt-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response — Vollständiger Leitfaden',
+      seoTitle: 'CO-STAR-Framework: 6-Komponenten-Struktur für komplexe Aufgaben',
+      metaDescription: 'Das CO-STAR-Framework strukturiert jeden KI-Prompt in 6 Komponenten: Kontext, Ziel, Stil, Ton, Zielgruppe, Response. Vorlage, Beispiele und Vergleich zu CRAFT, SPECS und APE.',
+      intro: 'Das CO-STAR-Framework ist ein strukturiertes Prompt-Format, das Ihnen hilft, klare, mehrstufige Anweisungen für komplexe Aufgaben zu entwerfen, indem Sie Kontext, Ziel, Stil, Ton, Zielgruppe und Response in einer kohärenten Botschaft definieren. In PromptQuorum ist das CO-STAR-Framework als integrierte Option verfügbar, die jeder Benutzer auswählen und auf alle unterstützten Modelle anwenden kann.',
       publishDate: '2026-03-24',
-      readTime: '8 min read',
+      readTime: '10 Min. Lesezeit',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'CO-STAR-Framework',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=de',
         'inLanguage': 'de',
-        headline: 'CO-STAR-Framework: Kontext, Ziel, Stil & Ton',
-        description: 'Das CO-STAR-Framework zerlegt komplexe Prompts in Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Mit allen großen Sprachmodellen. PromptQuorum-unterstützt.',
+        headline: 'CO-STAR-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response',
+        description: 'Das CO-STAR-Framework strukturiert komplexe Prompts in 6 Komponenten: Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Wie es funktioniert, wann man es einsetzt, und wie PromptQuorum es als integrierte Option anbietet.',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
+        keywords: ['CO-STAR-Framework', 'Prompt-Engineering', 'KI-Prompts', 'Prompt-Struktur', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt-Engineering' },
+          { '@type': 'Thing', name: 'Prompt-Frameworks' },
+          { '@type': 'Thing', name: 'Große Sprachmodelle' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
+        },
       },
-      sections: {}
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'de',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Was bedeutet CO-STAR?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR steht für Context (Kontext), Objective (Ziel), Style (Stil), Tone (Ton), Audience (Zielgruppe) und Response (Antwort). Jeder Buchstabe repräsentiert eine Komponente eines strukturierten KI-Prompts. Zusammen bilden die sechs Komponenten ein vollständiges Briefing — entsprechend dem, was ein menschlicher Autor benötigen würde, um beim ersten Versuch die richtige Ausgabe zu produzieren.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollte ich das CO-STAR-Framework verwenden?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Verwenden Sie CO-STAR, wenn mehrere Dimensionen gleichzeitig wichtig sind — wenn die Ausgabe eine bestimmte Struktur UND einen bestimmten Ton UND muss für ein bestimmtes Publikum kalibriert sein. Wenn Sie nur eine sachliche Antwort oder ein einfaches Format benötigen, ist ein kürzerer Prompt oder ein Single-Step-Ansatz ausreichend. CO-STAR glänzt bei Dokumentation, kundenorientiertem Inhalt, Onboarding-Materialien und Mehrfach-Stakeholder-Kommunikation.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterscheidet sich CO-STAR von CRAFT?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide sind strukturierte Prompt-Frameworks, aber mit unterschiedlichen Schwerpunkten. CO-STAR (Context, Objective, Style, Tone, Audience, Response) konzentriert sich auf Kommunikationsdimensionen — wer liest es, wie sollte es sich anfühlen. CRAFT (Context, Role, Action, Format, Target) konzentriert sich auf Aufgabenausführung — welche Rolle das Modell spielt und welche Aktion es ergreift. CO-STAR ist besser für zielgruppenorientierte Inhalte; CRAFT ist besser für rollendefinierten Aufgaben.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterscheidet sich CO-STAR von SPECS?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'SPECS (Situation, Problem, Examples, Constraints, Style) ist problemlösungsorientiert — es geht von einem Problem aus und arbeitet auf eine Lösung hin. CO-STAR ist kommunikationsorientiert — es geht von einer Zielgruppe aus und arbeitet auf die richtige Botschaft hin. Verwenden Sie SPECS für analytische und problemlösende Aufgaben; verwenden Sie CO-STAR für Content-Erstellung und Kommunikationsaufgaben.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich CO-STAR mit lokalen Modellen über Ollama verwenden?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. CO-STAR ist eine Prompt-Ebenen-Technik — sie funktioniert mit jedem Modell, das Anweisungen befolgt. Lokale Modelle reagieren auf die gleiche sechsteilige Struktur. Kleinere Modelle können möglicherweise weniger Einschränkungen gleichzeitig bewältigen, daher priorisieren Sie die wichtigsten 3–4 Komponenten, wenn Sie ein Modell unter 7B-Parametern verwenden.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Benötige ich alle sechs CO-STAR-Komponenten in jedem Prompt?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Kontext und Ziel sind essentiell. Stil, Ton, Zielgruppe und Response verbessern die Qualität, können aber bei einfachen Aufgaben weggelassen werden. Beginnen Sie mit Context + Objective + Response als minimal lebensfähigen CO-STAR-Prompt, dann fügen Sie Stil, Ton und Zielgruppe hinzu, wenn die Ausgabe Kalibrierung benötigt.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich CO-STAR mit Chain-of-Thought oder APE kombinieren?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. CO-STAR definiert WAS das Modell produzieren soll und WIE es sich anfühlen soll. Chain-of-Thought oder APE definieren, wie das Modell DENKEN soll. Sie können CO-STAR für das Briefing verwenden und „Denken Sie Schritt für Schritt, bevor Sie die endgültige Antwort erstellen" als zusätzliche Anweisung hinzufügen. Die Frameworks ergänzen sich gegenseitig, sind nicht konkurrierend.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist das CO-STAR-Framework DSGVO-konform?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Das CO-STAR-Framework selbst ist ein Prompt-Engineering-Konzept und unterliegt nicht direkt der DSGVO. Wenn Sie jedoch mit lokalen Modellen (wie Ollama) oder selbstgehosteten KI-Systemen arbeiten, können Sie sicherstellen, dass personenbezogene Daten lokal verbleiben. Dies erfüllt DSGVO-Anforderungen an Datenresidenz und -verarbeitung. BSI-Grundschutz-Kataloge empfehlen für sensitive Daten die Verwendung von lokalen Inferenzbasis-Systemen, die CO-STAR unterstützt.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist das CO-STAR-Framework für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, besonders für den Mittelstand. Viele mittelständische Unternehmen in Deutschland, Österreich und der Schweiz nutzen CO-STAR für interne Dokumentation, Kundenkommunikation und Team-Workflows. Das Framework passt zu bestehenden IT-Sicherheitsstandards (BSI-Grundschutz) und ermöglicht es KMUs, KI-Prompts strukturiert und zuverlässig zu verwenden, ohne externe Abhängigkeiten. PromptQuorum bietet CO-STAR als integrierte Option, die mit lokalen Alternativen kompatibel ist.' }
+          },
+        ]
+      },
+      sections: {
+        wasIstCOSTAR: {
+          title: 'Was das CO-STAR-Framework ist',
+          content: [
+            '**Das CO-STAR-Framework ist ein Prompt-Engineering-Muster für komplexe Anweisungen, bei denen Modelle nicht nur verstehen sollen, was zu tun ist, sondern wie, für wen und in welchem Stil.** Anstatt einen einzelnen vagen Satz zu schreiben, zerlegen Sie Ihren Prompt in explizite CO-STAR-Komponenten, damit alle großen Sprachmodelle ein vollständiges Briefing erhalten.',
+            'Das Akronym wird typischerweise wie folgt erweitert:',
+          ],
+          items: [
+            'C — Context (Kontext): Hintergrundsinformationen und relevante Fakten.',
+            'O — Objective (Ziel): Das einzelne Hauptziel der Aufgabe.',
+            'S — Style (Stil): Strukturelle oder rhetorische Vorlieben (zum Beispiel „Schritt-für-Schritt-Erklärung").',
+            'T — Tone (Ton): Der emotionale Charakter oder die Stimme (zum Beispiel „formal", „freundlich", „direkt").',
+            'A — Audience (Zielgruppe): Wer wird die Ausgabe lesen oder verwenden.',
+            'R — Response (Antwort): Das genaue Ausgabeformat, das Sie erwarten.',
+          ],
+        },
+        warumCOSTARWirkt: {
+          title: 'Warum das CO-STAR-Framework funktioniert',
+          content: [
+            '**Das CO-STAR-Framework funktioniert, weil es widerspiegelt, wie Menschen gute Briefe schreiben: Es macht das Modell auf Kontext, Ziel und Publikum aufmerksam, bevor es mit der Generierung beginnt.** Wenn diese Elemente explizit sind, muss das Modell sie nicht aus einer kurzen, mehrdeutigen Anweisung ableiten.',
+            'Dies führt zu mehreren praktischen Vorteilen:',
+          ],
+          items: [
+            'Höhere Konsistenz über Läufe hinweg, da die gleiche Struktur wiederverwendet wird.',
+            'Einfachere Zusammenarbeit, da der Prompt wie eine gemeinsame Spezifikation lesbar ist.',
+            'Bessere Cross-Model-Vergleichbarkeit, da alle Anbieter die gleiche Aufschlüsselung sehen.',
+          ],
+        },
+        komponenten: {
+          title: 'Die CO-STAR-Komponenten im Detail',
+          content: [
+            '**Ein starker CO-STAR-Prompt umfasst alle sechs Komponenten, jeweils als kurze, klare Anweisung oder Satz geschrieben.** Sie können sie als beschriftete Zeilen oder als strukturierten Absatz formatieren; das Wichtigste ist, dass jede Komponente leicht zu erkennen und zu bearbeiten ist.',
+            'Typische Komponentenbeschreibungen:',
+          ],
+          items: [
+            'Context: Was es geht, was bereits geschehen ist und alle Einschränkungen oder Datenquellen.',
+            'Objective: Eine prägnante Aussage über das Erfolgsaussehen.',
+            'Style: Ob Sie eine Erzählung, eine Liste, eine Schritt-für-Schritt-Anleitung oder eine andere Struktur möchten.',
+            'Tone: Ob die Stimme formal, neutral, gesprächig oder etwas anderes sein sollte.',
+            'Audience: Die spezifische Gruppe, die Sie anstreben, einschließlich ihrer Rolle und ihres Wissensstandes.',
+            'Response: Das erforderliche Format, z. B. Überschriften, Aufzählungszeichen, Längenbegrenzung oder JSON-Felder.',
+          ],
+        },
+        schlechtesVsGutesBeispiel: {
+          title: 'Beispiel: Schlechter vs. Guter CO-STAR-Prompt',
+          content: [
+            '**Der Wert des CO-STAR-Frameworks wird deutlich, wenn Sie einen unstrukturierten Prompt mit einem CO-STAR-basierten Prompt für die gleiche Aufgabe vergleichen.** Hier ist ein Beispiel für eine technische Erklärung.',
+            '**[Schlechter Prompt]**',
+            '"Erklären Sie APIs unseren Kunden."',
+            '**[Guter Prompt]**',
+            '"Context: Wir bieten eine SaaS-Plattform und fügen eine API hinzu, damit Kunden unser Produkt in ihre internen Tools integrieren können. Viele von ihnen sind nicht-technische Geschäftsbenutzer. Objective: Erklären Sie, was eine API ist und warum sie für unser Produkt wichtig ist, auf eine Weise, die Angst reduziert und Einführung fördert. Style: Verwenden Sie kurze Abschnitte mit H2-Überschriften und Aufzählungszeichen für Schlüsselideen. Fügen Sie eine einfache reale Analogie ein. Tone: Klar, beruhigend und nicht technisch. Vermeiden Sie Jargon, wo möglich, und erklären Sie alle notwendigen technischen Begriffe. Audience: Geschäftsbenutzer und Manager ohne Programmierhintergrund. Response: 700–900 Wort-Artikel mit Intro, 3–4 Hauptabschnitten und kurzer Zusammenfassung, die sie einlädt, mit ihrem Account Manager zu sprechen."',
+            'Die CO-STAR-Version definiert jede wichtige Dimension explizit und macht es viel wahrscheinlicher, dass das Modell etwas produziert, das Ihre Kunden tatsächlich verwenden können.',
+          ],
+        },
+        wann: {
+          title: 'Wann sollte man das CO-STAR-Framework verwenden',
+          content: [
+            '**Sie sollten das CO-STAR-Framework verwenden, wenn Sie mit Multi-Constraint-Aufgaben umgehen, bei denen Zielgruppe, Struktur und Ton gleichzeitig wichtig sind.** Dies umfasst viele allgemeine Workflows in Produkt, Marketing, Kundenerfolg und Bildung.',
+            'Typische Anwendungsfälle:',
+          ],
+          items: [
+            'Schreiben von Produktdokumentation oder Onboarding-Leitfäden.',
+            'Erstellen von Bildungsartikeln oder Erklärungen für Nicht-Expert-Publika.',
+            'Verfassen von strukturierten internen Memos, Strategienotizen oder Richtliniendokumenten.',
+            'Vorbereitung von Support-Makros oder Help-Center-Inhalten, die einen konsistenten Ton aufrechterhalten müssen.',
+          ],
+        },
+        wieMan: {
+          title: 'Wie man einen CO-STAR-Prompt praktisch schreibt',
+          content: [
+            '**Das Schreiben eines CO-STAR-Prompts ist unkompliziert, wenn Sie es sich als Ausfüllen von sechs Zeilen eines Briefings vorstellen, das Sie zusammen als eine Anweisung senden.** Sie können dieses Muster speichern und durch Ändern nur der Details für verschiedene Aufgaben wiederverwenden.',
+            'Eine generische Vorlage sieht so aus:',
+          ],
+          items: [
+            'Context: [Was passiert, worum geht es, relevanter Hintergrund.]',
+            'Objective: [Einzelnes Hauptziel für diesen Prompt.]',
+            'Style: [Bevorzugte Struktur, z. B. Aufzählungszeichen, Erzählung oder Schritt-für-Schritt.]',
+            'Tone: [Stimme und emotionales Gefühl, das Sie möchten.]',
+            'Audience: [Wer wird dies lesen und was wissen sie.]',
+            'Response: [Genaues Format, Länge und spezielle Anforderungen.]',
+          ],
+        },
+        wiePQImplementiert: {
+          title: 'Wie PromptQuorum das CO-STAR-Framework implementiert',
+          content: [
+            '**PromptQuorum ist ein Multi-Model-KI-Dispatch-Tool, das das CO-STAR-Framework als integrierte Prompt-Option enthält, damit Benutzer Context-Objective-Style-Tone-Audience-Response-Prompting anwenden können, ohne das Muster auswendig zu lernen.** Wenn Sie das CO-STAR-Framework in PromptQuorum auswählen, bietet die App dedizierte Eingabefelder für jede Komponente und stellt sie automatisch in einen einzigen strukturierten Prompt zusammen.',
+            'In PromptQuorum können Sie:',
+          ],
+          items: [
+            'Füllen Sie CO-STAR-Felder für eine Aufgabe aus und leiten Sie den resultierenden Prompt an mehrere große Sprachmodelle weiter, einschließlich proprietärer und Open-Source-Optionen.',
+            'Speichern Sie CO-STAR-Prompts als Vorlagen für wiederkehrende Workflows, z. B. Dokumentationsaktualisierungen, Feature-Ankündigungen oder vierteljährliche Zusammenfassungen.',
+            'Teilen Sie diese Vorlagen mit Ihrem Team, damit alle die gleiche Struktur verwenden, auch wenn sie neu im Prompt-Engineering sind.',
+          ],
+        },
+        zusammenMitAnderen: {
+          title: 'Verwendung von CO-STAR zusammen mit anderen Frameworks',
+          content: [
+            '**Sie sollten das CO-STAR-Framework neben anderen Prompt-Frameworks positionieren, indem Sie jedem eine klare Rolle in Ihrem Workflow zuweisen.** CO-STAR zeichnet sich bei Multi-Constraint-Kommunikationsaufgaben aus, bei denen Zielgruppe und Struktur beide wichtig sind.',
+            'Eine einfache Strategie ist:',
+          ],
+          items: [
+            'Verwenden Sie CO-STAR für strukturierte Erklärungen, Leitfäden und Kommunikationsstücke.',
+            'Verwenden Sie CRAFT, wenn Sie sich auf reine Marketingsprache und Markenstimme für spezifische Kanäle konzentrieren.',
+            'Verwenden Sie Single Step oder Specification-Style-Frameworks für eng formatierte Ausgaben wie Berichte oder JSON.',
+            'Verwenden Sie Reasoning-Frameworks wie Analyze-Plan-Execute, wenn das Modell sein Zwischendenken offenlegen soll.',
+          ],
+        },
+        schluesselErkenntnisse: {
+          title: 'Schlüsselerkentnisse',
+          isTldr: true,
+          content: [
+            '**CO-STAR** = C — Context (Kontext), O — Objective (Ziel), S — Style (Stil), T — Tone (Ton), A — Audience (Zielgruppe), R — Response (Antwort) — sechs beschriftete Komponenten, die Vermutungen aus KI-Prompts eliminieren',
+            'CO-STAR ist am stärksten für **Multi-Constraint-Kommunikationsaufgaben**, bei denen Zielgruppe, Struktur und Ton gleichzeitig wichtig sind',
+            'Das Framework spiegelt wider, wie Menschen gute Briefe schreiben: Kontext, Ziel und Publikum vor der Modellgenerierung explizit machen',
+            'CO-STAR-Prompts sind tragbar über alle Sprachmodelle — Cloud-APIs und lokale Modelle',
+            'Verwenden Sie CO-STAR für Dokumentation, Onboarding-Leitfäden, Erklärungen, interne Memos und Help-Center-Inhalte',
+            'Für reine Reasoning-Aufgaben verwenden Sie APE oder Chain-of-Thought. Für einfache Single-Output-Aufgaben verwenden Sie Single-Step.',
+          ],
+        },
+        schnelleFakten: {
+          title: 'Schnelle Fakten',
+          items: [
+            '**CO-STAR =** C — Context (Kontext), O — Objective (Ziel), S — Style (Stil), T — Tone (Ton), A — Audience (Zielgruppe), R — Response (Antwort)',
+            '**Best für:** Multi-Constraint-Kommunikationsaufgaben (Dokumentation, Erklärungen, Onboarding, Memos)',
+            '**Komponenten:** 6 — mehr als APE (3), vergleichbar mit CRAFT (5) und SPECS (5)',
+            '**Minimal lebensfähig:** Context + Objective + Response (3 von 6)',
+            '**Kernstärke:** Zielgruppen- und Ton-Bewusstsein — CO-STAR ist das zielgruppenzentrierteste Framework',
+            '**Funktioniert auf:** Alle Sprachmodelle — Cloud und lokal',
+          ],
+        },
+        frameworkVergleich: {
+          title: 'CO-STAR vs. andere Prompt-Frameworks',
+          columns: ['Framework', 'Komponenten', 'Fokus', 'Am besten für'],
+          rows: [
+            { 'Framework': 'CO-STAR', 'Komponenten': '6 (Context, Objective, Style, Tone, Audience, Response)', 'Fokus': 'Zielgruppenorientierte Kommunikation', 'Am besten für': 'Dokumentation, Erklärungen, Kundeninhalt' },
+            { 'Framework': 'CRAFT', 'Komponenten': '5 (Context, Role, Action, Format, Target)', 'Fokus': 'Rollendefinierte Aufgabenausführung', 'Am besten für': 'Marketing, kanalspezifische Inhalte' },
+            { 'Framework': 'SPECS', 'Komponenten': '5 (Situation, Problem, Examples, Constraints, Style)', 'Fokus': 'Problemlösung mit Beispielen', 'Am besten für': 'Analytische Aufgaben, Fehlerbehebung' },
+            { 'Framework': 'APE', 'Komponenten': '3 (Analyze, Plan, Execute)', 'Fokus': 'Sichtbares Reasoning', 'Am besten für': 'Komplexe Analyse, Strategie, Code-Review' },
+            { 'Framework': 'RTF', 'Komponenten': '3 (Role, Task, Format)', 'Fokus': 'Minimale Struktur', 'Am besten für': 'Schnelle Aufgaben, einfache Ausgaben' },
+            { 'Framework': 'Single-Step', 'Komponenten': '1 (eine Anweisung)', 'Fokus': 'Geschwindigkeit', 'Am besten für': 'Wohldefinierte, einfache Aufgaben' },
+          ],
+        },
+        haeufigeFehler: {
+          title: 'Häufige Fehler mit dem CO-STAR-Framework',
+          numberedItems: [
+            '**Context als einen einzelnen vagen Satz schreiben.** Warum es schadet: "Wir sind ein SaaS-Unternehmen" sagt dem Modell fast nichts. Es kennt Ihr Produkt, Ihre Kunden oder die Situation nicht. Reparieren: Spezifischen Hintergrund einbeziehen: Was Produkt, welches Problem, was bereits geschehen ist, welche Daten verfügbar sind.',
+            '**Style und Tone verwechseln.** Warum es schadet: Style = Struktur (Aufzählungszeichen, Überschriften, Schritt-für-Schritt). Tone = Stimme (formal, freundlich, dringend). Diese zu mischen führt zu Prompts, bei denen keines klar ist. Reparieren: Style beantwortet "wie sieht es aus?" Tone beantwortet "wie klingt es?" Halten Sie sie in separaten Zeilen.',
+            '**Audience bei internen Dokumenten überspringen.** Warum es schadet: "Intern" ist keine Zielgruppe. Ein Memo für Ingenieure liest sich anders als ein Memo für den CFO. Ohne Angabe, wer es liest, verfällt das Modell zu generischer Mid-Level-Prosa. Reparieren: Nennen Sie die Rolle des Lesers, sein Wissensniveau und was er mit der Ausgabe tun wird.',
+            '**Response zu vage machen ("ein Dokument").** Warum es schadet: Das Modell wählt seine eigene Länge, Struktur und Format — was bei jedem Durchlauf ändert. Reparieren: Format (Aufzählungszeichen, Überschriften, JSON), Länge (Wortanzahl oder Abschnittsanzahl) und alle strukturellen Anforderungen (Intro, Schluss, CTA) angeben.',
+          ],
+        },
+        erweitertesFAQ: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Was bedeutet CO-STAR?',
+              a: 'CO-STAR steht für Context (Kontext), Objective (Ziel), Style (Stil), Tone (Ton), Audience (Zielgruppe) und Response (Antwort). Jeder Buchstabe repräsentiert eine Komponente eines strukturierten KI-Prompts. Zusammen bilden die sechs Komponenten ein vollständiges Briefing — entsprechend dem, was ein menschlicher Autor benötigen würde, um beim ersten Versuch die richtige Ausgabe zu produzieren.'
+            },
+            {
+              q: 'Wann sollte ich CO-STAR anstelle eines einfacheren Prompts verwenden?',
+              a: 'Verwenden Sie CO-STAR, wenn mehrere Dimensionen gleichzeitig wichtig sind — wenn die Ausgabe eine bestimmte Struktur UND einen bestimmten Ton UND eine Kalibrierung für ein bestimmtes Publikum benötigt. Wenn Sie nur eine sachliche Antwort oder ein einfaches Format benötigen, ist ein kürzerer Prompt oder Single-Step-Ansatz ausreichend. CO-STAR glänzt bei Dokumentation, kundenorientiertem Inhalt, Onboarding-Materialien und Multi-Stakeholder-Kommunikation.'
+            },
+            {
+              q: 'Wie unterscheidet sich CO-STAR von CRAFT?',
+              a: 'Beide sind strukturierte Prompt-Frameworks, aber mit unterschiedlichen Schwerpunkten. CO-STAR (Context, Objective, Style, Tone, Audience, Response) konzentriert sich auf Kommunikationsdimensionen — wer liest es, wie sollte es sich anfühlen. CRAFT (Context, Role, Action, Format, Target) konzentriert sich auf Aufgabenausführung — welche Rolle das Modell spielt und welche Aktion es ergreift. CO-STAR ist besser für zielgruppenorientierte Inhalte; CRAFT ist besser für rollendefinierte Aufgaben.'
+            },
+            {
+              q: 'Wie unterscheidet sich CO-STAR von SPECS?',
+              a: 'SPECS (Situation, Problem, Examples, Constraints, Style) ist problemlösungsorientiert — es geht von einem Problem aus und arbeitet auf eine Lösung hin. CO-STAR ist kommunikationsorientiert — es geht von einer Zielgruppe aus und arbeitet auf die richtige Botschaft hin. Verwenden Sie SPECS für analytische und problemlösende Aufgaben; verwenden Sie CO-STAR für Content-Erstellung und Kommunikationsaufgaben.'
+            },
+            {
+              q: 'Kann ich CO-STAR mit lokalen Modellen über Ollama verwenden?',
+              a: 'Ja. CO-STAR ist eine Prompt-Ebenen-Technik — sie funktioniert mit jedem Modell, das Anweisungen befolgt. Lokale Modelle reagieren auf die gleiche sechsteilige Struktur. Kleinere Modelle können möglicherweise weniger Einschränkungen gleichzeitig bewältigen, daher priorisieren Sie die wichtigsten 3–4 Komponenten, wenn Sie ein Modell unter 7B-Parametern verwenden.'
+            },
+            {
+              q: 'Benötige ich alle sechs CO-STAR-Komponenten in jedem Prompt?',
+              a: 'Nein. Context und Objective sind essentiell. Stil, Ton, Zielgruppe und Response verbessern die Qualität, können aber bei einfachen Aufgaben weggelassen werden. Beginnen Sie mit Context + Objective + Response als minimal lebensfähigen CO-STAR-Prompt, dann fügen Sie Stil, Ton und Zielgruppe hinzu, wenn die Ausgabe Kalibrierung benötigt.'
+            },
+            {
+              q: 'Kann ich CO-STAR mit Chain-of-Thought oder APE kombinieren?',
+              a: 'Ja. CO-STAR definiert WAS das Modell produzieren soll und WIE es sich anfühlen soll. Chain-of-Thought oder APE definieren, wie das Modell DENKEN soll. Sie können CO-STAR für das Briefing verwenden und „Denken Sie Schritt für Schritt, bevor Sie die endgültige Antwort erstellen" als zusätzliche Anweisung hinzufügen. Die Frameworks ergänzen sich gegenseitig, sind nicht konkurrierend.'
+            },
+            {
+              q: 'Ist das CO-STAR-Framework DSGVO-konform?',
+              a: 'Das CO-STAR-Framework selbst ist ein Prompt-Engineering-Konzept und unterliegt nicht direkt der DSGVO. Wenn Sie jedoch mit lokalen Modellen (wie Ollama) oder selbstgehosteten KI-Systemen arbeiten, können Sie sicherstellen, dass personenbezogene Daten lokal verbleiben. Dies erfüllt DSGVO-Anforderungen an Datenresidenz und -verarbeitung. BSI-Grundschutz-Kataloge empfehlen für sensitive Daten die Verwendung von lokalen Inferenzbasis-Systemen, die CO-STAR unterstützt.'
+            },
+            {
+              q: 'Ist das CO-STAR-Framework für den deutschen Mittelstand geeignet?',
+              a: 'Ja, besonders für den Mittelstand. Viele mittelständische Unternehmen in Deutschland, Österreich und der Schweiz nutzen CO-STAR für interne Dokumentation, Kundenkommunikation und Team-Workflows. Das Framework passt zu bestehenden IT-Sicherheitsstandards (BSI-Grundschutz) und ermöglicht es KMUs, KI-Prompts strukturiert und zuverlässig zu verwenden, ohne externe Abhängigkeiten. PromptQuorum bietet CO-STAR als integrierte Option, die mit lokalen Alternativen kompatibel ist.'
+            },
+          ],
+        },
+        quellen: {
+          title: 'Quellen',
+          items: [
+            '[White et al. (2023). „A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." arXiv:2302.11382](https://arxiv.org/abs/2302.11382) — Taxonomie von Prompt-Mustern, einschließlich strukturierter Kommunikationsmuster',
+            '[Anthropic. „Prompt Engineering Guide." docs.anthropic.com](https://docs.anthropic.com) — Best Practices für strukturierte Prompting, anwendbar auf CO-STAR',
+            '[OpenAI. „Prompt Engineering Guide." platform.openai.com](https://platform.openai.com/docs/guides/prompt-engineering) — Anleitung zu Rolle, Kontext und Format-Spezifikation',
+            '[Google. „Gemini API: Prompting Strategies." ai.google.dev](https://ai.google.dev) — Strategien für strukturierte Prompts',
+          ],
+        },
+        weitereLektuere: {
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Welches Prompt-Framework sollten Sie verwenden?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de) — Vergleich CO-STAR vs CRAFT vs SPECS vs APE',
+            '[CRAFT-Framework](/prompt-engineering/craft-framework?lang=de) — Rollenorientierte Alternative zu CO-STAR',
+            '[SPECS-Framework](/prompt-engineering/specs-framework?lang=de) — Problemlösungsorientierte Alternative zu CO-STAR',
+            '[APE-Framework](/prompt-engineering/ape-framework?lang=de) — Reasoning-fokussiertes Framework (Analyze, Plan, Execute)',
+            '[5 Bausteine, die jeder Prompt benötigt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — Die universellen Bausteine, die CO-STAR organisiert',
+            '[Persona-Prompting](/prompt-engineering/persona-prompting?lang=de) — Tiefgang in die Rollen-/Zielgruppendimension, die CO-STAR berührt',
+          ],
+        },
+        wieManSieAnwendet: {
+          title: 'Wie man das CO-STAR-Framework anwendet',
+          numberedItems: [
+            '**Context:** Bieten Sie relevante Hintergrundsinformationen, die das Modell benötigt. Beispiel: „Überprüfen Sie einen Pull-Request für eine React-Komponentenbibliothek. Das Projekt erzwingt TypeScript-Strikethrough-Modus, unveränderliche Zustand und nur funktionale Komponenten."',
+            '**Objective:** Sagen Sie in einem Satz, was Sie möchten. Beispiel: „Überprüfen Sie diesen Code auf Typsicherheit und Verstöße gegen funktionale Programmierung."',
+            '**Style:** Spezifizieren Sie Ton und Format. Beispiel: „Seien Sie direkt und kritisch. Geben Sie Feedback als Aufzählungsliste zurück. Verwenden Sie technische Sprache."',
+            '**Tone:** Definieren Sie die Stimme und emotionalen Charakter. Beispiel: „Formal, präzise und sachlich."',
+            '**Audience:** Nennen Sie, wer die Ausgabe liest und ihr Wissensniveau. Beispiel: „Erfahrene Backend-Ingenieure, die mit React-Best-Practices vertraut sind."',
+            '**Response:** Geben Sie genau an, wie Ausgaben strukturiert sein sollen. Beispiel: „Rückgabe als JSON: { issues: [...], summary: string, confidence: high|medium|low }."',
+          ],
+        },
+      },
     },
     fr: {
       freshness_tier: 'evergreen',
