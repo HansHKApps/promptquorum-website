@@ -558,8 +558,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Llama 4 und Qwen3.5 für allgemeine Verwendung, DeepSeek-Coder für Softwareentwicklung, beide sind BSI-kompatibel wenn On-Premises bereitgestellt. Diese Modelle ermöglichen DSGVO-konforme KI-Nutzung ohne Anbieter-Lock-in.'
     },
     {
-      q: 'Was sind die besten Ollama-Modelle im April 2026?',
-      a: 'Top Ollama-Modelle April 2026: Llama 4 Scout 17B (beste Gesamtqualität auf 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (bestes Coding, 5 GB VRAM), Gemma 3 12B (starkes Reasoning auf RTX 3060, 8 GB VRAM), DeepSeek-R2 8B (beste Mathe/Logik, 5 GB VRAM).'
+      q: 'Was sind die besten Ollama-Modelle im Mai 2026?',
+      a: 'Top Ollama-Modelle Mai 2026: Llama 4 Scout 17B (beste Gesamtqualität auf 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (bestes Coding, 5 GB VRAM), Gemma 3 12B (starkes Reasoning auf RTX 3060, 8 GB VRAM), DeepSeek-R2 8B (beste Mathe/Logik, 5 GB VRAM).'
     },
     {
       q: 'Welches lokale LLM eignet sich für eine RTX 3060 12 GB?',
@@ -616,8 +616,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama : exécutez `ollama pull <model-name>` à nouveau — il télécharge uniquement les couches modifiées. LM Studio : ouvrez le navigateur de modèles, trouvez la version mise à jour et téléchargez-la. Les anciens fichiers GGUF ne sont pas supprimés automatiquement — supprimez-les manuellement de ~/.ollama/models (Ollama) ou ~/Library/Application Support/LM Studio/models (macOS) pour libérer de l\'espace disque. Les mises à jour de modèles de Meta, Alibaba et Mistral arrivent généralement 24–48 heures après la sortie officielle.'
     },
     {
-      q: 'Quels sont les meilleurs modèles Ollama en avril 2026 ?',
-      a: 'Top modèles Ollama avril 2026 : Llama 4 Scout 17B (meilleure qualité sur 12 Go VRAM, `ollama pull llama4:scout`), Qwen3 8B (meilleur code, 5 Go VRAM), Gemma 3 12B (raisonnement puissant sur RTX 3060, 8 Go VRAM), DeepSeek-R2 8B (maths/logique, 5 Go VRAM).'
+      q: 'Quels sont les meilleurs modèles Ollama en mai 2026 ?',
+      a: 'Top modèles Ollama mai 2026 : Llama 4 Scout 17B (meilleure qualité sur 12 Go VRAM, `ollama pull llama4:scout`), Qwen3 8B (meilleur code, 5 Go VRAM), Gemma 3 12B (raisonnement puissant sur RTX 3060, 8 Go VRAM), DeepSeek-R2 8B (maths/logique, 5 Go VRAM).'
     },
     {
       q: 'Quel est le meilleur LLM local pour une RTX 3060 12 Go ?',
@@ -674,8 +674,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama: `ollama pull <model-name>`を再実行します — 変更されたレイヤーのみをダウンロードします。LM Studio: モデルブラウザを開き、更新版を見つけてダウンロードします。古いGGUFファイルは自動削除されません — ~/.ollama/models（Ollama）または~/Library/Application Support/LM Studio/models（macOS）から手動で削除してディスク容量を解放します。Meta、Alibaba、Mistralのモデル更新は通常、公式リリースの24–48時間以内に利用可能になります。'
     },
     {
-      q: '2026年4月のベストOllamaモデルは？',
-      a: '2026年4月トップOllamaモデル：Llama 4 Scout 17B（12 GB VRAMで最高品質、`ollama pull llama4:scout`）、Qwen3 8B（最高コーディング、5 GB VRAM）、Gemma 3 12B（RTX 3060で強力な推論、8 GB VRAM）、DeepSeek-R2 8B（数学・論理最強、5 GB VRAM）。'
+      q: '2026年5月のベストOllamaモデルは？',
+      a: '2026年5月トップOllamaモデル：Llama 4 Scout 17B（12 GB VRAMで最高品質、`ollama pull llama4:scout`）、Qwen3 8B（最高コーディング、5 GB VRAM）、Gemma 3 12B（RTX 3060で強力な推論、8 GB VRAM）、DeepSeek-R2 8B（数学・論理最強、5 GB VRAM）。'
     },
     {
       q: 'RTX 3060 12 GB VRAMに最適なローカルLLMは？',
@@ -732,8 +732,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama：再次运行`ollama pull <model-name>`— 仅下载更改的层。LM Studio：打开模型浏览器，找到更新版本并下载。旧的GGUF文件不会自动删除— 从~/.ollama/models（Ollama）或~/Library/Application Support/LM Studio/models（macOS）手动删除以释放磁盘空间。Meta、Alibaba和Mistral的模型更新通常在官方发布后24–48小时内推出。'
     },
     {
-      q: '2026年4月最佳Ollama模型是什么？',
-      a: '2026年4月顶级Ollama模型：Llama 4 Scout 17B（12 GB VRAM最佳综合质量，`ollama pull llama4:scout`）、Qwen3 8B（最佳编程，5 GB VRAM）、Gemma 3 12B（RTX 3060上强大推理，8 GB VRAM）、DeepSeek-R2 8B（数学逻辑最强，5 GB VRAM）。'
+      q: '2026年5月最佳Ollama模型是什么？',
+      a: '2026年5月顶级Ollama模型：Llama 4 Scout 17B（12 GB VRAM最佳综合质量，`ollama pull llama4:scout`）、Qwen3 8B（最佳编程，5 GB VRAM）、Gemma 3 12B（RTX 3060上强大推理，8 GB VRAM）、DeepSeek-R2 8B（数学逻辑最强，5 GB VRAM）。'
     },
     {
       q: 'RTX 3060 12 GB最适合哪款本地LLM？',
