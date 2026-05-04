@@ -1662,6 +1662,7 @@ export const article: Record<Language, PEArticle> = {
         { label: '将RTF与其他框架结合', anchor: 'combining-rtf' },
         { label: '常见RTF错误', anchor: 'common-mistakes' },
         { label: 'PromptQuorum如何实现RTF', anchor: 'promptquorum-implementation' },
+        { label: '中国企业应用方案', anchor: 'regional-context' },
         { label: '常见问题', anchor: 'faq' },
         { label: '参考资源', anchor: 'sources' },
       ],
@@ -1781,6 +1782,22 @@ export const article: Record<Language, PEArticle> = {
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'PromptQuorum将RTF作为内置框架模板包含在内。用户填入Role、Task和Format字段，PromptQuorum将相同的提示词分发到25个以上的模型（GPT-5.5、Claude、Gemini、本地模型），用于比较和A/B测试。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '使用RTF和本地模型部署需要遵守数据安全法吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的。中国2021年数据安全法要求企业在处理敏感数据时采取保护措施。本地推理（通过Ollama、LM Studio等本地运行模型）满足数据安全法的关键合规要求，因为数据在组织内部处理，不会跨境传输。使用RTF框架定义清晰的数据处理角色和格式有助于确保符合合规要求。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '本地RTF提示词如何满足企业合规要求？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '金融、医疗、法律等行业的企业需要处理受监管的数据。RTF框架通过明确定义数据处理的角色（谁在处理）、任务（处理什么）和格式（输出如何管理）来支持合规。本地推理确保数据不离开企业网络，结合明确的RTF提示词结构，企业可以满足中国CAC（网络安全审查）、网络安全法和行业特定合规要求。',
             },
           },
         ],
@@ -2028,6 +2045,45 @@ export const article: Record<Language, PEArticle> = {
             '将RTF提示词保存为重复工作流的模板 — 例如"每周状态摘要"、"客户回复草稿"或"错误报告摘要"。',
             '在您的团队中共享RTF模板，即使非专家也可以创建产生一致、结构化输出的提示词。',
             '在多个模型之间并排A/B测试相同的RTF提示词，以找到最适合您的用例的模型。',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '中国企业应用方案',
+          content: [
+            '**在中国，遵守数据安全法、网络安全法和行业特定合规要求对于处理敏感信息的企业至关重要。** RTF框架与本地推理（通过Ollama、LM Studio等本地模型）结合，为企业提供了一种结构化、合规的方式来部署AI能力。',
+          ],
+        },
+        dataSecurity: {
+          title: '数据安全法与RTF',
+          content: [
+            '中国2021年数据安全法要求企业对数据处理采取安全措施。本地推理确保企业数据不通过公共API传输，符合数据本地存储和处理的核心要求。',
+            '通过使用RTF框架定义清晰的Role（谁处理数据）、Task（处理什么）和Format（如何输出），企业可以建立可审计的数据处理流程，满足监管检查和内部治理要求。',
+          ],
+          items: [
+            '**本地推理**：数据保留在企业网络内，不跨境传输',
+            '**清晰的角色定义**：RTF的Role字段定义谁有权访问和处理敏感数据',
+            '**输出格式控制**：Format字段确保敏感信息按照合规要求输出（例如，日志记录、审计跟踪）',
+            '**任务边界**：Task字段明确定义允许的操作范围',
+          ],
+        },
+        apacCompliance: {
+          title: '亚太地区跨境数据框架',
+          content: [
+            '如果企业在中国、东南亚或亚太地区多地运营，理解跨境数据流框架很重要。RTF框架帮助企业在不同地区明确定义数据处理政策。',
+            '中国CAC（网络安全审查）框架、泰国PDPA（个人数据保护法）和其他地区法规都要求企业对数据处理有明确的治理。RTF提示词通过显式定义数据处理逻辑来支持这些要求。',
+          ],
+        },
+        enterpriseDeployment: {
+          title: '金融、医疗、法律行业部署',
+          content: [
+            '金融机构、医疗保健提供商和律师事务所处理高度受管制的数据（PCI-DSS、HIPAA等价物、行业保密标准）。RTF框架与本地模型部署相结合，为这些行业提供了可审计、可控的AI能力。',
+          ],
+          items: [
+            '**金融服务**：使用RTF定义交易分析、风险评估、法规报告的提示词，确保输出符合金融监管要求',
+            '**医疗保健**：RTF的Format字段确保患者信息按照行业标准（如医疗记录保密性）输出',
+            '**法律服务**：定义清晰的Role和Task确保法律咨询、合同审查提示词遵循专业道德和客户保密要求',
+            '**常见做法**：大型企业（如阿里巴巴、腾讯、华为、百度）使用类似的结构化提示词框架来管理内部AI部署，确保合规性和可追溯性',
           ],
         },
         relatedReading: {
