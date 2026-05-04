@@ -26,7 +26,6 @@ export const article: Record<Language, PEArticle> = {
       audience: 'Researchers, analysts, and developers processing large document corpora with AI',
       aboutTopics: ['Document summarisation', 'NotebookLM', 'LLM hallucination'],
       howToName: 'How to Use Iterative Summarisation',
-      next_refresh_due: '2026-09-23',
       quickFacts: [
         'Best faithfulness: Gemini 3 Flash — 0.7% hallucination rate on HHEM benchmark (831 documents)',
         'Best for synthesis: Claude Sonnet 4.6 — cross-document analysis, complex reasoning',
@@ -633,7 +632,6 @@ export const article: Record<Language, PEArticle> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'KI-Dokumentenzusammenfassung',
       audience: 'Forscher, Analysten und Entwickler, die umfangreiche Dokumentensammlungen mit KI verarbeiten',
-      next_refresh_due: '2026-09-23',
       quickFacts: [
         'Beste Genauigkeit: Gemini 3 Flash — 0,7% Halluzinationsrate auf HHEM-Benchmark (831 Dokumente)',
         'Beste für Synthese: Claude Sonnet 4.6 — dokumentenübergreifende Analyse, komplexe Argumentation',
