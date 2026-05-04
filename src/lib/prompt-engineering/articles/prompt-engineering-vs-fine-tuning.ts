@@ -1,9 +1,343 @@
 // Auto-generated from src/lib/prompt-engineering/content.ts
 // Slug: prompt-engineering-vs-fine-tuning
-// Generated: 2026-04-26T09:45:32.245Z
+// Generated: 2026-05-04T14:32:00.000Z
 
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 
-export const article: Record<Language, PEArticle> = { en: { theme: 'Tools & Platforms', title: 'Prompt Engineering vs Fine-Tuning', seoTitle: 'Decision', metaDescription: 'Choose approach.', intro: '**Decision guide.**', publishDate: '2026-04-10', dateModified: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', primaryTerm: 'decision', aboutTopics: ['strategy'], schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Decision', datePublished: '2026-04-10', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum' }, url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning', inLanguage: 'en' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: 'Which?', acceptedAnswer: { '@type': 'Answer', text: 'PE vs FT tradeoffs.' } }] }, sections: { keyTakeaways: { isTldr: true, items: ['PE: fast', 'FT: specialized'] }, faq: { title: 'FAQ', faqs: [{ q: 'When FT?', a: 'For specialization.' }] }, sources: { title: 'Sources', items: ['[OpenAI](https://openai.com)'] } } }, de: { theme: 'Tools & Platforms', title: 'Decision', seoTitle: 'Decision', metaDescription: 'Decision', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} }, fr: { theme: 'Tools & Platforms', title: 'Decision', seoTitle: 'Decision', metaDescription: 'Decision', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} }, ja: { theme: 'Tools & Platforms', title: 'Decision', seoTitle: 'Decision', metaDescription: 'Decision', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} }, zh: { freshness_tier: 'semi_annual', theme: 'Tools & Platforms', title: 'Decision', seoTitle: 'Decision', metaDescription: 'Decision', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} } };
+export const article: Record<Language, PEArticle> = {
+  en: {
+    freshness_tier: 'semi_annual',
+    theme: 'Tools & Platforms',
+    title: 'Prompt Engineering vs Fine-Tuning: When to Prompt, When to Train (2026)',
+    intro: 'Prompt engineering and fine-tuning are fundamentally different approaches to improving AI model output. Prompt engineering is free, instant, and reversible. Fine-tuning costs $500-$5000+, takes days or weeks, and is difficult to undo. This guide explains when each wins.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-04',
+    readTime: '9 min read',
+    educationalLevel: 'Intermediate',
+    audience: 'Developers and engineering leads',
+    primaryTerm: 'prompt engineering vs fine-tuning',
+    aboutTopics: ['decision-framework', 'cost-comparison', 'model-training'],
+    seoTitle: 'Prompt Engineering vs Fine-Tuning: When to Prompt, When to Train',
+    metaDescription: 'Decision guide: prompt engineering vs fine-tuning. Compare cost ($0 vs $500+), time, reversibility. When each approach wins.',
+    ogDescription: 'Prompt engineering or fine-tuning? Cost, time, reversibility compared. Decision flowchart plus 5 real scenarios.',
+    next_refresh_due: '2026-11-03',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning',
+      inLanguage: 'en',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      headline: 'Prompt Engineering vs Fine-Tuning',
+      description: 'Decision guide comparing prompt engineering and fine-tuning approaches.',
+      datePublished: '2026-04-10',
+      dateModified: '2026-05-04',
+      keywords: ['prompt engineering', 'fine-tuning', 'decision guide', 'cost comparison'],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Prompt Engineering' },
+        { '@type': 'Thing', name: 'Fine-Tuning' },
+        { '@type': 'Thing', name: 'Large Language Models' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'OpenAI GPT-4o', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude', url: 'https://anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+        { '@type': 'SoftwareApplication', name: 'LoRA', url: 'https://huggingface.co' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Should I use prompt engineering or fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Try prompt engineering first. It is free and instant. Only fine-tune if prompt engineering fails on repeated attempts.' } },
+        { '@type': 'Question', name: 'How much does fine-tuning cost?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-tuning costs $500-$5000+ depending on model, data size, and infrastructure.' } },
+        { '@type': 'Question', name: 'How long does fine-tuning take?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-tuning takes days or weeks, while prompt engineering takes minutes.' } },
+        { '@type': 'Question', name: 'Can I undo fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'No. Fine-tuning permanently changes model weights. You cannot easily revert.' } },
+      ],
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        title: 'Key Takeaways',
+        id: 'key-takeaways',
+        items: [
+          'Prompt engineering is free, instant, and reversible. Fine-tuning is expensive, slow, and permanent.',
+          'Test prompt engineering first on 10-20 examples. Only fine-tune if it fails repeatedly.',
+          'The 90% rule: 90 percent of use cases solve with good prompt engineering alone.',
+          'Fine-tuning is best for domain-specific terminology, niche knowledge, or strict output formatting.',
+          'Cost matters: A good prompt saves $500+ in fine-tuning costs.',
+          'Maintenance trap: Fine-tuned models require constant updates as new model versions release.',
+          'Combine both: Use prompt engineering for flexibility, fine-tuning for specialization.',
+        ],
+      },
+      introduction: {
+        title: 'Why This Decision Matters',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Prompt engineering is your first choice (free, instant); fine-tuning is your backup when prompting fails (expensive, permanent).' },
+          { type: 'in-plain-terms', text: 'Writing a better instruction to an AI costs nothing and takes minutes. Training the AI costs hundreds or thousands and takes days. Try the cheap option first.' },
+        ],
+        content: [
+          'You have two paths to improve AI output: change how you ask (prompt engineering) or change the AI itself (fine-tuning). The wrong choice costs time and money. This guide shows you which path to take.',
+        ],
+      },
+      promptEngineeringExplained: {
+        title: 'What Is Prompt Engineering?',
+        content: [
+          'Prompt engineering means writing clear, detailed instructions to an AI model. Instead of saying "summarize this", you write: "Summarize the following text in 2-3 sentences. Focus on the main decision and who made it. Avoid jargon."',
+          'Every prompt is an experiment. You try it, see the output, adjust the wording, and try again. Prompt engineering is free because you are not training the model—you are just talking to it better.',
+        ],
+        items: [
+          'Free: No API training costs, only inference (using) the model',
+          'Instant: Takes minutes to hours to refine, not days or weeks',
+          'Reversible: Bad prompt? Just delete it and try a new one',
+          'Testable: You can A/B test 10 versions in an hour',
+          'Portable: Same prompt often works across different models',
+          'Model-agnostic: Techniques work on GPT-4o, Claude, Gemini, and local models',
+        ],
+      },
+      fineTuningExplained: {
+        title: 'What Is Fine-Tuning?',
+        content: [
+          'Fine-tuning means retraining the model on your own data. You provide hundreds or thousands of examples of inputs and desired outputs, and the model learns from them. It permanently changes the model weights.',
+          'Fine-tuning is necessary only when prompt engineering fails on systematic problems that affect 10+ percent of cases. Common reasons: domain-specific terminology, very strict output formatting, or specialized reasoning patterns the base model has never seen.',
+        ],
+        items: [
+          'Expensive: $500-$5000+ per training run depending on data size',
+          'Slow: Takes days or weeks to complete',
+          'Permanent: Changes the model weights—very hard to undo',
+          'Data-hungry: Requires hundreds or thousands of labeled examples',
+          'Expensive inference: Inference (using) the model also costs more',
+          'Version-locked: Each model version requires separate fine-tuning',
+        ],
+        callouts: [
+          { type: '🔍', label: 'Fine-Tuning Is Not RAG', text: 'Retrieval-Augmented Generation (RAG) and fine-tuning solve different problems. RAG inserts relevant context into the prompt—it is a prompt engineering technique. Fine-tuning retrains the model. Use RAG first. Only fine-tune if RAG and prompt engineering both fail.' },
+        ],
+      },
+      headToHeadComparison: {
+        title: 'Side-by-Side Comparison',
+        id: 'comparison-table',
+        tableFormat: true,
+        columns: ['Factor', 'Prompt Engineering', 'Fine-Tuning'],
+        rows: [
+          { 'Factor': 'Cost', 'Prompt Engineering': '$0 (only inference)', 'Fine-Tuning': '$500-$5000+ per run' },
+          { 'Factor': 'Speed', 'Prompt Engineering': 'Minutes to hours', 'Fine-Tuning': 'Days to weeks' },
+          { 'Factor': 'Reversibility', 'Prompt Engineering': 'Delete and start over', 'Fine-Tuning': 'Permanent changes' },
+          { 'Factor': 'Data needed', 'Prompt Engineering': '3-10 examples for testing', 'Fine-Tuning': '100-10000+ labeled examples' },
+          { 'Factor': 'Expertise', 'Prompt Engineering': 'Anyone can do it', 'Fine-Tuning': 'Requires ML knowledge' },
+          { 'Factor': 'Model portability', 'Prompt Engineering': 'Works on GPT, Claude, local models', 'Fine-Tuning': 'Locked to one model/version' },
+          { 'Factor': 'Success rate', 'Prompt Engineering': 'Solves 80-90% of cases', 'Fine-Tuning': 'Solves remaining 10-20%' },
+          { 'Factor': 'Maintenance', 'Prompt Engineering': 'Adjust prompt when model updates', 'Fine-Tuning': 'Retrain entire model per version' },
+          { 'Factor': 'Testing', 'Prompt Engineering': 'Test 10 versions in 1 hour', 'Fine-Tuning': 'Test 10 versions in 10 days' },
+          { 'Factor': 'Inference cost', 'Prompt Engineering': 'Standard pricing', 'Fine-Tuning': 'Custom pricing (usually higher)' },
+        ],
+      },
+      decisionFlowchart: {
+        title: 'Decision Flowchart: When to Use Each Approach',
+        id: 'decision-flowchart',
+        content: [
+          'Follow this flowchart to decide whether to prompt engineer or fine-tune.',
+        ],
+        numberedItems: [
+          'Start with a clear problem statement. Example: "Summarize customer reviews into exactly 2 sentences."',
+          'Write 10-20 example prompts and test on 10 examples using the base model. If 8/10 succeed, stop. You are done with prompt engineering.',
+          'If fewer than 8/10 succeed, try improving the prompt. Add context, examples, constraints, and output format. Run another 10 test cases.',
+          'After 3-5 prompt iterations, if success rate is still below 80%, consider fine-tuning.',
+          'If fine-tuning: collect 100-500 labeled examples (input-output pairs). Train a custom model. Test on a hold-out set.',
+          'Choose the approach with the best cost-to-quality ratio.',
+        ],
+        callouts: [
+          { type: '🔍', label: 'The 90% Test', text: 'Ask yourself: Do I need to fix 90% of cases, or just 10%? If 90% of cases work with prompt engineering, stop. If 90% fail, you have a bigger problem than fine-tuning can solve alone.' },
+        ],
+      },
+      fiveScenarios: {
+        title: 'Five Real-World Scenarios',
+        content: [
+          'Here are five realistic decisions teams face and how to approach each.',
+        ],
+        numberedItems: [
+          'Extracting structured data from messy PDFs: Try prompt engineering with examples first. If success rate exceeds 85%, stop. If it stalls at 60%, add fine-tuning on domain-specific variations.',
+          'Classifying customer support tickets into categories: Use prompt engineering with examples of each category. Cost: $0. Effort: 2 hours. Fine-tuning would cost $1000+ and take 1 week.',
+          'Generating specialized legal clauses: Prompt engineering fails because the base model is too generic. Fine-tune on 500 historical documents in your company style. Cost justified: $2000.',
+          'Summarizing long research papers into key insights: Prompt engineering works well. Chain-of-thought prompting + examples = 92% accuracy. No fine-tuning needed.',
+          'Translating technical docs into plain English: Prompt engineering + few-shot examples covers 88% of cases. Fine-tune on remaining 12% of edge cases.',
+        ],
+      },
+      whenToCombine: {
+        title: 'Using Both: When and How to Combine',
+        content: [
+          'Best practice: Start with prompt engineering. If it hits a ceiling (around 80-85% success), add fine-tuning on top.',
+          'Workflow: Use a fine-tuned model inside a prompt engineering loop. The fine-tuned model handles specialized tasks, while a prompt engineer adds context and routing logic.',
+        ],
+        items: [
+          'Use prompt engineering to route requests: "Is this a legal document, medical note, or financial report?"',
+          'Use fine-tuning for specialized models: A fine-tuned legal model, a fine-tuned medical model, a fine-tuned finance model.',
+          'Use prompt engineering for output formatting: Even a fine-tuned model benefits from clear format instructions.',
+          'Combine for cost: Fine-tune on 10% of edge cases, route 90% through cheaper prompt engineering.',
+        ],
+        callouts: [
+          { type: '🔍', label: 'The Maintenance Trap', text: 'Each time a new model version releases, fine-tuned models become obsolete. You must retrain them. Prompt engineering requires only tweaks. Budget for annual fine-tuning retraining costs—they add up.' },
+        ],
+      },
+      costComparison: {
+        title: 'Realistic Cost Breakdown',
+        id: 'cost-table',
+        tableFormat: true,
+        columns: ['Provider', 'Prompt Engineering (1M tokens)', 'Fine-Tuning (training)', 'Fine-Tuned Inference (1M tokens)'],
+        rows: [
+          { 'Provider': 'OpenAI GPT-4o', 'Prompt Engineering (1M tokens)': '$15', 'Fine-Tuning (training)': '$1500-3000', 'Fine-Tuned Inference (1M tokens)': '$30-60' },
+          { 'Provider': 'Anthropic Claude', 'Prompt Engineering (1M tokens)': '$8', 'Fine-Tuning (training)': 'Not available', 'Fine-Tuned Inference (1M tokens)': 'N/A' },
+          { 'Provider': 'Google Vertex AI', 'Prompt Engineering (1M tokens)': '$1', 'Fine-Tuning (training)': '$500-2000', 'Fine-Tuned Inference (1M tokens)': '$2-5' },
+          { 'Provider': 'Open source (Ollama)', 'Prompt Engineering (1M tokens)': '$0', 'Fine-Tuning (training)': 'Free (your hardware)', 'Fine-Tuned Inference (1M tokens)': '$0' },
+          { 'Provider': 'AWS Bedrock', 'Prompt Engineering (1M tokens)': '$0.75', 'Fine-Tuning (training)': '$500-3000', 'Fine-Tuned Inference (1M tokens)': '$1.50-6' },
+        ],
+        callouts: [
+          { type: '🔍', label: 'Cost Per Output', text: 'Prompt engineering costs fall as you improve prompts (same tokens, better output). Fine-tuning costs are front-loaded (training) plus ongoing inference costs. A $2000 fine-tuning job amortized over 1M inferences adds $0.002 per call.' },
+        ],
+      },
+      commonMistakes: {
+        title: 'Five Common Mistakes',
+        id: 'mistakes',
+        mistakes: [
+          { mistake: 'Fine-tuning before testing prompts', problem: 'Teams jump to fine-tuning without seriously iterating on prompts. Result: $3000 spent on fine-tuning when $0 prompt engineering would have worked.', fix: 'Test prompt engineering first. Run 30-50 examples with 3-5 prompt variations. Only fine-tune if the best prompt still fails 20%+ of the time.' },
+          { mistake: 'Training on small datasets', problem: 'Fine-tuning on 20 examples per class. Result: Overfitting, model fails on new examples.', fix: 'Collect at least 100 examples per category. Ideally 500+. Check that your training and test distributions match real-world data.' },
+          { mistake: 'Forgetting inference costs', problem: 'Teams calculate fine-tuning cost ($2000) but forget that fine-tuned models cost 2-3x more to run.', fix: 'Calculate total cost of ownership: training + (inference cost per call × expected volume × time horizon).' },
+          { mistake: 'Ignoring model versioning', problem: 'A fine-tuned model works great, then GPT-4o is updated. The fine-tuned model is now outdated and must be retrained.', fix: 'Budget for annual retraining or migration to new models. Document which base model version each fine-tune is for.' },
+          { mistake: 'Fine-tuning the wrong model', problem: 'Fine-tuning a model that is too small for the task (e.g., a 7B model for complex reasoning).', fix: 'Start with the largest model you can afford. Fine-tune to optimize cost, not to fix a weak base model.' },
+        ],
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        id: 'faq',
+        faqs: [
+          { q: 'Can I fine-tune Claude?', a: 'As of 2026, Anthropic does not offer fine-tuning for Claude. Use prompt engineering instead.' },
+          { q: 'How do I get training data for fine-tuning?', a: 'Collect your own examples, use existing datasets, or hire annotators. Data quality matters more than quantity.' },
+          { q: 'Can I fine-tune a fine-tuned model?', a: 'Technically yes, but it is rarely needed. Usually, fine-tune once on your best data.' },
+          { q: 'What is LoRA fine-tuning?', a: 'Low-Rank Adaptation (LoRA) fine-tunes only a small part of the model, reducing cost and data requirements.' },
+          { q: 'Should I fine-tune locally or in the cloud?', a: 'Cloud fine-tuning (OpenAI, Google) is easier and faster. Local fine-tuning (Ollama, PEFT) gives you control and privacy.' },
+          { q: 'How long does fine-tuning take?', a: 'Usually 1-7 days depending on data size, model size, and hardware.' },
+          { q: 'What if fine-tuning does not help?', a: 'You may have the wrong base model, insufficient training data, or unrealistic expectations. Try a larger model or more data first.' },
+          { q: 'Can I combine prompt engineering with fine-tuning?', a: 'Yes, best practice. Use fine-tuning for core competence, prompt engineering for flexibility and routing.' },
+        ],
+      },
+      relatedReading: {
+        title: 'Related Articles',
+        id: 'related',
+        items: [
+          { title: 'How to Write Effective Prompts', url: '/prompt-engineering/how-to-write-effective-prompts' },
+          { title: 'Prompt Engineering Frameworks', url: '/prompt-engineering/frameworks' },
+          { title: 'Cost Optimization for LLMs', url: '/prompt-engineering/cost-optimization' },
+          { title: 'Building RAG Systems', url: '/prompt-engineering/retrieval-augmented-generation' },
+          { title: 'Model Selection Guide', url: '/prompt-engineering/model-selection' },
+          { title: 'LLM API Benchmarks', url: '/prompt-engineering/llm-api-benchmarks' },
+        ],
+      },
+    },
+  },
+  de: {
+    freshness_tier: 'semi_annual',
+    theme: 'Tools & Platforms',
+    title: 'Prompt Engineering vs Fine-Tuning: Wann prompen, wann trainieren (2026)',
+    intro: 'Prompt Engineering und Fine-Tuning sind zwei grundverschiedene Ansatze zur Verbesserung von Modellausgaben. Prompt Engineering ist kostenlos, sofort und ruckgangig machbar. Fine-Tuning kostet 500-5000+ Euro, dauert Tage oder Wochen und ist schwer ruckgangig zu machen. Dieser Leitfaden zeigt, wann jeder Ansatz gewinnt.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-04',
+    readTime: '9 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    seoTitle: 'Prompt Engineering vs Fine-Tuning: Wann prompen, wann trainieren',
+    metaDescription: 'Entscheidungsleitfaden: Prompt Engineering vs Fine-Tuning. Vergleich von Kosten, Zeit und Reversibilitat. Wann jeder Ansatz gewinnt.',
+    ogDescription: 'Prompt Engineering oder Fine-Tuning? Kosten, Zeit und Reversibilitat verglichen. Entscheidungsflussdiagramm mit 5 realen Szenarios.',
+    next_refresh_due: '2026-11-03',
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Sollte ich Prompt Engineering oder Fine-Tuning nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Versuchen Sie zuerst Prompt Engineering. Es ist kostenlos und sofort. Fine-tunen Sie nur, wenn Prompt Engineering nach wiederholten Versuchen fehlschlagt.' } },
+        { '@type': 'Question', name: 'Wie viel kostet Fine-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-Tuning kostet 500-5000+ Euro je nach Modell, Datengre und Infrastruktur.' } },
+        { '@type': 'Question', name: 'Wie lange dauert Fine-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-Tuning dauert Tage oder Wochen, wahrend Prompt Engineering nur Minuten dauert.' } },
+        { '@type': 'Question', name: 'Kann ich Fine-Tuning ruckgangig machen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Fine-Tuning andert die Modellgewichte dauerhaft. Sie konnen dies nicht leicht ruckgangig machen.' } },
+        { '@type': 'Question', name: 'Was ist LoRA Fine-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Low-Rank Adaptation (LoRA) fine-tuned nur einen Teil des Modells und reduziert Kosten und Datenanforderungen.' } },
+        { '@type': 'Question', name: 'Sollte ich lokal oder in der Cloud fine-tunen?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud Fine-Tuning (OpenAI, Google) ist einfacher und schneller. Lokales Fine-Tuning gibt Ihnen Kontrolle und Datenschutz.' } },
+        { '@type': 'Question', name: 'Wie lange dauert Fine-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Normalerweise 1-7 Tage je nach Datengre, Modellgre und Hardware.' } },
+        { '@type': 'Question', name: 'Kann ich Prompt Engineering und Fine-Tuning kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, das ist Best Practice. Verwenden Sie Fine-Tuning fur Kernkompetenz und Prompt Engineering fur Flexibilitat und Routing.' } },
+        { '@type': 'Question', name: 'Muss ich DSGVO bei der Nutzung beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Nach DSGVO Artikel 28 erfordert die Verwendung von Large Language Models besondere Aufmerksamkeit auf Datenverarbeitung und Compliance. Lokales Fine-Tuning kann DSGVO-Anforderungen erfullen, da Daten nicht an externe APIs ubertragen werden.' } },
+        { '@type': 'Question', name: 'Ist Fine-Tuning fur den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, insbesondere fur Unternehmen, die BSI-Grundschutz einhalten mussen. Fine-Tuning ermoglicht lokale Kontrolle, Datenschutz und Compliance gemass DSGVO und BSI-Katalogen.' } },
+      ],
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        title: 'Zusammenfassung',
+        id: 'key-takeaways',
+        items: [
+          'Prompt Engineering ist kostenlos, sofort und ruckgangig machbar. Fine-Tuning ist teuer, langsam und dauerhaft.',
+          'Testen Sie zuerst Prompt Engineering an 10-20 Beispielen. Fine-tunen Sie nur, wenn es wiederholt fehlschlagt.',
+          'Die 90%-Regel: 90 Prozent der Anwendungsfalle werden allein durch gutes Prompt Engineering gelost.',
+          'Fine-Tuning eignet sich am besten fur domenenspezifische Terminologie, Nischenwissen oder strikte Ausgabeformatierung.',
+          'Gutes Prompt Engineering spart 500+ Euro an Fine-Tuning-Kosten.',
+          'Wartungsfalle: Fine-abgestimmte Modelle erfordern konstante Updates bei neuen Modellversionen.',
+          'Kombinieren Sie beide: Nutzen Sie Prompt Engineering fur Flexibilitat und Fine-Tuning fur Spezialisierung.',
+        ],
+      },
+      introduction: {
+        title: 'Warum diese Entscheidung wichtig ist',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Prompt Engineering ist Ihre erste Wahl (kostenlos, sofort). Fine-Tuning ist Ihr Backup, wenn Prompting fehlschlagt (teuer, dauerhaft).' },
+          { type: 'in-plain-terms', text: 'Eine bessere Anweisung fur ein KI-Modell schreiben kostet nichts und dauert Minuten. Das Modell trainieren kostet Hunderte oder Tausende Euro und dauert Tage. Versuchen Sie zuerst die gnstige Option.' },
+        ],
+        content: [
+          'Sie haben zwei Wege, um KI-Ausgaben zu verbessern: Anderung der Fragestellung (Prompt Engineering) oder Anderung des Modells selbst (Fine-Tuning). Die falsche Wahl kostet Zeit und Geld. Dieser Leitfaden zeigt, welchen Weg Sie nehmen sollten.',
+        ],
+      },
+    },
+  },
+  fr: {
+    freshness_tier: 'semi_annual',
+    theme: 'Tools & Platforms',
+    title: 'Prompt Engineering vs Fine-Tuning : Quand prompter, quand entraîner (2026)',
+    intro: 'Prompt Engineering et fine-tuning sont deux approches fondamentalement differentes pour ameliorer les resultats du modele. Prompt Engineering est gratuit, instantane et reversible. Le fine-tuning coute 500-5000+ euros, prend des jours ou des semaines, et est difficile a annuler.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-04',
+    readTime: '9 min de lecture',
+    educationalLevel: 'Intermediate',
+    seoTitle: 'Prompt Engineering vs Fine-Tuning : Quand prompter, quand entraîner',
+    metaDescription: 'Guide de decision : prompt engineering vs fine-tuning. Comparaison des couts, temps et reversibilite.',
+    next_refresh_due: '2026-11-03',
+    sections: {
+      keyTakeaways: { isTldr: true, title: 'Points clés', id: 'key-takeaways', items: ['Prompt Engineering est gratuit, instantane et reversible. Fine-tuning est cher, lent et permanent.', 'Testez d abord le prompt engineering sur 10-20 exemples. Ne fine-tunez que s il echoue plusieurs fois.', 'La regle des 90 %: 90 % des cas d usage se resolvent avec un bon prompt engineering seul.'] },
+    },
+  },
+  ja: {
+    freshness_tier: 'semi_annual',
+    theme: 'Tools & Platforms',
+    title: 'プロンプトエンジニアリング vs ファインチューニング：使い分けガイド (2026)',
+    intro: 'プロンプトエンジニアリングとファインチューニングは、AIモデルの出力を改善するための根本的に異なる2つのアプローチです。プロンプトエンジニアリングは無料で、即座で、可逆的です。ファインチューニングは$500-$5000+かかり、数日から数週間かかり、取り消すのが難しいです。',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-04',
+    readTime: '9分で読める',
+    educationalLevel: 'Intermediate',
+    seoTitle: 'プロンプトエンジニアリング vs ファインチューニング：使い分けガイド',
+    metaDescription: 'プロンプトエンジニアリング vs ファインチューニング。コスト、時間、可逆性の比較。',
+    next_refresh_due: '2026-11-03',
+    sections: {
+      keyTakeaways: { isTldr: true, title: '重要ポイント', id: 'key-takeaways', items: ['プロンプトエンジニアリングは無料、即座、可逆的。ファインチューニングは高額、遅い、永続的。', '最初に10-20個の例でプロンプトエンジニアリングをテストします。何度も失敗した場合のみファインチューニングしてください。', '90%ルール：90%のユースケースは優れたプロンプトエンジニアリングだけで解決します。'] },
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    theme: 'Tools & Platforms',
+    title: 'Prompt工程 vs 微调：何时用提示，何时训练 (2026)',
+    intro: '提示工程和微调是改进AI模型输出的两种根本不同的方法。提示工程免费、即时、可逆。微调成本$500-$5000+，需要数天或数周，难以撤销。',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-04',
+    readTime: '阅读约9分钟',
+    educationalLevel: 'Intermediate',
+    seoTitle: 'Prompt工程 vs 微调：何时用提示，何时训练',
+    metaDescription: '决策指南：Prompt工程 vs 微调。成本、时间、可逆性对比。',
+    next_refresh_due: '2026-11-03',
+    sections: {
+      keyTakeaways: { isTldr: true, title: '核心要点', id: 'key-takeaways', items: ['提示工程免费、即时、可逆。微调昂贵、缓慢、永久。', '首先在10-20个示例上测试提示工程。仅当重复失败时才进行微调。', '90%规则：90%的用例仅通过优秀的提示工程解决。'] },
+    },
+  },
+};
