@@ -138,29 +138,7 @@ function HeaderInner() {
         <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md px-4 py-3 space-y-2">
           {/* Language Selector in Mobile Menu */}
           <div className="sm:hidden mb-2 pb-2 border-b border-gray-200">
-            <div className="text-xs font-semibold text-gray-500 px-4 py-1 mb-2">Language</div>
-            <div className="flex gap-2 px-2">
-              {[
-                { code: 'en', name: 'English', flag: '🇺🇸' },
-                { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-                { code: 'fr', name: 'Français', flag: '🇫🇷' },
-                { code: 'ja', name: '日本語', flag: '🇯🇵' },
-                { code: 'zh', name: '中文', flag: '🇨🇳' },
-              ].map(l => (
-                <a
-                  key={l.code}
-                  href={l.code === 'en' ? '/' : `/?lang=${l.code}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`flex-1 px-3 py-2 text-center rounded-lg text-sm transition-colors ${
-                    lang === l.code
-                      ? 'bg-purple-600 text-white font-semibold'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  <span className="text-base">{l.flag}</span>
-                </a>
-              ))}
-            </div>
+            <LanguageSwitcherWrapper initialLang={lang as Language} />
           </div>
 
           <Link
