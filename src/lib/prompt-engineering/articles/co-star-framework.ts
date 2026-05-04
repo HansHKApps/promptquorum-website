@@ -965,23 +965,326 @@ export const article: Record<Language, PEArticle> = {
     ja: {
       freshness_tier: 'evergreen',
       theme: 'Frameworks',
-      title: 'The CO-STAR Framework',
-      seoTitle: 'CO-STARフレームワーク：背景、目的、スタイル、トーン',
-      metaDescription: 'CO-STARフレームワークで複雑なプロンプトを構造化。コンテキスト、目的、スタイル、トーン、対象者に分割します。すべての大規模言語モデルに対応。',
+      title: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス — 完全ガイド',
+      seoTitle: 'CO-STARフレームワーク：複雑なプロンプト用6要素構造',
+      metaDescription: 'CO-STARフレームワークは、すべてのAIプロンプトを6つの要素に構造化します。コンテキスト、目的、スタイル、トーン、対象者、レスポンス。テンプレート、事例、CRAFT/SPECS/APEとの比較。',
+      intro: 'CO-STARフレームワークは、複雑なタスク向けに構造化されたプロンプト形式です。コンテキスト、目的、スタイル、トーン、対象者、レスポンスを定義することで、クリアで多段階の指示を設計するのに役立ちます。PromptQuorumでは、CO-STARフレームワークが組み込みオプションとして利用可能です。ユーザーは選択して、サポートされているすべてのモデルに適用できます。',
       publishDate: '2026-03-24',
-      readTime: '8 min read',
+      readTime: '10分で読める',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'CO-STARフレームワーク',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=ja',
         'inLanguage': 'ja',
-        headline: 'CO-STARフレームワーク: コンテキスト、目的、スタイル、トーン',
-        description: 'CO-STARフレームワークは複雑なプロンプトを：コンテキスト、目的、スタイル、トーン、対象者、レスポンスに分割します。すべての大規模言語モデルで使用可能。',
+        headline: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス',
+        description: 'CO-STARフレームワークの仕組み、使用するタイミング、PromptQuorumがどのように組み込みオプションとして実装しているかについてのガイド。',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
+        keywords: ['CO-STARフレームワーク', 'プロンプトエンジニアリング', 'AI', '構造化プロンプト', 'PromptQuorum'],
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
+          { '@type': 'Thing', name: 'プロンプトフレームワーク' },
+          { '@type': 'Thing', name: '大規模言語モデル' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
+        },
       },
-      sections: {}
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'CO-STARは何の略ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STARは Context（コンテキスト）、Objective（目的）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（レスポンス）の略です。各文字は構造化されたAIプロンプトの1つの要素を表します。6つの要素全体で、完全なブリーフが形成されます。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARはいつ使うべきですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '複数の側面が同時に重要な場合に使用します。出力が特定の構造、特定のトーン、特定の対象者向けの調整を必要とする場合です。単なる事実の回答や単純なフォーマットが必要な場合は、よりシンプルなプロンプトで十分です。ドキュメント、顧客向けコンテンツ、オンボーディング資料で特に役立ちます。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARとCRAFTの違いは何ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'どちらも構造化されたフレームワークですが、焦点が異なります。CO-STAR（Context、Objective、Style、Tone、Audience、Response）は、コミュニケーション次元に焦点を当てています。CRAFTは、タスク実行に焦点を当てています。対象者中心のコンテンツにはCO-STARが、役割定義されたタスクにはCRAFTが適しています。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARとSPECSの違いは何ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'SPECS（Situation、Problem、Examples、Constraints、Style）は問題解決志向です。CO-STARはコミュニケーション志向です。分析的なタスクにはSPECSを、コンテンツ作成や通信タスクにはCO-STARを使用してください。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaなどのローカルモデルでCO-STARを使用できますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。CO-STARはプロンプトレベルのテクニックです。すべてのモデルで機能します。ローカルモデルは同じ6要素構造に応答します。小さなモデル（7B未満）の場合は、最も重要な3～4要素に優先順位を付けてください。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'すべてのプロンプトに6つの要素が必要ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。コンテキストと目的は必須です。スタイル、トーン、対象者、レスポンスは品質を向上させますが、シンプルなタスクでは省略できます。Context + Objective + Responseから始めて、必要に応じて他の要素を追加してください。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARをChain-of-ThoughtやAPEと組み合わせられますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。CO-STARは「何を」「どのように」作成するかを定義し、Chain-of-ThoughtやAPEは「どのように考えるか」を定義します。2つは補完関係にあり、競合していません。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '日本企業でCO-STARは使用されていますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。日本の多くの企業がCO-STARを内部ドキュメント、顧客コミュニケーション、チームワークフローに使用しています。構造化されたアプローチは日本のQA文化や品質基準に適合しており、AIプロンプトの一貫性と信頼性を向上させます。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARのすべての要素を毎回使用する必要はありますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。ただし、コンテキストと目的は常に含めることをお勧めします。スタイル、トーン、対象者を追加すると、より目的に合った出力が得られます。シンプルなタスクではミニマル版のContext+Objective+Responseで始めることができます。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '実際にCO-STARの使い始めるにはどうしたらいいですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'まずシンプルに始めてください。コンテキスト、目的、希望する出力フォーマットを定義します。習得後、スタイルとトーンを追加して品質を向上させます。対象者を指定して複雑さを調整します。最高のプロンプトをテンプレートとして保存して再利用してください。' }
+          },
+        ]
+      },
+      sections: {
+        ceQuestCOSTAR: {
+          title: 'CO-STARフレームワークとは',
+          content: [
+            '**CO-STARフレームワークは、複雑な指示向けのプロンプトエンジニアリングパターンです。モデルに「何をするか」だけでなく、「どのように」「誰のために」「どのようなスタイルで」理解させたいときに使います。** 単一の曖昧な文を書く代わりに、プロンプトを明示的なCO-STAR要素に分解します。すべての大規模言語モデルが完全なブリーフを受け取ります。',
+            '「このセクションでは、CO-STARの各要素について詳しく説明します。」',
+            'アクロニムは通常、以下のように展開されます：',
+          ],
+          items: [
+            'C — Context（コンテキスト）：背景情報と関連事実',
+            'O — Objective（目的）：タスクの単一の主目標',
+            'S — Style（スタイル）：構造的または修辞的な好み（例：「ステップバイステップの説明」）',
+            'T — Tone（トーン）：感情的な特性または声（例：「形式的」「親友のように」「直接的」）',
+            'A — Audience（対象者）：出力を読むまたは使用する人',
+            'R — Response（レスポンス）：期待する正確な出力フォーマット',
+          ],
+        },
+        warumCOSTARFunctioniert: {
+          title: 'CO-STARが機能する理由',
+          content: [
+            '**CO-STARフレームワークは、人間が優れたブリーフを書く方法を反映しているため機能します。モデルに生成を開始する前にコンテキスト、目標、対象者を認識させます。** これらの要素が明示的であれば、モデルは短い曖昧な指示から推測する必要がありません。',
+            'これにより、いくつかの実用的な利点が生まれます：',
+          ],
+          items: [
+            '実行全体でより高い一貫性：同じ構造が再利用されるため',
+            'より簡単なコラボレーション：プロンプトが共有仕様のように読めるため',
+            'より良いクロスモデル比較：すべてのプロバイダーが同じ分解を見るため',
+          ],
+        },
+        komponenten: {
+          title: 'CO-STAR要素の詳細',
+          content: [
+            '**強力なCO-STARプロンプトには、6つすべての要素が、それぞれ短く明確な指示または文として含まれます。** ラベル付きの行として、または構造化された段落として形式化できます。重要なのは、各要素が簡単に認識して編集できることです。',
+            '典型的な要素の説明：',
+          ],
+          items: [
+            'Context: それについて何か、すでに何が起こったか、すべての制約またはデータソース',
+            'Objective: 成功が何のように見えるかについての簡潔な声明',
+            'Style: ナレーション、リスト、ステップバイステップガイド、または別の構造を望むかどうか',
+            'Tone: 声が形式的、中立的、会話的、またはその他である必要があるかどうか',
+            'Audience: 対象とする特定のグループ（その役割と知識レベルを含む）',
+            'Response: ヘッダー、箇条書き、文字数制限、JSONフィールドなどの必須フォーマット',
+          ],
+        },
+        schlchtesVsGut: {
+          title: '例：悪いプロンプト vs 良いプロンプト',
+          content: [
+            '**CO-STARフレームワークの価値は、非構造化プロンプトと同じタスクのCO-STARベースのプロンプトを比較するときに明白になります。** 技術的な説明の例を以下に示します。',
+            '**[悪いプロンプト]**',
+            '「APIを顧客に説明してください。」',
+            '**[良いプロンプト]**',
+            '「Context: SaaS プラットフォームを提供しており、APIを追加しているため、顧客は内部ツールと統合できます。多くは非技術的なビジネスユーザーです。Objective: APIとは何か、製品にとってなぜ重要かを説明します。恐怖を減らし、採用を促進する方法で。Style: H2ヘッダーとキーアイデア用の箇条書きを使用した短いセクション。簡単な現実世界のアナロジーを含める。Tone: 明確で安心し、非技術的。可能な限りジャーゴンを避け、必要な技術用語を説明します。Audience: 非技術的なビジネスユーザーとプログラミング経験のないマネージャー。Response: 700～900ワードの記事（イントロ、3～4つのメインセクション、アカウントマネージャーへの連絡を促す短い結論）。」',
+            'CO-STARバージョンはすべての重要な側面を明示的に定義し、顧客が実際に使用できるものを生成する可能性をはるかに高めます。',
+          ],
+        },
+        wannVerwenden: {
+          title: 'CO-STARフレームワークの使用場面',
+          content: [
+            '**対象者、構造、トーンがすべて同時に重要な複数制約タスク向けのCO-STARを使用します。** これには、製品、マーケティング、カスタマーサクセス、教育の多くの一般的なワークフローが含まれます。',
+            '典型的なユースケース：',
+          ],
+          items: [
+            '製品ドキュメントまたはオンボーディングガイドの作成',
+            '非専門家の対象者向けの教育記事またはエクスプレイナーの作成',
+            '構造化された内部メモ、戦略メモ、またはポリシードキュメントのドラフト作成',
+            'トーンを一貫して保つ必要があるサポートマクロまたはヘルプセンターコンテンツの準備',
+          ],
+        },
+        howToWrite: {
+          title: '実践的なCO-STARプロンプトの書き方',
+          content: [
+            '**CO-STARプロンプトの作成は、ブリーフの6行を入力し、1つの指示として一緒に送信することと考えれば簡単です。** 異なるタスクに対してこのパターンを保存して、詳細だけを変更して再利用できます。',
+            '一般的なテンプレートは次のようになります：',
+          ],
+          items: [
+            'Context: [何が起こっているか、何についてのか、関連する背景。]',
+            'Objective: [このプロンプトの単一の主要な目的。]',
+            'Style: [好むスタイル、たとえば箇条書き、ナレーション、またはステップバイステップ。]',
+            'Tone: [望む声と感情的なフィーリング。]',
+            'Audience: [これを読む人と彼らが知ること。]',
+            'Response: [正確なフォーマット、長さ、特別な要件。]',
+          ],
+        },
+        hoPromptquorumImplements: {
+          title: 'PromptQuorumがCO-STARを実装する方法',
+          content: [
+            '**PromptQuorumはマルチモデルAIディスパッチツールで、CO-STARフレームワークを組み込みオプションとして含みます。ユーザーはパターンを暗記することなく、Context-Objective-Style-Tone-Audience-Responseプロンプティングを適用できます。** PromptQuorumでCO-STARフレームワークを選択すると、アプリは各コンポーネント用の専用入力フィールドを提供し、自動的に単一の構造化プロンプトにアセンブルします。',
+            'PromptQuorum内では、以下を実行できます：',
+          ],
+          items: [
+            'タスク用のCO-STARフィールドを入力し、結果のプロンプトを複数の大規模言語モデルにディスパッチします',
+            'CO-STARプロンプトをテンプレートとして保存して、ドキュメント更新などの反復的なワークフローに使用します',
+            'これらのテンプレートをチームと共有して、全員が同じ構造を使用できるようにします',
+          ],
+        },
+        togethherWithOthers: {
+          title: 'CO-STARを他のフレームワークと一緒に使用',
+          content: [
+            '**CO-STARフレームワークを他のプロンプトフレームワークと並行して位置付け、ワークフロー内で各フレームワークに明確な役割を割り当てます。** CO-STARは、対象者と構造の両方が重要な複数制約のコミュニケーションタスクで優れています。',
+            'シンプルな戦略は次のとおりです：',
+          ],
+          items: [
+            '構造化された説明、ガイド、通信作品にはCO-STARを使用します',
+            '特定のチャネル向けのマーケティングと品質ボイスに焦点を合わせるときはCRAFTを使用します',
+            'レポートやJSONなどの厳密にフォーマットされた出力にはSingle StepまたはSpecification-Styleフレームワークを使用します',
+            'モデルが中間の思考を露出させたいときはAnalyze-Plan-Executeなどの推論志向フレームワークを使用します',
+          ],
+        },
+        keyPoints: {
+          title: '重要ポイント',
+          isTldr: true,
+          content: [
+            '**CO-STAR** = C — Context（コンテキスト）、O — Objective（目的）、S — Style（スタイル）、T — Tone（トーン）、A — Audience（対象者）、R — Response（レスポンス）— AIプロンプトから推測を排除する6つのラベル付きコンポーネント',
+            'CO-STARは**複数制約のコミュニケーションタスク**に最適です。対象者、構造、トーンがすべて同時に重要な場合',
+            'フレームワークは、人間が優れたブリーフを書く方法を反映します。モデルが生成を開始する前に、コンテキスト、目標、対象者を明示的にします',
+            'CO-STARプロンプトはすべての言語モデル間で移植可能です。クラウドAPIとローカルモデルの両方',
+            'ドキュメント、オンボーディングガイド、説明、内部メモ、ヘルプセンターコンテンツにCO-STARを使用します',
+            '純粋な推論タスクにはAPEまたはChain-of-Thoughtを、シンプルなシングル出力タスクはSingle-Stepを使用します',
+          ],
+        },
+        quickFacts: {
+          title: '素早い事実',
+          items: [
+            '**CO-STAR =** C — Context（コンテキスト）、O — Objective（目的）、S — Style（スタイル）、T — Tone（トーン）、A — Audience（対象者）、R — Response（レスポンス）',
+            '**最適なタスク：** 複数制約のコミュニケーションタスク（ドキュメント、説明、オンボーディング、メモ）',
+            '**コンポーネント数：** 6 — APE（3）より多く、CRAFT（5）およびSPECS（5）と同等',
+            '**最小限必要な構成：** Context + Objective + Response（6つ中3つ）',
+            '**中核的な強み：** 対象者とトーン認識 — CO-STARは最も対象者中心のフレームワーク',
+            '**動作対象：** すべての言語モデル — クラウドとローカルの両方',
+          ],
+        },
+        frameworkComparison: {
+          title: 'CO-STARと他のプロンプトフレームワークの比較',
+          columns: ['フレームワーク', 'コンポーネント', '焦点', '最適なタスク'],
+          rows: [
+            { 'フレームワーク': 'CO-STAR', 'コンポーネント': '6（Context、Objective、Style、Tone、Audience、Response）', '焦点': '対象者中心のコミュニケーション', '最適なタスク': 'ドキュメント、説明、顧客向けコンテンツ' },
+            { 'フレームワーク': 'CRAFT', 'コンポーネント': '5（Context、Role、Action、Format、Target）', '焦点': '役割定義タスク実行', '最適なタスク': 'マーケティング、チャネル固有コンテンツ' },
+            { 'フレームワーク': 'SPECS', 'コンポーネント': '5（Situation、Problem、Examples、Constraints、Style）', '焦点': '事例を用いた問題解決', '最適なタスク': '分析タスク、トラブルシューティング' },
+            { 'フレームワーク': 'APE', 'コンポーネント': '3（Analyze、Plan、Execute）', '焦点': '可視化された推論', '最適なタスク': '複雑な分析、戦略、コードレビュー' },
+            { 'フレームワーク': 'RTF', 'コンポーネント': '3（Role、Task、Format）', '焦点': '最小構造', '最適なタスク': 'クイックタスク、シンプルな出力' },
+            { 'フレームワーク': 'Single-Step', 'コンポーネント': '1（1つの指示）', '焦点': 'スピード', '最適なタスク': 'よく定義されたシンプルなタスク' },
+          ],
+        },
+        commonMistakes: {
+          title: 'CO-STARフレームワークの一般的なミス',
+          numberedItems: [
+            '**Context を単一の曖昧な文として書く。** 問題：「私たちはSaaS企業です」はモデルにほぼ何も伝えません。修正：具体的な背景を含めます。製品、問題、何が起こったか、どのデータが利用可能か。',
+            '**StyleとToneを混同する。** 問題：Style = 構造（箇条書き、ヘッダー、ステップバイステップ）。Tone = 声（形式的、親友のように、緊急）。修正：Style は「見た目」、Tone は「聞こえ方」に答えます。別行に保ちます。',
+            '**内部ドキュメントのAudienceをスキップする。** 問題：「内部」はオーディエンスではありません。エンジニア向けのメモはCFO向けのメモとは異なります。修正：読者の役割、知識レベル、出力をどうするかを指定します。',
+            '**Responseが曖昧になる（「ドキュメント」）。** 問題：モデルが自身の長さ、構造、フォーマットを選択します。修正：フォーマット（箇注記、ヘッダー、JSON）、長さ（単語数またはセクション数）、構造的な要件を指定します。',
+          ],
+        },
+        expandedFAQ: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'CO-STARは何の略ですか？',
+              a: 'CO-STARは Context（コンテキスト）、Objective（目的）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（レスポンス）の略です。各文字は構造化されたAIプロンプトの1つの要素を表します。6つの要素全体で、完全なブリーフが形成されます。'
+            },
+            {
+              q: 'CO-STARはいつ使うべきですか？',
+              a: '複数の側面が同時に重要な場合に使用します。出力が特定の構造と特定のトーン、特定の対象者への調整が必要な場合です。単なる事実の回答または単純なフォーマットの場合は、より短いプロンプトで十分です。'
+            },
+            {
+              q: 'CO-STARとCRAFTの違いは何ですか？',
+              a: '両方とも構造化されたフレームワークですが、焦点が異なります。CO-STAR（Context、Objective、Style、Tone、Audience、Response）はコミュニケーション次元に焦点を当てています。CRAFTはタスク実行に焦点を当てています。'
+            },
+            {
+              q: 'CO-STARとSPECSの違いは何ですか？',
+              a: 'SPECS（Situation、Problem、Examples、Constraints、Style）は問題解決志向です。CO-STARはコミュニケーション志向です。分析的なタスクにはSPECSを、コンテンツ作成や通信にはCO-STARを使用してください。'
+            },
+            {
+              q: 'OllamaなどのローカルモデルでCO-STARを使用できますか？',
+              a: 'はい。CO-STARはプロンプトレベルのテクニックです。すべてのモデルで機能します。ローカルモデルは同じ6要素構造に応答します。小さなモデル（7B未満）では最も重要な3～4要素に焦点を当ててください。'
+            },
+            {
+              q: 'すべてのプロンプトに6つの要素が必要ですか？',
+              a: 'いいえ。Context と Objective は必須です。Style、Tone、Audience、Response は品質を向上させますがオプションです。Context + Objective + Response から始めて、必要に応じて追加してください。'
+            },
+            {
+              q: 'CO-STARをChain-of-ThoughtやAPEと組み合わせられますか？',
+              a: 'はい。CO-STARは「何を」「どのように」するかを定義し、Chain-of-ThoughtやAPEは「どのように考えるか」を定義します。補完関係にあり、競合していません。'
+            },
+            {
+              q: '日本企業でCO-STARは使用されていますか？',
+              a: 'はい。日本企業の多くが内部ドキュメント、顧客コミュニケーション、チームワークフローに使用しています。構造化されたアプローチは品質基準に適合し、AIプロンプトの一貫性と信頼性を向上させます。'
+            },
+            {
+              q: 'CO-STARのすべての要素を毎回使用する必要はありますか？',
+              a: 'いいえ。ただし、Context と Objective は常に含めることをお勧めします。スタイル、トーン、対象者を追加すると、より目的に合った出力が得られます。'
+            },
+            {
+              q: '実践的にCO-STARの使い始めるにはどうしたらいいですか？',
+              a: 'まずシンプルに始めてください。コンテキスト、目的、希望する出力フォーマットを定義します。習得後、スタイルとトーンを追加して品質を向上させます。対象者を指定して複雑さを調整します。'
+            },
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            '[White et al. (2023). 「A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT.」 arXiv:2302.11382](https://arxiv.org/abs/2302.11382) — プロンプトパターン分類法、構造化コミュニケーションパターンを含む',
+            '[Anthropic. 「Prompt Engineering Guide.」 docs.anthropic.com](https://docs.anthropic.com) — CO-STARに適用可能な構造化プロンプティングのベストプラクティス',
+            '[OpenAI. 「Prompt Engineering Guide.」 platform.openai.com](https://platform.openai.com/docs/guides/prompt-engineering) — 役割、コンテキスト、フォーマット仕様ガイダンス',
+            '[Google. 「Gemini API: Prompting Strategies.」 ai.google.dev](https://ai.google.dev) — 構造化プロンプト戦略',
+          ],
+        },
+        relatedReading: {
+          title: '関連資料',
+          items: [
+            '[どのプロンプトフレームワークを使用すべきか？](/prompt-engineering/which-prompt-framework-should-you-use?lang=ja) — CO-STAR vs CRAFT vs SPECS vs APE 比較',
+            '[CRAFTフレームワーク](/prompt-engineering/craft-framework?lang=ja) — CO-STARの役割志向の代替案',
+            '[SPECSフレームワーク](/prompt-engineering/specs-framework?lang=ja) — CO-STARの問題解決志向の代替案',
+            '[APEフレームワーク](/prompt-engineering/ape-framework?lang=ja) — 推論焦点フレームワーク（Analyze、Plan、Execute）',
+            '[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — CO-STARが組織する普遍的な構成要素',
+            '[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja) — CO-STARがタッチする役割/対象者次元への深掘り',
+          ],
+        },
+        hoToApply: {
+          title: 'CO-STARフレームワークの使用方法',
+          numberedItems: [
+            '**Context:** モデルが理解するために必要な関連背景情報を提供します。例：「React コンポーネントライブラリのプルリクエストをレビューしています。プロジェクトは TypeScript strict mode、不変状態、関数型コンポーネントのみを強制しています。」',
+            '**Objective:** 1文でやりたいことを言います。例：「このコードをtype safetyと関数型プログラミング違反をチェックしてください。」',
+            '**Style:** トーンとフォーマットを指定します。例：「直接的で批判的にしてください。箇条書きでフィードバックを返してください。技術言語を使用してください。」',
+            '**Tone:** 声と感情的なキャラクターを定義します。例：「形式的で正確で客観的です。」',
+            '**Audience:** 出力を読む人を指定します。例：「React best practicesに精通した経験豊富なバックエンドエンジニア。」',
+            '**Response:** 出力の正確なフォーマットを指定します。例：「JSON を返す: { issues: [...], summary: string, confidence: high|medium|low }」',
+          ],
+        },
+      },
     },
     zh: {
       freshness_tier: 'evergreen',
