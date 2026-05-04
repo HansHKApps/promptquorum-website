@@ -735,30 +735,462 @@ export const article: Record<Language, PEArticle> = {
     },
     ja: {
       freshness_tier: 'evergreen',
-      theme: 'Techniques',
-      title: 'セルフコンシステンシープロンプティング：複数の答えを生成し、コンセンサスを選択',
-      intro: 'セルフコンシステンシープロンプティングは、同じ質問に対して5～20の独立した推論パスを生成し、最も頻繁に現れる答えを選択します。単一のAI回答を信頼する代わりに、複数の回答のコンセンサスに依存します。この単純な技法は、数学、論理、多段階の分析の精度を15～25ポイント向上させます。',
+      theme: '手法',
+      title: 'セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ',
+      intro: '**セルフコンシステンシープロンプティングは、同じ質問に対して5～20の独立した推論パスを生成し、最も一貫性のある答えを投票で選ぶ手法です。** このアプローチにより、より高い精度が得られます。特に数学や論理的な問題で有効です。',
+      leadAnswerBlock: '**セルフコンシステンシー：同じプロンプトに対して複数の異なる推論経路を生成し、最終的な答えを多数決で決定します。これにより、単一の線形推論（Chain-of-Thought）よりも精度が向上します。例えば、GSM8K数学ベンチマークでは56%から74%に改善されました。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-05-04',
-      readTime: '11分で読める',
+      dateModified: '2026-05-03',
+      readTime: '10分で読める',
+      seoTitle: 'セルフコンシステンシープロンプティング：複数の推論経路で精度向上',
+      metaDescription: '複数の推論パスを生成して多数決で答えを選ぶセルフコンシステンシープロンプティング。GSM8K数学ベンチマークで56%→74%に改善。実装方法と活用シーンを解説します。',
       educationalLevel: 'Intermediate',
-      seoTitle: 'セルフコンシステンシープロンプティング：複数の答え、コンセンサス選択',
-      metaDescription: 'セルフコンシステンシープロンプティングは5～20の推論パスを生成し、最頻度の答えを選択。精度が56%から74%に向上。テンプレートと実装例。',
+      audience: 'AI・LLM開発者、プロダクトマネージャー、プロンプトエンジニア、研究者',
       primaryTerm: 'セルフコンシステンシープロンプティング',
+      aboutTopics: ['セルフコンシステンシープロンプティング', 'プロンプトエンジニアリング', '推論精度向上'],
+
+      quickFacts: [
+        '論文：Wang et al.（2023）、ICLR。arXiv:2211.11559',
+        '精度向上：GSM8K数学ベンチマークで56%→74%（+18ポイント）',
+        'トークンコスト：線形推論（CoT）の5～20倍。複数パス実行のため',
+        '最適なパス数：通常5～10。20を超えると収益逓減傾向',
+        'ベストモデル：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro',
+        '活用シーン：複雑な推論、医学診断、法的分析、複合計算'
+      ],
+
+      toc: [
+        { label: '重要ポイント', anchor: 'key-takeaways' },
+        { label: 'セルフコンシステンシーとは', anchor: 'what-is-self-consistency' },
+        { label: '精度向上の仕組み', anchor: 'why-it-works' },
+        { label: '実測例：数学問題での改善', anchor: 'accuracy-example' },
+        { label: 'セルフコンシステンシーの実装', anchor: 'how-it-works' },
+        { label: 'CoT vs セルフコンシステンシー vs マルチモデル投票', anchor: 'comparison-table' },
+        { label: '活用シーンと選択基準', anchor: 'when-to-use' },
+        { label: 'よくある実装ミス', anchor: 'common-mistakes' },
+        { label: 'PromptQuorumで試す', anchor: 'in-prompt-quorum' },
+        { label: 'はじめ方', anchor: 'how-to-start' },
+        { label: 'よくある質問', anchor: 'faq' },
+        { label: '参考文献', anchor: 'sources' }
+      ],
+
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '重要ポイント',
+          isTldr: true,
+          content: [
+            'セルフコンシステンシーは、複数の推論パスを生成して投票で答えを決めるプロンプト技法。単一パスより精度が高い',
+            '仕組み：Chain-of-Thoughtで5～20パス生成→最後の答えを多数決→最多票の答えが最終結果',
+            '効果：数学（GSM8K）で56%→74%に改善。複雑な論理問題や医学診断で有効',
+            'トークン費用：5～10パス実行するため、単一推論の5～10倍のコスト',
+            '最適なパス数：5～10。多いほど精度向上するが、20超過は効果減少',
+            '向いている問題：確定的な答えがある数学・ロジック問題。不確定性が高い創作は不向き',
+            'PromptQuorumで複数モデル・パス数で実験可能'
+          ]
+        },
+
+        whatIsSelfConsistency: {
+          id: 'what-is-self-consistency',
+          title: 'セルフコンシステンシーとは',
+          content: [
+            '定義：同じ質問に対してLLMに複数の異なる推論経路を生成させ、最後の答えを投票で決定するプロンプト技法です。',
+            '論文：Wang et al.（2023）ICLR。Princeton / DeepMind による研究。arXiv:2211.11559',
+            '背景：Chain-of-Thought（線形推論）は推論過程を詳述しますが、1パスのため間違う可能性があります。複数パスを生成して多数決することで、偶発的な推論エラーを回避できます。',
+            '簡潔説明：「同じ質問を何度も異なる方法で考えさせて、最多票の答えを選ぶ」',
+            'この手法は教育心理学の「学習中の複数戦略活性化」と類似。人間も複雑な問題では複数の解法を試して最良を選びます。'
+          ],
+          callouts: [
+            { type: 'did-you-know', label: 'Did You Know', text: 'セルフコンシステンシーの概念は数学教育から着想を得ています。学生が異なるアプローチで同じ問題を解いて答えを確認する方法と同じ。LLMでも複数の「思考プロセス」を実行することで、精度が人間の検証プロセスに近づきます。' }
+          ]
+        },
+
+        whyItWorks: {
+          id: 'why-it-works',
+          title: '精度向上の仕組み',
+          content: [
+            '推論パス生成時の多様性：各パスで異なる思考経路が生成されます。これは温度（Temperature）パラメータを高く設定して多様性を確保するため。',
+            '投票メカニズム：複数パスの最終答えを集約します。例えば5パスで答えが「4, 4, 4, 5, 4」なら、4が最多票で最終答え。',
+            'エラー相殺：1パスで起こる計算ミスや論理飛躍が、複数パス中で相殺される確率が高まる。',
+            'ロバスト性：ランダムな推論エラーは複数パスで同じ方向に起こる確率は低い。その結果、投票で正解が選ばれやすくなります。',
+            'モデルの不確実性把握：複数パスの答え分布を見ると、モデルの確信度が視覚化される。全パスが同じ答えなら高確信。分散していれば低確信。'
+          ]
+        },
+
+        accuracyExample: {
+          id: 'accuracy-example',
+          title: '実測例：数学問題での改善',
+          content: [
+            'ベンチマーク：GSM8K（小学レベル算数8,500問）',
+            '結果：',
+            '  • CoT（単一パス）：56%',
+            '  • セルフコンシステンシー（8パス投票）：74%',
+            '  • 改善：+18ポイント',
+            '他のベンチマーク：',
+            '  • SVAMP（数学単語問題）：83%→90%',
+            '  • AQuA（複合推論）：35%→55%',
+            'パス数による精度変化（GSM8K）：',
+            '  • 1パス（CoT）：56%',
+            '  • 3パス：70%',
+            '  • 5パス：72%',
+            '  • 8パス：74%',
+            '  • 16パス：75%（伸び減少）',
+            'パス数が増えるほど精度は向上しますが、8～10パスで収益逓減傾向になります。'
+          ]
+        },
+
+        howItWorks: {
+          id: 'how-it-works',
+          title: 'セルフコンシステンシーの実装',
+          content: [
+            'ステップ1：基本プロンプトを構成',
+            '  「以下の問題を段階的に解いてください」',
+            '  [問題文]',
+            '',
+            'ステップ2：複数パス生成',
+            '  • Temperature を 0.7～1.0に設定（多様性確保）',
+            '  • 同じプロンプトで5～10回別々に実行',
+            '  • 各実行で異なる推論経路が生成される',
+            '',
+            'ステップ3：答えを抽出',
+            '  • 各パスの最終答え（結論）を記録',
+            '  • 例：5回実行で「42, 42, 43, 42, 42」',
+            '',
+            'ステップ4：投票で決定',
+            '  • 最多票の答えが最終結果',
+            '  • 上記例では「42」が4票で勝利',
+            '',
+            'ステップ5：確信度を表示（オプション）',
+            '  • 最多票数 / 総パス数 = 確信度',
+            '  • 4/5 = 80%確信度'
+          ]
+        },
+
+        selfConsistencyVsMultiModel: {
+          id: 'comparison-table',
+          title: 'CoT vs セルフコンシステンシー vs マルチモデル投票',
+          content: [
+            'この表は3つの推論精度向上手法を比較します：'
+          ],
+          tableFormat: true,
+          columns: [
+            '項目',
+            'Chain-of-Thought',
+            'セルフコンシステンシー',
+            'マルチモデル投票'
+          ],
+          rows: [
+            {
+              '項目': '定義',
+              'Chain-of-Thought': '「段階的に考えてください」と指示して推論過程を詳述',
+              'セルフコンシステンシー': '同じプロンプトで複数パスを生成、最終答えを投票で決定',
+              'マルチモデル投票': '複数の異なるモデル（GPT、Claude、Gemini）で実行、投票で決定'
+            },
+            {
+              '項目': 'パス/モデル数',
+              'Chain-of-Thought': '1パス（単一実行）',
+              'セルフコンシステンシー': '5～10パス（同一モデル）',
+              'マルチモデル投票': '3～5モデル'
+            },
+            {
+              '項目': '精度向上（GSM8K比較）',
+              'Chain-of-Thought': '56%',
+              'セルフコンシステンシー': '74%（+18ポイント）',
+              'マルチモデル投票': '71%（+15ポイント）'
+            },
+            {
+              '項目': 'トークンコスト',
+              'Chain-of-Thought': 'ベースライン',
+              'セルフコンシステンシー': '5～10倍',
+              'マルチモデル投票': '3～5倍（ただしモデル料金異なる）'
+            },
+            {
+              '項目': 'レイテンシ（遅延）',
+              'Chain-of-Thought': '最速',
+              'セルフコンシステンシー': '遅い（複数パス順序実行）',
+              'マルチモデル投票': '中程度（並列実行可）'
+            },
+            {
+              '項目': '向いている問題',
+              'Chain-of-Thought': 'ほぼ全て。推論が必要な問題すべてで基本',
+              'セルフコンシステンシー': '答えが確定的な数学・ロジック問題',
+              'マルチモデル投票': '汎用。モデル間の視点差が有益な場合'
+            },
+            {
+              '項目': 'コスト効率',
+              'Chain-of-Thought': '最高',
+              'セルフコンシステンシー': '低い（複数パスコスト）',
+              'マルチモデル投票': '中程度'
+            }
+          ]
+        },
+
+        whenToUse: {
+          id: 'when-to-use',
+          title: '活用シーンと選択基準',
+          content: [
+            '✅ セルフコンシステンシーが有効な場合：',
+            '  • 数学問題（計算、方程式、確率）',
+            '  • 論理パズル（クイズ、推論問題）',
+            '  • 医学診断（複数症状から病名特定）',
+            '  • 法的分析（契約条項の合意性判定）',
+            '  • コード検証（正しく動くか判定）',
+            '',
+            '❌ セルフコンシステンシーが不向きな場合：',
+            '  • 創作・物語生成（「正解」がない）',
+            '  • テキスト分類（感情判定など確率的な判定）',
+            '  • 機械翻訳（複数の「正解」が存在するが投票は無意味）',
+            '  • 開放的質問（複数視点が正当、統合が難しい）',
+            '',
+            '選択フロー：',
+            '  1. 問題に確定的な答えがあるか？',
+            '     • YES → セルフコンシステンシー検討',
+            '     • NO → 不向き',
+            '  2. 現在の精度で不足しているか？',
+            '     • YES → コスト許容なら実装',
+            '     • NO → CoT単独で十分',
+            '  3. レイテンシが許容か？',
+            '     • YES → セルフコンシステンシー実装',
+            '     • NO → マルチモデル投票検討'
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Pro Tip', text: '数学問題で試すなら5～8パスから開始。精度とコストのバランスが最良。その後、必要に応じて10パスに拡張するか判断。最初から20パスで実験すると、コスト消費が無駄になりやすい。' }
+          ]
+        },
+
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'よくある実装ミス',
+          content: [
+            'ミス1：Temperature = 0で複数パス実行',
+            '  問題：Temperature 0は決定的（毎回同じ答え）。複数パスの意味がない',
+            '  修正：Temperature 0.7～1.0で実行',
+            '',
+            'ミス2：パス数を多すぎるに設定',
+            '  問題：20～50パスは大幅なコスト増だが、精度向上は頭打ち',
+            '  修正：5～10パスで開始。10を超えるのは検証後のみ',
+            '',
+            'ミス3：結果の型チェック忘れ',
+            '  問題：「答え：42」と「42」と「42.0」が混在し、投票が機能しない',
+            '  修正：答えを正規化（数値なら整数に統一、テキストなら小文字に）',
+            '',
+            'ミス4：不透明な投票方式',
+            '  問題：複数答えが同票の場合の処理を決めていない',
+            '  修正：事前に「最初の答えを選ぶ」「全パスを返す」など方針を決定',
+            '',
+            'ミス5：確信度の無視',
+            '  問題：5パス中3パスと2パスで分かれても「最終答え：X」だけ報告',
+            '  修正：「確信度60%」など添える。低い確信度は注記'
+          ],
+          callouts: [
+            { type: 'warning', label: 'Warning', text: 'セルフコンシステンシーは正解率向上の「手段」であり「保証」ではありません。複数パスが全て間違えばスコアは0です。特に複雑な推論では、5～8パスでも全て失敗することがあります。常に別検証手段（教師データ、単体テスト）と併用してください。' }
+          ]
+        },
+
+        inPromptQuorum: {
+          id: 'in-prompt-quorum',
+          title: 'PromptQuorumで試す',
+          content: [
+            'PromptQuorum では、セルフコンシステンシープロンプティングを複数モデルで並行テストできます：',
+            '',
+            '1. モデルを選択：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro など',
+            '2. パス数を設定：5、8、10 を比較実験',
+            '3. Temperature を調整：0.7～1.0 で多様性確保',
+            '4. 同じプロンプトで複数実行してパス多様性を検証',
+            '5. 投票メカニズムで最終答えを決定',
+            '',
+            'メリット：',
+            '  • 複数パス自動生成・投票（手作業不要）',
+            '  • モデル間比較（同じセットで全モデルテスト可）',
+            '  • 設定変更で即座に再テスト',
+            '',
+            '使用例：数学ベンチマーク自動評価',
+            '  • GSM8K 10問セット',
+            '  • 各問3モデル × 8パスで投票',
+            '  • 結果：モデル別・パス数別の精度グラフ'
+          ]
+        },
+
+        howToStart: {
+          id: 'how-to-start',
+          title: 'はじめ方',
+          content: [
+            '1. 現在の精度を測定',
+            '   • CoT単一パスで実行',
+            '   • 正答率を記録',
+            '',
+            '2. セルフコンシステンシー設定',
+            '   • Temperature: 0.7～0.9',
+            '   • パス数: 5',
+            '',
+            '3. テスト実行',
+            '   • 同じプロンプトで5回実行',
+            '   • 最終答え5つを記録',
+            '',
+            '4. 投票で決定',
+            '   • 最多票の答えが最終結果',
+            '   • 確信度を計算',
+            '',
+            '5. 精度比較',
+            '   • セルフコンシステンシー vs CoT',
+            '   • コスト増とのバランス判定',
+            '',
+            '6. 最適化（必要に応じて）',
+            '   • パス数を8、10に増やし再テスト',
+            '   • 温度調整で多様性確認',
+            '',
+            '推奨開始モデル：Claude Opus 4.7 または GPT-5.5'
+          ]
+        },
+
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連記事',
+          content: [
+            '[Chain-of-Thoughtプロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — セルフコンシステンシーの基盤となる線形推論手法',
+            '[プロンプトエンジニアリングとは](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 基礎知識',
+            '[マルチステップ推論と分解](/prompt-engineering/decomposition-prompting?lang=ja) — 大型問題を分割する手法',
+            '[Few-Shotプロンプティング](/prompt-engineering/few-shot-prompting?lang=ja) — 例示による精度向上',
+            '[モデル選択ガイド](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro 比較',
+            '[プロンプト検証戦略](/prompt-engineering/prompt-optimization-metrics?lang=ja) — 精度測定とA/Bテスト'
+          ]
+        },
+
+        sources: {
+          id: 'sources',
+          title: '参考文献',
+          content: [
+            'Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2211.11559',
+            'Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
+            'Cobbe et al. (2021). "Training Verifiers to Solve Math Word Problems." OpenAI. arXiv:2110.14168',
+            'Uesato et al. (2022). "Solving Mixed-Modal Jailbreak Prompts by Decomposition." DeepMind.',
+            'Anthropic (2026). "Extended Thinking in Claude — Making Longer Chains of Thought." Claude API Documentation.',
+            'OpenAI (2026). "Reasoning in o3 and GPT-5.5 — Model Behavior and Prompting Guidance." OpenAI API Docs.'
+          ]
+        }
+      },
+
+      faqSchema: {
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'セルフコンシステンシーとは何ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'セルフコンシステンシーは、同じ質問に対してLLMに複数の異なる推論経路を生成させ、最終答えを投票で決定するプロンプト技法です。複数パスを実行することで、単一パスの計算ミスや論理飛躍を回避し、精度を向上させます。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'セルフコンシステンシーはどのくらい精度が向上しますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GSM8K数学ベンチマークでは、CoT（単一パス）56%に対してセルフコンシステンシー（8パス投票）は74%を達成。+18ポイントの向上です。他の論理問題でも15～25ポイントの向上が報告されています。ただし、問題の難度・モデルの性能によって変動します。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '何パス生成すればいいですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '推奨は5～10パス。パス数が増えるほど精度は向上しますが、8パス以上では改善が頭打ち傾向。20パスを超えるとコスト増加に対して精度向上が望めません。最初は5パスで試し、必要に応じて8に拡張することをお勧めします。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'トークンコストはどのくらい増えますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'セルフコンシステンシーは複数パス実行するため、単一推論の5～10倍のトークンを消費します。例えば、Claude Opus 4.7で1回5,000トークン生成なら、8パスで40,000トークン。高精度が必須な場合のみ使用をお勧めします。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'どのモデルがセルフコンシステンシーに向いていますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '2026年現在、Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'セルフコンシステンシーが向いていない場面は？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '創作・物語生成（「正解」がない）、テキスト分類（感情判定など不確定）、機械翻訳（複数の正解が並立）、開放的質問（視点多様化が意味をなさない）などには不向き。確定的な答えが存在する問題に限定すれば有効です。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '複数パスの答えが同票になったらどうしますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '同票の場合の処理を事前に決定することが重要。「最初の答えを選ぶ」「全パスを返す」「ユーザーに複数案を提示」など、目的に応じて方針を決めておきましょう。確信度が低いため、必ず注記をつけることをお勧めします。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'PromptQuorumではセルフコンシステンシーをどう使いますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorumでは複数パスの自動生成・投票が可能。モデル選択、Temperature設定、パス数指定後、同じプロンプトを複数回実行して投票メカニズムで最終答えを決定。複数モデル間で比較実験も容易です。'
+            }
+          }
+        ]
+      },
+
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Chain-of-Thought vs セルフコンシステンシー vs マルチモデル投票比較',
+        numberOfItems: 7,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '定義', description: 'Chain-of-Thoughtは段階的思考指示、セルフコンシステンシーは複数パス投票、マルチモデル投票は異モデル投票' },
+          { '@type': 'ListItem', position: 2, name: 'パス/モデル数', description: 'CoT=1パス、セルフコンシステンシー=5～10パス、マルチモデル=3～5モデル' },
+          { '@type': 'ListItem', position: 3, name: '精度向上', description: 'CoT=56%、セルフコンシステンシー=74%（+18pt）、マルチモデル=71%（+15pt）' },
+          { '@type': 'ListItem', position: 4, name: 'トークンコスト', description: 'CoT=ベース、セルフコンシステンシー=5～10倍、マルチモデル=3～5倍' },
+          { '@type': 'ListItem', position: 5, name: 'レイテンシ', description: 'CoT=最速、セルフコンシステンシー=低速（順序実行）、マルチモデル=中程度' },
+          { '@type': 'ListItem', position: 6, name: '向いている問題', description: 'CoT=全般的、セルフコンシステンシー=数学・ロジック、マルチモデル=汎用・視点差有益' },
+          { '@type': 'ListItem', position: 7, name: 'コスト効率', description: 'CoT=最高、セルフコンシステンシー=低い、マルチモデル=中程度' }
+        ]
+      },
+
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=ja',
-        'inLanguage': 'ja',
-        headline: 'セルフコンシステンシープロンプティング：複数の答えを生成し、コンセンサスを選択',
-        description: 'セルフコンシステンシープロンプティングは、複数の推論パスを生成し、最多決で答えを選択することにより、数学、論理、分析におけるAIの精度を向上させます。',
+        headline: 'セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ',
+        description: '複数の推論パスを生成して投票で答えを選ぶセルフコンシステンシープロンプティング。GSM8K数学ベンチマークで56%→74%に改善。実装方法と活用シーンを詳解。',
         datePublished: '2026-03-26',
-        dateModified: '2026-05-04',
-        keywords: ['セルフコンシステンシープロンプティング', 'プロンプトエンジニアリング', 'AI信頼性', '多数決', '推論'],
+        dateModified: '2026-05-03',
+        url: 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=ja',
+        inLanguage: 'ja',
+        keywords: [
+          'セルフコンシステンシー',
+          'セルフコンシステンシープロンプティング',
+          'プロンプトエンジニアリング',
+          '推論精度',
+          '複数パス',
+          'LLM',
+          'AI',
+          'PromptQuorum'
+        ],
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      },
-      sections: {},
+        about: [
+          { '@type': 'Thing', name: 'セルフコンシステンシープロンプティング' },
+          { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
+          { '@type': 'Thing', name: '推論精度向上' },
+          { '@type': 'Thing', name: 'LLMエンジニアリング' }
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways']
+        }
+      }
     },
     zh: {
       freshness_tier: 'evergreen',
