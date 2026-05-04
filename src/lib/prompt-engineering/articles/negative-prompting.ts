@@ -313,132 +313,383 @@ export const article: Record<Language, PEArticle> = {
   },
 },
     fr: {
-      theme: 'Techniques',
-      title: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
-      intro: 'Le guidage négatif est une technique permettant de définir explicitement ce que le modèle doit éviter—contenu, tonalité, structure ou comportements—pour maintenir les résultats dans des limites claires. Il fonctionne comme une « couche de protection » s\'ajoutant à vos instructions standard.',
-      publishDate: '2026-03-26',
-      readTime: '5 min de lecture',
-      metaDescription: 'Guide complet du guidage négatif : définition, enjeux, et application des règles « ne pas faire » pour maîtriser les sorties IA en respect des contraintes de marque et de conformité.',
-      primaryTerm: 'Guidage Négatif',
-      seoTitle: 'Guidage Négatif : Maîtriser les Sorties IA avec des Règles Explicites',
-      educationalLevel: 'Intermediate',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        headline: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
-        description: 'Définition, enjeux et mise en œuvre du guidage négatif pour maintenir les sorties IA dans des limites de sécurité, de conformité et d\'alignement de marque.',
-        datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['guidage négatif', 'ingénierie des invites', 'garde-fous', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        about: [
-          { '@type': 'Thing', name: 'Ingénierie des Invites' },
-          { '@type': 'Thing', name: 'Modèles de Langage de Grande Taille' },
-          { '@type': 'Thing', name: 'Garde-fous Numériques' },
-        ],
-      },
-      sections: {
-        whatIsNegativePrompting: {
-          title: 'Qu\'est-ce que le Guidage Négatif ?',
-          content: [
-            '**Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à vos invites, aux côtés de ce que vous souhaitez obtenir du modèle.** Au lieu de décrire uniquement le résultat attendu, vous précisez également les sujets, tonalités, formats ou erreurs à éviter.',
-            'Ces instructions négatives peuvent porter sur des termes interdits, des catégories de contenu prohibées, des opinions hors limites, ou simplement des styles indésirables (par exemple « pas de blagues », « pas d\'emojis », « éviter le langage marketing »). Plus vos règles « ne pas faire » sont explicites, plus il est aisé pour le modèle de rester aligné.',
-          ],
-        },
-        whyItMatters: {
-          title: 'Pourquoi le Guidage Négatif Compte',
-          content: [
-            '**Le guidage négatif importe parce que les résultats concrètes sont limités non seulement par les objectifs, mais par les contraintes—de marque, légales, de sécurité et de qualité.** Un bon résultat est souvent « exact ET conforme aux limites », pas simplement « utile ».',
-            'Le guidage négatif vous permet :',
-          ],
-          items: [
-            'Prévenir les défaillances spécifiques déjà observées : surpromodon, spéculation, mentions inutiles de mises en garde.',
-            'Imposer les règles de marque et de tonalité directement dans l\'invite, en évitant le jargon ou les adjectifs proscrits.',
-            'Réduire l\'édition manuelle, car nombre de corrections courantes peuvent être anticipées par un guidage explicite « ne pas faire ».',
-          ],
-        },
-        useNote: {
-          content: [
-            'Bien mis en œuvre, le guidage négatif transforme les erreurs antérieures en garde-fous réutilisables et durables.',
-          ],
-        },
-        whatYouCanConstrain: {
-          title: 'Ce Que Vous Pouvez Maîtriser avec le Guidage Négatif',
-          content: [
-            '**Vous pouvez appliquer le guidage négatif au contenu, à la tonalité, à la structure et au comportement.** L\'objectif est d\'être assez spécifique pour que le modèle sache exactement quoi éviter.',
-            'Contraintes négatives courantes :',
-          ],
-          items: [
-            'Contenu : « Ne pas inclure de conseils médicaux », « ne pas mentionner les concurrents », « ne pas émettre de conclusions juridiques ».',
-            'Tonalité : « Ne pas utiliser de termes accrocheurs comme « révolutionnaire » ou « disruptif » », « pas d\'emojis », « éviter le sarcasme ».',
-            'Structure : « Ne pas ajouter d\'introduction », « ne pas utiliser de listes numérotées », « ne pas inclure de conclusion ».',
-            'Comportement : « Ne pas inventer de statistiques », « en cas d\'incertitude, reconnaître l\'incertitude au lieu de deviner ».',
-          ],
-        },
-        combiningNote: {
-          content: [
-            'L\'association d\'instructions positives et négatives vous offre une spécification d\'invite bien plus rigoureuse.',
-          ],
-        },
-        example: {
-          title: 'Exemple : Sans vs Avec Guidage Négatif',
-          content: [
-            '**L\'effet du guidage négatif apparaît clairement en comparant une invite générique à une invite qui encode des règles explicites « ne pas faire ». Voici un exemple adapté au contexte français.**',
-            '**[Invite Faible]**',
-            '« Rédige une description de produit pour notre nouveau tableau de bord analytique. »',
-            '**[Bonne Invite]**',
-            '« Tu es un responsable produit B2B. Tâche : Rédige une description de produit pour notre nouveau tableau de bord analytique destinée aux directeurs d\'exploitation en France. Contraintes (guidage négatif) : Ne pas utiliser de termes marketing comme « révolutionnaire », « disruptif » ou « innovant ». Ne pas mentionner les concurrents. Ne pas promouvoir de fonctionnalités futures ; décrire uniquement ce qui existe aujourd\'hui. Ne pas dépasser 180 mots. Format : 1 paragraphe court pour la présentation générale, suivi de 3 points clés pour les avantages. »',
-            'Cette « bonne » version encode les écueils connus (marketing, spéculation, comparaisons) directement dans les instructions, réduisant le besoin de correction manuelle.',
-          ],
-        },
-        whenToUse: {
-          title: 'Quand Utiliser le Guidage Négatif',
-          content: [
-            '**Utilisez le guidage négatif dès que vous avez des exemples clairs de ce que vous ne voulez jamais revoir.** C\'est particulièrement utile dans les workflows répétables où les mêmes erreurs réapparaissent.',
-            'Cas d\'usage typiques :',
-          ],
-          items: [
-            'Communication client où la tonalité, les affirmations et les promesses doivent respecter des directives strictes.',
-            'Contextes réglementés (finance, santé, droit) où certains types de conseils ou de formulations doivent être évités.',
-            'Documentation interne ou rapports ne devant pas contenir de détails confidentiels, de données personnelles ou de spéculation.',
-            'Contenu public où vous souhaitez éviter les sujets sensibles, les opinions politiques ou le langage controversé.',
-          ],
-        },
-        productionNote: {
-          content: [
-            'Pour les expériences rapides et peu risquées, le guidage négatif peut rester léger. À mesure que les invites deviennent opérationnelles, votre liste de règles « ne pas faire » s\'étend généralement.',
-          ],
-        },
-        inPromptQuorum: {
-          title: 'Guidage Négatif dans PromptQuorum',
-          content: [
-            '**PromptQuorum est un outil de dispatch multi-modèles où le guidage négatif peut être intégré dans des cadres réutilisables au lieu d\'être réécrit à chaque fois.** Vous définissez les contraintes négatives standard une seule fois et les attachez à de nombreuses tâches.',
-            'Avec PromptQuorum, vous pouvez :',
-          ],
-          items: [
-            'Ajouter des blocs de guidage négatif (« termes interdits », « contenu défendu », « restrictions de style ») aux cadres tels que SPECS (S — Portée | P — Objet | E — Exemples | C — Contraintes | S — Spécification), RTF (R — Rôle | T — Tâche | F — Format) ou CRAFT pour qu\'ils s\'appliquent systématiquement.',
-            'Maintenir des listes partagées de règles « ne pas faire » pour votre marque ou équipe, garantissant des garde-fous cohérents sur toutes les invites et modèles.',
-            'Exécuter la même invite avec contraintes négatives sur différents modèles pour voir lequel s\'aligne le mieux à vos limites.',
-          ],
-        },
-        pqConversion: {
-          content: [
-            'En traitant le guidage négatif comme part intégrante de votre architecture d\'invites, PromptQuorum vous aide à convertir les erreurs passées en contraintes durables et réutilisables.',
-          ],
-        },
-        howToStart: {
-          title: 'Comment Mettre en Œuvre le Guidage Négatif',
-          numberedItems: [
-            '**Identifiez ce que vous ne voulez pas dans la sortie : mots spécifiques, tonalités, styles ou approches.** Exemple : « Ne pas utiliser de termes marketing. Ne pas faire de promesses. Ne pas référencer les concurrents. »',
-            '**Exprimez les interdictions explicitement en utilisant « ne pas », « ne doit pas » ou « jamais ». Les formulations douces comme « éviter si possible » sont moins efficaces. Soyez direct : « Ne jamais utiliser les mots « disruptif », « révolutionnaire » ou « basé sur l\'IA ». »**',
-            '**Fournissez des exemples négatifs : montrez au modèle ce que vous ne voulez explicitement pas.** Exemple : « N\'écris pas comme ceci : « Décupler votre croissance avec notre solution IA. » N\'écris pas ainsi : « Notre plateforme de pointe utilise l\'apprentissage machine. » Écris plutôt : [exemple positif]. »',
-            '**Combinez guidage positif et négatif.** Ne dites pas seulement ce à éviter—dites aussi ce à faire. Exemple : « Ne pas utiliser de langage marketing. Concentrez-vous sur les avantages spécifiques et mesurables. »',
-            '**Utilisez le guidage négatif avec modération—il peut parfois dérouter le modèle.** Le guidage positif (« écris de manière claire et technique ») fonctionne souvent mieux que de lourdes interdictions (« ne sois pas vague, ne simplifie pas, ne omets rien »). Équilibrez les deux approches.',
-          ],
-        },
-      },
+  freshness_tier: 'semi_annual',
+  theme: 'Techniques',
+  title: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
+  intro: 'Le guidage négatif est une technique permettant de définir explicitement ce que le modèle doit éviter—contenu, tonalité, structure ou comportements—pour maintenir les résultats dans des limites claires. Il fonctionne comme une « couche de protection » s\'ajoutant à vos instructions standard.',
+  seoTitle: 'Guidage Négatif : Maîtriser les Sorties IA (2026)',
+  metaDescription: 'Guidage négatif : règles « ne pas » pour mots interdits, sujets prohibés, restrictions de format. Modèle à 4 catégories avec exemples et comparaison de modèles IA.',
+  publishDate: '2026-03-26',
+  dateModified: '2026-05-04',
+  lastFactChecked: '2026-05-04',
+  readTime: '13 min de lecture',
+  next_refresh_due: '2026-11-03',
+  educationalLevel: 'Intermediate',
+  audience: 'Développeurs, équipes de contenu, et ingénieurs en prompt engineering d\'entreprise construisant des garde-fous IA',
+  primaryTerm: 'Guidage Négatif',
+  aboutTopics: ['Guidage Négatif', 'Ingénierie des Invites', 'Garde-fous IA'],
+  leadAnswerBlock: '**Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à une invite : contraindre le contenu, la tonalité, la structure et le comportement. Chaque sortie IA défectueuse que vous avez vue peut devenir un garde-fou permanent. Associez 3–5 contraintes négatives claires avec des instructions positives pour la spécification de prompt la plus serrée.**',
+  quickFacts: [
+    'Le guidage négatif couvre 4 dimensions : contenu (« pas de conseils médicaux »), tonalité (« pas de mots hyperboliques »), structure (« pas d\'introduction »), et comportement (« jamais fabriquer de statistiques »)',
+    'Les invites qui associent instructions positives et négatives réduisent les motifs indésirés par rapport aux invites positives seules — l\'effet est le plus fort quand les négatifs sont spécifiques et associés à « à la place, faites X »',
+    'La règle 3–5 : plus de 5–6 contraintes négatives dans une seule invite peuvent confondre les modèles et causer des résultats incomplets ou hésitants',
+    'Le langage dur fonctionne : « ne doit pas », « jamais », « ne pas » surpasse « essayez d\'éviter », « préférez ne pas », « si possible, évitez »',
+    'Le guidage négatif est le fondement des garde-fous IA d\'entreprise — chaque liste de conformité se traduit par une règle « ne pas faire »',
+    'PromptQuorum permet des blocs de contraintes négatives réutilisables sur tous les modèles — définir une fois, appliquer partout',
+  ],
+  toc: [
+    { label: 'Points clés', anchor: 'key-takeaways' },
+    { label: 'Qu\'est-ce que le Guidage Négatif', anchor: 'what-is-negative-prompting' },
+    { label: 'Pourquoi C\'est Important', anchor: 'why-it-matters' },
+    { label: 'Ce Que Vous Pouvez Contraindre', anchor: 'what-you-can-constrain' },
+    { label: 'Guidage Positif vs Négatif', anchor: 'negative-vs-positive' },
+    { label: 'Conformité des Modèles', anchor: 'model-compliance' },
+    { label: 'Exemple : Sans et Avec Guidage Négatif', anchor: 'example' },
+    { label: 'Quand Utiliser le Guidage Négatif', anchor: 'when-to-use' },
+    { label: 'Erreurs Courantes', anchor: 'common-mistakes' },
+    { label: 'Comment Utiliser le Guidage Négatif', anchor: 'how-to-use' },
+    { label: 'Questions Fréquemment Posées', anchor: 'faq' },
+    { label: 'Sources', anchor: 'sources' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
+    description: 'Qu\'est-ce que le guidage négatif, pourquoi c\'est important, et comment utiliser des règles explicites « ne pas faire » pour maintenir les sorties IA dans des limites sûres et alignées à la marque.',
+    datePublished: '2026-03-26',
+    dateModified: '2026-05-04',
+    url: 'https://www.promptquorum.com/prompt-engineering/negative-prompting?lang=fr',
+    inLanguage: 'fr',
+    keywords: ['guidage négatif', 'ingénierie des invites', 'garde-fous', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Guidage Négatif' },
+      { '@type': 'Thing', name: 'Ingénierie des Invites' },
+      { '@type': 'Thing', name: 'Garde-fous IA' },
+    ],
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+  },
+  sections: {
+    tldr: {
+      isTldr: true,
+      id: 'key-takeaways',
+      title: 'Points clés',
+      content: [
+        'Le guidage négatif ajoute des règles explicites « ne pas faire » aux côtés d\'instructions positives — c\'est une couche de garde-fou, pas un remplacement de la guidance positive',
+        'Il couvre 4 dimensions : contenu (sujets à éviter), tonalité (mots/tons), structure (interdictions de format), et comportement (contraintes de raisonnement comme « jamais fabriquer »)',
+        'Utilisez un langage dur : « ne doit pas », « jamais », « ne pas » — les négatifs doux comme « évitez si possible » sont moins efficaces',
+        'La règle 3–5 : limitez-vous à 3–5 contraintes par invite — les négatifs lourds (7+) peuvent confondre les modèles et dégrader la qualité des résultats',
+        'Toujours associer avec une guidance positive — dites au modèle à la fois ce à éviter ET ce à faire à la place',
+        'Chaque défaillance IA est une future règle « ne pas faire » — traitez le guidage négatif comme mémoire institutionnelle de votre workflow de prompt',
+      ],
     },
+    whatIsNegativePrompting: {
+      title: 'Qu\'est-ce que le Guidage Négatif',
+      content: [
+        '**Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à une invite, aux côtés d\'instructions positives.** Ces règles contraignent le contenu (pas de conseils médicaux), la tonalité (pas de mots hyperboliques), la structure (pas de listes à puces), ou le comportement (jamais fabriquer de données).',
+        'Chaque règle agit comme un garde-fou qui prévient les modes de défaillance connus.',
+      ],
+      items: [
+        '**En une phrase :** Le guidage négatif signifie ajouter des règles explicites « ne pas faire » à une invite pour que le modèle évite les contenus, styles, structures ou comportements spécifiés.',
+        '**En termes simples :** Dites à l\'IA non seulement ce à faire, mais aussi ce à éviter — mots interdits, sujets prohibés, règles structurelles que vous ne voulez jamais brisées.',
+      ],
+      blockquote: 'Gardez un doc courant des sorties IA que vous ne voulez jamais revoir. Chaque entrée devient une future règle « ne pas faire ». Les équipes qui systématisent cela réduisent l\'édition manuelle des prompts en quelques semaines.',
+      blockquoteSource: 'Modèle de garde-fou',
+    },
+    whyItMatters: {
+      title: 'Pourquoi C\'est Important',
+      content: [
+        '**Le guidage négatif est important parce que les sorties réelles sont contraintes non seulement par des objectifs, mais par des limites—marque, légalité, sécurité, qualité.** Un bon résultat est souvent « correct ET dans les limites », pas simplement « utile ».',
+        'Le guidage négatif vous aide à :',
+      ],
+      items: [
+        'Prévenir les modes de défaillance spécifiques que vous avez déjà observés, comme la survente, la spéculation, ou les avertissements inutiles',
+        'Appliquer les règles de marque et de tonalité directement dans le prompt, par exemple en évitant le jargon ou les adjectifs interdits',
+        'Réduire l\'édition manuelle, car beaucoup de corrections courantes peuvent être préemptées par une guidance « ne pas faire » claire',
+        'Pour les expériences rapides et à faible risque, gardez le guidage négatif léger. Quand les prompts mûrissent en workflows de production, la liste des règles « ne pas faire » s\'agrandit généralement.',
+      ],
+    },
+    whatYouCanConstrain: {
+      title: 'Ce Que Vous Pouvez Contraindre',
+      content: [
+        '**Vous pouvez appliquer le guidage négatif au contenu, à la tonalité, à la structure et au comportement.** L\'objectif est d\'être suffisamment spécifique pour que le modèle sache exactement ce à éviter.',
+        'Contraintes négatives courantes :',
+      ],
+      items: [
+        'Contenu : « Ne pas inclure de conseils médicaux », « ne pas mentionner les concurrents », « ne pas fournir de conclusions juridiques »',
+        'Tonalité : « Ne pas utiliser de mots hyperboliques comme \'révolutionnaire\' ou \'disruptif\' », « pas d\'emojis », « éviter le sarcasme »',
+        'Structure : « Ne pas ajouter une section d\'introduction », « ne pas utiliser de listes numérotées », « ne pas inclure une conclusion »',
+        'Comportement : « Ne pas fabriquer de statistiques », « si vous êtes incertain, dites-le plutôt que de deviner »',
+      ],
+      blockquote: 'Pour les contextes réglementés (finance, santé, droit), le guidage négatif n\'est pas optionnel — c\'est de la conformité. Mappez directement chaque exigence réglementaire à une règle « ne pas faire ». « Ne pas fournir de recommandations d\'investissement spécifiques. » « Ne pas suggérer de diagnostics spécifiques. » Gardez une bibliothèque de prompts négatifs distincte pour chaque domaine réglementé.',
+      blockquoteSource: 'Industries Réglementées',
+    },
+    negativeVsPositiveTable: {
+      id: 'negative-vs-positive',
+      title: 'Guidage Positif vs Négatif : Comparaison d\'Efficacité',
+      content: ['**La combinaison d\'instructions positives et négatives produit la spécification de prompt la plus serrée.** Les prompts négatifs seuls laissent le modèle sans direction ; les prompts positifs seuls laissent les modes de défaillance connus ouverts.'],
+      tableFormat: true,
+      columns: ['Approche', 'Description', 'Efficacité', 'Meilleur pour'],
+      rows: [
+        {
+          'Approche': 'Positif seul',
+          'Description': '« Écrivez clairement, soyez spécifique, utilisez un ton professionnel »',
+          'Efficacité': 'Modérée — direction fixée mais pas de garde-fous',
+          'Meilleur pour': 'Nouvelles tâches sans modes de défaillance connus',
+        },
+        {
+          'Approche': 'Négatif seul',
+          'Description': '« Ne pas être vague, ne pas utiliser le jargon, ne pas sortir du sujet »',
+          'Efficacité': 'Basse — le modèle n\'a aucune direction sur ce à FAIRE',
+          'Meilleur pour': 'Anti-motif ; rarement recommandé',
+        },
+        {
+          'Approche': 'Positif + Négatif (3–5 contraintes)',
+          'Description': '« Écrivez X, dans le ton Y ; ne pas Z »',
+          'Efficacité': 'Haute — spécification serrée avec direction et garde-fous',
+          'Meilleur pour': 'Prompts de production, workflows répétables',
+        },
+        {
+          'Approche': 'Négatif lourd (7+ contraintes)',
+          'Description': '7+ règles « ne pas faire » avec direction positive minimale',
+          'Efficacité': 'Basse à moyenne — rendements décroissants, risque de confusion',
+          'Meilleur pour': 'À éviter — restructurez en approche combinée',
+        },
+      ],
+    },
+    modelComplianceTable: {
+      id: 'model-compliance',
+      title: 'Conformité des Modèles aux Contraintes Négatives',
+      content: ['**La conformité aux contraintes négatives varie selon le modèle et le type de contrainte.** Vérifiez vos contraintes spécifiques avec votre version de modèle actuelle — le comportement change entre les versions.'],
+      tableFormat: true,
+      columns: ['Type de Contrainte', 'GPT-4o / GPT-4.5', 'Claude Sonnet / Opus', 'Gemini Pro'],
+      rows: [
+        {
+          'Type de Contrainte': 'Mots interdits',
+          'GPT-4o / GPT-4.5': 'Haute conformité',
+          'Claude Sonnet / Opus': 'Haute conformité',
+          'Gemini Pro': 'Haute conformité',
+        },
+        {
+          'Type de Contrainte': 'Interdictions de format (« pas de listes à puces »)',
+          'GPT-4o / GPT-4.5': 'Haute conformité',
+          'Claude Sonnet / Opus': 'Haute conformité',
+          'Gemini Pro': 'Modérée — parfois contourne sur les longs résultats',
+        },
+        {
+          'Type de Contrainte': 'Interdictions de contenu (« pas de conseils médicaux »)',
+          'GPT-4o / GPT-4.5': 'Haute conformité (ajoute des couches de sécurité par défaut)',
+          'Claude Sonnet / Opus': 'Haute conformité',
+          'Gemini Pro': 'Haute conformité',
+        },
+        {
+          'Type de Contrainte': 'Contraintes comportementales (« jamais fabriquer »)',
+          'GPT-4o / GPT-4.5': 'Modérée — utiliser avec vérification de résultat',
+          'Claude Sonnet / Opus': 'Haute conformité — répond bien aux contraintes explicites',
+          'Gemini Pro': 'Modérée — vérifier sur tâches critiques',
+        },
+      ],
+    },
+    example: {
+      id: 'example',
+      title: 'Exemple : Sans et Avec Guidage Négatif',
+      content: [
+        '**Le guidage négatif devient clair quand vous comparez un prompt générique avec un qui encode des règles explicites « ne pas faire ». ** Voici un exemple de description de produit.',
+        '**[Mauvais Prompt]**',
+        '« Écrivez une description de produit pour notre nouveau tableau de bord analytique. »',
+        '**[Bon Prompt]**',
+        '« Vous êtes un responsable marketing B2B. Tâche : Écrivez une description de produit pour notre nouveau tableau de bord analytique destiné aux responsables d\'exploitation. Contraintes (guidage négatif) : Ne pas utiliser de mots hyperboliques comme \'révolutionnaire\', \'disruptif\' ou \'change-jeu\'. Ne pas mentionner les concurrents ni nous comparer à d\'autres outils. Ne pas promettre de fonctionnalités futures ; décrivez seulement ce qui existe aujourd\'hui. Ne pas dépasser 180 mots. Format de résultat : 1 court paragraphe pour la vue d\'ensemble, suivi de 3 puces pour les bénéfices clés. »',
+        'La version « bonne » encode les pièges connus (hyperbole, spéculation, comparaisons) directement dans les instructions, réduisant le besoin de nettoyage manuel.',
+      ],
+      blockquote: 'Le mauvais prompt échoue non par manque de règles négatives — il échoue par manque de contraintes du tout. Ajouter des règles « ne pas faire » sans direction positive est aussi faible. La formule : énoncez ce à faire, définissez le format, puis ajoutez 3–5 règles « ne pas faire » spécifiques pour les modes de défaillance connus.',
+      blockquoteSource: 'Positif + Négatif = Spécification Serrée',
+    },
+    whenToUse: {
+      id: 'when-to-use',
+      title: 'Quand Utiliser le Guidage Négatif',
+      content: [
+        '**Utilisez le guidage négatif chaque fois que vous avez des exemples clairs de ce que vous ne voulez jamais revoir.** C\'est particulièrement utile dans les workflows répétables où les mêmes erreurs reviennent sans cesse.',
+        'Cas d\'usage typiques :',
+      ],
+      items: [
+        'Communication client où la tonalité, les affirmations, et les promesses doivent rester dans des directives strictes',
+        'Contextes réglementés (finance, santé, droit) où certains types de conseils ou formulations doivent être évités',
+        'Documentation interne ou rapports qui ne doivent pas inclure les détails confidentiels, données personnelles, ou spéculation',
+        'Contenu public où vous voulez éviter les sujets sensibles, opinions politiques, ou langage controversé',
+      ],
+      blockquote: 'Les instructions positives (« écrivez clairement et techniquement ») sont plus fiables que les négatifs lourds (« ne soyez pas vague, ne simplifiez pas, n\'omettez pas les détails »). Quand vous trouvez vous-même écrivant 6+ règles négatives, réécrivez la version positive d\'abord, puis utilisez les négatifs seulement pour corriger les modes de défaillance spécifiques.',
+      blockquoteSource: 'Seuil de Confusion',
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: 'Erreurs Courantes',
+      content: ['Voici 5 erreurs fréquentes avec le guidage négatif et comment les corriger :'],
+      items: [
+        {
+          title: 'Tous les négatifs, aucun positif',
+          problem: 'Le modèle n\'a aucune direction sur ce à FAIRE — les résultats deviennent hésitants, incomplets, ou génériques',
+          fix: 'Associez toujours chaque contrainte négative avec une alternative positive. « Ne pas utiliser le langage hyperbolique. À la place, décrivez les bénéfices mesurables spécifiques. »',
+        },
+        {
+          title: 'Langage négatif doux : « essayez d\'éviter », « préférez ne pas »',
+          problem: 'Les modèles traitent le langage doux comme une guidance optionnelle — la conformité baisse versus les contraintes dures',
+          fix: 'Utilisez des directives dures : « ne doit pas », « jamais », « ne pas ». Réservez « éviter » seulement pour les préférences de style, pas les contraintes critiques.',
+        },
+        {
+          title: '7+ contraintes négatives dans un prompt',
+          problem: 'Les modèles peinent à suivre plus de 5–6 contraintes simultanément — les résultats se dégradent, les règles se font ignorer',
+          fix: 'Limitez-vous à 3–5 contraintes ciblées. Combinez les règles connexes : « Ne pas utiliser les mots hyperboliques (révolutionnaire, disruptif, game-changing) » compte comme une contrainte.',
+        },
+        {
+          title: 'Règles négatives sans exemples',
+          problem: 'Les règles abstraites comme « ne pas être vague » sont interprétées inconsistemment entre les modèles et les exécutions',
+          fix: 'Ancrez chaque règle avec un exemple concret : « Ne pas écrire ainsi : [mauvais exemple]. Écrivez ainsi : [bon exemple]. »',
+        },
+        {
+          title: 'Dupliquer le comportement de sécurité intégré du modèle',
+          problem: 'Écrire « ne pas produire de contenu nuisible » n\'ajoute aucune valeur — tous les modèles de frontier bloquent cela par défaut',
+          fix: 'Utilisez le guidage négatif pour VOS contraintes spécifiques : marque, tonalité, format, limites spécifiques au domaine. Ne gaspillez pas le token budget sur la sécurité par défaut.',
+        },
+      ],
+    },
+    howToStart: {
+      id: 'how-to-use',
+      title: 'Comment Utiliser le Guidage Négatif',
+      numberedItems: [
+        '**Identifiez ce que vous ne voulez pas dans la résultat : mots, tonalité, style, approches spécifiques.** Exemple : « Ne pas utiliser le jargon. Ne pas faire de promesses. Ne pas référencer les concurrents. »',
+        '**Énoncez les négatifs explicitement en utilisant le langage « ne pas », « ne doit pas », « jamais ».** Le langage doux comme « essayez d\'éviter » est moins efficace. Soyez direct : « Ne jamais utiliser les mots \'disruptif\', \'révolutionnaire\' ou \'propulsé par IA\'. »',
+        '**Fournissez des exemples négatifs : montrez au modèle ce que vous ne voulez explicitement pas.** Exemple : « N\'écrivez pas ainsi : \'Déverrouiller une croissance explosive avec notre solution IA.\' N\'écrivez pas ainsi : \'Notre plateforme d\'avant-garde utilise l\'apprentissage automatique.\' Écrivez ainsi : [example positif]. »',
+        '**Combinez la guidance positive et négative.** Ne dites pas juste ce à éviter—dites aussi ce à faire à la place. Exemple : « Ne pas utiliser le langage hyperbolique. À la place, concentrez-vous sur les bénéfices mesurables spécifiques. »',
+        '**Utilisez le guidage négatif avec parcimonie—il peut parfois confondre le modèle.** La guidance positive (« écrivez clairement et techniquement ») fonctionne souvent mieux que les négatifs lourds (« ne soyez pas vague, ne simplifiez pas, n\'omettez pas les détails »). Équilibrez les deux approches.',
+      ],
+    },
+    inPromptQuorum: {
+      title: 'Guidage Négatif dans PromptQuorum',
+      content: [
+        '**PromptQuorum est un outil de dispatch multi-modèles où le guidage négatif peut être intégré dans des frameworks réutilisables au lieu d\'être réécrit chaque fois.** Vous définissez les contraintes négatives standards une fois et les attachez à de nombreuses tâches.',
+        'Avec PromptQuorum, vous pouvez :',
+      ],
+      items: [
+        'Ajouter des blocs de guidage négatif (par exemple « phrases interdites », « contenu interdit », « restrictions de style ») à des frameworks comme SPECS, RTF, ou CRAFT pour qu\'ils s\'appliquent toujours',
+        'Maintenir les listes partagées de règles « ne pas faire » pour votre marque ou équipe, garantissant des garde-fous cohérents sur tous les prompts et modèles',
+        'Exécuter le même prompt avec contraintes négatives sur différents modèles pour voir quel fournisseur adhère le mieux à vos limites',
+      ],
+    },
+    pqConversion: {
+      content: [
+        'En traitant le guidage négatif comme part de votre architecture de prompt, PromptQuorum vous aide à convertir les erreurs passées en contraintes durables et réutilisables.',
+      ],
+    },
+    faqSection: {
+      id: 'faq',
+      title: 'Questions Fréquemment Posées',
+      faqs: [
+        {
+          q: 'Qu\'est-ce que le guidage négatif ?',
+          a: 'Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à une invite aux côtés d\'instructions positives. Ces règles contraignent le contenu (pas de conseils médicaux), la tonalité (pas de mots hyperboliques), la structure (pas de listes à puces), ou le comportement (jamais fabriquer des données). Chaque règle agit comme un garde-fou qui prévient les modes de défaillance connus.',
+        },
+        {
+          q: 'Le guidage négatif fonctionne-t-il avec tous les modèles IA ?',
+          a: 'Oui — GPT-4o/4.5, Claude Sonnet/Opus, et Gemini Pro répondent tous aux contraintes négatives dures (« ne doit pas », « jamais », « ne pas »). La conformité varie selon le type de contrainte : les interdictions de format sont parfois appliquées de manière inconsistante sur les résultats longs dans Gemini Pro. Testez vos contraintes avec votre version de modèle spécifique.',
+        },
+        {
+          q: 'Combien de contraintes négatives dois-je utiliser ?',
+          a: 'Limitez-vous à 3–5 par prompt. Plus de 5–6 règles négatives peuvent confondre les modèles, causant des règles ignorées ou une résultat trop prudent. Groupez les règles connexes : « Ne pas utiliser les mots hyperboliques (révolutionnaire, disruptif, game-changing) » compte comme une contrainte.',
+        },
+        {
+          q: 'Le guidage négatif est-il la même chose que le filtrage de contenu ?',
+          a: 'Non. Le filtrage de contenu est une couche de sécurité externe qui bloque les résultats spécifiques indépendamment des instructions du prompt. Le guidage négatif est une technique in-prompt qui façonne la génération. Ils se complètent : les filtres de contenu gèrent les violations de sécurité ; le guidage négatif gère la marque, la tonalité, et les contraintes spécifiques au domaine.',
+        },
+        {
+          q: 'Puis-je utiliser le guidage négatif pour les tâches créatives ?',
+          a: 'Oui. Pour le travail créatif, le guidage négatif prévient le phrasé générique (« pas de clichés »), limite les choix structurels (« pas de structure en trois actes »), ou exclut les références spécifiques (« pas de métaphores de guerre »). Appliquez la même règle 3–5 — trop de négatifs étouffent la plage créative.',
+        },
+        {
+          q: 'Le guidage négatif aide-t-il à prévenir les hallucinations ?',
+          a: 'Il réduit les types spécifiques de fabrication quand constrained précisément. « Ne pas citer les sources à moins que vous ne soyez certain qu\'elles existent » et « Si vous êtes incertain, dites-le au lieu de deviner » réduisent l\'hallucination dans les modes de défaillance spécifiques. Ils n\'éliminent pas entièrement le risque d\'hallucination — utilisez la vérification de résultat pour les affirmations factuelles de haut enjeu.',
+        },
+        {
+          q: 'Y a-t-il une différence entre le guidage négatif pour le texte et l\'image IA ?',
+          a: 'Oui. Dans la génération d\'image (DALL-E, Stable Diffusion, Midjourney), le guidage négatif est un champ de paramètre formel séparé. Dans les LLMs texte, le guidage négatif est incorporé directement comme des règles « ne pas faire » dans le texte de l\'invite. Ce guide couvre le guidage négatif pour les LLMs texte.',
+        },
+        {
+          q: 'Comment je teste si mes contraintes négatives fonctionnent ?',
+          a: 'Exécutez le même prompt 3–5 fois et vérifiez si les éléments contraints apparaissent. Pour les contraintes critiques, testez sur plusieurs modèles en utilisant PromptQuorum\'s dispatch multi-modèles — si un modèle viole une règle de manière cohérente, renforcez le phrasé de « éviter » à « ne doit pas » ou « jamais ».',
+        },
+        {
+          q: 'Comment le guidage négatif s\'aligne-t-il avec la conformité réglementée (CNIL, RGPD) ?',
+          a: 'La CNIL recommande le traitement des données sensibles (financières, médicales, juridiques) avec des IA locales ou fortement contraintes. Le guidage négatif aide à respecter ces recommandations en codifiant les limites de conformité directement dans le prompt. Cartographiez chaque exigence réglementaire à une règle « ne pas faire » et maintenez une documentation d\'audit des contraintes appliquées.',
+        },
+        {
+          q: 'Quels sont les pièges courants du guidage négatif en contexte d\'entreprise ?',
+          a: 'Les défis incluent : (1) Les exigences légales sont strictes et variables par région—le guidage négatif doit les capturer avec nuance. (2) La documentation de conformité est extensive ; les contraintes doivent être vérifiables. (3) La précision linguistique est critique—les utilisateurs francophones attendent des formulations exactes. (4) Les grandes organisations exigent des templates centralisés pour les contraintes, pour garantir la cohérence entre les équipes. PromptQuorum adresse cela par des ensembles de contraintes réutilisables et des pistes d\'audit.',
+        },
+      ],
+    },
+    relatedReading: {
+      items: [
+        { title: 'Guidage Contraint', url: '/prompt-engineering/constrained-prompting?lang=fr' },
+        { title: 'Les 5 Éléments Clés d\'un Prompt', url: '/prompt-engineering/5-building-blocks-of-a-prompt?lang=fr' },
+        { title: 'Hallucinations IA', url: '/prompt-engineering/ai-hallucinations?lang=fr' },
+        { title: 'Injection de Prompt et Sécurité', url: '/prompt-engineering/prompt-injection-and-security?lang=fr' },
+        { title: 'Température et Top-P', url: '/prompt-engineering/temperature-and-top-p?lang=fr' },
+        { title: 'Zero-Shot vs Few-Shot Prompting', url: '/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=fr' },
+      ],
+    },
+    sources: {
+      items: [
+        'Schulhoff, S., et al. (2024). « The Prompt Report: A Systematic Survey of Prompting Techniques. » arXiv:2406.06608',
+        'OpenAI. (2026). « Prompt Engineering Guide. » [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
+        'Anthropic. (2026). « Prompt Engineering Overview. » [docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)',
+      ],
+    },
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Comment Utiliser le Guidage Négatif',
+    inLanguage: 'fr',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Identifiez ce que vous ne voulez pas', text: 'Identifiez ce que vous ne voulez pas dans le résultat : mots, tonalité, style, approches spécifiques. Exemple : « Ne pas utiliser le jargon. Ne pas faire de promesses. Ne pas référencer les concurrents. »' },
+      { '@type': 'HowToStep', position: 2, name: 'Énoncez les négatifs explicitement', text: 'Énoncez les négatifs explicitement en utilisant le langage « ne pas », « ne doit pas », « jamais ». Le langage doux comme « essayez d\'éviter » est moins efficace. Soyez direct : « Ne jamais utiliser les mots \'disruptif\', \'révolutionnaire\' ou \'propulsé par IA\'. »' },
+      { '@type': 'HowToStep', position: 3, name: 'Fournissez des exemples négatifs', text: 'Fournissez des exemples négatifs : montrez au modèle ce que vous ne voulez explicitement pas. Exemple : « N\'écrivez pas ainsi : \'Déverrouiller une croissance explosive avec notre solution IA.\' Écrivez ainsi : [exemple positif]. »' },
+      { '@type': 'HowToStep', position: 4, name: 'Combinez positive et négative', text: 'Combinez la guidance positive et négative. Ne dites pas juste ce à éviter—dites aussi ce à faire à la place. Exemple : « Ne pas utiliser le langage hyperbolique. À la place, concentrez-vous sur les bénéfices mesurables spécifiques. »' },
+      { '@type': 'HowToStep', position: 5, name: 'Utilisez avec parcimonie', text: 'Utilisez le guidage négatif avec parcimonie—il peut parfois confondre le modèle. La guidance positive (« écrivez clairement et techniquement ») fonctionne souvent mieux que les négatifs lourds. Équilibrez les deux approches.' },
+    ],
+    totalTime: 'PT8M',
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'fr',
+    mainEntity: [
+      { '@type': 'Question', name: 'Qu\'est-ce que le guidage négatif ?', acceptedAnswer: { '@type': 'Answer', text: 'Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à une invite aux côtés d\'instructions positives. Ces règles contraignent le contenu (pas de conseils médicaux), la tonalité (pas de mots hyperboliques), la structure (pas de listes à puces), ou le comportement (jamais fabriquer des données). Chaque règle agit comme un garde-fou qui prévient les modes de défaillance connus.' } },
+      { '@type': 'Question', name: 'Le guidage négatif fonctionne-t-il avec tous les modèles IA ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — GPT-4o/4.5, Claude Sonnet/Opus, et Gemini Pro répondent tous aux contraintes négatives dures (« ne doit pas », « jamais », « ne pas »). La conformité varie selon le type de contrainte : les interdictions de format sont parfois appliquées de manière inconsistante sur les résultats longs dans Gemini Pro. Testez vos contraintes avec votre version de modèle spécifique.' } },
+      { '@type': 'Question', name: 'Combien de contraintes négatives dois-je utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'Limitez-vous à 3–5 par prompt. Plus de 5–6 règles négatives peuvent confondre les modèles, causant des règles ignorées ou une résultat trop prudent. Groupez les règles connexes : « Ne pas utiliser les mots hyperboliques (révolutionnaire, disruptif, game-changing) » compte comme une contrainte.' } },
+      { '@type': 'Question', name: 'Le guidage négatif est-il la même chose que le filtrage de contenu ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Le filtrage de contenu est une couche de sécurité externe qui bloque les résultats spécifiques indépendamment des instructions du prompt. Le guidage négatif est une technique in-prompt qui façonne la génération. Ils se complètent : les filtres de contenu gèrent les violations de sécurité ; le guidage négatif gère la marque, la tonalité, et les contraintes spécifiques au domaine.' } },
+      { '@type': 'Question', name: 'Puis-je utiliser le guidage négatif pour les tâches créatives ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Pour le travail créatif, le guidage négatif prévient le phrasé générique (« pas de clichés »), limite les choix structurels (« pas de structure en trois actes »), ou exclut les références spécifiques (« pas de métaphores de guerre »). Appliquez la même règle 3–5 — trop de négatifs étouffent la plage créative.' } },
+      { '@type': 'Question', name: 'Le guidage négatif aide-t-il à prévenir les hallucinations ?', acceptedAnswer: { '@type': 'Answer', text: 'Il réduit les types spécifiques de fabrication quand constrained précisément. « Ne pas citer les sources à moins que vous ne soyez certain qu\'elles existent » et « Si vous êtes incertain, dites-le au lieu de deviner » réduisent l\'hallucination dans les modes de défaillance spécifiques. Ils n\'éliminent pas entièrement le risque d\'hallucination — utilisez la vérification de résultat pour les affirmations factuelles de haut enjeu.' } },
+      { '@type': 'Question', name: 'Y a-t-il une différence entre le guidage négatif pour le texte et l\'image IA ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Dans la génération d\'image (DALL-E, Stable Diffusion, Midjourney), le guidage négatif est un champ de paramètre formel séparé. Dans les LLMs texte, le guidage négatif est incorporé directement comme des règles « ne pas faire » dans le texte de l\'invite. Ce guide couvre le guidage négatif pour les LLMs texte.' } },
+      { '@type': 'Question', name: 'Comment je teste si mes contraintes négatives fonctionnent ?', acceptedAnswer: { '@type': 'Answer', text: 'Exécutez le même prompt 3–5 fois et vérifiez si les éléments contraints apparaissent. Pour les contraintes critiques, testez sur plusieurs modèles en utilisant PromptQuorum\'s dispatch multi-modèles — si un modèle viole une règle de manière cohérente, renforcez le phrasé de « éviter » à « ne doit pas » ou « jamais ».' } },
+      { '@type': 'Question', name: 'Comment le guidage négatif s\'aligne-t-il avec la conformité réglementée (CNIL, RGPD) ?', acceptedAnswer: { '@type': 'Answer', text: 'La CNIL recommande le traitement des données sensibles (financières, médicales, juridiques) avec des IA locales ou fortement contraintes. Le guidage négatif aide à respecter ces recommandations en codifiant les limites de conformité directement dans le prompt. Cartographiez chaque exigence réglementaire à une règle « ne pas faire » et maintenez une documentation d\'audit des contraintes appliquées.' } },
+      { '@type': 'Question', name: 'Quels sont les pièges courants du guidage négatif en contexte d\'entreprise ?', acceptedAnswer: { '@type': 'Answer', text: 'Les défis incluent : (1) Les exigences légales sont strictes et variables par région—le guidage négatif doit les capturer avec nuance. (2) La documentation de conformité est extensive ; les contraintes doivent être vérifiables. (3) La précision linguistique est critique—les utilisateurs francophones attendent des formulations exactes. (4) Les grandes organisations exigent des templates centralisés pour les contraintes, pour garantir la cohérence entre les équipes. PromptQuorum adresse cela par des ensembles de contraintes réutilisables et des pistes d\'audit.' } },
+    ],
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    inLanguage: 'fr',
+    name: 'Guidage Positif vs Négatif : Comparaison d\'Efficacité',
+    numberOfItems: 4,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Positif seul', description: '« Écrivez clairement, soyez spécifique, utilisez un ton professionnel »' },
+      { '@type': 'ListItem', position: 2, name: 'Négatif seul', description: '« Ne pas être vague, ne pas utiliser le jargon, ne pas sortir du sujet »' },
+      { '@type': 'ListItem', position: 3, name: 'Positif + Négatif (3–5 contraintes)', description: '« Écrivez X, dans le ton Y ; ne pas Z »' },
+      { '@type': 'ListItem', position: 4, name: 'Négatif lourd (7+ contraintes)', description: '7+ règles « ne pas faire » avec direction positive minimale' },
+    ],
+  },
+},
     ja: {
       theme: 'Techniques',
       title: 'ネガティブプロンプティング：AIに「やってはいけないこと」を教える',
