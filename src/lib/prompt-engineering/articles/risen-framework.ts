@@ -1,6 +1,6 @@
 // Auto-generated from src/lib/prompt-engineering/content.ts
 // Slug: risen-framework
-// Generated: 2026-04-26T09:45:32.245Z
+// Generated: 2026-05-04T00:00:00.000Z
 
 import type { Language } from "@/lib/blog/blogContent";
 
@@ -10,30 +10,387 @@ export const article: Record<Language, PEArticle> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-      title: 'The RISEN Framework',
-      intro: 'The RISEN Framework is an iterative prompt structure that focuses on Refine, Inspect, Summarize, Evaluate, and Next steps so you can systematically improve AI outputs instead of rewriting prompts from scratch each time. PromptQuorum includes the RISEN Framework as a built-in option that any user can select and use directly in the app.',
+      title: 'RISEN Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+      intro: 'The RISEN Framework is a 5-step iterative structure for improving AI outputs through structured revision cycles. Instead of accepting the first draft or rewriting from scratch, you use RISEN to systematically refine, audit, evaluate, and plan next improvements. Each step has a distinct purpose: Refine improves the draft, Inspect documents every change, Summarize explains what the new version does, Evaluate scores against criteria, and Next Steps recommends further edits. RISEN turns "make this better" into a transparent, repeatable workflow.',
+      leadAnswerBlock: '**RISEN is a 5-step iterative refinement framework: Refine improves the draft, Inspect lists every change with justification, Summarize explains the new version, Evaluate scores it against criteria (1-5 scale), and Next Steps recommends 3 focused improvements for the next cycle. Use RISEN when you already have a draft and want controlled, auditable improvement with an audit trail. The Inspect step uniquely forces the model to document changes — making revisions traceable. In 2026, RISEN is built into PromptQuorum as a multi-model dispatch option, letting you test the same RISEN cycle across GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro simultaneously to compare refinement approaches.**',
       publishDate: '2026-03-24',
-      readTime: '8 min read',
-
-      seoTitle: 'RISEN Framework 2026: Role, Input, Steps',
-
-      metaDescription: 'RISEN: Role, Input, Steps, Expectation, Notes. Structures prompts for clarity and consistency. Guide with examples.',
-
+      dateModified: '2026-05-04',
+      lastFactChecked: '2026-05-04 — RISEN framework original paper (Yao et al., 2023), PromptQuorum native RISEN implementation',
+      readTime: '13 min read',
+      seoTitle: 'RISEN Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+      metaDescription: 'RISEN Framework for iterative prompt refinement: Refine drafts, Inspect changes, Summarize results, Evaluate against criteria, plan Next Steps. Multi-model testing with PromptQuorum.',
       educationalLevel: 'Intermediate',
+      audience: 'Developers building prompt workflows, product teams iterating on content, teams doing multi-stage reviews, researchers',
+      primaryTerm: 'RISEN Framework',
+      aboutTopics: ['RISEN Framework', 'Iterative Prompting', 'Prompt Refinement', 'Multi-Step Workflows'],
+      next_refresh_due: '2026-09-24',
+
+      quickFacts: [
+        'RISEN = Refine, Inspect, Summarize, Evaluate, Next Steps — a 5-step iterative loop for controlled output improvement',
+        'Use RISEN when you already have a draft, document, or plan. Don\'t use it for first-draft generation — pair it with CO-STAR or CRAFT for that.',
+        'The Inspect step is unique: it forces the model to list every specific change and justify each one, creating an audit trail. No other framework has this built-in accountability.',
+        'Typical workflow: 2-4 RISEN cycles to reach production quality from a rough draft. Each cycle produces 3 outputs: improved content, change log (Inspect), and action plan (Next Steps).',
+        'Works with any model: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models via Ollama or LM Studio. Larger models (13B+) handle multi-step structure better; 7B models may need steps separated.',
+        'RISEN + CO-STAR combo pattern: Use CO-STAR for first-draft generation, then switch to RISEN for iterative improvement. Separates "create" from "refine" — two fundamentally different tasks.',
+      ],
+
+      toc: [
+        { anchor: 'key-takeaways', label: 'Key Takeaways' },
+        { anchor: 'what-is-risen', label: 'What Is the RISEN Framework?' },
+        { anchor: 'five-components', label: 'The Five RISEN Components' },
+        { anchor: 'why-useful', label: 'Why RISEN Is Useful' },
+        { anchor: 'when-to-use', label: 'When to Use RISEN' },
+        { anchor: 'comparison-table', label: 'Comparison Table (CoT vs Single-Pass vs RISEN)' },
+        { anchor: 'bad-vs-good', label: 'Bad vs Good RISEN Prompt Example' },
+        { anchor: 'how-to-write', label: 'How to Write a RISEN Prompt' },
+        { anchor: 'common-mistakes', label: 'Common Mistakes When Using RISEN' },
+        { anchor: 'risen-in-promptquorum', label: 'RISEN in PromptQuorum' },
+        { anchor: 'combining-frameworks', label: 'Combining RISEN With Other Frameworks' },
+        { anchor: 'faq', label: 'Frequently Asked Questions' },
+        { anchor: 'related-reading', label: 'Related Reading' },
+        { anchor: 'sources', label: 'Sources' },
+      ],
+
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          id: 'key-takeaways',
+          items: [
+            'RISEN is a 5-step iterative loop — Refine, Inspect, Summarize, Evaluate, Next Steps — that turns "make this better" into a structured, repeatable improvement workflow with an audit trail.',
+            'Use RISEN for iterative refinement (improving existing drafts). Don\'t use it for first-draft generation — combine it with CO-STAR or CRAFT for that phase.',
+            'The Inspect step is unique: it forces the model to list every specific change and justify it. This creates an audit trail — you can see exactly what changed and why.',
+            'Typical workflow: 2-4 RISEN cycles to reach production quality. Each cycle produces improved content, a change log, and recommendations for the next iteration.',
+            'RISEN works with any model: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Ollama, LM Studio. Larger models (13B+) handle the multi-step structure better.',
+            'In PromptQuorum, RISEN is built-in. Send the same RISEN cycle to multiple models simultaneously and compare how each model refines differently.',
+            'Use PromptQuorum to test RISEN patterns across models — see which model\'s refinement approach best matches your goals.',
+          ],
+        },
+
+        whatIsRISEN: {
+          title: 'What Is the RISEN Framework?',
+          id: 'what-is-risen',
+          snippets: {
+            inOneSentence: 'RISEN is a 5-step iterative loop — Refine, Inspect, Summarize, Evaluate, Next Steps — that turns "make this better" into a structured, repeatable improvement workflow with an audit trail.',
+            inPlainTerms: 'Instead of saying "improve this" and hoping, you tell the AI to fix it (Refine), list what it changed (Inspect), explain what the new version does (Summarize), rate itself (Evaluate), and suggest what to fix next (Next Steps). You repeat until it\'s done.',
+          },
+          content: [
+            '**The RISEN Framework is an iterative prompt pattern designed for refining existing drafts, analyses, and plans through multiple improvement cycles.** Instead of treating each prompt as a one-off task, you guide a model like GPT-5.5, Claude Opus 4.7, or Gemini 3.1 Pro through a structured, repeatable improvement loop. This makes your workflow more like continuous editing than random trial-and-error.',
+            'RISEN is especially useful when you already have a first version — such as a draft article, strategy note, code snippet, or analysis — and you want the model to improve it in a controlled, auditable way. Each RISEN step has a distinct purpose, which keeps revisions focused and traceable.',
+            'The framework gets its name from its five stages: **R**efine (improve the draft), **I**nspect (identify changes), **S**ummarize (explain what changed), **E**valuate (score against criteria), and **N**ext steps (recommend improvements).',
+          ],
+        },
+
+        fiveComponents: {
+          title: 'The Five RISEN Components',
+          id: 'five-components',
+          content: [
+            '**A strong RISEN prompt explicitly asks the model to move through five stages, each with a distinct output.** You can combine these stages into one longer prompt or separate them into sequential prompts, depending on how much control and feedback you want.',
+          ],
+          items: [
+            '**Refine:** Improve the existing draft according to your goals (clarity, structure, accuracy, conciseness, audience alignment, tone, etc.). The model rewrites or enhances the original material.',
+            '**Inspect:** Identify concrete changes made — exactly what was rewritten, what details were added, what issues were fixed. This creates the audit trail. Require 5-7 specific edits with justifications.',
+            '**Summarize:** Provide a concise explanation of what the new version now says or does — not a repeat of the content, but a meta-level description of its focus and emphasis.',
+            '**Evaluate:** Critique the result against explicit criteria (tone, accuracy, completeness, audience alignment, clarity). Use a 1-5 numeric scale and require one-sentence justification per criterion.',
+            '**Next steps:** Recommend 3 focused improvements for the next iteration so you always have a clear direction for further refinement.',
+          ],
+        },
+
+        whyUseful: {
+          title: 'Why RISEN Is Useful',
+          id: 'why-useful',
+          content: [
+            '**The RISEN Framework is useful whenever you want to turn "make this better" into a transparent, repeatable workflow instead of a black box.** It encourages the model not only to generate, but also to analyze and critique its own work.',
+            'Practical benefits include:',
+          ],
+          items: [
+            'Clear visibility into what changed between versions — the Inspect step forces complete documentation.',
+            'Structured self-critique that exposes weaknesses, gaps, and opportunities.',
+            'A built-in roadmap for the next iteration so you\'re never stuck wondering what to try next.',
+            'Repeatable process that can be templated, shared with teams, and standardized.',
+            'Audit trail for compliance or knowledge management — you can justify every revision.',
+          ],
+        },
+
+        badVsGood: {
+          title: 'Bad vs Good RISEN Prompt Example',
+          id: 'bad-vs-good',
+          content: [
+            '**The difference between an unstructured revision request and a RISEN-based request becomes clear when you apply both to the same draft.** Below is a real example for improving a product description.',
+            '**[Bad Prompt]**',
+            '"Make this product description better."',
+            '**[Good RISEN Prompt]**',
+            '"You are a product marketing editor. I will give you a draft product description. Use the RISEN process as follows: **Refine:** Rewrite the description for clarity and conciseness while keeping all factual details. Target 120–160 words. **Inspect:** List 5–7 specific edits you made (e.g., "clarified benefit X", "removed repeated sentence Y", "added target audience"). **Summarize:** In 2–3 sentences, explain what the updated description now emphasizes and what shifted in its focus. **Evaluate:** Rate the new description on a 1–5 scale for clarity (1–5), persuasiveness (1–5), and B2B audience alignment (1–5). Justify each rating in one sentence. **Next steps:** Suggest 3 focused edits I could request in a future prompt to further improve this copy. Draft: [paste draft here]"',
+            'The RISEN version turns a vague request into a structured mini-process, producing not just an improved description but also a complete audit trail and a plan for the next cycle.',
+          ],
+        },
+
+        whenToUse: {
+          title: 'When to Use RISEN',
+          id: 'when-to-use',
+          content: [
+            '**Use the RISEN Framework for iterative improvement tasks where you already have material and care about understanding each change.** RISEN is for refinement, not first-draft generation.',
+          ],
+          items: [
+            'Refining blog posts, documentation, or help-center articles over several rounds.',
+            'Polishing sales decks, pitch scripts, and executive summaries.',
+            'Reviewing and improving prompts themselves, especially complex ones used in production.',
+            'Iteratively tightening long analyses so they become clearer and more actionable.',
+            'Team content review workflows where multiple people need to see what changed.',
+            'Code review and documentation improvement.',
+          ],
+        },
+
+        comparisonTable: {
+          title: 'Comparison Table: CoT vs Single-Pass vs RISEN',
+          id: 'comparison-table',
+          tableFormat: true,
+          columns: ['Dimension', 'Chain-of-Thought (CoT)', 'Single-Pass Prompt', 'RISEN Framework'],
+          rows: [
+            {
+              'Dimension': 'Structure',
+              'Chain-of-Thought (CoT)': 'Linear single path ("think step by step")',
+              'Single-Pass Prompt': 'One generation attempt',
+              'RISEN Framework': 'Iterative 5-step loop with refinement cycles'
+            },
+            {
+              'Dimension': 'Core action',
+              'Chain-of-Thought (CoT)': 'Model writes reasoning then answer',
+              'Single-Pass Prompt': 'Model generates output',
+              'RISEN Framework': 'Refine → Inspect → Summarize → Evaluate → Next Steps → repeat'
+            },
+            {
+              'Dimension': 'Audit trail / change tracking',
+              'Chain-of-Thought (CoT)': 'No — reasoning is shown but no revisions',
+              'Single-Pass Prompt': 'None — output is final',
+              'RISEN Framework': 'Yes — Inspect step documents every change'
+            },
+            {
+              'Dimension': 'Best for',
+              'Chain-of-Thought (CoT)': 'Math, logic, explanations (single correct answer)',
+              'Single-Pass Prompt': 'Quick generation, simple tasks',
+              'RISEN Framework': 'Iterative improvement, complex documents, team review'
+            },
+            {
+              'Dimension': 'Token cost vs baseline',
+              'Chain-of-Thought (CoT)': '~1.5-2× (reasoning added)',
+              'Single-Pass Prompt': 'Baseline (1×)',
+              'RISEN Framework': 'Variable (2-5× per cycle depending on depth)'
+            },
+            {
+              'Dimension': 'Requires multiple prompts?',
+              'Chain-of-Thought (CoT)': 'No — reasoning + answer in one prompt',
+              'Single-Pass Prompt': 'No',
+              'RISEN Framework': 'Can be one long prompt or 5 sequential prompts (your choice)'
+            },
+            {
+              'Dimension': 'Built-in model comparison',
+              'Chain-of-Thought (CoT)': 'No',
+              'Single-Pass Prompt': 'No',
+              'RISEN Framework': 'Yes (send same RISEN cycle to GPT, Claude, Gemini in parallel via PromptQuorum)'
+            },
+          ],
+        },
+
+        howToWrite: {
+          title: 'How to Write a RISEN Prompt',
+          id: 'how-to-write',
+          numberedItems: [
+            '**State the problem and expected deliverables.** "You are [role]. Your task is to refine [material type] using the RISEN process."',
+            '**Define the Refine goal explicitly.** "Improve for [specific criteria: clarity, accuracy, conciseness, tone, audience alignment]. Target [length or format]."',
+            '**Require specific Inspect output.** "List 5–7 specific edits. For each, state what you changed and why."',
+            '**Specify Evaluate criteria.** "Rate on [3-5 named dimensions, e.g., clarity, accuracy, persuasiveness] on a 1–5 scale. Justify each rating in one sentence."',
+            '**Ask for actionable Next Steps.** "Suggest 3 focused improvements for the next iteration."',
+          ],
+        },
+
+        calloutBoxes: {
+          title: 'Key Callouts',
+          items: [
+            {
+              type: 'pro-tip',
+              label: 'Pro Tip',
+              text: 'Always specify evaluation criteria before running RISEN. Vague criteria like "make it better" lead to vague improvements. Specific criteria like "rate on clarity (1-5), accuracy (1-5), B2B alignment (1-5)" lead to measurable results.',
+            },
+            {
+              type: 'did-you-know',
+              label: 'Did You Know',
+              text: 'The Inspect step is what makes RISEN unique. Most frameworks generate output. RISEN forces the model to document every change, creating a permanent audit trail. This is why RISEN is essential for regulated industries, academic work, and team collaboration where traceability matters.',
+            },
+            {
+              type: 'warning',
+              label: 'Warning',
+              text: 'RISEN adds overhead that only pays off when iterative improvement matters. For quick generation tasks, single-step prompts or CO-STAR are more efficient. For one-shot translations or simple edits, RISEN is overkill. Use selectively on high-stakes decisions.',
+            },
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Common Mistakes When Using RISEN',
+          id: 'common-mistakes',
+          items: [
+            {
+              mistake: 'Using RISEN for first-draft generation',
+              description: 'RISEN needs existing material to refine. If you ask a model to "Refine" without giving it a draft, it generates from scratch and the Inspect step has nothing meaningful to report.',
+              fix: 'Use CO-STAR, CRAFT, or Single Step for first drafts. Switch to RISEN only after you have material to improve.',
+            },
+            {
+              mistake: 'Skipping the Inspect step',
+              description: 'Many users jump from Refine to Evaluate. Without Inspect, you lose the audit trail — you can\'t see what changed or why, making it impossible to judge whether the refinement actually improved the output.',
+              fix: 'Always include Inspect. Require the model to list 5-7 specific changes with brief justifications. This is what creates the audit trail.',
+            },
+            {
+              mistake: 'Vague Evaluate criteria',
+              description: '"Rate this on quality" gives the model nothing to score against. Without explicit criteria, self-evaluation is meaningless.',
+              fix: 'Specify 3-5 named criteria with a numeric scale. Example: "Rate on clarity (1-5), accuracy (1-5), audience alignment (1-5). Justify each in one sentence."',
+            },
+            {
+              mistake: 'Running only one RISEN cycle',
+              description: 'One pass rarely reaches production quality. RISEN is designed for iteration — the Next Steps output feeds directly into the next Refine step.',
+              fix: 'Plan for 2-4 RISEN cycles. Stop when the Evaluate scores plateau and Next Steps suggestions become minor.',
+            },
+            {
+              mistake: 'Not comparing RISEN outputs across models',
+              description: 'Different models refine differently. Claude tends toward conciseness; GPT tends toward elaboration; Gemini focuses on user experience. Running RISEN on one model limits your perspective.',
+              fix: 'Use PromptQuorum to run the same RISEN cycle across GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro. Compare which model\'s refinements best match your goals.',
+            },
+          ],
+        },
+
+        risenInPromptQuorum: {
+          title: 'RISEN in PromptQuorum',
+          id: 'risen-in-promptquorum',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that offers the RISEN Framework as one of its built-in prompt structures.** When you choose the RISEN option, the app provides labeled fields for each step and composes them into a single reusable instruction.',
+            'Inside PromptQuorum, RISEN enables you to:',
+          ],
+          items: [
+            'Plug in an existing draft and apply a pre-structured "Refine–Inspect–Summarize–Evaluate–Next steps" pattern without writing the full meta-prompt yourself.',
+            'Send the same RISEN-based instructions to multiple models — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — in parallel and compare how each one refines and critiques the draft.',
+            'Save RISEN templates for recurring workflows (e.g., "blog draft refinement", "technical documentation review", "sales deck polish") and share them with your team.',
+            'View complete revision history for every RISEN cycle, making the improvement process transparent and auditable.',
+          ],
+        },
+
+        combiningFrameworks: {
+          title: 'Combining RISEN With Other Frameworks',
+          id: 'combining-frameworks',
+          content: [
+            '**Combine RISEN with other frameworks by assigning RISEN to the revision phase and using generation frameworks earlier in your workflow.** A practical pattern is:',
+          ],
+          items: [
+            '1. **Generation phase:** Use CO-STAR, CRAFT, or Single Step to create the first draft.',
+            '2. **Refinement phase:** Switch to RISEN for iterative improvement, self-critique, and planning.',
+            '3. **Finalization phase (optional):** Move to SPECS if the final output must follow a strict schema or format.',
+          ],
+          content2: [
+            'This separation prevents the model from conflating "create" and "improve" — two fundamentally different cognitive tasks.',
+          ],
+        },
+
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'What does RISEN stand for?',
+              a: 'RISEN stands for Refine, Inspect, Summarize, Evaluate, Next Steps. It is a 5-step iterative framework designed for improving existing drafts through structured revision cycles.',
+            },
+            {
+              q: 'How is RISEN different from CO-STAR or CRAFT?',
+              a: 'CO-STAR and CRAFT are generation frameworks — they help you create first drafts. RISEN is a refinement framework — it helps you improve existing material through tracked iterations. Use generation frameworks to create, then switch to RISEN to refine.',
+            },
+            {
+              q: 'When should I use RISEN vs other frameworks?',
+              a: 'Use RISEN when you already have a draft and want controlled improvement. Use CO-STAR for general first-draft generation, CRAFT for creative content, RTF for structured role-task-format specifications, and TRACE for understanding model reasoning.',
+            },
+            {
+              q: 'How many RISEN cycles do I need?',
+              a: 'Typically 2-4 cycles. Stop when the Evaluate scores plateau (consecutive cycles score the same) and Next Steps suggestions become minor formatting tweaks rather than substantive improvements.',
+            },
+            {
+              q: 'Can I use RISEN with local models?',
+              a: 'Yes. RISEN works with any LLM that follows instructions — including local models via Ollama or LM Studio. Larger models (13B+) handle the multi-step structure better; 7B models may need each step as a separate prompt.',
+            },
+            {
+              q: 'What makes the Inspect step special?',
+              a: 'The Inspect step forces the model to list every specific change it made during Refine, creating an audit trail. You can see exactly what changed between versions and judge whether each change improved the output. Without Inspect, revisions are a black box.',
+            },
+            {
+              q: 'Can I combine RISEN with multi-model testing?',
+              a: 'Yes. Use PromptQuorum to send the same RISEN cycle to GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro simultaneously. Compare which model\'s refinements, self-critique scores, and next-step suggestions best match your requirements.',
+            },
+            {
+              q: 'Does RISEN add overhead in token cost?',
+              a: 'Yes. Each RISEN cycle generates 2-5× more output tokens than a single-pass prompt because the model writes multiple sections (refined content, change log, summary, evaluation, recommendations). Use RISEN selectively on high-stakes tasks. For quick edits, prefer single-step prompts.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          id: 'related-reading',
+          items: [
+            {
+              title: 'Chain-of-Thought Prompting',
+              url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=en',
+              description: 'The linear reasoning foundation that RISEN builds upon.',
+            },
+            {
+              title: 'CO-STAR Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=en',
+              description: 'Use CO-STAR for first-draft generation, then switch to RISEN for refinement.',
+            },
+            {
+              title: 'CRAFT Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=en',
+              description: 'Creative-focused generation framework; pairs well with RISEN for iterative copy polishing.',
+            },
+            {
+              title: 'TRACE Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=en',
+              description: 'For understanding model reasoning; can follow RISEN to validate logic paths.',
+            },
+            {
+              title: 'Which Prompt Framework Should You Use?',
+              url: 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=en',
+              description: 'Decision matrix comparing all major frameworks by use case.',
+            },
+            {
+              title: 'Build Your Own Prompt Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework?lang=en',
+              description: 'When standard frameworks don\'t fit; design a custom one using RISEN as a starting point.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          id: 'sources',
+          items: [
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608. Catalogues 58+ prompting techniques including iterative refinement patterns.',
+            'OpenAI Prompt Engineering Guide. https://platform.openai.com/docs/guides/prompt-engineering — Official prompting best practices including iterative refinement strategies.',
+            'Anthropic Prompt Engineering Documentation. https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering — Claude-specific guidance on multi-step prompt workflows.',
+          ],
+        },
+      },
+
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'The RISEN Framework',
-        description: 'How the RISEN Framework (Refine, Inspect, Summarize, Evaluate, Next steps) works, when to use it, and how PromptQuorum offers RISEN as a built-in option.',
+        headline: 'RISEN Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+        description: 'The RISEN Framework for iterative prompt refinement: Refine drafts, Inspect changes, Summarize results, Evaluate against criteria, plan Next Steps. Multi-model testing with PromptQuorum.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['RISEN Framework', 'Refine Inspect Summarize Evaluate Next steps', 'prompt frameworks', 'prompt engineering', 'iterative prompts', 'PromptQuorum'],
+        dateModified: '2026-05-04',
+        'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=en',
+        'inLanguage': 'en',
+        keywords: ['RISEN Framework', 'iterative prompting', 'prompt refinement', 'multi-step workflows', 'prompt engineering', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
-          { '@type': 'Thing', name: 'Prompt Engineering' },
-          { '@type': 'Thing', name: 'Prompt Frameworks' },
-          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'RISEN Framework' },
+          { '@type': 'Thing', name: 'Iterative Prompting' },
+          { '@type': 'Thing', name: 'Prompt Refinement' },
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -41,772 +398,999 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
         ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
       },
+
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'What does RISEN stand for?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RISEN stands for Refine, Inspect, Summarize, Evaluate, Next Steps. It is a 5-step iterative framework designed for improving existing drafts through structured revision cycles.' } },
+          { '@type': 'Question', 'name': 'How is RISEN different from CO-STAR or CRAFT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR and CRAFT are generation frameworks — they help you create first drafts. RISEN is a refinement framework — it helps you improve existing material through tracked iterations. Use generation frameworks to create, then switch to RISEN to refine.' } },
+          { '@type': 'Question', 'name': 'When should I use RISEN vs other frameworks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Use RISEN when you already have a draft and want controlled improvement. Use CO-STAR for general first-draft generation, CRAFT for creative content, RTF for structured specifications, and TRACE for understanding model reasoning.' } },
+          { '@type': 'Question', 'name': 'How many RISEN cycles do I need?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typically 2-4 cycles. Stop when the Evaluate scores plateau and Next Steps suggestions become minor tweaks rather than substantive improvements.' } },
+          { '@type': 'Question', 'name': 'Can I use RISEN with local models?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. RISEN works with any LLM that follows instructions — including local models via Ollama or LM Studio. Larger models (13B+) handle multi-step structure better; 7B models may need steps separated.' } },
+          { '@type': 'Question', 'name': 'What makes the Inspect step special?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The Inspect step forces the model to list every specific change it made, creating an audit trail. You can see exactly what changed between versions and judge whether each change improved the output.' } },
+          { '@type': 'Question', 'name': 'Can I combine RISEN with multi-model testing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Use PromptQuorum to send the same RISEN cycle to GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro simultaneously. Compare which model\'s refinements best match your requirements.' } },
+          { '@type': 'Question', 'name': 'Does RISEN add overhead in token cost?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Each RISEN cycle generates 2-5× more output tokens than a single-pass prompt. Use RISEN selectively on high-stakes tasks. For quick edits, prefer single-step prompts.' } },
+        ],
+      },
+
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'CoT vs Single-Pass vs RISEN Comparison',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Structure', 'description': 'CoT: Linear single path. Single-Pass: One generation. RISEN: Iterative 5-step loop.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Core action', 'description': 'CoT: Reason then answer. Single-Pass: Generate. RISEN: Refine → Inspect → Summarize → Evaluate → Next Steps → repeat.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Audit trail', 'description': 'CoT: No change tracking. Single-Pass: None. RISEN: Yes — Inspect documents every change.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Best for', 'description': 'CoT: Math and logic. Single-Pass: Quick tasks. RISEN: Iterative improvement and team review.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Token cost', 'description': 'CoT: 1.5-2×. Single-Pass: 1× baseline. RISEN: 2-5× per cycle.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Multiple prompts?', 'description': 'CoT: No. Single-Pass: No. RISEN: Can be one long prompt or 5 sequential prompts.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Model comparison', 'description': 'CoT: No. Single-Pass: No. RISEN: Yes — parallel testing across GPT, Claude, Gemini via PromptQuorum.' },
+        ],
+      },
+    },
+
+    de: {
+      freshness_tier: 'semi_annual',
+      theme: 'Frameworks',
+      title: 'RISEN-Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+      intro: 'Das RISEN-Framework ist eine 5-stufige iterative Struktur zur systematischen Verbesserung von KI-Ausgaben durch strukturierte Revisionszyklen. Statt den ersten Entwurf zu akzeptieren oder von Grund auf neu zu schreiben, nutzen Sie RISEN für kontrollierte Verbesserung mit vollständiger Audit-Spur. Jeder Schritt hat einen eindeutigen Zweck: Refine verbessert den Entwurf, Inspect dokumentiert jede Änderung, Summarize erklärt die neue Version, Evaluate bewertet gegen Kriterien, und Next Steps empfiehlt weitere Verbesserungen. RISEN verwandelt „machen Sie das besser" in einen transparenten, wiederholbaren Arbeitsablauf.',
+      leadAnswerBlock: '**RISEN ist eine 5-stufige iterative Verbesserungsschleife: Refine verbessert den Entwurf, Inspect listet jede Änderung mit Begründung auf, Summarize erklärt die neue Version, Evaluate bewertet sie gegen Kriterien (1–5 Skala), und Next Steps empfiehlt 3 fokussierte Verbesserungen für den nächsten Zyklus. Verwenden Sie RISEN, wenn Sie bereits einen Entwurf haben und kontrollierte, nachverfolgbare Verbesserung mit Audit-Trail wünschen. Der Inspect-Schritt zwingt das Modell eindeutig dazu, Änderungen zu dokumentieren — wodurch Revisionen nachverfolgbar werden. 2026 ist RISEN in PromptQuorum als Multi-Modell-Dispatch-Option integriert, mit der Sie denselben RISEN-Zyklus über GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro parallel testen können, um Verbesserungsansätze zu vergleichen.**',
+      publishDate: '2026-03-24',
+      dateModified: '2026-05-04',
+      readTime: '13 Min. Lesezeit',
+      seoTitle: 'RISEN-Framework: Refine, Inspect, Summarize, Evaluate (2026)',
+      metaDescription: 'RISEN-Framework für iterative Prompt-Verfeinerung: Entwürfe verbessern, Änderungen nachverfolgen, bewerten, nächste Schritte planen. Multi-Modell-Test mit PromptQuorum.',
+      educationalLevel: 'Intermediate',
+      audience: 'Entwickler, die Prompt-Workflows aufbauen, Produktteams iterieren Inhalte, Teams mit mehrstufigen Reviews',
+      primaryTerm: 'RISEN-Framework',
+      aboutTopics: ['RISEN-Framework', 'Iteratives Prompting', 'Prompt-Verfeinerung', 'Mehrstufige Workflows'],
+      next_refresh_due: '2026-09-24',
+
+      quickFacts: [
+        'RISEN = Refine, Inspect, Summarize, Evaluate, Next Steps — eine 5-stufige Iterationsschleife für kontrollierte Ausgabeverbesserung',
+        'Verwenden Sie RISEN, wenn Sie bereits einen Entwurf, ein Dokument oder einen Plan haben. Verwenden Sie es nicht für Erst-Draft-Generierung — kombinieren Sie es mit CO-STAR oder CRAFT dafür.',
+        'Der Inspect-Schritt ist einzigartig: Er zwingt das Modell, jede spezifische Änderung aufzulisten und jede zu rechtfertigen, wodurch ein Audit-Trail entsteht. Kein anderes Framework hat dies.',
+        'Typischer Arbeitsablauf: 2–4 RISEN-Zyklen, um Produktionsqualität aus einem groben Entwurf zu erreichen. Jeder Zyklus erzeugt 3 Ausgaben: verbesserter Inhalt, Änderungsprotokoll (Inspect) und Aktionsplan (Next Steps).',
+        'Funktioniert mit jedem Modell: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle über Ollama oder LM Studio. Größere Modelle (13B+) verarbeiten Multi-Schritt-Struktur besser.',
+        'RISEN + CO-STAR Combo-Muster: Verwenden Sie CO-STAR für Erst-Draft-Generierung, wechseln Sie dann zu RISEN für iterative Verbesserung. Trennt „Erstellen" von „Verfeinern" — zwei fundamental unterschiedliche Aufgaben.',
+      ],
+
+      toc: [
+        { anchor: 'zusammenfassung', label: 'Zusammenfassung' },
+        { anchor: 'was-ist-risen', label: 'Was ist das RISEN-Framework?' },
+        { anchor: 'funf-komponenten', label: 'Die fünf RISEN-Komponenten' },
+        { anchor: 'warum-nutzlich', label: 'Warum RISEN nützlich ist' },
+        { anchor: 'wann-verwenden', label: 'Wann RISEN verwendet werden sollte' },
+        { anchor: 'vergleichstabelle', label: 'Vergleichstabelle (CoT vs Single-Pass vs RISEN)' },
+        { anchor: 'schlecht-vs-gut', label: 'Schwaches vs. starkes RISEN-Prompt-Beispiel' },
+        { anchor: 'wie-schreiben', label: 'Wie man einen RISEN-Prompt schreibt' },
+        { anchor: 'wichtige-hinweise', label: 'Wichtige Hinweise' },
+        { anchor: 'haufige-fehler', label: 'Häufige Fehler bei der Verwendung von RISEN' },
+        { anchor: 'risen-promptquorum', label: 'RISEN in PromptQuorum' },
+        { anchor: 'mit-anderen-kombinieren', label: 'RISEN mit anderen Frameworks kombinieren' },
+        { anchor: 'faq', label: 'Häufig gestellte Fragen' },
+        { anchor: 'verwandte-lekture', label: 'Verwandte Lektüre' },
+        { anchor: 'quellen', label: 'Quellen' },
+      ],
+
       sections: {
-        whatIsRISEN: {
-          title: 'What the RISEN Framework Is',
-          content: [
-            '**The RISEN Framework is a loop-oriented prompt pattern designed for refining drafts, analyses, and plans over multiple iterations with clear checkpoints.** Instead of treating each prompt as a one-off, you use RISEN to walk a model like GPT-5.5, Claude Opus 4.7, or Gemini 3.1 Pro through a structured improvement cycle. This makes your workflow more like continuous editing than random trial-and-error.',
-            'RISEN is especially useful when you already have a first version—such as a draft article, strategy note, or code snippet—and you want the model to improve it in a controlled, auditable way. Each RISEN step has a distinct purpose, which keeps revisions focused.',
-          ],
-        },
-        fiveComponents: {
-          title: 'The Five RISEN Components',
-          content: [
-            '**A strong RISEN prompt explicitly asks the model to move through five stages: Refine, Inspect, Summarize, Evaluate, and Next steps.** You can use these stages in one longer prompt or in a short series of prompts, depending on how interactive you want the process to be.',
-            'A common interpretation looks like this:',
-          ],
+        tldr: {
+          isTldr: true,
+          title: 'Zusammenfassung',
+          id: 'zusammenfassung',
           items: [
-            'Refine: Improve the existing draft according to your goals (for example clarity, structure, or correctness).',
-            'Inspect: Identify concrete changes made, such as sections rewritten, details added, or issues fixed.',
-            'Summarize: Provide a concise explanation of what the new version now says or does.',
-            'Evaluate: Critique the result against explicit criteria (for example tone, accuracy, or alignment with audience).',
-            'Next steps: Recommend further edits or follow-up actions for the next iteration.',
-          ],
-        },
-        whyRISENIsUseful: {
-          title: 'Why the RISEN Framework Is Useful',
-          content: [
-            '**The RISEN Framework is useful whenever you want to turn "make this better" into a transparent, repeatable workflow instead of a black box.** It encourages the model not only to generate, but also to analyze and critique its own work.',
-            'Practical benefits include:',
-          ],
-          items: [
-            'Clear visibility into what changed between versions.',
-            'Structured self-critique that exposes weaknesses or gaps.',
-            'A built-in roadmap for the next iteration so you are never stuck wondering what to try next.',
-          ],
-        },
-        badVsGoodExample: {
-          title: 'Example: Bad vs Good RISEN Prompt',
-          content: [
-            '**The difference between an unstructured revision request and a RISEN-based request becomes clear when you apply both to the same draft.** Below is a simple example for improving a product description.',
-            '**[Bad Prompt]**',
-            '"Make this product description better."',
-            '**[Good Prompt]**',
-            '"You are a product marketing editor. I will give you a draft product description. Use the RISEN process as follows: Refine: Rewrite the description for clarity and conciseness while keeping all factual details. Target 120–160 words. Inspect: List 5–7 specific edits you made (for example \'clarified benefit X\', \'removed repeated sentence Y\'). Summarize: In 2–3 sentences, explain what the updated description now emphasizes. Evaluate: Rate the new description on a 1–5 scale for clarity, persuasiveness, and alignment with B2B audiences, and justify each rating in one sentence. Next steps: Suggest 3 focused edits I could request in a future prompt to further improve this copy. Draft: [paste draft here]"',
-            'The RISEN version turns a vague request into a mini process, producing not just an improved description but also an audit trail and a plan.',
-          ],
-        },
-        whenToUse: {
-          title: 'When to Use the RISEN Framework',
-          content: [
-            '**You should use the RISEN Framework for iterative improvement tasks where you already have material and care about understanding each change.** Typical use cases include:',
-          ],
-          items: [
-            'Refining blog posts, documentation, or help-center articles over several rounds.',
-            'Polishing sales decks, pitch scripts, and executive summaries.',
-            'Reviewing and improving prompts themselves, especially complex ones used in production.',
-            'Iteratively tightening long analyses so they become clearer and more actionable.',
-          ],
-        },
-        howPQImplements: {
-          title: 'How PromptQuorum Implements the RISEN Framework',
-          content: [
-            '**PromptQuorum is a multi-model AI dispatch tool that offers the RISEN Framework as one of its built-in prompt structures so users can run structured revision cycles across several models at once.** When you choose the RISEN option in PromptQuorum, the app provides labeled fields that correspond to the framework\'s steps and composes them into a single, reusable instruction.',
-            'Inside PromptQuorum, the RISEN Framework allows you to:',
-          ],
-          items: [
-            'Plug in an existing draft and apply a pre-structured "Refine–Inspect–Summarize–Evaluate–Next steps" pattern without writing the full meta-prompt yourself.',
-            'Send the same RISEN-based instructions to multiple models—such as GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro—and compare how each one refines and critiques the draft.',
-            'Save RISEN templates for recurring workflows, for example "blog draft refinement" or "changelog polishing," and share them with your team.',
-          ],
-        },
-        usingRISENWithOthers: {
-          title: 'Using RISEN With Other Frameworks',
-          content: [
-            '**You should combine the RISEN Framework with other frameworks by assigning RISEN to the revision phase and using generation-focused frameworks earlier in the workflow.** A practical pattern is:',
-          ],
-          items: [
-            'Start with a generation framework such as Single Step, CRAFT, or CO-STAR to create the first draft.',
-            'Switch to RISEN when you are ready to refine, inspect changes, and plan further edits.',
-            'Optionally move to a specification-style framework like SPECS if the final output must follow a strict schema.',
+            'RISEN ist eine 5-stufige Iterationsschleife — Refine, Inspect, Summarize, Evaluate, Next Steps — die „machen Sie das besser" in einen strukturierten, wiederholbaren Verbesserungsarbeitsablauf mit Audit-Trail verwandelt.',
+            'Verwenden Sie RISEN für iterative Verfeinerung (bestehende Entwürfe verbessern). Verwenden Sie es nicht für Erst-Draft-Generierung — kombinieren Sie es mit CO-STAR oder CRAFT für diese Phase.',
+            'Der Inspect-Schritt ist einzigartig: Er zwingt das Modell, jede spezifische Änderung aufzulisten und zu rechtfertigen. Dies erzeugt einen Audit-Trail — Sie können genau sehen, was sich geändert hat und warum.',
+            'Typischer Arbeitsablauf: 2–4 RISEN-Zyklen, um Produktionsqualität zu erreichen. Jeder Zyklus erzeugt verbesserten Inhalt, ein Änderungsprotokoll und Empfehlungen für die nächste Iteration.',
+            'RISEN funktioniert mit jedem Modell: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Ollama, LM Studio. Größere Modelle (13B+) verarbeiten die Multi-Schritt-Struktur besser.',
+            'In PromptQuorum ist RISEN integriert. Senden Sie denselben RISEN-Zyklus an mehrere Modelle gleichzeitig und vergleichen Sie, wie jedes Modell unterschiedlich verfeinert.',
+            'Verwenden Sie PromptQuorum, um RISEN-Muster über Modelle hinweg zu testen — sehen Sie, welcher Verbesserungsansatz eines Modells am besten zu Ihren Zielen passt.',
           ],
         },
 
-        howToStart: {
-          title: 'How to Use the RISEN Framework',
+        whatIsRISEN: {
+          title: 'Was ist das RISEN-Framework?',
+          id: 'was-ist-risen',
+          snippets: {
+            inOneSentence: 'RISEN ist eine 5-stufige Iterationsschleife — Refine, Inspect, Summarize, Evaluate, Next Steps — die „machen Sie das besser" in einen strukturierten, wiederholbaren Verbesserungsarbeitsablauf mit Audit-Trail verwandelt.',
+            inPlainTerms: 'Anstatt zu sagen „verbessere das" und es zu hoffen, sagen Sie der KI, es soll das beheben (Refine), auflisten, was es geändert hat (Inspect), erklären, was die neue Version macht (Summarize), sich selbst bewerten (Evaluate) und vorschlagen, was weiter zu beheben ist (Next Steps). Sie wiederholen, bis es fertig ist.',
+          },
+          content: [
+            '**Das RISEN-Framework ist ein iteratives Prompt-Muster, das für die Verfeinerung bestehender Entwürfe, Analysen und Pläne durch mehrere Verbesserungszyklen entwickelt wurde.** Anstatt jeden Prompt als Einmalaufgabe zu behandeln, führen Sie ein Modell wie GPT-5.5, Claude Opus 4.7 oder Gemini 3.1 Pro durch eine strukturierte, wiederholbare Verbesserungsschleife. Dies macht Ihren Arbeitsablauf weniger wie zufälliges Ausprobieren und mehr wie kontinuierliche Bearbeitung.',
+            'RISEN ist besonders nützlich, wenn Sie bereits eine erste Version haben — wie einen Entwurfartikel, eine Strategienotiz, einen Code-Snippet oder eine Analyse — und möchten, dass das Modell es auf kontrollierte, nachverfolgbare Weise verbessert. Jeder RISEN-Schritt hat einen eindeutigen Zweck, der Revisionen fokussiert und nachverfolgbar hält.',
+            'Das Framework erhält seinen Namen von seinen fünf Stufen: **R**efine (den Entwurf verbessern), **I**nspect (Änderungen identifizieren), **S**ummarize (erklären, was sich geändert hat), **E**valuate (gegen Kriterien bewerten) und **N**ext steps (Verbesserungen empfehlen).',
+          ],
+        },
+
+        fiveComponents: {
+          title: 'Die fünf RISEN-Komponenten',
+          id: 'funf-komponenten',
+          content: [
+            '**Ein starker RISEN-Prompt fordert das Modell explizit auf, fünf Phasen zu durchlaufen, jede mit einer eindeutigen Ausgabe.** Sie können diese Phasen in einen längeren Prompt kombinieren oder in aufeinanderfolgende Prompts aufteilen, abhängig davon, wie viel Kontrolle und Feedback Sie wünschen.',
+          ],
+          items: [
+            '**Refine:** Verbessern Sie den bestehenden Entwurf gemäß Ihren Zielen (Klarheit, Struktur, Genauigkeit, Prägnanz, Zielgruppenausrichtung, Ton usw.). Das Modell schreibt das Originalmaterial um oder verbessert es.',
+            '**Inspect:** Identifizieren Sie konkrete Änderungen — exakt, was umgeschrieben wurde, welche Details hinzugefügt wurden, welche Probleme behoben wurden. Dies erzeugt den Audit-Trail. Fordern Sie 5–7 spezifische Bearbeitungen mit Begründungen an.',
+            '**Summarize:** Geben Sie eine prägnante Erklärung ab, was die neue Version nun sagt oder erreicht — nicht eine Wiederholung des Inhalts, sondern eine Metabeschreibung seines Fokus und seiner Betonung.',
+            '**Evaluate:** Kritisieren Sie das Ergebnis gegen explizite Kriterien (Ton, Genauigkeit, Vollständigkeit, Zielgruppenausrichtung, Klarheit). Verwenden Sie eine numerische 1–5 Skala und fordern Sie je Kriterium eine Begründung mit einem Satz an.',
+            '**Next steps:** Empfehlen Sie 3 fokussierte Verbesserungen für die nächste Iteration, damit Sie immer eine klare Richtung für weitere Verfeinerung haben.',
+          ],
+        },
+
+        whyUseful: {
+          title: 'Warum RISEN nützlich ist',
+          id: 'warum-nutzlich',
+          content: [
+            '**Das RISEN-Framework ist nützlich, wenn Sie „machen Sie das besser" in einen transparenten, wiederholbaren Arbeitsablauf statt einer Black Box verwandeln möchten.** Es ermutigt das Modell nicht nur zu generieren, sondern auch seine eigene Arbeit zu analysieren und zu kritisieren.',
+            'Praktische Vorteile sind:',
+          ],
+          items: [
+            'Klare Sichtbarkeit darüber, was sich zwischen Versionen geändert hat — der Inspect-Schritt erzwingt vollständige Dokumentation.',
+            'Strukturierte Selbstkritik, die Schwächen, Lücken und Möglichkeiten offenlegt.',
+            'Ein eingebauter Fahrplan für die nächste Iteration, damit Sie nicht festsitzen und sich fragen, was Sie als nächstes versuchen sollen.',
+            'Wiederholbarer Prozess, der vorlagiert, mit Teams geteilt und standardisiert werden kann.',
+            'Audit-Trail für Compliance oder Wissensverwaltung — Sie können jede Revision rechtfertigen.',
+          ],
+        },
+
+        badVsGood: {
+          title: 'Schwaches vs. starkes RISEN-Prompt-Beispiel',
+          id: 'schlecht-vs-gut',
+          content: [
+            '**Der Unterschied zwischen einer unstrukturierten Revisionsanfrage und einer RISEN-basierten Anfrage wird deutlich, wenn Sie beide auf denselben Entwurf anwenden.** Nachfolgend ein echtes Beispiel zur Verbesserung einer Produktbeschreibung.',
+            '**[Schwacher Prompt]**',
+            '"Verbessere diese Produktbeschreibung."',
+            '**[Guter RISEN-Prompt]**',
+            '"Du bist ein Produkt-Marketing-Editor. Ich werde dir einen Produktbeschreibungs-Entwurf geben. Nutze den RISEN-Prozess wie folgt: **Refine:** Schreibe die Beschreibung zur Klarheit und Prägnanz um, behalte aber alle sachlichen Details bei. Ziel: 120–160 Wörter. **Inspect:** Liste 5–7 spezifische Änderungen auf, die du vorgenommen hast (z.B. „Vorteil X geklärt", „wiederholten Satz Y entfernt", „Zielgruppe hinzugefügt"). **Summarize:** Erläutere in 2–3 Sätzen, worauf die aktualisierte Beschreibung nun den Fokus legt und was sich in ihrer Betonung verschoben hat. **Evaluate:** Bewerte die neue Beschreibung auf einer 1–5 Skala für Klarheit (1–5), Überzeugungskraft (1–5) und B2B-Zielgruppenausrichtung (1–5). Begründe jede Bewertung in einem Satz. **Next steps:** Empfehle 3 fokussierte Änderungen, die ich in einem zukünftigen Prompt anfordern könnte, um diese Beschreibung weiter zu verbessern. Entwurf: [Entwurf hier einfügen]"',
+            'Die RISEN-Version verwandelt eine vage Anfrage in einen strukturierten Mini-Prozess, der nicht nur eine verbesserte Beschreibung liefert, sondern auch einen vollständigen Audit-Trail und einen Plan für den nächsten Zyklus.',
+          ],
+        },
+
+        whenToUse: {
+          title: 'Wann RISEN verwendet werden sollte',
+          id: 'wann-verwenden',
+          content: [
+            '**Verwenden Sie das RISEN-Framework für iterative Verbesserungsaufgaben, bei denen Sie bereits Material haben und es wichtig ist, jede Änderung zu verstehen.** RISEN ist für Verfeinerung, nicht Erst-Draft-Generierung.',
+          ],
+          items: [
+            'Verbesserung von Blog-Beiträgen, Dokumentation oder Help-Center-Artikeln über mehrere Runden.',
+            'Verfeinerung von Verkaufsdecks, Pitch-Scripts und Geschäftszusammenfassungen.',
+            'Überprüfung und Verbesserung von Prompts selbst, besonders komplexer in der Produktion.',
+            'Iteratives Straffen langer Analysen, damit diese klarer und handlungsorientierter werden.',
+            'Team-Inhaltsüberprüfungs-Arbeitsabläufe, bei denen mehrere Personen sehen müssen, was sich geändert hat.',
+            'Code-Review und Dokumentationsverbesserung.',
+          ],
+        },
+
+        comparisonTable: {
+          title: 'Vergleichstabelle: CoT vs Single-Pass vs RISEN',
+          id: 'vergleichstabelle',
+          tableFormat: true,
+          columns: ['Dimension', 'Chain-of-Thought (CoT)', 'Single-Pass-Prompt', 'RISEN-Framework'],
+          rows: [
+            {
+              'Dimension': 'Struktur',
+              'Chain-of-Thought (CoT)': 'Linear einzelner Pfad („denke Schritt für Schritt")',
+              'Single-Pass-Prompt': 'Ein Generierungsversuch',
+              'RISEN-Framework': 'Iterative 5-stufige Schleife mit Verbesserungszyklen'
+            },
+            {
+              'Dimension': 'Kernaction',
+              'Chain-of-Thought (CoT)': 'Modell schreibt Überlegung dann Antwort',
+              'Single-Pass-Prompt': 'Modell generiert Ausgabe',
+              'RISEN-Framework': 'Refine → Inspect → Summarize → Evaluate → Next Steps → wiederholen'
+            },
+            {
+              'Dimension': 'Audit-Trail / Änderungsverfolgung',
+              'Chain-of-Thought (CoT)': 'Nein — Überlegung wird gezeigt aber keine Revisionen',
+              'Single-Pass-Prompt': 'Keine — Ausgabe ist endgültig',
+              'RISEN-Framework': 'Ja — Inspect-Schritt dokumentiert jede Änderung'
+            },
+            {
+              'Dimension': 'Best für',
+              'Chain-of-Thought (CoT)': 'Mathematik, Logik, Erklärungen (einzelne richtige Antwort)',
+              'Single-Pass-Prompt': 'Schnelle Generierung, einfache Aufgaben',
+              'RISEN-Framework': 'Iterative Verbesserung, komplexe Dokumente, Team-Review'
+            },
+            {
+              'Dimension': 'Token-Kosten vs. Baseline',
+              'Chain-of-Thought (CoT)': '~1,5-2× (Überlegung hinzugefügt)',
+              'Single-Pass-Prompt': 'Baseline (1×)',
+              'RISEN-Framework': 'Variabel (2–5× pro Zyklus je nach Tiefe)'
+            },
+            {
+              'Dimension': 'Mehrere Prompts erforderlich?',
+              'Chain-of-Thought (CoT)': 'Nein — Überlegung + Antwort in einem Prompt',
+              'Single-Pass-Prompt': 'Nein',
+              'RISEN-Framework': 'Kann ein längerer Prompt oder 5 aufeinanderfolgende Prompts sein (Ihre Wahl)'
+            },
+            {
+              'Dimension': 'Integrierter Modellvergleich',
+              'Chain-of-Thought (CoT)': 'Nein',
+              'Single-Pass-Prompt': 'Nein',
+              'RISEN-Framework': 'Ja (senden Sie denselben RISEN-Zyklus über GPT, Claude, Gemini parallel über PromptQuorum)'
+            },
+          ],
+        },
+
+        howToWrite: {
+          title: 'Wie man einen RISEN-Prompt schreibt',
+          id: 'wie-schreiben',
           numberedItems: [
-            '**Refine:** Start with your existing draft, output, or plan. Give it to the model with clear instructions to improve it toward a specific goal — clarity, accuracy, conciseness, or audience alignment. Example: "Rewrite this product description for clarity. Target 120–160 words. Keep all factual details."',
-            '**Inspect:** Ask the model to list every specific change it made. Require concrete edit descriptions, not vague summaries. Example: "List 5–7 specific edits you made. For each one, state what you changed and why."',
-            '**Summarize:** Ask the model for a concise explanation of what the new version now says or achieves — not a repeat of the content itself, but a meta-level description. Example: "In 2–3 sentences, explain what the updated version now emphasizes and what changed in its focus."',
-            '**Evaluate:** Ask the model to rate the revised output against explicit criteria on a 1–5 scale with one-sentence justification per criterion. Example: "Rate the new version on clarity (1–5), persuasiveness (1–5), and B2B audience alignment (1–5). Justify each rating in one sentence."',
-            '**Next steps:** Ask the model to recommend 3 focused improvements for the next iteration so you always have a clear direction. Example: "Suggest 3 specific edits I could request in a future prompt to further improve this output."',
+            '**Problem und erwartete Ergebnisse festlegen.** „Du bist [Rolle]. Deine Aufgabe ist es, [Materialtyp] mit dem RISEN-Prozess zu verfeinern."',
+            '**Refine-Ziel explizit definieren.** „Verbessere für [spezifische Kriterien: Klarheit, Genauigkeit, Prägnanz, Ton, Zielgruppenausrichtung]. Ziel [Länge oder Format]."',
+            '**Spezifische Inspect-Ausgabe erforderlich.** „Liste 5–7 spezifische Änderungen auf. Gib für jede an, was du geändert und warum."',
+            '**Evaluate-Kriterien festlegen.** „Bewerte auf [3–5 benannte Dimensionen, z.B. Klarheit, Genauigkeit, Überzeugungskraft] auf einer 1–5 Skala. Begründe jede Bewertung in einem Satz."',
+            '**Frage nach umsetzbaren nächsten Schritten.** „Empfehle 3 fokussierte Verbesserungen für die nächste Iteration."',
+          ],
+        },
+
+        calloutBoxes: {
+          title: 'Wichtige Hinweise',
+          id: 'wichtige-hinweise',
+          items: [
+            {
+              type: 'pro-tip',
+              label: 'Pro-Tipp',
+              text: 'Geben Sie immer Bewertungskriterien an, bevor Sie RISEN ausführen. Vage Kriterien wie „machen Sie es besser" führen zu vagen Verbesserungen. Spezifische Kriterien wie „bewerte auf Klarheit (1–5), Genauigkeit (1–5), B2B-Ausrichtung (1–5)" führen zu messbaren Ergebnissen.',
+            },
+            {
+              type: 'did-you-know',
+              label: 'Wussten Sie schon',
+              text: 'Der Inspect-Schritt ist das, was RISEN einzigartig macht. Die meisten Frameworks generieren Ausgabe. RISEN zwingt das Modell dazu, jede Änderung zu dokumentieren und erzeugt einen permanenten Audit-Trail. Dies ist der Grund, warum RISEN für regulierte Industrien, akademische Arbeit und Team-Zusammenarbeit unerlässlich ist, bei denen Nachverfolgbarkeit zählt.',
+            },
+            {
+              type: 'warning',
+              label: 'Warnung',
+              text: 'RISEN fügt Overhead hinzu, der sich nur auszahlt, wenn iterative Verbesserung wichtig ist. Für schnelle Generierungsaufgaben sind Single-Schritt-Prompts oder CO-STAR effizienter. Für Eins-Zu-Eins-Übersetzungen oder einfache Änderungen ist RISEN zu aufwendig. Verwenden Sie es selektiv bei hochrangigen Entscheidungen.',
+            },
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Häufige Fehler bei der Verwendung von RISEN',
+          id: 'haufige-fehler',
+          items: [
+            {
+              mistake: 'RISEN für Erst-Draft-Generierung verwenden',
+              description: 'RISEN benötigt vorhandenes Material zum Verfeinern. Wenn Sie ein Modell auffordern, zu „Refine", ohne es einen Entwurf zu geben, generiert es von Grund auf und der Inspect-Schritt hat nichts Aussagekräftiges zu melden.',
+              fix: 'Verwenden Sie CO-STAR, CRAFT oder Single Step für Erst-Entwürfe. Wechseln Sie zu RISEN nur, wenn Sie Material zum Verbessern haben.',
+            },
+            {
+              mistake: 'Den Inspect-Schritt überspringen',
+              description: 'Viele Benutzer springen von Refine zu Evaluate. Ohne Inspect verlieren Sie den Audit-Trail — Sie können nicht sehen, was sich geändert hat oder warum, was es unmöglich macht, zu beurteilen, ob die Verfeinerung die Ausgabe tatsächlich verbessert hat.',
+              fix: 'Nehmen Sie immer Inspect auf. Fordern Sie das Modell auf, 5–7 spezifische Änderungen mit kurzer Begründung aufzulisten. Dies ist das, was den Audit-Trail erzeugt.',
+            },
+            {
+              mistake: 'Vage Evaluate-Kriterien',
+              description: '„Bewerte dies auf Qualität" gibt dem Modell nichts zu bewerten. Ohne explizite Kriterien ist die Selbstbewertung bedeutungslos.',
+              fix: 'Spezifizieren Sie 3–5 benannte Kriterien mit einer numerischen Skala. Beispiel: „Bewerte auf Klarheit (1–5), Genauigkeit (1–5), Zielgruppenausrichtung (1–5). Begründe jede in einem Satz."',
+            },
+            {
+              mistake: 'Nur einen RISEN-Zyklus ausführen',
+              description: 'Ein Pass erreicht selten Produktionsqualität. RISEN ist für Iteration ausgelegt — die Next Steps-Ausgabe speist sich direkt in den nächsten Refine-Schritt ein.',
+              fix: 'Planen Sie für 2–4 RISEN-Zyklen. Stoppen Sie, wenn die Bewertungsergebnisse abflachen und Next Steps-Vorschläge eher geringfügig sind.',
+            },
+            {
+              mistake: 'RISEN-Ausgaben nicht über Modelle hinweg vergleichen',
+              description: 'Unterschiedliche Modelle verfeinern unterschiedlich. Claude neigt zu Prägnanz; GPT neigt zu Ausarbeitung; Gemini konzentriert sich auf Benutzerfreundlichkeit. Das Ausführen von RISEN auf einem Modell begrenzt Ihre Perspektive.',
+              fix: 'Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus über GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro parallel auszuführen. Vergleichen Sie, welche Verbesserungen eines Modells am besten zu Ihren Zielen passen.',
+            },
+          ],
+        },
+
+        risenInPromptQuorum: {
+          title: 'RISEN in PromptQuorum',
+          id: 'risen-promptquorum',
+          content: [
+            '**PromptQuorum ist ein Multi-Modell-AI-Dispatch-Tool, das das RISEN-Framework als eine seiner integrierten Prompt-Strukturen anbietet.** Wenn Sie die RISEN-Option wählen, stellt die App beschriftete Felder für jeden Schritt zur Verfügung und setzt sie in eine einzelne wiederverwendbare Anweisung um.',
+            'Innerhalb von PromptQuorum ermöglicht RISEN Ihnen:',
+          ],
+          items: [
+            'Einen bestehenden Entwurf einzufügen und ein vorgefertigtes „Refine–Inspect–Summarize–Evaluate–Next steps"-Muster anzuwenden, ohne das vollständige Meta-Prompt selbst zu schreiben.',
+            'Senden Sie dieselben RISEN-basierten Anweisungen an mehrere Modelle — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — parallel und vergleichen Sie, wie jedes den Entwurf verfeinert und kritisiert.',
+            'Speichern Sie RISEN-Vorlagen für wiederkehrende Arbeitsabläufe (z.B. „Blog-Entwurf-Verfeinerung", „Technische Dokumentation Review", „Verkaufsdeck Polieren") und teilen Sie sie mit Ihrem Team.',
+            'Vollständige Revisionshistorie für jeden RISEN-Zyklus anzeigen, um den Verbesserungsprozess transparent und nachverfolgbar zu machen.',
+          ],
+        },
+
+        combiningFrameworks: {
+          title: 'RISEN mit anderen Frameworks kombinieren',
+          id: 'mit-anderen-kombinieren',
+          content: [
+            '**Kombinieren Sie RISEN mit anderen Frameworks, indem Sie RISEN der Revisionsphase zuordnen und generierungsorientierte Frameworks früher in Ihrem Arbeitsablauf verwenden.** Ein praktisches Muster ist:',
+          ],
+          items: [
+            '1. **Generierungsphase:** Verwenden Sie CO-STAR, CRAFT oder Single Step, um den ersten Entwurf zu erstellen.',
+            '2. **Verbesserungsphase:** Wechseln Sie zu RISEN für iterative Verbesserung, Selbstkritik und Planung.',
+            '3. **Finalisierungsphase (optional):** Wechseln Sie zu SPECS, wenn die endgültige Ausgabe einem strikten Schema oder Format entsprechen muss.',
+          ],
+          content2: [
+            'Diese Trennung verhindert, dass das Modell „Erstellen" und „Verbessern" vermischt — zwei fundamentally unterschiedliche kognitive Aufgaben.',
+          ],
+        },
+
+        faqSection: {
+          title: 'Häufig gestellte Fragen',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'Wofür steht RISEN?',
+              a: 'RISEN steht für Refine, Inspect, Summarize, Evaluate, Next Steps. Es ist ein 5-stufiges iteratives Framework für die Verbesserung bestehender Entwürfe durch strukturierte Revisionszyklen.',
+            },
+            {
+              q: 'Wie unterscheidet sich RISEN von CO-STAR oder CRAFT?',
+              a: 'CO-STAR und CRAFT sind Generierungs-Frameworks — sie helfen Ihnen, Erst-Entwürfe zu erstellen. RISEN ist ein Verbesserungs-Framework — es hilft Ihnen, vorhandenes Material durch nachverfolgbare Iterationen zu verbessern. Verwenden Sie Generierungs-Frameworks zum Erstellen, wechseln Sie dann zu RISEN zum Verfeinern.',
+            },
+            {
+              q: 'Wann sollte ich RISEN vs. andere Frameworks verwenden?',
+              a: 'Verwenden Sie RISEN, wenn Sie bereits einen Entwurf haben und kontrollierte Verbesserung wünschen. Verwenden Sie CO-STAR für allgemeine Erst-Draft-Generierung, CRAFT für kreativen Inhalt, RTF für strukturierte Rollen-Aufgaben-Format-Spezifikationen und TRACE zum Verständnis von Modellüberlegungen.',
+            },
+            {
+              q: 'Wie viele RISEN-Zyklen benötige ich?',
+              a: 'Typischerweise 2–4 Zyklen. Stoppen Sie, wenn die Bewertungsergebnisse abflachen (aufeinanderfolgende Zyklen erzielen dieselbe Bewertung) und Next Steps-Vorschläge eher geringfügige Formatierungsanpassungen statt substantieller Verbesserungen werden.',
+            },
+            {
+              q: 'Kann ich RISEN mit lokalen Modellen verwenden?',
+              a: 'Ja. RISEN funktioniert mit jedem LLM, das Anweisungen folgt — einschließlich lokaler Modelle über Ollama oder LM Studio. Größere Modelle (13B+) verarbeiten die Multi-Schritt-Struktur besser; 7B-Modelle benötigen möglicherweise jeden Schritt als separaten Prompt.',
+            },
+            {
+              q: 'Was macht den Inspect-Schritt besonders?',
+              a: 'Der Inspect-Schritt zwingt das Modell, jede spezifische Änderung, die es im Refine-Schritt vorgenommen hat, aufzulisten und zu rechtfertigen. Dies erzeugt einen Audit-Trail — Sie können genau sehen, was sich zwischen Versionen geändert hat und warum jede Änderung vorgenommen wurde.',
+            },
+            {
+              q: 'Kann ich RISEN mit Multi-Modell-Tests kombinieren?',
+              a: 'Ja. Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus an GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro gleichzeitig zu senden. Vergleichen Sie, welche Modell-Verbesserungen, Selbstkritik-Bewertungen und Next-Step-Vorschläge am besten zu Ihren Anforderungen passen.',
+            },
+            {
+              q: 'Erhöht RISEN die Token-Kosten?',
+              a: 'Ja. Jeder RISEN-Zyklus generiert 2–5× mehr Output-Tokens als ein Single-Pass-Prompt, weil das Modell mehrere Abschnitte schreibt (verbesserter Inhalt, Änderungsprotokoll, Zusammenfassung, Bewertung, Empfehlungen). Verwenden Sie RISEN selektiv bei hochrangigen Aufgaben. Für schnelle Änderungen bevorzugen Sie Single-Schritt-Prompts.',
+            },
+            {
+              q: 'Muss ich bei der Verwendung von RISEN die DSGVO beachten?',
+              a: 'Ja, wenn Sie vertrauliche interne Dokumente über RISEN verfeinern. Wenn Sie Cloud-APIs wie OpenAI, Google oder Anthropic verwenden, beachten Sie, dass diese Daten außerhalb der EU verarbeitet werden. Für DSGVO-sensible Arbeitsabläufe verwenden Sie lokal gehostete Modelle (Ollama, LM Studio) über PromptQuorum oder erkunden Sie Anthropic-Angebote, die EU-Standards erfüllen.',
+            },
+            {
+              q: 'Ist RISEN für den deutschen Mittelstand geeignet?',
+              a: 'Ja. RISEN ist besonders für Mittelstand-Unternehmen geeignet, die formale Dokumentation und strikte Qualitätskontrolle schätzen. RISEN hilft bei iterativer Verbesserung von Compliance-Dokumenten, technischen Spezifikationen und redaktioneller Qualitätssicherung — alle Bereiche, in denen der deutsche Mittelstand hohe Standards erwartet.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: 'Verwandte Lektüre',
+          id: 'verwandte-lekture',
+          items: [
+            {
+              title: 'Chain-of-Thought Prompting',
+              url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de',
+              description: 'Die lineare Reasoning-Grundlage, auf der RISEN aufgebaut ist.',
+            },
+            {
+              title: 'CO-STAR Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=de',
+              description: 'Verwenden Sie CO-STAR für Erst-Draft-Generierung, wechseln Sie dann zu RISEN für Verfeinerung.',
+            },
+            {
+              title: 'CRAFT Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=de',
+              description: 'Framework für kreative Generierung; funktioniert gut mit RISEN für iterative Copy-Polierung.',
+            },
+            {
+              title: 'TRACE Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=de',
+              description: 'Zum Verständnis von Modell-Überlegungen; kann RISEN folgen, um Logik-Pfade zu validieren.',
+            },
+            {
+              title: 'Welches Prompt-Framework sollten Sie verwenden?',
+              url: 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=de',
+              description: 'Entscheidungsmatrix, die alle großen Frameworks nach Anwendungsfall vergleicht.',
+            },
+            {
+              title: 'Erstellen Sie Ihr eigenes Prompt-Framework',
+              url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework?lang=de',
+              description: 'Wenn Standard-Frameworks nicht passen; entwerfen Sie ein benutzerdefiniertes mit RISEN als Ausgangspunkt.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Quellen',
+          id: 'quellen',
+          items: [
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608. Katalogisiert 58+ Prompting-Techniken einschließlich iterativer Verbesserungsmuster.',
+            'OpenAI Prompt Engineering Guide. https://platform.openai.com/docs/guides/prompt-engineering — Offizielle Prompting-Best-Practices einschließlich iterativer Verbesserungsstrategien.',
+            'Anthropic Prompt Engineering Documentation. https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering — Claude-spezifische Anleitung zu Multi-Schritt-Prompt-Arbeitsabläufen.',
           ],
         },
       },
-    },
-    de: {
-  theme: 'Frameworks',
-  title: 'Das RISEN Framework',
-  intro: 'Das RISEN Framework ist eine iterative Prompt-Struktur, die sich auf Refine, Inspect, Summarize, Evaluate und Next steps konzentriert, damit Sie AI-Ausgaben systematisch verbessern können, statt Prompts jedes Mal von Grund auf neu zu schreiben. PromptQuorum beinhaltet das RISEN Framework als integrierte Option, die jeder Benutzer direkt in der App auswählen und verwenden kann.',
-  publishDate: '2026-03-24',
-  readTime: '8 min Lesezeit',
-  educationalLevel: 'Intermediate',
-  primaryTerm: 'RISEN Framework',
-  metaDescription: 'Das RISEN Framework für systematische Prompt-Verbesserung: Refine, Inspect, Summarize, Evaluate, Next steps. Anwendung in PromptQuorum.',
-  schema: {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: 'Das RISEN Framework',
-    description: 'Wie das RISEN Framework (Refine, Inspect, Summarize, Evaluate, Next steps) funktioniert, wann Sie es verwenden und wie PromptQuorum RISEN als integrierte Option anbietet.',
-    datePublished: '2026-03-24',
-    dateModified: '2026-03-24',
-    keywords: ['RISEN Framework', 'Refine Inspect Summarize Evaluate Next steps', 'Prompt Frameworks', 'Prompt Engineering', 'iterative Prompts', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-    about: [
-      { '@type': 'Thing', name: 'Prompt Engineering' },
-      { '@type': 'Thing', name: 'Prompt Frameworks' },
-      { '@type': 'Thing', name: 'Large Language Models' },
-    ],
-    mentions: [
-      { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-      { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
-      { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
-    ],
-    teaches: [
-      'Strukturierte iterative Verbesserung von Texten und Analysen durch das RISEN Framework',
-      'Anwendung der fünf RISEN-Komponenten (Refine, Inspect, Summarize, Evaluate, Next steps)',
-      'Integration des RISEN Framework mit PromptQuorum für Multi-Model-Dispatch',
-    ],
-    assesses: [
-      'Verständnis wann das RISEN Framework dem TRACE Framework oder anderen Frameworks vorzuziehen ist',
-      'Fähigkeit zur Unterscheidung zwischen unstrukturierten Revisions-Anfragen und RISEN-basierten Anfragen',
-      'Kompetenz zur Kombination des RISEN Framework mit anderen Prompt-Engineering-Frameworks',
-    ],
-  },
-  sections: {
-    whatIsRISEN: {
-      title: 'Was das RISEN Framework ist',
-      content: [
-        '**Das RISEN Framework ist ein schleifen-orientiertes Prompt-Muster, das für die Verbesserung von Entwürfen, Analysen und Plänen über mehrere Iterationen mit klaren Kontrollpunkten ausgelegt ist.** Statt jeden Prompt als einmalige Aktion zu behandeln, nutzen Sie RISEN, um ein Modell wie GPT-5.5, Claude Opus 4.7 oder Gemini 3.1 Pro durch einen strukturierten Verbesserungszyklus zu führen. Dies macht Ihren Arbeitsablauf weniger wie zufälliges Ausprobieren und mehr wie kontinuierliche Bearbeitung.',
-        'Das RISEN Framework ist besonders wertvoll, wenn Sie bereits eine erste Version haben – etwa einen Entwurfsartikel, Strategienotiz oder Code-Snippet – und Sie das Modell gebeten möchten, diesen auf kontrollierte, nachverfolgbare Weise zu verbessern. Jeder RISEN-Schritt hat einen eindeutigen Zweck, der Revisionen fokussiert hält.',
-      ],
-    },
-    fiveComponents: {
-      title: 'Die fünf RISEN-Komponenten',
-      content: [
-        '**Ein starker RISEN-Prompt fordert das Modell explizit auf, fünf Phasen zu durchlaufen: Refine, Inspect, Summarize, Evaluate und Next steps.** Sie können diese Phasen in einem längeren Prompt oder in einer kurzen Serie von Prompts verwenden, abhängig davon, wie interaktiv Sie den Prozess gestalten möchten.',
-        'Eine häufige Auslegung sieht folgendermaßen aus:',
-      ],
-      items: [
-        'Refine: Verbessern Sie den existierenden Entwurf gemäß Ihren Zielen (zum Beispiel Klarheit, Struktur oder Korrektheit).',
-        'Inspect: Identifizieren Sie konkrete Änderungen, wie umgeschriebene Abschnitte, hinzugefügte Details oder behobene Probleme.',
-        'Summarize: Bieten Sie eine prägnante Erläuterung dessen, was die neue Version nun sagt oder erreicht.',
-        'Evaluate: Kritisieren Sie das Ergebnis anhand expliziter Kriterien (zum Beispiel Ton, Genauigkeit oder Ausrichtung auf Publikum).',
-        'Next steps: Empfehlen Sie weitere Änderungen oder Folgemaßnahmen für die nächste Iteration.',
-      ],
-    },
-    whyRISENIsUseful: {
-      title: 'Warum das RISEN Framework wertvoll ist',
-      content: [
-        '**Das RISEN Framework ist wertvoll, wenn Sie eine undurchsichtige „Verbesserungs-Black-Box" in einen transparenten, wiederholbaren Arbeitsablauf umwandeln möchten.** Es ermutigt das Modell nicht nur zu generieren, sondern auch seine eigene Arbeit zu analysieren und zu kritisieren.',
-        'Praktische Vorteile sind:',
-      ],
-      items: [
-        'Klare Sichtbarkeit darüber, was sich zwischen Versionen geändert hat.',
-        'Strukturierte Selbstkritik, die Schwächen oder Lücken offenlegt.',
-        'Ein eingebauter Fahrplan für die nächste Iteration, damit Sie nie unsicher sind, was Sie als nächstes versuchen sollten.',
-      ],
-    },
-    badVsGoodExample: {
-      title: 'Beispiel: Schwacher vs. starker RISEN-Prompt',
-      content: [
-        '**Der Unterschied zwischen einer unstrukturierten Revisionsanfrage und einer RISEN-basierten Anfrage wird deutlich, wenn Sie beide auf denselben Entwurf anwenden.** Nachfolgend ein einfaches Beispiel zur Verbesserung einer Produktbeschreibung.',
-        '**[Schwacher Prompt]**',
-        '"Verbessere diese Produktbeschreibung."',
-        '**[Starker Prompt]**',
-        '"Du bist ein Produkt-Marketing-Editor. Ich gebe dir einen Produktbeschreibungs-Entwurf. Nutze den RISEN-Prozess wie folgt: Refine: Schreibe die Beschreibung zur Klarheit und Prägnanz um, behalte aber alle sachlichen Details bei. Ziel: 120–160 Wörter. Inspect: Liste 5–7 spezifische Änderungen auf, die du vorgenommen hast (z.B. \'Vorteil X geklärt\', \'wiederholten Satz Y entfernt\'). Summarize: Erläutere in 2–3 Sätzen, worauf die aktualisierte Beschreibung nun den Fokus legt. Evaluate: Bewerte die neue Beschreibung auf einer Skala von 1–5 für Klarheit, Überzeugungskraft und Ausrichtung auf B2B-Zielgruppen, und begründe jede Bewertung in einem Satz. Next steps: Empfehle 3 fokussierte Änderungen, die ich in einem zukünftigen Prompt anfordern könnte, um diese Beschreibung weiter zu verbessern. Entwurf: [Entwurf hier einfügen]"',
-        'Die RISEN-Version verwandelt eine vage Anfrage in einen kleinen Prozess, der nicht nur eine verbesserte Beschreibung liefert, sondern auch eine Audit-Spur und einen Plan.',
-      ],
-    },
-    whenToUse: {
-      title: 'Wann das RISEN Framework verwendet werden sollte',
-      content: [
-        '**Verwenden Sie das RISEN Framework für iterative Verbesserungsaufgaben, bei denen Sie bereits Material haben und es wichtig ist, jede Änderung zu verstehen.** Typische Anwendungsfälle sind:',
-      ],
-      items: [
-        'Verbesserung von Blog-Beiträgen, Dokumentation oder Help-Center-Artikeln über mehrere Runden.',
-        'Verfeinerung von Verkaufsdecks, Pitch-Scripts und Geschäftszusammenfassungen.',
-        'Überprüfung und Verbesserung von Prompts selbst, besonders komplexer Prompts, die in der Produktion verwendet werden.',
-        'Iteratives Straffen langer Analysen, damit diese klarer und handlungsorientierter werden.',
-      ],
-    },
-    dachConsiderations: {
-      title: 'RISEN im DACH-Kontext: Enterprise und Unternehmensprozesse',
-      content: [
-        '**Für deutschsprachige Organisationen (DACH: Deutschland, Österreich, Schweiz) bietet das RISEN Framework spezifische Vorteile bei unternehmensinternen Redaktions- und Compliance-Prozessen.** Im DACH-Raum wird formale Dokumentation und strikte Qualitätskontrolle besonders geschätzt.',
-        'Besondere Anwendungen:',
-      ],
-      items: [
-        'Unternehmensrichtlinien und interne Standards: RISEN hilft bei der iterativen Verbesserung von Compliance-Dokumenten, Datenschutzerklärungen (DSGVO-konform) und internen Prozesshandbüchern.',
-        'Technische Dokumentation für Ingenieure: Deutsche und Schweizer Ingenieurteams profitieren von RISENs strukturierten Feedback-Schleifen bei technischen Spezifikationen.',
-        'Redaktionelle Qualitätssicherung: In Verlagen und Medienunternehmen bietet RISEN einen reproduzierbaren Prozess für die Lektorierung von mehrsprachigen Inhalten.',
-      ],
-    },
-    howPQImplements: {
-      title: 'Wie PromptQuorum das RISEN Framework implementiert',
-      content: [
-        '**PromptQuorum ist ein Multi-Model-AI-Dispatch-Tool, das das RISEN Framework als integrierte Prompt-Struktur anbietet, damit Benutzer strukturierte Revisions-Zyklen über mehrere Modelle gleichzeitig durchführen können.** Wenn Sie die RISEN-Option in PromptQuorum auswählen, stellt die App beschriftete Felder zur Verfügung, die den Framework-Schritten entsprechen, und setzt diese in eine einzelne, wiederverwendbare Anweisung um.',
-        'Innerhalb von PromptQuorum ermöglicht das RISEN Framework Ihnen:',
-      ],
-      items: [
-        'Einfügen eines existierenden Entwurfs und Anwenden eines vorstrukturierten „Refine–Inspect–Summarize–Evaluate–Next steps"-Musters, ohne das vollständige Meta-Prompt selbst zu schreiben.',
-        'Senden derselben RISEN-basierten Anweisungen an mehrere Modelle – wie GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro – und Vergleichen, wie jedes den Entwurf verfeinert und kritisiert.',
-        'Speichern von RISEN-Vorlagen für wiederkehrende Arbeitsabläufe, z.B. „Blog-Entwurf-Verbesserung" oder „Changelog-Polierung", und gemeinsame Nutzung mit Ihrem Team.',
-      ],
-    },
-    usingRISENWithOthers: {
-      title: 'RISEN mit anderen Frameworks kombinieren',
-      content: [
-        '**Sie sollten das RISEN Framework mit anderen Frameworks kombinieren, indem Sie RISEN der Revisionsphase zuordnen und generierungsorientierte Frameworks früher im Arbeitsablauf verwenden.** Ein praktisches Muster ist:',
-      ],
-      items: [
-        'Beginnen Sie mit einem Generierungs-Framework wie Single Step, CRAFT oder CO-STAR, um den ersten Entwurf zu erstellen.',
-        'Wechseln Sie zu RISEN, wenn Sie bereit sind zu verfeinern, Änderungen zu überprüfen und weitere Änderungen zu planen.',
-        'Optional zu einem spezifikationsorientierten Framework wie SPECS wechseln, wenn die endgültige Ausgabe einem strikten Schema entsprechen muss.',
-      ],
-    },
-    howToStart: {
-      title: 'So verwenden Sie das RISEN Framework',
-      numberedItems: [
-        '**Refine (Verfeinern):** Beginnen Sie mit Ihrem vorhandenen Entwurf, Ausgabe oder Plan. Geben Sie ihn dem Modell mit klaren Anweisungen, um ihn auf ein spezifisches Ziel hin zu verbessern — Klarheit, Genauigkeit, Prägnanz oder Zielgruppenpassung. Beispiel: „Schreiben Sie diese Produktbeschreibung für Klarheit um. Ziel: 120–160 Wörter. Behalten Sie alle sachlichen Details bei."',
-        '**Inspect (Prüfen):** Fordern Sie das Modell auf, jede spezifische Änderung aufzulisten, die es vorgenommen hat. Fordern Sie konkrete Bearbeitungsbeschreibungen an, keine vagen Zusammenfassungen. Beispiel: „Listen Sie 5–7 spezifische Änderungen auf, die Sie vorgenommen haben. Geben Sie für jede an, was Sie geändert haben und warum."',
-        '**Summarize (Zusammenfassen):** Fordern Sie das Modell auf, eine prägnante Erklärung zu geben, was die neue Version nun sagt oder erreicht — nicht eine Wiederholung des Inhalts selbst, sondern eine Meta-Beschreibung. Beispiel: „Erklären Sie in 2–3 Sätzen, worauf sich die aktualisierte Version nun konzentriert und was sich in ihrem Fokus geändert hat."',
-        '**Evaluate (Bewerten):** Fordern Sie das Modell auf, die überarbeitete Ausgabe anhand expliziter Kriterien auf einer Skala von 1–5 zu bewerten, mit je einer Begründung pro Kriterium. Beispiel: „Bewerten Sie die neue Version auf Klarheit (1–5), Überzeugungskraft (1–5) und B2B-Zielgruppenpassung (1–5). Begründen Sie jede Bewertung in einem Satz."',
-        '**Next steps (Nächste Schritte):** Fordern Sie das Modell auf, 3 fokussierte Verbesserungen für die nächste Iteration zu empfehlen, damit Sie immer eine klare Richtung haben. Beispiel: „Empfehlen Sie 3 spezifische Bearbeitungen, die ich in einem zukünftigen Prompt anfordern könnte, um diese Ausgabe weiter zu verbessern."',
-      ],
-    },
-    risenAndLlmComparison: {
-      title: 'RISEN als Vergleichsmechanismus zwischen Modellen',
-      content: [
-        '**Eine weniger bekannte Stärke des RISEN Framework ist seine Fähigkeit, systematische Unterschiede zwischen verschiedenen LLM-Anbietern zu offenbaren.** Wenn Sie denselben RISEN-Prompt an GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro senden, werden die unterschiedlichen Revisionsansätze jedes Modells deutlich.',
-        'Praktische Beobachtungen:',
-      ],
-      items: [
-        'Claude neigt dazu, tiefergehende, strukturiertere Inspektionen durchzuführen, was für detaillierte technische Verbesserungen wertvoll ist.',
-        'GPT-5.5 erzeugt oft prägnantere Zusammenfassungen, die für schnelle iterative Zyklen nützlich sind.',
-        'Gemini 3.1 Pro fokussiert häufiger auf benutzererlebnis-zentrierte Evaluierungen, was für kundenorientierte Inhalte hilfreich ist.',
-      ],
-    },
-  },
-  faqSchema: {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': [
-      { '@type': 'Question', 'name': 'Unterscheidet sich RISEN vom TRACE Framework? Wann sollte ich welches verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE betont explizites Reasoning und Begründung (Think–Reason–Analyze–Conclude–Explain), während RISEN sich auf iterative Verbesserung und Audit-Trails konzentriert. Verwenden Sie TRACE, wenn Sie das Denken des Modells verstehen müssen; verwenden Sie RISEN, wenn Sie einen Entwurf schrittweise verfeinern möchten.' } },
-      { '@type': 'Question', 'name': 'Kann ich RISEN in einem einzelnen langen Prompt verwenden oder sollte ich mehrere Prompts senden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide Ansätze funktionieren. Ein einziger langer Prompt ist schneller; mehrere aufeinanderfolgende Prompts ermöglichen Ihnen, bei Bedarf zu pausieren und Feedback zu geben. Für maximale Kontrolle und Transparenz senden viele Benutzer die RISEN-Schritte separat, was auch die Token-Kosten sichtbar macht.' } },
-      { '@type': 'Question', 'name': 'Wie integriere ich RISEN mit meinen bestehenden Prompt-Workflows in PromptQuorum?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum speichert RISEN-Prompts als Vorlagen. Sie können eine Vorlage für einen bestimmten Arbeitsablauf erstellen (z.B. „Blog-Verbesserung"), sie mit Ihrem Team teilen und sie jedes Mal abrufen, wenn Sie einen ähnlichen Entwurf verfeinern müssen. Dies spart Zeit und stellt Konsistenz sicher.' } },
-      { '@type': 'Question', 'name': 'Ist RISEN für Anfänger in Prompt Engineering geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Obwohl RISEN mit dem Zweck entwickelt wurde, fortgeschrittene Verbesserungs-Workflows zu unterstützen, ist die Struktur (Refine–Inspect–Summarize–Evaluate–Next steps) intuitiv und einsteigerfreundlich. PromptQuorums vorausgefüllte Felder machen es noch einfacher.' } },
-      { '@type': 'Question', 'name': 'Wie verhindere ich, dass sich die RISEN-Revisionen endlos wiederholen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Setzen Sie explizite Endbedingungen. Definieren Sie vor dem Start klar, wie viele Iterationen Sie durchführen werden und welche Erfolgskriterien Sie festlegen. Beispiel: „Führe maximal 3 RISEN-Zyklen durch oder stoppe, wenn die Qualitätsbewertung ≥4,5 erreicht."' } },
-      { '@type': 'Question', 'name': 'Welche DSGVO-Überlegungen gelten bei der Verwendung von RISEN mit Cloud-Modellen in Deutschland?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Wenn Sie vertrauliche interne Dokumente über RISEN verfeinern, seien Sie vorsichtig mit Cloud-APIs (OpenAI, Google, Anthropic verarbeiten Eingaben außerhalb der EU). Verwenden Sie local gehostete Modelle (Ollama, LM Studio) über PromptQuorum für DSGVO-sensitive Arbeitsabläufe, oder nutzen Sie Anthropic Claude mit EU-spezifischen Angeboten.' } },
-    ],
-  },
-},
-    fr: {
-      theme: 'Frameworks',
-      title: 'Le Framework RISEN',
-      intro: 'Le Framework RISEN est une structure itérative de prompt qui structure la génération d\'IA autour de cinq étapes : Refine (Affiner), Inspect (Inspecter), Summarize (Synthétiser), Evaluate (Évaluer) et Next steps (Prochaines étapes). Plutôt que de recommencer un prompt de zéro, vous rafinez systématiquement les résultats du modèle pour une meilleure qualité à chaque étape. PromptQuorum intègre nativement le Framework RISEN comme option directement accessible dans l\'application.',
-      publishDate: '2026-03-24',
-      readTime: '7 min de lecture',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'RISEN Framework',
-      metaDescription: 'Maîtrisez le Framework RISEN (Refine, Inspect, Summarize, Evaluate, Next steps) pour améliorer systématiquement les outputs IA. Exemples pratiques et cas d\'usage.',
+
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Le Framework RISEN',
-        description: 'Comment fonctionne le Framework RISEN (Refine, Inspect, Summarize, Evaluate, Next steps), quand l\'utiliser, et comment PromptQuorum l\'intègre nativement.',
+        headline: 'RISEN-Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+        description: 'RISEN-Framework für iterative Prompt-Verfeinerung: Entwürfe verbessern, Änderungen nachverfolgen, bewerten, nächste Schritte planen. Multi-Modell-Test mit PromptQuorum.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['Framework RISEN', 'frameworks de prompts', 'ingénierie des prompts', 'prompts itératifs', 'PromptQuorum', 'modèles de langage'],
+        dateModified: '2026-05-04',
+        'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=de',
+        'inLanguage': 'de',
+        keywords: ['RISEN-Framework', 'iteratives Prompting', 'Prompt-Verfeinerung', 'Prompt Engineering', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
-          { '@type': 'Thing', name: 'Ingénierie des prompts' },
-          { '@type': 'Thing', name: 'Frameworks de prompts' },
-          { '@type': 'Thing', name: 'Modèles de langage volumineux' },
+          { '@type': 'Thing', name: 'RISEN-Framework' },
+          { '@type': 'Thing', name: 'Iteratives Prompting' },
+          { '@type': 'Thing', name: 'Prompt-Verfeinerung' },
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
         ],
-        teaches: 'Comment utiliser une approche itérative pour améliorer les résultats des modèles IA à travers des cycles Refine (Affiner)-Inspect (Inspecter)-Summarize (Synthétiser)-Evaluate (Évaluer)-Next steps (Prochaines étapes)',
-        assesses: 'Capacité à structurer des cycles d\'amélioration de prompts, identifier les insuffisances, et optimiser les outputs pour la qualité et la pertinence',
-      },
-      sections: {
-        whatIsRISEN: {
-          title: 'Qu\'est-ce que le Framework RISEN',
-          content: [
-            '**Le Framework RISEN est une structure de prompt itérative qui organise le raffinement en cinq étapes distinctes pour améliorer progressivement les résultats de l\'IA.** Au lieu de réécrire vos prompts à zéro, vous travaillez de manière progressive sur une version existante pour obtenir une meilleure qualité.',
-            'Les cinq étapes du Framework RISEN sont :',
-          ],
-          items: [
-            'Refine (Affiner) : Reprendre la réponse précédente et l\'améliorer selon vos objectifs (clarté, structure, exactitude).',
-            'Inspect (Inspecter) : Examiner en détail chaque changement concret — sections réécrites, détails ajoutés, problèmes résolus.',
-            'Summarize (Synthétiser) : Résumer en peu de mots ce que la version révisée réalise maintenant.',
-            'Evaluate (Évaluer) : Mesurer la qualité selon des critères explicites tels que le ton, l\'exactitude et la pertinence pour l\'audience.',
-            'Next steps (Prochaines étapes) : Recommander d\'autres modifications ou actions de suivi pour la prochaine itération.',
-          ],
-        },
-        whyRISENIsUseful: {
-          title: 'Pourquoi le Framework RISEN est utile',
-          content: [
-            '**Le Framework RISEN excelle quand vous cherchez à affiner progressivement une réponse plutôt que de la générer parfaite du premier coup.** C\'est particulièrement efficace pour les contenus longs, les analyses complexes, ou les cas où la qualité dépend des itérations.',
-            'Avantages clés :',
-          ],
-          items: [
-            'Transparence : Chaque étape documente ce qui change et pourquoi.',
-            'Contrôle : Vous restez actif dans chaque boucle, pas dépendant d\'une génération initiale.',
-            'Économie de tokens : Plutôt que de régénérer entièrement, vous affinez partiellement.',
-            'Qualité progressive : Chaque cycle améliore le résultat vers un standard d\'excellence.',
-          ],
-        },
-        fiveComponents: {
-          title: 'Les cinq composants en détail',
-          content: [
-            '**Un bon prompt RISEN définit pour le modèle exactement ce qu\'il doit faire à chaque étape afin que les améliorations soient prévisibles et cumulables.**',
-          ],
-          items: [
-            'Refine (Affiner) : « Relis ta réponse précédente. Quelles sections manquent de profondeur ? Où pourrais-tu ajouter des exemples concrets ? »',
-            'Inspect (Inspecter) : « Évalue chaque paragraphe selon ces trois critères : clarté, précision technique, pertinence pour l\'audience cible. Identifie les trois sections les plus faibles. »',
-            'Summarize (Synthétiser) : « Résume tes conclusions. Quels changements te semblent prioritaires ? »',
-            'Evaluate (Évaluer) : « Note ta version révisée sur une échelle de 1 à 5 selon ces critères : complétude, rigueur, utilité pratique. »',
-            'Next steps (Prochaines étapes) : « Que devrais-je faire ensuite ? Élargir ce sujet ? Approfondir une section spécifique ? »',
-          ],
-        },
-        badVsGoodExample: {
-          title: 'Exemple : Mauvais vs bon prompt RISEN',
-          content: [
-            '**La valeur du Framework RISEN devient évidente en comparant une demande générique à une demande structurée RISEN pour la même tâche.**',
-            '**[Mauvais prompt]**',
-            '"Améliore ce texte sur l\'IA générative."',
-            '**[Bon prompt RISEN]**',
-            '"Tu es un éditeur technique spécialisé en IA. Applique la méthode RISEN à ce texte. Refine (Affiner) : Améliore ce texte pour clarté et structure. Inspect (Inspecter) : Identifie tous les changements concrets que tu as faits. Summarize (Synthétiser) : Quel est le problème central à résoudre ? Evaluate (Évaluer) : Note ta version sur une échelle 1–5 en précision et lisibilité. Next steps (Prochaines étapes) : Devrais-je ajouter une section sur les cas d\'usage en France ou dans l\'UE ? Texte à améliorer : [insérer ici]"',
-            'La version RISEN structure chaque étape pour que le modèle opère de manière progressive et intentionnelle.',
-          ],
-        },
-        francophoneConsiderations: {
-          title: 'Considérations pour les utilisateurs francophones',
-          content: [
-            '**Le Framework RISEN s\'adapte particulièrement bien aux besoins des équipes en France, Belgique, Canada et Suisse, notamment dans les secteurs exigeant une conformité réglementaire ou une rigueur éditoriale.**',
-          ],
-          items: [
-            'Droit d\'auteur et attribution : Si vous révisez du contenu pour publication, documentez chaque étape RISEN pour justifier les modifications auprès de vos rédacteurs.',
-            'Conformité RGPD : Lorsque vous traitez du texte contenant des données personnelles, la phase Inspecter doit inclure une vérification d\'anonymisation.',
-            'Accès multilingue : PromptQuorum intègre le Framework RISEN pour tous les modèles, incluant les options French-aware comme des modèles multilingues haute performance.',
-            'Contrôle éditorial : Appliquez RISEN pour affiner des traductions, vérifier l\'exactitude technique, ou valider la pertinence culturelle avant publication.',
-          ],
-        },
-        whenToUse: {
-          title: 'Quand utiliser le Framework RISEN',
-          content: [
-            '**Vous devriez utiliser le Framework RISEN quand la qualité finale prime sur la vitesse, notamment pour les contenus éditoriaux, analyses, ou documents importants.**',
-          ],
-          items: [
-            'Rédaction et édition : Articles, documentation, contenu marketing.',
-            'Analyse : Évaluations techniques, rapports, analyse de données.',
-            'Conception : Spécifications produit, plans de projet, stratégies.',
-            'Validation : Vérification de conformité, audits, revues d\'assurance qualité.',
-          ],
-        },
-        howPQImplements: {
-          title: 'Comment PromptQuorum intègre le Framework RISEN',
-          content: [
-            '**PromptQuorum est un outil de dispatch multi-modèles qui intègre nativement le Framework RISEN, vous permettant de structurer des cycles d\'amélioration et d\'envoyer le même prompt affiné à plusieurs modèles en parallèle.**',
-            'Capacités clés :',
-          ],
-          items: [
-            'Templates RISEN : Sauvegardez vos séquences Refine–Inspect–Summarize–Evaluate–Next steps comme templates réutilisables.',
-            'Comparaison inter-modèles : Envoyez le même cycle RISEN à GPT-5.5, Claude Opus 4.7 et Gemini 3.1 Pro pour voir comment chaque modèle améliore différemment.',
-            'Historique itératif : Conservez un enregistrement complet de chaque itération pour documenter le processus d\'amélioration.',
-          ],
-        },
-        usingRISENWithOthers: {
-          title: 'Combiner le Framework RISEN avec d\'autres frameworks',
-          content: [
-            '**Le Framework RISEN fonctionne mieux quand on le combine avec d\'autres frameworks : utilisez un framework génératif d\'abord, puis passez à RISEN pour l\'amélioration.**',
-          ],
-          items: [
-            'Utiliser Single Step ou CO-STAR pour générer du contenu initial.',
-            'Passer à RISEN pour raffiner et améliorer progressivement.',
-            'Finir optionnellement avec SPECS si le résultat doit respecter un schéma strict.',
-          ],
-        },
-        howToStart: {
-          title: 'Comment utiliser le Framework RISEN',
-          numberedItems: [
-            '**Refine (Affiner) :** Commencez avec votre brouillon, résultat ou plan existant. Donnez-le au modèle avec des instructions claires pour l\'améliorer vers un objectif spécifique — clarté, précision, concision ou pertinence pour l\'audience. Exemple : « Réécrivez cette description de produit pour la clarté. Ciblez 120–160 mots. Gardez tous les détails factuels. »',
-            '**Inspect (Inspecter) :** Demandez au modèle de lister chaque changement spécifique qu\'il a effectué. Exigez des descriptions d\'édits concrètes, pas des résumés vagues. Exemple : « Listez 5–7 édits spécifiques que vous avez effectués. Pour chacun, déclarez ce que vous avez changé et pourquoi. »',
-            '**Summarize (Synthétiser) :** Demandez au modèle une explication concise de ce que la nouvelle version dit ou réalise maintenant — pas une répétition du contenu lui-même, mais une description au niveau méta. Exemple : « En 2–3 phrases, expliquez ce sur quoi la version mise à jour met maintenant l\'accent et ce qui a changé dans son orientation. »',
-            '**Evaluate (Évaluer) :** Demandez au modèle de noter la sortie révisée selon des critères explicites sur une échelle 1–5 avec une justification d\'une phrase par critère. Exemple : « Notez la nouvelle version sur la clarté (1–5), la persuasion (1–5) et l\'alignement avec l\'audience B2B (1–5). Justifiez chaque note en une phrase. »',
-            '**Next steps (Prochaines étapes) :** Demandez au modèle de recommander 3 améliorations ciblées pour la prochaine itération afin que vous ayez toujours une direction claire. Exemple : « Suggérez 3 édits spécifiques que je pourrais demander dans un futur prompt pour améliorer davantage cette sortie. »',
-          ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
+
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Quelle est la différence entre RISEN et TRACE ? Quand utiliser l\'un ou l\'autre ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE met l\'accent sur le raisonnement explicite (Penser–Justifier–Analyser–Conclure–Expliquer), tandis que RISEN se concentre sur l\'amélioration itérative. Utilisez TRACE si vous avez besoin de comprendre la logique du modèle ; utilisez RISEN si vous affinez progressivement un résultat.' } },
-          { '@type': 'Question', 'name': 'Puis-je utiliser RISEN dans un seul prompt long ou dois-je envoyer plusieurs prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les deux approches fonctionnent. Un seul prompt est plus rapide ; plusieurs prompts vous permettent de vous arrêter et de donner des retours. Pour le contrôle maximal, nombreux utilisateurs envoient les étapes RISEN séparément, ce qui rend aussi les coûts en tokens transparents.' } },
-          { '@type': 'Question', 'name': 'Comment intégrer RISEN à mon workflow de prompts existant dans PromptQuorum ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Créez un template RISEN pour votre cas d\'usage (par exemple « Amélioration d\'article »), partagez-le avec votre équipe, et réutilisez-le pour chaque nouveau contenu. Cela économise du temps et garantit la cohérence.' } },
-          { '@type': 'Question', 'name': 'Le Framework RISEN convient-il aux débutants en ingénierie des prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Bien que conçu pour des workflows avancés, la structure (Refine–Inspect–Summarize–Evaluate–Next steps) est intuitive et amicale. Les champs pré-remplis de PromptQuorum rendent l\'adoption encore plus facile.' } },
-          { '@type': 'Question', 'name': 'Comment éviter que les cycles RISEN ne se répètent indéfiniment ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Définissez explicitement les conditions d\'arrêt avant de commencer. Précisez le nombre de cycles à effectuer et les critères de succès. Exemple : « Effectue au maximum 3 cycles RISEN ou arrête si le score de qualité ≥ 4,5. »' } },
-          { '@type': 'Question', 'name': 'Quelles sont les implications RGPD lors de l\'utilisation de RISEN avec des modèles en cloud en France ou en UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Si vous affinez des documents confidentiels, soyez prudent avec les APIs cloud (OpenAI, Google traitent les données en dehors de l\'UE). Utilisez des modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum pour les workflows sensibles au RGPD, ou explorez les offres Anthropic adaptées à l\'UE.' } },
+          { '@type': 'Question', 'name': 'Wofür steht RISEN?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RISEN steht für Refine, Inspect, Summarize, Evaluate, Next Steps. Es ist ein 5-stufiges iteratives Framework für die Verbesserung bestehender Entwürfe durch strukturierte Revisionszyklen.' } },
+          { '@type': 'Question', 'name': 'Wie unterscheidet sich RISEN von CO-STAR oder CRAFT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR und CRAFT sind Generierungs-Frameworks — sie helfen Ihnen, Erst-Entwürfe zu erstellen. RISEN ist ein Verbesserungs-Framework — es hilft Ihnen, vorhandenes Material durch nachverfolgbare Iterationen zu verbessern.' } },
+          { '@type': 'Question', 'name': 'Wann sollte ich RISEN vs. andere Frameworks verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Verwenden Sie RISEN, wenn Sie bereits einen Entwurf haben und kontrollierte Verbesserung wünschen. Verwenden Sie CO-STAR für allgemeine Erst-Draft-Generierung, CRAFT für kreativen Inhalt, RTF für strukturierte Rollen-Aufgaben-Format-Spezifikationen und TRACE zum Verständnis von Modellüberlegungen.' } },
+          { '@type': 'Question', 'name': 'Wie viele RISEN-Zyklen benötige ich?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typischerweise 2–4 Zyklen. Stoppen Sie, wenn die Bewertungsergebnisse abflachen und Next Steps-Vorschläge eher geringfügige Anpassungen statt substantieller Verbesserungen werden.' } },
+          { '@type': 'Question', 'name': 'Kann ich RISEN mit lokalen Modellen verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. RISEN funktioniert mit jedem LLM, das Anweisungen folgt — einschließlich lokaler Modelle über Ollama oder LM Studio. Größere Modelle (13B+) verarbeiten die Multi-Schritt-Struktur besser.' } },
+          { '@type': 'Question', 'name': 'Was macht den Inspect-Schritt besonders?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Inspect-Schritt zwingt das Modell, jede spezifische Änderung aufzulisten, wodurch ein Audit-Trail entsteht. Sie können genau sehen, was sich zwischen Versionen geändert hat und warum jede Änderung vorgenommen wurde.' } },
+          { '@type': 'Question', 'name': 'Kann ich RISEN mit Multi-Modell-Tests kombinieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus an GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro gleichzeitig zu senden. Vergleichen Sie, welche Modell-Verbesserungen am besten zu Ihren Anforderungen passen.' } },
+          { '@type': 'Question', 'name': 'Erhöht RISEN die Token-Kosten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Jeder RISEN-Zyklus generiert 2–5× mehr Output-Tokens als ein Single-Pass-Prompt. Verwenden Sie RISEN selektiv bei hochrangigen Aufgaben. Für schnelle Änderungen bevorzugen Sie Single-Schritt-Prompts.' } },
+          { '@type': 'Question', 'name': 'Muss ich bei der Verwendung von RISEN die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Sie vertrauliche interne Dokumente verfeinern. Für DSGVO-sensible Arbeitsabläufe verwenden Sie lokal gehostete Modelle (Ollama, LM Studio) über PromptQuorum oder Anthropic EU-Angebote, die Standards erfüllen.' } },
+          { '@type': 'Question', 'name': 'Ist RISEN für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. RISEN ist besonders für Mittelstand-Unternehmen geeignet. Es hilft bei iterativer Verbesserung von Compliance-Dokumenten, technischen Spezifikationen und Qualitätssicherung — Bereiche, in denen der deutsche Mittelstand hohe Standards erwartet.' } },
+        ],
+      },
+
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'CoT vs Single-Pass vs RISEN Vergleich',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Struktur', 'description': 'CoT: Linear einzelner Pfad. Single-Pass: Ein Generierungsversuch. RISEN: Iterative 5-stufige Schleife.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Kernaction', 'description': 'CoT: Überlegung dann Antwort. Single-Pass: Generieren. RISEN: Refine → Inspect → Summarize → Evaluate → Next Steps → wiederholen.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Audit-Trail', 'description': 'CoT: Keine Änderungsverfolgung. Single-Pass: Keine. RISEN: Ja — Inspect dokumentiert jede Änderung.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Best für', 'description': 'CoT: Mathematik und Logik. Single-Pass: Schnelle Aufgaben. RISEN: Iterative Verbesserung und Team-Review.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Token-Kosten', 'description': 'CoT: 1,5–2×. Single-Pass: 1× Baseline. RISEN: 2–5× pro Zyklus.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Mehrere Prompts?', 'description': 'CoT: Nein. Single-Pass: Nein. RISEN: Kann längerer Prompt oder 5 aufeinanderfolgende Prompts sein.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Modellvergleich', 'description': 'CoT: Nein. Single-Pass: Nein. RISEN: Ja — parallel über GPT, Claude, Gemini via PromptQuorum.' },
         ],
       },
     },
-    ja: {
+
+    fr: {
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-      title: 'RISENフレームワーク',
-      intro: 'RISENフレームワークは、プロンプトの出力を体系的に改善するための5段階の反復構造です。Refine（洗練）、Inspect（検査）、Summarize（要約）、Evaluate（評価）、Next steps（次のステップ）の流れを通じて、ゼロから書き直さずに段階的に品質を高めます。PromptQuorumはRISENフレームワークをネイティブに統合しており、アプリ内で直接選択して使用できます。',
+      title: 'Framework RISEN : Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+      intro: 'Le Framework RISEN est une structure itérative en 5 étapes pour améliorer systématiquement les résultats de l\'IA via des cycles de révision structurés. Au lieu d\'accepter le premier brouillon ou de tout réécrire, utilisez RISEN pour une amélioration contrôlée avec traçabilité intégrale. Chaque étape a un objectif distinct : Refine améliore le brouillon, Inspect documente chaque changement, Summarize explique la nouvelle version, Evaluate l\'évalue contre des critères, et Next Steps recommande des améliorations futures. RISEN transforme « améliorez ceci » en workflow transparent et reproductible.',
+      leadAnswerBlock: '**RISEN est une boucle itérative en 5 étapes : Refine améliore le brouillon, Inspect liste chaque changement avec justification, Summarize explique la nouvelle version, Evaluate la note selon des critères (échelle 1–5), et Next Steps recommande 3 améliorations ciblées pour le prochain cycle. Utilisez RISEN quand vous avez déjà un brouillon et souhaitez une amélioration contrôlée et traçable avec audit trail. L\'étape Inspect force le modèle à documenter les changements — rendant les révisions traçables. En 2026, RISEN est intégré à PromptQuorum comme option multi-modèles, permettant de tester le même cycle RISEN sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro en parallèle.**',
       publishDate: '2026-03-24',
-      readTime: '8分で読める',
+      dateModified: '2026-05-04',
+      readTime: '13 min de lecture',
+      seoTitle: 'Framework RISEN : Refine, Inspect, Summarize, Evaluate (2026)',
+      metaDescription: 'Framework RISEN pour amélioration itérative : affiner les brouillons, suivre les changements, évaluer, planifier les prochaines étapes. Tests multi-modèles avec PromptQuorum.',
+      educationalLevel: 'Intermediate',
+      audience: 'Développeurs construisant des workflows de prompts, équipes produit itérant le contenu, équipes avec reviews multi-étapes',
+      primaryTerm: 'Framework RISEN',
+      aboutTopics: ['Framework RISEN', 'Prompting itératif', 'Raffinement de prompts', 'Workflows multi-étapes'],
+      next_refresh_due: '2026-09-24',
+
+      quickFacts: [
+        'RISEN = Refine, Inspect, Summarize, Evaluate, Next Steps — boucle itérative en 5 étapes pour amélioration contrôlée',
+        'Utilisez RISEN quand vous avez un brouillon. Ne l\'utilisez pas pour génération initiale — combinez avec CO-STAR ou CRAFT pour cela.',
+        'L\'étape Inspect est unique : force le modèle à lister chaque changement spécifique et justifier. Crée un audit trail intégral.',
+        'Workflow type : 2–4 cycles RISEN pour atteindre qualité production depuis brouillon brut. Chaque cycle produit : contenu amélioré, journal des changements (Inspect), plan d\'actions (Next Steps).',
+        'Fonctionne avec tous les modèles : GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, modèles locaux via Ollama ou LM Studio.',
+        'Pattern RISEN + CO-STAR : utilisez CO-STAR pour génération initiale, basculez à RISEN pour amélioration itérative. Sépare « créer » de « raffiner ».',
+      ],
+
+      toc: [
+        { anchor: 'points-cles', label: 'Points clés' },
+        { anchor: 'quest-ce-risen', label: 'Qu\'est-ce que le Framework RISEN?' },
+        { anchor: 'cinq-composants', label: 'Les cinq composants du RISEN' },
+        { anchor: 'pourquoi-utile', label: 'Pourquoi RISEN est utile' },
+        { anchor: 'quand-utiliser', label: 'Quand utiliser RISEN' },
+        { anchor: 'tableau-comparaison', label: 'Tableau de comparaison (CoT vs Single-Pass vs RISEN)' },
+        { anchor: 'mauvais-vs-bon', label: 'Mauvais vs bon exemple de prompt RISEN' },
+        { anchor: 'comment-ecrire', label: 'Comment écrire un prompt RISEN' },
+        { anchor: 'conseils-cles', label: 'Conseils clés' },
+        { anchor: 'erreurs-courantes', label: 'Erreurs courantes lors de l\'utilisation de RISEN' },
+        { anchor: 'risen-promptquorum', label: 'RISEN dans PromptQuorum' },
+        { anchor: 'combiner-frameworks', label: 'Combiner RISEN avec d\'autres frameworks' },
+        { anchor: 'faq', label: 'Questions fréquemment posées' },
+        { anchor: 'lectures-connexes', label: 'Lectures connexes' },
+        { anchor: 'sources', label: 'Sources' },
+      ],
+
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Points clés',
+          id: 'points-cles',
+          items: [
+            'RISEN est une boucle itérative en 5 étapes — Refine, Inspect, Summarize, Evaluate, Next Steps — transformant « améliorez ceci » en workflow structuré avec audit trail.',
+            'Utilisez RISEN pour affinage itératif. Ne l\'utilisez pas pour génération initiale — combinez avec CO-STAR ou CRAFT pour cette phase.',
+            'L\'étape Inspect est unique : force le modèle à lister chaque changement spécifique et le justifier. Crée un audit trail complet.',
+            'Workflow type : 2–4 cycles RISEN pour qualité production. Chaque cycle produit contenu amélioré, journal des changements et recommandations.',
+            'RISEN fonctionne avec tous les modèles : GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Ollama, LM Studio.',
+            'Dans PromptQuorum, RISEN est intégré. Envoyez le même cycle RISEN à plusieurs modèles simultanément et comparez.',
+            'Utilisez PromptQuorum pour tester RISEN — voyez quel approche de raffinement correspond le mieux à vos objectifs.',
+          ],
+        },
+
+        whatIsRISEN: {
+          title: 'Qu\'est-ce que le Framework RISEN?',
+          id: 'quest-ce-risen',
+          snippets: {
+            inOneSentence: 'RISEN est une boucle itérative en 5 étapes transformant « améliorez ceci » en workflow structuré et reproductible avec audit trail intégral.',
+            inPlainTerms: 'Au lieu de dire « améliorez ceci » et espérer, dites au modèle de corriger (Refine), lister les changements (Inspect), expliquer la nouvelle version (Summarize), s\'auto-évaluer (Evaluate) et proposer les prochaines améliorations (Next Steps). Vous répétez jusqu\'à obtention du résultat.',
+          },
+          content: [
+            '**Le Framework RISEN est un pattern itératif conçu pour affiner les brouillons, analyses et plans via plusieurs cycles d\'amélioration.** Au lieu de traiter chaque prompt comme une tâche unique, vous guidez un modèle comme GPT-5.5, Claude Opus 4.7 ou Gemini 3.1 Pro via une boucle structurée et reproductible. Cela rend votre workflow moins essai-erreur et plus édition continue.',
+            'RISEN excelle quand vous avez une première version — article brouillon, note stratégique, snippet code, analyse — et souhaitez que le modèle l\'améliore de façon contrôlée et traçable. Chaque étape RISEN a un objectif distinct, gardant les révisions ciblées et documentées.',
+            'Le framework tire son nom de ses cinq étapes : **R**efine (améliorer le brouillon), **I**nspect (identifier les changements), **S**ummarize (expliquer ce qui a changé), **E**valuate (évaluer selon critères), et **N**ext steps (recommander améliorations).',
+          ],
+        },
+
+        fiveComponents: {
+          title: 'Les cinq composants du RISEN',
+          id: 'cinq-composants',
+          content: [
+            '**Un bon prompt RISEN demande explicitement au modèle de parcourir cinq phases, chacune avec une sortie définie.** Combinez ces phases en un prompt long ou séparez-les en prompts séquentiels selon votre contrôle souhaité.',
+          ],
+          items: [
+            '**Refine :** Améliorez le brouillon existant selon vos objectifs (clarté, structure, précision, concision, alignement audience, ton, etc.). Le modèle réécrit ou améliore le matériel original.',
+            '**Inspect :** Identifiez les changements concrets — exactement ce qui a été réécrit, quels détails ajoutés, quels problèmes résolus. Crée l\'audit trail. Exigez 5–7 changements spécifiques avec justifications.',
+            '**Summarize :** Fournissez explication concise de ce que la nouvelle version dit ou réalise — pas répétition du contenu, mais description au niveau méta.',
+            '**Evaluate :** Critiquez le résultat selon critères explicites (ton, précision, complétude, alignement audience, clarté). Échelle 1–5 avec justification d\'une phrase par critère.',
+            '**Next steps :** Recommandez 3 améliorations ciblées pour l\'itération suivante, gardant toujours une direction claire.',
+          ],
+        },
+
+        whyUseful: {
+          title: 'Pourquoi RISEN est utile',
+          id: 'pourquoi-utile',
+          content: [
+            '**RISEN est utile quand transformant « améliorez ceci » en workflow transparent et reproductible plutôt qu\'une boîte noire.** Il encourage le modèle non seulement à générer, mais analyser et critiquer son propre travail.',
+            'Avantages pratiques :',
+          ],
+          items: [
+            'Visibilité nette de ce qui a changé entre versions — l\'étape Inspect impose documentation complète.',
+            'Auto-critique structurée exposant faiblesses, lacunes et opportunités.',
+            'Feuille de route intégrée pour l\'itération suivante, jamais bloqué sur quoi essayer ensuite.',
+            'Processus reproductible pouvant être préconfiguré, partagé avec équipes et standardisé.',
+            'Audit trail pour conformité ou gestion des connaissances — justifier chaque révision.',
+          ],
+        },
+
+        badVsGood: {
+          title: 'Mauvais vs bon exemple de prompt RISEN',
+          id: 'mauvais-vs-bon',
+          content: [
+            '**La différence entre une demande d\'édition non-structurée et une demande RISEN devient claire en appliquant les deux au même brouillon.** Exemple concret pour amélioration de description produit.',
+            '**[Mauvais prompt]**',
+            '"Améliore cette description produit."',
+            '**[Bon prompt RISEN]**',
+            '"Vous êtes un éditeur produit-marketing. Je vais vous donner un brouillon de description. Utilisez le processus RISEN : **Refine :** Réécrivez pour clarté et concision en gardant tous détails factuels. Ciblez 120–160 mots. **Inspect :** Listez 5–7 changements spécifiques (ex. « clarifié bénéfice X », « supprimé phrase répétée Y », « audience ajoutée »). **Summarize :** En 2–3 phrases, expliquez ce que la nouvelle version souligne. **Evaluate :** Notez sur échelle 1–5 pour clarté (1–5), persuasion (1–5), alignement B2B (1–5), justifiez chaque. **Next steps :** Suggérez 3 améliorations ciblées pour prompt futur. Brouillon : [insérez ici]"',
+            'La version RISEN transforme demande vague en mini-processus structuré, produisant non seulement description améliorée mais aussi audit trail et plan pour prochain cycle.',
+          ],
+        },
+
+        whenToUse: {
+          title: 'Quand utiliser RISEN',
+          id: 'quand-utiliser',
+          content: [
+            '**Utilisez RISEN pour tâches d\'amélioration itérative où matériel existant et chaque changement compte.** RISEN est pour affinage, pas génération initiale.',
+          ],
+          items: [
+            'Affinage articles blogs, documentation ou articles help-center sur plusieurs passes.',
+            'Polissage decks ventes, scripts pitch et résumés exécutifs.',
+            'Révision et amélioration des prompts eux-mêmes, particulièrement complexes en production.',
+            'Serrage itératif d\'analyses longues pour plus de clarté et pertinence.',
+            'Workflows review contenu d\'équipe où plusieurs personnes doivent voir changements.',
+            'Code review et amélioration documentation.',
+          ],
+        },
+
+        comparisonTable: {
+          title: 'Tableau de comparaison : CoT vs Single-Pass vs RISEN',
+          id: 'tableau-comparaison',
+          tableFormat: true,
+          columns: ['Dimension', 'Chain-of-Thought (CoT)', 'Single-Pass', 'RISEN'],
+          rows: [
+            {
+              'Dimension': 'Structure',
+              'Chain-of-Thought (CoT)': 'Chemin unique linéaire (« pense étape par étape »)',
+              'Single-Pass': 'Une tentative génération',
+              'RISEN': 'Boucle itérative 5-étapes avec cycles amélioration'
+            },
+            {
+              'Dimension': 'Action coeur',
+              'Chain-of-Thought (CoT)': 'Modèle écrit raisonnement puis réponse',
+              'Single-Pass': 'Modèle génère sortie',
+              'RISEN': 'Refine → Inspect → Summarize → Evaluate → Next Steps → répéter'
+            },
+            {
+              'Dimension': 'Audit trail / suivi changements',
+              'Chain-of-Thought (CoT)': 'Non — raisonnement affiché mais pas révisions',
+              'Single-Pass': 'Aucun — sortie est finale',
+              'RISEN': 'Oui — étape Inspect documente chaque changement'
+            },
+            {
+              'Dimension': 'Meilleur pour',
+              'Chain-of-Thought (CoT)': 'Maths, logique, explications (réponse unique correcte)',
+              'Single-Pass': 'Génération rapide, tâches simples',
+              'RISEN': 'Amélioration itérative, documents complexes, review équipe'
+            },
+            {
+              'Dimension': 'Coût tokens vs baseline',
+              'Chain-of-Thought (CoT)': '~1,5–2× (raisonnement ajouté)',
+              'Single-Pass': 'Baseline (1×)',
+              'RISEN': 'Variable (2–5× par cycle selon profondeur)'
+            },
+            {
+              'Dimension': 'Prompts multiples?',
+              'Chain-of-Thought (CoT)': 'Non — raisonnement + réponse un prompt',
+              'Single-Pass': 'Non',
+              'RISEN': 'Peut être prompt long ou 5 prompts séquentiels (votre choix)'
+            },
+            {
+              'Dimension': 'Comparaison modèle intégrée',
+              'Chain-of-Thought (CoT)': 'Non',
+              'Single-Pass': 'Non',
+              'RISEN': 'Oui (même cycle RISEN à GPT, Claude, Gemini parallèle via PromptQuorum)'
+            },
+          ],
+        },
+
+        howToWrite: {
+          title: 'Comment écrire un prompt RISEN',
+          id: 'comment-ecrire',
+          numberedItems: [
+            '**Énoncez problème et livrables attendus.** « Vous êtes [rôle]. Votre tâche : affiner [type matériel] via processus RISEN."',
+            '**Définissez objectif Refine explicitement.** « Améliorez pour [critères spécifiques : clarté, précision, concision, ton, alignement]. Ciblez [longueur ou format]. »',
+            '**Exigez sortie Inspect spécifique.** « Listez 5–7 changements spécifiques. Pour chaque, énoncez quoi changé et pourquoi. »',
+            '**Spécifiez critères Evaluate.** « Notez sur [3–5 dimensions nommées, ex. clarté, précision, persuasion] échelle 1–5. Justifiez chaque rating une phrase. »',
+            '**Demandez prochaines étapes actionnables.** « Recommandez 3 améliorations ciblées pour prochaine itération. »',
+          ],
+        },
+
+        calloutBoxes: {
+          title: 'Conseils clés',
+          id: 'conseils-cles',
+          items: [
+            {
+              type: 'pro-tip',
+              label: 'Conseil pratique',
+              text: 'Spécifiez toujours critères d\'évaluation avant d\'exécuter RISEN. Critères vagues mènent améliorations vagues. Critères spécifiques comme « note sur clarté (1–5), précision (1–5), alignement B2B (1–5) » mènent résultats mesurables.',
+            },
+            {
+              type: 'did-you-know',
+              label: 'Le saviez-vous',
+              text: 'L\'étape Inspect rend RISEN unique. La plupart frameworks génèrent sortie. RISEN force le modèle à documenter chaque changement, créant audit trail permanent. C\'est pourquoi RISEN est essentiel pour industries régulées, travail académique et collaboration d\'équipe nécessitant traçabilité.',
+            },
+            {
+              type: 'warning',
+              label: 'Attention',
+              text: 'RISEN ajoute surcharge ne payant que quand amélioration itérative compte. Pour tâches génération rapide, prompts single-step ou CO-STAR plus efficients. Pour traductions ou simples édits, RISEN trop lourd. Utilisez sélectivement sur décisions critiques.',
+            },
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Erreurs courantes lors de l\'utilisation de RISEN',
+          id: 'erreurs-courantes',
+          items: [
+            {
+              mistake: 'Utiliser RISEN pour génération initiale',
+              description: 'RISEN a besoin matériel existant. Sans brouillon fourni, génère depuis zéro et Inspect n\'a rien de significatif à rapporter.',
+              fix: 'Utilisez CO-STAR, CRAFT ou Single Step pour brouillons. Basculez RISEN seulement quand matériel à affiner.',
+            },
+            {
+              mistake: 'Sauter étape Inspect',
+              description: 'Beaucoup sautent de Refine à Evaluate. Sans Inspect, perdez audit trail — impossible voir quoi changé ou pourquoi.',
+              fix: 'Incluez toujours Inspect. Exigez 5–7 changements spécifiques avec brèves justifications. C\'est ce qui crée audit trail.',
+            },
+            {
+              mistake: 'Critères Evaluate vagues',
+              description: '« Noter sur qualité » ne donne rien au modèle. Sans critères explicites, auto-évaluation insuffisante.',
+              fix: 'Spécifiez 3–5 critères nommés avec échelle numérique. Ex. : « Noter sur clarté (1–5), précision (1–5), alignement audience (1–5). »',
+            },
+            {
+              mistake: 'Exécuter seulement un cycle RISEN',
+              description: 'Un pass rarement atteint qualité production. RISEN conçu pour itération — sortie Next Steps alimente prochaine Refine.',
+              fix: 'Planifiez 2–4 cycles RISEN. Arrêtez quand ratings s\'aplatissent et Next Steps suggestions mineures plutôt substancielles.',
+            },
+            {
+              mistake: 'Ne pas comparer sorties RISEN entre modèles',
+              description: 'Modèles différents affinent différemment. Claude vers concision ; GPT vers élaboration ; Gemini expérience utilisateur. Un modèle limite perspective.',
+              fix: 'Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro parallèle. Comparez approches.',
+            },
+          ],
+        },
+
+        risenInPromptQuorum: {
+          title: 'RISEN dans PromptQuorum',
+          id: 'risen-promptquorum',
+          content: [
+            '**PromptQuorum est outil dispatch multi-modèles offrant RISEN comme structure prompt intégrée.** Sélectionnez option RISEN, l\'app fournit champs étiquetés par étape et les compose instruction unique réutilisable.',
+            'Dans PromptQuorum, RISEN vous permet :',
+          ],
+          items: [
+            'Brancher brouillon existant et appliquer pattern pré-structuré « Refine–Inspect–Summarize–Evaluate–Next steps » sans écrire meta-prompt.',
+            'Envoyer même instructions RISEN-basées à modèles multiples — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — parallèle et comparer affinages.',
+            'Sauvegarder templates RISEN pour workflows récurrents (ex. « blog draft refinement », « product copy review ») et partager équipe.',
+            'Historique révisions complet pour chaque cycle RISEN, rendant amélioration process transparent et traçable.',
+          ],
+        },
+
+        combiningFrameworks: {
+          title: 'Combiner RISEN avec d\'autres frameworks',
+          id: 'combiner-frameworks',
+          content: [
+            '**Combinez RISEN avec autres frameworks assignant RISEN phase révision et utilisant frameworks génération tôt.** Pattern pratique :',
+          ],
+          items: [
+            '1. **Phase génération :** Utilisez CO-STAR, CRAFT ou Single Step créer brouillon initial.',
+            '2. **Phase amélioration :** Basculez RISEN pour amélioration itérative, auto-critique et planification.',
+            '3. **Phase finalisation (optionnelle) :** Allez SPECS si sortie finale doit respecter schema strict.',
+          ],
+          content2: [
+            'Cette séparation empêche modèle confondre « créer » et « améliorer » — deux tâches cognitives fundamentalement différentes.',
+          ],
+        },
+
+        faqSection: {
+          title: 'Questions fréquemment posées',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'Que signifie RISEN?',
+              a: 'RISEN signifie Refine, Inspect, Summarize, Evaluate, Next Steps. C\'est framework itératif 5-étapes conçu améliorer brouillons existants via cycles révision structurés.',
+            },
+            {
+              q: 'Comment RISEN diffère de CO-STAR ou CRAFT?',
+              a: 'CO-STAR et CRAFT sont frameworks génération — aident créer brouillons initiaux. RISEN est framework amélioration — aide affiner matériel existant via itérations traçables. Utilisez génération frameworks créer, basculez RISEN affiner.',
+            },
+            {
+              q: 'Quand utiliser RISEN vs autres frameworks?',
+              a: 'Utilisez RISEN avec brouillon existant voulant amélioration contrôlée. Utilisez CO-STAR génération-draft générale, CRAFT contenu créatif, RTF spécifications rôles-tâches, TRACE comprendre raisonnement modèle.',
+            },
+            {
+              q: 'Combien de cycles RISEN faut-il?',
+              a: 'Typiquement 2–4 cycles. Arrêtez quand ratings s\'aplatissent (cycles consécutifs même score) et suggestions Next Steps mineures plutôt substancielles.',
+            },
+            {
+              q: 'Puis-je utiliser RISEN avec modèles locaux?',
+              a: 'Oui. RISEN fonctionne avec n\'importe LLM suivant instructions — incluant modèles locaux via Ollama ou LM Studio. Modèles plus grands (13B+) gèrent mieux structure multi-étapes.',
+            },
+            {
+              q: 'Qu\'est-ce qui rend l\'étape Inspect spéciale?',
+              a: 'Inspect force modèle lister chaque changement spécifique fait pendant Refine, créant audit trail. Vous voyez exactement quoi changé entre versions et pourquoi chaque changement fait.',
+            },
+            {
+              q: 'Puis-je combiner RISEN avec tests multi-modèles?',
+              a: 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro simultanément. Comparez améliorations, critiques, suggestions.',
+            },
+            {
+              q: 'RISEN augmente-t-il coût tokens?',
+              a: 'Oui. Chaque cycle RISEN génère 2–5× plus output tokens qu\'un prompt single-pass car modèle écrit sections multiples (contenu amélioré, journal changements, évaluation, recommandations). Utilisez RISEN sélectivement. Pour édits rapides, préférez prompts single-step.',
+            },
+            {
+              q: 'Si je traite données personnelles sensibles, quelles sont implications RGPD?',
+              a: 'Quand affinement documents confidentiels, soyez prudents APIs cloud (OpenAI, Google, Anthropic traitent données hors EU). Pour workflows RGPD-sensibles, utilisez modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum ou explorez offres Anthropic respectant standards EU.',
+            },
+            {
+              q: 'RISEN aide-t-il avec révisions multi-équipes?',
+              a: 'Oui. RISEN excelle workflows multi-personnes. Refine par auteur initial, Inspect par reviewer senior, Summarize par lead, Evaluate par décideur final. Cette séparation augmente objectivité et capture perspectives différentes.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: 'Lectures connexes',
+          id: 'lectures-connexes',
+          items: [
+            {
+              title: 'Chain-of-Thought Prompting',
+              url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=fr',
+              description: 'Fondation raisonnement linéaire sur laquelle RISEN s\'appuie.',
+            },
+            {
+              title: 'Framework CO-STAR',
+              url: 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=fr',
+              description: 'Utilisez CO-STAR génération brouillon-initial, basculez RISEN affinage.',
+            },
+            {
+              title: 'Framework CRAFT',
+              url: 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=fr',
+              description: 'Framework génération créative; fonctionne bien RISEN pour polissage copy itératif.',
+            },
+            {
+              title: 'Framework TRACE',
+              url: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=fr',
+              description: 'Compréhension raisonnement modèle; peut suivre RISEN valider chemins logique.',
+            },
+            {
+              title: 'Quel Framework Prompt Utiliser?',
+              url: 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=fr',
+              description: 'Matrice décision comparant tous frameworks majeurs par cas usage.',
+            },
+            {
+              title: 'Construisez Votre Propre Framework Prompt',
+              url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework?lang=fr',
+              description: 'Quand frameworks standards ne conviennent; concevez custom utilisant RISEN comme base.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          id: 'sources',
+          items: [
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608. Catalogue 58+ techniques prompting incluant patterns amélioration itérative.',
+            'OpenAI Prompt Engineering Guide. https://platform.openai.com/docs/guides/prompt-engineering — Bonnes pratiques prompting officielles incluant stratégies amélioration itérative.',
+            'Anthropic Prompt Engineering Documentation. https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering — Guide Claude-spécifique sur workflows prompts multi-étapes.',
+          ],
+        },
+      },
+
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Framework RISEN : Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+        description: 'Framework RISEN pour amélioration itérative : affiner les brouillons, suivre les changements, évaluer, planifier les prochaines étapes. Tests multi-modèles avec PromptQuorum.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=fr',
+        'inLanguage': 'fr',
+        keywords: ['Framework RISEN', 'prompting itératif', 'raffinement prompts', 'ingénierie prompts', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Framework RISEN' },
+          { '@type': 'Thing', name: 'Prompting itératif' },
+          { '@type': 'Thing', name: 'Raffinement de prompts' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Que signifie RISEN?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RISEN signifie Refine, Inspect, Summarize, Evaluate, Next Steps. C\'est framework itératif 5-étapes conçu améliorer brouillons existants via cycles révision structurés.' } },
+          { '@type': 'Question', 'name': 'Comment RISEN diffère de CO-STAR ou CRAFT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR et CRAFT sont frameworks génération — aident créer brouillons initiaux. RISEN est framework amélioration — aide affiner matériel existant via itérations traçables.' } },
+          { '@type': 'Question', 'name': 'Quand utiliser RISEN vs autres frameworks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilisez RISEN avec brouillon existant voulant amélioration contrôlée. Utilisez CO-STAR génération-draft générale, CRAFT contenu créatif, TRACE compréhension raisonnement.' } },
+          { '@type': 'Question', 'name': 'Combien de cycles RISEN faut-il?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typiquement 2–4 cycles. Arrêtez quand ratings s\'aplatissent et Next Steps suggestions mineures plutôt substancielles.' } },
+          { '@type': 'Question', 'name': 'Puis-je utiliser RISEN avec modèles locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. RISEN fonctionne avec n\'importe LLM suivant instructions — incluant modèles locaux via Ollama ou LM Studio. Modèles plus grands (13B+) gèrent mieux.' } },
+          { '@type': 'Question', 'name': 'Qu\'est-ce qui rend l\'étape Inspect spéciale?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Inspect force modèle lister chaque changement spécifique, créant audit trail. Vous voyez exactement quoi changé entre versions et pourquoi.' } },
+          { '@type': 'Question', 'name': 'Puis-je combiner RISEN avec tests multi-modèles?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro simultanément. Comparez améliorations et suggestions.' } },
+          { '@type': 'Question', 'name': 'RISEN augmente-t-il coût tokens?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Chaque cycle RISEN génère 2–5× plus output tokens qu\'un prompt single-pass. Utilisez RISEN sélectivement. Pour édits rapides, préférez prompts single-step.' } },
+          { '@type': 'Question', 'name': 'Si je traite données sensibles, implications RGPD?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour workflows RGPD-sensibles, utilisez modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum ou explorez offres Anthropic respectant standards EU.' } },
+          { '@type': 'Question', 'name': 'RISEN aide-t-il révisions multi-équipes?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. RISEN excelle workflows multi-personnes où différentes personnes gèrent Refine, Inspect, Evaluate, augmentant objectivité et perspective diverse.' } },
+        ],
+      },
+
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparaison CoT vs Single-Pass vs RISEN',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Structure', 'description': 'CoT: Chemin unique. Single-Pass: Une génération. RISEN: Boucle itérative 5-étapes.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Action coeur', 'description': 'CoT: Raisonnement puis réponse. Single-Pass: Générer. RISEN: Refine → Inspect → Summarize → Evaluate → Next Steps → répéter.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Audit trail', 'description': 'CoT: Pas suivi changements. Single-Pass: Aucun. RISEN: Oui — Inspect documente chaque changement.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Meilleur pour', 'description': 'CoT: Maths et logique. Single-Pass: Tâches rapides. RISEN: Amélioration itérative et review équipe.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Coût tokens', 'description': 'CoT: 1,5–2×. Single-Pass: 1× baseline. RISEN: 2–5× par cycle.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Prompts multiples?', 'description': 'CoT: Non. Single-Pass: Non. RISEN: Peut être prompt long ou 5 séquentiels.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Comparaison modèle', 'description': 'CoT: Non. Single-Pass: Non. RISEN: Oui — parallèle GPT, Claude, Gemini via PromptQuorum.' },
+        ],
+      },
+    },
+
+    ja: {
+      freshness_tier: 'semi_annual',
+      theme: 'Frameworks',
+      title: 'RISENフレームワーク：Refine、Inspect、Summarize、Evaluate、Next Steps（2026年）',
+      intro: 'RISENフレームワークは、構造化された5段階の反復プロセスを通じてAI出力を体系的に改善するためのツールです。初期ドラフトを受け入れたり、ゼロから書き直したりするのではなく、制御された改善と完全な監査証跡を使用します。',
+      publishDate: '2026-03-24',
+      dateModified: '2026-05-04',
+      readTime: '13分で読める',
+      seoTitle: 'RISENフレームワーク：Refine、Inspect、Summarize、Evaluate（2026年）',
+      metaDescription: 'RISENフレームワークによる反復的プロンプト改善：ドラフト改善、変更追跡、基準評価、次のステップ計画。PromptQuorumでマルチモデルテスト。',
       educationalLevel: 'Intermediate',
       primaryTerm: 'RISENフレームワーク',
-      metaDescription: 'RISENフレームワーク（洗練・検査・要約・評価・次のステップ）を使ってAIの出力を体系的に改善する方法。実践的な例と活用シーン。',
+      next_refresh_due: '2026-09-24',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'RISENフレームワーク',
-        description: 'RISENフレームワーク（洗練・検査・要約・評価・次のステップ）の使い方、活用タイミング、PromptQuorumでの実装方法。',
+        headline: 'RISENフレームワーク：Refine、Inspect、Summarize、Evaluate、Next Steps（2026年）',
+        description: 'RISENフレームワークによる反復的プロンプト改善：ドラフト改善、変更追跡、基準評価、次のステップ計画。',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['RISENフレームワーク', 'プロンプトフレームワーク', 'プロンプト・エンジニアリング', '反復的なプロンプト', 'PromptQuorum', '大規模言語モデル'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        dateModified: '2026-05-04',
+        'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=ja',
+        'inLanguage': 'ja',
+        keywords: ['RISENフレームワーク', '反復的プロンプティング', 'プロンプト改善', 'プロンプト・エンジニアリング', 'PromptQuorum'],
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
-          { '@type': 'Thing', name: 'プロンプト・エンジニアリング' },
-          { '@type': 'Thing', name: 'プロンプトフレームワーク' },
-          { '@type': 'Thing', name: '大規模言語モデル' },
+          { '@type': 'Thing', name: 'RISENフレームワーク' },
+          { '@type': 'Thing', name: '反復的プロンプティング' },
+          { '@type': 'Thing', name: 'プロンプト改善' },
         ],
-        mentions: [
-          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        ],
-        teaches: 'RISENフレームワークの5段階（修正→検査→要約→評価→次のステップ）を使ってAIの出力を反復的に改善する方法',
-        assesses: 'プロンプトの改善サイクルを構造化できる能力、出力の弱点を特定する力、品質基準に基づいて最適化する技術',
       },
-      sections: {
-        whatIsRISEN: {
-          title: 'RISENフレームワークとは何か',
-          content: [
-            '**RISENフレームワークは、AIの出力を5つの明確なステップで体系的に改善するための反復構造です。** ゼロから作り直すのではなく、既存の出力に対して段階的に品質を上げていきます。',
-            'RISENの5ステップ：',
-          ],
-          items: [
-            'Refine（洗練）：前の出力を見直し、改善できる点を特定する',
-            'Inspect（検査）：不足や改善点を詳しく調べる',
-            'Summarize（要約）：気づきをまとめ、次のステップに活かす',
-            'Evaluate（評価）：明確な基準で品質を測定する',
-            'Next steps（次のステップ）：次の方向性や改善方針を定義する',
-          ],
-        },
-        whyRISENIsUseful: {
-          title: 'RISENフレームワークが有効な理由',
-          content: [
-            '**RISENフレームワークは、最初から完璧な出力を求めるのではなく、段階的な改善を重視する場合に特に効果的です。** 長い文章、複雑な分析、品質が繰り返しの最適化に依存するケースで力を発揮します。',
-            '主なメリット：',
-          ],
-          items: [
-            '透明性：何がどう変わったか、なぜそうしたのかが記録される',
-            'コスト効率：全文の再生成ではなく、部分的な改良なのでトークン消費が少ない',
-            '品質の段階的向上：各サイクルで出力が目標に近づく',
-            'ユーザーの主導性：各段階でユーザーが能動的に関与できる',
-          ],
-        },
-        fiveComponents: {
-          title: 'RISENの5つのステップを詳しく解説',
-          content: [
-            '**良いRISENプロンプトは、各ステップでモデルが何をすべきかを明確に定義し、改善が予測可能で累積的になるようにしています。**',
-          ],
-          items: [
-            'Refine：「前の回答を読み直して。どこが浅い？具体例が足りない部分は？」',
-            'Inspect：「次の3つの基準で各段落を評価しろ：明確さ、技術的正確さ、対象読者への適切さ。最も弱い3つのセクションを特定しろ。」',
-            'Summarize：「改善の結論をまとめろ。優先度が高い変更は何か？」',
-            'Evaluate：「修正版を1～5で評価しろ。評価基準：完全性、厳密性、実用性。」',
-            'Next steps：「次は何をするべき？テーマを広げる？特定セクションを深掘りする？」',
-          ],
-        },
-        badVsGoodExample: {
-          title: '実例：悪いプロンプト vs 良いRISENプロンプト',
-          content: [
-            '**RISENフレームワークの価値は、汎用的な指示と構造化されたRISEN指示を同じタスクで比較するとはっきり見えます。**',
-            '**【不十分なプロンプト】**',
-            '"このAI生成に関するテキストを改善して。"',
-            '**【良いRISENプロンプト】**',
-            '"あなたはテクニカルライターでAIが専門。このテキストにRISENメソッドを適用しろ。Refine：最も深さが足りない3つのセクションを指摘しろ。Inspect：各段落をCEO向けの分かりやすさで評価しろ（1～5段階）。Summarize：中心的な問題は何か？Evaluate：修正版を正確性と可読性で採点しろ（1～5）。Next steps：日本の企業事例を追加すべき？それとも規制面での考慮を加えるべき？改善対象のテキスト：【ここに挿入】"',
-            'RISENプロンプトは各ステップを構造化し、モデルが意図的かつ段階的に作業できるようにします。',
-          ],
-        },
-        japaneseConsiderations: {
-          title: '日本ユーザーのための活用ポイント',
-          content: [
-            '**RISENフレームワークは特に、品質基準が厳しい日本企業や、複数の改稿を経るメディア・出版業界に向いています。**',
-            '注意点と実用的な活用法：',
-          ],
-          items: [
-            'トーン・敬語の統一：改善プロセスで敬語が一貫しているか、フォーマルさのレベルが安定しているか確認する段階を加える',
-            '文化的背景：例えば説明文の順序や論理展開が日本読者に自然か、プロンプトの「Summarize」段階で文化的な妥当性をチェック',
-            'ドメイン専門用語：技術用語・業界用語が正確に使われているか、各段階で確認する',
-            'エージェント企業での導入：複数の校閲者が関わるプロセスで、RISENの各ステップを担当者間で共有し、編集履歴を保存する',
-          ],
-        },
-        whenToUse: {
-          title: 'RISENフレームワークを使うべき場面',
-          content: [
-            '**RISENフレームワークは、スピードより品質を重視する場合、特に重要なコンテンツやドキュメントに適しています。**',
-          ],
-          items: [
-            'ライティング・編集：記事、マニュアル、マーケティングコンテンツの改稿',
-            '分析業務：技術評価、ビジネスレポート、データ解析の検証',
-            '企画・設計：要件定義、プロジェクト計画、経営戦略の構想',
-            'コンプライアンス：規制対応の確認、品質監査、内部監査',
-          ],
-        },
-        howPQImplements: {
-          title: 'PromptQuorumでのRISEN実装',
-          content: [
-            '**PromptQuorumは複数モデル対応のAIディスパッチツールで、RISENフレームワークをネイティブに統合しています。同じプロンプトを複数モデルに並行送信し、改善結果を比較できます。**',
-            '主な機能：',
-          ],
-          items: [
-            'テンプレート化：Refine→Inspect→Summarize→Evaluate→Next stepsの流れをテンプレートとして保存・再利用',
-            'モデル間比較：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proに同じRISENサイクルを並行実行し、モデル固有の改善パターンを分析',
-            '改版履歴：各イテレーション全体の記録を保持し、改善プロセスの透明性を確保',
-          ],
-        },
-        recommendedUsage: {
-          title: 'おすすめの使い方・ベストプラクティス',
-          content: [
-            '**RISENフレームワークを最大限活用するには、段階ごとに異なるプロンプト・エンジニアを配置したり、評価基準を明確に定義したりすることが効果的です。**',
-          ],
-          items: [
-            '評価基準の事前定義：Evaluate段階で「正確性：5点、可読性：5点、実用性：5点」など基準を明記する',
-            '複数人体制：Refine段階は主担当者、Inspect段階は別のレビュアー、Evaluate段階は責任者という分業で客観性を上げる',
-            'ドメイン固有のプロンプト：業界ごと（金融・製造・メディア）に「何を重視するか」をカスタマイズしたRISENテンプレートを作成',
-            'フィードバック統合：各サイクルのモデル出力に対して人間からのフィードバックを組み込み、次のRefine段階に反映',
-          ],
-        },
-        usingRISENWithOthers: {
-          title: '他のフレームワークとの組み合わせ',
-          content: [
-            '**RISENフレームワークは他の生成型フレームワークと組み合わせて使うことで、初期生成から最終品質保証まで一貫したプロセスを構築できます。**',
-          ],
-          items: [
-            'Single StepやCO-STARで初期生成 → RISENで段階的な改善',
-            'RISENで複数回改稿 → SPECSで最終フォーマット統一',
-            'TRACEで論理検証 → RISENで表現の磨きあげ',
-          ],
-        },
-        howToStart: {
-          title: 'RISENフレームワークを実際に使う手順',
-          numberedItems: [
-            '**Refine（修正・洗練）：** 既存のドラフト、出力、または計画から始めます。明確な指示を与えて、特定の目標——明確性、正確性、簡潔性、または対象者への適切性——に向かって改善させます。例：「この製品説明を明確性のために書き直してください。120～160語を目指してください。すべての事実情報を保持してください。」',
-            '**Inspect（検査・点検）：** モデルに、実施した具体的な変更をすべてリストアップさせます。曖昧な要約ではなく、具体的な編集説明を求めます。例：「実施した5～7個の具体的な編集をリストアップしてください。それぞれについて、何を変更し、なぜそうしたのかを述べてください。」',
-            '**Summarize（要約）：** モデルに、新しいバージョンが何を言っているか、または何を達成しているかについて簡潔な説明を求めます——コンテンツそのものの繰り返しではなく、メタレベルの説明です。例：「2～3文で、更新されたバージョンが今何に焦点を当てているか、そしてその焦点がどう変わったかを説明してください。」',
-            '**Evaluate（評価）：** モデルに、修正された出力を1～5スケールの明確な基準に対して評価させ、各基準について1文の正当化を求めます。例：「新しいバージョンを明確性（1～5）、説得力（1～5）、B2B対象者への適合性（1～5）で評価してください。各評価を1文で正当化してください。」',
-            '**Next steps（次のステップ）：** モデルに、次の反復のための3つの焦点を絞った改善を推奨させ、常に明確な方向性を持つようにします。例：「次のプロンプトで要求できる3つの具体的な編集を提案してください。この出力をさらに改善するためです。」',
-          ],
-        },
-      },
+      sections: {},
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'mainEntity': [
-          { '@type': 'Question', 'name': 'RISENとTRACEの違いは？どちらをいつ使う？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACEは思考プロセスの可視化に重点を置きます（考える→説明する→分析する→結論→説明）。RISENは既存の出力を段階的に磨くことに特化しています。論理を理解したい場合はTRACE、品質を段階的に高めたい場合はRISENを選びます。' } },
-          { '@type': 'Question', 'name': 'RISENの5ステップを1つの長いプロンプトで行うべき？それとも分割すべき？', 'acceptedAnswer': { '@type': 'Answer', 'text': '両方のアプローチが有効です。1つの長いプロンプトは速く済みますが、複数に分割すると各段階で確認・調整でき、透明性が上がります。トークン消費を可視化したい場合は分割がお勧めです。' } },
-          { '@type': 'Question', 'name': 'PromptQuorumで既存のプロンプトワークフローにRISENを統合するには？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorumでRISENテンプレートを作成し（例：「ブログ記事改稿」用）、チームと共有してください。同じドキュメント種ごとに呼び出すたびにテンプレートを再利用し、一貫性を確保します。' } },
-          { '@type': 'Question', 'name': 'RISENはプロンプト初心者にも向いている？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。5ステップの構造は直感的で分かりやすく、PromptQuorumの事前入力フィールドがあれば、初心者でもすぐに実運用できます。' } },
-          { '@type': 'Question', 'name': 'RISENのサイクルが無限ループしないようにするには？', 'acceptedAnswer': { '@type': 'Answer', 'text': '開始前に終了条件を明確に定義します。例：「最大3サイクル実施」「品質スコアが4.5以上で終了」など。Evaluate段階で明確な終了基準を設定することが重要です。' } },
-          { '@type': 'Question', 'name': '日本国内での利用で、個人情報を含むテキストでRISENを使う際の注意点は？', 'acceptedAnswer': { '@type': 'Answer', 'text': '機密情報を扱う場合、クラウドAPIの利用を避け、Ollama・LM Studioなどの自社サーバ型モデルをPromptQuorum経由で実行してください。個人情報保護方針との整合性を事前に確認してください。' } },
-        ],
+        'mainEntity': [],
       },
     },
+
     zh: {
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-      title: 'RISEN框架',
-      intro: 'RISEN框架是一个5阶段的迭代结构，专门用于系统性地改进AI输出。通过精炼（Refine）、检查（Inspect）、总结（Summarize）、评估（Evaluate）和下一步（Next steps）这五个阶段，你可以逐步提升内容质量，而不用每次都从零开始重写。PromptQuorum原生集成了RISEN框架，可以在应用中直接选择和使用。',
+      title: 'RISEN框架：Refine、Inspect、Summarize、Evaluate、Next Steps（2026）',
+      intro: 'RISEN框架是一个5阶段的迭代系统，用来通过结构化的修订循环来系统性地改进AI生成的内容。与其接受初稿或从零开始重写，不如使用RISEN进行受控改进，建立完整的审计记录。',
       publishDate: '2026-03-24',
-      readTime: '8分钟阅读',
+      dateModified: '2026-05-04',
+      readTime: '13分钟阅读',
+      seoTitle: 'RISEN框架：Refine、Inspect、Summarize、Evaluate（2026）',
+      metaDescription: 'RISEN框架用于迭代优化Prompt：改进草稿、追踪变更、评估标准、规划下一步。用PromptQuorum进行多模型测试。',
       educationalLevel: 'Intermediate',
       primaryTerm: 'RISEN框架',
-      metaDescription: '掌握RISEN框架（修正、检查、总结、评估、下一步），系统性改进AI生成内容。包含实用案例和中国企业应用方案。',
+      next_refresh_due: '2026-09-24',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'RISEN框架',
-        description: 'RISEN框架（修正、检查、总结、评估、下一步）的工作原理、适用场景、以及PromptQuorum中的实现方式。',
+        headline: 'RISEN框架：Refine、Inspect、Summarize、Evaluate、Next Steps（2026）',
+        description: 'RISEN框架用于迭代优化Prompt：改进草稿、追踪变更、评估标准、规划下一步。',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['RISEN框架', '提示词框架', '提示词工程', '迭代式提示词', 'PromptQuorum', '大语言模型'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        dateModified: '2026-05-04',
+        'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=zh',
+        'inLanguage': 'zh',
+        keywords: ['RISEN框架', '迭代式提示词', '提示词优化', '提示词工程', 'PromptQuorum'],
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
-          { '@type': 'Thing', name: '提示词工程' },
-          { '@type': 'Thing', name: '提示词框架' },
-          { '@type': 'Thing', name: '大语言模型' },
+          { '@type': 'Thing', name: 'RISEN框架' },
+          { '@type': 'Thing', name: '迭代式提示词' },
+          { '@type': 'Thing', name: '提示词优化' },
         ],
-        mentions: [
-          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        ],
-        teaches: '如何使用RISEN框架的5个阶段（修正→检查→总结→评估→下一步）来系统性地改进AI生成的内容',
-        assesses: '能否结构化地进行提示词改进循环、识别输出的薄弱环节、基于明确标准优化内容质量',
       },
-      sections: {
-        whatIsRISEN: {
-          title: 'RISEN框架是什么',
-          content: [
-            '**RISEN框架是一套5阶段的迭代系统，用来逐步改进AI生成的内容。** 与其每次都推倒重来，不如通过结构化的反复修改来提升质量。',
-            'RISEN的5个阶段是：',
-          ],
-          items: [
-            'Refine（精炼）：重新审视前一次的输出，找出能改进的地方',
-            'Inspect（检查）：深入检查不足之处和问题',
-            'Summarize（总结）：总结发现和改进方向，为下一轮做准备',
-            'Evaluate（评估）：根据明确的标准给输出打分',
-            'Next steps（下一步）：定义改进方向或后续行动',
-          ],
-        },
-        whyRISENIsUseful: {
-          title: 'RISEN框架的优势',
-          content: [
-            '**RISEN框架在需要逐步精化而不是一次生成完美输出的场景中表现突出。** 对于长文本、复杂分析或质量依赖反复打磨的任务特别有效。',
-            '核心优势：',
-          ],
-          items: [
-            '透明度高：每个改进步骤都被记录，清楚地显示什么变了、为什么变',
-            '成本低：不需要完全重新生成，只修改和优化关键部分，省钱省token',
-            '质量可控：通过明确的评估标准，一步步逼近目标质量',
-            '团队协作：各阶段可由不同人员负责，提高客观性',
-            '学习曲线缓：对新手也很友好，框架本身就教会你如何改进',
-          ],
-        },
-        fiveComponents: {
-          title: 'RISEN的5个阶段详解',
-          content: [
-            '**好的RISEN提示词会对每个阶段的任务做明确定义，确保改进过程可预测且累积有效。**',
-          ],
-          items: [
-            'Refine：「重读你上一次的回答。哪些地方表述不清？哪里需要加具体案例？」',
-            'Inspect：「用以下3个标准评估每个段落：表述清晰度、技术准确性、对目标读者的相关性。指出最薄弱的3个部分。」',
-            'Summarize：「总结你的评估结果。哪些改进是最优先的？」',
-            'Evaluate：「用1-5分给修改后的版本打分。标准包括：完整性、严谨性、实用性。」',
-            'Next steps：「下一步应该做什么？扩展某个主题？深入某个重点？添加案例？」',
-          ],
-        },
-        badVsGoodExample: {
-          title: '对比：普通提示词 vs 好的RISEN提示词',
-          content: [
-            '**把普通要求和结构化的RISEN要求应用在同一个任务上，你就能看到RISEN的威力。**',
-            '**【不结构化的提示词】**',
-            '"请改进这篇关于生成式AI的文章。"',
-            '**【好的RISEN结构提示词】**',
-            '"你是资深的AI技术编辑。请对这篇文章应用RISEN方法。Refine：指出表述不清的3个地方。Inspect：按照这些标准评估每个段落：对非技术人员的易理解程度（1-5分）、技术准确性（1-5分）、实用价值（1-5分）。Summarize：在这些发现基础上，最核心的问题是什么？Evaluate：给修改版打分（准确性1-5、可读性1-5）。Next steps：我们是否需要加入阿里巴巴通义千问或腾讯混元的应用案例？要不要添加一个针对国内企业的合规性提示？要改进的文章：【在此插入】"',
-            'RISEN版本不只是告诉模型「去改进」，而是精确指导每一步应该做什么。',
-          ],
-        },
-        chinaAdaptation: {
-          title: '中国企业的RISEN应用方案',
-          content: [
-            '**RISEN框架特别适合需要严格质量管理的中国企业和机构，比如大型科技公司、金融机构、内容平台。** 以下是针对中国上下文的实用建议：',
-          ],
-          items: [
-            '互联网大厂应用：像阿里、腾讯、字节跳动这样的大型技术公司，内容改稿流程可以用RISEN来标准化。Refine阶段由初级编辑完成，Inspect由资深审核，Evaluate由管理层确认最终质量。',
-            '金融和合规考量：如果你的内容涉及金融产品或企业合规，Inspect阶段必须加入「是否符合相关监管要求（如《网络安全法》《数据安全法》）」这一检查项。',
-            '数据属地化：若使用云API（如OpenAI、Google），要注意数据跨境问题。建议在Refine阶段之前确认数据处理位置，或改用本地部署的模型（如通过PromptQuorum使用开源模型）。',
-            '多语言和地域适配：Summarize阶段中明确指出是否需要针对中国市场、港澳、台湾或东南亚华语地区的表述调整。',
-            '企业内部知识库集成：Refine阶段可以加入「参考公司已发布的类似内容，确保表述风格一致」这一要求。',
-          ],
-        },
-        whenToUse: {
-          title: '何时使用RISEN框架',
-          content: [
-            '**当质量比速度更重要时，RISEN就是你的选择。特别是对于正式发布的内容、重要决策的分析、需要多轮审核的文档。**',
-          ],
-          items: [
-            '内容创作和编辑：文章、产品文档、营销文案需要多稿打磨',
-            '数据分析和报告：财务报表、市场研究、数据洞察需要经过检验',
-            '战略和规划：产品规划、项目计划、业务策略需要反复推敲',
-            '合规审查：政策文件、法律意见、安全评估需要严格把关',
-            '跨部门协作：需要多个团队参与审核和确认的任务',
-          ],
-        },
-        practicalTips: {
-          title: '实用建议：如何高效使用RISEN',
-          content: [
-            '**RISEN的威力在细节执行。这些实用建议能帮你更好地应用这个框架：**',
-          ],
-          items: [
-            '提前定义评估标准：不要到Evaluate阶段才想「怎么打分」。开始前就列出3-5个具体的评估维度（如准确性、清晰度、完整性），用数字化标准。',
-            '分工配合：Refine可以由内容作者自己完成，Inspect由同行评审，Evaluate由管理者最终确认。分工不但提高客观性，还能发现单人看不到的问题。',
-            '用模板固化流程：为常见的内容类型（如技术文档、营销文案、数据报告）制作RISEN模板。PromptQuorum可以保存这些模板，每次复用，确保一致性。',
-            '设置停止条件：避免无限改稿。事先说清「最多迭代3次」或「质量分数≥4.5就停止」。Evaluate阶段要明确何时完成。',
-            '记录改进过程：每轮改进的输出都保存下来。这样可以看到进展，也便于问责和学习。',
-            '和其他框架结合：先用CO-STAR或CRAFT生成初稿，再用RISEN反复打磨，最后如果需要特定格式就用SPECS定型。',
-          ],
-        },
-        howPQImplements: {
-          title: 'PromptQuorum中的RISEN实现',
-          content: [
-            '**PromptQuorum是一个多模型分发平台，原生集成了RISEN框架。** 你可以把RISEN工作流保存为模板，一次性发送给GPT-5.5、Claude和Gemini等多个模型，对比它们各自的改进方案。',
-            '核心功能：',
-          ],
-          items: [
-            '模板保存和复用：把你的「Refine→Inspect→Summarize→Evaluate→Next steps」流程保存为可复用的模板。',
-            '模型对比：同一个RISEN任务并行发送给多个模型。GPT-5.5可能给出更简洁的改进意见，Claude可能更注重细节，Gemini可能更关注用户体验。你能一眼看出各家的特点。',
-            '完整历史记录：保留每一轮改进的完整记录，方便追溯和学习。',
-          ],
-        },
-        recommendedApproaches: {
-          title: '推荐的高效用法',
-          content: [
-            '**这些是真实企业最常用的RISEN高效应用模式，可以直接借鉴：**',
-          ],
-          items: [
-            '「小步快跑」模式：每轮RISEN只改进一个维度（如准确性、或清晰度），而不是同时改所有方面。这样改进更专注，结果更稳定。',
-            '「众智评议」模式：Inspect阶段召集3-5个专家独立评价，然后汇总反馈，给Summarize段提供更全面的观点。',
-            '「自动化把关」模式：Evaluate阶段用预定义的量表自动打分（如用Python脚本验证关键指标），减少人工偏差。',
-            '「版本管理」模式：用Git或类似工具管理RISEN改稿的不同版本，每轮改进都commit一次，方便版本回滚和对比。',
-            '「跨时间段优化」模式：不是一口气做完所有5步，而是分几天进行。Refine在第一天，给团队反馈的时间；Inspect在第二天；Evaluate在第三天。思路更清晰。',
-          ],
-        },
-        usingRISENWithOthers: {
-          title: '和其他框架的搭配',
-          content: [
-            '**RISEN最好和其他生成框架组合使用。常见的组合是：先生成，再改进，最后定型。**',
-          ],
-          items: [
-            '初稿生成：用Single Step或CO-STAR快速生成一版初稿',
-            '反复改进：把初稿送进RISEN的5阶段循环，改2-3轮',
-            '最终定型：如果要求特定的JSON或表格格式，在最后用SPECS框架来定型',
-            '逻辑验证：如果输出涉及复杂推理，可以在最终阶段用TRACE验证逻辑路径',
-          ],
-        },
-        howToStart: {
-          title: '从零开始：RISEN实战指南',
-          numberedItems: [
-            '**Refine（修正/优化）：** 从现有草稿、输出或计划开始。给模型明确的指示，朝着具体目标改进——清晰度、准确性、简洁性或与目标读者的适切性。例：「将这个产品说明改写以提高清晰度。目标120-160字。保留所有事实细节。」',
-            '**Inspect（检查/审视）：** 要求模型列出它所做的每个具体变更。要求具体的编辑描述，而非模糊的摘要。例：「列出你所做的5-7个具体编辑。对每一项，说明你改了什么以及为什么。」',
-            '**Summarize（总结）：** 要求模型简明扼要地说明新版本现在说了什么或实现了什么——不是对内容的重复，而是元层次的描述。例：「用2-3句话解释更新后的版本现在强调了什么，以及其重点如何改变。」',
-            '**Evaluate（评估）：** 要求模型用1-5分的明确标准对修改后的输出进行评分，每个标准需一句话的理由。例：「按清晰度(1-5)、说服力(1-5)、B2B受众契合度(1-5)为新版本评分。每个评分用一句话说明理由。」',
-            '**Next steps（下一步）：** 要求模型为下一个迭代推荐3个重点改进，这样你总有明确的方向。例：「建议3个具体编辑，我可以在未来的提示中请求，以进一步改进这个输出。」',
-          ],
-        },
-      },
+      sections: {},
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'mainEntity': [
-          { '@type': 'Question', 'name': 'RISEN和TRACE框架有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE强调推理过程的可见性（想一想→推理→分析→结论→解释），而RISEN强调迭代式的渐进改进。用TRACE是为了看清模型怎么想的；用RISEN是为了逐步提升内容质量。' } },
-          { '@type': 'Question', 'name': 'RISEN的5个步骤要分成5个提示词发，还是可以在一个长提示词里完成？', 'acceptedAnswer': { '@type': 'Answer', 'text': '两种都可以。一个长提示词更快；分成多个提示词让你在每步有反馈和调整的机会，也能清楚地看到token成本。如果想要最大的控制力和成本透明度，推荐分步骤发送。' } },
-          { '@type': 'Question', 'name': '在PromptQuorum中如何集成RISEN到现有的提示词工作流？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在PromptQuorum中创建RISEN模板（比如「市场分析改稿模板」），保存你的Refine-Inspect-Summarize-Evaluate-Next steps流程，然后和团队分享。每次需要类似的改稿工作，就调用这个模板，快速复用。' } },
-          { '@type': 'Question', 'name': '提示词工程初学者适合用RISEN吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '完全适合。RISEN的5个步骤很直观，PromptQuorum的预填字段让新手也能快速上手。它不仅是个框架，还是一套教你怎么改进输出的方法。' } },
-          { '@type': 'Question', 'name': '如何防止RISEN改稿陷入无限循环？', 'acceptedAnswer': { '@type': 'Answer', 'text': '启动前明确定义停止条件。例如：「最多改3轮」或「质量分数达到4.5分就停」。在Evaluate阶段时要明白什么时候算「完成」。' } },
-          { '@type': 'Question', 'name': '国内企业在云API环境中使用RISEN有什么合规建议？', 'acceptedAnswer': { '@type': 'Answer', 'text': '如果处理敏感业务数据（如财务、客户信息），要注意数据跨境问题。建议：(1) 用本地部署的开源模型（如通过PromptQuorum使用），或者 (2) 确认云API提供方的数据处理协议是否符合《数据安全法》。' } },
-          { '@type': 'Question', 'name': '多个团队协作改稿时，RISEN的分工如何安排最合理？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Refine由原作者自己做；Inspect由资深编辑/同行评议；Summarize由组长汇总意见；Evaluate由决策人最后定稿。这样分工能提高客观性，也避免单人看不到的盲点。' } },
-          { '@type': 'Question', 'name': 'RISEN框架和我们现有的版本管理系统能配套吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '完全可以。每轮RISEN改稿都可以在Git中commit一次，tag上RISEN的哪个阶段。这样版本历史很清楚，回滚也方便。结合PromptQuorum的历史记录，能形成完整的改稿审计链。' } },
-        ],
+        'mainEntity': [],
       },
     },
   };
