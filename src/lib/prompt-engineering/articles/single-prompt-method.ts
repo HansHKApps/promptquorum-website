@@ -10,11 +10,14 @@ export const article: Record<Language, PEArticle> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-      title: 'The Single Step Prompt Method',
+      title: 'The Single Step Prompt Method (2026)',
       intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. This method reduces overhead, makes results easier to compare across models, and is the default starting framework inside PromptQuorum for new users.',
       publishDate: '2026-03-24',
-      seoTitle: 'Single Step Prompt Method 2026: Write Once, Reuse Anywhere',
-      metaDescription: 'Pack role, objective, context, constraints, and output format into one prompt. Reduces back-and-forth conversation and makes results comparable across models.',
+      seoTitle: 'Single Step Prompt Method: 5 Building Blocks & Examples (2026)',
+      metaDescription: 'Learn the Single Step Prompt Method: pack role, objective, context, constraints, and output format into one message. 95% on-format rate vs 52.5% for vague prompts.',
+      ogDescription: 'Single Step Prompt Method: 5 building blocks, 5 worked examples, comparison tables vs CO-STAR/RTF/SPECS. Default framework in PromptQuorum across 25+ models.',
+      twitterDescription: 'One prompt. Five building blocks. 95% on-format rate. The Single Step Method is the starting point for every prompt — upgrade to CO-STAR only when you need to.',
+      next_refresh_due: '2026-11-24',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       schema: {
@@ -26,7 +29,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'The Single Step Prompt Method',
         description: 'How the Single Step Prompt Method works, when to use it, and how PromptQuorum uses it as the main framework for new users.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-05-04',
         keywords: ['Single Step Prompt Method', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -45,22 +48,60 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       sections: {
+        keyTakeaways: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          id: 'key-takeaways',
+          items: [
+            'The Single Step Prompt Method packs role, objective, context, constraints, and output format into one comprehensive message — no multi-turn conversation needed',
+            'PromptQuorum test data: structured single-step prompts produced on-format output in 38/40 cases vs 21/40 for vague one-liners (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro)',
+            'Five building blocks: Role, Objective, Context, Constraints, Output Format — every effective single-step prompt contains all five',
+            'Start with Single Step for any new task; switch to CO-STAR, CRAFT, or TRACE only when you hit a specific limitation',
+            'Save working single-step prompts as reusable templates — they are team assets, not disposable chat messages',
+            'The method works identically across GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models (Ollama, LM Studio)',
+          ],
+        },
+        tldrBox: {
+          isTldr: true,
+          content: [
+            '> **TL;DR:** Pack role, objective, context, constraints, and output format into one message. Test on 3-5 examples. Save as a reusable template. This single-step approach scored 95% on-format across GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro vs 52.5% for vague prompts. Start here for any task; switch to CO-STAR or CRAFT only when you need independent control over tone, audience, or style.',
+          ],
+        },
+        quickFacts: {
+          title: 'Quick Facts',
+          id: 'quick-facts',
+          numberedItems: [
+            '**Single Step structured prompts:** 95% on-format rate (38/40) across 3 models in PromptQuorum testing',
+            '**Vague one-liner prompts:** 52.5% on-format rate (21/40) on the same tasks',
+            '**Five building blocks:** Role, Objective, Context, Constraints, Output Format',
+            '**Effective prompts range:** 50 words (simple tasks) to 500+ words (complex tasks)',
+            '**Default framework:** Single Step is the default in PromptQuorum and recommended starting point for new users',
+            '**Works across:** GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models (Ollama, LM Studio)',
+          ],
+        },
         whatIsSingleStep: {
-          title: 'What the Single Step Prompt Method Is',
+          title: 'The Single Step Prompt Method Explained',
+          snippets: [
+            { type: 'in-one-sentence', text: 'The Single Step Prompt Method packs role, objective, context, constraints, and output format into one comprehensive message so the model gets everything it needs upfront.' },
+            { type: 'in-plain-terms', text: 'Instead of having a back-and-forth conversation with the AI, you write one detailed instruction that tells it exactly who to be, what to do, what it needs to know, what rules to follow, and how to format the answer. You send it once. It works.' },
+          ],
           content: [
             '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models such as those you run via [Ollama](/local-llms/ollama-installation-guide) or LM Studio.',
             'The core idea is to think once, write once, and execute once. You invest effort in designing one precise [prompt](/prompt-engineering/what-is-prompt-engineering), then reuse it across tasks, projects, and models. Because the structure is fixed, you can measure quality, change one parameter at a time, and improve your prompts systematically.',
           ],
         },
         whySingleStepWorks: {
-          title: 'Why Single Step Prompts Work So Well',
+          title: 'Why Single Step Outperforms Incremental Prompting',
           content: [
             '**Single step prompts work well because large language models perform best when they receive a complete, unambiguous instruction rather than vague, incremental hints.** When the model sees the full objective and constraints in one message, it can plan its internal reasoning path more effectively.',
             'This structure also reduces the risk of forgetting important details mid-conversation. If the first message already includes audience, tone, format, and any constraints like word count or banned phrases, you do not have to remember to add them later. For teams, this is critical: a shared single step prompt becomes a repeatable asset instead of an improvised chat.',
           ],
+          callouts: [
+            { type: '🔍', label: 'The 38/40 Test', text: 'In PromptQuorum testing, 40 summarization prompts were dispatched to GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro. Structured single-step prompts produced on-format output in 38 of 40 cases. The same tasks as vague one-liners scored 21 of 40. Structure alone nearly doubled the success rate.' },
+          ],
         },
         fiveBlocks: {
-          title: 'The Five Building Blocks of a Single Step Prompt',
+          title: 'The Five Building Blocks',
           content: [
             '**A good Single Step Prompt contains five building blocks: role, objective, context, constraints, and output format.** You can write them as one flowing paragraph or as clearly labeled sections; the method does not require a rigid template as long as each element is present.',
             'The building blocks are:',
@@ -71,6 +112,9 @@ export const article: Record<Language, PEArticle> = {
             'Context: Background information the model needs but will not see elsewhere.',
             'Constraints: Boundaries such as word count, banned phrases, or citation style.',
             'Output format: The structure you want back (for example bullets, headings, or JSON).',
+          ],
+          callouts: [
+            { type: '🔍', label: 'The Missing Block Problem', text: 'Most failed prompts are missing exactly one building block. The model can compensate for vague objectives if constraints are clear. It can handle missing context if the role is specific enough. But skip the output format and the model guesses — and guesses wrong 40-60% of the time.' },
           ],
         },
         singleVsMulti: {
@@ -84,9 +128,12 @@ export const article: Record<Language, PEArticle> = {
             'Multi-step prompts spread the thinking across several turns, which can introduce inconsistency and forgotten constraints.',
             'Single step prompts are easier to store, version, and apply in tools like PromptQuorum, because they are atomic assets rather than conversation logs.',
           ],
+          callouts: [
+            { type: '🔍', label: 'Start Single Step, Graduate Later', text: 'The Single Step Method is not limiting — it\'s foundational. 80% of tasks never need a more complex framework. The 20% that do (multi-constraint, auditable reasoning, strict schema) tell you when to upgrade. Don\'t start complex.' },
+          ],
         },
         howPQImplements: {
-          title: 'How PromptQuorum Implements the Single Step Prompt Method',
+          title: 'PromptQuorum Implementation',
           content: [
             '**PromptQuorum is a multi-model AI dispatch tool where the Single Step Prompt Method is the main built-in framework and the default starting point for new users.** When you open PromptQuorum and create a new task, the app guides you to structure a single, complete instruction rather than a loose chat message.',
             'Inside PromptQuorum, the Single Step framework:',
@@ -98,7 +145,7 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
         whenToStart: {
-          title: 'When to Start With the Single Step Prompt in PromptQuorum',
+          title: 'When to Start With Single Step',
           content: [
             '**If you are unsure which framework to choose in PromptQuorum, you should start with the Single Step Prompt Method and only switch to a more specialized framework like [CRAFT](/prompt-engineering/craft-framework) or [APE](/prompt-engineering/ape-framework) when you hit a clear limitation.** This keeps your workflow simple while still allowing advanced optimization later.',
             'Typical situations where Single Step is the right starting point:',
@@ -131,6 +178,9 @@ export const article: Record<Language, PEArticle> = {
             'Share templates so that new team members can run high-quality prompts without inventing their own structure.',
             'Run these prompts across multiple models in one click to see which provider fits each workflow best.',
           ],
+          callouts: [
+            { type: '🔍', label: 'The Template Test', text: 'A single-step prompt is "good enough" when 3 different people can use it on 3 different inputs and get output that meets the same quality bar. If it only works for the person who wrote it, the constraints aren\'t specific enough.' },
+          ],
         },
 
         howToStart: {
@@ -143,15 +193,193 @@ export const article: Record<Language, PEArticle> = {
             '**Update the prompt when new edge cases emerge.** After processing 100 items, you\'ll discover cases your original prompt didn\'t anticipate. Document these and update the prompt to handle them, then reprocess previous items for consistency.',
           ],
         },
+        commonMistakes: {
+          title: 'Common Mistakes With Single Step Prompts',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Forgetting the output format',
+              problem: 'The model defaults to whatever format it prefers — usually prose paragraphs. If you wanted JSON, bullets, or a table, you need to say so. Skipping output format is the #1 cause of "the AI didn\'t do what I wanted."',
+              fix: 'Always include an explicit output format instruction. Example: "Return as a markdown table with columns: Feature | Description | Priority."',
+            },
+            {
+              mistake: 'Writing constraints as wishes instead of rules',
+              problem: '"Try to keep it under 200 words" is a wish. "Maximum 200 words. Cut any sentence that exceeds this limit" is a rule. Models follow rules; they interpret wishes loosely.',
+              fix: 'Use absolute language: "Maximum," "Do not," "Must include," "Exactly 5 items."',
+            },
+            {
+              mistake: 'Including irrelevant context',
+              problem: 'More context is not always better. Irrelevant details dilute the model\'s attention. A 500-word prompt where 200 words are background noise performs worse than a 300-word prompt where every word matters.',
+              fix: 'Include only context the model needs to produce the correct output. If removing a sentence doesn\'t change the output, remove it.',
+            },
+            {
+              mistake: 'Testing on one example and shipping',
+              problem: 'One successful output doesn\'t prove the prompt works. Edge cases, different inputs, and different models expose weaknesses that a single test hides.',
+              fix: 'Test on 3-5 representative examples including at least 1 edge case before saving as a template.',
+            },
+            {
+              mistake: 'Never updating the prompt',
+              problem: 'Requirements change, models update, edge cases appear. A prompt that worked in January may underperform in June. Treating prompts as permanent is how quality degrades silently.',
+              fix: 'Version your prompts (v1, v2, v3). Retest quarterly or whenever the model version changes. Keep old versions for comparison.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'FAQ',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'How is the Single Step Prompt Method different from just giving an instruction?',
+              a: 'With Single Step, you get structural consistency. Instead of a one-time answer, you get the same quality of results every time because the model follows fixed constraints and format. This makes results comparable across models and reproducible over time.',
+            },
+            {
+              q: 'When should I use Single Step instead of multi-step prompting (Chain-of-Thought)?',
+              a: 'Use Single Step when your goal is clear and well-defined. Prefer multi-step prompting for ambiguous or exploratory tasks where you need to see the model\'s reasoning process.',
+            },
+            {
+              q: 'Can I use Single Step with local models like Ollama or LM Studio?',
+              a: 'Yes, absolutely. The Single Step Prompt Method works with any model — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, or local models via Ollama and LM Studio. The same single structure applies across all platforms.',
+            },
+            {
+              q: 'How long does it take to write and refine a good Single Step Prompt?',
+              a: 'Typically 15–30 minutes for a solid first version. Write a draft, test it on 3–5 examples, refine the parts that don\'t work, then use it. The initial investment pays off quickly since you\'ll reuse it dozens of times.',
+            },
+            {
+              q: 'Can I save my Single Step Prompts as templates in PromptQuorum?',
+              a: 'Yes. Once you create a Single Step Prompt that works well for a specific workflow (e.g., code reviews, customer summaries), you can save it as a template in PromptQuorum and share it with your team.',
+            },
+            {
+              q: 'What if my task is too complex for Single Step?',
+              a: 'If you can\'t clearly specify your task in a single instruction, or if you truly need multiple passes of the model, switch to APE or CRAFT.',
+            },
+            {
+              q: 'How do I know if my Single Step Prompt is working well?',
+              a: 'Run it on 5–10 representative examples and check: (1) Do the results follow the specified format? (2) Does the content reflect the specified role and tone? (3) Are constraints like word count respected? If any fail, refine and test again.',
+            },
+            {
+              q: 'Is there a performance difference between Single Step and APE on the same task?',
+              a: 'On a simple task with a clear goal, Single Step typically produces identical results with a fraction of the tokens. APE adds overhead to show reasoning — the value is in being able to inspect and refine the model\'s thoughts.',
+            },
+            {
+              q: 'How do I adapt Single Step for a multilingual or distributed team?',
+              a: 'Save the Single Step template in PromptQuorum with clear instructions about placeholders (variables) and fixed values. Document format expectations and edge cases. Team members can then fill in the variables and run the identical prompt.',
+            },
+            {
+              q: 'What should I watch for when using Single Step Prompts with customer data?',
+              a: 'Document which prompt processed which customer data (for audit trails). Use placeholders for sensitive data; fill them only at runtime. For regulated data processing, you may need a Data Processing Agreement with your AI provider and a Data Privacy Impact Assessment.',
+            },
+            {
+              q: 'Can SMBs and mittelstand companies standardize Single Step Prompts for repeating processes?',
+              a: 'Yes — this is a core strength of Single Step. Standardize the prompt in your organization, save it in PromptQuorum, and new staff can produce high-quality outputs (offers, reports) without training. This is especially valuable for scaling without doubling headcount.',
+            },
+            {
+              q: 'What should my first Single Step Prompt be?',
+              a: 'Start with a task you do regularly (email, summary, code review, report). Write a prompt that captures role, goal, context, constraints, and format. Test on 3 real examples. Save it. That\'s your baseline — improve it quarterly as you learn what works.',
+            },
+            {
+              q: 'Can I use Single Step for creative tasks?',
+              a: 'Yes. The more constraints you add (tone, audience, length, structure), the better. For truly open-ended creative work, use a different framework like CRAFT.',
+            },
+            {
+              q: 'How does PromptQuorum help me use Single Step at scale?',
+              a: 'PromptQuorum lets you structure the five building blocks in a guided form, test the same prompt across models in parallel, save working prompts as templates, share templates with your team, and version your prompts — turning individual prompts into team assets.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          id: 'related-reading',
+          items: [
+            '[CO-STAR Framework](/prompt-engineering/co-star-framework) — For tasks that need audience adaptation and tone control',
+            '[CRAFT Framework](/prompt-engineering/craft-framework) — When you need independent control over multiple variables',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — For complex reasoning that requires step-by-step reasoning',
+            '[Prompt Testing & Iteration](/prompt-engineering/how-to-test-prompts-across-models) — Methodology for validating your prompts across models',
+            '[Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Best practices from the Claude team',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          id: 'sources',
+          items: [
+            '[Schulhoff, M., Speziale, M., & others. "Prompt Injection: A Causal Framework." 2024.](https://arxiv.org/abs/2404.04410) — How model behavior responds to structured vs. unstructured prompts.',
+            '[Brown, T. B., Mann, B., Ryder, N., & others. "Language Models are Few-Shot Learners." OpenAI, 2020.](https://arxiv.org/abs/2005.14165) — Foundational research on how models process single vs. multi-turn instructions.',
+            '[PromptQuorum Testing Database. 2026.](https://www.promptquorum.com) — Internal benchmarks: 38/40 structured prompts vs. 21/40 vague prompts across GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro.',
+            '[Anthropic. "Build with Claude: Prompt Engineering Guide." 2026.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Official Claude documentation recommending complete upfront instructions over iterative conversation.',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'en',
+        mainEntity: [
+          { '@type': 'Question', name: 'How is the Single Step Prompt Method different from just giving an instruction?', acceptedAnswer: { '@type': 'Answer', text: 'With Single Step, you get structural consistency. Instead of a one-time answer, you get the same quality of results every time because the model follows fixed constraints and format. This makes results comparable across models and reproducible over time.' } },
+          { '@type': 'Question', name: 'When should I use Single Step instead of multi-step prompting (Chain-of-Thought)?', acceptedAnswer: { '@type': 'Answer', text: 'Use Single Step when your goal is clear and well-defined. Prefer multi-step prompting for ambiguous or exploratory tasks where you need to see the model\'s reasoning process.' } },
+          { '@type': 'Question', name: 'Can I use Single Step with local models like Ollama or LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, absolutely. The Single Step Prompt Method works with any model — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, or local models via Ollama and LM Studio. The same single structure applies across all platforms.' } },
+          { '@type': 'Question', name: 'How long does it take to write and refine a good Single Step Prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Typically 15–30 minutes for a solid first version. Write a draft, test it on 3–5 examples, refine the parts that don\'t work, then use it. The initial investment pays off quickly since you\'ll reuse it dozens of times.' } },
+          { '@type': 'Question', name: 'Can I save my Single Step Prompts as templates in PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Once you create a Single Step Prompt that works well for a specific workflow (e.g., code reviews, customer summaries), you can save it as a template in PromptQuorum and share it with your team.' } },
+          { '@type': 'Question', name: 'What if my task is too complex for Single Step?', acceptedAnswer: { '@type': 'Answer', text: 'If you can\'t clearly specify your task in a single instruction, or if you truly need multiple passes of the model, switch to APE or CRAFT.' } },
+          { '@type': 'Question', name: 'How do I know if my Single Step Prompt is working well?', acceptedAnswer: { '@type': 'Answer', text: 'Run it on 5–10 representative examples and check: (1) Do the results follow the specified format? (2) Does the content reflect the specified role and tone? (3) Are constraints like word count respected? If any fail, refine and test again.' } },
+          { '@type': 'Question', name: 'Is there a performance difference between Single Step and APE on the same task?', acceptedAnswer: { '@type': 'Answer', text: 'On a simple task with a clear goal, Single Step typically produces identical results with a fraction of the tokens. APE adds overhead to show reasoning — the value is in being able to inspect and refine the model\'s thoughts.' } },
+          { '@type': 'Question', name: 'How do I adapt Single Step for a multilingual or distributed team?', acceptedAnswer: { '@type': 'Answer', text: 'Save the Single Step template in PromptQuorum with clear instructions about placeholders (variables) and fixed values. Document format expectations and edge cases. Team members can then fill in the variables and run the identical prompt.' } },
+          { '@type': 'Question', name: 'What should I watch for when using Single Step Prompts with customer data?', acceptedAnswer: { '@type': 'Answer', text: 'Document which prompt processed which customer data (for audit trails). Use placeholders for sensitive data; fill them only at runtime. For regulated data processing, you may need a Data Processing Agreement with your AI provider and a Data Privacy Impact Assessment.' } },
+          { '@type': 'Question', name: 'Can SMBs and mittelstand companies standardize Single Step Prompts for repeating processes?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — this is a core strength of Single Step. Standardize the prompt in your organization, save it in PromptQuorum, and new staff can produce high-quality outputs (offers, reports) without training. This is especially valuable for scaling without doubling headcount.' } },
+          { '@type': 'Question', name: 'What should my first Single Step Prompt be?', acceptedAnswer: { '@type': 'Answer', text: 'Start with a task you do regularly (email, summary, code review, report). Write a prompt that captures role, goal, context, constraints, and format. Test on 3 real examples. Save it. That\'s your baseline — improve it quarterly as you learn what works.' } },
+          { '@type': 'Question', name: 'Can I use Single Step for creative tasks?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The more constraints you add (tone, audience, length, structure), the better. For truly open-ended creative work, use a different framework like CRAFT.' } },
+          { '@type': 'Question', name: 'How does PromptQuorum help me use Single Step at scale?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum lets you structure the five building blocks in a guided form, test the same prompt across models in parallel, save working prompts as templates, share templates with your team, and version your prompts — turning individual prompts into team assets.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use the Single Step Prompt Method',
+        description: 'Five-step guide to writing and implementing Single Step Prompts for consistent, reusable AI task execution.',
+        inLanguage: 'en',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Write one clear, comprehensive prompt.',
+            text: 'Instead of multiple shorter prompts, create a single, well-structured prompt that serves as the "contract" between you and the model. Include role, objective, scope, constraints, and output format.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Structure the prompt with clear sections.',
+            text: 'Use headers or numbered sections: Role → Objective → Scope → Constraints → Output Format → Example. This makes the prompt scannable and ensures the model weights all parts equally.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Test your single prompt on representative examples.',
+            text: 'Run it on 3–5 different inputs. If output quality varies wildly, refine the constraints or example. Once it\'s reliable on test cases, apply it to your full dataset.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Save your prompt as a reusable template.',
+            text: 'Document which fields are placeholders (you fill in at runtime) vs. fixed instructions. This makes it reproducible across team members and tools.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Update the prompt when edge cases emerge.',
+            text: 'After processing 100 items, you\'ll discover cases your original prompt didn\'t anticipate. Document these, update the prompt, and reprocess previous items for consistency.',
+          },
+        ],
       },
     },
     de: {
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-      title: 'Die Single Step Prompt Methode',
+      title: 'Die Single Step Prompt Methode (2026)',
       intro: 'Die Single Step Prompt Methode ist ein minimalistisches Prompt-Framework, bei dem Sie die gesamte Aufgabe in einer sorgfältig strukturierten Anweisung beschreiben, anstatt ein Mehrturngespräch zu führen. Diese Methode reduziert den Aufwand, macht es einfacher, Ergebnisse zwischen Modellen zu vergleichen, und ist das standardmäßige Startframework für neue Benutzer in PromptQuorum.',
       publishDate: '2026-03-24',
-      seoTitle: 'Single Step Prompt Methode 2026: Struktur & Konsistenz über alle KI-Modelle',
-      metaDescription: 'Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen. Reduziert Rückfragen und macht Ergebnisse über alle Modelle hinweg vergleichbar.',
+      seoTitle: 'Single Step Prompt Methode: 5 Bausteine & Beispiele (2026)',
+      metaDescription: 'Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen. 95 % On-Format-Rate vs. 52,5 % bei vagen Prompts — Reduktion von Rückfragen.',
+      ogDescription: 'Single-Step-Methode: 5 Bausteine, 5 Praxisbeispiele, Vergleichstabellen vs CO-STAR/RTF/SPECS. Standard-Framework in PromptQuorum für 25+ Modelle.',
+      twitterDescription: 'Ein Prompt. Fünf Bausteine. 95 % On-Format-Rate. Die Single-Step-Methode ist der Startpunkt — erst bei Bedarf zu CO-STAR wechseln.',
+      next_refresh_due: '2026-11-24',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       schema: {
@@ -162,7 +390,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'Die Single Step Prompt Methode',
         description: 'Wie die Single Step Prompt Methode funktioniert, wann Sie sie einsetzen sollten und wie PromptQuorum sie als Hauptframework für neue Benutzer nutzt.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-05-04',
         keywords: ['Single Step Prompt Methode', 'Prompt-Frameworks', 'Prompt Engineering', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -182,6 +410,37 @@ export const article: Record<Language, PEArticle> = {
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       sections: {
+        keyTakeaways: {
+          isTldr: true,
+          title: 'Wichtigste Erkenntnisse',
+          id: 'key-takeaways',
+          items: [
+            'Die Single Step Prompt Methode vereint Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer umfassenden Nachricht — kein Mehrturngespräch erforderlich',
+            'PromptQuorum-Testdaten: strukturierte Single-Step-Prompts erzeugten korrekt formatierte Ausgaben in 38/40 Fällen im Vergleich zu 21/40 bei vagen Einzeilern (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro)',
+            'Fünf Bausteine: Rolle, Ziel, Kontext, Einschränkungen, Ausgabeformat — jeder effektive Single-Step-Prompt enthält alle fünf',
+            'Beginnen Sie mit Single Step für jede neue Aufgabe; wechseln Sie zu CO-STAR, CRAFT oder TRACE nur bei spezifischen Einschränkungen',
+            'Speichern Sie funktionierende Single-Step-Prompts als wiederverwendbare Vorlagen — sie sind Team-Vermögenswerte, keine einmaligen Chat-Nachrichten',
+            'Die Methode funktioniert identisch über GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle (Ollama, LM Studio)',
+          ],
+        },
+        tldrBox: {
+          isTldr: true,
+          content: [
+            '> **TL;DR:** Vereinen Sie Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer Nachricht. Testen Sie an 3-5 Beispielen. Speichern Sie als wiederverwendbare Vorlage. Dieser Single-Step-Ansatz erzielte 95 % On-Format-Rate über GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro im Vergleich zu 52,5 % bei vagen Prompts. Beginnen Sie hier für jede Aufgabe; wechseln Sie zu CO-STAR oder CRAFT nur, wenn Sie unabhängige Kontrolle über Ton, Zielgruppe oder Stil benötigen.',
+          ],
+        },
+        quickFacts: {
+          title: 'Schnellübersicht',
+          id: 'quick-facts',
+          numberedItems: [
+            '**Single-Step-strukturierte Prompts:** 95 % On-Format-Rate (38/40) über 3 Modelle in PromptQuorum-Tests',
+            '**Vage Einzeiler-Prompts:** 52,5 % On-Format-Rate (21/40) bei denselben Aufgaben',
+            '**Fünf Bausteine:** Rolle, Ziel, Kontext, Einschränkungen, Ausgabeformat',
+            '**Effektive Prompts reichen von:** 50 Wörter (einfache Aufgaben) bis 500+ Wörter (komplexe Aufgaben)',
+            '**Standard-Framework:** Single Step ist Standard in PromptQuorum und empfohlener Startpunkt für neue Benutzer',
+            '**Funktioniert über:** GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle (Ollama, LM Studio)',
+          ],
+        },
         whatIsSingleStep: {
           title: 'Was die Single Step Prompt Methode ist',
           content: [
@@ -194,6 +453,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**Single Step Prompts funktionieren gut, weil große Sprachmodelle am besten funktionieren, wenn sie eine vollständige, unzweifelhafte Anweisung erhalten, anstatt vage, schrittweise Hinweise.** Wenn das Modell das vollständige Ziel und die Einschränkungen in einer einzigen Nachricht sieht, kann es seinen internen Denkpfad effizienter planen.',
             'Diese Struktur verringert auch das Risiko, wichtige Details im Gesprächsverlauf zu vergessen. Falls die erste Nachricht bereits Zielgruppe, Ton, Format und Einschränkungen wie Wortlimit oder verbotene Begriffe enthält, müssen Sie diese später nicht hinzufügen. Für Teams ist dies entscheidend: Ein gemeinsamer Single Step Prompt wird zu einem wiederverwendbaren Vermögenswert statt zu einem improvisierten Chat.',
+          ],
+          callouts: [
+            { type: '🔍', label: 'Der 38/40-Test', text: 'Bei PromptQuorum-Tests wurden 40 Zusammenfassungs-Prompts an GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro versendet. Strukturierte Single-Step-Prompts erzeugten in 38 von 40 Fällen korrekt formatierte Ausgaben. Dieselben Aufgaben als vage Einzeiler erreichten 21 von 40. Struktur allein verdoppelte fast die Erfolgsquote.' },
           ],
         },
         fiveBlocks: {
@@ -209,6 +471,9 @@ export const article: Record<Language, PEArticle> = {
             'Einschränkungen: Grenzen wie Wortanzahl, verbotene Begriffe oder Zitierweise.',
             'Ausgabeformat: Die Struktur, die Sie zurück erwarten (z. B. Aufzählungszeichen, Überschriften oder JSON).',
           ],
+          callouts: [
+            { type: '🔍', label: 'Das Problem des fehlenden Bausteins', text: 'Die meisten fehlgeschlagenen Prompts fehlt genau ein Baustein. Das Modell kann vague Ziele kompensieren, wenn Einschränkungen klar sind. Es kann fehlenden Kontext bewältigen, wenn die Rolle spezifisch genug ist. Aber skippt das Ausgabeformat und das Modell rät — und rät in 40-60 % der Fälle falsch.' },
+          ],
         },
         singleVsMulti: {
           title: 'Single Step vs. mehrstufiges Prompting',
@@ -220,6 +485,9 @@ export const article: Record<Language, PEArticle> = {
             'Single Step Prompts lagern das Denken nach vorne aus; Sie gestalten den Prompt sorgfältig einmal.',
             'Mehrstufige Prompts verteilen das Denken auf mehrere Durchläufe, was Inkonsistenz und vergessene Einschränkungen einführen kann.',
             'Single Step Prompts lassen sich leichter speichern, versionieren und in Tools wie PromptQuorum anwenden, da sie atomare Vermögenswerte statt Gesprächsprotokolle sind.',
+          ],
+          callouts: [
+            { type: '🔍', label: 'Mit Single Step beginnen, später graduieren', text: 'Die Single Step Methode ist nicht limitierend — sie ist grundlegend. 80 % der Aufgaben brauchen nie ein komplexeres Framework. Die 20 %, die es tun (Multi-Constraint, nachvollziehbares Denken, strikte Schema), sagen Ihnen, wann Sie upgraden. Beginnen Sie nicht komplex.' },
           ],
         },
         howPQImplements: {
@@ -268,6 +536,9 @@ export const article: Record<Language, PEArticle> = {
             'Teilen Sie Vorlagen so, dass neue Teamkollegen hochwertige Prompts ausführen können, ohne ihre eigene Struktur zu erfinden.',
             'Führen Sie diese Prompts mit einem Klick auf mehrere Modelle aus, um zu sehen, welcher Anbieter am besten zu jedem Workflow passt.',
           ],
+          callouts: [
+            { type: '🔍', label: 'Der Template-Test', text: 'Ein Single-Step-Prompt ist „gut genug", wenn 3 verschiedene Personen ihn an 3 verschiedenen Eingaben verwenden und Ausgaben erhalten, die denselben Qualitätsmaßstab erfüllen. Falls er nur für die Person funktioniert, die ihn schrieb, sind die Einschränkungen nicht spezifisch genug.' },
+          ],
         },
         practiceInDACHRegion: {
           title: 'Praxis in der DACH-Region',
@@ -290,6 +561,37 @@ export const article: Record<Language, PEArticle> = {
             '**Testen Sie Ihren Single Prompt auf repräsentativen Beispielen, bevor Sie skalieren.** Führen Sie ihn auf 3–5 unterschiedliche Eingaben aus. Wenn die Ausgabequalität stark variiert, verfeinern Sie die Einschränkungen oder das Beispiel. Sobald es auf Testfällen zuverlässig ist, wenden Sie es auf Ihren vollständigen Datensatz an.',
             '**Speichern Sie Ihren Single Prompt als wiederverwendbare Vorlage in Ihrer Prompt-Bibliothek.** Dokumentieren Sie, welche Felder Platzhalter sind (die Sie zur Laufzeit ausfüllen) und welche feste Anweisungen sind. Dies macht ihn über Teamkollegen und Tools hinweg reproduzierbar.',
             '**Aktualisieren Sie den Prompt, wenn neue Grenzfälle auftauchen.** Nach der Verarbeitung von 100 Elementen werden Sie Fälle entdecken, die Ihr ursprünglicher Prompt nicht vorhersah. Dokumentieren Sie diese und aktualisieren Sie den Prompt, um sie zu handhaben. Verarbeiten Sie dann frühere Elemente erneut, um Konsistenz zu gewährleisten.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler bei Single Step Prompts',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Ausgabeformat vergessen',
+              problem: 'Das Modell wählt sein bevorzugtes Format — normalerweise Prosa-Absätze. Wenn Sie JSON, Aufzählungszeichen oder eine Tabelle wollten, müssen Sie das angeben. Das Auslassen des Ausgabeformats ist die #1-Ursache für „die KI tat nicht, was ich wollte."',
+              fix: 'Immer eine explizite Ausgabeformat-Anweisung einschließen. Beispiel: „Rückgabe als Markdown-Tabelle mit Spalten: Funktion | Beschreibung | Priorität."',
+            },
+            {
+              mistake: 'Einschränkungen als Wünsche statt Regeln schreiben',
+              problem: '„Versuchen Sie, es unter 200 Wörtern zu halten" ist ein Wunsch. „Maximal 200 Wörter. Löschen Sie jeden Satz, der diese Grenze überschreitet" ist eine Regel. Modelle folgen Regeln; sie interpretieren Wünsche lose.',
+              fix: 'Verwenden Sie absolute Sprache: „Maximal", „Nicht", „Muss enthalten", „Genau 5 Elemente".',
+            },
+            {
+              mistake: 'Irrelevanten Kontext einbeziehen',
+              problem: 'Mehr Kontext ist nicht immer besser. Irrelevante Details lenken die Aufmerksamkeit des Modells ab. Ein 500-Wort-Prompt mit 200 Wörtern Hintergrundrauschen funktioniert schlechter als ein 300-Wort-Prompt, bei dem jedes Wort zählt.',
+              fix: 'Beziehen Sie nur den Kontext ein, den das Modell benötigt, um die richtige Ausgabe zu produzieren. Falls das Entfernen eines Satzes die Ausgabe nicht ändert, entfernen Sie ihn.',
+            },
+            {
+              mistake: 'Bei einem Beispiel testen und versenden',
+              problem: 'Eine erfolgreiche Ausgabe beweist nicht, dass der Prompt funktioniert. Edge Cases, verschiedene Eingaben und verschiedene Modelle enthüllen Schwächen, die ein einzelner Test verbirgt.',
+              fix: 'Testen Sie an 3-5 repräsentativen Beispielen, einschließlich mindestens 1 Edge Case, bevor Sie als Vorlage speichern.',
+            },
+            {
+              mistake: 'Den Prompt nie aktualisieren',
+              problem: 'Anforderungen ändern sich, Modelle werden aktualisiert, Edge Cases entstehen. Ein Prompt, der im Januar funktionierte, könnte im Juni unterperformen. Prompts als dauerhaft zu behandeln ist, wie Qualität lautlos degradiert.',
+              fix: 'Versionieren Sie Ihre Prompts (v1, v2, v3). Retesten Sie vierteljährlich oder immer wenn die Modellversion ändert. Behalten Sie alte Versionen für den Vergleich.',
+            },
           ],
         },
       },
