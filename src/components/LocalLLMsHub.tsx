@@ -1007,11 +1007,11 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           </div>
 
           {/* PE Sidebar */}
-          <div className="mb-10 bg-blue-950/20 border border-blue-900/30 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-blue-100 mb-2">
+          <div className="mb-10 bg-blue-950/40 border border-blue-900/50 rounded-xl p-6">
+            <h3 className="text-lg font-bold text-blue-50 mb-2">
               {HUB_PE_SIDEBAR_TITLE[lang] ?? HUB_PE_SIDEBAR_TITLE['en']}
             </h3>
-            <p className="text-sm text-blue-200 mb-4">
+            <p className="text-sm text-blue-100 mb-4">
               {HUB_PE_SIDEBAR_BODY[lang] ?? HUB_PE_SIDEBAR_BODY['en']}
             </p>
             <div className="space-y-2">
