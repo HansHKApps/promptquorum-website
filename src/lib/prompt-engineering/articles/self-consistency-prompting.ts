@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'evergreen',
       theme: 'Techniques',
       title: 'Self-Consistency Prompting: Let the AI Check Its Own Work',
       intro: 'Self-consistency prompting is a technique where you ask the model to generate multiple reasoning paths for the same task and then aggregate the results, instead of trusting a single answer. This increases reliability on complex reasoning problems.',
