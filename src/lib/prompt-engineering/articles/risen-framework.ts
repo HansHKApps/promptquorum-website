@@ -681,14 +681,12 @@ export const article: Record<Language, PEArticle> = {
           id: 'mit-anderen-kombinieren',
           content: [
             '**Kombinieren Sie RISEN mit anderen Frameworks, indem Sie RISEN der Revisionsphase zuordnen und generierungsorientierte Frameworks früher in Ihrem Arbeitsablauf verwenden.** Ein praktisches Muster ist:',
-          ],
-          items: [
-            '1. **Generierungsphase:** Verwenden Sie CO-STAR, CRAFT oder Single Step, um den ersten Entwurf zu erstellen.',
-            '2. **Verbesserungsphase:** Wechseln Sie zu RISEN für iterative Verbesserung, Selbstkritik und Planung.',
-            '3. **Finalisierungsphase (optional):** Wechseln Sie zu SPECS, wenn die endgültige Ausgabe einem strikten Schema oder Format entsprechen muss.',
-          ],
-          content2: [
             'Diese Trennung verhindert, dass das Modell „Erstellen" und „Verbessern" vermischt — zwei fundamentally unterschiedliche kognitive Aufgaben.',
+          ],
+          numberedItems: [
+            'Verwenden Sie CO-STAR, CRAFT oder Single Step, um den ersten Entwurf zu erstellen.',
+            'Wechseln Sie zu RISEN für iterative Verbesserung, Selbstkritik und Planung.',
+            'Wechseln Sie zu SPECS, wenn die endgültige Ausgabe einem strikten Schema oder Format entsprechen muss (optional).',
           ],
         },
 
@@ -1097,14 +1095,12 @@ export const article: Record<Language, PEArticle> = {
           id: 'combiner-frameworks',
           content: [
             '**Combinez RISEN avec autres frameworks assignant RISEN phase révision et utilisant frameworks génération tôt.** Pattern pratique :',
-          ],
-          items: [
-            '1. **Phase génération :** Utilisez CO-STAR, CRAFT ou Single Step créer brouillon initial.',
-            '2. **Phase amélioration :** Basculez RISEN pour amélioration itérative, auto-critique et planification.',
-            '3. **Phase finalisation (optionnelle) :** Allez SPECS si sortie finale doit respecter schema strict.',
-          ],
-          content2: [
             'Cette séparation empêche modèle confondre « créer » et « améliorer » — deux tâches cognitives fundamentalement différentes.',
+          ],
+          numberedItems: [
+            'Utilisez CO-STAR, CRAFT ou Single Step créer brouillon initial.',
+            'Basculez RISEN pour amélioration itérative, auto-critique et planification.',
+            'Allez SPECS si sortie finale doit respecter schema strict (optionnelle).',
           ],
         },
 
@@ -1513,14 +1509,12 @@ export const article: Record<Language, PEArticle> = {
           id: 'konawase',
           content: [
             '**RISENを他フレームワークと組み合わせ、RISENを改善フェーズに割り当て、生成フレームワークを早期に使用します。** 実用パターン：',
-          ],
-          items: [
-            '1. **生成フェーズ：** CO-STAR、CRAFT、Single Step使い初期ドラフト作成',
-            '2. **改善フェーズ：** RISENに切り替え反復改善、自己批評、計画',
-            '3. **仕上げフェーズ（オプション）：** 最終出力が厳格スキーマに従う必要ならSPECS',
-          ],
-          content2: [
             'この分離は「作成」と「改善」を混在させないようにします — 2つの根本的に異なる認知タスク。',
+          ],
+          numberedItems: [
+            'CO-STAR、CRAFT、Single Step使い初期ドラフト作成',
+            'RISENに切り替え反復改善、自己批評、計画',
+            '最終出力が厳格スキーマに従う必要ならSPECS（オプション）',
           ],
         },
 
