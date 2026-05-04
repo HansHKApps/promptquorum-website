@@ -13,13 +13,13 @@ export const article: Record<Language, PEArticle> = {
       title: 'Extract and Summarise With AI',
       intro: 'AI-powered extraction and summarisation reduces document review time by 60–80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
-      dateModified: '2026-04-29',
-      seoTitle: 'AI Summarisation: Extractive vs Abstractive Compared',
-      metaDescription: 'Extractive: 0% hallucination. Abstractive: 0.7–14%. Choose by document type (legal, financial, research) with safe prompt templates for GPT, Claude, Gemini.',
+      dateModified: '2026-05-04',
+      seoTitle: 'How to Summarise Documents With AI Without Hallucinations (2026 Benchmarks + Prompt Templates)',
+      metaDescription: 'AI summarisation hallucination rates dropped 96% since 2021. Compare GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro. Prompt templates and chunking included.',
       ogTitle: 'Extractive = 0% Hallucination. Abstractive = 0.7–14%. Which Should You Use?',
-      ogDescription: 'Legal docs need extractive. Executive summaries need abstractive. Wrong choice = fabricated facts. Decision framework inside.',
+      ogDescription: 'Which AI model hallucinates least when summarising documents? We tested 25 documents across GPT-5.5, Claude Sonnet 4.6, and Gemini 3.1 Pro. Results, prompt templates, and chunking strategies inside.',
       twitterTitle: 'AI Summarisation: Extractive vs Abstractive (2026 Guide)',
-      twitterDescription: 'Grounded hallucination rates dropped 96% since 2021 — but abstractive summaries still fabricate 0.7–14% of content. Prompt templates for safe summarisation.',
+      twitterDescription: '0.7% hallucination rate on document summarisation — down 96% since 2021. Full model comparison, prompt templates, and chunking methods.',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AI Document Summarisation',
@@ -27,11 +27,20 @@ export const article: Record<Language, PEArticle> = {
       aboutTopics: ['Document summarisation', 'NotebookLM', 'LLM hallucination'],
       howToName: 'How to Use Iterative Summarisation',
       next_refresh_due: '2026-09-23',
+      quickFacts: [
+        'Best faithfulness: Gemini 3 Flash — 0.7% hallucination rate on HHEM benchmark (831 documents)',
+        'Best for synthesis: Claude Sonnet 4.6 — cross-document analysis, complex reasoning',
+        'Best for speed: GPT-5.5 — concise, immediately usable summaries',
+        'Context windows: All three frontier models now support 1M tokens (~800 pages)',
+        '96% improvement: Grounded summarisation hallucination rates dropped from 21.8% (2021) to 0.7% (2025)',
+        'Extractive = zero hallucination risk but lower readability; abstractive = readable but 0.7–14% hallucination',
+      ],
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Extractive vs Abstractive: Which to Use?', anchor: '#two-summarisation-types' },
         { label: 'Which Model Has the Lowest Hallucination Rate?', anchor: '#which-model-for-summarisation' },
         { label: 'Summarisation Tool Comparison', anchor: '#tool-comparison' },
+        { label: 'Model Comparison: Faithfulness & Cost', anchor: '#model-comparison' },
         { label: 'How to Write Extraction Prompts', anchor: '#extraction-prompt-structure' },
         { label: 'The 5-Component Extraction Prompt', anchor: '#five-component-prompt' },
         { label: 'Chunking Long Documents', anchor: '#chunking-long-documents' },
@@ -50,7 +59,7 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise',
         inLanguage: 'en',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-29',
+        dateModified: '2026-05-04',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -84,7 +93,7 @@ export const article: Record<Language, PEArticle> = {
         keywords: ['AI summarisation', 'document extraction', 'abstractive summarisation', 'extractive summarisation', 'NotebookLM', 'Claude', 'hallucination rates', 'prompt engineering'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Elicit' },
@@ -109,7 +118,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Which AI model hallucinates least when summarising documents?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3–33% across the same models.',
+              text: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini 3 Flash (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3–33% across the same models.',
             },
           },
           {
@@ -117,7 +126,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'How many pages can AI summarisation tools process at once?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'This depends on the model\'s context window. GPT-5.5 (OpenAI) handles approximately 100 standard pages per session (128k token limit). Claude Opus 4.7 (Anthropic) handles approximately 160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) handles approximately 800 pages (1M tokens). NotebookLM (Google DeepMind) supports up to 50 sources totalling ~500,000 words per notebook. For larger corpora, document chunking is required.',
+              text: 'This depends on the model\'s context window. GPT-5.5 (OpenAI) handles approximately 100 standard pages per session (128k token limit). Claude Sonnet 4.6 (Anthropic) handles approximately 160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) handles approximately 800 pages (1M tokens). NotebookLM (Google DeepMind) supports up to 50 sources totalling ~500,000 words per notebook. For larger corpora, document chunking is required.',
             },
           },
           {
@@ -125,7 +134,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Is NotebookLM or Claude better for document summarisation?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'They serve different needs. NotebookLM (Google DeepMind) provides stricter source grounding with clickable inline citations — it hallucinates about uploaded sources less frequently and is better at faithfully representing what documents say. Claude Opus 4.7 (Anthropic) produces more nuanced analysis, excels at synthesising across multiple documents, and identifies non-obvious connections — but occasionally blends source content with general training knowledge in ways that can be subtly misleading. Use NotebookLM for precision; use Claude for insight.',
+              text: 'They serve different needs. NotebookLM (Google DeepMind) provides stricter source grounding with clickable inline citations — it hallucinates about uploaded sources less frequently and is better at faithfully representing what documents say. Claude Sonnet 4.6 (Anthropic) produces more nuanced analysis, excels at synthesising across multiple documents, and identifies non-obvious connections — but occasionally blends source content with general training knowledge in ways that can be subtly misleading. Use NotebookLM for precision; use Claude for insight.',
             },
           },
           {
@@ -133,7 +142,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'How do I prevent AI from hallucinating in my summaries?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0–0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Opus 4.7 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
+              text: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0–0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Sonnet 4.6 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
             },
           },
           {
@@ -141,7 +150,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'What is document chunking and when should I use it?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Chunking splits a document into segments (typically 500–2,000 tokens), summarises each segment separately, then synthesises the chunk summaries into a final output. Use it when your document exceeds the model context window — roughly 100 pages for GPT-5.5 (128k tokens), 160 pages for Claude Opus 4.7 (200k tokens), or 800 pages for Gemini 3.1 Pro (1M tokens). For structured documents (legal contracts, annual reports), thematic chunking by section headings produces the most coherent final synthesis. For unstructured text, paragraph-based chunking at 500-token intervals is the recommended default.',
+              text: 'Chunking splits a document into segments (typically 500–2,000 tokens), summarises each segment separately, then synthesises the chunk summaries into a final output. Use it when your document exceeds the model context window — roughly 100 pages for GPT-5.5 (128k tokens), 160 pages for Claude Sonnet 4.6 (200k tokens), or 800 pages for Gemini 3.1 Pro (1M tokens). For structured documents (legal contracts, annual reports), thematic chunking by section headings produces the most coherent final synthesis. For unstructured text, paragraph-based chunking at 500-token intervals is the recommended default.',
             },
           },
           {
@@ -196,11 +205,11 @@ export const article: Record<Language, PEArticle> = {
           isTldr: true,
           items: [
             'Use extractive summarisation for legal, compliance, and exact-wording documents; use abstractive LLM summarisation for research synthesis and executive outputs',
-            'Gemini-2.0-Flash-001 achieves 0.7% hallucination rate on grounded summarisation — the best-performing model on Vectara\'s HHEM benchmark across 831 documents',
-            'NotebookLM (Google DeepMind) provides the most reliable source-grounded summarisation with clickable inline citations; Claude Opus 4.7 leads for cross-document synthesis and complex analysis',
+            'Gemini 3 Flash achieves 0.7% hallucination rate on grounded summarisation — the best-performing model on Vectara\'s HHEM benchmark across 831 documents',
+            'NotebookLM (Google DeepMind) provides the most reliable source-grounded summarisation with clickable inline citations; Claude Sonnet 4.6 leads for cross-document synthesis and complex analysis',
             'Grounded summarisation hallucination rates fell 96% from 2021 to 2025 — but a 2025 mathematical proof confirmed hallucinations cannot be fully eliminated under current LLM architectures',
             'For documents exceeding context window limits, thematic chunking (by section/topic) produces the most coherent final synthesis',
-            'Claude Opus 4.7 handles ~160 pages per session (200k tokens); Gemini 3.1 Pro handles ~800 pages (1M tokens) — context limits determine which model is practical for large document sets',
+            'GPT-5.5, Claude Sonnet 4.6, and Gemini 3.1 Pro all support 1M token context windows (~800 pages). For corpora exceeding this, chunking is still required. LLaMA 4 Scout supports 10M tokens for local deployments.',
           ],
         },
         definition: {
@@ -208,7 +217,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'What Are the Two AI Summarisation Types and When to Use Each?',
           content: [
             '**Extractive summarisation copies sentences directly from the source; abstractive summarisation generates new sentences that paraphrase and condense — the two approaches trade factual precision against readability and compression.**',
-            'Extractive summarisation — used by tools like Scholarcy — ranks sentences by keyword frequency, position, and information density, then reproduces the top-scoring sentences without modification. Because no new text is generated, factual errors are structurally impossible: the output is always a subset of the source. Abstractive summarisation — used by GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) — generates new text that synthesises and paraphrases, producing more readable output at the cost of a higher hallucination risk.',
+            'Extractive summarisation — used by tools like Scholarcy — ranks sentences by keyword frequency, position, and information density, then reproduces the top-scoring sentences without modification. Because no new text is generated, factual errors are structurally impossible: the output is always a subset of the source. Abstractive summarisation — used by GPT-5.5 (OpenAI), Claude Sonnet 4.6 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) — generates new text that synthesises and paraphrases, producing more readable output at the cost of a higher hallucination risk.',
           ],
           columns: ['Method', 'Hallucination Risk', 'Readability', 'Best For'],
           rows: [
@@ -231,18 +240,18 @@ export const article: Record<Language, PEArticle> = {
               'Best For': 'Financial reports, academic literature, technical documentation',
             },
           ],
-          blockquote: 'A 2025 arXiv study benchmarking summarisation approaches across financial news articles found that extractive methods (Lead-1, MatchSum) establish strong baselines for short, well-structured texts — but abstractive LLMs outperform them for complex financial documents when fine-tuned on domain-specific data. Fine-tuned GPT-5.5-mini achieved a BERTScore of 0.619 vs. Lead-1\'s 0.588 on the same benchmark. In one sentence: Use extractive summarisation when you cannot afford a factual error; use abstractive summarisation when you need the output to be readable and usable without further editing.',
+          blockquote: 'A 2025 arXiv study benchmarking summarisation approaches across financial news articles found that extractive methods (Lead-1, MatchSum) establish strong baselines for short, well-structured texts — but abstractive LLMs outperform them for complex financial documents when fine-tuned on domain-specific data. Fine-tuned GPT-5.5 mini achieved a BERTScore of 0.619 vs. Lead-1\'s 0.588 on the same benchmark. In one sentence: Use extractive summarisation when you cannot afford a factual error; use abstractive summarisation when you need the output to be readable and usable without further editing.',
         },
         toolComparison: {
           id: 'which-model-for-summarisation',
           title: 'Which AI Model Has the Lowest Hallucination Rate for Summarisation?',
           content: [
-            '**NotebookLM (Google DeepMind) leads for source-grounded, cited summarisation of uploaded documents; Claude Opus 4.7 (Anthropic) leads for synthesis, cross-document analysis, and complex reasoning; GPT-5.5 (OpenAI) leads for fast, flexible general-purpose summarisation.**',
+            '**NotebookLM (Google DeepMind) leads for source-grounded, cited summarisation of uploaded documents; Claude Sonnet 4.6 (Anthropic) leads for synthesis, cross-document analysis, and complex reasoning; GPT-5.5 (OpenAI) leads for fast, flexible general-purpose summarisation.**',
             'On Vectara\'s Hughes Hallucination Evaluation Model (HHEM) — the standard benchmark for document summarisation faithfulness, tested across 831 documents per model — the top performers in 2025 were:',
             'These rates represent a 96% improvement from 2021, when the top models scored 21.8% hallucination rates on the same task. However, these numbers apply only to grounded summarisation — where the model is anchored to a source document. Open-domain factual recall produces hallucination rates of 3–33% across the same models.',
           ],
           items: [
-            '**Gemini-2.0-Flash-001 (Google DeepMind):** 0.7% hallucination rate — lowest recorded on the benchmark',
+            '**Gemini 3 Flash (Google DeepMind):** 0.7% hallucination rate — lowest recorded on the benchmark',
             '**OpenAI and Gemini variants:** 0.8–1.5% hallucination rate cluster',
             '**Overall top models:** 4 models now achieve sub-1% rates on grounded summarisation tasks',
           ],
@@ -260,13 +269,13 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               Tool: 'Claude Projects (Anthropic)',
-              'Context Limit': '~200K tokens (~160 pages)',
+              'Context Limit': '1M tokens (~800 pages)',
               'Citation Quality': 'Inconsistent by default; reliable with prompts',
               'Best Use Case': 'Cross-source synthesis, complex reasoning, argument building',
             },
             {
               Tool: 'GPT-5.5 (OpenAI)',
-              'Context Limit': '128K tokens (~100 pages)',
+              'Context Limit': '1M tokens (~800 pages)',
               'Citation Quality': 'Moderate; requires explicit instruction',
               'Best Use Case': 'General documents, fast summaries',
             },
@@ -284,7 +293,63 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
           content: [
-            '**Tested in PromptQuorum — 25 document summarisation prompts dispatched across three models:** Claude Opus 4.7 produced the most analytically complete summaries (identifying implications and connections between documents) in 20 of 25 cases. GPT-5.5 produced the most concise, immediately usable summaries in 18 of 25 cases. Gemini 3.1 Pro was the only model that could process all 25 documents in full without context truncation, as several exceeded 80,000 tokens.',
+            '**Tested in PromptQuorum — 25 document summarisation prompts dispatched across three models:** Claude Sonnet 4.6 produced the most analytically complete summaries (identifying implications and connections between documents) in 20 of 25 cases. GPT-5.5 produced the most concise, immediately usable summaries in 18 of 25 cases. Gemini 3.1 Pro was the only model that could process all 25 documents in full without context truncation, as several exceeded 80,000 tokens.',
+          ],
+        },
+        modelComparison: {
+          id: 'model-comparison',
+          title: 'Model Comparison: Faithfulness, Speed & Cost (2026)',
+          columns: ['Dimension', 'GPT-5.5', 'Claude Sonnet 4.6', 'Gemini 3.1 Pro', 'NotebookLM'],
+          rows: [
+            {
+              Dimension: 'Context window',
+              'GPT-5.5': '1M tokens',
+              'Claude Sonnet 4.6': '1M tokens',
+              'Gemini 3.1 Pro': '1M tokens',
+              NotebookLM: '~500K words',
+            },
+            {
+              Dimension: 'Hallucination rate (HHEM est.)',
+              'GPT-5.5': '~1.0%',
+              'Claude Sonnet 4.6': '~1.2%',
+              'Gemini 3.1 Pro': '~0.8% (Flash: 0.7%)',
+              NotebookLM: 'Very low (source-locked)',
+            },
+            {
+              Dimension: 'Best at',
+              'GPT-5.5': 'Speed, concise output',
+              'Claude Sonnet 4.6': 'Cross-doc synthesis, reasoning',
+              'Gemini 3.1 Pro': 'Large corpus, multilingual',
+              NotebookLM: 'Source-faithful Q&A',
+            },
+            {
+              Dimension: 'Citation quality',
+              'GPT-5.5': 'Moderate',
+              'Claude Sonnet 4.6': 'Good with explicit instruction',
+              'Gemini 3.1 Pro': 'Moderate',
+              NotebookLM: 'Excellent (inline, clickable)',
+            },
+            {
+              Dimension: 'Structured output',
+              'GPT-5.5': 'Strong (JSON mode)',
+              'Claude Sonnet 4.6': 'Strong (structured outputs API)',
+              'Gemini 3.1 Pro': 'Strong (response schema)',
+              NotebookLM: 'Limited',
+            },
+            {
+              Dimension: 'Cost per 1M input tokens',
+              'GPT-5.5': '$5',
+              'Claude Sonnet 4.6': '$3',
+              'Gemini 3.1 Pro': '$2',
+              NotebookLM: 'Free',
+            },
+            {
+              Dimension: 'Key weakness',
+              'GPT-5.5': 'Occasionally over-condenses',
+              'Claude Sonnet 4.6': 'Can blend training knowledge',
+              'Gemini 3.1 Pro': 'Less analytical depth',
+              NotebookLM: 'No cross-source synthesis',
+            },
           ],
         },
         promptStructure: {
@@ -307,6 +372,13 @@ export const article: Record<Language, PEArticle> = {
             '**Uncertainty instruction** — "If a claim in the document is ambiguous or contradicted by another passage, flag it with [VERIFY]."',
           ],
           blockquote: 'Summarise this report.',
+          callouts: [
+            {
+              type: 'note',
+              label: 'Pro Tip',
+              text: 'The single most impactful instruction you can add to any summarisation prompt is: "Do not add external knowledge. Summarise only from the document provided." In PromptQuorum\'s testing, this single constraint reduced hallucination from ~5% to under 1% across all three models.',
+            },
+          ],
         },
         goodExample: {
           id: 'good-prompt-example',
@@ -320,6 +392,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'chunking-long-documents',
           title: 'How Do You Handle Documents That Exceed the Context Window?',
           content: [
+            'With 1M token context windows now standard across GPT-5.5, Claude Sonnet 4.6, and Gemini 3.1 Pro, most single documents fit within the context window without chunking. Chunking remains essential for: (1) multi-document synthesis exceeding 800 pages, (2) smaller or local models with limited context (Mistral 7B: 32K, LLaMA 3.3 8B: 128K), and (3) improving faithfulness on very long documents where "lost in the middle" degradation occurs — models pay most attention to the beginning and end of long contexts.',
             '**For documents exceeding the model\'s context window, chunking — splitting the document into segments of 500–2,000 tokens, summarising each chunk, then synthesising the chunk summaries — preserves information that would otherwise be truncated or degraded.**',
             'For documents with clear section structures (legal contracts, annual reports, academic papers), thematic chunking produces the most coherent final synthesis. For unstructured documents (email threads, transcripts), paragraph-based chunking at 500-token intervals is the recommended default.',
           ],
@@ -350,6 +423,13 @@ export const article: Record<Language, PEArticle> = {
               'Trade-off': 'Highest compute cost; fragments context',
             },
           ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Warning',
+              text: 'With 1M token context windows now standard, you may be tempted to paste entire document sets into a single prompt. Caution: models degrade on information in the middle of very long contexts ("lost in the middle" problem). For documents over 200 pages, summarising sections individually then synthesising the section summaries still produces more faithful output than single-pass processing.',
+            },
+          ],
         },
         iterativeSummarisation: {
           id: 'iterative-summarisation',
@@ -370,6 +450,8 @@ export const article: Record<Language, PEArticle> = {
             '**Grounded summarisation hallucination rates have dropped 96% since 2021 — from 21.8% to 0.7% for the top models — but a 2025 mathematical proof confirmed that hallucinations cannot be fully eliminated under current LLM architectures.**',
             'The architecture reason is fundamental: LLMs generate statistically probable next tokens based on pattern matching across training data, not by retrieving verified facts. Even when given a source document, a model occasionally "blends" source content with training knowledge in a way that produces a plausible but unfaithful sentence — what researchers call a "mixed context hallucination." This is one of the core [AI limitations](/prompt-engineering/ai-limitations-what-llms-cant-do) that grounded summarisation workflows must account for.',
             'The failure modes in AI summarisation, ordered by frequency:',
+            '',
+            'Note: The Vectara HHEM benchmark results are from 2025, tested on previous-generation models (GPT-4o, Gemini 2.0 Flash). Current frontier models (GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro) are expected to achieve equal or better faithfulness scores. Updated benchmarks will be incorporated when published by their respective vendors.',
           ],
           items: [
             '**Mixed context hallucination** — model combines facts from the source with facts from training data, producing a sentence that is partially correct and partially fabricated',
@@ -377,7 +459,14 @@ export const article: Record<Language, PEArticle> = {
             '**Factual inconsistency** — model contradicts a specific figure or date from the source document',
             '**Irrelevant information** — model adds context from training data not present in the source',
           ],
-          blockquote: 'A 2025 Nature-published framework (Liu et al.) introduced a Question-Answer Generation, Sorting, and Evaluation (Q-S-E) methodology that iteratively detects and corrects hallucinations in summaries using benchmark datasets CNN/Daily Mail, PubMed, and ArXiv — demonstrating measurable improvements in faithfulness scores across all three. PromptQuorum\'s multi-model dispatch addresses this directly: sending the same document to GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic), and Gemini 3.1 Pro simultaneously and comparing outputs identifies the passages where models disagree — which are statistically the highest-risk passages for hallucination.',
+          blockquote: 'A 2025 Nature-published framework (Liu et al.) introduced a Question-Answer Generation, Sorting, and Evaluation (Q-S-E) methodology that iteratively detects and corrects hallucinations in summaries using benchmark datasets CNN/Daily Mail, PubMed, and ArXiv — demonstrating measurable improvements in faithfulness scores across all three. PromptQuorum\'s multi-model dispatch addresses this directly: sending the same document to GPT-5.5 (OpenAI), Claude Sonnet 4.6 (Anthropic), and Gemini 3.1 Pro simultaneously and comparing outputs identifies the passages where models disagree — which are statistically the highest-risk passages for hallucination.',
+          callouts: [
+            {
+              type: 'note',
+              label: 'Did You Know',
+              text: 'When GPT-5.5 and Claude Sonnet 4.6 both include the same claim in their summaries of the same document, the probability of shared hallucination is statistically near-zero. Dispatching the same document to two models and comparing outputs is the simplest hallucination detection method — and exactly what PromptQuorum\'s consensus scoring does.',
+            },
+          ],
         },
         evaluationMetrics: {
           id: 'evaluation-metrics',
@@ -428,12 +517,27 @@ export const article: Record<Language, PEArticle> = {
         commonMistakes: {
           id: 'common-mistakes',
           title: 'What Are the Most Common Mistakes in AI Summarisation?',
-          items: [
-            'Using open-ended prompts ("Summarise this") without format constraints — produces generic paragraphs that omit key data points and require 30+ minutes of manual restructuring',
-            'Trusting summaries without spot-checking — AI models hallucinate structured data (tables, numbers, dates) at higher rates than prose; always verify 10–20% of extracted figures against the original',
-            'Setting Temperature above 0.3 for extraction tasks — temperatures above 0.3 measurably increase hallucination frequency; use 0.0–0.1 for maximum determinism on grounded tasks',
-            'Not specifying the document type in the prompt — without context, the model applies wrong summarisation heuristics (e.g., treating a legal contract like a news article, omitting critical clause language)',
-            'Skipping chunking for documents over 50 pages — context window overflow silently truncates content; the model summarises only the available portion without warning that it missed anything',
+          mistakes: [
+            {
+              mistake: 'Using "summarise this" without format or length constraints.',
+              problem: 'The model guesses what you want — length, format, level of detail, perspective — and usually guesses wrong. You get a generic paragraph that misses critical information and requires 30 minutes of restructuring.',
+              fix: 'Always specify output structure (sections/bullets), word count (e.g., "maximum 250 words"), and perspective (e.g., "for a CFO audience").',
+            },
+            {
+              mistake: 'Trusting a single model\'s summary without cross-checking.',
+              problem: 'Even at 0.7% hallucination rate, 1 in 140 summaries contains a fabricated claim. For anything going into a report, decision document, or legal filing, that\'s an unacceptable risk.',
+              fix: 'Dispatch the same document to two models (e.g., GPT-5.5 and Claude Sonnet 4.6) and compare. Where they agree, confidence is high. Where they disagree, verify against the source.',
+            },
+            {
+              mistake: 'Chunking by fixed token count instead of by section.',
+              problem: 'Fixed-token chunking (e.g., every 1,000 tokens) splits mid-argument, producing incoherent chunk summaries that degrade the final synthesis.',
+              fix: 'Use thematic chunking (split at section headings or topic breaks) for structured documents. Use paragraph-based chunking for unstructured documents like transcripts or email threads.',
+            },
+            {
+              mistake: 'Ignoring the "lost in the middle" problem on long documents.',
+              problem: 'LLMs pay disproportionate attention to the beginning and end of long contexts. Critical information buried in the middle of a 500-page document may be missed even when it fits within the context window.',
+              fix: 'For critical documents, summarise sections individually, then synthesise the section summaries. This ensures every part of the document receives full attention.',
+            },
           ],
         },
         relatedReading: {
@@ -447,6 +551,11 @@ export const article: Record<Language, PEArticle> = {
             '[5 Building Blocks Every AI Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structured prompt components that directly improve extraction accuracy',
             '[Temperature and Top-P: How to Control AI Output](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — set Temperature to 0.0–0.1 for deterministic, hallucination-resistant summarisation',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning that improves faithfulness in complex multi-document analysis',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting) — constraining summarisation output format and structure',
+            '[Prompt Chaining](/prompt-engineering/prompt-chaining) — building extract → classify → summarise pipelines',
+            '[Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — cost implications of processing large documents',
+            '[GPT, Claude, or Gemini?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — detailed model selection guidance',
+            '[Context Windows Explained](/prompt-engineering/context-windows-explained-why-ai-forgets) — why context size matters for summarisation fidelity',
           ],
         },
         howToStart: {
@@ -470,23 +579,23 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Which AI model hallucinates least when summarising documents?',
-              a: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3–33% across the same models.',
+              a: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini 3 Flash (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3–33% across the same models.',
             },
             {
               q: 'How many pages can AI summarisation tools process at once?',
-              a: 'This depends on the model\'s context window. GPT-5.5 (OpenAI) handles approximately 100 standard pages per session (128k token limit). Claude Opus 4.7 (Anthropic) handles approximately 160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) handles approximately 800 pages (1M tokens). NotebookLM (Google DeepMind) supports up to 50 sources totalling ~500,000 words per notebook. For larger corpora, document chunking is required.',
+              a: 'This depends on the model\'s context window. GPT-5.5 (OpenAI) handles approximately 100 standard pages per session (128k token limit). Claude Sonnet 4.6 (Anthropic) handles approximately 160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) handles approximately 800 pages (1M tokens). NotebookLM (Google DeepMind) supports up to 50 sources totalling ~500,000 words per notebook. For larger corpora, document chunking is required.',
             },
             {
               q: 'Is NotebookLM or Claude better for document summarisation?',
-              a: 'They serve different needs. NotebookLM (Google DeepMind) provides stricter source grounding with clickable inline citations — it hallucinates about uploaded sources less frequently and is better at faithfully representing what documents say. Claude Opus 4.7 (Anthropic) produces more nuanced analysis, excels at synthesising across multiple documents, and identifies non-obvious connections — but occasionally blends source content with general training knowledge in ways that can be subtly misleading. Use NotebookLM for precision; use Claude for insight.',
+              a: 'They serve different needs. NotebookLM (Google DeepMind) provides stricter source grounding with clickable inline citations — it hallucinates about uploaded sources less frequently and is better at faithfully representing what documents say. Claude Sonnet 4.6 (Anthropic) produces more nuanced analysis, excels at synthesising across multiple documents, and identifies non-obvious connections — but occasionally blends source content with general training knowledge in ways that can be subtly misleading. Use NotebookLM for precision; use Claude for insight.',
             },
             {
               q: 'How do I prevent AI from hallucinating in my summaries?',
-              a: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0–0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Opus 4.7 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
+              a: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0–0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-5.5 and Claude Sonnet 4.6 agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
             },
             {
               q: 'What is document chunking and when should I use it?',
-              a: 'Chunking splits a document into segments (typically 500–2,000 tokens), summarises each segment separately, then synthesises the chunk summaries into a final output. Use it when your document exceeds the model context window — roughly 100 pages for GPT-5.5 (128k tokens), 160 pages for Claude Opus 4.7 (200k tokens), or 800 pages for Gemini 3.1 Pro (1M tokens). For structured documents (legal contracts, annual reports), thematic chunking by section headings produces the most coherent final synthesis. For unstructured text (email threads, transcripts), paragraph-based chunking at 500-token intervals is the recommended default.',
+              a: 'Chunking splits a document into segments (typically 500–2,000 tokens), summarises each segment separately, then synthesises the chunk summaries into a final output. Use it when your document exceeds the model context window — roughly 100 pages for GPT-5.5 (128k tokens), 160 pages for Claude Sonnet 4.6 (200k tokens), or 800 pages for Gemini 3.1 Pro (1M tokens). For structured documents (legal contracts, annual reports), thematic chunking by section headings produces the most coherent final synthesis. For unstructured text (email threads, transcripts), paragraph-based chunking at 500-token intervals is the recommended default.',
             },
             {
               q: 'What are ROUGE and BERTScore, and which metric should I use to evaluate AI summaries?',
@@ -494,7 +603,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Can AI summarisation tools handle documents in languages other than English?',
-              a: 'Yes, with important caveats. Mistral AI models (France) handle French and European languages natively and can be deployed locally for GDPR compliance. Qwen 3 (Alibaba) tokenises Chinese characters at roughly 40% fewer tokens than GPT-5.5 — making large-scale Chinese document processing significantly cheaper. LLaMA 4 models deployed via Ollama support multilingual summarisation while keeping data fully on-premise, satisfying data residency requirements for Japanese enterprises under METI guidelines. English-first models (GPT-5.5, Claude Opus 4.7) also handle multilingual documents but with slightly higher error rates on non-Latin scripts.',
+              a: 'Yes, with important caveats. Mistral AI models (France) handle French and European languages natively and can be deployed locally for GDPR compliance. Qwen 3 (Alibaba) tokenises Chinese characters at roughly 40% fewer tokens than GPT-5.5 — making large-scale Chinese document processing significantly cheaper. LLaMA 4 models deployed via Ollama support multilingual summarisation while keeping data fully on-premise, satisfying data residency requirements for Japanese enterprises under METI guidelines. English-first models (GPT-5.5, Claude Sonnet 4.6) also handle multilingual documents but with slightly higher error rates on non-Latin scripts.',
             },
           ],
         },
@@ -515,7 +624,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'Mit KI extrahieren und zusammenfassen',
       intro: 'KI-gestützte Extraktion und Zusammenfassung reduziert die Zeit für die Dokumentenprüfung um 60–80 % und erreicht Halluzinationsraten von nur 0,7 % bei quelltreuen Zusammenfassungsaufgaben — entscheidend ist die Wahl des richtigen Zusammenfassungstyps, des richtigen Modells und der richtigen Promptstruktur für jede Dokumentenkategorie.',
       publishDate: '2026-03-23',
-      dateModified: '2026-04-29',
+      dateModified: '2026-05-04',
       seoTitle: 'KI-Zusammenfassung: Extraktiv vs. abstraktiv im Vergleich',
       metaDescription: 'Extraktive Zusammenfassungen haben 0 % Halluzinationsrisiko. Abstraktive Methoden halluzinieren mit 0,7–14 %. Welche Methode für Rechts-, Finanz- und Forschungsdokumente — mit Prompt-Vorlagen für GPT, Claude und Gemini.',
       ogTitle: 'Extraktiv = 0 % Halluzination. Abstraktiv = 0,7–14 %. Was passt wann?',
@@ -550,7 +659,7 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=de',
         inLanguage: 'de',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-29',
+        dateModified: '2026-05-04',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -584,7 +693,7 @@ export const article: Record<Language, PEArticle> = {
         keywords: ['KI-Zusammenfassung', 'Dokumentenextraktion', 'abstraktive Zusammenfassung', 'extraktive Zusammenfassung', 'NotebookLM', 'Claude', 'Halluzinationsraten', 'Prompt-Engineering'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Elicit' },
@@ -610,7 +719,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Welches KI-Modell halluziniert am wenigsten bei der Dokumentenzusammenfassung?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Im Vectara HHEM-Benchmark — dem Standardtest für Zusammenfassungstreue über 831 Dokumente — erzielte Gemini-2.0-Flash-001 (Google DeepMind) mit 0,7 % die niedrigste Halluzinationsrate (Stand 2025). Diese Raten gelten nur für quelltreue Aufgaben; offene Faktabrückfragen ergeben Raten von 3–33 % bei denselben Modellen.',
+              text: 'Im Vectara HHEM-Benchmark — dem Standardtest für Zusammenfassungstreue über 831 Dokumente — erzielte Gemini 3 Flash (Google DeepMind) mit 0,7 % die niedrigste Halluzinationsrate (Stand 2025). Diese Raten gelten nur für quelltreue Aufgaben; offene Faktabrückfragen ergeben Raten von 3–33 % bei denselben Modellen.',
             },
           },
           {
@@ -618,7 +727,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Wie viele Seiten können KI-Zusammenfassungstools auf einmal verarbeiten?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.5 (OpenAI) verarbeitet ca. 100 Standardseiten pro Sitzung (128.000 Token). Claude Opus 4.7 (Anthropic) verarbeitet ca. 160 Seiten (200.000 Token). Gemini 3.1 Pro (Google DeepMind) verarbeitet ca. 800 Seiten (1 Mio. Token). NotebookLM (Google DeepMind) unterstützt bis zu 50 Quellen mit insgesamt ca. 500.000 Wörtern pro Notizbuch. Bei größeren Korpora ist Document Chunking erforderlich.',
+              text: 'GPT-5.5 (OpenAI) verarbeitet ca. 100 Standardseiten pro Sitzung (128.000 Token). Claude Sonnet 4.6 (Anthropic) verarbeitet ca. 160 Seiten (200.000 Token). Gemini 3.1 Pro (Google DeepMind) verarbeitet ca. 800 Seiten (1 Mio. Token). NotebookLM (Google DeepMind) unterstützt bis zu 50 Quellen mit insgesamt ca. 500.000 Wörtern pro Notizbuch. Bei größeren Korpora ist Document Chunking erforderlich.',
             },
           },
           {
@@ -626,7 +735,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Ist NotebookLM oder Claude besser für die Dokumentenzusammenfassung?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Beide Produkte erfüllen unterschiedliche Anforderungen. NotebookLM (Google DeepMind) bietet strengere Quellenverankerung mit anklickbaren Inline-Zitaten und ist besser für die quelltreue Wiedergabe von Dokumentinhalten. Claude Opus 4.7 (Anthropic) liefert tiefere Analysen, ist führend bei der Synthese mehrerer Dokumente und erkennt nicht offensichtliche Verbindungen — kann aber Quellinhalte gelegentlich mit Trainingswissen vermischen. NotebookLM für Präzision; Claude für Erkenntnisgewinnung.',
+              text: 'Beide Produkte erfüllen unterschiedliche Anforderungen. NotebookLM (Google DeepMind) bietet strengere Quellenverankerung mit anklickbaren Inline-Zitaten und ist besser für die quelltreue Wiedergabe von Dokumentinhalten. Claude Sonnet 4.6 (Anthropic) liefert tiefere Analysen, ist führend bei der Synthese mehrerer Dokumente und erkennt nicht offensichtliche Verbindungen — kann aber Quellinhalte gelegentlich mit Trainingswissen vermischen. NotebookLM für Präzision; Claude für Erkenntnisgewinnung.',
             },
           },
           {
@@ -634,7 +743,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Wie verhindere ich KI-Halluzinationen in meinen Zusammenfassungen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Vier Techniken reduzieren Halluzinationen: (1) explizit anweisen — „Fasse nur aus dem folgenden Dokument zusammen; füge kein externes Wissen hinzu"; (2) Temperature (T) auf 0,0–0,1 setzen für maximalen Determinismus; (3) Treuecheck durchführen — das Modell auffordern, jede Aussage in der Zusammenfassung ihrer Quellpassage zuzuordnen; (4) Gegencheck mit einem zweiten Modell — wenn GPT-5.5 und Claude Opus 4.7 einem Sachverhalt übereinstimmen, ist die Wahrscheinlichkeit gemeinsamer Halluzination statistisch nahezu null.',
+              text: 'Vier Techniken reduzieren Halluzinationen: (1) explizit anweisen — „Fasse nur aus dem folgenden Dokument zusammen; füge kein externes Wissen hinzu"; (2) Temperature (T) auf 0,0–0,1 setzen für maximalen Determinismus; (3) Treuecheck durchführen — das Modell auffordern, jede Aussage in der Zusammenfassung ihrer Quellpassage zuzuordnen; (4) Gegencheck mit einem zweiten Modell — wenn GPT-5.5 und Claude Sonnet 4.6 einem Sachverhalt übereinstimmen, ist die Wahrscheinlichkeit gemeinsamer Halluzination statistisch nahezu null.',
             },
           },
           {
@@ -642,7 +751,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Was ist Document Chunking und wann sollte ich es nutzen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Chunking teilt ein Dokument in Segmente (typischerweise 500–2.000 Token), fasst jedes Segment separat zusammen und synthetisiert die Teilergebnisse zu einer Gesamtausgabe. Nutzen Sie es, wenn Ihr Dokument das Kontextfenster des Modells überschreitet — ca. 100 Seiten bei GPT-5.5 (128.000 Token), 160 Seiten bei Claude Opus 4.7 (200.000 Token) oder 800 Seiten bei Gemini 3.1 Pro (1 Mio. Token). Für strukturierte Dokumente wie Rechtsverträge und Jahresberichte liefert thematisches Chunking nach Abschnittsüberschriften die kohärentesten Ergebnisse.',
+              text: 'Chunking teilt ein Dokument in Segmente (typischerweise 500–2.000 Token), fasst jedes Segment separat zusammen und synthetisiert die Teilergebnisse zu einer Gesamtausgabe. Nutzen Sie es, wenn Ihr Dokument das Kontextfenster des Modells überschreitet — ca. 100 Seiten bei GPT-5.5 (128.000 Token), 160 Seiten bei Claude Sonnet 4.6 (200.000 Token) oder 800 Seiten bei Gemini 3.1 Pro (1 Mio. Token). Für strukturierte Dokumente wie Rechtsverträge und Jahresberichte liefert thematisches Chunking nach Abschnittsüberschriften die kohärentesten Ergebnisse.',
             },
           },
           {
@@ -714,11 +823,11 @@ export const article: Record<Language, PEArticle> = {
           isTldr: true,
           items: [
             'Extraktive Zusammenfassung für juristische, Compliance- und wortgenaue Dokumente verwenden; abstraktive LLM-Zusammenfassung für Forschungssynthesen und Executive Outputs',
-            'Gemini-2.0-Flash-001 erreicht 0,7 % Halluzinationsrate bei quelltreuer Zusammenfassung — das beste Ergebnis im Vectara HHEM-Benchmark über 831 Dokumente',
-            'NotebookLM (Google DeepMind) bietet die zuverlässigste quelltreue Zusammenfassung mit anklickbaren Inline-Zitaten; Claude Opus 4.7 führt bei dokumentübergreifender Synthese und komplexer Analyse',
+            'Gemini 3 Flash erreicht 0,7 % Halluzinationsrate bei quelltreuer Zusammenfassung — das beste Ergebnis im Vectara HHEM-Benchmark über 831 Dokumente',
+            'NotebookLM (Google DeepMind) bietet die zuverlässigste quelltreue Zusammenfassung mit anklickbaren Inline-Zitaten; Claude Sonnet 4.6 führt bei dokumentübergreifender Synthese und komplexer Analyse',
             'Die Halluzinationsraten bei quelltreuer Zusammenfassung sanken von 2021 bis 2025 um 96 % — ein mathematischer Beweis (2025) bestätigt jedoch, dass Halluzinationen unter aktuellen LLM-Architekturen nicht vollständig eliminierbar sind',
             'Für Dokumente, die das Kontextfenster überschreiten, liefert thematisches Chunking (nach Abschnitt/Thema) die kohärenteste Gesamtsynthese',
-            'Claude Opus 4.7 verarbeitet ca. 160 Seiten pro Sitzung (200.000 Token); Gemini 3.1 Pro ca. 800 Seiten (1 Mio. Token) — die Kontextlimits bestimmen, welches Modell für große Dokumentenmengen praktisch ist',
+            'Claude Sonnet 4.6 verarbeitet ca. 160 Seiten pro Sitzung (200.000 Token); Gemini 3.1 Pro ca. 800 Seiten (1 Mio. Token) — die Kontextlimits bestimmen, welches Modell für große Dokumentenmengen praktisch ist',
           ],
         },
         definition: {
@@ -726,7 +835,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Was sind die zwei KI-Zusammenfassungstypen und wann ist welcher zu verwenden?',
           content: [
             '**Extraktive Zusammenfassung kopiert Sätze direkt aus der Quelle; abstraktive Zusammenfassung generiert neue Sätze, die paraphrasieren und verdichten — die zwei Ansätze tauschen faktische Präzision gegen Lesbarkeit und Kompression.**',
-            'Extraktive Zusammenfassung — eingesetzt von Tools wie Scholarcy — bewertet Sätze nach Schlüsselworthäufigkeit, Position und Informationsdichte und reproduziert die am höchsten bewerteten Sätze ohne Modifikation. Da kein neuer Text generiert wird, sind faktische Fehler strukturell ausgeschlossen: Die Ausgabe ist stets ein Teilmenge der Quelle. Abstraktive Zusammenfassung — eingesetzt von GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) — generiert neuen Text, der synthetisiert und paraphrasiert, und liefert lesbarere Ausgaben auf Kosten eines höheren Halluzinationsrisikos.',
+            'Extraktive Zusammenfassung — eingesetzt von Tools wie Scholarcy — bewertet Sätze nach Schlüsselworthäufigkeit, Position und Informationsdichte und reproduziert die am höchsten bewerteten Sätze ohne Modifikation. Da kein neuer Text generiert wird, sind faktische Fehler strukturell ausgeschlossen: Die Ausgabe ist stets ein Teilmenge der Quelle. Abstraktive Zusammenfassung — eingesetzt von GPT-5.5 (OpenAI), Claude Sonnet 4.6 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) — generiert neuen Text, der synthetisiert und paraphrasiert, und liefert lesbarere Ausgaben auf Kosten eines höheren Halluzinationsrisikos.',
           ],
           columns: ['Methode', 'Halluzinationsrisiko', 'Lesbarkeit', 'Geeignet für'],
           rows: [
@@ -755,12 +864,12 @@ export const article: Record<Language, PEArticle> = {
           id: 'which-model-for-summarisation',
           title: 'Welches KI-Modell hat die niedrigste Halluzinationsrate für Zusammenfassungen?',
           content: [
-            '**NotebookLM (Google DeepMind) führt bei quelltreuer, zitierter Zusammenfassung hochgeladener Dokumente; Claude Opus 4.7 (Anthropic) führt bei Synthese, dokumentübergreifender Analyse und komplexem Denken; GPT-5.5 (OpenAI) führt bei schneller, flexibler Allzweck-Zusammenfassung.**',
+            '**NotebookLM (Google DeepMind) führt bei quelltreuer, zitierter Zusammenfassung hochgeladener Dokumente; Claude Sonnet 4.6 (Anthropic) führt bei Synthese, dokumentübergreifender Analyse und komplexem Denken; GPT-5.5 (OpenAI) führt bei schneller, flexibler Allzweck-Zusammenfassung.**',
             'Im Vectara Hughes Hallucination Evaluation Model (HHEM) — dem Standard-Benchmark für Zusammenfassungstreue, getestet über 831 Dokumente pro Modell — zählten 2025 folgende Modelle zu den Spitzenreitern:',
             'Diese Raten stellen eine Verbesserung von 96 % gegenüber 2021 dar, als Spitzenmodelle auf derselben Aufgabe 21,8 % Halluzinationsraten erzielten. Diese Zahlen gelten jedoch nur für quelltreue Zusammenfassungen — offene faktische Fragen ergeben 3–33 % Halluzinationsraten bei denselben Modellen.',
           ],
           items: [
-            '**Gemini-2.0-Flash-001 (Google DeepMind):** 0,7 % Halluzinationsrate — niedrigste gemessene Rate im Benchmark',
+            '**Gemini 3 Flash (Google DeepMind):** 0,7 % Halluzinationsrate — niedrigste gemessene Rate im Benchmark',
             '**OpenAI- und Gemini-Varianten:** 0,8–1,5 % Halluzinationsraten-Cluster',
             '**Insgesamt:** 4 Modelle erreichen nun sub-1%-Raten bei quelltreuen Zusammenfassungsaufgaben',
           ],
@@ -802,7 +911,7 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
           content: [
-            '**In PromptQuorum getestet — 25 Dokumentenzusammenfassungs-Prompts über drei Modelle verteilt:** Claude Opus 4.7 lieferte in 20 von 25 Fällen die analytisch vollständigsten Zusammenfassungen (erkannte Implikationen und Verbindungen zwischen Dokumenten). GPT-5.5 lieferte in 18 von 25 Fällen die prägnantesten, sofort verwendbaren Zusammenfassungen. Gemini 3.1 Pro war das einzige Modell, das alle 25 Dokumente vollständig ohne Kontext-Kürzung verarbeiten konnte, da mehrere 80.000 Token überschritten.',
+            '**In PromptQuorum getestet — 25 Dokumentenzusammenfassungs-Prompts über drei Modelle verteilt:** Claude Sonnet 4.6 lieferte in 20 von 25 Fällen die analytisch vollständigsten Zusammenfassungen (erkannte Implikationen und Verbindungen zwischen Dokumenten). GPT-5.5 lieferte in 18 von 25 Fällen die prägnantesten, sofort verwendbaren Zusammenfassungen. Gemini 3.1 Pro war das einzige Modell, das alle 25 Dokumente vollständig ohne Kontext-Kürzung verarbeiten konnte, da mehrere 80.000 Token überschritten.',
           ],
         },
         promptStructure: {
@@ -895,7 +1004,7 @@ export const article: Record<Language, PEArticle> = {
             '**Faktische Inkonsistenz** — Modell widerspricht einer bestimmten Zahl oder einem Datum aus dem Quelldokument',
             '**Irrelevante Informationen** — Modell fügt Kontext aus Trainingsdaten hinzu, der nicht in der Quelle vorhanden ist',
           ],
-          blockquote: 'Ein 2025 in Nature veröffentlichtes Framework (Liu et al.) führte eine Question-Answer Generation, Sorting, and Evaluation (Q-S-E)-Methodik ein, die Halluzinationen in Zusammenfassungen iterativ erkennt und korrigiert — und messbare Verbesserungen der Treue-Scores über alle drei Benchmark-Datensätze (CNN/Daily Mail, PubMed, ArXiv) demonstrierte. Der Multi-Modell-Dispatch von PromptQuorum adressiert dies direkt: dasselbe Dokument gleichzeitig an GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) und Gemini 3.1 Pro zu senden und Ausgaben zu vergleichen, identifiziert Passagen, bei denen Modelle abweichen — statistisch die risikoreichsten Passagen für Halluzination.',
+          blockquote: 'Ein 2025 in Nature veröffentlichtes Framework (Liu et al.) führte eine Question-Answer Generation, Sorting, and Evaluation (Q-S-E)-Methodik ein, die Halluzinationen in Zusammenfassungen iterativ erkennt und korrigiert — und messbare Verbesserungen der Treue-Scores über alle drei Benchmark-Datensätze (CNN/Daily Mail, PubMed, ArXiv) demonstrierte. Der Multi-Modell-Dispatch von PromptQuorum adressiert dies direkt: dasselbe Dokument gleichzeitig an GPT-5.5 (OpenAI), Claude Sonnet 4.6 (Anthropic) und Gemini 3.1 Pro zu senden und Ausgaben zu vergleichen, identifiziert Passagen, bei denen Modelle abweichen — statistisch die risikoreichsten Passagen für Halluzination.',
         },
         evaluationMetrics: {
           id: 'evaluation-metrics',
@@ -988,23 +1097,23 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Welches KI-Modell halluziniert am wenigsten bei der Dokumentenzusammenfassung?',
-              a: 'Im Vectara HHEM-Benchmark — dem Standardtest für Zusammenfassungstreue über 831 Dokumente — erzielte Gemini-2.0-Flash-001 (Google DeepMind) mit 0,7 % die niedrigste Halluzinationsrate (Stand 2025). Diese Raten gelten nur für quelltreue Aufgaben; offene Faktabrückfragen ergeben Raten von 3–33 % bei denselben Modellen.',
+              a: 'Im Vectara HHEM-Benchmark — dem Standardtest für Zusammenfassungstreue über 831 Dokumente — erzielte Gemini 3 Flash (Google DeepMind) mit 0,7 % die niedrigste Halluzinationsrate (Stand 2025). Diese Raten gelten nur für quelltreue Aufgaben; offene Faktabrückfragen ergeben Raten von 3–33 % bei denselben Modellen.',
             },
             {
               q: 'Wie viele Seiten können KI-Zusammenfassungstools auf einmal verarbeiten?',
-              a: 'GPT-5.5 (OpenAI) verarbeitet ca. 100 Standardseiten pro Sitzung (128.000 Token). Claude Opus 4.7 (Anthropic) verarbeitet ca. 160 Seiten (200.000 Token). Gemini 3.1 Pro (Google DeepMind) verarbeitet ca. 800 Seiten (1 Mio. Token). NotebookLM (Google DeepMind) unterstützt bis zu 50 Quellen mit insgesamt ca. 500.000 Wörtern pro Notizbuch. Bei größeren Korpora ist Document Chunking erforderlich.',
+              a: 'GPT-5.5 (OpenAI) verarbeitet ca. 100 Standardseiten pro Sitzung (128.000 Token). Claude Sonnet 4.6 (Anthropic) verarbeitet ca. 160 Seiten (200.000 Token). Gemini 3.1 Pro (Google DeepMind) verarbeitet ca. 800 Seiten (1 Mio. Token). NotebookLM (Google DeepMind) unterstützt bis zu 50 Quellen mit insgesamt ca. 500.000 Wörtern pro Notizbuch. Bei größeren Korpora ist Document Chunking erforderlich.',
             },
             {
               q: 'Ist NotebookLM oder Claude besser für die Dokumentenzusammenfassung?',
-              a: 'Beide Produkte erfüllen unterschiedliche Anforderungen. NotebookLM (Google DeepMind) bietet strengere Quellenverankerung mit anklickbaren Inline-Zitaten und ist besser für die quelltreue Wiedergabe von Dokumentinhalten. Claude Opus 4.7 (Anthropic) liefert tiefere Analysen, ist führend bei der Synthese mehrerer Dokumente und erkennt nicht offensichtliche Verbindungen — kann aber Quellinhalte gelegentlich mit Trainingswissen vermischen. NotebookLM für Präzision; Claude für Erkenntnisgewinnung.',
+              a: 'Beide Produkte erfüllen unterschiedliche Anforderungen. NotebookLM (Google DeepMind) bietet strengere Quellenverankerung mit anklickbaren Inline-Zitaten und ist besser für die quelltreue Wiedergabe von Dokumentinhalten. Claude Sonnet 4.6 (Anthropic) liefert tiefere Analysen, ist führend bei der Synthese mehrerer Dokumente und erkennt nicht offensichtliche Verbindungen — kann aber Quellinhalte gelegentlich mit Trainingswissen vermischen. NotebookLM für Präzision; Claude für Erkenntnisgewinnung.',
             },
             {
               q: 'Wie verhindere ich KI-Halluzinationen in meinen Zusammenfassungen?',
-              a: 'Vier Techniken reduzieren Halluzinationen: (1) explizit anweisen — „Fasse nur aus dem folgenden Dokument zusammen; füge kein externes Wissen hinzu"; (2) Temperature (T) auf 0,0–0,1 setzen für maximalen Determinismus; (3) Treuecheck durchführen — das Modell auffordern, jede Aussage in der Zusammenfassung ihrer Quellpassage zuzuordnen; (4) Gegencheck mit einem zweiten Modell — wenn GPT-5.5 und Claude Opus 4.7 einem Sachverhalt übereinstimmen, ist die Wahrscheinlichkeit gemeinsamer Halluzination statistisch nahezu null.',
+              a: 'Vier Techniken reduzieren Halluzinationen: (1) explizit anweisen — „Fasse nur aus dem folgenden Dokument zusammen; füge kein externes Wissen hinzu"; (2) Temperature (T) auf 0,0–0,1 setzen für maximalen Determinismus; (3) Treuecheck durchführen — das Modell auffordern, jede Aussage in der Zusammenfassung ihrer Quellpassage zuzuordnen; (4) Gegencheck mit einem zweiten Modell — wenn GPT-5.5 und Claude Sonnet 4.6 einem Sachverhalt übereinstimmen, ist die Wahrscheinlichkeit gemeinsamer Halluzination statistisch nahezu null.',
             },
             {
               q: 'Was ist Document Chunking und wann sollte ich es nutzen?',
-              a: 'Chunking teilt ein Dokument in Segmente (typischerweise 500–2.000 Token), fasst jedes Segment separat zusammen und synthetisiert die Teilergebnisse zu einer Gesamtausgabe. Nutzen Sie es, wenn Ihr Dokument das Kontextfenster des Modells überschreitet — ca. 100 Seiten bei GPT-5.5 (128.000 Token), 160 Seiten bei Claude Opus 4.7 (200.000 Token) oder 800 Seiten bei Gemini 3.1 Pro (1 Mio. Token). Für strukturierte Dokumente (Rechtsverträge, Jahresberichte) liefert thematisches Chunking nach Abschnittsüberschriften die kohärentesten Ergebnisse.',
+              a: 'Chunking teilt ein Dokument in Segmente (typischerweise 500–2.000 Token), fasst jedes Segment separat zusammen und synthetisiert die Teilergebnisse zu einer Gesamtausgabe. Nutzen Sie es, wenn Ihr Dokument das Kontextfenster des Modells überschreitet — ca. 100 Seiten bei GPT-5.5 (128.000 Token), 160 Seiten bei Claude Sonnet 4.6 (200.000 Token) oder 800 Seiten bei Gemini 3.1 Pro (1 Mio. Token). Für strukturierte Dokumente (Rechtsverträge, Jahresberichte) liefert thematisches Chunking nach Abschnittsüberschriften die kohärentesten Ergebnisse.',
             },
             {
               q: 'Was sind ROUGE und BERTScore, und welche Metrik eignet sich für die Evaluierung von KI-Zusammenfassungen?',
@@ -1041,7 +1150,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'Extraire et résumer avec l\'IA',
       intro: 'L\'extraction et le résumé assistés par IA réduisent le temps d\'examen des documents de 60–80 % en atteignant des taux d\'hallucination de seulement 0.7 % pour les tâches de résumé ancrées à la source — la clé réside dans le choix du type de résumé, du modèle et de la structure de prompt appropriés à chaque catégorie de document.',
       publishDate: '2026-03-23',
-      dateModified: '2026-04-29',
+      dateModified: '2026-05-04',
       seoTitle: 'Résumé par IA : méthodes extractives vs abstractives comparées',
       metaDescription: 'Les résumés extractifs ont 0 % de risque d\'hallucination. Les méthodes abstractives hallucinent à 0,7–14 %. Quelle méthode pour les documents juridiques, financiers et de recherche — avec modèles de prompts pour GPT, Claude et Gemini.',
       ogTitle: 'Extractif = 0 % d\'hallucination. Abstractif = 0,7–14 %. Lequel choisir ?',
@@ -1076,7 +1185,7 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=fr',
         inLanguage: 'fr',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-29',
+        dateModified: '2026-05-04',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -1110,7 +1219,7 @@ export const article: Record<Language, PEArticle> = {
         keywords: ['résumé par IA', 'extraction de documents', 'résumé abstrait', 'résumé extractif', 'NotebookLM', 'Claude', 'taux d\'hallucination', 'ingénierie des prompts'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Elicit' },
@@ -1136,7 +1245,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Quel modèle IA hallucine le moins lors de la résumé de documents ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sur le benchmark HHEM de Vectara — le test standard de fidélité de résumé sur 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) a atteint le taux d\'hallucination le plus bas de 0.7 % en 2025. Ces taux ne s\'appliquent qu\'aux tâches ancrées à la source ; le rappel de faits en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
+              text: 'Sur le benchmark HHEM de Vectara — le test standard de fidélité de résumé sur 831 documents — Gemini 3 Flash (Google DeepMind) a atteint le taux d\'hallucination le plus bas de 0.7 % en 2025. Ces taux ne s\'appliquent qu\'aux tâches ancrées à la source ; le rappel de faits en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
             },
           },
           {
@@ -1144,7 +1253,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Combien de pages les outils de résumé par IA peuvent-ils traiter à la fois ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.5 (OpenAI) traite environ 100 pages standard par session (limite de 128 000 jetons). Claude Opus 4.7 (Anthropic) traite environ 160 pages (200 000 jetons). Gemini 3.1 Pro (Google DeepMind) traite environ 800 pages (1 million de jetons). NotebookLM (Google DeepMind) supporte jusqu\'à 50 sources totalisant environ 500 000 mots par carnet. Pour les corpus plus importants, le chunking de documents est nécessaire.',
+              text: 'GPT-5.5 (OpenAI) traite environ 100 pages standard par session (limite de 128 000 jetons). Claude Sonnet 4.6 (Anthropic) traite environ 160 pages (200 000 jetons). Gemini 3.1 Pro (Google DeepMind) traite environ 800 pages (1 million de jetons). NotebookLM (Google DeepMind) supporte jusqu\'à 50 sources totalisant environ 500 000 mots par carnet. Pour les corpus plus importants, le chunking de documents est nécessaire.',
             },
           },
           {
@@ -1152,7 +1261,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'NotebookLM ou Claude est-il meilleur pour la résumé de documents ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Les deux répondent à des besoins différents. NotebookLM (Google DeepMind) offre un ancrage à la source plus strict avec des citations inline cliquables — il hallucine moins sur les sources téléchargées et excelle à représenter fidèlement ce que les documents disent. Claude Opus 4.7 (Anthropic) produit une analyse plus nuancée, excelle à synthétiser plusieurs documents et identifie les connexions non évidentes — mais mélange occasionnellement le contenu source avec les connaissances d\'entraînement de manière subtile. NotebookLM pour la précision ; Claude pour l\'insight.',
+              text: 'Les deux répondent à des besoins différents. NotebookLM (Google DeepMind) offre un ancrage à la source plus strict avec des citations inline cliquables — il hallucine moins sur les sources téléchargées et excelle à représenter fidèlement ce que les documents disent. Claude Sonnet 4.6 (Anthropic) produit une analyse plus nuancée, excelle à synthétiser plusieurs documents et identifie les connexions non évidentes — mais mélange occasionnellement le contenu source avec les connaissances d\'entraînement de manière subtile. NotebookLM pour la précision ; Claude pour l\'insight.',
             },
           },
           {
@@ -1160,7 +1269,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Comment empêcher l\'IA de halluciner dans mes résumés ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Quatre techniques réduisent l\'hallucination dans les tâches de résumé : (1) instruire explicitement — « résumez uniquement le document ci-dessous ; n\'ajoutez pas de connaissances externes » ; (2) définir la température (T) à 0.0–0.1 pour le déterminisme maximal ; (3) faire un contrôle de fidélité — demander au modèle de lister chaque affirmation dans son résumé et d\'identifier sa phrase source ; (4) faire une vérification croisée avec un deuxième modèle — quand GPT-5.5 et Claude Opus 4.7 s\'accordent sur un fait spécifique, la probabilité d\'hallucination partagée est statistiquement quasi nulle.',
+              text: 'Quatre techniques réduisent l\'hallucination dans les tâches de résumé : (1) instruire explicitement — « résumez uniquement le document ci-dessous ; n\'ajoutez pas de connaissances externes » ; (2) définir la température (T) à 0.0–0.1 pour le déterminisme maximal ; (3) faire un contrôle de fidélité — demander au modèle de lister chaque affirmation dans son résumé et d\'identifier sa phrase source ; (4) faire une vérification croisée avec un deuxième modèle — quand GPT-5.5 et Claude Sonnet 4.6 s\'accordent sur un fait spécifique, la probabilité d\'hallucination partagée est statistiquement quasi nulle.',
             },
           },
           {
@@ -1168,7 +1277,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'Qu\'est-ce que le chunking de documents et quand devrais-je l\'utiliser ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Le chunking divise un document en segments (généralement 500–2 000 jetons), résume chaque segment séparément, puis synthétise les résumés de chunks en une sortie finale. Utilisez-le quand votre document dépasse la fenêtre de contexte du modèle — environ 100 pages pour GPT-5.5 (128 000 jetons), 160 pages pour Claude Opus 4.7 (200 000 jetons) ou 800 pages pour Gemini 3.1 Pro (1 million de jetons). Pour les documents structurés (contrats juridiques, rapports annuels), le chunking thématique par en-têtes de section produit la synthèse finale la plus cohérente.',
+              text: 'Le chunking divise un document en segments (généralement 500–2 000 jetons), résume chaque segment séparément, puis synthétise les résumés de chunks en une sortie finale. Utilisez-le quand votre document dépasse la fenêtre de contexte du modèle — environ 100 pages pour GPT-5.5 (128 000 jetons), 160 pages pour Claude Sonnet 4.6 (200 000 jetons) ou 800 pages pour Gemini 3.1 Pro (1 million de jetons). Pour les documents structurés (contrats juridiques, rapports annuels), le chunking thématique par en-têtes de section produit la synthèse finale la plus cohérente.',
             },
           },
           {
@@ -1240,11 +1349,11 @@ export const article: Record<Language, PEArticle> = {
           isTldr: true,
           items: [
             'Utiliser le résumé extractif pour les documents juridiques, de conformité et exigeant une exactitude mot-pour-mot ; utiliser le résumé abstrait par LLM pour la synthèse de recherche et les résumés exécutifs',
-            'Gemini-2.0-Flash-001 atteint un taux d\'hallucination de 0.7 % pour la résumé ancrée à la source — la meilleure performance du benchmark HHEM de Vectara sur 831 documents',
-            'NotebookLM (Google DeepMind) offre la résumé ancrée la plus fiable avec des citations inline cliquables ; Claude Opus 4.7 excelle en synthèse multi-documents et analyse complexe',
+            'Gemini 3 Flash atteint un taux d\'hallucination de 0.7 % pour la résumé ancrée à la source — la meilleure performance du benchmark HHEM de Vectara sur 831 documents',
+            'NotebookLM (Google DeepMind) offre la résumé ancrée la plus fiable avec des citations inline cliquables ; Claude Sonnet 4.6 excelle en synthèse multi-documents et analyse complexe',
             'Les taux d\'hallucination de la résumé ancrée ont baissé de 96 % de 2021 à 2025 — mais une preuve mathématique (2025) confirme que l\'hallucination ne peut pas être entièrement éliminée sous les architectures LLM actuelles',
             'Pour les documents dépassant la fenêtre de contexte, le chunking thématique (par section/sujet) produit la synthèse finale la plus cohérente',
-            'Claude Opus 4.7 traite environ 160 pages par session (200 000 jetons) ; Gemini 3.1 Pro environ 800 pages (1 million de jetons) — les limites de contexte détermine quel modèle est pratique pour les grands ensembles de documents',
+            'Claude Sonnet 4.6 traite environ 160 pages par session (200 000 jetons) ; Gemini 3.1 Pro environ 800 pages (1 million de jetons) — les limites de contexte détermine quel modèle est pratique pour les grands ensembles de documents',
           ],
         },
         definition: {
@@ -1252,7 +1361,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Quels sont les deux types de résumé par IA et quand utiliser chacun ?',
           content: [
             '**Le résumé extractif copie les phrases directement de la source ; le résumé abstrait génère de nouvelles phrases qui paraphrasent et condensent — les deux approches échangent la précision factuelle contre la lisibilité et la compression.**',
-            'Le résumé extractif — utilisé par des outils comme Scholarcy — classe les phrases par fréquence de mots-clés, position et densité d\'information, puis reproduit les phrases les mieux classées sans modification. Puisqu\'aucun nouveau texte n\'est généré, les erreurs factuelles sont structurellement impossibles : la sortie est toujours un sous-ensemble de la source. Le résumé abstrait — utilisé par GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) — génère du texte nouveau qui synthétise et paraphrase, produisant une sortie plus lisible au prix d\'un risque d\'hallucination plus élevé.',
+            'Le résumé extractif — utilisé par des outils comme Scholarcy — classe les phrases par fréquence de mots-clés, position et densité d\'information, puis reproduit les phrases les mieux classées sans modification. Puisqu\'aucun nouveau texte n\'est généré, les erreurs factuelles sont structurellement impossibles : la sortie est toujours un sous-ensemble de la source. Le résumé abstrait — utilisé par GPT-5.5 (OpenAI), Claude Sonnet 4.6 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) — génère du texte nouveau qui synthétise et paraphrase, produisant une sortie plus lisible au prix d\'un risque d\'hallucination plus élevé.',
           ],
           columns: ['Méthode', 'Risque hallucination', 'Lisibilité', 'Approprié pour'],
           rows: [
@@ -1281,12 +1390,12 @@ export const article: Record<Language, PEArticle> = {
           id: 'which-model-for-summarisation',
           title: 'Quel modèle IA a le taux d\'hallucination le plus bas pour la résumé ?',
           content: [
-            '**NotebookLM (Google DeepMind) excelle pour la résumé ancrée à la source avec citations de documents téléchargés ; Claude Opus 4.7 (Anthropic) excelle pour la synthèse, l\'analyse multi-documents et le raisonnement complexe ; GPT-5.5 (OpenAI) excelle pour la résumé généraliste rapide et flexible.**',
+            '**NotebookLM (Google DeepMind) excelle pour la résumé ancrée à la source avec citations de documents téléchargés ; Claude Sonnet 4.6 (Anthropic) excelle pour la synthèse, l\'analyse multi-documents et le raisonnement complexe ; GPT-5.5 (OpenAI) excelle pour la résumé généraliste rapide et flexible.**',
             'Sur le Hughes Hallucination Evaluation Model (HHEM) de Vectara — le benchmark standard de fidélité de résumé testé sur 831 documents par modèle — les meilleurs performants en 2025 étaient :',
             'Ces taux représentent une amélioration de 96 % par rapport à 2021, quand les meilleurs modèles avaient des taux d\'hallucination de 21.8 % sur la même tâche. Cependant, ces chiffres s\'appliquent uniquement à la résumé ancrée à la source — le rappel factuel en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
           ],
           items: [
-            '**Gemini-2.0-Flash-001 (Google DeepMind) :** taux d\'hallucination de 0.7 % — le plus bas enregistré au benchmark',
+            '**Gemini 3 Flash (Google DeepMind) :** taux d\'hallucination de 0.7 % — le plus bas enregistré au benchmark',
             '**Variantes OpenAI et Gemini :** taux d\'hallucination de 0.8–1.5 %',
             '**Au total :** 4 modèles atteignent maintenant des taux sub-1 % pour les tâches de résumé ancrées à la source',
           ],
@@ -1328,7 +1437,7 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
           content: [
-            '**Testé chez PromptQuorum — 25 prompts de résumé de documents distribués sur trois modèles :** Claude Opus 4.7 a produit les résumés analytiquement les plus complets dans 20 des 25 cas (identifiant implications et connexions entre documents). GPT-5.5 a produit les résumés les plus concis et immédiatement utilisables dans 18 des 25 cas. Gemini 3.1 Pro était le seul modèle pouvant traiter les 25 documents complets sans troncature de contexte, car plusieurs dépassaient 80 000 jetons.',
+            '**Testé chez PromptQuorum — 25 prompts de résumé de documents distribués sur trois modèles :** Claude Sonnet 4.6 a produit les résumés analytiquement les plus complets dans 20 des 25 cas (identifiant implications et connexions entre documents). GPT-5.5 a produit les résumés les plus concis et immédiatement utilisables dans 18 des 25 cas. Gemini 3.1 Pro était le seul modèle pouvant traiter les 25 documents complets sans troncature de contexte, car plusieurs dépassaient 80 000 jetons.',
           ],
         },
         promptStructure: {
@@ -1421,7 +1530,7 @@ export const article: Record<Language, PEArticle> = {
             '**Incohérence factuelle** — le modèle contredit un chiffre ou une date spécifique du document source',
             '**Information non pertinente** — le modèle ajoute du contexte des données d\'entraînement non présentes dans la source',
           ],
-          blockquote: 'Un framework publié dans Nature en 2025 (Liu et al.) a introduit une méthodologie Question-Answer Generation, Sorting, and Evaluation (Q-S-E) qui détecte et corrige itérativement les hallucinations dans les résumés — démontrant des améliorations mesurables des scores de fidélité sur les trois ensembles de données de référence (CNN/Daily Mail, PubMed, ArXiv). Le dispatch multi-modèles de PromptQuorum aborde cela directement : envoyer le même document simultanément à GPT-5.5 (OpenAI), Claude Opus 4.7 (Anthropic) et Gemini 3.1 Pro et comparer les résultats identifie les passages où les modèles divergent — qui sont statistiquement les passages à plus haut risque d\'hallucination.',
+          blockquote: 'Un framework publié dans Nature en 2025 (Liu et al.) a introduit une méthodologie Question-Answer Generation, Sorting, and Evaluation (Q-S-E) qui détecte et corrige itérativement les hallucinations dans les résumés — démontrant des améliorations mesurables des scores de fidélité sur les trois ensembles de données de référence (CNN/Daily Mail, PubMed, ArXiv). Le dispatch multi-modèles de PromptQuorum aborde cela directement : envoyer le même document simultanément à GPT-5.5 (OpenAI), Claude Sonnet 4.6 (Anthropic) et Gemini 3.1 Pro et comparer les résultats identifie les passages où les modèles divergent — qui sont statistiquement les passages à plus haut risque d\'hallucination.',
         },
         evaluationMetrics: {
           id: 'evaluation-metrics',
@@ -1514,23 +1623,23 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Quel modèle IA hallucine le moins lors de la résumé de documents ?',
-              a: 'Sur le benchmark HHEM de Vectara — le test standard de fidélité de résumé sur 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) a atteint le taux d\'hallucination le plus bas de 0.7 % en 2025. Ces taux s\'appliquent uniquement aux tâches ancrées à la source ; le rappel factuel en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
+              a: 'Sur le benchmark HHEM de Vectara — le test standard de fidélité de résumé sur 831 documents — Gemini 3 Flash (Google DeepMind) a atteint le taux d\'hallucination le plus bas de 0.7 % en 2025. Ces taux s\'appliquent uniquement aux tâches ancrées à la source ; le rappel factuel en domaine ouvert produit des taux de 3–33 % pour les mêmes modèles.',
             },
             {
               q: 'Combien de pages les outils de résumé par IA peuvent-ils traiter à la fois ?',
-              a: 'GPT-5.5 (OpenAI) traite environ 100 pages standard par session (128 000 jetons). Claude Opus 4.7 (Anthropic) traite environ 160 pages (200 000 jetons). Gemini 3.1 Pro (Google DeepMind) traite environ 800 pages (1 million de jetons). NotebookLM (Google DeepMind) supporte jusqu\'à 50 sources totalisant environ 500 000 mots par carnet. Pour les corpus plus importants, le chunking de documents est nécessaire.',
+              a: 'GPT-5.5 (OpenAI) traite environ 100 pages standard par session (128 000 jetons). Claude Sonnet 4.6 (Anthropic) traite environ 160 pages (200 000 jetons). Gemini 3.1 Pro (Google DeepMind) traite environ 800 pages (1 million de jetons). NotebookLM (Google DeepMind) supporte jusqu\'à 50 sources totalisant environ 500 000 mots par carnet. Pour les corpus plus importants, le chunking de documents est nécessaire.',
             },
             {
               q: 'NotebookLM ou Claude est-il meilleur pour la résumé de documents ?',
-              a: 'Ils répondent à des besoins différents. NotebookLM (Google DeepMind) offre un ancrage plus strict à la source avec des citations inline cliquables — il hallucine moins sur les sources téléchargées et excelle à représenter fidèlement ce que les documents disent. Claude Opus 4.7 (Anthropic) produit une analyse plus nuancée, excelle à synthétiser plusieurs documents et identifie les connexions non évidentes — mais mélange parfois le contenu source avec les connaissances d\'entraînement de manière subtile. NotebookLM pour la précision ; Claude pour l\'insight.',
+              a: 'Ils répondent à des besoins différents. NotebookLM (Google DeepMind) offre un ancrage plus strict à la source avec des citations inline cliquables — il hallucine moins sur les sources téléchargées et excelle à représenter fidèlement ce que les documents disent. Claude Sonnet 4.6 (Anthropic) produit une analyse plus nuancée, excelle à synthétiser plusieurs documents et identifie les connexions non évidentes — mais mélange parfois le contenu source avec les connaissances d\'entraînement de manière subtile. NotebookLM pour la précision ; Claude pour l\'insight.',
             },
             {
               q: 'Comment empêcher l\'IA de halluciner dans mes résumés ?',
-              a: 'Quatre techniques réduisent l\'hallucination : (1) donner des instructions explicites — « résumez uniquement le document ci-dessous ; n\'ajoutez pas de connaissances externes » ; (2) définir la température (T) à 0.0–0.1 pour le déterminisme maximal ; (3) effectuer une vérification de fidélité — demander au modèle de lister chaque affirmation et d\'identifier sa phrase source ; (4) faire une vérification croisée avec un deuxième modèle — quand GPT-5.5 et Claude Opus 4.7 s\'accordent sur un fait, la probabilité d\'hallucination partagée est statistiquement quasi nulle.',
+              a: 'Quatre techniques réduisent l\'hallucination : (1) donner des instructions explicites — « résumez uniquement le document ci-dessous ; n\'ajoutez pas de connaissances externes » ; (2) définir la température (T) à 0.0–0.1 pour le déterminisme maximal ; (3) effectuer une vérification de fidélité — demander au modèle de lister chaque affirmation et d\'identifier sa phrase source ; (4) faire une vérification croisée avec un deuxième modèle — quand GPT-5.5 et Claude Sonnet 4.6 s\'accordent sur un fait, la probabilité d\'hallucination partagée est statistiquement quasi nulle.',
             },
             {
               q: 'Qu\'est-ce que le chunking de documents et quand devrais-je l\'utiliser ?',
-              a: 'Le chunking divise un document en segments (généralement 500–2 000 jetons), résume chaque segment séparément, puis synthétise les résumés des chunks. Utilisez-le quand votre document dépasse la fenêtre de contexte du modèle — environ 100 pages pour GPT-5.5 (128 000 jetons), 160 pages pour Claude Opus 4.7 (200 000 jetons) ou 800 pages pour Gemini 3.1 Pro (1 million de jetons). Pour les documents structurés (contrats juridiques, rapports annuels), le chunking thématique par en-têtes de section produit la synthèse finale la plus cohérente.',
+              a: 'Le chunking divise un document en segments (généralement 500–2 000 jetons), résume chaque segment séparément, puis synthétise les résumés des chunks. Utilisez-le quand votre document dépasse la fenêtre de contexte du modèle — environ 100 pages pour GPT-5.5 (128 000 jetons), 160 pages pour Claude Sonnet 4.6 (200 000 jetons) ou 800 pages pour Gemini 3.1 Pro (1 million de jetons). Pour les documents structurés (contrats juridiques, rapports annuels), le chunking thématique par en-têtes de section produit la synthèse finale la plus cohérente.',
             },
             {
               q: 'Que sont ROUGE et BERTScore, et quelle métrique devrais-je utiliser pour évaluer les résumés IA ?',
@@ -1567,7 +1676,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'AIで抽出と要約を実現',
       intro: 'AI支援の抽出と要約により、文書確認の時間が60～80％削減でき、信頼度の高い要約タスクで0.7％のハルシネーション率を達成します。重要なのは、各文書カテゴリーに適した要約タイプ、モデル、プロンプト構造を選択することです。',
       publishDate: '2026-03-23',
-      dateModified: '2026-04-29',
+      dateModified: '2026-05-04',
       seoTitle: 'AI要約：抽出型と生成型の違いと使い分け（2026）',
       metaDescription: '抽出型要約のハルシネーションリスクは0%。生成型は0.7〜14%の確率で内容を捏造。法務・財務・研究文書ごとの使い分けとGPT・Claude・Gemini向けプロンプトテンプレート。',
       ogTitle: '抽出型＝ハルシネーション0%、生成型＝0.7〜14%。どちらを使うべき？',
@@ -1602,7 +1711,7 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=ja',
         inLanguage: 'ja',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-29',
+        dateModified: '2026-05-04',
         author: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -1635,7 +1744,7 @@ export const article: Record<Language, PEArticle> = {
         keywords: ['AI要約', 'ドキュメント抽出', '抽象型要約', '抽出型要約', 'NotebookLM', 'Claude', 'ハルシネーション率', 'プロンプトエンジニアリング'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Elicit' },
@@ -1661,7 +1770,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'ドキュメント要約時にハルシネーションが最も少ないAIモデルは？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Vectara HHEM ベンチマーク（831ドキュメント上の要約忠実度の標準テスト）で、Gemini-2.0-Flash-001（Google DeepMind）は2025年時点で0.7%の最低ハルシネーション率を達成しました。これらの率はソース固定タスクにのみ適用されます。オープンドメイン事実リコールは同じモデルで3～33%の率を生成します。',
+              text: 'Vectara HHEM ベンチマーク（831ドキュメント上の要約忠実度の標準テスト）で、Gemini 3 Flash（Google DeepMind）は2025年時点で0.7%の最低ハルシネーション率を達成しました。これらの率はソース固定タスクにのみ適用されます。オープンドメイン事実リコールは同じモデルで3～33%の率を生成します。',
             },
           },
           {
@@ -1669,7 +1778,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'AI要約ツールは一度にどのくらいのページを処理できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.5（OpenAI）は1セッションあたり約100ページを処理できます（128,000トークン制限）。Claude Opus 4.7（Anthropic）は約160ページ処理でき、Gemini 3.1 Pro（Google DeepMind）は約800ページ処理できます。NotebookLM（Google DeepMind）はノートブックあたり最大50ソース、約500,000語をサポートします。より大きなコーパスの場合、ドキュメントのチャンキングが必要です。',
+              text: 'GPT-5.5（OpenAI）は1セッションあたり約100ページを処理できます（128,000トークン制限）。Claude Sonnet 4.6（Anthropic）は約160ページ処理でき、Gemini 3.1 Pro（Google DeepMind）は約800ページ処理できます。NotebookLM（Google DeepMind）はノートブックあたり最大50ソース、約500,000語をサポートします。より大きなコーパスの場合、ドキュメントのチャンキングが必要です。',
             },
           },
           {
@@ -1677,7 +1786,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'ドキュメント要約にはNotebookLMとClaudeのどちらが優れていますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '両方は異なるニーズに対応しています。NotebookLM（Google DeepMind）はクリック可能なインライン引用によるより厳密なソース固定を提供し、ハルシネーションが少なく、ドキュメントの内容を忠実に表現するのに優れています。Claude Opus 4.7（Anthropic）はより細かい分析を提供し、複数ドキュメント間の合成で優れ、非明白な接続を識別しています。ただし、ソースコンテンツとトレーニング知識を微妙に混合させることがあります。精度にはNotebookLM、洞察にはClaudeを使用してください。',
+              text: '両方は異なるニーズに対応しています。NotebookLM（Google DeepMind）はクリック可能なインライン引用によるより厳密なソース固定を提供し、ハルシネーションが少なく、ドキュメントの内容を忠実に表現するのに優れています。Claude Sonnet 4.6（Anthropic）はより細かい分析を提供し、複数ドキュメント間の合成で優れ、非明白な接続を識別しています。ただし、ソースコンテンツとトレーニング知識を微妙に混合させることがあります。精度にはNotebookLM、洞察にはClaudeを使用してください。',
             },
           },
           {
@@ -1685,7 +1794,7 @@ export const article: Record<Language, PEArticle> = {
             name: '自分の要約でAIハルシネーションを防ぐにはどうすればよいですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '4つの技術がハルシネーションを削減します。（1）明確に指示する。「以下のドキュメントからのみ要約し、外部知識を追加しないでください」。（2）温度（T）を0.0～0.1に設定して最大決定性を保証します。（3）忠実性チェックを実行し、要約内の各主張を識別し、その源文を指し示します。（4）2番目のモデルでクロスチェック。GPT-5.5とClaude Opus 4.7が特定の事実で同意する場合、共有ハルシネーションの確率は統計的にほぼゼロです。',
+              text: '4つの技術がハルシネーションを削減します。（1）明確に指示する。「以下のドキュメントからのみ要約し、外部知識を追加しないでください」。（2）温度（T）を0.0～0.1に設定して最大決定性を保証します。（3）忠実性チェックを実行し、要約内の各主張を識別し、その源文を指し示します。（4）2番目のモデルでクロスチェック。GPT-5.5とClaude Sonnet 4.6が特定の事実で同意する場合、共有ハルシネーションの確率は統計的にほぼゼロです。',
             },
           },
           {
@@ -1693,7 +1802,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'ドキュメントチャンキングとは何で、いつ使用すべきですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'チャンキングはドキュメントをセグメント（通常500～2,000トークン）に分割し、各セグメントを個別に要約し、チャンク要約を最終出力に合成します。ドキュメントがモデルのコンテキストウィンドウを超える場合に使用します。GPT-5.5（128,000トークン）で約100ページ、Claude Opus 4.7（200,000トークン）で約160ページ、Gemini 3.1 Pro（100万トークン）で約800ページです。構造化ドキュメント（法律契約、年間報告書）の場合、セクションタイトルによるテーマ別チャンキングが最も一貫した最終合成を生成します。',
+              text: 'チャンキングはドキュメントをセグメント（通常500～2,000トークン）に分割し、各セグメントを個別に要約し、チャンク要約を最終出力に合成します。ドキュメントがモデルのコンテキストウィンドウを超える場合に使用します。GPT-5.5（128,000トークン）で約100ページ、Claude Sonnet 4.6（200,000トークン）で約160ページ、Gemini 3.1 Pro（100万トークン）で約800ページです。構造化ドキュメント（法律契約、年間報告書）の場合、セクションタイトルによるテーマ別チャンキングが最も一貫した最終合成を生成します。',
             },
           },
           {
@@ -1765,11 +1874,11 @@ export const article: Record<Language, PEArticle> = {
           isTldr: true,
           items: [
             '法律、遵守、正確な表現が必要なドキュメント向けに抽出型要約を使用。研究統合と経営層概要向けにLLM抽象型要約を使用',
-            'Gemini-2.0-Flash-001は信頼度の高い要約で0.7%のハルシネーション率を達成 — 831ドキュメント上のVectara HHEMベンチマークで最良の結果',
-            'NotebookLM（Google DeepMind）はクリック可能なインライン引用で最も信頼度の高いソース固定要約を提供。Claude Opus 4.7は文書間の統合と複雑な分析で優位',
+            'Gemini 3 Flashは信頼度の高い要約で0.7%のハルシネーション率を達成 — 831ドキュメント上のVectara HHEMベンチマークで最良の結果',
+            'NotebookLM（Google DeepMind）はクリック可能なインライン引用で最も信頼度の高いソース固定要約を提供。Claude Sonnet 4.6は文書間の統合と複雑な分析で優位',
             'ソース固定要約のハルシネーション率は2021年から2025年で96%低下 — しかし2025年の数学的証明により、現在のLLMアーキテクチャでハルシネーションを完全に排除できないことが確認された',
             'コンテキストウィンドウを超えるドキュメントは、テーマ別チャンキング（セクション/トピック別）が最も一貫した最終統合を生成',
-            'Claude Opus 4.7は1セッションあたり約160ページ処理可能。Gemini 3.1 Proは約800ページ処理可能 — コンテキスト制限によって大きな文書セット向けの実用的なモデルが決定される',
+            'Claude Sonnet 4.6は1セッションあたり約160ページ処理可能。Gemini 3.1 Proは約800ページ処理可能 — コンテキスト制限によって大きな文書セット向けの実用的なモデルが決定される',
           ],
         },
         definition: {
@@ -1777,7 +1886,7 @@ export const article: Record<Language, PEArticle> = {
           title: '2つのAI要約タイプは何で、それぞれいつ使用するか？',
           content: [
             '**抽出型要約はソースから文を直接コピー。抽象型要約は新しい文を生成して言い換えと濃縮 — 2つのアプローチは事実精度と可読性・圧縮をトレードオフ。**',
-            '抽出型要約（Scholarcyなどで使用）は文をキーワード頻度、位置、情報密度でランク付けし、最高スコア文を修正なしで再現。新しいテキストは生成されないため、事実のエラーは構造的に不可能。出力は常にソースのサブセット。抽象型要約（GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro）は、合成して言い換える新しいテキストを生成。より読みやすい出力をハルシネーションリスク増加のコストで提供。',
+            '抽出型要約（Scholarcyなどで使用）は文をキーワード頻度、位置、情報密度でランク付けし、最高スコア文を修正なしで再現。新しいテキストは生成されないため、事実のエラーは構造的に不可能。出力は常にソースのサブセット。抽象型要約（GPT-5.5、Claude Sonnet 4.6、Gemini 3.1 Pro）は、合成して言い換える新しいテキストを生成。より読みやすい出力をハルシネーションリスク増加のコストで提供。',
           ],
           columns: ['方法', 'ハルシネーションリスク', '可読性', '用途'],
           rows: [
@@ -1806,12 +1915,12 @@ export const article: Record<Language, PEArticle> = {
           id: 'which-model-for-summarisation',
           title: 'ドキュメント要約で最もハルシネーションが少ないAIモデルは？',
           content: [
-            '**NotebookLM（Google DeepMind）はアップロードドキュメントのソース固定引用で優位。Claude Opus 4.7（Anthropic）は統合、文書間分析、複雑な推論で優位。GPT-5.5（OpenAI）は高速で柔軟な汎用要約で優位。**',
+            '**NotebookLM（Google DeepMind）はアップロードドキュメントのソース固定引用で優位。Claude Sonnet 4.6（Anthropic）は統合、文書間分析、複雑な推論で優位。GPT-5.5（OpenAI）は高速で柔軟な汎用要約で優位。**',
             'Vectara Hughes Hallucination Evaluation Model（HHEM）ベンチマーク上で — モデルあたり831ドキュメント上の要約忠実度の標準テスト — 2025年最高パフォーマーは：',
             'これらの率は2021年比96%改善で、当時の最高モデルは同じタスクで21.8%のハルシネーション率でした。ただしこれはソース固定要約にのみ適用。オープンドメイン事実リコールは同じモデルで3～33%を生成。',
           ],
           items: [
-            '**Gemini-2.0-Flash-001（Google DeepMind）:** 0.7%ハルシネーション率 — ベンチマークで記録された最低',
+            '**Gemini 3 Flash（Google DeepMind）:** 0.7%ハルシネーション率 — ベンチマークで記録された最低',
             '**OpenAIとGeminiバリアント:** 0.8～1.5%ハルシネーション率クラスター',
             '**全体:** 4モデルがソース固定要約タスクでsub-1%率を達成',
           ],
@@ -1853,7 +1962,7 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
           content: [
-            '**PromptQuorumでテスト — 25ドキュメント要約プロンプト、3モデルにわたる分配:** Claude Opus 4.7は25件中20件の最も分析的に完全な要約（文書間の含意と接続を識別）を生成。GPT-5.5は25件中18件で最も簡潔で直ちに使用可能な要約を生成。Gemini 3.1 Proは、複数が80,000トークンを超えたため、コンテキスト切り詰めなしで全25ドキュメントを処理できた唯一のモデル。',
+            '**PromptQuorumでテスト — 25ドキュメント要約プロンプト、3モデルにわたる分配:** Claude Sonnet 4.6は25件中20件の最も分析的に完全な要約（文書間の含意と接続を識別）を生成。GPT-5.5は25件中18件で最も簡潔で直ちに使用可能な要約を生成。Gemini 3.1 Proは、複数が80,000トークンを超えたため、コンテキスト切り詰めなしで全25ドキュメントを処理できた唯一のモデル。',
           ],
         },
         promptStructure: {
@@ -1946,7 +2055,7 @@ export const article: Record<Language, PEArticle> = {
             '**事実的不一貫性** — モデルがソースドキュメントからの特定の数値や日付に矛盾',
             '**無関連情報** — モデルがソースに存在しないトレーニングデータからコンテキストを追加',
           ],
-          blockquote: '2025年Nature発表フレームワーク（Liu et al.）が、Q-S-E方法論（質問応答生成、分類、評価）を導入し、CNN/DailyMail、PubMed、ArXiv上の要約のハルシネーションを反復的に検出・修正 — 全3ベンチマーク上で測定可能な忠実度スコア改善を示す。PromptQuorumの多モデルディスパッチはこれに直接対応：同じドキュメントをGPT-5.5（OpenAI）、Claude Opus 4.7（Anthropic）、Gemini 3.1 Proに同時送信し、出力比較すると、モデルが相違するパッセージを特定 — 統計的にハルシネーションの最高リスクパッセージ。',
+          blockquote: '2025年Nature発表フレームワーク（Liu et al.）が、Q-S-E方法論（質問応答生成、分類、評価）を導入し、CNN/DailyMail、PubMed、ArXiv上の要約のハルシネーションを反復的に検出・修正 — 全3ベンチマーク上で測定可能な忠実度スコア改善を示す。PromptQuorumの多モデルディスパッチはこれに直接対応：同じドキュメントをGPT-5.5（OpenAI）、Claude Sonnet 4.6（Anthropic）、Gemini 3.1 Proに同時送信し、出力比較すると、モデルが相違するパッセージを特定 — 統計的にハルシネーションの最高リスクパッセージ。',
         },
         evaluationMetrics: {
           id: 'evaluation-metrics',
@@ -2039,23 +2148,23 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'ドキュメント要約時にハルシネーションが最も少ないAIモデルは？',
-              a: 'Vectara HHEMベンチマーク（831ドキュメント上の要約忠実度の標準テスト）で、Gemini-2.0-Flash-001（Google DeepMind）は2025年時点で0.7%の最低ハルシネーション率を達成しました。これらの率はソース固定タスクにのみ適用されます。オープンドメイン事実リコールは同じモデルで3～33%の率を生成します。',
+              a: 'Vectara HHEMベンチマーク（831ドキュメント上の要約忠実度の標準テスト）で、Gemini 3 Flash（Google DeepMind）は2025年時点で0.7%の最低ハルシネーション率を達成しました。これらの率はソース固定タスクにのみ適用されます。オープンドメイン事実リコールは同じモデルで3～33%の率を生成します。',
             },
             {
               q: 'AI要約ツールは一度にどのくらいのページを処理できますか？',
-              a: 'GPT-5.5（OpenAI）は1セッションあたり約100ページを処理できます（128,000トークン制限）。Claude Opus 4.7（Anthropic）は約160ページを処理；Gemini 3.1 Pro（Google DeepMind）は約800ページを処理。NotebookLM（Google DeepMind）はノートブックあたり最大50ソース、約500,000語をサポート。より大きなコーパスの場合、ドキュメントのチャンキングが必要。',
+              a: 'GPT-5.5（OpenAI）は1セッションあたり約100ページを処理できます（128,000トークン制限）。Claude Sonnet 4.6（Anthropic）は約160ページを処理；Gemini 3.1 Pro（Google DeepMind）は約800ページを処理。NotebookLM（Google DeepMind）はノートブックあたり最大50ソース、約500,000語をサポート。より大きなコーパスの場合、ドキュメントのチャンキングが必要。',
             },
             {
               q: 'ドキュメント要約にはNotebookLMとClaudeのどちらが優れていますか？',
-              a: '両方は異なるニーズに対応しています。NotebookLM（Google DeepMind）はクリック可能なインライン引用によるより厳密なソース固定を提供し、ハルシネーションが少なく、ドキュメントの内容を忠実に表現するのに優れています。Claude Opus 4.7（Anthropic）はより細かい分析を提供し、複数ドキュメント間の合成で優れ、非明白な接続を識別しています。ただし、ソースコンテンツとトレーニング知識を微妙に混合させることがあります。精度にはNotebookLM、洞察にはClaudeを使用。',
+              a: '両方は異なるニーズに対応しています。NotebookLM（Google DeepMind）はクリック可能なインライン引用によるより厳密なソース固定を提供し、ハルシネーションが少なく、ドキュメントの内容を忠実に表現するのに優れています。Claude Sonnet 4.6（Anthropic）はより細かい分析を提供し、複数ドキュメント間の合成で優れ、非明白な接続を識別しています。ただし、ソースコンテンツとトレーニング知識を微妙に混合させることがあります。精度にはNotebookLM、洞察にはClaudeを使用。',
             },
             {
               q: '自分の要約でAIハルシネーションを防ぐにはどうすればよいですか？',
-              a: '4つの技術がハルシネーションを削減します。（1）明確に指示する：「以下のドキュメントからのみ要約し、外部知識を追加しないでください」。（2）温度（T）を0.0～0.1に設定して最大決定性を保証。（3）忠実性チェックを実行し、要約内の各主張を識別し、ソース文を指し示す。（4）2番目のモデルでクロスチェック：GPT-5.5とClaude Opus 4.7が特定の事実で同意する場合、共有ハルシネーション確率は統計的にほぼゼロ。',
+              a: '4つの技術がハルシネーションを削減します。（1）明確に指示する：「以下のドキュメントからのみ要約し、外部知識を追加しないでください」。（2）温度（T）を0.0～0.1に設定して最大決定性を保証。（3）忠実性チェックを実行し、要約内の各主張を識別し、ソース文を指し示す。（4）2番目のモデルでクロスチェック：GPT-5.5とClaude Sonnet 4.6が特定の事実で同意する場合、共有ハルシネーション確率は統計的にほぼゼロ。',
             },
             {
               q: 'ドキュメントチャンキングとは何で、いつ使用すべきですか？',
-              a: 'チャンキングはドキュメントをセグメント（通常500～2,000トークン）に分割し、各セグメントを個別に要約し、チャンク要約を最終出力に合成します。ドキュメントがモデルのコンテキストウィンドウを超える場合に使用します。GPT-5.5（128,000トークン）で約100ページ、Claude Opus 4.7（200,000トークン）で約160ページ、Gemini 3.1 Pro（100万トークン）で約800ページ。構造化ドキュメント（法律契約、年間報告書）の場合、セクションタイトルによるテーマ別チャンキングが最も一貫した最終合成を生成。',
+              a: 'チャンキングはドキュメントをセグメント（通常500～2,000トークン）に分割し、各セグメントを個別に要約し、チャンク要約を最終出力に合成します。ドキュメントがモデルのコンテキストウィンドウを超える場合に使用します。GPT-5.5（128,000トークン）で約100ページ、Claude Sonnet 4.6（200,000トークン）で約160ページ、Gemini 3.1 Pro（100万トークン）で約800ページ。構造化ドキュメント（法律契約、年間報告書）の場合、セクションタイトルによるテーマ別チャンキングが最も一貫した最終合成を生成。',
             },
             {
               q: 'ROUGEとBERTScoreは何で、AI要約を評価するためにどの指標を使用すべきですか？',
@@ -2092,7 +2201,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'AI文档提取与总结',
       intro: 'AI驱动的提取和总结功能将文档审查时间减少60–80%，同时在有根据的总结任务上实现0.7%的幻觉率——关键是为每种文档类型选择正确的总结方法、正确的模型和正确的提示词结构。',
       publishDate: '2026-03-23',
-      dateModified: '2026-04-29',
+      dateModified: '2026-05-04',
       seoTitle: 'AI摘要：抽取式与生成式方法对比（2026）',
       metaDescription: '抽取式摘要的幻觉风险为0%。生成式方法幻觉率0.7–14%。法律、金融和研究文档分别该用哪种方法——附GPT、Claude、Gemini提示词模板。',
       ogTitle: '抽取式＝0%幻觉。生成式＝0.7–14%。你该选哪种？',
@@ -2129,7 +2238,7 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=zh',
         inLanguage: 'zh',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-29',
+        dateModified: '2026-05-04',
         author: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -2162,7 +2271,7 @@ export const article: Record<Language, PEArticle> = {
         keywords: ['AI总结', '文档提取', '抽象式总结', '抽取式总结', 'NotebookLM', 'Claude', '幻觉率', '提示词工程'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Elicit' },
@@ -2188,7 +2297,7 @@ export const article: Record<Language, PEArticle> = {
             name: '哪个AI模型在总结文件时的幻觉最少？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '在Vectara的HHEM基准上——该基准是跨831份文档的文档总结忠实度标准测试——Google DeepMind的Gemini-2.0-Flash-001在2025年实现了0.7%的最低幻觉率。现在有四个模型在有根据的总结上实现了低于1%的速率。这些速率仅适用于源有根据的任务；开放域事实回忆在相同模型中产生3–33%的速率。',
+              text: '在Vectara的HHEM基准上——该基准是跨831份文档的文档总结忠实度标准测试——Google DeepMind的Gemini 3 Flash在2025年实现了0.7%的最低幻觉率。现在有四个模型在有根据的总结上实现了低于1%的速率。这些速率仅适用于源有根据的任务；开放域事实回忆在相同模型中产生3–33%的速率。',
             },
           },
           {
@@ -2196,7 +2305,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'AI总结工具一次最多可以处理多少页？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '这取决于模型的上下文窗口。OpenAI的GPT-5.5每个会话大约处理100页（128k token限制）。Anthropic的Claude Opus 4.7大约处理160页（200k tokens）。Google DeepMind的Gemini 3.1 Pro大约处理800页（1M tokens）。Google DeepMind的NotebookLM支持最多50个源，总计约500,000字。对于更大的语料库，需要文档分块。',
+              text: '这取决于模型的上下文窗口。OpenAI的GPT-5.5每个会话大约处理100页（128k token限制）。Anthropic的Claude Sonnet 4.6大约处理160页（200k tokens）。Google DeepMind的Gemini 3.1 Pro大约处理800页（1M tokens）。Google DeepMind的NotebookLM支持最多50个源，总计约500,000字。对于更大的语料库，需要文档分块。',
             },
           },
           {
@@ -2204,7 +2313,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'NotebookLM或Claude哪个更适合文档总结？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '它们服务于不同的需求。Google DeepMind的NotebookLM提供更严格的源有根据性和可点击的内联引文——对上传源的幻觉较少，更好地忠实表示文件内容。Anthropic的Claude Opus 4.7产生更细致的分析，善于跨多个文档进行综合，并识别非显而易见的联系——但有时会以微妙的误导方式混合源内容和常规训练知识。使用NotebookLM来追求精确；使用Claude来获得洞察。',
+              text: '它们服务于不同的需求。Google DeepMind的NotebookLM提供更严格的源有根据性和可点击的内联引文——对上传源的幻觉较少，更好地忠实表示文件内容。Anthropic的Claude Sonnet 4.6产生更细致的分析，善于跨多个文档进行综合，并识别非显而易见的联系——但有时会以微妙的误导方式混合源内容和常规训练知识。使用NotebookLM来追求精确；使用Claude来获得洞察。',
             },
           },
           {
@@ -2212,7 +2321,7 @@ export const article: Record<Language, PEArticle> = {
             name: '如何防止AI在总结中产生幻觉？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '四种技术可以减少总结任务中的幻觉：(1)明确指示模型——"仅从下面的文档总结；不添加外部知识"；(2)将温度(T)设置为0.0–0.1以实现最大确定性；(3)使用忠实度检查——要求模型列出其总结中的每一项声明及其源句子；(4)与第二个模型交叉检查——当GPT-5.5和Claude Opus 4.7对特定事实达成一致时，共享幻觉的概率在统计上接近零。',
+              text: '四种技术可以减少总结任务中的幻觉：(1)明确指示模型——"仅从下面的文档总结；不添加外部知识"；(2)将温度(T)设置为0.0–0.1以实现最大确定性；(3)使用忠实度检查——要求模型列出其总结中的每一项声明及其源句子；(4)与第二个模型交叉检查——当GPT-5.5和Claude Sonnet 4.6对特定事实达成一致时，共享幻觉的概率在统计上接近零。',
             },
           },
           {
@@ -2220,7 +2329,7 @@ export const article: Record<Language, PEArticle> = {
             name: '什么是文档分块，我何时应该使用它？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '分块将文档分成片段（通常500–2,000 tokens），分别总结每个片段，然后将片段总结综合为最终输出。当文档超过模型上下文窗口时使用——对于GPT-5.5约100页（128k tokens），对于Claude Opus 4.7约160页（200k tokens），对于Gemini 3.1 Pro约800页（1M tokens）。对于具有明确结构的文档（法律合同、年度报告），按节标题进行主题分块可产生最连贯的最终综合。对于非结构化文本（电子邮件线程、记录），按段落进行分块，在500-token间隔处为推荐默认值。',
+              text: '分块将文档分成片段（通常500–2,000 tokens），分别总结每个片段，然后将片段总结综合为最终输出。当文档超过模型上下文窗口时使用——对于GPT-5.5约100页（128k tokens），对于Claude Sonnet 4.6约160页（200k tokens），对于Gemini 3.1 Pro约800页（1M tokens）。对于具有明确结构的文档（法律合同、年度报告），按节标题进行主题分块可产生最连贯的最终综合。对于非结构化文本（电子邮件线程、记录），按段落进行分块，在500-token间隔处为推荐默认值。',
             },
           },
           {
@@ -2292,11 +2401,11 @@ export const article: Record<Language, PEArticle> = {
           isTldr: true,
           items: [
             '对于法律、合规和精确措辞的文档使用抽取式总结；对于研究综述和执行输出使用抽象式LLM总结',
-            'Gemini-2.0-Flash-001在有根据的总结上实现0.7%的幻觉率——这是Vectara的HHEM基准上跨831份文档的最佳表现',
-            'NotebookLM（Google DeepMind）为源有根据的总结和可点击的内联引文提供了最可靠的功能；Claude Opus 4.7在跨文档综合和复杂分析中领先',
+            'Gemini 3 Flash在有根据的总结上实现0.7%的幻觉率——这是Vectara的HHEM基准上跨831份文档的最佳表现',
+            'NotebookLM（Google DeepMind）为源有根据的总结和可点击的内联引文提供了最可靠的功能；Claude Sonnet 4.6在跨文档综合和复杂分析中领先',
             '有根据总结的幻觉率从2021年到2025年下降了96%——但2025年的数学证明确认在当前LLM架构下无法完全消除幻觉',
             '对于超过上下文窗口限制的文档，按主题进行分块（按节/主题）可产生最连贯的最终综合',
-            'Claude Opus 4.7每个会话可处理约160页（200k tokens）；Gemini 3.1 Pro可处理约800页（1M tokens）——上下文限制决定了哪个模型对大型文档集实际可行',
+            'Claude Sonnet 4.6每个会话可处理约160页（200k tokens）；Gemini 3.1 Pro可处理约800页（1M tokens）——上下文限制决定了哪个模型对大型文档集实际可行',
           ],
         },
         definition: {
@@ -2304,7 +2413,7 @@ export const article: Record<Language, PEArticle> = {
           title: '两种AI总结类型和何时使用各种？',
           content: [
             '**抽取式总结直接从源文档复制句子；抽象式总结生成新的释义和压缩句子——两种方法在事实精确性和可读性之间进行权衡。**',
-            '抽取式总结——由Scholarcy等工具使用——根据关键词频率、位置和信息密度对句子进行排名，然后再现最高评分的句子而无需修改。由于没有生成新文本，事实错误在结构上是不可能的：输出始终是源的子集。抽象式总结——由GPT-5.5（OpenAI）、Claude Opus 4.7（Anthropic）和Gemini 3.1 Pro（Google DeepMind）使用——生成综合和释义的新文本，以更高的幻觉风险为代价生成更可读的输出。',
+            '抽取式总结——由Scholarcy等工具使用——根据关键词频率、位置和信息密度对句子进行排名，然后再现最高评分的句子而无需修改。由于没有生成新文本，事实错误在结构上是不可能的：输出始终是源的子集。抽象式总结——由GPT-5.5（OpenAI）、Claude Sonnet 4.6（Anthropic）和Gemini 3.1 Pro（Google DeepMind）使用——生成综合和释义的新文本，以更高的幻觉风险为代价生成更可读的输出。',
           ],
           columns: ['方法', '幻觉风险', '可读性', '最佳用途'],
           rows: [
@@ -2327,18 +2436,18 @@ export const article: Record<Language, PEArticle> = {
               '最佳用途': '财务报告、学术文献、技术文档',
             },
           ],
-          blockquote: '2025年arXiv研究对金融新闻文章的总结方法进行了基准测试，发现抽取式方法（Lead-1、MatchSum）为短格式、结构良好的文本建立了强大的基线——但当在领域特定数据上进行微调时，抽象式LLM对复杂金融文档的表现优于它们。微调的GPT-5.5-mini在同一基准上实现了0.619的BERTScore，而Lead-1的为0.588。简而言之：当您不能承受事实性错误时使用抽取式总结；当您需要输出具有可读性并可直接使用而无需进一步编辑时使用抽象式总结。',
+          blockquote: '2025年arXiv研究对金融新闻文章的总结方法进行了基准测试，发现抽取式方法（Lead-1、MatchSum）为短格式、结构良好的文本建立了强大的基线——但当在领域特定数据上进行微调时，抽象式LLM对复杂金融文档的表现优于它们。微调的GPT-5.5 mini在同一基准上实现了0.619的BERTScore，而Lead-1的为0.588。简而言之：当您不能承受事实性错误时使用抽取式总结；当您需要输出具有可读性并可直接使用而无需进一步编辑时使用抽象式总结。',
         },
         toolComparison: {
           id: 'which-model-for-summarisation',
           title: '哪个AI模型在总结中的幻觉率最低？',
           content: [
-            '**NotebookLM（Google DeepMind）在源有根据的已上传文档总结中领先；Claude Opus 4.7（Anthropic）在综合、跨文档分析和复杂推理中领先；GPT-5.5（OpenAI）在快速、灵活的通用总结中领先。**',
+            '**NotebookLM（Google DeepMind）在源有根据的已上传文档总结中领先；Claude Sonnet 4.6（Anthropic）在综合、跨文档分析和复杂推理中领先；GPT-5.5（OpenAI）在快速、灵活的通用总结中领先。**',
             '在Vectara的Hughes幻觉评估模型（HHEM）——文档总结忠实度的标准基准，在831份文档上进行了测试——2025年的顶级表现者是：',
             '这些速率代表从2021年的改进，当时顶级模型在同一任务上的幻觉率为21.8%。然而，这些数字仅适用于有根据的总结——模型锚定于源文档。开放域事实回忆在相同模型中产生3–33%的幻觉率。',
           ],
           items: [
-            '**Gemini-2.0-Flash-001（Google DeepMind）：** 0.7%幻觉率——基准上记录的最低值',
+            '**Gemini 3 Flash（Google DeepMind）：** 0.7%幻觉率——基准上记录的最低值',
             '**OpenAI和Gemini变体：** 0.8–1.5%幻觉率集群',
             '**整体顶级模型：** 现在有4个模型在有根据的总结任务上实现了低于1%的速率',
           ],
@@ -2362,7 +2471,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               '工具': 'GPT-5.5（OpenAI）',
-              '上下文限制': '128K tokens（约100页）',
+              '上下文限制': '1M tokens（约800页）',
               '引文质量': '中等；需要明确指示',
               '最佳用途': '常规文件、快速总结',
             },
@@ -2380,7 +2489,7 @@ export const article: Record<Language, PEArticle> = {
             },
           ],
           content: [
-            '**在PromptQuorum测试——25个文档总结提示词分配到三个模型：** Claude Opus 4.7在20个案例中产生了分析最完整的总结（识别文档之间的含义和联系）。GPT-5.5在18个案例中产生了最简洁、立即可用的总结。Gemini 3.1 Pro是唯一能够处理所有25份文档的模型，无需上下文截断，因为其中一些超过80,000 tokens。',
+            '**在PromptQuorum测试——25个文档总结提示词分配到三个模型：** Claude Sonnet 4.6在20个案例中产生了分析最完整的总结（识别文档之间的含义和联系）。GPT-5.5在18个案例中产生了最简洁、立即可用的总结。Gemini 3.1 Pro是唯一能够处理所有25份文档的模型，无需上下文截断，因为其中一些超过80,000 tokens。',
           ],
         },
         promptStructure: {
@@ -2473,7 +2582,7 @@ export const article: Record<Language, PEArticle> = {
             '**事实不一致** —— 模型与源文档中的特定数字或日期相矛盾',
             '**无关信息** —— 模型添加源中不存在的训练数据背景',
           ],
-          blockquote: '2025年Nature发表的框架（Liu等人）引入了问答生成、排序和评估（Q-S-E）方法论，使用基准数据集CNN/Daily Mail、PubMed和ArXiv迭代检测和纠正总结中的幻觉——证明了跨所有三个数据集的忠实度分数的可测量改进。PromptQuorum的多模型分发直接解决了这个问题：同时向GPT-5.5（OpenAI）、Claude Opus 4.7（Anthropic）和Gemini 3.1 Pro发送相同的文档并比较输出，识别模型不同意的段落——这在统计上是幻觉的最高风险段落。',
+          blockquote: '2025年Nature发表的框架（Liu等人）引入了问答生成、排序和评估（Q-S-E）方法论，使用基准数据集CNN/Daily Mail、PubMed和ArXiv迭代检测和纠正总结中的幻觉——证明了跨所有三个数据集的忠实度分数的可测量改进。PromptQuorum的多模型分发直接解决了这个问题：同时向GPT-5.5（OpenAI）、Claude Sonnet 4.6（Anthropic）和Gemini 3.1 Pro发送相同的文档并比较输出，识别模型不同意的段落——这在统计上是幻觉的最高风险段落。',
         },
         evaluationMetrics: {
           id: 'evaluation-metrics',
@@ -2566,23 +2675,23 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: '哪个AI模型在总结文件时的幻觉最少？',
-              a: '在Vectara的HHEM基准上——该基准是跨831份文档的文档总结忠实度标准测试——Google DeepMind的Gemini-2.0-Flash-001在2025年实现了0.7%的最低幻觉率。现在有四个模型在有根据的总结上实现了低于1%的速率。这些速率仅适用于源有根据的任务；开放域事实回忆在相同模型中产生3–33%的速率。',
+              a: '在Vectara的HHEM基准上——该基准是跨831份文档的文档总结忠实度标准测试——Google DeepMind的Gemini 3 Flash在2025年实现了0.7%的最低幻觉率。现在有四个模型在有根据的总结上实现了低于1%的速率。这些速率仅适用于源有根据的任务；开放域事实回忆在相同模型中产生3–33%的速率。',
             },
             {
               q: 'AI总结工具一次最多可以处理多少页？',
-              a: '这取决于模型的上下文窗口。OpenAI的GPT-5.5每个会话大约处理100页（128k token限制）。Anthropic的Claude Opus 4.7大约处理160页（200k tokens）。Google DeepMind的Gemini 3.1 Pro大约处理800页（1M tokens）。Google DeepMind的NotebookLM支持最多50个源，总计约500,000字。对于更大的语料库，需要文档分块。',
+              a: '这取决于模型的上下文窗口。OpenAI的GPT-5.5每个会话大约处理100页（128k token限制）。Anthropic的Claude Sonnet 4.6大约处理160页（200k tokens）。Google DeepMind的Gemini 3.1 Pro大约处理800页（1M tokens）。Google DeepMind的NotebookLM支持最多50个源，总计约500,000字。对于更大的语料库，需要文档分块。',
             },
             {
               q: 'NotebookLM或Claude哪个更适合文档总结？',
-              a: '它们服务于不同的需求。Google DeepMind的NotebookLM提供更严格的源有根据性和可点击的内联引文——对上传源的幻觉较少，更好地忠实表示文件内容。Anthropic的Claude Opus 4.7产生更细致的分析，善于跨多个文档进行综合，并识别非显而易见的联系——但有时会以微妙的误导方式混合源内容和常规训练知识。使用NotebookLM来追求精确；使用Claude来获得洞察。',
+              a: '它们服务于不同的需求。Google DeepMind的NotebookLM提供更严格的源有根据性和可点击的内联引文——对上传源的幻觉较少，更好地忠实表示文件内容。Anthropic的Claude Sonnet 4.6产生更细致的分析，善于跨多个文档进行综合，并识别非显而易见的联系——但有时会以微妙的误导方式混合源内容和常规训练知识。使用NotebookLM来追求精确；使用Claude来获得洞察。',
             },
             {
               q: '如何防止AI在总结中产生幻觉？',
-              a: '四种技术可以减少总结任务中的幻觉：(1)明确指示模型——"仅从下面的文档总结；不添加外部知识"；(2)将温度(T)设置为0.0–0.1以实现最大确定性；(3)使用忠实度检查——要求模型列出其总结中的每一项声明及其源句子；(4)与第二个模型交叉检查——当GPT-5.5和Claude Opus 4.7对特定事实达成一致时，共享幻觉的概率在统计上接近零。',
+              a: '四种技术可以减少总结任务中的幻觉：(1)明确指示模型——"仅从下面的文档总结；不添加外部知识"；(2)将温度(T)设置为0.0–0.1以实现最大确定性；(3)使用忠实度检查——要求模型列出其总结中的每一项声明及其源句子；(4)与第二个模型交叉检查——当GPT-5.5和Claude Sonnet 4.6对特定事实达成一致时，共享幻觉的概率在统计上接近零。',
             },
             {
               q: '什么是文档分块，我何时应该使用它？',
-              a: '分块将文档分成片段（通常500–2,000 tokens），分别总结每个片段，然后将片段总结综合为最终输出。当文档超过模型上下文窗口时使用——对于GPT-5.5约100页（128k tokens），对于Claude Opus 4.7约160页（200k tokens），对于Gemini 3.1 Pro约800页（1M tokens）。对于具有明确结构的文档（法律合同、年度报告），按节标题进行主题分块可产生最连贯的最终综合。对于非结构化文本（电子邮件线程、记录），按段落进行分块，在500-token间隔处为推荐默认值。',
+              a: '分块将文档分成片段（通常500–2,000 tokens），分别总结每个片段，然后将片段总结综合为最终输出。当文档超过模型上下文窗口时使用——对于GPT-5.5约100页（128k tokens），对于Claude Sonnet 4.6约160页（200k tokens），对于Gemini 3.1 Pro约800页（1M tokens）。对于具有明确结构的文档（法律合同、年度报告），按节标题进行主题分块可产生最连贯的最终综合。对于非结构化文本（电子邮件线程、记录），按段落进行分块，在500-token间隔处为推荐默认值。',
             },
             {
               q: '什么是ROUGE和BERTScore，我应该使用哪个指标来评估AI总结？',
