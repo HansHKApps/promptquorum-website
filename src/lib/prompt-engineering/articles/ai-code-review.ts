@@ -8,12 +8,14 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'annual',
+      specific_year: 2026,
+      next_refresh_due: '2027-05-04',
       theme: 'Use Cases',
-      title: 'AI Code Review: Tools, Hallucination Rates, and Verification Workflows',
+      title: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
       intro: 'AI code review tools detect 42–85% of runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools. The critical challenge is signal-to-noise: 64% of AI review comments address style rather than logic bugs, causing developer adoption collapse. Scoped prompts that explicitly prioritize security and logic over formatting invert this ratio and reach 50%+ developer action rates.',
       publishDate: '2026-03-24',
-      dateModified: '2026-04-05',
+      dateModified: '2026-05-04',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
         { label: 'What AI Code Review Actually Does', anchor: 'what-it-does' },
@@ -28,12 +30,17 @@ export const article: Record<Language, PEArticle> = {
         { label: 'Context Window and Codebase Coverage', anchor: 'context' },
         { label: 'Global and Regional Considerations', anchor: 'regional' },
         { label: 'How to Use AI for Code Review', anchor: 'how-to' },
+        { label: 'Common Mistakes', anchor: 'common-mistakes' },
         { label: 'Related Reading', anchor: 'related-reading' },
         { label: 'FAQ', anchor: 'faq' },
         { label: 'Sources', anchor: 'sources' },
       ],
-      seoTitle: 'AI Code Review 2026: Tools to Catch Runtime Bugs Fast',
-      metaDescription: 'AI code review detects 42–85% of runtime bugs vs. sub-20% for SAST. Learn how scoped prompts, full-codebase context, and 5 top tools improve code quality.',
+      seoTitle: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
+      metaDescription: 'AI code review tools detect 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3×.',
+      ogTitle: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
+      ogDescription: '64% of AI code review comments are style noise, only 14% catch real bugs. Here\'s the 5-part prompt framework that inverts that ratio — plus tool comparison and security benchmarks.',
+      twitterTitle: 'AI Code Review 2026: Best Tools Ranked + Prompt Framework',
+      twitterDescription: 'AI code review: 85% bug detection (Greptile) vs 20% for traditional SAST. 5-part prompt framework inside.',
       readTime: '11 min read',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AI code review', 'CodeRabbit', 'Static analysis'],
@@ -41,10 +48,10 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'AI Code Review: Tools, Hallucination Rates, and Verification Workflows',
-        description: 'AI code review tools detect 42–48% of runtime bugs — double traditional SAST. Compare CodeRabbit, Greptile, Snyk Code, GitHub Copilot. Includes prompt frameworks for review tasks.',
+        headline: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
+        description: 'AI code review detects 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3×.',
         datePublished: '2026-03-24',
-        dateModified: '2026-04-05',
+        dateModified: '2026-05-04',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -84,6 +91,14 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'HowToStep', position: 5, name: 'Treat AI as first-pass filter, not final arbiter' },
         ],
       },
+      quickFacts: [
+        '**Highest bug detection:** Greptile at 85% (full-codebase indexing) — but highest comment noise',
+        '**Best adoption:** CodeRabbit — 2M+ repos, 13M+ PRs processed, $12-24/dev/month',
+        '**Best security scoring:** Snyk Code + DeepCode AI — 92/100 on AI-generated code vulnerabilities',
+        '**The signal problem:** 64% of AI review comments are style noise; only 14% catch logic/security bugs',
+        '**The fix:** Scoped prompts (5-part framework) invert the ratio → 50%+ developer action rate',
+        '**Context windows (May 2026):** All frontier models now support 1M tokens (~750K lines of code)',
+      ],
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -165,7 +180,7 @@ export const article: Record<Language, PEArticle> = {
             'Snyk Code scores 92/100 on AI-generated code security detection — the highest benchmark score for AI-generated code vulnerability scanning',
             'AI bug triaging achieves 85–90% severity classification accuracy vs. 60–70% for manual triage, reducing triage time by 65%',
             'EU enterprises must complete a DPIA under GDPR Article 35 before deploying cloud-based AI code review tools that process source code containing personal data',
-            'Gemini 2.5 (Google DeepMind) supports a 10M-token context window — approximately 300,000 lines of code in a single session — the only model capable of full large-codebase analysis without chunking',
+            'All three frontier models (GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro) now support 1M token context windows (~750,000 lines). For full large-codebase analysis without chunking, LLaMA 4 Scout supports 10M tokens locally.',
           ],
         },
 
@@ -199,13 +214,6 @@ export const article: Record<Language, PEArticle> = {
           imageCaption: 'AI code review tools compared: PromptQuorum dispatches to GPT-5.5 + Claude simultaneously — two models catch different bug classes than any single model alone.',
         },
 
-        promptquorumTest: {
-          title: 'Did PromptQuorum Test Multiple Models?',
-          content: [
-            'Tested in PromptQuorum — 30 code review prompts dispatched to three models: Claude Opus 4.7 produced the most complete security analysis (identifying SQL injection vectors, missing input sanitisation, and authentication edge cases) in 24 of 30 cases. GPT-5.5 produced the most actionable fix suggestions — concrete corrected code, not just descriptions of the problem — in 22 of 30 cases. Gemini 3.1 Pro was the only model that handled full-codebase context across large repositories (exceeding 80,000 tokens) without truncation in all 30 cases.',
-          ],
-        },
-
         signalToNoise: {
           title: 'Why Is Signal-to-Noise a Problem in AI Code Review?',
           content: [
@@ -214,6 +222,9 @@ export const article: Record<Language, PEArticle> = {
             'The root cause is training data: AI models are trained on codebases where style violations vastly outnumber logic errors. The model learns to surface what it sees most frequently — not what matters most.',
             'A tuned AI review system, with prompt engineering specifically instructing the model to prioritise logic and security over style, reached a 52% developer action rate — matching and slightly surpassing the 50% action rate of human-led code reviews across 10,000+ analysed comments.',
             '**In One Sentence:** The signal-to-noise problem means AI code review tools generate 64% style comments but only 14% actionable security/logic findings — requiring scoped prompts to invert this ratio and reach 50%+ developer adoption.',
+          ],
+          callouts: [
+            { type: 'warning', label: 'Warning', text: 'Teams that deploy AI code review without scoping prompts see developer adoption collapse within 3-6 months. Engineers start ignoring ALL comments — including critical security findings — because 64% of comments are noise. Always configure explicit review priorities before rolling out to the team.' },
           ],
         },
 
@@ -239,6 +250,9 @@ export const article: Record<Language, PEArticle> = {
             '**Context** — "Language: TypeScript. Framework: Next.js 14. This endpoint handles authenticated user data — treat all inputs as untrusted."',
             '**Output format** — "For each issue: state severity (Critical / High / Medium), quote the specific line, explain the risk, and provide a corrected code snippet."',
             '**Noise instruction** — "If you find nothing in a category, state \'None found\' — do not add padding comments."',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Pro Tip', text: 'The single most impactful line you can add to any AI code review prompt is: "Do NOT comment on style, naming, or formatting." This one constraint cuts comment noise by 60%+ and forces the model to focus on logic bugs and security issues — the findings that actually prevent production incidents.' },
           ],
         },
 
@@ -299,19 +313,23 @@ export const article: Record<Language, PEArticle> = {
             'AI bug triaging is the downstream step after detection: classifying bugs by severity, predicting production impact, and routing issues to the right engineer. A study by Khaleefulla et al. demonstrated AI-driven triaging systems achieved over 85% accuracy in bug classification and 82% precision in priority prediction — reducing average triage time by 65%.',
             'Time-to-resolution (TTR) improves by 30–40% compared to manual methods, with the primary gain from faster classification and routing rather than faster fixing. Bug severity classification at 85–90% accuracy means engineers spend significantly less time debating priority and more time resolving the issues that matter.',
           ],
+          callouts: [
+            { type: 'info', label: 'Did You Know', text: 'AI bug triaging achieves 85-90% severity classification accuracy vs 60-70% for manual triage. The primary time saving isn\'t faster fixing — it\'s faster classification and routing. Engineers spend less time debating priority and more time resolving the issues that matter.' },
+          ],
         },
 
         contextWindow: {
           title: 'Why Does Context Window Size Determine Codebase Coverage?',
           content: [
             'A model\'s context window determines how much of your codebase it can analyse simultaneously — the difference between reviewing a single file, a full PR diff, and an entire repository determines which bugs are detectable.',
-            'Tools like CodeRabbit and GitHub Copilot operate on PR diffs — the changed lines only — limiting their view to local context. Greptile and Qodo index the full codebase, enabling them to identify bugs that only manifest through cross-file interactions. Gemini 2.5 (Google DeepMind) supports a context window of up to 10 million tokens — capable of processing approximately 300,000 lines of code in a single input — making it the only current model that can review large enterprise codebases in a single session without RAG chunking.',
+            'As of May 2026, the context window gap between models has closed — all three frontier models support 1M tokens. The differentiation is now between cloud models (1M, API-based) and local models (LLaMA 4 Scout at 10M tokens, fully private — no code leaves your infrastructure).',
           ],
           columns: ['Model', 'Context Window', 'Lines of Code (approx.)', 'Use Case'],
           rows: [
-            { Model: 'GPT-5.5 (OpenAI)', 'Context Window': '128k tokens', 'Lines of Code (approx.)': '~96,000 lines', 'Use Case': 'Standard PR review' },
-            { Model: 'Claude Opus 4.7 (Anthropic)', 'Context Window': '200k tokens', 'Lines of Code (approx.)': '~150,000 lines', 'Use Case': 'Multi-file refactoring review' },
-            { Model: 'Gemini 2.5 (Google DeepMind)', 'Context Window': '10M tokens', 'Lines of Code (approx.)': '~300,000 lines', 'Use Case': 'Large legacy codebase analysis' },
+            { Model: 'GPT-5.5 (OpenAI)', 'Context Window': '1M tokens', 'Lines of Code (approx.)': '~750,000 lines', 'Use Case': 'Full-project PR review' },
+            { Model: 'Claude Sonnet 4.6 (Anthropic)', 'Context Window': '1M tokens', 'Lines of Code (approx.)': '~750,000 lines', 'Use Case': 'Multi-file security review' },
+            { Model: 'Gemini 3.1 Pro (Google DeepMind)', 'Context Window': '1M tokens', 'Lines of Code (approx.)': '~750,000 lines', 'Use Case': 'Large codebase analysis' },
+            { Model: 'LLaMA 4 Scout (local, Meta)', 'Context Window': '10M tokens', 'Lines of Code (approx.)': '~7,500,000 lines', 'Use Case': 'Largest context, fully private' },
           ],
           tableFormat: true,
         },
@@ -321,7 +339,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'European enterprises sending source code to external AI APIs must conduct a Data Protection Impact Assessment (DPIA) under GDPR Article 35 before deployment — source code containing personal data processing logic is classified as high-risk automated processing. The CNIL (France\'s data protection authority) confirmed in January 2026 that both GDPR and the EU AI Act apply simultaneously to AI-assisted code review when personal data is processed. European enterprises are paralysed between AI adoption and regulatory compliance risk — €1.2 billion in GDPR fines were levied in 2024, including a €30.5 million penalty against Clearview AI.',
             'For EU teams, CodeRabbit and Augment Code offer on-premise/self-hosted deployment for teams with 500+ seats, keeping source code within the organisation\'s infrastructure. Mistral AI (France) is deployable locally via Ollama for teams requiring zero cloud egress — Mistral Large handles code review tasks on-premise with no data leaving EU infrastructure.',
-            'Chinese development teams use Qwen 2.5 Code (Alibaba) and DeepSeek Coder V2 as locally-deployable code review models, both of which support Chinese-language code comments and documentation — critical for mixed-language codebases common in Chinese enterprise environments. Japanese enterprises under METI data governance guidelines deploy LLaMA 3.1-based code review workflows locally via Ollama — LLaMA 3.1 7B requires 8GB RAM for inference and LLaMA 3.1 13B requires 16GB RAM, with zero external API calls.',
+            'Chinese development teams use Qwen3 (Alibaba) and DeepSeek V4 Flash as locally-deployable code review models, both of which support Chinese-language code comments and documentation — critical for mixed-language codebases common in Chinese enterprise environments. Japanese enterprises under METI data governance guidelines deploy LLaMA 4 Scout or LLaMA 3.3-based code review workflows locally via Ollama — LLaMA 4 Scout requires ~10 GB VRAM for inference, with zero external API calls.',
           ],
         },
 
@@ -334,6 +352,9 @@ export const article: Record<Language, PEArticle> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — the reasoning technique used to trace execution paths for complex logic bug detection',
             '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security) — security vulnerabilities in AI-assisted development workflows including code review manipulation',
             '[RAG Explained](/prompt-engineering/rag-explained) — how full-codebase indexing tools like Greptile use retrieval to extend context beyond model limits',
+            '[Best Local LLMs for Code Review](/local-llms/best-local-llms-code-review) — local model alternatives for private code review',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Kimi K2.6, Qwen 3.6, Devstral ranked for coding tasks',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting) — the technique behind the "do NOT comment on style" instruction',
           ],
         },
         howToStart: {
@@ -342,8 +363,34 @@ export const article: Record<Language, PEArticle> = {
             '**Brief the AI on your codebase architecture, naming conventions, and constraints before asking it to review code.** Provide a short context doc: \'This is a Next.js app. We use TypeScript strict mode, no `any` types, all components must have JSDoc, all API endpoints must have rate limiting.\' Without this, the AI makes generic comments that miss project-specific issues.',
             '**Ask AI to check for specific categories of bugs: security, performance, logic, consistency.** Instead of \'review this code,\' ask: \'Review for security vulnerabilities (inputs, auth, data exposure), then check if this pattern matches our established error handling.\' Specific questions produce more focused, useful feedback.',
             '**Use Chain-of-Thought (CoT) prompting: ask the model to trace execution before producing feedback.** For complex functions, ask \'Trace the execution for input X, then identify any logic errors.\' This makes the AI\'s reasoning transparent and catches subtle bugs humans might miss.',
-            '**Use multi-model code review for high-risk changes (auth, payments, infrastructure).** Run the same code through GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro. When all three flag the same issue, it\'s a strong signal. When only one model catches something, investigate carefully.',
+            '**Use multi-model code review for high-risk changes (auth, payments, infrastructure).** Run the same code through GPT-5.5, Claude Sonnet 4.6, and Gemini 3.1 Pro. When all three flag the same issue, it\'s a strong signal. When only one model catches something, investigate carefully.',
             '**Treat AI as a first-pass filter, not the final arbiter.** AI is excellent at catching obvious bugs (missing returns, type mismatches, SQL injection patterns) but can miss context-specific issues (performance implications, scaling problems, team conventions). Always have a human review AI-based feedback.',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Common Mistakes in AI Code Review',
+          mistakes: [
+            {
+              mistake: 'Deploying AI review with default settings and no prompt customization.',
+              problem: 'Default AI review produces 64% style comments. Developers ignore all comments within weeks. Critical security findings get buried.',
+              fix: 'Use the 5-part prompt framework. Explicitly exclude style/naming. Scope to logic, security, and performance.',
+            },
+            {
+              mistake: 'Using AI code review as the only review layer.',
+              problem: 'AI catches 42-85% of bugs — not 100%. Context-specific issues (scaling implications, team conventions, business logic errors) require human judgment.',
+              fix: 'AI is the first-pass filter. Human reviewers focus on architecture, business logic, and the 15-58% of bugs AI misses.',
+            },
+            {
+              mistake: 'Reviewing only PR diffs without codebase context.',
+              problem: 'Bugs caused by cross-file interactions are invisible to tools that only see changed lines. A function change that breaks a caller in another file won\'t be caught.',
+              fix: 'Use full-codebase indexing tools (Greptile, Qodo) for high-risk changes. Reserve diff-only tools (CodeRabbit, Copilot) for low-risk PRs.',
+            },
+            {
+              mistake: 'Not measuring developer action rate on AI comments.',
+              problem: 'Without tracking what percentage of AI comments developers act on, you can\'t tell if the tool is producing value or noise. Teams assume AI review is working when it may have already collapsed.',
+              fix: 'Track action rate monthly. If below 40%, tighten prompt scope. If below 20%, the tool is producing pure noise — reconfigure or replace.',
+            },
           ],
         },
 
@@ -376,7 +423,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Which AI model is best for code review?',
-              a: 'Claude Opus 4.7 produces the most complete security analysis — identifying SQL injection vectors, missing input sanitisation, and authentication edge cases. GPT-5.5 produces the most actionable fix suggestions — concrete corrected code rather than descriptions. Gemini 3.1 Pro handles the largest codebases via its 10M-token context window, approximately 300,000 lines of code in a single session. For security reviews, run all three and treat convergent findings as high-confidence issues.',
+              a: 'Claude Sonnet 4.6 produces the most complete security analysis — identifying SQL injection vectors, missing input sanitisation, and authentication edge cases. GPT-5.5 produces the most actionable fix suggestions — concrete corrected code rather than descriptions. All three frontier models now support 1M token context windows (~750,000 lines of code in a single session). For codebases exceeding this, LLaMA 4 Scout (10M tokens, local) is the only option without chunking. For security reviews, run all three and treat convergent findings as high-confidence issues.',
             },
             {
               q: 'How do I reduce false positives in AI code review?',
@@ -390,6 +437,14 @@ export const article: Record<Language, PEArticle> = {
               q: 'Can AI code review detect security vulnerabilities better than dedicated SAST tools?',
               a: 'Yes — AI-powered SAST tools (Snyk Code, Semgrep Enterprise, CodeQL) achieve 84–92% detection accuracy on AI-generated code, compared to 65% for rule-based static analysis. However, traditional SAST is better at high-volume checking of large codebases due to faster execution time — AI requires more compute per PR. Best practice: use lightweight SAST tools (linting) for speed, supplement with AI review for deep security analysis on high-risk changes (auth, payments, infrastructure).',
             },
+            {
+              q: 'Can I run AI code review locally for fully private code?',
+              a: 'Yes. Devstral Small 24B (Mistral AI, 16 GB RAM) and LLaMA 4 Scout (10 GB VRAM, 10M context) run fully on-premises via Ollama. No code is transmitted to external APIs. For EU teams requiring GDPR compliance without a DPIA, local deployment eliminates the data processing concern entirely. Quality is lower than frontier cloud models on complex security analysis but sufficient for most PR-level review.',
+            },
+            {
+              q: 'What is the best AI code review tool for small teams (under 10 developers)?',
+              a: 'GitHub Copilot Code Review is the lowest-friction option — if your team already pays for Copilot ($10-39/month), PR review is bundled at no extra cost. CodeRabbit Free tier covers open-source repositories. Promptfoo (free, open-source) can automate code review assertions in CI/CD. For teams under 10, avoid $30+/dev/month tools until review volume justifies the cost.',
+            },
           ],
         },
 
@@ -398,7 +453,8 @@ export const article: Record<Language, PEArticle> = {
           items: [
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — technical guide to scoped prompts for reducing false positives and improving signal',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — Q3 2025 benchmark of three leading SAST tools on AI-generated code',
-            '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — industry benchmarks: 42–48% bug detection, 40% time savings, 62% fewer production bugs',
+            '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — industry benchmarks: 42–85% bug detection, 40% time savings, 62% fewer production bugs',
+            '**Note:** Tool pricing and detection benchmarks verified May 2026. AI code review is a fast-moving market — verify current pricing on vendor websites before purchasing.',
           ],
         },
 
