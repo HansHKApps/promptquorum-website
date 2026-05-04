@@ -14,9 +14,9 @@ export const article: Record<Language, PEArticle> = {
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
       leadAnswerBlock: '**AI geopolitics determines which models you can use, what regulatory framework governs your deployment, and whether critical hardware remains accessible. The EU AI Act applies globally, US export controls limit chip access, and China\'s CAC filters block content at the API level.**',
       publishDate: '2026-04-01',
-      seoTitle: 'AI Geopolitics 2026: EU vs US vs China Comparison',
-      metaDescription: 'EU AI Act vs US approach vs China\'s CAC: compliance frameworks, timelines, geopolitical risks, and deployment implications for your organization.',
-      dateModified: '2026-04-02',
+      seoTitle: 'EU AI Act High-Risk Deadline in Flux: Digital Omnibus May Delay to Dec 2027',
+      metaDescription: 'EU AI Act high-risk enforcement arrives August 2026 — unless the Digital Omnibus delays it to December 2027. Meanwhile, Trump\'s AI framework targets state laws and China\'s DeepSeek matched GPT models at 94% lower cost. Country-by-country compliance guide.',
+      dateModified: '2026-05-04',
       readTime: '16 min read',
       educationalLevel: 'Intermediate',
       audience: 'Teams deploying AI in regulated markets (EU, China, US)',
@@ -141,7 +141,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', name: 'What are the fines for violating the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Fines reach up to €35 million or 7% of global annual turnover for prohibited AI practices (whichever is higher). High-risk AI violations carry fines up to €15 million or 3% of global turnover. Providing incorrect information to authorities carries fines up to €7.5 million or 1% of global turnover.' } },
           { '@type': 'Question', name: 'What AI applications does the EU ban outright?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act prohibits: social scoring systems by public authorities, real-time biometric surveillance in public spaces (with narrow law enforcement exceptions), AI that exploits cognitive vulnerabilities, and untargeted scraping of facial images from the internet to build recognition databases. These are categorized as Unacceptable Risk.' } },
           { '@type': 'Question', name: 'How does US AI regulation differ from the EU approach?', acceptedAnswer: { '@type': 'Answer', text: 'The US uses a sectoral, voluntary approach — existing regulators (FTC, FDA, CFPB, EEOC) apply their mandates to AI within their domains. There is no federal AI law equivalent to the EU AI Act. The Biden Executive Order on AI Safety (October 2023) was revoked by the Trump administration in January 2025 and replaced with a competitiveness-focused AI Action Plan.' } },
-          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, matched GPT-5.5 on multiple benchmarks (AIME 2024, MATH-500, HumanEval) while reportedly training at a fraction of the cost. China\'s leading models — including Alibaba\'s Qwen and Baidu\'s ERNIE — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs.' } },
+          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, exceeded GPT-4o on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.5\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 2.5 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' } },
           { '@type': 'Question', name: 'Can EU companies use GPT-5.5 and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-5.5 and Claude Opus 4.7 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
           { '@type': 'Question', name: 'What is the UK AI Safety Institute (AISI)?', acceptedAnswer: { '@type': 'Answer', text: 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.' } },
           { '@type': 'Question', name: 'How does DeepSeek affect the AI geopolitics race?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.' } },
@@ -152,13 +152,15 @@ export const article: Record<Language, PEArticle> = {
       },
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'Quick Facts', anchor: 'quick-facts-ai-geopolitics-at-a-glance' },
         { label: 'EU Compliance Deadlines', anchor: 'if-you-re-an-eu-based-organization-critical-compliance-deadlines' },
         { label: 'Key Data Points', anchor: 'ai-geopolitics-key-data-points' },
         { label: 'The AI Arms Race: US, China, and the EU', anchor: 'the-ai-arms-race-us-china-and-the-eu' },
         { label: 'The EU AI Act: What It Actually Requires', anchor: 'the-eu-ai-act-what-it-actually-requires' },
+        { label: 'Digital Omnibus: High-Risk Deadline in Flux', anchor: 'digital-omnibus-eu-ai-act-high-risk-compliance-deadline-in-flux' },
         { label: 'EU Member States: National AI Strategies', anchor: 'eu-member-states-national-ai-strategies' },
         { label: 'France & Mistral: EU AI Independence', anchor: 'france-mistral-building-european-ai-independence' },
-        { label: 'US Strategy: CHIPS Act, NIST', anchor: 'us-strategy-executive-orders-chips-act-nist' },
+        { label: 'US Strategy: Executive Orders & State Law Preemption', anchor: 'us-strategy-executive-orders-chips-act-state-law-preemption' },
         { label: "China's AI Strategy: DeepSeek, CAC", anchor: 'china-s-ai-strategy-made-in-china-2025-cac-regulations-deepseek' },
         { label: 'China: Available Models', anchor: 'china-for-prompt-engineers-which-models-are-available' },
         { label: 'China: Content Filters & CAC', anchor: 'content-filters-cac-requirements-critical-constraints' },
@@ -214,9 +216,21 @@ export const article: Record<Language, PEArticle> = {
             'The Brussels Effect: EU AI Act rules apply to any AI reaching EU users, worldwide.',
             'The US has no federal AI law — sector regulators apply existing mandates to AI in their domains.',
             'The US revoked its AI safety executive order in January 2025 — competitiveness now leads over safety.',
-            'China\'s DeepSeek R1 matched GPT-5.5 on key benchmarks — GPU export controls have not stopped Chinese AI.',
+            'China\'s DeepSeek R1 exceeded GPT-4o on key benchmarks (AIME, MATH, HumanEval) at $6M training cost — a 94% reduction — demonstrating GPU export controls have limits.',
             'TSMC in Taiwan fabricates the chips that power all frontier AI — a single geopolitical dependency.',
             'Organizations must comply with three conflicting regulatory frameworks simultaneously: EU, US, and China.',
+          ],
+        },
+
+        quickFacts: {
+          title: 'Quick Facts: AI Geopolitics at a Glance',
+          items: [
+            '**EU AI Act:** World\'s first binding AI law. High-risk enforcement: August 2, 2026 (may be delayed to December 2, 2027 by Digital Omnibus, pending trilogue agreement scheduled May 13, 2026). Fines: up to €35 million or 7% of global annual revenue.',
+            '**US AI Policy:** No federal AI law. Trump Administration pursuing state law preemption via EO 14365 (December 2025), National Framework (March 2026), and proposed TRUMP AMERICA AI Act (March 2026). Multiple implementation deadlines missed as of May 2026 (FTC statement due March 11, Commerce evaluation due March 11).',
+            '**China AI Governance:** CAC (Cyberspace Administration of China) pre-launch assessment mandatory. Content filters block CPC criticism, Taiwan/Tibet/Xinjiang discussions, and content undermining "socialist core values." Filters return HTTP 200 with `is_safe: 0` flag (not 4xx errors). PIPL requires data residency for Chinese personal data.',
+            '**Hardware Chokepoints:** Nvidia controls ~80% of AI training GPU market. TSMC fabricates ~90% of advanced semiconductors. Both are geopolitical flashpoints. US CHIPS Act ($52B) aims to reduce TSMC dependency.',
+            '**DeepSeek R1 Impact:** Exceeded GPT-4o on reasoning/coding (AIME 2024, MATH, HumanEval) at estimated ~$6M training cost (94% reduction vs. frontier model estimates; cost figure disputed). Trained on China-restricted Nvidia H800 GPUs. Demonstrates hardware export controls have limits.',
+            '**Global Regulatory Conflict:** EU focuses on rights and safety; US focuses on innovation and competitiveness; China focuses on state control and strategic advantage. Organizations deploying AI globally must navigate three incompatible frameworks simultaneously.',
           ],
         },
 
@@ -246,6 +260,13 @@ export const article: Record<Language, PEArticle> = {
           title: 'How Geopolitics Changes Prompt Optimization: Country-by-Country',
           content: [
             '**Where your AI output is consumed determines what your prompts must do — and what they must avoid.** Language affects model performance directly: a prompt written in English sent to a Chinese model (ERNIE 4.0, Qwen) underperforms the same prompt written in Mandarin. Law affects prompt design structurally: EU AI Act disclosure requirements, US sector regulations, and China\'s CAC content filters each impose different constraints on how prompts can be framed, what outputs can be generated, and how applications must handle responses.',
+          ],
+          callouts: [
+            {
+              type: 'pro-tip',
+              label: 'Pro Tip: Write Prompts in the Target Language',
+              text: 'GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro perform significantly better on German, French, Japanese, and Chinese tasks when the prompt itself is in that language. English prompts for non-English output add a translation layer that degrades quality. If you\'re optimizing model performance for a specific country, write your prompts in that country\'s language from the start.',
+            },
           ],
           tableFormat: true,
           columns: ['Region', 'Legal constraint on prompts', 'Language optimization', 'Recommended model'],
@@ -348,7 +369,7 @@ export const article: Record<Language, PEArticle> = {
             '**The EU AI Act** is a regulation passed by the European Parliament in March 2024. It is enforced by the EU AI Office and national market surveillance authorities. It applies to any organization — regardless of headquarters location — whose AI systems affect EU users. The EU AI Act is related to the Brussels Effect: because it applies extraterritorially, it effectively regulates OpenAI, Google DeepMind, and Anthropic globally.',
             '**NVIDIA** is a US semiconductor company that designs AI training GPUs (H100, H200, B200 series). NVIDIA\'s hardware is the primary compute substrate for training GPT-5.5, Claude, Gemini, and most frontier AI models. US export controls on NVIDIA GPUs to China are a central mechanism in the US-China tech rivalry. NVIDIA\'s market position (~80% AI GPU share) makes it a geopolitical actor as well as a commercial one.',
             '**TSMC** (Taiwan Semiconductor Manufacturing Company) is a Taiwanese chip foundry that manufactures advanced semiconductors for NVIDIA, Apple, AMD, and Google. TSMC\'s geographic location in Taiwan — and the island\'s disputed political status — makes TSMC a critical variable in AI geopolitics. The CHIPS and Science Act was enacted partly to reduce US dependency on TSMC by funding domestic US fabs.',
-            '**DeepSeek** is a Chinese AI laboratory (backed by High-Flyer Capital Management) that released DeepSeek R1 in January 2025. DeepSeek R1 matched GPT-5.5 on multiple benchmarks while reportedly training at a fraction of the cost, using China-restricted NVIDIA H800 GPUs. DeepSeek\'s release weakened the argument that US export controls could permanently limit Chinese frontier AI development.',
+            '**DeepSeek** is a Chinese AI laboratory (backed by High-Flyer Capital Management) that released DeepSeek R1 in January 2025. DeepSeek R1 exceeded GPT-4o on reasoning and coding benchmarks (AIME 2024, MATH-500, HumanEval) while training at estimated ~$6 million cost — 94% less than frontier model estimates — using China-restricted NVIDIA H800 GPUs. DeepSeek\'s release weakened the argument that US export controls could permanently limit Chinese frontier AI development.',
           ],
         },
 
@@ -401,6 +422,22 @@ export const article: Record<Language, PEArticle> = {
           imageCaption: 'EU AI Act 4-tier risk system: Unacceptable (banned Aug 2024), High-risk (conformity assessment), Limited (disclosure only), Minimal (no obligations).',
         },
 
+        digitalOmnibus: {
+          title: 'Digital Omnibus: EU AI Act High-Risk Compliance Deadline in Flux',
+          content: [
+            '**As of May 2026, the EU\'s high-risk AI compliance deadline of August 2, 2026 may be delayed to December 2, 2027 — but adoption is not guaranteed.** The European Commission proposed the Digital Omnibus in November 2025 to address unintended consequences and implementation challenges in the EU AI Act. Both the European Parliament and Council of the EU signaled support for a deferral. However, inter-institutional negotiations have stalled.',
+            '**Trilogue Status:** The first trilogue (negotiation between Parliament, Council, and Commission) in February 2026 found broad political agreement on urgency but left technical details unresolved. The second trilogue on April 28, 2026 ended without consensus. A third trilogue was scheduled for May 13, 2026. If adopted before August 2, 2026, the deferral becomes binding; if not, the original August 2, 2026 deadline applies as written.',
+            '**What organizations should do:** Plan for August 2, 2026 as your binding compliance deadline for high-risk AI systems. The Digital Omnibus deferral may extend your timeline to December 2027, but assuming the delay will pass is a risk. Achieving August 2026 compliance now means you are protected either way — if the Omnibus passes, you can optimize further during the extra months; if it doesn\'t, you\'re already compliant.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Warning: Digital Omnibus Adoption Uncertain',
+              text: 'The Digital Omnibus deferral from August 2026 to December 2027 is NOT guaranteed. The second trilogue on April 28, 2026 reached no consensus. A third trilogue is scheduled for May 13, 2026. Do NOT assume the delay will pass. Plan your compliance roadmap for August 2, 2026 as the binding deadline. If the Omnibus is adopted later, you gain extra time; if it isn\'t, you\'re already compliant.',
+            },
+          ],
+        },
+
         euMemberStates: {
           title: 'EU Member States: National AI Strategies',
           content: [
@@ -441,13 +478,19 @@ export const article: Record<Language, PEArticle> = {
         },
 
         usStrategy: {
-          title: 'US Strategy: Executive Orders, CHIPS Act, NIST',
+          title: 'US Strategy: Executive Orders, CHIPS Act, State Law Preemption',
           content: [
-            '**The United States does not have a federal AI law, and the Trump administration\'s 2025 revocation of Biden\'s AI Safety Executive Order reversed the main federal safety framework — shifting US AI policy fully toward competitiveness.** This creates a regulatory gap between the US and EU that affects cross-Atlantic AI procurement and data sharing.',
+            '**The United States does not have a federal AI law, and the Trump administration\'s 2025 revocation of Biden\'s AI Safety Executive Order reversed the main federal safety framework — shifting US AI policy fully toward competitiveness. As of March 2026, Trump is pursuing aggressive federal preemption of state AI laws through Executive Order 14365 and proposed legislation.** This creates a regulatory gap between the US and EU that affects cross-Atlantic AI procurement and data sharing.',
           ],
           items: [
             '**Biden Executive Order on AI Safety (October 2023):** Required frontier AI developers to share safety test results with the US government, established NIST AI safety standards, addressed AI in critical infrastructure and national security. Revoked by President Trump in January 2025.',
             '**Trump AI Action Plan (2025):** Replaces Biden\'s EO with a focus on removing regulatory barriers to AI development, maintaining US leadership over China, and promoting AI export to allied nations. No mandatory safety reporting requirements for AI developers.',
+            '**Executive Order 14365: Ensuring a National Policy Framework for AI (December 11, 2025):** Establishes an AI Litigation Task Force within the Department of Justice to challenge state AI laws in court. Directs the Commerce Secretary (90-day deadline, due March 11, 2026) to identify and publish "onerous" state AI laws — defined as laws requiring AI models to alter truthful outputs or laws compelling disclosure that would violate the First Amendment. Authorizes withholding federal BEAD broadband infrastructure funds from states with "onerous" AI laws. The explicit goal is federal preemption of state AI laws.',
+            '**White House National AI Legislative Framework (March 20, 2026):** A comprehensive framework covering 7 policy areas: protecting children and empowering parents, safeguarding communities, protecting digital replicas, preventing government censorship, workforce development, state law preemption, and light-touch innovation promotion. The framework urges Congress to adopt a "federally unified, innovation-oriented regime centered on preemption of state AI laws."',
+            '**TRUMP AMERICA AI Act (March 18, 2026, Senator Marsha Blackburn):** A 291-page legislative discussion draft that codifies federal AI governance, establishes national standards on training data and deepfakes, mandates artist/creator protections, and includes "duty of care" requirements for AI developers. Sunsets Section 230 of the Communications Decency Act. Aligns with Trump\'s executive order on state law preemption.',
+            '**GUARDRAILS Act (March 20, 2026, Rep. Beyer et al.):** Democratic counter-proposal to the TRUMP AMERICA Act. Would repeal Trump\'s AI EO 14365 and explicitly block federal preemption of state AI laws, preserving state regulatory authority. Reflects the fundamental conflict between federal preemption (Trump) and state autonomy (Democrats) that will define US AI policy 2026–2029.',
+            '**Missed Implementation Deadlines (as of May 2026):** EO 14365 required the FTC to issue an AI policy statement by March 11, 2026 (NOT YET ISSUED as of May 4). The Commerce Department evaluation of state AI laws was also due March 11, 2026 (NOT YET PUBLISHED). Implementation is significantly lagging behind policy ambition.',
+            '**Colorado AI Act (February 1, 2026 enforcement):** The first US state law addressing algorithmic discrimination in high-stakes decisions (hiring, lending, insurance, etc.). Went into effect February 1, 2026. Trump\'s EO 14365 explicitly cited Colorado\'s law as an example of "excessive" regulation. Compliance deadline extended to June 30, 2026. This law exemplifies the state regulations Trump is seeking to preempt federally.',
             '**CHIPS and Science Act ($52 billion):** Signed August 2022. Funds domestic semiconductor manufacturing, R&D, and workforce development. Reduces US dependency on Taiwan Semiconductor Manufacturing Company (TSMC) for advanced chips. Intel, TSMC, and Samsung are building US fabs with CHIPS Act funding.',
             '**Export controls on AI hardware:** The Biden administration restricted exports of advanced Nvidia A100 and H100 GPUs to China and other countries of concern. The restrictions were expanded in October 2023 and October 2024. Nvidia created China-specific chips (A800, H800) that fell within export limits — these were subsequently restricted too.',
             '**NIST AI Risk Management Framework (AI RMF 1.0):** Published January 2023. A voluntary framework — not legally binding — covering AI trustworthiness across seven dimensions: valid/reliable, safe, secure/resilient, explainable/interpretable, privacy-enhanced, fair with managed bias, accountable/transparent. Widely adopted by US federal agencies and large enterprises as a compliance baseline.',
@@ -463,7 +506,7 @@ export const article: Record<Language, PEArticle> = {
           items: [
             '**Made in China 2025 and New Generation AI Development Plan (2017):** China\'s 2017 AI plan targeted global AI leadership by 2030 across research, talent, product development, and regulation. It allocated $15 billion in state funding and set benchmarks for AI patent output, research citations, and industry revenue. AI is designated a core strategic technology alongside semiconductors and quantum computing.',
             '**Cyberspace Administration of China (CAC) algorithm regulations (March 2022):** Required all algorithm-based recommendation systems serving Chinese users to register with the CAC, disclose how algorithms work, and allow users to opt out of personalized recommendations. Extended to generative AI in July 2023 — all generative AI services must register, pass a security assessment, and ensure outputs align with "socialist core values."',
-            '**DeepSeek R1 (January 2025):** Released by DeepSeek (a Chinese AI lab backed by High-Flyer hedge fund), R1 matched or exceeded GPT-5.5 on multiple benchmarks including AIME 2024 (79.8% vs GPT-5.5\'s 74.4%), MATH-500 (97.3%), and HumanEval coding tasks. Trained on Nvidia H800 GPUs — the China-specific variant within export control limits. The release triggered a significant drop in Nvidia\'s stock price and accelerated US policy debates about the effectiveness of hardware export controls.',
+            '**DeepSeek R1 (January 2025):** Released by DeepSeek (a Chinese AI lab backed by High-Flyer hedge fund), R1 exceeded GPT-4o on multiple benchmarks including AIME 2024 (79.8%), MATH-500 (97.3%), and HumanEval coding tasks. Trained on Nvidia H800 GPUs — the China-specific variant within export control limits — with estimated training cost of ~$6 million (94% reduction vs. frontier model estimates; figure is disputed but significant cost advantage clear). The release triggered a significant drop in Nvidia\'s stock price and accelerated US policy debates about the effectiveness of hardware export controls.',
             '**Huawei Ascend chips:** Huawei\'s Ascend 910B and 910C chips are positioned as domestic alternatives to Nvidia GPUs for AI training. Performance remains below Nvidia H100 on most benchmarks but sufficient for training medium-scale models. Major Chinese tech companies (Baidu, Alibaba, ByteDance) have begun migrating some workloads to Ascend to reduce Nvidia dependency.',
             '**Belt and Road AI diplomacy:** China exports AI surveillance infrastructure (facial recognition, smart city systems) to developing nations through BRI partnerships. Providers include Huawei, Alibaba Cloud, and ZTE. This exports Chinese AI governance norms — including algorithmic social management — to partner countries, creating a parallel AI standards ecosystem outside the OECD/EU framework.',
             '**Leading Chinese AI models:** Alibaba Qwen 2.5, Baidu ERNIE 4.0, ByteDance Doubao, Zhipu AI GLM-4. These are competitive on Chinese-language tasks and increasingly on multilingual benchmarks. [Open-source vs proprietary LLM tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) affect Chinese model adoption — Qwen\'s open-weights release has attracted international developers.',
@@ -484,6 +527,13 @@ export const article: Record<Language, PEArticle> = {
             '**All generative AI services in China must comply with the CAC Generative AI Measures (2023).** Content restrictions are enforced at the model and API level, not just by law. Services must implement filters that block output on: CPC leadership criticism, Taiwan/Tibet/Xinjiang independence discussions, politically sensitive historical events (June 4, 1989), content undermining "socialist core values," and material the CAC deems a threat to state security. These filters are built into the API — you cannot configure them out.',
             '**Critical implementation detail:** Requests that trigger filters return HTTP 200 (not HTTP 4xx) with an `is_safe: 0` flag in the response body — not a traditional error. This requires explicit application-level handling in your code. If you call ERNIE 4.0 or DeepSeek with a filtered prompt, the API returns a valid HTTP response with sanitized output or an error flag, not a 4xx status.',
             '**Pre-launch CAC security assessment is mandatory.** Before any consumer-facing generative AI service launches in China, the provider must complete a CAC assessment (45–90 days). Assessment requires: training data sources, content filtering documentation, sample output testing, and self-certification of compliance. Foreign companies cannot directly apply — you need a mainland China entity or licensed partner (Alibaba Cloud, Tencent Cloud) as the registered provider. Their CAC registration covers the model layer; your application-level outputs remain your responsibility.',
+          ],
+          callouts: [
+            {
+              type: 'did-you-know',
+              label: 'Did You Know: CAC Filters Return HTTP 200, Not 4xx',
+              text: 'When content is filtered by China\'s Cyberspace Administration (CAC), regulated APIs (Baidu ERNIE, DeepSeek) return HTTP 200 with an `is_safe: 0` flag in the response body — NOT an HTTP 4xx error. Applications that only check HTTP status codes will silently pass through censored or empty responses. Always check the response body\'s `is_safe` flag before rendering results to end users. This is the most common integration mistake when deploying AI in China.',
+            },
           ],
         },
 
