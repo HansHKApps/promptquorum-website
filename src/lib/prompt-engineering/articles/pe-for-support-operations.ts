@@ -650,8 +650,8 @@ export const article: Record<Language, PEArticle> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
-          { q: 'Pourquoi le PE pour support est-il différent du PE général ?', a: 'Les erreurs dans les prompts support sont visibles par les clients, juridiquement significatives et souvent sensibles aux politiques. La priorité de conception est la précision et la bonne escalade, pas la créativité. Les erreurs peuvent entraîner des dommages aux relations clients, des violations de politique ou une exposition légale. Cela exige des contraintes plus strictes sur la portée des sujets, le format de sortie et les règles d'escalade que la plupart des autres types de prompts.' },
-          { q: 'Comment concevoir un prompt de triage qui route correctement les problèmes ?', a: 'Définissez le triage avec des règles de décision explicites mappant les niveaux de sévérité : L1 (résolution immédiate, pas de humain), L2 (enquête requise, assistance IA), L3 (escalade humaine). Utilisez un format d'arbre de décision avec une logique if-then-else. Testez le prompt sur 15+ vrais tickets de support pour vérifier le routage correct avant le déploiement.' },
+          { q: 'Pourquoi le PE pour support est-il différent du PE général ?', a: 'Les erreurs dans les prompts support sont visibles par les clients, juridiquement significatives et souvent sensibles aux politiques. La priorité de conception est la précision et la bonne escalade, pas la créativité. Les erreurs peuvent entraîner des dommages aux relations clients, des violations de politique ou une exposition légale. Cela exige des contraintes plus strictes sur la portée des sujets, le format de sortie et les règles d\'escalade que la plupart des autres types de prompts.' },
+          { q: 'Comment concevoir un prompt de triage qui route correctement les problèmes ?', a: 'Définissez le triage avec des règles de décision explicites mappant les niveaux de sévérité : L1 (résolution immédiate, pas de humain), L2 (enquête requise, assistance IA), L3 (escalade humaine). Utilisez un format d\'arbre de décision avec une logique if-then-else. Testez le prompt sur 15+ vrais tickets de support pour vérifier le routage correct avant le déploiement.' },
           { q: 'Comment codifier le ton support sans sembler insincère ?', a: 'Fournissez 3–5 exemples de référence de réponses support conformes à votre marque et empathiques. Incluez des descripteurs de ton (3 adjectifs, par ex. «professionnel, chaleureux, direct»). Testez le template sur 2–3 modèles pour assurer la cohérence du ton. Évitez les formules d\'empathie génériques comme «Je comprends votre frustration» — utilisez plutôt des reconnaissances spécifiques du problème.' },
           { q: 'Quelles informations de politique dois-je inclure dans un prompt support ?', a: 'Incluez des documents de référence pour les politiques courantes (politique de remboursement, confidentialité, sécurité des comptes, facturation). Pour chaque politique, définissez les sorties spécifiques que l\'IA ne doit jamais produire : pas de promesses de prix au-delà des tarifs publiés, pas d\'interprétations légales, pas de conseils médicaux, pas d\'exceptions non autorisées. Rendez ces interdictions explicites et testez le prompt sur des cas limites.' },
           { q: 'Quand une IA support doit-elle transférer à un agent humain ?', a: 'Cinq conditions exigent une escalade humaine immédiate : (1) Langage juridique (avocat, procès, etc.); (2) Demandes d\'annulation de compte; (3) Exposition de données ou préoccupations de sécurité; (4) Problèmes P1 répétés pour le même ticket; (5) Demande explicite d\'un humain. Définissez ces déclencheurs explicitement dans le prompt et formez les équipes support à reconnaître les signaux de transfert de l\'IA.' },
@@ -786,42 +786,82 @@ export const article: Record<Language, PEArticle> = {
           'フォローアップテンプレート：トリガー：チケットが解決済みとマークされてから48時間後。出力：解決が維持されているか確認し、満足度シグナルを求める短いフォローアップメッセージ。',
         ],
       },
+      bad_good_example: {
+        id: 'bad-good-example',
+        title: '例：悪いプロンプト vs 良いトリアージプロンプト',
+        content: [
+          '**悪いプロンプト：**\n\n「顧客の問題を手伝う。」\n\n**良いプロンプト：**\n\n「あなたはB2B SaaS プラットフォームのレベル1トリアージ agent です。このカスタマーメッセージを分類：請金（Financeにルーティング）、技術（Techにルーティング）、アカウント（Account Managementにルーティング）、一般（直接処理）。重大度を割り当て：P1=業務ブロック、1時間以内回答、P2=機能的影響、4時間以内回答、P3=情報提供、24時間以内回答。出力：分類ラベル + 重大度 + ルーティング決定 + 顧客メッセージ。制約：問題を解決しない — トリアージのみ。メッセージが「弁護士」「訴訟」「アカウント削除」「データ侵害」「GDPR」を含む場合、P1として分類し、法的エスカレーションに直ちにルーティング。」\n\n**なぜ違いが重要か：**\n悪いプロンプトはAIに「手伝う」の意味を推測させます。良いプロンプトは分類ルール、重大度レベル、ルーティングロジック、出力フォーマット、エスカレーショントリガーを定義し、各決定が1000+チケット全体で予測可能で一貫性があります。',
+        ],
+      },
+      common_mistakes: {
+        id: 'common-mistakes',
+        title: 'サポートプロンプトの一般的な間違い',
+        content: [],
+        items: [
+          '**エスカレーション条件がない：** エスカレーショントリガーのないプロンプトはAIがすべての入力を処理できると仮定します。できません。法的脅迫、削除要求、データ露出には人間判断が必要です。**解決策：** 3–5の明示的エスカレーショントリガーを追加。正確なキーワード（「弁護士」「アカウント削除」「データ侵害」）とアクションをリストします。',
+          '**一般的共感（「フラストレーションを理解します」）：** AIは定型句を使用し、顧客は自動化として認識します。信頼を損ないます。**解決策：** 感情ではなく具体的な問題を確認するよう指示。「CSVエクスポートがあなたのアカウントで空ファイルを返していることがわかります」は「フラストレーションを理解します」より共感的です。',
+          '**ポリシー幻覚 — 存在しないポリシーの発明：** 参照ドキュメントなしでは、AIはもっともらしい但し不正なポリシーを生成します。幻覚した払戻ポリシーは責任です。**解決策：** 実ポリシーテキストまたは決定ツリーをプロンプトに含めます。制約を追加：「このプロンプトに含まれていないポリシーを参照しないでください。顧客要求がカバーされていない場合はエスカレーション。」',
+          '**単純なチケットのみでトーンテスト：** AIは丁寧で明確な要求を処理します。怒った顧客、下品な言葉、間違った顧客、エッジケースで失敗します。**解決策：** 15+の実チケットをテスト：5つ普通、5つ怒った/困難、5つエッジケース（請金紛争、製品欠陥、法的言及）。正確性、コンプライアンス、トーン、エスカレーションで評価。',
+          '**すべてのサポートチャネルで同じプロンプト：** メール、チャット、電話転写には異なる出力フォーマット、トーンレジスター、長さ制限が必要。**解決策：** 各テンプレートのチャネル固有の変種を作成。チャット=より短く非公式。メール=より長く構造化。電話サマリー=agent ノートのためのバレットポイント形式。',
+        ],
+      },
       tone_controls: {
         id: 'tone-controls',
-        title: 'サポートプロンプトのトーンと共感の制御',
+        title: 'サポートプロンプトのトーン共感制御',
         content: [
-          '**サポートプロンプトのトーンには3つの明示的な制御が必要です：共感マーカー、フォーマリティレベル仕様、責任転嫁言語の制約。** 明示的な制御なしでは、モデルのトーンデフォルトが異なります。',
+          '**サポートプロンプトのトーンには3つの明示的な制御が必要：共感マーカー、フォーマリティレベル仕様、非難言語の制約。** 明示的な制御なしでは、モデルのトーンデフォルトが異なります。',
         ],
         items: [
-          '**共感マーカー：** モデルが問題を対処する前に顧客のフラストレーションや状況を認識するよう指示します。パターン：共感ステートメント→問題の再述→解決パス。',
-          '**フォーマリティレベル：** ブランドガイドに基づいてフォーマリティレジスターを指定します。「フレンドリーになって」などの曖昧な指示には依存しないでください。',
-          '**責任転嫁言語制約：** 顧客に責任を帰属させる言語を避けるよう明示的に指示します。10の難しいチケット例でこれをテストします。',
+          '**共感マーカー：** モデルが問題を対処する前に顧客のフラストレーションや状況を認識するよう指示。パターン：共感ステートメント → 問題の再述 → 解決パス。これはAIが解決に直接ジャンプすることを防ぎます。',
+          '**フォーマリティレベル：** ブランドガイドに基づいてフォーマリティレジスターを指定（例：「senior customer service representative の形式性と親しみやすさ」）。「フレンドリーになる」のような漠然とした指示に頼らないでください。',
+          '**非難言語の制約：** モデルに顧客に責任を帰する言語を避けるよう明示的に指示。これは[negativePrompting](/prompt-engineering/negative-prompting?lang=ja)の形 — やることに加えて、避けるべきことをモデルに伝える。10の困難なチケット例でテストします。',
+        ],
+        callouts: [
+          {
+            type: 'pro-tip',
+            label: '困難なケースでテスト',
+            text: '10の困難なチケット例に対してトーンプロンプトを実行してください — 怒った顧客、下品な言葉、顧客が事実上間違っているケース。モデルが非難言語制約または共感マーカーをいずれのケースで失敗する場合、デプロイ前に制約を修正します。',
+          },
         ],
       },
       guardrails: {
         id: 'guardrails',
         title: 'ポリシーコンプライアンスガードレール',
         content: [
-          '**サポートプロンプトのポリシーコンプライアンスには3種類のガードレールが必要です：トピック制約、出力制約、キーワード検出に結びついたエスカレーショントリガー。**',
+          '**サポートプロンプトのポリシーコンプライアンスには3種類のガードレールが必要：主題制約、出力制約、キーワード検出に結び付けられたエスカレーショントリガー。** これらのガードレールはAIが対処できることと対処できないことの境界を定義します。',
         ],
         items: [
-          '**トピック制約：** AIが回答で対処してはならないトピックの明示的なリスト：法的解釈、医療アドバイス、標準ポリシーにない価格例外、内部プロセスの詳細。',
-          '**出力制約：** AIが絶対に生成してはならない特定の出力：価格の約束なし、法的解釈なし、医療アドバイスなし、標準外例外の確認なし。',
-          '**エスカレーショントリガー：** 検出されたときにAIを即座に停止させエスカレーション出力を生成させる特定のキーワードリスト：「弁護士」「訴訟」「アカウントをキャンセル」「データ侵害」「GDPR違反」。',
+          '**主題制約：** AIが応答で対処してはいけない主題の明示的なリスト。典型的な例：法的解釈、医学的助言、標準ポリシー外の価格例外、内部プロセスの詳細。フォーマット：「これらの主題を対処しないでください：[リスト]。顧客メッセージがこれらに触れる場合は、[中立的確認]で応答し、[チーム]にルーティングしてください。」',
+          '**出力制約：** AIが決してどのような状況でも生成してはいけない特定の出力。分類禁止：価格の約束（例「割引を提供できます」）、法的解釈（例「これは契約違反です」）、医学的助言（例「医師の診察を受けてください」）、非標準例外の確認。',
+          '**エスカレーショントリガー：** 特定のキーワード — 「弁護士」「訴訟」「アカウント削除」「データ侵害」「GDPR違反」 — 検出時にAIを直ちに停止し、エスカレーション出力を生成するようにします。フォーマット：「顧客メッセージに以下のいずれかの単語を含む場合：[キーワードリスト]、解決を試みないでください。エスカレーション確認を生成し、チケットに[理由]をフラグ立てし、[チーム]にルーティングしてください。」',
+        ],
+        callouts: [
+          {
+            type: 'key-point',
+            label: 'ポリシー幻覚のリスク',
+            text: 'プロンプトの実ポリシーテキストがないと、モデルはもっともらしく聞こえるが存在しないポリシーを発明します。幻覚した「30日間払戻」（あなたの実ポリシーが14日間の場合）は法的責任です。常にポリシーテキストまたは決定ツリーをプロンプトに含めます。',
+          },
         ],
       },
       handoff: {
         id: 'handoff',
-        title: '人間のエージェントへのハンドオフのタイミングと方法',
+        title: '人間のエージェントへの引き渡しのタイミングと方法',
         content: [
-          '**5つのトリガー条件が常に人間のエージェントへのハンドオフをもたらすべきです：法的な言葉、アカウントキャンセル、データ漏洩、同じ問題への繰り返しP1、人間への明示的な顧客要求。**',
+          '**5つのトリガー条件が常に人間のエージェントへの引き渡しをもたらすべきです：法的言語、アカウント削除、データ露出、同じ問題への繰り返しP1、人間への明示的な要求。** これらは交渉不可能なエスカレーションポイント — AIはいずれのケースでも解決を試みてはいけません。',
         ],
         items: [
-          '**法的な言葉：** 「弁護士」「訴訟」「法的措置」などの言葉を含むメッセージは即座のエスカレーションをトリガーしなければなりません。',
-          '**アカウントキャンセル：** アカウントキャンセル要求は人間による対応が必要なほどリスクが高い。AIは要求を確認しますが、人間の承認なしに解約処理やリテンション提案を試みません。',
-          '**データ漏洩：** データ侵害、不正アクセス、またはGDPR/CCPA懸念の言及はエスカレーションをトリガーしなければなりません。',
-          '**同じ問題への繰り返しP1：** 顧客が同じP1問題を2回以上報告し、未解決のままであれば、人間のエージェントがチケット履歴を確認する必要があります。',
-          '**人間への明示的な要求：** 顧客が人と話したいと言えば、AIはまず問題を解決しようとせずに即座にその要求を満たさなければなりません。',
+          '**法的言語：** 「弁護士」「訴訟」「訴訟」「法的措置」を含むメッセージは直ちにエスカレーションをトリガーします。AIは法的フレーミングに従事してはいけません — 確認してルーティングするだけです。',
+          '**アカウント削除：** アカウント削除要求は高リスク。AIは要求を確認し、ハンドオフを確認しますが、人間の承認なしに払戻オファーまたは削除処理を試みません。',
+          '**データ露出：** データ侵害、不正アクセス、またはGDPR/CCPA懸念の言及はエスカレーションをトリガーします。これには規制上のタイムラインと法的含意があり、人間の決定を要求します。',
+          '**同じ問題への繰り返しP1：** 顧客が同じP1問題を2回以上報告し、未解決の場合、人間のエージェントがチケット履歴を確認する必要があります。AIはもう一つの解決サイクルを試みてはいけません。',
+          '**人間への明示的な要求：** 顧客が人間、manager、またはagentと話したいと言う場合、AIはこの要求を直ちに満たす必要があります。先に問題を解決しようとしてはいけません。',
+        ],
+        callouts: [
+          {
+            type: 'key-point',
+            label: 'ハンドオフパターン',
+            text: '正しいハンドオフ出力パターン：(1) 顧客の問題を一文で確認。(2) agent へのコンテキストをチケットノートで要約。(3) エスカレーション理由でチケットにフラグ。(4) 正しいチームにルーティング。顧客メッセージは中立でプロフェッショナル — 「I\'m routing this to our [team] who can best help you」 — ハンドオフへの謝罪なし。謝罪はAIが失敗したことを意味し、それは間違ったフレームワークです。',
+          },
         ],
       },
       tldr: {

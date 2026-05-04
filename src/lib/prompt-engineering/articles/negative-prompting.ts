@@ -521,38 +521,6 @@ export const article: Record<Language, PEArticle> = {
       blockquote: 'Les instructions positives (« écrivez clairement et techniquement ») sont plus fiables que les négatifs lourds (« ne soyez pas vague, ne simplifiez pas, n\'omettez pas les détails »). Quand vous trouvez vous-même écrivant 6+ règles négatives, réécrivez la version positive d\'abord, puis utilisez les négatifs seulement pour corriger les modes de défaillance spécifiques.',
       blockquoteSource: 'Seuil de Confusion',
     },
-    commonMistakes: {
-      id: 'common-mistakes',
-      title: 'Erreurs Courantes',
-      content: ['Voici 5 erreurs fréquentes avec le guidage négatif et comment les corriger :'],
-      items: [
-        {
-          title: 'Tous les négatifs, aucun positif',
-          problem: 'Le modèle n\'a aucune direction sur ce à FAIRE — les résultats deviennent hésitants, incomplets, ou génériques',
-          fix: 'Associez toujours chaque contrainte négative avec une alternative positive. « Ne pas utiliser le langage hyperbolique. À la place, décrivez les bénéfices mesurables spécifiques. »',
-        },
-        {
-          title: 'Langage négatif doux : « essayez d\'éviter », « préférez ne pas »',
-          problem: 'Les modèles traitent le langage doux comme une guidance optionnelle — la conformité baisse versus les contraintes dures',
-          fix: 'Utilisez des directives dures : « ne doit pas », « jamais », « ne pas ». Réservez « éviter » seulement pour les préférences de style, pas les contraintes critiques.',
-        },
-        {
-          title: '7+ contraintes négatives dans un prompt',
-          problem: 'Les modèles peinent à suivre plus de 5–6 contraintes simultanément — les résultats se dégradent, les règles se font ignorer',
-          fix: 'Limitez-vous à 3–5 contraintes ciblées. Combinez les règles connexes : « Ne pas utiliser les mots hyperboliques (révolutionnaire, disruptif, game-changing) » compte comme une contrainte.',
-        },
-        {
-          title: 'Règles négatives sans exemples',
-          problem: 'Les règles abstraites comme « ne pas être vague » sont interprétées inconsistemment entre les modèles et les exécutions',
-          fix: 'Ancrez chaque règle avec un exemple concret : « Ne pas écrire ainsi : [mauvais exemple]. Écrivez ainsi : [bon exemple]. »',
-        },
-        {
-          title: 'Dupliquer le comportement de sécurité intégré du modèle',
-          problem: 'Écrire « ne pas produire de contenu nuisible » n\'ajoute aucune valeur — tous les modèles de frontier bloquent cela par défaut',
-          fix: 'Utilisez le guidage négatif pour VOS contraintes spécifiques : marque, tonalité, format, limites spécifiques au domaine. Ne gaspillez pas le token budget sur la sécurité par défaut.',
-        },
-      ],
-    },
     howToStart: {
       id: 'how-to-use',
       title: 'Comment Utiliser le Guidage Négatif',
