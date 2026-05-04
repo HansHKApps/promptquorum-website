@@ -329,16 +329,12 @@ export const article: Record<Language, PEArticle> = {
           title: 'Related Reading',
           id: 'related-reading',
           items: [
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=en) — The linear reasoning foundation that RISEN builds upon.',
-            '[CO-STAR Framework](/prompt-engineering/co-star-framework?lang=en) — Use CO-STAR for first-draft generation, then switch to RISEN for refinement.',
-            '[CRAFT Framework](/prompt-engineering/craft-framework?lang=en) — Creative-focused generation framework; pairs well with RISEN for iterative copy polishing.',
-            '[TRACE Framework](/prompt-engineering/trace-framework?lang=en) — For understanding model reasoning; can follow RISEN to validate logic paths.',
-            '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=en) — Decision matrix comparing all major frameworks by use case.',
-            {
-              title: 'Build Your Own Prompt Framework',
-              url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework?lang=en',
-              description: 'When standard frameworks don\'t fit; design a custom one using RISEN as a starting point.',
-            },
+            { title: 'Chain-of-Thought Prompting', url: '/prompt-engineering/chain-of-thought-prompting?lang=en' },
+            { title: 'CO-STAR Framework', url: '/prompt-engineering/co-star-framework?lang=en' },
+            { title: 'CRAFT Framework', url: '/prompt-engineering/craft-framework?lang=en' },
+            { title: 'TRACE Framework', url: '/prompt-engineering/trace-framework?lang=en' },
+            { title: 'Which Prompt Framework Should You Use?', url: '/prompt-engineering/which-prompt-framework-should-you-use?lang=en' },
+            { title: 'Build Your Own Prompt Framework', url: '/prompt-engineering/build-your-own-prompt-framework?lang=en' },
           ],
         },
 
@@ -747,36 +743,12 @@ export const article: Record<Language, PEArticle> = {
           title: 'Verwandte Lektüre',
           id: 'verwandte-lekture',
           items: [
-            {
-              title: 'Chain-of-Thought Prompting',
-              url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de',
-              description: 'Die lineare Reasoning-Grundlage, auf der RISEN aufgebaut ist.',
-            },
-            {
-              title: 'CO-STAR Framework',
-              url: 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=de',
-              description: 'Verwenden Sie CO-STAR für Erst-Draft-Generierung, wechseln Sie dann zu RISEN für Verfeinerung.',
-            },
-            {
-              title: 'CRAFT Framework',
-              url: 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=de',
-              description: 'Framework für kreative Generierung; funktioniert gut mit RISEN für iterative Copy-Polierung.',
-            },
-            {
-              title: 'TRACE Framework',
-              url: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=de',
-              description: 'Zum Verständnis von Modell-Überlegungen; kann RISEN folgen, um Logik-Pfade zu validieren.',
-            },
-            {
-              title: 'Welches Prompt-Framework sollten Sie verwenden?',
-              url: 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=de',
-              description: 'Entscheidungsmatrix, die alle großen Frameworks nach Anwendungsfall vergleicht.',
-            },
-            {
-              title: 'Erstellen Sie Ihr eigenes Prompt-Framework',
-              url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework?lang=de',
-              description: 'Wenn Standard-Frameworks nicht passen; entwerfen Sie ein benutzerdefiniertes mit RISEN als Ausgangspunkt.',
-            },
+            { title: 'Chain-of-Thought Prompting', url: '/prompt-engineering/chain-of-thought-prompting?lang=de' },
+            { title: 'CO-STAR Framework', url: '/prompt-engineering/co-star-framework?lang=de' },
+            { title: 'CRAFT Framework', url: '/prompt-engineering/craft-framework?lang=de' },
+            { title: 'TRACE Framework', url: '/prompt-engineering/trace-framework?lang=de' },
+            { title: 'Welches Prompt-Framework sollten Sie verwenden?', url: '/prompt-engineering/which-prompt-framework-should-you-use?lang=de' },
+            { title: 'Erstellen Sie Ihr eigenes Prompt-Framework', url: '/prompt-engineering/build-your-own-prompt-framework?lang=de' },
           ],
         },
 
@@ -1187,36 +1159,12 @@ export const article: Record<Language, PEArticle> = {
           title: 'Lectures connexes',
           id: 'lectures-connexes',
           items: [
-            {
-              title: 'Chain-of-Thought Prompting',
-              url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=fr',
-              description: 'Fondation raisonnement linéaire sur laquelle RISEN s\'appuie.',
-            },
-            {
-              title: 'Framework CO-STAR',
-              url: 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=fr',
-              description: 'Utilisez CO-STAR génération brouillon-initial, basculez RISEN affinage.',
-            },
-            {
-              title: 'Framework CRAFT',
-              url: 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=fr',
-              description: 'Framework génération créative; fonctionne bien RISEN pour polissage copy itératif.',
-            },
-            {
-              title: 'Framework TRACE',
-              url: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=fr',
-              description: 'Compréhension raisonnement modèle; peut suivre RISEN valider chemins logique.',
-            },
-            {
-              title: 'Quel Framework Prompt Utiliser?',
-              url: 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=fr',
-              description: 'Matrice décision comparant tous frameworks majeurs par cas usage.',
-            },
-            {
-              title: 'Construisez Votre Propre Framework Prompt',
-              url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework?lang=fr',
-              description: 'Quand frameworks standards ne conviennent; concevez custom utilisant RISEN comme base.',
-            },
+            { title: 'Chain-of-Thought Prompting', url: '/prompt-engineering/chain-of-thought-prompting?lang=fr' },
+            { title: 'Framework CO-STAR', url: '/prompt-engineering/co-star-framework?lang=fr' },
+            { title: 'Framework CRAFT', url: '/prompt-engineering/craft-framework?lang=fr' },
+            { title: 'Framework TRACE', url: '/prompt-engineering/trace-framework?lang=fr' },
+            { title: 'Quel Framework Prompt Utiliser?', url: '/prompt-engineering/which-prompt-framework-should-you-use?lang=fr' },
+            { title: 'Construisez Votre Propre Framework Prompt', url: '/prompt-engineering/build-your-own-prompt-framework?lang=fr' },
           ],
         },
 
@@ -1627,36 +1575,12 @@ export const article: Record<Language, PEArticle> = {
           title: '関連資料',
           id: 'kanren-shiryo',
           items: [
-            {
-              title: 'Chain-of-Thought Prompting',
-              url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=ja',
-              description: 'RISENが構築する線形推理基礎。',
-            },
-            {
-              title: 'CO-STARフレームワーク',
-              url: 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=ja',
-              description: '初期ドラフト生成にCO-STAR、その後RISENで改善。',
-            },
-            {
-              title: 'CRAFTフレームワーク',
-              url: 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=ja',
-              description: '創造生成フレームワーク；RISENとコピーポリッシング反復で連携。',
-            },
-            {
-              title: 'TRACEフレームワーク',
-              url: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=ja',
-              description: 'モデル推理理解；RISEの後に論理パス検証に利用可。',
-            },
-            {
-              title: 'どのプロンプトフレームワークを使いますか？',
-              url: 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=ja',
-              description: '全メジャーフレームワークを用途で比較する決定マトリックス。',
-            },
-            {
-              title: '独自プロンプトフレームワークを構築する',
-              url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework?lang=ja',
-              description: '標準が合致しない場合；RISENを基にカスタム設計。',
-            },
+            { title: 'Chain-of-Thought Prompting', url: '/prompt-engineering/chain-of-thought-prompting?lang=ja' },
+            { title: 'CO-STARフレームワーク', url: '/prompt-engineering/co-star-framework?lang=ja' },
+            { title: 'CRAFTフレームワーク', url: '/prompt-engineering/craft-framework?lang=ja' },
+            { title: 'TRACEフレームワーク', url: '/prompt-engineering/trace-framework?lang=ja' },
+            { title: 'どのプロンプトフレームワークを使いますか？', url: '/prompt-engineering/which-prompt-framework-should-you-use?lang=ja' },
+            { title: '独自プロンプトフレームワークを構築する', url: '/prompt-engineering/build-your-own-prompt-framework?lang=ja' },
           ],
         },
 
@@ -2016,13 +1940,14 @@ export const article: Record<Language, PEArticle> = {
       },
 
       relatedReading: {
+        title: '相关阅读',
         items: [
-          '[链式思维提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 线性前驱 — 概念基础',
-          '[什么是Prompt工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 基础背景',
-          '[少样本Prompt](/prompt-engineering/few-shot-prompting?lang=zh) — 少样本示例可以演示RISEN模式',
-          '[受限Prompt](/prompt-engineering/constrained-prompting?lang=zh) — 在RISEN的Evaluate步骤中约束输出',
-          '[GPT、Claude还是Gemini？选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — 模型特定的推理能力',
-          '[Prompt注入和安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 用RISEN改进的模型部署的安全考虑',
+          { title: '链式思维提示词', url: '/prompt-engineering/chain-of-thought-prompting?lang=zh' },
+          { title: '什么是Prompt工程？', url: '/prompt-engineering/what-is-prompt-engineering?lang=zh' },
+          { title: '少样本Prompt', url: '/prompt-engineering/few-shot-prompting?lang=zh' },
+          { title: '受限Prompt', url: '/prompt-engineering/constrained-prompting?lang=zh' },
+          { title: 'GPT、Claude还是Gemini？选择合适的模型', url: '/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh' },
+          { title: 'Prompt注入和安全', url: '/prompt-engineering/prompt-injection-and-security?lang=zh' },
         ],
       },
 
