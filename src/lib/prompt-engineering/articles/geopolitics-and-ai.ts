@@ -12,12 +12,14 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Policy & Compliance',
       title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
+      leadAnswerBlock: '**AI geopolitics determines which models you can use, what regulatory framework governs your deployment, and whether critical hardware remains accessible. The EU AI Act applies globally, US export controls limit chip access, and China\'s CAC filters block content at the API level.**',
       publishDate: '2026-04-01',
       seoTitle: 'AI Geopolitics 2026: EU vs US vs China Comparison',
-      metaDescription: 'EU AI Act vs US sectoral approach vs China\'s CAC strategy. Regulatory frameworks, compliance timelines, geopolitical risks, and deployment implications.',
+      metaDescription: 'EU AI Act vs US approach vs China\'s CAC: compliance frameworks, timelines, geopolitical risks, and deployment implications for your organization.',
       dateModified: '2026-04-02',
       readTime: '16 min read',
       educationalLevel: 'Intermediate',
+      audience: 'Teams deploying AI in regulated markets (EU, China, US)',
       primaryTerm: 'AI Geopolitics',
       schema: {
         '@context': 'https://schema.org',
@@ -164,7 +166,9 @@ export const article: Record<Language, PEArticle> = {
         { label: 'Global AI Regulation: EU vs US vs China', anchor: 'global-ai-regulation-eu-vs-us-vs-china-compared' },
         { label: 'AI Geopolitical Risks for Organizations', anchor: 'ai-geopolitical-risks-what-this-means-for-organizations' },
         { label: 'Key Definitions', anchor: 'definition-eu-ai-act' },
+        { label: 'Common Mistakes', anchor: 'common-mistakes' },
         { label: 'Frequently Asked Questions', anchor: 'frequently-asked-questions' },
+        { label: 'Sources', anchor: 'sources' },
       ],
       howToSchema: {
         '@context': 'https://schema.org',
@@ -709,6 +713,38 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        commonMistakes: {
+          title: 'Common Mistakes When Deploying AI Across Geopolitical Boundaries',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Assuming EU AI Act compliance is optional if your company is US-based.',
+              problem: 'The Brussels Effect means the EU AI Act applies extraterritorially — if your AI system reaches any EU user, you must comply. US companies serving EU users have faced regulatory enforcement.',
+              fix: 'Audit your user geography. If any users are in EU member states, implement EU AI Act compliance at the application level: risk classify your AI, document training data, implement human oversight for high-risk systems, and maintain audit trails.',
+            },
+            {
+              mistake: 'Sending personal data of Chinese users through US-hosted API endpoints without GDPR-equivalent protections.',
+              problem: 'China\'s PIPL (2021) prohibits cross-border transfer of personal data without government security assessment. Regulators in Germany, France, and Netherlands have restricted Chinese AI tools for government use. Private-sector organizations face legal exposure.',
+              fix: 'Route China-user traffic through mainland-hosted inference (Alibaba Cloud, Tencent Cloud) so personal data never leaves Chinese jurisdiction. For international deployments, use Qwen 2.5 (open-weights) or Mistral (EU-based) instead of US APIs for China-facing products.',
+            },
+            {
+              mistake: 'Assuming CAC content filters return HTTP 4xx errors (like standard API errors).',
+              problem: 'CAC-regulated APIs (Baidu ERNIE, DeepSeek) return HTTP 200 with `is_safe: 0` flag in the response body when content is filtered — not a 4xx status. Applications that expect HTTP errors will ignore filtered responses and use blocked content.',
+              fix: 'Explicitly check the `is_safe` field in API responses. Log and handle filtered responses at the application level. Test your AI deployment in China with prompts touching sensitive topics (Taiwan, Tiananmen, etc.) to verify filtering is handled correctly.',
+            },
+            {
+              mistake: 'Treating GPU export controls as a permanent bar to Chinese AI development.',
+              problem: 'DeepSeek R1 (January 2025) matched GPT-5.5 on major benchmarks while training on restricted H800 GPUs at ~$6M compute cost — 94% cheaper than GPT-4 training estimates. Export controls slow Chinese progress but do not stop it.',
+              fix: 'Plan for a multi-decade geopolitical competition in AI. For long-term product roadmaps, don\'t assume US hardware dominance is permanent. Consider investing in open-weights alternatives (Llama, Mistral, Qwen) that are harder to restrict. Monitor TSMC\'s political status since it fabricates all advanced chips.',
+            },
+            {
+              mistake: 'Assuming proprietary US models (GPT-5.5, Claude) will remain available globally without regulatory friction.',
+              problem: 'The EU AI Act already applies compliance obligations to GPT-5.5 and Claude. Future EU regulation could restrict export of data or require on-premises deployment for sensitive use cases. China\'s domestic substitution strategy (Made in China 2025) may limit foreign model access.',
+              fix: 'Diversify your AI infrastructure. Use a mix of proprietary models (for frontier capability), open-weights models (for regulatory flexibility), and local deployments (for data residency). Test your product across GPT-5.5, Claude, Mistral, and Qwen to reduce vendor lock-in.',
+            },
+          ],
+        },
+
         sources: {
           title: 'Sources',
           items: [
@@ -732,6 +768,7 @@ export const article: Record<Language, PEArticle> = {
             '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Security vulnerabilities that national AI strategies and the EU AI Act address in high-risk system requirements',
             '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Reliability issues central to EU AI Act high-risk documentation and human oversight requirements',
             '[RAG Explained](/prompt-engineering/rag-explained) — How retrieval-augmented generation addresses knowledge cutoff and hallucination concerns relevant to regulated AI deployments',
+            '[GDPR and AI: Compliance Obligations](/prompt-engineering/gdpr-and-ai-compliance) — How EU data protection law combines with the AI Act to create multi-layered compliance requirements for organizations processing personal data across borders',
           ],
         },
       },
