@@ -8,17 +8,18 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
     en: {
-      freshness_tier: 'annual',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-11-04',
       theme: 'Fundamentals',
       title: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
       intro: '**No single AI model is best for every task. GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.**',
       publishDate: '2026-03-23',
-      seoTitle: 'GPT vs Claude vs Gemini 2026: How to Pick the Right AI Model',
-      metaDescription: 'No single AI model wins every task. GPT-5.5 leads on tool integration, Claude on writing quality, Gemini on cost-efficiency. Decision matrix and routing guide.',
-      ogTitle: 'GPT, Claude, or Gemini — Which AI Model Wins for YOUR Task?',
-      ogDescription: 'Claude for writing. Gemini for long docs. GPT for agents. DeepSeek for China. Decision matrix inside.',
-      twitterTitle: 'GPT vs Claude vs Gemini: Pick the Right Model (2026)',
-      twitterDescription: 'Gemini has 2M context at $0.30/M tokens. Claude costs $15/M but cuts revision rounds. GPT has 50,000+ integrations. Match model to task — not hype.',
+      seoTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro: Which AI Model? (2026)',
+      metaDescription: 'GPT-5.5 for agents, Claude Opus 4.7 for writing, Gemini 3.1 Pro for cost — all now with 1M context. Side-by-side comparison with pricing, benchmarks, and task routing.',
+      ogTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro: Which Wins for Your Task?',
+      ogDescription: 'No single AI model wins at everything. GPT-5.5 dominates tool integration, Claude leads writing quality, Gemini offers cost efficiency. We compared all three on real tasks.',
+      twitterTitle: 'GPT-5.5 vs Claude vs Gemini 3.1 Pro: Which Model? (2026)',
+      twitterDescription: 'GPT-5.5 for agents, Claude for writing, Gemini for cost. All three now at 1M context. Decision matrix, pricing, and 4 routing recipes.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       toc: [
@@ -51,7 +52,7 @@ export const article: Record<Language, PEArticle> = {
         headline: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
         description: 'A practical guide to choosing between GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE based on your task, budget, and geography.',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-29',
+        dateModified: '2026-05-04',
         keywords: ['GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'AI model comparison', 'model selection', 'prompt engineering'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -75,9 +76,9 @@ export const article: Record<Language, PEArticle> = {
         'description': 'Comparison of 5 major AI models across 8 dimensions: general reasoning, writing, coding, long-context, multimodal, cost, ecosystem, and China access.',
         'numberOfItems': 5,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'GPT-5.5', 'description': 'Best for tool integration and agentic workflows. Context: 128k tokens. Cost: $5 input/$15 output per 1M tokens. Restricted in mainland China.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Claude Opus 4.7', 'description': 'Best for writing quality, code review, enterprise safety. Context: 200k tokens. Cost: $3 input/$15 output per 1M tokens. Restricted in mainland China.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Gemini 3.1 Pro', 'description': 'Best for Google Workspace, long documents, cost efficiency. Context: 2M tokens. Most cost-effective frontier model. Restricted in mainland China.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'GPT-5.5', 'description': 'Best for tool integration and agentic workflows. Context: 1M tokens. Cost: $5 input/$30 output per 1M tokens. Restricted in mainland China.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Claude Opus 4.7', 'description': 'Best for writing quality, code review, enterprise safety. Context: 1M tokens. Cost: $5 input/$25 output per 1M tokens. Restricted in mainland China.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Gemini 3.1 Pro', 'description': 'Best for Google Workspace, long documents, cost efficiency. Context: 1M tokens. Most cost-effective frontier model. Restricted in mainland China.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'DeepSeek', 'description': 'Best for mainland China workloads, coding, cost-sensitive high-volume tasks. Native low-latency in China. Competitive pricing globally.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Baidu ERNIE', 'description': 'Required for mainland China consumer and enterprise apps. Deep Baidu Cloud integration. Optimized for Chinese language and regulatory compliance.' },
         ],
@@ -165,7 +166,7 @@ export const article: Record<Language, PEArticle> = {
           items: [
             'GPT-5.5 wins: multi-agent workflows, tool integration, API ecosystem, multimodal (images/audio). Start here if integrations matter.',
             'Claude Opus 4.7 wins: writing quality, code review, reasoning depth, enterprise safety. Start here for content/code quality.',
-            'Gemini 3.1 Pro wins: long documents (2M tokens), batch processing, cost efficiency, Google Workspace. Start here for large-scale document analysis.',
+            'Gemini 3.1 Pro wins: long documents (1M tokens), batch processing, cost efficiency, Google Workspace. Start here for large-scale document analysis.',
             'DeepSeek/Baidu ERNIE wins: mainland China (required for latency/access), high-volume cost-sensitive tasks. Only choice if data stays in China.',
             'Use PromptQuorum to test all 5 on your actual task — benchmarks lie; your data tells the truth.',
           ],
@@ -173,7 +174,7 @@ export const article: Record<Language, PEArticle> = {
           columns: ['Your Priority', 'Start With', 'Why', 'When to Switch'],
           rows: [
             { 'Your Priority': 'Complex writing & analysis', 'Start With': 'Claude Opus 4.7', 'Why': 'Highest output quality; cuts revision rounds', 'When to Switch': 'Switch to GPT-5.5 if you need multi-tool workflows or integrations' },
-            { 'Your Priority': 'Coding & development speed', 'Start With': 'Gemini 3.1 Pro or Flash', 'Why': '2M context (load entire projects) + best cost/quality', 'When to Switch': 'Switch to Claude for deep debugging or code review; GPT for tool integration' },
+            { 'Your Priority': 'Coding & development speed', 'Start With': 'Gemini 3.1 Pro or Flash', 'Why': '1M context (load entire projects) + best cost/quality', 'When to Switch': 'Switch to Claude for deep debugging or code review; GPT for tool integration' },
             { 'Your Priority': 'Multi-agent workflows / APIs', 'Start With': 'GPT-5.5', 'Why': 'Richest third-party ecosystem; best tool calling', 'When to Switch': 'Switch to Gemini to save costs on high-volume tasks' },
             { 'Your Priority': 'Mainland China users/data', 'Start With': 'DeepSeek or Baidu ERNIE', 'Why': 'Only practical choice — Western models restricted/slow', 'When to Switch': 'N/A — compliance/latency requirements make switch impossible' },
           ],
@@ -193,6 +194,20 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        quickFacts: {
+          title: 'Quick Facts: May 2026',
+          content: '**At a glance — key figures before you dive in:**',
+          items: [
+            '**Context windows:** GPT-5.5 (1M), Claude Opus 4.7 (1M), Gemini 3.1 Pro (1M) — all three now equal',
+            '**Pricing (per 1M tokens):** GPT-5.5 $5/$30, Claude Opus 4.7 $5/$25, Gemini 3.1 Pro $2/$12',
+            '**Best writing:** Claude Opus 4.7 — concise, structured, publication-ready',
+            '**Best tool integration:** GPT-5.5 — largest third-party ecosystem (50,000+ integrations)',
+            '**Best cost/quality ratio:** Gemini 3.1 Pro — cheapest frontier model per token',
+            '**Required for China:** DeepSeek or Baidu ERNIE — Western models restricted or high-latency',
+            '**Private/local:** Ollama or LM Studio — zero data egress',
+          ],
+        },
+
         whatMatters: {
           title: 'What Matters When Choosing an AI Model?',
           content: '**Model selection should start from your use case and constraints, not hype or leaderboard position.** Here are the 7 dimensions that actually matter:',
@@ -200,7 +215,7 @@ export const article: Record<Language, PEArticle> = {
             '**Quality for your task:** Does this model excel at writing, coding, analysis, or reasoning? Check performance on tasks similar to yours — not generic benchmarks.',
             '**Cost per token and pricing tiers:** Frontier models cost $15–60 per million tokens; budget models cost $0.15–3. Price scales by input and output tokens. [See token economics in detail.](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
             '**Latency and rate limits:** How fast does it respond? Can it handle your request volume? Some models are capped at 100 requests per minute; others support 10,000+.',
-            '**Context window size:** GPT-5.5: 128k tokens. Claude Opus 4.7: 200k tokens. Gemini 3.1 Pro: 2M tokens (10× larger, best for long documents). [Learn about context windows.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            '**Context window size:** GPT-5.5: 1M tokens. Claude Opus 4.7: 1M tokens. Gemini 3.1 Pro: 1M tokens (all three now equal; Gemini 2.5 Pro previously led with 2M). [Learn about context windows.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
             '**Multimodal capabilities:** Can it process images, audio, or video? GPT-5.5 and Gemini 3.1 Pro support images well. DeepSeek and Baidu ERNIE focus on text.',
             '**Ecosystem and integrations:** How many third-party tools, plugins, and APIs support it? GPT-5.5 dominates here. Local models via Ollama or LM Studio support thousands of community integrations.',
             '**Geography and data-residency rules:** Is it available in your region? Does your data need to stay within a country or company network? Mainland China requires local models (DeepSeek, Baidu ERNIE) due to regulations and latency.',
@@ -213,8 +228,8 @@ export const article: Record<Language, PEArticle> = {
           items: [
             '**Strengths:** Excellent general reasoning and chat across all domains. Strong multimodal capabilities — reliably processes images, audio, and sometimes video. Strongest tool calling ecosystem — largest third-party integration library of any commercial model (50,000+ integrations on the OpenAI platform). Trusted in production by millions of developers.',
             '**Best use cases:** Multi-step agent workflows. Complex chains where tool calling (APIs, databases, code execution) is required. Tasks needing screenshot or image analysis. OpenAI ecosystem projects (ChatGPT, Assistants API, Codex, fine-tuning).',
-            '**Trade-offs:** Premium frontier models cost more per token ($5 input / $15 output per million). Output can be verbose — requires prompt discipline to enforce conciseness.',
-            '**Context window:** 128,000 tokens (handles ~100 pages of text).',
+            '**Trade-offs:** Premium frontier models cost more per token ($5 input / $30 output per million). Output can be verbose — requires prompt discipline to enforce conciseness.',
+            '**Context window:** 1,000,000 tokens (handles ~800 pages of text).',
           ],
         },
 
@@ -225,7 +240,7 @@ export const article: Record<Language, PEArticle> = {
             '**Strengths:** High-quality writing and summarization; outputs are concise, well-structured, and publication-ready. Excellent code understanding, refactoring, and explanation — often catches bugs that other models miss. Good long-context handling for research and document workflows. Strong safety culture; preferred in regulated industries.',
             '**Best use cases:** Reports, analyses, and knowledge work where structure and clarity are critical. Complex codebases and architecture discussions. Enterprise settings with compliance and safety requirements. Content that requires editing minimization.',
             '**Trade-offs:** Higher price point for top tiers; may be overkill for simple tasks. Some third-party integrations are newer than GPT-5.5 equivalents.',
-            '**Context window:** 200,000 tokens (handles ~150 pages of text).',
+            '**Context window:** 1,000,000 tokens (handles ~800 pages of text).',
           ],
         },
 
@@ -233,10 +248,10 @@ export const article: Record<Language, PEArticle> = {
           title: 'When Should You Use Gemini 3.1 Pro?',
           content: '**Gemini 3.1 Pro from Google DeepMind is cost-effective with the strongest long-context handling and deep Google Workspace integration.** Use Gemini when processing many long documents or when your team lives in Google Workspace.',
           items: [
-            '**Strengths:** Very good coding performance at attractive price points — especially mid-tier Flash models. Strongest long-context (2M tokens) and retrieval; excellent for research across many documents + live web search. Native integration with Google Workspace (Docs, Sheets, Drive, Gmail, Slides).',
+            '**Strengths:** Very good coding performance at attractive price points — especially mid-tier Flash models. Strong long-context (1M tokens) and retrieval; excellent for research across many documents + live web search. Native integration with Google Workspace (Docs, Sheets, Drive, Gmail, Slides).',
             '**Best use cases:** Teams living in Google Workspace. Batch coding and data tasks where cost/performance ratio is critical. Research workflows combining local docs with web search. Processing 100+ pages of PDFs or transcripts.',
             '**Trade-offs:** Writing tone can feel more hedged or generic vs Claude or GPT. Outside Google\'s ecosystem, some integrations lag competitors.',
-            '**Context window:** 2,000,000 tokens (strongest; handles ~1,500 pages of text).',
+            '**Context window:** 1,000,000 tokens (handles ~800 pages of text; Gemini 2.5 Pro previously supported 2M).',
           ],
         },
 
@@ -253,14 +268,14 @@ export const article: Record<Language, PEArticle> = {
 
         longContext: {
           title: 'Best LLM for long context or large documents 2026?',
-          content: '**Gemini 3.1 Pro dominates with 2M context tokens (handles ~1,500 pages); Claude Opus 4.7 with 200k tokens is next (handles ~150 pages); GPT-5.5 at 128k tokens is sufficient for most single-document tasks.** Choose based on document size, retrieval precision, and whether you need to load multiple files simultaneously.',
+          content: '**As of May 2026, all three frontier models support 1M context tokens (handles ~800 pages). The long-context gap has closed. For tasks requiring more than 1M tokens, consider local models like LLaMA 4 Scout (10M tokens).** Choose based on cost, retrieval precision, and whether you need to load multiple files simultaneously.',
           image: '/images/context-windows-chart.svg',
-          imageCaption: 'Context window comparison: Gemini 3.1 Pro supports 10× larger context than GPT-5.5, enabling entire projects and document archives in a single request.',
+          imageCaption: 'Context window comparison: As of May 2026, all three frontier models support 1M tokens — context window parity has arrived. Gemini 2.5 Pro previously led with 2M.',
           items: [
-            '**Gemini 3.1 Pro (2M tokens):** Load entire codebases, legal document sets, or research archives. Web search integration lets you reference external sources within long context. Best for: due diligence reviews, regulatory analysis, knowledge base search, processing 100+ page PDFs.',
-            '**Claude Opus 4.7 (200k tokens):** Strong enough for most documents: books, theses, lengthy codebase walk-throughs. Excellent for detailed analysis and extracting nuanced information. Trade-off: higher cost per token, but quality may reduce revision rounds.',
-            '**GPT-5.5 (128k tokens):** Sufficient for single documents under 100 pages. Use when you need tool calling alongside long context (file system, APIs). Trade-off: Cannot load multiple large documents; requires chunking/splitting.',
-            '**Practical strategy:** For very long tasks (multi-document workflows), use Gemini first (cheapest, largest context), then refine with Claude if output quality needs polish.',
+            '**Gemini 3.1 Pro (1M tokens):** Load entire codebases, legal document sets, or research archives. Web search integration lets you reference external sources within long context. Best for: due diligence reviews, regulatory analysis, knowledge base search, processing 100+ page PDFs.',
+            '**Claude Opus 4.7 (1M tokens):** Excellent for detailed analysis and extracting nuanced information from long documents. Trade-off: highest cost per token, but quality may reduce revision rounds.',
+            '**GPT-5.5 (1M tokens):** Strong for multi-step reasoning across long documents. Best when you need tool calling alongside long context (file system, APIs).',
+            '**Practical strategy:** All three now support 1M tokens equally. Choose based on cost (Gemini cheapest), quality (Claude highest), or tools ecosystem (GPT-5.5 broadest).',
           ],
         },
 
@@ -284,7 +299,7 @@ export const article: Record<Language, PEArticle> = {
             { 'Dimension': 'General Q&A', 'GPT-5.5': 'Excellent global', 'Claude Opus 4.7': 'Very good, cautious', 'Gemini 3.1 Pro': 'Very good + retrieval', 'DeepSeek': 'Strong, best for CN', 'Baidu ERNIE': 'Strong, best for CN' },
             { 'Dimension': 'Writing', 'GPT-5.5': 'Great, sometimes verbose', 'Claude Opus 4.7': 'Excellent structure & clarity', 'Gemini 3.1 Pro': 'Good, neutral tone', 'DeepSeek': 'Good, Chinese-first', 'Baidu ERNIE': 'Good, Chinese-first' },
             { 'Dimension': 'Coding', 'GPT-5.5': 'Strong', 'Claude Opus 4.7': 'Excellent, premium', 'Gemini 3.1 Pro': 'Great value', 'DeepSeek': 'Very strong for CN devs', 'Baidu ERNIE': 'Good, applied business' },
-            { 'Dimension': 'Long context', 'GPT-5.5': 'Strong (128k)', 'Claude Opus 4.7': 'Strong (200k)', 'Gemini 3.1 Pro': 'Strongest (2M) + web', 'DeepSeek': 'Good', 'Baidu ERNIE': 'Good with Baidu data' },
+            { 'Dimension': 'Long context', 'GPT-5.5': 'Strong (1M)', 'Claude Opus 4.7': 'Strong (1M)', 'Gemini 3.1 Pro': 'Strong (1M) + web', 'DeepSeek': 'Good', 'Baidu ERNIE': 'Good with Baidu data' },
             { 'Dimension': 'Multimodal', 'GPT-5.5': 'Leading (image/audio)', 'Claude Opus 4.7': 'Good vision', 'Gemini 3.1 Pro': 'Very strong (video/web)', 'DeepSeek': 'Varies', 'Baidu ERNIE': 'Text + CN web' },
             { 'Dimension': 'Cost efficiency', 'GPT-5.5': 'Medium–High', 'Claude Opus 4.7': 'Higher, premium quality', 'Gemini 3.1 Pro': 'Very cost-effective', 'DeepSeek': 'Very cost-competitive', 'Baidu ERNIE': 'Competitive (CN enterprise)' },
             { 'Dimension': 'Global ecosystem', 'GPT-5.5': 'Most extensive', 'Claude Opus 4.7': 'Growing, esp. enterprise', 'Gemini 3.1 Pro': 'Strong in Google world', 'DeepSeek': 'Limited outside China', 'Baidu ERNIE': 'Strong in Baidu ecosystem' },
@@ -313,7 +328,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'How Do Costs and Token Limits Compare?',
           content: '**All major models are priced per input and output token, with rate limits based on your tier.** Frontier models cost 10–100× more per token than budget models. Pricing varies by region (especially China).',
           items: [
-            '**Frontier models (most expensive per token):** GPT-5.5 ($5 input / $15 output per million tokens), Claude Opus 4.7 (~$3 input / $15 output per million tokens).',
+            '**Frontier models (most expensive per token):** GPT-5.5 ($5 input / $30 output per million tokens), Claude Opus 4.7 ($5 input / $25 output per million tokens).',
             '**Cost-effective mid-tier:** Gemini 2.5 Flash ($0.075 input / $0.30 output per million tokens).',
             '**Competitive budget models:** DeepSeek (aggressive pricing), local models via Ollama/LM Studio (free, run on-device).',
             '**Rate limits:** Frontier models often start at 100 req/min; scaled tier can reach 10,000+ req/min. Local models depend on your hardware.',
@@ -379,7 +394,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'How to Choose an AI Model for Your Task',
           numberedItems: [
             '**Define your task type:** Is it factual/analytical (legal analysis, code review, data extraction) or creative/generative (brainstorming, copywriting, design ideation)? Factual tasks favor GPT-5.5 or Claude Opus 4.7; creative tasks work across all frontier models.',
-            '**Match the model to speed/cost trade-offs:** GPT-5.5 is fastest and cheapest for most tasks. Claude Opus 4.7 is best for long reasoning and accuracy. Gemini 3.1 Pro excels at multimodal and long context (2M tokens). Use PromptQuorum to benchmark all three against your specific prompt.',
+            '**Match the model to speed/cost trade-offs:** GPT-5.5 is fastest and cheapest for most tasks. Claude Opus 4.7 is best for long reasoning and accuracy. Gemini 3.1 Pro excels at multimodal and long context (1M tokens). Use PromptQuorum to benchmark all three against your specific prompt.',
             '**Start with a frontier model (GPT-5.5, Claude Opus 4.7, or Gemini 3.1 Pro), then downgrade if possible:** A task that works well on GPT-5.5 might run just as well on GPT-5.5 mini (10–33× cheaper). Test your prompt on cheaper models once you have a working version.',
             '**For local/private workflows, use Ollama or LM Studio, but accept lower quality:** Local models handle private data without external API calls but produce lower accuracy than frontier models. Use a hybrid: local model for first pass, frontier model for quality check.',
             '**For geographically distributed users, route by region:** Global users (US, EU, Japan) → GPT-5.5 / Claude / Gemini. China → DeepSeek or Baidu ERNIE (legal requirement). Use PromptQuorum to test each region\'s model independently.',
@@ -391,29 +406,29 @@ export const article: Record<Language, PEArticle> = {
           title: 'Common Mistakes When Choosing an AI Model',
           mistakes: [
             {
-              mistake: 'Choosing based on benchmarks, not your actual task',
-              problem: 'Generic benchmarks (MMLU, HumanEval) measure average performance across hundreds of tasks — your specific task may rank models completely differently.',
-              fix: 'Test your actual prompt on all candidate models using PromptQuorum. Benchmark your task, not the internet\'s task.',
+              mistake: 'Choosing based on benchmark leaderboards instead of your actual task',
+              problem: 'LMSYS Arena rankings and HumanEval leaderboards shift monthly. A model that leads on MMLU may lag on your specific coding, writing, or analysis task.',
+              fix: 'Test your actual prompts on 2-3 models before committing. Use PromptQuorum to compare on YOUR data.',
             },
             {
-              mistake: 'Using one model for all tasks to simplify your stack',
-              problem: 'Claude may reduce revision rounds on writing tasks by 40% but cost 3× more per token for simple classification tasks you run at 1M/day.',
-              fix: 'Route by task type: budget models for repetitive high-volume tasks ($0.15–3/M tokens), frontier models for complex reasoning.',
+              mistake: 'Assuming context window = quality on long documents',
+              problem: 'As of May 2026, all three frontier models support 1M tokens — context window parity has arrived. Filling a 1M context doesn\'t mean the model uses all of it well. The "lost in the middle" problem means information in the center of very long contexts may be missed.',
+              fix: 'For documents over 200 pages, chunk and summarize rather than pasting everything into one prompt, regardless of context window size. For documents requiring >1M tokens, consider local models like LLaMA 4 Scout (10M).',
             },
             {
-              mistake: 'Ignoring geographic constraints until production',
-              problem: 'GPT-5.5 and Claude are restricted or slow (3–10s latency) in mainland China. Discovering this after building requires a full re-architecture.',
-              fix: 'Map your user geography before architecture decisions. If any significant user segment is in mainland China, plan DeepSeek or Baidu ERNIE as primary from day one.',
+              mistake: 'Using a frontier model for every task',
+              problem: 'GPT-5.5 at $5/$30 per million tokens is 60× more expensive than Gemini 3 Flash at ~$0.50/$3. Most classification, extraction, and summarization tasks produce identical quality on cheap models.',
+              fix: 'Start with the cheapest model. Upgrade to frontier only when the cheaper model measurably fails on your task.',
             },
             {
-              mistake: 'Treating model choice as permanent',
-              problem: 'Model capabilities and pricing shift every 3–4 months. A model that was best-value in Q1 2026 may be beaten on cost/quality by Q3.',
-              fix: 'Re-evaluate model choices quarterly. Use PromptQuorum to re-test critical tasks on new model releases without rebuilding your pipeline.',
+              mistake: 'Ignoring geography and data residency.',
+              problem: 'Sending EU personal data to US APIs requires SCCs. Serving mainland China users via GPT/Claude adds 3–10 seconds latency and may violate regulations.',
+              fix: 'Route by geography. EU-sensitive data → local LLMs or EU-region API endpoints. China → DeepSeek or Baidu ERNIE. Global → any frontier model.',
             },
             {
-              mistake: 'Not accounting for vendor lock-in during prompt design',
-              problem: 'Prompts that exploit Claude-specific formatting or GPT-specific tool-call syntax cannot be ported without rewriting.',
-              fix: 'Write prompts using standard structures that work across models. Test portability with PromptQuorum before committing to one provider.',
+              mistake: 'Locking into one provider\'s SDK without an abstraction layer',
+              problem: 'When a new model launches (and one launches every few months), you can\'t switch without rewriting your integration.',
+              fix: 'Use provider-agnostic SDKs (LiteLLM, PromptQuorum) or the OpenAI-compatible API format that Claude, Gemini, and local models also support.',
             },
           ],
         },
@@ -439,7 +454,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Where do open-source local models fit into this picture?',
-              a: 'Local models (Llama 3.1, Mistral 7B, others via Ollama or LM Studio) are best for: high-volume repetitive tasks (classify, summarize, extract), private data (no API calls), cost-sensitive workloads, and testing before committing to API costs. They do not match frontier models on quality but excel on privacy and cost. Use them for the 80% of tasks that do not need frontier-level reasoning.'
+              a: 'Local models (Llama 4 Scout, Qwen3, Mistral, others via Ollama or LM Studio) are best for: high-volume repetitive tasks (classify, summarize, extract), private data (no API calls), cost-sensitive workloads, and testing before committing to API costs. They do not match frontier models on quality but excel on privacy and cost. Use them for the 80% of tasks that do not need frontier-level reasoning.'
             },
             {
               q: 'Is Claude better than ChatGPT?',
@@ -451,14 +466,14 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'What is the difference between GPT-5.5 and GPT-5.5 mini?',
-              a: 'GPT-5.5 is OpenAI\'s frontier model — highest capability, highest cost ($5 input/$15 output per million tokens). GPT-5.5 mini is a smaller, faster, cheaper version ($0.15 input/$0.60 output per million tokens) — 33x cheaper with slightly lower quality. Use GPT-5.5 mini for classification, summarization, and high-volume tasks where frontier reasoning is not required. Use GPT-5.5 for complex multi-step reasoning, agent workflows, and tasks where quality is critical.'
+              a: 'GPT-5.5 is OpenAI\'s frontier model — highest capability, highest cost ($5 input/$30 output per million tokens). GPT-5.5 mini is a smaller, faster, cheaper version ($0.15 input/$0.60 output per million tokens) — 50x cheaper with slightly lower quality. Use GPT-5.5 mini for classification, summarization, and high-volume tasks where frontier reasoning is not required. Use GPT-5.5 for complex multi-step reasoning, agent workflows, and tasks where quality is critical.'
             },
           ],
         },
 
         sources: {
           title: 'Sources & Further Reading',
-          content: '**Model strengths and pricing reflect April 2026 usage patterns and benchmarks from LMSYS Arena, SWE-Bench, and GPQA.** Model capabilities and pricing change frequently — check official pricing pages for current rates, and test on your task before committing to production.',
+          content: '**Model strengths and pricing reflect May 2026 usage patterns and benchmarks from LMSYS Arena, SWE-Bench, and GPQA.** Model capabilities and pricing change frequently — check official pricing pages for current rates, and test on your task before committing to production.',
           items: [
             '[OpenAI — GPT-5.5 and model overview](https://platform.openai.com/docs/models)',
             '[Anthropic — Claude models overview](https://docs.anthropic.com/en/docs/models-overview)',
@@ -480,6 +495,9 @@ export const article: Record<Language, PEArticle> = {
             '[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where different models can handle different steps',
             '[Fundamentals: Context Windows Explained: Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — how context window size drives model selection for long documents',
             '[Techniques: Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — technique that works differently across GPT-5.5, Claude, and Gemini',
+            '[Local LLMs: Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — how open-weights models compare when you choose local over cloud',
+            '[Local LLMs: Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — local coding alternatives to GPT-5.5 and Claude',
+            '[Fundamentals: Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) — when local models match cloud APIs and when they don\'t',
           ],
         },
       },
@@ -489,12 +507,12 @@ export const article: Record<Language, PEArticle> = {
   title: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
   intro: 'Kein einzelnes KI-Modell ist für alle Aufgaben das Beste. GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek und Baidu ERNIE dominieren jeweils in verschiedenen Aufgaben, Regionen und Budgets. Diese Anleitung bietet Ihnen ein praktisches Entscheidungsrahmenwerk — nicht noch eine weitere Benchmark-Liste.',
   publishDate: '2026-03-23',
-  seoTitle: 'GPT vs Claude vs Gemini 2026: Das richtige KI-Modell wählen',
-  metaDescription: 'Kein KI-Modell gewinnt bei jeder Aufgabe. GPT-5.5 führt bei Tool-Integration, Claude Opus 4.7 bei Schreibqualität, Gemini 3.1 Pro bei langem Kontext und Kosten. Entscheidungsmatrix, Preise und Routing-Leitfaden.',
-  ogTitle: 'GPT, Claude oder Gemini — welches KI-Modell gewinnt bei IHRER Aufgabe?',
-  ogDescription: 'Claude fürs Schreiben. Gemini für lange Dokumente. GPT für Agenten. DeepSeek für China. Entscheidungsmatrix inklusive.',
-  twitterTitle: 'GPT vs Claude vs Gemini: Das richtige Modell wählen (2026)',
-  twitterDescription: 'Gemini: 2M Kontext für 0,30 $/M Tokens. Claude: 15 $/M, aber weniger Überarbeitungsrunden. GPT: 50.000+ Integrationen. Modell nach Aufgabe wählen.',
+  seoTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro: Welches KI-Modell? (2026)',
+  metaDescription: 'GPT-5.5 für Agenten, Claude Opus 4.7 für Texte, Gemini 3.1 Pro für Kosten — alle jetzt mit 1M Kontext. Vergleich mit Preisen, Benchmarks und Routing-Leitfaden.',
+  ogTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro: Welches gewinnt für IHRE Aufgabe?',
+  ogDescription: 'Kein KI-Modell gewinnt bei allem. GPT-5.5 dominiert Tool-Integration, Claude führt bei Textqualität, Gemini bietet beste Kosteneffizienz. Vergleich auf realen Aufgaben.',
+  twitterTitle: 'GPT-5.5 vs Claude vs Gemini 3.1 Pro: Welches Modell? (2026)',
+  twitterDescription: 'GPT-5.5 für Agenten, Claude für Schreiben, Gemini für Kosteneffizienz. Alle jetzt mit 1M Kontext. Entscheidungsmatrix, Preise und 4 Routing-Rezepte.',
   readTime: '12 min Lesedauer',
   schema: {
     '@context': 'https://schema.org',
@@ -503,7 +521,7 @@ export const article: Record<Language, PEArticle> = {
     inLanguage: 'de',
     headline: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
     datePublished: '2026-03-23',
-    dateModified: '2026-04-29',
+    dateModified: '2026-05-04',
     author: { '@type': 'Person', 'name': 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
     publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -545,7 +563,7 @@ export const article: Record<Language, PEArticle> = {
       columns: ['Ihre Priorität', 'Beginnen Sie mit', 'Warum', 'Wann wechseln'],
       rows: [
         { 'Ihre Priorität': 'Komplexes Schreiben & Analyse', 'Beginnen Sie mit': 'Claude Opus 4.7', 'Warum': 'Höchste Ausgabequalität; reduziert Überarbeitungsrunden', 'Wann wechseln': 'Wechseln Sie zu GPT-5.5, wenn Sie Multi-Tool-Workflows oder Integrationen benötigen' },
-        { 'Ihre Priorität': 'Coding & Entwicklungsgeschwindigkeit', 'Beginnen Sie mit': 'Gemini 3.1 Pro oder Flash', 'Warum': '2M Kontext (laden Sie komplette Projekte) + beste Kosten/Qualität', 'Wann wechseln': 'Wechseln Sie zu Claude für tiefes Debugging oder Code-Review; GPT für Tool-Integration' },
+        { 'Ihre Priorität': 'Coding & Entwicklungsgeschwindigkeit', 'Beginnen Sie mit': 'Gemini 3.1 Pro oder Flash', 'Warum': '1M Kontext (laden Sie komplette Projekte) + beste Kosten/Qualität', 'Wann wechseln': 'Wechseln Sie zu Claude für tiefes Debugging oder Code-Review; GPT für Tool-Integration' },
         { 'Ihre Priorität': 'Multi-Agent-Workflows / APIs', 'Beginnen Sie mit': 'GPT-5.5', 'Warum': 'Reichstes Drittanbieter-Ökosystem; bester Tool-Aufruf', 'Wann wechseln': 'Wechseln Sie zu Gemini, um Kosten bei Hochvolumen-Aufgaben zu sparen' },
         { 'Ihre Priorität': 'Festlandchina Nutzer/Daten', 'Beginnen Sie mit': 'DeepSeek oder Baidu ERNIE', 'Warum': 'Einzig praktische Wahl — westliche Modelle eingeschränkt/langsam', 'Wann wechseln': 'N/A — Compliance/Latenz-Anforderungen machen Wechsel unmöglich' },
       ],
@@ -565,6 +583,20 @@ export const article: Record<Language, PEArticle> = {
       ],
     },
 
+    quickFacts: {
+      title: 'Schnelle Fakten: Mai 2026',
+      content: '**Auf einen Blick — wichtigste Daten vor dem Eintauchen:**',
+      items: [
+        '**Kontextfenster:** GPT-5.5 (1M), Claude Opus 4.7 (1M), Gemini 3.1 Pro (1M) — alle drei jetzt gleich',
+        '**Preise (pro 1M Tokens):** GPT-5.5 $5/$30, Claude Opus 4.7 $5/$25, Gemini 3.1 Pro $2/$12',
+        '**Beste Schreibqualität:** Claude Opus 4.7 — prägnant, strukturiert, publikationsreif',
+        '**Beste Tool-Integration:** GPT-5.5 — größtes Drittanbieter-Ökosystem (50.000+ Integrationen)',
+        '**Bestes Preis-/Leistungsverhältnis:** Gemini 3.1 Pro — günstigstes Frontier-Modell pro Token',
+        '**Erforderlich für China:** DeepSeek oder Baidu ERNIE — westliche Modelle eingeschränkt oder langsam',
+        '**Privat/lokal:** Ollama oder LM Studio — null Datenegressus',
+      ],
+    },
+
     whatMatters: {
       title: 'Was ist wichtig bei der Wahl eines KI-Modells?',
       content: '**Die Modellauswahl sollte von Ihrem Use-Case und Ihren Einschränkungen ausgehen, nicht von Hype oder Leaderboard-Position.** Hier sind die 7 Dimensionen, die tatsächlich wichtig sind:',
@@ -572,7 +604,7 @@ export const article: Record<Language, PEArticle> = {
         '**Qualität für Ihre Aufgabe:** Zeichnet sich dieses Modell beim Schreiben, Coding, Analyse oder Reasoning aus? Überprüfen Sie die Leistung bei ähnlichen Aufgaben wie Ihre — nicht generische Benchmarks.',
         '**Kosten pro Token und Preisstufen:** Frontier-Modelle kosten $15–60 pro Million Tokens; Budget-Modelle kosten $0,15–3. Der Preis skaliert mit Input- und Output-Tokens. [Siehe Token-Ökonomie im Detail.](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
         '**Latenz und Rate Limits:** Wie schnell antwortet es? Kann es Ihr Anfragevolumen verarbeiten? Einige Modelle sind auf 100 Anfragen pro Minute begrenzt; andere unterstützen 10.000+.',
-        '**Kontextfenstergröße:** GPT-5.5: 128k Tokens. Claude Opus 4.7: 200k Tokens. Gemini 3.1 Pro: 2M Tokens (10× größer, beste für lange Dokumente). [Lernen Sie über Kontextfenster.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+        '**Kontextfenstergröße:** GPT-5.5: 1M Tokens. Claude Opus 4.7: 1M Tokens. Gemini 3.1 Pro: 1M Tokens (alle jetzt gleich; Gemini 2.5 Pro war bisher 2M). [Lernen Sie über Kontextfenster.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
         '**Multimodale Fähigkeiten:** Kann es Bilder, Audio oder Video verarbeiten? GPT-5.5 und Gemini 3.1 Pro unterstützen Bilder gut. DeepSeek und Baidu ERNIE konzentrieren sich auf Text.',
         '**Ökosystem und Integrationen:** Wie viele Drittanbieter-Tools, Plugins und APIs unterstützen es? GPT-5.5 dominiert hier. Lokale Modelle via Ollama oder LM Studio unterstützen Tausende von Community-Integrationen.',
         '**Geografie und Datenspeicherungsregeln:** Ist es in Ihrer Region verfügbar? Müssen Ihre Daten innerhalb eines Landes oder Netzwerks bleiben? Festlandchina erfordert lokale Modelle (DeepSeek, Baidu ERNIE) wegen Vorschriften und Latenz.',
@@ -585,8 +617,8 @@ export const article: Record<Language, PEArticle> = {
       items: [
         '**Stärken:** Hervorragendes allgemeines Reasoning und Chat über alle Bereiche. Starke multimodale Fähigkeiten — verarbeitet zuverlässig Bilder, Audio und manchmal Video. Best-in-class Tool-Aufruf und Integrationen (Agenten, IDE-Plugins, Enterprise-Stack). Von Millionen von Entwicklern in der Produktion vertraut.',
         '**Beste Anwendungsfälle:** Multi-Schritt-Agent-Workflows. Komplexe Ketten, bei denen Tool-Aufrufe (APIs, Datenbanken, Code-Ausführung) erforderlich sind. Aufgaben, die Screenshot- oder Bildanalyse benötigen. OpenAI-Ökosystem-Projekte (ChatGPT, Assistants API, Codex, Fine-Tuning).',
-        '**Kompromisse:** Premium-Frontier-Modelle kosten mehr pro Token ($5 Input / $15 Output pro Million). Die Ausgabe kann ausführlich sein — erfordert Disziplin bei der Eingabeaufforderung, um Prägnanz durchzusetzen.',
-        '**Kontextfenster:** 128.000 Tokens (bewältigt ~100 Seiten Text).',
+        '**Kompromisse:** Premium-Frontier-Modelle kosten mehr pro Token ($5 Input / $30 Output pro Million). Die Ausgabe kann ausführlich sein — erfordert Disziplin bei der Eingabeaufforderung, um Prägnanz durchzusetzen.',
+        '**Kontextfenster:** 1.000.000 Tokens (bewältigt ~800 Seiten Text).',
       ],
     },
 
@@ -597,7 +629,7 @@ export const article: Record<Language, PEArticle> = {
         '**Stärken:** Hochwertige Schreiben und Zusammenfassung; Ausgaben sind prägnant, gut strukturiert und publikationsreif. Hervorragendes Code-Verständnis, Refactoring und Erklärung — findet oft Fehler, die andere Modelle übersehen. Gute Langkontext-Handhabung für Recherche- und Dokumenten-Workflows. Starke Sicherheitskultur; bevorzugt in regulierten Industrien.',
         '**Beste Anwendungsfälle:** Berichte, Analysen und Knowledge-Arbeit, bei der Struktur und Klarheit entscheidend sind. Komplexe Codebases und Architektur-Diskussionen. Enterprise-Einstellungen mit Compliance- und Sicherheitsanforderungen. Inhalte, die minimale Bearbeitung erfordern.',
         '**Kompromisse:** Höhere Preispunkte für Top-Tiers; kann für einfache Aufgaben zu übertrieben sein. Einige Drittanbieter-Integrationen sind neuere als GPT-5.5-Äquivalente.',
-        '**Kontextfenster:** 200.000 Tokens (bewältigt ~150 Seiten Text).',
+        '**Kontextfenster:** 1.000.000 Tokens (bewältigt ~800 Seiten Text).',
       ],
     },
 
@@ -605,10 +637,10 @@ export const article: Record<Language, PEArticle> = {
       title: 'Wann sollten Sie Gemini 3.1 Pro verwenden?',
       content: '**Gemini 3.1 Pro von Google DeepMind ist kosteneffizient mit der stärksten Langkontext-Handhabung und tiefer Google Workspace-Integration.** Verwenden Sie Gemini, wenn Sie viele lange Dokumente verarbeiten oder wenn Ihr Team in Google Workspace tätig ist.',
       items: [
-        '**Stärken:** Sehr gute Coding-Leistung zu attraktiven Preisen — besonders Mid-Tier Flash-Modelle. Stärkste Langkontext (2M Tokens) und Retrieval; hervorragend für Recherche über viele Dokumente + Live-Web-Suche. Native Integration mit Google Workspace (Docs, Sheets, Drive, Gmail, Slides).',
+        '**Stärken:** Sehr gute Coding-Leistung zu attraktiven Preisen — besonders Mid-Tier Flash-Modelle. Langkontext (1M Tokens) und Retrieval; hervorragend für Recherche über viele Dokumente + Live-Web-Suche. Native Integration mit Google Workspace (Docs, Sheets, Drive, Gmail, Slides).',
         '**Beste Anwendungsfälle:** Teams, die in Google Workspace leben. Batch-Coding und Daten-Aufgaben, bei denen das Kosten/Leistungs-Verhältnis entscheidend ist. Recherche-Workflows, die lokale Dokumente mit Web-Suche kombinieren. Verarbeitung von 100+ Seiten PDFs oder Transkripte.',
         '**Kompromisse:** Schreibton kann sich absichernder oder generischer anfühlen als Claude oder GPT. Außerhalb von Googles Ökosystem hinken einige Integrationen Konkurrenten hinterher.',
-        '**Kontextfenster:** 2.000.000 Tokens (stärkste; bewältigt ~1.500 Seiten Text).',
+        '**Kontextfenster:** 1.000.000 Tokens (bewältigt ~800 Seiten Text; Gemini 2.5 Pro war bisher 2M).',
       ],
     },
 
@@ -622,11 +654,11 @@ export const article: Record<Language, PEArticle> = {
 
     longContext: {
       title: 'Welches Modell bewältigt Langkontext am besten?',
-      content: '**Gemini 3.1 Pro mit 2M Tokens ist das klare Sieger für Langkontext-Aufgaben. Claude Opus 4.7 mit 200k Tokens ist die beste Alternative. GPT-5.5 mit 128k Tokens ist am schwächsten, reicht aber für die meisten praktischen Aufgaben aus.**',
+      content: '**Alle drei Modelle unterstützen jetzt 1M Tokens (Stand: Mai 2026). Gemini 3.1 Pro ist kostengünstig für Langkontext. Claude Opus 4.7 hat die beste Schreibqualität. GPT-5.5 dominiert bei Integrationen.**',
       items: [
         '**Gemini 3.1 Pro (2M Tokens):** Laden Sie ein komplettes Buch, alle Seiten einer Website, einen kompletten Code-Repository auf einmal. Beste für: Dokumenten-Vergleich, Konzern-Wissensbasen, lange Recherche-Sitzungen, Batch-Code-Analyse.',
-        '**Claude Opus 4.7 (200k Tokens):** Laden Sie ein einjähriges E-Mail-Archiv, ~150 Seiten eines PDF-Buches, ein komplettes GitHub-Repository. Beste für: Historische Analyse, lange Berichte, großflächige Code-Refactoring.',
-        '**GPT-5.5 (128k Tokens):** Laden Sie ~100 Seiten Text, ein mäßig großes Projekt-Repository. Beste für: tägliche Aufgaben, Coding-Assistenz, Dokumentenanalyse mit normaler Länge.',
+        '**Claude Opus 4.7 (1M Tokens / ~800 Seiten):** Laden Sie ein einjähriges E-Mail-Archiv, komplette Codebases, lange Berichte. Beste für: Historische Analyse, Code-Review, großflächige Refactoring.',
+        '**GPT-5.5 (1M Tokens / ~800 Seiten):** Laden Sie große Projekt-Repositories, komplette Codebases, detaillierte Dokumentationen. Beste für: Agenten, Tool-Integration, Dokumentenanalyse mit Funktionsaufrufen.',
         'Wenn Sie mehrere Quellen kombinieren müssen (5 PDFs + 10 E-Mails + Code-Archiv), verwenden Sie Gemini oder Claude und fassen die Ergebnisse zusammen.',
       ],
     },
@@ -648,8 +680,8 @@ export const article: Record<Language, PEArticle> = {
       tableFormat: true,
       columns: ['Modell', 'Beste Anwendung', 'Kontextfenster', 'Kosten', 'Stärke', 'Schwäche'],
       rows: [
-        { 'Modell': 'GPT-5.5', 'Beste Anwendung': 'Tool-Integration, Agenten', 'Kontextfenster': '128k', 'Kosten': '$5/$15 per M', 'Stärke': 'Integrationen, Ökosystem', 'Schwäche': 'Preislich höher, kurzerer Kontext' },
-        { 'Modell': 'Claude Opus 4.7', 'Beste Anwendung': 'Schreiben, Code-Quality', 'Kontextfenster': '200k', 'Kosten': '$3/$15 per M', 'Stärke': 'Schreibqualität, Sicherheit', 'Schwäche': 'Weniger Integrationen als GPT' },
+        { 'Modell': 'GPT-5.5', 'Beste Anwendung': 'Tool-Integration, Agenten', 'Kontextfenster': '1M', 'Kosten': '$5/$30 per M', 'Stärke': 'Integrationen, Ökosystem', 'Schwäche': 'Preislich höher als Gemini' },
+        { 'Modell': 'Claude Opus 4.7', 'Beste Anwendung': 'Schreiben, Code-Quality', 'Kontextfenster': '1M', 'Kosten': '$5/$25 per M', 'Stärke': 'Schreibqualität, Sicherheit', 'Schwäche': 'Weniger Integrationen als GPT' },
         { 'Modell': 'Gemini 3.1 Pro', 'Beste Anwendung': 'Langkontext, Batch-Coding', 'Kontextfenster': '2M', 'Kosten': '$1.25/$5 per M', 'Stärke': 'Langkontext, Kosteneffizienz', 'Schwäche': 'Weniger Agenten-Features' },
         { 'Modell': 'DeepSeek', 'Beste Anwendung': 'China, Kosteneffizienz', 'Kontextfenster': '64k-128k', 'Kosten': '$0.14/$0.42 per M', 'Stärke': 'Preis, China-Latenz', 'Schwäche': 'Weniger Ökosystem außerhalb China' },
         { 'Modell': 'Baidu ERNIE', 'Beste Anwendung': 'China, Compliance', 'Kontextfenster': '128k', 'Kosten': 'Pay-per-token', 'Stärke': 'China, Regulierung', 'Schwäche': 'Begrenzte internationale Nutzung' },
@@ -722,6 +754,37 @@ export const article: Record<Language, PEArticle> = {
       ],
     },
 
+    commonMistakes: {
+      title: 'Häufige Fehler bei der Wahl eines KI-Modells',
+      mistakes: [
+        {
+          mistake: 'Wahl basierend auf Benchmark-Leaderboards statt auf Ihrer tatsächlichen Aufgabe',
+          problem: 'LMSYS Arena-Rankings und HumanEval-Leaderboards verschieben sich monatlich. Ein Modell, das bei MMLU führt, kann bei Ihrer spezifischen Codierungs-, Schreib- oder Analyseaufgabe zurückfallen.',
+          fix: 'Testen Sie Ihre tatsächlichen Prompts auf 2-3 Modellen, bevor Sie sich festlegen. Verwenden Sie PromptQuorum, um auf IHREN Daten zu vergleichen.',
+        },
+        {
+          mistake: 'Annahme, dass Kontextfenster = Qualität bei langen Dokumenten',
+          problem: 'Seit Mai 2026 unterstützen alle drei Frontier-Modelle 1M Tokens — Kontextfenster-Parität ist angekommen. Das Füllen eines 1M-Kontexts bedeutet nicht, dass das Modell ihn gut nutzt. Das Problem „verloren in der Mitte" bedeutet, dass Informationen in der Mitte sehr langer Kontexte möglicherweise übersehen werden.',
+          fix: 'Für Dokumente über 200 Seiten: Chunking und Zusammenfassung anstatt alles in einen Prompt zu passen, unabhängig von der Kontextfenstergröße. Für Dokumente, die >1M Tokens erfordern, erwägen Sie lokale Modelle wie LLaMA 4 Scout (10M).',
+        },
+        {
+          mistake: 'Verwendung eines Frontier-Modells für jede Aufgabe',
+          problem: 'GPT-5.5 kostet $5/$30 pro Million Tokens, also 60× mehr als Gemini 3 Flash bei ~$0,50/$3. Die meisten Klassifizierungs-, Extraktions- und Zusammenfassungsaufgaben liefern identische Qualität auf günstigen Modellen.',
+          fix: 'Beginnen Sie mit dem billigsten Modell. Führen Sie ein Upgrade auf Frontier durch, nur wenn das billigere Modell messbar fehlschlägt.',
+        },
+        {
+          mistake: 'Ignorieren von Geografie und Datenspeicherung',
+          problem: 'Das Senden von EU-Personendaten an US-APIs erfordert SCCs. Das Bedienen von Festlandchina-Benutzern über GPT/Claude fügt 3–10 Sekunden Latenz hinzu und kann gegen Vorschriften verstoßen.',
+          fix: 'Routing nach Geografie. EU-empfindliche Daten → lokale LLMs oder EU-Region API-Endpunkte. China → DeepSeek oder Baidu ERNIE. Global → beliebiges Frontier-Modell.',
+        },
+        {
+          mistake: 'Blockierung in das SDK eines Anbieters ohne Abstraktionsschicht',
+          problem: 'Wenn ein neues Modell startet (und eines startet alle paar Monate), können Sie nicht ohne Umschreiben der Integration wechseln.',
+          fix: 'Verwenden Sie anbieterunabhängige SDKs (LiteLLM, PromptQuorum) oder das OpenAI-kompatible API-Format, das Claude, Gemini und lokale Modelle auch unterstützen.',
+        },
+      ],
+    },
+
     faq: {
       title: 'Häufig gestellte Fragen',
       faqs: [
@@ -755,13 +818,14 @@ export const article: Record<Language, PEArticle> = {
         },
         {
           q: 'Was ist der Unterschied zwischen GPT-5.5 und GPT-5.5 mini?',
-          a: 'GPT-5.5 ist OpenAIs Frontier-Modell — höchste Fähigkeit, höchste Kosten ($5 Input/$15 Output pro Million Tokens). GPT-5.5 mini ist eine kleinere, schnellere, billigere Version ($0,15 Input/$0,60 Output pro Million Tokens) — 33× billiger mit leicht niedrigerer Qualität. Verwenden Sie GPT-5.5 mini für Klassifizierung, Zusammenfassung und Hochvolumen-Aufgaben, bei denen Frontier Reasoning nicht erforderlich ist. Verwenden Sie GPT-5.5 für komplexes mehrstufiges Reasoning, Agent-Workflows und Aufgaben, bei denen Qualität entscheidend ist.'
+          a: 'GPT-5.5 ist OpenAIs Frontier-Modell — höchste Fähigkeit, höchste Kosten ($5 Input/$30 Output pro Million Tokens). GPT-5.5 mini ist eine kleinere, schnellere, billigere Version ($0,15 Input/$0,60 Output pro Million Tokens) — 50× billiger mit leicht niedrigerer Qualität. Verwenden Sie GPT-5.5 mini für Klassifizierung, Zusammenfassung und Hochvolumen-Aufgaben, bei denen Frontier Reasoning nicht erforderlich ist. Verwenden Sie GPT-5.5 für komplexes mehrstufiges Reasoning, Agent-Workflows und Aufgaben, bei denen Qualität entscheidend ist.'
         },
       ],
     },
 
     sources: {
       title: 'Quellen & weiterführende Ressourcen',
+      content: '**Modellstärken und Preise entsprechen Mai 2026 Nutzungsmustern und Benchmarks.** Modellfähigkeiten und Preise ändern sich häufig — überprüfen Sie offizielle Preisseiten für aktuelle Tarife, und testen Sie auf Ihre Aufgabe vor der Produktion.',
       items: [
         '[OpenAI GPT-5.5 — Modellkarte](https://openai.com/research/gpt-4)',
         '[Anthropic Claude Opus 4.7 — Dokumentation](https://www.anthropic.com/news/claude-3-family)',
@@ -783,6 +847,9 @@ export const article: Record<Language, PEArticle> = {
         '[Kontextfenster erklärt — Warum vergisst KI](/prompt-engineering/context-windows-explained-why-ai-forgets)',
         '[Wie man bessere Eingabeaufforderungen schreibt](/prompt-engineering/better-prompts)',
         '[KI-Fehler und Halluzinationen](/prompt-engineering/ai-errors-and-hallucinations)',
+        '[Lokale LLMs: Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — wie Open-Weights-Modelle verglichen werden, wenn Sie lokal über Cloud wählen',
+        '[Lokale LLMs: Beste Lokale LLMs für Coding](/local-llms/best-local-llms-for-coding) — lokale Coding-Alternativen zu GPT-5.5 und Claude',
+        '[Grundlagen: Open Source vs proprietäre LLMs](/prompt-engineering/open-source-vs-proprietary-llms) — wann lokale Modelle Cloud-APIs entsprechen und wann nicht',
       ],
     },
 
@@ -797,12 +864,12 @@ export const article: Record<Language, PEArticle> = {
     title: 'GPT, Claude ou Gemini : Comment choisir le bon modèle IA',
     intro: 'Aucun modèle IA unique n\'est le meilleur pour chaque tâche. GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE excellent chacun dans des tâches, régions et budgets différents. Ce guide vous offre un cadre décisionnel pratique — pas une autre liste de benchmarks.',
     publishDate: '2026-03-23',
-    seoTitle: 'GPT vs Claude vs Gemini 2026 : choisir le bon modèle IA',
-    metaDescription: 'Aucun modèle IA ne gagne sur toutes les tâches. GPT-5.5 domine l\'intégration d\'outils, Claude Opus 4.7 la rédaction et le code, Gemini 3.1 Pro le contexte long et le coût. Matrice de décision, tarifs et guide de routage.',
-    ogTitle: 'GPT, Claude ou Gemini — quel modèle IA gagne pour VOTRE tâche ?',
-    ogDescription: 'Claude pour la rédaction. Gemini pour les longs docs. GPT pour les agents. DeepSeek pour la Chine. Matrice de décision incluse.',
-    twitterTitle: 'GPT vs Claude vs Gemini : choisir le bon modèle (2026)',
-    twitterDescription: 'Gemini : contexte 2M à 0,30 $/M tokens. Claude : 15 $/M mais moins de révisions. GPT : 50 000+ intégrations. Choisir par tâche, pas par hype.',
+    seoTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro : lequel choisir ? (2026)',
+    metaDescription: 'GPT-5.5 pour agents, Claude Opus 4.7 pour textes, Gemini 3.1 Pro pour coûts — tous à 1M contexte. Comparaison avec tarifs, benchmarks et guide routage.',
+    ogTitle: 'GPT-5.5 vs Claude Opus 4.7 vs Gemini 3.1 Pro : qui gagne pour VOTRE tâche ?',
+    ogDescription: 'Aucun modèle IA ne gagne partout. GPT-5.5 domine intégration outils, Claude excelle rédaction, Gemini offre coût efficace. Comparaison sur tâches réelles.',
+    twitterTitle: 'GPT-5.5 vs Claude vs Gemini 3.1 Pro : lequel ? (2026)',
+    twitterDescription: 'GPT-5.5 pour agents, Claude pour rédaction, Gemini pour coûts. Tous à 1M contexte. Matrice décision, tarifs et 4 recettes routage.',
     readTime: '12 min de lecture',
     schema: {
       '@context': 'https://schema.org',
@@ -811,7 +878,7 @@ export const article: Record<Language, PEArticle> = {
       inLanguage: 'fr',
       headline: 'GPT, Claude ou Gemini : Comment choisir le bon modèle IA',
       datePublished: '2026-03-23',
-      dateModified: '2026-04-29',
+      dateModified: '2026-05-04',
       author: { '@type': 'Person', 'name': 'Hans Kuepper' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -845,7 +912,7 @@ export const article: Record<Language, PEArticle> = {
         items: [
           'GPT-5.5 gagne: workflows multi-agents, intégration d\'outils, écosystème API, multimodal (images/audio). Commencez ici si les intégrations sont importantes.',
           'Claude Opus 4.7 gagne: qualité de l\'écriture, révision de code, profondeur du raisonnement, sécurité d\'entreprise. Commencez ici pour la qualité du contenu/code.',
-          'Gemini 3.1 Pro gagne: longs documents (2M tokens), traitement par lots, efficacité des coûts, Google Workspace. Commencez ici pour l\'analyse à grande échelle de documents.',
+          'Gemini 3.1 Pro gagne: longs documents (1M tokens), traitement par lots, efficacité des coûts, Google Workspace. Commencez ici pour l\'analyse à grande échelle de documents.',
           'DeepSeek/Baidu ERNIE gagne: Chine continentale (requis pour la latence/accès), tâches sensibles aux coûts à haut volume. Seul choix si les données restent en Chine.',
           'Utilisez PromptQuorum pour tester les 5 sur votre tâche réelle — les benchmarks mentent; vos données disent la vérité.',
         ],
@@ -880,7 +947,7 @@ export const article: Record<Language, PEArticle> = {
           '**Qualité pour votre tâche:** Ce modèle excelle-t-il à l\'écriture, codage, analyse ou raisonnement? Vérifiez les performances sur des tâches similaires aux vôtres — pas des benchmarks génériques.',
           '**Coût par token et niveaux de tarification:** Les modèles frontier coûtent $15–60 par million de tokens; les modèles budgétaires coûtent $0,15–3. Le prix varie selon les tokens d\'entrée et de sortie. [Voir l\'économie des tokens en détail.](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
           '**Latence et limites de débit:** À quelle vitesse répond-il? Peut-il gérer votre volume de demandes? Certains modèles sont limités à 100 requêtes par minute; d\'autres supportent 10 000+.',
-          '**Taille de la fenêtre de contexte:** GPT-5.5: 128k tokens. Claude Opus 4.7: 200k tokens. Gemini 3.1 Pro: 2M tokens (10× plus grand, meilleur pour les longs documents). [En savoir plus sur les fenêtres de contexte.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**Taille de la fenêtre de contexte:** Tous les trois modèles frontière: 1M tokens (mai 2026). Suffisant pour les longs documents, archives, projets complets. [En savoir plus sur les fenêtres de contexte.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
           '**Capacités multimodales:** Peut-il traiter les images, l\'audio ou la vidéo? GPT-5.5 et Gemini 3.1 Pro supportent bien les images. DeepSeek et Baidu ERNIE se concentrent sur le texte.',
           '**Écosystème et intégrations:** Combien d\'outils tiers, plugins et APIs le supportent? GPT-5.5 domine ici. Les modèles locaux via Ollama ou LM Studio supportent des milliers d\'intégrations communautaires.',
           '**Géographie et règles de résidence des données:** Est-il disponible dans votre région? Vos données doivent-elles rester dans un pays ou un réseau d\'entreprise? La Chine continentale exige des modèles locaux (DeepSeek, Baidu ERNIE) en raison des réglementations et de la latence.',
@@ -913,7 +980,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'Quand utiliser Gemini 3.1 Pro?',
         content: '**Gemini 3.1 Pro de Google DeepMind est rentable avec le traitement du contexte long le plus fort et l\'intégration profonde avec Google Workspace.** Utilisez Gemini quand vous traitez de nombreux longs documents ou quand votre équipe vit dans Google Workspace.',
         items: [
-          '**Forces:** Très bonnes performances de codage à des prix attractifs — surtout les modèles Flash de mid-tier. Traitement du contexte long le plus fort (2M tokens) et retrieval; excellent pour la recherche sur de nombreux documents + recherche web en direct. Intégration native avec Google Workspace (Docs, Sheets, Drive, Gmail, Slides).',
+          '**Forces:** Très bonnes performances de codage à des prix attractifs — surtout les modèles Flash de mid-tier. Contexte long puissant (1M tokens) et retrieval; excellent pour la recherche sur de nombreux documents + recherche web en direct. Intégration native avec Google Workspace (Docs, Sheets, Drive, Gmail, Slides).',
           '**Meilleurs cas d\'usage:** Équipes vivant dans Google Workspace. Codage par lots et tâches de données où le ratio coût/performance est critique. Workflows de recherche combinant des documents locaux avec recherche web. Traitement de 100+ pages de PDFs ou transcriptions.',
           '**Compromis:** Le ton de l\'écriture peut paraître plus prudent ou générique que Claude ou GPT. En dehors de l\'écosystème Google, certaines intégrations traînent derrière les concurrents.',
           '**Fenêtre de contexte:** 2 000 000 tokens (plus fort; gère ~1 500 pages de texte).',
@@ -933,13 +1000,13 @@ export const article: Record<Language, PEArticle> = {
 
       longContext: {
         title: 'Meilleur LLM pour le contexte long ou les grands documents 2026?',
-        content: '**Gemini 3.1 Pro domine avec 2M tokens de contexte (gère ~1 500 pages); Claude Opus 4.7 avec 200k tokens est suivant (gère ~150 pages); GPT-5.5 à 128k tokens suffit pour la plupart des tâches sur un seul document.** Choisissez en fonction de la taille du document, de la précision de retrieval, et si vous devez charger plusieurs fichiers simultanément.',
+        content: '**Tous les trois modèles (Gemini, Claude, GPT-5.5) supportent maintenant 1M tokens (~800 pages). Choisissez en fonction de la qualité des résultats, du coût, des intégrations, et de votre zone géographique plutôt que de la taille du contexte.**',
         image: '/images/context-windows-chart.svg',
         imageCaption: 'Comparaison de fenêtre de contexte: Gemini 3.1 Pro supporte un contexte 10× plus grand que GPT-5.5, permettant des projets entiers et des archives de documents en une seule requête.',
         items: [
-          '**Gemini 3.1 Pro (2M tokens):** Chargez des codebases entières, des ensembles de documents juridiques ou des archives de recherche. L\'intégration de recherche web vous permet de référencer des sources externes dans le contexte long. Meilleur pour: examens de diligence raisonnable, analyse réglementaire, recherche dans la base de connaissances, traitement de 100+ PDFs pages.',
-          '**Claude Opus 4.7 (200k tokens):** Assez fort pour la plupart des documents: livres, thèses, walkthrough de codebase longueur. Excellent pour l\'analyse détaillée et l\'extraction d\'informations nuancées. Compromis: coût plus élevé par token, mais la qualité peut réduire les cycles de révision.',
-          '**GPT-5.5 (128k tokens):** Suffisant pour les documents uniques sous 100 pages. Utilisez quand vous avez besoin d\'appel d\'outils aux côtés du contexte long (système de fichiers, APIs). Compromis: ne peut pas charger plusieurs grands documents; nécessite chunking/division.',
+          '**Gemini 3.1 Pro (1M tokens / ~800 pages):** Chargez des codebases entières, des archives juridiques ou de recherche complètes. Intégration de recherche web native. Meilleur pour: due diligence, analyses réglementaires, recherche documentaire, traitement massif de PDFs.',
+          '**Claude Opus 4.7 (1M tokens / ~800 pages):** Idéal pour tous les documents: livres, thèses, codebases complètes. Excellence en analyse détaillée et extraction nuancée. Meilleur pour: révision de code, rapports longs, analyse de contrats.',
+          '**GPT-5.5 (1M tokens / ~800 pages):** Excellente pour documents longs + appels d\'outils (filesystem, APIs). Meilleur pour: agentique, intégrations, systèmes complexes avec contexte long.',
           '**Stratégie pratique:** Pour les tâches très longues (workflows multi-documents), utilisez d\'abord Gemini (moins cher, plus grand contexte), puis affinez avec Claude si la qualité de sortie a besoin de finition.',
         ],
       },
@@ -964,7 +1031,7 @@ export const article: Record<Language, PEArticle> = {
           { 'Dimension': 'Q&A Générale', 'GPT-5.5': 'Excellent global', 'Claude Opus 4.7': 'Très bon, prudent', 'Gemini 3.1 Pro': 'Très bon + retrieval', 'DeepSeek': 'Fort, meilleur pour CN', 'Baidu ERNIE': 'Fort, meilleur pour CN' },
           { 'Dimension': 'Écriture', 'GPT-5.5': 'Excellent, parfois verbeux', 'Claude Opus 4.7': 'Structure & clarté excellent', 'Gemini 3.1 Pro': 'Bon, ton neutre', 'DeepSeek': 'Bon, chinois-first', 'Baidu ERNIE': 'Bon, chinois-first' },
           { 'Dimension': 'Codage', 'GPT-5.5': 'Fort', 'Claude Opus 4.7': 'Excellent, premium', 'Gemini 3.1 Pro': 'Excellent rapport qualité-prix', 'DeepSeek': 'Très fort pour dév CN', 'Baidu ERNIE': 'Bon, business appliqué' },
-          { 'Dimension': 'Contexte long', 'GPT-5.5': 'Fort (128k)', 'Claude Opus 4.7': 'Fort (200k)', 'Gemini 3.1 Pro': 'Plus fort (2M) + web', 'DeepSeek': 'Bon', 'Baidu ERNIE': 'Bon avec données Baidu' },
+          { 'Dimension': 'Contexte long', 'GPT-5.5': 'Fort (1M)', 'Claude Opus 4.7': 'Fort (1M)', 'Gemini 3.1 Pro': 'Fort (1M) + web', 'DeepSeek': 'Bon', 'Baidu ERNIE': 'Bon avec données Baidu' },
           { 'Dimension': 'Multimodal', 'GPT-5.5': 'Leader (image/audio)', 'Claude Opus 4.7': 'Bonne vision', 'Gemini 3.1 Pro': 'Très fort (vidéo/web)', 'DeepSeek': 'Varie', 'Baidu ERNIE': 'Texte + web CN' },
           { 'Dimension': 'Efficacité des coûts', 'GPT-5.5': 'Moyen–Élevé', 'Claude Opus 4.7': 'Plus élevé, qualité premium', 'Gemini 3.1 Pro': 'Très rentable', 'DeepSeek': 'Très compétitif', 'Baidu ERNIE': 'Compétitif (ent CN)' },
           { 'Dimension': 'Écosystème global', 'GPT-5.5': 'Le plus étendu', 'Claude Opus 4.7': 'Croissance, esp. d\'entreprise', 'Gemini 3.1 Pro': 'Fort dans monde Google', 'DeepSeek': 'Limité hors Chine', 'Baidu ERNIE': 'Fort écosystème Baidu' },
@@ -1210,7 +1277,7 @@ export const article: Record<Language, PEArticle> = {
           '**あなたのタスクの品質:** このモデルは文章、コーディング、分析、推論に優れていますか？あなたのタスクに類似したタスクのパフォーマンスを確認してください—汎用ベンチマークではなく。',
           '**トークンあたりのコストと価格レベル:** フロンティアモデルは100万トークンあたり$15–60; 予算モデルは$0.15–3。価格は入力トークンと出力トークンで変わります。[トークン経済学の詳細を参照。](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
           '**レイテンシーとレート制限:** どのくらい速く応答しますか？リクエストボリュームを処理できますか？一部のモデルは1分100リクエストに制限; 他は10,000+をサポート。',
-          '**コンテキストウィンドウサイズ:** GPT-5.5: 128k トークン。Claude Opus 4.7: 200k トークン。Gemini 3.1 Pro: 2M トークン（10倍大きく、長いドキュメントに最適）。[コンテキストウィンドウについて学習。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**コンテキストウィンドウサイズ:** すべてのフロンティアモデル（GPT-5.5、Claude、Gemini）は1Mトークン（2026年5月）。長いドキュメント、プロジェクト全体、大規模アーカイブに対応。[コンテキストウィンドウについて学習。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
           '**マルチモーダル機能:** 画像、音声、またはビデオを処理できますか？GPT-5.5とGemini 3.1 Proは画像をサポートします。DeepSeekとBaidu ERNIEはテキストに焦点。',
           '**エコシステムと統合:** どのくらいのサードパーティツール、プラグイン、APIがサポートしていますか？GPT-5.5がここを支配します。OllamaまたはLM Studio経由のローカルモデルは数千のコミュニティ統合をサポート。',
           '**地理と規制:** あなたの地域で利用可能ですか？データは国またはネットワーク内に留まる必要がありますか？中国本土は規制とレイテンシーのため、ローカルモデル（DeepSeek、Baidu ERNIE）が必須。',
@@ -1224,7 +1291,7 @@ export const article: Record<Language, PEArticle> = {
           '**強み:** すべてのドメインにわたる優れた一般推論とチャット。強いマルチモーダル機能—信頼性の高い画像、音声、時々ビデオ処理。クラス最高のツール呼び出しと統合（エージェント、IDEプラグイン、エンタープライズスタック）。数百万の開発者による本番環境で信頼。',
           '**最良の使用例:** マルチステップエージェントワークフロー。ツール呼び出し（API、データベース、コード実行）が必須の複雑なチェーン。スクリーンショットまたは画像分析が必要なタスク。ChatGPT、Assistants API、Codex、ファインチューニングなどのOpenAIエコシステムプロジェクト。',
           '**トレードオフ:** プレミアムフロンティアモデルはトークンあたりのコストが高い（$5入力/$15出力100万）。出力は冗長になる可能性があります—簡潔さを強制するためのプロンプト規律が必要。',
-          '**コンテキストウィンドウ:** 128,000 トークン（~100ページのテキストを処理）。',
+          '**コンテキストウィンドウ:** 1,000,000 トークン（~800ページのテキストを処理）。',
         ],
       },
 
@@ -1235,7 +1302,7 @@ export const article: Record<Language, PEArticle> = {
           '**強み:** 高品質の文章とサマリー; 出力は簡潔で、よく構造化され、発行準備完了。優れたコード理解、リファクタリング、説明—他のモデルが見逃すバグをしばしば検出。長文脈処理が優れている研究およびドキュメントワークフロー。強いセキュリティ文化; 規制産業で推奨。',
           '**最良の使用例:** 構造と明確さが極めて重要なレポート、分析、知識作業。複雑なコードベースとアーキテクチャ議論。コンプライアンスとセキュリティ要件を持つエンタープライズ設定。最小限の編集が必要なコンテンツ。',
           '**トレードオフ:** 最上位レベルでより高い価格ポイント; 単純なタスクには過剰かもしれません。一部のサードパーティ統合はGPT-5.5同等より新しい。',
-          '**コンテキストウィンドウ:** 200,000 トークン（~150ページのテキストを処理）。',
+          '**コンテキストウィンドウ:** 1,000,000 トークン（~800ページのテキストを処理）。',
         ],
       },
 
@@ -1246,7 +1313,7 @@ export const article: Record<Language, PEArticle> = {
           '**強み:** 魅力的な価格でコーディングパフォーマンスが非常に良好—特にミッドティアFlashモデル。最強の長文脈（2Mトークン）とリトリーバル; ドキュメント+ライブウェブ検索にわたる研究に優れている。Google Workspace（Docs、Sheets、Drive、Gmail、Slides）とのネイティブ統合。',
           '**最良の使用例:** Google Workspaceに住むチーム。コスト/パフォーマンス比率が重要なバッチコーディングとデータタスク。ローカルドキュメントとウェブ検索を組み合わせるリサーチワークフロー。100+ページのPDFまたはトランスクリプトの処理。',
           '**トレードオフ:** 文章トーンはClaudeまたはGPTより慎重またはより一般的に感じることができます。Googleのエコシステム外では、一部の統合は競争他社より遅れています。',
-          '**コンテキストウィンドウ:** 2,000,000 トークン（最強; ~1,500ページのテキストを処理）。',
+          '**コンテキストウィンドウ:** 1,000,000 トークン（~800ページのテキストを処理; Gemini 2.5 Proは以前2Mに対応）。',
         ],
       },
 
@@ -1263,13 +1330,13 @@ export const article: Record<Language, PEArticle> = {
 
       longContext: {
         title: '2026年のロングコンテキストまたは大規模ドキュメントに最適なLLMは?',
-        content: '**Gemini 3.1 Proは2M文脈トークンで支配的（~1,500ページを処理）; Claude Opus 4.7（200kトークン）は次点（~150ページを処理）; GPT-5.5は128kトークンでほとんどの単一ドキュメントタスクに十分。** ドキュメントサイズ、リトリーバル精度、複数ファイルを同時にロードする必要があるかに基づいて選択してください。',
+        content: '**すべてのフロンティアモデルが1Mトークンに統一（2026年5月）。選択の基準はコンテキストサイズではなく、品質（Claude/GPT）、コスト効率（Gemini）、統合能力（GPT）で判断してください。**',
         image: '/images/context-windows-chart.svg',
         imageCaption: 'コンテキストウィンドウ比較: Gemini 3.1 ProはGPT-5.5より10倍大きなコンテキストをサポート、単一リクエストでプロジェクト全体とドキュメントアーカイブを有効にします。',
         items: [
           '**Gemini 3.1 Pro（2Mトークン）:** 完全なコードベース、法律ドキュメントセット、または研究アーカイブをロードします。ウェブ検索統合により、ロングコンテキスト内で外部ソースを参照できます。最適: デューディリジェンスレビュー、規制分析、知識ベース検索、100+ページPDF処理。',
-          '**Claude Opus 4.7（200kトークン）:** ほとんどのドキュメントに十分: 本、論文、ロングコードベースウォークスルー。詳細な分析と微妙な情報抽出に優れています。トレードオフ: トークンあたりのコストが高い、しかし品質は修正サイクルを削減できる可能性。',
-          '**GPT-5.5（128kトークン）:** 100ページ未満の単一ドキュメントに十分。長文脈と共にツール呼び出しが必要な場合に使用（ファイルシステム、API）。トレードオフ: 複数の大きなドキュメントをロードできない; チャンキング/分割が必要。',
+          '**Claude Opus 4.7（1Mトークン / ~800ページ）:** すべてのドキュメントに対応: 本、論文、完全なコードベース。詳細な分析と微妙な情報抽出に優れています。ベストフォー: コードレビュー、長い報告書、複雑な分析。',
+          '**GPT-5.5（1Mトークン / ~800ページ）:** ツール呼び出しと長いコンテキストが必要な場合（ファイルシステム、API、エージェント）。ベストフォー: エージェント、統合、複雑なワークフロー。',
           '**実用的な戦略:** 非常に長いタスク（マルチドキュメントワークフロー）では、最初にGeminiを使用（安価、大規模コンテキスト）、出力品質が最後の仕上げが必要な場合はClaudeで改良。',
         ],
       },
@@ -1294,7 +1361,7 @@ export const article: Record<Language, PEArticle> = {
           { '側面': '一般Q&A', 'GPT-5.5': '優れた グローバル', 'Claude Opus 4.7': '非常に良好、慎重', 'Gemini 3.1 Pro': '非常に良好+リトリーバル', 'DeepSeek': '強い、CN向け最高', 'Baidu ERNIE': '強い、CN向け最高' },
           { '側面': '文章', 'GPT-5.5': '優れた、時々冗長', 'Claude Opus 4.7': '優れた構造と明確さ', 'Gemini 3.1 Pro': '良好、ニュートラルトーン', 'DeepSeek': '良好、中国語-優先', 'Baidu ERNIE': '良好、中国語-優先' },
           { '側面': 'コーディング', 'GPT-5.5': '強い', 'Claude Opus 4.7': '優れた、プレミアム', 'Gemini 3.1 Pro': '優れた価値', 'DeepSeek': 'CN開発者向けに非常に強い', 'Baidu ERNIE': '良好、ビジネス適用' },
-          { '側面': 'ロングコンテキスト', 'GPT-5.5': '強い（128k）', 'Claude Opus 4.7': '強い（200k）', 'Gemini 3.1 Pro': '最強（2M）+ウェブ', 'DeepSeek': '良好', 'Baidu ERNIE': 'Baiduデータで良好' },
+          { '側面': 'ロングコンテキスト', 'GPT-5.5': '強い（1M）', 'Claude Opus 4.7': '強い（1M）', 'Gemini 3.1 Pro': '強い（1M）+ウェブ', 'DeepSeek': '良好', 'Baidu ERNIE': 'Baiduデータで良好' },
           { '側面': 'マルチモーダル', 'GPT-5.5': 'リード（画像/音声）', 'Claude Opus 4.7': '良好なビジョン', 'Gemini 3.1 Pro': '非常に強い（ビデオ/ウェブ）', 'DeepSeek': 'varies', 'Baidu ERNIE': 'テキスト+中国ウェブ' },
           { '側面': 'コスト効率', 'GPT-5.5': '中程度–高', 'Claude Opus 4.7': 'より高い、プレミアム品質', 'Gemini 3.1 Pro': '非常に費用効果的', 'DeepSeek': '非常に競争力がある', 'Baidu ERNIE': '競争力がある（ent CN）' },
           { '側面': 'グローバルエコシステム', 'GPT-5.5': '最も広範', 'Claude Opus 4.7': '成長中、特に企業', 'Gemini 3.1 Pro': 'Googleの世界で強い', 'DeepSeek': '中国外では限定的', 'Baidu ERNIE': '強いBaiduエコシステム' },
@@ -1540,7 +1607,7 @@ export const article: Record<Language, PEArticle> = {
           '**您的任务质量:** 此模型在写作、编码、分析或推理方面表现出色吗?检查与您的任务类似的任务的性能——而不是通用基准。',
           '**每令牌成本和定价等级:** 前沿模型成本$15–60 per百万令牌;预算模型成本$0.15–3。价格随输入和输出令牌缩放。[详细查看令牌经济学。](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
           '**延迟和速率限制:** 它的响应速度有多快?它能处理您的请求量吗?某些模型限制为每分钟100个请求;其他模型支持10,000+。',
-          '**上下文窗口大小:** GPT-5.5: 128k令牌。Claude Opus 4.7: 200k令牌。Gemini 3.1 Pro: 2M令牌(大10倍,最适合长文档)。[了解上下文窗口。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**上下文窗口大小:** 所有前沿模型（GPT-5.5、Claude、Gemini）均为1M令牌（2026年5月）。足以处理长文档、整个项目、大型档案库。[了解上下文窗口。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
           '**多模态功能:** 它能处理图像、音频或视频吗?GPT-5.5和Gemini 3.1 Pro很好地支持图像。DeepSeek和Baidu ERNIE专注于文本。',
           '**生态系统和集成:** 多少第三方工具、插件和API支持它?GPT-5.5在这里占主导地位。Ollama或LM Studio的本地模型支持数千个社区集成。',
           '**地理和数据驻留规则:** 在您的地区可用吗?您的数据需要留在国家或公司网络内吗?中国大陆因规定和延迟需要本地模型(DeepSeek、Baidu ERNIE)。',
@@ -1554,7 +1621,7 @@ export const article: Record<Language, PEArticle> = {
           '**优势:** 跨所有领域的优秀通用推理和聊天。强大的多模态功能——可靠地处理图像、音频,有时还处理视频。一流的工具调用和集成(代理、IDE插件、企业堆栈)。被数百万开发人员在生产中信任。',
           '**最佳用例:** 多步骤代理工作流。需要工具调用(API、数据库、代码执行)的复杂链。需要屏幕截图或图像分析的任务。ChatGPT、Assistants API、Codex、微调等OpenAI生态系统项目。',
           '**权衡:** 高级前沿模型的每令牌成本更高($5输入/$15输出百万)。输出可能很冗长——需要提示纪律来强制简洁。',
-          '**上下文窗口:** 128,000令牌(处理~100页文本)。',
+          '**上下文窗口:** 1,000,000令牌(处理~800页文本)。',
         ],
       },
 
@@ -1565,7 +1632,7 @@ export const article: Record<Language, PEArticle> = {
           '**优势:** 高质量的写作和总结;输出简洁、结构良好、可发表。优秀的代码理解、重构和解释——经常发现其他模型遗漏的错误。优秀的长上下文处理,用于研究和文档工作流。强大的安全文化;在受管制的行业中是首选。',
           '**最佳用例:** 结构和清晰度至关重要的报告、分析和知识工作。复杂的代码库和架构讨论。具有合规和安全要求的企业设置。需要最少编辑的内容。',
           '**权衡:** 最高级更高的价格点;可能对简单任务过度。一些第三方集成比GPT-5.5等价物更新。',
-          '**上下文窗口:** 200,000令牌(处理~150页文本)。',
+          '**上下文窗口:** 1,000,000令牌(处理~800页文本)。',
         ],
       },
 
@@ -1576,7 +1643,7 @@ export const article: Record<Language, PEArticle> = {
           '**优势:** 以有吸引力的价格具有非常好的编码性能——尤其是中端Flash模型。最强的长上下文(2M令牌)和检索;对多文档+实时网络搜索的研究很好。与Google Workspace的本地集成(Docs、Sheets、Drive、Gmail、Slides)。',
           '**最佳用例:** 在Google Workspace中工作的团队。成本/性能比至关重要的批量编码和数据任务。结合本地文档和网络搜索的研究工作流。处理100+页PDF或成绩单。',
           '**权衡:** 写作语气可能比Claude或GPT更谨慎或更通用。在Google的生态系统之外,一些集成在竞争对手之后。',
-          '**上下文窗口:** 2,000,000令牌(最强;处理~1,500页文本)。',
+          '**上下文窗口:** 1,000,000令牌(处理~800页文本;Gemini 2.5 Pro之前支持2M)。',
         ],
       },
 
@@ -1593,13 +1660,13 @@ export const article: Record<Language, PEArticle> = {
 
       longContext: {
         title: '2026年最适合长上下文或大型文档的LLM?',
-        content: '**Gemini 3.1 Pro以2M上下文令牌占主导地位(处理~1,500页);Claude Opus 4.7具有200k令牌是下一个(处理~150页);GPT-5.5具有128k令牌对大多数单文档任务来说足够。** 根据文档大小、检索精度以及是否需要同时加载多个文件进行选择。',
+        content: '**所有前沿模型现统一为1M上下文令牌(2026年5月)。选择标准改为：质量(Claude/GPT)、成本效益(Gemini)、集成能力(GPT)、地域可用性。**',
         image: '/images/context-windows-chart.svg',
         imageCaption: '上下文窗口比较:Gemini 3.1 Pro支持比GPT-5.5大10倍的上下文,在单个请求中启用整个项目和文档档案。',
         items: [
           '**Gemini 3.1 Pro(2M令牌):** 加载完整的代码库、法律文件集或研究档案。网络搜索集成允许您在长上下文中引用外部源。最适合:尽职调查审查、监管分析、知识库搜索、处理100+页PDF。',
-          '**Claude Opus 4.7(200k令牌):** 足以用于大多数文档:书籍、论文、长代码库演练。擅长详细分析和提取细微信息。权衡:每令牌的成本更高,但质量可能会减少修订周期。',
-          '**GPT-5.5(128k令牌):** 足以用于100页以下的单个文档。当您需要长上下文(文件系统、API)旁边的工具调用时使用。权衡:无法加载多个大文档;需要分块/拆分。',
+          '**Claude Opus 4.7(1M令牌 / ~800页):** 适用于所有文档：书籍、论文、完整代码库。擅长详细分析和微妙信息提取。最佳用途：代码审查、长报告、复杂分析。',
+          '**GPT-5.5(1M令牌 / ~800页):** 需要工具调用和长上下文的场景（文件系统、API、代理）。最佳用途：代理工作流、集成、复杂系统。',
           '**实用策略:** 对于非常长的任务(多文档工作流),首先使用Gemini(更便宜、更大的上下文),然后如果输出质量需要最后的润色,则用Claude改进。',
         ],
       },
@@ -1624,7 +1691,7 @@ export const article: Record<Language, PEArticle> = {
           { '维度': '常规问答', 'GPT-5.5': '优秀全球', 'Claude Opus 4.7': '很好,谨慎', 'Gemini 3.1 Pro': '很好+检索', 'DeepSeek': '强,最好CN', 'Baidu ERNIE': '强,最好CN' },
           { '维度': '写作', 'GPT-5.5': '优秀,有时冗长', 'Claude Opus 4.7': '优秀结构和清晰', 'Gemini 3.1 Pro': '好,中立语气', 'DeepSeek': '好,中文优先', 'Baidu ERNIE': '好,中文优先' },
           { '维度': '编码', 'GPT-5.5': '强', 'Claude Opus 4.7': '优秀,高级', 'Gemini 3.1 Pro': '优秀价值', 'DeepSeek': '非常强CN开发者', 'Baidu ERNIE': '好,应用业务' },
-          { '维度': '长上下文', 'GPT-5.5': '强(128k)', 'Claude Opus 4.7': '强(200k)', 'Gemini 3.1 Pro': '最强(2M)+网络', 'DeepSeek': '好', 'Baidu ERNIE': '好带百度数据' },
+          { '维度': '长上下文', 'GPT-5.5': '强(1M)', 'Claude Opus 4.7': '强(1M)', 'Gemini 3.1 Pro': '强(1M)+网络', 'DeepSeek': '好', 'Baidu ERNIE': '好带百度数据' },
           { '维度': '多模态', 'GPT-5.5': '领先(图像/音频)', 'Claude Opus 4.7': '好的视觉', 'Gemini 3.1 Pro': '非常强(视频/网络)', 'DeepSeek': '变化', 'Baidu ERNIE': '文本+中文网络' },
           { '维度': '成本效率', 'GPT-5.5': '中等-高', 'Claude Opus 4.7': '更高、高级质量', 'Gemini 3.1 Pro': '非常划算', 'DeepSeek': '非常有竞争力', 'Baidu ERNIE': '竞争力(ent CN)' },
           { '维度': '全球生态系统', 'GPT-5.5': '最广泛', 'Claude Opus 4.7': '增长,特别是企业', 'Gemini 3.1 Pro': '在Google世界中强大', 'DeepSeek': '中国外有限', 'Baidu ERNIE': '强大的百度生态' },
