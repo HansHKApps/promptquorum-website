@@ -1447,6 +1447,20 @@ export const article: Record<Language, PEArticle> = {
             '**Testé chez PromptQuorum — 25 prompts de résumé de documents distribués sur trois modèles :** Claude Sonnet 4.6 a produit les résumés analytiquement les plus complets dans 20 des 25 cas (identifiant implications et connexions entre documents). GPT-5.5 a produit les résumés les plus concis et immédiatement utilisables dans 18 des 25 cas. Gemini 3.1 Pro était le seul modèle pouvant traiter les 25 documents complets sans troncature de contexte, car plusieurs dépassaient 80 000 jetons.',
           ],
         },
+        modelComparison: {
+          id: 'model-comparison',
+          title: 'Comparaison des modèles : Précision et coûts',
+          columns: ['Dimension', 'GPT-5.5', 'Claude Sonnet 4.6', 'Gemini 3.1 Pro', 'NotebookLM'],
+          rows: [
+            { Dimension: 'Fenêtre de contexte', 'GPT-5.5': '128K tokens (~100 pages)', 'Claude Sonnet 4.6': '200K tokens (~160 pages)', 'Gemini 3.1 Pro': '1M tokens (~800 pages)', NotebookLM: 'ca. 500 000 mots / 50 sources' },
+            { Dimension: 'Taux d\'hallucination (groundé)', 'GPT-5.5': '~2%', 'Claude Sonnet 4.6': '~1%', 'Gemini 3.1 Pro': '0,7%', NotebookLM: '<0,5%' },
+            { Dimension: 'Meilleur cas d\'usage', 'GPT-5.5': 'Résumés rapides, brainstorming', 'Claude Sonnet 4.6': 'Synthèse multi-documents, analyse complexe', 'Gemini 3.1 Pro': 'Grands corpus, longs documents', NotebookLM: 'Recherche groundée, citations' },
+            { Dimension: 'Qualité de citation', 'GPT-5.5': 'Modérée (nécessite instructions explicites)', 'Claude Sonnet 4.6': 'Bonne (avec prompting)', 'Gemini 3.1 Pro': 'Modérée', NotebookLM: 'Excellente (citations en ligne cliquables)' },
+            { Dimension: 'Sortie structurée (JSON/YAML)', 'GPT-5.5': 'Fiable', 'Claude Sonnet 4.6': 'Très fiable', 'Gemini 3.1 Pro': 'Fiable', NotebookLM: 'Limité par source' },
+            { Dimension: 'Coût par 1M tokens traités', 'GPT-5.5': '$5,00', 'Claude Sonnet 4.6': '$3,00', 'Gemini 3.1 Pro': '$1,50', NotebookLM: 'Gratuit (jusqu\'à 50 sources/mois)' },
+            { Dimension: 'Faiblesse principale', 'GPT-5.5': 'Fenêtre contexte réduite, coûteux pour gros volumes', 'Claude Sonnet 4.6': 'Contexte limité pour très longs documents', 'Gemini 3.1 Pro': 'Contradictions internes sur très long contexte', NotebookLM: 'Pas d\'API granulaire, pas de déploiement local' },
+          ],
+        },
         promptStructure: {
           id: 'extraction-prompt-structure',
           title: 'Comment rédiger des prompts d\'extraction et de résumé ?',
@@ -1970,6 +1984,20 @@ export const article: Record<Language, PEArticle> = {
           ],
           content: [
             '**PromptQuorumでテスト — 25ドキュメント要約プロンプト、3モデルにわたる分配:** Claude Sonnet 4.6は25件中20件の最も分析的に完全な要約（文書間の含意と接続を識別）を生成。GPT-5.5は25件中18件で最も簡潔で直ちに使用可能な要約を生成。Gemini 3.1 Proは、複数が80,000トークンを超えたため、コンテキスト切り詰めなしで全25ドキュメントを処理できた唯一のモデル。',
+          ],
+        },
+        modelComparison: {
+          id: 'model-comparison',
+          title: 'モデル比較：精度とコスト',
+          columns: ['観点', 'GPT-5.5', 'Claude Sonnet 4.6', 'Gemini 3.1 Pro', 'NotebookLM'],
+          rows: [
+            { '観点': 'コンテキストウィンドウ', 'GPT-5.5': '128Kトークン (~100ページ)', 'Claude Sonnet 4.6': '200Kトークン (~160ページ)', 'Gemini 3.1 Pro': '1Mトークン (~800ページ)', NotebookLM: '約500,000語 / 50ソース' },
+            { '観点': 'ソースグラウンド時のハルシネーション率', 'GPT-5.5': '~2%', 'Claude Sonnet 4.6': '~1%', 'Gemini 3.1 Pro': '0.7%', NotebookLM: '<0.5%' },
+            { '観点': '最適なユースケース', 'GPT-5.5': '高速な要約、ブレインストーミング', 'Claude Sonnet 4.6': 'マルチドキュメント分析、複雑な推論', 'Gemini 3.1 Pro': '大規模コーパス、長いドキュメント', NotebookLM: 'ソースグラウンド研究、引用' },
+            { '観点': '引用品質', 'GPT-5.5': '中程度（明示的指示が必要）', 'Claude Sonnet 4.6': '良好（プロンプティング有）', 'Gemini 3.1 Pro': '中程度', NotebookLM: '優秀（クリッカブルなインライン引用）' },
+            { '観点': 'JSON/YAML構造出力', 'GPT-5.5': '信頼性あり', 'Claude Sonnet 4.6': 'きわめて信頼性あり', 'Gemini 3.1 Pro': '信頼性あり', NotebookLM: 'ソース単位で限定' },
+            { '観点': '1Mトークン処理あたりのコスト', 'GPT-5.5': '$5.00', 'Claude Sonnet 4.6': '$3.00', 'Gemini 3.1 Pro': '$1.50', NotebookLM: '無料（月50ソースまで）' },
+            { '観点': '主な弱点', 'GPT-5.5': 'コンテキスト短い、大規模コスト高', 'Claude Sonnet 4.6': '超長ドキュメント時に制限', 'Gemini 3.1 Pro': '長コンテキスト時に矛盾発生', NotebookLM: 'APIなし、ローカル展開不可' },
           ],
         },
         promptStructure: {
@@ -2497,6 +2525,20 @@ export const article: Record<Language, PEArticle> = {
           ],
           content: [
             '**在PromptQuorum测试——25个文档总结提示词分配到三个模型：** Claude Sonnet 4.6在20个案例中产生了分析最完整的总结（识别文档之间的含义和联系）。GPT-5.5在18个案例中产生了最简洁、立即可用的总结。Gemini 3.1 Pro是唯一能够处理所有25份文档的模型，无需上下文截断，因为其中一些超过80,000 tokens。',
+          ],
+        },
+        modelComparison: {
+          id: 'model-comparison',
+          title: '模型对比：精度与成本',
+          columns: ['维度', 'GPT-5.5', 'Claude Sonnet 4.6', 'Gemini 3.1 Pro', 'NotebookLM'],
+          rows: [
+            { '维度': '上下文窗口', 'GPT-5.5': '128K tokens (~100页)', 'Claude Sonnet 4.6': '200K tokens (~160页)', 'Gemini 3.1 Pro': '1M tokens (~800页)', NotebookLM: '约500,000字 / 50个源' },
+            { '维度': '源证实时幻觉率', 'GPT-5.5': '~2%', 'Claude Sonnet 4.6': '~1%', 'Gemini 3.1 Pro': '0.7%', NotebookLM: '<0.5%' },
+            { '维度': '最佳使用场景', 'GPT-5.5': '快速总结、头脑风暴', 'Claude Sonnet 4.6': '多文档综合、复杂推理', 'Gemini 3.1 Pro': '大规模语料库、长文档', NotebookLM: '源证实研究、引用' },
+            { '维度': '引用质量', 'GPT-5.5': '中等（需明确指导）', 'Claude Sonnet 4.6': '良好（通过提示工程）', 'Gemini 3.1 Pro': '中等', NotebookLM: '优秀（可点击的行内引用）' },
+            { '维度': 'JSON/YAML结构输出', 'GPT-5.5': '可靠', 'Claude Sonnet 4.6': '高度可靠', 'Gemini 3.1 Pro': '可靠', NotebookLM: '每源限制' },
+            { '维度': '处理100万tokens的成本', 'GPT-5.5': '$5.00', 'Claude Sonnet 4.6': '$3.00', 'Gemini 3.1 Pro': '$1.50', NotebookLM: '免费（每月50个源）' },
+            { '维度': '主要弱点', 'GPT-5.5': '上下文窗口短、大规模成本高', 'Claude Sonnet 4.6': '超长文档时受限', 'Gemini 3.1 Pro': '长上下文时出现矛盾', NotebookLM: '无API、无本地部署' },
           ],
         },
         promptStructure: {
