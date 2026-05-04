@@ -23,8 +23,8 @@ export const article: Record<Language, PEArticle> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Structure',
       audience: 'Developers and non-technical users writing AI prompts',
-      dateModified: '2026-04-28',
-      lastFactChecked: '2026-04-28',
+      dateModified: '2026-05-04',
+      lastFactChecked: '2026-05-04',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Are the 5 Building Blocks?', anchor: '#what-are-the-5-building-blocks' },
@@ -168,6 +168,19 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ Quick Facts',
+          content: 'A quick reference guide to the 5 building blocks and when to use them:',
+          items: [
+            '**The 5 blocks:** Role & Context → Task / Instruction → Input & Examples → Constraints → Output Format',
+            '**Minimum viable prompt:** Task + Output Format (2 blocks) for simple tasks',
+            '**Highest-impact addition:** One constraint like "use only provided information" cuts hallucination risk dramatically',
+            '**Works on:** All major language models, frontier models, and all local LLMs via Ollama, LM Studio, or similar',
+            '**Maps to:** CRAFT, CO-STAR, SPECS, RTF, and every other major framework — different names, same blocks',
+          ],
+        },
+
         whyMatters: {
           id: 'why-building-blocks-matter',
           title: 'Why Do These 5 Building Blocks Matter?',
@@ -254,12 +267,19 @@ export const article: Record<Language, PEArticle> = {
           content: 'For the technique of using exclusions to shape output, see [Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting). For why unconstrained prompts hallucinate more, see [AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
         },
 
+        block4ProTip: {
+          id: 'pro-tip-constraints',
+          title: '🔍 Pro Tip: The Highest-Leverage Constraint',
+          content: 'The single highest-leverage constraint you can add to any prompt is: **"Use only information from the provided context. If you cannot answer from the provided information, say so."** This one sentence eliminates the most common failure mode in AI output — plausible-sounding fabrication. Adding this constraint alone often reduces hallucination risk by 80%+ and is universally supported across all models.',
+        },
+
         block5: {
           id: 'block-5-output-format',
           title: 'How Does Output Format Control What You Get?',
           content: [
             '**Output Format specifies the exact shape of the answer the model should produce.** This is the block that determines whether the output is directly usable or requires reformatting before it is useful. For automated pipelines, an unspecified output format means brittle, inconsistent parsing. For GEO, a structured output is more likely to be cited verbatim by AI search engines, because structured answers are easier to extract programmatically.',
             'The output format block can specify the file format (JSON, Markdown, CSV), the structure (table, bullet list, numbered steps), the length, and the labelling of sections. The more precisely you specify it, the less editing the output requires.',
+            '**API-Level Output Format Enforcement:** In 2026, all major providers offer API-level output format enforcement that goes beyond prompt-text instructions. Structured outputs (including JSON schema validation) guarantee valid JSON matching your schema at the token generation level — the model literally cannot produce invalid output. When using these APIs, Block 5 becomes a server-side constraint rather than a prompt-text instruction. Use both for maximum reliability: API-level enforcement as the hard guarantee, prompt-text format specification as guidance for content structure within that format.',
           ],
           items: [
             '**JSON:** "Return the result as a JSON object with keys: title, summary, tags"',
@@ -290,6 +310,28 @@ export const article: Record<Language, PEArticle> = {
           content: 'This template works on all major language models and local LLMs via Ollama or LM Studio. The block order is a recommendation, not a rigid rule — but placing Role & Context first and Output Format last is the most common and reliable arrangement across all major models.',
         },
 
+        templateLocalLLMLinks: {
+          id: 'local-llm-cross-links',
+          content: 'For prompt techniques optimized specifically for local models with smaller context windows, see [Prompt Engineering for Local LLMs](/prompt-engineering/prompt-engineering-for-local-models). For a comparison of which local model follows the 5-block structure most reliably, see [Comparing Open-Source Models](/prompt-engineering/comparing-open-source-models).',
+        },
+
+        systemVsUser: {
+          id: 'system-prompt-vs-user-message',
+          title: 'Where Do the 5 Blocks Go in an API Call?',
+          content: [
+            'In 2026, all major AI APIs separate the **system prompt** (persistent instructions) from the **user message** (per-request content). The 5 blocks split naturally across these two layers, which has important implications for cost and efficiency.',
+            '**System prompt (set once, reused):**',
+            'Block 1: Role & Context — "You are a senior business analyst..."',
+            'Block 4: Constraints — "Use formal tone. Never exceed 200 words. Do not speculate."',
+            'Block 5: Output Format — "Always return 3 bullet points under \'Key Findings\'..."',
+            '**User message (changes per request):**',
+            'Block 2: Task / Instruction — "Summarise the key findings from this report."',
+            'Block 3: Input & Examples — The actual report text + any examples.',
+            'This split matters because **system prompts are cached** on leading models — meaning your Role, Constraints, and Output Format are stored efficiently and don\'t consume fresh tokens on every request. For production pipelines processing hundreds of prompts, this reduces cost by 50-90% on the system prompt portion.',
+            'For local LLMs via Ollama or LM Studio, the same split applies: use a **Modelfile** with a SYSTEM directive for blocks 1, 4, and 5, and pass blocks 2 and 3 in the user message.',
+          ],
+        },
+
         frameworks: {
           id: 'frameworks-and-tools',
           title: 'How Do the 5 Blocks Map to CRAFT, CO-STAR, and SPECS?',
@@ -311,6 +353,12 @@ export const article: Record<Language, PEArticle> = {
           content: 'PromptQuorum includes 9 built-in frameworks that pre-fill these blocks in different configurations depending on the task type. For framework-specific guides, see [Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use), [CRAFT Framework](/prompt-engineering/craft-framework), and [CO-STAR Framework](/prompt-engineering/co-star-framework).',
         },
 
+        frameworksDidYouKnow: {
+          id: 'frameworks-did-you-know',
+          title: '🔍 Did You Know?',
+          content: 'Every major prompt engineering framework published since 2023 — CRAFT, CO-STAR, SPECS, RTF, TRACE, APE — maps directly to these 5 blocks under different names. Learning the blocks once means you can apply any framework without memorizing its specific terminology. The frameworks differ in emphasis and order, but the underlying structure is always the same: who, what, how, constraints, and format.',
+        },
+
         mistakes: {
           id: 'common-mistakes',
           title: 'What Are the Most Common Mistakes With Prompt Building Blocks?',
@@ -323,6 +371,12 @@ export const article: Record<Language, PEArticle> = {
             '**Merging everything into one paragraph:** Blocks mixed into a wall of text are harder for the model to parse — use line breaks or explicit labels for each block',
             '**Over-identical examples:** Three examples that are all the same teach only one pattern — vary them to cover the real range of inputs',
           ],
+        },
+
+        mistakesWarning: {
+          id: 'warning-output-format',
+          title: '⚠️ Warning: Omitting Output Format is #1 Cause of Unusable Output',
+          content: 'Leaving the Output Format block unspecified is the single most common cause of unusable AI output in production pipelines. Without an explicit format specification, the model\'s default format changes between runs, between models, and between API versions. Always specify format — even "respond in plain prose, no bullet points" is better than leaving it unspecified. This is the difference between getting an output and getting a usable output.',
         },
 
         howToStart: {
@@ -378,6 +432,9 @@ export const article: Record<Language, PEArticle> = {
             '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Why constraints and examples matter: the root causes of hallucination and evidence-based defenses.',
             '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — Specifying output format precisely: JSON mode, markdown tables, and other structured approaches across models.',
             '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use) — Comparing CRAFT, CO-STAR, SPECS, and others: choosing a framework aligned to your use case.',
+            '[Persona Prompting](/prompt-engineering/persona-prompting) — Deep dive into Block 1 (Role & Context) with 7 sub-components: how persona selection affects output quality and consistency.',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting) — Deep dive into Block 4 (Constraints) including API-level enforcement: hard constraints that guarantee valid output.',
+            '[Prompt Chaining](/prompt-engineering/prompt-chaining) — How to apply the 5 blocks across multi-step workflows: breaking complex tasks into sequential prompts.',
           ],
         },
 
@@ -388,6 +445,9 @@ export const article: Record<Language, PEArticle> = {
             '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Official prompt engineering guidance from OpenAI, including best practices for role-based and structured prompts.',
             '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Security implications of unstructured prompts and recommendations for constraints.',
             '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Comprehensive catalog of prompt design patterns including structured and role-based techniques directly applicable to the 5-block model.',
+            '[Prompt Engineering — Claude Documentation — Anthropic](https://docs.anthropic.com/) — System prompt best practices, structured outputs, and caching strategies for production pipelines.',
+            '[Structured Outputs — Responses API — OpenAI](https://platform.openai.com/docs/) — API-level output format enforcement guaranteeing valid JSON matching your schema at token generation.',
+            '[Gemini API: Prompting Strategies — Google](https://ai.google.dev/) — Response schema and controlled generation techniques across frontier models.',
           ],
         },
 
@@ -410,8 +470,8 @@ export const article: Record<Language, PEArticle> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt-Struktur',
       audience: 'Entwickler und Nicht-Techniker, die KI-Prompts schreiben',
-      dateModified: '2026-04-28',
-      lastFactChecked: '2026-04-28',
+      dateModified: '2026-05-04',
+      lastFactChecked: '2026-05-04',
       toc: [
         { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
         { label: 'Was sind die 5 Bausteine?', anchor: '#what-are-the-5-building-blocks' },
@@ -565,6 +625,19 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ Schnellübersicht',
+          content: 'Ein schneller Referenzleitfaden zu den 5 Bausteinen und wann sie verwendet werden:',
+          items: [
+            '**Die 5 Bausteine:** Rolle & Kontext → Aufgabe / Anweisung → Eingabe & Beispiele → Einschränkungen → Ausgabeformat',
+            '**Minimaler brauchbarer Prompt:** Aufgabe + Ausgabeformat (2 Bausteine) für einfache Aufgaben',
+            '**Höchste Hebelwirkung:** Eine Einschränkung wie „verwende nur bereitgestellte Informationen" senkt das Halluzinationsrisiko dramatisch',
+            '**Funktioniert auf:** Allen führenden Sprachmodellen und allen lokalen LLMs über Ollama, LM Studio oder ähnliches',
+            '**Entspricht:** CRAFT, CO-STAR, SPECS, RTF und jedem anderen wichtigen Framework — unterschiedliche Namen, gleiche Bausteine',
+          ],
+        },
+
         whyMatters: {
           id: 'why-building-blocks-matter',
           title: 'Warum sind diese 5 Bausteine wichtig?',
@@ -652,12 +725,19 @@ export const article: Record<Language, PEArticle> = {
           content: 'Für die Technik, Ausschlüsse zur Gestaltung von Ausgaben zu verwenden, siehe [Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=de). Warum unkontrollierte Prompts mehr halluzinieren, erklärt [AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de).',
         },
 
+        block4ProTip: {
+          id: 'pro-tip-constraints',
+          title: '🔍 Profi-Tipp: Die wirkungsvollste Einschränkung',
+          content: 'Die einzeln wirkungsvollste Einschränkung, die Sie zu einem Prompt hinzufügen können, ist: **„Verwende nur Informationen aus dem bereitgestellten Kontext. Wenn du nicht aus den bereitgestellten Informationen antwortet, sage es so."** Dieser eine Satz eliminiert den häufigsten Fehler bei KI-Ausgabe — plausibel klingende Erfindung. Das Hinzufügen dieser Einschränkung allein reduziert das Halluzinationsrisiko oft um 80%+ und wird universell über alle Modelle unterstützt.',
+        },
+
         block5: {
           id: 'block-5-output-format',
           title: 'Wie steuert das Ausgabeformat, was man erhält?',
           content: [
             '**Ausgabeformat legt die genaue Form der Antwort fest, die das Modell produzieren soll.** Dies ist der Baustein, der bestimmt, ob die Ausgabe direkt verwendbar ist oder vor der Nutzung umformatiert werden muss. Bei automatisierten Pipelines bedeutet ein nicht festgelegtes Ausgabeformat fragiles, inkonsistentes Parsen. Für GEO ist eine strukturierte Ausgabe eher dazu geeignet, von KI-Suchmaschinen wörtlich zitiert zu werden, da strukturierte Antworten programmatisch leichter zu extrahieren sind.',
             'Der Ausgabeformat-Baustein kann das Dateiformat (JSON, Markdown, CSV), die Struktur (Tabelle, Aufzählungsliste, nummerierte Schritte), die Länge und die Beschriftung von Abschnitten festlegen. Je präziser man es angibt, desto weniger Bearbeitung erfordert die Ausgabe.',
+            '**API-Level-Ausgabeformat-Durchsetzung:** In 2026 bieten alle wichtigen Anbieter API-Level-Ausgabeformat-Durchsetzung, die über reine Prompt-Text-Anweisungen hinausgeht. Strukturierte Ausgaben (einschließlich JSON-Schema-Validierung) garantieren gültiges JSON, das zu Ihrem Schema auf Token-Generierungsebene passt — das Modell kann einfach keine ungültige Ausgabe erzeugen. Bei Verwendung dieser APIs wird Baustein 5 zu einer serverseitigen Einschränkung statt einer Prompt-Text-Anweisung. Verwenden Sie beide zur maximalen Zuverlässigkeit: API-Level-Durchsetzung als harte Garantie, Prompt-Text-Formatspezifikation als Anleitung für die Inhaltsstruktur innerhalb dieses Formats.',
           ],
           items: [
             '**JSON:** „Gib das Ergebnis als JSON-Objekt mit den Schlüsseln: title, summary, tags zurück"',
@@ -688,6 +768,28 @@ export const article: Record<Language, PEArticle> = {
           content: 'Diese Vorlage funktioniert auf allen Sprachmodellen und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
         },
 
+        templateLocalLLMLinks: {
+          id: 'local-llm-cross-links',
+          content: 'Für Prompt-Techniken, die speziell für lokale Modelle mit kleineren Kontextfenstern optimiert sind, siehe [Prompt Engineering for Local LLMs](/prompt-engineering/prompt-engineering-for-local-models?lang=de). Um zu vergleichen, welches lokale Modell der 5-Block-Struktur am zuverlässigsten folgt, siehe [Comparing Open-Source Models](/prompt-engineering/comparing-open-source-models?lang=de).',
+        },
+
+        systemVsUser: {
+          id: 'system-prompt-vs-user-message',
+          title: 'Wo gehen die 5 Bausteine hin in einem API-Aufruf?',
+          content: [
+            'In 2026 trennen alle wichtigen KI-APIs die **System-Anweisung** (persistente Anweisungen) von der **Benutzernachricht** (pro-Anfrage-Inhalt). Die 5 Bausteine verteilen sich natürlich auf diese beiden Ebenen, was wichtige Auswirkungen auf Kosten und Effizienz hat.',
+            '**System-Anweisung (einmal gesetzt, wiederverwendet):**',
+            'Baustein 1: Rolle & Kontext — „Du bist ein erfahrener Business-Analyst..."',
+            'Baustein 4: Einschränkungen — „Verwende formalen Ton. Überschreite nie 200 Wörter. Spekuliere nicht."',
+            'Baustein 5: Ausgabeformat — „Gib immer 3 Aufzählungspunkte unter \'Wichtigste Erkenntnisse\' zurück..."',
+            '**Benutzernachricht (ändert sich pro Anfrage):**',
+            'Baustein 2: Aufgabe / Anweisung — „Fasse die wichtigsten Erkenntnisse aus diesem Bericht zusammen."',
+            'Baustein 3: Eingabe & Beispiele — Der tatsächliche Berichtstext + Beispiele.',
+            'Diese Aufteilung ist wichtig, weil **System-Anweisungen gecacht** werden — das bedeutet, Ihre Rolle, Einschränkungen und Ausgabeformat werden effizient gespeichert und verbrauchen keine frischen Tokens für jede Anfrage. Für Produktions-Pipelines mit Hunderten von Prompts reduziert dies die Kosten um 50-90% für den Systemteil.',
+            'Für lokale LLMs über Ollama oder LM Studio gilt die gleiche Aufteilung: Verwenden Sie eine **Modelfile** mit einer SYSTEM-Direktive für die Bausteine 1, 4 und 5, und geben Sie die Bausteine 2 und 3 in der Benutzernachricht ein.',
+          ],
+        },
+
         frameworks: {
           id: 'frameworks-and-tools',
           title: 'Wie mappen die 5 Bausteine auf CRAFT, CO-STAR und SPECS?',
@@ -709,6 +811,12 @@ export const article: Record<Language, PEArticle> = {
           content: 'PromptQuorum enthält 9 eingebaute Frameworks, die diese Bausteine je nach Aufgabentyp in verschiedenen Konfigurationen vorausfüllen. Für framework-spezifische Leitfäden, siehe [Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de), [CRAFT Framework](/prompt-engineering/craft-framework?lang=de) und [CO-STAR Framework](/prompt-engineering/co-star-framework?lang=de).',
         },
 
+        frameworksDidYouKnow: {
+          id: 'frameworks-did-you-know',
+          title: '🔍 Wusstest du schon?',
+          content: 'Jedes wichtige Prompt-Engineering-Framework, das seit 2023 veröffentlicht wurde — CRAFT, CO-STAR, SPECS, RTF, TRACE, APE — bildet sich direkt auf diese 5 Bausteine unter verschiedenen Namen ab. Das Erlernen der Bausteine bedeutet, dass Sie jedes Framework anwenden können, ohne dessen spezifische Terminologie auswendig lernen zu müssen. Die Frameworks unterscheiden sich in Gewichtung und Reihenfolge, aber die zugrunde liegende Struktur ist immer gleich: wer, was, wie, Einschränkungen und Format.',
+        },
+
         mistakes: {
           id: 'common-mistakes',
           title: 'Was sind die häufigsten Fehler mit Prompt-Bausteinstrukturen?',
@@ -721,6 +829,12 @@ export const article: Record<Language, PEArticle> = {
             '**Alles in einen Absatz zusammenführen:** In einem Textblock vermischte Bausteine sind schwerer für das Modell zu verarbeiten – Zeilenumbrüche oder explizite Beschriftungen für jeden Baustein verwenden',
             '**Zu identische Beispiele:** Drei Beispiele, die alle gleich sind, lehren nur ein Muster – sie variieren, um den echten Bereich der Eingaben abzudecken',
           ],
+        },
+
+        mistakesWarning: {
+          id: 'warning-output-format',
+          title: '⚠️ Warnung: Das Weglassen von Ausgabeformat ist #1 Ursache für unbrauchbare Ausgabe',
+          content: 'Die Nicht-Angabe des Ausgabeformat-Blocks ist die häufigste Ursache für unbrauchbare KI-Ausgabe in Produktions-Pipelines. Ohne explizite Formatspezifikation ändert sich die Standard-Ausgabe des Modells zwischen Durchläufen, zwischen Modellen und zwischen API-Versionen. Geben Sie immer das Format an — auch „antworte in einfachem Prosa, keine Aufzählungspunkte" ist besser als es unangegeben zu lassen. Dies ist der Unterschied zwischen dem Erhalten einer Ausgabe und dem Erhalten einer verwendbaren Ausgabe.',
         },
 
         howToStart: {
@@ -784,6 +898,9 @@ export const article: Record<Language, PEArticle> = {
             '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — Warum Einschränkungen und Beispiele wichtig sind: die Grundursachen von Halluzinationen und evidenzbasierte Abwehrmaßnahmen.',
             '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode?lang=de) — Präzise Ausgabeformate angeben: JSON-Modus, Markdown-Tabellen und andere strukturierte Ansätze über Modelle hinweg.',
             '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de) — Vergleich von CRAFT, CO-STAR, SPECS und anderen: Wahl eines Frameworks, das zu Ihrem Anwendungsfall passt.',
+            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=de) — Tiefere Erkundung von Baustein 1 (Rolle & Kontext) mit 7 Unterkategorien: wie die Persona-Auswahl die Ausgabequalität und Konsistenz beeinflusst.',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) — Tiefere Erkundung von Baustein 4 (Einschränkungen) einschließlich API-Level-Durchsetzung: harte Einschränkungen, die gültige Ausgaben garantieren.',
+            '[Prompt Chaining](/prompt-engineering/prompt-chaining?lang=de) — Wie die 5 Bausteine über mehrstufige Arbeitsabläufe hinweg angewendet werden: Aufteilung komplexer Aufgaben in sequenzielle Prompts.',
           ],
         },
 
@@ -794,6 +911,9 @@ export const article: Record<Language, PEArticle> = {
             '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Offizielle Prompt-Engineering-Anleitung von OpenAI, einschließlich Best Practices für rollenbasierte und strukturierte Prompts.',
             '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Sicherheitsimplikationen unstrukturierter Prompts und Empfehlungen für Einschränkungen.',
             '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Umfassender Katalog von Prompt-Design-Mustern, einschließlich strukturierter und rollenbasierter Techniken, die direkt auf das Fünf-Bausteine-Modell anwendbar sind.',
+            '[Prompt Engineering — Claude Documentation — Anthropic](https://docs.anthropic.com/) — System-Prompt-Best-Practices, strukturierte Ausgaben und Caching-Strategien für Produktions-Pipelines.',
+            '[Structured Outputs — Responses API — OpenAI](https://platform.openai.com/docs/) — API-Level-Ausgabeformat-Durchsetzung, die gültiges JSON garantiert, das Ihrem Schema auf Token-Generierungsebene entspricht.',
+            '[Gemini API: Prompting Strategies — Google](https://ai.google.dev/) — Response-Schema und kontrollierte Generierungstechniken über führende Modelle hinweg.',
           ],
         },
 
@@ -815,8 +935,8 @@ export const article: Record<Language, PEArticle> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Structure de prompt',
       audience: 'Développeurs et utilisateurs non techniques rédigeant des prompts IA',
-      dateModified: '2026-04-28',
-      lastFactChecked: '2026-04-28',
+      dateModified: '2026-05-04',
+      lastFactChecked: '2026-05-04',
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Qu\'est-ce que les 5 éléments fondamentaux ?', anchor: '#what-are-the-5-building-blocks' },
@@ -980,6 +1100,19 @@ export const article: Record<Language, PEArticle> = {
           ],
         },
 
+        quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ Résumé rapide',
+          content: 'Un guide de référence rapide pour les 5 éléments et quand les utiliser :',
+          items: [
+            '**Les 5 éléments :** Rôle & Contexte → Tâche / Instruction → Entrée & Exemples → Contraintes → Format de sortie',
+            '**Prompt minimum viable :** Tâche + Format de sortie (2 éléments) pour les tâches simples',
+            '**Impact maximal :** Une contrainte comme « utilise uniquement les informations fournies » réduit dramatiquement le risque d\'hallucination',
+            '**Fonctionne sur :** Tous les modèles de langage majeurs et tous les LLM locaux via Ollama, LM Studio ou similaire',
+            '**Correspond à :** CRAFT, CO-STAR, SPECS, RTF et tous les autres cadres majeurs — noms différents, mêmes éléments',
+          ],
+        },
+
         whyMatters: {
           id: 'why-building-blocks-matter',
           title: 'Pourquoi ces 5 éléments sont importants ?',
@@ -1073,6 +1206,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**Le Format de sortie définit la forme exacte de la réponse que le modèle produira.** C\'est l\'élément qui détermine si la sortie est immédiatement utilisable ou doit être reformatée avant utilisation. Dans les pipelines automatisés, un format de sortie non spécifié signifie un parsing fragile et incohérent. Pour la GEO, une sortie structurée est plus probable d\'être citée littéralement par les moteurs de recherche IA car les réponses structurées sont plus faciles à extraire programmatiquement.',
             'L\'élément Format de sortie peut spécifier le format de fichier (JSON, Markdown, CSV), la structure (tableau, liste à puces, étapes numérotées), la longueur et l\'étiquetage des sections. Plus vous le spécifiez précisément, moins la sortie a besoin d\'être éditée.',
+            '**Application au niveau API du Format de sortie :** En 2026, tous les fournisseurs majeurs offrent une application au niveau de l\'API du format de sortie au-delà des seules instructions texte d\'invite. Les sorties structurées (y compris la validation du schéma JSON) garantissent un JSON valide correspondant à votre schéma au niveau de la génération de tokens — le modèle ne peut tout simplement pas produire de sortie invalide. Lors de l\'utilisation de ces API, l\'élément 5 devient une contrainte côté serveur plutôt qu\'une instruction texte d\'invite. Utilisez les deux pour une fiabilité maximale : l\'application au niveau API comme garantie dure, la spécification du format texte d\'invite comme guide pour la structure du contenu.',
           ],
           items: [
             '**JSON :** « Retourne le résultat comme un objet JSON avec les clés : title, summary, tags »',
@@ -1100,7 +1234,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'Ce modèle fonctionne sur GPT-5, Claude 4.7, Gemini 3 Pro et sur les LLM locaux via Ollama ou LM Studio. L\'ordre des éléments est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est le plus courant et fiable sur tous les modèles majeurs.',
+          content: 'Ce modèle fonctionne sur tous les modèles de langage majeurs et les LLM locaux via Ollama ou LM Studio. L\'ordre des éléments est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est le plus courant et fiable sur tous les modèles majeurs.',
         },
 
         frameworks: {
@@ -1223,24 +1357,23 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     ja: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'evergreen',
       theme: '基礎',
       title: 'すべてのプロンプトに必要な5つの構成要素',
       seoTitle: 'AIプロンプトに必要な5つの要素（テンプレート付き）',
       intro: '**効果的なAIプロンプトには5つの構成要素が必須です：役割とコンテキスト、タスク/指示、入力と例、制約、出力形式。これらのいずれかを欠くと、AIの出力は一貫性を失い、形式が崩れ、幻覚が発生します。**',
-      metaDescription: '効果的なAIプロンプトには5つの要素が必要：役割、タスク、入力、制約、出力形式。1つ欠けるだけで出力品質が低下。GPT・Claude・Gemini対応のコピペ用テンプレート付き。',
+      metaDescription: '効果的なAIプロンプトには5つの要素が必要：役割、タスク、入力、制約、出力形式。1つ欠けるだけで出力品質が低下。すべてのモデルに対応したコピペ用テンプレート付き。',
       ogTitle: 'この5要素のうち1つでも欠けるとAIの出力が不安定に',
       ogDescription: '役割、タスク、入力、制約、出力形式。全モデル対応のテンプレート。すぐにコピペで使える。',
-      twitterTitle: 'AIプロンプトに必要な5つの構成要素（2026テンプレート）',
-      twitterDescription: '曖昧なプロンプトはトークンと修正時間の無駄。5ブロック構造なら一発で使える出力が得られる。GPT・Claude・Gemini・ローカルLLM対応。',
+      twitterTitle: 'AIプロンプトに必要な5つの構成要素',
+      twitterDescription: '曖昧なプロンプトはトークンと修正時間の無駄。5ブロック構造なら一発で使える出力が得られる。すべてのモデルとローカルLLM対応。',
       publishDate: '2026-03-01',
       readTime: '8分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Structure',
       audience: 'AIプロンプトを作成する開発者と一般ユーザー',
-      dateModified: '2026-04-28',
-      lastFactChecked: '2026-04-28',
-      next_refresh_due: '2026-09-01',
+      dateModified: '2026-05-04',
+      lastFactChecked: '2026-05-04',
       toc: [
         { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: 'プロンプトの5つの構成要素とは', anchor: '#what-are-the-5-building-blocks' },
@@ -1267,13 +1400,11 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja',
         inLanguage: 'ja',
         proficiencyLevel: 'Beginner',
-        keywords: ['プロンプト構造', 'プロンプト構成要素', '役割とコンテキスト', '出力形式', 'プロンプト制約', 'フューショット例', 'プロンプトエンジニアリング', 'GPT-5', 'Claude', 'Gemini'],
+        keywords: ['プロンプト構造', 'プロンプト構成要素', '役割とコンテキスト', '出力形式', 'プロンプト制約', 'フューショット例', 'プロンプトエンジニアリング', '言語モデル'],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
-          { '@type': 'Thing', name: 'OpenAI GPT-5' },
-          { '@type': 'Thing', name: 'Anthropic Claude' },
-          { '@type': 'Thing', name: 'Google Gemini' },
+          { '@type': 'Thing', name: 'Language Models' },
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'CO-STAR framework' },
           { '@type': 'Thing', name: 'CRAFT framework' },
@@ -1526,7 +1657,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'このテンプレートは GPT-5、Claude 4.7、Gemini 3 Pro、および Ollama または LM Studio 経由のローカル LLM で動作します。ブロック順序は推奨ですが、厳格なルールではありません。ただし、最初に役割とコンテキストを配置し、最後に出力形式を配置することがすべての主要なモデル全体で最も一般的で信頼できる配置です。',
+          content: 'このテンプレートはすべての主要な言語モデルおよび Ollama または LM Studio 経由のローカル LLM で動作します。ブロック順序は推奨ですが、厳格なルールではありません。ただし、最初に役割とコンテキストを配置し、最後に出力形式を配置することがすべての主要なモデル全体で最も一般的で信頼できる配置です。',
         },
 
         frameworks: {
@@ -1649,28 +1780,31 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     zh: {
+      freshness_tier: 'evergreen',
       theme: '基础知识',
       title: '每个提示词必需的5个构建模块',
       seoTitle: '每个AI提示词必备的5个构建块（含可复制模板）',
       intro: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。',
-      metaDescription: '高效AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。缺少任何一个，输出都会跑偏。附GPT、Claude、Gemini通用的可复制模板。',
+      metaDescription: '高效AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。缺少任何一个，输出都会跑偏。所有模型通用的可复制模板。',
       ogTitle: '缺少这5个提示词构建块中的任何一个，AI输出就会跑偏',
       ogDescription: '角色、任务、输入、约束、输出格式。一套模板适用所有模型。直接复制使用。',
-      twitterTitle: '每个AI提示词必备的5个构建块（2026模板）',
-      twitterDescription: '模糊的提示词浪费Token和修改时间。结构化5模块提示词一次生成可用输出。适用于GPT、Claude、Gemini和本地LLM。',
+      twitterTitle: '每个AI提示词必备的5个构建块',
+      twitterDescription: '模糊的提示词浪费Token和修改时间。结构化5模块提示词一次生成可用输出。适用于所有模型和本地LLM。',
       publishDate: '2026-03-01',
       readTime: '阅读约8分钟',
       educationalLevel: 'Beginner',
+      dateModified: '2026-05-04',
+      lastFactChecked: '2026-05-04',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '每个提示词必需的5个构建模块',
         description: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。这5个组成部分确保了AI提示词的可靠性和可重复性。',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-05-04',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh',
         inLanguage: 'zh',
-        keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', '语言模型'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       },
