@@ -26,7 +26,8 @@
       "Bash(pnpm exec:*)",
       "Bash(ls /Users/hanskuepper/promptquorum-website/public/og*)",
       "Bash(ls /Users/hanskuepper/promptquorum-website/src/app/video-sitemap*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(node scripts/validate-evergreen-articles.mjs)"
     ]
   }
 }

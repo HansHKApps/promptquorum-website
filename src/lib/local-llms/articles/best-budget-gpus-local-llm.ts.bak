@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**RTX 3060 12GB** ($200–250 used): Runs every 7B model and most 13B at Q4. Plus Llama 4 Scout (MoE) at ~10 GB — best overall quality.',
             '**RTX 3060 6GB**: Limited to 3B models (Phi-4 Mini, Llama 3.2 3B). Too tight for 7B.',
             '**Best overall model on 12GB:** Llama 4 Scout 17B (MoE) at ~10 GB VRAM, 12–16 tok/sec. Delivers quality comparable to dense 30B models.',
-            '**Best coding model on 12GB:** Qwen3 8B at 16–20 tok/sec. Improved over Qwen3.',
+            '**Best coding model on 12GB:** Qwen3 8B at 16–20 tok/sec. Improved over Qwen2.5-Coder.',
             '**Best reasoning model on 12GB:** DeepSeek-R1 7B at 10–12 tok/sec. Chain-of-thought.',
             '**Skip if:** You want 70B models or 13B at Q8 — you need 24GB (RTX 4090).',
           ],
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**Chat / Q&A:** `ollama run llama4:scout` — MoE, ~10 GB VRAM, best quality on 12 GB. For a lighter option: `ollama run llama3.2:3b` at 2.5 GB.',
-            '**Coding:** `ollama run qwen3:8b` — Improved coding performance over Qwen3. 5 GB VRAM. 16–20 tok/sec.',
+            '**Coding:** `ollama run qwen3:8b` — Improved coding performance over Qwen2.5-Coder. 5 GB VRAM. 16–20 tok/sec.',
             '**Reasoning / Math:** `ollama run deepseek-r1:7b` — Chain-of-thought reasoning. 10–12 tok/sec. Slower but significantly more accurate on multi-step problems.',
             '**Writing / Creative:** `ollama run mistral:7b` — Best instruction following. 18 tok/sec. Clean, structured output. Good for drafting and rewriting.',
             '**Vision / Images:** `ollama run gemma4:9b` — Multimodal (accepts images). 12–15 tok/sec. Uses ~8GB VRAM. Describe photos, read screenshots, analyze charts.',
@@ -322,7 +322,7 @@ schema: {
             '**RTX 3060 12GB** (150–190 € gebraucht): Führt jedes 7B-Modell und die meisten 13B bei Q4 aus. Plus Llama 4 Scout (MoE) bei ~10 GB — beste Gesamtqualität.',
             '**RTX 3060 6GB**: Beschränkt auf 3B-Modelle (Phi-4 Mini, Llama 3.2 3B). Zu knapp für 7B.',
             '**Bestes Gesamtmodell auf 12GB:** Llama 4 Scout 17B (MoE) bei ~10 GB VRAM, 12–16 Tok/Sek. Liefert Qualität vergleichbar mit dichten 30B-Modellen.',
-            '**Bestes Coding-Modell auf 12GB:** Qwen3 8B mit 16–20 Tok/Sek. Verbesserung gegenüber Qwen3.',
+            '**Bestes Coding-Modell auf 12GB:** Qwen3 8B mit 16–20 Tok/Sek. Verbesserung gegenüber Qwen2.5-Coder.',
             '**Bestes Reasoning-Modell auf 12GB:** DeepSeek-R1 7B mit 10–12 Tok/Sek.',
             '**Überspringen wenn:** Sie 70B-Modelle oder 13B bei Q8 wollen — dafür brauchen Sie 24GB (RTX 4090).',
           ],
@@ -424,7 +424,7 @@ schema: {
           ],
           items: [
             '**Chat / Frage-Antwort:** `ollama run llama4:scout` — MoE, ~10 GB VRAM, beste Qualität auf 12 GB. Für leichtere Option: `ollama run llama3.2:3b` bei 2,5 GB.',
-            '**Coding:** `ollama run qwen3:8b` — Verbesserte Coding-Leistung gegenüber Qwen3. 5 GB VRAM. 16–20 Tok/Sek.',
+            '**Coding:** `ollama run qwen3:8b` — Verbesserte Coding-Leistung gegenüber Qwen2.5-Coder. 5 GB VRAM. 16–20 Tok/Sek.',
             '**Reasoning / Mathematik:** `ollama run deepseek-r1:7b` — Chain-of-Thought. 10–12 Tok/Sek.',
             '**Schreiben / Kreativ:** `ollama run mistral:7b` — Beste Instruktionsfolge. 18 Tok/Sek.',
             '**Vision / Bilder:** `ollama run gemma4:9b` — Multimodal (Bilder). 12–15 Tok/Sek. ~8 GB VRAM.',
@@ -567,7 +567,7 @@ schema: {
       ],
       sections: {
         tldr: { id: 'key-takeaways',
- isTldr: true, items: ['**RTX 3060 12 Go** (200–250 $ d\'occasion) : Exécute tous les 7B et la plupart des 13B en Q4. Plus Llama 4 Scout (MoE) à ~10 Go — meilleure qualité.', '**RTX 3060 6 Go** : Limité aux modèles 3B (Phi-4 Mini, Llama 3.2 3B). Trop juste pour 7B.', '**Meilleur modèle global sur 12 Go :** Llama 4 Scout 17B (MoE) à ~10 Go VRAM, 12–16 tok/sec. Qualité comparable aux modèles denses 30B.', '**Meilleur modèle code sur 12 Go :** Qwen3 8B à 16–20 tok/sec. Amélioration vs Qwen3.', '**Meilleur modèle raisonnement sur 12 Go :** DeepSeek-R1 7B à 10–12 tok/sec.', '**À éviter si :** vous voulez des modèles 70B ou 13B en Q8 — il faut 24 Go (RTX 4090).'] },
+ isTldr: true, items: ['**RTX 3060 12 Go** (200–250 $ d\'occasion) : Exécute tous les 7B et la plupart des 13B en Q4. Plus Llama 4 Scout (MoE) à ~10 Go — meilleure qualité.', '**RTX 3060 6 Go** : Limité aux modèles 3B (Phi-4 Mini, Llama 3.2 3B). Trop juste pour 7B.', '**Meilleur modèle global sur 12 Go :** Llama 4 Scout 17B (MoE) à ~10 Go VRAM, 12–16 tok/sec. Qualité comparable aux modèles denses 30B.', '**Meilleur modèle code sur 12 Go :** Qwen3 8B à 16–20 tok/sec. Amélioration vs Qwen2.5-Coder.', '**Meilleur modèle raisonnement sur 12 Go :** DeepSeek-R1 7B à 10–12 tok/sec.', '**À éviter si :** vous voulez des modèles 70B ou 13B en Q8 — il faut 24 Go (RTX 4090).'] },
         'rtx-3060-12gb': {
           id: 'rtx-3060-12gb',
           title: 'Que peut-on exécuter sur RTX 3060 12 Go ?',
@@ -625,7 +625,7 @@ schema: {
           ],
           items: [
             '**Chat / Q&R :** `ollama run llama4:scout` — MoE, ~10 Go VRAM, meilleure qualité sur 12 Go. Pour une option plus légère : `ollama run llama3.2:3b` à 2.5 Go.',
-            '**Code :** `ollama run qwen3:8b` — Performance de codage améliorée vs Qwen3. 5 Go VRAM. 16–20 tok/sec.',
+            '**Code :** `ollama run qwen3:8b` — Performance de codage améliorée vs Qwen2.5-Coder. 5 Go VRAM. 16–20 tok/sec.',
             '**Raisonnement / Maths :** `ollama run deepseek-r1:7b` — Chain-of-thought. 10–12 tok/sec.',
             '**Écriture / Créatif :** `ollama run mistral:7b` — Meilleur suivi d\'instructions. 18 tok/sec.',
             '**Vision / Images :** `ollama run gemma4:9b` — Multimodal. 12–15 tok/sec. ~8 Go VRAM.',
@@ -679,7 +679,7 @@ schema: {
       ],
       sections: {
         tldr: { id: 'key-takeaways',
- isTldr: true, items: ['**RTX 3060 12GB**（中古$200–250）：すべての7Bモデルとほとんどの13BをQ4で実行。プラスLlama 4 Scout（MoE）~10GB — 最良の全体品質。', '**RTX 3060 6GB**：3Bモデルのみ（Phi-4 Mini、Llama 3.2 3B）。7Bには不足。', '**12GBでの最良総合モデル：** Llama 4 Scout 17B（MoE）~10GB VRAM、12–16トークン/秒。稠密30Bモデルに匹敵する品質。', '**12GBでの最良コーディングモデル：** Qwen3 8B、16–20トークン/秒。Qwen3より改善。', '**12GBでの最良推論モデル：** DeepSeek-R1 7B、10–12トークン/秒。', '**対象外：** 70Bモデルや13B Q8が必要な場合は24GB（RTX 4090）が必要。'] },
+ isTldr: true, items: ['**RTX 3060 12GB**（中古$200–250）：すべての7Bモデルとほとんどの13BをQ4で実行。プラスLlama 4 Scout（MoE）~10GB — 最良の全体品質。', '**RTX 3060 6GB**：3Bモデルのみ（Phi-4 Mini、Llama 3.2 3B）。7Bには不足。', '**12GBでの最良総合モデル：** Llama 4 Scout 17B（MoE）~10GB VRAM、12–16トークン/秒。稠密30Bモデルに匹敵する品質。', '**12GBでの最良コーディングモデル：** Qwen3 8B、16–20トークン/秒。Qwen2.5-Coderより改善。', '**12GBでの最良推論モデル：** DeepSeek-R1 7B、10–12トークン/秒。', '**対象外：** 70Bモデルや13B Q8が必要な場合は24GB（RTX 4090）が必要。'] },
         'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'RTX 3060 12GBで何が動く？', content: ['**RTX 3060 12GBは2026年のローカルLLM用最良バジェットGPUです。** 12GB VRAMはQ4/Q5のすべての7Bモデルと、Q4のほとんどの13Bモデルに対応：'], columns: ['モデル', 'サイズ', '量子化', 'VRAM使用', '速度', '最適用途'], rows: [{ 'モデル': 'Llama 4 Scout 17B', 'サイズ': '17B活性（109B MoE）', '量子化': 'Q4_K_M', 'VRAM使用': '~10 GB', '速度': '12–16トークン/秒', '最適用途': '最良総合品質（MoE）' }, { 'モデル': 'Llama 3.2 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '15–20トークン/秒', '最適用途': 'チャット、Q&A（レガシー）' }, { 'モデル': 'Mistral 7B v0.3', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '18トークン/秒', '最適用途': '指示従行' }, { 'モデル': 'Qwen3 8B', 'サイズ': '8B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '16–20トークン/秒', '最適用途': 'コーディング（Qwen2.5より改善）' }, { 'モデル': 'DeepSeek-R1 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '10–12トークン/秒', '最適用途': '推論、数学' }, { 'モデル': 'Gemma 4 9B', 'サイズ': '9B', '量子化': 'Q4_K_M', 'VRAM使用': '~8 GB', '速度': '12–15トークン/秒', '最適用途': 'ビジョン、マルチモーダル' }, { 'モデル': 'Llama 3.2 13B', 'サイズ': '13B', '量子化': 'Q4_K_M', 'VRAM使用': '~11 GB', '速度': '8–10トークン/秒', '最適用途': '高品質チャット（Q4のみ）' }], note: 'Llama 4 Scoutは2026年RTX 3060 12GB所有者向けの最大アップグレード。MoE アーキテクチャはトークンあたり17Bパラメータのみアクティブ（109B合計）、稠密7B-8Bモデルを大きく上回る品質を同等VRAM使用量で提供。`ollama pull llama4:scout`。すべての速度はOllama、RTX 3060 12GB、16GBシステムRAM、Ryzen 7 7700Xで計測。Q4_K_M量子化。速度は±15%変動。' },
         'rtx-3060-6gb': { id: 'rtx-3060-6gb', title: 'RTX 3060 6GBで何が動く？', content: ['**6GB版は大幅に制限されています。** 3Bモデルのみ快適に動作。7BモデルのQ4は~7GB必要で、容量不足です。'], items: ['**Phi-4 Mini 3.8B（Q4）：** ~3GB VRAM、20–25トークン/秒。このサイズでの最良推論。', '**Llama 3.2 3B（Q4）：** ~2.5GB VRAM、25–35トークン/秒。最速オプション。', '**Gemma 2 2B（Q4）：** ~1.7GB VRAM、35–45トークン/秒。最軽量モデル。', '**7Bオフローディング：** 可能だが遅い。Llama 7BのCPUオフロード = ~5–8トークン/秒。', '**推奨：** 6GBカードをお持ちなら、12GB中古（$200–250）にアップグレードを。'] },
         'which-budget-gpus': { title: 'RTX 3060 vs 他のバジェットGPU', columns: ['GPU', 'VRAM', '価格（中古）', '7B速度', '最大モデル', '評価'], rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥30,000–38,000', '7B速度': '15–20トークン/秒', '最大モデル': '13B（Q4）', '評価': '最良バジェット' }, { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '価格（中古）': '¥38,000–45,000', '7B速度': '20–25トークン/秒', '最大モデル': '7B（Q5最大）', '評価': '高速だがVRAM少' }, { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '価格（中古）': '¥27,000–35,000', '7B速度': '12–15トークン/秒', '最大モデル': '13B（Q5）', '評価': 'VRAM/円最良' }, { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', '価格（中古）': '¥60,000–68,000', '7B速度': '25–30トークン/秒', '最大モデル': '13B（Q5）', '評価': '高速だが2倍の価格' }, { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', '価格（中古）': '¥23,000–30,000', '7B速度': '10–14トークン/秒', '最大モデル': '13B（Q4）', '評価': '最安、AMDの手間' }], note: 'RTX 3060 12GBが価格性能比で勝利：¥30,000–38,000の12GB VRAMですべての7Bとほとんどの13Bを実行。' },
@@ -737,7 +737,7 @@ schema: {
             '**RTX 3060 12GB**（二手$200–250）：运行所有7B和大多数13B的Q4模型。最佳预算选择。',
             '**RTX 3060 6GB**：仅限3B模型（Phi-4 Mini、Llama 3.2 3B）。7B不够用。',
             '**12GB最佳聊天模型：** Llama 3.2 7B，15–20令牌/秒。',
-            '**12GB最佳编程模型：** Qwen3 7B，16令牌/秒。72% HumanEval。',
+            '**12GB最佳编程模型：** Qwen2.5-Coder 7B，16令牌/秒。72% HumanEval。',
             '**12GB最佳推理模型：** DeepSeek-R1 7B，10–12令牌/秒。',
             '**不适合：** 需要70B模型或13B Q8的用户——需要24GB（RTX 4090）。',
           ],
@@ -752,7 +752,7 @@ schema: {
           rows: [
             { '模型': 'Llama 3.2 7B', '大小': '7B', '量化': 'Q4_K_M', 'VRAM占用': '~7 GB', '速度': '15–20令牌/秒', '最适合': '聊天、问答' },
             { '模型': 'Mistral 7B v0.3', '大小': '7B', '量化': 'Q4_K_M', 'VRAM占用': '~7 GB', '速度': '18令牌/秒', '最适合': '指令遵循' },
-            { '模型': 'Qwen3 7B', '大小': '7B', '量化': 'Q4_K_M', 'VRAM占用': '~7 GB', '速度': '16令牌/秒', '最适合': '编程（72% HumanEval）' },
+            { '模型': 'Qwen2.5-Coder 7B', '大小': '7B', '量化': 'Q4_K_M', 'VRAM占用': '~7 GB', '速度': '16令牌/秒', '最适合': '编程（72% HumanEval）' },
             { '模型': 'DeepSeek-R1 7B', '大小': '7B', '量化': 'Q4_K_M', 'VRAM占用': '~7 GB', '速度': '10–12令牌/秒', '最适合': '推理、数学' },
             { '模型': 'Gemma 4 9B', '大小': '9B', '量化': 'Q4_K_M', 'VRAM占用': '~8 GB', '速度': '12–15令牌/秒', '最适合': '视觉、多模态' },
             { '模型': 'Llama 3.2 13B', '大小': '13B', '量化': 'Q4_K_M', 'VRAM占用': '~11 GB', '速度': '8–10令牌/秒', '最适合': '高质量聊天' },

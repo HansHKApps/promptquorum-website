@@ -210,3 +210,48 @@ Before writing or substantially editing any article, ask:
    - `evergreen` articles must NOT contain year references, specific models, or benchmarks
    - `semi_annual` articles must have year in title and `next_refresh_due` set
    - `annual` articles must have year in slug and `specific_year` set
+
+### Pre-commit Enforcement (Evergreen Article Validation)
+
+**Before every commit**, a git pre-commit hook runs `scripts/validate-evergreen-articles.mjs` which automatically validates all articles tagged as `freshness_tier: 'evergreen'` and rejects commits that contain:
+
+- **Concrete LLM model names** (GPT-4o, Claude, Gemini, Llama, Mistral, Qwen, DeepSeek, Command, PaLM, etc.)
+- **Version numbers** (1.0, 2.0, 3.5, etc.)
+- **Years** (2024, 2025, 2026, 2027, etc.)
+- **Time-sensitive phrases** (latest, newest, current, recently, just came, just released, etc.)
+
+**If validation fails, the commit is blocked with an error like:**
+```
+❌ FRESHNESS TIER VALIDATION FAILED
+
+Evergreen articles must not contain:
+  • Concrete LLM model names (GPT-4o, Claude, Gemini, etc.)
+  • Version numbers (2.0, 3.5, etc.)
+  • Years (2024, 2025, 2026, etc.)
+  • Time-sensitive phrases (latest, current, newest, etc.)
+
+pattern violations (N):
+  [file]:[line]
+    Found: "[match]"
+    Line: [content preview]
+```
+
+**To fix and commit:**
+
+1. **Change the tier** (if article needs model/version refs): Change `freshness_tier` to `'semi_annual'` (set `next_refresh_due`) or `'annual'` (set `specific_year`)
+2. **Rewrite for timelessness** (recommended): Remove concrete refs and use generic language:
+   - ❌ "GPT-4o performs best for code generation"
+   - ✅ "Large proprietary models excel at code generation"
+   - ❌ "Latest LLMs have improved reasoning"
+   - ✅ "Modern LLMs have improved reasoning"
+   - ❌ "As of 2026, Llama 3.2 leads open source"
+   - ✅ "Leading open-source models provide cost-effective performance"
+
+3. **Use `git commit --no-verify` only as a last resort** (not recommended — defeats the purpose)
+
+**Exceptions:** The validation skips:
+- Code blocks and code examples (references in schema, imports, codeBlock fields are allowed)
+- Comments within code
+- Any field marked as `codeBlock` or `codeLanguage`
+
+The goal: Keep evergreen content truly timeless, preventing the pattern where framework articles reference specific models that become stale and require re-updating every quarter.
