@@ -621,6 +621,63 @@ export const article: Record<Language, PEArticle> = {
           "**Demande explicite d'un humain :** Si le client dit vouloir parler à une personne, l'IA doit honorer cette demande immédiatement.",
         ],
       },
+      bad_good_example: {
+        id: 'bad-good-example',
+        title: 'Exemple : mauvais prompt vs bon prompt de triage',
+        content: [
+          "**Mauvais prompt :**\n\n«Aidez le client avec son problème.»\n\n**Bon prompt :**\n\n«Vous êtes un agent de triage support de niveau 1 pour une plateforme SaaS B2B. Classifiez ce message client en : Facturation (router à Finance), Technique (router à Tech), Compte (router à Account Management) ou Général (traiter directement). Assignez le niveau de sévérité : P1 (urgence, réponse en 1h), P2 (impact fonctionnel, réponse en 4h), P3 (informatif, réponse en 24h). Sortie : label de classification, sévérité, décision de routage et message de confirmation au client. Contraintes : ne résolvez pas le problème — triagez uniquement. Si le message contient «avocat», «procès», «annuler mon compte», «violation de données» ou «RGPD», classifiez comme P1 et routez immédiatement à l'escalade légale.»\n\n**Pourquoi la différence compte :**\nLe mauvais prompt laisse l'IA deviner ce que «aider» signifie. Le bon prompt définit les règles de classification, les niveaux de sévérité, la logique de routage, le format de sortie et les déclencheurs d'escalade — rendant chaque décision de triage prévisible et cohérente sur 1000+ tickets.",
+        ],
+      },
+      common_mistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes dans les prompts support',
+        content: [],
+        items: [
+          "**Pas de condition d'escalade :** Un prompt support sans déclencheur d'escalade suppose que l'IA peut traiter toutes les entrées. Ce n'est pas le cas. Les menaces légales, les demandes d'annulation et l'exposition de données exigent un jugement humain. **Solution :** Ajoutez 3–5 déclencheurs d'escalade explicites. Listez les mots-clés exacts («avocat», «annuler mon compte», «violation de données») et l'action à prendre.",
+          "**Empathie générique («Je comprends votre frustration»)** : Les modèles IA utilisent des formules d'empathie standardisées que les clients reconnaissent comme automatisées. Cela endommage la confiance. **Solution :** Instruisez le modèle de reconnaître le problème spécifique, pas l'émotion. «Je vois que l'export CSV de votre compte retourne des fichiers vides» est plus empathique que «Je comprends votre frustration.»",
+          "**Hallucination de politique :** Sans documents de référence, le modèle génère des politiques qui semblent plausibles mais ne correspondent pas à vos règles réelles. Une politique d'échange hallucinez est une responsabilité légale. **Solution :** Incluez le texte de politique ou l'arbre de décision directement dans le prompt. Ajoutez une contrainte : «Ne faites pas référence à des politiques non incluses dans ce prompt. Si la demande du client n'est pas couverte, escaladez.»",
+          "**Tests de ton uniquement sur tickets simples :** Le modèle traite bien les demandes claires et polies. Il échoue avec les clients en colère, les obscénités, les clients qui ont tort, et les cas limites. **Solution :** Testez sur 15+ vrais tickets : 5 normaux, 5 difficiles/en colère, 5 cas limites (litiges de facturation, défauts de produit, mentions légales). Évaluez chacun sur la précision, la conformité, le ton et l'escalade.",
+          "**Même prompt sur tous les canaux de support :** Email, chat et transcriptions d'appels téléphoniques exigent des formats de sortie, des registres de ton et des limites de longueur différents. **Solution :** Créez des variantes spécifiques au canal. Chat = plus court, informel. Email = plus long, structuré. Résumé téléphonique = format bullet-point.",
+        ],
+      },
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        content: "Les prompts support priorisent la précision, la cohérence et la bonne escalade avant la créativité — les erreurs sont visibles par les clients et juridiquement significatives. Concevez un template de triage qui route les problèmes avec des règles de décision explicites (L1/L2/L3) vers la bonne équipe. Codifiez le ton avec 3–5 exemples conformes à votre marque et testez la cohérence entre modèles. Ajoutez des guardrails de conformité politique : une liste explicite de sujets que l'IA ne doit pas aborder, les sorties spécifiques que l'IA ne doit jamais produire (promesses de prix, interprétations légales, conseils médicaux), et les déclencheurs d'escalade (mots-clés comme «avocat», «procès», «annuler mon compte», «violation de données»). Cinq conditions de transfert exigent une escalade humaine immédiate : langage juridique, annulation de compte, exposition de données, P1 répété pour le même sujet, demande explicite d'un humain. Testez tous les templates de triage, ton et escalade sur 15+ cas limites sur 2–3 modèles avant le déploiement.",
+      },
+      faq: {
+        id: 'faq',
+        title: 'Questions fréquemment posées',
+        faqs: [
+          { q: 'Pourquoi le PE pour support est-il différent du PE général ?', a: 'Les erreurs dans les prompts support sont visibles par les clients, juridiquement significatives et souvent sensibles aux politiques. La priorité de conception est la précision et la bonne escalade, pas la créativité. Les erreurs peuvent entraîner des dommages aux relations clients, des violations de politique ou une exposition légale. Cela exige des contraintes plus strictes sur la portée des sujets, le format de sortie et les règles d'escalade que la plupart des autres types de prompts.' },
+          { q: 'Comment concevoir un prompt de triage qui route correctement les problèmes ?', a: 'Définissez le triage avec des règles de décision explicites mappant les niveaux de sévérité : L1 (résolution immédiate, pas de humain), L2 (enquête requise, assistance IA), L3 (escalade humaine). Utilisez un format d'arbre de décision avec une logique if-then-else. Testez le prompt sur 15+ vrais tickets de support pour vérifier le routage correct avant le déploiement.' },
+          { q: 'Comment codifier le ton support sans sembler insincère ?', a: 'Fournissez 3–5 exemples de référence de réponses support conformes à votre marque et empathiques. Incluez des descripteurs de ton (3 adjectifs, par ex. «professionnel, chaleureux, direct»). Testez le template sur 2–3 modèles pour assurer la cohérence du ton. Évitez les formules d\'empathie génériques comme «Je comprends votre frustration» — utilisez plutôt des reconnaissances spécifiques du problème.' },
+          { q: 'Quelles informations de politique dois-je inclure dans un prompt support ?', a: 'Incluez des documents de référence pour les politiques courantes (politique de remboursement, confidentialité, sécurité des comptes, facturation). Pour chaque politique, définissez les sorties spécifiques que l\'IA ne doit jamais produire : pas de promesses de prix au-delà des tarifs publiés, pas d\'interprétations légales, pas de conseils médicaux, pas d\'exceptions non autorisées. Rendez ces interdictions explicites et testez le prompt sur des cas limites.' },
+          { q: 'Quand une IA support doit-elle transférer à un agent humain ?', a: 'Cinq conditions exigent une escalade humaine immédiate : (1) Langage juridique (avocat, procès, etc.); (2) Demandes d\'annulation de compte; (3) Exposition de données ou préoccupations de sécurité; (4) Problèmes P1 répétés pour le même ticket; (5) Demande explicite d\'un humain. Définissez ces déclencheurs explicitement dans le prompt et formez les équipes support à reconnaître les signaux de transfert de l\'IA.' },
+          { q: 'Comment tester un prompt support avant le déploiement ?', a: 'Exécutez le prompt sur au moins 15 vrais tickets couvrant les cas normaux, les cas limites et les déclencheurs d\'escalade. Évaluez chaque réponse sur la précision (exactitude factuelle), la conformité (respect des politiques), le ton (empathie et adéquation à la marque) et l\'escalade (routage correct). Déployez uniquement si le score moyen est 1.5+ sur une échelle 0–2. Testez le même prompt sur 2–3 modèles pour vérifier la cohérence.' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          { title: 'Automatisation du support client : bonnes pratiques et pièges', url: '/prompt-engineering/customer-support-automation?lang=fr' },
+          { title: 'Concevoir la logique d\'escalade pour le support assisté par IA', url: '/prompt-engineering/escalation-logic-ai-support?lang=fr' },
+          { title: 'Tester les prompts support pour la précision et la conformité', url: '/prompt-engineering/support-prompt-testing?lang=fr' },
+          { title: 'Construire des guardrails : conformité politique dans les prompts côté client', url: '/prompt-engineering/guardrails-policy-compliance?lang=fr' },
+          { title: 'Tests multi-modèles pour les opérations support', url: '/prompt-engineering/multi-model-support-testing?lang=fr' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          { title: 'OpenAI Guide to Responsible AI in Customer Support', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
+          { title: 'Anthropic Safety Guidelines for Customer-Facing Prompts', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
+          { title: 'PromptQuorum Multi-Model Support Testing Platform', url: 'https://www.promptquorum.com/features' },
+        ],
+      },
     },
   },
 
