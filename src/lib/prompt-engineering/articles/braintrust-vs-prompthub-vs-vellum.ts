@@ -598,16 +598,16 @@ tests:
   },
   de: {
     theme: 'Tools & Plattformen',
-    title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo',
+    title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
-    metaDescription: 'Braintrust, PromptHub, Vellum und Promptfoo im Vergleich: Evaluation, Versionskontrolle, A/B-Tests und CI/CD. Head-to-Head-Tabelle mit Preisen.',
-    ogTitle: 'Alle 4 Prompt-Tools kaufen verschwendet 1.000+ $/Monat. Der 2-Tool-Stack',
-    ogDescription: '4 Prompt-Management-Tools verglichen: Braintrust für Scoring, PromptHub für Versioning, Vellum für A/B-Tests, Promptfoo für CI/CD. Den richtigen 2-Tool-Stack wählen.',
+    metaDescription: '€249/Mo Pro (Braintrust), €200–500/Mo (Vellum), kostenlos (Promptfoo), €50/Mo (PromptHub): Eval, A/B-Tests, CI/CD, Versionskontrolle. Die meisten Teams brauchen genau 2.',
+    ogTitle: 'Alle 4 Prompt-Tools kaufen verschwendet €700+/Monat. Der 2-Tool-Stack',
+    ogDescription: 'Braintrust scored. Vellum splits traffic. Promptfoo catches regressions. PromptHub versions. Pick 2. Comparison table inside.',
     twitterTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo: Welche 2 wählen?',
-    twitterDescription: 'Braintrust vs PromptHub vs Vellum vs Promptfoo — welche zwei Tools braucht Ihr Team wirklich? Vergleich mit Preisen (2026).',
-    intro: 'Braintrust, PromptHub, Vellum und Promptfoo sind die vier führenden Plattformen für Prompt-Management und LLM-Evaluierung. Aber welche sollten Sie tatsächlich verwenden? Dieser Vergleich untersucht ihre Stärken, Schwächen und idealen Use-Cases — basierend auf Dokumentation, Preisgestaltung und Benutzer-Feedback.',
+    twitterDescription: 'Promptfoo ist kostenlos. Vellum kostet ab €200/Mo. Braintrust ab €249/Mo. PromptHub ab €50/Mo. Sie brauchen genau 2 — Eval + Deployment. Entscheidungsmatrix innen.',
+    intro: '**Vier Tools dominieren Prompt-Management für Teams: Braintrust für Output-Evaluation, PromptHub für Versionskontrolle, Vellum für Production A/B-Tests und Promptfoo für CI/CD-Regressionsprävention.** Die meisten Teams kaufen alle vier und verschwenden €700+/Monat. Der richtige Stack ist immer exakt zwei Tools — eines für Evaluation, eines für Deployment.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-05-01',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Prompt-Engineers und Engineering Manager, die einen Prompt-Management-Stack auswählen',
@@ -620,7 +620,7 @@ tests:
       { label: 'Zusammenfassung', anchor: '#key-takeaways' },
       { label: 'Was Braintrust, PromptHub, Vellum und Promptfoo leisten', anchor: '#what-is' },
       { label: 'Vergleichskriterien und -methodik', anchor: '#evaluation-criteria' },
-      { label: 'Braintrust: Evaluierungstiefe für ~500 €/Monat', anchor: '#braintrust' },
+      { label: 'Braintrust: Evaluierungstiefe für €249/Monat (Pro)', anchor: '#braintrust' },
       { label: 'PromptHub: Versionskontrolle für 50–200 €/Monat', anchor: '#prompthub' },
       { label: 'Vellum: Production-Traffic-Splitting für 200–500 €/Monat', anchor: '#vellum' },
       { label: 'Promptfoo: Kostenloses Open-Source-CI/CD-Testing', anchor: '#promptfoo' },
@@ -638,7 +638,7 @@ tests:
       'key-takeaways': {
         isTldr: true,
         items: [
-          'Braintrust eignet sich am besten für detaillierte Evaluierung und Scoring — teuer (500 €/Mo), aber mit umfangreicher Experimentieren-Infrastruktur.',
+          'Braintrust führt bei Evaluierungstiefe: Custom Scoring-Funktionen, Loop-Agent für autonome Iteration, MCP-Integration für IDE-Tools, €249/Mo Pro (kostenlose Stufe verfügbar). Beste für Teams, die Output-Qualität systematisch messen.',
           'Vellum ist beste Wahl für Production Deployment mit A/B-Tests — 200–500 €/Mo, mit Traffic-Splitting und Approval-Workflows.',
           'Promptfoo ist die einzige kostenlose Option mit CI/CD-Integration — ideal für Regressions-Tests in GitHub Actions, aber ohne Production-Features.',
           'PromptHub passt Teams, die Versionskontrolle und kollaboratives Prompt-Management wollen — 50–200 €/Mo, am einfachsten zu verwenden.',
@@ -691,17 +691,31 @@ tests:
         ],
       },
       'braintrust': {
-        title: 'Braintrust: Evaluierungstiefe für ~500 €/Monat',
+        title: 'Braintrust: Evaluierungstiefe für €249/Monat (Pro)',
         content: [
-          '**Was:** Braintrust ist eine Evaluierungs- und Experiment-Plattform. Sie senden Ausgaben an Braintrust, definieren Metriken (Genauigkeit, Latenz, Cost, benutzerdefiniert), und Braintrust zeigt Ihnen, wie verschiedene Prompt-Versionen abschneiden. Sie können auch automatische Bewerter (LLM-basiert) definieren.',
-          '**Stärken:** Braintrust hat die stärkste Experiment-Infrastruktur. Sie können mehrere Prompt-Versionen testen, konfigurierbare Scoring-Funktionen schreiben, und Ergebnisse über Zeit hinweg verfolgen. Das Dashboard ist detailliert. Die API ist gut dokumentiert.',
-          '**Schwächen:** Braintrust ist teuer (ca. 500 €/Mo für Teams) und bietet keine Production-Deployment-Features. Es ist ein Evaluierungs-Tool, nicht ein Production-Tool. Sie müssen die beste Prompt manuell in Ihre App übernehmen oder mit Vellum kombinieren.',
+          '**Braintrust ist eine KI-Evaluierungs-Plattform, die jeden API-Aufruf protokolliert, Ausgaben mit benutzerdefinierten Metriken bewertet und A/B-Experimente in einem gemeinsamen Labor ausführt — beste für Teams, die Output-Qualität systematisch messen.** Braintrust ist kein Prompt-Builder oder Versionskontrollsystem; es ist ein gemeinsames Evaluierungslabor.',
+          'Kostenlose Stufe mit 1M Trace-Spans und 10K Scores mit unbegrenzten Benutzern — ausreichend für die meisten Evaluierungsworkflows vor der Produktion. Pro-Plan €249/Monat. Braintrust hat 2026 den Loop-Agent hinzugefügt: einen autonomen Evaluator, der Test-Fälle generiert und Prompts ohne manuelle Einrichtung iteriert. MCP-Server verbindet Claude Code und Cursor direkt mit dem Braintrust-Evaluierungsstapel aus der IDE. Der Logging-Proxy integriert sich ohne Codeänderungen mit OpenAI-, Anthropic- und Google-APIs. Sie definieren Custom-Scoring-Funktionen in TypeScript oder Python. GitHub-Integration ermöglicht Prompt-Versionierung neben Code. SOC 2 Type II Zertifizierung jetzt verfügbar. Vorteil: Pro-Plan erfordert Ingenieur-Expertise zum Entwerfen und Pflegen von Scoring-Funktionen; kostenlose Stufe ist ausgezeichnet für Evaluierungs-Baselines.',
         ],
         items: [
-          'Automatische Bewerter mit LLM (z.B. „Ist die Antwort sachlich korrekt?")',
+          'Automatische Bewerter mit LLM',
           'Experiment-Dashboard mit Signifikanz-Tests',
-          'Custom Scoring-Funktionen (JavaScript oder Python)',
-          'Historische Versionsanpassung (rollback, trend-Analyse)',
+          'Custom Scoring-Funktionen (TypeScript oder Python)',
+          'Historische Versionsanpassung (rollback, Trend-Analyse)',
+          'Loop-Agent: autonomer Evaluator generiert Test-Fälle und iteriert Prompts (neu 2026)',
+          'MCP-Server: direkte Integration mit Claude Code und Cursor für IDE-basierte Evaluation',
+          'SOC 2 Type II zertifiziert für Enterprise-Deployments',
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: 'Wussten Sie schon?',
+            text: 'Die kostenlose Stufe von Braintrust beinhaltet 1M Trace-Spans und 10K Scores mit unbegrenzten Benutzern — mehr Evaluierungskapazität als die meisten Teams in ihren ersten 3 Monaten nutzen. Sie können einen vollständigen Prompt-Evaluierungs-Workflow ohne Bezahlung ausführen.',
+          },
+          {
+            type: 'warning',
+            label: 'Scoring-Funktions-Komplexität',
+            text: 'Braintrust-Pro Custom-Scorer erfordern TypeScript oder Python. Wenn niemand in Ihrem Team Scoring-Funktionen schreibt, ist Braintrust\'s Hauptdifferenzierungsmerkmal unnutzbar. Überprüfen Sie die Team-Fähigkeit vor dem Kauf. Die kostenlose Stufe und der Loop-Agent verringern diese Barriere jedoch.',
+          },
         ],
       },
       'prompthub': {
@@ -776,8 +790,8 @@ tests:
             'Tool': 'Braintrust',
             'Primäre Nutzung': 'Evaluierung + Experimente',
             'Zusammenarbeit': '✓ Workspace freigeben',
-            'CI/CD': '✓ API-Integrationen',
-            'Preisgestaltung': '~500 €/Mo',
+            'CI/CD': '✓ API + MCP',
+            'Preisgestaltung': 'Kostenlos / €249 Pro',
             'Am besten für': 'Detaillierte Bewertung',
           },
           {
@@ -902,7 +916,7 @@ tests:
           },
           {
             q: 'Wie viel teurer ist Vellum als Braintrust?',
-            a: 'Braintrust kostet ~500 €/Mo. Vellum kostet 200–500 €/Mo je nach Volumen. Also: Vellum kann gleich teuer oder günstiger sein, je nachdem, wie viel Production-Traffic Sie haben.',
+            a: 'Braintrust Pro kostet €249/Monat (kostenlose Stufe mit 1M Spans + 10K Scores auch verfügbar). Vellum Starter kostet €200/Monat; Growth €500/Monat. Auf Pro-Ebene ist Braintrust etwas teurer als Vellum Starter, beinhaltet aber deutlich mehr Evaluierungskapazität. Beide haben kostenlose oder kostengünstige Einstiegspunkte. Promptfoo ist kostenlos; PromptHub €50–200/Monat.',
           },
           {
             q: 'Wie integriere ich Promptfoo mit GitHub Actions?',
@@ -915,6 +929,10 @@ tests:
           {
             q: 'Ist Vellum dasselbe wie eine Prompt-Management-Plattform?',
             a: 'Nein, Vellum ist ein Production-Deployment-Tool, nicht Versionskontrolle. Wenn Sie nur Prompts speichern möchten, verwenden Sie PromptHub. Vellum ist für Live A/B-Tests mit echtem Traffic.',
+          },
+          {
+            q: 'Gibt es Alternativen zu diesen 4 Tools 2026?',
+            a: 'Ja. Der Prompt-Evaluierungsmarkt expandierte 2025–2026 erheblich. Confident AI bietet 50+ integrierte Evaluierungsmetriken für €19,99–49,99/Benutzer/Monat mit niedrigeren Tracing-Kosten als Braintrust (€1/GB vs €3/GB). Galileo AI bietet Runtime-Guardrails über ihre Luna-2-Evaluierungsmodelle. Arize Phoenix ist eine kostenlose, Open-Source-LLM-Observability-Plattform. Für die meisten Teams decken die vier Tools in diesem Vergleich plus Confident AI alle praktischen Anforderungen ab.',
           },
           {
             q: 'Muss ich bei der Verwendung von Braintrust, Vellum, PromptHub oder Promptfoo die DSGVO beachten?',
@@ -938,11 +956,14 @@ tests:
       'sources': {
         title: 'Quellen',
         items: [
-          '[Braintrust — AI Evaluation Platform](https://braintrust.dev) — Offizielle Dokumentation; Basis für Scoring-Funktion, Experiment-Dashboard und ~500 €/Mo Team-Plan-Ansprüche',
+          '[Braintrust — AI Evaluation Platform](https://braintrust.dev) — Offizielle Dokumentation; Basis für Loop-Agent, MCP-Integration, SOC 2-Zertifizierung und €249/Mo Pro-Plan-Preisgestaltung (Umstrukturierung März 2026)',
           '[PromptHub — Prompt Version Control](https://prompthub.ai) — Produkt-Homepage; Basis für Versionskontrolle, Web-UI und 50–200 €/Mo Preisgestaltung-Ansprüche',
           '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — Produkt-Übersicht und Preisgestaltungs-Seite; Basis für Traffic-Splitting, Approval-Workflow und 200–500 €/Mo Ansprüche',
           '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub-Repository und Dokumentation; Basis für MIT-Lizenz, YAML-Config und GitHub-Actions-Integration Ansprüche',
           '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — Multi-Modell-Vergleich-Tool; Basis für 25+ Modell-Verteilung und Cross-Modell-Vergleich Ansprüche',
+          '[Confident AI](https://confident.ai) — Emerging Evaluierungsplattform mit 50+ integrierten Metriken für €19,99–49,99/Benutzer/Monat',
+          '[Galileo AI](https://galileo.ai) — Luna-2-Evaluierungsmodelle und Runtime-Guardrails für LLM-Anwendungen',
+          '[Arize Phoenix](https://docs.arize.com/phoenix) — Open-Source LLM-Observability-Plattform für Tracing und Evaluierung',
         ],
       },
     },
@@ -1000,7 +1021,7 @@ tests:
           name: 'Wie viel teurer ist Vellum als Braintrust?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Braintrust kostet ~500 €/Mo. Vellum kostet 200–500 €/Mo je nach Volumen. Also: Vellum kann gleich teuer oder günstiger sein, je nachdem, wie viel Production-Traffic Sie haben.',
+            text: 'Braintrust Pro kostet €249/Monat (kostenlose Stufe mit 1M Spans + 10K Scores auch verfügbar). Vellum Starter kostet €200/Monat; Growth €500/Monat. Auf Pro-Ebene ist Braintrust etwas teurer als Vellum Starter, beinhaltet aber deutlich mehr Evaluierungskapazität. Beide haben kostenlose oder kostengünstige Einstiegspunkte. Promptfoo ist kostenlos; PromptHub €50–200/Monat.',
           },
         },
         {
@@ -1043,6 +1064,14 @@ tests:
             text: 'Ja, besonders Promptfoo (kostenlos, lokal) und PromptHub (günstig, einfach). Für größere Mittelstände ist Vellum eine gute Production-Wahl. Braintrust ist eher für große Unternehmen. Beginnen Sie mit Promptfoo und skalieren Sie je nachdem.',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'Gibt es Alternativen zu diesen 4 Tools 2026?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ja. Der Prompt-Evaluierungsmarkt expandierte 2025–2026 erheblich. Confident AI bietet 50+ integrierte Evaluierungsmetriken für €19,99–49,99/Benutzer/Monat mit niedrigeren Tracing-Kosten als Braintrust. Galileo AI bietet Runtime-Guardrails über ihre Luna-2-Evaluierungsmodelle. Arize Phoenix ist kostenlos und Open-Source. Für die meisten Teams decken die vier Tools in diesem Vergleich plus Confident AI alle praktischen Anforderungen ab.',
+          },
+        },
       ],
       inLanguage: 'de',
     },
@@ -1054,7 +1083,7 @@ tests:
       url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=de',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Evaluierung und Experimente mit detaillierten Metriken und automatischen Bewertern' },
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'KI-Evaluierungsplattform mit zusammenarbeitende Scoring, Loop-Agent für autonome Iteration und MCP-IDE-Integration. Kostenlose Stufe verfügbar (1M Spans, 10K Scores); Pro €249/Monat. Beste für Teams, die Output-Qualität messen.' },
         { '@type': 'ListItem', position: 2, name: 'PromptHub', description: 'Versionskontrolle für Prompts mit Team-Zusammenarbeit' },
         { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'Production A/B-Testing mit Live-Traffic-Splitting' },
         { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'Open-Source Regressions-Testing mit GitHub Actions Integration' },
