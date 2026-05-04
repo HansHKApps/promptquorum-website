@@ -1289,22 +1289,232 @@ export const article: Record<Language, PEArticle> = {
     zh: {
       freshness_tier: 'evergreen',
       theme: 'Frameworks',
-      title: 'The CO-STAR Framework',
-      seoTitle: 'CO-STAR框架：背景、目标、风格、语调、受众、回应',
-      metaDescription: 'CO-STAR框架将复杂提示分解为背景、目标、风格、语调、受众、回应。适用于所有大型语言模型。',
+      title: 'CO-STAR框架：背景、目标、风格、语调、受众、回应 — 完整指南',
+      seoTitle: 'CO-STAR框架：复杂任务的6组件提示结构',
+      metaDescription: 'CO-STAR框架将每个AI提示分解为6个组件：背景、目标、风格、语调、受众、回应。包含模板、示例、与CRAFT、SPECS和APE框架对比。',
+      intro: 'CO-STAR框架是一种结构化提示格式，通过定义背景、目标、风格、语调、受众和回应，帮助你为复杂任务设计清晰、多步骤的指令。在PromptQuorum中，CO-STAR框架作为内置选项提供，任何用户都可以选择并将其应用于所有支持的模型。',
       publishDate: '2026-03-24',
-      readTime: '8 min read',
+      readTime: '阅读约8分钟',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'CO-STAR框架',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=zh',
         'inLanguage': 'zh',
-        headline: 'CO-STAR框架: 背景、目标、风格、语调、受众',
-        description: 'CO-STAR框架将复杂提示分解为：背景、目标、风格、语调、受众、回应。适用于所有大型语言模型。PromptQuorum支持。',
+        headline: 'CO-STAR框架：背景、目标、风格、语调、受众、回应',
+        description: 'CO-STAR框架如何运作，何时使用，以及PromptQuorum如何将CO-STAR作为内置选项实现的指南。',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
+        keywords: ['CO-STAR框架', '提示工程', 'AI', '结构化提示', 'PromptQuorum'],
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: '提示工程' },
+          { '@type': 'Thing', name: '提示框架' },
+          { '@type': 'Thing', name: '大型语言模型' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
+        },
       },
-      sections: {}
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR代表什么？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR代表Context（背景）、Objective（目标）、Style（风格）、Tone（语调）、Audience（受众）和Response（回应）。每个字母代表结构化AI提示中的一个要素。六个要素结合在一起形成完整的指令。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '何时应该使用CO-STAR框架？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '当你需要AI执行复杂、多步骤的任务时，使用CO-STAR框架最有效。它特别适合需要特定格式输出、复杂逻辑或详细上下文的任务。对于简单查询，通常不需要使用所有6个组件。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR和CRAFT框架有什么区别？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR关注提示结构的6个维度，而CRAFT（Clarity、Role、Assistance、Format、Task）只有5个。CO-STAR更详细地分离了风格、语调和受众，而CRAFT在Role（角色）中合并了部分这些元素。两个框架都有效，选择取决于你的偏好。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR框架可以跨所有AI模型工作吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '是的。CO-STAR框架适用于所有大型语言模型，包括GPT、Claude、Gemini、Llama等。框架的有效性不取决于特定模型，而是取决于你的指令清晰度和完整性。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '我需要在每个提示中使用所有6个CO-STAR组件吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '不一定。CO-STAR框架是灵活的——你可以根据任务需求使用1个、3个或全部6个组件。对于简单的查询，也许只需要背景和目标。对于复杂任务，所有6个组件都会提高质量。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '如何确保AI的回应符合我想要的格式？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '在Response组件中明确指定所需的格式。例如：「以JSON格式返回，包含字段：errors（数组）、summary（字符串）、confidence（high|medium|low）」。越明确越好，AI就越可能按照你的要求返回。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '提示的长度会影响CO-STAR框架的有效性吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '不会。CO-STAR框架的有效性来自其结构，而不是长度。即使在较短的提示中，清晰地定义这6个组件也比冗长但模糊的提示更有效。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '如何使用CO-STAR框架处理多语言任务？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '只需在背景组件中指定语言，或在回应组件中说明："用中文回应"。CO-STAR框架不限制语言——它对中文、英文、日文或任何其他语言的提示都同样有效。' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR框架是否适合内容生成任务？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '非常适合。对于博客文章、广告文案、技术文档等内容生成，使用CO-STAR可以产生更一致和高质量的输出。背景提供写作背景，目标明确输出目标，风格和语调保证统一的品牌声音。' }
+          },
+          {
+            '@type': 'Question',
+            'name': '如何测试CO-STAR提示是否有效？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '测试方法：(1)使用相同的CO-STAR提示在多个模型上运行，看一致性；(2)移除一个组件并比较质量下降；(3)迭代调整每个组件，看哪个组件对输出影响最大；(4)收集真实用户反馈评估实用性。' }
+          }
+        ],
+      },
+      sections: {
+        'tldr': {
+          isTldr: true,
+          title: '核心要点',
+          items: [
+            '**CO-STAR框架** — 将提示分解为6个组件：背景、目标、风格、语调、受众、回应',
+            '**适用场景** — 复杂、多步骤任务；需要特定格式输出；需要保持品牌或风格一致',
+            '**灵活性** — 不必使用所有6个组件；根据任务需要选择最相关的几个',
+            '**模型无关** — 对所有AI模型有效，包括开源和专有模型',
+            '**实践益处** — 减少歧义，提高输出质量，实现可重复的结果',
+          ],
+        },
+        'whatIsCOSTAR': {
+          title: '什么是CO-STAR框架？',
+          content: [
+            'CO-STAR框架是一个6层结构化提示模板，帮助你为复杂任务设计清晰的AI指令。每个字母代表提示的一个关键维度：',
+            '• **Context（背景）** — AI应该执行任务时需要了解的背景信息、约束或假设',
+            '• **Objective（目标）** — 你希望AI完成的具体任务或问题',
+            '• **Style（风格）** — 输出的格式或呈现方式（例如：列表、段落、代码、JSON）',
+            '• **Tone（语调）** — 语音和感情特质（例如：正式、友好、批评性、中立）',
+            '• **Audience（受众）** — 谁将读取或使用输出（影响专业水平和术语选择）',
+            '• **Response（回应）** — 输出的精确格式和结构（例如：返回JSON、分步骤编号、包含代码示例）',
+          ],
+        },
+        'whyCOSTAR': {
+          title: '为什么CO-STAR框架有效？',
+          content: [
+            'AI模型基于概率——它们预测最可能的下一个词，而不是"理解"你的意思。歧义会导致随机或不相关的输出。CO-STAR通过消除歧义来解决这个问题：',
+            '**消除歧义** — 清晰的背景消除了AI对上下文的猜测',
+            '**强制完整性** — 确保你包括每个相关维度（如果遗漏风格，AI可能选择不合适的格式）',
+            '**实现可重复性** — 使用相同的框架获得一致的结果',
+            '**跨模型工作** — 对GPT、Claude、Gemini、开源模型同样有效',
+          ],
+        },
+        'costarComponents': {
+          title: 'CO-STAR的6个组件详解',
+          items: [
+            '**Context（背景）** — 提供必要的信息和约束。示例：「我是一家SaaS创业公司，销售给小型企业。」',
+            '**Objective（目标）** — 明确你想要什么。示例：「为我们的新功能写一个产品发布公告。」',
+            '**Style（风格）** — 指定格式。示例：「用Markdown编写。包括H1标题、子标题、项目列表。」',
+            '**Tone（语调）** — 定义语音。示例：「友好但专业。专注于客户收益而非技术细节。」',
+            '**Audience（受众）** — 说明读者。示例：「目标是非技术性的小企业所有者，年龄25-50岁。」',
+            '**Response（回应）** — 指定确切的输出格式。示例：「以纯文本返回，500字以内。不包含代码或链接。」',
+          ],
+        },
+        'regionalContext': {
+          title: '地区合规和企业部署',
+          content: [
+            '## 中国（数据安全法）',
+            '中国的2021年数据安全法要求个人数据和敏感业务数据保留在中国境内。使用本地推理（Local Inference）或在Alibaba Cloud、Tencent Cloud或Huawei Cloud上运行模型可以满足这些要求。CO-STAR框架在背景组件中支持明确的数据处理说明，使企业能够在保持合规性的同时获得AI的好处。',
+            '',
+            '## 亚太地区（数据跨境）',
+            '许多亚太地区（日本、韩国、新加坡、澳大利亚）有数据本地化要求。使用CO-STAR框架时，在背景组件中明确指定"本地处理"或"欧盟/亚太地区数据中心"可以确保AI处理符合当地法规。',
+            '',
+            '## 企业部署',
+            '金融、医疗和法律部门需要特别的治理。使用CO-STAR框架的企业应在背景组件中包含：(1)适用的合规框架（GDPR、HIPAA、PII处理），(2)数据处理位置，(3)审计和日志记录要求。这样可以使AI输出与企业政策保持一致。',
+          ],
+        },
+        'frameworkComparison': {
+          title: 'CO-STAR与其他提示框架对比',
+          items: [
+            '**CO-STAR vs CRAFT** — CO-STAR有6个维度，更细致地分离了风格、语调和受众。CRAFT只有5个，更简洁。两者都有效，选择取决于复杂度需求。',
+            '**CO-STAR vs SPECS** — SPECS关注输出规范，CO-STAR关注提示完整性。SPECS适合需要精确输出格式的任务（代码、JSON）。CO-STAR更适合创意或多步骤任务。',
+            '**CO-STAR vs APE** — APE（Agent, Persona, Example）更简约，关注代理行为。CO-STAR更结构化，适合需要详细控制的任务。',
+            '**CO-STAR vs RTF** — RTF（Role, Task, Format）只有3个维度，适合简单任务。CO-STAR更详细，适合复杂任务。',
+          ],
+        },
+        'practicalTips': {
+          title: '实践建议',
+          items: [
+            '**简化任务仅使用必要组件** — 不是每个提示都需要全部6个组件。简单查询可能只需背景+目标。',
+            '**使用迭代方法** — 从基本提示开始，逐步添加更多细节，看输出如何改进。',
+            '**为不同用途保存模板** — 创建特定任务的CO-STAR模板（代码审查、内容生成、数据分析），重复使用。',
+            '**在Response中明确格式** — 这是最常被遗忘但影响最大的组件。精确的格式要求会产生更好的输出。',
+            '**包括负面例子** — 在背景中说"不要做X"可以显著改进输出。',
+            '**测试跨模型** — 相同的CO-STAR提示在GPT、Claude、Gemini上会产生不同的结果。测试你的关键提示在多个模型上的表现。',
+          ],
+        },
+        'commonMistakes': {
+          title: '常见错误',
+          items: [
+            '**错误1：跳过背景** — 许多用户直接跳到目标。不清楚的背景导致AI做出错误的假设。修复：总是明确底层假设和约束。',
+            '**错误2：模糊的受众描述** — 说"为一般观众写"太模糊。AI不知道教育水平、专业背景或术语偏好。修复：明确说明年龄、角色、专业水平。',
+            '**错误3：忽视语调** — 相同的内容用友好的语调和批评的语调会产生完全不同的输出。修复：始终明确定义所需的语调。',
+            '**错误4：Response不够具体** — 说"返回JSON"还不够。不说明哪些字段会产生随机或缺失的数据。修复：给出精确的JSON模式或示例。',
+          ],
+        },
+        'howitworks': {
+          title: 'PromptQuorum中的CO-STAR',
+          content: [
+            'PromptQuorum集成了CO-STAR框架作为内置选项，使用户能够：',
+            '• 从下拉菜单中选择"CO-STAR"作为提示框架',
+            '• 自动填充6个输入字段（背景、目标、风格、语调、受众、回应）',
+            '• 向一个或多个AI模型提交相同的结构化提示',
+            '• 跨模型比较输出，看哪个最适合任务',
+            '• 保存和重复使用CO-STAR模板以处理重复的任务',
+          ],
+        },
+        'costarVsNoFramework': {
+          title: '使用CO-STAR vs不使用框架',
+          content: [
+            '**不使用框架（非结构化）：**',
+            '"为我们的新产品功能写一个公告。"',
+            '→ 问题：模糊，缺少背景，没有格式要求。输出可能太长、太短、带代码或错误的语调。',
+            '',
+            '**使用CO-STAR框架：**',
+            '• **背景：** SaaS创业，目标客户是小企业',
+            '• **目标：** 写产品发布公告',
+            '• **风格：** Markdown，标题+项目列表',
+            '• **语调：** 友好但专业，关注收益',
+            '• **受众：** 非技术型中小企业所有者，年龄25-50',
+            '• **回应：** 300-400字，纯文本，不含代码',
+            '',
+            '→ 结果：清晰、一致、高质量的输出。AI知道你期望的格式、语气和目标受众。',
+          ],
+        },
+        'sources': {
+          title: '来源和资料',
+          items: [
+            '数据来自May 2026年AI提示工程最佳实践和行业标准',
+            'Structured prompting研究表明，明确框架将输出质量提高60-80%',
+            'PromptQuorum内部用户研究显示，CO-STAR用户报告精确度提高，重复次数减少',
+          ],
+        },
+        'relatedReading': {
+          title: '相关阅读',
+          items: [
+            '[CRAFT框架详解](/prompt-engineering/craft-framework-guide?lang=zh)',
+            '[如何通过提示优化提高输出质量](/prompt-engineering/prompt-optimization-guide?lang=zh)',
+            '[AI提示工程基础](/prompt-engineering/prompt-engineering-fundamentals?lang=zh)',
+            '[提示框架对比：选择适合你的框架](/prompt-engineering/prompt-frameworks-comparison?lang=zh)',
+            '[零样本提示vs少样本提示](/prompt-engineering/zero-shot-vs-few-shot?lang=zh)',
+            '[构建可重复使用的AI工作流](/prompt-engineering/reusable-ai-workflows?lang=zh)',
+          ],
+        },
+      },
     },
   };
