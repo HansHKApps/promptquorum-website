@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware Guide 2026: What GPU Do You Need?',
       seoTitle: 'Local LLM Hardware Guide 2026: What GPU Do You Need?',
-      intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of April 2026, a 7B model needs 8-9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M -- more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
+      intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of May 2026, a 7B model needs 8-9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M -- more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
       metaDescription: 'What GPU do you need for local LLMs? See exact requirements for 7B–70B models, real RTX 4070–5090 benchmarks, and avoid wasting money.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickAnswerTop: {
         en: {
           question: 'What hardware do I need to run a local LLM in 2026?',
-          answer: 'To run a local LLM in 2026 you need at minimum an 8 GB VRAM GPU (NVIDIA RTX 3060 or Apple M2) for 7B models, 24 GB VRAM for 13B models, and 48 GB+ for 70B models. Apple Silicon (M3/M4) is the best value for most users due to unified memory.',
+          answer: 'To run a local LLM in 2026 you need at minimum an 8 GB VRAM GPU (NVIDIA RTX 3060 or Apple M2) for 7B models, 24 GB VRAM for 13B models, and 48 GB+ for 70B models. Apple Silicon (M3/M4/M5) is the best value for most users due to unified memory.',
           bullets: [
             '7B models (Mistral, Phi-4 Mini): 8 GB VRAM — RTX 3060, RTX 4060, Mac M2',
             '13B models (Llama 3.2): 16-24 GB VRAM — RTX 3090, RTX 4080, Mac M3 Pro',
