@@ -1448,7 +1448,18 @@ export const article: Record<Language, PEArticle> = {
         'Les outils de détection d\'IA ont des taux de faux positifs de 15–30 % — insuffisants comme outil autonome pour l\'intégrité académique',
         'La Loi IA de l\'UE classe l\'IA éducative comme haut risque ; les écoles de l\'UE doivent mettre en place une formation en compétences IA pour tous les enseignants (article 4, applicable à partir de 2025)',
         'Les élèves utilisant des outils IA obtiennent 15–35 % de résultats plus élevés dans 21 études empiriques ; corrélation r = 0,781 entre utilisation d\'outil IA et résultats',
-        'Claude Sonnet 4.6 (Anthropic) traite ~160 pages académiques par session (200 000 tokens) ; Gemini 3.1 Pro traite ~800 pages (1 million tokens) — les limites de contexte déterminent le modèle approprié',
+        'En mai 2026, GPT-5.5, Claude Sonnet 4.6 (Anthropic) et Gemini 3.1 Pro supportent tous des fenêtres de contexte de 1 million tokens (~800 pages par session) — la taille de la fenêtre de contexte n\'est plus un différenciateur clé entre modèles frontière',
+      ],
+    },
+    quickFacts: {
+      title: '⚡ Faits rapides',
+      items: [
+        '**Résultat de l\'essai randomisé Harvard :** Le tutorat par IA a produit des gains d\'apprentissage de 0,73–1,3 SD par rapport aux salles de classe d\'apprentissage actif en 18 % moins de temps (n=194, p < 10⁻⁸)',
+        '**Adoption par les enseignants :** 85 % des enseignants américains ont utilisé l\'IA en 2024–25',
+        '**Temps économisé :** Les prompts structurés économisent aux enseignants 5–13 heures/semaine de planification et d\'admin',
+        '**Problème de détection IA :** Taux de faux positifs de 15–30 % — peu fiable pour les décisions autonomes d\'intégrité académique',
+        '**Loi IA de l\'UE :** L\'IA éducative classée comme haut risque (Annexe III). Formation en compétences IA obligatoire pour le personnel (article 4, applicable à partir de 2025). Reconnaissance d\'émotions interdite en école.',
+        '**Meilleurs outils :** Khanmigo (tutorat), MagicSchool (plans d\'études), ChatGPT/Claude (contenu flexible), NotebookLM (recherche fondée sur sources)',
       ],
     },
     definition: {
@@ -1554,6 +1565,12 @@ export const article: Record<Language, PEArticle> = {
           'Température': '0,1',
           'Économie de temps': 'Heures par document',
         },
+      ],
+    },
+    localLLMs: {
+      title: 'IA scolaire privée : LLM locaux pour confidentialité des données',
+      content: [
+        'Pour les écoles aux exigences strictes de confidentialité des données — particulièrement les écoles de l\'UE sous RGPD — les LLM locaux via [Ollama](/local-llms/how-to-install-ollama?lang=fr) offrent une alternative sans sortie de données. Un ordinateur portable scolaire avec 16 Go de RAM exécute Qwen3 8B ou Llama 4 Scout localement, gérant la planification pédagogique et les retours d\'apprentissage sans qu\'aucune donnée d\'élève ne quitte l\'appareil. La qualité est inférieure aux modèles cloud frontière mais suffisante pour les tâches de planification courante. Voir [Que sont les LLM locaux ?](/local-llms/what-are-local-llms?lang=fr) pour un guide de configuration.',
       ],
     },
     promptStructure: {
@@ -1672,6 +1689,7 @@ export const article: Record<Language, PEArticle> = {
         '**Confiance excessive dans les outils de détection d\'IA pour l\'intégrité :** Les taux de faux positifs de 15–30 % signifient qu\'accuser un élève uniquement sur la sortie de détection porte un risque de 15–30 % d\'erreur. Les locuteurs non natifs sont signalés de manière disproportionnée.',
         '**Ignorer les obligations de la Loi IA de l\'UE pour les écoles de l\'UE :** Les outils IA éducatifs affectant les parcours d\'apprentissage ou l\'évaluation sont haut risque selon l\'Annexe III. Les écoles de l\'UE déployant ces outils sans formation du personnel selon l\'article 4 ne sont pas conformes.',
         '**Utiliser des paramètres de température élevée pour le contenu pédagogique :** La température par défaut sur la plupart des plates-formes (0,7–1,0) augmente le risque d\'hallucination. Pour le contenu pédagogique factuel, les directives d\'évaluation et la génération de citations, réglez la température sur 0,1–0,2.',
+        '**Ne pas enseigner aux élèves comment formuler des prompts IA efficaces :** Les élèves qui tapent « écris mon essai sur la photosynthèse » n\'apprennent rien. Les élèves qui tapent « explique la photosynthèse à un niveau classe 8, puis teste-moi sur les trois concepts clés » apprennent activement. Créez un modèle de prompt que les élèves doivent utiliser pour toutes les interactions IA. Demandez-leur de spécifier leur objectif d\'apprentissage, ce qu\'ils savent déjà et le format qu\'ils veulent pour la réponse. Cela transforme l\'IA d\'un raccourci à un véritable outil pédagogique.',
       ],
       callouts: [
         { type: '🛠️', label: 'Bonne pratique', text: 'Documentez toute utilisation d\'IA : quel outil, quels paramètres (température, contexte) et quelle tâche. Cela crée une piste d\'audit pour la conformité (article 6 de la Loi IA de l\'UE) et vous aide à améliorer au fil du temps.' },
@@ -1702,6 +1720,9 @@ export const article: Record<Language, PEArticle> = {
         '[Recherche assistée par IA](/prompt-engineering/ai-powered-research?lang=fr) — flux de validation pour le contenu généré par IA, applicable aux tâches de recherche des élèves et enseignants',
         '[Prompting par persona](/prompt-engineering/persona-prompting?lang=fr) — comment les définitions de rôle comme « enseignant de mathématiques de cinquième année expérimenté » changent la qualité et la cohérence de la sortie IA',
         '[Prompting par chaîne de pensée](/prompt-engineering/chain-of-thought-prompting?lang=fr) — la technique de raisonnement derrière les tuteurs IA socratiques comme Khanmigo',
+        '[Prompting contraint](/prompt-engineering/constrained-prompting?lang=fr) — essentiel pour contrôler le format de sortie IA dans les matériels pédagogiques',
+        '[Extraire et résumer](/prompt-engineering/extract-and-summarise?lang=fr) — techniques de compréhension de lecture assistée par IA et analyse de documents en classe',
+        '[5 briques élémentaires chaque prompt doit avoir](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — la structure universelle de prompt sur laquelle le framework de prompt pédagogique s\'appuie',
       ],
     },
     faq: {
@@ -1764,20 +1785,20 @@ export const article: Record<Language, PEArticle> = {
   },
 },
     ja: {
-  freshness_tier: 'semi_annual',
+  freshness_tier: 'annual',
   theme: 'Use Cases',
-  title: 'AIで教える：教育者向けのツール、成果、プロンプト 2026',
-  intro: '**2026年に効果的にAIで教えるために：5つのコンポーネント構造プロンプト（役割、目標、学習者コンテキスト、制約、出力形式）を使用し、タスクに合ったツール（チューター向けKhanmigo、計画向けMagicSchool、コンテンツ作成向けClaude Sonnet 4.6またはGPT-5.5）を選択し、ファクト内容は温度0.1–0.2に設定し、EU圏内の学校の場合、高リスクシステム導入前にすべての教師にAIリテラシー研修を実施してください。** 2024年のハーバード大学ランダム化比較試験では、AIチューターは従来のアクティブラーニング教室より2倍以上の学習成果をもたらし、18%少ない学習時間で実現することが示されました。2026年4月時点で、米国の教師の85%と生徒の86%が学年中にAIを使用しており、これはあらゆる業界で最も高いAI採用率です。課題は採用ではなく構造にあります。曖昧なプロンプトは使用不可能な結果を生み出し、構造化されたプロンプトは週5~13時間を節約し、EU圏の学校は現在、生徒評価に影響するあらゆるAIツールについてAI法に基づく法的義務があります。',
+  title: 'AIで教える 2026：ハーバード研究が示す学習効果2倍—ツール・プロンプト・EU AI法ガイド',
+  intro: '**2026年に効果的にAIで教えるために：5つのコンポーネント構造プロンプト（役割、目標、学習者コンテキスト、制約、出力形式）を使用し、タスクに合ったツール（チューター向けKhanmigo、計画向けMagicSchool、コンテンツ作成向けClaude Sonnet 4.6またはGPT-5.5）を選択し、ファクト内容は温度0.1–0.2に設定し、EU圏内の学校の場合、高リスクシステム導入前にすべての教師にAIリテラシー研修を実施してください。** 2024年のハーバード大学ランダム化比較試験では、AIチューターは従来のアクティブラーニング教室より2倍以上の学習成果をもたらし、18%少ない学習時間で実現することが示されました。2026年5月時点で、米国の教師の85%と生徒の86%が学年中にAIを使用しており、これはあらゆる業界で最も高いAI採用率です。課題は採用ではなく構造にあります。曖昧なプロンプトは使用不可能な結果を生み出し、構造化されたプロンプトは週5~13時間を節約し、EU圏の学校は現在、生徒評価に影響するあらゆるAIツールについてAI法に基づく法的義務があります。',
   publishDate: '2026-03-23',
-  dateModified: '2026-04-28',
+  dateModified: '2026-05-04',
   readTime: '9分で読める',
-  seoTitle: 'AIで教える：教育者向けツール・プロンプト・学習成果（2026）',
+  seoTitle: 'AIで教える 2026：教育者向けツール・プロンプト・学習成果ガイド',
   metaDescription: 'ハーバード大RCT：AI個別指導は学習効果を2倍以上に向上、学習時間は18%短縮。教員の85%がAIを活用。構造化プロンプトで週5〜13時間を節約。EU AI規制と検出ツールの課題も解説。',
   educationalLevel: '初級',
   audience: 'AIツールを使用する教師、学校管理者、教育専門家',
   aboutTopics: ['教育とAI', 'Khanmigo', 'EU AI法'],
   howToName: 'AIで教える方法',
-  next_refresh_due: '2026-09-23',
+  next_refresh_due: '2027-05-04',
   primaryTerm: 'AIで教える',
   toc: [
     { label: '教育用AIツールが実際に行うこと', anchor: '#what-ai-teaching-tools-actually-do' },
@@ -1911,7 +1932,18 @@ export const article: Record<Language, PEArticle> = {
         'AI検出ツールは15～30%の偽陽性率 - 学業不正に対する唯一のツールとして不十分',
         'EU AI法は教育AIを高リスクと分類；EU圏の学校はすべての教師にAIスキル研修を実施する必要があります（2025年から有効の第4条）',
         'AI使用する生徒は21の経験的研究全体で評価で15～35%高い成果を達成；AI使用と成果間のr = 0.781相関',
-        'Claude Sonnet 4.6（Anthropic）は1セッションで約160学術ページ処理（200,000トークン）；Gemini 3.1 Proは約800ページ（100万トークン）処理 - コンテキスト制限が適切なモデルを決定',
+        'Claude Sonnet 4.6（Anthropic）、GPT-5.5（OpenAI）、Gemini 3.1 Pro（Google DeepMind）はすべて1セッションで100万トークン（約800ページ）処理できます—2026年5月時点でコンテキストウィンドウはもはやフロンティアモデル間の主要な差別化要因ではありません',
+      ],
+    },
+    quickFacts: {
+      title: '⚡ クイックファクト',
+      items: [
+        '**ハーバード大学ランダム化試験結果：** AI個別指導は従来のアクティブラーニング教室より0.73～1.3 SD学習成果を生み出し、18%少ない時間で達成（n=194、p < 10⁻⁸）',
+        '**教師採用：** 米国の教師の85%は2024～25学年度にAIを使用',
+        '**時間節約：** 構造化プロンプトは教師に週5～13時間の計画・管理作業を節約',
+        '**AI検出問題：** 15～30%偽陽性率—学業不正に対する唯一のツールとして信頼性不足',
+        '**EU AI法：** 教育AIは高リスク分類（別紙III）。EU圏の学校はすべての教職員にAI研修が必須（第4条、2025年から有効）。学校での感情認識AI完全禁止。',
+        '**最良のツール：** Khanmigo（個別指導）、MagicSchool（カリキュラム）、ChatGPT/Claude（柔軟コンテンツ）、NotebookLM（ソースベースQ&A）',
       ],
     },
     definition: {
@@ -1957,6 +1989,12 @@ export const article: Record<Language, PEArticle> = {
         { 'ユースケース': 'ルーブリック整列フィードバック', '推奨ツール': 'Claude Sonnet 4.6（200,000トークンコンテキスト）', '温度': '0.2', '時間節約': 'シリーズ当たり時間' },
         { 'ユースケース': '親通信草案', '推奨ツール': 'ChatGPT / GPT-5.5', '温度': '0.3–0.5', '時間節約': 'メッセージ当たり5~10分' },
         { 'ユースケース': 'テキスト/ポリシー査閲', '推奨ツール': 'Gemini 3.1 Pro（100万トークンコンテキスト）', '温度': '0.1', '時間節約': 'ドキュメント当たり時間' },
+      ],
+    },
+    localLLMs: {
+      title: 'プライベート学校AI：データプライバシー向けローカルLLM',
+      content: [
+        'GDPRを含み厳密なデータプライバシー要件を持つ学校向け—特にEU圏の学校—OllamaおよびLM Studioを通じたローカルLLMはゼロデータエグレス代替を提供します。16 GB RAM学校ラップトップでQwen3 8BまたはLlama 4 Scoutをローカルで実行し、レッスンプラン生成と形成フィードバックハンドル、学生データなしデバイス外へ移動。品質はフロンティアクラウドモデルより低いですが、ルーチン計画タスク向けに十分。セットアップガイダンス向けに[ローカルLLMとは何か？](/local-llms/what-are-local-llms?lang=ja)を参照。',
       ],
     },
     promptStructure: {
@@ -2074,6 +2112,7 @@ export const article: Record<Language, PEArticle> = {
         '**完全性向けAI検出ツール過信：** 15～30%偽陽性率は検出結果のみに基づいて生徒を非難することが15～30%エラーリスク意味。非ネイティブスピーカーは不釣り合いに高く フラグ立てられます。',
         '**EU圏の学校向けEU AI法義務無視：** 学習パスか評価に影響するAI教育ツールはAnnex IIIのもとでハイリスク。これらのツール第4条教師研修なしで導入するEU圏の学校は非準拠。',
         '**教育コンテンツハイ温度設定使用：** ほとんどのプラットフォームのデフォルト温度（0.7～1.0）は創意的タスク向けで教育内容のファクトエラーを増加させます。ファクト教育内容、評価ガイドライン、引用生成向けに温度0.1～0.2を設定。',
+        '**生徒にAI効果的プロンプティング方法を教えない：** 「AIにエッセイを書かせて」と入力する生徒は何も習得しません。「光合成を8年生レベルで説明してから3つの重要概念について私をテストして」と入力する生徒は積極的に習得。すべてのAI交互作用で生徒が使う必要があるクラスロームプロンプトテンプレート作成。彼らが学習目標、何を既に知っているか、彼らが答えにどんな形式を望むかを指定する必要があります。これはAIショートカットから真のアクティブラーニングツール変形。',
       ],
       callouts: [
         { type: '🛠️', label: 'ベストプラクティス', text: 'すべてのAI使用を文書化：どのツール、どのセッティング（温度、コンテキスト）、どのタスク。これはコンプライアンス監査証跡（EU AI法第6条）を作成し時間経過で改善。' },
@@ -2104,6 +2143,9 @@ export const article: Record<Language, PEArticle> = {
         '[AI支援研究](/prompt-engineering/ai-powered-research?lang=ja) — AIで生成コンテンツ検証フロー、生徒と教師研究タスク適用可能',
         '[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja) — 「経験豊かな5年生算数教師」のような役割定義がAI出力品質と一貫性を変える方法',
         '[チェーン・オブ・シンク・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — Khanmigoのようなソクラテス的AIチューターの背後の推理技術',
+        '[プロンプティングを制約する](/prompt-engineering/constrained-prompting?lang=ja) — 教育資料のAI出力形式の制御に不可欠',
+        '[抽出と要約](/prompt-engineering/extract-and-summarise?lang=ja) — 教室での読書理解と文書分析をAIで支援する技術',
+        '[すべてのプロンプトが持つべき5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — 教師プロンプトフレームワークが構築される普遍的プロンプト構造',
       ],
     },
     faq: {
@@ -2136,20 +2178,20 @@ export const article: Record<Language, PEArticle> = {
   },
 },
     zh: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'annual',
       theme: '应用案例',
-      title: '教学中的AI：工具、学习成效与教师提示词框架（2026）',
-      intro: '**有效地在2026年用AI教学：采用结构化五步提示词（角色、目标、学生背景、约束条件、输出格式），选择与任务匹配的工具（Khanmigo用于辅导、MagicSchool用于课程规划、Claude Sonnet 4.6或GPT-5.5用于内容生成），将温度设置为0.1–0.2处理事实性内容，对于欧盟学校，在部署任何高风险系统前实施第4条员工AI素养培训。** 2024年哈佛大学随机对照试验发现AI辅导的学习增长是主动学习课堂的两倍以上——用时减少18%。截至2026年4月，85%的美国教师和86%的学生在学年中使用了AI，超过任何其他行业。挑战不在于采用，而在于结构：模糊提示词产生无法使用的输出，结构化提示词每周节省5–13小时，欧盟学校现在对任何涉及学生评估的AI工具承担AI法的法律义务。',
+      title: '2026年用AI教学：哈佛研究证明学习效果提升2倍——工具、提示词与EU AI法合规指南',
+      intro: '**有效地在2026年用AI教学：采用结构化五步提示词（角色、目标、学生背景、约束条件、输出格式），选择与任务匹配的工具（Khanmigo用于辅导、MagicSchool用于课程规划、Claude Sonnet 4.6或GPT-5.5用于内容生成），将温度设置为0.1–0.2处理事实性内容，对于欧盟学校，在部署任何高风险系统前实施第4条员工AI素养培训。** 2024年哈佛大学随机对照试验发现AI辅导的学习增长是主动学习课堂的两倍以上——用时减少18%。截至2026年5月，85%的美国教师和86%的学生在学年中使用了AI，超过任何其他行业。挑战不在于采用，而在于结构：模糊提示词产生无法使用的输出，结构化提示词每周节省5–13小时，欧盟学校现在对任何涉及学生评估的AI工具承担AI法的法律义务。',
       publishDate: '2026-03-23',
-      dateModified: '2026-04-28',
+      dateModified: '2026-05-04',
       readTime: '阅读约8分钟',
-      seoTitle: '用AI教学：教育者工具、提示词与学习成果（2026）',
+      seoTitle: '2026年用AI教学：教育工作者工具、提示词与学习成效指南',
       metaDescription: '哈佛RCT研究：AI辅导使学习效果提升2倍以上，学习时间减少18%。85%的教师使用AI——结构化提示词每周节省5–13小时。EU AI法案合规与AI检测工具误判率解析。',
       educationalLevel: 'Beginner',
       audience: '使用AI工具的教师、学校管理人员和教育专业人士',
       aboutTopics: ['教育中的AI', 'Khanmigo', 'EU AI Act'],
       howToName: '如何用AI进行教学',
-      next_refresh_due: '2026-09-23',
+      next_refresh_due: '2027-05-04',
       toc: [
         { label: 'AI教学工具的实际功能', anchor: '#what-ai-teaching-tools-actually-do' },
         { label: '2026年教师应该选择哪些AI工具？', anchor: '#which-ai-tools-should-teachers-use-in-2026' },
@@ -2170,10 +2212,10 @@ export const article: Record<Language, PEArticle> = {
         '@type': 'TechArticle',
         url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=zh',
         inLanguage: 'zh',
-        headline: '教学中的AI：工具、学习成效与教师提示词框架（2026）',
+        headline: '2026年用AI教学：哈佛研究证明学习效果提升2倍——工具、提示词与EU AI法合规指南',
         description: 'AI辅导系统将学习成效提升至传统课堂的两倍。了解教师如何将AI用于课程规划、评估、学生辅导，以及为什么85%的美国教师在2026年采用了AI。',
         datePublished: '2026-03-23',
-        dateModified: '2026-04-28',
+        dateModified: '2026-05-04',
         proficiencyLevel: 'Beginner',
         author: {
           '@type': 'Organization',
@@ -2394,6 +2436,36 @@ export const article: Record<Language, PEArticle> = {
         ],
       },
       sections: {
+        tldr: {
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            'AI辅导系统在2024年哈佛随机对照试验中产生了比传统主动学习课堂超过两倍的学习成效，用时减少18%（194名学生；效果量0.73–1.3 SD）',
+            '85%的美国教师和86%的学生在2024-25学年中使用了AI——任何行业中最高的AI采用率',
+            '结构化教师提示词（包括年级、目标、学习者背景、约束条件和输出格式）相比非结构化提示词每周节省5-13小时',
+            'AI检测工具的假阳性率为15-30%——不足以作为学术诚信的唯一工具',
+            'EU AI法将教育AI分类为高风险；欧盟学校必须为所有教师实施AI素养培训（第4条，自2025年起生效）',
+            'AI支持的学生在21项经验研究中的评估表现超过传统教学15-35%；AI使用与成果间r = 0.781相关',
+            '截至2026年5月，GPT-5.5、Claude Sonnet 4.6（Anthropic）和Gemini 3.1 Pro都支持100万令牌上下文窗口（约800页/会话）——上下文窗口大小不再是前沿模型间的主要差异',
+          ],
+        },
+        quickFacts: {
+          title: '⚡ 快速事实',
+          items: [
+            '**哈佛随机对照试验结果：** AI辅导与传统主动学习课堂相比产生0.73-1.3 SD学习成效，用时减少18%（n=194，p < 10⁻⁸）',
+            '**教师采用率：** 2024-25学年中85%的美国教师使用了AI',
+            '**节省时间：** 结构化提示词为教师节省每周5-13小时的规划和管理工作',
+            '**AI检测问题：** 15-30%假阳性率——学术诚信决定不可靠',
+            '**EU AI法：** 教育AI被列为高风险（附录III）。欧盟学校必须为所有员工提供AI培训（第4条，自2025年起生效）。学校中禁止情感识别AI。',
+            '**最佳工具：** Khanmigo（辅导）、MagicSchool（课程规划）、ChatGPT/Claude（灵活内容）、NotebookLM（基于来源的Q&A）',
+          ],
+        },
+        localLLMs: {
+          title: '私密学校AI：本地LLM用于数据隐私',
+          content: [
+            '对于具有严格数据隐私要求的学校——尤其是欧盟学校在GDPR下——通过Ollama的本地LLM提供零数据泄露的替代方案。学校笔记本电脑配有16GB RAM可在本地运行Qwen3 8B或Llama 4 Scout，处理课程计划生成和形成反馈，学生数据无需离开设备。质量低于前沿云模型，但足以处理日常规划任务。请参考[什么是本地LLM？](/local-llms/what-are-local-llms?lang=zh)了解设置指南。',
+          ],
+        },
         definition: {
           title: 'AI教学工具的实际功能',
           content: [
@@ -2557,6 +2629,7 @@ export const article: Record<Language, PEArticle> = {
             '**误区3：假设高温度（0.7–1.0）对事实性内容很好。** 高温度增加多样性但也增加幻觉和错误。事实性内容（历史日期、科学事实、公式）在温度0.1–0.2时更好。改为：为事实创建模板（0.1–0.2），为创意活动使用高温度（0.7–0.9）。',
             '**误区4：不教学生验证AI输出。** 学生认为AI总是正确的。加强课堂活动，学生检查AI答案对错。改为：课堂练习，学生评估AI反馈或提议的解决方案。',
             '**误区5：对所有工作使用相同的提示词。** 笼统的提示词（「创建一个课程」）产生笼统的结果。针对具体学生、年级、学习风格的提示词产生有用的结果。改为：使用五步框架为每种任务类型定制提示词。',
+            '**误区6：不教学生如何有效提示AI。** 输入「让AI写我的论文关于光合作用」的学生学不到任何东西。输入「用8年级水平解释光合作用，然后关于三个关键概念给我出题」的学生在主动学习。为所有AI交互创建课堂提示词模板学生必须使用。要求他们指定学习目标、他们已知的内容以及他们想要的答案格式。这将AI从捷径转变为真正的学习工具。',
           ],
         },
         howToStart: {
@@ -2584,6 +2657,9 @@ export const article: Record<Language, PEArticle> = {
             '[AI支持的研究](/prompt-engineering/ai-powered-research?lang=zh) — AI生成内容验证工作流，可应用于学生和教师研究任务',
             '[角色提示词](/prompt-engineering/persona-prompting?lang=zh) — 角色定义（如「经验丰富的五年级数学教师」）如何改变AI输出质量和一致性',
             '[链式思维提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) — Khanmigo等苏格拉底式AI导师背后的推理技术',
+            '[约束提示词](/prompt-engineering/constrained-prompting?lang=zh) — 在教育材料中控制AI输出格式的必要工具',
+            '[提取与总结](/prompt-engineering/extract-and-summarise?lang=zh) — 教室中AI辅助阅读理解和文档分析的技术',
+            '[每个提示词需要的5个构建块](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh) — 教师提示词框架所基于的通用提示词结构',
           ],
         },
         faq: {
