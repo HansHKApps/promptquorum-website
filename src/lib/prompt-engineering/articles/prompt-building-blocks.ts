@@ -8,16 +8,16 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'evergreen',
       theme: 'Fundamentals',
       title: 'The 5 Building Blocks Every Prompt Needs',
       seoTitle: '5 Building Blocks Every AI Prompt Needs (With Template)',
       intro: '**Every effective AI prompt needs five building blocks: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format — miss any one and outputs become inconsistent, off-format, or hallucinated.**',
-      metaDescription: 'Every effective AI prompt needs 5 parts: Role, Task, Input, Constraints, and Output Format. Miss one and outputs go off-track. Copy-paste template for GPT, Claude, and Gemini included.',
+      metaDescription: 'Every effective AI prompt needs 5 parts: Role, Task, Input, Constraints, and Output Format. Miss one and outputs go off-track. Copy-paste template works on all major language models.',
       ogTitle: 'Miss One of These 5 Prompt Blocks and AI Output Goes Off-Track',
       ogDescription: 'Role, Task, Input, Constraints, Output Format. One template that works on every model. Copy-paste ready.',
-      twitterTitle: '5 Building Blocks Every AI Prompt Needs (2026 Template)',
-      twitterDescription: 'Vague prompts waste tokens and revision time. Structured 5-block prompts produce usable output in one pass. Template works on GPT, Claude, Gemini, and local LLMs.',
+      twitterTitle: '5 Building Blocks Every AI Prompt Needs',
+      twitterDescription: 'Vague prompts waste tokens and revision time. Structured 5-block prompts produce usable output in one pass. Template works on all major language models.',
       publishDate: '2026-03-01',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -25,7 +25,6 @@ export const article: Record<Language, PEArticle> = {
       audience: 'Developers and non-technical users writing AI prompts',
       dateModified: '2026-04-28',
       lastFactChecked: '2026-04-28',
-      next_refresh_due: '2026-09-01',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Are the 5 Building Blocks?', anchor: '#what-are-the-5-building-blocks' },
@@ -52,13 +51,11 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'en',
         proficiencyLevel: 'Beginner',
-        keywords: ['prompt structure', 'prompt building blocks', 'role and context', 'output format', 'prompt constraints', 'few-shot examples', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['prompt structure', 'prompt building blocks', 'role and context', 'output format', 'prompt constraints', 'few-shot examples', 'prompt engineering', 'language models'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
-          { '@type': 'Thing', name: 'OpenAI GPT-5.5' },
-          { '@type': 'Thing', name: 'Anthropic Claude' },
-          { '@type': 'Thing', name: 'Google Gemini' },
+          { '@type': 'Thing', name: 'Language Models' },
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'CO-STAR framework' },
           { '@type': 'Thing', name: 'CRAFT framework' },
@@ -176,7 +173,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Why Do These 5 Building Blocks Matter?',
           content: [
             'The five-block model reflects the converged consensus across prompt engineering guidance from OpenAI, Google, Anthropic, and independent practitioners. Role, instructions, examples, constraints, and output format appear — under different names — in every major framework published since 2023. This is not coincidence: it is the minimum information a probabilistic model needs to produce a useful, consistent result.',
-            'The business case is straightforward. Missing role and context produces generic answers that need rewriting. Missing constraints increases hallucination risk and off-brand output. Missing output format means results that cannot be parsed or copy-pasted directly. The 5-block model addresses all three failure modes at once, and applies equally to GPT-5, Claude 4.7, Gemini 3 Pro, and locally-run LLMs.',
+            'The business case is straightforward. Missing role and context produces generic answers that need rewriting. Missing constraints increases hallucination risk and off-brand output. Missing output format means results that cannot be parsed or copy-pasted directly. The 5-block model addresses all three failure modes at once, and applies equally to all major language models and locally-run LLMs.',
           ],
         },
 
@@ -290,7 +287,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'This template works on GPT-5, Claude 4.7, Gemini 3 Pro, and local LLMs via Ollama or LM Studio. The block order is a recommendation, not a rigid rule — but placing Role & Context first and Output Format last is the most common and reliable arrangement across all major models.',
+          content: 'This template works on all major language models and local LLMs via Ollama or LM Studio. The block order is a recommendation, not a rigid rule — but placing Role & Context first and Output Format last is the most common and reliable arrangement across all major models.',
         },
 
         frameworks: {
@@ -398,15 +395,15 @@ export const article: Record<Language, PEArticle> = {
     },
 
     de: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'evergreen',
       theme: 'Fundamentals',
       title: 'Die 5 Bausteine eines jeden Prompts',
       seoTitle: '5 Bausteine für jeden KI-Prompt (mit Vorlage zum Kopieren)',
       intro: '**Jeder effektive KI-Prompt benötigt fünf Bausteine: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat — fehlt einer, werden Ergebnisse inkonsistent, falsch formatiert oder halluziniert.**',
-      metaDescription: 'Jeder gute KI-Prompt braucht 5 Teile: Rolle, Aufgabe, Input, Einschränkungen und Ausgabeformat. Fehlt einer, wird die Antwort unbrauchbar. Kopierfertige Vorlage für GPT, Claude und Gemini.',
+      metaDescription: 'Jeder gute KI-Prompt braucht 5 Teile: Rolle, Aufgabe, Input, Einschränkungen und Ausgabeformat. Fehlt einer, wird die Antwort unbrauchbar. Kopierfertige Vorlage für alle Sprachmodelle.',
       ogTitle: 'Fehlt einer dieser 5 Prompt-Bausteine, wird die KI-Antwort unbrauchbar',
       ogDescription: 'Rolle, Aufgabe, Input, Einschränkungen, Ausgabeformat. Eine Vorlage für alle Modelle. Sofort einsetzbar.',
-      twitterTitle: '5 Bausteine für jeden KI-Prompt (Vorlage 2026)',
+      twitterTitle: '5 Bausteine für jeden KI-Prompt',
       twitterDescription: 'Vage Prompts verschwenden Tokens und Überarbeitungszeit. Strukturierte 5-Block-Prompts liefern im ersten Anlauf brauchbare Ergebnisse.',
       publishDate: '2026-03-01',
       readTime: '8 Min. Lesezeit',
@@ -415,7 +412,6 @@ export const article: Record<Language, PEArticle> = {
       audience: 'Entwickler und Nicht-Techniker, die KI-Prompts schreiben',
       dateModified: '2026-04-28',
       lastFactChecked: '2026-04-28',
-      next_refresh_due: '2026-09-01',
       toc: [
         { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
         { label: 'Was sind die 5 Bausteine?', anchor: '#what-are-the-5-building-blocks' },
@@ -442,13 +438,11 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de',
         inLanguage: 'de',
         proficiencyLevel: 'Beginner',
-        keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'GPT-5', 'Claude', 'Gemini'],
+        keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'Sprachmodelle'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
-          { '@type': 'Thing', name: 'OpenAI GPT-5' },
-          { '@type': 'Thing', name: 'Anthropic Claude' },
-          { '@type': 'Thing', name: 'Google Gemini' },
+          { '@type': 'Thing', name: 'Language Models' },
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'CO-STAR framework' },
           { '@type': 'Thing', name: 'CRAFT framework' },
@@ -576,7 +570,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Warum sind diese 5 Bausteine wichtig?',
           content: [
             'Das Fünf-Bausteine-Modell spiegelt den konvergierten Konsens aus Prompt-Engineering-Anleitungen von OpenAI, Google, Anthropic und unabhängigen Praktikern wider. Rolle, Anweisungen, Beispiele, Einschränkungen und Ausgabeformat erscheinen — unter verschiedenen Namen — in jedem wichtigen Framework, das seit 2023 veröffentlicht wurde. Das ist kein Zufall: Es sind die Mindestinformationen, die ein probabilistisches Modell benötigt, um ein nützliches, konsistentes Ergebnis zu liefern.',
-            'Der geschäftliche Nutzen ist eindeutig. Fehlende Rolle und Kontext liefern generische Antworten, die umgeschrieben werden müssen. Fehlende Einschränkungen erhöhen das Halluzinationsrisiko und erzeugen markenfremde Ausgaben. Fehlendes Ausgabeformat bedeutet Ergebnisse, die nicht direkt verwendet oder kopiert werden können. Das 5-Bausteine-Modell adressiert alle drei Fehlertypen gleichzeitig und gilt gleichermaßen für GPT-5, Claude 4.7, Gemini 3 Pro und lokal betriebene LLMs.',
+            'Der geschäftliche Nutzen ist eindeutig. Fehlende Rolle und Kontext liefern generische Antworten, die umgeschrieben werden müssen. Fehlende Einschränkungen erhöhen das Halluzinationsrisiko und erzeugen markenfremde Ausgaben. Fehlendes Ausgabeformat bedeutet Ergebnisse, die nicht direkt verwendet oder kopiert werden können. Das 5-Bausteine-Modell adressiert alle drei Fehlertypen gleichzeitig und gilt gleichermaßen für alle Sprachmodelle und lokal betriebene LLMs.',
             'Für deutsche Unternehmen unter DSGVO und BSI-Grundschutz-Standards: Lokale Inferenzen mit Ollama oder LM Studio erfüllen Datenschutzanforderungen vollständig, während Sie gleichzeitig die Effizienz dieser strukturierten Prompts nutzen.',
           ],
         },
@@ -691,7 +685,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: 'Diese Vorlage funktioniert auf GPT-5, Claude 4.7, Gemini 3 Pro und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
+          content: 'Diese Vorlage funktioniert auf allen Sprachmodellen und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
         },
 
         frameworks: {
@@ -806,15 +800,15 @@ export const article: Record<Language, PEArticle> = {
       },
     },
     fr: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'evergreen',
       theme: 'Fondamentaux',
       title: 'Les 5 éléments fondamentaux de tout prompt',
       seoTitle: '5 éléments essentiels de tout prompt IA (avec modèle à copier)',
       intro: '**Tout prompt IA efficace nécessite cinq éléments : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie — en oublier un seul, et les résultats deviennent incohérents, mal formatés ou hallucinations.**',
-      metaDescription: 'Chaque bon prompt IA a 5 parties : Rôle, Tâche, Input, Contraintes et Format de sortie. En oublier un dégrade la réponse. Modèle prêt à copier pour GPT, Claude et Gemini.',
+      metaDescription: 'Chaque bon prompt IA a 5 parties : Rôle, Tâche, Input, Contraintes et Format de sortie. En oublier un dégrade la réponse. Modèle prêt à copier pour tous les modèles de langage.',
       ogTitle: 'Oubliez un seul de ces 5 blocs et la réponse IA déraille',
       ogDescription: 'Rôle, Tâche, Input, Contraintes, Format de sortie. Un modèle universel, prêt à copier-coller.',
-      twitterTitle: '5 éléments essentiels de tout prompt IA (modèle 2026)',
+      twitterTitle: '5 éléments essentiels de tout prompt IA',
       twitterDescription: 'Les prompts vagues gaspillent des tokens et du temps de révision. Un prompt structuré en 5 blocs produit un résultat exploitable dès le premier essai.',
       publishDate: '2026-03-01',
       readTime: '8 min de lecture',
@@ -823,7 +817,6 @@ export const article: Record<Language, PEArticle> = {
       audience: 'Développeurs et utilisateurs non techniques rédigeant des prompts IA',
       dateModified: '2026-04-28',
       lastFactChecked: '2026-04-28',
-      next_refresh_due: '2026-09-01',
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Qu\'est-ce que les 5 éléments fondamentaux ?', anchor: '#what-are-the-5-building-blocks' },
@@ -850,13 +843,11 @@ export const article: Record<Language, PEArticle> = {
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr',
         inLanguage: 'fr',
         proficiencyLevel: 'Beginner',
-        keywords: ['Structure de prompt', 'Éléments de prompt', 'Rôle et contexte', 'Format de sortie', 'Contraintes de prompt', 'Exemples few-shot', 'Ingénierie des prompts', 'GPT-5', 'Claude', 'Gemini'],
+        keywords: ['Structure de prompt', 'Éléments de prompt', 'Rôle et contexte', 'Format de sortie', 'Contraintes de prompt', 'Exemples few-shot', 'Ingénierie des prompts', 'Modèles de langage'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
-          { '@type': 'Thing', name: 'OpenAI GPT-5' },
-          { '@type': 'Thing', name: 'Anthropic Claude' },
-          { '@type': 'Thing', name: 'Google Gemini' },
+          { '@type': 'Thing', name: 'Language Models' },
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'Framework CO-STAR' },
           { '@type': 'Thing', name: 'Framework CRAFT' },
@@ -924,7 +915,7 @@ export const article: Record<Language, PEArticle> = {
           {
             '@type': 'Question',
             name: 'Ces 5 éléments s\'appliquent-ils à tous les modèles IA ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Que vous utilisiez GPT-5, Claude 4.7, Gemini 3 Pro, ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Que vous utilisiez les principaux modèles de langage ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.' },
           },
         ],
       },
@@ -994,7 +985,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'Pourquoi ces 5 éléments sont importants ?',
           content: [
             'Le modèle des 5 éléments reflète le consensus convergent des guides d\'ingénierie de prompts d\'OpenAI, Google, Anthropic et des praticiens indépendants. Rôle, instructions, exemples, contraintes et format de sortie apparaissent — sous différents noms — dans chaque framework majeur publié depuis 2023. Ce n\'est pas un hasard : ce sont les informations minimales dont un modèle probabiliste a besoin pour produire une sortie utile et cohérente.',
-            'Les avantages commerciaux sont évidents. L\'absence de rôle et de contexte produit des réponses génériques qui doivent être réécrites. L\'absence de contraintes augmente le risque d\'hallucination et génère une sortie hors marque. L\'absence de format de sortie signifie des résultats qui ne peuvent pas être utilisés directement ou copiés. Le modèle des 5 éléments adresse les trois types d\'erreurs simultanément et s\'applique également à GPT-5, Claude 4.7, Gemini 3 Pro et aux LLM exécutés localement.',
+            'Les avantages commerciaux sont évidents. L\'absence de rôle et de contexte produit des réponses génériques qui doivent être réécrites. L\'absence de contraintes augmente le risque d\'hallucination et génère une sortie hors marque. L\'absence de format de sortie signifie des résultats qui ne peuvent pas être utilisés directement ou copiés. Le modèle des 5 éléments adresse les trois types d\'erreurs simultanément et s\'applique également à tous les modèles de langage et aux LLM exécutés localement.',
             'Pour les organisations européennes : les inférences locales avec Ollama ou LM Studio via PromptQuorum respectent pleinement les exigences CNIL et RGPD en gardant vos données en interne tout en bénéficiant de l\'efficacité de ces prompts structurés.',
           ],
         },
