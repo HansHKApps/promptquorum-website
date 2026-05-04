@@ -905,6 +905,37 @@ ja: {
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {
+    keyTakeaways: {
+      isTldr: true,
+      title: '重要なポイント',
+      id: 'key-takeaways',
+      items: [
+        'Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つの包括的なメッセージに統合する手法。複数ターンの対話は不要です。',
+        'PromptQuorumのテストデータ：構造化されたSingle Stepプロンプトは38/40（95%）の成功率を達成。曖昧な1行プロンプトは21/40（52.5%）。（GPT-5.5・Claude Opus 4.7・Gemini 3.1 Proでの検証）',
+        '5つの構成要素：ロール・目的・コンテキスト・制約・出力形式。効果的なSingle Stepプロンプトはすべての要素を含みます。',
+        '新しいタスクではまずSingle Stepから始め、CO-STAR・CRAFT・TRACEへの切り替えは明確な制限に直面したときだけ。',
+        'Single Stepプロンプトを再利用可能なテンプレートとして保存してください。これはチームの資産であり、使い捨てのチャットではありません。',
+        'このメソッドはGPT-5.5・Claude Opus 4.7・Gemini 3.1 Pro・ローカルモデル（Ollama・LM Studio）で同じように機能します。',
+      ],
+    },
+    tldrBox: {
+      isTldr: true,
+      content: [
+        '> **TL;DR：** ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに統合してください。3～5つの例でテストし、再利用可能なテンプレートとして保存します。このSingle Stepアプローチは、GPT-5.5・Claude Opus 4.7・Gemini 3.1 Pro全体で95%の成功率を実現（曖昧なプロンプトは52.5%）。すべてのタスクではここから始めてください。トーン・対象者・スタイルの独立的な制御が必要な場合のみ、CO-STARやCRAFTに切り替えてください。',
+      ],
+    },
+    quickFacts: {
+      title: 'クイックファクト',
+      id: 'quick-facts',
+      numberedItems: [
+        '**構造化されたSingle Stepプロンプト：** 3モデルでのPromptQuorumテストで95%の成功率（38/40）',
+        '**曖昧な1行プロンプト：** 同じタスクで52.5%の成功率（21/40）',
+        '**5つの構成要素：** ロール・目的・コンテキスト・制約・出力形式',
+        '**有効なプロンプト長：** シンプルなタスク50語～複雑なタスク500語以上',
+        '**デフォルトフレームワーク：** Single StepはPromptQuorumのデフォルトであり、新規ユーザーの推奨出発点',
+        '**動作環境：** GPT-5.5・Claude Opus 4.7・Gemini 3.1 Pro・ローカルモデル（Ollama・LM Studio）',
+      ],
+    },
     whatIsSingleStep: {
       title: 'What the Single Step Prompt Method Is',
       content: [
