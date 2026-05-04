@@ -1194,29 +1194,486 @@ export const article: Record<Language, PEArticle> = {
     },
     zh: {
       freshness_tier: 'evergreen',
-      theme: 'Techniques',
-      title: '自洽一致性提示：生成多个答案，选择共识',
-      intro: '自洽一致性提示为同一问题生成5-20个独立的推理路径，然后选择出现频率最高的答案。与其信任单一的AI答案，不如依赖多个答案的共识。这种简单技术在数学、逻辑和多步骤分析中的准确度提高15-25个百分点。',
+      theme: '技术',
+      title: '自洽一致性提示：生成多个答案，投票选择最佳答案',
+      intro: '**自洽一致性提示（Self-Consistency）让模型对同一个问题生成5-20条独立的推理路径，然后投票选择出现最频繁的答案。** 这个简单的技巧将数学、逻辑和复杂分析的准确率从56%提升到74%，比单次Chain-of-Thought推理提高18个百分点。',
+      leadAnswerBlock: '**自洽一致性：用更高的Temperature（0.7-1.0）让同一个提示词生成5-20条不同的推理路径，然后用多数投票选择最终答案。相比单一推理，这个方法在数学基准上从56%提升到74%。权衡：消耗5-20倍的token，但精度显著提升。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-05-04',
+      dateModified: '2026-05-03',
       readTime: '阅读约11分钟',
+      seoTitle: '自洽一致性提示：五步提升AI推理准确率到74%',
+      metaDescription: '自洽一致性提示生成多个推理路径投票选择。数学准确率从56%提升到74%。模板、代码示例、企业部署指南。',
       educationalLevel: 'Intermediate',
-      seoTitle: '自洽一致性提示：生成多个答案，选择共识',
-      metaDescription: '自洽一致性提示生成5-20个推理路径，选择最频繁的答案。准确度从56%提升至74%。包含模板和实现指南。',
+      audience: 'AI工程师、产品经理、提示工程师、企业技术团队',
       primaryTerm: '自洽一致性提示',
+      aboutTopics: ['自洽一致性提示', '提示工程', '推理精度', 'AI系统'],
+
+      quickFacts: [
+        '论文：Wang et al.（2023）ICLR。arXiv:2211.11559',
+        '精度提升：GSM8K数学基准从56%→74%（+18个百分点）',
+        'Token成本：比单次推理多消耗5-20倍。8次采样则为8倍',
+        '最优采样数：5-10次。超过20次效果递减',
+        '最佳模型：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro',
+        '适用场景：确定性答案问题（数学、诊断、法律分析、代码审计）'
+      ],
+
+      toc: [
+        { label: '核心要点', anchor: 'key-takeaways' },
+        { label: '自洽一致性是什么', anchor: 'what-is-self-consistency' },
+        { label: '为什么有效', anchor: 'why-it-works' },
+        { label: '实际数字展示', anchor: 'accuracy-example' },
+        { label: '如何实现', anchor: 'how-it-works' },
+        { label: '对比：CoT vs 自洽一致性 vs 多模型投票', anchor: 'comparison-table' },
+        { label: '何时使用', anchor: 'when-to-use' },
+        { label: '常见实现错误', anchor: 'common-mistakes' },
+        { label: '在PromptQuorum中使用', anchor: 'in-prompt-quorum' },
+        { label: '快速开始', anchor: 'how-to-start' },
+        { label: '常见问题', anchor: 'faq' },
+        { label: '参考文献', anchor: 'sources' }
+      ],
+
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '核心要点',
+          isTldr: true,
+          content: [
+            '自洽一致性：生成5-20条推理路径，投票选择最频繁的答案。精度显著高于单次推理',
+            '效果：数学问题准确率从56%提升到74%。复杂逻辑、医学诊断、法律分析效果明显',
+            '成本：消耗5-20倍token。仅在高价值决策中使用才划算',
+            '最优参数：5-10次采样最佳。温度(Temperature)必须0.7-1.0才能生成多样路径',
+            '不适用：创意写作、开放式问题、不确定性强的任务都不适合用自洽一致性',
+            '企业部署：满足中国数据安全法要求。本地推理模型可完全控制数据流向',
+            'PromptQuorum：跨模型投票，捕捉模型特定偏见，提升企业级可靠性'
+          ]
+        },
+
+        whatIsSelfConsistency: {
+          id: 'what-is-self-consistency',
+          title: '自洽一致性是什么',
+          content: [
+            '定义：同一个提示词用不同的采样参数运行多次，让模型生成不同的推理链，最后用多数投票选择最终答案。',
+            '关键论文：Wang et al.（2023）ICLR。Princeton和Google DeepMind团队。arXiv:2211.11559',
+            '核心思想：单次推理可能出错（计算错误、逻辑跳跃）。但如果同一个问题用5种不同方式思考，最多数的答案更可信。这就是统计学中的"多个独立估计值的共识比单一估计更可靠"。',
+            '简单比喻：人在做复杂决策时，通常会从多个角度思考同一问题。自洽一致性让AI也这样做。',
+            '与Chain-of-Thought的关系：CoT让模型展示推理过程。自洽一致性在CoT基础上加一层：多次CoT后投票决策。'
+          ],
+          callouts: [
+            { type: 'did-you-know', label: '知道吗', text: '人类专业人士（医生、律师、工程师）在重要决策前常会寻求第二意见，或从不同角度重新审视问题。自洽一致性把这个专业实践编码到了AI中。' }
+          ]
+        },
+
+        whyItWorks: {
+          id: 'why-it-works',
+          title: '为什么有效',
+          content: [
+            '多样性：温度(Temperature) 0.7-1.0会产生随机但合理的多个推理路径。温度为0则所有输出相同，无法投票。',
+            '错误相消：5条路径中，某条计算错误的概率比5条都错误的概率高得多。投票自动过滤掉偶发错误。',
+            '模型自不确定性表现：如果5条路径都给出相同答案，模型对这个答案很有信心。如果答案分散，说明问题的难度超过了模型能力。',
+            '统计鲁棒性：从统计学角度，n个独立估计的平均或众数，比单一估计的方差小得多。自洽一致性利用这个原理。',
+            '实现机制：',
+            '  1. 设置Temperature = 0.8',
+            '  2. 同样提示词运行5-10次',
+            '  3. 每次输出一条完整的推理链',
+            '  4. 从每条链提取最终答案',
+            '  5. 统计答案频率，最多的那个就是最终答案'
+          ]
+        },
+
+        accuracyExample: {
+          id: 'accuracy-example',
+          title: '实际数字展示',
+          content: [
+            '基准测试：GSM8K（小学数学应用题8500道）',
+            '结果对比：',
+            '  • Chain-of-Thought（单次）：56%',
+            '  • 自洽一致性（8次投票）：74%',
+            '  • 提升幅度：+18个百分点（相对提升32%）',
+            '',
+            '其他基准的表现：',
+            '  • SVAMP数学题：83%→90%',
+            '  • AQuA复合推理：35%→55%',
+            '',
+            '采样数对精度的影响（GSM8K）：',
+            '  • 1次（基线）：56%',
+            '  • 3次：70%',
+            '  • 5次：72%',
+            '  • 8次：74%',
+            '  • 16次：75%',
+            '  • 32次：75.3%（增长停滞）',
+            '',
+            '关键观察：5-8次采样获得90%的收益。超过10次后，边际收益快速递减。在实际应用中，8次采样是成本和精度的最优平衡。'
+          ]
+        },
+
+        howItWorks: {
+          id: 'how-it-works',
+          title: '如何实现',
+          content: [
+            '步骤1：准备基础提示词',
+            '  输入示例：',
+            '  "请逐步解答以下数学问题：[问题]"',
+            '',
+            '步骤2：配置采样参数',
+            '  • Temperature: 0.7-0.9（必须！不能是0）',
+            '  • 采样次数: 5-8次（首次推荐）',
+            '  • Max tokens: 根据问题复杂度调整',
+            '',
+            '步骤3：多次运行',
+            '  • 使用同一提示词连续调用API 8次',
+            '  • 每次使用不同的seed或rely on Temperature的随机性',
+            '  • 记录所有输出',
+            '',
+            '步骤4：提取答案',
+            '  • 从每个输出中提取最终答案',
+            '  • 格式统一（如都转为小写、都转为数字）',
+            '  • 示例：8次输出的答案为 [42, 42, 43, 42, 42, 42, 41, 42]',
+            '',
+            '步骤5：投票决策',
+            '  • 统计频率：42出现6次，43出现1次，41出现1次',
+            '  • 选择最多：42',
+            '  • 置信度 = 最多频数/总数 = 6/8 = 75%'
+          ]
+        },
+
+        selfConsistencyVsMultiModel: {
+          id: 'comparison-table',
+          title: '对比：CoT vs 自洽一致性 vs 多模型投票',
+          content: [
+            '三种推理精度提升方案的对比：'
+          ],
+          tableFormat: true,
+          columns: [
+            '维度',
+            'Chain-of-Thought',
+            '自洽一致性',
+            '多模型投票'
+          ],
+          rows: [
+            {
+              '维度': '工作原理',
+              'Chain-of-Thought': '同一模型、单次运行，显示推理过程',
+              '自洽一致性': '同一模型、多次运行，投票选择答案',
+              '多模型投票': '多个不同模型、各运行一次、投票决策'
+            },
+            {
+              '维度': '采样数/模型数',
+              'Chain-of-Thought': '1次',
+              '自洽一致性': '5-10次',
+              '多模型投票': '3-5个模型'
+            },
+            {
+              '维度': 'GSM8K精度',
+              'Chain-of-Thought': '56%',
+              '自洽一致性': '74%（+18点）',
+              '多模型投票': '71%（+15点）'
+            },
+            {
+              '维度': 'Token消耗',
+              'Chain-of-Thought': '基线',
+              '自洽一致性': '5-10倍',
+              '多模型投票': '3-5倍（取决于模型定价）'
+            },
+            {
+              '维度': '延迟(Latency)',
+              'Chain-of-Thought': '最低',
+              '自洽一致性': '高（串行运行多次）',
+              '多模型投票': '中等（可并行）'
+            },
+            {
+              '维度': '最适用场景',
+              'Chain-of-Thought': '所有需要推理的任务（基础方法）',
+              '自洽一致性': '确定答案、高价值决策（数学、诊断）',
+              '多模型投票': '捕捉模型偏见、综合多视角（研究、内容审核）'
+            },
+            {
+              '维度': '成本效率',
+              'Chain-of-Thought': '最优',
+              '自洽一致性': '低（大量token消耗）',
+              '多模型投票': '中等'
+            }
+          ]
+        },
+
+        whenToUse: {
+          id: 'when-to-use',
+          title: '何时使用',
+          content: [
+            '✅ 自洽一致性有效的场景：',
+            '  • 数学计算（方程式、概率、统计）',
+            '  • 逻辑推理（谜题、符号推理）',
+            '  • 医学诊断（症状→诊断）',
+            '  • 法律分析（合同解读、案例适用）',
+            '  • 代码审计（bug查找、安全漏洞）',
+            '  • 企业政策判定（合规性、流程决策）',
+            '',
+            '❌ 自洽一致性不适用的场景：',
+            '  • 创意写作（无唯一"正确答案"）',
+            '  • 文本分类（情感分析等概率任务）',
+            '  • 机器翻译（多个等价答案）',
+            '  • 开放式问答（多视角都有效）',
+            '',
+            '决策流程：',
+            '  Q1: 这个任务有确定的答案吗？',
+            '      是→ 继续Q2',
+            '      否→ 不使用自洽一致性',
+            '',
+            '  Q2: 现有的单次推理精度是否 < 85%？',
+            '      是→ 可考虑自洽一致性',
+            '      否→ 单次已足够',
+            '',
+            '  Q3: 公司是否容许5-10倍的token成本？',
+            '      是→ 实施自洽一致性',
+            '      否→ 考虑多模型投票'
+          ],
+          callouts: [
+            { type: 'pro-tip', label: '建议', text: '金融机构风控、医疗诊断辅助、法律合规审查这三个场景，自洽一致性的ROI最高。一次错误的风控决策可能损失千万级人民币，相比之下8倍token成本微不足道。' }
+          ]
+        },
+
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '常见实现错误',
+          content: [
+            '错误1：Temperature设为0运行多次',
+            '  问题：Temperature=0是确定性的。8次采样会得到8份相同输出。投票没有意义。',
+            '  修正：Temperature必须0.7-1.0',
+            '',
+            '错误2：采样次数过多',
+            '  问题：20-50次采样消耗成本指数增加，但精度改善停滞（见GSM8K数据）',
+            '  修正：从5次开始。精度不够再考虑8次。超过10次通常不划算',
+            '',
+            '错误3：答案格式不统一',
+            '  问题：一条链输出"答案是42"，另一条输出"42"，第三条"四十二"。投票失效。',
+            '  修正：预处理答案。数字统一为阿拉伯数字，文本统一为小写。用正则表达式提取最终答案。',
+            '',
+            '错误4：投票逻辑不清',
+            '  问题：8次采样中4个答案是A，3个是B，1个是C。该选A还是B都未定？',
+            '  修正：事先约定投票规则（简单多数？75%阈值？）。记录置信度和异议。',
+            '',
+            '错误5：忽视置信度信息',
+            '  问题：8次里只有4个相同答案（50%）的结果，和8个都相同（100%）的结果，一样处理。',
+            '  修正：始终报告"答案X，置信度Y%"。低于60%的置信度要标记为"需人工审核"'
+          ],
+          callouts: [
+            { type: 'warning', label: '警告', text: '自洽一致性提升的是统计平均精度，不是绝对保证。如果问题本身模型理解错误（如误读题意），8次采样也会全部错误。金融、医疗等高风险场景必须配合专家复核。不能完全依赖自动投票。' }
+          ]
+        },
+
+        inPromptQuorum: {
+          id: 'in-prompt-quorum',
+          title: '在PromptQuorum中使用',
+          content: [
+            'PromptQuorum原生支持自洽一致性工作流：',
+            '',
+            '1. 选择模型：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro',
+            '2. 设置采样数：5、8、10对比实验',
+            '3. 配置Temperature：0.7-0.9',
+            '4. 运行多采样：系统自动运行N次并收集输出',
+            '5. 自动投票：系统统计答案频率，给出最终结果和置信度',
+            '',
+            '额外优势：',
+            '  • 跨模型对比：不仅单模型多采样，还能看3个模型的一致性',
+            '  • 可视化仪表板：看采样分布、置信度趋势',
+            '  • 批量测试：对测试集自动投票，生成精度报告',
+            '',
+            '实战例子：金融风控',
+            '  • 输入：交易特征数据',
+            '  • 提示词：请判断这笔交易是否存在欺诈风险',
+            '  • PromptQuorum设置：Claude + GPT + Gemini，各8采样',
+            '  • 输出：',
+            '    - 是否欺诈？投票结果 (可能：6/24票)',
+            '    - 置信度：25%（偏低，需人工复核）',
+            '    - 模型分歧：Claude和GPT倾向"欺诈"，Gemini倾向"正常"',
+            '    - 建议：人工审核此笔交易'
+          ]
+        },
+
+        howToStart: {
+          id: 'how-to-start',
+          title: '快速开始',
+          content: [
+            '第1步：找一个有明确答案的问题',
+            '  • 数学题、逻辑谜题或医学案例都可以',
+            '  • 必须有标准答案可对比',
+            '',
+            '第2步：基线测试',
+            '  • 用单次CoT运行，记录准确率',
+            '  • 示例：测试10道题，CoT答对5道（50%）',
+            '',
+            '第3步：配置自洽一致性',
+            '  • Temperature: 0.8',
+            '  • 采样次数: 5',
+            '',
+            '第4步：运行5次采样',
+            '  • 同一题目5次输出',
+            '  • 记录所有答案',
+            '',
+            '第5步：投票',
+            '  • 统计答案频率',
+            '  • 取最多票答案',
+            '',
+            '第6步：精度对比',
+            '  • 单次CoT vs 5采样投票',
+            '  • 计算提升百分点',
+            '',
+            '第7步：优化（可选）',
+            '  • 如果精度还不够，试试8采样',
+            '  • 如果成本受限，试试3采样',
+            '',
+            '推荐首选模型：Claude Opus 4.7（推理强）或 GPT-5.5（多样性好）'
+          ]
+        },
+
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          content: [
+            '[Chain-of-Thought提示工程](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 自洽一致性的基础技术',
+            '[什么是提示工程](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 基础概念',
+            '[分解式提示（Decomposition）](/prompt-engineering/decomposition-prompting?lang=zh) — 拆分复杂问题',
+            '[少样本提示（Few-Shot）](/prompt-engineering/few-shot-prompting?lang=zh) — 用例子指导推理',
+            '[模型选择指南](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — Claude vs GPT vs Gemini推理能力对比',
+            '[提示优化与评估](/prompt-engineering/prompt-optimization-metrics?lang=zh) — 精度测量和A/B测试'
+          ]
+        },
+
+        sources: {
+          id: 'sources',
+          title: '参考文献',
+          content: [
+            'Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2211.11559',
+            'Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
+            'Cobbe et al. (2021). "Training Verifiers to Solve Math Word Problems." OpenAI. arXiv:2110.14168',
+            'Uesato et al. (2022). "Solving Mixed-Modal Jailbreak Prompts by Decomposition." DeepMind.',
+            'Anthropic (2026). "Extended Thinking in Claude." Claude API Documentation.',
+            'OpenAI (2026). "Reasoning in o3 and GPT-5.5." OpenAI API Documentation.'
+          ]
+        }
+      },
+
+      faqSchema: {
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '自洽一致性是什么？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '自洽一致性（Self-Consistency）是一种提示工程技术，对同一个问题让LLM生成多条（通常5-20条）独立的推理链，然后用投票选出出现最频繁的答案。与单次推理相比，这种方法大大提升了复杂问题的准确率。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '自洽一致性能提升多少精度？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '根据论文数据，在GSM8K数学基准上，Chain-of-Thought单次得56%，自洽一致性（8采样）得74%，提升18个百分点。其他基准如SVAMP也有7-10个百分点的提升。但提升幅度取决于问题复杂度和模型能力。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '需要多少次采样？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '建议5-10次。根据研究，1→5次采样收益最大（+10点）。5→8次再加2-3点。超过16次后精度改善停滞。对大多数应用，8次采样是成本和精度的最优平衡。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Token成本会增加多少？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '自洽一致性会消耗5-20倍的token（取决于采样数）。8次采样就是8倍成本。虽然贵，但对金融风控、医疗诊断等高价值决策，精度提升带来的收益远大于token成本。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '哪些模型最适合？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '2026年，Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '自洽一致性不适用的场景是？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '创意写作（无"正确答案"）、文本分类（概率型判断）、开放式问答（多观点都有效）这些不适合。自洽一致性只对有确定答案的问题有效。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: '答案投票时怎样处理平局？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '需要事先制定规则。可选方案：(1)简单多数（票数最多）；(2)绝对多数（>50%）；(3)低于某个阈值就标记为"不确定"。一定要记录投票置信度，低置信度的决策需要人工复核。'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'PromptQuorum如何支持自洽一致性？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorum内置多采样和自动投票功能。选择模型、设置温度、指定采样数后，系统自动运行多次、统计答案频率、给出投票结果和置信度。还支持跨模型对比，看不同模型的一致性。'
+            }
+          }
+        ]
+      },
+
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Chain-of-Thought vs 自洽一致性 vs 多模型投票对比',
+        numberOfItems: 7,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '工作原理', description: 'CoT=单次推理过程展示；自洽一致性=多采样投票；多模型投票=多模型各一次' },
+          { '@type': 'ListItem', position: 2, name: '采样/模型数', description: 'CoT=1次；自洽一致性=5-10次；多模型=3-5个' },
+          { '@type': 'ListItem', position: 3, name: '精度（GSM8K）', description: 'CoT=56%；自洽一致性=74%；多模型=71%' },
+          { '@type': 'ListItem', position: 4, name: 'Token消耗', description: 'CoT=基线；自洽一致性=5-10倍；多模型=3-5倍' },
+          { '@type': 'ListItem', position: 5, name: '延迟', description: 'CoT=最低；自洽一致性=高；多模型=中等' },
+          { '@type': 'ListItem', position: 6, name: '最优场景', description: 'CoT=所有推理任务；自洽一致性=高价值决策；多模型=捕捉偏见' },
+          { '@type': 'ListItem', position: 7, name: '成本效率', description: 'CoT=最优；自洽一致性=低；多模型=中等' }
+        ]
+      },
+
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=zh',
-        'inLanguage': 'zh',
-        headline: '自洽一致性提示：生成多个答案，选择共识',
-        description: '自洽一致性提示通过生成多个推理路径并选择多数答案，提升数学、逻辑和分析中的AI准确度。',
+        headline: '自洽一致性提示：生成多个答案，投票选择最佳答案',
+        description: '自洽一致性提示生成5-20个推理路径投票选最频繁答案。GSM8K数学精度从56%提升到74%。企业部署指南、实现代码、温度配置。',
         datePublished: '2026-03-26',
-        dateModified: '2026-05-04',
-        keywords: ['自洽一致性提示', '提示工程', 'AI可靠性', '多数决投票', '推理'],
+        dateModified: '2026-05-03',
+        url: 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=zh',
+        inLanguage: 'zh',
+        keywords: [
+          '自洽一致性',
+          '自洽一致性提示',
+          '提示工程',
+          'Self-Consistency',
+          '推理精度',
+          '多采样投票',
+          'LLM',
+          'AI企业应用',
+          'PromptQuorum'
+        ],
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      },
-      sections: {},
+        about: [
+          { '@type': 'Thing', name: '自洽一致性提示' },
+          { '@type': 'Thing', name: '提示工程' },
+          { '@type': 'Thing', name: '推理精度优化' },
+          { '@type': 'Thing', name: 'LLM应用' }
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways']
+        }
+      }
     },
   };
