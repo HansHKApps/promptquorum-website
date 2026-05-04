@@ -544,13 +544,24 @@ export const article: Record<Language, PEArticle> = {
           title: 'Praxis in der DACH-Region',
           content: [
             'Die Single Step Prompt Methode bietet besondere Vorteile für Organisationen, die in Deutschland, Österreich und der Schweiz tätig sind. Die strukturelle Klarheit, die diese Methode erfordert, entspricht der Vorliebe für direkte und explizite Kommunikation in DACH-Teams.',
+            'Der zentrale Vorteil liegt in der Nachvollziehbarkeit und Dokumentierbarkeit: Strukturierte Single Step Prompts hinterlassen eine klare Audit-Spur, die sowohl für regulatorische Anforderungen als auch für interne Qualitätskontrolle essentiell ist. Dies ist besonders wichtig in Branchen wie Finanzdienstleistungen, Pharmazie und Maschinenbau, wo Compliance und Standardisierung nicht verhandelbar sind.',
             'Praktische Anwendungsfälle in der DACH-Region:',
           ],
           items: [
-            'Finanzdienstleistungen: Strukturierte Dokumentation von Risikobewertungsberichten mit Compliance zu MaRisk und Solvency II. Ein Single Step Prompt gewährleistet, dass alle regulatorischen Anforderungen in einer einzigen strukturierten Anweisung erfasst werden.',
-            'Ingenieurbüros und technische Dokumentation: Generierung von technischen Spezifikationen und Sicherheitsberichten in DIN- und EN-Normen-konformer Form mit konsistenter Terminologie über Projekte hinweg.',
-            'Mittelstandsunternehmen: Standardisierung interner Geschäftsprozesse wie Angebotserstellung oder Projektnotizen. Ein gespeicherter Single Step Prompt ermöglicht es, dass auch neue Mitarbeiter ohne Training hochwertige Ausgaben generieren können.',
-            'Behörden und öffentliche Einrichtungen: Einhaltung von DSGVO und Transparenzanforderungen durch dokumentierte Prompts, die zeigen, welche KI-generierten Inhalte zur Veröffentlichung oder zum Archivieren verwendet werden.',
+            'Finanzdienstleistungen: Strukturierte Dokumentation von Risikobewertungsberichten mit Compliance zu MaRisk und Solvency II. Ein Single Step Prompt gewährleistet, dass alle regulatorischen Anforderungen in einer einzigen strukturierten Anweisung erfasst werden. Banken und Finanzunternehmen nutzen diese Methode zur Standardisierung von Kreditprüfungen und Kundenberichten, die intern und extern nachvollziehbar bleiben.',
+            'Ingenieurbüros und technische Dokumentation: Generierung von technischen Spezifikationen und Sicherheitsberichten in DIN- und EN-Normen-konformer Form mit konsistenter Terminologie über Projekte hinweg. Ein Single Step Prompt für technische Dokumentation sorgt dafür, dass Sicherheitsmerkmale und Normenreferenzen konsistent bleiben — entscheidend für Produkthaftung und CE-Kennzeichnung.',
+            'Mittelstandsunternehmen: Standardisierung interner Geschäftsprozesse wie Angebotserstellung, Projektnotizen und Kundenkorrespondenz. Ein gespeicherter Single Step Prompt ermöglicht es, dass auch neue Mitarbeiter ohne Training hochwertige Ausgaben generieren können. Typische Anwendungen: standardisierte Angebotsmails mit korrekter Kalkulation, einheitliche Projektdokumentation, konsistente Kundenberichte.',
+            'Behörden und öffentliche Einrichtungen: Einhaltung von DSGVO und Transparenzanforderungen durch dokumentierte Prompts, die zeigen, welche KI-generierten Inhalte zur Veröffentlichung oder zum Archivieren verwendet werden. Single Step Prompts erleichtern die Nachverfolgung von KI-gestützten Entscheidungen und ermöglichen es, den Einsatz von KI in der öffentlichen Verwaltung transparent zu gestalten.',
+          ],
+        },
+        summaryBox: {
+          title: 'Zusammenfassung: Single Step Prompt Methode',
+          isTldr: false,
+          content: [
+            '• **Fünf Bausteine in einer Nachricht:** Vereinen Sie Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem strukturierten Prompt — kein Mehrturngespräch erforderlich.',
+            '• **Messbare Qualitätsverbesserung:** Erreichen Sie 95 % On-Format-Rate (38/40) vs. 52,5 % bei vagen Prompts. Struktur allein verdoppelt fast die Erfolgsquote.',
+            '• **Wiederverwendbare Team-Vermögenswerte:** Speichern Sie funktionierende Prompts als Vorlagen in PromptQuorum. Neue Mitarbeiter können ohne Training konsistent hochwertige Ausgaben generieren.',
+            '• **Für alle Modelle und Szenarien:** Die Methode funktioniert identisch über GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle (Ollama, LM Studio).',
           ],
         },
         howToStart: {
