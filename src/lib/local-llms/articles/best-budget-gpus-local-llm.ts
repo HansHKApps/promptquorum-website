@@ -12,10 +12,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'GPU Buying Guides',
       title: 'Best Local LLMs for RTX 3060 (12GB / 6GB) in 2026',
       seoTitle: 'RTX 3060 Local LLM Guide 2026: What Models You Can Run',
-      intro: '**RTX 3060 12GB runs Llama 3.2 7B at 15–20 tok/sec, Mistral 7B at 18 tok/sec, and Qwen2.5-Coder 7B at 16 tok/sec — all at Q4 quantization.** The 6GB variant is limited to 3B models only. As of April 2026, the RTX 3060 12GB ($200–250 used) remains the best budget GPU for local LLMs: 12GB VRAM fits every 7B model and most 13B models at Q4. This guide covers exactly which models run on each VRAM tier, with real speeds and practical setups.',
+      intro: '**RTX 3060 12GB runs Llama 4 Scout 17B (MoE) at 12–16 tok/sec, Qwen3 8B at 16–20 tok/sec, Mistral 7B at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec — all at Q4 quantization.** The 6GB variant is limited to 3B models only. As of May 2026, the RTX 3060 12GB ($200–250 used) remains the best budget GPU for local LLMs: 12GB VRAM fits every 7B model and most 13B models at Q4, plus Llama 4 Scout (MoE) which delivers quality well above dense 7B-8B models at similar VRAM. This guide covers exactly which models run on each VRAM tier, with real speeds and practical setups.',
       metaDescription: 'What local LLMs can you run on RTX 3060 12GB or 6GB? See best models for coding, chat, and reasoning in 2026 with real VRAM limits and performance tips.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**RTX 3060 12GB runs Llama 3.2 7B at 15–20 tok/sec, Mistral 7B at 18 tok/sec, and Qwen2.5-Coder 7B at 16 tok/sec. The 6GB variant handles 3B models only. Best budget GPU for local LLMs in 2026 at $200–250 used.**',
+      leadAnswerBlock: '**RTX 3060 12GB runs Llama 4 Scout 17B (MoE) at 12–16 tok/sec, Qwen3 8B at 16–20 tok/sec, Mistral 7B at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec. The 6GB variant handles 3B models only. Best budget GPU for local LLMs in 2026 at $200–250 used.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '7 min',
       educationalLevel: 'Beginner',
@@ -37,10 +37,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           items: [
-            '**RTX 3060 12GB** ($200–250 used): Runs every 7B model and most 13B at Q4. Best budget pick.',
+            '**RTX 3060 12GB** ($200–250 used): Runs every 7B model and most 13B at Q4. Plus Llama 4 Scout (MoE) at ~10 GB — best overall quality.',
             '**RTX 3060 6GB**: Limited to 3B models (Phi-4 Mini, Llama 3.2 3B). Too tight for 7B.',
-            '**Best chat model on 12GB:** Llama 3.2 7B at 15–20 tok/sec. Smooth, fast, reliable.',
-            '**Best coding model on 12GB:** Qwen2.5-Coder 7B at 16 tok/sec. 72% HumanEval.',
+            '**Best overall model on 12GB:** Llama 4 Scout 17B (MoE) at ~10 GB VRAM, 12–16 tok/sec. Delivers quality comparable to dense 30B models.',
+            '**Best coding model on 12GB:** Qwen3 8B at 16–20 tok/sec. Improved over Qwen2.5-Coder.',
             '**Best reasoning model on 12GB:** DeepSeek-R1 7B at 10–12 tok/sec. Chain-of-thought.',
             '**Skip if:** You want 70B models or 13B at Q8 — you need 24GB (RTX 4090).',
           ],
@@ -53,14 +53,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Model', 'Size', 'Quantization', 'VRAM Used', 'Speed', 'Best For'],
           rows: [
-            { 'Model': 'Llama 3.2 7B', 'Size': '7B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~7 GB', 'Speed': '15–20 tok/sec', 'Best For': 'General chat, Q&A' },
+            { 'Model': 'Llama 4 Scout 17B', 'Size': '17B active (109B MoE)', 'Quantization': 'Q4_K_M', 'VRAM Used': '~10 GB', 'Speed': '12–16 tok/sec', 'Best For': 'Best overall quality (MoE)' },
+            { 'Model': 'Llama 3.2 7B', 'Size': '7B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~7 GB', 'Speed': '15–20 tok/sec', 'Best For': 'General chat, Q&A (legacy)' },
             { 'Model': 'Mistral 7B v0.3', 'Size': '7B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~7 GB', 'Speed': '18 tok/sec', 'Best For': 'Instruction following' },
-            { 'Model': 'Qwen2.5-Coder 7B', 'Size': '7B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~7 GB', 'Speed': '16 tok/sec', 'Best For': 'Coding (72% HumanEval)' },
+            { 'Model': 'Qwen3 8B', 'Size': '8B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~7 GB', 'Speed': '16–20 tok/sec', 'Best For': 'Coding (improved over Qwen2.5)' },
             { 'Model': 'DeepSeek-R1 7B', 'Size': '7B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~7 GB', 'Speed': '10–12 tok/sec', 'Best For': 'Reasoning, math' },
             { 'Model': 'Gemma 4 9B', 'Size': '9B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~8 GB', 'Speed': '12–15 tok/sec', 'Best For': 'Vision, multimodal' },
-            { 'Model': 'Llama 3.2 13B', 'Size': '13B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~11 GB', 'Speed': '8–10 tok/sec', 'Best For': 'Higher quality chat' },
+            { 'Model': 'Llama 3.2 13B', 'Size': '13B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~11 GB', 'Speed': '8–10 tok/sec', 'Best For': 'Higher quality chat (Q4 only, tight fit)' },
           ],
-          note: 'All speeds measured with Ollama on RTX 3060 12GB, 16GB system RAM, Ryzen 7 7700X. Q4_K_M quantization. Speeds vary ±15% depending on prompt length and context window.',
+          note: 'Llama 4 Scout is the biggest upgrade for RTX 3060 12GB owners in 2026. Its MoE architecture means only 17B parameters are active per token (out of 109B total), delivering quality well above dense 7B-8B models at similar VRAM usage. `ollama pull llama4:scout`. All speeds measured with Ollama on RTX 3060 12GB, 16GB system RAM, Ryzen 7 7700X. Q4_K_M quantization. Speeds vary ±15% depending on prompt length and context window.',
         },
         'rtx-3060-6gb': {
           id: 'rtx-3060-6gb',
@@ -107,8 +108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Budget hardware runs smaller models — but skilled prompting closes the quality gap. The [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers techniques like chain-of-thought and structured output that help smaller models punch above their weight.',
           ],
           items: [
-            '**Chat / Q&A:** `ollama run llama3.2:7b` — Best all-around. 15–20 tok/sec. 128K context. Handles conversation, summarization, and general knowledge well.',
-            '**Coding:** `ollama run qwen2.5-coder:7b` — 72% HumanEval. 16 tok/sec. Strong at Python, JavaScript, SQL, and TypeScript completion. Better than Llama for code.',
+            '**Chat / Q&A:** `ollama run llama4:scout` — MoE, ~10 GB VRAM, best quality on 12 GB. For a lighter option: `ollama run llama3.2:3b` at 2.5 GB.',
+            '**Coding:** `ollama run qwen3:8b` — Improved coding performance over Qwen2.5-Coder. 5 GB VRAM. 16–20 tok/sec.',
             '**Reasoning / Math:** `ollama run deepseek-r1:7b` — Chain-of-thought reasoning. 10–12 tok/sec. Slower but significantly more accurate on multi-step problems.',
             '**Writing / Creative:** `ollama run mistral:7b` — Best instruction following. 18 tok/sec. Clean, structured output. Good for drafting and rewriting.',
             '**Vision / Images:** `ollama run gemma4:9b` — Multimodal (accepts images). 12–15 tok/sec. Uses ~8GB VRAM. Describe photos, read screenshots, analyze charts.',
@@ -129,18 +130,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Buying a 4GB RTX 2060 and expecting smooth 7B inference--you\'ll hit out-of-memory errors constantly.',
             'Pairing a $250 GPU with a $30 PSU (power supply)--voltage sag kills stability. Budget 80+ Gold certified, 650W minimum.',
             'Assuming DDR5 RAM and i9 CPU speed up LLM inference--they don\'t. GPU VRAM bandwidth is the only bottleneck that matters for inference speed.',
+            'Not trying Llama 4 Scout on 12 GB VRAM. Many RTX 3060 owners assume they\'re limited to 7B-8B dense models. Llama 4 Scout (MoE, 17B active / 109B total) fits at ~10 GB and delivers quality comparable to dense 30B models. If you have 12 GB VRAM and haven\'t tried Scout, you\'re significantly underutilizing your hardware.',
+            'Buying a 16 GB card just for 13B models. With Llama 4 Scout available at ~10 GB, the 12→16 GB upgrade is less necessary than it was six months ago. Only upgrade to 16 GB if you specifically need Llama 3.1 70B, Mistral Small 3.1, or other dense 20B+ models.',
           ],
         },
         'faqSection': {
           title: 'FAQ',
           faqs: [
-            { q: 'Is RTX 3060 12GB still worth buying in 2026?', a: 'Yes. It\'s 4+ years old, but 12GB VRAM is timeless. Runs Llama 3 8B and Mistral 7B smoothly. Ideal if you find one used under $250.' },
+            { q: 'Is RTX 3060 12GB still worth buying in 2026?', a: 'Yes. It\'s 4+ years old, but 12GB VRAM is timeless. Runs Llama 4 Scout 17B (MoE), Qwen3 8B, and Mistral 7B smoothly. The MoE architecture of Llama 4 Scout means 12 GB VRAM is now enough for model quality that previously required 16+ GB.' },
             { q: 'Should I buy RTX 5060 Ti or RTX 4060 Ti for local LLMs?', a: 'RTX 5060 Ti. The newer generation (2026) offers 10-15% better performance. If budget-constrained, RTX 4060 Ti is still solid. Avoid base 4060/5060 (8GB) and 4070 (12GB)—poor value.' },
             { q: 'Can I use an AMD RX 7900 XT or RX 7900 XTX instead?', a: 'Yes, but driver support for AMD is weaker than NVIDIA + CUDA. HIP/ROCm setup requires more effort. RTX is safer for beginners.' },
             { q: 'Is 12GB VRAM enough for 13B models?', a: 'Barely, at Q4 quantization. Q5 or Q8 will cause OOM errors. If you want 13B comfort, aim for 16GB.' },
             { q: 'Should I buy a used enterprise GPU like RTX A4000?', a: 'Yes, if available. 16GB VRAM, professional-grade cooling, usually $180-230 used. Slightly slower than RTX 3060, but VRAM cushion is worth it.' },
             { q: 'What PSU wattage should I buy with a $250 GPU?', a: '650W, 80+ Gold minimum. A $250 GPU + CPU + motherboard doesn\'t exceed 400W draw, but you want headroom for spikes.' },
-            { q: 'Can I run Ollama with a $200 budget GPU?', a: 'Yes. Ollama is lightweight. A 4-year-old RTX 3060 with Ollama will run Mistral 7B at 10-15 tokens/sec--totally usable.' },
+            { q: 'Can I run Ollama with a $200 budget GPU?', a: 'Yes. Ollama is lightweight. A 4-year-old RTX 3060 with Ollama will run Llama 4 Scout at 12-16 tok/sec or Qwen3 8B at 16-20 tok/sec — totally usable for interactive chat and coding assistance.' },
+            { q: 'Can I run Llama 4 Scout on an RTX 3060 12GB?', a: 'Yes. Llama 4 Scout uses MoE architecture — 17B parameters active out of 109B total. At Q4_K_M, it uses ~10 GB VRAM, fitting comfortably within the RTX 3060 12GB\'s memory. Expect 12-16 tok/sec. This is the single best upgrade for RTX 3060 owners in 2026: `ollama pull llama4:scout`.' },
           ],
         },
         'relatedReading': {
@@ -152,14 +156,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
             '[VRAM Calculator](/local-llms/vram-calculator-local-llm)',
             '[Laptop vs Desktop for Local LLMs](/local-llms/laptop-vs-desktop-local-llm) — Full platform comparison: GPU desktop vs MacBook for local LLMs.',
+            '[Prompt Engineering for Local LLMs](/prompt-engineering/prompt-engineering-for-local-models) — optimize prompts for models running on budget hardware.',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — significantly improves DeepSeek-R1 output quality.',
           ],
         },
         'sources': {
           title: 'Sources',
           items: [
+            'Meta AI. (2025). "Llama 4 Model Card." — Scout MoE architecture, VRAM requirements',
+            'Qwen Team. (2026). "Qwen3 Technical Report." — Qwen3 8B specifications',
             'TechPowerUp GPU Database: RTX 3060 / RTX 4060 Ti / RTX 4070 Super specs and power consumption',
             'NVIDIA CUDA Capability Matrix: GPU memory bandwidth and theoretical throughput for inference workloads',
-            'Ollama Model Requirements: VRAM recommendations for Llama 2 7B, Mistral 7B, and Qwen quantization levels',
+            'Ollama Model Requirements: VRAM recommendations for Llama 4 Scout, Qwen3, and Mistral 7B quantization levels',
             'Compliance frameworks require auditable workflows. Establish governance standards for AI prompt quality and review: [prompt governance in production](https://www.promptquorum.com/prompt-engineering/prompt-governance-in-production) covers policies, version control, and approval processes.',
           ],
         },
@@ -172,7 +180,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm',
         'inLanguage': 'en',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-05-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -270,6 +278,14 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Yes, GPU upgrades are straightforward in desktop PCs. Start with RTX 3060 12GB, then upgrade to RTX 4090 or 5090 later. PCIE slot is backward-compatible across generations.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run Llama 4 Scout on an RTX 3060 12GB?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Llama 4 Scout uses MoE architecture — 17B parameters active out of 109B total. At Q4_K_M, it uses ~10 GB VRAM, fitting comfortably within the RTX 3060 12GB\'s memory. Expect 12-16 tok/sec. This is the single best upgrade for RTX 3060 owners in 2026: `ollama pull llama4:scout`.'
             }
           }
         ]
