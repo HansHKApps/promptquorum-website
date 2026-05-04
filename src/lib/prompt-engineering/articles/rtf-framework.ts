@@ -1633,23 +1633,52 @@ export const article: Record<Language, PEArticle> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'RTF框架：Role、Task、Format的提示词结构（2026）',
-      intro: 'RTF框架是一种轻量级的三要素提示词结构：Role（模型的角色）、Task（要执行的任务）、Format（输出格式）。在GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和本地模型上工作。将其用作日常任务（摘要、代码审查、电子邮件、报告）的默认设置，仅当需要更多结构时才升级到CO-STAR或SPECS。',
+      intro: 'RTF框架是一种轻量级的三要素提示词结构：Role（模型的角色）、Task（要执行的任务）、Format（输出格式）。适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和本地模型。将其作为日常任务的默认选择——摘要、代码审查、电子邮件、报告——仅在需要更多结构时才升级到CO-STAR或SPECS。',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '阅读约6分钟',
-      seoTitle: 'RTF框架2026：Role、Task、Format的提示词结构',
-      metaDescription: 'RTF提示词框架：Role（谁）、Task（做什么）、Format（怎么输出）。3个组件应对日常任务。与CO-STAR、SPECS、TRACE的对比表。',
+      seoTitle: 'RTF框架2026：Role、Task、Format提示词结构指南',
+      metaDescription: 'RTF提示词框架：Role（角色）、Task（任务）、Format（格式）。3个组件应对日常任务。与CO-STAR、SPECS、TRACE的对比。',
+      leadAnswerBlock: '**RTF = Role、Task、Format。三个组件，无额外复杂性。定义模型的角色、要完成的任务以及答案应该如何显示。将其用于日常任务——摘要、代码审查、电子邮件、会议记录。仅当需要更复杂的结构时，才切换到CO-STAR（处理语气/受众）、SPECS（处理约束）或TRACE（处理推理）。RTF是最轻量级、仍能强制执行结构的框架。**',
+      quickFacts: [
+        'RTF = Role + Task + Format — 最轻量级的结构化提示词框架（3个组件 vs CO-STAR/SPECS的5-6个组件）',
+        '为日常、重复性任务而设计：摘要、电子邮件、代码审查、会议记录',
+        '适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和本地模型（Ollama、LM Studio）',
+        'RTF是推荐的起始框架 — 仅当达到限制时才升级到CO-STAR、SPECS或TRACE',
+        '格式字段可以包含约束和示例，使RTF比其3个组件的数量更灵活',
+        'PromptQuorum将RTF作为内置框架，支持跨25个以上模型的多模型分发',
+      ],
+      toc: [
+        { label: '核心要点', anchor: 'key-takeaways' },
+        { label: 'RTF框架是什么', anchor: 'what-is-rtf-framework' },
+        { label: 'RTF的三个组件', anchor: 'three-components' },
+        { label: 'RTF为什么有用', anchor: 'why-rtf-useful' },
+        { label: '示例：不好 vs 优秀的RTF提示词', anchor: 'bad-vs-good' },
+        { label: '何时使用RTF', anchor: 'when-to-use' },
+        { label: 'RTF不是正确选择的时候', anchor: 'when-not-to-use' },
+        { label: '对比表', anchor: 'comparison-tables' },
+        { label: '如何编写RTF提示词', anchor: 'how-to-write' },
+        { label: '5个真实RTF案例', anchor: 'five-examples' },
+        { label: '将RTF与其他框架结合', anchor: 'combining-rtf' },
+        { label: '常见RTF错误', anchor: 'common-mistakes' },
+        { label: 'PromptQuorum如何实现RTF', anchor: 'promptquorum-implementation' },
+        { label: '常见问题', anchor: 'faq' },
+        { label: '参考资源', anchor: 'sources' },
+      ],
       educationalLevel: 'Intermediate',
+      audience: '构建LLM应用的开发者、设计AI工作流的产品经理、开发AI驱动工具的团队',
+      primaryTerm: 'RTF框架',
+      aboutTopics: ['RTF提示词', '提示词框架', '提示词工程'],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'RTF框架：Role、Task、Format的提示词结构（2026）',
-        description: 'RTF框架（Role、Task、Format）说明：其工作原理、何时使用以及PromptQuorum如何实现它。',
+        description: 'RTF框架（Role、Task、Format）如何工作、何时使用，以及PromptQuorum如何将RTF作为内置选项提供。',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
         url: 'https://www.promptquorum.com/prompt-engineering/rtf-framework?lang=zh',
         inLanguage: 'zh',
-        keywords: ['RTF框架', 'Role Task Format', '提示词框架', '提示词工程', 'PromptQuorum'],
+        keywords: ['RTF框架', 'Role Task Format', '提示词框架', '提示词工程', 'PromptQuorum', 'LLM提示词'],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -1662,12 +1691,363 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
-      sections: {},
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'RTF框架是什么？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF = Role、Task、Format。一种三部分的提示词结构：Role定义模型是谁（例如"资深数据分析师"），Task说明要做什么，Format指定输出应如何结构化。适用于所有主要模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '何时应该使用RTF而不是CO-STAR或SPECS？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '对于日常的、重复性的任务（摘要、代码审查、电子邮件、报告）使用RTF。当语气/受众至关重要时升级到CO-STAR，当需要严格的模式和约束时使用SPECS，当推理透明度很重要时使用TRACE。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF是否与"只是告诉模型做什么"相同？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '不是。RTF强制显式指定三项内容：模型是谁（Role）、解决什么任务，以及输出必须如何结构化（Format）。这种结构消除了歧义，提高了跨模型和运行之间的一致性。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF与Chain-of-Thought相比如何？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chain-of-Thought通过要求模型"逐步思考"来改进推理。RTF构建输出格式和角色。两者是互补的——您可以结合它们：使用RTF定义角色和格式，然后为复杂推理任务添加"逐步思考"。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '我能将RTF与Ollama等本地模型一起使用吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '可以。RTF适用于任何LLM，包括通过Ollama或LM Studio运行的本地模型。较简单的模型（Mistral 7B、LLaMA 2）可能在复杂Format字段上不够一致，但RTF仍能改进输出质量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '最常见的RTF错误是什么？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '让Format含糊不清或隐含。没有显式的Format字段（例如"3个要点，每个最多50个词"），模型默认为散文段落。始终指定Format。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF如何帮助提高一致性？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '通过显式指定Role、Task和Format，您减少了模型对您想要什么的歧义。这使输出跨模型、运行和重复使用提示词的团队成员更加一致。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '我应该保存RTF提示词吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '应该。编写好的RTF提示词来处理定期任务（每周摘要、代码审查、电子邮件草稿）应该保存为模板并重复使用。这是RTF相对于每次从头写提示词的最大优势。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF能否强制执行严格的约束，如JSON输出？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '部分可以。RTF可以在Format字段中请求"JSON格式"，现代模型（GPT-5.5、Claude）通常会遵守。为了100%严格的模式强制执行，使用SPECS（包含显式约束）或结构化输出API。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'PromptQuorum如何使用RTF？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorum将RTF作为内置框架模板包含在内。用户填入Role、Task和Format字段，PromptQuorum将相同的提示词分发到25个以上的模型（GPT-5.5、Claude、Gemini、本地模型），用于比较和A/B测试。',
+            },
+          },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            'RTF = Role（模型是谁）、Task（要做什么）、Format（如何输出）。三个简单的组件。',
+            '将RTF用作日常任务的默认框架：摘要、代码审查、电子邮件、报告、会议记录。',
+            'Format字段是RTF增加最大价值的地方 — 显式结构产生更加一致的输出。',
+            'RTF处理80%的日常LLM任务。仅当RTF达到限制时才升级到CO-STAR（语气/受众）、SPECS（约束）或TRACE（推理）。',
+            '编写良好的RTF提示词是可重复使用的模板。保存它们，一年重复使用52次，而不是每周重写一次。',
+            '适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和本地模型（Ollama、LM Studio）。',
+            '使用PromptQuorum在多个模型之间并排测试相同的RTF提示词。',
+          ],
+        },
+        whatIsRTFFramework: {
+          id: 'what-is-rtf-framework',
+          title: 'RTF框架是什么',
+          snippets: [
+            { type: 'in-one-sentence', text: 'RTF是一个三部分提示词骨架 — Role、Task、Format — 为日常任务提供刚好足够的结构，而没有更大框架的开销。' },
+            { type: 'in-plain-terms', text: '告诉AI它是谁（Role）、要做什么（Task）以及如何格式化答案（Format）。就这样。三件事。适用于80%的日常任务。当不再足够时，您就升级到CO-STAR或SPECS。' },
+          ],
+          content: [
+            '**RTF框架是一个三部分提示词模式，告诉模型它是谁、要做什么，以及答案应该如何显示。** 与其发送一个松散的问题，您可以显式指定Role、Task和Format。这适用于GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro和您通过Ollama或LM Studio运行的本地模型。',
+            'RTF故意保持最小化。仅有三个字段，易于记住，填写速度快，对许多日常任务足够灵活。当您不确定使用哪个专业框架时，您可以将其视为"默认提示词骨架"。',
+          ],
+        },
+        threeComponents: {
+          id: 'three-components',
+          title: 'RTF的三个组件',
+          content: [
+            '**一个强大的RTF提示词清楚地定义了三个组件中的每一个，这样模型对其工作没有歧义。** 您可以将它们写成标记行或仍包含所有三个部分的一个句子。',
+            '典型定义：',
+          ],
+          items: [
+            'Role：模型应采用的角色或专业知识（例如"您是一位资深数据分析师"）。',
+            'Task：您想要的具体行动，用一到两句话描述。',
+            'Format：输出的结构、长度和风格（例如"3个要点加一个2句话的总结"）。',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Format是关键',
+              text: 'Role和Task是显而易见的 — 大多数人已经说出他们想要什么。Format是RTF增加真正价值的地方。"3个要点，每个最多50个词，Markdown格式"产生的输出一致性远高于"给我一个摘要"。Format字段是RTF的秘密武器。',
+            },
+          ],
+        },
+        whyRTFUseful: {
+          id: 'why-rtf-useful',
+          title: 'RTF为什么有用',
+          content: [
+            '**RTF框架很有用，因为它提供了更复杂框架的大部分好处，同时几乎没有额外复杂性。** 它迫使您在发送提示词之前做出三个决定 — 谁、什么和如何。',
+            '实际优势包括：',
+          ],
+          items: [
+            '比多部分框架更快地编写日常工作的提示词。',
+            '跨模型和运行的一致性更好，因为格式总是显式的。',
+            '轻松让团队成员入门，他们可以在几分钟内学会RTF并在任何地方重复使用。',
+          ],
+        },
+        badVsGood: {
+          id: 'bad-vs-good',
+          title: '示例：不好 vs 优秀的RTF提示词',
+          promptExamples: [
+            {
+              bad: '总结这次会议。',
+              good: 'Role：您是一位运营经理，为高管领导总结项目状态会议。Task：阅读记录文稿，识别会议中讨论的主要决定、未解决的风险和后续步骤。Format：输出Markdown摘要，包含三个部分（`决定`、`风险`、`后续步骤`）。每个部分下使用3-5个要点。保持总摘要在250个字以内。',
+              badLabel: '非结构化请求',
+              goodLabel: 'RTF提示词',
+            },
+          ],
+          content: [
+            'RTF版本准确告诉模型如何思考内容以及如何打包结果，以便他人可以立即使用它。',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: '何时使用RTF',
+          content: [
+            '**当您希望一个简单的、可重复使用的模式仍能强制执行清晰度和结构时，应该使用RTF框架。** 它是一个强大的默认框架，当您不需要长规范或多步推理轨迹时。',
+            '典型用例包括：',
+          ],
+          items: [
+            '电子邮件或聊天的短报告、摘要和总结。',
+            '为客户或内部利益相关者起草回复，具有清晰的结构。',
+            '生成小代码片段或重构，具有指定的输出格式。',
+            '快速内容片段，如产品文案、常见问题条目或简单检查清单。',
+          ],
+        },
+        whenNotToUse: {
+          id: 'when-not-to-use',
+          title: 'RTF不是正确选择的时候',
+          tableFormat: true,
+          columns: ['场景', 'RTF的限制', '改用'],
+          rows: [
+            { '场景': '面向客户的内容，其中语气和受众至关重要', 'RTF的限制': '没有显式的受众或语气字段', '改用': 'CO-STAR（包含Style、Audience、Tone）或CRAFT（Constraints、Role、Audience、Format、Tone）' },
+            { '场景': '需要严格的数据结构或模式强制执行', 'RTF的限制': 'Format字段可以请求JSON但没有约束语法', '改用': 'SPECS（包含显式Constraints字段）' },
+            { '场景': '需要多步推理或决策逻辑', 'RTF的限制': '没有显式的逐步推理字段', '改用': 'TRACE（包含Trigger、Response、Action、Consequence、Evaluation）' },
+            { '场景': '具有条件逻辑的复杂工作流', 'RTF的限制': '每个提示词单一Role/Task/Format', '改用': 'APE（Action、Process、Examples）或自定义多轮工作流' },
+          ],
+        },
+        comparisonTables: {
+          id: 'comparison-tables',
+          title: '对比表',
+          content: [
+            '**RTF与其他主要框架的对比：**',
+          ],
+        },
+        dimensionComparison: {
+          title: '基于维度的对比',
+          tableFormat: true,
+          columns: ['维度', 'RTF', 'CO-STAR', 'SPECS', 'TRACE'],
+          rows: [
+            { '维度': '字段数量', 'RTF': '3（Role、Task、Format）', 'CO-STAR': '6（Context、Objective、Style、Audience、Response、Tone）', 'SPECS': '5（Settings、Person、Examples、Pattern、Constraints）', 'TRACE': '5（Trigger、Response、Action、Consequence、Evaluation）' },
+            { '维度': '设置时间', 'RTF': '30秒', 'CO-STAR': '2-3分钟', 'SPECS': '3-5分钟', 'TRACE': '2-3分钟' },
+            { '维度': '最适合', 'RTF': '日常的、重复性任务', 'CO-STAR': '语气和受众控制', 'SPECS': '严格的模式和约束', 'TRACE': '显式推理步骤' },
+            { '维度': '输出一致性', 'RTF': '良好', 'CO-STAR': '优秀', 'SPECS': '优秀', 'TRACE': '良好' },
+            { '维度': '需要示例？', 'RTF': '否', 'CO-STAR': '可选', 'SPECS': '是（强模式）', 'TRACE': '否' },
+          ],
+        },
+        pairwiseComparison: {
+          title: '成对对比（RTF vs其他）',
+          tableFormat: true,
+          columns: ['对比', '获胜者', '原因'],
+          rows: [
+            { '对比': 'RTF vs CO-STAR', '获胜者': 'CO-STAR（如果受众重要）', '原因': 'CO-STAR包含显式的受众和语气字段。RTF强制将语气放入Role或Format中，这会变得混乱。如果您不在意声音，RTF更快。' },
+            { '对比': 'RTF vs SPECS', '获胜者': 'SPECS（如果需要严格约束）', '原因': 'SPECS包含专用的Constraints字段并期望示例。RTF可以在Format中请求约束但缺少结构化语法。对于JSON、CSV或结构化数据，SPECS赢。' },
+            { '对比': 'RTF vs TRACE', '获胜者': 'TRACE（如果推理重要）', '原因': 'TRACE显式建模因果关系（Trigger → Response → Action → Consequence）。RTF没有推理步骤字段。使用TRACE处理复杂逻辑，使用RTF处理简单输出。' },
+            { '对比': 'RTF vs Chain-of-Thought', '获胜者': '互补', '原因': 'RTF定义角色和输出格式。CoT改进推理。结合它们：使用RTF构建提示词结构，为复杂数学或逻辑添加"逐步思考"。' },
+          ],
+        },
+        howToWrite: {
+          id: 'how-to-write',
+          title: '如何编写RTF提示词',
+          numberedItems: [
+            '**Role：定义AI扮演谁。** 具体的角色胜过通用的。不好："您很乐于助人。" 好的："您是审查代码性能回归的资深后端工程师。" 角色越具体，输出越一致。',
+            '**Task：说明AI应该做什么。** 要具体。不好："总结这个。" 好的："识别讨论的三个关键决定、未解决的风险和后续步骤。"',
+            '**Format：指定结构、长度和风格。** 这是RTF增加价值的地方。不好：（缺少Format）。好的："3个要点，每个最多50个词，Markdown格式，总共200个字以内。"',
+            '**分离Task和Format。** 将它们合并成一个团块，两者都缺乏足够的具体性。保持它们独立。',
+            '**始终包含Format，即使看起来很明显。** 没有它，模型默认为散文段落。',
+          ],
+        },
+        fiveExamples: {
+          id: 'five-examples',
+          title: '5个真实RTF案例',
+          content: ['以下是五个生产就绪的RTF提示词，用于常见工作流：'],
+        },
+        example1: {
+          title: '案例1：每周状态摘要',
+          content: [
+            '**Role：** 您是为执行领导层撰写每周状态摘要的运营经理。',
+            '**Task：** 总结本周的项目进度、做出的关键决定、识别的风险和下周的优先事项。',
+            '**Format：** Markdown，四个部分（摘要、决定、风险、下周），每个部分3-5个要点，最多300个字。',
+          ],
+        },
+        example2: {
+          title: '案例2：代码审查反馈',
+          content: [
+            '**Role：** 您是审查代码的资深后端工程师，关注可维护性、性能和安全性。',
+            '**Task：** 审查这个代码块并识别任何问题、建议改进，并对整体质量进行评级。',
+            '**Format：** Markdown，三个部分（发现的问题、改进、质量评级1-5），代码块用于示例。',
+          ],
+        },
+        example3: {
+          title: '案例3：客户电子邮件草稿',
+          content: [
+            '**Role：** 您是起草对客户投诉的专业、同情回复的客户成功经理。',
+            '**Task：** 解决他们的关注点，在适当时道歉，解释解决方案，并恢复信心。',
+            '**Format：** 电子邮件格式（问候语、2-3个段落、关闭语），专业语气，150-250个字。',
+          ],
+        },
+        example4: {
+          title: '案例4：会议记录到行动项',
+          content: [
+            '**Role：** 您是从原始会议记录中提取行动项的项目协调员。',
+            '**Task：** 识别做出的决定、讨论的风险以及具有所有者和截止日期的后续步骤。',
+            '**Format：** Markdown，包含三个部分（决定、风险、行动项），行动项作为带受理人和截止日期的复选框列表。',
+          ],
+        },
+        example5: {
+          title: '案例5：为非技术用户的产品文档',
+          content: [
+            '**Role：** 您是向非技术用户以简单语言解释功能的技术作者。',
+            '**Task：** 解释此功能的作用、他们可能使用它的原因，以及如何在三个简单步骤中使用它。',
+            '**Format：** 1句话介绍、3个带示例的编号步骤、1句话结论。避免行话。',
+          ],
+        },
+        combiningRTF: {
+          id: 'combining-rtf',
+          title: '将RTF与其他框架结合',
+          content: [
+            '**应该通过将RTF视为轻量级默认值并在约束增加时切换到更重的框架来结合RTF与其他框架。** 一个实际的模式是：',
+          ],
+          items: [
+            '对于大多数需要快速清晰结构的新任务，从RTF开始。',
+            '当需要严格的模式、示例和约束时，切换到SPECS。',
+            '当想要最终答案之前的显式推理步骤时，使用TRACE或APE。',
+            '当受众和语气是中心时，使用CRAFT等创意框架。',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '常见RTF错误',
+          mistakes: [
+            {
+              mistake: '模糊的Role — "您是一个乐于助人的助手"',
+              problem: '"乐于助人的助手"是默认的。它什么都不增加。模糊的角色意味着模型选择自己的角色，在运行之间变化。',
+              fix: '要具体："您是一位资深后端工程师"或"您是一位针对首席财务官的B2B营销经理"。角色越具体，输出越一致。',
+            },
+            {
+              mistake: 'Task和Format合并成一个团块',
+              problem: '"用要点总结这次会议"混合了任务和格式。当它们合并时，两者都缺乏足够的具体性。',
+              fix: '分离它们：Task ="识别决定、风险和后续步骤。" Format ="Markdown，3个部分，每个3-5个要点，总共250个字。"',
+            },
+            {
+              mistake: '完全缺少Format',
+              problem: '没有显式的Format，模型默认为散文段落 — 这可能不是您需要的。这是"AI给我一堵文字"的#1原因。',
+              fix: '始终指定Format。即使"Format：3个要点"也比什么都没有好。',
+            },
+            {
+              mistake: '对需要受众/语气控制的任务使用RTF',
+              problem: 'RTF没有受众或语气字段。如果您正在编写语音重要的面向客户的内容，RTF迫使您将语气塞入Role或Format字段中，这会变得混乱。',
+              fix: '当语音重要时，切换到CRAFT（具有显式受众和语气字段）或CO-STAR（将Style和Audience分开）。',
+            },
+            {
+              mistake: '从不将RTF提示词保存为模板',
+              problem: '每周从头开始编写相同的"会议摘要"RTF提示词会浪费时间并引入不一致。',
+              fix: '在PromptQuorum中将有效的RTF提示词保存为命名模板。通过仅交换输入数据来重复使用它们。',
+            },
+          ],
+        },
+        promptquorumImplementation: {
+          id: 'promptquorum-implementation',
+          title: 'PromptQuorum如何实现RTF框架',
+          content: [
+            '**PromptQuorum是一个多模型AI分发工具，将RTF框架作为其内置提示词结构之一包含在内，以便用户可以以一致的方式应用Role-Task-Format提示词。** 当您在PromptQuorum内选择RTF选项时，界面公开Role、Task和Format的字段，并将它们组合成单一的形成良好的指令。',
+            '在PromptQuorum中，RTF框架让您能够：',
+          ],
+          items: [
+            '填入Role、Task和Format一次，并将相同的结构化提示词发送到25个以上的模型，如GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro以及通过Ollama或LM Studio配置的本地模型。',
+            '将RTF提示词保存为重复工作流的模板 — 例如"每周状态摘要"、"客户回复草稿"或"错误报告摘要"。',
+            '在您的团队中共享RTF模板，即使非专家也可以创建产生一致、结构化输出的提示词。',
+            '在多个模型之间并排A/B测试相同的RTF提示词，以找到最适合您的用例的模型。',
+          ],
+        },
+        relatedReading: {
+          items: [
+            { title: 'Chain-of-Thought提示词', url: '/prompt-engineering/chain-of-thought-prompting?lang=zh' },
+            { title: '什么是提示词工程', url: '/prompt-engineering/what-is-prompt-engineering?lang=zh' },
+            { title: 'Zero-Shot vs Few-Shot提示词', url: '/prompt-engineering/zero-shot-vs-few-shot?lang=zh' },
+            { title: '约束提示词', url: '/prompt-engineering/constrained-prompting?lang=zh' },
+            { title: '如何选择合适的模型：GPT-5.5 vs Claude vs Gemini', url: '/prompt-engineering/gpt-claude-gemini-which-model?lang=zh' },
+            { title: 'CO-STAR框架', url: '/prompt-engineering/co-star-framework?lang=zh' },
+          ],
+        },
+        sources: {
+          items: [
+            'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
+            'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
+            'OpenAI. (2026). Prompt Engineering Best Practices. [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2026). Prompt Engineering — Claude API Documentation. [https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)',
+          ],
+        },
+      },
     },
 };
