@@ -340,6 +340,15 @@ export const article: Record<Language, PEArticle> = {
       readTime: '12 min Lesezeit',
       seoTitle: 'RAG erklärt 2026: Retrieval-Augmented Generation Leitfaden',
       metaDescription: 'RAG erklärt: 4-Stufen-Pipeline, optimale Chunk-Größen, Relevanz-Schwellenwerte, Vektor-DB-Vergleich. RAG vs Fine-Tuning Entscheidungsleitfaden.',
+      quickFacts: [
+        '4-Stufen-Pipeline: Aufnahme → Indexierung → Abruf → Generierung — jede Stufe ist unabhängig und kann separat aktualisiert werden',
+        'Optimale Chunk-Größe: 200–500 Wörter mit 10–20% Überlappung zwischen benachbarten Chunks',
+        'Relevanzschwelle: >0,7 Kosinus-Ähnlichkeit vor Übergabe an das LLM',
+        'RAG ist modellunabhängig: funktioniert mit jedem LLM — Cloud oder lokal (Ollama, LM Studio)',
+        'Datenschutz: sensible Daten bleiben in Ihrem eigenen Vektor-Store — das Modell absorbiert sie nie',
+        'RAG vor Fine-Tuning: RAG ist reversibel (Dokumente aktualisieren), Fine-Tuning ist dauerhaft (Parameter retrainieren)',
+        'Vektor-Datenbank-Optionen: Pinecone (verwaltet), Weaviate (Open-Source), Chroma (lokal), Milvus (Unternehmen)',
+      ],
       educationalLevel: 'Intermediate',
       primaryTerm: 'RAG',
       toc: [
@@ -405,6 +414,20 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', position: 8, name: 'Typischer Anwendungsfall', description: 'RAG: Unternehmens-Q&A, Support-Bots, Forschungsassistenten. Fine-Tuning: Rechtsdokumentverarbeitung, medizinische Kodierung.' },
         ],
       },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Vektor-Datenbank-Vergleich für RAG',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Verwaltete Cloud-Vektor-Datenbank, einfach zu starten, serverlos. Skaliert automatisch, kostet ca. 100–1.000 EUR/Monat je nach Nutzung. EU-Datenlokalisierung verfügbar.' },
+          { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Open-Source Vektor-Datenbank, flexibel, On-Premise oder Cloud. GraphQL-API, unterstützt Hybrid Search (Vektor + Schlüsselwort). Selbsthosting erfüllt DSGVO/BSI.' },
+          { '@type': 'ListItem', position: 3, name: 'Chroma', description: 'Leichte, lokal gehostete Vektor-Datenbank für Prototypen und kleine Projekte. Python-basiert, schnelle Einrichtung, kostenlos. Nicht für Produktionsskala gedacht.' },
+          { '@type': 'ListItem', position: 4, name: 'Milvus', description: 'Unternehmens-Vektor-Datenbank, hochleistungsfähig, Millionen von Vektoren. Cloud-gehostet oder selbstgehostet. Kostenlos (Open-Source), optionale kommerzielle Unterstützung.' },
+          { '@type': 'ListItem', position: 5, name: 'Qdrant', description: 'Moderne, aus Rust geschriebene Vektor-Datenbank mit erweiterten Filtermöglichkeiten. Unterstützt Payload-Filterung + Vektor-Ähnlichkeit kombiniert. On-Premise oder Cloud, kostenlos oder ca. 500–2.000 EUR/Monat.' },
+          { '@type': 'ListItem', position: 6, name: 'pgvector (PostgreSQL)', description: 'PostgreSQL-Erweiterung für Vektor-Speicherung, keine neue Datenbank nötig. Best für bestehende PostgreSQL-Deployments, reduziert Infrastruktur-Komplexität. Kostenlos, selbstgehostet.' },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -444,6 +467,10 @@ export const article: Record<Language, PEArticle> = {
             '**RAG kombiniert einen Retriever, der relevante Informationen findet, mit einem Generator, der die endgültige Antwort schreibt.** Der Retriever durchsucht eine Wissensdatenbank (wie indizierte PDFs, Webseiten oder interne Dokumente) anhand der Benutzerabfrage. Der Generator liest dann die abgerufenen Passagen und erstellt eine Antwort, die diese Inhalte zitiert oder widerspiegelt.',
             'Dies unterscheidet sich von einem einfachen Sprachmodellaufruf, bei dem das Modell allein aus seinen internen Parametern antwortet. In RAG "liest" das Modell bei jeder Frage aktuellen Kontext. Seit April 2026 ist RAG die Standard-Architektur für unternehmensweite KI-Systeme, die von geschützten Dokumenten, aktuellen Daten oder privaten Wissensdatenbanken antworten müssen.',
           ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'RAG ruft relevante Dokumente aus Ihrer Wissensdatenbank ab und übergibt sie dem LLM zusammen mit der Frage, sodass das Modell aus Ihren Daten antwortet, anstatt zu raten.' },
+            { type: 'in-plain-terms', text: 'Ohne RAG = Prüfung ohne Unterlagen (das Modell antwortet aus dem Gedächtnis, kann Dinge erfinden). Mit RAG = offene Prüfung (das Modell schlägt zuerst in Ihren Notizen nach). Könnte die Notizen immer noch falsch lesen, aber wenigstens nicht erfundene Fakten erfinden.' },
+          ],
         },
         whyItMatters: {
           title: 'Warum RAG wichtig ist',
@@ -456,6 +483,9 @@ export const article: Record<Language, PEArticle> = {
           title: 'Wie ein RAG-System funktioniert: Schritt für Schritt',
           content: [
             '**Ein typisches RAG-System durchläuft vier Hauptstufen: Aufnahme, Indexierung, Abruf und Generierung.** Jede Stufe kann unabhängig abgestimmt werden.',
+          ],
+          callouts: [
+            { type: 'info', label: 'Abruf ist der Engpass', text: 'Die meisten RAG-Fehler sind Abruffehler — die falschen Dokumente werden zurückgegeben, oder es werden keine Dokumente über den Schwellenwert hinaus zurückgegeben. Testen Sie den Retriever unabhängig auf 20 repräsentativen Abfragen, bevor Sie die vollständige Pipeline evaluieren. Wenn der Abruf defekt ist, wird das Verbessern des Generators nicht helfen.' }
           ],
           numberedItems: [
             'Aufnahme: Sie laden Dokumente (z. B. PDFs, Wissensdatenbank-Artikel, Tickets, Code) und teilen sie in Chunks, oft 200–1.000 Token. Metadaten wie Titel, Daten, Autoren oder Tags können angehängt werden.',
@@ -480,6 +510,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG und [Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=de) lösen unterschiedliche Probleme und funktionieren am besten kombiniert, nicht als Alternativen.** Verwenden Sie zuerst RAG. Fügen Sie Fine-Tuning nur hinzu, wenn Sie konsistente Verhaltensänderungen benötigen, die RAG durch Prompting nicht bieten kann.',
           ],
+          callouts: [
+            { type: 'info', label: 'RAG zuerst, Fine-Tuning später', text: 'RAG ist reversibel — aktualisieren Sie Ihren Dokumentenspeicher, Antworten ändern sich sofort, keine Retraining-Kosten. Fine-Tuning ist dauerhaft — es ändert die Modellparameter und erfordert einen neuen Trainingslauf zum Rückgängigmachen. Beginnen Sie mit RAG. Fügen Sie Fine-Tuning nur hinzu, wenn RAG durch Prompting allein keine konsistenten Verhaltensänderungen erzeugen kann.' }
+          ],
           columns: ['Faktor', 'RAG', 'Fine-Tuning'],
           rows: [
             { Faktor: 'Wissensquelle', RAG: 'Zur Abfragezeit aus Ihren Dokumenten abgerufen', 'Fine-Tuning': 'In Modellparametern beim Training eingebettet' },
@@ -490,6 +523,19 @@ export const article: Record<Language, PEArticle> = {
             { Faktor: 'Stil/Verhaltensänderung', RAG: 'Kann Modellverhalten nicht ändern', 'Fine-Tuning': 'Kann konsistenten Stil, Ton, Domain-Verhalten lehren' },
             { Faktor: 'Am besten für', RAG: 'Richtlinien, Produktdokumentation, aktuelle Daten, private Daten', 'Fine-Tuning': 'Festes Domain-Verhalten, enge stabile Aufgaben' },
             { Faktor: 'Typischer Anwendungsfall', RAG: 'Unternehmens-Q&A, Support-Bots, Forschungsassistenten', 'Fine-Tuning': 'Rechtsdokumentverarbeitung, medizinische Kodierung' },
+          ],
+        },
+        vectorDbTable: {
+          title: 'Vektor-Datenbank-Vergleich',
+          content: ['**Die Wahl der richtigen Vektor-Datenbank hängt von Ihrem Umfang, Datenlokalisierungsanforderungen und operativen Modell ab.** Die Tabelle unten deckt die sechs am weitesten verbreiteten Optionen ab (Stand 2026).'],
+          columns: ['Datenbank', 'Typ', 'Am besten für', 'EU-Datenlokalisierung', 'Selbstgehostet', 'Ungefähre Kosten'],
+          rows: [
+            { Datenbank: 'Pinecone', Typ: 'Verwaltete Cloud', 'Am besten für': 'Schneller Start, Produktionsskalierung mit minimalem Ops-Overhead', 'EU-Datenlokalisierung': 'EU-Region verfügbar', 'Selbstgehostet': 'Nein', 'Ungefähre Kosten': 'Kostenlos; ~70 $/Mo. Starter' },
+            { Datenbank: 'Weaviate', Typ: 'Open-Source / verwaltet', 'Am besten für': 'Flexibles Schema, hybride Suche, EU-Compliance', 'EU-Datenlokalisierung': 'Selbstgehostet oder EU-Cloud', 'Selbstgehostet': 'Ja', 'Ungefähre Kosten': 'Kostenlos (selbstgehostet); ab 25 $/Mo. verwaltet' },
+            { Datenbank: 'Chroma', Typ: 'Open-Source, lokal', 'Am besten für': 'Lokale Entwicklung, Prototyping, kleine Dokumentenmengen', 'EU-Datenlokalisierung': 'On-Premise (vollständige Kontrolle)', 'Selbstgehostet': 'Ja', 'Ungefähre Kosten': 'Kostenlos' },
+            { Datenbank: 'Milvus', Typ: 'Open-Source / verwaltet', 'Am besten für': 'Arbeitslasten im Milliarden-Maßstab für Unternehmen', 'EU-Datenlokalisierung': 'Selbstgehostet oder EU-Cloud (Zilliz)', 'Selbstgehostet': 'Ja', 'Ungefähre Kosten': 'Kostenlos (selbstgehostet); ab 65 $/Mo. verwaltet' },
+            { Datenbank: 'Qdrant', Typ: 'Open-Source / verwaltet', 'Am besten für': 'Hochleistungs-gefilterte Vektorsuche', 'EU-Datenlokalisierung': 'EU-Region verfügbar; selbstgehostet', 'Selbstgehostet': 'Ja', 'Ungefähre Kosten': 'Kostenlos (selbstgehostet); ab 25 $/Mo. verwaltet' },
+            { Datenbank: 'pgvector', Typ: 'PostgreSQL-Erweiterung', 'Am besten für': 'Teams, die bereits PostgreSQL verwenden, vermeiden neue Infrastruktur', 'EU-Datenlokalisierung': 'Überall dort, wo PostgreSQL läuft', 'Selbstgehostet': 'Ja', 'Ungefähre Kosten': 'Kostenlos (PostgreSQL-Erweiterung)' },
           ],
         },
         example: {
@@ -508,6 +554,9 @@ export const article: Record<Language, PEArticle> = {
           title: 'RAG in Multi-Model-Workflows',
           content: [
             '**RAG wird noch leistungsfähiger, wenn es mit mehreren Modellen und strukturiertem Prompting kombiniert wird.** Sie können:',
+          ],
+          callouts: [
+            { type: 'info', label: 'Gleiche Dokumente, unterschiedliche Antworten', text: 'Verschiedene Modelle nutzen abgerufene Kontexte unterschiedlich. Anweisungs-optimierte Modelle neigen dazu, über abgerufene Texte hinauszugehen. Modelle, die für Grundung optimiert sind, sagen häufiger „nicht in den bereitgestellten Dokumenten enthalten". Testen Sie Ihre RAG-Pipeline mit mehreren Modellen mit PromptQuorum, um herauszufinden, welches Ihre Domäne am besten verarbeitet.' }
           ],
           items: [
             'Ein Modell oder Service zum Einbetten und Abrufen von Dokumenten und ein anderes zur Generierung von Antworten verwenden.',
@@ -531,16 +580,39 @@ export const article: Record<Language, PEArticle> = {
         },
         commonMistakes: {
           title: 'Häufige Fehler',
-          items: [
-            '**RAG für Wissen verwenden, das das Modell bereits gut hat:** Kontext abrufen, den das Modell genau kennt (z. B. allgemeine Python-Syntax), fügt Token und Latenzzeit hinzu, ohne die Qualität zu verbessern. Reservieren Sie RAG für domänenspezifische, proprietäre oder aktuelle Informationen.',
-            '**Chunk-Größe zu klein:** Chunks unter 100 Wörter verlieren häufig den umgebenden Kontext, der nötig ist, um eine Tatsache zu verstehen. Ein Richtliniensatz ohne seinen umgebenden Absatz ist häufig mehrdeutig. Verwenden Sie 200–500-Wort-Chunks als Basislinie.',
-            '**Kein Relevanzschwellenwert:** Alle abgerufenen Dokumente an das LLM zu übergeben, unabhängig von der Ähnlichkeitsbewertung, zwingt das Modell, mit irrelevantem Kontext zu arbeiten. Legen Sie eine minimale Ähnlichkeitsbewertung fest (>0,7 Kosinus-Ähnlichkeit) und geben Sie "nicht gefunden" zurück, wenn keine Chunks den Schwellenwert überschreiten.',
-            '**Abruf- und Generierungsqualität nicht separat testen:** Wenn Ihre Antworten falsch sind, kann der Fehler beim Abruf (falsche Dokumente zurückgegeben) oder bei der Generierung (Modell-Reasoning) liegen. Testen Sie den Retriever anhand von 20 repräsentativen Abfragen, bevor Sie die gesamte Pipeline evaluieren.',
-            '**Metadaten-Filter ignorieren:** Große Dokumenten-Stores ohne Datums-, Abteilungs- oder Berechtigungsfilter geben veraltete oder irrelevante Inhalte zurück. Fügen Sie Metadaten bei der Aufnahme an und wenden Sie Filter beim Abruf an.',
+          mistakes: [
+            {
+              mistake: 'RAG für Wissen verwenden, das das Modell bereits gut hat',
+              problem: 'Kontext abrufen, den das Modell bereits genau kennt (z. B. allgemeine Python-Syntax), fügt Token und Latenzzeit hinzu, ohne Qualität zu verbessern.',
+              fix: 'Reservieren Sie RAG für domänenspezifische, proprietäre oder aktuelle Informationen. Testen Sie, ob das Modell ohne RAG korrekt antwortet — wenn ja, fügt RAG Kosten hinzu, aber keinen Mehrwert.'
+            },
+            {
+              mistake: 'Chunk-Größe zu klein (unter 100 Wörter)',
+              problem: 'Chunks unter 100 Wörtern verlieren häufig den umgebenden Kontext, der nötig ist, um eine Tatsache zu verstehen. Ein Richtliniensatz ohne seinen umgebenden Absatz ist häufig mehrdeutig.',
+              fix: 'Verwenden Sie 200–500-Wort-Chunks als Basislinie. Fügen Sie 10–20% Überlappung zwischen benachbarten Chunks hinzu, um Kontext über Chunk-Grenzen zu bewahren.'
+            },
+            {
+              mistake: 'Kein Relevanzschwellenwert',
+              problem: 'Alle abgerufenen Dokumente an das LLM zu übergeben, unabhängig von der Ähnlichkeitsbewertung, zwingt das Modell, mit irrelevantem Kontext zu arbeiten, und erhöht das Halluzinationsrisiko.',
+              fix: 'Legen Sie eine minimale Ähnlichkeitsbewertung fest (>0,7 Kosinus-Ähnlichkeit). Geben Sie „nicht in der Wissensdatenbank gefunden" zurück, wenn keine Chunks den Schwellenwert überschreiten — zwingen Sie das Modell nicht, aus irrelevantem Inhalt zu antworten.'
+            },
+            {
+              mistake: 'Abruf- und Generierungsqualität nicht separat testen',
+              problem: 'Wenn Ihre Antworten falsch sind, kann der Fehler beim Abruf (falsche Dokumente) oder bei der Generierung (Modell-Reasoning) liegen. Ohne separates Testen können Sie das Problem nicht isolieren.',
+              fix: 'Testen Sie den Retriever anhand von 20 repräsentativen Abfragen, bevor Sie die gesamte Pipeline evaluieren. Überprüfen Sie: Werden die richtigen Dokumente zurückgegeben? Enthalten sie die Antwort? Evaluieren Sie erst dann den Generator.'
+            },
+            {
+              mistake: 'Metadaten-Filter ignorieren',
+              problem: 'Große Dokumenten-Stores ohne Datums-, Abteilungs- oder Berechtigungsfilter geben veraltete oder irrelevante Inhalte zurück — besonders wenn Dokumente aus verschiedenen Zeiträumen oder Abteilungen in Konflikt stehen.',
+              fix: 'Fügen Sie Metadaten bei der Aufnahme an (Datum, Autor, Abteilung, Berechtigungen). Wenden Sie Filter beim Abruf an, um nur relevante, autorisierte und aktuelle Dokumente zurückzugeben.'
+            },
           ],
         },
         howToStart: {
           title: 'RAG implementieren',
+          callouts: [
+            { type: 'info', label: 'Der Hybrid-Search-Vorteil', text: 'BM25-Keyword-Suche und Vektor-Ähnlichkeitssuche haben komplementäre Stärken. Hybrid-Suche (beides kombiniert mit erneuter Rangierung) übertrifft häufig entweder allein — besonders für Abfragen, die exakte Begriffe mit semantischer Bedeutung mischen. Die meisten Vektor-Datenbanken (Weaviate, Milvus, Qdrant) unterstützen Hybrid-Suche nativ.' }
+          ],
           numberedItems: [
             '**Identifizieren Sie die Wissensquellen, auf die die KI antworten muss (Dokumente, PDFs, Datenbanken, APIs).** Seit April 2026 sind die am häufigsten verwendeten Quellen interne PDFs, Wissensdatenbank-Artikel und Produktdokumentation. Für Kundensupport: FAQs, Produktdokumentation und frühere Ticket-Lösungen. Für Forschung: Ihr Papier-Repository und externe Datenbanken.',
             '**Konvertieren Sie statische Dokumente in suchbare Embeddings mit einer Vektor-Datenbank (Pinecone, Weaviate, Chroma, Milvus).** Dieser Prozess teilt Dokumente in Chunks (Absätze oder Sätze), wandelt jeden in einen Vektor um (numerische Bedeutungsdarstellung) und speichert ihn für schnelle semantische Suche.',
@@ -599,6 +671,15 @@ export const article: Record<Language, PEArticle> = {
       readTime: '10 min de lecture',
       seoTitle: 'RAG expliqué 2026 : guide Retrieval-Augmented Generation',
       metaDescription: 'RAG expliqué : pipeline 4 étapes, tailles de chunks optimales, seuils de pertinence, comparaison bases vectorielles. Guide de décision RAG vs fine-tuning.',
+      quickFacts: [
+        'Pipeline 4 étapes : Ingestion → Indexation → Récupération → Génération — chaque étape est indépendante et améliorable',
+        'Taille optimale : 200–500 mots par fragment avec 10–20% chevauchement entre fragments adjacents',
+        'Seuil de pertinence : >0.7 similarité cosinus avant envoi au LLM',
+        'RAG est agnostique modèle : fonctionne avec n\'importe quel LLM — cloud ou local (Ollama, LM Studio)',
+        'Confidentialité : données sensibles restent dans votre vecteur-store — le modèle ne les absorbe jamais',
+        'RAG avant fine-tuning : RAG est réversible (mettez à jour les docs), fine-tuning est permanent (retrainement des paramètres)',
+        'Options bases vectorielles : Pinecone (géré), Weaviate (open-source), Chroma (local), Milvus (entreprise)',
+      ],
       educationalLevel: 'Intermediate',
       primaryTerm: 'RAG',
       toc: [
@@ -664,6 +745,20 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', position: 8, name: 'Cas d\'usage courant', description: 'RAG : Q&A entreprise, bots support, assistants recherche. Fine-Tuning : documents légaux, codage médical.' },
         ],
       },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Comparaison des bases de données vectorielles pour RAG',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Base vectorielle gérée (cloud), idéale pour prototypage et MVP sans gestion ops. Disponible en eu-west-1 pour résidence EU. Coûte environ 100–1.000€/mois selon l\'usage.' },
+          { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Vecteur open-source pour déploiements d\'entreprise avec recherche hybride (vecteur + mots-clés). Auto-hébergée (Kubernetes), gratuit avec coûts infra 500–5.000€/an. Conforme RGPD/BSI.' },
+          { '@type': 'ListItem', position: 3, name: 'Chroma', description: 'Vecteur léger en Python, gratuit, idéal pour prototypes et apps locales. Pas de déploiement ops. Résidence EU garantie (local).' },
+          { '@type': 'ListItem', position: 4, name: 'Milvus', description: 'Haute performance (millions de vecteurs, latence <100ms), open-source gratuit ou 500–2.000€/mois support. Auto-hébergée via Kubernetes/Docker. Scalable entreprise.' },
+          { '@type': 'ListItem', position: 5, name: 'Qdrant', description: 'Vecteur moderne écrit en Rust, support filtrage avancé + vecteurs. Auto-hébergée (gratuit) ou cloud (500–2.000€/mois). Performance élevée, moderne.' },
+          { '@type': 'ListItem', position: 6, name: 'pgvector (PostgreSQL)', description: 'Extension PostgreSQL pour vecteurs, intégre stockage vecteur + requêtes SQL. Gratuit (extension), utilise votre PostgreSQL existant. Simplifie infra.' },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -701,6 +796,10 @@ export const article: Record<Language, PEArticle> = {
             '**RAG combine un retriever qui trouve les informations pertinentes avec un générateur qui rédige la réponse finale.** Le retriever interroge une base de connaissances (PDFs indexés, pages web, documents internes) selon la requête. Le générateur lit les passages et produit une réponse qui cite ou reflète ce contenu.',
             'Contrairement à un appel direct au modèle où celui-ci répond de ses paramètres seuls, RAG fait "lire" au modèle du contexte frais à chaque question. Depuis avril 2026, c\'est l\'architecture standard pour les systèmes IA d\'entreprise ayant besoin de répondre depuis des documents protégés ou des données en temps réel.',
           ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'RAG récupère des documents pertinents de votre base de connaissances et les fournit au LLM avec la question, pour que le modèle réponde à partir de vos données au lieu de deviner.' },
+            { type: 'in-plain-terms', text: 'Sans RAG = examen à livre fermé (le modèle répond de mémoire, peut inventer). Avec RAG = examen à livre ouvert (le modèle consulte d\'abord vos notes). Peut toujours mal lire les notes, mais au moins n\'invente pas des faits.' },
+          ],
         },
         whyItMatters: {
           title: 'Pourquoi RAG est important',
@@ -714,6 +813,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**Quatre étapes principales : ingestion, indexation, récupération, génération.** Chacune peut être affinée indépendamment.',
           ],
+          callouts: [
+            { type: 'info', label: 'La récupération est le goulot', text: 'La qualité de RAG dépend 80% de la récupération. Un bon retriever avec un modèle faible donne meilleures résultats qu\'un mauvais retriever avec GPT-4o. Investissez dans le tuning de l\'indexation et des chunking.' },
+          ],
           numberedItems: [
             'Ingestion : charger documents (PDFs, articles, tickets, code), les fractionner. Métadonnées (titres, dates, auteurs, tags) optionnelles.',
             'Indexation : convertir chaque fragment en vecteur via un modèle d\'embedding, stocker en base vectorielle. Permet chercher du contenu sémantiquement similaire.',
@@ -726,6 +828,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG et [Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=fr) résolvent des problèmes différents et marchent mieux combinés.** Commencez par RAG. Ajoutez Fine-Tuning seulement si vous besoin de changements comportementaux stables que le prompting ne peut pas fournir.',
           ],
+          callouts: [
+            { type: 'info', label: 'RAG d\'abord, fine-tuning ensuite', text: 'RAG ajoute des connaissances (réversible : mettez à jour le vecteur-store). Fine-tuning change le comportement (permanent : réentraînement). Commencez toujours par RAG pour le contenu, puis fine-tuning seulement pour le style/ton.' },
+          ],
           columns: ['Facteur', 'RAG', 'Fine-Tuning'],
           rows: [
             { Facteur: 'Source de connaissance', RAG: 'Récupérée à l\'interrogation', 'Fine-Tuning': 'Intégrée au training' },
@@ -736,6 +841,20 @@ export const article: Record<Language, PEArticle> = {
             { Facteur: 'Changement comportement', RAG: 'Non', 'Fine-Tuning': 'Oui' },
             { Facteur: 'Meilleur pour', RAG: 'Données changeantes', 'Fine-Tuning': 'Comportement stable' },
             { Facteur: 'Cas d\'usage', RAG: 'Q&A, support bots', 'Fine-Tuning': 'Documents légaux' },
+          ],
+        },
+        vectorDbTable: {
+          title: 'Comparaison des bases de données vectorielles',
+          tableFormat: true,
+          content: ['**Choisir la bonne base vectorielle dépend de votre infrastructure, vos contraintes de latence, et vos exigences de conformité.** Voici les six options principales.'],
+          columns: ['Base de données', 'Type', 'Meilleur pour', 'Résidence EU', 'Auto-hébergé', 'Coût approximatif'],
+          rows: [
+            { 'Base de données': 'Pinecone', Type: 'Vecteur géré (cloud)', 'Meilleur pour': 'Prototypage rapide, MVP, sans ops', 'Résidence EU': 'Oui, région eu-west-1', 'Auto-hébergé': 'Non', 'Coût approximatif': '100–1.000€/mois selon usage' },
+            { 'Base de données': 'Weaviate', Type: 'Vecteur open-source', 'Meilleur pour': 'Déploiements d\'entreprise, recherche hybride', 'Résidence EU': 'Oui, auto-hébergé', 'Auto-hébergé': 'Oui (Kubernetes)', 'Coût approximatif': 'Gratuit + coûts infra (500–5.000€/an)' },
+            { 'Base de données': 'Chroma', Type: 'Vecteur léger', 'Meilleur pour': 'Prototypes, applications locales, démos', 'Résidence EU': 'Oui, local', 'Auto-hébergé': 'Oui (Python)', 'Coût approximatif': 'Gratuit' },
+            { 'Base de données': 'Milvus', Type: 'Vecteur haute performance', 'Meilleur pour': 'Millions de vecteurs, latence <100ms', 'Résidence EU': 'Oui, auto-hébergé', 'Auto-hébergé': 'Oui (Kubernetes, Docker)', 'Coût approximatif': 'Gratuit (open-source) ou 500–2.000€/mois (support)' },
+            { 'Base de données': 'Qdrant', Type: 'Vecteur moderne Rust', 'Meilleur pour': 'Filtrage avancé + vecteurs, performance élevée', 'Résidence EU': 'Oui, auto-hébergé', 'Auto-hébergé': 'Oui', 'Coût approximatif': 'Gratuit ou 500–2.000€/mois (cloud)' },
+            { 'Base de données': 'pgvector (PostgreSQL)', Type: 'Extension PostgreSQL', 'Meilleur pour': 'Vecteurs + requêtes SQL, simplifier infra', 'Résidence EU': 'Oui, utilise votre PostgreSQL', 'Auto-hébergé': 'Oui', 'Coût approximatif': 'Gratuit (extension) + PostgreSQL existant' },
           ],
         },
         example: {
@@ -754,6 +873,9 @@ export const article: Record<Language, PEArticle> = {
           title: 'RAG dans les workflows multi-modèles',
           content: [
             '**RAG devient plus puissant combiné avec plusieurs modèles et prompting structuré.**',
+          ],
+          callouts: [
+            { type: 'info', label: 'Mêmes documents, réponses différentes', text: 'Tester le même prompt RAG sur GPT-4o, Claude Opus 4.7, et Gemini 2.0 Pro avec le même vecteur-store. Vous verrez: différentes longueurs, styles, utilisation du contexte. PromptQuorum permet router une même requête vers plusieurs modèles et comparer.' },
           ],
           items: [
             'Un modèle pour embedding/récupération, un autre pour génération de réponse.',
@@ -777,16 +899,19 @@ export const article: Record<Language, PEArticle> = {
         },
         commonMistakes: {
           title: 'Erreurs courantes',
-          items: [
-            '**RAG pour ce que le modèle sait déjà :** contexte connu gaspille tokens. Réservez-le aux données domaine-spécifiques, propriétaires ou récentes.',
-            '**Fragments trop petits :** <100 mots perdent contexte. Une phrase seule est ambiguë. 200–500 mots de base.',
-            '**Pas de seuil de pertinence :** tout passer au LLM force sur du bruit. Seuil 0.7, sinon "non trouvé".',
-            '**Ne pas tester retrieval vs génération séparément :** si erreurs, d\'où viennent-elles ? Testez retriever sur 20 requêtes avant évaluer tout.',
-            '**Ignorer métadonnées :** grandes bases sans filtres retournent du vieil ou faux contenu. Métadonnées à ingestion, filtres à récupération.',
+          mistakes: [
+            { mistake: 'Utiliser RAG pour ce que le modèle sait déjà', problem: 'Contexte redondant gaspille tokens et ralentit réponses sans bénéfice', fix: 'Réservez RAG aux données domaine-spécifiques, propriétaires, ou très récentes que le modèle ne peut pas connaître.' },
+            { mistake: 'Fragments trop petits (< 100 mots)', problem: 'Perte de contexte, fragments ambigus, le modèle perd la cohérence du document original', fix: 'Utilisez 200–500 mots par fragment avec 10–20% chevauchement; testez sur requêtes représentatives.' },
+            { mistake: 'Pas de seuil de pertinence', problem: 'Tous les fragments passent au LLM, y compris du bruit sémantique, forçant le modèle à démêler signal/bruit', fix: 'Établissez un seuil minimum (>0.7 similarité cosinus); fragments sous le seuil déclenchent "non trouvé".' },
+            { mistake: 'Ne pas tester retrieval vs génération séparément', problem: 'Impossible de diagnostiquer si erreurs viennent du retriever ou du générateur', fix: 'Évaluez retriever sur 20+ requêtes représentatives d\'abord, générez ensuite, puis testez ensemble.' },
+            { mistake: 'Ignorer les métadonnées (dates, auteurs, types)', problem: 'Grandes bases sans filtres retournent du contenu périmé, archivé, ou en conflit', fix: 'Capturez métadonnées à l\'ingestion; utilisez filtres à la récupération (date, type doc, permissions).' },
           ],
         },
         howToStart: {
           title: 'Implémenter RAG',
+          callouts: [
+            { type: 'info', label: 'L\'avantage de la recherche hybride', text: 'Combinez recherche vectorielle (sémantique) + BM25 (mots-clés). Weaviate et Qdrant supportent nativement. Requête "contrat client 2024" : sémantique attrape paragraphes, BM25 attrape la date exacte. Ensemble = meilleur rappel.' },
+          ],
           numberedItems: [
             '**Identifier sources (docs, PDFs, APIs)** dont l\'IA répond. Support : FAQs, docs produit, anciens tickets. Recherche : vos repos d\'articles, sources externes.',
             '**Convertir en embeddings avec base vectorielle (Pinecone, Weaviate, Chroma, Milvus).** Fractionner, vectoriser, stocker. Permet cherche rapide sémantique.',
@@ -843,6 +968,15 @@ export const article: Record<Language, PEArticle> = {
       readTime: '12分で読める',
       seoTitle: 'RAG解説2026：AIの回答を実データに基づかせる完全ガイド',
       metaDescription: 'RAG解説：Retrieval-Augmented Generationが幻覚を減らし、回答を最新に保ち、機密データを保護する仕組み。4段階パイプライン、最適チャンクサイズ、ベクトルDB比較、RAG vs ファインチューニング判断ガイド付き。',
+      quickFacts: [
+        '4段階パイプライン：取得 → 索引化 → 検索 → 生成 — 各段階は独立で改善可能',
+        '最適チャンクサイズ：200～500単語で隣接チャンク間10～20%オーバーラップ',
+        'シンプルに：>0.7コサイン類似度前にモデルにチャンク渡し',
+        'RAG はモデル非依存：任意のLLM で動く — クラウドまたはローカル（Ollama、LM Studio）',
+        'プライバシー保護：機密データはベクトルストアに留まる — モデルは決して吸収しない',
+        'RAG before ファインチューニング：RAG は可逆（ドキュメント更新）、ファインチューニングは永続（パラメータ再訓練）',
+        'ベクトルDB選択肢：Pinecone（マネージド）、Weaviate（オープンソース）、Chroma（ローカル）、Milvus（エンタープライズ）',
+      ],
       educationalLevel: 'Intermediate',
       primaryTerm: 'RAG',
       toc: [
@@ -908,6 +1042,20 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', position: 8, name: '典型的なユースケース', description: 'RAG：エンタープライズQ&A、サポートボット、リサーチアシスタント。ファインチューニング：法律文書処理、医療コーディング。' },
         ],
       },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'RAG 用ベクトルデータベース比較',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'マネージドクラウドベクトル、素早い開始、サーバーレス。自動スケール、月 100～1,000€ 。EU データレジデンシー利用可（eu-west-1）。' },
+          { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'オープンソースベクトルDB、ハイブリッド検索（ベクトル+キーワード）対応。Kubernetes セルフホスト、無料でインフラ 500～5,000€/年。GDPR/BSI 準拠。' },
+          { '@type': 'ListItem', position: 3, name: 'Chroma', description: 'Python ベースの軽量ベクトルDB、無料、プロトタイプ・ローカルアプリ向け。運用不要、セットアップ迅速。本番規模は想定外。' },
+          { '@type': 'ListItem', position: 4, name: 'Milvus', description: '高性能ベクトルDB、数百万ベクトル、<100ms 遅延。Kubernetes/Docker セルフホスト、無料（オープンソース）または月 500～2,000€（サポート）。スケーラブル。' },
+          { '@type': 'ListItem', position: 5, name: 'Qdrant', description: 'Rust で実装された最新ベクトルDB、高度なペイロード フィルタリング。高性能、セルフホスト無料またはクラウド月 500～2,000€。' },
+          { '@type': 'ListItem', position: 6, name: 'pgvector（PostgreSQL）', description: 'PostgreSQL ベクトル拡張、SQL+ベクトル統合。既存 PostgreSQL に無料追加、インフラ簡素化、セルフホスト。' },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -943,6 +1091,11 @@ export const article: Record<Language, PEArticle> = {
           title: 'RAGとは何か',
           content: [
             '**RAG は関連情報を見つけるレトリバーと、その情報を使って最終回答を執筆するジェネレータを組み合わせます。** レトリバーはユーザークエリに基づいて知識ベース（インデックス付き PDF、ウェブページ、内部ドキュメント）を検索します。ジェネレータはそれから取得された通路を読み、そのコンテンツを引用または反映した回答を生成します。',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'RAG は知識ベースから関連ドキュメントを取得し、それらを質問と共にLLMに提供します。モデルは推測ではなく、あなたのデータから応答します。' },
+            { type: 'in-plain-terms', text: 'RAG なし = クローズドブック試験（モデルは記憶から答える、詳細を発明可能）。RAG あり = オープンブック（モデルは最初にノートを参照）。ノートを誤読しても、少なくとも事実を発明しない。' },
+          ],
             'これはモデルがその内部パラメータのみから応答する単純な言語モデル呼び出しとは異なります。RAG では、モデルは質問のたびに新しいコンテキストを「読みます」。2026 年 4 月時点で、RAG はエンタープライズ AI システムが保護ドキュメント、最新データ、プライベート知識ベースから応答する場合の標準アーキテクチャです。',
           ],
         },
@@ -958,6 +1111,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**典型的な RAG システムは 4 つの主段階を実行：取得、索引化、検索、生成。** 各段階は独立して調整可能です。',
           ],
+          callouts: [
+            { type: 'info', label: '検索がボトルネック', text: 'RAG の品質は 80%が検索に依存。優れたレトリバーと弱いモデル = 弱いレトリバーと GPT-4o より良い結果。索引化とチャンク化のチューニングに時間をかけてください。' },
+          ],
           numberedItems: [
             '取得：ドキュメント（PDF、知識ベース記事、チケット、コード）を読み込み、チャンク化。メタデータ（タイトル、日付、作成者、タグ）を附属させることができます。',
             '索引化：各チャンクを埋め込みモデルでベクトル表現に変換し、ベクトルデータベースまたは検索インデックスに保存。新しいクエリに対してセマンティックに類似したコンテンツを検索。',
@@ -969,6 +1125,9 @@ export const article: Record<Language, PEArticle> = {
           title: 'RAG vs ファインチューニング',
           content: [
             '**RAG と [ファインチューニング](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=ja) は異なる問題を解決し、組み合わせが最適です。** 最初に RAG から始めます。プロンプトでは実現できない一貫した動作変更が必要な場合のみファインチューニングを追加してください。',
+          ],
+          callouts: [
+            { type: 'info', label: 'RAG 優先、その後ファインチューニング', text: 'RAG は知識を追加（可逆：ベクトルストア更新）。ファインチューニングは動作を変更（永続：再訓練）。コンテンツには常に RAG を使用、スタイル/トーンにのみファインチューニング。' },
           ],
           columns: ['要素', 'RAG', 'ファインチューニング'],
           rows: [
@@ -994,10 +1153,27 @@ export const article: Record<Language, PEArticle> = {
             'この場合、モデルは実際のポリシードキュメントに固定され、情報が欠けている時の対応が明確です。',
           ],
         },
+        vectorDbTable: {
+          title: 'ベクトルデータベース比較表',
+          tableFormat: true,
+          content: ['**正しいベクトルデータベースを選ぶことは、インフラ、レイテンシ制約、コンプライアンス要件に依存します。** 以下は 6 つの主要選択肢です。'],
+          columns: ['データベース', 'タイプ', '最適用途', 'EU データ拠点', 'セルフホスト', '概算コスト'],
+          rows: [
+            { 'データベース': 'Pinecone', タイプ: 'マネージド ベクトル（クラウド）', '最適用途': '素早いプロトタイピング、MVP、運用負荷最小', 'EU データ拠点': 'はい、eu-west-1', 'セルフホスト': 'いいえ', '概算コスト': '月 100～1,000€（使用量別）' },
+            { 'データベース': 'Weaviate', タイプ: 'ベクトル オープンソース', '最適用途': 'エンタープライズデプロイメント、ハイブリッド検索', 'EU データ拠点': 'はい、セルフホスト', 'セルフホスト': 'はい（Kubernetes）', '概算コスト': '無料 + インフラ（年 500～5,000€）' },
+            { 'データベース': 'Chroma', タイプ: 'ベクトル 軽量', '最適用途': 'プロトタイプ、ローカルアプリケーション、デモ', 'EU データ拠点': 'はい、ローカル', 'セルフホスト': 'はい（Python）', '概算コスト': '無料' },
+            { 'データベース': 'Milvus', タイプ: 'ベクトル 高性能', '最適用途': '数百万ベクトル、<100ms 遅延', 'EU データ拠点': 'はい、セルフホスト', 'セルフホスト': 'はい（Kubernetes、Docker）', '概算コスト': '無料（オープンソース）または月 500～2,000€（サポート）' },
+            { 'データベース': 'Qdrant', タイプ: 'ベクトル 最新 Rust', '最適用途': '高度なフィルタリング + ベクトル、高性能', 'EU データ拠点': 'はい、セルフホスト', 'セルフホスト': 'はい', '概算コスト': '無料または月 500～2,000€（クラウド）' },
+            { 'データベース': 'pgvector（PostgreSQL）', タイプ: 'PostgreSQL 拡張', '最適用途': 'ベクトル + SQL クエリ、インフラ簡素化', 'EU データ拠点': '既存 PostgreSQL を使用', 'セルフホスト': 'はい', '概算コスト': '無料（拡張）+ 既存 PostgreSQL' },
+          ],
+        },
         multiModel: {
           title: 'マルチモデルワークフローでのRAG',
           content: [
             '**RAG は複数モデルと構造化プロンプティングと組み合わせるとさらに強力になります。**',
+          ],
+          callouts: [
+            { type: 'info', label: '同じドキュメント、異なる回答', text: '同じ RAG プロンプトを GPT-4o、Claude Opus 4.7、Gemini 2.0 Pro で同じベクトルストアに対して実行してみてください。長さ・スタイル・コンテキスト活用が異なります。PromptQuorum は同じクエリを複数モデルにルーティングして比較を可能にします。' },
           ],
           items: [
             'ドキュメント埋め込み・検索に 1 つのモデル、回答生成に別のモデル使用。',
@@ -1021,16 +1197,19 @@ export const article: Record<Language, PEArticle> = {
         },
         commonMistakes: {
           title: 'よくある間違い',
-          items: [
-            '**モデルが既に良く知っている知識に RAG を使用：** モデルが正確に知っているコンテンツ取得（例：一般的な Python 構文）はトークンと遅延を加えるだけ。ドメイン固有、独占的、最新情報に RAG を予約します。',
-            '**チャンク化がすぎ小さい：** 100 単語未満のチャンクは周囲のコンテキストを失い、事実理解に必要。ポリシー文を周囲の段落なしでは曖昧なことが多い。200～500 単語をベースラインに。',
-            '**関連性しきい値なし：** すべての取得ドキュメントを類似度スコア関係なく LLM に渡すと、無関係コンテキストでの作業を強制。最小スコア（>0.7 コサイン類似度）を設定、ドキュメントが閾値を超えないなら「見つかりません」返す。',
-            '**検索品質と生成品質を分離テストしない：** 回答が間違っていても、エラーが検索（間違ったドキュメント）か生成（モデル推論）か不明。フルパイプライン評価前に 20 代表クエリで検索機をテスト。',
-            '**メタデータフィルタを無視：** 大きなドキュメントストアも日付・部門・権限フィルタなしでは陳腐化または無関係コンテンツを返す。取得時にメタデータを附属、検索時にフィルタを適用。',
+          mistakes: [
+            { mistake: 'モデルが既に知っている知識に RAG を使用', problem: 'モデルが正確に知っているコンテンツ（例：Python 標準ライブラリ）取得は、トークン消費と遅延が増すだけで価値がない', fix: 'RAG をドメイン固有・独占的・最新データに制限してください。一般知識は LLM パラメータに十分。' },
+            { mistake: 'チャンク化が小さすぎる（<100 単語）', problem: '周囲コンテキスト喪失。ポリシー文は隣接段落なしでは曖昧、モデルが正確に理解できない', fix: '200～500 単語をベースラインに。あなたのドメインの代表クエリで実際にテストしてください。' },
+            { mistake: '関連性しきい値がない', problem: 'すべての取得ドキュメントが LLM に渡されるので無関連コンテキストでモデルに作業させ、ノイズと誤り増加', fix: '最小スコア設定：>0.7 コサイン類似度。閾値を超えないドキュメントは「知識ベースに見つかりません」を返す。' },
+            { mistake: '検索品質と生成品質を分離テストしない', problem: '回答が間違っていても原因（検索でドキュメント取得失敗 vs 生成でモデル推論失敗）が不明', fix: 'フルパイプライン評価前に 20+ 代表クエリで検索機を独立テストしてください。' },
+            { mistake: 'メタデータ（日付、所有者、権限）フィルタを使用していない', problem: '大規模ストアでも日付/部門/権限フィルタなしでは陳腐化・機密・アクセス不可コンテンツを返す', fix: '取得時にメタデータを附属、検索時にフィルタを適用。権限ベースアクセス制御（RBAC）を実装。' },
           ],
         },
         howToStart: {
           title: 'RAGの実装方法',
+          callouts: [
+            { type: 'info', label: 'ハイブリッド検索の利点', text: 'ベクトル検索（セマンティック）+ BM25（キーワード）を組み合わせてください。Weaviate と Qdrant はネイティブサポート。「顧客契約2024」というクエリ：セマンティックが段落を、BM25 が年号を捉える。合わせて = 優れたリコール。' },
+          ],
           numberedItems: [
             '**AI が応答する必要がある知識ソースを特定（ドキュメント、PDF、データベース、API）。** 2026 年 4 月現在、最も一般的なソースは内部 PDF、知識ベース記事、製品ドキュメント。カスタマーサポート：FAQ、製品ドキュメント、過去チケット解決。研究：論文リポジトリ、外部データベース。',
             '**静的ドキュメントをベクトルデータベース（Pinecone、Weaviate、Chroma、Milvus）で検索可能な埋め込みに変換。** プロセスはドキュメントを段落または文にチャンク化、各チャンクを意味の数値表現に変換、高速セマンティック検索に保存。',
@@ -1087,6 +1266,15 @@ export const article: Record<Language, PEArticle> = {
       readTime: '阅读约12分钟',
       seoTitle: 'RAG详解2026：检索增强生成4步骤管道与向量数据库指南',
       metaDescription: 'RAG详解：检索增强生成如何减少幻觉、保持回答最新、保护敏感数据。包含4步骤管道、向量数据库对比表（Pinecone/Weaviate/Chroma）和RAG vs微调决策指南。',
+      quickFacts: [
+        '4步骤管道：检索 → 索引 → 搜索 → 生成 — 每个阶段都可独立改进',
+        '最优分块大小：200-500字，相邻分块间10-20%重叠',
+        '相关性阈值：>0.7余弦相似度后才传给LLM',
+        'RAG模型无关：任何LLM都可用 — 云端或本地（Ollama、LM Studio）',
+        '隐私保护：敏感数据留在你的向量存储 — 模型永不吸收',
+        'RAG优先于微调：RAG可逆（更新文档），微调永久（重新训练参数）',
+        '向量数据库选项：Pinecone（托管）、Weaviate（开源）、Chroma（本地）、Milvus（企业级）',
+      ],
       educationalLevel: 'Intermediate',
       primaryTerm: 'RAG',
       toc: [
@@ -1152,6 +1340,20 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', position: 8, name: '典型用例', description: 'RAG：企业Q&A、支持机器人、研究助手。微调：法律文件处理、医学编码。' },
         ],
       },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'RAG向量数据库对比表',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Pinecone', description: '托管云端向量数据库，快速启动，无服务器。自动扩展，每月$100-1,000。EU数据驻留可用（eu-west-1）。' },
+          { '@type': 'ListItem', position: 2, name: 'Weaviate', description: '开源向量数据库，支持混合搜索（向量+关键词）。Kubernetes自托管，免费加基础设施$500-5,000/年。GDPR/BSI合规。' },
+          { '@type': 'ListItem', position: 3, name: 'Chroma', description: 'Python轻量级向量数据库，免费，适合原型和本地应用。无运维开销，快速部署。生产规模不推荐。' },
+          { '@type': 'ListItem', position: 4, name: 'Milvus', description: '高性能向量数据库，数百万向量，<100ms延迟。Kubernetes/Docker自托管，免费（开源）或每月$500-2,000（支持）。可扩展。' },
+          { '@type': 'ListItem', position: 5, name: 'Qdrant', description: 'Rust实现的现代向量数据库，高级有效负载过滤。高性能，自托管免费或云端$500-2,000/月。' },
+          { '@type': 'ListItem', position: 6, name: 'pgvector（PostgreSQL）', description: 'PostgreSQL向量扩展，整合向量+SQL查询。免费添加到现有PostgreSQL，简化基础设施，自托管。' },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -1189,6 +1391,10 @@ export const article: Record<Language, PEArticle> = {
             '**RAG结合一个查找相关信息的检索器和一个使用该信息撰写最终答案的生成器。** 检索器根据用户查询搜索知识库（索引PDF、网页、内部文档）。生成器随后阅读检索的段落并生成引用或反映该内容的答案。',
             '这不同于模型仅从其内部参数回答的简单语言模型调用。在RAG中，模型在每次提问时"阅读"新的上下文。截至2026年4月，RAG是企业AI系统需要从受保护文档、最新数据或私有知识库回答时的标准架构。',
           ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'RAG从你的知识库检索相关文档，并将其与问题一起提供给LLM，因此模型从你的数据而非猜测中回答。' },
+            { type: 'in-plain-terms', text: '无RAG = 闭卷考试（模型从记忆答题，可能编造细节）。有RAG = 开卷考试（模型先查看你的笔记）。仍可能读错笔记，但至少不会凭空造事实。' },
+          ],
         },
         whyItMatters: {
           title: '为什么RAG很重要',
@@ -1202,6 +1408,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**典型RAG系统执行4个主要阶段：取入、索引、检索、生成。** 每个阶段都可独立调优。',
           ],
+          callouts: [
+            { type: 'info', label: '检索是瓶颈', text: 'RAG质量80%取决于检索。优秀的检索器配弱模型 = 劣质检索器配GPT-4o。花时间优化索引和分块。' },
+          ],
           numberedItems: [
             '取入：加载文档（PDF、知识库文章、工单、代码）并将其分成块。可附加元数据如标题、日期、作者或标签。',
             '索引：通过嵌入模型将每个块转换为向量表示，存储在向量数据库或搜索索引中。允许系统为新查询查找语义相似内容。',
@@ -1213,6 +1422,10 @@ export const article: Record<Language, PEArticle> = {
           title: 'RAG vs 微调',
           content: [
             '**RAG和[微调](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=zh)解决不同问题，最适合组合使用。** 从RAG开始。仅当需要提示无法提供的一致行为变化时才添加微调。',
+          ],
+          callouts: [
+            { type: 'info', label: 'RAG优先，其次微调', text: 'RAG添加知识（可逆：更新向量存储）。微调改变行为（永久：重新训练）。总是先用RAG获取内容，仅用微调调整风格/语调。' },
+          ],
           ],
           columns: ['因素', 'RAG', '微调'],
           rows: [
@@ -1238,10 +1451,27 @@ export const article: Record<Language, PEArticle> = {
             '在第二种情况下，模型固定在你的实际政策文档，处理缺失信息的方式很清晰。',
           ],
         },
+        vectorDbTable: {
+          title: '向量数据库对比',
+          tableFormat: true,
+          content: ['**选择合适的向量数据库取决于基础设施、延迟约束和合规要求。** 以下是6个主要选项。'],
+          columns: ['数据库', '类型', '最适用于', 'EU数据驻留', '自托管', '大约成本'],
+          rows: [
+            { 数据库: 'Pinecone', 类型: '托管向量（云）', '最适用于': '快速原型、MVP、最小运维', 'EU数据驻留': '是，eu-west-1', 自托管: '否', '大约成本': '$100-1,000/月（按使用量）' },
+            { 数据库: 'Weaviate', 类型: '向量开源', '最适用于': '企业部署、混合搜索', 'EU数据驻留': '是，自托管', 自托管: '是（Kubernetes）', '大约成本': '免费+基础设施（$500-5,000/年）' },
+            { 数据库: 'Chroma', 类型: '向量轻量', '最适用于': '原型、本地应用、演示', 'EU数据驻留': '是，本地', 自托管: '是（Python）', '大约成本': '免费' },
+            { 数据库: 'Milvus', 类型: '向量高性能', '最适用于': '数百万向量、<100ms延迟', 'EU数据驻留': '是，自托管', 自托管: '是（Kubernetes、Docker）', '大约成本': '免费（开源）或$500-2,000/月（支持）' },
+            { 数据库: 'Qdrant', 类型: '向量现代Rust', '最适用于': '高级过滤+向量、高性能', 'EU数据驻留': '是，自托管', 自托管: '是', '大约成本': '免费或$500-2,000/月（云）' },
+            { 数据库: 'pgvector（PostgreSQL）', 类型: 'PostgreSQL扩展', '最适用于': '向量+SQL查询、简化基础设施', 'EU数据驻留': '使用现有PostgreSQL', 自托管: '是', '大约成本': '免费（扩展）+现有PostgreSQL' },
+          ],
+        },
         multiModel: {
           title: '多模型工作流中的RAG',
           content: [
             '**当与多模型和结构化提示结合时，RAG变得更强大。** 你可以：',
+          ],
+          callouts: [
+            { type: 'info', label: '相同文档，不同答案', text: '在GPT-4o、Claude Opus 4.7、Gemini 2.0 Pro上用同样的RAG提示对相同向量存储做测试。你会看到长度、风格、文档利用率不同。PromptQuorum允许路由相同查询到多个模型并做对比。' },
           ],
           items: [
             '用一个模型进行嵌入和检索，另一个用于生成答案。',
@@ -1277,16 +1507,19 @@ export const article: Record<Language, PEArticle> = {
         },
         commonMistakes: {
           title: '常见错误',
-          items: [
-            '**为模型已知良好的知识使用RAG：** 检索模型准确知道的内容（如基础Python语法）浪费令牌和延迟。为特定领域、专有或最新信息保留RAG。',
-            '**块太小：** <100字的块丧失周围上下文。政策句子无其周围段落通常模糊。以200-500字为基线。',
-            '**无相关性阈值：** 将所有检索文档传递给LLM使其处理无关上下文。设置最小分数（>0.7余弦相似度），否则返回"未找到"。',
-            '**不分离测试检索和生成质量：** 答案错误可能来自检索（错文档）或生成（模型推理）。在评估全管道前在20个代表查询上测试检索器。',
-            '**忽略元数据过滤：** 大型文档存储无日期、部门或权限过滤会返回陈旧或无关内容。在取入时附加元数据，在检索时应用过滤。',
+          mistakes: [
+            { mistake: '为模型已知的信息使用RAG', problem: '检索模型已准确掌握的内容（如Python标准库）只是浪费令牌和增加延迟，没有价值', fix: '将RAG保留给特定领域、专有或最新信息。一般知识已在模型参数中。' },
+            { mistake: '块大小太小（<100字）', problem: '失去周围上下文。政策句子若无其邻近段落通常难以理解，模型无法准确解释', fix: '以200-500字为基线。在你的领域代表查询上测试块大小。' },
+            { mistake: '没有相关性阈值', problem: '所有检索文档都传给LLM，强迫其处理无关上下文，导致噪声和错误增加', fix: '设置最小分数：>0.7余弦相似度。不达标的文档返回"未在知识库中找到"。' },
+            { mistake: '不分离测试检索和生成质量', problem: '答案错误可能源于检索失败（取错文档）或生成失败（模型推理），原因不明', fix: '在评估整个管道前，在20+代表查询上独立测试检索器。' },
+            { mistake: '忽视元数据（日期、部门、权限）过滤', problem: '大型存储无过滤会返回陈旧、机密或无权限访问的内容', fix: '在取入时附加元数据，在检索时应用过滤。实施基于角色的访问控制（RBAC）。' },
           ],
         },
         howToStart: {
           title: '实施RAG',
+          callouts: [
+            { type: 'info', label: '混合搜索的优势', text: '结合向量搜索（语义）+ BM25（关键词）。Weaviate和Qdrant原生支持。查询"客户合同2024"：语义抓住段落，BM25抓住年份。合并 = 更好的召回。' },
+          ],
           numberedItems: [
             '**识别AI需要回答的知识源（文档、PDF、数据库、API）。** 2026年4月，最常见的源是内部PDF、知识库文章、产品文档。客户支持：常见问题、产品文档、过去工单。研究：论文库、外部数据库。',
             '**用向量数据库（Pinecone、Weaviate、Chroma、Milvus）将静态文档转换为可搜索的嵌入。** 过程：分块文档、向量化、存储用于快速语义搜索。',
