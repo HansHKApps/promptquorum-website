@@ -1287,7 +1287,7 @@ export const article: Record<Language, PEArticle> = {
           '**渐进式微调：** 从基础模型开始使用优秀的Prompt。仅当Prompt停止改进时才微调。再次开始Prompt迭代改进微调模型',
         ],
         callouts: [
-          { type: '🔍', title: '维护陷阱', content: '微调的模型与特定基础模型版本绑定。当新版本发布时，您的微调停止工作。您必须在新版本上重新微调。计划预算用于此持续维护。' },
+          { type: 'warning', label: '维护陷阱', text: '微调的模型与特定基础模型版本绑定。当新版本发布时，您的微调停止工作。您必须在新版本上重新微调。计划预算用于此持续维护。' },
         ],
       },
       costComparison: {

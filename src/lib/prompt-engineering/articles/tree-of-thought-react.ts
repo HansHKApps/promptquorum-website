@@ -37,6 +37,7 @@ export const article: Record<Language, PEArticle> = {
       { label: 'Prompt Examples', anchor: 'prompt-examples' },
       { label: 'Token Cost', anchor: 'token-cost' },
       { label: 'How to Get Started', anchor: 'how-to-start' },
+      { label: 'Common Mistakes', anchor: 'common-mistakes' },
       { label: 'Frequently Asked Questions', anchor: 'faq' },
       { label: 'Sources', anchor: 'sources' },
     ],
@@ -184,7 +185,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'what-is-tree-of-thought',
         title: 'What Is Tree-of-Thought?',
         content: [
-          '**Tree-of-Thought (ToT) prompting instructs a language model to explore multiple possible reasoning paths — like branches of a decision tree — evaluate each one, and then select the best path before giving a final answer.** Unlike chain-of-thought, which follows a single linear reasoning path, ToT explicitly generates and compares alternatives. This makes it useful for strategy, planning, and complex decision-making where exploring multiple options leads to better outcomes.',
+          '**Tree-of-Thought (ToT) prompting instructs a language model to explore multiple possible reasoning paths — like branches of a decision tree — evaluate each one, and then select the best path before giving a final answer.** Unlike [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting?lang=en), which follows a single linear reasoning path, ToT explicitly generates and compares alternatives. This makes it useful for strategy, planning, and complex decision-making where exploring multiple options leads to better outcomes.',
           'The term comes from the 2023 paper by Yao et al. from Princeton and Google DeepMind: "Tree of Thoughts: Deliberate Problem Solving with Large Language Models" (NeurIPS 2023).',
           'In simple terms: Chain-of-thought is like walking a single road and explaining your steps. Tree-of-Thought is like exploring a fork in the road, comparing both paths, and then committing to the one that makes more sense.',
         ],
@@ -200,7 +201,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'what-is-react',
         title: 'What Is ReAct?',
         content: [
-          '**ReAct (Reason + Act) is a prompting framework where the model alternates between reasoning steps ("thoughts") and actions (tool calls, searches, lookups).** After each action, the model observes the result and updates its reasoning. This pattern is the foundation of modern AI agents — every time an AI tool searches the web, reads a file, or runs code, it\'s executing a ReAct loop.',
+          '**ReAct (Reason + Act) is a prompting framework where the model alternates between reasoning steps ("thoughts") and actions (tool calls, searches, lookups).** After each action, the model observes the result and updates its reasoning. This pattern is the foundation of modern AI agents — every time an AI tool searches the web, reads a file, or runs code, it\'s executing a ReAct loop. ReAct is also the pattern behind retrieval-augmented workflows — see [RAG explained](/prompt-engineering/rag-explained?lang=en) for how retrieval integrates with reasoning.',
           'The pattern comes from the 2023 paper by Yao et al.: "ReAct: Synergizing Reasoning and Acting in Language Models" (ICLR 2023).',
           '**Manual ReAct format (for educational or explicit tracing):**',
           '```',
@@ -375,10 +376,41 @@ export const article: Record<Language, PEArticle> = {
         id: 'how-to-start',
         title: 'How to Get Started',
         numberedItems: [
-          '**For strategy and planning → use Tree-of-Thought.** You\'re making a high-stakes decision (product roadmap, investment, system architecture). Explicitly ask the model to generate 3 approaches, evaluate them on your criteria, and select the best. The extra tokens are worth the structured thinking.',
+          '**For strategy and planning → use Tree-of-Thought.** You\'re making a high-stakes decision (product roadmap, investment, system architecture). Explicitly ask the model to generate 3 approaches, evaluate them on your criteria, and select the best. The extra tokens are worth the structured thinking. For a related branching technique that votes across paths instead of evaluating, see [self-consistency prompting](/prompt-engineering/self-consistency-prompting?lang=en).',
           '**For research, debugging, or fact-finding → use ReAct or native tool use.** Ask the model to look things up, observe the results, and synthesize. On frontier models (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro), native tool use handles ReAct automatically. On open-weights, you can structure it manually if needed.',
-          '**Combine both techniques.** Use ToT at the planning stage: "Generate 3 strategies for X. For each, list the steps needed." Then use ReAct within the chosen strategy: "For strategy [selected], research the following: [question 1], [question 2]. Observe results, then execute."',
+          '**Combine both techniques.** Use ToT at the planning stage: "Generate 3 strategies for X. For each, list the steps needed." Then use ReAct within the chosen strategy: "For strategy [selected], research the following: [question 1], [question 2]. Observe results, then execute." For simpler multi-step tasks that don\'t need branching or tool use, [prompt chaining](/prompt-engineering/prompt-chaining?lang=en) is lighter and cheaper.',
           '**Test both on your use case in PromptQuorum.** Compare how GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and Mistral Large handle your specific ToT or ReAct prompt. You\'ll see which model\'s reasoning style fits your task best.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Common Mistakes',
+        mistakes: [
+          {
+            mistake: 'Using ToT for simple tasks',
+            problem: 'ToT adds 2-5× token cost. For a "summarize this email" task, linear chain-of-thought is faster, cheaper, and equally accurate. ToT only pays off when the problem genuinely has multiple viable paths.',
+            fix: 'Test with chain-of-thought first. If accuracy is >90%, don\'t upgrade to ToT.',
+          },
+          {
+            mistake: 'Asking for too many branches',
+            problem: '"Generate 10 approaches" overwhelms the model\'s ability to evaluate meaningfully. Beyond 5 branches, quality of evaluation drops and the model may start generating filler options.',
+            fix: '3-5 branches is the sweet spot. For complex problems, use 3. For creative brainstorms, use 5.',
+          },
+          {
+            mistake: 'ReAct without real tools',
+            problem: 'Simulated ReAct (where the model imagines action results) is weaker than real ReAct (where the model calls actual APIs/tools). Simulated actions still hallucinate data.',
+            fix: 'For production ReAct, use an agent framework (LangChain, CrewAI) with real tool bindings. Simulated ReAct is fine for exploration and prototyping.',
+          },
+          {
+            mistake: 'No evaluation criteria in ToT',
+            problem: '"Pick the best approach" without criteria means the model picks randomly or by default preference. Without explicit criteria, the branching evaluation step is meaningless.',
+            fix: 'Specify 3-5 evaluation criteria: "Evaluate each branch on feasibility (1-5), cost (1-5), time-to-implement (1-5). Choose the highest total score."',
+          },
+          {
+            mistake: 'Combining ToT + ReAct on every problem',
+            problem: 'The combination is powerful but expensive and slow. Most problems need one technique, not both.',
+            fix: 'Use ToT for "which strategy" problems. Use ReAct for "find information and reason" problems. Combine only when you need both: "which strategy, and each strategy needs data to evaluate."',
+          },
         ],
       },
       inPromptQuorum: {

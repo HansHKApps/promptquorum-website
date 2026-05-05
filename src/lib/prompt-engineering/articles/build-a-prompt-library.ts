@@ -8,18 +8,17 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
     en: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-09-24',
+      freshness_tier: 'evergreen',
       theme: 'Fundamentals',
-      title: 'Build a Prompt Library That Saves Hours',
+      title: 'How to Build a Prompt Library: 8-Field Template, Governance, and Team Adoption Guide',
       intro: 'A prompt library is a team-wide collection of tested instructions. Done well, each entry works like a small tool: pick it up, adapt the inputs, and get consistent results.',
       publishDate: '2026-03-24',
       dateModified: '2026-04-29',
       readTime: '10 min read',
       seoTitle: 'Build a Prompt Library: Reusable AI Templates for Teams',
-      metaDescription: 'Build a prompt library with structured metadata, versioning, and team governance. Reuse tested AI prompts across models and projects. Step-by-step guide with templates. April 2026.',
-      ogDescription: 'Your team rewrites the same AI prompts from scratch every day. A shared prompt library with tested templates, clear ownership, and version control fixes that. Here is how to build one that actually gets used.',
-      twitterDescription: 'Prompt library → tested templates → consistent AI output. Build one for your team in a week. Step-by-step framework inside.',
+      metaDescription: 'Build a shared prompt library with 8-field metadata, Draft→Approved governance, and monthly pruning. Template, structured example, storage comparison, and team adoption playbook.',
+      ogDescription: 'Stop losing great prompts in private chats. Build a team prompt library with structured templates, version control, and light governance — so anyone can reuse what works.',
+      twitterDescription: 'Prompt library = recipe box for AI. 8-field template, step-by-step build guide, storage comparison, and governance that doesn\'t kill adoption.',
       educationalLevel: 'Beginner',
       audience: 'Team leads and practitioners adopting AI tools',
       leadAnswerBlock: '**A prompt library is a shared collection of tested prompts with structured metadata — title, inputs, expected output format, owner, and version — so your team can reuse working instructions instead of starting from scratch every time.**',
@@ -37,6 +36,7 @@ export const article: Record<Language, PEArticle> = {
         { label: 'How to Build Step by Step', anchor: '#how-to-build' },
         { label: 'Where to Store It', anchor: '#where-to-store' },
         { label: 'How Do Storage Options Compare?', anchor: '#storage-options-comparison' },
+        { label: 'Maturity Levels', anchor: '#maturity-levels' },
         { label: 'Versioning & Quality', anchor: '#versioning' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Regional Considerations', anchor: '#regional-considerations' },
@@ -45,7 +45,7 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Build a Prompt Library That Saves Hours',
+        headline: 'How to Build a Prompt Library: 8-Field Template, Governance, and Team Adoption Guide',
         description: 'What a prompt library is, why your team should build one, how to structure and maintain it, and best practices for versioning and governance.',
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
@@ -121,7 +121,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'How do you handle prompts that work on one model but not another?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Claude" and "Meeting summary – GPT-4o" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
+              text: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Model A" and "Meeting summary – Model B" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
             },
           },
           {
@@ -186,7 +186,7 @@ export const article: Record<Language, PEArticle> = {
             'Each entry needs a title, prompt body, inputs, output format, tags, owner, and version — so anyone on your team can use it reliably.',
             'Build bottom-up: harvest real prompts from everyday work first, then normalize them into a common template.',
             'Organize by task or function (e.g., summarise, code-review, plan), not by model; model specifics go in metadata.',
-            'Light governance keeps quality high: mark prompts as Draft → Approved → Deprecated; never remove FAQs or working prompts.',
+            'Light governance keeps quality high: mark prompts as Draft → Approved → Deprecated; never remove working prompts without marking them Deprecated first.',
             'Version explicitly (v1.0, v1.1) with one-line change notes; keep prior versions rollback-able.',
             'Monthly review cadence: retire low-use prompts and promote improved ones as model defaults evolve.',
           ],
@@ -258,7 +258,7 @@ export const article: Record<Language, PEArticle> = {
           id: 'what-to-store',
           title: 'What Should You Store for Each Prompt?',
           content: [
-            '**Every prompt should capture enough context that another person can reproduce your results reliably, even months later.** As of April 2026, teams that document prompts with these 8 fields report 40–60% faster onboarding when new colleagues join.',
+            '**Every prompt should capture enough context that another person can reproduce your results reliably, even months later.** Teams that document prompts with these 8 fields report 40–60% faster onboarding when new colleagues join.',
             'A practical schema:',
           ],
         },
@@ -295,6 +295,13 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Example input and output: One realistic input and a good output so users can judge fit at a glance.',
+          ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'Pro Tip: Add just ONE realistic example',
+              text: 'The most commonly skipped field is "Example input and output." Adding just ONE realistic example to each prompt entry cuts first-time-use errors in half — new colleagues see exactly what "good" looks like before adapting the template.',
+            },
           ],
         },
         howToStart: {
@@ -374,7 +381,7 @@ export const article: Record<Language, PEArticle> = {
             {
               type: 'tip',
               label: 'EU data residency check',
-              text: 'As of April 2026, EU-only server options are available from most major platforms (Notion, Airtable, Notion). Check data residency settings before choosing a cloud-based tool if your team handles sensitive data subject to GDPR.',
+              text: 'EU-only server options are available from most major platforms (Notion, Airtable, Sheets). Check data residency settings before choosing a cloud-based tool if your team handles sensitive data subject to GDPR.',
             },
           ],
         },
@@ -407,12 +414,65 @@ export const article: Record<Language, PEArticle> = {
           ],
           tableFormat: true,
         },
+        maturityLevels: {
+          id: 'maturity-levels',
+          title: 'Prompt Library Maturity Levels',
+          content: [
+            'As your organization grows, your prompt library matures through predictable stages. Most teams start at Level 0 and should aim for Level 2 within 4–6 weeks. Level 3–4 only makes sense when prompt volume and team size justify the overhead.',
+          ],
+          columns: ['Maturity Level', 'Entries', 'Governance', 'Tooling', 'Team Size'],
+          rows: [
+            {
+              'Maturity Level': 'Level 0: Ad hoc',
+              'Entries': '0',
+              'Governance': 'None — prompts in private chats',
+              'Tooling': 'Chat history',
+              'Team Size': '1 person',
+            },
+            {
+              'Maturity Level': 'Level 1: Collection',
+              'Entries': '5–10',
+              'Governance': 'Shared doc, no review',
+              'Tooling': 'Google Doc / Notion page',
+              'Team Size': '2–5 people',
+            },
+            {
+              'Maturity Level': 'Level 2: Structured',
+              'Entries': '10–30',
+              'Governance': 'Draft/Approved status, owner assigned',
+              'Tooling': 'Notion/Airtable with fields',
+              'Team Size': '5–15 people',
+            },
+            {
+              'Maturity Level': 'Level 3: Managed',
+              'Entries': '30–100',
+              'Governance': 'Version control, monthly reviews, test cases',
+              'Tooling': 'Git repo or dedicated tool',
+              'Team Size': '15–50 people',
+            },
+            {
+              'Maturity Level': 'Level 4: Product',
+              'Entries': '100+',
+              'Governance': 'Approval workflows, analytics, rollback',
+              'Tooling': 'Dedicated platform (PromptQuorum, PromptHub)',
+              'Team Size': '50+ people',
+            },
+          ],
+          tableFormat: true,
+        },
+        promptQuorumFit: {
+          id: 'prompt-quorum-fit',
+          title: 'How PromptQuorum Enhances Your Prompt Library',
+          content: [
+            'PromptQuorum combines prompt storage with multi-model execution: save a prompt template, dispatch it to multiple models simultaneously, and record which model produced the best result for that template. Over time, this builds an evidence-based library where each prompt includes not just the instruction but the empirical data on which model handles it best — turning your library from a recipe box into a tested playbook.',
+          ],
+        },
         versioning: {
           id: 'versioning',
           title: 'How Do You Version Prompts and Maintain Quality?',
           content: [
             '**Without versioning and basic testing, a prompt library turns into a junk drawer; with light governance, it becomes a reliable internal product.**',
-            'Most major AI models updated their instruction-following behavior in late 2025 and early 2026, which means prompts written for GPT-4 may need adjustment for GPT-4o or newer. As of April 2026, Anthropic\'s Claude 3.5 and 4 series handle system prompts differently than earlier versions — always version-tag when you retest against a new model. Practical habits:',
+            'Major AI models periodically update their instruction-following behavior, which means prompts written for earlier versions may need adjustment for newer releases. Different models handle system prompts differently — always version-tag when you retest against a new model. Practical habits:',
           ],
           items: [
             'Version prompts explicitly: Use a simple scheme like v1.0 – v1.1. Add a one-line change note (e.g., "v1.1 – added JSON output format; reduced hallucinations for dates").',
@@ -425,7 +485,12 @@ export const article: Record<Language, PEArticle> = {
             {
               type: 'warning',
               label: 'Model upgrades break prompts silently',
-              text: 'When your team upgrades to a new model version (e.g., from GPT-4o to GPT-4o mini), run your full set of "Approved" prompts against it before switching. Output format and instruction-following behavior shift between versions.',
+              text: 'When your team upgrades to a new model version, run your full set of "Approved" prompts against it before switching. Output format and instruction-following behavior shift between versions.',
+            },
+            {
+              type: 'warning',
+              label: 'Version control is non-negotiable',
+              text: 'A prompt library without version control becomes a liability, not an asset. When a model update changes output behavior and nobody knows which prompt version was used, you can\'t diagnose what broke. Even a simple "v1.0 → v1.1 – added JSON format" change note prevents hours of debugging.',
             },
           ],
         },
@@ -458,12 +523,12 @@ export const article: Record<Language, PEArticle> = {
             {
               mistake: 'Skipping version history — no change notes or prior versions kept.',
               problem: 'When a new model breaks a prompt, you can\'t easily revert or understand what changed.',
-              fix: 'Add one-line change notes per version (e.g., "v1.2 – updated for GPT-4o mini, removed temperature override"). Keep prior versions accessible.',
+              fix: 'Add one-line change notes per version (e.g., "v1.2 – updated for new model version, removed temperature override"). Keep prior versions accessible.',
             },
             {
               mistake: 'Never retiring deprecated prompts — library grows with dead weight.',
               problem: 'Harder to find useful prompts; unclear which versions are actually maintained.',
-              fix: 'Mark outdated prompts as Deprecated with a reason (e.g., "Llama 3.2 natively handles this case better"). Remove from default views; archive for audit trails.',
+              fix: 'Mark outdated prompts as Deprecated with a reason (e.g., "The current default model handles this case natively"). Remove from default views; archive for audit trails.',
             },
           ],
         },
@@ -472,11 +537,11 @@ export const article: Record<Language, PEArticle> = {
           title: 'Are There Regional or Compliance Considerations?',
           content: [
             '**Data residency and compliance requirements affect where and how you store prompts, especially when prompt bodies include sensitive customer data as placeholders.**',
-            'As of April 2026, the main constraints by region:',
+            'The main constraints by region:',
           ],
           items: [
             'EU / GDPR: If prompt templates include or reference personal data, the storage tool must meet GDPR requirements. Notion, Airtable, and most SaaS platforms offer EU data residency; verify before enabling for sensitive workflows.',
-            'US SOC 2: For enterprise customers that require vendor compliance, choose tools with SOC 2 Type II certification (Notion, Airtable, PromptQuorum all qualify as of April 2026).',
+            'US SOC 2: For enterprise customers that require vendor compliance, choose tools with SOC 2 Type II certification (Notion, Airtable, and PromptQuorum all qualify).',
             'Regulated industries (healthcare, finance, legal): System prompts that include patient identifiers or financial records need to stay in your own infrastructure. Use Git-based storage or a self-hosted option, not a consumer SaaS tool.',
             'Tip: Separate sensitive prompts (those that accept PII as inputs) from general-purpose prompts. Apply stricter access controls and shorter retention to the sensitive group.',
           ],
@@ -517,7 +582,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'How do you handle prompts that work on one model but not another?',
-              a: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Claude" and "Meeting summary – GPT-4o" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
+              a: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Model A" and "Meeting summary – Model B" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
             },
             {
               q: 'What is the difference between a prompt library and a prompt management platform?',
@@ -534,6 +599,10 @@ export const article: Record<Language, PEArticle> = {
             { title: 'How to Test Prompts Across Models', url: '/prompt-engineering/how-to-test-prompts-across-models' },
             { title: 'PromptQuorum: AI Dispatch & Multi-Model Consensus', url: '/how-it-works' },
             { title: 'Best Prompt Optimization Tools for Teams', url: '/prompt-engineering/best-prompt-optimization-tools-teams' },
+            { title: 'Persona Prompting', url: '/prompt-engineering/persona-prompting' },
+            { title: 'Constrained Prompting', url: '/prompt-engineering/constrained-prompting' },
+            { title: '5 Building Blocks Every Prompt Needs', url: '/prompt-engineering/5-building-blocks-every-prompt-needs' },
+            { title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo', url: '/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo' },
           ],
         },
         sources: {
@@ -543,6 +612,7 @@ export const article: Record<Language, PEArticle> = {
             { title: 'Anthropic: Prompt Engineering Overview', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
             { title: 'Lilian Weng: Prompt Engineering (2023)', url: 'https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/' },
             { title: 'Google DeepMind: Prompting Strategies', url: 'https://ai.google.dev/gemini-api/docs/prompting-strategies' },
+            { title: 'White et al. (2023). "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT" — arXiv:2302.11382', url: 'https://arxiv.org/abs/2302.11382' },
           ],
         },
       },
