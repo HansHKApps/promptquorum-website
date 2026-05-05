@@ -180,6 +180,51 @@ export const article: Record<Language, PEArticle> = {
           '**Setting up a 3-model Promptfoo test in under 10 minutes:** Install with npm install -g promptfoo. Create a promptfooconfig.yaml with providers (openai:gpt-4o, anthropic:claude-sonnet-4-6, google:gemini-2.5-flash), your prompts, and at least 5 test cases with assert criteria. Run promptfoo eval to get a scored comparison across all three models.',
         ],
       },
+      model_comparison: {
+        id: 'model-comparison',
+        title: 'GPT-4o vs Claude 4.6 Sonnet vs Gemini 2.5 Flash',
+        content: 'The three recommended models represent the current best options. This comparison helps you decide which models to test.',
+        columns: ['Dimension', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Flash'],
+        rows: [
+          { 'Dimension': 'Format Compliance', 'GPT-4o': 'Strict adherence to formats', 'Claude 4.6 Sonnet': 'Adds explanatory prose', 'Gemini 2.5 Flash': 'Wraps format in context' },
+          { 'Dimension': 'Instruction-Following', 'GPT-4o': 'Excellent with nested instructions', 'Claude 4.6 Sonnet': 'Strict on constraints', 'Gemini 2.5 Flash': 'Good but creative' },
+          { 'Dimension': 'Verbosity', 'GPT-4o': 'Concise by default', 'Claude 4.6 Sonnet': 'Detailed by default', 'Gemini 2.5 Flash': 'Variable' },
+          { 'Dimension': 'Cost per 1M tokens', 'GPT-4o': '~$2.50', 'Claude 4.6 Sonnet': '~$3.00', 'Gemini 2.5 Flash': '~$0.075' },
+          { 'Dimension': 'Latency', 'GPT-4o': '1-2s', 'Claude 4.6 Sonnet': '2-3s', 'Gemini 2.5 Flash': '1-2s' },
+          { 'Dimension': 'Best For', 'GPT-4o': 'Structured output, JSON', 'Claude 4.6 Sonnet': 'Long-form reasoning', 'Gemini 2.5 Flash': 'High-volume, cost-sensitive' },
+        ],
+      },
+      common_mistakes: {
+        id: 'common-mistakes',
+        title: 'Common Mistakes in Multi-Model Testing',
+        mistakes: [
+          {
+            mistake: 'Testing only one model',
+            problem: 'A single model is one data point. Single-model testing risks shipping a prompt that breaks in production.',
+            fix: 'Test on minimum 2 models, ideally 3. A 3-model test with PromptQuorum takes 5 minutes.',
+          },
+          {
+            mistake: 'Using different prompt versions per model',
+            problem: 'Adjusting the prompt for each model defeats the test. You measure prompt adaptation, not model behavior.',
+            fix: 'Use identical prompts across all models. If a model consistently underperforms, revise the prompt for all.',
+          },
+          {
+            mistake: 'Inconsistent scoring rubrics',
+            problem: 'Scoring early test cases strictly and later ones leniently introduces bias.',
+            fix: 'Define your rubric (1=fail, 2=partial, 3=pass) before scoring. Apply it consistently.',
+          },
+          {
+            mistake: 'Ignoring latency and cost',
+            problem: 'Picking the highest-scoring model without considering cost can result in an expensive choice.',
+            fix: 'Create a weighted matrix: test score (50%), cost (25%), latency (25%).',
+          },
+          {
+            mistake: 'Test matrices that are too small',
+            problem: 'Fewer than 10 test cases produce noisy results.',
+            fix: 'Aim for 15-20 test cases: 60% typical, 20% edge cases, 20% adversarial.',
+          },
+        ],
+      },
       reading_results: {
         id: 'reading-results',
         title: 'How to Read Multi-Model Test Results',
@@ -197,6 +242,21 @@ export const article: Record<Language, PEArticle> = {
             type: 'key-point',
             label: 'Decision Rule',
             text: 'If no model scores above 80% of the maximum possible score on your test matrix, fix the prompt before choosing the model. A weak prompt will underperform on all models. Model selection only matters after the prompt itself is solid.',
+          },
+          {
+            type: 'pro-tip',
+            label: 'The Three-Way Split Strategy',
+            text: 'GPT-4o excels at structured output and JSON. Claude dominates long-form reasoning and analysis. Gemini is unbeatable on cost. Route different task types to the model that wins on that category.',
+          },
+          {
+            type: 'warning',
+            label: 'Consensus Scoring Has Hidden Costs',
+            text: 'Running on all 3 models and voting (consensus) improves accuracy but triples latency and cost. Only use for high-stakes decisions where accuracy justifies the overhead.',
+          },
+          {
+            type: 'did-you-know',
+            label: 'Model Behavior Shifts with Temperature',
+            text: 'Your test matrix assumes a fixed temperature (usually 0.7). At temperature 0.0, models are nearly deterministic. At 1.5+, all models become more creative. Re-test at your production temperature.',
           },
         ],
       },
