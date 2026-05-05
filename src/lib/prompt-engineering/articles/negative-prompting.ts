@@ -31,6 +31,9 @@ export const article: Record<Language, PEArticle> = {
         'Hard language works: "must not", "never", "do not" outperforms "try to avoid", "prefer not to", "if possible skip"',
         'Negative prompting is the foundation of enterprise AI guardrails — every compliance checklist maps to a "do not" rule',
         'PromptQuorum enables reusable negative constraint blocks across all models — define once, enforce everywhere',
+        'Negative constraints stick better when paired with a positive alternative: "Do not use hype words; focus on measurable benefits instead" outperforms "Do not use hype words" alone',
+        'Guardrail ROI: A single well-written negative prompt prevents 50-100 manual edits across a team\'s output — invest in constraints upfront, recoup savings at scale',
+        'Compliance by constraint: GDPR, HIPAA, SOC2 audits are easier with negative prompting baked into templates — violations are prevented in generation, not caught downstream',
       ],
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -158,6 +161,110 @@ export const article: Record<Language, PEArticle> = {
             '**Provide negative examples: show the model what you explicitly don\'t want.** Example: \'Don\'t write like this: \"Unlock explosive growth with our AI solution.\" Don\'t write like this: \"Our cutting-edge platform uses machine learning.\" Write like this: [provide positive example].\'',
             '**Combine positive and negative guidance.** Don\'t just say what to avoid—also say what to do instead. Example: \'Do not use hype language. Instead, focus on specific, measurable benefits.\'',
             '**Use negative prompting sparingly—it can sometimes confuse the model.** Positive guidance (\'write clearly and technically\') often works better than heavy negatives (\'don\'t be vague, don\'t simplify, don\'t omit details\'). Balance both approaches.',
+          ],
+        },
+        calloutBoxes: {
+          title: 'Key Callouts',
+          id: 'callouts',
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Guardrails Are Not Policies',
+              text: 'Negative prompting is a technical control, not a substitute for policy. It prevents some failures but cannot replace human judgment, legal review, or compliance processes. Use it as one layer of many, not the only layer.',
+            },
+            {
+              type: 'pro-tip',
+              label: 'Pair Every "Do Not" With a "Do This Instead"',
+              text: 'Unpaired negatives confuse models ("Don\'t be vague"). Paired negatives guide them ("Don\'t be vague; be specific with dates, numbers, and examples"). Every constraint works better with a positive alternative.',
+            },
+            {
+              type: 'key-point',
+              label: '3-5 Constraints Max—More Breaks the Model',
+              text: 'Beyond 5-6 negative constraints, models start second-guessing themselves or ignoring constraints entirely. Heavy constraint lists (7+) can produce overly cautious, incomplete, or evasive outputs. Stay focused.',
+            },
+            {
+              type: 'did-you-know',
+              label: 'Compliance Teams Love Reusable Guardrails',
+              text: 'Once you codify regulatory, brand, or safety constraints as reusable negative prompting blocks, audits become easier. You can prove that every output was processed through the same guardrails — that is audit gold.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Negative Prompting',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Writing too many negative constraints',
+              problem: 'More than 5-6 "do not" rules overwhelms the model. It starts second-guessing itself, ignoring some constraints, or producing overly cautious output.',
+              fix: 'Limit to 3-5 focused constraints per prompt. Group related rules: "Never use hype words (disrupt, revolutionary, game-changing)" counts as one constraint.',
+            },
+            {
+              mistake: 'Pairing negatives without positive alternatives',
+              problem: 'Saying "don\'t be vague" without saying "instead, be specific with dates and numbers" leaves the model guessing.',
+              fix: 'Always pair: "Do not use vague language. Instead, include specific dates, numbers, or measurable outcomes."',
+            },
+            {
+              mistake: 'Using soft negative language',
+              problem: '"Try to avoid," "prefer not to," "if possible skip" are interpreted as suggestions, not rules. Models ignore them.',
+              fix: 'Use hard negatives: "must not," "never," "do not," "forbidden." Models follow hard language.',
+            },
+            {
+              mistake: 'Setting unachievable constraints',
+              problem: '"Never mention the competitor" when a comparison is necessary creates impossible expectations.',
+              fix: 'Make constraints specific and realistic. Example: "Do not name competitors; instead, reference capabilities."',
+            },
+            {
+              mistake: 'Not testing constraints across models',
+              problem: 'GPT-4o, Claude, and Gemini have different compliance sensitivities. A constraint that works perfectly on one may be ignored or over-applied on another.',
+              fix: 'Test your negative prompts on all target models. Document compliance differences. Adjust constraints for each model if needed.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'What is negative prompting?',
+              a: 'Negative prompting means adding explicit "do not" rules to a prompt alongside positive instructions. These rules constrain content (no medical advice), style (no hype words), structure (no introduction), or behavior (never fabricate data). Each rule acts as a guardrail preventing known failure modes.',
+            },
+            {
+              q: 'Does negative prompting work with all AI models?',
+              a: 'Yes — GPT-4o, Claude Opus/Sonnet, and Gemini Pro all respond to hard negative constraints ("must not," "never," "do not"). Compliance varies: format bans are sometimes inconsistently applied on long outputs. Test your specific constraints with your target models.',
+            },
+            {
+              q: 'How many negative constraints should I use?',
+              a: 'Limit to 3-5 per prompt. More than 5-6 can confuse models, cause ignored constraints, or produce overly cautious output. Group related rules: "Never use hype words (disruptive, revolutionary, game-changing)" counts as one constraint.',
+            },
+            {
+              q: 'Is negative prompting the same as content filtering?',
+              a: 'No. Content filtering detects and blocks unwanted output after generation. Negative prompting prevents unwanted output during generation by telling the model upfront what to avoid. Filtering happens downstream; negative prompting prevents the problem before it starts.',
+            },
+            {
+              q: 'Can I use negative prompting for compliance (GDPR, HIPAA)?',
+              a: 'Yes. Embedding compliance constraints into templates as negative rules creates an audit trail: every output was processed through the same guardrails. This is valuable for audits, but negative prompting alone does not replace legal review or Data Processing Agreements.',
+            },
+            {
+              q: 'What happens if I pair negative prompting with few-shot examples?',
+              a: 'Combining works well. Show positive examples of what you want, then add negative constraints for what to avoid. The examples anchor the model; the constraints keep it from drifting. Use both together for tightest control.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          id: 'related-reading',
+          items: [
+            { title: 'Prompt Injection and Security', url: '/prompt-engineering/prompt-injection-and-security?lang=en' },
+            { title: 'Constrained Prompting', url: '/prompt-engineering/constrained-prompting?lang=en' },
+            { title: 'How to Test Prompts Across Models', url: '/prompt-engineering/how-to-test-prompts-across-models?lang=en' },
+            { title: 'Single Step Prompt Method', url: '/prompt-engineering/single-prompt-method?lang=en' },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          id: 'sources',
+          items: [
+            'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — How models process and apply constraints across long inputs.',
           ],
         },
       },
