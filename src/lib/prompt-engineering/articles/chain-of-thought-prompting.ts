@@ -21,7 +21,7 @@ export const article: Record<Language, PEArticle> = {
       metaDescription: 'Chain-of-Thought improves reasoning by 10-40% on math and logic tasks. Learn when to use prompt-level CoT vs built-in reasoning modes.',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Chain-of-Thought Prompting',
-      audience: 'Developers, data scientists, and teams building with GPT-5.5, Claude, Gemini, or local LLMs',
+      audience: 'Developers, data scientists, and teams building with GPT-4o, Claude, Gemini, or local LLMs',
       next_refresh_due: '2026-11-03',
       aboutTopics: ['Chain-of-Thought Prompting', 'Structured Reasoning', 'Prompt Engineering', 'Reasoning Models'],
       toc: [
@@ -55,8 +55,8 @@ export const article: Record<Language, PEArticle> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
-          { '@type': 'Thing', name: 'Chain-of-Thought Prompting' },
-          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+          { '@type': 'Thing', name: 'Large Language Models', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
           { '@type': 'Thing', name: 'Reasoning' },
           { '@type': 'Thing', name: 'Structured Output' },
         ],
@@ -86,7 +86,7 @@ export const article: Record<Language, PEArticle> = {
             '**Trigger phrase:** "Let\'s think step by step" (zero-shot) or worked examples (few-shot)',
             '**2026 evolution:** Built-in reasoning modes (o3, Claude extended thinking) now automate CoT internally',
             '**Cost impact:** Prompt-level CoT = more output tokens; reasoning modes = separate thinking token budget',
-            '**Best models for prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, Gemini Flash, GPT-5.5 mini, LLaMA 4 Scout)',
+            '**Best models for prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, Gemini Flash, GPT-4o mini, LLaMA 4 Scout)',
           ]
         },
         whatIsChainOfThought: {
