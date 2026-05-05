@@ -1260,7 +1260,7 @@ export const article: Record<Language, PEArticle> = {
           '**第6步：选择基础设施。** 云端（OpenAI）用于速度和简单。本地（Ollama/PEFT）用于隐私和成本控制。微调。',
         ],
         callouts: [
-          { type: '🔍', title: '90%规则', content: '90%的用例只需优秀的Prompt工程就能解决。如果您认为需要微调，先再试5个Prompt变体。' },
+          { type: 'info', label: '90%规则', text: '90%的用例只需优秀的Prompt工程就能解决。如果您认为需要微调，先再试5个Prompt变体。' },
         ],
       },
       fiveScenarios: {
