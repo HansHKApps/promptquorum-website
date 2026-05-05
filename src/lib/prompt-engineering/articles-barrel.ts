@@ -61,7 +61,6 @@ import { article as a_braintrust_vs_prompthub_vs_vellum } from "./articles/brain
 import { article as a_promptlayer_vs_mirascope_vs_promptperfect } from "./articles/promptlayer-vs-mirascope-vs-promptperfect";
 import { article as a_prompt_engineering_vs_fine_tuning } from "./articles/prompt-engineering-vs-fine-tuning";
 import { article as a_prompt_engineering_vs_rag } from "./articles/prompt-engineering-vs-rag";
-import { article as a_manual_vs_automated_prompt_optimization } from "./articles/manual-vs-automated-prompt-optimization";
 import { article as a_how_to_evaluate_prompt_quality } from "./articles/how-to-evaluate-prompt-quality";
 import { article as a_prompt_evaluation_metrics } from "./articles/prompt-evaluation-metrics";
 import { article as a_how_to_test_prompts_across_models } from "./articles/how-to-test-prompts-across-models";
@@ -143,7 +142,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   "promptlayer-vs-mirascope-vs-promptperfect": a_promptlayer_vs_mirascope_vs_promptperfect,
   "prompt-engineering-vs-fine-tuning": a_prompt_engineering_vs_fine_tuning,
   "prompt-engineering-vs-rag": a_prompt_engineering_vs_rag,
-  "manual-vs-automated-prompt-optimization": a_manual_vs_automated_prompt_optimization,
   "how-to-evaluate-prompt-quality": a_how_to_evaluate_prompt_quality,
   "prompt-evaluation-metrics": a_prompt_evaluation_metrics,
   "how-to-test-prompts-across-models": a_how_to_test_prompts_across_models,

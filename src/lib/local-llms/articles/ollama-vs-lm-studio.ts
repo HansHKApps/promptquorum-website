@@ -234,6 +234,7 @@ schema: {
           ],
           callouts: [{
             type: 'warning',
+            label: 'Privacy Warning',
             text: 'LM Studio collects anonymous usage analytics by default. For privacy-sensitive deployments, disable immediately after installation: Settings → Privacy → Send anonymous usage data → off. Ollama collects no telemetry by default.',
           }],
         },
@@ -552,6 +553,7 @@ schema: {
           ],
           callouts: [{
             type: 'warning',
+            label: 'Datenschutzwarnung',
             text: 'LM Studio erfasst standardmäßig anonyme Nutzungsanalytik. Für datenschutzsensible Bereitstellungen deaktivieren Sie sofort nach der Installation: Einstellungen → Datenschutz → Anonyme Nutzungsdaten senden → aus. Ollama erfasst standardmäßig keine Telemetrie.',
           }],
         },
@@ -1466,7 +1468,12 @@ schema: {
             '**macOS、Windows 工作** (最佳 OS 支持)。',
             '**无需记终端命令** 快速模型切换。',
           ],
-          callout: '⚠️ **警告：** LM Studio 默认收集匿名用户分析。隐私重点部署时，安装后立即禁用：设置 → 隐私 → 发送匿名使用数据 → 关。Ollama 默认无遥测。',
+          callouts: [
+            {
+              type: 'warning',
+              text: '⚠️ **警告：** LM Studio 默认收集匿名用户分析。隐私重点部署时，安装后立即禁用：设置 → 隐私 → 发送匿名使用数据 → 关。Ollama 默认无遥测。'
+            }
+          ],
         },
         regionalContext: {
           id: 'regional-context',
