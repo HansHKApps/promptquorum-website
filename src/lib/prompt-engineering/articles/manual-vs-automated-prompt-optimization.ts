@@ -6,12 +6,11 @@ import type { PEArticle } from "@/lib/prompt-engineering/content";
 
 export const article: Record<Language, PEArticle> = {
   en: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-05',
+    freshness_tier: 'evergreen',
     theme: 'Tools & Platforms',
-    title: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate (2026)',
-    seoTitle: 'Manual vs Automated Prompt Optimization: When to Use Each',
-    metaDescription: 'Manual vs automated prompt optimization: when to iterate by hand (< 50 prompts), when to use DSPy, TextGrad, or Promptfoo (> 100 prompts). Decision framework with cost and scale comparison.',
+    title: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate',
+    seoTitle: 'Manual vs Automated Optimization: Choosing Your Approach',
+    metaDescription: 'Manual vs automated prompt optimization: choose based on prompt count and resources. When to iterate by hand, when to automate. Decision framework and comparison.',
     intro: '**Prompt optimization can be manual (you rewrite the prompt) or automated (a framework rewrites it for you).** Manual optimization gives you control but scales only to ~50 production prompts. Automated optimization (DSPy, TextGrad, Promptfoo) scales to 100+ prompts but requires labeled training data and metric definitions. This guide shows when to use each and how they work together.',
     publishDate: '2026-04-26',
     dateModified: '2026-05-05',
@@ -45,8 +44,8 @@ export const article: Record<Language, PEArticle> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate (2026)',
-      description: 'Manual vs automated prompt optimization: when to iterate by hand, when to use DSPy or TextGrad. Scaling decision framework.',
+      headline: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate',
+      description: 'Manual vs automated prompt optimization: choose based on prompt count. Scaling decision framework.',
       datePublished: '2026-04-26',
       dateModified: '2026-05-05',
       url: 'https://www.promptquorum.com/prompt-engineering/manual-vs-automated-prompt-optimization?lang=en',
@@ -236,12 +235,11 @@ export const article: Record<Language, PEArticle> = {
   },
 
   de: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-05',
+    freshness_tier: 'evergreen',
     theme: 'Tools & Platforms',
-    title: 'Manuelle vs Automatisierte Prompt-Optimierung: Wann welcher Ansatz (2026)',
-    seoTitle: 'Manuelle vs Automatisierte Prompt-Optimierung: Entscheidungshilfe',
-    metaDescription: 'Manuelle vs automatisierte Prompt-Optimierung: wann von Hand iterieren (< 50 Prompts), wann DSPy oder Promptfoo nutzen (> 100 Prompts). Entscheidungsrahmen mit Kosten- und Skalierungsvergleich.',
+    title: 'Manuelle vs Automatisierte Prompt-Optimierung: Wann welcher Ansatz',
+    seoTitle: 'Manuelle vs Automatisierte Optimierung: Entscheidungshilfe',
+    metaDescription: 'Manuelle vs automatisierte Prompt-Optimierung: Entscheidungsrahmen basierend auf Prompt-Anzahl und Ressourcen. Wann von Hand optimieren, wann automatisieren.',
     intro: '**Prompt-Optimierung kann manuell erfolgen (Sie schreiben den Prompt um) oder automatisiert (ein Framework schreibt ihn für Sie um).** Manuelle Optimierung gibt Ihnen Kontrolle, skaliert aber nur bis ~50 Produktions-Prompts. Automatisierte Optimierung (DSPy, TextGrad, Promptfoo) skaliert auf 100+ Prompts, erfordert aber gekennzeichnete Trainingsdaten und Metrik-Definitionen. Dieser Leitfaden zeigt, wann Sie welchen Ansatz verwenden und wie sie zusammenwirken.',
     publishDate: '2026-04-26',
     dateModified: '2026-05-05',
@@ -275,8 +273,8 @@ export const article: Record<Language, PEArticle> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Manuelle vs Automatisierte Prompt-Optimierung: Wann welcher Ansatz (2026)',
-      description: 'Manuelle vs automatisierte Prompt-Optimierung: wann von Hand iterieren, wann DSPy oder TextGrad nutzen. Skalierungsentscheidungsrahmen.',
+      headline: 'Manuelle vs Automatisierte Prompt-Optimierung: Wann welcher Ansatz',
+      description: 'Manuelle vs automatisierte Prompt-Optimierung: Entscheidungsrahmen basierend auf Prompt-Anzahl. Skalierungsentscheidung.',
       datePublished: '2026-04-26',
       dateModified: '2026-05-05',
       url: 'https://www.promptquorum.com/prompt-engineering/manual-vs-automated-prompt-optimization?lang=de',
@@ -471,12 +469,11 @@ export const article: Record<Language, PEArticle> = {
   },
 
   fr: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-05',
+    freshness_tier: 'evergreen',
     theme: 'Tools & Platforms',
-    title: 'Optimisation Manuelle vs Automatisée des Prompts : Quand Choisir Chaque Approche (2026)',
+    title: 'Optimisation Manuelle vs Automatisée des Prompts : Quand Choisir Chaque Approche',
     seoTitle: 'Optimisation Manuelle vs Automatisée : Guide de Décision',
-    metaDescription: 'Optimisation manuelle vs automatisée des prompts : quand itérer manuellement (< 50 prompts), quand utiliser DSPy ou Promptfoo (> 100 prompts). Cadre de décision avec comparaison des coûts et scalabilité.',
+    metaDescription: 'Optimisation manuelle vs automatisée : quand itérer manuellement, quand utiliser DSPy ou Promptfoo. Cadre décisionnel avec comparaison des coûts et scalabilité.',
     intro: '**L\'optimisation de prompts peut être manuelle (vous réécrivez le prompt) ou automatisée (un framework le réécrit pour vous).** L\'optimisation manuelle vous donne du contrôle mais ne s\'étend qu\'à ~50 prompts de production. L\'optimisation automatisée (DSPy, TextGrad, Promptfoo) s\'étend à 100+ prompts mais nécessite des données d\'entraînement étiquetées et des définitions de métriques. Ce guide vous montre quand utiliser chacun et comment ils fonctionnent ensemble.',
     publishDate: '2026-04-26',
     dateModified: '2026-05-05',
@@ -510,7 +507,7 @@ export const article: Record<Language, PEArticle> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Optimisation Manuelle vs Automatisée des Prompts : Quand Choisir Chaque Approche (2026)',
+      headline: 'Optimisation Manuelle vs Automatisée des Prompts : Quand Choisir Chaque Approche',
       description: 'Optimisation manuelle vs automatisée des prompts : quand itérer manuellement, quand utiliser DSPy ou TextGrad. Cadre de décision de scalabilité.',
       datePublished: '2026-04-26',
       dateModified: '2026-05-05',
@@ -704,12 +701,11 @@ export const article: Record<Language, PEArticle> = {
   },
 
   ja: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-05',
+    freshness_tier: 'evergreen',
     theme: 'Tools & Platforms',
-    title: 'マニュアル vs 自動プロンプト最適化：いつどちらを使うか（2026）',
+    title: 'マニュアル vs 自動プロンプト最適化：いつどちらを使うか',
     seoTitle: 'マニュアル vs 自動最適化：判断フレームワーク',
-    metaDescription: 'マニュアル vs 自動プロンプト最適化：手動反復（<50個），DSPy・Promptfoo使用（100個以上）の判断基準。コスト・スケーリング比較フレームワーク。',
+    metaDescription: 'マニュアル vs 自動プロンプト最適化の判断基準。手動反復とDSPy・Promptfooの選択、コスト・スケーリング比較フレームワーク。',
     intro: '**プロンプト最適化はマニュアル（自分で書き直す）か自動（フレームワークが書き直す）です。** マニュアルは完全な制御が得られますが、~50個の本番プロンプトまでしかスケールしません。自動最適化（DSPy、TextGrad、Promptfoo）は100個以上にスケールしますが、ラベル付きトレーニングデータとメトリクス定義が必要です。このガイドでは、どちらをいつ使うか、どう組み合わせるかを説明します。',
     publishDate: '2026-04-26',
     dateModified: '2026-05-05',
@@ -743,7 +739,7 @@ export const article: Record<Language, PEArticle> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'マニュアル vs 自動プロンプト最適化：いつどちらを使うか（2026）',
+      headline: 'マニュアル vs 自動プロンプト最適化：いつどちらを使うか',
       description: 'マニュアル vs 自動プロンプト最適化：手動反復とDSPy/TextGradの使い分け。スケーリング判断フレームワーク。',
       datePublished: '2026-04-26',
       dateModified: '2026-05-05',
@@ -936,12 +932,11 @@ export const article: Record<Language, PEArticle> = {
   },
 
   zh: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-05',
+    freshness_tier: 'evergreen',
     theme: 'Tools & Platforms',
-    title: '手动 vs 自动提示词优化：何时选择每种方法（2026）',
+    title: '手动 vs 自动提示词优化：何时选择每种方法',
     seoTitle: '手动 vs 自动提示词优化：决策框架',
-    metaDescription: '手动 vs 自动提示词优化：何时手动迭代（<50个），何时使用DSPy或Promptfoo（>100个）。成本和扩展性对比决策框架。',
+    metaDescription: '手动 vs 自动提示词优化的判断基准。何时手动迭代，何时自动化。成本和扩展性对比决策框架。',
     intro: '**提示词优化可以是手动（自己重写提示词）或自动（框架为你重写）。** 手动优化让你拥有完全控制，但只能扩展到约50个生产提示词。自动优化（DSPy、TextGrad、Promptfoo）能扩展到100个以上，但需要标记的训练数据和指标定义。本指南展示何时使用每种方法，以及它们如何协作。',
     publishDate: '2026-04-26',
     dateModified: '2026-05-05',
@@ -975,7 +970,7 @@ export const article: Record<Language, PEArticle> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '手动 vs 自动提示词优化：何时选择每种方法（2026）',
+      headline: '手动 vs 自动提示词优化：何时选择每种方法',
       description: '手动 vs 自动提示词优化：何时手动迭代，何时使用DSPy或TextGrad。扩展性决策框架。',
       datePublished: '2026-04-26',
       dateModified: '2026-05-05',
