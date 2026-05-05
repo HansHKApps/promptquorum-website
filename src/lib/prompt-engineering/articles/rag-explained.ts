@@ -93,6 +93,20 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'ListItem', position: 8, name: 'Typical use', description: 'RAG: enterprise Q&A, support bots, research assistants. Fine-tuning: legal document processing, medical coding.' },
         ],
       },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Vector Database Comparison for RAG',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Managed cloud vector database. Best for fast start and production scale. EU region available. Approx. $70/mo starter.' },
+          { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Open-source and managed. Best for hybrid search and EU compliance. Self-hosted or EU cloud. Free self-hosted; from $25/mo managed.' },
+          { '@type': 'ListItem', position: 3, name: 'Chroma', description: 'Open-source local vector store. Best for development and prototyping. Full on-premise control. Free.' },
+          { '@type': 'ListItem', position: 4, name: 'Milvus', description: 'Open-source enterprise scale. Best for billion-scale workloads. Self-hosted or Zilliz EU cloud. Free self-hosted; from $65/mo managed.' },
+          { '@type': 'ListItem', position: 5, name: 'Qdrant', description: 'Open-source high-performance filtered vector search. EU region available. Free self-hosted; from $25/mo managed.' },
+          { '@type': 'ListItem', position: 6, name: 'pgvector', description: 'PostgreSQL extension. Best for teams already on PostgreSQL. Runs wherever PostgreSQL runs. Free.' },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -147,6 +161,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**A typical RAG system runs through four main stages: ingestion, indexing, retrieval, and generation.** Each stage can be tuned independently.',
           ],
+          callouts: [
+            { type: 'info', label: 'Retrieval Is the Bottleneck', text: 'Most RAG failures are retrieval failures — the wrong documents are returned, or no documents pass the threshold. Test your retriever independently on 20 representative queries before evaluating the full pipeline. If retrieval is broken, improving the generator won\'t help.' }
+          ],
           numberedItems: [
             'Ingestion: You load documents (for example PDFs, knowledge base articles, tickets, code) and split them into chunks, often 200–1,000 tokens each. Metadata such as titles, dates, authors, or tags can be attached.',
             'Indexing: Each chunk is transformed into a vector representation using an embedding model, then stored in a vector database or search index. This lets the system find semantically similar content for new queries.',
@@ -164,6 +181,9 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG and [fine-tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning) solve different problems and work best when combined, not treated as alternatives.** Use RAG first. Add fine-tuning only when you need consistent behavioral changes that RAG cannot provide through prompting.',
           ],
+          callouts: [
+            { type: 'info', label: 'RAG First, Fine-Tune Second', text: 'RAG is reversible — update your document store, answers change immediately, no retraining cost. Fine-tuning is permanent — it modifies model parameters and requires a new training run to undo. Start with RAG. Add fine-tuning only when RAG cannot produce consistent behavior changes through prompting alone.' }
+          ],
           columns: ['Factor', 'RAG', 'Fine-Tuning'],
           rows: [
             { Factor: 'Knowledge source', RAG: 'Retrieved at query time from your documents', 'Fine-Tuning': 'Baked into model parameters during training' },
@@ -174,6 +194,19 @@ export const article: Record<Language, PEArticle> = {
             { Factor: 'Style/behavior change', RAG: 'Cannot change model behavior', 'Fine-Tuning': 'Can teach consistent style, tone, domain behavior' },
             { Factor: 'Best for', RAG: 'Policies, product docs, recent data, private data', 'Fine-Tuning': 'Fixed domain behavior, narrow stable tasks' },
             { Factor: 'Typical use', RAG: 'Enterprise Q&A, support bots, research assistants', 'Fine-Tuning': 'Legal document processing, medical coding' },
+          ],
+        },
+        vectorDbTable: {
+          title: 'Vector Database Comparison',
+          content: ['**Choosing the right vector database depends on your scale, data residency requirements, and operational model.** The table below covers the six most widely deployed options as of 2026.'],
+          columns: ['Database', 'Type', 'Best for', 'EU data residency', 'Self-hosted', 'Approx. cost'],
+          rows: [
+            { Database: 'Pinecone', Type: 'Managed cloud', 'Best for': 'Fast start, production scale with minimal ops overhead', 'EU data residency': 'EU region available', 'Self-hosted': 'No', 'Approx. cost': 'Free tier; ~$70/mo starter' },
+            { Database: 'Weaviate', Type: 'Open-source / managed', 'Best for': 'Flexible schema, hybrid search, EU compliance', 'EU data residency': 'Self-hosted or EU cloud', 'Self-hosted': 'Yes', 'Approx. cost': 'Free (self-hosted); managed from $25/mo' },
+            { Database: 'Chroma', Type: 'Open-source, local', 'Best for': 'Local development, prototyping, small document sets', 'EU data residency': 'On-premise (full control)', 'Self-hosted': 'Yes', 'Approx. cost': 'Free' },
+            { Database: 'Milvus', Type: 'Open-source / managed', 'Best for': 'Billion-scale enterprise workloads', 'EU data residency': 'Self-hosted or EU cloud (Zilliz)', 'Self-hosted': 'Yes', 'Approx. cost': 'Free (self-hosted); managed from $65/mo' },
+            { Database: 'Qdrant', Type: 'Open-source / managed', 'Best for': 'High-performance filtered vector search', 'EU data residency': 'EU region available; self-hosted', 'Self-hosted': 'Yes', 'Approx. cost': 'Free (self-hosted); managed from $25/mo' },
+            { Database: 'pgvector', Type: 'PostgreSQL extension', 'Best for': 'Teams already on PostgreSQL, avoiding new infrastructure', 'EU data residency': 'Wherever PostgreSQL runs', 'Self-hosted': 'Yes', 'Approx. cost': 'Free (PostgreSQL extension)' },
           ],
         },
         example: {
@@ -192,6 +225,9 @@ export const article: Record<Language, PEArticle> = {
           title: 'RAG in Multi-Model Workflows',
           content: [
             '**RAG becomes even more powerful when combined with multiple models and structured prompting.** You can:',
+          ],
+          callouts: [
+            { type: 'info', label: 'Same Documents, Different Answers', text: 'Different models use retrieved context differently. Instruction-tuned models tend to extrapolate beyond retrieved text. Models optimized for grounding say "not in the provided documents" more readily. Test your RAG pipeline across multiple models with PromptQuorum to find which handles your domain best.' }
           ],
           items: [
             'Use one model or service to embed and retrieve documents, and another to generate answers.',
@@ -215,16 +251,39 @@ export const article: Record<Language, PEArticle> = {
         },
         commonMistakes: {
           title: 'Common Mistakes',
-          items: [
-            '**Using RAG for knowledge the model already has well:** Retrieving context the model knows accurately (e.g., general Python syntax) adds tokens and latency without improving quality. Reserve RAG for domain-specific, proprietary, or recent information.',
-            '**Chunk size too small:** Chunks under 100 words often miss the surrounding context needed to understand a fact. A policy sentence without its surrounding paragraph is frequently ambiguous. Use 200–500 word chunks as the baseline.',
-            '**No relevance threshold:** Passing all retrieved documents to the LLM regardless of similarity score forces the model to work with irrelevant context. Set a minimum similarity score (>0.7 cosine similarity) and return "not found" if no chunks pass the threshold.',
-            '**Not testing retrieval quality separately from generation quality:** If your answers are wrong, the fault may be in retrieval (wrong documents returned) not generation (model reasoning). Test the retriever on 20 representative queries before evaluating the full pipeline.',
-            '**Ignoring metadata filters:** Large document stores without date, department, or permission filters return outdated or irrelevant content. Attach metadata at ingestion time and apply filters at retrieval time.',
+          mistakes: [
+            {
+              mistake: 'Using RAG for knowledge the model already has well',
+              problem: 'Retrieving context the model already knows accurately (e.g., general Python syntax) adds tokens and latency without improving quality.',
+              fix: 'Reserve RAG for domain-specific, proprietary, or recent information. Test whether the model answers correctly without RAG first — if it does, RAG adds cost but not value.'
+            },
+            {
+              mistake: 'Chunk size too small (under 100 words)',
+              problem: 'Chunks under 100 words often miss the surrounding context needed to understand a fact. A policy sentence without its surrounding paragraph is frequently ambiguous.',
+              fix: 'Use 200–500 word chunks as the baseline. Add 10–20% overlap between adjacent chunks to preserve context across chunk boundaries.'
+            },
+            {
+              mistake: 'No relevance threshold',
+              problem: 'Passing all retrieved documents to the LLM regardless of similarity score forces the model to work with irrelevant context, increasing hallucination risk.',
+              fix: 'Set a minimum similarity score (>0.7 cosine similarity). Return "not found in knowledge base" if no chunks pass the threshold — do not force the model to answer from irrelevant content.'
+            },
+            {
+              mistake: 'Not testing retrieval quality separately from generation quality',
+              problem: 'If your answers are wrong, the fault may be in retrieval (wrong documents returned) not generation (model reasoning). Without separate testing, you cannot isolate the problem.',
+              fix: 'Test the retriever on 20 representative queries before evaluating the full pipeline. Check: Are the right documents returned? Do they contain the answer? Only then evaluate the generator.'
+            },
+            {
+              mistake: 'Ignoring metadata filters',
+              problem: 'Large document stores without date, department, or permission filters return outdated or irrelevant content — especially when documents from different time periods or departments conflict.',
+              fix: 'Attach metadata at ingestion time (date, author, department, permissions). Apply filters at retrieval time to return only relevant, authorized, and current documents.'
+            },
           ],
         },
         howToStart: {
           title: 'How to Implement RAG',
+          callouts: [
+            { type: 'info', label: 'The Hybrid Search Advantage', text: 'BM25 keyword search and vector similarity search have complementary strengths. Hybrid search (both combined with re-ranking) often outperforms either alone — especially for queries that mix exact terms with semantic meaning. Most vector databases (Weaviate, Milvus, Qdrant) support hybrid search natively.' }
+          ],
           numberedItems: [
             '**Identify the knowledge sources the AI needs (documents, PDFs, databases, APIs).** As of April 2026, the most commonly used sources are internal PDFs, knowledge base articles, and product documentation. For customer support: FAQs, product docs, and past ticket resolutions. For research: your paper repository and external databases.',
             '**Convert static documents into searchable embeddings using a vector database (Pinecone, Weaviate, Chroma, Milvus).** This process breaks documents into chunks (paragraphs or sentences), converts each to a vector (numerical representation of meaning), and stores them for fast semantic search.',
