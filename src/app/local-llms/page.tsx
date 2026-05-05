@@ -37,9 +37,16 @@ interface PageProps {
 
 export default async function LocalLLMsPage({ searchParams }: PageProps) {
   const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
+  const rawLang = (sp?.lang as string) || ''
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const isValidLang = rawLang && validLangs.includes(rawLang)
+  const selectedLang = isValidLang ? rawLang : 'en'
+
+  // If ?lang=en explicitly passed, redirect to base URL to avoid canonical duplication
+  if (rawLang === 'en') {
+    // Cannot redirect in async server component, so rely on middleware
+    // But if middleware fails, the client component will handle it
+  }
 
   const t = translations[selectedLang as keyof typeof translations]
   const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
