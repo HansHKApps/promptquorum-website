@@ -1941,7 +1941,7 @@ export const article: Record<Language, PEArticle> = {
         },
 
         templateNote: {
-          content: '该模板适用于 GPT-5.5、Claude、Gemini 以及通过 Ollama 或 LM Studio 运行的本地大型语言模型。模块顺序是建议，而非硬性规定——但将角色与上下文置于首位、输出格式置于末位，是在所有主流模型上最通用且可靠的排列方式。',
+          content: '该模板适用于 GPT-4o、Claude、Gemini 以及通过 Ollama 或 LM Studio 运行的本地大型语言模型。模块顺序是建议，而非硬性规定——但将角色与上下文置于首位、输出格式置于末位，是在所有主流模型上最通用且可靠的排列方式。',
         },
 
         frameworks: {

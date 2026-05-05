@@ -111,8 +111,8 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
         },
         {
           '@type': 'Question',
-          name: 'Can local LLMs match cloud models like GPT-5.5?',
-          acceptedAnswer: { '@type': 'Answer', text: 'On coding and reasoning tasks, Llama 4 Scout, DeepSeek V3, and Qwen3 score within 5–10% of GPT-5.5 mini on standard benchmarks (MMLU, HumanEval). Claude Opus 4.7 and GPT-5.5 maintain an edge on complex multi-step tasks.' }
+          name: 'Can local LLMs match cloud models like GPT-4o?',
+          acceptedAnswer: { '@type': 'Answer', text: 'On coding and reasoning tasks, Llama 4 Scout, DeepSeek V3, and Qwen3 score within 5–10% of GPT-4o mini on standard benchmarks (MMLU, HumanEval). Claude Opus 4.7 and GPT-4o maintain an edge on complex multi-step tasks.' }
         },
         {
           '@type': 'Question',
@@ -225,7 +225,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
         { '@type': 'ListItem', position: 2, name: 'Qwen3 8B', description: 'Alibaba. Top coding and multilingual. ollama pull qwen3:8b. 5 GB VRAM.' },
         { '@type': 'ListItem', position: 3, name: 'Gemma 3 12B', description: 'Google. Strong reasoning on RTX 3060. ollama pull gemma3:12b. 8 GB VRAM.' },
         { '@type': 'ListItem', position: 4, name: 'DeepSeek-R2 8B', description: 'DeepSeek. Best for math and logic. ollama pull deepseek-r2:8b. 5 GB VRAM.' },
-        { '@type': 'ListItem', position: 5, name: 'Qwen3-Coder 7B', description: 'Alibaba. Best for code completion and review. 7B runs on 8 GB GPU. Outperforms GPT-5.5 mini on HumanEval.' },
+        { '@type': 'ListItem', position: 5, name: 'Qwen3-Coder 7B', description: 'Alibaba. Best for code completion and review. 7B runs on 8 GB GPU. Outperforms GPT-4o mini on HumanEval.' },
         { '@type': 'ListItem', position: 6, name: 'Mistral 7B', description: 'Mistral AI. Fastest on consumer hardware. 4 GB VRAM at Q4. Best for throughput-sensitive tasks.' },
         { '@type': 'ListItem', position: 7, name: 'Llama 4 Scout', description: 'Meta. Best overall quality. 8B and 70B variants. Runs on RTX 4060 Ti (8B Q4) or dual RTX 4090 (70B Q4).' }
       ]

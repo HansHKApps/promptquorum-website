@@ -754,7 +754,7 @@ export const article: Record<Language, PEArticle> = {
         '精度向上：GSM8K数学ベンチマークで56%→74%（+18ポイント）',
         'トークンコスト：線形推論（CoT）の5～20倍。複数パス実行のため',
         '最適なパス数：通常5～10。20を超えると収益逓減傾向',
-        'ベストモデル：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro',
+        'ベストモデル：Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro',
         '活用シーン：複雑な推論、医学診断、法的分析、複合計算'
       ],
 
@@ -992,7 +992,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'PromptQuorum では、セルフコンシステンシープロンプティングを複数モデルで並行テストできます：',
             '',
-            '1. モデルを選択：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro など',
+            '1. モデルを選択：Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro など',
             '2. パス数を設定：5、8、10 を比較実験',
             '3. Temperature を調整：0.7～1.0 で多様性確保',
             '4. 同じプロンプトで複数実行してパス多様性を検証',
@@ -1038,7 +1038,7 @@ export const article: Record<Language, PEArticle> = {
             '   • パス数を8、10に増やし再テスト',
             '   • 温度調整で多様性確認',
             '',
-            '推奨開始モデル：Claude Opus 4.7 または GPT-5.5'
+            '推奨開始モデル：Claude Opus 4.7 または GPT-4o'
           ]
         },
 
@@ -1050,7 +1050,7 @@ export const article: Record<Language, PEArticle> = {
             '[プロンプトエンジニアリングとは](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 基礎知識',
             '[マルチステップ推論と分解](/prompt-engineering/decomposition-prompting?lang=ja) — 大型問題を分割する手法',
             '[Few-Shotプロンプティング](/prompt-engineering/few-shot-prompting?lang=ja) — 例示による精度向上',
-            '[モデル選択ガイド](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro 比較',
+            '[モデル選択ガイド](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro 比較',
             '[プロンプト検証戦略](/prompt-engineering/prompt-optimization-metrics?lang=ja) — 精度測定とA/Bテスト'
           ]
         },
@@ -1064,7 +1064,7 @@ export const article: Record<Language, PEArticle> = {
             'Cobbe et al. (2021). "Training Verifiers to Solve Math Word Problems." OpenAI. arXiv:2110.14168',
             'Uesato et al. (2022). "Solving Mixed-Modal Jailbreak Prompts by Decomposition." DeepMind.',
             'Anthropic (2026). "Extended Thinking in Claude — Making Longer Chains of Thought." Claude API Documentation.',
-            'OpenAI (2026). "Reasoning in o3 and GPT-5.5 — Model Behavior and Prompting Guidance." OpenAI API Docs.'
+            'OpenAI (2026). "Reasoning in o3 and GPT-4o — Model Behavior and Prompting Guidance." OpenAI API Docs.'
           ]
         }
       },
@@ -1108,7 +1108,7 @@ export const article: Record<Language, PEArticle> = {
             name: 'どのモデルがセルフコンシステンシーに向いていますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '2026年現在、Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。'
+              text: '2026年現在、Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。'
             }
           },
           {
@@ -1183,7 +1183,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
         ],
         speakable: {
@@ -1213,7 +1213,7 @@ export const article: Record<Language, PEArticle> = {
         '精度提升：GSM8K数学基准从56%→74%（+18个百分点）',
         'Token成本：比单次推理多消耗5-20倍。8次采样则为8倍',
         '最优采样数：5-10次。超过20次效果递减',
-        '最佳模型：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro',
+        '最佳模型：Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro',
         '适用场景：确定性答案问题（数学、诊断、法律分析、代码审计）'
       ],
 
@@ -1466,7 +1466,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             'PromptQuorum原生支持自洽一致性工作流：',
             '',
-            '1. 选择模型：Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro',
+            '1. 选择模型：Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro',
             '2. 设置采样数：5、8、10对比实验',
             '3. 配置Temperature：0.7-0.9',
             '4. 运行多采样：系统自动运行N次并收集输出',
@@ -1521,7 +1521,7 @@ export const article: Record<Language, PEArticle> = {
             '  • 如果精度还不够，试试8采样',
             '  • 如果成本受限，试试3采样',
             '',
-            '推荐首选模型：Claude Opus 4.7（推理强）或 GPT-5.5（多样性好）'
+            '推荐首选模型：Claude Opus 4.7（推理强）或 GPT-4o（多样性好）'
           ]
         },
 
@@ -1547,7 +1547,7 @@ export const article: Record<Language, PEArticle> = {
             'Cobbe et al. (2021). "Training Verifiers to Solve Math Word Problems." OpenAI. arXiv:2110.14168',
             'Uesato et al. (2022). "Solving Mixed-Modal Jailbreak Prompts by Decomposition." DeepMind.',
             'Anthropic (2026). "Extended Thinking in Claude." Claude API Documentation.',
-            'OpenAI (2026). "Reasoning in o3 and GPT-5.5." OpenAI API Documentation.'
+            'OpenAI (2026). "Reasoning in o3 and GPT-4o." OpenAI API Documentation.'
           ]
         }
       },
@@ -1591,7 +1591,7 @@ export const article: Record<Language, PEArticle> = {
             name: '哪些模型最适合？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '2026年，Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。'
+              text: '2026年，Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。'
             }
           },
           {
@@ -1667,7 +1667,7 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
         ],
         speakable: {

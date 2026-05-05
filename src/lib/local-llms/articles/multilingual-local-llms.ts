@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**European languages (German, French, Spanish, Italian)**: Mistral and Llama 3.x are competitive with Qwen2.5 for EU languages; Qwen2.5 still leads on code-mixed and formal register tasks.',
             '**Japanese and Korean**: Qwen2.5 is significantly stronger -- 15-25% better on language-specific benchmarks than Llama 3.x at the same size.',
             '**Chinese (Simplified and Traditional)**: Qwen2.5 is the dominant model -- trained on the largest Chinese corpus of any open-weight model.',
-            'As of April 2026, no locally-runnable model matches GPT-5.5 or Claude Opus 4.7 quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
+            'As of April 2026, no locally-runnable model matches GPT-4o or Claude Opus 4.7 quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
           ],
         },
         whichSupport: {
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Local LLMs Perform Best for Arabic?',
           content: [
             '**Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs.** Egyptian, Gulf, Levantine). As of April 2026, Qwen2.5 and Gemma 3 are the strongest locally-runnable Arabic models.',
-            'For MSA (Modern Standard Arabic) instruction-following, Qwen2.5 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-5.5, which has broader Arabic dialect coverage.',
+            'For MSA (Modern Standard Arabic) instruction-following, Qwen2.5 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-4o, which has broader Arabic dialect coverage.',
           ],
         },
         howToBenchmark: {
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Run m-MMLU -- the multilingual version of MMLU covering 57 subjects in multiple languages.',
             'For conversational quality: write 10 test prompts in your target language covering different task types (summarization, Q&A, translation, creative writing). Evaluate responses manually or with a native speaker.',
             'For Japanese specifically: use JMT-bench (github.com/Stability-AI/lm-evaluation-harness) which covers Japanese instruction-following.',
-            'Compare your local model against cloud APIs using [PromptQuorum](/) -- send the same multilingual prompt to your local Ollama model and GPT-5.5 simultaneously to quantify the quality gap on your specific use case.',
+            'Compare your local model against cloud APIs using [PromptQuorum](/) -- send the same multilingual prompt to your local Ollama model and GPT-4o simultaneously to quantify the quality gap on your specific use case.',
           ],
         },
         comparisonTable: {
@@ -398,8 +398,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'Sie haben ähnliche Geschwindigkeit. **Ollama** ist einsteigerfreundlich (CLI, Web-UI). **llama.cpp** ist direkter und schneller für High-Performance-Setup. Für Anfänger: Ollama. Für Experten: llama.cpp.'
             },
             {
-              q: 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.5?',
-              a: 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.5 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.5 $30-100.'
+              q: 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-4o?',
+              a: 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-4o API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-4o $30-100.'
             },
             {
               q: 'Kann ich ein 13B-Modell auf meinem Laptop ausführen?',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
-              a: 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.5 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+              a: 'Bei Latenzanforderungen: Nein. OpenAI GPT-4o ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
             },
             {
               q: 'Sollte ich CPU- oder GPU-Inferenz verwenden?',
@@ -559,10 +559,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.5?',
+            'name': 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-4o?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.5 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.5 $30-100.'
+              'text': 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-4o API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-4o $30-100.'
             }
           },
           {
@@ -610,7 +610,7 @@ schema: {
             'name': 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.5 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+              'text': 'Bei Latenzanforderungen: Nein. OpenAI GPT-4o ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
             }
           },
           {
@@ -911,8 +911,8 @@ schema: {
               a: 'Ils ont une vitesse similaire. **Ollama** est convivial pour les débutants (CLI, Web UI). **llama.cpp** est plus direct et plus rapide pour la configuration haute performance. Pour les débutants : Ollama. Pour les experts : llama.cpp.'
             },
             {
-              q: 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.5 ?',
-              a: 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.5 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.5 30-100 $.'
+              q: 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-4o ?',
+              a: 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-4o : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-4o 30-100 $.'
             },
             {
               q: 'Puis-je exécuter un modèle 13B sur mon ordinateur portable ?',
@@ -936,7 +936,7 @@ schema: {
             },
             {
               q: 'Un LLM local peut-il rivaliser avec OpenAI pour les traitements par lot importants (100+ requêtes) ?',
-              a: 'Pour les exigences de latence : non. OpenAI GPT-5.5 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
+              a: 'Pour les exigences de latence : non. OpenAI GPT-4o est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
             },
             {
               q: 'Devrais-je utiliser l\'inférence CPU ou GPU ?',
@@ -1063,10 +1063,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.5 ?',
+            'name': 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-4o ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.5 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.5 30-100 $.'
+              'text': 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-4o : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-4o 30-100 $.'
             }
           },
           {
@@ -1114,7 +1114,7 @@ schema: {
             'name': 'Un LLM local peut-il rivaliser avec OpenAI pour les traitements par lot importants (100+ requêtes) ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Pour les exigences de latence : non. OpenAI GPT-5.5 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
+              'text': 'Pour les exigences de latence : non. OpenAI GPT-4o est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
             }
           },
           {
@@ -1399,8 +1399,8 @@ schema: {
               a: '速度は同等。**Ollama** は初心者向けで使い易い（CLI、Web UI）。**llama.cpp** より直接的で高性能セットアップで高速。初心者：Ollama、エキスパート：llama.cpp。'
             },
             {
-              q: 'ローカルLLM実行 vs OpenAI GPT-5.5 のコスト比較？',
-              a: 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.5 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.5 $30-100。'
+              q: 'ローカルLLM実行 vs OpenAI GPT-4o のコスト比較？',
+              a: 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-4o API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-4o $30-100。'
             },
             {
               q: 'ノート PC で 13B モデル実行可能？',
@@ -1424,7 +1424,7 @@ schema: {
             },
             {
               q: '大規模バッチ処理（100+クエリ）で OpenAI と競争可能？',
-              a: 'レイテンシ要件：いいえ。OpenAI GPT-5.5 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
+              a: 'レイテンシ要件：いいえ。OpenAI GPT-4o は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
             },
             {
               q: 'CPU または GPU 推論選択？',
@@ -1552,10 +1552,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'ローカルLLM実行 vs OpenAI GPT-5.5 のコスト比較？',
+            'name': 'ローカルLLM実行 vs OpenAI GPT-4o のコスト比較？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.5 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.5 $30-100。'
+              'text': 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-4o API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-4o $30-100。'
             }
           },
           {
@@ -1603,7 +1603,7 @@ schema: {
             'name': '大規模バッチ処理（100+クエリ）で OpenAI と競争可能？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'レイテンシ要件：いいえ。OpenAI GPT-5.5 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
+              'text': 'レイテンシ要件：いいえ。OpenAI GPT-4o は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
             }
           },
           {

@@ -188,8 +188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'Yes -- llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.',
             },
             {
-              q: 'How does 70B local quality compare to GPT-5.5?',
-              a: 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-5.5 (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-5.5 on most tasks.',
+              q: 'How does 70B local quality compare to GPT-4o?',
+              a: 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-4o (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-4o on most tasks.',
             },
             {
               q: 'Does Ollama support running 70B models automatically?',
@@ -295,7 +295,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'What is the cheapest hardware that can run a 70B model usably?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As of April 2026, a used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 is the cheapest path to 70B inference at 25+ tok/sec. A new machine equivalent would be the M5 Max MacBook Pro 64 GB (~$3,500). An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000-$4,000 total but produces slower inference due to layer offloading.' } },
           { '@type': 'Question', 'name': 'Can I run a 70B model on two GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.' } },
-          { '@type': 'Question', 'name': 'How does 70B local quality compare to GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-5.5 (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-5.5 on most tasks.' } },
+          { '@type': 'Question', 'name': 'How does 70B local quality compare to GPT-4o?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-4o (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-4o on most tasks.' } },
           { '@type': 'Question', 'name': 'Does Ollama support running 70B models automatically?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Running `ollama run llama3.3:70b` downloads and runs the model with automatic GPU layer offloading. Ollama detects available VRAM and system RAM, offloads as many layers as possible to GPU, and runs the rest on CPU. No manual configuration is required for basic use.' } },
           { '@type': 'Question', 'name': 'How much electricity does running a 70B model use?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A Mac Studio M2 Ultra running 70B inference draws approximately 30-50 W. An NVIDIA RTX 4090 desktop under load draws 350-450 W. At $0.15 per kWh, continuous 70B inference on an RTX 4090 costs approximately $0.05-0.07 per hour. Apple Silicon is 7-10× more energy-efficient for this workload.' } },
           { '@type': 'Question', 'name': 'Are 70B models worth it compared to 13B models for everyday tasks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For complex reasoning, long-document analysis, and nuanced writing, yes -- the quality difference is noticeable. For simple summarization, Q&A, and classification, a 13B or even 7B model produces nearly identical output. Run both on your specific use case with [PromptQuorum](/) to quantify the quality difference before investing in 70B hardware.' } },
@@ -400,10 +400,10 @@ schema: {
       },
       {
         '@type': 'Question',
-        'name': 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?',
+        'name': 'Wie vergleicht sich 70B lokale Qualität mit GPT-4o?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen2.5 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoningintensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
+          'text': 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen2.5 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-4o (2024) schneidet höher bei reasoningintensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-4o.',
         }
       },
       {
@@ -560,8 +560,8 @@ schema: {
           a: 'Ja -- llama.cpp und Ollama unterstützen Multi-GPU Inferenz auf NVIDIA Hardware. Zwei RTX 4090s (48 GB insgesamt VRAM) passen ein Q4_K_M 70B Modell vollständig in VRAM. Ollama verwaltet Multi-GPU automatisch, wenn mehrere GPUs vorhanden sind. Tensor Parallelism in llama.cpp (`--tensor-split`) kontrolliert, wie Layers verteilt werden.',
         },
         {
-          q: 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?',
-          a: 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen2.5 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoning-intensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
+          q: 'Wie vergleicht sich 70B lokale Qualität mit GPT-4o?',
+          a: 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen2.5 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-4o (2024) schneidet höher bei reasoning-intensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-4o.',
         },
         {
           q: 'Unterstützt Ollama die automatische Ausführung von 70B Modellen?',
@@ -731,8 +731,8 @@ schema: {
           a: 'Oui -- llama.cpp et Ollama supportent l\'inférence multi-GPU sur matériel NVIDIA. Deux RTX 4090 (48 Go VRAM total) rentrent entièrement dans VRAM un modèle 70B Q4_K_M. Ollama gère multi-GPU automatiquement quand plusieurs GPU sont présents. Le parallélisme de tenseur dans llama.cpp (`--tensor-split`) contrôle comment les couches sont distribuées.',
         },
         {
-          q: 'Comment la qualité 70B locale se compare-t-elle à GPT-5.5 ?',
-          a: 'Sur les benchmarks MMLU et HumanEval, Llama 3.3 70B (82 %, 88 %) et Qwen2.5 72B (84 %, 87 %) égalent ou dépassent légèrement les scores GPT-4 (2023). GPT-5.5 (2024) obtient des scores plus élevés sur les tâches lourdes en raisonnement. Pour le suivi d\'instructions général, résumé et génération de code, les modèles 70B locaux sont compétitifs avec GPT-5.5 sur la plupart des tâches.',
+          q: 'Comment la qualité 70B locale se compare-t-elle à GPT-4o ?',
+          a: 'Sur les benchmarks MMLU et HumanEval, Llama 3.3 70B (82 %, 88 %) et Qwen2.5 72B (84 %, 87 %) égalent ou dépassent légèrement les scores GPT-4 (2023). GPT-4o (2024) obtient des scores plus élevés sur les tâches lourdes en raisonnement. Pour le suivi d\'instructions général, résumé et génération de code, les modèles 70B locaux sont compétitifs avec GPT-4o sur la plupart des tâches.',
         },
         {
           q: 'Ollama supporte-t-il l\'exécution automatique de modèles 70B ?',
@@ -838,10 +838,10 @@ schema: {
         },
         {
           '@type': 'Question',
-          'name': 'Comment la qualité 70B locale se compare-t-elle à GPT-5.5 ?',
+          'name': 'Comment la qualité 70B locale se compare-t-elle à GPT-4o ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Sur les benchmarks MMLU et HumanEval, Llama 3.3 70B (82 %, 88 %) et Qwen2.5 72B (84 %, 87 %) égalent ou dépassent légèrement les scores GPT-4 (2023). GPT-5.5 (2024) obtient des scores plus élevés sur les tâches lourdes en raisonnement.',
+            'text': 'Sur les benchmarks MMLU et HumanEval, Llama 3.3 70B (82 %, 88 %) et Qwen2.5 72B (84 %, 87 %) égalent ou dépassent légèrement les scores GPT-4 (2023). GPT-4o (2024) obtient des scores plus élevés sur les tâches lourdes en raisonnement.',
           }
         },
         {
@@ -921,7 +921,7 @@ schema: {
       { '@type': 'Question', name: 'RTX 4090で70Bモデルを完全に実行できますか？', acceptedAnswer: { '@type': 'Answer', text: '直接ではありません。RTX 4090は24GB VRAMで、Q4_K_Mで量化された70Bモデルには約40～43GBが必要です。Ollamaまたはllama.cppのレイヤーオフロード機能を使用して、約60％のレイヤーをGPU上で実行し、残りの40％をシステムRAM上で実行できます。これにより10～18 tok/secが得られます。' } },
       { '@type': 'Question', name: '「レイヤーオフロード」とは正確には何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'レイヤーオフロード（層オフロード）は、LLMの計算レイヤーを GPU VRAM とシステムRAMに分割する手法です。VRAMに格納されたレイヤーはGPU速度で実行され、システムRAMのレイヤーはCPU速度で実行されます。Ollamaで自動的に処理されます：OLLAMA_GPU_LAYERS=999 を設定すると、VRAMに収まるだけ多くのレイヤーをオフロードします。' } },
       { '@type': 'Question', name: 'CPU専用で70Bモデルを実行することは実際に可能ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、64GB RAMを備えたハイコアCPU（AMD Threadripper、Intel Xeon）では可能ですが、1～3 tok/secしか生成しません。200語の応答は約75秒かかります。バッチ処理（文書の要約、レポート生成）には使用できますが、対話的なチャットには不適切です。対話的な使用には最低8+ tok/secの処理速度が必要です。' } },
-      { '@type': 'Question', name: '70Bモデルの質は GPT-5.5 と比較してどうですか？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.3 70B（MMLU 82%、HumanEval 88%）と Qwen2.5 72B（MMLU 84%、HumanEval 87%）は、ベンチマークスコアで GPT-4（2023年）を一致または僅かに上回ります。GPT-5.5（2024年）は推論の多い作業ではスコアが高くなりますが、一般的な指示遵行、要約、コード生成では、70Bのローカルモデルはほとんどのタスクで GPT-5.5 と同等です。' } },
+      { '@type': 'Question', name: '70Bモデルの質は GPT-4o と比較してどうですか？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.3 70B（MMLU 82%、HumanEval 88%）と Qwen2.5 72B（MMLU 84%、HumanEval 87%）は、ベンチマークスコアで GPT-4（2023年）を一致または僅かに上回ります。GPT-4o（2024年）は推論の多い作業ではスコアが高くなりますが、一般的な指示遵行、要約、コード生成では、70Bのローカルモデルはほとんどのタスクで GPT-4o と同等です。' } },
       { '@type': 'Question', name: '2026年4月時点での最も費用対効果の高い70B セットアップは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '中古 Mac Studio M2 Ultra（64GB統合メモリ）で約2,000ドル、25+ tok/secで動作することが最も費用対効果の高い選択肢です。新品相当品（M5 Max MacBook Pro 64GB）は約3,500ドルです。NVIDIA RTX 4090デスクトップ構成（24GB VRAM + 32GB RAM）は3,000～4,000ドルかかりますが、レイヤーオフロードのため速度が低下します。' } },
       { '@type': 'Question', name: '複数のGPUで70Bモデルを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、NVIDIA ハードウェアでは llama.cpp と Ollama がマルチGPU推論をサポートしています。2つのRTX 4090s（合計48GB VRAM）は Q4_K_M 70B モデルを完全にVRAM内に適合させることができます。Ollamaは複数GPUが存在する場合、自動的にマルチGPU処理を行います。llama.cpp では tensor parallelism（--tensor-split）がレイヤー分配を制御します。' } },
       { '@type': 'Question', name: '70Bモデルを実行する場合、電力消費はどのくらいですか？', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M2 Ultra は70B推論で約30～50W消費します。NVIDIA RTX 4090 デスクトップは負荷時に350～450W消費します。1kWh あたり0.15ドルで、RTX 4090での継続的な70B推論は時間あたり約0.05～0.07ドルのコストがかかります。Apple Siliconはこのワークロードで7～10倍エネルギー効率が優れています。' } },
@@ -1064,8 +1064,8 @@ schema: {
           a: 'はい -- llama.cpp と Ollama は NVIDIA ハードウェアでマルチ GPU 推論をサポートしています。2つの RTX 4090s（合計48GB VRAM）は Q4_K_M 70B モデルを完全に VRAM に適合させることができます。Ollama は複数の GPU が存在する場合、自動的にマルチ GPU 処理を行います。llama.cpp では tensor parallelism（--tensor-split）がレイヤーをどのように分配するかを制御します。',
         },
         {
-          q: '70B ローカル品質は GPT-5.5 とどう比較されますか？',
-          a: 'MMLU と HumanEval ベンチマークでは、Llama 3.3 70B（82%, 88%）と Qwen2.5 72B（84%, 87%）は GPT-4（2023年）スコアに一致またはやや上回ります。GPT-5.5（2024年）は推論が多いタスクではより高いスコアを示します。一般的な指示遵行、要約、コード生成では、70B ローカルモデルはほとんどのタスクで GPT-5.5 と同等です。',
+          q: '70B ローカル品質は GPT-4o とどう比較されますか？',
+          a: 'MMLU と HumanEval ベンチマークでは、Llama 3.3 70B（82%, 88%）と Qwen2.5 72B（84%, 87%）は GPT-4（2023年）スコアに一致またはやや上回ります。GPT-4o（2024年）は推論が多いタスクではより高いスコアを示します。一般的な指示遵行、要約、コード生成では、70B ローカルモデルはほとんどのタスクで GPT-4o と同等です。',
         },
         {
           q: 'Ollama は70Bモデルを自動的に実行できますか？',
@@ -1233,8 +1233,8 @@ schema: {
           a: '可以 -- llama.cpp 和 Ollama 在 NVIDIA 硬件上支持多 GPU 推理。两个 RTX 4090 (48 GB 总 VRAM) 可以完整拟合 Q4_K_M 70B 模型到 VRAM。Ollama 在有多个 GPU 时自动处理多 GPU。llama.cpp 中的张量并行 (`--tensor-split`) 控制层如何分布。',
         },
         {
-          q: '70B 本地质量与 GPT-5.5 相比如何？',
-          a: '在 MMLU 和 HumanEval 基准上，Llama 3.3 70B (82%, 88%) 和 Qwen2.5 72B (84%, 87%) 与或略超 GPT-4 (2023) 分数。GPT-5.5 (2024) 在推理密集任务上分数更高。对于通用指令跟随、摘要和代码生成，70B 本地模型在大多数任务上与 GPT-5.5 竞争力相当。',
+          q: '70B 本地质量与 GPT-4o 相比如何？',
+          a: '在 MMLU 和 HumanEval 基准上，Llama 3.3 70B (82%, 88%) 和 Qwen2.5 72B (84%, 87%) 与或略超 GPT-4 (2023) 分数。GPT-4o (2024) 在推理密集任务上分数更高。对于通用指令跟随、摘要和代码生成，70B 本地模型在大多数任务上与 GPT-4o 竞争力相当。',
         },
         {
           q: 'Ollama 支持自动运行 70B 模型吗？',
@@ -1335,7 +1335,7 @@ schema: {
       },
       {
         '@type': 'Question',
-        name: '70B 本地质量与 GPT-5.5 相比如何？',
+        name: '70B 本地质量与 GPT-4o 相比如何？',
         acceptedAnswer: {
           '@type': 'Answer',
           text: '在 MMLU 和 HumanEval 基准上，Llama 3.3 70B 和 Qwen2.5 72B 与 GPT-4 (2023) 相当或略超。对于通用指令跟随、摘要和代码生成，70B 本地模型竞争力相当。',

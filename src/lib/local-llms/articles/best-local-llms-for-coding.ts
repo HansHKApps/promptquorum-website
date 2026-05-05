@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         de: {
           question: 'Welches lokale LLM ist 2026 am besten fuer Programmierung?',
-          answer: 'Das beste lokale Coding-LLM 2026 ist Qwen2.5-Coder 32B — es uebertrifft GPT-5.5 beim HumanEval-Benchmark und laeuft lokal ueber Ollama. Fuer weniger VRAM: Qwen3 8B.',
+          answer: 'Das beste lokale Coding-LLM 2026 ist Qwen2.5-Coder 32B — es uebertrifft GPT-4o beim HumanEval-Benchmark und laeuft lokal ueber Ollama. Fuer weniger VRAM: Qwen3 8B.',
           bullets: [
             'Qwen2.5-Coder 32B — bestes Coding-Modell, HumanEval 92,7%',
             'DeepSeek-Coder-V3 — bestes Modell fuer komplexes Refactoring',
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         fr: {
           question: 'Quel est le meilleur LLM local pour coder en 2026 ?',
-          answer: 'Le meilleur LLM local pour coder en 2026 est Qwen2.5-Coder 32B — il depasse GPT-5.5 sur HumanEval et tourne localement via Ollama. Pour moins de VRAM: Qwen3 8B.',
+          answer: 'Le meilleur LLM local pour coder en 2026 est Qwen2.5-Coder 32B — il depasse GPT-4o sur HumanEval et tourne localement via Ollama. Pour moins de VRAM: Qwen3 8B.',
           bullets: [
             'Qwen2.5-Coder 32B — meilleur modele de code, HumanEval 92,7%',
             'DeepSeek-Coder-V3 — meilleur pour le refactoring complexe',
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ja: {
           question: '2026年のコーディング向け最高のローカルLLMは？',
-          answer: '2026年のコーディング向け最高のローカルLLMはQwen2.5-Coder 32Bです。これはHumanEvalベンチマークでGPT-5.5を上回り、Ollamaを通じてローカルで実行します。VRAMが少ない場合：Qwen3 8B。',
+          answer: '2026年のコーディング向け最高のローカルLLMはQwen2.5-Coder 32Bです。これはHumanEvalベンチマークでGPT-4oを上回り、Ollamaを通じてローカルで実行します。VRAMが少ない場合：Qwen3 8B。',
           bullets: [
             'Qwen2.5-Coder 32B — 最高のコーディングモデル、HumanEval 92.7%',
             'DeepSeek-Coder-V3 — 複雑なリファクタリングに最適',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         zh: {
           question: '2026年最佳的本地编程LLM是什么？',
-          answer: '2026年最佳的本地编程LLM是Qwen2.5-Coder 32B——它在HumanEval基准上超过了GPT-5.5，并可通过Ollama在本地运行。VRAM较少的情况：Qwen3 8B。',
+          answer: '2026年最佳的本地编程LLM是Qwen2.5-Coder 32B——它在HumanEval基准上超过了GPT-4o，并可通过Ollama在本地运行。VRAM较少的情况：Qwen3 8B。',
           bullets: [
             'Qwen2.5-Coder 32B — 最佳编程模型，HumanEval评分92.7%',
             'DeepSeek-Coder-V3 — 最适合复杂重构',
@@ -336,10 +336,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'when-not-to-use',
           title: '❌ When NOT to Use Local LLMs for Coding',
           items: [
-            '**You need latest framework knowledge (2025+ APIs):** Local models are trained on fixed cutoff dates. Qwen2.5-Coder trained through Q3 2024, DeepSeek-Coder through mid-2024. For Vue 3.5, Next.js 15, or Python 3.13 APIs released after model training, use GPT-5.5 or Claude Sonnet 4.6 (2024) which are constantly updated.',
-            '**You need multi-file reasoning across large codebases (100k+ tokens):** Local models degrade on very long context. Latency becomes prohibitive. Cloud models (GPT-5.5, Claude) handle 100k+ token contexts natively. For architectural refactoring of entire services, use cloud models.',
+            '**You need latest framework knowledge (2025+ APIs):** Local models are trained on fixed cutoff dates. Qwen2.5-Coder trained through Q3 2024, DeepSeek-Coder through mid-2024. For Vue 3.5, Next.js 15, or Python 3.13 APIs released after model training, use GPT-4o or Claude Sonnet 4.6 (2024) which are constantly updated.',
+            '**You need multi-file reasoning across large codebases (100k+ tokens):** Local models degrade on very long context. Latency becomes prohibitive. Cloud models (GPT-4o, Claude) handle 100k+ token contexts natively. For architectural refactoring of entire services, use cloud models.',
             '**Latency must be <300ms (real-time interactive coding):** Local models run at 15-25 tokens/sec on CPU (typical laptops), producing a 5-10 second delay per response. GitHub Copilot and Claude in IDE complete suggestions in <1 second. For keystroke-level autocomplete, local models are too slow.',
-            '**You need best-in-class debugging accuracy:** On complex debugging tasks (tracing multiple function call stacks, identifying subtle type errors), GPT-5.5 and Claude Sonnet 4.6 (2024) score 15-20% higher than local models on real-world code issues. Local models excel at generation; frontier models excel at diagnosis.',
+            '**You need best-in-class debugging accuracy:** On complex debugging tasks (tracing multiple function call stacks, identifying subtle type errors), GPT-4o and Claude Sonnet 4.6 (2024) score 15-20% higher than local models on real-world code issues. Local models excel at generation; frontier models excel at diagnosis.',
             '**You cannot tolerate hallucination in generated code:** Local 7B models generate syntactically valid but logically incorrect code at ~2% rate on complex tasks. Cloud models hallucinate at <0.5% rate. For mission-critical code (payment systems, security), require human review or use frontier APIs.',
           ],
           callouts: [
@@ -355,12 +355,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'Devstral Small 24B', 'Best For': 'Agentic coding workflows, debugging loops', 'VRAM': '~16 GB', 'Speed': '15-25 tok/sec', 'Strength': 'Multi-file edits, tool calling, error recovery', 'When to Pick': 'You use multi-step workflows or aider-style agents' },
             { 'Model': 'Codestral 22B', 'Best For': 'IDE autocomplete (VS Code, Cursor)', 'VRAM': '~14 GB', 'Speed': '20-30 tok/sec', 'Strength': 'FIM-optimized, best local Copilot alternative', 'When to Pick': 'You want IDE autocomplete via Continue.dev' },
             { 'Model': 'Qwen3 8B', 'Best For': 'Laptop coding, best for 8 GB RAM', 'VRAM': '~5 GB', 'Speed': '25-40 tok/sec', 'Strength': 'Fast, improved from Qwen3 8B, FIM support', 'When to Pick': 'You have 8 GB RAM and want best local coding model' },
-            { 'Model': 'GPT-5.5 (cloud)', 'Best For': 'Latest APIs, complex reasoning, peak performance', 'VRAM': 'N/A (cloud)', 'Speed': '<1 sec', 'Strength': 'Best accuracy, latest knowledge cutoff, multi-file reasoning', 'When to Pick': 'You need peak performance or real-time latency' },
+            { 'Model': 'GPT-4o (cloud)', 'Best For': 'Latest APIs, complex reasoning, peak performance', 'VRAM': 'N/A (cloud)', 'Speed': '<1 sec', 'Strength': 'Best accuracy, latest knowledge cutoff, multi-file reasoning', 'When to Pick': 'You need peak performance or real-time latency' },
             { 'Model': 'Claude Sonnet 4.6 (cloud)', 'Best For': 'Code review, architectural decisions, debugging', 'VRAM': 'N/A (cloud)', 'Speed': '<1 sec', 'Strength': 'Best for code understanding, multi-file context', 'When to Pick': 'You prioritize accuracy over cost or privacy' },
           ],
           columns: ['Model', 'Best For', 'VRAM', 'Speed', 'Strength', 'When to Pick'],
           content: [
-            '**Unsure which coding model to pick?** PromptQuorum lets you send one prompt to multiple models simultaneously (Kimi K2.6, Qwen 3.6, Devstral, GPT-5.5, Claude) and see side-by-side outputs, real response times, and accuracy on YOUR code. Try [PromptQuorum free — 5 minutes, no signup](https://www.promptquorum.com/).',
+            '**Unsure which coding model to pick?** PromptQuorum lets you send one prompt to multiple models simultaneously (Kimi K2.6, Qwen 3.6, Devstral, GPT-4o, Claude) and see side-by-side outputs, real response times, and accuracy on YOUR code. Try [PromptQuorum free — 5 minutes, no signup](https://www.promptquorum.com/).',
           ],
         },
         regionalContext: {
@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'How much RAM do I need for local coding LLMs?', a: 'Minimum 4 GB (tiny 3B models), practically 8 GB+ for usable coding. Recommended: 16 GB for 7B–16B models with headroom. High-end: 32 GB+ for 32B models. Use this formula: model size in GB ≈ parameter count ÷ 4 (e.g., 7B ÷ 4 ≈ 1.75 GB at FP16, ~4.7 GB at Q4_K_M).' },
             { q: 'How much context does a 500-line Python file use?', a: "Approximately 2,000-3,000 tokens for a 500-line Python file. Ollama's default 2048 token context is insufficient. Set `PARAMETER num_ctx 16384` minimum for single-file code review. For multi-file analysis, use 32768 or 65536 context." },
             { q: 'Are local coding models fast enough for development?', a: 'Yes for iterative workflows (10–50 tokens/sec). Qwen3 8B runs at 20–35 tokens/sec on laptops — waiting 5–10 seconds per response is acceptable for batch generation. No for real-time autocomplete (<1 sec required). For IDE use, local models are suitable for request-and-review, not keystroke completion.' },
-            { q: 'Can local LLMs replace GPT-5.5 for coding?', a: 'No. Local models (Kimi K2.6 87/100, Qwen 3.6 27B 77.2% SWE-bench) lag on: latest framework knowledge (APIs post-training cutoff), complex multi-file reasoning (100k+ tokens), and debugging accuracy. However, Kimi K2.6 and Qwen 3.6 have narrowed the gap significantly on multi-file coding tasks.' },
+            { q: 'Can local LLMs replace GPT-4o for coding?', a: 'No. Local models (Kimi K2.6 87/100, Qwen 3.6 27B 77.2% SWE-bench) lag on: latest framework knowledge (APIs post-training cutoff), complex multi-file reasoning (100k+ tokens), and debugging accuracy. However, Kimi K2.6 and Qwen 3.6 have narrowed the gap significantly on multi-file coding tasks.' },
             { q: 'Which language does Qwen2.5-Coder support best?', a: 'Python is the primary training language. JavaScript, TypeScript, Java, C++, Go, Rust, and SQL are all well-supported. The model also handles PHP, Ruby, Swift, and Kotlin. For non-Python languages, HumanEval scores are lower but still competitive.' },
             { q: 'Is DeepSeek-Coder safe to use for proprietary code?', a: 'When running locally via Ollama, DeepSeek-Coder makes no external connections. Your code stays on your hardware. The data concern with DeepSeek applies to their cloud API (api.deepseek.com), not to local Ollama inference. Local inference is completely private.' },
             { q: 'What is the difference between Qwen2.5-Coder and Qwen2.5?', a: 'Qwen2.5-Coder is fine-tuned specifically on code corpora and includes FIM support. Qwen2.5 is a general-purpose model. On HumanEval, Qwen3 8B and Qwen2.5 7B score similarly (72%) -- but Qwen2.5-Coder includes code completion features that the general model does not.' },
@@ -598,7 +598,7 @@ schema: {
           title: '#1 Qwen2.5-Coder 32B -- Bestes lokales Programmiermodell insgesamt',
           content: [
             '**Qwen2.5-Coder 32B ist das am höchsten performierende lokal lauffähige Codierungsmodell 2026.** Es erreicht 87% auf HumanEval und 79% auf MBPP (ein weiterer Python-Codierungsbenchmark). Es unterstützt 40+ Programmiersprachen einschließlich Python, JavaScript, TypeScript, Java, C++, SQL, Rust und Go.',
-            'Bei Q4_K_M-Quantisierung erfordert es ~20 GB RAM -- machbar auf Workstations und MacBooks mit 24+ GB shared memory. Response-Qualität bei komplexen Multi-File-Refactoring und Algorithmus-Design-Aufgaben ist wettbewerbsfähig mit GPT-5.5 Mini.',
+            'Bei Q4_K_M-Quantisierung erfordert es ~20 GB RAM -- machbar auf Workstations und MacBooks mit 24+ GB shared memory. Response-Qualität bei komplexen Multi-File-Refactoring und Algorithmus-Design-Aufgaben ist wettbewerbsfähig mit GPT-4o Mini.',
           ],
           callouts: [
             { type: 'warning', text: '20 GB RAM ist eine zwingende Anforderung. Versuche nicht, Q4_K_M auf Maschinen mit weniger als 22 GB verfügbarem Speicher auszuführen. Wenn du 16 GB oder weniger hast, verwende stattdessen Qwen 3.6 27B.' },
@@ -723,10 +723,10 @@ schema: {
           id: 'when-not-to-use',
           title: '❌ Wann du lokale LLMs NICHT für Programmierung verwenden solltest',
           items: [
-            '**Du brauchst aktuelles Framework-Wissen (2025+ APIs):** Lokale Modelle sind auf feste Cutoff-Daten trainiert. Qwen2.5-Coder trainiert bis Q3 2024, DeepSeek-Coder bis Mitte 2024. Für Vue 3.5, Next.js 15 oder Python 3.13-APIs, die nach dem Model-Training veröffentlicht wurden, verwende GPT-5.5 oder Claude Sonnet 4.6 (2024), die ständig aktualisiert werden.',
-            '**Du brauchst Multi-File-Reasoning über große Codebases (100k+ Tokens):** Lokale Modelle verschlechtern sich bei sehr langen Kontexten. Latenz wird prohibitiv. Cloud-Modelle (GPT-5.5, Claude) handhaben nativ 100k+ Token-Kontexte. Für architektonisches Refactoring ganzer Services verwende Cloud-Modelle.',
+            '**Du brauchst aktuelles Framework-Wissen (2025+ APIs):** Lokale Modelle sind auf feste Cutoff-Daten trainiert. Qwen2.5-Coder trainiert bis Q3 2024, DeepSeek-Coder bis Mitte 2024. Für Vue 3.5, Next.js 15 oder Python 3.13-APIs, die nach dem Model-Training veröffentlicht wurden, verwende GPT-4o oder Claude Sonnet 4.6 (2024), die ständig aktualisiert werden.',
+            '**Du brauchst Multi-File-Reasoning über große Codebases (100k+ Tokens):** Lokale Modelle verschlechtern sich bei sehr langen Kontexten. Latenz wird prohibitiv. Cloud-Modelle (GPT-4o, Claude) handhaben nativ 100k+ Token-Kontexte. Für architektonisches Refactoring ganzer Services verwende Cloud-Modelle.',
             '**Latenz muss <300ms sein (echte interaktive Codierung):** Lokale Modelle laufen mit 15-25 Tokens/Sek. auf CPU (typische Laptops), was zu einer 5-10 Sekunden Verzögerung pro Response führt. GitHub Copilot und Claude in IDE ergänzen Vorschläge in <1 Sekunde. Für Tastenanschlag-Level-Autovervollständigung sind lokale Modelle zu langsam.',
-            '**Du brauchst beste Debugging-Genauigkeit:** Bei komplexen Debugging-Aufgaben (Verfolgung mehrerer Funktionsaufrufe, Identifizierung subtiler Typfehler) erzielen GPT-5.5 und Claude Sonnet 4.6 (2024) 15-20% höher als lokale Modelle bei realen Code-Problemen. Lokale Modelle zeichnen sich durch Generierung aus; Frontier-Modelle zeichnen sich durch Diagnose aus.',
+            '**Du brauchst beste Debugging-Genauigkeit:** Bei komplexen Debugging-Aufgaben (Verfolgung mehrerer Funktionsaufrufe, Identifizierung subtiler Typfehler) erzielen GPT-4o und Claude Sonnet 4.6 (2024) 15-20% höher als lokale Modelle bei realen Code-Problemen. Lokale Modelle zeichnen sich durch Generierung aus; Frontier-Modelle zeichnen sich durch Diagnose aus.',
             '**Du kannst Halluzination in generiertem Code nicht tolerieren:** Lokale 7B-Modelle generieren syntaktisch valide, aber logisch inkorrekte Code mit einer Rate von ~2% bei komplexen Aufgaben. Cloud-Modelle halluzinieren mit <0,5% Rate. Für mission-kritischen Code (Zahlungssysteme, Sicherheit) benötige menschliche Überprüfung oder verwende Frontier-APIs.',
           ],
           callouts: [
@@ -741,7 +741,7 @@ schema: {
             { 'Modell': 'Qwen 3.6 27B', 'Best für': 'Ausgewogene Qualität und Speed, 16GB-Maschinen', 'VRAM': '~10 GB', 'Speed': '15-25 Tokens/Sek.', 'Stärke': 'MoE erreicht 81% HumanEval mit schneller Inferenz', 'Wann zu wählen': 'Du hast 16 GB RAM und möchtest bestes Preis-Leistungs-Verhältnis' },
             { 'Modell': 'Qwen3 8B', 'Best für': 'Laptop-Programmierung, IDE-Autovervollständigung, Alltagsaufgaben', 'VRAM': '~4,7 GB', 'Speed': '20-35 Tokens/Sek.', 'Stärke': 'Schnell, beinhaltet FIM, läuft reibungslos auf Consumer-Laptops', 'Wann zu wählen': 'Du hast 8 GB RAM oder brauchst leichte Einrichtung' },
             { 'Modell': 'Codestral 22B', 'Best für': 'IDE-Code-Completion (VS Code, Continue.dev)', 'VRAM': '~9 GB', 'Speed': '15-20 Tokens/Sek.', 'Stärke': 'FIM-optimiert, 600+ Sprachen, Cursor-Position-Completion', 'Wann zu wählen': 'Du verwendest IDE-Autovervollständigung, nicht Chat-basierte Generierung' },
-            { 'Modell': 'GPT-5.5 (Cloud)', 'Best für': 'Aktuelle APIs, Debugging, komplexes Reasoning', 'VRAM': 'N/A (Cloud)', 'Speed': '<1 Sek.', 'Stärke': 'Beste Genauigkeit, aktuellste Knowledge, Multi-File-Reasoning', 'Wann zu wählen': 'Du brauchst Spitzenperformance oder Echtzeit-Latenz' },
+            { 'Modell': 'GPT-4o (Cloud)', 'Best für': 'Aktuelle APIs, Debugging, komplexes Reasoning', 'VRAM': 'N/A (Cloud)', 'Speed': '<1 Sek.', 'Stärke': 'Beste Genauigkeit, aktuellste Knowledge, Multi-File-Reasoning', 'Wann zu wählen': 'Du brauchst Spitzenperformance oder Echtzeit-Latenz' },
             { 'Modell': 'Claude Sonnet 4.6 (2024) (Cloud)', 'Best für': 'Code-Review, Architektur-Entscheidungen, Debugging', 'VRAM': 'N/A (Cloud)', 'Speed': '<1 Sek.', 'Stärke': 'Best für Code-Verständnis, Multi-File-Kontext', 'Wann zu wählen': 'Du priorisierst Genauigkeit über Kosten oder Datenschutz' },
           ],
           columns: ['Modell', 'Best für', 'VRAM', 'Speed', 'Stärke', 'Wann zu wählen'],
@@ -797,7 +797,7 @@ schema: {
             { q: 'Wie viel RAM brauche ich für lokale Programmier-LLMs?', a: 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbare Programmierung. Empfohlen: 16 GB für 7B–16B-Modelle mit Kopfraum. High-End: 32 GB+ für 32B-Modelle. Verwende diese Formel: Modellgröße in GB ≈ Parameterzahl ÷ 4 (z.B. 7B ÷ 4 ≈ 1,75 GB bei FP16, ~4,7 GB bei Q4_K_M).' },
             { q: 'Wie viele Tokens nutzt eine 500-zeilige Python-Datei?', a: 'Ungefähr 2.000-3.000 Tokens für eine 500-zeilige Python-Datei. Ollamaś Standard 2048-Token-Kontext ist unzureichend. Setze `PARAMETER num_ctx 16384` Minimum für Single-File-Code-Review. Für Multi-File-Analyse verwende 32768 oder 65536 Kontext.' },
             { q: 'Sind lokale Programmiermodelle schnell genug für die Entwicklung?', a: 'Ja für iterative Workflows (10–50 Tokens/Sek.). Qwen3 8B läuft auf Laptops mit 20–35 Tokens/Sek. — Warten von 5–10 Sekunden pro Response ist akzeptabel für Batch-Generierung. Nein für Echtzeit-Autovervollständigung (<1 Sek. erforderlich). Für IDE-Verwendung eignen sich lokale Modelle für Request-and-Review, nicht für Tastenanschlag-Completion.' },
-            { q: 'Können lokale LLMs GPT-5.5 für Programmierung ersetzen?', a: 'Nein. Qwen2.5-Coder 32B (87% HumanEval) vs. GPT-5.5 (~92% effektiv). Lokale Modelle liegen zurück bei: aktuellem Framework-Wissen (APIs nach Trainingscutoff), komplexem Multi-File-Reasoning (100k+ Tokens) und Debugging-Genauigkeit. Beste lokale Modelle sind bei Funktionsgenerierung wettbewerbsfähig, nicht bei System-Level-Design.' },
+            { q: 'Können lokale LLMs GPT-4o für Programmierung ersetzen?', a: 'Nein. Qwen2.5-Coder 32B (87% HumanEval) vs. GPT-4o (~92% effektiv). Lokale Modelle liegen zurück bei: aktuellem Framework-Wissen (APIs nach Trainingscutoff), komplexem Multi-File-Reasoning (100k+ Tokens) und Debugging-Genauigkeit. Beste lokale Modelle sind bei Funktionsgenerierung wettbewerbsfähig, nicht bei System-Level-Design.' },
             { q: 'Welche Sprache unterstützt Qwen2.5-Coder am besten?', a: 'Python ist die primäre Trainingssprache. JavaScript, TypeScript, Java, C++, Go, Rust und SQL werden alle gut unterstützt. Das Modell verarbeitet auch PHP, Ruby, Swift und Kotlin. Für Nicht-Python-Sprachen sind HumanEval-Scores niedriger, aber weiterhin wettbewerbsfähig.' },
             { q: 'Ist DeepSeek-Coder sicher für proprietären Code?', a: 'Bei lokaler Ausführung über Ollama macht DeepSeek-Coder keine externen Verbindungen. Dein Code bleibt auf deiner Hardware. Das Daten-Problem mit DeepSeek gilt für ihre Cloud-API (api.deepseek.com), nicht für lokale Ollama-Inferenz. Lokale Inferenz ist komplett privat.' },
             { q: 'Was ist der Unterschied zwischen Qwen2.5-Coder und Qwen2.5?', a: 'Qwen2.5-Coder ist speziell auf Code-Korpora feinabgestimmt und beinhaltet FIM-Unterstützung. Qwen2.5 ist ein General-Purpose-Modell. Bei HumanEval erzielen Qwen3 8B und Qwen2.5 7B ähnliche Scores (72%) -- aber Qwen2.5-Coder beinhaltet Code-Completion-Features, die das General-Modell nicht hat.' },
@@ -850,7 +850,7 @@ schema: {
           { '@type': 'Question', 'name': 'Wie viel RAM brauche ich für lokale Programmier-LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbare Programmierung. Empfohlen: 16 GB für 7B–16B-Modelle mit Kopfraum. High-End: 32 GB+ für 32B-Modelle. Verwende diese Formel: Modellgröße in GB ≈ Parameterzahl ÷ 4 (z.B. 7B ÷ 4 ≈ 1,75 GB bei FP16, ~4,7 GB bei Q4_K_M).' } },
           { '@type': 'Question', 'name': 'Wie viele Tokens nutzt eine 500-zeilige Python-Datei?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ungefähr 2.000-3.000 Tokens für eine 500-zeilige Python-Datei. Ollamaś Standard 2048-Token-Kontext ist unzureichend. Setze `PARAMETER num_ctx 16384` Minimum für Single-File-Code-Review. Für Multi-File-Analyse verwende 32768 oder 65536 Kontext.' } },
           { '@type': 'Question', 'name': 'Sind lokale Programmiermodelle schnell genug für die Entwicklung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja für iterative Workflows (10–50 Tokens/Sek.). Qwen3 8B läuft auf Laptops mit 20–35 Tokens/Sek. — Warten von 5–10 Sekunden pro Response ist akzeptabel für Batch-Generierung. Nein für Echtzeit-Autovervollständigung (<1 Sek. erforderlich). Für IDE-Verwendung eignen sich lokale Modelle für Request-and-Review, nicht für Tastenanschlag-Completion.' } },
-          { '@type': 'Question', 'name': 'Können lokale LLMs GPT-5.5 für Programmierung ersetzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Qwen2.5-Coder 32B (87% HumanEval) vs. GPT-5.5 (~92% effektiv). Lokale Modelle liegen zurück bei: aktuellem Framework-Wissen (APIs nach Trainingscutoff), komplexem Multi-File-Reasoning (100k+ Tokens) und Debugging-Genauigkeit. Beste lokale Modelle sind bei Funktionsgenerierung wettbewerbsfähig, nicht bei System-Level-Design.' } },
+          { '@type': 'Question', 'name': 'Können lokale LLMs GPT-4o für Programmierung ersetzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Qwen2.5-Coder 32B (87% HumanEval) vs. GPT-4o (~92% effektiv). Lokale Modelle liegen zurück bei: aktuellem Framework-Wissen (APIs nach Trainingscutoff), komplexem Multi-File-Reasoning (100k+ Tokens) und Debugging-Genauigkeit. Beste lokale Modelle sind bei Funktionsgenerierung wettbewerbsfähig, nicht bei System-Level-Design.' } },
           { '@type': 'Question', 'name': 'Welche Sprache unterstützt Qwen2.5-Coder am besten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Python ist die primäre Trainingssprache. JavaScript, TypeScript, Java, C++, Go, Rust und SQL werden alle gut unterstützt. Das Modell verarbeitet auch PHP, Ruby, Swift und Kotlin. Für Nicht-Python-Sprachen sind HumanEval-Scores niedriger, aber weiterhin wettbewerbsfähig.' } },
           { '@type': 'Question', 'name': 'Ist DeepSeek-Coder sicher für proprietären Code?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei lokaler Ausführung über Ollama macht DeepSeek-Coder keine externen Verbindungen. Dein Code bleibt auf deiner Hardware. Das Daten-Problem mit DeepSeek gilt für ihre Cloud-API (api.deepseek.com), nicht für lokale Ollama-Inferenz. Lokale Inferenz ist komplett privat.' } },
           { '@type': 'Question', 'name': 'Was ist der Unterschied zwischen Qwen2.5-Coder und Qwen2.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder ist speziell auf Code-Korpora feinabgestimmt und beinhaltet FIM-Unterstützung. Qwen2.5 ist ein General-Purpose-Modell. Bei HumanEval erzielen Qwen3 8B und Qwen2.5 7B ähnliche Scores (72%) -- aber Qwen2.5-Coder beinhaltet Code-Completion-Features, die das General-Modell nicht hat.' } },
@@ -982,7 +982,7 @@ schema: {
           title: '#1 Qwen2.5-Coder 32B — Meilleur modèle de codage local global',
           content: [
             '**Qwen2.5-Coder 32B est le modèle de codage le plus performant exécutable localement en 2026.** Il atteint 87% sur HumanEval et 79% sur MBPP (un autre benchmark de codage Python). Il supporte 40+ langages de programmation incluant Python, JavaScript, TypeScript, Java, C++, SQL, Rust et Go.',
-            'À la quantification Q4_K_M, il nécessite ~20 GB RAM — gérable sur les postes de travail et MacBooks avec 24+ GB de mémoire unifiée. La qualité des réponses sur les tâches complexes de refactorisation multi-fichiers et de conception d\'algorithmes est compétitive avec GPT-5.5 Mini.',
+            'À la quantification Q4_K_M, il nécessite ~20 GB RAM — gérable sur les postes de travail et MacBooks avec 24+ GB de mémoire unifiée. La qualité des réponses sur les tâches complexes de refactorisation multi-fichiers et de conception d\'algorithmes est compétitive avec GPT-4o Mini.',
           ],
           callouts: [
             { type: 'warning', text: '20 GB RAM est une exigence absolue. N\'essayez pas d\'exécuter Q4_K_M sur des machines avec moins de 22 GB de mémoire disponible. Si vous avez 16 GB ou moins, utilisez plutôt Qwen 3.6 27B.' },
@@ -1107,10 +1107,10 @@ schema: {
           id: 'when-not-to-use',
           title: '❌ Quand NE PAS utiliser les LLMs locaux pour la programmation',
           items: [
-            '**Vous avez besoin de connaissance récente du framework (2025+ APIs)** : Les modèles locaux sont entraînés sur des dates de coupure fixes. Qwen2.5-Coder entraîné jusqu\'à Q3 2024, DeepSeek-Coder jusqu\'à mi-2024. Pour Vue 3.5, Next.js 15, ou les APIs Python 3.13 publiées après l\'entraînement du modèle, utilisez GPT-5.5 ou Claude Sonnet 4.6 (2024) qui sont continuellement mises à jour.',
-            '**Vous avez besoin de raisonnement multi-fichiers sur de grandes codebases (100k+ jetons)** : Les modèles locaux se dégradent sur des contextes très longs. La latence devient prohibitive. Les modèles cloud (GPT-5.5, Claude) gèrent nativement les contextes 100k+ jetons. Pour la refactorisation architecturale de services entiers, utilisez les modèles cloud.',
+            '**Vous avez besoin de connaissance récente du framework (2025+ APIs)** : Les modèles locaux sont entraînés sur des dates de coupure fixes. Qwen2.5-Coder entraîné jusqu\'à Q3 2024, DeepSeek-Coder jusqu\'à mi-2024. Pour Vue 3.5, Next.js 15, ou les APIs Python 3.13 publiées après l\'entraînement du modèle, utilisez GPT-4o ou Claude Sonnet 4.6 (2024) qui sont continuellement mises à jour.',
+            '**Vous avez besoin de raisonnement multi-fichiers sur de grandes codebases (100k+ jetons)** : Les modèles locaux se dégradent sur des contextes très longs. La latence devient prohibitive. Les modèles cloud (GPT-4o, Claude) gèrent nativement les contextes 100k+ jetons. Pour la refactorisation architecturale de services entiers, utilisez les modèles cloud.',
             '**La latence doit être <300ms (programmation interactive en temps réel)** : Les modèles locaux s\'exécutent à 15-25 jetons/sec sur CPU (ordinateurs portables typiques), produisant un délai de 5-10 secondes par réponse. GitHub Copilot et Claude dans l\'IDE complètent les suggestions en <1 seconde. Pour l\'autocomplétion au niveau des touches, les modèles locaux sont trop lents.',
-            '**Vous avez besoin de la meilleure précision de débogage** : Sur les tâches complexes de débogage (traçage des appels de fonction multiples, identification des erreurs de type subtiles), GPT-5.5 et Claude Sonnet 4.6 (2024) obtiennent 15-20% plus élevé que les modèles locaux sur les problèmes de code réels. Les modèles locaux excèlent à la génération; les modèles frontier excellent au diagnostic.',
+            '**Vous avez besoin de la meilleure précision de débogage** : Sur les tâches complexes de débogage (traçage des appels de fonction multiples, identification des erreurs de type subtiles), GPT-4o et Claude Sonnet 4.6 (2024) obtiennent 15-20% plus élevé que les modèles locaux sur les problèmes de code réels. Les modèles locaux excèlent à la génération; les modèles frontier excellent au diagnostic.',
             '**Vous ne pouvez pas tolérer la hallucination dans le code généré** : Les modèles locaux 7B génèrent du code syntaxiquement valide mais logiquement incorrect à un taux d\'~2% sur les tâches complexes. Les modèles cloud hallucinent à un taux <0.5%. Pour le code critique (systèmes de paiement, sécurité), exigez une revue humaine ou utilisez les APIs frontier.',
           ],
           callouts: [
@@ -1125,7 +1125,7 @@ schema: {
             { 'Modèle': 'Qwen 3.6 27B', 'Meilleur pour': 'Qualité et vitesse équilibrées, machines 16GB', 'VRAM': '~10 GB', 'Vitesse': '15-25 jetons/sec', 'Point fort': 'MoE atteint 81% HumanEval avec inférence rapide', 'Quand choisir': 'Vous avez 16 GB RAM et voulez le meilleur rapport qualité-prix' },
             { 'Modèle': 'Qwen3 8B', 'Meilleur pour': 'Programmation d\'ordinateur portable, autocomplétion IDE, tâches quotidiennes', 'VRAM': '~4.5 GB', 'Vitesse': '20-35 jetons/sec', 'Point fort': 'Rapide, inclut FIM, s\'exécute sans problème sur ordinateurs portables grand public', 'Quand choisir': 'Vous avez 8 GB RAM ou avez besoin d\'une configuration légère' },
             { 'Modèle': 'Codestral 22B', 'Meilleur pour': 'Autocomplétion de code IDE (VS Code, Continue.dev)', 'VRAM': '~9 GB', 'Vitesse': '15-20 jetons/sec', 'Point fort': 'Optimisé FIM, 600+ langues, complétion à position du curseur', 'Quand choisir': 'Vous utilisez l\'autocomplétion IDE, pas la génération basée sur le chat' },
-            { 'Modèle': 'GPT-5.5 (cloud)', 'Meilleur pour': 'APIs récentes, débogage, raisonnement complexe', 'VRAM': 'N/A (cloud)', 'Vitesse': '<1 sec', 'Point fort': 'Meilleure précision, connaissance la plus récente, raisonnement multi-fichiers', 'Quand choisir': 'Vous avez besoin de performance maximale ou latence en temps réel' },
+            { 'Modèle': 'GPT-4o (cloud)', 'Meilleur pour': 'APIs récentes, débogage, raisonnement complexe', 'VRAM': 'N/A (cloud)', 'Vitesse': '<1 sec', 'Point fort': 'Meilleure précision, connaissance la plus récente, raisonnement multi-fichiers', 'Quand choisir': 'Vous avez besoin de performance maximale ou latence en temps réel' },
             { 'Modèle': 'Claude Sonnet 4.6 (2024) (cloud)', 'Meilleur pour': 'Revue de code, décisions architecturales, débogage', 'VRAM': 'N/A (cloud)', 'Vitesse': '<1 sec', 'Point fort': 'Meilleur pour la compréhension de code, contexte multi-fichiers', 'Quand choisir': 'Vous priorisez la précision par rapport au coût ou la confidentialité' },
           ],
           columns: ['Modèle', 'Meilleur pour', 'VRAM', 'Vitesse', 'Point fort', 'Quand choisir'],
@@ -1176,7 +1176,7 @@ schema: {
             { q: 'Les modèles de programmation locaux peuvent-ils remplacer GitHub Copilot?', a: 'Non pour l\'autocomplétion en temps réel; oui pour la génération intentionnelle. Qwen2.5-Coder 32B (8–15 jetons/sec) est trop lent pour la complétion au niveau des touches. Mais via Continue.dev pour les workflows request-and-review, Qwen2.5-Coder 32B égale la qualité Copilot sur les tâches de génération de code. Compromis : plus lent mais privé.' },
             { q: 'Combien de RAM ai-je besoin pour les LLMs de programmation locaux?', a: 'Minimum 4 GB (petits modèles 3B), pratiquement 8 GB+ pour une programmation utilisable. Recommandé : 16 GB pour les modèles 7B–16B avec marge. Haut de gamme : 32 GB+ pour les modèles 32B. Utilisez cette formule : taille du modèle en GB ≈ nombre de paramètres ÷ 4 (ex. 7B ÷ 4 ≈ 1.75 GB à FP16, ~4.5 GB à Q4_K_M).' },
             { q: 'Les modèles de programmation locaux sont-ils assez rapides pour le développement?', a: 'Oui pour les workflows itératifs (10–50 jetons/sec). Qwen3 8B s\'exécute sur les ordinateurs portables à 20–35 jetons/sec — attendre 5–10 secondes par réponse est acceptable pour la génération par lots. Non pour l\'autocomplétion en temps réel (<1 sec requis). Pour l\'usage IDE, les modèles locaux conviennent au request-and-review, pas à la complétion au niveau des touches.' },
-            { q: 'Les LLMs locaux peuvent-ils remplacer GPT-5.5 pour la programmation?', a: 'Non. Qwen2.5-Coder 32B (87% HumanEval) vs GPT-5.5 (~92% effectif). Les modèles locaux traînent sur : la connaissance récente du framework (APIs post-entraînement), le raisonnement multi-fichiers complexe (100k+ jetons) et la précision du débogage. Les meilleur modèles locaux sont compétitifs sur la génération de fonction, pas sur la conception au niveau système.' },
+            { q: 'Les LLMs locaux peuvent-ils remplacer GPT-4o pour la programmation?', a: 'Non. Qwen2.5-Coder 32B (87% HumanEval) vs GPT-4o (~92% effectif). Les modèles locaux traînent sur : la connaissance récente du framework (APIs post-entraînement), le raisonnement multi-fichiers complexe (100k+ jetons) et la précision du débogage. Les meilleur modèles locaux sont compétitifs sur la génération de fonction, pas sur la conception au niveau système.' },
             { q: 'Quelle langue Qwen2.5-Coder supporte-t-il le mieux?', a: 'Python est la langue d\'entraînement principale. JavaScript, TypeScript, Java, C++, Go, Rust et SQL sont tous bien supportés. Le modèle gère aussi PHP, Ruby, Swift et Kotlin. Pour les langues non-Python, les scores HumanEval sont plus bas mais toujours compétitifs.' },
             { q: 'Est-ce que DeepSeek-Coder est sûr pour le code propriétaire?', a: 'Lors de l\'exécution locale via Ollama, DeepSeek-Coder ne fait aucune connexion externe. Votre code reste sur votre matériel. Le problème de données avec DeepSeek s\'applique à leur API cloud (api.deepseek.com), pas à l\'inférence Ollama locale. L\'inférence locale est complètement privée.' },
             { q: 'Quelle est la différence entre Qwen2.5-Coder et Qwen2.5?', a: 'Qwen2.5-Coder est affiné spécifiquement sur les corpus de code et inclut le support FIM. Qwen2.5 est un modèle polyvalent. Sur HumanEval, Qwen3 8B et Qwen2.5 7B obtiennent des scores similaires (72%) — mais Qwen2.5-Coder inclut les fonctionnalités de complétion de code que le modèle général n\'a pas.' },
@@ -1224,7 +1224,7 @@ schema: {
           { '@type': 'Question', 'name': 'Les modèles de programmation locaux peuvent-ils remplacer GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non pour l\'autocomplétion en temps réel; oui pour la génération intentionnelle. Qwen2.5-Coder 32B (8–15 jetons/sec) est trop lent pour la complétion au niveau des touches. Mais via Continue.dev pour les workflows request-and-review, Qwen2.5-Coder 32B égale la qualité Copilot sur les tâches de génération de code. Compromis : plus lent mais privé.' } },
           { '@type': 'Question', 'name': 'Combien de RAM ai-je besoin pour les LLMs de programmation locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum 4 GB (petits modèles 3B), pratiquement 8 GB+ pour une programmation utilisable. Recommandé : 16 GB pour les modèles 7B–16B avec marge. Haut de gamme : 32 GB+ pour les modèles 32B. Utilisez cette formule : taille du modèle en GB ≈ nombre de paramètres ÷ 4 (ex. 7B ÷ 4 ≈ 1.75 GB à FP16, ~4.5 GB à Q4_K_M).' } },
           { '@type': 'Question', 'name': 'Les modèles de programmation locaux sont-ils assez rapides pour le développement?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui pour les workflows itératifs (10–50 jetons/sec). Qwen3 8B s\'exécute sur les ordinateurs portables à 20–35 jetons/sec — attendre 5–10 secondes par réponse est acceptable pour la génération par lots. Non pour l\'autocomplétion en temps réel (<1 sec requis). Pour l\'usage IDE, les modèles locaux conviennent au request-and-review, pas à la complétion au niveau des touches.' } },
-          { '@type': 'Question', 'name': 'Les LLMs locaux peuvent-ils remplacer GPT-5.5 pour la programmation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Qwen2.5-Coder 32B (87% HumanEval) vs GPT-5.5 (~92% effectif). Les modèles locaux traînent sur : la connaissance récente du framework (APIs post-entraînement), le raisonnement multi-fichiers complexe (100k+ jetons) et la précision du débogage. Les meilleur modèles locaux sont compétitifs sur la génération de fonction, pas sur la conception au niveau système.' } },
+          { '@type': 'Question', 'name': 'Les LLMs locaux peuvent-ils remplacer GPT-4o pour la programmation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Qwen2.5-Coder 32B (87% HumanEval) vs GPT-4o (~92% effectif). Les modèles locaux traînent sur : la connaissance récente du framework (APIs post-entraînement), le raisonnement multi-fichiers complexe (100k+ jetons) et la précision du débogage. Les meilleur modèles locaux sont compétitifs sur la génération de fonction, pas sur la conception au niveau système.' } },
           { '@type': 'Question', 'name': 'Quelle langue Qwen2.5-Coder supporte-t-il le mieux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Python est la langue d\'entraînement principale. JavaScript, TypeScript, Java, C++, Go, Rust et SQL sont tous bien supportés. Le modèle gère aussi PHP, Ruby, Swift et Kotlin. Pour les langues non-Python, les scores HumanEval sont plus bas mais toujours compétitifs.' } },
           { '@type': 'Question', 'name': 'Est-ce que DeepSeek-Coder est sûr pour le code propriétaire?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Lors de l\'exécution locale via Ollama, DeepSeek-Coder ne fait aucune connexion externe. Votre code reste sur votre matériel. Le problème de données avec DeepSeek s\'applique à leur API cloud (api.deepseek.com), pas à l\'inférence Ollama locale. L\'inférence locale est complètement privée.' } },
           { '@type': 'Question', 'name': 'Quelle est la différence entre Qwen2.5-Coder et Qwen2.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder est affiné spécifiquement sur les corpus de code et inclut le support FIM. Qwen2.5 est un modèle polyvalent. Sur HumanEval, Qwen3 8B et Qwen2.5 7B obtiennent des scores similaires (72%) — mais Qwen2.5-Coder inclut les fonctionnalités de complétion de code que le modèle général n\'a pas.' } },
@@ -1434,7 +1434,7 @@ schema: {
           title: 'ローカルLLMを使うべきでない時',
           items: [
             '**リアルタイムオートコンプリート必須**：ローカルモデルは遅い（100ms以上）。GitHub Copilotを使う。',
-            '**最新APIライブラリ知識必須**：訓練データが古い（2023年末）。GPT-5.5を使う。',
+            '**最新APIライブラリ知識必須**：訓練データが古い（2023年末）。GPT-4oを使う。',
             '**複雑なマルチファイル推論**：100k+ トークンコンテキスト。ローカルRAM不足。クラウド使う。',
             '**セキュリティ機密コード**：Ollama経由なら安全。DeepSeek APIではない。ただし検証必須。',
           ],
@@ -1442,14 +1442,14 @@ schema: {
         localVsCloudComparison: {
           id: 'local-vs-cloud-comparison',
           title: '決定比較マトリックス：ローカル vs クラウド',
-          columns: ['要件', 'ローカルLLM', 'GPT-5.5 / Claude'],
+          columns: ['要件', 'ローカルLLM', 'GPT-4o / Claude'],
           rows: [
-            { '要件': 'コスト（大規模使用）', 'ローカルLLM': '無料（計算力のみ）', 'GPT-5.5 / Claude': '$0.03-0.30/1k tokens' },
-            { '要件': 'プライバシー', 'ローカルLLM': '100%プライベート', 'GPT-5.5 / Claude': 'APIに送信' },
-            { '要件': 'レイテンシ', 'ローカルLLM': '5～50秒（CPU依存）', 'GPT-5.5 / Claude': '1～5秒' },
-            { '要件': 'コード品質（HumanEval）', 'ローカルLLM': '87%（最高モデル）', 'GPT-5.5 / Claude': '92%+' },
-            { '要件': 'リアルタイム補完', 'ローカルLLM': 'いいえ', 'GPT-5.5 / Claude': 'はい（Copilot）' },
-            { '要件': '大規模コンテキスト', 'ローカルLLM': '最大128k（RAM依存）', 'GPT-5.5 / Claude': '128k-200k' },
+            { '要件': 'コスト（大規模使用）', 'ローカルLLM': '無料（計算力のみ）', 'GPT-4o / Claude': '$0.03-0.30/1k tokens' },
+            { '要件': 'プライバシー', 'ローカルLLM': '100%プライベート', 'GPT-4o / Claude': 'APIに送信' },
+            { '要件': 'レイテンシ', 'ローカルLLM': '5～50秒（CPU依存）', 'GPT-4o / Claude': '1～5秒' },
+            { '要件': 'コード品質（HumanEval）', 'ローカルLLM': '87%（最高モデル）', 'GPT-4o / Claude': '92%+' },
+            { '要件': 'リアルタイム補完', 'ローカルLLM': 'いいえ', 'GPT-4o / Claude': 'はい（Copilot）' },
+            { '要件': '大規模コンテキスト', 'ローカルLLM': '最大128k（RAM依存）', 'GPT-4o / Claude': '128k-200k' },
           ],
         },
         regionalContext: {
@@ -1531,7 +1531,7 @@ schema: {
           { '@type': 'Question', 'name': 'ローカルプログラミングモデルはGitHub Copilotに代わる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'リアルタイムオートコンプリートではいいえ。意図的なコード生成では可。Qwen2.5-Coder 32B（8～15トークン/秒）はキー単位の補完には遅い。Continue.devを経由したrequest-and-reviewワークフローでは、Qwen2.5-Coder 32Bはコード生成タスクでCopilot品質と同等。トレードオフ：遅いが非公開。' } },
           { '@type': 'Question', 'name': 'ローカルプログラミングLLMに必要なRAM？', 'acceptedAnswer': { '@type': 'Answer', 'text': '最小4 GB（小さい3Bモデル）、実用的には8 GB+。推奨：16 GBで7B～16Bモデル用余裕あり。ハイエンド：32 GB+で32Bモデル。計算式：パラメータ数GB≈パラメータ数÷4（例：7B÷4≈FP16で1.75 GB、Q4_K_Mで~4.5 GB）。' } },
           { '@type': 'Question', 'name': 'ローカルプログラミングモデルは開発に十分な速度？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、反復ワークフロー用（10～50トークン/秒）。Qwen3 8Bはラップトップで20～35トークン/秒――応答あたり5～10秒待機は一括生成に許容可。リアルタイムオートコンプリート用にはいいえ（<1秒必要）。IDE使用にはローカルモデルはrequest-and-review向き、キー単位補完ではない。' } },
-          { '@type': 'Question', 'name': 'ローカルLLMはプログラミング用GPT-5.5に代わる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。Qwen2.5-Coder 32B（87% HumanEval）対GPT-5.5（~92%実効）。ローカルモデルは以下で遅延：最近のフレームワーク知識（学習後API）、複雑なマルチファイルの推論（100k+トークン）、デバッグ精度。最高ローカルモデルは関数生成で競争的、システムレベル設計ではない。' } },
+          { '@type': 'Question', 'name': 'ローカルLLMはプログラミング用GPT-4oに代わる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。Qwen2.5-Coder 32B（87% HumanEval）対GPT-4o（~92%実効）。ローカルモデルは以下で遅延：最近のフレームワーク知識（学習後API）、複雑なマルチファイルの推論（100k+トークン）、デバッグ精度。最高ローカルモデルは関数生成で競争的、システムレベル設計ではない。' } },
           { '@type': 'Question', 'name': 'Qwen2.5-Coderが最も良いサポート言語？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pythonが主要学習言語。JavaScript、TypeScript、Java、C++、Go、Rust、SQLはすべて十分サポート。モデルはPHP、Ruby、Swift、Kotlinも処理。非Python言語ではHumanEvalスコアはより低いが、まだ競争力あり。' } },
           { '@type': 'Question', 'name': 'DeepSeek-Coderは独自コード用に安全？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama経由ローカル実行時、DeepSeek-Coderは外部接続しない。コードはハードウェア上に保持。DataSecurityはDeepSeekクラウドAPI（api.deepseek.com）に適用、Ollama ローカル推論ではない。ローカル推論は完全非公開。' } },
           { '@type': 'Question', 'name': 'Qwen2.5-CoderとQwen2.5の違い？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coderはコードコーパスで特別にファインチューンおよびFIMサポート。Qwen2.5は汎用。HumanEvalではQwen3 8BとQwen2.5 7Bは類似スコア（72%）だが、Qwen2.5-Coderはコード補完機能を含む汎用モデルはない。' } },
@@ -1740,7 +1740,7 @@ schema: {
           title: '何时不使用本地LLM',
           items: [
             '**实时自动补全必需**：本地模型慢（100ms+）。用GitHub Copilot。',
-            '**最新API库知识必需**：训练数据旧（2023年末）。用GPT-5.5。',
+            '**最新API库知识必需**：训练数据旧（2023年末）。用GPT-4o。',
             '**复杂多文件推理**：100k+ token上下文。本地RAM不足。用云服务。',
             '**代码机密性**：Ollama经由安全。DeepSeek API则否。需验证。',
           ],
@@ -1748,14 +1748,14 @@ schema: {
         localVsCloudComparison: {
           id: 'local-vs-cloud-comparison',
           title: '决策比较矩阵：本地 vs 云端',
-          columns: ['要求', '本地LLM', 'GPT-5.5 / Claude'],
+          columns: ['要求', '本地LLM', 'GPT-4o / Claude'],
           rows: [
-            { '要求': '成本（大规模）', '本地LLM': '无（计算力）', 'GPT-5.5 / Claude': '$0.03-0.30/1k tokens' },
-            { '要求': '隐私性', '本地LLM': '100%私密', 'GPT-5.5 / Claude': '发送API' },
-            { '要求': '响应延迟', '本地LLM': '5～50秒（CPU）', 'GPT-5.5 / Claude': '1～5秒' },
-            { '要求': '代码质量（HumanEval）', '本地LLM': '87%（最佳）', 'GPT-5.5 / Claude': '92%+' },
-            { '要求': '实时补全', '本地LLM': '否', 'GPT-5.5 / Claude': '是（Copilot）' },
-            { '要求': '大上下文', '本地LLM': '最高128k（RAM限制）', 'GPT-5.5 / Claude': '128k-200k' },
+            { '要求': '成本（大规模）', '本地LLM': '无（计算力）', 'GPT-4o / Claude': '$0.03-0.30/1k tokens' },
+            { '要求': '隐私性', '本地LLM': '100%私密', 'GPT-4o / Claude': '发送API' },
+            { '要求': '响应延迟', '本地LLM': '5～50秒（CPU）', 'GPT-4o / Claude': '1～5秒' },
+            { '要求': '代码质量（HumanEval）', '本地LLM': '87%（最佳）', 'GPT-4o / Claude': '92%+' },
+            { '要求': '实时补全', '本地LLM': '否', 'GPT-4o / Claude': '是（Copilot）' },
+            { '要求': '大上下文', '本地LLM': '最高128k（RAM限制）', 'GPT-4o / Claude': '128k-200k' },
           ],
         },
         regionalContext: {
@@ -1837,7 +1837,7 @@ schema: {
           { '@type': 'Question', 'name': '本地编程模型能替代GitHub Copilot吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '实时自动补全：不能。意图代码生成：可以。Qwen2.5-Coder 32B（8-15 token/秒）太慢用于按键补全。通过Continue.dev的请求-审查工作流，Qwen2.5-Coder 32B在代码生成任务上与Copilot质量相当。权衡：更慢但私密。' } },
           { '@type': 'Question', 'name': '本地编程LLM需要多少RAM？', 'acceptedAnswer': { '@type': 'Answer', 'text': '最小4 GB（小3B模型），实用8 GB+。推荐：16 GB用于7B-16B模型余地充足。高端：32 GB+用于32B模型。公式：GB数≈参数数÷4（如：7B÷4≈FP16下1.75 GB，Q4_K_M下~4.5 GB）。' } },
           { '@type': 'Question', 'name': '本地编程模型开发够快吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是，迭代工作流（10-50 token/秒）。Qwen3 8B在笔记本电脑上20-35 token/秒——每个响应等待5-10秒对批量生成可接受。实时自动补全不够快（<1秒需要）。IDE用途本地模型适合请求-审查，不适合按键补全。' } },
-          { '@type': 'Question', 'name': '本地LLM能替代编程用GPT-5.5吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能。Qwen2.5-Coder 32B（87% HumanEval）对GPT-5.5（~92%实效）。本地模型滞后于：最新框架知识（训练后API）、复杂多文件推理（100k+token）、调试精度。最佳本地模型在函数生成上竞争性强，系统级设计上不行。' } },
+          { '@type': 'Question', 'name': '本地LLM能替代编程用GPT-4o吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能。Qwen2.5-Coder 32B（87% HumanEval）对GPT-4o（~92%实效）。本地模型滞后于：最新框架知识（训练后API）、复杂多文件推理（100k+token）、调试精度。最佳本地模型在函数生成上竞争性强，系统级设计上不行。' } },
           { '@type': 'Question', 'name': 'Qwen2.5-Coder最好支持哪种语言？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Python是主要训练语言。JavaScript、TypeScript、Java、C++、Go、Rust、SQL都充分支持。模型还处理PHP、Ruby、Swift、Kotlin。非Python语言HumanEval分数更低但仍有竞争力。' } },
           { '@type': 'Question', 'name': 'DeepSeek-Coder对专有代码安全吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama本地运行时，DeepSeek-Coder无外部连接。代码保留在硬件上。数据安全问题适用DeepSeek云API（api.deepseek.com），不适用Ollama本地推理。本地推理完全私密。' } },
           { '@type': 'Question', 'name': 'Qwen2.5-Coder与Qwen2.5有何区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder专门在代码语料库上微调并包含FIM支持。Qwen2.5是通用模型。HumanEval上Qwen3 8B和Qwen2.5 7B分数相似（72%）但Qwen2.5-Coder包含代码补全特性通用模型没有。' } },

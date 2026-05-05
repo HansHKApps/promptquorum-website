@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What to Expect: Speed, Quality, and Limitations',
           content: [
             '**Speed** varies by hardware. On a 2023 laptop (no GPU): expect 15-25 tokens/sec for a 3B model and 8-15 tokens/sec for an 8B model. On Apple M3 Pro: 50-80 tokens/sec for 8B. On NVIDIA RTX 4070 Ti: 90-130 tokens/sec for 8B.',
-            '**Quality** from `llama3.2:3b` is noticeably lower than GPT-5.5 or Claude Opus 4.7 on complex tasks. For summarization, simple Q&A, and code explanation, the output is useful. For multi-step reasoning or long-form writing, upgrade to an 8B or 13B model.',
+            '**Quality** from `llama3.2:3b` is noticeably lower than GPT-4o or Claude Opus 4.7 on complex tasks. For summarization, simple Q&A, and code explanation, the output is useful. For multi-step reasoning or long-form writing, upgrade to an 8B or 13B model.',
             '**Context window**: `llama3.2:3b` supports 128K tokens by default in Ollama. In practice, quality degrades after ~16K tokens in a single conversation.',
             '**First response delay**: the first response after `ollama run` includes model loading time (5-30 seconds). Subsequent responses in the same session are faster.',
           ],

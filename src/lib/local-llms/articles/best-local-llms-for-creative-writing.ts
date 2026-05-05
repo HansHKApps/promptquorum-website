@@ -80,7 +80,7 @@ schema: {
         '@type': 'FAQPage',
         'inLanguage': 'en',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Can a local LLM replace a writing assistant like Claude or GPT-5.5 for fiction?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude Opus 4.7 and GPT-5.5 maintain narrative coherence more reliably at any hardware tier. A 70B local model narrows this gap significantly.' } },
+          { '@type': 'Question', 'name': 'Can a local LLM replace a writing assistant like Claude or GPT-4o for fiction?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude Opus 4.7 and GPT-4o maintain narrative coherence more reliably at any hardware tier. A 70B local model narrows this gap significantly.' } },
           { '@type': 'Question', 'name': 'Does the model remember earlier parts of my story?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only within the current context window. If your conversation history exceeds the model\'s context limit (typically 4K-128K tokens), earlier details are forgotten. For long projects, periodically provide a story summary at the start of each session to re-establish context.' } },
           { '@type': 'Question', 'name': 'Which local model produces the most vivid prose?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B with Q5_K_M quantization produces the most consistently vivid sensory detail and natural dialogue flow. Mistral Small 3.1 24B achieves 80-85% of this quality at 14 GB RAM vs 45 GB for 70B. Fimbulvetr-11B fine-tune on a 13B base model also excels at prose richness within smaller resource budgets.' } },
           { '@type': 'Question', 'name': 'How do I handle inconsistencies in character voice across chapters?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Provide a detailed character sheet (name, background, speech patterns, motivations) in your system prompt. For each new chapter, begin the session with: "You are writing as [Character]. Maintain the following voice and perspective..." Then paste the character sheet. This keeps coherence for 500-2,000 word sections.' } },
@@ -226,8 +226,8 @@ schema: {
           id: 'faq',
           faqs: [
             {
-              q: 'Can a local LLM replace a writing assistant like Claude or GPT-5.5 for fiction?',
-              a: 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude Opus 4.7 and GPT-5.5 maintain narrative coherence more reliably at any hardware tier. A 70B local model narrows this gap significantly.',
+              q: 'Can a local LLM replace a writing assistant like Claude or GPT-4o for fiction?',
+              a: 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude Opus 4.7 and GPT-4o maintain narrative coherence more reliably at any hardware tier. A 70B local model narrows this gap significantly.',
             },
             {
               q: 'Does the model remember earlier parts of my story?',
@@ -408,8 +408,8 @@ schema: {
           title: 'Häufig gestellte Fragen zu lokalen LLMs für kreatives Schreiben',
           faqs: [
             {
-              q: 'Kann ein lokales LLM einen Schreib-Assistenten wie Claude oder GPT-5.5 für Fiktion ersetzen?',
-              a: 'Für Kurztexte (unter 500 Wörtern) erzeugt ein gut gepromptetes 13B+-Modell lokaler Ausgabe, die in blinden Tests schwer vom Cloud-Modellen zu unterscheiden ist. Für Long-Form-Fiktion (Romane, vollständige Kurzgeschichten) bewahren Claude Opus 4.7 und GPT-5.5 die Narrative-Kohärenz zuverlässiger auf jeder Hardware-Ebene. Ein 70B-Modell schließt diese Lücke erheblich.',
+              q: 'Kann ein lokales LLM einen Schreib-Assistenten wie Claude oder GPT-4o für Fiktion ersetzen?',
+              a: 'Für Kurztexte (unter 500 Wörtern) erzeugt ein gut gepromptetes 13B+-Modell lokaler Ausgabe, die in blinden Tests schwer vom Cloud-Modellen zu unterscheiden ist. Für Long-Form-Fiktion (Romane, vollständige Kurzgeschichten) bewahren Claude Opus 4.7 und GPT-4o die Narrative-Kohärenz zuverlässiger auf jeder Hardware-Ebene. Ein 70B-Modell schließt diese Lücke erheblich.',
             },
             {
               q: 'Erinnert sich das Modell an frühere Teile meiner Geschichte?',
@@ -417,7 +417,7 @@ schema: {
             },
             {
               q: 'Wie konform ist das Verwenden von lokalen LLMs mit deutschem Datenschutz (DSGVO)?',
-              a: 'Lokale LLMs, die auf Ihrer eigenen Hardware laufen, speichern Daten nicht auf Servern von Drittanbietern, daher sind Sie nicht dem DSGVO-Daten-Transit unterworfen. Cloud-Modelle wie Claude oder GPT-5.5 erfordern möglicherweise Datenverarbeitungsverträge (Datenschutzvorkehrungen), da Ihre Eingaben auf fremden Servern verarbeitet werden. Für DSGVO-sensible Schreibprojekte sind lokale Modelle vorzuziehen.',
+              a: 'Lokale LLMs, die auf Ihrer eigenen Hardware laufen, speichern Daten nicht auf Servern von Drittanbietern, daher sind Sie nicht dem DSGVO-Daten-Transit unterworfen. Cloud-Modelle wie Claude oder GPT-4o erfordern möglicherweise Datenverarbeitungsverträge (Datenschutzvorkehrungen), da Ihre Eingaben auf fremden Servern verarbeitet werden. Für DSGVO-sensible Schreibprojekte sind lokale Modelle vorzuziehen.',
             },
             {
               q: 'Kann ich lokale LLMs für kommerzielle Veröffentlichungen verwenden?',
@@ -578,8 +578,8 @@ schema: {
           title: 'Questions fréquentes',
           faqs: [
             {
-              q: 'Remplace local LLM Claude/GPT-5.5 fiction?',
-              a: 'Court format (<500 mots) : 13B+ local indistinguible blind test. Long format (romans) : Claude Opus 4.7 et GPT-5.5 cohérence plus fiable. 70B local réduit l\'écart.',
+              q: 'Remplace local LLM Claude/GPT-4o fiction?',
+              a: 'Court format (<500 mots) : 13B+ local indistinguible blind test. Long format (romans) : Claude Opus 4.7 et GPT-4o cohérence plus fiable. 70B local réduit l\'écart.',
             },
             {
               q: 'Modèle se souvient parties antérieures?',
@@ -744,8 +744,8 @@ schema: {
           title: 'ローカルLLMの創作文章についてよくある質問',
           faqs: [
             {
-              q: 'ローカルLLMはClaudeやGPT-5.5などの執筆補助にとって代わることができますか？',
-              a: '短編コンテンツ（500語未満）の場合、よくプロンプトされた13B以上のローカルモデルは、ブラインドテストではクラウドモデルから区別しにくい出力を生成します。長編フィクション（小説、短編小説全体）の場合、Claude Opus 4.7およびGPT-5.5はハードウェアレベルに関わらずナレーティング一貫性をより確実に保ちます。',
+              q: 'ローカルLLMはClaudeやGPT-4oなどの執筆補助にとって代わることができますか？',
+              a: '短編コンテンツ（500語未満）の場合、よくプロンプトされた13B以上のローカルモデルは、ブラインドテストではクラウドモデルから区別しにくい出力を生成します。長編フィクション（小説、短編小説全体）の場合、Claude Opus 4.7およびGPT-4oはハードウェアレベルに関わらずナレーティング一貫性をより確実に保ちます。',
             },
             {
               q: 'モデルは私のストーリーの以前の部分を覚えていますか？',
@@ -907,8 +907,8 @@ schema: {
           title: '关于本地LLM创意写作的常见问题',
           faqs: [
             {
-              q: '本地LLM能否取代Claude或GPT-5.5等写作助手？',
-              a: '对于短篇内容（500字以下），经过良好提示的13B+本地模型生成的输出在盲测中难以与云模型区分。对于长篇小说（小说、完整短篇故事），Claude Opus 4.7和GPT-5.5在任何硬件级别都能更可靠地保持叙事连贯性。70B本地模型显著缩小了这一差距。',
+              q: '本地LLM能否取代Claude或GPT-4o等写作助手？',
+              a: '对于短篇内容（500字以下），经过良好提示的13B+本地模型生成的输出在盲测中难以与云模型区分。对于长篇小说（小说、完整短篇故事），Claude Opus 4.7和GPT-4o在任何硬件级别都能更可靠地保持叙事连贯性。70B本地模型显著缩小了这一差距。',
             },
             {
               q: '模型能否记住我故事的早期部分？',

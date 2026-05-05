@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           items: [
-            'Local 7B models need more explicit guidance than GPT-5.5. Longer prompts, clearer instructions.',
+            'Local 7B models need more explicit guidance than GPT-4o. Longer prompts, clearer instructions.',
             'Chain-of-thought ("Let me think step by step") improves reasoning accuracy by 10-20%.',
             'Always specify output format (JSON, Markdown, plain text). Unstructured outputs are unpredictable.',
             'Few-shot examples (1-3) work better than zero-shot for local models. More examples = better consistency.',
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'structured-output',
           title: 'Why Is Specifying Output Format Critical for Local Models?',
           content: [
-            '**Specifying exact output format (JSON, Markdown, plain text) is critical for local models because they produce unpredictable outputs without explicit instructions.** Cloud models like GPT-5.5 can infer intent from vague requests; local 7B–13B models cannot. For [local RAG systems that need structured document extraction](/local-llms/local-rag-2026), JSON format specifications prevent parsing errors and increase extraction accuracy 30–40%.',
+            '**Specifying exact output format (JSON, Markdown, plain text) is critical for local models because they produce unpredictable outputs without explicit instructions.** Cloud models like GPT-4o can infer intent from vague requests; local 7B–13B models cannot. For [local RAG systems that need structured document extraction](/local-llms/local-rag-2026), JSON format specifications prevent parsing errors and increase extraction accuracy 30–40%.',
             '**Example:** "Extract entities from the text" might return narrative text instead of a list.',
             '**Better:** "Extract entities as JSON with keys: person, location, organization".',
           ],
@@ -190,12 +190,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Questions About Local LLM Prompting',
           faqs: [
             {
-              q: 'Why do local LLMs need more explicit prompts than GPT-5.5?',
-              a: 'Local 7B–13B models have fewer parameters and less diverse training data than GPT-5.5 (1.8T parameters estimated). They cannot infer ambiguous intent as well. Explicit instructions — format, role, step-by-step reasoning — compensate for this gap. Chain-of-thought prompting improves local model accuracy by 10–20% on reasoning tasks.',
+              q: 'Why do local LLMs need more explicit prompts than GPT-4o?',
+              a: 'Local 7B–13B models have fewer parameters and less diverse training data than GPT-4o (1.8T parameters estimated). They cannot infer ambiguous intent as well. Explicit instructions — format, role, step-by-step reasoning — compensate for this gap. Chain-of-thought prompting improves local model accuracy by 10–20% on reasoning tasks.',
             },
             {
               q: 'How many few-shot examples should I include in prompts for local LLMs?',
-              a: '3–5 examples are optimal for local 7B models. GPT-5.5 typically needs only 1–2 examples. More examples improve consistency but consume context window tokens (4K–32K tokens depending on the model). For Llama 3.2 8B with a 4K context window, limit to 3 examples plus your task. For models with 32K+ context, 5 examples is safe.',
+              a: '3–5 examples are optimal for local 7B models. GPT-4o typically needs only 1–2 examples. More examples improve consistency but consume context window tokens (4K–32K tokens depending on the model). For Llama 3.2 8B with a 4K context window, limit to 3 examples plus your task. For models with 32K+ context, 5 examples is safe.',
             },
             {
               q: 'Does chain-of-thought prompting work with all local models?',
@@ -405,7 +405,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Lokale 7B-Modelle benötigen explizitere Anleitung als GPT-5.5. Längere Prompts, klarere Anweisungen.',
+            'Lokale 7B-Modelle benötigen explizitere Anleitung als GPT-4o. Längere Prompts, klarere Anweisungen.',
             'Gedankenketten-Prompting („Lass mich Schritt für Schritt denken") verbessert die Genauigkeit um 10–20%.',
             'Geben Sie immer das Ausgabeformat an (JSON, Markdown, Klartext). Unstrukturierte Ausgaben sind unvorhersehbar.',
             'Few-Shot-Beispiele (1–3) funktionieren besser als Zero-Shot bei lokalen Modellen. Mehr Beispiele = bessere Konsistenz.',
@@ -459,7 +459,7 @@ schema: {
           id: 'structured-output',
           title: 'Warum ist die Angabe des Ausgabeformats für lokale Modelle kritisch?',
           content: [
-            '**Die Angabe des exakten Ausgabeformats (JSON, Markdown, Klartext) ist für lokale Modelle kritisch, da sie ohne explizite Anweisungen unvorhersehbare Ausgaben erzeugen.** Cloud-Modelle wie GPT-5.5 können Absichten aus vagen Anfragen ableiten; lokale 7B–13B-Modelle können das nicht. Für [lokale RAG-Systeme, die strukturierte Dokumentextraktion benötigen](/local-llms/local-rag-2026?lang=de), verhindern JSON-Formatspezifikationen Parsing-Fehler und erhöhen die Extraktionsgenauigkeit um 30–40%.',
+            '**Die Angabe des exakten Ausgabeformats (JSON, Markdown, Klartext) ist für lokale Modelle kritisch, da sie ohne explizite Anweisungen unvorhersehbare Ausgaben erzeugen.** Cloud-Modelle wie GPT-4o können Absichten aus vagen Anfragen ableiten; lokale 7B–13B-Modelle können das nicht. Für [lokale RAG-Systeme, die strukturierte Dokumentextraktion benötigen](/local-llms/local-rag-2026?lang=de), verhindern JSON-Formatspezifikationen Parsing-Fehler und erhöhen die Extraktionsgenauigkeit um 30–40%.',
             '**Beispiel:** „Extrahiere Entitäten aus dem Text" könnte Narrativtext statt einer Liste zurückgeben.',
             '**Besser:** „Extrahiere Entitäten als JSON mit Schlüsseln: Person, Ort, Organisation".',
           ],
@@ -554,12 +554,12 @@ schema: {
           title: 'Häufig gestellte Fragen zum lokalen LLM-Prompting',
           faqs: [
             {
-              q: 'Warum benötigen lokale LLMs explizitere Prompts als GPT-5.5?',
-              a: 'Lokale 7B–13B-Modelle haben weniger Parameter und diversere Trainingsdaten als GPT-5.5 (geschätzt 1,8T Parameter). Sie können mehrdeutige Absichten nicht so gut ableiten. Explizite Anweisungen – Format, Rolle, Schritt-für-Schritt-Argumentation – kompensieren diese Lücke. Gedankenketten-Prompting verbessert die Genauigkeit lokaler Modelle um 10–20% bei Argumentationsaufgaben.',
+              q: 'Warum benötigen lokale LLMs explizitere Prompts als GPT-4o?',
+              a: 'Lokale 7B–13B-Modelle haben weniger Parameter und diversere Trainingsdaten als GPT-4o (geschätzt 1,8T Parameter). Sie können mehrdeutige Absichten nicht so gut ableiten. Explizite Anweisungen – Format, Rolle, Schritt-für-Schritt-Argumentation – kompensieren diese Lücke. Gedankenketten-Prompting verbessert die Genauigkeit lokaler Modelle um 10–20% bei Argumentationsaufgaben.',
             },
             {
               q: 'Wie viele Few-Shot-Beispiele sollte ich in Prompts für lokale LLMs einbeziehen?',
-              a: '3–5 Beispiele sind optimal für lokale 7B-Modelle. GPT-5.5 benötigt typischerweise nur 1–2 Beispiele. Mehr Beispiele verbessern die Konsistenz, verbrauchen aber Kontextfenster-Token (4K–32K Token je nach Modell). Für Llama 3.2 8B mit 4K-Kontextfenster sollten Sie auf 3 Beispiele plus Ihre Aufgabe begrenzen. Für Modelle mit 32K+-Kontext sind 5 Beispiele sicher.',
+              a: '3–5 Beispiele sind optimal für lokale 7B-Modelle. GPT-4o benötigt typischerweise nur 1–2 Beispiele. Mehr Beispiele verbessern die Konsistenz, verbrauchen aber Kontextfenster-Token (4K–32K Token je nach Modell). Für Llama 3.2 8B mit 4K-Kontextfenster sollten Sie auf 3 Beispiele plus Ihre Aufgabe begrenzen. Für Modelle mit 32K+-Kontext sind 5 Beispiele sicher.',
             },
             {
               q: 'Funktioniert Gedankenketten-Prompting bei allen lokalen Modellen?',
@@ -798,7 +798,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Les modèles locaux 7B exigent des instructions plus explicites que GPT-5.5. Prompts plus longs, instructions plus claires.',
+            'Les modèles locaux 7B exigent des instructions plus explicites que GPT-4o. Prompts plus longs, instructions plus claires.',
             'Le prompting par chaîne de pensées (« Laisse-moi penser étape par étape ») améliore la précision du raisonnement de 10–20%.',
             'Spécifiez toujours le format de sortie (JSON, Markdown, texte brut). Les sorties non structurées sont imprévisibles.',
             'Les exemples Few-Shot (1–3) fonctionnent mieux que Zero-Shot pour les modèles locaux. Plus d\'exemples = meilleure cohérence.',
@@ -852,7 +852,7 @@ schema: {
           id: 'structured-output',
           title: 'Pourquoi spécifier le format de sortie est-il critique pour les modèles locaux ?',
           content: [
-            '**Spécifier le format de sortie exact (JSON, Markdown, texte brut) est critique pour les modèles locaux car ils produisent des sorties imprévisibles sans instructions explicites.** Les modèles cloud comme GPT-5.5 peuvent déduire l\'intention de demandes vagues ; les modèles locaux 7B–13B ne le peuvent pas. Pour les [systèmes RAG locaux qui nécessitent une extraction de documents structurée](/local-llms/local-rag-2026?lang=fr), les spécifications de format JSON préviennent les erreurs d\'analyse et augmentent la précision d\'extraction de 30–40%.',
+            '**Spécifier le format de sortie exact (JSON, Markdown, texte brut) est critique pour les modèles locaux car ils produisent des sorties imprévisibles sans instructions explicites.** Les modèles cloud comme GPT-4o peuvent déduire l\'intention de demandes vagues ; les modèles locaux 7B–13B ne le peuvent pas. Pour les [systèmes RAG locaux qui nécessitent une extraction de documents structurée](/local-llms/local-rag-2026?lang=fr), les spécifications de format JSON préviennent les erreurs d\'analyse et augmentent la précision d\'extraction de 30–40%.',
             '**Exemple :** « Extrais les entités du texte » pourrait retourner du texte narratif au lieu d\'une liste.',
             '**Mieux :** « Extrais les entités en JSON avec clés : personne, lieu, organisation ».',
           ],
@@ -947,12 +947,12 @@ schema: {
           title: 'Questions fréquemment posées sur le prompting des LLM locaux',
           faqs: [
             {
-              q: 'Pourquoi les LLM locaux ont-ils besoin de prompts plus explicites que GPT-5.5 ?',
-              a: 'Les modèles locaux 7B–13B ont moins de paramètres et des données d\'entraînement moins diversifiées que GPT-5.5 (estimé 1,8T paramètres). Ils ne peuvent pas déduire les intentions ambiguës aussi bien. Les instructions explicites — format, rôle, raisonnement étape par étape — comblent cette lacune. Le prompting par chaîne de pensées améliore la précision des modèles locaux de 10–20% sur les tâches de raisonnement.',
+              q: 'Pourquoi les LLM locaux ont-ils besoin de prompts plus explicites que GPT-4o ?',
+              a: 'Les modèles locaux 7B–13B ont moins de paramètres et des données d\'entraînement moins diversifiées que GPT-4o (estimé 1,8T paramètres). Ils ne peuvent pas déduire les intentions ambiguës aussi bien. Les instructions explicites — format, rôle, raisonnement étape par étape — comblent cette lacune. Le prompting par chaîne de pensées améliore la précision des modèles locaux de 10–20% sur les tâches de raisonnement.',
             },
             {
               q: 'Combien d\'exemples Few-Shot devrais-je inclure dans les prompts pour les LLM locaux ?',
-              a: '3–5 exemples sont optimaux pour les modèles locaux 7B. GPT-5.5 a généralement besoin de seulement 1–2 exemples. Plus d\'exemples améliorent la cohérence mais consomment les tokens de fenêtre de contexte (4K–32K tokens selon le modèle). Pour Llama 3.2 8B avec une fenêtre de contexte 4K, limitez-vous à 3 exemples plus votre tâche. Pour les modèles avec 32K+ contexte, 5 exemples sont sûrs.',
+              a: '3–5 exemples sont optimaux pour les modèles locaux 7B. GPT-4o a généralement besoin de seulement 1–2 exemples. Plus d\'exemples améliorent la cohérence mais consomment les tokens de fenêtre de contexte (4K–32K tokens selon le modèle). Pour Llama 3.2 8B avec une fenêtre de contexte 4K, limitez-vous à 3 exemples plus votre tâche. Pour les modèles avec 32K+ contexte, 5 exemples sont sûrs.',
             },
             {
               q: 'Le prompting par chaîne de pensées fonctionne-t-il avec tous les modèles locaux ?',
@@ -1173,7 +1173,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'ローカル7Bモデルは、GPT-5.5より明示的なガイダンスが必要です。より長いプロンプト、より明確な指示。',
+            'ローカル7Bモデルは、GPT-4oより明示的なガイダンスが必要です。より長いプロンプト、より明確な指示。',
             '思考の連鎖（「ステップバイステップで考えさせる」）は、推論精度を10～20%向上させます。',
             '常に出力形式を指定してください（JSON、Markdown、プレーンテキスト）。構造化されていない出力は予測不可能です。',
             'Few-Shotサンプル（1～3個）はローカルモデルでZero-Shotより優れています。サンプル数が多いほど一貫性が向上します。',
@@ -1227,7 +1227,7 @@ schema: {
           id: 'structured-output',
           title: 'ローカルモデルでは出力形式の指定が重要なのはなぜですか？',
           content: [
-            '**正確な出力形式（JSON、Markdown、プレーンテキスト）を指定することは、ローカルモデルが明示的な指示なしに予測不可能な出力を生成するため、ローカルモデルにとって重要です。** GPT-5.5のようなクラウドモデルは、あいまいなリクエストから意図を推測できます。ローカル7B～13Bモデルはそうできません。[構造化されたドキュメント抽出が必要なローカルRAGシステム](/local-llms/local-rag-2026?lang=ja)では、JSON形式の仕様がパースエラーを防ぎ、抽出精度を30～40%向上させます。',
+            '**正確な出力形式（JSON、Markdown、プレーンテキスト）を指定することは、ローカルモデルが明示的な指示なしに予測不可能な出力を生成するため、ローカルモデルにとって重要です。** GPT-4oのようなクラウドモデルは、あいまいなリクエストから意図を推測できます。ローカル7B～13Bモデルはそうできません。[構造化されたドキュメント抽出が必要なローカルRAGシステム](/local-llms/local-rag-2026?lang=ja)では、JSON形式の仕様がパースエラーを防ぎ、抽出精度を30～40%向上させます。',
             '**例：** 「テキストからエンティティを抽出する」はリストではなくナラティブテキストを返す可能性があります。',
             '**より良い：** 「エンティティをJSONで抽出します。キー：person、location、organization」。',
           ],
@@ -1321,12 +1321,12 @@ schema: {
           title: 'ローカルLLMプロンプティングについてよくある質問',
           faqs: [
             {
-              q: 'ローカルLLMがGPT-5.5より明示的なプロンプトを必要とするのはなぜですか？',
-              a: 'ローカル7B～13Bモデルはパラメータが少なく、GPT-5.5よりトレーニングデータが多様（推定1.8Tパラメータ）です。彼らはあいまいな意図を推測できません。明示的な指示（形式、ロール、ステップバイステップの推論）がこのギャップを補償します。思考の連鎖プロンプティングは、推論タスクでローカルモデルの精度を10～20%向上させます。',
+              q: 'ローカルLLMがGPT-4oより明示的なプロンプトを必要とするのはなぜですか？',
+              a: 'ローカル7B～13Bモデルはパラメータが少なく、GPT-4oよりトレーニングデータが多様（推定1.8Tパラメータ）です。彼らはあいまいな意図を推測できません。明示的な指示（形式、ロール、ステップバイステップの推論）がこのギャップを補償します。思考の連鎖プロンプティングは、推論タスクでローカルモデルの精度を10～20%向上させます。',
             },
             {
               q: 'ローカルLLMのプロンプトに何個のFew-Shotサンプルを含める必要がありますか？',
-              a: 'ローカル7Bモデルでは3～5個のサンプルが最適です。GPT-5.5は通常1～2個のサンプルのみが必要です。より多くのサンプルは一貫性を改善しますが、コンテキストウィンドウトークンを消費します（モデルによって4K～32Kトークン）。4Kコンテキストウィンドウを持つLlama 3.2 8Bの場合、3つのサンプル+タスクに制限してください。32K+コンテキストを持つモデルの場合、5個のサンプルは安全です。',
+              a: 'ローカル7Bモデルでは3～5個のサンプルが最適です。GPT-4oは通常1～2個のサンプルのみが必要です。より多くのサンプルは一貫性を改善しますが、コンテキストウィンドウトークンを消費します（モデルによって4K～32Kトークン）。4Kコンテキストウィンドウを持つLlama 3.2 8Bの場合、3つのサンプル+タスクに制限してください。32K+コンテキストを持つモデルの場合、5個のサンプルは安全です。',
             },
             {
               q: 'すべてのローカルモデルで思考の連鎖プロンプティングが機能しますか？',
@@ -1547,7 +1547,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '本地7B模型需要比GPT-5.5更明确的指导。更长的提示、更清晰的指示。',
+            '本地7B模型需要比GPT-4o更明确的指导。更长的提示、更清晰的指示。',
             '思维链（"让我逐步思考"）将推理准确率提高10-20%。',
             '始终指定输出格式（JSON、Markdown、纯文本）。非结构化输出是不可预测的。',
             '少样本示例（1-3个）对本地模型比零样本效果更好。更多示例=更好的一致性。',
@@ -1601,7 +1601,7 @@ schema: {
           id: 'structured-output',
           title: '为什么在本地模型中指定输出格式至关重要？',
           content: [
-            '**指定确切的输出格式（JSON、Markdown、纯文本）对本地模型至关重要，因为没有明确指示它们会产生不可预测的输出。** 像GPT-5.5这样的云模型可以从模糊请求推断意图；本地7B-13B模型则不能。对于[需要结构化文档提取的本地RAG系统](/local-llms/local-rag-2026?lang=zh)，JSON格式规范可防止解析错误并将提取准确率提高30-40%。',
+            '**指定确切的输出格式（JSON、Markdown、纯文本）对本地模型至关重要，因为没有明确指示它们会产生不可预测的输出。** 像GPT-4o这样的云模型可以从模糊请求推断意图；本地7B-13B模型则不能。对于[需要结构化文档提取的本地RAG系统](/local-llms/local-rag-2026?lang=zh)，JSON格式规范可防止解析错误并将提取准确率提高30-40%。',
             '**示例：** "从文本中提取实体"可能返回叙述文本而不是列表。',
             '**更好：** "以JSON格式提取实体，键为：人员、位置、组织"。',
           ],
@@ -1695,12 +1695,12 @@ schema: {
           title: '本地LLM提示工程常见问题',
           faqs: [
             {
-              q: '为什么本地LLM需要比GPT-5.5更明确的提示？',
-              a: '本地7B-13B模型的参数少于GPT-5.5（估计1.8T参数），训练数据多样性较低。它们无法像GPT-5.5那样推断模糊意图。明确的指示（格式、角色、逐步推理）弥补了这一差距。思维链提示在推理任务上将本地模型准确率提高10-20%。',
+              q: '为什么本地LLM需要比GPT-4o更明确的提示？',
+              a: '本地7B-13B模型的参数少于GPT-4o（估计1.8T参数），训练数据多样性较低。它们无法像GPT-4o那样推断模糊意图。明确的指示（格式、角色、逐步推理）弥补了这一差距。思维链提示在推理任务上将本地模型准确率提高10-20%。',
             },
             {
               q: '我应该在本地LLM的提示中包含多少个少样本示例？',
-              a: '本地7B模型的最优值为3-5个示例。GPT-5.5通常只需1-2个示例。更多示例改进一致性但消耗上下文窗口token（根据模型4K-32K token）。对于具有4K上下文窗口的Llama 3.2 8B，限制为3个示例加任务。对于具有32K+上下文的模型，5个示例是安全的。',
+              a: '本地7B模型的最优值为3-5个示例。GPT-4o通常只需1-2个示例。更多示例改进一致性但消耗上下文窗口token（根据模型4K-32K token）。对于具有4K上下文窗口的Llama 3.2 8B，限制为3个示例加任务。对于具有32K+上下文的模型，5个示例是安全的。',
             },
             {
               q: '思维链提示词是否适用于所有本地模型？',

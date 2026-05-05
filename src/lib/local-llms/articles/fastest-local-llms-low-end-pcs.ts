@@ -349,7 +349,7 @@ schema: {
             'name': 'What is the best free alternative to ChatGPT on a low-end PC?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mistral 7B Q4 on Ollama with 8 GB VRAM gives 25–60 tok/sec — comparable to ChatGPT for basic tasks. Quality is lower than GPT-5.5 but sufficient for chat, summaries, and simple coding. Completely free, runs offline, no API key needed.',
+              'text': 'Mistral 7B Q4 on Ollama with 8 GB VRAM gives 25–60 tok/sec — comparable to ChatGPT for basic tasks. Quality is lower than GPT-4o but sufficient for chat, summaries, and simple coding. Completely free, runs offline, no API key needed.',
             },
           },
           {

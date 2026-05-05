@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Not tuning debounce latency.** If completions feel "laggy", increase debounceWaitMs (e.g., to 400 ms) to avoid showing incomplete suggestions.',
             '**Using a model too large for your VRAM.** A 13B model + editor overhead can use 12+ GB. On 8GB machines, stick with 7B models.',
-            '**Expecting cloud-level code quality.** GPT-5.5 is significantly better at code than any 7B model. Local completions are 70-80% of cloud quality.',
+            '**Expecting cloud-level code quality.** GPT-4o is significantly better at code than any 7B model. Local completions are 70-80% of cloud quality.',
             '**Running inference on CPU.** CPU completions are impractical (5-10 second latency). GPU is required for usable completions.',
           ],
         },
@@ -343,7 +343,7 @@ schema: {
           items: [
             '**Keine Debounce-Latenz-Optimierung**: Falls Vervollständigungen sich "langsam" anfühlen, erhöhen Sie debounceWaitMs (z.B. auf 400 ms), um unvollständige Vorschläge zu vermeiden.',
             '**Verwendung eines für Ihren VRAM zu großen Modells**: Ein 13B-Modell + Editor-Overhead kann 12+ GB verwenden. Bei 8GB-Maschinen bleiben Sie mit 7B-Modellen.',
-            '**Erwartung von Cloud-Level-Code-Qualität**: GPT-5.5 ist deutlich besser bei Code als jedes 7B-Modell. Lokale Vervollständigungen sind 70-80% der Cloud-Qualität.',
+            '**Erwartung von Cloud-Level-Code-Qualität**: GPT-4o ist deutlich besser bei Code als jedes 7B-Modell. Lokale Vervollständigungen sind 70-80% der Cloud-Qualität.',
             '**Ausführung von Inferenz auf CPU**: CPU-Vervollständigungen sind unpraktisch (5-10 Sekunden Latenz). GPU ist erforderlich für nutzbare Vervollständigungen.',
           ],
         },
@@ -519,7 +519,7 @@ schema: {
           items: [
             '**Ne pas optimiser la latence de debounce** : Si les complétions semblent « lentes », augmentez debounceWaitMs (par exemple à 400 ms) pour éviter les suggestions incomplètes.',
             '**Utiliser un modèle trop grand pour votre RAM** : Un modèle 13B + surcharge d\'éditeur peut utiliser 12+ Go. Sur les machines 8Go, restez avec les modèles 7B.',
-            '**Attendre une qualité de code au niveau du cloud** : GPT-5.5 est bien meilleur pour le code que n\'importe quel modèle 7B. Les complétions locales représentent 70-80% de la qualité cloud.',
+            '**Attendre une qualité de code au niveau du cloud** : GPT-4o est bien meilleur pour le code que n\'importe quel modèle 7B. Les complétions locales représentent 70-80% de la qualité cloud.',
             '**Exécution de l\'inférence sur CPU** : Les complétions CPU sont impratiques (latence 5-10 secondes). GPU est requis pour les complétions utilisables.',
           ],
         },
@@ -694,7 +694,7 @@ schema: {
           items: [
             '**Debounceレイテンシを調整しない**：補完が「遅い」と感じたら、debounceWaitMsを増やす（例えば400 ms）して不完全な提案を表示しない。',
             '**VRAMに対して大きすぎるモデルを使用**：13Bモデル+エディタオーバーヘッドは12+ GB使用できる。8GBマシンでは7Bモデルを使用。',
-            '**クラウドレベルのコード品質を期待**：GPT-5.5はどの7Bモデルよりもコードで大幅に優れている。ローカル補完はクラウド品質の70〜80%。',
+            '**クラウドレベルのコード品質を期待**：GPT-4oはどの7Bモデルよりもコードで大幅に優れている。ローカル補完はクラウド品質の70〜80%。',
             '**CPUで推論を実行**：CPU補完は非実用的（5〜10秒レイテンシ）。GPUは有用な補完に必要。',
           ],
         },
@@ -869,7 +869,7 @@ schema: {
           items: [
             '**不调整去抖延迟**：如果补全感觉"迟缓"，增加debounceWaitMs（例如400毫秒）以避免显示不完整建议。',
             '**使用对您的显存来说过大的模型**：13B模型+编辑器开销可使用12+ GB。在8GB机器上，使用7B模型。',
-            '**期望云级代码质量**：GPT-5.5在代码方面比任何7B模型好得多。本地补全达到云质量的70-80%。',
+            '**期望云级代码质量**：GPT-4o在代码方面比任何7B模型好得多。本地补全达到云质量的70-80%。',
             '**在CPU上运行推理**：CPU补全不实用（5-10秒延迟）。显存对有用补全是必需的。',
           ],
         },

@@ -61,7 +61,7 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Thing', name: 'Language Tiers in LLMs' },
       ],
       mentions: [
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+        { '@type': 'SoftwareApplication', name: 'GPT-4o' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.0 Pro' },
         { '@type': 'SoftwareApplication', name: 'Mistral Large 2' },
@@ -81,14 +81,14 @@ export const article: Record<Language, PEArticle> = {
       mainEntity: [
         { '@type': 'Question', name: 'Should I write my prompt in English or the target language?', acceptedAnswer: { '@type': 'Answer', text: 'For structural reasoning tasks, write the system prompt in English. For tone and formality, write the user message and register instructions in the target language. See the "System Prompt Language" section for a full breakdown.' } },
         { '@type': 'Question', name: 'Why does AI perform worse in non-English languages?', acceptedAnswer: { '@type': 'Answer', text: 'LLM training datasets are dominated by English (~46% of CommonCrawl). Languages with <5% training share have fewer patterns for the model to draw on, producing higher error rates and less reliable instruction following.' } },
-        { '@type': 'Question', name: 'Which AI model handles Japanese best?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro consistently leads on Japanese, Korean, and Chinese (East Asian scripts). GPT-5.5 is a close second. Mistral Large 2 is not recommended for Japanese as a primary model.' } },
+        { '@type': 'Question', name: 'Which AI model handles Japanese best?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro consistently leads on Japanese, Korean, and Chinese (East Asian scripts). GPT-4o is a close second. Mistral Large 2 is not recommended for Japanese as a primary model.' } },
         { '@type': 'Question', name: 'How much more do Arabic prompts cost than English prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Arabic text uses approximately 46% more tokens than equivalent English content. Budget accordingly for high-volume Arabic applications.' } },
         { '@type': 'Question', name: 'Do I need to translate my few-shot examples?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Few-shot examples should be in the same language as your expected output. Cross-language examples (English examples, French task) reduce accuracy by 15–20% in Tier 2–3 languages according to Shi et al. (2023).' } },
         { '@type': 'Question', name: 'What is cross-lingual chain-of-thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Cross-lingual CoT uses English for the reasoning steps but requests the final answer in the target language. For Tier 3 languages (Japanese, Arabic, Korean), this improves reasoning accuracy by 5–12% vs. prompting reasoning entirely in the target language.' } },
         { '@type': 'Question', name: 'How do I make an LLM use formal German (Sie-form)?', acceptedAnswer: { '@type': 'Answer', text: 'Add this to your system prompt: "Verwende ausschließlich die Sie-Form und einen professionellen Ton." Models default to mixed registers; this instruction is required to enforce Sie-form consistently.' } },
         { '@type': 'Question', name: 'What is code-switching in multilingual prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Code-switching occurs when a user writes in a mix of languages (e.g., German question with English technical terms). Without explicit instructions, models respond in whatever language they detect as dominant. Add to your system prompt: "If the user mixes languages, respond in [target language] throughout."' } },
         { '@type': 'Question', name: 'Can I use the same prompt template across all languages?', acceptedAnswer: { '@type': 'Answer', text: 'No. Each language tier requires a different strategy. Tier 1 (English) works with any prompt. Tier 2 (European languages) works with native-language prompts and English system instructions. Tier 3 (Asian, Arabic) requires cross-lingual CoT and native few-shot examples. Tier 4 (low-resource) requires retrieval-augmented generation rather than direct prompting.' } },
-        { '@type': 'Question', name: 'How does PromptQuorum help with multilingual prompting?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum dispatches the same prompt to multiple models simultaneously (e.g., GPT-5.5, Gemini 3.0 Pro, Mistral Large 2) and returns side-by-side outputs. This lets you identify which model performs better on your specific language and task in one run, instead of testing models separately.' } },
+        { '@type': 'Question', name: 'How does PromptQuorum help with multilingual prompting?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum dispatches the same prompt to multiple models simultaneously (e.g., GPT-4o, Gemini 3.0 Pro, Mistral Large 2) and returns side-by-side outputs. This lets you identify which model performs better on your specific language and task in one run, instead of testing models separately.' } },
       ],
     },
     howToSchema: {
@@ -98,7 +98,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'How to Set Up a Multilingual Prompt Workflow',
       step: [
         { '@type': 'HowToStep', position: 1, name: 'Identify language tier', text: 'Identify which language tier(s) your target language(s) fall into (Tier 1–4).' },
-        { '@type': 'HowToStep', position: 2, name: 'Select the right model', text: 'Select the right model for each language (Mistral Large 2 for Romance, Gemini 3.0 Pro for East Asian, GPT-5.5 for Arabic).' },
+        { '@type': 'HowToStep', position: 2, name: 'Select the right model', text: 'Select the right model for each language (Mistral Large 2 for Romance, Gemini 3.0 Pro for East Asian, GPT-4o for Arabic).' },
         { '@type': 'HowToStep', position: 3, name: 'Write system prompt', text: 'Write an English system prompt with explicit language instruction: "Respond in formal German (Sie-form)."' },
         { '@type': 'HowToStep', position: 4, name: 'Prepare few-shot examples', text: 'Prepare few-shot examples in the target language (minimum 2, ideally 3).' },
         { '@type': 'HowToStep', position: 5, name: 'Test chain-of-thought', text: 'For Tier 3+ languages, test CoT: include "Think step by step in English, then respond in [language]."' },
@@ -112,7 +112,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'Best AI Models for Multilingual Prompting',
       numberOfItems: 6,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'GPT-5.5', description: 'Best for Arabic and general multilingual structured extraction' },
+        { '@type': 'ListItem', position: 1, name: 'GPT-4o', description: 'Best for Arabic and general multilingual structured extraction' },
         { '@type': 'ListItem', position: 2, name: 'Gemini 3.0 Pro', description: 'Best for Japanese, Korean, and Chinese (East Asian scripts)' },
         { '@type': 'ListItem', position: 3, name: 'Mistral Large 2', description: 'Best for French, Spanish, and Italian business content' },
         { '@type': 'ListItem', position: 4, name: 'Claude Opus 4.7', description: 'Best for nuanced multilingual document analysis and tone matching' },
@@ -128,7 +128,7 @@ export const article: Record<Language, PEArticle> = {
           'LLMs perform best in English; non-English outputs have 5–15% higher error rates in Tier 3+ languages (Ahuja et al., 2023 MEGA benchmark).',
           'English system prompts + native-language user input outperforms native system prompts for structured tasks in Tier 2–3 languages.',
           '1,000 English words ≈ 1,300 tokens; the same content in Arabic ≈ 1,900 tokens — 46% more expensive in API cost.',
-          'Mistral models (Mistral Large 2) lead on French/Italian/Spanish; Google Gemini 3.0 Pro leads on Japanese/Korean/Chinese; GPT-5.5 leads on Arabic.',
+          'Mistral models (Mistral Large 2) lead on French/Italian/Spanish; Google Gemini 3.0 Pro leads on Japanese/Korean/Chinese; GPT-4o leads on Arabic.',
           'Few-shot examples must be in the target language — mismatched examples cut accuracy by ~20% (Shi et al., 2023).',
           'Always declare output language explicitly in the system prompt: "Respond in formal German (Sie-form)." — never assume the model will match the user\'s language.',
         ],
@@ -141,7 +141,7 @@ export const article: Record<Language, PEArticle> = {
           '**1,900 tokens** needed for 1,000 words in Arabic (46% more than English); **900 tokens** for Chinese (31% less).',
           '**5–12%** accuracy improvement by using English chain-of-thought reasoning with native-language output (Tier 3 languages).',
           '**15–20%** accuracy drop when using English few-shot examples for non-English tasks (Shi et al., 2023).',
-          '**Mistral Large 2** leads on Romance languages; **Gemini 3.0 Pro** leads on East Asian; **GPT-5.5** leads on Arabic.',
+          '**Mistral Large 2** leads on Romance languages; **Gemini 3.0 Pro** leads on East Asian; **GPT-4o** leads on Arabic.',
         ],
       },
       definition: {
@@ -229,11 +229,11 @@ export const article: Record<Language, PEArticle> = {
         id: 'model-matrix',
         title: 'Which Models Handle Which Languages Best?',
         content: [
-          '**No single model leads across all languages. Mistral Large 2 leads on Romance languages; Google Gemini 3.0 Pro leads on East Asian languages; GPT-5.5 leads on Arabic and multilingual reasoning tasks.** This table aggregates model performance from Ahuja et al. (2023) MEGA benchmark.',
+          '**No single model leads across all languages. Mistral Large 2 leads on Romance languages; Google Gemini 3.0 Pro leads on East Asian languages; GPT-4o leads on Arabic and multilingual reasoning tasks.** This table aggregates model performance from Ahuja et al. (2023) MEGA benchmark.',
         ],
         columns: ['Model', 'Tier 2 (European)', 'Tier 3 (East Asian)', 'Arabic', 'Best Use Case'],
         rows: [
-          { 'Model': 'GPT-5.5', 'Tier 2 (European)': '✅ Strong', 'Tier 3 (East Asian)': '✅ Strong', 'Arabic': '✅ Best', 'Best Use Case': 'General multilingual, structured extraction' },
+          { 'Model': 'GPT-4o', 'Tier 2 (European)': '✅ Strong', 'Tier 3 (East Asian)': '✅ Strong', 'Arabic': '✅ Best', 'Best Use Case': 'General multilingual, structured extraction' },
           { 'Model': 'Claude Opus 4.7', 'Tier 2 (European)': '✅ Strong', 'Tier 3 (East Asian)': '✓ Good', 'Arabic': '✓ Good', 'Best Use Case': 'Document analysis, nuanced tone' },
           { 'Model': 'Gemini 3.0 Pro', 'Tier 2 (European)': '✓ Good', 'Tier 3 (East Asian)': '✅ Best', 'Arabic': '✓ Good', 'Best Use Case': 'Japanese/Korean/Chinese, translation' },
           { 'Model': 'Mistral Large 2', 'Tier 2 (European)': '✅ Best', 'Tier 3 (East Asian)': '⚠ Moderate', 'Arabic': '⚠ Moderate', 'Best Use Case': 'French/Spanish/Italian business content' },
@@ -250,7 +250,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'cost-by-use-case',
         title: 'Cost by Use Case',
         content: [
-          '**The token cost differences above translate directly to your API bill.** Here\'s the real-world impact based on GPT-5.5 pricing ($5 per 1M input tokens).',
+          '**The token cost differences above translate directly to your API bill.** Here\'s the real-world impact based on GPT-4o pricing ($5 per 1M input tokens).',
         ],
         columns: ['Use Case', 'English Cost', 'Arabic Cost', 'Japanese Cost', 'Savings Tip'],
         rows: [
@@ -334,7 +334,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'promptquorum-multilingual',
         title: 'How PromptQuorum Helps Multilingual Workflows',
         items: [
-          '**One prompt → multiple models → side-by-side language comparison.** Send the same French prompt to Mistral Large 2, Claude, and GPT-5.5 and see which produces the best register, accuracy, and tone in one run.',
+          '**One prompt → multiple models → side-by-side language comparison.** Send the same French prompt to Mistral Large 2, Claude, and GPT-4o and see which produces the best register, accuracy, and tone in one run.',
           '**9 built-in prompt frameworks** — all support multilingual templates with language-specific placeholders. Examples: CoT, few-shot, persona, register-enforcement patterns.',
           '**Token count display per model** — see exactly how many tokens your Arabic or Japanese input consumes before sending, preventing budget surprises.',
           '**Context overflow alerts for multilingual inputs** — automatically flags when Arabic or Russian content (which use 30–46% more tokens) approaches your model\'s context window.',
@@ -359,7 +359,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'How to Set Up a Multilingual Prompt Workflow',
         numberedItems: [
           'Identify which language tier(s) your target language(s) fall into (Tier 1–4).',
-          'Select the right model for each language (Mistral Large 2 for Romance, Gemini 3.0 Pro for East Asian, GPT-5.5 for Arabic).',
+          'Select the right model for each language (Mistral Large 2 for Romance, Gemini 3.0 Pro for East Asian, GPT-4o for Arabic).',
           'Write an English system prompt with explicit language instruction: "Respond in formal German (Sie-form)."',
           'Prepare few-shot examples in the target language (minimum 2, ideally 3).',
           'For Tier 3+ languages, test CoT: include "Think step by step in English, then respond in [language]."',
@@ -370,8 +370,8 @@ export const article: Record<Language, PEArticle> = {
         id: 'regional-context',
         title: 'Regional Compliance & Data Considerations',
         content: [
-          '**European Union (GDPR):** If processing French, German, or other EU-language data, ensure your LLM API meets GDPR Article 28 (Data Processing Agreement). Mistral Large 2 and Claude Opus 4.7 both offer EU-compliant deployments with data residency in Frankfurt/Ireland. GPT-5.5 requires data processing terms via OpenAI\'s Data Processing Agreement. Never send personally identifiable information (names, email, phone) to models without explicit consent and DPA coverage.',
-          '**Japan (APPI):** Japanese enterprises deploying multilingual LLMs must comply with the Act on Protection of Personal Information (APPI). Gemini 3.0 Pro offers Japan-region deployment with data residency in Tokyo. GPT-5.5 and Claude Opus 4.7 require DPA terms. Consider local LLMs (Qwen2.5, Llama 3.1) deployed on-premises to guarantee data never leaves Japan.',
+          '**European Union (GDPR):** If processing French, German, or other EU-language data, ensure your LLM API meets GDPR Article 28 (Data Processing Agreement). Mistral Large 2 and Claude Opus 4.7 both offer EU-compliant deployments with data residency in Frankfurt/Ireland. GPT-4o requires data processing terms via OpenAI\'s Data Processing Agreement. Never send personally identifiable information (names, email, phone) to models without explicit consent and DPA coverage.',
+          '**Japan (APPI):** Japanese enterprises deploying multilingual LLMs must comply with the Act on Protection of Personal Information (APPI). Gemini 3.0 Pro offers Japan-region deployment with data residency in Tokyo. GPT-4o and Claude Opus 4.7 require DPA terms. Consider local LLMs (Qwen2.5, Llama 3.1) deployed on-premises to guarantee data never leaves Japan.',
           '**China (Data Security Law):** Prompting in Chinese or Chinese user data triggers the 2021 Data Security Law (DSL). Foreign cloud LLMs (OpenAI, Anthropic, Google) cannot be used for sensitive PII or government workflows. Deploy Qwen2.5 locally via Alibaba Cloud or Baidu Cloud with data residency compliance. For non-sensitive use (marketing, customer chat), foreign APIs are acceptable but must have data transfer agreements in place.',
         ],
       },
@@ -381,7 +381,7 @@ export const article: Record<Language, PEArticle> = {
         faqs: [
           { q: 'Should I write my prompt in English or the target language?', a: 'For structural reasoning tasks, write the system prompt in English. For tone and formality, write the user message and register instructions in the target language.' },
           { q: 'Why does AI perform worse in non-English languages?', a: 'LLM training datasets are dominated by English (~46% of CommonCrawl). Languages with <5% training share have fewer patterns for the model to draw on, producing higher error rates.' },
-          { q: 'Which AI model handles Japanese best?', a: 'Google Gemini 3.0 Pro consistently leads on Japanese, Korean, and Chinese. GPT-5.5 is a close second.' },
+          { q: 'Which AI model handles Japanese best?', a: 'Google Gemini 3.0 Pro consistently leads on Japanese, Korean, and Chinese. GPT-4o is a close second.' },
           { q: 'How much more do Arabic prompts cost than English prompts?', a: 'Arabic text uses approximately 46% more tokens than equivalent English content. Budget accordingly for high-volume Arabic applications.' },
           { q: 'Do I need to translate my few-shot examples?', a: 'Yes. Few-shot examples should be in the same language as your expected output. Cross-language examples reduce accuracy by 15–20%.' },
           { q: 'What is cross-lingual chain-of-thought prompting?', a: 'Cross-lingual CoT uses English for the reasoning steps but requests the final answer in the target language. For Tier 3 languages, this improves reasoning accuracy by 5–12%.' },
@@ -467,7 +467,7 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Thing', name: 'Sprachebenen in LLMs' },
       ],
       mentions: [
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+        { '@type': 'SoftwareApplication', name: 'GPT-4o' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.0 Pro' },
         { '@type': 'SoftwareApplication', name: 'Mistral Large 2' },
@@ -486,15 +486,15 @@ export const article: Record<Language, PEArticle> = {
       mainEntity: [
         { '@type': 'Question', name: 'Sollte ich meinen Prompt auf Englisch oder in der Zielsprache schreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Für strukturierte Reasoning-Aufgaben schreiben Sie den System-Prompt auf Englisch. Für Ton und Formalität schreiben Sie die Benutzeranweisung und die Register-Anweisungen in der Zielsprache. Englische Anweisungen werden bei komplexer Struktur zuverlässiger befolgt.' } },
         { '@type': 'Question', name: 'Warum performt KI in nicht-englischen Sprachen schlechter?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-Trainingsdaten bestehen zu ~46 % aus Englisch (CommonCrawl). Sprachen mit <5 % Trainingsanteil haben weniger Muster für das Modell, was zu höheren Fehlerraten und weniger zuverlässigem Instruction-Following führt.' } },
-        { '@type': 'Question', name: 'Welches KI-Modell beherrscht Japanisch am besten?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro führt konstant bei Japanisch, Koreanisch und Chinesisch (ostasiatische Schriften). GPT-5.5 ist ein enger zweiter Platz. Mistral Large 2 ist für Japanisch als primäres Modell nicht empfehlenswert.' } },
+        { '@type': 'Question', name: 'Welches KI-Modell beherrscht Japanisch am besten?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro führt konstant bei Japanisch, Koreanisch und Chinesisch (ostasiatische Schriften). GPT-4o ist ein enger zweiter Platz. Mistral Large 2 ist für Japanisch als primäres Modell nicht empfehlenswert.' } },
         { '@type': 'Question', name: 'Wie viel mehr kosten arabische Prompts im Vergleich zu englischen?', acceptedAnswer: { '@type': 'Answer', text: 'Arabischer Text verbraucht ca. 46 % mehr Token als äquivalenter englischer Content. Budgetieren Sie entsprechend für arabische Hochvolumen-Anwendungen.' } },
         { '@type': 'Question', name: 'Muss ich meine Few-Shot-Beispiele übersetzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Few-Shot-Beispiele sollten in derselben Sprache wie Ihre erwartete Ausgabe sein. Sprachübergreifende Beispiele (englische Beispiele, deutsche Aufgabe) senken die Genauigkeit um 15–20 % in Ebene-2- und Ebene-3-Sprachen nach Shi et al. (2023).' } },
         { '@type': 'Question', name: 'Was ist sprachübergreifendes Chain-of-Thought-Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Sprachübergreifendes CoT verwendet Englisch für die Reasoning-Schritte, fordert aber die Endantwort in der Zielsprache. Für Ebene-3-Sprachen (Japanisch, Arabisch, Koreanisch) verbessert dies die Reasoning-Genauigkeit um 5–12 % gegenüber vollständig zielsprachigem Reasoning.' } },
         { '@type': 'Question', name: 'Wie bringe ich ein LLM dazu, formales Deutsch (Sie-Form) zu verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Fügen Sie im System-Prompt hinzu: „Verwende ausschließlich die Sie-Form und einen professionellen Ton." Modelle verwenden standardmäßig gemischte Register; diese Anweisung ist erforderlich, um die Sie-Form konsistent durchzusetzen.' } },
         { '@type': 'Question', name: 'Was ist Code-Switching beim mehrsprachigen Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Code-Switching tritt auf, wenn ein Nutzer Sprachen mischt (z. B. deutsche Frage mit englischen Fachbegriffen). Ohne explizite Anweisungen antwortet das Modell in der Sprache, die es als dominant erkennt. System-Prompt ergänzen: „Wenn der Nutzer Sprachen mischt, antworten Sie durchgängig auf [Zielsprache]."' } },
         { '@type': 'Question', name: 'Kann ich dieselbe Prompt-Vorlage in allen Sprachen verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Jede Sprachebene erfordert eine andere Strategie. Ebene 1 (Englisch) funktioniert mit jedem Prompt. Ebene 2 (europäische Sprachen) benötigt zielsprachige Prompts und englische System-Anweisungen. Ebene 3 (asiatisch, arabisch) erfordert sprachübergreifendes CoT und native Few-Shot-Beispiele. Ebene 4 erfordert RAG statt direktem Prompting.' } },
-        { '@type': 'Question', name: 'Wie hilft PromptQuorum beim mehrsprachigen Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum sendet denselben Prompt gleichzeitig an mehrere Modelle (z. B. GPT-5.5, Gemini 3.0 Pro, Mistral Large 2) und liefert Ausgaben nebeneinander. So identifizieren Sie in einem Durchlauf, welches Modell für Ihre spezifische Sprach-Task-Kombination besser abschneidet.' } },
-        { '@type': 'Question', name: 'Muss ich bei der Verwendung von KI-Sprachmodellen die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wenn Sie personenbezogene Daten an Cloud-LLMs wie GPT-5.5, Claude oder Gemini senden, benötigen Sie einen Auftragsverarbeitungsvertrag (AV-Vertrag) gemäß DSGVO-Artikel 28. OpenAI, Anthropic und Google bieten standardisierte Muster-AV-Verträge an. Für besonders sensible Daten (Gesundheit, Finanzen, HR) empfehlen die BSI-Grundschutz-Kataloge den Einsatz lokal betriebener Modelle (z. B. Mistral Large 2 oder Llama 4 70B via Ollama), um die Datenspeicherung vollständig im Unternehmen zu halten.' } },
+        { '@type': 'Question', name: 'Wie hilft PromptQuorum beim mehrsprachigen Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum sendet denselben Prompt gleichzeitig an mehrere Modelle (z. B. GPT-4o, Gemini 3.0 Pro, Mistral Large 2) und liefert Ausgaben nebeneinander. So identifizieren Sie in einem Durchlauf, welches Modell für Ihre spezifische Sprach-Task-Kombination besser abschneidet.' } },
+        { '@type': 'Question', name: 'Muss ich bei der Verwendung von KI-Sprachmodellen die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wenn Sie personenbezogene Daten an Cloud-LLMs wie GPT-4o, Claude oder Gemini senden, benötigen Sie einen Auftragsverarbeitungsvertrag (AV-Vertrag) gemäß DSGVO-Artikel 28. OpenAI, Anthropic und Google bieten standardisierte Muster-AV-Verträge an. Für besonders sensible Daten (Gesundheit, Finanzen, HR) empfehlen die BSI-Grundschutz-Kataloge den Einsatz lokal betriebener Modelle (z. B. Mistral Large 2 oder Llama 4 70B via Ollama), um die Datenspeicherung vollständig im Unternehmen zu halten.' } },
         { '@type': 'Question', name: 'Ist mehrsprachiges KI-Prompting für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, mit den richtigen Modellen und Strategien. Für deutschsprachige Geschäftsanwendungen (Kundensupport, Dokumentenanalyse, E-Mail-Bearbeitung) liefert Mistral Large 2 die besten Ergebnisse bei gleichzeitig EU-konformem Deployment. PromptQuorum ermöglicht den parallelen Test verschiedener Modelle vor der Produktiventscheidung. BSI-Grundschutz-konforme Deployments sind über lokale Modelle oder EU-Region-APIs realisierbar.' } },
       ],
     },
@@ -505,7 +505,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'Anleitung: Mehrsprachigen Prompt-Workflow einrichten',
       step: [
         { '@type': 'HowToStep', position: 1, name: 'Sprachebene identifizieren', text: 'Ermitteln Sie, in welche Sprachebene(n) Ihre Zielsprache(n) fallen (Ebene 1–4).' },
-        { '@type': 'HowToStep', position: 2, name: 'Richtiges Modell wählen', text: 'Wählen Sie das richtige Modell: Mistral Large 2 für romanische Sprachen, Gemini 3.0 Pro für ostasiatische Sprachen, GPT-5.5 für Arabisch.' },
+        { '@type': 'HowToStep', position: 2, name: 'Richtiges Modell wählen', text: 'Wählen Sie das richtige Modell: Mistral Large 2 für romanische Sprachen, Gemini 3.0 Pro für ostasiatische Sprachen, GPT-4o für Arabisch.' },
         { '@type': 'HowToStep', position: 3, name: 'System-Prompt schreiben', text: 'Schreiben Sie einen englischen System-Prompt mit expliziter Sprachanweisung: „Respond in formal German (Sie-form)."' },
         { '@type': 'HowToStep', position: 4, name: 'Few-Shot-Beispiele vorbereiten', text: 'Bereiten Sie Few-Shot-Beispiele in der Zielsprache vor (mindestens 2, idealerweise 3).' },
         { '@type': 'HowToStep', position: 5, name: 'Chain-of-Thought testen', text: 'Für Ebene-3+-Sprachen: Testen Sie CoT — fügen Sie ein: „Think step by step in English, then respond in [language]."' },
@@ -519,7 +519,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'Beste KI-Modelle für mehrsprachiges Prompting',
       numberOfItems: 6,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'GPT-5.5', description: 'Beste Wahl für Arabisch und allgemeine mehrsprachige strukturierte Extraktion' },
+        { '@type': 'ListItem', position: 1, name: 'GPT-4o', description: 'Beste Wahl für Arabisch und allgemeine mehrsprachige strukturierte Extraktion' },
         { '@type': 'ListItem', position: 2, name: 'Gemini 3.0 Pro', description: 'Beste Wahl für Japanisch, Koreanisch und Chinesisch (ostasiatische Schriften)' },
         { '@type': 'ListItem', position: 3, name: 'Mistral Large 2', description: 'Beste Wahl für Deutsch, Französisch und Spanisch in Geschäftsanwendungen' },
         { '@type': 'ListItem', position: 4, name: 'Claude Opus 4.7', description: 'Beste Wahl für nuancierte mehrsprachige Dokumentenanalyse und Tonanpassung' },
@@ -535,7 +535,7 @@ export const article: Record<Language, PEArticle> = {
           'Sprachmodelle machen in Sprachen der Ebene 3+ bis zu 5–15 % mehr Fehler als auf Englisch (Ahuja et al., 2023 MEGA-Benchmark).',
           'Englische System-Prompts kombiniert mit deutschsprachigen Benutzereingaben liefern bei strukturierten Aufgaben bessere Ergebnisse als rein deutschsprachige System-Prompts.',
           '1.000 englische Wörter ≈ 1.300 Token; derselbe Inhalt auf Arabisch ≈ 1.900 Token — 46 % teurer in der API-Abrechnung.',
-          'Mistral Large 2 führt bei Deutsch/Französisch/Spanisch; Google Gemini 3.0 Pro bei Japanisch/Koreanisch/Chinesisch; GPT-5.5 bei Arabisch.',
+          'Mistral Large 2 führt bei Deutsch/Französisch/Spanisch; Google Gemini 3.0 Pro bei Japanisch/Koreanisch/Chinesisch; GPT-4o bei Arabisch.',
           'Few-Shot-Beispiele müssen in der Zielsprache sein — falsch zugeordnete Beispiele senken die Genauigkeit um ca. 20 % (Shi et al., 2023).',
           'Deklarieren Sie die Ausgabesprache stets explizit im System-Prompt: „Respond in formal German (Sie-form)." — gehen Sie nie davon aus, dass das Modell die Sprache des Nutzers automatisch übernimmt.',
         ],
@@ -548,7 +548,7 @@ export const article: Record<Language, PEArticle> = {
           '**1.900 Token** für 1.000 Wörter auf Arabisch (46 % mehr als Englisch); **900 Token** für Chinesisch (31 % weniger).',
           '**5–12 %** Genauigkeitsgewinn durch englisches Chain-of-Thought-Reasoning mit Ausgabe in der Zielsprache (Ebene-3-Sprachen).',
           '**15–20 %** Genauigkeitsverlust bei englischen Few-Shot-Beispielen für nicht-englische Aufgaben (Shi et al., 2023).',
-          '**Mistral Large 2** führt bei romanischen Sprachen; **Gemini 3.0 Pro** bei ostasiatischen Sprachen; **GPT-5.5** bei Arabisch.',
+          '**Mistral Large 2** führt bei romanischen Sprachen; **Gemini 3.0 Pro** bei ostasiatischen Sprachen; **GPT-4o** bei Arabisch.',
         ],
       },
       definition: {
@@ -636,11 +636,11 @@ export const article: Record<Language, PEArticle> = {
         id: 'model-matrix',
         title: 'Welche Modelle beherrschen welche Sprachen?',
         content: [
-          '**Kein einzelnes Modell dominiert alle Sprachen. Mistral Large 2 führt bei romanischen Sprachen; Google Gemini 3.0 Pro bei ostasiatischen Sprachen; GPT-5.5 bei Arabisch und mehrsprachigen Reasoning-Aufgaben.** Diese Tabelle aggregiert die Modellperformance aus dem Ahuja et al. (2023) MEGA-Benchmark.',
+          '**Kein einzelnes Modell dominiert alle Sprachen. Mistral Large 2 führt bei romanischen Sprachen; Google Gemini 3.0 Pro bei ostasiatischen Sprachen; GPT-4o bei Arabisch und mehrsprachigen Reasoning-Aufgaben.** Diese Tabelle aggregiert die Modellperformance aus dem Ahuja et al. (2023) MEGA-Benchmark.',
         ],
         columns: ['Modell', 'Ebene 2 (Europäisch)', 'Ebene 3 (Ostasiatisch)', 'Arabisch', 'Bester Anwendungsfall'],
         rows: [
-          { 'Modell': 'GPT-5.5', 'Ebene 2 (Europäisch)': '✅ Stark', 'Ebene 3 (Ostasiatisch)': '✅ Stark', 'Arabisch': '✅ Beste', 'Bester Anwendungsfall': 'Allgemeines Mehrsprachig, strukturierte Extraktion' },
+          { 'Modell': 'GPT-4o', 'Ebene 2 (Europäisch)': '✅ Stark', 'Ebene 3 (Ostasiatisch)': '✅ Stark', 'Arabisch': '✅ Beste', 'Bester Anwendungsfall': 'Allgemeines Mehrsprachig, strukturierte Extraktion' },
           { 'Modell': 'Claude Opus 4.7', 'Ebene 2 (Europäisch)': '✅ Stark', 'Ebene 3 (Ostasiatisch)': '✓ Gut', 'Arabisch': '✓ Gut', 'Bester Anwendungsfall': 'Dokumentenanalyse, differenzierter Ton' },
           { 'Modell': 'Gemini 3.0 Pro', 'Ebene 2 (Europäisch)': '✓ Gut', 'Ebene 3 (Ostasiatisch)': '✅ Beste', 'Arabisch': '✓ Gut', 'Bester Anwendungsfall': 'Japanisch/Koreanisch/Chinesisch, Übersetzung' },
           { 'Modell': 'Mistral Large 2', 'Ebene 2 (Europäisch)': '✅ Beste', 'Ebene 3 (Ostasiatisch)': '⚠ Moderat', 'Arabisch': '⚠ Moderat', 'Bester Anwendungsfall': 'Deutsch/Französisch/Spanisch, Geschäftsinhalte' },
@@ -657,7 +657,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'cost-by-use-case',
         title: 'Kosten nach Anwendungsfall',
         content: [
-          '**Die Token-Kostenunterschiede schlagen sich direkt in Ihrer API-Rechnung nieder.** Hier die reale Auswirkung basierend auf GPT-5.5-Preisen (5 $ pro 1 Million Input-Token).',
+          '**Die Token-Kostenunterschiede schlagen sich direkt in Ihrer API-Rechnung nieder.** Hier die reale Auswirkung basierend auf GPT-4o-Preisen (5 $ pro 1 Million Input-Token).',
         ],
         columns: ['Anwendungsfall', 'Englische Kosten', 'Arabische Kosten', 'Japanische Kosten', 'Spartipp'],
         rows: [
@@ -741,7 +741,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'promptquorum-multilingual',
         title: 'Wie PromptQuorum mehrsprachige Workflows unterstützt',
         items: [
-          '**Ein Prompt → mehrere Modelle → Sprachvergleich nebeneinander.** Senden Sie denselben deutschen Prompt an Mistral Large 2, Claude und GPT-5.5 und sehen Sie, welches Modell das beste Register, die höchste Genauigkeit und den besten Ton liefert — in einem einzigen Durchlauf.',
+          '**Ein Prompt → mehrere Modelle → Sprachvergleich nebeneinander.** Senden Sie denselben deutschen Prompt an Mistral Large 2, Claude und GPT-4o und sehen Sie, welches Modell das beste Register, die höchste Genauigkeit und den besten Ton liefert — in einem einzigen Durchlauf.',
           '**9 eingebaute Prompt-Frameworks** — alle unterstützen mehrsprachige Vorlagen mit sprachspezifischen Platzhaltern. Beispiele: CoT, Few-Shot, Persona, Register-Durchsetzungsmuster.',
           '**Token-Anzeigefeature pro Modell** — sehen Sie genau, wie viele Token Ihre arabischen oder deutschen Eingaben verbrauchen, bevor Sie senden — keine Budget-Überraschungen.',
           '**Kontextüberlauf-Warnungen für mehrsprachige Eingaben** — warnt automatisch, wenn arabischer oder russischer Content (der 30–46 % mehr Token verbraucht) das Kontextfenster Ihres Modells ausschöpft.',
@@ -766,7 +766,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'Anleitung zum Aufbau eines mehrsprachigen Prompt-Workflows',
         numberedItems: [
           'Ermitteln Sie, in welche Sprachebene(n) Ihre Zielsprache(n) fallen (Ebene 1–4).',
-          'Wählen Sie das richtige Modell für jede Sprache (Mistral Large 2 für romanische Sprachen, Gemini 3.0 Pro für ostasiatische Sprachen, GPT-5.5 für Arabisch).',
+          'Wählen Sie das richtige Modell für jede Sprache (Mistral Large 2 für romanische Sprachen, Gemini 3.0 Pro für ostasiatische Sprachen, GPT-4o für Arabisch).',
           'Schreiben Sie einen englischen System-Prompt mit expliziter Sprachanweisung: „Respond in formal German (Sie-form)."',
           'Bereiten Sie Few-Shot-Beispiele in der Zielsprache vor (mindestens 2, idealerweise 3).',
           'Für Ebene-3+-Sprachen: Testen Sie CoT — fügen Sie ein: „Think step by step in English, then respond in [language]."',
@@ -777,8 +777,8 @@ export const article: Record<Language, PEArticle> = {
         id: 'regional-context',
         title: 'Regionale Compliance und Datenschutz',
         content: [
-          '**Europäische Union (DSGVO):** Bei der Verarbeitung von deutsch-, französisch- oder anderer EU-sprachiger Daten muss Ihr LLM-API DSGVO-Artikel 28 (Auftragsverarbeitungsvertrag, AV-Vertrag) erfüllen. Mistral Large 2 und Claude Opus 4.7 bieten EU-konforme Deployments mit Datenspeicherung in Frankfurt oder Irland. GPT-5.5 erfordert Datenverarbeitungsbedingungen über OpenAIs AV-Vertrag. Übermitteln Sie niemals personenbezogene Daten (Namen, E-Mail-Adressen, Telefonnummern) ohne ausdrückliche Rechtsgrundlage und gültige AV-Vereinbarung.',
-          '**Deutschland, Österreich, Schweiz (BSI-Grundschutz):** Für Unternehmen im DACH-Raum sind die BSI-Grundschutz-Kataloge (IT-Grundschutz nach BSI-Standard 200-2) der maßgebliche Rahmen für den sicheren KI-Einsatz. Das Bundesamt für Sicherheit in der Informationstechnik (BSI) empfiehlt für Anwendungsfälle mit vertraulichen Daten lokale LLM-Deployments. Mistral Large 2 kann über Mistral La Plateforme mit EU-Datenspeicherung oder vollständig lokal via Ollama betrieben werden und erfüllt damit die BSI-Anforderungen zur Datensparsamkeit. GPT-5.5 und Claude Opus 4.7 sind für sensible Unternehmensdaten nur mit vollständigem AV-Vertrag und einer DSGVO-konformen Rechtsgrundlage zulässig.',
+          '**Europäische Union (DSGVO):** Bei der Verarbeitung von deutsch-, französisch- oder anderer EU-sprachiger Daten muss Ihr LLM-API DSGVO-Artikel 28 (Auftragsverarbeitungsvertrag, AV-Vertrag) erfüllen. Mistral Large 2 und Claude Opus 4.7 bieten EU-konforme Deployments mit Datenspeicherung in Frankfurt oder Irland. GPT-4o erfordert Datenverarbeitungsbedingungen über OpenAIs AV-Vertrag. Übermitteln Sie niemals personenbezogene Daten (Namen, E-Mail-Adressen, Telefonnummern) ohne ausdrückliche Rechtsgrundlage und gültige AV-Vereinbarung.',
+          '**Deutschland, Österreich, Schweiz (BSI-Grundschutz):** Für Unternehmen im DACH-Raum sind die BSI-Grundschutz-Kataloge (IT-Grundschutz nach BSI-Standard 200-2) der maßgebliche Rahmen für den sicheren KI-Einsatz. Das Bundesamt für Sicherheit in der Informationstechnik (BSI) empfiehlt für Anwendungsfälle mit vertraulichen Daten lokale LLM-Deployments. Mistral Large 2 kann über Mistral La Plateforme mit EU-Datenspeicherung oder vollständig lokal via Ollama betrieben werden und erfüllt damit die BSI-Anforderungen zur Datensparsamkeit. GPT-4o und Claude Opus 4.7 sind für sensible Unternehmensdaten nur mit vollständigem AV-Vertrag und einer DSGVO-konformen Rechtsgrundlage zulässig.',
           '**Japan (APPI):** Japanische Unternehmen, die mehrsprachige LLMs einsetzen, müssen das Act on Protection of Personal Information (APPI) einhalten. Gemini 3.0 Pro bietet Japan-Region-Deployment mit Datenspeicherung in Tokio. Für vollständige Datensouveränität empfiehlt sich der lokale Betrieb von Qwen 3 72B für japanische und chinesische Aufgaben.',
         ],
       },
@@ -788,7 +788,7 @@ export const article: Record<Language, PEArticle> = {
         faqs: [
           { q: 'Sollte ich meinen Prompt auf Englisch oder in der Zielsprache schreiben?', a: 'Für strukturierte Reasoning-Aufgaben schreiben Sie den System-Prompt auf Englisch. Für Ton und Formalität schreiben Sie die Benutzeranweisung und die Register-Anweisungen in der Zielsprache.' },
           { q: 'Warum performt KI in nicht-englischen Sprachen schlechter?', a: 'LLM-Trainingsdaten bestehen zu ~46 % aus Englisch (CommonCrawl). Sprachen mit <5 % Trainingsanteil haben weniger Muster für das Modell, was zu höheren Fehlerraten führt.' },
-          { q: 'Welches KI-Modell beherrscht Japanisch am besten?', a: 'Google Gemini 3.0 Pro führt konstant bei Japanisch, Koreanisch und Chinesisch. GPT-5.5 ist ein enger zweiter Platz. Mistral Large 2 ist für Japanisch als primäres Modell nicht empfehlenswert.' },
+          { q: 'Welches KI-Modell beherrscht Japanisch am besten?', a: 'Google Gemini 3.0 Pro führt konstant bei Japanisch, Koreanisch und Chinesisch. GPT-4o ist ein enger zweiter Platz. Mistral Large 2 ist für Japanisch als primäres Modell nicht empfehlenswert.' },
           { q: 'Wie viel mehr kosten arabische Prompts im Vergleich zu englischen?', a: 'Arabischer Text verbraucht ca. 46 % mehr Token als äquivalenter englischer Content. Budgetieren Sie entsprechend für arabische Hochvolumen-Anwendungen.' },
           { q: 'Muss ich meine Few-Shot-Beispiele übersetzen?', a: 'Ja. Few-Shot-Beispiele sollten in derselben Sprache wie Ihre erwartete Ausgabe sein. Sprachübergreifende Beispiele senken die Genauigkeit um 15–20 % in Ebene-2- und Ebene-3-Sprachen.' },
           { q: 'Was ist sprachübergreifendes Chain-of-Thought-Prompting?', a: 'Sprachübergreifendes CoT verwendet Englisch für die Reasoning-Schritte, fordert aber die Endantwort in der Zielsprache. Für Ebene-3-Sprachen verbessert dies die Reasoning-Genauigkeit um 5–12 %.' },
@@ -796,7 +796,7 @@ export const article: Record<Language, PEArticle> = {
           { q: 'Was ist Code-Switching beim mehrsprachigen Prompting?', a: 'Code-Switching tritt auf, wenn ein Nutzer Sprachen mischt (z. B. deutsche Frage mit englischen Fachbegriffen). Ohne explizite Anweisungen antwortet das Modell in der dominanten Sprache.' },
           { q: 'Kann ich dieselbe Prompt-Vorlage in allen Sprachen verwenden?', a: 'Nein. Jede Sprachebene erfordert eine andere Strategie. Ebene 1 (Englisch) funktioniert mit jedem Prompt. Ebene 2–3 benötigen sprachspezifische CoT- und Few-Shot-Strategien. Ebene 4 erfordert RAG.' },
           { q: 'Wie hilft PromptQuorum beim mehrsprachigen Prompting?', a: 'PromptQuorum sendet denselben Prompt gleichzeitig an mehrere Modelle und liefert Ausgaben nebeneinander. So identifizieren Sie in einem Durchlauf, welches Modell für Ihre spezifische Sprach-Task-Kombination besser abschneidet.' },
-          { q: 'Muss ich bei der Verwendung von KI-Sprachmodellen die DSGVO beachten?', a: 'Ja. Wenn Sie personenbezogene Daten an Cloud-LLMs wie GPT-5.5, Claude oder Gemini senden, benötigen Sie einen AV-Vertrag gemäß DSGVO-Artikel 28. Für sensible Daten empfehlen die BSI-Grundschutz-Kataloge lokal betriebene Modelle (z. B. Mistral Large 2 oder Llama 4 70B via Ollama).' },
+          { q: 'Muss ich bei der Verwendung von KI-Sprachmodellen die DSGVO beachten?', a: 'Ja. Wenn Sie personenbezogene Daten an Cloud-LLMs wie GPT-4o, Claude oder Gemini senden, benötigen Sie einen AV-Vertrag gemäß DSGVO-Artikel 28. Für sensible Daten empfehlen die BSI-Grundschutz-Kataloge lokal betriebene Modelle (z. B. Mistral Large 2 oder Llama 4 70B via Ollama).' },
           { q: 'Ist mehrsprachiges KI-Prompting für den deutschen Mittelstand geeignet?', a: 'Ja. Für deutschsprachige Geschäftsanwendungen (Kundensupport, Dokumentenanalyse, E-Mail-Bearbeitung) liefert Mistral Large 2 die besten Ergebnisse bei EU-konformem Deployment. BSI-Grundschutz-konforme Deployments sind über lokale Modelle oder EU-Region-APIs realisierbar.' },
         ],
       },
@@ -876,7 +876,7 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Thing', name: 'Niveaux linguistiques dans les LLM' },
       ],
       mentions: [
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+        { '@type': 'SoftwareApplication', name: 'GPT-4o' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.0 Pro' },
         { '@type': 'SoftwareApplication', name: 'Mistral Large 2' },
@@ -895,7 +895,7 @@ export const article: Record<Language, PEArticle> = {
       mainEntity: [
         { '@type': 'Question', name: 'Dois-je écrire mon prompt en anglais ou en français ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour les tâches de raisonnement structuré, rédigez le prompt système en anglais. Pour le ton et la formalité, rédigez le message utilisateur et les instructions de registre en français.' } },
         { '@type': 'Question', name: 'Pourquoi l\'IA performe-t-elle moins bien en français ?', acceptedAnswer: { '@type': 'Answer', text: 'Les données d\'entraînement des LLM sont dominées par l\'anglais (~46 % de CommonCrawl). Le français ne représente qu\'environ 5 %, ce qui laisse moins de motifs au modèle, entraînant des taux d\'erreur plus élevés.' } },
-        { '@type': 'Question', name: 'Quel modèle d\'IA gère le mieux le japonais ?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro est en tête sur le japonais, le coréen et le chinois. GPT-5.5 est un proche second. Mistral Large 2 n\'est pas recommandé comme modèle principal pour le japonais.' } },
+        { '@type': 'Question', name: 'Quel modèle d\'IA gère le mieux le japonais ?', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro est en tête sur le japonais, le coréen et le chinois. GPT-4o est un proche second. Mistral Large 2 n\'est pas recommandé comme modèle principal pour le japonais.' } },
         { '@type': 'Question', name: 'Les prompts en arabe coûtent-ils plus cher qu\'en anglais ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Le texte arabe utilise environ 46 % plus de tokens que le contenu anglais équivalent. Prévoyez ce budget supplémentaire pour les applications arabes à fort volume.' } },
         { '@type': 'Question', name: 'Dois-je traduire mes exemples few-shot ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Les exemples few-shot doivent être dans la même langue que la sortie attendue. Les exemples en langue différente réduisent la précision de 15 à 20 % selon Shi et al. (2023).' } },
         { '@type': 'Question', name: 'Qu\'est-ce que le chain-of-thought multilingue ?', acceptedAnswer: { '@type': 'Answer', text: 'Le CoT multilingue utilise l\'anglais pour les étapes de raisonnement, mais demande la réponse finale dans la langue cible. Pour les langues de niveau 3, cela améliore la précision de 5 à 12 %.' } },
@@ -912,7 +912,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'Mettre en place un workflow de prompts multilingues',
       step: [
         { '@type': 'HowToStep', position: 1, name: 'Identifier le niveau linguistique', text: 'Déterminez dans quel niveau linguistique (1–4) se situe(nt) votre ou vos langue(s) cible(s).' },
-        { '@type': 'HowToStep', position: 2, name: 'Sélectionner le bon modèle', text: 'Choisissez le modèle adapté à chaque langue : Mistral Large 2 pour les langues romanes, Gemini 3.0 Pro pour les langues d\'Asie de l\'Est, GPT-5.5 pour l\'arabe.' },
+        { '@type': 'HowToStep', position: 2, name: 'Sélectionner le bon modèle', text: 'Choisissez le modèle adapté à chaque langue : Mistral Large 2 pour les langues romanes, Gemini 3.0 Pro pour les langues d\'Asie de l\'Est, GPT-4o pour l\'arabe.' },
         { '@type': 'HowToStep', position: 3, name: 'Rédiger le prompt système', text: 'Rédigez un prompt système en anglais avec une instruction de langue explicite : "Respond in formal French using Vous-form."' },
         { '@type': 'HowToStep', position: 4, name: 'Préparer des exemples few-shot', text: 'Préparez des exemples few-shot dans la langue cible (au minimum 2, idéalement 3).' },
         { '@type': 'HowToStep', position: 5, name: 'Tester le chain-of-thought', text: 'Pour les langues de niveau 3+, testez le CoT : "Think step by step in English, then respond in [language]."' },
@@ -926,7 +926,7 @@ export const article: Record<Language, PEArticle> = {
       name: 'Meilleurs modèles IA pour les prompts multilingues',
       numberOfItems: 6,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'GPT-5.5', description: 'Meilleur pour l\'arabe et l\'extraction structurée multilingue générale' },
+        { '@type': 'ListItem', position: 1, name: 'GPT-4o', description: 'Meilleur pour l\'arabe et l\'extraction structurée multilingue générale' },
         { '@type': 'ListItem', position: 2, name: 'Gemini 3.0 Pro', description: 'Meilleur pour le japonais, le coréen et le chinois (scripts d\'Asie de l\'Est)' },
         { '@type': 'ListItem', position: 3, name: 'Mistral Large 2', description: 'Meilleur pour le contenu professionnel en français, espagnol et italien' },
         { '@type': 'ListItem', position: 4, name: 'Claude Opus 4.7', description: 'Meilleur pour l\'analyse documentaire multilingue nuancée et la correspondance de ton' },
@@ -942,7 +942,7 @@ export const article: Record<Language, PEArticle> = {
           'Les LLM performent mieux en anglais ; les sorties non anglophones présentent des taux d\'erreur 5 à 15 % plus élevés dans les langues de niveau 3+ (Ahuja et al., 2023, benchmark MEGA).',
           'Les prompts système en anglais combinés à une entrée utilisateur en langue native surpassent les prompts système en langue native pour les tâches structurées en niveaux 2–3.',
           '1 000 mots en anglais ≈ 1 300 tokens ; le même contenu en arabe ≈ 1 900 tokens — 46 % plus cher en coût d\'API.',
-          'Mistral Large 2 est en tête pour le français/l\'italien/l\'espagnol ; Google Gemini 3.0 Pro pour le japonais/coréen/chinois ; GPT-5.5 pour l\'arabe.',
+          'Mistral Large 2 est en tête pour le français/l\'italien/l\'espagnol ; Google Gemini 3.0 Pro pour le japonais/coréen/chinois ; GPT-4o pour l\'arabe.',
           'Les exemples few-shot doivent être dans la langue cible — des exemples discordants réduisent la précision d\'environ 20 % (Shi et al., 2023).',
           'Déclarez toujours explicitement la langue de sortie dans le prompt système : "Respond in formal French using Vous-form." — ne supposez jamais que le modèle adoptera la langue de l\'utilisateur.',
         ],
@@ -955,7 +955,7 @@ export const article: Record<Language, PEArticle> = {
           '**1 900 tokens** nécessaires pour 1 000 mots en arabe (46 % de plus qu\'en anglais) ; **900 tokens** pour le chinois (31 % de moins).',
           '**5 à 12 %** d\'amélioration de la précision en utilisant un raisonnement chain-of-thought en anglais avec une sortie en langue native (langues de niveau 3).',
           '**15 à 20 %** de baisse de précision lors de l\'utilisation d\'exemples few-shot en anglais pour des tâches non anglophones (Shi et al., 2023).',
-          '**Mistral Large 2** est en tête pour les langues romanes ; **Gemini 3.0 Pro** pour l\'Asie de l\'Est ; **GPT-5.5** pour l\'arabe.',
+          '**Mistral Large 2** est en tête pour les langues romanes ; **Gemini 3.0 Pro** pour l\'Asie de l\'Est ; **GPT-4o** pour l\'arabe.',
         ],
       },
       definition: {
@@ -1042,11 +1042,11 @@ export const article: Record<Language, PEArticle> = {
         id: 'model-matrix',
         title: 'Quels modèles maîtrisent quelles langues ?',
         content: [
-          '**Aucun modèle ne domine dans toutes les langues. Mistral Large 2 est en tête pour les langues romanes ; Google Gemini 3.0 Pro pour les langues d\'Asie de l\'Est ; GPT-5.5 pour l\'arabe et les tâches de raisonnement multilingue.** Ce tableau synthétise les performances des modèles à partir du benchmark MEGA d\'Ahuja et al. (2023).',
+          '**Aucun modèle ne domine dans toutes les langues. Mistral Large 2 est en tête pour les langues romanes ; Google Gemini 3.0 Pro pour les langues d\'Asie de l\'Est ; GPT-4o pour l\'arabe et les tâches de raisonnement multilingue.** Ce tableau synthétise les performances des modèles à partir du benchmark MEGA d\'Ahuja et al. (2023).',
         ],
         columns: ['Modèle', 'Niveau 2 (européen)', 'Niveau 3 (Asie de l\'Est)', 'Arabe', 'Meilleur cas d\'usage'],
         rows: [
-          { 'Modèle': 'GPT-5.5', 'Niveau 2 (européen)': '✅ Fort', 'Niveau 3 (Asie de l\'Est)': '✅ Fort', 'Arabe': '✅ Meilleur', 'Meilleur cas d\'usage': 'Multilingue général, extraction structurée' },
+          { 'Modèle': 'GPT-4o', 'Niveau 2 (européen)': '✅ Fort', 'Niveau 3 (Asie de l\'Est)': '✅ Fort', 'Arabe': '✅ Meilleur', 'Meilleur cas d\'usage': 'Multilingue général, extraction structurée' },
           { 'Modèle': 'Claude Opus 4.7', 'Niveau 2 (européen)': '✅ Fort', 'Niveau 3 (Asie de l\'Est)': '✓ Bon', 'Arabe': '✓ Bon', 'Meilleur cas d\'usage': 'Analyse documentaire, ton nuancé' },
           { 'Modèle': 'Gemini 3.0 Pro', 'Niveau 2 (européen)': '✓ Bon', 'Niveau 3 (Asie de l\'Est)': '✅ Meilleur', 'Arabe': '✓ Bon', 'Meilleur cas d\'usage': 'Japonais/coréen/chinois, traduction' },
           { 'Modèle': 'Mistral Large 2', 'Niveau 2 (européen)': '✅ Meilleur', 'Niveau 3 (Asie de l\'Est)': '⚠ Modéré', 'Arabe': '⚠ Modéré', 'Meilleur cas d\'usage': 'Contenu professionnel français/espagnol/italien' },
@@ -1063,7 +1063,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'cost-by-use-case',
         title: 'Coût par cas d\'usage',
         content: [
-          '**Les différences de coût de tokens ci-dessus se répercutent directement sur votre facture d\'API.** Voici l\'impact réel basé sur la tarification GPT-5.5 (5 $ par million de tokens en entrée).',
+          '**Les différences de coût de tokens ci-dessus se répercutent directement sur votre facture d\'API.** Voici l\'impact réel basé sur la tarification GPT-4o (5 $ par million de tokens en entrée).',
         ],
         columns: ['Cas d\'usage', 'Coût anglais', 'Coût arabe', 'Coût japonais', 'Conseil d\'économie'],
         rows: [
@@ -1147,7 +1147,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'promptquorum-multilingual',
         title: 'Comment PromptQuorum aide les workflows multilingues',
         items: [
-          '**Un prompt → plusieurs modèles → comparaison de langue côte à côte.** Envoyez le même prompt en français à Mistral Large 2, Claude et GPT-5.5 et voyez lequel produit le meilleur registre, la meilleure précision et le meilleur ton en une seule exécution.',
+          '**Un prompt → plusieurs modèles → comparaison de langue côte à côte.** Envoyez le même prompt en français à Mistral Large 2, Claude et GPT-4o et voyez lequel produit le meilleur registre, la meilleure précision et le meilleur ton en une seule exécution.',
           '**9 cadres de prompts intégrés** — tous prenant en charge les modèles multilingues avec des espaces réservés spécifiques à chaque langue. Exemples : CoT, few-shot, persona, patterns d\'application de registre.',
           '**Affichage du nombre de tokens par modèle** — voyez exactement combien de tokens votre entrée en arabe ou en japonais consomme avant l\'envoi, évitant les surprises budgétaires.',
           '**Alertes de dépassement de contexte pour les entrées multilingues** — signale automatiquement quand le contenu arabe ou russe (qui utilise 30 à 46 % plus de tokens) approche de la fenêtre de contexte de votre modèle.',
@@ -1172,7 +1172,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'Mettre en place un workflow de prompts multilingues',
         numberedItems: [
           'Identifiez dans quel niveau linguistique (1–4) se situe(nt) votre ou vos langue(s) cible(s).',
-          'Sélectionnez le bon modèle pour chaque langue (Mistral Large 2 pour les langues romanes, Gemini 3.0 Pro pour l\'Asie de l\'Est, GPT-5.5 pour l\'arabe).',
+          'Sélectionnez le bon modèle pour chaque langue (Mistral Large 2 pour les langues romanes, Gemini 3.0 Pro pour l\'Asie de l\'Est, GPT-4o pour l\'arabe).',
           'Rédigez un prompt système en anglais avec une instruction de langue explicite : "Respond in formal French using Vous-form."',
           'Préparez des exemples few-shot dans la langue cible (au minimum 2, idéalement 3).',
           'Pour les langues de niveau 3+, testez le CoT : "Think step by step in English, then respond in [language]."',
@@ -1183,8 +1183,8 @@ export const article: Record<Language, PEArticle> = {
         id: 'regional-context',
         title: 'Conformité régionale et données',
         content: [
-          '**Union européenne (RGPD) :** Si vous traitez des données en français, allemand ou dans d\'autres langues de l\'UE, assurez-vous que votre API de LLM est conforme à l\'article 28 du RGPD (contrat de traitement des données). Mistral Large 2 et Claude Opus 4.7 proposent des déploiements conformes à l\'UE avec résidence des données à Francfort/Irlande. GPT-5.5 nécessite des conditions de traitement des données via le DPA d\'OpenAI. La CNIL recommande de privilégier les solutions d\'IA locale pour le traitement de données professionnelles sensibles (données médicales, financières, juridiques). N\'envoyez jamais d\'informations personnelles identifiables (noms, e-mail, téléphone) aux modèles sans consentement explicite et couverture DPA.',
-          '**Japon (APPI) :** Les entreprises japonaises déployant des LLM multilingues doivent se conformer à la loi sur la protection des informations personnelles (APPI). Gemini 3.0 Pro propose un déploiement dans la région Japon avec résidence des données à Tokyo. GPT-5.5 et Claude Opus 4.7 nécessitent des conditions DPA. Envisagez des LLM locaux (Qwen2.5, Llama 3.1) déployés sur site pour garantir que les données ne quittent jamais le Japon.',
+          '**Union européenne (RGPD) :** Si vous traitez des données en français, allemand ou dans d\'autres langues de l\'UE, assurez-vous que votre API de LLM est conforme à l\'article 28 du RGPD (contrat de traitement des données). Mistral Large 2 et Claude Opus 4.7 proposent des déploiements conformes à l\'UE avec résidence des données à Francfort/Irlande. GPT-4o nécessite des conditions de traitement des données via le DPA d\'OpenAI. La CNIL recommande de privilégier les solutions d\'IA locale pour le traitement de données professionnelles sensibles (données médicales, financières, juridiques). N\'envoyez jamais d\'informations personnelles identifiables (noms, e-mail, téléphone) aux modèles sans consentement explicite et couverture DPA.',
+          '**Japon (APPI) :** Les entreprises japonaises déployant des LLM multilingues doivent se conformer à la loi sur la protection des informations personnelles (APPI). Gemini 3.0 Pro propose un déploiement dans la région Japon avec résidence des données à Tokyo. GPT-4o et Claude Opus 4.7 nécessitent des conditions DPA. Envisagez des LLM locaux (Qwen2.5, Llama 3.1) déployés sur site pour garantir que les données ne quittent jamais le Japon.',
           '**Chine (Loi sur la sécurité des données) :** Les prompts en chinois ou les données d\'utilisateurs chinois sont soumis à la Loi sur la sécurité des données de 2021 (DSL). Les LLM cloud étrangers (OpenAI, Anthropic, Google) ne peuvent pas être utilisés pour des données personnelles sensibles ou des workflows gouvernementaux. Déployez Qwen2.5 localement via Alibaba Cloud ou Baidu Cloud avec conformité de résidence des données.',
         ],
       },
@@ -1194,7 +1194,7 @@ export const article: Record<Language, PEArticle> = {
         faqs: [
           { q: 'Dois-je écrire mon prompt en anglais ou dans la langue cible ?', a: 'Pour les tâches de raisonnement structuré, rédigez le prompt système en anglais. Pour le ton et la formalité, rédigez le message utilisateur et les instructions de registre dans la langue cible.' },
           { q: 'Pourquoi l\'IA performe-t-elle moins bien en français ?', a: 'Les données d\'entraînement des LLM sont dominées par l\'anglais (~46 % de CommonCrawl). Le français ne représente qu\'environ 5 %, ce qui laisse moins de motifs au modèle et entraîne des taux d\'erreur plus élevés.' },
-          { q: 'Quel modèle d\'IA gère le mieux le japonais ?', a: 'Google Gemini 3.0 Pro est en tête sur le japonais, le coréen et le chinois. GPT-5.5 est un proche second.' },
+          { q: 'Quel modèle d\'IA gère le mieux le japonais ?', a: 'Google Gemini 3.0 Pro est en tête sur le japonais, le coréen et le chinois. GPT-4o est un proche second.' },
           { q: 'Les prompts en arabe coûtent-ils plus cher qu\'en anglais ?', a: 'Oui. Le texte arabe utilise environ 46 % plus de tokens que le contenu anglais équivalent. Prévoyez ce budget supplémentaire pour les applications arabes à fort volume.' },
           { q: 'Dois-je traduire mes exemples few-shot ?', a: 'Oui. Les exemples few-shot doivent être dans la même langue que la sortie attendue. Les exemples en langue différente réduisent la précision de 15 à 20 % selon Shi et al. (2023).' },
           { q: 'Qu\'est-ce que le chain-of-thought multilingue ?', a: 'Le CoT multilingue utilise l\'anglais pour les étapes de raisonnement mais demande la réponse finale dans la langue cible. Pour les langues de niveau 3, cela améliore la précision de 5 à 12 %.' },
@@ -1280,7 +1280,7 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Thing', name: 'LLMにおける言語レベル' },
       ],
       mentions: [
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+        { '@type': 'SoftwareApplication', name: 'GPT-4o' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.0 Pro' },
         { '@type': 'SoftwareApplication', name: 'Mistral Large 2' },
@@ -1299,7 +1299,7 @@ export const article: Record<Language, PEArticle> = {
       mainEntity: [
         { '@type': 'Question', name: 'System promptは英語と日本語、どちらで書くべきですか？', acceptedAnswer: { '@type': 'Answer', text: '推論・構造化タスクにはsystem promptを英語で書いてください。語調・敬語指示はuser messageで日本語を使うと効果的です。' } },
         { '@type': 'Question', name: 'なぜAIは非英語で性能が低下するのですか？', acceptedAnswer: { '@type': 'Answer', text: 'LLMのトレーニングデータは英語が約46%（CommonCrawl）を占めます。日本語は約3%のため、モデルが参照できる学習パターンが少なく、エラー率が高くなります。' } },
-        { '@type': 'Question', name: '日本語のAIに最も適したモデルはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Proが日本語・韓国語・中国語（東アジアのscript）で一貫してトップです。GPT-5.5が僅差で続きます。Mistral Large 2は日本語の主要モデルとしては推奨されません。' } },
+        { '@type': 'Question', name: '日本語のAIに最も適したモデルはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Proが日本語・韓国語・中国語（東アジアのscript）で一貫してトップです。GPT-4oが僅差で続きます。Mistral Large 2は日本語の主要モデルとしては推奨されません。' } },
         { '@type': 'Question', name: 'アラビア語のpromptは英語より費用がかかりますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。アラビア語テキストは同等の英語コンテンツと比較して約46%多くのtokenを消費します。高トラフィックのアラビア語アプリではコストに注意が必要です。' } },
         { '@type': 'Question', name: 'Few-shot例を翻訳する必要はありますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Few-shot例は期待する出力と同じ言語で用意してください。言語が異なる例はShi et al.（2023）によると精度を15〜20%低下させます。' } },
         { '@type': 'Question', name: '言語横断Chain-of-Thoughtとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '言語横断CoTは推論ステップを英語で行い、最終回答をターゲット言語で要求する手法です。レベル3の言語（日本語、アラビア語、韓国語）では推論精度が5〜12%向上します。' } },
@@ -1316,7 +1316,7 @@ export const article: Record<Language, PEArticle> = {
       name: '多言語promptワークフローの構築手順',
       step: [
         { '@type': 'HowToStep', position: 1, name: '言語レベルを特定する', text: 'ターゲット言語がどの言語レベル（1〜4）に該当するかを確認します。' },
-        { '@type': 'HowToStep', position: 2, name: '最適なモデルを選択する', text: '各言語に適したモデルを選択します：Romance語系にはMistral Large 2、東アジア言語にはGemini 3.0 Pro、アラビア語にはGPT-5.5。' },
+        { '@type': 'HowToStep', position: 2, name: '最適なモデルを選択する', text: '各言語に適したモデルを選択します：Romance語系にはMistral Large 2、東アジア言語にはGemini 3.0 Pro、アラビア語にはGPT-4o。' },
         { '@type': 'HowToStep', position: 3, name: 'System promptを作成する', text: '言語指示を含む英語のsystem promptを作成します：「Respond in formal Japanese using 丁寧語.」' },
         { '@type': 'HowToStep', position: 4, name: 'Few-shot例を準備する', text: 'ターゲット言語でfew-shot例を準備します（最低2件、理想は3件）。' },
         { '@type': 'HowToStep', position: 5, name: 'Chain-of-Thoughtをテストする', text: 'レベル3以上の言語では、CoTをテストします：「Think step by step in English, then respond in Japanese.」' },
@@ -1330,7 +1330,7 @@ export const article: Record<Language, PEArticle> = {
       name: '多言語プロンプティングに最適なAIモデル',
       numberOfItems: 6,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'GPT-5.5', description: 'アラビア語および一般的な多言語構造化抽出に最適' },
+        { '@type': 'ListItem', position: 1, name: 'GPT-4o', description: 'アラビア語および一般的な多言語構造化抽出に最適' },
         { '@type': 'ListItem', position: 2, name: 'Gemini 3.0 Pro', description: '日本語・韓国語・中国語（東アジアのscript）に最適' },
         { '@type': 'ListItem', position: 3, name: 'Mistral Large 2', description: 'フランス語・スペイン語・イタリア語のビジネスコンテンツに最適' },
         { '@type': 'ListItem', position: 4, name: 'Claude Opus 4.7', description: 'ニュアンスのある多言語ドキュメント分析と語調マッチングに最適' },
@@ -1346,7 +1346,7 @@ export const article: Record<Language, PEArticle> = {
           'LLMは英語で最も高いパフォーマンスを発揮します。レベル3以上の言語では非英語の出力エラー率が5〜15%高くなります（Ahuja et al., 2023 MEGAベンチマーク）。',
           '英語のsystem prompt＋母語のユーザー入力は、レベル2〜3言語の構造化タスクにおいて母語のsystem promptを上回ります。',
           '英語1,000語≈1,300 token；同じ内容のアラビア語≈1,900 token — APIコストが46%増加します。',
-          'Mistral Large 2はフランス語/イタリア語/スペイン語をリード；Google Gemini 3.0 Proは日本語/韓国語/中国語をリード；GPT-5.5はアラビア語をリード。',
+          'Mistral Large 2はフランス語/イタリア語/スペイン語をリード；Google Gemini 3.0 Proは日本語/韓国語/中国語をリード；GPT-4oはアラビア語をリード。',
           'Few-shot例はターゲット言語で用意する必要があります。言語が異なる例は精度を約20%低下させます（Shi et al., 2023）。',
           'System promptで出力言語を常に明示してください：「Respond in formal Japanese using 丁寧語.」 — モデルがユーザーの言語に合わせることを期待しないでください。',
         ],
@@ -1359,7 +1359,7 @@ export const article: Record<Language, PEArticle> = {
           '**1,900 token**：アラビア語1,000語に必要なtoken数（英語比46%増）；中国語は**900 token**（31%減）。',
           '**5〜12%** の精度向上：英語のchain-of-thought推論＋母語出力（レベル3言語）。',
           '**15〜20%** の精度低下：非英語タスクに英語のfew-shot例を使用した場合（Shi et al., 2023）。',
-          '**Mistral Large 2**はRomance語系をリード；**Gemini 3.0 Pro**は東アジア言語をリード；**GPT-5.5**はアラビア語をリード。',
+          '**Mistral Large 2**はRomance語系をリード；**Gemini 3.0 Pro**は東アジア言語をリード；**GPT-4o**はアラビア語をリード。',
         ],
       },
       definition: {
@@ -1446,11 +1446,11 @@ export const article: Record<Language, PEArticle> = {
         id: 'model-matrix',
         title: 'どのモデルがどの言語を得意とするか',
         content: [
-          '**全言語で1つのモデルがトップというわけではありません。Mistral Large 2はRomance語系をリード；Google Gemini 3.0 Proは東アジア言語をリード；GPT-5.5はアラビア語と多言語推論タスクをリードします。** この表はAhuja et al.（2023）MEGAベンチマークからのモデルパフォーマンスをまとめたものです。',
+          '**全言語で1つのモデルがトップというわけではありません。Mistral Large 2はRomance語系をリード；Google Gemini 3.0 Proは東アジア言語をリード；GPT-4oはアラビア語と多言語推論タスクをリードします。** この表はAhuja et al.（2023）MEGAベンチマークからのモデルパフォーマンスをまとめたものです。',
         ],
         columns: ['モデル', 'レベル2（ヨーロッパ）', 'レベル3（東アジア）', 'アラビア語', '最適ユースケース'],
         rows: [
-          { 'モデル': 'GPT-5.5', 'レベル2（ヨーロッパ）': '✅ 強力', 'レベル3（東アジア）': '✅ 強力', 'アラビア語': '✅ 最強', '最適ユースケース': '一般多言語、構造化抽出' },
+          { 'モデル': 'GPT-4o', 'レベル2（ヨーロッパ）': '✅ 強力', 'レベル3（東アジア）': '✅ 強力', 'アラビア語': '✅ 最強', '最適ユースケース': '一般多言語、構造化抽出' },
           { 'モデル': 'Claude Opus 4.7', 'レベル2（ヨーロッパ）': '✅ 強力', 'レベル3（東アジア）': '✓ 良好', 'アラビア語': '✓ 良好', '最適ユースケース': 'ドキュメント分析、ニュアンスのある語調' },
           { 'モデル': 'Gemini 3.0 Pro', 'レベル2（ヨーロッパ）': '✓ 良好', 'レベル3（東アジア）': '✅ 最強', 'アラビア語': '✓ 良好', '最適ユースケース': '日本語/韓国語/中国語、翻訳' },
           { 'モデル': 'Mistral Large 2', 'レベル2（ヨーロッパ）': '✅ 最強', 'レベル3（東アジア）': '⚠ 中程度', 'アラビア語': '⚠ 中程度', '最適ユースケース': 'フランス語/スペイン語/イタリア語のビジネスコンテンツ' },
@@ -1467,7 +1467,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'cost-by-use-case',
         title: 'ユースケース別コスト',
         content: [
-          '**上記のtokenコストの差は直接API請求額に影響します。** GPT-5.5の価格（入力100万tokenあたり$5）に基づく実際の影響です。',
+          '**上記のtokenコストの差は直接API請求額に影響します。** GPT-4oの価格（入力100万tokenあたり$5）に基づく実際の影響です。',
         ],
         columns: ['ユースケース', '英語コスト', 'アラビア語コスト', '日本語コスト', 'コスト節約のヒント'],
         rows: [
@@ -1551,7 +1551,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'promptquorum-multilingual',
         title: 'PromptQuorumが多言語ワークフローを支援する方法',
         items: [
-          '**1つのprompt → 複数のモデル → 言語比較を並列表示。** 同じ日本語promptをMistral Large 2、Claude、GPT-5.5に送信し、1回の実行でどれが最高のregister・精度・語調を生成するかを確認できます。',
+          '**1つのprompt → 複数のモデル → 言語比較を並列表示。** 同じ日本語promptをMistral Large 2、Claude、GPT-4oに送信し、1回の実行でどれが最高のregister・精度・語調を生成するかを確認できます。',
           '**9つの組み込みpromptフレームワーク** — 全て言語固有のプレースホルダーを持つ多言語テンプレートに対応。例：CoT、few-shot、ペルソナ、register強制パターン。',
           '**モデル別token数表示** — 送信前にアラビア語や日本語の入力が何tokenを消費するかを正確に確認でき、予算の驚きを防げます。',
           '**多言語入力のコンテキストオーバーフローアラート** — アラビア語やロシア語コンテンツ（30〜46%多くのtokenを使用）がモデルのコンテキストウィンドウに近づくと自動的にフラグを立てます。',
@@ -1576,7 +1576,7 @@ export const article: Record<Language, PEArticle> = {
         title: '多言語promptワークフローの構築手順',
         numberedItems: [
           'ターゲット言語がどの言語レベル（1〜4）に該当するかを特定します。',
-          '各言語に適したモデルを選択します（Romance語系にはMistral Large 2、東アジア言語にはGemini 3.0 Pro、アラビア語にはGPT-5.5）。',
+          '各言語に適したモデルを選択します（Romance語系にはMistral Large 2、東アジア言語にはGemini 3.0 Pro、アラビア語にはGPT-4o）。',
           '言語指示を含む英語のsystem promptを作成します：「Respond in formal Japanese using 丁寧語.」',
           'ターゲット言語でfew-shot例を準備します（最低2件、理想は3件）。',
           'レベル3以上の言語では、CoTをテストします：「Think step by step in English, then respond in [language].」',
@@ -1587,7 +1587,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'regional-context',
         title: '地域別コンプライアンスとデータ規制',
         content: [
-          '**日本（個人情報保護法）：** 多言語LLMを導入する日本企業は個人情報保護法（APPI）を遵守する必要があります。METIのAIガバナンスガイドライン2024では、企業向けAI導入における個人情報処理とデータガバナンスについて具体的な指針が示されています。Gemini 3.0 Proは東京でのデータレジデンシーを持つ日本リージョン展開を提供しています。GPT-5.5とClaude Opus 4.7はDPA条件が必要です。機密データが日本国外に出ることを確保するために、オンプレミスにローカルLLM（Qwen2.5、Llama 3.1）を展開することを検討してください。',
+          '**日本（個人情報保護法）：** 多言語LLMを導入する日本企業は個人情報保護法（APPI）を遵守する必要があります。METIのAIガバナンスガイドライン2024では、企業向けAI導入における個人情報処理とデータガバナンスについて具体的な指針が示されています。Gemini 3.0 Proは東京でのデータレジデンシーを持つ日本リージョン展開を提供しています。GPT-4oとClaude Opus 4.7はDPA条件が必要です。機密データが日本国外に出ることを確保するために、オンプレミスにローカルLLM（Qwen2.5、Llama 3.1）を展開することを検討してください。',
           '**アジア太平洋地域（データ越境）：** 多くのAPAC諸国がデータローカライゼーション要件を強化しています。韓国（PIPA）、シンガポール（PDPA）、オーストラリア（Privacy Act）はそれぞれデータ越境移転に関する規制を持っています。クラウドAPIを使用する際は、APIプロバイダーがそれぞれの管轄区域に適切なデータレジデンシーオプションを提供しているかを確認してください。',
           '**グローバル展開：** 複数の言語・地域にまたがる展開の場合、各市場のデータ規制を別々に確認する必要があります。EU（GDPR）、中国（データセキュリティ法）、その他の地域はそれぞれ異なる要件を持ちます。PromptQuorumはローカルLLMをサポートしており、クラウドAPIを使用せずにデータを組織内に保持することができます。',
         ],
@@ -1598,7 +1598,7 @@ export const article: Record<Language, PEArticle> = {
         faqs: [
           { q: 'System promptは英語と日本語、どちらで書くべきですか？', a: '推論・構造化タスクにはsystem promptを英語で書いてください。語調・敬語指示はuser messageで日本語を使うと効果的です。' },
           { q: 'なぜAIは非英語で性能が低下するのですか？', a: 'LLMのトレーニングデータは英語が約46%（CommonCrawl）を占めます。日本語は約3%のため、モデルが参照できる学習パターンが少なく、エラー率が高くなります。' },
-          { q: '日本語のAIに最も適したモデルはどれですか？', a: 'Google Gemini 3.0 Proが日本語・韓国語・中国語で一貫してトップです。GPT-5.5が僅差で続きます。Mistral Large 2は日本語の主要モデルとしては推奨されません。' },
+          { q: '日本語のAIに最も適したモデルはどれですか？', a: 'Google Gemini 3.0 Proが日本語・韓国語・中国語で一貫してトップです。GPT-4oが僅差で続きます。Mistral Large 2は日本語の主要モデルとしては推奨されません。' },
           { q: 'アラビア語のpromptは英語より費用がかかりますか？', a: 'はい。アラビア語テキストは同等の英語コンテンツと比較して約46%多くのtokenを消費します。高トラフィックのアラビア語アプリではコストに注意が必要です。' },
           { q: 'Few-shot例を翻訳する必要はありますか？', a: 'はい。Few-shot例は期待する出力と同じ言語で用意してください。言語が異なる例はShi et al.（2023）によると精度を15〜20%低下させます。' },
           { q: '言語横断Chain-of-Thoughtとは何ですか？', a: '言語横断CoTは推論ステップを英語で行い、最終回答をターゲット言語で要求する手法です。レベル3の言語（日本語、アラビア語、韓国語）では推論精度が5〜12%向上します。' },
@@ -1684,7 +1684,7 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'Thing', name: 'LLM语言等级' },
       ],
       mentions: [
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+        { '@type': 'SoftwareApplication', name: 'GPT-4o' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.0 Pro' },
         { '@type': 'SoftwareApplication', name: 'Mistral Large 2' },
@@ -1703,7 +1703,7 @@ export const article: Record<Language, PEArticle> = {
       mainEntity: [
         { '@type': 'Question', name: '系统提示应该用中文还是英文？', acceptedAnswer: { '@type': 'Answer', text: '推理和结构化任务使用英文系统提示。语气和正式程度指令在用户消息中使用中文效果更好。' } },
         { '@type': 'Question', name: '为什么AI在非英文语言上性能较差？', acceptedAnswer: { '@type': 'Answer', text: 'LLM训练数据英文占约46%（CommonCrawl），中文仅占约3%。模型可参考的学习模式更少，导致错误率更高。' } },
-        { '@type': 'Question', name: '哪个AI模型最擅长中文？', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro在日文、韩文和中文（东亚文字）上持续领先。Qwen 3 72B是中文主导工作流的最佳开源选择。GPT-5.5紧随其后。' } },
+        { '@type': 'Question', name: '哪个AI模型最擅长中文？', acceptedAnswer: { '@type': 'Answer', text: 'Google Gemini 3.0 Pro在日文、韩文和中文（东亚文字）上持续领先。Qwen 3 72B是中文主导工作流的最佳开源选择。GPT-4o紧随其后。' } },
         { '@type': 'Question', name: '中文提示比英文更便宜吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。中文文本比同等英文内容少使用约31%的token，可降低API成本。相比之下，阿拉伯文需要多46%的token。' } },
         { '@type': 'Question', name: '需要翻译few-shot示例吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Few-shot示例应与期望输出使用相同语言。根据Shi et al.（2023），语言不同的示例会使精度降低15～20%。' } },
         { '@type': 'Question', name: '什么是跨语言思维链提示？', acceptedAnswer: { '@type': 'Answer', text: '跨语言思维链用英文进行推理步骤，但要求以目标语言给出最终答案。对于3级语言（中文、日文、阿拉伯文），这可将推理精度提升5～12%。' } },
@@ -1720,7 +1720,7 @@ export const article: Record<Language, PEArticle> = {
       name: '构建多语言提示工作流',
       step: [
         { '@type': 'HowToStep', position: 1, name: '确定语言等级', text: '确认目标语言属于哪个语言等级（1～4）。' },
-        { '@type': 'HowToStep', position: 2, name: '选择合适的模型', text: '为每种语言选择合适的模型：Romance语系选Mistral Large 2，东亚语言选Gemini 3.0 Pro，阿拉伯文选GPT-5.5。' },
+        { '@type': 'HowToStep', position: 2, name: '选择合适的模型', text: '为每种语言选择合适的模型：Romance语系选Mistral Large 2，东亚语言选Gemini 3.0 Pro，阿拉伯文选GPT-4o。' },
         { '@type': 'HowToStep', position: 3, name: '撰写系统提示', text: '用英文撰写包含明确语言指令的系统提示：「Respond in formal Chinese.」' },
         { '@type': 'HowToStep', position: 4, name: '准备few-shot示例', text: '用目标语言准备few-shot示例（最少2个，理想为3个）。' },
         { '@type': 'HowToStep', position: 5, name: '测试思维链', text: '对3级以上语言，测试思维链：「Think step by step in English, then respond in Chinese.」' },
@@ -1734,7 +1734,7 @@ export const article: Record<Language, PEArticle> = {
       name: '多语言提示最佳AI模型',
       numberOfItems: 6,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'GPT-5.5', description: '最适合阿拉伯文及通用多语言结构化提取' },
+        { '@type': 'ListItem', position: 1, name: 'GPT-4o', description: '最适合阿拉伯文及通用多语言结构化提取' },
         { '@type': 'ListItem', position: 2, name: 'Gemini 3.0 Pro', description: '最适合日文、韩文和中文（东亚文字）' },
         { '@type': 'ListItem', position: 3, name: 'Mistral Large 2', description: '最适合法文、西班牙文和意大利文商业内容' },
         { '@type': 'ListItem', position: 4, name: 'Claude Opus 4.7', description: '最适合细腻的多语言文档分析和语气匹配' },
@@ -1750,7 +1750,7 @@ export const article: Record<Language, PEArticle> = {
           'LLM在英文上性能最佳；3级以上语言的非英文输出错误率高出5～15%（Ahuja et al., 2023 MEGA基准测试）。',
           '英文系统提示+母语用户输入，在2～3级语言的结构化任务上优于母语系统提示。',
           '1,000个英文单词≈1,300个token；同等中文内容≈900个token（便宜31%）；阿拉伯文≈1,900个token（贵46%）。',
-          'Mistral Large 2领跑法文/意大利文/西班牙文；Google Gemini 3.0 Pro领跑日文/韩文/中文；GPT-5.5领跑阿拉伯文。',
+          'Mistral Large 2领跑法文/意大利文/西班牙文；Google Gemini 3.0 Pro领跑日文/韩文/中文；GPT-4o领跑阿拉伯文。',
           'Few-shot示例必须使用目标语言——语言不匹配的示例会使精度降低约20%（Shi et al., 2023）。',
           '始终在系统提示中明确声明输出语言：「Respond in formal Chinese.」——不要假设模型会自动匹配用户语言。',
         ],
@@ -1763,7 +1763,7 @@ export const article: Record<Language, PEArticle> = {
           '阿拉伯文1,000词需要**1,900个token**（比英文多46%）；中文仅需**900个token**（少31%）。',
           '英文思维链推理+母语输出可将精度提升**5～12%**（3级语言）。',
           '非英文任务使用英文few-shot示例时精度降低**15～20%**（Shi et al., 2023）。',
-          '**Mistral Large 2**领跑Romance语系；**Gemini 3.0 Pro**领跑东亚语言；**GPT-5.5**领跑阿拉伯文。',
+          '**Mistral Large 2**领跑Romance语系；**Gemini 3.0 Pro**领跑东亚语言；**GPT-4o**领跑阿拉伯文。',
         ],
       },
       definition: {
@@ -1850,11 +1850,11 @@ export const article: Record<Language, PEArticle> = {
         id: 'model-matrix',
         title: '哪些模型最擅长哪些语言？',
         content: [
-          '**没有单一模型在所有语言上领跑。Mistral Large 2领跑Romance语系；Google Gemini 3.0 Pro领跑东亚语言；GPT-5.5领跑阿拉伯文和多语言推理任务。** 此表汇总了Ahuja et al.（2023）MEGA基准测试的模型性能数据。',
+          '**没有单一模型在所有语言上领跑。Mistral Large 2领跑Romance语系；Google Gemini 3.0 Pro领跑东亚语言；GPT-4o领跑阿拉伯文和多语言推理任务。** 此表汇总了Ahuja et al.（2023）MEGA基准测试的模型性能数据。',
         ],
         columns: ['模型', '2级（欧洲）', '3级（东亚）', '阿拉伯文', '最佳用例'],
         rows: [
-          { '模型': 'GPT-5.5', '2级（欧洲）': '✅ 强', '3级（东亚）': '✅ 强', '阿拉伯文': '✅ 最强', '最佳用例': '通用多语言、结构化提取' },
+          { '模型': 'GPT-4o', '2级（欧洲）': '✅ 强', '3级（东亚）': '✅ 强', '阿拉伯文': '✅ 最强', '最佳用例': '通用多语言、结构化提取' },
           { '模型': 'Claude Opus 4.7', '2级（欧洲）': '✅ 强', '3级（东亚）': '✓ 良', '阿拉伯文': '✓ 良', '最佳用例': '文档分析、细腻语气' },
           { '模型': 'Gemini 3.0 Pro', '2级（欧洲）': '✓ 良', '3级（东亚）': '✅ 最强', '阿拉伯文': '✓ 良', '最佳用例': '日文/韩文/中文、翻译' },
           { '模型': 'Mistral Large 2', '2级（欧洲）': '✅ 最强', '3级（东亚）': '⚠ 一般', '阿拉伯文': '⚠ 一般', '最佳用例': '法文/西班牙文/意大利文商业内容' },
@@ -1871,7 +1871,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'cost-by-use-case',
         title: '按用例的成本分析',
         content: [
-          '**上述token成本差异直接反映在API账单上。** 以下是基于GPT-5.5定价（每100万输入token $5）的实际影响。',
+          '**上述token成本差异直接反映在API账单上。** 以下是基于GPT-4o定价（每100万输入token $5）的实际影响。',
         ],
         columns: ['用例', '英文成本', '阿拉伯文成本', '日文成本', '节省建议'],
         rows: [
@@ -1955,7 +1955,7 @@ export const article: Record<Language, PEArticle> = {
         id: 'promptquorum-multilingual',
         title: 'PromptQuorum如何支持多语言工作流',
         items: [
-          '**一个提示→多个模型→并排语言比较。** 将同一个中文提示发送给Mistral Large 2、Claude和GPT-5.5，一次运行即可看出哪个模型的语气、精度和风格最佳。',
+          '**一个提示→多个模型→并排语言比较。** 将同一个中文提示发送给Mistral Large 2、Claude和GPT-4o，一次运行即可看出哪个模型的语气、精度和风格最佳。',
           '**9个内置提示框架**——全部支持带语言特定占位符的多语言模板。示例：思维链、few-shot、角色扮演、语气强制模式。',
           '**按模型显示token数**——发送前查看阿拉伯文或日文输入消耗多少token，避免预算惊喜。',
           '**多语言输入的上下文溢出提醒**——当阿拉伯文或俄文内容（多消耗30～46%的token）接近模型上下文窗口时自动提醒。',
@@ -1980,7 +1980,7 @@ export const article: Record<Language, PEArticle> = {
         title: '构建多语言提示工作流的步骤',
         numberedItems: [
           '确认目标语言属于哪个语言等级（1～4）。',
-          '为每种语言选择合适的模型（Romance语系选Mistral Large 2，东亚语言选Gemini 3.0 Pro，阿拉伯文选GPT-5.5）。',
+          '为每种语言选择合适的模型（Romance语系选Mistral Large 2，东亚语言选Gemini 3.0 Pro，阿拉伯文选GPT-4o）。',
           '撰写包含明确语言指令的英文系统提示：「Respond in formal Chinese.」',
           '用目标语言准备few-shot示例（最少2个，理想为3个）。',
           '对3级以上语言，测试思维链：「Think step by step in English, then respond in [language].」',

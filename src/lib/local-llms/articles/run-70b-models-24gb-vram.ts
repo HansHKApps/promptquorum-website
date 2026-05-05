@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'Use a 13B model (Llama 3.1 13B at Q5 = 8 GB, very fast)',
             'Buy a second RTX 4090 for layer splitting (2× 24GB = 48GB, 100+ tok/sec)',
-            'Use a cloud API (GPT-5.5 for important tasks, local for experimentation)',
+            'Use a cloud API (GPT-4o for important tasks, local for experimentation)',
             'Wait for more efficient models (smaller, same quality)',
           ],
         },

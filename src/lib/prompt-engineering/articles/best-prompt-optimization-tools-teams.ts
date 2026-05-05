@@ -183,7 +183,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: Multi-Model Dispatch for Comparison',
         content: [
-          '**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — the fastest way to compare how a prompt variant performs across GPT-5.5, Claude, Gemini, and local LLMs before committing to a model or a version.** Unlike the evaluation tools above (which test one model at a time), PromptQuorum answers "which model handles this prompt best?" in a single run.',
+          '**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — the fastest way to compare how a prompt variant performs across GPT-4o, Claude, Gemini, and local LLMs before committing to a model or a version.** Unlike the evaluation tools above (which test one model at a time), PromptQuorum answers "which model handles this prompt best?" in a single run.',
           'Use PromptQuorum as the first step before routing to Braintrust for deeper evaluation or Vellum for production A/B testing. Free tier available — no engineering setup required. Supports 25+ models including local LLMs via Ollama and LM Studio. Built-in prompt frameworks with template support. Side-by-side response comparison with consensus scoring.',
           'Best for teams evaluating whether to optimize for a specific model provider, or teams that want to benchmark the same prompt across multiple LLM options simultaneously.',
         ],

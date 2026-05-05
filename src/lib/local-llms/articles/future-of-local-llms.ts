@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'challenges',
           title: 'What Challenges Do Local LLMs Still Face?',
           items: [
-            '**Quality gap:** Open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. Gap narrowing but not closed before 2027–2028.',
+            '**Quality gap:** Open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89%. Gap narrowing but not closed before 2027–2028.',
             '**Real-time latency:** Local inference is not suitable for <500ms real-time pipelines. An RTX 4090 generates ~150 tok/sec on 7B — good for chat, not sub-500ms APIs.',
             '**Infrastructure costs:** On-premises requires capital: $600–$2,000 GPU + cooling + maintenance. "Local is free" is a misconception — API costs shift, not disappear.',
             '**Talent shortage:** Few engineers know how to productionize vLLM, manage model updates, or optimize batch throughput. Will improve by 2027.',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'common-mistakes',
           title: 'Common Mistakes When Planning for Local LLM Adoption',
           items: [
-            '**Overestimating model quality timelines.** 3B models do not match GPT-5.5 today. The gap is 20–30%. Expecting parity before 2027 leads to failed production deployments.',
+            '**Overestimating model quality timelines.** 3B models do not match GPT-4o today. The gap is 20–30%. Expecting parity before 2027 leads to failed production deployments.',
             '**Assuming "local is free."** On-premises AI shifts costs from API fees to hardware ($600–$2,000+), electricity (~$200/year/GPU), and DevOps time. ROI is real but not immediate.',
             '**Conflating small model with good-enough model.** 1–3B models excel at summarization and Q&A. For complex reasoning or long-form generation, they underperform 7B+ models by 20–40%.',
             '**Ignoring the cold-start problem.** Local model servers restart on crash or update. Without OLLAMA_KEEP_ALIVE settings and health checks, production systems see 10–30 sec dead periods.',
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is the quality gap between local and cloud LLMs in 2026?',
-              a: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. The gap is closing — 2024–2025 saw ~10–15% benchmark improvements annually. Full parity for 70B models vs GPT-5.5 class is not expected before 2027–2028.',
+              a: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. The gap is closing — 2024–2025 saw ~10–15% benchmark improvements annually. Full parity for 70B models vs GPT-4o class is not expected before 2027–2028.',
             },
             {
               q: 'Is local LLM inference fast enough for real-time applications?',
@@ -249,7 +249,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'What is the quality gap between local and cloud LLMs in 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. Gap is closing annually (~10–15% improvement per year). Full parity for 70B models is not expected before 2027–2028.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. Gap is closing annually (~10–15% improvement per year). Full parity for 70B models is not expected before 2027–2028.' },
           },
           {
             '@type': 'Question',
@@ -378,7 +378,7 @@ schema: {
           id: 'challenges',
           title: 'Welche Herausforderungen bleiben für lokale LLMs?',
           items: [
-            '**Qualitätslücke:** Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. Lücke schließt sich, aber nicht vor 2027–2028.',
+            '**Qualitätslücke:** Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89%. Lücke schließt sich, aber nicht vor 2027–2028.',
             '**Real-Time-Latenz:** Lokale Inferenz ist nicht geeignet für <500ms Real-Time-Pipelines. RTX 4090 erzeugt ~150 Token/Sek. auf 7B — gut für Chat, nicht für Sub-500ms APIs.',
             '**Infrastrukturkosten:** On-Premises benötigt Kapital: 600–2.200 € GPU + Kühlung + Wartung. "Lokal ist kostenlos" ist ein Irrtum — API-Kosten verschieben sich, nicht verschwinden.',
             '**Talentmangel:** Wenige Ingenieure wissen, wie man vLLM produktiviert, Model-Updates verwaltet oder Batch-Durchsatz optimiert. Wird bis 2027 besser.',
@@ -389,7 +389,7 @@ schema: {
           id: 'common-mistakes',
           title: 'Häufige Fehler bei der Planung der lokalen LLM-Adoption',
           items: [
-            '**Modellqualitäts-Zeitpläne überschätzen.** 3B-Modelle entsprechen nicht GPT-5.5 heute. Die Lücke ist 20–30%. Parität vor 2027 zu erwarten führt zu gescheiterten Produktionsbereitstellungen.',
+            '**Modellqualitäts-Zeitpläne überschätzen.** 3B-Modelle entsprechen nicht GPT-4o heute. Die Lücke ist 20–30%. Parität vor 2027 zu erwarten führt zu gescheiterten Produktionsbereitstellungen.',
             '**Annahme "Lokal ist kostenlos."** On-Premises-KI verschiebt Kosten von API-Gebühren zu Hardware (600–2.200 €+), Stromversorgung (~200 €/Jahr/GPU) und DevOps-Zeit. ROI ist real, aber nicht unmittelbar.',
             '**Kleine Modelle mit gut-genug Modellen vermischen.** 1–3B-Modelle zeichnen sich bei Zusammenfassung und Q&A aus. Für komplexes Reasoning oder lange Textgenerierung, unterscheiden sie sich um 20–40% von 7B+ Modellen.',
             '**Cold-Start-Problem ignorieren.** Lokale Modell-Server starten bei Absturz oder Update neu. Ohne OLLAMA_KEEP_ALIVE-Einstellungen und Health Checks sehen Produktionssysteme 10–30 Sek. tote Perioden.',
@@ -421,7 +421,7 @@ schema: {
             },
             {
               q: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs 2026?',
-              a: 'Lokale Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. Die Lücke schließt sich — 2024–2025 sahen ~10–15% Benchmark-Verbesserungen pro Jahr. Volle Parität für 70B-Modelle vs. GPT-5.5 Klasse wird nicht vor 2027–2028 erwartet.',
+              a: 'Lokale Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. Die Lücke schließt sich — 2024–2025 sahen ~10–15% Benchmark-Verbesserungen pro Jahr. Volle Parität für 70B-Modelle vs. GPT-4o Klasse wird nicht vor 2027–2028 erwartet.',
             },
             {
               q: 'Ist lokale LLM-Inferenz schnell genug für Real-Time-Anwendungen?',
@@ -527,7 +527,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Lokale Modelle hinken um 20–30% hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. Schließt sich ~10–15% pro Jahr. Volle Parität erwartet nicht vor 2027–2028.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Lokale Modelle hinken um 20–30% hinterher. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89%. Schließt sich ~10–15% pro Jahr. Volle Parität erwartet nicht vor 2027–2028.' },
           },
           {
             '@type': 'Question',
@@ -672,7 +672,7 @@ schema: {
           id: 'challenges',
           title: 'Quels défis les LLM locaux font-ils encore face?',
           items: [
-            '**Écart de qualité :** Les modèles ouverts traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-5.5 : 89%. L\'écart se réduit mais ne se ferme pas avant 2027–2028.',
+            '**Écart de qualité :** Les modèles ouverts traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-4o : 89%. L\'écart se réduit mais ne se ferme pas avant 2027–2028.',
             '**Latence en temps réel :** L\'inférence locale ne convient pas aux pipelines en temps réel <500ms. Un RTX 4090 génère ~150 tok/s sur 7B — bon pour le chat, pas pour les API sub-500ms.',
             '**Coûts d\'infrastructure :** Sur site nécessite du capital : GPU 600–2 200 € + refroidissement + maintenance. "Local est gratuit" est une fausse idée — les coûts API changent, ne disparaissent pas.',
             '**Pénurie de talents :** Peu d\'ingénieurs savent productioniser vLLM, gérer les mises à jour de modèles ou optimiser le débit par lots. S\'améliorera d\'ici 2027.',
@@ -683,7 +683,7 @@ schema: {
           id: 'common-mistakes',
           title: 'Erreurs courantes lors de la planification de l\'adoption des LLM locaux',
           items: [
-            '**Surestimer les calendriers de qualité du modèle.** Les modèles 3B ne correspondent pas à GPT-5.5 aujourd\'hui. L\'écart est de 20–30%. S\'attendre à la parité avant 2027 mène à des déploiements de production échoués.',
+            '**Surestimer les calendriers de qualité du modèle.** Les modèles 3B ne correspondent pas à GPT-4o aujourd\'hui. L\'écart est de 20–30%. S\'attendre à la parité avant 2027 mène à des déploiements de production échoués.',
             '**Supposer que "local est gratuit".** L\'IA sur site déplace les coûts des frais d\'API vers le matériel (600–2 200 €+), l\'électricité (~200 €/année/GPU) et le temps DevOps. Le ROI est réel mais pas immédiat.',
             '**Confondre petit modèle avec modèle assez bon.** Les modèles 1–3B excellent en synthèse et Q&A. Pour le raisonnement complexe ou la génération longue, ils sous-performent les modèles 7B+ de 20–40%.',
             '**Ignorer le problème du démarrage à froid.** Les serveurs de modèles locaux redémarrent en cas de panne ou de mise à jour. Sans les paramètres OLLAMA_KEEP_ALIVE et les vérifications de santé, les systèmes de production voient 10–30 sec de périodes mortes.',
@@ -715,7 +715,7 @@ schema: {
             },
             {
               q: 'Quel est l\'écart de qualité entre les LLM locaux et les LLM cloud en 2026?',
-              a: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-5.5 : 89% MMLU. L\'écart se réduit — 2024–2025 a vu ~10–15% d\'améliorations de benchmark annuellement. La parité complète pour les modèles 70B par rapport à la classe GPT-5.5 n\'est pas attendue avant 2027–2028.',
+              a: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-4o : 89% MMLU. L\'écart se réduit — 2024–2025 a vu ~10–15% d\'améliorations de benchmark annuellement. La parité complète pour les modèles 70B par rapport à la classe GPT-4o n\'est pas attendue avant 2027–2028.',
             },
             {
               q: 'L\'inférence des LLM locaux est-elle assez rapide pour les applications en temps réel?',
@@ -813,7 +813,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quel est l\'écart de qualité entre les LLM locaux et les LLM cloud en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-5.5 : 89% MMLU. L\'écart se réduit annuellement (~10–15% d\'amélioration par an). La parité complète pour les modèles 70B n\'est pas attendue avant 2027–2028.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-4o : 89% MMLU. L\'écart se réduit annuellement (~10–15% d\'amélioration par an). La parité complète pour les modèles 70B n\'est pas attendue avant 2027–2028.' },
           },
           {
             '@type': 'Question',
@@ -948,7 +948,7 @@ schema: {
           id: 'challenges',
           title: '残る課題',
           items: [
-            '**品質ギャップ：** オープンモデルはベンチマークで独占モデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。ギャップ縮小中だが2027–2028前に閉じない予測。',
+            '**品質ギャップ：** オープンモデルはベンチマークで独占モデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。ギャップ縮小中だが2027–2028前に閉じない予測。',
             '**実時間遅延：** ローカル推論は<500ms実時間パイプライン不適。RTX 4090は7B型で毎秒150トークン生成 ← チャット向き、500ms以下API不適。',
             '**インフラ費用：** オンプレミスには資本投下要：GPU 600–2 200 € +冷却 +保守。「ローカルは無料」は誤解 ← APIコスト移転、消滅しない。',
             '**人材不足：** vLLM生産化・モデル更新管理・バッチスループット最適化知るエンジニア少。2027年改善予定。',
@@ -959,7 +959,7 @@ schema: {
           id: 'common-mistakes',
           title: '一般的なミス',
           items: [
-            '**モデル品質タイムライン過大評価。** 3Bモデルは現在GPT-5.5に非対応。ギャップ20–30%。2027年前に対等期待は本番デプロイ失敗招く。',
+            '**モデル品質タイムライン過大評価。** 3Bモデルは現在GPT-4oに非対応。ギャップ20–30%。2027年前に対等期待は本番デプロイ失敗招く。',
             '**「ローカルは無料」仮定。** オンプレミスAIはAPI料金からハードウェア（¥95,000–300,000+）、電力（年GPU当たり約¥30,000）、DevOps時間へコスト移転。ROI実ありだが即座でない。',
             '**小型モデル = 十分モデル混同。** 1–3B型は要約・Q&A向き好。複雑推論・長編生成は7B+型より20–40%劣。',
             '**コールドスタート問題無視。** ローカルモデルサーバはクラッシュ・更新時再起動。OLLAMA_KEEP_ALIVE設定・ヘルスチェック無いと本番システムで10–30秒デッドタイム。',
@@ -991,7 +991,7 @@ schema: {
             },
             {
               q: '2026年ローカル vs クラウドLLM品質ギャップ？',
-              a: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-5.5：89% MMLU。ギャップは毎年縮小（年10–15%改善）。70Bモデルとの完全対等は2027–2028前未期待。',
+              a: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-4o：89% MMLU。ギャップは毎年縮小（年10–15%改善）。70Bモデルとの完全対等は2027–2028前未期待。',
             },
             {
               q: 'ローカルLLM推論は実時間アプリケーション十分速？',
@@ -1089,7 +1089,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年ローカル vs クラウドLLM品質ギャップ？',
-            acceptedAnswer: { '@type': 'Answer', text: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。ギャップ毎年縮小（年10–15%改善）。完全対等は2027–2028前未期待。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。ギャップ毎年縮小（年10–15%改善）。完全対等は2027–2028前未期待。' },
           },
           {
             '@type': 'Question',
@@ -1224,7 +1224,7 @@ schema: {
           id: 'challenges',
           title: '本地LLM仍存在的挑战',
           items: [
-            '**品质差距：** 开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。差距缩小中但预期2027–2028前不会关闭。',
+            '**品质差距：** 开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。差距缩小中但预期2027–2028前不会关闭。',
             '**实时延迟：** 本地推理不适合<500ms实时管道。RTX 4090在7B上生成约150令牌/秒—适合聊天，不适于500ms以下API。',
             '**基础设施成本：** 本地需资本投入：GPU 600–2 200 € +冷却 +维护。"本地免费"是误解—API成本转移，不消失。',
             '**人才缺口：** 懂vLLM生产化、管理模型更新或优化批吞吐的工程师少。2027年预期改进。',
@@ -1235,7 +1235,7 @@ schema: {
           id: 'common-mistakes',
           title: '常见错误',
           items: [
-            '**高估模型品质时间表。** 3B模型今日不匹配GPT-5.5。差距20–30%。期望2027前达到平价导致生产部署失败。',
+            '**高估模型品质时间表。** 3B模型今日不匹配GPT-4o。差距20–30%。期望2027前达到平价导致生产部署失败。',
             '**假设"本地免费"。** 本地AI将API费用成本转移至硬件（$600–$2000+）、电力（年GPU约$200）和DevOps时间。ROI实际但非即刻。',
             '**混淆小模型和足够好的模型。** 1–3B模型在摘要和问答中优秀。对复杂推理或长篇生成，它们落后7B+模型20–40%。',
             '**忽视冷启动问题。** 本地模型服务器在崩溃或更新时重启。无OLLAMA_KEEP_ALIVE设置和健康检查，生产系统见10–30秒停机时间。',
@@ -1267,7 +1267,7 @@ schema: {
             },
             {
               q: '2026年本地与云LLM品质差距？',
-              a: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-5.5：89% MMLU。差距缩小—每年约10–15%改进。70B模型与GPT-5.5级别的完全平价预期不早于2027–2028。',
+              a: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-4o：89% MMLU。差距缩小—每年约10–15%改进。70B模型与GPT-4o级别的完全平价预期不早于2027–2028。',
             },
             {
               q: '本地LLM推理对实时应用足够快吗？',
@@ -1365,7 +1365,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年本地与云LLM品质差距？',
-            acceptedAnswer: { '@type': 'Answer', text: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。差距缩小—每年约10–15%改进。完全平价预期不早于2027–2028。' },
+            acceptedAnswer: { '@type': 'Answer', text: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。差距缩小—每年约10–15%改进。完全平价预期不早于2027–2028。' },
           },
           {
             '@type': 'Question',

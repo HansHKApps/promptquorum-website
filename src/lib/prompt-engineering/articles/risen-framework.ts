@@ -209,18 +209,23 @@ export const article: Record<Language, PEArticle> = {
           callouts: [
             {
               type: 'pro-tip',
-              label: 'Pro Tip',
-              text: 'Always specify evaluation criteria before running RISEN. Vague criteria like "make it better" lead to vague improvements. Specific criteria like "rate on clarity (1-5), accuracy (1-5), B2B alignment (1-5)" lead to measurable results.',
+              label: 'The Inspect Step Is the Secret Weapon',
+              text: 'The Inspect step is what makes RISEN unique among frameworks. Most frameworks generate output. RISEN forces the model to document every specific change, creating a permanent audit trail. No other framework has this built-in accountability — this is why RISEN is essential for regulated industries, academic work, and team collaboration where traceability matters.',
             },
             {
-              type: 'did-you-know',
-              label: 'Did You Know',
-              text: 'The Inspect step is what makes RISEN unique. Most frameworks generate output. RISEN forces the model to document every change, creating a permanent audit trail. This is why RISEN is essential for regulated industries, academic work, and team collaboration where traceability matters.',
+              type: 'key-point',
+              label: 'Why "Make This Better" Fails',
+              text: 'Vague improvement requests like "make this better" or "improve this" give the model zero constraints. Without explicit criteria and structure, the model wanders and produces inconsistent results. RISEN works because each step has a specific, named output with constraints. Specificity drives quality.',
             },
             {
               type: 'warning',
-              label: 'Warning',
-              text: 'RISEN adds overhead that only pays off when iterative improvement matters. For quick generation tasks, single-step prompts or CO-STAR are more efficient. For one-shot translations or simple edits, RISEN is overkill. Use selectively on high-stakes decisions.',
+              label: 'When NOT to Use RISEN',
+              text: 'Don\'t use RISEN for first-draft generation. RISEN requires existing material to refine. If you need to create something from scratch, use CO-STAR, CRAFT, or Single Step first. Then switch to RISEN for iterative improvement. Using RISEN on non-existent material wastes tokens and produces meaningless Inspect output.',
+            },
+            {
+              type: 'pro-tip',
+              label: 'The Two-Framework Workflow',
+              text: 'The optimal pattern: Use CO-STAR or CRAFT to generate the first draft. Then switch to RISEN for iterative refinement and self-critique. This separation prevents the model from conflating two fundamentally different cognitive tasks — "create" and "improve". Each framework excels at its specific phase.',
             },
           ],
         },
@@ -613,18 +618,23 @@ export const article: Record<Language, PEArticle> = {
           callouts: [
             {
               type: 'pro-tip',
-              label: 'Pro-Tipp',
-              text: 'Geben Sie immer Bewertungskriterien an, bevor Sie RISEN ausführen. Vage Kriterien wie „machen Sie es besser" führen zu vagen Verbesserungen. Spezifische Kriterien wie „bewerte auf Klarheit (1–5), Genauigkeit (1–5), B2B-Ausrichtung (1–5)" führen zu messbaren Ergebnissen.',
+              label: 'Der Inspect-Schritt ist die geheime Waffe',
+              text: 'Der Inspect-Schritt ist das, was RISEN unter den Frameworks einzigartig macht. Die meisten Frameworks generieren Ausgabe. RISEN zwingt das Modell dazu, jede spezifische Änderung zu dokumentieren und erzeugt einen permanenten Audit-Trail. Kein anderes Framework hat diese eingebaute Rechenschaftspflicht — darum ist RISEN unverzichtbar für regulierte Industrien, akademische Arbeit und Team-Zusammenarbeit, wo Nachverfolgbarkeit wichtig ist.',
             },
             {
-              type: 'did-you-know',
-              label: 'Wussten Sie schon',
-              text: 'Der Inspect-Schritt ist das, was RISEN einzigartig macht. Die meisten Frameworks generieren Ausgabe. RISEN zwingt das Modell dazu, jede Änderung zu dokumentieren und erzeugt einen permanenten Audit-Trail. Dies ist der Grund, warum RISEN für regulierte Industrien, akademische Arbeit und Team-Zusammenarbeit unerlässlich ist, bei denen Nachverfolgbarkeit zählt.',
+              type: 'key-point',
+              label: 'Warum „Machen Sie das besser" fehlschlägt',
+              text: 'Vage Verbesserungsanfragen wie „machen Sie das besser" oder „verbessern Sie das" geben dem Modell null Einschränkungen. Ohne explizite Kriterien und Struktur schweift das Modell ab und produziert inkonsistente Ergebnisse. RISEN funktioniert, weil jeder Schritt eine spezifische, benannte Ausgabe mit Einschränkungen hat. Spezifität fördert Qualität.',
             },
             {
               type: 'warning',
-              label: 'Warnung',
-              text: 'RISEN fügt Overhead hinzu, der sich nur auszahlt, wenn iterative Verbesserung wichtig ist. Für schnelle Generierungsaufgaben sind Single-Schritt-Prompts oder CO-STAR effizienter. Für Eins-Zu-Eins-Übersetzungen oder einfache Änderungen ist RISEN zu aufwendig. Verwenden Sie es selektiv bei hochrangigen Entscheidungen.',
+              label: 'Wann RISEN NICHT verwenden',
+              text: 'Verwenden Sie RISEN nicht für Erst-Draft-Generierung. RISEN benötigt vorhandenes Material zum Verfeinern. Wenn Sie etwas von Grund auf erstellen müssen, verwenden Sie zuerst CO-STAR, CRAFT oder Single Step. Wechseln Sie dann zu RISEN für iterative Verbesserung. Die Verwendung von RISEN auf nicht vorhandenem Material verschwendet Tokens und produziert sinnlose Inspect-Ausgabe.',
+            },
+            {
+              type: 'pro-tip',
+              label: 'Der Zwei-Framework-Arbeitsablauf',
+              text: 'Das optimale Muster: Verwenden Sie CO-STAR oder CRAFT, um den ersten Entwurf zu generieren. Wechseln Sie dann zu RISEN für iterative Verbesserung und Selbstkritik. Diese Trennung verhindert, dass das Modell zwei fundamentally unterschiedliche kognitive Aufgaben vermischt — „erstellen" und „verbessern". Jedes Framework ist hervorragend in seiner spezifischen Phase.',
             },
           ],
         },
@@ -1027,13 +1037,23 @@ export const article: Record<Language, PEArticle> = {
           callouts: [
             {
               type: 'pro-tip',
-              label: 'Conseil pratique',
-              text: 'Spécifiez toujours critères d\'évaluation avant d\'exécuter RISEN. Critères vagues mènent améliorations vagues. Critères spécifiques comme « note sur clarté (1–5), précision (1–5), alignement B2B (1–5) » mènent résultats mesurables.',
+              label: 'L\'étape Inspect est l\'arme secrète',
+              text: 'L\'étape Inspect rend RISEN unique parmi les frameworks. La plupart des frameworks génèrent une sortie. RISEN force le modèle à documenter chaque changement spécifique, créant un audit trail permanent. Aucun autre framework n\'a cette responsabilité intégrée — c\'est pourquoi RISEN est essentiel pour les industries régulées, le travail académique et la collaboration d\'équipe où la traçabilité importe.',
             },
             {
-              type: 'did-you-know',
-              label: 'Le saviez-vous',
-              text: 'L\'étape Inspect rend RISEN unique. La plupart frameworks génèrent sortie. RISEN force le modèle à documenter chaque changement, créant audit trail permanent. C\'est pourquoi RISEN est essentiel pour industries régulées, travail académique et collaboration d\'équipe nécessitant traçabilité.',
+              type: 'key-point',
+              label: 'Pourquoi « Améliorez ceci » échoue',
+              text: 'Les demandes d\'amélioration vagues comme « améliorez ceci » ou « rendez ceci mieux » ne donnent au modèle aucune contrainte. Sans critères explicites et structure, le modèle divague et produit des résultats incohérents. RISEN fonctionne car chaque étape a une sortie spécifique et nommée avec des contraintes. La spécificité conduit à la qualité.',
+            },
+            {
+              type: 'warning',
+              label: 'Quand NE PAS utiliser RISEN',
+              text: 'N\'utilisez pas RISEN pour la génération de brouillon initial. RISEN nécessite du matériel existant à affiner. Si vous devez créer quelque chose à partir de zéro, utilisez d\'abord CO-STAR, CRAFT ou Single Step. Puis basculez à RISEN pour l\'amélioration itérative. Utiliser RISEN sur du matériel inexistant gaspille des tokens et produit une sortie Inspect sans sens.',
+            },
+            {
+              type: 'pro-tip',
+              label: 'Le flux de travail à deux frameworks',
+              text: 'Le pattern optimal : Utilisez CO-STAR ou CRAFT pour générer le brouillon initial. Puis basculez à RISEN pour l\'amélioration itérative et l\'auto-critique. Cette séparation empêche le modèle de confondre deux tâches cognitives fondamentalement différentes — « créer » et « améliorer ». Chaque framework excelle dans sa phase spécifique.',
             },
             {
               type: 'warning',
@@ -1441,18 +1461,23 @@ export const article: Record<Language, PEArticle> = {
           callouts: [
             {
               type: 'pro-tip',
-              label: 'プロのコツ',
-              text: 'RISEN実行前に評価基準を常に指定します。曖昧な基準は曖昧な改善を招きます。「明確さ（1～5）、精度（1～5）、B2B適合（1～5）」のような具体的基準は測定可能な結果を招きます。',
+              label: 'Inspectステップは秘密兵器',
+              text: 'Inspectステップはフレームワーク間でRISENを独特にする理由です。ほとんどのフレームワークは出力を生成します。RISENはモデルに具体的な各変更を文書化し、永続的な監査証跡を作成するよう強制します。他のフレームワークにはこの組み込み責任がありません — これが規制産業、学術研究、トレーサビリティが重要なチーム協業にRISENが不可欠な理由です。',
             },
             {
-              type: 'did-you-know',
-              label: '知ってましたか',
-              text: 'InspectステップがRISENを独特にします。ほとんどのフレームワークは出力を生成。RISENはモデルに各変更を記録させ、永続的監査証跡を作成。これが規制産業、学術研究、追跡必要なチーム協業にRISENが不可欠な理由。',
+              type: 'key-point',
+              label: '「これを改善して」が失敗する理由',
+              text: '「これを改善して」や「改善して」のような曖昧な改善要求は、モデルに制約をゼロ与えます。明示的な基準と構造がないと、モデルはさまようり、矛盾した結果を生成します。RISENが機能するのは、各ステップが制約付きの特定の名前付き出力を持つためです。具体性が品質を駆動します。',
             },
             {
               type: 'warning',
-              label: '警告',
-              text: 'RISENはオーバーヘッドを追加。反復改善が大切な場合のみペイする。高速生成ではsingle-stepやCO-STARが効率的。1回翻訳や簡単編集ではRISEN過剰。戦略的決定で選択的に使用。',
+              label: 'RISENを使ってはいけない場合',
+              text: '初期ドラフト生成にRISENを使わないでください。RISENは改善する既存資料が必要です。ゼロから何か作成する必要がある場合は、最初にCO-STAR、CRAFT、またはSingle Stepを使用してください。その後、反復的改善のためRISENに切り替えます。存在しない資料でRISENを使用することはトークンを浪費し、無意味なInspect出力を生成します。',
+            },
+            {
+              type: 'pro-tip',
+              label: '2つのフレームワーク戦略',
+              text: '最適なパターン：CO-STARまたはCRAFTを使用して初期ドラフトを生成します。その後、反復的改善と自己批評のためRISENに切り替えます。この分離は、モデルが2つの根本的に異なる認知タスク——「作成」と「改善」——を混在させるのを防ぎます。各フレームワークは特定のフェーズで優れています。',
             },
           ],
         },
@@ -1799,6 +1824,33 @@ export const article: Record<Language, PEArticle> = {
             '**要求具体的Inspect输出。** "列出5-7个具体的编辑。对每一个，说明您更改了什么以及为什么。"',
             '**指定Evaluate标准。** "在[3-5个命名维度，如清晰度、准确性、说服力]上评分（1-5）。用一句话解释每个评分。"',
             '**要求可行的Next Steps。** "建议3个下一次迭代的重点改进。"',
+          ],
+        },
+
+        calloutBoxes: {
+          title: '关键提示',
+          id: 'key-callouts',
+          callouts: [
+            {
+              type: 'pro-tip',
+              label: 'Inspect步骤是秘密武器',
+              text: 'Inspect步骤正是使RISEN在框架中独特的原因。大多数框架生成输出。RISEN强制模型记录每个具体的变更，创建永久的审计记录。没有其他框架有这种内置的责任制——这就是为什么RISEN对受管制行业、学术工作和需要可追溯性的团队协作至关重要。',
+            },
+            {
+              type: 'key-point',
+              label: '为什么"改进这个"会失败',
+              text: '像"改进这个"或"把这个改好"这样含糊的改进请求给模型零约束。没有明确的标准和结构，模型会漫无目的，产生不一致的结果。RISEN之所以有效，是因为每个步骤都有特定的、有名字的、受约束的输出。具体性驱动质量。',
+            },
+            {
+              type: 'warning',
+              label: '何时不应使用RISEN',
+              text: '不要在初期草稿生成中使用RISEN。RISEN需要现有的材料来改进。如果您需要从零开始创建东西，请先使用CO-STAR、CRAFT或Single Step。然后切换到RISEN进行迭代改进。在不存在的材料上使用RISEN会浪费代币并产生无意义的Inspect输出。',
+            },
+            {
+              type: 'pro-tip',
+              label: '两框架工作流',
+              text: '最优模式：使用CO-STAR或CRAFT生成初期草稿。然后切换到RISEN进行迭代精化和自我批评。这种分离防止了模型将两个根本不同的认知任务——"创建"和"改进"——混在一起。每个框架在其特定的阶段都表现出色。',
+            },
           ],
         },
 
