@@ -83,9 +83,9 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 answers on prompt optimization, multi-model consensus, 9 frameworks, local LLM support (Ollama, LM Studio), BYOM privacy and free tier",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt Engineering Guide: 80 Articles Across 9 Topics (2026) | PromptQuorum",
-    promptEngineeringHubDescription: "80 prompt engineering guides across 9 topics: fundamentals, frameworks (CO-STAR, CRAFT, RISEN), techniques, evaluation, tools, team governance, and workflows. Updated May 2026.",
-    promptEngineeringHubOgDescription: "80 prompt engineering articles organized by skill level — covering chain-of-thought, RAG, few-shot prompting, team governance, and evaluation for GPT-4o, Claude 4.6 Opus, and Gemini 2.5 Pro.",
+    promptEngineeringHubTitle: "Prompt Engineering Guide: 80 Articles Across 9 Topics (2026)",
+    promptEngineeringHubDescription: "80 prompt engineering guides across 9 topics: frameworks, techniques, evaluation, tools, and workflows. Start with fundamentals, master advanced patterns.",
+    promptEngineeringHubOgDescription: "80 prompt engineering articles for all skill levels — chain-of-thought, RAG, few-shot prompting, team governance, and evaluation for GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 prompt engineering guides across 9 topics. Start with Fundamentals, master Evaluation & Reliability — for GPT-4o, Claude, and Gemini.",
     localLlmsHubTitle: "Best Local LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide",
     localLlmsHubDescription: "Best local LLMs April 2026 – latest Ollama models, LM Studio vs Jan.ai comparison, VRAM/GPU requirements for RTX 3060 & more. Pull commands, beginner guides & hardware recommendations.",
@@ -332,9 +332,9 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 Antworten zu Optimierung, Multi-Model-Consensus, 9 Frameworks, lokalem LLM-Support (Ollama, LM Studio), BYOM-Datenschutz und Zugang.",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt Engineering Guide: 80 Artikel in 9 Themenbereichen (2026) | PromptQuorum",
-    promptEngineeringHubDescription: "80 Prompt-Engineering-Leitfäden in 9 Themenbereichen: Grundlagen, Frameworks (CO-STAR, CRAFT, RISEN), Techniken, Evaluierung, Tools, Team-Steuerung und Prozesse. Stand Mai 2026.",
-    promptEngineeringHubOgDescription: "80 Prompt-Engineering-Artikel nach Kenntnisstufen — Chain-of-Thought, RAG, Few-Shot-Prompting, Team-Governance und Evaluierung für GPT-4o, Claude 4.6 Opus und Gemini 2.5 Pro.",
+    promptEngineeringHubTitle: "Prompt Engineering Guide: 80 Artikel in 9 Themenbereichen (2026)",
+    promptEngineeringHubDescription: "80 Prompt-Engineering-Leitfäden in 9 Themenbereichen: Frameworks, Techniken, Evaluierung, Tools und Prozesse. Grundlagen bis fortgeschrittene Muster.",
+    promptEngineeringHubOgDescription: "80 Prompt-Engineering-Artikel für alle Kenntnisstufen — Chain-of-Thought, RAG, Few-Shot, Team-Governance und Evaluierung für GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 Prompt-Engineering-Leitfäden in 9 Themenbereichen. Beginnen Sie mit Grundlagen, meistern Sie Evaluierung — für GPT-4o, Claude und Gemini.",
     localLlmsHubTitle: "Beste Lokale LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide",
     localLlmsHubDescription: "Beste lokale LLMs April 2026: aktuelle Ollama-Modelle, LM Studio vs Jan.ai Vergleich, VRAM- & GPU-Anforderungen (RTX 3060 etc.), Pull-Befehle und Hardware-Empfehlungen.",
@@ -581,9 +581,9 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 réponses sur optimisation, consensus multi-modèles, 9 frameworks, support LLM local (Ollama, LM Studio), BYOM et accès gratuit.",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Guide Prompt Engineering : 80 Articles en 9 Thématiques (2026) | PromptQuorum",
-    promptEngineeringHubDescription: "80 guides de prompt engineering en 9 thématiques : fondamentaux, frameworks (CO-STAR, CRAFT, RISEN), techniques, évaluation, outils, gouvernance d'équipe et workflows. Mis à jour mai 2026.",
-    promptEngineeringHubOgDescription: "80 articles de prompt engineering organisés par niveau — chaîne de pensée, RAG, few-shot, gouvernance d'équipe et évaluation pour GPT-4o, Claude 4.6 Opus et Gemini 2.5 Pro.",
+    promptEngineeringHubTitle: "Guide Prompt Engineering : 80 Articles en 9 Thématiques (2026)",
+    promptEngineeringHubDescription: "80 guides de prompt engineering en 9 thématiques : frameworks, techniques, évaluation, outils et workflows. Apprentissage progressif des fondamentaux aux techniques avancées.",
+    promptEngineeringHubOgDescription: "80 articles de prompt engineering pour tous niveaux — chaîne de pensée, RAG, few-shot, gouvernance d'équipe et évaluation pour GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 guides de prompt engineering en 9 thématiques. Commencez par les Fondamentaux, maîtrisez l'Évaluation — pour GPT-4o, Claude et Gemini.",
     localLlmsHubTitle: "Meilleurs LLMs Locaux Avril 2026 : Ollama, LM Studio & Guide VRAM",
     localLlmsHubDescription: "Meilleurs LLMs locaux avril 2026 : modèles Ollama les plus récents, comparaison LM Studio vs Jan.ai, exigences VRAM/GPU (RTX 3060 inclus), commandes pull et guides complets.",
@@ -830,9 +830,9 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: よくある26個の質問に完全回答 - プロンプト最適化、マルチモデルコンセンサス、9つのフレームワーク、Ollama・LM Studioなどローカルモデル対応、BYOM型プライバシー、API連携、無料試用、日本語ドキュメント、カスタマーサポート。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "プロンプトエンジニアリングガイド：9テーマ80記事（2026年）| PromptQuorum",
-    promptEngineeringHubDescription: "9テーマ80本のプロンプトエンジニアリングガイド：基礎、フレームワーク（CO-STAR、CRAFT、RISEN）、テクニック、評価、ツール、チームガバナンス、ワークフロー。2026年5月更新。",
-    promptEngineeringHubOgDescription: "スキルレベル別80本のプロンプトエンジニアリング記事 — チェーン・オブ・ソート、RAG、few-shot、チームガバナンス、評価をGPT-4o、Claude 4.6 Opus、Gemini 2.5 Pro向けに解説。",
+    promptEngineeringHubTitle: "プロンプトエンジニアリングガイド：9テーマ80記事（2026年）",
+    promptEngineeringHubDescription: "80本のプロンプトエンジニアリングガイド：フレームワーク、テクニック、評価、ツール、ワークフロー。基礎から応用パターンまで習得できます。",
+    promptEngineeringHubOgDescription: "全スキルレベル対応80本のプロンプトエンジニアリング記事 — チェーン・オブ・ソート、RAG、few-shot、チームガバナンス、評価をGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro向けに解説。",
     promptEngineeringHubTwitterDescription: "9テーマ80本のプロンプトエンジニアリングガイド。基礎から始め、評価と信頼性を習得 — GPT-4o、Claude、Gemini対応。",
     localLlmsHubTitle: "2026年4月最高のローカルLLM：Ollama・LM Studio・VRAMガイド",
     localLlmsHubDescription: "2026年4月最新ローカルLLM：Ollamaおすすめモデル、LM Studio vs Jan.ai比較、RTX 3060などVRAM/GPU必要スペック、pullコマンド付き完全ガイド。",
@@ -1079,9 +1079,9 @@ export const translations = {
     faqMetaDescription: "PromptQuorum常见问题：涵盖26个关键问答 - 包括提示词优化、多模型共识评分、9个提示框架、Ollama本地模型部署、LM Studio支持、BYOM隐私设计、API接口集成、免费试用计划、完整中文文档、多语言用户界面、专业技术支持、企业解决方案、价格对比、安全保障、用户案例。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt工程指南：9大主题80篇文章（2026）| PromptQuorum",
-    promptEngineeringHubDescription: "9大主题80篇提示词工程指南：基础知识、框架（CO-STAR、CRAFT、RISEN）、技术、评估、工具、团队治理和工作流程。2026年5月更新。",
-    promptEngineeringHubOgDescription: "按技能水平组织的80篇提示词工程文章——思维链、RAG、few-shot提示、团队治理和评估，适用于GPT-4o、Claude 4.6 Opus和Gemini 2.5 Pro。",
+    promptEngineeringHubTitle: "Prompt工程指南：9大主题80篇文章（2026）",
+    promptEngineeringHubDescription: "80篇提示词工程指南：框架、技术、评估、工具、工作流程。从基础知识到高级模式的全面学习路径。",
+    promptEngineeringHubOgDescription: "全技能水平80篇提示词工程文章——思维链、RAG、few-shot提示、团队治理和评估，适用于GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro。",
     promptEngineeringHubTwitterDescription: "9大主题80篇提示词工程指南。从基础知识开始，精通评估与可靠性——适用于GPT-4o、Claude和Gemini。",
     localLlmsHubTitle: "2026年4月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南",
     localLlmsHubDescription: "2026年4月最佳本地LLM：最新Ollama模型、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。",
