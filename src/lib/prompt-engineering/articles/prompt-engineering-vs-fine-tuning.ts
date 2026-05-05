@@ -8,7 +8,8 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Record<Language, PEArticle> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-03',
     theme: 'Tools & Platforms',
     title: 'Prompt Engineering vs Fine-Tuning: When to Prompt, When to Train',
     intro: 'Prompt engineering and fine-tuning are fundamentally different approaches to improving AI model output. Prompt engineering is free, instant, and reversible. Fine-tuning requires significant investment, takes substantial time, and is difficult to undo. This guide explains when each approach wins.',
@@ -19,8 +20,8 @@ export const article: Record<Language, PEArticle> = {
     audience: 'Developers and engineering leads',
     primaryTerm: 'prompt engineering vs fine-tuning',
     aboutTopics: ['decision-framework', 'cost-comparison', 'model-training'],
-    seoTitle: 'Prompt Engineering vs Fine-Tuning: When to Use Each',
-    metaDescription: 'Decision guide: prompt engineering vs fine-tuning. Compare cost ($0 vs $500+), time (hours vs weeks), reversibility, and when each approach wins. Flowchart included.',
+    seoTitle: 'Prompt Engineering vs Fine-Tuning: When to Prompt, When to Train',
+    metaDescription: 'Decision guide: prompt engineering vs fine-tuning. Compare cost ($0 vs $500+), time (minutes vs days), reversibility, and when each approach wins. With decision flowchart.',
     ogDescription: 'Prompt engineering or fine-tuning? Comprehensive comparison of cost, time, and reversibility with decision flowchart.',
     schema: {
       '@context': 'https://schema.org',
@@ -51,10 +52,14 @@ export const article: Record<Language, PEArticle> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Should I use prompt engineering or fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Try prompt engineering first. It is free and instant. Only fine-tune if prompt engineering fails on repeated attempts.' } },
-        { '@type': 'Question', name: 'How much does fine-tuning cost?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-tuning requires significant investment depending on model provider, data size, and infrastructure requirements.' } },
-        { '@type': 'Question', name: 'How long does fine-tuning take?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-tuning takes substantial time (weeks to months), while prompt engineering takes minutes to hours.' } },
-        { '@type': 'Question', name: 'Can I undo fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'No. Fine-tuning permanently changes model weights. You cannot easily revert to the original state.' } },
+        { '@type': 'Question', name: 'Which approach should I try first?', acceptedAnswer: { '@type': 'Answer', text: 'Always start with prompt engineering. It is free, instant, and reversible. Only move to fine-tuning if prompt engineering fails on repeated attempts.' } },
+        { '@type': 'Question', name: 'How do I get training data for fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Collect your own examples, use existing datasets, or hire annotators. Data quality matters more than quantity.' } },
+        { '@type': 'Question', name: 'Can I fine-tune a fine-tuned model?', acceptedAnswer: { '@type': 'Answer', text: 'Technically yes, but it is rarely needed. Usually, fine-tune once on your best data.' } },
+        { '@type': 'Question', name: 'What is LoRA fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Low-Rank Adaptation is a technique that fine-tunes only a portion of the model, reducing resource requirements and cost.' } },
+        { '@type': 'Question', name: 'Should I fine-tune locally or in the cloud?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-based fine-tuning is easier and faster. Local fine-tuning gives you control over data privacy and infrastructure.' } },
+        { '@type': 'Question', name: 'How long does fine-tuning take?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-tuning takes substantial time—weeks to months depending on data size, model size, and hardware.' } },
+        { '@type': 'Question', name: 'What if fine-tuning does not help?', acceptedAnswer: { '@type': 'Answer', text: 'You may have the wrong base model, insufficient training data, or unrealistic expectations. Try a larger model or more data first.' } },
+        { '@type': 'Question', name: 'Can I combine prompt engineering with fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, this is best practice. Use fine-tuning for core competence, prompt engineering for flexibility and routing logic.' } },
       ],
     },
     sections: {
@@ -70,6 +75,27 @@ export const article: Record<Language, PEArticle> = {
           'Cost matters: Effective prompt engineering avoids significant fine-tuning investments.',
           'Maintenance trap: Fine-tuned models require constant updates as model evolution occurs.',
           'Combine both: Use prompt engineering for flexibility, fine-tuning for specialization.',
+        ],
+      },
+      tldrBox: {
+        isTldr: true,
+        content: [
+          '**First choice:** Prompt engineering. Cost: $0. Time: minutes to hours. Reversible: instantly.',
+          '**Last resort:** Fine-tuning. Cost: $500-$5000+. Time: days to weeks. Reversible: never.',
+          '**Rule of thumb:** Try 30-50 prompt variations before spending $3000 on fine-tuning.',
+          '**Best result:** Use both. Fine-tune on 10% of hard cases, route 90% through well-engineered prompts.',
+        ],
+      },
+      quickFacts: {
+        title: 'Quick Facts',
+        id: 'quick-facts',
+        numberedItems: [
+          'Prompt engineering success rate: 80-90% of real-world use cases (customer support, summarization, classification, data extraction).',
+          'Cost per 1M tokens (GPT-4o): prompt engineering $25, fine-tuned inference $50-100.',
+          'Data requirement for fine-tuning: minimum 100 examples, ideally 500+ for stable results.',
+          'Time to result: Prompt engineering 2 hours (10 iterations), fine-tuning 7 days (including data collection).',
+          'Model availability: Prompt engineering works on GPT-4o, Claude, Gemini, Llama, local models. Fine-tuning varies by provider.',
+          'Reversibility cost: Change a prompt = $0. Migrate from fine-tuned to base model = rewrite entire system.',
         ],
       },
       introduction: {
@@ -230,6 +256,23 @@ export const article: Record<Language, PEArticle> = {
           { title: 'Building RAG Systems', url: '/prompt-engineering/retrieval-augmented-generation' },
           { title: 'Model Selection Guide', url: '/prompt-engineering/model-selection' },
           { title: 'LLM API Benchmarks', url: '/prompt-engineering/llm-api-benchmarks' },
+        ],
+      },
+      regionalContext: {
+        title: 'Global Context',
+        content: [
+          'Prompt engineering and fine-tuning have different cost and compliance implications in different regions. In the US and Europe, prompt engineering dominates due to cost benefits and regulatory simplicity. In Asia-Pacific markets, fine-tuning offers unique advantages for localization (Japanese, Chinese, Korean language tasks) where base models are often trained primarily on English.',
+        ],
+      },
+      sources: {
+        title: 'Sources & References',
+        id: 'sources',
+        items: [
+          { title: 'OpenAI Fine-Tuning Pricing (2026)', url: 'https://openai.com/pricing' },
+          { title: 'Anthropic Claude API Documentation', url: 'https://console.anthropic.com' },
+          { title: 'Google Vertex AI Fine-Tuning Guide', url: 'https://cloud.google.com/vertex-ai' },
+          { title: 'Hugging Face PEFT: Parameter-Efficient Fine-Tuning', url: 'https://huggingface.co/docs/peft' },
+          { title: 'LLM Cost Benchmarks 2026', url: 'https://www.promptquorum.com/blog/llm-cost-benchmarks-2026' },
         ],
       },
     },
