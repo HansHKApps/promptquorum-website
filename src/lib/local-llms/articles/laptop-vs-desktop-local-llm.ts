@@ -32,7 +32,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'When to Choose Laptop', anchor: '#when-to-choose' },
         { label: 'When to Choose Desktop', anchor: '#when-to-choose-desktop' },
         { label: '2026 Buying Guide', anchor: '#buying-guide' },
+        { label: 'Pro Tip: Hybrid Setup', anchor: '#pro-tip' },
         { label: 'Apple Silicon Deep Dive', anchor: '#apple-silicon' },
+        { label: 'Warning: Unified Memory', anchor: '#warning-unified-memory' },
+        { label: 'Throttling & UX', anchor: '#thermal-throttling-detail' },
         { label: 'Regional Considerations', anchor: '#regional-context' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Common Questions', anchor: '#faq' },
@@ -93,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         cost: {
           id: 'cost',
           title: 'What Is the True Cost of Laptop vs Desktop for AI?',
-          content: ['**Desktops deliver 2.5–7× better cost efficiency per token/sec than laptops.** A $1,500 desktop RTX 4070 Ti costs $19 per tok/sec; a MacBook Pro M5 Max ($3,500-4,000) with M5's superior speed costs $50-70 per tok/sec — still 2.5-3.5× more expensive. The new RTX 5090 ($2,500-3,000) delivers $17-25 per tok/sec for 70B models.'],
+          content: ['**Desktops deliver 2.5–7× better cost efficiency per token/sec than laptops.** A $1,500 desktop RTX 4070 Ti costs $19 per tok/sec; a MacBook Pro M5 Max ($3,500-4,000) with M5 superior speed costs $50-70 per tok/sec — still 2.5-3.5× more expensive. The new RTX 5090 ($2,500-3,000) delivers $17-25 per tok/sec for 70B models.'],
           rows: [
             { 'Option': 'MacBook Pro 16" M5 Max (128 GB)', 'Cost': '$3,500-4,000', 'LLM Speed': '55-70 tok/sec (est.)', 'Cost/tok/sec': '$50-70' },
             { 'Option': 'MacBook Pro 16" M4 Max (48 GB)', 'Cost': '$3,500+', 'LLM Speed': '35 tok/sec', 'Cost/tok/sec': '~$100' },
@@ -165,6 +168,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Chip': 'Mac Studio M2 Ultra (desktop)', 'RAM Options': '64–192 GB', 'Speed (8B)': '50–60 tok/sec', 'Max Model': '70B Q4 native', 'Throttles?': 'None' },
           ],
         },
+        proTip: {
+          id: 'pro-tip',
+          title: '🔍 Pro Tip: The Hybrid Setup Wins Every Time',
+          content: [
+            'The hybrid setup (desktop + cheap laptop) almost always beats a single expensive laptop. A $2,000 RTX 5090 desktop + $1,200 MacBook Air M5 = $3,200 total, with 120-180 tok/sec sustained at home and full portability. A $3,500-4,000 MacBook Pro M5 Max gives you 55-70 tok/sec that throttles after 15-18 minutes. The math is clear: hybrid setup delivers more performance, better reliability, and greater flexibility at lower total cost.',
+          ],
+          callouts: [
+            { type: '💡', text: 'Use the desktop for heavy workloads (70B models, APIs, batch jobs) and the MacBook for quick inference and mobile work.' },
+          ],
+        },
+        warningUnifiedMemory: {
+          id: 'warning-unified-memory',
+          title: '⚠️ Warning: Unified Memory ≠ Unlimited VRAM',
+          content: [
+            'Apple\'s "128 GB unified memory" does NOT mean 128 GB of dedicated VRAM. Unified memory is shared between CPU, GPU, OS, and user applications. A 70B model at Q4 requires ~40 GB. With macOS, background apps, and Ollama overhead, a 128 GB M5 Max has ~90-100 GB available for model weights — tight but workable. A 64 GB M5 Pro cannot run 70B at all; max practical model size is 30B at Q4.',
+          ],
+          callouts: [
+            { type: '⚠️', text: 'Always subtract 30-40 GB from the advertised unified memory when estimating available LLM memory.' },
+          ],
+        },
+        thermalThrottlingDetail: {
+          id: 'thermal-throttling-detail',
+          title: '🔍 Did You Know: Uneven Throttling Creates Bad UX',
+          content: [
+            'Thermal throttling doesn\'t just slow down inference — it degrades it unevenly. The first 500 tokens generate at full speed; tokens 500-2000 progressively slow. This means a 2,000-token response starts fast and ends slow — creating an inconsistent user experience that\'s worse than a steady slower speed. Desktop GPUs maintain consistent speed throughout, providing predictable performance.',
+          ],
+          callouts: [
+            { type: '💡', text: 'If you need consistent performance for user-facing applications, a desktop is non-negotiable. Laptops are only suitable for development and short offline work.' },
+          ],
+        },
         regionalContext: {
           id: 'regional-context',
           title: 'Regional Considerations for Local LLM Hardware',
@@ -179,10 +212,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Mistakes When Choosing a Platform for Local LLMs',
           numberedItems: [
             '**Buying a laptop expecting desktop performance.** Laptops thermally throttle after 15–20 minutes. For sustained inference (APIs, batch jobs), a desktop is the only practical choice.',
-            '**Assuming Apple Silicon beats everything.** MacBook Pro M4 Max runs 35 tok/sec on Llama 3.2 8B. A $1,500 desktop RTX 4070 Ti runs 80 tok/sec on the same model — 2.3× faster at less cost.',
-            '**Forgetting that 70B models require desktop-class VRAM.** Llama 3.3 70B at Q4 quantization needs 40+ GB VRAM — impossible on any current laptop without an eGPU.',
+            '**Assuming Apple Silicon beats everything.** MacBook Pro M5 Max reaches 55-70 tok/sec (est.) on Llama 4 Scout. A $1,500 desktop RTX 4070 Ti runs 80 tok/sec on the same model — comparable or faster at less cost. An RTX 5090 reaches 120-180 tok/sec — far superior for 70B work.',
+            '**Comparing M5 Max to M4 Max using the same model.** M5 Max has 4× faster LLM prompt processing (Apple claim) and higher memory bandwidth (460-614 GB/s vs M4 Max 410 GB/s). Benchmarks using Llama 3.2 8B on M4 Max don\'t predict M5 Max performance — use the same model on both to compare, or scale estimates accordingly.',
+            '**Assuming 70B is now practical on laptops.** M5 Max can load 70B at Q4 (~40 GB out of 128 GB), but thermal throttling limits sustained use to 15-18 minutes. For actual 70B workflows, a desktop GPU or Mac Studio is essential.',
             '**Ignoring thermal throttling in performance benchmarks.** Many benchmarks measure peak speed, not sustained speed. Always check 30-minute sustained performance, not 1-minute bursts.',
-            '**Using a desktop for on-the-go work.** If you travel frequently or work from multiple locations, a high-end laptop (MacBook Pro M4 Max or gaming laptop with 16+ GB unified/dedicated memory) is the correct tradeoff.',
+            '**Using a desktop for on-the-go work.** If you travel frequently or work from multiple locations, a high-end laptop (MacBook Pro M5 Max or gaming laptop with 16+ GB unified/dedicated memory) is the correct tradeoff.',
           ],
         },
         faqSection: {
@@ -195,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Can a MacBook Pro run large language models locally?',
-              a: 'Yes. MacBook Pro M4 Max (36–128 GB unified memory) runs Llama 3.2 8B at 35 tok/sec and Llama 3.2 13B at ~20 tok/sec using Ollama. Thermal throttling kicks in after 18–20 minutes of sustained inference. For short sessions and portability, it is a capable option.',
+              a: 'Yes. MacBook Pro M5 Max (64-128 GB unified memory) runs Llama 4 Scout at 55-70 tok/sec (est.) and can load Llama 3.3 70B (first laptop to do so). MacBook Pro M4 Max runs Llama 3.2 8B at 35 tok/sec. Thermal throttling kicks in after 15-18 minutes (M5) or 18-20 minutes (M4). For short sessions and portability, M5 is a capable option; for sustained work, a desktop is more practical.',
             },
             {
               q: 'What is thermal throttling and how does it affect local LLMs?',
@@ -203,15 +237,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How much faster is a desktop than a laptop for local LLMs?',
-              a: 'A desktop RTX 4070 Ti runs Llama 3.2 8B at 80 tok/sec sustained. A MacBook Pro M4 Max peaks at 35 tok/sec before throttling. That is a 2.3× speed difference at the same price point ($1,500 desktop vs $3,500 MacBook). An RTX 4090 desktop reaches 150 tok/sec — 4.3× faster than the MacBook.',
+              a: 'A desktop RTX 4070 Ti runs Llama 4 Scout at 80 tok/sec sustained. A MacBook Pro M5 Max reaches 55-70 tok/sec (est.) before throttling — roughly equivalent or slightly slower at a higher cost ($1,500 desktop vs $3,500-4,000 MacBook). A new RTX 5090 desktop reaches 120-180 tok/sec (est.) on Llama 4 Scout — 2× faster than M5 Max, with better cost efficiency per tok/sec ($17-25 vs $50-70).',
             },
             {
               q: 'Can a laptop run 70B models locally?',
-              a: 'No standard laptop can run Llama 3.3 70B without an external GPU enclosure. Even at Q4 quantization, a 70B model requires ~40 GB VRAM. A Mac Studio M2 Ultra can run 70B natively at 50–60 tok/sec. For non-Apple systems, a desktop with RTX 4090 (24 GB VRAM) paired with CPU offloading is the practical solution.',
+              a: 'The MacBook Pro 16" M5 Max (128 GB unified memory) is the first laptop that can technically load Llama 3.3 70B at Q4 quantization (~40 GB required). However, thermal throttling limits sustained inference to 15-18 minutes — making it impractical for real-world 70B work. A Mac Studio M2 Ultra can run 70B natively at 50–60 tok/sec with no throttling. For sustained 70B performance, a desktop with RTX 5090 (32 GB VRAM) is the most practical solution.',
             },
             {
               q: 'Is it worth buying a desktop just for local LLMs?',
-              a: 'Yes, if you run LLMs regularly. A $1,500 desktop RTX 4070 Ti costs $19 per tok/sec — compared to $140 per tok/sec for a MacBook Pro M4 Max. For daily use, batch processing, or serving a local API, a desktop pays for itself in speed and reliability within months. For occasional experimentation, a high-end laptop you already own is sufficient.',
+              a: 'Yes, if you run LLMs regularly. A $1,500 desktop RTX 4070 Ti costs $19 per tok/sec — compared to $50-70 per tok/sec for a MacBook Pro M5 Max (2.5-3.5× more expensive). A new $2,500-3,000 RTX 5090 costs $17-25 per tok/sec and handles 70B models with sustained performance. For daily use, batch processing, or serving a local API, a desktop delivers superior reliability and cost efficiency. For occasional 15-minute sessions and portability, a high-end MacBook M5 is sufficient.',
             },
           ],
         },
@@ -220,11 +254,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations for CPUs, GPUs, and RAM.',
-            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection guide: RTX 4060 through RTX 4090, plus AMD and Apple Silicon.',
+            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection guide: RTX 4060 through RTX 5090, plus AMD and Apple Silicon.',
             '[How Much VRAM Do Local LLMs Need?](/local-llms/how-much-vram-local-llm) — VRAM requirements by model size and quantization level.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Thermal and power concerns for laptops and desktops.',
             '[How to Quantize Local LLMs](/local-llms/how-to-quantize-local-llm) — Run larger models on limited VRAM with Q4/Q8 quantization.',
             '[Top Open-Source Models for Ollama](/local-llms/top-open-source-models-ollama) — Best Llama, Qwen, and Mistral models by hardware tier.',
+            '[Prompt Engineering for Local LLMs](/prompt-engineering/prompt-engineering-for-local-llms) — Optimize prompts for hardware-constrained local models.',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Which coding models fit which hardware tier.',
           ],
         },
         sources: {
@@ -241,12 +277,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Laptop vs Desktop for Local LLMs 2026: Cost, Speed & 70B Capability',
-        'description': 'Desktop RTX 4070 Ti: 80 tok/sec, $19/tok/sec. MacBook M4 Max: 35 tok/sec (throttles after 18 min), $140/tok/sec. 70B models require desktop or Mac Studio. April 2026 buying guide.',
+        'headline': 'Laptop vs Desktop for Local LLMs: 7× Cost Gap, Thermal Throttling Data & 2026 Buying Guide',
+        'description': 'Desktop RTX 4070 Ti: 80 tok/sec sustained at $19/tok/sec. MacBook M5 Max: 55-70 tok/sec (est.), throttles after 15-18 min, $50-70/tok/sec. Full thermal data, cost analysis, M5 Max 70B capability, and 2026 buying guide.',
         'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-20',
+        'dateModified': '2026-05-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -310,11 +346,11 @@ schema: {
         'inLanguage': 'en',
         'numberOfItems': 5,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16" M5 Max', 'description': '$3,500 · 25 tok/sec · $140/tok/sec · Best for: Apple ecosystem and portability (M3 generation).' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'MacBook Pro 16" M4 Max', 'description': '$3,500+ · 35 tok/sec · ~$100/tok/sec · Fastest current Mac laptop; 18-min sustained window.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Desktop RTX 4070 Ti', 'description': '$1,500 · 80 tok/sec · $19/tok/sec · Best cost efficiency for local LLMs.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Desktop RTX 4090', 'description': '$3,300 · 150 tok/sec · $22/tok/sec · Best performance; runs Llama 3.3 70B.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Mac Studio M2 Ultra', 'description': '$4,000 · 50–60 tok/sec · ~$67/tok/sec · Only consumer Mac that runs 70B natively (192 GB).' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16" M5 Max', 'description': '$3,500-4,000 · 55-70 tok/sec (est.) · $50-70/tok/sec · First laptop to load 70B; M5 generation with 4× faster LLM processing.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'MacBook Pro 16" M4 Max', 'description': '$3,500+ · 35 tok/sec · ~$100/tok/sec · Previous generation Mac laptop; 18-min sustained window.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Desktop RTX 4070 Ti', 'description': '$1,500 · 80 tok/sec · $19/tok/sec · Best cost efficiency for local LLMs on desktop.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Desktop RTX 5090', 'description': '$2,500-3,000 · 120-180 tok/sec (est.) · $17-25/tok/sec · New option: 32 GB VRAM, fits 70B on single GPU.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Mac Studio M2 Ultra', 'description': '$4,000 · 50–60 tok/sec · ~$67/tok/sec · Only consumer Mac that runs 70B natively with no throttling.' },
         ],
       },
       gammaEmbedUrl: '/presentations/laptop-vs-desktop-local-llm-static.html',
