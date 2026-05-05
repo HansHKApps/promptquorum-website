@@ -9,9 +9,15 @@ export function middleware(request: NextRequest) {
   // Skip API routes — the OG image generator depends on an explicit ?lang=en.
   const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh']
   const langParam = url.searchParams.get('lang')
-  if (langParam !== null && !VALID_NON_EN_LANGS.includes(langParam) && !url.pathname.startsWith('/api/')) {
+  const isApiRoute = url.pathname.startsWith('/api/')
+  const isCronRoute = url.pathname.startsWith('/cron/')
+
+  // Redirect if: lang param exists AND (it's 'en' OR it's invalid) AND not an API/cron route
+  if (langParam !== null && !VALID_NON_EN_LANGS.includes(langParam) && !isApiRoute && !isCronRoute) {
     const redirectUrl = url.clone()
     redirectUrl.searchParams.delete('lang')
+    // Log for debugging
+    console.log(`[Middleware] 301 redirect: ${url.toString()} -> ${redirectUrl.toString()}`)
     return NextResponse.redirect(redirectUrl, 301)
   }
 
