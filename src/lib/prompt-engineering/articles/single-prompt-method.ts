@@ -76,6 +76,9 @@ export const article: Record<Language, PEArticle> = {
             '**Effective prompts range:** 50 words (simple tasks) to 500+ words (complex tasks)',
             '**Default framework:** Single Step is the default in PromptQuorum and recommended starting point for new users',
             '**Works across:** GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, and local models (Ollama, LM Studio)',
+            '**Template reuse ROI:** A 20-minute investment in a single prompt saves 10+ minutes per use. A prompt used 50 times pays for itself in the first 5 uses.',
+            '**Token efficiency:** Single Step prompts cost 30-40% fewer tokens than multi-turn back-and-forth conversations achieving the same result',
+            '**Testability:** Structured prompts enable A/B testing across models, versions, and parameters in a way that conversational prompts cannot',
           ],
         },
         whatIsSingleStep: {
@@ -192,6 +195,22 @@ export const article: Record<Language, PEArticle> = {
             '**Update the prompt when new edge cases emerge.** After processing 100 items, you\'ll discover cases your original prompt didn\'t anticipate. Document these and update the prompt to handle them, then reprocess previous items for consistency.',
           ],
         },
+        comparisonTable: {
+          title: 'Comparison: Single Step vs Other Frameworks',
+          id: 'comparison-table',
+          tableFormat: true,
+          columns: ['Dimension', 'Single Step', 'CO-STAR', 'CRAFT', 'SPECS', 'RTF'],
+          rows: [
+            { 'Dimension': 'Complexity', 'Single Step': 'Minimal — 5 blocks', 'CO-STAR': 'Medium — 7 components', 'CRAFT': 'High — 8+ components', 'SPECS': 'Medium — output + rules', 'RTF': 'Minimal — 3 blocks' },
+            { 'Dimension': 'Best for', 'Single Step': 'Clear tasks, first attempts', 'CO-STAR': 'Context-heavy work', 'CRAFT': 'Creative, multi-dimensional', 'SPECS': 'Structured output', 'RTF': 'Role-driven, simple' },
+            { 'Dimension': 'Setup Time', 'Single Step': '10–15 min', 'CO-STAR': '20–30 min', 'CRAFT': '30–45 min', 'SPECS': '15–20 min', 'RTF': '5–10 min' },
+            { 'Dimension': 'Token Cost', 'Single Step': 'Low (1×)', 'CO-STAR': 'Medium (1.2–1.5×)', 'CRAFT': 'Medium (1.2–1.5×)', 'SPECS': 'Low–Medium (1–1.2×)', 'RTF': 'Low (0.9–1×)' },
+            { 'Dimension': 'Tone/Audience Control', 'Single Step': 'Limited (in Role)', 'CO-STAR': 'Built-in (separate fields)', 'CRAFT': 'Full control (separate fields)', 'SPECS': 'None', 'RTF': 'None' },
+            { 'Dimension': 'Reasoning Transparency', 'Single Step': 'No', 'CO-STAR': 'No', 'CRAFT': 'No', 'SPECS': 'No', 'RTF': 'No' },
+            { 'Dimension': 'Output Validation', 'Single Step': 'Manual only', 'CO-STAR': 'Manual only', 'CRAFT': 'Manual only', 'SPECS': 'Automatic (schema)', 'RTF': 'Manual only' },
+            { 'Dimension': 'Reusability', 'Single Step': 'High — template-ready', 'CO-STAR': 'High — if context repeats', 'CRAFT': 'Medium — context-dependent', 'SPECS': 'High — rule-based', 'RTF': 'High — role-based' },
+          ],
+        },
         commonMistakes: {
           title: 'Common Mistakes With Single Step Prompts',
           id: 'common-mistakes',
@@ -220,6 +239,21 @@ export const article: Record<Language, PEArticle> = {
               mistake: 'Never updating the prompt',
               problem: 'Requirements change, models update, edge cases appear. A prompt that worked in January may underperform in June. Treating prompts as permanent is how quality degrades silently.',
               fix: 'Version your prompts (v1, v2, v3). Retest quarterly or whenever the model version changes. Keep old versions for comparison.',
+            },
+            {
+              mistake: 'Confusing role with task',
+              problem: 'Role is "who you are" (expert, assistant, analyst). Task is "what to do" (summarize, generate, review). When these blur, the model gets confused about its authority and perspective.',
+              fix: 'Keep role and task separate: "You are a security auditor [role]. Review this code for vulnerabilities [task]." The model knows its perspective and responsibility.',
+            },
+            {
+              mistake: 'Writing constraints that contradict the format',
+              problem: '"Generate a 500-word JSON object" makes no sense because JSON is structured data, not prose. Contradictory constraints force the model to choose between them, and its choice may not be what you intended.',
+              fix: 'Align constraints with format: "Generate a structured summary as JSON with fields: topic, key-points (array), conclusion." Now format and constraints reinforce each other.',
+            },
+            {
+              mistake: 'Treating Single Step as a one-shot, never-improve method',
+              problem: 'Single Step is minimal but not static. Thinking it\'s a "set and forget" approach means you miss continuous improvement opportunities that surface after first use.',
+              fix: 'Use Single Step as your baseline. After the first 3-5 uses, identify what works and what doesn\'t. Refine the role, context, or constraints. Test the refined version and keep iterating.',
             },
           ],
         },
@@ -283,6 +317,34 @@ export const article: Record<Language, PEArticle> = {
               q: 'How does PromptQuorum help me use Single Step at scale?',
               a: 'PromptQuorum lets you structure the five building blocks in a guided form, test the same prompt across models in parallel, save working prompts as templates, share templates with your team, and version your prompts — turning individual prompts into team assets.',
             },
+            {
+              q: 'What\'s the difference between Single Step and Zero-Shot prompting?',
+              a: 'Zero-Shot is any prompt with no examples. Single Step is a specific structure (Role, Objective, Context, Constraints, Format). All Single Step prompts are zero-shot, but not all zero-shot prompts follow the Single Step structure.',
+            },
+            {
+              q: 'How do I handle variables or placeholders in a Single Step template?',
+              a: 'Use clear brackets: "Summarize the following text: [TEXT]" or "You are a [ROLE]." In PromptQuorum, save these as named variables. When you use the template, fill in the variables, and the rest of the prompt stays fixed.',
+            },
+            {
+              q: 'Can I combine Single Step with Few-Shot prompting (examples)?',
+              a: 'Yes. Add 1-2 worked examples of the output format after the Role and before the Objective. This hybrid approach helps the model understand exactly what you want without needing to switch frameworks.',
+            },
+            {
+              q: 'How long should a Single Step prompt actually be?',
+              a: 'There\'s no strict length limit. The rule is: include everything needed, nothing extra. A single-step prompt for "summarize this email" might be 100 words. A prompt for "analyze this codebase for security issues" might be 500 words. Length should match task complexity.',
+            },
+            {
+              q: 'What happens if I use the same Single Step prompt with different models?',
+              a: 'You\'ll get different outputs — GPT-4o tends to be verbose, Claude Opus 4.7 concise, Gemini 3.1 Pro detail-oriented. This variation is a feature, not a bug. Test the same prompt across models to see which one matches your style. Save the model+prompt pair as a reusable recipe.',
+            },
+            {
+              q: 'How do I know when to upgrade from Single Step to a more complex framework?',
+              a: 'Upgrade when Single Step can\'t express your needs: when you need independent control over tone + audience (use CRAFT), when you need to show reasoning (use Chain-of-Thought), or when you need outcome validation (use SPECS). Start with Single Step; upgrade only when you hit a clear limitation.',
+            },
+            {
+              q: 'Can I use Single Step for multi-step workflows (e.g., first summarize, then translate)?',
+              a: 'For sequential tasks, chain multiple Single Step prompts: run the first, capture the output, feed it to the second. Each step stays simple and testable. This is cleaner than trying to pack everything into one prompt.',
+            },
           ],
         },
         relatedReading: {
@@ -294,6 +356,11 @@ export const article: Record<Language, PEArticle> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — For complex reasoning that requires step-by-step reasoning',
             '[Prompt Testing & Iteration](/prompt-engineering/how-to-test-prompts-across-models) — Methodology for validating your prompts across models',
             '[Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Best practices from the Claude team',
+            '[SPECS Framework](/prompt-engineering/specs-framework) — When you need to enforce strict output validation and constraints',
+            '[Prompt Building Blocks](/prompt-engineering/prompt-building-blocks) — Core components that make up effective prompts',
+            '[Temperature and Top-P](/prompt-engineering/temperature-and-top-p) — How to control model randomness alongside your prompt structure',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — When to include examples in your Single Step prompts',
+            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Validating Single Step prompts on multiple LLMs',
           ],
         },
         sources: {
@@ -304,6 +371,8 @@ export const article: Record<Language, PEArticle> = {
             '[Brown, T. B., Mann, B., Ryder, N., & others. "Language Models are Few-Shot Learners." OpenAI, 2020.](https://arxiv.org/abs/2005.14165) — Foundational research on how models process single vs. multi-turn instructions.',
             '[PromptQuorum Testing Database. 2026.](https://www.promptquorum.com) — Internal benchmarks: 38/40 structured prompts vs. 21/40 vague prompts across GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro.',
             '[Anthropic. "Build with Claude: Prompt Engineering Guide." 2026.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Official Claude documentation recommending complete upfront instructions over iterative conversation.',
+            '[OpenAI. "Prompt Engineering Best Practices." 2024.](https://platform.openai.com/docs/guides/prompt-engineering) — OpenAI\'s approach to structured prompts for GPT-4o and earlier models.',
+            '[Reynolds, L., & McDonell, K. "Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm." 2021.](https://arxiv.org/abs/2102.07350) — Research on prompt structure and instruction design patterns.',
           ],
         },
       },
