@@ -839,7 +839,7 @@ export const article: Record<Language, PEArticle> = {
     primaryTerm: 'プロンプトエンジニアリング vs ファインチューニング',
     aboutTopics: ['decision-framework', 'cost-comparison', 'model-training'],
     seoTitle: 'プロンプトエンジニアリング vs ファインチューニング 2026',
-    metaDescription: '2026年：プロンプトエンジニアリング vs ファインチューニング。コスト比較（$0 vs $500+）、時間（分 vs 日）、可逆性を解説。判断フローチャート付き。',
+    metaDescription: '2026年判断ガイド：プロンプト工学とファインチューニング。コスト、時間、可逆性を比較。判断図付き。',
     ogDescription: 'プロンプトエンジニアリングかファインチューニング？コスト、時間、可逆性の比較と判断フローチャート。',
     schema: {
       '@context': 'https://schema.org',
