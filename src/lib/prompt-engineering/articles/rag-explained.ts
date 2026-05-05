@@ -1424,7 +1424,6 @@ export const article: Record<Language, PEArticle> = {
           callouts: [
             { type: 'info', label: 'RAG优先，其次微调', text: 'RAG添加知识（可逆：更新向量存储）。微调改变行为（永久：重新训练）。总是先用RAG获取内容，仅用微调调整风格/语调。' },
           ],
-          ],
           columns: ['因素', 'RAG', '微调'],
           rows: [
             { '因素': '知识来源', 'RAG': '在查询时从文档检索', '微调': '在训练期间烘烤到参数' },
