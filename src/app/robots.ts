@@ -10,10 +10,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/_next/static/', '/api/og/'],
       },
-      // AI crawlers: explicit allow for discovery files and blog content
+      // AI crawlers: explicit allow for discovery files, content, and social previews
       {
-        userAgent: ['GPTBot', 'OAI-SearchBot', 'PerplexityBot', 'CCBot', 'ClaudeBot', 'anthropic-ai'],
-        allow: ['/', '/blog/', '/llms.txt', '/mcp.json', '/sitemap.xml'],
+        userAgent: ['GPTBot', 'OAI-SearchBot', 'PerplexityBot', 'CCBot', 'ClaudeBot', 'anthropic-ai', 'YouBot', 'Googlebot-Extended', 'FacebookBot', 'Valerian'],
+        allow: ['/', '/api/og/', '/blog/', '/llms.txt', '/mcp.json', '/sitemap.xml'],
       },
       {
         userAgent: 'Bingbot',
