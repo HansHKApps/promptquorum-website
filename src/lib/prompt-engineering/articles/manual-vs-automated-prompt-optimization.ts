@@ -850,7 +850,423 @@ export const article: Record<Language, PEArticle> = {
       }
     }
   },
-  fr: { theme: 'Tools & Platforms', title: 'Optimization', seoTitle: 'Optimization', metaDescription: 'Optimization', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} },
+  fr: {
+    freshness_tier: 'evergreen',
+    theme: 'Tools & Platforms',
+    title: 'Optimisation manuelle vs. automatisée de prompts',
+    seoTitle: 'Manuel vs. automatisé : Choisir le bon chemin',
+    metaDescription: 'Guide décisionnel : quand accorder le prompt, quand automatiser. Coûts, délais, contrôle, reproductibilité. Avec diagramme de décision.',
+    intro: '**L\'amélioration des prompts par perfectionnement systématique s\'appelle optimisation.** Quand les réponses d\'un LLM ne sont pas satisfaisantes, vous pouvez affiner le prompt vous-même (manuel) ou laisser un outil chercher de meilleures formulations automatiquement. Ce guide clarifie quelle approche convient à votre équipe, vos délais et vos contraintes.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-04-10',
+    readTime: '7 min de lecture',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'optimisation de prompt',
+    aboutTopics: ['optimisation de prompt', 'DSPy', 'prompt engineering', 'amélioration LLM'],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Optimisation manuelle vs. automatisée de prompts',
+      description: 'Guide décisionnel : quand accorder vs. automatiser.',
+      datePublished: '2026-04-10',
+      dateModified: '2026-04-10',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/prompt-engineering/manual-vs-automated-prompt-optimization?lang=fr',
+      inLanguage: 'fr',
+      about: [
+        { '@type': 'Thing', name: 'Optimisation manuelle de prompts' },
+        { '@type': 'Thing', name: 'Optimisation automatisée de prompts' },
+        { '@type': 'Thing', name: 'Framework DSPy' },
+        { '@type': 'Thing', name: 'Meilleures pratiques prompt engineering' }
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'DSPy' },
+        { '@type': 'SoftwareApplication', name: 'Anthropic Prompt Caching' }
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Combien d\'itérations manuelles faut-il en général ?', acceptedAnswer: { '@type': 'Answer', text: '5–20 itérations selon la complexité du domaine. Tâches juridiques/médicales : 15–20 ; classification simple : 5–8.' } },
+        { '@type': 'Question', name: 'Puis-je automatiser un prompt que je ne comprends pas ?', acceptedAnswer: { '@type': 'Answer', text: 'Pas efficacement. L\'automatisation amplifie les problèmes. Comprenez d\'abord votre prompt de base.' } },
+        { '@type': 'Question', name: 'Qu\'est-ce qu\'une bonne métrique d\'optimisation ?', acceptedAnswer: { '@type': 'Answer', text: 'Spécifique, mesurable et corrélée au succès réel. « Meilleur » est vague ; « précision >95%, latence <2s » est concret.' } },
+        { '@type': 'Question', name: 'L\'automatisation fonctionne-t-elle avec GPT-4 ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais l\'API peut être coûteuse. Plus efficace avec les modèles open-source ou les endpoints mis en cache.' } },
+        { '@type': 'Question', name: 'Combien de données d\'entraînement me faut-il ?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum 5–10 exemples étiquetés ; 50+ est idéal pour des résultats robustes.' } },
+        { '@type': 'Question', name: 'Puis-je passer du manuel à l\'automatisé en cours de route ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, c\'est recommandé. Commencez manuellement, collectez 50+ exemples, puis automatisez.' } },
+        { '@type': 'Question', name: 'Et si ma métrique s\'améliore mais les utilisateurs se plaignent ?', acceptedAnswer: { '@type': 'Answer', text: 'Vous optimisez la mauvaise métrique. Auditez 10 plaintes, redéfinissez la métrique, réoptimisez.' } },
+        { '@type': 'Question', name: 'Combien de fois dois-je réoptimiser ?', acceptedAnswer: { '@type': 'Answer', text: 'Manuel : uniquement si performance baisse ou modèle change. Automatisé : trimestriellement ou si distribution change.' } },
+        { '@type': 'Question', name: 'Puis-je utiliser l\'automatisation pour le brainstorming ?', acceptedAnswer: { '@type': 'Answer', text: 'Aide à l\'exploration, mais traitez comme raffinement, pas innovation. Commencez par idéation humaine.' } },
+        { '@type': 'Question', name: 'L\'optimisation de prompt = fine-tuning de modèle ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Optimisation peaufine le texte d\'entrée ; fine-tuning ré-entraîne les poids. Domaines, coûts et ROI différents.' } }
+      ]
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        title: 'Points clés',
+        id: 'key-takeaways',
+        items: [
+          '**L\'optimisation manuelle excelle pour prompts sur mesure, à enjeux élevés** (juridique, médical, domaines spécialisés) où contrôle et traçabilité importent plus que vitesse.',
+          '**L\'automatisation met à l\'échelle des centaines/milliers de prompts** économiquement et reproductiblement, avec surveillance minimale.',
+          '**Les meilleures équipes utilisent les deux** : manuel pour recherche, automatisé pour mise en production.',
+          '**Approche hybride gagne** : 2–4h d\'optimisation manuelle, puis automatisez le raffinage à l\'échelle.'
+        ]
+      },
+      tldrBox: {
+        isTldr: true,
+        title: 'Points clés',
+        id: 'tldr',
+        content: [
+          'Choisissez **manuel** si <50 prompts, données limitées, enjeux élevés, métrique floue.',
+          'Choisissez **automatisé** si 100+ prompts, données d\'entraînement, objectif mesurable, ressources engineering.',
+          'Utilisez **les deux** : recherche manuelle → mise à l\'échelle automatisée.'
+        ]
+      },
+      quickFacts: {
+        title: 'Faits rapides',
+        id: 'quick-facts',
+        numberedItems: [
+          'Optimisation manuelle : **2–8h par prompt** ; automatisée : 30 min setup + 10–60 min optimisation.',
+          'Coûts : manuels ~0€ (temps) ; automatisés 10–500€ (API).',
+          'Précision : manuelle 95%+ sur tâches custom ; automatisée 80–90% sur métriques standard.',
+          'Skalabilité : manuelle 1–10 prompts ; automatisée 100–1.000+.',
+          'Contrôle : manuel complet ; automatisé partiel (métrique-limité).',
+          'Compétences requises : manuel haut (domaine + prompt expertise) ; automatisé bas (une fois configuré).',
+          '**Meilleures équipes** : manuel pour recherche/niches, automatisé pour haut-volume/répétitif.'
+        ]
+      },
+      introduction: {
+        title: 'Qu\'est-ce que l\'optimisation de prompt ?',
+        id: 'introduction',
+        snippets: [
+          {
+            label: 'En une phrase',
+            content: 'Optimisation de prompt améliore la qualité de sortie LLM en perfectionnant le libellé, structure, exemples ou ton.'
+          },
+          {
+            label: 'En termes simples',
+            content: 'Quand un prompt donne des réponses médiocres, affinez-le vous-même (manuel) ou laissez un outil tester des variantes automatiquement. Ce guide clarifie quelle approche convient.'
+          }
+        ],
+        content: [
+          'Chaque prompt est un pari sur le libellé qui élicitera le bon comportement du LLM. Votre pari initial perd souvent. Optimisation affine cette wette jusqu\'à fiabilité.',
+          'Deux chemins : **manuel** (vous itérez) et **automatisé** (outil cherche). Chacun a forces, faiblesses, coûts, délais. Mauvais choix = des semaines perdues.'
+        ]
+      },
+      manualExplained: {
+        title: 'Optimisation manuelle : quand vous accordez',
+        id: 'manual-explained',
+        content: [
+          'L\'optimisation manuelle est éditer prompts à la main, tester la sortie, identifier erreurs, itérer. C\'est l\'art du prompt engineering.'
+        ],
+        items: [
+          {
+            label: 'Comment ça marche',
+            content: [
+              '1. Rédigez un prompt initial.',
+              '2. Testez sur 5–10 vrais exemples.',
+              '3. Identifiez patterns d\'erreurs (ex: « prompt trop vague »).',
+              '4. Affinez libellé, ajoutez exemples, adaptez ton.',
+              '5. Re-testez.',
+              '6. Répétez jusqu\'à acceptable (5–20 itérations).'
+            ]
+          },
+          {
+            label: 'Forces',
+            content: [
+              '**Contrôle complet** : vous comprenez chaque mot.',
+              '**Feedback immédiat** : cycle tight (minutes).',
+              '**Savoir portable** : transfère à nouveaux modèles/tâches.',
+              '**Traçabilité** : chaque changement est intentionnel.',
+              '**Coûts bas** : aucun setup, frameworks, données.'
+            ]
+          },
+          {
+            label: 'Limitations',
+            content: [
+              '**Chronophage** : 2–8h ; ne scale pas.',
+              '**Ne scale pas** : 1 personne = 1–3 prompts/jour.',
+              '**Dur à reproduire** : savoir dans la tête.',
+              '**Fragile** : prompts optimisés pour une version peuvent échouer après mise à jour.',
+              '**Expertise requise** : domaine ET prompt writing.'
+            ]
+          },
+          {
+            label: 'Meilleur pour',
+            content: [
+              'Petits datasets (5–50 exemples).',
+              'Tâches à enjeux élevés (contrats, diagnostic, conseil financier).',
+              'Domaines nouveaux (pas de données historiques).',
+              'Recherche ou projets ponctuels.',
+              'Équipes sans données validées.'
+            ]
+          }
+        ]
+      },
+      automatedExplained: {
+        title: 'Optimisation automatisée : quand vous automatisez',
+        id: 'automated-explained',
+        content: [
+          'L\'optimisation automatisée utilise un framework pour chercher systématiquement de meilleurs prompts. Définissez succès, laissez l\'outil trouver.'
+        ],
+        items: [
+          {
+            label: 'Comment (exemple: DSPy)',
+            content: [
+              '1. Définissez prompt de base.',
+              '2. Fournissez exemples d\'entraînement (5–100 paires).',
+              '3. Exécutez optimiseur : génère variantes.',
+              '4. Évalue chacune vs. ensemble validation.',
+              '5. Retourne meilleur prompt (ou top-3).',
+              '6. Déployez.'
+            ]
+          },
+          {
+            label: 'Frameworks populaires',
+            content: [
+              '**DSPy** (Stanford) : recherche métrique-driven.',
+              '**Anthropic Prompt Caching** : réduit coûts API.',
+              '**LLM-as-judge** : un LLM note les variantes.',
+              '**Synthetic data** : génère données automatiquement.',
+              '**Langsmith, Braintrust** : plateformes versioning/éval.'
+            ]
+          },
+          {
+            label: 'Forces',
+            content: [
+              '**Scale sans effort** : 100–1.000+ prompts.',
+              '**Reproductible** : même input = même output.',
+              '**Trouve améliorations non-évidentes** : explore l\'espace.',
+              '**Métrique-driven** : succès mesurable.',
+              '**Coût-efficace à scale** : par-prompt baisse.'
+            ]
+          },
+          {
+            label: 'Limitations',
+            content: [
+              '**Requiert métriques claires** : but vague = échec.',
+              '**Besoin données d\'entraînement** : 5+ exemples min ; 50+ sûr.',
+              '**Overhead setup** : 30–60 min avant résultats.',
+              '**Contrôle réduit** : pourquoi ça marche ? opaque.',
+              '**Peut optimiser la mauvaise chose** : métrique up, utilisateurs mécontents.',
+              '**Coûteux d\'abord** : API, outils, compute.'
+            ]
+          },
+          {
+            label: 'Meilleur pour',
+            content: [
+              'Tâches haut-volume (100+ prompts, millions requêtes).',
+              'Systèmes production (cohérence > créativité).',
+              'Optimisation coûts (Prompt Caching).',
+              'Problèmes bien-compris, métriques claires.',
+              'Équipes avec données et ressources engineering.'
+            ]
+          }
+        ],
+        callouts: [
+          {
+            type: '🔍',
+            title: 'Fine-tuning ≠ optimisation prompt',
+            content: 'Optimisation affine le *texte prompt* ; fine-tuning ré-entraîne les *poids modèle*. Domaines, outils, délais, ROI différents. Plupart des équipes : optimiser prompts d\'abord.'
+          }
+        ]
+      },
+      comparison: {
+        title: 'Comparaison côte à côte',
+        id: 'comparison',
+        tableFormat: true,
+        columns: ['Facteur', 'Manuel', 'Automatisé'],
+        rows: [
+          { Facteur: 'Vitesse/prompt', Manuel: '2–8h', Automatisé: '30 min setup + 10–60 min' },
+          { Facteur: 'Coûts', Manuel: '~0€ (temps)', Automatisé: '10–500€ (API)' },
+          { Facteur: 'Précision', Manuel: '95%+ custom', Automatisé: '80–90% standard' },
+          { Facteur: 'Skalabilité', Manuel: '1–10', Automatisé: '100–1.000+' },
+          { Facteur: 'Contrôle', Manuel: 'Complet', Automatisé: 'Partiel' },
+          { Facteur: 'Compétences', Manuel: 'Haut', Automatisé: 'Bas' },
+          { Facteur: 'Reproductibilité', Manuel: 'Difficile', Automatisé: 'Facile' },
+          { Facteur: 'Cycles itération', Manuel: 'Semaines', Automatisé: 'Heures–jours' },
+          { Facteur: 'Savoir transféré', Manuel: 'Portable', Automatisé: 'Spécifique' },
+          { Facteur: 'Meilleur quand', Manuel: 'Enjeux haut', Automatisé: 'Volume haut' }
+        ]
+      },
+      decisionFlowchart: {
+        title: 'Diagramme décision',
+        id: 'decision-flowchart',
+        content: [
+          'Suivez ces étapes pour décider quel chemin convient.'
+        ],
+        numberedItems: [
+          '**<50 prompts à optimiser ?** OUI → Manual. NON → Étape 2.',
+          '**Définissez succès comme métrique ?** OUI → Étape 3. NON → Manuel seul.',
+          '**5+ exemples validation ?** OUI → Étape 4. NON → Commencez manuel, collectez, puis auto.',
+          '**Production (haut-volume) ou recherche (ponctuel) ?** PRODUCTION → Automatisez. RECHERCHE → Manuel.',
+          '**Décision** : Manuel ou Automatisé ?'
+        ],
+        callouts: [
+          {
+            type: '🔍',
+            title: 'Le test 90%',
+            content: 'Prompt manuel 90%+ ? Auto ne l\'aidera guère. Dessous 80% ? Essayez auto.'
+          }
+        ]
+      },
+      fiveScenarios: {
+        title: 'Cinq scénarios réels',
+        id: 'five-scenarios',
+        content: [
+          'Comment les équipes choisissent dans différentes situations :'
+        ],
+        numberedItems: [
+          '**Petite équipe, domaine custom (Analyse documents juridiques)**\n  Scénario : 5 avocats analysent contrats.\n  Décision : **Manuel** — prompts spécialisés, volume bas (10–20/an), enjeux hauts.\n  Approche : Avocat senior rédige, équipe valide.',
+          '**Entreprise, haut-volume (Routage support clients)**\n  Scénario : 100.000 tickets/mois, classer urgence.\n  Décision : **Automatisé** — haut-volume, métrique claire, scale essentielle.\n  Approche : DSPy + données historiques → prompts optimisés.',
+          '**Recherche explorant technique nouvelle**\n  Scénario : Tester si chain-of-thought améliore code generation.\n  Décision : **Manuel d\'abord, puis Auto** — 5–10 variantes manuelles, puis recherche sys.',
+          '**Pipeline ML production, budget serré**\n  Scénario : 1M appels/mois, réduire coûts 30%.\n  Décision : **Automatisé (Prompt Caching)** — haut-volume, coûts métrique.\n  Approche : Cache prompts fréquents, optimize longueur.',
+          '**Tâche ponctuelle, délai tight**\n  Scénario : Prompt extraction entités, 50 docs, 2h.\n  Décision : **Manuel** — petit volume, délai serré, auto setup trop long.\n  Approche : Itérez sur 50 exemples, déployez.'
+        ]
+      },
+      hybrid: {
+        title: 'Combiner les deux : approches hybrides',
+        id: 'hybrid-approaches',
+        content: [
+          'Meilleures équipes ne choisissent pas ; combinent. Commencez manuel, puis automatisez à scale.'
+        ],
+        items: [
+          {
+            label: 'Pattern 1 : Recherche manuelle → Production auto',
+            content: 'Optimisez manuellement 2–4h. Puis automatisez à scale production. Ex: 1 jour optimisation → déploiement 10K requêtes.'
+          },
+          {
+            label: 'Pattern 2 : Baseline auto → Raffinement manuel',
+            content: 'Auto produit top-3. Inspectez manuellement, combinez les meilleures idées. Ex: Outil génère 1.000 variantes, choisissez 3 patterns, mergez.'
+          },
+          {
+            label: 'Pattern 3 : Skalage progressif',
+            content: 'Phase 1 (mois 1) : Manuel sur 5–10 ex. Phase 2 (mois 2) : Auto dès 50+ examples. Phase 3 (mois 3+) : Auto monitoring + human-in-loop edge cases.'
+          }
+        ],
+        callouts: [
+          {
+            type: '🔍',
+            title: 'Le piège maintenance',
+            content: 'N\'automatisez pas ce que vous ne maîtrisez pas manuellement d\'abord. Auto sur prompts mal-compris = debugging impossible. Maîtrisez d\'abord.'
+          }
+        ]
+      },
+      commonMistakes: {
+        title: 'Cinq erreurs courantes',
+        id: 'common-mistakes',
+        mistakes: [
+          {
+            mistake: 'Automatiser trop tôt',
+            problem: 'Auto sur baseline faible gaspille compute (garbage in = garbage out) et produit prompts optimisés-mais-inutiles.',
+            fix: '2–3h optimisation manuelle d\'abord. Atteignez 80%+ avant auto refinement.'
+          },
+          {
+            mistake: 'Oublier valider résultats auto',
+            problem: 'Auto converge sur métrique qui ne corrèle pas au succès réel (mauvaise chose optimisée).',
+            fix: 'Toujours sampler et vérifier manuellement top-N prompts avant déployement. Testez out-of-distribution.'
+          },
+          {
+            mistake: 'Un prompt pour tous contextes',
+            problem: 'Essayer optimiser one-size-fits-all au lieu de segmenter par use-case, type user, distribution données.',
+            fix: 'Créez prompts + workflows optimization séparés. Ex: « Enquête client » vs. « Support technique » vs. « Escalade ».'
+          },
+          {
+            mistake: 'Ignorer trade-off longueur/coûts',
+            problem: 'Auto ajoute tokens (clarté, exemples, reasoning), hausse coûts API sans bénéfice proportionnel.',
+            fix: 'Définissez contrainte coût en métrique. Ex: accuracy + (token_count × cost_per_token).'
+          },
+          {
+            mistake: 'Traiter manual tuning comme done',
+            problem: 'Modèle change, attentes users évoluent, mais prompts manuels stagnent et perdent efficacité.',
+            fix: 'Automatisez monitoring. Performance baisse >5% ? Re-tune ou automatisez. Réoptimisation Q3 standard.'
+          }
+        ]
+      },
+      faqSection: {
+        title: 'FAQ',
+        id: 'faq',
+        faqs: [
+          {
+            q: 'Combien d\'itérations manuelles faut-il en général ?',
+            a: '5–20 itérations selon complexité. Juridique/médical : 15–20 ; classification simple : 5–8.'
+          },
+          {
+            q: 'Puis-je automatiser un prompt que je ne comprends pas ?',
+            a: 'Pas efficacement. Auto amplifie problèmes. Comprenez baseline d\'abord.'
+          },
+          {
+            q: 'Qu\'est-ce qu\'une bonne métrique d\'optimisation ?',
+            a: 'Spécifique, mesurable, corrélée au succès réel. « Meilleur » est vague ; « précision >95%, latence <2s » est concret.'
+          },
+          {
+            q: 'L\'automatisation fonctionne-t-elle avec GPT-4 ?',
+            a: 'Oui, mais coûts API élevés. Plus efficace avec modèles open-source ou endpoints cachés.'
+          },
+          {
+            q: 'Combien de données d\'entraînement ?',
+            a: 'Min 5–10 exemples étiquetés ; 50+ idéal pour résultats robustes.'
+          },
+          {
+            q: 'Passer du manuel à l\'automatisé en cours ?',
+            a: 'Oui, recommandé. Commencez manuel, collectez 50+, puis automatisez.'
+          },
+          {
+            q: 'Et si métrique monte mais users complaining ?',
+            a: 'Mauvaise métrique. Auditez 10 plaintes, redéfinissez, réoptimisez.'
+          },
+          {
+            q: 'Combien souvent réoptimiser ?',
+            a: 'Manuel : seulement si perfo baisse/modèle change. Auto : trimestriellement ou si distribution change.'
+          },
+          {
+            q: 'Utiliser auto pour brainstorm ?',
+            a: 'Aide exploration, mais traitez comme raffinement, pas innovation. Idéation humaine d\'abord.'
+          },
+          {
+            q: 'Optimisation prompt = fine-tuning ?',
+            a: 'Non. Optimisation peaufine texte input ; fine-tuning ré-entraîne poids. Domaines, coûts, ROI différents.'
+          }
+        ]
+      },
+      relatedReading: {
+        title: 'Lectures connexes',
+        id: 'related-reading',
+        items: [
+          '[Rédiger des prompts qui marchent](/prompt-engineering/how-to-write-prompts-that-work?lang=fr)',
+          '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr)',
+          '[In-Context Learning et Few-Shot](/prompt-engineering/in-context-learning-few-shot-prompting?lang=fr)',
+          '[Prompt Engineering vs. Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=fr)',
+          '[Évaluer la qualité LLM](/prompt-engineering/evaluating-llm-output-quality?lang=fr)',
+          '[Documentation DSPy](https://github.com/stanfordnlp/dspy) — framework official'
+        ]
+      },
+      regionalContext: {
+        title: 'Contexte régional & organisationnel',
+        id: 'regional-context',
+        content: [
+          'Cette décision s\'applique mondialement. Cadres réglementaires (RGPD, data residency) peuvent favoriser l\'optimisation manuelle où traçabilité est critique.',
+          'En industries régulées (santé, finance, droit), l\'optimisation manuelle gagne souvent : trail clair pour compliance. Auto est opaque ; humains ne peuvent pas expliquer pourquoi un prompt a été choisi.',
+          'En recherche, auto brille : testez milliers variantes, rapportez findings agrégés. Contrôle < important que couverture.',
+          'La plupart des équipes finissent hybride : manuel pour recherche/fondations, auto pour scaling/monitoring.',
+          'Pour données sensibles professionnelles (données clients, conseils financiers, diagnostics), la Commission nationale de l\'informatique et des libertés (CNIL) recommande l\'IA locale quand vous gérez données sensibles. L\'optimisation manuelle offre transparence ; l\'automatisation distribuée ou cloud-based pose risques de résidency.'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        id: 'sources',
+        items: [
+          '[Dépôt DSPy GitHub](https://github.com/stanfordnlp/dspy) — framework optimisation prompt systématique',
+          '[Documentation Anthropic Prompt Caching](https://docs.anthropic.com) — réduire coûts API',
+          '[Guide Prompt Engineering OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — techniques optimisation manuelle',
+          '[Article DSPy Stanford](https://arxiv.org/abs/2310.03714) — recherche optimisation prompt/programme LLM automatisée',
+          'Études cas interne PromptQuorum — optimisation manuelle + automatisée en systèmes production'
+        ]
+      }
+    }
+  },
   ja: { theme: 'Tools & Platforms', title: 'Optimization', seoTitle: 'Optimization', metaDescription: 'Optimization', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} },
   zh: { freshness_tier: 'evergreen', theme: 'Tools & Platforms', title: 'Optimization', seoTitle: 'Optimization', metaDescription: 'Optimization', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} }
 };
