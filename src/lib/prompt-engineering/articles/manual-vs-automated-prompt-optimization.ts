@@ -1684,5 +1684,336 @@ export const article: Record<Language, PEArticle> = {
       }
     }
   },
-  zh: { freshness_tier: 'evergreen', theme: 'Tools & Platforms', title: 'Optimization', seoTitle: 'Optimization', metaDescription: 'Optimization', intro: '[Translation coming soon](/prompt-engineering/best-prompt-engineering-tools-2026?lang=en).', publishDate: '2026-04-10', readTime: '8 min', educationalLevel: 'Intermediate', sections: {} }
+  zh: {
+    freshness_tier: 'evergreen',
+    theme: 'Tools & Platforms',
+    title: 'Prompt优化：手动 vs 自动化',
+    seoTitle: 'Prompt优化 : 手动调优与自动化',
+    metaDescription: '决策指南：何时手动调整Prompt，何时自动化。成本、时间、可控性、可再现性对比。含决策流程图。',
+    intro: '**通过系统化改进来提升LLM输出质量的过程称为优化。** 当LLM的回答不令人满意时，你可以手动调整Prompt（手动方式），或者让工具自动搜索更好的表述（自动化方式）。本指南澄清了哪种方法适合你的团队、时间表和约束条件。',
+    publishDate: '2026-04-10',
+    dateModified: '2026-04-10',
+    readTime: '阅读约8分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Prompt优化',
+    aboutTopics: ['Prompt优化', 'DSPy', 'Prompt工程', 'LLM改进'],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Prompt优化：手动 vs 自动化',
+      description: '决策指南：手动调整 vs 自动化。',
+      datePublished: '2026-04-10',
+      dateModified: '2026-04-10',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/prompt-engineering/manual-vs-automated-prompt-optimization?lang=zh',
+      inLanguage: 'zh',
+      about: [
+        { '@type': 'Thing', name: '手动Prompt优化' },
+        { '@type': 'Thing', name: '自动化Prompt优化' },
+        { '@type': 'Thing', name: 'DSPy框架' },
+        { '@type': 'Thing', name: 'Prompt工程最佳实践' }
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'DSPy' },
+        { '@type': 'SoftwareApplication', name: 'Anthropic Prompt Caching' }
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: '手动调整通常需要多少次迭代？', acceptedAnswer: { '@type': 'Answer', text: '根据领域复杂度，5～20次迭代。法律/医疗任务：15～20次；简单分类：5～8次。' } },
+        { '@type': 'Question', name: '我能自动化我不理解的Prompt吗？', acceptedAnswer: { '@type': 'Answer', text: '不能有效自动化。自动化会放大问题。先理解基础Prompt，然后再自动优化。' } },
+        { '@type': 'Question', name: '什么是好的优化指标？', acceptedAnswer: { '@type': 'Answer', text: '具体、可测量且与真实用户成功相关联。"更好"太模糊；"精度>95%，延迟<2秒"很具体。' } },
+        { '@type': 'Question', name: '自动优化对GPT-4等商用模型有效吗？', acceptedAnswer: { '@type': 'Answer', text: '有效，但API调用成本高。开源模型或缓存端点成本更低。' } },
+        { '@type': 'Question', name: '自动优化需要多少训练数据？', acceptedAnswer: { '@type': 'Answer', text: '最少5～10个标注样本；50+个样本更能确保健壮结果。' } },
+        { '@type': 'Question', name: '项目中途能从手动切换到自动化吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，且推荐这样做。手动开始，收集50+个样本，然后切换到自动化。' } },
+        { '@type': 'Question', name: '如果指标改善但用户仍然投诉怎么办？', acceptedAnswer: { '@type': 'Answer', text: '你在优化错误的指标。审查10条用户投诉，重新定义指标，然后重新优化。' } },
+        { '@type': 'Question', name: '多久应该重新优化一次Prompt？', acceptedAnswer: { '@type': 'Answer', text: '手动：仅在性能下降或模型变化时。自动化：每季度，或数据分布有重大变化时。' } },
+        { '@type': 'Question', name: '能用自动优化进行头脑风暴吗？', acceptedAnswer: { '@type': 'Answer', text: '可以帮助探索，但要视为改进而非创新。从人类创意开始，然后自动化优化。' } },
+        { '@type': 'Question', name: 'Prompt优化等同于模型微调吗？', acceptedAnswer: { '@type': 'Answer', text: '不同。优化调整输入文本；微调重新训练模型权重。不同领域、成本和ROI。' } }
+      ]
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        title: '核心要点',
+        id: 'key-takeaways',
+        items: [
+          '**手动优化擅长定制化、高风险Prompt**（法律、医疗、行业特定）——控制和审计追踪比速度更重要。',
+          '**自动化以经济高效且可再现的方式扩展数百至数千个Prompt**——最少人工监督。',
+          '**最好的团队两者都用**：研究用手动，生产扩展用自动。',
+          '**混合方法胜出**：2～4小时手动基础优化，然后自动化数据集范围内的优化。'
+        ]
+      },
+      tldrBox: {
+        isTldr: true,
+        title: '核心要点',
+        id: 'tldr',
+        content: [
+          '选择**手动**：Prompt<50个、数据有限、风险高、指标模糊。',
+          '选择**自动化**：Prompt 100+个、有训练数据、目标可测、有工程资源。',
+          '**同时使用**：手动研究→自动生产扩展。'
+        ]
+      },
+      quickFacts: {
+        title: '快速事实',
+        id: 'quick-facts',
+        numberedItems: [
+          '手动优化：**每个Prompt 2～8小时**；自动化：30分钟配置+10～60分钟优化。',
+          '成本：手动~¥0（人工）；自动化¥100～5,000（API调用、工具）。',
+          '精度：手动定制任务 95%+；自动化标准指标 80～90%。',
+          '可扩展性：手动1～10个；自动化 100～1,000+。',
+          '控制：手动=完全；自动化=部分（指标受限）。',
+          '技能要求：手动=高（领域+Prompt专业知识）；自动化=低（配置后）。',
+          '**最好的团队**：研究/利基用手动，高体量反复任务用自动化。'
+        ]
+      },
+      introduction: {
+        title: 'Prompt优化是什么？',
+        id: 'introduction',
+        snippets: [
+          {
+            label: '一句话',
+            content: 'Prompt优化通过调整措辞、结构、示例或语气来改善LLM输出质量。'
+          },
+          {
+            label: '简单说',
+            content: '当Prompt给出平庸答案时，你可以手动改进Prompt或让工具自动尝试变体。本指南澄清哪种方法适合你的团队、时间表和约束。'
+          }
+        ],
+        content: [
+          'Prompt是你对LLM的赌注：用什么措辞会诱发正确行为。你的初始赌注通常失败。优化就是精化这个赌注，直到LLM可靠地做你想要的事。',
+          '两条路：**手动**（你反复）和**自动化**（工具搜索）。各有优缺点、成本和时间表。选错会浪费数周。'
+        ]
+      },
+      manualExplained: {
+        title: '手动Prompt优化',
+        id: 'manual-explained',
+        content: [
+          '手动优化是手工编辑Prompt、测试输出、识别失败模式、反复迭代。这是Prompt工程的艺术。'
+        ],
+        items: [
+          {
+            label: '工作流程',
+            content: [
+              '1.编写初始Prompt。2.在5～10个真实例子上测试。3.识别失败模式。4.调整措辞、添加示例、调整语气。5.重新测试。6.重复，直到满意（通常5～20次迭代）。'
+            ]
+          },
+          {
+            label: '优势',
+            content: '**完全控制**：理解每个词汇和为什么在那里。**即时反馈**：测试-迭代-学习周期紧凑。**可转移知识**：学到的转移到新模型/新任务。**审计追踪**：每项改变可文档化。**低初始成本**：无需框架或数据。'
+          },
+          {
+            label: '局限',
+            content: '**耗时**：每个Prompt 2～8小时。**不可扩展**：1人1天1～3个。**难复现**：知识在人脑中。**脆弱**：针对一版本优化的可能在更新后失效。**需专业知识**：需领域和Prompt能力。'
+          },
+          {
+            label: '适用于',
+            content: '小型数据集（5～50例）、高风险任务（法律/医疗）、陌生领域、研究或单次项目、无标注数据的团队。'
+          }
+        ]
+      },
+      automatedExplained: {
+        title: '自动化Prompt优化',
+        id: 'automated-explained',
+        content: [
+          '自动化优化使用框架系统地搜索更好的Prompt。定义成功，让工具找到。'
+        ],
+        items: [
+          {
+            label: '工作方式（示例DSPy）',
+            content: '1.定义基础Prompt。2.提供训练样本（5～100标注对）。3.运行优化器生成数千变体。4.评估每个对验证集。5.返回最佳Prompt。6.部署。'
+          },
+          {
+            label: '流行框架',
+            content: '**DSPy**：指标驱动搜索。**Prompt Caching**：降低API成本。**LLM-as-judge**：用LLM评分。**合成数据**：自动生成。**Langsmith/Braintrust**：版本/评估/监控。'
+          },
+          {
+            label: '优势',
+            content: '**轻松扩展**：100～1,000+ Prompt。**可再现**：相同输入=相同输出。**发现非显而易见改进**。**指标驱动**：成功可测。**经济高效**：大规模单位成本低。'
+          },
+          {
+            label: '局限',
+            content: '**需清晰指标**：模糊目标=失败。**需训练数据**：最少5～10。**配置开销**：30～60分钟。**控制减少**。**可能优化错误的东西**。**初期成本高**。'
+          },
+          {
+            label: '适用于',
+            content: '高体量（100+Prompt、数百万查询）、生产系统、成本优化、问题清晰指标明、有数据和资源的团队。'
+          }
+        ],
+        callouts: [
+          {
+            type: '🔍',
+            title: '微调≠Prompt优化',
+            content: '优化调整**Prompt文本**（你问什么）；微调重新训练**模型权重**（LLM如何思考）。不同工具、时间表、ROI。'
+          }
+        ]
+      },
+      comparison: {
+        title: '手动 vs 自动化',
+        id: 'comparison',
+        tableFormat: true,
+        columns: ['因素', '手动', '自动化'],
+        rows: [
+          { '因素': '单Prompt速度', '手动': '2～8小时', '自动化': '30分钟+10～60分钟' },
+          { '因素': '成本', '手动': '~¥0', '自动化': '¥100～5,000' },
+          { '因素': '精度', '手动': '95%+', '自动化': '80～90%' },
+          { '因素': '可扩展性', '手动': '1～10', '自动化': '100～1,000+' },
+          { '因素': '控制', '手动': '完全', '自动化': '部分' },
+          { '因素': '技能要求', '手动': '高', '自动化': '低' },
+          { '因素': '再现性', '手动': '困难', '自动化': '容易' },
+          { '因素': '迭代周期', '手动': '数周', '自动化': '数小时～天' },
+          { '因素': '知识转移', '手动': '可移植', '自动化': '任务特定' },
+          { '因素': '最适于', '手动': '风险高数据少', '自动化': '体量高指标清' }
+        ]
+      },
+      decisionFlowchart: {
+        title: '决策流程图',
+        id: 'decision-flowchart',
+        content: [
+          '按这些步骤判断方向。'
+        ],
+        numberedItems: [
+          '**Prompt<50个？** 是→手动。否→步骤2。',
+          '**能定义成功指标？** 是→步骤3。否→仅手动。',
+          '**有5+验证样本？** 是→步骤4。否→手动收集数据后自动。',
+          '**生产还是研究？** 生产→自动。研究→手动。',
+          '**决定**：手动还是自动化？'
+        ],
+        callouts: [
+          {
+            type: '🔍',
+            title: '90%测试',
+            content: '手动Prompt达90%？自动化帮助不大。低于80%？尝试自动化。'
+          }
+        ]
+      },
+      fiveScenarios: {
+        title: '五个真实场景',
+        id: 'five-scenarios',
+        content: [
+          '不同情况的选择方式：'
+        ],
+        numberedItems: [
+          '**法律文件审查**：小团队、高度特化、低体量、高风险→**手动**。',
+          '**客户支持路由**：企业、大体量、清晰指标→**自动化**。',
+          '**新技术研究**：Chain-of-Thought测试→**手动优先+自动扩展**。',
+          '**生产ML、预算受限**：大体量、成本是指标→**自动化（Caching）**。',
+          '**单次任务、时间紧**：小体量、2小时期限→**手动**。'
+        ]
+      },
+      hybrid: {
+        title: '混合方法',
+        id: 'hybrid-approaches',
+        content: [
+          '最好的团队组合两者：手动洞察→自动扩展。'
+        ],
+        items: [
+          {
+            label: '模式1：手动研究→自动生产',
+            content: '2～4小时手动优化→自动生产扩展。例：1天优化→10K查询。'
+          },
+          {
+            label: '模式2：自动基础→手动改进',
+            content: '自动化得前3名→手动检查合并最佳。'
+          },
+          {
+            label: '模式3：分阶段扩展',
+            content: '月1手动5～10例→月2自动50+→月3+监控+边界Human。'
+          }
+        ],
+        callouts: [
+          {
+            type: '🔍',
+            title: '维护陷阱',
+            content: '不自动化未手动掌握的流程。先掌握，再自动化。'
+          }
+        ]
+      },
+      commonMistakes: {
+        title: '五个常见错误',
+        id: 'common-mistakes',
+        mistakes: [
+          {
+            mistake: '过早自动化',
+            problem: '弱基础自动化浪费计算、产生无用Prompt。',
+            fix: '2～3小时手动优化。80%+精度后自动。'
+          },
+          {
+            mistake: '忽视自动结果验证',
+            problem: '自动化收敛到无关指标。',
+            fix: '样本并手动审查前N个Prompt再部署。'
+          },
+          {
+            mistake: '万能Prompt',
+            problem: '尝试优化通用Prompt，不分段。',
+            fix: '场景分离Prompt+工作流。'
+          },
+          {
+            mistake: '忽视长度成本权衡',
+            problem: '自动化添加token，成本增加。',
+            fix: '指标中设成本约束。'
+          },
+          {
+            mistake: '手动调优视为完成',
+            problem: '模型更新/期望变，优化停滞失效。',
+            fix: '监控自动化、季度重新优化。'
+          }
+        ]
+      },
+      faqSection: {
+        title: '常见问题',
+        id: 'faq',
+        faqs: [
+          { q: '手动需多少次迭代？', a: '5～20次，根据复杂度。法律/医疗15～20；简单5～8。' },
+          { q: '能自动化不理解的Prompt？', a: '不能。自动化放大问题。先理解基础。' },
+          { q: '什么是好指标？', a: '具体、可测、与成功相关。"更好"太模糊；"精度>95%"很清。' },
+          { q: '自动化对商用模型有效？', a: '有效但API成本高。开源更经济。' },
+          { q: '需多少训练数据？', a: '最少5～10；50+更安全。' },
+          { q: '中途能切换自动化？', a: '可以，推荐。手动→50+样本→自动。' },
+          { q: '指标上升但用户投诉？', a: '优化错误指标。审查10条投诉，重定义。' },
+          { q: '多久重新优化？', a: '手动：仅性能下降/模型变化。自动：季度。' },
+          { q: '自动优化做头脑风暴？', a: '可帮助探索，视为改进非创新。' },
+          { q: 'Prompt优化=微调？', a: '不同。优化调文本；微调重训练。不同领域成本ROI。' }
+        ]
+      },
+      relatedReading: {
+        title: '相关阅读',
+        id: 'related-reading',
+        items: [
+          '[如何编写有效Prompt](/prompt-engineering/how-to-write-prompts-that-work?lang=zh)',
+          '[Chain-of-Thought提示](/prompt-engineering/chain-of-thought-prompting?lang=zh)',
+          '[上下文学习和少样本](/prompt-engineering/in-context-learning-few-shot-prompting?lang=zh)',
+          '[Prompt工程 vs 微调](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=zh)',
+          '[评估LLM输出质量](/prompt-engineering/evaluating-llm-output-quality?lang=zh)',
+          '[DSPy官方文档](https://github.com/stanfordnlp/dspy)'
+        ]
+      },
+      regionalContext: {
+        title: '区域背景',
+        id: 'regional-context',
+        content: [
+          '本决策适用全球。受管制行业（医疗、金融、法律）手动优化胜出：清晰合规证迹。自动化不透明。',
+          '研究中自动化大放异彩：测数千变体，汇总。',
+          '多数团队混合：研究手动，生产自动。',
+          '中国、亚太地区：数据法规（《数据安全法》、跨境框架）可能利本地推理。自动化分布式/云可能带数据驻留风险。手动提供透明。'
+        ]
+      },
+      sources: {
+        title: '来源',
+        id: 'sources',
+        items: [
+          '[DSPy GitHub](https://github.com/stanfordnlp/dspy) — 系统框架',
+          '[Anthropic Caching](https://docs.anthropic.com) — 降低成本',
+          '[OpenAI 指南](https://platform.openai.com/docs/guides/prompt-engineering) — 手动实践',
+          '[Stanford论文](https://arxiv.org/abs/2310.03714) — 自动研究',
+          'PromptQuorum案例 — 混合优化'
+        ]
+      }
+    }
+  }
+};
 };
