@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Sources',
           items: [
             '[OpenAI API Pricing](https://openai.com/pricing) — Official GPT-4 and GPT-3.5 API pricing per token',
-            '[Anthropic Claude Pricing](https://www.anthropic.com/pricing) — Claude 4.6 Opus, Sonnet, and Haiku API pricing',
+            '[Anthropic Claude Pricing](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet, Sonnet, and Haiku API pricing',
             '[Ollama Tool Calling Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — Local model function calling API reference',
             '[LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — Multi-agent orchestration framework for local and cloud LLMs',
             'Multimodal input opens new workflows, but image prompting requires different techniques. Learn how to caption, structure, and prompt images: [beyond text: prompting with images](https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images) covers vision-language prompting.',
@@ -483,7 +483,7 @@ schema: {
           title: 'Quellen',
           items: [
             '[OpenAI API Pricing](https://openai.com/pricing) — Offizielle Preisgestaltung von GPT-4 und GPT-3.5 API pro Token',
-            '[Anthropic Claude Pricing](https://www.anthropic.com/pricing) — Claude 4.6 Opus, Sonnet und Haiku API-Preisgestaltung',
+            '[Anthropic Claude Pricing](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet, Sonnet und Haiku API-Preisgestaltung',
             '[Ollama Tool Calling Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — Referenz zur lokalen Modell-Function-Calling-API',
             '[LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — Multi-Agent-Orchestrierungs-Framework für lokale und Cloud-LLMs',
           ],
@@ -756,7 +756,7 @@ schema: {
           title: 'Sources',
           items: [
             '[Tarification API OpenAI](https://openai.com/pricing) — Tarification officielle GPT-4 et GPT-3.5 API par token',
-            '[Tarification Anthropic Claude](https://www.anthropic.com/pricing) — Tarification Claude 4.6 Opus, Sonnet et Haiku API',
+            '[Tarification Anthropic Claude](https://www.anthropic.com/pricing) — Tarification Claude 4.6 Sonnet, Sonnet et Haiku API',
             '[Documentation Ollama Tool Calling](https://github.com/ollama/ollama/blob/main/docs/api.md) — Référence API appel de fonction modèles locaux',
             '[Documentation LangGraph](https://langchain-ai.github.io/langgraph/) — Framework orchestration multi-agents pour LLMs locaux et Cloud',
           ],
@@ -1029,7 +1029,7 @@ schema: {
           title: '情報源',
           items: [
             '[OpenAI API価格設定](https://openai.com/pricing) — GPT-4/GPT-3.5 API公式トークンあたり価格',
-            '[Anthropic Claude価格設定](https://www.anthropic.com/pricing) — Claude 4.6 Opus/Sonnet/Haiku API価格',
+            '[Anthropic Claude価格設定](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet/Sonnet/Haiku API価格',
             '[Ollama Tool Calling Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — Local model関数呼び出しAPI リファレンス',
             '[LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — Local/Cloud LLM対応マルチエージェント オーケストレーション',
           ],
@@ -1302,7 +1302,7 @@ schema: {
           title: '参考资源',
           items: [
             '[OpenAI API价格](https://openai.com/pricing) — GPT-4和GPT-3.5官方API令牌价格',
-            '[Anthropic Claude价格](https://www.anthropic.com/pricing) — Claude 4.6 Opus、Sonnet和Haiku API价格',
+            '[Anthropic Claude价格](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet、Sonnet和Haiku API价格',
             '[Ollama工具调用文档](https://github.com/ollama/ollama/blob/main/docs/api.md) — 本地模型函数调用API参考',
             '[LangGraph文档](https://langchain-ai.github.io/langgraph/) — 本地和云端LLM的多代理编排框架',
           ],

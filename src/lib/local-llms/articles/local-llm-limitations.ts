@@ -99,7 +99,7 @@ schema: {
         numberOfItems: 6,
         inLanguage: 'en',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Maximum output quality is required', description: 'Legal documents, complex code generation, advanced research analysis. Use GPT-5.5 or Claude 4.6 Opus.' },
+          { '@type': 'ListItem', position: 1, name: 'Maximum output quality is required', description: 'Legal documents, complex code generation, advanced research analysis. Use GPT-5.5 or Claude 4.6 Sonnet.' },
           { '@type': 'ListItem', position: 2, name: 'Real-time information is needed', description: 'Current news, live data, URL retrieval. Local models have a training cutoff.' },
           { '@type': 'ListItem', position: 3, name: 'Setup time is a constraint', description: 'For a quick prototype or one-off task, a cloud API key is faster to get working than a local install.' },
           { '@type': 'ListItem', position: 4, name: 'Your hardware is limited', description: 'On a machine with 4-6 GB RAM, local inference is marginal. Cloud APIs produce better results with zero hardware strain.' },
@@ -208,7 +208,7 @@ schema: {
         qualityGap: {
           title: 'Why Are Local LLMs Worse Than GPT-5.5 on Complex Tasks?',
           content: [
-            '**The most significant limitation of local LLMs is output quality on complex tasks.** Frontier cloud models -- OpenAI GPT-5.5, Anthropic Claude 4.6 Opus, Google Gemini 3.1 Pro -- are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model. Open-weight alternatives like Llama 3.3, Qwen2.5, and Mistral (deployed via Ollama, LM Studio, or llama.cpp) cannot match this scale.',
+            '**The most significant limitation of local LLMs is output quality on complex tasks.** Frontier cloud models -- OpenAI GPT-5.5, Anthropic Claude 4.6 Sonnet, Google Gemini 3.1 Pro -- are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model. Open-weight alternatives like Llama 3.3, Qwen2.5, and Mistral (deployed via Ollama, LM Studio, or llama.cpp) cannot match this scale.',
             'On MMLU (general knowledge), HumanEval (Python coding), and MATH benchmarks, frontier models score 85-92%. The best locally-runnable 70B models (Llama 3.3 70B, Qwen2.5 72B) score 75-85%. Consumer-friendly 7B models score 55-70%.',
             'The quality gap is task-dependent. For summarization, simple Q&A, translation, and code explanation, a 7B model produces results that are difficult to distinguish from GPT-5.5 in blind evaluations. The gap is widest on: complex multi-step reasoning, advanced mathematics, nuanced long-form writing, and tasks requiring current world knowledge.',
             'Local model limitations overlap with broader LLM constraints — hallucinations, reasoning failures, and knowledge cutoffs affect all models regardless of deployment. For the complete picture of what LLMs still cannot do reliably, see [AI limitations: what LLMs can\'t do](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).',
@@ -399,7 +399,7 @@ schema: {
         whenCloud: {
           title: 'When Should You Use a Cloud API Instead of a Local LLM?',
           items: [
-            '**Maximum output quality is required** -- legal documents, complex code generation, advanced research analysis. Use GPT-5.5 or Claude 4.6 Opus. For a full comparison, see [Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis).',
+            '**Maximum output quality is required** -- legal documents, complex code generation, advanced research analysis. Use GPT-5.5 or Claude 4.6 Sonnet. For a full comparison, see [Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis).',
             '**Real-time information is needed** -- current news, live data, URL retrieval. Local models have a training cutoff.',
             '**Setup time is a constraint** -- for a quick prototype or one-off task, a cloud API key is faster to get working than a local install.',
             '**Your hardware is limited** -- on a machine with 4-6 GB RAM, local inference is marginal. Cloud APIs produce better results with zero hardware strain.',
@@ -413,7 +413,7 @@ schema: {
           content: [
             'Local LLMs are the wrong choice in these scenarios:',
             '',
-            '**Complex multi-step reasoning** -- Your task requires breaking down a problem, using intermediate results, and iterating. Local 7B models fail on these tasks. Use GPT-5.5 or Claude 4.6 Opus instead.',
+            '**Complex multi-step reasoning** -- Your task requires breaking down a problem, using intermediate results, and iterating. Local 7B models fail on these tasks. Use GPT-5.5 or Claude 4.6 Sonnet instead.',
             '',
             '**Real-time information requirements** -- You need current news, live data feeds, or the ability to visit URLs. Local models have a training cutoff and no internet access. Cloud APIs with web search are required.',
             '',

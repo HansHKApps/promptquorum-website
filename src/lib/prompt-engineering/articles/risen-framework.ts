@@ -12,7 +12,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'RISEN Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
       intro: 'The RISEN Framework is a 5-step iterative structure for improving AI outputs through structured revision cycles. Instead of accepting the first draft or rewriting from scratch, you use RISEN to systematically refine, audit, evaluate, and plan next improvements. Each step has a distinct purpose: Refine improves the draft, Inspect documents every change, Summarize explains what the new version does, Evaluate scores against criteria, and Next Steps recommends further edits. RISEN turns "make this better" into a transparent, repeatable workflow.',
-      leadAnswerBlock: '**RISEN is a 5-step iterative refinement framework: Refine improves the draft, Inspect lists every change with justification, Summarize explains the new version, Evaluate scores it against criteria (1-5 scale), and Next Steps recommends 3 focused improvements for the next cycle. Use RISEN when you already have a draft and want controlled, auditable improvement with an audit trail. The Inspect step uniquely forces the model to document changes — making revisions traceable. In 2026, RISEN is built into PromptQuorum as a multi-model dispatch option, letting you test the same RISEN cycle across GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro simultaneously to compare refinement approaches.**',
+      leadAnswerBlock: '**RISEN is a 5-step iterative refinement framework: Refine improves the draft, Inspect lists every change with justification, Summarize explains the new version, Evaluate scores it against criteria (1-5 scale), and Next Steps recommends 3 focused improvements for the next cycle. Use RISEN when you already have a draft and want controlled, auditable improvement with an audit trail. The Inspect step uniquely forces the model to document changes — making revisions traceable. In 2026, RISEN is built into PromptQuorum as a multi-model dispatch option, letting you test the same RISEN cycle across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro simultaneously to compare refinement approaches.**',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       lastFactChecked: '2026-05-04 — RISEN framework original paper (Yao et al., 2023), PromptQuorum native RISEN implementation',
@@ -30,7 +30,7 @@ export const article: Record<Language, PEArticle> = {
         'Use RISEN when you already have a draft, document, or plan. Don\'t use it for first-draft generation — pair it with CO-STAR or CRAFT for that.',
         'The Inspect step is unique: it forces the model to list every specific change and justify each one, creating an audit trail. No other framework has this built-in accountability.',
         'Typical workflow: 2-4 RISEN cycles to reach production quality from a rough draft. Each cycle produces 3 outputs: improved content, change log (Inspect), and action plan (Next Steps).',
-        'Works with any model: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and local models via Ollama or LM Studio. Larger models (13B+) handle multi-step structure better; 7B models may need steps separated.',
+        'Works with any model: GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models via Ollama or LM Studio. Larger models (13B+) handle multi-step structure better; 7B models may need steps separated.',
         'RISEN + CO-STAR combo pattern: Use CO-STAR for first-draft generation, then switch to RISEN for iterative improvement. Separates "create" from "refine" — two fundamentally different tasks.',
       ],
 
@@ -61,7 +61,7 @@ export const article: Record<Language, PEArticle> = {
             'Use RISEN for iterative refinement (improving existing drafts). Don\'t use it for first-draft generation — combine it with CO-STAR or CRAFT for that phase.',
             'The Inspect step is unique: it forces the model to list every specific change and justify it. This creates an audit trail — you can see exactly what changed and why.',
             'Typical workflow: 2-4 RISEN cycles to reach production quality. Each cycle produces improved content, a change log, and recommendations for the next iteration.',
-            'RISEN works with any model: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Ollama, LM Studio. Larger models (13B+) handle the multi-step structure better.',
+            'RISEN works with any model: GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, LM Studio. Larger models (13B+) handle the multi-step structure better.',
             'In PromptQuorum, RISEN is built-in. Send the same RISEN cycle to multiple models simultaneously and compare how each model refines differently.',
             'Use PromptQuorum to test RISEN patterns across models — see which model\'s refinement approach best matches your goals.',
           ],
@@ -75,7 +75,7 @@ export const article: Record<Language, PEArticle> = {
             { type: 'in-plain-terms', text: 'Instead of saying "improve this" and hoping, you tell the AI to fix it (Refine), list what it changed (Inspect), explain what the new version does (Summarize), rate itself (Evaluate), and suggest what to fix next (Next Steps). You repeat until it\'s done.' },
           ],
           content: [
-            '**The RISEN Framework is an iterative prompt pattern designed for refining existing drafts, analyses, and plans through multiple improvement cycles.** Instead of treating each prompt as a one-off task, you guide a model like GPT-5.5, Claude Opus 4.7, or Gemini 3.1 Pro through a structured, repeatable improvement loop. This makes your workflow more like continuous editing than random trial-and-error.',
+            '**The RISEN Framework is an iterative prompt pattern designed for refining existing drafts, analyses, and plans through multiple improvement cycles.** Instead of treating each prompt as a one-off task, you guide a model like GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro through a structured, repeatable improvement loop. This makes your workflow more like continuous editing than random trial-and-error.',
             'RISEN is especially useful when you already have a first version — such as a draft article, strategy note, code snippet, or analysis — and you want the model to improve it in a controlled, auditable way. Each RISEN step has a distinct purpose, which keeps revisions focused and traceable.',
             'The framework gets its name from its five stages: **R**efine (improve the draft), **I**nspect (identify changes), **S**ummarize (explain what changed), **E**valuate (score against criteria), and **N**ext steps (recommend improvements).',
           ],
@@ -252,7 +252,7 @@ export const article: Record<Language, PEArticle> = {
             {
               mistake: 'Not comparing RISEN outputs across models',
               problem: 'Different models refine differently. Claude tends toward conciseness; GPT tends toward elaboration; Gemini focuses on user experience. Running RISEN on one model limits your perspective.',
-              fix: 'Use PromptQuorum to run the same RISEN cycle across GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro. Compare which model\'s refinements best match your goals.',
+              fix: 'Use PromptQuorum to run the same RISEN cycle across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. Compare which model\'s refinements best match your goals.',
             },
           ],
         },
@@ -266,7 +266,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Plug in an existing draft and apply a pre-structured "Refine–Inspect–Summarize–Evaluate–Next steps" pattern without writing the full meta-prompt yourself.',
-            'Send the same RISEN-based instructions to multiple models — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — in parallel and compare how each one refines and critiques the draft.',
+            'Send the same RISEN-based instructions to multiple models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro — in parallel and compare how each one refines and critiques the draft.',
             'Save RISEN templates for recurring workflows (e.g., "blog draft refinement", "technical documentation review", "sales deck polish") and share them with your team.',
             'View complete revision history for every RISEN cycle, making the improvement process transparent and auditable.',
           ],
@@ -316,7 +316,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Can I combine RISEN with multi-model testing?',
-              a: 'Yes. Use PromptQuorum to send the same RISEN cycle to GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro simultaneously. Compare which model\'s refinements, self-critique scores, and next-step suggestions best match your requirements.',
+              a: 'Yes. Use PromptQuorum to send the same RISEN cycle to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously. Compare which model\'s refinements, self-critique scores, and next-step suggestions best match your requirements.',
             },
             {
               q: 'Does RISEN add overhead in token cost?',
@@ -358,7 +358,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=en',
         'inLanguage': 'en',
-        keywords: ['RISEN Framework', 'iterative prompting', 'prompt refinement', 'multi-step workflows', 'prompt engineering', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+        keywords: ['RISEN Framework', 'iterative prompting', 'prompt refinement', 'multi-step workflows', 'prompt engineering', 'PromptQuorum', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -368,9 +368,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -388,7 +388,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'How many RISEN cycles do I need?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typically 2-4 cycles. Stop when the Evaluate scores plateau and Next Steps suggestions become minor tweaks rather than substantive improvements.' } },
           { '@type': 'Question', 'name': 'Can I use RISEN with local models?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. RISEN works with any LLM that follows instructions — including local models via Ollama or LM Studio. Larger models (13B+) handle multi-step structure better; 7B models may need steps separated.' } },
           { '@type': 'Question', 'name': 'What makes the Inspect step special?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The Inspect step forces the model to list every specific change it made, creating an audit trail. You can see exactly what changed between versions and judge whether each change improved the output.' } },
-          { '@type': 'Question', 'name': 'Can I combine RISEN with multi-model testing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Use PromptQuorum to send the same RISEN cycle to GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro simultaneously. Compare which model\'s refinements best match your requirements.' } },
+          { '@type': 'Question', 'name': 'Can I combine RISEN with multi-model testing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Use PromptQuorum to send the same RISEN cycle to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously. Compare which model\'s refinements best match your requirements.' } },
           { '@type': 'Question', 'name': 'Does RISEN add overhead in token cost?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Each RISEN cycle generates 2-5× more output tokens than a single-pass prompt. Use RISEN selectively on high-stakes tasks. For quick edits, prefer single-step prompts.' } },
         ],
       },
@@ -415,7 +415,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'RISEN-Framework: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
       intro: 'Das RISEN-Framework ist eine 5-stufige iterative Struktur zur systematischen Verbesserung von KI-Ausgaben durch strukturierte Revisionszyklen. Statt den ersten Entwurf zu akzeptieren oder von Grund auf neu zu schreiben, nutzen Sie RISEN für kontrollierte Verbesserung mit vollständiger Audit-Spur. Jeder Schritt hat einen eindeutigen Zweck: Refine verbessert den Entwurf, Inspect dokumentiert jede Änderung, Summarize erklärt die neue Version, Evaluate bewertet gegen Kriterien, und Next Steps empfiehlt weitere Verbesserungen. RISEN verwandelt „machen Sie das besser" in einen transparenten, wiederholbaren Arbeitsablauf.',
-      leadAnswerBlock: '**RISEN ist eine 5-stufige iterative Verbesserungsschleife: Refine verbessert den Entwurf, Inspect listet jede Änderung mit Begründung auf, Summarize erklärt die neue Version, Evaluate bewertet sie gegen Kriterien (1–5 Skala), und Next Steps empfiehlt 3 fokussierte Verbesserungen für den nächsten Zyklus. Verwenden Sie RISEN, wenn Sie bereits einen Entwurf haben und kontrollierte, nachverfolgbare Verbesserung mit Audit-Trail wünschen. Der Inspect-Schritt zwingt das Modell eindeutig dazu, Änderungen zu dokumentieren — wodurch Revisionen nachverfolgbar werden. 2026 ist RISEN in PromptQuorum als Multi-Modell-Dispatch-Option integriert, mit der Sie denselben RISEN-Zyklus über GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro parallel testen können, um Verbesserungsansätze zu vergleichen.**',
+      leadAnswerBlock: '**RISEN ist eine 5-stufige iterative Verbesserungsschleife: Refine verbessert den Entwurf, Inspect listet jede Änderung mit Begründung auf, Summarize erklärt die neue Version, Evaluate bewertet sie gegen Kriterien (1–5 Skala), und Next Steps empfiehlt 3 fokussierte Verbesserungen für den nächsten Zyklus. Verwenden Sie RISEN, wenn Sie bereits einen Entwurf haben und kontrollierte, nachverfolgbare Verbesserung mit Audit-Trail wünschen. Der Inspect-Schritt zwingt das Modell eindeutig dazu, Änderungen zu dokumentieren — wodurch Revisionen nachverfolgbar werden. 2026 ist RISEN in PromptQuorum als Multi-Modell-Dispatch-Option integriert, mit der Sie denselben RISEN-Zyklus über GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro parallel testen können, um Verbesserungsansätze zu vergleichen.**',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '13 Min. Lesezeit',
@@ -432,7 +432,7 @@ export const article: Record<Language, PEArticle> = {
         'Verwenden Sie RISEN, wenn Sie bereits einen Entwurf, ein Dokument oder einen Plan haben. Verwenden Sie es nicht für Erst-Draft-Generierung — kombinieren Sie es mit CO-STAR oder CRAFT dafür.',
         'Der Inspect-Schritt ist einzigartig: Er zwingt das Modell, jede spezifische Änderung aufzulisten und jede zu rechtfertigen, wodurch ein Audit-Trail entsteht. Kein anderes Framework hat dies.',
         'Typischer Arbeitsablauf: 2–4 RISEN-Zyklen, um Produktionsqualität aus einem groben Entwurf zu erreichen. Jeder Zyklus erzeugt 3 Ausgaben: verbesserter Inhalt, Änderungsprotokoll (Inspect) und Aktionsplan (Next Steps).',
-        'Funktioniert mit jedem Modell: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle über Ollama oder LM Studio. Größere Modelle (13B+) verarbeiten Multi-Schritt-Struktur besser.',
+        'Funktioniert mit jedem Modell: GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle über Ollama oder LM Studio. Größere Modelle (13B+) verarbeiten Multi-Schritt-Struktur besser.',
         'RISEN + CO-STAR Combo-Muster: Verwenden Sie CO-STAR für Erst-Draft-Generierung, wechseln Sie dann zu RISEN für iterative Verbesserung. Trennt „Erstellen" von „Verfeinern" — zwei fundamental unterschiedliche Aufgaben.',
       ],
 
@@ -464,7 +464,7 @@ export const article: Record<Language, PEArticle> = {
             'Verwenden Sie RISEN für iterative Verfeinerung (bestehende Entwürfe verbessern). Verwenden Sie es nicht für Erst-Draft-Generierung — kombinieren Sie es mit CO-STAR oder CRAFT für diese Phase.',
             'Der Inspect-Schritt ist einzigartig: Er zwingt das Modell, jede spezifische Änderung aufzulisten und zu rechtfertigen. Dies erzeugt einen Audit-Trail — Sie können genau sehen, was sich geändert hat und warum.',
             'Typischer Arbeitsablauf: 2–4 RISEN-Zyklen, um Produktionsqualität zu erreichen. Jeder Zyklus erzeugt verbesserten Inhalt, ein Änderungsprotokoll und Empfehlungen für die nächste Iteration.',
-            'RISEN funktioniert mit jedem Modell: GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Ollama, LM Studio. Größere Modelle (13B+) verarbeiten die Multi-Schritt-Struktur besser.',
+            'RISEN funktioniert mit jedem Modell: GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, LM Studio. Größere Modelle (13B+) verarbeiten die Multi-Schritt-Struktur besser.',
             'In PromptQuorum ist RISEN integriert. Senden Sie denselben RISEN-Zyklus an mehrere Modelle gleichzeitig und vergleichen Sie, wie jedes Modell unterschiedlich verfeinert.',
             'Verwenden Sie PromptQuorum, um RISEN-Muster über Modelle hinweg zu testen — sehen Sie, welcher Verbesserungsansatz eines Modells am besten zu Ihren Zielen passt.',
           ],
@@ -478,7 +478,7 @@ export const article: Record<Language, PEArticle> = {
             { type: 'in-plain-terms', text: 'Anstatt zu sagen „verbessere das" und es zu hoffen, sagen Sie der KI, es soll das beheben (Refine), auflisten, was es geändert hat (Inspect), erklären, was die neue Version macht (Summarize), sich selbst bewerten (Evaluate) und vorschlagen, was weiter zu beheben ist (Next Steps). Sie wiederholen, bis es fertig ist.' },
           ],
           content: [
-            '**Das RISEN-Framework ist ein iteratives Prompt-Muster, das für die Verfeinerung bestehender Entwürfe, Analysen und Pläne durch mehrere Verbesserungszyklen entwickelt wurde.** Anstatt jeden Prompt als Einmalaufgabe zu behandeln, führen Sie ein Modell wie GPT-5.5, Claude Opus 4.7 oder Gemini 3.1 Pro durch eine strukturierte, wiederholbare Verbesserungsschleife. Dies macht Ihren Arbeitsablauf weniger wie zufälliges Ausprobieren und mehr wie kontinuierliche Bearbeitung.',
+            '**Das RISEN-Framework ist ein iteratives Prompt-Muster, das für die Verfeinerung bestehender Entwürfe, Analysen und Pläne durch mehrere Verbesserungszyklen entwickelt wurde.** Anstatt jeden Prompt als Einmalaufgabe zu behandeln, führen Sie ein Modell wie GPT-4o, Claude 4.6 Sonnet oder Gemini 2.5 Pro durch eine strukturierte, wiederholbare Verbesserungsschleife. Dies macht Ihren Arbeitsablauf weniger wie zufälliges Ausprobieren und mehr wie kontinuierliche Bearbeitung.',
             'RISEN ist besonders nützlich, wenn Sie bereits eine erste Version haben — wie einen Entwurfartikel, eine Strategienotiz, einen Code-Snippet oder eine Analyse — und möchten, dass das Modell es auf kontrollierte, nachverfolgbare Weise verbessert. Jeder RISEN-Schritt hat einen eindeutigen Zweck, der Revisionen fokussiert und nachverfolgbar hält.',
             'Das Framework erhält seinen Namen von seinen fünf Stufen: **R**efine (den Entwurf verbessern), **I**nspect (Änderungen identifizieren), **S**ummarize (erklären, was sich geändert hat), **E**valuate (gegen Kriterien bewerten) und **N**ext steps (Verbesserungen empfehlen).',
           ],
@@ -656,7 +656,7 @@ export const article: Record<Language, PEArticle> = {
             {
               mistake: 'RISEN-Ausgaben nicht über Modelle hinweg vergleichen',
               problem: 'Unterschiedliche Modelle verfeinern unterschiedlich. Claude neigt zu Prägnanz; GPT neigt zu Ausarbeitung; Gemini konzentriert sich auf Benutzerfreundlichkeit. Das Ausführen von RISEN auf einem Modell begrenzt Ihre Perspektive.',
-              fix: 'Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus über GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro parallel auszuführen. Vergleichen Sie, welche Verbesserungen eines Modells am besten zu Ihren Zielen passen.',
+              fix: 'Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus über GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro parallel auszuführen. Vergleichen Sie, welche Verbesserungen eines Modells am besten zu Ihren Zielen passen.',
             },
           ],
         },
@@ -670,7 +670,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Einen bestehenden Entwurf einzufügen und ein vorgefertigtes „Refine–Inspect–Summarize–Evaluate–Next steps"-Muster anzuwenden, ohne das vollständige Meta-Prompt selbst zu schreiben.',
-            'Senden Sie dieselben RISEN-basierten Anweisungen an mehrere Modelle — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — parallel und vergleichen Sie, wie jedes den Entwurf verfeinert und kritisiert.',
+            'Senden Sie dieselben RISEN-basierten Anweisungen an mehrere Modelle — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro — parallel und vergleichen Sie, wie jedes den Entwurf verfeinert und kritisiert.',
             'Speichern Sie RISEN-Vorlagen für wiederkehrende Arbeitsabläufe (z.B. „Blog-Entwurf-Verfeinerung", „Technische Dokumentation Review", „Verkaufsdeck Polieren") und teilen Sie sie mit Ihrem Team.',
             'Vollständige Revisionshistorie für jeden RISEN-Zyklus anzeigen, um den Verbesserungsprozess transparent und nachverfolgbar zu machen.',
           ],
@@ -720,7 +720,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Kann ich RISEN mit Multi-Modell-Tests kombinieren?',
-              a: 'Ja. Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus an GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro gleichzeitig zu senden. Vergleichen Sie, welche Modell-Verbesserungen, Selbstkritik-Bewertungen und Next-Step-Vorschläge am besten zu Ihren Anforderungen passen.',
+              a: 'Ja. Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus an GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro gleichzeitig zu senden. Vergleichen Sie, welche Modell-Verbesserungen, Selbstkritik-Bewertungen und Next-Step-Vorschläge am besten zu Ihren Anforderungen passen.',
             },
             {
               q: 'Erhöht RISEN die Token-Kosten?',
@@ -770,7 +770,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=de',
         'inLanguage': 'de',
-        keywords: ['RISEN-Framework', 'iteratives Prompting', 'Prompt-Verfeinerung', 'Prompt Engineering', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+        keywords: ['RISEN-Framework', 'iteratives Prompting', 'Prompt-Verfeinerung', 'Prompt Engineering', 'PromptQuorum', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -780,9 +780,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -800,7 +800,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'Wie viele RISEN-Zyklen benötige ich?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typischerweise 2–4 Zyklen. Stoppen Sie, wenn die Bewertungsergebnisse abflachen und Next Steps-Vorschläge eher geringfügige Anpassungen statt substantieller Verbesserungen werden.' } },
           { '@type': 'Question', 'name': 'Kann ich RISEN mit lokalen Modellen verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. RISEN funktioniert mit jedem LLM, das Anweisungen folgt — einschließlich lokaler Modelle über Ollama oder LM Studio. Größere Modelle (13B+) verarbeiten die Multi-Schritt-Struktur besser.' } },
           { '@type': 'Question', 'name': 'Was macht den Inspect-Schritt besonders?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Inspect-Schritt zwingt das Modell, jede spezifische Änderung aufzulisten, wodurch ein Audit-Trail entsteht. Sie können genau sehen, was sich zwischen Versionen geändert hat und warum jede Änderung vorgenommen wurde.' } },
-          { '@type': 'Question', 'name': 'Kann ich RISEN mit Multi-Modell-Tests kombinieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus an GPT-5.5, Claude Opus 4.7 und Gemini 3.1 Pro gleichzeitig zu senden. Vergleichen Sie, welche Modell-Verbesserungen am besten zu Ihren Anforderungen passen.' } },
+          { '@type': 'Question', 'name': 'Kann ich RISEN mit Multi-Modell-Tests kombinieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Verwenden Sie PromptQuorum, um denselben RISEN-Zyklus an GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro gleichzeitig zu senden. Vergleichen Sie, welche Modell-Verbesserungen am besten zu Ihren Anforderungen passen.' } },
           { '@type': 'Question', 'name': 'Erhöht RISEN die Token-Kosten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Jeder RISEN-Zyklus generiert 2–5× mehr Output-Tokens als ein Single-Pass-Prompt. Verwenden Sie RISEN selektiv bei hochrangigen Aufgaben. Für schnelle Änderungen bevorzugen Sie Single-Schritt-Prompts.' } },
           { '@type': 'Question', 'name': 'Muss ich bei der Verwendung von RISEN die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Sie vertrauliche interne Dokumente verfeinern. Für DSGVO-sensible Arbeitsabläufe verwenden Sie lokal gehostete Modelle (Ollama, LM Studio) über PromptQuorum oder Anthropic EU-Angebote, die Standards erfüllen.' } },
           { '@type': 'Question', 'name': 'Ist RISEN für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. RISEN ist besonders für Mittelstand-Unternehmen geeignet. Es hilft bei iterativer Verbesserung von Compliance-Dokumenten, technischen Spezifikationen und Qualitätssicherung — Bereiche, in denen der deutsche Mittelstand hohe Standards erwartet.' } },
@@ -829,7 +829,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'Framework RISEN : Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
       intro: 'Le Framework RISEN est une structure itérative en 5 étapes pour améliorer systématiquement les résultats de l\'IA via des cycles de révision structurés. Au lieu d\'accepter le premier brouillon ou de tout réécrire, utilisez RISEN pour une amélioration contrôlée avec traçabilité intégrale. Chaque étape a un objectif distinct : Refine améliore le brouillon, Inspect documente chaque changement, Summarize explique la nouvelle version, Evaluate l\'évalue contre des critères, et Next Steps recommande des améliorations futures. RISEN transforme « améliorez ceci » en workflow transparent et reproductible.',
-      leadAnswerBlock: '**RISEN est une boucle itérative en 5 étapes : Refine améliore le brouillon, Inspect liste chaque changement avec justification, Summarize explique la nouvelle version, Evaluate la note selon des critères (échelle 1–5), et Next Steps recommande 3 améliorations ciblées pour le prochain cycle. Utilisez RISEN quand vous avez déjà un brouillon et souhaitez une amélioration contrôlée et traçable avec audit trail. L\'étape Inspect force le modèle à documenter les changements — rendant les révisions traçables. En 2026, RISEN est intégré à PromptQuorum comme option multi-modèles, permettant de tester le même cycle RISEN sur GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro en parallèle.**',
+      leadAnswerBlock: '**RISEN est une boucle itérative en 5 étapes : Refine améliore le brouillon, Inspect liste chaque changement avec justification, Summarize explique la nouvelle version, Evaluate la note selon des critères (échelle 1–5), et Next Steps recommande 3 améliorations ciblées pour le prochain cycle. Utilisez RISEN quand vous avez déjà un brouillon et souhaitez une amélioration contrôlée et traçable avec audit trail. L\'étape Inspect force le modèle à documenter les changements — rendant les révisions traçables. En 2026, RISEN est intégré à PromptQuorum comme option multi-modèles, permettant de tester le même cycle RISEN sur GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro en parallèle.**',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '13 min de lecture',
@@ -846,7 +846,7 @@ export const article: Record<Language, PEArticle> = {
         'Utilisez RISEN quand vous avez un brouillon. Ne l\'utilisez pas pour génération initiale — combinez avec CO-STAR ou CRAFT pour cela.',
         'L\'étape Inspect est unique : force le modèle à lister chaque changement spécifique et justifier. Crée un audit trail intégral.',
         'Workflow type : 2–4 cycles RISEN pour atteindre qualité production depuis brouillon brut. Chaque cycle produit : contenu amélioré, journal des changements (Inspect), plan d\'actions (Next Steps).',
-        'Fonctionne avec tous les modèles : GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, modèles locaux via Ollama ou LM Studio.',
+        'Fonctionne avec tous les modèles : GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, modèles locaux via Ollama ou LM Studio.',
         'Pattern RISEN + CO-STAR : utilisez CO-STAR pour génération initiale, basculez à RISEN pour amélioration itérative. Sépare « créer » de « raffiner ».',
       ],
 
@@ -878,7 +878,7 @@ export const article: Record<Language, PEArticle> = {
             'Utilisez RISEN pour affinage itératif. Ne l\'utilisez pas pour génération initiale — combinez avec CO-STAR ou CRAFT pour cette phase.',
             'L\'étape Inspect est unique : force le modèle à lister chaque changement spécifique et le justifier. Crée un audit trail complet.',
             'Workflow type : 2–4 cycles RISEN pour qualité production. Chaque cycle produit contenu amélioré, journal des changements et recommandations.',
-            'RISEN fonctionne avec tous les modèles : GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, Ollama, LM Studio.',
+            'RISEN fonctionne avec tous les modèles : GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, LM Studio.',
             'Dans PromptQuorum, RISEN est intégré. Envoyez le même cycle RISEN à plusieurs modèles simultanément et comparez.',
             'Utilisez PromptQuorum pour tester RISEN — voyez quel approche de raffinement correspond le mieux à vos objectifs.',
           ],
@@ -892,7 +892,7 @@ export const article: Record<Language, PEArticle> = {
             { type: 'in-plain-terms', text: 'Au lieu de dire « améliorez ceci » et espérer, dites au modèle de corriger (Refine), lister les changements (Inspect), expliquer la nouvelle version (Summarize), s\'auto-évaluer (Evaluate) et proposer les prochaines améliorations (Next Steps). Vous répétez jusqu\'à obtention du résultat.' },
           ],
           content: [
-            '**Le Framework RISEN est un pattern itératif conçu pour affiner les brouillons, analyses et plans via plusieurs cycles d\'amélioration.** Au lieu de traiter chaque prompt comme une tâche unique, vous guidez un modèle comme GPT-5.5, Claude Opus 4.7 ou Gemini 3.1 Pro via une boucle structurée et reproductible. Cela rend votre workflow moins essai-erreur et plus édition continue.',
+            '**Le Framework RISEN est un pattern itératif conçu pour affiner les brouillons, analyses et plans via plusieurs cycles d\'amélioration.** Au lieu de traiter chaque prompt comme une tâche unique, vous guidez un modèle comme GPT-4o, Claude 4.6 Sonnet ou Gemini 2.5 Pro via une boucle structurée et reproductible. Cela rend votre workflow moins essai-erreur et plus édition continue.',
             'RISEN excelle quand vous avez une première version — article brouillon, note stratégique, snippet code, analyse — et souhaitez que le modèle l\'améliore de façon contrôlée et traçable. Chaque étape RISEN a un objectif distinct, gardant les révisions ciblées et documentées.',
             'Le framework tire son nom de ses cinq étapes : **R**efine (améliorer le brouillon), **I**nspect (identifier les changements), **S**ummarize (expliquer ce qui a changé), **E**valuate (évaluer selon critères), et **N**ext steps (recommander améliorations).',
           ],
@@ -1070,7 +1070,7 @@ export const article: Record<Language, PEArticle> = {
             {
               mistake: 'Ne pas comparer sorties RISEN entre modèles',
               problem: 'Modèles différents affinent différemment. Claude vers concision ; GPT vers élaboration ; Gemini expérience utilisateur. Un modèle limite perspective.',
-              fix: 'Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro parallèle. Comparez approches.',
+              fix: 'Utilisez PromptQuorum envoyant même cycle RISEN à GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro parallèle. Comparez approches.',
             },
           ],
         },
@@ -1084,7 +1084,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             'Brancher brouillon existant et appliquer pattern pré-structuré « Refine–Inspect–Summarize–Evaluate–Next steps » sans écrire meta-prompt.',
-            'Envoyer même instructions RISEN-basées à modèles multiples — GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — parallèle et comparer affinages.',
+            'Envoyer même instructions RISEN-basées à modèles multiples — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro — parallèle et comparer affinages.',
             'Sauvegarder templates RISEN pour workflows récurrents (ex. « blog draft refinement », « product copy review ») et partager équipe.',
             'Historique révisions complet pour chaque cycle RISEN, rendant amélioration process transparent et traçable.',
           ],
@@ -1134,7 +1134,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'Puis-je combiner RISEN avec tests multi-modèles?',
-              a: 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro simultanément. Comparez améliorations, critiques, suggestions.',
+              a: 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro simultanément. Comparez améliorations, critiques, suggestions.',
             },
             {
               q: 'RISEN augmente-t-il coût tokens?',
@@ -1184,7 +1184,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=fr',
         'inLanguage': 'fr',
-        keywords: ['Framework RISEN', 'prompting itératif', 'raffinement prompts', 'ingénierie prompts', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+        keywords: ['Framework RISEN', 'prompting itératif', 'raffinement prompts', 'ingénierie prompts', 'PromptQuorum', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -1194,9 +1194,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -1214,7 +1214,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'Combien de cycles RISEN faut-il?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typiquement 2–4 cycles. Arrêtez quand ratings s\'aplatissent et Next Steps suggestions mineures plutôt substancielles.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser RISEN avec modèles locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. RISEN fonctionne avec n\'importe LLM suivant instructions — incluant modèles locaux via Ollama ou LM Studio. Modèles plus grands (13B+) gèrent mieux.' } },
           { '@type': 'Question', 'name': 'Qu\'est-ce qui rend l\'étape Inspect spéciale?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Inspect force modèle lister chaque changement spécifique, créant audit trail. Vous voyez exactement quoi changé entre versions et pourquoi.' } },
-          { '@type': 'Question', 'name': 'Puis-je combiner RISEN avec tests multi-modèles?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro simultanément. Comparez améliorations et suggestions.' } },
+          { '@type': 'Question', 'name': 'Puis-je combiner RISEN avec tests multi-modèles?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro simultanément. Comparez améliorations et suggestions.' } },
           { '@type': 'Question', 'name': 'RISEN augmente-t-il coût tokens?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Chaque cycle RISEN génère 2–5× plus output tokens qu\'un prompt single-pass. Utilisez RISEN sélectivement. Pour édits rapides, préférez prompts single-step.' } },
           { '@type': 'Question', 'name': 'Si je traite données sensibles, implications RGPD?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour workflows RGPD-sensibles, utilisez modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum ou explorez offres Anthropic respectant standards EU.' } },
           { '@type': 'Question', 'name': 'RISEN aide-t-il révisions multi-équipes?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. RISEN excelle workflows multi-personnes où différentes personnes gèrent Refine, Inspect, Evaluate, augmentant objectivité et perspective diverse.' } },
@@ -1243,7 +1243,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'RISENフレームワーク：Refine、Inspect、Summarize、Evaluate、Next Steps（2026年）',
       intro: 'RISENフレームワークは、5段階の反復プロセスでAI出力を体系的に改善するツールです。初期ドラフトを受け入れたり、ゼロから書き直したりするのではなく、制御された改善と完全な監査証跡を使います。各ステップには明確な目的があります。Refineはドラフトを改善し、Inspectはすべての変更を記録し、Summarizeは新しいバージョンを説明し、Evaluateは基準に対して評価し、Next Stepsは次の改善を推奨します。RISENは「これを改善して」を構造化された再現可能なワークフローに変えます。',
-      leadAnswerBlock: '**RISENは5段階の反復ループです：Refineはドラフトを改善し、Inspectは各変更を正当化を含めてリストアップし、Summarizeは新バージョンを説明し、Evaluateは基準に対して評価（1～5スケール）し、Next Stepsは次サイクルの3つの焦点を絞った改善を推奨します。既にドラフトがあり、制御された追跡可能な改善と監査証跡が必要な場合にRISENを使用します。Inspectステップは、モデルに変更を記録することを強制します。2026年、RISENはPromptQuorumにマルチモデルディスパッチオプションとして統合され、同じRISENサイクルをGPT-5.5、Claude Opus 4.7、Gemini 3.1 Proで並行してテストして改善アプローチを比較できます。**',
+      leadAnswerBlock: '**RISENは5段階の反復ループです：Refineはドラフトを改善し、Inspectは各変更を正当化を含めてリストアップし、Summarizeは新バージョンを説明し、Evaluateは基準に対して評価（1～5スケール）し、Next Stepsは次サイクルの3つの焦点を絞った改善を推奨します。既にドラフトがあり、制御された追跡可能な改善と監査証跡が必要な場合にRISENを使用します。Inspectステップは、モデルに変更を記録することを強制します。2026年、RISENはPromptQuorumにマルチモデルディスパッチオプションとして統合され、同じRISENサイクルをGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで並行してテストして改善アプローチを比較できます。**',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '13分で読める',
@@ -1260,7 +1260,7 @@ export const article: Record<Language, PEArticle> = {
         'ドラフトがある場合にRISENを使用。初期ドラフト生成には使用しない — CO-STARやCRAFTと組み合わせる',
         'Inspectステップは独特：モデルに各変更をリストアップして正当化させ、監査証跡を作成。他のフレームワークにはない',
         '典型的なワークフロー：2～4回のRISENサイクルで本番品質を達成。各サイクルは改善されたコンテンツ、変更ログ、アクションプランを生成',
-        'すべてのモデルで動作：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、OllamaやLM Studioの地元モデル',
+        'すべてのモデルで動作：GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、OllamaやLM Studioの地元モデル',
         'RISEN + CO-STAR組み合わせパターン：CO-STARで初期ドラフト生成、その後RISENで反復改善。「作成」と「改善」を分離',
       ],
 
@@ -1292,7 +1292,7 @@ export const article: Record<Language, PEArticle> = {
             '反復的改善（既存ドラフト改善）に使用。初期ドラフト生成には使用しない — CO-STARやCRAFTと組み合わせる',
             'Inspectステップは独特：各変更を記録。完全な監査証跡が得られる',
             '典型的：2～4サイクルで本番品質。各サイクルは改善コンテンツ、変更ログ、推奨を生成',
-            'すべてのモデルで動作：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、Ollama、LM Studio',
+            'すべてのモデルで動作：GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Ollama、LM Studio',
             'PromptQuorumで統合。同じサイクルを複数モデルで同時実行して比較',
             'PromptQuorumでRISENパターンをテスト — どのモデルの改善アプローチが目標に最適かを確認',
           ],
@@ -1306,7 +1306,7 @@ export const article: Record<Language, PEArticle> = {
             { type: 'in-plain-terms', text: '「改善して」と言うのではなく、修正させ（Refine）、変更をリストアップさせ（Inspect）、新バージョンを説明させ（Summarize）、自己評価させ（Evaluate）、次の改善を提案させます（Next Steps）。完了まで繰り返します。' },
           ],
           content: [
-            '**RISENフレームワークは、複数改善サイクルを通じてドラフト、分析、計画を改善する反復パターンです。** 各プロンプトを1回限りの作業ではなく、GPT-5.5、Claude Opus 4.7、Gemini 3.1 Proなどのモデルを構造化された再現可能ループで導きます。これにより、ワークフローは試行錯誤よりも継続的編集に見えます。',
+            '**RISENフレームワークは、複数改善サイクルを通じてドラフト、分析、計画を改善する反復パターンです。** 各プロンプトを1回限りの作業ではなく、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proなどのモデルを構造化された再現可能ループで導きます。これにより、ワークフローは試行錯誤よりも継続的編集に見えます。',
             'RISENは、既に第1版がある場合、すなわちドラフト記事、戦略ノート、コードスニペット、分析があり、制御可能で追跡可能な方法でモデルに改善させたい場合に特に有用です。各RISENステップは明確な目的を持っており、改善を焦点を絞ったものにします。',
             'フレームワークは5つのステップから名前が付いています：**R**efine（ドラフト改善）、**I**nspect（変更を特定）、**S**ummarize（変更内容を説明）、**E**valuate（基準に対して評価）、**N**ext steps（改善を推奨）。',
           ],
@@ -1484,7 +1484,7 @@ export const article: Record<Language, PEArticle> = {
             {
               mistake: 'RISEN出力をモデル間で比較しない',
               problem: 'モデルは異なるように改善。Claudeは簡潔；GPTは詳細；Geminiはユーザー体験。1モデルは視野限定',
-              fix: 'PromptQuorumで同じRISENをGPT-5.5、Claude Opus 4.7、Gemini 3.1 Proに並行実行。比較',
+              fix: 'PromptQuorumで同じRISENをGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proに並行実行。比較',
             },
           ],
         },
@@ -1498,7 +1498,7 @@ export const article: Record<Language, PEArticle> = {
           ],
           items: [
             '既存ドラフト挿入で「Refine–Inspect–Summarize–Evaluate–Next steps」パターンを適用。メタプロンプト自作不要。',
-            '同じRISEN命令を複数モデル — GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro — 並行送信、各改善方法を比較',
+            '同じRISEN命令を複数モデル — GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro — 並行送信、各改善方法を比較',
             'RISENテンプレート保存で繰返ワークフロー（「ブログ改善」「製品コピーレビュー」など）、チーム共有',
             '各RISENサイクルの完全改版履歴。改善プロセスが透明で追跡可能',
           ],
@@ -1548,7 +1548,7 @@ export const article: Record<Language, PEArticle> = {
             },
             {
               q: 'RISENをマルチモデルテストと組み合わせられますか？',
-              a: 'はい。PromptQuorumで同じRISENをGPT-5.5、Claude Opus 4.7、Gemini 3.1 Proに同時送信。改善方法を比較。',
+              a: 'はい。PromptQuorumで同じRISENをGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proに同時送信。改善方法を比較。',
             },
             {
               q: 'RISENはトークンコストを増やしますか？',
@@ -1598,7 +1598,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=ja',
         'inLanguage': 'ja',
-        keywords: ['RISENフレームワーク', '反復的プロンプティング', 'プロンプト改善', 'プロンプト・エンジニアリング', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+        keywords: ['RISENフレームワーク', '反復的プロンプティング', 'プロンプト改善', 'プロンプト・エンジニアリング', 'PromptQuorum', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -1608,9 +1608,9 @@ export const article: Record<Language, PEArticle> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -1628,7 +1628,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': 'RISENサイクルは何回必要ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '通常2～4サイクル。評価が安定（連続サイクル同スコア）し、提案が軽微になったら停止。' } },
           { '@type': 'Question', 'name': 'ローカルモデルでRISEN使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。指示を遵守するLLMなら — OllamaやLM Studioの地元モデルを含む。大きいモデル（13B+）が多段階対応良好。' } },
           { '@type': 'Question', 'name': 'Inspectステップが特別なのはなぜですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Inspectはモデルに各変更具体的に記録させ、監査証跡作成。バージョン間で何が変わり、なぜかが見えます。' } },
-          { '@type': 'Question', 'name': 'RISENをマルチモデルテストと組み合わせられますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。PromptQuorumで同じRISENをGPT-5.5、Claude Opus 4.7、Gemini 3.1 Proに同時送信。改善方法を比較。' } },
+          { '@type': 'Question', 'name': 'RISENをマルチモデルテストと組み合わせられますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。PromptQuorumで同じRISENをGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proに同時送信。改善方法を比較。' } },
           { '@type': 'Question', 'name': 'RISENはトークンコストを増やしますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。各サイクルは単一パスの2～5倍output生成。戦略的に選択使用。' } },
           { '@type': 'Question', 'name': 'センシティブ資料処理時、規制考慮はありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '機密ドキュメント改善時、クラウドAPI利用に注意。規制敏感作業にはOllama、LM Studio利用またはAnthropicのEU対応検討。' } },
           { '@type': 'Question', 'name': 'RISENはチーム複数人レビューに役立ちますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Refineを初期作者、Inspectを上級レビュア、Evaluateを決定者で処理。分割が客観性向上。' } },
@@ -1657,7 +1657,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'RISEN框架：Refine、Inspect、Summarize、Evaluate、Next Steps（2026）',
       intro: 'RISEN框架是一个5阶段的迭代系统，用来通过结构化的修订循环来系统性地改进AI生成的内容。与其接受初稿或从零开始重写，不如使用RISEN进行受控改进，建立完整的审计记录。每个阶段都有不同的目的：Refine改进草稿，Inspect记录每一个变更，Summarize解释新版本是什么，Evaluate用标准打分，Next Steps推荐进一步改进。RISEN把"把这个改得更好"转变为一个透明、可重复的工作流程。',
-      leadAnswerBlock: '**RISEN是一个5阶段的迭代优化框架：Refine改进草稿，Inspect列举每一个变更及其理由，Summarize解释新版本的作用，Evaluate按标准打分（1-5分），Next Steps推荐下一阶段的3个重点改进。在已经有初稿的时候使用RISEN，通过可跟踪的改进获得受控的、可审计的升级。Inspect步骤的独特之处在于强制模型记录所有变更——让修订变成可追踪的。在2026年，RISEN内置于PromptQuorum中，成为多模型分发选项，让您可以在GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro上同时测试RISEN循环，比较不同的改进方法。**',
+      leadAnswerBlock: '**RISEN是一个5阶段的迭代优化框架：Refine改进草稿，Inspect列举每一个变更及其理由，Summarize解释新版本的作用，Evaluate按标准打分（1-5分），Next Steps推荐下一阶段的3个重点改进。在已经有初稿的时候使用RISEN，通过可跟踪的改进获得受控的、可审计的升级。Inspect步骤的独特之处在于强制模型记录所有变更——让修订变成可追踪的。在2026年，RISEN内置于PromptQuorum中，成为多模型分发选项，让您可以在GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro上同时测试RISEN循环，比较不同的改进方法。**',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       lastFactChecked: '2026-05-04 — RISEN框架原始论文（Yao等，2023），PromptQuorum原生RISEN实现',
@@ -1675,7 +1675,7 @@ export const article: Record<Language, PEArticle> = {
         '使用RISEN当您已经有初稿、文档或计划。不要用于初期草稿生成 — 那种情况结合CO-STAR或CRAFT。',
         'Inspect步骤是独特的：强制模型列出每一个具体变更及其理由，建立审计记录。其他框架都没有这个内置的问责制。',
         '典型工作流：从粗糙草稿到生产质量需要2-4个RISEN循环。每个循环产生3个输出：改进内容、变更日志（Inspect）、行动计划（Next Steps）。',
-        '适用于任何模型：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro，以及通过Ollama或LM Studio的本地模型。13B以上的大模型能更好地处理多步结构；7B模型可能需要分离步骤。',
+        '适用于任何模型：GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro，以及通过Ollama或LM Studio的本地模型。13B以上的大模型能更好地处理多步结构；7B模型可能需要分离步骤。',
         'RISEN + CO-STAR组合模式：使用CO-STAR进行初期草稿生成，然后切换到RISEN进行迭代改进。分离"创建"和"改进" — 两个根本不同的任务。',
       ],
 
@@ -1706,7 +1706,7 @@ export const article: Record<Language, PEArticle> = {
             '使用RISEN进行迭代改进（改进现有草稿）。不要用于初期草稿生成 — 结合CO-STAR或CRAFT来处理那个阶段。',
             'Inspect步骤是独特的：强制模型列出每一个具体变更及其理由。这建立了审计记录 — 您可以确切看到改了什么以及为什么。',
             '典型工作流：2-4个RISEN循环达到生产质量。每个循环产生改进内容、变更日志和下一阶段的建议。',
-            'RISEN适用于任何模型：GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro、Ollama、LM Studio。13B以上的大模型更好地处理多步结构。',
+            'RISEN适用于任何模型：GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Ollama、LM Studio。13B以上的大模型更好地处理多步结构。',
             '在PromptQuorum中，RISEN是内置的。把同一个RISEN循环同时发送给多个模型，比较每个模型如何以不同的方式改进。',
             '使用PromptQuorum测试跨模型的RISEN模式 — 看哪个模型的改进方法最符合你的目标。',
           ],
@@ -1720,7 +1720,7 @@ export const article: Record<Language, PEArticle> = {
             { type: 'in-plain-terms', text: '与其说"改进这个"然后希望最好的结果，不如告诉AI修复它（Refine）、列出它改了什么（Inspect）、解释新版本是什么（Summarize）、给自己打分（Evaluate），然后建议下一步改什么（Next Steps）。重复直到完成。' },
           ],
           content: [
-            '**RISEN框架是一个迭代Prompt模式，通过多个改进循环来改进现有的草稿、分析和计划。** 与其把每个Prompt当作一次性任务，不如引导GPT-5.5、Claude Opus 4.7或Gemini 3.1 Pro这样的模型通过一个结构化、可重复的改进循环。这使得您的工作流程更像持续编辑而不是随机试错。',
+            '**RISEN框架是一个迭代Prompt模式，通过多个改进循环来改进现有的草稿、分析和计划。** 与其把每个Prompt当作一次性任务，不如引导GPT-4o、Claude 4.6 Sonnet或Gemini 2.5 Pro这样的模型通过一个结构化、可重复的改进循环。这使得您的工作流程更像持续编辑而不是随机试错。',
             'RISEN尤其在您已经有初稿的时候有用 — 例如一篇草稿文章、策略笔记、代码片段或分析 — 您想让模型以受控、可审计的方式改进它。每个RISEN步骤都有不同的目的，这使得修订集中且可追踪。',
             '框架得名于其五个阶段：**R**efine（改进草稿）、**I**nspect（识别变更）、**S**ummarize（解释改了什么）、**E**valuate（按标准打分），**N**ext steps（推荐改进）。',
           ],
@@ -1853,7 +1853,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'PromptQuorum中的RISEN',
           id: 'risen-in-promptquorum',
           content: [
-            'PromptQuorum把RISEN变成了一个一级公民功能。您可以写一个RISEN循环，把它发送给GPT-5.5、Claude Opus 4.7和Gemini 3.1 Pro同时，比较它们各自的改进方法。这让您可以看到不同的模型如何以不同的方式处理相同的改进任务。',
+            'PromptQuorum把RISEN变成了一个一级公民功能。您可以写一个RISEN循环，把它发送给GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro同时，比较它们各自的改进方法。这让您可以看到不同的模型如何以不同的方式处理相同的改进任务。',
             '选择产生最相关改进的模型进行后续迭代，或者在多个模型的改进中综合最好的部分。对于寻求多模型共识或想要优化模型选择的团队来说，这是强大的。',
           ],
         },
@@ -1899,7 +1899,7 @@ export const article: Record<Language, PEArticle> = {
           },
           {
             q: '我可以把RISEN与多模型测试组合吗？',
-            a: '是的。在PromptQuorum中，将同一个RISEN循环同时发送给GPT-5.5、Claude Opus 4.7和Gemini 3.1 Pro。比较它们各自如何改进。',
+            a: '是的。在PromptQuorum中，将同一个RISEN循环同时发送给GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro。比较它们各自如何改进。',
           },
           {
             q: 'RISEN会增加Token成本吗？',
@@ -1949,7 +1949,7 @@ export const article: Record<Language, PEArticle> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework?lang=zh',
         'inLanguage': 'zh',
-        keywords: ['RISEN框架', '迭代式提示词', '提示词优化', '提示词工程', 'PromptQuorum', 'GPT-5.5', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+        keywords: ['RISEN框架', '迭代式提示词', '提示词优化', '提示词工程', 'PromptQuorum', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -1973,7 +1973,7 @@ export const article: Record<Language, PEArticle> = {
           { '@type': 'Question', 'name': '一个RISEN循环需要多少步骤？', 'acceptedAnswer': { '@type': 'Answer', 'text': '通常2-4个循环就能从粗糙草稿达到生产质量。当Evaluate分数稳定（连续循环中相同）且Next Steps建议变得微小时，停止。' } },
           { '@type': 'Question', 'name': '我可以在本地模型上使用RISEN吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。任何遵守指令的LLM都可以 — 包括通过Ollama或LM Studio的本地模型。13B及以上的模型在处理多步结构时表现更好。' } },
           { '@type': 'Question', 'name': 'Inspect步骤为什么特别？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Inspect强制模型记录每个具体的变更并解释为什么。这创建了一个审计记录 — 您可以看到版本之间改了什么以及为什么。' } },
-          { '@type': 'Question', 'name': '我可以把RISEN与多模型测试组合吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。在PromptQuorum中，将同一个RISEN循环同时发送给GPT-5.5、Claude Opus 4.7和Gemini 3.1 Pro。比较它们各自如何改进。' } },
+          { '@type': 'Question', 'name': '我可以把RISEN与多模型测试组合吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。在PromptQuorum中，将同一个RISEN循环同时发送给GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro。比较它们各自如何改进。' } },
           { '@type': 'Question', 'name': 'RISEN会增加Token成本吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。每个循环产生2-5倍基准Prompt的输出Token。在战略选择是否使用RISEN，或分阶段实施它。' } },
           { '@type': 'Question', 'name': '处理敏感材料时有监管考虑吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在改进机密文件时，注意云端API使用。对于监管敏感的工作，考虑本地推理（Ollama、LM Studio）或Anthropic的欧盟选项。' } },
           { '@type': 'Question', 'name': 'RISEN对多人团队评审有帮助吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。您可以让初始作者做Refine，高级评审者做Inspect，决策者做Evaluate。这种分工增加了客观性。' } },

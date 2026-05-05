@@ -51,11 +51,11 @@ const HUB_IN_PLAIN_TERMS_LABEL: Record<string, string> = {
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Prompt engineering determines whether an AI model gives you a useful answer or a vague one. A well-engineered prompt specifies the task clearly, provides the right context, sets format constraints, and uses examples to calibrate model behavior — transforming generic AI responses into expert-quality, predictable outputs. These 80 guides cover the complete prompt engineering stack: fundamentals (tokens, context windows, temperature, model selection), proven frameworks (CO-STAR, CRAFT, RTF, APE, RISEN), advanced techniques (chain-of-thought, RAG, self-consistency, few-shot learning), team workflows (version control, governance, CI/CD review gates), evaluation methods (metrics, regression testing, cross-model testing), and tool comparisons (Braintrust, PromptHub, Cursor). Whether you\'re building production AI features, optimizing prompts for GPT-4o, Claude 4.6 Opus, or Gemini 2.5 Pro, or scaling prompt engineering across a team, these research-backed guides give you the patterns that work.',
-  de: 'Prompt Engineering entscheidet, ob ein KI-Modell eine nützliche oder eine vage Antwort liefert. Ein gut engineerter Prompt spezifiziert die Aufgabe klar, liefert den richtigen Kontext, setzt Formatbeschränkungen und verwendet Beispiele zur Kalibrierung des Modellverhaltens. Diese 80 Leitfäden decken das vollständige Spektrum ab: Grundlagen (Tokens, Kontextfenster, Temperatur), bewährte Frameworks (CO-STAR, CRAFT, RTF, APE), fortgeschrittene Techniken (Chain-of-Thought, RAG, Few-Shot), Team-Prozesse (Versionskontrolle, Steuerung, CI/CD-Kontrollen), Evaluierungsmethoden und Tool-Vergleiche für GPT-4o, Claude 4.6 Opus und Gemini 2.5 Pro.',
-  fr: 'Le prompt engineering détermine si un modèle d\'IA vous donne une réponse utile ou vague. Un prompt bien conçu spécifie clairement la tâche, fournit le bon contexte, définit des contraintes de format et utilise des exemples pour calibrer le comportement du modèle. Ces 80 guides couvrent l\'ensemble de l\'écosystème prompt engineering : fondamentaux (tokens, fenêtres de contexte, température), frameworks éprouvés (CO-STAR, CRAFT, RTF, APE), techniques avancées (chain-of-thought, RAG, few-shot), processus d\'équipe, méthodes d\'évaluation et comparatifs d\'outils pour GPT-4o, Claude 4.6 Opus et Gemini 2.5 Pro.',
-  ja: 'プロンプトエンジニアリングは、AIモデルが有用な回答を返すか曖昧な回答を返すかを決定します。適切に設計されたプロンプトは、タスクを明確に指定し、適切なコンテキストを提供し、フォーマット制約を設定し、例を用いてモデルの動作を調整します。これらの80本のガイドは、基礎知識（トークン、コンテキストウィンドウ、温度）、実証済みフレームワーク（CO-STAR、CRAFT、RTF）、高度な技術（チェーン・オブ・ソート、RAG、フューショット）、チームワークフロー、評価手法、GPT-4oとClaude 4.6 Opus向けのツール比較を網羅します。',
-  zh: '提示词工程决定了AI模型是给出有用答案还是模糊答案。精心设计的提示词明确指定任务、提供正确上下文、设置格式约束并使用示例校准模型行为。这80篇指南涵盖完整的提示词工程体系：基础知识（词元、上下文窗口、温度）、成熟框架（CO-STAR、CRAFT、RTF）、高级技术（思维链、RAG、少样本学习）、团队工作流程、评估方法，以及GPT-4o、Claude 4.6 Opus和Gemini 2.5 Pro的工具比较。',
+  en: 'Prompt engineering determines whether an AI model gives you a useful answer or a vague one. A well-engineered prompt specifies the task clearly, provides the right context, sets format constraints, and uses examples to calibrate model behavior — transforming generic AI responses into expert-quality, predictable outputs. These 80 guides cover the complete prompt engineering stack: fundamentals (tokens, context windows, temperature, model selection), proven frameworks (CO-STAR, CRAFT, RTF, APE, RISEN), advanced techniques (chain-of-thought, RAG, self-consistency, few-shot learning), team workflows (version control, governance, CI/CD review gates), evaluation methods (metrics, regression testing, cross-model testing), and tool comparisons (Braintrust, PromptHub, Cursor). Whether you\'re building production AI features, optimizing prompts for GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro, or scaling prompt engineering across a team, these research-backed guides give you the patterns that work.',
+  de: 'Prompt Engineering entscheidet, ob ein KI-Modell eine nützliche oder eine vage Antwort liefert. Ein gut engineerter Prompt spezifiziert die Aufgabe klar, liefert den richtigen Kontext, setzt Formatbeschränkungen und verwendet Beispiele zur Kalibrierung des Modellverhaltens. Diese 80 Leitfäden decken das vollständige Spektrum ab: Grundlagen (Tokens, Kontextfenster, Temperatur), bewährte Frameworks (CO-STAR, CRAFT, RTF, APE), fortgeschrittene Techniken (Chain-of-Thought, RAG, Few-Shot), Team-Prozesse (Versionskontrolle, Steuerung, CI/CD-Kontrollen), Evaluierungsmethoden und Tool-Vergleiche für GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.',
+  fr: 'Le prompt engineering détermine si un modèle d\'IA vous donne une réponse utile ou vague. Un prompt bien conçu spécifie clairement la tâche, fournit le bon contexte, définit des contraintes de format et utilise des exemples pour calibrer le comportement du modèle. Ces 80 guides couvrent l\'ensemble de l\'écosystème prompt engineering : fondamentaux (tokens, fenêtres de contexte, température), frameworks éprouvés (CO-STAR, CRAFT, RTF, APE), techniques avancées (chain-of-thought, RAG, few-shot), processus d\'équipe, méthodes d\'évaluation et comparatifs d\'outils pour GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.',
+  ja: 'プロンプトエンジニアリングは、AIモデルが有用な回答を返すか曖昧な回答を返すかを決定します。適切に設計されたプロンプトは、タスクを明確に指定し、適切なコンテキストを提供し、フォーマット制約を設定し、例を用いてモデルの動作を調整します。これらの80本のガイドは、基礎知識（トークン、コンテキストウィンドウ、温度）、実証済みフレームワーク（CO-STAR、CRAFT、RTF）、高度な技術（チェーン・オブ・ソート、RAG、フューショット）、チームワークフロー、評価手法、GPT-4oとClaude 4.6 Sonnet向けのツール比較を網羅します。',
+  zh: '提示词工程决定了AI模型是给出有用答案还是模糊答案。精心设计的提示词明确指定任务、提供正确上下文、设置格式约束并使用示例校准模型行为。这80篇指南涵盖完整的提示词工程体系：基础知识（词元、上下文窗口、温度）、成熟框架（CO-STAR、CRAFT、RTF）、高级技术（思维链、RAG、少样本学习）、团队工作流程、评估方法，以及GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro的工具比较。',
 }
 
 const HUB_TLDR: Record<string, string> = {
@@ -75,17 +75,17 @@ const HUB_CTA_TEXT: Record<string, string> = {
 }
 
 const HUB_QUICK_FACTS: Record<string, string[]> = {
-  en: ['80 articles across 9 topic areas', 'Covers GPT-4o, Claude 4.6 Opus, and Gemini 2.5 Pro', '5–20 min per article', 'Updated May 2026'],
-  de: ['80 Artikel in 9 Themenbereichen', 'Behandelt GPT-4o, Claude 4.6 Opus und Gemini 2.5 Pro', '5–20 Min. pro Artikel', 'Aktualisiert Mai 2026'],
-  fr: ['80 articles dans 9 domaines', 'Couvre GPT-4o, Claude 4.6 Opus et Gemini 2.5 Pro', '5–20 min par article', 'Mis à jour mai 2026'],
-  ja: ['9テーマ領域の80記事', 'GPT-4o、Claude 4.6 Opus、Gemini 2.5 Pro対応', '記事あたり5〜20分', '2026年5月更新'],
-  zh: ['9个主题领域80篇文章', '涵盖GPT-4o、Claude 4.6 Opus和Gemini 2.5 Pro', '每篇5-20分钟', '2026年5月更新'],
+  en: ['80 articles across 9 topic areas', 'Covers GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro', '5–20 min per article', 'Updated May 2026'],
+  de: ['80 Artikel in 9 Themenbereichen', 'Behandelt GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro', '5–20 Min. pro Artikel', 'Aktualisiert Mai 2026'],
+  fr: ['80 articles dans 9 domaines', 'Couvre GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro', '5–20 min par article', 'Mis à jour mai 2026'],
+  ja: ['9テーマ領域の80記事', 'GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro対応', '記事あたり5〜20分', '2026年5月更新'],
+  zh: ['9个主题领域80篇文章', '涵盖GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro', '每篇5-20分钟', '2026年5月更新'],
 }
 
 const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
   en: [
     '80 articles across 9 topic areas, updated May 2026',
-    'Covers GPT-4o, Claude 4.6 Opus/Sonnet, Gemini 2.5 Pro, and 20+ open-source models',
+    'Covers GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and 20+ open-source models',
     '5–20 min per article, each with Key Takeaways, FAQ, and Sources',
     'Chain-of-thought prompting improves complex reasoning accuracy by 30–40%',
     'Most production teams need exactly 2 prompt tools: one for evaluation, one for deployment',
@@ -93,7 +93,7 @@ const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
   ],
   de: [
     '80 Artikel in 9 Themenbereichen, aktualisiert Mai 2026',
-    'Behandelt GPT-4o, Claude 4.6 Opus/Sonnet, Gemini 2.5 Pro und 20+ Open-Source-Modelle',
+    'Behandelt GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und 20+ Open-Source-Modelle',
     '5–20 Min. pro Artikel, jeweils mit Wichtigsten Erkenntnissen, FAQ und Quellen',
     'Chain-of-Thought-Prompting verbessert die Genauigkeit komplexer Schlussfolgerungen um 30–40 %',
     'Die meisten Produktionsteams brauchen genau 2 Tools: eines für Evaluation, eines für Deployment',
@@ -101,7 +101,7 @@ const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
   ],
   fr: [
     '80 articles dans 9 domaines, mis à jour mai 2026',
-    'Couvre GPT-4o, Claude 4.6 Opus/Sonnet, Gemini 2.5 Pro et 20+ modèles open source',
+    'Couvre GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et 20+ modèles open source',
     '5–20 min par article, chacun avec Points clés, FAQ et Sources',
     'Le chain-of-thought prompting améliore la précision du raisonnement complexe de 30–40%',
     "La plupart des équipes en production n'ont besoin que de 2 outils : un pour l'évaluation, un pour le déploiement",
@@ -109,7 +109,7 @@ const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
   ],
   ja: [
     '9テーマ領域の80記事、2026年5月更新',
-    'GPT-4o、Claude 4.6 Opus/Sonnet、Gemini 2.5 Pro、20以上のオープンソースモデル対応',
+    'GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、20以上のオープンソースモデル対応',
     '記事あたり5〜20分、各記事に重要なポイント・FAQ・出典付き',
     'チェーン・オブ・ソートプロンプティングで複雑な推論の精度が30〜40%向上',
     'ほとんどの本番チームに必要なツールは2つだけ：評価用1つとデプロイ用1つ',
@@ -117,7 +117,7 @@ const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
   ],
   zh: [
     '9大主题80篇文章，2026年5月更新',
-    '涵盖GPT-4o、Claude 4.6 Opus/Sonnet、Gemini 2.5 Pro及20+开源模型',
+    '涵盖GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro及20+开源模型',
     '每篇5-20分钟，含关键要点、FAQ和参考来源',
     '思维链提示将复杂推理准确性提高30-40%',
     '大多数生产团队只需2个工具：一个用于评估，一个用于部署',
@@ -226,11 +226,11 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
 
 const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   fundamentals: {
-    en: 'Core concepts every prompt engineer needs to understand — how LLMs work, what tokens are, and why prompt structure determines output quality. These articles explain how temperature controls randomness, why context windows cause AI to "forget," and how different models (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro) interpret instructions differently. Start here if you\'re new to prompt engineering, or use these guides as a reference for the mechanics behind every advanced technique.',
+    en: 'Core concepts every prompt engineer needs to understand — how LLMs work, what tokens are, and why prompt structure determines output quality. These articles explain how temperature controls randomness, why context windows cause AI to "forget," and how different models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) interpret instructions differently. Start here if you\'re new to prompt engineering, or use these guides as a reference for the mechanics behind every advanced technique.',
     de: 'Grundkonzepte, die jeder Prompt Engineer verstehen muss — wie LLMs funktionieren, was Tokens sind und warum die Prompt-Struktur die Ausgabequalität bestimmt. Diese Artikel erklären, wie die Temperatur die Zufälligkeit steuert, warum Kontextfenster dazu führen, dass KI "vergisst", und wie verschiedene Modelle Anweisungen unterschiedlich interpretieren. Beginnen Sie hier, wenn Sie neu im Prompt Engineering sind.',
     fr: 'Concepts fondamentaux que tout prompt engineer doit comprendre — comment fonctionnent les LLMs, ce que sont les tokens et pourquoi la structure du prompt détermine la qualité de la sortie. Ces articles expliquent comment la température contrôle l\'aléatoire, pourquoi les fenêtres de contexte font "oublier" à l\'IA, et comment différents modèles interprètent les instructions. Commencez ici si vous débutez en prompt engineering.',
     ja: 'すべてのプロンプトエンジニアが理解すべき基本概念 — LLMの仕組み、トークンとは何か、プロンプトの構造が出力品質を決定する理由。温度がどのようにランダム性を制御するか、なぜコンテキストウィンドウがAIに「忘れさせる」のか、異なるモデルが指示をどのように解釈するかを説明します。プロンプトエンジニアリング初心者はここから始めてください。',
-    zh: '每位提示词工程师需要理解的核心概念——LLM的工作原理、词元是什么，以及为什么提示词结构决定输出质量。这些文章解释温度如何控制随机性、为什么上下文窗口会导致AI"遗忘"，以及GPT-4o、Claude 4.6 Opus等不同模型如何以不同方式解释指令。提示词工程新手请从这里开始。',
+    zh: '每位提示词工程师需要理解的核心概念——LLM的工作原理、词元是什么，以及为什么提示词结构决定输出质量。这些文章解释温度如何控制随机性、为什么上下文窗口会导致AI"遗忘"，以及GPT-4o、Claude 4.6 Sonnet等不同模型如何以不同方式解释指令。提示词工程新手请从这里开始。',
   },
   frameworks: {
     en: 'Structured templates for building reliable, repeatable prompts across different tasks — marketing, coding, research, and more. Frameworks like CO-STAR, CRAFT, RTF, and APE break down prompts into components (role, context, constraints, output format) to eliminate guesswork and produce consistent results regardless of who writes the prompt. Use these guides to find the right framework for your use case, compare frameworks head-to-head, or build a custom framework tailored to your team\'s specific needs.',

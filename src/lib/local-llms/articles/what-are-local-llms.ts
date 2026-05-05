@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Factor': 'Privacy', 'Local LLM': 'Complete -- data never leaves your machine', 'Cloud API': 'Data processed on provider servers' },
             { 'Factor': 'Cost', 'Local LLM': '$0 per token after hardware cost', 'Cloud API': '$0.15-$15 per 1M tokens depending on model' },
             { 'Factor': 'Speed', 'Local LLM': '10-120 tok/sec on consumer hardware', 'Cloud API': '50-200 tok/sec, varies by load' },
-            { 'Factor': 'Model quality', 'Local LLM': 'Good -- competitive at 70B scale', 'Cloud API': 'Best available (GPT-5.5, Claude 4.6 Opus)' },
+            { 'Factor': 'Model quality', 'Local LLM': 'Good -- competitive at 70B scale', 'Cloud API': 'Best available (GPT-5.5, Claude 4.6 Sonnet)' },
             { 'Factor': 'Setup time', 'Local LLM': '5-15 minutes with Ollama or LM Studio', 'Cloud API': '2-5 minutes to get an API key' },
             { 'Factor': 'Offline use', 'Local LLM': 'Yes -- works without internet', 'Cloud API': 'No -- requires active connection' },
           ],
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'Can a local LLM match GPT-5.5 quality?',
-              a: 'No -- not on current consumer hardware. GPT-5.5 and Claude 4.6 Opus outperform any locally-runnable model on complex reasoning, code generation, and instruction-following benchmarks. However, for summarization, translation, and everyday writing tasks, a well-quantized 13B-34B model produces results that are difficult to distinguish from frontier models.',
+              a: 'No -- not on current consumer hardware. GPT-5.5 and Claude 4.6 Sonnet outperform any locally-runnable model on complex reasoning, code generation, and instruction-following benchmarks. However, for summarization, translation, and everyday writing tasks, a well-quantized 13B-34B model produces results that are difficult to distinguish from frontier models.',
             },
             {
               q: 'Do I need a GPU to run a local LLM?',
@@ -494,7 +494,7 @@ schema: {
             { '項目': 'プライバシー', 'ローカルLLM': '完全--データは絶対に外に出ない', 'クラウドAPI': 'プロバイダーのサーバーで処理' },
             { '項目': 'コスト', 'ローカルLLM': 'ハードウェア代後は$0/トークン', 'クラウドAPI': '$0.15～15/100万トークン' },
             { '項目': '速度', 'ローカルLLM': 'コンシューマー機で10～120 tok/sec', 'クラウドAPI': '50～200 tok/sec（負荷による）' },
-            { '項目': 'モデル品質', 'ローカルLLM': '良好--70Bスケールで競争力あり', 'クラウドAPI': '最良（GPT-5.5、Claude 4.6 Opus）' },
+            { '項目': 'モデル品質', 'ローカルLLM': '良好--70Bスケールで競争力あり', 'クラウドAPI': '最良（GPT-5.5、Claude 4.6 Sonnet）' },
             { '項目': 'セットアップ', 'ローカルLLM': 'OllamaやLM Studioで5～15分', 'クラウドAPI': 'APIキー取得で2～5分' },
             { '項目': 'オフライン', 'ローカルLLM': 'はい--インターネット不要', 'クラウドAPI': 'いいえ--接続が必須' },
           ],
@@ -523,7 +523,7 @@ schema: {
           faqs: [
             {
               q: 'ローカルLLMはGPT-5.5 の品質に達するか？',
-              a: '現在のコンシューマー機ではいいえ。GPT-5.5とClaude 4.6 Opusは複雑な推論、コード生成、命令遵守ベンチマークで勝ります。しかし要約、翻訳、日常的な文章作成では、量子化された13B～34Bモデルは最先端モデルと区別が難しい結果を出します。',
+              a: '現在のコンシューマー機ではいいえ。GPT-5.5とClaude 4.6 Sonnetは複雑な推論、コード生成、命令遵守ベンチマークで勝ります。しかし要約、翻訳、日常的な文章作成では、量子化された13B～34Bモデルは最先端モデルと区別が難しい結果を出します。',
             },
             {
               q: 'ローカルLLM実行にGPUは必須？',
@@ -643,7 +643,7 @@ schema: {
             { '因素': '隐私', '本地LLM': '完全--数据永不离开您的机器', '云API': '在提供商服务器上处理' },
             { '因素': '成本', '本地LLM': '硬件后$0/token', '云API': '按token计费（$0.15-15/100万tokens）' },
             { '因素': '速度', '本地LLM': '消费者硬件10-120 tokens/秒', '云API': '50-200 tokens/秒（负载变化）' },
-            { '因素': '模型质量', '本地LLM': '好--70B规模有竞争力', '云API': '最好（GPT-5.5、Claude 4.6 Opus）' },
+            { '因素': '模型质量', '本地LLM': '好--70B规模有竞争力', '云API': '最好（GPT-5.5、Claude 4.6 Sonnet）' },
             { '因素': '设置时间', '本地LLM': 'Ollama或LM Studio 5-15分钟', '云API': '获取API密钥2-5分钟' },
             { '因素': '离线使用', '本地LLM': '是--无需互联网', '云API': '否--需要活跃连接' },
           ],
@@ -672,7 +672,7 @@ schema: {
           faqs: [
             {
               q: '本地LLM能达到GPT-5.5的质量吗？',
-              a: '消费者硬件上不能。GPT-5.5和Claude 4.6 Opus在复杂推理、代码生成、指令遵循基准上更优。但13B-34B良好量化的模型在摘要、翻译和日常写作中表现与前沿模型难以区分。',
+              a: '消费者硬件上不能。GPT-5.5和Claude 4.6 Sonnet在复杂推理、代码生成、指令遵循基准上更优。但13B-34B良好量化的模型在摘要、翻译和日常写作中表现与前沿模型难以区分。',
             },
             {
               q: '运行本地LLM需要GPU吗？',
@@ -792,7 +792,7 @@ schema: {
             { 'Faktor': 'Datenschutz', 'Lokales LLM': 'Vollständig -- Daten verlassen nie Ihren Computer', 'Cloud-API': 'Daten werden auf Anbieter-Servern verarbeitet' },
             { 'Faktor': 'Kosten', 'Lokales LLM': '0 € pro Token nach Hardware-Kosten', 'Cloud-API': '0,15 €-15 € pro 1 Mio. Tokens je nach Modell' },
             { 'Faktor': 'Geschwindigkeit', 'Lokales LLM': '10-120 Tokens/Sek. auf Consumer-Hardware', 'Cloud-API': '50-200 Tokens/Sek., variiert je nach Last' },
-            { 'Faktor': 'Modellqualität', 'Lokales LLM': 'Gut -- wettbewerbsfähig bei 70B-Skalierung', 'Cloud-API': 'Das beste verfügbare (GPT-5.5, Claude 4.6 Opus)' },
+            { 'Faktor': 'Modellqualität', 'Lokales LLM': 'Gut -- wettbewerbsfähig bei 70B-Skalierung', 'Cloud-API': 'Das beste verfügbare (GPT-5.5, Claude 4.6 Sonnet)' },
             { 'Faktor': 'Einrichtungszeit', 'Lokales LLM': '5-15 Minuten mit Ollama oder LM Studio', 'Cloud-API': '2-5 Minuten für einen API-Schlüssel' },
             { 'Faktor': 'Offline-Nutzung', 'Lokales LLM': 'Ja -- funktioniert ohne Internet', 'Cloud-API': 'Nein -- erfordert aktive Verbindung' },
           ],
@@ -821,7 +821,7 @@ schema: {
           faqs: [
             {
               q: 'Kann ein lokales LLM die Qualität von GPT-5.5 erreichen?',
-              a: 'Nein -- nicht auf aktueller Consumer-Hardware. GPT-5.5 und Claude 4.6 Opus übertreffen jedes lokal ausführbare Modell bei komplexer Argumentation, Code-Generierung und Befolgung von Anweisungen-Benchmarks. Für Zusammenfassungen, Übersetzungen und alltägliche Schreibaufgaben produziert jedoch ein gut quantisiertes 13B-34B-Modell Ergebnisse, die schwer von Top-Modellen zu unterscheiden sind.',
+              a: 'Nein -- nicht auf aktueller Consumer-Hardware. GPT-5.5 und Claude 4.6 Sonnet übertreffen jedes lokal ausführbare Modell bei komplexer Argumentation, Code-Generierung und Befolgung von Anweisungen-Benchmarks. Für Zusammenfassungen, Übersetzungen und alltägliche Schreibaufgaben produziert jedoch ein gut quantisiertes 13B-34B-Modell Ergebnisse, die schwer von Top-Modellen zu unterscheiden sind.',
             },
             {
               q: 'Brauche ich eine GPU, um ein lokales LLM auszuführen?',

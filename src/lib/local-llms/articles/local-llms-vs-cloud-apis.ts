@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'Factor': 'Data privacy', 'Local LLM': 'Complete -- data never leaves your device', 'Cloud API': 'Data processed on provider servers; subject to their privacy policy' },
             { 'Factor': 'Cost per token', 'Local LLM': '$0 (after hardware investment)', 'Cloud API': '$0.15-$60 per 1M tokens (varies by model)' },
-            { 'Factor': 'Output quality', 'Local LLM': 'Good at 13B-70B; competitive on many tasks', 'Cloud API': 'Best available -- GPT-5.5, Claude 4.6 Opus lead benchmarks' },
+            { 'Factor': 'Output quality', 'Local LLM': 'Good at 13B-70B; competitive on many tasks', 'Cloud API': 'Best available -- GPT-5.5, Claude 4.6 Sonnet lead benchmarks' },
             { 'Factor': 'Response speed', 'Local LLM': '10-120 tok/sec (hardware dependent)', 'Cloud API': '50-200 tok/sec (provider load dependent)' },
             { 'Factor': 'Setup time', 'Local LLM': '5-15 minutes with Ollama or LM Studio', 'Cloud API': '2-5 minutes to create an account and get an API key' },
             { 'Factor': 'Offline access', 'Local LLM': 'Yes -- works without internet', 'Cloud API': 'No -- requires active connection' },
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'which-has-better-model-quality',
           title: 'Which Has Better Model Quality: Local or Cloud?',
           content: [
-            '**Cloud frontier models (GPT-5.5, Claude 4.6 Opus, Gemini 3.1 Pro) lead on complex reasoning; local 13B models match on summarization, translation, and simple Q&A.** On MMLU (knowledge breadth) and HumanEval (coding) benchmarks, frontier cloud models score 85-90% vs. 65-80% for the best local 70B models.',
+            '**Cloud frontier models (GPT-5.5, Claude 4.6 Sonnet, Gemini 3.1 Pro) lead on complex reasoning; local 13B models match on summarization, translation, and simple Q&A.** On MMLU (knowledge breadth) and HumanEval (coding) benchmarks, frontier cloud models score 85-90% vs. 65-80% for the best local 70B models.',
             'For everyday tasks -- summarization, translation, classification, simple Q&A, and document drafting -- a well-prompted 13B local model produces results that are difficult to distinguish from GPT-5.5 Mini in blind evaluations. The quality gap is most visible on tasks requiring deep world knowledge or multi-step reasoning chains.',
             'The gap is narrowing. Meta Llama 3.3 70B (2025) matches GPT-4 (2023) on most benchmarks. Local model quality at the 7B scale has improved by roughly one generation per year.',
           ],
@@ -203,7 +203,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Data privacy', 'description': 'Local LLM: complete, data never leaves device. Cloud API: processed on provider servers, subject to privacy policy.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Cost per token', 'description': 'Local LLM: $0 after hardware. Cloud API: $0.15-$60 per 1M tokens.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Output quality', 'description': 'Local LLM: good at 13B-70B. Cloud API: best available -- GPT-5.5, Claude 4.6 Opus lead benchmarks.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Output quality', 'description': 'Local LLM: good at 13B-70B. Cloud API: best available -- GPT-5.5, Claude 4.6 Sonnet lead benchmarks.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Response speed', 'description': 'Local LLM: 10-120 tok/sec hardware dependent. Cloud API: 50-200 tok/sec provider dependent.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Setup time', 'description': 'Local LLM: 5-15 minutes with Ollama. Cloud API: 2-5 minutes for account and API key.' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Offline access', 'description': 'Local LLM: yes, works without internet. Cloud API: no, requires active connection.' },
@@ -290,7 +290,7 @@ schema: {
           rows: [
             { 'Faktor': 'Datenschutz', 'Lokales LLM': 'Vollständig \u2014 Daten verlassen Ihr Gerät nie', 'Cloud-API': 'Daten werden auf Anbieterservern verarbeitet; unterliegt deren Datenschutzrichtlinie' },
             { 'Faktor': 'Kosten pro Token', 'Lokales LLM': '$0 (nach Hardware-Investition)', 'Cloud-API': '$0,15\u2013$60 pro 1\u00a0Mio. Tokens (je nach Modell)' },
-            { 'Faktor': 'Ausgabequalität', 'Lokales LLM': 'Gut bei 13B\u201370B; bei vielen Aufgaben wettbewerbsfähig', 'Cloud-API': 'Beste verfügbar \u2014 GPT-5.5, Claude 4.6 Opus führen Benchmarks an' },
+            { 'Faktor': 'Ausgabequalität', 'Lokales LLM': 'Gut bei 13B\u201370B; bei vielen Aufgaben wettbewerbsfähig', 'Cloud-API': 'Beste verfügbar \u2014 GPT-5.5, Claude 4.6 Sonnet führen Benchmarks an' },
             { 'Faktor': 'Antwortgeschwindigkeit', 'Lokales LLM': '10\u2013120 Tokens/Sek. (hardwareabhängig)', 'Cloud-API': '50\u2013200 Tokens/Sek. (anbieterabhängig)' },
             { 'Faktor': 'Einrichtungszeit', 'Lokales LLM': '5\u201315 Minuten mit Ollama oder LM Studio', 'Cloud-API': '2\u20135 Minuten für Konto und API-Schlüssel' },
             { 'Faktor': 'Offline-Zugriff', 'Lokales LLM': 'Ja \u2014 funktioniert ohne Internet', 'Cloud-API': 'Nein \u2014 erfordert aktive Verbindung' },
@@ -337,7 +337,7 @@ schema: {
           id: 'which-has-better-model-quality',
           title: 'Welches hat die bessere Modellqualität: lokal oder Cloud?',
           content: [
-            '**Cloud-Frontier-Modelle (GPT-5.5, Claude 4.6 Opus, Gemini 3.1 Pro) führen bei komplexem Denken; lokale 13B-Modelle erreichen die gleiche Qualität bei Zusammenfassungen, Übersetzungen und einfachen Fragen.** Bei MMLU (Wissensbreite) und HumanEval (Programmierung)-Benchmarks erzielen Frontier-Cloud-Modelle 85\u201390\u00a0% gegenüber 65\u201380\u00a0% für die besten lokalen 70B-Modelle.',
+            '**Cloud-Frontier-Modelle (GPT-5.5, Claude 4.6 Sonnet, Gemini 3.1 Pro) führen bei komplexem Denken; lokale 13B-Modelle erreichen die gleiche Qualität bei Zusammenfassungen, Übersetzungen und einfachen Fragen.** Bei MMLU (Wissensbreite) und HumanEval (Programmierung)-Benchmarks erzielen Frontier-Cloud-Modelle 85\u201390\u00a0% gegenüber 65\u201380\u00a0% für die besten lokalen 70B-Modelle.',
             'Für alltägliche Aufgaben \u2014 Zusammenfassung, Übersetzung, Klassifizierung, einfache Fragen und Dokumentenerstellung \u2014 liefert ein gut strukturiertes 13B-Modell Ergebnisse, die in blinden Auswertungen kaum von GPT-5.5 Mini zu unterscheiden sind. Die Qualitätslücke zeigt sich am deutlichsten bei Aufgaben, die tiefes Weltwissen oder mehrstufige Denkketten erfordern.',
             'Der Abstand verringert sich. Meta Llama 3.3 70B (2025) erreicht GPT-4 (2023) bei den meisten Benchmarks. Die Qualität lokaler Modelle auf 7B-Ebene verbessert sich jährlich um etwa eine Generation.',
           ],
@@ -453,7 +453,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Datenschutz', 'description': 'Lokales LLM: vollständig, Daten verlassen das Gerät nie. Cloud-API: auf Anbieterservern verarbeitet, unterliegt der Datenschutzrichtlinie.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Kosten pro Token', 'description': 'Lokales LLM: $0 nach Hardware. Cloud-API: $0,15\u2013$60 pro 1\u00a0Mio. Tokens.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Ausgabequalität', 'description': 'Lokales LLM: gut bei 13B\u201370B. Cloud-API: beste verfügbar \u2014 GPT-5.5, Claude 4.6 Opus führen Benchmarks an.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Ausgabequalität', 'description': 'Lokales LLM: gut bei 13B\u201370B. Cloud-API: beste verfügbar \u2014 GPT-5.5, Claude 4.6 Sonnet führen Benchmarks an.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Antwortgeschwindigkeit', 'description': 'Lokales LLM: 10\u2013120 Tokens/Sek. hardwareabhängig. Cloud-API: 50\u2013200 Tokens/Sek. anbieterabhängig.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Einrichtungszeit', 'description': 'Lokales LLM: 5\u201315 Minuten mit Ollama. Cloud-API: 2\u20135 Minuten für Konto und API-Schlüssel.' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Offline-Zugriff', 'description': 'Lokales LLM: ja, funktioniert ohne Internet. Cloud-API: nein, erfordert aktive Verbindung.' },
@@ -542,7 +542,7 @@ schema: {
           rows: [
             { 'Facteur': 'Confidentialité des données', 'LLM local': 'Totale -- les données ne quittent jamais votre appareil', 'API cloud': 'Données traitées sur les serveurs du fournisseur ; soumises à leur politique de confidentialité' },
             { 'Facteur': 'Coût par token', 'LLM local': '$0 (après investissement matériel)', 'API cloud': '$0,15-$60 par million de tokens (selon le modèle)' },
-            { 'Facteur': 'Qualité de sortie', 'LLM local': 'Bonne à 13B-70B ; compétitive sur de nombreuses tâches', 'API cloud': 'Meilleure disponible -- GPT-5.5, Claude 4.6 Opus dominent les benchmarks' },
+            { 'Facteur': 'Qualité de sortie', 'LLM local': 'Bonne à 13B-70B ; compétitive sur de nombreuses tâches', 'API cloud': 'Meilleure disponible -- GPT-5.5, Claude 4.6 Sonnet dominent les benchmarks' },
             { 'Facteur': 'Vitesse de réponse', 'LLM local': '10-120 tokens/s (selon le matériel)', 'API cloud': '50-200 tokens/s (selon la charge fournisseur)' },
             { 'Facteur': 'Temps de configuration', 'LLM local': '5-15 minutes avec Ollama ou LM Studio', 'API cloud': '2-5 minutes pour créer un compte et obtenir une clé API' },
             { 'Facteur': 'Accès hors ligne', 'LLM local': 'Oui -- fonctionne sans Internet', 'API cloud': 'Non -- nécessite une connexion active' },
@@ -585,7 +585,7 @@ schema: {
         quality: {
           title: 'Lequel offre la meilleure qualité de modèle : local ou cloud ?',
           content: [
-            '**Les modèles cloud de pointe (GPT-5.5, Claude 4.6 Opus, Gemini 3.1 Pro) dominent sur le raisonnement complexe ; les modèles locaux 13B atteignent la même qualité pour la synthèse, la traduction et les questions simples.** Sur les benchmarks MMLU (étendue des connaissances) et HumanEval (programmation), les modèles cloud de pointe obtiennent 85-90 % contre 65-80 % pour les meilleurs modèles locaux 70B.',
+            '**Les modèles cloud de pointe (GPT-5.5, Claude 4.6 Sonnet, Gemini 3.1 Pro) dominent sur le raisonnement complexe ; les modèles locaux 13B atteignent la même qualité pour la synthèse, la traduction et les questions simples.** Sur les benchmarks MMLU (étendue des connaissances) et HumanEval (programmation), les modèles cloud de pointe obtiennent 85-90 % contre 65-80 % pour les meilleurs modèles locaux 70B.',
             'Pour les tâches quotidiennes -- synthèse, traduction, classification, questions simples et rédaction de documents -- un modèle local 13B bien sollicité produit des résultats difficiles à distinguer de GPT-5.5 Mini en évaluation en aveugle. L\'écart de qualité est le plus visible sur les tâches nécessitant une connaissance approfondie du monde ou des chaînes de raisonnement multi-étapes.',
             'L\'écart se réduit. Meta Llama 3.3 70B (2025) rivalise avec GPT-4 (2023) sur la plupart des benchmarks. La qualité des modèles locaux à l\'échelle 7B s\'améliore d\'environ une génération par an.',
           ],
@@ -700,7 +700,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Confidentialité des données', 'description': 'LLM local : totale, les données ne quittent jamais l\'appareil. API cloud : traitées sur les serveurs du fournisseur, soumises à la politique de confidentialité.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Coût par token', 'description': 'LLM local : $0 après le matériel. API cloud : $0,15-$60 par million de tokens.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Qualité de sortie', 'description': 'LLM local : bonne à 13B-70B. API cloud : meilleure disponible -- GPT-5.5, Claude 4.6 Opus dominent les benchmarks.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Qualité de sortie', 'description': 'LLM local : bonne à 13B-70B. API cloud : meilleure disponible -- GPT-5.5, Claude 4.6 Sonnet dominent les benchmarks.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Vitesse de réponse', 'description': 'LLM local : 10-120 tokens/s selon le matériel. API cloud : 50-200 tokens/s selon le fournisseur.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Temps de configuration', 'description': 'LLM local : 5-15 minutes avec Ollama. API cloud : 2-5 minutes pour un compte et une clé API.' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Accès hors ligne', 'description': 'LLM local : oui, fonctionne sans Internet. API cloud : non, nécessite une connexion active.' },
@@ -789,7 +789,7 @@ schema: {
           rows: [
             { '要素': 'データプライバシー', 'ローカルLLM': '完全 -- データはデバイスから出ない', 'クラウドAPI': 'プロバイダーサーバーで処理；プライバシーポリシーに従う' },
             { '要素': 'トークンあたりコスト', 'ローカルLLM': '$0（ハードウェア投資後）', 'クラウドAPI': '$0.15〜$60/100万トークン（モデルによる）' },
-            { '要素': '出力品質', 'ローカルLLM': '13B〜70Bで良好；多くのタスクで競争力あり', 'クラウドAPI': '最高水準 -- GPT-5.5、Claude 4.6 Opusがベンチマークをリード' },
+            { '要素': '出力品質', 'ローカルLLM': '13B〜70Bで良好；多くのタスクで競争力あり', 'クラウドAPI': '最高水準 -- GPT-5.5、Claude 4.6 Sonnetがベンチマークをリード' },
             { '要素': '応答速度', 'ローカルLLM': '10〜120トークン/秒（ハードウェア依存）', 'クラウドAPI': '50〜200トークン/秒（プロバイダー負荷依存）' },
             { '要素': 'セットアップ時間', 'ローカルLLM': 'OllamaまたはLM Studioで5〜15分', 'クラウドAPI': 'アカウント作成とAPIキー取得で2〜5分' },
             { '要素': 'オフラインアクセス', 'ローカルLLM': 'あり -- インターネット不要で動作', 'クラウドAPI': 'なし -- アクティブな接続が必要' },
@@ -832,7 +832,7 @@ schema: {
         quality: {
           title: 'モデル品質が高いのはローカルとクラウドのどちらですか？',
           content: [
-            '**クラウドのフロンティアモデル（GPT-5.5、Claude 4.6 Opus、Gemini 3.1 Pro）は複雑な推論でリード；ローカル13Bモデルは要約・翻訳・シンプルなQ&Aで同等の品質を達成します。** MMLU（知識の幅）とHumanEval（コーディング）ベンチマークでは、フロンティアクラウドモデルが85〜90%のスコアに対し、最良のローカル70Bモデルは65〜80%です。',
+            '**クラウドのフロンティアモデル（GPT-5.5、Claude 4.6 Sonnet、Gemini 3.1 Pro）は複雑な推論でリード；ローカル13Bモデルは要約・翻訳・シンプルなQ&Aで同等の品質を達成します。** MMLU（知識の幅）とHumanEval（コーディング）ベンチマークでは、フロンティアクラウドモデルが85〜90%のスコアに対し、最良のローカル70Bモデルは65〜80%です。',
             '日常的なタスク -- 要約、翻訳、分類、シンプルなQ&A、文書作成 -- では、適切にプロンプトされた13BローカルモデルはブラインドEvaluationでGPT-5.5 Miniと区別が難しい結果を出します。品質の差は深い世界知識や多段階の推論チェーンを必要とするタスクで最も顕著です。',
             'このギャップは縮まっています。Meta Llama 3.3 70B（2025年）はほとんどのベンチマークでGPT-4（2023年）に匹敵します。7Bスケールのローカルモデル品質は年間約1世代分改善しています。',
           ],
@@ -947,7 +947,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'データプライバシー', 'description': 'ローカルLLM：完全、データはデバイスから出ない。クラウドAPI：プロバイダーサーバーで処理、プライバシーポリシーに従う。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'トークンあたりコスト', 'description': 'ローカルLLM：ハードウェア投資後$0。クラウドAPI：$0.15〜$60/100万トークン。' },
-          { '@type': 'ListItem', 'position': 3, 'name': '出力品質', 'description': 'ローカルLLM：13B〜70Bで良好。クラウドAPI：最高水準 -- GPT-5.5、Claude 4.6 Opusがリード。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '出力品質', 'description': 'ローカルLLM：13B〜70Bで良好。クラウドAPI：最高水準 -- GPT-5.5、Claude 4.6 Sonnetがリード。' },
           { '@type': 'ListItem', 'position': 4, 'name': '応答速度', 'description': 'ローカルLLM：10〜120トークン/秒、ハードウェア依存。クラウドAPI：50〜200トークン/秒、プロバイダー依存。' },
           { '@type': 'ListItem', 'position': 5, 'name': 'セットアップ時間', 'description': 'ローカルLLM：Ollamaで5〜15分。クラウドAPI：アカウントとAPIキーで2〜5分。' },
           { '@type': 'ListItem', 'position': 6, 'name': 'オフラインアクセス', 'description': 'ローカルLLM：あり、インターネット不要。クラウドAPI：なし、接続が必要。' },
@@ -1036,7 +1036,7 @@ schema: {
           rows: [
             { '因素': '数据隐私', '本地LLM': '完全 -- 数据永不离开您的设备', '云端API': '数据在提供商服务器上处理；受其隐私政策约束' },
             { '因素': '每token成本', '本地LLM': '$0（硬件投资后）', '云端API': '$0.15-$60/百万token（因模型而异）' },
-            { '因素': '输出质量', '本地LLM': '13B-70B表现良好；许多任务具有竞争力', '云端API': '最佳水平 -- GPT-5.5、Claude 4.6 Opus领跑基准测试' },
+            { '因素': '输出质量', '本地LLM': '13B-70B表现良好；许多任务具有竞争力', '云端API': '最佳水平 -- GPT-5.5、Claude 4.6 Sonnet领跑基准测试' },
             { '因素': '响应速度', '本地LLM': '10-120 token/秒（硬件依赖）', '云端API': '50-200 token/秒（提供商负载依赖）' },
             { '因素': '设置时间', '本地LLM': '通过Ollama或LM Studio 5-15分钟', '云端API': '创建账户并获取API密钥2-5分钟' },
             { '因素': '离线访问', '本地LLM': '支持 -- 无需互联网', '云端API': '不支持 -- 需要活跃连接' },
@@ -1079,7 +1079,7 @@ schema: {
         quality: {
           title: '本地和云端哪个模型质量更好？',
           content: [
-            '**云端前沿模型（GPT-5.5、Claude 4.6 Opus、Gemini 3.1 Pro）在复杂推理上领先；本地13B模型在摘要、翻译和简单问答上达到同等质量。** 在MMLU（知识广度）和HumanEval（编程）基准测试中，前沿云端模型得分85-90%，而最好的本地70B模型得分65-80%。',
+            '**云端前沿模型（GPT-5.5、Claude 4.6 Sonnet、Gemini 3.1 Pro）在复杂推理上领先；本地13B模型在摘要、翻译和简单问答上达到同等质量。** 在MMLU（知识广度）和HumanEval（编程）基准测试中，前沿云端模型得分85-90%，而最好的本地70B模型得分65-80%。',
             '对于日常任务 -- 摘要、翻译、分类、简单问答和文档起草 -- 经过良好提示的13B本地模型在盲评中产生的结果难以与GPT-5.5 Mini区分。质量差距在需要深度世界知识或多步推理链的任务上最为明显。',
             '差距正在缩小。Meta Llama 3.3 70B（2025年）在大多数基准测试中与GPT-4（2023年）相当。7B规模的本地模型质量每年提升约一代。',
           ],
@@ -1194,7 +1194,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '数据隐私', 'description': '本地LLM：完全，数据永不离开设备。云端API：在提供商服务器上处理，受隐私政策约束。' },
           { '@type': 'ListItem', 'position': 2, 'name': '每token成本', 'description': '本地LLM：硬件投资后$0。云端API：$0.15-$60/百万token。' },
-          { '@type': 'ListItem', 'position': 3, 'name': '输出质量', 'description': '本地LLM：13B-70B表现良好。云端API：最佳水平 -- GPT-5.5、Claude 4.6 Opus领跑基准测试。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '输出质量', 'description': '本地LLM：13B-70B表现良好。云端API：最佳水平 -- GPT-5.5、Claude 4.6 Sonnet领跑基准测试。' },
           { '@type': 'ListItem', 'position': 4, 'name': '响应速度', 'description': '本地LLM：10-120 token/秒，硬件依赖。云端API：50-200 token/秒，提供商依赖。' },
           { '@type': 'ListItem', 'position': 5, 'name': '设置时间', 'description': '本地LLM：通过Ollama 5-15分钟。云端API：账户和API密钥2-5分钟。' },
           { '@type': 'ListItem', 'position': 6, 'name': '离线访问', 'description': '本地LLM：支持，无需互联网。云端API：不支持，需要活跃连接。' },

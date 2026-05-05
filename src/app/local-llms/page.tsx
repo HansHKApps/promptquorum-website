@@ -147,7 +147,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
         {
           '@type': 'Question',
           name: 'Is a local LLM better than ChatGPT?',
-          acceptedAnswer: { '@type': 'Answer', text: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude 4.6 Opus) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 3.3 70B, Qwen2.5 72B) match or exceed GPT-4o Mini on most everyday tasks — at zero per-query cost.' }
+          acceptedAnswer: { '@type': 'Answer', text: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude 4.6 Sonnet) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 3.3 70B, Qwen2.5 72B) match or exceed GPT-4o Mini on most everyday tasks — at zero per-query cost.' }
         },
         {
           '@type': 'Question',
