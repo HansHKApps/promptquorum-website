@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         cost: {
           id: 'cost',
           title: 'What Is the True Cost of Laptop vs Desktop for AI?',
-          content: ['**Desktops deliver 2.5–7× better cost efficiency per token/sec than laptops.** A $1,500 desktop RTX 4070 Ti costs $19 per tok/sec; a MacBook Pro M5 Max ($3,500-4,000) with M5 superior speed costs $50-70 per tok/sec — still 2.5-3.5× more expensive. The new RTX 5090 ($2,500-3,000) delivers $17-25 per tok/sec for 70B models.'],
+          content: ['**Desktops deliver 2.5–7× better cost efficiency per token/sec than laptops.** A $1,500 desktop RTX 4070 Ti costs $19 per tok/sec; a MacBook Pro M5 Max ($3,500-4,000) with M5\'s superior speed costs $50-70 per tok/sec — still 2.5-3.5× more expensive. The new RTX 5090 ($2,500-3,000) delivers $17-25 per tok/sec for 70B models.'],
           rows: [
             { 'Option': 'MacBook Pro 16" M5 Max (128 GB)', 'Cost': '$3,500-4,000', 'LLM Speed': '55-70 tok/sec (est.)', 'Cost/tok/sec': '$50-70' },
             { 'Option': 'MacBook Pro 16" M4 Max (48 GB)', 'Cost': '$3,500+', 'LLM Speed': '35 tok/sec', 'Cost/tok/sec': '~$100' },
