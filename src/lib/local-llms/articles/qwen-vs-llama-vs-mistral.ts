@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model', 'MMLU', 'SWE-bench', 'MATH', 'RAM (Q4_K_M)'],
           image: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-en.svg',
           imageCaption: 'Benchmark comparison (May 2026): Qwen 3.6 27B (77.2% SWE-bench) leads dense coding. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses MoE architecture enabling 17B active parameters in ~10 GB VRAM.',
-          content: '**SWE-bench (real-world GitHub issue resolution) is the primary 2026 coding benchmark** for practical coding evaluation. It tests multi-file changes, codebase understanding, and test writing. HumanEval (single-function Python) remains useful for comparison but is secondary. MMLU and MATH evaluate general knowledge and reasoning. Llama 4 Scout benchmarks are limited due to recent release and MoE complexity. Dashes indicate benchmarks not yet published or not applicable.',"
+          content: '**SWE-bench (real-world GitHub issue resolution) is the primary 2026 coding benchmark** for practical coding evaluation. It tests multi-file changes, codebase understanding, and test writing. HumanEval (single-function Python) remains useful for comparison but is secondary. MMLU and MATH evaluate general knowledge and reasoning. Llama 4 Scout benchmarks are limited due to recent release and MoE complexity. Dashes indicate benchmarks not yet published or not applicable.',
         },
         qwen: {
           id: 'qwen3',
