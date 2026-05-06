@@ -3,21 +3,27 @@ import { NextRequest, NextResponse } from 'next/server'
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
 
-  // 301-redirect ?lang=en, ?lang= (empty), or ?lang=<invalid> to the bare URL.
-  // English is served at the default path; any non-translatable lang param duplicates the
-  // canonical URL and triggers GSC "Duplicate without user-selected canonical".
-  // Skip API routes — the OG image generator depends on an explicit ?lang=en.
   const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh']
   const langParam = url.searchParams.get('lang')
   const isApiRoute = url.pathname.startsWith('/api/')
   const isCronRoute = url.pathname.startsWith('/cron/')
 
-  // Redirect if: lang param exists AND (it's 'en' OR it's invalid) AND not an API/cron route
+  // FIX 3: Special case for ?lang=jp (country code) → 301 to ?lang=ja (language code)
+  if (langParam === 'jp' && !isApiRoute && !isCronRoute) {
+    const redirectUrl = url.clone()
+    redirectUrl.searchParams.set('lang', 'ja')
+    console.log(`[Middleware] 301 redirect (jp→ja): ${url.toString()} -> ${redirectUrl.toString()}`)
+    return NextResponse.redirect(redirectUrl, 301)
+  }
+
+  // FIX 1 & 2: 301-redirect ?lang=en, ?lang= (empty), or other invalid langs to the bare URL.
+  // English is served at the default path; any non-translatable lang param duplicates the
+  // canonical URL and triggers GSC "Duplicate without user-selected canonical".
+  // Skip API routes — the OG image generator depends on an explicit ?lang=en.
   if (langParam !== null && !VALID_NON_EN_LANGS.includes(langParam) && !isApiRoute && !isCronRoute) {
     const redirectUrl = url.clone()
     redirectUrl.searchParams.delete('lang')
-    // Log for debugging
-    console.log(`[Middleware] 301 redirect: ${url.toString()} -> ${redirectUrl.toString()}`)
+    console.log(`[Middleware] 301 redirect (remove lang): ${url.toString()} -> ${redirectUrl.toString()}`)
     return NextResponse.redirect(redirectUrl, 301)
   }
 
