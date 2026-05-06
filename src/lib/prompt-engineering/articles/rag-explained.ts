@@ -278,7 +278,7 @@ export const article: Record<Language, PEArticle> = {
             {
               mistake: 'Not testing retrieval quality separately from generation quality',
               problem: 'If your answers are wrong, the fault may be in retrieval (wrong documents returned) not generation (model reasoning). Without separate testing, you cannot isolate the problem.',
-              fix: 'Test the retriever on 20 representative queries before evaluating the full pipeline. Check: Are the right documents returned? Do they contain the answer? Only then evaluate the generator.'
+              fix: 'Test the retriever on 20 representative queries before evaluating the full pipeline. Check: Are the right documents returned? Do they contain the answer? Then use [prompt quality evaluation techniques](/prompt-engineering/how-to-evaluate-prompt-quality) to measure generation accuracy separately.'
             },
             {
               mistake: 'Ignoring metadata filters',
@@ -307,6 +307,7 @@ export const article: Record<Language, PEArticle> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — combine chain-of-thought with RAG for complex multi-step reasoning over retrieved documents',
             '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security) — indirect prompt injection via retrieved documents is the primary RAG security risk',
             '[Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) — choosing between cloud and local LLMs for the generation stage of your RAG pipeline',
+            '[Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026) — testing and evaluation tools for RAG pipelines including Braintrust, Arize, and LangSmith',
             '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — understanding why RAG is necessary to overcome LLM knowledge cutoff and hallucination limits',
             '[Build Quality Checks](/prompt-engineering/build-quality-checks) — validation patterns for RAG output including hallucination detection and source verification',
           ],
@@ -319,7 +320,7 @@ export const article: Record<Language, PEArticle> = {
             { q: 'What is the difference between RAG and fine-tuning?', a: 'RAG retrieves external knowledge at query time and adds it to the prompt. Fine-tuning permanently modifies the model\'s parameters through additional training. RAG is better for frequently changing data; fine-tuning is better for teaching the model a consistent behavior or style.' },
             { q: 'What vector databases work best for RAG in 2026?', a: 'The most widely used options are Pinecone (managed, easy to start), Weaviate (open-source, flexible), Chroma (lightweight, local), and Milvus (enterprise scale). For EU data residency, self-hosted Weaviate or Chroma are preferred.' },
             { q: 'What is the optimal chunk size for RAG?', a: '200–500 words per chunk with 10–20% overlap between adjacent chunks works well for most use cases. Smaller chunks (under 100 words) lose context; larger chunks (over 1,000 words) reduce retrieval precision. Test on representative queries from your specific domain.' },
-            { q: 'Can I use RAG with local LLMs like Ollama?', a: 'Yes. RAG is model-agnostic. You retrieve documents using any embedding model, then pass the retrieved context to any LLM — including LLaMA 3.1 or Mistral running locally via Ollama or LM Studio. This keeps all data on your own hardware.' },
+            { q: 'Can I use RAG with local LLMs like Ollama?', a: 'Yes. RAG is model-agnostic. You retrieve documents using any embedding model, then pass the retrieved context to any LLM — including LLaMA 3.1 or Mistral running locally via Ollama or LM Studio. Before deploying on local hardware, verify your GPU capacity using our [local LLM VRAM calculator](/local-llms/vram-calculator-local-llm). This keeps all data on your own hardware.' },
             { q: 'Does RAG work with GPT-4o, Claude, and Gemini?', a: 'Yes. All three accept retrieved context in the prompt. Claude Opus 4.7 is particularly effective at flagging when retrieved context does not contain the answer, rather than hallucinating. GPT-4o produces more concise answers from dense context.' },
             { q: 'What is a relevance threshold in RAG?', a: 'A similarity score cutoff below which retrieved documents are not passed to the LLM. A threshold of 0.7 cosine similarity means only documents with 70% or more semantic match to the query are included. Documents below this threshold trigger a "not found in knowledge base" response rather than a hallucinated answer.' },
             { q: 'Is RAG better than using a large context window?', a: 'For large document sets, yes. RAG searches millions of documents in milliseconds via semantic similarity and costs less per query since you only pass relevant chunks, not your entire knowledge base.' },

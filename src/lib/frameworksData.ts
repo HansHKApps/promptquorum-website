@@ -52,7 +52,7 @@ export const FRAMEWORKS: Framework[] = [
     faq: [
       { q: 'What does CO-STAR stand for?', a: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response — six fields that give you precise control over AI output.' },
       { q: 'Why did CO-STAR win the Singapore GPT-4 competition?', a: 'CO-STAR won because it separates Style (presentation) from Tone (emotion), giving more precise control than frameworks that treat them as one field.' },
-      { q: 'When should I use CO-STAR vs CRAFT?', a: 'Use CO-STAR when you need fine-grained control over voice and audience. Use CRAFT when you want a Role-based framing with a clear Target persona.' },
+      { q: 'When should I use CO-STAR vs CRAFT?', a: 'Use CO-STAR when you need fine-grained control over voice and audience. Use CRAFT when you want a Role-based framing with a clear Target persona. Learn how to measure the effectiveness of your CO-STAR prompts at https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality.' },
     ],
   },
   {
@@ -89,7 +89,7 @@ export const FRAMEWORKS: Framework[] = [
     faq: [
       { q: 'What does CRAFT stand for?', a: 'CRAFT stands for Context, Role, Action, Format, and Target — five fields that combine role-based framing with a clear audience definition.' },
       { q: 'How is CRAFT different from CO-STAR?', a: 'CRAFT uses a Role field (giving the AI a persona) while CO-STAR splits style and tone separately. CRAFT is simpler; CO-STAR gives more voice control.' },
-      { q: 'What is CRAFT best used for?', a: 'CRAFT excels at marketing copy and creative writing where assigning an expert persona and defining a target audience significantly improves output quality.' },
+      { q: 'What is CRAFT best used for?', a: 'CRAFT excels at marketing copy and creative writing where assigning an expert persona and defining a target audience significantly improves output quality. After building CRAFT prompts, evaluate their quality using systematic frameworks at https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality.' },
     ],
   },
   {

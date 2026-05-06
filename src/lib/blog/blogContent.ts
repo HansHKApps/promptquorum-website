@@ -1568,6 +1568,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         relatedReading: {
           title: 'Related Reading',
           items: [
+            '/prompt-engineering/how-to-evaluate-prompt-quality',
+            '/blog/prompt-optimization-market-overview-2026',
+            '/prompt-engineering/best-prompt-engineering-tools-2026',
             '/prompt-engineering/prompt-optimization',
             '/prompt-engineering/enterprise-data-privacy',
             '/prompt-engineering/ai-model-comparison',

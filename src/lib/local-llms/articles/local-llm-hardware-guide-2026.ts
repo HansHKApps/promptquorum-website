@@ -200,6 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Best Local LLMs by VRAM Tier (May 2026)',
           content: [
             '**Use this as a quick lookup by your GPU\'s VRAM tier:**',
+            'All models listed below are open-weights — downloadable, fine-tunable, and free to run locally. If you\'re choosing between open-weights and proprietary APIs, see our [open-source vs proprietary LLMs comparison](/prompt-engineering/open-source-vs-proprietary-llms) for cost and performance trade-offs at different token volumes.',
             'Hardware determines which models you can run; prompt engineering determines how well they perform. A well-structured prompt on a 7B model often outperforms a lazy prompt on a 70B model. See the [complete prompt engineering guide](https://www.promptquorum.com/prompt-engineering) for techniques that maximise output quality at any parameter count.',
           ],
           items: [

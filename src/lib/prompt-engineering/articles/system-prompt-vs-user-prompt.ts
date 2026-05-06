@@ -285,6 +285,8 @@ export const article: Record<Language, PEArticle> = {
           '[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structure that applies to both system and user prompts',
           '[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — optimize user prompts for efficiency',
           '[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where each step has its own prompts',
+          '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — measure system and user prompt effectiveness systematically',
+          '[Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026) — testing and versioning tools for iterating on system prompts',
         ],
       },
 
