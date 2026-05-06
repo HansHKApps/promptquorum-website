@@ -93,7 +93,17 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const translationObj = peContent[key][selectedLang] as any
   const hasTranslation =
     Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
-  const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
+
+  // Framework pages: redirect to /frameworks/ canonical URL
+  const FRAMEWORK_SLUG_MAP: Record<string, string> = {
+    'craft-framework': '/frameworks/craft',
+    'trace-framework': '/frameworks/trace',
+    'risen-framework': '/frameworks/risen',
+    'rtf-framework': '/frameworks/rtf',
+    'co-star-framework': '/frameworks/co-star',
+  }
+  const canonicalPath = FRAMEWORK_SLUG_MAP[slug] ?? `/prompt-engineering/${slug}`
+  const canonicalUrl = `https://www.promptquorum.com${canonicalPath}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
 
   // Use seoTitle if available for better SERP display, otherwise use article title
