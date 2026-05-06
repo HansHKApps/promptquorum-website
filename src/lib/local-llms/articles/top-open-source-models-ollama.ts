@@ -130,7 +130,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**General chat (beginner)**: `ollama run llama3.2:3b` -- most documentation, best-supported first model.',
             '**General chat (quality)**: `ollama run llama4:scout` -- MoE architecture, ~10 GB VRAM. For 8 GB machines, keep `ollama run llama3.2:3b`.',
-            '**Coding (7B)**: `ollama run qwen3:8b` -- 76% HumanEval, improved from Qwen2.5, multilingual.',
+            '**Coding on 8 GB**: `ollama run qwen3:8b` -- Best local coding model for 8 GB VRAM machines. 76% HumanEval, 5 GB used, multilingual.',
+            '**General inference on 8 GB (if not coding)**: `ollama run mistral:7b` -- Fastest general-purpose model at 8 GB, 40-60 tok/sec.',
             '**Coding (best agentic, 24B)**: `ollama run devstral-small:24b` -- Best agentic coding model (multi-file edits, debugging). 16 GB RAM. By Mistral AI.',
             '**Coding (best dense, 27B)**: `ollama run qwen3.6:27b` -- 77.2% SWE-bench. Best dense coding model. 22 GB VRAM.',
             '**Coding (frontier MoE)**: `ollama run kimi-k2.6` -- 87/100 real-world coding, top tier. MoE (42B active/1T total). MIT license. Needs quantization for consumer hardware.',

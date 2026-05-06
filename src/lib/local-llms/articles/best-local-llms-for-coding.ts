@@ -32,11 +32,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         de: {
           question: 'Welches lokale LLM ist 2026 am besten fuer Programmierung?',
-          answer: 'Das beste lokale Coding-LLM 2026 ist Qwen2.5-Coder 32B — es uebertrifft GPT-4o beim HumanEval-Benchmark und laeuft lokal ueber Ollama. Fuer weniger VRAM: Qwen3 8B.',
+          answer: 'Das beste lokale Coding-LLM Mai 2026 ist Kimi K2.6 (87/100 Real-World-Benchmark, MoE, MIT-Lizenz) für maximale Qualität. Bestes dichtes Modell: Qwen 3.6 27B (77,2% SWE-bench). Für 8 GB RAM: Qwen3 8B. Alle laufen lokal via Ollama.'.,
           bullets: [
-            'Qwen2.5-Coder 32B — bestes Coding-Modell, HumanEval 92,7%',
+            'Kimi K2.6 — bestes Coding-Modell, 87/100 Real-World, MoE (42B aktiv / 1T total)'.,
             'DeepSeek-Coder-V3 — bestes Modell fuer komplexes Refactoring',
-            'Qwen3 8B — bestes Modell unter 8 GB VRAM',
+            'Qwen3 8B — bestes Modell fuer 8 GB VRAM, 5 GB genutzt'.,
             'CodeLlama 13B — gut fuer Code-Vervollstaendigung in VS Code / Cursor',
             'Phi-4 Mini — gut in Python auf nur 4 GB VRAM',
           ],
@@ -44,11 +44,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         fr: {
           question: 'Quel est le meilleur LLM local pour coder en 2026 ?',
-          answer: 'Le meilleur LLM local pour coder en 2026 est Qwen2.5-Coder 32B — il depasse GPT-4o sur HumanEval et tourne localement via Ollama. Pour moins de VRAM: Qwen3 8B.',
+          answer: 'Le meilleur LLM local pour coder en mai 2026 est Kimi K2.6 (87/100 real-world, MoE, licence MIT) pour la qualité maximale. Meilleur dense: Qwen 3.6 27B (77,2% SWE-bench). Pour 8 GB RAM: Qwen3 8B. Tous via Ollama.'.,
           bullets: [
-            'Qwen2.5-Coder 32B — meilleur modele de code, HumanEval 92,7%',
+            'Kimi K2.6 — meilleur modele de code, 87/100 real-world, MoE (42B actif / 1T total)'.,
             'DeepSeek-Coder-V3 — meilleur pour le refactoring complexe',
-            'Qwen3 8B — meilleur sous 8 Go VRAM',
+            'Qwen3 8B — meilleur pour 8 Go VRAM, 5 Go utilises'.,
             'CodeLlama 13B — bon pour l\'autocompletion dans VS Code / Cursor',
             'Phi-4 Mini — efficace en Python sur 4 Go',
           ],
