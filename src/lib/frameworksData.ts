@@ -97,6 +97,8 @@ export const FRAMEWORKS: Framework[] = [
     name: 'RISEN',
     expansion: 'Role · Instructions · Steps · End Goal · Narrowing',
     tagline: 'Built for multi-step enterprise tasks. The Narrowing field keeps AI output on-track and within constraints.',
+    seoTitle: 'RISEN Framework: Multi-Step Enterprise Workflows — Complete Guide',
+    metaDescription: 'RISEN (Role, Instructions, Steps, End Goal, Narrowing) for enterprise workflows. Why the Narrowing field prevents AI hallucinations and scope drift.',
     complexity: 'High',
     fields: [
       { name: 'Role', description: 'The expert persona the AI should adopt for this task.' },

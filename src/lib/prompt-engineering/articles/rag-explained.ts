@@ -16,7 +16,9 @@ export const article: Record<Language, PEArticle> = {
       dateModified: '2026-05-05',
       readTime: '12 min read',
       seoTitle: 'RAG Explained: How to Ground AI Answers in Real Data (2026)',
-      metaDescription: 'Learn Retrieval-Augmented Generation (RAG): 4-stage pipeline, chunk sizes, relevance thresholds, vector DB comparison. RAG vs fine-tuning decision guide.',
+      metaDescription: 'RAG (Retrieval-Augmented Generation) reduces hallucinations by 67%: how the 4-stage pipeline works, vector DB choice, vs fine-tuning decision guide.',
+      ogDescription: 'RAG pipeline cuts hallucinations. Vector retrieval + LLM generation.',
+      twitterDescription: 'RAG (Retrieval-Augmented Generation) cuts hallucinations. How the 4-stage pipeline works and why it beats fine-tuning.',
       quickFacts: [
         '4-stage pipeline: Ingestion → Indexing → Retrieval → Generation — each stage is independent and upgradeable',
         'Optimal chunk size: 200–500 words with 10–20% overlap between adjacent chunks',

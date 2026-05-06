@@ -74,14 +74,14 @@ const FRAMEWORK_PAGES: Page[] = [
 ]
 
 const LOCAL_LLM_PAGES: Page[] = [
-  { path: '/local-llms', priority: 0.9, changefreq: 'weekly', lastmod: '2026-03-16' },
+  { path: '/local-llms', priority: 0.9, changefreq: 'weekly', lastmod: '2026-05-06' },
   ...Object.keys(LLM_SLUG_TO_KEY)
     .filter(slug => hasRealContent(llmContent, LLM_SLUG_TO_KEY[slug]))
     .map(slug => ({
       path: `/local-llms/${slug}`,
       priority: 0.8,
       changefreq: 'monthly' as const,
-      lastmod: '2026-03-16',
+      lastmod: '2026-05-06',
     })),
 ]
 
@@ -91,23 +91,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
   PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
-    // Add entry for each language variant (all 5 languages crawlable)
-    LANGS.forEach(lang => {
-      const url = lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`
-      entries.push({
-        url,
-        lastModified: lastmod,
-        changeFrequency: changefreq,
-        priority,
-        alternates: {
-          languages: Object.fromEntries(
-            LANGS.map(l => [
-              l,
-              l === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${l}`,
-            ])
-          ),
-        },
-      })
+    // Only EN pages as <loc> entries; all language variants via hreflang
+    const enUrl = `${BASE}${path}`
+    entries.push({
+      url: enUrl,
+      lastModified: lastmod,
+      changeFrequency: changefreq,
+      priority,
+      alternates: {
+        languages: Object.fromEntries([
+          ['en', enUrl],
+          ['de', `${BASE}${path}?lang=de`],
+          ['fr', `${BASE}${path}?lang=fr`],
+          ['ja', `${BASE}${path}?lang=ja`],
+          ['zh', `${BASE}${path}?lang=zh`],
+          ['x-default', enUrl],
+        ]),
+      },
     })
   })
 

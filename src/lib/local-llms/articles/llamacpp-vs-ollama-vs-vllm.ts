@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks',
       seoTitle: 'llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks',
       intro: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching.** As of April 2026, choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM. All three run the same models and produce identical output--speed/throughput differ.',
-      metaDescription: 'llama.cpp: 38 tok/s single-token (fastest). Ollama: 5-min setup (simplest). vLLM: 250+ tok/s batched (highest throughput). RTX 4090 benchmarks, feature matrix. April 2026.',
+      metaDescription: 'llama.cpp delivers 38 tok/s speed. Ollama offers 5-min simplicity. vLLM provides 250+ throughput. Complete RTX 4090 benchmark matrix and comparison.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching. As of April 2026, choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM.**',
