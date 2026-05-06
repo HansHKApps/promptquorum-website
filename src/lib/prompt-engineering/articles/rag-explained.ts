@@ -329,6 +329,22 @@ export const article: Record<Language, PEArticle> = {
             'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
           ],
         },
+
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            { q: 'What does RAG stand for?', a: 'RAG stands for Retrieval-Augmented Generation. It is a two-step process: first, retrieve relevant documents from a knowledge base; second, feed those documents to an LLM alongside the user\'s question. The LLM answers based on the retrieved content instead of only its training data.' },
+            { q: 'How does RAG reduce hallucinations?', a: 'RAG anchors every answer in documents you control. Instead of relying solely on learned patterns, the model reads actual source material. If the source doesn\'t contain an answer, the model can say "not found" rather than inventing one.' },
+            { q: 'What\'s the difference between RAG and fine-tuning?', a: 'RAG retrieves knowledge at query time (dynamic and updatable). Fine-tuning embeds knowledge into model parameters at training time (static and permanent). RAG is faster to update; fine-tuning can embed style and behavior. For current information, RAG is superior.' },
+            { q: 'Can I use RAG with any language model?', a: 'Yes. RAG is model-agnostic. Any LLM that accepts a prompt with context can use retrieved documents. This includes GPT-4o, Claude Opus, Gemini, open-source models like Llama, and local models via Ollama.' },
+            { q: 'What\'s the optimal chunk size for RAG?', a: 'For most use cases: 200–500 words per chunk with 10–20% overlap between adjacent chunks. Smaller chunks (50–100 words) improve precision; larger chunks (500+ words) improve context but risk irrelevant passages being included.' },
+            { q: 'What\'s a relevance threshold in RAG?', a: 'A similarity score cutoff. If a retrieved document\'s similarity is below the threshold (e.g., 0.7 cosine similarity), it\'s not passed to the LLM. This prevents low-quality or irrelevant context from confusing the model.' },
+            { q: 'Is RAG better than a large context window?', a: 'For massive document collections, yes. RAG efficiently searches millions of documents in milliseconds using semantic similarity. Large context windows are more expensive and require knowing which documents to include beforehand.' },
+            { q: 'Can I combine RAG with fine-tuning?', a: 'Yes. Fine-tune a model to improve style, tone, or domain behavior. Then use RAG to ground it in current facts. This creates the best of both: consistent behavior + factual grounding.' },
+            { q: 'How do I prevent prompt injection attacks in RAG?', a: 'Validate retrieved content before including it in the prompt. Use clear delimiters between system instructions and retrieved text. Never treat retrieved content as executable instructions. Monitor for suspicious patterns in retrieved documents.' },
+            { q: 'Does RAG require a vector database?', a: 'Not for small collections. BM25 keyword search works for under 10,000 documents without vectors. For semantic similarity on larger collections, a vector database (Weaviate, Pinecone, Chroma, Milvus) is essential.' },
+          ],
+        },
       },
     },
     de: {
@@ -660,6 +676,22 @@ export const article: Record<Language, PEArticle> = {
             'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
           ],
         },
+
+        faqSection: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Was ist RAG?', a: 'RAG (Retrieval-Augmented Generation) ruft relevante Dokumente ab, bevor eine Antwort generiert wird, anstatt sich auf das Trainingswissen des Modells zu verlassen. Die Antwort wird in Ihren Dokumenten verankert, nicht erfunden.' },
+            { q: 'Wie reduziert RAG Halluzinationen?', a: 'RAG verankert die Antwort im abgerufenen Text. Der Prompt teilt dem Modell mit, nur aus den bereitgestellten Auszügen zu antworten und fehlende Informationen zu kennzeichnen. Dies eliminiert den Anreiz des Modells, plausible Details zu erfinden.' },
+            { q: 'Was ist der Unterschied zwischen RAG und Fine-Tuning?', a: 'RAG ruft Wissen zur Abfragezeit ab und fügt es zum Prompt hinzu. Fine-Tuning modifiziert die Modellparameter dauerhaft. RAG eignet sich für sich ändernde Daten; Fine-Tuning für stabiles Verhalten.' },
+            { q: 'Funktioniert RAG mit jedem Sprachmodell?', a: 'Ja. RAG ist modellunabhängig. Jedes LLM, das einen Prompt mit Kontext akzeptiert, kann abgerufene Dokumente nutzen. Dies gilt für GPT-4o, Claude Opus, Gemini, Open-Source-Modelle wie Llama und lokale Modelle via Ollama.' },
+            { q: 'Was ist die optimale Chunk-Größe für RAG?', a: 'Für die meisten Fälle: 200–500 Worte pro Chunk mit 10–20% Überlappung zwischen angrenzenden Chunks. Kleinere Chunks (50–100 Wörter) verbessern die Präzision; größere Chunks (500+ Wörter) geben mehr Kontext, riskieren aber irrelevante Passagen.' },
+            { q: 'Was ist ein Relevanzschwellenwert in RAG?', a: 'Ein Ähnlichkeitswert-Cutoff. Wenn die Ähnlichkeit eines abgerufenen Dokuments unter dem Schwellenwert (z.B. 0,7 Kosinus-Ähnlichkeit) liegt, wird es nicht an das LLM übergeben. Dies verhindert, dass minderwertiger Kontext das Modell verwirrt.' },
+            { q: 'Ist RAG besser als ein großes Kontextfenster?', a: 'Für massive Dokumentsammlungen, ja. RAG durchsucht Millionen von Dokumenten in Millisekunden mit semantischer Ähnlichkeit. Große Kontextfenster sind teurer und erfordern im Voraus zu wissen, welche Dokumente einzubeziehen sind.' },
+            { q: 'Kann ich RAG mit Fine-Tuning kombinieren?', a: 'Ja. Fine-tunen Sie ein Modell, um Stil, Ton oder Domain-Verhalten zu verbessern. Nutzen Sie dann RAG, um es in aktuellen Fakten zu verankern. Dies schafft das Beste aus beiden: konsistentes Verhalten + faktische Verankerung.' },
+            { q: 'Wie vermeide ich Prompt-Injektions-Angriffe in RAG?', a: 'Validieren Sie abgerufenen Inhalt, bevor Sie ihn in den Prompt aufnehmen. Verwenden Sie klare Trennzeichen zwischen Systemanweisungen und abgerufenem Text. Behandeln Sie abgerufenen Inhalt niemals als ausführbare Anweisungen. Überwachen Sie auf verdächtige Muster.' },
+            { q: 'Benötigt RAG eine Vektor-Datenbank?', a: 'Nicht für kleine Sammlungen. BM25-Schlüsselwortsuche funktioniert für unter 10.000 Dokumente ohne Vektoren. Für semantische Ähnlichkeit bei größeren Sammlungen ist eine Vektor-Datenbank (Weaviate, Pinecone, Chroma, Milvus) wesentlich.' },
+          ],
+        },
       },
     },
     fr: {
@@ -957,6 +989,22 @@ export const article: Record<Language, PEArticle> = {
             'OpenAI. (2024). "Retrieval and Augmentation in Language Models." https://platform.openai.com/docs/guides/prompt-engineering',
           ],
         },
+
+        faqSection: {
+          title: 'Questions fréquemment posées',
+          faqs: [
+            { q: 'Qu\'est-ce que RAG ?', a: 'RAG (Retrieval-Augmented Generation) récupère des documents pertinents avant de générer une réponse, plutôt que de s\'appuyer uniquement sur les connaissances d\'entraînement du modèle. La réponse est ancrée dans vos documents, pas inventée.' },
+            { q: 'Comment RAG réduit-il les hallucinations ?', a: 'RAG ancre la réponse dans le texte récupéré. Le prompt indique au modèle de répondre uniquement à partir des extraits fournis et de signaler les informations manquantes. Cela supprime l\'incitation du modèle à inventer des détails plausibles.' },
+            { q: 'Quelle est la différence entre RAG et Fine-Tuning ?', a: 'RAG récupère les connaissances au moment de la requête et les ajoute au prompt. Le Fine-Tuning modifie les paramètres du modèle définitivement. RAG convient aux données changeantes ; le Fine-Tuning aux comportements stables.' },
+            { q: 'RAG fonctionne-t-il avec n\'importe quel modèle de langage ?', a: 'Oui. RAG est modèle-agnostique. Tout LLM acceptant un prompt avec contexte peut utiliser des documents récupérés. Cela inclut GPT-4o, Claude Opus, Gemini, les modèles open-source comme Llama et les modèles locaux via Ollama.' },
+            { q: 'Quelle est la taille de chunk optimale pour RAG ?', a: 'Pour la plupart des cas : 200–500 mots par chunk avec 10–20% de chevauchement entre chunks adjacents. Les chunks plus petits (50–100 mots) améliorent la précision ; les chunks plus grands (500+ mots) fournissent plus de contexte mais risquent d\'inclure des passages non pertinents.' },
+            { q: 'Qu\'est-ce qu\'un seuil de pertinence dans RAG ?', a: 'Un seuil de score de similarité. Si la similarité d\'un document récupéré est inférieure au seuil (ex. 0,7 cosinus), il n\'est pas transmis au LLM. Cela évite que du contexte de faible qualité confonde le modèle.' },
+            { q: 'RAG est-il meilleur qu\'une large fenêtre contextuelle ?', a: 'Pour les grandes collections de documents, oui. RAG recherche efficacement des millions de documents en millisecondes avec similarité sémantique. Les grandes fenêtres contextuelles coûtent plus cher et nécessitent de savoir à l\'avance quels documents inclure.' },
+            { q: 'Puis-je combiner RAG avec le Fine-Tuning ?', a: 'Oui. Fine-tuner un modèle pour améliorer le style, le ton ou le comportement du domaine. Puis utiliser RAG pour l\'ancrer dans des faits actuels. Cela crée le meilleur des deux : comportement cohérent + ancrage factuel.' },
+            { q: 'Comment prévenir les attaques par injection de prompts dans RAG ?', a: 'Validez le contenu récupéré avant de l\'inclure dans le prompt. Utilisez des délimiteurs clairs entre les instructions système et le texte récupéré. Ne traitez jamais le contenu récupéré comme des instructions exécutables. Surveillez les patterns suspects.' },
+            { q: 'RAG nécessite-t-il une base de données vectorielle ?', a: 'Non pour les petites collections. La recherche BM25 par mots-clés fonctionne pour moins de 10 000 documents sans vecteurs. Pour la similarité sémantique sur les plus grandes collections, une base de données vectorielle (Weaviate, Pinecone, Chroma, Milvus) est essentielle.' },
+          ],
+        },
       },
     },
     ja: {
@@ -1251,6 +1299,22 @@ export const article: Record<Language, PEArticle> = {
             'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. https://arxiv.org/abs/2312.10997',
             'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. https://arxiv.org/abs/2002.08909',
             'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
+          ],
+        },
+
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            { q: 'RAGとは何ですか？', a: 'RAG（検索増強生成）は、モデルのトレーニングデータだけに頼るのではなく、先に関連ドキュメントを取得してから回答を生成します。回答はあなたのドキュメントに根拠づけられ、発明されていません。' },
+            { q: 'RAGはどのように幻覚を減らしますか？', a: 'RAGは回答を取得したテキストに基づかせます。プロンプトはモデルに提供された抜粋からのみ答えるように指示し、不足している情報を示します。これによりモデルが詳細を作り上げる傾向を排除します。' },
+            { q: 'RAGとファインチューニングの違いは？', a: 'RAGはクエリ時に知識を取得し、プロンプトに追加します。ファインチューニングはモデルパラメータを永続的に変更します。RAGは変化するデータに適しており、ファインチューニングは安定した動作に適しています。' },
+            { q: 'RAGはすべての言語モデルで機能しますか？', a: 'はい。RAGはモデルに依存しません。コンテキスト付きプロンプトを受け入れるすべてのLLMが、取得されたドキュメントを使用できます。これはGPT-4o、Claude Opus、Gemini、Llamaなどのオープンソースモデル、Ollama経由のローカルモデルを含みます。' },
+            { q: 'RAGの最適なチャンクサイズは？', a: 'ほとんどの場合：1チャンク200～500単語、隣接するチャンク間に10～20%のオーバーラップ。小さいチャンク（50～100単語）は精度を改善し、大きいチャンク（500+単語）はコンテキストを提供しますが、無関係な段落を含むリスクがあります。' },
+            { q: 'RAGの関連性閾値とは？', a: '類似度スコアの最小値です。取得されたドキュメントの類似度が閾値（例：0.7コサイン類似度）未満の場合、LLMに渡されません。これにより、低品質なコンテキストがモデルを混乱させるのを防ぎます。' },
+            { q: 'RAGは大きなコンテキストウィンドウより優れていますか？', a: '大規模なドキュメント集合の場合はそうです。RAGはセマンティック類似度を使用して数百万のドキュメントをミリ秒で効率的に検索します。大きなコンテキストウィンドウはより費用がかかり、どのドキュメントを含めるかを事前に知る必要があります。' },
+            { q: 'RAGとファインチューニングを組み合わせることはできますか？', a: 'はい。モデルをファインチューニングしてスタイル、トーン、またはドメイン動作を改善します。その後RAGを使用して、それを現在の事実に根拠づけます。これにより両方の長所が得られます：一貫した動作+事実の根拠。' },
+            { q: 'RAGでプロンプト・インジェクション攻撃を防ぐにはどうしますか？', a: 'プロンプトに含める前に取得されたコンテンツを検証します。システム指示と取得されたテキスト間に明確な区切り文字を使用します。取得されたコンテンツを実行可能な命令として扱わないでください。不審なパターンを監視します。' },
+            { q: 'RAGはベクトルデータベースが必要ですか？', a: '小さな集合には必要ありません。BM25キーワード検索は10,000ドキュメント未満でベクトルなしで動作します。より大きな集合でのセマンティック類似度については、ベクトルデータベース（Weaviate、Pinecone、Chroma、Milvus）が重要です。' },
           ],
         },
       },
@@ -1560,6 +1624,22 @@ export const article: Record<Language, PEArticle> = {
             'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. https://arxiv.org/abs/2312.10997',
             'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. https://arxiv.org/abs/2002.08909',
             'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
+          ],
+        },
+
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            { q: 'RAG是什么？', a: 'RAG（检索增强生成）不只依赖模型的训练数据，而是先从知识库中检索相关文档，然后生成答案。答案根植于你的文档，而非凭空捏造。' },
+            { q: 'RAG如何减少幻觉？', a: 'RAG将答案锚定在取得的文本中。提示词指导模型只基于提供的摘录回答，并标记缺失信息。这消除了模型编造看似合理的细节的动机。' },
+            { q: 'RAG与微调有什么区别？', a: 'RAG在查询时检索知识并添加到提示词中。微调永久性修改模型参数。RAG适合数据变化的情况；微调适合稳定行为。' },
+            { q: 'RAG适用于任何语言模型吗？', a: '是的。RAG模型无关。任何接受带上下文提示的LLM都可以使用检索到的文档。这包括GPT-4o、Claude Opus、Gemini、开源模型如Llama，以及通过Ollama的本地模型。' },
+            { q: 'RAG的最优块大小是多少？', a: '对于大多数情况：每块200-500字，相邻块之间有10-20%的重叠。较小块（50-100字）提高精度；较大块（500+字）增加上下文但可能包含无关段落。' },
+            { q: 'RAG中的关联性阈值是什么？', a: '这是相似度分数的最小值。如果检索文档的相似度低于阈值（例如0.7余弦相似度），就不会传递给LLM。这防止低质量内容混淆模型。' },
+            { q: 'RAG比大上下文窗口更好吗？', a: '对于大规模文档集合是的。RAG使用语义相似度在毫秒内有效搜索数百万文档。大上下文窗口成本更高，且需要提前知道包含哪些文档。' },
+            { q: '能结合RAG和微调吗？', a: '可以。微调模型改进风格、语调或领域行为。然后使用RAG将其根植于最新事实。这结合了两者的优势：一致行为+事实依据。' },
+            { q: '如何防止RAG中的提示词注入攻击？', a: '在将检索内容包含在提示词中之前进行验证。在系统指令和检索文本之间使用清晰分隔符。不要将检索内容视为可执行指令。监控可疑模式。' },
+            { q: 'RAG需要向量数据库吗？', a: '不是小型集合。BM25关键词搜索可用于少于10,000个文档，无需向量。对于较大集合中的语义相似性，向量数据库（Weaviate、Pinecone、Chroma、Milvus）是必需的。' },
           ],
         },
       },

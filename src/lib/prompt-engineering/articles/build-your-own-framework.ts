@@ -246,6 +246,22 @@ export const article: Record<Language, PEArticle> = {
           { title: 'PromptQuorum Multi-Model Testing', url: 'https://www.promptquorum.com/features' },
         ],
       },
+
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is the difference between a prompt technique and a prompt framework?', a: 'A technique is a single instruction or method (e.g., "think step by step"). A framework is a reusable structure with 3+ components that define how prompts should be built. Frameworks are repeatable; techniques are ad-hoc.' },
+          { q: 'When should I build a custom framework instead of using CO-STAR, CRAFT, or RISEN?', a: 'Build one when you repeatedly apply the same 3+ modifications to an existing framework for every prompt in a workflow. If you always add a policy constraint, domain terminology, and output schema to CO-STAR, those should be components of your own framework.' },
+          { q: 'Can a custom framework work across different AI models?', a: 'Yes, if designed correctly. Avoid model-specific syntax and build around universal components (task, constraints, output format). Test on GPT-4o and Claude before finalizing. If the framework needs rewording per model, simplify it.' },
+          { q: 'How many components should my custom framework have?', a: 'Use 3–6 components. Fewer than 3 is a technique, not a framework. More than 6 creates friction and writers skip sections. If you need more, split into two specialized frameworks for different task types.' },
+          { q: 'How do I test whether my custom framework actually works?', a: 'Apply it to 10 representative prompts from your workflow. Score outputs against three criteria: (1) task completion, (2) format compliance, (3) quality consistency. A working framework scores 8/10 or better on all three. Test across multiple models using PromptQuorum.' },
+          { q: 'How should I name a custom framework?', a: 'Use an acronym that maps to your components in order (like REPAIR). The acronym test: can a new team member recall all components from the name alone? If not, simplify your component list.' },
+          { q: 'Can I combine components from CO-STAR, CRAFT, and RISEN to build my own framework?', a: 'Yes, but treat it as a new framework, not a hybrid. Name it, document it, test it, and store it in version control. Combining without formalizing just creates an undocumented ad-hoc pattern.' },
+          { q: 'How do I version a custom framework?', a: 'Store each version in a dated file (e.g., repair-v1-2026-05.md) in your prompt library. Tag breaking changes (component added/removed) as major versions. Tag refinements (definition updates) as minor versions. Document the reason for each change.' },
+          { q: 'What should I document for my custom framework?', a: 'Write a one-page spec: (1) framework name and goal, (2) 3–6 component definitions with examples, (3) a fill-in template, (4) 3 annotated full example prompts using the framework. Keep it in version control alongside your prompt library.' },
+          { q: 'How do I get my team to use a custom framework I\'ve created?', a: 'Start with a 30-minute walkthrough using real task examples. Test together on 2–3 prompts. Create a shareable one-page spec. Track compliance and impact metrics (task success rate, output consistency) for the first month. Iterate based on feedback.' },
+        ],
+      },
     },
   },
 
@@ -420,6 +436,22 @@ export const article: Record<Language, PEArticle> = {
           { title: 'PromptQuorum Multi-Model Testing', url: 'https://www.promptquorum.com/features' },
         ],
       },
+
+      faqSection: {
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          { q: 'Was ist der Unterschied zwischen einer Prompt-Technik und einem Prompt-Framework?', a: 'Eine Technik ist eine einzelne Anweisung oder Methode (z. B. „denke Schritt für Schritt"). Ein Framework ist eine wiederverwendbare Struktur mit 3+ Komponenten, die definiert, wie Prompts aufgebaut sein sollten. Frameworks sind wiederholbar; Techniken sind ad hoc.' },
+          { q: 'Wann sollte ich ein eigenes Framework statt CO-STAR, CRAFT oder RISEN verwenden?', a: 'Erstellen Sie eines, wenn Sie wiederholt die gleichen 3+ Modifikationen an einem existierenden Framework für jeden Prompt in einem Workflow vornehmen. Wenn Sie immer eine Compliance-Einschränkung, Domain-Terminologie und Output-Schema zu CO-STAR hinzufügen, sollten diese Komponenten Ihres eigenen Frameworks werden.' },
+          { q: 'Kann ein eigenes Framework über verschiedene KI-Modelle hinweg funktionieren?', a: 'Ja, wenn es richtig gestaltet ist. Vermeiden Sie modellspezifische Syntax und bauen Sie auf universelle Komponenten (Aufgabe, Einschränkungen, Output-Format). Testen Sie auf GPT-4o und Claude, bevor Sie finalisieren. Wenn das Framework pro Modell Umformulierungen benötigt, vereinfachen Sie es.' },
+          { q: 'Wie viele Komponenten sollte mein eigenes Framework haben?', a: 'Verwenden Sie 3–6 Komponenten. Weniger als 3 ist eine Technik, kein Framework. Mehr als 6 erzeugt Reibung und Autoren überspringen Abschnitte. Wenn Sie mehr brauchen, teilen Sie in zwei spezialisierte Frameworks für verschiedene Aufgabentypen auf.' },
+          { q: 'Wie teste ich, ob mein eigenes Framework tatsächlich funktioniert?', a: 'Wenden Sie es auf 10 repräsentative Prompts aus Ihrem Workflow an. Bewerten Sie Ausgaben nach drei Kriterien: (1) Aufgabenerledigung, (2) Format-Einhaltung, (3) Qualitätskonsistenz. Ein funktionierendes Framework erzielte 8/10 oder besser bei allen drei. Testen Sie über mehrere Modelle mit PromptQuorum.' },
+          { q: 'Wie sollte ich mein eigenes Framework benennen?', a: 'Verwenden Sie ein Akronym, das Ihren Komponenten in Reihenfolge zugeordnet ist (wie REPAIR). Der Akronym-Test: Kann ein neues Teammitglied alle Komponenten allein aus dem Namen abrufen? Wenn nicht, vereinfachen Sie Ihre Komponentenliste.' },
+          { q: 'Kann ich Komponenten von CO-STAR, CRAFT und RISEN kombinieren?', a: 'Ja, behandeln Sie es aber als neues Framework, nicht als Hybrid. Benennen Sie es, dokumentieren Sie es, testen Sie es und speichern Sie es in Versionskontrolle. Kombinieren ohne Formalisierung schafft nur ein undokumentiertes ad-hoc-Muster.' },
+          { q: 'Wie versioniere ich ein eigenes Framework?', a: 'Speichern Sie jede Version in einer datierten Datei (z. B. repair-v1-2026-05.md) in Ihrer Prompt-Bibliothek. Markieren Sie Breaking Changes (Komponente hinzugefügt/entfernt) als Hauptversionen. Markieren Sie Verfeinerungen (Definitionen aktualisiert) als Nebenversionen. Dokumentieren Sie den Grund für jede Änderung.' },
+          { q: 'Was sollte ich für mein eigenes Framework dokumentieren?', a: 'Schreiben Sie eine einseitige Spezifikation: (1) Framework-Name und Ziel, (2) 3–6 Komponentendefinitionen mit Beispielen, (3) eine Ausfüllvorlage, (4) 3 annotierte vollständige Beispielprompts mit dem Framework. Halten Sie es in Versionskontrolle neben Ihrer Prompt-Bibliothek.' },
+          { q: 'Wie bekomme ich mein Team, mein eigenes Framework zu verwenden?', a: 'Beginnen Sie mit einer 30-Minuten-Anleitung mit echten Aufgabenbeispielen. Testen Sie zusammen an 2–3 Prompts. Erstellen Sie eine teilbare einseitige Spezifikation. Verfolgen Sie Compliance und Impact Metrics (Task-Erfolgsrate, Output-Konsistenz) für den ersten Monat. Iterieren Sie basierend auf Feedback.' },
+          ],
+        },
     },
   },
 
@@ -603,6 +635,22 @@ export const article: Record<Language, PEArticle> = {
           { title: 'PromptQuorum Multi-Model Testing', url: 'https://www.promptquorum.com/features' },
         ],
       },
+
+      faqSection: {
+        title: 'Questions fréquemment posées',
+        faqs: [
+          { q: 'Quelle est la différence entre une technique de prompt et un framework de prompt?', a: 'Une technique est une instruction ou méthode unique (par exemple, "réfléchis étape par étape"). Un framework est une structure réutilisable avec 3+ composants qui définissent comment les prompts doivent être construits. Les frameworks sont répétables; les techniques sont ad hoc.' },
+          { q: 'Quand devrais-je créer un framework personnalisé plutôt que d\'utiliser CO-STAR, CRAFT ou RISEN?', a: 'Créez-en un lorsque vous appliquez régulièrement les mêmes 3+ modifications à un framework existant pour chaque prompt dans un workflow. Si vous ajoutez toujours une contrainte de politique, une terminologie de domaine et un schéma de sortie à CO-STAR, ceux-ci devraient devenir des composants de votre propre framework.' },
+          { q: 'Un framework personnalisé peut-il fonctionner sur différents modèles d\'IA?', a: 'Oui, s\'il est correctement conçu. Évitez la syntaxe spécifique au modèle et construisez autour de composants universels (tâche, contraintes, format de sortie). Testez sur GPT-4o et Claude avant de finaliser. Si le framework nécessite une reformulation par modèle, simplifiez-le.' },
+          { q: 'Combien de composants mon framework personnalisé devrait-il avoir?', a: 'Utilisez 3–6 composants. Moins de 3 est une technique, pas un framework. Plus de 6 crée des frictions et les rédacteurs sautent des sections. Si vous en avez besoin de plus, divisez-les en deux frameworks spécialisés pour différents types de tâches.' },
+          { q: 'Comment tester si mon framework personnalisé fonctionne réellement?', a: 'Appliquez-le à 10 prompts représentatifs de votre workflow. Évaluez les sorties selon trois critères: (1) accomplissement de la tâche, (2) respect du format, (3) cohérence de qualité. Un framework efficace score 8/10 ou mieux sur tous les trois. Testez sur plusieurs modèles avec PromptQuorum.' },
+          { q: 'Comment devrais-je nommer un framework personnalisé?', a: 'Utilisez un acronyme mappant vos composants dans l\'ordre (comme REPAIR). Le test de l\'acronyme: un nouveau membre de l\'équipe peut-il se souvenir de tous les composants uniquement à partir du nom? Si non, simplifiez votre liste de composants.' },
+          { q: 'Puis-je combiner des composants de CO-STAR, CRAFT et RISEN?', a: 'Oui, mais traitez cela comme un nouveau framework, pas un hybride. Nommez-le, documentez-le, testez-le et stockez-le dans le contrôle de version. Combiner sans formaliser crée juste un schéma ad hoc non documenté.' },
+          { q: 'Comment je versionne un framework personnalisé?', a: 'Stockez chaque version dans un fichier daté (par exemple, repair-v1-2026-05.md) dans votre bibliothèque de prompts. Marquez les changements majeurs (composant ajouté/supprimé) comme versions majeures. Marquez les raffinements comme versions mineures. Documentez la raison de chaque changement.' },
+          { q: 'Que dois-je documenter pour mon framework personnalisé?', a: 'Écrivez une spécification d\'une page: (1) nom et objectif du framework, (2) définitions des 3–6 composants avec exemples, (3) un modèle à remplir, (4) 3 exemples de prompts complets annotés utilisant le framework. Conservez-le en contrôle de version.' },
+          { q: 'Comment je fais en sorte que mon équipe utilise le framework personnalisé que j\'ai créé?', a: 'Commencez avec une présentation de 30 minutes utilisant des exemples de tâches réelles. Testez ensemble sur 2–3 prompts. Créez une spécification d\'une page partageable. Suivez les métriques de conformité et d\'impact pour le premier mois. Itérez selon les commentaires.' },
+          ],
+        },
     },
   },
 
@@ -798,6 +846,22 @@ export const article: Record<Language, PEArticle> = {
           { title: 'PromptQuorum Multi-Model Testing', url: 'https://www.promptquorum.com/features' },
         ],
       },
+
+      faqSection: {
+        title: 'よくある質問',
+        faqs: [
+          { q: 'プロンプト技法とプロンプトフレームワークの違いは?', a: '技法は単一の指示またはメソッドです（例：「ステップバイステップで考える」）。フレームワークは3+コンポーネントを持つ再利用可能な構造で、プロンプトの構築方法を定義します。フレームワークは繰り返し可能で、技法はアドホックです。' },
+          { q: 'CO-STAR、CRAFT、RISENではなくカスタムフレームワークを構築すべき時は?', a: 'ワークフロー内の各プロンプトで既存フレームワークに同じ3+の修正を繰り返し適用する場合に構築します。常にCO-STARにコンプライアンス制約、ドメイン用語、出力スキーマを追加する場合、これらはあなたのフレームワークのコンポーネントになるべきです。' },
+          { q: 'カスタムフレームワークは異なるAIモデル間で機能できるか?', a: 'はい、正しく設計されていれば可能です。モデル固有の構文を避けて、普遍的なコンポーネント（タスク、制約、出力形式）の周りに構築します。最終化する前にGPT-4oとClaudeでテストします。フレームワークがモデルごとに大幅な言い換えを必要とする場合は、簡単にしてください。' },
+          { q: 'カスタムフレームワークは何個のコンポーネントを持つべきか?', a: '3～6個のコンポーネントを使用します。3個未満はテクニックで、フレームワークではありません。6個超は摩擦を生み、ライターはセクションをスキップします。もっと必要な場合は、異なるタスクタイプ用の2つの専門フレームワークに分割します。' },
+          { q: 'カスタムフレームワークが実際に機能しているか確認するには?', a: 'ワークフロー内の10個の代表的なプロンプトに適用します。3つの基準に対して出力をスコアリングします：（1）タスク完了、（2）フォーマット準拠、（3）品質一貫性。機能するフレームワークは3つすべてで8/10以上のスコアを取得すべきです。PromptQuorumを使用して複数のモデル間でテストします。' },
+          { q: 'カスタムフレームワークにどう名前を付ける?', a: 'REPAIR のようなアクロニムを使用して記憶に残りやすくします。アクロニムテスト：新しいチームメンバーが名前だけですべてのコンポーネントを思い出せるか?そうでない場合は、コンポーネントリストを単純化します。' },
+          { q: '複数の既存フレームワークのコンポーネントを組み合わせられるか?', a: 'CO-STAR、CRAFT、RISENのコンポーネントを組み合わせることはできますが、結果を新しいカスタムフレームワークとして扱い、命名、文書化、テストします。正式化なしで組み合わせると、文書化されていないアドホックパターンが作成されるだけです。' },
+          { q: 'カスタムフレームワークのバージョン管理方法は?', a: '各フレームワークバージョンを日付付きファイル（例：repair-v1-2026-05.md）でPromptライブラリディレクトリに保存します。重大な変更（コンポーネント追加/削除）をメジャーバージョンとしてタグします。改善（定義更新）をマイナーバージョンとしてタグします。各変更の理由をドキュメント化します。' },
+          { q: 'カスタムフレームワークで何を文書化すべきか?', a: '1ページの仕様を作成します：（1）フレームワーク名と目標、（2）例付きの3～6コンポーネント定義、（3）記入テンプレート、（4）フレームワークを使用した3つの注釈付き完全なサンプルプロンプト。バージョン制御でPromptライブラリの横に保管します。' },
+          { q: '構築したカスタムフレームワークをチームに使用させるには?', a: '実際のタスク例を使用した30分間のウォークスルーから開始します。2～3のプロンプトで一緒にテストします。共有可能な1ページの仕様を作成します。最初の1ヶ月間のコンプライアンスと影響メトリクスを追跡します。フィードバックに基づいて反復します。' },
+        ],
+      },
     },
   },
 
@@ -991,6 +1055,22 @@ export const article: Record<Language, PEArticle> = {
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
           { title: 'Anthropic Prompt Engineering Documentation', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'PromptQuorum Multi-Model Testing', url: 'https://www.promptquorum.com/features' },
+        ],
+      },
+
+      faqSection: {
+        title: '常见问题',
+        faqs: [
+          { q: '提示技巧和提示框架有什么区别?', a: '技巧是单一指令或方法（如"逐步思考"）。框架是具有3+组件的可重用结构，定义如何构建提示。框架可重复使用；技巧是临时的。' },
+          { q: '何时应该构建自定义框架而不使用CO-STAR、CRAFT或RISEN?', a: '当您为工作流中的每条提示重复对现有框架进行相同的3+修改时，构建一个。如果您始终向CO-STAR添加政策约束、领域术语和输出模式，这些应该成为您自己框架的组件。' },
+          { q: '自定义框架能在不同的AI模型上工作吗?', a: '是的，如果设计正确。避免特定于模型的语法，围绕通用组件（任务、约束、输出格式）构建。在最终确定前在GPT-4o和Claude上测试。如果框架需要按型号重新措辞，请简化它。' },
+          { q: '我的自定义框架应该有多少个组件?', a: '使用3-6个组件。少于3个是技巧，不是框架。超过6个会产生摩擦，编写者跳过部分。如果需要更多，将其分为两个针对不同任务类型的专用框架。' },
+          { q: '如何测试我的自定义框架是否真正有效?', a: '将其应用于工作流中的10个代表性提示。根据三个标准对输出进行评分：（1）任务完成、（2）格式遵守、（3）质量一致。有效的框架在所有三个方面的评分应为8/10或更高。使用PromptQuorum跨多个模型进行测试。' },
+          { q: '我应该如何命名自定义框架?', a: '使用映射到顺序中的组件的首字母缩略词（如REPAIR）。首字母缩略词测试：新团队成员仅从名称就能记住所有组件吗？如果不能，简化您的组件列表。' },
+          { q: '我能将CO-STAR、CRAFT和RISEN的组件结合起来吗?', a: '可以，但将其视为新的自定义框架，而不是混合体。命名、记录和测试它，就像它是原创的一样。没有正式化，结合只会创建无文档的临时模式。' },
+          { q: '我应该如何对自定义框架进行版本管理?', a: '将每个框架版本存储在日期文件（如repair-v1-2026-05.md）中。将重大更改（添加/删除的组件）标记为主要版本。将改进（定义更新）标记为次要版本。记录每个更改的原因。' },
+          { q: '我应该为我的自定义框架记录什么?', a: '编写一份一页的规范：（1）框架名称和目标、（2）带示例的3-6组件定义、（3）填充模板、（4）3个使用框架的带注释的完整示例提示。将其保存在版本控制中，并在您的提示库旁边。' },
+          { q: '我如何让我的团队使用我创建的自定义框架?', a: '从使用实际任务示例的30分钟演练开始。在2-3条提示上一起测试。创建可共享的一页规范。第一个月跟踪合规性和影响指标。根据反馈进行迭代。' },
         ],
       },
     },
