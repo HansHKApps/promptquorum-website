@@ -44,11 +44,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         fr: {
           question: 'Quel est le meilleur LLM local pour coder en 2026 ?',
-          answer: 'Le meilleur LLM local pour coder en mai 2026 est Kimi K2.6 (87/100 real-world, MoE, licence MIT) pour la qualité maximale. Meilleur dense: Qwen 3.6 27B (77,2% SWE-bench). Pour 8 GB RAM: Qwen3 8B. Tous via Ollama.'.,
+          answer: 'Le meilleur LLM local pour coder en mai 2026 est Kimi K2.6 (87/100 real-world, MoE, licence MIT) pour la qualité maximale. Meilleur dense: Qwen 3.6 27B (77,2% SWE-bench). Pour 8 GB RAM: Qwen3 8B. Tous via Ollama.',
           bullets: [
-            'Kimi K2.6 — meilleur modele de code, 87/100 real-world, MoE (42B actif / 1T total)'.,
+            'Kimi K2.6 — meilleur modele de code, 87/100 real-world, MoE (42B actif / 1T total)',
             'DeepSeek-Coder-V3 — meilleur pour le refactoring complexe',
-            'Qwen3 8B — meilleur pour 8 Go VRAM, 5 Go utilises'.,
+            'Qwen3 8B — meilleur pour 8 Go VRAM, 5 Go utilises',
             'CodeLlama 13B — bon pour l\'autocompletion dans VS Code / Cursor',
             'Phi-4 Mini — efficace en Python sur 4 Go',
           ],
