@@ -441,7 +441,7 @@ export const article: Record<Language, PEArticle> = {
         integrityProblem: {
           title: 'How Detectable Is AI Cheating in Schools?',
           content: [
-            '**Current AI detection tools have false positive rates of 15–30% in peer-reviewed studies, meaning they are unreliable for high-stakes academic integrity decisions — and many students use [AI hallucinations](/prompt-engineering/ai-hallucinations-how-to-stop) strategically to evade detection.**',
+            '**Current AI detection tools have false positive rates of 15–30% in peer-reviewed studies, meaning they are unreliable for high-stakes academic integrity decisions — and many students use [AI hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) strategically to evade detection.**',
             'Academic integrity is the central challenge in AI-assisted education. The scale of adoption has outpaced both policy and detection technology. Student adoption is widespread: surveys report 60–92% of students use AI for studies, though institutional policies vary widely on which uses are permitted.',
             'The detection problem has three critical layers:',
           ],
@@ -1037,7 +1037,7 @@ export const article: Record<Language, PEArticle> = {
         integrityProblem: {
           title: 'Wie erkennbar ist KI-Betrug in Schulen?',
           content: [
-            '**Aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass sie für risikoreiche akademische Integritätsentscheidungen unzuverlässig sind — und viele Schüler nutzen [KI-Halluzinationen](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de) strategisch, um Erkennung zu vermeiden.**',
+            '**Aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass sie für risikoreiche akademische Integritätsentscheidungen unzuverlässig sind — und viele Schüler nutzen [KI-Halluzinationen](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) strategisch, um Erkennung zu vermeiden.**',
             'Akademische Integrität ist die zentrale Herausforderung in KI-unterstützter Bildung. Der Umfang der Adoption hat sowohl Richtlinien als auch Erkennungstechnologie überholt. Schüler-Adoption ist weit verbreitet: Umfragen berichten 60–92 % der Schüler nutzen KI zum Lernen, obwohl institutionelle Richtlinien bezüglich erlaubter Nutzungen stark unterscheiden.',
             'Das Erkennungsproblem hat drei kritische Schichten:',
           ],
@@ -1638,7 +1638,7 @@ export const article: Record<Language, PEArticle> = {
     integrityProblem: {
       title: 'La triche par IA est-elle détectable dans les établissements scolaires ?',
       content: [
-        '**Les outils de détection d\'IA actuels ont des taux de faux positifs de 15–30 % dans les études examinées par les pairs, ce qui les rend peu fiables pour les décisions d\'intégrité académique à haut risque — et de nombreux élèves utilisent stratégiquement les [hallucinations d\'IA](/prompt-engineering/ai-hallucinations-how-to-stop?lang=fr) pour éviter la détection.**',
+        '**Les outils de détection d\'IA actuels ont des taux de faux positifs de 15–30 % dans les études examinées par les pairs, ce qui les rend peu fiables pour les décisions d\'intégrité académique à haut risque — et de nombreux élèves utilisent stratégiquement les [hallucinations d\'IA](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) pour éviter la détection.**',
         'L\'intégrité académique est le défi central de l\'éducation assistée par IA. Le rythme d\'adoption a surpassé à la fois les politiques et la technologie de détection. L\'adoption par les élèves est répandue : les sondages signalent 60–92 % des élèves utilisant l\'IA pour l\'apprentissage, bien que les politiques institutionnelles varient considérablement sur l\'utilisation permise.',
         'Le problème de détection a trois couches critiques :',
       ],
@@ -2062,7 +2062,7 @@ export const article: Record<Language, PEArticle> = {
     integrityProblem: {
       title: '学校におけるAI不正はどの程度検出可能か',
       content: [
-        '**現在のAI検出ツールは査読済み研究で15～30%の偽陽性率を持つため、高リスク学業不正決定向けに信頼できません—多くの生徒は戦略的に[AI幻覚](/prompt-engineering/ai-hallucinations-how-to-stop?lang=ja)を使って検出を回避します。**',
+        '**現在のAI検出ツールは査読済み研究で15～30%の偽陽性率を持つため、高リスク学業不正決定向けに信頼できません—多くの生徒は戦略的に[AI幻覚](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を使って検出を回避します。**',
         '学業不整がAI支援教育における中心課題。採用速度は両ポリシーと検出技術を上回りました。生徒採用は広範：調査は学習向けAI使用を60～92%の生徒が報告、制度ポリシーは許可した使用について大きく異なりますが。検出問題は3つの重要レイヤーを持つ：',
       ],
       items: [

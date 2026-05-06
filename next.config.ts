@@ -40,6 +40,22 @@ const nextConfig: NextConfig = {
         destination: '/frameworks/co-star',
         permanent: true,
       },
+      // Slug corrections: fix broken internal links
+      {
+        source: '/prompt-engineering/ai-hallucinations-how-to-stop',
+        destination: '/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
+        permanent: true,
+      },
+      {
+        source: '/local-llms/langchain-tutorial',
+        destination: '/local-llms/local-ai-agents-langgraph-ollama',
+        permanent: true,
+      },
+      {
+        source: '/local-llms/rag-retrieval-augmented-generation',
+        destination: '/prompt-engineering/rag-explained',
+        permanent: true,
+      },
     ]
   },
   async headers() {
