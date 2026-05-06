@@ -99,6 +99,26 @@ export const article: Record<Language, PEArticle> = {
             '@type': 'Question',
             'name': 'Can I combine CO-STAR with Chain-of-Thought or APE?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. CO-STAR defines WHAT the model should produce and HOW it should feel. Chain-of-Thought or APE define how the model should THINK. You can use CO-STAR for the brief and add "Think step by step before producing the final response" as an additional instruction. The frameworks are complementary, not competing.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What does CO-STAR stand for in prompt engineering?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. These six components work together to give an AI model a complete brief. Context provides background, Objective states the goal, Style defines structure, Tone sets the voice, Audience clarifies who will read it, and Response specifies the exact format needed.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do you use the CO-STAR method to write a prompt?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Fill out each of the six CO-STAR fields: write the context, state your objective, specify the style (bullets, narrative, steps), choose the tone (formal, casual, technical), identify the audience, and define the response format. You can format them as labeled lines or structured text. Send all six components together as one prompt to the AI model.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are the best alternatives to the CO-STAR framework?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Top alternatives include RTF (Role, Task, Format—simpler, 3 components), CRAFT (Context, Role, Action, Format, Target—task-focused), SPECS (Situation, Problem, Examples, Constraints, Style—problem-solving), and TRACE (Task, Requirements, Actions, Context, Examples—reasoning-oriented). Choose based on your task type and complexity needs.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does CO-STAR compare to RISEN, CRAFT, and other prompt frameworks?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR (6 components, audience-centric) is for communication-heavy tasks. CRAFT (5 components, role-focused) is for task execution. RISEN emphasizes role and goals. SPECS focuses on problem-solving with constraints. TRACE adds reasoning transparency. CO-STAR excels when audience, tone, and style matter equally; other frameworks shine for different task profiles.' }
           }
         ]
       },

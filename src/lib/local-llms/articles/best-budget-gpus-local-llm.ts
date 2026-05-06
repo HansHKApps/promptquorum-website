@@ -287,6 +287,30 @@ schema: {
               '@type': 'Answer',
               'text': 'Yes. Llama 4 Scout uses MoE architecture — 17B parameters active out of 109B total. At Q4_K_M, it uses ~10 GB VRAM, fitting comfortably within the RTX 3060 12GB\'s memory. Expect 12-16 tok/sec. This is the single best upgrade for RTX 3060 owners in 2026: `ollama pull llama4:scout`.'
             }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best budget NVIDIA GPU for local LLM inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4060 Ti (8 GB, ~$250) for 7B models, or RTX 4070 Super (12 GB, ~$350-400) for 13B models. For used: RTX 3060 12GB (~$150-200) runs 7-13B models smoothly at Q4. Best value is RTX 3060 12GB used, or RTX 4070 Super new.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does the AMD 6800XT compare to the RTX 4070 for AI inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AMD RX 6800 XT (16 GB) beats RTX 4070 (12 GB) on VRAM and gaming performance but lags on LLM inference speed (15-20% slower). ROCm driver setup for llama.cpp is also more complex than CUDA. For pure LLM work, RTX 4070 is easier; for gaming + LLMs, 6800 XT offers better value.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Used RTX 3090 (24 GB, ~$450-500) = $18-20 per GB. Used RTX 3060 (12 GB, ~$150-180) = $12-15 per GB. RTX 4070 Ti (12 GB, ~$600 new) = $50 per GB. Best value: RTX 3060 12GB used. Most capacity per dollar: RTX 3090 24GB used. Balance price + power: RTX 4070 new.'
+            }
           }
         ]
       },

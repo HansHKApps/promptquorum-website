@@ -163,6 +163,30 @@ export const article: Record<Language, PEArticle> = {
               text: 'PromptQuorum includes RTF as a built-in framework template. Users fill in Role, Task, and Format fields, and PromptQuorum dispatches the same prompt across 25+ models (GPT-4o, Claude, Gemini, local models) for comparison and A/B testing.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What does the RTF framework help you do when prompting AI?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF helps you structure prompts consistently by separating concerns into three fields: who the model is (Role), what task it solves (Task), and how the output should be formatted (Format). This eliminates vagueness and makes prompts reusable templates.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What does RTF stand for in prompt engineering?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF stands for Role, Task, Format—the three essential components of a lightweight prompt structure. Role defines the model\'s persona, Task defines the action, and Format defines the output structure. Together they create the minimal framework needed for consistent results.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does the RTF framework compare to CO-STAR for prompt engineering?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF has 3 components (Role, Task, Format) and is minimal. CO-STAR has 6 components (Context, Objective, Style, Tone, Audience, Response) and is comprehensive. Use RTF for routine tasks; use CO-STAR when tone/audience/style are critical. RTF is your default; CO-STAR is your upgrade.',
+            },
+          },
         ],
       },
       sections: {

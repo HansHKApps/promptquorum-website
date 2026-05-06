@@ -309,6 +309,38 @@ export const article: Record<Language, PEArticle> = {
             {
               q: 'How can I reduce my AI API token costs?',
               a: 'Seven strategies: trim system prompts, constrain output length, summarise conversation history every 5 turns, use cheaper models for simple tasks, avoid sending full conversation history, downscale images before uploading, and batch test calls rather than running them manually.'
+            },
+            {
+              q: 'How many tokens does a typical AI prompt use?',
+              a: 'A typical prompt uses 150–500 tokens depending on complexity. A simple question (5–20 tokens), a medium paragraph (50–150 tokens), a full research prompt with examples (200–600 tokens). Tokens per prompt vary based on language and complexity.'
+            },
+            {
+              q: 'What does it mean when a prompt has 3,000 tokens?',
+              a: 'A 3,000-token prompt is roughly a 2,000-word article or 10+ pages of text. This indicates a long system prompt, complete conversation history, or large document context. For efficiency, consider summarizing conversation history or trimming unnecessary context.'
+            },
+            {
+              q: 'How much does each AI prompt cost across different models?',
+              a: 'Costs vary by model: GPT-4o mini = ~$0.00005–0.0001 per prompt. GPT-4o = ~$0.001–0.01. Claude Haiku = ~$0.00003 per prompt. Claude Opus = ~$0.005–0.02. Gemini Flash = ~$0.00002. Costs depend on prompt length and output.'
+            },
+            {
+              q: 'How are AI prompt tokens calculated?',
+              a: 'Tokens are calculated by breaking text into units of 3–4 characters (roughly ¾ of English words). System prompts, conversation history, images, attached files, and output all count. Most API providers show exact token count in responses. Shorter prompts and constrained output reduce token usage.'
+            },
+            {
+              q: 'How many tokens is a 1,000-word prompt?',
+              a: 'A 1,000-word prompt is approximately 1,200–1,500 tokens in English. Other languages tokenize less efficiently and may require 20–40% more tokens. Token count depends on word choice and average word length in the language used.'
+            },
+            {
+              q: 'Are token limits based on a single prompt or the entire conversation?',
+              a: 'Token limits apply to the entire conversation history, including all system prompts, previous messages, retrieved documents, and the current prompt. Rate limits (tokens per minute) accumulate across all your API calls in that timeframe, not just one prompt.'
+            },
+            {
+              q: 'How many prompts can you get from 1 million tokens?',
+              a: 'With 1 million tokens: 2,000–6,667 prompts if each prompt averages 150–500 tokens. GPT-4o mini prompts (~300 tokens) = ~3,333 prompts. GPT-4o prompts (~500 tokens) = ~2,000 prompts. Actual count depends on prompt size and output length.'
+            },
+            {
+              q: 'Does prompt optimization reduce API costs significantly?',
+              a: 'Yes. Trimming a 500-token system prompt to 300 tokens saves ~$0.001 per API call. At 1,000 calls/day, that\'s $365/year saved. Constraining output length and summarizing conversation history every 5 turns reduces costs 30–50%. Model selection is the largest lever — GPT-4o mini costs 33× less than GPT-4o.'
             },          ]
         },
         relatedReading: {

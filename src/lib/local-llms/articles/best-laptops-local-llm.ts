@@ -218,6 +218,38 @@ schema: {
               'text': 'Used MSI GE75 or ASUS ROG with RTX 4070 (2023 model), $1,200-1,500 on eBay. Check return policy.'
             }
           },
+          {
+            '@type': 'Question',
+            'name': 'Can gaming laptops be used for running local LLM models?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Gaming laptops with RTX GPUs (4060, 4070, 4090) are ideal for local LLMs. RTX 4070 laptops run 13B models at 12-15 tok/s. RTX 4090 laptops run 30B models at 40-60 tok/s. Gaming thermal design handles continuous inference well.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best Apple laptop to run LLMs locally?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Max (128 GB unified memory) is the best—runs 70B models at 20+ tok/s. M4 Max (36 GB) runs 30B at 25-35 tok/s. M3 Pro (18 GB) handles 7-13B models at 15-25 tok/s. Apple Silicon is energy-efficient but slower than RTX 4090.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are the best Windows laptops for running local LLMs in the UK?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ASUS ROG Zephyrus (RTX 4070, 16GB), £2,000-2,500. MSI Raider GE67 (RTX 4080, 32GB), £2,200-2,700. Gigabyte Aorus Master (RTX 4090, 32GB), £2,500-3,200. All available via Curry\'s, John Lewis, or Amazon UK with warranties.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What laptops work best for local LLM inference in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4070 / RTX 5070 laptops (12-14 GB VRAM) offer the best balance for 7-13B models at 50-70 tok/s. RTX 4090 laptops (24 GB) run any 70B model at 100-150 tok/s. Mac M5 Max runs 70B at unified memory but with lower inference speed. Windows RTX laptops are fastest; Mac is energy-efficient.'
+            }
+          },
         ],
       },
       itemListSchema: {

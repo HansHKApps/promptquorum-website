@@ -323,6 +323,38 @@ export const article: Record<Language, PEArticle> = {
             q: 'How do system prompts affect EU AI Act compliance?',
             a: 'The EU AI Act (effective February 2025) requires transparency documentation for high-risk AI systems, including the instructions the system operates under. System prompts must be logged, versioned, and accessible to compliance teams. Hidden system prompts that cannot be disclosed create direct compliance risk under Article 13 transparency obligations and Article 86 (right to explanation).'
           },
+          {
+            q: 'What is the purpose of a system prompt?',
+            a: 'A system prompt establishes the AI model\'s personality, constraints, and operational rules for the entire conversation. It controls how the model interprets requests, formats responses, and handles edge cases. System prompts prevent unpredictable behavior and ensure consistent output quality across all user interactions.'
+          },
+          {
+            q: 'Is a system prompt followed more closely than a user prompt by AI agents?',
+            a: 'Yes. System prompts have structural precedence in the model\'s processing order. The model reads and applies system prompts first, treating them as persistent constraints. User prompts are evaluated within the system prompt\'s boundaries. This makes system prompts harder to override and more reliable for enforcing strict behavioral rules.'
+          },
+          {
+            q: 'What is a developer prompt and how does it relate to system prompts?',
+            a: 'A developer prompt is a system prompt written by an engineer or product team to control how an AI behaves in a production application. It is a specialized type of system prompt designed for automated workflows, APIs, and non-interactive systems. Developer prompts prioritize precision and measurable outputs over conversational naturalness.'
+          },
+          {
+            q: 'What is the pre-prompt that sits between the system prompt and user prompt?',
+            a: 'The pre-prompt is an intermediate instruction block sometimes used in advanced prompting architectures. It refines the system prompt\'s scope without modifying it directly, sitting logically between the system prompt and user input. Pre-prompts are common in RAG systems and multi-turn conversations to contextualize retrieval results.'
+          },
+          {
+            q: 'Which system prompt pattern is most effective for enforcing strict JSON output?',
+            a: 'The most effective pattern combines role definition with explicit format constraints and an example. Structure: (1) role, (2) output requirement ("respond ONLY in valid JSON"), (3) schema specification, (4) escape rules. This combination forces consistency better than format instructions alone.'
+          },
+          {
+            q: 'Are system prompts more powerful than regular user prompts?',
+            a: 'Yes. System prompts account for approximately 70% of behavioral consistency according to PromptQuorum testing across multiple models. User prompts account for roughly 30%. A well-crafted system prompt can make weak user prompts work better, but a poor system prompt will undermine even excellent user prompts.'
+          },
+          {
+            q: 'What is the difference between a core prompt and a session prompt?',
+            a: 'A core prompt is the base system prompt that defines permanent rules and role. A session prompt is dynamically generated per conversation session (e.g., with session ID, user metadata, or context). Core prompts are static; session prompts are contextually generated before each session begins.'
+          },
+          {
+            q: 'How do system prompts work differently in OpenAI, Claude, and Gemini APIs?',
+            a: 'All three APIs support system prompts in the messages array, but with subtle differences. OpenAI uses `system` role at message start. Anthropic Claude uses `system` parameter. Google Gemini uses `systemInstruction` as a separate parameter. Functionality is equivalent, but implementation and token counting vary slightly across providers.'
+          },
         ],
       },
 
