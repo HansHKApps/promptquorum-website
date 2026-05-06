@@ -118,9 +118,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'most-popular-models-on-ollama',
           title: 'Which Models Are Most Popular on Ollama in 2026?',
           content: [
-            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of May 2026, the top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since March 2026 release.',
+            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of May 2026, the top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since its April 2026 release.',
             'Qwen3 is the fastest-growing model family in the Ollama library, with Qwen3 and the new Qwen 3.6 dense variant quickly displacing Qwen2.5. DeepSeek-R1 and the new DeepSeek-R2 saw major spikes following releases and remain highly downloaded for reasoning tasks.',
-            'Meta released **Llama 4** in April 2025 with Scout (17B active, 109B total, MoE) and Maverick (17B active, 400B total) variants. Llama 4 Scout is now stable in the Ollama library (`ollama pull llama4:scout`). The Llama 4 family uses Mixture-of-Experts (MoE) architecture — only 17B parameters are active per token, making Scout runnable on ~10 GB VRAM despite having 109B total parameters. For lightweight setups (8 GB RAM), Llama 3.2 3B remains the easiest first model. The Ollama ecosystem expanded significantly in late April / early May 2026. Kimi K2.6 (Moonshot AI, MIT license, 42B active / 1T total MoE) became the first non-Western model to reach Tier A in coding benchmarks (87/100). Qwen 3.6 27B achieved 77.2% SWE-bench as the best dense coding model. Ollama v0.22.1 added Gemma 4 support with thinking and tool calling improvements. The Ollama library now references 4,500+ models.',
+            'Meta released **Llama 4** in April 2026 with Scout (17B active, 109B total, MoE) and Maverick (17B active, 400B total) variants. Llama 4 Scout is now stable in the Ollama library (`ollama pull llama4:scout`). The Llama 4 family uses Mixture-of-Experts (MoE) architecture — only 17B parameters are active per token, making Scout runnable on ~10 GB VRAM despite having 109B total parameters. For lightweight setups (8 GB RAM), Llama 3.2 3B remains the easiest first model. The Ollama ecosystem expanded significantly in late April / early May 2026. Kimi K2.6 (Moonshot AI, MIT license, 42B active / 1T total MoE) became the first non-Western model to reach Tier A in coding benchmarks (87/100). Qwen 3.6 27B achieved 77.2% SWE-bench as the best dense coding model. Ollama v0.22.1 added Gemma 4 support with thinking and tool calling improvements. The Ollama library now references 4,500+ models.',
           ],
         },
         byCategory: {
@@ -351,13 +351,13 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'url': 'https://ollama.com/library/llama3.2', 'description': 'Best first model. 2.5 GB RAM. 60% HumanEval. Most tutorials. ollama run llama3.2:3b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.1 8B', 'url': 'https://ollama.com/library/llama3.1', 'description': 'Best quality general chat. 5.5 GB RAM. 72% HumanEval. ollama run llama3.2' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'qwen2.5-coder:32b', 'url': 'https://ollama.com/library/qwen2.5-coder', 'description': 'Best coding model 2026. 20 GB RAM. 92.7% HumanEval. FIM support. ollama run qwen2.5-coder:32b' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5-coder:7b', 'url': 'https://ollama.com/library/qwen2.5-coder', 'description': 'Best coding 7B. 4.7 GB RAM. 72% HumanEval. FIM support. ollama run qwen2.5-coder:7b' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3.6 27B', 'url': 'https://ollama.com/library/qwen3.6', 'description': 'Best dense coding model May 2026. 77.2% SWE-bench. 22 GB RAM. ollama run qwen3.6:27b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Kimi K2.6', 'url': 'https://ollama.com/library/kimi-k2.6', 'description': 'Frontier MoE coding model May 2026. 87/100 real-world. 42B active/1T total. MIT license. ollama run kimi-k2.6' },
           { '@type': 'ListItem', 'position': 5, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Best reasoning. 5 GB RAM. 52% MATH vs 28% Mistral 7B. ollama run deepseek-r1:7b' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'gemma4:9b', 'url': 'https://ollama.com/library/gemma4', 'description': 'NEW April 2026. Best agent + tool calling + vision. 6 GB RAM. ollama run gemma4:9b' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'qwen3:7b', 'url': 'https://ollama.com/library/qwen3', 'description': 'NEW April 2026. 76% HumanEval -- best in class at 7B. Multilingual. ollama run qwen3:7b' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Best quality 16 GB tier. 14 GB RAM. 74% HumanEval. Apache 2.0. ollama run mistral-small3.1' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Qwen2.5 7B', 'url': 'https://ollama.com/library/qwen2.5', 'description': 'Best multilingual. 4.7 GB RAM. 29 native languages. ollama run qwen2.5:7b' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'gemma4:9b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Best agent + tool calling + vision. 6 GB RAM. Vision support + structured output. ollama run gemma4:9b' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'qwen3:7b', 'url': 'https://ollama.com/library/qwen3', 'description': 'Best lightweight coding. 76% HumanEval. Multilingual. 5.5 GB RAM. ollama run qwen3:7b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Best agentic coding May 2026. Multi-file edits, debugging. 16 GB RAM. ollama run devstral-small:24b' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Best quality 16 GB tier. 14 GB RAM. 74% HumanEval. Apache 2.0. ollama run mistral-small3.1' },
           { '@type': 'ListItem', 'position': 10, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'Fastest and lightest. 1.7 GB RAM. Best CPU inference. ollama run gemma2:2b' },
           { '@type': 'ListItem', 'position': 11, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Best reasoning under 4 GB. 2.5 GB RAM. 70% HumanEval. ollama run phi4-mini' },
         ],
@@ -388,7 +388,7 @@ schema: {
             'name': 'Which Ollama model is best for building a local chatbot?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'For a general-purpose local chatbot: `llama3.1:8b` on 8 GB RAM machines, `mistral-small3.1` on 16 GB RAM. For a coding assistant chatbot: `qwen2.5-coder:7b`. Pair with Open WebUI for a web-based interface that connects to Ollama\'s API at localhost:11434.',
+              'text': 'For a general-purpose local chatbot: `llama4:scout` on 12 GB VRAM (best quality, MoE), or `llama3.2:3b` on 8 GB RAM (easiest entry point). For higher-quality use: `mistral-small3.1` on 16 GB RAM. For a coding assistant chatbot: `qwen3.6:27b` (best coding model, 77.2% SWE-bench) or `devstral-small:24b` (agentic coding). Pair with Open WebUI for a web-based interface that connects to Ollama\'s API at localhost:11434.',
             }
           },
           {
@@ -396,7 +396,7 @@ schema: {
             'name': 'Are all Ollama models truly open source?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Not all. The Ollama library includes models with varying licences. Llama 3.x uses the Meta Llama Community Licence (not OSI-approved open source -- restricts commercial use above 700M monthly active users). Mistral 7B, Qwen2.5, and Gemma 3 are Apache 2.0 (fully open source). Always check the licence before commercial deployment.',
+              'text': 'Not all. The Ollama library includes models with varying licences. Llama 3.x/4.x use the Meta Llama Community Licence (not OSI-approved open source -- restricts commercial use above 700M monthly active users). Mistral 7B, Qwen3, Qwen 3.6, Devstral, and Gemma models are Apache 2.0 (fully open source). Kimi K2.6 is MIT licensed (fully commercial-friendly). Always check the licence before commercial deployment.',
             }
           },
           {
@@ -412,7 +412,7 @@ schema: {
             'name': 'How often does the Ollama library get updated with new models?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The Ollama team adds new models within days to weeks of major releases. Meta Llama 3.3 appeared in the Ollama library within 3 days of its December 2025 release. Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
+              'text': 'The Ollama team adds new models within days to weeks of major releases. Kimi K2.6 and Qwen 3.6 appeared within days of their May 2026 releases. Ollama v0.22.1 (May 3, 2026) added Gemma 4 rendering improvements. Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
             }
           },
           {
