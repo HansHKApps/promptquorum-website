@@ -238,7 +238,22 @@ export const article: Record<Language, PEArticle> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
-      sections: {}
+      sections: {
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            { q: 'What does APE stand for?', a: 'APE stands for Analyze, Plan, Execute. It\'s a three-step prompt framework that breaks down complex reasoning into three explicit stages: understanding the problem, planning an approach, and executing the solution.' },
+            { q: 'How is APE different from just asking a model for an answer?', a: 'With APE, you get visibility into the model\'s thinking process. Instead of a single answer, you see how the model understood your task, what plan it chose, and the final output. This makes errors easier to catch and results more reliable.' },
+            { q: 'When should I use APE instead of the Single Step Prompt Method?', a: 'Use APE when reasoning is critical to your task: technical analysis, code reviews, strategy development, or situations where errors are costly. Use Single Step when your objective is clear upfront and you mainly need execution speed.' },
+            { q: 'Can I use APE with local models like Ollama or LM Studio?', a: 'Yes. APE works with any model—frontier models from OpenAI, Anthropic, and Google, or local models via Ollama and LM Studio. The same three-step structure applies across all platforms.' },
+            { q: 'How long does an APE prompt need to be?', a: 'APE prompts can be compact. A single paragraph that mentions Analyze, Plan, and Execute and specifies what you expect in each stage is sufficient. The framework itself is about structure, not length.' },
+            { q: 'Can I save APE prompts as templates in PromptQuorum?', a: 'Yes. Once you create an APE-structured prompt that works well for a particular workflow (e.g., code reviews, customer summaries), you can save it as a template in PromptQuorum and share it with your team.' },
+            { q: 'What if my task is too simple for APE?', a: 'If your task is straightforward and doesn\'t require visible reasoning, the Single Step Prompt Method is probably sufficient. APE adds overhead—the value comes from being able to inspect and refine the model\'s reasoning.' },
+            { q: 'How do I know if an APE prompt is working well?', a: 'Run your APE prompt on 3–5 representative examples and check: (1) Does the analysis capture the core challenge? (2) Is the plan reasonable and actionable? (3) Does the execution follow the plan? If any step is weak, refine the prompt and test again.' },
+            { q: 'What is the difference between APE (Analyze-Plan-Execute) and APE (Automatic Prompt Engineering)?', a: 'They share an acronym but are completely different techniques. APE (Analyze-Plan-Execute) is a manual prompt structure you write yourself. APE (Automatic Prompt Engineering, Zhou et al. 2022) is a technique where AI automatically generates and scores prompt variants to find the optimal phrasing. This article covers both — the main framework is Analyze-Plan-Execute; automated prompt optimization is covered in the final section.' },
+          ],
+        },
+      }
     },
     fr: {
       freshness_tier: 'evergreen',
@@ -263,7 +278,22 @@ export const article: Record<Language, PEArticle> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
-      sections: {}
+      sections: {
+        faqSection: {
+          title: 'Questions Fréquemment Posées',
+          faqs: [
+            { q: 'Que signifie APE ?', a: 'APE signifie Analyser, Planifier, Exécuter. C\'est un framework de prompt en trois étapes qui divise le raisonnement complexe en trois phases explicites : la compréhension du problème, la planification d\'une approche et l\'exécution de la solution.' },
+            { q: 'En quoi APE diffère-t-il du fait de simplement demander une réponse à un modèle ?', a: 'Avec APE, vous avez une visibilité sur le processus de réflexion du modèle. Au lieu d\'une seule réponse, vous voyez comment le modèle a compris votre tâche, quel plan il a choisi et la sortie finale. Cela rend les erreurs plus faciles à attraper et les résultats plus fiables.' },
+            { q: 'Quand devrais-je utiliser APE plutôt que la Single Step Prompt Method ?', a: 'Utilisez APE quand le raisonnement est critique pour votre tâche : analyse technique, révisions de code, développement de stratégie, ou situations où les erreurs sont coûteuses. Utilisez Single Step quand votre objectif est clair d\'avance et vous avez surtout besoin de rapidité d\'exécution.' },
+            { q: 'Puis-je utiliser APE avec des modèles locaux comme Ollama ou LM Studio ?', a: 'Oui. APE fonctionne avec n\'importe quel modèle—modèles de pointe d\'OpenAI, Anthropic et Google, ou modèles locaux via Ollama et LM Studio. La même structure en trois étapes s\'applique sur toutes les plateformes.' },
+            { q: 'Quelle longueur doit avoir un prompt APE ?', a: 'Les prompts APE peuvent être compacts. Un seul paragraphe qui mentionne Analyser, Planifier et Exécuter et spécifie ce que vous attendez à chaque étape est suffisant. Le framework lui-même concerne la structure, pas la longueur.' },
+            { q: 'Puis-je enregistrer les prompts APE comme modèles dans PromptQuorum ?', a: 'Oui. Une fois que vous avez créé un prompt structuré en APE qui fonctionne bien pour un flux de travail particulier (par exemple, révisions de code, résumés de clients), vous pouvez l\'enregistrer comme modèle dans PromptQuorum et le partager avec votre équipe.' },
+            { q: 'Et si ma tâche est trop simple pour APE ?', a: 'Si votre tâche est directe et ne nécessite pas un raisonnement visible, la Single Step Prompt Method est probablement suffisante. APE ajoute une surcharge—la valeur vient de la capacité à inspecter et affiner le raisonnement du modèle.' },
+            { q: 'Comment savoir si un prompt APE fonctionne bien ?', a: 'Exécutez votre prompt APE sur 3–5 exemples représentatifs et vérifiez : (1) L\'analyse capture-t-elle le défi fondamental ? (2) Le plan est-il raisonnable et réalisable ? (3) L\'exécution suit-elle le plan ? Si une étape est faible, affinez le prompt et testez à nouveau.' },
+            { q: 'Quelle est la différence entre APE (Analyser-Planifier-Exécuter) et APE (Automatic Prompt Engineering) ?', a: 'Ils partagent un acronyme mais ce sont des techniques complètement différentes. APE (Analyser-Planifier-Exécuter) est une structure de prompt manuelle que vous écrivez vous-même. APE (Automatic Prompt Engineering, Zhou et al. 2022) est une technique où l\'IA génère et note automatiquement les variantes de prompt pour trouver le formulation optimale.' },
+          ],
+        },
+      }
     },
     ja: {
       freshness_tier: 'evergreen',
@@ -288,7 +318,22 @@ export const article: Record<Language, PEArticle> = {
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
-      sections: {}
+      sections: {
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            { q: 'APEは何の略ですか？', a: 'APEはAnalyze（分析）、Plan（計画）、Execute（実行）の略です。複雑な推論を3つの明示的な段階に分割するプロンプトフレームワークです。問題の理解、アプローチの計画、解決策の実行という段階です。' },
+            { q: 'APEと単にモデルに答えを求めることの違いは？', a: 'APEを使用すると、モデルの思考プロセスが見えます。単一の答えではなく、モデルがタスクをどのように理解したか、どのプランを選択したか、最終出力がどうなったかが見えます。これにより、エラーをキャッチしやすく、結果がより信頼できるものになります。' },
+            { q: 'APEをSingle Step Prompt Methodの代わりに使うべき場合は？', a: 'テクニカル分析、コードレビュー、戦略立案、エラーが高コストな状況など、推論がタスクに重要な場合はAPEを使用します。目標が最初から明確で、主に実行速度が必要な場合はSingle Stepを使用します。' },
+            { q: 'OllamaやLM Studioなどのローカルモデルで使用できますか？', a: 'はい。APEは任意のモデルで機能します。OpenAI、Anthropic、GoogleのフロンティアモデルやOllamaおよびLM Studio経由のローカルモデルです。すべてのプラットフォームで同じ3段階の構造が適用されます。' },
+            { q: 'APEプロンプトの長さはどの程度必要ですか？', a: 'APEプロンプトはコンパクトにできます。分析、計画、実行に言及し、各段階で期待することを指定する1つの段落で十分です。フレームワーク自体は長さについてではなく構造についてのものです。' },
+            { q: 'PromptQuorumでAPEプロンプトをテンプレートとして保存できますか？', a: 'はい。特定のワークフロー（コードレビュー、カスタマーサマリーなど）でうまく機能するAPE構造化プロンプトを作成したら、PromptQuorumでテンプレートとして保存し、チームと共有できます。' },
+            { q: 'タスクがAPEに対して単純すぎる場合は？', a: 'タスクが単純で可視的な推論が必要ない場合、Single Step Prompt Methodで十分でしょう。APEはオーバーヘッドを追加します。価値はモデルの推論を検査して改良できることにあります。' },
+            { q: 'APEプロンプトがうまく機能しているかどうかをどうやって知りますか？', a: 'APEプロンプトを3～5の代表的な例で実行し、次を確認します：（1）分析は核となる課題をキャプチャしていますか？（2）プランは合理的で実行可能ですか？（3）実行はプランに従っていますか？ステップが弱い場合はプロンプトを改良してテストし直します。' },
+            { q: 'APE（分析-計画-実行）とAPE（Automatic Prompt Engineering）の違いは？', a: '同じ頭文字ですが、まったく異なるテクニックです。APE（分析-計画-実行）は自分自身で記述する手動のプロンプト構造です。APE（Automatic Prompt Engineering、Zhou et al. 2022）はAIが自動的にプロンプト変種を生成およびスコアリングして最適な表現を見つけるテクニックです。' },
+          ],
+        },
+      }
     },
     zh: {
       freshness_tier: 'evergreen',
@@ -313,6 +358,21 @@ export const article: Record<Language, PEArticle> = {
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
-      sections: {}
+      sections: {
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            { q: 'APE代表什么？', a: 'APE代表分析（Analyze）、规划（Plan）、执行（Execute）。这是一个三步骤的提示框架，将复杂推理分为三个明确的阶段：理解问题、规划方法和执行解决方案。' },
+            { q: 'APE与仅仅要求模型给出答案有何不同？', a: '使用APE，您可以看到模型的思考过程。与其说是单一答案，不如说您会看到模型如何理解您的任务、选择了什么计划、最终输出是什么。这使得错误更容易被捕捉，结果更可靠。' },
+            { q: '何时应该使用APE而不是Single Step Prompt Method？', a: '当推理对您的任务至关重要时使用APE：技术分析、代码审查、策略制定或错误代价高昂的情况。当您的目标从一开始就明确且主要需要执行速度时使用Single Step。' },
+            { q: '我能在Ollama或LM Studio等本地模型上使用APE吗？', a: '可以。APE可与任何模型一起工作——来自OpenAI、Anthropic和Google的前沿模型，或通过Ollama和LM Studio的本地模型。所有平台上都适用相同的三步结构。' },
+            { q: 'APE提示需要多长？', a: 'APE提示可以很紧凑。一个提到分析、规划和执行并指定您在每个阶段期望的段落就足够了。框架本身关乎结构，而非长度。' },
+            { q: '我能在PromptQuorum中将APE提示保存为模板吗？', a: '可以。一旦您创建了适用于特定工作流（例如，代码审查、客户摘要）的APE结构化提示，您可以将其在PromptQuorum中保存为模板并与您的团队共享。' },
+            { q: '如果我的任务对APE太简单怎么办？', a: '如果您的任务很简单，不需要可见推理，Single Step Prompt Method可能就够了。APE会增加开销——其价值来自于能够检查和完善模型推理的能力。' },
+            { q: '我怎么知道APE提示是否有效？', a: '在3-5个代表性示例上运行您的APE提示并检查：（1）分析是否抓住了核心挑战？（2）计划是否合理可行？（3）执行是否遵循了计划？如果任何步骤很弱，改进提示并再次测试。' },
+            { q: 'APE（分析-规划-执行）和APE（Automatic Prompt Engineering）之间的区别是什么？', a: '它们共享首字母缩略词，但完全是不同的技术。APE（分析-规划-执行）是一个您自己编写的手动提示结构。APE（Automatic Prompt Engineering，Zhou et al. 2022）是一种技术，其中AI自动生成和评分提示变体以找到最优措辞。' },
+          ],
+        },
+      }
     },
   };
