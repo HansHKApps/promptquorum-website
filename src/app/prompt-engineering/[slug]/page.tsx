@@ -64,6 +64,16 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const key = PE_SLUG_TO_KEY[slug]
   if (!key) return notFound()
 
+  // Noindex pages (placeholders)
+  const NOINDEX_SLUGS = new Set(['prompt-engineering-glossary', 'the-single-step-prompt-method'])
+  if (NOINDEX_SLUGS.has(slug)) {
+    return {
+      title: `${getTitleForSlug(slug)} — PromptQuorum`,
+      description: 'Coming soon. This article is currently under development.',
+      robots: 'noindex, follow',
+    }
+  }
+
   // Article not written yet — still return basic metadata
   if (!peContent[key]) {
     return {

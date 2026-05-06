@@ -10,6 +10,13 @@ export const dynamic = 'force-static'
 const BASE = 'https://www.promptquorum.com'
 const LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const
 
+// Placeholder pages that should be noindexed and excluded from sitemap
+const NOINDEX_PAGES = new Set([
+  '/download',
+  '/prompt-engineering/prompt-engineering-glossary',
+  '/prompt-engineering/the-single-step-prompt-method',
+])
+
 // Check if a content entry has real sections (not a stub)
 function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
   const en = contentMap[key]?.['en']
@@ -30,18 +37,19 @@ const STATIC_PAGES: Page[] = [
   { path: '/features/optimization', priority: 0.8, changefreq: 'weekly',  lastmod: '2026-03-14' },
   { path: '/features/quorum',      priority: 0.8, changefreq: 'weekly',  lastmod: '2026-03-14' },
   { path: '/how-it-works',         priority: 0.8, changefreq: 'weekly',  lastmod: '2026-03-16' },
-  { path: '/download',             priority: 0.9, changefreq: 'weekly',  lastmod: '2026-03-14' },
   { path: '/faq',                  priority: 0.7, changefreq: 'weekly',  lastmod: '2026-03-14' },
   { path: '/about',                priority: 0.5, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/waitlist',             priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/privacy',              priority: 0.3, changefreq: 'monthly', lastmod: '2026-03-15' },
   { path: '/image-license',        priority: 0.3, changefreq: 'monthly', lastmod: '2026-04-20' },
+  // Note: /download removed from sitemap (noindex placeholder page)
 ]
 
 const PE_PAGES: Page[] = [
   { path: '/prompt-engineering', priority: 0.9, changefreq: 'weekly', lastmod: '2026-04-30' },
   ...Object.keys(PE_SLUG_TO_KEY)
     .filter(slug => hasRealContent(peContent, PE_SLUG_TO_KEY[slug]))
+    .filter(slug => !NOINDEX_PAGES.has(`/prompt-engineering/${slug}`))
     .map(slug => ({
       path: `/prompt-engineering/${slug}`,
       priority: 0.8,
