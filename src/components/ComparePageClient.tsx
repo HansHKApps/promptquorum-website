@@ -225,12 +225,16 @@ const content: Record<Lang, CompareText> = {
         a: 'Consensus scoring is an automated analysis of how much independent AI models agree on a given prompt. PromptQuorum\'s Quorum Verdict scores agreement across all dispatched models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and others — identifies specific points of divergence, and interprets what those divergences indicate about answer reliability. High consensus across independent models is a strong signal an answer is likely correct. Low consensus flags uncertainty that warrants further investigation or human review.',
       },
       {
-        q: 'How is PromptQuorum different from Poe?',
-        a: 'Poe (by Quora) is a consumer multi-model chat platform built for easy access and exploration — users switch between models or compare two at a time. PromptQuorum is a professional evaluation tool built for simultaneous dispatch to all selected models, consensus scoring, and local LLM workflows. Poe is optimised for conversation; PromptQuorum is optimised for controlled evaluation. They serve fundamentally different user types: Poe for casual users, PromptQuorum for developers, researchers, and professionals.',
+        q: 'What is the difference between PromptQuorum and Poe or LM Arena?',
+        a: 'Poe (by Quora) is a consumer chat platform for switching between models one at a time. LM Arena uses crowdsourced voting to rank individual model performance. PromptQuorum is unique: it dispatches to all selected models simultaneously and automatically analyzes where they agree or diverge through consensus scoring. Poe is built for conversation; LM Arena for benchmarking; PromptQuorum for controlled evaluation and hallucination detection.',
       },
       {
         q: 'Do I need my own API keys to use PromptQuorum?',
         a: 'Yes. PromptQuorum requires users to bring their own API keys from OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet), Google (Gemini 2.5 Pro), Mistral, and other providers. This design keeps your data under your control, costs transparent, and usage bound by your own commercial agreements with each provider. It also enables local LLM support via Ollama and LM Studio for fully private inference.',
+      },
+      {
+        q: 'Is PromptQuorum free to use?',
+        a: 'Yes. PromptQuorum is in free beta as of April 2026. All features—simultaneous dispatch, consensus scoring, hallucination detection, and export in multiple formats—are free. After beta, pricing will scale with your API usage on a pay-as-you-go model. You bring your own API keys, so you control costs directly with each provider.',
       },
     ],
 
@@ -366,12 +370,16 @@ const content: Record<Lang, CompareText> = {
         a: 'Konsens-Scoring ist eine automatische Analyse, inwieweit unabhängige KI-Modelle bei einem gegebenen Prompt übereinstimmen. Das Quorum Verdict von PromptQuorum bewertet die Übereinstimmung über alle dispatched Modelle — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und andere — identifiziert spezifische Divergenzpunkte und interpretiert, was diese Divergenzen über die Antwortzuverlässigkeit aussagen. Hoher Konsens über unabhängige Modelle ist ein starkes Signal für Korrektheit. Niedriger Konsens markiert Unsicherheit, die weitere Untersuchung oder menschliche Prüfung erfordert.',
       },
       {
-        q: 'Wie unterscheidet sich PromptQuorum von Poe?',
-        a: 'Poe (von Quora) ist eine Consumer-Multi-Modell-Chat-Plattform für einfachen Zugang und Erkundung — Nutzer wechseln zwischen Modellen oder vergleichen zwei gleichzeitig. PromptQuorum ist ein professionelles Evaluierungstool für simultanes Dispatching an alle gewählten Modelle, Konsens-Scoring und lokale LLM-Workflows. Poe ist für Konversation optimiert; PromptQuorum für kontrollierte Evaluation. Sie bedienen grundlegend unterschiedliche Nutzertypen: Poe für Gelegenheitsnutzer, PromptQuorum für Entwickler, Forscher und Fachleute.',
+        q: 'Wie unterscheidet sich PromptQuorum von Poe oder LM Arena?',
+        a: 'Poe (von Quora) ist eine Consumer-Chat-Plattform zum Wechseln zwischen Modellen nacheinander. LM Arena nutzt Crowd-Voting zur Modell-Rangierung. PromptQuorum ist einzigartig: simultanes Dispatching an alle Modelle mit automatischer Analyse ihrer Übereinstimmung durch Konsens-Scoring. Poe ist für Konversation optimiert; LM Arena fürs Benchmarking; PromptQuorum für kontrollierte Evaluation und Halluzinations-Erkennung.',
       },
       {
         q: 'Brauche ich eigene API-Keys für PromptQuorum?',
         a: 'Ja. PromptQuorum erfordert eigene API-Keys von OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet), Google (Gemini 2.5 Pro), Mistral und anderen Anbietern. Dieses Design hält deine Daten unter deiner Kontrolle, Kosten transparent und die Nutzung an deine eigenen Vertragskonditionen mit jedem Anbieter gebunden. Es ermöglicht auch lokale LLM-Unterstützung über Ollama und LM Studio für vollständig private Inferenz.',
+      },
+      {
+        q: 'Ist PromptQuorum kostenlos zu nutzen?',
+        a: 'Ja. PromptQuorum ist ab April 2026 kostenlos im Beta. Alle Features – simultanes Dispatching, Konsens-Scoring, Halluzinations-Erkennung und Export in mehreren Formaten – sind kostenlos. Nach Beta wird die Preisgestaltung mit deiner API-Nutzung nach dem Pay-as-you-go-Modell skaliert. Du bringst deine eigenen API-Keys mit, daher kontrollierst du Kosten direkt mit jedem Anbieter.',
       },
     ],
 
@@ -507,12 +515,16 @@ const content: Record<Lang, CompareText> = {
         a: 'Le scoring de consensus est une analyse automatisée du degré d\'accord des modèles d\'IA indépendants sur un prompt donné. Le Quorum Verdict de PromptQuorum évalue l\'accord sur tous les modèles dispatchés — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et autres — identifie les points de divergence spécifiques et interprète ce que ces divergences indiquent sur la fiabilité de la réponse. Un consensus élevé entre modèles indépendants est un signal fort que la réponse est probablement correcte. Un faible consensus signale une incertitude qui justifie une investigation ou une révision humaine.',
       },
       {
-        q: 'En quoi PromptQuorum est-il différent de Poe ?',
-        a: 'Poe (par Quora) est une plateforme de chat multi-modèles grand public conçue pour un accès facile et l\'exploration — les utilisateurs changent de modèle ou comparent deux à la fois. PromptQuorum est un outil d\'évaluation professionnel conçu pour le dispatch simultané vers tous les modèles sélectionnés, le scoring de consensus et les flux LLM locaux. Poe est optimisé pour la conversation ; PromptQuorum est optimisé pour l\'évaluation contrôlée. Ils servent des types d\'utilisateurs fondamentalement différents : Poe pour les utilisateurs occasionnels, PromptQuorum pour les développeurs, chercheurs et professionnels.',
+        q: 'En quoi PromptQuorum est-il différent de Poe ou LM Arena ?',
+        a: 'Poe (par Quora) est une plateforme de chat grand public pour basculer entre modèles un à un. LM Arena utilise le vote communautaire pour classer les modèles. PromptQuorum est unique : dispatch simultané vers tous les modèles avec analyse automatique via scoring de consensus. Poe optimisé pour la conversation ; LM Arena pour le benchmark ; PromptQuorum pour l\'évaluation contrôlée et la détection d\'hallucinations.',
       },
       {
         q: 'Ai-je besoin de mes propres clés API pour utiliser PromptQuorum ?',
         a: 'Oui. PromptQuorum exige que les utilisateurs apportent leurs propres clés API d\'OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet), Google (Gemini 2.5 Pro), Mistral et d\'autres fournisseurs. Ce choix de conception maintient vos données sous votre contrôle, vos coûts transparents et votre utilisation liée à vos propres accords commerciaux avec chaque fournisseur. Il permet également le support LLM local via Ollama et LM Studio pour une inférence entièrement privée.',
+      },
+      {
+        q: 'PromptQuorum est-il gratuit à utiliser ?',
+        a: 'Oui. PromptQuorum est en bêta gratuite depuis avril 2026. Toutes les fonctionnalités — dispatch simultané, scoring de consensus, détection d\'hallucinations et export multi-formats — sont gratuites. Après la bêta, la tarification sera à l\'usage selon le modèle pay-as-you-go. Vous apportez vos propres clés API, vous contrôlez donc directement les coûts avec chaque fournisseur.',
       },
     ],
 
@@ -648,12 +660,16 @@ const content: Record<Lang, CompareText> = {
         a: 'コンセンサススコアリングは、独立したAIモデルが与えられたプロンプトにどれだけ同意するかの自動分析です。PromptQuorumのQuorum Verdictは、すべてのディスパッチされたモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proなど）にわたる合意をスコアリングし、特定の相違点を特定し、それらの相違が回答の信頼性について何を示すかを解釈します。独立したモデル間の高いコンセンサスは回答が正しい可能性が高いという強いシグナルです。低いコンセンサスは、さらなる調査または人間によるレビューを正当化する不確実性を示します。',
       },
       {
-        q: 'PromptQuorumはPoeとどう違いますか？',
-        a: 'Poe（Quora製）は、簡単なアクセスと探索のために構築されたコンシューマーマルチモデルチャットプラットフォームです — ユーザーはモデルを切り替えるか2つを比較します。PromptQuorumは、選択したすべてのモデルへの同時ディスパッチ、コンセンサススコアリング、ローカルLLMワークフローのために構築されたプロフェッショナル評価ツールです。Poeは会話に最適化されており、PromptQuorumは制御された評価に最適化されています。根本的に異なるユーザータイプに対応しています：Poeはカジュアルユーザー向け、PromptQuorumは開発者、研究者、専門家向けです。',
+        q: 'PromptQuorumはPoeやLM Arenaとどう違いますか？',
+        a: 'Poe（Quora製）は、順番にモデルを切り替えるためのコンシューマーチャットプラットフォーム。LM Arenaはクラウドボーティングでモデルをランク付けします。PromptQuorumはユニーク：すべてのモデルに同時ディスパッチし、コンセンサススコアリングで自動分析。Poeは会話向け；LM Arenaはベンチマーク向け；PromptQuorumは制御された評価と幻覚検出向けです。',
       },
       {
         q: 'PromptQuorumを使用するには独自のAPIキーが必要ですか？',
         a: 'はい。PromptQuorumは、OpenAI（GPT-4o）、Anthropic（Claude 4.6 Sonnet）、Google（Gemini 2.5 Pro）、Mistral、その他のプロバイダーからの独自APIキーを持ち込む必要があります。この設計により、データはあなたの管理下に置かれ、コストは透明で、使用は各プロバイダーとの独自の商業契約に結び付けられます。また、完全にプライベートな推論のためにOllamaとLM Studio経由のローカルLLMサポートも可能にします。',
+      },
+      {
+        q: 'PromptQuorumは無料で使用できますか？',
+        a: 'はい。PromptQuorumは2026年4月からフリーベータです。同時ディスパッチ、コンセンサススコアリング、幻覚検出、複数形式でのエクスポートなど、すべての機能が無料です。ベータ後は、使用量に応じた後払いモデルで価格が設定されます。独自のAPIキーを持ち込むため、各プロバイダーで直接コストをコントロールできます。',
       },
     ],
 
@@ -789,12 +805,16 @@ const content: Record<Lang, CompareText> = {
         a: '共识评分是对独立AI模型在给定提示上同意程度的自动分析。PromptQuorum的Quorum Verdict对所有已分发模型（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro等）的一致性进行评分，识别特定分歧点，并解释这些分歧对答案可靠性的指示意义。多个独立模型之间的高共识是答案可能正确的强烈信号。低共识标志着需要进一步调查或人工审查的不确定性。',
       },
       {
-        q: 'PromptQuorum与Poe有何不同？',
-        a: 'Poe（由Quora开发）是为轻松访问和探索而构建的消费者多模型聊天平台——用户切换模型或同时比较两个。PromptQuorum是为同时向所有选定模型分发、共识评分和本地LLM工作流程而构建的专业评估工具。Poe针对对话进行了优化；PromptQuorum针对受控评估进行了优化。它们服务于根本不同的用户类型：Poe适合普通用户，PromptQuorum适合开发者、研究人员和专业人员。',
+        q: 'PromptQuorum与Poe或LM Arena有何不同？',
+        a: 'Poe是一个消费者聊天平台，用于逐个切换模型。LM Arena使用社区投票对模型进行排名。PromptQuorum是唯一的：同时向所有模型分发，通过共识评分进行自动分析。Poe针对对话优化；LM Arena针对基准测试优化；PromptQuorum针对受控评估和幻觉检测优化。',
       },
       {
         q: '使用PromptQuorum需要我自己的API密钥吗？',
         a: '是的。PromptQuorum要求用户携带来自OpenAI（GPT-4o）、Anthropic（Claude 4.6 Sonnet）、Google（Gemini 2.5 Pro）、Mistral和其他提供商的自己的API密钥。这种设计使您的数据处于您的控制之下，成本透明，使用与您与每个提供商的商业协议绑定。它还支持通过Ollama和LM Studio的本地LLM，实现完全私密的推理。',
+      },
+      {
+        q: 'PromptQuorum是免费使用的吗？',
+        a: '是的。从2026年4月起，PromptQuorum处于免费测试版。所有功能——同时分发、共识评分、幻觉检测和多格式导出——都是免费的。测试版后，定价将采用按用量付费模式。您自带API密钥，因此可以直接通过每个供应商控制成本。',
       },
     ],
 

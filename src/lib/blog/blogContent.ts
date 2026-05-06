@@ -4245,6 +4245,46 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
               text: 'Yes. During beta, workloads are free. Recommended for evaluating which models work best for your use case before committing to production.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'Is PromptQuorum reliable for comparing AI model outputs?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. PromptQuorum dispatches identical prompts to all selected models, ensuring fair comparison. Consensus scoring flags where models agree (reliable) and diverge (uncertain). Results are exportable for verification. Reliability increases with more models: comparing 5 models is more robust than comparing 2.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does PromptQuorum\'s consensus scoring work across multiple models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Consensus scoring analyzes agreement patterns across all dispatched models. When 90%+ of models give similar answers, confidence is high. When models split, it flags the disagreement. The Quorum Verdict quantifies how strongly models agree on a factual claim, helping you identify reliable vs. uncertain answers.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I send a prompt to several frontier models at the same time with PromptQuorum?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. PromptQuorum\'s Dispatch feature sends your prompt to ChatGPT, Claude, Gemini, Llama, Mistral, and 20+ other frontier models simultaneously in parallel. All responses arrive within seconds. This parallel dispatch is faster and more efficient than querying models individually.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the difference between PromptQuorum and Poe or LM Arena?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorum focuses on consensus analysis and simultaneous dispatch. Poe is a chat interface for accessing multiple models. LM Arena uses crowdsourced voting to rank model performance. PromptQuorum is unique: it automatically analyzes where models agree, flags hallucinations, and provides consensus scoring.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is PromptQuorum free to use?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. PromptQuorum is in free beta as of April 2026. All features—dispatch, consensus analysis, hallucination detection, and export—are free. After beta, pricing will scale with your API usage on a pay-as-you-go model. Sign up at promptquorum.com today.',
+            },
+          },
         ],
       },
       howToSchema: {
