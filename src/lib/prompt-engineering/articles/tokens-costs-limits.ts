@@ -15,7 +15,7 @@ export const article: Record<Language, PEArticle> = {
       publishDate: '2026-03-22',
       dateModified: '2026-04-12',
       seoTitle: 'AI Prompting Costs & Token Limits Explained 2026',
-      metaDescription: 'Complete guide to tokens, costs, and context limits across major models including local LLMs.',
+      metaDescription: 'Every prompt uses tokens—the unit controlling AI costs and limits. Understand token counting, pricing for GPT-4o/Claude/Gemini, and the local LLM option.',
       readTime: '13 min read',
       toc: [
         { label: 'What Is a Token?',              anchor: 'what-is-a-token' },

@@ -61,7 +61,7 @@ export const FRAMEWORKS: Framework[] = [
     expansion: 'Context · Role · Action · Format · Target',
     tagline: 'Role-based framing with a clear target audience. Great for marketing, copywriting, and creative work.',
     seoTitle: 'CRAFT Prompt Framework: Complete Guide with Examples 2026',
-    metaDescription: 'Master the CRAFT framework (Context, Role, Action, Format, Tone) with real examples and templates for better prompts.',
+    metaDescription: 'The 5-field CRAFT framework for marketing copy and creative work: Context, Role, Action, Format, Target. Learn when you need CO-STAR instead.',
     complexity: 'Medium',
     fields: [
       { name: 'Context', description: 'Background the AI needs — what project, product, or situation this relates to.' },

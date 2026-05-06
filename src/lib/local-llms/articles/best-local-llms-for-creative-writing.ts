@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content',
       seoTitle: 'Best Local LLMs for Creative Writing 2026',
       intro: 'As of April 2026, the best local LLMs for creative writing are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr and Midnight-Rose (specialized for fiction and roleplay). Creative writing performance is not well captured by standard benchmarks -- it requires evaluating narrative coherence, stylistic range, and instruction-following on open-ended prompts.',
-      metaDescription: 'Top 5 local LLMs for fiction, poetry & long-form writing in 2026. Llama 3.3 70B best prose, Mistral 24B best 16GB, fine-tunes for roleplay. Ranked by narrative coherence.',
+      metaDescription: '4 top local LLMs for creative writing: Llama 3.3 70B (best prose), Mistral 24B (best 16GB), fine-tunes (specialized voices). Find the right fit.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**As of April 2026, the best local LLMs for creative writing are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr a.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
