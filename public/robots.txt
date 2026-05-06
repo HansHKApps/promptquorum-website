@@ -1,0 +1,18 @@
+# PromptQuorum robots.txt — Block non-indexable content
+
+User-agent: *
+Allow: /
+
+# Block presentation PDFs — print views and language variants waste crawl budget
+Disallow: /presentations/
+
+# Block internal utility pages
+Disallow: /download
+Disallow: /image-license
+
+# Block utility params (preserve indexing of base URLs)
+Disallow: /?*
+Disallow: /*?print=
+
+# Sitemap
+Sitemap: https://www.promptquorum.com/sitemap.xml

@@ -8,7 +8,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/_next/static/', '/api/og/'],
+        disallow: [
+          '/_next/static/',
+          '/api/og/',
+          '/presentations/', // Block PDF print views — low-value crawl budget waste
+          '/download',
+          '/image-license',
+        ],
       },
       // AI crawlers: explicit allow for discovery files, content, and social previews
       {
