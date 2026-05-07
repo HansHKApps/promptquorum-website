@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Build Local RAG on Your PDFs in 30 Minutes](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — practical implementation walkthrough using nomic-embed-text-v1.5.',
           '[Chat With 1,000 PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — scaling implications of embedding choice past the 10K-page cliff.',
           '[Local AI Apps With Built-In RAG](/power-local-llm/local-ai-app-with-built-in-rag) — beginner-friendly tier (LM Studio, Jan, AnythingLLM) for readers not yet tuning embedders.',
-          '[RAG Explained](/prompt-engineering/rag-explained) — the concept layer for retrieval-augmented generation.',
+          '[RAG Explained: How to Ground AI Answers in Real Data (2026)](/prompt-engineering/rag-explained) — the concept layer for retrieval-augmented generation.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — sizing GPU and RAM for embedding workloads.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
         ],

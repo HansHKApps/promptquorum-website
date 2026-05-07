@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Embedding Models for Local RAG 2026](/power-local-llm/best-embedding-models-local-rag-2026) — the deeper technical layer behind retrieval quality.',
           '[Chat With 1,000 PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — what to do when the corpus crosses the 10K-page scaling cliff.',
           '[Local AI Apps With Built-In RAG](/power-local-llm/local-ai-app-with-built-in-rag) — the simpler beginner-friendly tier (LM Studio, Jan, AnythingLLM desktop) for readers who realise they want simpler.',
-          '[RAG Explained](/prompt-engineering/rag-explained) — the concept layer for retrieval-augmented generation.',
+          '[RAG Explained: How to Ground AI Answers in Real Data (2026)](/prompt-engineering/rag-explained) — the concept layer for retrieval-augmented generation.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — sizing GPU and RAM for RAG workloads.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
         ],
