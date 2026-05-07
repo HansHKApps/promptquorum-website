@@ -26,6 +26,7 @@ import { article as a_local_rag_for_private_business_data } from './articles/loc
 import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/local-rag-on-your-pdfs-step-by-step'
 import { article as a_replace_github_copilot_with_local_llm } from './articles/replace-github-copilot-with-local-llm'
 import { article as a_replace_zapier_with_local_ai_agents } from './articles/replace-zapier-with-local-ai-agents'
+import { article as a_local_llm_prompts_for_fiction_writers } from './articles/local-llm-prompts-for-fiction-writers'
 import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles/sillytavern-vs-agnai-vs-risuai-roleplay'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
@@ -50,5 +51,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-rag-on-your-pdfs-step-by-step':    a_local_rag_on_your_pdfs_step_by_step,
   'replace-github-copilot-with-local-llm':  a_replace_github_copilot_with_local_llm,
   'replace-zapier-with-local-ai-agents':    a_replace_zapier_with_local_ai_agents,
+  'local-llm-prompts-for-fiction-writers':   a_local_llm_prompts_for_fiction_writers,
   'sillytavern-vs-agnai-vs-risuai-roleplay': a_sillytavern_vs_agnai_vs_risuai_roleplay,
 }
