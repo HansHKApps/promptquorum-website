@@ -57,6 +57,13 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ja: 'ローカルLLM',
     zh: '本地LLM',
   },
+  powerLocalLlm: {
+    en: 'Power Local LLM',
+    de: 'Power Local LLM',
+    fr: 'Power Local LLM',
+    ja: 'Power Local LLM',
+    zh: 'Power Local LLM',
+  },
   waitlist: {
     en: 'Waitlist',
     de: 'Warteliste',
@@ -72,6 +79,12 @@ function t(key: string, lang: string) {
 
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
+}
+
+// Power Local LLM uses path-based locales (/de/power-local-llm) instead of ?lang=XX.
+// Keep the navHref helper above unchanged so the rest of the nav is untouched.
+function powerLocalLlmHref(lang: string) {
+  return lang === 'en' ? '/power-local-llm' : `/${lang}/power-local-llm`
 }
 
 function HeaderInner() {
@@ -102,6 +115,7 @@ function HeaderInner() {
           <Link href={navHref('/blog', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
           <Link href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
           <Link href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
+          <Link href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -189,6 +203,13 @@ function HeaderInner() {
             onClick={() => setMobileMenuOpen(false)}
           >
             {t('localLlms', lang)}
+          </Link>
+          <Link
+            href={powerLocalLlmHref(lang)}
+            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {t('powerLocalLlm', lang)}
           </Link>
           <a
             href="#waitlist"
