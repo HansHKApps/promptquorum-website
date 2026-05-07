@@ -72,6 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'How We Tested', anchor: '#how-we-tested' },
       { label: 'Head-to-Head Comparison', anchor: '#comparison' },
       { label: 'Per-Model Verdicts', anchor: '#verdicts' },
+      { label: 'Sample Outputs', anchor: '#sample-outputs' },
       { label: 'Temperature and Top-P for Creative Work', anchor: '#sampling' },
       { label: 'Uncensored Models: What They Are', anchor: '#uncensored' },
       { label: 'Frontends for Creative Work', anchor: '#frontends' },
@@ -178,6 +179,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      sampleOutputs: {
+        id: 'sample-outputs',
+        title: 'Sample Outputs: Three Models, One Prompt',
+        content:
+          '**Shared prompt:** "Open a noir scene where the detective enters a rain-soaked diner at 2 AM." Same temperature (0.95), same top-p (0.92), same repeat penalty (1.1) — only the model changes. The excerpts below are representative of each model\'s typical output on this prompt class across three runs.',
+        items: [
+          '**Llama 3.3 70B** — "The bell above the door chimed twice and went silent. Rain ran down my coat in sheets, pooling on the linoleum before I\'d taken three steps. The counter girl didn\'t look up. Two truck drivers at the far booth studied their coffee. Nobody in a place like this at two in the morning wanted to be noticed, and neither did I." — *Concrete sensory grounding, active voice, no wasted words. The social scene is established in three sentences.*',
+          '**Qwen3 32B** — "I pushed through the door into a wall of cigarette smoke and griddle grease. The diner was half-empty and fully quiet — the kind of quiet that settles in when people have agreed, without saying so, to leave each other alone. A ceiling fan turned overhead. The waitress refilled a mug at the far end of the counter without looking at me." — *Observational setup before action; efficient atmosphere. Slightly more structured than Llama 3.3 but equally clean.*',
+          '**Yi-1.5 34B** — "Rain hammered the awning with the regularity of a metronome counting out the last hours of a night no one wanted to remember. Inside, the fluorescents threw their cold arithmetic across the laminate — every stain, every scratch, every year the place had been losing arguments with entropy. I found a stool at the near end and sat down like a man who had already made his peace with something." — *Metaphor-led from the first clause; rhythmic sentence variation; denser imagery. Yi-1.5\'s poetry background shows even in prose.*',
+        ],
+        columns: ['Model', 'Typical opening phrasing', 'Typical descriptor pattern'],
+        rows: [
+          { 'Model': 'Llama 3.3 70B', 'Typical opening phrasing': 'Action-first, immediate sensory detail', 'Typical descriptor pattern': 'Concrete and physical; avoids abstract nouns; socially grounded' },
+          { 'Model': 'Qwen3 32B', 'Typical opening phrasing': 'Environmental observation before character action', 'Typical descriptor pattern': 'Efficient; social/atmospheric detail; slight structural tell' },
+          { 'Model': 'Yi-1.5 34B', 'Typical opening phrasing': 'Metaphor or simile from the first clause', 'Typical descriptor pattern': 'Abstract imagery; rhythmic variation; denser; occasional purple streak' },
+          { 'Model': 'Command R+ 104B', 'Typical opening phrasing': 'Character voice or dialogue-adjacent opener', 'Typical descriptor pattern': 'Conversational; strong distinct voice; weaker solo description' },
+          { 'Model': 'Mistral Large', 'Typical opening phrasing': 'Scene-setting paragraph; slower start', 'Typical descriptor pattern': 'Even and controlled; consistent across long passages; slightly generic' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'These excerpts are illustrative of each model\'s tendencies across multiple runs, not cherry-picked highlights. Yi-1.5 34B\'s "losing arguments with entropy" landed in one of three runs; the other two were more straightforward. Run any model 2–3 times on the same prompt and take the one that fits your scene, not just the first output.',
+          },
+        ],
+      },
       sampling: {
         id: 'sampling',
         title: 'Temperature and Top-P for Creative Work',
@@ -190,6 +216,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Surreal or genre fiction:** temperature 1.1–1.3, top-p 0.95–0.98. Pushes the model to produce less-common combinations of imagery and metaphor.',
           '**Plot-driven scenes (action, mystery, twists):** temperature 0.85–0.95, top-p 0.9. Wants direction-following more than novelty.',
           '**Repeat penalty 1.1–1.15** is the right range for most creative work. Higher (1.2+) makes the model avoid repeating words even when repetition is stylistically intentional; lower (1.0–1.05) lets the model fall into loops on long scenes.',
+          '**min_p (0.05–0.1):** A newer alternative to top-p that dynamically scales the probability cutoff relative to the peak token probability. More permissive on creative prompts than top-p 0.9 without the incoherence risk of very high top-p values. The recommended default for SillyTavern and KoboldCpp users in 2026 when the interface exposes it; Ollama passes it through as-is, and Open WebUI 0.5+ exposes it under Advanced Settings.',
+          '**DRY repetition penalty (multiplier 0.8, base 1.75, allowed length 2):** Catches phrase-level repetition that the standard repeat_penalty misses. Where repeat_penalty tracks individual tokens, DRY tracks n-gram sequences — so the cliché "shiver down their spine" in scene 1 is suppressed when it would otherwise appear again in scene 4. Useful for long-session creative work where the model has seen its own output and starts pulling from it.',
+          '**Modern creative-writing baseline (2026):** temperature 0.95, min_p 0.05, DRY multiplier 0.8 (base 1.75, allowed length 2). Top-p 0.92 still works well if your frontend does not expose min_p or DRY — these are incremental improvements over the classic settings, not mandatory replacements.',
           'For a fuller treatment of why these parameters matter and how they interact, see [temperature and top-p control](/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
         ],
         callouts: [
@@ -334,6 +363,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How is local creative writing different from coding workloads?',
             a: 'Sampling settings and prompt structure. Coding wants temperature 0.2–0.4, deterministic output, structured (JSON, code) output, and explicit constraints in the prompt. Creative writing wants temperature 0.8–1.1, freer output, prose form, and richer system prompts (character voice, POV, tone, genre conventions). The same model — Llama 3.3 70B serves both — produces wildly different output depending on these settings. A coding-style prompt on a creative model produces flat output; a creative-style prompt on a coding model produces hallucinated code.',
           },
+          {
+            q: 'Which local model has the fewest "AI tells"?',
+            a: 'AI tells — phrases like "shiver down their spine," "tapestry," "delve," "navigate," and ChatGPT-style transitional summaries — are more frequent in smaller instruct models. Llama 3.3 70B and Qwen3 32B have fewer tells than models below 20B. Hermes 3 has the fewest in this set: the RLHF refusal-pattern training was also where many formulaic transitions were introduced, and removing it removes both. Yi-1.5 34B is unusual — stronger on rare vocabulary but occasionally over-purple. The highest-impact lever for tell reduction is the system prompt with negative examples ("do not write \'shiver,\' \'tapestry,\' or \'delve\'"), not the model.',
+          },
+          {
+            q: 'How do I avoid the "shiver down their spine" cliché?',
+            a: 'A system prompt with negative examples is the highest-impact lever — list 8–12 banned phrases explicitly ("do not write \'shiver,\' \'tapestry,\' \'delve,\' \'masterfully,\' or \'she felt\'"). Lower the temperature slightly (0.85–0.95 instead of 1.1) to reduce the model\'s reach for stock language. Repeat penalty 1.1 alone does NOT catch this — the phrases are not exact token repetitions. DRY penalty (multiplier 0.8, base 1.75) catches them at the n-gram level across scenes. A manual revision pass is the final filter. See [negative prompting](/prompt-engineering/negative-prompting) for the prompt structure that consistently kills clichés.',
+          },
         ],
       },
       relatedReading: {
@@ -345,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Uncensored Local LLMs for Creative Writing: Ethics, Legality & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — full treatment of when uncensored derivatives are legitimate creative tools and where the legal and ethical lines are.',
           '[Temperature and Top-P: Control AI Creativity](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — the prompt-engineering side of sampling parameters; deeper than the summary in this guide.',
           '[Negative Prompting](/prompt-engineering/negative-prompting) — specifying what NOT to do in a prompt; a force-multiplier for system prompts on creative work.',
-          '[Top Open-Source Models in Ollama](/local-llms/top-open-source-models-ollama) — broader model landscape; useful when you outgrow the six picks above.',
+          '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — the authoritative model landscape guide; useful when you want to explore beyond the six creative-writing picks above.',
         ],
       },
     },
