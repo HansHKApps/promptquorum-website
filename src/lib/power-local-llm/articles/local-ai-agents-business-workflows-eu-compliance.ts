@@ -111,6 +111,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Local AI Agents Do for Business Teams',
         content:
           '**A local AI agent is a tool-calling model running inside the controller\'s infrastructure with explicit approval gates between read and write actions.** It is not a chat assistant, not a workflow automator (n8n, Zapier), and not a fine-tuned classifier — it is the layer that turns a model into something that operates on your systems.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A local AI agent is a tool-calling model plus a tool surface plus an approval gate, running entirely inside the controller\'s infrastructure — turning EU compliance from a documentation exercise into an architectural property.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'An agent is a model that can read your filesystem, query your database, send an email, or call your internal API — with a human approving every action that writes or sends. Run the model, the tools, and the audit log on your own hardware and you replace the entire cloud-LLM compliance stack (Schrems II, sub-processor lists, cross-border transfer assessments) with one architectural fact: nothing leaves your network. The remaining work is the GDPR controls on the data itself, which apply to any system, cloud or local.',
+          },
+        ],
         items: [
           '**Definition:** model + tool surface (filesystem, database, email, calendar, internal API) + approval gate per write = agent. The model proposes; the agent runtime executes; the human approves anything that mutates state or leaves the network.',
           '**Distinction from automation tools.** n8n, Zapier, and Make.com are deterministic workflows — explicit triggers, explicit branches, explicit actions. An agent is non-deterministic: the model decides which tool to call and with what arguments, based on the input and the conversation state. Use automation when the path is fixed; use an agent when the path varies per input.',
@@ -132,6 +142,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**4. Compliance report generation.** Trigger: scheduled (monthly, quarterly). Tools: database (read), report-template store, report renderer, reviewer notification. Model: GLM-5.1 32B or Llama 3.3 70B — long context, structured output, low hallucination. Approval pattern: auto for data extraction, manual for the published report. AI Act tier: Limited-risk; verify the underlying data sources have a documented lawful basis. Pair with [structured output and JSON mode](/prompt-engineering/structured-output-and-json-mode) to keep the report shape stable.',
           '**5. Invoice processing and validation.** Trigger: invoice lands in finance inbox or AP folder. Tools: filesystem (read), OCR, ERP integration (read PO and vendor), exception queue (write). Model: Gemma 4 27B for tool calling; Qwen3 32B when invoices have non-standard layouts. Approval pattern: auto for extraction and PO match, manual for any exception (mismatch, new vendor, large amount). AI Act tier: Limited-risk. DPIA: usually not triggered.',
           '**Common pattern across all five:** the read steps auto-approve; the write steps that affect external systems or people\'s rights manually approve. The audit log captures every decision.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'The 5 templates differ in trigger and output but share one rule: read steps auto-approve, write or send steps require human approval, every action is captured in an immutable audit log.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pick a template that matches a workflow you already do manually. Wire the agent to read the inputs (filesystem, inbox, transcript folder), classify or draft, then queue for human review before anything is sent or written. The approval gate is the difference between a useful agent and a regulatory incident.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Start with one template, not five. Document intake and email triage are the two lowest-risk entry points — both are Limited-risk, both have clear approval boundaries (route, send), and both build the audit-log infrastructure you reuse for the remaining three. Compounding template adoption beats parallel rollout for compliance teams.',
+          },
         ],
       },
       aiAct: {
@@ -169,6 +195,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For the data-side architecture this builds on, see [Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — the RAG controls feed the same audit pipeline.',
           'For the prompt and output controls layered on top, see [prompt governance in production](/prompt-engineering/prompt-governance-in-production) and [prompt injection and security](/prompt-engineering/prompt-injection-and-security).',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Local-only architecture removes the cloud-LLM threat model; the GDPR controls on the data itself (lawful basis, minimisation, security of processing, audit log, DPIA) still apply and the technical file documents them in one shape.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Going local does not turn off GDPR. It turns off the part of GDPR that worries about Schrems II and processor agreements, and leaves the part that worries about which data the agent sees, why it sees it, and what evidence you keep. The local stack makes that evidence easier to produce — same audit log feeds both the GDPR file and the AI Act technical file.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'A common mistake: deploying first and writing the DPIA second. Supervisory authorities expect the DPIA before processing begins (Article 35(1)). For workflows that touch employee data or hit High-risk under the AI Act, write the DPIA at design time — it is short (4–8 pages) and forces decisions that are expensive to revisit later.',
+          },
+        ],
       },
       dachSpecifics: {
         id: 'dach-specifics',
@@ -182,6 +224,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Practical implication:** for any §203-bound profession, local-only architecture is not a preference, it is the default that allows the workflow to exist at all. The contract with the agent\'s vendor (if any) must include §203 compliance language; the technical file must document that no client data leaves the firm\'s infrastructure.',
           '**Austria and Switzerland:** Austria mirrors §203 closely (StGB §121); Swiss confidentiality (Article 321 StGB CH) is even broader. The architectural conclusion is the same — local-only, no exceptions for sensitive professional data.',
           'For the data-side compliance picture on the same controller, see [Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — the RAG and agent stacks share the audit log and the access control layer.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Engage the Works Council at design time, not at deployment time. German labour courts have voided agent rollouts that processed employee data without prior Betriebsvereinbarung. The cost of involving the Works Council early is hours; the cost of involving them late is a paused rollout and a renegotiation from a weaker position.',
+          },
         ],
       },
       modelPick: {
@@ -198,6 +246,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mistral Large.** EU-hosted alternative for hybrid setups where pure local is overkill but US cloud is non-starter. Run via Mistral\'s EU endpoint with a DPA in place; data still stays in EU jurisdiction.',
           '**Avoid for tool-calling work:** anything below 7B for production work, any general-purpose model without explicit tool-call training, and quantisations harsher than Q4_K_M on the smaller end. Symptoms are malformed tool calls, hallucinated arguments, and stalled agent loops.',
           'For the head-to-head data, see [Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026). For VRAM and hardware sizing across the same models, see [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Q4_K_M is the production floor for tool-calling reliability. Q3 and below degrade tool-call accuracy before they degrade chat quality, which is the wrong way to fail in a regulated workflow. If VRAM is tight, drop a parameter tier (32B → 27B) before dropping a quantisation tier (Q4 → Q3).',
+          },
         ],
       },
       stackComparison: {
@@ -218,6 +272,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pick n8n + Ollama** if the workflow has a deterministic shape with one or two model steps. n8n\'s human-in-the-loop nodes give you approval gates without a custom UI.',
           '**Pick custom LangGraph** only when the workflow shape is genuinely incompatible with the above. The build effort is real; the audit-trail and approval-gate code is on you.',
           '**For an honest reliability comparison across these stacks**, see [Local AI Agents in 2026: What Actually Works (And What Still Fails)](/power-local-llm/autonomous-local-agents-actually-work).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Cline is the lowest-friction starting point even for non-coding workflows. Wire MCP servers (filesystem, sqlite, IMAP) and you have document intake, invoice processing, and email triage in one runtime — without writing an orchestrator. Move to LangGraph only when the workflow shape genuinely outgrows Cline\'s scoped per-step UX.',
+          },
         ],
       },
       commonMistakes: {
