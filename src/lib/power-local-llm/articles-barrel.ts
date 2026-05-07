@@ -9,6 +9,7 @@ import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './artic
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
+import { article as a_continue_dev_vs_cline_vs_aider_local } from './articles/continue-dev-vs-cline-vs-aider-local'
 import { article as a_lm_studio_vs_jan_vs_gpt4all_2026 } from './articles/lm-studio-vs-jan-vs-gpt4all-2026'
 import { article as a_local_ai_app_non_technical_users } from './articles/local-ai-app-non-technical-users'
 import { article as a_local_ai_app_with_built_in_rag } from './articles/local-ai-app-with-built-in-rag'
@@ -21,6 +22,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-embedding-models-local-rag-2026':   a_best_embedding_models_local_rag_2026,
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,
   'chat-with-1000-pdfs-locally':            a_chat_with_1000_pdfs_locally,
+  'continue-dev-vs-cline-vs-aider-local':   a_continue_dev_vs_cline_vs_aider_local,
   'lm-studio-vs-jan-vs-gpt4all-2026':       a_lm_studio_vs_jan_vs_gpt4all_2026,
   'local-ai-app-non-technical-users':       a_local_ai_app_non_technical_users,
   'local-ai-app-with-built-in-rag':         a_local_ai_app_with_built_in_rag,
