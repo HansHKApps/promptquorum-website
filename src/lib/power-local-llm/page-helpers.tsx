@@ -10,6 +10,7 @@ import { powerLLMContent } from './content'
 import { POWER_LLM_SLUG_TO_KEY } from './slugs'
 import { POWER_LLM_CATEGORIES } from './categories'
 import { powerLLMAlternates, powerLLMHubPath, powerLLMArticlePath } from './metadata-helpers'
+import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -135,6 +136,10 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 
   // Coming-soon when: slug exists in registry, but no EN content yet OR target lang has no translation.
   if (!hasEnContent) {
+    const brief = POWER_LLM_BRIEFS[slug]
+    if (lang === 'en' && brief) {
+      return renderArticleBrief({ slug, brief })
+    }
     return renderComingSoon({ slug, lang, kind: 'article' })
   }
 
@@ -294,6 +299,192 @@ export async function buildHubPageElement(lang: Lang) {
 }
 
 // ─── COMING SOON RENDERER ─────────────────────────────────────────────────
+
+// ─── EDITORIAL BRIEF RENDERER ─────────────────────────────────────────────
+// Renders the writing brief for an EN article slug that has been registered but
+// not yet authored. Replaced by full article content as articles are written.
+
+function isClusterSlug(ref: string): boolean {
+  return !ref.startsWith('/') && ref in POWER_LLM_SLUG_TO_KEY
+}
+
+function refHref(ref: string): string {
+  if (ref.startsWith('/')) return ref
+  if (isClusterSlug(ref)) return powerLLMArticlePath('en', ref)
+  return ref
+}
+
+function refLabel(ref: string): string {
+  if (ref.startsWith('/')) return ref
+  if (isClusterSlug(ref)) {
+    return powerLLMContent[ref]?.['en']?.title ?? slugToTitle(ref)
+  }
+  return ref
+}
+
+function renderArticleBrief({ slug, brief }: { slug: string; brief: ArticleBrief }) {
+  const hubHref = powerLLMHubPath('en')
+  const hasTable = !!brief.structure.headers && !!brief.structure.rows && brief.structure.rows.length > 0
+
+  return (
+    <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
+      <div className="max-w-3xl mx-auto">
+
+        {/* Status banner — distinct from Coming Soon's primary-blue badge */}
+        <div className="mb-8">
+          <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-amber-50 border border-amber-200 text-amber-800">
+            Editorial Brief
+          </span>
+          <p className="text-xs text-text-secondary mt-3">
+            Internal writing scaffold. The full article publishes within 2 days.
+          </p>
+        </div>
+
+        <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">{brief.title}</h1>
+
+        <blockquote className="border-l-4 border-primary bg-primary/5 rounded-r-lg px-5 py-4 mb-10 text-text-secondary italic">
+          {brief.meta}
+        </blockquote>
+
+        {/* Type / SERP / CTR — three short metadata rows */}
+        <section className="border border-primary/15 bg-card rounded-xl p-5 mb-8 space-y-3">
+          <div className="text-sm">
+            <span className="font-semibold text-text-primary">Article type:</span>{' '}
+            <span className="text-text-secondary">{brief.articleType}</span>
+          </div>
+          <div className="text-sm">
+            <span className="font-semibold text-text-primary">SERP intent:</span>{' '}
+            <span className="text-text-secondary">{brief.serpIntent}</span>
+          </div>
+          <div className="text-sm">
+            <span className="font-semibold text-text-primary">CTR rule:</span>{' '}
+            <span className="text-text-secondary">{brief.ctrRule}</span>
+          </div>
+        </section>
+
+        {/* Writing brief */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-text-primary mb-3">Writing brief</h2>
+          <div className="border-l-4 border-primary bg-primary/5 rounded-r-lg px-5 py-4">
+            <p className="text-text-secondary leading-relaxed">{brief.writingBrief}</p>
+          </div>
+        </section>
+
+        {/* Structure */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-text-primary mb-3">{brief.structure.label}</h2>
+
+          {hasTable && (
+            <div className="overflow-x-auto border border-primary/15 rounded-xl">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-primary/5">
+                    {brief.structure.headers!.map((h, i) => (
+                      <th
+                        key={i}
+                        className="text-left font-semibold text-text-primary border border-primary/15 px-3 py-2"
+                      >
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {brief.structure.rows!.map((row, ri) => (
+                    <tr key={ri}>
+                      {row.map((cell, ci) => (
+                        <td
+                          key={ci}
+                          className="border border-primary/15 px-3 py-2 text-text-secondary align-top"
+                        >
+                          {cell || <span className="text-text-secondary/40">—</span>}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {brief.structure.notes && (
+            <pre className="border border-primary/15 bg-card rounded-xl p-5 text-sm text-text-secondary whitespace-pre-wrap font-sans leading-relaxed">
+              {brief.structure.notes}
+            </pre>
+          )}
+        </section>
+
+        {/* Internal links (cluster) */}
+        {brief.internalLinks.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-xl font-bold text-text-primary mb-3">Internal links (cluster)</h2>
+            <ul className="border border-primary/15 bg-card rounded-xl p-5 space-y-3">
+              {brief.internalLinks.map((l, i) => (
+                <li key={i} className="text-sm">
+                  <Link
+                    href={refHref(l.ref)}
+                    className="font-medium text-primary hover:underline break-words"
+                  >
+                    {refLabel(l.ref)}
+                  </Link>
+                  <span className="text-text-secondary"> — {l.reasoning}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* External links (other site clusters) */}
+        {brief.externalLinks.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-xl font-bold text-text-primary mb-3">External links (on-site)</h2>
+            <ul className="border border-primary/15 bg-card rounded-xl p-5 space-y-3">
+              {brief.externalLinks.map((l, i) => (
+                <li key={i} className="text-sm">
+                  <Link href={l.url} className="font-medium text-primary hover:underline break-words">
+                    {l.url}
+                  </Link>
+                  <span className="text-text-secondary"> — {l.reasoning}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* FAQ seeds */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-text-primary mb-3">FAQ topic seeds</h2>
+          <ul className="border border-primary/15 bg-card rounded-xl p-5 space-y-2 list-disc list-inside marker:text-primary">
+            {brief.faqSeeds.map((q, i) => (
+              <li key={i} className="text-sm text-text-secondary">{q}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Mobile angle */}
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-text-primary mb-3">Mobile angle</h2>
+          <div className="border-l-4 border-primary bg-primary/5 rounded-r-lg px-5 py-4">
+            <p className="text-sm text-text-secondary leading-relaxed">{brief.mobileAngle}</p>
+          </div>
+        </section>
+
+        {/* Slug + back link */}
+        <div className="border-t border-primary/15 pt-8 flex items-center justify-between gap-4 flex-wrap">
+          <code className="text-xs text-text-secondary bg-primary/5 border border-primary/15 px-2 py-1 rounded">
+            /power-local-llm/{slug}
+          </code>
+          <Link
+            href={hubHref}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+          >
+            ← Back to Power Local LLM hub
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function renderComingSoon({ slug, lang, kind }: { slug?: string; lang: Lang; kind: 'article' | 'hub' }) {
   const copy = COMING_SOON_COPY[lang]
