@@ -12,6 +12,7 @@ import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
 import { article as a_continue_dev_vs_cline_vs_aider_local } from './articles/continue-dev-vs-cline-vs-aider-local'
+import { article as a_local_ai_agents_business_workflows_eu_compliance } from './articles/local-ai-agents-business-workflows-eu-compliance'
 import { article as a_local_ai_agents_with_mcp_2026 } from './articles/local-ai-agents-with-mcp-2026'
 import { article as a_lm_studio_vs_jan_vs_gpt4all_2026 } from './articles/lm-studio-vs-jan-vs-gpt4all-2026'
 import { article as a_local_ai_app_non_technical_users } from './articles/local-ai-app-non-technical-users'
@@ -31,6 +32,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
   'chat-with-1000-pdfs-locally':            a_chat_with_1000_pdfs_locally,
   'continue-dev-vs-cline-vs-aider-local':   a_continue_dev_vs_cline_vs_aider_local,
+  'local-ai-agents-business-workflows-eu-compliance': a_local_ai_agents_business_workflows_eu_compliance,
   'local-ai-agents-with-mcp-2026':          a_local_ai_agents_with_mcp_2026,
   'lm-studio-vs-jan-vs-gpt4all-2026':       a_lm_studio_vs_jan_vs_gpt4all_2026,
   'local-ai-app-non-technical-users':       a_local_ai_app_non_technical_users,
