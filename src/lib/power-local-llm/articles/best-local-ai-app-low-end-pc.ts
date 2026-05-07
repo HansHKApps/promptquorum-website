@@ -87,6 +87,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Do Ollama, GPT4All, Jan, and llama.cpp Compare on 8 GB RAM, No GPU?',
         content:
           'Ranges below are aggregated from llama.cpp upstream benchmark threads, Hugging Face model card numbers, and r/LocalLLaMA test reports on 8 GB integrated-graphics laptops (Intel UHD 620 / Iris Xe / Ryzen 5 5500U vega / Apple M1 8 GB). Tokens/sec is measured on 200-token generations after model load, default context window 2048 unless noted.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'On an 8 GB RAM laptop with no dedicated GPU, Ollama with Phi-4 Mini Q4_K_M is the best all-round local AI setup — fastest generation speed among the no-code options, lowest thermal load, and the widest model library.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'On a low-end PC with 8 GB RAM and no GPU: install Ollama, run `ollama pull phi4-mini`, then `ollama run phi4-mini`. You get 4–14 tokens per second depending on your CPU — slow but usable for tasks where you send a prompt and wait for the response. For a no-terminal alternative, GPT4All installs like a normal app and curates its model list to models that fit in 8 GB.',
+          },
+        ],
         columns: ['App', 'Min RAM', 'Best model (8GB constraint)', 'Tokens/sec (CPU-only)', 'Heat', 'Verdict'],
         rows: [
           {
@@ -163,6 +173,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['Your situation', 'Pick'],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'When in doubt, start with Ollama. It runs on every OS, pulls models from a simple `ollama pull [model-name]` command, and exposes an OpenAI-compatible API if you want to integrate other tools later. If the terminal is a dealbreaker, GPT4All is the right alternative — same models, no command line needed.',
+          },
+        ],
       },
       cpuBenchmarks: {
         id: 'cpu-benchmarks',
@@ -296,6 +312,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AMD Ryzen 7000/8000 with Radeon 700M/800M iGPU — experimental.** ROCm support on integrated Radeon is partial and finicky in 2026. CPU-only is the safer pick unless you enjoy debugging driver stacks.',
           '**Older Intel UHD / Iris Plus / AMD Vega — skip.** These iGPUs lack the FP16 throughput and memory bandwidth to beat a modern AVX2 CPU kernel. Stay on CPU.',
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The simplest test to check if your iGPU is worth using: run the same model on CPU-only vs. iGPU-accelerated for 10 generations and compare tokens/sec. On Apple Silicon, iGPU is always faster. On x86 integrated graphics, the answer is device-specific — test rather than assume.',
+          },
+        ],
       },
       mistakes: {
         id: 'mistakes',
@@ -308,6 +330,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mistake 3: Running with Chrome, Slack, and Spotify open.** Each of those eats 0.5–2 GB. On 8 GB RAM, you have ≈ 5 GB after the OS. Background apps push you into swap before the model even loads. **Fix:** close everything except the AI app and a notes window before inference.',
           '**Mistake 4: Picking Q8_0 "for quality."** On 1B–4B models the quality difference between Q4_K_M and Q8_0 is below human-perceptible threshold for chat use, but Q8 doubles RAM cost and halves tokens/sec. **Fix:** stay on Q4_K_M unless you have a measurable benchmark showing Q8 helps your task.',
           '**Mistake 5: Assuming a Raspberry Pi 4 is enough.** 4 GB RAM and a 1.5 GHz Cortex-A72 can technically run TinyLlama 1B at 1–3 tok/sec, but the experience is unusable for chat. **Fix:** Raspberry Pi 5 with 8 GB RAM is the realistic ARM SBC floor — and even there, an 8 GB x86 laptop is faster.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'All five mistakes have the same root cause: assuming desktop settings apply to a constrained laptop. Every default (context 4096, Q8 quality, all threads) is tuned for a machine with 16–32 GB RAM and a discrete GPU. On 8 GB CPU-only, you need to actively override the defaults. Think of the settings section in this guide as the "low-end PC preset" — apply all five tweaks before your first run.',
+          },
         ],
       },
       faq: {

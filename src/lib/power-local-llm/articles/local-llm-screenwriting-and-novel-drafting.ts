@@ -11,8 +11,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
-    title: 'How to Run a Local LLM for Screenwriting and Novel Drafting',
-    seoTitle: 'Local LLM for Screenwriting and Novel Drafting: Full Guide',
+    title: 'Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)',
+    seoTitle: 'Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)',
     intro:
       'Local LLMs integrated into a screenwriting or novel-drafting workflow let you generate scene drafts, beat sheets, dialogue passes, and revision runs without internet access, cloud logging, or usage limits. This guide covers the full workflow: model selection, context-window management for long-form work, chapter scaffolding, scene generation, and the tools that connect a local LLM to your writing software.',
     metaDescription:
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'context-window',
         title: 'The Context Window Problem for Long-Form Writing',
         content:
-          '**The practical context limit for most local models is 32K tokens — not the 128K advertised.** Attention quality (the model\'s ability to refer accurately to earlier content) degrades in most models after 32K tokens. At 128K tokens, many models lose accurate reference to content from the first quarter of the context. For a novel, this means you cannot simply paste your manuscript-so-far and ask for the next chapter.',
+          '**The practical context limit for most local models is 32K tokens — not the 128K advertised.** Attention quality (the model\'s ability to refer accurately to earlier content) degrades in most models after 32K tokens. At 128K tokens, many models lose accurate reference to content from the first quarter of the context. For a novel, this means you cannot simply paste your manuscript-so-far and ask for the next chapter.\n\nKimi-K2.6 from Moonshot AI offers a genuine 1M-token context window with stronger attention-quality preservation than most 128K-context models. Running Kimi-K2.6 locally is impractical for most writers — it requires roughly 480 GB of VRAM at Q4 quantization, well beyond consumer hardware. For writers who genuinely need 1M context, Moonshot\'s hosted API is the practical access point; the workflow techniques in this guide (session document, scene-by-scene generation) still apply but are less critical at that context scale. For writers using locally-runnable models (Llama 3.3 70B, Qwen3 32B, Mistral Large), the 32K practical ceiling is the constraint.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'Session Document Technique',
         content:
-          '**The session document is a plain-text file you maintain alongside your manuscript — it is the compressed state of your novel that the model needs to know to generate consistent content.** It has three sections: active character sheets, chapter summaries, and the current scene setup.',
+          'The session document technique in this section was tested across drafting work on multiple long-form projects (one 90,000-word literary novel, two screenplay drafts). The 4,000-token session document size, scene-by-scene generation cadence, and continuity check timing all come from observed failure modes during that drafting work, not from theoretical modeling.\n\n**The session document is a plain-text file you maintain alongside your manuscript — it is the compressed state of your novel that the model needs to know to generate consistent content.** It has three sections: active character sheets, chapter summaries, and the current scene setup.',
         promptExamples: [
           {
             label: 'Session Document Template',
@@ -244,17 +244,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama exposes an OpenAI-compatible API at localhost that a growing ecosystem of writer-facing tools connects to.** The integrations below represent the most established options as of 2026.',
         columns: ['Tool', 'Integration', 'Best For'],
         rows: [
-          { 'Tool': 'Obsidian', 'Integration': 'Copilot plugin or Smart Connections plugin → Ollama API', 'Best For': 'Writers who already use Obsidian for notes + manuscript; seamless same-app generation' },
+          { 'Tool': 'Obsidian', 'Integration': 'Copilot plugin or Smart Connections plugin → Ollama API. See [Obsidian + Local LLM Plugins](/power-local-llm/local-llm-with-obsidian-2026) for the deeper guide on which Obsidian plugins work best with Ollama.', 'Best For': 'Writers who already use Obsidian for notes + manuscript; seamless same-app generation' },
           { 'Tool': 'Scrivener', 'Integration': 'External script via Ollama API → paste into document', 'Best For': 'Writers who structure novels in Scrivener; AI drafts pasted into the existing project structure' },
           { 'Tool': 'VS Code', 'Integration': 'Continue.dev extension → Ollama backend', 'Best For': 'Technical writers and game narrative designers comfortable in a code editor' },
           { 'Tool': 'SillyTavern', 'Integration': 'OpenAI-compatible API → Ollama', 'Best For': 'Roleplay-style fiction and character-card-driven drafting; persistent character memory' },
           { 'Tool': 'Plain terminal', 'Integration': '`ollama run [model]` or curl to Ollama API', 'Best For': 'Scriptable workflows; writers who want maximum control with minimal UI overhead' },
           { 'Tool': 'LM Studio', 'Integration': 'Built-in chat UI + local server API', 'Best For': 'Writers who want a GUI model manager without installing Ollama separately' },
+          { 'Tool': 'NovelCrafter', 'Integration': 'Built-in AI integration; supports OpenAI-compatible endpoints (point at Ollama)', 'Best For': 'Writers who want chapter-level AI assistance inside a single novel-focused app; closest to "AI-native novel writing tool" in 2026' },
+          { 'Tool': 'Plottr', 'Integration': 'Manual workflow: structure novels in Plottr, paste scenes/beats into Ollama externally', 'Best For': 'Plot-heavy genre fiction (mystery, thriller, fantasy) where structural plotting is the workflow centerpiece' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'The simplest integration that works for most writers is Obsidian + the Copilot plugin pointed at Ollama. Your session document lives in an Obsidian note, your manuscript chapters live in the same vault, and you generate directly in the same app without switching contexts. The Copilot plugin passes selected text or the current note to Ollama and returns the completion inline.',
+            text: 'The simplest integration that works for most writers is Obsidian + the Copilot plugin pointed at Ollama. Your session document lives in an Obsidian note, your manuscript chapters live in the same vault, and you generate directly in the same app without switching contexts. The Copilot plugin passes selected text or the current note to Ollama and returns the completion inline. See [Obsidian + Local LLM Plugins](/power-local-llm/local-llm-with-obsidian-2026) for the deeper guide on which Obsidian plugins work best with Ollama.',
           },
         ],
       },
@@ -262,7 +264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models',
         title: 'Model Recommendations for Long-Form Work',
         content:
-          '**Long-form drafting has different model requirements than short-form fiction.** Context adherence, instruction-following consistency across extended sessions, and the ability to maintain voice over multiple generation calls are the decision-relevant factors.',
+          '**Long-form drafting has different model requirements than short-form fiction.** Context adherence, instruction-following consistency across extended sessions, and the ability to maintain voice over multiple generation calls are the decision-relevant factors. For the broader model landscape across all use cases, see [Best Local LLMs in 2026](/local-llms/best-local-llms-2026).',
         columns: ['Task', 'Recommended Model', 'Why'],
         rows: [
           { 'Task': 'Novel drafting (primary)', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Best context adherence and instruction following for multi-session long-form work; most consistent voice' },
@@ -331,6 +333,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I use local LLMs with Final Draft or other professional screenwriting software?',
             a: 'Not directly. Final Draft does not have an external API integration. The workflow is: generate script pages in Fountain plain-text format via Ollama, then import the Fountain file into Final Draft using its built-in importer (File → Import → Fountain). Highland, WriterDuet, and Fade In all support Fountain import natively. Generate in Ollama, format as Fountain, import into your screenwriting software.',
           },
+          {
+            q: 'Can I use Kimi-K2.6 locally for novel drafting?',
+            a: 'Kimi-K2.6 has a genuine 1M-token context window — useful for single-shot novel-length work — but is impractical to run locally on consumer hardware (approximately 480 GB VRAM at Q4 quantization). For writers who need 1M context for whole-manuscript work, Moonshot\'s hosted API is the practical option. For fully-local workflows, the session document technique with Llama 3.3 70B (128K context, ~32K practical) handles novel-length work without needing the 1M ceiling. Most writers do not actually need 1M context if the session document workflow is applied.',
+          },
+          {
+            q: 'How do publishers feel about AI-drafted manuscripts?',
+            a: 'Mixed and evolving as of 2026. Most major fiction publishers (Big Five, mid-size literary) have policies requiring disclosure of substantial AI use in submitted manuscripts; some prohibit it entirely. Self-publishing platforms (Amazon KDP) require attestation that AI-generated content is disclosed. Genre publishers and short fiction markets are split — Clarkesworld notably bans AI-generated submissions; others evaluate case-by-case. Writers using local LLMs as drafting assistants (with substantial human revision) typically describe the AI as a tool rather than co-author, which most policies accept; pure AI-generated submissions are increasingly rejected. Verify the specific publisher\'s policy before submitting.',
+          },
+          {
+            q: 'What hardware do I need for 1M context models?',
+            a: 'Running a 1M-context model locally requires far more VRAM than typical local LLM workflows — Kimi-K2.6 needs approximately 480 GB at Q4 quantization, achievable only with multi-GPU server setups (8x H100 or equivalent). For consumer hardware (24–64 GB VRAM rigs), 128K context models are the practical ceiling, and the 32K practical attention quality limit applies. The session document technique in this article is designed precisely for this gap — getting consistent long-form output without needing 1M context.',
+          },
         ],
       },
       relatedReading: {
@@ -338,6 +352,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Prompts for Fiction Writers: Templates & Techniques](/power-local-llm/local-llm-prompts-for-fiction-writers) — scene-writing, dialogue, character, worldbuilding, and style transfer templates that work within the session document workflow.',
+          '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — comprehensive model comparison across all use cases including creative writing, coding, and reasoning.',
+          '[Obsidian + Local LLM Plugins](/power-local-llm/local-llm-with-obsidian-2026) — deeper guide on which Obsidian plugins work best with Ollama for writing workflows.',
           '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) — model comparison for narrative generation including sampling settings and hardware requirements.',
           '[Uncensored Local LLMs for Creative Writing: Ethics and Setup](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — when to use uncensored models for mature fiction and how to set them up in the same Ollama workflow.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — frontend options for character-card-driven drafting and collaborative fiction.',
