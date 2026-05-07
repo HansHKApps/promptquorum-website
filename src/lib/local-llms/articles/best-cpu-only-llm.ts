@@ -847,4 +847,285 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    ja: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-11-07',
+      theme: '最高のモデル',
+      title: '最高の CPU-only LLMs 2026: GPU なしで AI を実行',
+      seoTitle: '最高の CPU-only LLMs 2026: Phi-4 Mini vs Gemma 3 vs Llama 3.2 (4–8 GB VRAM)',
+      intro: 'CPU-only 推論は、8–32 GB RAM を搭載したモダン CPU 上の 3–13B モデルに実用的です。2026年5月の最高の CPU-only モデルは Phi-4 Mini (3.8B、~2.3 GB、CPU 上で 12 トークン/秒)、Gemma 3 2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒) です。Ollama、LM Studio、または CPU-only モード有効の llama.cpp を使用して実行します。',
+      metaDescription: '2026年5月: 最高の CPU-only LLMs は Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒)、Gemma 3 2B (1.5 GB)、Llama 3.2 3B (2 GB)。GPU は不要。8–32 GB RAM で実行します。',
+      publishDate: '2026-05-07',
+      dateModified: '2026-05-07',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral 7B Q4'],
+      current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
+      leadAnswerBlock: '**CPU-only 推論はモダン CPU 上の 3–13B モデルで効果的です。最高の選択肢: 一般的なチャット向け Phi-4 Mini (3.8B、2.3 GB、CPU 上で 12 トークン/秒)、速度重視タスク向け Gemma 3 2B (1.5 GB、最速)、品質向け Llama 3.2 3B (2 GB、バランス)。Ollama または llama.cpp を CPU モードで使用します。CPU 推論は GPU より 10–30× 遅いですが、専用ビデオ VRAM は不要です — システム RAM のみです。**',
+      audience: '古いハードウェアユーザー、Raspberry Pi ユーザー、および実用的なローカル LLM 推論を探す専用 GPU のないユーザー。',
+      readTime: '8分で読める',
+      educationalLevel: '初級',
+      primaryTerm: 'CPU-only LLM 推論',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'CPU は LLM を実行できますか？', anchor: '#can-cpus-run-llms' },
+        { label: '最高の CPU-only モデル 2026', anchor: '#best-models' },
+        { label: '速度: CPU vs GPU', anchor: '#speed-comparison' },
+        { label: 'モデル別 RAM 要件', anchor: '#ram-requirements' },
+        { label: 'CPU-only モードの実行方法', anchor: '#how-to-run' },
+        { label: 'CPU 推論の最適化のヒント', anchor: '#optimization' },
+        { label: 'CPU vs GPU を使用する場合', anchor: '#when-to-use' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: '関連リンク', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'CPU-only 推論は 8–32 GB RAM 搭載のモダン CPU 上の 3–13B モデルで効果的です。',
+            '最高の CPU モデル: Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒)、Gemma 3 2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒)。',
+            'CPU 推論は GPU より 10–30× 遅いですが、専用 VRAM をゼロ使用します。',
+            'Ollama または llama.cpp で CPU-only モードを有効にします — シンプルなコマンドラインフラグ。',
+            'CPU 推論は本番 API (GPU オーバーヘッド不要)、エッジデバイス、コスト制約環境に最適です。',
+          ],
+        },
+        canCpusRun: {
+          id: 'can-cpus-run-llms',
+          title: 'CPU は LLM を実行できますか？',
+          content: [
+            '**はい、モダン CPU (Intel i7-10世代+、AMD Ryzen 5000+、Apple M シリーズ) は 3–13B モデルを 8–15 トークン/秒で実行できます。** これは GPU より 10–30× 遅いですが、専用 VRAM を必要としません。十分なシステム RAM (8–32 GB) を搭載した CPU は、$300+ の GPU を必要とするモデルを実行できます。',
+            'CPU 推論は速度をアクセシビリティと交換します: GPU オーバーヘッドゼロ、完璧な安定性、ドライバー問題なし。カジュアルなユースケース (毎秒数リクエストに応答するチャットボット、オフラインドキュメント処理) では、CPU-only は実用的です。',
+            'モダン CPU には AVX-512 または NEON/SVE ベクター命令があり、マトリックス演算を加速します。llama.cpp と Ollama などのツールはこれらを自動的に使用し、CPU 推論をナイーブな実装より大幅に高速化します。',
+          ],
+        },
+        bestModels: {
+          id: 'best-models',
+          title: '最高の CPU-only モデル 2026',
+          content: '以下の表は、CPU-only モード搭載の Intel i7-12700 (12コア、AVX-512) 上のパフォーマンスでモデルをランク付けします:',
+          rows: [
+            { 'モデル': 'Phi-4 Mini', 'パラメータ': '3.8B', 'GGUF サイズ': '~2.3 GB', 'RAM 要件': '4 GB', 'CPU 速度': '12 トークン/秒', '最適な用途': '一般的なチャット、コード支援' },
+            { 'モデル': 'Gemma 3 2B', 'パラメータ': '2B', 'GGUF サイズ': '~1.5 GB', 'RAM 要件': '3 GB', 'CPU 速度': '15 トークン/秒', '最適な用途': '高速応答、低 VRAM' },
+            { 'モデル': 'Llama 3.2 3B', 'パラメータ': '3B', 'GGUF サイズ': '~2 GB', 'RAM 要件': '3.5 GB', 'CPU 速度': '10 トークン/秒', '最適な用途': 'バランスの取れた品質/速度' },
+            { 'モデル': 'Mistral 7B Q4', 'パラメータ': '7B', 'GGUF サイズ': '~4.5 GB', 'RAM 要件': '6 GB', 'CPU 速度': '5 トークン/秒', '最適な用途': 'より高い品質、16+ GB RAM' },
+            { 'モデル': 'Llama 3.1 8B Q4', 'パラメータ': '8B', 'GGUF サイズ': '~5 GB', 'RAM 要件': '7 GB', 'CPU 速度': '4 トークン/秒', '最適な用途': 'コーディング、ロジックタスク' },
+          ],
+          columns: ['モデル', 'パラメータ', 'GGUF サイズ', 'RAM 要件', 'CPU 速度', '最適な用途'],
+        },
+        speedComparison: {
+          id: 'speed-comparison',
+          title: '速度: CPU vs GPU',
+          content: '速度はハードウェアによって異なります。これらのベンチマークは Ollama または llama.cpp を実行する標準 2026 ハードウェア上のものです:',
+          rows: [
+            { 'ハードウェア': 'Intel i7-12700 (CPU)', 'モデル': 'Phi-4 Mini 3.8B', '速度': '12 トークン/秒', '注釈': 'AVX-512 有効' },
+            { 'ハードウェア': 'AMD Ryzen 7 5700X (CPU)', 'モデル': 'Phi-4 Mini 3.8B', '速度': '9 トークン/秒', '注釈': '古い AVX2 のみ' },
+            { 'ハードウェア': 'Apple M3 (CPU)', 'モデル': 'Phi-4 Mini 3.8B', '速度': '14 トークン/秒', '注釈': 'ユニファイドメモリの利点' },
+            { 'ハードウェア': 'RTX 3060 (GPU、12 GB)', 'モデル': 'Phi-4 Mini 3.8B', '速度': '80 トークン/秒', '注釈': 'GPU は 6.7× 高速' },
+            { 'ハードウェア': 'RTX 4090 (GPU、24 GB)', 'モデル': 'Llama 3.1 8B Q4', '速度': '120 トークン/秒', '注釈': 'GPU は CPU より 30× 高速' },
+          ],
+          columns: ['ハードウェア', 'モデル', '速度', '注釈'],
+        },
+        ramRequirements: {
+          id: 'ram-requirements',
+          title: 'モデル別 RAM 要件',
+          content: '**経験則: GGUF サイズ + 500 MB オーバーヘッド = 必要最小限 RAM。** 2 GB GGUF モデルは 2.5–3 GB の無料システム RAM が必要です:',
+          rows: [
+            { 'モデル': 'Gemma 3 2B', 'GGUF サイズ': '~1.5 GB', '最小 RAM': '2–2.5 GB', '快適': '4 GB', 'コンテキスト長': '8K' },
+            { 'モデル': 'Phi-4 Mini 3.8B', 'GGUF サイズ': '~2.3 GB', '最小 RAM': '3 GB', '快適': '6 GB', 'コンテキスト長': '4K' },
+            { 'モデル': 'Llama 3.2 3B', 'GGUF サイズ': '~2 GB', '最小 RAM': '2.5–3 GB', '快適': '6 GB', 'コンテキスト長': '8K' },
+            { 'モデル': 'Mistral 7B Q4', 'GGUF サイズ': '~4.5 GB', '最小 RAM': '5 GB', '快適': '8 GB', 'コンテキスト長': '32K' },
+            { 'モデル': 'Llama 3.1 8B Q4', 'GGUF サイズ': '~5 GB', '最小 RAM': '6 GB', '快適': '12 GB', 'コンテキスト長': '128K' },
+          ],
+          columns: ['モデル', 'GGUF サイズ', '最小 RAM', '快適', 'コンテキスト長'],
+        },
+        howToRun: {
+          id: 'how-to-run',
+          title: 'CPU-only モードの実行方法',
+          content: '**Ollama (最も簡単):** 単に `ollama run phi:mini` を実行します。Ollama は NVIDIA/AMD GPU のないシステムで CPU-only を自動検出し、システム RAM を使用します。**LM Studio:** 設定を開く → GPU の「なし」を選択して CPU モードを強制します。**Llama.cpp:** フラグ `--n-gpu-layers 0` を使用して GPU オフロードを無効にします。',
+          codeBlock: 'ollama run phi:mini\n# Ollama は CPU-only システムを自動検出します',
+          codeLanguage: 'bash',
+        },
+        optimization: {
+          id: 'optimization',
+          title: 'CPU 推論の最適化のヒント',
+          content: 'CPU 推論から最大パフォーマンスを引き出します:',
+          items: [
+            '**Q4_K_M 量子化を使用** — GGUF サイズを ~70% 削減、最小品質損失、キャッシュ動作の向上により 10–20% 速度向上。',
+            '**コンテキストウィンドウを削減** — より長いコンテキスト = より遅い推論。`--context 2048` を使用してコンテキストを 2K トークンに制限します。',
+            '**マルチスレッドを有効化** — Ollama と llama.cpp は CPU コア数を自動検出します。`nproc` で一致を確認します。',
+            '**AVX-512 または ARM NEON を使用** — モダン Intel/AMD/ARM CPU にはベクター命令があります。CPU フラグを確認: `cat /proc/cpuinfo | grep avx512` (Linux) または Apple 情報 → システムレポート (Mac)。',
+            '**バッチサイズ = 1** — CPU はシングルシーケンス推論を最適に処理します。CPU でマルチバッチを試みないでください。',
+            '**スレッドをコアに固定** — Linux では `numactl --cpunodebind=0 ollama run phi:mini` を使用してコア切り替えオーバーヘッドを回避します。',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: 'CPU vs GPU を使用する場合',
+          content: '',
+          rows: [
+            { 'ユースケース': 'リアルタイムチャット (1秒未満レイテンシ)', 'CPU': '❌ 遅すぎる (12 トークン/秒 = 60 トークンで 5 秒)', 'GPU': '✅ 80+ トークン/秒' },
+            { 'ユースケース': 'バッチ処理 (ドキュメント、ログ)', 'CPU': '✅ 良好 (速度は問題ない)', 'GPU': '⚠️ オーバーキル' },
+            { 'ユースケース': '本番 API (コスト制約)', 'CPU': '✅ $0 ハードウェアコスト', 'GPU': '⚠️ $200+ GPU + 電力' },
+            { 'ユースケース': 'エッジデバイス (Raspberry Pi)', 'CPU': '✅ 代替案なし', 'GPU': '❌ GPU オプション限定' },
+            { 'ユースケース': '開発 / ローカルテスト', 'CPU': '✅ 低消費電力、静かな', 'GPU': '⚠️ オーバーキル' },
+            { 'ユースケース': 'LLM ファインチューニング', 'CPU': '❌ 遅すぎる (時間 → 日数)', 'GPU': '✅ 10–30× 高速化' },
+          ],
+          columns: ['ユースケース', 'CPU', 'GPU'],
+        },
+        faq: {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'CPU-only 推論は GPU と比べて何倍遅いですか？',
+              a: 'CPU: モダンプロセッサ上で 8–15 トークン/秒。GPU (RTX 3060): 80 トークン/秒。GPU (RTX 4090): 120+ トークン/秒。CPU は 10–30× 遅いですが $0 GPU 投資が必要です。',
+            },
+            {
+              q: 'CPU 上で一貫性のある出力を生成する最小モデルは何ですか？',
+              a: 'Gemma 3 2B (1.5 GB) は合理的な応答を生成します。それ以下では品質が低下します。8 GB RAM での最高品質には Phi-4 Mini (3.8B) または Llama 3.2 3B (2 GB) を使用してください。',
+            },
+            {
+              q: '13B モデルを CPU 上で実行できますか？',
+              a: 'はい、Q4_K_M 量子化で 13B モデルは ~6.5 GB です。8–12 GB システム RAM が必要です。速度: ~2–3 トークン/秒。インタラクティブ使用には不快ですがバッチ処理で機能します。',
+            },
+            {
+              q: 'CPU 推論は GPU をまったく使用しますか？',
+              a: 'いいえ。Ollama/llama.cpp の CPU-only モードは GPU 使用を明示的に無効にし、システム RAM のみを使用します。',
+            },
+            {
+              q: 'CPU-only 推論は安定していますか？',
+              a: 'はい、GPU より安定しています。ドライバークラッシュなし、GPU メモリエラーなし。唯一のリスクはシステム RAM 飽和で、モデル選択により制御します。',
+            },
+            {
+              q: 'Apple Silicon CPU の設定を調整する必要がありますか？',
+              a: 'いいえ。Ollama は M1/M2/M3/M4 を自動検出し、ユニファイドメモリを効率的に使用します。Apple Silicon は メモリアーキテクチャにより同等 Intel CPU より ~10–20% 高速です。',
+            },
+            {
+              q: 'CPU-only LLM 使用時に METI ガイダンスに準拠する必要がありますか？',
+              a: 'エンタープライズデプロイの場合、METI 2024 AI ガバナンスを参照してください。ローカル CPU 推論はデータ管理に対するより高度な制御を提供し、企業ポリシーに適合しやすくなります。',
+            },
+            {
+              q: '10 GB の古いノートパソコンでも CPU-only 推論は実用的ですか？',
+              a: 'はい。Gemma 3 2B (1.5 GB) または Phi-4 Mini (2.3 GB) は 10 GB RAM で効率的に実行できます。3–5 トークン/秒のバッチ処理や軽量チャットボットに最適です。',
+            },
+            {
+              q: '複数のモデルを同時に CPU で実行できますか？',
+              a: 'RAM が許可されていれば技術的には可能ですが、非現実的です。複数モデルはメモリ競合を引き起こし、どちらも低速になります。一度に 1 モデルを使用することをお勧めします。',
+            },
+            {
+              q: 'CPU 推論の実装でのセキュリティリスクは何ですか？',
+              a: 'CPU-only は GPU より安全です。クラウド転送なし = データはローカルに留まります。ただし物理的マシンセキュリティと OS アップデートをしっかりし、センシティブデータが未暗号化で残る可能性があります。',
+            },
+            {
+              q: 'llama.cpp vs Ollama で CPU 推論速度に違いはありますか？',
+              a: 'わずかです。両者とも同じコア CPU 最適化 (AVX-512) を使用します。わずかな差異はスレッド管理の実装による (~2–5%)。デフォルトの Ollama をお試しください。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連リンク',
+          items: [
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=ja) — ローカル LLM 推論のハードウェアトレードオフの深掘り',
+            '[必要な VRAM は？](/local-llms/how-much-vram-do-i-need?lang=ja) — すべてのモデルサイズおよび量子化レベルの VRAM 計算機',
+            '[LLM 量子化の説明](/local-llms/llm-quantization-explained?lang=ja) — Q4_K_M、Q5_K_M をマスターし、各いつ使用するか',
+            '[最高の初級ローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) — 最初のローカル LLM へのステップバイステップガイド',
+            '[Ollama コマンドガイド](/local-llms/ollama-command-guide?lang=ja) — CPU/GPU モード、マルチ GPU、オフロード管理',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ja',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'CPU は LLM を実行できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい。モダン CPU (Intel i7-10世代+、AMD Ryzen 5000+、Apple M シリーズ) は 3–13B モデルを 8–15 トークン/秒で実行できます。これは GPU より 10–30× 遅いですが、専用 VRAM を必要としません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '最高の CPU-only LLM は何ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒) が全体的に最高です。速度: Gemma 3 2B (1.5 GB、15 トークン/秒)。バランス: Llama 3.2 3B (2 GB、10 トークン/秒)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU-only 推論にはどのくらいの RAM が必要ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ルールを使用: GGUF ファイルサイズ + 500 MB オーバーヘッド。Phi-4 Mini (2.3 GB) は 3 GB RAM が必要です。Gemma 3 2B (1.5 GB) は 2 GB RAM が必要です。Mistral 7B Q4 (4.5 GB) は 5 GB RAM が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU-only モードを有効にするにはどうすればよいですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ollama では単に実行: ollama run phi:mini。Ollama は CPU-only システムを自動検出します。llama.cpp では --n-gpu-layers 0 を使用します。LM Studio では設定で GPU を なし に設定します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 推論は本番環境で実用的ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい、リアルタイムレイテンシが不要な場合。バッチ処理、非同期 API、オフラインワークフローはすべて CPU で良好に機能します。インタラクティブチャット (1秒未満レイテンシ) には GPU を使用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU-only 推論は GPU と比べて何倍遅いですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'CPU: モダンプロセッサ上で 8–15 トークン/秒。GPU (RTX 3060): 80 トークン/秒。GPU (RTX 4090): 120+ トークン/秒。CPU は 10–30× 遅いですが $0 GPU 投資が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 上で一貫性のある出力を生成する最小モデルは何ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Gemma 3 2B (1.5 GB) は合理的な応答を生成します。それ以下では品質が低下します。8 GB RAM での最高品質には Phi-4 Mini (3.8B) または Llama 3.2 3B (2 GB) を使用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '13B モデルを CPU 上で実行できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい、Q4_K_M 量子化で 13B モデルは ~6.5 GB です。8–12 GB システム RAM が必要です。速度: ~2–3 トークン/秒。インタラクティブ使用には不快ですがバッチ処理で機能します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 推論は GPU をまったく使用しますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'いいえ。Ollama/llama.cpp の CPU-only モードは GPU 使用を明示的に無効にし、システム RAM のみを使用します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU-only 推論は安定していますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい、GPU より安定しています。ドライバークラッシュなし、GPU メモリエラーなし。唯一のリスクはシステム RAM 飽和で、モデル選択により制御します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Apple Silicon CPU の設定を調整する必要がありますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'いいえ。Ollama は M1/M2/M3/M4 を自動検出し、ユニファイドメモリを効率的に使用します。Apple Silicon は メモリアーキテクチャにより同等 Intel CPU より ~10–20% 高速です。',
+            },
+          },
+        ],
+      },
+    },
 };
