@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         whichCodingModel: {
           title: 'Which Local Coding LLM Should You Use?',
-          content: 'The model you choose matters, but how you prompt it matters more for code quality. Structured prompting techniques — specifying language, constraints, test cases, and output format — dramatically improve code generation accuracy. The [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers 80 techniques across fundamentals, frameworks, and evaluation methods.',
+          content: 'The model you choose matters, but how you prompt it matters more for code quality. Structured prompting techniques — specifying language, constraints, test cases, and output format — dramatically improve code generation accuracy. The [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers 80 techniques across fundamentals, frameworks, and evaluation methods.\n\nFor a complete IDE workflow built around these models, see [Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm) — the open-source stack (Continue.dev + Ollama + Qwen3-Coder) that pairs cleanly with the picks above.',
           items: [
             '**8 GB RAM, coding focus**: `ollama run qwen3:8b` -- 5 GB VRAM used, best model for this tier.',
             '**16 GB RAM**: `ollama run devstral-small:24b` -- best for agentic coding (multi-file edits, debugging loops), 16 GB VRAM.',
@@ -724,7 +724,7 @@ schema: {
         },
         whichCodingModel: {
           title: 'Welches lokales Programmiermodell solltest du verwenden?',
-          content: 'Das Modell, das Sie wählen, ist wichtig — aber wie Sie es prompten, ist für die Code-Qualität noch entscheidender. Strukturierte Prompt-Techniken — Sprache, Einschränkungen, Testfälle und Ausgabeformat angeben — verbessern die Genauigkeit der Code-Generierung erheblich. Der [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) deckt 80 Techniken in den Bereichen Grundlagen, Frameworks und Evaluierungsmethoden ab.',
+          content: 'Das Modell, das Sie wählen, ist wichtig — aber wie Sie es prompten, ist für die Code-Qualität noch entscheidender. Strukturierte Prompt-Techniken — Sprache, Einschränkungen, Testfälle und Ausgabeformat angeben — verbessern die Genauigkeit der Code-Generierung erheblich. Der [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) deckt 80 Techniken in den Bereichen Grundlagen, Frameworks und Evaluierungsmethoden ab.\n\nEinen vollständigen IDE-Workflow rund um diese Modelle beschreibt [GitHub Copilot durch ein lokales LLM ersetzen](/power-local-llm/replace-github-copilot-with-local-llm?lang=de) — der Open-Source-Stack (Continue.dev + Ollama + Qwen3-Coder), der sauber zu den oben genannten Modellen passt.',
           items: [
             '**8 GB RAM, Programmier-Fokus**: `ollama run qwen3:8b` -- 5 GB VRAM genutzt, bestes Modell für diese Kategorie.',
             '**16 GB RAM**: `ollama run devstral-small:24b` -- beste für agentic Programmierung (Multi-File-Edits, Debugging-Loops), 16 GB VRAM.',
@@ -1140,7 +1140,7 @@ schema: {
         },
         whichCodingModel: {
           title: 'Quel modèle de programmation local utiliser?',
-          content: 'Le modèle que vous choisissez est important, mais la façon dont vous le promptez l\'est encore plus pour la qualité du code. Les techniques de prompting structuré — spécifier le langage, les contraintes, les cas de test et le format de sortie — améliorent considérablement la précision de la génération de code. Le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering) couvre 80 techniques dans les domaines des fondamentaux, des frameworks et des méthodes d\'évaluation.',
+          content: 'Le modèle que vous choisissez est important, mais la façon dont vous le promptez l\'est encore plus pour la qualité du code. Les techniques de prompting structuré — spécifier le langage, les contraintes, les cas de test et le format de sortie — améliorent considérablement la précision de la génération de code. Le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering) couvre 80 techniques dans les domaines des fondamentaux, des frameworks et des méthodes d\'évaluation.\n\nPour un workflow IDE complet construit autour de ces modèles, voir [Remplacer GitHub Copilot par un LLM local](/power-local-llm/replace-github-copilot-with-local-llm?lang=fr) — la stack open source (Continue.dev + Ollama + Qwen3-Coder) qui s\'associe proprement aux choix ci-dessus.',
           items: [
             '**8 GB RAM, focus programmation** : `ollama run qwen2.5-coder:7b` — meilleur HumanEval par GB RAM.',
             '**16 GB RAM** : `ollama run deepseek-coder-v2:16b` — 81% HumanEval avec seulement 10 GB RAM.',
@@ -1514,6 +1514,7 @@ schema: {
             '3. 8 GB → Qwen3 8B',
             '4. IDE自動補完必須 → Codestral 22B（いずれのRAMレベル）',
             '選ぶモデルも重要ですが、コードの品質においてはプロンプトの方法がさらに重要です。言語・制約・テストケース・出力フォーマットを指定する構造化プロンプト技術は、コード生成の精度を大幅に向上させます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)では、基礎・フレームワーク・評価手法にわたる80のテクニックを解説しています。',
+            'これらのモデルを軸にした完全な IDE ワークフローについては、[GitHub Copilot をローカル LLM で置き換える](/power-local-llm/replace-github-copilot-with-local-llm?lang=ja)を参照してください。上記の選択肢と相性のよいオープンソーススタック（Continue.dev + Ollama + Qwen3-Coder）です。',
           ],
           image: '/images/best-local-llms-for-coding-hardware-selection-ja.svg',
           imageCaption: 'ハードウェア別モデル選択：8 GB RAM → Qwen3 8B（72% HumanEval、4.7 GB使用）；16 GB RAM → DeepSeek-Coder V2 16B（81% HumanEval、10 GB使用）；20+ GB RAM → Qwen2.5-Coder 32B（87% HumanEval、最高品質）。',
@@ -1852,6 +1853,7 @@ schema: {
             '3. 8 GB → Qwen3 8B',
             '4. IDE自动补全必需 → Codestral 22B（任何RAM级别）',
             '你选择的模型很重要，但对于代码质量来说，提示方式更重要。结构化提示技术——指定编程语言、约束条件、测试用例和输出格式——可以显著提高代码生成的准确性。[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)涵盖了基础知识、框架和评估方法等80项技术。',
+            '要围绕这些模型搭建完整的 IDE 工作流，请参阅[用本地 LLM 替代 GitHub Copilot](/power-local-llm/replace-github-copilot-with-local-llm?lang=zh) —— 与上述模型完美搭配的开源方案（Continue.dev + Ollama + Qwen3-Coder）。',
           ],
           image: '/images/best-local-llms-for-coding-hardware-selection-zh.svg',
           imageCaption: '按硬件的模型选择：8 GB RAM → Qwen3 8B（72% HumanEval、4.7 GB占用）；16 GB RAM → DeepSeek-Coder V2 16B（81% HumanEval、10 GB占用）；20+ GB RAM → Qwen2.5-Coder 32B（87% HumanEval、最高质量）。',

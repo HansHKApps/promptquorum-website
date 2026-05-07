@@ -350,6 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **Cloud**: $5–50/month for typical developer use (Llama API or GPT-4o mini)',
             'For light users (< 100,000 tokens/month), cloud APIs cost $5–10/month and require zero hardware. For heavy users (> 10M tokens/month), local breaks even in 6–12 months.',
             '**[Compare full local vs cloud cost and performance trade-offs](https://www.promptquorum.com/local-llms/local-llm-limitations)** to find your break-even point. Many developers discover cloud is cheaper for their actual usage pattern.',
+            'Already shopping below the recommended VRAM tiers? See [Best Local AI App for a Low-End PC](/power-local-llm/best-local-ai-app-low-end-pc) for which model and app combinations actually run on 8 GB or less.',
           ],
         },
         llamaCppSpeed: {
@@ -760,6 +761,7 @@ schema: {
             '- **Cloud**: 5–50 €/Monat für typische Entwicklernutzung (Llama API oder GPT-4o mini)',
             'Für leichte Benutzer (< 100.000 Tokens/Monat) kostet Cloud-API 5–10 €/Monat und erfordert keine Hardware. Für schwere Benutzer (> 10 Mio. Tokens/Monat) rentiert sich lokal in 6–12 Monaten.',
             '**[Vergleichen Sie den vollständigen Kosten- und Leistungs-Trade-off zwischen lokal und Cloud](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=de)**, um Ihren Break-Even-Punkt zu finden. Viele Entwickler stellen fest, dass Cloud für ihr tatsächliches Nutzungsmuster billiger ist.',
+            'Schon unterhalb der empfohlenen VRAM-Stufen unterwegs? Welche Modell- und App-Kombinationen tatsächlich auf 8 GB oder weniger laufen, zeigt [Beste lokale KI-App für einen schwachen PC](/power-local-llm/best-local-ai-app-low-end-pc?lang=de).',
           ],
         },
         mac: {
@@ -1039,6 +1041,7 @@ schema: {
             '- **Cloud**: 5–50 €/mois pour usage développeur typique (Llama API ou GPT-4o mini)',
             'Pour utilisateurs légers (< 100 000 tokens/mois), cloud API coûte 5–10 €/mois sans matériel. Pour utilisateurs lourds (> 10 M tokens/mois), local rentable en 6–12 mois.',
             '**[Comparez le compromis complet local vs cloud sur coût et performance](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=fr)** pour trouver votre point de rupture. Beaucoup de développeurs découvrent que cloud coûte moins cher pour leur usage réel.',
+            'Déjà en train de chercher en dessous des paliers de VRAM recommandés ? Pour savoir quelles combinaisons modèle + appli tournent vraiment sur 8 Go ou moins, voir [Meilleure application IA locale pour un PC d\'entrée de gamme](/power-local-llm/best-local-ai-app-low-end-pc?lang=fr).',
           ],
         },
         mac: {
@@ -1318,6 +1321,7 @@ schema: {
             '- **クラウド**: 一般的な開発者の使用で月額$5–50 (Llama APIまたはGPT-4o mini)',
             '軽度のユーザー (100,000トークン/月未満) の場合、クラウドAPI は月額$5–10で、ハードウェアは不要です。ヘビーユーザー (1000万トークン/月超) の場合、ローカルは6–12か月で元が取れます。',
             '**[ローカルとクラウドの完全なコストと性能トレードオフを比較する](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=ja)**分岐点を見つけるため。多くの開発者は、彼らの実際の使用パターンではクラウドの方が安いことを発見します。',
+            '推奨 VRAM ティアより下のハードウェアを検討中ですか？ 実際に 8 GB 以下で動くモデルとアプリの組み合わせは、[ロースペック PC におすすめのローカル AI アプリ](/power-local-llm/best-local-ai-app-low-end-pc?lang=ja)を参照してください。',
           ],
         },
         mac: {
@@ -1594,6 +1598,7 @@ schema: {
             '- **云端**: 典型开发者使用月费$5–50 (Llama API或GPT-4o mini)',
             '对于轻度用户 (< 100,000 tokens/月)，云API月费$5–10且无需硬件。对于重度用户 (> 1000万 tokens/月)，本地在6–12个月内达到收支平衡。',
             '**[比较本地与云端的完整成本和性能权衡](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=zh)**找到您的收支平衡点。许多开发者发现云端对他们的实际使用模式来说更便宜。',
+            '已经在考虑低于推荐 VRAM 档位的硬件了？要了解哪些模型与应用组合真的能在 8 GB 或更低的内存上跑起来，请参阅[面向低配 PC 的最佳本地 AI 应用](/power-local-llm/best-local-ai-app-low-end-pc?lang=zh)。',
           ],
         },
         mac: {

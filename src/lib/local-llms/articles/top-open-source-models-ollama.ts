@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         byCategory: {
           id: 'top-models-by-category',
           title: 'Which Ollama Models Work Best for Your Use Case?',
-          content: 'The quality of a model\'s output depends heavily on how you prompt it. For structured techniques that work across all local models — including chain-of-thought, few-shot examples, and output formatting — see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering). For reasoning tasks, [chain-of-thought prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting) significantly improves DeepSeek-R1 and Qwen3 output quality. For agent workflows with Gemma 4, see [Tree-of-Thought and ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react).',
+          content: 'The quality of a model\'s output depends heavily on how you prompt it. For structured techniques that work across all local models — including chain-of-thought, few-shot examples, and output formatting — see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering). For reasoning tasks, [chain-of-thought prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting) significantly improves DeepSeek-R1 and Qwen3 output quality. For agent workflows with Gemma 4, see [Tree-of-Thought and ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react). Once a tool-calling model from this list is wired into a multi-step loop with file and database access, see [Local AI Agents With MCP](/power-local-llm/local-ai-agents-with-mcp-2026) for the open-source orchestration pattern.',
           items: [
             '**General chat (beginner)**: `ollama run llama3.2:3b` -- most documentation, best-supported first model.',
             '**General chat (quality)**: `ollama run llama4:scout` -- MoE architecture, ~10 GB VRAM. For 8 GB machines, keep `ollama run llama3.2:3b`.',
@@ -506,7 +506,7 @@ schema: {
         byCategory: {
           id: 'by-category',
           title: 'Top-Modelle nach Kategorie',
-          content: 'Die Qualität der Modellausgabe hängt stark davon ab, wie Sie prompten. Für strukturierte Techniken, die mit allen lokalen Modellen funktionieren — darunter Chain-of-Thought, Few-Shot-Beispiele und Output-Formatierung — siehe den [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering). Für Reasoning-Aufgaben verbessert [Chain-of-Thought-Prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting) erheblich DeepSeek-R1 und Qwen3 Output-Qualität. Für Agent-Workflows mit Gemma 4 siehe [Tree-of-Thought und ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react).',
+          content: 'Die Qualität der Modellausgabe hängt stark davon ab, wie Sie prompten. Für strukturierte Techniken, die mit allen lokalen Modellen funktionieren — darunter Chain-of-Thought, Few-Shot-Beispiele und Output-Formatierung — siehe den [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering?lang=de). Für Reasoning-Aufgaben verbessert [Chain-of-Thought-Prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de) erheblich DeepSeek-R1 und Qwen3 Output-Qualität. Für Agent-Workflows mit Gemma 4 siehe [Tree-of-Thought und ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=de). Sobald ein Tool-Calling-Modell aus dieser Liste in einer mehrstufigen Schleife mit Datei- und Datenbankzugriff läuft, siehe [Lokale KI-Agenten mit MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) für das Open-Source-Orchestrierungsmuster.',
           items: [
             '**Allgemeines Chat (Anfänger)**: `ollama run llama3.2:3b` -- die meiste Dokumentation, am besten unterstütztes Einstiegsmodell.',
             '**Allgemeines Chat (Qualität)**: `ollama run llama4:scout` -- MoE-Architektur, ~10 GB VRAM. Für 8 GB Maschinen `ollama run llama3.2:3b` verwenden.',
@@ -867,7 +867,7 @@ schema: {
         },
         byCategory: {
           title: 'Meilleurs modèles par catégorie',
-          content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering). Pour les tâches de raisonnement, [le prompt engineering de chaîne de pensée](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting) améliore considérablement la qualité des sorties DeepSeek-R1 et Qwen3. Pour les workflows d\'agents avec Gemini 4, voir [Tree-of-Thought et ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react).',
+          content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering?lang=fr). Pour les tâches de raisonnement, [le prompt engineering de chaîne de pensée](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=fr) améliore considérablement la qualité des sorties DeepSeek-R1 et Qwen3. Pour les workflows d\'agents avec Gemini 4, voir [Tree-of-Thought et ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=fr). Une fois qu\'un modèle à appel d\'outils de cette liste est intégré dans une boucle multi-étapes avec accès aux fichiers et aux bases de données, voir [Agents IA locaux avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr) pour le pattern d\'orchestration open source.',
           items: [
             '**Chat général (débutant)** : `ollama run llama3.2:3b` -- la plupart de la documentation, le modèle de démarrage le mieux soutenu.',
             '**Chat général (qualité)** : `ollama run llama4:scout` -- architecture MoE, ~10 Go VRAM. Pour les machines à 8 Go, gardez `ollama run llama3.2:3b`.',
@@ -1222,7 +1222,7 @@ schema: {
         },
         byCategory: {
           title: 'カテゴリ別トップモデル',
-          content: 'モデルの出力品質はプロンプトの設計に大きく左右されます。Chain-of-Thought、Few-Shot例、出力フォーマットなど、すべてのローカルモデルで使える構造化テクニックについては[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)をご覧ください。推論タスク用に、[Chain-of-Thoughtプロンプティング](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting)はDeepSeek-R1とQwen3出力品質を大幅に改善。Gemma 4エージェントワークフロー用は[Tree-of-Thoughtと ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react)参照。',
+          content: 'モデルの出力品質はプロンプトの設計に大きく左右されます。Chain-of-Thought、Few-Shot例、出力フォーマットなど、すべてのローカルモデルで使える構造化テクニックについては[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering?lang=ja)をご覧ください。推論タスク用に、[Chain-of-Thoughtプロンプティング](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=ja)はDeepSeek-R1とQwen3出力品質を大幅に改善。Gemma 4エージェントワークフロー用は[Tree-of-Thoughtと ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=ja)参照。このリストにあるツール呼び出し対応モデルを、ファイルアクセスやデータベース照会まで含むマルチステップのループに組み込む方法は、[MCP を使ったローカル AI エージェント](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja)を参照してください。オープンソースのオーケストレーションパターンを解説しています。',
           items: [
             '**一般チャット（初心者）**：`ollama run llama3.2:3b` -- ドキュメント多数、最適入門モデル。',
             '**一般チャット（品質）**：`ollama run llama4:scout` -- MoEアーキテクチャ、~10GB VRAM。8GB機はllama3.2:3b維持。',
@@ -1584,7 +1584,7 @@ schema: {
         },
         byCategory: {
           title: '按用途分类',
-          content: '模型的输出质量在很大程度上取决于你的提示方式。关于适用于所有本地模型的结构化技术——包括思维链、Few-Shot示例和输出格式化——请参阅[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)。对于推理任务，[Chain-of-Thought提示](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting)显著改善DeepSeek-R1和Qwen3输出质量。对于Gemma 4代理工作流，见[Tree-of-Thought和ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react)。',
+          content: '模型的输出质量在很大程度上取决于你的提示方式。关于适用于所有本地模型的结构化技术——包括思维链、Few-Shot示例和输出格式化——请参阅[Prompt工程指南](https://www.promptquorum.com/prompt-engineering?lang=zh)。对于推理任务，[Chain-of-Thought提示](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=zh)显著改善DeepSeek-R1和Qwen3输出质量。对于Gemma 4代理工作流，见[Tree-of-Thought和ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=zh)。一旦把这份榜单中的工具调用模型接入具备文件访问和数据库查询能力的多步循环，就可以参阅[使用 MCP 的本地 AI 代理](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh)，了解这套开源编排方案。',
           items: [
             '**通用聊天（初学者）**：`ollama run llama3.2:3b` -- 文档最多，最佳入门模型。',
             '**通用聊天（品质）**：`ollama run llama4:scout` -- MoE架构，~10GB显存。8GB机器保持`ollama run llama3.2:3b`。',

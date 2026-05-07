@@ -85,6 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             'Decision matrix:',
             'Before investing in LoRA fine-tuning, verify that better prompting cannot solve the problem first — prompt engineering is faster, reversible, and model-agnostic. For the full decision framework, see [prompt engineering vs fine-tuning: how to decide](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning).',
+            'Fine-tuning is one path to keeping a coding workflow productive offline. For the broader offline setup — model, IDE, package cache, docs mirror — see [Local Coding LLM Without Internet](/power-local-llm/local-coding-llm-without-internet).',
           ],
           rows: [
             { 'Criteria': 'Documents change frequency', 'Fine-Tuning': 'Annual or less', 'RAG': 'Weekly or more' },
@@ -446,6 +447,7 @@ schema: {
           content: [
             'Entscheidungsmatrix:',
             'Stellen Sie vor einer LoRA-Feinabstimmung sicher, dass besseres Prompting das Problem nicht zuerst lösen kann — Prompt Engineering ist schneller, reversibel und modellunabhängig. Das vollständige Entscheidungs-Framework finden Sie unter [Prompt Engineering vs. Fine-Tuning: Wie Sie entscheiden](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=de).',
+            'Fine-Tuning ist ein Weg, um einen Coding-Workflow auch offline produktiv zu halten. Für das umfassendere Offline-Setup — Modell, IDE, Paket-Cache, Dokumentations-Mirror — siehe [Lokales Coding-LLM ohne Internet](/power-local-llm/local-coding-llm-without-internet?lang=de).',
           ],
           rows: [
             { 'Kriterium': 'Dokumentenänderungshäufigkeit', 'Fine-Tuning': 'Jährlich oder seltener', 'RAG': 'Wöchentlich oder häufiger' },
@@ -831,6 +833,7 @@ schema: {
           content: [
             'Matrice de décision :',
             'Avant d\'investir dans le fine-tuning LoRA, vérifiez que de meilleurs prompts ne peuvent pas d\'abord résoudre le problème — le prompt engineering est plus rapide, réversible et agnostique au modèle. Pour le cadre de décision complet, voir [prompt engineering vs fine-tuning : comment décider](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=fr).',
+            'Le fine-tuning est l\'une des façons de garder un workflow de code productif hors ligne. Pour l\'installation hors ligne plus complète — modèle, IDE, cache de paquets, miroir de docs — voir [LLM de code local sans Internet](/power-local-llm/local-coding-llm-without-internet?lang=fr).',
           ],
           rows: [
             { 'Critère': 'Fréquence de changement des documents', 'Fine-tuning': 'Annuel ou moins', 'RAG': 'Hebdomadaire ou plus' },
@@ -1176,6 +1179,7 @@ schema: {
           content: [
             '決定マトリックス：',
             'LoRAファインチューニングに投資する前に、より良いプロンプティングで問題が解決できないか確認してください——プロンプトエンジニアリングはより速く、可逆的で、モデルに依存しません。完全な意思決定フレームワークについては、[プロンプトエンジニアリング vs ファインチューニング：決め方](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=ja)をご覧ください。',
+            'ファインチューニングは、オフラインでもコーディングワークフローを生産的に保つ手段の一つです。モデル、IDE、パッケージキャッシュ、ドキュメントミラーを含むより広いオフライン構成については、[インターネットなしのローカルコーディング LLM](/power-local-llm/local-coding-llm-without-internet?lang=ja)を参照してください。',
           ],
           rows: [
             { '基準': 'ドキュメント変更頻度', 'ファインチューニング': '年1回以下', 'RAG': '週1回以上' },
@@ -1521,6 +1525,7 @@ schema: {
           content: [
             '决策矩阵：',
             '在投资LoRA微调之前，请先确认更好的提示词工程是否无法解决问题——提示词工程更快速、可逆且与模型无关。完整的决策框架请参阅[提示词工程 vs 微调：如何决定](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=zh)。',
+            '微调是让编码工作流在离线环境下保持生产力的途径之一。要了解涵盖模型、IDE、包缓存、文档镜像的更完整离线方案，请参阅[无需联网的本地编码 LLM](/power-local-llm/local-coding-llm-without-internet?lang=zh)。',
           ],
           rows: [
             { '标准': '文档变化频率', '微调': '每年或更少', 'RAG': '每周或更多' },
