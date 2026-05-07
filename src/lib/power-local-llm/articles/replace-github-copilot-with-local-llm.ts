@@ -46,6 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
+      { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'Quick Comparison', anchor: '#quick-comparison' },
       { label: 'The Recommended Stack', anchor: '#recommended-stack' },
       { label: 'Cost Math (24 Months)', anchor: '#cost-math' },
@@ -54,6 +55,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Where Local Wins', anchor: '#local-wins' },
       { label: 'Where Copilot Still Wins', anchor: '#copilot-wins' },
       { label: 'Hardware Recommendations', anchor: '#hardware' },
+      { label: 'Common Mistakes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
@@ -67,6 +70,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cost breakeven is 8-14 months on existing RTX 3060+ or M3+ hardware.',
           'Privacy advantage: zero code ever leaves your machine — important for NDA work.',
           'Copilot still wins on obscure libraries with thin public training data.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Quick Facts',
+        items: [
+          '**Recommended stack:** Continue.dev (free, open-source) + Ollama + Qwen3-Coder 30B Q4_K_M.',
+          '**Quality:** 90-95% of Copilot Pro on TypeScript and Python, 88% on Rust (May 2026 benchmarks).',
+          '**Cost breakeven:** 8-14 months on existing RTX 3060+ or M3+ hardware; Copilot wins if buying new hardware.',
+          '**VRAM needed:** 18 GB for the 30B model, 5 GB for the 7B fallback.',
+          '**Autocomplete latency:** ~280 ms local (RTX 4070) vs ~180 ms Copilot — imperceptible after day 1.',
+          '**Open-source throughout:** Continue.dev (Apache), Ollama (MIT), Qwen3-Coder (open-weight).',
+          '**Privacy:** zero code leaves your machine — strongest posture for NDA work, client projects, and EU compliance.',
         ],
       },
       quickComparison: {
@@ -87,8 +103,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       recommendedStack: {
         id: 'recommended-stack',
-        title: 'What Is the Best Local Copilot Stack in 2026?',
+        title: 'The Recommended Stack',
         content: '**Continue.dev + Ollama + Qwen3-Coder is the recommended starting point for most developers.** Each piece does one thing well:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Continue.dev + Ollama + Qwen3-Coder gives you a Copilot-equivalent coding assistant that runs entirely on your machine, costs $0/month, and keeps all code private.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Install three free tools, pull one model, and you have autocomplete, chat, and agent mode in VS Code — same as Copilot, except nothing leaves your laptop. It takes about 30 minutes to set up and pays for itself in 8-14 months if you already own the hardware.',
+          },
+        ],
         items: [
           '**Continue.dev** (free, open-source) — the VS Code/JetBrains extension. Ships autocomplete, chat, and agent mode. The Copilot-equivalent frontend.',
           '**Ollama** — the local model runtime. One-line install. Manages model downloads, quantization, GPU offload, and exposes an OpenAI-compatible API.',
@@ -104,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       costMath: {
         id: 'cost-math',
-        title: 'When Does the Local Stack Pay Back?',
+        title: 'Cost Math (24 Months)',
         content: '**On a 24-month horizon, local wins if you already own qualifying hardware or build a new PC under ~$1,500.** Numbers below assume $20/month Copilot Pro and US electricity at $0.16/kWh.',
         rows: [
           { 'Scenario': 'You already own RTX 3060 12 GB', 'Hardware cost': '$0', 'Electricity (24 mo, 2 hr/day)': '~$45', 'Total local cost': '$45', 'Copilot 24-month cost': '$480', 'Savings': '$435' },
@@ -126,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setup: {
         id: 'setup',
-        title: 'How Do You Set Up the Local Copilot Stack?',
+        title: 'Setup Walkthrough',
         content: 'Total time: 20-30 minutes the first time, including model download. Steps below assume macOS or Linux; Windows is identical except for the Ollama installer.',
         numberedItems: [
           'Install Ollama from ollama.com (one installer; supports macOS, Linux, Windows).',
@@ -143,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qualityTest: {
         id: 'quality-test',
-        title: 'How Good Is the Output on Real Code?',
+        title: 'Quality Test on Real Code',
         content: 'Tested on a real Next.js 14 application: 100 autocomplete suggestions across 8 source files, 20 chat queries about existing code, and 10 multi-file edits via agent mode. Same prompts run against GitHub Copilot Pro and Continue.dev + Qwen3-Coder 30B.',
         rows: [
           { 'Task': 'TypeScript autocomplete (common patterns)', 'Local (Qwen3-Coder 30B)': '94/100 acceptable', 'GitHub Copilot Pro': '97/100 acceptable' },
@@ -166,6 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**No vendor lock-in** — Continue.dev is open source; Ollama is open source; Qwen3-Coder is openly licensed. You cannot lose access via subscription cancellation or ToS change.',
           '**Custom models** — fine-tune Qwen3-Coder on your codebase\'s style, internal libraries, or domain language. Impossible with Copilot.',
           '**Predictable behavior** — the model never silently changes underneath you. Pinned model version = pinned behavior, useful for reproducibility.',
+          '**Better prompting compounds the quality gap.** For structured prompting techniques that improve code generation on any model, see [write better code with AI](/prompt-engineering/write-better-code-with-ai).',
         ],
       },
       copilotWins: {
@@ -191,6 +218,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Hardware': 'Apple M3 Max / M5 (32 GB+)', 'Recommended model': 'Qwen3-Coder 30B', 'Tokens/sec': '35-50', 'Suitable for': 'Mac power users' },
         ],
         columns: ['Hardware', 'Recommended model', 'Tokens/sec', 'Suitable for'],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Common Mistakes',
+        items: [
+          '**Mistake 1: Running the 30B model on 8 GB VRAM.** The model loads but thrashes between GPU and system RAM. Autocomplete takes 2-5 seconds instead of 280 ms — unusable. Fix: use Qwen3-Coder 7B on 8-12 GB VRAM cards. The 30B model needs 18+ GB. Check actual usage with `ollama ps`.',
+          '**Mistake 2: Comparing local quality only on rare libraries and declaring it worse.** Local models underperform on niche SDKs with sparse public docs. This is expected and well-documented; testing only on rare libraries gives a misleading picture. Fix: test on the languages and patterns you write 80% of the time. That is the quality that matters.',
+          '**Mistake 3: Forgetting to enable agent mode.** Continue.dev ships with agent mode off by default. Without it you are missing multi-file edits — the feature that makes the setup competitive with Copilot\'s newer plans. Fix: Continue.dev settings → enable agent mode → grant file-edit and terminal permissions with confirmation.',
+          '**Mistake 4: Never updating the model.** A new generation lands roughly every six months. Staying on the old version means leaving quality on the table. Fix: check for new releases quarterly. `ollama pull qwen3-coder:30b` overwrites the old version; keep the previous tag for one week as a rollback.',
+          '**Mistake 5: Buying new hardware just to avoid Copilot.** A $1,200 PC build to save $20/month Copilot breaks even in 60 months. The cost case only works on hardware you already own or would buy anyway. Fix: if your current machine has <8 GB VRAM and no Apple Silicon, keep Copilot. Switch when you upgrade hardware for other reasons.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Continue.dev Documentation](https://docs.continue.dev/) — Official setup guide, model configuration, and agent mode documentation.',
+          '[Ollama Model Library](https://ollama.com/library) — Available models, quantization levels, and VRAM requirements.',
+          '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-30B) — Architecture, benchmarks, and licence for the recommended coding model.',
+          '[GitHub Copilot Pricing](https://github.com/features/copilot) — Current Copilot Individual, Pro, and Enterprise pricing.',
+          '[HumanEval+ Benchmark](https://github.com/evalplus/evalplus) — The evaluation benchmark used to compare coding model quality.',
+        ],
       },
       faq: {
         id: 'faq',
@@ -226,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What about GDPR and EU compliance?',
-            a: 'A fully local stack is the strongest GDPR posture you can have for AI-assisted coding — no personal data, no proprietary code, and no client work leaves your machine. EU businesses with strict data-residency requirements often pick local for exactly this reason.',
+            a: 'A fully local stack is the strongest GDPR posture you can have for AI-assisted coding — no personal data, no proprietary code, and no client work leaves your machine. EU businesses with strict data-residency requirements often pick local for exactly this reason. For the full GDPR compliance architecture including audit logging, DPIA scope, and deletion paths, see [local RAG for private business data](/power-local-llm/local-rag-for-private-business-data).',
           },
           {
             q: 'How often should I update the model?',
