@@ -668,4 +668,44 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     mobileAngle: 'Audience often discovers via mobile while annoyed at SaaS bills. Lead with cost savings table.',
   },
+
+  'local-ai-agents-business-workflows-eu-compliance': {
+    title: 'Local AI Agents for EU Business Workflows: GDPR-Safe Automation in 2026',
+    meta: 'GDPR, EU AI Act, BSI, DSGVO. Local AI agents that keep customer data on-prem. Compliance-grade stack, audit logging, lawful-basis checklist, 5 workflows.',
+    articleType: 'Decision + applied compliance guide',
+    serpIntent: 'Mixed — compliance-led decision queries; readers want a stack they can defend in an audit',
+    ctrRule: 'Specific regulation (GDPR, EU AI Act) + concrete outcome (GDPR-safe) + audience (EU business)',
+    writingBrief:
+      'Compliance-driven decision page for EU business buyers. Anchor every recommendation in a specific regulation (GDPR Articles 5, 25, 32; EU AI Act risk tiers; BSI baseline for DACH). Stack pick: Ollama or vLLM on dedicated hardware + Cline / Continue.dev (UI) + AnythingLLM (RAG) + audit logging — all open source, all on-prem, all auditable. Walk 5 real workflows: HR CV-screening, contract-clause review, customer-support draft generation, finance invoice triage, internal knowledge-base Q&A. For each: data classification, lawful basis (consent vs legitimate interest vs contract), DPIA trigger criteria, retention policy, audit-log requirement, AI Act classification (limited/high-risk). Be specific about what disqualifies cloud (Schrems II, sub-processor list, EDPB guidance) and what makes local defensible (data never leaves controller). End with a 10-point compliance checklist a DPO can sign off on.',
+    internalLinks: [
+      { ref: 'local-ai-agents-with-mcp-2026', reasoning: 'protocol layer the compliance stack runs on' },
+      { ref: 'autonomous-local-agents-actually-work', reasoning: 'reality check on what the stack can do' },
+      { ref: 'local-rag-for-private-business-data', reasoning: 'RAG side of the same compliance picture' },
+    ],
+    externalLinks: [{ url: '/local-llms/best-local-llms-2026', reasoning: 'model authority for EU-hosted picks (Mistral) vs open-weight alternatives' }],
+    structure: {
+      label: 'Workflow × compliance matrix',
+      headers: ['Workflow', 'Data category', 'Lawful basis', 'AI Act tier', 'DPIA needed?', 'Audit-log fields'],
+      rows: [
+        ['HR CV screening', 'Special category (potentially)', 'Legitimate interest + consent', 'High-risk', 'Yes', 'Input hash, model ID, decision, reviewer'],
+        ['Contract review', 'Confidential business', 'Contract / legitimate interest', 'Limited', 'Trigger-based', 'Document ID, clause IDs, suggestions'],
+        ['Customer support drafts', 'Personal data (customer)', 'Contract / consent', 'Limited', 'No (low impact)', 'Ticket ID, draft text, agent override'],
+        ['Invoice triage', 'Financial data', 'Legal obligation', 'Minimal', 'No', 'Invoice ID, classification, confidence'],
+        ['Internal KB Q&A', 'Internal / mixed', 'Legitimate interest', 'Minimal', 'No', 'Query, sources cited, user role'],
+      ],
+    },
+    faqSeeds: [
+      'Are local AI agents GDPR-compliant by default?',
+      'Does the EU AI Act apply to local agents in business workflows?',
+      'When does a local AI agent trigger a DPIA requirement?',
+      'Can I use a local agent to process special-category data (HR, health)?',
+      'What lawful basis applies to AI-generated customer responses?',
+      'How long should I retain agent audit logs under GDPR?',
+      'Does Schrems II affect any local AI deployment?',
+      'Is Mistral on Scaleway a defensible alternative to fully local?',
+      'What does the BSI baseline require for AI in German business?',
+      'Who is the controller when an agent makes decisions — me or the model?',
+    ],
+    mobileAngle: 'EU business buyers (DPOs, compliance leads) often vet on phone before forwarding to legal. Lead with the workflow × compliance matrix; lawful-basis answers must be skim-readable.',
+  },
 }
