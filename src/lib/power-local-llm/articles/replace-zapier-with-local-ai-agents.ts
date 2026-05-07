@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       workflowContentScheduling: {
         id: 'workflow-content-scheduling',
         title: 'Workflow 5 — Content Scheduling (Cross-Post)',
-        content: '**Triggered by a webhook from your CMS (or a row in a local content DB), generates platform-specific copy (LinkedIn long, Twitter short, Mastodon medium) using Llama 3.2 3B, and schedules the posts via each platform\'s API at the requested time.** Replaces "publish in CMS → cross-post" Zapier flows.',
+        content: '**Triggered by a webhook from your CMS (or a row in a local content DB), generates platform-specific copy (LinkedIn long, Twitter short, Mastodon medium) using Llama 3.2 3B, and schedules the posts via each platform\'s API at the requested time.** Replaces "publish in CMS → cross-post" Zapier flows. For prompt techniques that improve the model\'s platform-specific copy generation, see [prompt engineering for content teams](/prompt-engineering/prompt-engineering-for-content-teams).',
         numberedItems: [
           'Trigger: Webhook node — exposed publicly via Cloudflare Tunnel (`cloudflared tunnel --url http://localhost:5678`).',
           'Webhook payload: `{ "title": "...", "url": "...", "summary": "...", "publishAt": "ISO timestamp" }`.',
