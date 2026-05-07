@@ -112,6 +112,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Architecture Decision Tree: Pick by Corpus Size First',
         content:
           '**Choose the simplest architecture that handles your document count. Adding hybrid search, reranking, or hierarchical indices is straightforward to retrofit; switching the entire vector store is not.** Use this tree before opening any installer.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'The fastest local RAG setup for chatting with up to 1,000 PDFs is AnythingLLM Desktop with chunk size 1,000 / overlap 200 and nomic-embed-text-v1.5 as the embedder — no code required, and it runs entirely on your machine.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pick your architecture by document count: AnythingLLM for under 1,000 PDFs (no code, drag-and-drop); LlamaIndex local for 1,000–5,000 (150 lines of Python); custom Ollama + ChromaDB for 5,000–10,000 (300–400 lines, adds hybrid search and reranking); Ollama + Qdrant for 10,000+ (Docker, metadata filtering, production-grade). The right choice is the simplest one that handles your corpus — over-engineering the architecture adds maintenance cost without improving answer quality for smaller collections.',
+          },
+        ],
         items: [
           '**Under 1,000 documents (under ~5,000 chunks):** AnythingLLM Desktop with chunk size 1,000 / overlap 200 and nomic-embed-text-v1.5 as the embedder. No custom code. See [the 30-minute step-by-step guide](/power-local-llm/local-rag-on-your-pdfs-step-by-step) for setup.',
           '**1,000-5,000 documents (5k-25k chunks):** LlamaIndex local mode with hierarchical indices (DocumentSummaryIndex + VectorStoreIndex), Ollama as the LLM provider, nomic-embed-text-v1.5 as the embedder, LanceDB or ChromaDB as the vector store. ~150 lines of Python, runs as a long-lived process.',
