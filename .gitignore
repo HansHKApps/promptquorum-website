@@ -3,6 +3,7 @@ out/
 .next/
 /app/
 public/data/seo-registry.json
+tsconfig.tsbuildinfo
 
 # Playwright run artifacts (regenerated on every run)
 test-results/
