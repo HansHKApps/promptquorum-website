@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Embedding Models for Local RAG in 2026](/power-local-llm/best-embedding-models-local-rag-2026) — for users tweaking retrieval quality.',
           '[LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — broader app comparison if RAG is one of several criteria.',
           '[Chat With 1,000+ PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — scaling guide for very large document libraries.',
-          '[RAG Explained: Retrieval-Augmented Generation Fundamentals](/prompt-engineering/rag-explained) — concept authority on how RAG works under the hood.',
+          '[RAG Explained: How to Ground AI Answers in Real Data (2026)](/prompt-engineering/rag-explained) — concept authority on how RAG works under the hood.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library for the cluster.',
         ],
       },
@@ -442,6 +442,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'AnythingLLM, LM Studio, and Jan + Documents tested on 1,000-page documents. Built-in RAG with no vector database setup, no Python, no command line.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
+      'url': 'https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=en',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
