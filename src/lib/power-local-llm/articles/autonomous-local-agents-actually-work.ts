@@ -312,6 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Failed-supervision pattern:** approval fatigue. Past ~30 approvals in a session, humans rubber-stamp. The harness that requires too many approvals trains you out of reviewing them, at which point the safety gate is fictional.',
           '**The right knob: auto-approve allow-lists.** Read tools (read_file, list_files, search_files, list_directory) are safe to auto-approve. Write tools (write_to_file, replace_in_file, execute_command, browser_action with form submission) are not. This single setting is the difference between a useful agent and a tedious one.',
           '**The right unit: per-task approval count.** When you evaluate a stack, count approvals on a representative real task — not on a demo task. If the count is over 20, the stack is not actually saving you work.',
+          'For prompt techniques that reduce supervision cost by improving tool-call quality, see [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting).',
         ],
         callouts: [
           {
