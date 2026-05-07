@@ -247,6 +247,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Where it shines:** whole-repo reasoning, long-context tasks, multi-step agentic plans.',
           '**Where it falls short:** the hardware bar is the highest of any model in this guide. On a 24 GB card, the smaller derivative variants are the only viable option, and they trail the full model on long-context tasks.',
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'DeepSeek Coder V3 has the highest hardware bar in this guide — 48 GB+ VRAM at Q4_K_M for the full model. The community 24 GB-targeted derivatives exist and are usable, but they trade away the long-context reasoning that is the main reason to pick DeepSeek over Qwen3-Coder. Match the variant to your hardware before deciding.',
+          },
+        ],
       },
       codestralDeep: {
         id: 'codestral',
@@ -284,6 +290,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tool-calling reliability:** good on OpenAI-style tool calls; less reliable than Qwen3-Coder on Cline-strict XML schemas. The 8B variant struggles with tool calls in agent loops.',
           '**Where it shines:** stacks already running Llama (existing infra, deployment recipes, fine-tunes), general-purpose coding with occasional non-code reasoning.',
           '**Where it falls short:** absolute coding direction trails the dedicated coding models. If coding is the primary use case and you have no Llama lock-in, Qwen3-Coder is the better default.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The Llama 3.3 8B is a frequent autocomplete pick on 8 GB GPUs — but the agent-loop reliability drops sharply at that size. Use 8B for inline completions, escalate to a 27B+ tool-call-trained model for chat and refactor work. Two models in the same Continue.dev or Cline config is the common pattern.',
+          },
         ],
       },
       graniteCodeDeep: {
@@ -353,6 +365,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Granite Code 34B', 'Claimed context': '128K', 'Practical working context (coding)': '~32K–64K', 'Notes': 'Balanced; not a long-context leader.' },
           { 'Model': 'StarCoder 2 15B', 'Claimed context': '16K', 'Practical working context (coding)': '~8K–12K', 'Notes': 'The hard limit in this set.' },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Practical working context is what determines whether the model can hold your repo in mind, not the headline number. For multi-file refactors, prefer the actual recall column over the marketing column — Codestral\'s 32K is real, Llama 3.3\'s 128K is partial.',
+          },
+        ],
       },
       licensing: {
         id: 'licensing',
@@ -368,6 +386,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Granite Code', 'Licence': 'Apache 2.0', 'Commercial use without separate licensing?': 'Yes', 'Key constraint': 'Standard attribution; no other restrictions.' },
           { 'Model': 'StarCoder 2', 'Licence': 'BigCode OpenRAIL-M', 'Commercial use without separate licensing?': 'Yes (with use-case restrictions)', 'Key constraint': 'Use-case restrictions for high-risk applications; verify against the licence text.' },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Codestral\'s Mistral Non-Production licence trips up teams that prototype with it then ship without re-checking. If the model touches a paying user — even indirectly through an internal tool that produces customer-facing artefacts — you need Mistral Commercial. Move to Qwen3-Coder or Granite Code (both Apache 2.0) before integration to avoid the licence-renegotiation cycle.',
+          },
+        ],
       },
       decisionTree: {
         id: 'decision-tree',
@@ -381,6 +405,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**4. Are you writing niche languages (Rust, Lua, Haskell, Solidity)?** Yes: StarCoder 2 15B, despite the 16K context limit.',
           '**5. Are you in a regulated industry where licence and training-data provenance need procurement defence?** Yes: Granite Code 34B is the easiest case to make.',
           '**6. Still unsure?** Default to Qwen3-Coder — 30B if you have a 24 GB GPU, 7B otherwise. Re-evaluate when you outgrow it.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'The decision is VRAM first, licence second, context third — Qwen3-Coder is the safe default at 24 GB on Apache 2.0; the other five picks each address one specific binding constraint that Qwen3-Coder does not.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pick Qwen3-Coder unless you have a specific reason not to. The reasons are: hardware (under 12 GB → 7B; over 48 GB → DeepSeek), languages (niche language support → StarCoder 2), procurement (regulated industry → Granite Code), or ecosystem lock-in (existing Llama infra → Llama 3.3 Code). Codestral is the speed pick if you can pay for the commercial licence.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The decision tree is intentionally short. Most teams overthink the model choice and underthink the harness choice — see [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local) for the harness side. The model differences within the reliable picks are smaller than the harness-fit differences.',
+          },
         ],
       },
       commonMistakes: {
