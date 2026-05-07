@@ -6,6 +6,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
 import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './articles/anythingllm-vs-privategpt-vs-openwebui-rag'
+import { article as a_autonomous_local_agents_actually_work } from './articles/autonomous-local-agents-actually-work'
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
@@ -23,6 +24,7 @@ import { article as a_replace_github_copilot_with_local_llm } from './articles/r
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
+  'autonomous-local-agents-actually-work':  a_autonomous_local_agents_actually_work,
   'best-embedding-models-local-rag-2026':   a_best_embedding_models_local_rag_2026,
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
