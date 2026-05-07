@@ -65,6 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
+      { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'Comparison Table', anchor: '#comparison-table' },
       { label: 'Which One Should You Pick?', anchor: '#which-one' },
       { label: 'Continue.dev: Deep Dive', anchor: '#continue-dev' },
@@ -78,6 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Workflow Fit by Use Case', anchor: '#workflow-fit' },
       { label: 'Decision Tree', anchor: '#decision-tree' },
       { label: 'Common Mistakes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
@@ -95,11 +97,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For a single developer, **workflow fit** dominates outcomes more than any benchmark. The harness you actually keep open is the one you should pick.',
         ],
       },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Quick Facts',
+        items: [
+          '**Continue.dev** — autocomplete + chat, VS Code and JetBrains, lowest-friction install of the three.',
+          '**Cline** — autonomous agent with approval gates, VS Code only, highest capability and highest token usage.',
+          '**Aider** — terminal CLI, git-native commits, every edit is reviewable and undoable through git.',
+          'All three run against the same local backend — **Ollama** is the smoothest path; **llama.cpp** and **vLLM** also work via OpenAI-compatible config.',
+          '**Tool-call reliability is a model property, not a harness property.** Qwen3-Coder 30B and DeepSeek Coder V3 are reliable in all three; 7B-class models fail in all three.',
+          '**Context budget:** Continue.dev and Aider stay comfortable on a 32K-context model; Cline needs **128K** for non-trivial multi-file tasks.',
+          '**Pick by editor:** JetBrains → Continue.dev or Aider. Vim/Neovim or SSH → Aider. VS Code with autocomplete-heavy days → Continue.dev. VS Code with multi-file refactors → Cline.',
+        ],
+      },
       comparisonTable: {
         id: 'comparison-table',
         title: 'How Continue.dev, Cline, and Aider Compare in 2026',
         content:
           'All three harnesses are open source, free to run, and work with any local LLM endpoint. The structural differences below decide which one fits your workflow.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Continue.dev is Copilot-style autocomplete, Cline is an autonomous agent that edits across files, Aider is a terminal tool that commits every edit to git — pick by workflow, not by benchmark.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Three free tools, the same local model, three completely different workflows. Continue.dev feels like Copilot — tab to accept suggestions inside your editor. Cline feels like a junior developer you supervise — it plans and edits across files while you approve each step. Aider feels like pair-programming in the terminal — you talk, it commits. Try the one that matches how you already work.',
+          },
+        ],
         columns: ['Feature', 'Continue.dev', 'Cline', 'Aider'],
         rows: [
           {
@@ -248,6 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Aider** — search-and-replace diff blocks rendered in plain prose, parsed at the CLI. The model emits something like a unified-diff fenced block; Aider applies it and commits. If the SEARCH block does not match the file verbatim, the edit is rejected and Aider asks the model to retry.',
           '**Reliability ranking on a 7B-class model:** Continue.dev > Aider > Cline. Continue.dev\'s "apply" is forgiving — small paraphrases get reconciled by the diff algorithm. Aider rejects outright on mismatched search blocks but the failure is loud and recoverable. Cline\'s XML tool format is the most brittle on small models — malformed tool calls stall the loop.',
           '**Reliability ranking on a 30B+ tool-calling model (Qwen3-Coder 30B, DeepSeek Coder V3):** all three converge — the model has the capacity to emit precise diff blocks and well-formed tool calls consistently.',
+          'For structured prompting techniques that improve code generation regardless of which harness wraps them, see [Write Better Code With AI](/prompt-engineering/write-better-code-with-ai).',
         ],
       },
       undo: {
@@ -279,6 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Aider** — tree-sitter repo map (defaults to ~2K tokens, configurable via `--map-tokens`) plus the contents of files explicitly `/add`-ed. The map is a definition-only summary, not full code, so it scales much better with repo size than streaming files. `/drop` files when they are no longer in scope.',
           '**Practical implication for a 32K-context model:** Continue.dev and Aider stay comfortable on most repos; Cline starts hitting context pressure on tasks that touch more than 5–6 files unless you switch to a 128K-context model.',
           '**Practical implication for a 128K-context model:** all three are comfortable. Cline\'s heavier consumption stops mattering; the deciding factor reverts to workflow primitive.',
+          'For a deeper explanation of context windows and why models lose information mid-context, see [Context Windows Explained: Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets).',
         ],
       },
       toolCalls: {
@@ -386,6 +413,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mistake 4: using Aider on a model that paraphrases code.** If the model cannot reproduce SEARCH blocks verbatim, every edit fails. Use a coding-tuned 22B+ model (Qwen3-Coder, DeepSeek Coder, Codestral) for reliable diff edits.',
           '**Mistake 5: switching harnesses to fix a model problem.** If tool calls fail in Cline, they will likely also fail in Continue.dev\'s Agent mode for the same reason. Diagnose the model first.',
           '**Mistake 6: running Cline against a 32K-context model on multi-file tasks.** Token consumption blows through the budget mid-task. Use a 128K-context model for non-trivial Cline work.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Continue.dev Documentation](https://docs.continue.dev/) — Official setup guide, model configuration, `@`-context providers, and Agent mode reference.',
+          '[Cline GitHub Repository](https://github.com/cline/cline) — Source code, tool schemas, Plan/Act mode behaviour, and extension architecture.',
+          '[Aider Documentation](https://aider.chat/) — Official CLI reference, edit-format documentation, repo-map mechanics, and per-model defaults.',
+          '[Ollama Model Library](https://ollama.com/library) — Available local models and quantization levels referenced for each harness.',
+          '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-30B) — Architecture, supported context lengths, and tool-call training data for the recommended coding model.',
         ],
       },
       faq: {
