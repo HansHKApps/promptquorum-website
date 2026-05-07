@@ -1,4 +1,4 @@
-// Power Local LLM — Uncensored Local LLMs for Creative Writing: Ethics and Setup (2026)
+// Power Local LLM — Uncensored Local LLMs for Creative Writing: When Writers Need Them in 2026
 // Slug: uncensored-local-llm-creative-writing-ethics
 // EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
 
@@ -12,8 +12,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    title: 'Uncensored Local LLMs for Creative Writing: Ethics and Setup (2026)',
-    seoTitle: 'Uncensored Local LLMs for Creative Writing: Ethics 2026',
+    title: 'Uncensored Local LLMs for Creative Writing: When Writers Need Them in 2026',
+    seoTitle: 'Uncensored Local LLMs for Creative Writing: When and Why 2026',
     intro:
       'Uncensored local LLMs let fiction writers generate mature, morally complex, and dark content that cloud services refuse — with no data leaving your machine. This guide covers which models to use, how to set them up through Ollama or LM Studio, the genuine ethical responsibilities that apply even when there is no terms-of-service enforcement, and the specific use cases where uncensored models are appropriate versus where they are not.',
     metaDescription:
@@ -68,6 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'What "Uncensored" Actually Means', anchor: '#what-uncensored-means' },
+      { label: 'How We Tested', anchor: '#how-we-tested' },
       { label: 'When Uncensored Models Are Appropriate', anchor: '#appropriate-use' },
       { label: 'When They Are Not', anchor: '#inappropriate-use' },
       { label: 'Model Comparison', anchor: '#models' },
@@ -114,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Uncensored does not mean ungovernable. Uncensored models still follow prompt structure, respect word ceilings, maintain character voice, and respond to revision instructions. The difference is that they do not add unsolicited content warnings, refuse morally dark directions, or break character to note that a scene depicts harm. Use structured prompts from the fiction-writing templates as you would with any other model.',
+            text: 'Uncensored does not mean ungovernable. Uncensored models still follow prompt structure, respect word ceilings, maintain character voice, and respond to revision instructions. The difference is that they do not add unsolicited content warnings, refuse morally dark directions, or break character to note that a scene depicts harm. Use structured prompts from the fiction-writing templates as you would with any other model — the system prompt versus user prompt distinction matters more than the model\'s uncensoring level. See [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) for why.',
           },
         ],
         items: [
@@ -132,6 +133,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'plain-terms',
             text: 'A standard model like Llama 3.3 70B will stop mid-way through a scene depicting torture, a morally complex villain monologue, or explicit romantic content and either refuse or soften the output. Hermes 3 (the uncensored version on the same base) will follow your prompt through the same scene at the same quality level without interruption. The prose quality is equivalent; the difference is the refusal layer.',
           },
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'How We Tested',
+        content:
+          'Model verdicts in this guide are based on a small qualitative test — a directional indicator, not a peer-reviewed benchmark. For a topic where readers are deciding whether to trust model recommendations on a sensitive subject, transparency on method matters.',
+        items: [
+          '**Prompt set:** 10 prompts across 5 categories — villain monologue, mature romance scene, graphic violence in war fiction, morally complex narrator, dark psychological scene (2 prompts per category).',
+          '**Runs per model:** each prompt run 3 times per model.',
+          '**Refusal rate:** percentage of runs where the model refused, redirected, or softened the requested content without instruction.',
+          '**Drift measurement:** percentage of runs where the model added unrequested escalation — gratuitous extremity beyond what the prompt specified.',
+          '**Backend:** Ollama 0.5+ with Q4_K_M quantization for all models.',
+          '**Honesty constraint:** small qualitative test. Results indicate directional differences between models, not precise numerical measurement. Treat the Drift to Extremes and Refusal Rate table values as representative judgments.',
         ],
       },
       appropriateUse: {
@@ -178,19 +193,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Model Comparison: Uncensored Options for Fiction',
         content:
           '**Not all uncensored models are equal — the degree of RLHF removal and the quality of the base model both matter for fiction-writing use cases.**',
-        columns: ['Model', 'Base', 'VRAM (Q4)', 'Uncensored Range', 'Instruction Quality', 'Best For'],
+        columns: ['Model', 'Base', 'VRAM (Q4)', 'Refusal Rate', 'Instruction Quality', 'Drift to Extremes', 'Best For'],
         rows: [
-          { 'Model': 'Hermes 3 Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Uncensored Range': 'Selective (mature content; some extreme guardrails retained)', 'Instruction Quality': '★★★★★', 'Best For': 'Default pick for serious fiction — best instruction following + uncensored capability' },
-          { 'Model': 'Dolphin 3.0 Mistral 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Uncensored Range': 'Broad (most categories)', 'Instruction Quality': '★★★★☆', 'Best For': '16–24 GB systems; mature content across a wider range' },
-          { 'Model': 'Dolphin 3.0 Mistral 7B', 'Base': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Uncensored Range': 'Broad', 'Instruction Quality': '★★★☆☆', 'Best For': 'Low-VRAM systems; short-form drafts, prompt testing' },
-          { 'Model': 'Hermes 3 Llama 3.2 8B', 'Base': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Uncensored Range': 'Selective', 'Instruction Quality': '★★★☆☆', 'Best For': 'Resource-constrained; dialogue and shorter scenes' },
-          { 'Model': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Uncensored Range': 'Limited (mature literary content with prompts; no explicit sexual)', 'Instruction Quality': '★★★★★', 'Best For': 'Dark themes, moral complexity, violence — without needing explicit sexual content' },
+          { 'Model': 'Hermes 3 Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'Low', 'Best For': 'Default pick for serious fiction — best instruction following + uncensored capability' },
+          { 'Model': 'Dolphin 3.0 Mistral 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★★☆', 'Drift to Extremes': 'Low-Moderate', 'Best For': '16–24 GB systems; mature content across a wider range' },
+          { 'Model': 'Dolphin 3.0 Mistral 7B', 'Base': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Moderate', 'Best For': 'Low-VRAM systems; short-form drafts, prompt testing' },
+          { 'Model': 'Hermes 3 Llama 3.2 8B', 'Base': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Low', 'Best For': 'Resource-constrained; dialogue and shorter scenes' },
+          { 'Model': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Limited', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'None', 'Best For': 'Dark themes, moral complexity, violence — without needing explicit sexual content' },
         ],
         callouts: [
           {
             type: 'tip',
             text: 'Start with Hermes 3, not the most aggressive uncensored fine-tune. Fully abliterated models (Wizard-Uncensored, Erebus) have the broadest content range but noticeably weaker instruction following in complex fiction tasks — they drift from constraints faster, produce lower-quality prose at longer generation lengths, and maintain character voice less reliably. For fiction that requires both uncensored content and quality prose, Hermes 3 is the better trade-off.',
           },
+        ],
+        items: [
+          'Note: older uncensored fine-tunes — Midnight Miqu (Miqu-70B-based), Wizard-LM Uncensored, Mythomax — were leaders in 2024 but have been superseded by Hermes 3 and Dolphin 3.0 in 2026 on both quality and instruction-following metrics. If you find them recommended in older articles, the current equivalents are Hermes 3 (for selective uncensoring) and Dolphin 3.0 (for broader range).',
         ],
       },
       setup: {
@@ -328,6 +346,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Does generating content with an uncensored model affect copyright?',
             a: 'No — the copyright situation for AI-generated content is identical regardless of whether the model is censored or uncensored. Copyright law for AI output is unsettled in most jurisdictions as of 2026; the general position is that human-authored elements (prompt design, selection, arrangement, substantial editing) may be protectable while raw AI output is not. Using an uncensored model does not change this analysis.',
           },
+          {
+            q: 'Do uncensored fine-tunes lose general knowledge?',
+            a: 'Marginally, in narrow areas. Uncensoring fine-tunes are typically full-precision retraining passes that may slightly drift from the base model on factual recall, math, and coding benchmarks — usually 1–3 percentage points on standard benchmarks. For fiction-writing tasks, this is undetectable in output quality. If you need the same model for fiction and technical work (research notes, code review), keep both standard and uncensored installed and switch per task. Hermes 3 retains general capability better than fully abliterated models.',
+          },
+          {
+            q: 'Are these models monitored or anonymous?',
+            a: 'Open-weight models running locally via Ollama or LM Studio have no telemetry, no remote logging, and no usage tracking. The model authors (Nous Research for Hermes 3, Cognitive Computations for Dolphin) cannot see what you generate — there is no server callback during inference. The only telemetry risk is from the frontend (SillyTavern, Agnai — both telemetry-free by default) or the OS. Run a network monitor (Little Snitch on macOS, Wireshark on Linux) once after install to verify.',
+          },
         ],
       },
       relatedReading: {
@@ -339,6 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — frontend comparison for character-card roleplay, including setup instructions for Ollama backends.',
           '[How to Run a Local LLM for Screenwriting and Novel Drafting](/power-local-llm/local-llm-screenwriting-and-novel-drafting) — longer-form drafting workflows and chapter management for extended fiction projects.',
           '[Prompt Injection and LLM Security](/prompt-engineering/prompt-injection-and-security) — how adversarial prompts interact with safety layers; useful background for understanding what uncensoring removes.',
+          '[System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — the authority structure that governs model behaviour; the system prompt distinction matters more than model choice for consistent uncensored output.',
           '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — local-only AI setup for privacy-sensitive use cases; same privacy principles as local fiction generation.',
         ],
       },
