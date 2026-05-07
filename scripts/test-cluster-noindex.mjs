@@ -134,9 +134,14 @@ async function main() {
   console.log(`▶ Loaded ${slugs.length} slugs from ${SLUGS_FILE}`)
 
   console.log(`▶ Starting next start on port ${PORT}…`)
+  // detached: true puts the server in its own process group so we can signal
+  // every descendant (including the grandchild next-server that npx spawns).
+  // Without this, killing the npx wrapper leaves next-server orphaned —
+  // it keeps the port bound and serves stale builds to anything that connects later.
   const server = spawn('npx', ['next', 'start', '-p', PORT], {
     stdio: ['ignore', 'pipe', 'pipe'],
     env: { ...process.env, NODE_ENV: 'production' },
+    detached: true,
   })
 
   let serverOutput = ''
@@ -147,13 +152,38 @@ async function main() {
     serverOutput += d.toString()
   })
 
+  let cleanedUp = false
   const cleanup = () => {
-    if (!server.killed) server.kill('SIGTERM')
+    if (cleanedUp) return
+    cleanedUp = true
+    if (!server.pid) return
+    try {
+      // Negative pid signals the whole process group — npx, next start, next-server.
+      process.kill(-server.pid, 'SIGTERM')
+    } catch {
+      // group may already be gone
+    }
+    // Force-kill anything that survives a graceful shutdown window.
+    setTimeout(() => {
+      try { process.kill(-server.pid, 'SIGKILL') } catch {}
+    }, 3000).unref()
   }
   process.on('exit', cleanup)
-  process.on('SIGINT', () => {
+  for (const sig of ['SIGINT', 'SIGTERM', 'SIGHUP']) {
+    process.on(sig, () => {
+      cleanup()
+      process.exit(sig === 'SIGINT' ? 130 : 143)
+    })
+  }
+  process.on('uncaughtException', (err) => {
+    console.error('✗ uncaughtException:', err)
     cleanup()
-    process.exit(130)
+    process.exit(1)
+  })
+  process.on('unhandledRejection', (err) => {
+    console.error('✗ unhandledRejection:', err)
+    cleanup()
+    process.exit(1)
   })
 
   const ready = await waitForReady(HOST, Date.now() + READY_TIMEOUT_MS)
