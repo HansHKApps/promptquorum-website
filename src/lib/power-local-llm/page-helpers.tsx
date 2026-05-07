@@ -711,7 +711,7 @@ function renderEnglishHub() {
           {/* Hero */}
           <div className="py-16 border-b border-primary/20 mb-16">
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Power Local LLM</p>
-            <p className="text-xs text-text-secondary mb-4">Updated <time dateTime={lastUpdated}>May 2026</time></p>
+            <p className="text-xs text-text-secondary mb-4">Last updated: <time dateTime={lastUpdated}>{lastUpdated}</time></p>
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
               Power Local LLM — Build a Private AI Stack That Replaces Your SaaS Bills
             </h1>

@@ -636,7 +636,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {new Date((article.dateModified ?? article.publishDate) + 'T00:00:00Z').toLocaleDateString(LANGUAGE_TO_LOCALE[lang] ?? 'en-US', { month: 'long', year: 'numeric' })}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {article.dateModified ?? article.publishDate}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
@@ -758,20 +758,9 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
           })}
         </article>
 
-        {/* Footer CTA */}
-        <div className="mt-16 pt-8 border-t border-primary/20 text-center">
-          <p className="text-text-secondary mb-6">
-            {POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
-          </p>
-          <a
-            href={lang === 'en' ? '/' : `/?lang=${lang}`}
-            className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
-          >
-            {POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}
-          </a>
-        </div>
+        {/* Marketing CTA suppressed cluster-wide until /power-local-llm launches publicly. */}
 
-        <p className="text-center mt-8">
+        <p className="text-center mt-16 pt-8 border-t border-primary/20">
           <a href={powerLLMHubPath(lang)} className="text-primary hover:text-primary/80 text-sm">
             {POST_UI.backLink[lang] ?? POST_UI.backLink['en']}
           </a>
