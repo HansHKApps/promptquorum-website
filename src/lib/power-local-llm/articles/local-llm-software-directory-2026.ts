@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-systems',
         title: '5. RAG & Document Chat Systems',
         content:
-          '**RAG (Retrieval-Augmented Generation) systems combine a local LLM with an embedding model and a vector store so the model can answer from your own documents.** The split is between turn-key apps (AnythingLLM, PrivateGPT, Quivr, Khoj) that "just work" and framework libraries (LlamaIndex, Haystack, txtai) that you build on. RAGFlow has gained share in 2026 specifically for documents that need citation-grade retrieval.',
+          '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/rag-explained) systems combine a local LLM with an embedding model and a vector store so the model can answer from your own documents.** The split is between turn-key apps (AnythingLLM, PrivateGPT, Quivr, Khoj) that "just work" and framework libraries (LlamaIndex, Haystack, txtai) that you build on. RAGFlow has gained share in 2026 specifically for documents that need citation-grade retrieval.',
         columns: ['Tool', 'Link', 'Description', 'License'],
         rows: [
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'Easiest all-in-one personal RAG with workspaces', 'License': 'MIT' },

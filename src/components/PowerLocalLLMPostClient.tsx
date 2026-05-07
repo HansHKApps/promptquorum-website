@@ -636,7 +636,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {new Date((article.dateModified ?? article.publishDate) + 'T00:00:00Z').toLocaleDateString(LANGUAGE_TO_LOCALE[lang] ?? 'en-US', { month: 'long', year: 'numeric' })}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {article.dateModified ?? article.publishDate}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
