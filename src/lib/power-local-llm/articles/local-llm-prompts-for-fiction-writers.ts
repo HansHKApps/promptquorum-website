@@ -1,4 +1,4 @@
-// Power Local LLM — Local LLM Prompts for Fiction Writers: Templates & Techniques (2026)
+// Power Local LLM — Local LLM Prompts for Fiction Writers: Templates & Techniques
 // Slug: local-llm-prompts-for-fiction-writers
 // EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
 
@@ -7,13 +7,12 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'evergreen',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    title: 'Local LLM Prompts for Fiction Writers: Templates & Techniques (2026)',
-    seoTitle: 'Local LLM Prompts for Fiction Writers: Templates 2026',
+    title: 'Local LLM Prompts for Fiction Writers: Templates & Techniques',
+    seoTitle: 'Local LLM Prompts for Fiction Writers: Templates & Techniques',
     intro:
       'Local LLMs produce measurably better fiction when you give them structured prompts rather than open-ended requests. This guide covers the prompt templates that work — for scene-writing, character development, dialogue, worldbuilding, and style transfer — all tested against Llama 3.3 70B, Qwen3 32B, and Mistral Large running locally through Ollama or LM Studio. Every template is copy-paste ready and includes what to adjust per genre.',
     metaDescription:

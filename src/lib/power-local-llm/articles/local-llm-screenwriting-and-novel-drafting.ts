@@ -1,4 +1,4 @@
-// Power Local LLM — How to Run a Local LLM for Screenwriting and Novel Drafting (2026)
+// Power Local LLM — How to Run a Local LLM for Screenwriting and Novel Drafting
 // Slug: local-llm-screenwriting-and-novel-drafting
 // EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
 
@@ -7,13 +7,12 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'evergreen',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    title: 'How to Run a Local LLM for Screenwriting and Novel Drafting (2026)',
-    seoTitle: 'Local LLM for Screenwriting and Novel Drafting: Full Guide 2026',
+    title: 'How to Run a Local LLM for Screenwriting and Novel Drafting',
+    seoTitle: 'Local LLM for Screenwriting and Novel Drafting: Full Guide',
     intro:
       'Local LLMs integrated into a screenwriting or novel-drafting workflow let you generate scene drafts, beat sheets, dialogue passes, and revision runs without internet access, cloud logging, or usage limits. This guide covers the full workflow: model selection, context-window management for long-form work, chapter scaffolding, scene generation, and the tools that connect a local LLM to your writing software.',
     metaDescription:
