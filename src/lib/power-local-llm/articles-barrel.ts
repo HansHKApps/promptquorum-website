@@ -16,6 +16,7 @@ import { article as a_lm_studio_vs_jan_vs_gpt4all_2026 } from './articles/lm-stu
 import { article as a_local_ai_app_non_technical_users } from './articles/local-ai-app-non-technical-users'
 import { article as a_local_ai_app_with_built_in_rag } from './articles/local-ai-app-with-built-in-rag'
 import { article as a_local_coding_llm_without_internet } from './articles/local-coding-llm-without-internet'
+import { article as a_local_llm_code_review_ci_cd } from './articles/local-llm-code-review-ci-cd'
 import { article as a_local_rag_for_private_business_data } from './articles/local-rag-for-private-business-data'
 import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/local-rag-on-your-pdfs-step-by-step'
 import { article as a_replace_github_copilot_with_local_llm } from './articles/replace-github-copilot-with-local-llm'
@@ -32,6 +33,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-ai-app-non-technical-users':       a_local_ai_app_non_technical_users,
   'local-ai-app-with-built-in-rag':         a_local_ai_app_with_built_in_rag,
   'local-coding-llm-without-internet':      a_local_coding_llm_without_internet,
+  'local-llm-code-review-ci-cd':            a_local_llm_code_review_ci_cd,
   'local-rag-for-private-business-data':    a_local_rag_for_private_business_data,
   'local-rag-on-your-pdfs-step-by-step':    a_local_rag_on_your_pdfs_step_by_step,
   'replace-github-copilot-with-local-llm':  a_replace_github_copilot_with_local_llm,
