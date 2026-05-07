@@ -86,12 +86,29 @@ export default async function RootLayout({
   const pathname = headersList.get('x-pathname') || '/'
   const baseUrlWithoutLang = `https://www.promptquorum.com${pathname}`
 
+  // Path prefixes that must serve `noindex, follow` until the cluster ships publicly.
+  // Mirrors EXCLUDED_PATH_PREFIXES in src/app/sitemap.ts — keep both in sync.
+  const NOINDEX_PATH_PREFIXES = [
+    '/power-local-llm',
+    '/de/power-local-llm',
+    '/fr/power-local-llm',
+    '/ja/power-local-llm',
+    '/zh/power-local-llm',
+  ]
+  const pathOnly = pathname.split('?')[0]
+  const isNoindexPath = NOINDEX_PATH_PREFIXES.some(
+    (prefix) => pathOnly === prefix || pathOnly.startsWith(`${prefix}/`)
+  )
+  const robotsContent = isNoindexPath
+    ? 'noindex, follow'
+    : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+
   return (
     <html lang={selectedLang} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
       <head>
         <meta name="theme-color" content="#6750A4" />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content={robotsContent} />
+        <meta name="googlebot" content={robotsContent} />
 
         {/* MCP discovery — Model Context Protocol manifest for AI agents */}
         <link rel="mcp" href="/mcp.json" type="application/json" />
