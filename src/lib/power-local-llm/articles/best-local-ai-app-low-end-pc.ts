@@ -14,8 +14,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
     seoTitle: 'Best Local AI Apps for 8GB RAM PCs 2026: Tested CPU-Only',
-    intro:
-      '**On an 8 GB RAM laptop with no discrete GPU, four apps actually run well in 2026: Ollama (lean terminal), GPT4All (one-click installer), Jan (open-source GUI), and llama.cpp (bare-metal speed). All four pair best with sub-4B models — Phi-4 Mini, Gemma 3 4B, SmolLM 2, or Llama 3.2 1B.**',
     metaDescription:
       'No RTX 4090, no problem. Ollama, GPT4All, Jan, and llama.cpp tested on 8 GB RAM laptops with integrated graphics. Tokens/sec ranges, memory pressure, exact settings. May 2026.',
     twitterDescription:
@@ -348,6 +346,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Does Windows 10 still work for local AI in 2026?',
             a: 'Yes. All four apps support Windows 10 22H2. Ollama, GPT4All, and Jan ship signed Windows installers; llama.cpp ships prebuilt Windows binaries on its GitHub releases. The end of Windows 10 mainstream support in October 2025 does not prevent installation, but security updates have ended, so consider a Linux dual-boot or Windows 11 upgrade for long-term use.',
           },
+          {
+            q: "What's the cheapest laptop that runs local AI well?",
+            a: 'A used 2021–2022 ThinkPad T14 or Dell Latitude 5430 with 16 GB RAM and a Ryzen 5 5500U or Intel i5-1235U costs €350–450 in 2026 and runs Phi-4 Mini Q4 at 8–14 tok/sec. Cheaper still: any 8 GB Apple M1 MacBook Air at €450–550 used, which beats most x86 laptops on tokens/sec thanks to unified memory.',
+          },
+          {
+            q: 'Can I use a Raspberry Pi for local AI?',
+            a: 'A Raspberry Pi 5 with 8 GB RAM runs Llama 3.2 1B Q4 at 4–7 tok/sec — usable but slow. A Pi 4 4 GB caps out at around 2 tok/sec on TinyLlama 1B. For real chat use, an 8 GB x86 laptop or M1 MacBook Air is faster, cheaper used, and easier to set up. Pi makes sense only for embedded, edge, or always-on workloads.',
+          },
         ],
       },
       relatedReading: {
@@ -470,6 +476,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text':
               'Yes. All four apps support Windows 10 22H2. Ollama, GPT4All, and Jan ship signed Windows installers; llama.cpp ships prebuilt Windows binaries on its GitHub releases. The end of Windows 10 mainstream support in October 2025 does not prevent installation, but security updates have ended, so consider a Linux dual-boot or Windows 11 upgrade for long-term use.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': "What's the cheapest laptop that runs local AI well?",
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'A used 2021–2022 ThinkPad T14 or Dell Latitude 5430 with 16 GB RAM and a Ryzen 5 5500U or Intel i5-1235U costs €350–450 in 2026 and runs Phi-4 Mini Q4 at 8–14 tokens per second. Cheaper still: any 8 GB Apple M1 MacBook Air at €450–550 used, which beats most x86 laptops on tokens per second thanks to unified memory.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I use a Raspberry Pi for local AI?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'A Raspberry Pi 5 with 8 GB RAM runs Llama 3.2 1B Q4 at 4–7 tokens per second — usable but slow. A Pi 4 4 GB caps out at around 2 tokens per second on TinyLlama 1B. For real chat use, an 8 GB x86 laptop or M1 MacBook Air is faster, cheaper used, and easier to set up. Pi makes sense only for embedded, edge, or always-on workloads.',
           },
         },
       ],
