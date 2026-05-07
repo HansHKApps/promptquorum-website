@@ -171,7 +171,7 @@ export function FAQAccordion({ lang = 'en' }: { lang?: Lang }) {
         <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
           <button
             onClick={() => toggleItem(index)}
-            className="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors text-left"
+            className="w-full px-6 py-4 min-h-[48px] flex items-center justify-between bg-white hover:bg-gray-50 transition-colors text-left"
           >
             <h3 className="font-semibold text-gray-900">{faq.question}</h3>
             <span className={`text-gray-400 transition-transform flex-shrink-0 ${expandedIndex === index ? 'rotate-180' : ''}`}>
