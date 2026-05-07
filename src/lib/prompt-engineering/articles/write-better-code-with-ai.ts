@@ -226,6 +226,7 @@ export const article: Record<Language, PEArticle> = {
             '**The output of any AI coding session is only as good as the instruction you give — a vague prompt produces vague code, a structured prompt produces production-ready code.** Large Language Models (LLMs) — the class of neural networks behind GPT-4o, Claude Opus 4.7, and Gemini 3.1 Pro — do not "understand" your project; they predict the next most likely token based on patterns learned from billions of lines of code.',
             'This means your prompt is an architectural contract, not a casual question. When you specify the programming language, expected inputs/outputs, and edge cases to handle, you consistently receive code closer to production-ready.',
             'In one sentence: The developer\'s job has shifted from writing every line to writing instructions that an AI executes — the skill is prompt engineering, not keyboarding speed.',
+            'These prompting techniques apply identically to local coding stacks. To replace a cloud assistant with an open-source pairing of Continue.dev + Ollama + Qwen3-Coder, see [Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm).',
           ],
         },
         modelComparison: {
@@ -734,6 +735,7 @@ export const article: Record<Language, PEArticle> = {
             '**Der Output jeder KI-Programmier-Session ist nur so gut wie die Anweisung, die du gibst — ein vager Prompt erzeugt vagen Code, ein strukturierter Prompt erzeugt Production-Ready-Code.** Large Language Models (LLMs) — die Klasse neuronaler Netzwerke hinter GPT-5, Claude 4.7 Opus und Gemini 3 Pro — "verstehen" Ihr Projekt nicht; sie sagen das nächste wahrscheinlichste Token basierend auf Mustern vorher, die sie aus Milliarden Codezeilen gelernt haben.',
             'Das bedeutet, Ihr Prompt ist ein Architektur-Vertrag, keine beiläufige Frage. Wenn Sie die Programmiersprache, erwartete Eingaben/Ausgaben und Edge Cases spezifizieren, die Sie handhaben wollen, erhalten Sie durchgehend Code, der näher an Production-Ready ist.',
             'In einem Satz: Die Aufgabe des Entwicklers hat sich verschoben von "jede Zeile schreiben" zu "Anweisungen schreiben, die eine KI ausführt" — die Fähigkeit ist Prompt Engineering, nicht Schreibgeschwindigkeit.',
+            'Diese Prompting-Techniken gelten genauso für lokale Coding-Stacks. Um einen Cloud-Assistenten durch das Open-Source-Trio Continue.dev + Ollama + Qwen3-Coder zu ersetzen, siehe [GitHub Copilot durch ein lokales LLM ersetzen](/power-local-llm/replace-github-copilot-with-local-llm?lang=de).',
           ],
         },
         modelComparison: {
@@ -1236,6 +1238,7 @@ export const article: Record<Language, PEArticle> = {
             '**La sortie de toute session de codage IA est aussi bonne que l\'instruction que vous donnez — un prompt vague produit du code vague, un prompt structuré produit du code prêt pour la production.** Les modèles de langage de grande taille (LLM) — la classe de réseaux de neurones derrière GPT-5, Claude 4.7 Opus et Gemini 3 Pro — ne « comprennent » pas votre projet ; ils prédisent le token le plus probable basé sur les patterns appris de milliards de lignes de code.',
             'Cela signifie que votre prompt est un contrat architectural, pas une question improvisée. Quand vous précisez le langage de programmation, les entrées/sorties attendues et les cas limites à gérer, vous recevez systématiquement du code plus proche d\'être prêt pour la production.',
             'En une phrase : Le rôle du développeur s\'est déplacé de l\'écriture de chaque ligne à l\'écriture d\'instructions qu\'une IA exécute — la compétence est l\'ingénierie des prompts, pas la vitesse de frappe.',
+            'Ces techniques de prompting s\'appliquent à l\'identique aux stacks de code locales. Pour remplacer un assistant cloud par le couple open-source Continue.dev + Ollama + Qwen3-Coder, voir [Remplacer GitHub Copilot par un LLM local](/power-local-llm/replace-github-copilot-with-local-llm?lang=fr).',
           ],
         },
         modelComparison: {
@@ -1740,6 +1743,7 @@ export const article: Record<Language, PEArticle> = {
             '**AI コーディングセッションの出力は、提供する指示と同等です。曖昧なプロンプトは曖昧なコード、構造化されたプロンプトは本番環境対応のコードを生成します。** 大規模言語モデル（LLM）はプロジェクトを「理解」しません。代わりに、数十億行のコードから学んだパターンに基づいて、次の最も可能性の高いトークンを予測します。',
             'つまり、プロンプトは気軽な質問ではなく、アーキテクチャ契約です。プログラミング言語、期待される入力/出力、処理するエッジケースを指定すると、本番環境対応に近いコードが一貫して得られます。',
             '一文で言うと：開発者のジョブは「すべての行を書く」から「AI が実行する指示を書く」にシフトしました。スキルはプロンプトエンジニアリング、キーボード速度ではありません。',
+            'これらのプロンプト技法はローカルのコーディングスタックにもそのまま当てはまります。クラウドアシスタントをオープンソースの Continue.dev + Ollama + Qwen3-Coder で置き換える方法は、[GitHub Copilot をローカル LLM で置き換える](/power-local-llm/replace-github-copilot-with-local-llm?lang=ja)を参照してください。',
           ],
         },
         modelComparison: {
@@ -2170,6 +2174,7 @@ export const article: Record<Language, PEArticle> = {
             '**任何AI编码会话的输出质量只取决于你给出的指令 — 模糊的提示词会产生模糊的代码，结构化的提示词会产生生产就绪的代码。** 大语言模型（LLM） — GPT-5、Claude 4.7 Opus和Gemini 3 Pro等神经网络类别 — 不"理解"你的项目；它们根据从数十亿行代码学习到的模式预测下一个最可能的token。',
             '这意味着你的提示词是一个架构合约，而不是随意的问题。当你指定编程语言、预期的输入/输出和要处理的边界情况时，你始终会收到更接近生产就绪的代码。',
             '一句话：开发人员的工作已经从编写每一行代码转变为编写AI执行的指令 — 这种技能是提示工程，而不是打字速度。',
+            '这些提示技巧同样适用于本地编码栈。要用 Continue.dev + Ollama + Qwen3-Coder 这套开源组合替代云端助手，请参阅[用本地 LLM 替代 GitHub Copilot](/power-local-llm/replace-github-copilot-with-local-llm?lang=zh)。',
           ],
         },
         modelComparison: {

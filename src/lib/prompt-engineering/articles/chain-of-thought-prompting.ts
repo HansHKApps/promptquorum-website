@@ -114,6 +114,7 @@ export const article: Record<Language, PEArticle> = {
           title: 'When Chain-of-Thought Helps (and When It Doesn\'t)',
           content: [
             '**Chain-of-thought prompting helps most on tasks that naturally break into clear steps, but it is not necessary for every prompt.** It shines wherever the path is as important as the destination.',
+            'Chain-of-Thought reasoning is what lets a tool-calling agent stay reliable across multi-step tasks. For a local agent stack that gives a CoT-capable model the ability to query databases and edit files, see [Local AI Agents With MCP](/power-local-llm/local-ai-agents-with-mcp-2026).',
             'Good use cases include:',
           ],
           items: [
@@ -524,6 +525,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'Wann Chain-of-Thought hilft (und wann nicht)',
       content: [
         '**Chain-of-Thought Prompting hilft am meisten bei Aufgaben, die sich natürlicherweise in klare Schritte unterteilen lassen, ist aber nicht für jeden Prompt notwendig.** Es glänzt überall dort, wo der Weg genauso wichtig ist wie das Ziel.',
+        'Chain-of-Thought-Reasoning ist es, was einen Tool-Calling-Agenten über mehrstufige Aufgaben hinweg zuverlässig macht. Für einen lokalen Agenten-Stack, der einem CoT-fähigen Modell den Zugriff auf Datenbanken und Dateien gibt, siehe [Lokale KI-Agenten mit MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de).',
         'Gute Anwendungsfälle sind:',
       ],
       items: [
@@ -933,6 +935,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'Quand le Chain-of-Thought aide',
       content: [
         '**Le Chain-of-Thought Prompting brille sur les tâches qui se divisent naturellement en étapes claires, mais n\'est pas nécessaire pour chaque prompt.** Il excelle quand le chemin est aussi important que la destination.',
+        'Le raisonnement en chaîne de pensée est ce qui permet à un agent à appel d\'outils de rester fiable sur des tâches multi-étapes. Pour une stack d\'agent local qui donne à un modèle compatible CoT la possibilité d\'interroger des bases de données et d\'éditer des fichiers, voir [Agents IA locaux avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr).',
         'Les bons cas d\'usage incluent:',
       ],
       items: [
@@ -1342,6 +1345,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'Chain-of-Thoughtが役立つ場面',
       content: [
         '**Chain-of-Thoughtプロンプティングは、自然に明確なステップに分割されるタスクで最も役立ちますが、すべてのプロンプトに必要なわけではありません。** 目的地と同じくらいパスが重要な場所で輝きます。',
+        'Chain-of-Thought 推論こそが、ツール呼び出し型エージェントを複数ステップのタスクで安定させる仕組みです。CoT 対応モデルにデータベース照会やファイル編集の能力を与えるローカルエージェント構成については、[MCP を使ったローカル AI エージェント](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja)を参照してください。',
         '適切なユースケースには次のようなものがあります:',
       ],
       items: [
@@ -1754,6 +1758,7 @@ export const article: Record<Language, PEArticle> = {
       title: '链式思维何时有效',
       content: [
         '**链式思维提示词在能自然分解为清晰步骤的任务上最有效，但并非所有提示词都需要它。** 当过程本身和结果一样重要时，它表现最佳。',
+        'Chain-of-Thought 推理是工具调用型代理在多步骤任务中保持可靠性的关键。要搭建一套让具备 CoT 能力的模型可以查询数据库、编辑文件的本地代理，请参阅[使用 MCP 的本地 AI 代理](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh)。',
         '适用场景包括:',
       ],
       items: [

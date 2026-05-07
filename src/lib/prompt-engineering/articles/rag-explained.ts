@@ -162,12 +162,14 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG matters because it reduces [hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) and keeps answers up to date.** A pure language model can confidently invent details, especially on specialized or recent topics. With RAG, answers are anchored in retrieved documents you control.',
             'RAG is also important for privacy and governance. Instead of fine-tuning a model on sensitive data, you can keep that data in your own store and only feed relevant snippets into the model at query time. That way, the model reasons over your content without permanently absorbing it.',
+            'When the documents you want to retrieve cannot leave your infrastructure, the entire RAG pipeline can run on your own hardware. For the GDPR-compliant architecture, audit logging, and deployment patterns, see [Local RAG for Business Data](/power-local-llm/local-rag-for-private-business-data).',
           ],
         },
         howItWorks: {
           title: 'How a RAG System Works Step by Step',
           content: [
             '**A typical RAG system runs through four main stages: ingestion, indexing, retrieval, and generation.** Each stage can be tuned independently.',
+            'For a step-by-step walk-through of running this pipeline on your own PDFs with a local model, see [Local RAG on Your PDFs Step by Step](/power-local-llm/local-rag-on-your-pdfs-step-by-step).',
           ],
           callouts: [
             { type: 'info', label: 'Retrieval Is the Bottleneck', text: 'Most RAG failures are retrieval failures — the wrong documents are returned, or no documents pass the threshold. Test your retriever independently on 20 representative queries before evaluating the full pipeline. If retrieval is broken, improving the generator won\'t help.' }
@@ -502,12 +504,14 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG ist wichtig, weil es [Halluzinationen](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) reduziert und Antworten aktuell hält.** Ein reines Sprachmodell kann vertrauensvoll Details erfinden, besonders bei Spezialthemen oder aktuellen Inhalten. Mit RAG sind Antworten in abgerufenen Dokumenten verankert, die Sie kontrollieren.',
             'RAG ist auch für Datenschutz und Governance wichtig. Anstatt ein Modell mit sensiblen Daten zu trainieren, können Sie diese Daten in Ihrem eigenen Store behalten und nur relevante Ausschnitte zur Abfragezeit an das Modell übergeben. Das Modell begründet sein Verständnis auf Ihren Inhalten, ohne diese dauerhaft zu absorbieren.',
+            'Wenn die Dokumente, die Sie abrufen wollen, Ihre Infrastruktur nicht verlassen dürfen, kann die gesamte RAG-Pipeline auf Ihrer eigenen Hardware laufen. Für die DSGVO-konforme Architektur, Audit-Protokollierung und Deployment-Muster siehe [Lokales RAG für Geschäftsdaten](/power-local-llm/local-rag-for-private-business-data?lang=de).',
           ],
         },
         howItWorks: {
           title: 'Wie ein RAG-System funktioniert: Schritt für Schritt',
           content: [
             '**Ein typisches RAG-System durchläuft vier Hauptstufen: Aufnahme, Indexierung, Abruf und Generierung.** Jede Stufe kann unabhängig abgestimmt werden.',
+            'Für eine Schritt-für-Schritt-Anleitung, wie Sie diese Pipeline auf Ihren eigenen PDFs mit einem lokalen Modell ausführen, siehe [Lokales RAG auf Ihren PDFs Schritt für Schritt](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=de).',
           ],
           callouts: [
             { type: 'info', label: 'Abruf ist der Engpass', text: 'Die meisten RAG-Fehler sind Abruffehler — die falschen Dokumente werden zurückgegeben, oder es werden keine Dokumente über den Schwellenwert hinaus zurückgegeben. Testen Sie den Retriever unabhängig auf 20 repräsentativen Abfragen, bevor Sie die vollständige Pipeline evaluieren. Wenn der Abruf defekt ist, wird das Verbessern des Generators nicht helfen.' }
@@ -847,12 +851,14 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG réduit les [hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) et maintient les réponses à jour.** Un modèle seul invente volontiers sur des sujets spécialisés ou récents. Avec RAG, les réponses reposent sur des documents que vous contrôlez.',
             'Essentiel aussi pour la confidentialité. Vous gardez vos données sensibles dans votre infrastructure et ne passez que des extraits pertinents au modèle à chaque interrogation. Le modèle opère sur votre contenu sans l\'absorber définitivement.',
+            'Lorsque les documents que vous voulez interroger ne peuvent pas quitter votre infrastructure, le pipeline RAG complet peut s\'exécuter sur votre propre matériel. Pour l\'architecture conforme RGPD, la journalisation d\'audit et les schémas de déploiement, voir [RAG local pour les données métier](/power-local-llm/local-rag-for-private-business-data?lang=fr).',
           ],
         },
         howItWorks: {
           title: 'Comment fonctionne un système RAG',
           content: [
             '**Quatre étapes principales : ingestion, indexation, récupération, génération.** Chacune peut être affinée indépendamment.',
+            'Pour un guide pas-à-pas qui exécute ce pipeline sur vos propres PDF avec un modèle local, voir [RAG local sur vos PDF étape par étape](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=fr).',
           ],
           callouts: [
             { type: 'info', label: 'La récupération est le goulot', text: 'La qualité de RAG dépend 80% de la récupération. Un bon retriever avec un modèle faible donne meilleures résultats qu\'un mauvais retriever avec GPT-4o. Investissez dans le tuning de l\'indexation et des chunking.' },
@@ -1159,12 +1165,14 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG は [ハルシネーション](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) を削減し、回答を最新に保つため重要です。** 純粋な言語モデルは専門的または最新の話題で自信満々に詳細を作り出すことができます。RAG を使えば、回答はあなたが管理するドキュメントに固定されます。',
             'プライバシーとガバナンスにおいても重要です。機密データでモデルをトレーニングする代わりに、そのデータを自社ストアに保管し、クエリ時に関連スニペットのみをモデルに供給できます。モデルはあなたのコンテンツについて推論しますが、永続的に吸収することはありません。',
+            '取得したい文書がインフラ外に出せない場合、RAG パイプライン全体を自分のハードウェアで動かすことができます。GDPR 対応のアーキテクチャ、監査ログ、デプロイパターンについては、[業務データのためのローカル RAG](/power-local-llm/local-rag-for-private-business-data?lang=ja)を参照してください。',
           ],
         },
         howItWorks: {
           title: 'RAGシステムの仕組み',
           content: [
             '**典型的な RAG システムは 4 つの主段階を実行：取得、索引化、検索、生成。** 各段階は独立して調整可能です。',
+            'このパイプラインを自分の PDF とローカルモデルで動かす手順については、[自分の PDF でローカル RAG をステップバイステップで動かす](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja)を参照してください。',
           ],
           callouts: [
             { type: 'info', label: '検索がボトルネック', text: 'RAG の品質は 80%が検索に依存。優れたレトリバーと弱いモデル = 弱いレトリバーと GPT-4o より良い結果。索引化とチャンク化のチューニングに時間をかけてください。' },
@@ -1472,12 +1480,14 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**RAG很重要，因为它减少[幻觉](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh)并保持答案最新。** 纯LLM能够自信地在专业或最新主题上虚构细节。通过RAG，答案固定在你管理的文档中。',
             '对隐私和治理也至关重要。与其用敏感数据微调模型，不如将该数据保留在自己的存储中，并仅在查询时将相关片段传递给模型。模型对你的内容推理但永不吸收。',
+            '当您要检索的文档不能离开自己的基础设施时，整条 RAG 管线都可以在自己的硬件上运行。要查看符合 GDPR 的架构、审计日志和部署模式，请参阅[面向企业数据的本地 RAG](/power-local-llm/local-rag-for-private-business-data?lang=zh)。',
           ],
         },
         howItWorks: {
           title: 'RAG系统如何运作',
           content: [
             '**典型RAG系统执行4个主要阶段：取入、索引、检索、生成。** 每个阶段都可独立调优。',
+            '要查看在自己的 PDF 上用本地模型一步步运行该管线的完整流程，请参阅[在自己的 PDF 上一步步搭建本地 RAG](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh)。',
           ],
           callouts: [
             { type: 'info', label: '检索是瓶颈', text: 'RAG质量80%取决于检索。优秀的检索器配弱模型 = 劣质检索器配GPT-4o。花时间优化索引和分块。' },
