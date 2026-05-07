@@ -624,8 +624,12 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4 leading-tight">
             {article.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm text-text-secondary">
-            <time dateTime={article.dateModified ?? article.publishDate}>
+          <div className="flex items-center gap-4 text-sm text-text-secondary flex-wrap">
+            <time dateTime={article.dateModified ?? article.publishDate} className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold">
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
               {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {new Date((article.dateModified ?? article.publishDate) + 'T00:00:00Z').toLocaleDateString(LANGUAGE_TO_LOCALE[lang] ?? 'en-US', { month: 'long', year: 'numeric' })}
             </time>
             <span>·</span>

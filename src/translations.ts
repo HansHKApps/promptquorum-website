@@ -245,6 +245,16 @@ export const translations = {
     privacyFooterHome: "Home",
     privacyFooterFaq: "FAQ",
 
+    // Explore Free Guides Section
+    guidesTitle: "Explore Free Guides",
+    guidesDesc: "Deep dives into AI, prompting, and local LLMs",
+    guidesLocalLlms: "Local LLMs",
+    guidesLocalLlmsDesc: "How to run AI models on your own hardware",
+    guidesPromptEng: "Prompt Engineering",
+    guidesPromptEngDesc: "Techniques to optimize prompts for better answers",
+    guidesQuantization: "LLM Quantization",
+    guidesQuantizationDesc: "Compress models to run on consumer GPUs",
+
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Built with care for AI power users.",
   },
@@ -493,6 +503,16 @@ export const translations = {
     // Footer Nav
     privacyFooterHome: "Startseite",
     privacyFooterFaq: "FAQ",
+
+    // Explore Free Guides Section
+    guidesTitle: "Kostenlose Leitfäden entdecken",
+    guidesDesc: "Umfassende Einführungen zu KI, Prompts und lokalen LLMs",
+    guidesLocalLlms: "Lokale LLMs",
+    guidesLocalLlmsDesc: "So führen Sie KI-Modelle auf Ihrer eigenen Hardware aus",
+    guidesPromptEng: "Prompt Engineering",
+    guidesPromptEngDesc: "Techniken zur Optimierung von Prompts für bessere Antworten",
+    guidesQuantization: "LLM-Quantisierung",
+    guidesQuantizationDesc: "Komprimieren Sie Modelle zur Ausführung auf Consumer-GPUs",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Mit Sorgfalt entwickelt fuer KI-Power-User.",
@@ -743,6 +763,16 @@ export const translations = {
     privacyFooterHome: "Accueil",
     privacyFooterFaq: "FAQ",
 
+    // Explore Free Guides Section
+    guidesTitle: "Explorer les guides gratuits",
+    guidesDesc: "Explorations approfondies sur l'IA, les prompts et les LLMs locaux",
+    guidesLocalLlms: "LLMs locaux",
+    guidesLocalLlmsDesc: "Comment exécuter des modèles IA sur votre propre matériel",
+    guidesPromptEng: "Ingénierie des prompts",
+    guidesPromptEngDesc: "Techniques pour optimiser les prompts et obtenir de meilleures réponses",
+    guidesQuantization: "Quantification LLM",
+    guidesQuantizationDesc: "Compressez les modèles pour les exécuter sur des GPU grand public",
+
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Developpe avec soin pour les experts IA.",
   },
@@ -992,6 +1022,16 @@ export const translations = {
     privacyFooterHome: "ホーム",
     privacyFooterFaq: "FAQ",
 
+    // Explore Free Guides Section
+    guidesTitle: "無料ガイドを探索",
+    guidesDesc: "AI、プロンプト、ローカルLLMについての深い解説",
+    guidesLocalLlms: "ローカルLLM",
+    guidesLocalLlmsDesc: "独自のハードウェアでAIモデルを実行する方法",
+    guidesPromptEng: "プロンプトエンジニアリング",
+    guidesPromptEngDesc: "より良い回答を得るためのプロンプト最適化テクニック",
+    guidesQuantization: "LLM量子化",
+    guidesQuantizationDesc: "コンシューマーGPU上で実行するモデルを圧縮する",
+
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. AIパワーユーザー向けに丁寧に開発。",
   },
@@ -1240,6 +1280,16 @@ export const translations = {
     // Footer Nav
     privacyFooterHome: "主页",
     privacyFooterFaq: "常见问题",
+
+    // Explore Free Guides Section
+    guidesTitle: "探索免费指南",
+    guidesDesc: "关于AI、提示词和本地LLM的深度讲解",
+    guidesLocalLlms: "本地LLM",
+    guidesLocalLlmsDesc: "如何在自己的硬件上运行AI模型",
+    guidesPromptEng: "提示词工程",
+    guidesPromptEngDesc: "优化提示词以获得更好答案的技术",
+    guidesQuantization: "LLM量化",
+    guidesQuantizationDesc: "压缩模型以在消费级GPU上运行",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. 为AI高级用户精心打造。",
