@@ -103,6 +103,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Do AnythingLLM, PrivateGPT, and Open WebUI Compare in 2026?',
         content:
           'Tested on a 5,047-page corpus (research papers, contracts, a technical manual, internal wiki exports) using Llama 3.3 8B Q4_K_M as the chat model and each platform\'s default embedder. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (16 GB unified). Numbers are medians of three runs.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AnythingLLM had the lowest hallucination rate (6%) and best citation quality on a 5,000-page corpus; PrivateGPT had the lowest retrieval latency and cleanest offline posture; Open WebUI had the best multi-user and OAuth support for shared deployments.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pick AnythingLLM if you want the easiest setup and best answer accuracy for a personal document library (under 3,000 docs). Pick PrivateGPT if you need guaranteed offline operation with no cloud dependencies. Pick Open WebUI if multiple people need to share the same RAG system with separate accounts and access controls.',
+          },
+        ],
         columns: ['Feature', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
         rows: [
           {
