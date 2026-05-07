@@ -334,6 +334,7 @@ jobs:
           '**The single biggest determinant of false-positive rate is the system prompt.** A vague "review this code" prompt produces vague review comments; a specific prompt with severity thresholds and structured output produces actionable feedback.',
         items: [
           '**Structured output is non-negotiable.** Force JSON with a strict schema (`verdict`, `summary`, `comments[]`). Without it, the action spends 30% of its code parsing free-form output and the failure modes are subtle.',
+          'For the full guide on structured output enforcement across models, see [structured output and JSON mode](/prompt-engineering/structured-output-and-json-mode).',
           '**Severity thresholds belong in the prompt, not the action.** Tell the model what counts as `critical`, `high`, `medium`, `low`; tell it to filter low-severity findings unless explicitly asked. This is far more reliable than post-hoc filtering on a free-form severity field.',
           '**Anchor the prompt with examples.** A 1–2-shot prompt with a real diff and a real ideal-review JSON dramatically outperforms zero-shot for the same model and the same diff size.',
           '**Distinguish "review" from "comment" intent.** A reviewer comment ("consider extracting this to a helper") and a blocker ("this introduces a SQL injection") need different actions in CI. Tag them in the structured output and have the action block only on blockers.',
