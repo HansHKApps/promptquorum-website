@@ -91,6 +91,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AnythingLLM Desktop** — the UI + vector store + RAG orchestration. Ships LanceDB embedded, parses PDFs/DOCX/TXT/MD natively, talks to Ollama as its LLM provider.',
           '**nomic-embed-text-v1.5** — embedding model. 768-dim vectors, runs through Ollama at ~600 chunks/sec on a modern CPU. Replaces AnythingLLM\'s underpowered default.',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A local RAG system is four pieces — a runtime (Ollama), an answer model (Llama 3.3 8B), a UI plus vector store (AnythingLLM), and an embedding model (nomic-embed-text-v1.5) — wired together on one machine with no cloud calls.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Drop a PDF, ask a question, get a grounded answer with citations — fully offline. The four pieces split the work: Ollama runs the models, Llama 3.3 8B writes the answer, AnythingLLM handles the chunks and vectors, nomic-embed-text-v1.5 turns text into the vectors that make retrieval work. Total install: ~30 minutes; total cost: $0.',
+          },
+        ],
         callouts: [
           {
             type: 'note',
@@ -266,6 +276,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['Query type', 'Example', 'Healthy answer pattern', 'Failure pattern'],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A healthy local RAG answer quotes the source chunk verbatim for fact recall, synthesises across chunks for summary questions, and cites the specific chunk IDs it used — generic answers without quotes signal a retrieval problem, not a model problem.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'If the answer reads like "typically researchers use 100-500 participants" instead of "Smith et al. used 287 participants (Methods, p.4)", retrieval is broken and the model is winging it from training data. Fix retrieval first (chunk size, embedder, similarity threshold) before changing the answer model.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Use these three query patterns as your test set after every retrieval-config change. If fact-recall still misses but synthesis works, your chunks are too coarse. If synthesis misses but fact-recall works, your top-k is too low. The pattern of what fails tells you which knob to turn.',
+          },
+        ],
       },
       troubleshooting: {
         id: 'troubleshooting',
