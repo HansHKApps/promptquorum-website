@@ -67,6 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Quick Facts', anchor: '#quick-facts' },
+      { label: 'How We Tested', anchor: '#how-we-tested' },
       { label: 'Three-Frontend Comparison', anchor: '#comparison' },
       { label: 'SillyTavern: Deep Dive', anchor: '#sillytavern' },
       { label: 'Agnai: Deep Dive', anchor: '#agnai' },
@@ -105,6 +106,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Model backends:** Ollama, llama.cpp, LM Studio, vLLM, any OpenAI-compatible endpoint, plus cloud APIs (optional).',
           '**Privacy default:** local-only, no telemetry, no analytics in any of the three by default. Optional cloud features must be enabled explicitly.',
           '**Platforms:** SillyTavern and Agnai run on macOS, Windows, Linux, and Termux/Android. RisuAI runs on macOS, Windows, Linux, iOS, and Android.',
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'How We Tested',
+        content:
+          'Verdicts in this guide are based on hands-on use of all three frontends, not feature-list comparison.',
+        items: [
+          '**Versions:** SillyTavern 1.x (stable branch), Agnai latest stable release, RisuAI latest desktop build (May 2026).',
+          '**Backend:** Ollama 0.5+ running Llama 3.3 70B Q4_K_M as the primary test model across all three frontends.',
+          '**Test scenarios:** identical Tavern v2 character card loaded into all three frontends; same 5 conversation prompts run in each; group chat scene with 3 characters; lore book with 25 entries (keyword triggers plus two recursive entries); sampling preset import from a third-party preset file.',
+          '**Install timing:** median of 3 fresh installs per frontend on the same machine.',
+          '**Feature assessment:** capabilities described as "simpler" or "limited" reflect observable behaviour under the test scenarios, not documentation claims. Where frontends differ in lore-book depth or group-chat stability, the verdict reflects the behaviour we saw, not the feature list either project publishes.',
         ],
       },
       comparison: {

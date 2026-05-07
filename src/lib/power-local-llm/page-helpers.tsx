@@ -237,6 +237,28 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
         }
       : null)
 
+  const mdUrlRe = /\[.*?\]\((https?:\/\/[^)]+)\)/
+  const itemListSchemas = Object.values(article.sections)
+    .filter((s) => s.rows && s.rows.length > 0 && s.columns?.includes('Link'))
+    .map((s) => ({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: s.title ?? article.title,
+      itemListElement: s.rows!.map((row, i) => {
+        const urlMatch = (row['Link'] ?? '').match(mdUrlRe)
+        return {
+          '@type': 'ListItem',
+          position: i + 1,
+          item: {
+            '@type': 'SoftwareApplication',
+            name: (row['Tool'] ?? '').replace(/\*\*/g, '').trim(),
+            ...(urlMatch && { url: urlMatch[1] }),
+            description: row['Description'] ?? '',
+          },
+        }
+      }),
+    }))
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -247,6 +269,9 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {howToSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       )}
+      {itemListSchemas.map((schema, i) => (
+        <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <PowerLocalLLMPostClient slug={slug} lang={lang} />
     </>
   )
