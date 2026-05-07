@@ -18,6 +18,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   // Best Local LLM Models 2026
   'best-local-llms-2026':                 'best-local-llms-2026',
   'qwen-vs-llama-vs-mistral':             'qwen-vs-llama-vs-mistral',
+  'best-cpu-only-llm':                    'best-cpu-only-llm',
   'best-local-llms-for-coding':           'best-local-llms-for-coding',
   'best-local-llms-for-creative-writing': 'best-local-llms-for-creative-writing',
   'small-local-llm-models':              'small-local-llm-models',

@@ -24,6 +24,68 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       readTime: '14 min read',
       educationalLevel: 'Advanced',
       primaryTerm: 'LLM quantization and VRAM optimization',
+      quickAnswerTop: {
+        en: {
+          question: 'What is Q4_K_M quantization and which format should I use?',
+          answer: 'Q4_K_M is 4-bit quantization that reduces VRAM by ~70% with only 1–3% quality loss. Choose based on your VRAM: 6–8 GB → Q4_K_M (~4.5 GB for 7B models), 16 GB → Q5_K_M, 24+ GB → Q8_0.',
+          bullets: [
+            'Q4_K_M (4-bit) — best default, ~4.5 GB for 7B models, 1–3% quality loss',
+            'Q5_K_M (5-bit) — minimal loss, ~5.7 GB for 7B, recommended for 16+ GB VRAM',
+            'Q8_0 (8-bit) — negligible loss, ~7.7 GB for 7B, for maximum quality on high-end GPUs',
+            'Q3_K_S (3-bit) — extreme compression, ~3.3 GB for 7B, acceptable for 4–5 GB VRAM',
+            'GGUF format stores quantized weights for Ollama, LM Studio, and llama.cpp',
+          ],
+          updatedDate: '2026-05-06',
+        },
+        de: {
+          question: 'Was ist Q4_K_M-Quantisierung und welches Format sollte ich verwenden?',
+          answer: 'Q4_K_M ist 4-Bit-Quantisierung, die VRAM um ~70% reduziert mit nur 1–3% Qualitätsverlust. Wählen Sie basierend auf Ihrem VRAM: 6–8 GB → Q4_K_M (~4,5 GB für 7B-Modelle), 16 GB → Q5_K_M, 24+ GB → Q8_0.',
+          bullets: [
+            'Q4_K_M (4-Bit) — beste Standard, ~4,5 GB für 7B-Modelle, 1–3% Qualitätsverlust',
+            'Q5_K_M (5-Bit) — minimaler Verlust, ~5,7 GB für 7B, empfohlen für 16+ GB VRAM',
+            'Q8_0 (8-Bit) — vernachlässigbarer Verlust, ~7,7 GB für 7B, für maximale Qualität auf High-End-GPUs',
+            'Q3_K_S (3-Bit) — extreme Kompression, ~3,3 GB für 7B, akzeptabel für 4–5 GB VRAM',
+            'GGUF-Format speichert quantisierte Gewichte für Ollama, LM Studio und llama.cpp',
+          ],
+          updatedDate: '2026-05-06',
+        },
+        fr: {
+          question: 'Qu\'est-ce que la quantization Q4_K_M et quel format dois-je utiliser ?',
+          answer: 'Q4_K_M est une quantization 4-bit qui réduit la VRAM d\'environ 70% avec seulement 1–3% de perte de qualité. Choisissez en fonction de votre VRAM : 6–8 GB → Q4_K_M (~4,5 GB pour les modèles 7B), 16 GB → Q5_K_M, 24+ GB → Q8_0.',
+          bullets: [
+            'Q4_K_M (4-bit) — meilleur défaut, ~4,5 GB pour modèles 7B, perte 1–3%',
+            'Q5_K_M (5-bit) — perte minimale, ~5,7 GB pour 7B, recommandé pour 16+ GB VRAM',
+            'Q8_0 (8-bit) — perte négligeable, ~7,7 GB pour 7B, pour qualité maximale sur GPU haut de gamme',
+            'Q3_K_S (3-bit) — compression extrême, ~3,3 GB pour 7B, acceptable pour 4–5 GB VRAM',
+            'Format GGUF stocke les poids quantifiés pour Ollama, LM Studio et llama.cpp',
+          ],
+          updatedDate: '2026-05-06',
+        },
+        ja: {
+          question: 'Q4_K_M量子化とは何か、どの形式を使うべきか？',
+          answer: 'Q4_K_M は 4 ビット量子化で、VRAM を約 70% 削減し、品質低下はわずか 1～3% です。あなたの VRAM に基づいて選択してください：6～8 GB → Q4_K_M (7B モデルで約 4.5 GB)、16 GB → Q5_K_M、24+ GB → Q8_0。',
+          bullets: [
+            'Q4_K_M（4ビット）— 最良のデフォルト、7B モデルで約 4.5 GB、1～3% の品質低下',
+            'Q5_K_M（5ビット）— 最小限の低下、7B で約 5.7 GB、16GB 以上の VRAM に推奨',
+            'Q8_0（8ビット）— 無視できる低下、7B で約 7.7 GB、高級 GPU で最高品質',
+            'Q3_K_S（3ビット）— 極限圧縮、7B で約 3.3 GB、4～5 GB VRAM で許容可能',
+            'GGUF 形式は、Ollama、LM Studio、llama.cpp の量子化重みを保存します',
+          ],
+          updatedDate: '2026-05-06',
+        },
+        zh: {
+          question: 'Q4_K_M 量化是什么，我应该使用哪种格式？',
+          answer: 'Q4_K_M 是 4 位量化，将显存减少约 70%，质量损失仅为 1-3%。根据您的显存选择：6-8 GB → Q4_K_M（7B 模型约 4.5 GB），16 GB → Q5_K_M，24+ GB → Q8_0。',
+          bullets: [
+            'Q4_K_M（4位）— 最佳默认值，7B 模型约 4.5 GB，质量损失 1-3%',
+            'Q5_K_M（5位）— 最小损失，7B 约 5.7 GB，推荐用于 16+ GB 显存',
+            'Q8_0（8位）— 可忽略的损失，7B 约 7.7 GB，高端 GPU 上质量最高',
+            'Q3_K_S（3位）— 极度压缩，7B 约 3.3 GB，可用于 4-5 GB 显存',
+            'GGUF 格式为 Ollama、LM Studio 和 llama.cpp 存储量化权重',
+          ],
+          updatedDate: '2026-05-06',
+        },
+      },
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Is LLM Quantization?', anchor: '#what-is-llm-quantization' },

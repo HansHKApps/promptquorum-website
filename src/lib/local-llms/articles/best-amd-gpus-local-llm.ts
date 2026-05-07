@@ -97,6 +97,11 @@ schema: {
             '@type': 'Question',
             'name': 'What is the best AMD GPU for under $400?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'AMD RX 6800 XT (16GB, ~$220-300 used) is the best value AMD GPU under $400. It runs 13B models at Q4 smoothly and 7B models at Q8 comfortably via llama.cpp HIP backend.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run local LLMs on an AMD RX 6800M laptop GPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. The AMD RX 6800M (mobile variant, 12GB GDDR6) can run 13B models at Q4_K_M (~8 GB) or 7B models at Q8_0 (~7 GB). Use llama.cpp HIP backend on Linux or Windows. ROCm driver support for RX 6800M is solid on Ubuntu 22.04+ with Linux Kernel 6.2+. Windows HIP support is newer (less stable). Speed: ~8-12 tokens/sec on CPU-only fallback, ~30-40 tokens/sec with HIP acceleration on RX 6800M.' }
           }
         ]
       },

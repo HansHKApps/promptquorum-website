@@ -80,7 +80,7 @@ export const translations = {
     howItWorksMetaTitle: "How PromptQuorum Works: Optimize, Dispatch & Score 2026",
     howItWorksMetaDescription: "PromptQuorum's 4-stage pipeline optimizes your prompt, dispatches to 25+ AI models simultaneously, then runs consensus scoring for the best answer.",
     faqMetaTitle: "PromptQuorum FAQ: Multi-Model Prompts, Privacy & Pricing",
-    faqMetaDescription: "PromptQuorum FAQ: 26 answers on prompt optimization, multi-model consensus, 9 frameworks, local LLM support (Ollama, LM Studio), BYOM privacy and free tier",
+    faqMetaDescription: "PromptQuorum FAQ: How does multi-model consensus work? Is there a free tier? Does it support Ollama/LM Studio locally? Full answers to 28 questions on prompt optimization, frameworks, and pricing.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Guide: 80 Articles Across 9 Topics (2026)",
@@ -329,7 +329,7 @@ export const translations = {
     howItWorksMetaTitle: "Wie PromptQuorum funktioniert: 4-Stufen-Pipeline 2026",
     howItWorksMetaDescription: "PromptQuorums 4-Stufen-Pipeline optimiert Ihren Prompt, sendet ihn an 25+ KI-Modelle und führt Konsensscoring durch, um die beste Antwort zu finden.",
     faqMetaTitle: "PromptQuorum FAQ: Prompts, Datenschutz & Preismodell",
-    faqMetaDescription: "PromptQuorum FAQ: 26 Antworten zu Optimierung, Multi-Model-Consensus, 9 Frameworks, lokalem LLM-Support (Ollama, LM Studio), BYOM-Datenschutz und Zugang.",
+    faqMetaDescription: "PromptQuorum FAQ: Wie funktioniert Multi-Model-Consensus? Kostenlos? Ollama/LM Studio Support? Alle 28 Fragen beantwortet zu Prompt-Optimierung, Datenschutz und Preisen.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Guide: 80 Artikel in 9 Themenbereichen (2026)",
@@ -578,7 +578,7 @@ export const translations = {
     howItWorksMetaTitle: "Comment fonctionne PromptQuorum: Pipeline en 4 étapes",
     howItWorksMetaDescription: "Le pipeline en 4 étapes de PromptQuorum optimise votre prompt, l'envoie à 25+ modèles d'IA simultanément et exécute la notation du consensus.",
     faqMetaTitle: "PromptQuorum FAQ: Prompts, Confidentialité & Tarifs",
-    faqMetaDescription: "PromptQuorum FAQ: 26 réponses sur optimisation, consensus multi-modèles, 9 frameworks, support LLM local (Ollama, LM Studio), BYOM et accès gratuit.",
+    faqMetaDescription: "PromptQuorum FAQ: Comment fonctionne le consensus multi-modèles? Accès gratuit? Support Ollama/LM Studio? Toutes les 28 questions répondues sur optimisation, confidentialité et tarification.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Guide Prompt Engineering : 80 Articles en 9 Thématiques (2026)",
@@ -827,7 +827,7 @@ export const translations = {
     howItWorksMetaTitle: "PromptQuorumの仕組み: 4段階のAIパイプライン",
     howItWorksMetaDescription: "PromptQuorumの4段階パイプラインはプロンプトを最適化し、25+ のAIモデルに同時に送信し、コンセンサススコアリングを実行します。",
     faqMetaTitle: "PromptQuorum FAQ 2026年版: マルチモデル最適化、プライバシー & 完全ガイド",
-    faqMetaDescription: "PromptQuorum FAQ: よくある26個の質問に完全回答 - プロンプト最適化、マルチモデルコンセンサス、9つのフレームワーク、Ollama・LM Studioなどローカルモデル対応、BYOM型プライバシー、API連携、無料試用、日本語ドキュメント、カスタマーサポート。",
+    faqMetaDescription: "PromptQuorum FAQ: マルチモデルコンセンサスの仕組みは？無料プランはある？OllamaやLM Studioに対応？プロンプト最適化、フレームワーク、価格設定に関する28個の質問すべてに回答。",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "プロンプトエンジニアリングガイド：9テーマ80記事（2026年）",
@@ -1076,7 +1076,7 @@ export const translations = {
     howItWorksMetaTitle: "PromptQuorum如何工作2026: 4阶段AI工作流",
     howItWorksMetaDescription: "PromptQuorum 4阶段工作流：优化提示词，同时一键分发至25+ AI模型并行运行，再用共识评分自动筛选最佳答案。",
     faqMetaTitle: "PromptQuorum 常见问题 2026: 本地多模型优化、隐私保护、完整定价与技术支持",
-    faqMetaDescription: "PromptQuorum常见问题：涵盖26个关键问答 - 包括提示词优化、多模型共识评分、9个提示框架、Ollama本地模型部署、LM Studio支持、BYOM隐私设计、API接口集成、免费试用计划、完整中文文档、多语言用户界面、专业技术支持、企业解决方案、价格对比、安全保障、用户案例。",
+    faqMetaDescription: "PromptQuorum常见问题：多模型共识如何工作？有免费版本吗？支持Ollama和LM Studio本地模型吗？关于提示词优化、框架、定价的28个问题完全解答。",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt工程指南：9大主题80篇文章（2026）",
