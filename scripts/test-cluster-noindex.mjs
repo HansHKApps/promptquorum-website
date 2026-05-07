@@ -1,0 +1,226 @@
+#!/usr/bin/env node
+// Postbuild regression test for the /power-local-llm cluster noindex contract.
+//
+// History: commit 1d3f6479 introduced a path-conditional <meta name="robots"> in the
+// root layout that read x-pathname from a middleware-set header. Middleware does NOT
+// run during SSG prerender, so the layout fell back to the indexable robots string,
+// which got baked into static HTML and served from the edge cache. Multiple commits
+// (9d32a485, dabb5b75, ba55647b) shipped while this regression was masked.
+//
+// Architectural fix shipped alongside this script: layout no longer injects <meta
+// name="robots"> directly; the Next.js metadata API owns it. Site-wide default is
+// indexable; cluster pages override via generateMetadata in
+// src/lib/power-local-llm/page-helpers.tsx.
+//
+// This test boots `next start` and asserts:
+//   1. Every cluster URL emits exactly one <meta name="robots"> with noindex, follow.
+//   2. Every cluster URL emits exactly one <meta name="googlebot"> with noindex, follow.
+//   3. A representative non-cluster URL emits the indexable default.
+// Failing assertions exit 1 and break the build.
+
+import { spawn } from 'node:child_process'
+import { readFileSync, existsSync } from 'node:fs'
+import { setTimeout as sleep } from 'node:timers/promises'
+
+const PORT = process.env.NOINDEX_TEST_PORT || '3017'
+const HOST = `http://127.0.0.1:${PORT}`
+const READY_TIMEOUT_MS = 60_000
+const SLUGS_FILE = 'src/lib/power-local-llm/slugs.ts'
+const LOCALE_PREFIXES = ['', '/de', '/fr', '/ja', '/zh']
+const NON_CLUSTER_PROBES = ['/', '/local-llms/llm-quantization-explained']
+
+function readSlugs() {
+  const src = readFileSync(SLUGS_FILE, 'utf8')
+  // Lines like:   'slug-name': 'key-name',  (whitespace after colon is optional)
+  const re = /^\s+'([a-z0-9-]+)':\s*'[a-z0-9-]+',?\s*$/gm
+  const slugs = []
+  let m
+  while ((m = re.exec(src)) !== null) slugs.push(m[1])
+  if (slugs.length === 0) {
+    throw new Error(`Failed to parse slugs from ${SLUGS_FILE}`)
+  }
+  return slugs
+}
+
+async function waitForReady(url, deadline) {
+  while (Date.now() < deadline) {
+    try {
+      const res = await fetch(url, { method: 'HEAD' })
+      if (res.status < 500) return true
+    } catch {
+      // server not up yet
+    }
+    await sleep(500)
+  }
+  return false
+}
+
+function countMatches(html, regex) {
+  const matches = html.match(regex)
+  return matches ? matches.length : 0
+}
+
+function extractRobotsTags(html) {
+  const tags = []
+  const re = /<meta\s+name="(robots|googlebot)"\s+content="([^"]*)"[^>]*\/?>/gi
+  let m
+  while ((m = re.exec(html)) !== null) {
+    tags.push({ name: m[1].toLowerCase(), content: m[2] })
+  }
+  return tags
+}
+
+async function checkUrl(url, expect) {
+  const res = await fetch(url, { redirect: 'manual' })
+  if (res.status >= 400) {
+    return { ok: false, reason: `HTTP ${res.status}`, url }
+  }
+  const html = await res.text()
+  const tags = extractRobotsTags(html)
+  const robots = tags.filter((t) => t.name === 'robots')
+  const googlebot = tags.filter((t) => t.name === 'googlebot')
+
+  if (robots.length !== 1) {
+    return {
+      ok: false,
+      reason: `expected exactly 1 <meta name="robots">, found ${robots.length}: ${JSON.stringify(robots)}`,
+      url,
+    }
+  }
+  if (googlebot.length > 1) {
+    return {
+      ok: false,
+      reason: `expected at most 1 <meta name="googlebot">, found ${googlebot.length}: ${JSON.stringify(googlebot)}`,
+      url,
+    }
+  }
+
+  if (expect === 'noindex') {
+    if (!/noindex/i.test(robots[0].content)) {
+      return {
+        ok: false,
+        reason: `expected noindex, got robots="${robots[0].content}"`,
+        url,
+      }
+    }
+  } else if (expect === 'index') {
+    if (/noindex/i.test(robots[0].content)) {
+      return {
+        ok: false,
+        reason: `expected indexable, got robots="${robots[0].content}"`,
+        url,
+      }
+    }
+    // Indexable default should also carry the snippet/preview directives.
+    if (!/max-snippet/.test(robots[0].content)) {
+      return {
+        ok: false,
+        reason: `expected max-snippet directives in indexable default, got robots="${robots[0].content}"`,
+        url,
+      }
+    }
+  }
+
+  return { ok: true, url, robots: robots[0].content }
+}
+
+async function main() {
+  if (!existsSync('.next')) {
+    console.error('✗ .next directory missing — run `npm run build` first.')
+    process.exit(1)
+  }
+
+  const slugs = readSlugs()
+  console.log(`▶ Loaded ${slugs.length} slugs from ${SLUGS_FILE}`)
+
+  console.log(`▶ Starting next start on port ${PORT}…`)
+  const server = spawn('npx', ['next', 'start', '-p', PORT], {
+    stdio: ['ignore', 'pipe', 'pipe'],
+    env: { ...process.env, NODE_ENV: 'production' },
+  })
+
+  let serverOutput = ''
+  server.stdout.on('data', (d) => {
+    serverOutput += d.toString()
+  })
+  server.stderr.on('data', (d) => {
+    serverOutput += d.toString()
+  })
+
+  const cleanup = () => {
+    if (!server.killed) server.kill('SIGTERM')
+  }
+  process.on('exit', cleanup)
+  process.on('SIGINT', () => {
+    cleanup()
+    process.exit(130)
+  })
+
+  const ready = await waitForReady(HOST, Date.now() + READY_TIMEOUT_MS)
+  if (!ready) {
+    console.error(`✗ next start did not become ready within ${READY_TIMEOUT_MS}ms`)
+    console.error(serverOutput.slice(-2000))
+    cleanup()
+    process.exit(1)
+  }
+  console.log('✓ Server ready')
+
+  const failures = []
+  let passed = 0
+
+  // Cluster URLs — must all be noindex.
+  for (const locale of LOCALE_PREFIXES) {
+    for (const slug of slugs) {
+      const url = `${HOST}${locale}/power-local-llm/${slug}`
+      const result = await checkUrl(url, 'noindex')
+      if (result.ok) {
+        passed++
+      } else {
+        failures.push(result)
+      }
+    }
+  }
+
+  // Cluster hub pages — must also be noindex.
+  for (const locale of LOCALE_PREFIXES) {
+    const url = `${HOST}${locale}/power-local-llm`
+    const result = await checkUrl(url, 'noindex')
+    if (result.ok) {
+      passed++
+    } else {
+      failures.push(result)
+    }
+  }
+
+  // Non-cluster sanity: must serve the indexable default.
+  for (const path of NON_CLUSTER_PROBES) {
+    const url = `${HOST}${path}`
+    const result = await checkUrl(url, 'index')
+    if (result.ok) {
+      passed++
+    } else {
+      failures.push(result)
+    }
+  }
+
+  cleanup()
+
+  console.log('')
+  console.log(`▶ ${passed} URL(s) passed`)
+  if (failures.length > 0) {
+    console.error(`✗ ${failures.length} URL(s) failed`)
+    for (const f of failures) {
+      console.error(`  ${f.url}`)
+      console.error(`    ${f.reason}`)
+    }
+    process.exit(1)
+  }
+
+  console.log('✓ All cluster URLs serve noindex; non-cluster URLs serve indexable default.')
+  process.exit(0)
+}
+
+main().catch((err) => {
+  console.error('✗ test-cluster-noindex crashed:', err)
+  process.exit(1)
+})
