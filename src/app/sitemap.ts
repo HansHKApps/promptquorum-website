@@ -17,6 +17,16 @@ const NOINDEX_PAGES = new Set([
   '/prompt-engineering/the-single-step-prompt-method',
 ])
 
+// Path prefixes excluded from sitemap entirely (every URL beneath these paths is dropped).
+// Use for whole clusters that ship behind noindex pre-launch — e.g. Power Local LLM.
+const EXCLUDED_PATH_PREFIXES = [
+  '/power-local-llm',
+  '/de/power-local-llm',
+  '/fr/power-local-llm',
+  '/ja/power-local-llm',
+  '/zh/power-local-llm',
+]
+
 // Check if a content entry has real sections (not a stub)
 function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
   const en = contentMap[key]?.['en']
@@ -95,10 +105,16 @@ const LOCAL_LLM_PAGES: Page[] = [
 
 const PAGES: Page[] = [...STATIC_PAGES, ...PE_PAGES, ...BLOG_PAGES, ...FRAMEWORK_PAGES, ...LOCAL_LLM_PAGES]
 
+function isExcluded(path: string): boolean {
+  return EXCLUDED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
   PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
+    if (isExcluded(path)) return
+
     // Only EN pages as <loc> entries; all language variants via hreflang
     const enUrl = `${BASE}${path}`
     entries.push({

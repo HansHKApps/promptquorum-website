@@ -3,6 +3,8 @@ import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
+import { powerLLMContent } from '@/lib/power-local-llm/content'
+import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 import type { Language } from '@/lib/blog/blogContent'
 
 export const runtime = 'nodejs'
@@ -16,9 +18,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
-  // Try prompt-engineering first, then local-llms
+  // Cluster lookup order: prompt-engineering → local-llms → power-local-llm.
+  // First match wins. Watch for slug collisions across clusters when adding new articles.
   const peKey = PE_SLUG_TO_KEY[slug]
   const llmKey = LLM_SLUG_TO_KEY[slug]
+  const powerKey = POWER_LLM_SLUG_TO_KEY[slug]
 
   let article: { title?: string; intro?: string } | undefined
 
@@ -27,6 +31,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
     article = langContent[selectedLang] || langContent['en']
   } else if (llmKey && llmContent[llmKey]) {
     const langContent = llmContent[llmKey]
+    article = langContent[selectedLang] || langContent['en']
+  } else if (powerKey && powerLLMContent[powerKey]) {
+    const langContent = powerLLMContent[powerKey]
     article = langContent[selectedLang] || langContent['en']
   }
 
