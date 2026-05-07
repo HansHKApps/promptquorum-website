@@ -3,6 +3,9 @@
 // will render real content — the rest fall through to the "Coming Soon" template.
 
 export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
+  // Category 0 — Overview & Reference
+  'local-llm-software-directory-2026':           'local-llm-software-directory-2026',
+
   // Category 1 — Easiest Desktop Apps
   'lm-studio-vs-jan-vs-gpt4all-2026':            'lm-studio-vs-jan-vs-gpt4all-2026',
   'easiest-local-ai-app-windows-mac-linux':      'easiest-local-ai-app-windows-mac-linux',

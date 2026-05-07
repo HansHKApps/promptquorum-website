@@ -525,6 +525,17 @@ const HUB_THEMES: Array<{
   slugs: string[]
 }> = [
   {
+    id: 'overview-reference',
+    badge: 'Overview & Reference',
+    question: 'Overview & Reference: Where Do You Start in the Local LLM Ecosystem?',
+    description: 'A directory of every local-LLM tool worth knowing — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice/multimodal, mobile, and productivity plugins. The "what exists" map before you commit to a stack.',
+    colorBadge: 'bg-slate-50 text-slate-700 border-slate-200',
+    colorDot: 'bg-slate-400',
+    slugs: [
+      'local-llm-software-directory-2026',
+    ],
+  },
+  {
     id: 'easiest-desktop-apps',
     badge: 'Easiest Desktop Apps',
     question: 'Easiest Desktop Apps: Which Local AI App Should You Install First?',

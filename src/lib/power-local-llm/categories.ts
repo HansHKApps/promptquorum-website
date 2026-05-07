@@ -1,4 +1,4 @@
-// Power Local LLM — 7 category definitions used by the hub page.
+// Power Local LLM — 8 category definitions used by the hub page.
 // Each category lists its constituent article slugs (resolved against POWER_LLM_SLUG_TO_KEY).
 // Localized copy lives in the hub page itself; this file only defines structure + slug membership.
 
@@ -11,6 +11,15 @@ export interface PowerLLMCategory {
 }
 
 export const POWER_LLM_CATEGORIES: PowerLLMCategory[] = [
+  {
+    id: 'overview-reference',
+    slug: 'overview-reference',
+    titleEn: 'Overview & Reference',
+    descriptionEn: 'Cross-cutting indexes and "what exists" maps before you commit to a stack.',
+    articleSlugs: [
+      'local-llm-software-directory-2026',
+    ],
+  },
   {
     id: 'easiest-desktop-apps',
     slug: 'easiest-desktop-apps',
