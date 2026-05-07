@@ -10,6 +10,7 @@ import { article as a_autonomous_local_agents_actually_work } from './articles/a
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
+import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
 import { article as a_continue_dev_vs_cline_vs_aider_local } from './articles/continue-dev-vs-cline-vs-aider-local'
 import { article as a_local_ai_agents_business_workflows_eu_compliance } from './articles/local-ai-agents-business-workflows-eu-compliance'
@@ -30,6 +31,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-embedding-models-local-rag-2026':   a_best_embedding_models_local_rag_2026,
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
+  'best-local-models-tool-calling-2026':    a_best_local_models_tool_calling_2026,
   'chat-with-1000-pdfs-locally':            a_chat_with_1000_pdfs_locally,
   'continue-dev-vs-cline-vs-aider-local':   a_continue_dev_vs_cline_vs_aider_local,
   'local-ai-agents-business-workflows-eu-compliance': a_local_ai_agents_business_workflows_eu_compliance,
