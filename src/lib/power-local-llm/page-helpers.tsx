@@ -635,9 +635,12 @@ function PowerArticleCard({ slug, dot }: { slug: string; dot: string }) {
   const hasContent =
     !!powerLLMContent[slug]?.['en'] &&
     Object.keys(powerLLMContent[slug]?.['en']?.sections ?? {}).length > 0
-  const title = powerLLMContent[slug]?.['en']?.title ?? slugToTitle(slug)
+  const brief = POWER_LLM_BRIEFS[slug]
+  const linkable = hasContent || !!brief
+  const title =
+    powerLLMContent[slug]?.['en']?.title ?? brief?.title ?? slugToTitle(slug)
 
-  if (!hasContent) {
+  if (!linkable) {
     return (
       <div className="flex items-start gap-3 bg-card border border-primary/10 rounded-xl p-4 opacity-50 cursor-default select-none">
         <span className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-gray-300" />
