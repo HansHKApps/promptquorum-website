@@ -1128,4 +1128,285 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    zh: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-11-07',
+      theme: '最佳模型',
+      title: '2026 年最佳 CPU-only LLMs: 无需 GPU 运行 AI',
+      seoTitle: '2026 年最佳 CPU-only LLMs: Phi-4 Mini vs Gemma 3 vs Llama 3.2 (4–8 GB VRAM)',
+      intro: 'CPU-only 推理适用于搭载 8–32 GB RAM 的现代处理器上的 3–13B 模型。2026 年 5 月最佳的 CPU-only 模型是 Phi-4 Mini (3.8B、~2.3 GB、CPU 上 12 令牌/秒)、Gemma 3 2B (1.5 GB、15 令牌/秒) 和 Llama 3.2 3B (2 GB、10 令牌/秒)。通过启用 CPU-only 模式的 Ollama、LM Studio 或 llama.cpp 运行。',
+      metaDescription: '2026 年 5 月: 最佳 CPU-only LLMs 是 Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒)、Gemma 3 2B (1.5 GB)、Llama 3.2 3B (2 GB)。无需 GPU。在 8–32 GB RAM 上运行。',
+      publishDate: '2026-05-07',
+      dateModified: '2026-05-07',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral 7B Q4'],
+      current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
+      leadAnswerBlock: '**CPU-only 推理对现代处理器上的 3–13B 模型有效。最佳选择: Phi-4 Mini (3.8B、2.3 GB、CPU 上 12 令牌/秒) 用于一般聊天、Gemma 3 2B (1.5 GB、最快) 用于时间敏感任务、Llama 3.2 3B (2 GB、平衡) 用于质量。使用 Ollama 或 llama.cpp 的 CPU 模式。CPU 推理比 GPU 慢 10–30 倍，但使用零专用视频 VRAM — 仅需系统 RAM。**',
+      audience: '拥有旧硬件、树莓派用户和寻求实用本地 LLM 推理但无专用 GPU 的用户。',
+      readTime: '阅读约8分钟',
+      educationalLevel: '初级',
+      primaryTerm: 'CPU-only LLM 推理',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: 'CPU 可以运行 LLM 吗？', anchor: '#can-cpus-run-llms' },
+        { label: '2026 年最佳 CPU-only 模型', anchor: '#best-models' },
+        { label: '速度: CPU vs GPU', anchor: '#speed-comparison' },
+        { label: '按模型列出的 RAM 要求', anchor: '#ram-requirements' },
+        { label: '如何运行 CPU-only 模式', anchor: '#how-to-run' },
+        { label: 'CPU 推理的优化技巧', anchor: '#optimization' },
+        { label: '何时使用 CPU vs GPU', anchor: '#when-to-use' },
+        { label: '常见问题', anchor: '#faq' },
+        { label: '相关阅读', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'CPU-only 推理对搭载 8–32 GB RAM 的现代处理器上的 3–13B 模型有效。',
+            '最佳 CPU 模型: Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒)、Gemma 3 2B (1.5 GB、15 令牌/秒)、Llama 3.2 3B (2 GB、10 令牌/秒)。',
+            'CPU 推理比 GPU 慢 10–30 倍，但使用零专用 VRAM。',
+            '在 Ollama 或 llama.cpp 中使用简单的命令行标志启用 CPU-only 模式。',
+            'CPU 推理对生产 API (无 GPU 开销)、边缘设备和成本受限环境最理想。',
+          ],
+        },
+        canCpusRun: {
+          id: 'can-cpus-run-llms',
+          title: 'CPU 可以运行 LLM 吗？',
+          content: [
+            '**是的，现代 CPU (Intel i7-10 代+、AMD Ryzen 5000+、Apple M 系列) 可以以 8–15 令牌/秒的速度运行 3–13B 模型。** 这比 GPU 慢 10–30 倍，但不需要专用 VRAM。具有足够系统 RAM (8–32 GB) 的 CPU 可以运行需要 $300+ GPU 的模型。',
+            'CPU 推理用可访问性换取速度: 零 GPU 开销、完美的稳定性、无驱动程序问题。对于临时用例 (每秒回答几个请求的聊天机器人、离线文档处理)，CPU-only 很实用。',
+            '现代 CPU 具有加速矩阵数学的 AVX-512 或 NEON/SVE 向量指令。llama.cpp 和 Ollama 等工具自动使用这些指令，使 CPU 推理比朴素实现快得多。',
+          ],
+        },
+        bestModels: {
+          id: 'best-models',
+          title: '2026 年最佳 CPU-only 模型',
+          content: '下表按 CPU-only 模式下 Intel i7-12700 (12 核、AVX-512) 上的性能对模型进行排名:',
+          rows: [
+            { '模型': 'Phi-4 Mini', '参数': '3.8B', 'GGUF 大小': '~2.3 GB', 'RAM 需求': '4 GB', 'CPU 速度': '12 令牌/秒', '最适合': '一般聊天、代码协助' },
+            { '模型': 'Gemma 3 2B', '参数': '2B', 'GGUF 大小': '~1.5 GB', 'RAM 需求': '3 GB', 'CPU 速度': '15 令牌/秒', '最适合': '快速响应、低 VRAM' },
+            { '模型': 'Llama 3.2 3B', '参数': '3B', 'GGUF 大小': '~2 GB', 'RAM 需求': '3.5 GB', 'CPU 速度': '10 令牌/秒', '最适合': '质量/速度平衡' },
+            { '模型': 'Mistral 7B Q4', '参数': '7B', 'GGUF 大小': '~4.5 GB', 'RAM 需求': '6 GB', 'CPU 速度': '5 令牌/秒', '最适合': '更高质量、16+ GB RAM' },
+            { '模型': 'Llama 3.1 8B Q4', '参数': '8B', 'GGUF 大小': '~5 GB', 'RAM 需求': '7 GB', 'CPU 速度': '4 令牌/秒', '最适合': '编码、逻辑任务' },
+          ],
+          columns: ['模型', '参数', 'GGUF 大小', 'RAM 需求', 'CPU 速度', '最适合'],
+        },
+        speedComparison: {
+          id: 'speed-comparison',
+          title: '速度: CPU vs GPU',
+          content: '速度因硬件而异。这些基准来自运行 Ollama 或 llama.cpp 的标准 2026 硬件:',
+          rows: [
+            { '硬件': 'Intel i7-12700 (CPU)', '模型': 'Phi-4 Mini 3.8B', '速度': '12 令牌/秒', '备注': '启用了 AVX-512' },
+            { '硬件': 'AMD Ryzen 7 5700X (CPU)', '模型': 'Phi-4 Mini 3.8B', '速度': '9 令牌/秒', '备注': '仅限旧版 AVX2' },
+            { '硬件': 'Apple M3 (CPU)', '模型': 'Phi-4 Mini 3.8B', '速度': '14 令牌/秒', '备注': '统一内存优势' },
+            { '硬件': 'RTX 3060 (GPU、12 GB)', '模型': 'Phi-4 Mini 3.8B', '速度': '80 令牌/秒', '备注': 'GPU 快 6.7 倍' },
+            { '硬件': 'RTX 4090 (GPU、24 GB)', '模型': 'Llama 3.1 8B Q4', '速度': '120 令牌/秒', '备注': 'GPU 比 CPU 快 30 倍' },
+          ],
+          columns: ['硬件', '模型', '速度', '备注'],
+        },
+        ramRequirements: {
+          id: 'ram-requirements',
+          title: '按模型列出的 RAM 要求',
+          content: '**经验法则: GGUF 大小 + 500 MB 开销 = 最少 RAM 需求。** 2 GB GGUF 模型需要 2.5–3 GB 可用系统 RAM:',
+          rows: [
+            { '模型': 'Gemma 3 2B', 'GGUF 大小': '~1.5 GB', '最小 RAM': '2–2.5 GB', '舒适': '4 GB', '上下文长度': '8K' },
+            { '模型': 'Phi-4 Mini 3.8B', 'GGUF 大小': '~2.3 GB', '最小 RAM': '3 GB', '舒适': '6 GB', '上下文长度': '4K' },
+            { '模型': 'Llama 3.2 3B', 'GGUF 大小': '~2 GB', '最小 RAM': '2.5–3 GB', '舒适': '6 GB', '上下文长度': '8K' },
+            { '模型': 'Mistral 7B Q4', 'GGUF 大小': '~4.5 GB', '最小 RAM': '5 GB', '舒适': '8 GB', '上下文长度': '32K' },
+            { '模型': 'Llama 3.1 8B Q4', 'GGUF 大小': '~5 GB', '最小 RAM': '6 GB', '舒适': '12 GB', '上下文长度': '128K' },
+          ],
+          columns: ['模型', 'GGUF 大小', '最小 RAM', '舒适', '上下文长度'],
+        },
+        howToRun: {
+          id: 'how-to-run',
+          title: '如何运行 CPU-only 模式',
+          content: '**Ollama (最简单):** 只需运行 `ollama run phi:mini`。Ollama 在没有 NVIDIA/AMD GPU 的系统上自动检测 CPU-only 并使用系统 RAM。**LM Studio:** 打开设置 → 在 GPU 下选择"无"以强制 CPU 模式。**Llama.cpp:** 使用标志 `--n-gpu-layers 0` 禁用 GPU 卸载。',
+          codeBlock: 'ollama run phi:mini\n# Ollama 自动检测 CPU-only 系统',
+          codeLanguage: 'bash',
+        },
+        optimization: {
+          id: 'optimization',
+          title: 'CPU 推理的优化技巧',
+          content: '从 CPU 推理中获得最大性能:',
+          items: [
+            '**使用 Q4_K_M 量化** — 将 GGUF 大小减少 ~70%、质量损失最少、由于缓存行为改善，速度提升 10–20%。',
+            '**减少上下文窗口** — 更长的上下文 = 更慢的推理。使用 `--context 2048` 将上下文限制为 2K 令牌。',
+            '**启用多线程** — Ollama 和 llama.cpp 自动检测 CPU 核心数。用 `nproc` 验证匹配。',
+            '**使用 AVX-512 或 ARM NEON** — 现代 Intel/AMD/ARM CPU 有向量指令。检查 CPU 标志: `cat /proc/cpuinfo | grep avx512` (Linux) 或 Apple 关于 → 系统报告 (Mac)。',
+            '**批大小 = 1** — CPU 最适合单序列推理。不要在 CPU 上尝试多批。',
+            '**将线程固定到核心** — 在 Linux 上，使用 `numactl --cpunodebind=0 ollama run phi:mini` 避免核心切换开销。',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: '何时使用 CPU vs GPU',
+          content: '',
+          rows: [
+            { '用例': '实时聊天 (延迟 < 1 秒)', 'CPU': '❌ 太慢 (12 令牌/秒 = 60 令牌 5 秒)', 'GPU': '✅ 80+ 令牌/秒' },
+            { '用例': '批量处理 (文档、日志)', 'CPU': '✅ 很好 (速度无关)', 'GPU': '⚠️ 过度' },
+            { '用例': '生产 API (成本受限)', 'CPU': '✅ $0 硬件成本', 'GPU': '⚠️ $200+ GPU + 电力' },
+            { '用例': '边缘设备 (树莓派)', 'CPU': '✅ 无替代方案', 'GPU': '❌ GPU 选项有限' },
+            { '用例': '开发 / 本地测试', 'CPU': '✅ 低功耗、更静音', 'GPU': '⚠️ 过度' },
+            { '用例': 'LLM 微调', 'CPU': '❌ 太慢 (小时 → 天)', 'GPU': '✅ 10–30× 加速' },
+          ],
+          columns: ['用例', 'CPU', 'GPU'],
+        },
+        faq: {
+          id: 'faq',
+          title: '常见问题',
+          faqs: [
+            {
+              q: 'CPU-only 推理与 GPU 相比有多慢？',
+              a: 'CPU: 现代处理器上 8–15 令牌/秒。GPU (RTX 3060): 80 令牌/秒。GPU (RTX 4090): 120+ 令牌/秒。CPU 慢 10–30 倍，但需要 $0 GPU 投资。',
+            },
+            {
+              q: '在 CPU 上生成连贯输出的最小模型是什么？',
+              a: 'Gemma 3 2B (1.5 GB) 生成合理的回应。更小的质量下降。在 8 GB RAM 上实现最佳质量，使用 Phi-4 Mini (3.8B) 或 Llama 3.2 3B (2 GB)。',
+            },
+            {
+              q: '我可以在 CPU 上运行 13B 模型吗？',
+              a: '是的，使用 Q4_K_M 量化，13B 模型是 ~6.5 GB。需要 8–12 GB 系统 RAM。速度: ~2–3 令牌/秒。对于交互使用很不舒服，但对批处理有效。',
+            },
+            {
+              q: 'CPU 推理是否使用 GPU 呢？',
+              a: '否。Ollama/llama.cpp 中的 CPU-only 模式明确禁用 GPU 使用并仅使用系统 RAM。',
+            },
+            {
+              q: 'CPU-only 推理稳定吗？',
+              a: '是的，比 GPU 更稳定。无驱动程序崩溃、无 GPU 内存错误。唯一的风险是系统 RAM 饱和，通过模型选择控制。',
+            },
+            {
+              q: '我需要为 Apple Silicon CPU 调整设置吗？',
+              a: '否。Ollama 自动检测 M1/M2/M3/M4 并有效使用统一内存。Apple Silicon 由于内存架构，速度快 ~10–20%，相当于 Intel CPU。',
+            },
+            {
+              q: 'CPU-only LLM 是否适合中文使用？',
+              a: '是的。Phi-4 Mini 和 Llama 3.2 3B 都支持中文。对于中文特定优化，Qwen2.5 系列 (开源) 在中文语言任务上表现出色，而且可以在 CPU 上运行。',
+            },
+            {
+              q: '旧笔记本电脑 (8 GB RAM) 可以运行 CPU-only 推理吗？',
+              a: '是的。Gemma 3 2B (1.5 GB) 在 8 GB RAM 上有效运行。预期 3–5 令轿/秒用于批处理或轻量级聊天机器人。',
+            },
+            {
+              q: '我可以同时在 CPU 上运行多个模型吗？',
+              a: '如果 RAM 允许，技术上可以，但不切实际。多模型导致内存争争，两者都变慢。建议一次运行 1 个模型。',
+            },
+            {
+              q: 'CPU 推理中的安全风险是什么？',
+              a: 'CPU-only 比 GPU 更安全。无云传输 = 数据保持本地。但要确保物理机器安全和操作系统更新，敏感数据可能以未加密方式保留。',
+            },
+            {
+              q: 'Ollama vs llama.cpp: CPU 推理速度有区别吗？',
+              a: '差异很小。两者都使用相同的核心 CPU 优化 (AVX-512)。轻微差异来自线程管理实现 (~2–5%)。尝试默认的 Ollama。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=zh) — 本地 LLM 推理硬件权衡的深入探讨',
+            '[我需要多少 VRAM？](/local-llms/how-much-vram-do-i-need?lang=zh) — 每个模型大小和量化级别的 VRAM 计算器',
+            '[LLM 量化讲解](/local-llms/llm-quantization-explained?lang=zh) — 掌握 Q4_K_M、Q5_K_M，何时使用每一个',
+            '[最佳初级本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh) — 第一个本地 LLM 的分步指南',
+            '[Ollama 命令指南](/local-llms/ollama-command-guide?lang=zh) — 管理 CPU/GPU 模式、多 GPU 和卸载',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'CPU 可以运行 LLM 吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的。现代 CPU (Intel i7-10 代+、AMD Ryzen 5000+、Apple M 系列) 可以以 8–15 令牌/秒的速度运行 3–13B 模型。这比 GPU 慢 10–30 倍，但不需要专用 VRAM。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '最好的 CPU-only LLM 是什么？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒) 总体最好。速度: Gemma 3 2B (1.5 GB、15 令牌/秒)。平衡: Llama 3.2 3B (2 GB、10 令牌/秒)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU-only 推理需要多少 RAM？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '使用规则: GGUF 文件大小 + 500 MB 开销。Phi-4 Mini (2.3 GB) 需要 3 GB RAM。Gemma 3 2B (1.5 GB) 需要 2 GB RAM。Mistral 7B Q4 (4.5 GB) 需要 5 GB RAM。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '如何启用 CPU-only 模式？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '在 Ollama 中，只需运行: ollama run phi:mini。Ollama 自动检测 CPU-only 系统。在 llama.cpp 中使用 --n-gpu-layers 0。在 LM Studio 中，在设置下将 GPU 设置为无。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 推理对生产实用吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的，如果你不需要实时延迟。批处理、异步 API 和离线工作流在 CPU 上都能很好地工作。对于交互式聊天 (延迟 < 1 秒)，使用 GPU。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU-only 推理与 GPU 相比有多慢？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'CPU: 现代处理器上 8–15 令牌/秒。GPU (RTX 3060): 80 令牌/秒。GPU (RTX 4090): 120+ 令牌/秒。CPU 慢 10–30 倍，但需要 $0 GPU 投资。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '在 CPU 上生成连贯输出的最小模型是什么？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Gemma 3 2B (1.5 GB) 生成合理的回应。更小的质量下降。在 8 GB RAM 上实现最佳质量，使用 Phi-4 Mini (3.8B) 或 Llama 3.2 3B (2 GB)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '我可以在 CPU 上运行 13B 模型吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的，使用 Q4_K_M 量化，13B 模型是 ~6.5 GB。需要 8–12 GB 系统 RAM。速度: ~2–3 令牌/秒。对于交互使用很不舒服，但对批处理有效。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 推理是否使用 GPU 呢？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '否。Ollama/llama.cpp 中的 CPU-only 模式明确禁用 GPU 使用并仅使用系统 RAM。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU-only 推理稳定吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '是的，比 GPU 更稳定。无驱动程序崩溃、无 GPU 内存错误。唯一的风险是系统 RAM 饱和，通过模型选择控制。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '我需要为 Apple Silicon CPU 调整设置吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '否。Ollama 自动检测 M1/M2/M3/M4 并有效使用统一内存。Apple Silicon 由于内存架构，速度快 ~10–20%，相当于 Intel CPU。',
+            },
+          },
+        ],
+      },
+    },
 };
