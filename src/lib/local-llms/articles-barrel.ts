@@ -17,6 +17,7 @@ import { article as a_local_llm_security_privacy_checklist } from "./articles/lo
 import { article as a_local_llm_limitations } from "./articles/local-llm-limitations";
 import { article as a_best_local_llms_2026 } from "./articles/best-local-llms-2026";
 import { article as a_qwen_vs_llama_vs_mistral } from "./articles/qwen-vs-llama-vs-mistral";
+import { article as a_best_cpu_only_llm } from "./articles/best-cpu-only-llm";
 import { article as a_best_local_llms_for_coding } from "./articles/best-local-llms-for-coding";
 import { article as a_best_local_llms_for_creative_writing } from "./articles/best-local-llms-for-creative-writing";
 import { article as a_small_local_llm_models } from "./articles/small-local-llm-models";
@@ -104,6 +105,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "local-llm-limitations": a_local_llm_limitations,
   "best-local-llms-2026": a_best_local_llms_2026,
   "qwen-vs-llama-vs-mistral": a_qwen_vs_llama_vs_mistral,
+  "best-cpu-only-llm": a_best_cpu_only_llm,
   "best-local-llms-for-coding": a_best_local_llms_for_coding,
   "best-local-llms-for-creative-writing": a_best_local_llms_for_creative_writing,
   "small-local-llm-models": a_small_local_llm_models,
