@@ -507,6 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Embedding Models for Local RAG in 2026](/power-local-llm/best-embedding-models-local-rag-2026) — embedder choice is the single most consequential decision before indexing 10,000 documents.',
           '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — natural escalation when personal-scale RAG meets enterprise compliance requirements.',
           '[Build Local RAG on Your PDFs in 30 Minutes (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — the entry-level setup before you hit the scaling cliff.',
+          '[RAG Explained: How to Ground AI Answers in Real Data (2026)](/prompt-engineering/rag-explained) — concept authority on what RAG is and why each retrieval component matters.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — hardware sizing reference for 10,000+ document corpora.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library for the cluster.',
         ],
