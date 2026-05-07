@@ -7,12 +7,13 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    title: 'Local RAG for Business Data: GDPR-Compliant AI for Sensitive Documents',
-    seoTitle: 'GDPR-Compliant Local RAG: Architecture for Sensitive Documents',
+    title: 'Local RAG for Business Data: GDPR-Compliant AI for Sensitive Documents (2026)',
+    seoTitle: 'GDPR-Compliant Local RAG for Sensitive Documents (2026)',
     intro:
       'Legal, medical, and financial teams face the same problem: the documents most worth searching with AI are exactly the ones that cannot leave the building. This is the architecture, control set, and deployment-pattern decision matrix for self-hosted RAG that meets GDPR, the EU AI Act, HIPAA, and German Datenschutz expectations — written for the compliance officer who needs to send one document to an IT team and have them know what to build.',
     metaDescription:

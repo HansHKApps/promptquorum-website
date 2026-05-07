@@ -199,8 +199,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       flightTest: {
         id: 'flight-test',
         title: 'The 14-Hour Flight Test: What Actually Happened',
-        content:
+        content: [
           '**The setup was tested on a transpacific flight in March 2026 — 14 hours, no Wi-Fi (purchased airline pass failed at gate-out and never came back).** What follows is what worked, what almost broke, and what would have stopped the trip dead without preparation.',
+          'Output quality on a local model is downstream of how you prompt it. For structured prompting techniques that improve code generation on any local model, see [Write Better Code With AI](/prompt-engineering/write-better-code-with-ai).',
+        ],
         items: [
           '**Hour 1 — Pulled out laptop, opened a Next.js project I had cloned the night before.** Continue.dev was already pointed at Ollama on `localhost:11434`. Hit Cmd+I on a function I wanted to refactor. Diff appeared in 2 seconds. Accepted. The model was Qwen3-Coder 30B Q4_K_M loaded in memory; it had been since I packed.',
           '**Hour 3 — Needed to add a new dependency: `@tanstack/react-query`.** Ran `npm install`. Verdaccio served it from local cache (I had run `npm install` once at home as a smoke test). Total elapsed: 4 seconds. No network calls observed in `tcpdump` (yes, I checked — it was that kind of flight).',
