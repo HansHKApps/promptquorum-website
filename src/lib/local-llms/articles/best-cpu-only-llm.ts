@@ -566,4 +566,285 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    fr: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-11-07',
+      theme: 'Meilleurs Modèles',
+      title: 'Meilleurs LLMs CPU-only 2026: Exécutez l\'IA sans GPU',
+      seoTitle: 'Meilleurs LLMs CPU-only 2026: Phi-4 Mini vs Gemma 3 vs Llama 3.2 (4–8 GB RAM)',
+      intro: 'L\'inférence CPU-only est pratique pour les modèles 3–13B sur processeurs modernes avec 8–32 GB de RAM. Les meilleurs modèles CPU-only en mai 2026 sont Phi-4 Mini (3.8B, ~2.3 GB, 12 tokens/sec sur CPU), Gemma 3 2B (1.5 GB, 15 tokens/sec), et Llama 3.2 3B (2 GB, 10 tokens/sec). Exécutez via Ollama, LM Studio, ou llama.cpp avec le mode CPU-only activé.',
+      metaDescription: 'Mai 2026: Meilleurs LLMs CPU-only: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec), Gemma 3 2B (1.5 GB), Llama 3.2 3B (2 GB). Aucun GPU requis. Exécutez sur 8–32 GB RAM.',
+      publishDate: '2026-05-07',
+      dateModified: '2026-05-07',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral 7B Q4'],
+      current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
+      leadAnswerBlock: '**L\'inférence CPU-only fonctionne bien pour les modèles 3–13B sur processeurs modernes. Meilleurs choix: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec sur CPU) pour chat général, Gemma 3 2B (1.5 GB, plus rapide) pour tâches sensibles au temps, et Llama 3.2 3B (2 GB, équilibré) pour la qualité. Utilisez Ollama ou llama.cpp avec mode CPU. L\'inférence CPU est 10–30× plus lente que GPU mais utilise zéro VRAM vidéo dédié — juste RAM système.**',
+      audience: 'Utilisateurs avec matériel ancien, utilisateurs Raspberry Pi, et ceux sans GPUs dédiés cherchant l\'inférence LLM locale pratique.',
+      readTime: '8 min de lecture',
+      educationalLevel: 'Débutant',
+      primaryTerm: 'Inférence LLM CPU-only',
+      toc: [
+        { label: 'Points Clés', anchor: '#key-takeaways' },
+        { label: 'Les CPUs Peuvent-Ils Exécuter des LLMs?', anchor: '#can-cpus-run-llms' },
+        { label: 'Meilleurs Modèles CPU-only 2026', anchor: '#best-models' },
+        { label: 'Vitesse: CPU vs GPU', anchor: '#speed-comparison' },
+        { label: 'Exigences RAM par Modèle', anchor: '#ram-requirements' },
+        { label: 'Comment Exécuter le Mode CPU-only', anchor: '#how-to-run' },
+        { label: 'Conseils d\'Optimisation pour l\'Inférence CPU', anchor: '#optimization' },
+        { label: 'Quand Utiliser CPU vs GPU', anchor: '#when-to-use' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Lectures Connexes', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'L\'inférence CPU-only fonctionne bien pour les modèles 3–13B sur processeurs modernes avec 8–32 GB RAM.',
+            'Meilleurs modèles CPU: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec), Gemma 3 2B (1.5 GB, 15 tokens/sec), Llama 3.2 3B (2 GB, 10 tokens/sec).',
+            'L\'inférence CPU est 10–30× plus lente que GPU mais utilise zéro VRAM dédié.',
+            'Activez le mode CPU-only dans Ollama ou llama.cpp avec un simple flag en ligne de commande.',
+            'L\'inférence CPU est idéale pour les APIs production (pas d\'overhead GPU), appareils edge, et environnements limités en coût.',
+          ],
+        },
+        canCpusRun: {
+          id: 'can-cpus-run-llms',
+          title: 'Les CPUs Peuvent-Ils Exécuter des LLMs?',
+          content: [
+            '**Oui, les CPUs modernes (Intel i7-10e gén+, AMD Ryzen 5000+, Apple M-series) peuvent exécuter des modèles 3–13B à 8–15 tokens par seconde.** C\'est 10–30× plus lent que GPU, mais ne nécessite pas de VRAM dédié. Un CPU avec assez de RAM système (8–32 GB) peut exécuter des modèles qui nécessiteraient un GPU à $300+.',
+            'L\'inférence CPU échange la vitesse pour l\'accessibilité: zéro overhead GPU, stabilité parfaite, aucun problème de pilote. Pour les cas d\'usage occasionnels (chatbots répondant à quelques requêtes/seconde, traitement de documents hors ligne), CPU-only est pratique.',
+            'Les CPUs modernes ont des instructions vectorielles AVX-512 ou NEON/SVE qui accélèrent les opérations matricielles. Des outils comme llama.cpp et Ollama les utilisent automatiquement, rendant l\'inférence CPU beaucoup plus rapide que les implémentations naïves.',
+          ],
+        },
+        bestModels: {
+          id: 'best-models',
+          title: 'Meilleurs Modèles CPU-only 2026',
+          content: 'Le tableau ci-dessous classe les modèles par performance sur Intel i7-12700 (12-core, AVX-512) avec mode CPU-only:',
+          rows: [
+            { 'Modèle': 'Phi-4 Mini', 'Paramètres': '3.8B', 'Taille GGUF': '~2.3 GB', 'RAM Requise': '4 GB', 'Vitesse CPU': '12 tokens/sec', 'Meilleur Pour': 'Chat général, assistance code' },
+            { 'Modèle': 'Gemma 3 2B', 'Paramètres': '2B', 'Taille GGUF': '~1.5 GB', 'RAM Requise': '3 GB', 'Vitesse CPU': '15 tokens/sec', 'Meilleur Pour': 'Réponses rapides, VRAM faible' },
+            { 'Modèle': 'Llama 3.2 3B', 'Paramètres': '3B', 'Taille GGUF': '~2 GB', 'RAM Requise': '3.5 GB', 'Vitesse CPU': '10 tokens/sec', 'Meilleur Pour': 'Équilibre qualité/vitesse' },
+            { 'Modèle': 'Mistral 7B Q4', 'Paramètres': '7B', 'Taille GGUF': '~4.5 GB', 'RAM Requise': '6 GB', 'Vitesse CPU': '5 tokens/sec', 'Meilleur Pour': 'Meilleure qualité, 16+ GB RAM' },
+            { 'Modèle': 'Llama 3.1 8B Q4', 'Paramètres': '8B', 'Taille GGUF': '~5 GB', 'RAM Requise': '7 GB', 'Vitesse CPU': '4 tokens/sec', 'Meilleur Pour': 'Codage, tâches logiques' },
+          ],
+          columns: ['Modèle', 'Paramètres', 'Taille GGUF', 'RAM Requise', 'Vitesse CPU', 'Meilleur Pour'],
+        },
+        speedComparison: {
+          id: 'speed-comparison',
+          title: 'Vitesse: CPU vs GPU',
+          content: 'La vitesse varie selon le matériel. Ces benchmarks sont sur matériel standard 2026 exécuté via Ollama ou llama.cpp:',
+          rows: [
+            { 'Matériel': 'Intel i7-12700 (CPU)', 'Modèle': 'Phi-4 Mini 3.8B', 'Vitesse': '12 tokens/sec', 'Notes': 'AVX-512 activé' },
+            { 'Matériel': 'AMD Ryzen 7 5700X (CPU)', 'Modèle': 'Phi-4 Mini 3.8B', 'Vitesse': '9 tokens/sec', 'Notes': 'Ancien AVX2 seulement' },
+            { 'Matériel': 'Apple M3 (CPU)', 'Modèle': 'Phi-4 Mini 3.8B', 'Vitesse': '14 tokens/sec', 'Notes': 'Avantage mémoire unifié' },
+            { 'Matériel': 'RTX 3060 (GPU, 12 GB)', 'Modèle': 'Phi-4 Mini 3.8B', 'Vitesse': '80 tokens/sec', 'Notes': 'GPU 6.7× plus rapide' },
+            { 'Matériel': 'RTX 4090 (GPU, 24 GB)', 'Modèle': 'Llama 3.1 8B Q4', 'Vitesse': '120 tokens/sec', 'Notes': 'GPU 30× plus rapide que CPU' },
+          ],
+          columns: ['Matériel', 'Modèle', 'Vitesse', 'Notes'],
+        },
+        ramRequirements: {
+          id: 'ram-requirements',
+          title: 'Exigences RAM par Modèle',
+          content: '**Règle d\'or: taille GGUF + 500 MB overhead = RAM minimum nécessaire.** Un modèle GGUF de 2 GB nécessite 2.5–3 GB de RAM système libre:',
+          rows: [
+            { 'Modèle': 'Gemma 3 2B', 'Taille GGUF': '~1.5 GB', 'RAM Min': '2–2.5 GB', 'Confortable': '4 GB', 'Longueur Contexte': '8K' },
+            { 'Modèle': 'Phi-4 Mini 3.8B', 'Taille GGUF': '~2.3 GB', 'RAM Min': '3 GB', 'Confortable': '6 GB', 'Longueur Contexte': '4K' },
+            { 'Modèle': 'Llama 3.2 3B', 'Taille GGUF': '~2 GB', 'RAM Min': '2.5–3 GB', 'Confortable': '6 GB', 'Longueur Contexte': '8K' },
+            { 'Modèle': 'Mistral 7B Q4', 'Taille GGUF': '~4.5 GB', 'RAM Min': '5 GB', 'Confortable': '8 GB', 'Longueur Contexte': '32K' },
+            { 'Modèle': 'Llama 3.1 8B Q4', 'Taille GGUF': '~5 GB', 'RAM Min': '6 GB', 'Confortable': '12 GB', 'Longueur Contexte': '128K' },
+          ],
+          columns: ['Modèle', 'Taille GGUF', 'RAM Min', 'Confortable', 'Longueur Contexte'],
+        },
+        howToRun: {
+          id: 'how-to-run',
+          title: 'Comment Exécuter le Mode CPU-only',
+          content: '**Ollama (le plus simple):** Exécutez simplement `ollama run phi:mini`. Ollama détecte automatiquement CPU-only sur les systèmes sans GPUs NVIDIA/AMD et utilise la RAM système. **LM Studio:** Ouvrez Paramètres → sélectionnez "Aucun" sous GPU pour forcer le mode CPU. **Llama.cpp:** Utilisez le flag `--n-gpu-layers 0` pour désactiver l\'offloading GPU.',
+          codeBlock: 'ollama run phi:mini\n# Ollama détecte automatiquement les systèmes CPU-only',
+          codeLanguage: 'bash',
+        },
+        optimization: {
+          id: 'optimization',
+          title: 'Conseils d\'Optimisation pour l\'Inférence CPU',
+          content: 'Pour extraire les performances maximales de l\'inférence CPU:',
+          items: [
+            '**Utilisez quantisation Q4_K_M** — réduit taille GGUF de ~70%, perte de qualité minimale, gain de vitesse 10–20% grâce à meilleur comportement du cache.',
+            '**Réduisez fenêtre de contexte** — contextes plus longs = inférence plus lente. Utilisez `--context 2048` pour limiter le contexte à 2K tokens.',
+            '**Activez multi-threading** — Ollama et llama.cpp détectent automatiquement le nombre de cœurs CPU. Vérifiez avec `nproc` qu\'il correspond.',
+            '**Utilisez AVX-512 ou ARM NEON** — les CPUs modernes Intel/AMD/ARM ont des instructions vectorielles. Vérifiez les flags CPU: `cat /proc/cpuinfo | grep avx512` (Linux) ou Apple À Propos → Rapport Système (Mac).',
+            '**Taille batch = 1** — CPU gère mieux l\'inférence mono-séquence. Ne tentez pas multi-batch sur CPU.',
+            '**Épinglez threads aux cœurs** — sur Linux, utilisez `numactl --cpunodebind=0 ollama run phi:mini` pour éviter l\'overhead de changement de cœur.',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: 'Quand Utiliser CPU vs GPU',
+          content: '',
+          rows: [
+            { 'Cas d\'usage': 'Chat temps réel (latence < 1 sec)', 'CPU': '❌ Trop lent (12 tokens/sec = 5 sec pour 60 tokens)', 'GPU': '✅ 80+ tokens/sec' },
+            { 'Cas d\'usage': 'Traitement batch (documents, logs)', 'CPU': '✅ Bon (vitesse n\'importe pas)', 'GPU': '⚠️ Overkill' },
+            { 'Cas d\'usage': 'API production (coût limité)', 'CPU': '✅ $0 coût matériel', 'GPU': '⚠️ $200+ GPU + électricité' },
+            { 'Cas d\'usage': 'Appareil edge (Raspberry Pi)', 'CPU': '✅ Pas d\'alternative', 'GPU': '❌ Options GPU limitées' },
+            { 'Cas d\'usage': 'Développement / tests locaux', 'CPU': '✅ Consommation basse, plus silencieux', 'GPU': '⚠️ Overkill' },
+            { 'Cas d\'usage': 'Fine-tuning LLM', 'CPU': '❌ Trop lent (heures → jours)', 'GPU': '✅ 10–30× accélération' },
+          ],
+          columns: ['Cas d\'usage', 'CPU', 'GPU'],
+        },
+        faq: {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'À quelle vitesse l\'inférence CPU-only est-elle comparée à un GPU?',
+              a: 'CPU: 8–15 tokens/sec sur processeurs modernes. GPU (RTX 3060): 80 tokens/sec. GPU (RTX 4090): 120+ tokens/sec. CPU est 10–30× plus lent mais nécessite une investissement GPU de $0.',
+            },
+            {
+              q: 'Quel est le plus petit modèle qui produit des sorties cohérentes sur CPU?',
+              a: 'Gemma 3 2B (1.5 GB) produit des réponses raisonnables. Au-dessous, la qualité baisse. Pour meilleure qualité sur 8 GB RAM, utilisez Phi-4 Mini (3.8B) ou Llama 3.2 3B (2 GB).',
+            },
+            {
+              q: 'Puis-je exécuter un modèle 13B sur CPU?',
+              a: 'Oui, avec quantisation Q4_K_M un modèle 13B est ~6.5 GB. Nécessite 8–12 GB RAM système. Vitesse: ~2–3 tokens/sec. Inconfortable pour utilisation interactive mais fonctionne pour traitement batch.',
+            },
+            {
+              q: 'L\'inférence CPU utilise-t-elle le GPU du tout?',
+              a: 'Non. Mode CPU-only dans Ollama/llama.cpp désactive explicitement l\'usage GPU et utilise exclusivement la RAM système.',
+            },
+            {
+              q: 'L\'inférence CPU-only est-elle stable?',
+              a: 'Oui, plus stable que GPU. Aucun plantage pilote, aucune erreur mémoire GPU. Le seul risque est saturation RAM système, que vous contrôlez par choix de modèle.',
+            },
+            {
+              q: 'Dois-je ajuster les paramètres pour les CPUs Apple Silicon?',
+              a: 'Non. Ollama détecte automatiquement M1/M2/M3/M4 et utilise efficacement la mémoire unifiée. Apple Silicon est ~10–20% plus rapide que CPUs Intel équivalents grâce à l\'architecture mémoire.',
+            },
+            {
+              q: 'Dois-je me conformer à des réglementations lors de l\'utilisation de LLMs CPU-only?',
+              a: 'Pour données sensibles (financières, médicales, juridiques), respectez CNIL. L\'inférence CPU-only garde toutes les données localement — idéal pour conformité données. Aucune transmission cloud = aucun problème de transfert international de données.',
+            },
+            {
+              q: 'Les modèles CPU-only conviennent-ils aux petites entreprises françaises?',
+              a: 'Oui, parfaitement. Aucune investissement GPU, respect des standards IT européens, coûteux pour traitement documents/chatbots clients, et données sensibles restent en interne. Cas d\'usage: facturation, analyse contrats, bases de connaissances internes.',
+            },
+            {
+              q: 'Quelle quantité de VRAM un modèle 7B nécessite-t-il en CPU-only?',
+              a: 'Zéro VRAM dédié. Un modèle 7B Q4 (~4.5 GB) nécessite 5–6 GB de RAM système pour fonctionner confortablement. C\'est le grand avantage: pas de GPU nécessaire.',
+            },
+            {
+              q: 'Puis-je faire du fine-tuning LLM sur CPU?',
+              a: 'Techniquement oui, mais impraticable. Le fine-tuning sur CPU est 10–30× plus lent. GPU est fortement recommandé pour fine-tuning. CPU-only convient à l\'inférence uniquement (pas d\'entraînement).',
+            },
+            {
+              q: 'Comment puis-je optimiser davantage l\'inférence CPU sur du vieux matériel?',
+              a: 'Utilisez les plus petits modèles (Gemma 3 2B), quantisation maximale (Q4_K_M), contexte minimal (2K tokens), et réduisez le nombre de threads. Sur Raspberry Pi, dépassez rarement 5 tokens/sec.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures Connexes',
+          items: [
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=fr) — analyse approfondie des compromis matériels pour inférence LLM locale',
+            '[Combien de VRAM Ai-je Besoin?](/local-llms/how-much-vram-do-i-need?lang=fr) — calculatrice VRAM pour chaque taille de modèle et niveau de quantisation',
+            '[Quantisation LLM Expliquée](/local-llms/llm-quantization-explained?lang=fr) — maîtrisez Q4_K_M, Q5_K_M, et quand utiliser chacun',
+            '[Meilleurs Modèles LLM Débutant](/local-llms/best-beginner-local-llm-models?lang=fr) — guide étape par étape vers votre premier LLM local',
+            '[Guide Commandes Ollama](/local-llms/ollama-command-guide?lang=fr) — gestion des modes CPU/GPU, multi-GPU, et offloading',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Les CPUs peuvent-ils exécuter des LLMs?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui. Les CPUs modernes (Intel i7-10e gén+, AMD Ryzen 5000+, Apple M-series) peuvent exécuter des modèles 3–13B à 8–15 tokens par seconde. C\'est 10–30× plus lent que GPU, mais ne nécessite pas de VRAM dédié.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quel est le meilleur LLM CPU-only?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec) est le meilleur globalement. Pour vitesse: Gemma 3 2B (1.5 GB, 15 tokens/sec). Pour équilibre: Llama 3.2 3B (2 GB, 10 tokens/sec).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Combien de RAM ai-je besoin pour l\'inférence CPU-only?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Utilisez la règle: taille GGUF + 500 MB overhead. Phi-4 Mini (2.3 GB) nécessite 3 GB RAM. Gemma 3 2B (1.5 GB) nécessite 2 GB RAM. Mistral 7B Q4 (4.5 GB) nécessite 5 GB RAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Comment puis-je activer le mode CPU-only?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Dans Ollama, exécutez simplement: ollama run phi:mini. Ollama détecte automatiquement les systèmes CPU-only. Dans llama.cpp, utilisez --n-gpu-layers 0. Dans LM Studio, réglez GPU à Aucun sous Paramètres.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'L\'inférence CPU est-elle pratique pour la production?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui, si vous n\'avez pas besoin de latence temps réel. Traitement batch, APIs asynchrones, et workflows offline fonctionnent très bien sur CPU. Pour chat interactif (latence < 1 seconde), utilisez GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'À quelle vitesse l\'inférence CPU-only est-elle comparée à un GPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'CPU: 8–15 tokens/sec sur processeurs modernes. GPU (RTX 3060): 80 tokens/sec. GPU (RTX 4090): 120+ tokens/sec. CPU est 10–30× plus lent mais nécessite une investissement GPU de $0.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quel est le plus petit modèle qui produit des sorties cohérentes sur CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Gemma 3 2B (1.5 GB) produit des réponses raisonnables. Au-dessous, la qualité baisse. Pour meilleure qualité sur 8 GB RAM, utilisez Phi-4 Mini (3.8B) ou Llama 3.2 3B (2 GB).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Puis-je exécuter un modèle 13B sur CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui, avec quantisation Q4_K_M un modèle 13B est ~6.5 GB. Nécessite 8–12 GB RAM système. Vitesse: ~2–3 tokens/sec. Inconfortable pour utilisation interactive mais fonctionne pour traitement batch.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'L\'inférence CPU utilise-t-elle le GPU du tout?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Non. Mode CPU-only dans Ollama/llama.cpp désactive explicitement l\'usage GPU et utilise exclusivement la RAM système.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'L\'inférence CPU-only est-elle stable?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui, plus stable que GPU. Aucun plantage pilote, aucune erreur mémoire GPU. Le seul risque est saturation RAM système, que vous contrôlez par choix de modèle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Dois-je ajuster les paramètres pour les CPUs Apple Silicon?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Non. Ollama détecte automatiquement M1/M2/M3/M4 et utilise efficacement la mémoire unifiée. Apple Silicon est ~10–20% plus rapide que CPUs Intel équivalents grâce à l\'architecture mémoire.',
+            },
+          },
+        ],
+      },
+    },
 };
