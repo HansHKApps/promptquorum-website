@@ -321,10 +321,159 @@ function renderComingSoon({ slug, lang, kind }: { slug?: string; lang: Lang; kin
 
 // ─── ENGLISH HUB CONTENT ──────────────────────────────────────────────────
 
+// Per-category visual + copy. Mirrors the pattern in /src/components/LocalLLMsHub.tsx
+// (THEME_LABELS / THEME_DESCRIPTIONS / THEME_COLORS) so the three cluster hubs share
+// the same shape: colored badge → question H2 → 2-col card grid.
+const HUB_THEMES: Array<{
+  id: string
+  badge: string
+  question: string
+  description: string
+  colorBadge: string
+  colorDot: string
+  slugs: string[]
+}> = [
+  {
+    id: 'easiest-desktop-apps',
+    badge: 'Easiest Desktop Apps',
+    question: 'Easiest Desktop Apps: Which Local AI App Should You Install First?',
+    description: 'ChatGPT-like apps you download and run. No terminal required. Best entry point for beginners. LM Studio, Jan, and GPT4All tested side-by-side for speed, UX, and privacy.',
+    colorBadge: 'bg-blue-50 text-blue-700 border-blue-200',
+    colorDot: 'bg-blue-400',
+    slugs: [
+      'lm-studio-vs-jan-vs-gpt4all-2026',
+      'easiest-local-ai-app-windows-mac-linux',
+      'local-ai-app-non-technical-users',
+      'best-local-ai-app-low-end-pc',
+      'local-ai-app-with-built-in-rag',
+    ],
+  },
+  {
+    id: 'rag-document-chat',
+    badge: 'RAG & Document Chat',
+    question: 'RAG & Document Chat: How Do You Talk to Your Own PDFs Locally?',
+    description: 'Personal knowledge bases that never leave your device. AnythingLLM, PrivateGPT, and Open WebUI tested on real corpora. Embedding-model picks for legal, research, and technical content.',
+    colorBadge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+    colorDot: 'bg-emerald-400',
+    slugs: [
+      'anythingllm-vs-privategpt-vs-openwebui-rag',
+      'local-rag-on-your-pdfs-step-by-step',
+      'best-embedding-models-local-rag-2026',
+      'chat-with-1000-pdfs-locally',
+      'local-rag-for-private-business-data',
+    ],
+  },
+  {
+    id: 'coding-assistants',
+    badge: 'Coding Assistants',
+    question: 'Coding Assistants: Can a Local LLM Really Replace GitHub Copilot?',
+    description: 'Continue.dev, Cline, Aider, and Qwen3-Coder benchmarked against GitHub Copilot on real Next.js, Python, and Rust projects. Cost math, setup walkthroughs, and honest verdicts on quality gaps.',
+    colorBadge: 'bg-purple-50 text-purple-700 border-purple-200',
+    colorDot: 'bg-purple-400',
+    slugs: [
+      'replace-github-copilot-with-local-llm',
+      'continue-dev-vs-cline-vs-aider-local',
+      'best-local-coding-models-2026',
+      'local-coding-llm-without-internet',
+      'local-llm-code-review-ci-cd',
+    ],
+  },
+  {
+    id: 'local-ai-agents',
+    badge: 'Local AI Agents',
+    question: 'Local AI Agents: Which Workflows Actually Work Without the Cloud?',
+    description: 'MCP, tool calling, autonomous agents — the 2026 frontier. Honest reports on what runs reliably (and what still fails). Replacing Zapier with self-hosted agents and EU-compliance patterns.',
+    colorBadge: 'bg-orange-50 text-orange-700 border-orange-200',
+    colorDot: 'bg-orange-400',
+    slugs: [
+      'local-ai-agents-with-mcp-2026',
+      'best-local-models-tool-calling-2026',
+      'autonomous-local-agents-actually-work',
+      'replace-zapier-with-local-ai-agents',
+      'local-ai-agents-business-workflows-eu-compliance',
+    ],
+  },
+  {
+    id: 'creative-roleplay',
+    badge: 'Creative & Roleplay',
+    question: 'Creative & Roleplay: Which Local Models Write Like a Human?',
+    description: 'Fiction, dialogue, worldbuilding, screenplays — tested on 50+ creative prompts. SillyTavern vs Agnai vs RisuAI for character work. The honest take on uncensored models for legitimate creative writing.',
+    colorBadge: 'bg-rose-50 text-rose-700 border-rose-200',
+    colorDot: 'bg-rose-400',
+    slugs: [
+      'best-local-llm-creative-writing-2026',
+      'sillytavern-vs-agnai-vs-risuai-roleplay',
+      'local-llm-prompts-for-fiction-writers',
+      'uncensored-local-llm-creative-writing-ethics',
+      'local-llm-screenwriting-and-novel-drafting',
+    ],
+  },
+  {
+    id: 'mobile-edge-llms',
+    badge: 'Mobile & Edge LLMs',
+    question: 'Mobile & Edge LLMs: Can You Run Real AI Offline on Your Phone?',
+    description: 'iPhone, Android, iPad, Pixel — tested on real devices in 2026. Phi-4 Mini, Gemma 3 4B, SmolLM benchmarked for speed and quality. Voice assistants and Whisper-based offline pipelines.',
+    colorBadge: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+    colorDot: 'bg-cyan-400',
+    slugs: [
+      'best-local-llm-apps-iphone-2026',
+      'best-local-llm-apps-android-2026',
+      'run-ai-on-tablet-ipad-android',
+      'mobile-llm-models-phi4-gemma-smollm',
+      'voice-assistant-local-mobile-offline',
+    ],
+  },
+  {
+    id: 'productivity-tools',
+    badge: 'Productivity & Knowledge Tools',
+    question: 'Productivity Tools: How Do You Plug Local AI into Your Daily Workflow?',
+    description: 'Obsidian, Logseq, Joplin integrations. Email/calendar automation. Replace Grammarly and Notion AI with local models. The full personal-knowledge-base stack for 10,000+ items.',
+    colorBadge: 'bg-amber-50 text-amber-700 border-amber-200',
+    colorDot: 'bg-amber-400',
+    slugs: [
+      'local-llm-with-obsidian-2026',
+      'local-llm-with-logseq-and-joplin',
+      'local-llm-personal-knowledge-base-2026',
+      'local-llm-email-and-calendar-automation',
+      'replace-grammarly-notion-ai-with-local',
+    ],
+  },
+]
+
+function PowerArticleCard({ slug, dot }: { slug: string; dot: string }) {
+  const hasContent =
+    !!powerLLMContent[slug]?.['en'] &&
+    Object.keys(powerLLMContent[slug]?.['en']?.sections ?? {}).length > 0
+  const title = powerLLMContent[slug]?.['en']?.title ?? slugToTitle(slug)
+
+  if (!hasContent) {
+    return (
+      <div className="flex items-start gap-3 bg-card border border-primary/10 rounded-xl p-4 opacity-50 cursor-default select-none">
+        <span className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-gray-300" />
+        <span className="text-text-secondary text-sm font-medium leading-snug flex-1">
+          {title}
+          <span className="ml-2 text-xs font-normal opacity-60">· soon</span>
+        </span>
+      </div>
+    )
+  }
+
+  return (
+    <Link
+      href={powerLLMArticlePath('en', slug)}
+      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+    >
+      <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
+      <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
+        {title}
+      </span>
+    </Link>
+  )
+}
+
 function renderEnglishHub() {
   const lastUpdated = '2026-05-07'
 
-  // FAQ schema for the hub
   const hubFaqs = [
     { q: 'What is a local LLM and how is it different from ChatGPT?', a: 'A local LLM runs entirely on your own hardware — phone, laptop, desktop, or server — without sending prompts to any cloud service. ChatGPT runs on OpenAI servers and sends your prompts there. Local LLMs are private, work offline, and have no per-token cost; ChatGPT is faster on rare topics and requires no setup.' },
     { q: 'Do I need a powerful computer to run local LLMs?', a: 'No. 4 GB RAM and an integrated GPU is enough for small models like Phi-4 Mini or Gemma 3 4B. 16 GB RAM and a midrange GPU (RTX 3060 12 GB or M3 Pro) covers most everyday workflows. Heavy power users want 24+ GB VRAM.' },
@@ -362,134 +511,73 @@ function renderEnglishHub() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubFaqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubBreadcrumbSchema) }} />
 
-      <main className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          {/* Breadcrumb */}
-          <nav className="mb-6 text-sm text-text-secondary">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <span className="text-text-primary font-medium">Power Local LLM</span>
-          </nav>
+      <div className="min-h-screen bg-surface pt-24 pb-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
           {/* Hero */}
-          <header className="mb-12">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary/10 text-primary mb-4">
-              Hub · Last updated {lastUpdated}
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6 leading-tight">
+          <div className="py-16 border-b border-primary/20 mb-16">
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Power Local LLM</p>
+            <p className="text-xs text-text-secondary mb-4">Updated <time dateTime={lastUpdated}>May 2026</time></p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
               Power Local LLM — Build a Private AI Stack That Replaces Your SaaS Bills
             </h1>
-            <div className="text-lg text-text-secondary leading-relaxed space-y-4">
-              <p>
-                Local LLMs are no longer just chatbots. In 2026 they run inside your code editor, query your private documents, automate workflows, and replace tools you currently pay monthly for. This cluster covers the apps, agents, and workflows that turn a local model into a complete personal AI stack.
-              </p>
-              <p className="font-semibold text-text-primary">
-                If you can run Ollama or LM Studio, you can replace 5-10 SaaS subscriptions before the end of this month.
-              </p>
-            </div>
-          </header>
+            <p className="article-intro text-lg text-text-secondary max-w-2xl leading-relaxed mb-10">
+              Local LLMs are no longer just chatbots. In 2026 they run inside your code editor, query your private documents, automate workflows, and replace tools you currently pay monthly for. <strong>If you can run Ollama or LM Studio, you can replace 5-10 SaaS subscriptions before the end of this month.</strong>
+            </p>
 
-          {/* TLDR */}
-          <section className="mb-12 p-6 bg-emerald-50 border border-emerald-200 rounded-xl">
-            <h2 className="text-lg font-bold text-emerald-900 mb-3">Key Takeaways</h2>
-            <ul className="space-y-2 text-emerald-900">
-              <li>• Local LLM ecosystem in 2026 = chat tools, RAG systems, coding agents, creative apps, mobile inference, and tool-calling agents.</li>
-              <li>• Best entry points: LM Studio (beginners), Ollama + Open WebUI (balance), Continue.dev (coders).</li>
-              <li>• The biggest 2026 shift: agentic coding harnesses replacing $200/month cloud API bills.</li>
-              <li>• Mobile/edge LLMs are the fastest-growing segment — running on phones, tablets, NPUs.</li>
-              <li>• Privacy, cost arbitrage, and offline reliability are the three forces driving adoption.</li>
-            </ul>
-          </section>
-
-          {/* Categories */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">Browse by Category</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {POWER_LLM_CATEGORIES.map((cat) => (
-                <div
-                  key={cat.id}
-                  className="p-5 border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all"
-                >
-                  <h3 className="font-bold text-text-primary mb-2">{cat.titleEn}</h3>
-                  <p className="text-sm text-text-secondary mb-3">{cat.descriptionEn}</p>
-                  <ul className="space-y-1 text-sm">
-                    {cat.articleSlugs.map((slug) => {
-                      const hasContent =
-                        !!powerLLMContent[slug]?.['en'] &&
-                        Object.keys(powerLLMContent[slug]?.['en']?.sections ?? {}).length > 0
-                      return (
-                        <li key={slug}>
-                          <Link
-                            href={powerLLMArticlePath('en', slug)}
-                            className={hasContent ? 'text-primary hover:underline' : 'text-gray-400'}
-                          >
-                            {slugToTitle(slug)}
-                            {!hasContent && ' (coming soon)'}
-                          </Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              ))}
+            {/* Key Takeaways */}
+            <div className="key-takeaways mb-10 bg-primary/3 border border-primary/15 rounded-xl p-5">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Key Takeaways</p>
+              <ul className="space-y-2">
+                {[
+                  'Local LLM ecosystem in 2026 = chat tools, RAG systems, coding agents, creative apps, mobile inference, and tool-calling agents.',
+                  'Best entry points: LM Studio (beginners), Ollama + Open WebUI (balance), Continue.dev (coders).',
+                  'The biggest 2026 shift: agentic coding harnesses replacing $200/month cloud API bills.',
+                  'Mobile and edge LLMs are the fastest-growing segment — running on phones, tablets, and NPUs.',
+                  'Privacy, cost arbitrage, and offline reliability are the three forces driving adoption.',
+                ].map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </section>
+          </div>
 
-          {/* Decision matrix */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-4">Where Should You Start?</h2>
-            <div className="overflow-x-auto">
-              <table className="min-w-full border border-gray-200 rounded-lg">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-text-primary border-b border-gray-200">Your situation</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-text-primary border-b border-gray-200">Start here</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm">
-                  <tr className="border-b border-gray-100"><td className="px-4 py-3">Total beginner, want ChatGPT replacement</td><td className="px-4 py-3 font-medium">Easiest Desktop Apps</td></tr>
-                  <tr className="border-b border-gray-100"><td className="px-4 py-3">Want to chat with my documents</td><td className="px-4 py-3 font-medium">RAG &amp; Document Chat</td></tr>
-                  <tr className="border-b border-gray-100"><td className="px-4 py-3">Developer, replace cloud coding tools</td><td className="px-4 py-3 font-medium">Coding Assistants</td></tr>
-                  <tr className="border-b border-gray-100"><td className="px-4 py-3">Want to automate multi-step tasks</td><td className="px-4 py-3 font-medium">Local AI Agents</td></tr>
-                  <tr className="border-b border-gray-100"><td className="px-4 py-3">Creative writing or roleplay</td><td className="px-4 py-3 font-medium">Creative &amp; Roleplay</td></tr>
-                  <tr className="border-b border-gray-100"><td className="px-4 py-3">Want AI on my phone/tablet</td><td className="px-4 py-3 font-medium">Mobile &amp; Edge LLMs</td></tr>
-                  <tr><td className="px-4 py-3">Improve my note-taking workflow</td><td className="px-4 py-3 font-medium">Productivity Tools</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* Why local AI */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-4">Why Local AI in 2026?</h2>
-            <div className="space-y-4 text-text-secondary leading-relaxed">
-              <p>
-                <strong className="text-text-primary">Privacy.</strong> GDPR, EU AI Act, and data sovereignty rules push EU and German businesses toward on-premises inference. Local LLMs do not transmit prompts, conversations, or proprietary code to any third party.
-              </p>
-              <p>
-                <strong className="text-text-primary">Cost.</strong> Cloud API prices continue to rise as demand outpaces supply. Local inference is essentially free after hardware — typical electricity cost for moderate use is $1-3/month versus $20-200/month for SaaS subscriptions.
-              </p>
-              <p>
-                <strong className="text-text-primary">Performance.</strong> 8B-class models in 2026 outperform 70B-class models from 2025 thanks to better training data and quantization. The hardware bar to run useful local AI keeps dropping.
-              </p>
-            </div>
-          </section>
+          {/* Themed sections — one per category, mirroring /local-llms hub layout */}
+          {HUB_THEMES.map((theme) => (
+            <section key={theme.id} id={theme.id} className="mb-16">
+              <div className="flex items-center gap-3 mb-2">
+                <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${theme.colorBadge}`}>
+                  {theme.badge}
+                </span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold text-text-primary mb-3">{theme.question}</h2>
+              <p className="text-text-secondary text-sm mb-6 max-w-2xl">{theme.description}</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {theme.slugs.map((slug) => (
+                  <PowerArticleCard key={slug} slug={slug} dot={theme.colorDot} />
+                ))}
+              </div>
+            </section>
+          ))}
 
           {/* FAQ */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {hubFaqs.map((f, i) => (
-                <details key={i} className="border border-gray-200 rounded-lg p-4 group">
+                <details key={i} className="border border-primary/15 rounded-xl p-4 group bg-card">
                   <summary className="cursor-pointer font-semibold text-text-primary group-open:mb-3">{f.q}</summary>
-                  <p className="text-text-secondary leading-relaxed">{f.a}</p>
+                  <p className="text-text-secondary leading-relaxed text-sm">{f.a}</p>
                 </details>
               ))}
             </div>
           </section>
 
           {/* Sources */}
-          <section className="border-t border-gray-200 pt-8">
+          <section className="border-t border-primary/15 pt-8">
             <h2 className="text-lg font-bold text-text-primary mb-4">Related Reading</h2>
             <ul className="space-y-2 text-sm">
               <li><Link href="/local-llms/local-llm-hardware-guide-2026" className="text-primary hover:underline">Local LLM Hardware Guide 2026</Link></li>
@@ -498,8 +586,9 @@ function renderEnglishHub() {
               <li><Link href="/prompt-engineering/rag-explained" className="text-primary hover:underline">RAG Explained</Link></li>
             </ul>
           </section>
+
         </div>
-      </main>
+      </div>
     </>
   )
 }
