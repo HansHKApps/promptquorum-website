@@ -74,44 +74,6 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       'OS-shoppers research on phone, install on desktop. Anchor links to each OS section so mobile readers jump straight to their OS.',
   },
 
-  'local-ai-app-non-technical-users': {
-    title: 'Local AI for Non-Technical Users: 5 Apps That Just Work (No Terminal)',
-    meta: 'Zero terminal commands. No Python. No Docker. 5 local AI apps your parents could install in 10 minutes. Tested on real beginners.',
-    articleType: 'List (ranked, persona-driven)',
-    serpIntent: 'List-dominant — Google shows "5 best" / "easiest" lists for beginner queries',
-    ctrRule:
-      'Specific persona (non-technical) + clear payoff (just work) + constraint (no terminal) + proof (tested on real beginners)',
-    writingBrief:
-      'Persona-driven decision page targeting absolute beginners and non-technical users. Test 5 apps that require zero command-line interaction. Score each on: install steps count, first chat time, UI clarity, error message quality, model browsing experience. Real beginner testing — sit non-technical person in front of laptop, time them, document where they get stuck. Recommend by user persona: "the curious parent," "the skeptical professional," "the privacy-conscious student." Include screenshots throughout. Each app section ends with "Install this if you are…" Lead with verdict — top pick stated in first 200 words. Strong call-out boxes for common stumbling blocks.',
-    internalLinks: [
-      { ref: 'lm-studio-vs-jan-vs-gpt4all-2026', reasoning: 'for users ready to compare more deeply' },
-      { ref: 'easiest-local-ai-app-windows-mac-linux', reasoning: 'for users who know nothing about their own OS' },
-      { ref: 'best-local-llm-creative-writing-2026', reasoning: 'common non-technical use case' },
-    ],
-    externalLinks: [
-      { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority for what to download first' },
-    ],
-    structure: {
-      label: 'Ranking format (no comparison table — use ranked list)',
-      notes:
-        '1. [Winner] — Best for absolute beginners\n2. [Runner-up] — Best for privacy-conscious beginners\n3. [Third] — Best for "I want it pretty"\n4. [Fourth] — Best for grandparents who used Windows XP\n5. [Fifth] — Best for Mac users specifically',
-    },
-    faqSeeds: [
-      'Do I need to know coding to use local AI?',
-      'Can I install local AI without admin rights?',
-      'What if my computer is too old?',
-      'Will local AI slow down my computer?',
-      'Can I uninstall it cleanly?',
-      'Is it safe to download these from the internet?',
-      'Do these apps need internet to work?',
-      'Can I use these on a work laptop?',
-      "What's the difference vs ChatGPT for a non-technical user?",
-      'Do these apps cost money long-term?',
-    ],
-    mobileAngle:
-      'This audience researches heavily on phone before any download. Mobile-first all the way — short paragraphs, bullet lists over prose, screenshots that work on small screens.',
-  },
-
   'best-local-ai-app-low-end-pc': {
     title: 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
     meta: 'No RTX 4090? No problem. 4 local AI apps tested on 8GB RAM laptops with integrated graphics. Real benchmarks, real settings.',
