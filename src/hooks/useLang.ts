@@ -5,17 +5,28 @@ import { useState, useEffect } from 'react'
 export type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
 const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh']
+const PATH_LOCALE_RE = /^\/(de|fr|ja|zh)(\/|$)/
 
 /**
- * Returns the current language from the ?lang= query param.
+ * Returns the current language. Path-prefix locales (/de/, /fr/, /ja/, /zh/) take
+ * priority over the ?lang= query param — path-prefix-routed clusters render server-side
+ * off the URL, so the client must agree with what the server already rendered.
+ *
  * Defaults to 'en' on server/static render so all content is pre-rendered as English.
- * After hydration, reads window.location.search and updates on popstate events.
+ * After hydration, reads window.location and updates on popstate events.
  */
 export function useLang(initialLang?: Lang): Lang {
   const [lang, setLang] = useState<Lang>(initialLang ?? 'en')
 
   useEffect(() => {
     const read = () => {
+      // Path-prefix wins: /de/foo → 'de' regardless of query string
+      const pathMatch = window.location.pathname.match(PATH_LOCALE_RE)
+      if (pathMatch) {
+        setLang(pathMatch[1] as Lang)
+        return
+      }
+
       const params = new URLSearchParams(window.location.search)
       const rawLang = params.get('lang')
 

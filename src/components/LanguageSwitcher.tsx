@@ -31,6 +31,33 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
   const current = languageCodes.find(l => l.code === currentLang) || languageCodes[0]
 
   const handleLanguageChange = (lang: Language) => {
+    // Path-prefix-routed clusters (separate src/app/{de,fr,ja,zh}/<cluster>/ trees).
+    // Switching language must mutate the path prefix and trigger a full server render —
+    // history.pushState would leave the user on the wrong locale's server-rendered HTML.
+    // Keep this list in sync with NOINDEX_PATH_PREFIXES in src/app/layout.tsx and
+    // EXCLUDED_PATH_PREFIXES in src/app/sitemap.ts.
+    const PATH_LOCALE_CLUSTERS = ['power-local-llm']
+
+    const pathname = window.location.pathname
+    // Match: /<cluster> or /<cluster>/... or /<lang>/<cluster> or /<lang>/<cluster>/...
+    const clusterMatch = pathname.match(
+      new RegExp(`^(?:/(de|fr|ja|zh))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/.*)?$`)
+    )
+
+    if (clusterMatch) {
+      const cluster = clusterMatch[2]
+      const rest = clusterMatch[3] ?? ''
+      const targetPath = lang === 'en' ? `/${cluster}${rest}` : `/${lang}/${cluster}${rest}`
+      const target = new URL(targetPath, window.location.origin)
+      // Drop ?lang= entirely on cluster paths (it has no meaning when locale lives in the URL path)
+      target.search = ''
+      target.hash = window.location.hash
+      window.location.href = target.toString()
+      return
+    }
+
+    // Query-string-routed clusters (/blog, /prompt-engineering, /local-llms, /frameworks):
+    // mutate ?lang= and stay client-side via pushState.
     const url = new URL(window.location.href)
     if (lang === 'en') {
       url.searchParams.delete('lang')
