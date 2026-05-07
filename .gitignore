@@ -3,3 +3,10 @@ out/
 .next/
 /app/
 public/data/seo-registry.json
+
+# Playwright run artifacts (regenerated on every run)
+test-results/
+playwright-report/
+
+# Office / Word lock files anywhere in the tree
+~$*
