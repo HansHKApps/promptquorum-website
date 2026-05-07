@@ -74,50 +74,6 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       'OS-shoppers research on phone, install on desktop. Anchor links to each OS section so mobile readers jump straight to their OS.',
   },
 
-  'best-local-ai-app-low-end-pc': {
-    title: 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
-    meta: 'No RTX 4090? No problem. 4 local AI apps tested on 8GB RAM laptops with integrated graphics. Real benchmarks, real settings.',
-    articleType: 'Decision (hardware-constrained)',
-    serpIntent: 'Decision-dominant — high-volume query "low-end PC AI" wants tested verdict',
-    ctrRule:
-      'Specific constraint (8GB RAM, No GPU) + specific outcome (Best) + freshness (2026) + objection handler (No problem)',
-    writingBrief:
-      'Hardware-constrained decision page targeting the largest user segment — people with old or budget laptops. Test 4 apps optimized for low-end hardware on actual 8GB RAM machines with integrated GPUs. Cover: which models actually run (Phi-4 Mini, Gemma 3 4B, SmolLM 2), tokens-per-second benchmarks, memory pressure under load, thermal throttling. Declare winners per scenario. Include exact settings (context length, batch size, KV cache quantization). This is a high-volume search topic per GSC data — the #1 zero-click query was "low-end PC LLM" related. Phrase explicitly for "low-end PC" and "old laptop" queries. Lead with model + app combo recommendation in first 200 words.',
-    internalLinks: [
-      { ref: 'easiest-local-ai-app-windows-mac-linux', reasoning: 'many low-end PC users are on older Windows' },
-      { ref: 'best-local-llm-apps-android-2026', reasoning: 'natural alternative for low-end users' },
-      { ref: 'replace-zapier-with-local-ai-agents', reasoning: 'practical workflow for budget users' },
-    ],
-    externalLinks: [
-      { url: '/local-llms/best-budget-gpus-local-llm', reasoning: 'for users considering an upgrade' },
-      { url: '/local-llms/local-llm-hardware-guide-2026', reasoning: 'hardware authority' },
-    ],
-    structure: {
-      label: 'Comparison table structure',
-      headers: ['App', 'Min RAM', 'Best model (8GB constraint)', 'Tokens/sec (CPU-only)', 'Heat', 'Verdict'],
-      rows: [
-        ['', '', '', '', '', ''],
-        ['', '', '', '', '', ''],
-        ['', '', '', '', '', ''],
-        ['', '', '', '', '', ''],
-      ],
-    },
-    faqSeeds: [
-      'Can I run local AI on 4GB RAM?',
-      'Does an old Intel CPU work for local AI?',
-      'Will local AI brick my laptop?',
-      'Is integrated graphics enough?',
-      'Which model is fastest on CPU only?',
-      'Does adding RAM help more than upgrading CPU?',
-      'Can I run local AI on a Chromebook?',
-      "What's the cheapest laptop that runs local AI well?",
-      'Does Windows 10 still work for local AI?',
-      'Can I use a Raspberry Pi?',
-    ],
-    mobileAngle:
-      'Critical mobile audience — users with low-end laptops often research on phones. Comparison table must be mobile-readable. Tokens/sec numbers prominent in titles so mobile readers see speed differences without scrolling.',
-  },
-
   'local-ai-app-with-built-in-rag': {
     title: 'Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)',
     meta: '3 apps that let you drop a PDF and chat with it. No vector DB setup. No Python. Tested on 1000-page documents.',
