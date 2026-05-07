@@ -324,6 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 32B (`qwen3:32b`)** — well-rounded; the dense 32B handles MCP cleanly and is happy in a long agent loop. **Qwen3-Coder 30B (`qwen3-coder:30b`)** is the best pick if your agent work is code-shaped.',
           '**Llama 3.3 70B (`llama3.3:70b`)** — the highest ceiling but the heaviest. 48 GB+ unified memory or 2× 24 GB GPUs at Q4_K_M. Use only if your hardware accommodates it; the smaller models are usually enough.',
           '**Avoid for MCP work:** anything under 7B and any general-purpose model without explicit tool-call training. They will emit malformed calls, the loop will stall, and you will blame the harness — but the harness is fine.',
+          'For structured prompting techniques that improve tool-call quality on any model, see [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting).',
           'For the head-to-head data, see [Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026).',
         ],
       },
