@@ -53,8 +53,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
+      { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'Deployment Pattern Comparison', anchor: '#deployment-comparison' },
-      { label: 'Which Deployment Should You Pick?', anchor: '#which-deployment' },
+      { label: 'Choosing a Deployment Pattern', anchor: '#which-deployment' },
       { label: 'Why Local RAG for Sensitive Data', anchor: '#why-local-rag' },
       { label: 'The Six Controls Every Deployment Needs', anchor: '#required-controls' },
       { label: 'Air-Gap and Egress Control', anchor: '#air-gap' },
@@ -63,12 +64,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Encryption and Access Control', anchor: '#encryption-access' },
       { label: 'Single-User Laptop Pattern', anchor: '#laptop-pattern' },
       { label: 'On-Prem Server Pattern', anchor: '#on-prem-pattern' },
+      { label: 'Vector Database Options', anchor: '#vector-db-comparison' },
       { label: 'Private EU Cloud Pattern', anchor: '#private-cloud-pattern' },
       { label: 'EU AI Act Classification', anchor: '#eu-ai-act' },
-      { label: 'When You Need a DPIA', anchor: '#dpia-requirements' },
+      { label: 'DPIA Requirements', anchor: '#dpia-requirements' },
       { label: 'Germany-Specific Notes (Datenschutz)', anchor: '#germany-datenschutz' },
       { label: 'Compliance Checklist', anchor: '#compliance-checklist' },
       { label: 'Common Mistakes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
@@ -86,9 +89,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open-source embedding models are GDPR-safe in principle**, but only if (a) the model weights are downloaded once and pinned to a hash, (b) inference runs entirely on local hardware with no telemetry, and (c) the model card and licence are reviewed for any clauses that conflict with confidential business use.',
         ],
       },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Quick Facts',
+        items: [
+          '**6 mandatory controls** for any regulated RAG: air-gap, RBAC, audit logs, encryption, data lineage, deletion path.',
+          '**3 deployment patterns:** single-user laptop (solo professionals), on-prem server (5–50 users), private EU cloud (multi-entity).',
+          '**DPIA is mandatory** under Article 35 when ingesting special-category data (health, legal, biometric) at scale.',
+          '**EU AI Act:** most local RAG = limited-risk; becomes high-risk when retrieval feeds automated decisions (credit, employment, benefits).',
+          '**Right-to-be-forgotten** must propagate through source docs, vector indexes, cached embeddings, AND answer history.',
+          '**Works-council (Betriebsrat) co-determination** under §87 BetrVG required for any RAG over employee-authored content in Germany.',
+          '**Open-source embedding models** are GDPR-safe only if weights are pinned, inference is fully local, and licence is reviewed.',
+        ],
+      },
       comparisonTable: {
         id: 'deployment-comparison',
-        title: 'How Do the 3 Deployment Patterns Compare for Compliance?',
+        title: 'Deployment Pattern Comparison',
         content:
           'Each pattern can be made GDPR-compliant; what changes is the cost of the controls and the breakage modes when something goes wrong. Pick the simplest pattern that fits the user count, document sensitivity, and resilience requirement.',
         columns: ['Control', 'Single-user laptop', 'On-prem server', 'Private EU cloud'],
@@ -151,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whichOne: {
         id: 'which-deployment',
-        title: 'Which Deployment Pattern Should You Pick?',
+        title: 'Choosing a Deployment Pattern',
         content:
           '**The right choice depends on user count, document sensitivity, audit-readiness pressure, and how much in-house IT capacity you have.** This decision shortcut covers most real situations.',
         columns: ['Your situation', 'Pick'],
@@ -195,6 +211,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Why Local RAG for Sensitive Data',
         content:
           '**The case for local RAG over cloud LLM-as-a-service is not ideology — it is the shape of the GDPR risk assessment.** Cloud RAG is workable for many uses cases; for sensitive business data it adds five risks that local RAG eliminates by construction.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Local RAG keeps your sensitive documents on your own hardware while giving your team AI-powered search — no data leaves the building, no third-party processor touches it, and no cross-border transfer question arises.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Imagine your legal team could search 10,000 case files by asking questions in plain language — but the documents never leave your server room. That is local RAG: the AI reads your documents on your hardware, answers your questions on your hardware, and nothing gets sent anywhere. The compliance advantage is not a feature — it is the architecture.',
+          },
+        ],
         items: [
           '**Cross-border transfer (Article 44–49).** Sending personal data to a non-EU processor requires Standard Contractual Clauses, a Transfer Impact Assessment, and a credible answer for whether the receiving jurisdiction has subpoena powers reaching that data. Local RAG does not transfer data — the question does not arise.',
           '**Sub-processor sprawl (Article 28).** Cloud LLM providers typically rely on hyperscaler infrastructure, content-moderation services, and observability vendors. Each is a sub-processor that must be listed, contracted, and audited. Local RAG has zero sub-processors by default.',
@@ -228,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Immutable audit logs covering ingest and retrieval',
             whyItMatters:
-              'For each document: who uploaded it, when, source path, hash. For each query: who asked, what was asked (if logging permits), which chunks were retrieved, which document IDs they came from, what answer was returned. Logs must be tamper-evident — append-only, signed, with retention long enough to cover the supervisory authority\'s investigation window.',
+              'For each document: who uploaded it, when, source path, hash. For each query: who asked, what was asked (if logging permits), which chunks were retrieved, which document IDs they came from, what answer was returned. Logs must be tamper-evident — append-only, signed, with retention long enough to cover the supervisory authority\'s investigation window. For the prompt-level audit trail — versioning, changelogs, and rollback — see [prompt version control workflows](https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows).',
           },
           {
             title: 'Encryption at rest and in transit',
@@ -325,8 +351,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The single-user laptop is the easiest pattern to make air-gapped and the hardest to scale.** Right for solo professionals and one-off matter reviews; wrong for anything that needs to outlive a single user or survive their departure.',
         items: [
-          '**Hardware** — a workstation-class laptop with full-disk encryption, a discrete GPU (or a recent unified-memory machine), and at least 32 GB of RAM. The model and embedder must fit in memory alongside the vector store cache.',
-          '**Software** — a self-contained desktop RAG application running locally; an open-source LLM with weights downloaded once and pinned to a hash; an open-source embedder; a local vector store on the encrypted disk.',
+          '**Hardware** — a workstation-class laptop with full-disk encryption, a discrete GPU (or a recent unified-memory machine), and at least 32 GB of RAM. The model and embedder must fit in memory alongside the vector store cache. For hardware requirements and model selection by VRAM, see the [local LLM hardware guide](https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026).',
+          '**Software** — a self-contained desktop RAG application running locally; an open-source LLM with weights downloaded once and pinned to a hash; an open-source embedder; a local vector store on the encrypted disk. For a comparison of open-source models suitable for local RAG, see [top open-source models for Ollama](https://www.promptquorum.com/local-llms/top-open-source-models-ollama).',
           '**Network posture** — air-gapped during work; reconnected only for explicit signed updates. Configure the OS firewall to drop all outbound connections by default and create explicit exceptions for the update workflow.',
           '**Document handling** — source documents on the encrypted disk; a separate per-matter folder structure; weekly encrypted backups to an external drive stored at a different location.',
           '**Audit posture** — the OS-level audit log (login, file access, peripheral events) is the floor. Application-level events are easier in the on-prem server pattern; for the laptop pattern, treat the OS log as the primary record and supplement with manual matter-by-matter notes.',
@@ -357,6 +383,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'On-prem RAG is the pattern most likely to fail for non-technical reasons: a backup that has never been restored, an admin account shared across IT staff, a UPS that nobody has tested, a log forwarder that has been silently dropping events for two months. The technical controls are easier than the operational hygiene.',
+          },
+        ],
+      },
+      vectorDbComparison: {
+        id: 'vector-db-comparison',
+        title: 'Vector Database Options for On-Prem RAG',
+        content:
+          '**The vector store choice rarely makes or breaks compliance — but it does shape operational cost, scale ceiling, and how cleanly the deletion runbook can be implemented.** Most regulated deployments pick one of these six.',
+        columns: ['Vector Database', 'Type', 'EU Self-Hosted', 'Best for RAG Pattern'],
+        rows: [
+          {
+            'Vector Database': '**Chroma**',
+            'Type': 'Open-source, lightweight',
+            'EU Self-Hosted': '✅',
+            'Best for RAG Pattern': 'Laptop + small on-prem',
+          },
+          {
+            'Vector Database': '**Qdrant**',
+            'Type': 'Open-source, performant',
+            'EU Self-Hosted': '✅',
+            'Best for RAG Pattern': 'On-prem server, filtering-heavy',
+          },
+          {
+            'Vector Database': '**Weaviate**',
+            'Type': 'Open-source, full-featured',
+            'EU Self-Hosted': '✅',
+            'Best for RAG Pattern': 'On-prem + hybrid search',
+          },
+          {
+            'Vector Database': '**Milvus**',
+            'Type': 'Open-source, enterprise',
+            'EU Self-Hosted': '✅',
+            'Best for RAG Pattern': 'Large-scale on-prem',
+          },
+          {
+            'Vector Database': '**pgvector**',
+            'Type': 'PostgreSQL extension',
+            'EU Self-Hosted': '✅',
+            'Best for RAG Pattern': 'Teams already on Postgres',
+          },
+          {
+            'Vector Database': '**Pinecone**',
+            'Type': 'Managed SaaS',
+            'EU Self-Hosted': '⚠️ US-hosted',
+            'Best for RAG Pattern': 'Private EU cloud only (with caveats)',
           },
         ],
       },
@@ -403,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       dpia: {
         id: 'dpia-requirements',
-        title: 'When You Need a DPIA — and What It Has to Cover',
+        title: 'DPIA Requirements',
         content:
           '**A Data Protection Impact Assessment (Article 35) is mandatory for processing likely to result in a high risk to data subjects.** Most regulated local RAG falls in scope. Treat the DPIA as the design document, not a post-hoc compliance artefact.',
         items: [
@@ -470,6 +541,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mistake 6: Reusing one workspace for several matters or clients.** Cross-contamination of citations and context is a confidentiality failure even before any external party sees it. One matter or client per collection; separate ACLs; separate retention.',
           '**Mistake 7: Buying air-gap and then plugging in a personal phone for testing.** The air-gap perimeter has to include the people who can carry data across it. Endpoint policy is part of the control, not a separate concern.',
           '**Mistake 8: Treating model and embedder choice as "set and forget".** Each upgrade is a change-management event with DPIA, lineage, and audit-trail implications. Plan for the upgrade workflow before the first production deployment.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[GDPR Full Text (Official)](https://gdpr-info.eu/) — Complete text of the General Data Protection Regulation with article-by-article commentary.',
+          '[EU AI Act Full Text](https://artificialintelligenceact.eu/) — Complete regulation text with risk classification framework.',
+          '[NIST AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — US federal governance framework applicable to AI risk assessment.',
+          '[BDSG-Neu (German Federal Data Protection Act)](https://www.gesetze-im-internet.de/bdsg_2018/) — German implementation of GDPR with sector-specific additions.',
+          '[EDPB Guidelines on DPIA](https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-data-protection-impact-assessment-and-determining_en) — European Data Protection Board guidance on when and how to conduct DPIAs.',
+          '[BfDI (German Federal Commissioner for Data Protection)](https://www.bfdi.bund.de/) — German Federal Commissioner for Data Protection position papers on AI deployment.',
         ],
       },
       faq: {
