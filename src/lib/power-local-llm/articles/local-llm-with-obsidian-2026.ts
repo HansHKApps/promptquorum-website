@@ -1347,4 +1347,451 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Obsidian + ローカルLLM: あなたのボルトを第二の脳に変える5つのプラグイン (2026)',
+    seoTitle: 'Obsidian + ローカルLLM: 2026年の5つプラグイン',
+    intro:
+      '2026年、5つのObsidianプラグインがローカルOllamaバックエンドと組み合わせることで、ボルトを機能する第二の脳に変えます: Smart Connections、Copilot for Obsidian、Text Generator、Local GPT、BMO Chatbot。各プラグインは異なるレイヤーをカバーしています — セマンティック検索、インラインチャット、テンプレート生成、プライバシー重視の会話、軽量なコンテキスト対応チャット。ほとんどのユーザーにとって推奨される組み合わせはSmart Connections + Copilot for Obsidianです: 一方がボルト全体のセマンティック連携を処理し、もう一方がチャットインターフェイスを提供します。このガイドは、ボルト検索品質、生成速度、プロンプトのカスタマイズ、モバイル同期の動作に基づいて5つのプラグインをランク付けし、Ollamaの具体的な設定手順を含みます。',
+    metaDescription:
+      '2026年にOllamaローカルでテストした5つのObsidianプラグイン: Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot。最良の組み合わせ、ボルトサイズ、モバイル同期。',
+    twitterDescription:
+      '2026年のObsidian + ローカルLLM最良の組み合わせ: Smart Connections (ボルトセマンティック検索) + Copilot for Obsidian (チャット)。すべての5つのプラグインはOllamaでテスト済み。モバイル同期の注意事項。',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Qwen3 1.7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (16GB以上のユニファイドメモリ)',
+      'RTX 3060 12GBまたはRTX 4060 8GB搭載PC',
+      'RAM 16GB PC (CPU のみのフォールバック)',
+    ],
+    audience:
+      '1,000～20,000ノートのボルトを運用するObsidianパワーユーザー、ナレッジワーカー、研究者、ライターで、ノートをクラウドサービスに送信することなくAI機能を利用したい方。',
+    readTime: '14分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Obsidian ローカルLLM プラグイン',
+    targetKeywords: [
+      'obsidian ローカル llm',
+      'obsidian ollama プラグイン',
+      'smart connections obsidian ローカル',
+      'copilot for obsidian ローカル',
+      'obsidian 第二の脳 ai',
+      'obsidian プラグイン プライベート llm',
+    ],
+    leadAnswerBlock:
+      '**2026年のほとんどのObsidianユーザーにとって、Smart Connections + Copilot for Obsidianをインストールし、両方をローカルOllamaバックエンドを使用するよう設定してください。** Smart Connectionsは `nomic-embed-text` または `mxbai-embed-large` を介したローカルエンベディングを使用して、ボルト全体のセマンティック連携 (関連ノートサイドバー) を処理します。Copilot for Obsidianはチャットインターフェイスを提供し、`http://localhost:11434/v1` のOllamaのOpenAI互換エンドポイントに設定されます。このペアは、ボルトコンテンツをクラウドに送信することなく、「第二の脳」ユースケースの~80%(セマンティック検索+ノートとのチャット)をカバーしています。テンプレート駆動コンテンツ生成 (日次ジャーナルプロンプト、会議ノート展開) を望む場合は、Text Generatorを3番目のプラグインとして追加してください。Smart Connectionsエンベディングはボルト内の `.smart-env/` に存在します — Obsidian Syncで複数デバイス間で同期しますが、iCloudまたはGitを使用する場合はデバイスごとに再生成する必要があります。',
+    quickAnswerTop: {
+      en: {
+        question: '2026年、ローカルLLMに最適なObsidianプラグイン組み合わせはどれですか?',
+        answer:
+          'Smart Connections + Copilot for Obsidianが推奨される組み合わせです。Smart Connectionsはローカルエンベディング (nomic-embed-text または mxbai-embed-large via Ollama) でボルトセマンティック検索を処理します; CopilotはあなたのボルトのOpenAI互換エンドポイントに設定されたチャットサイドバーを提供します。一緒に、関連ノートの発見とボルトコンテキストでのチャット — 「第二の脳」ユースケースの約80% をカバーしています。テンプレート駆動生成にはText Generatorを3番目のプラグインとして追加してください。Local GPTとBMO Chatbotはシンプルなチャットのみの体験を好むユーザーにはCopilotのより軽い代替案です。すべての5つのプラグインはあらゆるOllamaモデルで動作します; 2026年の16GB RAMシステムに推奨されるチャットモデルはLlama 3.2 3BまたはPhi-4 Miniです。',
+        bullets: [
+          'Smart Connections — セマンティック検索 + 関連ノートサイドバー。ボルト全体の連携に最適。',
+          'Copilot for Obsidian — ボルトコンテキスト付きチャットサイドバー。会話型クエリに最適。',
+          'Text Generator — フロントマター変数でテンプレート駆動生成。繰り返し可能なワークフロー (日次ノート、会議要約) に最適。',
+          'Local GPT — プライバシー重視チャット (現在のノート)。Copilotの軽い代替案。',
+          'BMO Chatbot — ボルトコンテキスト付きミニマリストチャット。Copilotの機能サーフェスなしに単一チャットプラグインを望むユーザーに最適。',
+          '推奨Ollamaモデル: Llama 3.2 3B (チャット)、Phi-4 Mini (チャット、小)、nomic-embed-text または mxbai-embed-large (Smart Connectionsのエンベディング)。',
+          'モバイル同期注意: Smart Connectionsエンベディングは .smart-env/ に存在します — Obsidian Syncで同期、iCloudまたはGitではデバイスごとに再生成。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '重要なポイント', anchor: '#key-takeaways' },
+      { label: '重要な事実', anchor: '#quick-facts' },
+      { label: 'どのプラグイン組み合わせをインストールすべき?', anchor: '#which-plugins' },
+      { label: 'プラグイン比較表', anchor: '#comparison-table' },
+      { label: 'Smart Connections: ボルトセマンティック検索', anchor: '#smart-connections' },
+      { label: 'Copilot for Obsidian: ボルトコンテキスト付きチャット', anchor: '#copilot' },
+      { label: 'Text Generator: テンプレート駆動生成', anchor: '#text-generator' },
+      { label: 'Local GPT: プライバシー重視チャット', anchor: '#local-gpt' },
+      { label: 'BMO Chatbot: 軽量チャット', anchor: '#bmo-chatbot' },
+      { label: '推奨コンボ: Smart Connections + Copilot', anchor: '#recommended-combo' },
+      { label: 'ワークフロー例: Daily Notes、MOCs、執筆支援', anchor: '#workflows' },
+      { label: 'モバイル同期: Obsidian Sync vs iCloud vs Git', anchor: '#mobile-sync' },
+      { label: 'ボルトスケール: 1K、5K、10K、20Kノート', anchor: '#vault-scale' },
+      { label: 'よくある間違い', anchor: '#common-mistakes' },
+      { label: 'リソース', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連リーディング', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Smart Connections + Copilot for Obsidianはほとんどのユーザーに推奨される組み合わせです。** Smart Connectionsはローカルエンベディングでボルトセマンティック検索を処理します; Copilotはボルトコンテキスト付きチャットを処理します。一緒に、クラウド呼び出しなしで「第二の脳」ユースケースの~80%をカバーしています。',
+          '**すべての5つのプラグインは `http://localhost:11434/v1` でOllamaのOpenAI互換エンドポイント経由で動作します。** 各プラグインの「API基本URL」設定または同等の設定をこのアドレスにポイントしてください。Ollamaデフォルトモデル名 (例: `llama3.2:3b`) はプラグインのモデルフィールドに入力するものです。',
+          '**Smart Connectionsは、ボルト全体にエンベディングインデックスを構築する唯一のプラグインです。** これにより、5,000以上のノートでの関連ノート検索が実用的になります。インデックスはボルト内の `.smart-env/` に保存され、Obsidian Syncと同期します; iCloudまたはGitではデバイスごとに再生成してください。',
+          '**Text Generatorは繰り返し可能なワークフロー向けの最高のプラグインです。** 日次ノート要約、会議ノート展開、MOC (コンテンツマップ) 生成は、フロントマター変数を備えたテンプレート経由でシングルキーストロークアクションになります。',
+          '**チャットのみのユーザーの場合、BMO ChatbotはCopilotより軽量です。** インデックスを構築しません — コンテキストは単に現在のノートです。開いているノートについてのみチャットする場合、BMOで十分です。',
+          '**ボルトスケール (Smart Connections + nomic-embed-text の場合):** Mac M3 Proで1Kノートは~2分、5Kは~10分、10Kは~25分、20Kは~75分のインデックス作成。最初の実行後は再インデックス時間が少なります (変更されたノートのみ)。',
+          '**2026年の推奨Ollamaモデル:** チャット — Llama 3.2 3B (デフォルト) またはPhi-4 Mini (小); エンベディング — nomic-embed-text (768次元、高速) または mxbai-embed-large (1024次元、より正確)。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '重要な事実',
+        items: [
+          '**対象プラグイン:** Smart Connections、Copilot for Obsidian、Text Generator、Local GPT、BMO Chatbot。',
+          '**LLMバックエンド:** Ollama (推奨) またはLM Studio — ローカルURLでOpenAI互換エンドポイントを公開するもの。',
+          '**Ollamaデフォルトエンドポイント:** `http://localhost:11434/v1` (チャット) または `http://localhost:11434/api/embeddings` (エンベディング)。',
+          '**推奨チャットモデル:** Llama 3.2 3B、Phi-4 Mini、Gemma 3 4B (16GB RAMシステム); Qwen3 1.7B (8GB RAM)。',
+          '**推奨エンベディングモデル:** nomic-embed-text (768次元、高速)、mxbai-embed-large (1024次元、より正確)。',
+          '**ボルトサイズターゲット:** すべての5つのプラグインは5,000以上のノートで応答性を保ちます; Smart Connections再インデックスは20Kノートを超えるボトルネックです。',
+          '**モバイル互換性:** OllamaがLAN上でアクセス可能な場合、チャットプラグインはObsidian Mobileで動作します; Smart Connectionsエンベディング生成はデスクトップのみで実行されます。',
+        ],
+      },
+      whichPlugins: {
+        id: 'which-plugins',
+        title: 'どのプラグイン組み合わせをインストールすべき?',
+        content:
+          '**2026年のほとんどのObsidianユーザーの場合: Smart Connections (ボルトセマンティック検索) とCopilot for Obsidian (チャットサイドバー) をインストールしてください — 一緒に「第二の脳」ユースケースの~80%をカバーしています。** テンプレート駆動生成を望む場合はText Generatorを追加してください。他は特定のUIを選んでいない限り無視してください。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Smart Connections + Copilot for Obsidianをインストールし、どちらもlocalhost:11434でOllamaを使用するよう設定してください。ボルト全体のセマンティック検索と会話型クエリをカバーするプライベート第二脳スタックが得られます。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Obsidian + AIを2つの仕事と考えてください: 関連ノートを見つける (「他のどのノートがこのアイデアに触れていますか?」) そしてノートについて議論する (「このテーマについて最後のクォーターに何を書きましたか?」)。Smart Connectionsが最初をする; Copilotが2番目をする。両方はOllama経由でローカルLLMを使用するため、何も機械を離れません。繰り返し可能なタスクを実行する場合はText Generatorを追加してください (たとえば、各会議ノートを要約に変える)。特定の理由がない限り、Local GPTとBMO Chatbotは無視してください。',
+          },
+        ],
+        decisionBlock: {
+          title: '決定: どのObsidianプラグイン?',
+          localIf: [
+            'ボルト全体のセマンティック検索が必要 (「関連ノートを見せて」) → Smart Connections',
+            'ノートコンテキスト付きチャットサイドバーが必要 → Copilot for Obsidian',
+            'テンプレート駆動生成が必要 (日次ノート、会議要約) → Text Generator',
+            '現在のノートについてのみチャット (ボルト検索なし) → BMO Chatbot (Copilotより軽量)',
+            '厳密なプライバシー保証と最小機能が必要 → Local GPT',
+          ],
+          cloudIf: [
+            'すべてのチャット応答でGPT-4oの品質が必要 → クラウドの同等品 (ローカルスタックは~70%の容量に達します)',
+            'ボルトがローカルネットワーク呼び出しをブロックする管理クラウドサービス上にある → クラウドプラグイン',
+            'Obsidian Mobileアプリ内のiOSネイティブAI機能がLANアクセスなしで必要 → 2026年ではまだ実用的ではありません (モバイルはTailscaleなしでlocal hosLLMに到達できません)',
+          ],
+          quick: [
+            '推奨組み合わせ: Smart Connections + Copilot for Obsidian',
+            'テンプレートに追加: Text Generator',
+            '軽量代替案: BMO Chatbot (チャットのみ)',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Smart ConnectionsとCopilot for Obsidianを1つずつインストールしてください。Smart Connectionsは初回インストール時にエンベディングインデックスを構築する必要があります (ボルトサイズによって2～75分)。Copilotを追加する前に完了させてください (初期インデックス中のCPU競合を避けるため)。両方が実行されたら、RAMの使用量は低い (~200～400MB組み合わせ) — Ollamaが重いプロセスで、プラグインではありません。',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'プラグイン比較表',
+        content:
+          '**5つのプラグインは、ほとんどのユーザーにとって重要な4つの軸で異なります: ボルト検索の深さ、生成柔軟性、モバイル互換性、機能サーフェス。** Smart ConnectionsとCopilotは交換不可能です — 異なる問題を解決し、互いに補完します。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Smart Connectionsは埋め込みでボルト全体を検索する唯一のプラグインです; 他の4つはチャットまたは生成ツールで、現在のノートまたは特定の選択肢に対して機能します。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'これら5つのうち2つ (Smart Connections、Copilot) はボルト全体のコンテキストを処理します。他の3つ (Text Generator、Local GPT、BMO Chatbot) は現在のノートまたは特定の選択肢に対して機能します。複数をインストールする最も一般的な理由は、Smart Connectionsが独自のチャットUIを持たないことです — ボルトと実際に会話するために、Copilotまたはより軽いチャットプラグインのいずれかが必要です。',
+          },
+        ],
+        columns: ['プラグイン', 'ボルト検索', '生成', 'モバイル同期', '最適用途'],
+        rows: [
+          { 'プラグイン': 'Smart Connections', 'ボルト検索': 'はい (エンベディングインデックス)', '生成': 'いいえ (検索のみ)', 'モバイル同期': 'Obsidian Syncで同期; iCloud/Gitではデバイスごとに再生成', '最適用途': 'ノート間のセマンティック連携' },
+          { 'プラグイン': 'Copilot for Obsidian', 'ボルト検索': 'はい (vault QAモード)', '生成': 'はい (チャット+インライン)', 'モバイル同期': 'プラグイン同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': 'インラインチャット+執筆支援' },
+          { 'プラグイン': 'Text Generator', 'ボルト検索': 'いいえ', '生成': 'はい (テンプレート駆動)', 'モバイル同期': 'テンプレート同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': '繰り返し可能なテンプレート生成' },
+          { 'プラグイン': 'Local GPT', 'ボルト検索': 'いいえ', '生成': 'はい (チャット)', 'モバイル同期': 'プラグイン同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': '現在のノートでプライバシー重視チャット' },
+          { 'プラグイン': 'BMO Chatbot', 'ボルト検索': 'いいえ', '生成': 'はい (チャット)', 'モバイル同期': 'プラグイン同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': '現在のノートで軽量チャット' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'モバイル使用の場合、制約はプラグインではなく、Obsidian MobileがOllamaに到達できるかどうかです。解決策: (1) Ollamaをホームサーバーで実行し、LANで静的IPに公開し、プラグイン内でlocalhost代わりにそのIPを入力する、(2) TailscaleまたはメッシュVPNを使用してホームOllamaにどこからでも到達する、(3) AI機能がホームWi-Fiの時のみ機能することを受け入れる。',
+          },
+        ],
+      },
+      smartConnections: {
+        id: 'smart-connections',
+        title: 'Smart Connections: ボルトセマンティック検索',
+        content:
+          '**Smart Connectionsは2026年、ボルト全体にエンベディングインデックスを構築する唯一のObsidianプラグインです。** これにより、5,000以上のノートで「関連ノートを見せて」が実用的になり、プラグインエコシステムで「第二の脳」を実現する最大のドライバーです。',
+        items: [
+          '**実行内容:** 各ノート (および設定可能なセクション) に対してベクトルエンベディングを生成し、アクティブノートの意味的に関連するノートの「Smart Connections」サイドバーを表示します。',
+          '**インストール:** 設定 → コミュニティプラグイン → 参照 → 「Smart Connections」 → インストール+有効化。作成者: Brian Petro。',
+          '**Ollamaの設定:** 設定 → Smart Connections → エンベディングモデル → 「Local (Ollama)」選択 → `http://localhost:11434/api/embeddings` 入力 → モデル名 `nomic-embed-text` (または `mxbai-embed-large`)。',
+          '**初回インデックス:** プラグインは各ノートを埋め込みます。Mac M3 Proでnomic-embed-textの時間: 1Kノート~2分、5K~10分、10K~25分、20K~75分。編集後の再インデックスは増分 (変更ノートのみ)。',
+          '**ストレージ:** インデックスはボルト内の `.smart-env/` に存在します。Obsidian Syncでクリーンに同期; iCloud/Gitではデバイスごとに再生成してください (インデックスはプラットフォーム固有バイナリ)。',
+          '**最高のエンベディングモデル2026:** `nomic-embed-text` (137Mパラメータ、768次元、高速) ほとんどのユーザー向け。`mxbai-embed-large` (335Mパラメータ、1024次元) は技術的コンテンツでより正確ですが、インデックス時間は~2倍かかります。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '初回インデックス完了後、Smart Connectionsをバックグラウンドで実行し続けてください。後の編集は増分再埋め込みをトリガーします — 通常は保存済みノート当たり1秒未満。集中編集セッション中にインデックスを一時停止してOllamaとのCPU競合を避けることもできます。',
+          },
+        ],
+      },
+      copilot: {
+        id: 'copilot',
+        title: 'Copilot for Obsidian: ボルトコンテキスト付きチャット',
+        content:
+          '**Copilot for ObsidianはSmart Connectionsが持たないチャットサイドバーを提供します。** Ollamaを使用するよう設定して、ボルトをコンテキストとして使用して質問に答え、インラインコンテンツを生成し、選択肢にカスタムプロンプトを実行できるプライベートチャットアシスタントを取得します。',
+        items: [
+          '**実行内容:** チャットサイドバー、vault QAモード (取得ノートでチャット)、インラインチャット、選択肢でカスタムプロンプト、コマンドパレットコマンド。',
+          '**インストール:** 設定 → コミュニティプラグイン → 参照 → 「Copilot」by Logan Yang → インストール+有効化。',
+          '**Ollamaの設定:** 設定 → Copilot → APIの設定 → 「カスタムOpenAI」または「Ollama」プロバイダー → API基本URL `http://localhost:11434/v1` → モデル `llama3.2:3b` (またはあらゆるOllamaモデル)。',
+          '**Vault QAモード:** Copilotはその独自エンベディングパイプライン (Smart Connectionsから独立) を使用して関連性の高いノートを取得し、取得チャンクをチャットモデルに送信します。Copilot設定でエンベディングを設定 — `http://localhost:11434/api/embeddings` をポイント、`nomic-embed-text` 選択。',
+          '**インラインコマンド:** ノート内のテキストを選択 → Cmd/Ctrl+P → 「Copilot: ...」 — チャットサイドバーを開かずに言い換え、要約、またはカスタムプロンプトテンプレートを適用。',
+          '**最適用途:** チャットインターフェイスとボルト対応検索の両方を希望するユーザー。現在のノートについてのみチャットする場合、BMO Chatbotはより軽量。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'CopilotはSmart Connectionsから独立した独自のエンベディングインデックスを保守します。両方を実行すると、同じボルト上に2つのインデックスと約2倍のディスク領域 (~5Kノート当たり200MBのベクトルデータ) が意味します。ディスク容量が重要な場合、CopilotをSmart Connectionsインデックスを使用するよう設定するか、2026年5月時点で2つのプラグインが埋め込みを共有しないことを受け入れてください。',
+          },
+        ],
+      },
+      textGenerator: {
+        id: 'text-generator',
+        title: 'Text Generator: テンプレート駆動生成',
+        content:
+          '**Text Generatorは繰り返し可能なワークフロー向けの最高のプラグインです: 日次ノート拡張、会議ノート要約、MOC生成、カスタム形式出力。** テンプレートはフロントマター変数とMarkdownを使用するため、単一のテンプレートをあらゆるノート上でホットキーでトリガーできます。',
+        items: [
+          '**実行内容:** ローカルLLMを使用して、現在のノート (または選択) に対してカスタムプロンプトテンプレートを実行します。テンプレートはフロントマター変数、現在の日付挿入、選択キャプチャをサポートします。',
+          '**インストール:** 設定 → コミュニティプラグイン → 参照 → 「Text Generator」 → インストール+有効化。作成者: nhaouari。',
+          '**Ollamaの設定:** 設定 → Text Generator → プロバイダー → 「Ollama」または「カスタム」 → エンドポイント `http://localhost:11434/v1` → モデル `llama3.2:3b`。',
+          '**テンプレート:** 設定フォルダ (例: `Templates/`) 内のMarkdownファイルとして保存されます。テンプレートは `{{title}}`、`{{selection}}`、`{{date}}` プレースホルダーを持つプロンプトです。',
+          '**ホットキーワークフロー:** 特定のテンプレートにホットキーを割り当てます (Cmd/Ctrl+T → 「テンプレートから生成」 → テンプレート選択)。1つのキーストロークが現在のノートでテンプレートを実行します。',
+          '**最適用途:** 何十回も行うワークフロー — 日次ジャーナルプロンプト、週間レビュー質問、会議要約、論文読み取りノート。',
+        ],
+        promptExamples: [
+          {
+            label: 'Text Generator テンプレート: 日次ノート要約作成者',
+            text: '---\nname: Daily summary\n---\nSummarise the following daily note in three concise bullet points. Focus on decisions made, blockers identified, and action items for tomorrow.\n\nDaily note ({{date}}):\n{{content}}\n\nSummary:',
+          },
+          {
+            label: 'Text Generator テンプレート: MOC (コンテンツマップ) ジェネレータ',
+            text: '---\nname: MOC for tag\n---\nGenerate a Map of Content for all notes tagged with `#{{selection}}`. Group related notes into 3–5 thematic clusters, with a one-sentence description per cluster and a list of the notes inside each cluster.\n\nNotes tagged #{{selection}}:\n{{vault_search_result tag={{selection}}}}\n\nMOC:',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Text GeneratorテンプレートをObsidian QuickAddと組み合わせて「Daily Review」シーケンスを構築してください: 単一のQuickAddコマンドが今日の日次ノートを開き、日次要約テンプレートを実行し、結果を挿入します。3つのプラグイン (Text Generator + QuickAdd + 日付数学用Templater) でトリガーに2秒、完了に10秒のワークフローを構築できます。',
+          },
+        ],
+      },
+      localGpt: {
+        id: 'local-gpt',
+        title: 'Local GPT: プライバシー重視チャット',
+        content:
+          '**Local GPTは、ノートコンテンツが機械を離れないべきという原則の周りに構築されたチャットプラグインです。** 機能的にはCopilot for Obsidianより単純です — vault QAモード、テンプレートライブラリなし — しかしプライバシーのポーズについて最も明確です。',
+        items: [
+          '**実行内容:** ローカルLLMを使用して現在のノート (または選択テキスト) とチャットします。プラグインではクラウドオプションは存在しません — ローカルプロバイダーのみ。',
+          '**インストール:** 設定 → コミュニティプラグイン → 参照 → 「Local GPT」 → インストール+有効化。作成者: pfrankov (リストで確認してください — 複数のプラグインに類似の名前があります)。',
+          '**Ollamaの設定:** 設定 → Local GPT → プロバイダー → 「Ollama」 → URL `http://localhost:11434` → モデル `llama3.2:3b`。',
+          '**チャットスコープ:** アクティブノートまたは選択テキストのみ。エンベディングインデックスはありません — コンテキストは明確に送信するものです。',
+          '**最適用途:** 現在のノートでチャット、可能な限り最小の機能サーフェスを好む、クラウドサービスを誤って呼び出せないプラグインを望むユーザー。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Copilot for Obsidianをローカルに留まると信頼する場合 (クラウドまたはローカルで設定可能)、Copilotを使用してください。プラグインコード自体がクラウド呼び出しを不可能にすることを望む場合、Local GPTを使用してください — その設計制約は「クラウドプロバイダーなし、決して」です。これはヘルスケア、法律、ジャーナリズムのワークフローでは有意義な区別です (偶発的なクラウドエグレスの可能性が問題の場合)。',
+          },
+        ],
+      },
+      bmoChatbot: {
+        id: 'bmo-chatbot',
+        title: 'BMO Chatbot: 軽量チャット',
+        content:
+          '**BMO Chatbotはミニマリストチャットプラグインです: サイドバー、モデルセレクタ、エンドポイントの設定フィールド。** ボルト検索、テンプレート、インラインコマンドなし。アクティブノートについてのみチャットする場合、BMOが最も軽量。',
+        items: [
+          '**実行内容:** コンテキストとしてアクティブノートを含むチャットサイドバー。',
+          '**インストール:** 設定 → コミュニティプラグイン → 参照 → 「BMO Chatbot」 → インストール+有効化。作成者: longy2k。',
+          '**Ollamaの設定:** 設定 → BMO Chatbot → API → URL `http://localhost:11434/v1` → モデル `llama3.2:3b`。',
+          '**コンテキスト処理:** アクティブノートは自動的にチャットコンテキストに含まれます。ノートの切り替えはコンテキストを切り替えます。',
+          '**最適用途:** 最小セットアップを望むユーザー、エンベディングインデックスなし、狭いObsidianサイドバーにフィットするUI。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'BMO Chatbotは「現在のノートについてのみチャットしたい」に適しています。「ボルト全体を検索したい」または「すべての会議ノートでこのプロンプトテンプレートを実行したい」を見つけたら、BMOを超えました — Copilot for Obsidian (vault QA) またはText Generator (テンプレート) に切り替えてください。',
+          },
+        ],
+      },
+      recommendedCombo: {
+        id: 'recommended-combo',
+        title: '推奨コンボ: Smart Connections + Copilot',
+        content:
+          '**Smart Connections + Copilot for Obsidianをインストール、両方ともOllamaをポイントしてください。** この組み合わせは、Obsidianユーザーが実際に望む2つの異なるAIジョブを処理します — ボルトセマンティック検索とボルトコンテキスト付きチャット — そして「第二の脳」ユースケースの~80%をカバーし、ノートをクラウドに送信しません。',
+        numberedItems: [
+          '**Ollamaをインストール** マシンに: `brew install ollama` (macOS) またはollama.comから (Windows/Linux)。チャットモデル引き出す: `ollama pull llama3.2:3b`。エンベディングモデル引き出す: `ollama pull nomic-embed-text`。',
+          '**Ollamaを起動:** インストール後、通常バックグラウンドサービスとして起動します。確認: `curl http://localhost:11434/api/tags` は、インストール済みモデルでJSONを返す。',
+          '**Smart Connectionsをインストール** Obsidian内 → エンベディング設定 `http://localhost:11434/api/embeddings` でOllamaを使用するよう設定、モデル `nomic-embed-text`。インデックス実行 (ボルトサイズによって2～75分)。',
+          '**Copilot for Obsidianをインストール** → プロバイダー「Ollama」または「カスタムOpenAI」に設定 → API基本URL `http://localhost:11434/v1` → チャットモデル `llama3.2:3b` → エンベディングモデル `nomic-embed-text` (vault QA用)。',
+          '**テスト:** ノートを開く → Smart Connectionsサイドバーで関連ノートを確認 → Copilotチャットを開く → ボルト知識を必要とする質問を尋ねる (「[トピック] について書いたものを要約してください」) → 応答が実際にノートを参照しているか確認。',
+          '**オプション3番目プラグイン:** 繰り返し可能なワークフローがある場合Text Generatorを追加 (日次ノート要約、会議展開、MOC生成)。同じOllamaエンドポイントで設定します。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '一般的な間違いは、CopilotをあるモデルとSmart Connectionsを別のモデルで設定してから、応答が一貫していない理由を疑問に思うことです。両方で同じチャットモデルを使用してください (ほとんどのユーザーはLlama 3.2 3B; 8GB RAMシステムではPhi-4 Mini)。異なるモデルを使用することが理にかなっている唯一の場所はエンベディングモデルです — それは常にチャットモデルから別のモデルです。',
+          },
+        ],
+      },
+      workflows: {
+        id: 'workflows',
+        title: 'ワークフロー例: Daily Notes、MOCs、執筆支援',
+        content:
+          '**組み合わせを実際に示す3つの具体的なワークフロー。** 各々はSmart Connections (ボルトコンテキスト用) とCopilot (チャット用) の上に構築、テンプレート作業用Text Generator追加。',
+        items: [
+          '**日次ノート要約:** 日次ノート内のすべてを選択 → Copilotインラインコマンド → 「この日を3点で要約してください、決定、ブロッカー、明日のアクション項目に焦点」。出力は選択の下に置き換えるか追加します。Text Generatorテンプレートとしてプロンプトを保存して、シングルキーストロークアクションにします。',
+          '**MOC (コンテンツマップ) 生成:** タグページまたはトピックノートを開く → Copilot → 「このトピックのコンテンツマップを生成し、関連ノートを3～5つのテーマクラスターにグループ化します。Smart Connectionsサイドバーを使用して関連ノートを識別します。」→ 確認編集。Smart Connectionsが発見レイヤーを提供; Copilotが構造を合成。',
+          '**コンテキスト執筆支援:** ノートを起草しながら、Copilotチャットを開く → 「[トピック] について書いたノートを考えると、どのような視点が不足していますか?」Copilot vault QA経由で関連ノートを取得し、ギャップを提案。単一視点ドラフトから脱出するために役立つ。',
+          '**週間レビュー:** 過去7日間の日次ノートに対して実行するText Generatorテンプレート → 「週を3ポイントで要約: 進捗、ブロッカー、テーマ」ホットキーに バインド シングルキーストロークレビュー。',
+          '**論文/書籍読取ノート:** ソースノートを開く → Copilotインラインコマンド → 「このノートから間隔反復用3つのAnkiスタイル質問/回答ペアを生成します。」出力はSpaced Repetitionプラグインにパイプ可能。',
+          '**眠いノートの連携:** Smart Connectionsサイドバーは数ヶ月触れられないままの関連ノートを表示 — 古い素材を再検討し、現在の作業に接続する促し。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '最も過小評価されたワークフローは毎日のSmart Connectionsレビューです。毎朝、日次ノートを開く → Smart Connectionsサイドバーで予期しない関連ノートをアーカイブから確認。プラグインは同じテーマに触れて忘れられたノートをサーフェスします — それはナレッジワーカーが第二の脳から期待する「思考パートナー」効果です。',
+          },
+        ],
+      },
+      mobileSync: {
+        id: 'mobile-sync',
+        title: 'モバイル同期: Obsidian Sync vs iCloud vs Git',
+        content:
+          '**Obsidian Mobileでのプラグイン互換性は2つの要因に依存します: ボルトがどのように同期し、電話がローカルOllamaサーバーに到達できるかどうか。** Smart Connectionsエンベディングが最も同期に敏感なコンポーネント。',
+        items: [
+          '**Obsidian Sync (有料):** クリーンなパス。`.smart-env/` フォルダはデバイス間でエンドツーエンド暗号化で同期するため、Smart Connectionsはデバイスごとに再インデックスする必要がありません。プラグイン設定も同期します。モバイルチャットプラグインはまだOllamaへのLANアクセスが必要です (下記)。',
+          '**iCloud Drive:** ボルトが同期しますが、`.smart-env/` はプラットフォーム固有バイナリで、iOS/macOS/Windows/Android間で腐敗または不正な同期の可能性があります。実用的解決策: デバイスごとにSmart Connectionsを再インデックス、または `.smart-env/` を同期から除外し、モバイルが意味的サイドバーを持たないことを受け入れます。',
+          '**Git (iOS経由Working Copy、Android経由Termux):** プレーンテキストボルトはクリーンに同期; `.smart-env/` を `.gitignore` に追加してください (バイナリインデックスはリポジトリを膨張させ、マージ競合を作成するため)。デバイスごとに再インデックス。',
+          '**モバイルからOllamaへのLANアクセス:** デフォルトでOllamaは `localhost:11434` でのみリッスン — 電話からはアクセス不可。Obsidian MobileでAIプラグインを使用するには: Ollamaを `OLLAMA_HOST=0.0.0.0:11434 ollama serve` でLANにバインド、デスクトップのLAN IP (例: `192.168.1.20`) を検出、プラグイン内でlocalhostの代わりにそのIPを入力。電話はホームWi-Fiにあること。',
+          '**Tailscale/メッシュVPN:** 電話がホームWi-FiのみならずどこからでもホームOllamaに到達できるようにします。Tailscaleは2026年で最も一般的なオプション — デスクトップと電話にインストール、プラグイン設定でTailscale IPを使用。',
+          '**Smart Connectionsエンベディング生成はデスクトップのみで実行されます。** Obsidian Syncがインデックスを移動したとしても、インデックスはどこかで作成される必要があります — それは常にデスクトップクラスマシンです。モバイルは同期インデックスを関連ノート検索の読み取り専用参照として使用します。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'iCloudまたはGitをボルト同期に使用し、複数デバイスでSmart Connectionsを使用したい場合、クリーンなパスはあるデバイス (メインデスクトップ) を「インデクサー」として指定し、Smart Connectionsが完全にそこのみで機能することを受け入れることです。他のデバイスでは古いインデックス (iCloud) または結局インデックスなし (`.gitignore` に `.smart-env/` のGit) があります。Obsidian Syncがこれを正しく処理する唯一のオプションです。',
+          },
+        ],
+      },
+      vaultScale: {
+        id: 'vault-scale',
+        title: 'ボルトスケール: 1K、5K、10K、20Kノート',
+        content:
+          '**すべての5つのプラグインは5,000以上のノートで応答性を保ちます; 20Kノートを超えるボトルネックはSmart Connections再インデックス時間で、クエリレイテンシーではありません。** 下の現実的な数字はMac M3 Pro (16GB統一メモリ)、`nomic-embed-text` エンベディング、Llama 3.2 3Bチャットで測定されました。',
+        columns: ['ボルトサイズ', 'Smart Connections初回インデックス', '変更ごと再インデックス', 'チャットレイテンシ (Copilot)', 'ノート'],
+        rows: [
+          { 'ボルトサイズ': '1,000ノート', 'Smart Connections初回インデックス': '~2分', '変更ごと再インデックス': '<1秒', 'チャットレイテンシ (Copilot)': '~1-2秒最初トークン', 'ノート': 'モダンハードウェアで快適。' },
+          { 'ボルトサイズ': '5,000ノート', 'Smart Connections初回インデックス': '~10分', '変更ごと再インデックス': '<1秒', 'チャットレイテンシ (Copilot)': '~1-2秒最初トークン', 'ノート': 'ほとんどのナレッジワーカーのスイートスポット。' },
+          { 'ボルトサイズ': '10,000ノート', 'Smart Connections初回インデックス': '~25分', '変更ごと再インデックス': '~1-2秒', 'チャットレイテンシ (Copilot)': '~2-3秒最初トークン (vault QA検索は~500ms追加)', 'ノート': 'まだ完全に使用可能; 速度低下を気づいたら分割を考慮。' },
+          { 'ボルトサイズ': '20,000ノート', 'Smart Connections初回インデックス': '~75分', '変更ごと再インデックス': '~2-4秒', 'チャットレイテンシ (Copilot)': '~3-5秒最初トークン', 'ノート': '初回インデックスを夜間に計画します。`.smart-env/` ディスク使用量 ~800MB-1.2GB。' },
+          { 'ボルトサイズ': '50,000+ノート', 'Smart Connections初回インデックス': '4-8時間', '変更ごと再インデックス': '~5-10秒', 'チャットレイテンシ (Copilot)': '~5-10秒最初トークン', 'ノート': '実用的限界。品質が速度より重要な場合はサブボルトまたはmxbai-embed-largeへのアップグレードを考慮。' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'ボルトサイズは日々の応答性より初回インデックスに大きい影響があります。初回インデックス後、再埋め込みは変更ノートのみに発生 — 通常は保存済みノート当たり1秒未満、20Kノートでさえ。スロー初回体験は単回コストです。大きなボルトの場合、初回インデックスを夜間に実行してください。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'よくある間違い',
+        items: [
+          '**2つ異なるチャットモデルで2つプラグイン設定。** Smart Connectionsは生成しません、しかしCopilot、Text Generator、Local GPT、BMOは生成します。各々で異なるモデル使用すると応答が一貫していません。チャットモデルを1つ選択 (ほとんどのユーザーはLlama 3.2 3Bがデフォルト) してすべてのチャットプラグインで設定。',
+          '**`.gitignore` なしでGit同期ボルトに `.smart-env/` 追加。** Smart Connectionsインデックスはバイナリで毎回変更。`.gitignore` なしで、巨大なGit履歴と絶え間ないマージ競合。`.smart-env/` を `.gitignore` に追加し、デバイスごとに再インデックス。',
+          '**モバイルSmart Connectionsが独自のインデックスを構築することを期待。** エンベディング生成はデスクトップクラスマシンが必要。モバイルは同期インデックス (Obsidian Sync) または無インデックス (iCloud/Git) を使用。相応に計画。',
+          '**プラグインをモバイルデバイスから `http://localhost:11434/v1` にポイント。** モバイルはデスクトップのlocalhostに到達できません。Ollamaをランアドレス IP にバインド (`OLLAMA_HOST=0.0.0.0:11434`) してプラグイン設定でそのIPを使用 — またはネットワーク外アクセス用Tailscale。',
+          '**同じボルト上でSmart ConnectionsとCopilot両方インデックス実行。** 2つの個別インデックスは約2倍のディスク容量と CPU消費 (~5Kノート当たり200MBベクトルデータ)。ディスク圧力が重要なら、Smart Connections検索用に設定してCopilot使用 (上級 — CopilotのVector store検索設定の編集が必要)。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'リソース',
+        items: [
+          'Smart Connections — [github.com/brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections) (オープンソースObsidianプラグイン).',
+          'Copilot for Obsidian — [github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot) (オープンソースObsidianプラグイン).',
+          'Text Generator — [github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin) (オープンソースObsidianプラグイン).',
+          'Ollama — [ollama.com](https://ollama.com) および [github.com/ollama/ollama](https://github.com/ollama/ollama) (ローカルLLM実行時).',
+          'Obsidian Mobile同期アーキテクチャ — [help.obsidian.md](https://help.obsidian.md) およびObsidian Syncドキュメント。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'どのObsidianプラグインがOllamaで最高に機能しますか?',
+            a: 'ほとんどのユーザー向け: Smart Connections (ボルトセマンティック検索) + Copilot for Obsidian (チャット)。両方はOllamaエンドポイントをポイント (チャット `http://localhost:11434/v1`、エンベディング `http://localhost:11434/api/embeddings`)。Smart Connectionsは関連ノート発見処理; Copilotはボルトコンテキスト会話型クエリ処理。繰り返し可能なテンプレートワークフローがある場合はText Generatorを3番目プラグインとして追加。',
+          },
+          {
+            q: 'プラグインは10,000ノートボルトを処理できますか?',
+            a: 'はい。Smart Connectionsはmac M3 Proで初回インデックスに~25分、その後1-2秒/変更。Copilot vault QAレイテンシ ~2-3秒最初トークン。20Kノートで~75分初回インデックス (夜間実行)。50K+ノートでは4-8時間かかり、サブボルト分割を考慮してください。',
+          },
+          {
+            q: 'これらプラグインはモバイルに同期しますか?',
+            a: 'プラグイン自体はObsidianプラグイン同期経由で同期します。制約: (1) Smart Connectionsエンベディングインデックス — Obsidian Syncでクリーンに同期、iCloudまたはGitではデバイスごと再インデックスが必要; (2) チャットプラグインはOllamaに到達する必要があります (LANアクセスはデスクトップのLAN IP後 `0.0.0.0` にバインド、またはTailscaleのようなメッシュVPN)。',
+          },
+          {
+            q: '複数AI プラグインを一緒に使用できますか?',
+            a: 'はい。Smart Connections + Copilotが推奨組み合わせ。テンプレート用Text Generator追加が一般的。3つ以上のチャットプラグイン (Copilot + Local GPT + BMO) は冗長 — すべて同じジョブをする。チャットプラグインを1つ選択してそのまま。',
+          },
+          {
+            q: 'ノート内での執筆にはどのプラグインが最高ですか?',
+            a: 'Copilot for Obsidian — インラインコマンド (Cmd/Ctrl+P → Copilot → 言い換え/要約/カスタムプロンプト) がありテキスト選択で機能します。Text Generatorもテンプレート経由の繰り返し可能な執筆タスクで強力。アドホック執筆支援 (「このパラグラフをより形式的に言い直して」) の場合はCopilotが速い。構造化生成 (「このテンプレートを使用して各会議ノートを要約に変える」) の場合はText Generatorが良い。',
+          },
+          {
+            q: 'ボルト全体でどう prompt しますか?',
+            a: 'Copilot for Obsidian vault QAモードを使用。関連最高のノートを検索するエンベディングインデックス (Smart Connectionsに同様) を使用してから、その chunk をチャットモデルに送信。Copilot設定のエンベディングを設定してローカルOllamaをポイント。Smart Connections自体はチャット UI を持たない — 関連ノート表示しますが合成しません。',
+          },
+          {
+            q: 'これらを日次ジャーナリングに使用できますか?',
+            a: 'はい。2つの強いパターン: (1) Smart Connectionsサイドバーは今日の日次ノート開いた時にアーカイブから忘れられた関連ノートをサーフェス — 「思考パートナー」効果。(2) Text Generatorテンプレートが日没に実行して日次ノート3ポイントに要約 (決定、ブロッカー、アクション項目)。両方組み合わせが日次ジャーナリングをより熟考させます。',
+          },
+          {
+            q: 'プラグインはObsidian更新を生き残りますか?',
+            a: '一般にはい — よく保守されたプラグイン (Smart Connections、Copilot、Text Generator) は主要Obsidian リリース内数日で更新。保守不足プラグインは時々ラグ。プラグインがObsidian更新後壊れた場合はそのGitHub Issues ページをチェック; fix は通常メンテナー リリース1-2週内。プラグインマニフェストは最小Obsidian互換性を宣言。',
+          },
+          {
+            q: 'どれが最高のコミュニティサポートですか?',
+            a: 'Smart Connectionsは2026年で最大で最も活発なコミュニティ (~5K Discordメンバー、定期的デベロッパーコール)。Copilot for Obsidianは強いGitHub Issuesコミュニティと活発なメンテナー (Logan Yang)。Text Generatorはより小さいが関心あるコミュニティ。Local GPTと BMO Chatbotは小さいコミュニティ — 安定使用は良好、問題解決は遅い。',
+          },
+          {
+            q: 'AIプラグインを別マシンで実行できますか?',
+            a: 'はい。ホームサーバーでOllamaを実行 (ミニPC、NAS、または専用ワークステーション)、`OLLAMA_HOST=0.0.0.0:11434 ollama serve` でLAN にバインド、各プラグイン設定にサーバーのLAN IP (例: `http://192.168.1.20:11434/v1`) を入力。低パワーノートパソコンまたはモバイルデバイスがホームサーバーで実行中フルサイズ70Bモデル使用可能。Tailscaleで組み合わせてホームWi-Fi外でも動作。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連リーディング',
+        items: [
+          '[LogseqとJoplinでのローカルLLM](/power-local-llm/local-llm-with-logseq-and-joplin?lang=ja) — ObsidianよりLogseqやJoplinを好むリーダーの関連オープンソース代替案。',
+          '[ローカルLLM個人ナレッジベース2026](/power-local-llm/local-llm-personal-knowledge-base-2026?lang=ja) — Obsidianが流入する広いPKBアーキテクチャ; RAG層、タギング戦略、10K項目ワークフロー対応。',
+          '[30分でPDFへのローカルRAGを構築 (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja) — Smart Connectionsのようなセマンティックプラグインを支えるRAG層; エンベディング選択の有用な背景。',
+          '[ローカルLLMsで小説とスクリーンプレイを起草 (2026)](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=ja) — ロングフォーム執筆用起草レイヤーとしてのObsidian。',
+          '[最高のローカルLLMs 2026](/local-llms/best-local-llms-2026?lang=ja) — これらプラグインの背後のチャットとエンベディングモデルを選ぶための広いモデル機関。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory-2026?lang=ja) — Ollama、Smart Connections、Copilot、このスタックの他のコンポーネントのディレクトリリスティング。',
+        ],
+      },
+    },
+  },
 }
