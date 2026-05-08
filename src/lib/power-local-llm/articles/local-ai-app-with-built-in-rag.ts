@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Einfachste Desktop-Apps',
+    theme: 'Easiest Desktop Apps',
     title: 'Lokale KI-Apps mit integriertem RAG: Chat mit Ihren Dateien (ohne Setup)',
     seoTitle: 'Integrierte RAG-Apps 2026: PDFs lokal durchsuchen, keine Vektor-DB',
     metaDescription:
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Applications Desktop les plus simples',
+    theme: 'Easiest Desktop Apps',
     title: 'Applications IA locales avec RAG intégré : Discutez avec vos fichiers (sans configuration)',
     seoTitle: 'Applications RAG intégrées 2026 : PDFs locaux sans base de données vectorielle',
     metaDescription:
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: '最も簡単なデスクトップアプリ',
+    theme: 'Easiest Desktop Apps',
     title: 'ローカルAIアプリ（内蔵RAG対応）：ファイルとチャット（セットアップ不要）',
     seoTitle: '内蔵RAGアプリ 2026 : ローカルPDF検索、ベクトルDB不要',
     metaDescription:
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: '最简单的桌面应用',
+    theme: 'Easiest Desktop Apps',
     title: '内置RAG的本地AI应用：与文件聊天（无需配置）',
     seoTitle: '内置RAG应用 2026：本地PDF查询，无需向量数据库',
     metaDescription:
@@ -2823,7 +2823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '内置RAG处理扫描PDF（OCR）吗？',
-            a: '三个都不处理仅图像的扫描PDF，2026年5月。它们通过PDF文本层提取文本，所以没有文本层的扫描PDF返回零块。使用Tesseract OCR（免费）或ocrmypdf等工具先添加文本层，然后将OCR'​​d PDF放入应用。AnythingLLM对内置Tesseract集成有开放的功能请求。',
+            a: '三个都不处理仅图像的扫描PDF，2026年5月。它们通过PDF文本层提取文本，所以没有文本层的扫描PDF返回零块。使用Tesseract OCR（免费）或ocrmypdf等工具先添加文本层，然后将OCR\'d PDF放入应用。AnythingLLM对内置Tesseract集成有开放的功能请求。',
           },
           {
             q: '内置RAG变慢之前的最大文档大小是多少？',
