@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Logseq and Joplin are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against Ollama for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends note content to OpenAI; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on AI plugin maturity, sync-without-cloud paths, mobile compatibility, and the migration path from Notion, with concrete configuration steps for Ollama.',
     metaDescription:
-      'Logseq and Joplin paired with Ollama in 2026: logseq-copilot vs Jarvis (Joplin) plugins tested. Sync-without-cloud setup, GDPR posture, mobile plugin gap, Notion migration.',
+      'Logseq + logseq-copilot vs Joplin + Jarvis on Ollama: private alternative to Notion AI. Cloud-free sync, GDPR posture, mobile plugin gap. 2026.',
     twitterDescription:
       'Open-source notes + local AI without cloud: Logseq with logseq-copilot, Joplin with Jarvis, both on Ollama. Mobile plugin gap explained. Notion migration path. GDPR-friendly by default.',
     current_models_mentioned: [
