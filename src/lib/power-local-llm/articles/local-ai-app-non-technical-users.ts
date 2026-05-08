@@ -1350,4 +1350,338 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: '桌面初学者应用',
+    title: '初学者本地AI应用5个：零终端，立即可用',
+    seoTitle: '初学者本地AI应用5个(无需终端，2026)',
+    intro: 'GPT4All、Jan、Msty、AnythingLLM Desktop和LM Studio是五个本地AI应用，非技术用户可在10分钟内安装并使用。零终端、零Python、零Docker。每个应用都最适合不同的初学者。让非技术用户坐在GPT4All前，4次点击即可获得可用的聊天；Jan提供零遥测；Msty提供最美观的界面；AnythingLLM Desktop提供拖放文档聊天；LM Studio提供最佳的Mac体验。',
+    metaDescription: '零终端命令。无需Python。无需Docker。初学者10分钟内可安装的5个本地AI应用。用真实用户测试。',
+    twitterDescription: '无需打开终端即可运行的五个本地AI应用——按初学者角色排序。2026年5月测试。',
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
+    audience: '完全初学者和非技术用户——家长、记者、学生、小企业主——希望拥有私有ChatGPT替代品，无需打开终端。',
+    readTime: '阅读约12分钟',
+    educationalLevel: 'Beginner',
+    primaryTerm: '初学者本地AI应用',
+    targetKeywords: [
+      '初学者本地ai',
+      '最简单的本地ai应用',
+      '无需终端的本地ai',
+      '初学者本地llm应用',
+      '家长本地ai',
+    ],
+    leadAnswerBlock: '**如果您从未使用过终端，请安装GPT4All——这是摩擦力最小的本地AI应用，从下载到首次聊天只需4次点击，即使在5年前的笔记本电脑上也能运行。如果需要完全隐私请选Jan。如果想要最美观的界面请选Msty。如果想要拖放文档聊天请选AnythingLLM Desktop。如果在Mac上请选LM Studio。这五个应用都是免费的，在首次下载后可完全离线运行，您的对话永远不会发送到任何地方。**',
+    quickAnswerTop: {
+      zh: {
+        question: '非技术用户应该首先安装哪个本地AI应用？',
+        answer: '安装GPT4All。这是最小的下载（约290MB），可在8GB RAM笔记本电脑上无GPU运行，4次点击即可进行首次聊天。如果您特别需要隐私、文档聊天、美观界面或使用Mac，请参阅下面的角色排序列表——每个角色都有不同的赢家。',
+        bullets: [
+          'GPT4All——最适合完全初学者；最小安装；在弱硬件上运行；首次聊天4次点击。',
+          'Jan——最适合隐私至上的初学者；零遥测；完全开源。',
+          'Msty——最适合"我想要漂亮界面"；现代分屏UI；内置文档聊天。',
+          'AnythingLLM Desktop——最适合需要熟悉Windows风格UI和拖放文档文件夹的用户。',
+          'LM Studio——最适合Mac用户；针对Apple Silicon优化；五个应用中M系列上最快。',
+          '这五个应用在首次模型下载后可完全离线运行。',
+          '这五个应用都不需要命令行、Python、Docker、管理员权限或信用卡。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '这份指南适合谁？', anchor: '#who-should-use' },
+      { label: '#1 GPT4All——最适合完全初学者', anchor: '#gpt4all' },
+      { label: '#2 Jan——最适合隐私至上的初学者', anchor: '#jan' },
+      { label: '#3 Msty——最适合美观界面', anchor: '#msty' },
+      { label: '#4 AnythingLLM Desktop——最适合熟悉的界面', anchor: '#anythingllm' },
+      { label: '#5 LM Studio——最适合Mac用户', anchor: '#lm-studio' },
+      { label: '常见问题及解决方案', anchor: '#stumbling-blocks' },
+      { label: '你的前10分钟', anchor: '#first-ten-minutes' },
+      { label: '常见问题解答', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'GPT4All是最简单的入门选择——从下载到首次聊天4次点击，即使在5年前的笔记本电脑上也能运行。',
+          'Jan是唯一拥有零遥测和完全开源代码库的应用。',
+          'Msty拥有最精美的界面和内置PDF聊天功能，无需设置。',
+          'AnythingLLM Desktop感觉像熟悉的Windows文件/聊天应用——最接近"打开文档，提问"的体验。',
+          'LM Studio在Apple Silicon上最快，并拥有最大的应用内模型浏览器。',
+          '这五个应用都是免费的，安装后可离线工作，永远不会向服务器发送您的提示。',
+        ],
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: '这份指南适合谁？',
+        content: '**本指南适合完全初学者——从未打开过终端且不想打开的人。** 如果您能安装Zoom，就能安装这五个应用中的任何一个。选择下面与您相符的角色，直接跳到该部分。',
+        rows: [
+          { '你的情况': '我从未从命令行运行任何东西，我想要私有ChatGPT', '选择': 'GPT4All' },
+          { '你的情况': '我担心EU隐私/GDPR，想要零遥测', '选择': 'Jan' },
+          { '你的情况': '外观对我很重要。我想要整洁现代的界面', '选择': 'Msty' },
+          { '你的情况': '我主要想与自己的PDF、Word文档或笔记聊天', '选择': 'AnythingLLM Desktop' },
+          { '你的情况': '我有2024+年的MacBook，想要最快的本地AI', '选择': 'LM Studio' },
+          { '你的情况': '我只有4GB RAM或Chromebook', '选择': '无——请改用手机应用' },
+        ],
+        columns: ['你的情况', '选择'],
+        callouts: [
+          {
+            type: 'note',
+            text: '最低现实硬件配置：8GB RAM和约5GB可用磁盘空间。更低配置请改用手机应用——见下面的延伸阅读。',
+          },
+        ],
+      },
+      gpt4all: {
+        id: 'gpt4all',
+        title: '#1 GPT4All——最适合完全初学者',
+        content: '**GPT4All是2026年最不费力的本地AI应用——290MB下载，让非技术用户从"我不知道该安装什么"到"与运行在笔记本电脑上的AI交谈"只需10分钟。** 它是开源的（MIT许可证），由Nomic AI维护，在此列表中认知开销最低。',
+        items: [
+          '**安装路径：** 从gpt4all.io下载 → 运行安装程序 → 在"建议模型"屏幕上点击"Llama 3.2 3B Instruct" → 等待2GB下载 → 开始聊天。总计4次点击加一个模型下载。',
+          '**硬件要求：** 在拥有8GB RAM和集成图形的5年前Intel笔记本电脑上运行流畅——不需要GPU。',
+          '**UI清晰度：** 一个窗口。左侧边栏列出聊天。中央是对话。没有标签、没有嵌套下拉菜单、没有可能被意外破坏的"高级设置"页面。',
+          '**错误消息：** 当出现问题时（内存不足、模型文件损坏），GPT4All显示带有单一建议修复的纯文本框。没有堆栈跟踪。',
+          '**遥测：** 默认关闭。您可以在安装期间选择共享匿名使用情况，但默认值为否。',
+          '**许可证：** MIT——完全开源。源代码在GitHub上供任何想审计它的人使用。',
+          '**推荐起始模型：** Llama 3.2 3B Instruct（Q4_0）。磁盘约2GB，运行时4–6GB RAM，在集成图形上舒适快速。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '安装此应用：想要私有ChatGPT的家长、预算笔记本电脑的记者、向学生演示AI的教师，或第一次反应"打开终端"时想到"什么终端？"的人。',
+          },
+        ],
+      },
+      jan: {
+        id: 'jan',
+        title: '#2 Jan——最适合隐私至上的初学者',
+        content: '**Jan是隐私优先的选择——零遥测、零分析SDK、完全可审计的开源代码（AGPL许可证）。** 它看起来和感觉像一个简洁的ChatGPT克隆，拥有大约150个精选模型的目录，您无需离开应用即可浏览。',
+        items: [
+          '**安装路径：** 从jan.ai下载签名的安装程序 → 安装 → 从应用内库中选择模型（无Hugging Face账户、无登录）→ 聊天。总共约5次点击。',
+          '**隐私立场：** 零遥测。零分析SDK。零电话回家。源代码在GitHub上以AGPL发布——独立审计人员可验证二进制文件与源代码匹配。',
+          '**UI：** 默认暗模式的现代聊天UI，边栏中有对话线程。与ChatGPT外观相当，但一切都在您的机器上运行。',
+          '**模型浏览器：** 约150个精选模型，带有"Hugging Face URL"导入退出选项。不如LM Studio那样令人应接不暇，比GPT4All更有指导。',
+          '**内置工具：** 文档聊天、Web搜索和OpenAI兼容API服务的可选扩展。全部可选且清楚标记。',
+          '**硬件要求：** 8GB RAM，现代（2020+）CPU。Apple Silicon和NVIDIA GPU自动检测和使用。',
+          '**推荐起始模型：** Phi-4 Mini（约2.6GB）——小巧快速，在日常问题上表现出奇地好。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '安装此应用：担心GDPR的EU居民、处理来源的记者、无法将草稿发送到云API的律师、威胁模型包括"这个应用向外发送什么？"的人。',
+          },
+        ],
+      },
+      msty: {
+        id: 'msty',
+        title: '#3 Msty——最适合美观界面',
+        content: '**Msty是视觉上最精美的本地AI应用——现代分屏界面，可并排比较对话，内置文档聊天，单击模型安装程序。** 个人使用免费，在Windows、macOS和Linux上运行。',
+        items: [
+          '**安装路径：** 从msty.app下载安装程序 → 安装 → 在欢迎屏幕上选择"本地AI" → 选择推荐模型 → 聊天。约5–6次点击。',
+          '**突出的UI特性：** 分屏聊天。您可以运行两个模型并排回答相同问题，然后选择更好的答案。此列表中的其他应用都不附带此功能。',
+          '**文档聊天：** 内置。将PDF、DOCX或文件夹拖到边栏并提问。无需插件安装。',
+          '**知识库：** 您可以将文档固定到"库"，这样该工作区中的每个聊天都可以访问它们——非常适合"与我的学习笔记交谈"。',
+          '**硬件要求：** 8GB RAM，任何2020+年的CPU。自动检测和使用Apple Silicon、NVIDIA和AMD加速。',
+          '**许可证：** 专有，个人使用免费。存在高级云API功能的付费层，但仅限本地使用永远免费。',
+          '**推荐起始模型：** Gemma 3 4B Instruct——友善的语气，擅长总结，适合大多数笔记本电脑。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '安装此应用：认为裸露聊天UI很丑的设计师、想并排比较两个模型答案的学生、想让AI开箱即用读取笔记文件夹的作家。',
+          },
+        ],
+      },
+      anythingllm: {
+        id: 'anythingllm',
+        title: '#4 AnythingLLM Desktop——最适合熟悉的界面',
+        content: '**AnythingLLM Desktop围绕文档工作区组织——最接近"打开文件夹，提问"而无需任何设置的体验。** 其界面借用经典桌面应用的"左树、右内容"约定，这使其对在Windows上长大的用户特别舒适。',
+        items: [
+          '**安装路径：** 从anythingllm.com下载 → 运行安装程序 → 首次启动时选择"使用本地AI（无API密钥）" → 选择内置本地模型 → 将文档拖入工作区。约6次点击。',
+          '**工作区模型：** 每个工作区都是其自己的文档文件夹和聊天历史。心智模型："这是2026年税务文件夹，这是了解2026年税务文件夹的聊天"。',
+          '**文档支持：** PDF、DOCX、TXT、Markdown、网页导入。拖放它们，应用在本地索引它们，不需要嵌入API账户。',
+          '**UI：** 熟悉的三窗格布局（工作区列表/文档列表/聊天），让人想起电子邮件客户端和旧式Windows应用。对于从未适应"现代"极简UI的用户来说认知负荷低。',
+          '**隐私：** 遥测是选择加入。选择本地AI选项时，文档索引完全在您的机器上进行。',
+          '**硬件要求：** 8GB RAM，如果您的工作区包含数百个文档，最好16GB。',
+          '**推荐起始模型：** Llama 3.2 3B Instruct或Qwen3 4B——两者在此应用中都能很好地处理文档问答。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '安装此应用：想就合同文件夹提问的小企业主、拥有"要阅读的论文"文件夹的研究人员、认为现代UI令人困惑并喜欢看起来像Outlook的东西的祖父母。',
+          },
+        ],
+      },
+      lmStudio: {
+        id: 'lm-studio',
+        title: '#5 LM Studio——最适合Mac用户',
+        content: '**LM Studio在Apple Silicon上是五个应用中最快的，拥有最大的应用内模型浏览器，但在这个群体中学习曲线最陡峭。** 对于非技术Mac用户来说它仍然非常容易使用——但在Windows和Linux上，GPT4All或Jan通常提供更平缓的首次体验。',
+        items: [
+          '**安装路径：** 从lmstudio.ai下载 → 运行安装程序 → 首次启动时接受默认设置 → 使用应用内模型浏览器选择"工作人员精选"模型 → 加载它 → 聊天。约6次点击加一个模型下载。',
+          '**为什么在Mac上排名第一：** LM Studio附带针对Apple Silicon优化的自定义Metal内核，在M系列芯片上比上游默认快15–30%。在16GB MacBook Pro上，它以约每秒38个token的速度传输8B级模型。',
+          '**模型浏览器深度：** 从Hugging Face实时提取约5,000个模型变体，可按RAM/VRAM、许可证和系列筛选。当您超越Jan或GPT4All的精选目录时很有用。',
+          '**内置文档聊天：** 是的（2025年推出），具有清晰的拖放界面。',
+          '**遥测：** 默认发送匿名使用事件。在设置 → 隐私中易于禁用。对话和模型文件永远不会离开设备。',
+          '**许可证：** 专有（个人和商业使用免费）。如果开源代码不可协商，请选择Jan。',
+          '**推荐起始模型：** 8GB Mac上的Phi-4 Mini；16GB+Mac上的Llama 3.3 8B Q4_K_M。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '安装此应用：想要Apple Silicon上最快本地AI的Mac用户、想尝试多个模型的16GB+MacBook作家、或认为Jan和GPT4All的精选目录太小的人。',
+          },
+        ],
+      },
+      stumblingBlocks: {
+        id: 'stumbling-blocks',
+        title: '常见问题及解决方案',
+        content: '**这是在最初30分钟内绊倒真实非技术用户的五件事。** 一旦你知道要找什么，每一个都是一行修复。',
+        items: [
+          '**"在macOS上说\'unidentified developer\'。"** → 打开系统设置 → 隐私和安全，向下滚动到底部，点击"仍然打开"。这对任何签名但未由Apple公证的应用来说都是正常的。',
+          '**"Windows Defender标记了安装程序。"** → 所有五个应用都被广泛使用且安全。点击"更多信息" → "仍然运行"。为了额外安全，验证下载URL是否与官方网站完全匹配（gpt4all.io、jan.ai、msty.app、anythingllm.com、lmstudio.ai）。',
+          '**"模型下载永远在进行中。"** → 模型是1.5–8GB的文件。在50Mbps连接上预计5–20分钟。如果它卡住，取消并恢复——所有五个应用都支持可恢复的下载。',
+          '**"我的电脑变得非常热/风扇开始尖叫。"** → 本地AI在生成答复的几秒钟内使用100%的CPU或GPU。这是正常的，并在答复结束时停止。如果这困扰您，请切换到更小的模型（3B或4B而不是7B/8B）。',
+          '**"我不知道选择哪个模型。"** → 首次安装时默认为3B或4B Instruct模型。示例：Llama 3.2 3B Instruct、Phi-4 Mini、Gemma 3 4B。它们很小、很快，对大多数日常任务都足够。仅在您决定实际使用该应用后才升级到7B或8B。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '不要从随机网站或torrent网站下载模型。使用您安装的任何应用的应用内模型浏览器——此列表中的每个应用都从官方Hugging Face镜像中提取。',
+          },
+        ],
+      },
+      firstTenMinutes: {
+        id: 'first-ten-minutes',
+        title: '你的前10分钟 — 分步指南',
+        content: '**这是一条确切的路径，非技术用户可以在今天按照，在任何现代Windows或Mac笔记本电脑上，从零到工作本地AI对话。** 括号中的数字是现实的持续时间。',
+        numberedItems: [
+          '从上面的角色表中选择一个应用。如果您无法决定：安装GPT4All。（1分钟）',
+          '打开官方网站（gpt4all.io / jan.ai / msty.app / anythingllm.com / lmstudio.ai）并为您的操作系统下载安装程序。（1分钟）',
+          '运行安装程序。接受默认值。这五个应用中的任何一个在Windows或Mac上的按用户安装都不需要管理员权限。（2分钟）',
+          '首次启动时，按照屏幕提示下载推荐的起始模型——选择提供的最小"Instruct"模型（3B或4B参数）。（3–5分钟取决于您的连接）',
+          '在聊天框中输入"你好，你能写一首关于猫的俳句吗？"并按Enter。您应该在5–10秒内看到回复。（1分钟）',
+          '如果回复有效，您就完成了。本地AI现在在您的笔记本电脑上运行，完全离线，您的对话从未离开您的机器。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在第5步之后，将笔记本电脑从Wi-Fi断开连接并尝试另一个问题。回复仍然有效。这是大多数非技术用户意识到本地AI是真实的时刻。',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题解答',
+        faqs: [
+          {
+            q: '使用本地AI需要知道编码吗？',
+            a: '不需要。此列表中的五个应用——GPT4All、Jan、Msty、AnythingLLM Desktop、LM Studio——都不需要编码、脚本或终端。如果您能安装普通桌面应用并点击设置向导，您就拥有所需的所有技能。',
+          },
+          {
+            q: '我可以在没有管理员权限的工作笔记本电脑上安装本地AI吗？',
+            a: '有时可以。GPT4All和Jan在Windows上附带不需要管理员权限的按用户安装程序。LM Studio和Msty通常需要标准安装程序的管理员权限。如果您根本无法在工作笔记本电脑上安装软件，请先咨询您的IT部门——本地AI是网络策略问题，而不是技术问题。',
+          },
+          {
+            q: '如果我的电脑太旧怎么办？',
+            a: '一台2018+年、8GB RAM、5GB可用磁盘空间的笔记本电脑可以在任何这些应用中以可用的速度（8–15个token/秒）运行3B参数模型。较旧或较小的机器应该尝试基于手机的本地AI应用——请参阅下面关于iPhone和Android本地LLM应用的延伸阅读。',
+          },
+          {
+            q: '本地AI会减慢我的电脑速度吗？',
+            a: '仅在主动回复时。本地AI在生成答复所需的几秒钟内大量使用您的CPU或GPU，然后降回空闲。您的笔记本电脑风扇可能会旋转，您的电池会耗尽得更快，其他应用在回复期间可能会感觉缓慢。没有什么是永久的——关闭应用会释放所有资源。',
+          },
+          {
+            q: '我可以干净地卸载它吗？',
+            a: '是的。所有五个应用都通过标准Windows/Mac/Linux卸载程序卸载。模型位于单独的文件夹中（通常在您的文档或AppData下）——您可以删除该文件夹以回收磁盘空间。没有任何东西改变您的注册表、系统文件或其他应用。',
+          },
+          {
+            q: '从互联网下载这些应用是否安全？',
+            a: '如果您使用官方网站是的。五个官方网站是gpt4all.io、jan.ai、msty.app、anythingllm.com和lmstudio.ai。避免第三方下载器和torrent。五个安装程序中的每一个都由其发布者签名；macOS和Windows在安装期间都会显示发布者名称。',
+          },
+          {
+            q: '这些应用需要互联网才能工作吗？',
+            a: '仅用于首次模型下载。磁盘上有模型后，所有五个应用完全离线运行——您可以关闭Wi-Fi、登上飞机或在地下室工作，AI继续回复。',
+          },
+          {
+            q: '我可以在工作笔记本电脑上使用这些吗？',
+            a: '在技术上是的。在政治上，先咨询您的IT或合规团队。本地AI不会将您的提示发送到任何地方，这通常是合规的一个特性——但在托管设备上安装第三方软件通常仍然是一个策略问题。向他们展示本文和Jan和GPT4All的AGPL/MIT源链接，如果"零数据离开机器"的证明有帮助。',
+          },
+          {
+            q: '对于非技术用户，本地AI和ChatGPT有什么区别？',
+            a: '三个区别：(1)本地AI在您的笔记本电脑上运行，不会将您的提示发送到服务器，(2)本地AI在首次模型下载后可离线工作，(3)本地AI永远免费——无订阅、无token账单。权衡是速度和质量：3B–8B本地模型的能力比GPT-4o级云模型少。对于日常写作、总结、头脑风暴和问答，差距很小。对于长期复杂推理，差距更大。',
+          },
+          {
+            q: '这些应用会长期花费金钱吗？',
+            a: '不会。所有五个应用永远个人使用免费。GPT4All（MIT）和Jan（AGPL）是开源的。Msty有高级云API功能的付费层，但仅限本地使用永远免费。LM Studio对个人和商业使用免费。AnythingLLM Desktop免费，付费托管产品作为单独的产品。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[LM Studio vs Jan vs GPT4All：2026年哪个本地AI应用最佳](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=zh) — 当您准备好在速度、模型库和隐私上比较前三名时。',
+          '[每个OS最简单的本地AI应用：Windows、Mac、Linux选择](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=zh) — 仅需要按OS推荐的用户。',
+          '[2026年创意写作最佳本地LLM](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh) — 常见的非技术使用案例。',
+          '[2026年最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) — 要加载到这五个应用中任何一个的模型推荐。',
+          '[2026年iPhone最佳本地AI应用](/power-local-llm/best-local-llm-apps-iphone-2026?lang=zh) — 笔记本电脑太旧的用户。',
+          '[2026年Android最佳本地AI应用](/power-local-llm/best-local-llm-apps-android-2026?lang=zh) — Chromebook或低配Windows笔记本电脑上的用户。',
+          '[Power Local LLM中心](/power-local-llm?lang=zh) — 完整指南库。',
+        ],
+      },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '2026年初学者本地AI应用Top 5',
+      numberOfItems: 5,
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'GPT4All',
+          description:
+            '最适合完全初学者。最小安装（约290MB）。在5年前8GB RAM笔记本电脑上无GPU运行。MIT许可开源。遥测默认关闭。',
+          url: 'https://gpt4all.io',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Jan',
+          description:
+            '最适合隐私至上的初学者。AGPL下完全开源。默认零遥测。约150个精选模型的目录。',
+          url: 'https://jan.ai',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Msty',
+          description:
+            '最适合想要精美UI的用户。现代分屏界面带有并排模型比较。内置文档聊天和知识库。',
+          url: 'https://msty.app',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'AnythingLLM Desktop',
+          description:
+            '最适合想要熟悉Windows风格UI的用户，用于与文档文件夹聊天。基于工作区的PDF/DOCX/Markdown聊天。MIT许可。',
+          url: 'https://anythingllm.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'LM Studio',
+          description:
+            '最适合Mac用户。Apple Silicon定制优化Metal内核可加快15–30%推理速度。最大的应用内模型浏览器（Hugging Face中约5,000种变体）。',
+          url: 'https://lmstudio.ai',
+        },
+      ],
+    },
+  },
 }
