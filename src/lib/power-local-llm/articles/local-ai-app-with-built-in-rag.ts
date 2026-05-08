@@ -2439,4 +2439,605 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: '最简单的桌面应用',
+    title: '内置RAG的本地AI应用：与文件聊天（无需配置）',
+    seoTitle: '内置RAG应用 2026：本地PDF查询，无需向量数据库',
+    metaDescription:
+      '3个桌面应用可以上传PDF并聊天 — 无向量库，无Python，无命令行。LM Studio、Jan、AnythingLLM在1,000页文档上测试。2026年5月。',
+    twitterDescription:
+      '3个本地AI内置RAG应用。上传PDF，提出问题。在1,000页文档上2026年5月测试。',
+    readTime: '阅读约12分钟',
+    educationalLevel: 'Beginner',
+    primaryTerm: '内置RAG的本地AI应用',
+    leadAnswerBlock:
+      '**3个桌面应用让您在5分钟内上传PDF并提问 — 无向量库，无Python，无命令行。AnythingLLM功能最强（10+文件格式、可互换的嵌入模型、最佳引用）。LM Studio最简单（单二进制安装、PDF + DOCX + TXT、对话范围）。Jan最私密（完全开源AGPL、零遥测、仅本地）。三个都能处理1,000页文档，安装后完全离线运行。**',
+    quickAnswerTop: {
+      zh: {
+        question: '用于PDF聊天的最佳本地AI内置RAG应用是什么？',
+        answer:
+          '选择AnythingLLM可以获得最多的文件格式支持（PDF、DOCX、TXT、MD、EPUB、网站、音频）、可互换的嵌入模型和最佳的引用呈现。选择LM Studio以在任何聊天中一键附加文档 — 设置最快，最适合临时问题。选择Jan如果开源代码和零遥测是不可协商的。三个都是免费的，安装后离线工作，本地存储数据。',
+        bullets: [
+          'AnythingLLM — 10+文件格式、可互换的嵌入、持久工作区、最适合100+文档库',
+          'LM Studio — 在聊天中拖放文档、对话范围、最快首次回答',
+          'Jan — 文档扩展、完全开源（AGPL）、零遥测、最适合合规工作流',
+          '三个都在16GB RAM硬件上处理1,000页文档、离线运行、本地存储',
+          '对于5,000+文档或细粒度分块控制，升级到自定义RAG堆栈',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '对比表', anchor: '#comparison-table' },
+      { label: '我应该选择哪一个？', anchor: '#which-one' },
+      { label: '测试方法', anchor: '#how-we-tested' },
+      { label: 'AnythingLLM：深度评测', anchor: '#anythingllm' },
+      { label: 'LM Studio：深度评测', anchor: '#lm-studio' },
+      { label: 'Jan + 文档：深度评测', anchor: '#jan' },
+      { label: '示例查询和结果', anchor: '#sample-queries' },
+      { label: '引用准确性', anchor: '#citations' },
+      { label: '大文件处理', anchor: '#large-files' },
+      { label: '何时超越内置RAG', anchor: '#outgrow' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**AnythingLLM** 是功能最强的内置RAG：10+文件格式（PDF、DOCX、TXT、MD、EPUB、网站、音频记录）、可互换的嵌入模型、最佳引用、持久工作区。',
+          '**LM Studio** 摩擦力最小：将PDF拖放到聊天中，30秒内获得答案。对话范围，无工作区概念。',
+          '**Jan + 文档扩展** 是开源选择：AGPL、零遥测、仅本地嵌入，最适合法律/医疗/管制工作流。',
+          '三个都在16GB RAM硬件上处理1,000页文档，索引时间不到5分钟。',
+          '默认嵌入模型（nomic-embed-text v1.5、all-MiniLM-L6-v2）对大多数工作负载足够 — 只有AnythingLLM在不离开应用的情况下允许互换。',
+          '三个都不处理扫描PDF（仅图像）而无外部OCR — 先用Tesseract或PDF工具提取文本。',
+          '**升级路径：** 超过~1,000份文档、需要跨工作区搜索或高级分块时，升级到自定义Ollama + AnythingLLM Docker或PrivateGPT。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'AnythingLLM、LM Studio和Jan + 文档 2026年对比',
+        content:
+          '在Apple M5 MacBook Pro（16GB统一内存）和Windows 11配NVIDIA RTX 4070（12GB VRAM、32GB系统RAM）上测试。相同文档集：412页研究论文PDF、38页合同DOCX、1,047页技术手册PDF、25个markdown笔记（总共600KB）。每个应用配Llama 3.3 8B Q4_K_M聊天模型。',
+        columns: ['应用', '文件格式', '最大实际大小', '嵌入模型', '引用', '结论'],
+        rows: [
+          {
+            '应用': 'AnythingLLM',
+            '文件格式': 'PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、网站、音频（Whisper）',
+            '最大实际大小': '~5,000文档 / ~50,000页',
+            '嵌入模型': '内置或交换到Ollama / OpenAI / LM Studio',
+            '引用': '按分块加来源文件名 + 页码',
+            '结论': '功能最强 — 优先选择库',
+          },
+          {
+            '应用': 'LM Studio',
+            '文件格式': 'PDF、DOCX、TXT、MD',
+            '最大实际大小': '~30文档/聊天 / ~3,000页',
+            '嵌入模型': 'nomic-embed-text v1.5（捆绑、不可互换）',
+            '引用': '内联来源提及、无页码',
+            '结论': '最简单 — 临时Q&A选择',
+          },
+          {
+            '应用': 'Jan + 文档',
+            '文件格式': 'PDF、DOCX、TXT、MD',
+            '最大实际大小': '~200文档 / ~10,000页',
+            '嵌入模型': 'all-MiniLM-L6-v2（捆绑、通过扩展可互换）',
+            '引用': '按分块加文件名',
+            '结论': '最私密 — AGPL/合规选择',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: '我应该选择哪一个？',
+        content:
+          '**正确选择取决于您的文档库大小、文件格式和开源优先级。** 决策矩阵：',
+        rows: [
+          {
+            '您的情况': '1个PDF、60秒内想要答案',
+            '选择': 'LM Studio',
+          },
+          {
+            '您的情况': '50～500个PDF文件夹要定期查询',
+            '选择': 'AnythingLLM',
+          },
+          {
+            '您的情况': '同一工作区中需要EPUB、网站或音频',
+            '选择': 'AnythingLLM',
+          },
+          {
+            '您的情况': '处理法律或医疗文件 — 开源是必须',
+            '选择': 'Jan + 文档',
+          },
+          {
+            '您的情况': '想要交换嵌入模型来测试检索质量',
+            '选择': 'AnythingLLM',
+          },
+          {
+            '您的情况': '4年前的笔记本电脑、8GB RAM',
+            '选择': 'LM Studio（最小安装、最轻工作区）',
+          },
+          {
+            '您的情况': '需要学术文章的页码引用',
+            '选择': 'AnythingLLM',
+          },
+          {
+            '您的情况': '想按项目分离聊天历史和文档索引',
+            '选择': 'AnythingLLM（工作区是一级概念）',
+          },
+          {
+            '您的情况': '公司在网络上阻止闭源二进制文件',
+            '选择': 'Jan + 文档（AGPL、可审计）',
+          },
+        ],
+        columns: ['您的情况', '选择'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: '测试方法',
+        content:
+          '**每个应用都被新鲜安装、用相同文档集、用相同12个查询进行测试。** 使用相同的聊天模型（Llama 3.3 8B Q4_K_M，≈ 4.9 GB）将RAG质量与聊天质量分离。',
+        items: [
+          '**硬件：** MacBook Pro M5（16GB统一内存）用于macOS路径；Windows 11 + RTX 4070（12GB VRAM、32GB系统RAM）。在两者上运行测试。',
+          '**文档集：** 412页研究论文PDF（图表、表格、公式）、38页合同DOCX（商业房地产租赁、密集法律文本）、1,047页技术手册PDF（工业控制系统）、25个markdown笔记（～600 KB会议记录、项目规范）。',
+          '**嵌入：** 每个应用使用其默认嵌入模型，除非明确交换。AnythingLLM Native默认使用接近all-MiniLM-L6-v2品质的384维；LM Studio使用nomic-embed-text v1.5（768维）；Jan默认使用all-MiniLM-L6-v2。',
+          '**查询类型：** 事实查询（「租赁合同解约通知期限？」）、多跳推理（「手册中哪些部分涵盖安全互锁和紧急停止？」）、引用准确性（「论文中关于令牌混合的确切短语」）、摘要（「用5个要点总结第4章」）、矛盾检测（「合同在租金升级方面自相矛盾吗？」）。',
+          '**测量内容：** 投入文档后到第一个答案的时间（索引+首次回复）、12个查询黄金集上的检索召回率、引用正确性（块文件名+页码），以及1,047页手册上的行为（压力测试）。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '一旦模型下载，三个都是100%本地化。在这些测试中，提示、文档块或嵌入向量都不会离开设备。我们在每个应用中禁用了网络访问来确认离线行为。',
+          },
+        ],
+      },
+      anythingllmDeep: {
+        id: 'anythingllm',
+        title: 'AnythingLLM：功能最强的内置RAG',
+        content:
+          '**AnythingLLM将文档聊天作为一级功能交付。** 工作区持有持久的文档索引；每个工作区独立，所以您可以将「法律合同」与「研究论文」分开存储，没有交叉污染。',
+        items: [
+          '**安装路径：** 从anythingllm.com下载签名的安装程序（macOS、Windows、Linux）。~430 MB。macOS或Linux上不需要管理员权限。',
+          '**文件格式：** PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON。音频文件（MP3、WAV、M4A）通过捆绑的Whisper自动转录。网站通过内置刮板拉取。',
+          '**嵌入模型：** 默认「Native」（一个小捆绑模型，接近all-MiniLM-L6-v2质量）。通过一次点击，交换到Ollama上的nomic-embed-text、LM Studio上的BAAI/bge-small或OpenAI text-embedding-3-small。',
+          '**块控制：** 块大小（默认1,000个字符）和重叠（默认20）在工作区设置中公开。重新嵌入所有按钮在更改后重建索引。',
+          '**引用：** 每个答案都用所用块加脚注，格式为文件名 + 页码（PDF）、文件名 + 部分（MD）或仅文件名（TXT）。单击引用在侧面板中打开源块。',
+          '**性能：** 在RTX 4070上用4分12秒索引完整的1,047页手册 + 412页论文 + 38页合同 + 25个markdown笔记，M5上5分38秒。首次查询回复：两者都约3秒。',
+          '**LLM后端：** 默认使用捆绑的Ollama运行时，或指向LM Studio、llama.cpp服务器、OpenAI兼容URL或任何云提供商。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '为每个项目创建一个工作区（例如「Q3合同」「论文来源」「入职手册」）。每个工作区获得自己的聊天历史和嵌入索引，所以上下文永远不会在项目之间泄漏。',
+          },
+        ],
+      },
+      lmStudioDeep: {
+        id: 'lm-studio',
+        title: 'LM Studio：最简单的文档聊天',
+        content:
+          '**LM Studio在2025年增加了聊天内文档附件。** 将PDF拖放到打开的聊天窗口，数秒内即可提问 — 无工作区、无设置、无嵌入配置。',
+        items: [
+          '**安装路径：** 从lmstudio.ai下载。~450 MB签名的安装程序（macOS、Windows、Linux）。与聊天使用的同一安装 — 无单独的RAG插件。',
+          '**文件格式：** PDF、DOCX、TXT、MD。无EPUB、HTML、音频。',
+          '**嵌入模型：** nomic-embed-text v1.5（768维）捆绑。2026年5月不可从UI交换 — 对于嵌入模型选择，改用AnythingLLM。',
+          '**块控制：** 从UI中隐藏。块大小、重叠和top-K根据文档大小自动调整。',
+          '**引用：** 模型接收块作为上下文并获得引用指令。引用质量取决于聊天模型 — Llama 3.3 8B及以上可靠地提及来源；更小的模型有时会丢弃引用。',
+          '**性能：** 在M5上用38秒、RTX 4070上用24秒索引一份412页的论文。首次查询回复：2～3秒。实际极限在减速前：~30文档或~3,000页/聊天。',
+          '**LLM后端：** 使用为对话选择的相同聊天模型 — 当文档附加时RAG发生透明。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'LM Studio文档附件是对话范围，不是工作区范围。开始新聊天，您之前的文档就消失了。这是特定Q&A的特点，也是持续研究库的限制。',
+          },
+        ],
+      },
+      janDeep: {
+        id: 'jan',
+        title: 'Jan + 文档扩展：开源选择',
+        content:
+          '**Jan是三个中唯一具有完全可审计的开源代码（AGPL）的应用。** 文档扩展添加RAG而不损害零遥测立场 — 嵌入在本地运行，文档块永远不会离开设备。',
+        items: [
+          '**安装路径：** 从jan.ai下载Jan（~380 MB）。然后从应用中的Hub标签启用文档扩展。扩展由Jan团队发送，不是第三方。',
+          '**文件格式：** PDF、DOCX、TXT、MD。添加新格式在2026年5月的公开路线图上。',
+          '**嵌入模型：** all-MiniLM-L6-v2（384维）捆绑。通过扩展设置可交换到BAAI/bge-small-en-v1.5或任何sentence-transformers GGUF。',
+          '**块控制：** 块大小和重叠在扩展设置中公开。重新索引按钮重建本地LanceDB存储。',
+          '**引用：** 按块引用加文件名。2026年5月无页码 — Jan GitHub上的issue #1184追踪此功能请求。',
+          '**性能：** 在M5上用6分04秒、RTX 4070上用5分12秒索引完整的测试语料库。首次查询回复：3～4秒。实际极限：~200文档。',
+          '**LLM后端：** 使用Jan的内置llama.cpp运行时。为聊天加载的同一模型用于RAG合成。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于EU GDPR合规、管制行业或源代码审计必须的环境，Jan是三个中唯一的选择。AnythingLLM在GitHub上是开源的，但在官方构建中有闭源遥测；LM Studio完全专有。',
+          },
+        ],
+      },
+      sampleQueries: {
+        id: 'sample-queries',
+        title: '示例查询和每个应用返回的内容',
+        content:
+          '**相同的文档、相同的聊天模型（Llama 3.3 8B Q4_K_M）、相同的提示。** 逐字答案在适当处缩短。每行显示应用是否检索了正确的块以及它说了什么。',
+        columns: ['查询', 'AnythingLLM', 'LM Studio', 'Jan + 文档'],
+        rows: [
+          {
+            '查询': '租赁合同的解约通知期限是多少？',
+            'AnythingLLM': '✅ 「60天书面通知」加引用[contract.docx，第12页]',
+            'LM Studio': '✅ 「60天书面通知」 — 引用：contract.docx',
+            'Jan + 文档': '✅ 「60天书面通知」 — 引用：contract.docx',
+          },
+          {
+            '查询': '论文中关于令牌混合的确切短语',
+            'AnythingLLM': '✅ 逐字引用加[research.pdf，第4页]',
+            'LM Studio': '✅ 逐字引用，归因于research.pdf（无页码）',
+            'Jan + 文档': '⚠️ 改述引用，归因于research.pdf',
+          },
+          {
+            '查询': '手册中哪些部分既涵盖安全互锁又涵盖紧急停止？',
+            'AnythingLLM': '✅ 「第4.2部分和第7.1部分」加引用',
+            'LM Studio': '⚠️ 仅返回第4.2部分 — 错过多跳',
+            'Jan + 文档': '⚠️ 仅返回第7.1部分 — 错过多跳',
+          },
+          {
+            '查询': '用5个要点总结第4章',
+            'AnythingLLM': '✅ 5个准确的要点，各有引用',
+            'LM Studio': '✅ 5个准确的要点，末尾单个引用块',
+            'Jan + 文档': '✅ 5个准确的要点，仅在首个要点引用',
+          },
+          {
+            '查询': '合同在租金升级方面是否自相矛盾？',
+            'AnythingLLM': '✅ 「是的 — 第8页说CPI关联，第14页说固定3%」',
+            'LM Studio': '✅ 「是的 — 引用了两个不同的升级方法」',
+            'Jan + 文档': '⚠️ 「未发现冲突」 — 未能呈现第14页',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'AnythingLLM在多跳和矛盾查询上领先，因为其检索默认值拉取更多块（top-K = 6）比LM Studio（top-K = 4）和Jan（top-K = 4）。在简单的事实查询上，三个基本相当。',
+          },
+        ],
+      },
+      citations: {
+        id: 'citations',
+        title: '引用准确性',
+        content:
+          '**引用质量是三个应用中最大的单一区分因素。** AnythingLLM是2026年5月唯一提供按块加文件名 + 页码的应用。其他两个只按文件名引用，这对学术或法律工作不足。',
+        items: [
+          '**AnythingLLM：** 每个答案都用所用块加脚注。格式为`[filename，page X]` PDFs、`[filename，section]` markdown。点击在侧面板中打开块以验证。',
+          '**LM Studio：** 聊天回复中的内联提及（「根据research.pdf...」）。无页码，无可点击的验证面板。可靠性取决于聊天模型 — Llama 3.3 8B可靠地引用；Phi-4 Mini有时丢弃引用。',
+          '**Jan + 文档：** 按块引用加文件名。无页码。引用的块在扩展面板中可见。',
+          '**验证成本：** AnythingLLM用2次点击验证引用；LM Studio和Jan要求您打开源PDF并搜索。对于1,000页手册，这很重要。',
+          '**幻想引用：** 三个应用都偶尔在不实际检索相关块的情况下引用文件名。在我们的12查询测试中频率：AnythingLLM 0/12、LM Studio 1/12、Jan 1/12。始终验证高风险声明。',
+        ],
+      },
+      largeFiles: {
+        id: 'large-files',
+        title: '大文件处理（1,000+页）',
+        content:
+          '**1,047页技术手册是压力测试。** 三个都加载和索引；区别出现在检索时间和工作区人类工程学中。',
+        rows: [
+          {
+            '行为': '索引时间（M5）',
+            'AnythingLLM': '4分12秒',
+            'LM Studio': '2分47秒',
+            'Jan + 文档': '6分04秒',
+          },
+          {
+            '行为': '索引过程中的RAM',
+            'AnythingLLM': '~3.2 GB',
+            'LM Studio': '~2.4 GB',
+            'Jan + 文档': '~2.8 GB',
+          },
+          {
+            '行为': '索引磁盘大小',
+            'AnythingLLM': '~210 MB',
+            'LM Studio': '~95 MB',
+            'Jan + 文档': '~140 MB',
+          },
+          {
+            '行为': '首次查询延迟（冷启动）',
+            'AnythingLLM': '3.1秒',
+            'LM Studio': '2.2秒',
+            'Jan + 文档': '3.8秒',
+          },
+          {
+            '行为': '实际文档计数上限',
+            'AnythingLLM': '~5,000',
+            'LM Studio': '~30/聊天',
+            'Jan + 文档': '~200',
+          },
+          {
+            '行为': '多跳检索（12查询测试）',
+            'AnythingLLM': '11/12',
+            'LM Studio': '8/12',
+            'Jan + 文档': '7/12',
+          },
+        ],
+        columns: ['行为', 'AnythingLLM', 'LM Studio', 'Jan + 文档'],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'LM Studio在单个大文档上速度快但不能扩展到库。对话范围索引意味着新聊天从零开始 — 有利于一次性问题，对持续研究则是痛点。超过50个文档，改用AnythingLLM。',
+          },
+        ],
+      },
+      outgrow: {
+        id: 'outgrow',
+        title: '何时超越内置RAG',
+        content:
+          '**内置RAG是正确的工具，直到以下三种情况之一发生：** 库超过~1,000个文档、您需要细粒度块策略控制，或您需要跨工作区搜索。此时升级。',
+        items: [
+          '**文档计数 > 1,000：** AnythingLLM在~5,000个文档/工作区前检索延迟变得明显。超过此点，移至自定义Ollama + AnythingLLM Docker堆栈，配备专用向量DB（Qdrant、Weaviate或Postgres + pgvector）。',
+          '**需要自定义分块策略：** 内置应用使用固定块大小（~1,000字符，~20重叠）。对于特定领域分块（语义、分层、父子），使用包含LangChain或LlamaIndex的自定义堆栈。',
+          '**需要跨工作区/跨来源搜索：** AnythingLLM工作区是按设计隔离的。如果您需要单个查询跨越「合同+电子邮件+Slack+Notion」，构建一个带有统一向量存储的自定义RAG。',
+          '**需要细粒度访问控制：** 内置应用假定单用户。对于具有基于角色权限的团队RAG，部署AnythingLLM Docker（多用户模式）或PrivateGPT。',
+          '**需要扫描PDF的OCR：** 三个都不处理仅图像PDF。使用Tesseract或pdf2image + Tesseract预处理，或迁移到包含Unstructured.io的堆栈。',
+          '**生产部署：** 内置应用是桌面应用，不是服务器。对于生产RAG配API访问，部署AnythingLLM Docker、PrivateGPT或Open WebUI配正确的RAG插件。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '保留您的工作的升级路径：Desktop → Docker（相同数据格式）→ 自定义Ollama + Qdrant + LlamaIndex堆栈。每个步骤保留您的文档语料库，避免重新索引。',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '我可以在这些应用中与1,000+ PDF聊天吗？',
+            a: 'AnythingLLM处理每个工作区最多约5,000份文档，检索延迟才会变得明显。Jan + 文档可靠地处理约200份文档。LM Studio是对话范围的，实际上约30份文档/聊天。对于1,000+份文档库，AnythingLLM是唯一的内置选项，无需升级到自定义堆栈。',
+          },
+          {
+            q: '这些应用支持DOCX和Excel吗？',
+            a: '三个都支持DOCX（Microsoft Word）。Excel（XLSX）在2026年5月不被任何应用直接支持 — 先转换为CSV（AnythingLLM原生接受）或复制/粘贴到markdown文件。AnythingLLM另外支持EPUB、HTML、JSON、音频（Whisper转录）和网站。',
+          },
+          {
+            q: '我的文档存储在哪里？',
+            a: '全部在本地磁盘。AnythingLLM存储在~/.anythingllm/（macOS/Linux）或%APPDATA%/AnythingLLM（Windows）。LM Studio存储在~/.cache/lm-studio/或%APPDATA%/LM Studio。Jan存储在~/jan/。三个都不会将您的文档上传到任何地方 — 始终是本地推理和本地索引。',
+          },
+          {
+            q: '我可以从应用的记忆中删除文档吗？',
+            a: '是的，三个都可以。AnythingLLM在工作区UI中有按文档移除+重新索引。LM Studio：从聊天中分离文档或删除聊天。Jan：从文档扩展面板移除并点击重新索引。删除后，嵌入块会在下一次重新索引时从本地向量存储中移除。',
+          },
+          {
+            q: '引用的准确性如何？',
+            a: 'AnythingLLM提供按块的引用，文件名和页码（PDF）— 经过验证后足以用于学术文章。LM Studio按文件名引用；可靠性取决于聊天模型（Llama 3.3 8B及以上可靠地引用；Phi-4 Mini有时会丢弃）。Jan按块引用，文件名，无页码。在12查询测试中，虚假引用很少（AnythingLLM 0/12、LM Studio 1/12、Jan 1/12）— 始终验证高风险声明。',
+          },
+          {
+            q: '内置RAG可以离线工作吗？',
+            a: '是的。安装应用并下载至少一个聊天模型和嵌入模型后，三个都完全离线工作。文档索引在本地发生；查询击中本地向量存储和本地LLM。我们通过在每个应用中禁用网络来确认此行为 — 三个都继续正常应答查询。',
+          },
+          {
+            q: '我可以在设备之间共享文档数据库吗？',
+            a: 'AnythingLLM在便携文件夹中存储工作区（~/.anythingllm/storage/），您可以在机器之间复制。LM Studio文档索引是对话范围的，不是为同步设计的。Jan在~/jan/中存储，但LanceDB格式对Jan安装之间的版本差异敏感。对于多设备，最清洁的路径是家庭服务器上的AnythingLLM Docker，所有设备指向同一实例。',
+          },
+          {
+            q: '内置RAG处理扫描PDF（OCR）吗？',
+            a: '三个都不处理仅图像的扫描PDF，2026年5月。它们通过PDF文本层提取文本，所以没有文本层的扫描PDF返回零块。使用Tesseract OCR（免费）或ocrmypdf等工具先添加文本层，然后将OCR'​​d PDF放入应用。AnythingLLM对内置Tesseract集成有开放的功能请求。',
+          },
+          {
+            q: '内置RAG变慢之前的最大文档大小是多少？',
+            a: '在16GB RAM硬件上，AnythingLLM在~5,000份文档或~50,000页/工作区前保持响应。LM Studio实际限制约30份文档/聊天（~3,000页）。Jan + 文档可靠地处理~200份文档。超过这些上限，索引时间增长线性，冷查询检索延迟可达5～10秒；这是升级到自定义RAG堆栈的信号。',
+          },
+          {
+            q: '我能将这些用于敏感的法律或医疗文件吗？',
+            a: '三个都在安装后100%离线运行，从不传输文档内容。对于管制工作流（HIPAA、GDPR、律师-客户特权），Jan + 文档是最强的选择，因为整个堆栈是开源（AGPL）和可审计的，默认情况下零遥测。AnythingLLM在使用开源Docker构建的已审计环境中也是合理的选择（跳过桌面安装程序遥测）。LM Studio是完全专有的 — 在使用管制数据之前请咨询您的合规团队。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI：最佳本地RAG 2026](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 超越内置RAG时的升级路径。',
+          '[在30分钟内为您的PDF构建本地RAG（Ollama + AnythingLLM）](/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step) — 当您想要更多控制时的自定义堆栈教程。',
+          '[2026年本地RAG最佳嵌入模型](/zh/power-local-llm/best-embedding-models-local-rag-2026) — 对于调整检索质量的用户。',
+          '[LM Studio vs Jan vs GPT4All：2026年哪个本地AI应用赢？](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 当RAG是多个标准之一时的更广泛的应用比较。',
+          '[本地与1,000+ PDF聊天](/zh/power-local-llm/chat-with-1000-pdfs-locally) — 很大文档库的扩展指南。',
+          '[RAG解释：如何用真实数据支撑AI答案（2026）](/prompt-engineering/rag-explained?lang=zh) — 关于RAG如何在幕后工作的概念权威。',
+          '[Power Local LLM中心](/zh/power-local-llm) — 集群的完整指南库。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': '内置RAG的本地AI应用：与文件聊天（无需配置）',
+      'description':
+        'AnythingLLM、LM Studio和Jan + 文档在1,000页文档上测试。内置RAG无向量库、无Python、无命令行。',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'url': 'https://www.promptquorum.com/zh/power-local-llm/local-ai-app-with-built-in-rag',
+      'inLanguage': 'zh',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=zh',
+      'author': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'LM Studio' },
+        { '@type': 'Thing', 'name': 'Jan（本地AI应用）' },
+        { '@type': 'Thing', 'name': 'Retrieval-Augmented Generation' },
+        { '@type': 'Thing', 'name': '本地文档聊天' },
+        { '@type': 'Thing', 'name': '内置RAG' },
+      ],
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '.key-takeaways']
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'zh',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '我可以在这些应用中与1,000+ PDF聊天吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM处理每个工作区最多约5,000份文档。Jan + 文档可靠地处理约200份文档。LM Studio是对话范围，约30份文档/聊天。对于1,000+份文档库，AnythingLLM是唯一的内置选项，无需升级。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '这些应用支持DOCX和Excel吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '三个都支持DOCX。Excel在2026年5月不被任何应用直接支持 — 先转换为CSV或markdown。AnythingLLM另外支持EPUB、HTML、JSON、音频和网站。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '我的文档存储在哪里？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM在~/.anythingllm/（macOS/Linux）或%APPDATA%/AnythingLLM（Windows）。LM Studio在~/.cache/lm-studio/或%APPDATA%/LM Studio。Jan在~/jan/。三个都不将您的文档上传到任何地方。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '我可以从应用的记忆中删除文档吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '是的，三个都可以。AnythingLLM在工作区UI中有移除 + 重新索引。LM Studio从聊天中分离或删除。Jan从扩展面板移除 + 重新索引。删除后，块会在下一次重新索引时从本地向量存储中移除。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '引用的准确性如何？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM按块引用，文件名和页码 — 足以用于学术文章。LM Studio按文件名引用；可靠性取决于模型。Jan按块引用，文件名，无页码。在12查询测试中，虚假引用很少 — 始终验证高风险声明。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '内置RAG可以离线工作吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '是的。安装后，三个都完全离线工作。索引在本地；查询击中本地向量存储和本地LLM。我们通过禁用网络来确认 — 三个都继续正常应答。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '我可以在设备之间共享文档数据库吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM在便携文件夹中存储工作区，可在机器之间复制。LM Studio是对话范围，不同步。Jan在~/jan/但LanceDB对版本敏感。最好的方式是家庭服务器上的AnythingLLM Docker。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '内置RAG处理扫描PDF（OCR）吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '三个都不处理仅图像的扫描PDF。使用Tesseract OCR或ocrmypdf先添加文本层，然后放入应用。AnythingLLM对内置Tesseract有开放的功能请求。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '内置RAG变慢之前的最大文档大小是多少？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '在16GB RAM上，AnythingLLM ~5,000份文档或~50,000页/工作区。LM Studio约30/聊天。Jan约200份文档。超过这些，升级到自定义RAG堆栈。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '我能将这些用于敏感的法律或医疗文件吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '三个都100%离线，从不传输内容。对于管制工作流，Jan + 文档最强（AGPL、可审计、零遥测）。AnythingLLM也可以用开源Docker。LM Studio完全专有 — 请咨询合规团队。',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'zh',
+      'name': '2026年本地AI桌面应用，内置RAG',
+      'numberOfItems': 3,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'AnythingLLM',
+          'description':
+            '功能最强的内置RAG：10+文件格式（PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、网站、音频）、可互换的嵌入模型、持久工作区、按块引用（页码）。约5,000份文档/工作区实用限制。',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'LM Studio',
+          'description':
+            '最简单的文档聊天：在聊天中拖放PDF/DOCX/TXT/MD。nomic-embed-text v1.5捆绑。对话范围（无工作区）。约30份文档/聊天实用限制。',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Jan + 文档扩展',
+          'description':
+            '开源选择：AGPL可审计、默认零遥测、仅本地嵌入（all-MiniLM-L6-v2捆绑、可互换）。PDF、DOCX、TXT、MD支持。最适合合规工作流。约200份文档实用限制。',
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': '首页',
+          'item': 'https://www.promptquorum.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/zh/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': '内置RAG的本地AI应用',
+          'item': 'https://www.promptquorum.com/zh/power-local-llm/local-ai-app-with-built-in-rag',
+        },
+      ],
+    },
+  },
 }
