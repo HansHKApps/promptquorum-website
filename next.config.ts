@@ -3,7 +3,11 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   compress: true,
   trailingSlash: false,
-  images: {},
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -74,7 +78,19 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/_next/static/:path*',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex' },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
+          },
+        ],
       },
       {
         source: '/:path*',
@@ -97,7 +113,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Cache-Control',
-            value: 'public, max-age=0, must-revalidate',
+            value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800',
           },
         ],
       },

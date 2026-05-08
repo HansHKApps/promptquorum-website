@@ -90,6 +90,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                 width={1200}
                 height={675}
                 className="w-full rounded-lg border border-primary/20 shadow-sm"
+                loading="lazy"
               />
             </div>
           ) : null}
@@ -132,6 +133,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                       src={section.image}
                       alt={section.imageCaption || 'Article illustration'}
                       className="w-full rounded-lg border border-primary/20 shadow-sm hover:shadow-md transition-shadow"
+                      loading="lazy"
                     />
                     {section.imageCaption && (
                       <figcaption className="text-sm text-text-secondary mt-3 text-center italic">

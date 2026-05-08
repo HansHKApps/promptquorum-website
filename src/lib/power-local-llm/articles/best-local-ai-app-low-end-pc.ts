@@ -593,4 +593,417 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Tools & Interfaces',
+    title: 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
+    seoTitle: 'Beste lokale KI-Apps für 8-GB-RAM-PCs 2026: CPU-only getestet',
+    metaDescription:
+      'Kein RTX 4090 nötig. Ollama, GPT4All, Jan und llama.cpp auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen. Mai 2026.',
+    twitterDescription:
+      '4 lokale KI-Apps, die auf 8-GB-RAM-Laptops ohne GPU laufen. Tokens/Sek., exakte Einstellungen, ehrliche Bewertungen. Mai 2026.',
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_hardware_mentioned: [
+      'Intel UHD 620',
+      'Intel Iris Xe',
+      'AMD Ryzen 5 5500U',
+      'Apple M1 8GB',
+      'Intel Core i5-8250U',
+    ],
+    audience:
+      'Besitzer von 4 bis 7 Jahre alten Laptops mit 8 GB RAM ohne dedizierte GPU, die ihre erste lokale KI-App auswählen.',
+    readTime: '11 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'lokale KI auf leistungsschwachem PC',
+    targetKeywords: [
+      'lokale ki 8gb ram',
+      'beste lokale llm low end pc',
+      'lokale ki ohne gpu',
+      'lokales llm cpu only 2026',
+      'lokale ki alter laptop',
+    ],
+    leadAnswerBlock:
+      '**Auf einem 8-GB-RAM-Laptop ohne dedizierte GPU laufen vier Apps in 2026 wirklich gut: Ollama, GPT4All, Jan und llama.cpp. Kombinieren Sie eine davon mit Phi-4 Mini Q4 (beste Balance), SmolLM 2 1.7B Q4 (am schnellsten) oder Llama 3.2 1B Q5 (flüssigstes GUI-Gefühl) und bleiben Sie unter 6 GB Working Set.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Welche lokale KI-App läuft am besten auf einem 8-GB-RAM-Laptop ohne GPU?',
+        answer:
+          'Wählen Sie Ollama, wenn Sie mit dem Terminal vertraut sind — es ist die schlankste Laufzeitumgebung und harmoniert sauber mit Phi-4 Mini Q4 bei 4–8 Tok/Sek. auf älteren Intel-CPUs und 8–14 Tok/Sek. auf Hardware der Klasse Ryzen 5000 / Intel 12. Generation. Wählen Sie GPT4All, wenn Sie einen One-Click-Installer und keinerlei Kommandozeile möchten — es ist die nachsichtigste Option bei 8 GB RAM und liefert einen integrierten Modellbrowser. Wählen Sie Jan für ein sauberes GUI mit vollständig offenem Quellcode. Wählen Sie llama.cpp direkt für maximale Tokens-pro-Sekunde, wenn Sie zur Kompilierung bereit sind.',
+        bullets: [
+          'Ollama — schlankste CPU-Laufzeit, terminalbasiert, harmoniert am besten mit Phi-4 Mini',
+          'GPT4All — einfachste Installation, niedrigster Mindest-RAM (4 GB), empfohlen für nicht-technische Nutzer',
+          'Jan — vollständiges GUI, Open Source (AGPL), Apple Silicon nativ, leichteste 8-GB-Mac-Wahl',
+          'llama.cpp — Geschwindigkeit auf Bare-Metal-Niveau, Kompilierung erforderlich, harmoniert am besten mit SmolLM 2 / Gemma 3 4B',
+          'Alle vier sind kostenlos, laufen nach der Installation offline und laden Standard-GGUF-Modelldateien',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Vergleichstabelle', anchor: '#comparison-table' },
+      { label: 'Welche sollten Sie wählen?', anchor: '#which-one' },
+      { label: 'Tokens/Sek.-Benchmarks (CPU-only, 8 GB RAM)', anchor: '#cpu-benchmarks' },
+      { label: 'Speicherdruck & Thermal Throttling', anchor: '#memory-thermals' },
+      { label: 'Bestes Modell pro App auf 8 GB RAM', anchor: '#best-models' },
+      { label: 'Einstellungen, die 30–60 % mehr Geschwindigkeit bringen', anchor: '#settings' },
+      { label: 'Integrierte Grafik: Lohnt sich das?', anchor: '#igpu' },
+      { label: 'Häufige Fehler', anchor: '#mistakes' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Ollama** — schlankste CPU-Laufzeit in 2026, läuft als Hintergrundserver, beste App + Modell-Kombination: Ollama + Phi-4 Mini Q4 bei 4–14 Tok/Sek. auf 8 GB CPU-only.',
+          '**GPT4All** — einzige App mit 4-GB-RAM-Minimum und Null-Terminal-Installationspfad, am besten für nicht-technische Nutzer auf Windows-10-Laptops.',
+          '**Jan** — vollständiges GUI, AGPL Open Source, nativ auf Apple Silicon, leichteste GUI-App für ein 8-GB-MacBook-Air oder M1 Mac mini.',
+          '**llama.cpp** — schnellste Tokens-pro-Sekunde auf identischer Hardware (5–15 % über Ollama, 15–25 % über GPT4All), erfordert jedoch einen Kompilierschritt.',
+          '**Bestes Modell auf 8 GB / ohne GPU:** Phi-4 Mini 3,8B bei Q4_K_M für Balance, SmolLM 2 1,7B Q4 für maximale Geschwindigkeit, Llama 3.2 1B Q5 für flüssigstes Chat-Gefühl.',
+          '**Geschwindigkeitsranking auf identischer CPU:** llama.cpp > Ollama > Jan > GPT4All. Der Abstand beträgt 15–25 %, nicht 2–3×.',
+          '**Stand Mai 2026: Führen Sie keine 7B+-Modelle auf 8 GB RAM aus** — Kontextfenster-Druck plus das Betriebssystem selbst lösen Swap aus und brechen den Durchsatz um den Faktor 5–10 ein.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Wie schneiden Ollama, GPT4All, Jan und llama.cpp auf 8 GB RAM ohne GPU im Vergleich ab?',
+        content:
+          'Die unten angegebenen Bereiche sind aggregiert aus llama.cpp Upstream-Benchmark-Threads, Hugging-Face-Modellkarten und r/LocalLLaMA-Testberichten auf 8-GB-Laptops mit integrierter Grafik (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Tokens/Sek. werden bei 200-Token-Generierungen nach dem Modellladen gemessen, Standardkontextfenster 2048, sofern nicht anders angegeben.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Auf einem 8-GB-RAM-Laptop ohne dedizierte GPU ist Ollama mit Phi-4 Mini Q4_K_M das beste Allround-Setup für lokale KI — schnellste Generierungsgeschwindigkeit unter den No-Code-Optionen, niedrigste Wärmelast und größte Modellbibliothek.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Auf einem leistungsschwachen PC mit 8 GB RAM und ohne GPU: Installieren Sie Ollama, führen Sie `ollama pull phi4-mini` aus, dann `ollama run phi4-mini`. Sie erhalten 4–14 Tokens pro Sekunde, je nach CPU — langsam, aber nutzbar für Aufgaben, bei denen Sie einen Prompt absenden und auf die Antwort warten. Für eine Alternative ohne Terminal installiert sich GPT4All wie eine normale App und kuratiert seine Modellliste auf Modelle, die in 8 GB passen.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Apple M1 8 GB übertrifft 8-GB-x86-Laptops konsistent in allen vier Apps dieser Tabelle. Wenn Sie Zugang zu einem Apple-Silicon-Mac haben, ist es die beste Hardware mit wenig RAM für lokale KI — die Unified-Memory-Architektur gibt dem Modell Zugriff auf die vollen 8 GB ohne den OS-Overhead, den Windows- und Linux-Laptops haben.',
+          },
+        ],
+        columns: ['App', 'Min. RAM', 'Bestes Modell (8-GB-Beschränkung)', 'Tokens/Sek. (CPU-only)', 'Wärme', 'Verdikt'],
+        rows: [
+          {
+            'App': 'Ollama',
+            'Min. RAM': '6 GB',
+            'Bestes Modell (8-GB-Beschränkung)': 'Phi-4 Mini Q4_K_M',
+            'Tokens/Sek. (CPU-only)': '4–14 Tok/Sek.',
+            'Wärme': 'Niedrig',
+            'Verdikt': 'Beste Balance — zuerst wählen',
+          },
+          {
+            'App': 'GPT4All',
+            'Min. RAM': '4 GB',
+            'Bestes Modell (8-GB-Beschränkung)': 'Llama 3.2 1B Q4_0',
+            'Tokens/Sek. (CPU-only)': '3–10 Tok/Sek.',
+            'Wärme': 'Niedrig',
+            'Verdikt': 'Einfachste Installation — nicht-technische Wahl',
+          },
+          {
+            'App': 'Jan',
+            'Min. RAM': '6 GB',
+            'Bestes Modell (8-GB-Beschränkung)': 'Gemma 3 4B Q4_K_M',
+            'Tokens/Sek. (CPU-only)': '3–11 Tok/Sek.',
+            'Wärme': 'Mittel',
+            'Verdikt': 'Bestes GUI auf Apple Silicon 8 GB',
+          },
+          {
+            'App': 'llama.cpp',
+            'Min. RAM': '4 GB',
+            'Bestes Modell (8-GB-Beschränkung)': 'SmolLM 2 1.7B Q4_K_M',
+            'Tokens/Sek. (CPU-only)': '5–18 Tok/Sek.',
+            'Wärme': 'Niedrig',
+            'Verdikt': 'Am schnellsten bei eigener Kompilierung',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: 'Welche sollten Sie wählen?',
+        content:
+          '**Die richtige App hängt davon ab, ob Sie ein Terminal nutzen können, ob Sie auf Windows oder Mac arbeiten und wie alt Ihre CPU ist.** Verwenden Sie diese Entscheidungs-Abkürzung:',
+        rows: [
+          { 'Ihre Situation': 'Windows-10-Laptop, 8 GB RAM, keine Terminal-Erfahrung', 'Wählen': 'GPT4All' },
+          { 'Ihre Situation': 'Moderner Ryzen / Intel 12. Gen., 8 GB, terminalvertraut', 'Wählen': 'Ollama' },
+          { 'Ihre Situation': 'MacBook Air M1 / Mac mini M1 8 GB', 'Wählen': 'Jan oder Ollama' },
+          { 'Ihre Situation': 'Linux-Laptop, maximale Tokens/Sek. gewünscht', 'Wählen': 'llama.cpp' },
+          { 'Ihre Situation': '4-GB-RAM-Maschine (unter Spezifikation)', 'Wählen': 'GPT4All + Llama 3.2 1B Q4_0' },
+          { 'Ihre Situation': 'Ältere Intel Core i5-8250U / i7-7700U Klasse CPU', 'Wählen': 'Ollama + SmolLM 2 1.7B' },
+          { 'Ihre Situation': 'Chromebook mit Linux-Dev-Modus', 'Wählen': 'llama.cpp + SmolLM 2' },
+          { 'Ihre Situation': 'Arbeits-Laptop, auf dem keine Treiber installiert werden dürfen', 'Wählen': 'GPT4All (Installation ohne Treiber / ohne Admin-Rechte)' },
+        ],
+        columns: ['Ihre Situation', 'Wählen'],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Wenn Sie unschlüssig sind, beginnen Sie mit Ollama. Es läuft auf jedem Betriebssystem, lädt Modelle mit einem einfachen `ollama pull [modellname]` und stellt eine OpenAI-kompatible API bereit, falls Sie später andere Tools integrieren möchten. Wenn das Terminal ein Ausschlusskriterium ist, ist GPT4All die richtige Alternative — gleiche Modelle, keine Kommandozeile nötig.',
+          },
+        ],
+      },
+      cpuBenchmarks: {
+        id: 'cpu-benchmarks',
+        title: 'Wie schnell ist jede App auf realer Low-End-Hardware?',
+        content:
+          '**Tokens-pro-Sekunde auf repräsentativen 8-GB-RAM-Maschinen ohne dedizierte GPU, Mai 2026.** Die Zahlen sind von der Community gemeldete Bereiche aus llama.cpp-Upstream-Benchmark-Threads, Hugging-Face-Modellkarten und r/LocalLLaMA-Hardware-getaggten Tests. Jede Zelle ist der typische Bereich über die gemeldeten Läufe bei Standardeinstellungen; Ausreißer ausgeschlossen.',
+        columns: ['Hardware', 'Modell', 'Ollama', 'GPT4All', 'Jan', 'llama.cpp'],
+        rows: [
+          { 'Hardware': 'Intel Core i5-8250U + UHD 620 (2018 Ultraportable)', 'Modell': 'Phi-4 Mini Q4_K_M', 'Ollama': '4–6 Tok/Sek.', 'GPT4All': '3–5 Tok/Sek.', 'Jan': '3–5 Tok/Sek.', 'llama.cpp': '5–7 Tok/Sek.' },
+          { 'Hardware': 'AMD Ryzen 5 5500U + Vega 7 (2021 Budget)', 'Modell': 'Phi-4 Mini Q4_K_M', 'Ollama': '8–11 Tok/Sek.', 'GPT4All': '6–9 Tok/Sek.', 'Jan': '7–9 Tok/Sek.', 'llama.cpp': '9–13 Tok/Sek.' },
+          { 'Hardware': 'Intel Core Ultra 5 125H + Arc iGPU (2024 Mittelklasse)', 'Modell': 'Gemma 3 4B Q4_K_M', 'Ollama': '10–14 Tok/Sek.', 'GPT4All': '8–11 Tok/Sek.', 'Jan': '9–12 Tok/Sek.', 'llama.cpp': '12–18 Tok/Sek.' },
+          { 'Hardware': 'Apple M1 8 GB (MacBook Air 2020)', 'Modell': 'Llama 3.2 1B Q5_K_M', 'Ollama': '28–40 Tok/Sek.', 'GPT4All': '20–30 Tok/Sek.', 'Jan': '26–38 Tok/Sek.', 'llama.cpp': '32–48 Tok/Sek.' },
+          { 'Hardware': 'Apple M1 8 GB', 'Modell': 'Phi-4 Mini Q4_K_M', 'Ollama': '12–18 Tok/Sek.', 'GPT4All': '9–14 Tok/Sek.', 'Jan': '11–17 Tok/Sek.', 'llama.cpp': '14–20 Tok/Sek.' },
+          { 'Hardware': 'Intel Core i5-8250U', 'Modell': 'SmolLM 2 1.7B Q4_K_M', 'Ollama': '10–14 Tok/Sek.', 'GPT4All': '8–12 Tok/Sek.', 'Jan': '9–13 Tok/Sek.', 'llama.cpp': '12–16 Tok/Sek.' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Apple Silicon dominiert diese Tabelle, weil die M1-Unified-Memory-Architektur GPU und CPU denselben RAM mit hoher Bandbreite teilen lässt. Auf x86-Laptops ohne dedizierte GPU lohnt sich integrierte Grafik selten wegen des Offload-Overheads — siehe iGPU-Abschnitt unten.',
+          },
+        ],
+      },
+      memoryThermals: {
+        id: 'memory-thermals',
+        title: 'Warum fühlt sich 8 GB RAM so eng an, und wann drosselt der Laptop?',
+        content:
+          '**Bei 8 GB RAM verbraucht das Betriebssystem bereits 2,5–3,5 GB, bevor irgendein Modell geladen wird, und lässt 4,5–5,5 GB für das Modell und seinen KV-Cache übrig.** Diese Obergrenze macht Phi-4 Mini (3,8B Q4 ≈ 2,4 GB) zum praktischen Sweet Spot und schließt jedes 7B-Modell bei jeder Quantisierung für den Dauerbetrieb aus.',
+        items: [
+          '**Working Set vs. System-RAM:** Eine Modelldatei auf der Festplatte ist kleiner als ihr geladener Working Set. Phi-4 Mini Q4_K_M ist ≈ 2,4 GB auf der Festplatte, aber ≈ 3,0–3,5 GB im RAM, sobald der KV-Cache für ein 2048-Token-Kontextfenster hinzukommt. Reduzieren Sie den Kontext auf 1024 und Sie sparen ≈ 400 MB.',
+          '**Swap-Tod:** Wenn der Working Set den physischen RAM übersteigt, beginnen macOS und Linux mit dem Paging auf die SSD. Tokens-pro-Sekunde fallen um den Faktor 5–10 und der Laptop wird unresponsiv. Beobachten Sie `vm_stat` (Mac) oder `free -h` (Linux) — wenn Swap während der Inferenz steigt, wechseln Sie sofort zu einem kleineren Modell.',
+          '**Thermal Throttling auf Ultraportables:** Lüfterlose und Single-Fan-Laptops (MacBook Air M1, XPS 13, Surface Laptop Go) erreichen innerhalb von 3–5 Minuten Dauerbetrieb das thermische Limit und takten die CPU um 20–35 % herunter. Tokens/Sek. fallen entsprechend.',
+          '**Kontextlänge ist eine Speichersteuer:** Standard 4096 Kontext reserviert einen 4096-Token-KV-Cache vorab. Bei 1B-Modellen sind das 200–300 MB; bei 4B-Modellen sind es 600–900 MB. Reduzieren Sie auf 1024, sofern Sie nicht tatsächlich lange Eingaben benötigen.',
+          '**Hintergrund-Apps zählen mehr als das CPU-Modell:** Ein Chrome-Fenster mit 20 Tabs sind 1–2 GB. Slack belegt 400–600 MB. Auf 8 GB RAM ist das Schließen dieser Apps vor dem Laden eines 4B-Modells der größte verfügbare Tokens/Sek.-Gewinn.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Laden Sie kein 7B-Modell auf 8 GB RAM, auch nicht bei Q2. Q2 7B sind ≈ 2,5 GB auf der Festplatte, aber Working Set plus 2048 Kontext landen bei ≈ 5,5 GB, was auf den meisten Windows-/Linux-Systemen in den Swap führt. Das Ergebnis ist ein 5–10× Geschwindigkeitsverlust und eine eingefrorene Benutzeroberfläche.',
+          },
+        ],
+      },
+      bestModels: {
+        id: 'best-models',
+        title: 'Welches Modell und welche Quantisierung sollten Sie in jeder App laden?',
+        content:
+          '**Auf 8 GB RAM ohne dedizierte GPU bleiben Sie unter 4B-Parametern bei Q4_K_M oder darunter.** Q4_K_M ist die Standard-Quantisierung in 2026 — sie verliert ≈ 1 % Perplexität gegenüber FP16, passt in halben RAM und ist der Standard für die meisten GGUF-Builds auf Hugging Face. Aufgelistet pro App:',
+        items: [
+          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3,8B Q4_K_M, ≈ 2,4 GB) ist die Standardempfehlung. Für maximale Geschwindigkeit `ollama pull smollm2:1.7b` (≈ 1,0 GB). Für Chat-Politur `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
+          '**GPT4All:** Verwenden Sie den App-internen Modellbrowser → "Llama 3.2 1B Instruct Q4_0" (≈ 0,7 GB) für die leichteste Installation oder "Phi-4 Mini Q4_K_M", wenn der RAM es zulässt. GPT4All-Standards sind konservativ abgestimmt, daher ist die sichtbare Modellliste kürzer als die von llama.cpp, aber jeder Eintrag läuft.',
+          '**Jan:** Verwenden Sie den kuratierten Katalog → "Gemma 3 4B Instruct Q4_K_M" (≈ 2,6 GB) auf Apple Silicon oder "Phi-4 Mini Q4_K_M" auf x86. Jan akzeptiert auch das Einfügen einer Hugging-Face-URL für jedes GGUF.',
+          '**llama.cpp:** Laden Sie GGUF direkt von Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF`, `bartowski/SmolLM2-1.7B-Instruct-GGUF` oder `bartowski/Llama-3.2-1B-Instruct-GGUF`. Ausführen mit `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
+          '**Vermeiden auf 8 GB / ohne GPU:** jedes 7B-Modell bei jeder Quantisierung, jedes Modell über Q5_K_M (vernachlässigbarer Qualitätsgewinn, doppelter RAM-Aufwand) und jedes Basis-Modell — wählen Sie immer `-instruct`- oder `-chat`-Varianten für nutzbare Ausgabe.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Q4_K_M ist nicht dasselbe wie Q4_0. Q4_K_M verwendet ein intelligenteres Mixed-Precision-Schema und ist ≈ 5–10 % besser in der Qualität bei gleicher Größe. Wählen Sie Q4_K_M, wann immer beide verfügbar sind.',
+          },
+        ],
+      },
+      settings: {
+        id: 'settings',
+        title: 'Welche Einstellungen bringen 30–60 % mehr Tokens/Sek. auf Low-End-PCs?',
+        content:
+          '**Standard-Einstellungen sind auf 16 GB RAM und eine dedizierte GPU abgestimmt. Auf 8 GB CPU-only zählen drei Stellschrauben am meisten:** Kontextlänge, Batch-Größe und Thread-Anzahl. Gemeinsam abgestimmt sind sie 30–60 % mehr Tokens/Sek. auf derselben Hardware wert.',
+        items: [
+          '**Kontextlänge — der größte Einzelgewinn.** Reduzieren Sie von 4096 (Standard) auf 1024. In Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. In llama.cpp: `-c 1024`. RAM-Ersparnis: 400–900 MB je nach Modell. Tokens/Sek.-Gewinn: 10–20 %.',
+          '**Thread-Anzahl — physische Kerne, nicht logische.** Ältere CPUs (i5-8250U, Ryzen 5 5500U) haben 4 physische / 8 logische Kerne. Setzen Sie Threads = 4, nicht 8. In llama.cpp: `-t 4`. In Ollama: `OLLAMA_NUM_THREAD=4`. Hyperthreading schadet der Inferenz, weil beide Threads um dieselbe FP/SIMD-Einheit konkurrieren.',
+          '**Batch-Größe für Prompt-Verarbeitung — auf 8 bei schwachen CPUs.** llama.cpp: `--n-batch 8`. Standard 512 belastet den L2-Cache auf 4-Kern-CPUs. Tokens/Sek.-Gewinn auf 4B-Modellen: 15–25 %.',
+          '**KV-Cache-Quantisierung — auf q8_0 setzen, um den KV-RAM zu halbieren.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. RAM-Ersparnis: 150–400 MB bei 1024 Kontext, mehr bei höheren Kontexten. Qualitätsauswirkung: nicht wahrnehmbar.',
+          '**mlock auf Swap-anfälligen Systemen deaktivieren.** llama.cpp `--no-mlock`. Auf 8-GB-Systemen verhindert das Sperren des Modells im RAM, dass das OS intelligente Caching-Entscheidungen trifft. Kontraintuitiv, aber konsistent schneller auf Windows 10/11 mit 8 GB.',
+          '**AVX2-Builds explizit verwenden.** Die meisten vorgefertigten llama.cpp-/Ollama-Binärdateien erkennen AVX2 / AVX-512 automatisch und wechseln zum richtigen Kernel. Wenn Sie selbst kompiliert haben, übergeben Sie `-DGGML_AVX2=ON`. AVX-512-Erkennung: `cat /proc/cpuinfo | grep avx512`. AVX-512 bringt weitere 10–15 % auf unterstützten CPUs (Ice Lake / Tiger Lake / Rocket Lake / Zen 4+).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Stapeln Sie alle fünf Optimierungen, und Sie sehen typischerweise 35–55 % mehr Tokens/Sek. auf demselben Modell und derselben Hardware. Der größte Einzelgewinn ist der Kontextschnitt von 4096 → 1024, der auch die Time-to-First-Token bei einem kalten Prompt drastisch verkürzt.',
+          },
+        ],
+      },
+      igpu: {
+        id: 'igpu',
+        title: 'Lohnt sich integrierte Grafik für lokale KI?',
+        content:
+          '**Auf den meisten 8-GB-RAM-Laptops lautet die Antwort nein — halten Sie die Inferenz auf der CPU.** Integrierte Grafik teilt sich den System-RAM, daher gibt das Auslagern von Schichten Ihnen keinen zusätzlichen Speicher; es fügt nur eine Offload-Overhead-Strafe hinzu. Drei nennenswerte Ausnahmen:',
+        items: [
+          '**Apple Silicon (M1/M2/M3/M4) — ja, immer.** Die Unified-Memory-Architektur bedeutet, dass die "GPU" denselben RAM mit derselben Bandbreite wie die CPU sieht. Ollama, Jan und llama.cpp nutzen alle automatisch Metal-Beschleunigung auf dem Mac, ohne Flag. Deshalb übertrifft ein M1 8 GB die meisten 8-GB-Windows-Laptops um den Faktor 2–3.',
+          '**Intel Arc iGPU (Meteor Lake / Lunar Lake / Arrow Lake) — manchmal.** Intel-Core-Ultra-Chips (Ultra 5 125H, Ultra 7 155H, Ultra 7 258V) bringen eine Arc iGPU mit, die OpenVINO und SYCL-Beschleunigung unterstützt. llama.cpp mit `-DGGML_SYCL=ON` ist 30–60 % schneller als CPU-only auf diesen Chips. Die Einrichtung ist nicht trivial.',
+          '**AMD Ryzen 7000/8000 mit Radeon 700M/800M iGPU — experimentell.** ROCm-Support auf integrierter Radeon ist 2026 partiell und heikel. CPU-only ist die sicherere Wahl, sofern Sie nicht gerne Treiber-Stacks debuggen.',
+          '**Ältere Intel UHD / Iris Plus / AMD Vega — überspringen.** Diesen iGPUs fehlen FP16-Durchsatz und Speicherbandbreite, um einen modernen AVX2-CPU-Kernel zu schlagen. Bleiben Sie auf der CPU.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Der einfachste Test, ob sich Ihre iGPU lohnt: Führen Sie dasselbe Modell 10 Generierungen lang CPU-only vs. iGPU-beschleunigt aus und vergleichen Sie Tokens/Sek. Auf Apple Silicon ist die iGPU immer schneller. Auf x86-integrierter Grafik ist die Antwort gerätespezifisch — testen statt annehmen.',
+          },
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'Häufige Fehler',
+        content:
+          '**Fünf Fehler, die die Leistung auf 8-GB-/Ohne-GPU-Systemen ruinieren**, mit der Lösung für jeden:',
+        items: [
+          '**Fehler 1: Ein 7B-Modell laden, "weil Q4 auf die Festplatte passt".** Die Festplattendatei ist kleiner als der geladene Working Set. 7B Q4 ≈ 4,4 GB auf der Festplatte, ≈ 5,5–6,5 GB im RAM mit 2048 Kontext, was die 8-GB-Grenze überschreitet und Swap auslöst. **Lösung:** Bleiben Sie bei 4B oder darunter. Phi-4 Mini Q4_K_M ist das qualitativ hochwertigste Modell, das konsistent passt.',
+          '**Fehler 2: Das Kontextfenster auf 4096 belassen.** Standard 4096 reserviert einen KV-Cache, der zusätzlich 400–900 MB belegt. **Lösung:** Setzen Sie den Kontext auf 1024, sofern Sie nicht tatsächlich lange Eingaben benötigen. `OLLAMA_NUM_CTX=1024` (Ollama), `-c 1024` (llama.cpp).',
+          '**Fehler 3: Mit Chrome, Slack und Spotify offen ausführen.** Jedes davon belegt 0,5–2 GB. Auf 8 GB RAM haben Sie nach dem OS ≈ 5 GB. Hintergrund-Apps drücken Sie in den Swap, bevor das Modell überhaupt lädt. **Lösung:** Schließen Sie alles außer der KI-App und einem Notiz-Fenster vor der Inferenz.',
+          '**Fehler 4: Q8_0 "für Qualität" wählen.** Auf 1B–4B-Modellen liegt der Qualitätsunterschied zwischen Q4_K_M und Q8_0 unter der menschlich wahrnehmbaren Schwelle für Chat-Nutzung, aber Q8 verdoppelt den RAM-Aufwand und halbiert die Tokens/Sek. **Lösung:** Bleiben Sie bei Q4_K_M, sofern Sie keinen messbaren Benchmark haben, der zeigt, dass Q8 Ihrer Aufgabe hilft.',
+          '**Fehler 5: Annehmen, dass ein Raspberry Pi 4 ausreicht.** 4 GB RAM und ein 1,5-GHz-Cortex-A72 können TinyLlama 1B technisch bei 1–3 Tok/Sek. ausführen, aber das Erlebnis ist für Chat unbrauchbar. **Lösung:** Raspberry Pi 5 mit 8 GB RAM ist die realistische ARM-SBC-Untergrenze — und selbst dort ist ein 8-GB-x86-Laptop schneller.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Alle fünf Fehler haben dieselbe Wurzel: die Annahme, dass Desktop-Einstellungen für einen eingeschränkten Laptop gelten. Jeder Standard (Kontext 4096, Q8-Qualität, alle Threads) ist auf eine Maschine mit 16–32 GB RAM und einer dedizierten GPU abgestimmt. Auf 8 GB CPU-only müssen Sie die Standards aktiv überschreiben. Betrachten Sie den Einstellungen-Abschnitt in dieser Anleitung als das "Low-End-PC-Preset" — wenden Sie alle fünf Optimierungen vor Ihrem ersten Lauf an.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Kann ich lokale KI auf 4 GB RAM ausführen?',
+            a: 'Ja, aber nur mit Sub-2B-Modellen wie Llama 3.2 1B Q4_0 (≈ 0,7 GB auf der Festplatte) oder SmolLM 2 360M (≈ 0,25 GB auf der Festplatte). GPT4All ist die einzige der vier Apps, die 4 GB als offizielles Minimum auflistet. Erwarten Sie 3–8 Tok/Sek. auf einer modernen CPU und merklich trägeres UI-Verhalten, weil das OS fast keinen Spielraum hat.',
+          },
+          {
+            q: 'Funktioniert eine alte Intel-CPU für lokale KI?',
+            a: 'Alles mit AVX2 (Haswell, 2013, oder neuer) funktioniert in 2026. Die praktische Untergrenze ist eine Intel Core i5-8250U oder ein älterer Ryzen 5 2500U, wo Phi-4 Mini Q4 bei 4–6 Tok/Sek. läuft. CPUs ohne AVX2 (vor 2013, Intel, Original-AMD-Bulldozer) laden zwar, laufen aber bei 1–2 Tok/Sek., was für Chat unbrauchbar ist.',
+          },
+          {
+            q: 'Beschädigt lokale KI meinen Laptop?',
+            a: 'Nein. Lokale Inferenz ist ein normaler User-Space-Prozess — sie kann keine Hardware beschädigen. Das Worst-Case-Szenario ist, dass der Laptop heiß wird (90–100 °C auf Ultraportables) und drosselt, wovor die Firmware automatisch schützt. Um dies zu vermeiden, verwenden Sie ein Kühlpad bei längeren Sitzungen, halten Sie den Raum unter 25 °C, und stoppen Sie die Inferenz, wenn das Gehäuse unangenehm zu berühren ist.',
+          },
+          {
+            q: 'Reicht integrierte Grafik aus?',
+            a: 'Auf Apple Silicon (M1+) ist sie mehr als ausreichend — Unified Memory macht die iGPU effektiv zu einer Low-End-Diskret-GPU. Auf Intel Core Ultra (Meteor Lake / Arrow Lake) kann sie 30–60 % zusätzliche Geschwindigkeit bringen, wenn Sie SYCL einrichten. Auf älteren Intel UHD / Iris Plus / AMD Vega ist integrierte Grafik langsamer als die CPU und nicht der Mühe wert.',
+          },
+          {
+            q: 'Welches Modell ist am schnellsten auf reiner CPU?',
+            a: 'Llama 3.2 1B Q4_0 und SmolLM 2 1.7B Q4_K_M sind die schnellsten nutzbaren Modelle. Llama 3.2 1B erreicht 25–50 Tok/Sek. auf Apple M1 und 12–25 Tok/Sek. auf einer modernen Ryzen-/Intel-CPU. SmolLM 2 ist ähnlich schnell mit etwas polierterem Schreibstil. Alles über 4B-Parametern fühlt sich auf CPU-only-Systemen wahrscheinlich nicht schnell an.',
+          },
+          {
+            q: 'Hilft mehr RAM mehr als ein CPU-Upgrade?',
+            a: 'Auf 8-GB-Systemen ist der Wechsel zu 16 GB das größte praktische Upgrade, weil es 7B–8B-Modelle wie Mistral 7B Q4 und Llama 3.1 8B Q4 freischaltet. CPU-Upgrades bringen 20–50 % mehr Tokens/Sek.; das RAM-Upgrade bringt 2–4× Qualität (Sprung von 1B–4B auf 7B–8B). Wenn Sie nur eines tun können, fügen Sie RAM hinzu.',
+          },
+          {
+            q: 'Kann ich lokale KI auf einem Chromebook ausführen?',
+            a: 'Nur wenn der Linux-Dev-Modus (Crostini) verfügbar ist. Die vier Apps in dieser Anleitung laufen alle im Linux-Container — llama.cpp aus dem Quellcode kompiliert ist auf ARM-Chromebooks am zuverlässigsten, während x86-Chromebooks (Intel-basiert) mit Ollama oder GPT4All funktionieren. Die Leistung entspricht der zugrunde liegenden CPU; ein Intel-Core-i3-/i5-Chromebook verhält sich wie der entsprechende Windows-Laptop.',
+          },
+          {
+            q: 'Funktioniert Windows 10 noch für lokale KI in 2026?',
+            a: 'Ja. Alle vier Apps unterstützen Windows 10 22H2. Ollama, GPT4All und Jan liefern signierte Windows-Installer; llama.cpp liefert vorgefertigte Windows-Binärdateien in seinen GitHub-Releases. Das Ende des Windows-10-Mainstream-Supports im Oktober 2025 verhindert die Installation nicht, aber Sicherheitsupdates sind eingestellt — erwägen Sie für die Langzeitnutzung ein Linux-Dual-Boot oder ein Upgrade auf Windows 11.',
+          },
+          {
+            q: 'Was ist der günstigste Laptop, der lokale KI gut ausführt?',
+            a: 'Ein gebrauchtes 2021–2022 ThinkPad T14 oder Dell Latitude 5430 mit 16 GB RAM und einem Ryzen 5 5500U oder Intel i5-1235U kostet 350–450 € in 2026 und läuft Phi-4 Mini Q4 bei 8–14 Tok/Sek. Noch günstiger: jedes 8-GB-Apple-M1-MacBook-Air zu 450–550 € gebraucht, das die meisten x86-Laptops bei Tokens/Sek. dank Unified Memory schlägt.',
+          },
+          {
+            q: 'Kann ich einen Raspberry Pi für lokale KI verwenden?',
+            a: 'Ein Raspberry Pi 5 mit 8 GB RAM läuft Llama 3.2 1B Q4 bei 4–7 Tok/Sek. — nutzbar, aber langsam. Ein Pi 4 4 GB ist bei rund 2 Tok/Sek. auf TinyLlama 1B begrenzt. Für echte Chat-Nutzung ist ein 8-GB-x86-Laptop oder ein M1 MacBook Air schneller, gebraucht günstiger und einfacher einzurichten. Pi macht nur Sinn für Embedded-, Edge- oder Always-On-Workloads.',
+          },
+          {
+            q: 'Muss ich bei der Verwendung lokaler KI-Apps die DSGVO beachten?',
+            a: 'Bei rein lokaler Inferenz auf Ihrem Gerät verlassen die verarbeiteten Daten Ihren Endpunkt nicht — das erfüllt die Anforderungen an Datenresidenz und Auftragsverarbeitung (Art. 28 DSGVO) ohne zusätzliche Auftragsverarbeitungsverträge mit Cloud-Anbietern. Beachten Sie für den geschäftlichen Einsatz dennoch die BSI-Grundschutz-Kataloge für die Konfiguration der Endgeräte (Festplattenverschlüsselung, Zugriffskontrolle, Update-Management). Wenn Sie sensible Kategorien (Art. 9 DSGVO — Gesundheit, Religion, etc.) verarbeiten, dokumentieren Sie die Verarbeitung im Verzeichnis von Verarbeitungstätigkeiten und führen Sie ggf. eine Datenschutz-Folgenabschätzung durch — die lokale Verarbeitung reduziert das Risiko, ersetzt aber nicht die Dokumentationspflicht.',
+          },
+          {
+            q: 'Sind lokale KI-Apps für den deutschen Mittelstand geeignet?',
+            a: 'Ja — und besonders dort, wo Cloud-KI an Compliance-Hürden scheitert. Mittelständische Unternehmen in Maschinenbau, Steuerkanzleien, Arztpraxen und Anwaltskanzleien setzen 2026 zunehmend auf lokale Modelle, um Mandantendaten, Patientendaten und Konstruktionsdaten DSGVO-konform mit KI zu verarbeiten. Empfohlene Konfiguration für Mittelstand-IT: Ollama oder GPT4All auf einem dedizierten Workstation-PC (16 GB RAM minimum für 7B-Modelle; 32 GB für 13B), BSI-konformer Festplattenverschlüsselung (BitLocker oder LUKS), und einem internen Netzwerksegment ohne Internetzugang während der Inferenz. Für Teams ab 5 Personen lohnt sich die Investition in ein zentrales Ollama-Server-Setup mit Open WebUI als Browser-Frontend.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Einfachste lokale KI-App pro Betriebssystem: Windows-, Mac-, Linux-Empfehlungen](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=de) — viele Low-End-PC-Nutzer sind auf älterem Windows; dieser Leitfaden wählt eine App pro OS.',
+          '[Beste lokale LLM-Apps für Android in 2026](/power-local-llm/best-local-llm-apps-android-2026?lang=de) — natürliche Alternative für Low-End-Nutzer mit einem aktuellen Android-Smartphone.',
+          '[Zapier durch lokale KI-Agenten ersetzen](/power-local-llm/replace-zapier-with-local-ai-agents?lang=de) — praktische Workflow-Automatisierung für Budget-Nutzer auf derselben Hardware.',
+          '[LM Studio vs Jan vs GPT4All: Welche lokale KI-App gewinnt 2026](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=de) — Direktvergleich, falls Sie auch LM Studio in Erwägung ziehen.',
+          '[Beste Budget-GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm?lang=de) — wenn Sie bereit sind, das CPU-only-Territorium zu verlassen.',
+          '[Hardware-Leitfaden für lokale LLMs 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — vollständige Hardware-Autorität inklusive RAM-, CPU- und GPU-Trade-offs.',
+          '[Power Local LLM Hub](/power-local-llm?lang=de) — vollständige Leitfadenbibliothek für den Cluster.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/power-local-llm/best-local-ai-app-low-end-pc?lang=de',
+      'inLanguage': 'de',
+      'headline': 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
+      'description':
+        'Ollama, GPT4All, Jan und llama.cpp auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen.',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'GPT4All' },
+        { '@type': 'Thing', 'name': 'Jan (lokale KI-App)' },
+        { '@type': 'Thing', 'name': 'llama.cpp' },
+        { '@type': 'Thing', 'name': 'Phi-4 Mini' },
+        { '@type': 'Thing', 'name': 'Lokales LLM auf leistungsschwachem PC' },
+      ],
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '.key-takeaways'],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'de',
+      'mainEntity': [
+        { '@type': 'Question', 'name': 'Kann ich lokale KI auf 4 GB RAM ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, aber nur mit Sub-2B-Modellen wie Llama 3.2 1B Q4_0 (etwa 0,7 GB auf der Festplatte) oder SmolLM 2 360M (etwa 0,25 GB auf der Festplatte). GPT4All ist die einzige der vier Apps, die 4 GB als offizielles Minimum auflistet. Erwarten Sie 3–8 Tokens pro Sekunde auf einer modernen CPU und merklich trägeres UI-Verhalten, weil das OS fast keinen Spielraum hat.' } },
+        { '@type': 'Question', 'name': 'Funktioniert eine alte Intel-CPU für lokale KI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Alles mit AVX2 (Haswell, 2013, oder neuer) funktioniert in 2026. Die praktische Untergrenze ist eine Intel Core i5-8250U oder ein älterer Ryzen 5 2500U, wo Phi-4 Mini Q4 bei 4–6 Tokens pro Sekunde läuft. CPUs ohne AVX2 (vor 2013 Intel, Original-AMD-Bulldozer) laden zwar, laufen aber bei 1–2 Tokens pro Sekunde, was für Chat unbrauchbar ist.' } },
+        { '@type': 'Question', 'name': 'Beschädigt lokale KI meinen Laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Lokale Inferenz ist ein normaler User-Space-Prozess — sie kann keine Hardware beschädigen. Das Worst-Case-Szenario ist, dass der Laptop heiß wird (90–100 °C auf Ultraportables) und drosselt, wovor die Firmware automatisch schützt.' } },
+        { '@type': 'Question', 'name': 'Reicht integrierte Grafik aus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Auf Apple Silicon (M1 und neuer) ist sie mehr als ausreichend — Unified Memory macht die iGPU effektiv zu einer Low-End-Diskret-GPU. Auf Intel Core Ultra (Meteor Lake / Arrow Lake) kann sie 30–60 % zusätzliche Geschwindigkeit bringen. Auf älteren Intel UHD / Iris Plus / AMD Vega ist integrierte Grafik langsamer als die CPU.' } },
+        { '@type': 'Question', 'name': 'Welches Modell ist am schnellsten auf reiner CPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 1B Q4_0 und SmolLM 2 1.7B Q4_K_M sind die schnellsten nutzbaren Modelle. Llama 3.2 1B erreicht 25–50 Tokens pro Sekunde auf Apple M1 und 12–25 Tokens pro Sekunde auf einer modernen Ryzen- oder Intel-CPU.' } },
+        { '@type': 'Question', 'name': 'Hilft mehr RAM mehr als ein CPU-Upgrade?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Auf 8-GB-Systemen ist der Wechsel zu 16 GB das größte praktische Upgrade, weil es 7B–8B-Modelle wie Mistral 7B Q4 und Llama 3.1 8B Q4 freischaltet. CPU-Upgrades bringen 20–50 % mehr Tokens pro Sekunde; das RAM-Upgrade bringt 2–4× Qualität.' } },
+        { '@type': 'Question', 'name': 'Kann ich lokale KI auf einem Chromebook ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur wenn der Linux-Dev-Modus (Crostini) verfügbar ist. Die vier Apps in dieser Anleitung laufen alle im Linux-Container — llama.cpp aus dem Quellcode kompiliert ist auf ARM-Chromebooks am zuverlässigsten, während x86-Chromebooks mit Ollama oder GPT4All funktionieren.' } },
+        { '@type': 'Question', 'name': 'Funktioniert Windows 10 noch für lokale KI in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Alle vier Apps unterstützen Windows 10 22H2. Ollama, GPT4All und Jan liefern signierte Windows-Installer; llama.cpp liefert vorgefertigte Windows-Binärdateien. Das Ende des Windows-10-Mainstream-Supports im Oktober 2025 verhindert die Installation nicht, aber Sicherheitsupdates sind eingestellt.' } },
+        { '@type': 'Question', 'name': 'Was ist der günstigste Laptop, der lokale KI gut ausführt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ein gebrauchtes 2021–2022 ThinkPad T14 oder Dell Latitude 5430 mit 16 GB RAM und einem Ryzen 5 5500U oder Intel i5-1235U kostet 350–450 € in 2026 und läuft Phi-4 Mini Q4 bei 8–14 Tokens pro Sekunde. Noch günstiger: jedes 8-GB-Apple-M1-MacBook-Air zu 450–550 € gebraucht.' } },
+        { '@type': 'Question', 'name': 'Kann ich einen Raspberry Pi für lokale KI verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ein Raspberry Pi 5 mit 8 GB RAM läuft Llama 3.2 1B Q4 bei 4–7 Tokens pro Sekunde — nutzbar, aber langsam. Ein Pi 4 4 GB ist bei rund 2 Tokens pro Sekunde auf TinyLlama 1B begrenzt. Für echte Chat-Nutzung ist ein 8-GB-x86-Laptop oder ein M1 MacBook Air schneller, gebraucht günstiger und einfacher einzurichten.' } },
+        { '@type': 'Question', 'name': 'Muss ich bei der Verwendung lokaler KI-Apps die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei rein lokaler Inferenz auf Ihrem Gerät verlassen die verarbeiteten Daten Ihren Endpunkt nicht — das erfüllt die Anforderungen an Datenresidenz und Auftragsverarbeitung (Art. 28 DSGVO) ohne zusätzliche Auftragsverarbeitungsverträge mit Cloud-Anbietern. Beachten Sie für den geschäftlichen Einsatz dennoch die BSI-Grundschutz-Kataloge für die Konfiguration der Endgeräte. Wenn Sie sensible Kategorien (Art. 9 DSGVO) verarbeiten, dokumentieren Sie die Verarbeitung im Verzeichnis von Verarbeitungstätigkeiten.' } },
+        { '@type': 'Question', 'name': 'Sind lokale KI-Apps für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja — und besonders dort, wo Cloud-KI an Compliance-Hürden scheitert. Mittelständische Unternehmen in Maschinenbau, Steuerkanzleien, Arztpraxen und Anwaltskanzleien setzen 2026 zunehmend auf lokale Modelle, um Mandantendaten, Patientendaten und Konstruktionsdaten DSGVO-konform mit KI zu verarbeiten. Empfohlene Konfiguration: Ollama oder GPT4All auf einem dedizierten Workstation-PC (16 GB RAM minimum), BSI-konformer Festplattenverschlüsselung, und einem internen Netzwerksegment ohne Internetzugang während der Inferenz.' } },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'de',
+      'name': 'Beste lokale KI-Apps für 8-GB-RAM-Laptops ohne GPU in 2026',
+      'numberOfItems': 4,
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Ollama', 'description': 'Schlankste CPU-Laufzeit; Mindestens 6 GB RAM; harmoniert am besten mit Phi-4 Mini Q4_K_M bei 4–14 Tokens pro Sekunde auf 8 GB CPU-only.' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'GPT4All', 'description': 'Einfachster One-Click-Installer; Mindestens 4 GB RAM; harmoniert am besten mit Llama 3.2 1B Q4_0 bei 3–10 Tokens pro Sekunde; empfohlen für nicht-technische Nutzer.' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Jan', 'description': 'Open-Source-GUI (AGPL); Mindestens 6 GB RAM; harmoniert am besten mit Gemma 3 4B Q4_K_M bei 3–11 Tokens pro Sekunde; leichteste GUI auf Apple Silicon 8 GB.' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'llama.cpp', 'description': 'Bare-Metal-Geschwindigkeit bei eigener Kompilierung; Mindestens 4 GB RAM; harmoniert am besten mit SmolLM 2 1.7B Q4_K_M bei 5–18 Tokens pro Sekunde; am schnellsten auf identischer Hardware.' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Startseite', 'item': 'https://www.promptquorum.com/?lang=de' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/power-local-llm?lang=de' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Beste lokale KI-Apps für leistungsschwache PCs', 'item': 'https://www.promptquorum.com/power-local-llm/best-local-ai-app-low-end-pc?lang=de' },
+      ],
+    },
+  },
 }

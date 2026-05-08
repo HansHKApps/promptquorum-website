@@ -810,6 +810,7 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
             className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm hover:shadow-md transition-shadow"
             width={800}
             height={450}
+            loading="lazy"
           />
           {section.imageCaption && (
             <figcaption className="text-sm text-text-secondary italic mt-3 text-center max-w-2xl">
