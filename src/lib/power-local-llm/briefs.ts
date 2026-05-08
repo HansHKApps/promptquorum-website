@@ -889,6 +889,139 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       'Pure mobile content. Tables-heavy because mobile readers can extract winners from tables alone. Per-tier verdict (flagship / mid-range / budget) prominent.',
   },
 
+  // ─── CATEGORY 7 — Productivity & Knowledge Tools ────────────────────────────
+
+  'local-llm-with-obsidian-2026': {
+    title: 'Obsidian + Local LLM: 5 Plugins That Turn Your Vault Into a Second Brain',
+    meta: 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. 5 Obsidian plugins tested with Ollama. Best combo revealed.',
+    articleType: 'List + decision (plugin-driven)',
+    serpIntent: 'List-dominant — Obsidian audience searches "best plugins"',
+    ctrRule: 'Specific count (5) + outcome (Second Brain) + tension (Best combo revealed)',
+    writingBrief:
+      'Decision page for Obsidian power users. Test 5 plugins (Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, BMO Chatbot) all configured to use local Ollama backend. Score: vault search quality, semantic linking, generation speed, prompt customization, mobile sync compatibility. Show how to combine 2–3 plugins for a complete "second brain" workflow. Include sample workflows: daily note summarization, MOC generation, contextual writing assistance. High-intent niche traffic — Obsidian users are loyal and search heavily. Reference vault sizes (target: works with 5,000+ note vaults). Mobile angle: Obsidian users sync between desktop and mobile. Address the "Obsidian Sync vs git vs iCloud" tradeoff for plugin compatibility. Smart Connections embeddings need to sync OR be regenerated per device — flag explicitly.',
+    internalLinks: [
+      { ref: 'local-llm-with-logseq-and-joplin', reasoning: 'adjacent open-source alternative for readers who prefer Logseq or Joplin' },
+      { ref: 'local-llm-personal-knowledge-base-2026', reasoning: 'broader PKB architecture that Obsidian feeds into' },
+      { ref: 'local-rag-on-your-pdfs-step-by-step', reasoning: 'RAG layer that powers semantic plugins like Smart Connections' },
+      { ref: 'local-llm-screenwriting-and-novel-drafting', reasoning: 'Obsidian as drafting layer for long-form writing' },
+    ],
+    externalLinks: [
+      { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority for plugin configuration' },
+      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory listing for Obsidian plugins' },
+    ],
+    structure: {
+      label: 'Plugin comparison table (5-col)',
+      headers: ['Plugin', 'Vault search', 'Generation', 'Mobile sync', 'Best for'],
+      rows: [
+        ['Smart Connections', '', '', '', 'Semantic linking across notes'],
+        ['Copilot for Obsidian', '', '', '', 'Inline chat + writing assistance'],
+        ['Text Generator', '', '', '', 'Template-driven content generation'],
+        ['Local GPT', '', '', '', 'Privacy-first chat with notes'],
+        ['BMO Chatbot', '', '', '', 'Lightweight chat with vault context'],
+      ],
+    },
+    faqSeeds: [
+      'Which Obsidian plugin works best with Ollama?',
+      'Can plugins handle a 10,000-note vault?',
+      'Do these plugins sync to mobile?',
+      'Can I use multiple AI plugins together?',
+      'Which plugin is best for writing inside notes?',
+      'How do I prompt across my entire vault?',
+      'Can I use these for daily journaling?',
+      'Do plugins survive Obsidian updates?',
+      'Which has the best community support?',
+      'Can I run the AI plugin on a different machine?',
+    ],
+    mobileAngle:
+      'Obsidian users sync between desktop and mobile; address "Obsidian Sync vs git vs iCloud" tradeoff for plugin compatibility. Smart Connections embeddings need to sync OR regenerate per device — flag explicitly.',
+  },
+
+  'local-llm-with-logseq-and-joplin': {
+    title: 'Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync',
+    meta: 'Open-source notes + local AI = full privacy. Setup for Logseq AI plugins and Joplin AI integrations. Tested workflows.',
+    articleType: 'Decision (open-source alternative)',
+    serpIntent: 'Mixed — guides and tool reviews; thinner SERP than Obsidian',
+    ctrRule: 'Specific tools (Logseq + Joplin) + outcome (Smart Notes) + tension (Without Cloud Sync)',
+    writingBrief:
+      'Companion decision page to the Obsidian article covering open-source alternatives. Test Logseq with available AI plugins (logseq-copilot, GPT plugin variants) and Joplin with Ollama integrations (jarvis-plugin, AI assistant plugin). Score: privacy posture, AI feature depth, sync reliability (without cloud), mobile experience. Position as "the privacy alternative to Notion AI" — Notion sends data to OpenAI, these don\'t. Include migration guide from cloud notes (Notion export → Logseq). Strong EU/Germany angle on data sovereignty — both Logseq and Joplin are GDPR-friendlier than Notion by default architecture. Mobile: both Logseq and Joplin have mobile apps but neither has plugin support on mobile (as of 2026). Flag this gap explicitly — readers need to know they get full AI on desktop, manual workflows on mobile.',
+    internalLinks: [
+      { ref: 'local-llm-with-obsidian-2026', reasoning: 'sister article — Obsidian is the power-user alternative these readers are choosing against' },
+      { ref: 'local-llm-personal-knowledge-base-2026', reasoning: 'broader PKB architecture that Logseq/Joplin feeds into' },
+      { ref: 'replace-grammarly-notion-ai-with-local', reasoning: 'adjacent SaaS replacement — Notion AI specifically' },
+      { ref: 'replace-zapier-with-local-ai-agents', reasoning: 'adjacent workflow replacement for productivity stack' },
+    ],
+    externalLinks: [
+      { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority for plugin configuration' },
+      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory listing for Logseq and Joplin AI tools' },
+    ],
+    structure: {
+      label: 'Tool comparison table (5-col)',
+      headers: ['Tool', 'AI plugins', 'Sync (no cloud)', 'Mobile', 'Best for'],
+      rows: [
+        ['Logseq', '', '', '', 'Daily-journal + outliner workflow'],
+        ['Joplin', '', '', '', 'Markdown notes + e2e sync'],
+        ['Obsidian (reference)', '', '', '', 'Power users, paid plugins'],
+      ],
+    },
+    faqSeeds: [
+      'Can Logseq replace Notion for AI users?',
+      'Does Joplin support local AI plugins?',
+      'Which has better sync without cloud?',
+      'Can I migrate from Notion to Logseq with AI?',
+      'Does Logseq work offline fully?',
+      'Are Joplin plugins as mature as Obsidian\'s?',
+      'Which is better for daily journaling with AI?',
+      'Can I use the same vault on multiple devices?',
+      'Do AI plugins work with Joplin mobile?',
+      'Is open-source AI integration safer than Notion AI?',
+    ],
+    mobileAngle:
+      'Note-taking is mobile-heavy. Both Logseq and Joplin have mobile apps but neither supports plugins on mobile (as of 2026). Flag this gap explicitly — full AI on desktop, manual workflows on mobile.',
+  },
+
+  'local-llm-personal-knowledge-base-2026': {
+    title: 'Build a Personal Knowledge Base With Local AI: 2026 Stack Guide',
+    meta: 'Notes + bookmarks + emails + documents = your local AI knowledge base. Architecture and tools that scale to 10,000+ items.',
+    articleType: 'Tutorial + architecture decision',
+    serpIntent: 'Guide-dominant — architecture posts and "how to build" guides',
+    ctrRule: 'Specific outcome (Personal Knowledge Base) + freshness (2026) + scale (10,000+ items)',
+    writingBrief:
+      'Architecture-focused decision page. Cover the full personal knowledge base stack: capture (web clipper, email forwarder), storage (markdown vault), embeddings (local), retrieval (RAG), interface (chat or search). Compare 3 architectures: Obsidian-centric, AnythingLLM-centric, custom Python+ChromaDB. Address scaling: 1000 → 10000 → 100000 items. Cover backup, version control, multi-device sync. Reference Obsidian, Logseq/Joplin, and RAG articles for component depth — don\'t duplicate. This is a "blueprint" article — readers will follow it as a build guide. Hardware floor: 16 GB RAM laptop minimum; 32 GB recommended past 10,000 items. Mobile angle: capture-on-mobile is critical (most KB items get captured on phone, queried on desktop). Address the iOS Shortcuts → Obsidian / Working Copy / a-Shell capture paths.',
+    internalLinks: [
+      { ref: 'local-llm-with-obsidian-2026', reasoning: 'Obsidian-centric architecture deep-dive' },
+      { ref: 'local-llm-with-logseq-and-joplin', reasoning: 'alternative storage layers for the PKB' },
+      { ref: 'chat-with-1000-pdfs-locally', reasoning: 'scaling the RAG layer specifically past 1000 items' },
+      { ref: 'local-rag-on-your-pdfs-step-by-step', reasoning: 'RAG implementation for the retrieval layer' },
+    ],
+    externalLinks: [
+      { url: '/prompt-engineering/rag-explained', reasoning: 'concept authority for the retrieval layer' },
+      { url: '/local-llms/local-llm-hardware-guide-2026', reasoning: 'hardware sizing — 16 GB floor, 32 GB recommended past 10K items' },
+    ],
+    structure: {
+      label: 'Architecture comparison table (5-col)',
+      headers: ['Architecture', 'Setup complexity', 'Max items', 'Mobile sync', 'Best for'],
+      rows: [
+        ['Obsidian-centric', 'Medium', '~50,000', 'Yes (with sync)', 'Power users with note-first workflows'],
+        ['AnythingLLM-centric', 'Low', '~100,000', 'Limited', 'Document-heavy KBs'],
+        ['Custom Python + ChromaDB', 'High', '1M+', 'Manual', 'Engineers wanting full control'],
+      ],
+    },
+    faqSeeds: [
+      'How do I capture web pages into my knowledge base?',
+      'Can I forward emails into the system?',
+      'How do I sync across desktop and mobile?',
+      'Should I use one big vault or split by topic?',
+      'How often should I re-embed for accuracy?',
+      'Can I version-control my knowledge base?',
+      'How do I handle PDFs in this system?',
+      'Can I share parts of my KB selectively?',
+      'What backup strategy is best?',
+      'How do I migrate to a new computer?',
+    ],
+    mobileAngle:
+      'Mobile-first table summary at top, depth below. Capture-on-mobile is critical — most KB items are captured on phone, queried on desktop. Address iOS Shortcuts → Obsidian / Working Copy / a-Shell capture paths.',
+  },
+
   'voice-assistant-local-mobile-offline': {
     title: 'Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud)',
     meta: 'Fully offline voice AI on iPhone and Android. Whisper local transcription + on-device LLM. Setup, latency, privacy guarantees.',
