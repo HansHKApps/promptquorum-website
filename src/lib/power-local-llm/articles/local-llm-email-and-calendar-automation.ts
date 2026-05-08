@@ -1195,4 +1195,419 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'ローカルLLMでメール・カレンダー自動化：クラウドAPIなし (2026)',
+    seoTitle: 'ローカルLLM メール・カレンダー自動化 2026',
+    intro:
+      'ローカルLLMsは、メール返信案を作成し、受信トレイを要約し、会議アジェンダを生成し、カレンダーイベントを分類できます——あなたのメッセージをクラウドAPIに送信することなく。このガイドは実践的なアーキテクチャを扱います：OllamaによるローカルIMAP自動化、ローカルAIプラグイン付きのオープンソースメールクライアント、そしてあなたのマシンに通信データを保つためのプライバシーの基礎知識。',
+    metaDescription:
+      'ローカルLLMsでメールドラフト作成、受信トレイ整理、カレンダー管理を自動化します。Ollama、IMAP統合、プライバシーを尊重する通信自動化。',
+    twitterDescription:
+      'ローカルLLMメール自動化：返信案を作成、受信トレイを要約、会議アジェンダを生成——すべてローカル、クラウドAPIなし。Ollama + IMAPワークフローセットアップガイド。',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 14B',
+      'Mistral 7B',
+      'Phi-4 Mini',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4070 12 GB',
+    ],
+    audience:
+      'メール作成の自動化、受信トレイの要約、カレンダー管理をしたい専門家、小企業オーナー、プライバシー意識の高い個人。クラウドAIサービスに通信データを送信したくない方向け。',
+    readTime: '14分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'ローカルLLM メール自動化',
+    targetKeywords: [
+      'ローカルllmメール自動化',
+      'ollama メール作成',
+      'ローカルai 受信トレイ要約',
+      'ローカルllm カレンダー自動化',
+      'プライベートai メールアシスタント',
+      'imap ローカルllm ワークフロー',
+    ],
+    leadAnswerBlock:
+      '**ローカルLLMメール自動化は、2段階パイプラインとして最適に機能します：メールクライアントまたはIMAPスクリプトが生のメッセージを取得し、ヘッダーを削除し、プレーンテキストをOllamaのローカルAPIに送信します。モデルはあなたが送信前に確認するドラフトを生成します。メールコンテンツはあなたのマシンから出ません。2026年で最も実用的な3つのセットアップは：(1) スケジュール通りにOllamaを呼び出すPython IMAPスクリプト——50行、完全に自動化可能；(2) Thunderbird + Ollama Composeプラグイン——GUIベース、コード不要；(3) n8n自己ホスト + ローカルOllamaノード——条件付きロジック、マルチステップフィルタリング、カレンダー統合を希望するユーザー向けの視覚的ワークフロービルダー。カレンダー自動化の場合、同じOllama APIコールがエクスポートされたICSファイルまたはローカルcredentialsを持つGoogle Calendar APIに対して機能します——会議アジェンダの生成、週間要約、イベント詳細からのフォローアップメール作成。**',
+    quickAnswerTop: {
+      ja: {
+        question: 'ローカルAIを使ってメール作成を自動化し、メールをクラウドに送信しない方法は？',
+        answer:
+          '最速のローカルメール自動化セットアップはPython IMAPスクリプトです。未読メールを取得し、ヘッダーを削除し、プレーンテキストをOllamaのローカルAPIに渡し、ドラフト返信をローカルファイルまたはドラフトフォルダに保存します。Python 50行以下。メールデータはあなたのマシンを離れません。GUI選択肢として、Thunderbird + Ollama Compose拡張機能は、メールを右クリックして、メールクライアントを離れずに返信を生成できます。ワークフロー自動化の場合、n8n自己ホスト + ローカルOllamaノードは条件付きロジック、マルチステップフィルタリング、クラウド依存性なしのカレンダー統合を管理します。',
+        bullets: [
+          'IMAP + Python + Ollama：50行スクリプト、スケジュール通り実行、ドラフトをローカルに保存——最もシンプルなセットアップ。',
+          'Thunderbird + Ollama Composeプラグイン：GUIベース、コード不要、メールクライアントで右クリックして返信生成。',
+          'n8n自己ホスト + Ollama ノード：条件付きロジック、フィルタリング、カレンダー統合用の視覚的ワークフロービルダー。',
+          'カレンダー自動化：ICSファイルをエクスポートするか、Google Calendar APIをローカルで使用して、アジェンダとフォローアップドラフトを生成。',
+          'メール用ベストモデル：Qwen3 14B または Phi-4 Mini——高速生成、低VRAM、ビジネス通信に十分な品質。',
+          'プライバシー：IMAPクレデンシャルとメールコンテンツはあなたのマシンから出ません；これらのセットアップのいずれでもクラウドAPI呼び出しなし。',
+          '送信前の確認は必須：ローカルモデルはトーンと事実で誤りを犯します；すべての出力を第一ドラフトとして扱う。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: '重要な事実', anchor: '#quick-facts' },
+      { label: 'なぜメール用にローカルAIを使うのか？', anchor: '#why-local' },
+      { label: 'アプローチの比較', anchor: '#approach-comparison' },
+      { label: 'セットアップ1：IMAP + Python + Ollama', anchor: '#imap-python' },
+      { label: 'セットアップ2：Thunderbird + Ollama プラグイン', anchor: '#thunderbird' },
+      { label: 'セットアップ3：n8n Self-Hosted + Ollama', anchor: '#n8n' },
+      { label: 'トライアージと週間レビュー プロンプト', anchor: '#triage-prompts' },
+      { label: 'カレンダー自動化', anchor: '#calendar' },
+      { label: 'モデル推奨事項', anchor: '#models' },
+      { label: 'プライバシーとセキュリティ', anchor: '#privacy' },
+      { label: '一般的な誤り', anchor: '#common-mistakes' },
+      { label: '日本ユーザーのための活用ポイント', anchor: '#japan-context' },
+      { label: '参考文献', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連資料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**3つのセットアップがローカルメール自動化の95%をカバーします。** IMAP + Python + Ollama (50行、完全スクリプト可能)、Thunderbird + Ollama Compose (GUI、コード不要)、n8n自己ホスト + Ollama ノード (視覚的ワークフロー、条件付きロジック)。あなたのワークフローに合わせた最もシンプルなオプションを選択してください。',
+          '**小さいモデルは創作作業よりメールに適しています。** メール作成には創造性ではなく一貫性が必要です。Qwen3 14B と Phi-4 Mini は16 GBシステムで2〜5秒でビジネス品質の返信ドラフトを生成します。Llama 3.3 70Bはほとんどのメールタスクには過剰です。',
+          '**送信前の確認は必須ではなく絶対です。** ローカルモデルはトーンエラー（非常にフォーマル、非常にカジュアル）、事実の不正確さ（間違った時間、間違った受信者名）を犯し、時々無関係なコンテキストから内容を作り上げます。常に送信前にドラフトを読んでください。',
+          '**メールコンテンツはこれらのセットアップのいずれでもあなたのマシンを離れません。** IMAP接続はあなたのメールサーバーに、クラウドAIには行きません。Ollama APIはローカルです。n8n自己ホストはあなたのマシン上で実行されます。プライバシー利点は本当です。',
+          '**カレンダー自動化はエクスポートされたICSファイルまたはローカルGoogle Calendar API呼び出しで最適に動作します。** 週のイベントをICSファイルにエクスポートし、Ollama に渡し、会議アジェンダ、準備チェックリスト、またはあなたのチーム向け週間要約メールを生成するよう依頼します。',
+          '**IMAPクレデンシャルは機密です。** スクリプトソースコードではなく、環境変数またはローカルシークレットマネージャーに保存してください。プライマリアカウントパスワードではなくアプリ固有のパスワードを使用してください。',
+          '**n8nは条件付きロジックの正しい選択です。** 「[ドメイン]からのすべてのメールを毎日要約する」または「カレンダーイベントが終わるときにフォローアップメールを生成する」場合、n8n の視覚的ワークフロービルダーはカスタムPythonなしでこれを処理します。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '重要な事実',
+        items: [
+          '**カバーされるセットアップ：** IMAP + Python + Ollama、Thunderbird + Ollama Compose、n8n自己ホスト + Ollama ノード。',
+          '**メール向けベストモデル：** Qwen3 14B (高速、低VRAM、ビジネス品質) または Phi-4 Mini (最速、4 GB VRAM)。',
+          '**必要なVRAM：** Qwen3 14B (Q4) = ~9 GB；Phi-4 Mini (Q4) = ~3 GB；Llama 3.3 70B (Q4) = ~42 GB。',
+          '**サポートされるメール形式：** プレーンテキストIMAP (MIME デコード)、EMLファイル、Gmail API (ローカルcredentials)、Outlook経由IMAP。',
+          '**カレンダーフォーマット：** ICS エクスポート (ユニバーサル)、Google Calendar API (ローカルOAuth)、Nextcloud Calendar (CalDAV)。',
+          '**スクリプト複雑性：** IMAP + Python = ~50行；n8n ワークフロー = 視覚的、コードなし；Thunderbird = プラグインインストールのみ。',
+          '**プライバシー：** これらのセットアップのどれでもメールデータはクラウドAPIに送信されません；IMAP はあなたのメールサーバーのみに接続。',
+        ],
+      },
+      whyLocal: {
+        id: 'why-local',
+        title: 'なぜメール用にローカルAIを使うのか？',
+        content:
+          '**基本的な理由はプライバシーです：クラウドAIに貼り付けるすべてのメールは潜在的にログされ、トレーニングに使用され、そのプロバイダーのデータ保持ポリシーの対象となります。** ビジネス対応、顧客通信、個人メールには、サードパーティのデータセットに含めたくない情報が含まれています。ローカルAIはあなたのメールをあなたのハードウェアで処理し、ドラフトを返し、何も保持しません。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'ローカルAIでのメール自動化は、すべてのメールコンテンツをあなたのコンピュータに保ちます——クラウドAPIはあなたのメッセージを受け取りません、サードパーティはあなたの通信をログまたはトレーニングしません、ドラフト生成はインターネット接続なしで機能します。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'メールをChatGPTまたはClaude.aiに貼り付けて返信ドラフトを依頼すると、そのメールはOpenAIまたはAnthropicのサーバーで処理されます。ほとんどの人、ほとんどの時間、これは受け入れられます。ビジネス対応、顧客の詳細、契約の議論、または機密情報を含む通信の場合、そうではありません。Ollama経由で設定されたローカルAIは同じメールをあなたのコンピュータで処理し、どこにも送信しません。',
+          },
+        ],
+        items: [
+          '**データ主権：** メールコンテンツ、送信者情報、スレッドコンテキストはあなたのマシンに残ります。クラウド保持ポリシーは適用されません。',
+          '**オフライン操作：** Ollama が実行されていてモデルがダウンロードされたら、インターネットアクセスなしでメール生成が機能します。',
+          '**使用制限なし：** クラウドAI API はレート制限とトークンキャップを強制します。ローカル設定にはリクエストごとのコストと1日の制限がありません。',
+          '**規制遵守：** GDPR、HIPAA、職業上の秘密保持要件は、顧客通信をサードパーティAIに送信することを禁止する場合があります。ローカル処理はこの懸念を排除します。',
+          '**短いタスクの速度：** 小さいモデル (Qwen3 14B、Phi-4 Mini) は消費者ハードウェアで2〜5秒でビジネスメールドラフトを生成します——短いプロンプトのほとんどのクラウドラウンドトリップより高速。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'ローカルメール自動化はメールクライアントの代わりではなく、既存のワークフローに統合されるドラフト作成アシスタントです。メールを送信するためにThunderbird、Apple Mail、またはGmailを引き続き使用します；ローカルAIはあなたが確認、編集し、既存のクライアントから送信するテキストを生成します。',
+          },
+        ],
+      },
+      approachComparison: {
+        id: 'approach-comparison',
+        title: 'アプローチの比較',
+        content:
+          '**3つのセットアップはほとんどのユーザーに関連する5つの側面で異なります：セットアップの難しさ、30日間の信頼性、プライバシー態度、それぞれが最適なユーザープロフィール。** 最も強力なものではなく、あなたのワークフローをカバーする最もシンプルなオプションを選択してください。',
+        columns: ['アプローチ', 'セットアップ', '信頼性 (30日)', 'プライバシー', '最適な用途'],
+        rows: [
+          { 'アプローチ': 'Thunderbird + Ollama Compose', 'セットアップ': '簡単', '信頼性 (30日)': '高い (バックグラウンドプロセスなし)', 'プライバシー': 'ローカルのみ', '最適な用途': 'ソロプロフェッショナル、毎日のトライアージ、GUIユーザー' },
+          { 'アプローチ': 'Python + IMAP + Cron', 'セットアップ': '難しい (50 LOC + スケジューリング)', '信頼性 (30日)': '非常に高い (スクリプト化可能、監視可能)', 'プライバシー': 'ローカルのみ', '最適な用途': '完全制御 + カスタムロジックが欲しい開発者' },
+          { 'アプローチ': 'n8n自己ホスト + Ollama', 'セットアップ': '中程度 (視覚的ワークフロー編集)', '信頼性 (30日)': '高い (自己ホスト監視付き)', 'プライバシー': 'ローカル (自己ホスト付き)', '最適な用途': 'ワークフロー集約的ユーザー、Zapier置換；条件付きロジック' },
+        ],
+      },
+      imapPython: {
+        id: 'imap-python',
+        title: 'セットアップ1：IMAP + Python + Ollama',
+        content:
+          '**最も自動化スクリプト可能なセットアップ：Python スクリプトが IMAP 経由で未読メールを取得し、ヘッダーと HTML を削除し、プレーンテキストを Ollama のローカル API に渡し、返信ドラフトを保存します。** Cron または Task Scheduler を使用してスケジュール通り実行。Python 50行、Ollama Python クライアント以外の外部依存なし。',
+        promptExamples: [
+          {
+            label: 'IMAP メール取得 + Ollama ドラフト (Python スケルトン)',
+            text: 'import imaplib, email, os\nimport ollama\n\n# IMAP に接続\nmail = imaplib.IMAP4_SSL(os.environ["IMAP_HOST"])\nmail.login(os.environ["IMAP_USER"], os.environ["IMAP_PASS"])\nmail.select("INBOX")\n\n# 未読メール取得\n_, msgnums = mail.search(None, "UNSEEN")\nfor num in msgnums[0].split():\n    _, data = mail.fetch(num, "(RFC822)")\n    msg = email.message_from_bytes(data[0][1])\n    body = msg.get_payload(decode=True).decode("utf-8", errors="ignore")\n    subject = msg["Subject"]\n    sender = msg["From"]\n\n    # Ollama でドラフト生成\n    response = ollama.chat(model="qwen3:14b", messages=[\n        {"role": "system", "content": "あなたはプロフェッショナルメール アシスタント。簡潔で丁寧なビジネス返信を書く。受信メールの礼儀正しさに合わせる。"},\n        {"role": "user", "content": f"メール差出人：{sender}\\n件名：{subject}\\n\\n本文：\\n{body[:2000]}\\n\\n返信ドラフトを作成。"}\n    ])\n    draft = response["message"]["content"]\n    print(f"ドラフト：{subject}\\n{draft}\\n---")',
+          },
+        ],
+        items: [
+          '**IMAP クレデンシャル：** 環境変数 (`IMAP_HOST`, `IMAP_USER`, `IMAP_PASS`) に保存——スクリプトソースコードに絶対にしない。プライマリパスワードではなくアプリ固有のパスワードを使用。',
+          '**本文切り詰め：** Ollama に渡す前にメール本文を 2,000〜3,000 文字に制限。長いメールスレッドはドラフト返信に有用なコンテキストをめったに追加せず、生成を遅くします。',
+          '**HTML削除：** メール本文が HTML の場合、`html.parser` または `BeautifulSoup` を使用してプレーンテキストを抽出してからモデルに渡す。HTML タグは生成品質を低下させます。',
+          '**スケジューリング：** macOS/Linux では Cron エントリ (`crontab -e`) を追加してスクリプトを 30 分ごとに実行。Windows では Task Scheduler を Python インタープリタパスで使用。',
+          '**ドラフト保存：** ドラフトをメール参照のローカルテキストファイルに書き込む (タイムスタンプ + サブジェクトスラグで命名) または `mail.append()` を使用して IMAP「ドラフト」フォルダにプッシュ。テキストファイル読み取りは確認用としてより安全；IMAP ドラフトはどのクライアントからでも送信を許可。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '自動送信を有効にしないでください。ローカルAIはヒューマンレビューなしで送信するのに十分な信頼性でメールドラフトを生成しません。トーンエラー、悪いデータ、作り上げられた事実、スレッド誤り送信は定期的に発生。自動化は作成時間を節約します；確認ステップは必須。',
+          },
+        ],
+      },
+      thunderbird: {
+        id: 'thunderbird',
+        title: 'セットアップ2：Thunderbird + Ollama Compose プラグイン',
+        content:
+          '**Ollama Compose 拡張機能付きの Thunderbird はノーコードオプション。** Thunderbird をインストール、Ollama をインストール、モデルをプル、拡張機能をインストール——メール生成は作成ウィンドウで右クリック一つ先。',
+        items: [
+          '**Thunderbird をインストール** thunderbird.net から。macOS、Windows、Linux で利用可能。',
+          '**Ollama をインストールしてモデルをプル：** `ollama pull qwen3:14b` (メール作業に推奨)。`ollama serve` を起動。',
+          '**Ollama Compose 拡張機能をインストール** Thunderbird アドオンマネージャーから。「Ollama」を検索またはプロジェクトリポジトリから XPI ファイルをインストール。',
+          '**拡張機能を設定** して `http://localhost:11434` を指す、モデルを選択 (Qwen3 14B または Phi-4 Mini 推奨)。',
+          '**作成ウィンドウで：** テキスト領域を右クリックして「Ollama で生成」を選択——拡張機能が引用元メールとカーソル位置を Ollama に送り、ドラフト返信を挿入。',
+          '**モデル切り替え：** 拡張機能は作成ツールバーからモデル切り替えを許可。高速返信で Phi-4 Mini を使用；複雑または機密通信で Qwen3 14B または Llama 3.3 70B に切り替え。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ollama Compose 設定でカスタム システムプロンプトを定義。デフォルトプロンプトはジェネリック；カスタマイズされたものはより良い結果を生成。例：「あなたは [あなたの名前]、[あなたの役割] at [会社] のプロフェッショナルメール返信を作成。返信は簡潔 (コンテキストがより多く必要な場合以外は150語未満)、専門的に温かく、受信メールの礼儀正しさと合致。免責事項や署名行は追加しない。」',
+          },
+        ],
+      },
+      n8n: {
+        id: 'n8n',
+        title: 'セットアップ3：n8n Self-Hosted + Ollama',
+        content:
+          '**ローカル Ollama ノード付き n8n 自己ホストは条件付き自動化の正しい選択：送信者ドメインでメールをフィルタ、毎日要約、カレンダーイベント終了時にフォローアップ生成、異なるメールタイプを異なるモデルプロンプトにルーティング——コード作成なし。**',
+        items: [
+          '**n8n 自己ホストをインストール：** `npm install -g n8n && n8n start` または `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`。ワークフロー編集は `http://localhost:5678` で実行。',
+          '**Ollama ノードを追加：** n8n ワークフロー編集で「Ollama」ノードを検索 (n8n v1.2+ 組込)。`http://localhost:11434` を指し、モデルを選択。',
+          '**IMAP トリガー：** ワークフロートリガーとして IMAP メールノードを追加——IMAP クレデンシャルで設定。ノードは新しいメールをポーリングして JSON オブジェクトとして各メールを次のステップに渡す。',
+          '**フィルタ論理：** IF ノードを追加してメールを送信者ドメイン、件名キーワード、または時刻でルーティング。メールタイプに基づいて異なる Ollama プロンプト (顧客メール、ニュースレターダイジェスト、内部チームメッセージ) にルーティング。',
+          '**カレンダー統合：** Google Calendar ノード (ローカル OAuth クレデンシャル付き) または ICS ファイルリーダーを追加して近来イベント取得。イベント詳細を Ollama ノードに渡してアジェンダまたは準備チェックリスト生成。',
+          '**出力オプション：** ドラフトをローカルファイルに書き込む、IMAP ドラフトにプッシュ、Slack メッセージ自分に送信、Notion/Obsidian ページに保存——すべて n8n 出力ノード経由。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'n8n 自己ホストはカレンダー + メール ワークフローの最良統合ポイント。典型的パターン：IMAP トリガーが会議確認メール受け取る → 会議詳細抽出 → Google Calendar API 呼び出し (ローカル OAuth) 出席者取得 → すべてのコンテキストを Ollama に渡す → 会議アジェンダ生成 → 指定フォルダに保存。n8n ビジュアル編集で約20分でセットアップ可能。',
+          },
+        ],
+      },
+      triagePrompts: {
+        id: 'triage-prompts',
+        title: 'トライアージと週間レビュー プロンプト テンプレート',
+        content:
+          '**最も高頻度のメールタスク 2 つを処理するプロンプト：メール別分類と週間受信トレイレビュー。** 3 つのセットアップのいずれかに投入 (Python スクリプト、Thunderbird システムプロンプト、n8n Ollama ノード本文)——意図的にモデル不知。',
+        promptExamples: [
+          {
+            label: 'トライアージ プロンプト テンプレート',
+            text: 'あなたはメール トライアージ アシスタント。以下のメールをこれらのカテゴリのいずれかに分類し、1 文で説明：\n- 緊急：4 時間以内に返信が必要\n- 重要：24 時間以内に返信が必要\n- 情報：認識のために読む、返信不要\n- プロモーション：マーケティングまたはニュースレター、アーカイブ可能\n- スパム：不要、フィルタリング推奨\n\nメール：\n差出人：{sender}\n件名：{subject}\n本文：{body[:1500]}\n\n出力フォーマット：\nカテゴリ：[緊急|重要|情報|プロモーション|スパム]\n推論：[1 文]\n推奨アクション：[返信 | アーカイブ | マーク | 削除]',
+          },
+          {
+            label: '週間レビュー プロンプト テンプレート',
+            text: '過去 1 週間の以下 50 メールを 3 セクションに要約：\n1. まだアクションが必要な「緊急」または「重要」アイテム (差出人 + 1 行要約付き)\n2. テーマ (例：「Q4 計画はこの週 12 メールに現れた」)\n3. 返信が必要な人 (差出人 + 日数保留中)\n\nメール (件名 + 各本文最初 200 文字)：\n[メール一覧をまとめて貼り付け]\n\n出力フォーマット：3 つのマークダウン セクション。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'トライアージプロンプトについて、n8n IF ノードでカテゴリ別ルーティング：緊急 → プッシュ通知、重要 → 「need-reply」フォルダに保存、プロモーション → 自動アーカイブ、スパム → フィルタルール標記。分類は下流自動化を安全にします——それなしでパイプラインは顧客フォローアップとマーケティングメールを区別できません。',
+          },
+        ],
+      },
+      calendar: {
+        id: 'calendar',
+        title: 'ローカルLLMsでのカレンダー自動化',
+        content:
+          '**ローカルAIでのカレンダー自動化は 2 モードで動作：パッシブ (ICS エクスポート、要約または agenda 生成用に Ollama に渡す) とアクティブ (リアルタイムイベント アクセス用のローカル OAuth credentials 付き Google Calendar API)。** パッシブは簡単；アクティブはスケジュール済みワークフローを有効。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'ローカル AI でのカレンダー自動化は、エクスポート ICS ファイルコンテンツまたは Google Calendar API データを Ollama に渡すことで会議アジェンダ、週間要約、フォローアップメール ドラフトを生成します——カレンダーデータはクラウド AI に接触しません。',
+          },
+          {
+            type: 'plain-terms',
+            text: '最も簡単なカレンダー自動化：任意のカレンダー app (Google Calendar、Apple Calendar、Nextcloud) から週のイベントを ICS ファイルとしてエクスポート、ターミナルを開く、ICS コンテンツを「各イベント用にアジェンダを生成」プロンプト付き Ollama に渡す、出力をノートにコピー。30 秒で、カレンダーデータはローカル。',
+          },
+        ],
+        promptExamples: [
+          {
+            label: 'ICS-to-Agenda プロンプト テンプレート',
+            text: 'これが ICS フォーマットでの私の週間カレンダーです：\n\n[ICS コンテンツ貼り付け]\n\n各会議イベント：\n1. イベント件名と説明に基づいて 5 ポイント会議アジェンダを生成。\n2. 出席者がリストされている場合、各アジェンダアイテムをリード誰が注記。\n3. イベントが説明ない場合、[会議タイプ] 会議用ジェネリック agenda を生成。\n\nプレーンテキストとしてフォーマット。イベントあたり 1 セクション、--- で区切られ。',
+          },
+        ],
+        items: [
+          '**ICS エクスポート (パッシブ)：** Google Calendar、Apple Calendar、Nextcloud、Outlook はすべて ICS ファイルをエクスポート。毎週または毎日エクスポート、ターミナル経由または script で Ollama に渡す、agendas または要約を生成。',
+          '**Google Calendar API (アクティブ)：** Google Cloud Console (personal project) でローカル OAuth credentials を作成、credentials JSON をダウンロード、イベント取得用に `google-auth-oauthlib` Python library を使用。OAuth token はローカルに保存、API calls は直接 Google Calendar に——AI intermediary なし。',
+          '**会議 agenda 生成 prompt：** title + attendees + description → 「時間割り当て付き 5 ポイント会議 agenda を生成。会議説明が空の場合、[会議タイプ] 会議用ジェネリック agenda を提案。」',
+          '**週間要約 prompt：** 週すべてのイベント → 「週の会議を 3 文で要約。背中合わせのブロックまたは異常に長い会議をハイライト。」',
+          '**フォローアップ email ドラフト：** 会議後 (イベント終了時間でトリガー) → 「会議 \'[title]\' 用フォローアップ email を作成。出席者に感謝し、次のステップを要約。コンテキスト用このイベント説明を使用：[説明]。」',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'カレンダーデータをプレーンテキストで可能に保つ。ICS はプレーンテキスト；Ollama に直接渡すのは簡単。proprietary calendar format または locked-down enterprise system を使用する場合、最初に ICS にエクスポート。ICS standard はユニバーサル、すべての major calendar application でサポート。',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'メール・カレンダータスク用モデル推奨',
+        content:
+          '**メール・カレンダー自動化タスクは大型の強力モデルより小型の高速モデルを優先します。** ビジネス email 返信作成、会議アジェンダ生成、受信トレイ要約には Llama 3.3 70B は不要——interactive に感じ、使用可能なビジネステキストを生成できるほど高速で一貫性があるモデルが必要。すべての use cases 上の broader モデルランドスケープについて、[2026 年のベスト ローカル LLMs](/local-llms/best-local-llms-2026?lang=ja) を参照。',
+        columns: ['タスク', '推奨モデル', 'VRAM (Q4)', 'なぜ'],
+        rows: [
+          { 'タスク': 'Email 返信ドラフト作成', '推奨モデル': 'Qwen3 14B', 'VRAM (Q4)': '~9 GB', 'なぜ': 'ビジネス writing quality と生成速度の最良バランス；フォーマルと casual registers を処理' },
+          { 'タスク': 'クイック 1 行返信', '推奨モデル': 'Phi-4 Mini', 'VRAM (Q4)': '~3 GB', 'なぜ': '最速オプション；シンプルな承認と scheduling 返信で十分' },
+          { 'タスク': '会議 agenda 生成', '推奨モデル': 'Qwen3 14B', 'VRAM (Q4)': '~9 GB', 'なぜ': '構造化リスト生成で良好；agenda format はその能力内' },
+          { 'タスク': '長 email thread 要約', '推奨モデル': 'Llama 3.3 70B or Qwen3 32B', 'VRAM (Q4)': '~42 GB / ~20 GB', 'なぜ': 'Long context adherence はマルチメッセージ threads に重要；小型モデルは詳細を見落とす' },
+          { 'タスク': '機密/法的通信', '推奨モデル': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'なぜ': 'ベスト reasoning quality；エラーが high-stakes の場合、ハードウェアコストの価値あり' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'ほとんどの email タスク (16 GB system) で、Qwen3 14B は正しいデフォルト選択。`ollama pull qwen3:14b` でダウンロード 1 度、すべての email・カレンダー自動化に使用。14B output quality が consistently inadequate なタスクタイプを遭遇したときだけ大型モデルに切り替え。',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'プライバシーとセキュリティ',
+        content:
+          '**ローカル email 自動化のプライバシー利点は本当ですが、正しい設定が必要です。** 3 つのことがそれを損なう可能性：IMAP credentials の偶発的 cloud 同期、サードパーティ tools accessible な logs の email コンテンツ、workflow をネットワークに露出させる誤った設定 n8n instances。他の tools で「SaaS をローカル AI で置換」する wider pattern については、[Grammarly と Notion AI をローカルモデルで置換](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=ja) を参照。',
+        items: [
+          '**IMAP credentials：** environment variables またはローカル secrets manager に保存 (macOS Keychain、Linux `secret-tool`、Windows Credential Manager)。script source code または cloud repository に同期される可能性ファイルに絶対に保存しない。',
+          '**Logs 内の email コンテンツ：** stdout/stderr に email コンテンツを print する Python scripts はログ有効で Cron 経由実行時、email データを log files に書き込み。Logs を `/dev/null` にリダイレクトまたは email コンテンツを除外する log level を使用。',
+          '**n8n ネットワーク露出：** n8n 自己ホスト は default で `localhost:5678` にバインド、ローカル。home network またはそれ以降に露出させる場合 (mobile access など)、authentication を追加、Ollama API も localhost に制限されることを確認。',
+          '**App パスワード：** Gmail、Outlook、Apple Mail での IMAP access 用に dedicated app-specific password を設定——primary account password ではなく。script が compromised 場合すぐ revoke。',
+          '**Git repositories：** automation scripts をバージョン管理する場合、credentials 含む `.env` ファイルを除外する `.gitignore` を追加。public または private repository に credentials を commit しない。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Cloud sync リスク。home directory が iCloud、Google Drive、OneDrive に同期される場合、synced directory の `.env` または credentials ファイルは cloud にアップロード。cloud sync から明示的に除外されたディレクトリに credentials を保存、または OS の native secrets manager を使用。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '一般的な誤り',
+        items: [
+          '**verification なしでドラフト自動送信。** ローカル AI はヒューマン verification なしで送信するのに十分な信頼性でドラフトを生成しない。Tone errors、悪いデータ、fabricated facts は一般的。常に送信前に読む。',
+          '**entire email threads をモデルに渡す。** Long threads は redundant context を含み、tokens を浪費、生成を遅くする。Quoted reply blocks を削除、最後 2–3 messages のみを渡す。',
+          '**すべての email タスクで Llama 3.3 70B を使用。** ほとんどの email 作成では、Qwen3 14B はより高速、より少ない VRAM を使用。Reserve 70B を truly complex または high-stakes correspondence のため。',
+          '**IMAP credentials をスクリプトに保存。** Source code のクレデンシャルは 1 つの `git push` で public になる。Environment variables を使用。',
+          '**ドラフト prompts のための word limit を設定しない。** Word limit なし、models はビジネス返信を unnecessary context、caveats、politeness flourishes でパッド。Add「150 words 未満で返信」をすべての email prompt に。',
+        ],
+      },
+      japanContext: {
+        id: 'japan-context',
+        title: '日本ユーザーのための活用ポイント',
+        content:
+          '**日本の組織にとって、ローカル email 自動化は METI AI Governance 要件、enterprise security standards、east asia データ residency frameworks の下でおよび beyond の compliance advantages を提供します。** Cloud automation solutions では提供されないプライバシーと control。',
+        items: [
+          '**METI AI Governance (2026)：** 経済産業省は sensitive organization (government、finance、healthcare、infrastructure) のためにローカルデータ処理 third parties への transmission なしを推奨。Ollama での automation は「locally stored」と「limited data flow」の METI guideline を満たす。',
+          '**東アジア データ residency：** Japan、Malaysia、Singapore、Korea のために enterprise は regional data residency を要求。ローカル processing はこの要件を満たし、cross-border data フレームワークを避ける (ASEAN、CPTPP context)。',
+          '**日本 Enterprise Security Standards：** US/EU standards とは異なる。BSI Guidelines の equivalent として Japanese organizations は local IT security preferences を持つ。ローカル solution は「it governed locally, not US cloud-dependent」を demonstrate。',
+          '**Data 保持と Right to Forgotten (GDPR 等価)：** Cloud AI providers はProcessing history・logs をしばしば months 保持。Sensitive data の場合、ローカル processing は immediate deletion を保証——no training データ contamination。',
+          '**Cost efficiency for SME：** Small・mid-size Japanese organizations は cloud API continuous costs より ローカル automation を prefer。One-time Ollama investment + hardware と API per-use costs の against を compare。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '日本で operate・customer communication または internal email sensitivity を document する場合、compliance officer・stakeholder meetings でローカル models を「Data-Governance-by-Design」architecture として recommend。Message：「Local processing、no third-party APIs、no training data use」は consistently convinces。METI・BSI・enterprise security context で「compliant in own right」と「cost savings vs cloud APIs」を frame。',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考文献',
+        items: [
+          'Qwen3 14B モデルカード — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
+          'Phi-4 Mini テクニカルレポート — [Microsoft Research](https://microsoft.com/research)',
+          'Ollama API ドキュメンテーション — [Ollama](https://ollama.com/docs)',
+          'n8n Self-Hosted ドキュメンテーション — [n8n.io](https://docs.n8n.io)',
+          'GDPR 記事 28 — Data processor obligations — [EUR-Lex](https://eur-lex.europa.eu)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'これ Gmail で動きますか？',
+            a: 'はい。Gmail は app-specific password でIMAP access をサポート。Gmail settings で IMAP を有効化、Google Account security settings で app password を生成、IMAP script でこれらの credentials を使用。Gmail は構造化アクセス用に Gmail API も expose——label management、thread operations、attachment handling が必要な n8n workflows に有用。',
+          },
+          {
+            q: 'Email 自動化で IMAP + Python または n8n どちらが良い？',
+            a: 'Script を書き・maintain する comfort、full control が欲しい場合は IMAP + Python が better。Conditional logic (sender・time・content でメール route)、calendar integration、複数 output destinations が欲しい場合は n8n が better (code なし)。Both は Ollama を local モデル backend として use；difference は その周りの orchestration layer。',
+          },
+          {
+            q: 'ローカル AI は entire email inbox を要約できますか？',
+            a: 'はい、limitations 付き。Weekly inbox summary (50–100 emails) は well-works：subjects と各body 最初 200 characters を fetch、concatenate、"summarize by theme and urgency" prompt で Qwen3 14B に渡す。Thousands emails の complete inbox については、summary を batch (API call あたり 50 emails)、batch summaries を aggregate。1,000 emails を 1 call で pass context limits を exceed、unreliable output を produce。',
+          },
+          {
+            q: 'フォーマル・ビジネス email 用、ベストローカル LLM は？',
+            a: 'Qwen3 14B は consumer hardware でフォーマル・ビジネス correspondence の best quality-to-speed ratio を produce。Formal register、appropriate hedging、professional closings を reliably handle。Very high-stakes correspondence (legal notices、executive communication、contract negotiation) については、Llama 3.3 70B を use——quality difference は complex・sensitive topics で visible。',
+          },
+          {
+            q: 'これ Windows で動きますか？',
+            a: 'はい。Ollama は Windows で run (ollama.com からダウンロード)。IMAP Python script は Windows の任意 Python 3.8+ installation で run。Thunderbird と Ollama Compose 拡張機能は cross-platform。n8n self-hosted は Windows で npm または Docker Desktop で run。',
+          },
+          {
+            q: 'Multiple previous replies を持つ email threads をどう処理？',
+            a: 'Model に渡す前に quoted content を remove。Python `email` library を use して latest reply only を extract (first `>` prefix または `--- Original Message ---` divider 上の portion)。Last 2–3 messages のみ total 3,000-character limit で pass。Model は comprehensive thread history を rarely need adequate reply を generate。',
+          },
+          {
+            q: 'これ GDPR compliant はビジネス用？',
+            a: 'Local processing は personal data のクラウド AI processing より GDPR-defensive。Data がマシンに stay、自動的に new data processor relationship を create しない (Article 28)。しかし GDPR compliance はあなたの specific role、data nature、organization existing data protection policies に depend。Customer・employee personal data を process する前に Data Protection Officer に consult。',
+          },
+          {
+            q: 'これを別人のために返信作成するのに use できますか？',
+            a: 'Technically はい——credentials を持つあらゆる IMAP account にアクセスするよう script を configure 可。法的・倫理的に、consent なしに別人のために email replies を generate は consent・impersonation の serious questions を raise。この自動化はあなたが personally responsible なアカウント・通信のためだけに use。',
+          },
+          {
+            q: 'Incoming emails 上で AI をトリガーできますか？',
+            a: 'はい、3 patterns で。(1) Python + IMAP + Cron：30-minute ごとに run するよう script をスケジュール、新 unread メール取得、ドラフト生成。(2) n8n IMAP trigger ノード：1–5-minute ごと poll、immediate に各新 email で workflow をトリガー。(3) Thunderbird filter rules：Ollama を curl で call する「Run a script」filter action を use。n8n approach が true real-time triage で most reliable；Cron は 30-minute latency で simple なら。',
+          },
+          {
+            q: 'Email AI を devices 間で sync できますか？',
+            a: 'Drafts は existing IMAP Drafts folder で sync 可能——AI-generated ドラフトを IMAP「Drafts」folder に write (`mail.append()` で)、IMAP access を持つ any device (phone、tablet、second laptop) が immediately see。Ollama backend itself は sync せず——configure した machine で run。Mobile devices は Ollama running home machine への network access が必要 (LAN IP または Tailscale)。Plan：home server run Ollama + automation；all devices read drafts from IMAP Drafts folder。Single AI generation、multi-device review・send。',
+          },
+          {
+            q: 'ローカル LLMs をメール自動化で使用する場合、GDPR を守る必要がありますか？',
+            a: 'はい、personal data のあらゆる processing について。ローカル processing では、ただし control は remaining——third-party AI provider との data processor relationship を create しない、全 local stay の場合。然し、GDPR compliance は data governance についてです、local vs cloud の選択ではなく：consent を demand (emails が customer personal data を contain する場合)；document purposes・legal basis for processing；retention period が end の場合 email data を delete。Local は easier to document・control；message は「local processing is more defensible」です。',
+          },
+          {
+            q: 'この自動化は日本の Mittelstand (SME) に適していますか？',
+            a: 'はい、特に special data-protection・compliance requirements を持つ KMU のため。Small・mid-size 日本・オーストリア・スイス companies は customer communication・sensitive business data のため、ローカル LLM 自動化を「IT security in-house」strategy の part として use できます。特に customers・business partners が data residency requirements を持つ場合。Setup は technical know-how が必要ですが、VPN・local NAS server setup より more ではない。BSI-Grundschutz-Katalog profile for Mittelstand IT は exactly such locally-managed systems を recommend。IT-skilled organizations のため、「compliant in own right」+ 「cloud APIs vs cost savings」の win-win。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[Zapier をローカル AI エージェントで置換](/power-local-llm/replace-zapier-with-local-ai-agents?lang=ja) — n8n、Ollama、Python を使用したローカル workflow 自動化。',
+          '[ローカル AI エージェント、ビジネス workflows：EU Compliance](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=ja) — GDPR、EU AI Act、ビジネス setting でのローカル AI deployment のための DACH compliance context。',
+          '[ローカル RAG、private ビジネスデータ](/power-local-llm/local-rag-for-private-business-data?lang=ja) — cloud APIs なしで private ビジネスデータ上で document Q&A setup。',
+          '[ローカル AI エージェント、MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja) — local LLMs を email clients、calendars、他の tools に接続するための MCP (Model Context Protocol)。',
+          '[自律ローカル エージェント：実際に動くもの](/power-local-llm/autonomous-local-agents-actually-work?lang=ja) — 2026年、ローカル AI エージェントが出来・出来ないことの正直な評価。',
+          '[Grammarly と Notion AI をローカルモデルで置換](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=ja) — writing tools のための adjacent SaaS-replacement pattern、email/calendar replacement を complement。',
+          '[2026年のベストローカル LLMs](/local-llms/best-local-llms-2026?lang=ja) — これら 3 つの setups のいずれか後ろの chat モデルを pick するための broader モデル authority。',
+          '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=ja) — prompt に email examples を include いつ vs better generalization のため hold いつ。',
+          '[ローカル LLM ソフトウェア ディレクトリ 2026](/power-local-llm/local-llm-software-directory-2026?lang=ja) — このstack のコンポーネント、Ollama、n8n、Thunderbird などのためのディレクトリ listings。',
+        ],
+      },
+    },
+  },
 }
