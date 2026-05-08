@@ -115,21 +115,19 @@ const LANGUAGE_TO_LOCALE: Record<string, string> = {
 // badge matches the hub category badge for that cluster.
 const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   // Cluster category themes (Cat 0–7) — match hub colors
-  'Overview & Reference':       { dot: 'bg-slate-400',    badge: 'bg-slate-50 text-slate-700 border border-slate-200' },
-  'Getting Started':            { dot: 'bg-blue-400',     badge: 'bg-blue-50 text-blue-700 border border-blue-200' },
-  'RAG & Document Chat':        { dot: 'bg-emerald-400',  badge: 'bg-emerald-50 text-emerald-700 border border-emerald-200' },
-  'Coding Assistants':          { dot: 'bg-purple-400',   badge: 'bg-purple-50 text-purple-700 border border-purple-200' },
-  'Local AI Agents & Tool Use': { dot: 'bg-orange-400',   badge: 'bg-orange-50 text-orange-700 border border-orange-200' },
-  'Creative & Roleplay':        { dot: 'bg-rose-400',     badge: 'bg-rose-50 text-rose-700 border border-rose-200' },
-  'Mobile & Edge LLMs':         { dot: 'bg-cyan-400',     badge: 'bg-cyan-50 text-cyan-700 border border-cyan-200' },
-  'Business & Productivity':    { dot: 'bg-amber-400',    badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
-  // Cross-cluster reusable themes (used across multiple hub categories)
-  'Tools & Interfaces':         { dot: 'bg-purple-400',   badge: 'bg-purple-50 text-purple-700 border border-purple-200' },
+  'Overview & Reference':           { dot: 'bg-slate-400',    badge: 'bg-slate-50 text-slate-700 border border-slate-200' },
+  'Easiest Desktop Apps':           { dot: 'bg-blue-400',     badge: 'bg-blue-50 text-blue-700 border border-blue-200' },
+  'RAG & Document Chat':            { dot: 'bg-emerald-400',  badge: 'bg-emerald-50 text-emerald-700 border border-emerald-200' },
+  'Coding Assistants':              { dot: 'bg-purple-400',   badge: 'bg-purple-50 text-purple-700 border border-purple-200' },
+  'Local AI Agents & Tool Use':     { dot: 'bg-orange-400',   badge: 'bg-orange-50 text-orange-700 border border-orange-200' },
+  'Creative & Roleplay':            { dot: 'bg-rose-400',     badge: 'bg-rose-50 text-rose-700 border border-rose-200' },
+  'Mobile & Edge LLMs':             { dot: 'bg-cyan-400',     badge: 'bg-cyan-50 text-cyan-700 border border-cyan-200' },
+  'Productivity & Knowledge Tools': { dot: 'bg-amber-400',    badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
   // Legacy themes retained for back-compat with any article still using them
-  'Best Models':                { dot: 'bg-emerald-400',  badge: 'bg-emerald-50 text-emerald-700 border border-emerald-200' },
-  'Hardware & Performance':     { dot: 'bg-orange-400',   badge: 'bg-orange-50 text-orange-700 border border-orange-200' },
-  'Advanced Techniques':        { dot: 'bg-rose-400',     badge: 'bg-rose-50 text-rose-700 border border-rose-200' },
-  'Enterprise':                 { dot: 'bg-amber-400',    badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
+  'Best Models':                    { dot: 'bg-emerald-400',  badge: 'bg-emerald-50 text-emerald-700 border border-emerald-200' },
+  'Hardware & Performance':         { dot: 'bg-orange-400',   badge: 'bg-orange-50 text-orange-700 border border-orange-200' },
+  'Advanced Techniques':            { dot: 'bg-rose-400',     badge: 'bg-rose-50 text-rose-700 border border-rose-200' },
+  'Enterprise':                     { dot: 'bg-amber-400',    badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
 }
 
 const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }> = {

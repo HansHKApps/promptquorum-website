@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Tools & Interfaces',
+    theme: 'RAG & Document Chat',
     title: 'Build Local RAG on Your PDFs in 30 Minutes (Ollama + AnythingLLM)',
     seoTitle: 'Local RAG on PDFs in 30 Minutes 2026: Ollama + AnythingLLM',
     intro:

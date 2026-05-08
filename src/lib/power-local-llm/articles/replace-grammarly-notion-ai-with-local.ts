@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-08',
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
-    theme: 'Business & Productivity',
+    theme: 'Productivity & Knowledge Tools',
     title: 'Replace Grammarly and Notion AI with a Local LLM (2026)',
     seoTitle: 'Replace Grammarly and Notion AI with Local LLM 2026',
     intro:

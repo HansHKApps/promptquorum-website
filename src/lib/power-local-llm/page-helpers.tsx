@@ -616,8 +616,8 @@ const HUB_THEMES: Array<{
   },
   {
     id: 'local-ai-agents',
-    badge: 'Local AI Agents',
-    question: 'Local AI Agents: Which Workflows Actually Work Without the Cloud?',
+    badge: 'Local AI Agents & Tool Use',
+    question: 'Local AI Agents & Tool Use: Which Workflows Actually Work Without the Cloud?',
     description: 'MCP, tool calling, autonomous agents — the 2026 frontier. Honest reports on what runs reliably (and what still fails). Replacing Zapier with self-hosted agents and EU-compliance patterns.',
     colorBadge: 'bg-orange-50 text-orange-700 border-orange-200',
     colorDot: 'bg-orange-400',

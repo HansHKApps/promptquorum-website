@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Tools & Interfaces',
+    theme: 'Easiest Desktop Apps',
     title: 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
     seoTitle: 'Best Local AI Apps for 8GB RAM PCs 2026: Tested CPU-Only',
     metaDescription:
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Tools & Interfaces',
+    theme: 'Easiest Desktop Apps',
     title: 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
     seoTitle: 'Beste lokale KI-Apps für 8-GB-RAM-PCs 2026: CPU-only getestet',
     metaDescription:

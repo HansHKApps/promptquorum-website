@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
-    theme: 'Business & Productivity',
+    theme: 'Productivity & Knowledge Tools',
     title: 'Local AI for Email and Calendar: Triage Without Sending Data to Google (2026)',
     seoTitle: 'Local AI Email and Calendar Triage 2026',
     intro:

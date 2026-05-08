@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Tools & Interfaces',
+    theme: 'Easiest Desktop Apps',
     title: 'Local AI for Non-Technical Users: 5 Apps That Just Work (No Terminal)',
     seoTitle: '5 Local AI Apps That Just Work (No Terminal, 2026)',
     intro: 'GPT4All, Jan, Msty, AnythingLLM Desktop, and LM Studio are the five local AI apps a non-technical user can install and chat with in under 10 minutes — no terminal, no Python, no Docker. Each ranks first for a different beginner persona. Sit a non-technical person in front of GPT4All and they hit a working chat in 4 clicks; Jan adds zero telemetry; Msty adds the prettiest UI; AnythingLLM Desktop adds drag-and-drop document chat; LM Studio adds the smoothest Mac experience.',

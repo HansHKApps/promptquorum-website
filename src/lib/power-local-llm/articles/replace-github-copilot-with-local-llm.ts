@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Tools & Interfaces',
+    theme: 'Coding Assistants',
     title: 'Replace GitHub Copilot With a Local LLM: Setup + Cost Comparison 2026',
     seoTitle: 'Replace GitHub Copilot With Local LLM: Continue.dev + Qwen3-Coder',
     intro: 'In 2026 you can replace a $20/month GitHub Copilot subscription with a fully local stack: Continue.dev plus Ollama plus Qwen3-Coder 30B (or 7B for low-end hardware). On a 24-month horizon, the local setup costs less if you already own an RTX 3060+ GPU or an M3+ Mac. Quality is competitive on private codebases; Copilot still wins on rare libraries with sparse public training data.',

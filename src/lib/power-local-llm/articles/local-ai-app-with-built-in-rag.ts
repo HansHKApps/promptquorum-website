@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Tools & Interfaces',
+    theme: 'Easiest Desktop Apps',
     title: 'Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)',
     seoTitle: 'Built-In RAG Apps 2026: Chat With PDFs Locally, No Vector DB',
     metaDescription:

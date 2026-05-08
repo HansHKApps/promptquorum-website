@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Getting Started',
+    theme: 'Easiest Desktop Apps',
     title: 'Easiest Local AI App for Windows, Mac, and Linux (2026)',
     seoTitle: 'Easiest Local AI App Windows Mac Linux 2026',
     intro:
