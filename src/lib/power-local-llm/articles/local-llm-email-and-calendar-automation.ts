@@ -9,11 +9,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
     theme: 'Business & Productivity',
-    title: 'Local LLM for Email and Calendar Automation (2026)',
-    seoTitle: 'Local LLM Email and Calendar Automation: Setup Guide 2026',
+    title: 'Local AI for Email and Calendar: Triage Without Sending Data to Google (2026)',
+    seoTitle: 'Local AI Email and Calendar Triage 2026',
     intro:
       'Local LLMs can draft email replies, summarise inboxes, generate meeting agendas, and classify calendar events — all without sending your messages to a cloud API. This guide covers the practical architectures: local IMAP automation with Ollama, open-source email clients with local AI plugins, and the privacy case for keeping communication data on-device.',
     metaDescription:
@@ -59,16 +59,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Privacy: IMAP credentials and email content never leave your machine; no cloud API calls in any of these setups.',
           'Review-before-send is mandatory: local models make factual errors and tone mismatches; treat all output as a first draft.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-05-08',
       },
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'Why Use a Local LLM for Email?', anchor: '#why-local' },
+      { label: 'Approach Comparison', anchor: '#approach-comparison' },
       { label: 'Setup 1: IMAP + Python + Ollama', anchor: '#imap-python' },
       { label: 'Setup 2: Thunderbird + Ollama Plugin', anchor: '#thunderbird' },
       { label: 'Setup 3: n8n Self-Hosted + Ollama', anchor: '#n8n' },
+      { label: 'Triage and Weekly Review Prompt Templates', anchor: '#triage-prompts' },
       { label: 'Calendar Automation', anchor: '#calendar' },
       { label: 'Model Recommendations', anchor: '#models' },
       { label: 'Privacy and Security', anchor: '#privacy' },
@@ -131,6 +133,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'tip',
             text: 'Local email automation is not a replacement for an email client — it is a drafting assistant that slots into your existing workflow. You still use Thunderbird, Apple Mail, or Gmail to send; the local LLM generates text that you review, edit, and send from your existing client.',
           },
+        ],
+      },
+      approachComparison: {
+        id: 'approach-comparison',
+        title: 'Approach Comparison',
+        content:
+          '**The three setups differ on five axes that matter to most users: setup difficulty, 30-day reliability, privacy posture, and the user profile each one suits.** Pick the simplest option that covers your workflow rather than the most powerful.',
+        columns: ['Approach', 'Setup', 'Reliability (30d)', 'Privacy', 'Best for'],
+        rows: [
+          { 'Approach': 'Thunderbird + Ollama Compose', 'Setup': 'Easy', 'Reliability (30d)': 'High (no background process)', 'Privacy': 'Local-only', 'Best for': 'Solo professionals, daily triage, GUI users' },
+          { 'Approach': 'Python + IMAP + cron', 'Setup': 'Hard (50 LOC + scheduling)', 'Reliability (30d)': 'Very high (scriptable, observable)', 'Privacy': 'Local-only', 'Best for': 'Developers wanting full control + custom logic' },
+          { 'Approach': 'n8n self-hosted + Ollama', 'Setup': 'Medium (visual workflow editor)', 'Reliability (30d)': 'High (with self-host monitoring)', 'Privacy': 'Local-only with self-host', 'Best for': 'Workflow-heavy users replacing Zapier; conditional logic' },
         ],
       },
       imapPython: {
@@ -198,6 +212,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      triagePrompts: {
+        id: 'triage-prompts',
+        title: 'Triage and Weekly Review Prompt Templates',
+        content:
+          '**Two prompts that handle the highest-frequency email tasks: per-email triage classification and a weekly inbox review.** Drop them into any of the three setups (Python script, Thunderbird system prompt, or n8n Ollama node body) — they are deliberately model-agnostic.',
+        promptExamples: [
+          {
+            label: 'Triage Prompt Template',
+            text: 'You are an email triage assistant. Given the following email, classify it into one of these categories and explain in one sentence:\n- URGENT: requires reply within 4 hours\n- IMPORTANT: requires reply within 24 hours\n- INFO: read for awareness, no reply needed\n- PROMOTIONAL: marketing or newsletter, can be archived\n- SPAM: unwanted, recommend filtering\n\nEmail:\nFrom: {sender}\nSubject: {subject}\nBody: {body[:1500]}\n\nOutput format:\nCategory: [URGENT|IMPORTANT|INFO|PROMOTIONAL|SPAM]\nReasoning: [one sentence]\nSuggested action: [reply | archive | flag | delete]',
+          },
+          {
+            label: 'Weekly Review Prompt Template',
+            text: 'Summarise the following 50 emails from the past week into 3 sections:\n1. URGENT or IMPORTANT items still needing action (with sender + 1-line summary)\n2. Themes (e.g., "Q4 planning came up in 12 emails this week")\n3. People I owe replies to (sender + days outstanding)\n\nEmails (subject + first 200 chars of each body):\n[paste batched email list]\n\nOutput format: 3 markdown sections.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'For the Triage prompt, pair it with the n8n IF node to route by category: URGENT → push notification, IMPORTANT → save to "needs-reply" folder, PROMOTIONAL → auto-archive, SPAM → flag for filter rule. The classification is what makes downstream automation safe — without it, the pipeline cannot distinguish a client follow-up from a marketing email.',
+          },
+        ],
+      },
       calendar: {
         id: 'calendar',
         title: 'Calendar Automation with Local LLMs',
@@ -237,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models',
         title: 'Model Recommendations for Email and Calendar Tasks',
         content:
-          '**Email and calendar automation tasks favour small, fast models over large, capable ones.** Drafting a business email reply, generating a meeting agenda, or summarising an inbox does not require Llama 3.3 70B — it requires a model that is fast enough to feel interactive and coherent enough to produce usable business text.',
+          '**Email and calendar automation tasks favour small, fast models over large, capable ones.** Drafting a business email reply, generating a meeting agenda, or summarising an inbox does not require Llama 3.3 70B — it requires a model that is fast enough to feel interactive and coherent enough to produce usable business text. For the broader model landscape across all use cases, see [Best Local LLMs in 2026](/local-llms/best-local-llms-2026).',
         columns: ['Task', 'Recommended Model', 'VRAM (Q4)', 'Why'],
         rows: [
           { 'Task': 'Email reply drafting', 'Recommended Model': 'Qwen3 14B', 'VRAM (Q4)': '~9 GB', 'Why': 'Best balance of business-writing quality and generation speed; handles formal and casual registers' },
@@ -257,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacy and Security',
         content:
-          '**The privacy advantage of local email automation is real, but it requires correct setup.** Three things can undermine it: accidental cloud sync of IMAP credentials, email content in logs accessible to third-party tools, and misconfigured n8n instances that expose the workflow to the network.',
+          '**The privacy advantage of local email automation is real, but it requires correct setup.** Three things can undermine it: accidental cloud sync of IMAP credentials, email content in logs accessible to third-party tools, and misconfigured n8n instances that expose the workflow to the network. For the broader "replace SaaS with local AI" pattern across other tools, see [Replace Grammarly and Notion AI With Local Models](/power-local-llm/replace-grammarly-notion-ai-with-local).',
         items: [
           '**IMAP credentials:** store in environment variables or a local secrets manager (macOS Keychain, Linux `secret-tool`, Windows Credential Manager). Never store in script source code or a file that might be synced to a cloud repository.',
           '**Email content in logs:** Python scripts that print email content to stdout/stderr will write email data to log files if run via cron with logging enabled. Redirect logs to `/dev/null` or use a log level that excludes email content.',
@@ -330,6 +366,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I use this to reply on behalf of someone else?',
             a: 'Technically yes — the script can be configured to access any IMAP account you have credentials for. Legally and ethically, generating email replies on behalf of another person without their knowledge raises significant consent and impersonation issues. Use this automation only for accounts and correspondence you are personally responsible for.',
           },
+          {
+            q: 'Can I trigger AI on incoming emails?',
+            a: 'Yes, via three patterns. (1) Python + IMAP + cron: schedule the script to run every 30 min, fetch new unread emails, generate drafts. (2) n8n IMAP trigger node: polls every 1–5 min, triggers the workflow on each new email immediately. (3) Thunderbird filter rules: use a "Run a script" filter action that calls Ollama via curl. The n8n approach is most reliable for real-time triage; cron is simpler if 30-min latency is acceptable.',
+          },
+          {
+            q: 'Can I sync email AI across devices?',
+            a: 'The drafts can sync via your existing IMAP Drafts folder — write the AI-generated draft to the IMAP "Drafts" folder using `mail.append()`, and any device with IMAP access (phone, tablet, second laptop) sees it instantly. The Ollama backend itself does not sync — it runs on whichever machine you set up. Mobile devices need network access to the home machine running Ollama (LAN IP or Tailscale). Plan: home server runs Ollama + automation; all devices read drafts from IMAP Drafts folder. Single AI generation, multi-device review and send.',
+          },
         ],
       },
       relatedReading: {
@@ -341,7 +385,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — how to set up document Q&A over private business data without cloud APIs.',
           '[Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — MCP (Model Context Protocol) for connecting local LLMs to email clients, calendars, and other tools as agent contexts.',
           '[Autonomous Local Agents: What Actually Works](/power-local-llm/autonomous-local-agents-actually-work) — honest assessment of what local AI agents can and cannot do in 2026.',
+          '[Replace Grammarly and Notion AI With Local Models](/power-local-llm/replace-grammarly-notion-ai-with-local) — adjacent SaaS-replacement pattern for writing tools, complementing the email/calendar replacement here.',
+          '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — broader model authority for picking the chat model behind any of these three setups.',
           '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) — when to include example emails in the prompt and when to withhold them for better generalisation.',
+          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — directory listings for Ollama, n8n, Thunderbird, and other components in this stack.',
         ],
       },
     },
