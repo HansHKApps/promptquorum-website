@@ -26,6 +26,7 @@ import { article as a_local_llm_code_review_ci_cd } from './articles/local-llm-c
 import { article as a_local_llm_software_directory_2026 } from './articles/local-llm-software-directory-2026'
 import { article as a_local_rag_for_private_business_data } from './articles/local-rag-for-private-business-data'
 import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/local-rag-on-your-pdfs-step-by-step'
+import { article as a_mobile_llm_models_phi4_gemma_smollm } from './articles/mobile-llm-models-phi4-gemma-smollm'
 import { article as a_replace_github_copilot_with_local_llm } from './articles/replace-github-copilot-with-local-llm'
 import { article as a_replace_grammarly_notion_ai_with_local } from './articles/replace-grammarly-notion-ai-with-local'
 import { article as a_run_ai_on_tablet_ipad_android } from './articles/run-ai-on-tablet-ipad-android'
@@ -60,6 +61,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-software-directory-2026':      a_local_llm_software_directory_2026,
   'local-rag-for-private-business-data':    a_local_rag_for_private_business_data,
   'local-rag-on-your-pdfs-step-by-step':    a_local_rag_on_your_pdfs_step_by_step,
+  'mobile-llm-models-phi4-gemma-smollm':    a_mobile_llm_models_phi4_gemma_smollm,
   'replace-github-copilot-with-local-llm':  a_replace_github_copilot_with_local_llm,
   'replace-grammarly-notion-ai-with-local': a_replace_grammarly_notion_ai_with_local,
   'run-ai-on-tablet-ipad-android':          a_run_ai_on_tablet_ipad_android,
