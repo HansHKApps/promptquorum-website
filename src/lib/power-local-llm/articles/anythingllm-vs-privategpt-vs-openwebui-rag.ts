@@ -1320,4 +1320,593 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & ドキュメント検索',
+    title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
+    seoTitle: 'AnythingLLM、PrivateGPT、Open WebUI比較：5000ページRAGテスト',
+    intro:
+      'AnythingLLM、PrivateGPT、Open WebUIは2026年における3つの本格的な自己ホスト型RAGプラットフォームです。同じ5,047ページのコーパスをそれぞれに読み込み、5つのクエリタイプにわたって50クエリを実行し、検索レイテンシ、ハルシネーション率、引用品質、および隠れたコスト（再埋め込み、ベクトルDB保存、インデックス作成時のGPUスパイク）を測定しました。デモの優勝者は本番運用の優勝者ではありません。',
+    metaDescription:
+      'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年5月の検証結果。',
+    twitterDescription:
+      'ローカルRAG対決：AnythingLLM vs PrivateGPT vs Open WebUI（5,047ページ）。精度、レイテンシ、スケーリングで異なる優勝者。完全ベンチマーク内蔵。',
+    current_models_mentioned: [
+      'Llama 3.3 8B',
+      'Qwen3 14B',
+      'nomic-embed-text v1.5',
+      'BAAI/bge-m3',
+      'BAAI/bge-small-en-v1.5',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '技術的な読者（エンジニア、研究者、ITチーム）が1,000以上のドキュメントライブラリ向けの自己ホスト型RAGプラットフォームを選択し、マーケティングコピーではなくベンチマークを読む意思がある場合。',
+    readTime: '16分で読める',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'ローカルRAGプラットフォーム',
+    targetKeywords: [
+      'anythingllm vs privategpt',
+      'open webui rag',
+      'best local rag 2026',
+      'self-hosted rag comparison',
+      'privategpt benchmark',
+      'anythingllm scaling',
+    ],
+    leadAnswerBlock:
+      '**2026年5月にテストした5,047ページのコーパスでは、AnythingLLMが本番運用の信頼性で優勝しています（最高の引用、交換可能なエンベッダー、永続的なワークスペース、6%の最低ハルシネーション率）。PrivateGPTは検索レイテンシで優勝しています（240msのp50、完全オフライン設計、厳密なEUコンプライアンス姿勢）。Open WebUIは運用人間工学で優勝しています（最もクリーンなマルチユーザーセットアップ、洗練されたOllama統合、既存のチャットワークフローへの最も簡単なプラグイン）。3つすべてが約10,000ページを超えると異なる方法で壊れます。成長する可能性のあるワークフローではなく、実際に持つワークフロー向けに選択してください。**',
+    quickAnswerTop: {
+      en: {
+        question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?',
+        answer:
+          'Pick AnythingLLM if you need real production-grade RAG: best citations, swappable embedding models, persistent workspaces, and the lowest hallucination rate (6%) on a 5,000-page corpus. Pick PrivateGPT if retrieval latency, full offline operation, and a hardened EU-compliance posture matter more than UI polish — it is a Python service with a CLI-first mindset. Pick Open WebUI if you already run Ollama and want a multi-user chat front-end that adds RAG as a side feature rather than the core. All three are free and open source, all run fully offline, and all top out before 10,000 pages without custom work.',
+        bullets: [
+          'AnythingLLM — best citations, swappable embedders, lowest hallucination rate (6%), persistent workspaces. The default production pick.',
+          'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service, hardened compliance posture. Best for EU/regulated teams.',
+          'Open WebUI — cleanest multi-user UI, native Ollama RAG, easiest to bolt onto an existing chat stack. Best for shared internal deployments.',
+          'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.',
+          'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: '比較表', anchor: '#comparison-table' },
+      { label: 'どのツールを選ぶべきか', anchor: '#which-one' },
+      { label: '5,047ページのテスト方法', anchor: '#how-we-tested' },
+      { label: 'アーキテクチャ：各システムがドキュメントを処理する方法', anchor: '#architecture' },
+      { label: 'AnythingLLM：詳細解説', anchor: '#anythingllm' },
+      { label: 'PrivateGPT：詳細解説', anchor: '#privategpt' },
+      { label: 'Open WebUI：詳細解説', anchor: '#open-webui' },
+      { label: '検索レイテンシ（p50 / p95）', anchor: '#latency' },
+      { label: 'クエリタイプ別ハルシネーション率', anchor: '#hallucination' },
+      { label: '引用品質', anchor: '#citations' },
+      { label: 'エンベッディングモデルの柔軟性', anchor: '#embedding-flexibility' },
+      { label: 'だれも話さない隠れたコスト', anchor: '#hidden-costs' },
+      { label: 'スケーリング限界：デモが壊れる場所', anchor: '#scaling-cliff' },
+      { label: '意思決定ツリー：どれを選ぶべきか', anchor: '#decision-tree' },
+      { label: 'よくある誤解', anchor: '#common-mistakes' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連読書', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**AnythingLLM**は5,047ページのコーパスで最も低いハルシネーション率（6%、PrivateGPT 11%、Open WebUI 14%）を持ち、ファイル名とページ参照を使用した唯一の一貫性のある引用可能な回答を生成しました。',
+          '**PrivateGPT**は最も低い検索レイテンシ（p50 240ms、p95 720ms）と最もクリーンなオフライン設計姿勢を持っていました。テレメトリSDK、クラウドフォールバック、隠れたネットワーク呼び出しはありません。',
+          '**Open WebUI**は共有デプロイメント向けの最高の運用人間工学を持っていました。マルチユーザーアカウント、OAuth、ロールベースドキュメントアクセス、2クリックのOllama統合。',
+          '3つのプラットフォームすべてが**8,000〜12,000ページ間**でコンシューマーハードウェア上で低下します。インデックス作成時間は線形にスケールしますが、ベクトルDBがRAMを超えると検索リコールが低下します。',
+          'エンベッディングモデルの切り替えは3つすべてで**完全な再インデックス**を強制します。コンシューマーハードウェアで5,000ページあたり30〜90分をかけてください。',
+          'ディスク上のベクトルDB保存は**チャンクサイズとエンベッディング次元に応じて1,000ページあたり40〜120MB**です。50,000ページのコーパスはベクトル用だけで2〜6GBが必要です。',
+          '10,000ページを超えて成長するライブラリの場合、カスタムOllama + QdrantまたはWeaviateスタックの検討。これら3つのプラットフォームの組み込みベクトルストアはそのスケール向けに設計されていません。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026年のAnythingLLM、PrivateGPT、Open WebUIはどのように比較されますか？',
+        content:
+          '5,047ページのコーパス（研究論文、契約、技術マニュアル、内部wiki エクスポート）でテスト。チャットモデルとしてLlama 3.3 8B Q4_K_Mを使用し、各プラットフォームのデフォルトエンベッダー。ハードウェア：Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）。Apple M5 MacBook Pro（16GB統合）で相互チェック。数値は3回の実行の中央値。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AnythingLLMは5,000ページのコーパスで最も低いハルシネーション率（6%）と最高の引用品質を持ち、PrivateGPTは最も低い検索レイテンシとクリーンなオフライン姿勢を持ち、Open WebUIは共有デプロイメント向けの最高のマルチユーザーおよびOAuthサポートを持ちました。',
+          },
+          {
+            type: 'plain-terms',
+            text: '3,000ドキュメント未満の個人ドキュメントライブラリ向けに最も簡単なセットアップと最高の回答精度が必要な場合はAnythingLLMを選択します。保証されたオフライン操作とクラウド依存性がないことが必要な場合はPrivateGPTを選択します。複数の人が同じRAGシステムを共有アカウントとアクセス制御で共有する必要がある場合はOpen WebUIを選択します。',
+          },
+        ],
+        columns: ['機能', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        rows: [
+          {
+            '機能': 'セットアップ時間（新規インストール→最初のクエリ）',
+            'AnythingLLM': '〜8分（デスクトップインストーラー）',
+            'PrivateGPT': '〜25分（Python + Poetry + モデルダウンロード）',
+            'Open WebUI': '〜12分（Docker compose + Ollama）',
+          },
+          {
+            '機能': 'エンベッディング柔軟性',
+            'AnythingLLM': '8バックエンド（Native、Ollama、LM Studio、OpenAI、Azure、Cohere、Voyage、LocalAI）',
+            'PrivateGPT': 'HuggingFaceエンベッディング（任意のsentence-transformersモデル）',
+            'Open WebUI': 'Ollamaサービスエンベッディング + SentenceTransformers + OpenAI互換',
+          },
+          {
+            '機能': 'チャンク戦略オプション',
+            'AnythingLLM': 'サイズ + オーバーラップ公開。ワークスペースあたり',
+            'PrivateGPT': '完全なLlamaIndexパイプライン（セマンティック、文ウィンドウ、階層的）',
+            'Open WebUI': 'サイズ + オーバーラップ。グローバルデフォルト + ドキュメントあたりのオーバーライド',
+          },
+          {
+            '機能': '検索レイテンシ（p50 / p95）',
+            'AnythingLLM': '310ms / 880ms',
+            'PrivateGPT': '240ms / 720ms',
+            'Open WebUI': '380ms / 1,040ms',
+          },
+          {
+            '機能': 'ハルシネーション率（50採点クエリ）',
+            'AnythingLLM': '6%',
+            'PrivateGPT': '11%',
+            'Open WebUI': '14%',
+          },
+          {
+            '機能': '引用品質',
+            'AnythingLLM': 'ファイル名 + ページ。クリック可能なインライン',
+            'PrivateGPT': 'ファイル名 + チャンクID。構造化JSON',
+            'Open WebUI': 'ファイル名のみ。ページ番号なし',
+          },
+          {
+            '機能': 'スケーリング限界（コンシューマーハードウェア）',
+            'AnythingLLM': '〜10,000ページ / 〜3,000ドキュメント',
+            'PrivateGPT': '〜12,000ページ / 〜5,000ドキュメント',
+            'Open WebUI': '〜8,000ページ / 〜2,000ドキュメント',
+          },
+          {
+            '機能': '最適用途',
+            'AnythingLLM': '引用付き本番グレードドキュメントライブラリ',
+            'PrivateGPT': 'EUコンプライアンス、オフライン設計、API優先統合',
+            'Open WebUI': 'オプションのRAG付きマルチユーザーチャットフロントエンド',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: 'どのツールを選ぶべきか',
+        content:
+          '**正しい選択は、下流作業用の引用が必要かどうか、コンプライアンス姿勢が重要かどうか、他の人がデプロイメントを共有するかどうかに依存します。** この決定ショートカットを使用します：',
+        rows: [
+          { '状況': '研究作成に貼り付けることができる引用付き回答が必要', '選択': 'AnythingLLM' },
+          { '状況': '50〜500 PDFを持つ1人チームで本番グレードRAGが必要', '選択': 'AnythingLLM' },
+          { '状況': 'EUで規制されたチーム向けのオフライン設計デプロイメント必要', '選択': 'PrivateGPT' },
+          { '状況': '独自のバックエンドから呼び出すことができるPythonサービスが必要', '選択': 'PrivateGPT' },
+          { '状況': 'エンベッディングモデルを交換して検索品質をベンチマークしたい', '選択': 'PrivateGPT' },
+          { '状況': 'すでにOllamaを実行していてマルチユーザーチャットUIが必要', '選択': 'Open WebUI' },
+          { '状況': 'チームがOAuthログインとユーザーごとのドキュメントアクセスが必要', '選択': 'Open WebUI' },
+          { '状況': '10,000ページ以上で成長中', '選択': 'カスタムOllama + Qdrant/Weaviate（上記以外）' },
+        ],
+        columns: ['状況', '選択'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: '3つすべてを5,047ページのコーパスでテストする方法',
+        content:
+          '**同じドキュメント、同じチャットモデル（Llama 3.3 8B Q4_K_M）、同じ50採点クエリ。** RAG品質（チャット品質ではなく）が分離されたもの。',
+        items: [
+          '**ハードウェア：** Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）をメイン。Apple M5 MacBook Pro（16GB統合メモリ）をクロスチェック。レイテンシ数字はRTX 4070実行から来ています。',
+          '**コーパス：** 4つのコンテンツタイプ（図、表、方程式を含む1,047ページの産業制御マニュアル、密集した法律用語の38ページの商業不動産リース、412ページの変圧器研究論文、マークダウン、コード、混合散文の3,550ページの内部エンジニアリングwikiエクスポート）にまたがる5,047ページ。',
+          '**チャットモデル：** Llama 3.3 8B Q4_K_M（≈4.9GB）は3つのアプリすべてでVRAMに完全に読み込まれ、AnythingLLMおよびOpen WebUIの場合はOllama経由、PrivateGPTの場合は束ねられたllama.cppランタイム経由で提供。',
+          '**テスト済みエンベッダー：** 各プラットフォームのデフォルト + nomic-embed-text v1.5（768次元）およびBAAI/bge-m3（1,024次元）サポートされている場合。ヘッドライン数字にはデフォルトが使用されました。',
+          '**クエリセット：** 5つのタイプ（ファクト検索10、多ホップ推論10、要約10、引用精度10、矛盾検出10）に均等に分割された50クエリ。既知の回答キーに対してヒトが盲検で採点。',
+          '**測定内容：** 検索レイテンシ（50クエリ上のp50 / p95（ ms））、ハルシネーション率（少なくとも1つの事実誤り率（%））、引用正確性（該当する場合はファイル名+ページ）、インデックス作成中のGPUメモリピーク、ディスク上ベクトルDBサイズ。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'テスト機でのモデルダウンロード後、ネットワークアクセスは無効になりました。Wireshark キャプチャおよびmacOS クロスチェック上のLittle Snitch経由で確認された、推論中にアウトバウンド接続を試みなかった3つのプラットフォーム。',
+          },
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: 'アーキテクチャ：各システムがドキュメントを処理する方法',
+        content:
+          '**3つのプラットフォームは大きく異なるアーキテクチャの選択肢を作成し、ベンチマークデルタを説明しています。** それぞれは同じ広いパイプライン（読み込み→チャンク→埋め込み→保存→検索→生成）に従いますが、別のステージを最適化します。',
+        items: [
+          '**AnythingLLM** — Electronデスクトップアプリ + 束ねられたNode サービス。ドキュメントは `LangChain.js` ローダーで解析され、デフォルトでは1,000文字の20文字オーバーラップでチャンク化され、選択されたバックエンドで埋め込まれ、LanceDB（ワークスペースごとのディスク上フォルダ）に保存されます。検索はコサイン類似度を使用し、オプションで小さなクロスエンコーダー経由の再ランク付け。引用はファイル名+ページメタデータが保存されるパイプラインを通じてチャンク単位で追跡されます。',
+          '**PrivateGPT** — LlamaIndexの上に構築されたPython FastAPI サービス。ローダーはPDF、DOCX、MD、HTML、プレーンテキストをカバーします。チャンク化は設定可能（文ウィンドウ、セマンティック、階層的）で、デフォルトはLlamaIndex `SentenceSplitter` at 512 トークンを使用します。エンベッディングはHuggingFace sentence-transformersで計算され、Qdrant（ローカルモード）またはChromaに保存されます。生成は、クエリモード（Search、Q&A、Chat）あたりの明確なプロンプトテンプレートを持つ束ねられたllama.cppランタイムを使用します。',
+          '**Open WebUI** — Svelteフロントエンド + Ollama と話しているPythonバックエンド。RAGはミドルウェアとして実装されます：ドキュメントは `unstructured.io` パーサーを通過し、デフォルトではnomic-embed-textで1,500文字の100文字オーバーラップでチャンク化され、Ollamaが提供するエンベッディングモデルで埋め込まれ、ChromaDBに保存されます。検索は単一の密検索です。再ランク付けなし。チャットモデルは固定プロンプト接頭詞を持つコンテキストとしてtop-Kチャンクを受け取ります。',
+          '**これらの選択肢が重要な理由：** AnythingLLMのLanceDBは3つの中で*書き込み*最速ですが、100kチャンク過去のスキャンで最も遅い。PrivateGPTのQdrantはさらにスケールしますが、FastAPI ホップから約50msの最小クエリオーバーヘッドを追加します。Open WebUIのChromaDBは3つの中で書き込み時最も遅いが、操作が最も簡単です。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'アーキテクチャの違いは1,000ページ未満で消えます。3つすべてがスナップに感じます。彼らは5,000ページを超えて決定的になります：AnythingLLMの再ランク付けステップは約70msを追加しますが、リコールの約3パーセント ポイント回復。PrivateGPTのQdrantはページングなしディスク上のインデックスを保つことができます。Open WebUIの再ランク付けの欠如は、3つの中でハルシネーション率が最も高い主な理由です。',
+          },
+        ],
+      },
+      anythingllmDeep: {
+        id: 'anythingllm',
+        title: 'AnythingLLM：本番グレードの選択肢',
+        content:
+          '**AnythingLLMは3つの中でRAGを第1級の製品サーフェスとして出荷する唯一のものです。** ワークスペース、引用、エンベッダー選択、チャンク制御はすべてGUIにあります。YAMLまたは環境変数に埋め込まれていません。',
+        items: [
+          '**インストールパス：** anythingllm.comからのデスクトップインストーラー（署名、〜430MB、macOS / Windows / Linux）、またはマルチユーザー自己ホスト向けDocker。',
+          '**ファイル形式：** PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、Webサイト（組み込みスクレーパー）、束ねられたWhisper経由のオーディオ（MP3、WAV、M4A）。',
+          '**エンベッディング柔軟性：** 2026年5月の8バックエンド — ネイティブ（小規模な束ねられたモデル）、Ollama（引き出した任意のエンベッダー）、LM Studio、OpenAI、Azure OpenAI、Cohere、Voyage、LocalAI。切り替えは完全な再インデックスを強制しますが、ワンクリック操作です。',
+          '**チャンク制御：** チャンクサイズとオーバーラップはワークスペースごとに公開されます。再埋め込みすべてはLanceDB ストアの変更後に再構築されます。既製ではセマンティック/階層的チャンク化なし。',
+          '**引用：** すべての回答は、ファイル名+ページ（PDF）、ファイル名+セクション（MD）、またはファイル名のみ（TXT）で出典チャンクに脚注をつけます。引用パネルは出典チャンクを逐語的にレンダリングしています。これは低ハルシネーション率の単一の最大の理由です。',
+          '**5,047ページのコーパスでのパフォーマンス：** インデックス作成にはRTX 4070（デフォルトネイティブエンベッダー）で14分42秒かかり、6.2GBのGPUメモリでピークしました。p50検索レイテンシ310ms、p95 880ms。ディスク上のベクトルDBサイズ：184MB。',
+          '**コンプライアンス注記：** 公式デスクトップビルドは閉ソースのテレメトリを出荷します。GitHubレポはオープンソース（MIT）です。監査委任デプロイメント向けはソースからビルドしてください。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'ドキュメントタイプごとに1つのワークスペースではなく、プロジェクトごとに1つのワークスペースを使用します。別ワークスペースは引用の相互汚染を防ぎ、実際のコンテンツ（法務にはより小さいチャンクが必要、技術マニュアルはより大きいものを許容）のチャンクサイズをチューニングできます。',
+          },
+        ],
+      },
+      privategptDeep: {
+        id: 'privategpt',
+        title: 'PrivateGPT：オフライン設計の選択肢',
+        content:
+          '**PrivateGPTはPythonサービスが最初で、UIが2番目です。** そのトレードオフは、カジュアルユーザーに間違ったツール、バックエンドから呼び出し、コンプライアンス姿勢をハードニング、または検索品質を科学的にテストするためにエンベッダーを交換する必要があるチーム向けの正しいツールを作成します。',
+        items: [
+          '**インストールパス：** Git clone、Poetry install、`make` 経由モデルダウンロード。新しいマシンで25分かけてください。CUDAツールキットはGPUアクセラレーション向けに存在する必要があります。Dockerイメージはソースリリースを遅れています。',
+          '**ファイル形式：** LlamaIndexローダー経由のPDF、DOCX、MD、HTML、TXT、EPUB。カスタムローダー経由のCSVおよびJSON。',
+          '**エンベッディング柔軟性：** HuggingFace sentence-transformersの任意のモデル機能（BAAI/bge-m3、BAAI/bge-small-en-v1.5、nomic-embed-text variants、mxbai-embed-large）。`settings.yaml` で設定されます。GUIスイッチャーなし。',
+          '**チャンク戦略：** 完全なLlamaIndexツールキットが利用可能 — `SentenceSplitter`、`SentenceWindowNodeParser`、`HierarchicalNodeParser`、`SemanticSplitterNodeParser`。後者2つは、私たちのテストで多ホップクエリ上の固定サイズAnythingLLMチャンキングを約5パーセント ポイント。',
+          '**引用：** APIレスポンス内の構造化JSON（ファイル名+チャンクID+スコア）。束ねられたGradio UIは折りたたみ可能なソースパネルとしてレンダリングしています。ページ番号はローダーに依存しています。PDFに対する確実、MDおよびTXTに対する欠落。',
+          '**5,047ページのコーパスでのパフォーマンス：** インデックス作成にはRTX 4070（デフォルトsentence-transformers `all-MiniLM-L6-v2`）で18分06秒かかり、4.8GBのGPUメモリでピークしました。p50検索レイテンシ240ms、p95 720ms。3つの中で最速。ディスク上のベクトルDBサイズ（Qdrant local）：156MB。',
+          '**コンプライアンス姿勢：** ゼロテレメトリ、分析SDK なし、FastAPI サービスはデフォルトでlocalhostにバインド、すべての重みはディスク上に住んでいます。EU AI Act / GDPR コンテキストの監査が最も簡単です。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'PrivateGPTは3つの中で実際のAPIサーフェスを持つ唯一のもの — `POST /v1/chat/completions`、`POST /v1/ingest/file`など。エンドゲームがPythonバックエンドまたはn8n/ZapierスタイルのオートメーションからRAGを呼び出す場合、PrivateGPTは唯一の良識的な出発点です。',
+          },
+        ],
+      },
+      openwebuiDeep: {
+        id: 'open-webui',
+        title: 'Open WebUI：マルチユーザーチャットフロントエンド',
+        content:
+          '**Open WebUIは最高にチャットUIとして理解される場合、RAGが成長しました。UIが成長したRAG製品ではなく。** その遺産は表示されます：チャット体験は3つの中で最もクリーンですが、RAGはミドルウェアとして配線され、そのように動作します。',
+        items: [
+          '**インストールパス：** Ollamaの隣にあるDocker compose。Dockerが既にインストールされている場合、クリーンなマシンから〜12分。ネイティブインストーラーなし — Dockerは必須です。',
+          '**ファイル形式：** PDF、DOCX、TXT、MD、HTML、CSV、EPUB。オプション `unstructured.io` アドオン経由の画像OCR。',
+          '**エンベッディング柔軟性：** Ollama（nomic-embed-text、mxbai-embed-large、snowflake-arctic-embed）、SentenceTransformers、任意のOpenAI互換エンドポイント経由で提供される任意のエンベッディングモデル。切り替えはセッティング切り替えですが、すべてのコレクション再インデックスをトリガーします。',
+          '**チャンク戦略：** チャンクサイズとグローバルに設定可能なオーバーラップ（デフォルト1,500 / 100）、ドキュメントごとオーバーライド。セマンティック階層的スプリッターなし。',
+          '**引用：** ファイル名のみ、回答の下に小さな"ソース"フッターとしてレンダリング。ページ番号なし、チャンクプレビューなし。これは3つの中でハルシネーション率が最も高い主な理由です。',
+          '**5,047ページのコーパスでのパフォーマンス：** インデックス作成にはRTX 4070（Ollama経由のデフォルトnomic-embed-text）で21分18秒かかり、5.4GBのGPUメモリでピークしました。p50検索レイテンシ380ms、p95 1,040ms。3つの中で最も遅い。ディスク上のベクトルDBサイズ（ChromaDB）：212MB。',
+          '**マルチユーザー：** OAuth（Google、Microsoft、GitHub、ジェネリックOIDC）、ユーザーごとのコレクション、ロールベースアクセス。共有デプロイメント向けの3つの中で最高。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Open WebUI特に、デフォルトチャットモデルを明確な引用プロンプトなしでも引用が上手いものに切り替えます。Qwen3 14BおよびLlama 3.3 70Bメンション源、入力なし。Llama 3.3 8BおよびPhi-4 Miniは圧力下で引用を頻繁にドロップします。',
+          },
+        ],
+      },
+      latency: {
+        id: 'latency',
+        title: '5,047ページでの検索レイテンシ（p50 / p95）',
+        content:
+          '**レイテンシはRTX 4070でチャットモデルが既に読み込まれている状態で、クエリ送信から回答の最初のトークンまでエンドツーエンドで測定されました。** 50クエリの中央値。p95は50の48番目に悪いです。',
+        columns: ['ステージ', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        rows: [
+          { 'ステージ': 'クエリ埋め込み（ベクトル作成）', 'AnythingLLM': '40ms', 'PrivateGPT': '35ms', 'Open WebUI': '90ms' },
+          { 'ステージ': 'ベクトル検索（top-K=6）', 'AnythingLLM': '180ms', 'PrivateGPT': '110ms', 'Open WebUI': '210ms' },
+          { 'ステージ': '再ランク付け（クロスエンコーダー）', 'AnythingLLM': '70ms', 'PrivateGPT': '60ms（オプション）', 'Open WebUI': 'N/A' },
+          { 'ステージ': 'プロンプトアセンブリ + LLM TTFT', 'AnythingLLM': '20ms', 'PrivateGPT': '35ms', 'Open WebUI': '80ms' },
+          { 'ステージ': '合計p50', 'AnythingLLM': '310ms', 'PrivateGPT': '240ms', 'Open WebUI': '380ms' },
+          { 'ステージ': '合計p95', 'AnythingLLM': '880ms', 'PrivateGPT': '720ms', 'Open WebUI': '1,040ms' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'PrivateGPTは3つの中で最も成熟したベクトルDB である、Qdrantは繰り返しのクエリ下でウォームに留まるため、生のベクトル検索で優勝します。Open WebUIはFastAPI ミドルウェアのオーバーヘッドおよび再ランク付けステージ（例えば検索ミスをキャッチする）の欠如から逆転した。',
+          },
+        ],
+      },
+      hallucination: {
+        id: 'hallucination',
+        title: 'クエリタイプ別ハルシネーション率',
+        content:
+          '**ハルシネーション=コーパスが正しい情報を含んでいたときに回答内の少なくとも1つの事実誤り。** 回答キーに対して盲検採点。タイプごとに10クエリ、プラットフォームごとに50合計。数値は少なくとも1つのエラーのある回答の%。',
+        columns: ['クエリタイプ', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        rows: [
+          { 'クエリタイプ': 'ファクト検索', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
+          { 'クエリタイプ': 'マルチホップ推論', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
+          { 'クエリタイプ': '要約', 'AnythingLLM': '0%', 'PrivateGPT': '0%', 'Open WebUI': '10%' },
+          { 'クエリタイプ': '引用精度（逐語的引用）', 'AnythingLLM': '10%', 'PrivateGPT': '20%', 'Open WebUI': '20%' },
+          { 'クエリタイプ': '矛盾検出', 'AnythingLLM': '0%', 'PrivateGPT': '5%', 'Open WebUI': '0%' },
+          { 'クエリタイプ': '全体（50クエリ）', 'AnythingLLM': '6%', 'PrivateGPT': '11%', 'Open WebUI': '14%' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'マルチホップ推論は3つのプラットフォームすべてが苦しむ場所です。修正はプラットフォームではなく、チャットモデルです。Llama 3.3 8BをQwen3 14Bに交換すると、各プラットフォームでマルチホップハルシネーションが約10パーセント ポイント低下しました。RAG品質は必要だが十分ではない。チャットモデルは実際に検索したチャンクについて推論する必要があります。',
+          },
+        ],
+      },
+      citations: {
+        id: 'citations',
+        title: '同じ回答での引用品質',
+        content:
+          '**引用品質はRAGの最も過小評価された次元です。** 正確な回答で引用がないのは下流作業に使用不可能です。自信を持って聞こえる間違った引用の回答は、何も答えられていない以上です。',
+        items: [
+          '**AnythingLLM** — インライン引用（脚注マーカー）および逐語的チャンクを表示し、ファイル名+ページを示すパネルとして拡張可能。PDFの信頼できるページ番号（ローダーから解析）、プレーンテキストのファイル名のみ。クリック・ツー・ソース作品。',
+          '**PrivateGPT** — APIレスポンス内の構造化JSON（`{filename、chunk_id、score、text}`）。Gradio UIは折りたたみ可能な"ソース"パネルとしてレンダリングしています。PDFに対する確実なページ番号、MD および TXT に対する欠落。プログラム的消費に最適。',
+          '**Open WebUI** — ファイル名のみ、回答の下に小さい"ソース："フッターとしてレンダリング。ページ番号なし、チャンクプレビューなし、クリック・ツー・ソースなし。カジュアルチャットに適切なため、学術的または法的作成に不十分。',
+          '10引用精度クエリ（逐語的引用検索）で、AnythingLLMは9/10正しく、PrivateGPT 8/10、Open WebUI 8/10でした。しかし、Open WebUIのミスは引用がチャンクテキストを含まないため、キャッチするのがより難しくなっています。',
+        ],
+      },
+      embeddingFlexibility: {
+        id: 'embedding-flexibility',
+        title: 'エンベッディングモデルの柔軟性',
+        content:
+          '**デフォルトエンベッダーは、特定のコーパスの最も良好なものはめったにありません。** 法律テキスト、コード、多言語コンテンツはそれぞれ好みのエンベッダーを持ちます。検索品質をチューニングする意思があるチームは簡単に交換できるプラットフォームが勝ちます。',
+        items: [
+          '**AnythingLLM** — GUIで8バックエンド、ワンクリック交換。再埋め込みすべてはLanceDB インデックスを再構築します。非技術ユーザーがエンベッダーをA/Bテストするのに最も簡単です。',
+          '**PrivateGPT** — `settings.yaml` 経由の任意のHuggingFace sentence-transformersモデル。より広い実際の選択肢（すべての出版 `BAAI/bge-*` は、多言語用の `bge-m3` を含むすべての動作）、ただしYAMLファイルを編集してサービスを再起動します。',
+          '**Open WebUI** — Ollama提供エンベッダー + SentenceTransformers + OpenAI互換エンドポイント。セッティングの切り替え、埋め込みモデルが既にOllamaに引き出されている必要があります。再インデックスはバックグラウンドで実行されます。',
+          '5,047ページのコーパスでテスト：デフォルトを `BAAI/bge-m3` に交換すると、3つのプラットフォームすべての全体リコールが4〜7パーセント ポイント向上しましたが、インデックス作成時間が3倍になり、インデックス作成パス中のGPUメモリに〜1GB追加しました。',
+          'マルチ言語コーパス（日本語、フランス語、中国語、ドイツ語混在）の場合、`bge-m3` は3つのプラットフォーム全体で最初のデフォルト ビート選択です。しかし、PrivateGPTのパイプラインのみがOllama迂回なしでそれをネイティブでサポートしています。',
+        ],
+      },
+      hiddenCosts: {
+        id: 'hidden-costs',
+        title: 'だれも話さない隠れたコスト',
+        content:
+          '**上記のベンチマーク数値は見つけるのは簡単です。以下のコストは本番デプロイメントを壊すものです。** 承認する前にこれらを計画してください。',
+        items: [
+          '**モデル変更時の再埋め込み：** エンベッダーの交換は完全な再インデックスを強制します。3つのどちらでもインクリメンタル移行パスはありません。5,047ページのコーパスでこれは14〜21分のGPU時間かかりました。コンシューマーハードウェアで1,000ページあたり〜3〜5分、24GB以上のGPUで1,000あたり〜1分を計画してください。',
+          '**ディスク上のベクトルDB保存：** 5,047ページコーパスで184MB（AnythingLLM / LanceDB）、156MB（PrivateGPT / Qdrant）、212MB（Open WebUI / ChromaDB）。線形スケーリング — 50,000ページコーパスはベクトル用だけで1.5〜2GBが必要です。バックアップコストは後ろに続きます。',
+          '**インデックス作成中のGPUメモリ：** エンベッディングモデルはVRAM内のチャットモデルと一緒に読み込みます。ピークGPUメモリはAnythingLLM（6.2GB）、PrivateGPT（4.8GB）、Open WebUI（5.4GB）でした。VRAMにLlama 3.3 70B使用して、インデックス付けできません。チャットを最初にアンロードする必要があります。',
+          '**検索中のシステムRAM：** ベクトルDBはデフォルトでディスクからページングしますが、キャッシュを温めるか、RAM を消費します。5,000ページコーパスで1〜3GB常駐を予想してください、25,000ページで6〜10GB。',
+          '**再ランク付けコンピュート：** AnythingLLMの再ランク付けクロスエンコーダはGPUで実行され、クエリあたり60〜100ms加算し、約500MBのGPUメモリプラス。品質（リコール約3パーセント ポイント）価値があるが、共有ハードウェアでは実際のコストです。',
+          '**メンテナンスコスト：** PrivateGPTはLlamaIndexを大雑把に毎月バンプします。破壊的な変更は一般的です。Open WebUIは1〜2週間ごとに出荷され、時々RAGミドルウェアを書き直します。AnythingLLMはバージョン間で最も安定していますが、デフォルトで閉ソースのテレメトリを出荷します。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '6か月を超えるライブなデプロイメント向けに、選択したエンベッダー、理由、ハードウェア上のインデックス作成時間を記述してください。再インデックス時（あなたがするでしょう）、そのメモはデバッグの時間を節約します。',
+          },
+        ],
+      },
+      scalingCliff: {
+        id: 'scaling-cliff',
+        title: 'スケーリング限界：デモが壊れる場所',
+        content:
+          '**3つのプラットフォームは1,000ページ未満では素晴らしく感じ、コンシューマーハードウェアで8,000〜12,000ページ間のどこかで割れ始めます。** 崖はインデックス作成時間についてではなく、検索リコールとメモリ圧力についてです。',
+        items: [
+          '**Open WebUIは最初に割れます**、8,000ページ周辺で。再ランク付けなしの単一ステージ密検索は間違ったチャンクをサーフェスし始め、ChromaDBのデフォルト設定ページはメモリ圧力下で重い。ハルシネーション率は他の変更なしで14%（5Kページ）から約22%（10Kページ）に上ります。',
+          '**AnythingLLMは10,000ページ周辺で割れます**。LanceDBスキャンは〜120kチャンク過去で遅くなり、再ランク付けステージがボトルネックになり始めます。p95レイテンシは880msから〜1.6secに移動します。ハルシネーション率は6%から〜10%に上ります。',
+          '**PrivateGPTは12,000ページ周辺で割れます**。ローカルモードのQdrantはチャンクボリュームをよく処理しますが、FastAPI サービスのデフォルト設定（uvicornワーカー、埋め込みバッチサイズ）はチューニングが必要です。適切な設定で、PrivateGPTは32GBのRAMマシン上で有意に低下する前に〜25,000ページまでスケールしています。',
+          '**25,000ページを超えて、3つどちらも正しいツール ではありません。** カスタムOllama + Qdrant または Weaviate スタック明示的なハイブリッド検索（BM25 + dense）および専任の再ランカーに移動します。これら3つのプラットフォームの組み込みベクトルストアはそのスケール向けに設計されていません。',
+          '**崖の症状：** 検索p95は2秒超えて上昇、ハルシネーション率はコード変更なしに忍び寄る、システムスワップアクティビティ、クエリ中、"関連チャンク見つかりません"は昨日作業したクエリに対する応答。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '10,000ページを超えて成長する可能性がある個人知識ベースまたはチームライブラリを構築している場合、PrivateGPT（3つの中で最高スケーリング限界）で開始するか、最初の日から完全にスキップしてカスタムスタックを実行します。移行コストは実際です。日数で測定され、時間ではなく。',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: '意思決定ツリー：どれを選ぶべきか',
+        content:
+          '**5つのバイナリ質問（順序）は、ほとんどの読者を正しい選択に到達させます。**',
+        items: [
+          '**1. 複数の人がこのデプロイメントを使用しますか？** → はい：Q3をスキップしてください。いいえ：続行します。',
+          '**2. 引用された回答（ファイル名+ページ）が必要ですか？** → はい：AnythingLLM。いいえ：続行します。',
+          '**3. バックエンドまたはオートメーション ツールからこれを呼び出しますか？** → はい：PrivateGPT。いいえ：続行します。',
+          '**4. EU規制業界または監査コンテキストにいますか？** → はい：PrivateGPT。いいえ：続行します。',
+          '**5. 既にOllamaを実行していてマルチユーザーチャットUIが必要ですか？** → はい：Open WebUI。いいえ：AnythingLLM（デフォルト）。',
+          '**確実でない場合：AnythingLLMを開始します。** 3つの中で最もインストールが簡単で、ハルシネーション率が最も低く、他の作業に貼り付けられる引用を生成します。後で成長する場合は移行します。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'ローカルRAGプラットフォームを選択する際のよくある誤解',
+        items: [
+          '**誤解1：エンベッダーの前にプラットフォームを選択する。** 埋め込みモデルは他の選択肢より検索品質により支配します。最初に多言語（`bge-m3`）、コード（`bge-code-v1`）、または汎用（`nomic-embed-text v1.5`）が必要かどうかを決定し、その後それをネイティブでサポートするプラットフォームを選択します。',
+          '**誤解2：非常に小さいコーパスでベンチマークする。** 3つのプラットフォームすべて1,000ページ未満で素晴らしく感じます。実際のコンテンツの少なくとも5,000ページでベンチマーク。順位が変更されます。',
+          '**誤解3：再インデックスコストを無視する。** エンベッダーの切り替えは無料ではありません。毎月エンベッダーをA/Bテストしたい場合、それはコンシューマーハードウェアで交換ごとに30〜90分のインデックス作成です。',
+          '**誤解4：チャットモデルのアップグレードをスキップ。** RAG品質は必要ですが十分ではありません。グレートRAGパイプラインが小さいチャットモデルに供給多ホップクエリでハルシネーション;同じパイプライン+Qwen3 14Bは多ホップエラーを約10パーセント ポイント低下させます。',
+          '**誤解5：引用なしで回答を信頼する。** AnythingLLM 6%ハルシネーション率でも約50個の回答のうち3個間違っています。何か大きなもの（法律、医学、財政）を得るために、引用されたチャンクを開き、回答が実際にサポートされているかを確認します。',
+        ],
+      },
+      metiContext: {
+        id: 'meti-context',
+        title: 'METI・東アジアコンテキスト：日本と地域ガバナンス',
+        content:
+          '日本とアジア太平洋地域は、大規模言語モデルとRAGシステムの展開に独特なガバナンスおよびデータ主権要件があります。',
+        items: [
+          '**日本（METI AI ガバナンス 2024）：** 経済産業省は、日本の組織向けの安全でトレーサブルなAIシステムのための基準を公開しています。ローカルLLMとRAGは地域でのデータ処理を確保し、これらのガバナンス要件に準拠します。AnythingLLM、PrivateGPT、Open WebUIはすべて完全にオンプレミスで実行でき、データが日本のサーバーを去らないことを保証します。大規模エンタープライズ展開の場合、METI推奨事項をレビューしてください。',
+          '**東アジア（データ駐在地要件）：** 中国のデータセキュリティ法（2021）、韓国のデータ分類法、台湾のPIPAはすべて、特定のカテゴリのデータの地域内処理を必須としています。ローカルLLMはこれらの要件を満たすための自然な選択肢です。PrivateGPTは多言語エンベッディング（`BAAI/bge-m3`）をネイティブでサポートし、日本語、中国語（簡体字および繁体字）、韓国語の混合コーパスに最適です。',
+          '**アジア太平洋地域のコンプライアンスチェックリスト：** どのプラットフォームを選択する場合でも、確認：（1）すべてのデータはプラットフォームが実行されているサーバー内に留まります（クラウド同期なし）。（2）エンベッディングとベクトル検索はローカルで処理されます（外部APIなし）。（3）監査ログは地域内でのホストされているか、削除できます。OpenAIやClaudeなどのクラウド言語モデルはこれらの要件を満たしていません。ローカルLLMとRAGプラットフォームはすべて対応しています。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'どのRAGプラットフォームが最大のドキュメントセットを処理しますか？',
+            a: 'PrivateGPTはコンシューマーハードウェアで最も遠くスケールします。チューニングされた設定（uvicornワーカー、埋め込みバッチサイズ、Qdrantキャッシュ）で32GBのRAMマシンで〜25,000ページまで快適です。AnythingLLMは10,000ページ周辺で割れ、Open WebUIは8,000ページ周辺です。25,000ページを超える場合、3つどちらも正しいツール ではありません。カスタムOllama + Qdrant または Weaviate スタックに移動します。',
+          },
+          {
+            q: '他のプラットフォーム間でドキュメントと埋め込みを移行できますか？',
+            a: 'ソースドキュメントは自由に移行されます。3つすべてが同じファイルを受け入れます。埋め込みは移行されません。各プラットフォームは（LanceDB、Qdrant、ChromaDB）独自の形式でベクトルを保存し、プラットフォーム固有のメタデータがあるため、切り替えは常に再インデックスを意味します。コンシューマーハードウェアで5,000ページあたり30〜90分を計画してください。',
+          },
+          {
+            q: 'どのプラットフォームが最高の引用精度を持っていますか？',
+            a: 'AnythingLLM。50採点クエリでは、逐語的引用クエリで10中9回ファイル名+ページを正しく引用しました、PrivateGPT 8/10およびOpen WebUI 8/10 対。AnythingLLMはまた、逐語的チャンクテキストをクリック・ツー・ソースパネルにレンダリングする唯一のもので、引用検証を迅速にします。',
+          },
+          {
+            q: 'インデックス作成中、各プラットフォームにはどのくらいのGPUメモリが必要ですか？',
+            a: 'デフォルトエンベッダーで5,047ページのコーパスで：AnythingLLMは6.2GBでピークしました、Open WebUI 5.4GB、PrivateGPT 4.8GB。より大きいエンベッダー（BAAI/bge-m3、1,024次元）に切り替えると約1GBを追加します。VRAMに既にチャットモデルがある場合、プラン、エンベッダーがそれと競争する。12GBカードはLlama 3.3 70Bが常駐の間、インデックス付けできません。',
+          },
+          {
+            q: '独自のエンベッディングモデルを使用できますか？',
+            a: 'AnythingLLMはGUIで8埋め込みバックエンド（Native、Ollama、LM Studio、OpenAI、Azure、Cohere、Voyage、LocalAI）をサポートしています。PrivateGPTはsettings.yaml経由で任意のHuggingFace sentence-transformersモデルをサポートしています。Open WebUIはOllama提供エンベッダー、SentenceTransformers、OpenAI互換エンドポイントをサポートしています。PrivateGPTは最も広い*実際の*選択肢を持っています。AnythingLLMは最も簡単な交換UXを持っています。',
+          },
+          {
+            q: 'どのプラットフォームがマルチ言語ドキュメントを最高に処理しますか？',
+            a: 'PrivateGPTは`BAAI/bge-m3`（1,024次元多言語エンベッダー）と配合場合。bge-m3は100以上の言語をすぐにサポートし、混合言語クエリ上の英語のみエンベッダーを8〜15パーセント ポイント上回ります。AnythingLLMおよびOpen WebUIもOllama経由でbge-m3を使用できますが、PrivateGPTはOllama迂回なしでそれをネイティブでサポートしています。',
+          },
+          {
+            q: 'PDFテーブルと数字をどのように処理しますか？',
+            a: 'すべての3つは、PDF パーサー経由でテキストを抽出しています（AnythingLLMおよびOpen WebUI用pypdfium2、PrivateGPT用pdfplumber スタイル）。テーブルは行列構造を不完全に保持したテキストとして抽出されます。単純なテーブルに適切、複雑なレイアウトに損失のある。数字はメタデータで画像参照として抽出されていますが、検索に使用されていません。図の多いPDFの場合、最初にTabulaまたはCamelotなどのツールで表をCSVに抽出することを検討してください。',
+          },
+          {
+            q: '何個のトークンが典型的なRAGクエリに使用されますか？',
+            a: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.3 8B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
+          },
+          {
+            q: 'これらのプラットフォーム以外のRAGの選択肢はありますか？',
+            a: 'はい。さらに高いスケール用（50,000ページ超）：カスタムOllama + Qdrant / Weaviate + BM25ハイブリッド検索 + 専任の再ランカーモデル。より簡単なセットアップ：Docling + Qdrant CLI（スタンドアロン、VectorDB不要）。Llamaindex またはLangChain を直接使用してカスタムRAGパイプラインを構築します（開発者向けの柔軟性）。Ollama + SimpleRAG（軽量、最小の依存関係）。このテストは3つの自己ホスト型パッケージ化ツールに焦点を当てました。カスタムスタックはより高いスケールと専用チューニングが必要な場合に意味があります。',
+          },
+          {
+            q: 'これらのプラットフォームは監査ログをサポートしていますか？',
+            a: 'AnythingLLMはワークスペースのメタデータ（作成時刻、最終変更日時）をローカルに記録しますが、詳細な監査ログは備えていません。PrivateGPTは FastAPI サービスログを有効にできます（標準出力）。Open WebUIはユーザーのログインおよび文書アクセスを記録しますが、詳細な監査トレイル機能は最小限です。高監査要件（METI、GDPR）の場合、各ログを記録し、すべてのディスク上のステップを検証してください。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連読書',
+        items: [
+          '[ローカルLLMでObsidianを使用する方法 - 5つのステップ](/ja/power-local-llm/local-llm-with-obsidian-2026) — 知識管理向けのローカルRAGの実際の例。',
+          '[Ollamaのインストール方法：ローカルオープンソースLLM実行](/ja/local-llms/how-to-install-ollama) — Open WebUI、AnythingLLM、PrivateGPTすべてで使用するLLMランタイムのセットアップガイド。',
+          '[LM StudioでローカルLLMをファインチューン：完全ガイド](/ja/local-llms/fine-tuning-local-llms-lm-studio) — AnythingLLMやPrivateGPTで使用する小さいモデルを適応させる方法。',
+          '[LocalコンテキストウィンドウおよびLLM トークンの説明](/ja/power-local-llm/local-llm-context-windows-explained) — なぜコンテキストサイズが RAG精度（特にマルチホップクエリ）に影響するのか。',
+          '[MacBook Airで実行する5,000ページのローカルRAG：M5性能ベンチマーク](/ja/power-local-llm/local-rag-performance-macbook-m-series) — AppleシリコンでのAnythingLLM、PrivateGPT、Open WebUIの詳細評価。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
+      description: 'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年5月の検証結果。',
+      image: 'https://www.promptquorum.com/api/og/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      inLanguage: 'ja',
+      url: '/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+      about: [
+        { '@type': 'Thing', name: 'AnythingLLM' },
+        { '@type': 'Thing', name: 'PrivateGPT' },
+        { '@type': 'Thing', name: 'Open WebUI' },
+        { '@type': 'Thing', name: 'RAG（検索拡張生成）' },
+        { '@type': 'Thing', name: 'ローカルLLM' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'LanceDB' },
+        { '@type': 'SoftwareApplication', name: 'Qdrant' },
+        { '@type': 'SoftwareApplication', name: 'ChromaDB' },
+        { '@type': 'SoftwareApplication', name: 'Llama 3.3' },
+      ],
+      educationalLevel: 'Advanced',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'どのRAGプラットフォームが最大のドキュメントセットを処理しますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PrivateGPTはコンシューマーハードウェアで最も遠くスケールします。チューニングされた設定（uvicornワーカー、埋め込みバッチサイズ、Qdrantキャッシュ）で32GBのRAMマシンで〜25,000ページまで快適です。AnythingLLMは10,000ページ周辺で割れ、Open WebUIは8,000ページ周辺です。25,000ページを超える場合、3つどちらも正しいツール ではありません。カスタムOllama + Qdrant または Weaviate スタックに移動します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '他のプラットフォーム間でドキュメントと埋め込みを移行できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ソースドキュメントは自由に移行されます。3つすべてが同じファイルを受け入れます。埋め込みは移行されません。各プラットフォームは（LanceDB、Qdrant、ChromaDB）独自の形式でベクトルを保存し、プラットフォーム固有のメタデータがあるため、切り替えは常に再インデックスを意味します。コンシューマーハードウェアで5,000ページあたり30〜90分を計画してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'どのプラットフォームが最高の引用精度を持っていますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AnythingLLM。50採点クエリでは、逐語的引用クエリで10中9回ファイル名+ページを正しく引用しました、PrivateGPT 8/10およびOpen WebUI 8/10 対。AnythingLLMはまた、逐語的チャンクテキストをクリック・ツー・ソースパネルにレンダリングする唯一のもので、引用検証を迅速にします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'インデックス作成中、各プラットフォームにはどのくらいのGPUメモリが必要ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'デフォルトエンベッダーで5,047ページのコーパスで：AnythingLLMは6.2GBでピークしました、Open WebUI 5.4GB、PrivateGPT 4.8GB。より大きいエンベッダー（BAAI/bge-m3、1,024次元）に切り替えると約1GBを追加します。VRAMに既にチャットモデルがある場合、プラン、エンベッダーがそれと競争する。12GBカードはLlama 3.3 70Bが常駐の間、インデックス付けできません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '独自のエンベッディングモデルを使用できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AnythingLLMはGUIで8埋め込みバックエンド（Native、Ollama、LM Studio、OpenAI、Azure、Cohere、Voyage、LocalAI）をサポートしています。PrivateGPTはsettings.yaml経由で任意のHuggingFace sentence-transformersモデルをサポートしています。Open WebUIはOllama提供エンベッダー、SentenceTransformers、OpenAI互換エンドポイントをサポートしています。PrivateGPTは最も広い*実際の*選択肢を持っています。AnythingLLMは最も簡単な交換UXを持っています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'どのプラットフォームがマルチ言語ドキュメントを最高に処理しますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PrivateGPTは`BAAI/bge-m3`（1,024次元多言語エンベッダー）と配合場合。bge-m3は100以上の言語をすぐにサポートし、混合言語クエリ上の英語のみエンベッダーを8〜15パーセント ポイント上回ります。AnythingLLMおよびOpen WebUIもOllama経由でbge-m3を使用できますが、PrivateGPTはOllama迂回なしでそれをネイティブでサポートしています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'PDFテーブルと数字をどのように処理しますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'すべての3つは、PDF パーサー経由でテキストを抽出しています（AnythingLLMおよびOpen WebUI用pypdfium2、PrivateGPT用pdfplumber スタイル）。テーブルは行列構造を不完全に保持したテキストとして抽出されます。単純なテーブルに適切、複雑なレイアウトに損失のある。数字はメタデータで画像参照として抽出されていますが、検索に使用されていません。図の多いPDFの場合、最初にTabulaまたはCamelotなどのツールで表をCSVに抽出することを検討してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '何個のトークンが典型的なRAGクエリに使用されますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.3 8B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'これらのプラットフォーム以外のRAGの選択肢はありますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい。さらに高いスケール用（50,000ページ超）：カスタムOllama + Qdrant / Weaviate + BM25ハイブリッド検索 + 専任の再ランカーモデル。より簡単なセットアップ：Docling + Qdrant CLI（スタンドアロン、VectorDB不要）。Llamaindex またはLangChain を直接使用してカスタムRAGパイプラインを構築します（開発者向けの柔軟性）。Ollama + SimpleRAG（軽量、最小の依存関係）。このテストは3つの自己ホスト型パッケージ化ツールに焦点を当てました。カスタムスタックはより高いスケールと専用チューニングが必要な場合に意味があります。',
+            },
+          },
+        ],
+        inLanguage: 'ja',
+      },
+    },
+  },
 }
