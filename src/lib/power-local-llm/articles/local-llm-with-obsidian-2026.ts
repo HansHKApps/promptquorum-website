@@ -1794,4 +1794,451 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Obsidian + 本地大模型：5 个插件打造您的第二大脑（2026）',
+    seoTitle: 'Obsidian + 本地大模型：2026 年 5 个插件指南',
+    intro:
+      '2026 年，五个 Obsidian 插件配合本地 Ollama 后端，能将您的库转变为真正可用的第二大脑：Smart Connections、Copilot for Obsidian、Text Generator、Local GPT 和 BMO Chatbot。每个插件负责不同的功能层——语义搜索、行内聊天、模板生成、隐私优先对话、轻量级上下文感知聊天。大多数用户的推荐组合是 Smart Connections + Copilot for Obsidian：前者处理库范围内的语义链接，后者处理聊天界面。本指南从库搜索质量、生成速度、提示自定义和移动同步行为五个维度评估这五个插件，并提供 Ollama 的具体配置步骤。',
+    metaDescription:
+      '2026 年用本地 Ollama 测试的五个 Obsidian 插件：Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot。最佳组合、库规模、移动同步。',
+    twitterDescription:
+      '2026 年最佳 Obsidian + 本地大模型组合：Smart Connections（语义库搜索）+ Copilot for Obsidian（聊天）。用 Ollama 测试的全部 5 个插件。移动同步注意事项。',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Qwen3 1.7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4（16+ GB 统一内存）',
+      '配备 RTX 3060 12GB 或 RTX 4060 8GB 的 PC',
+      '配备 16GB RAM 的 PC（仅 CPU 备选方案）',
+    ],
+    audience:
+      'Obsidian 高级用户、知识工作者、研究人员和作家，运行 1000–20000 条笔记的库，需要 AI 功能但不想将笔记发送到云服务。',
+    readTime: '14 分钟阅读',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Obsidian 本地大模型插件',
+    targetKeywords: [
+      'obsidian local llm',
+      'obsidian ollama plugin',
+      'smart connections obsidian local',
+      'copilot for obsidian local',
+      'obsidian second brain ai',
+      'obsidian plugin private llm',
+    ],
+    leadAnswerBlock:
+      '**对于 2026 年的大多数 Obsidian 用户，安装 Smart Connections + Copilot for Obsidian 并配置两者使用本地 Ollama 后端。** Smart Connections 通过 `nomic-embed-text` 或 `mxbai-embed-large` 处理库范围内的语义链接（相关笔记侧边栏）。Copilot for Obsidian 提供聊天界面，配置指向 Ollama 的 OpenAI 兼容端点 `http://localhost:11434/v1`。这对插件覆盖了"第二大脑"大约 80% 的用例（语义搜索 + 聊天笔记），无需将任何库内容发送到云端。如果您需要模板驱动的内容生成（每日日记提示、会议笔记扩展），可添加 Text Generator 作为第三个插件。Smart Connections 嵌入存储在库内的 `.smart-env/` 文件夹中——通过 Obsidian Sync 跨设备同步，但使用 iCloud 或 Git 作为同步方法时必须按设备重新生成。',
+    quickAnswerTop: {
+      en: {
+        question: '2026 年本地大模型的最佳 Obsidian 插件组合是什么？',
+        answer:
+          'Smart Connections + Copilot for Obsidian 是推荐的组合。Smart Connections 使用本地嵌入（nomic-embed-text 或 mxbai-embed-large via Ollama）处理语义库搜索；Copilot 提供聊天侧边栏，配置到 Ollama 的 OpenAI 兼容端点。两者一起覆盖相关笔记发现和库上下文聊天——大约 80% 的"第二大脑"用例。添加 Text Generator 作为第三个插件实现模板驱动生成。Local GPT 和 BMO Chatbot 是想要更简单纯聊天体验的用户对 Copilot 的轻量级替代品。所有五个插件都适用于任何 Ollama 模型；2026 年推荐的聊天模型适用于 16GB RAM 系统的是 Llama 3.2 3B 或 Phi-4 Mini。',
+        bullets: [
+          'Smart Connections — 语义搜索 + 相关笔记侧边栏。最适合库范围内链接。',
+          'Copilot for Obsidian — 带库上下文的聊天侧边栏。最适合对话查询。',
+          'Text Generator — 使用 Frontmatter 变量的模板驱动生成。最适合重复工作流（每日笔记、会议总结）。',
+          'Local GPT — 隐私优先的当前笔记聊天。Copilot 的轻量级替代品。',
+          'BMO Chatbot — 库上下文最小化聊天。最适合想要单个聊天插件而不要 Copilot 功能表面的用户。',
+          '推荐的 Ollama 模型：Llama 3.2 3B（聊天）、Phi-4 Mini（聊天，较小）、nomic-embed-text 或 mxbai-embed-large（Smart Connections 嵌入）。',
+          '移动同步注意：Smart Connections 嵌入存储在 .smart-env/ 中——通过 Obsidian Sync 同步，使用 iCloud 或 Git 时按设备重新生成。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '关键要点', anchor: '#key-takeaways' },
+      { label: '快速事实', anchor: '#quick-facts' },
+      { label: '您应该安装哪个插件组合？', anchor: '#which-plugins' },
+      { label: '插件对比表', anchor: '#comparison-table' },
+      { label: 'Smart Connections：语义库搜索', anchor: '#smart-connections' },
+      { label: 'Copilot for Obsidian：库上下文聊天', anchor: '#copilot' },
+      { label: 'Text Generator：模板驱动生成', anchor: '#text-generator' },
+      { label: 'Local GPT：隐私优先聊天', anchor: '#local-gpt' },
+      { label: 'BMO Chatbot：轻量级聊天', anchor: '#bmo-chatbot' },
+      { label: '推荐组合：Smart Connections + Copilot', anchor: '#recommended-combo' },
+      { label: '示例工作流：每日笔记、MOC、写作辅助', anchor: '#workflows' },
+      { label: '移动同步：Obsidian Sync vs iCloud vs Git', anchor: '#mobile-sync' },
+      { label: '库规模：1K、5K、10K、20K 笔记', anchor: '#vault-scale' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Smart Connections + Copilot for Obsidian 是大多数用户的推荐组合。** Smart Connections 使用本地嵌入处理语义库搜索；Copilot 处理库上下文聊天。两者一起覆盖大约 80% 的"第二大脑"用例，无需云调用。',
+          '**所有五个插件都通过 `http://localhost:11434/v1` 的 OpenAI 兼容端点与 Ollama 配合使用。** 将每个插件的"API 基础 URL"或等效设置配置为指向此地址。Ollama 默认模型名称（例如 `llama3.2:3b`）是您在插件的模型字段中输入的内容。',
+          '**Smart Connections 是唯一在整个库上构建嵌入索引的插件。** 这使得相关笔记搜索在 5000+ 笔记处变得实用。索引存储在库内的 `.smart-env/` 中，与 Obsidian Sync 同步；使用 iCloud 或 Git 时按设备重新生成。',
+          '**Text Generator 是重复工作流的最佳插件。** 每日笔记摘要、会议笔记扩展和 MOC（内容地图）生成通过具有 Frontmatter 变量的模板变成单键操作。',
+          '**对于仅聊天用户，BMO Chatbot 比 Copilot 更轻量。** 它不构建索引——上下文只是当前笔记。如果您只聊论打开的笔记，BMO 足够了。',
+          '**库规模（使用 Smart Connections + nomic-embed-text）：** 1K 笔记索引耗时约 2 分钟，5K 约 10 分钟，10K 约 25 分钟，20K 约 75 分钟（在 Mac M3 Pro 上）。初始运行后重新索引时间较短，因为只有更改的笔记被重新嵌入。',
+          '**2026 年推荐的 Ollama 模型：** 聊天——Llama 3.2 3B（默认）或 Phi-4 Mini（更小）；嵌入——nomic-embed-text（768 维，快速）或 mxbai-embed-large（1024 维，更精确）。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速事实',
+        items: [
+          '**涵盖的插件：** Smart Connections、Copilot for Obsidian、Text Generator、Local GPT、BMO Chatbot。',
+          '**大模型后端：** Ollama（推荐）或 LM Studio——任何在本地 URL 上公开 OpenAI 兼容端点的东西。',
+          '**默认 Ollama 端点：** `http://localhost:11434/v1`（聊天）或 `http://localhost:11434/api/embeddings`（嵌入）。',
+          '**推荐的聊天模型：** Llama 3.2 3B、Phi-4 Mini、Gemma 3 4B（16GB RAM 系统）；Qwen3 1.7B（8GB RAM）。',
+          '**推荐的嵌入模型：** nomic-embed-text（768 维，快速）、mxbai-embed-large（1024 维，更精确）。',
+          '**库大小目标：** 所有五个插件在 5000+ 笔记处保持响应；Smart Connections 重新索引是 20K 笔记以上的瓶颈。',
+          '**移动兼容性：** 如果 Ollama 在 LAN 上可达，聊天插件在 Obsidian Mobile 上工作；Smart Connections 嵌入生成仅在桌面上运行。',
+        ],
+      },
+      whichPlugins: {
+        id: 'which-plugins',
+        title: '您应该安装哪个插件组合？',
+        content:
+          '**对于 2026 年的大多数 Obsidian 用户：安装 Smart Connections（语义库搜索）和 Copilot for Obsidian（聊天侧边栏）——两者一起覆盖大约 80% 的"第二大脑"用例。** 如果您想要模板驱动生成，添加 Text Generator。除非您特别偏好它们的界面，否则跳过其他的。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '安装 Smart Connections + Copilot for Obsidian，将两者配置为在 localhost:11434 处使用 Ollama，您就拥有一个私有第二大脑堆栈，覆盖库范围内的语义搜索和对话查询。',
+          },
+          {
+            type: 'plain-terms',
+            text: '将 Obsidian + AI 看作两项工作：查找相关笔记（"我库中哪些其他笔记触及这个想法？"）和聊论笔记（"我上个季度写了什么关于这个的？"）。Smart Connections 做第一项；Copilot 做第二项。两者都通过 Ollama 使用本地大模型，因此没有任何东西离开您的计算机。如果您执行可重复的任务（例如将每个会议笔记变成摘要），添加 Text Generator。除非您有特定的理由，否则跳过 Local GPT 和 BMO Chatbot。',
+          },
+        ],
+        decisionBlock: {
+          title: '决策：选择哪个 Obsidian 插件？',
+          localIf: [
+            '您想要库范围内的语义搜索（"向我显示相关笔记"）→ Smart Connections',
+            '您想要带笔记上下文的聊天侧边栏 → Copilot for Obsidian',
+            '您想要模板驱动的生成（每日笔记、会议摘要）→ Text Generator',
+            '您只聊论当前笔记（无库搜索）→ BMO Chatbot（比 Copilot 更轻量）',
+            '您想要严格的隐私保障 + 最少功能的聊天 → Local GPT',
+          ],
+          cloudIf: [
+            '您需要每次聊天响应都有 GPT-4o 质量 → 云等效物（本地堆栈约 70% 有能力）',
+            '您的库在阻止本地网络调用的托管云服务上 → 云插件',
+            '您想要 Obsidian Mobile 应用内的原生 iOS AI 功能而无需 LAN 访问 → 2026 年尚不可行（移动端无法在没有 Tailscale 等帮助下到达本地大模型）',
+          ],
+          quick: [
+            '推荐组合：Smart Connections + Copilot for Obsidian',
+            '模板添加：Text Generator',
+            '轻量级替代方案：BMO Chatbot（仅聊天）',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: '逐个安装 Smart Connections 和 Copilot for Obsidian。Smart Connections 需要在首次安装时构建嵌入索引（2–75 分钟，取决于库大小）。让它完成，然后再添加 Copilot，以避免在初始索引期间 CPU 竞争。两者都运行后，RAM 使用很小（约 200–400 MB）——Ollama 是重型进程，不是插件。',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '插件对比表',
+        content:
+          '**五个插件在四个对大多数用户来说重要的轴上有所不同：库搜索深度、生成灵活性、移动兼容性和功能表面。** Smart Connections 和 Copilot 不可互换——它们解决不同的问题并相互补充。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Smart Connections 是唯一用嵌入搜索整个库的插件；其他四个是在当前笔记或选定文本上运行的聊天或生成工具。',
+          },
+          {
+            type: 'plain-terms',
+            text: '这些插件中的两个（Smart Connections、Copilot）处理库范围内的上下文。其他三个（Text Generator、Local GPT、BMO Chatbot）在当前笔记或特定选择上工作。安装多个的最常见原因是 Smart Connections 没有自己的聊天 UI——您需要 Copilot 或其中一个更轻量级的聊天插件来实际与您的库交谈。',
+          },
+        ],
+        columns: ['插件', '库搜索', '生成', '移动同步', '最适合'],
+        rows: [
+          { '插件': 'Smart Connections', '库搜索': '是（嵌入索引）', '生成': '否（仅搜索）', '移动同步': '索引与 Obsidian Sync 同步；使用 iCloud / Git 时按设备重新生成', '最适合': '跨笔记的语义链接' },
+          { '插件': 'Copilot for Obsidian', '库搜索': '是（带库 QA 模式）', '生成': '是（聊天 + 行内）', '移动同步': '插件同步；Ollama 必须在 LAN 上可达', '最适合': '行内聊天 + 写作辅助' },
+          { '插件': 'Text Generator', '库搜索': '否', '生成': '是（模板驱动）', '移动同步': '模板同步；Ollama 必须在 LAN 上可达', '最适合': '可重复的模板生成' },
+          { '插件': 'Local GPT', '库搜索': '否', '生成': '是（聊天）', '移动同步': '插件同步；Ollama 必须在 LAN 上可达', '最适合': '当前笔记的隐私优先聊天' },
+          { '插件': 'BMO Chatbot', '库搜索': '否', '生成': '是（聊天）', '移动同步': '插件同步；Ollama 必须在 LAN 上可达', '最适合': '当前笔记的轻量级聊天' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于移动使用，约束不是插件——而是 Obsidian Mobile 是否可以到达 Ollama。解决方案：(1) 在家庭服务器上运行 Ollama 并将其暴露在 LAN 上的静态 IP，然后在插件中输入该 IP 而不是 localhost，(2) 使用 Tailscale 或另一个网格 VPN 从任何地方到达家庭 Ollama，(3) 接受 AI 功能仅在手机位于家庭 Wi-Fi 时工作。',
+          },
+        ],
+      },
+      smartConnections: {
+        id: 'smart-connections',
+        title: 'Smart Connections：语义库搜索',
+        content:
+          '**Smart Connections 是 2026 年唯一在整个库上构建嵌入索引的 Obsidian 插件。** 这使得"向我显示相关笔记"在 5000+ 笔记处变得实用，是插件生态系统中最大的"第二大脑"启用器。',
+        items: [
+          '**它的作用：** 为每条笔记（和可配置的部分）生成向量嵌入，并为活动笔记显示语义相关笔记的"Smart Connections"侧边栏。',
+          '**安装：** 设置 → 社区插件 → 浏览 → "Smart Connections" → 安装 + 启用。作者：Brian Petro。',
+          '**为 Ollama 配置：** 设置 → Smart Connections → 嵌入模型 → 选择"Local（Ollama）" → 输入 `http://localhost:11434/api/embeddings` → 模型名称 `nomic-embed-text`（或 `mxbai-embed-large`）。',
+          '**首次索引：** 插件嵌入每条笔记。Mac M3 Pro 使用 nomic-embed-text 的时间：1K 笔记约 2 分钟，5K 笔记约 10 分钟，10K 笔记约 25 分钟，20K 笔记约 75 分钟。编辑后重新索引是增量的（仅更改的笔记）。',
+          '**存储：** 索引存储在库内的 `.smart-env/` 中。与 Obsidian Sync 平稳同步；使用 iCloud / Git 时您必须按设备重新生成，因为索引是平台特定的二进制文件。',
+          '**最佳嵌入模型 2026：** `nomic-embed-text`（137M 参数，768 维，快速）适合大多数用户。`mxbai-embed-large`（335M 参数，1024 维）在技术内容上更准确，但索引时间约为两倍。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '首次索引完成后，保持 Smart Connections 在后台启用。后续编辑会触发增量重新嵌入——通常每保存笔记不到一秒钟。您也可以在大量编辑会话期间暂停索引，以避免与 Ollama 本身的 CPU 竞争。',
+          },
+        ],
+      },
+      copilot: {
+        id: 'copilot',
+        title: 'Copilot for Obsidian：库上下文聊天',
+        content:
+          '**Copilot for Obsidian 提供 Smart Connections 缺少的聊天侧边栏。** 为其配置 Ollama，您将获得一个私人聊天助手，可以使用您的库作为上下文来回答问题、生成行内内容并在选择上运行自定义提示。',
+        items: [
+          '**它的作用：** 聊天侧边栏、库 QA 模式（与检索笔记聊天）、行内聊天、选择上的自定义提示、命令面板命令。',
+          '**安装：** 设置 → 社区插件 → 浏览 → Logan Yang 的"Copilot" → 安装 + 启用。',
+          '**为 Ollama 配置：** 设置 → Copilot → API 设置 → "Custom OpenAI"或"Ollama"提供商 → API 基础 URL `http://localhost:11434/v1` → 模型 `llama3.2:3b`（或任何 Ollama 模型）。',
+          '**库 QA 模式：** Copilot 使用其自己的嵌入管道（独立于 Smart Connections）检索最相关的笔记，然后将检索的块发送到聊天模型。在 Copilot 设置中配置嵌入——指向 `http://localhost:11434/api/embeddings` 并选择 `nomic-embed-text`。',
+          '**行内命令：** 在笔记中选择文本 → Cmd/Ctrl+P → "Copilot: …" ——应用重写、摘要或自定义提示模板，无需打开聊天侧边栏。',
+          '**最适合：** 想要聊天界面和库感知检索的用户。如果您只想聊论当前笔记，BMO Chatbot 更轻量。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Copilot 维护自己的嵌入索引，独立于 Smart Connections。运行两者意味着在同一库上两个索引，大约 2 倍的磁盘空间（每 5K 笔记约 200 MB 的向量数据）。如果磁盘空间很紧张，配置 Copilot 使用 Smart Connections 索引（高级——需要编辑 Copilot 检索配置以读取 Smart Connections 向量存储），或接受这两个插件在 2026 年不共享嵌入。',
+          },
+        ],
+      },
+      textGenerator: {
+        id: 'text-generator',
+        title: 'Text Generator：模板驱动生成',
+        content:
+          '**Text Generator 是可重复工作流的最佳插件：每日笔记扩展、会议笔记摘要、MOC 生成、自定义格式输出。** 模板使用 Frontmatter 变量和 Markdown，因此单个模板可以通过任何笔记上的热键触发。',
+        items: [
+          '**它的作用：** 使用您的本地大模型针对当前笔记（或选择）运行自定义提示模板。模板支持 Frontmatter 变量、当前日期插入和选择捕获。',
+          '**安装：** 设置 → 社区插件 → 浏览 → "Text Generator" → 安装 + 启用。作者：nhaouari。',
+          '**为 Ollama 配置：** 设置 → Text Generator → 提供商 → "Ollama"或"Custom" → 端点 `http://localhost:11434/v1` → 模型 `llama3.2:3b`。',
+          '**模板：** 存储为配置文件夹中的 Markdown 文件（例如 `Templates/`）。模板只是一个提示，带有 `{{title}}`、`{{selection}}`、`{{date}}` 占位符。',
+          '**热键工作流：** 将热键分配给特定模板（Cmd/Ctrl+T → "从模板生成" → 选择模板）。一个按键在当前笔记上运行您的模板。',
+          '**最适合：** 您做过数十次的工作流——每日日记提示、每周回顾问题、会议笔记摘要、论文阅读笔记。',
+        ],
+        promptExamples: [
+          {
+            label: 'Text Generator 模板：每日笔记摘要器',
+            text: '---\nname: Daily summary\n---\nSummarise the following daily note in three concise bullet points. Focus on decisions made, blockers identified, and action items for tomorrow.\n\nDaily note ({{date}}):\n{{content}}\n\nSummary:',
+          },
+          {
+            label: 'Text Generator 模板：MOC（内容地图）生成器',
+            text: '---\nname: MOC for tag\n---\nGenerate a Map of Content for all notes tagged with `#{{selection}}`. Group related notes into 3–5 thematic clusters, with a one-sentence description per cluster and a list of the notes inside each cluster.\n\nNotes tagged #{{selection}}:\n{{vault_search_result tag={{selection}}}}\n\nMOC:',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '将 Text Generator 模板与 Obsidian QuickAdd 结合，构建一个"每日回顾"序列：单个 QuickAdd 命令打开今天的每日笔记，运行每日摘要模板，并插入结果。三个插件（Text Generator + QuickAdd + Templater 用于日期数学）让您构建一个耗时 2 秒来调用和 10 秒来完成的工作流。',
+          },
+        ],
+      },
+      localGpt: {
+        id: 'local-gpt',
+        title: 'Local GPT：隐私优先聊天',
+        content:
+          '**Local GPT 是一个围绕笔记内容不应离开机器的原则构建的聊天插件。** 从功能上讲，它比 Copilot for Obsidian 更简单——没有库 QA 模式，没有模板库——但它在隐私立场上最明确。',
+        items: [
+          '**它的作用：** 使用本地大模型与当前笔记（或选定文本）聊天。插件中不存在云选项——仅本地提供商。',
+          '**安装：** 设置 → 社区插件 → 浏览 → "Local GPT" → 安装 + 启用。作者：pfrankov（在列表中验证——多个插件有相似名称）。',
+          '**为 Ollama 配置：** 设置 → Local GPT → 提供商 → "Ollama" → URL `http://localhost:11434` → 模型 `llama3.2:3b`。',
+          '**聊天范围：** 仅活动笔记或选定文本。没有嵌入索引——上下文只是您明确发送的内容。',
+          '**最适合：** 想要在当前笔记上聊天、偏好尽可能小的功能表面、想要无法意外调用云服务的插件的用户。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '如果您信任 Copilot for Obsidian 保持本地（它可以配置为云或本地），使用 Copilot。如果您想要插件的代码本身使云调用不可能，使用 Local GPT——其设计约束是"无云提供商，永不"。这对医疗保健、法律和新闻工作流是有意义的区分，其中任何意外云泄漏的机会都是个问题。',
+          },
+        ],
+      },
+      bmoChatbot: {
+        id: 'bmo-chatbot',
+        title: 'BMO Chatbot：轻量级聊天',
+        content:
+          '**BMO Chatbot 是极简的聊天插件：一个侧边栏、一个模型选择器和一个端点配置字段。** 没有库搜索，没有模板，没有行内命令。如果您只聊论活动笔记，BMO 是最轻量的选项。',
+        items: [
+          '**它的作用：** 聊天侧边栏包括活动笔记作为上下文。',
+          '**安装：** 设置 → 社区插件 → 浏览 → "BMO Chatbot" → 安装 + 启用。作者：longy2k。',
+          '**为 Ollama 配置：** 设置 → BMO Chatbot → API → URL `http://localhost:11434/v1` → 模型 `llama3.2:3b`。',
+          '**上下文处理：** 活动笔记自动包含在聊天上下文中。切换笔记会切换上下文。',
+          '**最适合：** 想要单个聊天插件、最小设置、无嵌入索引和适合狭窄 Obsidian 侧边栏的 UI 的用户。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'BMO Chatbot 是"我只想聊论我的当前笔记"的正确插件。如果您发现自己想要"在整个库中搜索"或"在每个会议笔记上运行此提示模板"，您已经超出了 BMO——切换到 Copilot for Obsidian（库 QA）或 Text Generator（模板）。',
+          },
+        ],
+      },
+      recommendedCombo: {
+        id: 'recommended-combo',
+        title: '推荐组合：Smart Connections + Copilot',
+        content:
+          '**安装 Smart Connections + Copilot for Obsidian，两者都指向 Ollama。** 这个组合处理 Obsidian 用户想要的两个不同的 AI 工作——语义库搜索和库上下文聊天——并覆盖大约 80% 的"第二大脑"用例，无需将笔记发送到云端。',
+        numberedItems: [
+          '**在您的计算机上安装 Ollama**：`brew install ollama`（macOS）或从 ollama.com 下载（Windows / Linux）。拉取聊天模型：`ollama pull llama3.2:3b`。拉取嵌入模型：`ollama pull nomic-embed-text`。',
+          '**启动 Ollama：** 它通常在安装后作为后台服务启动。验证：`curl http://localhost:11434/api/tags` 返回带有您安装的模型的 JSON。',
+          '**在 Obsidian 中安装 Smart Connections** → 将嵌入配置为使用 Ollama，位于 `http://localhost:11434/api/embeddings`，模型为 `nomic-embed-text`。让它索引（2–75 分钟，取决于库大小）。',
+          '**安装 Copilot for Obsidian** → 将提供商配置为"Ollama"或"Custom OpenAI" → API 基础 URL `http://localhost:11434/v1` → 聊天模型 `llama3.2:3b` → 嵌入模型 `nomic-embed-text`（用于库 QA）。',
+          '**测试：** 打开笔记 → 检查 Smart Connections 侧边栏的相关笔记 → 打开 Copilot 聊天 → 提出需要库知识的问题（"总结我写过的关于[主题]的内容"）→ 验证响应引用您的实际笔记。',
+          '**可选第三个插件：** 如果您有可重复的工作流（每日笔记摘要、会议扩展、MOC 生成），添加 Text Generator。使用相同的 Ollama 端点配置。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '一个常见的错误是在 Copilot 中配置一个模型，在 Smart Connections 中配置另一个——然后想知道为什么响应感觉不一致。在两者中使用相同的聊天模型（大多数用户使用 Llama 3.2 3B；8GB RAM 系统使用 Phi-4 Mini）。唯一使用不同模型的地方是嵌入模型——那总是从聊天模型分离的单独模型。',
+          },
+        ],
+      },
+      workflows: {
+        id: 'workflows',
+        title: '示例工作流：每日笔记、MOC、写作辅助',
+        content:
+          '**三个具体工作流，演示组合的实际应用。** 每个都建立在 Smart Connections（用于库上下文）和 Copilot（用于聊天）的基础上，添加了 Text Generator 用于模板工作。',
+        items: [
+          '**每日笔记摘要：** 在您的每日笔记中，全选 → Copilot 行内命令 → "用三个要点摘要这一天，重点关注做出的决策、识别的阻碍和明天的行动项"。输出替换或附加到选择下方。将提示保存为 Text Generator 模板，使其成为一键操作。',
+          '**MOC（内容地图）生成：** 打开标签页或主题笔记 → Copilot → "为此主题生成内容地图，将我拥有的相关笔记分组为 3–5 个主题集群。使用 Smart Connections 侧边栏识别相关笔记。" → 查看和编辑。Smart Connections 提供发现层；Copilot 综合结构。',
+          '**上下文写作辅助：** 起草笔记时，打开 Copilot 聊天 → 问"鉴于我写过的关于[主题]的笔记，我遗漏了什么观点？" Copilot 通过库 QA 检索相关笔记并提议间隙。适用于打破单一观点草稿。',
+          '**每周回顾：** Text Generator 模板针对过去 7 个每日笔记运行 → "将周摘要为每个类别 3 个要点：进度、阻碍、主题。" 绑定到热键以获得一键回顾。',
+          '**论文 / 书籍阅读笔记：** 打开源笔记 → Copilot 行内命令 → "从此笔记生成三个 Anki 式问答对用于间隔重复。" 输出可以通过管道传送到间隔重复插件。',
+          '**链接休眠笔记：** Smart Connections 侧边栏显示可能数月未触碰的相关笔记——促使您重新访问并将旧材料连接到当前工作。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '最被低估的工作流是每日 Smart Connections 回顾。每天早上，打开每日笔记 → 检查 Smart Connections 侧边栏的来自档案的意外相关笔记。插件浮现接触相同主题的遗忘笔记，这正是知识工作者从第二大脑期望的"思考伙伴"效应。',
+          },
+        ],
+      },
+      mobileSync: {
+        id: 'mobile-sync',
+        title: '移动同步：Obsidian Sync vs iCloud vs Git',
+        content:
+          '**Obsidian Mobile 上的插件兼容性取决于两个因素：您的库如何同步，以及您的手机是否可以到达本地 Ollama 服务器。** Smart Connections 嵌入是最同步敏感的组件。',
+        items: [
+          '**Obsidian Sync（付费）：** 最干净的路径。`.smart-env/` 文件夹跨设备端到端加密同步，所以 Smart Connections 不需要按设备重新索引。插件设置也同步。移动聊天插件仍需要 Ollama LAN 访问（见下文）。',
+          '**iCloud Drive：** 库同步，但 `.smart-env/` 是平台特定的二进制文件，可能在 iOS / macOS / Windows / Android 上损坏或无法正确同步。实用解决方案：按设备重新索引 Smart Connections，或将 `.smart-env/` 从同步中排除并接受移动设备没有语义侧边栏。',
+          '**Git（iOS 上通过 Working Copy，Android 上通过 Termux）：** 纯文本库平稳同步；`.smart-env/` 应添加到 `.gitignore`，因为二进制索引会膨胀存储库并导致合并冲突。按设备重新索引。',
+          '**从移动设备的 Ollama LAN 访问：** 默认情况下，Ollama 仅侦听 `localhost:11434`——无法从您的手机访问。要在 Obsidian Mobile 上使用 AI 插件：将 Ollama 绑定到 LAN，使用 `OLLAMA_HOST=0.0.0.0:11434 ollama serve`，找到台式机的 LAN IP（例如 `192.168.1.20`），在插件中输入该 IP 而不是 localhost。手机必须在家庭 Wi-Fi 上。',
+          '**Tailscale / 网格 VPN：** 让您的手机从任何地方到达家庭 Ollama，而不仅仅是家庭 Wi-Fi。Tailscale 是 2026 年最受欢迎的选项——在台式机和手机上安装，在插件配置中使用 Tailscale IP。',
+          '**Smart Connections 嵌入生成仅在桌面上运行。** 即使 Obsidian Sync 移动索引，索引也必须在某处创建——那总是台式机级计算机。移动使用同步索引进行只读相关笔记查找。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '如果您使用 iCloud 或 Git 进行库同步并希望 Smart Connections 在多个设备上工作，最干净的路径是将一个设备指定为"索引器"（您的主台式机）并接受 Smart Connections 仅在那里完全工作。在其他设备上，您拥有陈旧的索引（iCloud）或无索引（Git，`.smart-env/` 在 `.gitignore` 中）。Obsidian Sync 是唯一正确处理这种情况的选项。',
+          },
+        ],
+      },
+      vaultScale: {
+        id: 'vault-scale',
+        title: '库规模：1K、5K、10K、20K 笔记',
+        content:
+          '**所有五个插件在 5000+ 笔记处保持响应；20K 笔记以上的瓶颈是 Smart Connections 重新索引时间，而不是查询延迟。** 下面的现实数字是在 Mac M3 Pro（16GB 统一内存）上用 `nomic-embed-text` 嵌入和 Llama 3.2 3B 聊天测量的。',
+        columns: ['库大小', 'Smart Connections 初始索引', '每个更改重新索引', '聊天延迟（Copilot）', '笔记'],
+        rows: [
+          { '库大小': '1,000 笔记', 'Smart Connections 初始索引': '约 2 分钟', '每个更改重新索引': '<1 秒', '聊天延迟（Copilot）': '约 1–2 秒首个令牌', '笔记': '在任何现代硬件上舒适。' },
+          { '库大小': '5,000 笔记', 'Smart Connections 初始索引': '约 10 分钟', '每个更改重新索引': '<1 秒', '聊天延迟（Copilot）': '约 1–2 秒首个令牌', '笔记': '大多数知识工作者的最佳点。' },
+          { '库大小': '10,000 笔记', 'Smart Connections 初始索引': '约 25 分钟', '每个更改重新索引': '约 1–2 秒', '聊天延迟（Copilot）': '约 2–3 秒首个令牌（库 QA 检索增加约 500 毫秒）', '笔记': '仍然完全可用；如果注意到放慢，考虑拆分。' },
+          { '库大小': '20,000 笔记', 'Smart Connections 初始索引': '约 75 分钟', '每个更改重新索引': '约 2–4 秒', '聊天延迟（Copilot）': '约 3–5 秒首个令牌', '笔记': '计划夜间初始索引。`.smart-env/` 的磁盘使用量约 800 MB–1.2 GB。' },
+          { '库大小': '50,000+ 笔记', 'Smart Connections 初始索引': '4–8 小时', '每个更改重新索引': '约 5–10 秒', '聊天延迟（Copilot）': '约 5–10 秒首个令牌', '笔记': '实用边缘。考虑子库或升级到 mxbai-embed-large 以获得准确性，如果质量重于速度。' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '库大小对初始索引的影响比日常响应更大。初始索引后，重新嵌入仅发生在更改的笔记上——即使在 20K 笔记上通常也不到一秒。缓慢的首次体验是一次性成本。如果您的库很大，请在夜间运行初始索引。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '**用两个不同的聊天模型配置两个插件。** Smart Connections 不生成，但 Copilot、Text Generator、Local GPT 和 BMO 都做。在每个中使用不同的模型使响应感觉不一致。选择一个聊天模型（大多数用户的默认值是 Llama 3.2 3B）并配置所有聊天插件使用它。',
+          '**将 `.smart-env/` 添加到 Git 同步库而不添加 `.gitignore`。** Smart Connections 索引是二进制且每次编辑都会更改。没有 `.gitignore`，您会获得大量的 Git 历史记录和恒定的合并冲突。添加 `.smart-env/` 到 `.gitignore` 并按设备重新索引。',
+          '**期望移动 Smart Connections 构建自己的索引。** 嵌入生成需要台式机级机器。移动使用同步索引（Obsidian Sync）或没有索引（iCloud / Git）。相应计划。',
+          '**从移动设备指向插件到 `http://localhost:11434/v1`。** 移动无法到达台式机的 localhost。将 Ollama 绑定到 LAN IP（`OLLAMA_HOST=0.0.0.0:11434`）并在插件配置中使用该 IP，或使用 Tailscale 进行非网络访问。',
+          '**针对同一库运行 Smart Connections 和 Copilot 索引。** 两个单独的索引消耗约 2 倍的磁盘和 CPU。截至 2026 年 5 月，这两个插件不共享嵌入。如果磁盘压力重要，使用 Smart Connections 进行检索并配置 Copilot 使用它（高级——需要编辑 Copilot 检索配置以读取 Smart Connections 向量存储）。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          'Smart Connections — [github.com/brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections)（开源 Obsidian 插件）。',
+          'Copilot for Obsidian — [github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)（开源 Obsidian 插件）。',
+          'Text Generator — [github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin)（开源 Obsidian 插件）。',
+          'Ollama — [ollama.com](https://ollama.com) 和 [github.com/ollama/ollama](https://github.com/ollama/ollama)（本地大模型运行时）。',
+          'Obsidian Mobile 同步架构 — [help.obsidian.md](https://help.obsidian.md) 和 Obsidian Sync 文档。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '哪个 Obsidian 插件最适合与 Ollama 配合使用？',
+            a: '对于大多数用户：Smart Connections（语义库搜索）+ Copilot for Obsidian（聊天）。两者都配置为指向 Ollama 的端点（聊天在 `http://localhost:11434/v1`，嵌入在 `http://localhost:11434/api/embeddings`）。Smart Connections 处理相关笔记发现；Copilot 处理库上下文的对话查询。如果您有可重复的模板工作流，添加 Text Generator 作为第三个插件。',
+          },
+          {
+            q: '插件能处理 10000 条笔记的库吗？',
+            a: '可以。Smart Connections 在 Mac M3 Pro 上首次嵌入索引需要约 25 分钟，之后每次更改约 1–2 秒。在 20K 笔记处，计划约 75 分钟的初始索引（在夜间运行）。在 50K+ 笔记处，索引需要 4–8 小时，您应该考虑拆分为子库。',
+          },
+          {
+            q: '这些插件能同步到移动设备吗？',
+            a: '插件本身通过 Obsidian 的插件同步同步。约束条件是：(1) Smart Connections 嵌入索引——与 Obsidian Sync 平稳同步，使用 iCloud 或 Git 时需要按设备重新索引；(2) 聊天插件需要到达 Ollama，这意味着 LAN 访问（在 Ollama 绑定到 `0.0.0.0` 后用台式机的 LAN IP 替换 `localhost`）或 Tailscale 之类的网格 VPN。',
+          },
+          {
+            q: '我可以一起使用多个 AI 插件吗？',
+            a: '可以。Smart Connections + Copilot 是推荐的组合。为模板添加 Text Generator 很常见。添加超过 3 个聊天插件（Copilot + Local GPT + BMO）是多余的——它们都做同样的工作。选择一个聊天插件并坚持使用它。',
+          },
+          {
+            q: '哪个插件最适合在笔记内写作？',
+            a: 'Copilot for Obsidian——它具有行内命令（Cmd/Ctrl+P → Copilot → 重写 / 摘要 / 自定义提示），可在选定文本上运行。Text Generator 对于通过模板的可重复写作任务也很强。对于临时写作辅助（"以更正式的语气重写此段落"），Copilot 更快。对于结构化生成（"使用此模板将每个会议笔记变为摘要"），Text Generator 更好。',
+          },
+          {
+            q: '我如何在整个库中提示？',
+            a: '使用 Copilot for Obsidian 的库 QA 模式。它使用嵌入索引（类似于 Smart Connections）检索查询最相关的笔记，然后将这些块发送到聊天模型。在 Copilot 设置中配置嵌入以指向您的本地 Ollama。Smart Connections 本身没有聊天 UI——它显示相关笔记但不综合跨越它们。',
+          },
+          {
+            q: '我可以用这些做每日日记吗？',
+            a: '可以。两个强大的模式：(1) Smart Connections 侧边栏在打开今天的每日笔记时浮现被遗忘的相关笔记——一个"思考伙伴"效应。(2) Text Generator 模板在日终运行以将每日笔记摘要为 3 个要点（决策、阻碍、行动项）。结合两者使每日日记更具反思性。',
+          },
+          {
+            q: '插件能在 Obsidian 更新中存活吗？',
+            a: '通常能——维护良好的插件（Smart Connections、Copilot、Text Generator）在重大 Obsidian 发布后的几天内更新。维护不足的插件偶尔滞后。如果插件在 Obsidian 更新后损坏，检查插件的 GitHub Issues 页面；修复通常是维护人员发布在 1–2 周内。插件清单声明最小 Obsidian 版本兼容性。',
+          },
+          {
+            q: '哪个拥有最好的社区支持？',
+            a: 'Smart Connections 拥有最大且最活跃的社区（2026 年 Discord 约 5K 成员，定期开发者电话）。Copilot for Obsidian 拥有强大的 GitHub Issues 社区和活跃的维护人员（Logan Yang）。Text Generator 拥有较小但参与度高的社区。Local GPT 和 BMO Chatbot 拥有较小的社区——适合稳定使用，问题解决较慢。',
+          },
+          {
+            q: '我可以在不同的机器上运行 AI 插件吗？',
+            a: '可以。在更强大的家庭服务器（迷你 PC、NAS 或专用工作站）上运行 Ollama，使用 `OLLAMA_HOST=0.0.0.0:11434 ollama serve` 将其绑定到 LAN，然后在每个插件的配置中输入服务器的 LAN IP（例如 `http://192.168.1.20:11434/v1`）。这让低功率笔记本或移动设备可以使用在家庭服务器上运行的完整 70B 模型。与 Tailscale 配对，使其从任何地方工作，而不仅仅是家庭 Wi-Fi。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Logseq 和 Joplin 本地大模型](/power-local-llm/local-llm-with-logseq-and-joplin?lang=zh) — 针对偏好 Logseq 或 Joplin 而不是 Obsidian 的读者的邻近开源替代品。',
+          '[本地大模型个人知识库 2026](/power-local-llm/local-llm-personal-knowledge-base-2026?lang=zh) — Obsidian 流入的更广泛的 PKB 架构；涵盖 RAG 层、标记策略和 10K 项工作流。',
+          '[在 30 分钟内构建 PDF 本地 RAG（Ollama + AnythingLLM）](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh) — 驱动 Smart Connections 之类的语义插件的 RAG 层；关于嵌入选择的有用背景。',
+          '[用本地大模型起草小说和剧本（2026）](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=zh) — 作为长篇写作起草层的 Obsidian。',
+          '[2026 年最佳本地大模型](/local-llms/best-local-llms-2026?lang=zh) — 为这些插件后面的聊天和嵌入模型选择提供广泛的模型权威。',
+          '[本地大模型软件目录 2026](/power-local-llm/local-llm-software-directory-2026?lang=zh) — Ollama、Smart Connections、Copilot 和此堆栈中其他组件的目录列表。',
+        ],
+      },
+    },
+  },
 }
