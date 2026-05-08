@@ -1385,4 +1385,480 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Mobile & Edge LLMs',
+    title: 'スマートフォンで完全オフラインの音声アシスタントを構築する：Whisper + ローカルLLM（クラウドなし）— 2026',
+    seoTitle: 'ローカル音声アシスタント Whisper LLM スマートフォン 2026',
+    intro:
+      '2026年のiPhoneまたはAndroidで完全にオフラインの音声アシスタントを実装するには、3つのコンポーネントが必要です：音声をテキストに変換するWhisper、デバイス上のローカルLLM、および音声合成用のPiperまたはシステムTTS。フラッグシップスマートフォンでの実際の音声からの最初のオーディオまでのレイテンシは0.8～1.5秒です。これは2秒の「使用可能に感じる」しきい値を下回っています。このガイドでは、iPhone（LLM Farm + WhisperKit）、Android（Layla + Whisper.cpp）、およびハイブリッド（スマートフォンSTT +リモートOllama）のパスについて、測定されたレイテンシ、バッテリー、精度の数値を含めて説明します。',
+    metaDescription:
+      '2026年のiPhoneおよびAndroidで完全にオフラインで動作する音声アシスタント。Whisper ローカルSTT + ローカルLLM + Piper TTS。iPhone、Android、ハイブリッド設定；レイテンシ、バッテリー、プライバシー。',
+    twitterDescription:
+      'Siriの代替として動作するオフラインの音声アシスタントを構築：Whisper ローカルSTT + Phi-4 Mini + Piper TTS。フラッグシップスマートフォンで1.5秒以内に音声から最初のオーディオまで。iPhone + Android設定。',
+    current_models_mentioned: [
+      'Whisper Small',
+      'Whisper Medium',
+      'WhisperKit',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Piper TTS',
+    ],
+    current_hardware_mentioned: [
+      'iPhone 17 Pro (A19 Pro)',
+      'iPhone 16 Pro (A18 Pro, 8 GB RAM)',
+      'Pixel 9 Pro (Tensor G4)',
+      'Galaxy S25 Ultra (Snapdragon 8 Elite)',
+      'OnePlus 13 (Snapdragon 8 Elite)',
+    ],
+    audience:
+      'プライバシーを重視するスマートフォンユーザーで、デバイス上で完全に動作するSiri / Google Assistantの代替品を望んでいる人、旅行者、ジャーナリスト、医療従事者、およびオフライン音声ワークフローを構築している開発者を含みます。',
+    readTime: '13分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local voice assistant',
+    targetKeywords: [
+      'ローカル音声アシスタント スマートフォン',
+      'オフライン Whisper iPhone',
+      'Whisper ローカルLLM Android',
+      'Siri代替 オフライン',
+      'Piper TTS モバイル',
+      'WhisperKit iOS',
+      'Layla Android 音声',
+    ],
+    leadAnswerBlock:
+      '**2026年に完全にオフラインで動作する音声アシスタントには3つのコンポーネントが必要です：音声テキスト変換用のWhisper SmallまたはMedium、応答用のローカル3B～4B LLM（Phi-4 MiniまたはGemma 3 4B）、およびオーディオ出力用のPiper TTSまたはシステムTTS。** iPhoneでは、最もシンプルなスタックはWhisperKit（またはWhisper Transcriptionアプリ）+ LLM Farm + iOSシステムTTS —iPhone 16 Proで約0.9～1.4秒の音声から最初のオーディオまでのレイテンシ。Androidでは、Laylはネイティブに類似したスタックをバンドルしているか、Termux + whisper.cpp + Ollama + Piperを使用して組み立てることができます。より良いLLM品質の場合は、ハイブリッドパスを使用します：スマートフォンはWhisperをローカルで実行してプライバシー重要なSTTを実行し、トランスクリプトをホームのMacまたはPC上で実行されているOllama 70Bモデルに送信します。すべての3つの設定は、モデルがダウンロードされたら、インターネットなしで機能します。',
+    quickAnswerTop: {
+      ja: {
+        question: '2026年にスマートフォンで完全にオフラインの音声アシスタントを構築できますか？',
+        answer:
+          'はい。標準的なスタックは、音声テキスト変換用のWhisper、応答用のローカル3B～4B LLM（Phi-4 MiniまたはGemma 3 4B）、およびオーディオ出力用のPiper TTSまたはiOS / AndroidシステムTTSです。iPhone 16 Proでは、音声から最初のオーディオまでのレイテンシは約0.9～1.4秒です。これは「使用可能に感じる」2秒のしきい値を下回っています。フラッグシップAndroidスマートフォン（Pixel 9 Pro、Galaxy S25 Ultra）では、レイテンシは約1.0～1.6秒です。iPhoneパスはWhisperKit + LLM Farmを使用します。Androidパスはlayla（組み込みスタック）またはTermux + whisper.cpp + Ollama + Piperを使用します。ハイブリッドパスはスマートフォンでSTTを保持し、ホームのMacまたはPCで実行されている70Bモデルにトランスクリプトを送信します。',
+        bullets: [
+          'スタック：Whisper（STT）+ 3B～4B ローカルLLM + PiperまたはシステムTTS —すべてデバイス上。',
+          'iPhone：WhisperKit / Whisper Transcription + LLM Farm + iOSシステムボイス。レイテンシ 16 Proで約0.9～1.4秒。',
+          'Android：Layla（バンドルスタック）またはTermux + whisper.cpp + Ollama + Piper。レイテンシ Pixel 9 Proで約1.0～1.6秒。',
+          'ハイブリッド：スマートフォンはローカルでSTTを実行し、トランスクリプトをホームOollama Llama 3.3 70Bに送信します。最高の品質。',
+          'バッテリー（1時間のアクティブな会話）：iPhone 16 Proで約25～35% ; フラッグシップAndroidで約25～40%。',
+          'Whisper Small（~466 MB）はモバイルの標準 — 約12% WER、約150～300 msのSTTレイテンシ。',
+          '2秒以内の音声から最初のオーディオは「使用可能に感じる」しきい値；1秒以内はネイティブに感じます。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '重要なポイント', anchor: '#key-takeaways' },
+      { label: 'クイックファクト', anchor: '#quick-facts' },
+      { label: 'どの音声アシスタントスタックを構築すべきか？', anchor: '#which-stack' },
+      { label: '音声アシスタントスタック比較', anchor: '#stack-comparison' },
+      { label: '3コンポーネントスタック：STT + LLM + TTS', anchor: '#the-stack' },
+      { label: 'iPhone設定：WhisperKit + LLM Farm（5分）', anchor: '#iphone-setup' },
+      { label: 'Android設定：LaylまたはTermuxスタック（5～15分）', anchor: '#android-setup' },
+      { label: 'ハイブリッド設定：スマートフォンSTT +リモートOllama', anchor: '#hybrid-setup' },
+      { label: 'レイテンシバジェット：秒はどこへ行くのか', anchor: '#latency-budget' },
+      { label: '1時間以上の精度とバッテリー消耗', anchor: '#accuracy-battery' },
+      { label: 'ハンズフリー：ショートカット、Tasker、CarPlay、Android Auto', anchor: '#hands-free' },
+      { label: 'プライバシー保証：完全にオフラインvsクラウド支援', anchor: '#privacy' },
+      { label: '一般的な間違い', anchor: '#common-mistakes' },
+      { label: 'ソース', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連情報', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**完全にオフラインのスタックはWhisper（STT）+ 3B～4B ローカルLLM + PiperまたはシステムTTSです。** 3つのコンポーネントはすべて、インストール後にデバイス上でローカルに実行されます。操作中のクラウド呼び出しはありません。',
+          '**iPhone：WhisperKit + LLM Farm + iOSシステムボイスが最も簡単なパスです。** WhisperKitはSTT用にApple Neural Engineを使用します。LLM Farmは応答用にPhi-4 Miniを実行します。iOSシステムTTSはオーディオを処理します。音声から最初のオーディオまで：iPhone 16 Proで約0.9～1.4秒。',
+          '**Android：Laylは完全なスタックをネイティブにバンドルするか、Termux + whisper.cpp + Ollama + Piperで手動で構築します。** Laylはより簡単なパス；Termuxビルドはより柔軟です。音声から最初のオーディオまで：Pixel 9 ProおよびGalaxy S25 Ultraで約1.0～1.6秒。',
+          '**ハイブリッド（スマートフォンSTT +リモートOllama）が最高のLLM品質を提供します。** スマートフォンはWhisperをローカルで実行してプライバシー重要なオーディオを取得し、トランスクリプトをホームのMacまたはPCで実行されているLlama 3.3 70Bに送信します。より良い応答品質；ホームWi-Fiが必要。',
+          '**Whisper Small（~466 MB）はモバイルの最適なポイントです。** 通常の音声で約12% WER、約150～300 msのSTTレイテンシ。Whisper Medium（~1.5 GB）はより正確（~9% WER）ですが、遅い；Whisper Tiny（~75 MB）はより高速ですが、バックグラウンドノイズの上ではエラーが発生しやすい。',
+          '**バッテリー消費は重要です—フラッグシップスマートフォンでのアクティブな会話1時間当たり約25～35%。** 終日使用の場合は、コンセントに接続するか、ハイブリッドパスを使用します（スマートフォンでのみSTTが実行され、消費が約10～15%/時間に削減）。',
+          '**これは機能の幅よりもプライバシーを好むユーザー向けのSiriの本当の代替品です。** 放棄しているもの：Web検索、専有クラウドを使用するスマートホーム統合、システムアクション範囲。獲得しているもの：オフラインで動作、テレメトリなし、アカウントなし。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'クイックファクト',
+        items: [
+          '**STTエンジン：** Whisper.cpp（クロスプラットフォーム）、WhisperKit（iOS、Apple Neural Engine最適化）、Sherpa-ONNX（Android、ONNXランタイム）。',
+          '**LLM：** Phi-4 Mini（3.8B）フラッグシップスマートフォン上；Qwen3 1.7BまたはSmolLM 2 1.7B古いデバイス上。',
+          '**TTS：** Piper TTS（オープンソース、~50 MB/音声）、iOSシステムTTS（AVSpeechSynthesizer）、AndroidシステムTTS。',
+          '**iPhoneアプリ：** WhisperKit、Whisper Transcription（Aiko開発者）、LLM Farm、PocketPal AI。',
+          '**Androidアプリ：** Layla（バンドルスタック）、Termux + whisper.cpp + Ollama、Sherpa-ONNXデモアプリ。',
+          '**音声から最初のオーディオまでのターゲット：** 2秒以下 = 「使用可能に感じる」；1秒以下 = 「ネイティブに感じる」。',
+          '**バッテリー（1時間アクティブ）：** iPhone 16 Pro ~25～35% ; Pixel 9 Pro / Galaxy S25 Ultra ~25～40%。',
+        ],
+      },
+      whichStack: {
+        id: 'which-stack',
+        title: 'どの音声アシスタントスタックを構築すべきか？',
+        content:
+          '**フラッグシップスマートフォン上のほとんどのユーザーの場合：デバイス上のパスが正しい選択です。** それは完全にプライベート、オフラインで動作、および1.5秒以内に使用可能な結果を生成します。特に70Bクラスの品質が必要で、ホームWi-Fi依存性を受け入れる場合にのみ、ハイブリッドパスを使用します。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Whisper（STT）、ローカル3B～4B LLM（Phi-4 MiniまたはGemma 3 4B）、およびPiperまたはシステムTTSをスタックして、完全にオフラインの音声アシスタントを構築します—2026年のフラッグシップスマートフォンで0.9～1.6秒の音声から最初のオーディオまで。',
+          },
+          {
+            type: 'plain-terms',
+            text: '音声アシスタントには3つの仕事があります：音声をテキストに変換する、返信を生成する、および返信を話す。最初のステップ用にWhisperを使用して、2番目のステップ用に小さなローカルLLMを使用して、3番目のステップ用にPiperまたはスマートフォンの組み込み音声を使用して、インターネットなしでスマートフォン上のすべての3つを実行できます。フルループは最近のiPhoneまたはAndroidフラッグシップで約1秒かかります—Siriと会話している感じがするのに十分な速さですが、すべてがデバイス上に留まります。',
+          },
+        ],
+        decisionBlock: {
+          title: '決定：どの音声アシスタントスタック？',
+          localIf: [
+            'あなたは完全なプライバシーとオフライン操作を望んでいます→完全にデバイス上（iPhoneまたはAndroidパス）',
+            'あなたは頻繁に旅行し、飛行機/信号なしエリアで音声が必要です→完全にデバイス上',
+            'あなたはジャーナリスト、医療専門家、弁護士です→ソース/患者/クライアント機密のため、完全にデバイス上',
+            'あなたはオフライン音声ワークフローをプロトタイプしている開発者です→完全にデバイス上',
+          ],
+          cloudIf: [
+            'あなたは70B+モデルの品質（複雑な推論）が必要です→ハイブリッドパス（スマートフォンSTT +リモートホームOllama）',
+            'あなたはリアルタイムWebサーチまたはライブデータが必要です→クラウドアシスタント（2026年にはローカル相当なし）',
+            'あなたは独自のクラウドとのディープ統合が必要です（Google Calendar、iCloud等）→これらのタスク用にSiri / Google Assistantを使用し続けてください',
+          ],
+          quick: [
+            'iPhone最も簡単なパス：WhisperKit + LLM Farm + iOSボイス',
+            'Android最も簡単なパス：Layla（バンドルスタック）',
+            '最高品質：ハイブリッド（スマートフォンSTT +ホームOllama 70B）',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: '最終的にハイブリッドアプローチを望んでいても、完全にデバイス上のパスから始めてください。デバイス上の設定は、移動部分（STT、LLM、TTS）を教え、ホームサーバーの依存性なしで動作します。実行中に、LLM呼び出しをローカルからリモートOllama URLに交換するのは1行の変更です。',
+          },
+        ],
+      },
+      stackComparison: {
+        id: 'stack-comparison',
+        title: '音声アシスタントスタック比較',
+        content:
+          '**2026年の3つの実行可能なスタック、それぞれが異なる優先順位に調整：シンプリシティ（Layla）、Apple-nativeポリッシング（WhisperKit + LLM Farm）、またはLLM品質（ハイブリッド）。** 3つはすべてデバイス上でSTTとTTSを実行します；ハイブリッドは家庭のコンピューターのみLLMステップを移動します。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'iOS上の単純さにはiPhone（WhisperKit + LLM Farm + iOSボイス）を選択し、Android上の単純さにはAndroid（Layla）を、最高のLLM品質にはハイブリッド（スマートフォンSTT +ホームOllama）を選択します。',
+          },
+          {
+            type: 'plain-terms',
+            text: '以下のレイテンシ数値は音声から最初のオーディオまでです—あなたが話すのをやめた時間から、アシスタントが答え始めます。2秒以下は「使用可能に感じます」；1秒以下は「ネイティブに感じます」。バッテリーは、1時間のアクティブな双方向の会話で消耗するパーセンテージです。',
+          },
+        ],
+        columns: ['スタック', 'レイテンシ（音声→最初のオーディオ）', 'バッテリー（1時間アクティブ）', '最適な用途'],
+        rows: [
+          { 'スタック': 'iPhone（WhisperKit + LLM Farm）', 'レイテンシ（音声→最初のオーディオ）': '~0.9～1.4秒（16 Pro / 17 Pro）', 'バッテリー（1時間アクティブ）': '~25～35%', '最適な用途': 'Apple-nativeポリッシングを望むiOSユーザー' },
+          { 'スタック': 'Android（Layla、バンドル）', 'レイテンシ（音声→最初のオーディオ）': '~1.0～1.6秒（Pixel 9 Pro、Galaxy S25 Ultra）', 'バッテリー（1時間アクティブ）': '~25～40%', '最適な用途': 'シングルアプリシンプリシティを望むAndroidユーザー' },
+          { 'スタック': 'Android（Termux + whisper.cpp + Ollama + Piper）', 'レイテンシ（音声→最初のオーディオ）': '~1.2～2.0秒', 'バッテリー（1時間アクティブ）': '~30～40%', '最適な用途': 'フルコントロールを望むパワーユーザー' },
+          { 'スタック': 'ハイブリッド（スマートフォンSTT +ホームOllama 70B）', 'レイテンシ（音声→最初のオーディオ）': '~1.5～2.5秒（Wi-Fi依存）', 'バッテリー（1時間アクティブ）': '~10～15%', '最適な用途': '70Bクラス品質、ホームネットワーク使用' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'レイテンシはLLM「最初のトークン」ステップによって支配されます、WhisperやTTSではありません。レイテンシを削減するには、より小さなLLM（Phi-4 Miniの代わりにQwen3 1.7B）を使用します。LLMステップを~600 msから~250 msに削減します。トレードオフはより短く、詳細度が低い応答です。',
+          },
+        ],
+      },
+      theStack: {
+        id: 'the-stack',
+        title: '3コンポーネントスタック：STT + LLM + TTS',
+        content:
+          '**音声からテキスト、LLM、およびテキストから音声は、個別に交換できる3つの独立したコンポーネントです。** それらのいずれか1つを最適化する（小さいWhisper、より高速なLLM、低いTTSレイテンシ）は、総レイテンシを削減します。',
+        items: [
+          '**STT—Whisper.cpp / WhisperKit / Sherpa-ONNX。** Whisper Small（~466 MB）は標準的なモバイルの選択肢です—通常の音声で約12% WER、5秒の発言に約150～300 msのSTTレイテンシ。Whisper Medium（~1.5 GB）はWERを約9%に減らしますが、レイテンシは2倍。Whisper Tiny（~75 MB）は高速ですが、中程度の背景ノイズ上ではエラーが発生しやすい。WhisperKit（iOS）は、Vanilla Whisper.cppよりもSTTレイテンシが約30～40%低いApple Neural Engineを使用します。',
+          '**LLM—Phi-4 Mini、Gemma 3 4B、Llama 3.2 3B。** Phi-4 Mini（3.8B Q4_K_M、~2.7 GB）は、フラッグシップスマートフォン上の推奨デフォルトです。短いプロンプトのiPhone 16 Proでの最初のトークンまでの時間は約400～800 ms—総レイテンシへの最大の単一の貢献者。古いデバイスまたはRAM制約のあるデバイスの場合、Qwen3 1.7B（~1.1 GB）はより高速（~200～400 ms TTFT）ですが、より短く、より単純な応答を犠牲にします。',
+          '**TTS—Piper TTSまたはシステムTTS。** Piper（Rhasspy Project、オープンソース）は30以上の言語をサポートし、~50 MB/ボイス、~100～200 msの最初のオーディオレイテンシ、およびiOS、Android、Linux、macOS、Windowsで実行されます。システムTTS（iOSのAVSpeechSynthesizer、AndroidのTextToSpeech）はより低いレイテンシ（~50～100 ms）を備えていますが、古いOSバージョンではより多くのロボット音声です。iOS 18+およびAndroid 14+のシステムボイスは、以前のOSバージョンよりも顕著に優れています。',
+          '**音声活動検出（VAD）。** ほとんどのアプリはSilero VADまたはwebrtcvadを使用して、話すのをやめたときを検出します。200～500 msのサイレンスウィンドウは、典型的な発話終了のしきい値です。短すぎる→文の途中であなたをカットします。長すぎる→レイテンシを追加します。300 msは合理的なデフォルトです。',
+          '**フルパイプライン：** マイク・キャプチャ→VADは音声終了を検出→Whisperトランスクリプト→LLM生成返信→TTSスピーク。LLMトークンをストリーミングして、到着時にTTSへ—これが「最初のオーディオ」をフラッグシップスマートフォンで1秒以下にします—代替案（完全なLLM応答を待ってから話す）は認識レイテンシを2倍にします。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'あなたのスタックが遅く感じる場合、各ステップをプロフィール化します：（マイク→STT完了）、（STT完了→LLM最初のトークン）、（LLM最初のトークン→TTS最初のオーディオ）の期間をログします。1つのステップが通常支配します。2026年のフラッグシップスマートフォンでは、それはほぼ常にLLM最初のトークンまでの時間（~400～800 ms）です。より小さなLLMに切り替えて、認識レイテンシを速くします。',
+          },
+        ],
+      },
+      iphoneSetup: {
+        id: 'iphone-setup',
+        title: 'iPhone設定：WhisperKit + LLM Farm（5分）',
+        content:
+          '**2026年で最も単純な完全にオフラインのiPhone音声アシスタント：STT用のWhisperKit（またはWhisper Transcription）、LLM用のLLM Farm、およびボイス用のiOSシステムTTS。** 総設定時間は5～10分、モデルダウンロード時間を追加します。',
+        numberedItems: [
+          'App Storeからwhisperkit-baseアプリをインストール（例：「Whisper Transcription」by Aiko developer、無料）—Apple Neural Engineを使用して、デバイス上でのトランスクリプションを提供。または、GitHubからwhisperkit参照アプリを構築（Argmax / WhisperKit）。',
+          'WhisperKit / Whisper Transcriptionで：「Small」モデル（~466 MB）をダウンロード。Tinyはより速いですが不正確です；Mediumはより正確ですが遅い。',
+          'App StoreからLLM Farmをインストール（無料）。LLM Farmで：モデル→「URLからモデルを追加」をタップ→Hugging Face URLを貼り付けて、Phi-4 Mini Q4_K_M（または、利用可能な場合はアプリ内ライブラリを使用）。モデルは~2.7 GB。',
+          'iOSショートカット経由で接続：これらのアクションを備えたショートカットを作成—（1）オーディオを記録（または共有シートからオーディオ入力を受け入れ）、（2）Whisper Transcriptionで転写、（3）LLM Farm（露出されている場合）または私立LLM（~£10、ショートカットアクション有）でテキスト生成、（4）iOSシステムボイスを使用してテキストを話す。',
+          'ロック画面ウィジェット、アクションボタン（iPhone 15 Pro以上）、または「Hey Siri、run [ショートカット名]」にショートカットを割り当てます。アクションボタンは、最も低いレイテンシのハンズフリートリガーを提供します。',
+          'テスト：アクションボタンを保持→話す→リリース。STT実行（~200 ms）→LLM生成（~600 ms最初のトークン、TTSにストリーム）→最初のオーディオ約0.9～1.4秒で再生。ショートカット内のVADサイレンスしきい値を調整します。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'LLM Farmは現在、ショートカットアクションを公開していません（2026年5月現在）。iOSショートカットパイプラインを使用するには、「テキスト生成」アクションを公開するPrivate LLM（~£10ワンタイム）が必要です。ショートカットアプローチは、iPhoneパスを「5分」にしているもの—ショートカットなしでは、アプリを手動で連鎖させる必要があります。',
+          },
+        ],
+      },
+      androidSetup: {
+        id: 'android-setup',
+        title: 'Android設定：LaylまたはTermuxスタック（5～15分）',
+        content:
+          '**2つのAndroidパス：Layla（5分バンドルスタックアプローチ）またはTermux + whisper.cpp + Ollama + Piper（15分マニュアルアプローチより多くのコントロール）。** 両方は、構成後に完全にオフラインで実行されます。',
+        items: [
+          '**パスA—Layla（5分）：** Play Storeからlaylをインストール、モデル（Phi-4 MiniまたはGemma 3 4B）をダウンロード、設定でボイスモードを有効にします。Laylはwhisper.cppをSTT用に、応答用のローカルLLMを、AndroidシステムTTSを使用します。最も簡単なパス；トレードオフは設定可能性が少ないです。',
+          '**パスB—Termuxスタック（15分）：**',
+          'F-Droidからtermuxをインストール（Play Store；Play Storeバージョンは古い）。',
+          'termuxで：`pkg update && pkg install git cmake clang ffmpeg`。',
+          'whisper.cppを構築：`git clone https://github.com/ggerganov/whisper.cpp && cd whisper.cpp && make`およびSmallモデルダウンロード：`bash ./models/download-ggml-model.sh small`。',
+          'ollama（Termux ARMビルド）をインストール：`curl -fsSL https://ollama.com/install.sh | sh`。モデルをプル：`ollama pull phi4-mini`。サーバーを起動：`ollama serve`。',
+          'Piperをインストール：`pip install piper-tts`（Termux Python venvidで）およびボイスダウンロード（例：`piper-tts --download-voice en_US-amy-low`）。',
+          'arecordから読み取り、オーディオでwhisper.cppを実行し、トランスクリプトをOollama at localhost:11434に送信し、応答をPiperにパイプする小さなPythonスクリプトでパイプラインを接続します。または、taskerを使用して、ボタンまたはクイックタイルによってトリガーされるシェルコマンドを連鎖させます。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'パスBの場合、Termux：Widgetを使用して、音声アシスタントスクリプトを実行するホーム画面ショートカットを作成します。ウィジェットの1回のタップはフルパイプラインをトリガーします。Bluetooth buttonまたはTaskerクイックタイルをペアリングして、ハンズフリー呼び出します。Pixel 9 ProおよびGalaxy S25 UltraアクションSideキーもTaskerアクションをトリガーできます。',
+          },
+        ],
+      },
+      hybridSetup: {
+        id: 'hybrid-setup',
+        title: 'ハイブリッド設定：スマートフォンSTT +リモートOllama',
+        content:
+          '**ハイブリッドスタックはLLM呼び出しをホームマシンに移動し、デバイスでSTTとTTSを保持します。** これは、70Bクラスのモデル（Llama 3.3 70B、Qwen3-Coder 32B）へのアクセスを与えながら、オーディオの機密性を保持します（スマートフォンを離れることはありません—テキストトランスクリプトのみがホームWi-Fi経由で送信されます）。',
+        numberedItems: [
+          'ホームマシン（Mac、PC、またはNAS）では：Ollama をインストール。70Bモデルをプル：`ollama pull llama3.3:70b`（~40 GBフリーディスク+ ~48 GB RAMまたは24 GB GPU VRAMが必要）。',
+          'Ollamaをローカルネットワークにバインド：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。ホームマシンのローカルIP（例：192.168.1.20）に注意してください。',
+          'スマートフォンでは、音声アシスタントパイプライン（iOSショートカットまたはAndroid Tasker）をWhisperトランスクリプトをHTTP POSTで`http://192.168.1.20:11434/api/generate`に送信するように構成します。',
+          'TTSはスマートフォン上で動作し続けます（Piperまたはシステムボイスはホームマシンからの応答テキストを使用）。',
+          '結果：Whisper STTはスマートフォンで実行されます（オーディオはデバイスを離れることはありません）、ホームOlamaは70B品質の応答を~600～1200 msで生成し、TTSはスマートフォンで話します。総レイテンシ~1.5～2.5秒—完全にデバイス上よりわずかに高いですが、より優れたLLM品質を備えています。',
+        ],
+        promptExamples: [
+          {
+            label: 'iOSショートカット：ハイブリッド音声アシスタント（アクションボタントリガー）',
+            text: '1. オーディオ記録→tempdファイルに保存します。\n2. Whisper Transcriptionで転写→出力：トランスクリプトテキスト。\n3. URLの内容を取得→URL：http://192.168.1.20:11434/api/generate、メソッド：POST、JSONボディ：{"model":"llama3.3:70b","prompt":"[transcript]","stream":false}→出力：応答テキスト。\n4. テキストを話す→入力：応答テキスト、ボイス：iOSシステムボイス。\nアクションボタンに割り当てます。レコードを保持；送信をリリース。最初のオーディオ~1.5～2.5秒再生します。',
+          },
+          {
+            label: 'Tasker：Androidハイブリッド音声アシスタント',
+            text: '1. 変数：%TRANSCRIPT =（記録されたオーディオファイル上のwhisper-CLIの出力）。\n2. HTTPリクエスト：URLhttp://192.168.1.20:11434/api/generate、メソッドPOST、Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}。\n3. 変数：%REPLY =（JSONから解析された「応答」フィールド）。\n4. 言う：%REPLY（Androidシステムティスまたはインストールされている場合はPiper）。\nクイックタイル、Bluetoothボタン、またはPixel 9 Proのサイドキーロングプレスからトリガーします。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '最低レイテンシハイブリッドの場合、Ollamaをストリーミングモード（`"stream":true`）に設定し、到着時にトークンをTTSにストリーミングして、完全な応答を待つのではなく。iOSショートカットはネイティブストリーム化できませんが、小さなTaskerプラグインまたはカスタムiOSアプリはできます。ストリーミングで、認識「最初のオーディオ」レイテンシは200～400 msで低下します。',
+          },
+        ],
+      },
+      latencyBudget: {
+        id: 'latency-budget',
+        title: 'レイテンシバジェット：秒はどこへ行くのか',
+        content:
+          '**2026年のフラッグシップスマートフォンでは、LLM最初のトークンまでの時間が総レイテンシを支配します—通常、音声から最初のオーディオ時間の50～60%。** LLMステップを最適化するには、WhisperまたはTTSの調整よりも多くの影響があります。',
+        columns: ['ステップ', '典型的な時間（iPhone 16 Pro、デバイス上）', '備考'],
+        rows: [
+          { 'ステップ': 'VAD発話終了検出', '典型的な時間（iPhone 16 Pro、デバイス上）': '~200～500 ms', '備考': '調整可能；300 msデフォルト。認識レイテンシに数えます。' },
+          { 'ステップ': 'Whisper Small STT（5秒発話）', '典型的な時間（iPhone 16 Pro、デバイス上）': '~150～300 ms', '備考': 'WhisperKit ~30～40%速いApple Neural Engine経由。' },
+          { 'ステップ': 'LLM最初のトークンまでの時間（Phi-4 Mini）', '典型的な時間（iPhone 16 Pro、デバイス上）': '~400～800 ms', '備考': '最大のコントリビューター。より小さいモデル=高速。' },
+          { 'ステップ': 'TTS最初のオーディオ（PiperまたはシステムTTS）', '典型的な時間（iPhone 16 Pro、デバイス上）': '~100～200 ms', '備考': 'システムTTSはPiperよりも少し速い。' },
+          { 'ステップ': '総音声から最初のオーディオまで', '典型的な時間（iPhone 16 Pro、デバイス上）': '~0.9～1.4秒', '備考': '2秒以下 = 「使用可能に感じます」；1秒以下 = 「ネイティブに感じます」。' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '1秒以下を取得するには：Whisper Tiny（75 MB、~80 ms STT）+ Qwen3 1.7B（~250 ms TTFT）+ systemTTS（~80 ms最初のオーディオ）を使用します。iPhone 16 Proで総~600～800 ms。トレードオフはより短く、一貫性のないLLM応答と、雑音の多い環境でのより低いSTT精度です。応答性が最優先事項の場合、それの価値があります。',
+          },
+        ],
+      },
+      accuracyBattery: {
+        id: 'accuracy-battery',
+        title: '1時間以上の精度とバッテリー消耗',
+        content:
+          '**Whisper Smallは、中程度の背景ノイズで通常の音声で約88%の精度を実現します；Whisper Mediumは約91%に達しますが、レイテンシは2倍。** 1時間のアクティブな会話でのバッテリーの自律性は、iPhone 16 Proで約25～35%、フラッグシップAndroidで約25～40%です。',
+        items: [
+          '**モデルサイズ別のwhisper精度（LibriSpeech-clean WER、より低いほど良い）：** Tiny ~7.5%、Small ~3%、Medium ~2.4%、Large v3 ~1.8%。実質的なノイズ条件では：Tiny ~15～20% WERに分解、Small ~10～14%、Medium ~7～10%、Large v3 ~5～7%。',
+          '**CloudWhisper vs Local Whisper：** OpenAIのCloud Whisper API は、デフォルトで大規模なv3（クリーンな音声で~2% WER）を使用します。スマートフォン上で実行されているWhisper Smallは、同じオーディオで~3% WERです—毎日のアシスタント使用で違いが認識できないほど十分に近い。',
+          '**バッテリー消耗（1時間のアクティブな会話、画面オン）：** iPhone 16 Pro ~25～35% ; iPhone 17 Pro ~22～30% ; Pixel 9 Pro ~30～40% ; Galaxy S25 Ultra ~28～38%。ハイブリッドモードでは、スマートフォンの消耗を~10～15%/時間に減らします。',
+          '**熱的な絞り込み：** 持続的なオンデバイスLLM推論は、iPhoneで~10～15分後に熱的な絞り込みをトリガーします（チップ表面~38℃）；フラッグシップAndroidで~15～20分（タブレットと大きなスマートフォン上でより優れた熱質量）。スロットリングはトークン/秒を30～50%削減し、LLM最初のトークンレイテンシを~600 msから~900 msに拡張します。',
+          '**長いセッションの軽減策：** 充電器に接続、スマートフォンを硬い表面に顔を置く（手の中ではなく）、またはハイブリッドモードに切り替えます。スマートフォン-as-マイクはスマートフォンのような全体のエネルギーのごく一部を使用します。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '1時間のall-localボイスセッションはスマートフォンのバッテリー自律性を30～40%消耗することができます。終日またはカー使用の場合は、チャージ計画を立てます。ハイブリッドパス（スマートフォン上のみSTT）は、周囲、常時オン音声アシスタントの現実的なオプション—ホームマシンは重い持ち上げをしています。',
+          },
+        ],
+      },
+      handsFree: {
+        id: 'hands-free',
+        title: 'ハンズフリー：ショートカット、Tasker、CarPlay、Android Auto',
+        content:
+          '**ハンズフリートリガーは、音声スタックではなく、トリガーメカニズムに依存します。** iOSはアクションボタンまたは「Hey Siri、run [ショートカット]」を持つショートカットを使用します；Androidはサイドキー、クイックタイル、またはBluetoothボタン付きのtaskerを使用します。',
+        items: [
+          '**iPhoneアクションボタン（iPhone 15 Pro以上）：** 音声パイプラインをトリガーするショートカットを割り当てます。アクションボタンを保持して記録を開始；送信をリリース。2026年のiPhoneでの最も低いレイテンシのハンズフリートリガー。',
+          '**iPhone「Hey Siri、run [ショートカット名]」：** Siritを目覚めさせます（~500 ms）、その後ショートカットを実行します。アクションボタン対やや遅いですが、ハンズフリーで任意の時間にスマートフォンが施錠される時間に機能します。',
+          '**Androidサイドキー / Bixbyキー（Galaxy）：** Galaxy Modes & Routinesの設定またはBixbyキーリマップアプリを使用して、taskerアクションを割り当てます。トリガーを押します。',
+          '**Android Taskerクイックタイル：** 通知シェードに追加されたクイックタイルが、音声スクリプトを実行します。ロック画面からトリガーをスワイプします。',
+          '**Bluetoothボタン（例：Flic、ジェネリックメディアボタン）：** iOS / Androidとペアリング、音声ショートカット / Taskerタスクをトリガーするように構成します。本当のハンズフリー（机の上のボタン、ステアリングホイール上、ポケット内）。',
+          '**CarPlay / Android Auto：** これらは、システムSiri / Google Assistantで設計によって使用されます—どちらも2026年でサードパーティ音声アシスタントAPIを公開しません。CarPlayの回避策は、CarPlayアクションボタンにショートカットをバインドすること（限定的なショートカットサポート）です；Android Autoは、Bluetoothメディアボタン経由でtaskerをトリガーするために。どちらもシステムアシスタントほどポーランド語されていません。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'CarPlay / Android Auto統合なしでのカー使用の場合：小さなBluetoothボタン（Flic、AirShou、汎用メディアリモート）をペアリング、ステアリングホイールに取り付けます。オフラインの音声アシスタントをトリガーすることを押します—インターネットなしで動作し、クラウドにオーディオを送信せず、~1.5秒で答えます。CarPlayへのトレードオフは、カーディスプレイのUIなし、オーディオのみ。',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'プライバシー保証：完全にオフラインvsクラウド支援',
+        content:
+          '**音声アシスタントは「完全にオフライン」の場合にのみ、マイクオーディオ、トランスクリプト、およびTTSオーディオがすべてデバイス上に留まり、ネットワーク呼び出しなし。** 「プライベート」としてマーケティングされている多くのアプリは、クラウドへのトランスクリプトまたはテレメトリをまだ送信します—信頼する前に、飛行機モードまたはネットワークモニターで確認します。',
+        items: [
+          '**「完全にオフライン」を確認する方法：** スマートフォンを飛行機モードにして、アシスタントを使用します。フルサービスで機能する場合、それは完全にオフラインです。劣化またはフェールする場合、ステップはクラウドサービスに依存します。',
+          '**オーディオキャプチャ：** マイクデータはローカルに処理され、どこにも記録または送信されるべきではありません。Whisper、whisperkitおよび sherpa-onnxは、すべてのmemoryのsttetを実行し、トランスクリプション後のオーディオを破棄します。',
+          '**LLM推論：** スマートフォン上のローカルモデル（Phi-4 Mini、Gemma 3、Llama 3.2）によって応答が生成される場合、デバイスはプロンプトを離れません。アシスタントが「クラウド支援」モード（Apple Intelligence Private Cloud Compute、Googleのオンデバイス最初のクラウドフォールバック）を使用している場合、トランスクリプトは特定の条件下でサーバーに送信される可能性があります—アプリのプライバシーポリシーを確認します。',
+          '**TTS：** PiperおよびシステムTTSは完全にデバイス上。いくつかの「プレミアム」クラウドボイス（Elevenlab、OpenAI TTS）はレスポンステキストをサーバーに送信する必要があります—真のオフラインでこれらを避けます。',
+          '**ハイブリッドパスプライバシースタンス：** ハイブリッドモードでは、オーディオはスマートフォン上に留まります（Whisper Local）、ただしテキストトランスクリプトはホームOllama serverがホームWi-Fi経由。これはローカルネットワークのみであり、クラウドではありません—データはネットワーク内に留まります。ほとんどのプライバシー意識のあるユーザーにとって受け入れ可能です。最も厳しい脅威モデルの場合、完全にデバイス上と同等ではありません。',
+          '**アプリ固有のメモ（2026年5月）：** whisperkitおよびwhisper.cppはオープンソースで確認可能オフラインです。Laylはデフォルトでローカルで実行されます（飛行機モードで確認）。LLM FarmおよびPocketPal AI実行推論完全にデバイス上。Apple Intelligenceはオンデバイス とPrivate Cloud Computeモード—disableを備えています。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '完全なオフライン操作が重要な場合（ジャーナリスト /ソース機密保持、医療、法律）：オープンソースアプリを優先（whisperkitリファレンスビルド、whisper.cpp via termux、layla）ネットワークの動作を監査できる場所。クローズドソースアプリ（「プライベート」としてマーケティングされている場合でも）、明らかなユーザー通知なしに、将来の更新でクラウド機能を追加することができます。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '一般的な間違い',
+        items: [
+          '**すべてにWhisper Tinyを使用。** Tinyは速い（~80 ms STT）ですが、ノイズの多い環境では誤りが発生しやすい（~15～20% WER対Small ~10～14%）。Tinyは静かなベッドルームでの短いコマンド用に受け入れ可能；汎用音声アシスタントにはSmallを使用します。',
+          '**TTSが開始する前に、完全なLLM応答を待つ。** これは認識レイテンシを2倍にします。到着時にLLMトークンをTTSにストリーミング—Piperはストリーミング入力をサポート、システムTTSは段階的な音声をサポート。最初のオーディオは完全な応答の後ではなく、LLMの最初の文の後に再生されるべき。',
+          '**ホット環境でオンデバイスLLMを実行します。** 熱的なスロットリングは直後に直後に、直射日光やホットカーで数分内で始まり、トークン/秒を30～50%削減し、レイテンシを2秒以上で押し出します。ハイブリッドパスを使用または冷たく保ちます。',
+          '**検証なしで「プライベート」を信頼。** 「プライベート」と「ローカル」は2026年のマーケティング用語—ローカル処理を主張する一部のアプリはまだ分析、モデル更新、またはクラウドフォールバックトランスクリプション用にホーム電話をかけます。敏感な使用に依存する前に、飛行機モードで確認します。',
+          '**低RAMデバイスでのTermux Androidスタック構築。** Termux + whisper.cpp + ollama + piperは、ピークでシステムRAM ~4 GBを消費します。6 GB以下のRAMを備えたデバイスは、会話の途中でコンポーネントのOOM-killです。低RAMAndroidでlaylを使用するか、iPhoneパスに固執します。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'ソース',
+        items: [
+          'Whisper.cpp — [github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp) （クロスプラットフォームWhisper、AndroidおよびiOSビルドを含む）。',
+          'WhisperKit（Argmax）—[github.com/argmaxinc/WhisperKit](https://github.com/argmaxinc/WhisperKit)（Apple Neural Engine最適化Whisper iOS / macOS用）。',
+          'Piper TTS（Rhasspy）— [github.com/rhasspy/piper](https://github.com/rhasspy/piper)（オープンソースニューラルTTS、モバイル対応、30+言語）。',
+          'LLM Farm — [github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)（iPhoneアプリをローカルで実行するGGUFモデル）。',
+          'Layla（Android）— [Play Storeリスト](https://play.google.com)とデベロッパードキュメント（音声サポート付きバンドルローカルLLMスタック）。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'ローカルWhisper対Cloud Whisperの精度はどの程度？',
+            a: 'スマートフォン上で実行されているWhisper Smallは、クリーンな音声で~3% WERを実現します；OpenAIのCloud Whisper（Large v3）は~2%を実現します。ノイズの多い環境では、ローカルSmallは~10～14% WERに落ち、Cloud Large v3は~5～7%に落ちます。毎日の音声アシスタント使用の場合、ローカルの精度は認識可能でないほど十分に閉じています。すべての言葉が重要な長い形式のテキスト口述の場合、クラウドまたはローカルMedium / Largeが望ましい。',
+          },
+          {
+            q: '地元の音声アシスタントは完全にSiriを置き換えることができますか？',
+            a: 'プライベートQ&A、ドラフト、サマリー用：はい、Siriのオンデバイス機能と比較可能または優れた品質です。システムアクション（アプリを開く、タイマーを設定する、HomeKitを制御）、Webサーチを起動したり、ライブデータ（天気、スポーツスコア）を起動したりするために：いいえ—2026年でSiriのiOSおよびAppleサービスとの統合は第三者ローカルスタックでは複製不可能です。多くのユーザーはどちらも保持：システムアクション用のSiri、プライベートQ&A用のローカルスタック。',
+          },
+          {
+            q: 'これはCarPlayまたはAndroid Autoで動作しますか？',
+            a: '限定的。CarPlayおよびAndroid Autoは、システムSiri / Google Assistantの周囲で設計—どちらも2026年にはサードパーティ音声アシスタントAPIを公開します。解決策：CarPlayアクションボタン（限定的なショートカットサポート）にバインドされたショートカットを使用するか、Bluetooth mediaボタン（Flic、ジェネリックメディアリモート）をペアリングして、tasker / shortcutをトリガーします。どちらもシステムアシスタント対ほど洗練されていません。',
+          },
+          {
+            q: 'ハンズフリーでどのようにトリガーしますか？',
+            a: 'iPhone：ショートカットを呼び出すためにアクションボタン（iPhone 15 Pro以降）を保持するか、「Hey Siri、run [ショートカット名]」と言ってください。Android：Galaxyスマートフォン上の側面キーまたはBixbyキーを使用し、taskerクイックタイルまたはペアリングされたBluetoothボタン。真のアンビエントハンズフリー（常に聞く目覚めの言葉）の場合、ローカルスタックは2026年にSiri / Google Assistantに一致しません—スマートフォンシステムウェイクワード検出器はサードパーティアプリには公開されていません。',
+          },
+          {
+            q: '多言語会話を処理できますか？',
+            a: 'はい、ただし注意事項付き。Whisperは入力言語を自動検出し、99言語をサポート。ローカルLLMsは異なります：Phi-4 Mini言語は良い、主要なヨーロッパ言語合理的；Qwen3は中国語を含む強い多言語サポート；Gemma 3 100+言語をサポート。TTS用、Piperは30+言語を持つ；システムTTSはインストールしているOSの言語パックに依存。途中の言語の切り替えはWhisperで機能しますが、LLMを混同する可能性があります。',
+          },
+          {
+            q: 'バックグラウンドノイズはローカルSTTを分割しますか？',
+            a: 'Whisper Tinyはモデレートノイズ（~15～20% WER）の上に大幅に分解；Smallはカフェレベルノイズを合理的に処理（~10～14% WER）；MediumおよびLargeはほとんどの現実的な環境を良く処理。ノイズの多い使用（車、公共交通機関）の場合、RAMを持つ場合はWhisper Mediumを使用するか、VADを積極的に適用（音声が検出される場合のみトランスクリプト、声明の間で無視）。',
+          },
+          {
+            q: 'スマートホームデバイスをローカルと統合する方法は？',
+            a: 'LLM応答をインテント（例：「キッチンライトをオフにする」）を検出するパーサーを使用し、ローカルスマートホームハブのAPIを直接呼び出す—Home AssistantはローカルIP、Apple HomeKit統合でRESTAPIを備えており、Shortcutsの「制御ホーム」アクションを経由。完全にオフラインパイプラインが必要な場合、クラウドスマートホーム統合（Alexa、Google Home）を避けます。',
+          },
+          {
+            q: 'ボイス（TTS）をカスタマイズできますか？',
+            a: 'はい。Piper TTSは30+言語で100+のコミュニティ訓練音声を備えています。iOSボイスショートカットを使用すると、高品質プレミアム音声（設定→アクセシビリティ→スポークンコンテンツ→音声）を含むシステムボイスから選択できます。AndroidシステムTTSはGoogleまたはサードパーティのボイスパックをサポート。カスタムボイスクローニング（独自のボイスまたは特定のペルソナ）には、別のTTSツールチェーン（Coqui、Tortoise TTS）が必要—2026年のデバイス上でまだ実用的ではありません。',
+          },
+          {
+            q: 'バッテリーライフは大きなヒットを取りますか？',
+            a: 'はい—フラッグシップスマートフォンでのアクティブな会話1時間あたり約25～40%。時折の音声クエリの場合、影響は小さい。終日またはAlways-On使用の場合、プラグイン（スマートフォンあたり~10～15%/時間を削減するため、ハイブリッドパスのみスマートフォンで実行）を使用します。バックグラウンドパッシブリッスニング、目覚めワード検出は、現在、受け入れ可能なバッテリーコストでサードパーティローカルスタック上で可行な一定あたり現在実行不可能です。',
+          },
+          {
+            q: 'iOS 19またはAndroid 16はこのセットアップを分割しますか？',
+            a: 'コアスタック（Whisper、ローカルLLM、TTS）の可能性は低い—これらはマイク・キャプチャ、TTS、ネットワークなど（これらは標準API）に依存するユーザースペースアプリです。破砕可能：ショートカット統合、Appleがショートカット APIを変更する場合；Termux on Android（Android 16がバックグラウンドプロセス制限をさらに厳しくする場合）。アプリをアップグレードしたままにして、各メジャーOSアップデート後に確認してください。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連情報',
+        items: [
+          '[iPhone 2026年のベストローカルLLMアプリ](/power-local-llm/best-local-llm-apps-iphone-2026?lang=ja) —iPhoneパスのベースレイヤーアプリ（PocketPal AI、LLM Farm、Private LLM）。',
+          '[Android 2026年のベストローカルLLMアプリ](/power-local-llm/best-local-llm-apps-android-2026?lang=ja) —Androidパスのベースレイヤーアプリ（Layla、Maid、MLC Chat、Termux + Ollama）。',
+          '[最高のモバイルLLMモデル2026：Phi-4 Mini vs Gemma 3 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm?lang=ja) —音声スタックのモデルレイヤー；ベンチマーク品質対レイテンシのトレードオフ。',
+          '[タブレットでAIを実行する方法：iPad and Android（2026）](/power-local-llm/run-ai-on-tablet-ipad-android?lang=ja) —より大きな画面の音声セットアップが必要なユーザー向けのタブレット等価物。',
+          '[最高のローカルLLMs 2026](/local-llms/best-local-llms-2026?lang=ja) —すべてのハードウェアティアをカバーするより広いモデル権限、ハイブリッド設定でLLMを選択するのに役立つ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory-2026?lang=ja) —Whisper.cpp、WhisperKit、Piper TTS、およびその他の音声スタックコンポーネントのディレクトリエントリ。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'スマートフォンで完全オフラインの音声アシスタントを構築する：Whisper + ローカルLLM（クラウドなし）— 2026',
+      url: 'https://www.promptquorum.com/power-local-llm/voice-assistant-local-mobile-offline?lang=ja',
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+      description: '2026年のiPhoneおよびAndroidで完全にオフラインで動作する音声アシスタント。Whisper ローカルSTT + ローカルLLM + Piper TTS。iPhone、Android、ハイブリッド設定；レイテンシ、バッテリー、プライバシー。',
+      inLanguage: 'ja',
+      author: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      about: [
+        { '@type': 'Thing', name: 'Whisper STT' },
+        { '@type': 'Thing', name: 'ローカルLLM' },
+        { '@type': 'Thing', name: 'iPhoneオフライン' },
+        { '@type': 'Thing', name: 'Androidオフライン' },
+        { '@type': 'Thing', name: '音声アシスタント' },
+        { '@type': 'Thing', name: 'モバイルAI' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'WhisperKit' },
+        { '@type': 'SoftwareApplication', name: 'LLM Farm' },
+        { '@type': 'SoftwareApplication', name: 'Layla' },
+        { '@type': 'SoftwareApplication', name: 'Piper TTS' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
+      },
+    },
+  },
 }
