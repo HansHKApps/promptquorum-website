@@ -2396,6 +2396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '这些支持自定义系统提示吗？',
             a: '三个都支持。Continue.dev：`config.json` 中的每个模型 `systemMessage`。Cline：扩展设置中的"自定义指令"字段。Aider：`--system-prompt` 标志或 `.aider.conf.yml` 中的每个模型默认值。自定义提示对 Cline（方向 Plan 模式行为）和 Aider（在提交中强制编码风格）特别有用。',
           },
+          {
             q: '中国企业部署本地编码代理需要考虑什么数据安全问题？',
             a: '企业必须遵守中国数据安全法，该法规对数据驻留、跨境传输和企业网络中的数据处理有严格要求。本地 LLM（Ollama、llama.cpp）本身不存储个人数据，但它们索引的代码库和日志可能包含敏感的业务信息。确保模型完全部署在公司自有基础设施上，没有外部 API 访问。对于处理客户数据或知识产权的任何工作，请在部署前咨询您的合规和法律团队。',
           },
