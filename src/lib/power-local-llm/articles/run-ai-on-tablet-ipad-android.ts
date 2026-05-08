@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Getting Started',
+    theme: 'Mobile & Edge LLMs',
     title: 'Run Local AI on Your Tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
     seoTitle: 'Run AI on iPad and Android Tablet Locally 2026',
     intro:

@@ -117,6 +117,7 @@ const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   'Hardware & Performance': { dot: 'bg-orange-400',   badge: 'bg-orange-50 text-orange-700 border border-orange-200' },
   'Advanced Techniques':   { dot: 'bg-rose-400',      badge: 'bg-rose-50 text-rose-700 border border-rose-200' },
   'Enterprise':            { dot: 'bg-amber-400',     badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
+  'Mobile & Edge LLMs':    { dot: 'bg-cyan-400',      badge: 'bg-cyan-50 text-cyan-700 border border-cyan-200' },
 }
 
 const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }> = {
