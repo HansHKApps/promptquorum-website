@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'RAG & ドキュメント検索',
+    theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
     seoTitle: 'AnythingLLM、PrivateGPT、Open WebUI比較：5000ページRAGテスト',
     intro:
@@ -1914,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'RAG & 文档检索',
+    theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台',
     seoTitle: 'AnythingLLM、PrivateGPT、Open WebUI对比：5000页RAG测试',
     intro: 'AnythingLLM、PrivateGPT和Open WebUI是2026年三个成熟的自托管RAG平台。我们将相同的5,047页语料库加载到每个平台，运行了50个跨5种查询类型的查询，测量了检索延迟、幻想率、引用质量和隐性成本（重新嵌入、向量DB存储、索引时GPU峰值）。演示冠军不是生产冠军。',

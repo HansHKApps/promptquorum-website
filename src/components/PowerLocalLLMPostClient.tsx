@@ -130,6 +130,17 @@ const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   'Enterprise':                     { dot: 'bg-amber-400',    badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
 }
 
+// Runtime safety net: rendered when an article slips through the prebuild
+// validator with a non-canonical theme (e.g., a translation that translated
+// the theme field). Without this, THEME_COLORS[badTheme] is undefined and
+// `colors.badge` throws → HTTP 500. The validator in
+// scripts/validate-translation-integrity.mjs is the primary defense; this
+// keeps the page rendering with a neutral grey badge if anything bypasses it.
+const FALLBACK_THEME_COLOR = {
+  dot: 'bg-slate-400',
+  badge: 'bg-slate-50 text-slate-700 border border-slate-200',
+}
+
 const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }> = {
   en: {
     heading: 'Slide Deck',
@@ -637,7 +648,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
   const langData = articleData[lang]
   const enData = articleData['en']!
   const article = (langData ?? enData)
-  const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started']
+  const colors = THEME_COLORS[article.theme] ?? FALLBACK_THEME_COLOR
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
