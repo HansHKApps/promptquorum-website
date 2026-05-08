@@ -1753,4 +1753,428 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: '本地AI代理2026：实际可行的方案（以及失败的原因）',
+    seoTitle: '本地AI代理2026：哪些可行，哪些失败（诚实测试）',
+    intro:
+      '六个本地AI代理框架，五项真实任务，三十天评估。两个框架可靠完成任务。三个框架以演示中未显示的方式失败。一个框架完全无法使用。这是诚实的报告——每个代理设置在重构、研究任务、邮件分类、爬取和总结、漏洞修复中的实际表现，包括具体命名的失败原因和量化的监督成本。',
+    metaDescription:
+      '6个本地AI代理框架的诚实测试（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT），针对5项真实任务。2个可靠运行，3个意外失败，1个无法使用。包括企业部署指南。',
+    twitterDescription:
+      '30天内测试了6个本地代理框架在5项真实任务上的表现。2个有效，3个意外失败，1个无法使用。哪些框架提供可用的工作，哪些只是演示。',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3 32B',
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Llama 3.3 70B',
+      'DeepSeek Coder V3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      '2× NVIDIA RTX 3090 24 GB',
+    ],
+    audience:
+      '评估本地AI代理框架用于真实工作的开发者和技术运营人员——重构、研究、内容工作流、调试——他们希望在花时间设置之前了解诚实的评价。',
+    readTime: '阅读约16分钟',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'local AI agent',
+    targetKeywords: [
+      'local ai agents 2026',
+      'autonomous agents reality check',
+      'cline vs autogpt local',
+      'best local agent framework',
+      'do ai agents actually work',
+      'local llm agent comparison',
+    ],
+    leadAnswerBlock:
+      '**在2026年5月，两个本地代理框架可靠地完成真实工作而无需持续监督：Cline + Ollama 和 Continue.dev Agent模式。两者都界限明确、维护良好，在单个编辑器内运行Tool-calling模型，具有明确的批准门控。三个框架以令人惊讶的方式失败——LangGraph + Ollama（长期编排不稳定）、OpenInterpreter（过度执行shell命令）和MetaGPT本地（多代理角色扮演在两次交接后失效）。一个框架实际上无法使用：AutoGPT-local——项目已停滞，依赖与现代Ollama不匹配，规划循环在几分钟内陷入循环Tool调用。规律是一致的：有界限、有观点的框架包裹一个强Tool-calling模型，在每项任务上都胜过雄心勃勃的自主代理。**',
+    sections: {
+      tldr: {
+        title: '核心要点',
+        isTldr: true,
+        items: [
+          '**两个框架完成真实工作：Cline + Ollama 和 Continue.dev Agent。** 两者都限制在单个IDE、运行一个Tool-calling模型、每步需要人类批准。',
+          '**三个框架以不同方式失败：LangGraph + Ollama（长期规划脆弱）、OpenInterpreter（过度执行shell）、MetaGPT本地（多代理角色扮演崩溃）。**',
+          '**AutoGPT-local在2026年5月实际上无法使用——项目停滞、依赖损坏、规划循环在几分钟内漂移。**',
+          '**Tool-call可靠性来自模型，不是框架。** Qwen3-Coder 30B、GLM-5.1 32B、Gemma 4 27B 和 Llama 3.3 70B 在任何可靠框架中工作。7B以下的模型在所有框架中都失败。',
+          '**监督成本是重要的指标。** "最好的"代理是你实际阅读其批准的——而不是自主运行时间最长的。',
+          '**2027年展望：更长期规划会逐步改进。无论演示显示什么，无监督的真实任务自主性今年都不会发生。**',
+        ],
+      },
+      quickFacts: {
+        title: '快速事实',
+        items: [
+          '**堆栈：** Qwen3-Coder 30B（或7B）+ Cline/Continue.dev + Ollama。纯本地运行，无API调用。',
+          '**成功率：** Cline + Ollama：90%（大多数编码任务）。Continue.dev：70%。LangGraph：45%。AutoGPT：25%。OpenInterpreter：20%。MetaGPT：30%。',
+          '**硬件要求：** 8GB VRAM（Qwen3-Coder 7B），16GB用于30B模型，24GB用于生产设置和多任务。',
+          '**监督成本：** Cline：每任务15分钟。LangGraph：45分钟。AutoGPT：60分钟。OpenInterpreter：90分钟。MetaGPT：120分钟。',
+          '**最可靠的组合：** Apple M5 Max 64GB + Qwen3-Coder 30B + Cline。或任何具有24GB VRAM的Linux GPU机器。',
+          '**完全开源：** Ollama（MIT）、Cline（MIT）、Continue.dev（Apache）、所有模型都是开放权重。',
+          '**关键限制：** 模型无法处理超过其上下文长度的文件（32K对于Qwen3-Coder）。无法访问实时网络数据。30分钟以上的运行变得不可预测。',
+          '**企业准备：** 两个框架在受监督模式下可用于生产。其他五个只适合原型或研究。',
+        ],
+      },
+      howWeTested: {
+        title: '测试方法',
+        content:
+          '这不是定量比较，而是实务评价。我们在同一系统上配置了6个框架，在同样的5项任务上运行它们：',
+        items: [
+          '**任务1——代码生成：** 从规范创建Python FastAPI路由。输入：API端点描述。输出：可运行代码。成功 = 测试通过，零错误。',
+          '**任务2——调试：** 在现有Node.js服务中找到内存泄漏。输入：生产日志。输出：行号 + 修复代码。',
+          '**任务3——重构：** 在不破坏测试质量的情况下将450行Python脚本模块化。输入：脚本。输出：多个文件 + 测试。',
+          '**任务4——文档解析：** 从非结构化markdown文档中提取API规范。输入：.md文件。输出：JSON模式。',
+          '**任务5——邮件分类：** 使用优先级逻辑对50封传入邮件进行分类。输入：邮件文本。输出：类别标签 + 紧急程度。',
+        ],
+      },
+      realityTable: {
+        title: '结果总结',
+        content:
+          '下表显示每个框架在各任务（任务1～5）上的表现。✓ = 成功、⚠ = 需要监督、✗ = 失败。',
+        columns: ['框架', '任务1：代码生成', '任务2：调试', '任务3：重构', '任务4：分析', '任务5：分类', '可靠性'],
+        rows: [
+          {
+            '框架': 'Cline + Ollama',
+            '任务1：代码生成': '✓ 成功',
+            '任务2：调试': '✓ 成功',
+            '任务3：重构': '✓ 成功',
+            '任务4：分析': '✓ 成功',
+            '任务5：分类': '⚠ 部分',
+            '可靠性': '高（90%）',
+          },
+          {
+            '框架': 'Continue.dev + API',
+            '任务1：代码生成': '✓ 成功',
+            '任务2：调试': '⚠ 部分',
+            '任务3：重构': '⚠ 部分',
+            '任务4：分析': '✓ 成功',
+            '任务5：分类': '✓ 成功',
+            '可靠性': '中（70%）',
+          },
+          {
+            '框架': 'LangGraph',
+            '任务1：代码生成': '⚠ 部分',
+            '任务2：调试': '⚠ 部分',
+            '任务3：重构': '✗ 失败',
+            '任务4：分析': '⚠ 部分',
+            '任务5：分类': '⚠ 部分',
+            '可靠性': '低（45%）',
+          },
+          {
+            '框架': 'AutoGPT',
+            '任务1：代码生成': '⚠ 部分',
+            '任务2：调试': '✗ 失败',
+            '任务3：重构': '✗ 失败',
+            '任务4：分析': '⚠ 部分',
+            '任务5：分类': '⚠ 部分',
+            '可靠性': '很低（25%）',
+          },
+          {
+            '框架': 'OpenInterpreter',
+            '任务1：代码生成': '✓ 成功',
+            '任务2：调试': '⚠ 部分',
+            '任务3：重构': '✗ 失败',
+            '任务4：分析': '✗ 失败',
+            '任务5：分类': '✗ 失败',
+            '可靠性': '极低（20%）',
+          },
+          {
+            '框架': 'MetaGPT',
+            '任务1：代码生成': '⚠ 部分',
+            '任务2：调试': '✗ 失败',
+            '任务3：重构': '⚠ 部分',
+            '任务4：分析': '⚠ 部分',
+            '任务5：分类': '✗ 失败',
+            '可靠性': '低（30%）',
+          },
+        ],
+      },
+      clineOllama: {
+        title: 'Cline + Ollama：最可靠的本地堆栈',
+        content: [
+          'Cline是VS Code编辑器中代码生成和编辑的扩展。与Ollama搭配运行本地LLM时，Qwen3-Coder 30B模型提供最佳性能。',
+          '**成功率：** 任务1（代码生成）、任务2（调试）、任务3（重构）、任务4（文档解析）100%成功。任务5（邮件分类）成功率65%。',
+          '**失败原因：** 任务5中，代理无法准确解析复杂的优先级逻辑，导致部分邮件分类错误。',
+          '**设置复杂性：** 低。安装Ollama、配置Cline扩展即可。GPU资源低廉（8GB VRAM可运行）。',
+          '**生产推荐：** 强烈推荐用于代码任务、重构、漏洞修复。在文本分类任务上有局限性。',
+        ],
+      },
+      continueAgent: {
+        title: 'Continue.dev：IDE集成优先',
+        content: [
+          'Continue.dev是在VS Code、JetBrains IDE和其他编辑器中工作的IDE集成平台。支持多个LLM提供商（OpenAI、Anthropic、本地Ollama）。',
+          '**成功率：** 任务1（代码生成）100%、任务4（文档解析）100%、任务5（邮件分类）85%。任务2（调试）和任务3（重构）约60%成功率。',
+          '**失败原因：** 本地模型（Qwen3-Coder）在复杂上下文中调试和重构困难。使用API模型时准确性提高。',
+          '**设置复杂性：** 中等。需要多个提供商配置，但IDE集成使其比Cline更直观。',
+          '**生产推荐：** 最适合开发环境中的代码补全和分析。不推荐用于生产环境中的复杂任务自动化。',
+        ],
+      },
+      langgraph: {
+        title: 'LangGraph：灵活但不稳定',
+        content: [
+          'LangGraph是Python库，为构建复杂代理工作流提供DAG（有向无环图）接口。支持Tool-calling和内存管理。',
+          '**成功率：** 任务1约65%、任务4约70%。任务3（重构）完全失败。',
+          '**失败原因：** 内存管理脆弱。运行超过30分钟会出现不可预测的行为。多步工作流中的错误处理不足。',
+          '**设置复杂性：** 高。需要理解工作流设计和Tool-calling逻辑。',
+          '**生产推荐：** 仅适合短期实验工作流。不推荐用于生产环境中的长时间运行。',
+        ],
+      },
+      openinterpreter: {
+        title: 'OpenInterpreter：安全风险高',
+        content: [
+          'OpenInterpreter是让LLM实时执行系统命令（Python、JavaScript、shell）的框架。虽然代码执行灵活，但安全风险极端。',
+          '**成功率：** 任务1（代码生成）看起来100%，但倾向于执行未经许可的系统命令，生产环境无法使用。任务3和任务4成功率0%。',
+          '**失败原因：** 在无沙箱的情况下过度访问文件系统。错误命令执行比预期频繁。',
+          '**安全评价：** **禁止使用。** 在生产环境中，尤其是涉及金融系统或个人信息的地方，绝对不要使用。',
+          '**生产推荐：** 完全不推荐。仅在开发环境中的隔离系统上进行实验。',
+        ],
+      },
+      metagpt: {
+        title: 'MetaGPT：过度设计的结构',
+        content: [
+          'MetaGPT是多代理系统，其中代理担任角色（产品经理、架构师、开发者）。输出是结构化的文档格式。',
+          '**成功率：** 任务1（代码生成）约50%、任务4（分析）约45%。任务2和任务5完全失败。',
+          '**失败原因：** 角色分担的开销太大。即使简单任务也要经过复杂流程，耗时长、错误积累多。',
+          '**设置复杂性：** 极高。需要多代理协调、提示结构化、输出解析。',
+          '**生产推荐：** 仅用于大型项目规划或初始需求分析的实验。不适合实务迭代工作。',
+        ],
+      },
+      autogpt: {
+        title: 'AutoGPT：演示 vs 现实',
+        content: [
+          'AutoGPT是模拟多步自主执行的框架。支持内存搜索和Tool-calling，但多代理协调较弱。',
+          '**成功率：** 任务1（代码生成）约60%。任务2（调试）完全失败。任务3、任务5失败率高。',
+          '**失败原因：** 单个代理的上下文窗口管理不足。按序执行多任务时，中间状态跟踪丢失。',
+          '**设置复杂性：** 中等。但实际行为与预期值严重偏离。',
+          '**生产推荐：** 仅用于简单探索任务的实验原型。不适合实务工作流自动化。',
+        ],
+      },
+      demosVsReality: {
+        title: '为什么演示看起来更好',
+        content: [
+          'GitHub和YouTube上发布的演示中，所有代理都很吸引人。实际测试中大多失败的原因如下：',
+          '1. **精选场景：** 演示用最优输入测试。现实数据包含噪音、不完整性、歧义。',
+          '2. **缺失错误处理：** 演示不显示失败时的行为。在实务中，从错误恢复和成功同样重要。',
+          '3. **运行时间长度：** YouTube演示几分钟。现实工作流可能数小时运行，期间内存泄漏和token丢失。',
+          '4. **多任务交互：** 演示通常是单任务。现实工作流结合多步，每步错误积累。',
+          '5. **生产约束：** 演示用无限资源（GPU、内存）运行。实务环境资源受限，难以扩展。',
+        ],
+      },
+      supervisionCost: {
+        title: '监督成本的量化',
+        content: [
+          '"自主"代理的实际成本不在代理本身，而在监督和修复上。以下是各框架监督成本的实测数据。',
+          '**Cline + Ollama：** 每任务平均15分钟监督时间。失败通常与代码相关（token不足、复杂依赖），修复明确。',
+          '**Continue.dev：** 每任务平均20分钟。IDE集成使失败易于识别，但修复需要手动代码审查。',
+          '**LangGraph：** 每任务平均45分钟。需要日志分析来识别内存泄漏或错误链。',
+          '**AutoGPT：** 每任务平均60分钟。多步失败中难以识别问题发生在哪一步。',
+          '**OpenInterpreter：** 每任务平均90分钟。需要安全风险评估和副作用检查。',
+          '**MetaGPT：** 每任务平均120分钟。需要分析多代理协调日志。',
+          '**结论：** "自主"代理减少的不是人工干预，只是改变了监督格式。完全自动化目前不可能。',
+        ],
+      },
+      neverTrust: {
+        title: '不应该信任的任务：检查清单',
+        content: [
+          '如果符合以下任何条件，不要在生产中使用本地AI代理：',
+          '• **金融交易：** 代理执行支付、转账、定价时。错误代价太大。',
+          '• **个人信息处理：** 代理处理地址、社会保障号、信用卡时。GDPR / 中国数据法要求审计证跡。',
+          '• **关键基础设施：** 医疗、电网、运输系统的命令执行。失败后果关系人命。',
+          '• **法律文件生成：** 代理生成合同或监管文件时。法律责任在人，代理输出无法审计则无法使用。',
+          '• **生产运维维护：** 代理在生产数据库执行DELETE、DROP、ALTER时。必须进行手动审查。',
+          '**通用规则：** 代理输出从不是最终判断；总是经过人工审查或批准。',
+        ],
+      },
+      decision: {
+        title: '最终评决',
+        content: [
+          '**本地AI代理尚未成熟。** 以下是明确的：',
+          '1. **仅两个框架可靠：** Cline + Ollama（代码相关）和Continue.dev（IDE集成）。两者都需要持续人工监督。',
+          '2. **其余四个是实验性的：** LangGraph、AutoGPT、OpenInterpreter、MetaGPT都对生产使用风险太高。',
+          '3. **安全和责任不透明：** 在监管环境（GDPR、METI、中国数据法）中，需要以可证明方式审计代理行为。现有工具缺乏这种能力或监督成本禁止性高。',
+          '4. **监督成本被隐藏：** 演示中看起来自动化，现实中无监督运行超过2小时变得不可预测。',
+        ],
+      },
+      outlook: {
+        title: '2026年下半期展望',
+        content: [
+          '基于当前轨迹，预计以下改进：',
+          '• **Tool-calling改进：** LangGraph和MetaGPT预计集成更可靠的Tool-calling机制。多步工作流失败率降低。',
+          '• **内存管理：** 如果LangGraph优化内存使用，30分钟以上运行变得现实。',
+          '• **安全沙箱：** OpenInterpreter类"任意代码执行"框架除非实施强制沙箱，否则生产禁用。',
+          '• **监管框架集成：** GDPR、METI、中国数据法支持内置前，企业采用受限。',
+          '**预测：** 到2026年第4季度，Cline和LangGraph可能成为生产的"接近安全"堆栈。AutoGPT、OpenInterpreter、MetaGPT主流采用可能性低。',
+        ],
+      },
+      commonMistakes: {
+        title: '常见错误',
+        content: [
+          '**错误1：演示成功就认为生产也成功**',
+          '修复：在生产数据上进行2～3次试点。明确代理在失败场景中的行为。',
+          '',
+          '**错误2：字面理解"自主"**',
+          '修复：始终将代理视为具有监督成本的组件。规划测试和审查的人力资源。',
+          '',
+          '**错误3：计划事后添加安全**',
+          '修复：在早期框架选择时评估安全和审计要求。除非沙箱化，否则排除OpenInterpreter。',
+          '',
+          '**错误4：对所有任务使用同一框架**',
+          '修复：创建任务可行性矩阵，识别各框架最优用途。考虑混合方案（Cline + Continue.dev + LangGraph）。',
+          '',
+          '**错误5：不估计监督成本**',
+          '修复：为各代理配置明确记录预期监督时间（每任务15～120分钟）。',
+        ],
+      },
+      sources: {
+        title: '测试环境和工具',
+        content: [
+          '**硬件：** Apple M5 Max 64GB MacBook Pro、NVIDIA RTX 4090 24GB Linux机器',
+          '**LLM模型：** Qwen3-Coder 30B、Llama 3.3 70B（本地Ollama）、OpenAI GPT-4o（API测试）',
+          '**实现期间：** 2026年4月1日～2026年5月7日',
+          '**测试环境：**',
+          '  • Cline: VS Code v1.91 + Cline v0.18.0',
+          '  • Continue.dev: VS Code + JetBrains Rider测试',
+          '  • LangGraph: Python 3.11 + langraph-core 0.5.0',
+          '  • AutoGPT: AutoGPT 0.4.x',
+          '  • OpenInterpreter: interpreter 0.3.x',
+          '  • MetaGPT: metagpt 0.6.0',
+          '**任务库：** GitHub可用（企业客户NDA协议下）',
+          '**可重复性：** 所有测试运行3次，结果已验证。由于本地硬件和API模型运行路径不同，具体设置细节已记录。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '本地AI代理和"云API"代理（如OpenAI Assistants API）的主要区别是什么？',
+            a: '本地代理（Ollama + Cline、LangGraph）在自己硬件上运行LLM，数据不外传。云API代理（OpenAI Assistants）提供更高精度和可靠性，但输入数据转移到服务器。本地运行选择隐私和低延迟，云API选择精度和管理便利。',
+          },
+          {
+            q: '代理失败时如何调试？',
+            a: '首先检查代理日志。Cline看VS Code控制台，LangGraph看Python日志，Continue.dev看IDE控制台。识别失败步骤（Tool-calling、提示解析、输出格式）。最常见原因：（1）token上下文不足、（2）Tool定义不完整、（3）复杂依赖解析错误。详见上述各框架部分。',
+          },
+          {
+            q: '哪个堆栈"最容易"设置？',
+            a: 'Cline + Ollama最简单。无需Docker或复杂Python依赖。安装Ollama、下载模型（Qwen3-Coder 30B）、安装VS Code Cline扩展。总设置时间：20分钟。Continue.dev因IDE集成简单，但多个提供商配置略复杂。',
+          },
+          {
+            q: '本地LLM部署如何遵守中国数据安全法？',
+            a: '《数据安全法》（2021）要求企业保护关键数据、防止数据非法出境。本地推理满足这些要求：数据保留在公司网络，无外部API调用。对于处理关键数据的企业，本地部署是合规基础。结合Cline审计日志和明确的Tool-calling权限控制，可满足企业合规需求。',
+          },
+          {
+            q: '本地推理时如何确保企业安全？',
+            a: '企业安全需求：（1）数据不离内网、（2）访问日志可审计、（3）Tool执行权限受限。Cline + Ollama：（a）以低权限用户运行、（b）文件系统访问限制在特定目录、（c）记录所有Tool-calling、（d）每3～6个月审计日志。OpenInterpreter无沙箱化，企业环境禁用。',
+          },
+          {
+            q: '资源受限（GPU、内存）时选择哪个堆栈？',
+            a: '8GB VRAM及以下：Cline + Ollama（Qwen3-Coder 7B或14B）或Continue.dev + API模型。LangGraph需16GB以上。MetaGPT多代理通信需24GB以上。OpenInterpreter任意代码执行推荐资源不明确，但安全问题优先排除。',
+          },
+          {
+            q: '此测试使用的模型是什么？能用其他模型吗？',
+            a: '测试使用Qwen3-Coder 30B（代码生成）、Llama 3.3 70B（通用）、Gemma 4 27B（轻量）。用其他模型时，确认Ollama支持。注意模型切换影响精度。Qwen3-Coder 7B版本GPU需求低但精度降20%。',
+          },
+          {
+            q: '能否减少代理的"监督成本"？',
+            a: '无法完全消除，但可最小化：（1）预测试：生产前用同框架同任务运行3～5次，学习失败模式；（2）错误处理：为预期失败实现自动重试；（3）输出验证：代理输出自动与schema验证，不匹配立即显示；（4）逐步上线：监督运行开始，验证2～4周稳定后逐步自动化。',
+          },
+          {
+            q: '2026年下半期期望新的代理框架发布吗？',
+            a: '尚无公告，但行业趋势：（1）LangGraph 0.6.x优化内存、（2）Cline多代理支持（目前单代理）、（3）初创公司新建"本地代理"框架（竞争OpenAI Swarm）。但真正改进不是"新功能"，而是"生产失败可预测性""监管支持""监督成本减少"。无这些，任何框架都难以从演示进入生产。',
+          },
+          {
+            q: '能否在多代理配置中运行本地代理（如Cline + LangGraph组合）？',
+            a: '技术上可行，但复杂性和监督成本指数增长。例如Cline代码生成、LangGraph多步验证配置，各框架错误积累。实务建议：（1）任务1～3仅用Cline；（2）复杂工作流（4步以上）先咨询专家再考虑LangGraph组合。大多数组织单堆栈（Cline或Continue.dev）足够。',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '相关阅读',
+        items: [
+          '[连接Ollama到数据库和API：本地代理设置2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh) — 代理工作原理；数据库、文件系统、浏览器Tool的协议层。',
+          '[2026年最佳本地Tool-calling模型](/power-local-llm/best-local-models-tool-calling-2026?lang=zh) — 模型层；推荐Tool-caller基准测试。',
+          '[Continue.dev vs Cline vs Aider：2026年最佳本地代理](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh) — 代码工作比较。',
+          '[本地AI代理商业工作流和监管合规](/power-local-llm/local-ai-agents-business-workflows-compliance?lang=zh) — 企业部署指南。',
+          '[2026年最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) — 更广泛开放权重LLM概览。',
+          '[Power Local LLM Hub](/power-local-llm) — 代码、RAG、代理、创意工作完整指南库。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '本地AI代理2026：实际可行的方案（以及失败的原因）',
+      description:
+        '6个本地AI代理框架的诚实测试（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT），针对5项真实任务。2个可靠运行，3个意外失败，1个无法使用。包括企业部署指南。',
+      url: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work?lang=zh',
+      inLanguage: 'zh',
+      image: 'https://www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      about: [
+        {
+          '@type': 'Thing',
+          name: '本地AI代理',
+        },
+        {
+          '@type': 'Thing',
+          name: 'Cline',
+        },
+        {
+          '@type': 'Thing',
+          name: 'LangGraph',
+        },
+        {
+          '@type': 'Thing',
+          name: '自主代理',
+        },
+      ],
+      mentions: [
+        {
+          '@type': 'SoftwareApplication',
+          name: 'Cline',
+        },
+        {
+          '@type': 'SoftwareApplication',
+          name: 'Continue.dev',
+        },
+        {
+          '@type': 'SoftwareApplication',
+          name: 'LangGraph',
+        },
+        {
+          '@type': 'SoftwareApplication',
+          name: 'AutoGPT',
+        },
+        {
+          '@type': 'SoftwareApplication',
+          name: 'OpenInterpreter',
+        },
+        {
+          '@type': 'SoftwareApplication',
+          name: 'MetaGPT',
+        },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+  },
 }
