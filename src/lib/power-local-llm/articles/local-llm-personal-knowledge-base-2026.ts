@@ -466,4 +466,1856 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Produktivitäts- und Wissens-Tools',
+    title: 'Persönliche Wissensdatenbank mit lokaler KI aufbauen: Stack-Guide 2026',
+    seoTitle: 'Persönliche KI-Wissensdatenbank: Stack-Guide 2026',
+    intro:
+      'Eine persönliche Wissensdatenbank (PKB) auf Basis lokaler KI besteht 2026 aus fünf Schichten: Capture (Web Clipper, E-Mail-Forwarder, Mobile Share Sheet), Speicherung (Markdown-Vault oder Dokumentenordner), Embeddings (lokales Modell via Ollama), Retrieval (RAG) und Schnittstelle (Chat oder semantische Suche). Drei Architekturen decken rund 95 % aller realen Builds ab — Obsidian-zentriert (notiz-zentrisch, skaliert bis ~50.000 Elemente), AnythingLLM-zentriert (dokumenten-zentrisch, skaliert bis ~100.000 Elemente) und ein eigener Stack aus Python + ChromaDB (engineer-zentrisch, skaliert über 1 Mio. Elemente). Die Hardware-Untergrenze ist ein Laptop mit 16 GB RAM; jenseits von 10.000 Elementen sollten Sie 32 GB einplanen. Die wichtigste Skalierungsentscheidung ist nicht das LLM — sondern ob Ihre Capture-Pipeline den Alltag auf dem Smartphone überlebt, denn dort entstehen die meisten Wissens-Items.',
+    metaDescription:
+      'Lokale KI-Wissensdatenbank 2026: 3 Architekturen (Obsidian, AnythingLLM, Python + ChromaDB). Skaliert bis 100.000+ Elemente. Capture, RAG, Sync, Backup.',
+    twitterDescription:
+      'Drei lokale KI-PKB-Architekturen 2026: Obsidian (~50K Elemente), AnythingLLM (~100K), Python + ChromaDB (1M+). Capture, RAG, Mobile Sync, Backup, Skalierung.',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Qwen3 7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+      'bge-m3',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (16 GB Unified Memory minimum, 32 GB empfohlen ab 10.000 Elementen)',
+      'PC mit RTX 3060 12 GB oder RTX 4060 8 GB',
+      'PC mit 32 GB RAM (CPU-only Fallback für große Vaults)',
+      'Heimserver / Mini-PC mit 64 GB RAM (eigener Python-Stack ab 100.000 Elementen)',
+    ],
+    audience:
+      'Wissensarbeitende, Forschende, Autoren und Engineers, die ein privates KI-durchsuchbares Archiv aus Notizen, Lesezeichen, E-Mails und Dokumenten aufbauen — typischerweise 1.000 bis 100.000 Elemente — ohne Inhalte an einen Cloud-Dienst zu senden.',
+    readTime: '15 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'lokale KI-Wissensdatenbank',
+    targetKeywords: [
+      'lokale KI Wissensdatenbank',
+      'lokales LLM Second Brain',
+      'private Wissensdatenbank KI',
+      'lokales RAG Wissensdatenbank',
+      'self-hosted KI Wissensdatenbank',
+      'persönliche Wissensdatenbank 2026',
+    ],
+    leadAnswerBlock:
+      '**Eine lokale KI-Wissensdatenbank besteht 2026 aus fünf Schichten — Capture, Speicherung, Embeddings, Retrieval, Schnittstelle — und Sie sollten eine von drei Referenzarchitekturen wählen, statt von Grund auf zu designen.** Verwenden Sie Obsidian + Smart Connections + Copilot for Obsidian + Ollama, wenn Sie täglich Notizen schreiben und vault-weite semantische Suche wünschen; das skaliert sauber bis ~50.000 Notizen auf einem 16-GB-Mac M3 Pro oder PC. Verwenden Sie AnythingLLM + Ollama, wenn Ihr Wissen vorwiegend als Dokumente vorliegt (PDFs, Exporte, Web-Clippings) statt als Notizen; das skaliert bis ~100.000 Dokumente und vereint Capture, RAG und Chat in einer App. Bauen Sie nur dann einen eigenen Python + ChromaDB + Llama 3.2 3B Stack, wenn Sie 100.000+ Elemente, Multi-User-Zugriff oder spezifische Schema-Anforderungen haben — der Wartungsaufwand ist real. Der eigentliche Engpass aller drei Architekturen ist Capture: Die meisten Wissens-Items entstehen mobil (Webseiten, Screenshots, Sprachnotizen, weitergeleitete E-Mails), und ein Stack ohne mobilen Capture-Pfad sammelt Staub, egal wie clever das Retrieval ist. Hardware-Untergrenze: 16 GB RAM; ab 10.000 Elementen 32 GB einplanen. Ab 100.000 Elementen Embeddings auf einen Heimserver auslagern.',
+    quickAnswerTop: {
+      de: {
+        question: 'Welche Architektur eignet sich 2026 am besten für eine lokale KI-Wissensdatenbank?',
+        answer:
+          'Für die meisten Anwender: Obsidian + Smart Connections + Copilot for Obsidian + Ollama (Llama 3.2 3B Chat, nomic-embed-text Embeddings). Skaliert bis ~50.000 Notizen auf einem 16-GB-Mac. Für dokumentenlastige Archive: AnythingLLM + Ollama in einer App, skaliert bis ~100.000 Dokumente. Für Engineers und Vaults mit 100.000+ Elementen: eigener Stack aus Python + ChromaDB + Llama 3.2 3B mit getrennten Capture-, Embedding- und Chat-Diensten. Hardware-Untergrenze 16 GB RAM; ab 10.000 Elementen 32 GB einplanen, ab 100.000 einen Heimserver. Capture ist der eigentliche Skalierungs-Engpass — entwerfen Sie Mobile Share Sheet, Web Clipper und E-Mail-Weiterleitung, bevor Sie das LLM optimieren.',
+        bullets: [
+          'Obsidian-zentriert — am besten für notiz-zentrische Workflows, skaliert bis ~50.000 Notizen, mindestens 16 GB RAM.',
+          'AnythingLLM-zentriert — am besten für dokumentenlastige PKBs (PDFs, Exporte), skaliert bis ~100.000 Dokumente, All-in-One-App.',
+          'Eigener Python + ChromaDB Stack — am besten für Engineers, skaliert über 1 Mio. Elemente, erfordert selbstverwaltete Dienste.',
+          'Empfohlene Chat-Modelle 2026: Llama 3.2 3B für 16-GB-Systeme, Phi-4 Mini für 8 GB, Qwen3 7B für Qualität ab 32 GB.',
+          'Empfohlenes Embedding-Modell: nomic-embed-text (768-dim, schnell) oder mxbai-embed-large (1024-dim, präziser); bge-m3 für mehrsprachige Archive.',
+          'Hardware-Untergrenze: Laptop mit 16 GB RAM; 32 GB ab 10.000 Elementen empfohlen; Heimserver mit 64 GB ab 100.000.',
+          'Capture ist der Engpass: Die meisten PKB-Items werden mobil erfasst (Webseiten, Screenshots, Sprachnotizen), aber am Desktop abgefragt. iOS Shortcuts → Obsidian, Working Copy (Git) oder a-Shell sind die drei mobilen Capture-Pfade.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Wichtige Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Quick Facts', anchor: '#quick-facts' },
+      { label: 'Welche Architektur sollten Sie bauen?', anchor: '#which-architecture' },
+      { label: 'Architektur-Vergleichstabelle', anchor: '#comparison-table' },
+      { label: 'Die fünf Schichten einer lokalen KI-PKB', anchor: '#five-layers' },
+      { label: 'Architektur A: Obsidian-zentriert', anchor: '#architecture-obsidian' },
+      { label: 'Architektur B: AnythingLLM-zentriert', anchor: '#architecture-anythingllm' },
+      { label: 'Architektur C: Eigener Python + ChromaDB Stack', anchor: '#architecture-custom' },
+      { label: 'Capture-Pipeline: Web, E-Mail, Mobil, Sprache', anchor: '#capture' },
+      { label: 'Mobile Capture: iOS Shortcuts, Working Copy, a-Shell', anchor: '#mobile-capture' },
+      { label: 'Skalierung: 1K, 10K, 100K Elemente', anchor: '#scaling' },
+      { label: 'Backup, Versionierung, Multi-Device-Sync', anchor: '#backup-sync' },
+      { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+      { label: 'Quellen', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Wählen Sie eine von drei Referenzarchitekturen, statt von Grund auf zu designen.** Obsidian-zentriert (notiz-zentrisch, ~50K Elemente), AnythingLLM-zentriert (dokumenten-zentrisch, ~100K Elemente) oder eigener Python + ChromaDB Stack (engineer-zentrisch, 1M+ Elemente). Architekturen zu mischen lohnt sich selten — der Integrationsaufwand dominiert.',
+          '**Eine lokale KI-PKB hat fünf Schichten: Capture, Speicherung, Embeddings, Retrieval, Schnittstelle.** Die meisten Anfängerfehler passieren in der Capture-Schicht, nicht im LLM. Wenn Items nicht aus Mobile und E-Mail in das System fließen, rettet kein noch so cleveres Retrieval den Build.',
+          '**Hardware-Untergrenze: 16 GB RAM.** Darunter müssen Sie zwischen Embedding-Modell und Chat-Modell wählen — beides geht nicht. Mit 16 GB lassen sich Llama 3.2 3B + nomic-embed-text parallel betreiben. Mit 32 GB können Sie auf Qwen3 7B aufrüsten oder mehrere Chat-Sitzungen führen. Ab 100.000 Elementen Embeddings auf einen Heimserver auslagern.',
+          '**Empfohlene Modelle 2026:** Chat — Llama 3.2 3B (Standard), Phi-4 Mini (8-GB-Systeme), Qwen3 7B (Qualität ab 32 GB); Embeddings — nomic-embed-text (768-dim, schnell), mxbai-embed-large (1024-dim, präziser), bge-m3 (mehrsprachig).',
+          '**Capture ist der Skalierungs-Engpass, nicht Retrieval.** Die meisten Wissens-Items entstehen mobil (Web-Clippings, Screenshots, Sprachnotizen, weitergeleitete E-Mails). Entwerfen Sie den Pfad Mobile Share Sheet → Vault, bevor Sie das LLM tunen. iOS Shortcuts → Obsidian / Working Copy / a-Shell sind die drei tragfähigen iOS-Pfade.',
+          '**Die Sync-Methode bestimmt, was auf Mobile funktioniert.** Obsidian Sync verarbeitet binäre Embedding-Indizes sauber; iCloud Drive korrumpiert sie plattformübergreifend; Git erfordert .gitignore-Disziplin und geräteweise Re-Indexing. Sync zuerst wählen, Plugins danach.',
+          '**Backup ist nicht optional.** Drei Schichten: Vault-Snapshot (Time Machine, Backblaze, restic), Git-Historie der Klartext-Inhalte und ein quartalsweiser Export von Embeddings + Metadaten als sauberer Wiederaufbaupfad. Embeddings sind regenerierbar, aber teuer — sichern Sie sie ab 10.000 Elementen ebenfalls.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Quick Facts',
+        items: [
+          '**Behandelte Architekturen:** Obsidian-zentriert, AnythingLLM-zentriert, eigener Python + ChromaDB Stack.',
+          '**LLM-Backend:** Ollama (empfohlen) — betreibt Chat- und Embedding-Modelle hinter einem lokalen Endpoint unter `http://localhost:11434`.',
+          '**Empfohlene Chat-Modelle 2026:** Llama 3.2 3B (16-GB-Systeme), Phi-4 Mini (8 GB), Qwen3 7B (ab 32 GB).',
+          '**Empfohlene Embedding-Modelle 2026:** nomic-embed-text (768-dim, schnell), mxbai-embed-large (1024-dim, präzise), bge-m3 (mehrsprachig).',
+          '**Element-Zielgrößen:** Obsidian ~50.000 Notizen, AnythingLLM ~100.000 Dokumente, eigener Python + ChromaDB Stack 1 Mio.+.',
+          '**Hardware-Untergrenze:** Laptop mit 16 GB RAM. Ab 10.000 Elementen: 32 GB empfohlen. Ab 100.000 Elementen: Heimserver mit 64 GB.',
+          '**Mobile Capture-Pfade (iOS):** Shortcuts → Obsidian, Shortcuts → Working Copy (Git), Shortcuts → a-Shell. Android: Tasker oder HTTP Shortcuts.',
+        ],
+      },
+      whichArchitecture: {
+        id: 'which-architecture',
+        title: 'Welche Architektur sollten Sie bauen?',
+        content:
+          '**Wählen Sie die Architektur, die zu Ihrem bestehenden Wissensfluss passt — nicht diejenige, die am leistungsstärksten klingt.** Wenn Sie bereits täglich Notizen schreiben, bauen Sie Obsidian-zentriert. Wenn Ihr Wissen überwiegend aus Dokumenten besteht (PDFs, Exporte, Web-Clippings), bauen Sie AnythingLLM-zentriert. Bauen Sie nur dann einen eigenen Python + ChromaDB Stack, wenn Sie wirklich 100.000+ Elemente haben oder Multi-User-Zugriff brauchen — die Wartungskosten sind real und unterhalb dieser Schwelle selten gerechtfertigt.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Notiz-zentrische Workflows wählen Obsidian + Smart Connections + Copilot + Ollama; dokumenten-zentrische Archive wählen AnythingLLM + Ollama; Engineers mit 100K+ Elementen wählen einen eigenen Python + ChromaDB Stack.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Drei Wege, ein Ziel. Wenn Sie ohnehin in einer Notiz-App leben, packt Obsidian KI-Funktionen um Ihre vorhandene Routine. Wenn Sie hauptsächlich PDFs und Webseiten sammeln, ist AnythingLLM eine einzelne App, die einliest, indexiert und chattet. Wenn Sie programmieren und volle Kontrolle wollen, lässt Sie Python + ChromaDB exakt das bauen, was Sie wollen — aber Sie warten es selbst. Wählen Sie den Weg, der zu Ihrer bestehenden Arbeitsweise passt; ändern Sie nicht Ihre Gewohnheiten, um zur Architektur zu passen.',
+          },
+        ],
+        decisionBlock: {
+          title: 'Entscheidung: Welche PKB-Architektur?',
+          localIf: [
+            'Sie nutzen bereits Obsidian oder wünschen einen notiz-zentrischen Workflow mit Markdown-Dateien → Obsidian-zentriert',
+            'Ihr Wissen besteht überwiegend aus PDFs, Exporten, Web-Clippings und E-Mail-Archiven → AnythingLLM-zentriert',
+            'Sie haben 100.000+ Elemente, eigene Schema-Anforderungen oder Multi-User-Zugriff → eigener Python + ChromaDB Stack',
+            'Sie wollen eine App, die Capture, Speicherung, RAG und Chat abdeckt → AnythingLLM-zentriert',
+            'Sie wollen volle Kontrolle über Chunking, Retrieval und Re-Ranking → eigener Python + ChromaDB Stack',
+          ],
+          cloudIf: [
+            'Sie brauchen GPT-4o-Klasse Reasoning bei jeder Anfrage und Ihr Archiv ist klein → Notion AI oder ChatGPT mit Custom GPTs (der lokale Stack ist bei Synthese rund 70 % so leistungsfähig)',
+            'Sie haben keinen Rechner mit 16 GB+ RAM und keinen Heimserver → Cloud-SaaS-PKB (Mem, Reflect)',
+            'Ihr Team braucht gleichzeitigen Multi-User-Zugriff und Sie wollen keine Dienste hosten → Cloud-Äquivalent',
+          ],
+          quick: [
+            'Standard für notiz-zentrische Anwender: Obsidian + Smart Connections + Copilot + Ollama',
+            'Standard für dokumenten-zentrische Anwender: AnythingLLM + Ollama',
+            'Engineer mit 100K+ Elementen: eigener Python + ChromaDB + Llama 3.2 3B Stack',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Starten Sie nicht mit dem eigenen Python-Stack, nur weil er leistungsfähiger klingt. Bauen Sie zuerst Obsidian-zentriert oder AnythingLLM-zentriert, betreiben Sie es zwei Monate, identifizieren Sie die Schicht, die nicht zu Ihrem Workflow passt, und ersetzen Sie erst dann diese eine Schicht durch eine eigene Komponente. Jedes PKB-Projekt, das „from scratch in Python" begonnen und länger als sechs Monate gelaufen ist, konvergierte am Ende ohnehin zu Obsidian- oder AnythingLLM-Form.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Architektur-Vergleichstabelle',
+        content:
+          '**Die drei Referenzarchitekturen unterscheiden sich auf fünf Achsen, die für die meisten Builder relevant sind: Setup-Komplexität, Element-Obergrenze, Mobile Sync, Capture-Flexibilität und Wartungsaufwand.** Die Setup-Komplexität wächst grob linear mit der Kontrolle — und ebenso die Wartungskosten.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidian ist mittelkomplex bei ~50K Elementen, AnythingLLM ist niedrigkomplex bei ~100K Elementen, und ein eigener Python + ChromaDB Stack ist hochkomplex, skaliert aber über 1 Mio. Elemente.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AnythingLLM ist am einfachsten einzurichten und skaliert von den beiden „fertigen" Optionen am weitesten — ist aber meinungsstark, wie Dokumente organisiert sein sollten. Obsidian liefert die ausdrucksstärkste Notiz-Schicht und ein aktives Plugin-Ökosystem, gegen einen leicht höheren Setup-Aufwand. Eigenes Python ist unbegrenzt, aber Sie warten alles: Chunking, Re-Ranking, Deduplikation, Sync, Backups. Wählen Sie nach Ihrer Geduld für Wartung, nicht allein nach Element-Anzahl.',
+          },
+        ],
+        columns: ['Architektur', 'Setup-Komplexität', 'Max. Elemente', 'Mobile Sync', 'Am besten für'],
+        rows: [
+          { 'Architektur': 'Obsidian-zentriert', 'Setup-Komplexität': 'Mittel', 'Max. Elemente': '~50.000', 'Mobile Sync': 'Ja (Obsidian Sync; iCloud / Git mit Einschränkungen)', 'Am besten für': 'Notiz-zentrische Power-User mit täglicher Schreibroutine' },
+          { 'Architektur': 'AnythingLLM-zentriert', 'Setup-Komplexität': 'Niedrig', 'Max. Elemente': '~100.000', 'Mobile Sync': 'Eingeschränkt (Web-UI vom Smartphone via LAN / Tailscale)', 'Am besten für': 'Dokumentenlastige PKBs (PDFs, Exporte, Web-Clippings)' },
+          { 'Architektur': 'Eigener Python + ChromaDB', 'Setup-Komplexität': 'Hoch', 'Max. Elemente': '1 Mio.+', 'Mobile Sync': 'Manuell (eigene API + mobiler Client erforderlich)', 'Am besten für': 'Engineers mit voller Kontrolle + Multi-User' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Mobile Sync ist die am stärksten unterschätzte Vergleichsachse. AnythingLLM ist technisch einfacher einzurichten als Obsidian, aber auf Mobile heißt das „LAN-Web-UI in Safari öffnen" — keine native Erfahrung. Obsidian Mobile, kombiniert mit Obsidian Sync, liefert Ihnen eine nahezu native iOS- / Android-App mit Offline-Lesen. Wenn mobiles Capture und Lesen wichtig sind, gewichten Sie Obsidian höher als die Tabelle vermuten lässt.',
+          },
+        ],
+      },
+      fiveLayers: {
+        id: 'five-layers',
+        title: 'Die fünf Schichten einer lokalen KI-PKB',
+        content:
+          '**Jede lokale KI-PKB hat unabhängig von der Architektur dieselben fünf Schichten: Capture, Speicherung, Embeddings, Retrieval, Schnittstelle.** Fehler entstehen meist, weil eine Schicht nicht zu den anderen passt — am häufigsten ein anspruchsvolles Retrieval gepaart mit einer kaputten Capture-Pipeline, die niemand benutzt.',
+        numberedItems: [
+          {
+            title: 'Capture',
+            whyItMatters: 'Wie Items ins System gelangen. Web Clipper, E-Mail-Forwarder, Mobile Share Sheet, Sprachnotiz, manuelles Einfügen. Die am häufigsten übersprungene Schicht in Anfänger-Builds — und die Schicht, die entscheidet, ob das System den Alltag überlebt. Wenn Capture mobil länger als 5 Sekunden dauert, sammelt das System Staub.',
+          },
+          {
+            title: 'Speicherung',
+            whyItMatters: 'Wo Items auf der Platte liegen. Markdown-Vault (Obsidian, Logseq), Dokumentenordner + Datenbank (AnythingLLM) oder Dateisystem + Manifest (eigenes Python). Wählen Sie ein Speicherformat, das jeden Tool-Wechsel überlebt — Klartext-Markdown ist am portabelsten; binäre Datenbanken sind es am wenigsten.',
+          },
+          {
+            title: 'Embeddings',
+            whyItMatters: 'Vektordarstellungen von Items für die semantische Suche. Erzeugt von einem lokalen Modell (nomic-embed-text oder mxbai-embed-large via Ollama). Das Embedding-Modell lässt sich später wechseln, aber die Migrationskosten lauten „alles neu embedden" — einmal wählen, dabei bleiben.',
+          },
+          {
+            title: 'Retrieval',
+            whyItMatters: 'Wie Items zur Abfragezeit gefunden werden. Top-k-Vektorsuche, optional Re-Ranking, optional Metadaten-Filter (Tags, Daten, Quellen). Der Qualitätsunterschied zwischen einem naiven Top-5 und einem getunten Top-20-mit-Re-Ranker ist der Unterschied zwischen „nützlich" und „magisch".',
+          },
+          {
+            title: 'Schnittstelle',
+            whyItMatters: 'Wie Sie abfragen und lesen. Sidebar (Smart Connections), Chat (Copilot, AnythingLLM), CLI (eigenes Python) oder API. Die meisten Anwender greifen standardmäßig zum Chat — aber eine Sidebar mit verwandten Notizen bringt vergessenes Material hervor, das Chat nicht findet, weil Sie nicht wissen, wonach Sie fragen sollen.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Ein häufiges Build-Muster, das scheitert: das leistungsstärkste Retrieval (eigene Hybridsuche mit Re-Ranking), das klügste Chat-Modell (Qwen3 7B) — und Capture wird ignoriert. Drei Wochen später hat der Vault 47 Items, weil mobil nichts hineinfließt. Die Korrektur ist immer dieselbe: Retrieval vereinfachen, Chat vereinfachen, Capture reparieren und akzeptieren, dass 80 % des Werts daraus entstehen, dass Items überhaupt im System landen.',
+          },
+        ],
+      },
+      architectureObsidian: {
+        id: 'architecture-obsidian',
+        title: 'Architektur A: Obsidian-zentriert',
+        content:
+          '**Obsidian + Smart Connections + Copilot for Obsidian + Ollama ist 2026 die Standardarchitektur für notiz-zentrische Workflows.** Sie skaliert sauber bis ~50.000 Notizen auf einem 16-GB-Mac M3 Pro oder PC, unterstützt mobiles Lesen via Obsidian Mobile und hält alles in Klartext-Markdown, das Sie zu jedem zukünftigen Tool mitnehmen können.',
+        items: [
+          '**Speicherung:** Markdown-Dateien in einem Ordner („Vault"). Klartext, einfache Ordner, keine Datenbank. Übersteht Tool-Migration.',
+          '**Capture:** Obsidian Web Clipper (Browser-Erweiterung), Obsidian Mobile Share Sheet (iOS / Android), E-Mail-zu-Obsidian via Mailspike oder ein eigenes IFTTT-Rezept, manuelles Einfügen.',
+          '**Embeddings:** Smart Connections Plugin → Ollama unter `http://localhost:11434/api/embeddings` → nomic-embed-text (Standard) oder mxbai-embed-large (präziser). Index liegt in `.smart-env/` innerhalb des Vaults.',
+          '**Retrieval:** Smart Connections Sidebar (Verwandte-Notizen-Ansicht) + Copilot for Obsidian Vault-QA-Modus (RAG über den Vault für Chat-Anfragen). Beide nutzen den Embedding-Index.',
+          '**Schnittstelle:** Smart Connections Sidebar (passive Entdeckung) + Copilot Chat-Panel (aktive Anfragen) + Text Generator Templates (wiederholbare Workflows wie tägliche Zusammenfassungen).',
+          '**Setup-Zeit:** ~30 Min. (Ollama installieren, Modelle pullen, drei Plugins installieren, Endpoints konfigurieren, initialen Index aufbauen lassen).',
+          '**Hardware:** mindestens 16 GB RAM (Llama 3.2 3B + nomic-embed-text parallel). 32 GB empfohlen ab 10.000 Notizen. SSD dringend empfohlen — Index-Neuaufbau ist auf HDDs I/O-gebunden.',
+          '**Element-Obergrenze:** ~50.000 Notizen praktikabel; getestet bis 20.000 mit Sub-Sekunden-Inkrement-Reindex. Ab 50K+ Notizen läuft der Initial-Index 4–8 Stunden, und Sie sollten Sub-Vaults erwägen.',
+          '**Am besten für:** Anwender mit täglicher Schreibroutine, Markdown-First-Vorlieben und dem Wunsch nach einer „Denkpartner"-Sidebar, die vergessene Notizen hervorholt.',
+          '**Nicht geeignet für:** Anwender, deren Wissen überwiegend aus PDFs und Web-Clippings besteht (AnythingLLM-zentriert wählen); Anwender, die eine einzelne All-in-One-App wünschen (Obsidian-zentriert ist „Obsidian + 3 Plugins + Ollama").',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Eine Vertiefung der Plugin-Schicht dieser Architektur (welche 5 Plugins, Konfigurationsschritte, Vault-Skalierungswerte) finden Sie im [Obsidian + Local LLM Plugin-Guide](/power-local-llm/local-llm-with-obsidian-2026?lang=de). Diese Seite behandelt die Architektur; der Plugin-Guide behandelt die Konfiguration.',
+          },
+        ],
+      },
+      architectureAnythingllm: {
+        id: 'architecture-anythingllm',
+        title: 'Architektur B: AnythingLLM-zentriert',
+        content:
+          '**AnythingLLM + Ollama ist die All-in-One-Option: Capture, Speicherung, RAG und Chat sind in einer Desktop- oder selbstgehosteten App gebündelt.** Sie skaliert bis ~100.000 Dokumente (gemischt PDFs, Web-Clippings, Exporte) und ist die richtige Wahl, wenn Ihr Wissen überwiegend als Dokumente und nicht als Notizen entsteht.',
+        items: [
+          '**Speicherung:** AnythingLLM-interne Datenbank (standardmäßig SQLite; Postgres für Multi-User Self-Hosting). Dokumente werden über die UI eingelesen; Originale können auch in einem Ordner verbleiben, den Sie spiegeln.',
+          '**Capture:** In-App-Upload (PDFs / Dateien per Drag & Drop in einen Workspace), Browser-Erweiterung für Webseiten, öffentliche API für programmatische Ingestion (`POST /api/v1/document/upload`), E-Mail-Forwarder via offizielle Integration oder eigenes Relay.',
+          '**Embeddings:** AnythingLLM nutzt Ihren konfigurierten Embedding-Provider — wählen Sie „Ollama" → Endpoint `http://localhost:11434` → Modell `nomic-embed-text`. Embeddings im integrierten Vector Store (standardmäßig LanceDB; ChromaDB / Pinecone optional).',
+          '**Retrieval:** RAG über den Workspace. Konfigurierbare Chunk-Größe, Top-k-Retrieval, optionales Re-Ranking. Mehrere Workspaces erlauben Partitionierung nach Thema (z. B. „Arbeit", „Lesen", „Projekte").',
+          '**Schnittstelle:** AnythingLLM Web-UI (funktioniert in Desktop- und Mobile-Browsern), öffentliche API für eigene Frontends, OpenAI-kompatibler Endpoint, um andere Tools an Ihre PKB anzubinden.',
+          '**Setup-Zeit:** ~15 Min. (AnythingLLM Desktop oder Docker installieren, auf Ollama zeigen, Dokumente hineinziehen).',
+          '**Hardware:** mindestens 16 GB RAM. 32 GB empfohlen ab 10.000 Dokumenten. AnythingLLM ist bei gleicher Element-Anzahl speichersparsamer als Obsidian + Plugins, weil ein Prozess statt zwei läuft.',
+          '**Element-Obergrenze:** ~100.000 Dokumente in einem einzigen Workspace; ab 50K in mehrere Workspaces partitionieren, um die Retrieval-Latenz unter ~1 Sek. zu halten.',
+          '**Am besten für:** Anwender mit PDF-lastigen Archiven, Web-Clipping-lastigem Capture und Vorliebe für eine App statt eines Plugin-Stacks. Auch die richtige Wahl für kleine Teams, die eine geteilte PKB selbst hosten.',
+          '**Nicht geeignet für:** Anwender, die eine notiz-zentrische Schreibfläche wollen (Obsidian); Anwender, die ihre Speicherung als Klartext-Markdown besitzen wollen (AnythingLLMs Vector Store ist intern).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Eine Schritt-für-Schritt-Einrichtung der hier verwendeten RAG-Schicht (Ollama + AnythingLLM, Ingestion, Chunk-Tuning) finden Sie im Walkthrough [Local RAG on Your PDFs in 30 Minutes](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=de). Zur Skalierung von RAG über Spielzeugbeispiele hinaus auf 1.000+ PDFs siehe [Chat With 1000+ PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally?lang=de).',
+          },
+        ],
+      },
+      architectureCustom: {
+        id: 'architecture-custom',
+        title: 'Architektur C: Eigener Python + ChromaDB Stack',
+        content:
+          '**Ein eigener Python + ChromaDB + Ollama Stack ist nur dann die richtige Wahl, wenn Sie tatsächlich 100.000+ Elemente, Multi-User-Anforderungen oder spezifische Schema-Anforderungen haben, die Standard-Tools nicht abbilden können.** Die Wartungskosten sind real: Chunking, Deduplikation, Re-Ranking, Sync, Backup — Sie verantworten alles selbst.',
+        items: [
+          '**Speicherung:** Dateisystem (ein Ordner pro Quelle: `notes/`, `pdfs/`, `web/`, `email/`) + ein Metadaten-Manifest (SQLite oder JSONL). Quelldateien bleiben in offenen Formaten, damit Sie Retrieval-Schichten ohne erneutes Einlesen austauschen können.',
+          '**Capture:** Skripte, ausgelöst von Webhooks (Web Clipper → HTTP-Endpoint → Datei schreiben), E-Mail-Forwarder → IMAP-Poller → Datei schreiben, Mobile Share Sheet → Tailscale-Endpoint → Datei schreiben. Jeder Capture-Pfad ist ein kleiner Python-Service.',
+          '**Embeddings:** ChromaDB (Local Mode, persistiert auf Platte) + Ollama-Embeddings über den OpenAI-kompatiblen Endpoint. Re-Embedding bei Datei-Änderung über einen Watchdog-Prozess. ChromaDB skaliert mit HNSW-Indexing auf einer einzelnen Maschine bis in die Millionen Vektoren.',
+          '**Retrieval:** ChromaDB Top-k-Ähnlichkeit + ein Re-Ranker (BGE Re-ranker oder lokales Cohere-Äquivalent) + Metadaten-Filter (Datumsbereich, Tags, Quelle). Optional Hybridsuche mit BM25 über Chunks für Exakt-Term-Matching.',
+          '**Schnittstelle:** beliebige Kombination aus: kleinem FastAPI-Service mit OpenAI-kompatiblem `/v1/chat/completions`-Endpoint, Streamlit- / Gradio-UI, CLI oder allen drei. Open WebUI davorschalten, um eine polierte Chat-Oberfläche ohne UI-Code zu erhalten.',
+          '**Setup-Zeit:** ~1 Tag für eine lauffähige v1; ~2 Wochen Iteration, um Chunking, Retrieval-Qualität und Capture-Pipelines auf Ihre Daten zu tunen.',
+          '**Hardware:** Laptop mit 32 GB RAM für die Entwicklung; Heimserver mit 64 GB RAM ab 100.000 Elementen, damit der Embedding-Service nicht mit Ihrem Laptop konkurriert. Eine dedizierte GPU (RTX 4060 oder besser) ab 500K Elementen für Chat-Durchsatz.',
+          '**Element-Obergrenze:** 1 Mio.+ Elemente praktikabel mit HNSW + Sharding; der Engpass verschiebt sich von Retrieval zu Capture-Pipeline-Zuverlässigkeit und Re-Embedding-Kosten bei Schema-Änderungen.',
+          '**Am besten für:** Engineers, die den Stack selbst besitzen wollen, Teams mit eigenem Schema (z. B. „jedes Item hat einen Confidence Score, eine Quelle und einen Autor") oder Anwender, die in Obsidian oder AnythingLLM an harte Grenzen stoßen (50K bzw. 100K).',
+          '**Nicht geeignet für:** Nicht-Engineers; alle, die die Wartungskosten unterschätzen; Anwender, deren Use Case bereits von einer Standardlösung abgedeckt wird.',
+        ],
+        promptExamples: [
+          {
+            label: 'ChromaDB-Ingestion (Python-Skizze)',
+            text: 'import chromadb, ollama, pathlib\nclient = chromadb.PersistentClient(path="./chroma")\ncoll = client.get_or_create_collection("kb")\nfor p in pathlib.Path("vault").rglob("*.md"):\n    text = p.read_text()\n    emb = ollama.embeddings(model="nomic-embed-text", prompt=text)["embedding"]\n    coll.upsert(ids=[str(p)], embeddings=[emb], documents=[text], metadatas=[{"source": str(p)}])',
+          },
+          {
+            label: 'Abfrage mit Re-Ranking (Skizze)',
+            text: 'q = "What did I write about local RAG sync?"\nq_emb = ollama.embeddings(model="nomic-embed-text", prompt=q)["embedding"]\nhits = coll.query(query_embeddings=[q_emb], n_results=20)\n# pass hits["documents"] through a re-ranker, keep top 5\n# send top 5 + question to Llama 3.2 3B via Ollama chat endpoint',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Das häufigste Versagensmuster in eigenen Builds: das gesamte Archiv bei jeder Code-Änderung neu zu embedden, weil das Schema nicht stabil ist. Fixieren Sie Embedding-Modell und Chunk-Größe, bevor Sie mehr als ~5.000 Elemente einlesen. Eine Migration von nomic-embed-text 768-dim zu mxbai-embed-large 1024-dim bei 100K Elementen kostet Stunden Compute und bricht die ChromaDB-Collection — Dimensionen lassen sich nicht mischen.',
+          },
+        ],
+      },
+      capture: {
+        id: 'capture',
+        title: 'Capture-Pipeline: Web, E-Mail, Mobil, Sprache',
+        content:
+          '**Die Capture-Schicht entscheidet, ob Ihre PKB den Alltag überlebt. Die meisten Wissens-Items entstehen außerhalb des Desktops — mobil, in E-Mail, in Sprachnotizen — und eine Capture-Pipeline, die zuerst eine Desktop-App öffnen verlangt, wird umgangen.** Bauen Sie für die vier Hauptzuflüsse und akzeptieren Sie, dass 80 % der Items mobil ankommen.',
+        items: [
+          '**Web Clipper (Desktop + Mobile):** Obsidian Web Clipper, AnythingLLM Browser-Erweiterung oder ein eigenes Bookmarklet, das die aktuelle Seite an Ihren Capture-Endpoint POSTet. Mobile Share Sheet → Web-Clipper-Erweiterung → Vault.',
+          '**E-Mail-Forwarder:** dedizierte Adresse (z. B. `kb@ihre-domain.de`) + IMAP-Poller → Datei schreiben. Leiten Sie die E-Mails weiter, die Sie behalten möchten; der Poller erledigt die Ingestion. Verwenden Sie ein Quelle-Präfix im Dateinamen, damit das Retrieval nach Sender filtern kann.',
+          '**Mobile Share Sheet:** der meistgenutzte Capture-Pfad. iOS Share → Obsidian (schreibt eine Markdown-Datei), iOS Share → Working Copy (committet zu Git), iOS Share → eigener Shortcut (POST an Ihre Capture-API). Android: HTTP Shortcuts oder Tasker.',
+          '**Sprachnotizen:** AudioPen-artiges Capture wird 2026 zunehmend gängig. Auf dem Smartphone aufnehmen → lokal mit Whisper.cpp oder über einen selbstgehosteten Whisper-Service transkribieren → Transkript als Markdown-Datei schreiben → embedden.',
+          '**Manuelles Einfügen:** der Fallback. Funktioniert immer, skaliert nie. Verwenden Sie es für den Long Tail.',
+          '**Screenshot-OCR:** Screenshots sind ein verlustbehaftetes Capture-Format. Nutzen Sie Apple Live Text auf iOS oder eine lokale OCR-Pipeline (Tesseract, Apple Vision, EasyOCR), um Text zu extrahieren + eine Markdown-Datei mit Bild und OCR-Text zu schreiben.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Auditieren Sie Ihre bestehenden Capture-Gewohnheiten, bevor Sie die Pipeline entwerfen. Schauen Sie, was Sie bereits speichern: Browser-Bookmarks, Screenshots, weitergeleitete E-Mails, Sprachnotizen. Die PKB-Capture-Schicht sollte diese bestehenden Zuflüsse spiegeln — wenn Sie ohnehin ständig Screenshots machen, bauen Sie den OCR-Pfad; wenn Sie ohnehin E-Mails an sich selbst weiterleiten, bauen Sie den E-Mail-Forwarder. Neue Gewohnheiten hinzuzufügen („ab jetzt kopiere ich jeden Artikel manuell in die KB") funktioniert nie.',
+          },
+        ],
+      },
+      mobileCapture: {
+        id: 'mobile-capture',
+        title: 'Mobile Capture: iOS Shortcuts, Working Copy, a-Shell',
+        content:
+          '**iOS hat 2026 drei tragfähige Capture-Pfade in eine lokale KI-PKB: Shortcuts → Obsidian, Shortcuts → Working Copy (Git) oder Shortcuts → a-Shell (skriptgesteuert).** Jeder passt natürlicherweise zu einer der drei Referenzarchitekturen. Wählen Sie den Pfad, dessen Sync-Modell zu Ihrer Gesamtarchitektur passt.',
+        items: [
+          '**Shortcuts → Obsidian (Obsidian-zentriert):** der Obsidian-Shortcut „An Notiz anhängen" schreibt den erfassten Inhalt direkt in den Vault. Sync via Obsidian Sync (kostenpflichtig, empfohlen) oder iCloud Drive (kostenlos, mit Einschränkungen). Am besten für notiz-zentrische Workflows.',
+          '**Shortcuts → Working Copy (Git):** der erfasste Inhalt wird in ein Working-Copy-Repository auf dem iPhone geschrieben, automatisch committet und gepusht. Der Desktop pullt. Kostenlos, robust, funktioniert mit jedem Markdown-Vault. Hinweis: Working Copy ist kostenpflichtig (einmalig ca. 22 €). Am besten für Git-synchronisierte Vaults.',
+          '**Shortcuts → a-Shell:** a-Shell ist ein kostenloses iOS-Terminal, das Skripte ausführt. Bauen Sie einen Shortcut, der den erfassten Text an ein a-Shell-Skript leitet, das eine Datei schreibt und entweder via `git` committet, via `rsync` über Tailscale synchronisiert oder zu Ihrem eigenen Capture-Endpoint hochlädt. Am besten für engineer-gebaute Eigenarchitekturen.',
+          '**Android-Pendants:** Tasker + Termux + Git als Pendant zum iOS Working Copy Pfad. HTTP Shortcuts für den Custom-Endpoint-Pfad. Obsidian Mobile Share Sheet für den Obsidian-Pfad.',
+          '**Latenzbudget:** Mobile Capture sollte Ende-zu-Ende in unter 5 Sekunden abgeschlossen sein (Share Sheet → Datei geschrieben / committet / hochgeladen). Alles Langsamere und der Anwender öffnet die App einmal und nie wieder.',
+          '**Offline-Capture:** alle drei iOS-Pfade puffern offline (Shortcuts puffert, Working Copy puffert Commits, a-Shell-Skripte können lokal schreiben und später syncen). Essentiell für Capture in Flugzeugen, im ÖPNV und in ländlichen Gebieten.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Bauen Sie keinen mobilen Capture-Pfad, der voraussetzt, dass der Desktop online ist (z. B. POST an einen Tailscale-geschützten Endpoint, der nur erreichbar ist, wenn Ihr Laptop wach ist). Sie verlieren Captures während Meetings, im Sleep-Modus und nachts. Betreiben Sie den Capture-Endpoint entweder auf einem dauerhaft laufenden Heimserver / NAS oder schreiben Sie in einen Eventually-consistent-Store (Obsidian Sync, Git, iCloud), der offline puffert.',
+          },
+        ],
+      },
+      scaling: {
+        id: 'scaling',
+        title: 'Skalierung: 1K, 10K, 100K Elemente',
+        content:
+          '**Die Skalierung einer lokalen KI-PKB hat drei Regimes: Unter 1.000 Elementen ist alles auf jedem modernen Laptop schnell; bei 1.000–10.000 Elementen wird der Embedding-Index zu einem realen Artefakt, das verwaltet werden muss; ab 10.000 Elementen wird Hardware zum Engpass und die Capture-Pipeline-Zuverlässigkeit dominiert das Ergebnis.** Realistische Werte unten gehen von Mac M3 Pro / RTX 4060 PC mit nomic-embed-text und Llama 3.2 3B aus.',
+        columns: ['Element-Anzahl', 'Empfohlene Architektur', 'Initialer Embedding-Lauf', 'Hardware', 'Hinweise'],
+        rows: [
+          { 'Element-Anzahl': '1.000 Elemente', 'Empfohlene Architektur': 'Beliebige der drei', 'Initialer Embedding-Lauf': '~2 Min.', 'Hardware': 'Laptop mit 16 GB RAM', 'Hinweise': 'Alles fühlt sich sofort an. Architekturwahl rein nach Workflow-Passung.' },
+          { 'Element-Anzahl': '10.000 Elemente', 'Empfohlene Architektur': 'Obsidian oder AnythingLLM', 'Initialer Embedding-Lauf': '~25 Min.', 'Hardware': 'Laptop mit 16 GB RAM (32 GB empfohlen)', 'Hinweise': 'Embedding-Index ~150–250 MB. Re-Embed-Zeit bei Bearbeitungen sub-sekündlich. Sweet Spot für die meisten Wissensarbeitenden.' },
+          { 'Element-Anzahl': '50.000 Elemente', 'Empfohlene Architektur': 'AnythingLLM oder eigenes Python', 'Initialer Embedding-Lauf': '~3 Stunden', 'Hardware': 'Laptop mit 32 GB RAM oder Heimserver', 'Hinweise': 'Initial-Index läuft über Nacht. Ab hier in Sub-Vaults / Workspaces aufteilen. Disk-Verbrauch ~1,5–2 GB für Embeddings.' },
+          { 'Element-Anzahl': '100.000 Elemente', 'Empfohlene Architektur': 'AnythingLLM (Multi-Workspace) oder eigenes Python', 'Initialer Embedding-Lauf': '6–8 Stunden', 'Hardware': 'mindestens 32 GB RAM; Heimserver bevorzugt', 'Hinweise': 'Embeddings auf einen dedizierten Heimserver auslagern. Capture-Pipeline-Zuverlässigkeit ist nun der primäre Fehlermodus, nicht Retrieval.' },
+          { 'Element-Anzahl': '500.000+ Elemente', 'Empfohlene Architektur': 'Eigenes Python + ChromaDB', 'Initialer Embedding-Lauf': '24+ Stunden', 'Hardware': 'Heimserver mit 64 GB RAM + dedizierte GPU', 'Hinweise': 'Sharding, Deduplikation und inkrementelle Re-Embed-Pipelines werden notwendig. Standard-Tools passen nicht mehr.' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die initialen Embedding-Kosten sind eine Einmalrechnung. Nach dem ersten Index werden nur geänderte Items neu embeddet — meist in unter einer Sekunde pro Save, selbst bei 100K Elementen. Die langsame erste Erfahrung ist real, aber nicht wiederkehrend. Lassen Sie den Initial-Index über Nacht auf einem netzgespeisten Gerät laufen und vergessen Sie ihn.',
+          },
+        ],
+      },
+      backupSync: {
+        id: 'backup-sync',
+        title: 'Backup, Versionierung, Multi-Device-Sync',
+        content:
+          '**Eine lokale KI-PKB benötigt drei Backup-Schichten: Vault-Snapshots (Time Machine, Backblaze, restic), Git-Historie der Klartext-Inhalte und einen quartalsweisen Export von Embeddings und Metadaten als sauberen Wiederaufbaupfad.** Embeddings sind technisch regenerierbar, aber bei 100K+ Elementen kostet die Regeneration Stunden — sichern Sie sie ebenfalls.',
+        items: [
+          '**Vault-Snapshots (Dateisystem-Ebene):** Time Machine (macOS) oder restic (Linux) alle 24 Stunden. Backblaze oder rsync.net für Off-Site. Erfasst alles inklusive Embeddings.',
+          '**Git-Historie (nur Inhalte):** Klartext-Markdown-Dateien in einem Git-Repo committet (lokal + GitHub / Gitea privat). Fügen Sie `.smart-env/`, `vector_store/` und alle weiteren binären Index-Ordner zu `.gitignore` hinzu. Git liefert pro-Notiz-Versionshistorie; Vault-Snapshots liefern System-Rollback.',
+          '**Embedding-Export (quartalsweise):** Vector Store in ein portables Format exportieren (ChromaDB → Parquet, Smart Connections → JSON-Dump, AnythingLLM → integrierter Export). Die letzten zwei Exporte off-site aufbewahren. Falls ein Vault-Snapshot fehlschlägt oder der Embedding-Index korrumpiert, ist dies Ihr schneller Wiederaufbaupfad.',
+          '**Multi-Device-Sync — Obsidian-zentriert:** Obsidian Sync verarbeitet Klartext + binäre Indizes sauber (Ende-zu-Ende-verschlüsselt). iCloud Drive funktioniert für Klartext, korrumpiert aber binäre Indizes plattformübergreifend. Git via Working Copy / Termux funktioniert nur für Klartext — Re-Index pro Gerät.',
+          '**Multi-Device-Sync — AnythingLLM-zentriert:** AnythingLLM als selbstgehosteten Docker-Container auf einem Heimserver betreiben. Alle Geräte verbinden sich per LAN oder Tailscale mit derselben Instanz. Kein Client-seitiger Sync nötig.',
+          '**Multi-Device-Sync — eigenes Python:** Die Architektur, die Sie bauen, bestimmt das. Die meisten Builds verwenden einen zentralen API-Service (FastAPI auf einem Heimserver) + Clients, die Captures POSTen und Anfragen GETten. Tailscale liefert die Netzwerkschicht.',
+          '**Migration auf einen neuen Rechner:** Vault-Snapshot wiederherstellen → Git-Repo wiederherstellen → Ollama neu starten → Embedding-Indexer neu starten. Embedding-Regeneration ist automatisch, falls Sie den Embedding-Export-Schritt übersprungen haben; manueller Re-Index, falls Sie ihn gesichert haben, das Format aber plattform-spezifisch ist.',
+          '**Selektives Teilen:** Für das Teilen von Vault-Teilen (z. B. ein Forschungsprojekt mit Mit-Autoren) Sub-Vaults oder ein Tagged-Export-Skript verwenden. Den ganzen Vault nicht teilen — die meisten lokalen KI-PKBs sammeln sensible Items (medizinisch, finanziell, persönlich), die den lokalen Stack nie verlassen sollten.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Testen Sie Ihre Wiederherstellung einmal pro Quartal. Die meisten „Ich habe Backups"-Aussagen sind Wunschdenken — der Test ist „Kann ich meinen Vault auf einem frischen Laptop in unter 2 Stunden wiederherstellen?" Führen Sie den Test durch. Beim ersten Mal werden Sie feststellen, dass eine der drei Schichten (Snapshot, Git, Embedding-Export) seit sechs Monaten falsch konfiguriert war.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler',
+        items: [
+          '**Die Retrieval-Schicht vor der Capture-Schicht designen.** Eine eigene Hybridsuche mit Re-Ranking ist bei 47 Items im Vault verschwendet. Bauen Sie zuerst Capture, akzeptieren Sie naives Top-5-Retrieval und optimieren Sie Retrieval erst, wenn der Vault 1.000+ Items hat und Sie Retrieval-Qualität an realen Anfragen messen können.',
+          '**Architekturen mischen.** „Obsidian für Notizen + AnythingLLM für PDFs + eigenes Python für E-Mails" klingt sauber, aber der Integrationsaufwand dominiert. Wählen Sie eine Architektur, akzeptieren Sie die Einschränkungen und ergänzen Sie höchstens einen einzigen Connector, wenn unbedingt nötig (z. B. AnythingLLM, das einen Obsidian-Vault-Ordner read-only einliest).',
+          '**Embedding-Modell wechseln, ohne das Archiv neu zu embedden.** Das Mischen von nomic-embed-text 768-dim und mxbai-embed-large 1024-dim Vektoren im selben Store bricht das Retrieval lautlos. Wählen Sie ein Embedding-Modell + Dimension, fixieren Sie es und wechseln Sie nur mit vollständigem Re-Embedding des Archivs.',
+          '**Backup des Embedding-Index ab 10.000 Elementen ignorieren.** „Ich kann ihn regenerieren" stimmt, aber die Regeneration dauert Stunden. Nehmen Sie den Embedding-Store ab 10K Elementen in Ihre Backup-Strategie auf.',
+          '**Für Desktop designen, obwohl 80 % des Captures mobil passieren.** Eine PKB ohne mobilen Capture-Pfad sammelt Staub. Testen Sie den mobilen Capture-Flow am ersten Tag — Share Sheet zu Vault sollte in unter 5 Sekunden abgeschlossen sein.',
+          '**iCloud Drive für binäre Embedding-Indizes nutzen.** iCloud verarbeitet Klartext sauber; binäre Indizes (Smart Connections `.smart-env/`, AnythingLLM Vector Store) korrumpieren plattformübergreifend. Nutzen Sie Obsidian Sync, eine selbstgehostete Instanz oder akzeptieren Sie geräteweises Re-Indexing.',
+          '**Bei 100K Elementen nicht partitionieren.** Ein einzelner Workspace / Vault mit 100K+ Elementen hat Retrieval-Latenzen im Sekundenbereich. Partitionieren Sie nach Thema (Arbeit, Lesen, Projekte) in mehrere Workspaces oder Sub-Vaults; fragen Sie jeden separat oder über einen Router ab.',
+          '**DSGVO-Risiko unterschätzen.** PKBs sammeln zwangsläufig sensible Daten (E-Mails von Mandanten, Patienten, Kollegen, finanzielle und gesundheitsbezogene Notizen). Auch bei rein lokaler Verarbeitung greifen DSGVO Art. 6 + Art. 32 — und Cloud-Backups (Backblaze, Dropbox) machen aus Ihrem privaten Stack einen Verarbeitungsvorgang mit Auftragsverarbeitungsvertrag-Pflicht. Für berufliche Nutzung On-Premise-Backups (NAS, externe SSD) bevorzugen.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          'Obsidian — [obsidian.md](https://obsidian.md) und [help.obsidian.md](https://help.obsidian.md) (Vault-Struktur, Mobile-Sync-Architektur, Plugin-Dokumentation).',
+          'AnythingLLM — [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm) (Open-Source selbstgehostete RAG-Anwendung).',
+          'Ollama — [ollama.com](https://ollama.com) und [github.com/ollama/ollama](https://github.com/ollama/ollama) (lokale LLM-Runtime; Chat- + Embedding-Endpoints).',
+          'ChromaDB — [trychroma.com](https://www.trychroma.com) und [github.com/chroma-core/chroma](https://github.com/chroma-core/chroma) (Open-Source lokale Vektordatenbank).',
+          'Working Copy — [workingcopy.app](https://workingcopy.app) (iOS Git-Client für mobile Capture-Pipelines).',
+          'a-Shell — [holzschu.github.io/a-Shell_iOS/](https://holzschu.github.io/a-Shell_iOS/) (kostenloses iOS-Terminal für skriptgesteuertes Mobile Capture).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Wie erfasse ich Webseiten in meiner Wissensdatenbank?',
+            a: 'Drei Optionen, nach Aufwand sortiert. (1) Browser-Erweiterungs-Web-Clipper — Obsidian Web Clipper oder AnythingLLM Browser-Erweiterung schreiben die aktuelle Seite direkt in Ihren Vault / Workspace. (2) Mobile Share Sheet — Safari / Chrome teilen → Obsidian (schreibt eine Markdown-Datei) oder → Working Copy (committet zu Git) oder → eigener Shortcut (POSTet zu Ihrer Capture-API). (3) Bookmarklet — für Browser ohne Erweiterung; POSTet die aktuelle URL + Auswahl an Ihren Capture-Endpoint. Das Mobile Share Sheet ist in der Praxis der meistgenutzte Pfad — entwerfen Sie es zuerst.',
+          },
+          {
+            q: 'Kann ich E-Mails ins System weiterleiten?',
+            a: 'Ja. Richten Sie eine dedizierte Adresse ein (z. B. ein Fastmail- / Migadu-Alias `kb@ihre-domain.de`) und betreiben Sie auf Ihrem Heimserver oder Laptop einen IMAP-Poller, der neue Mails herunterlädt und eine Markdown-Datei pro E-Mail in Ihren Vault schreibt. Verwenden Sie ein From-Adress-Präfix im Dateinamen, damit das Retrieval nach Sender filtern kann. AnythingLLM hat eine First-Party-E-Mail-Integration; Obsidian-Anwender bauen den IMAP-Poller meist selbst oder nutzen IFTTT- / Zapier-Alternativen wie n8n.',
+          },
+          {
+            q: 'Wie synchronisiere ich Desktop und Mobile?',
+            a: 'Architekturabhängig. Obsidian-zentriert: Obsidian Sync (kostenpflichtig, verarbeitet binäre Indizes sauber), iCloud Drive (kostenlos, nur Klartext — Re-Index pro Gerät) oder Git via Working Copy (kostenlos + einmalige Working-Copy-Gebühr, nur Klartext — Re-Index pro Gerät). AnythingLLM-zentriert: AnythingLLM in Docker auf einem Heimserver betreiben, alle Geräte per LAN oder Tailscale verbinden — kein Client-seitiger Sync nötig. Eigenes Python: zentralen API-Service auf einem Heimserver bauen; Clients POSTen Captures und GETten Anfragen.',
+          },
+          {
+            q: 'Soll ich einen großen Vault verwenden oder nach Themen aufteilen?',
+            a: 'Ein Vault bis ~50.000 Elemente. Ab 50K nach Thema aufteilen (Arbeit, Lesen, Projekte, Privat) aus zwei Gründen: Retrieval-Latenz bleibt unter ~1 Sek., und ungewollter Cross-Leak zwischen Kontexten (z. B. private Notizen tauchen in Arbeitsabfragen auf) wird ab dieser Größe möglich. Früher als 50K aufzuteilen ist verfrüht — Sie verlieren die zufälligen Cross-Domain-Verbindungen, die ein Hauptwert einer PKB sind.',
+          },
+          {
+            q: 'Wie oft sollte ich für Genauigkeit neu embedden?',
+            a: 'Niemals wegen „Genauigkeitsdrift" neu embedden — Embeddings degradieren nicht. Embedden Sie nur dann neu, wenn Sie das Embedding-Modell wechseln (z. B. Upgrade von nomic-embed-text auf mxbai-embed-large für besseres Retrieval bei technischen Inhalten). Alle drei Architekturen bewältigen inkrementelles Re-Embedding bei Datei-Änderungen automatisch; Sie planen nichts. Ausnahme sind eigene Python-Stacks, in denen Sie den Indexer kontrollieren — dort ist Watchdog-getriebenes inkrementelles Re-Embedding bei Save Standard.',
+          },
+          {
+            q: 'Kann ich meine Wissensdatenbank versionieren?',
+            a: 'Ja für Klartext-Inhalte (Markdown-Vault → Git-Repo, lokal + GitHub / Gitea privat). Fügen Sie binäre Index-Ordner (`.smart-env/`, `vector_store/`, ChromaDB-Persistenz-Verzeichnis) zu `.gitignore` hinzu — sie blähen die Historie auf und führen zu Merge-Konflikten. Git liefert pro-Notiz-Versionshistorie; Vault-Snapshots (Time Machine, restic) liefern Gesamtsystem-Rollback. Beide Schichten, nicht entweder/oder.',
+          },
+          {
+            q: 'Wie behandle ich PDFs in diesem System?',
+            a: 'Obsidian-zentriert: PDFs neben Markdown-Notizen ablegen; Smart Connections embeddet PDF-Inhalte nicht direkt — extrahieren Sie zuerst Text (z. B. via PDF++ Plugin oder ein Vorverarbeitungsskript, das eine Markdown-Zusammenfassung neben jedes PDF schreibt). AnythingLLM-zentriert: PDFs direkt in einen Workspace ziehen; AnythingLLM übernimmt PDF-Parsing und Chunking automatisch. Eigenes Python: `pypdf` oder `pdfplumber` für die Text-Extraktion in Ihrer Ingestion-Pipeline nutzen, dann den extrahierten Text embedden. AnythingLLM ist die reibungsärmste Option für PDF-lastige Archive.',
+          },
+          {
+            q: 'Kann ich Teile meiner KB selektiv teilen?',
+            a: 'Ja, aber von Tag eins darauf hin entwerfen. Verwenden Sie Sub-Vaults (Obsidian) oder Workspaces (AnythingLLM), um „teilbare" und „private" Inhalte in getrennten Stores zu halten. Für einmaliges Teilen ein Tagged-Export-Skript bauen, das Items per Tag (z. B. `#shareable`) in ein portables Markdown-Bundle zieht. Den ganzen Vault nicht teilen — die meisten lokalen KI-PKBs sammeln sensible Items (medizinisch, finanziell, persönliche Korrespondenz), die den lokalen Stack nie verlassen sollten.',
+          },
+          {
+            q: 'Welche Backup-Strategie ist die beste?',
+            a: 'Drei Schichten: (1) Dateisystem-Snapshot alle 24 Stunden (Time Machine / restic) mit Off-Site-Kopie (Backblaze / rsync.net); (2) Git-Historie der Klartext-Inhalte für pro-Notiz-Versionswiederherstellung; (3) quartalsweiser Export von Embeddings + Metadaten als schneller Wiederaufbaupfad. Wiederherstellung einmal pro Quartal testen — „Kann ich meinen Vault auf einem frischen Laptop in unter 2 Stunden aufbauen?" Der erste Wiederherstellungstest enthüllt meist, dass eine der drei Schichten falsch konfiguriert war.',
+          },
+          {
+            q: 'Wie migriere ich auf einen neuen Rechner?',
+            a: 'Vault-Snapshot wiederherstellen → Ollama installieren und dieselben Modelle pullen → Obsidian / AnythingLLM / Ihren eigenen Python-Stack installieren → Embedding-Indexer neu starten. Mit Obsidian Sync oder selbstgehostetem AnythingLLM ist die Migration „Client installieren und einloggen" — keine manuelle Wiederherstellung nötig. Ohne diese rechnen Sie mit ~30 Min. für einen 10K-Element-Vault, ~2 Stunden für 50K und über Nacht ab 100K, falls Sie den Embedding-Export-Schritt übersprungen haben.',
+          },
+          {
+            q: 'Muss ich bei einer lokalen KI-Wissensdatenbank die DSGVO beachten?',
+            a: 'Eine lokale KI-PKB speichert potenziell sensible personenbezogene Daten (Notizen, E-Mails, PDFs, Kontakte). DSGVO Art. 6 + Art. 32 verlangen Rechtsgrundlage + technisch-organisatorische Maßnahmen, auch bei privater oder beruflicher Nutzung. Lokale Inferenz (kein Cloud-Egress) erfüllt die meisten Anforderungen an Datenresidenz und Verarbeitung, weil kein Drittanbieter als Auftragsverarbeiter nach Art. 28 vertraglich gebunden werden muss. Aber: Backups auf Backblaze, Dropbox usw. bleiben Cloud-Dienste mit Auftragsverarbeitungsvertrag-Pflicht. Für Selbstständige (Anwälte, Ärzte, Steuerberater) mit Mandanten-/Patientendaten: rein lokale Backups (NAS, externe SSD) oder BSI-C5-zertifizierte Anbieter bevorzugen. Der lokale Stack ist der einfachere Compliance-Pfad als jede Cloud-PKB.',
+          },
+          {
+            q: 'Ist eine lokale KI-Wissensdatenbank für den deutschen Mittelstand geeignet?',
+            a: 'Ja — und für Mittelständler mit sensiblen Geschäftsdaten häufig die geeignetere Wahl als Cloud-PKBs. Empfohlene Aufstellung: AnythingLLM-zentriert auf einem Linux-Heimserver (oder Synology- / QNAP-NAS mit Docker) mit Ollama + Llama 3.2 3B. Das erfüllt BSI-Grundschutz-Bausteine SYS.1 + APP.4 mit auditierbarem On-Premise-Datenfluss. Mehrere Arbeitsplätze via Tailscale für Remote-Zugriff. Initiale Investition: ca. 3.000–5.000 € für Server mit 64 GB + Storage. Gesamtkosten über 3 Jahre liegen bei Teams ab fünf Personen unter den meisten Cloud-PKB-Abos. Für Mittelstand in Finanz, Recht und Medizin ist das die nüchterne Wahl.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Obsidian + Local LLM: 5 Plugins, die Ihren Vault zum Second Brain machen (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=de) — Vertiefung der Plugin-Schicht von Architektur A.',
+          '[Lokales LLM mit Logseq und Joplin](/power-local-llm/local-llm-with-logseq-and-joplin?lang=de) — alternative Speicherschichten für die PKB, falls Obsidian nicht Ihre Wahl ist.',
+          '[Chat mit 1000+ PDFs lokal: RAG über Spielzeugbeispiele hinaus skalieren](/power-local-llm/chat-with-1000-pdfs-locally?lang=de) — Skalierung der RAG-Schicht über 1.000 Elemente, gilt für alle drei Architekturen.',
+          '[Lokales RAG für Ihre PDFs in 30 Minuten (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=de) — RAG-Implementierungs-Walkthrough für die in Architektur B verwendete Retrieval-Schicht.',
+          '[Beste Embedding-Modelle für lokales RAG (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=de) — Embedding-Modell-Auswahl (nomic-embed-text vs mxbai-embed-large vs bge-m3) für jede der drei Architekturen.',
+          '[RAG erklärt](/prompt-engineering/rag-explained?lang=de) — konzeptionelle Grundlage der Retrieval-Schicht.',
+          '[Lokales LLM Hardware-Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Hardware-Sizing für 16-GB-Untergrenze, 32 GB ab 10K Elementen, Heimserver ab 100K.',
+          '[Lokales LLM Software-Verzeichnis 2026](/power-local-llm/local-llm-software-directory-2026?lang=de) — Verzeichnislisten für Ollama, ChromaDB, AnythingLLM, Obsidian und weitere Komponenten des Stacks.',
+        ],
+      },
+    },
+  },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Outils de productivité et de gestion des connaissances',
+    title: 'Construire une base de connaissances avec une IA locale : guide stack 2026',
+    seoTitle: 'Base de connaissances IA locale : Guide stack 2026',
+    intro:
+      'Une base de connaissances personnelle (PKB) construite sur une IA locale en 2026 comporte cinq couches : capture (web clipper, redirection e-mail, partage mobile), stockage (vault Markdown ou dossier de documents), embeddings (modèle local via Ollama), récupération (RAG) et interface (chat ou recherche sémantique). Trois architectures couvrent ~95 % des projets réels — Obsidian-centré (orienté notes, jusqu\'à ~50 000 éléments), AnythingLLM-centré (orienté documents, jusqu\'à ~100 000 éléments) et un stack Python + ChromaDB sur mesure (orienté ingénieurs, au-delà de 1 M d\'éléments). Le seuil matériel est un ordinateur portable avec 16 Go de RAM ; au-delà de 10 000 éléments, prévoyez 32 Go. La décision de mise à l\'échelle la plus importante n\'est pas le LLM — mais de savoir si votre pipeline de capture survit à un usage quotidien sur mobile, là où la plupart des connaissances arrivent réellement.',
+    metaDescription:
+      'Base de connaissances IA locale 2026 : 3 architectures (Obsidian, AnythingLLM, Python + ChromaDB). Jusqu\'à 100 000+ éléments. Capture, RAG, sync.',
+    twitterDescription:
+      'Trois architectures de PKB IA locale en 2026 : Obsidian (~50K), AnythingLLM (~100K), Python + ChromaDB (1M+). Capture, RAG, sync mobile, sauvegarde.',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Qwen3 7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+      'bge-m3',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (16 Go de mémoire unifiée minimum, 32 Go recommandés au-delà de 10 000 éléments)',
+      'PC avec RTX 3060 12 Go ou RTX 4060 8 Go',
+      'PC avec 32 Go de RAM (repli CPU pour les vaults volumineux)',
+      'Serveur domestique / mini-PC avec 64 Go de RAM (stack Python sur mesure au-delà de 100 000 éléments)',
+    ],
+    audience:
+      'Travailleurs du savoir, chercheurs, auteurs et ingénieurs construisant une archive privée consultable par IA à partir de leurs notes, signets, e-mails et documents — typiquement de 1 000 à 100 000 éléments — sans envoyer de contenu à un service cloud.',
+    readTime: '15 min de lecture',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'base de connaissances IA locale',
+    targetKeywords: [
+      'base de connaissances IA locale',
+      'second cerveau LLM local',
+      'base de connaissances privée IA',
+      'RAG local base de connaissances',
+      'base de connaissances auto-hébergée',
+      'base de connaissances personnelle 2026',
+    ],
+    leadAnswerBlock:
+      '**Une base de connaissances IA locale en 2026 comporte cinq couches — capture, stockage, embeddings, récupération, interface — et vous devriez choisir l\'une des trois architectures de référence plutôt que de partir de zéro.** Utilisez Obsidian + Smart Connections + Copilot for Obsidian + Ollama si vous écrivez des notes au quotidien et souhaitez une recherche sémantique sur tout le vault ; cela monte proprement jusqu\'à ~50 000 notes sur un Mac M3 Pro 16 Go ou un PC équivalent. Utilisez AnythingLLM + Ollama si vos connaissances sont essentiellement des documents (PDF, exports, captures web) plutôt que des notes ; cela monte jusqu\'à ~100 000 documents et regroupe capture, RAG et chat dans une seule application. Construisez un stack Python + ChromaDB + Llama 3.2 3B sur mesure uniquement si vous avez 100 000+ éléments, des besoins multi-utilisateurs ou des contraintes de schéma spécifiques — le coût de maintenance est réel. Le véritable goulot d\'étranglement des trois architectures est la capture : la plupart des connaissances arrivent sur mobile (pages web, captures d\'écran, notes vocales, e-mails transférés), et un stack sans chemin de capture mobile reste inutilisé, peu importe la qualité de la récupération. Seuil matériel : 16 Go de RAM ; au-delà de 10 000 éléments, prévoyez 32 Go. Au-delà de 100 000 éléments, déplacez les embeddings vers un serveur domestique.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Quelle est la meilleure architecture pour une base de connaissances IA locale en 2026 ?',
+        answer:
+          'Pour la plupart des utilisateurs : Obsidian + Smart Connections + Copilot for Obsidian + Ollama (Llama 3.2 3B pour le chat, nomic-embed-text pour les embeddings). Monte jusqu\'à ~50 000 notes sur un Mac 16 Go. Pour les archives orientées documents : AnythingLLM + Ollama dans une seule application, jusqu\'à ~100 000 documents. Pour les ingénieurs et les vaults de 100 000+ éléments : stack Python + ChromaDB + Llama 3.2 3B sur mesure avec services de capture, embedding et chat séparés. Seuil matériel : 16 Go de RAM ; prévoyez 32 Go au-delà de 10 000 éléments et un serveur domestique au-delà de 100 000. La capture est le véritable goulot d\'étranglement — concevez le partage mobile, le web clipper et la redirection e-mail avant d\'optimiser le LLM.',
+        bullets: [
+          'Obsidian-centré — meilleur pour les workflows orientés notes, jusqu\'à ~50 000 notes, 16 Go de RAM minimum.',
+          'AnythingLLM-centré — meilleur pour les PKB orientées documents (PDF, exports), jusqu\'à ~100 000 documents, application tout-en-un.',
+          'Stack Python + ChromaDB sur mesure — meilleur pour les ingénieurs, au-delà de 1 M d\'éléments, services auto-gérés requis.',
+          'Modèles de chat recommandés en 2026 : Llama 3.2 3B pour systèmes 16 Go, Phi-4 Mini pour 8 Go, Qwen3 7B pour la qualité au-delà de 32 Go.',
+          'Modèles d\'embedding recommandés : nomic-embed-text (768-dim, rapide) ou mxbai-embed-large (1024-dim, plus précis) ; bge-m3 pour les archives multilingues.',
+          'Seuil matériel : portable 16 Go de RAM ; 32 Go recommandés au-delà de 10 000 éléments ; serveur domestique 64 Go au-delà de 100 000.',
+          'La capture est le goulot d\'étranglement : la plupart des éléments PKB sont capturés sur mobile (pages web, captures d\'écran, notes vocales) et consultés sur le bureau. iOS Shortcuts → Obsidian, Working Copy (Git) ou a-Shell sont les trois chemins de capture mobile.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Faits rapides', anchor: '#quick-facts' },
+      { label: 'Quelle architecture construire ?', anchor: '#which-architecture' },
+      { label: 'Tableau comparatif des architectures', anchor: '#comparison-table' },
+      { label: 'Les cinq couches d\'une PKB IA locale', anchor: '#five-layers' },
+      { label: 'Architecture A : Obsidian-centré', anchor: '#architecture-obsidian' },
+      { label: 'Architecture B : AnythingLLM-centré', anchor: '#architecture-anythingllm' },
+      { label: 'Architecture C : Python + ChromaDB sur mesure', anchor: '#architecture-custom' },
+      { label: 'Pipeline de capture : web, e-mail, mobile, vocal', anchor: '#capture' },
+      { label: 'Capture mobile : iOS Shortcuts, Working Copy, a-Shell', anchor: '#mobile-capture' },
+      { label: 'Mise à l\'échelle : 1K, 10K, 100K éléments', anchor: '#scaling' },
+      { label: 'Sauvegarde, versioning, sync multi-appareils', anchor: '#backup-sync' },
+      { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Choisissez l\'une des trois architectures de référence plutôt que de partir de zéro.** Obsidian-centré (orienté notes, ~50K éléments), AnythingLLM-centré (orienté documents, ~100K éléments) ou stack Python + ChromaDB sur mesure (orienté ingénieurs, 1M+ éléments). Mélanger les architectures est rarement rentable — le coût d\'intégration domine.',
+          '**Une PKB IA locale comporte cinq couches : capture, stockage, embeddings, récupération, interface.** La plupart des erreurs de débutant se produisent au niveau de la capture, pas du LLM. Si les éléments ne circulent pas depuis le mobile et l\'e-mail, aucune récupération ingénieuse ne sauvera le projet.',
+          '**Seuil matériel : 16 Go de RAM.** En dessous, vous choisissez entre exécuter un modèle d\'embedding ou un modèle de chat — pas les deux. À 16 Go, vous pouvez exécuter Llama 3.2 3B + nomic-embed-text simultanément. À 32 Go, vous pouvez passer à Qwen3 7B ou exécuter plusieurs sessions de chat. Au-delà de 100 000 éléments, déplacez les embeddings vers un serveur domestique.',
+          '**Modèles recommandés en 2026 :** chat — Llama 3.2 3B (par défaut), Phi-4 Mini (systèmes 8 Go), Qwen3 7B (qualité au-delà de 32 Go) ; embeddings — nomic-embed-text (768-dim, rapide), mxbai-embed-large (1024-dim, plus précis), bge-m3 (multilingue).',
+          '**La capture est le goulot d\'étranglement, pas la récupération.** La plupart des éléments arrivent sur mobile (captures web, captures d\'écran, notes vocales, e-mails transférés). Concevez le chemin partage mobile → vault avant de régler le LLM. iOS Shortcuts → Obsidian / Working Copy / a-Shell sont les trois chemins iOS viables.',
+          '**La méthode de synchronisation détermine ce qui fonctionne sur mobile.** Obsidian Sync gère proprement les index binaires d\'embeddings ; iCloud Drive les corrompt entre plateformes ; Git nécessite une discipline .gitignore et une réindexation par appareil. Choisissez la sync d\'abord, les plugins ensuite.',
+          '**La sauvegarde n\'est pas optionnelle.** Trois couches : snapshot du vault (Time Machine, Backblaze, restic), historique Git du contenu en clair et un export trimestriel des embeddings + métadonnées comme chemin de reconstruction propre. Les embeddings sont régénérables, mais coûteux — sauvegardez-les aussi au-delà de 10 000 éléments.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Faits rapides',
+        items: [
+          '**Architectures couvertes :** Obsidian-centré, AnythingLLM-centré, stack Python + ChromaDB sur mesure.',
+          '**Backend LLM :** Ollama (recommandé) — exécute les modèles de chat et d\'embedding derrière un endpoint local à `http://localhost:11434`.',
+          '**Modèles de chat recommandés en 2026 :** Llama 3.2 3B (systèmes 16 Go), Phi-4 Mini (8 Go), Qwen3 7B (32 Go+).',
+          '**Modèles d\'embedding recommandés en 2026 :** nomic-embed-text (768-dim, rapide), mxbai-embed-large (1024-dim, précis), bge-m3 (multilingue).',
+          '**Cibles en nombre d\'éléments :** Obsidian ~50 000 notes, AnythingLLM ~100 000 documents, stack Python + ChromaDB sur mesure 1 M+.',
+          '**Seuil matériel :** portable 16 Go de RAM. Au-delà de 10 000 éléments : 32 Go recommandés. Au-delà de 100 000 : serveur domestique 64 Go.',
+          '**Chemins de capture mobile (iOS) :** Shortcuts → Obsidian, Shortcuts → Working Copy (Git), Shortcuts → a-Shell. Android : Tasker ou HTTP Shortcuts.',
+        ],
+      },
+      whichArchitecture: {
+        id: 'which-architecture',
+        title: 'Quelle architecture construire ?',
+        content:
+          '**Choisissez l\'architecture adaptée à la façon dont vos connaissances arrivent déjà — pas celle qui paraît la plus puissante.** Si vous écrivez déjà des notes au quotidien, optez pour Obsidian-centré. Si vos connaissances sont surtout des documents (PDF, exports, captures web), optez pour AnythingLLM-centré. Construisez un stack Python + ChromaDB sur mesure uniquement si vous avez véritablement 100 000+ éléments ou un besoin multi-utilisateurs — le coût de maintenance est réel et rarement justifié en deçà.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Les workflows orientés notes choisissent Obsidian + Smart Connections + Copilot + Ollama ; les archives orientées documents choisissent AnythingLLM + Ollama ; les ingénieurs avec 100K+ éléments choisissent un stack Python + ChromaDB sur mesure.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Trois voies, une destination. Si vous vivez déjà dans une application de notes, Obsidian habille votre routine existante de fonctionnalités IA. Si vous accumulez surtout des PDF et des pages web, AnythingLLM est une seule application qui ingère, indexe et chatte. Si vous codez et voulez un contrôle total, Python + ChromaDB vous laisse construire exactement ce que vous voulez — mais vous le maintenez. Choisissez la voie qui correspond à votre workflow existant ; ne changez pas vos habitudes pour vous adapter à l\'architecture.',
+          },
+        ],
+        decisionBlock: {
+          title: 'Décision : quelle architecture PKB ?',
+          localIf: [
+            'Vous utilisez déjà Obsidian ou souhaitez un workflow orienté notes en Markdown → Obsidian-centré',
+            'Vos connaissances sont surtout des PDF, exports, captures web et archives e-mail → AnythingLLM-centré',
+            'Vous avez 100 000+ éléments, des besoins de schéma sur mesure ou un accès multi-utilisateurs → stack Python + ChromaDB sur mesure',
+            'Vous voulez une application qui couvre capture, stockage, RAG et chat → AnythingLLM-centré',
+            'Vous voulez un contrôle total sur le chunking, la récupération et le re-ranking → stack Python + ChromaDB sur mesure',
+          ],
+          cloudIf: [
+            'Vous avez besoin d\'un raisonnement de classe GPT-4o à chaque requête et votre archive est petite → Notion AI ou ChatGPT avec GPT personnalisés (le stack local est ~70 % aussi capable en synthèse)',
+            'Vous n\'avez pas de machine avec 16 Go+ de RAM ni de serveur domestique → PKB SaaS cloud (Mem, Reflect)',
+            'Votre équipe a besoin d\'un accès multi-utilisateurs concurrent et vous ne voulez pas héberger de services → équivalent cloud',
+          ],
+          quick: [
+            'Par défaut pour les utilisateurs orientés notes : Obsidian + Smart Connections + Copilot + Ollama',
+            'Par défaut pour les utilisateurs orientés documents : AnythingLLM + Ollama',
+            'Ingénieur avec 100K+ éléments : stack Python + ChromaDB + Llama 3.2 3B sur mesure',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ne commencez pas par le stack Python sur mesure simplement parce qu\'il paraît plus puissant. Construisez d\'abord en Obsidian-centré ou AnythingLLM-centré, faites tourner pendant deux mois, identifiez la couche qui ne convient pas à votre workflow, et ne remplacez qu\'ensuite cette couche par un composant sur mesure. Tous les projets PKB démarrés « from scratch en Python » et tournant plus de six mois ont fini par converger vers une forme Obsidian ou AnythingLLM.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Tableau comparatif des architectures',
+        content:
+          '**Les trois architectures de référence diffèrent sur cinq axes pertinents pour la plupart des projets : complexité d\'installation, plafond en nombre d\'éléments, sync mobile, flexibilité de capture et coût de maintenance.** La complexité d\'installation croît à peu près linéairement avec le contrôle — et le coût de maintenance aussi.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidian a une complexité moyenne à ~50K éléments, AnythingLLM une faible complexité à ~100K éléments, et un stack Python + ChromaDB sur mesure une complexité élevée mais monte au-delà de 1 M d\'éléments.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AnythingLLM est le plus simple à installer et monte le plus haut des deux options « clé en main » — mais il est strict sur l\'organisation des documents. Obsidian offre la couche de prise de notes la plus expressive et un écosystème de plugins actif, au prix d\'une installation un peu plus longue. Python sur mesure est sans plafond, mais vous maintenez tout : chunking, re-ranking, déduplication, sync, sauvegardes. Choisissez selon votre tolérance à la maintenance, pas seulement selon le nombre d\'éléments.',
+          },
+        ],
+        columns: ['Architecture', 'Complexité', 'Éléments max', 'Sync mobile', 'Idéal pour'],
+        rows: [
+          { 'Architecture': 'Obsidian-centré', 'Complexité': 'Moyenne', 'Éléments max': '~50 000', 'Sync mobile': 'Oui (Obsidian Sync ; iCloud / Git avec restrictions)', 'Idéal pour': 'Utilisateurs orientés notes avec routine d\'écriture quotidienne' },
+          { 'Architecture': 'AnythingLLM-centré', 'Complexité': 'Faible', 'Éléments max': '~100 000', 'Sync mobile': 'Limitée (web UI depuis le mobile via LAN / Tailscale)', 'Idéal pour': 'PKB orientées documents (PDF, exports, captures web)' },
+          { 'Architecture': 'Python + ChromaDB sur mesure', 'Complexité': 'Élevée', 'Éléments max': '1 M+', 'Sync mobile': 'Manuelle (API + client mobile à construire)', 'Idéal pour': 'Ingénieurs voulant un contrôle total + multi-utilisateurs' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La sync mobile est l\'axe de comparaison le plus sous-estimé. AnythingLLM est techniquement plus simple à installer qu\'Obsidian, mais sur mobile cela signifie « ouvrir l\'UI web LAN dans Safari » — ce n\'est pas une expérience native. Obsidian Mobile, associé à Obsidian Sync, vous offre une application iOS / Android quasi native avec lecture hors ligne. Si la capture et la lecture mobiles comptent, pondérez Obsidian plus haut que ne le suggère le tableau.',
+          },
+        ],
+      },
+      fiveLayers: {
+        id: 'five-layers',
+        title: 'Les cinq couches d\'une PKB IA locale',
+        content:
+          '**Toute PKB IA locale comporte les mêmes cinq couches, quelle que soit l\'architecture : capture, stockage, embeddings, récupération, interface.** Les échecs viennent généralement d\'un décalage entre couches — le plus souvent une récupération sophistiquée associée à un pipeline de capture cassé que personne n\'utilise.',
+        numberedItems: [
+          {
+            title: 'Capture',
+            whyItMatters: 'Comment les éléments entrent dans le système. Web clipper, redirection e-mail, partage mobile, note vocale, copier-coller manuel. La couche la plus souvent négligée dans les projets de débutants — et celle qui détermine la survie du système au quotidien. Si la capture mobile prend plus de 5 secondes, le système reste inutilisé.',
+          },
+          {
+            title: 'Stockage',
+            whyItMatters: 'Où vivent les éléments sur le disque. Vault Markdown (Obsidian, Logseq), dossier de documents + base de données (AnythingLLM) ou système de fichiers + manifeste (Python sur mesure). Choisissez un format de stockage qui survit à un changement d\'outil — le Markdown en clair est le plus portable ; les bases binaires le moins.',
+          },
+          {
+            title: 'Embeddings',
+            whyItMatters: 'Représentations vectorielles des éléments pour la recherche sémantique. Générées par un modèle local (nomic-embed-text ou mxbai-embed-large via Ollama). Le modèle d\'embedding peut être changé plus tard, mais le coût de migration vaut « tout réembedder » — choisissez une fois, tenez-vous-y.',
+          },
+          {
+            title: 'Récupération',
+            whyItMatters: 'Comment les éléments sont retrouvés à la requête. Recherche vectorielle top-k, re-ranking optionnel, filtres de métadonnées (tags, dates, sources). L\'écart de qualité entre un top-5 naïf et un top-20-avec-re-ranker bien réglé est l\'écart entre « utile » et « magique ».',
+          },
+          {
+            title: 'Interface',
+            whyItMatters: 'Comment vous interrogez et lisez. Sidebar (Smart Connections), chat (Copilot, AnythingLLM), CLI (Python sur mesure) ou API. La plupart des utilisateurs prennent le chat par défaut — mais une sidebar « notes liées » fait remonter du matériel oublié que le chat ne trouve pas, parce que vous ne savez pas quoi demander.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Un schéma de projet courant qui échoue : choisir la récupération la plus puissante (recherche hybride sur mesure avec re-ranking), le modèle de chat le plus intelligent (Qwen3 7B), et ignorer la capture. Trois semaines plus tard, le vault contient 47 éléments parce que rien ne circule depuis le mobile. La correction est toujours la même : simplifier la récupération, simplifier le chat, réparer la capture, et accepter que 80 % de la valeur vienne du fait que les éléments sont simplement présents dans le système.',
+          },
+        ],
+      },
+      architectureObsidian: {
+        id: 'architecture-obsidian',
+        title: 'Architecture A : Obsidian-centré',
+        content:
+          '**Obsidian + Smart Connections + Copilot for Obsidian + Ollama est l\'architecture par défaut pour les workflows orientés notes en 2026.** Elle monte proprement jusqu\'à ~50 000 notes sur un Mac M3 Pro 16 Go ou un PC équivalent, supporte la lecture mobile via Obsidian Mobile, et garde tout en Markdown en clair que vous pourrez emporter vers n\'importe quel outil futur.',
+        items: [
+          '**Stockage :** fichiers Markdown dans un dossier (« vault »). Texte clair, dossiers simples, pas de base de données. Survit aux migrations d\'outils.',
+          '**Capture :** Obsidian Web Clipper (extension navigateur), partage mobile Obsidian (iOS / Android), e-mail vers Obsidian via Mailspike ou une recette IFTTT sur mesure, copier-coller manuel.',
+          '**Embeddings :** plugin Smart Connections → Ollama à `http://localhost:11434/api/embeddings` → nomic-embed-text (par défaut) ou mxbai-embed-large (plus précis). L\'index vit dans `.smart-env/` à l\'intérieur du vault.',
+          '**Récupération :** sidebar Smart Connections (vue notes liées) + mode Vault QA de Copilot for Obsidian (RAG sur le vault pour les requêtes chat). Les deux exploitent l\'index d\'embeddings.',
+          '**Interface :** sidebar Smart Connections (découverte passive) + panneau chat Copilot (requêtes actives) + templates Text Generator (workflows répétables comme les résumés quotidiens).',
+          '**Temps d\'installation :** ~30 min (installer Ollama, télécharger les modèles, installer trois plugins, configurer les endpoints, laisser construire l\'index initial).',
+          '**Matériel :** 16 Go de RAM minimum (Llama 3.2 3B + nomic-embed-text simultanément). 32 Go recommandés au-delà de 10 000 notes. SSD fortement recommandé — la reconstruction d\'index est I/O-limitée sur HDD.',
+          '**Plafond d\'éléments :** ~50 000 notes en pratique ; testé jusqu\'à 20 000 avec ré-indexation incrémentale sub-seconde. Au-delà de 50K notes, l\'index initial tourne 4–8 heures et vous devriez envisager des sous-vaults.',
+          '**Idéal pour :** utilisateurs avec routine d\'écriture quotidienne, préférences Markdown-first, et désir d\'une sidebar « partenaire de pensée » qui fait remonter les notes oubliées.',
+          '**Pas pour :** utilisateurs dont les connaissances sont surtout des PDF et captures web (choisir AnythingLLM-centré) ; utilisateurs voulant une seule application tout-en-un (Obsidian-centré, c\'est « Obsidian + 3 plugins + Ollama »).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Pour un approfondissement de la couche plugin de cette architecture (quels 5 plugins, étapes de configuration, valeurs d\'échelle de vault), voir le [guide des plugins Obsidian + LLM local](/power-local-llm/local-llm-with-obsidian-2026?lang=fr). Cette page couvre l\'architecture ; le guide des plugins couvre la configuration.',
+          },
+        ],
+      },
+      architectureAnythingllm: {
+        id: 'architecture-anythingllm',
+        title: 'Architecture B : AnythingLLM-centré',
+        content:
+          '**AnythingLLM + Ollama est l\'option tout-en-un : capture, stockage, RAG et chat sont regroupés dans une seule application bureau ou auto-hébergée.** Elle monte jusqu\'à ~100 000 documents (mélange de PDF, captures web, exports) et c\'est le bon choix quand vos connaissances arrivent surtout sous forme de documents plutôt que de notes.',
+        items: [
+          '**Stockage :** base de données interne AnythingLLM (SQLite par défaut ; Postgres pour l\'auto-hébergement multi-utilisateurs). Les documents sont ingérés via l\'UI ; les originaux peuvent rester dans un dossier que vous mirroirisez.',
+          '**Capture :** upload in-app (glisser des PDF / fichiers dans un workspace), extension navigateur pour les pages web, API publique pour l\'ingestion programmatique (`POST /api/v1/document/upload`), redirection e-mail via l\'intégration officielle ou un relais sur mesure.',
+          '**Embeddings :** AnythingLLM utilise le fournisseur d\'embeddings que vous configurez — choisissez « Ollama » → endpoint `http://localhost:11434` → modèle `nomic-embed-text`. Embeddings stockés dans le vector store intégré (LanceDB par défaut ; ChromaDB / Pinecone optionnels).',
+          '**Récupération :** RAG sur le workspace. Taille de chunk configurable, récupération top-k, re-ranking optionnel. Plusieurs workspaces permettent de partitionner par sujet (ex. « Travail », « Lecture », « Projets »).',
+          '**Interface :** UI web AnythingLLM (fonctionne dans les navigateurs bureau et mobiles), API publique pour des front-ends sur mesure, endpoint compatible OpenAI pour brancher d\'autres outils sur votre PKB.',
+          '**Temps d\'installation :** ~15 min (installer AnythingLLM Desktop ou Docker, le pointer sur Ollama, glisser les documents).',
+          '**Matériel :** 16 Go de RAM minimum. 32 Go recommandés au-delà de 10 000 documents. AnythingLLM est plus économe en mémoire qu\'Obsidian + plugins à nombre d\'éléments égal, parce qu\'il y a un seul processus au lieu de deux.',
+          '**Plafond d\'éléments :** ~100 000 documents dans un seul workspace ; partitionnez en plusieurs workspaces au-delà de 50K pour garder la latence de récupération sous ~1 sec.',
+          '**Idéal pour :** utilisateurs avec archives riches en PDF, capture orientée web clipping, et préférence pour une seule application plutôt qu\'un stack de plugins. Aussi le bon choix pour les petites équipes auto-hébergeant une PKB partagée.',
+          '**Pas pour :** utilisateurs voulant une surface d\'écriture orientée notes (Obsidian) ; utilisateurs voulant posséder leur stockage en Markdown clair (le vector store d\'AnythingLLM est interne).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Pour la mise en place pas-à-pas de la couche RAG utilisée ici (Ollama + AnythingLLM, ingestion, réglage du chunking), voir le tutoriel [RAG local sur vos PDF en 30 minutes](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=fr). Pour mettre à l\'échelle au-delà des exemples jouets jusqu\'à 1 000+ PDF, voir [Chatter avec 1000+ PDF localement](/power-local-llm/chat-with-1000-pdfs-locally?lang=fr).',
+          },
+        ],
+      },
+      architectureCustom: {
+        id: 'architecture-custom',
+        title: 'Architecture C : Python + ChromaDB sur mesure',
+        content:
+          '**Un stack Python + ChromaDB + Ollama sur mesure n\'est le bon choix que si vous avez véritablement 100 000+ éléments, des besoins multi-utilisateurs ou des contraintes de schéma que les outils prêts à l\'emploi ne peuvent modéliser.** Le coût de maintenance est réel : chunking, déduplication, re-ranking, sync, sauvegarde — vous portez tout.',
+        items: [
+          '**Stockage :** système de fichiers (un dossier par source : `notes/`, `pdfs/`, `web/`, `email/`) + un manifeste de métadonnées (SQLite ou JSONL). Les fichiers source restent dans des formats ouverts pour pouvoir changer la couche de récupération sans tout réingérer.',
+          '**Capture :** scripts déclenchés par webhooks (web clipper → endpoint HTTP → écriture fichier), redirection e-mail → poller IMAP → écriture fichier, partage mobile → endpoint Tailscale → écriture fichier. Chaque chemin de capture est un petit service Python.',
+          '**Embeddings :** ChromaDB (mode local, persistant sur disque) + embeddings Ollama via l\'endpoint compatible OpenAI. Réembedding au changement de fichier via un processus watchdog. ChromaDB monte jusqu\'à des millions de vecteurs sur une seule machine avec indexation HNSW.',
+          '**Récupération :** similarité top-k ChromaDB + un re-ranker (BGE Re-ranker ou équivalent Cohere local) + filtres de métadonnées (intervalle de dates, tags, source). Recherche hybride optionnelle avec BM25 sur les chunks pour le matching de termes exacts.',
+          '**Interface :** au choix : un petit service FastAPI exposant un endpoint `/v1/chat/completions` compatible OpenAI, une UI Streamlit / Gradio, un CLI, ou les trois. Mettez Open WebUI en façade pour une expérience chat soignée sans écrire de code UI.',
+          '**Temps d\'installation :** ~1 jour pour une v1 fonctionnelle ; ~2 semaines d\'itération pour régler chunking, qualité de récupération et pipelines de capture sur vos données.',
+          '**Matériel :** portable 32 Go de RAM pour le développement ; serveur domestique 64 Go de RAM au-delà de 100 000 éléments pour que le service d\'embedding ne concurrence pas votre portable. GPU dédié (RTX 4060 ou mieux) au-delà de 500K éléments pour le débit chat.',
+          '**Plafond d\'éléments :** 1 M+ éléments en pratique avec HNSW + sharding ; le goulot d\'étranglement passe de la récupération à la fiabilité du pipeline de capture et au coût de réembedding lors des changements de schéma.',
+          '**Idéal pour :** ingénieurs voulant posséder le stack, équipes avec un schéma sur mesure (ex. « chaque élément a un score de confiance, une source et un auteur ») ou utilisateurs qui atteignent les limites dures d\'Obsidian ou AnythingLLM (50K et 100K respectivement).',
+          '**Pas pour :** non-ingénieurs ; toute personne sous-estimant le coût de maintenance ; utilisateurs dont le cas d\'usage est déjà couvert par une option clé en main.',
+        ],
+        promptExamples: [
+          {
+            label: 'Ingestion ChromaDB (esquisse Python)',
+            text: 'import chromadb, ollama, pathlib\nclient = chromadb.PersistentClient(path="./chroma")\ncoll = client.get_or_create_collection("kb")\nfor p in pathlib.Path("vault").rglob("*.md"):\n    text = p.read_text()\n    emb = ollama.embeddings(model="nomic-embed-text", prompt=text)["embedding"]\n    coll.upsert(ids=[str(p)], embeddings=[emb], documents=[text], metadatas=[{"source": str(p)}])',
+          },
+          {
+            label: 'Requête avec re-ranking (esquisse)',
+            text: 'q = "What did I write about local RAG sync?"\nq_emb = ollama.embeddings(model="nomic-embed-text", prompt=q)["embedding"]\nhits = coll.query(query_embeddings=[q_emb], n_results=20)\n# pass hits["documents"] through a re-ranker, keep top 5\n# send top 5 + question to Llama 3.2 3B via Ollama chat endpoint',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Le mode d\'échec le plus courant des projets sur mesure : réembedder toute l\'archive à chaque changement de code parce que le schéma n\'est pas stable. Verrouillez le modèle d\'embedding et la taille de chunk avant d\'ingérer plus de ~5 000 éléments. Migrer de nomic-embed-text 768-dim vers mxbai-embed-large 1024-dim à 100K éléments coûte des heures de calcul et casse la collection ChromaDB — vous ne pouvez pas mélanger les dimensions.',
+          },
+        ],
+      },
+      capture: {
+        id: 'capture',
+        title: 'Pipeline de capture : web, e-mail, mobile, vocal',
+        content:
+          '**La couche de capture détermine la survie de votre PKB au quotidien. La plupart des connaissances arrivent en dehors du bureau — sur mobile, en e-mail, en notes vocales — et un pipeline de capture qui exige d\'ouvrir d\'abord une application bureau est un pipeline contourné.** Construisez pour les quatre flux principaux et acceptez que 80 % des éléments arrivent sur mobile.',
+        items: [
+          '**Web clipper (bureau + mobile) :** Obsidian Web Clipper, extension navigateur AnythingLLM, ou un bookmarklet sur mesure qui POSTe la page courante vers votre endpoint de capture. Partage mobile → extension web clipper → vault.',
+          '**Redirection e-mail :** adresse dédiée (ex. `kb@votre-domaine.fr`) + poller IMAP → écriture fichier. Transférez les e-mails que vous voulez garder ; le poller gère l\'ingestion. Utilisez un préfixe par source dans le nom de fichier pour permettre le filtrage par source à la récupération.',
+          '**Partage mobile :** le chemin de capture le plus utilisé. Partage iOS → Obsidian (écrit un fichier Markdown), Partage iOS → Working Copy (commit Git), Partage iOS → Shortcut sur mesure (POST vers votre API de capture). Android : HTTP Shortcuts ou Tasker.',
+          '**Notes vocales :** la capture style AudioPen devient courante en 2026. Enregistrer sur le téléphone → transcrire localement avec Whisper.cpp ou via un service Whisper auto-hébergé → écrire la transcription en Markdown → embedder.',
+          '**Copier-coller manuel :** le repli. Marche toujours, ne monte jamais. À utiliser pour la traîne longue.',
+          '**OCR de captures d\'écran :** les captures d\'écran sont un format de capture lossy. Utilisez Apple Live Text sur iOS ou un pipeline OCR local (Tesseract, Apple Vision, EasyOCR) pour extraire le texte + écrire un fichier Markdown contenant l\'image et le texte OCR.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Auditez vos habitudes de capture existantes avant de concevoir le pipeline. Regardez ce que vous sauvegardez déjà : signets navigateur, captures d\'écran, e-mails transférés, notes vocales. La couche de capture PKB doit refléter ces flux existants — si vous prenez déjà des captures d\'écran constamment, construisez le chemin OCR ; si vous transférez déjà des e-mails à vous-même, construisez la redirection e-mail. Ajouter de nouvelles habitudes (« désormais je copie-colle manuellement chaque article dans la KB ») ne marche jamais.',
+          },
+        ],
+      },
+      mobileCapture: {
+        id: 'mobile-capture',
+        title: 'Capture mobile : iOS Shortcuts, Working Copy, a-Shell',
+        content:
+          '**iOS dispose de trois chemins de capture viables vers une PKB IA locale en 2026 : Shortcuts → Obsidian, Shortcuts → Working Copy (Git) ou Shortcuts → a-Shell (piloté par script).** Chacun correspond naturellement à l\'une des trois architectures de référence. Choisissez le chemin dont le modèle de sync correspond à votre architecture globale.',
+        items: [
+          '**Shortcuts → Obsidian (Obsidian-centré) :** le Shortcut Obsidian « Ajouter à la note » écrit le contenu capturé directement dans le vault. Sync via Obsidian Sync (payant, recommandé) ou iCloud Drive (gratuit, avec restrictions). Idéal pour les workflows orientés notes.',
+          '**Shortcuts → Working Copy (Git) :** le contenu capturé est écrit dans un dépôt Working Copy sur l\'iPhone, puis automatiquement committé et poussé. Le bureau pull. Gratuit, robuste, fonctionne avec n\'importe quel vault Markdown. Note : Working Copy est payant (env. 22 € en achat unique). Idéal pour les vaults sync via Git.',
+          '**Shortcuts → a-Shell :** a-Shell est un terminal iOS gratuit qui exécute des scripts. Construisez un Shortcut qui passe le texte capturé à un script a-Shell, qui écrit un fichier puis soit committe via `git`, soit synchronise via `rsync` sur Tailscale, soit upload vers votre endpoint de capture. Idéal pour les architectures sur mesure construites par des ingénieurs.',
+          '**Équivalents Android :** Tasker + Termux + Git en pendant du chemin Working Copy iOS. HTTP Shortcuts pour le chemin endpoint sur mesure. Partage mobile Obsidian pour le chemin Obsidian.',
+          '**Budget de latence :** la capture mobile doit s\'achever de bout en bout en moins de 5 secondes (partage → fichier écrit / committé / uploadé). Plus lent et l\'utilisateur ouvre l\'application une fois et plus jamais.',
+          '**Capture hors ligne :** les trois chemins iOS bufferisent hors ligne (Shortcuts bufferise, Working Copy bufferise les commits, les scripts a-Shell peuvent écrire localement et synchroniser plus tard). Essentiel pour la capture en avion, dans les transports et en zones rurales.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Ne construisez pas un chemin de capture mobile qui exige que le bureau soit en ligne (ex. POST vers un endpoint protégé Tailscale, joignable seulement quand votre portable est éveillé). Vous perdrez des captures pendant les réunions, le veille du portable et la nuit. Faites tourner l\'endpoint de capture soit sur un serveur domestique / NAS toujours actif, soit écrivez vers un store eventually-consistent (Obsidian Sync, Git, iCloud) qui bufferise hors ligne.',
+          },
+        ],
+      },
+      scaling: {
+        id: 'scaling',
+        title: 'Mise à l\'échelle : 1K, 10K, 100K éléments',
+        content:
+          '**La mise à l\'échelle d\'une PKB IA locale a trois régimes : sous 1 000 éléments, tout est rapide sur n\'importe quel portable moderne ; entre 1 000 et 10 000, l\'index d\'embeddings devient un artefact réel à gérer ; au-delà de 10 000 éléments, le matériel devient le goulot d\'étranglement et la fiabilité du pipeline de capture domine les résultats.** Les valeurs réalistes ci-dessous supposent un Mac M3 Pro / PC RTX 4060 avec nomic-embed-text et Llama 3.2 3B.',
+        columns: ['Nombre d\'éléments', 'Architecture recommandée', 'Embedding initial', 'Matériel', 'Notes'],
+        rows: [
+          { 'Nombre d\'éléments': '1 000 éléments', 'Architecture recommandée': 'L\'une des trois', 'Embedding initial': '~2 min', 'Matériel': 'Portable 16 Go de RAM', 'Notes': 'Tout paraît instantané. Le choix d\'architecture dépend purement de l\'adéquation au workflow.' },
+          { 'Nombre d\'éléments': '10 000 éléments', 'Architecture recommandée': 'Obsidian ou AnythingLLM', 'Embedding initial': '~25 min', 'Matériel': 'Portable 16 Go (32 Go recommandés)', 'Notes': 'Index d\'embeddings ~150–250 Mo. Réembedding sub-seconde aux modifications. Sweet spot pour la plupart des travailleurs du savoir.' },
+          { 'Nombre d\'éléments': '50 000 éléments', 'Architecture recommandée': 'AnythingLLM ou Python sur mesure', 'Embedding initial': '~3 heures', 'Matériel': 'Portable 32 Go ou serveur domestique', 'Notes': 'L\'index initial tourne la nuit. Prévoir des sous-vaults / workspaces au-delà. ~1.5–2 Go pour les embeddings.' },
+          { 'Nombre d\'éléments': '100 000 éléments', 'Architecture recommandée': 'AnythingLLM (multi-workspace) ou Python sur mesure', 'Embedding initial': '6–8 heures', 'Matériel': 'Minimum 32 Go ; serveur domestique préféré', 'Notes': 'Déplacer les embeddings vers un serveur domestique dédié. La fiabilité du pipeline de capture devient le mode d\'échec primaire, pas la récupération.' },
+          { 'Nombre d\'éléments': '500 000+ éléments', 'Architecture recommandée': 'Python + ChromaDB sur mesure', 'Embedding initial': '24+ heures', 'Matériel': 'Serveur domestique 64 Go + GPU dédié', 'Notes': 'Sharding, déduplication et pipelines de réembedding incrémental deviennent nécessaires. Les outils clé en main ne suffisent plus.' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Le coût d\'embedding initial est une facture unique. Après le premier index, seuls les éléments modifiés sont réembeddés — généralement sous une seconde par sauvegarde, même à 100K éléments. La lenteur de la première fois est réelle mais non récurrente. Faites tourner l\'index initial la nuit sur une machine branchée et oubliez-le.',
+          },
+        ],
+      },
+      backupSync: {
+        id: 'backup-sync',
+        title: 'Sauvegarde, versioning, sync multi-appareils',
+        content:
+          '**Une PKB IA locale a besoin de trois couches de sauvegarde : snapshots du vault (Time Machine, Backblaze, restic), historique Git du contenu en clair et un export trimestriel des embeddings et métadonnées comme chemin de reconstruction propre.** Les embeddings sont techniquement régénérables, mais à 100K+ éléments la régénération coûte des heures — sauvegardez-les aussi.',
+        items: [
+          '**Snapshots du vault (système de fichiers) :** Time Machine (macOS) ou restic (Linux) toutes les 24 heures. Backblaze ou rsync.net pour le hors-site. Capture tout, embeddings inclus.',
+          '**Historique Git (contenu uniquement) :** fichiers Markdown clairs committés vers un dépôt Git (local + GitHub / Gitea privé). Ajoutez `.smart-env/`, `vector_store/` et tout autre dossier d\'index binaire à `.gitignore`. Git vous donne l\'historique par note ; les snapshots du vault donnent le rollback global.',
+          '**Export d\'embeddings (trimestriel) :** exportez le vector store dans un format portable (ChromaDB → parquet, Smart Connections → JSON dump, AnythingLLM → export intégré). Gardez les deux derniers exports hors-site. Si un snapshot du vault échoue ou si l\'index d\'embeddings se corrompt, c\'est votre chemin de reconstruction rapide.',
+          '**Sync multi-appareils — Obsidian-centré :** Obsidian Sync gère proprement texte clair + index binaires (chiffré de bout en bout). iCloud Drive marche pour le clair mais corrompt les index binaires entre plateformes. Git via Working Copy / Termux marche pour le clair seulement — réindexer par appareil.',
+          '**Sync multi-appareils — AnythingLLM-centré :** faites tourner AnythingLLM en conteneur Docker auto-hébergé sur un serveur domestique. Tous les appareils se connectent à la même instance via LAN ou Tailscale. Pas de sync côté client.',
+          '**Sync multi-appareils — Python sur mesure :** l\'architecture que vous construisez le détermine. La plupart des projets utilisent un service API central (FastAPI sur un serveur domestique) + clients qui POSTent les captures et GETent les requêtes. Tailscale fournit la couche réseau.',
+          '**Migration vers une nouvelle machine :** restaurer le snapshot du vault → restaurer le dépôt Git → relancer Ollama → relancer l\'indexeur d\'embeddings. La régénération d\'embeddings est automatique si vous avez sauté l\'export ; réindexation manuelle si vous l\'avez sauvegardé mais que le format est spécifique à la plateforme.',
+          '**Partage sélectif :** pour partager des parties d\'un vault (ex. un projet de recherche avec des co-auteurs), utilisez des sous-vaults ou un script d\'export par tags. Ne partagez pas tout le vault — la plupart des PKB IA locales accumulent des éléments sensibles (médicaux, financiers, personnels) qui ne doivent jamais quitter le stack local.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Testez votre restauration une fois par trimestre. La plupart des affirmations « j\'ai des sauvegardes » sont des vœux pieux — le test est « puis-je restaurer mon vault sur un portable neuf en moins de 2 heures ? » Faites le test. La première fois, vous découvrirez qu\'une des trois couches (snapshot, Git, export d\'embeddings) était mal configurée depuis six mois.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes',
+        items: [
+          '**Concevoir la couche de récupération avant la couche de capture.** Une recherche hybride sur mesure avec re-ranking est gaspillée sur un vault de 47 éléments. Construisez d\'abord la capture, acceptez le top-5 naïf, et n\'optimisez la récupération que lorsque le vault dépasse 1 000 éléments et que vous pouvez mesurer la qualité sur de vraies requêtes.',
+          '**Mélanger les architectures.** « Obsidian pour les notes + AnythingLLM pour les PDF + Python sur mesure pour les e-mails » paraît propre mais le coût d\'intégration domine. Choisissez une architecture, acceptez ses limites, et n\'ajoutez qu\'un seul connecteur si vraiment nécessaire (ex. AnythingLLM ingérant en lecture seule un dossier de vault Obsidian).',
+          '**Changer de modèle d\'embedding sans réembedder l\'archive.** Mélanger des vecteurs nomic-embed-text 768-dim et mxbai-embed-large 1024-dim dans le même store casse silencieusement la récupération. Choisissez un modèle d\'embedding + dimension, verrouillez-le, et ne changez qu\'avec un réembedding complet de l\'archive.',
+          '**Ignorer la sauvegarde de l\'index d\'embeddings au-delà de 10 000 éléments.** « Je peux le régénérer » est vrai mais la régénération prend des heures. Intégrez le store d\'embeddings à votre stratégie de sauvegarde au-delà de 10K éléments.',
+          '**Concevoir pour le bureau alors que 80 % de la capture se fait sur mobile.** Une PKB sans chemin de capture mobile reste inutilisée. Testez le flux de capture mobile dès le premier jour — le partage vers le vault doit s\'achever en moins de 5 secondes.',
+          '**Compter sur iCloud Drive pour les index d\'embeddings binaires.** iCloud gère le clair correctement ; les index binaires (Smart Connections `.smart-env/`, vector store AnythingLLM) se corrompent entre plateformes. Utilisez Obsidian Sync, une instance auto-hébergée, ou acceptez la réindexation par appareil.',
+          '**Ne pas partitionner à 100K éléments.** Un seul workspace / vault au-delà de 100K éléments a une latence de récupération de l\'ordre de la seconde. Partitionnez par sujet (Travail, Lecture, Projets) en plusieurs workspaces ou sous-vaults ; interrogez chacun séparément ou via un routeur.',
+          '**Sous-estimer les enjeux de conformité.** Les bases personnelles accumulent inévitablement des données sensibles (correspondances de clients, patients, collègues, notes financières et médicales). La CNIL recommande explicitement les solutions IA locales pour le traitement de données professionnelles sensibles (médical, financier, juridique) — l\'inférence locale élimine le besoin de contractualiser un sous-traitant tiers, simplifiant la conformité.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          'Obsidian — [obsidian.md](https://obsidian.md) et [help.obsidian.md](https://help.obsidian.md) (structure des vaults, architecture de sync mobile, documentation des plugins).',
+          'AnythingLLM — [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm) (application RAG open-source auto-hébergée).',
+          'Ollama — [ollama.com](https://ollama.com) et [github.com/ollama/ollama](https://github.com/ollama/ollama) (runtime LLM local ; endpoints chat + embedding).',
+          'ChromaDB — [trychroma.com](https://www.trychroma.com) et [github.com/chroma-core/chroma](https://github.com/chroma-core/chroma) (base vectorielle locale open-source).',
+          'Working Copy — [workingcopy.app](https://workingcopy.app) (client Git iOS pour les pipelines de capture mobile).',
+          'a-Shell — [holzschu.github.io/a-Shell_iOS/](https://holzschu.github.io/a-Shell_iOS/) (terminal iOS gratuit pour la capture mobile pilotée par script).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Comment capturer des pages web dans ma base de connaissances ?',
+            a: 'Trois options classées par friction. (1) Web clipper en extension navigateur — Obsidian Web Clipper ou extension AnythingLLM écrit la page courante directement dans votre vault / workspace. (2) Partage mobile — partager Safari / Chrome → Obsidian (écrit un fichier Markdown) ou → Working Copy (commit Git) ou → Shortcut sur mesure (POST vers votre API de capture). (3) Bookmarklet — pour les navigateurs sans extension ; POSTe l\'URL courante + sélection vers votre endpoint de capture. Le partage mobile est en pratique le chemin le plus utilisé — concevez-le en premier.',
+          },
+          {
+            q: 'Puis-je transférer des e-mails dans le système ?',
+            a: 'Oui. Configurez une adresse dédiée (ex. un alias Fastmail / Migadu `kb@votre-domaine.fr`) et faites tourner sur votre serveur domestique ou portable un poller IMAP qui télécharge les nouveaux e-mails et écrit un fichier Markdown par e-mail dans votre vault. Utilisez un préfixe d\'adresse expéditrice dans le nom de fichier pour permettre le filtrage par expéditeur. AnythingLLM a une intégration e-mail native ; les utilisateurs Obsidian construisent typiquement le poller IMAP eux-mêmes ou utilisent des alternatives à IFTTT / Zapier comme n8n.',
+          },
+          {
+            q: 'Comment synchroniser bureau et mobile ?',
+            a: 'Cela dépend de l\'architecture. Obsidian-centré : Obsidian Sync (payant, gère proprement les index binaires), iCloud Drive (gratuit, clair seulement — réindexer par appareil) ou Git via Working Copy (gratuit + paiement unique Working Copy, clair seulement — réindexer par appareil). AnythingLLM-centré : faites tourner AnythingLLM en Docker sur un serveur domestique, tous les appareils se connectent via LAN ou Tailscale — pas de sync côté client. Python sur mesure : construisez un service API central sur un serveur domestique ; les clients POSTent les captures et GETent les requêtes.',
+          },
+          {
+            q: 'Faut-il un grand vault ou plusieurs par sujet ?',
+            a: 'Un seul vault jusqu\'à ~50 000 éléments. Au-delà de 50K, séparez par sujet (Travail, Lecture, Projets, Personnel) pour deux raisons : la latence de récupération reste sous ~1 sec, et les fuites involontaires entre contextes (ex. notes personnelles apparaissant dans des requêtes pro) deviennent possibles à grande échelle. Séparer plus tôt que 50K est prématuré — vous perdez les connexions cross-domaine fortuites qui sont une valeur principale d\'une PKB.',
+          },
+          {
+            q: 'À quelle fréquence faut-il réembedder pour la précision ?',
+            a: 'Jamais pour cause de « dérive de précision » — les embeddings ne se dégradent pas. Réembeddez seulement quand vous changez de modèle d\'embedding (ex. mise à niveau de nomic-embed-text vers mxbai-embed-large pour une meilleure récupération sur du contenu technique). Les trois architectures gèrent automatiquement le réembedding incrémental aux changements de fichiers ; vous ne le planifiez pas. L\'exception : les stacks Python sur mesure où vous contrôlez l\'indexeur — là, le réembedding incrémental piloté par watchdog à la sauvegarde est la norme.',
+          },
+          {
+            q: 'Puis-je mettre ma base de connaissances sous contrôle de version ?',
+            a: 'Oui pour le contenu en clair (vault Markdown → dépôt Git, local + GitHub / Gitea privé). Ajoutez les dossiers d\'index binaires (`.smart-env/`, `vector_store/`, répertoire de persistance ChromaDB) à `.gitignore` — ils gonflent l\'historique et provoquent des conflits de merge. Git donne l\'historique par note ; les snapshots du vault (Time Machine, restic) donnent le rollback global. Les deux couches, pas l\'une ou l\'autre.',
+          },
+          {
+            q: 'Comment gérer les PDF dans ce système ?',
+            a: 'Obsidian-centré : stockez les PDF à côté des notes Markdown ; Smart Connections n\'embedde pas le contenu PDF directement — extrayez d\'abord le texte (ex. via le plugin PDF++ ou un script de prétraitement écrivant un résumé Markdown à côté de chaque PDF). AnythingLLM-centré : glissez les PDF directement dans un workspace ; AnythingLLM gère parsing PDF et chunking automatiquement. Python sur mesure : utilisez `pypdf` ou `pdfplumber` pour extraire le texte dans votre pipeline d\'ingestion, puis embeddez le texte extrait. AnythingLLM est l\'option avec le moins de friction pour les archives riches en PDF.',
+          },
+          {
+            q: 'Puis-je partager des parties de ma KB de manière sélective ?',
+            a: 'Oui, mais concevez-le dès le premier jour. Utilisez des sous-vaults (Obsidian) ou des workspaces (AnythingLLM) pour garder les contenus « partageables » et « privés » dans des stores séparés. Pour un partage ponctuel, construisez un script d\'export par tags qui extrait les éléments par tag (ex. `#shareable`) dans un bundle Markdown portable. Ne partagez pas tout le vault — la plupart des PKB IA locales accumulent des éléments sensibles (médicaux, financiers, correspondance personnelle) qui ne doivent jamais quitter le stack local.',
+          },
+          {
+            q: 'Quelle est la meilleure stratégie de sauvegarde ?',
+            a: 'Trois couches : (1) snapshot système de fichiers toutes les 24 heures (Time Machine / restic) avec copie hors-site (Backblaze / rsync.net) ; (2) historique Git du contenu en clair pour la récupération par note ; (3) export trimestriel des embeddings + métadonnées comme chemin de reconstruction rapide. Testez la restauration une fois par trimestre — « puis-je reconstruire mon vault sur un portable neuf en moins de 2 heures ? » Le premier test révèle généralement qu\'une des trois couches était mal configurée.',
+          },
+          {
+            q: 'Comment migrer vers un nouvel ordinateur ?',
+            a: 'Restaurer le snapshot du vault → installer Ollama et télécharger les mêmes modèles → installer Obsidian / AnythingLLM / votre stack Python sur mesure → relancer l\'indexeur d\'embeddings. Avec Obsidian Sync ou un AnythingLLM auto-hébergé, la migration se résume à « installer le client et se connecter » — pas de restauration manuelle. Sans cela, prévoyez ~30 min pour un vault de 10K éléments, ~2 heures pour 50K, et la nuit au-delà de 100K si vous avez sauté l\'étape d\'export d\'embeddings.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Obsidian + LLM local : 5 plugins qui transforment votre vault en second cerveau (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=fr) — approfondissement de la couche plugin de l\'Architecture A.',
+          '[LLM local avec Logseq et Joplin](/power-local-llm/local-llm-with-logseq-and-joplin?lang=fr) — couches de stockage alternatives pour la PKB si Obsidian n\'est pas votre choix.',
+          '[Chatter avec 1000+ PDF localement : RAG au-delà des exemples jouets](/power-local-llm/chat-with-1000-pdfs-locally?lang=fr) — mise à l\'échelle de la couche RAG au-delà de 1 000 éléments, valable pour les trois architectures.',
+          '[RAG local sur vos PDF en 30 minutes (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=fr) — tutoriel d\'implémentation RAG pour la couche de récupération de l\'Architecture B.',
+          '[Meilleurs modèles d\'embedding pour le RAG local (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=fr) — choix du modèle d\'embedding (nomic-embed-text vs mxbai-embed-large vs bge-m3) pour chacune des trois architectures.',
+          '[RAG expliqué](/prompt-engineering/rag-explained?lang=fr) — autorité conceptuelle pour la couche de récupération.',
+          '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — dimensionnement matériel pour seuil 16 Go, 32 Go au-delà de 10K, serveur domestique au-delà de 100K.',
+          '[Annuaire logiciels LLM local 2026](/power-local-llm/local-llm-software-directory-2026?lang=fr) — listes pour Ollama, ChromaDB, AnythingLLM, Obsidian et autres composants du stack.',
+        ],
+      },
+    },
+  },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: '生産性とナレッジツール',
+    title: 'ローカルAIで個人ナレッジベースを構築する: 2026年スタックガイド',
+    seoTitle: 'ローカルAI個人ナレッジベース 2026 スタックガイド',
+    intro:
+      'ローカルAIで構築する個人ナレッジベース (PKB) は、2026年時点で5つのレイヤーから成ります: キャプチャ (Web Clipper、メール転送、モバイル共有シート)、ストレージ (Markdown vaultまたはドキュメントフォルダ)、Embedding (Ollama経由のローカルモデル)、検索 (RAG)、インターフェース (チャットまたはセマンティック検索)。実際のビルドの約95%は3つのアーキテクチャでカバーされます — Obsidian中心型 (ノート優先、約50,000アイテムまで拡張)、AnythingLLM中心型 (ドキュメント優先、約100,000アイテムまで拡張)、独自Python + ChromaDBスタック (エンジニア向け、100万アイテム以上に拡張可能)。ハードウェアの最低要件は16 GB RAMのノートPC; 10,000アイテムを超える場合は32 GBを想定してください。最も重要なスケーリング判断はLLMではなく — 知識が実際に最も多く到着するモバイルでの日常使用にキャプチャパイプラインが耐えられるかどうかです。',
+    metaDescription:
+      'ローカルAI個人ナレッジベース 2026: 3つのアーキテクチャ (Obsidian、AnythingLLM、Python + ChromaDB) を比較。100,000以上のアイテムまで拡張。Capture、RAG、同期、バックアップ。',
+    twitterDescription:
+      '2026年のローカルAI PKBアーキテクチャ3つ: Obsidian (~50K)、AnythingLLM (~100K)、Python + ChromaDB (1M+)。Capture、RAG、モバイル同期、バックアップ、スケーリング。',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Qwen3 7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+      'bge-m3',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (16 GB unified memory最低、10,000アイテム以上で32 GB推奨)',
+      'PC with RTX 3060 12 GB or RTX 4060 8 GB',
+      'PC 32 GB RAM (大規模vault向けCPU-onlyフォールバック)',
+      'ホームサーバー / ミニPC 64 GB RAM (100,000アイテム以上のカスタムPythonスタック)',
+    ],
+    audience:
+      'ナレッジワーカー、研究者、ライター、エンジニアで、ノート、ブックマーク、メール、ドキュメント (典型的には1,000〜100,000アイテム) からなるプライベートなAI検索可能アーカイブを、コンテンツをクラウドサービスに送信せずに構築したい方。',
+    readTime: '15分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'ローカルAI個人ナレッジベース',
+    targetKeywords: [
+      'ローカルAI 個人ナレッジベース',
+      'ローカルLLM セカンドブレイン',
+      'プライベート ナレッジベース AI',
+      'ローカルRAG ナレッジベース',
+      'セルフホスト AIナレッジベース',
+      '個人ナレッジベース 2026',
+    ],
+    leadAnswerBlock:
+      '**ローカルAI個人ナレッジベースは2026年時点で5つのレイヤー (キャプチャ、ストレージ、Embedding、検索、インターフェース) から成り、ゼロから設計するのではなく3つの参照アーキテクチャのいずれかを選ぶべきです。** 毎日ノートを書き、vault全体のセマンティック検索を望むなら、Obsidian + Smart Connections + Copilot for Obsidian + Ollamaを選択してください; これは16 GB MacのM3 ProまたはPCで約50,000ノートまで安定して拡張します。知識の大半がノートではなくドキュメント (PDF、エクスポート、Webクリッピング) なら、AnythingLLM + Ollamaを選択してください; これは約100,000ドキュメントまで拡張し、キャプチャ、RAG、チャットを1つのアプリにまとめます。100,000+アイテム、マルチユーザーアクセス、または特定のスキーマニーズがある場合のみ、独自のPython + ChromaDB + Llama 3.2 3Bスタックを構築してください — メンテナンスコストは現実です。3つすべての本当のボトルネックはキャプチャです: ほとんどの知識はモバイルで到着し (Webページ、スクリーンショット、音声メモ、転送メール)、モバイルキャプチャパスのないスタックは、検索がどれほど巧妙でも放置されます。ハードウェア最低要件: 16 GB RAM; 10,000アイテム以上で32 GB計画。100,000アイテム以上ではEmbeddingをホームサーバーに移してください。',
+    quickAnswerTop: {
+      ja: {
+        question: '2026年のローカルAI個人ナレッジベースに最適なアーキテクチャは?',
+        answer:
+          'ほとんどのユーザー向け: Obsidian + Smart Connections + Copilot for Obsidian + Ollama (チャット用Llama 3.2 3B、Embedding用nomic-embed-text)。16 GB Macで約50,000ノートまで拡張。ドキュメント中心のアーカイブ向け: AnythingLLM + Ollamaを1つのアプリで、約100,000ドキュメントまで拡張。エンジニアおよび100,000+アイテムのvault向け: Python + ChromaDB + Llama 3.2 3Bのカスタムスタック、キャプチャ・Embedding・チャットサービスを分離。ハードウェア最低要件: 16 GB RAM; 10,000以上で32 GB、100,000以上でホームサーバー。キャプチャが本当のスケーリングボトルネックです — LLMを最適化する前に、モバイル共有シート、Web Clipper、メール転送を設計してください。',
+        bullets: [
+          'Obsidian中心型 — ノート優先のワークフローに最適、約50,000ノートまで拡張、最低16 GB RAM。',
+          'AnythingLLM中心型 — ドキュメント中心のPKB (PDF、エクスポート) に最適、約100,000ドキュメントまで拡張、オールインワンアプリ。',
+          'カスタムPython + ChromaDBスタック — エンジニアに最適、100万アイテム以上まで拡張、自己管理サービスが必要。',
+          '2026年の推奨チャットモデル: 16 GBシステム向けLlama 3.2 3B、8 GB向けPhi-4 Mini、32 GB+の品質向けQwen3 7B。',
+          '推奨Embeddingモデル: nomic-embed-text (768次元、高速) またはmxbai-embed-large (1024次元、より精密); 多言語アーカイブにはbge-m3。',
+          'ハードウェア最低要件: 16 GB RAMノートPC; 10,000アイテム以上で32 GB推奨; 100,000以上でホームサーバー64 GB。',
+          'キャプチャがボトルネック: ほとんどのPKBアイテムはモバイルでキャプチャされ (Webページ、スクリーンショット、音声メモ)、デスクトップで照会されます。iOS Shortcuts → Obsidian、Working Copy (Git)、a-Shellの3つがモバイルキャプチャパス。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: 'クイックファクト', anchor: '#quick-facts' },
+      { label: 'どのアーキテクチャを構築すべきか?', anchor: '#which-architecture' },
+      { label: 'アーキテクチャ比較表', anchor: '#comparison-table' },
+      { label: 'ローカルAI PKBの5つのレイヤー', anchor: '#five-layers' },
+      { label: 'アーキテクチャA: Obsidian中心型', anchor: '#architecture-obsidian' },
+      { label: 'アーキテクチャB: AnythingLLM中心型', anchor: '#architecture-anythingllm' },
+      { label: 'アーキテクチャC: カスタムPython + ChromaDB', anchor: '#architecture-custom' },
+      { label: 'キャプチャパイプライン: Web、メール、モバイル、音声', anchor: '#capture' },
+      { label: 'モバイルキャプチャ: iOS Shortcuts、Working Copy、a-Shell', anchor: '#mobile-capture' },
+      { label: 'スケーリング: 1K、10K、100Kアイテム', anchor: '#scaling' },
+      { label: 'バックアップ、バージョン管理、マルチデバイス同期', anchor: '#backup-sync' },
+      { label: 'よくある間違い', anchor: '#common-mistakes' },
+      { label: '出典', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**ゼロから設計するのではなく3つの参照アーキテクチャのいずれかを選択してください。** Obsidian中心型 (ノート優先、~50Kアイテム)、AnythingLLM中心型 (ドキュメント優先、~100Kアイテム)、カスタムPython + ChromaDBスタック (エンジニア向け、1M+アイテム)。アーキテクチャを混ぜることはまれにしか割に合いません — 統合コストが支配的になります。',
+          '**ローカルAI PKBは5つのレイヤーから成ります: キャプチャ、ストレージ、Embedding、検索、インターフェース。** 初心者の失敗の多くはLLMレイヤーではなくキャプチャレイヤーで起こります。アイテムがモバイルとメールからシステムに流入しない場合、巧妙な検索もビルドを救えません。',
+          '**ハードウェア最低要件: 16 GB RAM。** これ未満では、Embeddingモデルとチャットモデルのどちらか一方しか実行できません — 両方は無理です。16 GBではLlama 3.2 3B + nomic-embed-textを並列実行できます。32 GBではQwen3 7Bにアップグレードしたり、複数チャットセッションを実行できます。100,000アイテム以上ではEmbeddingをホームサーバーに移してください。',
+          '**2026年の推奨モデル:** チャット — Llama 3.2 3B (デフォルト)、Phi-4 Mini (8 GBシステム)、Qwen3 7B (32 GB+の品質); Embedding — nomic-embed-text (768次元、高速)、mxbai-embed-large (1024次元、より精密)、bge-m3 (多言語)。',
+          '**キャプチャがスケーリングのボトルネックで、検索ではありません。** ほとんどの知識アイテムはモバイルで到着します (Webクリッピング、スクリーンショット、音声メモ、転送メール)。LLMをチューニングする前に、モバイル共有シート → vaultのパスを設計してください。iOS Shortcuts → Obsidian / Working Copy / a-Shellが3つの実用的なiOSパスです。',
+          '**同期方法がモバイルで何が動くかを決定します。** Obsidian Syncはバイナリ Embeddingインデックスをきれいに処理します; iCloud Driveはプラットフォーム間で破損させます; Gitは.gitignore規律とデバイスごとの再インデックスを必要とします。同期を先に選択し、プラグインを後にしてください。',
+          '**バックアップは必須です。** 3つのレイヤー: vaultスナップショット (Time Machine、Backblaze、restic)、平文コンテンツのGit履歴、Embedding + メタデータの四半期エクスポートをクリーンな再構築パスとして。Embeddingは再生成可能ですが高価です — 10,000アイテム以上ではこれもバックアップしてください。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'クイックファクト',
+        items: [
+          '**カバーするアーキテクチャ:** Obsidian中心型、AnythingLLM中心型、カスタムPython + ChromaDBスタック。',
+          '**LLMバックエンド:** Ollama (推奨) — チャットモデルとEmbeddingモデルを1つのローカルエンドポイント `http://localhost:11434` の背後で実行。',
+          '**2026年の推奨チャットモデル:** Llama 3.2 3B (16 GBシステム)、Phi-4 Mini (8 GB)、Qwen3 7B (32 GB+)。',
+          '**2026年の推奨Embeddingモデル:** nomic-embed-text (768次元、高速)、mxbai-embed-large (1024次元、精密)、bge-m3 (多言語)。',
+          '**アイテム数の目標:** Obsidian約50,000ノート、AnythingLLM約100,000ドキュメント、カスタムPython + ChromaDBスタック1M+。',
+          '**ハードウェア最低要件:** 16 GB RAMノートPC。10,000アイテム以上: 32 GB推奨。100,000アイテム以上: 64 GBホームサーバー。',
+          '**モバイルキャプチャパス (iOS):** Shortcuts → Obsidian、Shortcuts → Working Copy (Git)、Shortcuts → a-Shell。Android: TaskerまたはHTTP Shortcuts。',
+        ],
+      },
+      whichArchitecture: {
+        id: 'which-architecture',
+        title: 'どのアーキテクチャを構築すべきか?',
+        content:
+          '**最も強力に聞こえるアーキテクチャではなく、知識がすでに到着している方法に合うアーキテクチャを選択してください。** すでに毎日ノートを書いているなら、Obsidian中心型を構築します。知識の大半がドキュメント (PDF、エクスポート、Webクリッピング) であれば、AnythingLLM中心型を構築します。100,000+アイテムやマルチユーザーアクセスが本当に必要な場合のみ、カスタムPython + ChromaDBスタックを構築してください — メンテナンスコストは現実で、その閾値以下では正当化されにくいです。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'ノート優先のワークフローはObsidian + Smart Connections + Copilot + Ollamaを選び; ドキュメント中心のアーカイブはAnythingLLM + Ollamaを選び; 100K+アイテムのエンジニアはカスタムPython + ChromaDBスタックを選びます。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'このセクションでは、3つの道、1つの目的地という考え方で説明します。すでにノートアプリで生活しているなら、Obsidianが既存の習慣にAI機能をかぶせます。主にPDFとWebページを集めているなら、AnythingLLMが取り込み、インデックス化、チャットを1つのアプリで行います。コードを書き、完全な制御を望むなら、Python + ChromaDBで欲しいものを正確に構築できます — ただしメンテナンスは自分でします。既存のワークフローに合う道を選んでください; アーキテクチャに合わせて習慣を変えないでください。',
+          },
+        ],
+        decisionBlock: {
+          title: '判断: どのPKBアーキテクチャ?',
+          localIf: [
+            'すでにObsidianを使っている、またはMarkdownファイルでノート優先のワークフローを望む → Obsidian中心型',
+            '知識の大半がPDF、エクスポート、Webクリッピング、メールアーカイブ → AnythingLLM中心型',
+            '100,000+アイテム、カスタムスキーマ要件、またはマルチユーザーアクセスが必要 → カスタムPython + ChromaDBスタック',
+            'キャプチャ、ストレージ、RAG、チャットを1つのアプリでカバーしたい → AnythingLLM中心型',
+            'チャンキング、検索、再ランク付けを完全にコントロールしたい → カスタムPython + ChromaDBスタック',
+          ],
+          cloudIf: [
+            'すべてのクエリでGPT-4oクラスの推論が必要で、アーカイブが小さい → Notion AIまたはChatGPT with Custom GPTs (ローカルスタックは合成で約70%の能力)',
+            '16 GB+ RAMのマシンもホームサーバーもない → クラウドSaaS PKB (Mem、Reflect)',
+            'チームに同時マルチユーザーアクセスが必要で、サービスをホストしたくない → クラウド相当',
+          ],
+          quick: [
+            'ノート優先ユーザーのデフォルト: Obsidian + Smart Connections + Copilot + Ollama',
+            'ドキュメント中心ユーザーのデフォルト: AnythingLLM + Ollama',
+            '100K+アイテムのエンジニア: カスタムPython + ChromaDB + Llama 3.2 3Bスタック',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'より強力に聞こえるという理由だけでカスタムPythonスタックから始めないでください。まずObsidian中心型またはAnythingLLM中心型を構築し、2か月運用し、ワークフローに合わないレイヤーを特定してから、そのレイヤーだけをカスタムコンポーネントに置き換えてください。「Pythonでゼロから」始めて6か月以上稼働したPKBプロジェクトはすべて、結局ObsidianまたはAnythingLLMの形に収束しました。',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'アーキテクチャ比較表',
+        content:
+          '**3つの参照アーキテクチャは、ほとんどのビルダーに重要な5つの軸で異なります: セットアップの複雑さ、アイテム数の上限、モバイル同期、キャプチャの柔軟性、メンテナンスの負担。** セットアップの複雑さはコントロールにほぼ比例して増加します — そしてメンテナンスコストも同様です。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidianは~50Kアイテムで中程度の複雑さ、AnythingLLMは~100Kアイテムで低複雑さ、カスタムPython + ChromaDBスタックは高複雑さですが100万アイテム以上に拡張します。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AnythingLLMはセットアップが最も簡単で、2つの「すぐに使える」オプションの中で最も拡張します — ただしドキュメントの整理方法に強い意見を持ちます。Obsidianは最も表現力豊かなノートレイヤーとアクティブなプラグインエコシステムを提供しますが、セットアップ作業がやや増えます。カスタムPythonは無制限ですが、すべてを自分でメンテナンスします: チャンキング、再ランク付け、重複排除、同期、バックアップ。アイテム数だけでなく、メンテナンスへの忍耐力で選択してください。',
+          },
+        ],
+        columns: ['アーキテクチャ', 'セットアップ複雑さ', '最大アイテム数', 'モバイル同期', '最適な用途'],
+        rows: [
+          { 'アーキテクチャ': 'Obsidian中心型', 'セットアップ複雑さ': '中', '最大アイテム数': '~50,000', 'モバイル同期': 'はい (Obsidian Sync; iCloud / Gitは制限あり)', '最適な用途': '日常的な執筆習慣を持つノート優先のパワーユーザー' },
+          { 'アーキテクチャ': 'AnythingLLM中心型', 'セットアップ複雑さ': '低', '最大アイテム数': '~100,000', 'モバイル同期': '限定的 (LAN / Tailscale経由でモバイルからWeb UI)', '最適な用途': 'ドキュメント中心のPKB (PDF、エクスポート、Webクリッピング)' },
+          { 'アーキテクチャ': 'カスタムPython + ChromaDB', 'セットアップ複雑さ': '高', '最大アイテム数': '1M+', 'モバイル同期': '手動 (独自API + モバイルクライアントを構築)', '最適な用途': '完全な制御 + マルチユーザーを望むエンジニア' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'モバイル同期は最も過小評価されている比較軸です。AnythingLLMはObsidianより技術的にセットアップが簡単ですが、モバイルでは「SafariでLAN Web UIを開く」ことを意味します — ネイティブな体験ではありません。Obsidian Mobileは、Obsidian Syncと組み合わせると、オフライン読み込みのできるほぼネイティブなiOS / Androidアプリを提供します。モバイルでのキャプチャと読み込みが重要なら、表が示唆するよりObsidianを高く評価してください。',
+          },
+        ],
+      },
+      fiveLayers: {
+        id: 'five-layers',
+        title: 'ローカルAI PKBの5つのレイヤー',
+        content:
+          '**すべてのローカルAI PKBは、アーキテクチャに関係なく同じ5つのレイヤーを持ちます: キャプチャ、ストレージ、Embedding、検索、インターフェース。** 失敗は通常、1つのレイヤーが他とミスマッチしているために起こります — 最も多いのは、誰も使わない壊れたキャプチャパイプラインと組み合わされた高度な検索レイヤーです。',
+        numberedItems: [
+          {
+            title: 'キャプチャ',
+            whyItMatters: 'アイテムがシステムに入る方法。Web Clipper、メール転送、モバイル共有シート、音声メモ、手動貼り付け。初心者ビルドで最もスキップされるレイヤー — そしてシステムが日常使用に耐えるかを決定するレイヤー。モバイルでキャプチャに5秒以上かかる場合、システムは放置されます。',
+          },
+          {
+            title: 'ストレージ',
+            whyItMatters: 'アイテムがディスク上に存在する場所。Markdown vault (Obsidian、Logseq)、ドキュメントフォルダ + データベース (AnythingLLM)、またはファイルシステム + マニフェスト (カスタムPython)。ツール変更を生き延びる保存形式を選択してください — 平文Markdownが最も移植可能; バイナリデータベースは最も移植不可。',
+          },
+          {
+            title: 'Embedding',
+            whyItMatters: 'セマンティック検索に使用されるアイテムのベクトル表現。ローカルモデル (Ollama経由のnomic-embed-textまたはmxbai-embed-large) で生成。Embeddingモデルは後で変更可能ですが、移行コストは「すべて再Embedding」です — 一度選んで貫いてください。',
+          },
+          {
+            title: '検索',
+            whyItMatters: 'クエリ時にアイテムを見つける方法。Top-kベクトル検索、オプションの再ランク付け、オプションのメタデータフィルター (タグ、日付、ソース)。素朴なtop-5とチューニングされたtop-20-with-rerankerの品質差は「便利」と「魔法」の差です。',
+          },
+          {
+            title: 'インターフェース',
+            whyItMatters: 'クエリと閲覧の方法。サイドバー (Smart Connections)、チャット (Copilot、AnythingLLM)、CLI (カスタムPython)、またはAPI。ほとんどのユーザーはデフォルトでチャットに頼りますが — 「関連ノート」サイドバーは、何を尋ねるべきかわからない忘れた素材を浮上させます。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '失敗するよくあるビルドパターン: 最も強力な検索 (再ランク付き独自ハイブリッド検索)、最も賢いチャットモデル (Qwen3 7B)、そしてキャプチャを無視。3週間後、vaultには47アイテムしかありません — モバイルから何も流入していないからです。修正は常に同じ: 検索を簡素化、チャットを簡素化、キャプチャを修正、そして価値の80%はアイテムがシステムに存在することから来ると受け入れる。',
+          },
+        ],
+      },
+      architectureObsidian: {
+        id: 'architecture-obsidian',
+        title: 'アーキテクチャA: Obsidian中心型',
+        content:
+          '**Obsidian + Smart Connections + Copilot for Obsidian + Ollamaは、2026年のノート優先ワークフローのデフォルトアーキテクチャです。** 16 GB Mac M3 ProまたはPCで約50,000ノートまで安定して拡張し、Obsidian Mobile経由でモバイル読み込みをサポートし、すべてを将来のどのツールにも持ち運べる平文Markdownで保持します。',
+        items: [
+          '**ストレージ:** フォルダ (「vault」) 内のMarkdownファイル。平文、シンプルなフォルダ、データベースなし。ツール移行に耐えます。',
+          '**キャプチャ:** Obsidian Web Clipper (ブラウザ拡張)、Obsidian Mobile共有シート (iOS / Android)、Mailspike経由またはカスタムIFTTTレシピでのObsidianへのメール転送、手動貼り付け。',
+          '**Embedding:** Smart Connectionsプラグイン → `http://localhost:11434/api/embeddings` のOllama → nomic-embed-text (デフォルト) またはmxbai-embed-large (より精密)。インデックスはvault内の `.smart-env/` に存在します。',
+          '**検索:** Smart Connectionsサイドバー (関連ノートビュー) + Copilot for Obsidian Vault QAモード (チャットクエリ用のvault上のRAG)。両方ともEmbeddingインデックスを使用します。',
+          '**インターフェース:** Smart Connectionsサイドバー (受動的発見) + Copilotチャットパネル (能動的クエリ) + Text Generatorテンプレート (日次サマリーなど反復可能なワークフロー)。',
+          '**セットアップ時間:** ~30分 (Ollamaインストール、モデルプル、3つのプラグインインストール、エンドポイント設定、初期インデックス構築)。',
+          '**ハードウェア:** 16 GB RAM最低 (Llama 3.2 3B + nomic-embed-text並列)。10,000ノート以上で32 GB推奨。SSD強く推奨 — インデックス再構築はHDDではI/O律速。',
+          '**アイテム数の上限:** ~50,000ノート実用; 20,000まで秒未満の増分再インデックスでテスト済み。50K+ノートで初期インデックスが4〜8時間かかり、サブvaultを検討すべきです。',
+          '**最適な用途:** 日常的な執筆習慣、Markdown優先の好み、忘れたノートを浮上させる「思考パートナー」サイドバーへの欲求を持つユーザー。',
+          '**不向き:** 知識の大半がPDFとWebクリッピングのユーザー (AnythingLLM中心型を選択); 1つのオールインワンアプリを望むユーザー (Obsidian中心型は「Obsidian + 3プラグイン + Ollama」)。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'このアーキテクチャのプラグインレイヤーの詳細 (どの5つのプラグイン、設定手順、vault規模の数値) については、[Obsidian + ローカルLLMプラグインガイド](/power-local-llm/local-llm-with-obsidian-2026?lang=ja) を参照してください。このページはアーキテクチャをカバーし、プラグインガイドは設定をカバーします。',
+          },
+        ],
+      },
+      architectureAnythingllm: {
+        id: 'architecture-anythingllm',
+        title: 'アーキテクチャB: AnythingLLM中心型',
+        content:
+          '**AnythingLLM + Ollamaはオールインワンオプションです: キャプチャ、ストレージ、RAG、チャットが1つのデスクトップまたはセルフホスト型アプリにバンドルされています。** 約100,000ドキュメント (PDF、Webクリッピング、エクスポートの混合) まで拡張し、知識がノートではなく主にドキュメントとして到着する場合の正しい選択です。',
+        items: [
+          '**ストレージ:** AnythingLLM内部データベース (デフォルトSQLite; マルチユーザーセルフホスト用にPostgres)。ドキュメントはUI経由で取り込まれます; 元ファイルはミラーリングするフォルダに残せます。',
+          '**キャプチャ:** アプリ内アップロード (PDF / ファイルをワークスペースにドラッグ)、Webページ用ブラウザ拡張、プログラム取り込み用パブリックAPI (`POST /api/v1/document/upload`)、公式統合またはカスタムリレー経由のメール転送。',
+          '**Embedding:** AnythingLLMは設定したEmbeddingプロバイダーを使用 — 「Ollama」を選択 → エンドポイント `http://localhost:11434` → モデル `nomic-embed-text`。Embeddingは内蔵ベクトルストア (デフォルトLanceDB; ChromaDB / Pineconeオプション) に保存されます。',
+          '**検索:** ワークスペース上のRAG。設定可能なチャンクサイズ、top-k検索、オプションの再ランク付け。複数のワークスペースでトピック (「仕事」、「読書」、「プロジェクト」など) ごとに分割可能。',
+          '**インターフェース:** AnythingLLM Web UI (デスクトップとモバイルブラウザで動作)、カスタムフロントエンド用パブリックAPI、他のツールをPKBに接続するOpenAI互換エンドポイント。',
+          '**セットアップ時間:** ~15分 (AnythingLLM DesktopまたはDockerをインストール、Ollamaを指定、ドキュメントをドラッグ)。',
+          '**ハードウェア:** 16 GB RAM最低。10,000ドキュメント以上で32 GB推奨。AnythingLLMは同じアイテム数でObsidian + プラグインよりメモリ効率が良く、プロセスが2つではなく1つだからです。',
+          '**アイテム数の上限:** 1つのワークスペースで~100,000ドキュメント; 50K以上で複数のワークスペースに分割し、検索レイテンシを~1秒未満に保ちます。',
+          '**最適な用途:** PDF中心のアーカイブ、Webクリッピング中心のキャプチャ、プラグインのスタックよりも1つのアプリを好むユーザー。共有PKBをセルフホストする小規模チームにも正しい選択。',
+          '**不向き:** ノート優先の執筆面を望むユーザー (Obsidian); 平文Markdownでストレージを所有したいユーザー (AnythingLLMのベクトルストアは内部)。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'ここで使用されるRAGレイヤーの段階的セットアップ (Ollama + AnythingLLM、取り込み、チャンク調整) については、[30分でのローカルRAG (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja) チュートリアルを参照してください。RAGをおもちゃの例を超えて1,000+ PDFに拡張するには、[1000+ PDFをローカルでチャット](/power-local-llm/chat-with-1000-pdfs-locally?lang=ja) を参照してください。',
+          },
+        ],
+      },
+      architectureCustom: {
+        id: 'architecture-custom',
+        title: 'アーキテクチャC: カスタムPython + ChromaDB',
+        content:
+          '**カスタムPython + ChromaDB + Ollamaスタックは、本当に100,000+アイテム、マルチユーザーニーズ、または既製ツールでモデル化できない特定のスキーマ要件がある場合のみ正しい選択です。** メンテナンスコストは現実です: チャンキング、重複排除、再ランク付け、同期、バックアップ — すべて自分で所有します。',
+        items: [
+          '**ストレージ:** ファイルシステム (ソースごとに1フォルダ: `notes/`、`pdfs/`、`web/`、`email/`) + メタデータマニフェスト (SQLiteまたはJSONL)。ソースファイルは平文形式のままで、再取り込みなしで検索レイヤーを交換できます。',
+          '**キャプチャ:** Webhookでトリガーされるスクリプト (Web Clipper → HTTPエンドポイント → ファイル書き込み)、メール転送 → IMAPポーラー → ファイル書き込み、モバイル共有シート → Tailscaleエンドポイント → ファイル書き込み。各キャプチャパスは小さなPythonサービス。',
+          '**Embedding:** ChromaDB (ローカルモード、ディスクに永続化) + OpenAI互換エンドポイント経由のOllama Embedding。watchdogプロセス経由でファイル変更時に再Embedding。ChromaDBはHNSWインデックスで単一マシンで数百万ベクトルまで拡張。',
+          '**検索:** ChromaDB top-k類似度 + 再ランカー (BGE Re-rankerまたはローカルCohere相当) + メタデータフィルター (日付範囲、タグ、ソース)。正確な単語マッチング用にチャンク上のBM25とのオプションのハイブリッド検索。',
+          '**インターフェース:** 任意の組み合わせ: OpenAI互換 `/v1/chat/completions` エンドポイントを公開する小さなFastAPIサービス、Streamlit / Gradio UI、CLI、または3つすべて。Open WebUIをフロントに置くと、UIコードを書かずに洗練されたチャット体験が得られます。',
+          '**セットアップ時間:** 動作するv1まで~1日; チャンキング、検索品質、データに合わせたキャプチャパイプラインの調整に~2週間の反復。',
+          '**ハードウェア:** 開発用の32 GB RAMノートPC; Embeddingサービスがノートと競合しないよう100,000アイテム以上ではホームサーバー64 GB RAM。チャットスループット用に500K+アイテムで専用GPU (RTX 4060以上) を検討。',
+          '**アイテム数の上限:** HNSW + シャーディングで1M+アイテム実用; ボトルネックは検索からキャプチャパイプラインの信頼性とスキーマ変更時の再Embeddingコストへ移ります。',
+          '**最適な用途:** スタックを所有したいエンジニア、カスタムスキーマを持つチーム (例: 「すべてのアイテムには信頼度スコア、ソース、著者がある」)、またはObsidianまたはAnythingLLMの硬い限界 (それぞれ50K / 100K) に達したユーザー。',
+          '**不向き:** 非エンジニア; メンテナンスコストを過小評価する人; 既製オプションでユースケースがすでにカバーされているユーザー。',
+        ],
+        promptExamples: [
+          {
+            label: 'ChromaDB取り込み (Pythonスケッチ)',
+            text: 'import chromadb, ollama, pathlib\nclient = chromadb.PersistentClient(path="./chroma")\ncoll = client.get_or_create_collection("kb")\nfor p in pathlib.Path("vault").rglob("*.md"):\n    text = p.read_text()\n    emb = ollama.embeddings(model="nomic-embed-text", prompt=text)["embedding"]\n    coll.upsert(ids=[str(p)], embeddings=[emb], documents=[text], metadatas=[{"source": str(p)}])',
+          },
+          {
+            label: '再ランク付きクエリ (スケッチ)',
+            text: 'q = "What did I write about local RAG sync?"\nq_emb = ollama.embeddings(model="nomic-embed-text", prompt=q)["embedding"]\nhits = coll.query(query_embeddings=[q_emb], n_results=20)\n# pass hits["documents"] through a re-ranker, keep top 5\n# send top 5 + question to Llama 3.2 3B via Ollama chat endpoint',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'カスタムビルドで最もよくある失敗パターン: スキーマが安定していないため、コード変更のたびにアーカイブ全体を再Embedding。~5,000アイテムを取り込む前に、Embeddingモデル + チャンクサイズをロックしてください。100Kアイテムでnomic-embed-text 768次元からmxbai-embed-large 1024次元への移行は数時間の計算コストがかかり、ChromaDBコレクションを破壊します — 次元を混ぜることはできません。',
+          },
+        ],
+      },
+      capture: {
+        id: 'capture',
+        title: 'キャプチャパイプライン: Web、メール、モバイル、音声',
+        content:
+          '**キャプチャレイヤーがPKBが日常使用に耐えるかを決定します。ほとんどの知識はデスクトップの外で到着します — モバイル、メール、音声メモで — そして最初にデスクトップアプリを開く必要があるキャプチャパイプラインは、迂回されるパイプラインです。** 4つの主要な流入用に構築し、80%のアイテムがモバイルで到着することを受け入れてください。',
+        items: [
+          '**Web Clipper (デスクトップ + モバイル):** Obsidian Web Clipper、AnythingLLMブラウザ拡張、または現在のページをキャプチャエンドポイントにPOSTするカスタムbookmarklet。モバイル共有シート → Web Clipper拡張 → vault。',
+          '**メール転送:** 専用アドレス (例: `kb@yourdomain.com`) + IMAPポーラー → ファイル書き込み。保存したいメールを転送; ポーラーが取り込みを処理。検索でソースごとにフィルターできるよう、ファイル名にソースごとのプレフィックスを使用してください。',
+          '**モバイル共有シート:** 最も使用されるキャプチャパス。iOS Share → Obsidian (Markdownファイルを書く)、iOS Share → Working Copy (Gitにコミット)、iOS Share → カスタムShortcut (キャプチャAPIにPOST)。Android: HTTP ShortcutsまたはTasker。',
+          '**音声メモ:** AudioPenスタイルのキャプチャは2026年に普及しています。電話で録音 → Whisper.cppでローカル転写またはセルフホストWhisperサービス経由 → 転写をMarkdownファイルとして書く → Embedding。',
+          '**手動貼り付け:** フォールバック。常に動作、決して拡張しません。ロングテールに使用。',
+          '**スクリーンショットOCR:** スクリーンショットは損失のあるキャプチャ形式。iOSではApple Live Textを使用するか、ローカルOCRパイプライン (Tesseract、Apple Vision、EasyOCR) を使用してテキストを抽出 + 画像とOCRテキストの両方を含むMarkdownファイルを書きます。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'パイプラインを設計する前に、既存のキャプチャ習慣を監査してください。すでに保存しているものを見てください: ブラウザブックマーク、スクリーンショット、転送メール、音声メモ。PKBキャプチャレイヤーはこれらの既存の流入を反映すべきです — すでに常にスクリーンショットを撮っているなら、OCRパスを構築; すでに自分にメールを転送しているなら、メール転送を構築。新しい習慣を追加する (「これからは各記事を手動でKBにコピー貼り付けする」) ことは決して機能しません。',
+          },
+        ],
+      },
+      mobileCapture: {
+        id: 'mobile-capture',
+        title: 'モバイルキャプチャ: iOS Shortcuts、Working Copy、a-Shell',
+        content:
+          '**iOSは2026年にローカルAI PKBへの3つの実用的なキャプチャパスを持ちます: Shortcuts → Obsidian、Shortcuts → Working Copy (Git)、またはShortcuts → a-Shell (スクリプト駆動)。** 各パスは3つの参照アーキテクチャの1つに自然にペアリングします。同期モデルが全体的なアーキテクチャに合うパスを選択してください。',
+        items: [
+          '**Shortcuts → Obsidian (Obsidian中心型):** Obsidianの「ノートに追加」Shortcutがキャプチャしたコンテンツを直接vaultに書き込みます。Obsidian Sync (有料、推奨) またはiCloud Drive (無料、制限あり) 経由で同期。ノート優先のワークフローに最適。',
+          '**Shortcuts → Working Copy (Git):** キャプチャしたコンテンツがiPhone上のWorking Copyリポジトリに書き込まれ、自動コミットとプッシュ。デスクトップがプル。無料、堅牢、どのMarkdown vaultでも動作。注: Working Copyは有料 (一括約¥3,000)。Git同期vaultに最適。',
+          '**Shortcuts → a-Shell:** a-Shellはスクリプトを実行する無料のiOSターミナル。キャプチャしたテキストをa-Shellスクリプトに渡すShortcutを構築し、ファイルを書いて `git` でコミット、Tailscale経由で `rsync` 同期、または独自キャプチャエンドポイントにアップロードします。エンジニアが構築するカスタムアーキテクチャに最適。',
+          '**Android相当:** iOS Working CopyパスのペアとしてTasker + Termux + Git。カスタムエンドポイントパス用にHTTP Shortcuts。Obsidianパス用にObsidian Mobile共有シート。',
+          '**レイテンシ予算:** モバイルキャプチャはエンドツーエンドで5秒未満で完了すべきです (共有シート → ファイル書き込み / コミット / アップロード)。それより遅いとユーザーは1度だけアプリを開いて二度と開きません。',
+          '**オフラインキャプチャ:** 3つすべてのiOSパスはオフラインでキューイングします (Shortcutsはキューイング、Working Copyはコミットをキューイング、a-Shellスクリプトはローカルに書いて後で同期可能)。フライト、交通機関、地方でのキャプチャに不可欠。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'デスクトップがオンラインであることを必要とするモバイルキャプチャパス (例: ノートPCが起動している間だけ到達可能なTailscale保護エンドポイントへのPOST) を構築しないでください。仕事の会議中、ノートPCのスリープモード中、夜間にキャプチャを失います。キャプチャエンドポイントを常時稼働のホームサーバー / NASで実行するか、オフラインでバッファする最終的整合性ストア (Obsidian Sync、Git、iCloud) に書き込んでください。',
+          },
+        ],
+      },
+      scaling: {
+        id: 'scaling',
+        title: 'スケーリング: 1K、10K、100Kアイテム',
+        content:
+          '**ローカルAI PKBのスケーリングには3つの体制があります: 1,000アイテム未満では、すべてが現代のノートPCで高速; 1,000〜10,000アイテムでは、Embeddingインデックスが管理が必要な実物のアーティファクトになる; 10,000アイテム以上では、ハードウェアがボトルネックになり、キャプチャパイプラインの信頼性が結果を支配します。** 以下の現実的な数値は、Mac M3 Pro / RTX 4060 PCでnomic-embed-textとLlama 3.2 3Bを想定しています。',
+        columns: ['アイテム数', '推奨アーキテクチャ', '初期Embedding時間', 'ハードウェア', 'メモ'],
+        rows: [
+          { 'アイテム数': '1,000アイテム', '推奨アーキテクチャ': '3つのいずれか', '初期Embedding時間': '~2分', 'ハードウェア': '16 GB RAMノートPC', 'メモ': 'すべてが瞬時に感じられます。アーキテクチャ選択は純粋にワークフローの適合性によります。' },
+          { 'アイテム数': '10,000アイテム', '推奨アーキテクチャ': 'ObsidianまたはAnythingLLM', '初期Embedding時間': '~25分', 'ハードウェア': '16 GB RAMノートPC (32 GB推奨)', 'メモ': 'Embeddingインデックス~150〜250 MB。編集時の再Embedding時間は秒未満。ほとんどのナレッジワーカーのスイートスポット。' },
+          { 'アイテム数': '50,000アイテム', '推奨アーキテクチャ': 'AnythingLLMまたはカスタムPython', '初期Embedding時間': '~3時間', 'ハードウェア': '32 GB RAMノートPCまたはホームサーバー', 'メモ': '初期インデックスは夜間実行。この点を超えるとサブvault / ワークスペースを計画。Embedding用ディスク使用量~1.5〜2 GB。' },
+          { 'アイテム数': '100,000アイテム', '推奨アーキテクチャ': 'AnythingLLM (マルチワークスペース) またはカスタムPython', '初期Embedding時間': '6〜8時間', 'ハードウェア': '32 GB RAM最低; ホームサーバー優先', 'メモ': 'Embeddingを専用ホームサーバーに移動。キャプチャパイプラインの信頼性が主な失敗モードに、検索ではない。' },
+          { 'アイテム数': '500,000+アイテム', '推奨アーキテクチャ': 'カスタムPython + ChromaDB', '初期Embedding時間': '24+時間', 'ハードウェア': '64 GB RAMホームサーバー + 専用GPU', 'メモ': 'シャーディング、重複排除、増分再Embeddingパイプラインが必要に。既製ツールはもはや適合しません。' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '初期Embeddingコストは1回限りの請求書です。最初のインデックスの後、変更されたアイテムのみが再Embeddingされます — 100Kアイテムでも通常save毎に1秒未満。最初の遅さは現実ですが繰り返しません。電源接続マシンで初期インデックスを夜間実行し、忘れてください。',
+          },
+        ],
+      },
+      backupSync: {
+        id: 'backup-sync',
+        title: 'バックアップ、バージョン管理、マルチデバイス同期',
+        content:
+          '**ローカルAI PKBには3つのバックアップレイヤーが必要です: vaultスナップショット (Time Machine、Backblaze、restic)、平文コンテンツのGit履歴、クリーンな再構築パスとしてのEmbeddingとメタデータの四半期エクスポート。** Embeddingは技術的には再生成可能ですが、100K+アイテムでは再生成コストは数時間 — これもバックアップしてください。',
+        items: [
+          '**vaultスナップショット (ファイルシステムレベル):** 24時間ごとのTime Machine (macOS) またはrestic (Linux)。オフサイトにBackblazeまたはrsync.net。Embeddingを含むすべてをキャプチャ。',
+          '**Git履歴 (コンテンツのみ):** Gitリポジトリ (ローカル + GitHub / Gitea private) にコミットされた平文Markdownファイル。`.smart-env/`、`vector_store/`、その他のバイナリインデックスフォルダを `.gitignore` に追加。Gitはノート毎のバージョン履歴を提供; vaultスナップショットはシステム全体のロールバックを提供。',
+          '**Embeddingエクスポート (四半期):** ベクトルストアを移植可能形式にエクスポート (ChromaDB → parquet、Smart Connections → JSONダンプ、AnythingLLM → 内蔵エクスポート)。最新2つのエクスポートをオフサイトに保管。vaultスナップショットが失敗するかEmbeddingインデックスが破損した場合、これが高速再構築パス。',
+          '**マルチデバイス同期 — Obsidian中心型:** Obsidian Syncは平文 + バイナリインデックスをきれいに処理 (E2E暗号化)。iCloud Driveは平文には機能しますが、プラットフォーム間でバイナリインデックスを破損させます。Working Copy / Termux経由のGitは平文のみ機能 — デバイスごとに再インデックス。',
+          '**マルチデバイス同期 — AnythingLLM中心型:** AnythingLLMをホームサーバーのセルフホストDockerコンテナとして実行。すべてのデバイスがLANまたはTailscale経由で同じインスタンスに接続。クライアント側同期不要。',
+          '**マルチデバイス同期 — カスタムPython:** 構築するアーキテクチャがこれを決定。ほとんどのビルドは中央APIサービス (ホームサーバーのFastAPI) + キャプチャをPOSTしクエリをGETするクライアントを使用。Tailscaleがネットワークレイヤーを提供。',
+          '**新しいコンピューターへの移行:** vaultスナップショット復元 → Gitリポジトリ復元 → Ollama再起動 → Embeddingインデクサー再起動。Embeddingエクスポート手順をスキップした場合、Embedding再生成は自動; バックアップしたが形式がプラットフォーム固有の場合は手動再インデックス。',
+          '**選択的共有:** vaultの一部 (例: 共同研究プロジェクト) を共有するには、サブvaultまたはタグエクスポートスクリプトを使用。vault全体を共有しないでください — ほとんどのローカルAI PKBはローカルスタックを離れるべきでない機密アイテム (医療、財務、個人) を蓄積します。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '四半期に一度復元をテストしてください。ほとんどの「バックアップがあります」という主張は願望です — テストは「新しいノートPCで2時間以内にvaultを復元できますか?」 そのテストを実行してください。最初に行うとき、3つのレイヤー (スナップショット、Git、Embeddingエクスポート) のうち1つが過去6か月間誤設定だったことが判明します。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'よくある間違い',
+        items: [
+          '**キャプチャレイヤーの前に検索レイヤーを設計する。** 47アイテムのvaultでは再ランク付き独自ハイブリッド検索は無駄です。最初にキャプチャを構築し、素朴なtop-5検索を受け入れ、vaultが1,000+アイテムを持ち、実際のクエリで検索品質を測定できるようになってから検索を最適化してください。',
+          '**アーキテクチャを混ぜる。** 「ノート用Obsidian + PDF用AnythingLLM + メール用カスタムPython」はクリーンに聞こえますが、統合コストが支配的になります。1つのアーキテクチャを選択し、限界を受け入れ、絶対に必要な場合のみ単一のコネクタを追加してください (例: Obsidian vaultフォルダを読み取り専用で取り込むAnythingLLM)。',
+          '**アーカイブを再Embeddingせずにモデルを切り替える。** 同じストアでnomic-embed-text 768次元とmxbai-embed-large 1024次元のベクトルを混ぜると、検索が静かに壊れます。Embeddingモデル + 次元を1つ選択し、ロックし、アーカイブの完全な再Embeddingでのみ切り替えてください。',
+          '**10,000アイテム以上でEmbeddingインデックスのバックアップを無視する。** 「再生成できる」は本当ですが、再生成は数時間かかります。10Kアイテム以上でEmbeddingストアをバックアップ戦略に追加してください。',
+          '**キャプチャの80%がモバイルで起こるのにデスクトップ専用に設計する。** モバイルキャプチャパスのないPKBは放置されます。1日目にモバイルキャプチャフローをテスト — 共有シートからvaultへは5秒未満で完了すべきです。',
+          '**バイナリEmbeddingインデックスにiCloud Driveを依存する。** iCloudは平文をきれいに処理; バイナリインデックス (Smart Connections `.smart-env/`、AnythingLLMベクトルストア) はプラットフォーム間で破損。Obsidian Sync、セルフホストインスタンスを使用するか、デバイスごとの再インデックスを受け入れてください。',
+          '**100Kアイテムで分割しない。** 100K+アイテムの単一ワークスペース / vaultは検索レイテンシが秒オーダーになります。トピックごと (仕事、読書、プロジェクト) に複数のワークスペースまたはサブvaultに分割; それぞれ別々にまたはルーター経由でクエリしてください。',
+          '**コンプライアンスリスクを過小評価する。** 個人ナレッジベースは必然的に機密データ (顧客、患者、同僚からのメール、財務・医療メモ) を蓄積します。経済産業省の「AI事業者ガイドライン (2024)」は、個人情報を扱う企業展開において、ローカル推論によるデータ最小化と説明責任を推奨しています — クラウドエグレスがないため、第三者処理者契約 (Art. 28相当) が不要になります。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        items: [
+          'Obsidian — [obsidian.md](https://obsidian.md) と [help.obsidian.md](https://help.obsidian.md) (vault構造、モバイル同期アーキテクチャ、プラグインドキュメント)。',
+          'AnythingLLM — [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm) (オープンソースのセルフホスト型RAGアプリケーション)。',
+          'Ollama — [ollama.com](https://ollama.com) と [github.com/ollama/ollama](https://github.com/ollama/ollama) (ローカルLLMランタイム; チャット + Embeddingエンドポイント)。',
+          'ChromaDB — [trychroma.com](https://www.trychroma.com) と [github.com/chroma-core/chroma](https://github.com/chroma-core/chroma) (オープンソースのローカルベクトルデータベース)。',
+          'Working Copy — [workingcopy.app](https://workingcopy.app) (モバイルキャプチャパイプライン用のiOS Gitクライアント)。',
+          'a-Shell — [holzschu.github.io/a-Shell_iOS/](https://holzschu.github.io/a-Shell_iOS/) (スクリプト駆動モバイルキャプチャ用の無料iOSターミナル)。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Webページをナレッジベースにキャプチャするには?',
+            a: '摩擦順に3つのオプション。(1) ブラウザ拡張Web Clipper — Obsidian Web ClipperまたはAnythingLLMブラウザ拡張が現在のページを直接vault / ワークスペースに書き込みます。(2) モバイル共有シート — Safari / Chrome共有 → Obsidian (Markdownファイルを書く)、または → Working Copy (Gitにコミット)、または → カスタムShortcut (キャプチャAPIにPOST)。(3) Bookmarklet — 拡張のないブラウザ向け; 現在のURL + 選択をキャプチャエンドポイントにPOST。実際にはモバイル共有シートが最も使用されるパス — 最初に設計してください。',
+          },
+          {
+            q: 'メールをシステムに転送できますか?',
+            a: 'はい。専用アドレスを設定し (例: Fastmail / Migaduエイリアス `kb@yourdomain.com`)、ホームサーバーまたはノートPCで新しいメールをダウンロードしてvaultに1メールにつき1Markdownファイルを書くIMAPポーラーを実行します。検索でsenderごとにフィルターできるよう、ファイル名にfromアドレスプレフィックスを使用してください。AnythingLLMはファーストパーティのメール統合を持ちます; ObsidianユーザーはIMAPポーラーを自分で構築するか、IFTTT / Zapier代替のn8nなどを使用するのが一般的です。',
+          },
+          {
+            q: 'デスクトップとモバイルを同期するには?',
+            a: 'アーキテクチャ依存。Obsidian中心型: Obsidian Sync (有料、バイナリインデックスをきれいに処理)、iCloud Drive (無料、平文のみ — デバイスごとに再インデックス)、Working Copy経由のGit (無料 + Working Copy一括料金、平文のみ — デバイスごとに再インデックス)。AnythingLLM中心型: AnythingLLMをホームサーバーでDockerで実行、すべてのデバイスがLANまたはTailscale経由で接続 — クライアント側同期不要。カスタムPython: ホームサーバーに中央APIサービスを構築; クライアントがキャプチャをPOSTしクエリをGET。',
+          },
+          {
+            q: '1つの大きなvaultを使うべきか、トピックで分割すべきか?',
+            a: '~50,000アイテムまでは1つのvault。50K以上ではトピック (仕事、読書、プロジェクト、個人) で分割、2つの理由から: 検索レイテンシが~1秒未満を維持し、コンテキスト間の意図しないクロスリーク (例: 個人ノートが仕事クエリに表示) が大規模で可能になります。50Kより早く分割するのは時期尚早 — PKBの主な価値である偶発的なクロスドメイン接続を失います。',
+          },
+          {
+            q: '精度のためにどのくらいの頻度で再Embeddingすべきか?',
+            a: '「精度ドリフト」のために再Embeddingしないでください — Embeddingは劣化しません。Embeddingモデルを変更するときのみ再Embedding (例: 技術コンテンツのより良い検索のためにnomic-embed-textからmxbai-embed-largeへのアップグレード)。3つすべてのアーキテクチャがファイル変更時の増分再Embeddingを自動的に処理します; スケジュールしません。例外はインデクサーを制御するカスタムPythonスタック — そこではwatchdog駆動の保存時増分再Embeddingが標準です。',
+          },
+          {
+            q: 'ナレッジベースをバージョン管理できますか?',
+            a: '平文コンテンツについてははい (Markdown vault → Gitリポジトリ、ローカル + GitHub / Gitea private)。バイナリインデックスフォルダ (`.smart-env/`、`vector_store/`、ChromaDB永続化ディレクトリ) を `.gitignore` に追加 — それらは履歴を膨張させ、マージコンフリクトを引き起こします。Gitはノート毎のバージョン履歴を提供; vaultスナップショット (Time Machine、restic) はシステム全体のロールバックを提供。両方のレイヤーで、どちらか一方ではない。',
+          },
+          {
+            q: 'このシステムでPDFを処理するには?',
+            a: 'Obsidian中心型: PDFをMarkdownノートと並べて保存; Smart ConnectionsはPDFコンテンツを直接Embeddingしない — まずテキストを抽出 (例: PDF++プラグイン経由または各PDFと並んでMarkdownサマリーを書く前処理スクリプト)。AnythingLLM中心型: PDFを直接ワークスペースにドラッグ; AnythingLLMがPDFパースとチャンキングを自動的に処理。カスタムPython: 取り込みパイプラインで `pypdf` または `pdfplumber` を使用してテキストを抽出し、抽出したテキストをEmbedding。AnythingLLMがPDF中心のアーカイブで最も摩擦の少ないオプションです。',
+          },
+          {
+            q: 'KBの一部を選択的に共有できますか?',
+            a: 'はい、ただし1日目から設計してください。サブvault (Obsidian) またはワークスペース (AnythingLLM) を使用して、「共有可能」と「プライベート」コンテンツを別々のストアに保ちます。1回限りの共有には、タグ (例: `#shareable`) でアイテムを引っ張る移植可能Markdownバンドルへのタグエクスポートスクリプトを構築。vault全体を共有しないでください — ほとんどのローカルAI PKBはローカルスタックを離れるべきでない機密アイテム (医療、財務、個人通信) を蓄積します。',
+          },
+          {
+            q: '最良のバックアップ戦略は?',
+            a: '3つのレイヤー: (1) 24時間ごとのファイルシステムスナップショット (Time Machine / restic) とオフサイトコピー (Backblaze / rsync.net); (2) ノート毎のバージョン回復のための平文コンテンツのGit履歴; (3) 高速再構築パスとしてのEmbedding + メタデータの四半期エクスポート。四半期に一度復元をテスト — 「新しいノートPCで2時間以内にvaultを再構築できますか?」 最初の復元テストは通常、3つのレイヤーのうち1つが誤設定だったことを明らかにします。',
+          },
+          {
+            q: '新しいコンピューターに移行するには?',
+            a: 'vaultスナップショットを復元 → Ollamaをインストールして同じモデルをプル → Obsidian / AnythingLLM / カスタムPythonスタックをインストール → Embeddingインデクサーを再起動。Obsidian Syncまたはセルフホスト型AnythingLLMでは、移行は「クライアントをインストールしてログイン」 — 手動復元不要。それらなしでは、10Kアイテムvaultで~30分、50Kで~2時間、Embeddingエクスポート手順をスキップした場合は100K以上で夜間を見込んでください。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[Obsidian + ローカルLLM: vaultをセカンドブレインに変える5つのプラグイン (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=ja) — アーキテクチャAのプラグインレイヤーの詳細。',
+          '[LogseqとJoplinでのローカルLLM](/power-local-llm/local-llm-with-logseq-and-joplin?lang=ja) — Obsidianが選択でない場合のPKBの代替ストレージレイヤー。',
+          '[1000+ PDFをローカルでチャット: おもちゃの例を超えてRAGをスケーリング](/power-local-llm/chat-with-1000-pdfs-locally?lang=ja) — 1,000アイテムを超えるRAGレイヤーのスケーリング、3つすべてのアーキテクチャに適用。',
+          '[30分でPDFのローカルRAG (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja) — アーキテクチャBで使用される検索レイヤーのRAG実装ウォークスルー。',
+          '[ローカルRAGに最適なEmbeddingモデル (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) — 3つのアーキテクチャそれぞれのEmbeddingモデル選択 (nomic-embed-text vs mxbai-embed-large vs bge-m3)。',
+          '[RAG解説](/prompt-engineering/rag-explained?lang=ja) — 検索レイヤーの概念的な権威。',
+          '[ローカルLLMハードウェアガイド 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — 16 GB最低、10K以上で32 GB、100K以上でホームサーバーのハードウェアサイジング。',
+          '[ローカルLLMソフトウェアディレクトリ 2026](/power-local-llm/local-llm-software-directory-2026?lang=ja) — Ollama、ChromaDB、AnythingLLM、Obsidian、その他のスタックコンポーネントのディレクトリリスト。',
+        ],
+      },
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: '生产力与知识工具',
+    title: '使用本地 AI 构建个人知识库:2026 技术栈指南',
+    seoTitle: '本地 AI 个人知识库:2026 技术栈指南',
+    intro:
+      '基于本地 AI 构建的个人知识库 (PKB) 在 2026 年由五个层组成:捕获 (Web Clipper、邮件转发、移动端分享)、存储 (Markdown vault 或文档文件夹)、嵌入 (通过 Ollama 的本地模型)、检索 (RAG) 和界面 (聊天或语义搜索)。三种架构覆盖约 95% 的实际项目 — Obsidian 中心型 (笔记优先,可扩展至约 50,000 条目)、AnythingLLM 中心型 (文档优先,可扩展至约 100,000 条目),以及自建 Python + ChromaDB 技术栈 (工程师优先,可扩展至 100 万+ 条目)。硬件门槛是 16 GB 内存的笔记本电脑;超过 10,000 条目时应规划 32 GB。最重要的扩展决策不是 LLM — 而是您的捕获管道能否在移动端经受日常使用,因为大多数知识实际上是在手机上产生的。',
+    metaDescription:
+      '2026 本地 AI 个人知识库:对比 3 种架构 (Obsidian、AnythingLLM、Python + ChromaDB)。可扩展至 100,000+ 条目。捕获、RAG、同步、备份。',
+    twitterDescription:
+      '2026 三种本地 AI PKB 架构:Obsidian (~50K)、AnythingLLM (~100K)、Python + ChromaDB (1M+)。捕获、RAG、移动同步、备份、扩展。',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Qwen3 7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+      'bge-m3',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (16 GB 统一内存最低,10,000 条目以上推荐 32 GB)',
+      'PC with RTX 3060 12 GB or RTX 4060 8 GB',
+      'PC with 32 GB 内存 (大型 vault 的 CPU-only 备用方案)',
+      '家庭服务器 / 迷你 PC with 64 GB 内存 (100,000 条目以上的自建 Python 技术栈)',
+    ],
+    audience:
+      '知识工作者、研究人员、作家和工程师,他们希望从笔记、书签、邮件和文档中构建一个私有的、可被 AI 检索的归档 — 通常 1,000 到 100,000 条目 — 而不将内容发送到云服务。',
+    readTime: '阅读约15分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '本地 AI 个人知识库',
+    targetKeywords: [
+      '本地 AI 个人知识库',
+      '本地 LLM 第二大脑',
+      '私有知识库 AI',
+      '本地 RAG 知识库',
+      '自托管 AI 知识库',
+      '个人知识库 2026',
+    ],
+    leadAnswerBlock:
+      '**2026 年的本地 AI 个人知识库由五层组成 — 捕获、存储、嵌入、检索、界面 — 您应该选择三种参考架构之一,而不是从零开始设计。** 如果您每天写笔记并希望对整个 vault 进行语义搜索,使用 Obsidian + Smart Connections + Copilot for Obsidian + Ollama;在 16 GB Mac M3 Pro 或 PC 上可干净地扩展至约 50,000 条笔记。如果您的知识主要是文档 (PDF、导出、网页剪藏) 而非笔记,使用 AnythingLLM + Ollama;可扩展至约 100,000 条文档,并将捕获、RAG 和聊天集成到一个应用中。仅当您拥有 100,000+ 条目、多用户访问或特定的 schema 需求时,才构建自建 Python + ChromaDB + Llama 3.2 3B 技术栈 — 维护成本是真实的。三种架构的真正瓶颈都是捕获:大多数知识在移动端到达 (网页、截图、语音笔记、转发的邮件),没有移动捕获路径的技术栈无论检索多巧妙都会被闲置。硬件门槛:16 GB 内存;超过 10,000 条目时规划 32 GB。超过 100,000 条目时将嵌入迁移到家庭服务器。',
+    quickAnswerTop: {
+      zh: {
+        question: '2026 年最佳的本地 AI 个人知识库架构是什么?',
+        answer:
+          '对大多数用户:Obsidian + Smart Connections + Copilot for Obsidian + Ollama (Llama 3.2 3B 用于聊天,nomic-embed-text 用于嵌入)。在 16 GB Mac 上可扩展至约 50,000 条笔记。对文档密集型归档:AnythingLLM + Ollama 集成在一个应用中,可扩展至约 100,000 条文档。对工程师和 100,000+ 条目的 vault:自建 Python + ChromaDB + Llama 3.2 3B 技术栈,捕获、嵌入和聊天服务分离。硬件门槛 16 GB 内存;10,000 条目以上规划 32 GB,100,000 以上规划家庭服务器。捕获是真正的扩展瓶颈 — 在优化 LLM 之前,先设计移动分享、Web Clipper 和邮件转发。',
+        bullets: [
+          'Obsidian 中心型 — 最适合笔记优先工作流,可扩展至约 50,000 条笔记,16 GB 内存最低。',
+          'AnythingLLM 中心型 — 最适合文档密集型 PKB (PDF、导出),可扩展至约 100,000 条文档,一体化应用。',
+          '自建 Python + ChromaDB 技术栈 — 最适合工程师,可扩展至 100 万+ 条目,需要自管服务。',
+          '2026 推荐聊天模型:16 GB 系统选 Llama 3.2 3B,8 GB 选 Phi-4 Mini,32 GB+ 追求质量选 Qwen3 7B。',
+          '推荐嵌入模型:nomic-embed-text (768 维,快速) 或 mxbai-embed-large (1024 维,更精准);多语言归档选 bge-m3。',
+          '硬件门槛:笔记本 16 GB 内存;10,000 条目以上推荐 32 GB;100,000 以上家庭服务器 64 GB。',
+          '捕获是瓶颈:大多数 PKB 条目在移动端被捕获 (网页、截图、语音笔记),在桌面端被查询。iOS Shortcuts → Obsidian、Working Copy (Git) 或 a-Shell 是三种移动捕获路径。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '快速事实', anchor: '#quick-facts' },
+      { label: '应该构建哪种架构?', anchor: '#which-architecture' },
+      { label: '架构对比表', anchor: '#comparison-table' },
+      { label: '本地 AI PKB 的五层', anchor: '#five-layers' },
+      { label: '架构 A:Obsidian 中心型', anchor: '#architecture-obsidian' },
+      { label: '架构 B:AnythingLLM 中心型', anchor: '#architecture-anythingllm' },
+      { label: '架构 C:自建 Python + ChromaDB', anchor: '#architecture-custom' },
+      { label: '捕获管道:网页、邮件、移动、语音', anchor: '#capture' },
+      { label: '移动捕获:iOS Shortcuts、Working Copy、a-Shell', anchor: '#mobile-capture' },
+      { label: '扩展:1K、10K、100K 条目', anchor: '#scaling' },
+      { label: '备份、版本控制、多设备同步', anchor: '#backup-sync' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**选择三种参考架构之一,而不是从零开始设计。** Obsidian 中心型 (笔记优先,~50K 条目)、AnythingLLM 中心型 (文档优先,~100K 条目) 或自建 Python + ChromaDB 技术栈 (工程师优先,1M+ 条目)。混合架构很少划算 — 集成成本占主导。',
+          '**本地 AI PKB 有五层:捕获、存储、嵌入、检索、界面。** 大多数初学者错误发生在捕获层,而不是 LLM 层。如果条目不能从移动端和邮件流入系统,再巧妙的检索也无法挽救项目。',
+          '**硬件门槛:16 GB 内存。** 低于此值,您只能在嵌入模型和聊天模型之间选一个 — 不能两者兼顾。在 16 GB 上可以并行运行 Llama 3.2 3B + nomic-embed-text。32 GB 可升级到 Qwen3 7B 或运行多个聊天会话。100,000 条目以上将嵌入迁移到家庭服务器。',
+          '**2026 推荐模型:** 聊天 — Llama 3.2 3B (默认)、Phi-4 Mini (8 GB 系统)、Qwen3 7B (32 GB+ 追求质量);嵌入 — nomic-embed-text (768 维,快速)、mxbai-embed-large (1024 维,更精准)、bge-m3 (多语言)。',
+          '**捕获是扩展瓶颈,不是检索。** 大多数知识条目在移动端到达 (网页剪藏、截图、语音笔记、转发邮件)。在调优 LLM 之前,先设计移动分享 → vault 路径。iOS Shortcuts → Obsidian / Working Copy / a-Shell 是三种可行的 iOS 路径。',
+          '**同步方式决定移动端能跑什么。** Obsidian Sync 干净处理二进制嵌入索引;iCloud Drive 跨平台破坏它们;Git 需要 .gitignore 纪律和按设备重新索引。先选同步,再选插件。',
+          '**备份不是可选项。** 三层:vault 快照 (Time Machine、Backblaze、restic)、明文内容的 Git 历史,以及嵌入 + 元数据的季度导出作为干净的重建路径。嵌入可重新生成但成本高 — 10,000 条目以上也要备份它们。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速事实',
+        items: [
+          '**覆盖架构:** Obsidian 中心型、AnythingLLM 中心型、自建 Python + ChromaDB 技术栈。',
+          '**LLM 后端:** Ollama (推荐) — 在一个本地端点 `http://localhost:11434` 后运行聊天和嵌入模型。',
+          '**2026 推荐聊天模型:** Llama 3.2 3B (16 GB 系统)、Phi-4 Mini (8 GB)、Qwen3 7B (32 GB+)。',
+          '**2026 推荐嵌入模型:** nomic-embed-text (768 维,快速)、mxbai-embed-large (1024 维,精准)、bge-m3 (多语言)。',
+          '**条目数量目标:** Obsidian ~50,000 条笔记,AnythingLLM ~100,000 条文档,自建 Python + ChromaDB 技术栈 1M+。',
+          '**硬件门槛:** 笔记本 16 GB 内存。10,000 条目以上:32 GB 推荐。100,000 条目以上:64 GB 家庭服务器。',
+          '**移动捕获路径 (iOS):** Shortcuts → Obsidian、Shortcuts → Working Copy (Git)、Shortcuts → a-Shell。Android:Tasker 或 HTTP Shortcuts。',
+        ],
+      },
+      whichArchitecture: {
+        id: 'which-architecture',
+        title: '应该构建哪种架构?',
+        content:
+          '**选择与您现有知识流入方式相符的架构 — 不是听起来最强大的那种。** 如果您每天写笔记,选择 Obsidian 中心型。如果您的知识主要是文档 (PDF、导出、网页剪藏),选择 AnythingLLM 中心型。仅当您真的有 100,000+ 条目或多用户访问需求时,才构建自建 Python + ChromaDB 技术栈 — 维护成本是真实的,在该阈值以下很少能被证明合理。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '笔记优先的工作流选择 Obsidian + Smart Connections + Copilot + Ollama;文档密集型归档选择 AnythingLLM + Ollama;100K+ 条目的工程师选择自建 Python + ChromaDB 技术栈。',
+          },
+          {
+            type: 'plain-terms',
+            text: '三条路,一个目的地。如果您已经在笔记应用中生活,Obsidian 在您现有的习惯外包裹 AI 功能。如果您主要囤积 PDF 和网页,AnythingLLM 是一个集成应用,可摄取、索引并聊天。如果您写代码并希望完全控制,Python + ChromaDB 让您构建您想要的 — 但您自己维护。选择符合您现有工作流的路径;不要为了适应架构而改变习惯。',
+          },
+        ],
+        decisionBlock: {
+          title: '决策:哪种 PKB 架构?',
+          localIf: [
+            '您已经使用 Obsidian 或希望 Markdown 文件的笔记优先工作流 → Obsidian 中心型',
+            '您的知识主要是 PDF、导出、网页剪藏和邮件归档 → AnythingLLM 中心型',
+            '您有 100,000+ 条目、自定义 schema 需求或多用户访问 → 自建 Python + ChromaDB 技术栈',
+            '您希望一个应用涵盖捕获、存储、RAG 和聊天 → AnythingLLM 中心型',
+            '您希望完全控制分块、检索和重排 → 自建 Python + ChromaDB 技术栈',
+          ],
+          cloudIf: [
+            '您每次查询都需要 GPT-4o 级推理且归档很小 → Notion AI 或带自定义 GPT 的 ChatGPT (本地技术栈在合成上约有 70% 的能力)',
+            '您没有 16 GB+ 内存的机器或家庭服务器 → 云 SaaS PKB (Mem、Reflect)',
+            '您的团队需要并发多用户访问且不想托管服务 → 云等价方案',
+          ],
+          quick: [
+            '笔记优先用户的默认选择:Obsidian + Smart Connections + Copilot + Ollama',
+            '文档密集型用户的默认选择:AnythingLLM + Ollama',
+            '100K+ 条目的工程师:自建 Python + ChromaDB + Llama 3.2 3B 技术栈',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: '不要因为听起来更强大就从自建 Python 技术栈开始。先构建 Obsidian 中心型或 AnythingLLM 中心型,运行两个月,识别不符合您工作流的层,然后只用自定义组件替换那一层。所有从「Python 从零开始」并运行超过六个月的 PKB 项目最终都收敛到 Obsidian 形或 AnythingLLM 形。',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '架构对比表',
+        content:
+          '**三种参考架构在五个对大多数构建者重要的轴上不同:设置复杂度、条目数量上限、移动同步、捕获灵活性和维护负担。** 设置复杂度大致随控制度线性增长 — 维护成本也是如此。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidian 在 ~50K 条目时为中等复杂度,AnythingLLM 在 ~100K 条目时为低复杂度,自建 Python + ChromaDB 技术栈为高复杂度但可扩展至 100 万+ 条目。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AnythingLLM 设置最简单,在两种「开箱即用」选项中扩展最远 — 但它对文档组织有强烈意见。Obsidian 提供最具表达力的笔记层和活跃的插件生态,代价是设置稍多。自建 Python 无上限,但您维护一切:分块、重排、去重、同步、备份。按您对维护的耐心选择,而不是仅按条目数量。',
+          },
+        ],
+        columns: ['架构', '设置复杂度', '最大条目', '移动同步', '最适合'],
+        rows: [
+          { '架构': 'Obsidian 中心型', '设置复杂度': '中', '最大条目': '~50,000', '移动同步': '是 (Obsidian Sync;iCloud / Git 有限制)', '最适合': '具有日常写作习惯的笔记优先重度用户' },
+          { '架构': 'AnythingLLM 中心型', '设置复杂度': '低', '最大条目': '~100,000', '移动同步': '有限 (通过 LAN / Tailscale 从手机访问 Web UI)', '最适合': '文档密集型 PKB (PDF、导出、网页剪藏)' },
+          { '架构': '自建 Python + ChromaDB', '设置复杂度': '高', '最大条目': '1M+', '移动同步': '手动 (需自建 API + 移动客户端)', '最适合': '希望完全控制 + 多用户的工程师' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '移动同步是最被低估的对比轴。AnythingLLM 在技术上比 Obsidian 更容易设置,但在移动端意味着「在 Safari 中打开 LAN Web UI」 — 不是原生体验。Obsidian Mobile 配合 Obsidian Sync,提供接近原生的 iOS / Android 应用,可离线阅读。如果移动捕获和阅读重要,请将 Obsidian 加权至高于表格暗示的水平。',
+          },
+        ],
+      },
+      fiveLayers: {
+        id: 'five-layers',
+        title: '本地 AI PKB 的五层',
+        content:
+          '**每个本地 AI PKB 无论架构如何都有相同的五层:捕获、存储、嵌入、检索、界面。** 失败通常是因为某一层与其他层不匹配 — 最常见的是先进的检索层搭配无人使用的破损捕获管道。',
+        numberedItems: [
+          {
+            title: '捕获',
+            whyItMatters: '条目进入系统的方式。Web Clipper、邮件转发、移动分享、语音笔记、手动粘贴。初学者构建中最容易跳过的层 — 也是决定系统能否经受日常使用的层。如果移动端捕获超过 5 秒,系统会被闲置。',
+          },
+          {
+            title: '存储',
+            whyItMatters: '条目在磁盘上的位置。Markdown vault (Obsidian、Logseq)、文档文件夹 + 数据库 (AnythingLLM) 或文件系统 + 清单 (自建 Python)。选择能在工具更换中存活的存储格式 — 明文 Markdown 最可移植;二进制数据库最不可移植。',
+          },
+          {
+            title: '嵌入',
+            whyItMatters: '用于语义搜索的条目向量表示。由本地模型生成 (通过 Ollama 的 nomic-embed-text 或 mxbai-embed-large)。嵌入模型可以稍后更换,但迁移成本是「全部重新嵌入」 — 选一次,坚持到底。',
+          },
+          {
+            title: '检索',
+            whyItMatters: '查询时如何找到条目。Top-k 向量搜索、可选重排、可选元数据过滤 (标签、日期、来源)。朴素 top-5 与调优 top-20 加重排器之间的质量差异是「有用」与「神奇」之差。',
+          },
+          {
+            title: '界面',
+            whyItMatters: '您查询和阅读的方式。侧边栏 (Smart Connections)、聊天 (Copilot、AnythingLLM)、CLI (自建 Python) 或 API。大多数用户默认选择聊天 — 但「相关笔记」侧边栏会浮现聊天找不到的被遗忘材料,因为您不知道该问什么。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '一种常见失败的构建模式:选择最强检索 (带重排的自定义混合搜索)、最聪明的聊天模型 (Qwen3 7B),却忽视捕获。三周后,vault 里有 47 个条目,因为移动端没有任何东西流入。修正方式始终一样:简化检索,简化聊天,修复捕获,接受 80% 的价值来自条目能进入系统这件事本身。',
+          },
+        ],
+      },
+      architectureObsidian: {
+        id: 'architecture-obsidian',
+        title: '架构 A:Obsidian 中心型',
+        content:
+          '**Obsidian + Smart Connections + Copilot for Obsidian + Ollama 是 2026 年笔记优先工作流的默认架构。** 在 16 GB Mac M3 Pro 或 PC 上可干净地扩展至约 50,000 条笔记,通过 Obsidian Mobile 支持移动阅读,并将所有内容保留为可带到任何未来工具的明文 Markdown。',
+        items: [
+          '**存储:** 文件夹 (「vault」) 中的 Markdown 文件。明文,简单文件夹,无数据库。可在工具迁移中存活。',
+          '**捕获:** Obsidian Web Clipper (浏览器扩展)、Obsidian Mobile 分享 (iOS / Android)、通过 Mailspike 或自定义 IFTTT 配方的邮件到 Obsidian、手动粘贴。',
+          '**嵌入:** Smart Connections 插件 → Ollama 在 `http://localhost:11434/api/embeddings` → nomic-embed-text (默认) 或 mxbai-embed-large (更精准)。索引位于 vault 内的 `.smart-env/`。',
+          '**检索:** Smart Connections 侧边栏 (相关笔记视图) + Copilot for Obsidian Vault QA 模式 (vault 上聊天查询的 RAG)。两者都使用嵌入索引。',
+          '**界面:** Smart Connections 侧边栏 (被动发现) + Copilot 聊天面板 (主动查询) + Text Generator 模板 (日常摘要等可重复工作流)。',
+          '**设置时间:** ~30 分钟 (安装 Ollama、拉取模型、安装三个插件、配置端点、让初始索引构建)。',
+          '**硬件:** 16 GB 内存最低 (Llama 3.2 3B + nomic-embed-text 并行)。10,000 条笔记以上推荐 32 GB。强烈推荐 SSD — 索引重建在 HDD 上受 I/O 限制。',
+          '**条目上限:** ~50,000 条笔记可行;测试至 20,000 时增量重新索引在亚秒级。50K+ 条笔记时初始索引运行 4–8 小时,应考虑子 vault。',
+          '**最适合:** 具有日常写作习惯、Markdown 优先偏好、希望「思考伙伴」侧边栏浮现被遗忘笔记的用户。',
+          '**不适合:** 知识主要为 PDF 和网页剪藏的用户 (选择 AnythingLLM 中心型);希望单一一体化应用的用户 (Obsidian 中心型是「Obsidian + 3 插件 + Ollama」)。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '关于此架构插件层的深入探讨 (哪 5 个插件、配置步骤、vault 规模数值),请参阅 [Obsidian + 本地 LLM 插件指南](/power-local-llm/local-llm-with-obsidian-2026?lang=zh)。本页面涵盖架构;插件指南涵盖配置。',
+          },
+        ],
+      },
+      architectureAnythingllm: {
+        id: 'architecture-anythingllm',
+        title: '架构 B:AnythingLLM 中心型',
+        content:
+          '**AnythingLLM + Ollama 是一体化选项:捕获、存储、RAG 和聊天打包在单个桌面或自托管应用中。** 可扩展至约 100,000 条文档 (PDF、网页剪藏、导出的混合),当您的知识主要以文档而非笔记的形式到达时,这是正确选择。',
+        items: [
+          '**存储:** AnythingLLM 内部数据库 (默认 SQLite;多用户自托管使用 Postgres)。文档通过 UI 摄取;原始文件可保留在您镜像的文件夹中。',
+          '**捕获:** 应用内上传 (将 PDF / 文件拖入工作区)、网页浏览器扩展、用于编程摄取的公共 API (`POST /api/v1/document/upload`)、通过官方集成或自定义中继的邮件转发。',
+          '**嵌入:** AnythingLLM 使用您配置的嵌入提供商 — 选择「Ollama」 → 端点 `http://localhost:11434` → 模型 `nomic-embed-text`。嵌入存储在内置向量库中 (默认 LanceDB;ChromaDB / Pinecone 可选)。',
+          '**检索:** 工作区上的 RAG。可配置块大小、top-k 检索、可选重排。多个工作区允许按主题分区 (例如「工作」、「阅读」、「项目」)。',
+          '**界面:** AnythingLLM Web UI (在桌面和移动浏览器中工作)、自定义前端的公共 API、用于将其他工具接入您的 PKB 的 OpenAI 兼容端点。',
+          '**设置时间:** ~15 分钟 (安装 AnythingLLM Desktop 或 Docker、指向 Ollama、拖入文档)。',
+          '**硬件:** 16 GB 内存最低。10,000 条文档以上推荐 32 GB。在相同条目数下,AnythingLLM 比 Obsidian + 插件更省内存,因为只有一个进程而不是两个。',
+          '**条目上限:** 单个工作区中 ~100,000 条文档;50K 以上分区到多个工作区,以保持检索延迟低于 ~1 秒。',
+          '**最适合:** PDF 重度归档用户、网页剪藏重度捕获用户,以及偏好单个应用而非插件栈的用户。也是自托管共享 PKB 的小团队的正确选择。',
+          '**不适合:** 希望笔记优先写作面的用户 (Obsidian);希望以明文 Markdown 拥有存储的用户 (AnythingLLM 的向量库是内部的)。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '关于此处使用的 RAG 层的逐步设置 (Ollama + AnythingLLM、摄取、块调优),请参阅 [30 分钟内为 PDF 构建本地 RAG](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh) 教程。要将 RAG 从玩具示例扩展到 1,000+ PDF,请参阅 [本地与 1000+ PDF 聊天](/power-local-llm/chat-with-1000-pdfs-locally?lang=zh)。',
+          },
+        ],
+      },
+      architectureCustom: {
+        id: 'architecture-custom',
+        title: '架构 C:自建 Python + ChromaDB',
+        content:
+          '**仅当您真的有 100,000+ 条目、多用户需求或现成工具无法建模的特定 schema 需求时,自建 Python + ChromaDB + Ollama 技术栈才是正确选择。** 维护成本是真实的:分块、去重、重排、同步、备份 — 您拥有一切。',
+        items: [
+          '**存储:** 文件系统 (每个来源一个文件夹:`notes/`、`pdfs/`、`web/`、`email/`) + 元数据清单 (SQLite 或 JSONL)。源文件保持开放格式,以便您可以更换检索层而无需重新摄取。',
+          '**捕获:** 由 webhook 触发的脚本 (Web Clipper → HTTP 端点 → 文件写入)、邮件转发 → IMAP poller → 文件写入、移动分享 → Tailscale 端点 → 文件写入。每个捕获路径都是一个小型 Python 服务。',
+          '**嵌入:** ChromaDB (本地模式,持久化到磁盘) + 通过 OpenAI 兼容端点的 Ollama 嵌入。通过 watchdog 进程在文件更改时重新嵌入。ChromaDB 通过 HNSW 索引在单台机器上扩展至数百万向量。',
+          '**检索:** ChromaDB top-k 相似度 + 重排器 (BGE Re-ranker 或本地 Cohere 等价物) + 元数据过滤 (日期范围、标签、来源)。可选与 BM25 在块上的混合搜索,用于精确词项匹配。',
+          '**界面:** 任意组合:小型 FastAPI 服务暴露 OpenAI 兼容 `/v1/chat/completions` 端点、Streamlit / Gradio UI、CLI 或全部三者。在前面放 Open WebUI,无需编写 UI 代码即可获得精致的聊天体验。',
+          '**设置时间:** ~1 天可工作的 v1;~2 周迭代调优分块、检索质量和针对您数据的捕获管道。',
+          '**硬件:** 32 GB 内存笔记本用于开发;100,000 条目以上家庭服务器 64 GB 内存,这样嵌入服务不会与您的笔记本竞争。500K 以上为聊天吞吐量考虑专用 GPU (RTX 4060 或更好)。',
+          '**条目上限:** 通过 HNSW + 分片可行 1M+ 条目;瓶颈从检索转移到捕获管道可靠性和 schema 更改时的重新嵌入成本。',
+          '**最适合:** 希望拥有技术栈的工程师、有自定义 schema 的团队 (例如「每个条目都有置信度分数、来源和作者」),或在 Obsidian 或 AnythingLLM 中遇到硬限制 (分别为 50K 和 100K) 的用户。',
+          '**不适合:** 非工程师;低估维护成本的任何人;用例已被现成选项覆盖的用户。',
+        ],
+        promptExamples: [
+          {
+            label: 'ChromaDB 摄取 (Python 草图)',
+            text: 'import chromadb, ollama, pathlib\nclient = chromadb.PersistentClient(path="./chroma")\ncoll = client.get_or_create_collection("kb")\nfor p in pathlib.Path("vault").rglob("*.md"):\n    text = p.read_text()\n    emb = ollama.embeddings(model="nomic-embed-text", prompt=text)["embedding"]\n    coll.upsert(ids=[str(p)], embeddings=[emb], documents=[text], metadatas=[{"source": str(p)}])',
+          },
+          {
+            label: '带重排的查询 (草图)',
+            text: 'q = "What did I write about local RAG sync?"\nq_emb = ollama.embeddings(model="nomic-embed-text", prompt=q)["embedding"]\nhits = coll.query(query_embeddings=[q_emb], n_results=20)\n# pass hits["documents"] through a re-ranker, keep top 5\n# send top 5 + question to Llama 3.2 3B via Ollama chat endpoint',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '自建项目最常见的失败模式:由于 schema 不稳定,在每次代码更改时重新嵌入整个归档。在摄取超过 ~5,000 条目之前,锁定嵌入模型 + 块大小。在 100K 条目时从 nomic-embed-text 768 维迁移到 mxbai-embed-large 1024 维需要数小时计算并破坏 ChromaDB 集合 — 您不能混合维度。',
+          },
+        ],
+      },
+      capture: {
+        id: 'capture',
+        title: '捕获管道:网页、邮件、移动、语音',
+        content:
+          '**捕获层决定您的 PKB 能否经受日常使用。大多数知识在桌面之外到达 — 在移动端、邮件、语音笔记中 — 而要求先打开桌面应用的捕获管道是被绕过的管道。** 为四个主要流入构建,接受 80% 的条目将在移动端到达。',
+        items: [
+          '**Web Clipper (桌面 + 移动):** Obsidian Web Clipper、AnythingLLM 浏览器扩展,或将当前页面 POST 到您的捕获端点的自定义 bookmarklet。移动分享 → Web Clipper 扩展 → vault。',
+          '**邮件转发:** 专用地址 (例如 `kb@yourdomain.com`) + IMAP poller → 文件写入。转发您想保留的邮件;poller 处理摄取。在文件名中使用每个来源的前缀,以便检索可以按来源过滤。',
+          '**移动分享:** 最常用的捕获路径。iOS Share → Obsidian (写入 Markdown 文件)、iOS Share → Working Copy (提交到 Git)、iOS Share → 自定义 Shortcut (POST 到您的捕获 API)。Android:HTTP Shortcuts 或 Tasker。',
+          '**语音笔记:** 类似 AudioPen 的捕获在 2026 年越来越普遍。在手机上录音 → 用 Whisper.cpp 本地转录或通过自托管 Whisper 服务 → 将转录写为 Markdown 文件 → 嵌入。',
+          '**手动粘贴:** 备用方案。始终有效,从不扩展。用于长尾。',
+          '**截图 OCR:** 截图是有损的捕获格式。在 iOS 上使用 Apple Live Text 或本地 OCR 管道 (Tesseract、Apple Vision、EasyOCR) 提取文本 + 写入包含图像和 OCR 文本的 Markdown 文件。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在设计管道之前审计您现有的捕获习惯。看看您已经保存的:浏览器书签、截图、转发邮件、语音备忘录。PKB 捕获层应反映这些现有流入 — 如果您已经在不断截图,构建 OCR 路径;如果您已经在向自己转发邮件,构建邮件转发。添加新习惯 (「从现在起我手动复制粘贴每篇文章到 KB」) 从来都不奏效。',
+          },
+        ],
+      },
+      mobileCapture: {
+        id: 'mobile-capture',
+        title: '移动捕获:iOS Shortcuts、Working Copy、a-Shell',
+        content:
+          '**iOS 在 2026 年有三条可行的本地 AI PKB 捕获路径:Shortcuts → Obsidian、Shortcuts → Working Copy (Git),或 Shortcuts → a-Shell (脚本驱动)。** 每条路径自然地与三种参考架构之一配对。选择其同步模型符合您整体架构的路径。',
+        items: [
+          '**Shortcuts → Obsidian (Obsidian 中心型):** Obsidian「附加到笔记」Shortcut 将捕获的内容直接写入 vault。通过 Obsidian Sync (付费,推荐) 或 iCloud Drive (免费,有限制) 同步。最适合笔记优先工作流。',
+          '**Shortcuts → Working Copy (Git):** 捕获的内容写入 iPhone 上的 Working Copy 仓库,然后自动提交并推送。桌面拉取。免费、稳健,与任何 Markdown vault 配合工作。注意:Working Copy 是付费的 (一次性约 $20)。最适合 Git 同步的 vault。',
+          '**Shortcuts → a-Shell:** a-Shell 是运行脚本的免费 iOS 终端。构建一个 Shortcut,将捕获的文本管道传递给 a-Shell 脚本,该脚本写入文件并通过 `git` 提交,通过 Tailscale 上的 `rsync` 同步,或上传到您的自定义捕获端点。最适合工程师构建的自定义架构。',
+          '**Android 等价物:** Tasker + Termux + Git 作为 iOS Working Copy 路径的对应。HTTP Shortcuts 用于自定义端点路径。Obsidian Mobile 分享用于 Obsidian 路径。',
+          '**延迟预算:** 移动捕获应在端到端 5 秒内完成 (分享 → 文件写入 / 提交 / 上传)。任何更慢用户都会打开应用一次再也不打开。',
+          '**离线捕获:** 三条 iOS 路径都离线排队 (Shortcuts 排队,Working Copy 排队提交,a-Shell 脚本可本地写入并稍后同步)。对飞行、交通和农村地区的捕获至关重要。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '不要构建需要桌面在线的移动捕获路径 (例如 POST 到仅在您的笔记本唤醒时可达的 Tailscale 保护端点)。您将在工作会议期间、笔记本睡眠模式期间和夜间丢失捕获。要么在始终在线的家庭服务器 / NAS 上运行捕获端点,要么写入离线缓冲的最终一致性存储 (Obsidian Sync、Git、iCloud)。',
+          },
+        ],
+      },
+      scaling: {
+        id: 'scaling',
+        title: '扩展:1K、10K、100K 条目',
+        content:
+          '**扩展本地 AI PKB 有三种状态:1,000 条目以下,任何现代笔记本上一切都很快;1,000–10,000 条目,嵌入索引成为需要管理的真实工件;10,000 条目以上,硬件成为瓶颈,捕获管道可靠性主导结果。** 以下现实数字假设 Mac M3 Pro / RTX 4060 PC 配 nomic-embed-text 和 Llama 3.2 3B。',
+        columns: ['条目数', '推荐架构', '初始嵌入时间', '硬件', '备注'],
+        rows: [
+          { '条目数': '1,000 条目', '推荐架构': '三者任一', '初始嵌入时间': '~2 分钟', '硬件': '16 GB 内存笔记本', '备注': '一切感觉即时。架构选择纯粹按工作流契合度。' },
+          { '条目数': '10,000 条目', '推荐架构': 'Obsidian 或 AnythingLLM', '初始嵌入时间': '~25 分钟', '硬件': '16 GB 内存笔记本 (推荐 32 GB)', '备注': '嵌入索引 ~150–250 MB。编辑时重新嵌入亚秒级。大多数知识工作者的甜蜜点。' },
+          { '条目数': '50,000 条目', '推荐架构': 'AnythingLLM 或自建 Python', '初始嵌入时间': '~3 小时', '硬件': '32 GB 内存笔记本或家庭服务器', '备注': '初始索引夜间运行。此后规划子 vault / 工作区。嵌入磁盘使用 ~1.5–2 GB。' },
+          { '条目数': '100,000 条目', '推荐架构': 'AnythingLLM (多工作区) 或自建 Python', '初始嵌入时间': '6–8 小时', '硬件': '最低 32 GB 内存;首选家庭服务器', '备注': '将嵌入迁移到专用家庭服务器。捕获管道可靠性现在是主要故障模式,而不是检索。' },
+          { '条目数': '500,000+ 条目', '推荐架构': '自建 Python + ChromaDB', '初始嵌入时间': '24+ 小时', '硬件': '64 GB 内存家庭服务器 + 专用 GPU', '备注': '分片、去重和增量重新嵌入管道变得必要。现成工具不再适合。' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '初始嵌入成本是一次性账单。第一次索引后,只有更改的条目重新嵌入 — 即使在 100K 条目下也通常每次保存不到一秒。第一次的缓慢体验是真实的,但不会重复。在通电的机器上夜间运行初始索引,然后忘记它。',
+          },
+        ],
+      },
+      backupSync: {
+        id: 'backup-sync',
+        title: '备份、版本控制、多设备同步',
+        content:
+          '**本地 AI PKB 需要三层备份:vault 快照 (Time Machine、Backblaze、restic)、明文内容的 Git 历史,以及作为干净重建路径的嵌入和元数据的季度导出。** 嵌入在技术上可重新生成,但在 100K+ 条目时重新生成成本是数小时 — 也要备份它们。',
+        items: [
+          '**vault 快照 (文件系统级):** 每 24 小时的 Time Machine (macOS) 或 restic (Linux)。Backblaze 或 rsync.net 用于异地。捕获包括嵌入在内的一切。',
+          '**Git 历史 (仅内容):** 提交到 Git 仓库 (本地 + GitHub / Gitea private) 的明文 Markdown 文件。将 `.smart-env/`、`vector_store/` 和任何其他二进制索引文件夹添加到 `.gitignore`。Git 提供每条笔记的版本历史;vault 快照提供整个系统回滚。',
+          '**嵌入导出 (季度):** 将向量库导出为可移植格式 (ChromaDB → parquet、Smart Connections → JSON dump、AnythingLLM → 内置导出)。最近两次导出保留在异地。如果 vault 快照失败或嵌入索引损坏,这是您的快速重建路径。',
+          '**多设备同步 — Obsidian 中心型:** Obsidian Sync 干净处理明文 + 二进制索引 (端到端加密)。iCloud Drive 适用于明文,但跨平台破坏二进制索引。Working Copy / Termux 上的 Git 仅适用于明文 — 按设备重新索引。',
+          '**多设备同步 — AnythingLLM 中心型:** 在家庭服务器上将 AnythingLLM 作为自托管 Docker 容器运行。所有设备通过 LAN 或 Tailscale 连接到同一实例。无需客户端同步。',
+          '**多设备同步 — 自建 Python:** 您构建的架构决定它。大多数构建使用中央 API 服务 (家庭服务器上的 FastAPI) + POST 捕获和 GET 查询的客户端。Tailscale 提供网络层。',
+          '**迁移到新计算机:** 恢复 vault 快照 → 恢复 Git 仓库 → 重启 Ollama → 重启嵌入索引器。如果您跳过了嵌入导出步骤,嵌入重新生成是自动的;如果您备份了它但格式与平台相关,则需要手动重新索引。',
+          '**选择性共享:** 要共享 vault 的部分 (例如与合著者的研究项目),使用子 vault 或带标签的导出脚本。不要共享整个 vault — 大多数本地 AI PKB 积累不应离开本地技术栈的敏感条目 (医疗、财务、个人)。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '每季度测试一次恢复。大多数「我有备份」的说法都是愿望 — 测试是「我能在不到 2 小时内将我的 vault 恢复到一台新笔记本上吗?」 运行该测试。第一次这样做时,您会发现三层 (快照、Git、嵌入导出) 中有一层在过去六个月被错误配置。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '**在捕获层之前设计检索层。** 在 47 条目的 vault 上,带重排的自定义混合搜索是浪费。先构建捕获,接受朴素 top-5 检索,只在 vault 拥有 1,000+ 条目并能在真实查询上测量检索质量后才优化检索。',
+          '**混合架构。** 「Obsidian 用于笔记 + AnythingLLM 用于 PDF + 自建 Python 用于邮件」听起来干净,但集成成本占主导。选择一种架构,接受其限制,只在绝对必要时添加单个连接器 (例如 AnythingLLM 只读摄取 Obsidian vault 文件夹)。',
+          '**切换嵌入模型而不重新嵌入归档。** 在同一存储中混合 nomic-embed-text 768 维和 mxbai-embed-large 1024 维向量会悄无声息地破坏检索。选择一个嵌入模型 + 维度,锁定它,只通过完整重新嵌入归档来切换。',
+          '**忽略 10,000 条目以上嵌入索引的备份。** 「我可以重新生成它」是真的,但重新生成需要数小时。10K 条目以上将嵌入存储添加到您的备份策略。',
+          '**为桌面设计但 80% 的捕获在移动端发生。** 没有移动捕获路径的 PKB 会被闲置。第一天就测试移动捕获流程 — 分享到 vault 应在 5 秒内完成。',
+          '**依赖 iCloud Drive 处理二进制嵌入索引。** iCloud 干净处理明文;二进制索引 (Smart Connections `.smart-env/`、AnythingLLM 向量库) 跨平台破坏。使用 Obsidian Sync、自托管实例,或接受按设备重新索引。',
+          '**100K 条目时不分区。** 100K+ 条目的单个工作区 / vault 检索延迟为秒级。按主题 (工作、阅读、项目) 分区到多个工作区或子 vault;分别查询每个或通过路由器查询。',
+          '**低估合规风险。** 个人知识库不可避免地积累敏感数据 (客户、患者、同事来信、财务和医疗笔记)。中国《数据安全法》(2021) 要求重要数据本地化存储和处理 — 本地推理满足数据本地化要求,因为没有跨境数据流动,无需签订第三方处理协议。对于金融、医疗、法律行业的企业部署,本地技术栈是合规的更简洁路径。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          'Obsidian — [obsidian.md](https://obsidian.md) 和 [help.obsidian.md](https://help.obsidian.md) (vault 结构、移动同步架构、插件文档)。',
+          'AnythingLLM — [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm) (开源自托管 RAG 应用)。',
+          'Ollama — [ollama.com](https://ollama.com) 和 [github.com/ollama/ollama](https://github.com/ollama/ollama) (本地 LLM 运行时;聊天 + 嵌入端点)。',
+          'ChromaDB — [trychroma.com](https://www.trychroma.com) 和 [github.com/chroma-core/chroma](https://github.com/chroma-core/chroma) (开源本地向量数据库)。',
+          'Working Copy — [workingcopy.app](https://workingcopy.app) (用于移动捕获管道的 iOS Git 客户端)。',
+          'a-Shell — [holzschu.github.io/a-Shell_iOS/](https://holzschu.github.io/a-Shell_iOS/) (用于脚本驱动移动捕获的免费 iOS 终端)。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '如何将网页捕获到我的知识库?',
+            a: '按摩擦排序的三个选项。(1) 浏览器扩展 Web Clipper — Obsidian Web Clipper 或 AnythingLLM 浏览器扩展将当前页面直接写入您的 vault / 工作区。(2) 移动分享 — 分享 Safari / Chrome → Obsidian (写入 Markdown 文件) 或 → Working Copy (提交到 Git) 或 → 自定义 Shortcut (POST 到您的捕获 API)。(3) Bookmarklet — 用于没有扩展的浏览器;将当前 URL + 选区 POST 到您的捕获端点。在实践中,移动分享是最常用的路径 — 先设计它。',
+          },
+          {
+            q: '我可以将邮件转发到系统吗?',
+            a: '可以。设置一个专用地址 (例如 Fastmail / Migadu 别名 `kb@yourdomain.com`) 并在您的家庭服务器或笔记本上运行 IMAP poller,该 poller 下载新邮件并将每封邮件作为一个 Markdown 文件写入您的 vault。在文件名中使用 from 地址前缀,以便检索可以按发件人过滤。AnythingLLM 有原生邮件集成;Obsidian 用户通常自己构建 IMAP poller 或使用 IFTTT / Zapier 替代品如 n8n。',
+          },
+          {
+            q: '如何在桌面和移动之间同步?',
+            a: '取决于架构。Obsidian 中心型:Obsidian Sync (付费,干净处理二进制索引)、iCloud Drive (免费,仅明文 — 按设备重新索引) 或 Working Copy 上的 Git (免费 + 一次性 Working Copy 费用,仅明文 — 按设备重新索引)。AnythingLLM 中心型:在家庭服务器上以 Docker 运行 AnythingLLM,所有设备通过 LAN 或 Tailscale 连接 — 无需客户端同步。自建 Python:在家庭服务器上构建中央 API 服务;客户端 POST 捕获并 GET 查询。',
+          },
+          {
+            q: '应该使用一个大 vault 还是按主题拆分?',
+            a: '~50,000 条目以下使用一个 vault。50K 以上按主题拆分 (工作、阅读、项目、个人),原因有二:检索延迟保持在 ~1 秒以下,以及上下文之间的意外交叉泄漏 (例如个人笔记出现在工作查询中) 在大规模时变得可能。早于 50K 拆分为时过早 — 您会失去 PKB 的主要价值之一:跨领域偶然连接。',
+          },
+          {
+            q: '为了准确度应该多久重新嵌入一次?',
+            a: '永远不要因「准确度漂移」而重新嵌入 — 嵌入不会退化。仅在更改嵌入模型时重新嵌入 (例如从 nomic-embed-text 升级到 mxbai-embed-large 以在技术内容上获得更好的检索)。三种架构都自动处理文件更改时的增量重新嵌入;您不安排它。例外是您控制索引器的自建 Python 技术栈 — 在那里,基于 watchdog 的保存时增量重新嵌入是标准做法。',
+          },
+          {
+            q: '我可以对知识库进行版本控制吗?',
+            a: '可以,对明文内容 (Markdown vault → Git 仓库,本地 + GitHub / Gitea private)。将二进制索引文件夹 (`.smart-env/`、`vector_store/`、ChromaDB 持久化目录) 添加到 `.gitignore` — 它们使历史膨胀并导致合并冲突。Git 提供每条笔记的版本历史;vault 快照 (Time Machine、restic) 提供整个系统回滚。两层都要,而不是二选一。',
+          },
+          {
+            q: '如何在此系统中处理 PDF?',
+            a: 'Obsidian 中心型:将 PDF 与 Markdown 笔记一起存储;Smart Connections 不直接嵌入 PDF 内容 — 先提取文本 (例如通过 PDF++ 插件或在每个 PDF 旁边写入 Markdown 摘要的预处理脚本)。AnythingLLM 中心型:将 PDF 直接拖入工作区;AnythingLLM 自动处理 PDF 解析和分块。自建 Python:在摄取管道中使用 `pypdf` 或 `pdfplumber` 提取文本,然后嵌入提取的文本。AnythingLLM 是 PDF 重度归档摩擦最小的选项。',
+          },
+          {
+            q: '我可以选择性共享 KB 的部分吗?',
+            a: '可以,但从第一天就为此设计。使用子 vault (Obsidian) 或工作区 (AnythingLLM) 将「可共享」和「私有」内容保留在分离的存储中。一次性共享时,构建一个带标签导出脚本,按标签 (例如 `#shareable`) 提取条目到一个可移植 Markdown 包中。不要共享整个 vault — 大多数本地 AI PKB 积累不应离开本地技术栈的敏感条目 (医疗、财务、个人通信)。',
+          },
+          {
+            q: '最佳备份策略是什么?',
+            a: '三层:(1) 每 24 小时文件系统快照 (Time Machine / restic) 加异地副本 (Backblaze / rsync.net);(2) 明文内容的 Git 历史用于每条笔记版本恢复;(3) 嵌入 + 元数据的季度导出作为快速重建路径。每季度测试一次恢复 — 「我能在不到 2 小时内在新笔记本上重建我的 vault 吗?」 第一次恢复测试通常会揭示三层中有一层被错误配置。',
+          },
+          {
+            q: '如何迁移到新计算机?',
+            a: '恢复 vault 快照 → 安装 Ollama 并拉取相同模型 → 安装 Obsidian / AnythingLLM / 您的自建 Python 技术栈 → 重启嵌入索引器。使用 Obsidian Sync 或自托管 AnythingLLM,迁移就是「安装客户端并登录」 — 无需手动恢复。否则,10K 条目 vault 大约需要 ~30 分钟,50K 大约 ~2 小时,如果您跳过了嵌入导出步骤,100K 以上需要一夜。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Obsidian + 本地 LLM:将您的 vault 变成第二大脑的 5 个插件 (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=zh) — 架构 A 的插件层深入探讨。',
+          '[Logseq 和 Joplin 的本地 LLM](/power-local-llm/local-llm-with-logseq-and-joplin?lang=zh) — 如果 Obsidian 不是您的选择,PKB 的替代存储层。',
+          '[本地与 1000+ PDF 聊天:将 RAG 扩展到玩具示例之外](/power-local-llm/chat-with-1000-pdfs-locally?lang=zh) — 将 RAG 层扩展到 1,000 条目以上,适用于所有三种架构。',
+          '[30 分钟内为 PDF 构建本地 RAG (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh) — 架构 B 中使用的检索层 RAG 实现演练。',
+          '[本地 RAG 的最佳嵌入模型 (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=zh) — 三种架构每种的嵌入模型选择 (nomic-embed-text vs mxbai-embed-large vs bge-m3)。',
+          '[RAG 解释](/prompt-engineering/rag-explained?lang=zh) — 检索层的概念权威。',
+          '[本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — 16 GB 门槛、10K 以上 32 GB、100K 以上家庭服务器的硬件规格。',
+          '[本地 LLM 软件目录 2026](/power-local-llm/local-llm-software-directory-2026?lang=zh) — Ollama、ChromaDB、AnythingLLM、Obsidian 和技术栈其他组件的目录列表。',
+        ],
+      },
+    },
+  },
 }
