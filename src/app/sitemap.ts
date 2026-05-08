@@ -4,6 +4,7 @@ import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { peContent } from '@/lib/prompt-engineering/content'
 import { llmContent } from '@/lib/local-llms/content'
+import { POWER_LLM_PUBLISHED_SLUGS, POWER_LLM_HUB_PUBLISHED } from '@/lib/power-local-llm/published'
 
 export const dynamic = 'force-static'
 
@@ -103,9 +104,39 @@ const LOCAL_LLM_PAGES: Page[] = [
     })),
 ]
 
-const PAGES: Page[] = [...STATIC_PAGES, ...PE_PAGES, ...BLOG_PAGES, ...FRAMEWORK_PAGES, ...LOCAL_LLM_PAGES]
+// Power Local LLM — partial-launch allowlist. Only slugs in
+// POWER_LLM_PUBLISHED_SLUGS are emitted here; the rest of the cluster stays
+// excluded via EXCLUDED_PATH_PREFIXES below until they pass audit.
+const POWER_LOCAL_LLM_PAGES: Page[] = [
+  ...(POWER_LLM_HUB_PUBLISHED
+    ? [{ path: '/power-local-llm', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-08' }]
+    : []),
+  ...Array.from(POWER_LLM_PUBLISHED_SLUGS).map(slug => ({
+    path: `/power-local-llm/${slug}`,
+    priority: 0.8,
+    changefreq: 'monthly' as const,
+    lastmod: '2026-05-08',
+  })),
+]
+
+const PAGES: Page[] = [
+  ...STATIC_PAGES,
+  ...PE_PAGES,
+  ...BLOG_PAGES,
+  ...FRAMEWORK_PAGES,
+  ...LOCAL_LLM_PAGES,
+  ...POWER_LOCAL_LLM_PAGES,
+]
+
+// Power Local LLM published paths override the prefix exclusion. Anything else
+// under /power-local-llm stays excluded (briefs, unwritten slugs, locale variants).
+const POWER_LLM_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
+  ...(POWER_LLM_HUB_PUBLISHED ? ['/power-local-llm'] : []),
+  ...Array.from(POWER_LLM_PUBLISHED_SLUGS).map(slug => `/power-local-llm/${slug}`),
+])
 
 function isExcluded(path: string): boolean {
+  if (POWER_LLM_PUBLISHED_PATHS.has(path)) return false
   return EXCLUDED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
 }
 

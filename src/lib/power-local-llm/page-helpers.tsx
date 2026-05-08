@@ -11,6 +11,7 @@ import { POWER_LLM_SLUG_TO_KEY } from './slugs'
 import { POWER_LLM_CATEGORIES } from './categories'
 import { powerLLMAlternates, powerLLMHubPath, powerLLMArticlePath } from './metadata-helpers'
 import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
+import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -91,11 +92,13 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
     article?.intro ??
     'A guide in the Power Local LLM cluster from PromptQuorum.'
 
+  const isPublished = isPowerLLMArticlePublished(slug, lang)
+
   return {
     title: baseTitle.length <= 45 ? `${baseTitle} | PromptQuorum` : baseTitle,
     description: desc,
     alternates: powerLLMAlternates(lang, slug),
-    robots: { index: false, follow: true },
+    robots: { index: isPublished, follow: true },
     openGraph: {
       title: article?.title ?? fallbackTitle,
       description: desc,
@@ -119,10 +122,14 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       title: article?.title ?? fallbackTitle,
       description: (article as any)?.twitterDescription ?? desc,
     },
-    other: {
-      // Hard-belt-and-braces noindex for crawlers that ignore the metadata API
-      'robots-cluster': 'noindex, follow',
-    },
+    ...(isPublished
+      ? {}
+      : {
+          other: {
+            // Hard-belt-and-braces noindex for crawlers that ignore the metadata API
+            'robots-cluster': 'noindex, follow',
+          },
+        }),
   } satisfies Metadata
 }
 
@@ -295,11 +302,13 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     zh: '停止为 SaaS AI 工具付费。使用本地 LLM 完全离线运行编码助手、RAG 系统、代理和创意应用。',
   }
 
+  const isPublished = isPowerLLMHubPublished(lang)
+
   return {
     title: titleByLang[lang],
     description: descByLang[lang],
     alternates: powerLLMAlternates(lang),
-    robots: { index: false, follow: true },
+    robots: { index: isPublished, follow: true },
     openGraph: {
       title: titleByLang[lang],
       description: descByLang[lang],
