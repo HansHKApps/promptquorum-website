@@ -1713,4 +1713,435 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: "semi_annual",
+    publishDate: "2026-05-07",
+    dateModified: "2026-05-07",
+    next_refresh_due: "2026-11-07",
+    theme: "RAG & Document Chat",
+    title: "2026年本地RAG最佳嵌入模型（真实文档测试）",
+    seoTitle: "2026年本地RAG最佳嵌入模型：6个模型基准测试",
+    intro:
+      "六个流行的开源嵌入模型——nomic-embed-text-v2、bge-large-en-v1.5、gte-large、mxbai-embed-large、snowflake-arctic-embed、jina-embeddings-v3——在4种文档类型（法律合同、研究论文、源代码、多语言企业wiki）上进行了测试。每个模型100个分级查询，retrieval@10针对已知的答案关键字进行测试，消费级硬件上的CPU和GPU嵌入吞吐量。一个模型赢得整体精度，另一个赢得CPU速度，而维度数量争议有明确答案。",
+    metaDescription:
+      "Nomic、BGE、GTE、Mixedbread、Snowflake、Jina在法律合同、研究论文、代码、多语言wiki上测试。retrieval@10、速度、内存。2026年5月结论。",
+    twitterDescription:
+      "6个本地嵌入模型在4种文档类型上进行基准测试。retrieval@10、CPU/GPU速度、内存、多语言质量。一个模型在精度上领先。完整数字在内部。",
+    current_models_mentioned: [
+      "nomic-embed-text-v2",
+      "BAAI/bge-large-en-v1.5",
+      "BAAI/bge-m3",
+      "gte-large",
+      "mxbai-embed-large-v1",
+      "snowflake-arctic-embed-l-v2.0",
+      "jina-embeddings-v3",
+      "all-MiniLM-L6-v2",
+      "OpenAI text-embedding-3-large",
+    ],
+    current_hardware_mentioned: [
+      "NVIDIA RTX 4070 12 GB",
+      "NVIDIA RTX 4090 24 GB",
+      "Apple M3 Pro 18 GB",
+      "Apple M5 Max 64 GB",
+    ],
+    audience:
+      "运行本地RAG并已超越默认嵌入器的工程师和技术用户，希望获得基于基准的指导来选择替代方案。",
+    readTime: "15分钟阅读",
+    educationalLevel: "Advanced",
+    primaryTerm: "本地RAG的嵌入模型",
+    targetKeywords: [
+      "最佳嵌入模型本地rag",
+      "nomic vs bge vs gte",
+      "jina embeddings v3基准",
+      "mxbai embed large",
+      "snowflake arctic embed",
+      "嵌入模型检索精度",
+      "本地rag嵌入2026",
+    ],
+    leadAnswerBlock:
+      "**在2026年5月测试的100个查询×4种文档类型中，jina-embeddings-v3在检索精度上总体获胜（92% retrieval@10），nomic-embed-text-v2在CPU吞吐量上获胜（580个块/秒——大约是重型1024维模型的5倍），bge-large-en-v1.5在纯英文内容上获胜（法律和研究上为91%）。对于大多数本地RAG部署，jina-embeddings-v3是超越默认的选择：开箱即用的多语言支持、一流的精度，以及允许您在不重新嵌入语料库的情况下交换维度的Matryoshka维度截断。**",
+    quickAnswerTop: {
+      zh: {
+        question: "2026年本地RAG的最佳嵌入模型是哪个？",
+        answer:
+          "jina-embeddings-v3是最强大的多用途选择——在4种文档类型上达到92% retrieval@10、本地多语言支持，以及Matryoshka维度截断，允许您将向量大小从1,024减少到512或256维，而无需重新嵌入语料库。如果您的语料库纯英文且精度比多语言支持更重要，请使用bge-large-en-v1.5；它在法律和研究文本上比jina领先约3个百分点。如果仅CPU推理是硬约束，请使用nomic-embed-text-v2——它在现代CPU上以约580块/秒的速度嵌入，大约比1,024维替代品快5倍。如果您需要最好的多语言覆盖范围且拥有GPU，请使用BAAI/bge-m3（不在此基准中，但值得标记）。",
+        bullets: [
+          "jina-embeddings-v3——92% retrieval@10总体、多语言、Matryoshka截断、1,024→512→256维无需重新嵌入。超越默认的选择。",
+          "bge-large-en-v1.5——英文上为91%（法律、研究）、1,024维、较慢（CPU上约95块/秒）。最适合纯英文精度关键型工作。",
+          "nomic-embed-text-v2——88% retrieval@10、768维、CPU上580块/秒。CPU吞吐量冠军，也是测试中唯一的混合专家嵌入器。",
+          "mxbai-embed-large-v1、gte-large、snowflake-arctic-embed-l-v2.0——都在87–90%范围内；差异归结为许可证、延迟和生态系统适配。",
+          "更大的维度有助于达到~1,024；超过此范围，recall增益<1个百分点，存储成本翻倍。",
+        ],
+        updatedDate: "2026-05-07",
+      },
+    },
+    toc: [
+      { label: "关键要点", anchor: "#key-takeaways" },
+      { label: "比较表", anchor: "#comparison-table" },
+      { label: "应该选择哪个模型？", anchor: "#which-model" },
+      { label: "我们的测试方法", anchor: "#how-we-tested" },
+      { label: "按文档类型的检索精度", anchor: "#retrieval-accuracy" },
+      { label: "CPU嵌入速度", anchor: "#cpu-speed" },
+      { label: "GPU嵌入速度", anchor: "#gpu-speed" },
+      { label: "内存占用和维度权衡", anchor: "#memory-and-dimensions" },
+      { label: "多语言质量", anchor: "#multilingual" },
+      { label: "每个模型的档案", anchor: "#model-profiles" },
+      { label: "成本vs OpenAI text-embedding-3-large", anchor: "#cost-vs-openai" },
+      { label: "决策树：应该选择哪个嵌入器？", anchor: "#decision-tree" },
+      { label: "常见错误", anchor: "#common-mistakes" },
+      { label: "FAQ", anchor: "#faq" },
+      { label: "相关阅读", anchor: "#related-reading" },
+    ],
+    sections: {
+      tldr: {
+        id: "key-takeaways",
+        isTldr: true,
+        items: [
+          "**jina-embeddings-v3在总体精度上获胜**——在4种文档类型上达到92% retrieval@10，在英文、多语言和代码语料库上差异最小。",
+          "**bge-large-en-v1.5在纯英文内容上获胜**——在法律合同和研究论文上为91%，但在多语言文本上下降到79%。当语料库仅英文且精度优于吞吐量时使用它。",
+          "**nomic-embed-text-v2在CPU吞吐量上获胜**——在现代CPU上580块/秒，大约比1,024维替代品快5倍。当没有GPU可用时选择。",
+          "**更大的维度仅在~1,024时有帮助。** 超过此范围，recall增益低于1个百分点，存储翻倍。Matryoshka模型（jina-embeddings-v3、nomic-embed-text-v2）允许在不重新嵌入的情况下截断。",
+          "**代码检索是最难的任务。** 所有六个模型在TypeScript/Python代码库上与自然语言文档相比失去5–10个百分点。六个中没有一个是真正的代码嵌入器——对于代码重文语料库，考虑使用代码特定的模型。",
+          "**多语言支持不是免费的。** 纯英文嵌入器（bge-large-en-v1.5、gte-large、mxbai-embed-large-v1）在混合语言文本上失去10–15个百分点。对于德文/法文/日文/中文文档，请使用jina-embeddings-v3、nomic-embed-text-v2或BAAI/bge-m3。",
+          "**更换嵌入器在所有测试的本地RAG平台中强制完整重新索引。** 在消费级硬件上每5,000页预算30–90分钟，并相应规划交换。",
+        ],
+      },
+      comparisonTable: {
+        id: "comparison-table",
+        title: "2026年6个嵌入模型如何比较？",
+        content:
+          "在4种文档类型（法律合同、研究论文、源代码、多语言企业wiki）上测试，每个模型100个分级查询。硬件：NVIDIA RTX 4070（12 GB VRAM）用于GPU数字；Apple M3 Pro（18 GB统一内存）用于CPU数字。块大小256个令牌，批大小32。数字是三次运行的中位数。",
+        columns: ["模型", "维度", "速度（CPU）", "速度（GPU）", "内存", "retrieval@10", "多语言", "最适合"],
+        rows: [
+          {
+            "模型": "nomic-embed-text-v2",
+            "维度": "768",
+            "速度（CPU）": "580块/秒",
+            "速度（GPU）": "4,800块/秒",
+            "内存": "1.2 GB",
+            "retrieval@10": "88%",
+            "多语言": "100+语言（MoE）",
+            "最适合": "仅CPU部署、中档硬件",
+          },
+          {
+            "模型": "bge-large-en-v1.5",
+            "维度": "1,024",
+            "速度（CPU）": "95块/秒",
+            "速度（GPU）": "1,400块/秒",
+            "内存": "2.4 GB",
+            "retrieval@10": "91%（英）/ 79%（多）",
+            "多语言": "仅英文",
+            "最适合": "仅英文精度关键RAG",
+          },
+          {
+            "模型": "gte-large",
+            "维度": "1,024",
+            "速度（CPU）": "110块/秒",
+            "速度（GPU）": "1,600块/秒",
+            "内存": "2.2 GB",
+            "retrieval@10": "90%（英）/ 78%（多）",
+            "多语言": "英文为主",
+            "最适合": "Apache-2.0许可部署",
+          },
+          {
+            "模型": "mxbai-embed-large-v1",
+            "维度": "1,024",
+            "速度（CPU）": "105块/秒",
+            "速度（GPU）": "1,500块/秒",
+            "内存": "2.1 GB",
+            "retrieval@10": "89%（英）/ 80%（多）",
+            "多语言": "英文为主",
+            "最适合": "均衡的英文RAG且许可证宽松",
+          },
+          {
+            "模型": "snowflake-arctic-embed-l-v2.0",
+            "维度": "1,024",
+            "速度（CPU）": "130块/秒",
+            "速度（GPU）": "1,800块/秒",
+            "内存": "1.9 GB",
+            "retrieval@10": "87%（英）/ 86%（多）",
+            "多语言": "~30种语言",
+            "最适合": "长上下文（8k令牌）块、多语言",
+          },
+          {
+            "模型": "jina-embeddings-v3",
+            "维度": "1,024（Matryoshka→256）",
+            "速度（CPU）": "220块/秒",
+            "速度（GPU）": "3,200块/秒",
+            "内存": "2.0 GB",
+            "retrieval@10": "92%（英）/ 89%（多）",
+            "多语言": "89种语言",
+            "最适合": "大多数本地RAG的超越默认选择",
+          },
+        ],
+      },
+      whichModel: {
+        id: "which-model",
+        title: "应该选择哪个嵌入模型？",
+        content:
+          "**正确的模型取决于三件事：您是否有GPU、语料库是否仅英文以及您是否期望稍后交换维度。** 使用此决策快速参考：",
+        rows: [
+          { "您的情况": "混合语言语料库、可用GPU、需要最佳整体精度", "选择": "jina-embeddings-v3" },
+          { "您的情况": "仅英文法律或研究、可用GPU、精度关键", "选择": "bge-large-en-v1.5" },
+          { "您的情况": "仅CPU笔记本、需要无GPU的可接受精度", "选择": "nomic-embed-text-v2" },
+          { "您的情况": "商业产品需要宽松的Apache-2.0许可证", "选择": "gte-large或mxbai-embed-large-v1" },
+          { "您的情况": "长文档（8k+令牌块）且多语言", "选择": "snowflake-arctic-embed-l-v2.0" },
+          { "您的情况": "想要稍后灵活地截断维度（存储成本控制）", "选择": "jina-embeddings-v3（Matryoshka）" },
+          { "您的情况": "代码重文语料库（TypeScript、Python、Rust）", "选择": "六个都不是——使用代码特定的嵌入器" },
+          { "您的情况": "多语言是主导要求、可用GPU", "选择": "BAAI/bge-m3（不在此基准中、专门多语言）" },
+        ],
+        columns: ["您的情况", "选择"],
+      },
+      howWeTested: {
+        id: "how-we-tested",
+        title: "我们如何在4种文档类型上测试6个嵌入模型",
+        content:
+          "**相同的块、相同的查询集、相同的检索管道。唯一的变量是嵌入器。** 下面的所有数字来自这个单一的受控运行。",
+        items: [
+          "**硬件：** NVIDIA RTX 4070（12 GB VRAM、32 GB系统RAM）在Windows 11上用于GPU数字；Apple M3 Pro（18 GB统一内存、无独立GPU）用于CPU数字。每次运行重复三次；报告的数字是中位数。",
+          "**语料库：** 四个文档集，各约1,200页。集合1——商业房地产租赁和主服务协议（法律）。集合2——来自arXiv的变换器和检索研究论文（研究）。集合3——来自公开Next.js代码库的TypeScript和Python源代码（代码）。集合4——英文、德文、法文、日文和中文的内部工程wiki导出（多语言）。",
+          "**块：** 固定256个令牌，32个令牌重叠。所有模型的分块器相同，块边界相同，仅嵌入步骤变化。",
+          "**向量存储：** 本地模式下的Qdrant 1.x、余弦相似度、top-K=10。所有六个模型的配置相同。在运行之间进行了干净的重新索引。",
+          "**查询集：** 100个查询——每种文档类型25个——由领域读者编写并对照已知答案关键字盲目评分。retrieval@10 =正确块出现在前10个结果中的查询百分比。",
+          "**速度测试：** 在1,000个块的预热加10,000个测试块上，批大小32时的块/秒。在嵌入期间峰值驻留集大小处测量的内存。",
+          "**我们*没有*测试的内容：** 端到端答案质量。聊天模型在所有运行中相同（Llama 3.3 8B Q4_K_M），但答案质量取决于提示模板和块数。我们在这里隔离检索，使嵌入器是唯一的变量。",
+        ],
+        callouts: [
+          {
+            type: "note",
+            text: "模型下载后禁用了网络访问。所有推理本地运行——通过Windows上的Wireshark和macOS上的Little Snitch确认。六个模型×四个文档集×三次运行=72个索引语料库加100个查询嵌入各。",
+          },
+        ],
+      },
+      retrievalAccuracy: {
+        id: "retrieval-accuracy",
+        title: "按文档类型的检索精度（retrieval@10）",
+        content:
+          "**retrieval@10 =正确块出现在前10个结果中的查询百分比。** 越高越好。数字来自每种文档类型每个模型的25个分级查询。",
+        columns: ["模型", "法律", "研究", "代码", "多语言", "总体"],
+        rows: [
+          { "模型": "nomic-embed-text-v2", "法律": "88%", "研究": "90%", "代码": "82%", "多语言": "92%", "总体": "88%" },
+          { "模型": "bge-large-en-v1.5", "法律": "94%", "研究": "93%", "代码": "85%", "多语言": "79%", "总体": "88%" },
+          { "模型": "gte-large", "法律": "92%", "研究": "92%", "代码": "86%", "多语言": "78%", "总体": "87%" },
+          { "模型": "mxbai-embed-large-v1", "法律": "91%", "研究": "91%", "代码": "84%", "多语言": "80%", "总体": "87%" },
+          { "模型": "snowflake-arctic-embed-l-v2.0", "法律": "88%", "研究": "89%", "代码": "83%", "多语言": "86%", "总体": "87%" },
+          { "模型": "jina-embeddings-v3", "法律": "93%", "研究": "92%", "代码": "87%", "多语言": "89%", "总体": "92%" },
+        ],
+        callouts: [
+          {
+            type: "tip",
+            text: "jina-embeddings-v3是测试中唯一在每种文档类型上保持87%以上的模型。纯英文模型（bge-large-en-v1.5、gte-large、mxbai-embed-large-v1）在纯英文文本上处于领先地位，但在多语言内容上失去10–15个百分点。如果您的语料库是混合的，英文领导陷阱是真实的。",
+          },
+        ],
+      },
+      cpuSpeed: {
+        id: "cpu-speed",
+        title: "CPU嵌入速度（每秒块数）",
+        content:
+          "**批大小32、256令牌块、Apple M3 Pro（无GPU）上的吞吐量。** 越高越好。CPU速度决定了您是否可以在午餐时间重新嵌入5,000页语料库（jina、nomic）或需要计划夜间运行（bge-large、gte-large）。",
+        columns: ["模型", "块/秒（CPU）", "5K页语料库索引时间", "注释"],
+        rows: [
+          { "模型": "nomic-embed-text-v2", "块/秒（CPU）": "580", "5K页语料库索引时间": "~9分钟", "注释": "混合专家；每个令牌激活475M中的305M参数" },
+          { "模型": "jina-embeddings-v3", "块/秒（CPU）": "220", "5K页语料库索引时间": "~24分钟", "注释": "LoRA适配器；可禁用适配器以获得额外~15%速度" },
+          { "模型": "snowflake-arctic-embed-l-v2.0", "块/秒（CPU）": "130", "5K页语料库索引时间": "~40分钟", "注释": "从更大的基础蒸馏；闪光注意在AVX-512上有帮助" },
+          { "模型": "gte-large", "块/秒（CPU）": "110", "5K页语料库索引时间": "~48分钟", "注释": "标准1,024维BERT风格；无特殊CPU优化" },
+          { "模型": "mxbai-embed-large-v1", "块/秒（CPU）": "105", "5K页语料库索引时间": "~50分钟", "注释": "标准1,024维；mxbai-embed-2d变体提供更小维度" },
+          { "模型": "bge-large-en-v1.5", "块/秒（CPU）": "95", "5K页语料库索引时间": "~55分钟", "注释": "英文最精确；由于24层×1,024维导致CPU最慢" },
+        ],
+        callouts: [
+          {
+            type: "tip",
+            text: "在仅CPU硬件上，对于1,000页以上的语料库选择nomic-embed-text-v2。5–6倍的速度优势复合：使用nomic的重新索引需要9分钟，使用bge-large需要50多分钟。这种差异每次调整块大小或交换嵌入器进行A/B测试时都很重要。",
+          },
+        ],
+      },
+      gpuSpeed: {
+        id: "gpu-speed",
+        title: "GPU嵌入速度（每秒块数）",
+        content:
+          "**批大小64、256令牌块、NVIDIA RTX 4070（12 GB VRAM）上的吞吐量。** 越高越好。GPU缩小了模型间的速度差距；最慢的GPU数字（bge-large的1,400块/秒）仍然比最快的CPU数字快2.4倍。",
+        columns: ["模型", "块/秒（GPU）", "5K页语料库索引时间", "GPU内存（峰值）"],
+        rows: [
+          { "模型": "nomic-embed-text-v2", "块/秒（GPU）": "4,800", "5K页语料库索引时间": "~1分5秒", "GPU内存（峰值）": "1.6 GB" },
+          { "模型": "jina-embeddings-v3", "块/秒（GPU）": "3,200", "5K页语料库索引时间": "~1分35秒", "GPU内存（峰值）": "2.4 GB" },
+          { "模型": "snowflake-arctic-embed-l-v2.0", "块/秒（GPU）": "1,800", "5K页语料库索引时间": "~2分50秒", "GPU内存（峰值）": "2.2 GB" },
+          { "模型": "gte-large", "块/秒（GPU）": "1,600", "5K页语料库索引时间": "~3分10秒", "GPU内存（峰值）": "2.5 GB" },
+          { "模型": "mxbai-embed-large-v1", "块/秒（GPU）": "1,500", "5K页语料库索引时间": "~3分25秒", "GPU内存（峰值）": "2.4 GB" },
+          { "模型": "bge-large-en-v1.5", "块/秒（GPU）": "1,400", "5K页语料库索引时间": "~3分35秒", "GPU内存（峰值）": "2.7 GB" },
+        ],
+        callouts: [
+          {
+            type: "note",
+            text: "这些数字假设嵌入模型拥有GPU。如果聊天模型（Llama 3.3 8B Q4_K_M占约5 GB）已经加载，嵌入器与VRAM竞争，吞吐量从竞争降低30–50%。在12 GB卡上，您可以索引或聊天——不能同时两者以全速进行。",
+          },
+        ],
+      },
+      memoryAndDimensions: {
+        id: "memory-and-dimensions",
+        title: "内存占用和维度权衡",
+        content:
+          "**维度数是本地RAG中最过度设计的选择。** 更大的维度在~1,024处有帮助，然后就不行了。超过此范围，您为sub-1百分点的增益支付双倍的存储。",
+        items: [
+          "**768维（nomic-embed-text-v2）：** 768×4字节=每块3 KB。在256令牌处分块的5,000页语料库（~30,000块）仅向量需要约90 MB。",
+          "**1,024维（其他所有）：** 4 KB每块。同一语料库需要~120 MB用于向量。存储线性缩放——50,000页语料库在1,024维需要1.2 GB对768维的0.9 GB。",
+          "**Matryoshka表示学习**——jina-embeddings-v3和nomic-embed-text-v2经过训练，您可以将向量截断为768、512、256甚至128维，仍然检索得很好。截断只是切片数组——无需重新嵌入。我们测量512维的retrieval@10下降约1点，256维约3点，128维约7点。",
+          "**量子化**——存储向量的int8量子化使存储减半，大约使检索延迟减半，retrieval@10在我们的测试中下降约0.5个百分点。值得对任何超过25,000块的语料库进行。",
+          "**推理时内存**——模型本身加载到RAM中一次。nomic-embed-text-v2占用约1.2 GB（混合专家意味着激活比参数小），1,024维模型占用1.9–2.4 GB。六个都不超过bf16的3 GB。",
+          "**生产中的存储**——对于50,000页语料库，向量DB磁盘大小为0.9 GB（768维）→1.2 GB（1,024维）→0.6 GB（1,024维、int8量子化）。备份、同步和增量更新成本都与此数字缩放。",
+        ],
+        callouts: [
+          {
+            type: "tip",
+            text: "如果存储成本很重要，使用jina-embeddings-v3在1,024维处嵌入索引，然后为存储截断到512维。您获得完整模型的索引时间精度和一半的存储成本，retrieval@10损失约1个百分点。截断仅在您保留完整向量时可逆——在提交之前决定。",
+          },
+        ],
+      },
+      multilingual: {
+        id: "multilingual",
+        title: "多语言质量：当英文领导者失败时",
+        content:
+          "**此基准中的大质量差距不在两个特定模型之间，而是在多语言和纯英文模型之间。** 25个查询的多语言集（英文、德文、法文、日文、中文——各5个）清楚地暴露了差距。",
+        columns: ["模型", "英文查询→英文文档", "英文查询→DE/FR文档", "英文查询→JA/ZH文档", "多语言平均"],
+        rows: [
+          { "模型": "jina-embeddings-v3", "英文查询→英文文档": "94%", "英文查询→DE/FR文档": "90%", "英文查询→JA/ZH文档": "84%", "多语言平均": "89%" },
+          { "模型": "nomic-embed-text-v2", "英文查询→英文文档": "92%", "英文查询→DE/FR文档": "93%", "英文查询→JA/ZH文档": "90%", "多语言平均": "92%" },
+          { "模型": "snowflake-arctic-embed-l-v2.0", "英文查询→英文文档": "90%", "英文查询→DE/FR文档": "88%", "英文查询→JA/ZH文档": "80%", "多语言平均": "86%" },
+          { "模型": "mxbai-embed-large-v1", "英文查询→英文文档": "92%", "英文查询→DE/FR文档": "82%", "英文查询→JA/ZH文档": "66%", "多语言平均": "80%" },
+          { "模型": "bge-large-en-v1.5", "英文查询→英文文档": "94%", "英文查询→DE/FR文档": "79%", "英文查询→JA/ZH文档": "64%", "多语言平均": "79%" },
+          { "模型": "gte-large", "英文查询→英文文档": "93%", "英文查询→DE/FR文档": "78%", "英文查询→JA/ZH文档": "63%", "多语言平均": "78%" },
+        ],
+        callouts: [
+          {
+            type: "note",
+            text: "nomic-embed-text-v2实际上在多语言查询上击败了jina-embeddings-v3，因为其混合专家架构为非英文内容激活语言特定的专家。对于具有实质性日文或中文内容的语料库，nomic-embed-text-v2值得直接比较——它在CPU上运行也是最便宜的，这使其在笔记本电脑上的多语言工作负载的吸引力翻倍。",
+          },
+        ],
+      },
+      modelProfiles: {
+        id: "model-profiles",
+        title: "每个模型的档案：每个嵌入器实际上擅长什么",
+        content:
+          "**每个模型都有不同的设计意图。** 上面的基准数字来自这些设计选择。",
+        items: [
+          "**nomic-embed-text-v2**——开源混合专家（475M总参数，每令牌约305M活跃）。在100多种语言中的1.6B对上训练。许可证：Apache-2.0。优点：CPU吞吐量（比1,024维对等物快5倍）、强大的跨语言recall、最小内存占用。缺点：768维上限意味着与1,024维模型相比略低的英文recall。最适合仅CPU笔记本电脑、多语言语料库和必须频繁运行的任何索引管道。",
+          "**bge-large-en-v1.5（BAAI）**——335M参数、1,024维、24层。主要在英文上训练，重点关注检索的对比对。许可证：MIT。优点：英文法律和研究文本中的顶级性能、成熟的生态系统（每个本地RAG平台都支持它）、微调下文档良好的行为。缺点：仅英文——在多语言查询上下降12–15个百分点。测试中最慢的CPU吞吐量。最适合精度比吞吐量更重要的仅英文RAG。",
+          "**gte-large（阿里巴巴）**——335M参数、1,024维。在Web对上训练，重点关注通用语义搜索。许可证：Apache-2.0。优点：宽松许可证、强大的英文性能、广泛的框架支持（Sentence Transformers、LangChain、LlamaIndex）。缺点：英文聚焦（gte-multilingual-large单独存在，增加~1 GB内存）。最适合Apache-2.0简化许可审查的商业部署。",
+          "**mxbai-embed-large-v1（Mixedbread）**——335M参数、1,024维。从强大的基础蒸馏并以检索聚焦对比训练微调。许可证：Apache-2.0。优点：均衡的英文性能、比bge-large更好的跨语言recall、mxbai-embed-2d变体（单独的模型）支持Matryoshka截断。缺点：比bge或gte的社区更小。最适合有宽松许可和升级到mxbai-embed-2d获得维度灵活性的选项的英文RAG。",
+          "**snowflake-arctic-embed-l-v2.0（Snowflake）**——568M参数、1,024维，原生支持最多8,192令牌块。许可证：Apache-2.0。优点：长上下文能力（大多数嵌入器限制在512令牌）、~30种语言、企业风格文档上强大。缺点：短块上的中档精度。最适合具有非常长的结构化文档（法律合同、技术手册、监管备案）的语料库，其中8k令牌块有用。",
+          "**jina-embeddings-v3（Jina AI）**——570M参数、1,024维，支持Matryoshka截断至768/512/256。使用任务特定的LoRA适配器（检索、分类、相似度）训练。89种语言支持。许可证：开源权重CC BY-NC 4.0（商业用途需要付费许可证）——在付费产品中部署前验证。优点：此基准中整体检索精度最高、强大的多语言性能、Matryoshka截断、任务感知适配器。缺点：许可证需要谨慎进行商业部署。最适合个人RAG、研究以及许可证可接受的任何部署。",
+        ],
+        callouts: [
+          {
+            type: "tip",
+            text: "在集成时始终重新验证许可证。嵌入模型许可证已多次更改——BGE从MIT移至更限制的商业条款并返回，jina-embeddings-v3以开源权重的CC BY-NC出货，Snowflake在Apache-2.0之上添加了可接受的使用政策。将README视为最新声明，而不是历史文档。",
+          },
+        ],
+      },
+      costVsOpenai: {
+        id: "cost-vs-openai",
+        title: "自托管vs OpenAI text-embedding-3-large：每百万令牌成本",
+        content:
+          "**自托管嵌入在规模上本质上是免费的。** 唯一的有意义的成本是电力和硬件折旧——两者都比任何超过几千页的语料库的API价格四舍五入为噪音。",
+        columns: ["方法", "成本/100万令牌", "100万令牌的时间", "注释"],
+        rows: [
+          { "方法": "OpenAI text-embedding-3-large（API）", "成本/100万令牌": "$0.13", "100万令牌的时间": "~3分钟（网络限制）", "注释": "英文最高绝对精度；数据离开您的机器" },
+          { "方法": "jina-embeddings-v3在RTX 4070上", "成本/100万令牌": "~$0.001（电力）", "100万令牌的时间": "~5分钟", "注释": "最高的本地精度；CC BY-NC许可证——验证商业" },
+          { "方法": "bge-large-en-v1.5在RTX 4070上", "成本/100万令牌": "~$0.001", "100万令牌的时间": "~12分钟", "注释": "最高的英文精度；MIT许可证" },
+          { "方法": "nomic-embed-text-v2在RTX 4070上", "成本/100万令牌": "~$0.0005", "100万令牌的时间": "~3分30秒", "注释": "最快的GPU吞吐量；多语言；Apache-2.0" },
+          { "方法": "nomic-embed-text-v2在M3 Pro CPU上", "成本/100万令牌": "~$0.0008", "100万令牌的时间": "~30分钟", "注释": "不需要GPU；仅因为在没有GPU的情况下可行而有意义" },
+        ],
+        callouts: [
+          {
+            type: "note",
+            text: "对于5,000页语料库（每页1,000令牌~5M令牌），OpenAI每次完整重新索引收费~$0.65——微不足道。真正的成本是数据出口：所有块都离开您的机器，许多合规制度根本不允许它。自托管嵌入是首先是隐私和控制选择，其次是成本选择。",
+          },
+        ],
+      },
+      decisionTree: {
+        id: "decision-tree",
+        title: "决策树：应该选择哪个嵌入器？",
+        content:
+          "**五个二元问题，按顺序，让大多数读者到达正确的嵌入器。**",
+        items: [
+          "**1. 您有可用的GPU用于索引吗？** →否：nomic-embed-text-v2（5倍CPU速度）。是：继续。",
+          "**2. 语料库是仅英文吗？** →否：继续。是：如果精度最重要则选bge-large-en-v1.5，如果Apache-2.0许可重要则选gte-large或mxbai-embed-large-v1。",
+          "**3. 文档非常长（8k+令牌块）吗？** →是：snowflake-arctic-embed-l-v2.0。否：继续。",
+          "**4. 您想稍后为存储成本灵活截断维度吗？** →是：jina-embeddings-v3（Matryoshka）。否：继续。",
+          "**5. 部署是商业产品吗？** →是：避免jina-embeddings-v3（CC BY-NC），除非您购买商业许可证——改用nomic-embed-text-v2（Apache-2.0）或BAAI/bge-m3（MIT）。",
+          "**不确定时：jina-embeddings-v3。** 它是基准中最高精度的通用选择，也是仅有的在每种文档类型上保持87%以上的模型。允许许可的部署应默认选择它。",
+        ],
+      },
+      commonMistakes: {
+        id: "common-mistakes",
+        title: "选择嵌入模型时的常见错误",
+        items: [
+          "**错误1：坚持平台默认值。** AnythingLLM附带一个小的内置嵌入器；PrivateGPT默认为all-MiniLM-L6-v2；Open WebUI默认为nomic-embed-text-v1.5。所有三个默认值都在retrieval@10上比jina-embeddings-v3低5–10个百分点。切换。",
+          "**错误2：当retrieval@10已经在768维模型上达到90%时选择1,024维模型。** 边际收益很少能证明双倍存储和5倍CPU吞吐量延迟。nomic-embed-text-v2达到88%——足够用于大多数用例。",
+          "**错误3：为多语言语料库选择纯英文嵌入器。** bge-large-en-v1.5是测试中最好的英文嵌入器，也是日文或中文内容最差的之一。最好的嵌入器答案取决于语料库——在您的数据上测试。",
+          "**错误4：忽略许可证。** jina-embeddings-v3以开源权重的CC BY-NC出货。如果您在付费产品内运送它而没有商业许可证，您有法律问题。在集成时始终重新验证许可证。",
+          "**错误5：在太小的语料库上进行基准测试。** 所有六个模型在100个文档上看起来都很棒。差异在~5,000块后变得决定性，这是较弱嵌入器的recall上限显示的地方。在至少5,000块的您的实际内容上测试。",
+          "**错误6：忘记切换嵌入器强制完整重新索引。** 没有本地RAG平台支持增量迁移。每个嵌入器交换在消费级硬件上每5,000页成本30–90分钟。一次选择，谨慎交换。",
+        ],
+      },
+      faq: {
+        id: "faq",
+        title: "FAQ",
+        faqs: [
+          {
+            q: "仅CPU的最快嵌入模型是什么？",
+            a: "nomic-embed-text-v2——Apple M3 Pro上批大小32、256令牌块时为580块/秒。大约比1,024维替代品快5倍（bge-large-en-v1.5为95、gte-large为110、mxbai-embed-large-v1为105块/秒）。速度优势来自其混合专家架构，每令牌激活约305M个参数中的475M。对于仅CPU硬件上的任何1,000页以上的语料库，nomic-embed-text-v2是实用的默认值。",
+          },
+          {
+            q: "更大的嵌入维度实际上改进检索吗？",
+            a: "到~1,024维为止，是的。超过此点，否。在基准中，768维nomic-embed-text-v2（88% retrieval@10）总体上落后于1,024维jina-embeddings-v3（92%）4个百分点。扩展到1,536或3,072维（一些商业API）在已发表的比较中增益不到1个百分点。维度成本线性存储：50,000页语料库在768维需要0.9 GB对1,024维1.2 GB对3,072维3.6 GB。Matryoshka技巧——嵌入后截断——无成本提供灵活性。",
+          },
+          {
+            q: "我可以使用多语言嵌入而不会性能损失吗？",
+            a: "多语言模型在2026年已大幅赶上。jina-embeddings-v3达到92% retrieval@10总体（特别是多语言查询89%）——与英文上最好的纯英文嵌入器竞争，并在非英文上远领先它们。历史差距（多语言=较低精度）已缩小到英文查询的1–2个百分点，用于非英文增益10个百分点。对于混合语料库，多语言现在是默认正确选择。",
+          },
+          {
+            q: "哪个嵌入模型最能处理代码？",
+            a: "测试的六个中没有一个是专用代码嵌入器。在TypeScript/Python代码库上，jina-embeddings-v3以87% retrieval@10领先，其他的在82–86%之间。对于代码重的语料库——代码搜索、存储库RAG、代码库上的代理工具——将通用嵌入器与代码特定的嵌入器配对（BAAI/bge-code-v1、voyage-code-2或微调变体）并为代码块使用更高分数的。最简单的方法：首先使用jina-embeddings-v3嵌入所有内容，在保留查询集上测试retrieval@10，仅在其落到阈值以下时才交换。",
+          },
+          {
+            q: "我应该多频繁更新我的嵌入模型？",
+            a: "当新的已发布模型在与您的语料库相似的数据上发布基准，并且您有可以比较的测得的retrieval@10数字时进行升级。没有基线测量，您无法判断新模型是否在您的内容上实际更好。对于大多数本地RAG部署，嵌入器在有意义更好的选项到达之前可以工作12–18个月。重新索引是成本——在消费级硬件上每5,000页预算30–90分钟。",
+          },
+          {
+            q: "我可以在同一RAG系统中混合嵌入模型吗？",
+            a: "技术上可以，实际上不行。混合需要两个并行向量索引（查询两者、合并结果——增加50–150毫秒延迟并复杂化相关性评分）或训练小投影层来对齐维度（研究级、脆弱）。对于95%的本地部署，选择一个嵌入器并重新索引。例外：带有代码块专用代码嵌入器和文档通用嵌入器的代码存储库——在摄入时按文档类型分割，当用户查询不明确时查询两个索引。",
+          },
+          {
+            q: "开源嵌入与OpenAI一样好吗？",
+            a: "对于大多数本地RAG用例，是的。OpenAI text-embedding-3-large仍然在已发表的英文基准上以2–4个百分点的retrieval@10领先，但差距已大幅缩小。jina-embeddings-v3在测试语料库上在2个百分点内。OpenAI路线需要数据离开您的机器——对于任何隐私或合规约束的部署都不是开始。对于英文文本的纯质量无隐私要求和有限预算，OpenAI仍然是最高的绝对数字；对于其他所有情况，开源已赶上。",
+          },
+          {
+            q: "量子化会影响嵌入质量吗？",
+            a: "存储向量的int8量子化以约0.5个百分点的retrieval@10为代价，使存储减半，大约使检索延迟减半。值得对任何超过25,000块的语料库进行。量子化嵌入模型本身（权重——bf16→int8→int4）更激进：int8模型量子化成本1–2个百分点；int4成本3–5个百分点并明显伤害多语言recall。对于消费级硬件上的本地RAG，在bf16（或fp16）运行模型，仅量子化存储的向量。",
+          },
+          {
+            q: "哪个模型最适合法律文件？",
+            a: "bge-large-en-v1.5在法律子集上以94% retrieval@10领先——基准中最高的单一数字——但仅适用于英文合同。对于德文、法文或多语言法律语料库，jina-embeddings-v3（93%英文/ 89%多语言）是更好的多用途。法律文本奖励1,024维模型，因为术语精度很重要；768维nomic-embed-text-v2在法律子集上下降6个百分点。对于非常长的合同（50+页密集的法律jargon），snowflake-arctic-embed-l-v2.0具有8k令牌块来减少碎片化损失。",
+          },
+          {
+            q: "如果我切换RAG平台，可以重用嵌入吗？",
+            a: "源文档在平台之间自由移动。嵌入仅在新平台支持相同向量格式和相同嵌入模型时移动。AnythingLLM（LanceDB）、PrivateGPT（Qdrant或Chroma）和Open WebUI（ChromaDB）都使用不同的向量存储；即使嵌入器相同，元数据schema也不同。实际上，每个平台切换也是重新索引运行。计划相应：为检索质量选择嵌入器，为其他所有选择平台。",
+          },
+        ],
+      },
+      relatedReading: {
+        id: "related-reading",
+        title: "相关阅读",
+        items: [
+          "[AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) ——嵌入选择如何适应更广泛平台决策的上下文。",
+          "[在30分钟内在您的PDF上构建本地RAG](/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step) ——使用nomic-embed-text-v1.5的实用实现演练。",
+          "[本地聊天1,000个PDF](/zh/power-local-llm/chat-with-1000-pdfs-locally) ——嵌入选择超过10K页断崖的缩放含义。",
+          "[内置RAG的本地AI应用](/zh/power-local-llm/local-ai-app-with-built-in-rag) ——初学者层级（LM Studio、Jan、AnythingLLM）对于还没有调整嵌入器的读者。",
+          "[RAG说明：如何使用真实数据为AI回答接地（2026）](/prompt-engineering/rag-explained?lang=zh) ——检索增强生成的概念层。",
+          "[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) ——为嵌入工作负载调整GPU和RAM大小。",
+          "[Power Local LLM Hub](/zh/power-local-llm) ——完整的指南库。",
+        ],
+      },
+    },
+  },
 }
