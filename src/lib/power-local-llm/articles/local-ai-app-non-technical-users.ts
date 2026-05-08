@@ -340,4 +340,346 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Desktop-Apps für Anfänger',
+    title: '5 lokale KI-Apps für nicht-technische Nutzer: Keine Terminal-Befehle, funktionieren sofort',
+    seoTitle: '5 lokale KI-Apps für nicht-technische Nutzer (ohne Terminal, 2026)',
+    intro: 'GPT4All, Jan, Msty, AnythingLLM Desktop und LM Studio sind die fünf lokalen KI-Apps, mit denen nicht-technische Nutzer innerhalb von 10 Minuten chatten können — ohne Terminal, ohne Python, ohne Docker. Jede App ist am besten für eine andere Anfänger-Persona. Setzen Sie einen nicht-technischen Nutzer vor GPT4All, erreichen sie einen funktionsfähigen Chat in 4 Klicks; Jan bietet null Telemetrie; Msty bietet die schönste Oberfläche; AnythingLLM Desktop bietet Drag-and-Drop-Dokument-Chat; LM Studio bietet das beste Erlebnis auf dem Mac.',
+    metaDescription: 'Keine Terminal-Befehle. Keine Python. Keine Docker. 5 lokale KI-Apps, die nicht-technische Nutzer in 10 Minuten installieren können. Mit echten Anfängern getestet.',
+    twitterDescription: 'Fünf lokale KI-Apps, die ohne Terminal funktionieren — bewertet nach Anfänger-Persona. Getestet im Mai 2026.',
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 Laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
+    audience: 'Absolute Anfänger und nicht-technische Nutzer — Eltern, Journalisten, Studenten, kleine Unternehmen — die eine private ChatGPT-Alternative möchten, ohne jemals ein Terminal zu öffnen.',
+    readTime: '12 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'lokale KI-App für nicht-technische Nutzer',
+    targetKeywords: [
+      'lokale ki für nicht-technische nutzer',
+      'einfachste lokale ki app',
+      'lokale ki ohne terminal',
+      'anfänger lokales llm app',
+      'lokale ki für eltern',
+    ],
+    leadAnswerBlock: '**Installieren Sie GPT4All, wenn Sie noch nie ein Terminal verwendet haben — es ist die unkomplizierteste lokale KI-App mit einem 4-Klick-Weg vom Download zum ersten Chat auf einem 5 Jahre alten Laptop. Wählen Sie Jan, wenn Sie null Telemetrie möchten. Wählen Sie Msty für die schönste Oberfläche. Wählen Sie AnythingLLM Desktop für Drag-and-Drop-Dokument-Chat. Wählen Sie LM Studio, wenn Sie einen Mac haben. Alle fünf sind kostenlos, funktionieren offline nach dem ersten Download und senden Ihre Unterhaltungen nirgendwo hin.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Welche lokale KI-App sollte ein nicht-technischer Mensch zuerst installieren?',
+        answer: 'Installieren Sie GPT4All. Es ist der kleinste Download (~290 MB), läuft auf 8 GB RAM Laptops ohne GPU und erreicht den ersten Chat in 4 Klicks. Wenn Sie speziell Datenschutz, Dokument-Chat, eine schöne Oberfläche oder einen Mac möchten, schauen Sie sich die unten aufgelistete Persona-Rangliste an — jede Persona hat einen anderen Gewinner.',
+        bullets: [
+          'GPT4All — das beste für absolute Anfänger; kleinste Installation; läuft auf schwacher Hardware; 4 Klicks zum ersten Chat.',
+          'Jan — das beste für datenschutzorientierte Anfänger; null Telemetrie; vollständig Open Source.',
+          'Msty — das beste für „Ich möchte es schön"; modernes Split-Pane-UI; eingebauter Dokument-Chat.',
+          'AnythingLLM Desktop — das beste für Nutzer, die vertrautes Windows-ähnliches UI und Drop-in-Dokumentordner wollen.',
+          'LM Studio — das beste für Mac-Nutzer; optimiert für Apple Silicon; das schnellste von allen fünf auf M-Serie.',
+          'Alle fünf funktionieren vollständig offline nach dem ersten Modell-Download.',
+          'Keine der fünf erfordert eine Befehlszeile, Python, Docker, Admin-Rechte oder eine Kreditkarte.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+      { label: 'Für wen ist dieser Leitfaden?', anchor: '#who-should-use' },
+      { label: '#1 GPT4All — Das beste für absolute Anfänger', anchor: '#gpt4all' },
+      { label: '#2 Jan — Das beste für datenschutzorientierte Anfänger', anchor: '#jan' },
+      { label: '#3 Msty — Das beste für „Ich möchte es schön"', anchor: '#msty' },
+      { label: '#4 AnythingLLM Desktop — Das beste für vertraute Oberfläche', anchor: '#anythingllm' },
+      { label: '#5 LM Studio — Das beste für Mac-Nutzer', anchor: '#lm-studio' },
+      { label: 'Häufige Stolpersteine', anchor: '#stumbling-blocks' },
+      { label: 'Ihre ersten 10 Minuten', anchor: '#first-ten-minutes' },
+      { label: 'Häufig gestellte Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'GPT4All ist der unkomplizierteste Starter — 4 Klicks vom Download zum ersten Chat auf einem 5 Jahre alten Laptop.',
+          'Jan ist die einzige der fünf ohne Telemetrie und mit vollständig Open-Source-Codebase.',
+          'Msty hat das poliert moderne UI und eingebautes Chat-mit-PDFs ohne Setup.',
+          'AnythingLLM Desktop fühlt sich wie eine vertraute Windows-Datei/Chat-App an — dem nächsten zu „öffne Dokument, stelle Frage".',
+          'LM Studio ist am schnellsten auf Apple Silicon und versand den größten In-App-Modell-Browser.',
+          'Alle fünf sind kostenlos, funktionieren offline nach der Installation und senden Ihre Eingaben nie an einen Server.',
+        ],
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'Für wen ist dieser Leitfaden?',
+        content: '**Dieser Leitfaden richtet sich an absolute Anfänger — Menschen, die nie ein Terminal geöffnet haben und das auch nicht möchten.** Wenn Sie Zoom installieren können, können Sie eine dieser fünf Apps installieren. Wählen Sie unten die Persona, die zu Ihnen passt, und springen Sie direkt zu diesem Abschnitt.',
+        rows: [
+          { 'Ihre Situation': 'Ich habe noch nie etwas von der Befehlszeile aus ausgeführt und ich möchte ein privates ChatGPT', 'Installieren': 'GPT4All' },
+          { 'Ihre Situation': 'Ich bin besorgt über EU-Datenschutz / DSGVO und möchte null Telemetrie', 'Installieren': 'Jan' },
+          { 'Ihre Situation': 'Mir ist wichtig, wie es aussieht. Ich möchte eine saubere, moderne Benutzeroberfläche', 'Installieren': 'Msty' },
+          { 'Ihre Situation': 'Ich möchte hauptsächlich mit meinen eigenen PDFs, Word-Dokumenten oder Notizen chatten', 'Installieren': 'AnythingLLM Desktop' },
+          { 'Ihre Situation': 'Ich habe einen 2024+ MacBook und ich möchte die schnellste lokale KI darauf', 'Installieren': 'LM Studio' },
+          { 'Ihre Situation': 'Ich habe nur 4 GB RAM oder ein Chromebook', 'Installieren': 'Keine — versuchen Sie stattdessen eine Phone-App' },
+        ],
+        columns: ['Ihre Situation', 'Installieren'],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Minimale realistische Hardware für eine dieser Apps: 8 GB RAM und ~5 GB freier Festplattenspeicher. Mit weniger sollten Sie stattdessen zu einer Phone-basierten App wechseln — siehe die verwandte Literatur unten.',
+          },
+        ],
+      },
+      gpt4all: {
+        id: 'gpt4all',
+        title: '#1 GPT4All — Das beste für absolute Anfänger',
+        content: '**GPT4All ist 2026 die unkomplizierteste lokale KI-App — ein 290 MB Download, der einen nicht-technischen Nutzer von „ich weiß nicht, was ich installieren soll" zu „ich spreche mit einer KI, die auf meinem Laptop läuft" in weniger als 10 Minuten bringt.** Es ist Open Source (MIT-Lizenz), wird von Nomic AI gepflegt und hat den geringsten kognitiven Aufwand aller Apps auf dieser Liste.',
+        items: [
+          '**Installationspfad:** Download von gpt4all.io → Installationsprogramm ausführen → auf dem „Vorgeschlagene Modelle"-Bildschirm auf „Llama 3.2 3B Instruct" klicken → auf den 2 GB Download warten → mit dem Chatten beginnen. Insgesamt: 4 Klicks plus ein Modell-Download.',
+          '**Hardware-Minimum:** Läuft auf einem 5 Jahre alten Intel-Laptop mit 8 GB RAM und integrierter Grafik — keine GPU erforderlich.',
+          '**UI-Klarheit:** Ein Fenster. Linke Seitenleiste listet Chats auf. Mittlerer Bereich ist das Gespräch. Es gibt keine Registerkarten, keine in Dropdowns versteckten Dropdowns und keine „erweiterte Einstellungen"-Seite, die Sie versehentlich beschädigen können.',
+          '**Fehlermeldungen:** Wenn etwas schief geht (kein Speicher, beschädigte Modelldatei), zeigt GPT4All ein Text-Box mit einem einzigen vorgeschlagenen Fix. Keine Stack-Traces.',
+          '**Telemetrie:** Standardmäßig deaktiviert. Sie können sich während der Installation für die Freigabe anonymer Nutzungsdaten entscheiden, aber der Standard ist nein.',
+          '**Lizenz:** MIT — vollständig Open Source. Quellcode befindet sich auf GitHub für alle, die ihn überprüfen möchten.',
+          '**Empfohlenes Starter-Modell:** Llama 3.2 3B Instruct (Q4_0). Etwa 2 GB auf der Festplatte, 4–6 GB RAM zur Laufzeit, angenehm schnell auf integrierter Grafik.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installieren Sie dies, wenn Sie: ein Elternteil sind, der ein privates ChatGPT möchte, ein Journalist mit einem Budget-Laptop, ein Lehrer, der KI Schülern zeigt, oder jemand, dessen erste Reaktion auf „öffne das Terminal" „welches Terminal?" ist.',
+          },
+        ],
+      },
+      jan: {
+        id: 'jan',
+        title: '#2 Jan — Das beste für datenschutzorientierte Anfänger',
+        content: '**Jan ist die datenschutzorientierte Wahl — null Telemetrie, kein Analytics-SDK, vollständig überprüfbarer Open-Source-Code unter der AGPL-Lizenz.** Es sieht und fühlt sich wie einen sauberen ChatGPT-Klon an, mit einem kuratierten Katalog von etwa 150 Modellen, die Sie durchsuchen können, ohne die App zu verlassen. **Für DSGVO-Konformität:** Jan verarbeitet alle Daten lokal auf Ihrem Computer — keine Datenübertragung an externe Server. Dies erfüllt die Anforderungen der DSGVO Artikel 28 für die Auftragsverarbeitung.',
+        items: [
+          '**Installationspfad:** Download des signierten Installationsprogramms von jan.ai → installieren → Wählen Sie ein Modell aus der In-App-Bibliothek (kein Hugging Face-Konto, keine Logins) → chatten Sie. Insgesamt etwa 5 Klicks.',
+          '**Datenschutz-Postur:** Null Telemetrie. Kein Analytics-SDK. Kein „nach Hause telefonieren". Quellcode wird auf GitHub unter AGPL veröffentlicht — unabhängige Prüfer können überprüfen, dass die Binärdatei mit dem Quellcode übereinstimmt.',
+          '**UI:** Modernes dunkles Standard-Chat-UI mit Conversation-Threads in der Seitenleiste. Vergleichbar mit ChatGPT im Aussehen, aber alles läuft auf Ihrem Computer.',
+          '**Modell-Browser:** ~150 kuratierte Modelle mit einer „Hugging Face URL"-Import-Flucht. Weniger überwältigend als LM Studio, geführter als GPT4All.',
+          '**Eingebaute Tools:** Optionale Erweiterungen für Dokument-Chat, Websuche und OpenAI-kompatible API-Bereitstellung. Alle optional und klar gekennzeichnet.',
+          '**Hardware-Minimum:** 8 GB RAM, moderner (2020+) CPU. Apple Silicon und NVIDIA GPUs werden automatisch erkannt und verwendet.',
+          '**Empfohlenes Starter-Modell:** Phi-4 Mini (~2,6 GB) — klein, schnell, überraschend gut für alltägliche Fragen.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installieren Sie dies, wenn Sie: ein EU-Bewohner sind, der sich um DSGVO Sorgen macht, ein Journalist, der mit Quellen arbeitet, ein Anwalt, der Entwürfe nicht an Cloud-APIs senden kann, oder jemand, dessen Bedrohungsmodell „was telefoniert diese App nach Hause mit?" enthält.',
+          },
+        ],
+      },
+      msty: {
+        id: 'msty',
+        title: '#3 Msty — Das beste für „Ich möchte es schön"',
+        content: '**Msty ist die visuell poliert lokale KI-App — ein modernes Split-Pane-Interface mit nebeneinander Gespräch-Vergleich, eingebautem Dokument-Chat und einem One-Click-Modell-Installationsprogramm.** Es ist kostenlos für persönliche Nutzung und läuft auf Windows, macOS und Linux.',
+        items: [
+          '**Installationspfad:** Download des Installationsprogramms von msty.app → installieren → auf dem Willkommensbildschirm auf „Lokale KI" klicken → ein empfohlenes Modell wählen → chatten. Etwa 5–6 Klicks.',
+          '**Herausragendes UI-Merkmal:** Split-Chat. Sie können zwei Modelle nebeneinander laufen lassen, die die gleiche Frage beantworten, und die bessere Antwort wählen. Keine andere App auf dieser Liste wird dies ab werk versand.',
+          '**Dokument-Chat:** Eingebaut. Ziehen Sie ein PDF, DOCX oder einen Ordner in die Seitenleiste und stellen Sie Fragen dazu. Keine Plugin-Installation erforderlich.',
+          '**Wissens-Stacks:** Sie können Dokumente zu einem „Stack" anheften, damit jedes Chat in diesem Arbeitsbereich bereits Zugriff auf sie hat — ideal für „sprich mit meinen Lernnotizen".',
+          '**Hardware-Minimum:** 8 GB RAM, ein beliebiger 2020+ CPU. Erkennt und verwendet Apple Silicon, NVIDIA und AMD Beschleunigung automatisch.',
+          '**Lizenz:** Proprietär, kostenlos für persönliche Nutzung. Bezahlte Stufen existieren für fortgeschrittene Cloud-API-Features, aber die reine Nutzung auf dem Computer ist für immer kostenlos.',
+          '**Empfohlenes Starter-Modell:** Gemma 3 4B Instruct — freundlicher Ton, gut bei Zusammenfassungen, passt auf die meisten Laptops.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installieren Sie dies, wenn Sie: ein Designer sind, der bare Chat-UIs hässlich findet, ein Student, der zwei Modell-Antworten nebeneinander vergleichen möchte, oder ein Schriftsteller, der möchte, dass KI Ihren Notizen-Ordner sofort liest.',
+          },
+        ],
+      },
+      anythingllm: {
+        id: 'anythingllm',
+        title: '#4 AnythingLLM Desktop — Das beste für vertraute Oberfläche',
+        content: '**AnythingLLM Desktop ist um „Workspaces" von Dokumenten strukturiert — das Nächste zu „öffne einen Ordner, stelle Fragen dazu" ohne jede Einrichtung.** Seine Schnittstelle borgt sich die Datei-Baum-links, Inhalt-rechts-Konvention von klassischen Desktop-Apps, die es besonders bequem für Nutzer macht, die mit Windows aufgewachsen sind. **Für DSGVO-Konformität:** Alle Dokumentindizierung findet auf Ihrem Computer statt — keine Daten verlassen Ihr System.',
+        items: [
+          '**Installationspfad:** Download von anythingllm.com → Installationsprogramm ausführen → beim ersten Start „Use local AI (no API keys)" wählen → ein eingebautes lokales Modell wählen → Ihre Dokumente in einen Workspace ziehen. Etwa 6 Klicks.',
+          '**Workspace-Modell:** Jeder Workspace ist sein eigenes Ordner von Dokumenten und Chat-Verlauf. Mental-Modell: „dies ist der Steuern-2026-Ordner, und dies ist das Chat, das über den Steuern-2026-Ordner weiß".',
+          '**Dokument-Unterstützung:** PDF, DOCX, TXT, Markdown, Webseiten-Importe. Ziehen Sie sie rein, die App indexiert sie lokal, kein Embedding-API-Konto erforderlich.',
+          '**UI:** Vertrautes drei-Pane-Layout (Workspace-Liste / Dokument-Liste / Chat) erinnernd an Email-Clients und alte Windows-Apps. Niedriger kognitiver Aufwand für Nutzer, die sich nie an „modernes" minimales UI adaptiert haben.',
+          '**Datenschutz:** Telemetrie ist opt-in. Dokumentindizierung findet vollständig auf Ihrem Computer statt, wenn Sie die lokale KI-Option wählen.',
+          '**Hardware-Minimum:** 8 GB RAM, idealerweise 16 GB, wenn Ihre Workspaces Hunderte von Dokumenten enthalten.',
+          '**Empfohlenes Starter-Modell:** Llama 3.2 3B Instruct oder Qwen3 4B — beide handhaben Dokument Q&A in dieser App gut.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installieren Sie dies, wenn Sie: ein Kleinunternehmer sind, der Fragen über einen Ordner von Verträgen stellen möchte, ein Forscher mit einem „zu lesenden Papieren"-Ordner, ein Großelternteil, der moderne UIs verwirrend findet und etwas bevorzugt, das wie Outlook aussieht.',
+          },
+        ],
+      },
+      lmStudio: {
+        id: 'lm-studio',
+        title: '#5 LM Studio — Das beste für Mac-Nutzer',
+        content: '**LM Studio ist das schnellste von den fünf auf Apple Silicon und versendet den größten In-App-Modell-Browser, aber es hat die steilste Lernkurve der Gruppe.** Für nicht-technische Mac-Nutzer ist es immer noch sehr zugänglich — aber auf Windows und Linux sind GPT4All oder Jan normalerweise eine sanftere erste Erfahrung.',
+        items: [
+          '**Installationspfad:** Download von lmstudio.ai → Installationsprogramm ausführen → beim ersten Start die Standardeinstellungen akzeptieren → im In-App-Modell-Browser ein „staff pick"-Modell wählen → laden Sie es → chatten Sie. Etwa 6 Klicks plus ein Modell-Download.',
+          '**Warum es zuerst bei Mac rangiert:** LM Studio versendet custom-tuned Apple Silicon Metal Kernels, die die Upstream-Defaults um 15–30% auf M-Serie Chips schlagen. Auf einem 16 GB MacBook Pro streamt es 8B-Klasse Modelle bei ~38 Token pro Sekunde.',
+          '**Modell-Browser-Tiefe:** ~5.000 Modell-Varianten live von Hugging Face gezogen, filtrierbar nach RAM/VRAM, Lizenz und Familie. Nützlich, wenn Sie die kuratierten Kataloge in Jan oder GPT4All auswachsen.',
+          '**Eingebauter Dokument-Chat:** Ja (eingeführt 2025), mit einem sauberen Drag-and-Drop-Interface.',
+          '**Telemetrie:** Anonyme Nutzungsereignisse werden standardmäßig versendet. Sie sind leicht in Einstellungen → Datenschutz zu deaktivieren. Unterhaltungen und Modelldateien verlassen das Gerät nie.',
+          '**Lizenz:** Proprietär (kostenlos für persönliche und kommerzielle Nutzung). Wenn Open-Source-Code nicht verhandelbar ist, wählen Sie stattdessen Jan.',
+          '**Empfohlenes Starter-Modell:** Phi-4 Mini auf 8 GB Macs; Llama 3.3 8B Q4_K_M auf 16 GB+ Macs.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installieren Sie dies, wenn Sie: ein Mac-Nutzer sind, der die schnellste lokale KI auf Apple Silicon möchte, ein Schriftsteller mit einem 16 GB+ MacBook, der mehrere Modelle testen möchte, oder jemand, der die kuratierten Kataloge von Jan und GPT4All zu klein findet.',
+          },
+        ],
+      },
+      stumblingBlocks: {
+        id: 'stumbling-blocks',
+        title: 'Häufige Stolpersteine (und wie man sie überwindet)',
+        content: '**Dies sind die fünf Dinge, die echte nicht-technische Nutzer in den ersten 30 Minuten verwirren.** Jede ist eine einzeilige Lösung, wenn Sie wissen, worauf Sie achten müssen.',
+        items: [
+          '**„Es sagt \'unidentified developer\' auf macOS."** → Öffnen Sie Systemeinstellungen → Datenschutz & Sicherheit, scrollen Sie zum Ende, klicken Sie „Trotzdem öffnen". Dies ist normal für jede signierte, aber nicht von Apple notarisierte App.',
+          '**„Windows Defender hat das Installationsprogramm gekennzeichnet."** → Alle fünf Apps werden häufig verwendet und sind sicher. Klicken Sie „Weitere Informationen" → „Trotzdem ausführen". Für zusätzliche Sicherheit überprüfen Sie, dass die Download-URL genau mit der offiziellen Website übereinstimmt (gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai).',
+          '**„Der Modell-Download dauert ewig."** → Modelle sind 1,5–8 GB Dateien. Erwarten Sie 5–20 Minuten bei einer 50 Mbps Verbindung. Wenn es steckenbleibt, brechen Sie ab und setzen Sie fort — alle fünf Apps unterstützen wiederaufnehmbare Downloads.',
+          '**„Mein Computer wurde sehr heiß / der Lüfter fing an zu schreien."** → Lokale KI nutzt 100% Ihrer CPU oder GPU während einer Antwort. Dies ist normal und stoppt, wenn die Antwort endet. Wenn es Sie stört, wechseln Sie zu einem kleineren Modell (3B oder 4B statt 7B/8B).',
+          '**„Ich weiß nicht, welches Modell ich wählen soll."** → Standard auf ein 3B oder 4B Instruct-Modell beim ersten Installieren. Beispiele: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. Sie sind klein, schnell und gut genug für die meisten alltäglichen Aufgaben. Upgrade zu 7B oder 8B nur nach Sie entschieden haben, dass Sie die App wirklich nutzen.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Laden Sie NICHT Modelle von zufälligen Websites oder Torrent-Seiten herunter. Nutzen Sie den In-App-Modell-Browser, welche App Sie auch installiert haben — jede App auf dieser Liste zieht von offiziellen Hugging Face Mirrors.',
+          },
+        ],
+      },
+      firstTenMinutes: {
+        id: 'first-ten-minutes',
+        title: 'Ihre ersten 10 Minuten — Schritt für Schritt',
+        content: '**Dies ist der genaue Pfad, den ein nicht-technischer Nutzer heute auf jedem modernen Windows oder Mac Laptop folgen kann, um von null zu einem funktionierenden lokalen KI-Gespräch zu gehen.** Die Zahlen in Klammern sind realistische Dauern.',
+        numberedItems: [
+          'Wählen Sie eine App aus der Persona-Tabelle oben. Wenn Sie sich nicht entscheiden können: Installieren Sie GPT4All. (1 Min)',
+          'Öffnen Sie die offizielle Website (gpt4all.io / jan.ai / msty.app / anythingllm.com / lmstudio.ai) und laden Sie das Installationsprogramm für Ihr Betriebssystem herunter. (1 Min)',
+          'Führen Sie das Installationsprogramm aus. Akzeptieren Sie die Standardwerte. Keine dieser fünf Apps erfordert Admin-Rechte auf Windows oder Mac für eine Pro-Benutzer-Installation. (2 Min)',
+          'Beim ersten Start folgen Sie der On-Screen-Eingabeaufforderung, um ein empfohlenes Starter-Modell herunterzuladen — wählen Sie das kleinste „Instruct"-Modell, das angeboten wird (3B oder 4B Parameter). (3–5 Min abhängig von Ihrer Verbindung)',
+          'Geben Sie „Hallo, können Sie ein Haiku über eine Katze schreiben?" in die Chat-Box ein und drücken Sie Enter. Sie sollten eine Antwort innerhalb von 5–10 Sekunden sehen. (1 Min)',
+          'Wenn die Antwort funktioniert, sind Sie fertig. Lokale KI läuft jetzt auf Ihrem Laptop, vollständig offline, und Ihr Gespräch hat Ihren Computer nicht verlassen.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ziehen Sie Ihren Laptop nach Schritt 5 vom Wi-Fi ab und probieren Sie eine andere Frage. Die Antwort funktioniert immer noch. Das ist der Moment, in dem die meisten nicht-technischen Nutzer realisieren, dass lokale KI real ist.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Muss ich Code kennen, um lokale KI zu nutzen?',
+            a: 'Nein. Keine der fünf Apps auf dieser Liste — GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio — erfordert Code, Scripting oder ein Terminal. Wenn Sie eine normale Desktop-App installieren und einen Setup-Wizard durchklicken können, haben Sie alle erforderlichen Fähigkeiten.',
+          },
+          {
+            q: 'Kann ich lokale KI auf einem Arbeits-Laptop ohne Admin-Rechte installieren?',
+            a: 'Manchmal. GPT4All und Jan versenden einen Pro-Benutzer-Installer, der keine Admin-Rechte auf Windows erfordert. LM Studio und Msty benötigen normalerweise Admin-Rechte für das Standard-Installationsprogramm. Wenn Sie Software auf Ihrem Arbeits-Laptop überhaupt nicht installieren können, fragen Sie zuerst Ihre IT-Abteilung — lokale KI ist eine Netzwerk-Richtlinie-Frage, keine technische.',
+          },
+          {
+            q: 'Was, wenn mein Computer zu alt ist?',
+            a: 'Ein 2018+ Laptop mit 8 GB RAM und 5 GB freiem Speicherplatz kann ein 3B-Parameter-Modell in einer dieser Apps mit nutzbarer Geschwindigkeit (8–15 Token pro Sekunde) ausführen. Ältere oder kleinere Maschinen sollten stattdessen eine Phone-basierte lokale KI-App ausprobieren — siehe die verwandte Literatur zu iPhone und Android lokalen LLM-Apps.',
+          },
+          {
+            q: 'Wird lokale KI meinen Computer verlangsamen?',
+            a: 'Nur während es aktiv antwortet. Lokale KI nutzt Ihre CPU oder GPU schwer für die wenigen Sekunden, die es braucht, um eine Antwort zu generieren, dann fällt zurück auf Leerlauf. Ihr Laptop-Lüfter kann laufen, Ihre Batterie wird schneller entladen, und andere Apps können sich während einer Antwort träge anfühlen. Nichts ist permanent — das Schließen der App befreit alle Ressourcen.',
+          },
+          {
+            q: 'Kann ich es sauber deinstallieren?',
+            a: 'Ja. Alle fünf Apps deinstallieren über das Standard-Windows/Mac/Linux-Deinstallationsprogramm. Modelle befinden sich in einem separaten Ordner (normalerweise unter Ihren Dokumenten oder AppData) — Sie können diesen Ordner löschen, um Festplattenspeicher freizugeben. Nichts ändert Ihre Registrierung, Systemdateien oder andere Anwendungen.',
+          },
+          {
+            q: 'Ist es sicher, diese Apps aus dem Internet herunterzuladen?',
+            a: 'Ja, wenn Sie die offizielle Website verwenden. Die fünf offiziellen Websites sind gpt4all.io, jan.ai, msty.app, anythingllm.com und lmstudio.ai. Vermeiden Sie Third-Party-Downloader und Torrents. Jedes der fünf Installationsprogramme ist von seinem Publisher unterzeichnet; macOS und Windows zeigen während der Installation beide den Publisher-Namen.',
+          },
+          {
+            q: 'Benötigen diese Apps Internet zum Funktionieren?',
+            a: 'Nur für den allerersten Modell-Download. Nach einem Modell auf der Festplatte funktionieren alle fünf Apps vollständig offline — Sie können Wi-Fi ausschalten, in ein Flugzeug steigen oder in einen Keller arbeiten, und die KI antwortet weiter.',
+          },
+          {
+            q: 'Kann ich diese auf einem Arbeits-Laptop verwenden?',
+            a: 'Technisch, ja. Politisch, fragen Sie zuerst Ihr IT oder Compliance-Team. Lokale KI sendet Ihre Eingaben nirgendwo hin, was oft ein Feature für Compliance ist — aber die Installation von Third-Party-Software auf einem verwalteten Gerät ist normalerweise immer noch eine Richtlinien-Frage. Zeigen Sie ihnen diesen Artikel und die AGPL/MIT-Quell-Links für Jan und GPT4All, wenn ein Beweis von „keine Daten verlassen die Maschine" hilft.',
+          },
+          {
+            q: 'Was ist der Unterschied zwischen lokaler KI und ChatGPT für einen nicht-technischen Nutzer?',
+            a: 'Drei Unterschiede: (1) lokale KI läuft auf Ihrem Laptop und sendet Ihre Eingaben nicht an einen Server, (2) lokale KI funktioniert offline nach dem ersten Modell-Download, (3) lokale KI ist für immer kostenlos — kein Abonnement, keine Token-Rechnung. Der Kompromiss ist Geschwindigkeit und Qualität: ein 3B–8B lokales Modell ist sinnvoll weniger fähig als GPT-4o-Klasse Cloud-Modelle. Für alltägliches Schreiben, Zusammenfassen, Brainstorming und Q&A ist die Lücke klein. Für lange, komplexe Überlegungen ist die Lücke größer.',
+          },
+          {
+            q: 'Kosten diese Apps langfristig Geld?',
+            a: 'Nein. Alle fünf sind für persönliche Nutzung auf Dauer kostenlos. GPT4All (MIT) und Jan (AGPL) sind Open Source. Msty hat einen kostenpflichtigen Tier für Cloud-API-Features, aber lokale-nur Nutzung ist für immer kostenlos. LM Studio ist kostenlos für persönliche und kommerzielle Nutzung. AnythingLLM Desktop ist kostenlos, mit einem gebotenen gehosteten Produkt als separates Angebot.',
+          },
+          {
+            q: 'Muss ich DSGVO beachten, wenn ich lokale KI auf einem Unternehmens-Laptop verwende?',
+            a: 'Ja, aber lokale KI hilft der Konformität. DSGVO Artikel 28 regelt die Auftragsverarbeitung — da lokale KI Daten nur auf Ihrem Computer verarbeitet (kein „Auftragsverarbeiter"-Dritter), ist sie tatsächlich konform. Zeigen Sie Ihrem Compliance-Team Jan oder AnythingLLM Desktop: beide sind Open Source mit null Telemetrie und verarbeiten alle Daten lokal. Das ist ein großer Vorteil für DSGVO Compliance im Vergleich zu Cloud-Alternativen.',
+          },
+          {
+            q: 'Welche App ist beste für kleine Unternehmen und Freelancer in Deutschland?',
+            a: 'Für deutsche KMUs und Freelancer empfehlen wir Jan oder AnythingLLM Desktop, beide wegen ihrer Datenschutz- und DSGVO-Konformität. Jan für Teams, die Datenschutz absolut ernst nehmen (zero telemetry, AGPL open source). AnythingLLM Desktop für Unternehmen, die mit Dokumenten arbeiten (Verträge, Rechnungen, Kundenakten) — die lokale Verarbeitung ist DSGVO-konform und der Workspace-Ansatz ist perfekt für kleine Teams. Beide funktionieren auf Standard-Office-Hardware und erfordern keine admin-Rechte.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Literatur',
+        items: [
+          '[LM Studio vs Jan vs GPT4All: Welche lokale KI-App gewinnt 2026](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=de) — wenn Sie bereit sind, die Top-Drei auf Geschwindigkeit, Modellbibliothek und Datenschutz zu vergleichen.',
+          '[Einfachste lokale KI-App für jedes Betriebssystem: Windows, Mac, Linux Picks](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=de) — für Nutzer, die nur die Pro-Betriebssystem-Empfehlung möchten.',
+          '[Beste lokales LLM für kreatives Schreiben 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=de) — häufiger nicht-technischer Anwendungsfall.',
+          '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) — Modellempfehlungen zum Laden in eine dieser fünf Apps.',
+          '[Beste lokale KI-Apps für iPhone 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=de) — für Nutzer, deren Laptop zu alt ist.',
+          '[Beste lokale KI-Apps für Android 2026](/power-local-llm/best-local-llm-apps-android-2026?lang=de) — für Nutzer auf einem Chromebook oder Low-Spec Windows Laptop.',
+          '[Power Local LLM Hub](/power-local-llm?lang=de) — vollständige Guide-Bibliothek.',
+        ],
+      },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Top 5 lokale KI-Apps für nicht-technische Nutzer 2026',
+      numberOfItems: 5,
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'GPT4All',
+          description:
+            'Das beste für absolute Anfänger. Kleinste Installation (~290 MB). Läuft auf einem 5 Jahre alten 8 GB RAM Laptop ohne GPU. MIT-lizenziert Open Source. Telemetrie standardmäßig deaktiviert.',
+          url: 'https://gpt4all.io',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Jan',
+          description:
+            'Das beste für datenschutzorientierte Anfänger. Vollständig Open Source unter AGPL. Zero Telemetrie standardmäßig versandt. Kuratierter Katalog von ~150 Modellen.',
+          url: 'https://jan.ai',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Msty',
+          description:
+            'Das beste für Nutzer, die eine poliert UI möchten. Modernes Split-Pane-Interface mit nebeneinander Modell-Vergleich. Eingebauter Dokument-Chat mit Wissens-Stacks.',
+          url: 'https://msty.app',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'AnythingLLM Desktop',
+          description:
+            'Das beste für Nutzer, die eine vertraute drei-Pane Windows-ähnliche UI für das Chatten mit Dokumentordnern möchten. Workspace-basiert PDF/DOCX/Markdown-Chat. MIT-lizenziert.',
+          url: 'https://anythingllm.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'LM Studio',
+          description:
+            'Das beste für Mac-Nutzer. Custom-tuned Apple Silicon Metal Kernels für 15–30% schnellere Inferenz. Größter In-App-Modell-Browser (~5.000 Varianten von Hugging Face).',
+          url: 'https://lmstudio.ai',
+        },
+      ],
+    },
+  },
 }
