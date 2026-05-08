@@ -26,6 +26,7 @@ import { article as a_local_llm_code_review_ci_cd } from './articles/local-llm-c
 import { article as a_local_llm_software_directory_2026 } from './articles/local-llm-software-directory-2026'
 import { article as a_local_llm_with_obsidian_2026 } from './articles/local-llm-with-obsidian-2026'
 import { article as a_local_llm_with_logseq_and_joplin } from './articles/local-llm-with-logseq-and-joplin'
+import { article as a_local_llm_personal_knowledge_base_2026 } from './articles/local-llm-personal-knowledge-base-2026'
 import { article as a_local_rag_for_private_business_data } from './articles/local-rag-for-private-business-data'
 import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/local-rag-on-your-pdfs-step-by-step'
 import { article as a_mobile_llm_models_phi4_gemma_smollm } from './articles/mobile-llm-models-phi4-gemma-smollm'
@@ -63,6 +64,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-software-directory-2026':      a_local_llm_software_directory_2026,
   'local-llm-with-obsidian-2026':           a_local_llm_with_obsidian_2026,
   'local-llm-with-logseq-and-joplin':       a_local_llm_with_logseq_and_joplin,
+  'local-llm-personal-knowledge-base-2026': a_local_llm_personal_knowledge_base_2026,
   'local-rag-for-private-business-data':    a_local_rag_for_private_business_data,
   'local-rag-on-your-pdfs-step-by-step':    a_local_rag_on_your_pdfs_step_by_step,
   'mobile-llm-models-phi4-gemma-smollm':    a_mobile_llm_models_phi4_gemma_smollm,
