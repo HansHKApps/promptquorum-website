@@ -1261,4 +1261,477 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Easiest Desktop Apps',
+    title: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
+    seoTitle: '最简单本地AI应用 Windows Mac Linux 2026',
+    intro:
+      '2026年，LM Studio是Windows、Mac、Linux上最简单的本地AI应用。下载、安装、加载模型，10分钟内开始聊天，无需终端。本指南涵盖LM Studio、Jan和GPT4All这三个无代码选项，按设置时间和功能比较它们，并根据你的硬件和目标解释选择哪一个。',
+    metaDescription:
+      '2026年最简单的本地AI应用：LM Studio、Jan、GPT4All对比。设置时间、模型兼容性、硬件要求、选择指南。',
+    twitterDescription:
+      '2026年本地AI应用：LM Studio（快速设置、最佳UI）、Jan（开源替代品）、GPT4All（初学者友好）。Windows、Mac、Linux对比。',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Qwen3 8B',
+      'Phi-4 Mini',
+      'Mistral 7B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M3 MacBook Air 8 GB',
+      'NVIDIA RTX 3060 12 GB',
+      'Intel Core i7（16 GB RAM）',
+    ],
+    audience:
+      '无终端经验、无Python设置、无云账户需求的非技术用户和初学者，他们想在Windows PC、Mac或Linux机器上本地运行AI聊天应用。',
+    readTime: '阅读约10分钟',
+    educationalLevel: 'Beginner',
+    primaryTerm: '最简单的本地AI应用',
+    targetKeywords: [
+      '本地AI应用 windows',
+      '本地AI应用 mac',
+      'lm studio vs jan vs gpt4all',
+      '本地AI 无代码',
+      '无终端运行AI',
+      '初学者最佳本地llm应用',
+    ],
+    leadAnswerBlock:
+      '**LM Studio是2026年Windows和Mac上最简单的本地AI应用 — 像任何桌面应用一样安装，内置模型浏览器，10分钟内无终端即可下载模型并开始聊天。Jan是具有几乎相同设置体验的开源替代品。GPT4All最适合Windows初学者，他们想要简单的单会话界面和策划的模型推荐。Linux上Jan和LM Studio都提供AppImage构建。在几乎任何硬件上运行的模型：Phi-4 Mini（3B，<4 GB RAM）或Llama 3.2 3B — 两者都能在2019年的笔记本上无GPU实时运行。**',
+    quickAnswerTop: {
+      zh: {
+        question: '2026年Windows、Mac或Linux上最简单的本地AI应用是什么？',
+        answer:
+          'LM Studio是Windows和Mac上最简单的本地AI应用 — 下载安装程序、打开、使用内置模型浏览器拉取模型（低端硬件用Phi-4 Mini或Llama 3.2 3B）、开始聊天。无终端、无Python、无配置。Jan是完全相同安装容易的开源替代品。GPT4All是完全初学者最策划的选项 — 单个聊天窗口，带预选推荐模型。三者都免费、完全本地运行、初始模型下载后无互联网连接。',
+        bullets: [
+          'LM Studio — Windows和Mac上最简单的设置；内置模型浏览器；首次运行10分钟。',
+          'Jan — LM Studio的开源替代品；相同的易用性；在Linux AppImage上工作。',
+          'GPT4All — 最初学者友好的单窗口界面；非技术用户的最佳策划模型推荐。',
+          '在任何硬件上用Phi-4 Mini（3B，约3 GB RAM）或Llama 3.2 3B开始 — 在过去7年制造的任何笔记本上运行。',
+          '3B–8B模型无GPU需要 — Apple Silicon或现代Intel/AMD CPU。',
+          '三者都免费、开源、下载后无云账户或互联网连接即可运行。',
+          'LM Studio也提供本地OpenAI兼容API — 想进一步发展的开发者。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '基本信息', anchor: '#quick-facts' },
+      { label: '3个应用对比', anchor: '#comparison' },
+      { label: 'LM Studio : 设置指南', anchor: '#lm-studio' },
+      { label: 'Jan : 设置指南', anchor: '#jan' },
+      { label: 'GPT4All : 设置指南', anchor: '#gpt4all' },
+      { label: '首先应该下载哪个模型？', anchor: '#first-model' },
+      { label: '硬件要求', anchor: '#hardware' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**LM Studio是从零到本地聊天的最快路径。** 从lmstudio.ai下载安装程序，打开Discover选项卡，搜索"Phi-4 Mini"，下载，开始聊天。在体面的互联网连接上10分钟内完成。',
+          '**Jan是开源的LM Studio替代品。** 与LM Studio相同的易用性，完全开源，在Linux AppImage上运行。如果你喜欢开源软件或想看源代码，Jan是等价的选择。',
+          '**GPT4All是最简化的体验。** 单个聊天窗口、策划的模型推荐、无模型浏览开销。最适合想问个问题并得到答案的用户，不需要设置决定。',
+          '**在任何硬件上从Phi-4 Mini或Llama 3.2 3B开始。** 这些3B模型在过去7年的任何笔记本上运行 — 无GPU、无32 GB RAM、无特殊硬件。比云AI慢但为大多数日常任务生成可用输出。',
+          '**无需云账户。** 初始下载后（应用+模型文件），一切本地运行，无互联网连接。无API密钥、无订阅、无数据发送到任何服务器。',
+          '**在Apple Silicon上几乎任何模型都运行良好。** M3 MacBook Air（8 GB）流畅运行Llama 3.2 3B和Phi-4 Mini。M3 Pro或M4（16 GB+）舒适运行Qwen3 8B。M5 Max（64 GB）运行70B模型。',
+          '**LM Studio也提供本地API。** 如果你稍后想将Obsidian、VS Code或其他工具连接到本地模型，LM Studio的Local Server选项卡在localhost上公开OpenAI兼容API — 无需额外设置。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '基本信息',
+        items: [
+          '**LM Studio :** lmstudio.ai — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage、.deb）。',
+          '**Jan :** jan.ai — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）。',
+          '**GPT4All :** gpt4all.io — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage）。',
+          '**推荐模型 :** Phi-4 Mini（3B、约3 GB）、Llama 3.2 3B（约2.2 GB）、Qwen3 8B（约5 GB）、Mistral 7B（约4 GB）。',
+          '**GPU可选 :** 三者都支持CUDA（NVIDIA）和Metal（Apple Silicon）。GPU加速5–10倍但不是必需的。',
+          '**最小RAM :** 无GPU 3B–8B模型需要6 GB。仅Phi-4 Mini 4 GB。多个模型建议16 GB+。',
+          '**成本 :** 三者都免费开源（或专有但无成本）。无需订阅。',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '3个应用对比',
+        content:
+          '哪个应用最适合你？取决于你的操作系统、硬件和重视什么 — 速度、UI或安装容易性。三者都允许下载多个模型并在它们之间切换。',
+        columns: ['标准', 'LM Studio', 'Jan', 'GPT4All'],
+        rows: [
+          { '标准': '最适用', 'LM Studio': '速度和灵活性', 'Jan': '开源和控制', 'GPT4All': '完全初学者' },
+          { '标准': '安装容易', 'LM Studio': '9/10', 'Jan': '9/10', 'GPT4All': '10/10' },
+          { '标准': '性能（M3 Mac、Llama 8B）', 'LM Studio': '28 tokens/sec', 'Jan': '22 tokens/sec', 'GPT4All': '16 tokens/sec' },
+          { '标准': '许可证', 'LM Studio': '专有', 'Jan': 'AGPL', 'GPT4All': 'MIT（开源）' },
+          { '标准': '下载大小', 'LM Studio': '约450 MB', 'Jan': '约380 MB', 'GPT4All': '约290 MB' },
+          { '标准': '本地OpenAI API', 'LM Studio': '是', 'Jan': '是', 'GPT4All': '是' },
+        ],
+      },
+      lmStudio: {
+        id: 'lm-studio',
+        title: 'LM Studio : 设置指南',
+        numberedItems: [
+          {
+            title: '下载LM Studio',
+            whyItMatters:
+              'LM Studio是Windows、Mac、Linux的官方桌面应用。无需终端、无需安装依赖。',
+          },
+          {
+            title: '打开"Discover"选项卡',
+            whyItMatters:
+              'LM Studio包括内置模型浏览器，直接从Hugging Face下载。无需手动搜索，无需提取URL。',
+          },
+          {
+            title: '搜索"Phi-4 Mini"或"Llama 3.2 3B"',
+            whyItMatters:
+              '两个模型都针对低端和移动设备优化。Phi-4 Mini性能更好；Llama 3.2 3B更多功能。',
+          },
+          {
+            title: '点击"Load"',
+            whyItMatters:
+              'LM Studio下载量化模型（Q4_K_M）并将其加载到内存中。根据你的互联网连接需要几分钟。',
+          },
+          {
+            title: '在聊天框中输入问题',
+            whyItMatters:
+              '加载后，立即可以聊天。无需其他步骤。首次答案生成可能需要10–30秒，具体取决于你的硬件。',
+          },
+        ],
+      },
+      jan: {
+        id: 'jan',
+        title: 'Jan : 设置指南',
+        numberedItems: [
+          {
+            title: '下载Jan',
+            whyItMatters:
+              'Jan是最接近LM Studio易用性的开源替代品。无需终端。',
+          },
+          {
+            title: '打开"Hub"选项卡',
+            whyItMatters:
+              'Jan也有模型浏览器。界面与LM Studio略有不同但功能相同。',
+          },
+          {
+            title: '搜索"Phi-4 Mini"或"Llama 3.2 3B"',
+            whyItMatters:
+              '相同的推荐模型。Jan同样从Hugging Face后端下载。',
+          },
+          {
+            title: '点击"Download"',
+            whyItMatters:
+              'Jan下载并配置模型。界面显示进度条。',
+          },
+          {
+            title: '导航到"Chat"选项卡并开始',
+            whyItMatters:
+              '下载后，模型自动准备好聊天。',
+          },
+        ],
+      },
+      gpt4all: {
+        id: 'gpt4all',
+        title: 'GPT4All : 设置指南',
+        numberedItems: [
+          {
+            title: '下载GPT4All',
+            whyItMatters:
+              'GPT4All是最古老也是最简单的。无需终端、标准安装。',
+          },
+          {
+            title: '启动GPT4All',
+            whyItMatters:
+              '界面故意极简 — 单个窗口、无复杂选项卡或菜单。',
+          },
+          {
+            title: '从菜单中选择推荐模型',
+            whyItMatters:
+              'GPT4All要求你从5–10个预选模型中选择。无浏览选择。简单选择：初学者友好。',
+          },
+          {
+            title: '下载并启动',
+            whyItMatters:
+              'GPT4All下载并加载模型。就这样。',
+          },
+          {
+            title: '开始聊天',
+            whyItMatters:
+              '无需额外选项。只是输入框和答案窗口。',
+          },
+        ],
+      },
+      firstModel: {
+        id: 'first-model',
+        title: '首先应该下载哪个模型？',
+        content:
+          '根据你的硬件选择。三个应用都允许下载多个模型并在它们之间切换。',
+        items: [
+          '**低端硬件（8 GB RAM、无GPU）：** Phi-4 Mini（3B、约3 GB）。在弱设备上最快。很好地理解代码和技术问题。略少创意会话。',
+          '**中端硬件（16 GB RAM、可选GPU）：** Llama 3.2 3B或Llama 3.2 8B。比Phi-4更多功能。速度和质量的良好平衡。为大多数用户推荐。',
+          '**Apple Silicon（M3、M4、M5）：** Qwen3 8B或Llama 3.3 8B。Apple Silicon在统一内存控制中对8B模型表现出色。优质和速度结合。',
+          '**NVIDIA RTX 3060或更高版本：** Llama 3.3 8B、Mistral 7B或Qwen3 8B。GPU将这些8B模型加速5–10倍。速度和质量的良好组合。',
+          '**RTX 4090或A100：** Llama 3.3 70B或Mixtral 8x7B。最大可用模型。接近云端质量。但速度慢（5–10 tokens/sec）。',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '硬件要求',
+        content:
+          '三个应用都在任何现代硬件上运行。3B模型在低端设备上运行，8B+模型需要最少16 GB RAM。',
+        items: [
+          '**推荐最小硬件 :** M3 MacBook Air（8 GB）、带Intel i7/i5的Windows PC（16 GB RAM）或同等Linux。',
+          '**推荐GPU :** NVIDIA RTX 3060或更高（12+ GB VRAM）加速5–10倍。Apple Silicon通过Metal提供同等改进。',
+          '**RAM :** 3B模型最少8 GB。8B模型16 GB。70B模型32+ GB。',
+          '**磁盘 :** 3–5个量化模型的20–50 GB。',
+          '**CPU :** 现代CPU（2019年以后的Intel i7、AMD Ryzen 5或Apple Silicon）。旧CPU工作但速度慢。',
+          '**无GPU即可开始。** 3B–8B模型在无GPU的现代CPU上舒适运行。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '**下载非量化模型。** 原始模型2–4倍大（16–32 GB）。始终下载量化：Q4_K_M、Q5_K_M或Q3_K。LM Studio和Jan自动执行；GPT4All仅提供量化版本。',
+          '**不等待"模型已加载"消息。** LM Studio和Jan显示通知；错误消息表示加载不完全。',
+          '**混淆VRAM和系统RAM。** RTX 3060 VRAM（12 GB）不同于系统RAM（16 GB）。模型加载时两者都用。每个应用显示使用情况；监控以避免阻塞。',
+          '**认为GPU是必需的。** Phi-4 Mini和Llama 3.2 3B在CPU上运行良好。GPU加速5–10倍但不是必需的开始。',
+          '**卡在首次响应缓慢。** 模型首次运行需要30–60秒（编译）。后续运行快速（CPU约1–2 tokens/sec、GPU约20–50 tokens/sec）。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          '[LM Studio](https://lmstudio.ai) — 官方桌面应用，带内置模型浏览器。',
+          '[Jan](https://jan.ai) — LM Studio的开源替代品。',
+          '[GPT4All](https://gpt4all.io) — 最简单的初学者应用。',
+          '[Hugging Face](https://huggingface.co/models) — 开源GGUF模型的主要存储库。',
+          '[llama.cpp](https://github.com/ggerganov/llama.cpp) — LM Studio、Jan、GPT4All使用的低级推理引擎。',
+          '[Ollama](https://ollama.ai) — 开发者和高级用户的命令行替代品。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '哪个应用最快？',
+            a: 'LM Studio一般最快 — 它公开GPU和量化参数，并对NVIDIA有最佳批处理支持。Jan非常接近。GPT4All最慢但在现代硬件上仍可用。',
+          },
+          {
+            q: '初始下载后能离线使用吗？',
+            a: '能。三者模型下载后完全离线工作。非常适合隐私和无互联网环境。',
+          },
+          {
+            q: 'GGUF、GPTQ及其他格式间的区别是什么？',
+            a: 'GGUF是三个应用的主要格式。最兼容、最易于量化。GPTQ是较旧的格式，现在不常见。无需了解区别 — 三个应用自动处理。',
+          },
+          {
+            q: '能将本地模型连接到其他应用吗？',
+            a: '能。LM Studio和Jan都在localhost上公开OpenAI兼容API：localhost:1234或localhost:5000。你可以将Obsidian、VS Code或其他工具指向此端点。',
+          },
+          {
+            q: '量化做什么？如何选择Q4对Q5对Q6？',
+            a: '量化减少模型的数值精度 — 更少内存、略低质量。Q3 = 极度压缩、低质量。Q4 = 良好权衡（推荐）。Q5 = 更高质量、更大大小。Q6 = 近乎原始质量、大文件。从Q4_K_M开始。',
+          },
+          {
+            q: '能同时运行多个模型吗？',
+            a: '不能。三者都一次只在内存中加载一个模型。必须先卸载当前模型再加载另一个。',
+          },
+          {
+            q: '这花多少钱？有订阅吗？',
+            a: '零。三个应用都免费。LM Studio专有但免费。Jan和GPT4All是开源（宽松许可证）。无需订阅、账户。',
+          },
+          {
+            q: '哪个应用最稳定？应该预期崩溃吗？',
+            a: '三者都稳定。崩溃罕见，通常由内存不足引起（卸载模型解决）。Jan最年轻但与其他两个同样稳定。',
+          },
+          {
+            q: '能在本地网络或远程使用这些应用吗？',
+            a: '三者都包括兼容OpenAPI。通过网络配置，你可以将远程客户端指向localhost:1234或以上。但默认只监听localhost。',
+          },
+          {
+            q: '本地AI应用环境中CPU对GPU的区别是什么？',
+            a: 'CPU = 慢、免费。GPU = 5–10倍快、昂贵。低端硬件CPU工作良好。中到高端硬件GPU大幅改善响应时间。三者都支持。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[LM Studio vs Jan vs GPT4All : 完整对比](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=zh) — 三个应用的功能和基准的深入对比。',
+          '[低端PC最佳本地AI应用](/power-local-llm/best-local-ai-app-low-end-pc?lang=zh) — RAM 8 GB或更少的计算机模型和应用推荐。',
+          '[非技术用户最佳本地AI应用](/power-local-llm/local-ai-app-non-technical-users?lang=zh) — 重点关于入职、文档和错误处理的用户体验对比。',
+          '[在平板电脑上运行AI（iPad和Android）](/power-local-llm/run-ai-on-tablet-ipad-android?lang=zh) — 触屏设备本地AI选项。',
+          '[本地RAG在你的PDF上：逐步](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh) — 第一个本地AI应用后的下一步：与你自己的文件聊天。',
+          '[如何安装Ollama：入门](/power-local-llm/how-to-install-ollama?lang=zh) — 开发者和高级用户的LM Studio命令行替代品。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
+      description:
+        '2026年最简单的本地AI应用完整指南：LM Studio、Jan、GPT4All。对比、设置、硬件推荐。',
+      url: 'https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=zh',
+      inLanguage: 'zh',
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/og/power-local-llm/easiest-local-ai-app-windows-mac-linux.jpg',
+        width: 1200,
+        height: 630,
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      educationalLevel: 'Beginner',
+      about: [
+        { '@type': 'Thing', name: 'LM Studio' },
+        { '@type': 'Thing', name: 'Jan' },
+        { '@type': 'Thing', name: 'GPT4All' },
+        { '@type': 'Thing', name: 'Llama 3.2' },
+        { '@type': 'Thing', name: 'Phi-4 Mini' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'LM Studio' },
+        { '@type': 'SoftwareApplication', name: 'Jan' },
+        { '@type': 'SoftwareApplication', name: 'GPT4All' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+    itemListSchema: {
+      '@type': 'ItemList',
+      inLanguage: 'zh',
+      name: '2026年最简单的三个本地AI应用',
+      description: 'LM Studio、Jan、GPT4All的本地模型运行对比。',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'LM Studio',
+          description: '最快的桌面应用，内置模型浏览器。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Jan',
+          description: '具有类似于LM Studio界面的开源替代品。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'GPT4All',
+          description: '初学者最简单的选项，极简界面。',
+        },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '哪个应用最快？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'LM Studio一般最快 — 它公开GPU和量化参数，并对NVIDIA有最佳批处理支持。Jan非常接近。GPT4All最慢但在现代硬件上仍可用。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '初始下载后能离线使用吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '能。三者模型下载后完全离线工作。非常适合隐私和无互联网环境。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'GGUF、GPTQ及其他格式间的区别是什么？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GGUF是三个应用的主要格式。最兼容、最易于量化。GPTQ是较旧的格式，现在不常见。无需了解区别 — 三个应用自动处理。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '能将本地模型连接到其他应用吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '能。LM Studio和Jan都在localhost上公开OpenAI兼容API：localhost:1234或localhost:5000。你可以将Obsidian、VS Code或其他工具指向此端点。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '量化做什么？如何选择Q4对Q5对Q6？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '量化减少模型的数值精度 — 更少内存、略低质量。Q3 = 极度压缩、低质量。Q4 = 良好权衡（推荐）。Q5 = 更高质量、更大大小。Q6 = 近乎原始质量、大文件。从Q4_K_M开始。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '能同时运行多个模型吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '不能。三者都一次只在内存中加载一个模型。必须先卸载当前模型再加载另一个。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '这花多少钱？有订阅吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '零。三个应用都免费。LM Studio专有但免费。Jan和GPT4All是开源（宽松许可证）。无需订阅、账户。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '哪个应用最稳定？应该预期崩溃吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '三者都稳定。崩溃罕见，通常由内存不足引起（卸载模型解决）。Jan最年轻但与其他两个同样稳定。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '能在本地网络或远程使用这些应用吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '三者都包括兼容OpenAPI。通过网络配置，你可以将远程客户端指向localhost:1234或以上。但默认只监听localhost。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '本地AI应用环境中CPU对GPU的区别是什么？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'CPU = 慢、免费。GPU = 5–10倍快、昂贵。低端硬件CPU工作良好。中到高端硬件GPU大幅改善响应时间。三者都支持。',
+          },
+        },
+      ],
+    },
+  },
 }
