@@ -731,59 +731,59 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Power Local LLM Hub](/power-local-llm?lang=de) — komplette Guides Bibliothek.',
         ],
       },
-    },
-    faqSection: {
-      id: 'faq',
-      faqs: [
-        {
-          q: 'Kann ich ein Quantisierungs-Format unter Q4_K_M verwenden?',
-          a: 'Technisch ja, aber nicht für Coding. Q3_K_M oder schlimmer degeneriert Coding-Accuracy bemerkbar. Coding braucht feinkörnige Token-Auswahl; Q4 ist minimaler Schwelle. Wenn Sie VRAM-gepresst sind, wählen Sie ein kleineres Modell (7B statt 30B) statt schlechtere Quantisierung.',
-        },
-        {
-          q: 'Sollte ich ein Modell lokales Fein-Tuning machen?',
-          a: 'Nur wenn Sie Firmenseite-Code haben, der anders aussieht als Public Training. Fine-Tuning auf Standard-Code-Patterns ist verschwendete Compute. Fine-Tuning kann hilfreich sein für domain-spezifischen Code (alte Legacy Codebase, Proprietary DSLs), aber es erfordert Infrastruktur und Validierung.',
-        },
-        {
-          q: 'Was ist HumanEval+ und warum ist es wichtig?',
-          a: 'HumanEval+ ist ein Benchmark, das misst, ob ein Modell Code schreiben kann, der die Eingabe-Ausgabe Tests besteht. Es ist wichtig, weil es realisitischer als "Code-Schreib-Leaderboards" ist, aber immer noch nicht echte Production Code ist. Verwenden Sie HumanEval+ Rankings als eine Signal, nicht die ganze Geschichte.',
-        },
-        {
-          q: 'Können diese Modelle SQL, Bash oder Dockerfile schreiben?',
-          a: 'Ja, alle sechs können. Sie waren auf Mixed-Code-Workloads trainiert. SQL ist oft sogar eine Stärke. Bash-Qualität ist niedriger (bash hat komplexere edge-cases). Dockerfile ist OK, aber nicht perfekt.',
-        },
-        {
-          q: 'Welches Modell ist für ein Team am besten?',
-          a: 'Für ein Team sind Konsistenz und Deployment-Leichtigkeit wichtig. Qwen3-Coder 30B ist das Punkt-Sieger: gute Performance, passt auf Standard-Hardware (24 GB), Apache 2.0 Lizenz ist Team-freundlich. Wenn das Team vielsprachig codiert, StarCoder 2. Wenn das Team stark ist mit IBM-Verträge, Granite.',
-        },
-        {
-          q: 'Wie oft sollte ich diese Modelle aktualisieren?',
-          a: 'Diese Liste ist "semi_annual", was bedeutet sie wird jedes Halbjahr überprüft (nächste Überprüfung Anfang November 2026). Neue Modelle werden häufig veröffentlicht; signifikante Leistungssprint könnten schneller Updates rechtfertigen. Verwenden Sie diese nicht als ewige Referenz — überprüfen Sie neuer Modell-Veröffentlichungen.',
-        },
-        {
-          q: 'Kann ich mehrere Modelle parallel auf einem Rig laufen lassen?',
-          a: 'Ja, aber nur wenn Sie genug VRAM haben. Z.B. auf einem 48-GB Rig könnten Sie Qwen3-Coder 30B (~18 GB) + ein kleineres Modell (~10 GB) = noch 20 GB übrig laufen. Das ist selten wert der Komplexität — wechseln Sie zwischen Modellen statt Parallel.',
-        },
-        {
-          q: 'Wie bekomme ich Modelle herunter und führe sie aus?',
-          a: 'Verwenden Sie llama.cpp (empfohlen), vLLM, Text Generation WebUI, oder Ollama. Alle diese downloaden GGUF-Quantisierungen von Hugging Face. Beispiel: `llama.cpp -m qwen3-coder-30b-q4_k_m.gguf -c 4096 -n 512`. Siehe [LLM-Quantisierung erklärt] für tiefere Erklärung.',
-        },
-        {
-          q: 'Sollte ich DeepSeek oder Qwen3-Coder wählen, wenn ich beides auf 48 GB passen könnte?',
-          a: 'Wählen Sie DeepSeek, wenn Kontext-Fenster (128K) ist Ihrer Use Case gebunden. Wählen Sie Qwen3-Coder, wenn reine Coding-Performance und Lizenz-Klarheit ist (Qwen ist Apache 2.0, DeepSeek ist komplizierter). Für die meisten Teams ist Qwen3-Coder besser, selbst auf 48 GB.',
-        },
-        {
-          q: 'Welches Modell ist für wissenschaftliche Code am besten?',
-          a: 'Qwen3-Coder oder DeepSeek Coder V3. Qwen hat verstärkt Mathe-Training; DeepSeek auch. Beide sind stark bei NumPy, SciPy, JAX, PyTorch Nutzung. Llama 3.3 Code ist auch ausreichend, aber nicht spezialisiert.',
-        },
-        {
-          q: 'Muss ich die DSGVO beachten, wenn ich lokale Coding-Modelle verwende?',
-          a: 'Ja, aber lokale Modelle machen es einfacher. Wenn Sie Code lokal ausführen und Daten nie zum externen Server senden, brechen Sie DSGVO Article 28 (Datenverarbeitung) nicht. Aber: (1) Überprüfen Sie, ob das Model selbst von ggf. datenschutz-bedenklichen Quellen trainiert wurde (z.B. GitHub Public Repo = OK; Proprietary Codebases = NICHT OK). (2) Wenn Sie lokale Modelle in ein Unternehmen deployen, dokumentieren Sie die Trainings-Herkunft und Daten-Handhabung für Compliance Teams. Lokale Inference ist der Punkt — Sie lösen das Daten-Residenz Problem, aber Sie müssen immer noch Trainings-Herkunft checken.',
-        },
-        {
-          q: 'Sind diese Modelle für deutsche Mittelstand-Entwickler geeignet?',
-          a: 'Ja, sehr. Für deutsche SMEs sind lokale Coding-Modelle ideal: (1) Kosten — kein API-Gebühren, einmalige GPU-Investition. (2) Datenschutz — Qwen3-Coder 30B auf einem 24-GB Desktop hält alten FirmCode 100% on-prem. (3) Unabhängigkeit von US-Cloud — relevant für GDPR-Awareness Firmen. Qwen3-Coder 30B oder StarCoder 2 sind beste Picks für Mittelstand Deployment. Validieren Sie in Ihrer IT-Sicherheits-Politik voraus.',
-        },
-      ],
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: 'Kann ich ein Quantisierungs-Format unter Q4_K_M verwenden?',
+            a: 'Technisch ja, aber nicht für Coding. Q3_K_M oder schlimmer degeneriert Coding-Accuracy bemerkbar. Coding braucht feinkörnige Token-Auswahl; Q4 ist minimaler Schwelle. Wenn Sie VRAM-gepresst sind, wählen Sie ein kleineres Modell (7B statt 30B) statt schlechtere Quantisierung.',
+          },
+          {
+            q: 'Sollte ich ein Modell lokales Fein-Tuning machen?',
+            a: 'Nur wenn Sie Firmenseite-Code haben, der anders aussieht als Public Training. Fine-Tuning auf Standard-Code-Patterns ist verschwendete Compute. Fine-Tuning kann hilfreich sein für domain-spezifischen Code (alte Legacy Codebase, Proprietary DSLs), aber es erfordert Infrastruktur und Validierung.',
+          },
+          {
+            q: 'Was ist HumanEval+ und warum ist es wichtig?',
+            a: 'HumanEval+ ist ein Benchmark, das misst, ob ein Modell Code schreiben kann, der die Eingabe-Ausgabe Tests besteht. Es ist wichtig, weil es realisitischer als "Code-Schreib-Leaderboards" ist, aber immer noch nicht echte Production Code ist. Verwenden Sie HumanEval+ Rankings als eine Signal, nicht die ganze Geschichte.',
+          },
+          {
+            q: 'Können diese Modelle SQL, Bash oder Dockerfile schreiben?',
+            a: 'Ja, alle sechs können. Sie waren auf Mixed-Code-Workloads trainiert. SQL ist oft sogar eine Stärke. Bash-Qualität ist niedriger (bash hat komplexere edge-cases). Dockerfile ist OK, aber nicht perfekt.',
+          },
+          {
+            q: 'Welches Modell ist für ein Team am besten?',
+            a: 'Für ein Team sind Konsistenz und Deployment-Leichtigkeit wichtig. Qwen3-Coder 30B ist das Punkt-Sieger: gute Performance, passt auf Standard-Hardware (24 GB), Apache 2.0 Lizenz ist Team-freundlich. Wenn das Team vielsprachig codiert, StarCoder 2. Wenn das Team stark ist mit IBM-Verträge, Granite.',
+          },
+          {
+            q: 'Wie oft sollte ich diese Modelle aktualisieren?',
+            a: 'Diese Liste ist "semi_annual", was bedeutet sie wird jedes Halbjahr überprüft (nächste Überprüfung Anfang November 2026). Neue Modelle werden häufig veröffentlicht; signifikante Leistungssprint könnten schneller Updates rechtfertigen. Verwenden Sie diese nicht als ewige Referenz — überprüfen Sie neuer Modell-Veröffentlichungen.',
+          },
+          {
+            q: 'Kann ich mehrere Modelle parallel auf einem Rig laufen lassen?',
+            a: 'Ja, aber nur wenn Sie genug VRAM haben. Z.B. auf einem 48-GB Rig könnten Sie Qwen3-Coder 30B (~18 GB) + ein kleineres Modell (~10 GB) = noch 20 GB übrig laufen. Das ist selten wert der Komplexität — wechseln Sie zwischen Modellen statt Parallel.',
+          },
+          {
+            q: 'Wie bekomme ich Modelle herunter und führe sie aus?',
+            a: 'Verwenden Sie llama.cpp (empfohlen), vLLM, Text Generation WebUI, oder Ollama. Alle diese downloaden GGUF-Quantisierungen von Hugging Face. Beispiel: `llama.cpp -m qwen3-coder-30b-q4_k_m.gguf -c 4096 -n 512`. Siehe [LLM-Quantisierung erklärt] für tiefere Erklärung.',
+          },
+          {
+            q: 'Sollte ich DeepSeek oder Qwen3-Coder wählen, wenn ich beides auf 48 GB passen könnte?',
+            a: 'Wählen Sie DeepSeek, wenn Kontext-Fenster (128K) ist Ihrer Use Case gebunden. Wählen Sie Qwen3-Coder, wenn reine Coding-Performance und Lizenz-Klarheit ist (Qwen ist Apache 2.0, DeepSeek ist komplizierter). Für die meisten Teams ist Qwen3-Coder besser, selbst auf 48 GB.',
+          },
+          {
+            q: 'Welches Modell ist für wissenschaftliche Code am besten?',
+            a: 'Qwen3-Coder oder DeepSeek Coder V3. Qwen hat verstärkt Mathe-Training; DeepSeek auch. Beide sind stark bei NumPy, SciPy, JAX, PyTorch Nutzung. Llama 3.3 Code ist auch ausreichend, aber nicht spezialisiert.',
+          },
+          {
+            q: 'Muss ich die DSGVO beachten, wenn ich lokale Coding-Modelle verwende?',
+            a: 'Ja, aber lokale Modelle machen es einfacher. Wenn Sie Code lokal ausführen und Daten nie zum externen Server senden, brechen Sie DSGVO Article 28 (Datenverarbeitung) nicht. Aber: (1) Überprüfen Sie, ob das Model selbst von ggf. datenschutz-bedenklichen Quellen trainiert wurde (z.B. GitHub Public Repo = OK; Proprietary Codebases = NICHT OK). (2) Wenn Sie lokale Modelle in ein Unternehmen deployen, dokumentieren Sie die Trainings-Herkunft und Daten-Handhabung für Compliance Teams. Lokale Inference ist der Punkt — Sie lösen das Daten-Residenz Problem, aber Sie müssen immer noch Trainings-Herkunft checken.',
+          },
+          {
+            q: 'Sind diese Modelle für deutsche Mittelstand-Entwickler geeignet?',
+            a: 'Ja, sehr. Für deutsche SMEs sind lokale Coding-Modelle ideal: (1) Kosten — kein API-Gebühren, einmalige GPU-Investition. (2) Datenschutz — Qwen3-Coder 30B auf einem 24-GB Desktop hält alten FirmCode 100% on-prem. (3) Unabhängigkeit von US-Cloud — relevant für GDPR-Awareness Firmen. Qwen3-Coder 30B oder StarCoder 2 sind beste Picks für Mittelstand Deployment. Validieren Sie in Ihrer IT-Sicherheits-Politik voraus.',
+          },
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1148,51 +1148,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Power Local LLM Hub](/power-local-llm?lang=fr) — bibliothèque guides complète.',
         ],
       },
-    },
-    faqSection: {
-      id: 'faq',
-      faqs: [
-        {
-          q: 'Puis-je utiliser un format quantization sous Q4_K_M ?',
-          a: 'Techniquement oui, mais non pour codage. Q3_K_M ou pire dégrade codage-accuracy noticeablement. Codage besoin fine-grain token-selection; Q4 c\'est seuil minimal. Si vous êtes VRAM-pressed, choisissez modèle plus petit (7B au lieu 30B) au lieu pire quantization.',
-        },
-        {
-          q: 'Devrais-je fine-tune localement un modèle ?',
-          a: 'Seulement si vous avez code côté-firm qui ressemble différent du training public. Fine-tuning sur standard-code-patterns c\'est compute wasted. Fine-tuning peut utile pour code domain-spécifique (legacy codebase vieux, proprietary DSLs), mais c\'est besoin infrastructure et validation.',
-        },
-        {
-          q: 'Qu\'est HumanEval+ et pourquoi c\'est important ?',
-          a: 'HumanEval+ c\'est benchmark qui mesure si un modèle écrit code qui passe input-output tests. C\'est important parce que c\'est plus réaliste qu\'"code-writing-leaderboards", mais toujours non vrai production code. Utiliser HumanEval+ rankings comme signal, non toute l\'histoire.',
-        },
-        {
-          q: 'Peuvent ces modèles écrire SQL, Bash ou Dockerfile ?',
-          a: 'Oui, tous six peuvent. Ils furent entraînés sur mixed-code-workloads. SQL est souvent même force. Bash-quality est bas (bash a complex edge-cases). Dockerfile c\'est OK mais non parfait.',
-        },
-        {
-          q: 'Quel modèle c\'est meilleur pour une équipe ?',
-          a: 'Pour équipe, consistency et deployment-easiness sont importants. Qwen3-Coder 30B c\'est gagnant point : bonne performance, ajuste standard-hardware (24 GB), Apache 2.0 licence équipe-friendly. Si équipe polyglotte-code, StarCoder 2. Si équipe forte contrats IBM, Granite.',
-        },
-        {
-          q: 'Combien souvent je devrais mettre à jour ces modèles ?',
-          a: 'Cette liste c\'est "semi_annual", ce qui signifie elle sera checked tous les six-mois (prochaine check début novembre 2026). Nouveaux modèles releasés fréquemment; significant performance-sprints pourraient justify faster updates. Ne pas utiliser comme ref eternel — check nouvelles releases modèles.',
-        },
-        {
-          q: 'Puis-je courir plusieurs modèles parallèle sur un rig ?',
-          a: 'Oui, mais seulement si vous suffisant VRAM. Par ex. sur rig 48 GB vous pouviez run Qwen3-Coder 30B (~18 GB) + modèle plus petit (~10 GB) = encore 20 GB left. C\'est rarement worth complexité — switch entre modèles au lieu parallel.',
-        },
-        {
-          q: 'Comment je obtiens modèles down et les runs ?',
-          a: 'Utiliser llama.cpp (recommandé), vLLM, Text Generation WebUI, ou Ollama. Tous ces download GGUF-quantizations depuis Hugging Face. Exemple: `llama.cpp -m qwen3-coder-30b-q4_k_m.gguf -c 4096 -n 512`. Voir [LLM Quantization Explained] pour explication plus profonde.',
-        },
-        {
-          q: 'Devrais-je choisir DeepSeek ou Qwen3-Coder si je pouvais les deux fit 48 GB ?',
-          a: 'Choisir DeepSeek si context-window (128K) c\'est bindant votre use-case. Choisir Qwen3-Coder si pure coding-performance et license-clarity c\'est (Qwen c\'est Apache 2.0, DeepSeek plus compliqué). Pour plupart équipes, Qwen3-Coder c\'est meilleur, même 48 GB.',
-        },
-        {
-          q: 'Quel modèle c\'est meilleur pour code scientifique ?',
-          a: 'Qwen3-Coder ou DeepSeek Coder V3. Qwen a math-training renforcé; DeepSeek aussi. Tous deux sont forts à NumPy, SciPy, JAX, PyTorch utilisation. Llama 3.3 Code c\'est aussi suffisant, mais non spécialisé.',
-        },
-      ],
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: 'Puis-je utiliser un format quantization sous Q4_K_M ?',
+            a: 'Techniquement oui, mais non pour codage. Q3_K_M ou pire dégrade codage-accuracy noticeablement. Codage besoin fine-grain token-selection; Q4 c\'est seuil minimal. Si vous êtes VRAM-pressed, choisissez modèle plus petit (7B au lieu 30B) au lieu pire quantization.',
+          },
+          {
+            q: 'Devrais-je fine-tune localement un modèle ?',
+            a: 'Seulement si vous avez code côté-firm qui ressemble différent du training public. Fine-tuning sur standard-code-patterns c\'est compute wasted. Fine-tuning peut utile pour code domain-spécifique (legacy codebase vieux, proprietary DSLs), mais c\'est besoin infrastructure et validation.',
+          },
+          {
+            q: 'Qu\'est HumanEval+ et pourquoi c\'est important ?',
+            a: 'HumanEval+ c\'est benchmark qui mesure si un modèle écrit code qui passe input-output tests. C\'est important parce que c\'est plus réaliste qu\'"code-writing-leaderboards", mais toujours non vrai production code. Utiliser HumanEval+ rankings comme signal, non toute l\'histoire.',
+          },
+          {
+            q: 'Peuvent ces modèles écrire SQL, Bash ou Dockerfile ?',
+            a: 'Oui, tous six peuvent. Ils furent entraînés sur mixed-code-workloads. SQL est souvent même force. Bash-quality est bas (bash a complex edge-cases). Dockerfile c\'est OK mais non parfait.',
+          },
+          {
+            q: 'Quel modèle c\'est meilleur pour une équipe ?',
+            a: 'Pour équipe, consistency et deployment-easiness sont importants. Qwen3-Coder 30B c\'est gagnant point : bonne performance, ajuste standard-hardware (24 GB), Apache 2.0 licence équipe-friendly. Si équipe polyglotte-code, StarCoder 2. Si équipe forte contrats IBM, Granite.',
+          },
+          {
+            q: 'Combien souvent je devrais mettre à jour ces modèles ?',
+            a: 'Cette liste c\'est "semi_annual", ce qui signifie elle sera checked tous les six-mois (prochaine check début novembre 2026). Nouveaux modèles releasés fréquemment; significant performance-sprints pourraient justify faster updates. Ne pas utiliser comme ref eternel — check nouvelles releases modèles.',
+          },
+          {
+            q: 'Puis-je courir plusieurs modèles parallèle sur un rig ?',
+            a: 'Oui, mais seulement si vous suffisant VRAM. Par ex. sur rig 48 GB vous pouviez run Qwen3-Coder 30B (~18 GB) + modèle plus petit (~10 GB) = encore 20 GB left. C\'est rarement worth complexité — switch entre modèles au lieu parallel.',
+          },
+          {
+            q: 'Comment je obtiens modèles down et les runs ?',
+            a: 'Utiliser llama.cpp (recommandé), vLLM, Text Generation WebUI, ou Ollama. Tous ces download GGUF-quantizations depuis Hugging Face. Exemple: `llama.cpp -m qwen3-coder-30b-q4_k_m.gguf -c 4096 -n 512`. Voir [LLM Quantization Explained] pour explication plus profonde.',
+          },
+          {
+            q: 'Devrais-je choisir DeepSeek ou Qwen3-Coder si je pouvais les deux fit 48 GB ?',
+            a: 'Choisir DeepSeek si context-window (128K) c\'est bindant votre use-case. Choisir Qwen3-Coder si pure coding-performance et license-clarity c\'est (Qwen c\'est Apache 2.0, DeepSeek plus compliqué). Pour plupart équipes, Qwen3-Coder c\'est meilleur, même 48 GB.',
+          },
+          {
+            q: 'Quel modèle c\'est meilleur pour code scientifique ?',
+            a: 'Qwen3-Coder ou DeepSeek Coder V3. Qwen a math-training renforcé; DeepSeek aussi. Tous deux sont forts à NumPy, SciPy, JAX, PyTorch utilisation. Llama 3.3 Code c\'est aussi suffisant, mais non spécialisé.',
+          },
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',

@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GGUF-Quantisierungsformat-Spezifikation — llama.cpp](https://github.com/ggerganov/llama.cpp)',
         ],
       },
-      faqSection: {
+      faq: {
         id: 'faq',
         title: 'FAQ',
         faqs: [
@@ -1032,7 +1032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama](https://ollama.ai) — Alternative en ligne de commande pour développeurs et power users.',
         ],
       },
-      faqSection: {
+      faq: {
         id: 'faq',
         title: 'FAQ',
         faqs: [
@@ -1501,7 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama](https://ollama.ai) — 開発者とパワーユーザー向けのコマンドラインの代替。',
         ],
       },
-      faqSection: {
+      faq: {
         id: 'faq',
         title: 'FAQ',
         faqs: [
@@ -1974,7 +1974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama](https://ollama.ai) — 开发者和高级用户的命令行替代品。',
         ],
       },
-      faqSection: {
+      faq: {
         id: 'faq',
         title: 'FAQ',
         faqs: [
