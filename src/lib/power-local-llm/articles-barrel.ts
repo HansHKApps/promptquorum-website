@@ -36,6 +36,7 @@ import { article as a_local_llm_prompts_for_fiction_writers } from './articles/l
 import { article as a_local_llm_screenwriting_and_novel_drafting } from './articles/local-llm-screenwriting-and-novel-drafting'
 import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles/sillytavern-vs-agnai-vs-risuai-roleplay'
 import { article as a_uncensored_local_llm_creative_writing_ethics } from './articles/uncensored-local-llm-creative-writing-ethics'
+import { article as a_voice_assistant_local_mobile_offline } from './articles/voice-assistant-local-mobile-offline'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
@@ -69,4 +70,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-screenwriting-and-novel-drafting':  a_local_llm_screenwriting_and_novel_drafting,
   'sillytavern-vs-agnai-vs-risuai-roleplay':     a_sillytavern_vs_agnai_vs_risuai_roleplay,
   'uncensored-local-llm-creative-writing-ethics': a_uncensored_local_llm_creative_writing_ethics,
+  'voice-assistant-local-mobile-offline':         a_voice_assistant_local_mobile_offline,
 }
