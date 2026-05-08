@@ -450,6 +450,450 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'Agents locaux en 2026 : Ce qui fonctionne réellement (et ce qui échoue)',
+    seoTitle: 'Agents IA locaux 2026 : Ce qui marche, ce qui échoue (Test honnête)',
+    intro:
+      'Six stacks d\'agents IA locaux, cinq tâches réelles, trente jours d\'évaluation. Deux stacks accomplissent les tâches de manière fiable. Trois échouent d\'une manière que les démos ne montrent pas. Un est pratiquement inutilisable. C\'est le rapport honnête — ce que chaque configuration d\'agent fait réellement sur une refonte, une tâche de recherche, une triage d\'e-mails, un scrape-et-résumé, et une chasse aux bugs, avec les échecs nommés spécifiquement et le coût de supervision quantifié.',
+    metaDescription:
+      'Test honnête de 6 stacks d\'agents IA locaux (Cline, Continue.dev, LangGraph, AutoGPT, OpenInterpreter, MetaGPT) sur 5 tâches réelles. 2 fonctionnent de manière fiable, 3 échouent de façon surprenante, 1 est inutilisable. Verdicts nommés.',
+    twitterDescription:
+      'Testé 6 stacks d\'agents locaux sur 5 tâches réelles pendant 30 jours. 2 ont fonctionné, 3 ont échoué de façon surprenante, 1 était inutilisable. Le verdict honnête sur les stacks qui livrent le travail et ceux qui ne livrent que des démos.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3 32B',
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Llama 3.3 70B',
+      'DeepSeek Coder V3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      '2× NVIDIA RTX 3090 24 GB',
+    ],
+    audience:
+      'Développeurs et opérateurs techniques évaluant des stacks d\'agents IA locaux pour du travail réel — refontes, recherche, flux de contenu, débogage — et qui veulent un verdict avant d\'investir un week-end à en configurer un.',
+    readTime: '16 min de lecture',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'agent IA local',
+    targetKeywords: [
+      'agents ia locaux 2026',
+      'reality check agents autonomes',
+      'cline vs autogpt local',
+      'meilleur framework agent local',
+      'les agents ia fonctionnent-ils vraiment',
+      'comparaison agents llm locaux',
+    ],
+    leadAnswerBlock:
+      '**En mai 2026, deux stacks d\'agents locaux accomplissent du travail réel sans surveillance constante : Cline + Ollama et Continue.dev Agent mode. Les deux sont limités, bien maintenus, et exécutent un modèle de tool-calling (Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B) à l\'intérieur d\'un seul éditeur avec des portes d\'approbation explicites. Trois stacks échouent de façon surprenante — LangGraph + Ollama (l\'orchestration est fragile sur les longs horizons), OpenInterpreter (exécute les commandes shell trop facilement pour être laissé sans surveillance), et MetaGPT local (le jeu de rôles multi-agents perd le fil après deux échanges). Un stack est pratiquement inutilisable : AutoGPT-local — le projet a stagné, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes. Le schéma est cohérent : les harnesses limités et opinionnés autour d\'un modèle de tool-calling puissant battent les agents autonomes ambitieux sur chaque tâche que nous avons testée.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Les agents IA autonomes locaux fonctionnent-ils réellement en 2026 ?',
+        answer:
+          'Certains oui, la plupart non. Les deux stacks fiables sont Cline + Ollama (agent de codage autonome dans VS Code avec approbation par étape) et Continue.dev Agent mode (boucle d\'agent plus légère dans le même IDE). Tous deux réussissent parce qu\'ils sont limités — un éditeur, un modèle, une porte d\'approbation — pas parce que la technologie sous-jacente est enfin assez bonne pour l\'autonomie sans surveillance. Les frameworks présentés comme « entièrement autonomes » (AutoGPT-local, MetaGPT, orchestrateurs LangGraph personnalisés) dérivent toujours vers des appels d\'outils circulaires, hallucinent des chemins de fichiers, ou se bloquent sur la planification d\'horizons longs. Le bon modèle en 2026 est « assistant supervisé » — des agents qui proposent des actions multi-étapes et s\'arrêtent pour approbation — pas « travailleur autonome ». Tout ce qui se vend comme autonome est une démo, pas un produit.',
+        bullets: [
+          'Deux stacks livrent du travail réel : Cline + Ollama et Continue.dev Agent. Les deux sont limités à un seul IDE, exécutent un modèle de tool-calling, et nécessitent une approbation humaine par étape.',
+          'Trois stacks échouent de façon non-évidente : LangGraph + Ollama (fragile sur les longs horizons), OpenInterpreter (trop pressé d\'exécuter le shell), MetaGPT local (le jeu de rôles multi-agents s\'effondre).',
+          'AutoGPT-local est pratiquement inutilisable en mai 2026 — projet stagnant, dépendances cassées, la boucle de planification dévie en quelques minutes.',
+          'La fiabilité des appels d\'outils provient du modèle, pas du harness. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, et Llama 3.3 70B fonctionnent dans n\'importe quel stack fiable. Les modèles sous 7B échouent dans tous.',
+          'Le coût de supervision est la métrique qui compte. Le « meilleur » agent est celui dont vous lisez réellement les approbations — pas celui avec la plus longue exécution autonome.',
+          'Les perspectives pour 2027 : la planification à long horizon s\'améliorera graduellement. L\'autonomie sans supervision sur les tâches réelles ne se produit pas cette année, indépendamment de ce que les démos montrent.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Faits rapides', anchor: '#quick-facts' },
+      { label: 'Comment nous avons testé', anchor: '#how-we-tested' },
+      { label: 'Tableau de réalité des agents', anchor: '#reality-table' },
+      { label: 'Ce qui fonctionne : Cline + Ollama', anchor: '#cline-ollama' },
+      { label: 'Ce qui fonctionne : Continue.dev Agent', anchor: '#continue-agent' },
+      { label: 'Ce qui échoue : LangGraph + Ollama', anchor: '#langgraph' },
+      { label: 'Ce qui échoue : OpenInterpreter', anchor: '#openinterpreter' },
+      { label: 'Ce qui échoue : MetaGPT Local', anchor: '#metagpt' },
+      { label: 'Inutilisable : AutoGPT-Local', anchor: '#autogpt' },
+      { label: 'Pourquoi les démos des agents semblent meilleures que la réalité', anchor: '#demos-vs-reality' },
+      { label: 'Le coût de supervision est la vraie métrique', anchor: '#supervision-cost' },
+      { label: 'Les tâches que vous ne devriez jamais confier à un agent', anchor: '#never-trust' },
+      { label: 'Décision : Choisissez votre stack', anchor: '#decision' },
+      { label: 'Ce que 2027 apportera probablement', anchor: '#outlook' },
+      { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Deux stacks livrent du travail réel en mai 2026 :** Cline + Ollama (agent de codage autonome dans VS Code) et Continue.dev Agent mode. Les deux sont limités à un éditeur, un modèle, et une porte d\'approbation par étape.',
+          '**Trois stacks échouent de façon surprenante :** LangGraph + Ollama, l\'orchestration est fragile au-delà de 4–5 étapes, OpenInterpreter exécute les commandes shell trop facilement pour être laissé sans surveillance, MetaGPT local, le jeu de rôles multi-agents s\'effondre après deux échanges.',
+          '**Un stack est inutilisable :** AutoGPT-local est effectivement abandonné — les dépendances ne correspondent pas à Ollama moderne, la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes, et il n\'y a pas de mainteneur répondant aux problèmes.',
+          '**La fiabilité des appels d\'outils est une propriété du modèle, pas du harness.** Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, et Llama 3.3 70B émettent des appels d\'outils propres dans chaque stack fiable. Les modèles sous 7B émettent des appels malformés indépendamment du harness qui les enveloppe.',
+          '**Le modèle « assistant supervisé » gagne en 2026.** Les agents qui proposent des actions multi-étapes et s\'arrêtent pour approbation terminent plus de tâches que les agents qui essaient de s\'exécuter sans surveillance. C\'est une limite des propriétés des LLM de 2026, pas une préférence UX.',
+          '**Le coût de supervision est la métrique qui compte.** Une tâche de 30 minutes qui nécessite trois approbations est livrable. Une tâche de 2 heures qui nécessite vingt approbations ne l\'est pas — vous faites le travail, l\'agent le ralentit juste.',
+          '**Le coût est réel mais petit.** L\'inférence locale uniquement, pas de dépenses API, l\'électricité est le seul coût marginal. La consommation de tokens par tâche est la contrainte — les boucles d\'agents consomment 30K–80K tokens pour une tâche multi-étapes, donc les modèles 32K-context heurtent le mur rapidement et les modèles 128K-context sont confortables.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Faits rapides',
+        items: [
+          '**Stacks testés :** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (personnalisé), AutoGPT-local, OpenInterpreter, MetaGPT local.',
+          '**Tâches testées :** recherche de sujets, refonte multi-fichiers, triage de brouillons d\'e-mails, scrape-et-résumé, débogage de bugs.',
+          '**Matériel :** Apple M5 Max 64 GB mémoire unifiée et boîtier 2× NVIDIA RTX 3090 24 GB ; les deux exécutent Qwen3-Coder 30B Q4_K_M confortablement à 32K context.',
+          '**Modèles :** Qwen3-Coder 30B (primaire), GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B (les quatre outils de tool-calling fiables en mai 2026).',
+          '**Forme du verdict :** 2 stacks fiables sur les 5 tâches, 3 stacks fiables sur 1–2 tâches chacun, 1 stack inutilisable.',
+          '**Coût :** 0 € en frais API. ~0,10–0,30 € en électricité par tâche multi-étapes sur un rig GPU de bureau 350W (moins de 0,05 € sur un Mac).',
+          '**Schéma de supervision qui fonctionne :** approbation automatique des outils de lecture, approbation manuelle de chaque outil d\'écriture/shell, examen du journal d\'audit après les sessions longues.',
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'Comment nous avons testé : Même modèle, mêmes tâches, différents harnesses',
+        content:
+          '**Le test a maintenu le modèle constant et n\'a varié que le harness d\'agent.** Chaque stack a reçu les mêmes cinq tâches contre le même backend (Ollama servant Qwen3-Coder 30B à Q4_K_M), donc les échecs s\'attribuent au harness, pas au modèle.',
+        items: [
+          '**Backend :** Ollama 0.5+ sur macOS et Linux. Modèle primaire Qwen3-Coder 30B Q4_K_M (32K context). Modèles secondaires (GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B) utilisés pour vérifier que les échecs de tool-call n\'étaient pas un artefact d\'un seul modèle.',
+          '**Matériel :** un MacBook Pro Apple M5 Max 64 GB et un ordinateur de bureau Linux avec 2× RTX 3090 24 GB. Les deux soutiennent Qwen3-Coder 30B à une vitesse utilisable (>15 tokens/s).',
+          '**Tâches :** recherche de sujets (collecter, dédupliquer, résumer 8 sources sur un sujet de niche), refonte multi-fichiers (renommer un service sur 12 fichiers TypeScript), triage de brouillons d\'e-mails (résumer et rédiger des réponses pour un dossier de 40 messages), scrape-et-résumé (lire 5 URL et produire un résumé comparatif), débogage de bugs (découvrir pourquoi un test existant est instable).',
+          '**Cadence de test :** chaque tâche s\'est exécutée 3 fois par stack sur la fenêtre de 30 jours, avec un nouveau prompt chaque fois. Le résultat évalué comme « complet sans surveillance », « complet avec supervision », « partiel », ou « bloqué / échoué ».',
+          '**Métrique de supervision :** nombre d\'approbations nécessaires par tâche et la part des approbations où nous avons rejeté l\'action proposée. Un taux de rejet élevé signale que le harness génère du bruit que l\'humain doit filtrer.',
+          '**Contrainte d\'honnêteté :** des plages, pas des pourcentages exactement inventés. « Fiable sur les 5 tâches » signifie 13–15 des 15 exécutions atterrissent ; « échoue sur les longs horizons » signifie 3–6 des 15 exécutions atterrissent sans intervention. Les verdicts sont conservateurs — quand un stack fonctionnait mais seulement avec une intervention non-triviale, cela compte comme un échec pour les besoins de tâches sans surveillance.',
+          'La fiabilité des appels d\'outils est la couche sous-jacente à tout cela. Pour la comparaison côté modèle, voir [Meilleurs modèles locaux pour Tool Calling en 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=fr) ; la couche de protocole est couverte dans [Connecter Ollama aux bases de données et API avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr).',
+        ],
+      },
+      realityTable: {
+        id: 'reality-table',
+        title: 'Tableau de réalité des agents : Six stacks, cinq tâches, verdicts honnêtes',
+        content:
+          '**Deux stacks terminent le travail ; trois trébuchent de différentes façons ; un est cassé.** La colonne verdict est celle à lire en premier.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Cline + Ollama et Continue.dev Agent sont les deux seuls stacks d\'agents IA locaux qui terminent les tâches réelles de manière fiable en mai 2026 ; LangGraph, OpenInterpreter, et MetaGPT échouent chacun d\'une manière différente ; AutoGPT-local est inutilisable.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Si vous voulez un agent local qui finit réellement une refonte ou une tâche de recherche, installez Cline ou Continue.dev et arrêtez de lire. Les quatre autres stacks ont des démos qui semblent meilleures que la réalité de les laisser fonctionner pendant dix minutes.',
+          },
+        ],
+        columns: ['Stack', 'Taux de réussite des tâches', 'Échecs observés', 'Supervision nécessaire', 'Verdict'],
+        rows: [
+          {
+            'Stack': 'Cline + Ollama',
+            'Taux de réussite des tâches': '13–15 de 15 exécutions atterrissent',
+            'Échecs observés': 'Pression des tokens sur les modèles 32K-context pour le travail multi-fichiers ; récupérable avec context 128K',
+            'Supervision nécessaire': 'Approbation par étape ; ~5–12 approbations par tâche',
+            'Verdict': 'Fonctionne. Choix par défaut pour les tâches liées au codage.',
+          },
+          {
+            'Stack': 'Continue.dev Agent',
+            'Taux de réussite des tâches': '12–14 de 15 exécutions atterrissent',
+            'Échecs observés': 'L\'horizon du plan est plus court que Cline ; les éditions multi-fichiers s\'arrêtent parfois après 2–3 fichiers',
+            'Supervision nécessaire': 'Approbation d\'aperçu diff ; ~4–8 approbations par tâche',
+            'Verdict': 'Fonctionne. Alternative plus légère quand Cline est excessif.',
+          },
+          {
+            'Stack': 'LangGraph + Ollama',
+            'Taux de réussite des tâches': '4–7 de 15 exécutions atterrissent sans intervention',
+            'Échecs observés': 'Fragile au-delà de 4–5 étapes ; cycles de machine d\'état quand un outil retourne des données inattendues ; pas de porte d\'approbation native (vous la construisez)',
+            'Supervision nécessaire': 'Élevée — déboguer l\'orchestration est la moitié du travail',
+            'Verdict': 'Échoué. L\'effort de construction dépasse la valeur pour 90% des utilisateurs.',
+          },
+          {
+            'Stack': 'AutoGPT-local',
+            'Taux de réussite des tâches': '0–2 de 15 exécutions atterrissent',
+            'Échecs observés': 'Projet stagnant en 2024–2025 ; les dépendances ne correspondent pas à Ollama moderne ; la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes',
+            'Supervision nécessaire': 'Constante — l\'agent ne converge pas',
+            'Verdict': 'Inutilisable. À sauter entièrement en 2026.',
+          },
+          {
+            'Stack': 'OpenInterpreter',
+            'Taux de réussite des tâches': '6–9 de 15 exécutions atterrissent — mais avec risque',
+            'Échecs observés': 'Exécution shell avide ; exécutera les commandes destructrices sans garde-fous explicites ; les prompts de sécurité sont incohérents',
+            'Supervision nécessaire': 'Constante — ne peut pas être laissé sans surveillance',
+            'Verdict': 'Échoué pour l\'autonomie. Utile uniquement comme un REPL baby-sat.',
+          },
+          {
+            'Stack': 'MetaGPT local',
+            'Taux de réussite des tâches': '3–6 de 15 exécutions atterrissent',
+            'Échecs observés': 'Le jeu de rôles multi-agents (PM → Engineer → QA) dévie après deux échanges ; les agents répètent les travaux antérieurs ; les résultats se contredisent',
+            'Supervision nécessaire': 'Élevée — et vous déboguez les définitions de rôle, pas la tâche',
+            'Verdict': 'Échoué. L\'abstraction multi-agents est le problème, pas l\'implémentation.',
+          },
+        ],
+      },
+      clineOllama: {
+        id: 'cline-ollama',
+        title: 'Ce qui fonctionne : Cline + Ollama est le choix par défaut',
+        content:
+          '**Cline + Ollama est le seul stack qui a réalisé chaque type de tâche avec un coût de supervision prévisible.** Il fonctionne parce qu\'il est limité : un IDE (VS Code), un modèle, une porte d\'approbation par étape.',
+        items: [
+          '**Ce que c\'est :** Cline est une extension VS Code qui transforme l\'éditeur en surface d\'agent autonome. Le modèle propose un plan en Plan mode, l\'exécute en Act mode via une surface d\'outils (read_file, write_to_file, replace_in_file, execute_command, list_files, search_files), et demande une approbation entre les étapes sauf si les outils sont sur une liste d\'approbation.',
+          '**Pourquoi ça fonctionne :** le harness est opinionnaire. La surface d\'outils est petite et stable, le flux d\'approbation est en avant (chaque étape est une carte que vous acceptez ou rejetez), et le modèle ne voit que l\'éditeur — pas la machine entière. Les échecs sont récupérables parce que la dernière action est toujours à un clic d\'annulation.',
+          '**Où ça brille :** refontes multi-fichiers (renommer un service sur 12 fichiers en une tâche), débogage exploratoire de bugs (« découvrir pourquoi ce test est instable » — Cline lit les fichiers de test adjacents, retrace les dépendances, propose une hypothèse, édite, exécute le test), et recherche limitée qui produit un livrable markdown à l\'intérieur du projet.',
+          '**Où ça trébuche :** tâches non-codage qui nécessitent HTTP externe (pas de navigateur natif). Le triage de brouillons d\'e-mails fonctionne seulement si vous connectez un serveur MCP ou des outils shell — et à ce moment-là vous configurez trois choses pour faire ce qu\'un outil plus petit et limité ferait directement.',
+          '**Coût de supervision :** ~5–12 approbations par tâche. La plupart sont des outils de lecture (bon marché, acceptation rapide). Les coûteux sont write_to_file et execute_command — réglez-les pour exiger une approbation manuelle et vous attraperez l\'appel rare mauvais avant qu\'il se produise.',
+          '**Coût des tokens :** élevé. Les contenus de fichier complets entrent dans la conversation alors que l\'agent les lit. Une refonte de 12 fichiers sur Qwen3-Coder 30B à 32K context épuise la fenêtre rapidement — basculez vers un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour le travail non-trivial.',
+          'Pour la configuration Cline plus approfondie, y compris les listes d\'approbation automatique, voir [Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Exécutez Cline contre Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) pour les tâches de codage. Pour les tâches qui touchent plus de 6 fichiers en une session, basculez vers DeepSeek Coder V3 ou un autre modèle 128K-context — la fenêtre 32K sur Qwen3-Coder sera pleine avant que l\'agent ne termine.',
+          },
+        ],
+      },
+      continueAgent: {
+        id: 'continue-agent',
+        title: 'Ce qui fonctionne : Continue.dev Agent mode pour les tâches plus légères',
+        content:
+          '**Continue.dev Agent mode est le bon choix quand Cline est excessif.** Même IDE, même classe de modèle, surface plus petite — moins d\'approbations, horizon du plan plus court, consommation de tokens inférieure.',
+        items: [
+          '**Ce que c\'est :** Continue.dev est principalement une extension d\'autocomplétion et de chat pour VS Code et JetBrains, avec un Agent mode qui ajoute des appels d\'outils (lecture/écriture de fichiers, recherche dans la base de code, exécution de terminal) et une boucle de plan multi-étapes. L\'agent est plus contraint que celui de Cline — moins d\'outils, horizons par défaut plus courts, comportement autonome moins agressif.',
+          '**Pourquoi ça fonctionne :** l\'audience d\'auteur de Continue.dev est les utilisateurs d\'autocomplétion, donc Agent mode hérite d\'une UX « petit, rapide, en avant ». Chaque édition atterrit comme un aperçu diff avant que le modèle ne touche le fichier. Les plans dépassent rarement 3–5 étapes, ce qui garde la consommation de tokens modeste et la piste d\'audit courte.',
+          '**Où ça brille :** tâches à un ou deux fichiers, « expliquer cette région de base de code », « réécrire cette fonction avec ces contraintes », « ajouter un test pour cette méthode ». L\'agent s\'exécute sans traîner la base de code entière dans la conversation, donc un modèle 32K-context est confortable.',
+          '**Où ça trébuche :** plans plus longs que 5 étapes. Les refontes multi-fichiers qui ont besoin de 8+ éditions s\'arrêtent parfois après 2–3 fichiers et demandent à l\'utilisateur de continuer. Ce n\'est pas un bug — c\'est le harness étant conservateur sur l\'horizon du plan — mais cela signifie que vous supervisez plus souvent que avec Cline sur la même tâche.',
+          '**Coût de supervision :** ~4–8 approbations par tâche, pondérées vers les aperçus diff (signal élevé, acceptation rapide).',
+          '**Coût des tokens :** notablement inférieur à Cline parce que Continue.dev utilise son indice TF-IDF + embeddings pour récupérer les chunks pertinents plutôt que de diffuser des fichiers entiers. Un modèle 32K-context termine confortablement la plupart des tâches.',
+          'Quand choisir Continue.dev Agent plutôt que Cline : quand la tâche tient en 2–3 fichiers, quand le budget de tokens est serré, quand vous utilisez déjà Continue.dev pour l\'autocomplétion et voulez un outil et non deux.',
+        ],
+      },
+      langgraph: {
+        id: 'langgraph',
+        title: 'Ce qui échoue : LangGraph + Ollama (Fragile sur les longs horizons)',
+        content:
+          '**LangGraph + Ollama est le bon outil pour l\'orchestration en production et le mauvais outil pour « je veux un agent sur mon ordinateur portable ».** L\'effort de construction est élevé, les modes d\'échec sont non-évidents, et la valeur est réalisée seulement à l\'échelle.',
+        items: [
+          '**Ce que c\'est :** LangGraph est une bibliothèque d\'orchestration de machine d\'état. Vous définissez les nœuds (fonctions typées qui appellent le modèle, exécutent un outil, évaluent une condition) et les arêtes (transitions). Le runtime exécute le graphe, gère la ramification, et gère l\'état entre les étapes. Associez-le à un backend Ollama et vous avez un agent local personnalisé.',
+          '**Pourquoi ça échoue comme agent de bureau :** la surface d\'échec est le code d\'orchestration, pas le modèle. Les machines d\'état qui semblent propres sur un tableau blanc font du cycle quand un outil retourne des données inattendues — par exemple, une récupération HTTP qui retourne 200 mais avec un corps vide, une lecture de fichier sur un chemin qui existe mais est un répertoire. Vous déboguez votre graphe autant que l\'agent débogue la tâche.',
+          '**Horizon du plan :** fragile au-delà de 4–5 nœuds. Chaque point de branchement double la surface de test. Au nœud 6, vous avez un arbre de chemins d\'exécution possibles et le modèle en choisit un que vous n\'aviez pas anticipé. Le graphe réécrit alors l\'état d\'une manière que le nœud suivant ne peut pas consommer.',
+          '**Pas de porte d\'approbation native :** vous construisez vous-même les interruptions humaines dans la boucle. La bibliothèque le supporte (l\'interruption-et-reprise est documentée) mais l\'implémentation est sur vous. Cline et Continue.dev vous le donnent gratuitement.',
+          '**Où ça appartient réellement :** flux de travail côté serveur où vous contrôlez la forme d\'entrée, la surface d\'outils est fixe, et vous pouvez écrire une suite de tests réelle pour le graphe. Par exemple, un flux de travail de routage de support client avec trois outils déterministes et un nœud modèle — c\'est le sweet spot de LangGraph.',
+          '**Verdict pour la question de l\'agent local :** échoué. Construire un orchestrateur LangGraph personnalisé pour faire ce que Cline fait en une installation est du temps perdu pour 90% des utilisateurs. Faites-le seulement si vous avez une forme de flux de travail que Cline ne peut pas exprimer et vous avez la discipline de test pour garder le graphe honnête.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Ce n\'est pas une critique de LangGraph — la bibliothèque est solide pour les flux de travail en production. La critique est que « utiliser LangGraph pour votre agent local » est la mauvaise recommandation quand les harnesses limités existent déjà.',
+          },
+        ],
+      },
+      openinterpreter: {
+        id: 'openinterpreter',
+        title: 'Ce qui échoue : OpenInterpreter est utile sous surveillance, dangereux sans',
+        content:
+          '**OpenInterpreter exécute les commandes shell trop facilement pour être laissé sans surveillance.** Il est réellement utile comme un REPL baby-sat — vous décrivez une tâche, il écrit du Python ou du shell, vous regardez s\'exécuter — et réellement dangereux à s\'en éloigner.',
+        items: [
+          '**Ce que c\'est :** OpenInterpreter est une CLI qui permet à un modèle d\'écrire et d\'exécuter du code (Python, shell, JavaScript, R) sur votre machine. L\'invite interactive demande une confirmation avant d\'exécuter chaque bloc — par défaut. Le cadrage est « Code Interpreter ChatGPT, localement ».',
+          '**Pourquoi ça échoue comme agent autonome :** le prompt de sécurité est par bloc, et le modèle propose régulièrement les commandes shell qui semblent bénignes mais produisent des changements d\'état permanents (`rm` dans les chemins profonds, `pip install` dans le Python système, `git reset --hard`). Confirmer chaque bloc devient le travail — vous ne pouvez pas skimmer parce que le coût d\'approuver le mauvais bloc est non borné.',
+          '**Le mode auto-confirm existe.** C\'est aussi d\'où chaque histoire d\'horreur vient. Nous ne recommandons pas d\'exécuter OpenInterpreter avec auto-confirm sur une machine qui a quelque chose dont vous vous souciez.',
+          '**Où ça brille :** comme un bloc-notes baby-sat. « Convertir ce CSV en Parquet », « extraire les métadonnées de ces 200 PDF », « réécrire ce script Python pour utiliser asyncio ». Les tâches où vous restez dans le terminal, regardez chaque commande, et le modèle fait le travail de dactylographie plus rapide pour vous.',
+          '**Où ça s\'effondre :** n\'importe quoi ressemblant à l\'autonomie. Même avec les prompts de confirmation sur, une tâche de 30 minutes a en moyenne 40+ confirmations et les modes d\'échec sont variés (mauvais répertoire de travail, lectures partielles, appels réseau inattendus).',
+          '**Coût de supervision :** essentiellement 100% — vous supervisez chaque bloc. Une tâche « 5 minutes » prend plus longtemps que de la faire à la main une fois que vous comptez la lecture et l\'approbation.',
+          '**Verdict :** outil utile, mauvaise catégorie. OpenInterpreter est un assistant de codage qui exécute le code, pas un agent autonome. Le scorer contre Cline est le mauvais cadre ; le bon cadre est « Cline livre une fonctionnalité, OpenInterpreter écrit un script ponctuel ».',
+        ],
+      },
+      metagpt: {
+        id: 'metagpt',
+        title: 'Ce qui échoue : MetaGPT Local (Le jeu de rôles multi-agents s\'effondre)',
+        content:
+          '**Le jeu de rôles multi-agents « PM → Engineer → QA → Designer » de MetaGPT ne survit pas au contact avec les tâches non-triviales.** Après deux échanges, les agents répètent les travaux antérieurs, se contredisent, ou se bloquent en négociant leurs propres rôles.',
+        items: [
+          '**Ce que c\'est :** MetaGPT est un framework multi-agents qui simule une équipe de développement logiciel. Un agent Product Manager rédige les exigences, un agent Architect conçoit, un agent Engineer code, un agent QA teste. Chaque agent est le même modèle sous-jacent avec un prompt système différent et un ensemble d\'outils.',
+          '**Pourquoi ça échoue :** le jeu de rôles multi-agents suppose que le modèle peut maintenir une persona cohérente sur de nombreux tours et remettre le contexte de manière fiable. En pratique, avec un modèle local 30B, les personas s\'estompent. L\'agent Engineer réexécute l\'analyse de l\'agent PM. L\'agent QA réécrit le code au lieu de le tester. L\'état de remise — ce que chaque agent a appris dans son tour — est le bug.',
+          '**Le problème plus profond :** l\'abstraction multi-agents ajoute des tours sans ajouter de capacité. Un agent unique avec la même surface d\'outils et un scratchpad plus long fait la même tâche en moins de tokens avec moins de dérive. Le cadrage « équipe » est anthropomorphe, pas architectural.',
+          '**Où ça pourrait fonctionner :** tâches étroitement définies avec des limites de remise dure — par exemple, un flux de travail d\'équipe d\'écriture (recherche → esquisse → brouillon → édition) où chaque étape a un livrable et l\'étape suivante ignore le raisonnement antérieur. Nous n\'avons pas trouvé un flux de travail réel où MetaGPT surpassait un harness d\'agent unique avec un prompt structuré.',
+          '**Verdict :** échoué. Le bug est conceptuel, pas dans l\'implémentation. Les harnesses d\'agent unique avec des prompts structurés battent les harnesses multi-agents sur chaque tâche que nous avons testée.',
+          'Pour les techniques de prompting qui améliorent la fiabilité de n\'importe quelle boucle d\'agent unique, voir [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — le même schéma de raisonnement structuré qui aide un modèle à penser aide un agent unique à rester cohérent.',
+        ],
+      },
+      autogpt: {
+        id: 'autogpt',
+        title: 'Inutilisable : AutoGPT-Local est effectivement abandonné',
+        content:
+          '**AutoGPT-local n\'est pas un stack à évaluer en 2026 — c\'est un stack à sauter.** Le projet est effectivement non maintenu, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie en quelques minutes.',
+        items: [
+          '**Ce qui s\'est passé :** AutoGPT était le projet « agent autonome » canonique de 2023. Le battage excessif a dépassé la technologie — les boucles de planification n\'ont jamais été fiables sur les tâches réelles. Le projet a stagné, l\'équipe de mainteneurs s\'est dispersée, et le fork local uniquement a traîné derrière chaque mise à jour de dépendance pendant 18+ mois.',
+          '**Cassure concrète en mai 2026 :** l\'intégration Ollama suppose une forme d\'API qui a changé en 2024. Les prompts de planification interne ont été réglés pour les modèles de classe GPT-3.5 et produisent des plans malformés sur les modèles de poids modernes. Les problèmes déposés sur le repo en 2025 restent ouverts et sans réponse.',
+          '**La boucle de planification dévie :** dans les exécutions qui ont commencé, l\'agent entre généralement dans un schéma d\'appel d\'outil circulaire en 2–4 minutes — relisant les mêmes fichiers, réexécutant les mêmes recherches, ne convergeant jamais sur la tâche. C\'est le mode d\'échec bien connu des boucles autonomes non limitées, exactement la chose que les harnesses limités (Cline, Continue.dev) évitent par conception.',
+          '**Verdict :** inutilisable. N\'investissez pas un week-end dans AutoGPT-local en 2026. Le travail intéressant a avancé vers les harnesses limités avec les portes d\'approbation explicites ; AutoGPT est un artefact historique, pas une option actuelle.',
+          '**Si vous êtes nostalgique :** le repo original est toujours sur GitHub. La bonne façon de s\'y engager est comme une leçon — l\'autonomie était la mauvaise abstraction ; l\'assistance supervisée est ce qui fonctionne.',
+        ],
+      },
+      demosVsReality: {
+        id: 'demos-vs-reality',
+        title: 'Pourquoi les démos des agents semblent meilleures que la réalité',
+        content:
+          '**Les démos sont curées ; les tâches réelles ne le sont pas.** Trois raisons structurelles expliquent pourquoi une vidéo d\'agent semble meilleure que vos premiers 30 minutes avec le même stack.',
+        items: [
+          '**Les tâches de démo sont limitées.** « Construire un jeu de serpent » ou « résumer ce PDF » ont une forme connue, une petite surface de fichier, et un signal de succès sans ambiguïté. Les tâches réelles sont ouvertes (« découvrir pourquoi notre flux de paiement perd 3% des utilisateurs ») et ont une grande surface de fichier, des critères de succès ambigus, et des effets secondaires qui composent les erreurs.',
+          '**Les exécutions de démo sont sélectionnées.** Une vidéo de démo de 30 secondes est le meilleur des nombreux prises. Les exécutions où l\'agent s\'est bloqué, a hallucné un chemin de fichier, ou a appelé une fonction dépréciée ne sont pas dans la coupe. Vous ne voyez pas le taux de réussite ; vous voyez un succès.',
+          '**Les prompts de démo sont sur-spécifiés.** « Refactoriser le service User pour utiliser le nouveau modèle de référentiel » fonctionne dans une démo parce que la démo a le nouveau modèle documenté dans un fichier que l\'agent trouve. Votre tâche réelle a le modèle dans un fil Slack de trois semaines ago. Le modèle n\'a pas votre contexte ; la démo l\'avait.',
+          '**Les modèles de démo sont plus grands que votre modèle local.** Les démos cloud s\'exécutent sur les modèles de frontière. Les agents locaux s\'exécutent sur tout ce que vous pouvez servir à >10 tokens/s. Qwen3-Coder 30B est excellent en mai 2026 mais ce n\'est pas GPT-5 — et les démos utilisent silencieusement le meilleur modèle.',
+          '**Le point à retenir :** supposez que toute démo représente les 10% supérieurs des exécutions. L\'attente raisonnable pour une tâche réelle est l\'exécution médiane, avec une chance de 20–30% d\'échec qui nécessite une intervention. Planifiez pour la médiane.',
+        ],
+      },
+      supervisionCost: {
+        id: 'supervision-cost',
+        title: 'Le coût de supervision est la vraie métrique',
+        content:
+          '**Le « meilleur » agent n\'est pas celui avec la plus longue exécution autonome — c\'est celui dont vous lisez réellement les approbations.** Compter les approbations est le nombre le plus utile que nous avons mesuré.',
+        items: [
+          '**Tâches à supervision faible (3–8 approbations total) :** Cline sur une refonte limitée, Continue.dev Agent sur une tâche à un seul fichier. Vous skimmez les approbations parce qu\'elles sont surtout des opérations de lecture et une ou deux écritures ; le temps de tâche total est dominé par la latence du modèle, pas la friction d\'approbation.',
+          '**Tâches à supervision moyenne (10–20 approbations) :** Cline sur une tâche multi-fichiers qui touche 8+ fichiers, Continue.dev Agent sur n\'importe quoi qui pousse son horizon de plan. Vous approuvez plus soigneusement ; le temps de tâche total est divisé grossièrement moitié modèle, moitié vous.',
+          '**Tâches à supervision élevée (40+ approbations) :** OpenInterpreter faisant n\'importe quoi de non-trivial. L\'agent est un multiplicateur de vitesse de dactylographie, pas un multiplicateur de productivité — vous faites toujours le travail cognitif et lisez chaque bloc.',
+          '**Schéma d\'approbation échouée :** fatigue d\'approbation. Au-delà de ~30 approbations en une session, les humains tamponnent. Le harness qui nécessite trop d\'approbations vous entraîne à en arrêter l\'examen, à quel point la porte de sécurité est fictive.',
+          '**Le bon bouton : listes d\'approbation automatique.** Les outils de lecture (read_file, list_files, search_files, list_directory) sont sûrs à auto-approuver. Les outils d\'écriture (write_to_file, replace_in_file, execute_command, browser_action avec soumission de formulaire) ne le sont pas. Ce single setting est la différence entre un agent utile et un agent fastidieux.',
+          '**La bonne unité : compte d\'approbation par tâche.** Quand vous évaluez un stack, comptez les approbations sur une tâche réelle représentative — pas sur une tâche de démo. Si le compte est supérieur à 20, le stack n\'économise pas réellement votre travail.',
+          'Pour les techniques de prompting qui réduisent le coût de supervision en améliorant la qualité de l\'appel d\'outils, voir [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Resserrez la liste d\'approbation automatique au début d\'un projet ; desserrez-la au fur et à mesure que vous construisez la confiance dans le modèle sur cette base de code. L\'opposé — commencer permissif, resserrer après une mauvaise exécution — est comment les agents sans surveillance causent les incidents.',
+          },
+        ],
+      },
+      neverTrust: {
+        id: 'never-trust',
+        title: 'Les tâches que vous ne devriez jamais confier à un agent',
+        content:
+          '**Certaines tâches sont incompatibles avec l\'agent indépendamment du harness.** Reconnaissez-les avant de dépenser un après-midi à configurer les règles d\'approbation.',
+        items: [
+          '**Écritures de base de données de production.** Un modèle qui émet un `DELETE FROM users WHERE active = false` confiant contre une vraie table est l\'incident pour lequel cet article existe. Exécutez les outils de base de données avec les rôles de lecture seule par défaut ; augmentez un rôle inscriptible séparé seulement pour les tâches qui l\'exigent explicitement, et seulement pour la durée de ces tâches.',
+          '**N\'importe quoi avec l\'argent ou auth.** APIs de paiement, issuance de token OAuth, création de compte, changements de rôle/permission. Le coût d\'un mauvais appel est non borné ; le bénéfice de l\'automatisation est petit.',
+          '**Planification d\'horizons longs au-delà de 8–10 étapes.** Les agents dérivent sur les longs horizons. Le bon schéma est « le modèle propose un plan, l\'humain approuve le plan, le modèle exécute le plan une étape à la fois » — pas « le modèle planifie et exécute une tâche de 25 étapes de manière autonome ».',
+          '**Les tâches où vous ne pouvez pas vérifier le succès rapidement.** Une tâche scrape-et-résumé que vous pouvez lire en 2 minutes est un bon ajustement. Une tâche « rechercher ce marché et produire un rapport » que vous ne pouvez pas vérifier en moins d\'une heure ne l\'est pas — vous ferez confiance au rapport parce que le vérifier coûte plus que de le réécrire.',
+          '**N\'importe quoi qui touche les fichiers dont vous ne faites pas de sauvegarde.** Sandbox le serveur de système de fichiers à un répertoire d\'espace de travail unique. Traitez l\'espace de travail comme jetable. Si l\'agent peut accéder aux fichiers en dehors de l\'espace de travail, vous avez configuré l\'agent incorrectement.',
+          '**Infrastructure multi-locataire ou partagée.** Les agents locaux sont des outils de machine personnelle en 2026. Les runners CI partagés, les bases de données multi-locataires, et les comptes cloud partagés sont la mauvaise surface d\'attaque pour une boucle d\'agent sans surveillance.',
+        ],
+      },
+      decision: {
+        id: 'decision',
+        title: 'Décision : Choisissez votre stack',
+        content:
+          '**La plupart des gens devraient installer Cline + Ollama et arrêter.** L\'arbre de décision ci-dessous couvre les cas où un autre stack est le bon choix.',
+        columns: ['Votre situation', 'Choisir'],
+        rows: [
+          { 'Votre situation': 'Je veux un agent local pour les tâches de codage (refonte, débogage, éditions multi-fichiers) dans VS Code', 'Choisir': 'Cline + Ollama avec Qwen3-Coder 30B (ou DeepSeek Coder V3 pour context 128K)' },
+          { 'Votre situation': 'J\'utilise déjà Continue.dev pour l\'autocomplétion et je veux un agent plus léger pour les petites tâches', 'Choisir': 'Continue.dev Agent mode dans la même installation' },
+          { 'Votre situation': 'Je veux un agent qui peut piloter un navigateur, interroger une base de données, et lire les fichiers', 'Choisir': 'Cline + Ollama avec les serveurs MCP connectés (système de fichiers, sqlite, puppeteer)' },
+          { 'Votre situation': 'Je veux un REPL local « code interpreter » — écrire du code, exécuter du code, itérer', 'Choisir': 'OpenInterpreter, mais ne le laissez pas sans surveillance' },
+          { 'Votre situation': 'J\'ai un flux de travail de production avec des outils déterministes et j\'ai besoin d\'orchestration', 'Choisir': 'LangGraph + Ollama, avec une vraie suite de tests pour le graphe' },
+          { 'Votre situation': 'Je veux des agents autonomes sans surveillance qui livrent le travail pendant la nuit', 'Choisir': 'Attendre. Le stack 2026 ne livre pas ça. Utilisez plutôt des stacks supervisés.' },
+          { 'Votre situation': 'Je veux évaluer AutoGPT ou MetaGPT pour du travail réel', 'Choisir': 'Sauter les deux. AutoGPT n\'est pas maintenu ; l\'abstraction multi-agents de MetaGPT ne se tient pas.' },
+        ],
+      },
+      outlook: {
+        id: 'outlook',
+        title: 'Ce que 2027 apportera probablement',
+        content:
+          '**La planification d\'horizons longs s\'améliorera graduellement ; l\'autonomie sans supervision sur les tâches réelles ne se produit pas cette année.** Deux prédictions spécifiques, formulées prudemment.',
+        items: [
+          '**La fiabilité des appels d\'outils continuera à monter.** La tendance de Llama 3 → Llama 3.3, Qwen2.5 → Qwen3, et l\'étape de changement Gemma 3 → Gemma 4 pointent tous vers une chose : l\'entraînement des appels d\'outils est le passage de post-entraînement le moins coûteux et le plus impactant. Attendez-vous à ce que les modèles de classe 7B deviennent des outils de tool-calling fiables en fin 2026 / début 2027, ce qui abaisse significativement la barre de matériel pour les agents.',
+          '**Les horizons du plan s\'allongeront.** L\'horizon fiable actuel d\'~5 étapes atteindra probablement 8–10 étapes sans les problèmes de dérive. Cela rend les agents limités de style Cline meilleurs ; cela ne rend pas les agents non limités de style AutoGPT fonctionner.',
+          '**Les systèmes multi-agents n\'auront pas leur percée.** Le problème structurel (état de remise, dérive de persona, travail redondant) n\'est pas une question d\'échelle de modèle. Les harnesses d\'agent unique avec les scratchpads plus longs continueront à battre le jeu de rôles multi-agents.',
+          '**Le modèle « assistant supervisé » gagne.** Les agents qui livrent du travail en 2027 ressembleront à Cline 2.0 — les meilleures surfaces d\'outils, les approbations plus lisses, les horizons de plan plus longs — pas comme un relancement réussi d\'AutoGPT.',
+          '**Couverture honnête :** n\'importe lequel de ceux-ci pourrait être faux. La technologie se déplace assez rapidement qu\'une version de modèle en Q3 2026 pourrait changer l\'équation de coût de supervision. Réévaluez cet article en novembre 2026.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes à choisir et exécuter des agents locaux',
+        items: [
+          '**Erreur 1 : optimiser pour l\'autonomie.** « Combien de temps peut-il s\'exécuter sans surveillance » est la mauvaise métrique. « Combien d\'approbations pour atterrir la tâche » est la bonne. Choisir un stack sur les benchmarks d\'autonomie vous obtient AutoGPT ; choisir sur le coût de supervision vous obtient Cline.',
+          '**Erreur 2 : petits modèles pour le travail des appels d\'outils.** N\'importe quoi sous 7B (et la plupart des modèles de 7B–13B de but général sans fine-tuning des appels d\'outils) émet des appels d\'outils malformés. Utilisez Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, ou Llama 3.3 70B et arrêtez de combattre le harness.',
+          '**Erreur 3 : context 32K pour le travail multi-fichiers.** Cline diffuse les contenus de fichier complets dans la conversation ; une tâche de 8 fichiers peut faire exploser les tokens 32K avant le raisonnement. Utilisez un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour les tâches non-triviales multi-fichiers.',
+          '**Erreur 4 : auto-approuver tout.** Le toggle « approuver tout » est la rampe d\'accès à « l\'agent a supprimé mes fichiers ». Auto-approuvez seulement les outils de lecture ; exigez une approbation manuelle pour les écritures et le shell.',
+          '**Erreur 5 : écritures de base de données de production d\'un agent.** Exécutez un rôle de lecture seule par défaut. Un rôle inscriptible séparé existe seulement pour la durée des tâches qui l\'exigent explicitement. Le coût d\'une mauvaise écriture est non borné.',
+          '**Erreur 6 : construire un orchestrateur LangGraph personnalisé avant d\'essayer Cline.** 90% des cas d\'usage « j\'ai besoin d\'un agent personnalisé » sont suffisamment limités que Cline + quelques serveurs MCP est la bonne réponse. Construisez personnalisé seulement quand la forme du flux de travail est réellement incompatible avec les harnesses existants.',
+          '**Erreur 7 : chasser les démos.** Les démos sont le meilleur des nombreux. Planifiez pour l\'exécution médiane — succès de 70–80% sur les tâches réelles, 20–30% nécessitant une intervention. N\'importe quoi s\'appelant « entièrement autonome » en 2026 est du marketing, pas de l\'ingénierie.',
+          '**Erreur 8 : ignorer la piste d\'audit.** Après chaque session d\'agent longue, lisez le journal d\'action. Les schémas émergent — le même type de faux pas trois exécutions de suite vous dit de resserrer une règle d\'approbation ou de changer le modèle.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Référentiel Cline GitHub](https://github.com/cline/cline) — agent de codage autonome, documentation de surface d\'outils, configuration d\'approbation automatique.',
+          '[Documentation Continue.dev](https://docs.continue.dev/) — mode agent, indexation de base de code, configuration du fournisseur.',
+          '[Documentation LangGraph](https://langchain-ai.github.io/langgraph/) — bibliothèque d\'orchestration, sémantique de machine d\'état, interruptions humaines dans la boucle.',
+          '[Référentiel OpenInterpreter GitHub](https://github.com/OpenInterpreter/open-interpreter) — agent d\'exécution de code, modes de sécurité, intégration de modèle local.',
+          '[Référentiel MetaGPT GitHub](https://github.com/geekan/MetaGPT) — framework multi-agents, définitions de rôle, configuration du fournisseur local.',
+          '[Bibliothèque de modèles Ollama](https://ollama.com/library) — modèles locaux disponibles, drapeaux de support des appels d\'outils, options de quantification.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Les agents IA autonomes sont-ils vraiment utiles en 2026 ?',
+            a: 'Oui, mais seulement sous des formes limitées et supervisées. Cline + Ollama et Continue.dev Agent mode terminent les tâches réelles (refontes multi-fichiers, débogage exploratoire, recherche limitée) avec un coût de supervision gérable — généralement 5–12 approbations par tâche. Les « entièrement autonomes » sont toujours aspirationnels ; les agents présentés comme sans surveillance (AutoGPT-local, MetaGPT) dérivent, répètent le travail, ou stagnent sur les longs horizons. Le bon modèle mental est « assistant supervisé », pas « travailleur autonome ».',
+          },
+          {
+            q: 'Pourquoi la plupart des démos d\'agents semblent-elles meilleures que la réalité ?',
+            a: 'Trois raisons. Les tâches de démo sont limitées (petite surface de fichier, signal de succès sans ambiguïté) ; les exécutions de démo sont sélectionnées à partir de nombreuses prises ; les prompts de démo sont sur-spécifiés avec le contexte que le modèle n\'aurait pas sur une tâche réelle. Planifiez pour l\'exécution médiane sur une tâche réelle — succès de 70–80%, 20–30% nécessitant une intervention — pas l\'exécution de démo.',
+          },
+          {
+            q: 'Quel stack d\'agents est le plus fiable pour le travail réel en 2026 ?',
+            a: 'Cline + Ollama est le choix par défaut pour les tâches de type codage (refontes, débogage, travail multi-fichiers). Associez-le à Qwen3-Coder 30B pour le travail quotidien ou DeepSeek Coder V3 / Llama 3.3 70B quand vous avez besoin de context 128K. Continue.dev Agent mode est l\'alternative plus légère pour les tâches à un ou deux fichiers. Les deux sont limités, bien maintenus, et exécutent à l\'intérieur de l\'éditeur avec des portes d\'approbation explicites.',
+          },
+          {
+            q: 'Combien de supervision les agents ont-ils vraiment besoin en 2026 ?',
+            a: '5–12 approbations par tâche sur un harness limité comme Cline ; 4–8 sur Continue.dev Agent. Au-delà de 30 approbations en une session, les humains tamponnent — à quel point la porte de sécurité est fictive. Le bon bouton est la liste d\'approbation automatique : auto-approuvez les outils de lecture (read_file, list_files, search_files), exigez l\'approbation manuelle pour les écritures et le shell. Ce single setting est la différence entre un agent utile et un agent fastidieux.',
+          },
+          {
+            q: 'Les agents peuvent-ils gérer les tâches multi-étapes sans se casser ?',
+            a: 'Jusqu\'à 5–8 étapes de manière fiable avec un modèle de tool-calling puissant (Qwen3-Coder 30B, Gemma 4 27B, GLM-5.1 32B, Llama 3.3 70B). Au-delà, les horizons du plan dérivent — l\'agent relit les fichiers, réexécute les mêmes recherches, ou propose les prochaines étapes contradictoires. Le bon schéma est « le modèle propose un plan, l\'humain approuve le plan, le modèle exécute une étape à la fois » — pas d\'exécution autonome de 25 étapes.',
+          },
+          {
+            q: 'Pourquoi les agents échouent-ils sur les tâches d\'horizons longs ?',
+            a: 'Deux raisons structurelles. D\'abord, l\'encombrement du contexte : chaque appel d\'outil ajoute le résultat à la conversation, donc une tâche de 20 étapes accumule ~50K–100K tokens d\'état et le modèle perd le suivi de ce qui a été décidé au début. Deuxièmement, la dérive de révision du plan : quand un outil retourne une sortie inattendueue, le modèle replanie souvent la tâche entière au lieu d\'ajuster localement — et le nouveau plan désaccorde avec l\'engagement original. Les harnesses limités (Cline, Continue.dev Agent) contournent ça en gardant les plans courts et en demandant à l\'humain de se rendre à nouveau en avant entre les étapes.',
+          },
+          {
+            q: 'Les agents locaux sont-ils plus mauvais que les agents cloud ?',
+            a: 'Sur la capacité absolue, oui — les modèles cloud de frontière battent toujours n\'importe quel modèle local de classe 30B sur les tâches les plus difficiles. Sur le travail quotidien supervisé, l\'écart est plus petit que les démos le suggèrent. Cline + Qwen3-Coder 30B termine 13–15 de 15 refontes multi-fichiers ; la même tâche sur Cline + Claude ou GPT-5 termine 14–15 de 15. L\'échange favorise le local pour les utilisateurs avec des données privées, pas de budget API, ou des exigences strictes hors ligne.',
+          },
+          {
+            q: 'Les agents peuvent-ils gérer les erreurs avec grâce ?',
+            a: 'Mixte. Cline et Continue.dev Agent se rétablissent bien des erreurs d\'outils — le harness fait surface à l\'erreur, le modèle propose une étape corrective, l\'humain approuve. LangGraph + Ollama se rétablit seulement aussi bien que votre graphe définit ; une erreur d\'outil non gérée fait du cycle. AutoGPT-local ne se rétablit pas du tout ; il dévie. La gestion des erreurs est une propriété du harness autant qu\'une propriété du modèle.',
+          },
+          {
+            q: 'Quelles tâches ne devriez-vous jamais confier à un agent ?',
+            a: 'Écritures de base de données de production (exécutez les rôles de lecture seule par défaut), n\'importe quoi touchant l\'argent ou auth (paiements, OAuth, création de compte), planification d\'horizons longs au-delà de 8–10 étapes, tâches où vous ne pouvez pas vérifier le succès rapidement, n\'importe quoi en dehors d\'un répertoire d\'espace de travail en sandbox, et n\'importe quel travail sur l\'infrastructure multi-locataire ou partagée. Le coût d\'une mauvaise action d\'agent dans ces catégories est non borné ; le bénéfice de l\'automatisation est petit.',
+          },
+          {
+            q: 'Les agents s\'amélioreront-ils significativement en 2027 ?',
+            a: 'La fiabilité des appels d\'outils continuera à monter — attendez-vous à ce que les modèles de classe 7B deviennent des outils de tool-calling fiables en fin 2026 / début 2027. Les horizons du plan s\'allongeront de ~5 étapes fiables à 8–10. Les systèmes multi-agents n\'auront pas leur percée — les problèmes structurels (état de remise, dérive de persona, travail redondant) ne sont pas une question d\'échelle de modèle. L\'autonomie sans supervision sur les tâches réelles est improbable en 2027 ; « Cline 2.0 » — meilleures surfaces d\'outils, approbations plus lisses — est le chemin réaliste.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Connecter Ollama aux bases de données et API avec MCP : Configuration locale des agents 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr) — ce qui active les agents sous le capot ; couche de protocole pour les outils système de fichiers, base de données, navigateur, et GitHub.',
+          '[Meilleurs modèles locaux pour Tool Calling en 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=fr) — la couche modèle ; benchmarks tête-à-tête pour les outils de tool-calling recommandés ci-dessus (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr) — comparaison de harness adjacent pour le travail de type codage.',
+          '[Agents IA locaux Workflows professionnels Conformité EU](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=fr) — contexte appliqué pour les entreprises opérant sous GDPR / EU AI Act.',
+          '[Meilleurs LLMs locaux en 2026](/local-llms/best-local-llms-2026?lang=fr) — autorité modèle pour le paysage des poids ouverts plus large.',
+          '[Power Local LLM Hub](/power-local-llm) — bibliothèque de guides complète.',
+        ],
+      },
+    },
+  },
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
