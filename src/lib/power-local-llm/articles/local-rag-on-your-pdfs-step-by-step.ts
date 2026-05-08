@@ -2520,4 +2520,674 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: '30分钟内构建本地 RAG 系统（Ollama + AnythingLLM）',
+    seoTitle: '30分钟本地 RAG PDF 系统 2026: Ollama + AnythingLLM',
+    intro:
+      '在16GB RAM笔记本电脑上构建完全本地 RAG 系统的最快路径。堆栈：Ollama、Llama 3.3 8B、AnythingLLM、nomic-embed-text。总时间：从空白系统到与自己的PDF聊天仅需30分钟。',
+    metaDescription:
+      '分步教程：安装 Ollama、设置 AnythingLLM、放入 PDF、与它们对话。总耗时30分钟。已在16GB RAM笔记本电脑上测试。2026年5月。',
+    twitterDescription:
+      '30分钟内：从空白笔记本到与自己的 PDF 聊天。Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text。已在16GB RAM上测试。',
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_hardware_mentioned: ['16 GB RAM 笔记本电脑', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
+    audience: '想在自己的笔记本电脑上构建本地 RAG 系统、不依赖云 API 的开发人员和高级用户。',
+    readTime: '阅读约12分钟',
+    educationalLevel: '初级',
+    primaryTerm: '本地 RAG PDF',
+    targetKeywords: [
+      '本地 rag pdf 教程',
+      'ollama anythingllm rag',
+      '本地聊天 pdf',
+      '本地 rag 30分钟',
+      '私密 rag 笔记本电脑',
+    ],
+    leadAnswerBlock:
+      '**安装 Ollama、拉取 Llama 3.3 8B、安装 AnythingLLM、指向 Ollama、将嵌入模型切换为 nomic-embed-text、将 PDF 拖入工作区、提出问题。在16GB RAM笔记本上整个过程需要30分钟——其中大部分是模型下载。**',
+    quickAnswerTop: {
+      zh: {
+        question: '如何在30分钟内在 PDF 上构建本地 RAG 系统？',
+        answer:
+          '安装 Ollama（3分钟）、拉取 Llama 3.3 8B（8分钟，主要是下载）、安装 AnythingLLM（4分钟）、连接到 Ollama（3分钟）并将其嵌入器切换为 nomic-embed-text、将 PDF 放入工作区（5分钟用于嵌入）、测试查询（5分钟）、调整块大小（2分钟）。总计：在16GB RAM笔记本上需要30分钟。系统安装后完全离线运行。',
+        bullets: [
+          '堆栈：Ollama + Llama 3.3 8B Q4_K_M + AnythingLLM + nomic-embed-text-v1.5',
+          '硬件下限：16GB RAM、20GB 可用磁盘、现代 CPU（任何 Apple Silicon、Ryzen 5000+、Intel 11代+）',
+          '仅初始模型和应用下载需要互联网——推理完全本地运行',
+          '在 macOS、Windows 10/11 和 Linux 上运行，AnythingLLM 步骤无需管理员/root',
+          '无代码、无 Python、无向量数据库设置——AnythingLLM 内置 LanceDB',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '30分钟概览', anchor: 'overview' },
+      { label: '什么是本地 RAG？', anchor: 'what-is-local-rag' },
+      { label: '预备条件与硬件检查', anchor: 'prerequisites' },
+      { label: '步骤1：安装 Ollama', anchor: 'step-1-install-ollama' },
+      { label: '步骤2：拉取 Llama 3.3 8B', anchor: 'step-2-pull-model' },
+      { label: '步骤3：安装 AnythingLLM', anchor: 'step-3-install-anythingllm' },
+      { label: '步骤4：配置嵌入模型', anchor: 'step-4-embedding-model' },
+      { label: '步骤5：上传 PDF', anchor: 'step-5-upload-pdfs' },
+      { label: '步骤6：测试查询', anchor: 'step-6-test-queries' },
+      { label: '步骤7：调整检索参数', anchor: 'step-7-tuning' },
+      { label: '故障排除', anchor: 'troubleshooting' },
+      { label: '常见问题解答', anchor: 'faq' },
+      { label: '相关阅读', anchor: 'related-reading' },
+    ],
+    tldr: {
+      isTldr: true,
+      title: '核心要点',
+      content:
+        '本地 RAG（检索增强生成）是指在自己的计算机上离线运行整个 LLM + 向量数据库堆栈——无云 API 调用、无数据传输、无订阅。本教程涵盖完整的安装-配置-运行流程：Ollama（模型运行时）+ Llama 3.3 8B Q4_K_M（量化 LLM）+ AnythingLLM（UI 和向量索引）+ nomic-embed-text-v1.5（快速嵌入模型）。硬件需求最低：16GB RAM、20GB 磁盘、现代 CPU。安装与配置均可视化点击完成，无 Python、无命令行 SQL。端到端时间：30分钟。',
+    },
+    whatIsLocalRag: {
+      id: 'what-is-local-rag',
+      title: '什么是本地 RAG？',
+      content:
+        '检索增强生成（RAG）是一种架构，将大型语言模型（LLM）与私有文档集合相结合，以回答特定于您的文档的问题。传统的云 RAG（OpenAI API、AWS Bedrock）将您的数据发送到远程服务器进行嵌入和查询处理，这涉及成本、延迟和数据隐私风险。**本地 RAG 在您的计算机上运行所有三个步骤**：将 PDF 分割成块、为每个块计算向量嵌入、存储向量索引。当您提出问题时，系统在本地找到最相关的块，通过 LLM 传递它们，得到回答。零网络往返、零云成本、100% 数据隐私。',
+      items: [
+        '**私密：** 您的 PDF、向量和对话永远不会离开您的计算机。无云日志、无数据中心、无第三方访问。',
+        '**离线：** 初始模型下载后，整个系统在没有互联网连接的情况下运行。飞行中、现场办公、网络中断时工作。',
+        '**成本固定：** 一次性下载模型（免费），然后零每查询成本。不同于按令牌计费的云 API。',
+        '**可定制嵌入：** 选择特定于语言或领域的嵌入模型（医学文本、法律文件、代码），而不被迫使用通用云嵌入。',
+      ],
+    },
+    stackOverview: {
+      id: 'stack-overview',
+      title: '堆栈概览及为何选择这些工具',
+      content:
+        '本教程中的堆栈经过精心选择，以平衡易用性、硬件效率和准确性。',
+      subsections: [
+        {
+          heading: 'Ollama（模型运行时）',
+          text: 'Ollama 是一个单一的跨平台二进制文件，可在您的计算机上本地运行 LLM。一行 curl/installer，没有 Docker、Python 或系统配置。支持在 macOS、Windows 和 Linux 上运行 GGUF 格式的模型（这是开源 LLM 的标准量化格式）。',
+        },
+        {
+          heading: 'Llama 3.3 8B（LLM 模型）',
+          text: '为16GB RAM 系统优化选择。8B 参数大小意味着在 Q4_K_M 量化下约4.9GB；推理速度 50–150 令牌/秒（Apple Silicon 更快）。足够好的推理质量用于 RAG（LLM 在这里是合成器，不是主要信息源）。如果您有8GB，请改用 Phi-4 Mini；如果您有24GB+，请使用 Qwen 2.5 14B 获得更好的长文档推理。',
+        },
+        {
+          heading: 'AnythingLLM（UI 和向量存储）',
+          text: 'AnythingLLM Desktop 是一个开源、单人使用的 LLM 应用程序，有内置的向量数据库 (LanceDB)、文档解析和基于网络的聊天 UI。无需学习 Python、向量数据库管理或 API。放入 PDF 并询问。',
+        },
+        {
+          heading: 'nomic-embed-text-v1.5（嵌入模型）',
+          text: '一个轻量级的、完全本地的嵌入模型（约 280MB）。在 CPU 上运行很快（每秒数百个块），并针对英语和技术文档进行了优化。其他有效的替代品：Ollama 内置默认值（不太准确）或 mxbai-embed-large（更准确但更慢）。',
+        },
+      ],
+    },
+    prerequisites: {
+      id: 'prerequisites',
+      title: '预备条件与硬件检查',
+      content: '**16GB RAM、20GB 磁盘空间、互联网连接、30分钟时间。** 操作系统：macOS 12+、Windows 10/11、最新 Linux 桌面。',
+      items: [
+        '**RAM：** 16GB 是 Llama 3.3 8B Q4 + AnythingLLM + 常见桌面应用的实用最小值。8GB 可使用 Phi-4 Mini Q4 运行——请参阅步骤2的替代方案。',
+        '**磁盘：** 20GB 可用空间。Llama 3.3 8B Q4_K_M 约为 5GB、嵌入模型约为 280MB、AnythingLLM 约为 600MB、嵌入需要余地 (约每100页 10–30MB)。',
+        '**网络：** 模型拉取最低约 50 Mbps。25 Mbps 时约 16分钟；其余教程不受影响。',
+        '**权限：** AnythingLLM 无需管理员/root。Ollama 在 macOS/Linux 上安装到 `/usr/local/bin`（密码一次）或 Windows `%LOCALAPPDATA%`（无管理员）。',
+        '**文档准备：** 首先准备 5–20 个 PDF。更大的集合也可以工作，较小的集合可以更快地测试检索质量。',
+      ],
+    },
+    step1InstallOllama: {
+      id: 'step-1-install-ollama',
+      title: '步骤1：安装 Ollama（3分钟）',
+      content:
+        '**从 ollama.com/download 下载您的操作系统 Ollama 安装程序并运行。安装程序将 `ollama` CLI 添加到 PATH、启动后台服务。** 无配置选项。',
+      items: [
+        '**macOS：** 下载 `.dmg`、将 Ollama 拖到应用程序文件夹、运行一次以安装 CLI 帮助程序。服务运行时菜单栏显示 llama 图标。',
+        '**Windows：** 下载 `.exe`、运行、接受默认值。Ollama 在安装后以后台服务运行——无需单独启动。',
+        '**Linux：** 单行安装：`curl -fsSL https://ollama.com/install.sh | sh`。脚本注册 systemd unit；`sudo systemctl start ollama` 启动。',
+        '**验证：** 打开终端，运行 `ollama --version`。应显示版本字符串。如果显示命令未找到，重新启动终端以刷新 PATH。',
+      ],
+      codeBlock: 'ollama --version\n# ollama version is 0.5.x  (any 0.5+ build works for this tutorial)',
+      codeLanguage: 'bash',
+      callouts: [
+        {
+          type: 'warning',
+          text: '`ollama --version` 成功但随后步骤出现"localhost:11434 连接被拒绝"错误时，后台服务未自动启动。macOS：从应用程序启动应用。Linux：`sudo systemctl start ollama`。Windows：打开 Ollama 托盘图标。',
+        },
+      ],
+    },
+    step2PullModel: {
+      id: 'step-2-pull-model',
+      title: '步骤2：拉取 Llama 3.3 8B（8分钟）',
+      content:
+        '**在终端中运行 `ollama pull llama3.3:8b-instruct-q4_K_M`。这将下载4.9GB 量化 GGUF、注册到 Ollama。** 整个30分钟中，几乎全部是这一步。',
+      items: [
+        '**下载大小：** 约 4.9GB (Q4_K_M 量化)。50 Mbps 时约 8分钟；100 Mbps 时约 4分钟；25 Mbps 时约 16分钟。',
+        '**观看进度：** Ollama 显示百分比和速率。下载中断仍可通过重新运行继续——使用 `ollama list` 确认。',
+        '**模型烟雾测试：** 下载完成后，运行 `ollama run llama3.3:8b-instruct-q4_K_M`、询问"2+2是多少"。验证合理回答。输入 `/bye` 退出。',
+        '**低 RAM 替代：** 8GB 则 `ollama pull phi3:mini`（Phi-4 Mini，约 2.4GB）。步骤3中使用此模型名称。长文档的质量下降但可运行。',
+      ],
+      codeBlock:
+        '# 16GB RAM 推荐\nollama pull llama3.3:8b-instruct-q4_K_M\n\n# 8GB RAM 替代方案\nollama pull phi3:mini\n\n# 快速烟雾测试（退出：/bye）\nollama run llama3.3:8b-instruct-q4_K_M',
+      codeLanguage: 'bash',
+      callouts: [
+        {
+          type: 'tip',
+          text: '已有其他 Ollama 模型？`ollama list` 列出全部。保持多个模型、在 AnythingLLM 工作区设置中切换。',
+        },
+      ],
+    },
+    step3InstallAnythingLLM: {
+      id: 'step-3-install-anythingllm',
+      title: '步骤3：安装 AnythingLLM（4分钟）',
+      content:
+        '**从 anythingllm.com/download 下载 AnythingLLM Desktop、运行安装程序。应用程序启动后，创建工作区。** 无 Python、无数据库配置。',
+      items: [
+        '**macOS：** 下载 `.dmg`、拖到应用程序、首次运行时授予权限（数据库创建）。',
+        '**Windows：** 下载 `.exe`、运行、默认安装路径是用户档案文件夹。',
+        '**Linux：** `.AppImage` 下载、`chmod +x AnythingLLM-*.AppImage` 制作可执行、运行。',
+        '**创建工作区：** 首次启动时选择"创建新工作区"。命名为`local-pdfs` 或任何名称。',
+      ],
+      codeBlock:
+        '# 验证启动\n# 在浏览器中：http://localhost:3001\n# 您应该看到 AnythingLLM 登录界面\n# 首次访问无需密码',
+      codeLanguage: 'bash',
+      callouts: [
+        {
+          type: 'warning',
+          text: '如果 localhost:3001 无法访问，确保没有其他应用使用端口3001。AnythingLLM 将回退到 3002、3003 等。检查控制台输出以查看实际端口。',
+        },
+      ],
+    },
+    step4EmbeddingModel: {
+      id: 'step-4-embedding-model',
+      title: '步骤4：配置嵌入模型（2分钟）',
+      content:
+        '**进入工作区设置 → 嵌入首选项 → 选择"Ollama"作为提供程序 → 选择"nomic-embed-text"作为模型。** AnythingLLM 的默认值较差；这一步大幅改善检索准确性。',
+      items: [
+        '**为什么？** AnythingLLM 默认使用内置较低质量的嵌入。Nomic-embed-text 快速、准确，已针对技术文档优化。',
+        '**模型拉取自动化：** 首次 AnythingLLM 与 nomic-embed-text 连接时，Ollama 在后台自动拉取它（约 280MB，~2 分钟）。',
+        '**测试：** 上传一个小 PDF（步骤5）并验证返回了相关块。如果块无关，跳到步骤7的调整。',
+      ],
+      codeBlock: '# 在 AnythingLLM 中：\n# 设置 → 嵌入首选项 → 提供程序：Ollama → 模型：nomic-embed-text',
+      codeLanguage: 'text',
+      callouts: [
+        {
+          type: 'tip',
+          text: '如果您想使用 mxbai-embed-large（更准确但CPU 较慢），Ollama 也支持它。在模型下拉菜单中选择或在工作区设置中手动输入 "mxbai-embed-large"。',
+        },
+      ],
+    },
+    step5UploadPdfs: {
+      id: 'step-5-upload-pdfs',
+      title: '步骤5：上传 PDF（5分钟）',
+      content:
+        '**拖动 5–20 个 PDF 文件到 AnythingLLM 工作区窗口。系统自动解析、分割和嵌入它们。** 进度条显示完成百分比。',
+      items: [
+        '**解析：** AnythingLLM 提取文本、检测表格、识别标题。处理时间 ~100 页/分钟（取决于 PDF 复杂性和 CPU）。',
+        '**嵌入：** 完成解析后，系统计算每个块的向量。使用 nomic-embed-text 在现代 CPU 上约 400–800 块/秒；Apple Silicon 快得多。',
+        '**反馈：** 一旦某些 PDF 完成，您可以开始提问——系统不需要等待全部 PDF。但请等待至少一个完成。',
+        '**存储：** 向量存储自动保存到 ~/.anythingllm/storage (macOS/Linux) 或 %LOCALAPPDATA%\\anythingllm-desktop\\storage (Windows)。您可以随时关闭应用——重新启动时加载。',
+      ],
+      codeBlock:
+        '# AnythingLLM 中的工作区\n# 拖放 PDF、或按 "上传文档" 按钮\n# 观看嵌入进度——完成后开始提问\n# 无需等待全部完成',
+      codeLanguage: 'text',
+      callouts: [
+        {
+          type: 'warning',
+          text: '如果嵌入非常慢（<100 块/秒），您的系统可能在 swap-disk 上运行模型。关闭其他应用以释放 RAM，重试。',
+        },
+      ],
+    },
+    step6TestQueries: {
+      id: 'step-6-test-queries',
+      title: '步骤6：测试查询（5分钟）',
+      content:
+        '**在 AnythingLLM 聊天框中输入问题。系统检索相关块、通过 LLM 处理、返回答案。** 验证答案来自您的文档，不是 LLM 的训练数据。',
+      sampleQueries: [
+        {
+          question: '我的文件涉及什么主要概念？',
+          expected:
+            '系统应列出文件中提到的关键主题。如果答案过于通用（例如不提及您文件中的特定术语），请跳到步骤7进行调整。',
+        },
+        {
+          question: '[特定术语或名称]如何工作？',
+          expected: '如果您的文件定义或解释术语，系统应基于文件文本回答。',
+        },
+        {
+          question: '您在阅读的文件中有什么数字或统计数据？',
+          expected:
+            '系统应引用来自您文件的数字（价格、日期、百分比），而非通用知识。',
+        },
+      ],
+      items: [
+        '**检查引用：** 在答案下方，AnythingLLM 显示"引用"——点击以查看检索到的块。验证块与您的问题相关。',
+        '**红旗：** 如果 LLM 回答问题但块无关，则检索失败。继续步骤7进行调整。',
+        '**自信度变化：** 询问与 PDF 无关的问题（例如，"谁赢得了 1982 年世界杯？"）。LLM 可能会回答（来自训练数据），但未显示引用——这表示检索未触发。这是预期的。',
+      ],
+    },
+    step7Tuning: {
+      id: 'step-7-tuning',
+      title: '步骤7：调整检索参数（2分钟）',
+      content:
+        '**如果步骤6的答案相关性不佳，调整三个旋钮（按影响顺序）：嵌入模型、块大小和 top-K。** 每次调整后重新嵌入 PDF，然后重新测试。',
+      tuningSteps: [
+        {
+          step: 1,
+          title: '嵌入模型（最大影响）',
+          description:
+            '您已在步骤4中使用 nomic-embed-text。如果检索仍然不好，尝试 mxbai-embed-large（更精确但 CPU 更慢；在 AnythingLLM 设置中选择）。',
+          action:
+            'AnythingLLM 设置 → 嵌入首选项 → 更改模型 → 清空工作区文档、重新上传、重新嵌入、重新测试。',
+        },
+        {
+          step: 2,
+          title: '块大小和重叠',
+          description:
+            '默认：512 令牌块、0 重叠。较大的块（1000–1500）在长形式文档中工作更好。较小的块（256）在短 FAQ 或摘要中更精确。重叠（200–400）保留上下文跨越分割点。',
+          action:
+            'AnythingLLM 设置 → 工作区 → 分割选项 → 更改块大小/重叠 → 清空文档、重新上传、重新测试。',
+        },
+        {
+          step: 3,
+          title: '检索 top-K（最小影响）',
+          description:
+            '默认：向 LLM 传递 4 个块。如果系统跳过相关信息，尝试 6 或 8。更高的 K 增加噪声和令牌成本。',
+          action: 'AnythingLLM 聊天设置 → top-K 滑块 → 调整为 6 → 重新测试，无需重新嵌入。',
+        },
+      ],
+      items: [
+        '**迭代：** 每次调整后观察答案质量。您可以在 5–10 分钟内找到适合您的文档集合的设置。',
+        '**何时停止：** 一旦答案引用相关的、特定的文本块，停止调整。RAG 不是完美的——100% 检索准确性通常是不可能的。',
+      ],
+    },
+    sampleQueries: [
+      {
+        question: '我应该如何处理密码保护的 PDF？',
+        answer:
+          '使用 qpdf 解密：`qpdf --password=YOUR_PASSWORD --decrypt input.pdf output.pdf`（qpdf 是免费的、跨平台的）。然后上传解密的副本。',
+      },
+      {
+        question: '如何备份我的工作区和嵌入？',
+        answer:
+          '整个工作区保存到 ~/.anythingllm/storage（macOS/Linux）或 %LOCALAPPDATA%\\anythingllm-desktop\\storage（Windows）。复制该文件夹到备份驱动器。要恢复，只需复制回来、重新启动应用。',
+      },
+      {
+        question: '我可以在多台计算机上使用同一个工作区吗？',
+        answer:
+          '是的。将 ~/.anythingllm/storage 复制到新计算机。安装 Ollama 和 AnythingLLM Desktop、复制 storage 文件夹、启动 AnythingLLM。工作区会自动加载。',
+      },
+    ],
+    troubleshooting: {
+      id: 'troubleshooting',
+      title: '故障排除',
+      issues: [
+        {
+          title: 'Ollama 安装失败',
+          solutions: [
+            'macOS 中，Gatekeeper 可能阻止未签名的帮助程序——进入系统设置 → 隐私和安全，点击"允许"。',
+            'Windows 中，Defender SmartScreen 隔离二进制文件——右键单击 → 属性 → 解除阻止。',
+            'Linux 中，安装脚本需要 sudo（systemd unit 写入）；如果无法使用 sudo，从 github.com/ollama/ollama/releases 下载静态二进制文件、手动放入 PATH。',
+          ],
+        },
+        {
+          title: '"localhost:11434 连接被拒绝"',
+          solutions: [
+            'Ollama 后台服务未运行。macOS：从应用程序启动应用。Linux：`sudo systemctl start ollama`。Windows：打开 Ollama 托盘图标。',
+            '检查 `ollama --version` 成功——如果失败，重新安装。',
+          ],
+        },
+        {
+          title: '模型拉取非常慢',
+          solutions: [
+            '网络速度 < 50 Mbps——预计 20–30 分钟。保持连接不中断。',
+            '网络波动——`ollama pull` 可以恢复。重新运行命令；它将从中断处继续。',
+          ],
+        },
+        {
+          title: '嵌入速度非常慢',
+          solutions: [
+            '系统在 swap-disk 上运行 embedding 模型——关闭其他应用以释放 RAM，重试。',
+            '第一次 embed 会更慢（模型 lazy-load）；后续 embed 应该是 400–2000 块/秒。',
+          ],
+        },
+        {
+          title: '检索返回无关的块',
+          solutions: [
+            '步骤4中的嵌入模型——确认已切换到 nomic-embed-text。',
+            '步骤7的块大小——尝试 1000/200（而不是默认 512/0）、重新嵌入、重新测试。',
+            '文档质量——扫描的 PDF（无文本）、乱码字符或极其短的文本会导致差的检索。使用 ocrmypdf 预处理扫描的 PDF。',
+          ],
+        },
+        {
+          title: '应用程序使用过多内存',
+          solutions: [
+            '减小 Ollama 分配——停止 Ollama（macOS：退出应用；Linux：`sudo systemctl stop ollama`），编辑 Ollama 配置以限制 GPU 或 RAM，重新启动。',
+            '关闭其他应用——AnythingLLM、嵌入模型、LLM 均在 RAM 中；总使用量通常为 6–8GB。',
+          ],
+        },
+      ],
+    },
+    regionalContext: {
+      id: 'regional-context',
+      title: '数据安全、法规和中文市场',
+      subsections: [
+        {
+          heading: '中国（数据安全法）',
+          text: '中国 2021 年《数据安全法》要求敏感个人数据和重要数据的本地存储和处理。本地 RAG 完全满足这一要求——您的 PDF、向量索引和聊天历史记录始终保留在中国边界内。对于金融机构（个人财务数据）、医疗机构（患者记录）、法律事务所（客户文件）以及处理敏感商业秘密的企业，这是强制性的。无云 API、无跨境数据传输、无美国服务器。相比之下，OpenAI、Anthropic 或 Google 的云 RAG 要求将 PDF 发送到美国数据中心，违反数据安全法。对于中国企业，本地 RAG 不仅仅是隐私——这是合规强制。',
+        },
+        {
+          heading: '亚太地区（跨境数据）',
+          text: '日本（APPI）、韩国（PIPA）、新加坡（PDPA）和澳大利亚（Privacy Act）各有跨境数据传输限制。本地 RAG 规避所有这些——数据永远不会跨越边界。新加坡的多国 AI 治理倡议（MLAI）推荐本地部署敏感行业数据。对于 ASEAN、印度或太平洋地区的企业，选择本地 RAG 而不是云 API 消除了复杂的跨境合规。',
+        },
+        {
+          heading: '企业部署（财务、医疗、法律）',
+          text: '金融机构（银行、保险、投资公司）处理客户账户数据、交易历史和风险档案——所有受当地法规约束（中国人民银行数据安全指导、日本金融厅指南）。医疗机构（医院、诊所）保存患者医疗记录——中国《医疗记录暂行管理办法》要求本地化。法律事务所存储客户材料和诉讼文件——中国《律师职业操守规则》禁止不适当披露。AnythingLLM + Ollama + Llama 在您的服务器或工作站上运行，满足所有这些要求。无需云合规审计、无供应商锁定、无每月许可证费用。对于多个地点的大企业，您可以部署专用的本地 RAG 服务器，所有地点都指向同一本地向量索引——与云 RAG 成本相比节省 90%。',
+        },
+      ],
+    },
+    faqSection: {
+      id: 'faq',
+      title: '常见问题解答',
+      faqs: [
+        {
+          q: 'Ollama 安装失败时如何处理？',
+          a: 'macOS 中，Gatekeeper 可能阻止未签名帮助程序——转到系统设置 → 隐私和安全，点击"允许"。Windows 中，Defender SmartScreen 隔离二进制文件——右键单击 → 属性 → 解除阻止。Linux 中，安装脚本需要 sudo（用于 systemd unit 写入）；如果无法使用 sudo，从 github.com/ollama/ollama/releases 下载静态二进制文件、手动放入 PATH。',
+        },
+        {
+          q: '为什么嵌入步骤很慢？',
+          a: '首次 embed 时 Ollama 执行 lazy-load（磁盘速度 10–40 秒）。之后，在现代 CPU 上约 400–800 块/秒、Apple Silicon 上 2000+ 块/秒。如果持续吞吐量 < 100 块/秒，模型在 swap-disk 上运行——关闭其他应用释放 RAM、重试。',
+        },
+        {
+          q: '一次可以上传多少个 PDF？',
+          a: 'AnythingLLM 在单个拖放中接受数百个文件。实际限制是解析步骤中的 RAM：约 100 个中等 PDF（每个 50 页）峰值约 1GB。嵌入后，磁盘向量存储很小（每 100 页 10–30MB）。对于 1000+ PDF，参考本地 RAG 指南。',
+        },
+        {
+          q: '受密码保护的 PDF 可以使用吗？',
+          a: 'AnythingLLM 无法直接解密受密码保护的 PDF。先使用 `qpdf --password=YOUR_PASSWORD --decrypt input.pdf output.pdf` 解密（qpdf 是免费的、跨平台的）、上传未保护的输出。如果威胁模型需要，可以在嵌入后删除未保护的副本——嵌入不是人类可读的。',
+        },
+        {
+          q: '如果检索返回错误的块怎么办？',
+          a: '按影响顺序的三个旋钮：在步骤4中从默认嵌入器切换到 nomic-embed-text、将分块从 512/0 改为 1000/200 并重新嵌入（步骤7）、在工作区设置中将 top-K 从 4 增加到 6。之后全部如果检索仍然错误，文档需要预处理——删除页眉和页脚、规范化空格、将长 PDF 分割成每章文件。',
+        },
+        {
+          q: '我应该使用 Llama 3.3 8B 以外的模型吗？',
+          a: 'Llama 3.3 8B Q4_K_M 是 16GB 系统上 2026 年质量与 RAM 的最佳权衡。8GB RAM 使用 Phi-4 Mini Q4_K_M（约 2.4GB）。24GB+ 使用 Qwen 2.5 14B Q4 以获得更好的长文档综合。多语言工作负载中 Mistral Nemo 12B 表现比 Llama 3.3 更好。',
+        },
+        {
+          q: '稍后如何更新模型？',
+          a: '重新运行 `ollama pull llama3.3:8b-instruct-q4_K_M` 获取最新构建、重启 AnythingLLM 以重新检测模型版本。要切换到完全不同的模型，运行 `ollama pull <new-model>`、在 AnythingLLM 设置中更改 LLM 偏好下拉菜单——无需重新嵌入（嵌入依赖于嵌入器，而非模型）。',
+        },
+        {
+          q: '可以移动到另一台计算机吗？',
+          a: '可以。Ollama 模型存储在 ~/.ollama/models（macOS 和 Linux）或 %USERPROFILE%\\.ollama\\models（Windows）——复制该文件夹。AnythingLLM 工作区位于 ~/.anythingllm/storage——也复制。在新机器上安装 Ollama 和 AnythingLLM Desktop、放置复制的文件夹。工作区和嵌入会自动加载。',
+        },
+        {
+          q: '如果 PDF 是扫描的图像怎么办？',
+          a: '不能直接处理——AnythingLLM 可以提取文本但不能进行图像 OCR。预处理扫描的 PDF：`ocrmypdf input.pdf output.pdf`（跨平台、MIT 许可、使用 Tesseract）。Apple Silicon 上 `ocrmypdf -l jpn+eng` 支持 70+ 语言。OCR 后，输出 PDF 包含原始图像 + 可搜索文本层，AnythingLLM 正确提取文本。',
+        },
+        {
+          q: '如何备份文档数据库？',
+          a: 'AnythingLLM 将所有内容存储在 ~/.anythingllm/storage（macOS 和 Linux）或 %LOCALAPPDATA%\\anythingllm-desktop\\storage（Windows）。将该文件夹压缩为 tar 或 zip、复制到备份驱动器。文件夹包含原始文档、解析的块、向量索引和聊天历史。恢复就是复制回来并重新启动——无需特殊导入流程。',
+        },
+      ],
+    },
+    relatedReading: {
+      id: 'related-reading',
+      title: '相关阅读',
+      items: [
+        {
+          title: '[本地 LLM 硬件指南 2026](/power-local-llm/local-llm-hardware-guide-2026?lang=zh)',
+          description: '选择合适的硬件进行本地 RAG：16GB 笔记本电脑、桌面升级、专用服务器。',
+        },
+        {
+          title: '[Ollama 模型库](/power-local-llm/ollama-models-list?lang=zh)',
+          description: '浏览所有可用的开源量化模型——按大小、性能和用途过滤。',
+        },
+        {
+          title: '[向量数据库在本地 RAG 中的作用](/power-local-llm/vector-databases-local-rag?lang=zh)',
+          description: '了解 LanceDB、Chroma 和其他嵌入式向量存储如何加速检索。',
+        },
+        {
+          title: '[生产中的本地 RAG：扩展到 1000+ 文档](/power-local-llm/scaling-local-rag-at-scale?lang=zh)',
+          description: '超越单用户设置：多个工作区、同步、监测、成本分析。',
+        },
+      ],
+    },
+    sources: {
+      id: 'sources',
+      title: '来源和进一步阅读',
+      items: [
+        {
+          title: 'Ollama 官方',
+          url: 'https://ollama.com',
+          description: 'Ollama 下载、文档和模型库。',
+        },
+        {
+          title: 'AnythingLLM 官方',
+          url: 'https://anythingllm.com',
+          description: 'AnythingLLM Desktop 下载、文档和向量存储指南。',
+        },
+        {
+          title: 'Nomic Embed Text',
+          url: 'https://www.nomic.ai/blog/nomic-embed-text-v1-5',
+          description: '关于嵌入模型、性能基准和与其他嵌入器的比较的技术详细信息。',
+        },
+        {
+          title: 'Llama 3.3 模型卡',
+          url: 'https://huggingface.co/meta-llama/Llama-3.3-70B',
+          description: 'Meta 官方模型卡、训练数据、已知局限性和基准。',
+        },
+        {
+          title: 'GGUF 量化指南',
+          url: 'https://github.com/ggerganov/llama.cpp/discussions/4641',
+          description: '理解 Q4_K_M、Q3_K 和其他 GGUF 量化方案的详细指南。',
+        },
+      ],
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': '30分钟内构建本地 RAG 系统（Ollama + AnythingLLM）',
+      'description':
+        '在16GB RAM笔记本电脑上构建完全本地 RAG 系统的最快路径。堆栈：Ollama、Llama 3.3 8B、AnythingLLM、nomic-embed-text。总时间：从空白系统到与自己的PDF聊天仅需30分钟。',
+      'url': 'https://www.promptquorum.com/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+      'image': 'https://www.promptquorum.com/images/local-rag-pdf-hero.svg',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'inLanguage': 'zh',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'about': [
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'Llama 3.3 8B' },
+        { '@type': 'Thing', 'name': 'nomic-embed-text-v1.5' },
+        { '@type': 'Thing', 'name': '本地 RAG' },
+      ],
+      'mentions': [
+        { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+        { '@type': 'SoftwareApplication', 'name': 'AnythingLLM Desktop' },
+        { '@type': 'SoftwareApplication', 'name': 'LanceDB' },
+        { '@type': 'SoftwareApplication', 'name': 'Phi-4 Mini' },
+        { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+      ],
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '.key-takeaways'],
+      },
+      'howToSchema': {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'inLanguage': 'zh',
+        'name': '在30分钟内构建本地 RAG 系统',
+        'description': '分步指南在16GB RAM笔记本电脑上设置 Ollama、AnythingLLM 和本地 PDF RAG。',
+        'step': [
+          {
+            '@type': 'HowToStep',
+            'position': 1,
+            'name': '安装 Ollama',
+            'text': '从 ollama.com/download 下载您的操作系统 Ollama 安装程序并运行。',
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 2,
+            'name': '拉取 Llama 3.3 8B',
+            'text': '在终端中运行 `ollama pull llama3.3:8b-instruct-q4_K_M`。',
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 3,
+            'name': '安装 AnythingLLM',
+            'text': '从 anythingllm.com/download 下载 AnythingLLM Desktop 并运行安装程序。',
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 4,
+            'name': '配置嵌入模型',
+            'text': '在 AnythingLLM 工作区设置中将嵌入提供程序更改为 Ollama、模型更改为 nomic-embed-text。',
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 5,
+            'name': '上传 PDF',
+            'text': '将 5–20 个 PDF 拖到 AnythingLLM 工作区中。系统自动解析和嵌入它们。',
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 6,
+            'name': '测试查询',
+            'text': '在聊天框中输入问题。验证答案引用相关块来自您的 PDF。',
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 7,
+            'name': '调整检索参数',
+            'text': '如果检索不理想，调整嵌入模型、块大小或 top-K。重新嵌入并重新测试。',
+          },
+        ],
+      },
+      'faqSchema': {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Ollama 安装失败时如何处理？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                'macOS 中，Gatekeeper 可能阻止未签名帮助程序——转到系统设置 → 隐私和安全，点击"允许"。Windows 中，Defender SmartScreen 隔离二进制文件——右键单击 → 属性 → 解除阻止。Linux 中，安装脚本需要 sudo（用于 systemd unit 写入）；如果无法使用 sudo，从 github.com/ollama/ollama/releases 下载静态二进制文件、手动放入 PATH。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '为什么嵌入步骤很慢？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                '首次 embed 时 Ollama 执行 lazy-load（磁盘速度 10–40 秒）。之后，在现代 CPU 上约 400–800 块/秒、Apple Silicon 上 2000+ 块/秒。如果持续吞吐量 < 100 块/秒，模型在 swap-disk 上运行——关闭其他应用释放 RAM、重试。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '一次可以上传多少个 PDF？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                'AnythingLLM 在单个拖放中接受数百个文件。实际限制是解析步骤中的 RAM：约 100 个中等 PDF（每个 50 页）峰值约 1GB。嵌入后，磁盘向量存储很小（每 100 页 10–30MB）。对于 1000+ PDF，参考本地 RAG 指南。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '受密码保护的 PDF 可以使用吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                'AnythingLLM 无法直接解密受密码保护的 PDF。先使用 `qpdf --password=YOUR_PASSWORD --decrypt input.pdf output.pdf` 解密（qpdf 是免费的、跨平台的）、上传未保护的输出。如果威胁模型需要，可以在嵌入后删除未保护的副本——嵌入不是人类可读的。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如果检索返回错误的块怎么办？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                '按影响顺序的三个旋钮：在步骤4中从默认嵌入器切换到 nomic-embed-text、将分块从 512/0 改为 1000/200 并重新嵌入（步骤7）、在工作区设置中将 top-K 从 4 增加到 6。之后全部如果检索仍然错误，文档需要预处理——删除页眉和页脚、规范化空格、将长 PDF 分割成每章文件。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我应该使用 Llama 3.3 8B 以外的模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                'Llama 3.3 8B Q4_K_M 是 16GB 系统上 2026 年质量与 RAM 的最佳权衡。8GB RAM 使用 Phi-4 Mini Q4_K_M（约 2.4GB）。24GB+ 使用 Qwen 2.5 14B Q4 以获得更好的长文档综合。多语言工作负载中 Mistral Nemo 12B 表现比 Llama 3.3 更好。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '稍后如何更新模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                '重新运行 `ollama pull llama3.3:8b-instruct-q4_K_M` 获取最新构建、重启 AnythingLLM 以重新检测模型版本。要切换到完全不同的模型，运行 `ollama pull <new-model>`、在 AnythingLLM 设置中更改 LLM 偏好下拉菜单——无需重新嵌入（嵌入依赖于嵌入器，而非模型）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '可以移动到另一台计算机吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                '可以。Ollama 模型存储在 ~/.ollama/models（macOS 和 Linux）或 %USERPROFILE%\\.ollama\\models（Windows）——复制该文件夹。AnythingLLM 工作区位于 ~/.anythingllm/storage——也复制。在新机器上安装 Ollama 和 AnythingLLM Desktop、放置复制的文件夹。工作区和嵌入会自动加载。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如果 PDF 是扫描的图像怎么办？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                '不能直接处理——AnythingLLM 可以提取文本但不能进行图像 OCR。预处理扫描的 PDF：`ocrmypdf input.pdf output.pdf`（跨平台、MIT 许可、使用 Tesseract）。Apple Silicon 上 `ocrmypdf -l jpn+eng` 支持 70+ 语言。OCR 后，输出 PDF 包含原始图像 + 可搜索文本层，AnythingLLM 正确提取文本。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何备份文档数据库？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text':
+                'AnythingLLM 将所有内容存储在 ~/.anythingllm/storage（macOS 和 Linux）或 %LOCALAPPDATA%\\anythingllm-desktop\\storage（Windows）。将该文件夹压缩为 tar 或 zip、复制到备份驱动器。文件夹包含原始文档、解析的块、向量索引和聊天历史。恢复就是复制回来并重新启动——无需特殊导入流程。',
+            },
+          },
+        ],
+      },
+      'breadcrumbSchema': {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '首页',
+            'item': 'https://www.promptquorum.com',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '本地 LLM 能力',
+            'item': 'https://www.promptquorum.com/zh/power-local-llm',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '30分钟内构建本地 RAG 系统',
+            'item': 'https://www.promptquorum.com/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+          },
+        ],
+      },
+    },
+  },
 }
