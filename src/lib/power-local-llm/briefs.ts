@@ -708,4 +708,226 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     mobileAngle: 'EU business buyers (DPOs, compliance leads) often vet on phone before forwarding to legal. Lead with the workflow × compliance matrix; lawful-basis answers must be skim-readable.',
   },
+
+  // ─── CATEGORY 6 — Mobile & Edge LLMs ─────────────────────────────────────
+
+  'best-local-llm-apps-iphone-2026': {
+    title: 'Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)',
+    meta: '5 iPhone apps that run real LLMs on-device. Tested on iPhone 16 Pro and 17 Pro. Speed, privacy, model selection compared. Plus 3 paid picks.',
+    articleType: 'Comparison + decision (mobile-native)',
+    serpIntent: 'List-dominant — Google shows "best apps" lists for mobile queries; App Store rankings appear too',
+    ctrRule: 'Specific platform (iPhone) + outcome (Best) + freshness (2026) + tension (Without WiFi)',
+    writingBrief:
+      'Mobile-native decision page. Test 5 iPhone apps (PocketPal AI, Private LLM, MLC Chat, LLM Farm, Apple Intelligence local mode) on iPhone 16 Pro and iPhone 17 Pro. Score: tokens/second on Apple Silicon, model library, RAM management, privacy posture (telemetry yes/no), iOS integration (Shortcuts, Siri). Cover Apple Neural Engine utilization. List which models actually run smoothly per device tier. Reference Apple Silicon facts (A18/A19 in iPhone 16/17 series). Pure mobile-first formatting — readers ARE on iPhone reading this. Strong FAQ on battery drain, thermal throttling, App Store availability, sideloading. Sources: Apple Neural Engine documentation, App Store listings for each tested app, MLC LLM iOS benchmarks.',
+    internalLinks: [
+      { ref: 'best-local-llm-apps-android-2026', reasoning: 'sister article for Android readers' },
+      { ref: 'run-ai-on-tablet-ipad-android', reasoning: 'adjacent platform for tablet readers' },
+      { ref: 'mobile-llm-models-phi4-gemma-smollm', reasoning: 'model side of the equation' },
+    ],
+    externalLinks: [
+      { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority' },
+      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory reference for app listings' },
+    ],
+    structure: {
+      label: 'iPhone app comparison table (4-col mobile-friendly)',
+      headers: ['App', 'Tokens/sec (17 Pro)', 'Privacy', 'Best for'],
+      rows: [
+        ['PocketPal AI', '', '', ''],
+        ['Private LLM', '', '', ''],
+        ['MLC Chat', '', '', ''],
+        ['LLM Farm', '', '', ''],
+        ['Apple Intelligence', '', '', ''],
+      ],
+    },
+    faqSeeds: [
+      'Can iPhone really run a 7B model?',
+      'Does local AI drain my battery?',
+      'Will my iPhone get hot using local AI?',
+      'Can I use Siri with a local model?',
+      'Do these apps work on iPhone SE / older iPhones?',
+      'Can I sync chat history between iPhone and Mac?',
+      'Are these apps available outside the App Store?',
+      'Do any of them require jailbreak?',
+      'Can I use local AI in iOS Shortcuts?',
+      'How does local AI compare to ChatGPT app on iPhone?',
+    ],
+    mobileAngle:
+      'This article IS mobile content. Readers are on iPhone reading it. Pure mobile-first throughout. Lead with the "if you have iPhone 14 or newer, install X" answer in the LAB.',
+  },
+
+  'best-local-llm-apps-android-2026': {
+    title: 'Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones',
+    meta: 'Pixel 9 Pro, Galaxy S25 Ultra, OnePlus 13 tested. 6 apps that run LLMs offline on Android. Different winners for stock vs power users.',
+    articleType: 'Comparison + decision (mobile-native)',
+    serpIntent: 'List-dominant',
+    ctrRule: 'Specific platform (Android) + count (6) + freshness (2026) + proof (Real Phones)',
+    writingBrief:
+      'Mobile-native Android version. Test 6 Android apps (MLC Chat, Maid, Layla, Ollama Android via Termux, Private AI, PocketPal AI) on flagship Android devices. Cover Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5 for inference. Address Android fragmentation (storage, RAM allocation, background limits). Score apps on: model library, NPU utilization, UI quality, integration with Android share sheet, offline reliability. Position differently from iPhone article — Android users care more about customization and Termux/sideload paths. Pure mobile-first format. Strong on real device benchmarks across all three major chipset families. Sources: Snapdragon 8 Gen 4 NPU documentation, MediaTek Dimensity 9400 APU specs, Tensor G5 specs (Pixel 9 series), each app\'s GitHub repo or Play Store listing.',
+    internalLinks: [
+      { ref: 'best-local-llm-apps-iphone-2026', reasoning: 'sister article for iPhone readers' },
+      { ref: 'run-ai-on-tablet-ipad-android', reasoning: 'adjacent platform for tablet readers' },
+      { ref: 'mobile-llm-models-phi4-gemma-smollm', reasoning: 'model side of the equation' },
+    ],
+    externalLinks: [
+      { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority' },
+      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory reference for app listings' },
+    ],
+    structure: {
+      label: 'Android app comparison table (4-col mobile-friendly)',
+      headers: ['App', 'Tokens/sec (S25 Ultra)', 'NPU support', 'Best for'],
+      rows: [
+        ['MLC Chat', '', '', ''],
+        ['Maid', '', '', ''],
+        ['Layla', '', '', ''],
+        ['Ollama Android (Termux)', '', '', ''],
+        ['Private AI', '', '', ''],
+        ['PocketPal AI', '', '', ''],
+      ],
+    },
+    faqSeeds: [
+      'Can a Pixel 9 Pro run a 7B model?',
+      'Do these apps use the Snapdragon NPU?',
+      'Can I run local AI on a Samsung S22?',
+      'Do I need to root my phone for local AI?',
+      'Can I use these apps with Termux?',
+      'How do they handle Android background limits?',
+      'Can I share local AI output to other apps?',
+      'Do these support Android Auto?',
+      'Which app handles model storage best?',
+      'Can I run multiple models simultaneously?',
+    ],
+    mobileAngle:
+      'Pure mobile content. Readers ARE on Android. Address Pixel vs Samsung vs OnePlus chipset differences explicitly — Android users care about chipset specifics in a way iPhone users don\'t.',
+  },
+
+  'run-ai-on-tablet-ipad-android': {
+    title: 'Run Local AI on Your Tablet: iPad and Android Setup Guide (2026)',
+    meta: 'iPad Pro M4, Galaxy Tab S10 Ultra, OnePlus Pad 2. 4 tablets tested for local AI. One handles 13B models, others struggle. Verdict.',
+    articleType: 'Comparison (cross-platform)',
+    serpIntent: 'Mixed — guide and comparison; thinner competition than phone-specific articles',
+    ctrRule: 'Specific platforms (iPad + Android) + outcome (Setup Guide) + freshness (2026) + tension (One handles 13B, others struggle)',
+    writingBrief:
+      'Tablet-specific decision page bridging mobile and desktop. Test local AI on 4 tablets (iPad Pro M4 with 16GB RAM, Galaxy Tab S10 Ultra, OnePlus Pad 2, Pixel Tablet). Cover: which model sizes actually fit, multitasking impact, keyboard/cursor app compatibility, accessory ecosystems. Highlight iPad Pro\'s unique advantage (16GB RAM with M4 = real LLM workstation). Address use cases: writing on the couch, RAG for students, offline travel companion. Reference Apple Silicon details (M4 still in iPad as of May 2026; M5 expected mid-2026). Touch-friendly tables. Sources: Apple M4 unified memory documentation, Galaxy Tab S10 Ultra specs, OnePlus Pad 2 specs, Pixel Tablet specs.',
+    internalLinks: [
+      { ref: 'best-local-llm-apps-iphone-2026', reasoning: 'adjacent iOS platform' },
+      { ref: 'best-local-llm-apps-android-2026', reasoning: 'adjacent Android platform' },
+      { ref: 'mobile-llm-models-phi4-gemma-smollm', reasoning: 'model layer for tablets' },
+      { ref: 'voice-assistant-local-mobile-offline', reasoning: 'workflow extension on tablet' },
+    ],
+    externalLinks: [
+      { url: '/local-llms/best-laptops-local-llm', reasoning: 'laptop alternative reference' },
+      { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority' },
+    ],
+    structure: {
+      label: 'Tablet comparison table (4-col mobile-friendly)',
+      headers: ['Tablet', 'RAM', 'Max model', 'Best for'],
+      rows: [
+        ['iPad Pro M4 (16GB)', '16 GB unified', '13B Q4', 'Real LLM workstation'],
+        ['Galaxy Tab S10 Ultra', '12–16 GB', '7B Q4', 'Android creative work'],
+        ['OnePlus Pad 2', '12 GB', '7B Q4', 'Budget tablet AI'],
+        ['Pixel Tablet', '8 GB', '3B Q4', 'Light chat use'],
+      ],
+    },
+    faqSeeds: [
+      'Can iPad Pro really replace a laptop for local AI?',
+      'Do tablets thermal-throttle during AI inference?',
+      'Which keyboard works best for AI tablet use?',
+      'Can I run SillyTavern on iPad?',
+      'Does the Apple Pencil help with AI workflows?',
+      'Can a tablet handle long-form RAG?',
+      'How does battery life look during heavy AI use?',
+      'Can I use external displays with tablet AI?',
+      'Do these tablets support stylus + AI together?',
+      'Is a tablet better than a phone for local AI?',
+    ],
+    mobileAngle:
+      'Tablet readers research from tablet — touch-friendly UI critical. iPad Pro section is the strongest — unified memory architecture means it actually competes with laptops, unlike Android tablets.',
+  },
+
+  'mobile-llm-models-phi4-gemma-smollm': {
+    title: 'Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
+    meta: 'Phone-friendly models tested on iPhone and Android. Phi-4 Mini, Gemma 3 4B, SmolLM 2 1.7B benchmarked for speed and quality.',
+    articleType: 'Comparison (model benchmark)',
+    serpIntent: 'Comparison-dominant',
+    ctrRule: 'Conflict (vs vs) + outcome (Best) + freshness (2026) + scope (Mobile)',
+    writingBrief:
+      'Model decision page for mobile constraints. Benchmark 6 small models (Phi-4 Mini 3.8B, Gemma 3 1B/4B, SmolLM 2 1.7B, Qwen 2.5 1.5B, Llama 3.2 3B) on identical mobile hardware. Measure: tokens/second, memory footprint, quality on mobile-typical tasks (chat, summarize, translate, draft). Include quantization recommendations (Q4_K_M usually best for mobile). Acknowledge the speed-quality tradeoff. Show clear winners per phone tier (flagship vs mid-range vs budget). This is the model companion article to the iPhone and Android app articles. Sources: Phi-4 Mini Microsoft technical report, Gemma 3 Google DeepMind report, SmolLM 2 HuggingFace model card, Qwen 2.5 Alibaba report.',
+    internalLinks: [
+      { ref: 'best-local-llm-apps-iphone-2026', reasoning: 'model + app pairing for iPhone' },
+      { ref: 'best-local-llm-apps-android-2026', reasoning: 'model + app pairing for Android' },
+      { ref: 'voice-assistant-local-mobile-offline', reasoning: 'niche application of mobile models' },
+    ],
+    externalLinks: [
+      { url: '/local-llms/llm-quantization-explained', reasoning: 'quantization authority' },
+      { url: '/local-llms/best-local-llms-2026', reasoning: 'general model authority' },
+    ],
+    structure: {
+      label: 'Mobile model comparison table (4-col mobile-friendly)',
+      headers: ['Model', 'Size', 'Tokens/sec (17 Pro)', 'Best for'],
+      rows: [
+        ['Phi-4 Mini', '3.8B', '', 'Smartest small model'],
+        ['Gemma 3 4B', '4B', '', 'Balanced default'],
+        ['Gemma 3 1B', '1B', '', 'Older phones'],
+        ['SmolLM 2', '1.7B', '', 'Fastest tokens/sec'],
+        ['Qwen 2.5', '1.5B', '', 'Best multilingual'],
+        ['Llama 3.2', '3B', '', 'Strongest 3B option'],
+      ],
+    },
+    faqSeeds: [
+      'Which mobile model is fastest on iPhone?',
+      'Does Phi-4 Mini really beat 7B models on phone?',
+      'Can SmolLM run on a 4-year-old phone?',
+      'Which model handles translation best on mobile?',
+      'Do I need a flagship phone to run these well?',
+      'Which model has the smallest battery drain?',
+      'Can mobile models handle multi-turn conversations?',
+      'Do these models work with voice input?',
+      'Which is best for offline travel use?',
+      'Are mobile models still useful in 2027?',
+    ],
+    mobileAngle:
+      'Pure mobile content. Tables-heavy because mobile readers can extract winners from tables alone. Per-tier verdict (flagship / mid-range / budget) prominent.',
+  },
+
+  'voice-assistant-local-mobile-offline': {
+    title: 'Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud)',
+    meta: 'Fully offline voice AI on iPhone and Android. Whisper local transcription + on-device LLM. Setup, latency, privacy guarantees.',
+    articleType: 'Tutorial + decision',
+    serpIntent: 'Guide-dominant — first-mover topic; thin competition',
+    ctrRule: 'Specific stack (Whisper + Local LLM) + outcome (Voice Assistant) + tension (No Cloud)',
+    writingBrief:
+      'Forward-looking decision page on mobile voice AI. Stack: Whisper.cpp (mobile builds) + on-device LLM (Phi-4 Mini, Gemma 3) + local TTS (Piper or system TTS). Setup guides for iPhone (LLM Farm + Whisper Transcription) and Android (Layla + Whisper Android). Measure: speech-to-response latency, accuracy in noisy environments, battery drain over 1 hour. Address privacy guarantees (truly offline vs "cloud-assisted"). Include Shortcuts/Tasker integrations for hands-free use. Position as "Siri replacement that respects your privacy." Latency numbers prominent — speech-to-first-token under 2 seconds is the threshold for "feels usable." Sources: Whisper.cpp GitHub + mobile build docs, Piper TTS GitHub, iOS LLM Farm GitHub, Android Layla documentation.',
+    internalLinks: [
+      { ref: 'best-local-llm-apps-iphone-2026', reasoning: 'base layer app for iOS pipeline' },
+      { ref: 'best-local-llm-apps-android-2026', reasoning: 'base layer app for Android pipeline' },
+      { ref: 'mobile-llm-models-phi4-gemma-smollm', reasoning: 'model layer for the voice stack' },
+    ],
+    externalLinks: [
+      { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority' },
+      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory for Whisper.cpp and Piper TTS entries' },
+    ],
+    structure: {
+      label: 'Voice assistant stack comparison (4-col mobile-friendly)',
+      headers: ['Stack', 'Latency', 'Battery (1 hr)', 'Best for'],
+      rows: [
+        ['iPhone (LLM Farm + Whisper)', '', '', 'iOS users'],
+        ['Android (Layla + Whisper)', '', '', 'Android users'],
+        ['Hybrid (phone STT + remote Ollama)', '', '', 'Home network users'],
+      ],
+    },
+    faqSeeds: [
+      'How accurate is local Whisper vs cloud Whisper?',
+      'Can a local voice assistant replace Siri completely?',
+      'Does this work with CarPlay or Android Auto?',
+      'How do I trigger it hands-free?',
+      'Can it handle multi-language conversations?',
+      'Does background noise break local STT?',
+      'How do I integrate with smart home devices locally?',
+      'Can I customize the voice (TTS)?',
+      'Does battery life take a major hit?',
+      'Will iOS 19 / Android 16 break this setup?',
+    ],
+    mobileAngle:
+      'Pure mobile. Lead with the "5-minute setup" path for iOS + Android. Latency numbers prominent — speech-to-first-token under 2 seconds is the threshold for "feels usable."',
+  },
 }
