@@ -10,6 +10,7 @@ import { article as a_autonomous_local_agents_actually_work } from './articles/a
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
+import { article as a_best_local_llm_apps_android_2026 } from './articles/best-local-llm-apps-android-2026'
 import { article as a_best_local_llm_apps_iphone_2026 } from './articles/best-local-llm-apps-iphone-2026'
 import { article as a_best_local_llm_creative_writing_2026 } from './articles/best-local-llm-creative-writing-2026'
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
@@ -42,6 +43,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-embedding-models-local-rag-2026':   a_best_embedding_models_local_rag_2026,
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
+  'best-local-llm-apps-android-2026':       a_best_local_llm_apps_android_2026,
   'best-local-llm-apps-iphone-2026':        a_best_local_llm_apps_iphone_2026,
   'best-local-llm-creative-writing-2026':   a_best_local_llm_creative_writing_2026,
   'best-local-models-tool-calling-2026':    a_best_local_models_tool_calling_2026,
