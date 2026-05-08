@@ -1,6 +1,6 @@
 // Power Local LLM — Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples
 // Slug: chat-with-1000-pdfs-locally
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// Complete localization: EN, DE, FR, JA, ZH
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
