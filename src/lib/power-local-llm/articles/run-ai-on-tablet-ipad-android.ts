@@ -777,4 +777,393 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Mobile & Edge LLMs',
+    title: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+    seoTitle: 'Exécuter l\'IA localement sur iPad et tablette Android 2026',
+    intro:
+      'L\'exécution d\'une IA locale sur une tablette est pratique en 2026 sur les iPad haut de gamme et les appareils Android disposant de 8 GB+ de RAM. Ce guide couvre les options : inférence sur appareil avec Pocket Paladin et LLM Farm sur iPad, Termux + Ollama sur Android, et l\'alternative de connexion à distance (connecter une tablette à un Mac ou PC exécutant Ollama via Wi-Fi local) pour les appareils ne pouvant pas exécuter l\'inférence localement.',
+    metaDescription:
+      'Exécutez l\'IA localement sur iPad ou Android en 2026. Applications d\'inférence locale, Termux + Ollama sur Android, connexion à distance vers Mac ou PC expliqués.',
+    twitterDescription:
+      'Exécutez l\'IA sur votre iPad ou tablette Android en 2026 : inférence locale (Pocket Paladin, LLM Farm, Termux+Ollama), connexion à distance vers Mac/PC, sélection de modèles par appareil.',
+    current_models_mentioned: [
+      'Phi-4 Mini',
+      'Llama 3.2 3B',
+      'Qwen3 1.7B',
+      'Gemma 3 4B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'iPad Pro M4 16 GB',
+      'iPad Air M2 8 GB',
+      'Samsung Galaxy Tab S10+ 12 GB',
+      'Google Pixel Tablet 8 GB',
+    ],
+    audience:
+      'Utilisateurs de tablettes souhaitant exécuter l\'IA localement ou se connecter à une configuration LLM locale depuis leur iPad ou appareil Android — sans dépendre des services d\'IA cloud.',
+    readTime: '10 min de lecture',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'exécuter l\'IA sur tablette',
+    targetKeywords: [
+      'exécuter l\'IA localement sur iPad',
+      'exécuter un LLM local sur tablette Android',
+      'connexion à distance Ollama iPad',
+      'Termux Ollama Android',
+      'LLM Farm iPad',
+      'Pocket Paladin iOS LLM',
+    ],
+    leadAnswerBlock:
+      '**L\'exécution d\'une IA locale sur une tablette offre deux modes distincts : l\'inférence sur appareil (le modèle s\'exécute directement sur le processeur de la tablette) et la connexion à distance (la tablette affiche un Mac ou PC exécutant Ollama à la maison). L\'inférence locale fonctionne sur iPad Pro M4 (16 GB, exécute Phi-4 Mini et Llama 3.2 3B en temps réel), iPad Air M2 (8 GB, exécute les modèles 3B correctement) et les appareils Android haut de gamme avec 8 GB+ de RAM (Samsung Galaxy Tab S10+, via Termux + Ollama). La connexion à distance via Open WebUI ou une interface chat simple à l\'IP locale fonctionne sur toute tablette, tout OS — elle transforme votre tablette en interface tactile pour une machine plus puissante. Pour la plupart, la connexion à distance est préférable : la machine exécute le modèle 70B, la tablette fournit l\'interface pratique.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Pouvez-vous exécuter un modèle d\'IA local sur un iPad ou une tablette Android ?',
+        answer:
+          'Oui, sur les appareils haut de gamme. iPad Pro M4 avec 16 GB de RAM exécute Phi-4 Mini (3.8B) et Llama 3.2 3B en temps réel avec LLM Farm ou Pocket Paladin. iPad Air M2 (8 GB) exécute les modèles 3B correctement. Les tablettes Android avec 8 GB+ de RAM (Samsung Galaxy Tab S10+) peuvent exécuter Phi-4 Mini et Qwen3 1.7B via Termux + Ollama. Pour les tablettes avec moins de RAM, l\'alternative est la connexion à distance : connectez-vous à un Mac ou PC exécutant Ollama sur votre réseau domestique via Open WebUI dans le navigateur.',
+        bullets: [
+          'iPad Pro M4 (16 GB) — exécute Phi-4 Mini et Llama 3.2 3B localement en temps réel avec LLM Farm ou Pocket Paladin.',
+          'iPad Air M2 (8 GB) — exécute les modèles 3B à vitesse utilisable ; les modèles 7B sont lents mais fonctionnels.',
+          'Tablettes Android (8 GB+ RAM) — Termux + Ollama exécute Phi-4 Mini et Qwen3 1.7B localement.',
+          'Connexion à distance — toute tablette, toute RAM : connectez-vous Mac ou PC local via Open WebUI navigateur.',
+          'Meilleur modèle on-device : Phi-4 Mini (3.8B, ~2.7 GB) ou Qwen3 1.7B pour appareils limités.',
+          'Connexion à distance recommandée pour 7B+ — machine locale plus rapide que toute tablette.',
+          'SillyTavern et RisuAI ont des UI réactives mobiles fonctionnant Safari / Android Chrome.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Faits rapides', anchor: '#quick-facts' },
+      { label: 'Deux modes : inférence locale vs. connexion à distance', anchor: '#two-modes' },
+      { label: 'iPad : inférence locale', anchor: '#ipad-on-device' },
+      { label: 'Android : inférence locale', anchor: '#android-on-device' },
+      { label: 'Connexion à distance à un ordinateur local', anchor: '#remote-connection' },
+      { label: 'Recommandations de modèles par appareil', anchor: '#models' },
+      { label: 'Interfaces avant pour IA locale', anchor: '#frontends' },
+      { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**L\'inférence locale fonctionne sur iPad Pro M4 (16 GB) et Android haut de gamme (8 GB+).** Au-dessous, génération trop lente. Connexion à distance préférable pour la plupart.',
+          '**La connexion à distance est l\'approche recommandée.** Connectez tablette (RAM quelconque, OS quelconque) à Mac ou PC exécutant Ollama localement. Machine exécute 70B ; tablette affiche interface chat tactile. Aucun téléchargement modèle requis.',
+          '**LLM Farm et Pocket Paladin sont les options natives iPad.** Les deux exécutent modèles GGUF localement sur Apple Silicon. LLM Farm plus d\'options ; Pocket Paladin plus simple.',
+          '**Termux + Ollama est l\'approche Android.** Demande aisance terminal, fonctionne tout appareil 8 GB+ RAM. Ollama dans Termux, modèle sur localhost:11434.',
+          '**Meilleur modèle pour la plupart : Phi-4 Mini (3.8B).** Fonctionne 6 GB+ RAM ; sortie utilisable ; téléchargement 5–10 minutes.',
+          '**Open WebUI dans navigateur tablette est l\'interface distance la plus simple.** Ouvrez http://[IP-locale]:3000 — aucune app, aucune config, chat complet.',
+          '**SillyTavern a une UI réactive mobile.** Jeu rôle tablette : accédez SillyTavern hébergé localement via navigateur ; RisuAI meilleur support natif mobile.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Faits rapides',
+        items: [
+          '**Apps iPad :** LLM Farm (gratuit, open-source), Pocket Paladin (gratuit + payant), PocketLLM (ancien).',
+          '**Approche Android :** Termux + Ollama (CLI) ou MNN LLM (app, support limité).',
+          '**Connexion à distance :** tout navigateur tablette → Open WebUI ou interface chat à IP locale.',
+          '**Minimum on-device :** iPad Air M2 (8 GB) pour 3B ; iPad Pro M4 (16 GB) pour 7B–8B.',
+          '**Minimum Android :** appareil 8 GB RAM (Galaxy Tab S10+, OnePlus Pad 2).',
+          '**Meilleur modèle on-device :** Phi-4 Mini (3.8B, 2.7 GB) ; Qwen3 1.7B pour très limité.',
+          '**Vitesse connexion à distance :** dépend qualité Wi-Fi et vitesse génération machine locale.',
+        ],
+      },
+      twoModes: {
+        id: 'two-modes',
+        title: 'Deux modes : inférence locale vs. connexion à distance',
+        content:
+          '**La décision clé n\'est pas quelle app utiliser — c\'est d\'exécuter inférence sur tablette ou machine plus puissante.** Chaque mode a exigences matérielles et plafonds de performance distincts.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'IA sur tablette : deux modes — inférence locale (modèle sur processeur tablette, 3B–7B) ou connexion à distance (tablette navigateur affichant Mac/PC exécutant grands modèles via Ollama et Open WebUI).',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Mode on-device : modèle sur tablette, hors ligne. Limité petits modèles (3B, 7B haut de gamme). Mode distant : Mac/PC exécute Ollama + 70B, tablette affiche chat navigateur — qualité 70B complète à l\'écran, machine doit être allumée même Wi-Fi. Choisissez distance sauf besoin hors ligne spécifique.',
+          },
+        ],
+        columns: ['Facteur', 'Inférence locale', 'Connexion à distance'],
+        rows: [
+          { 'Facteur': 'Limite modèle', 'Inférence locale': '3B–8B (iPad Pro M4) ; 3B (plupart)', 'Connexion à distance': 'Illimitée — machine exécute tout' },
+          { 'Facteur': 'Utilisation hors ligne', 'Inférence locale': 'Oui — sans Wi-Fi', 'Connexion à distance': 'Non — demande Wi-Fi maison' },
+          { 'Facteur': 'Vitesse génération', 'Inférence locale': 'Modérée (10–25 tok/sec iPad Pro M4)', 'Connexion à distance': 'Dépend machine (jusqu\'à 40+ tok/sec)' },
+          { 'Facteur': 'Stockage tablette', 'Inférence locale': '2–10 GB par modèle', 'Connexion à distance': 'Aucun — modèle sur machine' },
+          { 'Facteur': 'Complexité setup', 'Inférence locale': 'Basse (app + fichier modèle)', 'Connexion à distance': 'Basse–modérée (Ollama + Open WebUI)' },
+          { 'Facteur': 'Idéal pour', 'Inférence locale': 'Voyage, hors ligne, 3B', 'Connexion à distance': 'Qualité prioritaire, 70B, commodité' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si vous avez Mac ou PC pouvant exécuter Ollama, commencez par connexion à distance. Meilleure qualité immédiatement, sans stocker modèles tablette. Ajoutez on-device plus tard si besoin hors ligne.',
+          },
+        ],
+      },
+      ipadOnDevice: {
+        id: 'ipad-on-device',
+        title: 'iPad : inférence locale',
+        content:
+          '**iPad Pro M4 (16 GB) est le seul iPad exécutant modèles 7B à vitesse confortable.** iPad Air M2 (8 GB) et M3 exécutent 3B correctement. [iPhone 8 GB (iPhone 15 Pro Max) exécute aussi petits modèles](/fr/power-local-llm/best-local-llm-apps-iphone-2026) via LLM Farm.',
+        items: [
+          '**LLM Farm** (gratuit, open-source) : télécharge GGUF Hugging Face, llama.cpp Apple Silicon. Meilleure performance iOS native. Chat et completion. App Store.',
+          '**Pocket Paladin** (gratuit + payant) : téléchargements curés, UI propre, plus simple démarrage. Tier gratuit = 3B ; payant déverrouille gros modèles.',
+          '**Importer modèles :** LLM Farm, bibliothèque → "Ajouter URL" → URL Hugging Face GGUF. Ou Files pour transférer. Stockage local app — pas iCloud.',
+          '**Gestion RAM iPad :** iOS gère RAM aggressivement. Fermez autres apps avant 7B sur 8 GB — iOS supprimera si autre app demande mémoire. Sur 16 GB rare.',
+          '**Vitesse attendue :** iPad Pro M4 : Phi-4 Mini ~20 tok/sec, Llama 3.2 3B ~30 tok/sec, Gemma 3 4B ~18 tok/sec. iPad Air M2 : 3B ~12–18 tok/sec ; 7B ~5–8 tok/sec.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Ne tentez pas 7B sur iPad 8 GB pour chat temps réel. À 5–8 tok/sec, chaque réponse 15–30 sec. Utilisez 3B sur 8 GB ; passez 16 GB ou connexion à distance pour 7B+.',
+          },
+        ],
+      },
+      androidOnDevice: {
+        id: 'android-on-device',
+        title: 'Android : inférence locale',
+        content:
+          '**Inférence Android utilise [Termux + Ollama](/fr/power-local-llm/best-local-llm-apps-android-2026) — Termux émulateur Linux terminal exécutant Ollama nativement.** Plus technique qu\'app iPad mais accès complet écosystème Ollama.',
+        numberedItems: [
+          'Installez Termux de F-Droid (pas Play Store — vieux, dépendances manquent).',
+          'Dans Termux : `pkg update && pkg install curl`',
+          'Téléchargez Ollama ARM : `curl -fsSL https://ollama.com/install.sh | sh` — ARM64 compatible plupart Android.',
+          'Tirez modèle : `ollama pull phi4-mini` ou `ollama pull qwen3:1.7b`.',
+          'Démarrez serveur : `ollama serve` (gardez session active).',
+          'Chat Termux : `ollama run phi4-mini` — ou navigateur `http://localhost:11434`. Installez app chat connectant endpoint local.',
+        ],
+        items: [
+          '**Appareils compatibles 3B+ :** 8 GB RAM min (Galaxy Tab S10+, OnePlus Pad 2, Xiaomi Pad 7 Pro). 6 GB : Qwen3 1.7B seulement.',
+          '**Pixel Tablet non recommandé :** Tensor G2 beaucoup plus lent Snapdragon 8 Gen 3, ~4–7 tok/sec Phi-4 Mini (trop lent). Utilisateurs Pixel : connexion à distance.',
+          '**Snapdragon 8 Gen 3 et Dimensity 9300** puces Android les plus rapides 2026. ~15–25 tok/sec 1.7B ; ~8–12 tok/sec 3B.',
+          '**Stockage modèle :** Android pas mémoire unifiée — RAM sans GPU plupart configs. GPU demande Termux:NVIDIA ou Vulkan spécifique.',
+          '**Apps alternatives :** MNN LLM (Alibaba, gratuit, plus simple) sélection limitée. AI Runner, llamafile aussi disponibles.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installez Termux:Widget, créez raccourci "ollama serve" — démarre serveur depuis écran d\'accueil. Une fois actif, ouvrez app chat configurée localhost:11434.',
+          },
+        ],
+      },
+      remoteConnection: {
+        id: 'remote-connection',
+        title: 'Connexion à distance à un ordinateur local',
+        content:
+          '**Setup le plus simple : Ollama + Open WebUI sur Mac ou PC, accédez navigateur tablette même Wi-Fi.** Tablette devient interface tactile machine plus puissante — voir [guide laptop](/fr/local-llms/best-laptops-local-llm) pour dimensionner machine.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Connexion à distance machine Ollama + Open WebUI donne accès complet 70B via navigateur — aucun modèle tablette, aucune app, qualité complète.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Sur Mac/PC : installez Ollama, tirez modèle, Open WebUI (Docker une ligne), exécutez lié IP locale. Sur tablette : Safari/Chrome, http://[IP]:3000, chat complet. Modèle sur Mac ; tablette affiche. Fonctionne tout appareil, OS, écran.',
+          },
+        ],
+        numberedItems: [
+          '**Machine locale :** Ollama (`brew install ollama` macOS, ollama.com Windows). `ollama pull llama3.3:70b`. Démarrez : `OLLAMA_HOST=0.0.0.0:11434 ollama serve`.',
+          '**Open WebUI :** `docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --name open-webui ghcr.io/open-webui/open-webui:main`. Disponible `http://[IP]:3000`.',
+          '**Trouvez IP locale :** macOS Prefs → Réseau → IP. Windows : `ipconfig` → IPv4. Notez (typiquement `192.168.x.x`).',
+          '**Sur tablette :** Safari/Chrome, `http://[IP]:3000`. Créez compte Open WebUI (local). Sélectionnez modèle. Chattez.',
+          '**Sécurité :** local-only. N\'exposez pas port 3000 sans auth (système compte admin). Plain HTTP — pas données sensibles Wi-Fi public.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ajoutez URL Open WebUI écran d\'accueil tablette (Safari : Partage → Écran d\'accueil ; Chrome : Menu → Écran d\'accueil). Ressemble app native. iPad Safari fullscreen masque chrome navigateur.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'Recommandations de modèles par appareil',
+        content:
+          '**Choix modèle déterminé par RAM disponible.** Tableau ci-dessous mappe RAM au plus gros modèle tournant temps réel (8+ tok/sec). Couche modèle : [Best Mobile LLMs 2026](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm). Paysage complet : [Best LLMs 2026](/fr/local-llms/best-local-llms-2026).',
+        columns: ['Appareil / RAM', 'Modèle recommandé', 'Vitesse', 'Idéal pour'],
+        rows: [
+          { 'Appareil / RAM': 'iPad Air M2 / M3 (8 GB)', 'Modèle recommandé': 'Phi-4 Mini Q4', 'Vitesse': '~15–18 tok/sec', 'Idéal pour': 'Assistance écriture, résumé' },
+          { 'Appareil / RAM': 'iPad Pro M4 (16 GB)', 'Modèle recommandé': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Vitesse': '~25–30 tok/sec / ~15–20 tok/sec', 'Idéal pour': 'Station LLM réelle, RAG, fiction' },
+          { 'Appareil / RAM': 'Android 8 GB (Tab S10+)', 'Modèle recommandé': 'Phi-4 Mini Q4 Termux+Ollama', 'Vitesse': '~10–15 tok/sec', 'Idéal pour': 'Power users Termux' },
+          { 'Appareil / RAM': 'Android 6 GB', 'Modèle recommandé': 'Qwen3 1.7B Q4', 'Vitesse': '~15–20 tok/sec', 'Idéal pour': 'Chat léger, traduction' },
+          { 'Appareil / RAM': 'Pixel Tablet (8 GB)', 'Modèle recommandé': 'Connexion à distance seulement', 'Vitesse': 'N/A', 'Idéal pour': 'Tensor G2 trop lent' },
+          { 'Appareil / RAM': 'Toute tablette à distance', 'Modèle recommandé': 'Tout modèle machine locale', 'Vitesse': '~20–40 tok/sec', 'Idéal pour': 'Qualité prioritaire, 70B' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Tâches quotidiennes (brouillon, questions, résumé) : Phi-4 Mini (3.8B) tablette est adéquat. Échoue vs 70B : raisonnement multi-étapes, créativité nuancée, longs documents. Utilisez connexion à distance pour ces cas.',
+          },
+        ],
+      },
+      frontends: {
+        id: 'frontends',
+        title: 'Interfaces avant pour IA locale',
+        content:
+          '**Interface chat que vous utilisez affecte significativement usabilité.** Certains optimisés mobile ; d\'autres desktop-first.',
+        items: [
+          '**Open WebUI (navigateur) :** meilleure web UI réactive mobile. Fonctionne toute IP:port Safari/Chrome. S\'adapte tablette. Recommandé connexion à distance.',
+          '**LLM Farm (app iPad) :** conçu iOS, écran iPad complet. Plus capable on-device. Moins poli que desktop mais conçu iOS inférence.',
+          '**Pocket Paladin (app iPad) :** UI propre, simple. Tier gratuit 3B ; payant déverrouille gros modèles + API.',
+          '**RisuAI (navigateur, réactif mobile) :** meilleure expérience mobile jeu rôle. Se connecte Ollama distant. Fonctionne Safari near-app quality.',
+          '**SillyTavern (navigateur) :** fonctionne Safari connecté Ollama distant. Pas mobile-optimisé mais fonctionnel. Extensions partiellement Safari mobile.',
+          '**Termux CLI (Android) :** ligne commande seulement. Tâches scriptées ; pas pratique conversation sans app compagne.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Jeu rôle iPad : RisuAI + Ollama distant Llama 3.3 70B meilleure combo 2026. Interface RisuAI tactile ; 70B produit character voice bien meilleur que tout modèle tablette.',
+          },
+        ],
+      },
+      cnilContext: {
+        id: 'cnil-context',
+        title: 'Considérations pour utilisateurs francophones',
+        content:
+          'Pour utilisateurs en France, Belgique et Suisse romande : l\'exécution IA locale sur tablette offre avantages conformité. **La Commission Nationale de l\'Informatique et des Libertés (CNIL) recommande l\'inférence locale pour les données professionnelles sensibles** — communications clients, documents confidentiels, données patients, dossiers légaux restent dans réseau local. Architectures iPad/tablette connectées Ollama maison satisfont RGPD sans solutions enterprise coûteuses.',
+        items: [
+          '**CNIL + RGPD :** Si vous traitez données sensibles (communications clients, dossiers confidentiels, données patients) France, Belgique, Suisse — CNIL recommande inférence locale. Aucune transmission APIs cloud US sous RGPD.',
+          '**Mise en pratique :** iPad Pro M4 ou tablette Android (8 GB) + Ollama distant Mac/PC foyer = architecture simplement conforme CNIL. Documentez setup (stockage données, modèles) auprès de votre DPO.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes',
+        items: [
+          '**Modèle 7B sur tablette 8 GB.** À 5–8 tok/sec trop lent conversation. Utilisez 3B sur 8 GB ; connexion à distance pour 7B+.',
+          '**Termux Play Store Android.** Version vieille, dépendances manquent. Installez toujours F-Droid.',
+          '**Open WebUI exposé internet sans auth.** Aucun mot de passe défaut. Quiconque trouve URL accède modèle. Activez compte admin + firewall.',
+          '**Autres apps pas fermées avant on-device 8 GB iPad.** iOS supprime RAM. Modèle 3B ~3.5 GB ; iOS le tue si autre app demande. Fermez tout avant inférence.',
+          '**Attendre UI desktop-quality navigateurs mobile.** SillyTavern desktop-first. Mobile fonctionnel pas poli. Mobile-first : RisuAI ou Open WebUI.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          'LLM Farm (iOS) docs et GitHub — [github.com/guinmoon](https://github.com/guinmoon/LLMFarm)',
+          'App Pocket Paladin iOS — [App Store](https://apps.apple.com)',
+          'Build ARM Ollama Termux — [Docs Ollama](https://ollama.com/docs)',
+          'Docs Open WebUI — [docs.openwebui.com](https://docs.openwebui.com)',
+          'Spécifications puce M4 Apple bande passante Neural Engine — [Apple Silicon](https://apple.com/newsroom)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Pouvez-vous exécuter l\'IA sur un iPad ?',
+            a: 'Oui, sur iPad Pro M4 (16 GB) et iPad Air M2/M3 (8 GB). iPad Pro M4 exécute Phi-4 Mini et Llama 3.2 3B temps réel LLM Farm ou Pocket Paladin. iPad Air M2 exécute 3B correctement. Pour 7B+ iPad, connexion à distance Mac ou PC Ollama recommandée — iPad affiche chat, machine exécute inférence.',
+          },
+          {
+            q: 'Pouvez-vous exécuter l\'IA sur une tablette Android ?',
+            a: 'Oui, appareils 8 GB+ RAM Termux + Ollama. Galaxy Tab S10+ (12 GB) exécute Phi-4 Mini ~10–15 tok/sec. 6 GB exécute Qwen3 1.7B. Setup demande Termux F-Droid + commandes terminal. Connexion à distance machine locale est chemin plus facile plupart utilisateurs Android.',
+          },
+          {
+            q: 'L\'IA on-device tablette fonctionne hors ligne ?',
+            a: 'Oui. Modèle téléchargé et app installée, inférence on-device iPad (LLM Farm, Pocket Paladin) et Android (Termux + Ollama) fonctionne sans internet. Avantage principal on-device — connexion à distance demande Wi-Fi maison.',
+          },
+          {
+            q: 'Meilleure app IA iPad ?',
+            a: 'On-device : LLM Farm (plus options, open-source) ou Pocket Paladin (UI plus simple). Connexion distance Ollama : Open WebUI Safari (meilleur chat général), RisuAI Safari (meilleur jeu rôle). Choix dépend si vous voulez on-device, hors ligne, ou meilleure UI.',
+          },
+          {
+            q: 'Termux + Ollama Android sûr ?',
+            a: 'Oui. Termux émulateur terminal établi, millions développeurs. Ollama API locale seulement (localhost:11434 défaut) — pas accessible autres appareils réseau sauf bind explicite. Fichiers modèle stockage privé Termux, pas Android partagé.',
+          },
+          {
+            q: 'Qualité ChatGPT locale tablette ?',
+            a: 'Presque avec bon setup. GPT-4o demande 70B+. iPad Pro M4 (16 GB) pas 70B — 3B–8B seulement. À distance : GPU 24 GB (RTX 4090) ou unifié 64 GB (Mac M5 Max) exécute Llama 3.3 70B, tablette accède qualité Open WebUI. Plus proche qualité cloud tablette.',
+          },
+          {
+            q: 'Garder serveur Ollama maison démarré lid fermé ?',
+            a: 'macOS : Prefs → Énergie → désactiver "Power Nap" + Amphetamine prévenir sleep branché. Windows : Options énergie → "Jamais" sleep branché. Alternative : exécutez Ollama machine toujours-on (mini-PC, NAS) pas laptop primaire.',
+          },
+          {
+            q: 'Batterie tablette IA épuisée rapide ?',
+            a: 'Oui — inférence CPU/GPU intensif. Phi-4 Mini iPad Pro M4 conversation actuelle ~20–30% heure. Usage long : tablette branchée. Connexion distance machine : beaucoup moins batterie — affiche seulement page web.',
+          },
+          {
+            q: 'Throttling tablettes inférence IA ?',
+            a: 'Oui, spécialement iPad Air M2/M3 et Android sans refroidissement actif. iPad Pro M4 meilleur espace thermique, ~10–15 min avant throttling notable. Android plus vite (5–8 min). Mitigations : chunks 200–400 tokens, tablette surface dure, pas autres apps CPU.',
+          },
+          {
+            q: 'Clavier meilleur usage IA tablette ?',
+            a: 'Apple Magic Keyboard iPad Pro M4 (trackpad) setup poli — shortcuts Safari + Open WebUI, trackpad sélection texte. Logitech Combo Touch budget. Android : tout Bluetooth fonctionne Termux mais expérience plus rude. Prose : iPad Pro + Magic Keyboard station IA écriture.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Meilleures apps IA locales iPhone 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — guide compagnon iPhone.',
+          '[Meilleures apps IA locales Android 2026](/fr/power-local-llm/best-local-llm-apps-android-2026) — guide Android au-delà Termux + Ollama.',
+          '[Meilleurs modèles IA mobiles 2026 : Phi-4 Mini vs Gemma 3](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — quel modèle mobile pour quelle tâche.',
+          '[Construire assistant vocal local téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline) — guide build voice offline mobile.',
+          '[App IA locale plus facile Windows, Mac, Linux](/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux) — équivalent desktop.',
+          '[Meilleure app IA locale PC faible specs](/fr/power-local-llm/best-local-ai-app-low-end-pc) — appareils ressources limitées.',
+          '[Meilleure app IA locale utilisateurs non-techniques](/fr/power-local-llm/local-ai-app-non-technical-users) — UX comparaison onboarding.',
+          '[SillyTavern vs Agnai vs RisuAI : meilleur frontend roleplay local](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparaison UI mobile jeu rôle.',
+          '[LM Studio vs Jan vs GPT4All : comparaison complète](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparaison apps desktop.',
+          '[Agents IA locaux MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — connecter tablette agent MCP maison.',
+          '[Meilleurs laptops IA locale](/fr/local-llms/best-laptops-local-llm) — dimensionner machine maison.',
+          '[Meilleurs LLMs locaux 2026](/fr/local-llms/best-local-llms-2026) — paysage modèle complet tous hardware.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+      description:
+        'Exécutez l\'IA localement sur iPad ou Android en 2026. Applications d\'inférence locale, Termux + Ollama, connexion à distance vers Mac ou PC expliqués.',
+      image: `https://www.promptquorum.com/og/power-local-llm/run-ai-on-tablet-ipad-android?lang=fr`,
+      url: 'https://www.promptquorum.com/fr/power-local-llm/run-ai-on-tablet-ipad-android',
+      inLanguage: 'fr',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      articleBody:
+        'Exécution IA locale tablette pratique 2026. Inférence on-device et connexion à distance machine locale.',
+      keywords: [
+        'IA locale iPad',
+        'LLM local tablette Android',
+        'Ollama iPad',
+        'Termux Ollama',
+        'LLM Farm',
+        'Pocket Paladin',
+      ],
+      educationalLevel: 'Beginner',
+      teaches: [
+        'Configuration iPad inférence IA locale',
+        'Utiliser Termux et Ollama Android',
+        'Connexion Ollama distant tablette',
+        'Sélection modèle par hardware tablette',
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', 'name': 'LLM Farm' },
+        { '@type': 'SoftwareApplication', 'name': 'Pocket Paladin' },
+        { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+        { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
+        { '@type': 'SoftwareApplication', 'name': 'Termux' },
+      ],
+      about: [
+        { '@type': 'Thing', 'name': 'inférence IA locale' },
+        { '@type': 'Thing', 'name': 'LLMs tablette' },
+        { '@type': 'Thing', 'name': 'apps iPad IA' },
+        { '@type': 'Thing', 'name': 'inférence tablette Android' },
+      ],
+    },
+  },
 }
