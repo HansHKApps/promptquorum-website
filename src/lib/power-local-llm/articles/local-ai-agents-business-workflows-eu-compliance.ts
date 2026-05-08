@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Lokale KI-Agenten & Tool-Use',
+    theme: 'Local AI Agents & Tool Use',
     title: 'Lokale KI-Agenten in Geschäftsworkflows: DSGVO & EU AI Act Leitfaden 2026',
     seoTitle: 'Lokale KI-Agenten: DSGVO + EU AI Act Compliance 2026',
     intro:
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'Agents IA locaux & utilisation d\'outils',
+    theme: 'Local AI Agents & Tool Use',
     title: 'Agents IA locaux pour workflows métier : guide conformité UE 2026',
     seoTitle: 'Agents IA locaux : conformité RGPD & EU AI Act 2026',
     intro:
@@ -963,7 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'ローカルAIエージェント & ツール利用',
+    theme: 'Local AI Agents & Tool Use',
     title: 'ローカルAIエージェントの業務ワークフロー：GDPR & EU AI Act準拠ガイド 2026',
     seoTitle: 'ローカルAIエージェント GDPR EU AI Act 準拠 2026',
     intro:
@@ -1261,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: '本地AI智能体与工具调用',
+    theme: 'Local AI Agents & Tool Use',
     title: '本地AI智能体业务工作流：GDPR与EU AI Act合规指南 2026',
     seoTitle: '本地AI智能体GDPR与欧盟AI法案合规指南 2026',
     intro:

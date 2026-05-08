@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'RAG & Dokument-Chat',
+    theme: 'RAG & Document Chat',
     title: 'Lokales RAG auf deinen PDFs in 30 Minuten (Ollama + AnythingLLM)',
     seoTitle: 'Lokales RAG auf PDFs in 30 Minuten 2026: Ollama + AnythingLLM',
     intro:
@@ -1271,7 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'RAG & Chat de Documents',
+    theme: 'RAG & Document Chat',
     title: 'Construire un RAG local sur vos PDFs en 30 minutes (Ollama + AnythingLLM)',
     seoTitle: 'RAG local sur PDFs en 30 minutes 2026: Ollama + AnythingLLM',
     intro:
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
-    theme: 'RAG と文書チャット',
+    theme: 'RAG & Document Chat',
     title: '30分でローカルRAGシステムを構築: Ollama + AnythingLLM',
     seoTitle: '30分でローカルRAG構築 2026: Ollama + AnythingLLM',
     intro:
