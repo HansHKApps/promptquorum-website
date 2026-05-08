@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import { buildHubMetadata, buildHubPageElement } from '@/lib/power-local-llm/page-helpers'
 
-export async function generateMetadata(): Promise<Metadata> {
+// Enable caching: this route doesn't fetch dynamic data
+export const revalidate = 86400 // 24 hours
+
+export function generateMetadata(): Metadata {
   return buildHubMetadata('en')
 }
 
-export default async function PowerLocalLLMHubEn() {
+export default function PowerLocalLLMHubEn() {
   return buildHubPageElement('en')
 }

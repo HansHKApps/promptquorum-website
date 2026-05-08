@@ -5,6 +5,9 @@ import {
   getArticleStaticParams,
 } from '@/lib/power-local-llm/page-helpers'
 
+// Enable caching: articles don't change per-request
+export const revalidate = 86400 // 24 hours
+
 interface PageProps {
   params: Promise<{ slug: string }>
 }
