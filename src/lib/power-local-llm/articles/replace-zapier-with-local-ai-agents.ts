@@ -2201,6 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'tip',
             text: '配置检查表：✅ Cloudflare Tunnel 运行(`cloudflared tunnel login` 然后 `cloudflared tunnel --url http://localhost:5678`) ✅ 平台 API 密钥存储在 n8n 凭证中 ✅ 链接前分别测试每个平台 ✅ "Wait Until"节点使用 `publishAt` 字段，不是固定延迟 ✅ 重试策略：每个 HTTP 节点上 3 次尝试，指数退避。',
           },
+          {
             type: 'note',
             text: '30 天可靠性：99%(1 次 LinkedIn API 限流，retry handler 在第二次尝试时捕捉)。5 个中最复杂 —— 如果你是 n8n 初学者，从其他 4 个开始。',
           },
