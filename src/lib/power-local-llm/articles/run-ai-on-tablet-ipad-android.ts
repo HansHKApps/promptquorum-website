@@ -1166,4 +1166,404 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Mobile & Edge LLMs',
+    title: 'タブレットでAIをローカル実行：iPad Pro M4・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
+    seoTitle: 'iPadとAndroidタブレットでAIをローカル実行 2026',
+    intro:
+      '2026年、タブレットでのローカルAI実行はRAM 8GB以上の高性能iPad・Androidデバイスで現実的です。このガイドでは、iPadでのPocket PaladinとLLM Farmによるオンデバイス推論、AndroidでのTermux + Ollama、そしてローカル推論ができないデバイス向けのリモート接続（ローカルWi-FiでOllamaを実行するMacまたはPCへの接続）を解説します。',
+    metaDescription:
+      '2026年のiPadとAndroidタブレットでのAIローカル実行方法。オンデバイス推論アプリ、Termux + Ollama、ホームMac・PCへのリモート接続を解説。',
+    twitterDescription:
+      '2026年タブレットでAIをローカル実行：オンデバイス推論（Pocket Paladin・LLM Farm・Termux+Ollama）、ホームMac/PCへのリモート接続、デバイス別モデル選択。',
+    current_models_mentioned: [
+      'Phi-4 Mini',
+      'Llama 3.2 3B',
+      'Qwen3 1.7B',
+      'Gemma 3 4B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'iPad Pro M4 16 GB',
+      'iPad Air M2 8 GB',
+      'Samsung Galaxy Tab S10+ 12 GB',
+      'Google Pixel Tablet 8 GB',
+    ],
+    audience:
+      'クラウドAIサービスに頼らず、iPadまたはAndroidデバイスからAIをローカル実行、またはホームLLMセットアップに接続したいタブレットユーザー。',
+    readTime: '11分で読める',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'タブレットでAIをローカル実行',
+    targetKeywords: [
+      'iPadでAIをローカル実行',
+      'AndroidタブレットでローカルLLM実行',
+      'Ollama iPadリモート接続',
+      'Termux Ollama Android',
+      'LLM Farm iPad',
+      'Pocket Paladin iOS LLM',
+    ],
+    leadAnswerBlock:
+      '**タブレットでのローカルAI実行には2つのモードがあります。オンデバイス推論（タブレットのチップで直接モデルを実行）とリモート接続（自宅のMacまたはPCでOllamaを実行し、タブレットはその表示端末となる）です。オンデバイスはiPad Pro M4（16GB、Phi-4 MiniとLlama 3.2 3Bをリアルタイム実行）、iPad Air M2（8GB、3Bモデルを適切に実行）、RAM 8GB以上のAndroid高性能デバイス（Samsung Galaxy Tab S10+、Termux + Ollama経由）で実用的です。ホームサーバーのローカルIPでOpen WebUIまたはシンプルなチャットUIを使ったリモート接続は、あらゆるタブレット・RAM・OSで機能します。ほとんどのユーザーにはリモート接続がより優れた選択肢です。ホームマシンが70Bモデルを実行し、タブレットは使いやすいインターフェースを提供します。**',
+    quickAnswerTop: {
+      ja: {
+        question: 'iPadまたはAndroidタブレットでローカルAIモデルを実行できますか？',
+        answer:
+          'はい、高性能デバイスで可能です。16GB RAMのiPad Pro M4は、LLM FarmまたはPocket PaladinでPhi-4 Mini（3.8B）とLlama 3.2 3Bをリアルタイム実行します。iPad Air M2（8GB）は3Bモデルを適切に実行します。RAM 8GB以上のAndroidタブレット（Samsung Galaxy Tab S10+）はTermux + OllamaでPhi-4 MiniとQwen3 1.7Bをローカル実行できます。RAMが少ないまたは古いチップのタブレットには、リモート接続が実用的な代替手段です。',
+        bullets: [
+          'iPad Pro M4（16GB）— LLM FarmまたはPocket PaladinでPhi-4 MiniとLlama 3.2 3Bをリアルタイムローカル実行。',
+          'iPad Air M2（8GB）— 3Bモデルを実用的な速度で実行；7Bモデルは低速だが動作可能。',
+          'Androidタブレット（8GB+ RAM）— Termux + OllamaでPhi-4 MiniとQwen3 1.7Bをローカル実行。',
+          'リモート接続 — どのタブレット・RAM・OSでも：ブラウザのOpen WebUI経由でOllama実行中のホームMac・PCに接続。',
+          'ほとんどのタブレットに最適なオンデバイスモデル：Phi-4 Mini（3.8B、約2.7GB）、RAM制約デバイスにはQwen3 1.7B。',
+          '7B以上はリモート接続推奨 — ホームマシンの方がどのタブレットよりも高速。',
+          'SillyTavernとRisuAIはiPad Safari・Android Chromeで動作するモバイル対応UIを搭載。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: 'クイックファクト', anchor: '#quick-facts' },
+      { label: '2つのモード：オンデバイスvsリモート接続', anchor: '#two-modes' },
+      { label: 'iPad：オンデバイス推論', anchor: '#ipad-on-device' },
+      { label: 'Android：オンデバイス推論', anchor: '#android-on-device' },
+      { label: 'ホームマシンへのリモート接続', anchor: '#remote-connection' },
+      { label: 'デバイス別モデル推奨', anchor: '#models' },
+      { label: 'タブレット向けローカルAIフロントエンド', anchor: '#frontends' },
+      { label: 'よくある失敗', anchor: '#common-mistakes' },
+      { label: '参考資料', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連資料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**オンデバイス推論はiPad Pro M4（16GB）と高性能Android（8GB+）で実用的です。** これ以下のスペックではリアルタイム利用に生成速度が不足します。ほとんどのタブレットユーザーにはリモート接続の方が優れた選択肢です。',
+          '**リモート接続がほとんどの人に推奨されるアプローチです。** ホームネットワーク上のOllama実行中のMacまたはPCにタブレット（RAM・OS問わず）を接続します。ホームマシンが70Bモデルを実行し、タブレットはタッチ操作しやすいチャットインターフェースを表示します。タブレットへのモデルダウンロードは不要です。',
+          '**LLM FarmとPocket PaladinはiPadネイティブの選択肢です。** どちらもiPadのApple SiliconチップでGGUFモデルをローカル実行します。LLM Farmは設定オプションが豊富；Pocket Paladinは初回利用者に簡単です。',
+          '**Termux + OllamaはAndroidのアプローチです。** ターミナル操作に慣れている必要がありますが、RAM 8GB以上のあらゆるAndroidデバイスで動作します。Termux内でOllamaが動作し、localhost:11434でモデルを提供します。',
+          '**ほとんどのタブレットに最適なモデル：Phi-4 Mini（3.8B）。** 6GB以上の空きRAMで動作し、日常的なタスクで実用的な出力を生成します。高速回線で5〜10分でダウンロード完了します。',
+          '**タブレットブラウザのOpen WebUIが最もシンプルなリモート接続インターフェースです。** ホームのMacまたはPCが`192.168.x.x:3000`でOpen WebUIを実行中なら、タブレットのブラウザでそのアドレスを開くだけ — アプリインストール不要、設定不要、フルチャットインターフェース。',
+          '**SillyTavernはモバイル対応UIを搭載しています。** タブレットでのロールプレイやキャラクターカード利用では、ホームマシンで動作するSillyTavernにタブレットブラウザからアクセスする方法が効果的です；RisuAIは最高のネイティブモバイルサポートを持っています。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'クイックファクト',
+        items: [
+          '**iPadアプリ：** LLM Farm（無料・オープンソース）、Pocket Paladin（無料プラン＋有料）、PocketLLM（旧式、更新少ない）。',
+          '**Androidの方法：** Termux + Ollama（CLI）またはMNN LLM（アプリ、対応モデル限定）。',
+          '**リモート接続：** あらゆるタブレットブラウザ → ホームマシンのローカルIPでOpen WebUIまたはシンプルなチャットUI。',
+          '**オンデバイスの最低要件：** iPad Air M2（8GB）で3Bモデル；iPad Pro M4（16GB）で7B〜8Bモデル。',
+          '**Androidオンデバイスの最低要件：** RAM 8GBデバイス（Samsung Galaxy Tab S10+、OnePlus Pad 2）。',
+          '**最適オンデバイスモデル：** ほとんどのタブレットにPhi-4 Mini（3.8B、2.7GB）；非常に制約があるデバイスにはQwen3 1.7B。',
+          '**リモート接続速度：** タブレットのハードウェアではなく、Wi-Fi品質とホームマシンの生成速度に依存します。',
+        ],
+      },
+      twoModes: {
+        id: 'two-modes',
+        title: '2つのモード：オンデバイスvsリモート接続',
+        content:
+          '**最も重要な判断はどのアプリを使うかではなく、タブレットで推論するかホームの高性能マシンで推論するかです。** 各モードには異なるハードウェア要件と性能上限があります。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'タブレットでのAI実行には2つの実用的なモードがあります：オンデバイス推論（タブレットチップでモデル実行、3B〜7Bに限定）またはリモート接続（OllamaとOpen WebUIで大型モデルを実行するホームMac・PCのブラウザ表示端末としてタブレットを使用）。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'オンデバイスモード：モデルがタブレット上に存在し、オフラインで動作します。小型モデル（3B、高性能iPad Proなら7B）に限定され、クラウドAIより低速です。リモートモード：ホームのMacまたはPCがOllamaと70Bモデルを実行し、タブレットはブラウザでチャットを表示するだけ。タブレット画面で70Bの品質を得られ、タブレットにモデル保存不要、ホームマシンは電源オンで同じWi-Fiに接続している必要があります。オフライン利用が特に必要でない限りリモート接続を選んでください。',
+          },
+        ],
+        columns: ['項目', 'オンデバイス', 'リモート接続'],
+        rows: [
+          { '項目': 'モデルサイズ上限', 'オンデバイス': '3B〜8B（iPad Pro M4）；3B（ほとんどのタブレット）', 'リモート接続': '無制限 — ホームマシンがどのモデルも実行可能' },
+          { '項目': 'オフライン利用', 'オンデバイス': '可能 — Wi-Fi不要で動作', 'リモート接続': '不可 — ホームWi-Fi必須' },
+          { '項目': '生成速度', 'オンデバイス': '中程度（iPad Pro M4で10〜25トークン/秒）', 'リモート接続': 'ホームマシン次第（最大40+トークン/秒）' },
+          { '項目': 'タブレット上のストレージ', 'オンデバイス': 'モデルあたり2〜10GB', 'リモート接続': 'なし — モデルはホームマシン上' },
+          { '項目': 'セットアップの複雑さ', 'オンデバイス': '低（アプリ＋モデルファイルのダウンロード）', 'リモート接続': '低〜中（ホームマシンにOllama＋Open WebUI必要）' },
+          { '項目': '最適な用途', 'オンデバイス': '旅行、オフライン利用、3Bモデルのタスク', 'リモート接続': '品質優先利用、70Bモデル、利便性' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ollamaを実行できるMacまたはPCがすでにある場合は、リモート接続から始めてください。タブレットにモデルファイルを保存したり、モバイルアプリの制限に対処したりすることなく、すぐに高品質を得られます。後でオフライン利用が必要になった場合にオンデバイス機能を追加してください。',
+          },
+        ],
+      },
+      ipadOnDevice: {
+        id: 'ipad-on-device',
+        title: 'iPad：オンデバイス推論',
+        content:
+          '**iPad Pro M4（16GB）は7Bモデルを快適な速度で実行できる唯一のiPadです。** iPad Air M2（8GB）とM3（8GB）は3Bモデルを適切に実行します。[8GB RAM iPhone（iPhone 15 Pro Max）もLLM Farm経由で小型モデルを実行できます](/ja/power-local-llm/best-local-llm-apps-iphone-2026)。',
+        items: [
+          '**LLM Farm**（無料・オープンソース）：Hugging FaceからGGUFモデルをダウンロードし、Apple Silicon上でllama.cppを使って実行します。iOSネイティブオプションの中で最高のパフォーマンス。チャットと補完モードをサポート。App Storeからインストール。',
+          '**Pocket Paladin**（無料プラン＋サブスクリプション）：厳選されたモデルダウンロード、LLM Farmよりクリーンなインターフェース、初回起動が少し簡単。無料プランは3Bモデルを含む；サブスクリプションで大型モデルとAPIモードが解放。',
+          '**モデルのインポート：** LLM Farmでは、モデルライブラリアイコンをタップ → 「URLからモデルを追加」→ GGUFファイルのHugging Face直接ダウンロードURLを貼り付け。またはApple Filesを使って別の場所でダウンロードしたGGUFを転送。モデルはアプリのローカルストレージに保存 — iCloudではありません。',
+          '**iPadのRAM管理：** iOSはバックグラウンドアプリのRAMを積極的に管理します。8GB iPadで7Bモデルを実行する前に他のすべてのアプリを閉じてください — 別のアプリがメモリを必要とするとiOSがモデルを削除します。16GB iPad Pro M4ではほとんど問題になりません。',
+          '**生成速度の目安：** iPad Pro M4（16GB）：Phi-4 Mini 約20トークン/秒、Llama 3.2 3B 約30トークン/秒、Gemma 3 4B 約18トークン/秒。iPad Air M2（8GB）：3Bモデル 約12〜18トークン/秒；7Bモデル 約5〜8トークン/秒（リアルタイムチャットには低速）。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '8GB iPadでリアルタイムチャット用に7Bモデルを実行しようとしないでください。毎秒5〜8トークンでは、各レスポンスに15〜30秒かかります。プロンプトを送信して待つ要約タスクには使えますが、会話型利用には苛立たしい速度です。8GBデバイスでは3Bモデルを使用し、7B以上には16GBデバイスへのアップグレードまたはリモート接続に切り替えてください。',
+          },
+        ],
+      },
+      androidOnDevice: {
+        id: 'android-on-device',
+        title: 'Android：オンデバイス推論',
+        content:
+          '**Androidのオンデバイス推論は[Termux + Ollama](/ja/power-local-llm/best-local-llm-apps-android-2026)を使用します — TermuxはAndroidでOllamaをネイティブ実行するLinuxターミナルエミュレーターです。** iPadのアプリ体験より技術的ですが、完全なOllamaエコシステムへのアクセスが可能です。',
+        numberedItems: [
+          'F-DroidからTermuxをインストールします（Play Store版は不可 — 古く、必要なパッケージが不足しています）。',
+          'Termuxで：`pkg update && pkg install curl`',
+          'Ollama ARMバイナリをダウンロード：`curl -fsSL https://ollama.com/install.sh | sh` — ほとんどのAndroidタブレットと互換性のあるARM64ビルドをインストールします。',
+          'モデルをプル：`ollama pull phi4-mini` または `ollama pull qwen3:1.7b`。',
+          'サーバーを起動：`ollama serve`（このTermuxセッションを維持してください）。',
+          'Termux経由でチャット：`ollama run phi4-mini` — またはブラウザを開いて`http://localhost:11434`にアクセスしてAPIを利用。GUIのためにローカルOllamaエンドポイントに接続するAndroidチャットアプリをインストール。',
+        ],
+        items: [
+          '**3B以上のモデルに対応するデバイス：** RAM 8GB最低限（Samsung Galaxy Tab S10+、OnePlus Pad 2、Xiaomi Pad 7 Pro）。6GBデバイスはQwen3 1.7Bのみ実行可能。',
+          '**Pixel Tabletはオンデバイスに非推奨：** Pixel Tablet（2023年モデル、8GB Tensor G2）は推奨リストから除外 — Tensor G2はSnapdragon 8 Gen 3 / Dimensity 9300よりLLM推論が大幅に低速で、Phi-4 Miniで4〜7トークン/秒（会話型利用には低速すぎる）。Pixel Tabletユーザーはホームマシンへのリモート接続を使用してください。',
+          '**Snapdragon 8 Gen 3とDimensity 9300**は2026年のオンデバイス推論で最速のAndroidチップです。生成速度：1.7Bモデルで約15〜25トークン/秒；3Bモデルで約8〜12トークン/秒。',
+          '**モデルストレージ：** Androidは統合メモリを持たないため、ほとんどのTermux設定ではGPUアクセラレーションなしでシステムRAM上でモデルが実行されます。GPUアクセラレーションにはTermux:NVIDIAまたは特定のVulkanビルドが必要；セットアップがより複雑です。',
+          '**代替アプリ：** MNN LLM（Alibaba製、無料、選択されたモデルのオンデバイス推論Androidアプリ）はセットアップが簡単ですが、Ollamaよりモデル選択が限定的です。AI RunnerとllamafileもさまざまなサポートのAndroidビルドがあります。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Termux:Widgetアドオンをインストールし、「ollama serve」を実行するショートカットを作成してください — Termuxを手動で開かずにAndroidのホーム画面からOllamaサーバーを起動できます。Ollamaが起動したら、localhost:11434に接続するよう設定されたチャットアプリを開いてください。',
+          },
+        ],
+      },
+      remoteConnection: {
+        id: 'remote-connection',
+        title: 'ホームマシンへのリモート接続',
+        content:
+          '**ほとんどのタブレットユーザーに最もシンプルなセットアップ：ホームのMacまたはPCでOllamaとOpen WebUIを実行し、同じWi-FiネットワークのタブレットブラウザからチャットUIにアクセスする方法です。** タブレットは自宅でOllamaを実行するより高性能なマシンのタッチスクリーンインターフェースになります — ホームマシン選択時のハードウェアサイジングには[ラップトップガイド](/ja/local-llms/best-laptops-local-llm)を参照してください。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'OllamaとOpen WebUIを実行するホームマシンへのリモート接続により、どのタブレットでもブラウザ経由で70Bモデルへのフルアクセスが可能 — タブレットにモデル保存なし、アプリインストールなし、モデル品質への妥協なし。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'MacまたはPCで：Ollamaをインストール、モデルをプル、Open WebUIをインストール（Docker一行コマンド）、ローカルネットワークIPにバインドして実行。タブレットで：SafariまたはChromeを開き、http://[Mac-IP]:3000 に移動すると、フルAIチャットインターフェースが使えます。モデルはMac上で実行；タブレットはチャットを表示するだけ。どのタブレット、OS、画面サイズでも機能します。',
+          },
+        ],
+        numberedItems: [
+          '**ホームマシン上で：** Ollamaをインストール（macOSでは`brew install ollama`、Windowsではollama.comからダウンロード）。モデルをプル：`ollama pull llama3.3:70b`（または任意のモデル）。ネットワークバインドでOllamaを起動：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。',
+          '**Open WebUIをインストール**（最もタブレット向けのチャットUI）：`docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --name open-webui ghcr.io/open-webui/open-webui:main`。Open WebUIは`http://[マシンIP]:3000`でアクセス可能になります。',
+          '**ホームマシンのローカルIPを確認：** macOSでは、システム環境設定 → ネットワーク → 現在のネットワーク → IPアドレス。Windowsでは、コマンドプロンプトで`ipconfig`を実行してIPv4アドレスを確認。IPをメモ（通常`192.168.x.x`）。',
+          '**タブレット上で：** Safari（iPad）またはChrome（Android）を開く。`http://[マシンIP]:3000`に移動。Open WebUIでアカウントを作成（ローカルのみ、クラウドなし）。ドロップダウンからモデルを選択。チャット開始。',
+          '**セキュリティ：** このセットアップはローカルネットワーク限定です。Open WebUI認証を追加せずにポート3000をインターネットに公開しないでください（組み込みの管理者アカウントシステムがあります）。接続はプレーンHTTP — 公共Wi-Fiで機密情報を送信しないでください。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'ホームマシンのOpen WebUI URLをタブレットのホーム画面にブックマーク追加してください（Safariでは：共有 → ホーム画面に追加；Chromeでは：三点メニュー → ホーム画面に追加）。ネイティブアプリのような感覚になります。iPadでは、SafariのフルスクリーンWebアプリはブラウザのクロームを隠し、アプリのような体験が得られます。',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'デバイス別モデル推奨',
+        content:
+          '**モデルの選択は好みではなく、利用可能なRAMによって決まります。** 以下の表は、デバイスのRAMをリアルタイム速度（8トークン/秒以上）で実行できる最大モデルにマッピングしています。モデル層について詳しくは[モバイルLLMモデルベスト2026](/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm)を参照。すべてのハードウェア層のモデル全体像は[ベストローカルLLM 2026](/ja/local-llms/best-local-llms-2026)を参照。',
+        columns: ['デバイス / RAM', '推奨モデル', '速度', '最適な用途'],
+        rows: [
+          { 'デバイス / RAM': 'iPad Air M2 / M3（8GB）', '推奨モデル': 'Phi-4 Mini Q4', '速度': '約15〜18トークン/秒', '最適な用途': '文章作成補助、要約' },
+          { 'デバイス / RAM': 'iPad Pro M4（16GB）', '推奨モデル': 'Llama 3.2 3B / Gemma 3 4B Q4', '速度': '約25〜30 / 約15〜20トークン/秒', '最適な用途': '本格的LLMワークステーション、RAG、フィクション執筆' },
+          { 'デバイス / RAM': 'Android 8GB（Tab S10+）', '推奨モデル': 'Phi-4 Mini Q4（Termux+Ollama）', '速度': '約10〜15トークン/秒', '最適な用途': 'Termuxに慣れたパワーユーザー' },
+          { 'デバイス / RAM': 'Android 6GB', '推奨モデル': 'Qwen3 1.7B Q4', '速度': '約15〜20トークン/秒', '最適な用途': '軽いチャット、翻訳、シンプルなタスク' },
+          { 'デバイス / RAM': 'Pixel Tablet（8GB）', '推奨モデル': 'リモート接続のみ', '速度': 'N/A', '最適な用途': 'Tensor G2はオンデバイスに低速すぎる' },
+          { 'デバイス / RAM': 'リモート経由の全タブレット', '推奨モデル': 'ホームマシン上の任意モデル', '速度': '約20〜40トークン/秒', '最適な用途': '品質優先利用、70Bモデル' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'ほとんどの日常タスク（文章草稿、質問回答、内容要約）では、タブレット上のPhi-4 Mini（3.8B）は十分に実用的です。70Bモデルと比較して劣る点：複雑な多段階推論、ニュアンスのある創作、長文書分析。これらのタスクには大型モデルを実行するホームマシンへのリモート接続を使用してください。',
+          },
+        ],
+      },
+      frontends: {
+        id: 'frontends',
+        title: 'タブレット向けローカルAIフロントエンド',
+        content:
+          '**タブレットで使用するチャットインターフェースは使いやすさに大きく影響します。** モバイル向けに設計されたものもあれば、デスクトップファーストでタブレットでは使いにくいものもあります。',
+        items: [
+          '**Open WebUI（ブラウザ）：** 一般的なチャットに最適なモバイル対応WebUI。SafariまたはChromeの任意のローカルIP:ポートで動作。タブレットのアスペクト比にきれいに適応。リモート接続セットアップに推奨。',
+          '**LLM Farm（iPadアプリ）：** iOS向けに設計、iPadの全画面を使用。iPadで最も高性能なオンデバイスオプション。デスクトップアプリほどの洗練度はないが、iOS推論向けに作られています。',
+          '**Pocket Paladin（iPadアプリ）：** LLM Farmよりクリーンなインターフェース、一般ユーザー向け設計。無料プランは3Bモデルを実行；有料プランで大型モデルとAPIアクセスが解放。',
+          '**RisuAI（ブラウザ、モバイル対応）：** ロールプレイとキャラクターカードフィクションの最高モバイル体験。リモートOllamaインスタンスに接続可能。iPad Safariでアプリに近い品質のインターフェースで動作。',
+          '**SillyTavern（ブラウザ）：** リモートOllamaインスタンスに接続したiPad Safariで動作。モバイル最適化されていないが機能的。一部の拡張機能はモバイルSafariで動作しません。',
+          '**Termux CLI（Android）：** コマンドラインのみ。スクリプト化されたタスクに使えますが、コンパニオンアプリなしでの会話型利用には実用的でありません。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'iPadでのロールプレイとキャラクターカードフィクションには、Llama 3.3 70Bを実行するリモートOllamaインスタンスに接続したRisuAIが2026年に利用可能な最高の組み合わせです。RisuAIのモバイルインターフェースはタッチ操作向けに設計されており、リモート接続によりタブレットに収まるどのモデルよりも大幅に優れたキャラクターボイスを生み出す70Bモデルにアクセスできます。',
+          },
+        ],
+      },
+      metiContext: {
+        id: 'meti-context',
+        title: '日本・東アジアユーザーのための活用ポイント',
+        content:
+          '日本のユーザーにとって、タブレットでのローカルAI実行には規制面での追加的な意義があります。**経済産業省（METI）は2024年のAIガバナンスガイドラインで、企業データを処理するAIシステムにおけるローカル推論アーキテクチャを推奨しています。** タブレット上またはホームマシンへのリモート接続でのローカル推論は、クラウドAPIへのデータ送信なしにこれらの要件を満たします。',
+        items: [
+          '**METI AIガバナンス2024：** 経済産業省のガイドラインは、機密性の高い業務データを扱うシステムにローカル推論を推奨します。iPad Pro M4やAndroidタブレットのローカルモデルは、顧客データを海外クラウドに送信せずに動作します。',
+          '**東アジアのデータ主権：** 日本、マレーシア、シンガポール、韓国はデータローカリゼーション要件を強化しています。タブレットのローカル推論またはローカルネットワークリモート接続はデータを国境内に保持します。',
+          '**エンタープライズセキュリティ：** 日本の企業セキュリティ標準（ISMS、ISO 27001）はデータ処理の文書化を要求します。タブレット上または自社ネットワーク内で実行されるローカルモデルは、審査担当者へのコンプライアンス文書化を簡素化します。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'METI AIガバナンスへのコンプライアンスを検討している日本企業の場合：iPad Pro M4とOllamaを使ったローカル推論のプルーフオブコンセプトをCISO・法務部門とともに実施することをお勧めします。オープンソースライセンス（Meta、Alibaba）とローカルネットワークアーキテクチャにより、規制当局への文書化が簡素化されます。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'よくある失敗',
+        items: [
+          '**8GBタブレットで7Bモデルを実行する。** 毎秒5〜8トークンでは会話型利用には低速すぎます。8GBデバイスのオンデバイスチャットには3Bモデルを使用；7B以上の品質にはリモート接続を使用してください。',
+          '**AndroidでPlay Store版Termuxを使用する。** Play Store版のTermuxは古く、Ollamaに必要なパッケージが不足しています。常にF-DroidからTermuxをインストールしてください。',
+          '**認証なしにOpen WebUIをインターネットに公開する。** Open WebUIにはデフォルトでパスワードがありません。ホームネットワーク外に公開すると、URLを見つけた誰もがモデルにアクセスできます。管理者アカウントシステムを有効にしてファイアウォールを使用してください。',
+          '**8GB iPad でオンデバイス前に他のアプリを閉じない。** iOSはバックグラウンドアプリのRAMを削除します。8GB iPadの3Bモデルは約3.5GBを使用；iOSが別のアプリのためにそのメモリを回収するとモデルがクラッシュします。推論前にすべての他のアプリを閉じてください。',
+          '**モバイルブラウザでデスクトップ品質のUIを期待する。** SillyTavernなどはデスクトップファーストです。ブラウザでのモバイル体験は機能的ですが洗練されていません。モバイルファーストUXにはRisuAIまたはOpen WebUIを好んでください。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考資料',
+        items: [
+          'LLM Farm（iOS）ドキュメントとGitHub — [github.com/guinmoon](https://github.com/guinmoon/LLMFarm)',
+          'Pocket Paladin iOSアプリ — [App Store](https://apps.apple.com)',
+          'Termux向けOllama ARMビルド — [Ollamaドキュメント](https://ollama.com/docs)',
+          'Open WebUIドキュメント — [docs.openwebui.com](https://docs.openwebui.com)',
+          'Apple M4チップメモリ帯域幅とNeural Engineスペック — [Apple Silicon](https://apple.com/newsroom)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'iPadでAIを実行できますか？',
+            a: 'はい、iPad Pro M4（16GB）とiPad Air M2/M3（8GB）で可能です。iPad Pro M4はLLM FarmまたはPocket PaladinでPhi-4 MiniとLlama 3.2 3Bをリアルタイム実行します。iPad Air M2は3Bモデルを適切に実行します。iPadで7B以上のモデルには、Ollamaを実行するホームMacまたはPCへのリモート接続を推奨します — iPadはチャットを表示し、ホームマシンが推論を処理します。',
+          },
+          {
+            q: 'AndroidタブレットでAIを実行できますか？',
+            a: 'はい、Termux + Ollamaを使用してRAM 8GB以上のデバイスで可能です。Samsung Galaxy Tab S10+（RAM 12GB）はPhi-4 Miniを約10〜15トークン/秒で実行します。RAM 6GBデバイスはQwen3 1.7Bを実行できます。セットアップにはF-DroidからのTermuxといくつかのターミナルコマンドへの慣れが必要です。ほとんどのAndroidタブレットユーザーにはホームマシンへのリモート接続の方が簡単なルートです。',
+          },
+          {
+            q: 'タブレットのオンデバイスAIはインターネットなしで動作しますか？',
+            a: 'はい。モデルをダウンロードしてアプリをインストールすれば、iPadのオンデバイス推論（LLM Farm、Pocket Paladin）とAndroid（Termux + Ollama）はインターネット接続なしで動作します。これがリモート接続に対するオンデバイスの主な利点の一つです — リモート接続アプローチにはホームWi-Fiが必要です。',
+          },
+          {
+            q: 'iPadに最適なAIアプリは何ですか？',
+            a: 'オンデバイス推論には：LLM Farm（より多くのオプション、オープンソース）またはPocket Paladin（よりシンプルなUI）。ホームOllamaサーバーへのリモート接続には：Open WebUI in Safari（一般チャットに最適）、RisuAI in Safari（ロールプレイとキャラクターフィクションに最適）。最適な選択は、オンデバイス機能、オフライン利用、または最高のインターフェース品質が欲しいかどうかによって異なります。',
+          },
+          {
+            q: 'AndroidでTermux + Ollamaを使うのは安全ですか？',
+            a: 'はい。Termuxは何百万人もの開発者が使用する確立されたAndroidターミナルエミュレーターです。Termux内のOllamaはローカル専用APIを提供します（デフォルトでlocalhost:11434）— バインドアドレスを明示的に変更しない限り、ネットワーク上の他のデバイスからはアクセスできません。モデルファイルはTermuxのプライベートストレージに保存され、共有Androidストレージには保存されません。',
+          },
+          {
+            q: 'タブレットでChatGPT品質のレスポンスをローカルで得られますか？',
+            a: 'ほぼ、ただし適切なセットアップが必要です。GPT-4o品質には70B以上のモデルが必要です。タブレット上では：iPad Pro M4（16GB）は70Bモデルを実行できません — 3B〜8Bモデルのみ。リモート接続経由：ホームマシンに24GB GPU（RTX 4090）または64GB統合メモリ（Mac M5 Max）があればLlama 3.3 70Bを実行でき、タブレットはブラウザのOpen WebUI経由でその品質にアクセスできます。これがタブレットでクラウドAI品質に最も近い方法です。',
+          },
+          {
+            q: 'ラップトップのカバーを閉じてもホームOllamaサーバーを動かし続けるには？',
+            a: 'macOSの場合：カバーを閉じた時のスリープポリシーを設定：システム環境設定 → バッテリー → 「電源アダプタ接続時にPower Napを有効にする」を無効にし、Amphetamineなどのツールを使用して電源接続時のスリープを防ぐ。Windowsの場合：電源オプション → プラン設定の変更 → 電源接続時のスリープを「しない」に設定。または、プライマリラップトップではなく常時稼働マシン（ミニPC、NAS、または廃棄予定の古いラップトップ）でOllamaを実行する。',
+          },
+          {
+            q: 'タブレットでAIを実行するとバッテリーが早く消耗しますか？',
+            a: 'はい — オンデバイス推論はCPU/GPU集約的です。iPad Pro M4でPhi-4 Miniを活発な会話で実行すると、バッテリーが約1時間で20〜30%消耗します。長時間使用する場合は、タブレットを充電しながら使用してください。ホームマシンへのリモート接続は、タブレットのバッテリー消費が大幅に少なくなります — タブレットはウェブページを表示するだけです。',
+          },
+          {
+            q: 'AI推論中にタブレットはサーマルスロットリングしますか？',
+            a: 'はい、特にiPad Air M2/M3とアクティブ冷却のないAndroidタブレットでは。iPad Pro M4の方が熱的なヘッドルームが大きく、顕著なスロットリングが起きる前に約10〜15分間生成速度を維持します。Androidタブレットはより早くスロットリングします（5〜8分の持続的推論）。緩和策：より短い生成チャンク（レスポンスあたり200〜400トークン）を使用、タブレットを硬い面に置く、同時に他のCPU集約型アプリを実行しない。',
+          },
+          {
+            q: 'AIタブレット利用に最適なキーボードは何ですか？',
+            a: 'iPad Pro M4用Apple Magic Keyboard（トラックパッド付き）が最も洗練されたセットアップです — Safari + Open WebUIでフルキーボードショートカットが動作し、トラックパッドで長いレスポンスのテキスト選択が可能。Logitech Combo Touchは予算代替品。Android：Termuxではどのbluetoothキーボードも動作しますが体験はより粗い（ターミナルのみ）。文章作業には、iPad Pro + Magic Keyboardがタブレットを執筆ファーストのAIワークステーションに変えます。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[iPhone向けベストローカルLLMアプリ2026](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone特化のアプリ選択とセットアップのガイド。',
+          '[Android向けベストローカルLLMアプリ2026](/ja/power-local-llm/best-local-llm-apps-android-2026) — Termux + Ollama以外のAndroidアプリ選択ガイド。',
+          '[2026年ベストモバイルLLMモデル：Phi-4 Mini vs Gemma 3 vs SmolLM](/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — タスク別モバイルモデル選択のコンパニオンガイド。',
+          '[スマートフォンでローカル音声アシスタントを構築する](/ja/power-local-llm/voice-assistant-local-mobile-offline) — オフラインモバイル音声アシスタントのビルドガイド。',
+          '[Windows・Mac・Linuxで最も簡単なローカルAIアプリ](/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux) — MacまたはPCでローカルAIをセットアップするユーザー向けデスクトップ版。',
+          '[ローエンドPCに最適なローカルAIアプリ](/ja/power-local-llm/best-local-ai-app-low-end-pc) — RAMが限られたリソース制約デバイスへの推奨。',
+          '[非技術ユーザー向けベストローカルAIアプリ](/ja/power-local-llm/local-ai-app-non-technical-users) — オンボーディングと使いやすさに焦点を当てたUX比較。',
+          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — タブレットでのキャラクターカードロールプレイ向けモバイルUI比較。',
+          '[LM Studio vs Jan vs GPT4All：完全比較](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — タブレットガイドを補完するデスクトップアプリ比較。',
+          '[MCPを使ったローカルAIエージェント2026](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — タブレットをホームマシンのMCP対応ローカルエージェントセットアップに接続。',
+          '[ローカルLLMに最適なラップトップ](/ja/local-llms/best-laptops-local-llm) — リモート接続経由でタブレットと連携するホームマシンのハードウェアサイジングガイド。',
+          '[2026年ベストローカルLLM](/ja/local-llms/best-local-llms-2026) — モバイル以外を含む全ハードウェア層にわたる広範なモデル全体像。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'タブレットでAIをローカル実行：iPad Pro M4・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
+      description:
+        '2026年のiPadとAndroidタブレットでのAIローカル実行方法。オンデバイス推論アプリ、Termux + Ollama、ホームMac・PCへのリモート接続を解説。',
+      image: `https://www.promptquorum.com/og/power-local-llm/run-ai-on-tablet-ipad-android?lang=ja`,
+      url: 'https://www.promptquorum.com/ja/power-local-llm/run-ai-on-tablet-ipad-android',
+      inLanguage: 'ja',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Organization', 'name': 'PromptQuorum' },
+      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      articleBody:
+        '2026年のタブレットでのローカルAI実行。オンデバイス推論とホームマシンへのリモート接続を解説します。',
+      keywords: [
+        'iPad ローカルAI',
+        'Android タブレット ローカルLLM',
+        'Ollama iPad',
+        'Termux Ollama',
+        'LLM Farm',
+        'Pocket Paladin',
+      ],
+      educationalLevel: 'Beginner',
+      teaches: [
+        'ローカルAI推論のためのiPad設定方法',
+        'AndroidでTermuxとOllamaを使う方法',
+        'タブレットからリモートOllamaに接続する方法',
+        'タブレットハードウェアに基づくモデル選択',
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', 'name': 'LLM Farm' },
+        { '@type': 'SoftwareApplication', 'name': 'Pocket Paladin' },
+        { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+        { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
+        { '@type': 'SoftwareApplication', 'name': 'Termux' },
+      ],
+      about: [
+        { '@type': 'Thing', 'name': 'ローカルAI推論' },
+        { '@type': 'Thing', 'name': 'タブレットLLM' },
+        { '@type': 'Thing', 'name': 'iPad AIアプリ' },
+        { '@type': 'Thing', 'name': 'AndroidタブレットAI推論' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+  },
 }
