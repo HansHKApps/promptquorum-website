@@ -393,4 +393,419 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Lokale KI für E-Mail und Kalender: Automatisierung ohne Cloud-API (2026)',
+    seoTitle: 'Lokale KI-Automatisierung für E-Mail und Kalender 2026',
+    intro:
+      'Lokale LLMs können E-Mail-Antworten entwerfen, Posteingänge zusammenfassen, Besprechungsagenden generieren und Kalenderereignisse klassifizieren — alles ohne Ihre Nachrichten an eine Cloud-API zu senden. Dieser Leitfaden behandelt die praktischen Architekturen: lokale IMAP-Automatisierung mit Ollama, Open-Source-E-Mail-Clients mit lokalen KI-Plugins und die Sicherheitsgrundlagen für die lokale Speicherung von Kommunikationsdaten.',
+    metaDescription:
+      'Automatisierung von E-Mail-Entwürfen, Posteingangsorganisation und Kalendereverwaltung mit lokalen LLMs. Ollama, IMAP-Integration und datenschutzgerichtete Kommunikationsautomation.',
+    twitterDescription:
+      'Lokale LLM-E-Mail-Automatisierung: Antworten entwerfen, Posteingänge zusammenfassen, Besprechungsagenden generieren — alles lokal, keine Cloud-API. Setup-Anleitung für Ollama + IMAP-Workflows.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 14B',
+      'Mistral 7B',
+      'Phi-4 Mini',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4070 12 GB',
+    ],
+    audience:
+      'Fachleute, Kleinunternehmer und datenschutzbewusste Einzelpersonen, die E-Mail-Entwürfe automatisieren, Posteingänge zusammenfassen und Kalender verwalten möchten, ohne Kommunikationsdaten an Cloud-KI-Dienste zu senden.',
+    readTime: '14 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'lokale LLM E-Mail-Automatisierung',
+    targetKeywords: [
+      'lokale llm e-mail automatisierung',
+      'ollama e-mail entwurf',
+      'lokale ki posteingang zusammenfassung',
+      'lokale llm kalender automatisierung',
+      'private ki e-mail assistent',
+      'imap lokale llm workflow',
+    ],
+    leadAnswerBlock:
+      '**Lokale LLM-E-Mail-Automatisierung funktioniert am besten als zweistufige Pipeline: Der E-Mail-Client oder IMAP-Script ruft die rohe Nachricht ab, entfernt Header und übergibt den reinen Text an Ollama über dessen API; das Modell generiert einen Antwortentwurf, den Sie vor dem Versand überprüfen. Keine E-Mail-Inhalte verlassen Ihren Computer. Die drei praktischsten Setups in 2026 sind: (1) ein Python-IMAP-Script, das Ollama nach einem Zeitplan aufruft — 50 Zeilen, vollständig automatisierbar; (2) Thunderbird mit dem Ollama-Compose-Plugin — GUI-basiert, kein Code erforderlich; (3) n8n selbst gehostet mit einem lokalen Ollama-Knoten — visueller Workflow-Builder für Benutzer, die bedingte Logik, mehrstufige Filterung und Kalenderintegration ohne Programmierung wünschen. Für die Kalenderautomation funktioniert derselbe Ollama-API-Aufruf gegen exportierte ICS-Dateien oder die Google Calendar API mit lokalen Anmeldedaten — Generierung von Besprechungsagenden, Zusammenfassung der Woche und Entwurf von Folge-E-Mails aus Ereignisdetails.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Wie automatisiere ich E-Mail-Entwürfe mit einer lokalen KI, ohne meine E-Mails in die Cloud zu senden?',
+        answer:
+          'Das schnellste lokale E-Mail-Automatisierungs-Setup ist ein Python-IMAP-Script, das ungelesene E-Mails abruft, Header entfernt, den reinen Text an die lokale API von Ollama übergibt und den Antwortentwurf in einer lokalen Datei oder im Entwürfe-Ordner speichert. Unter 50 Zeilen Python. Keine E-Mail-Daten verlassen Ihren Computer. Als GUI-Alternative ermöglicht Thunderbird mit der Ollama-Compose-Erweiterung, dass Sie mit der rechten Maustaste auf eine E-Mail klicken und eine Antwort generieren, ohne den E-Mail-Client zu verlassen. Für die Workflow-Automatisierung verwaltet n8n selbst gehostet mit einem lokalen Ollama-Knoten bedingte Logik, mehrstufige Filterung und Kalenderintegration ohne Cloud-Abhängigkeiten.',
+        bullets: [
+          'IMAP + Python + Ollama: 50-Zeilen-Script, läuft nach Zeitplan, speichert Entwürfe lokal — das einfachste Setup.',
+          'Thunderbird + Ollama-Compose-Plugin: GUI-basiert, kein Code erforderlich, mit der rechten Maustaste im E-Mail-Client auf Antwort generieren klicken.',
+          'n8n selbst gehostet + Ollama-Knoten: visueller Workflow-Builder für bedingte Logik, Filterung und Kalenderintegration.',
+          'Kalenderautomation: Exportieren Sie die ICS-Datei oder verwenden Sie lokal die Google Calendar API, um Besprechungsagenden und Folge-Entwürfe zu generieren.',
+          'Bestes Modell für E-Mail: Qwen3 14B oder Phi-4 Mini — schnelle Generierung, geringer VRAM-Bedarf, ausreichende Qualität für geschäftliche Kommunikation.',
+          'Datenschutz: IMAP-Anmeldedaten und E-Mail-Inhalte verlassen Ihren Computer nie; keine Cloud-API-Aufrufe in einem dieser Setups.',
+          'Überprüfung vor dem Versand ist erforderlich: Lokale Modelle machen Fehler bei Fakten und Ton; behandeln Sie alle Ausgaben als ersten Entwurf.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Schnelle Fakten', anchor: '#quick-facts' },
+      { label: 'Warum eine lokale KI für E-Mail nutzen?', anchor: '#why-local' },
+      { label: 'Vergleich der Ansätze', anchor: '#approach-comparison' },
+      { label: 'Setup 1: IMAP + Python + Ollama', anchor: '#imap-python' },
+      { label: 'Setup 2: Thunderbird + Ollama-Plugin', anchor: '#thunderbird' },
+      { label: 'Setup 3: n8n Self-Hosted + Ollama', anchor: '#n8n' },
+      { label: 'Triage- und Überblicks-Prompt-Templates', anchor: '#triage-prompts' },
+      { label: 'Kalenderautomation', anchor: '#calendar' },
+      { label: 'Modellempfehlungen', anchor: '#models' },
+      { label: 'Datenschutz und Sicherheit', anchor: '#privacy' },
+      { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+      { label: 'Im DACH-Kontext', anchor: '#dach-context' },
+      { label: 'Quellen', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Drei Setups decken 95 % der lokalen E-Mail-Automatisierungsanwendungsfälle ab.** IMAP + Python + Ollama (50 Zeilen, vollständig skriptierbar), Thunderbird + Ollama-Compose (GUI, kein Code), n8n selbst gehostet + Ollama-Knoten (visueller Workflow, bedingte Logik). Wählen Sie die einfachste Option, die zu Ihrem Workflow passt.',
+          '**Kleinere Modelle sind besser für E-Mail als für kreative Aufgaben.** E-Mail-Entwürfe erfordern Kohärenz, nicht Kreativität. Qwen3 14B und Phi-4 Mini generieren geschäftsgeeignete Antwortentwürfe in 2–5 Sekunden auf einem System mit 16 GB. Llama 3.3 70B ist für die meisten E-Mail-Aufgaben zu groß.',
+          '**Überprüfung vor dem Versand ist nicht optional.** Lokale Modelle machen Fehler beim Ton (zu formell, zu locker), sachliche Fehler (falsche Uhrzeit, falscher Empfängername) und erfinden gelegentlich Inhalte aus unzusammenhängendem Kontext. Lesen Sie den Entwurf immer vor dem Versand durch.',
+          '**Keine E-Mail-Inhalte verlassen Ihren Computer in einem dieser Setups.** IMAP-Verbindungen gehen zu Ihrem E-Mail-Server, nicht zu einer Cloud-KI. Die Ollama-API ist lokal. n8n selbst gehostet läuft auf Ihrem Computer. Der Datenschutzvorteil ist real.',
+          '**Kalenderautomation funktioniert am besten mit exportierten ICS-Dateien oder einem lokalen Google Calendar API-Aufruf.** Exportieren Sie die Wochenereignisse in eine ICS-Datei, übergeben Sie sie an Ollama und bitten Sie, eine Besprechungsagenda, eine Vorbereitungscheckliste oder eine Wochenübersicht-E-Mail an Ihr Team zu generieren.',
+          '**IMAP-Anmeldedaten sind empfindlich.** Speichern Sie sie in Umgebungsvariablen oder einem lokalen Secrets Manager, niemals im Script-Quellcode. Verwenden Sie app-spezifische Passwörter statt Ihres primären Kontokennworts.',
+          '**n8n selbst gehostet ist die richtige Wahl für bedingte Logik.** Wenn Sie "alle E-Mails von [Domain] täglich zusammenfassen" oder "eine Folge-E-Mail generieren, wenn ein Kalenderereignis endet" möchten, verwaltet der visuelle Workflow-Builder von n8n dies ohne benutzerdefinierten Python-Code.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Schnelle Fakten',
+        items: [
+          '**Behandelte Setups:** IMAP + Python + Ollama, Thunderbird + Ollama-Compose, n8n selbst gehostet + Ollama-Knoten.',
+          '**Bestes Modell für E-Mail:** Qwen3 14B (schnell, geringer VRAM-Bedarf, ausreichende Geschäftsqualität) oder Phi-4 Mini (am schnellsten, 4 GB VRAM).',
+          '**Erforderlicher VRAM:** Qwen3 14B bei Q4 = ~9 GB; Phi-4 Mini bei Q4 = ~3 GB; Llama 3.3 70B bei Q4 = ~42 GB.',
+          '**Unterstützte E-Mail-Formate:** reiner Text IMAP (MIME decodiert), EML-Dateien, Gmail API (lokale Anmeldedaten), Outlook über IMAP.',
+          '**Kalenderformate:** ICS-Export (universell), Google Calendar API (lokales OAuth), Nextcloud Calendar (CalDAV).',
+          '**Script-Komplexität:** IMAP + Python = ~50 Zeilen; n8n-Workflow = visuell, kein Code; Thunderbird = nur Plugin-Installation.',
+          '**Datenschutz:** Keine E-Mail-Daten werden in einem Setup an eine Cloud-API gesendet; IMAP verbindet sich nur mit Ihrem E-Mail-Server.',
+        ],
+      },
+      whyLocal: {
+        id: 'why-local',
+        title: 'Warum eine lokale KI für E-Mail-Automatisierung nutzen?',
+        content:
+          '**Der Kerngrund ist der Datenschutz: Jede E-Mail, die Sie in eine Cloud-KI einfügen, wird möglicherweise protokolliert, zum Training verwendet und unterliegt der Datenspeicherungsrichtlinie dieses Anbieters.** Geschäftliche Korrespondenz, Kundenkommunikation und persönliche E-Mails enthalten Informationen, die Sie nicht in einem Datensatz eines Drittanbieters haben möchten. Eine lokale KI verarbeitet Ihre E-Mails auf Ihrer Hardware, gibt einen Entwurf zurück und speichert nichts.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Die Automatisierung von E-Mails mit lokalen KIs hält alle E-Mail-Inhalte auf Ihrem Computer — keine Cloud-API erhält Ihre Nachrichten, kein Dritter protokolliert oder trainiert mit Ihrer Korrespondenz, und die Entwurfsgenerierung funktioniert ohne Internetverbindung.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Wenn Sie eine E-Mail in ChatGPT oder Claude.ai einfügen und um einen Antwortentwurf bitten, wird diese E-Mail auf den Servern von OpenAI oder Anthropic verarbeitet. Für die meisten Menschen und für die meisten Gelegenheiten ist dies akzeptabel. Für geschäftliche Korrespondenz, Kundendetails, Vertragsdiskussionen oder jede Kommunikation, die vertrauliche Informationen enthält, ist dies nicht der Fall. Eine lokale KI, die über Ollama eingerichtet ist, verarbeitet dieselbe E-Mail auf Ihrem Computer und sendet sie nirgendwo hin.',
+          },
+        ],
+        items: [
+          '**Datensouveränität:** E-Mail-Inhalte, Absenderinformationen und Thread-Kontext bleiben auf Ihrem Computer. Keine Cloud-Aufbewahrungsrichtlinie gilt.',
+          '**Offline-Betrieb:** Sobald Ollama läuft und das Modell heruntergeladen ist, funktioniert die E-Mail-Generierung ohne Internetverbindung.',
+          '**Keine Nutzungsbeschränkungen:** Cloud-KI-APIs erzwingen Ratenbegrenzungen und Token-Limits. Ein lokales Setup hat keine Pro-Request-Kosten und kein Tageslimit.',
+          '**Einhaltung von Vorschriften:** DSGVO, HIPAA und Anforderungen zur beruflichen Geheimhaltung können das Senden von Kundenkommunikation an eine KI eines Drittanbieters verbieten. Die lokale Verarbeitung beseitigt diese Bedenken.',
+          '**Geschwindigkeit für kurze Aufgaben:** Ein kleines Modell (Qwen3 14B, Phi-4 Mini) generiert einen geschäftlichen E-Mail-Entwurf in 2–5 Sekunden auf Consumer-Hardware — schneller als die meisten Cloud-Roundtrips für kurze Prompts.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die lokale E-Mail-Automatisierung ist kein Ersatz für einen E-Mail-Client — sie ist ein Entwurfshilfe-Assistent, der sich in Ihren bestehenden Workflow einfügt. Sie nutzen Thunderbird, Apple Mail oder Gmail weiterhin zum Versand; die lokale KI generiert Text, den Sie überprüfen, bearbeiten und von Ihrem bestehenden Client aus versenden.',
+          },
+        ],
+      },
+      approachComparison: {
+        id: 'approach-comparison',
+        title: 'Vergleich der Ansätze',
+        content:
+          '**Die drei Setups unterscheiden sich in fünf Dimensionen, die für die meisten Benutzer wichtig sind: Einrichtungsschwierigkeit, 30-Tage-Zuverlässigkeit, Datenschutz und das Benutzerprofil, für das jedes Setup am besten geeignet ist.** Wählen Sie die einfachste Option, die Ihren Workflow abdeckt, anstelle der leistungsfähigsten.',
+        columns: ['Ansatz', 'Einrichtung', 'Zuverlässigkeit (30 Tage)', 'Datenschutz', 'Am besten geeignet für'],
+        rows: [
+          { 'Ansatz': 'Thunderbird + Ollama-Compose', 'Einrichtung': 'Einfach', 'Zuverlässigkeit (30 Tage)': 'Hoch (kein Hintergrundprozess)', 'Datenschutz': 'Nur lokal', 'Am besten geeignet für': 'Einzelne Fachleute, tägliche Triage, GUI-Benutzer' },
+          { 'Ansatz': 'Python + IMAP + Cron', 'Einrichtung': 'Schwierig (50 LOC + Planung)', 'Zuverlässigkeit (30 Tage)': 'Sehr hoch (skriptierbar, beobachtbar)', 'Datenschutz': 'Nur lokal', 'Am besten geeignet für': 'Entwickler, die volle Kontrolle und benutzerdefinierte Logik möchten' },
+          { 'Ansatz': 'n8n selbst gehostet + Ollama', 'Einrichtung': 'Mittel (visueller Workflow-Editor)', 'Zuverlässigkeit (30 Tage)': 'Hoch (mit Self-Host-Überwachung)', 'Datenschutz': 'Lokal mit Self-Host', 'Am besten geeignet für': 'Workflow-intensive Benutzer, die Zapier ersetzen; bedingte Logik' },
+        ],
+      },
+      imapPython: {
+        id: 'imap-python',
+        title: 'Setup 1: IMAP + Python + Ollama',
+        content:
+          '**Das skriptierbarste Setup: Ein Python-Script ruft ungelesene E-Mails über IMAP ab, entfernt Header und HTML, übergibt den reinen Text an die lokale API von Ollama und speichert den Antwortentwurf.** Läuft nach einem Zeitplan mit Cron oder Task Scheduler. Fünfzig Zeilen Python, keine externen Abhängigkeiten außer dem Ollama-Python-Client.',
+        promptExamples: [
+          {
+            label: 'IMAP-E-Mail-Abruf + Ollama-Entwurf (Python-Skelett)',
+            text: 'import imaplib, email, os\nimport ollama\n\n# Mit IMAP verbinden\nmail = imaplib.IMAP4_SSL(os.environ["IMAP_HOST"])\nmail.login(os.environ["IMAP_USER"], os.environ["IMAP_PASS"])\nmail.select("INBOX")\n\n# Ungelesene E-Mails abrufen\n_, msgnums = mail.search(None, "UNSEEN")\nfor num in msgnums[0].split():\n    _, data = mail.fetch(num, "(RFC822)")\n    msg = email.message_from_bytes(data[0][1])\n    body = msg.get_payload(decode=True).decode("utf-8", errors="ignore")\n    subject = msg["Subject"]\n    sender = msg["From"]\n\n    # Entwurf mit Ollama generieren\n    response = ollama.chat(model="qwen3:14b", messages=[\n        {"role": "system", "content": "Sie sind ein professioneller E-Mail-Assistent. Schreiben Sie prägnante, höfliche geschäftliche Antworten. Passen Sie die Formalität der eingehenden E-Mail an."},\n        {"role": "user", "content": f"E-Mail von: {sender}\\nBetreff: {subject}\\n\\nText:\\n{body[:2000]}\\n\\nSchreiben Sie einen Antwortentwurf."}\n    ])\n    draft = response["message"]["content"]\n    print(f"ENTWURF für: {subject}\\n{draft}\\n---")',
+          },
+        ],
+        items: [
+          '**IMAP-Anmeldedaten:** Speichern Sie sie in Umgebungsvariablen (`IMAP_HOST`, `IMAP_USER`, `IMAP_PASS`) — niemals im Quellcode. Verwenden Sie ein app-spezifisches Passwort, nicht Ihr primäres Kontokennwort.',
+          '**Textverkürzung:** Begrenzen Sie den E-Mail-Text auf 2.000–3.000 Zeichen, bevor Sie ihn an Ollama übergeben. Lange E-Mail-Threads fügen selten nützlichen Kontext für einen Antwortentwurf hinzu und verlangsamen die Generierung.',
+          '**HTML-Entfernung:** Wenn der E-Mail-Text HTML ist, verwenden Sie `html.parser` oder `BeautifulSoup`, um reinen Text zu extrahieren, bevor Sie ihn an das Modell übergeben. HTML-Tags verschlechtern die Generierungsqualität.',
+          '**Planung:** Auf macOS/Linux fügen Sie einen Cron-Eintrag (`crontab -e`) hinzu, um das Script alle 30 Minuten auszuführen. Auf Windows verwenden Sie Task Scheduler mit einem Python-Interpreter-Pfad.',
+          '**Entwurfsspeicherung:** Schreiben Sie Entwürfe in eine lokale Textdatei pro E-Mail (benannt nach Zeitstempel + Betreffslug) oder pushen Sie in einen IMAP-Ordner "Entwürfe" mit `mail.append()`. Das Lesen von Textdateien ist sicherer zur Überprüfung; IMAP-Entwürfe ermöglichen es Ihnen, von jedem Client aus zu versenden.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Aktivieren Sie nicht das automatische Versenden. Keine lokale KI erzeugt E-Mail-Entwürfe, die zuverlässig genug sind, um ohne menschliche Überprüfung zu versenden. Tonfehler, falsche Daten, erfundene Tatsachen und Antwort-an-falschen-Thread-Fehler treten regelmäßig auf. Die Automatisierung spart Ihnen Zeit beim Entwurf; der Überprüfungsschritt ist erforderlich.',
+          },
+        ],
+      },
+      thunderbird: {
+        id: 'thunderbird',
+        title: 'Setup 2: Thunderbird + Ollama-Compose-Plugin',
+        content:
+          '**Thunderbird mit der Ollama-Compose-Erweiterung ist die Code-freie Option.** Installieren Sie Thunderbird, installieren Sie Ollama, laden Sie ein Modell herunter, installieren Sie die Erweiterung — E-Mail-Generierung ist nur einen Rechtsklick im Composefenster entfernt.',
+        items: [
+          '**Thunderbird installieren** von thunderbird.net. Verfügbar für macOS, Windows und Linux.',
+          '**Ollama installieren und ein Modell laden:** `ollama pull qwen3:14b` (empfohlen für E-Mail-Arbeit). Starten Sie `ollama serve`.',
+          '**Die Ollama-Compose-Erweiterung installieren** vom Thunderbird-Add-ons-Manager. Suchen Sie "Ollama" oder installieren Sie aus der XPI-Datei der Erweiterung aus dem Projekt-Repository.',
+          '**Die Erweiterung konfigurieren** um auf `http://localhost:11434` zu zeigen und wählen Sie Ihr Modell (Qwen3 14B oder Phi-4 Mini empfohlen).',
+          '**Im Composefenster:** Rechtsklick im Textbereich und wählen Sie "Mit Ollama generieren" — die Erweiterung sendet die zitierte Original-E-Mail und Ihre Cursor-Position an Ollama und fügt den Antwortentwurf ein.',
+          '**Modellwechsel:** Die Erweiterung ermöglicht es Ihnen, Modelle aus der Compose-Symbolleiste zu wechseln. Verwenden Sie Phi-4 Mini für schnelle Antworten; wechseln Sie zu Qwen3 14B oder Llama 3.3 70B für komplexe oder vertrauliche Korrespondenz.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Legen Sie einen benutzerdefinierten System-Prompt in den Ollama-Compose-Einstellungen fest. Der Standard-Prompt ist generisch; ein angepasster erzeugt bessere Ergebnisse. Beispiel: "Sie schreiben professionelle E-Mail-Antworten für [Ihr Name], ein [Ihre Rolle] bei [Unternehmen]. Antworten sind prägnant (unter 150 Wörtern, es sei denn, der Kontext erfordert mehr), professionell warmherzig und passen zur Formalität der eingehenden E-Mail. Fügen Sie nie Disclaimers oder Signaturzeilen hinzu."',
+          },
+        ],
+      },
+      n8n: {
+        id: 'n8n',
+        title: 'Setup 3: n8n Self-Hosted + Ollama-Knoten',
+        content:
+          '**n8n selbst gehostet mit einem lokalen Ollama-Knoten ist die richtige Wahl für bedingte Automatisierung: E-Mails nach Absender-Domain filtern, täglich zusammenfassen, Folge-Entwürfe generieren, wenn Kalenderereignisse enden, oder verschiedene E-Mail-Typen zu verschiedenen Modell-Prompts leiten — alles ohne Code zu schreiben.**',
+        items: [
+          '**n8n selbst gehostet installieren:** `npm install -g n8n && n8n start` oder `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. Der Workflow-Editor läuft unter `http://localhost:5678`.',
+          '**Ollama-Knoten hinzufügen:** Suchen Sie im n8n-Workflow-Editor nach dem Knoten "Ollama" (ab n8n v1.2+ eingebaut). Zeigen Sie auf `http://localhost:11434` und wählen Sie Ihr Modell.',
+          '**IMAP-Trigger:** Fügen Sie einen IMAP-E-Mail-Knoten als Workflow-Trigger hinzu — konfigurieren Sie mit Ihren IMAP-Anmeldedaten. Der Knoten fragt neue E-Mails ab und übergibt jede als JSON-Objekt zum nächsten Schritt.',
+          '**Filterlogik:** Fügen Sie einen IF-Knoten hinzu, um E-Mails nach Absender-Domain, Betreffschlüsselwörtern oder Tageszeit zu leiten. Leiten Sie zu verschiedenen Ollama-Prompts basierend auf E-Mail-Typ weiter (Client-E-Mails, Newsletter-Digests, interne Team-Nachrichten).',
+          '**Kalenderintegration:** Fügen Sie einen Google Calendar-Knoten hinzu (mit lokalen OAuth-Anmeldedaten) oder einen ICS-Datei-Reader, um bevorstehende Ereignisse abzurufen. Übergeben Sie Ereignisdetails an den Ollama-Knoten, um eine Besprechungsagenda oder Vorbereitungscheckliste zu generieren.',
+          '**Ausgabeoptionen:** Schreiben Sie Entwürfe in eine lokale Datei, pushen Sie in IMAP-Entwürfe, versenden Sie per Slack-Nachricht an sich selbst oder speichern Sie in einer Notion/Obsidian-Seite — alles über n8n-Ausgabeknoten.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'n8n selbst gehostet ist der beste Integrationspunkt für Kalender + E-Mail-Workflows. Das typische Muster: IMAP-Trigger empfängt eine Besprechungsbestätigungs-E-Mail → Besprechungsdetails extrahieren → Google Calendar API aufrufen (lokales OAuth), um Teilnehmer abzurufen → alle Kontexte an Ollama übergeben → Besprechungsagenda generieren → in einen designierten Ordner speichern. Dies dauert etwa 20 Minuten zum Verdrahten im visuellen n8n-Editor.',
+          },
+        ],
+      },
+      triagePrompts: {
+        id: 'triage-prompts',
+        title: 'Triage- und Überblicks-Prompt-Templates',
+        content:
+          '**Zwei Prompts, die die häufigsten E-Mail-Aufgaben bewältigen: Klassifizierung pro E-Mail und wöchentliche Posteingangsüberprüfung.** Legen Sie sie in einem der drei Setups ab (Python-Script, Thunderbird-System-Prompt oder n8n-Ollama-Knoten-Text) — sie sind bewusst modellunabhängig.',
+        promptExamples: [
+          {
+            label: 'Triage-Prompt-Template',
+            text: 'Sie sind ein E-Mail-Triage-Assistent. Klassifizieren Sie die folgende E-Mail in eine dieser Kategorien und erklären Sie in einem Satz:\n- DRINGEND: Antwort erforderlich innerhalb von 4 Stunden\n- WICHTIG: Antwort erforderlich innerhalb von 24 Stunden\n- INFO: Zum Verständnis lesen, keine Antwort erforderlich\n- WERBUNG: Marketing oder Newsletter, kann archiviert werden\n- SPAM: Unerwünscht, Filterung empfohlen\n\nE-Mail:\nVon: {sender}\nBetreff: {subject}\nText: {body[:1500]}\n\nAusgabeformat:\nKategorie: [DRINGEND|WICHTIG|INFO|WERBUNG|SPAM]\nBegründung: [ein Satz]\nEmpfohlene Aktion: [antworten | archivieren | markieren | löschen]',
+          },
+          {
+            label: 'Wöchentliches Überblicks-Prompt-Template',
+            text: 'Fassen Sie die folgenden 50 E-Mails der letzten Woche in 3 Abschnitte zusammen:\n1. DRINGENDE oder WICHTIGE Elemente, die noch Maßnahmen erfordern (mit Absender + 1-Zeilen-Zusammenfassung)\n2. Themen (z.B. "Q4-Planung kam in 12 E-Mails diese Woche vor")\n3. Personen, an die ich noch antworte (Absender + ausstehende Tage)\n\nE-Mails (Betreff + erste 200 Zeichen jedes Texts):\n[geben Sie batched E-Mail-Liste ein]\n\nAusgabeformat: 3 Markdown-Abschnitte.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Für den Triage-Prompt kombinieren Sie ihn mit dem n8n-IF-Knoten, um nach Kategorie zu leiten: DRINGEND → Push-Benachrichtigung, WICHTIG → speichern Sie in den Ordner "benötigt-Antwort", WERBUNG → automatisch archivieren, SPAM → zur Filterregel kennzeichnen. Die Klassifizierung macht die nachgelagerte Automatisierung sicher — ohne sie kann die Pipeline nicht zwischen einer Client-Nachverfolgung und einer Marketing-E-Mail unterscheiden.',
+          },
+        ],
+      },
+      calendar: {
+        id: 'calendar',
+        title: 'Kalenderautomation mit lokalen LLMs',
+        content:
+          '**Kalenderautomation mit einer lokalen KI funktioniert in zwei Modi: passiv (ICS exportieren, an Ollama übergeben zur Zusammenfassung oder Agenda-Generierung) und aktiv (Google Calendar API mit lokalen OAuth-Anmeldedaten für Echtzeitzugriff auf Ereignisse).** Der passive Modus ist einfacher; der aktive Modus ermöglicht geplante Workflows.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Die lokale KI-Kalenderautomation generiert Besprechungsagenden, Wochenzusammenfassungen und E-Mail-Entwürfe für Folgeschritte, indem exportierter ICS-Dateiinhalt oder Google Calendar API-Daten an Ollama übergeben werden — keine Kalenderdaten berühren eine Cloud-KI.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Die einfachste Kalenderautomation: Exportieren Sie die Wochenereignisse als ICS-Datei aus einer beliebigen Kalender-App (Google Calendar, Apple Calendar, Nextcloud), öffnen Sie ein Terminal, übergeben Sie den ICS-Inhalt an Ollama mit einem "generieren Sie eine Besprechungsagenda für jedes Ereignis"-Prompt und kopieren Sie die Ausgabe in Ihre Notizen. Dauert 30 Sekunden und hält Ihre Kalenderdaten lokal.',
+          },
+        ],
+        promptExamples: [
+          {
+            label: 'ICS-zu-Agenda-Prompt-Template',
+            text: 'Hier ist mein Kalender für die Woche im ICS-Format:\n\n[geben Sie ICS-Inhalt ein]\n\nFür jedes Besprechungsereignis:\n1. Generieren Sie eine 5-Punkte-Besprechungsagenda basierend auf dem Ereignistitel und der Beschreibung.\n2. Wenn Teilnehmer aufgelistet sind, vermerken Sie, wer jedes Agenda-Element leiten sollte.\n3. Wenn das Ereignis keine Beschreibung hat, generieren Sie eine generische Agenda für eine [Besprechungstyp]-Besprechung.\n\nFormatieren Sie als Klartext. Ein Abschnitt pro Ereignis, getrennt durch ---.',
+          },
+        ],
+        items: [
+          '**ICS-Export (passiv):** Google Calendar, Apple Calendar, Nextcloud und Outlook exportieren alle ICS-Dateien. Exportieren Sie wöchentlich oder täglich, übergeben Sie an Ollama über das Terminal oder ein Script, generieren Sie Agenden oder Zusammenfassungen.',
+          '**Google Calendar API (aktiv):** Erstellen Sie eine lokale OAuth-Anmeldedaten in der Google Cloud Console (persönliches Projekt), laden Sie die Credentials-JSON herunter und verwenden Sie die `google-auth-oauthlib`-Python-Bibliothek zum Abrufen von Ereignissen. Das OAuth-Token wird lokal gespeichert und die API-Aufrufe gehen direkt zu Google Calendar — keine KI als Zwischenschicht.',
+          '**Besprechungsagenda-Generierungs-Prompt:** Titel + Teilnehmer + Beschreibung → "Generieren Sie eine 5-Punkte-Besprechungsagenda mit Zeitzuordnungen. Wenn die Besprechungsbeschreibung leer ist, schlagen Sie eine generische Agenda für eine [Besprechungstyp]-Besprechung vor."',
+          '**Wochenzusammenfassung-Prompt:** alle Ereignisse der Woche → "Fassen Sie die Besprechungen der Woche in 3 Sätzen zusammen. Heben Sie alle aufeinanderfolgenden Blöcke oder ungewöhnlich lange Besprechungen hervor."',
+          '**E-Mail-Entwurf folgen:** Nach einer Besprechung (ausgelöst durch Ereignisendzeit) → "Schreiben Sie eine Folge-E-Mail für die Besprechung \'[Titel]\', die die Teilnehmer dankt und die nächsten Schritte zusammenfasst. Verwenden Sie diese Ereignisbeschreibung für Kontext: [Beschreibung]."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Halten Sie Ihre Kalenderdaten, wo möglich, im Klartext. ICS ist Klartext; es ist einfach, direkt an Ollama zu übergeben. Wenn Sie ein proprietäres Kalenderformat oder ein gesperrtes Enterprise-System verwenden, exportieren Sie zuerst zu ICS. Der ICS-Standard ist universell und wird von jeder großen Kalender-Anwendung unterstützt.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'Modellempfehlungen für E-Mail- und Kalenderaufgaben',
+        content:
+          '**E-Mail- und Kalenderautomisierungsaufgaben bevorzugen kleine, schnelle Modelle gegenüber großen, leistungsstarken.** Das Entwerfen einer geschäftlichen E-Mail-Antwort, das Generieren einer Besprechungsagenda oder das Zusammenfassen eines Posteingangs erfordert nicht Llama 3.3 70B — es erfordert ein Modell, das schnell genug ist, um sich interaktiv anzufühlen und kohärent genug, um brauchbaren Geschäftstext zu erzeugen. Für die umfassendere Modelllandschaft über alle Anwendungsfälle hinweg, siehe [Beste lokale LLMs in 2026](/local-llms/best-local-llms-2026?lang=de).',
+        columns: ['Aufgabe', 'Empfohlenes Modell', 'VRAM (Q4)', 'Warum'],
+        rows: [
+          { 'Aufgabe': 'E-Mail-Antwort-Entwurf', 'Empfohlenes Modell': 'Qwen3 14B', 'VRAM (Q4)': '~9 GB', 'Warum': 'Beste Balance von Geschäftsschreib-Qualität und Generierungsgeschwindigkeit; verarbeitet formale und ungezwungene Register' },
+          { 'Aufgabe': 'Schnelle Einzeilen-Antworten', 'Empfohlenes Modell': 'Phi-4 Mini', 'VRAM (Q4)': '~3 GB', 'Warum': 'Schnellste Option; ausreichend für einfache Bestätigungen und Planungsantworten' },
+          { 'Aufgabe': 'Besprechungsagenda-Generierung', 'Empfohlenes Modell': 'Qwen3 14B', 'VRAM (Q4)': '~9 GB', 'Warum': 'Gut in strukturierter Listenerstellung; Agenda-Format liegt gut in seinen Möglichkeiten' },
+          { 'Aufgabe': 'Zusammenfassung langer E-Mail-Threads', 'Empfohlenes Modell': 'Llama 3.3 70B oder Qwen3 32B', 'VRAM (Q4)': '~42 GB / ~20 GB', 'Warum': 'Kontext-Treue wichtig für Multi-Nachrichten-Threads; kleinere Modelle verpassen Details' },
+          { 'Aufgabe': 'Vertrauliche / rechtliche Korrespondenz', 'Empfohlenes Modell': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Warum': 'Beste Reasoning-Qualität; wert der Hardware-Kosten, wenn Fehler hochriskant sind' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Für die meisten E-Mail-Aufgaben auf einem System mit 16 GB ist Qwen3 14B die richtige Standard-Wahl. Laden Sie es einmal mit `ollama pull qwen3:14b` herunter und verwenden Sie es für alle E-Mail- und Kalenderautomatisierung. Wechseln Sie nur zu einem größeren Modell, wenn Sie auf eine Aufgabengattung stoßen, bei der die Ausgabequalität des 14B konsistent unzureichend ist.',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Datenschutz und Sicherheit',
+        content:
+          '**Der Datenschutzvorteil der lokalen E-Mail-Automatisierung ist real, erfordert aber eine korrekte Einrichtung.** Drei Dinge können ihn untergraben: versehentliche Cloud-Synchronisierung von IMAP-Anmeldedaten, E-Mail-Inhalte in Protokollen, die für Drittanbieter-Tools zugänglich sind, und falsch konfigurierte n8n-Instanzen, die den Workflow dem Netzwerk aussetzen. Für das umfassendere Muster "SaaS durch lokale KI ersetzen" über andere Tools hinweg, siehe [Grammarly und Notion AI durch lokale Modelle ersetzen](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=de).',
+        items: [
+          '**IMAP-Anmeldedaten:** Speichern Sie in Umgebungsvariablen oder einem lokalen Secrets Manager (macOS Keychain, Linux `secret-tool`, Windows Credential Manager). Speichern Sie nie im Script-Quellcode oder einer Datei, die mit einem Cloud-Repository synchronisiert werden könnte.',
+          '**E-Mail-Inhalte in Protokollen:** Python-Scripts, die E-Mail-Inhalte auf stdout/stderr drucken, schreiben E-Mail-Daten in Protokolldateien, wenn sie über Cron mit aktivierter Protokollierung ausgeführt werden. Leiten Sie Protokolle auf `/dev/null` um oder verwenden Sie eine Protokollstufe, die E-Mail-Inhalte ausschließt.',
+          '**n8n-Netzwerk-Exposition:** n8n selbst gehostet bindet sich standardmäßig an `localhost:5678`, was lokal ist. Wenn Sie es für Ihr Heimnetzwerk oder darüber hinaus verfügbar machen (z.B. für mobilen Zugriff), fügen Sie Authentifizierung hinzu und stellen Sie sicher, dass die Ollama-API auch auf localhost beschränkt ist.',
+          '**App-Passwörter:** Konfigurieren Sie ein dediziertes App-spezifisches Passwort für IMAP-Zugriff in Gmail, Outlook und Apple Mail, anstatt Ihr primäres Kontopasswort zu verwenden. Widerrufen Sie es sofort, wenn das Script kompromittiert ist.',
+          '**Git-Repositories:** Wenn Sie Ihre Automatisierungs-Scripts versionskontrollieren, fügen Sie eine `.gitignore` hinzu, die alle `.env`-Dateien mit Anmeldedaten ausschließt. Verpflegen Sie niemals Anmeldedaten in einem öffentlichen oder privaten Repository.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Cloud-Sync-Risiko. Wenn Ihr Home-Verzeichnis mit iCloud, Google Drive oder OneDrive synchronisiert wird, wird eine `.env`-Datei oder Credentials-Datei in einem synchronisierten Verzeichnis in die Cloud hochgeladen. Speichern Sie Anmeldedaten in einem Verzeichnis, das ausdrücklich von Cloud-Sync ausgeschlossen ist, oder verwenden Sie den nativen Secrets Manager Ihres Betriebssystems.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler',
+        items: [
+          '**Automatisches Versenden von Entwürfen ohne Überprüfung.** Keine lokale KI erzeugt zuverlässig genug Output zum Versenden ohne menschliche Überprüfung. Tonfehler, falsche Daten und erfundene Tatsachen sind häufig. Lesen Sie immer vor dem Versenden durch.',
+          '**Ganze E-Mail-Threads an das Modell übergeben.** Lange Threads enthalten redundanten Kontext, der Token verschwendet und die Generierung verlangsamt. Entfernen Sie zitierte Antwort-Blöcke und übergeben Sie nur die letzten 2–3 Nachrichten.',
+          '**Llama 3.3 70B für alle E-Mail-Aufgaben verwenden.** Für die meisten E-Mail-Entwürfe ist Qwen3 14B schneller und verbraucht weniger VRAM. Reservieren Sie die 70B für wirklich komplexe oder hochriskante Korrespondenz.',
+          '**IMAP-Anmeldedaten im Script speichern.** Anmeldedaten im Quellcode sind nur ein `git push` entfernt, um öffentlich zu sein. Verwenden Sie Umgebungsvariablen.',
+          '**Keinen Wort-Limit für Entwürfe-Prompts setzen.** Ohne Wort-Limit polstern Modelle geschäftliche Antworten mit unnötigen Kontexten, Caveats und Höflichkeitsfloskeln. Fügen Sie "Antwort unter 150 Wörtern" zu jedem E-Mail-Prompt hinzu.',
+        ],
+      },
+      dachContext: {
+        id: 'dach-context',
+        title: 'Im DACH-Kontext',
+        content:
+          '**Für Organisationen in Deutschland, Österreich und der Schweiz bietet die lokale E-Mail-Automatisierung zusätzliche Compliance-Vorteile, die Cloud-Automatisierungslösungen nicht bieten. Die DSGVO, BSI-Grundschutz-Kataloge und Anforderungen an Auftragsverarbeiter machen lokale Verarbeitung zur bevorzugten Architektur für geschäftliche E-Mail in der DACH-Region.**',
+        items: [
+          '**DSGVO Artikel 28 — Auftragsverarbeiter:** Wenn Sie Cloud-KI-Dienste für E-Mail-Verarbeitung verwenden, etablieren Sie eine "Auftragsverarbeitung"-Beziehung mit dem KI-Anbieter. Das erfordert einen Datenverarbeitungsvertrag (DPA), regelmäßige Audits und dokumentierte Datenschutz-Impact-Assessments. Lokale Verarbeitung entfällt diese Anforderung — Ihre Daten bleiben in Ihrem Verantwortungsbereich.',
+          '**BSI-Grundschutz-Kataloge:** Das Bundesamt für Sicherheit in der Informationstechnik empfiehlt für sensible Organisationen (Regierungsbehörden, Finanzdienstleistungen, Gesundheitswesen, Infrastruktur) lokale Datenverarbeitung ohne Übertragung an Dritte. Die Automation mit Ollama erfüllt die "lokal gespeicherte" und "begrenzte Datenfluss"-Anforderungen der Kataloge.',
+          '**Mittelstand-Compliance:** Deutsche, österreichische und schweizer KMU unterliegen oft lokalen Industriestandards und Kundenanforderungen für IT-Sicherheit. Die Fähigkeit, "unsere E-Mail verlässt nie unseren Computer" zu sagen, ist für Aufträge mit öffentlichen Institutionen, Finanzpartnern und streng regulierten Clients von Vorteil.',
+          '**Datenspeicherung und Aufbewahrung:** Cloud-KI-Anbieter behalten Verarbeitungsverlauf und Logs oft monatelang. DSGVO Artikel 17 (Recht auf Vergessenwerden) wird kompliziert, wenn Ihr E-Mail-Inhalt in den Trainingsdaten oder Logs eines Drittanbieters liegt. Lokale Verarbeitung garantiert sofortige Löschung — keine Trainingsdaten-Kontamination.',
+          '**Wirtschaftlichkeit:** Kleine bis mittlere Organisationen sparen durch lokale Automation im Vergleich zu Cloud-KI-APIs Kosten. Statt fortlaufender API-Kosten für jede verarbeitete E-Mail, ist Ollama eine einmalige Software-Investition + Hardware.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Wenn Sie in Deutschland, Österreich oder der Schweiz tätig sind und Kundenkommunikation oder interne E-Mail-Sensitivität zu dokumentieren haben, empfehlen Sie die Automatisierung mit lokalen Modellen als "Datenschutz-by-Design"-Architektur gegenüber Compliance-Offiziellen und Stakeholder-Meetings. Die Nachricht: "Lokale Verarbeitung, keine Drittanbieter-APIs, keine Trainingsdaten-Nutzung" überzeugt regelmäßig.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          'Qwen3 14B-Modellkarte — [Alibaba Cloud / Qwen-Team](https://qwenlm.github.io)',
+          'Phi-4 Mini Technical Report — [Microsoft Research](https://microsoft.com/research)',
+          'Ollama API-Dokumentation — [Ollama](https://ollama.com/docs)',
+          'n8n Self-Hosted-Dokumentation — [n8n.io](https://docs.n8n.io)',
+          'DSGVO Artikel 28 — Anforderungen an die Auftragsverarbeitung — [EUR-Lex](https://eur-lex.europa.eu)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Funktioniert dies mit Gmail?',
+            a: 'Ja. Gmail unterstützt IMAP-Zugriff mit einem App-spezifischen Passwort. Aktivieren Sie IMAP in den Gmail-Einstellungen, generieren Sie ein App-Passwort in den Sicherheitseinstellungen Ihres Google-Kontos und verwenden Sie diese Anmeldedaten im IMAP-Script. Gmail stellt auch die Gmail API zur Verfügung, um strukturiertere Zugriffe zu ermöglichen — nützlich für n8n-Workflows, die Label-Verwaltung, Thread-Operationen oder Anhang-Handhabung benötigen.',
+          },
+          {
+            q: 'Was ist besser für E-Mail-Automatisierung: IMAP + Python oder n8n?',
+            a: 'IMAP + Python ist besser, wenn Sie sich wohlfühlen, ein Script zu schreiben und zu pflegen und volle Kontrolle möchten. n8n ist besser, wenn Sie bedingte Logik (E-Mails nach Absender, Zeit oder Inhalt weiterleiten), Kalenderintegration oder mehrere Ausgabeorte ohne Code möchten. Beide verwenden Ollama als lokales Modell-Backend; der Unterschied ist die Orchestrierungs-Ebene drumherum.',
+          },
+          {
+            q: 'Kann eine lokale KI einen ganzen E-Mail-Posteingang zusammenfassen?',
+            a: 'Ja, mit Einschränkungen. Eine wöchentliche Posteingang-Zusammenfassung (50–100 E-Mails) funktioniert gut: Betreffszeilen und erste 200 Zeichen jedes Textes abrufen, verketten, an Qwen3 14B übergeben mit einem "Zusammenfassung nach Thema und Dringlichkeit"-Prompt. Für einen kompletten Posteingang mit Tausenden E-Mails, batchen Sie die Zusammenfassung (50 E-Mails pro API-Aufruf) und aggregieren Sie die Batch-Zusammenfassungen. Das Übergeben von 1.000 E-Mails in einem Aufruf überschreitet Context-Limits und erzeugt unzuverlässige Ausgabe.',
+          },
+          {
+            q: 'Welches lokale LLM ist das beste für formale geschäftliche E-Mails?',
+            a: 'Qwen3 14B erzeugt das beste Qualitäts-zu-Geschwindigkeits-Verhältnis für formale geschäftliche Korrespondenz auf Consumer-Hardware. Es verarbeitet formales Register, angemessene Absicherung und professionelle Schlussformeln zuverlässig. Für sehr hochrisikante Korrespondenz (rechtliche Mitteilungen, Executive-Kommunikation, Vertragsverhandlung), verwenden Sie Llama 3.3 70B — der Qualitätsunterschied ist für komplexe oder sensible Themen sichtbar.',
+          },
+          {
+            q: 'Funktioniert dies auf Windows?',
+            a: 'Ja. Ollama läuft auf Windows (Download von ollama.com). Das IMAP-Python-Script läuft auf jeder Python 3.8+-Installation auf Windows. Thunderbird und die Ollama-Compose-Erweiterung sind Cross-Platform. n8n Self-Hosted läuft auf Windows über npm oder Docker Desktop.',
+          },
+          {
+            q: 'Wie gehe ich mit E-Mail-Threads mit mehreren vorherigen Antworten um?',
+            a: 'Entfernen Sie zitierte Inhalte vor der Übergabe an das Modell. Verwenden Sie die `email`-Bibliothek von Python, um nur die neueste Antwort zu extrahieren (den Teil über dem ersten `>`-Präfix oder Divider `--- Original Message ---`). Übergeben Sie nur die letzten 2–3 Nachrichten mit einem 3.000-Zeichen-Gesamtlimit. Das Modell benötigt selten die komplette Thread-Historie, um eine angemessene Antwort zu generieren.',
+          },
+          {
+            q: 'Ist dies DSGVO-konform für geschäftliche Nutzung?',
+            a: 'Lokale Verarbeitung ist unter der DSGVO defensiver als Cloud-KI-Verarbeitung für personenbezogene Daten. Wenn Daten auf Ihrem Computer bleiben, begründen Sie nicht automatisch eine neue Auftragsverarbeitungs-Beziehung (Artikel 28). Jedoch hängt die DSGVO-Konformität von Ihrer spezifischen Rolle, der Art der Daten und den bestehenden Datenschutzrichtlinien Ihrer Organisation ab. Konsultieren Sie Ihren Datenschutzbeauftragten, bevor Sie dieses Setup für die Verarbeitung personenbezogener Daten von Kunden oder Mitarbeitern verwenden.',
+          },
+          {
+            q: 'Kann ich damit im Auftrag einer anderen Person antworten?',
+            a: 'Technisch ja — das Script kann so konfiguriert werden, dass es auf jeden IMAP-Account zugegriffen wird, für den Sie Anmeldedaten haben. Rechtlich und ethisch setzt das Generieren von E-Mail-Antworten im Auftrag einer anderen Person ohne deren Wissen erhebliche Zustimmungs- und Personalisierungsfragen voraus. Verwenden Sie diese Automatisierung nur für Konten und Korrespondenz, für die Sie persönlich verantwortlich sind.',
+          },
+          {
+            q: 'Kann ich KI auf eingehende E-Mails auslösen?',
+            a: 'Ja, über drei Muster. (1) Python + IMAP + Cron: Planen Sie das Script alle 30 Min. aus, rufen Sie neue ungelesene E-Mails ab und generieren Sie Entwürfe. (2) n8n IMAP-Trigger-Knoten: fragt alle 1–5 Min. ab, löst den Workflow bei jeder neuen E-Mail sofort aus. (3) Thunderbird-Filterregeln: verwenden Sie eine "Script ausführen"-Filteraktion, die Ollama über Curl aufruft. Der n8n-Ansatz ist am zuverlässigsten für echte Echtzeit-Triage; Cron ist einfacher, wenn 30-Min-Latenz akzeptabel ist.',
+          },
+          {
+            q: 'Kann ich E-Mail-KI über Geräte synchronisieren?',
+            a: 'Die Entwürfe können sich über Ihren bestehenden IMAP-Entwürfe-Ordner synchronisieren — schreiben Sie den KI-generierten Entwurf in den IMAP-Ordner "Entwürfe" mit `mail.append()`, und jedes Gerät mit IMAP-Zugriff (Telefon, Tablet, zweiter Laptop) sieht ihn sofort. Das Ollama-Backend selbst synchronisiert nicht — es läuft auf dem Computer, auf dem Sie es einrichten. Mobile Geräte benötigen Netzwerk-Zugriff zum Home-Computer mit laufendem Ollama (Heimnetzwerk-IP oder Tailscale). Plan: Home-Server läuft Ollama + Automatisierung; alle Geräte lesen Entwürfe aus dem IMAP-Entwürfe-Ordner. Eine KI-Generierung, Multi-Device-Überprüfung und Versand.',
+          },
+          {
+            q: 'Muss ich bei der Verwendung von lokalen LLMs für E-Mail-Automatisierung die DSGVO beachten?',
+            a: 'Ja, das gilt für jede Verarbeitung personenbezogener Daten. Bei lokaler Verarbeitung bleibt der Datenschutz jedoch in Ihrer Kontrolle — Sie müssen keinen Auftragsverarbeitungsvertrag mit einem KI-Anbieter schließen, wenn alles lokal läuft. Jedoch müssen Sie immer noch sicherstellen, dass Ihre Automatisierung mit der DSGVO konform ist: Verlangen Sie Zustimmung, wenn E-Mails persönliche Daten von Kunden enthalten; dokumentieren Sie Ihre Zwecke und Rechtsgrundlage für die Verarbeitung; löschen Sie E-Mail-Daten, wenn die Aufbewahrungsfrist endet. Die DSGVO betrifft Daten-Governance, nicht die Wahl zwischen lokal und Cloud. Lokal ist einfacher zu dokumentieren und zu kontrollieren.',
+          },
+          {
+            q: 'Ist diese Automatisierung für den deutschen Mittelstand geeignet?',
+            a: 'Ja, besonders für KMU mit besonderen Datenschutz- oder Compliance-Anforderungen. Kleine deutsche und österreichische Unternehmen mit Kundenkommunikation oder sensiblen Geschäftsdaten können die lokale E-Mail-Automatisierung als Teil ihrer "IT-Sicherheit in Eigenregie"-Strategie nutzen, besonders wenn ihre Kunden oder Geschäftspartner Daten-Residenz-Anforderungen haben. Das Setup erfordert etwas technisches Know-how, aber nicht mehr als das Einrichten eines VPN oder eines lokalen NAS-Servers. Das BSI-Grundschutz-Katalog-Profil für Mittelstand-IT empfiehlt solche lokal verwalteten Systeme gerade. Für Organisationen mit IT-Personal ist dies ein Win-Win: Compliance in eigenem Recht + Kostenersparnisse gegenüber Cloud-APIs.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Literatur',
+        items: [
+          '[Zapier durch lokale KI-Agenten ersetzen](/power-local-llm/replace-zapier-with-local-ai-agents?lang=de) — lokale Workflow-Automatisierung mit n8n, Ollama und Python für Geschäftsprozess-Automatisierung.',
+          '[Lokale KI-Agenten für Geschäfts-Workflows: EU-Compliance](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=de) — DSGVO, EU-KI-Gesetz und DACH-Compliance-Kontext zur Bereitstellung lokaler KI in Geschäftsumgebungen.',
+          '[Lokale RAG für private Geschäftsdaten](/power-local-llm/local-rag-for-private-business-data?lang=de) — Einrichtung von Dokument-Q&A über private Geschäftsdaten ohne Cloud-APIs.',
+          '[Lokale KI-Agenten mit MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) — MCP (Model Context Protocol) zum Verbinden lokaler LLMs mit E-Mail-Clients, Kalendern und anderen Tools als Agent-Kontexte.',
+          '[Autonome lokale Agenten: Was wirklich funktioniert](/power-local-llm/autonomous-local-agents-actually-work?lang=de) — ehrliche Bewertung dessen, was lokale KI-Agenten 2026 können und nicht können.',
+          '[Grammarly und Notion AI durch lokale Modelle ersetzen](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=de) — benachbarte SaaS-Ersatz-Muster für Schreib-Tools, ergänzend zur E-Mail/Kalender-Ersetzung hier.',
+          '[Beste lokale LLMs in 2026](/local-llms/best-local-llms-2026?lang=de) — umfassendere Modell-Autorität zum Auswählen des Chat-Modells hinter einem dieser drei Setups.',
+          '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=de) — wann Beispiel-E-Mails im Prompt einzubeziehen sind und wann nicht für bessere Generalisierung.',
+          '[Lokales LLM-Software-Verzeichnis 2026](/power-local-llm/local-llm-software-directory-2026?lang=de) — Verzeichnislistungen für Ollama, n8n, Thunderbird und andere Komponenten in diesem Stack.',
+        ],
+      },
+    },
+  },
 }
