@@ -1,4 +1,4 @@
-// Power Local LLM — How to Run AI on a Tablet: iPad and Android (2026)
+// Power Local LLM — Run Local AI on Your Tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)
 // Slug: run-ai-on-tablet-ipad-android
 // EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
 
@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Getting Started',
-    title: 'How to Run AI on a Tablet: iPad and Android (2026)',
+    title: 'Run Local AI on Your Tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
     seoTitle: 'Run AI on iPad and Android Tablet Locally 2026',
     intro:
       'Running a local AI on a tablet in 2026 is practical on high-end iPads and Android devices with 8 GB+ RAM. This guide covers the options: on-device inference with Pocket Paladin and LLM Farm on iPad, Termux + Ollama on Android, and the remote-connection alternative (connecting a tablet to a Mac or PC running Ollama over local Wi-Fi) for devices that cannot run inference locally.',
@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: On-Device Inference',
         content:
-          '**iPad Pro M4 (16 GB) is the only iPad that runs 7B models at a comfortable speed.** iPad Air M2 (8 GB) and M3 (8 GB) run 3B models adequately. iPhone with 8 GB RAM (iPhone 15 Pro Max) also runs small models through LLM Farm.',
+          '**iPad Pro M4 (16 GB) is the only iPad that runs 7B models at a comfortable speed.** iPad Air M2 (8 GB) and M3 (8 GB) run 3B models adequately. [iPhone with 8 GB RAM (iPhone 15 Pro Max) also runs small models](/power-local-llm/best-local-llm-apps-iphone-2026) through LLM Farm.',
         items: [
           '**LLM Farm** (free, open-source): downloads GGUF models from Hugging Face, runs them using llama.cpp on Apple Silicon. Best performance of the iOS-native options. Supports chat and completion modes. Install from App Store.',
           '**Pocket Paladin** (free tier + subscription): curated model downloads, cleaner UI than LLM Farm, slightly simpler first-run experience. Free tier includes 3B models; subscription unlocks larger models and API mode.',
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'android-on-device',
         title: 'Android: On-Device Inference',
         content:
-          '**Android on-device inference requires Termux — a Linux terminal emulator that runs Ollama natively on Android.** This is more technical than the iPad app experience but gives access to the full Ollama ecosystem.',
+          '**Android on-device inference uses [Termux + Ollama](/power-local-llm/best-local-llm-apps-android-2026) — Termux is a Linux terminal emulator that runs Ollama natively on Android.** This is more technical than the iPad app experience but gives access to the full Ollama ecosystem.',
         numberedItems: [
           'Install Termux from F-Droid (not the Play Store version — the Play Store build is outdated and lacks required packages).',
           'In Termux: `pkg update && pkg install curl`',
@@ -171,6 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Supported devices for 3B+ models:** 8 GB RAM minimum (Samsung Galaxy Tab S10+, OnePlus Pad 2, Xiaomi Pad 7 Pro). Devices with 6 GB run Qwen3 1.7B only.',
+          '**Pixel Tablet not recommended for on-device:** Pixel Tablet (2023 model, 8 GB Tensor G2) was excluded from the recommended on-device list — Tensor G2 is significantly slower than Snapdragon 8 Gen 3 / Dimensity 9300 for LLM inference, producing 4–7 tok/sec on Phi-4 Mini (too slow for conversational use). Pixel Tablet users should use remote connection to a home machine.',
           '**Snapdragon 8 Gen 3 and Dimensity 9300** are the fastest Android chips for on-device inference in 2026. Generation speed: ~15–25 tok/sec for 1.7B models; ~8–12 tok/sec for 3B models.',
           '**Model storage:** Android does not have unified memory — the model runs in system RAM without GPU acceleration in most Termux configurations. GPU acceleration requires Termux:NVIDIA or specific Vulkan builds; setup is more complex.',
           '**Alternative apps:** MNN LLM (Alibaba, free, Android app with on-device inference for select models) is an easier setup but has a more limited model selection than Ollama. AI Runner and llamafile also have Android builds with varying support.',
@@ -186,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'remote-connection',
         title: 'Remote Connection to a Home Machine',
         content:
-          '**The simplest setup for most tablet users: run Ollama and Open WebUI on your home Mac or PC, then access the chat UI from your tablet browser on the same Wi-Fi network.** Your tablet becomes a touch-screen interface to the more powerful home machine.',
+          '**The simplest setup for most tablet users: run Ollama and Open WebUI on your home Mac or PC, then access the chat UI from your tablet browser on the same Wi-Fi network.** Your tablet becomes a touch-screen interface to the more powerful machine running Ollama at home — see [the laptop guide](/local-llms/best-laptops-local-llm) for hardware sizing if you are choosing the home machine.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -215,14 +216,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models',
         title: 'Model Recommendations by Device',
         content:
-          '**Model choice is determined by available RAM — not by preference.** The table below maps device RAM to the largest model that runs at real-time speed (over 8 tokens/sec).',
-        columns: ['Device / RAM', 'Recommended Model', 'Download Size', 'Expected Speed'],
+          '**Model choice is determined by available RAM — not by preference.** The table below maps device RAM to the largest model that runs at real-time speed (over 8 tokens/sec). For the model layer specifically, see [Best Mobile LLM Models in 2026](/power-local-llm/mobile-llm-models-phi4-gemma-smollm). For the broader model landscape across all hardware tiers, see [Best Local LLMs in 2026](/local-llms/best-local-llms-2026).',
+        columns: ['Device / RAM', 'Recommended Model', 'Speed', 'Best for'],
         rows: [
-          { 'Device / RAM': 'iPad Air M2 / M3 — 8 GB', 'Recommended Model': 'Phi-4 Mini (3.8B Q4)', 'Download Size': '~2.7 GB', 'Expected Speed': '~15–18 tok/sec' },
-          { 'Device / RAM': 'iPad Pro M4 — 16 GB', 'Recommended Model': 'Llama 3.2 3B or Gemma 3 4B (Q4)', 'Download Size': '2–3 GB', 'Expected Speed': '~25–30 tok/sec (3B); ~15–20 tok/sec (7B)' },
-          { 'Device / RAM': 'Android 8 GB (Tab S10+)', 'Recommended Model': 'Phi-4 Mini (3.8B Q4) via Termux+Ollama', 'Download Size': '~2.7 GB', 'Expected Speed': '~10–15 tok/sec' },
-          { 'Device / RAM': 'Android 6 GB', 'Recommended Model': 'Qwen3 1.7B (Q4)', 'Download Size': '~1.1 GB', 'Expected Speed': '~15–20 tok/sec' },
-          { 'Device / RAM': 'Any tablet via remote connection', 'Recommended Model': 'Any — runs on home machine', 'Download Size': 'N/A (stored on home machine)', 'Expected Speed': 'Depends on home machine (~20–40 tok/sec for 70B on RTX 4090)' },
+          { 'Device / RAM': 'iPad Air M2 / M3 (8 GB)', 'Recommended Model': 'Phi-4 Mini Q4', 'Speed': '~15–18 tok/sec', 'Best for': 'Writing assistance, summarization' },
+          { 'Device / RAM': 'iPad Pro M4 (16 GB)', 'Recommended Model': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Speed': '~25–30 tok/sec / ~15–20 tok/sec', 'Best for': 'Real LLM workstation, RAG, fiction drafting' },
+          { 'Device / RAM': 'Android 8 GB (Tab S10+)', 'Recommended Model': 'Phi-4 Mini Q4 via Termux+Ollama', 'Speed': '~10–15 tok/sec', 'Best for': 'Power users comfortable with Termux' },
+          { 'Device / RAM': 'Android 6 GB', 'Recommended Model': 'Qwen3 1.7B Q4', 'Speed': '~15–20 tok/sec', 'Best for': 'Light chat, translation, simple tasks' },
+          { 'Device / RAM': 'Pixel Tablet (8 GB)', 'Recommended Model': 'Remote connection only', 'Speed': 'N/A', 'Best for': 'Tensor G2 too slow for on-device' },
+          { 'Device / RAM': 'Any tablet via remote', 'Recommended Model': 'Any model on home machine', 'Speed': '~20–40 tok/sec', 'Best for': 'Quality-first use, 70B models' },
         ],
         callouts: [
           {
@@ -309,18 +311,48 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Does running AI on a tablet drain the battery quickly?',
             a: 'Yes — on-device inference is CPU/GPU-intensive. Running Phi-4 Mini on an iPad Pro M4 for active conversation drains the battery at roughly 20–30% per hour. For extended use, keep the tablet plugged in. Remote connection to a home machine draws significantly less tablet battery — the tablet is just displaying a web page.',
           },
+          {
+            q: 'Do tablets thermal-throttle during AI inference?',
+            a: 'Yes, especially on iPad Air M2 / M3 and Android tablets without active cooling. iPad Pro M4 has better thermal headroom and sustains generation speed for ~10–15 minutes before noticeable throttling. Android tablets thermal-throttle faster (5–8 minutes of sustained inference). Mitigations: use shorter generation chunks (200–400 tokens per response), keep the tablet on a hard surface, and avoid running other CPU-heavy apps simultaneously.',
+          },
+          {
+            q: 'Which keyboard works best for AI tablet use?',
+            a: 'Apple Magic Keyboard for iPad Pro M4 (with trackpad) is the most polished setup — full keyboard shortcuts work in Safari + Open WebUI, trackpad enables text selection across long responses. Logitech Combo Touch is the budget alternative. Android: any Bluetooth keyboard works with Termux but the experience is rougher (terminal-only). For prose work, an iPad Pro + Magic Keyboard turns the tablet into a writing-first AI workstation.',
+          },
+          {
+            q: 'Can I run SillyTavern on iPad?',
+            a: 'Yes, via remote connection. SillyTavern runs on a home Mac or PC, and iPad Safari connects to it at the local IP. Mobile UI is functional but not polished — some extension features (regex tools, group chat panels) work but feel cramped. For roleplay specifically, RisuAI has better mobile UI than SillyTavern; both can connect to the same Ollama backend on your home machine.',
+          },
+          {
+            q: 'Can a tablet handle long-form RAG?',
+            a: 'On-device, no — embedding 1,000+ documents on a tablet is impractical. Via remote connection, yes — your home machine handles the RAG pipeline, the tablet displays the chat interface. AnythingLLM running on a home machine and accessed via browser on the tablet handles document collections of any size with no tablet-side limit. For students or knowledge workers wanting RAG on tablet, remote connection is the only practical option.',
+          },
+          {
+            q: 'Can I use external displays with tablet AI?',
+            a: 'Yes on iPad Pro M4 (Stage Manager + external display gives a multi-window setup; Open WebUI on the external monitor, notes/source documents on the iPad screen). Galaxy Tab S10 Ultra supports DeX mode with an external display for similar multi-monitor AI workflow. Android tablets without DeX mode mirror the screen — less useful. iPad Pro + external monitor + Magic Keyboard is the closest a tablet gets to a real AI workstation in 2026.',
+          },
+          {
+            q: 'Is a tablet better than a phone for local AI?',
+            a: 'For typing-heavy use (drafting, RAG, long conversations), yes — keyboard support and screen size matter. For quick chat, voice queries, or on-the-go use, the phone you already carry is better. The iPad Pro M4 is the only tablet that significantly outperforms a flagship phone for local AI; mid-range tablets and phones are roughly equivalent. Most readers should not buy a tablet specifically for local AI — buy one if you want a tablet for other reasons; AI capability is a bonus.',
+          },
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — sister Cat 6 guide focused on iPhone-specific app picks and setup.',
+          '[Best Local LLM Apps for Android in 2026](/power-local-llm/best-local-llm-apps-android-2026) — sister Cat 6 guide for Android app picks beyond Termux + Ollama.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — model layer companion: which mobile model to pick for which task.',
+          '[Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) — sister Cat 6 build guide for offline mobile voice assistance.',
           '[Easiest Local AI App for Windows, Mac, and Linux](/power-local-llm/easiest-local-ai-app-windows-mac-linux) — the desktop equivalent for users setting up local AI on a Mac or PC.',
           '[Best Local AI App for Low-End PCs](/power-local-llm/best-local-ai-app-low-end-pc) — recommendations for resource-constrained devices with limited RAM.',
           '[Best Local AI App for Non-Technical Users](/power-local-llm/local-ai-app-non-technical-users) — user-experience comparison focused on onboarding and ease of use.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — mobile UI comparison for character-card roleplay on tablet.',
           '[LM Studio vs Jan vs GPT4All: Full Comparison](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — desktop app comparison that complements the tablet guide.',
           '[Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — connecting a tablet to an MCP-enabled local agent setup on your home machine.',
+          '[Best Laptops for Local LLM](/local-llms/best-laptops-local-llm) — hardware sizing guide for the home machine that pairs with a tablet via remote connection.',
+          '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — broader model landscape across all hardware tiers, including non-mobile.',
         ],
       },
     },
