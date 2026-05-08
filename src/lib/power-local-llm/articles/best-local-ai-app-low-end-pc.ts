@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
     seoTitle: 'Best Local AI Apps for 8GB RAM PCs 2026: Tested CPU-Only',
     metaDescription:
-      'No RTX 4090, no problem. Ollama, GPT4All, Jan, and llama.cpp tested on 8 GB RAM laptops with integrated graphics. Tokens/sec ranges, memory pressure, exact settings. May 2026.',
+      'Ollama, GPT4All, Jan, llama.cpp tested on 8 GB RAM + integrated graphics. Tokens/sec, memory pressure, exact settings for no-GPU local AI. May 2026.',
     twitterDescription:
       '4 local AI apps that run on 8 GB RAM laptops with no GPU. Tokens/sec ranges, exact settings, real verdicts. May 2026.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
@@ -600,9 +600,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
-    seoTitle: 'Beste lokale KI-Apps für 8-GB-RAM-PCs 2026: CPU-only getestet',
+    seoTitle: 'Lokale KI für 8-GB-RAM-PCs 2026: CPU-only getestet',
     metaDescription:
-      'Kein RTX 4090 nötig. Ollama, GPT4All, Jan und llama.cpp auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen. Mai 2026.',
+      'Ollama, GPT4All, Jan, llama.cpp auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen. Mai 2026.',
     twitterDescription:
       '4 lokale KI-Apps, die auf 8-GB-RAM-Laptops ohne GPU laufen. Tokens/Sek., exakte Einstellungen, ehrliche Bewertungen. Mai 2026.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
@@ -1013,9 +1013,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Meilleures applications d\'IA locale pour PC modestes en 2026 (8 Go RAM, sans GPU)',
-    seoTitle: 'Meilleures apps IA locales pour PC 8 Go RAM 2026 : test CPU',
+    seoTitle: 'Meilleures apps IA locales PC 8 Go RAM 2026 : test CPU',
     metaDescription:
-      'Pas besoin de RTX 4090. Ollama, GPT4All, Jan et llama.cpp testés sur des portables 8 Go RAM avec graphiques intégrés. Tokens/s, pression mémoire, réglages exacts. Mai 2026.',
+      'Ollama, GPT4All, Jan et llama.cpp testés sur portables 8 Go RAM avec graphiques intégrés. Tokens/s, pression mémoire, réglages exacts. Mai 2026.',
     twitterDescription:
       '4 apps d\'IA locale pour portables 8 Go RAM sans GPU. Tokens/s, réglages exacts, verdicts honnêtes. Mai 2026.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '2026年低配PC最佳本地AI应用（8GB内存，无独立GPU）',
-    seoTitle: '8GB内存PC本地AI应用2026：CPU专用实测',
+    seoTitle: '8GB内存集成显卡PC适用的本地AI 2026：Ollama、GPT4All、Jan、llama.cpp无GPU实测',
     metaDescription:
       '不需要RTX 4090。Ollama、GPT4All、Jan和llama.cpp在8GB内存集成显卡笔记本上实测。tokens/秒、内存压力、精确设置。2026年5月。',
     twitterDescription:

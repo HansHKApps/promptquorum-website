@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)',
-    seoTitle: 'Built-In RAG Apps 2026: Chat With PDFs Locally, No Vector DB',
+    seoTitle: 'Built-In RAG Apps 2026: Chat With PDFs Locally, No Setup',
     metaDescription:
       '3 desktop apps let you drop a PDF and chat with it — no vector DB setup, no Python. LM Studio, Jan, AnythingLLM tested on 1,000-page documents. May 2026.',
     twitterDescription:
@@ -625,9 +625,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Lokale KI-Apps mit integriertem RAG: Chat mit Ihren Dateien (ohne Setup)',
-    seoTitle: 'Integrierte RAG-Apps 2026: PDFs lokal durchsuchen, keine Vektor-DB',
+    seoTitle: 'PDFs lokal chatten 2026: Integrierte RAG, keine Vektor-DB',
     metaDescription:
-      '3 Desktop-Apps zum Ablegen einer PDF und Chatten — ohne Vektor-DB-Setup, ohne Python. LM Studio, Jan, AnythingLLM auf 1.000-Seiten-Dokumenten getestet. Mai 2026.',
+      'LM Studio, Jan, AnythingLLM: PDF ablegen, sofort chatten — ohne Vektor-DB, Python oder Setup. Auf 1.000-Seiten-Dokumenten getestet. Mai 2026.',
     twitterDescription:
       '3 lokale KI-Apps mit integriertem RAG, die einfach funktionieren. PDF ablegen, Frage stellen. Getestet auf 1.000-Seiten-Dokumenten im Mai 2026.',
     readTime: '12 Min. Lesezeit',
@@ -1248,9 +1248,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Applications IA locales avec RAG intégré : Discutez avec vos fichiers (sans configuration)',
-    seoTitle: 'Applications RAG intégrées 2026 : PDFs locaux sans base de données vectorielle',
+    seoTitle: 'RAG intégré 2026 : chat PDF local sans base vectorielle',
     metaDescription:
-      '3 apps de bureau pour charger un PDF et discuter — sans setup de base vectorielle, sans Python. LM Studio, Jan, AnythingLLM testés sur documents de 1 000 pages. Mai 2026.',
+      'LM Studio, Jan, AnythingLLM : chargez un PDF et discutez — sans base vectorielle, sans Python. Testés sur 1 000 pages de documents locaux. Mai 2026.',
     twitterDescription:
       '3 applications IA locales avec RAG intégré qui fonctionnent simplement. Chargez un PDF, posez une question. Testées sur documents de 1 000 pages en mai 2026.',
     readTime: '12 min de lecture',
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'ローカルAIアプリ（内蔵RAG対応）：ファイルとチャット（セットアップ不要）',
-    seoTitle: '内蔵RAGアプリ 2026 : ローカルPDF検索、ベクトルDB不要',
+    seoTitle: 'PDF対話内蔵RAGアプリ 2026：ベクトルDB不要、LM Studio・Jan・AnythingLLM実測',
     metaDescription:
       'PDFを読み込んでチャットできるデスクトップアプリ3つ — ベクトルDB、Python、コマンドライン不要。LM Studio、Jan、AnythingLLM を1,000ページドキュメントでテスト。2026年5月。',
     twitterDescription:
@@ -2446,7 +2446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '内置RAG的本地AI应用：与文件聊天（无需配置）',
-    seoTitle: '内置RAG应用 2026：本地PDF查询，无需向量数据库',
+    seoTitle: '本地PDF对话 2026：LM Studio、Jan、AnythingLLM内置RAG实测，无需向量数据库',
     metaDescription:
       '3个桌面应用可以上传PDF并聊天 — 无向量库，无Python，无命令行。LM Studio、Jan、AnythingLLM在1,000页文档上测试。2026年5月。',
     twitterDescription:
