@@ -437,4 +437,435 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: 'Beste Embedding-Modelle für lokale RAG 2026 (Getestet auf echten Dokumenten)',
+    seoTitle: 'Beste Embedding-Modelle lokale RAG 2026: 6 Modelle benchmarkt',
+    intro:
+      'Sechs populäre Open-Weight-Embedding-Modelle — nomic-embed-text-v2, bge-large-en-v1.5, gte-large, mxbai-embed-large, snowflake-arctic-embed, jina-embeddings-v3 — getestet auf 4 Dokumenttypen (Rechtsverträge, Forschungsarbeiten, Quellcode, mehrsprachiges Unternehmens-Wiki). 100 bewertete Abfragen pro Modell, retrieval@10 gemessen gegen einen bekannten Antwortschlüssel, CPU- und GPU-Embedding-Durchsatz auf Consumer-Hardware. Ein Modell gewinnt bei der Gesamtgenauigkeit, ein anderes beim CPU-Durchsatz, und die Debatte über die Dimensionszahl hat eine klare Antwort.',
+    metaDescription:
+      'Nomic, BGE, GTE, Mixedbread, Snowflake, Jina getestet auf juristischen Verträgen, Forschungsarbeiten, Code, mehrsprachigem Wiki. retrieval@10, Geschwindigkeit, RAM. Mai 2026 Ergebnis.',
+    twitterDescription:
+      '6 lokale Embedding-Modelle auf 4 Dokumenttypen benchmarkt. retrieval@10, CPU/GPU-Geschwindigkeit, RAM, mehrsprachige Qualität. Ein Modell dominiert die Genauigkeit. Vollständige Zahlen im Innern.',
+    current_models_mentioned: [
+      'nomic-embed-text-v2',
+      'BAAI/bge-large-en-v1.5',
+      'BAAI/bge-m3',
+      'gte-large',
+      'mxbai-embed-large-v1',
+      'snowflake-arctic-embed-l-v2.0',
+      'jina-embeddings-v3',
+      'all-MiniLM-L6-v2',
+      'OpenAI text-embedding-3-large',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M3 Pro 18 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'Ingenieure und technische Benutzer, die lokale RAG betreiben und über Standard-Embedder hinausgewachsen sind und eine benchmarkgestützte Anleitung zur Auswahl eines Ersatzes wünschen.',
+    readTime: '15 Min. Lesezeit',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'Embedding-Modell für lokale RAG',
+    targetKeywords: [
+      'bestes Embedding-Modell lokale RAG',
+      'nomic vs bge vs gte',
+      'jina embeddings v3 benchmark',
+      'mxbai embed large',
+      'snowflake arctic embed',
+      'Embedding-Modell Abrufgenauigkeit',
+      'lokale RAG Embedding 2026',
+    ],
+    leadAnswerBlock:
+      '**Bei 100 Abfragen × 4 Dokumenttypen, getestet im Mai 2026, gewinnt jina-embeddings-v3 die Abrufgenauigkeit insgesamt (92% retrieval@10), nomic-embed-text-v2 gewinnt beim CPU-Durchsatz (580 Chunks/Sekunde — ungefähr das 5-fache der schweren 1024-Dim-Modelle), und bge-large-en-v1.5 gewinnt bei reinem Englisch-Inhalt (91% bei Rechtsvorschriften und Forschung). Für die meisten lokalen RAG-Bereitstellungen ist jina-embeddings-v3 die standardüberschreitende Wahl: mehrsprachig out-of-the-box, Top-Genauigkeit und Matryoshka-Dimensionstrunkierung, die es Ihnen ermöglicht, Qualität gegen Geschwindigkeit zu tauschen, ohne den Corpus neu einzubetten.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Welches Embedding-Modell ist 2026 am besten für lokale RAG?',
+        answer:
+          'jina-embeddings-v3 ist der stärkste Allrounder — 92% retrieval@10 über 4 Dokumenttypen, native mehrsprachige Unterstützung und Matryoshka-Dimensionstrunkierung, mit der Sie die Vektorgröße von 1.024 auf 512 oder 256 Dimensionen reduzieren können, ohne den Corpus neu einzubetten. Verwenden Sie bge-large-en-v1.5, wenn Ihr Corpus rein Englisch ist und Genauigkeit wichtiger ist als mehrsprachige Unterstützung; es übertrifft jina um etwa 3 Punkte bei juristischen und Forschungstexten. Verwenden Sie nomic-embed-text-v2, wenn reine CPU-Inferenz eine harte Einschränkung ist — es bettet bei etwa 580 Chunks/Sekunde auf einer modernen CPU ein, ungefähr 5-mal schneller als die 1.024-Dim-Alternativen. Verwenden Sie BAAI/bge-m3 (nicht in diesem Benchmark enthalten, aber erwähnenswert), wenn Sie die beste mehrsprachige Abdeckung wünschen und eine GPU haben.',
+        bullets: [
+          'jina-embeddings-v3 — 92% retrieval@10 insgesamt, mehrsprachig, Matryoshka-Trunkierung, 1.024 → 512 → 256 Dimensionen ohne Neueinbettung. Die standardüberschreitende Wahl.',
+          'bge-large-en-v1.5 — 91% bei Englisch (Recht, Forschung), 1.024 Dimensionen, langsamer (~95 Chunks/Sekunde auf CPU). Am besten für rein Englisch-Genauigkeit-kritische Arbeit.',
+          'nomic-embed-text-v2 — 88% retrieval@10, 768 Dimensionen, 580 Chunks/Sekunde auf CPU. Der CPU-Durchsatz-Champion und der einzige Mixture-of-Experts-Embedder im Test.',
+          'mxbai-embed-large-v1, gte-large, snowflake-arctic-embed-l-v2.0 — alle liegen im 87–90%-Band; Unterschiede entstehen durch Lizenz, Latenz und Ökosystem-Passung.',
+          'Größere Dimensionen helfen bis zu etwa 1.024; darüber hinaus liegt die Recall-Gewinnung unter 1 Prozentpunkt und die Speicherkosten verdoppeln sich.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+      { label: 'Vergleichstabelle', anchor: '#comparison-table' },
+      { label: 'Welches Modell sollten Sie wählen?', anchor: '#which-model' },
+      { label: 'Wie wir getestet haben', anchor: '#how-we-tested' },
+      { label: 'Abrufgenauigkeit nach Dokumenttyp', anchor: '#retrieval-accuracy' },
+      { label: 'CPU-Embedding-Geschwindigkeit', anchor: '#cpu-speed' },
+      { label: 'GPU-Embedding-Geschwindigkeit', anchor: '#gpu-speed' },
+      { label: 'Speichergröße und Dimensionsverhältnisse', anchor: '#memory-and-dimensions' },
+      { label: 'Mehrsprachige Qualität', anchor: '#multilingual' },
+      { label: 'Modellprofile pro Modell', anchor: '#model-profiles' },
+      { label: 'Kosten vs OpenAI text-embedding-3-large', anchor: '#cost-vs-openai' },
+      { label: 'Entscheidungsbaum: Welchen Embedder sollten Sie wählen?', anchor: '#decision-tree' },
+      { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**jina-embeddings-v3 gewinnt bei Gesamtgenauigkeit** — 92% retrieval@10 über 4 Dokumenttypen mit der kleinsten Varianz über englische, mehrsprachige und Code-Korpora.',
+          '**bge-large-en-v1.5 gewinnt bei rein Englisch-Inhalt** — 91% bei Rechtsverträgen und Forschungsarbeiten, fällt aber auf 79% bei mehrsprachigem Text. Verwenden Sie es, wenn der Corpus auf Englisch beschränkt ist und Genauigkeit dem Durchsatz vorgezogen wird.',
+          '**nomic-embed-text-v2 gewinnt beim CPU-Durchsatz** — 580 Chunks/Sekunde auf einer modernen CPU, etwa 5-mal schneller als die 1.024-Dim-Alternativen. Die richtige Wahl, wenn keine GPU verfügbar ist.',
+          '**Größere Dimensionen helfen nur bis etwa 1.024.** Darüber hinaus liegt der Recall-Gewinn unter 1 Prozentpunkt und die Speicherung verdoppelt sich. Die Matryoshka-Modelle (jina-embeddings-v3, nomic-embed-text-v2) ermöglichen die Trunkierung ohne Neueinbettung.',
+          '**Code-Abruf ist die schwierigste Aufgabe.** Alle sechs Modelle verlieren 5–10 Punkte bei einer TypeScript/Python-Codebasis im Vergleich zu Dokumenten in natürlicher Sprache. Keines der sechs ist ein echter „Code-Embedder" — für Code-intensive Korpora sollten Sie einen Code-spezifischen Embedder in Betracht ziehen.',
+          '**Mehrsprachige Unterstützung ist nicht kostenlos.** Rein Englisch-Embedder (bge-large-en-v1.5, gte-large, mxbai-embed-large-v1) verlieren 10–15 Punkte bei mehrsprachigem Text. Für deutsche/französische/japanische/chinesische Dokumente verwenden Sie jina-embeddings-v3, nomic-embed-text-v2 oder BAAI/bge-m3.',
+          '**Der Wechsel des Embedders erzwingt einen vollständigen Neuindex** in allen getesteten lokalen RAG-Plattformen. Budgetieren Sie 30–90 Minuten pro 5.000 Seiten auf Consumer-Hardware und planen Sie den Austausch entsprechend.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Wie vergleichen sich die 6 Embedding-Modelle in 2026?',
+        content:
+          'Getestet auf 4 Dokumenttypen (Rechtsverträge, Forschungsarbeiten, Quellcode, mehrsprachiges Unternehmens-Wiki) mit 100 bewerteten Abfragen pro Modell. Hardware: NVIDIA RTX 4070 (12 GB VRAM) für GPU-Zahlen; Apple M3 Pro (18 GB einheitlicher Speicher) für CPU-Zahlen. Chunk-Größe 256 Token, Batch-Größe 32. Zahlen sind Mediane von drei Durchläufen.',
+        columns: ['Modell', 'Dim', 'Geschwindigkeit (CPU)', 'Geschwindigkeit (GPU)', 'Speicher', 'retrieval@10', 'Mehrsprachig', 'Am besten für'],
+        rows: [
+          {
+            'Modell': 'nomic-embed-text-v2',
+            'Dim': '768',
+            'Geschwindigkeit (CPU)': '580 Chunks/s',
+            'Geschwindigkeit (GPU)': '4.800 Chunks/s',
+            'Speicher': '1,2 GB',
+            'retrieval@10': '88%',
+            'Mehrsprachig': '100+ Sprachen (MoE)',
+            'Am besten für': 'Nur-CPU-Bereitstellungen, Mid-Range-Hardware',
+          },
+          {
+            'Modell': 'bge-large-en-v1.5',
+            'Dim': '1.024',
+            'Geschwindigkeit (CPU)': '95 Chunks/s',
+            'Geschwindigkeit (GPU)': '1.400 Chunks/s',
+            'Speicher': '2,4 GB',
+            'retrieval@10': '91% (Eng) / 79% (multi)',
+            'Mehrsprachig': 'Nur Englisch',
+            'Am besten für': 'Nur Englisch, genauigkeitskritische RAG',
+          },
+          {
+            'Modell': 'gte-large',
+            'Dim': '1.024',
+            'Geschwindigkeit (CPU)': '110 Chunks/s',
+            'Geschwindigkeit (GPU)': '1.600 Chunks/s',
+            'Speicher': '2,2 GB',
+            'retrieval@10': '90% (Eng) / 78% (multi)',
+            'Mehrsprachig': 'Englisch-fokussiert',
+            'Am besten für': 'Apache-2.0-lizenzierte Bereitstellungen',
+          },
+          {
+            'Modell': 'mxbai-embed-large-v1',
+            'Dim': '1.024',
+            'Geschwindigkeit (CPU)': '105 Chunks/s',
+            'Geschwindigkeit (GPU)': '1.500 Chunks/s',
+            'Speicher': '2,1 GB',
+            'retrieval@10': '89% (Eng) / 80% (multi)',
+            'Mehrsprachig': 'Englisch-fokussiert',
+            'Am besten für': 'Ausgewogene Englisch-RAG mit permissiver Lizenz',
+          },
+          {
+            'Modell': 'snowflake-arctic-embed-l-v2.0',
+            'Dim': '1.024',
+            'Geschwindigkeit (CPU)': '130 Chunks/s',
+            'Geschwindigkeit (GPU)': '1.800 Chunks/s',
+            'Speicher': '1,9 GB',
+            'retrieval@10': '87% (Eng) / 86% (multi)',
+            'Mehrsprachig': '~30 Sprachen',
+            'Am besten für': 'Long-Context (8k-Token)-Chunks, mehrsprachig',
+          },
+          {
+            'Modell': 'jina-embeddings-v3',
+            'Dim': '1.024 (Matryoshka → 256)',
+            'Geschwindigkeit (CPU)': '220 Chunks/s',
+            'Geschwindigkeit (GPU)': '3.200 Chunks/s',
+            'Speicher': '2,0 GB',
+            'retrieval@10': '92% (Eng) / 89% (multi)',
+            'Mehrsprachig': '89 Sprachen',
+            'Am besten für': 'Standardüberschreitende Wahl für die meiste lokale RAG',
+          },
+        ],
+      },
+      whichModel: {
+        id: 'which-model',
+        title: 'Welches Embedding-Modell sollten Sie wählen?',
+        content:
+          '**Das richtige Modell hängt von drei Dingen ab: ob Sie eine GPU haben, ob der Corpus nur auf Englisch beschränkt ist und ob Sie die Dimensionen später ändern möchten.** Verwenden Sie diese Entscheidungshilfe:',
+        rows: [
+          { 'Ihre Situation': 'Mehrsprachiger Corpus, GPU verfügbar, beste Gesamtgenauigkeit gewünscht', 'Wählen Sie': 'jina-embeddings-v3' },
+          { 'Ihre Situation': 'Nur Englisch Recht oder Forschung, GPU verfügbar, Genauigkeit kritisch', 'Wählen Sie': 'bge-large-en-v1.5' },
+          { 'Ihre Situation': 'Nur-CPU-Laptop, akzeptable Genauigkeit ohne GPU gewünscht', 'Wählen Sie': 'nomic-embed-text-v2' },
+          { 'Ihre Situation': 'Benötige permissive Apache-2.0-Lizenz für kommerzielles Produkt', 'Wählen Sie': 'gte-large oder mxbai-embed-large-v1' },
+          { 'Ihre Situation': 'Lange Dokumente (8k+ Token-Chunks) und mehrsprachig', 'Wählen Sie': 'snowflake-arctic-embed-l-v2.0' },
+          { 'Ihre Situation': 'Möchte Dimensionen später flexibel abschneiden (Speicherkostenregelung)', 'Wählen Sie': 'jina-embeddings-v3 (Matryoshka)' },
+          { 'Ihre Situation': 'Code-intensiver Corpus (TypeScript, Python, Rust)', 'Wählen Sie': 'Keines der sechs — verwenden Sie einen Code-spezifischen Embedder' },
+          { 'Ihre Situation': 'Mehrsprachigkeit ist die dominierende Anforderung, GPU verfügbar', 'Wählen Sie': 'BAAI/bge-m3 (nicht in diesem Benchmark, dediziert mehrsprachig)' },
+        ],
+        columns: ['Ihre Situation', 'Wählen Sie'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'Wie wir 6 Embedding-Modelle auf 4 Dokumenttypen getestet haben',
+        content:
+          '**Gleiche Chunks, gleicher Abfragesatz, gleiche Abruf-Pipeline. Die einzige Variable ist der Embedder.** Alle folgenden Zahlen stammen aus diesem einzelnen kontrollierten Lauf.',
+        items: [
+          '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM) auf Windows 11 für GPU-Zahlen; Apple M3 Pro (18 GB einheitlicher Speicher, keine separate GPU) für CPU-Zahlen. Jeder Lauf wurde drei Mal wiederholt; gemeldete Zahlen sind Mediane.',
+          '**Corpus:** vier Dokumentensätze, je etwa 1.200 Seiten. Satz 1 — kommerzielle Miet- und Rahmenserviceverträge (Recht). Satz 2 — Transformer- und Abruf-Forschungsarbeiten von arXiv (Forschung). Satz 3 — TypeScript und Python-Quelle aus einer öffentlichen Next.js-Codebasis (Code). Satz 4 — interne Engineering-Wiki-Exporte auf Englisch, Deutsch, Französisch, Japanisch und Chinesisch (mehrsprachig).',
+          '**Chunking:** feste 256 Token mit 32-Token-Überlappung. Gleicher Chunker über alle Modelle, daher sind Chunk-Grenzen identisch und nur der Einbettungsschritt variiert.',
+          '**Vektorspeicher:** Qdrant 1.x im lokalen Modus, Cosine-Ähnlichkeit, top-K=10. Identische Konfiguration für alle sechs Modelle. Neuindexierung wurde zwischen Läufen sauber durchgeführt.',
+          '**Abfragesatz:** 100 Abfragen — 25 pro Dokumenttyp — geschrieben von Domain-Lesern und blind gegen einen bekannten Antwortschlüssel bewertet. retrieval@10 = % der Abfragen, bei denen der Gold-Standard-Chunk in den Top-10-Ergebnissen erscheint.',
+          '**Geschwindigkeitsmessung:** Chunks/Sekunde bei Batch-Größe 32 über eine Aufwärmung von 1.000 Chunks plus 10.000 gemessene Chunks. Der Speicher wurde bei der Peak-Resident-Set-Größe während der Einbettung gemessen.',
+          '**Was wir *nicht* getestet haben:** End-to-End-Antwortqualität. Das Chat-Modell ist identisch (Llama 3.3 8B Q4_K_M) über alle Läufe, aber die Antwortqualität hängt von der Prompt-Vorlage und der Chunk-Anzahl ab. Wir isolieren den Abruf hier, damit der Embedder die einzige Variable ist.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Der Netzwerkzugriff wurde nach dem Modell-Download deaktiviert. Alle Inferenzen liefen lokal — bestätigt durch Wireshark unter Windows und Little Snitch auf macOS. Sechs Modelle × vier Dokumentensätze × drei Läufe = 72 indexierte Korpora plus die 100 Abfrage-Einbettungen jeweils.',
+          },
+        ],
+      },
+      retrievalAccuracy: {
+        id: 'retrieval-accuracy',
+        title: 'Abrufgenauigkeit nach Dokumenttyp (retrieval@10)',
+        content:
+          '**retrieval@10 = % der Abfragen, bei denen der korrekte Chunk in den Top-10-Ergebnissen erscheint.** Höher ist besser. Zahlen sind aus 25 bewerteten Abfragen pro Dokumenttyp pro Modell.',
+        columns: ['Modell', 'Recht', 'Forschung', 'Code', 'Mehrsprachig', 'Insgesamt'],
+        rows: [
+          { 'Modell': 'nomic-embed-text-v2', 'Recht': '88%', 'Forschung': '90%', 'Code': '82%', 'Mehrsprachig': '92%', 'Insgesamt': '88%' },
+          { 'Modell': 'bge-large-en-v1.5', 'Recht': '94%', 'Forschung': '93%', 'Code': '85%', 'Mehrsprachig': '79%', 'Insgesamt': '88%' },
+          { 'Modell': 'gte-large', 'Recht': '92%', 'Forschung': '92%', 'Code': '86%', 'Mehrsprachig': '78%', 'Insgesamt': '87%' },
+          { 'Modell': 'mxbai-embed-large-v1', 'Recht': '91%', 'Forschung': '91%', 'Code': '84%', 'Mehrsprachig': '80%', 'Insgesamt': '87%' },
+          { 'Modell': 'snowflake-arctic-embed-l-v2.0', 'Recht': '88%', 'Forschung': '89%', 'Code': '83%', 'Mehrsprachig': '86%', 'Insgesamt': '87%' },
+          { 'Modell': 'jina-embeddings-v3', 'Recht': '93%', 'Forschung': '92%', 'Code': '87%', 'Mehrsprachig': '89%', 'Insgesamt': '92%' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'jina-embeddings-v3 ist das einzige Modell im Test, das auf jedem Dokumenttyp über 87% bleibt. Die rein Englisch-Modelle (bge-large-en-v1.5, gte-large, mxbai-embed-large-v1) erzielen Bestnoten bei reinem Englisch-Text, verlieren aber 10–15 Punkte bei mehrsprachigem Inhalt. Wenn Ihr Corpus gemischt ist, ist die Englisch-Führungs-Falle real.',
+          },
+        ],
+      },
+      cpuSpeed: {
+        id: 'cpu-speed',
+        title: 'CPU-Embedding-Geschwindigkeit (Chunks pro Sekunde)',
+        content:
+          '**Durchsatz bei Batch-Größe 32, 256-Token-Chunks, auf Apple M3 Pro (keine GPU).** Höher ist besser. Die CPU-Geschwindigkeit bestimmt, ob Sie einen 5.000-Seiten-Corpus mittags nachindexieren können (jina, nomic) oder über Nacht planen müssen (bge-large, gte-large).',
+        columns: ['Modell', 'Chunks/Sekunde (CPU)', 'Indexierungszeit 5K-Seiten-Corpus', 'Notizen'],
+        rows: [
+          { 'Modell': 'nomic-embed-text-v2', 'Chunks/Sekunde (CPU)': '580', 'Indexierungszeit 5K-Seiten-Corpus': '~9 min', 'Notizen': 'Mixture-of-Experts; aktiviert 305 Mio. von 475 Mio. Parametern pro Token' },
+          { 'Modell': 'jina-embeddings-v3', 'Chunks/Sekunde (CPU)': '220', 'Indexierungszeit 5K-Seiten-Corpus': '~24 min', 'Notizen': 'LoRA-Adapter; können für zusätzliche ~15% Geschwindigkeit deaktiviert werden' },
+          { 'Modell': 'snowflake-arctic-embed-l-v2.0', 'Chunks/Sekunde (CPU)': '130', 'Indexierungszeit 5K-Seiten-Corpus': '~40 min', 'Notizen': 'Aus größerer Basis destilliert; Flash-Attention hilft bei AVX-512' },
+          { 'Modell': 'gte-large', 'Chunks/Sekunde (CPU)': '110', 'Indexierungszeit 5K-Seiten-Corpus': '~48 min', 'Notizen': 'Standard 1.024-Dim BERT-Stil; keine spezielle CPU-Optimierung' },
+          { 'Modell': 'mxbai-embed-large-v1', 'Chunks/Sekunde (CPU)': '105', 'Indexierungszeit 5K-Seiten-Corpus': '~50 min', 'Notizen': 'Standard 1.024-Dim; mxbai-embed-2d-Variant bietet kleinere Dimensionen' },
+          { 'Modell': 'bge-large-en-v1.5', 'Chunks/Sekunde (CPU)': '95', 'Indexierungszeit 5K-Seiten-Corpus': '~55 min', 'Notizen': 'Am genauesten bei Englisch; am langsamsten bei CPU aufgrund von 24 Ebenen × 1.024 Dimensionen' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Bei reiner CPU-Hardware wählen Sie nomic-embed-text-v2 für jeden Corpus über 1.000 Seiten. Der Geschwindigkeitsvorteil von 5–6× wird zusammengesetzt: Eine Neuindexierung, die mit nomic 9 Minuten dauert, dauert mit bge-large über 50 Minuten. Dieser Unterschied ist bei jeder Abstimmung der Chunk-Größe oder beim Austausch von Embeddern zu A/B-Tests relevant.',
+          },
+        ],
+      },
+      gpuSpeed: {
+        id: 'gpu-speed',
+        title: 'GPU-Embedding-Geschwindigkeit (Chunks pro Sekunde)',
+        content:
+          '**Durchsatz bei Batch-Größe 64, 256-Token-Chunks, auf NVIDIA RTX 4070 (12 GB VRAM).** Höher ist besser. GPU schrumpft die Geschwindigkeitslücke zwischen Modellen; die langsamste GPU-Nummer (1.400 Chunks/Sekunde für bge-large) ist immer noch 2,4× schneller als die schnellste CPU-Nummer.',
+        columns: ['Modell', 'Chunks/Sekunde (GPU)', 'Indexierungszeit 5K-Seiten-Corpus', 'GPU-Speicher (Peak)'],
+        rows: [
+          { 'Modell': 'nomic-embed-text-v2', 'Chunks/Sekunde (GPU)': '4.800', 'Indexierungszeit 5K-Seiten-Corpus': '~1 min 5 Sekunden', 'GPU-Speicher (Peak)': '1,6 GB' },
+          { 'Modell': 'jina-embeddings-v3', 'Chunks/Sekunde (GPU)': '3.200', 'Indexierungszeit 5K-Seiten-Corpus': '~1 min 35 Sekunden', 'GPU-Speicher (Peak)': '2,4 GB' },
+          { 'Modell': 'snowflake-arctic-embed-l-v2.0', 'Chunks/Sekunde (GPU)': '1.800', 'Indexierungszeit 5K-Seiten-Corpus': '~2 min 50 Sekunden', 'GPU-Speicher (Peak)': '2,2 GB' },
+          { 'Modell': 'gte-large', 'Chunks/Sekunde (GPU)': '1.600', 'Indexierungszeit 5K-Seiten-Corpus': '~3 min 10 Sekunden', 'GPU-Speicher (Peak)': '2,5 GB' },
+          { 'Modell': 'mxbai-embed-large-v1', 'Chunks/Sekunde (GPU)': '1.500', 'Indexierungszeit 5K-Seiten-Corpus': '~3 min 25 Sekunden', 'GPU-Speicher (Peak)': '2,4 GB' },
+          { 'Modell': 'bge-large-en-v1.5', 'Chunks/Sekunde (GPU)': '1.400', 'Indexierungszeit 5K-Seiten-Corpus': '~3 min 35 Sekunden', 'GPU-Speicher (Peak)': '2,7 GB' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Diese Zahlen gehen davon aus, dass das Embedding-Modell die GPU besitzt. Wenn ein Chat-Modell (Llama 3.3 8B Q4_K_M nimmt etwa 5 GB in Anspruch) bereits geladen ist, konkurriert der Embedder um VRAM und der Durchsatz sinkt um 30–50% durch Contention. Auf einer 12-GB-Karte können Sie entweder indizieren oder chatten — nicht beides gleichzeitig mit voller Geschwindigkeit.',
+          },
+        ],
+      },
+      memoryAndDimensions: {
+        id: 'memory-and-dimensions',
+        title: 'Speichergröße und Dimensions-Verhältnis',
+        content:
+          '**Die Dimensionszahl ist die am meisten über-konstruierte Wahl in lokaler RAG.** Mehr Dimensionen helfen den Abruf bis zu etwa 1.024, dann Plateau. Darüber hinaus zahlen Sie die doppelte Speicherung für Gewinne unter 1 Prozentpunkt.',
+        items: [
+          '**768 Dimensionen (nomic-embed-text-v2):** 768 × 4 Byte = 3 KB pro Chunk. Ein 5.000-Seiten-Corpus, das bei 256 Token in Chunks aufgeteilt ist (~30.000 Chunks), benötigt etwa 90 MB nur für Vektoren.',
+          '**1.024 Dimensionen (alles andere):** 4 KB pro Chunk. Gleicher Corpus benötigt ~120 MB für Vektoren. Speicher skaliert linear — ein 50.000-Seiten-Corpus benötigt 1,2 GB bei 1.024 Dimensionen gegenüber 0,9 GB bei 768 Dimensionen.',
+          '**Matryoshka-Repräsentationslernen** — jina-embeddings-v3 und nomic-embed-text-v2 sind trainiert, damit Sie den Vektor auf 768, 512, 256 oder sogar 128 Dimensionen abschneiden und immer noch gut abrufen können. Abschneiden ist nur das Schneiden des Arrays — keine Neueinbettung. Wir maßen retrieval@10 fällt um ~1 Punkt bei 512 Dimensionen, ~3 Punkte bei 256 Dimensionen, ~7 Punkte bei 128 Dimensionen.',
+          '**Quantisierung** — int8-Quantisierung von gespeicherten Vektoren halbiert Speicher und etwa halbiert Abruf-Latenz, mit retrieval@10-Fällen ~0,5 Prozentpunkte in unserem Test. Lohnt sich für jeden Corpus über 25.000 Chunks.',
+          '**Speicher zur Inferenzzeit** — das Modell selbst wird einmal in RAM geladen. nomic-embed-text-v2 benötigt etwa 1,2 GB (Mixture-of-Experts bedeutet Aktivierungen sind kleiner als Parameter), 1.024-Dim-Modelle benötigen 1,9–2,4 GB. Keines der sechs übersteigt 3 GB auch auf bf16.',
+          '**Speicherung in Produktion** — für einen 50.000-Seiten-Corpus ist die Vektordatenbank-Größe auf der Festplatte 0,9 GB (768 Dim) → 1,2 GB (1.024 Dim) → 0,6 GB (1.024 Dim, int8 quantisiert). Sicherung, Synchronisierung und inkrementelle Update-Kosten skalieren alle mit dieser Zahl.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Wenn Speicherkosten wichtig sind, betten Sie mit jina-embeddings-v3 bei 1.024 Dimensionen ein und schneiden Sie für die Speicherung auf 512 Dimensionen ab. Sie erhalten die Indexierungs-Zeit-Genauigkeit des vollständigen Modells und die halbe Speicherkostung, mit etwa 1 Prozentpunkt retrieval@10 verloren. Das Abschneiden ist nur umkehrbar, wenn Sie die vollständigen Vektoren behalten — entscheiden Sie, bevor Sie sich festlegen.',
+          },
+        ],
+      },
+      multilingual: {
+        id: 'multilingual',
+        title: 'Mehrsprachige Qualität: Wenn die englischen Führungskräfte verlieren',
+        content:
+          '**Die große Qualitätslücke in diesem Benchmark liegt zwischen mehrsprachigen und reinen Englisch-Modellen, nicht zwischen zwei bestimmten Modellen.** Ein Satz von 25 mehrsprachigen Abfragen (Englisch, Deutsch, Französisch, Japanisch, Chinesisch — je 5) macht die Lücke deutlich.',
+        columns: ['Modell', 'Englische Abfrage → Englisches Dokument', 'EN-Abfrage → DE/FR-Dokument', 'EN-Abfrage → JA/ZH-Dokument', 'Mehrsprachiger Durchschnitt'],
+        rows: [
+          { 'Modell': 'jina-embeddings-v3', 'Englische Abfrage → Englisches Dokument': '94%', 'EN-Abfrage → DE/FR-Dokument': '90%', 'EN-Abfrage → JA/ZH-Dokument': '84%', 'Mehrsprachiger Durchschnitt': '89%' },
+          { 'Modell': 'nomic-embed-text-v2', 'Englische Abfrage → Englisches Dokument': '92%', 'EN-Abfrage → DE/FR-Dokument': '93%', 'EN-Abfrage → JA/ZH-Dokument': '90%', 'Mehrsprachiger Durchschnitt': '92%' },
+          { 'Modell': 'snowflake-arctic-embed-l-v2.0', 'Englische Abfrage → Englisches Dokument': '90%', 'EN-Abfrage → DE/FR-Dokument': '88%', 'EN-Abfrage → JA/ZH-Dokument': '80%', 'Mehrsprachiger Durchschnitt': '86%' },
+          { 'Modell': 'mxbai-embed-large-v1', 'Englische Abfrage → Englisches Dokument': '92%', 'EN-Abfrage → DE/FR-Dokument': '82%', 'EN-Abfrage → JA/ZH-Dokument': '66%', 'Mehrsprachiger Durchschnitt': '80%' },
+          { 'Modell': 'bge-large-en-v1.5', 'Englische Abfrage → Englisches Dokument': '94%', 'EN-Abfrage → DE/FR-Dokument': '79%', 'EN-Abfrage → JA/ZH-Dokument': '64%', 'Mehrsprachiger Durchschnitt': '79%' },
+          { 'Modell': 'gte-large', 'Englische Abfrage → Englisches Dokument': '93%', 'EN-Abfrage → DE/FR-Dokument': '78%', 'EN-Abfrage → JA/ZH-Dokument': '63%', 'Mehrsprachiger Durchschnitt': '78%' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'nomic-embed-text-v2 schlägt tatsächlich jina-embeddings-v3 bei mehrsprachigen Abfragen, weil seine Mixture-of-Experts-Architektur sprachspezifische Experten für nicht-englische Inhalte aktiviert. Für Korpora mit erheblichem Japanisch- oder Chinesisch-Inhalt ist nomic-embed-text-v2 eine direkte Vergleichswert — es ist auch die billigste, auf CPU zu laufen, was seinen Reiz für mehrsprachige Arbeitslasten auf Laptops verdoppelt.',
+          },
+        ],
+      },
+      modelProfiles: {
+        id: 'model-profiles',
+        title: 'Modellprofile pro Modell: Wozu jeder Embedder wirklich gut ist',
+        content:
+          '**Jedes Modell hat eine andere Design-Absicht.** Die Benchmark-Zahlen oben stammen von diesen Design-Entscheidungen.',
+        items: [
+          '**nomic-embed-text-v2** — Open-Weights Mixture-of-Experts (475 Mio. Gesamtparameter, ~305 Mio. aktiv pro Token). Trainiert auf 1,6 Mrd. Paaren über 100+ Sprachen. Lizenz: Apache-2.0. Stärken: CPU-Durchsatz (5× schneller als 1.024-Dim-Peers), starke Cross-Lingual-Recall, kleinster Speicher-Footprint. Schwächen: 768-Dim-Obergrenze bedeutet leicht niedrigere englische Recall gegenüber 1.024-Dim-Modellen. Am besten für reine CPU-Laptops, mehrsprachige Korpora und jede Indexierungs-Pipeline, die häufig laufen muss.',
+          '**bge-large-en-v1.5 (BAAI)** — 335 Mio. Parameter, 1.024 Dimensionen, 24 Ebenen. Trainiert hauptsächlich auf Englisch mit abruf-fokussierten Contrastive-Paaren. Lizenz: MIT. Stärken: Top-Leistung bei englischen Rechts- und Forschungstexten, reife Ökosystem (jede lokale RAG-Plattform unterstützt es), gut dokumentiertes Verhalten unter Fine-Tuning. Schwächen: Nur Englisch — fällt 12–15 Punkte bei mehrsprachigen Abfragen. Langsamster CPU-Durchsatz im Test. Am besten für rein Englisch-RAG, wo Genauigkeit wichtiger ist als Indexierungsgeschwindigkeit.',
+          '**gte-large (Alibaba)** — 335 Mio. Parameter, 1.024 Dimensionen. Trainiert auf Web-Paaren mit Fokus auf allgemeine semantische Suche. Lizenz: Apache-2.0. Stärken: permissive Lizenz, starke Englisch-Leistung, breite Framework-Unterstützung (Sentence Transformers, LangChain, LlamaIndex). Schwächen: Englisch-fokussiert (gte-multilingual-large existiert separat und fügt ~1 GB Speicher hinzu). Am besten für kommerzielle Bereitstellungen, bei denen Apache-2.0 die Lizenzüberprüfung vereinfacht.',
+          '**mxbai-embed-large-v1 (Mixedbread)** — 335 Mio. Parameter, 1.024 Dimensionen. Aus starker Basis destilliert und mit abruf-fokussierten Contrastive-Training fine-getuned. Lizenz: Apache-2.0. Stärken: ausgewogene Englisch-Leistung, leicht bessere Cross-Lingual-Recall als bge-large, mxbai-embed-2d-Variant unterstützt Matryoshka-Trunkierung (separates Modell). Schwächen: kleinere Community als bge oder gte. Am besten für Englisch-RAG mit permissiver Lizenzierung und der Option, auf mxbai-embed-2d für Dimensions-Flexibilität zu aktualisieren.',
+          '**snowflake-arctic-embed-l-v2.0 (Snowflake)** — 568 Mio. Parameter, 1.024 Dimensionen, unterstützt nativ bis zu 8.192-Token-Chunks. Lizenz: Apache-2.0. Stärken: Long-Context-Fähigkeit (die meisten Embedder beschränken auf 512 Token), ~30 Sprachen, stark bei Enterprise-Stil-Dokumenten. Schwächen: Mittelklasse-Genauigkeit bei Short-Chunks. Am besten für Korpora mit sehr langen strukturierten Dokumenten (Rechtsverträge, technische Handbücher, Regulatory Filings), wo 8k-Token-Chunks nützlich sind.',
+          '**jina-embeddings-v3 (Jina AI)** — 570 Mio. Parameter, 1.024 Dimensionen mit Matryoshka-Trunkierung auf 768/512/256. Trainiert mit Task-spezifischen LoRA-Adaptern (Abruf, Klassifizierung, Ähnlichkeit). 89-Sprachen-Unterstützung. Lizenz: CC BY-NC 4.0 für die Open Weights (kommerzielle Nutzung benötigt eine kostenpflichtige Lizenz) — überprüfen Sie vor der Bereitstellung in einem kostenpflichtigen Produkt. Stärken: beste Gesamtabruf-Genauigkeit in diesem Benchmark, starke mehrsprachige Leistung, Matryoshka-Trunkierung, Task-bewusste Adapter. Schwächen: Lizenzierung erfordert Vorsicht für kommerzielle Bereitstellungen. Am besten für persönliche RAG, Forschung und jede Bereitstellung, bei der die Lizenzierung akzeptabel ist.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Überprüfen Sie die Lizenz immer zur Integrations-Zeit erneut. Embedding-Modell-Lizenzen haben sich mehrmals verschoben — bge war von MIT zu einem restriktiveren kommerziellen Term und zurück, jina-embeddings-v3 wird unter CC BY-NC für die Open Weights ausgeliefert und Snowflake fügte eine Akzeptable-Use-Policy zusätzlich zu Apache-2.0 hinzu. Behandeln Sie die README als eine aktuelle Aussage, nicht als historisches Dokument.',
+          },
+        ],
+      },
+      costVsOpenai: {
+        id: 'cost-vs-openai',
+        title: 'Selbst gehostet vs OpenAI text-embedding-3-large: Kosten pro Million Token',
+        content:
+          '**Selbst gehostete Einbettung ist im großen Maßstab im Grunde kostenlos.** Die einzigen aussagekräftigen Kosten sind Elektrizität und Hardware-Amortisation — beide runden zu Rauschen im Vergleich zu API-Preisen für jeden Corpus über ein paar tausend Seiten.',
+        columns: ['Ansatz', 'Kosten / 1 Million Token', 'Zeit für 1 Million Token', 'Notizen'],
+        rows: [
+          { 'Ansatz': 'OpenAI text-embedding-3-large (API)', 'Kosten / 1 Million Token': '€0,12*', 'Zeit für 1 Million Token': '~3 min (netzwerkgebunden)', 'Notizen': 'Höchste absolute Genauigkeit bei Englisch; Daten verlassen Ihren Computer' },
+          { 'Ansatz': 'jina-embeddings-v3 auf RTX 4070', 'Kosten / 1 Million Token': '~€0,001 (Elektrizität)', 'Zeit für 1 Million Token': '~5 min', 'Notizen': 'Beste lokale Genauigkeit; CC BY-NC-Lizenz — überprüfen Sie kommerziell' },
+          { 'Ansatz': 'bge-large-en-v1.5 auf RTX 4070', 'Kosten / 1 Million Token': '~€0,001', 'Zeit für 1 Million Token': '~12 min', 'Notizen': 'Beste Englisch-Genauigkeit; MIT-Lizenz' },
+          { 'Ansatz': 'nomic-embed-text-v2 auf RTX 4070', 'Kosten / 1 Million Token': '~€0,0005', 'Zeit für 1 Million Token': '~3 min 30 Sekunden', 'Notizen': 'Schnellster GPU-Durchsatz; mehrsprachig; Apache-2.0' },
+          { 'Ansatz': 'nomic-embed-text-v2 auf M3 Pro CPU', 'Kosten / 1 Million Token': '~€0,0008', 'Zeit für 1 Million Token': '~30 min', 'Notizen': 'Keine GPU erforderlich; sinnvoll nur, weil es ohne GPU möglich ist' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Für einen 5.000-Seiten-Corpus (~5 Mio. Token bei 1.000 Token pro Seite) berechnet OpenAI ~€0,60 pro vollständiger Neuindexierung — trivial. Die echte Kosten ist Daten-Egress: jeder Chunk verlässt Ihren Computer, und viele Compliance-Regime erlauben es einfach nicht. Selbst gehostete Einbettung ist eine Datenschutz- und Kontrollentscheidung zuerst, eine Kostenentscheidung zweite. *konvertiert von $0,13 mit aktuellem Kurs.',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: 'Entscheidungsbaum: Welchen Embedder sollten Sie wählen?',
+        content:
+          '**Fünf binäre Fragen, in dieser Reihenfolge, führen die meisten Leser zum richtigen Embedder.**',
+        items: [
+          '**1. Haben Sie eine GPU für die Indexierung verfügbar?** → Nein: nomic-embed-text-v2 (5× CPU-Geschwindigkeit). Ja: fortfahren.',
+          '**2. Ist der Corpus rein Englisch?** → Nein: fortfahren. Ja: bge-large-en-v1.5, wenn Genauigkeit am wichtigsten ist, gte-large oder mxbai-embed-large-v1, wenn Apache-2.0-Lizenz wichtig ist.',
+          '**3. Sind Dokumente sehr lang (8k+ Token-Chunks)?** → Ja: snowflake-arctic-embed-l-v2.0. Nein: fortfahren.',
+          '**4. Möchten Sie die Dimensionen später für Speicherkosten abschneiden?** → Ja: jina-embeddings-v3 (Matryoshka). Nein: fortfahren.',
+          '**5. Ist die Bereitstellung ein kommerzielles Produkt?** → Ja: vermeiden Sie jina-embeddings-v3 (CC BY-NC), es sei denn, Sie kaufen die kommerzielle Lizenz — verwenden Sie stattdessen nomic-embed-text-v2 (Apache-2.0) oder BAAI/bge-m3 (MIT).',
+          '**Wenn unsicher: jina-embeddings-v3.** Es ist die höchste-Genauigkeit allgemeine Wahl im Benchmark und das einzige Modell, das über 87% auf jedem Dokumenttyp bleibt. Lizenz-zulassende Bereitstellungen sollten sich standardmäßig dafür entscheiden.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler beim Wählen eines Embedding-Modells',
+        items: [
+          '**Fehler 1: An der Plattform-Standard haften.** AnythingLLM wird mit einem winzigen eingebauten Embedder ausgeliefert; PrivateGPT setzt auf all-MiniLM-L6-v2; Open WebUI setzt auf nomic-embed-text-v1.5. Alle drei Standards unterperformen jina-embeddings-v3 um 5–10 Prozentpunkte bei retrieval@10. Wechseln.',
+          '**Fehler 2: Ein 1.024-Dim-Modell wählen, wenn retrieval@10 bei 90% mit einem 768-Dim-Modell bereits war.** Der marginale Gewinn rechtfertigt selten die verdoppelte Speicherung und 5× langsamer CPU-Durchsatz. nomic-embed-text-v2 erreicht 88% — genug für die meisten Anwendungsfälle.',
+          '**Fehler 3: Einen reinen Englisch-Embedder für einen mehrsprachigen Corpus wählen.** bge-large-en-v1.5 ist der beste Englisch-Embedder im Test und einer der schlechtesten bei Japanisch- oder Chinesisch-Inhalten. Die „beste Embedder"-Antwort ist corpus-abhängig — messen Sie auf Ihren Daten.',
+          '**Fehler 4: Die Lizenz ignorieren.** jina-embeddings-v3 wird unter CC BY-NC für die Open Weights ausgeliefert. Wenn Sie es ohne die kommerzielle Lizenz in einem bezahlten Produkt ausliefern, haben Sie ein Rechtsproblem. Überprüfen Sie die Lizenz immer zur Integrations-Zeit.',
+          '**Fehler 5: Auf einem zu kleinen Corpus benchmarken.** Alle sechs Modelle sehen auf 100 Dokumenten großartig aus. Unterschiede werden über ~5.000 Chunks hinweg entscheidend, wo die Recall-Obergrenze schwächerer Embedder auftaucht. Testen Sie auf mindestens 5.000 Chunks Ihres tatsächlichen Inhalts.',
+          '**Fehler 6: Vergessen, dass der Wechsel des Embedders einen vollständigen Neuindex erzwingt.** Keine lokale RAG-Plattform unterstützt inkrementelle Migration. Jeder Embedder-Austausch kostet 30–90 Minuten pro 5.000 Seiten auf Consumer-Hardware. Wählen Sie einmal, tauschen Sie bewusst.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Welches Embedding-Modell ist nur auf CPU am schnellsten?',
+            a: 'nomic-embed-text-v2 — 580 Chunks/Sekunde auf Apple M3 Pro bei Batch-Größe 32, 256-Token-Chunks. Ungefähr 5× schneller als die 1.024-Dim-Alternativen (bge-large-en-v1.5 bei 95, gte-large bei 110, mxbai-embed-large-v1 bei 105 Chunks/Sekunde). Der Geschwindigkeitsvorteil kommt von seiner Mixture-of-Experts-Architektur, die nur etwa 305 Mio. von 475 Mio. Parametern pro Token aktiviert. Für jeden Corpus über 1.000 Seiten auf reiner CPU-Hardware ist nomic-embed-text-v2 die praktische Standardeinstellung.',
+          },
+          {
+            q: 'Verbessern größere Embedding-Dimensionen wirklich den Abruf?',
+            a: 'Bis zu etwa 1.024 Dimensionen, ja. Darüber hinaus, nein. Im Benchmark lag 768-Dim nomic-embed-text-v2 (88% retrieval@10) um 4 Punkte hinter 1.024-Dim jina-embeddings-v3 (92%) insgesamt. Die Skalierung auf 1.536 oder 3.072 Dimensionen (einige kommerzielle APIs) gewinnt weniger als 1 Prozentpunkt in veröffentlichten Vergleichen. Dimensionen kosten Speicher linear: Ein 50.000-Seiten-Corpus benötigt 0,9 GB bei 768 Dimensionen gegenüber 1,2 GB bei 1.024 Dimensionen gegenüber 3,6 GB bei 3.072 Dimensionen. Der Matryoshka-Trick — nach dem Einbetten abschneiden — gibt Ihnen Flexibilität ohne die Kosten.',
+          },
+          {
+            q: 'Kann ich mehrsprachige Einbettungen ohne Leistungsverlust verwenden?',
+            a: 'Mehrsprachige Modelle haben sich 2026 erheblich aufgeholt. jina-embeddings-v3 erreichte 92% retrieval@10 insgesamt (89% bei mehrsprachigen Abfragen speziell) — wettbewerbsfähig mit den besten reinen Englisch-Embeddern bei Englisch-Text und weit voraus bei nicht-Englisch. Die historische Lücke (mehrsprachig = niedrigere Genauigkeit) hat sich auf 1–2 Punkte bei englischen Abfragen für einen 10-Punkt-Gewinn bei nicht-Englisch verengt. Für gemischte Korpora ist mehrsprachig jetzt die Standardwahl.',
+          },
+          {
+            q: 'Welches Embedding-Modell behandelt Code am besten?',
+            a: 'Keines der sechs getesteten sind dedizierte Code-Embedder. Bei einer TypeScript/Python-Codebasis führte jina-embeddings-v3 mit 87% retrieval@10 an, die anderen lagen zwischen 82–86%. Für Code-intensive Korpora — Code-Suche, Repository-RAG, Agent-Tooling über einer Codebasis — kombinieren Sie einen allgemeinen Embedder mit einem Code-spezifischen (BAAI/bge-code-v1, voyage-code-2, oder eine Fine-Tuned-Variante) und verwenden Sie den besser bewerteten für Code-Chunks. Der einfachste Ansatz: Betten Sie alles zuerst mit jina-embeddings-v3 ein, messen Sie retrieval@10 auf einem gehaltenen Abfrage-Set und tauschen Sie nur aus, wenn es unter Ihren Schwellenwert fällt.',
+          },
+          {
+            q: 'Wie oft sollte ich mein Embedding-Modell aktualisieren?',
+            a: 'Aktualisierung, wenn ein neu veröffentlichtes Modell einen Benchmark veröffentlicht, der Ihren um 3+ Prozentpunkte bei ähnlichen Daten Ihres Corpus schlägt, UND Sie eine gemessene retrieval@10-Nummer haben, mit der Sie vergleichen können. Ohne eine Baseline-Messung können Sie nicht sagen, ob das neue Modell tatsächlich besser bei Ihrem Inhalt ist. Für die meisten lokalen RAG-Bereitstellungen ist ein Embedder für 12–18 Monate gut, bevor eine bedeutsam bessere Option ankommt. Neuindexierung ist der Kosten — budgetieren Sie 30–90 Minuten pro 5.000 Seiten auf Consumer-Hardware.',
+          },
+          {
+            q: 'Kann ich Embedding-Modelle im selben RAG-System mischen?',
+            a: 'Technisch ja, praktisch nein. Das Mischen erfordert entweder zwei parallele Vektor-Indexes (beide Abfragen, Ergebnisse zusammenführen — fügt 50–150 ms Latenz hinzu und verkompliziert die Relevanz-Bewertung) oder Training einer kleinen Projektions-Schicht zum Ausrichten von Dimensionen (Research-Grade, zerbrechlich). Für 95% der lokalen Bereitstellungen müssen Sie einen Embedder auswählen und neuindexieren. Die Ausnahme: Code-Repositories mit einem dedizierten Code-Embedder für Code-Chunks und einem allgemeinen Embedder für Dokumentation — teilen Sie nach Dokumenttyp beim Ingestion auf, beide Indexes abfragen, wenn die Benutzer-Abfrage mehrdeutig ist.',
+          },
+          {
+            q: 'Sind Open-Source-Einbettungen genauso gut wie OpenAIs?',
+            a: 'Für die meisten lokalen RAG-Anwendungsfälle, ja. OpenAI text-embedding-3-large führt immer noch veröffentlichte Englisch-Benchmarks um 2–4 Prozentpunkte bei retrieval@10 an, aber die Lücke hat sich erheblich verengt. jina-embeddings-v3 kam innerhalb von 2 Punkten auf dem Test-Corpus, und die OpenAI-Route erfordert Daten verlassen Ihren Computer — ein Non-Starter für jede Bereitstellung mit Datenschutz- oder Compliance-Einschränkungen. Für reine Qualität bei englischem Text ohne Datenschutz-Anforderung und ein bescheidenes Budget ist OpenAI immer noch die höchste absolute Zahl; für alles andere haben Open-Source-Lösungen aufgeholt.',
+          },
+          {
+            q: 'Beeinflusst Quantisierung die Einbettungsqualität?',
+            a: 'int8-Quantisierung von gespeicherten Vektoren kostet etwa 0,5 Prozentpunkte retrieval@10 im Austausch gegen die Halbierung des Speichers und etwa die Halbierung der Abruf-Latenz. Lohnt sich bei jedem Corpus über 25.000 Chunks. Die Quantisierung des Einbettungs-Modells selbst (die Gewichte — bf16 → int8 → int4) ist aggressiver: int8-Modell-Quantisierung kostet 1–2 Prozentpunkte; int4 kostet 3–5 Punkte und verletzt die mehrsprachige Recall merklich. Für lokale RAG auf Consumer-Hardware führen Sie das Modell bei bf16 (oder fp16) aus und quantisieren Sie nur die gespeicherten Vektoren.',
+          },
+          {
+            q: 'Welches Modell ist am besten für juristische Dokumente?',
+            a: 'bge-large-en-v1.5 führte die juristische Teilmenge bei 94% retrieval@10 an — die höchste einzelne Nummer im Benchmark — aber nur für englische Verträge. Für deutsche, französische oder mehrsprachige juristische Korpora ist jina-embeddings-v3 (93% Englisch / 89% mehrsprachig) der bessere Allrounder. Juridischer Text belohnt 1.024-Dim-Modelle, weil terminologische Präzision wichtig ist; das 768-Dim nomic-embed-text-v2 fiel um 6 Punkte bei der juristischen Teilmenge zurück. Für sehr lange Verträge (50+ Seiten dichtes Legalese) reduziert snowflake-arctic-embed-l-v2.0 mit 8k-Token-Chunks Fragmentierungs-Verluste.',
+          },
+          {
+            q: 'Können Einbettungen wiederverwendet werden, wenn ich RAG-Plattformen wechsle?',
+            a: 'Quell-Dokumente werden frei zwischen Plattformen verschoben. Einbettungen werden nur verschoben, wenn die neue Plattform das gleiche Vektor-Format und das gleiche Embedding-Modell unterstützt. AnythingLLM (LanceDB), PrivateGPT (Qdrant oder Chroma) und Open WebUI (ChromaDB) verwenden alle unterschiedliche Vektor-Stores; selbst wenn der Embedder identisch ist, unterscheiden sich die Metadaten-Schemas. In der Praxis ist jeder Plattform-Wechsel auch ein Neuindexierungs-Durchlauf. Planen Sie entsprechend: Wählen Sie den Embedder für die Abruf-Qualität, wählen Sie die Plattform für alles andere.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Literatur',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: Beste lokale RAG 2026](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — Kontext für die Einbettungs-Wahl in der breiteren Plattform-Entscheidung.',
+          '[Bauen Sie lokale RAG auf Ihren PDFs in 30 Minuten auf](/de/power-local-llm/local-rag-on-your-pdfs-step-by-step) — praktische Implementierungs-Anleitung mit nomic-embed-text-v1.5.',
+          '[Chatten Sie mit 1.000 PDFs lokal](/de/power-local-llm/chat-with-1000-pdfs-locally) — Skalierungs-Implikationen der Einbettungs-Wahl jenseits der 10K-Seiten-Grenze.',
+          '[Lokale AI-Apps mit eingebauter RAG](/de/power-local-llm/local-ai-app-with-built-in-rag) — Anfänger-freundliche Stufe (LM Studio, Jan, AnythingLLM) für Leser, die noch keine Embedder optimieren.',
+          '[RAG erklärt: Wie man AI-Antworten mit echten Daten (2026) grundieren kann](/prompt-engineering/rag-explained?lang=de) — die Konzept-Schicht für retrieval-augmented-generation.',
+          '[Leitfaden für lokale LLM-Hardware 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Dimensionierung von GPU und RAM für Einbettungs-Arbeitslasten.',
+          '[Power Local LLM Hub](/de/power-local-llm) — vollständige Leitfaden-Bibliothek.',
+        ],
+      },
+    },
+  },
 }
