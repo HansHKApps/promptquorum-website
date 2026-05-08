@@ -2759,313 +2759,276 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-    sections: [
-      {
-        anchor: 'why-defaults-break',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**默认设置在5000-8000个chunks时失效** — 向量索引超过RAM时，检索召回率下降，纯余弦搜索返回词汇相似但语义错误的chunks。',
+          '**按语料库大小选择架构，而非偏好：** 100-1000文档用AnythingLLM调优；1000-5000用LlamaIndex本地；5000-10000用自定义Ollama+ChromaDB；10000+用Ollama+Qdrant。',
+          '**三个最高影响升级，按顺序：** 混合搜索（BM25+向量）、用小型cross-encoder对top-50候选reranking、metadata预过滤。10k+时分层检索也有帮助。',
+          '**存储预算：** 默认分块下每100个PDF页面10-30MB；50000页的语料库在磁盘上需要5-15GB用于向量存储。',
+          '**索引时间：** 与文档数线性关系。在消费级硬件上用nomic-embed-text-v1.5，每5000个PDF预计30-90分钟；Apple Silicon比纯CPU x86更快。',
+          '**10k+文档的硬件底线：** 32GB RAM、NVMe SSD，加上8GB+ VRAM的独立GPU或32GB+统一内存的Apple Silicon。',
+          '**切换embedding模型会强制重新索引整个语料库** — 任何架构都是。在索引10000个文档之前选好embedder；选错代价是数小时回滚。',
+        ],
+      },
+      whyDefaultsBreak: {
+        id: 'why-defaults-break',
         title: '为什么默认RAG在大规模下失效',
-        content: [
-          '向量搜索的失效发生在语料库达到5000-8000个chunks时。当索引大小超过RAM时，数据库开始使用磁盘IO。单纯的余弦相似度搜索开始返回看似相关但语义错误的chunks——因为它衡量的是向量空间中的距离，而不是查询意图。',
+        content: '向量搜索的失效发生在语料库达到5000-8000个chunks时。当索引大小超过RAM时，数据库开始使用磁盘IO。单纯的余弦相似度搜索开始返回看似相关但语义错误的chunks——因为它衡量的是向量空间中的距离，而不是查询意图。',
+        items: [
           '规模影响：1000个文档（~3000 chunks）运行良好。10000个文档（~30000 chunks）时查询延迟从300ms跳到1-3秒。检索到的chunks中语义不符的比例从5-10%跳到30-50%。',
           '根本原因：向量索引（HNSW、FAISS、等）设计用于亚线性搜索，但它们假设相似度度量是可靠的。在高维空间中，余弦相似度开始变得不可靠，特别是当你有大量意义类似但细节不同的文档时。',
         ],
       },
-      {
-        anchor: 'decision-tree',
+      decisionTree: {
+        id: 'decision-tree',
         title: '架构决策树：按语料库大小选择',
-        content: [
+        content: '按语料库大小匹配最简单的架构。',
+        items: [
           '**100-1000个文档：AnythingLLM调优**。使用内置的Ollama集成。启用相似度阈值过滤。调整chunk大小为512 tokens。成本：一个GPU即可，典型部署8GB VRAM。',
           '**1000-5000个文档：LlamaIndex本地分层索引**。构建两层索引：一层是文档摘要，一层是细粒度chunks。查询时先通过摘要过滤，再进行chunk搜索。减少需要排序的候选数量。',
           '**5000-10000个文档：Ollama + ChromaDB混合搜索**。添加BM25关键词搜索与向量搜索的混合。使用倒排索引预先过滤。索引时间30-60分钟。查询延迟：0.5-1.5秒。',
           '**10000+个文档：Ollama + Qdrant生产级**。添加metadata过滤、向量过滤和reranker。支持多用户并发。完整的持久化和备份。索引时间：60-90分钟每5000文档。查询延迟：1-2秒。',
         ],
       },
-      {
-        anchor: 'architecture-comparison',
+      architectureComparison: {
+        id: 'architecture-comparison',
         title: '四种架构的成本对比',
-        content: [
-          '成本按三个维度评估：GPU内存、磁盘存储、和索引时间。',
+        content: '成本按三个维度评估：GPU内存、磁盘存储、和索引时间。',
+        columns: ['架构', 'GPU内存', '磁盘空间（10k文档）', '索引时间', '查询延迟', '相似度质量'],
+        rows: [
+          {
+            '架构': 'AnythingLLM调优',
+            'GPU内存': '8GB',
+            '磁盘空间（10k文档）': '15GB',
+            '索引时间': '2小时',
+            '查询延迟': '200-400ms',
+            '相似度质量': '中等（纯向量）',
+          },
+          {
+            '架构': 'LlamaIndex分层',
+            'GPU内存': '8-16GB',
+            '磁盘空间（10k文档）': '12GB',
+            '索引时间': '90分钟',
+            '查询延迟': '300-600ms',
+            '相似度质量': '良好（分层过滤）',
+          },
+          {
+            '架构': 'ChromaDB混合',
+            'GPU内存': '16GB',
+            '磁盘空间（10k文档）': '18GB',
+            '索引时间': '60分钟',
+            '查询延迟': '500ms-1.5s',
+            '相似度质量': '优秀（BM25+向量）',
+          },
+          {
+            '架构': 'Qdrant生产级',
+            'GPU内存': '32GB',
+            '磁盘空间（10k文档）': '25GB',
+            '索引时间': '90分钟',
+            '查询延迟': '1-2秒',
+            '相似度质量': '最优（混合+reranker）',
+          },
         ],
-        table: {
-          columns: ['架构', 'GPU内存', '磁盘空间（10k文档）', '索引时间', '查询延迟', '相似度质量'],
-          rows: [
-            {
-              '架构': 'AnythingLLM调优',
-              'GPU内存': '8GB',
-              '磁盘空间（10k文档）': '15GB',
-              '索引时间': '2小时',
-              '查询延迟': '200-400ms',
-              '相似度质量': '中等（纯向量）',
-            },
-            {
-              '架构': 'LlamaIndex分层',
-              'GPU内存': '8-16GB',
-              '磁盘空间（10k文档）': '12GB',
-              '索引时间': '90分钟',
-              '查询延迟': '300-600ms',
-              '相似度质量': '良好（分层过滤）',
-            },
-            {
-              '架构': 'ChromaDB混合',
-              'GPU内存': '16GB',
-              '磁盘空间（10k文档）': '18GB',
-              '索引时间': '60分钟',
-              '查询延迟': '500ms-1.5s',
-              '相似度质量': '优秀（BM25+向量）',
-            },
-            {
-              '架构': 'Qdrant生产级',
-              'GPU内存': '32GB',
-              '磁盘空间（10k文档）': '25GB',
-              '索引时间': '90分钟',
-              '查询延迟': '1-2秒',
-              '相似度质量': '最优（混合+reranker）',
-            },
-          ],
-        },
       },
-      {
-        anchor: 'anythingllm-option',
+      optionAnythingLLM: {
+        id: 'option-anythingllm',
         title: '选项1: AnythingLLM调优（100-1k）',
-        content: [
-          '最简单的入门方式。AnythingLLM有内置RAG，支持本地Ollama embedding。',
-          '关键调优：',
-          '1. 设置相似度阈值为0.4而不是默认的0.5。这会减少低质量结果。',
-          '2. Chunk大小：512 tokens（而不是默认的1024）。更小的chunks意味着更精确的匹配。',
-          '3. Overlap：50%。防止信息在chunk边界处丢失。',
-          '4. 禁用自动分页。让用户选择页面处理。',
+        content: '最简单的入门方式。AnythingLLM有内置RAG，支持本地Ollama embedding。',
+        items: [
+          '关键调优：设置相似度阈值为0.4而不是默认的0.5。这会减少低质量结果。',
+          'Chunk大小：512 tokens（而不是默认的1024）。更小的chunks意味着更精确的匹配。',
+          'Overlap：50%。防止信息在chunk边界处丢失。',
+          '禁用自动分页。让用户选择页面处理。',
           '在10000个文档时会变得缓慢，但对于1000个或更少的它工作良好。',
         ],
       },
-      {
-        anchor: 'llamaindex-option',
+      optionLlamaIndex: {
+        id: 'option-llamaindex',
         title: '选项2: LlamaIndex分层索引（1k-5k）',
-        content: [
-          '分层方法在1000-5000个文档时的最佳点。',
-          '架构：',
-          '1. 摘要索引：为每个文档生成一个100-200词的摘要。',
-          '2. 详细索引：原始chunks的向量索引。',
-          '3. 查询流程：向量搜索摘要索引，检索相关文档，然后在这些文档中进行chunk级搜索。',
+        content: '分层方法在1000-5000个文档时的最佳点。',
+        items: [
+          '摘要索引：为每个文档生成一个100-200词的摘要。',
+          '详细索引：原始chunks的向量索引。',
+          '查询流程：向量搜索摘要索引，检索相关文档，然后在这些文档中进行chunk级搜索。',
           '益处：减少了需要排序的chunk数量，但仍然保持高精度。典型性能：查询延迟300-600ms，检索准确率85-90%。',
         ],
       },
-      {
-        anchor: 'chromadb-option',
+      optionChromaDB: {
+        id: 'option-chromadb',
         title: '选项3: ChromaDB混合搜索（5k-10k）',
-        content: [
-          'ChromaDB的混合搜索结合BM25关键词匹配和向量相似度。',
-          '工作原理：',
-          '1. BM25索引：所有chunks的倒排索引。',
-          '2. 向量索引：chunks的embedding向量。',
-          '3. 查询时：分别运行BM25和向量搜索，获得两个top-50列表，合并并去重。',
+        content: 'ChromaDB的混合搜索结合BM25关键词匹配和向量相似度。',
+        items: [
+          'BM25索引：所有chunks的倒排索引。',
+          '向量索引：chunks的embedding向量。',
+          '查询时：分别运行BM25和向量搜索，获得两个top-50列表，合并并去重。',
           '效果：修复了纯向量搜索的"词汇相似但语义无关"问题。举例：查询"LLM fine-tuning成本"现在同时命中关键词"cost"和语义相关的chunks。',
           '部署：需要16GB GPU内存，磁盘空间18GB（10k文档）。',
         ],
       },
-      {
-        anchor: 'qdrant-option',
+      optionQdrant: {
+        id: 'option-qdrant',
         title: '选项4: Qdrant生产级（10k+）',
-        content: [
-          '完整的向量数据库，支持advanced过滤、metadata过滤和reranking。',
-          '关键特性：',
-          '1. Metadata过滤：按文档来源、日期、作者筛选，在搜索前预先缩小范围。',
-          '2. 向量过滤：只搜索特定类别的documents。',
-          '3. Reranking：用小型的cross-encoder（BGE-reranker-v2-m3）对top-50重新排序。',
-          '4. 多用户支持：持久化、备份、并发查询。',
+        content: '完整的向量数据库，支持advanced过滤、metadata过滤和reranking。',
+        items: [
+          'Metadata过滤：按文档来源、日期、作者筛选，在搜索前预先缩小范围。',
+          '向量过滤：只搜索特定类别的documents。',
+          'Reranking：用小型的cross-encoder（BGE-reranker-v2-m3）对top-50重新排序。',
+          '多用户支持：持久化、备份、并发查询。',
           '部署成本：32GB系统RAM + 8GB GPU。但规模和可靠性值得投资。',
         ],
       },
-      {
-        anchor: 'hybrid-search',
+      hybridSearch: {
+        id: 'hybrid-search',
         title: '混合搜索：BM25+向量组合',
-        content: [
-          '混合搜索是扩展RAG时的关键创新。它结合两种不同的相似度概念：',
+        content: '混合搜索是扩展RAG时的关键创新。它结合两种不同的相似度概念。',
+        items: [
           '**BM25（关键词相关性）**：用于精确术语匹配。如果查询包含"GGUF"，BM25会确保你得到提及GGUF的chunks。',
           '**向量相似度**：用于语义相关性。如果查询是"模型量化"，向量搜索会找到讨论压缩、蒸馏等相关概念的chunks。',
-          '实现：',
-          '1. 并行运行两个搜索。',
-          '2. BM25给出top-50（按BM25得分排序）。',
-          '3. 向量搜索给出top-50（按cosine相似度排序）。',
-          '4. 合并：对每个chunk计算混合得分 = 0.4 * BM25_rank + 0.6 * vector_rank。',
-          '5. 返回top-20。',
+          '实现：并行运行两个搜索。BM25给出top-50（按BM25得分排序）。向量搜索给出top-50（按cosine相似度排序）。',
+          '合并：对每个chunk计算混合得分 = 0.4 * BM25_rank + 0.6 * vector_rank。返回top-20。',
           '结果：准确率从75%提升到90%+。',
         ],
       },
-      {
-        anchor: 'reranking',
+      reranking: {
+        id: 'reranking',
         title: 'Reranking: 用交叉编码器优化排序',
-        content: [
-          'Reranking是从top-50候选中选出真正最佳的chunks的过程。',
+        content: 'Reranking是从top-50候选中选出真正最佳的chunks的过程。',
+        items: [
           '问题：向量搜索返回的前20个chunks中，往往有5-10个是"接近但不完全相关"的。用户得到的答案是基于次优chunks的。',
           '解决方案：用小型的cross-encoder（如BGE-reranker-v2-m3）对top-50重新排序。',
-          '交叉编码器 vs 双编码器：',
-          '- 双编码器（embedding模型）：分别编码查询和document。快速，可扩展。',
-          '- 交叉编码器：同时编码查询+document对。准确但慢。',
-          '实践：',
-          '1. 向量搜索得到top-50。',
-          '2. 用BGE-reranker-v2-m3给每个chunks打分：score = model(query, chunk)。',
-          '3. 按reranker得分排序，返回top-10。',
+          '双编码器（embedding模型）：分别编码查询和document。快速，可扩展。',
+          '交叉编码器：同时编码查询+document对。准确但慢。',
+          '实践：向量搜索得到top-50。用BGE-reranker-v2-m3给每个chunks打分：score = model(query, chunk)。按reranker得分排序，返回top-10。',
           '成本：每个查询额外100-300ms（50个chunks通过reranker）。值得投资。',
         ],
       },
-      {
-        anchor: 'metadata-filtering',
+      metadataFiltering: {
+        id: 'metadata-filtering',
         title: '元数据过滤：预先缩小搜索空间',
-        content: [
-          '元数据过滤在向量搜索之前减少了索引大小。',
+        content: '元数据过滤在向量搜索之前减少了索引大小。',
+        items: [
           '例子：你有10000个PDFs，其中5000个是2024年之前的过时版本。查询"当前2026最佳实践"时，不需要搜索那5000个旧文档。',
-          '设置元数据：',
-          '1. 在索引时为每个chunk添加metadata：{ "source": "legal_archive", "year": 2023, "category": "contracts" }',
-          '2. 在查询时应用过滤：where year >= 2024 AND category IN ["contracts", "amendments"]',
-          '3. 只在过滤后的subset中进行向量搜索。',
+          '设置元数据：在索引时为每个chunk添加metadata，如来源、年份、类别。',
+          '在查询时应用过滤：where year >= 2024 AND category IN ["contracts", "amendments"]。',
+          '只在过滤后的subset中进行向量搜索。',
           '益处：搜索空间从10000个document缩小到1000个，查询延迟从3秒降到500ms。',
           '实现：大多数向量数据库（Qdrant、Milvus、Pinecone）原生支持metadata过滤。',
         ],
       },
-      {
-        anchor: 'hierarchical-retrieval',
+      hierarchicalRetrieval: {
+        id: 'hierarchical-retrieval',
         title: '分层检索：摘要索引+chunk索引',
-        content: [
-          '分层方法的核心思想：不是搜索所有chunks，而是首先搜索文档级别的摘要，然后深入到chunks。',
-          '工作流程：',
-          '1. **索引时**：为每个文档生成一个简洁的摘要（100-200词）。',
-          '2. **查询时**：',
-          '   - 步骤1：向量搜索摘要索引。获得top-3文档。',
-          '   - 步骤2：在这3个文档中进行chunk级搜索。获得top-5 chunks。',
-          '3. **传递给LLM**：这5个chunks。',
-          '益处：',
-          '- 从30000个chunks搜索空间缩小到~1500个（3个文档*500个chunks/文档）。',
-          '- 检索准确率反而提高：模型现在关注最相关的文档。',
-          '- 延迟从1.5秒降到400ms。',
+        content: '分层方法的核心思想：不是搜索所有chunks，而是首先搜索文档级别的摘要，然后深入到chunks。',
+        items: [
+          '**索引时**：为每个文档生成一个简洁的摘要（100-200词）。',
+          '**查询时步骤1**：向量搜索摘要索引。获得top-3文档。',
+          '**查询时步骤2**：在这3个文档中进行chunk级搜索。获得top-5 chunks。',
+          '**传递给LLM**：这5个chunks。',
+          '从30000个chunks搜索空间缩小到~1500个（3个文档*500个chunks/文档）。',
+          '检索准确率反而提高：模型现在关注最相关的文档。延迟从1.5秒降到400ms。',
         ],
       },
-      {
-        anchor: 'benchmarks',
+      benchmarks: {
+        id: 'benchmarks',
         title: '实测基准：延迟、存储、准确率',
-        content: [
-          '基准测试在以下条件下进行：',
-          '- 硬件：RTX 4070（8GB VRAM），32GB系统RAM，NVMe SSD',
-          '- 文档：PDF混合（法律、研究、技术文档），每个PDF平均30页',
-          '- 查询：50个真实用户查询',
-          '- Embedding模型：nomic-embed-text-v1.5',
-          '**1000个文档**：',
-          '- 索引时间：15分钟',
-          '- 磁盘空间：3GB',
-          '- 查询延迟（向量）：180ms',
-          '- 检索准确率：88%',
-          '**5000个文档**：',
-          '- 索引时间：60分钟',
-          '- 磁盘空间：15GB',
-          '- 查询延迟（纯向量）：800ms，（混合搜索）：600ms',
-          '- 检索准确率：75%（纯向量），90%（混合搜索）',
-          '**10000个文档**：',
-          '- 索引时间：90分钟',
-          '- 磁盘空间：30GB',
-          '- 查询延迟（纯向量）：2.5秒，（混合+rerank）：1.2秒',
-          '- 检索准确率：65%（纯向量），92%（混合+rerank）',
+        content: '基准测试在以下条件下进行：硬件RTX 4070（8GB VRAM），32GB系统RAM，NVMe SSD；文档PDF混合（法律、研究、技术文档），每个PDF平均30页；查询50个真实用户查询；Embedding模型nomic-embed-text-v1.5。',
+        items: [
+          '**1000个文档**：索引时间15分钟。磁盘空间3GB。查询延迟（向量）180ms。检索准确率88%。',
+          '**5000个文档**：索引时间60分钟。磁盘空间15GB。查询延迟（纯向量）800ms，（混合搜索）600ms。检索准确率75%（纯向量），90%（混合搜索）。',
+          '**10000个文档**：索引时间90分钟。磁盘空间30GB。查询延迟（纯向量）2.5秒，（混合+rerank）1.2秒。检索准确率65%（纯向量），92%（混合+rerank）。',
         ],
       },
-      {
-        anchor: 'storage-hardware',
+      storageHardware: {
+        id: 'storage-hardware',
         title: '存储和硬件指南',
-        content: [
-          '**磁盘空间**：向量存储主导成本。默认embedding（1536维度）：每个chunk ~4KB。',
-          '- 100个文档（300个chunks）：1.2MB（忽略不计）',
-          '- 1000个文档（3000个chunks）：12MB（实际：3-5GB，加上原始PDF）',
-          '- 10000个文档（30000个chunks）：120MB向量（实际：15-30GB，加上PDF）',
+        content: '**磁盘空间**：向量存储主导成本。默认embedding（1536维度）：每个chunk ~4KB。',
+        items: [
+          '100个文档（300个chunks）：1.2MB（忽略不计）。',
+          '1000个文档（3000个chunks）：12MB（实际：3-5GB，加上原始PDF）。',
+          '10000个文档（30000个chunks）：120MB向量（实际：15-30GB，加上PDF）。',
           '建议：为10k+文档准备32GB NVMe SSD。SATA会增加30-100%的查询延迟。避免使用机械硬盘（超过2k文档会变得不可用）。',
-          '**GPU选择**：',
-          '- 8GB足够AnythingLLM + LlamaIndex（最多1k文档）',
-          '- 16GB推荐用于ChromaDB混合搜索（5k文档）',
-          '- 32GB+ 用于Qdrant生产级（10k+文档），特别是如果运行自己的reranker',
-          '**系统RAM**：',
-          '- 16GB最小。向量索引会部分加载到RAM中。',
-          '- 32GB推荐用于10k+文档。',
+          '**GPU选择**：8GB足够AnythingLLM + LlamaIndex（最多1k文档）；16GB推荐用于ChromaDB混合搜索（5k文档）；32GB+ 用于Qdrant生产级（10k+文档）。',
+          '**系统RAM**：16GB最小。32GB推荐用于10k+文档。',
           '**CPU**：现代8核CPU足够。embedding和reranking受益于多核，但不需要高端CPU。',
         ],
       },
-      {
-        anchor: 'incremental-indexing',
+      incrementalIndexing: {
+        id: 'incremental-indexing',
         title: '增量索引：添加新文档而不重新索引',
-        content: [
-          '完全重新索引10000个文档需要90分钟。添加50个新文件时这太昂贵了。',
+        content: '完全重新索引10000个文档需要90分钟。添加50个新文件时这太昂贵了。',
+        items: [
           '解决方案：增量索引。只embed和索引新的chunks。',
-          '实现：',
-          '1. 为每个新PDF生成唯一的ID（基于文件哈希）。',
-          '2. 检查此ID是否已在索引中。如果是，跳过。',
-          '3. 如果不是，embed并插入。',
-          '4. 更新元数据（ingest_date、source等）。',
+          '为每个新PDF生成唯一的ID（基于文件哈希）。',
+          '检查此ID是否已在索引中。如果是，跳过。如果不是，embed并插入。',
+          '更新元数据（ingest_date、source等）。',
           '成本：50个新文档 = 50 * 30页 * 0.5秒/页 = ~750秒 = 12分钟。',
           '注意：如果你改变embedding模型（nomic-embed-text → BGE-M3），需要完全重新索引。计划迁移时间。',
         ],
       },
-      {
-        anchor: 'monitoring',
+      monitoring: {
+        id: 'monitoring',
         title: '监控：追踪检索质量',
-        content: [
-          '你不能改进无法测量的东西。设置简单的监控来追踪RAG系统的健康。',
-          '关键指标：',
-          '1. **检索准确率**：在返回的top-5 chunks中，有多少百分比与查询相关？目标：>85%。',
-          '2. **生成准确率**：LLM的答案与事实相符吗？手动评估30个问答对。追踪"拒绝率"（LLM说"我不知道"或"答案不在文档中"）。',
-          '3. **延迟分布**：监控查询的p50/p95/p99延迟。',
-          '4. **索引健康**：最后一个成功索引的日期？是否有失败的ingestion？',
-          '工具：',
-          '- Trulens：自动评估检索和生成准确率。',
-          '- RAGAS：批量评估50-100个query-answer对。',
-          '- 手动黄金集合：30-50个精心设计的query-answer对（已验证），定期针对它们运行系统。',
+        content: '你不能改进无法测量的东西。设置简单的监控来追踪RAG系统的健康。',
+        items: [
+          '**检索准确率**：在返回的top-5 chunks中，有多少百分比与查询相关？目标：>85%。',
+          '**生成准确率**：LLM的答案与事实相符吗？手动评估30个问答对。追踪"拒绝率"。',
+          '**延迟分布**：监控查询的p50/p95/p99延迟。',
+          '**索引健康**：最后一个成功索引的日期？是否有失败的ingestion？',
+          '工具：Trulens自动评估检索和生成准确率。RAGAS批量评估50-100个query-answer对。',
+          '手动黄金集合：30-50个精心设计的query-answer对（已验证），定期针对它们运行系统。',
         ],
       },
-      {
-        anchor: 'faq-section',
+      faq: {
+        id: 'faq',
         title: '常见问题',
-        content: [],
+        faqs: [
+          {
+            q: '为什么向量搜索在10k文档时变慢？',
+            a: '向量索引（HNSW）通常为亚线性搜索进行优化，但只在索引完全驻留在RAM中时。超过~15GB索引时，数据库开始分页到磁盘。NVMe seeks从0.1ms增加到2-5ms。当你有30k个chunks要搜索时，延迟从300ms跳到1-3秒。解决方案：添加metadata过滤（预先缩小搜索空间）或分层索引（两阶段搜索）。',
+          },
+          {
+            q: '混合搜索真的比纯向量搜索更好吗？',
+            a: '取决于你的查询类型。对于特定术语查询（"GGUF是什么？"），BM25完美。对于模糊查询（"优化LLM成本的方法"），向量搜索更好。混合搜索赢家在于组合：命中精确术语 + 捕捉语义相关内容。在我们的基准上，混合搜索将10k文档上的准确率从65%提升到92%。',
+          },
+          {
+            q: '我应该使用什么embedding模型？',
+            a: '对于速度，使用nomic-embed-text-v1.5（本地，快速）。对于准确率，使用BGE-M3（更好的多语言和长context支持）或bge-base（平衡）。如果你最终想switching，计划完全重新索引。embedding维度通常是1536（可以缩小到256用于速度，但准确率会下降）。',
+          },
+          {
+            q: '我可以合并多个索引吗？',
+            a: '是的，但有成本。如果你有两个单独的Qdrant实例（每个5k文档），你可以：(a) 同时查询两个并合并结果（需要去重），或 (b) 完全重新索引成一个大索引。选项(a)更快但结果质量可能混乱。选项(b)更清晰但需要90分钟。用元数据区分来源："index_name": "legal"，并在查询时过滤。',
+          },
+          {
+            q: '如何处理敏感的PDFs（法律、医学）？',
+            a: '在embedding前进行敏感数据检测。使用regex或NER模型识别PII（社会安全号码、医疗记录号）和删除或掩码。Embedding本身不会保留文本，但chunks的元数据会。确保：(1) 只在本地存储（不发送到OpenAI等），(2) 使用文件级access control（某些用户只能看到某些PDF），(3) 启用Qdrant的ACL支持多用户隔离。',
+          },
+          {
+            q: '我应该多久重新索引一次？',
+            a: '如果文档静止，永远不需要。如果添加新文档，使用增量索引（只embed新文档）。如果改变chunk大小、embedding模型或重新排列文档，进行完全重新索引。信号：如果查询质量明显下降且你改变了系统，考虑重新索引。',
+          },
+          {
+            q: 'Chunk大小应该是多少？',
+            a: '这取决于文档类型和查询粒度。对于法律合同，512 tokens（代表~1-2页）可能太小。对于研究论文，1024是好的。对于代码文档，256 tokens。规则：chunk应该有足够的上下文来自洽，但足够小以避免混合多个主题。测试：从1024开始，运行50个真实查询，比较检索准确率。',
+          },
+          {
+            q: '为什么我的reranker会减慢查询速度？',
+            a: '因为交叉编码器逐个对chunks进行评分。对50个chunks运行BGE-reranker-v2-m3增加100-300ms。这值得吗？是的，如果它提高了准确率。对于10k文档系统，1.2秒的查询延迟（包括rerank）比3秒没有rerank的好得多。如果速度是critical，只对top-20进行rerank，而不是top-50。',
+          },
+          {
+            q: '我可以在Ollama中本地运行reranker吗？',
+            a: '困难。大多数reranker（BGE、Cohere）作为Python库提供。Ollama支持LLM inference，不支持交叉编码器。替代方案：(1) 用较小的local embedding模型做第一遍排序，然后refine（速度但可能更低准确率），(2) 离线计算和缓存top-10结果列表，(3) 使用FastAPI包装你的reranker并在单独的GPU上运行它。',
+          },
+          {
+            q: '10k文档需要什么硬件？',
+            a: '最低：32GB系统RAM，50GB+ 可用NVMe SSD，8GB+ VRAM discrete GPU或32GB unified Apple Silicon。GPU帮助indexing速度（1-3小时节省），但query inference可以在CPU上进行。SATA SSD可接受但增加30-100%的冷查询延迟；转轴盘对于2k+文档不可用。RAM是首要constraint——5GB索引在16GB RAM中舒适，但10GB索引需要32GB+。',
+          },
+        ],
       },
-    ],
-    faqSection: {
-      title: '常见问题',
-      faqs: [
-        {
-          q: '为什么向量搜索在10k文档时变慢？',
-          a: '向量索引（HNSW）通常为亚线性搜索进行优化，但只在索引完全驻留在RAM中时。超过~15GB索引时，数据库开始分页到磁盘。NVMe seeks从0.1ms增加到2-5ms。当你有30k个chunks要搜索时，延迟从300ms跳到1-3秒。解决方案：添加metadata过滤（预先缩小搜索空间）或分层索引（两阶段搜索）。',
-        },
-        {
-          q: '混合搜索真的比纯向量搜索更好吗？',
-          a: '取决于你的查询类型。对于特定术语查询（"GGUF是什么？"），BM25完美。对于模糊查询（"优化LLM成本的方法"），向量搜索更好。混合搜索赢家在于组合：命中精确术语 + 捕捉语义相关内容。在我们的基准上，混合搜索将10k文档上的准确率从65%提升到92%。',
-        },
-        {
-          q: '我应该使用什么embedding模型？',
-          a: '对于速度，使用nomic-embed-text-v1.5（本地，快速）。对于准确率，使用BGE-M3（更好的多语言和长context支持）或bge-base（平衡）。如果你最终想switching，计划完全重新索引。embedding维度通常是1536（可以缩小到256用于速度，但准确率会下降）。',
-        },
-        {
-          q: '我可以合并多个索引吗？',
-          a: '是的，但有成本。如果你有两个单独的Qdrant实例（每个5k文档），你可以：(a) 同时查询两个并合并结果（需要去重），或 (b) 完全重新索引成一个大索引。选项(a)更快但结果质量可能混乱。选项(b)更清晰但需要90分钟。用元数据区分来源："index_name": "legal"，并在查询时过滤。',
-        },
-        {
-          q: '如何处理敏感的PDFs（法律、医学）？',
-          a: '在embedding前进行敏感数据检测。使用regex或NER模型识别PII（社会安全号码、医疗记录号）和删除或掩码。Embedding本身不会保留文本，但chunks的元数据会。确保：(1) 只在本地存储（不发送到OpenAI等），(2) 使用文件级access control（某些用户只能看到某些PDF），(3) 启用Qdrant的ACL支持多用户隔离。',
-        },
-        {
-          q: '我应该多久重新索引一次？',
-          a: '如果文档静止，永远不需要。如果添加新文档，使用增量索引（只embed新文档）。如果改变chunk大小、embedding模型或重新排列文档，进行完全重新索引。信号：如果查询质量明显下降且你改变了系统，考虑重新索引。',
-        },
-        {
-          q: 'Chunk大小应该是多少？',
-          a: '这取决于文档类型和查询粒度。对于法律合同，512 tokens（代表~1-2页）可能太小。对于研究论文，1024是好的。对于代码文档，256 tokens。规则：chunk应该有足够的上下文来自洽，但足够小以避免混合多个主题。测试：从1024开始，运行50个真实查询，比较检索准确率。',
-        },
-        {
-          q: '为什么我的reranker会减慢查询速度？',
-          a: '因为交叉编码器逐个对chunks进行评分。对50个chunks运行BGE-reranker-v2-m3增加100-300ms。这值得吗？是的，如果它提高了准确率。对于10k文档系统，1.2秒的查询延迟（包括rerank）比3秒没有rerank的好得多。如果速度是critical，只对top-20进行rerank，而不是top-50。',
-        },
-        {
-          q: '我可以在Ollama中本地运行reranker吗？',
-          a: '困难。大多数reranker（BGE、Cohere）作为Python库提供。Ollama支持LLM inference，不支持交叉编码器。替代方案：(1) 用较小的local embedding模型做第一遍排序，然后refine（速度但可能更低准确率），(2) 离线计算和缓存top-10结果列表，(3) 使用FastAPI包装你的reranker并在单独的GPU上运行它。',
-        },
-        {
-          q: '10k文档需要什么硬件？',
-          a: '最低：32GB系统RAM，50GB+ 可用NVMe SSD，8GB+ VRAM discrete GPU或32GB unified Apple Silicon。GPU帮助indexing速度（1-3小时节省），但query inference可以在CPU上进行。SATA SSD可接受但增加30-100%的冷查询延迟；转轴盘对于2k+文档不可用。RAM是首要constraint——5GB索引在16GB RAM中舒适，但10GB索引需要32GB+。',
-        },
-      ],
     },
-    techArticleSchema: {
+    schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally?lang=zh',
