@@ -148,20 +148,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Only EN pages as <loc> entries; all language variants via hreflang
     const enUrl = `${BASE}${path}`
+
+    // Power Local LLM uses subdirectory routing; other clusters use query-string
+    const isPowerLLM = path.startsWith('/power-local-llm')
+    const alternateUrls = isPowerLLM
+      ? {
+          'en': `${BASE}${path}`,
+          'de': `${BASE}/de${path}`,
+          'fr': `${BASE}/fr${path}`,
+          'ja': `${BASE}/ja${path}`,
+          'zh': `${BASE}/zh${path}`,
+          'x-default': `${BASE}${path}`,
+        }
+      : {
+          'en': enUrl,
+          'de': `${BASE}${path}?lang=de`,
+          'fr': `${BASE}${path}?lang=fr`,
+          'ja': `${BASE}${path}?lang=ja`,
+          'zh': `${BASE}${path}?lang=zh`,
+          'x-default': enUrl,
+        }
+
     entries.push({
       url: enUrl,
       lastModified: lastmod,
       changeFrequency: changefreq,
       priority,
       alternates: {
-        languages: Object.fromEntries([
-          ['en', enUrl],
-          ['de', `${BASE}${path}?lang=de`],
-          ['fr', `${BASE}${path}?lang=fr`],
-          ['ja', `${BASE}${path}?lang=ja`],
-          ['zh', `${BASE}${path}?lang=zh`],
-          ['x-default', enUrl],
-        ]),
+        languages: alternateUrls,
       },
     })
   })

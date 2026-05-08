@@ -825,23 +825,53 @@ Every non-EN page MUST contain ONE section with market-specific context, placed 
 
 ## Section 13 — Internal Link and Hreflang Rules
 
-**Internal links in translated pages must use the base English slug with lang param:**
+**Internal links in translated pages must use cluster-specific patterns:**
+
+### For Power Local LLM Cluster (path-based locale routing)
+Use subdirectory pattern for links AND hreflang:
+```
+CORRECT: /de/power-local-llm/best-local-llm-apps-iphone-2026
+CORRECT hreflang: https://www.promptquorum.com/de/power-local-llm/[slug]
+```
+
+### For All Other Clusters (query-string locale routing until June 5 migration)
+Use query-string pattern:
 ```
 CORRECT: /prompt-engineering/risen-framework?lang=de
-WRONG:   /de/prompt-engineering/risen-framework
-WRONG:   /prompt-engineering/risen-framework (without lang param)
+CORRECT: /local-llms/how-to-install-ollama?lang=de
+CORRECT: /blog/slug?lang=de
+WRONG:   /de/prompt-engineering/risen-framework (reserved for June 5 migration)
+WRONG:   /prompt-engineering/risen-framework (missing lang param)
 ```
 
 **Hreflang — every translated page must include all 6 tags:**
+
+For **Power Local LLM** (subdirectory):
 ```
-hreflang="en"        → https://www.promptquorum.com/[slug]
-hreflang="de"        → https://www.promptquorum.com/[slug]?lang=de
-hreflang="fr"        → https://www.promptquorum.com/[slug]?lang=fr
-hreflang="ja"        → https://www.promptquorum.com/[slug]?lang=ja
-hreflang="zh"        → https://www.promptquorum.com/[slug]?lang=zh
-hreflang="x-default" → https://www.promptquorum.com/[slug]
+hreflang="en"        → https://www.promptquorum.com/power-local-llm/[slug]
+hreflang="de"        → https://www.promptquorum.com/de/power-local-llm/[slug]
+hreflang="fr"        → https://www.promptquorum.com/fr/power-local-llm/[slug]
+hreflang="ja"        → https://www.promptquorum.com/ja/power-local-llm/[slug]
+hreflang="zh"        → https://www.promptquorum.com/zh/power-local-llm/[slug]
+hreflang="x-default" → https://www.promptquorum.com/power-local-llm/[slug]
 ```
+
+For **All other clusters** (query-string, until June 5):
+```
+hreflang="en"        → https://www.promptquorum.com/[cluster]/[slug]
+hreflang="de"        → https://www.promptquorum.com/[cluster]/[slug]?lang=de
+hreflang="fr"        → https://www.promptquorum.com/[cluster]/[slug]?lang=fr
+hreflang="ja"        → https://www.promptquorum.com/[cluster]/[slug]?lang=ja
+hreflang="zh"        → https://www.promptquorum.com/[cluster]/[slug]?lang=zh
+hreflang="x-default" → https://www.promptquorum.com/[cluster]/[slug]
+```
+
 All URLs must be absolute. Relative URLs in hreflang are invalid.
+
+**Implementation Note (for /geo-translation skill):**
+When translating articles, detect the cluster path:
+- If translating `/power-local-llm/...`: append `/[LANG]/power-local-llm/[slug]` to all internal power-local-llm links
+- If translating `/prompt-engineering/...`, `/local-llms/...`, `/blog/...`, `/frameworks/...`: append `?lang=[CODE]` to all internal links
 
 ---
 
