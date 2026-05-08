@@ -1937,4 +1937,486 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'Continue.dev vs Cline vs Aider：2026 年本地编码代理对比',
+    seoTitle: 'Continue.dev vs Cline vs Aider – 2026 年本地编码代理对比',
+    intro:
+      'Continue.dev、Cline 和 Aider 是三个认真的开源编码工具，可以与本地 LLM 完美集成。它们不可互换：每一个都围绕不同的工作流原语构建 — 自动完成、自主代理循环或 Git 原生差异。首先按工作流选择，其次按模型选择，您可以避免 90% 的集成问题。',
+    metaDescription:
+      '2026 年本地编码代理对比：Continue.dev、Cline、Aider。编辑模型、IDE 集成、撤销和上下文策略 — 按工作流选择，不按效能选择。',
+    twitterDescription:
+      '三个本地编码工具，三个不同的工作流原语。Continue.dev 用于自动完成，Cline 用于自主代理，Aider 用于 Git 原生差异。按工作流的判决在内部。',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+      'Llama 3.3 70B',
+      'Codestral 22B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '运行本地编码 LLM（Qwen3-Coder、DeepSeek Coder、Codestral、Llama 3.3）的开发者，需要选择适合其现有编辑器和项目工作流的工具。',
+    readTime: '14 分钟阅读',
+    educationalLevel: 'Advanced',
+    primaryTerm: '本地编码代理',
+    targetKeywords: [
+      'continue.dev vs cline',
+      'cline vs aider',
+      '2026 年最佳本地编码代理',
+      '本地 llm 编码工具',
+      'aider 本地 llm',
+      'continue.dev 本地 llm',
+    ],
+    leadAnswerBlock:
+      '**Continue.dev、Cline 和 Aider 用同一个本地模型解决不同的问题。Continue.dev 围绕自动完成和 IDE 集成的聊天面板构建 — 最适合在 VS Code 或 JetBrains 中进行"输入时编辑"工作流。Cline 是一个自主的 VS Code 代理，可以计划、编辑多个文件并执行命令，具有明确的批准门控 — 最适合多文件重构和探索性的错误追踪。Aider 是一个以终端为先、Git 原生的 CLI，将每次编辑转换为具有外科级搜索和替换差异的提交 — 最适合全仓库工作和希望每次更改都反映在 `git log` 中的审阅者。按工作流原语（自动完成 vs 代理循环 vs Git 差异）选择，而不是按哪个工具听起来最强大。**',
+    quickAnswerTop: {
+      zh: {
+        question: '2026 年最好的本地编码代理是哪个：Continue.dev、Cline 还是 Aider？',
+        answer:
+          '如果您大部分时间都在 VS Code 或 JetBrains 中工作，并且想要自动完成加上可以访问您代码库的聊天面板，请选择 Continue.dev。如果您想要一个自主代理来计划、编辑多个文件并在步骤之间执行带批准门的命令，请选择 Cline — 最适合重构和探索性的错误追踪。如果您在终端中工作，并且希望每次编辑都作为单独的可审核的 git 提交进行，请选择 Aider。三个都可以完全离线对任何本地 LLM 端点（Ollama、llama.cpp、LM Studio、vLLM）工作。正确的选择是一个工作流决定，不是质量排名。',
+        bullets: [
+          'Continue.dev — 自动完成 + IDE 集成聊天。最适合想要在不离开编辑器的情况下进行增量编辑的 VS Code 和 JetBrains 用户。',
+          'Cline — 具有计划/行动模式、工具调用和每步批准的自主代理。最适合多文件重构和错误追踪。',
+          'Aider — 具有 Git 原生提交和搜索-替换差异的终端 CLI。最适合可审核和可撤销的全仓库工作。',
+          '三个都适用于任何 OpenAI 兼容的本地端点 — Ollama 是最简单的路径，llama.cpp 和 vLLM 通过提供商配置支持。',
+          '工作流适配性优于原始能力。强迫一个终端优先的开发者进入 Cline（或一个仅 VS Code 的开发者进入 Aider）花费的时间比工具能节省的更多。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '关键要点', anchor: '#key-takeaways' },
+      { label: '快速事实', anchor: '#quick-facts' },
+      { label: '比较表', anchor: '#comparison-table' },
+      { label: '应该选择哪一个', anchor: '#which-one' },
+      { label: 'Continue.dev：深度解析', anchor: '#continue-dev' },
+      { label: 'Cline：深度解析', anchor: '#cline' },
+      { label: 'Aider：深度解析', anchor: '#aider' },
+      { label: '编辑模型：每个工具如何编写代码', anchor: '#edit-model' },
+      { label: '撤销和回滚', anchor: '#undo' },
+      { label: '上下文窗口策略', anchor: '#context' },
+      { label: '工具调用可靠性', anchor: '#tool-calls' },
+      { label: 'IDE 集成', anchor: '#ide-integration' },
+      { label: '按用例划分的工作流适合度', anchor: '#workflow-fit' },
+      { label: '决策树', anchor: '#decision-tree' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '资源', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Continue.dev** 是自动完成优先：具有 FIM（Fill-in-the-Middle）补全、IDE 集成的聊天侧边栏和 `@` 上下文提供者（代码库、文件、文档、终端）的 VS Code 和 JetBrains 扩展。本地模型的最接近的开源 Copilot 类似物。',
+          '**Cline** 是代理优先：具有明确的计划和行动模式、工具调用循环（read_file、write_to_file、execute_command、browser_action）和每个步骤的批准门的 VS Code 扩展。设计为在多个文件中自主运行。',
+          '**Aider** 是 Git 优先：一个终端 CLI，维护 tree-sitter 仓库地图，通过搜索和替换差异块编辑文件，并提交每项更改。撤销是 `git reset` — 三个中最可审核的工作流。',
+          '三个都讲 OpenAI 兼容端点。**Ollama** 是最流畅的本地后端；**llama.cpp** 和 **vLLM** 通过提供商设置或像 LiteLLM 这样的代理工作。',
+          '**工具调用可靠性**取决于模型，而不是工具。Qwen3-Coder 30B 和 DeepSeek Coder V3 是 2026 年 5 月最可靠的工具调用者；较小的模型（7B 类）无论哪个工具包装它们都会定期发出格式错误的工具调用。',
+          '**上下文窗口策略**差异很大：Continue.dev 依靠嵌入式代码库索引和 `@` 固定的上下文，Cline 将完整文件内容流传输到对话中（高令牌使用），Aider 使用 tree-sitter 仓库地图加上显式的 `/add` 和 `/drop` 以保持工作集较小。',
+          '对于单个开发者，**工作流适应**比任何基准更主导结果。您实际保持打开的工具是您应该选择的工具。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速事实',
+        items: [
+          '**Continue.dev** — 自动完成 + 聊天，VS Code 和 JetBrains，三个中最低摩擦的安装。',
+          '**Cline** — 具有批准门的自主代理，仅 VS Code，最高能力和最高令牌使用。',
+          '**Aider** — 终端 CLI，Git 原生提交，每次编辑都可通过 Git 审核和撤销。',
+          '三个都对相同的本地后端运行 — **Ollama** 是最流畅的路径；**llama.cpp** 和 **vLLM** 也通过 OpenAI 兼容配置工作。',
+          '**工具调用可靠性是一个模型属性，不是工具属性。** Qwen3-Coder 30B 和 DeepSeek Coder V3 在三个中都可靠；7B 类模型在三个中都失败。',
+          '**上下文预算：** Continue.dev 和 Aider 在 32K 上下文模型上舒适地工作；Cline 对于非平凡的多文件任务需要 **128K**。',
+          '**按编辑器选择：** JetBrains → Continue.dev 或 Aider。Vim/Neovim 或 SSH → Aider。自动完成繁重的日子的 VS Code → Continue.dev。多文件重构的 VS Code → Cline。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Continue.dev、Cline 和 Aider 2026 年的比较',
+        content:
+          '三个工具都是开源的，免费运行，可以与任何本地 LLM 端点一起使用。下面的结构差异决定了哪一个适合您的工作流。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Continue.dev 是 Copilot 风格的自动完成，Cline 是跨文件编辑的自主代理，Aider 是将每次编辑提交到 Git 的终端工具 — 按工作流选择，不按基准选择。',
+          },
+          {
+            type: 'plain-terms',
+            text: '三个免费工具，相同的本地模型，三个完全不同的工作流。Continue.dev 感觉像 Copilot — 在您的编辑器中按 Tab 接受建议。Cline 感觉像一个您监督的初级开发者 — 在您批准每个步骤时跨文件计划和编辑。Aider 感觉像在终端中进行对工作 — 您说话，它提交。尝试与您已有的工作方式相匹配的那个。',
+          },
+        ],
+        columns: ['功能', 'Continue.dev', 'Cline', 'Aider'],
+        rows: [
+          {
+            '功能': '主要表面',
+            'Continue.dev': 'VS Code 和 JetBrains 扩展',
+            'Cline': 'VS Code 扩展',
+            'Aider': '终端 CLI（任何编辑器在旁边）',
+          },
+          {
+            '功能': '工作流原语',
+            'Continue.dev': '自动完成 + IDE 集成聊天',
+            'Cline': '具有批准门的自主代理循环',
+            'Aider': 'Git 原生差异编辑，每次更改一个提交',
+          },
+          {
+            '功能': '编辑模型',
+            'Continue.dev': '内联 FIM + 从聊天应用到文件',
+            'Cline': '工具调用（read_file、write_to_file、replace_in_file）',
+            'Aider': '搜索和替换差异块；小文件的"整体"模式',
+          },
+          {
+            '功能': '多文件编辑',
+            'Continue.dev': '手动：聊天建议，您按文件应用',
+            'Cline': '原生：代理在一个任务中跨文件编辑',
+            'Aider': '原生：在提示中命名文件，编辑在一个提交中着陆',
+          },
+          {
+            '功能': '撤销 / 回滚',
+            'Continue.dev': '应用的编辑上的 VS Code 撤销堆栈',
+            'Cline': '代理 UI 中每次编辑的回复；硬回滚使用 Git',
+            'Aider': '`/undo` 取消最后一次提交；完整的 git 历史下方',
+          },
+          {
+            '功能': '工具调用协议',
+            'Continue.dev': 'Agent 模式下的 OpenAI 工具（function-calling）',
+            'Cline': '具有严格模式的自定义 XML 工具块',
+            'Aider': '没有工具调用；提示模型发出差异块',
+          },
+          {
+            '功能': '代码库上下文',
+            'Continue.dev': '本地索引（TF-IDF + embeddings）+ `@` 提供者',
+            'Cline': '将完整文件内容流传输到对话中',
+            'Aider': 'Tree-sitter 仓库地图 + 手动 `/add` 和 `/drop`',
+          },
+          {
+            '功能': '批准 / 安全',
+            'Continue.dev': '每次应用前的差异预览',
+            'Cline': '每步批准；自动批准允许列表可配置',
+            'Aider': '终端中的差异预览；提交步骤是自动的',
+          },
+          {
+            '功能': '最适合',
+            'Continue.dev': '输入时编辑、IDE 集成聊天、自动完成繁重的日子',
+            'Cline': '多文件重构、探索性调试、仓库任务',
+            'Aider': '可审核的全仓库更改、终端驱动的工作流',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: '应该选择哪一个',
+        content:
+          '**正确的工具由您的编辑器、对自主编辑的容限和如何审核更改决定。** 使用此快捷方式。',
+        columns: ['您的情况', '选择'],
+        rows: [
+          { '您的情况': '我大部分时间都在 VS Code 或 JetBrains IDE 中工作，想要 Copilot 风格的自动完成', '选择': 'Continue.dev' },
+          { '您的情况': '我想要一个聊天侧边栏可以访问我的代码库，无需手动文件上传', '选择': 'Continue.dev' },
+          { '您的情况': '我想要一个代理来计划跨多个文件的重构并在每个步骤前询问', '选择': 'Cline' },
+          { '您的情况': '我想要模型能够执行命令并读取终端输出作为其循环的一部分', '选择': 'Cline' },
+          { '您的情况': '我通过 `git diff` 审核更改并希望所有编辑都自动提交', '选择': 'Aider' },
+          { '您的情况': '我通过 SSH 工作或在以终端为先的设置中工作', '选择': 'Aider' },
+          { '您的情况': '我偶尔需要三个工作流 — 首先选择最简单的', '选择': '从 Continue.dev 开始；当您需要 Git 原生差异时添加 Aider' },
+        ],
+      },
+      continueDevDeep: {
+        id: 'continue-dev',
+        title: 'Continue.dev：自动完成优先的选择',
+        content:
+          '**Continue.dev 是本地模型的最接近的开源 GitHub Copilot 类似物。** 主要表面是编辑器：打字时的 Tab 补全加上懂代码库的聊天侧边栏。',
+        items: [
+          '**安装路径：** VS Code Marketplace 和 JetBrains Marketplace。配置在 `~/.continue/config.json`（或 `config.yaml`）中；模型定义、自动完成设置和 `@` 上下文提供者都在那里。',
+          '**工作流原语：** 通过 FIM（Fill-in-the-Middle）的自动完成加上 IDE 集成的聊天侧边栏。聊天面板可以直接将编辑应用到打开的文件；Agent 模式为多步任务添加工具调用循环。',
+          '**本地模型设置：** 原生 Ollama 支持是一个配置块。llama.cpp、LM Studio 和任何 OpenAI 兼容端点也可以工作。标准模式是运行用于自动完成的小型模型（小、快 — Qwen2.5-Coder 1.5B 类）和用于聊天的较大型模型（Qwen3-Coder 30B、DeepSeek Coder V3）。',
+          '**代码库上下文：** 本地索引（TF-IDF + embeddings）在您的项目文件夹中。`@codebase`、`@file`、`@folder`、`@docs`、`@terminal` 和自定义提供者从聊天面板访问索引。',
+          '**编辑模型：** 在聊天中，模型建议一个代码块；点击"应用"就会对打开的文件进行差异并显示它供您接受或拒绝。内联编辑（选择上的 Cmd/Ctrl+I）在原地重写选择。两个流都在任何写入前显示差异预览。',
+          '**发光处：** 您已在使用的 IDE 中键盘驱动的编辑、每次编辑的认知开销低、快速反馈循环。您忘记安装的工具。',
+          '**不足处：** 多文件重构需要您按文件驱动聊天。长期运行的自主任务不是其原生习语 — Agent 模式在改进，但不是项目的重力中心。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在您的 Continue.dev 配置中运行两个模型：小型自动完成模型（Qwen2.5-Coder 1.5B at Q4_K_M 需要约 1.5 GB VRAM）和较大的聊天模型（Qwen3-Coder 30B Q4_K_M，约 17 GB）。分割使自动完成延迟保持在 200 毫秒以下，同时保持聊天面板对非平凡问题有用。',
+          },
+        ],
+      },
+      clineDeep: {
+        id: 'cline',
+        title: 'Cline：自主代理选择',
+        content:
+          '**Cline 将编码视为代理任务，而不是一系列编辑。** 您给它一个目标；它计划、读取文件、编辑它们、执行命令并要求您批准每个步骤。',
+        items: [
+          '**安装路径：** VS Code Marketplace（没有 JetBrains 版本）。配置在扩展面板内由 GUI 驱动 — 提供者、模型、自动批准设置、自定义指令。',
+          '**工作流原语：** 具有明确的计划和行动模式的自主代理循环。计划模式推理任务而不编写文件；行动模式用工具调用执行计划。除非您将工具放在自动批准允许列表上，否则步骤之间会出现批准门。',
+          '**本地模型设置：** 任何 OpenAI 兼容端点。Ollama 是一键。对于 llama.cpp 或 vLLM，将 Cline 指向 OpenAI 兼容服务器 URL。代理循环是令牌密集的 — 预留至少 32K 上下文窗口的模型（Qwen3-Coder 30B at 32K、DeepSeek Coder V3 at 128K）。',
+          '**工具表面：** `read_file`、`write_to_file`、`replace_in_file`、`execute_command`、`list_files`、`search_files`、`browser_action`、`ask_followup_question`、`attempt_completion`。集合很小，文档齐全；工具模式使用模型必须正确输出的自定义 XML 格式。',
+          '**编辑模型：** 对于数百行以下的文件，Cline 编写整个文件。对于较大的文件，它发出具有显式搜索和替换块的 `replace_in_file` 操作。差异在每次写入前显示在面板中。',
+          '**发光处：** 多文件重构、"为什么这个测试不稳定"的探索性任务、"添加接触三个层的功能"工作流。三个中对 5+ 文件编辑任务最强大。',
+          '**不足处：** 令牌消费很高 — 完整文件内容在每次读取时流传输到对话中。长期会话耗尽 32K 上下文模型；对于非平凡任务建议使用 128K 上下文模型。工具调用可靠性在较小型号（7B 类）上严重退化 — 它们发出格式错误的 XML 并且循环停止。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Cline 的自动批准允许列表是有用的代理和繁琐代理的区别。默认允许 `read_file`、`list_files` 和 `search_files`；在您信任此代码库上的模型之前保持 `write_to_file`、`replace_in_file` 和 `execute_command` 门控。按项目收紧或放松。',
+          },
+        ],
+      },
+      aiderDeep: {
+        id: 'aider',
+        title: 'Aider：Git 原生选择',
+        content:
+          '**Aider 是三个中唯一将您的仓库视为真实来源而不是对话的。** 每次编辑都作为 Git 提交着陆。撤销是 `git reset`。聊天历史是一次性的；提交日志是工件。',
+        items: [
+          '**安装路径：** `pip install aider-chat` 或 `pipx install aider-chat`。CLI 调用：`aider file1.py file2.py`（文件的范围限于对话）。通过 `.aider.conf.yml` 和每个标志的覆盖进行配置。',
+          '**工作流原语：** 以终端为先的对话编辑。输入提示；Aider 建议差异；如果您接受，更改将被提交。`/add` 和 `/drop` 管理范围内的文件。`/undo` 取消最后一次提交。`/diff` 显示对 HEAD 的最新更改。',
+          '**本地模型设置：** 通过 LiteLLM 可访问的任何模型 — Ollama、OpenAI 兼容服务器（llama.cpp、vLLM、LM Studio）或直接模型提供商。`--model ollama_chat/qwen3-coder:30b` 是典型的本地调用。',
+          '**代码库上下文：** Tree-sitter 仓库地图。Aider 解析您的仓库获取定义（函数、类、方法），通过与范围内文件的接近度对其进行排名，并将摘要包含在系统提示中。地图适合小型仓库约 1K–4K 令牌，大型仓库更多 — `--map-tokens` 限制预算。',
+          '**编辑模型：** 两种策略。"差异"模式发出模型必须逐字生成的搜索和替换块。外科，低令牌，但如果模型改述搜索块会破裂。"整体"模式重写整个文件 — 小文件上健壮，大文件上昂贵。Aider 自动选择每个模型的默认值与模型的已知优势相匹配。',
+          '**发光处：** 全仓库更改，您希望每个步骤都在提交日志中；代码审查内置的对工作（每个提交是离散的审查单元）；IDE 扩展不是选择的 SSH 和 devcontainer 工作流。',
+          '**不足处：** 没有自动完成。默认情况下没有 IDE 内预览（在编辑器旁的 VS Code 终端窗格中正常工作，但未集成）。差异编辑格式对模型输出质量敏感 — 一个改述搜索块而不是重现搜索块的模型会失败编辑，您会在终端中看到重试尝试。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '设置 `auto-commits: true`（默认值）并使用 `git rebase -i` 在功能结束时压缩 Aider 的提交。工作中的细粒度提交对 `/undo` 有价值；压缩最终提交是您的团队审查的内容。Aider 记录此确切的模式。',
+          },
+        ],
+      },
+      editModel: {
+        id: 'edit-model',
+        title: '编辑模型：每个工具如何编写代码',
+        content:
+          '**编辑模型是每个工具感觉如何的最大单一决定因素。** 相同的模型，相同的任务 — 三个非常不同的工件。',
+        items: [
+          '**Continue.dev** — 对于自动完成：光标周围的 FIM 令牌产生内联补全。对于聊天驱动的编辑：模型返回围栏代码块；"应用"对打开的文件进行差异并将其显示为接受/拒绝。对于内联编辑（选择上的 Cmd/Ctrl+I）：模型在原地重写选择，差异显示在原地。',
+          '**Cline** — 每次编辑都是工具调用。新文件或完全重写的 `write_to_file`，具有显式 `<<<<<<< SEARCH` / `>>>>>>> REPLACE` 块的外科更改的 `replace_in_file`。工具调用对模式进行验证；格式错误的工具调用获得"工具错误"，代理看到并重试。对话是结构化的工具调用和工具结果。不是自由散文。',
+          '**Aider** — 搜索和替换差异块呈现为简单散文，在 CLI 中解析。模型发出类似统一差异围栏块的内容。Aider 应用它并提交。如果搜索块与文件不完全匹配，编辑被拒绝，Aider 要求模型重试。',
+          '**7B 类模型上的可靠性排名：** Continue.dev > Aider > Cline。Continue.dev 的"应用"是容限的。小的改述通过差异算法进行调整。Aider 在不匹配的搜索块上直线拒绝，但失败是响亮和可恢复的。Cline 的 XML 工具格式在小型号上最脆弱 — 格式错误的工具调用停止循环。',
+          '**30B+ 工具调用模型（Qwen3-Coder 30B、DeepSeek Coder V3）上的排名：** 三个都收敛 — 模型具有一致地输出精确差异块和格式正确工具调用的能力。',
+          '对于改进代码生成的结构化提示技术（无论哪个工具包装它们），请参见 [用 AI 写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh)。',
+        ],
+      },
+      undo: {
+        id: 'undo',
+        title: '撤销、回滚和"代理刚刚做了什么"的问题',
+        content:
+          '**撤销是您只在需要时才注意到的无光彩特性。** 三个工具都可恢复；不同之处在于"这是一个错误"和"错误消失"之间有多少摩擦。',
+        items: [
+          '**Continue.dev** — 应用的编辑加入 VS Code 撤销堆栈。Cmd/Ctrl+Z 撤销每个文件上最近的应用。对于多文件回滚，您现有的 Git 工作流承担重任。没有工具级别的"撤销此整个对话"命令。',
+          '**Cline** — 代理 UI 将每个步骤显示为一张卡片；每次编辑回复是一键点击。卡片在任务期间持久化。任务结束后，回滚通过 Git — Cline 不自动提交，因此在长期会话后，您可能有未提交更改的堆。',
+          '**Aider** — `/undo` 取消最后一次提交；重复以进一步回溯。因为每次编辑都是单独的提交，粒度与逐步对话相匹配。`git reflog` 恢复 `/undo` 无法进行的任何操作。',
+          '**实际含义：** 如果您倾向于让代理无人监视运行 20 分钟，Aider 之后给您最可审核的工件（干净的提交日志），Cline 给您最可读的在进行中的审计跟踪（每步卡，但没有提交）。Continue.dev 假设您始终保持在键盘。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于 Cline 会话，在开始非平凡任务前运行 `git stash`。如果代理出轨，`git stash drop` 比按文件回复清理得更快。对于 Aider，现有的提交日志是安全网 — 不要做任何额外的事情。',
+          },
+        ],
+      },
+      context: {
+        id: 'context',
+        title: '上下文窗口策略：令牌去哪里',
+        content:
+          '**三个工具以不同的方式花费令牌。** 这是当您拥有较小上下文窗口（32K 或更低）的模型和非平凡仓库时最重要的预算决定。',
+        items: [
+          '**Continue.dev** — 项目上的 TF-IDF 加 embeddings 索引。检索是按需的：只有与当前聊天消息相关的块着陆在提示中。`@codebase` 触发语义搜索；`@file path/to/x.ts` 按字面注入文件。令牌使用按您固定的内容缩放，而不是仓库的大小。',
+          '**Cline** — 完整文件内容在每次读取时流传输到对话中。500 行文件消耗约 3K–5K 令牌；接触 8 个文件的代理任务在任何推理之前燃烧 25K–40K 令牌。推荐最小：32K 上下文窗口；128K 舒适。',
+          '**Aider** — Tree-sitter 仓库地图（默认约 2K 令牌，通过 `--map-tokens` 可配置）加上显式 `/add` 的文件的内容。地图是仅定义的摘要，不是完整代码，因此与仓库大小的比例远好于流传输文件。范围外时 `/drop` 文件。',
+          '**32K 上下文模型的实际含义：** Continue.dev 和 Aider 在大多数仓库上舒适地工作；Cline 开始对接触 5–6 个文件以上的任务施加上下文压力，除非您切换到 128K 上下文模型。',
+          '**128K 上下文模型的实际含义：** 三个都舒适。Cline 的更重消费停止重要；决定因素回归到工作流原语。',
+          '对于上下文窗口的深入解释和为什么模型在中文脉络中丢失信息，请参见 [上下文窗口解释：为什么 AI 忘记](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)。',
+        ],
+      },
+      toolCalls: {
+        id: 'tool-calls',
+        title: '工具调用可靠性是一个模型属性',
+        content:
+          '**工具调用失败通常被错误地归咎于工具。** 实际上，模型发出格式错误的调用，工具严格验证，循环停止。不同工具中的相同模型会产生相同的失败模式。',
+        items: [
+          '**对这些工具可靠地进行工具调用的模型（2026 年 5 月）：** Qwen3-Coder 30B（Cline 的 XML 格式最好的），DeepSeek Coder V3（大上下文，多步计划强），Llama 3.3 70B（慢但可靠），Codestral 22B（快，较小的计划视野）。',
+          '**困难的模型：** 7B 以下，13B 以下的大多数通用模型没有编码微调，下端比 Q4_K_M 更严格的量子化。症状：Cline 中格式错误的 XML、Aider 中改述的搜索块、Continue.dev 中与打开文件不匹配的围栏代码。',
+          '**修复很少是"切换工具"。** 这是"切换模型"或"提高量子化"。Qwen3-Coder 30B at Q4_K_M 在三个工具中进行可靠的工具调用。Llama 3.2 7B at Q4 在三个中都失败。',
+          '**Continue.dev 的 Agent 模式**使用标准的 OpenAI 工具调用 JSON。大多数编码微调模型很好地处理这个。',
+          '**Cline 的 XML 格式**是最苛刻的 — 模型必须生成精确的 XML 结构。在多种格式上训练的编码微调模型（Qwen3-Coder、DeepSeek Coder）处理这个；通用模型通常不处理。',
+          '**Aider 没有工具调用，严格来说** — 它从散文中解析搜索和替换块。"可靠性"问题变为"模型是否按字面重现搜索块"，大多数编码微调 22B+ 模型都做得很好。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '评估新的本地模型时，在您实际使用的工具中测试它，而不是在通用工具调用基准中。相关信号是您的日常工作流是否停止。在公开工具调用基准上得分 85% 的模型如果不可靠地发出 Cline 特定的 XML，仍然可能失败您一半的 Cline 任务。',
+          },
+        ],
+      },
+      ideIntegration: {
+        id: 'ide-integration',
+        title: 'IDE 集成和编辑器覆盖范围',
+        content:
+          '**编辑器范围是三个工具最明显分散的地方。** 这是大多数读者实际关心的维度；这也是最容易在 10 分钟内测试的。',
+        items: [
+          '**Continue.dev** — VS Code Marketplace 和 JetBrains Marketplace。JetBrains 构建是真实的（IntelliJ、PyCharm、GoLand、WebStorm 等），与 VS Code 构建的自动完成和聊天特性具有同等地位。Cursor 用户可以安装 VS Code 扩展；行为与 VS Code 相匹配。',
+          '**Cline** — 仅 VS Code 扩展。在 Cursor（VS Code 分叉）中工作，但未正式测试；扩展表面相同，大多数用户报告没有问题。JetBrains 用户现在没有运气。',
+          '**Aider** — 以终端为先；通过坐在编辑器旁边与任何编辑器集成。VS Code：打开集成终端，运行 Aider，在编辑器窗格中编辑，同时 Aider 提交。JetBrains：JetBrains 终端中的相同模式。Vim/Neovim：与 `:e!` 配对以在 Aider 提交后重新加载，这是一个生产性的流程。Cursor：与 VS Code 相同。',
+          '**JetBrains 用户的实际含义：** Continue.dev 或 Aider 是您的唯一选择。',
+          '**Vim/Neovim 用户的实际含义：** Aider 是自然适配。Continue.dev 有社区 Neovim 集成，成熟度各不相同；官方表面是 VS Code 和 JetBrains。',
+        ],
+      },
+      workflowFit: {
+        id: 'workflow-fit',
+        title: '按用例划分的工作流适合度',
+        content:
+          '**最有用的框架是"您在度过什么样的一天"。** 使工具适配日，而不是相反。',
+        columns: ['用例', '最佳选择', '为什么'],
+        rows: [
+          {
+            '用例': '使用自动完成向现有文件添加函数',
+            '最佳选择': 'Continue.dev',
+            '为什么': 'FIM 自动完成是自然原语；不需要聊天',
+          },
+          {
+            '用例': '在不离开编辑器的情况下询问"此函数做什么"',
+            '最佳选择': 'Continue.dev',
+            '为什么': '`@file` 的 IDE 内聊天是最低摩擦的路径',
+          },
+          {
+            '用例': '跨 5+ 个文件重构功能',
+            '最佳选择': 'Cline',
+            '为什么': '具有每步批准的原生多文件编辑',
+          },
+          {
+            '用例': '"为什么此测试不稳定"探索性错误追踪',
+            '最佳选择': 'Cline',
+            '为什么': '代理循环执行命令、读取日志、迭代',
+          },
+          {
+            '用例': '使用可审核提交的全仓库重命名或 API 迁移',
+            '最佳选择': 'Aider',
+            '为什么': '每次编辑变成提交；审查和撤销很容易',
+          },
+          {
+            '用例': 'SSH 到服务器，没有 IDE 的工作',
+            '最佳选择': 'Aider',
+            '为什么': '根据设计，仅终端',
+          },
+          {
+            '用例': 'Vim 或 Neovim 日常驱动',
+            '最佳选择': 'Aider',
+            '为什么': '自然配对终端驱动的编辑',
+          },
+          {
+            '用例': 'JetBrains IDE（IntelliJ、GoLand、PyCharm）用户',
+            '最佳选择': 'Continue.dev 或 Aider',
+            '为什么': 'Cline 仅 VS Code',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: '决策树：应该选择哪一个',
+        content: '**按顺序的五个问题可以将大多数读者引导到正确的选择。**',
+        items: [
+          '**1. 您在 JetBrains、Vim 或通过 SSH 工作吗？** → 是：您在 Continue.dev（仅 JetBrains）和 Aider（Vim/SSH）之间。跳到 Q4。否：继续。',
+          '**2. 您想要一个在一个任务中编辑多个文件的自主代理吗？** → 是：Cline。否：继续。',
+          '**3. 您想要自动完成加上 IDE 集成聊天面板吗？** → 是：Continue.dev。否：继续。',
+          '**4. 您通过 `git diff` 审核更改并希望所有编辑都自动提交吗？** → 是：Aider。否：Continue.dev（默认）。',
+          '**5. 仍然不确定吗？** → 从 Continue.dev 开始。这是最低摩擦的安装，可以在您可能已在使用的编辑器中工作，稍后添加 Aider 用于终端驱动的工作很简单。Cline 是添加到工作流中最具破坏性的；仅当您知道您想要代理循环时采用它。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '选择本地编码工具时的常见错误',
+        items: [
+          '**错误 1：在模型之前选择工具。** "最佳"工具中的 30B 编码微调模型胜过"最佳"工具中的 7B 通用模型。首先选择模型；工具是第二个决定。',
+          '**错误 2：在 Continue.dev 中为自动完成和聊天使用单一模型。** 自动完成需要 sub-200ms 延迟；聊天可以容忍秒数。在同一配置中运行小自动完成模型和大聊天模型。',
+          '**错误 3：让 Cline 自动批准完全开放。** 具有 `execute_command` 自动批准的模型循环可能造成真实伤害。在您信任此代码库上的模型之前保持破坏性工具门控。',
+          '**错误 4：在改述代码的模型上使用 Aider。** 如果模型无法逐字重现搜索块，每次编辑都失败。对于可靠的差异编辑，使用编码微调 22B+（Qwen3-Coder、DeepSeek Coder、Codestral）。',
+          '**错误 5：切换工具以修复模型问题。** 如果工具调用在 Cline 中失败，它们在 Continue.dev 的 Agent 模式中可能也会因相同原因失败。首先诊断模型。',
+          '**错误 6：对多文件任务在 32K 上下文模型上运行 Cline。** 令牌消费在任务中途燃烧通过预算。对于非平凡的 Cline 工作，使用 128K 上下文模型。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '资源',
+        items: [
+          '[Continue.dev 文档](https://docs.continue.dev/) — 官方设置指南、模型配置、`@` 上下文提供者、Agent 模式参考。',
+          '[Cline GitHub 仓库](https://github.com/cline/cline) — 源代码、工具模式、计划/行动模式行为、扩展架构。',
+          '[Aider 文档](https://aider.chat/) — 官方 CLI 参考、编辑格式文档、仓库地图机制、每个模型的默认值。',
+          '[Ollama 模型库](https://ollama.com/library) — 每个工具引用的可用本地模型和量子化级别。',
+          '[Qwen3-Coder 模型卡](https://huggingface.co/Qwen/Qwen3-Coder-30B) — 架构、支持的上下文长度、推荐编码模型的工具调用训练数据。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'VS Code 用户最好的是哪个？',
+            a: '三个都在 VS Code 中工作，但 Continue.dev 和 Cline 是自然的适配。Continue.dev 用于自动完成优先和 IDE 集成聊天；Cline 用于自主代理任务。Aider 从 VS Code 集成终端完美工作，但不与编辑器表面集成 — 其 UI 是终端。',
+          },
+          {
+            q: 'Cline 支持 Cursor IDE 吗？',
+            a: 'Cursor 是 VS Code 分叉，接受 VS Code 扩展。Cline 在 Cursor 中安装并运行；扩展表面相同。Cline 团队不正式针对 Cursor，因此边缘情况（特定的 Cursor API、未来的 Cursor 更改）不保证得到支持，但实际上用户报告没有问题。',
+          },
+          {
+            q: 'Aider 可以不使用 Git 工作吗？',
+            a: '可以，但您丧失定义它的工作流原语。Aider 在非 Git 目录中使用 `--no-git` 运行；编辑仍然适用但没有提交，所以 `/undo` 被禁用，回滚回到会话内的模型差异历史。对于非平凡的工作，在开始前初始化 Git 仓库 — 即使是被忽略的。',
+          },
+          {
+            q: '哪个有最好的多文件重构？',
+            a: '自主多文件工作的 Cline — 它在文件间计划，根据需要读取它们，并使用每步批准编辑。可审核的多文件工作的 Aider，您显式命名文件并希望每次编辑都被提交。Continue.dev 需要每个文件的手动驱动；这是三个中在多文件重构上最弱的。',
+          },
+          {
+            q: '这些支持开箱即用的本地 Ollama 吗？',
+            a: '支持。Continue.dev 有具有单一块配置的原生 Ollama 提供者。Cline 在提供者下拉菜单中列出 Ollama。Aider 通过 LiteLLM 支持 Ollama，使用 `--model ollama_chat/<model-name>`。Ollama 是三个最低摩擦的本地后端。',
+          },
+          {
+            q: '哪个最适合 Qwen3-Coder？',
+            a: 'Qwen3-Coder 30B 在 2026 年 5 月的三个工具中可靠 — 它处理 Cline 的 XML 工具格式、Aider 的搜索和替换块以及 Continue.dev 的自动完成 + 聊天工作流，没有可测量的退化。较小的 Qwen3-Coder 变体（7B 类）进行工具调用的可靠性较低，在 Continue.dev 的仅自动完成模式中比在 Cline 的代理循环中表现更好。',
+          },
+          {
+            q: '我可以将这些与 Cursor 的本地模式一起使用吗？',
+            a: 'Cursor 的内置功能（Tab 自动完成、Cmd+K）使用 Cursor 自己的模型路由，不是这些工具。要在 Cursor 中使用本地 LLM，在 Cursor 中作为 VS Code 扩展安装 Continue.dev 或 Cline — 它们带来自己独立于 Cursor 的提供者配置。Aider 在 Cursor 的集成终端中像在 VS Code 的终端中一样运行。',
+          },
+          {
+            q: '哪个对长期会话最稳定？',
+            a: 'Aider，因为没有进程中状态可以破坏 — 每次编辑是提交，会话崩溃仅丧失对话，不是工作。Continue.dev 在长 IDE 会话中稳定。Cline 的长期会话可能在较小型号上碰到上下文窗口压力；在大型重构之间重启任务避免这个。',
+          },
+          {
+            q: '这些支持自定义系统提示吗？',
+            a: '三个都支持。Continue.dev：`config.json` 中的每个模型 `systemMessage`。Cline：扩展设置中的"自定义指令"字段。Aider：`--system-prompt` 标志或 `.aider.conf.yml` 中的每个模型默认值。自定义提示对 Cline（方向 Plan 模式行为）和 Aider（在提交中强制编码风格）特别有用。',
+          },
+            q: '中国企业部署本地编码代理需要考虑什么数据安全问题？',
+            a: '企业必须遵守中国数据安全法，该法规对数据驻留、跨境传输和企业网络中的数据处理有严格要求。本地 LLM（Ollama、llama.cpp）本身不存储个人数据，但它们索引的代码库和日志可能包含敏感的业务信息。确保模型完全部署在公司自有基础设施上，没有外部 API 访问。对于处理客户数据或知识产权的任何工作，请在部署前咨询您的合规和法律团队。',
+          },
+          {
+            q: '亚太地区的团队使用这些工具的最佳实践是什么？',
+            a: 'Aider 在亚太地区提供最佳的成本效益：没有 IDE 许可依赖、终端原生（适配现有开发环境）、最低硬件要求（与 32K 上下文模型一起工作）、完整的审计追踪在 Git 日志中（支持更简单的合规和代码审查）。Continue.dev 对于已在 VS Code/JetBrains 中投入的团队来说是第二选择。Cline 强大于自主重构工作流，但具有更高的计算成本。本地模型部署可以使用分布式基础设施来降低成本；工具选择应遵循现有的基础设施和开发者工作流，而不是效能。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[使用本地 LLM 替换 GitHub Copilot](/power-local-llm/replace-github-copilot-with-local-llm?lang=zh) — 更广泛的替换背景，包括成本和隐私数学。',
+          '[2026 年最佳本地编码模型](/power-local-llm/best-local-coding-models-2026?lang=zh) — 方程式的模型端：实际基准上的 Qwen3-Coder vs DeepSeek vs Codestral。',
+          '[2026 年 MCP 的本地 AI 代理](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh) — 对于想要上述工具之外的扩展工具调用的用户。',
+          '[2026 年工具调用的最佳本地模型](/power-local-llm/best-local-models-tool-calling-2026?lang=zh) — 工具调用可靠性的相邻技术深度。',
+          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh) — 三个工具下的推论引擎层。',
+          '[Power Local LLM Hub](/power-local-llm) — 完整的指南库。',
+        ],
+      },
+    },
+  },
 }
