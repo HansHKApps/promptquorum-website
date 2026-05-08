@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Comparaison des 6 modèles 2026',
-        content: 'Testés sur 4 types (contrats légaux, articles recherche, code, wiki multilingue) avec 100 requêtes notées. Hardware : RTX 4070 (12 GB) GPU ; M3 Pro (18 GB mémoire unifiée) CPU. Chunk 256 tokens, batch 32. Médianes de trois exécutions.',
+        content: "Testés sur 4 types (contrats légaux, articles recherche, code, wiki multilingue) avec 100 requêtes notées. Hardware : RTX 4070 (12 GB) GPU ; M3 Pro (18 GB mémoire unifiée) CPU. Chunk 256 tokens, batch 32. Médianes de trois exécutions.",
         columns: ['Modèle', 'Dim', 'Vitesse CPU', 'Vitesse GPU', 'Mémoire', 'retrieval@10', 'Multilingue', 'Meilleur pour'],
         rows: [
           {
@@ -1026,7 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichModel: {
         id: 'which-model',
         title: 'Quel modèle choisir ?',
-        content: '**Trois critères : GPU disponible, corpus anglophone seul, dimension flexible.** Guide rapide :',
+        content: "**Trois critères : GPU disponible, corpus anglophone seul, dimension flexible.** Guide rapide :",
         rows: [
           { 'Situation': 'Corpus mélangé, GPU, précision maximale', 'Choisir': 'jina-embeddings-v3' },
           { 'Situation': 'Contrats/recherche anglophone, GPU, critère précision', 'Choisir': 'bge-large-en-v1.5' },
@@ -1042,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       howWeTested: {
         id: 'how-we-tested',
         title: 'Méthodologie : 6 modèles sur 4 types de documents',
-        content: '**Même chunks, même requêtes, même pipeline. Variable unique : embedder.** Tous chiffres ci-dessous d'une exécution contrôlée.',
+        content: "**Même chunks, même requêtes, même pipeline. Variable unique : embedder.** Tous chiffres ci-dessous d'une exécution contrôlée.",
         items: [
           "**Hardware :** RTX 4070 (12 GB VRAM, 32 GB RAM) Windows 11 pour GPU ; M3 Pro (18 GB mémoire unifiée) pour CPU. Trois exécutions ; chiffres rapportés sont médianes.",
           "**Corpus :** quatre ensembles, ~1 200 pages chacun. Set 1 — contrats immobiliers et services (légal). Set 2 — articles transformer et retrieval arXiv (recherche). Set 3 — TypeScript/Python codebase public Next.js (code). Set 4 — wiki engineering interne : EN, DE, FR, JA, ZH (multilingue).",
@@ -1062,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       retrievalAccuracy: {
         id: 'retrieval-accuracy',
         title: 'Précision retrieval par type (retrieval@10)',
-        content: '**retrieval@10 = % requêtes où chunk correct dans top-10.** Plus haut mieux. Basé 25 requêtes notées par type par modèle.',
+        content: "**retrieval@10 = % requêtes où chunk correct dans top-10.** Plus haut mieux. Basé 25 requêtes notées par type par modèle.",
         columns: ['Modèle', 'Légal', 'Recherche', 'Code', 'Multilingue', 'Global'],
         rows: [
           { 'Modèle': 'nomic-embed-text-v2', 'Légal': '88%', 'Recherche': '90%', 'Code': '82%', 'Multilingue': '92%', 'Global': '88%' },
@@ -1082,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cpuSpeed: {
         id: 'cpu-speed',
         title: 'Vitesse CPU (Chunks par seconde)',
-        content: '**Débit batch 32, chunks 256-tokens, M3 Pro sans GPU.** Plus rapide réindexe corpus 5K pages midi (jina, nomic) ou planifie nuit (bge, gte).',
+        content: "**Débit batch 32, chunks 256-tokens, M3 Pro sans GPU.** Plus rapide réindexe corpus 5K pages midi (jina, nomic) ou planifie nuit (bge, gte).",
         columns: ['Modèle', 'Chunks/sec CPU', 'Temps index 5K pages', 'Notes'],
         rows: [
           { 'Modèle': 'nomic-embed-text-v2', 'Chunks/sec CPU': '580', 'Temps index 5K pages': '~9 min', 'Notes': 'MoE ; active 305M de 475M params/token' },
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gpuSpeed: {
         id: 'gpu-speed',
         title: 'Vitesse GPU (Chunks par seconde)',
-        content: '**Débit batch 64, chunks 256-tokens, RTX 4070 (12 GB).** GPU réduit écart modèles ; slowest GPU (1 400 chunks/sec bge) 2.4× plus rapide fastest CPU.',
+        content: "**Débit batch 64, chunks 256-tokens, RTX 4070 (12 GB).** GPU réduit écart modèles ; slowest GPU (1 400 chunks/sec bge) 2.4× plus rapide fastest CPU.",
         columns: ['Modèle', 'Chunks/sec GPU', 'Temps index 5K pages', 'Mémoire GPU (peak)'],
         rows: [
           { 'Modèle': 'nomic-embed-text-v2', 'Chunks/sec GPU': '4 800', 'Temps index 5K pages': '~1 min 5 sec', 'Mémoire GPU (peak)': '1,6 GB' },
@@ -1180,7 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costVsOpenai: {
         id: 'cost-vs-openai',
         title: 'Auto-hébergé vs OpenAI : coût par million tokens',
-        content: '**Auto-hébergement essentiellement gratuit à l\'échelle.** Coûts réels : électricité, amortissement hardware — bruits vs API prix corpus >quelques milliers pages.',
+        content: "**Auto-hébergement essentiellement gratuit à l'échelle.** Coûts réels : électricité, amortissement hardware — bruits vs API prix corpus >quelques milliers pages.",
         columns: ['Approche', 'Coût / 1M tokens', 'Temps 1M tokens', 'Notes'],
         rows: [
           { 'Approche': 'OpenAI text-embedding-3-large (API)', 'Coût / 1M tokens': '€0,12*', 'Temps 1M tokens': '~3 min (réseau)', 'Notes': "Plus haute précision anglophone ; données quittent machine" },
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionTree: {
         id: 'decision-tree',
         title: 'Arbre de décision : quel embedder choisir ?',
-        content: '**Cinq questions binaires, cet ordre, guident plupart lecteurs au bon embedder.**',
+        content: "**Cinq questions binaires, cet ordre, guident plupart lecteurs au bon embedder.**",
         items: [
           '**1. GPU disponible indexing ?** → Non : nomic-embed-text-v2 (5× CPU). Oui : continuer.',
           '**2. Corpus anglophone seul ?** → Non : continuer. Oui : bge-large-en-v1.5 si précision prime, gte-large ou mxbai-embed-large-v1 si licence Apache-2.0.',
