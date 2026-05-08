@@ -1566,4 +1566,397 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Mobile & Edge LLMs',
+    title: '在平板上本地运行AI：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026）',
+    seoTitle: '在iPad和安卓平板上本地运行AI 2026',
+    intro:
+      '2026年，在高端iPad和内存8 GB以上的安卓设备上本地运行AI已切实可行。本指南涵盖所有方案：iPad上使用Pocket Paladin和LLM Farm进行本地推理、安卓上使用Termux + Ollama，以及针对无法本地推理设备的远程连接方案（通过局域网Wi-Fi将平板连接到运行Ollama的Mac或PC）。',
+    metaDescription:
+      '2026年如何在iPad或安卓平板上本地运行AI。本地推理应用、Termux + Ollama以及远程连接家用Mac或PC的方法详解。',
+    twitterDescription:
+      '2026年在iPad或安卓平板上运行AI：本地推理（Pocket Paladin、LLM Farm、Termux+Ollama）、远程连接家用Mac/PC，以及各设备型号推荐。',
+    current_models_mentioned: [
+      'Phi-4 Mini',
+      'Llama 3.2 3B',
+      'Qwen3 1.7B',
+      'Gemma 3 4B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'iPad Pro M4 16 GB',
+      'iPad Air M2 8 GB',
+      'Samsung Galaxy Tab S10+ 12 GB',
+      'Google Pixel Tablet 8 GB',
+    ],
+    audience:
+      '希望在iPad或安卓设备上本地运行AI或连接家用LLM的平板用户——无需依赖云端AI服务。',
+    readTime: '阅读约11分钟',
+    educationalLevel: 'Beginner',
+    primaryTerm: '平板本地运行AI',
+    targetKeywords: [
+      '在iPad本地运行AI',
+      '安卓平板本地运行LLM',
+      'Ollama iPad远程连接',
+      'Termux Ollama安卓',
+      'LLM Farm iPad',
+      'Pocket Paladin iOS LLM',
+    ],
+    leadAnswerBlock:
+      '**在平板上本地运行AI有两种截然不同的模式：本地推理（模型直接在平板芯片上运行）和远程连接（平板作为家用Mac或PC运行Ollama的显示终端）。本地推理在iPad Pro M4（16 GB，可实时运行Phi-4 Mini和Llama 3.2 3B）、iPad Air M2（8 GB，可运行3B模型）以及8 GB以上RAM的高端安卓设备（Samsung Galaxy Tab S10+，通过Termux + Ollama）上切实可行。通过Open WebUI或简单聊天界面经局域网IP远程连接，适用于任何平板、任何内存、任何系统——将平板变成连接家用高性能机器的触控终端。对大多数用户而言，远程连接是更优选择：家用机器运行70B模型，平板提供便捷界面。**',
+    quickAnswerTop: {
+      zh: {
+        question: '可以在iPad或安卓平板上运行本地AI模型吗？',
+        answer:
+          '可以，但需要高端设备。iPad Pro M4（16 GB RAM）使用LLM Farm或Pocket Paladin可实时运行Phi-4 Mini（3.8B）和Llama 3.2 3B。iPad Air M2（8 GB）可运行3B模型。8 GB以上RAM的安卓平板（Samsung Galaxy Tab S10+）通过Termux + Ollama可本地运行Phi-4 Mini和Qwen3 1.7B。内存较小或芯片较旧的平板，实用替代方案是远程连接：通过平板浏览器中的Open WebUI连接家庭网络中运行Ollama的Mac或PC。',
+        bullets: [
+          'iPad Pro M4（16 GB）——使用LLM Farm或Pocket Paladin可实时本地运行Phi-4 Mini和Llama 3.2 3B。',
+          'iPad Air M2（8 GB）——3B模型运行速度可用；7B模型较慢但可运行。',
+          '安卓平板（8 GB以上RAM）——Termux + Ollama可本地运行Phi-4 Mini和Qwen3 1.7B。',
+          '远程连接——任意平板、任意内存：通过浏览器Open WebUI连接运行Ollama的家用Mac或PC。',
+          '大多数平板最佳本地模型：Phi-4 Mini（3.8B，约2.7 GB）；内存受限设备选Qwen3 1.7B。',
+          '7B以上模型推荐远程连接而非本地推理——家用机器运行速度远超任何平板。',
+          'SillyTavern和RisuAI均有移动端响应式界面，支持iPad Safari / 安卓Chrome。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '快速概览', anchor: '#quick-facts' },
+      { label: '两种模式：本地推理 vs 远程连接', anchor: '#two-modes' },
+      { label: 'iPad：本地推理', anchor: '#ipad-on-device' },
+      { label: '安卓：本地推理', anchor: '#android-on-device' },
+      { label: '远程连接到家用机器', anchor: '#remote-connection' },
+      { label: '各设备型号推荐', anchor: '#models' },
+      { label: '平板AI前端界面', anchor: '#frontends' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**本地推理在iPad Pro M4（16 GB）和高端安卓设备（8 GB以上）上切实可行。** 低于此配置，生成速度过慢无法实时使用。对大多数平板用户，远程连接到家用机器是更优选择。',
+          '**远程连接是大多数用户的推荐方案。** 将任意平板（任意内存、任意系统）连接到家庭网络中运行Ollama的Mac或PC。家用机器运行70B模型，平板获得触控友好的聊天界面，无需在平板上下载模型。',
+          '**LLM Farm和Pocket Paladin是iPad原生选项。** 两款应用均在iPad Apple Silicon芯片上本地运行GGUF模型。LLM Farm配置选项更多；Pocket Paladin对新手更友好。',
+          '**Termux + Ollama是安卓方案。** 需要具备终端操作基础，但适用于任何8 GB以上RAM的安卓设备。Ollama在Termux中运行，通过localhost:11434提供模型服务。',
+          '**大多数平板最佳本地模型：Phi-4 Mini（3.8B）。** 可在6 GB以上可用RAM的设备上运行，满足大多数日常任务需求，快速网络下5至10分钟即可下载完成。',
+          '**Open WebUI是最简便的远程连接界面。** 家用Mac或PC在192.168.x.x:3000运行Open WebUI后，在平板浏览器中打开该地址即可——无需安装应用，无需配置，完整聊天界面立即可用。',
+          '**SillyTavern有移动端响应式界面。** 在平板上进行角色扮演和角色卡创作，通过平板浏览器访问家用机器上运行的SillyTavern效果很好；RisuAI原生移动端支持最佳。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速概览',
+        items: [
+          '**iPad应用：** LLM Farm（免费开源）、Pocket Paladin（免费版+付费版）、PocketLLM（较旧，维护较少）。',
+          '**安卓方案：** Termux + Ollama（命令行）或MNN LLM（应用，模型支持有限）。',
+          '**远程连接：** 任意平板浏览器 → 家用机器局域网IP上的Open WebUI或简单聊天界面。',
+          '**本地推理最低配置：** 3B模型需iPad Air M2（8 GB）；7B至8B模型需iPad Pro M4（16 GB）。',
+          '**安卓本地推理最低配置：** 8 GB RAM（Samsung Galaxy Tab S10+、OnePlus Pad 2）。',
+          '**最佳本地模型：** 大多数平板选Phi-4 Mini（3.8B，2.7 GB）；内存极度受限选Qwen3 1.7B。',
+          '**远程连接速度：** 取决于Wi-Fi质量和家用机器的生成速度，与平板硬件无关。',
+        ],
+      },
+      twoModes: {
+        id: 'two-modes',
+        title: '两种模式：本地推理 vs 远程连接',
+        content:
+          '**最重要的决策不是选哪款应用——而是在平板上本地推理还是连接家用更强大的机器。** 两种模式有截然不同的硬件要求和能力上限。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '在平板上运行AI有两种实用模式：本地推理（模型在平板芯片上运行，限于3B至7B模型）或远程连接（平板作为浏览器显示终端，连接家用Mac或PC通过Ollama和Open WebUI运行更大模型）。',
+          },
+          {
+            type: 'plain-terms',
+            text: '本地模式：模型存储在平板上，离线可用。受限于小型模型（3B，高端iPad Pro最多7B），速度慢于云端AI。远程模式：家用Mac或PC运行Ollama和70B模型，平板仅在浏览器中显示聊天——平板屏幕可获得完整70B模型质量，平板无需存储模型，但家用机器需开机且连接同一Wi-Fi。除非特别需要离线使用，否则选择远程连接。',
+          },
+        ],
+        columns: ['对比项', '本地推理', '远程连接'],
+        rows: [
+          { '对比项': '模型规模上限', '本地推理': '3B至8B（iPad Pro M4）；大多数平板3B', '远程连接': '无限制——家用机器可运行任意模型' },
+          { '对比项': '离线使用', '本地推理': '支持——无需Wi-Fi', '远程连接': '不支持——需要家庭Wi-Fi' },
+          { '对比项': '生成速度', '本地推理': '中等（iPad Pro M4约10至25词元/秒）', '远程连接': '取决于家用机器（最高40+词元/秒）' },
+          { '对比项': '平板存储占用', '本地推理': '每个模型2至10 GB', '远程连接': '零——模型存储在家用机器上' },
+          { '对比项': '设置复杂度', '本地推理': '低（下载应用+模型文件）', '远程连接': '低至中（家用机器需安装Ollama + Open WebUI）' },
+          { '对比项': '适合场景', '本地推理': '出行、离线使用、3B模型任务', '远程连接': '质量优先、70B模型、日常便捷使用' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '如果家中已有能运行Ollama的Mac或PC，先从远程连接开始。无需在平板上存储模型文件，立即获得更好的模型质量。如果之后发现需要离线使用，再考虑添加本地推理能力。',
+          },
+        ],
+      },
+      ipadOnDevice: {
+        id: 'ipad-on-device',
+        title: 'iPad：本地推理',
+        content:
+          '**iPad Pro M4（16 GB）是唯一能以舒适速度运行7B模型的iPad。** iPad Air M2（8 GB）和M3（8 GB）可运行3B模型。[配备8 GB RAM的iPhone（iPhone 15 Pro Max）也可通过LLM Farm运行小型模型](/zh/power-local-llm/best-local-llm-apps-iphone-2026)。',
+        items: [
+          '**LLM Farm**（免费开源）：从Hugging Face下载GGUF模型，在Apple Silicon上通过llama.cpp运行。iOS原生选项中性能最佳，支持聊天和补全模式。从App Store安装。',
+          '**Pocket Paladin**（免费版+订阅）：精选模型下载，界面比LLM Farm更简洁，新手上手体验更好。免费版包含3B模型；订阅版解锁更大模型和API模式。',
+          '**导入模型：** 在LLM Farm中，点击模型库图标 → "从URL添加模型" → 粘贴Hugging Face GGUF文件直链。也可使用苹果文件应用传输GGUF文件。模型存储在应用本地存储中——不使用iCloud。',
+          '**iPad内存管理：** iOS会主动管理后台应用内存。在8 GB iPad上运行7B模型前关闭所有其他应用——iOS可能会在其他应用需要内存时清除模型。在16 GB iPad Pro M4上此问题很少出现。',
+          '**生成速度预期：** iPad Pro M4（16 GB）：Phi-4 Mini约20词元/秒，Llama 3.2 3B约30词元/秒，Gemma 3 4B约18词元/秒。iPad Air M2（8 GB）：3B模型约12至18词元/秒；7B模型约5至8词元/秒（实时对话速度过慢）。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '不要在8 GB iPad上运行7B模型进行实时对话。每秒5至8词元意味着每个回复需要15至30秒。此速度勉强可用于摘要任务，但对话体验极差。8 GB设备请使用3B模型；7B以上质量需升级至16 GB设备或切换至远程连接。',
+          },
+        ],
+      },
+      androidOnDevice: {
+        id: 'android-on-device',
+        title: '安卓：本地推理',
+        content:
+          '**安卓本地推理使用[Termux + Ollama](/zh/power-local-llm/best-local-llm-apps-android-2026)——Termux是在安卓上原生运行Ollama的Linux终端模拟器。** 比iPad应用体验更需技术基础，但可访问完整的Ollama生态系统。',
+        numberedItems: [
+          '从F-Droid安装Termux（不要使用Play Store版本——Play Store版本已过时，缺少所需软件包）。',
+          '在Termux中执行：`pkg update && pkg install curl`',
+          '下载Ollama ARM二进制文件：`curl -fsSL https://ollama.com/install.sh | sh`——此命令安装兼容大多数安卓平板的ARM64版本。',
+          '拉取模型：`ollama pull phi4-mini` 或 `ollama pull qwen3:1.7b`。',
+          '启动服务：`ollama serve`（在Termux会话中保持运行）。',
+          '通过Termux对话：`ollama run phi4-mini`——或打开浏览器访问`http://localhost:11434`获取API。安装支持本地Ollama端点的安卓聊天应用可获得图形界面。',
+        ],
+        items: [
+          '**支持3B以上模型的设备：** 最少需要8 GB RAM（Samsung Galaxy Tab S10+、OnePlus Pad 2、小米Pad 7 Pro）。6 GB设备只能运行Qwen3 1.7B。',
+          '**不推荐Pixel Tablet本地推理：** Pixel Tablet（2023款，8 GB Tensor G2）被排除在推荐本地推理设备之外——Tensor G2在LLM推理方面明显慢于骁龙8 Gen 3 / 天玑9300，Phi-4 Mini只能达到4至7词元/秒（对话速度过慢）。Pixel Tablet用户应使用远程连接到家用机器。',
+          '**骁龙8 Gen 3和天玑9300**是2026年安卓本地推理最快的芯片。生成速度：1.7B模型约15至25词元/秒；3B模型约8至12词元/秒。',
+          '**模型存储：** 安卓没有统一内存——大多数Termux配置下模型在系统RAM中运行，无GPU加速。GPU加速需要Termux:NVIDIA或特定Vulkan构建版本，设置更复杂。',
+          '**替代应用：** MNN LLM（阿里巴巴，免费，安卓应用，支持精选模型的本地推理）设置更简便，但模型选择比Ollama有限。AI Runner和llamafile也有支持程度不同的安卓版本。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '安装Termux:Widget插件，创建一个运行"ollama serve"的快捷方式——这样无需打开Termux就能从安卓主屏幕启动Ollama服务。Ollama启动后，打开配置连接localhost:11434的任意聊天应用即可。',
+          },
+        ],
+      },
+      remoteConnection: {
+        id: 'remote-connection',
+        title: '远程连接到家用机器',
+        content:
+          '**大多数平板用户最简便的设置：在家用Mac或PC上运行Ollama和Open WebUI，然后通过同一Wi-Fi网络在平板浏览器中访问聊天界面。** 平板成为操控家用Ollama机器的触控界面——如果需要选购家用机器，参见[笔记本电脑指南](/zh/local-llms/best-laptops-local-llm)了解硬件配置建议。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '远程连接到运行Ollama和Open WebUI的家用机器，任意平板均可通过浏览器访问70B模型——平板无需存储模型，无需安装应用，模型质量不打折扣。',
+          },
+          {
+            type: 'plain-terms',
+            text: '在Mac或PC上：安装Ollama，拉取模型，安装Open WebUI（Docker一行命令），绑定到局域网IP运行。在平板上：打开Safari或Chrome，访问http://[您的Mac IP]:3000，获得完整的AI聊天界面。模型在Mac上运行，平板只显示聊天。适用于任何平板、任何系统、任何屏幕尺寸。',
+          },
+        ],
+        numberedItems: [
+          '**在家用机器上：** 安装Ollama（macOS执行`brew install ollama`，Windows从ollama.com下载）。拉取模型：`ollama pull llama3.3:70b`（或任意模型）。绑定网络启动Ollama：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。',
+          '**安装Open WebUI**（最适合平板的聊天界面）：`docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --name open-webui ghcr.io/open-webui/open-webui:main`。Open WebUI现在可通过`http://[您的机器IP]:3000`访问。',
+          '**查找家用机器的局域网IP：** macOS：系统偏好设置 → 网络 → 当前网络 → IP地址。Windows：命令提示符运行`ipconfig`，查找IPv4地址。记录IP（通常为`192.168.x.x`）。',
+          '**在平板上：** 打开Safari（iPad）或Chrome（安卓）。访问`http://[您的机器IP]:3000`。在Open WebUI中创建账号（仅限本地，无云端）。从下拉菜单选择模型。开始对话。',
+          '**安全注意：** 此设置仅限局域网访问。不要在未添加Open WebUI身份验证的情况下将端口3000暴露至公网（内置管理员账号系统）。连接为普通HTTP——不要在公共Wi-Fi上发送敏感信息。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '将家用机器的Open WebUI网址收藏到平板主屏幕（Safari：分享 → 添加到主屏幕；Chrome：三点菜单 → 添加到主屏幕）。这样使用体验接近原生应用。在iPad上，Safari中的全屏Web应用会隐藏浏览器地址栏，带来类应用体验。',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '各设备型号推荐',
+        content:
+          '**模型选择由可用内存决定——而非偏好。** 下表将设备内存映射到以实时速度（每秒8词元以上）运行的最大模型。具体模型层面参见[2026年最佳移动LLM模型](/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm)。全硬件层级的更广泛模型概览参见[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026)。',
+        columns: ['设备 / 内存', '推荐模型', '生成速度', '适合场景'],
+        rows: [
+          { '设备 / 内存': 'iPad Air M2 / M3（8 GB）', '推荐模型': 'Phi-4 Mini Q4', '生成速度': '约15至18词元/秒', '适合场景': '写作辅助、内容摘要' },
+          { '设备 / 内存': 'iPad Pro M4（16 GB）', '推荐模型': 'Llama 3.2 3B / Gemma 3 4B Q4', '生成速度': '约25至30 / 15至20词元/秒', '适合场景': '真正的LLM工作站、RAG、创意写作' },
+          { '设备 / 内存': '安卓8 GB（Tab S10+）', '推荐模型': '通过Termux+Ollama运行Phi-4 Mini Q4', '生成速度': '约10至15词元/秒', '适合场景': '熟悉Termux的高级用户' },
+          { '设备 / 内存': '安卓6 GB', '推荐模型': 'Qwen3 1.7B Q4', '生成速度': '约15至20词元/秒', '适合场景': '轻量对话、翻译、简单任务' },
+          { '设备 / 内存': 'Pixel Tablet（8 GB）', '推荐模型': '仅限远程连接', '生成速度': '不适用', '适合场景': 'Tensor G2本地推理速度过慢' },
+          { '设备 / 内存': '任意平板（远程连接）', '推荐模型': '家用机器上的任意模型', '生成速度': '约20至40词元/秒', '适合场景': '质量优先使用、70B模型' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于大多数日常任务（起草文本、回答问题、内容摘要），平板上的Phi-4 Mini（3.8B）已足够胜任。与70B模型相比的不足之处：复杂多步推理、细腻创意写作和长文档分析。这类任务请使用远程连接到运行更大模型的家用机器。',
+          },
+        ],
+      },
+      frontends: {
+        id: 'frontends',
+        title: '平板AI前端界面',
+        content:
+          '**在平板上使用的聊天界面对易用性影响显著。** 部分前端专为移动端设计；其他的以桌面端为主，在平板上勉强可用。',
+        items: [
+          '**Open WebUI（浏览器）：** 最佳移动端响应式通用聊天Web界面。在Safari或Chrome中通过任意本地IP:端口访问。适配平板屏幕比例效果良好。推荐用于远程连接设置。',
+          '**LLM Farm（iPad应用）：** 专为iOS设计，充分利用iPad全屏显示。iPad最强本地推理选项，专为iOS推理设计，尽管不如桌面应用精致。',
+          '**Pocket Paladin（iPad应用）：** 界面比LLM Farm更简洁，面向普通用户设计。免费版运行3B模型；付费版解锁更大模型和API访问。',
+          '**RisuAI（浏览器，移动端响应式）：** 角色扮演和角色卡创作的最佳移动端体验。可连接远程Ollama实例。在iPad Safari中提供接近原生应用的界面。',
+          '**SillyTavern（浏览器）：** 在连接远程Ollama实例的iPad Safari上可用。未针对移动端优化，但功能正常。部分扩展功能在移动端Safari中无法使用。',
+          '**Termux命令行（安卓）：** 仅限命令行。适合脚本任务；没有配套应用的情况下不适合对话使用。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在iPad上进行角色扮演和角色卡创作，连接到运行Llama 3.3 70B的远程Ollama实例的RisuAI是2026年可用的最佳组合。RisuAI的移动端界面专为触控设计；远程连接提供对70B模型的访问，角色声音质量远超任何能放进平板的模型。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '**在8 GB平板上运行7B模型。** 每秒5至8词元对实时对话来说太慢。8 GB设备本地对话请使用3B模型；7B以上质量请使用远程连接。',
+          '**在安卓上使用Play Store版Termux。** Play Store版Termux已过时，缺少Ollama所需软件包。务必从F-Droid安装Termux。',
+          '**在未启用身份验证的情况下将Open WebUI暴露至公网。** Open WebUI默认无密码保护。如果将其暴露到家庭网络之外，任何找到该URL的人都可以访问您的模型。启用管理员账号系统并使用防火墙。',
+          '**在8 GB iPad上运行本地推理前未关闭其他应用。** iOS会从内存中清除后台应用。8 GB iPad上3B模型占用约3.5 GB；如果iOS为其他应用回收该内存，模型会崩溃。运行推理前关闭所有其他应用。',
+          '**在移动端浏览器上期待桌面级UI质量。** SillyTavern等部分前端以桌面端为主。在浏览器中的移动端体验可用但不精致。移动端优先UX请选择RisuAI或Open WebUI。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          'LLM Farm（iOS）文档和GitHub — [github.com/guinmoon](https://github.com/guinmoon/LLMFarm)',
+          'Pocket Paladin iOS应用 — [App Store](https://apps.apple.com)',
+          'Termux版Ollama ARM构建 — [Ollama文档](https://ollama.com/docs)',
+          'Open WebUI文档 — [docs.openwebui.com](https://docs.openwebui.com)',
+          'Apple M4芯片内存带宽和神经引擎规格 — [Apple Silicon](https://apple.com/newsroom)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '可以在iPad上运行AI吗？',
+            a: '可以，支持iPad Pro M4（16 GB）和iPad Air M2/M3（8 GB）。iPad Pro M4使用LLM Farm或Pocket Paladin可实时运行Phi-4 Mini和Llama 3.2 3B。iPad Air M2可运行3B模型。对于iPad上的7B以上模型，推荐远程连接到运行Ollama的家用Mac或PC——iPad显示聊天，家用机器负责推理。',
+          },
+          {
+            q: '可以在安卓平板上运行AI吗？',
+            a: '可以，8 GB以上RAM的设备通过Termux + Ollama可以运行。Samsung Galaxy Tab S10+（12 GB RAM）运行Phi-4 Mini约达10至15词元/秒。6 GB RAM设备可运行Qwen3 1.7B。设置需要从F-Droid安装Termux并熟悉几个终端命令。对大多数安卓平板用户而言，远程连接到家用机器是更简便的路径。',
+          },
+          {
+            q: '平板上的本地AI是否无需联网就能工作？',
+            a: '是的。一旦下载好模型并安装了应用，iPad（LLM Farm、Pocket Paladin）和安卓（Termux + Ollama）上的本地推理无需网络连接即可工作。这是本地推理相对于远程连接的主要优势之一——远程连接需要家庭Wi-Fi。',
+          },
+          {
+            q: 'iPad最佳AI应用是什么？',
+            a: '本地推理选LLM Farm（选项更多，开源）或Pocket Paladin（界面更简洁）。远程连接到家用Ollama服务器选Safari中的Open WebUI（最佳通用聊天）或Safari中的RisuAI（最佳角色扮演和角色创作）。最佳选择取决于您是否需要本地推理能力、离线使用或最佳界面质量。',
+          },
+          {
+            q: '在安卓上使用Termux + Ollama安全吗？',
+            a: '安全。Termux是数百万开发者使用的成熟安卓终端模拟器。Termux中的Ollama默认只提供本地API（localhost:11434）——除非您明确更改绑定地址，否则网络上的其他设备无法访问。模型文件存储在Termux的私有存储中，不在安卓共享存储中。',
+          },
+          {
+            q: '运行AI会快速耗尽平板电量吗？',
+            a: '是的——本地推理对CPU/GPU要求较高。在iPad Pro M4上运行Phi-4 Mini进行活跃对话，电量消耗约为每小时20至30%。长时间使用请保持插电状态。远程连接到家用机器对平板电量消耗明显更少——平板仅显示网页。',
+          },
+          {
+            q: '平板在AI推理过程中会热降频吗？',
+            a: '会，尤其是iPad Air M2/M3和没有主动散热的安卓平板。iPad Pro M4散热余量更好，可持续生成约10至15分钟后才出现明显降频。安卓平板降频更快（持续推理5至8分钟）。缓解方法：使用较短的生成块（每次回复200至400词元）、将平板置于硬质平面上、避免同时运行其他CPU密集型应用。',
+          },
+          {
+            q: '如何让家用Ollama服务器在合上笔记本盖子后持续运行？',
+            a: '在macOS上，设置合盖睡眠策略：系统偏好设置 → 电池 → 禁用"启用Power Nap"，并使用Amphetamine等工具在插电时防止睡眠。在Windows上，转到电源选项 → 更改计划设置 → 插电时"从不"睡眠。或者，在始终开机的机器上运行Ollama（迷你主机、NAS或闲置旧笔记本），而非主力笔记本。',
+          },
+          {
+            q: '平板能处理长文档RAG吗？',
+            a: '本地推理方式不行——在平板上嵌入1000+份文档不切实际。通过远程连接可以——家用机器处理RAG管道，平板显示聊天界面。AnythingLLM运行在家用机器上并通过浏览器在平板访问，可处理任意规模的文档集合，平板端无限制。对于需要在平板上使用RAG的学生或知识工作者，远程连接是唯一实用方案。',
+          },
+          {
+            q: '平板比手机更适合本地AI吗？',
+            a: '对于打字密集型使用（起草、RAG、长对话），是的——键盘支持和屏幕尺寸很重要。对于快速聊天、语音查询或移动使用，随身携带的手机更方便。iPad Pro M4是唯一在本地AI方面显著超越旗舰手机的平板；中端平板和手机大致相当。大多数读者不应专门为本地AI购买平板——如果因其他原因想要平板，AI能力是附加价值。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 专注于iPhone特定应用选择和设置的姊妹指南。',
+          '[2026年安卓最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-android-2026) — Termux + Ollama之外安卓应用选择的姊妹指南。',
+          '[2026年最佳移动LLM模型：Phi-4 Mini vs Gemma 3 vs SmolLM](/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 模型层伴读：各任务选哪款移动模型。',
+          '[在手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline) — 离线移动语音助手构建指南。',
+          '[Windows、Mac和Linux最易用的本地AI应用](/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux) — Mac或PC上设置本地AI用户的桌面端对应指南。',
+          '[低配PC最佳本地AI应用](/zh/power-local-llm/best-local-ai-app-low-end-pc) — 内存有限的低配设备推荐。',
+          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 平板角色卡角色扮演移动端UI对比。',
+          '[最佳本地LLM笔记本电脑](/zh/local-llms/best-laptops-local-llm) — 配合平板远程连接使用的家用机器硬件配置指南。',
+          '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 涵盖所有硬件层级（包括非移动端）的更广泛模型概览。',
+          '[本地AI代理与MCP 2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 将平板连接到家用机器上启用MCP的本地代理设置。',
+        ],
+      },
+      zhContext: {
+        id: 'zh-context',
+        title: '中国数据合规背景：本地AI的适用场景',
+        content:
+          '**对于在中国运营的企业和个人用户，本地AI具有超越便捷性之外的数据合规意义。** 以下监管框架使本地推理在部分场景下成为合规必选。',
+        items: [
+          '**《数据安全法》（2021）：** 规范数据处理活动，要求对"重要数据"进行安全评估。向境外传输数据前需完成安全评估或标准合同备案。将数据发送至境外云端AI API（OpenAI、Anthropic、Google）可能触发跨境数据传输义务——具体取决于数据分类。',
+          '**《个人信息保护法》（PIPL，2021）：** 中国的综合个人信息保护框架，对个人信息境外传输设有明确限制（需通过国家互联网信息办公室安全评估或经认证机构认证）。通过本地推理在设备上处理个人信息，避免跨境传输合规问题。',
+          '**国家互联网信息办公室（CAC）监管：** 网信办监管互联网信息服务和算法推荐，并发布了生成式AI服务提供商相关规定。境外提供的生成式AI服务适用不同监管框架。在本地机器上运行开源模型（Qwen、Llama等）处于企业自用场景，目前通常不需要独立备案。',
+          '**实际指导：** 对于处理内部业务数据、客户信息或内容的企业，本地推理提供了清晰的数据边界——数据不离开设备或公司网络。建议企业用户在具体合规决策前咨询熟悉《数据安全法》和PIPL的法律顾问；本内容仅供参考，不构成法律建议。',
+          '**开源模型的选择：** Qwen系列（通义千问，阿里巴巴云）是本地运行开源模型的重要选项，包括针对移动端优化的Qwen3 1.7B。在平板上本地运行Qwen3 1.7B结合Termux + Ollama，为内存受限的安卓设备提供了切实可行的数据本地化解决方案。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '在平板上本地运行AI：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026）',
+      description:
+        '2026年如何在iPad或安卓平板上本地运行AI。本地推理应用、Termux + Ollama以及远程连接家用Mac或PC的方法详解。',
+      url: 'https://www.promptquorum.com/zh/power-local-llm/run-ai-on-tablet-ipad-android',
+      inLanguage: 'zh',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Organization', 'name': 'PromptQuorum' },
+      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      articleBody:
+        '2026年在平板上本地运行AI。本地推理与连接家用机器的远程访问方案详解。',
+      keywords: [
+        'iPad本地AI',
+        '安卓平板本地LLM',
+        'Ollama iPad',
+        'Termux Ollama',
+        'LLM Farm',
+        'Pocket Paladin',
+      ],
+      educationalLevel: 'Beginner',
+      teaches: [
+        '如何为本地AI推理配置iPad',
+        '如何在安卓上使用Termux和Ollama',
+        '如何从平板远程连接Ollama',
+        '根据平板硬件选择适合的模型',
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', 'name': 'LLM Farm' },
+        { '@type': 'SoftwareApplication', 'name': 'Pocket Paladin' },
+        { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+        { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
+        { '@type': 'SoftwareApplication', 'name': 'Termux' },
+      ],
+      about: [
+        { '@type': 'Thing', 'name': '本地AI推理' },
+        { '@type': 'Thing', 'name': '平板LLM' },
+        { '@type': 'Thing', 'name': 'iPad AI应用' },
+        { '@type': 'Thing', 'name': '安卓平板AI推理' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+  },
 }
