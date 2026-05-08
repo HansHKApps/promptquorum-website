@@ -1838,4 +1838,605 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: '最も簡単なデスクトップアプリ',
+    title: 'ローカルAIアプリ（内蔵RAG対応）：ファイルとチャット（セットアップ不要）',
+    seoTitle: '内蔵RAGアプリ 2026 : ローカルPDF検索、ベクトルDB不要',
+    metaDescription:
+      'PDFを読み込んでチャットできるデスクトップアプリ3つ — ベクトルDB、Python、コマンドライン不要。LM Studio、Jan、AnythingLLM を1,000ページドキュメントでテスト。2026年5月。',
+    twitterDescription:
+      'ローカルAIの内蔵RAGアプリ3つ。PDFを読み込み、質問を入力。1,000ページドキュメントで2026年5月テスト済み。',
+    readTime: '12分で読める',
+    educationalLevel: 'Beginner',
+    primaryTerm: '内蔵RAG対応ローカルAIアプリ',
+    leadAnswerBlock:
+      '**3つのデスクトップアプリなら、5分以内にPDFを読み込んで質問できます — ベクトルDB、Python、コマンドラインなし。AnythingLLM は最も高機能（10+ファイル形式、交換可能な埋め込みモデル、最高品質の引用）。LM Studio は最も簡単（シングルバイナリインストール、PDF + DOCX + TXT、会話スコープ）。Jan は最もプライベート（完全オープンソースAGPL、テレメトリゼロ、ローカルのみ）。3つすべてが1,000ページドキュメント対応、インストール後は完全オフライン動作。**',
+    quickAnswerTop: {
+      ja: {
+        question: 'PDFチャット用の最高のローカルAI内蔵RAGアプリはどれですか？',
+        answer:
+          'AnythingLLMを選ぶなら、最大のファイル形式対応（PDF、DOCX、TXT、MD、EPUB、ウェブサイト、音声）、交換可能な埋め込みモデル、最高品質の引用が得られます。LM Studioを選ぶなら、1クリックでドキュメント添付、最速セットアップ、シングルPDFへのアドホック質問に最適です。Janを選ぶなら、オープンソースコードとテレメトリゼロが絶対条件の場合。3つすべて無料、インストール後オフライン動作、データローカル保存。',
+        bullets: [
+          'AnythingLLM — 10+ファイル形式、交換可能な埋め込み、永続的なワークスペース、100+ドキュメントライブラリに最適',
+          'LM Studio — 会話内でドラッグ&ドロップ、会話スコープ、最速初回応答',
+          'Jan — ドキュメント拡張、完全オープンソース（AGPL）、テレメトリゼロ、コンプライアンス対応',
+          '3つすべて16GB RAM環境で1,000ページドキュメント対応、オフライン動作、ローカルストレージ',
+          '5,000+ドキュメント、細かいチャンク制御が必要なら、カスタムRAGスタックへの移行を検討',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'キーポイント', anchor: '#key-takeaways' },
+      { label: '比較表', anchor: '#comparison-table' },
+      { label: 'どれを選ぶべき？', anchor: '#which-one' },
+      { label: 'テスト方法', anchor: '#how-we-tested' },
+      { label: 'AnythingLLM 詳細解説', anchor: '#anythingllm' },
+      { label: 'LM Studio 詳細解説', anchor: '#lm-studio' },
+      { label: 'Jan + ドキュメント 詳細解説', anchor: '#jan' },
+      { label: 'サンプルクエリと結果', anchor: '#sample-queries' },
+      { label: '引用の正確性', anchor: '#citations' },
+      { label: '大規模ファイル処理', anchor: '#large-files' },
+      { label: '内蔵RAGから卒業する時期', anchor: '#outgrow' },
+      { label: 'よくある質問', anchor: '#faq' },
+      { label: '関連資料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**AnythingLLM** が最高機能の内蔵RAG：10+ファイル形式（PDF、DOCX、TXT、MD、EPUB、ウェブサイト、音声トランスクリプト）、交換可能な埋め込みモデル、最高品質の引用、永続的なワークスペース。',
+          '**LM Studio** が最も摩擦が少ない：PDFをチャットにドラッグ、30秒で回答。会話スコープ、ワークスペース概念なし。',
+          '**Jan + ドキュメント拡張** がオープンソース選択肢：AGPL、テレメトリゼロ、ローカルのみの埋め込み、法務/医療/規制ワークフロー向け。',
+          '3つすべてが16GB RAM環境で1,000ページドキュメント、5分未満のインデックス時間で対応。',
+          'デフォルト埋め込みモデル（nomic-embed-text v1.5、all-MiniLM-L6-v2）はほぼすべてのワークロードに十分 — AnythingLLMだけがアプリを離れずに交換可能。',
+          '3つすべて外部OCRなしスキャンPDF（画像のみ）は未対応 — 先にTesseractまたはPDFツールでテキスト抽出。',
+          '**アップスケール基準：** ~1,000ドキュメント超過、ワークスペース横断検索、高度なチャンキング需要時は、カスタムOllama + AnythingLLM DockerまたはPrivateGPTへ。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'AnythingLLM、LM Studio、Jan + ドキュメント 2026年比較',
+        content:
+          'Apple M5 MacBook Pro（16GB統合メモリ）および NVIDIA RTX 4070（12GB VRAM、32GB システムRAM）Windows 11デスクトップでテスト。ドキュメント同一セット：412ページリサーチPDF、38ページ契約DOCX、1,047ページ技術マニュアルPDF、25 markdown ノート（計600KB）。各アプリは Llama 3.3 8B Q4_K_M チャットモデル。',
+        columns: ['アプリ', 'ファイル形式', '実用的な最大サイズ', '埋め込みモデル', '引用', '判定'],
+        rows: [
+          {
+            'アプリ': 'AnythingLLM',
+            'ファイル形式': 'PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、ウェブサイト、音声（Whisper）',
+            '実用的な最大サイズ': '~5,000文書 / ~50,000ページ',
+            '埋め込みモデル': '内蔵（Native）またはOllama / OpenAI / LM Studio に交換',
+            '引用': 'チャンク単位の引用、ソースファイル名 + ページ',
+            '判定': '最も高機能 — ライブラリには最初に選択',
+          },
+          {
+            'アプリ': 'LM Studio',
+            'ファイル形式': 'PDF、DOCX、TXT、MD',
+            '実用的な最大サイズ': '~30文書（チャット単位） / ~3,000ページ',
+            '埋め込みモデル': 'nomic-embed-text v1.5（バンドル、交換不可）',
+            '引用': 'インライン記載、ページ番号なし',
+            '判定': '最も簡単 — アドホックQ&A向け',
+          },
+          {
+            'アプリ': 'Jan + ドキュメント',
+            'ファイル形式': 'PDF、DOCX、TXT、MD',
+            '実用的な最大サイズ': '~200文書 / ~10,000ページ',
+            '埋め込みモデル': 'all-MiniLM-L6-v2（バンドル、拡張を通じて交換可能）',
+            '引用': 'チャンク単位、ファイル名付き',
+            '判定': '最もプライベート — AGPL / コンプライアンス向け',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: 'どれを選ぶべき？',
+        content:
+          '**正しい選択はドキュメントライブラリサイズ、ファイル形式、オープンソース重視度に依存します。** 意思決定マトリックス：',
+        rows: [
+          {
+            'シナリオ': '1つのPDF、60秒で回答を得たい',
+            '選択': 'LM Studio',
+          },
+          {
+            'シナリオ': '50～500 PDFフォルダ、定期的に照会',
+            '選択': 'AnythingLLM',
+          },
+          {
+            'シナリオ': '同じワークスペースでEPUB、ウェブサイト、音声トランスクリプト必要',
+            '選択': 'AnythingLLM',
+          },
+          {
+            'シナリオ': '法務・医療ドキュメント、オープンソース必須',
+            '選択': 'Jan + ドキュメント',
+          },
+          {
+            'シナリオ': '埋め込みモデルを変更して取得品質をテスト',
+            '選択': 'AnythingLLM',
+          },
+          {
+            'シナリオ': '4年前のノートパソコン、8GB RAM',
+            '選択': 'LM Studio（最小インストール、最軽量）',
+          },
+          {
+            'シナリオ': 'アカデミック執筆用にページ番号付き引用が必要',
+            '選択': 'AnythingLLM',
+          },
+          {
+            'シナリオ': 'チャット履歴とドキュメントインデックスをプロジェクト別に分離',
+            '選択': 'AnythingLLM（ワークスペースはファーストクラス）',
+          },
+          {
+            'シナリオ': '企業がネットワーク上の独占的バイナリをブロック',
+            '選択': 'Jan + ドキュメント（AGPL、監査可能）',
+          },
+        ],
+        columns: ['シナリオ', '選択'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'テスト方法',
+        content:
+          '**各アプリをクリーンインストール、同じドキュメント セット、同じ12クエリで評価。** RAG 品質をチャット品質から分離するため同じチャットモデル（Llama 3.3 8B Q4_K_M、≈ 4.9 GB）を使用。',
+        items: [
+          '**ハードウェア：** MacBook Pro M5（16GB 統合メモリ）macOS パス用；Windows 11 + RTX 4070（12GB VRAM、32GB システム RAM）。両方でテスト実行。',
+          '**ドキュメント セット：** 412ページリサーチペーパーPDF（図表数式付き）、38ページ契約DOCX（企業不動産賃貸、密集法的テキスト）、1,047ページ技術マニュアルPDF（産業制御システム）、25 markdown ノート（～600 KB 会議ノート、プロジェクト仕様）。',
+          '**埋め込み：** 各アプリはデフォルト埋め込みモデル使用（明示的交換を除く）。AnythingLLM Native は all-MiniLM-L6-v2 品質に近い384次元；LM Studio は nomic-embed-text v1.5（768次元）；Jan は all-MiniLM-L6-v2 デフォルト。',
+          '**クエリ タイプ：** ファクト検索（「賃貸契約解約予告期間」）、マルチホップ推論（「マニュアルの安全インターロック＆緊急停止カバーセクション」）、引用精度（「トークンミキシング正確フレーズ引用」）、要約（「第4章を5つのポイントで要約」）、矛盾検出（「契約家賃指数付けで自己矛盾？」）。',
+          '**測定項目：** ドキュメント投入後初回回答までの時間（インデックス + 初回応答）、12クエリ ゴールデンセット検索リコール、引用正確性（チャンクファイル名 + ページ該当時）、1,047ページマニュアルストレステスト動作。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'モデルダウンロード後は100%ローカル。このテスト中、プロンプト、ドキュメント チャンク、埋め込みベクトルは一切デバイスを離れません。各アプリでネットワーク無効化を途中で確認、オフライン動作確認。',
+          },
+        ],
+      },
+      anythingllmDeep: {
+        id: 'anythingllm',
+        title: 'AnythingLLM：最高機能の内蔵RAG',
+        content:
+          '**AnythingLLM はドキュメントチャットをファーストクラス機能として提供。** ワークスペースは永続的なドキュメントインデックスを保持；各ワークスペースは独立、「法務契約」と「リサーチペーパー」を分離保管。',
+        items: [
+          '**インストール：** anythingllm.com から署名済みインストーラー（macOS、Windows、Linux）。~430 MB。macOS、Linux では管理者権限不要。',
+          '**ファイル形式：** PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON。音声ファイル（MP3、WAV、M4A）は Whisper で自動トランスクリプション。ウェブサイトはスクレーパー内蔵。',
+          '**埋め込みモデル：** デフォルト「Native」（all-MiniLM-L6-v2 に近い小型モデル）。Ollama を通じて nomic-embed-text、LM Studio を通じて BAAI/bge-small、OpenAI text-embedding-3-small に 1クリックで交換。',
+          '**チャンク制御：** チャンクサイズ（デフォルト1,000文字）とオーバーラップ（デフォルト20）はワークスペース設定で公開。変更後、「すべて再埋め込み」ボタンでインデックス再構築。',
+          '**引用：** 各回答はチャンク単位のフットノート付き、ファイル名 + ページ（PDF）、ファイル名 + セクション（MD）、またはファイル名のみ（TXT）。引用をクリックするとサイドパネルでソースチャンク開放。',
+          '**パフォーマンス：** 完全マニュアル + ペーパー + 契約 + マークダウンノート、RTX 4070 で 4分12秒でインデックス、M5 で 5分38秒。初回クエリ応答：両方で～3秒。',
+          '**LLM バックエンド：** デフォルトで Ollama バンドル、または LM Studio、llama.cpp サーバー、OpenAI 互換 URL、クラウドプロバイダーに指定。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'プロジェクト単位で1ワークスペース作成（例：「Q3契約」「論文ソース」「オンボーディングマニュアル」）。各ワークスペースは独立チャット履歴とインデックス、プロジェクト間での文脈漏洩なし。',
+          },
+        ],
+      },
+      lmStudioDeep: {
+        id: 'lm-studio',
+        title: 'LM Studio：最も簡単なドキュメントチャット',
+        content:
+          '**LM Studio 2025 でチャット内ドキュメント添付を追加。** PDF をチャットウィンドウにドラッグ、数秒で質問開始 — ワークスペース、セットアップ、埋め込み設定なし。',
+        items: [
+          '**インストール：** lmstudio.ai から署名済みインストーラー（macOS、Windows、Linux）。~450 MB。チャット専用インストール、RAG プラグイン別途なし。',
+          '**ファイル形式：** PDF、DOCX、TXT、MD。EPUB、HTML、音声なし。',
+          '**埋め込みモデル：** nomic-embed-text v1.5（768次元）バンドル。2026年5月時点で UI から交換不可 — 埋め込みモデル選択は AnythingLLM 使用。',
+          '**チャンク制御：** UI から隠蔽。チャンクサイズ、オーバーラップ、top-K はドキュメントサイズに基づき自動最適化。',
+          '**引用：** モデルはチャンクをコンテキストとして受け取り、引用指示受け取り。引用品質はチャットモデル依存 — Llama 3.3 8B 以上は確実に引用、Phi-4 Mini は時折落とす。',
+          '**パフォーマンス：** シングルペーパー M5 で 38秒、RTX 4070 で 24秒でインデックス。初回クエリ：2～3秒。実用上限：ドキュメント ~30 件またはチャット ~3,000ページ。',
+          '**LLM バックエンド：** 会話選択と同じチャットモデル使用 — ドキュメント添付時に RAG 透過化。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'LM Studio ドキュメント添付は会話スコープ、ワークスペーススコープでなし。新チャット開始 = 前のドキュメント消失。アドホック Q&A 向け機能、継続的リサーチライブラリ向けは制限。',
+          },
+        ],
+      },
+      janDeep: {
+        id: 'jan',
+        title: 'Jan + ドキュメント拡張：オープンソース選択肢',
+        content:
+          '**Jan は 3つの中で唯一、監査可能なオープンソースコード（AGPL）。** ドキュメント拡張は RAG 追加でテレメトリゼロ原則を侵害しない — 埋め込みはローカル実行、ドキュメントチャンクはデバイス離脱なし。',
+        items: [
+          '**インストール：** jan.ai (~380 MB)。次に、アプリ内 Hub タブからドキュメント拡張を有効化。拡張は Jan チーム署名、サードパーティでなし。',
+          '**ファイル形式：** PDF、DOCX、TXT、MD。新形式追加は 2026年5月時点で公開ロードマップ上。',
+          '**埋め込みモデル：** all-MiniLM-L6-v2（384次元）バンドル。拡張設定を通じて BAAI/bge-small-en-v1.5 または任意 sentence-transformers GGUF に交換可能。',
+          '**チャンク制御：** チャンクサイズとオーバーラップは拡張設定で公開。再インデックスボタンでローカル LanceDB ストア再構築。',
+          '**引用：** チャンク単位の引用、ファイル名付き。2026年5月版ではページ番号なし — Jan GitHub issue #1184 でこの機能をトラッキング。',
+          '**パフォーマンス：** テストコーパス全体、M5 で 6分04秒、RTX 4070 で 5分12秒でインデックス。初回クエリ：3～4秒。実用上限：～200文書。',
+          '**LLM バックエンド：** Jan 内蔵 llama.cpp ランタイム。チャット用にロードされた同じモデルを RAG 合成に使用。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'EU GDPR コンプライアンス、規制対象業界、またはソースコード監査必須の環境では Jan が 3つ中唯一の選択。AnythingLLM は GitHub でオープンソース、公式ビルドはテレメトリ非公開；LM Studio は全面的に独占。',
+          },
+        ],
+      },
+      sampleQueries: {
+        id: 'sample-queries',
+        title: 'サンプルクエリと各アプリの回答',
+        content:
+          '**ドキュメント同一、チャットモデル同一（Llama 3.3 8B Q4_K_M）、プロンプト同一。** 回答は必要に応じて短縮。各行は、アプリが正しいチャンク検索できたか、何を言ったかを表示。',
+        columns: ['クエリ', 'AnythingLLM', 'LM Studio', 'Jan + ドキュメント'],
+        rows: [
+          {
+            'クエリ': '賃貸契約解約予告期間は？',
+            'AnythingLLM': '✅ 「60日間書面通知」[契約.docx、p.12]',
+            'LM Studio': '✅ 「60日間書面通知」 — 契約.docx',
+            'Jan + ドキュメント': '✅ 「60日間書面通知」 — 契約.docx',
+          },
+          {
+            'クエリ': 'ペーパーのトークンミキシングの正確フレーズを引用',
+            'AnythingLLM': '✅ 逐語引用 [research.pdf、p.4]',
+            'LM Studio': '✅ 逐語引用、research.pdf（ページなし）',
+            'Jan + ドキュメント': '⚠️ 言い換え、research.pdf',
+          },
+          {
+            'クエリ': 'マニュアルで安全インターロック＆緊急停止をカバーするセクション？',
+            'AnythingLLM': '✅ 「セクション4.2、セクション7.1」引用',
+            'LM Studio': '⚠️ セクション4.2のみ — マルチホップ外す',
+            'Jan + ドキュメント': '⚠️ セクション7.1のみ — マルチホップ外す',
+          },
+          {
+            'クエリ': '第4章を5つのポイントで要約',
+            'AnythingLLM': '✅ 5つの正確ポイント、各引用',
+            'LM Studio': '✅ 5つの正確ポイント、末尾引用ブロック',
+            'Jan + ドキュメント': '✅ 5つの正確ポイント、初回ポイント引用',
+          },
+          {
+            'クエリ': '契約は家賃指数付けで自己矛盾？',
+            'AnythingLLM': '✅ 「はい、p.8は CPI リンク、p.14は固定3%」',
+            'LM Studio': '✅ 「はい、2つの異なる指数付けメソッド」',
+            'Jan + ドキュメント': '⚠️ 「矛盾なし」 — p.14見落とし',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'AnythingLLM は複数ホップと矛盾クエリで lead、デフォルト検索でもっとチャンク pull（top-K = 6）LM Studio/Jan より（top-K = 4）。シンプルファクト検索：3つすべてほぼ同等。',
+          },
+        ],
+      },
+      citations: {
+        id: 'citations',
+        title: '引用の正確性',
+        content:
+          '**引用品質は 3つのアプリの単一最大の差別化要因。** AnythingLLM だけが 2026年5月にチャンク単位のファイル名 + ページ。他は ファイル名のみ。',
+        items: [
+          '**AnythingLLM：** 各回答はチャンク使用をフットノート。形式は `[filename、page X]` PDF、`[filename、section]` markdown。パネルで開いてソース段落検証。',
+          '**LM Studio：** チャット回答内インラインメンション（「research.pdf による...」）。ページなし、検証パネルなし。引用信頼性はモデル依存 — Llama 3.3 8B 確実、Phi-4 Mini 時折落とす。',
+          '**Jan + ドキュメント：** チャンク単位の引用、ファイル名付き。ページなし。拡張パネルで引用チャンク可視。',
+          '**検証コスト：** AnythingLLM 2クリック；LM Studio/Jan はソース PDF 開いて検索。1,000ページマニュアル対象、これ重要。',
+          '**幻想引用：** 3つ全部たまに非検索チャンク で ファイル名引用。12クエリテスト頻度：AnythingLLM 0/12、LM Studio 1/12、Jan 1/12。ハイステークス主張は常に検証。',
+        ],
+      },
+      largeFiles: {
+        id: 'large-files',
+        title: '大規模ファイル（1,000+ページ）処理',
+        content:
+          '**1,047ページ技術マニュアル = ストレステスト。** 3つすべてロード・インデックス可能、差異は取得時と ワークスペース人間工学に出現。',
+        rows: [
+          {
+            'メトリック': 'インデックス時間（M5）',
+            'AnythingLLM': '4分12秒',
+            'LM Studio': '2分47秒',
+            'Jan + ドキュメント': '6分04秒',
+          },
+          {
+            'メトリック': 'インデックス中 RAM',
+            'AnythingLLM': '~3.2 GB',
+            'LM Studio': '~2.4 GB',
+            'Jan + ドキュメント': '~2.8 GB',
+          },
+          {
+            'メトリック': 'インデックス ディスク',
+            'AnythingLLM': '~210 MB',
+            'LM Studio': '~95 MB',
+            'Jan + ドキュメント': '~140 MB',
+          },
+          {
+            'メトリック': '初回クエリ遅延（コールド）',
+            'AnythingLLM': '3.1秒',
+            'LM Studio': '2.2秒',
+            'Jan + ドキュメント': '3.8秒',
+          },
+          {
+            'メトリック': '実用的ドキュメント数上限',
+            'AnythingLLM': '~5,000',
+            'LM Studio': '~30（チャット単位）',
+            'Jan + ドキュメント': '~200',
+          },
+          {
+            'メトリック': 'マルチホップ取得（12クエリテスト）',
+            'AnythingLLM': '11/12',
+            'LM Studio': '8/12',
+            'Jan + ドキュメント': '7/12',
+          },
+        ],
+        columns: ['メトリック', 'AnythingLLM', 'LM Studio', 'Jan + ドキュメント'],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'LM Studio は single-doc は高速、ライブラリはスケール不可。会話スコープインデックス = 新チャット ゼロ開始 — one-off ポジティブ、継続的リサーチは痛手。50+文書先は AnythingLLM に変更。',
+          },
+        ],
+      },
+      outgrow: {
+        id: 'outgrow',
+        title: '内蔵RAGから卒業する時期',
+        content:
+          '**内蔵RAGは正解、3つのいずれかが発生するまで：** ライブラリ～1,000+文書超過、細かいチャンク戦略制御必要、またはワークスペース横断検索必要。その時点で escalate。',
+        items: [
+          '**文書数 > 1,000：** AnythingLLM は～5,000/workspace 取得遅延目立つまで対応。超過時：カスタムOllama + AnythingLLM Docker + vector DB（Qdrant、Weaviate、Postgres+pgvector）へ移行。',
+          '**カスタムチャンキング戦略必要：** 内蔵アプリは固定チャンクサイズ（～1,000文字、～20オーバーラップ）。ドメイン特化チャンキング（セマンティック、階層、親子）：LangChain/LlamaIndex の カスタムスタック。',
+          '**ワークスペース横断・ソース横断検索必要：** AnythingLLM ワークスペースは意図的に隔離。単一クエリ「契約+メール+Slack+Notion」スパン必要 → unified vector store カスタム RAG。',
+          '**細かいアクセス制御必要：** 内蔵アプリはシングルユーザー想定。チーム RAG ロール別権限 → AnythingLLM Docker（マルチユーザー）または PrivateGPT 配置。',
+          '**スキャン PDF の OCR 必要：** 3つすべて未対応。Tesseract/pdf2image+Tesseract で前処理、または Unstructured.io 含むスタック へ移行。',
+          '**本番配置：** 内蔵アプリはデスクトップアプリ、サーバーでなし。本番RAG API → AnythingLLM Docker、PrivateGPT、Open WebUI+RAG プラグイン。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'escalate パスで作業保全：Desktop → Docker（データ同一形式）→ カスタムOllama+Qdrant+LlamaIndex スタック。各ステップは文書コーパス保全、再インデックス回避。',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'これらアプリで 1,000+ PDF チャット可能？',
+            a: 'AnythingLLM は約 5,000文書/workspace まで（取得遅延目立つ前）。Jan + ドキュメント は約200文書。LM Studio は会話スコープで約30/チャット。1,000+文書ライブラリ：AnythingLLM が唯一の内蔵オプション（カスタムstack escalate なし）。',
+          },
+          {
+            q: 'これらアプリは DOCX と Excel をサポート？',
+            a: '3つすべて DOCX（Microsoft Word）サポート。Excel（XLSX）は 2026年5月時点で 3つとも直接非対応 — CSV（AnythingLLM 原生対応）に先に変換するか markdown に コピペ。AnythingLLM はさらに EPUB、HTML、JSON、音声（Whisper トランスクリプション）、ウェブサイトをサポート。',
+          },
+          {
+            q: 'ドキュメントはどこに保存？',
+            a: 'ローカルディスク。AnythingLLM は ~/.anythingllm/（macOS/Linux）または %APPDATA%/AnythingLLM（Windows）。LM Studio は ~/.cache/lm-studio/ または %APPDATA%/LM Studio。Jan は ~/jan/。3つとも どこにもアップロード無し — 常にローカル推論とローカルインデックス。',
+          },
+          {
+            q: 'アプリメモリからドキュメント削除可能？',
+            a: 'はい 3つとも。AnythingLLM はワークスペース UI でドキュメント単位削除 + 再インデックス。LM Studio はチャットからドキュメント分離または削除。Jan は拡張パネルから削除 + 再インデックスボタン。削除後、埋め込みチャンク は次の再インデックスでローカル vector ストアから削除。',
+          },
+          {
+            q: '引用精度はどのくらい？',
+            a: 'AnythingLLM はチャンク単位の引用、ファイル名 + ページ（PDF）— アカデミック執筆に適切（検証時）。LM Studio はファイル名のみ；信頼性はモデル依存（Llama 3.3 8B 確実、Phi-4 Mini 時折落とす）。Jan はチャンク単位ファイル名、ページなし。12クエリテスト：幻想引用稀少（AnythingLLM 0/12、LM Studio 1/12、Jan 1/12）— ハイステークス主張は常に検証。',
+          },
+          {
+            q: '内蔵 RAG はオフライン動作？',
+            a: 'はい。アプリインストール + モデル最低1つ（チャットと埋め込み）ダウンロード後、100% オフライン。ドキュメント インデックスはローカル、クエリはローカル vector ストア + ローカル LLM 指向。ネットワーク無効化で各アプリでテスト済み、3つすべて通常通り応答。',
+          },
+          {
+            q: '複数デバイス間で ドキュメント DB 共有可能？',
+            a: 'AnythingLLM はワークスペース ポータブルフォルダ（~/.anythingllm/storage/）で マシン間でコピー可能。LM Studio はドキュメント インデックス会話スコープ、同期設計なし。Jan は ~/jan/ に保存、LanceDB フォーマットはバージョン間感度高い。マルチデバイス：ホームサーバー AnythingLLM Docker が最良（全デバイスが同一インスタンス指向）。',
+          },
+          {
+            q: '内蔵 RAG はスキャン PDF（OCR）処理？',
+            a: '2026年5月時点で 3つとも、画像のみスキャン PDF は未対応。テキストレイヤー抽出 → スキャン（テキストレイヤー無し） = ゼロチャンク 返却。Tesseract OCR（無料）または ocrmypdf でテキストレイヤー先に追加、その後 PDF をアプリに投入。AnythingLLM は統合 Tesseract 向けの公開機能リクエスト提供。',
+          },
+          {
+            q: '内蔵 RAG 遅延化前の最大ドキュメント サイズは？',
+            a: '16GB RAM ハードウェア：AnythingLLM は～5,000文書または～50,000ページ/workspace レスポンシブ維持。LM Studio 実用上限は～30文書/チャット（～3,000ページ）。Jan + ドキュメント は～200文書確実。この上限超過：インデックス時間は線形増長、コールドクエリ取得遅延は 5～10秒に到達可能；カスタム RAG スタック escalate 信号。',
+          },
+          {
+            q: 'これらアプリを 機密法務・医療ドキュメント に使用可能？',
+            a: 'すべて インストール後 100% オフライン、ドキュメント内容伝送なし。規制ワークフロー（HIPAA、GDPR、弁護士-クライアント特権）：Jan + ドキュメント が最強選択肢（スタック全体 AGPL 監査可能、デフォルト テレメトリゼロ）。AnythingLLM も監査環境内 オープンソース Docker ビルド使用なら防御可能（デスクトップ インストーラー テレメトリ回避）。LM Studio は完全独占的 — 規制データ前に コンプライアンスチーム確認必須。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI：ベスト ローカル RAG 2026](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 内蔵 RAG を超える時点での escalate パス。',
+          '[30分で PDF ローカル RAG を構築（Ollama + AnythingLLM）](/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step) — カスタムスタック チュートリアル（さらに制御が必要な場合）。',
+          '[ローカル RAG の最高埋め込みモデル 2026](/ja/power-local-llm/best-embedding-models-local-rag-2026) — 取得品質を調整するユーザー向け。',
+          '[LM Studio vs Jan vs GPT4All：ローカル AI アプリどれが 2026年勝つ？](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — RAG が複数基準の1つの広い比較。',
+          '[ローカルで 1,000+ PDF チャット](/ja/power-local-llm/chat-with-1000-pdfs-locally) — 非常に大きな文書ライブラリのスケーリング ガイド。',
+          '[RAG 説明：実データで AI 回答を根拠付ける方法（2026）](/prompt-engineering/rag-explained?lang=ja) — RAG が内部でどう動作するか概念権威。',
+          '[Power Local LLM ハブ](/ja/power-local-llm) — クラスター向け完全ガイド ライブラリ。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'ローカル AI アプリ（内蔵 RAG 対応）：ファイルとチャット（セットアップ不要）',
+      'description':
+        'AnythingLLM、LM Studio、Jan + ドキュメント を 1,000 ページドキュメントでテスト。内蔵 RAG、ベクトル DB 不要、Python 不要、コマンドラインなし。',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'url': 'https://www.promptquorum.com/ja/power-local-llm/local-ai-app-with-built-in-rag',
+      'inLanguage': 'ja',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ja',
+      'author': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'LM Studio' },
+        { '@type': 'Thing', 'name': 'Jan（ローカル AI アプリ）' },
+        { '@type': 'Thing', 'name': 'Retrieval-Augmented Generation' },
+        { '@type': 'Thing', 'name': 'ローカル ドキュメント チャット' },
+        { '@type': 'Thing', 'name': '内蔵 RAG' },
+      ],
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '.key-takeaways']
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'ja',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'これらアプリで 1,000+ PDF チャット可能？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM は約5,000文書/workspace（取得遅延目立つ前）対応。Jan+ドキュメント は約200文書確実。LM Studio は会話スコープ約30/チャット。1,000+文書ライブラリ：AnythingLLM が唯一の内蔵オプション（カスタムstack escalate なし）。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'これらアプリは DOCX と Excel をサポート？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '3つすべて DOCX（Microsoft Word）サポート。Excel（XLSX）は 2026年5月時点で 3つとも直接非対応 — CSV に先に変換（AnythingLLM 原生対応）するか markdown に コピペ。AnythingLLM はさらに EPUB、HTML、JSON、音声（Whisper）、ウェブサイト をサポート。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'ドキュメントはどこに保存？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'ローカルディスク。AnythingLLM は ~/.anythingllm/（macOS/Linux）または %APPDATA%/AnythingLLM（Windows）。LM Studio は ~/.cache/lm-studio/ または %APPDATA%/LM Studio。Jan は ~/jan/。3つとも どこにもアップロード無し。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'アプリメモリからドキュメント削除可能？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'はい 3つとも。AnythingLLM はワークスペース UI で削除+再インデックス。LM Studio はチャットから分離または削除。Jan は拡張パネルから削除+再インデックス。削除後、チャンク は次の再インデックスでローカル vector ストアから削除。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '引用精度はどのくらい？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM はチャンク単位の引用、ファイル名 + ページ（PDF）— アカデミック執筆に適切。LM Studio はファイル名のみ；信頼性はモデル依存。Jan はチャンク単位ファイル名、ページなし。12クエリテスト：幻想引用稀少 — ハイステークス主張は常に検証。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '内蔵 RAG はオフライン動作？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'はい。アプリインストール + モデルダウンロード後、100% オフライン。インデックスはローカル、クエリはローカル vector ストア + ローカル LLM 指向。ネットワーク無効化で テスト済み、3つすべて通常通り応答。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '複数デバイス間で ドキュメント DB 共有可能？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM はワークスペース ポータブルフォルダでマシン間でコピー可能。LM Studio はドキュメント インデックス会話スコープ、同期設計なし。Jan は ~/jan/ に保存。マルチデバイス：ホームサーバー AnythingLLM Docker が最良。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '内蔵 RAG はスキャン PDF（OCR）処理？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '2026年5月時点で 3つとも、画像のみスキャン PDF は未対応。テキストレイヤー抽出 → スキャン（テキストレイヤー無し） = ゼロチャンク。Tesseract OCR（無料）で テキストレイヤー先に追加。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '内蔵 RAG 遅延化前の最大ドキュメント サイズは？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '16GB RAM：AnythingLLM は～5,000文書または～50,000ページ/workspace レスポンシブ維持。LM Studio は～30/チャット（～3,000ページ）。Jan+ドキュメント は～200文書。この上限超過：コールドクエリ遅延 5～10秒が escalate 信号。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'これらアプリを 機密法務・医療ドキュメント に使用可能？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'すべて インストール後 100% オフライン、内容伝送なし。規制ワークフロー（HIPAA、GDPR、弁護士特権）：Jan+ドキュメント が最強（AGPL 監査可能、テレメトリゼロ）。AnythingLLM も監査環境内オープンソース Docker なら防御可能。LM Studio は完全独占的 — 規制データ前にコンプライアンス確認必須。',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'ja',
+      'name': 'ローカル AI デスクトップアプリ（内蔵 RAG 対応）2026年',
+      'numberOfItems': 3,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'AnythingLLM',
+          'description':
+            '最高機能の内蔵 RAG：10+ファイル形式（PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、ウェブサイト、音声）、交換可能な埋め込みモデル、永続的なワークスペース、チャンク単位の引用（ページ番号付き）。約5,000文書/workspace の実用上限。',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'LM Studio',
+          'description':
+            '最も簡単なドキュメントチャット：会話内ドラッグ&ドロップ PDF/DOCX/TXT/MD 添付。nomic-embed-text v1.5 バンドル。会話スコープ（ワークスペース概念なし）。約30文書/チャットの実用上限。',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Jan + ドキュメント拡張',
+          'description':
+            'オープンソース選択肢：AGPL 監査可能、デフォルト テレメトリゼロ、ローカルのみの埋め込み（all-MiniLM-L6-v2 バンドル、交換可能）。PDF、DOCX、TXT、MD サポート。コンプライアンス対応ワークフロー向け。約200文書の実用上限。',
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'ホーム',
+          'item': 'https://www.promptquorum.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/ja/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'ローカル AI アプリ（内蔵 RAG 対応）',
+          'item': 'https://www.promptquorum.com/ja/power-local-llm/local-ai-app-with-built-in-rag',
+        },
+      ],
+    },
+  },
 }
