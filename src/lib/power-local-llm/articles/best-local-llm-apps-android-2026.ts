@@ -2316,30 +2316,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         items: [
-          {
-            category: '测试的芯片组',
-            facts: [
-              'Snapdragon 8 Elite（S25 Ultra、OnePlus 13）——MLC Chat的Hexagon NPU支持',
-              'Tensor G5（Pixel 9 Pro）——第三方应用无NPU支持；所有应用纯CPU',
-              'MediaTek Dimensity 9400（Poco X8 Pro）——APU支持有限，MLC Chat无支持',
-            ],
-          },
-          {
-            category: '测试的模型',
-            facts: [
-              'Phi-4 Mini（3.8B）——CPU基线；S25 Ultra纯CPU约8-12 token/秒',
-              'Qwen3 1.7B——NPU最佳；S25 Ultra上MLC Chat Hexagon约40 token/秒',
-              'Llama 3.2 3B——良好平衡；纯CPU约6-8 token/秒',
-            ],
-          },
-          {
-            category: '芯片组别最快应用',
-            facts: [
-              'Snapdragon 8 Elite：MLC Chat（Qwen3 1.7B约40 token/秒）> PocketPal AI（纯CPU约18 token/秒）> Ollama Termux（纯CPU约12 token/秒）',
-              'Tensor G5：MLC Chat（纯CPU约12 token/秒）≈ PocketPal AI（纯CPU约15 token/秒）> Ollama Termux（纯CPU约10 token/秒）',
-              '所有芯片组：Maid、Layla、Private AI纯CPU提供8-14 token/秒',
-            ],
-          },
+          '**测试的芯片组**',
+          'Snapdragon 8 Elite（S25 Ultra、OnePlus 13）——MLC Chat的Hexagon NPU支持',
+          'Tensor G5（Pixel 9 Pro）——第三方应用无NPU支持；所有应用纯CPU',
+          'MediaTek Dimensity 9400（Poco X8 Pro）——APU支持有限，MLC Chat无支持',
+          '**测试的模型**',
+          'Phi-4 Mini（3.8B）——CPU基线；S25 Ultra纯CPU约8-12 token/秒',
+          'Qwen3 1.7B——NPU最佳；S25 Ultra上MLC Chat Hexagon约40 token/秒',
+          'Llama 3.2 3B——良好平衡；纯CPU约6-8 token/秒',
+          '**芯片组别最快应用**',
+          'Snapdragon 8 Elite：MLC Chat（Qwen3 1.7B约40 token/秒）> PocketPal AI（纯CPU约18 token/秒）> Ollama Termux（纯CPU约12 token/秒）',
+          'Tensor G5：MLC Chat（纯CPU约12 token/秒）≈ PocketPal AI（纯CPU约15 token/秒）> Ollama Termux（纯CPU约10 token/秒）',
+          '所有芯片组：Maid、Layla、Private AI纯CPU提供8-14 token/秒',
         ],
       },
       appComparisons: {
