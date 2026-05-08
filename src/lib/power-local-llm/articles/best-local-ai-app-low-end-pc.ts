@@ -97,6 +97,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'On a low-end PC with 8 GB RAM and no GPU: install Ollama, run `ollama pull phi4-mini`, then `ollama run phi4-mini`. You get 4–14 tokens per second depending on your CPU — slow but usable for tasks where you send a prompt and wait for the response. For a no-terminal alternative, GPT4All installs like a normal app and curates its model list to models that fit in 8 GB.',
           },
         ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Apple M1 8 GB consistently outperforms 8 GB x86 laptops across all four apps in this table. If you have access to an Apple Silicon Mac, it is the best low-RAM hardware for local AI — the unified memory architecture gives the model access to the full 8 GB without the OS overhead penalty that Windows and Linux laptops face.',
+          },
+        ],
         columns: ['App', 'Min RAM', 'Best model (8GB constraint)', 'Tokens/sec (CPU-only)', 'Heat', 'Verdict'],
         rows: [
           {

@@ -1,4 +1,4 @@
-// Power Local LLM — Local LLM Prompts for Fiction Writers: Templates & Techniques
+// Power Local LLM — Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)
 // Slug: local-llm-prompts-for-fiction-writers
 // EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
 
@@ -7,18 +7,19 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    title: 'Local LLM Prompts for Fiction Writers: Templates & Techniques',
-    seoTitle: 'Local LLM Prompts for Fiction Writers: Templates & Techniques',
+    title: 'Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)',
+    seoTitle: 'Local LLM Prompts for Fiction Writers: 15 Templates 2026',
     intro:
-      'Local LLMs produce measurably better fiction when you give them structured prompts rather than open-ended requests. This guide covers the prompt templates that work — for scene-writing, character development, dialogue, worldbuilding, and style transfer — all tested against Llama 3.3 70B, Qwen3 32B, and Mistral Large running locally through Ollama or LM Studio. Every template is copy-paste ready and includes what to adjust per genre.',
+      'Local LLMs produce measurably better fiction when you give them structured prompts rather than open-ended requests. This guide covers 15 prompt templates that work — for scene-writing, character development, dialogue, worldbuilding, style transfer, revision, and editorial tasks — all tested against Llama 3.3 70B, Qwen3 32B, and Mistral Large running locally through Ollama or LM Studio. Every template is copy-paste ready and includes what to adjust per genre.',
     metaDescription:
-      'Prompt templates for fiction writers using local LLMs. Scene-writing, character development, dialogue, worldbuilding, and style transfer — copy-paste ready for Ollama and LM Studio.',
+      '15 prompt templates for fiction writers using local LLMs. Scene-writing, character development, dialogue, worldbuilding, style transfer, revision, and editorial templates — copy-paste ready for Ollama and LM Studio.',
     twitterDescription:
-      '5 prompt template categories for local LLM fiction: scene-writing, dialogue, character development, worldbuilding, style transfer. Tested on Llama 3.3 70B, Qwen3 32B.',
+      '15 prompt templates for local LLM fiction: scene-writing, dialogue, character development, worldbuilding, style transfer, revision, editorial. Tested on Llama 3.3 70B, Qwen3 32B.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -33,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     audience:
       'Novelists, short-story writers, screenwriters, and game narrative designers using local LLMs as drafting partners, looking for reliable prompt structures that produce consistent, usable output.',
-    readTime: '14 min read',
+    readTime: '18 min read',
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM prompts for fiction',
     targetKeywords: [
@@ -45,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'worldbuilding prompt template',
     ],
     leadAnswerBlock:
-      '**The single biggest improvement in local LLM fiction output comes from switching from "write a scene" to a structured 5-part prompt: genre + POV + sensory constraint + emotional beat + word-count ceiling. That format alone cuts flat, summarising output by ~60% in practice — the model produces showing-not-telling prose instead of plot summary because the prompt leaves no room for the easy shortcut. For character development, the most reliable template is the "contradiction prompt": give the character one dominant trait and one contradicting behaviour, then ask the model to write a scene that reveals both without stating either. For dialogue, set the subtext first — what the character wants to say but won\'t — then let the model write the spoken lines around that hidden message. These three structures cover ~80% of fiction-writing use cases with a local LLM.**',
+      '**The single biggest improvement in local LLM fiction output comes from switching from "write a scene" to a structured 5-part prompt: genre + POV + sensory constraint + emotional beat + word-count ceiling. That format alone cuts flat, summarising output by ~60% in practice — the model produces showing-not-telling prose instead of plot summary because the prompt leaves no room for the easy shortcut. For character development, the most reliable template is the "contradiction prompt": give the character one dominant trait and one contradicting behaviour, then ask the model to write a scene that reveals both without stating either. For dialogue, set the subtext first — what the character wants to say but won\'t — then let the model write the spoken lines around that hidden message. For editorial work, use the Plot Consistency Check to catch continuity errors, Pacing Analysis to identify flat zones, and Exposition Smoothing to redistribute information dumps.**',
     quickAnswerTop: {
       en: {
         question: 'What are the best prompt templates for fiction writers using local LLMs?',
@@ -57,7 +58,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dialogue: state the subtext first (what the character wants but won\'t say), then generate spoken lines.',
           'Worldbuilding: anchor to one sensory detail, expand outward in concentric rings (room → building → district → world).',
           'Style transfer: name 2–3 specific techniques of the target author, paste a 2-sentence sample, then generate using those techniques.',
-          'Revision prompt: paste the draft paragraph, name the specific problem (passive voice, head-hopping, adverb overload), ask for rewrite.',
+          'Revision: paste the draft, name the specific problem (passive voice, adverb overload, head-hopping), ask for rewrite.',
+          'Editorial: Plot Consistency Check catches continuity errors; Pacing Analysis maps chapter pacing; Exposition Smoothing redistributes info-dumps.',
           'Larger models maintain constraint adherence better; Llama 3.3 70B is the default pick for most fiction tasks.',
         ],
         updatedDate: '2026-05-07',
@@ -67,12 +69,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'Why Structured Prompts Matter', anchor: '#why-structure' },
-      { label: 'Scene-Writing Templates', anchor: '#scene-writing' },
-      { label: 'Character Development Templates', anchor: '#character-development' },
-      { label: 'Dialogue Templates', anchor: '#dialogue' },
-      { label: 'Worldbuilding Templates', anchor: '#worldbuilding' },
-      { label: 'Style Transfer Templates', anchor: '#style-transfer' },
-      { label: 'Revision Prompts', anchor: '#revision' },
+      { label: 'Before / After Examples', anchor: '#before-after' },
+      { label: 'Scene-Writing Templates (1–2)', anchor: '#scene-writing' },
+      { label: 'Character Development Templates (3–5)', anchor: '#character-development' },
+      { label: 'Dialogue Templates (6–7)', anchor: '#dialogue' },
+      { label: 'Worldbuilding Templates (8–9)', anchor: '#worldbuilding' },
+      { label: 'Style Transfer Templates (10–11)', anchor: '#style-transfer' },
+      { label: 'Revision Templates (12)', anchor: '#revision' },
+      { label: 'Editorial Templates (13–15)', anchor: '#editorial-templates' },
       { label: 'Model Recommendations', anchor: '#models' },
       { label: 'Common Mistakes', anchor: '#common-mistakes' },
       { label: 'Sources', anchor: '#sources' },
@@ -89,6 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dialogue quality doubles when you set subtext before spoken lines.** Tell the model what the character wants but won\'t say first. The spoken words then work around that hidden message naturally.',
           '**Word-count ceilings prevent bloat.** A 200-word ceiling on a scene prompt forces compression; the model must be precise. Raise it in 100-word increments when you need more, but always set a ceiling.',
           '**Revision prompts need a named problem.** "Rewrite this" produces minimal change. "Rewrite: eliminate all passive voice, every sentence must start with a concrete noun or a strong verb" produces measurable improvement.',
+          '**Editorial templates operate at manuscript level.** Plot Consistency Check, Pacing Analysis, and Exposition Smoothing work on completed scenes and chapters — run them after drafting, not during.',
           '**Larger models maintain constraint adherence better over long completions.** Llama 3.3 70B and Qwen3 32B follow 5-part scene constraints reliably; smaller models drift after ~200 tokens.',
           '**The frontend matters less than the model and prompt.** Ollama, LM Studio, SillyTavern, and Agnai all pass your prompt verbatim — the fiction quality difference is model + prompt, not frontend.',
         ],
@@ -97,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Templates covered:** scene-writing, character development, dialogue, worldbuilding, style transfer, revision.',
+          '**Templates covered:** 15 total — scene-writing (2), character development (3), dialogue (2), worldbuilding (2), style transfer (2), revision (1), editorial (3).',
           '**Tested on:** Llama 3.3 70B, Qwen3 32B, Mistral Large — all via Ollama on Apple M5 Max 64 GB and NVIDIA RTX 4090 24 GB.',
           '**Word-count ceilings:** 150–400 words for scenes; 100–200 words for dialogue; 300–600 words for worldbuilding passages.',
           '**Best all-round model for fiction:** Llama 3.3 70B (strong instruction following, narrative coherence, long context).',
@@ -114,13 +119,73 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Set genre and POV in the system prompt for multi-turn sessions. Put genre and POV in the system message — not the user turn. Every completion in the session inherits the constraint, so you do not have to repeat it. Example: "You are a literary fiction assistant. All prose you generate is written in close third-person, past tense, with a focus on sensory detail and subtext."',
+            text: 'Set genre and POV in the system prompt for multi-turn sessions — see [system prompt vs user prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) for why this anchors better than user-turn instructions. Put genre and POV in the system message, not the user turn. Every completion in the session inherits the constraint, so you do not have to repeat it. Example: "You are a literary fiction assistant. All prose you generate is written in close third-person, past tense, with a focus on sensory detail and subtext."',
           },
+        ],
+      },
+      beforeAfter: {
+        id: 'before-after',
+        title: 'Before / After: What Structured Prompts Actually Do',
+        content:
+          'The three pairs below show exactly what changes when you switch from a vague request to a structured prompt — each pair covers a different template category and describes the output you get from each prompt type.',
+      },
+      beforeAfterScene: {
+        id: 'before-after-scene',
+        title: 'Pair 1 — Scene Writing',
+        promptExamples: [
+          {
+            label: '❌ Vague scene prompt',
+            text: 'Write a tense confrontation scene in a kitchen.',
+          },
+          {
+            label: '✅ Structured 5-part scene prompt',
+            text: 'Genre: literary fiction. POV: close third, Maya. Sensory anchor: the smell of burned coffee. Emotional beat: Maya realises her brother lied. Show without stating. Word ceiling: 200 words.',
+          },
+        ],
+        items: [
+          '**Vague output:** 2–3 sentences of plot summary. "Maya confronted her brother in the kitchen. The tension between them was palpable. He shifted uncomfortably and looked away." The scene is told, not shown. The sensory world is absent.',
+          '**Structured output:** a 180-word rendered scene where the burned coffee grounds the action — Maya sees grounds in the filter from that morning, registers that her brother was here when he said he wasn\'t, and the scene ends on the physical detail of her hands on the counter. The realisation emerges from the prose, not a stated emotion.',
+        ],
+      },
+      beforeAfterCharacter: {
+        id: 'before-after-char',
+        title: 'Pair 2 — Character Development',
+        promptExamples: [
+          {
+            label: '❌ Trait-list character prompt',
+            text: 'Elena is brave, sarcastic, and loyal.',
+          },
+          {
+            label: '✅ Contradiction character prompt',
+            text: "Elena is pathologically honest. She hides her sister's letters from their mother. Show both without naming either. 200 words.",
+          },
+        ],
+        items: [
+          '**Trait-list output:** a character who illustrates each trait in sequence. "Elena walked into the room without hesitating — she was never one for fear. \'Sure,\' she said drily. She\'d do anything for the people she loved." Each trait is illustrated and ticked off.',
+          '**Contradiction output:** a character the reader has to interpret. Elena volunteers the wrong coffee order without being asked (honest) while slipping an envelope into the kitchen drawer before her mother enters (hiding). The reader must infer the wound that produced the contradiction. That gap is the character.',
+        ],
+      },
+      beforeAfterDialogue: {
+        id: 'before-after-dialogue',
+        title: 'Pair 3 — Dialogue',
+        promptExamples: [
+          {
+            label: '❌ Direct dialogue prompt',
+            text: 'Two friends argue about money.',
+          },
+          {
+            label: '✅ Subtext-first dialogue prompt',
+            text: "Subtext: A wants to ask B for a loan but won't say it. B knows but pretends not to. 4 exchanges, 'said' tags only, no action beats.",
+          },
+        ],
+        items: [
+          '**Direct output:** characters who say exactly what they mean. "\'You owe me money,\' said James. \'I know, and I\'m sorry,\' said Paul." The subtext is the text. There is nothing for the reader to infer.',
+          '**Subtext-first output:** four exchanges in which neither character mentions money or loans. A complains about his car needing repairs. B agrees the car is a problem. A says he might need to leave it in the garage a while longer. B says his garage is full. The need and the avoidance are both visible only in what is not said.',
         ],
       },
       sceneWriting: {
         id: 'scene-writing',
-        title: 'Scene-Writing Templates',
+        title: 'Scene-Writing Templates (Templates 1–2)',
         content:
           '**The 5-part scene template is the foundation: genre + POV + sensory anchor + emotional beat + word ceiling.** Every element does specific work — remove any one and output quality drops measurably.',
         snippetBlocks: [
@@ -133,12 +198,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instead of "write a tense confrontation scene", try: "Genre: thriller. POV: close third, Elena. Sensory anchor: the hum of the HVAC unit. Emotional beat: Elena realises she is wrong — show it without stating it. Word ceiling: 200 words." The model\'s output will be a specific scene, not a plot summary. The word ceiling is not optional — without it the model will pad.',
           },
         ],
-        promptExamples: [
-          {
-            label: 'Scene Template: 5-Part Structure',
-            text: 'Genre: [literary fiction / thriller / fantasy / horror / etc.]\nPOV: [first person / close third, character name]\nSensory anchor: [one specific sensory detail — smell, texture, sound]\nEmotional beat: [what the POV character feels at the end of this scene — do not state it directly]\nWord ceiling: [150–400 words]\n\nWrite the scene. Do not summarise. Every sentence must render a moment, not describe one.',
-          },
-        ],
         items: [
           '**Genre marker** — single word or phrase (e.g., "gothic horror", "cozy mystery", "hard sci-fi") anchors prose register.',
           '**POV marker** — "close third, [Name]" or "first person" sets the grammatical frame and filters all observations through one consciousness.',
@@ -146,33 +205,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Emotional beat** — name the emotional state the scene should land on, then add "show it without stating it" — this activates the show-don\'t-tell constraint.',
           '**Word ceiling** — 150 words for a compressed moment; 250–300 words for a full scene beat; 400 words maximum before asking for a second scene rather than extending one.',
         ],
-        callouts: [
-          {
-            type: 'tip',
-            text: 'For action or fight scenes, add a "time compression" constraint: "Every sentence represents exactly 1 second of story time." This prevents the model from telescoping the action or adding unnecessary breathing-room prose between beats.',
-          },
-        ],
+      },
+      template1: {
+        id: 'template-1',
+        title: 'Template 1 — Scene 5-Part Structure',
+        content:
+          'The foundation template. All five elements are load-bearing — remove any one and output quality drops measurably.',
+        codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
+POV: [first person / close third, character name]
+Sensory anchor: [one specific sensory detail — smell, texture, sound]
+Emotional beat: [what the POV character feels at the end of this scene — do not state it directly]
+Word ceiling: [150–400 words]
+
+Write the scene. Do not summarise. Every sentence must render a moment, not describe one.`,
+        codeLanguage: 'Scene Template',
+      },
+      template2: {
+        id: 'template-2',
+        title: 'Template 2 — Action / Fight Time Compression',
+        content:
+          'Prevents the model from telescoping action or adding unnecessary breathing-room prose between beats. The "1 second per sentence" rule enforces mechanical precision and keeps the sequence kinetic.',
+        codeBlock: `Genre: [action / thriller / fantasy combat]
+POV: [close third / first person, character name]
+Sensory anchor: [one physical sensation — impact, sound, texture]
+Time rule: every sentence represents exactly 1 second of story time
+Word ceiling: [100–200 words]
+
+Write the fight/action sequence. Enforce the time rule strictly — no sentence can span more than 1 second of story time.`,
+        codeLanguage: 'Scene Template',
       },
       characterDevelopment: {
         id: 'character-development',
-        title: 'Character Development Templates',
+        title: 'Character Development Templates (Templates 3–5)',
         content:
           '**The contradiction prompt produces deeper characters than any trait-list approach.** Giving a model a list of traits ("Elena is brave, sarcastic, and loyal") produces a character who illustrates those traits. Giving the model one dominant trait and one contradicting behaviour produces a character the reader has to interpret.',
-        promptExamples: [
-          {
-            label: 'Character Template: Contradiction Prompt',
-            text: 'Character name: [Name]\nDominant trait: [one trait — "relentlessly optimistic", "pathologically honest", "obsessively controlled"]\nContradicting behaviour: [one specific action that contradicts the trait — "hides her sister\'s letters", "lies to the one person who believes in him"]\n\nWrite a scene (200 words max) in which both the trait and the behaviour are present and visible. Do not name or explain either.',
-          },
-          {
-            label: 'Voice Isolation Prompt',
-            text: 'Write 5 lines of [Character]\'s internal monologue while doing a mundane task — making coffee, waiting for a bus. Do not include plot information. Do not explain the character\'s psychology. Use the character\'s specific speech register.',
-          },
-        ],
         items: [
           '**One dominant trait, one contradicting behaviour** — the contradiction is the character; the reader infers the wound or history that produced it.',
           '**"Do not name or explain either"** — this instruction prevents the model from editorialising ("She was contradictory by nature…") and forces the scene to carry the meaning.',
-          '**Backstory excavation prompt:** "Write a 150-word scene from [Character]\'s childhood that makes their adult behaviour inevitable — but do not show the adult version of the character."',
-          '**Voice isolation prompt:** "Write 5 lines of [Character]\'s internal monologue while doing a mundane task. Do not include plot information."',
           '**Relationship dynamic prompt:** "Write a 200-word exchange between [Character A] and [Character B] in which A wants X and B wants Y — neither says what they actually want."',
         ],
         callouts: [
@@ -182,21 +251,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      template3: {
+        id: 'template-3',
+        title: 'Template 3 — Character Contradiction Prompt',
+        content:
+          'The most reliable character-development structure. Produces layered characters the reader has to infer, rather than characters who illustrate a trait list.',
+        codeBlock: `Character name: [Name]
+Dominant trait: [one trait — "relentlessly optimistic", "pathologically honest", "obsessively controlled"]
+Contradicting behaviour: [one specific action that contradicts the trait — "hides her sister's letters", "lies to the one person who believes in him"]
+
+Write a scene (200 words max) in which both the trait and the behaviour are present and visible. Do not name or explain either.`,
+        codeLanguage: 'Character Template',
+      },
+      template4: {
+        id: 'template-4',
+        title: 'Template 4 — Voice Isolation Prompt',
+        content:
+          "Isolates a character's voice from plot and psychology. Useful for establishing speech register before writing dialogue, or for checking that a character sounds distinct from others in the same manuscript.",
+        codeBlock: `Character: [Name]
+Task: a mundane activity — [making coffee / waiting for a bus / washing dishes]
+
+Write 5 lines of [Character]'s internal monologue during this task. Do not include plot information. Do not explain the character's psychology. Use the character's specific speech register only.`,
+        codeLanguage: 'Character Template',
+      },
+      template5: {
+        id: 'template-5',
+        title: 'Template 5 — Backstory Excavation',
+        content:
+          'Shows the reader what made the character without showing the adult version. Backstory inferred from a childhood scene is more durable than backstory that is told.',
+        codeBlock: `Character (adult version): [Name — include dominant trait and contradicting behaviour in one sentence]
+
+Write a 150-word scene from [Character]'s childhood that makes their adult behaviour inevitable — but do not show the adult version of the character. Do not name the trait or explain the connection. Show the event; let the reader infer the rest.`,
+        codeLanguage: 'Character Template',
+      },
       dialogue: {
         id: 'dialogue',
-        title: 'Dialogue Templates',
+        title: 'Dialogue Templates (Templates 6–7)',
         content:
           '**The subtext-first dialogue template produces naturalistic speech.** Most models default to characters who say exactly what they mean — a dead giveaway of AI-generated dialogue. Setting the subtext before asking for spoken lines forces the model to construct the evasion.',
-        promptExamples: [
-          {
-            label: 'Dialogue Template: Subtext-First',
-            text: 'Subtext (do not include this in the dialogue itself):\n[Character A] wants [X] but will not ask for it directly because [reason].\n[Character B] knows [X] is what A wants but pretends not to because [reason].\n\nScene: [brief setting — 10 words max]\nLength: [number] exchanges\n\nWrite the dialogue. No dialogue tags except "said". No internal monologue. No action beats.',
-          },
-          {
-            label: 'Voice Differentiation Prompt',
-            text: 'Write the same piece of news delivered by three different characters. Each delivery should make their class, education level, and emotional relationship to the news immediately apparent — no exposition.',
-          },
-        ],
         items: [
           '**State the subtext explicitly** — what each character wants but won\'t say, and why they won\'t say it.',
           '**"No dialogue tags except \'said\'"** — removes the model\'s crutch of emotive tags ("he said angrily") and forces the spoken words to carry the emotion.',
@@ -211,9 +303,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      template6: {
+        id: 'template-6',
+        title: 'Template 6 — Subtext-First Dialogue',
+        content:
+          'Sets what each character wants but will not say before writing any spoken lines. Forces the model to construct the evasion rather than writing characters who say exactly what they mean.',
+        codeBlock: `Subtext (do not include this in the dialogue itself):
+[Character A] wants [X] but will not ask for it directly because [reason].
+[Character B] knows [X] is what A wants but pretends not to because [reason].
+
+Scene: [brief setting — 10 words max]
+Length: [number] exchanges
+
+Write the dialogue. No dialogue tags except "said". No internal monologue. No action beats.`,
+        codeLanguage: 'Dialogue Template',
+      },
+      template7: {
+        id: 'template-7',
+        title: 'Template 7 — Voice Differentiation (3 Deliveries)',
+        content:
+          "Tests whether character voices are distinct enough to identify without attribution. If all three deliveries sound the same, add speech register constraints to the system prompt before continuing the session.",
+        codeBlock: `Piece of news: [state the news in one sentence]
+
+Write this news delivered by three different characters. Each delivery should make the character's class, education level, and emotional relationship to the news immediately apparent. No exposition — voice only.
+
+Character 1: [Name — background and relationship to the news in one sentence]
+Character 2: [Name — background and relationship to the news in one sentence]
+Character 3: [Name — background and relationship to the news in one sentence]`,
+        codeLanguage: 'Dialogue Template',
+      },
       worldbuilding: {
         id: 'worldbuilding',
-        title: 'Worldbuilding Templates',
+        title: 'Worldbuilding Templates (Templates 8–9)',
         content:
           '**Worldbuilding prompts work best with the concentric ring structure: anchor to one sensory detail, expand outward.** Starting with "describe my fantasy city" produces a catalogue. Starting with "the smell of the market at dawn" produces a world the reader inhabits.',
         snippetBlocks: [
@@ -224,16 +345,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'plain-terms',
             text: 'Start with something small and specific — the weight of a coin, the smell of a forge, the sound of a specific street vendor — and ask the model to expand outward from there. Stop before you reach the city level. Multiple short worldbuilding passages from different anchors build a richer world than one comprehensive description ever will.',
-          },
-        ],
-        promptExamples: [
-          {
-            label: 'Worldbuilding Template: Concentric Rings',
-            text: 'Anchor: [one specific sensory detail — a smell, a sound, a texture]\nPOV: [observer character or omniscient]\nRings: expand from the anchor outward — object → room → building → street → district. Stop when you reach [ring level].\nWord ceiling: [200–400 words]\n\nDo not name the world. Do not explain the history. Show only what the POV character perceives in this moment.',
-          },
-          {
-            label: 'Faction Culture Prompt',
-            text: 'Describe the interior of a building used by [faction] — only through the objects in the room, not through description of the people or their beliefs. 150 words max.',
           },
         ],
         items: [
@@ -250,21 +361,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      template8: {
+        id: 'template-8',
+        title: 'Template 8 — Worldbuilding Concentric Rings',
+        content:
+          'Anchors to one sensory detail and expands outward. Prevents encyclopaedic catalogues and produces immersive world description the reader inhabits rather than reads about.',
+        codeBlock: `Anchor: [one specific sensory detail — a smell, a sound, a texture]
+POV: [observer character or omniscient]
+Rings: expand from the anchor outward — object → room → building → street → district. Stop when you reach [ring level: room / building / street / district].
+Word ceiling: [200–400 words]
+
+Do not name the world. Do not explain the history. Show only what the POV character perceives in this moment.`,
+        codeLanguage: 'Worldbuilding Template',
+      },
+      template9: {
+        id: 'template-9',
+        title: 'Template 9 — Faction Culture Through Objects',
+        content:
+          "Reveals worldbuilding through material culture rather than description or exposition. What a faction owns, uses, and keeps visible tells the reader more than any explanation of their beliefs.",
+        codeBlock: `Faction: [name and one-line description of their core belief or function]
+
+Describe the interior of a building used by this faction — only through the objects in the room. Do not describe the people. Do not state their beliefs. Do not explain the purpose of any object. 150 words max.`,
+        codeLanguage: 'Worldbuilding Template',
+      },
       styleTransfer: {
         id: 'style-transfer',
-        title: 'Style Transfer Templates',
+        title: 'Style Transfer Templates (Templates 10–11)',
         content:
-          '**Style transfer works when you name the technique, not just the author.** "Write like Cormac McCarthy" produces a generic approximation — sparse punctuation and Western themes. "Write using McCarthy\'s technique of nested subordinate clauses, concrete nouns only, no dialogue tags" produces something with actual structural fidelity.',
-        promptExamples: [
-          {
-            label: 'Style Transfer Template: Technique-Named',
-            text: 'Target style: [Author name]\nTechniques to replicate (name 2–3 specifically):\n1. [Technique — e.g., "sentence fragments for interiority"]\n2. [Technique — e.g., "concrete Anglo-Saxon vocabulary, no Latinate abstractions"]\n3. [Technique — e.g., "em dashes for interruption, never ellipsis"]\n\nSample passage (2–3 sentences of the author\'s actual prose):\n"[paste sample]"\n\nNow write [scene description] using these techniques. 200 words. Do not mimic the sample — replicate the technique.',
-          },
-          {
-            label: 'Genre Register Transfer Prompt',
-            text: 'This scene is currently written in thriller-genre prose. Rewrite it in the register of literary fiction: longer sentences, more interiority, less action description. Do not change any plot information.',
-          },
-        ],
+          '**Style transfer works when you name the technique, not just the author.** "Write like Cormac McCarthy" produces a generic approximation — sparse punctuation and Western themes. "Write using McCarthy\'s technique of nested subordinate clauses, concrete nouns only, no dialogue tags" produces something with actual structural fidelity. For a fuller framework on structuring prompts that produce specific creative outputs, see [the CRAFT framework](/frameworks/craft).',
         items: [
           '**Name the techniques specifically** — "spare prose" is vague; "short declarative sentences, concrete nouns, no modifiers" is actionable.',
           '**Paste a sample** — 2–3 sentences of the actual author\'s prose activates pattern matching in the model more effectively than description alone.',
@@ -279,26 +403,46 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      template10: {
+        id: 'template-10',
+        title: 'Template 10 — Technique-Named Style Transfer',
+        content:
+          "Names specific techniques rather than the author's name alone. Produces structural fidelity rather than surface-level pastiche.",
+        codeBlock: `Target style: [Author name]
+Techniques to replicate (name 2–3 specifically):
+1. [Technique — e.g., "sentence fragments for interiority"]
+2. [Technique — e.g., "concrete Anglo-Saxon vocabulary, no Latinate abstractions"]
+3. [Technique — e.g., "em dashes for interruption, never ellipsis"]
+
+Sample passage (2–3 sentences of the author's actual prose):
+"[paste sample]"
+
+Now write [scene description] using these techniques. 200 words. Do not mimic the sample — replicate the technique.`,
+        codeLanguage: 'Style Transfer Template',
+      },
+      template11: {
+        id: 'template-11',
+        title: 'Template 11 — Genre Register Transfer',
+        content:
+          'Moves existing prose between genre registers without altering plot information. Useful for finding the right register for a scene or for revision when the register does not match the genre.',
+        codeBlock: `Source register: [thriller / romance / horror / literary fiction / commercial fiction / etc.]
+Target register: [literary fiction / commercial fiction / genre X]
+Specific changes: [longer sentences / more interiority / less action description / etc.]
+
+Rewrite the following passage in [target register]. Do not change any plot information. Word ceiling: same length as input.
+
+[paste passage]`,
+        codeLanguage: 'Style Transfer Template',
+      },
       revision: {
         id: 'revision',
-        title: 'Revision Prompts',
+        title: 'Revision Templates (Template 12)',
         content:
           '**Revision prompts need a named problem, not a general instruction to improve.** "Make this better" produces minimal surface-level edits. "Eliminate every passive construction; every sentence must begin with a concrete noun or a strong active verb" produces measurable structural change.',
-        promptExamples: [
-          {
-            label: 'Passive Voice Elimination',
-            text: 'Rewrite the following paragraph: every sentence must use active voice. If the subject is not clear, invent a concrete subject. 150 words max:\n\n[paste paragraph]',
-          },
-          {
-            label: 'Compression Prompt',
-            text: 'The following scene is [N] words. Rewrite it in [N/2] words. Preserve the emotional beat and all sensory anchors. Cut dialogue tags, action beats, and transitions first:\n\n[paste scene]',
-          },
-        ],
         items: [
-          '**Passive voice elimination:** "Rewrite: every sentence must use active voice. If the subject is not clear, invent a concrete subject."',
-          '**Adverb reduction:** "Rewrite: remove every adverb. Replace the adverb + weak verb combination with a single strong verb. Do not add new plot information."',
+          '**Always paste the draft, not a description.** Revision prompts only work when you paste the actual draft text. Describing the problem without showing the prose produces generic advice rather than a rewritten passage.',
+          '**Name the specific problem.** "Rewrite" is not enough. Identify one structural issue: passive voice, adverb overload, head-hopping, bloat, or info-dump.',
           '**Head-hopping fix:** "The following passage contains POV violations — we hear thoughts from multiple characters. Rewrite it strictly in close third [Character Name]. Remove all interior access to other characters."',
-          '**Compression:** "Rewrite in [X] words. Preserve the emotional beat and all sensory anchors. Cut dialogue tags, action beats, and transitions first."',
           '**Dialogue naturalisation:** "The following dialogue sounds written. Rewrite: characters may interrupt each other, speak in fragments, talk past each other. Keep the same information exchanged."',
         ],
         callouts: [
@@ -307,6 +451,85 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Always paste the draft, not a description. Revision prompts only work when you paste the actual draft text. Describing the problem without showing the prose produces generic advice rather than a rewritten passage. Paste the specific paragraph or exchange, name the specific problem, and specify the word ceiling for the rewrite.',
           },
         ],
+      },
+      template12: {
+        id: 'template-12',
+        title: 'Template 12 — Revision Toolkit (Compression, Passive Voice, Adverb Reduction)',
+        content:
+          'Three revision instructions that name the specific problem. Run each separately — combining all three in one prompt produces inconsistent results as the model prioritises one instruction over the others.',
+        codeBlock: `--- COMPRESSION ---
+The following scene is [N] words. Rewrite it in [N/2] words. Preserve the emotional beat and all sensory anchors. Cut dialogue tags, action beats, and transitions first:
+
+[paste scene]
+
+---
+
+--- PASSIVE VOICE ELIMINATION ---
+Rewrite the following paragraph: every sentence must use active voice. If the subject is not clear, invent a concrete subject. 150 words max:
+
+[paste paragraph]
+
+---
+
+--- ADVERB REDUCTION ---
+Rewrite the following: remove every adverb. Replace each adverb + weak verb pair with a single strong verb. Do not add new plot information:
+
+[paste paragraph]`,
+        codeLanguage: 'Revision Template',
+      },
+      editorialTemplates: {
+        id: 'editorial-templates',
+        title: 'Editorial Templates (Templates 13–15)',
+        content:
+          '**Editorial templates operate at manuscript level rather than scene level.** They help you catch continuity errors before they compound, identify pacing problems across a full chapter, and redistribute information dumps into rendered prose. Run these after drafting, not during.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Run editorial templates on completed drafts, not works-in-progress. Plot Consistency Check requires at least 3 scenes; Pacing Analysis requires a full chapter. Running them on incomplete passages produces false positives and wastes context window.',
+          },
+        ],
+      },
+      template13: {
+        id: 'template-13',
+        title: 'Template 13 — Plot Consistency Check',
+        content:
+          'Identifies continuity errors before they compound across chapters. Run after every 3–4 new scenes to catch errors while they are still easy to fix.',
+        codeBlock: `[paste the last 3 scenes here]
+
+Read these three scenes carefully. List every continuity error you detect: changed physical descriptions (eye colour, hair, height), location inconsistencies, timeline conflicts, object appearances that contradict earlier scenes, character knowledge they should not yet have.
+
+Output only a flag list — one sentence per flag, 150 words maximum total. Do not summarise the scenes. Do not suggest fixes. Flag only.`,
+        codeLanguage: 'Editorial Template',
+      },
+      template14: {
+        id: 'template-14',
+        title: 'Template 14 — Pacing Analysis',
+        content:
+          'Maps pacing across a chapter to identify flat zones. Useful when a chapter reads correctly at the sentence level but feels slow overall — the pacing marks show where the drag originates.',
+        codeBlock: `[paste chapter here]
+
+Read this chapter and mark each paragraph with: FAST / MEDIUM / SLOW.
+
+After marking, list only the SLOW paragraphs with a one-sentence diagnosis for each: what is causing the pacing to drag (over-description, dialogue repetition, excessive interiority, unnecessary backstory insertion, etc.).
+
+Output format: Paragraph [number]: [SLOW] — [one-sentence diagnosis]
+No other commentary. No summaries. Diagnosis only.`,
+        codeLanguage: 'Editorial Template',
+      },
+      template15: {
+        id: 'template-15',
+        title: 'Template 15 — Exposition Smoothing',
+        content:
+          'Redistributes information-dump exposition across dialogue, action, and sensory detail without adding or removing any information. Use when a paragraph reads as a fact-delivery mechanism rather than a scene.',
+        codeBlock: `[paste paragraph with exposition]
+
+This paragraph delivers exposition as a block. Rewrite it by distributing the same information across three channels:
+1. A line of dialogue that reveals one piece of information through character reaction (not explanation).
+2. One action beat that implies one piece of information without stating it.
+3. One sensory detail that shows one piece of information without naming it.
+
+Word ceiling: same length as the input paragraph. Do not add any new information. Do not remove any information that was in the original.`,
+        codeLanguage: 'Editorial Template',
       },
       models: {
         id: 'models',
