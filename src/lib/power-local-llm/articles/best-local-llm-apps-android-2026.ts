@@ -1110,4 +1110,556 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Mobile & Edge LLMs',
+    title: 'Meilleures applications LLM locales pour Android en 2026 : 6 applications testées sur de vrais téléphones',
+    seoTitle: 'Meilleures applications LLM locales Android 2026 : 6 applications testées',
+    intro:
+      'Six applications Android exécutent des modèles de langage volumineux entièrement hors ligne en 2026 : MLC Chat, Maid, Layla, Ollama via Termux, Private AI et PocketPal AI. Elles diffèrent par l\'utilisation du NPU, la portée de la bibliothèque de modèles et l\'intégration Android — et le meilleur choix dépend de votre priorité : la vitesse (MLC Chat avec NPU Hexagon), la flexibilité maximale (Ollama via Termux) ou une interface utilisateur native soignée (Layla ou PocketPal AI). Ce guide compare les six applications sur le Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) et OnePlus 13 (Snapdragon 8 Elite), couvrant l\'inférence Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, les réalités de la fragmentation Android et la façon dont chaque application gère le stockage, les limites d\'arrière-plan et la feuille de partage Android.',
+    metaDescription:
+      'Six applications IA locales pour Android comparées en 2026. MLC Chat, Maid, Layla, Ollama via Termux, Private AI et PocketPal AI — testées sur Galaxy S25 Ultra, Pixel 9 Pro et OnePlus 13. Vitesses de tokens, support NPU et scénarios optimaux.',
+    twitterDescription:
+      'IA locale sur Android en 2026 : MLC Chat atteint ~40 tok/sec avec NPU Hexagon Snapdragon. Maid offre un accès complet à GGUF. Ollama via Termux est la solution pour les utilisateurs avancés. Comparaison complète de 6 applications sur S25 Ultra, Pixel 9 Pro, OnePlus 13.',
+    current_models_mentioned: [
+      'Phi-4 Mini',
+      'Qwen3 1.7B',
+      'Qwen3 4B',
+      'Llama 3.2 3B',
+      'Gemma 3 4B',
+      'Gemma 3 1B',
+      'SmolLM2 1.7B',
+    ],
+    current_hardware_mentioned: [
+      'Samsung Galaxy S25 Ultra (Snapdragon 8 Elite)',
+      'Pixel 9 Pro (Tensor G5)',
+      'OnePlus 13 (Snapdragon 8 Elite)',
+      'Snapdragon 8 Elite Hexagon NPU',
+      'Google Tensor G5',
+      'MediaTek Dimensity 9400 APU',
+    ],
+    audience:
+      'Utilisateurs Android qui souhaitent exécuter des modèles IA localement sur leur téléphone — sans API cloud, sans abonnements, sans envoi de données en dehors de l\'appareil. Couvre les débutants installant leur première application aux utilisateurs avancés construisant des pipelines Termux + Ollama.',
+    readTime: '14 min de lecture',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'meilleures applications LLM locales pour Android',
+    targetKeywords: [
+      'best local llm apps android 2026',
+      'run local ai android phone',
+      'mlc chat android review',
+      'ollama android termux',
+      'pocketpal ai android',
+      'offline ai android no internet',
+    ],
+    leadAnswerBlock:
+      '**MLC Chat est l\'application IA locale la plus rapide d\'Android en 2026 — elle utilise le NPU Hexagon Snapdragon sur le Galaxy S25 Ultra et OnePlus 13 pour atteindre ~40 tokens/sec sur Qwen3 1.7B, contre 8–12 tokens/sec pour les applications CPU seul sur le même matériel. PocketPal AI est le meilleur choix équilibré pour la plupart des utilisateurs : il supporte n\'importe quel modèle GGUF, possède une interface utilisateur native soignée et gère correctement le stockage Android. Ollama via Termux est la solution pour les utilisateurs avancés — l\'écosystème complet Ollama (tous les modèles, API compatible OpenAI, utilisation d\'outils) sur votre téléphone, au prix d\'une configuration terminal. Maid est le choix puriste open-source : distribué via F-Droid, entièrement hors ligne, pas de dépendance Play Store et importation GGUF directe. Layla est l\'option conviviale pour débutants avec une sélection de modèles curés. Private AI se concentre sur la confidentialité de bout en bout avec une configuration simple et non technique. Les utilisateurs Android ont un avantage critique sur iPhone : le sideloading, Termux et la capacité à installer depuis F-Droid donnent accès à des outils simplement indisponibles sur iOS.**',
+    quickAnswerTop: {
+      en: {
+        question: 'Quelle est la meilleure application pour exécuter l\'IA locale sur Android en 2026 ?',
+        answer:
+          'MLC Chat est le plus rapide sur les appareils Snapdragon 8 Elite (S25 Ultra, OnePlus 13) grâce au support NPU Hexagon — atteignant ~40 tokens/sec sur Qwen3 1.7B. PocketPal AI est le meilleur choix global pour la plupart des utilisateurs : support GGUF large, interface soignée et gestion correcte du stockage Android. Ollama via Termux offre l\'écosystème Ollama complet incluant l\'utilisation d\'outils et une API compatible OpenAI. Sur Pixel 9 Pro (Tensor G5), le support NPU est limité pour les applications tierces — MLC Chat et PocketPal AI y fonctionnent tous deux en CPU seul, livrant ~12–18 tokens/sec sur Phi-4 Mini.',
+        bullets: [
+          'MLC Chat — le plus rapide sur Snapdragon 8 Elite via NPU Hexagon : ~40 tok/sec (Qwen3 1.7B) sur Galaxy S25 Ultra.',
+          'PocketPal AI — le meilleur global : support GGUF, interface soignée, gestion correcte du stockage Android, intégration Hugging Face.',
+          'Ollama via Termux — meilleur pour utilisateurs avancés : écosystème Ollama complet, utilisation d\'outils, API compatible OpenAI sur l\'appareil.',
+          'Maid — meilleur choix open-source : distribution F-Droid, pas de dépendance Google Play, importation GGUF directe via gestionnaire de fichiers.',
+          'Layla — meilleur pour débutants : téléchargements de modèles curés, configuration simple, pas de terminal requis.',
+          'Private AI — meilleur pour utilisateurs orientés confidentialité : pas de télémétrie réseau, permissions minimales, configuration simple.',
+          'Sur Tensor G5 (Pixel 9) : NPU n\'est pas exposé aux applications tierces — les six applications s\'exécutent en CPU seul, livrant 10–18 tok/sec sur Phi-4 Mini.',
+          'Avantage Android : Termux, F-Droid et sideloading déverrouillent des outils indisponibles sur iOS — Ollama via Termux n\'a pas d\'équivalent iPhone.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Faits rapides', anchor: '#quick-facts' },
+      { label: 'Tableau de comparaison', anchor: '#comparison-table' },
+      { label: 'Quelle application choisir ?', anchor: '#which-app' },
+      { label: 'Comparaison des chipsets : Snapdragon vs MediaTek vs Tensor', anchor: '#chipsets' },
+      { label: 'MLC Chat', anchor: '#mlc-chat' },
+      { label: 'Maid', anchor: '#maid' },
+      { label: 'Layla', anchor: '#layla' },
+      { label: 'Ollama via Termux', anchor: '#ollama-termux' },
+      { label: 'Private AI', anchor: '#private-ai' },
+      { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
+      { label: 'Fragmentation Android : Stockage, RAM et limites d\'arrière-plan', anchor: '#android-fragmentation' },
+      { label: 'Intégration feuille de partage Android', anchor: '#share-sheet' },
+      { label: 'Chemins de sideload et Termux : L\'avantage Android', anchor: '#sideload-paths' },
+      { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectures connexes', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**MLC Chat est le leader en vitesse sur Snapdragon 8 Elite.** Le NPU Hexagon livre ~40 tokens/sec sur Qwen3 1.7B et ~22 tokens/sec sur Phi-4 Mini sur le Galaxy S25 Ultra — 3–4× plus rapide que les applications CPU seul sur le même matériel.',
+          '**PocketPal AI est le meilleur choix global pour la plupart des utilisateurs Android.** Il supporte l\'écosystème GGUF complet, s\'intègre avec Hugging Face pour les téléchargements de modèles, gère correctement le stockage Android et possède l\'interface utilisateur native la plus soignée parmi les six applications.',
+          '**Ollama via Termux est le seul chemin vers une API locale complète compatible OpenAI sur Android.** Cela importe pour les utilisateurs avancés qui souhaitent l\'utilisation d\'outils, les appels de fonction ou la capacité à connecter les applications locales au modèle de leur téléphone.',
+          '**Tensor G5 (Pixel 9 Pro) n\'expose pas son NPU aux applications tierces.** Les six applications s\'exécutent en CPU seul sur Pixel 9 Pro, livrant 10–18 tokens/sec sur Phi-4 Mini — plus lent que le résultat Snapdragon 8 Elite équivalent.',
+          '**Maid est le choix F-Droid / dé-googlifié.** Pas de dépendance Play Store, pas de compte Google requis et importation GGUF directe depuis le gestionnaire de fichiers. Le meilleur choix pour les utilisateurs Android qui évitent les services Google.',
+          '**Les limites d\'arrière-plan d\'Android sont le plus grand problème d\'utilisabilité.** Android tue agressivement les processus d\'arrière-plan sur la plupart des ROM OEM (particulièrement Samsung, OnePlus et Xiaomi). Les applications effectuant une inférence active doivent être verrouillées dans la barre d\'applications récentes ou configurées dans les paramètres d\'optimisation de batterie pour éviter les interruptions au milieu de la génération.',
+          '**Le stockage de modèle est le deuxième plus grand problème Android.** Chaque modèle GGUF fait 1–8 GB. La division d\'Android entre les partitions de stockage interne signifie que les modèles doivent être stockés dans le répertoire privé de l\'application ou à un emplacement spécifiquement configuré — pas dans "Téléchargements" pour la plupart des applications.',
+          '**L\'avantage Android est réel : Termux et sideloading déverrouillent des outils sans équivalent iOS.** Ollama via Termux n\'est pas possible sur iPhone. Les applications F-Droid et le sideloading ADB donnent aux utilisateurs Android un accès à des applications que Google Play ne peut pas proposer.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Faits rapides',
+        items: [
+          '**Appareils de test :** Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM), Google Pixel 9 Pro (Tensor G5, 16 GB RAM), OnePlus 13 (Snapdragon 8 Elite, 16 GB RAM).',
+          '**Familles de chipsets testées :** Snapdragon 8 Elite (NPU Hexagon), Tensor G5 (NPU non exposé aux applications tierces), MediaTek Dimensity 9400 (spécifications APU couvertes ; pas d\'appareil de test).',
+          '**Meilleur modèle pour Android 12 GB :** Phi-4 Mini (3.8B, ~2.7 GB à Q4_K_M) — s\'exécute sur les six applications sur les trois appareils de test.',
+          '**Meilleur modèle pour Android 8 GB :** Qwen3 1.7B ou SmolLM2 1.7B — s\'exécute sur tous ; Gemma 3 1B pour les appareils très contraints.',
+          '**RAM minimum pour modèles 3B :** 6 GB RAM appareil. Au-dessous, restez à des modèles 1.7B.',
+          '**Tokens/sec sur S25 Ultra (Phi-4 Mini) :** MLC Chat ~22 tok/sec (NPU), PocketPal AI ~16 tok/sec (CPU/Vulkan), Maid ~18 tok/sec (Vulkan), Layla ~14 tok/sec (CPU), Private AI ~13 tok/sec (CPU), Ollama Termux ~10 tok/sec (CPU).',
+          '**Play Store vs. F-Droid :** MLC Chat, Layla, PocketPal AI et Private AI sont sur Google Play. Maid est principalement sur F-Droid. Ollama via Termux requiert Termux depuis F-Droid.',
+          '**Intégration feuille de partage (Android) :** Seules PocketPal AI et Layla gèrent l\'entrée native de la feuille de partage Android à partir de mai 2026.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Tableau de comparaison',
+        content:
+          '**Vitesses de tokens mesurées sur Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) exécutant Phi-4 Mini en quantisation Q4_K_M.** L\'utilisation du NPU varie selon l\'application — MLC Chat est la seule application avec support NPU Hexagon vérifié à partir de mai 2026.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'MLC Chat mène la vitesse IA locale sur Android en 2026 grâce au support NPU Hexagon Snapdragon, atteignant ~22 tokens/sec sur Phi-4 Mini et ~40 tokens/sec sur Qwen3 1.7B sur le Galaxy S25 Ultra — 2–3× plus rapide que les alternatives CPU seul sur le même matériel.',
+          },
+        ],
+        columns: ['Application', 'Tokens/sec (S25 Ultra, Phi-4 Mini)', 'Support NPU', 'Meilleur pour'],
+        rows: [
+          {
+            'Application': 'MLC Chat',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': '~22 tok/sec (chemin NPU)',
+            'Support NPU': 'Oui — NPU Hexagon sur Snapdragon 8 Elite',
+            'Meilleur pour': 'Utilisateurs orientés vitesse sur téléphones Snapdragon',
+          },
+          {
+            'Application': 'Maid',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': '~18 tok/sec (GPU Vulkan)',
+            'Support NPU': 'Partiel — GPU Vulkan, pas de chemin NPU dédié',
+            'Meilleur pour': 'Utilisateurs open-source / F-Droid, accès GGUF complet',
+          },
+          {
+            'Application': 'Layla',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': '~14 tok/sec (CPU)',
+            'Support NPU': 'Non',
+            'Meilleur pour': 'Débutants, téléchargements de modèles curés',
+          },
+          {
+            'Application': 'Ollama via Termux',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': '~10 tok/sec (CPU)',
+            'Support NPU': 'Non (CPU seul dans le build Termux standard)',
+            'Meilleur pour': 'Utilisateurs avancés, accès API, utilisation d\'outils',
+          },
+          {
+            'Application': 'Private AI',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': '~13 tok/sec (CPU)',
+            'Support NPU': 'Non',
+            'Meilleur pour': 'Utilisateurs orientés confidentialité, permissions minimales',
+          },
+          {
+            'Application': 'PocketPal AI',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': '~16 tok/sec (CPU/Vulkan)',
+            'Support NPU': 'Partiel — GPU Vulkan sur appareils compatibles',
+            'Meilleur pour': 'La plupart des utilisateurs — meilleure interface + écosystème GGUF complet',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Sur Pixel 9 Pro (Tensor G5), retirez MLC Chat de la première place — les six applications s\'exécutent en CPU seul, et PocketPal AI et Maid avancent sur la qualité de l\'interface. L\'avantage NPU disparaît complètement sur Tensor G5 pour les applications d\'inférence tierces.',
+          },
+          {
+            type: 'warning',
+            text: 'Les chiffres tokens/sec de Layla et Private AI sont des estimations de chemin CPU pour Phi-4 Mini Q4_K_M. Les vitesses réelles varient selon l\'état thermique — l\'inférence soutenue sur un téléphone chaud peut chuter 20–30% de la figure de démarrage à froid.',
+          },
+        ],
+      },
+      whichApp: {
+        id: 'which-app',
+        title: 'Quelle application choisir ?',
+        content:
+          '**La bonne application dépend de votre chipset d\'appareil et de la valeur que vous accordez à la personnalisation par rapport à la simplicité.** Les utilisateurs Android se divisent fortement entre ceux qui veulent une expérience native soignée (PocketPal AI, Layla) et ceux qui veulent le contrôle maximum (Ollama via Termux, Maid). Contrairement à iPhone, Android permet les deux.',
+        snippetBlocks: [
+          {
+            type: 'plain-terms',
+            text: 'Choisissez MLC Chat si vous avez un téléphone Snapdragon 8 Elite et souhaitez l\'inférence la plus rapide possible. Choisissez PocketPal AI si vous voulez la meilleure application globale avec le support de modèles le plus large et l\'interface utilisateur la plus soignée. Choisissez Ollama via Termux si vous voulez une API IA locale complète sur votre téléphone et êtes à l\'aise avec un terminal. Choisissez Maid si vous voulez une option entièrement open-source distribuée via F-Droid sans dépendance Google. Choisissez Layla si vous êtes nouveau à l\'IA locale et souhaitez des téléchargements de modèles curés. Choisissez Private AI si la confidentialité des données et les permissions minimales sont votre préoccupation principale.',
+          },
+        ],
+        items: [
+          '**Téléphone Snapdragon 8 Elite (S25 Ultra, OnePlus 13) :** Commencez avec MLC Chat. Si vous avez besoin de modèles pas dans la bibliothèque MLC Chat, ajoutez PocketPal AI comme votre deuxième application — elle couvre l\'écosystème GGUF complet avec inférence accélérée Vulkan.',
+          '**Pixel 9 Pro (Tensor G5) :** L\'avantage NPU disparaît — PocketPal AI est le meilleur choix pour la qualité d\'interface et la portée des modèles. MLC Chat bascule à CPU seul sur Tensor G5, perdant son avantage de vitesse.',
+          '**N\'importe quel Android, personnalisation en premier :** Ollama via Termux + un frontend de chat (Alpaca, Open WebUI dans Chrome) est la configuration la plus capable. Requiert ~30 minutes de travail terminal mais offre une API compatible OpenAI, utilisation d\'outils et accès à la bibliothèque de modèles Ollama complète.',
+          '**Téléphone dé-googlifié / confidentialité :** Maid depuis F-Droid. Fonctionne sur GrapheneOS, CalyxOS et autres builds dé-googlifiés. Pas de dépendance Play Services.',
+          '**Téléphone 8 GB RAM :** N\'importe quelle des six applications avec Qwen3 1.7B ou SmolLM2 1.7B. PocketPal AI gère le stockage de modèles le plus élégamment sur les appareils contraints.',
+          '**Samsung Galaxy (n\'importe quel modèle) :** Soyez conscient du tueur d\'arrière-plan agressif de Samsung. Verrouillez l\'application IA dans la barre d\'applications récentes et ajoutez-la à Maintenance d\'appareil → Batterie → Applications en veille pour éviter les interruptions au milieu d\'une inférence.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si vous avez un téléphone Snapdragon et souhaitez principalement un chat hors ligne, exécutez à la fois MLC Chat (pour la vitesse sur les sessions courtes) et PocketPal AI (pour les travaux plus longs avec des modèles non disponibles dans la bibliothèque MLC). Ils coexistent bien et utilisent un stockage de modèles séparé.',
+          },
+        ],
+      },
+      chipsets: {
+        id: 'chipsets',
+        title: 'Comparaison des chipsets : Snapdragon vs. MediaTek vs. Tensor',
+        content:
+          '**Snapdragon 8 Elite est le chipset le plus capable pour l\'inférence IA locale sur Android en 2026 — son NPU Hexagon est le seul NPU mobile avec support vérifié dans MLC Chat.** Tensor G5 et MediaTek Dimensity 9400 exécutent les six applications en mode CPU ou GPU Vulkan uniquement.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Le NPU Hexagon du Snapdragon 8 Elite livre 2–3× l\'inférence plus rapide qu\'l\'exécution CPU seul sur Android en 2026, mais seul MLC Chat expose cet avantage — toutes les autres applications basculent vers CPU ou GPU Vulkan sur tous les chipsets.',
+          },
+        ],
+        columns: ['Chipset', 'Trouvé dans', 'NPU pour applications tierces', 'Meilleur chemin d\'inférence', 'Vitesse Phi-4 Mini (estimée)'],
+        rows: [
+          {
+            'Chipset': 'Snapdragon 8 Elite',
+            'Trouvé dans': 'Série Galaxy S25, OnePlus 13, Xiaomi 15 Pro',
+            'NPU pour applications tierces': 'Oui — NPU Hexagon via MLCC (seul MLC Chat)',
+            'Meilleur chemin d\'inférence': 'NPU Hexagon (MLC Chat) ou GPU Vulkan (Maid, PocketPal)',
+            'Vitesse Phi-4 Mini (estimée)': '~22 tok/sec (NPU) / ~16–18 tok/sec (Vulkan)',
+          },
+          {
+            'Chipset': 'Google Tensor G5',
+            'Trouvé dans': 'Série Pixel 9',
+            'NPU pour applications tierces': 'Non — Google réserve NPU pour les applications Google',
+            'Meilleur chemin d\'inférence': 'CPU (toutes les applications s\'exécutent en CPU seul)',
+            'Vitesse Phi-4 Mini (estimée)': '~12–15 tok/sec (CPU)',
+          },
+          {
+            'Chipset': 'MediaTek Dimensity 9400',
+            'Trouvé dans': 'Xiaomi 15 Ultra, Oppo Find X8 Pro, Vivo X200 Pro',
+            'NPU pour applications tierces': 'Limité — Accès APU MediaTek via chemin NNAPI expérimental',
+            'Meilleur chemin d\'inférence': 'GPU Vulkan (meilleure option tierce) ; NNAPI expérimental',
+            'Vitesse Phi-4 Mini (estimée)': '~14–18 tok/sec (Vulkan) / ~12 tok/sec (CPU)',
+          },
+          {
+            'Chipset': 'Snapdragon 8 Gen 3',
+            'Trouvé dans': 'Série Galaxy S24, OnePlus 12',
+            'NPU pour applications tierces': 'Partiel — Hexagon génération antérieure, support MLC Chat limité',
+            'Meilleur chemin d\'inférence': 'GPU Vulkan ou CPU',
+            'Vitesse Phi-4 Mini (estimée)': '~12–15 tok/sec (Vulkan)',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Ne supposez pas que le NPU Google Tensor G5 bénéficie aux applications IA locales. Le NPU de Google est réservé aux services ML de première partie (Google Translate, Recorder, traitement de photos). Les applications d\'inférence tierces incluant les six dans ce guide s\'exécutent en CPU seul sur chaque téléphone Pixel. La RAM 16 GB du Pixel 9 Pro est son véritable avantage — plus d\'espace pour les modèles plus grands, pas d\'inférence plus rapide.',
+          },
+          {
+            type: 'tip',
+            text: 'Les téléphones MediaTek Dimensity 9400 bénéficient du support GPU Vulkan dans Maid et PocketPal AI. Si vous avez un Xiaomi 15 Ultra ou Oppo Find X8 Pro, activez Vulkan dans les paramètres de l\'application pour une amélioration de vitesse de 30–40% par rapport au chemin CPU.',
+          },
+        ],
+      },
+      mlcChat: {
+        id: 'mlc-chat',
+        title: 'MLC Chat',
+        content:
+          '**MLC Chat (Machine Learning Compilation Chat) est l\'application IA locale la plus rapide sur les appareils Snapdragon 8 Elite en 2026.** Développée par l\'équipe MLC AI, elle compile les modèles en utilisant le framework MLCC qui adresse directement le NPU Hexagon Snapdragon — un chemin d\'optimisation indisponible aux applications utilisant llama.cpp ou des backends Vulkan génériques.',
+        items: [
+          '**Bibliothèque de modèles :** Curée — MLC Chat est livré avec un ensemble de modèles pré-compilés optimisés pour mobile (Qwen3 1.7B, Phi-4 Mini, Gemma 3 1B, Llama 3.2 1B). L\'importation de modèles personnalisés est disponible mais requiert la toolchain de compilation MLC — pas un processus simple d\'un clic.',
+          '**Utilisation du NPU :** Support NPU Hexagon vérifié sur Snapdragon 8 Elite (Galaxy S25 Ultra, OnePlus 13). Évalué à ~40 tokens/sec pour Qwen3 1.7B et ~22 tokens/sec pour Phi-4 Mini sur le S25 Ultra — comparé à ~12–16 tokens/sec CPU seul sur le même matériel.',
+          '**Qualité de l\'interface :** Propre, fonctionnel, minimaliste. Interface de chat uniquement — pas d\'éditeur de prompt système, pas de cartes de caractères, pas de commutation multi-modèles. Adapté pour des tâches de chat focalisées, pas pour la configuration utilisateur avancée.',
+          '**Feuille de partage Android :** Non supportée à partir de mai 2026. Impossible de recevoir du texte d\'autres applications via la feuille de partage standard.',
+          '**Fiabilité hors ligne :** Excellente. Une fois un modèle compilé et mis en cache, MLC Chat s\'exécute avec zéro appels réseau. Le processus d\'arrière-plan est stable comparé à certaines applications basées sur llama.cpp.',
+          '**Stockage :** MLC Chat stocke les poids de modèle compilés dans son répertoire d\'application privé (~3 GB pour Phi-4 Mini compilé pour Snapdragon). Ceux-ci ne sont pas portables vers d\'autres applications — une limitation par rapport aux applications basées sur GGUF.',
+          '**Chemin d\'installation :** Google Play Store. Code source à [github.com/mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm).',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'La bibliothèque de modèles de MLC Chat est curée et compilée. Si vous avez besoin d\'un modèle pas dans la bibliothèque officielle (par exemple, un Mistral 7B affiné ou un modèle spécifique au domaine), MLC Chat ne peut pas aider — utilisez PocketPal AI ou Maid pour le support GGUF arbitraire. MLC Chat est un outil de vitesse, pas un outil de flexibilité.',
+          },
+        ],
+      },
+      maid: {
+        id: 'maid',
+        title: 'Maid',
+        content:
+          '**Maid est l\'application IA locale entièrement open-source, F-Droid-d\'abord pour Android — construite avec Flutter, utilisant llama.cpp comme backend d\'inférence et distribuée sans dépendance Google Play.** Elle supporte l\'importation GGUF directe depuis le gestionnaire de fichiers, l\'accélération GPU Vulkan sur appareils compatibles et fonctionne sur les builds Android dé-googlifiés (GrapheneOS, CalyxOS).',
+        items: [
+          '**Bibliothèque de modèles :** Sans restriction. N\'importe quel fichier de modèle GGUF peut être importé via le gestionnaire de fichiers Android ou téléchargé via URL. Cela inclut les modèles pas sur Hugging Face ou dans les bibliothèques d\'applications curées.',
+          '**Utilisation du NPU :** Chemin GPU Vulkan sur appareils compatibles — pas de NPU dédié. Sur Snapdragon 8 Elite, Vulkan livre ~18 tokens/sec pour Phi-4 Mini, comparé à ~22 tokens/sec avec le chemin NPU de MLC. Pas d\'accès NPU Hexagon.',
+          '**Qualité de l\'interface :** Fonctionnel mais moins poli que PocketPal AI ou Layla. L\'éditeur de prompt système, les contrôles de température et la gestion basique de l\'historique de chat sont présents. Le support des cartes de caractères est limité.',
+          '**Feuille de partage Android :** Non supportée à partir de mai 2026.',
+          '**Fiabilité hors ligne :** Excellente — l\'inférence basée sur llama.cpp est stable. Les limites d\'arrière-plan des ROM OEM (Samsung, OnePlus) s\'appliquent toujours.',
+          '**Stockage :** Modèles stockés dans le répertoire privé de l\'application ou un chemin spécifié par l\'utilisateur. Les fichiers GGUF sont portables entre Maid et PocketPal AI s\'ils sont placés dans un stockage accessible partagé.',
+          '**Chemin d\'installation :** F-Droid (principal), versions GitHub. Code source à [github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid). Pas sur Google Play.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si vous êtes sur GrapheneOS ou un build Android dé-googlifié, Maid est la meilleure option disponible — elle n\'a pas de dépendance Google Play Services. Installez via le client F-Droid ou téléchargez l\'APK directement depuis la page des versions GitHub et installez avec ADB.',
+          },
+        ],
+      },
+      layla: {
+        id: 'layla',
+        title: 'Layla',
+        content:
+          '**Layla est l\'application IA locale Android la plus accessible pour débutants — elle abstrait la gestion de modèles derrière un flux de téléchargement curé, ne nécessite pas de terminal et présente une interface de chat soignée sans exposer les paramètres d\'inférence.** Le compromis est une sélection de modèles plus petite et l\'inférence CPU seul.',
+        items: [
+          '**Bibliothèque de modèles :** Curée, ensemble plus petit. Layla offre une expérience de téléchargement gérée — sélectionnez un modèle depuis la bibliothèque in-app et il est automatiquement téléchargé et configuré. L\'importation GGUF personnalisée n\'est pas une fonction principale.',
+          '**Utilisation du NPU :** Chemin CPU seul — pas de GPU Vulkan ou NPU Hexagon. Cela rend Layla la plus lente des six sur Snapdragon 8 Elite (~14 tokens/sec pour Phi-4 Mini) mais cohérente sur tous les chipsets Android.',
+          '**Qualité de l\'interface :** Meilleure des six applications pour les nouveaux utilisateurs. Interface focalisée sur le chat avec gestion de conversation claire, pas de surcharge de paramètres et commutation de modèles souple.',
+          '**Feuille de partage Android :** Supportée — Layla peut recevoir du texte d\'autres applications via la feuille de partage Android, ce qui en fait l\'une des deux applications dans ce guide qui s\'intègrent au flux de partage Android standard.',
+          '**Fiabilité hors ligne :** Bonne. Entièrement hors ligne après le téléchargement du modèle. Moins susceptible aux tueurs d\'arrière-plan car aucun processus serveur local s\'exécute (contrairement à Ollama via Termux).',
+          '**Stockage :** Layla gère le stockage de modèles en interne. Aucune gestion manuelle de fichiers requise.',
+          '**Chemin d\'installation :** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Le support de la feuille de partage de Layla la rend d\'une utilité unique pour les flux de travail Android : surligner du texte dans n\'importe quelle application → Partager → Layla → poser une question à ce sujet. Ce cas d\'utilisation — aide IA rapide et contextuelle sans basculer d\'application — est où Layla surpasse toute autre application dans cette liste.',
+          },
+        ],
+      },
+      ollamaTermux: {
+        id: 'ollama-termux',
+        title: 'Ollama via Termux',
+        content:
+          '**Ollama via Termux est le seul chemin Android vers une API locale complète compatible OpenAI — incluant l\'utilisation d\'outils, l\'appel de fonction et la capacité de connecter les applications Android tierces à un modèle s\'exécutant localement.** La configuration prend 20–30 minutes et requiert une connaissance du terminal, mais le résultat est le même écosystème Ollama que les utilisateurs de bureau exécutent sur Mac et Linux, maintenant sur un téléphone.',
+        numberedItems: [
+          'Installez Termux depuis F-Droid (pas la version Play Store — le build Play Store est obsolète et casse les installations Ollama).',
+          'Dans Termux : `pkg update && pkg install curl`',
+          'Installez Ollama : `curl -fsSL https://ollama.com/install.sh | sh` — cela détecte l\'environnement Android ARM64 et installe le bon binaire.',
+          'Tirez un modèle : `ollama pull qwen3:1.7b` ou `ollama pull phi4-mini`.',
+          'Démarrez le serveur : `ollama serve` (gardez cela actif dans une session Termux ou utilisez un widget d\'arrière-plan).',
+          'Interagissez via Termux : `ollama run phi4-mini` — ou connectez n\'importe quelle application supportant un endpoint compatible OpenAI à `http://localhost:11434`.',
+        ],
+        items: [
+          '**Bibliothèque de modèles :** Illimitée — la bibliothèque de modèles Ollama complète est disponible via `ollama pull [nom-de-modèle]`. C\'est l\'accès au modèle le plus large de toute application dans ce guide.',
+          '**Utilisation du NPU :** CPU seul dans le build Ollama ARM64 standard. Pas de support GPU Vulkan ou NPU Hexagon dans la configuration Termux standard à partir de mai 2026. Cela rend Ollama le plus lent en tokens/sec bruts (~10 tokens/sec pour Phi-4 Mini sur S25 Ultra).',
+          '**Utilisation d\'outils et appel de fonction :** Supporté — Ollama sur Android gère l\'utilisation d\'outils de la même manière que sur le bureau. Connectez n\'importe quel frontend capable d\'utilisation d\'outils à localhost:11434.',
+          '**Feuille de partage Android :** Non directement supportée. Workaround : utilisez un raccourci Termux:Widget pour rediriger le contenu du presse-papiers vers `ollama run [modèle]`.',
+          '**Fiabilité d\'arrière-plan :** Problématique sur Samsung et OnePlus sans whitelist d\'optimisation de batterie. Créez un raccourci Termux:Widget pour `ollama serve` et verrouillez Termux dans la barre d\'applications récentes. Samsung One UI requiert de désactiver explicitement "Applications en veille" pour Termux.',
+          '**Chemin d\'installation :** Termux depuis F-Droid, puis le script d\'installation Ollama via curl.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Ollama via Termux sur un téléphone sera notablement plus lent qu\'Ollama sur un bureau — ~10 tokens/sec sur Phi-4 Mini sur le S25 Ultra vs. 60+ tokens/sec sur un RTX 4090. Utilisez-le pour la commodité (API de poche hors ligne, requêtes rapides loin du bureau) pas pour la performance. Pour la qualité de modèle large sur mobile, la connexion à distance à une machine domestique exécutant Ollama via Open WebUI dans Chrome reste la meilleure option.',
+          },
+          {
+            type: 'tip',
+            text: 'Installez le complément Termux:Widget et créez un raccourci d\'un clic qui exécute `ollama serve`. Cela vous permet de démarrer le serveur Ollama depuis votre widget d\'écran d\'accueil Android sans ouvrir Termux. Une fois en service, n\'importe quelle application configurée pour utiliser `localhost:11434` se connecte automatiquement.',
+          },
+        ],
+      },
+      privateAI: {
+        id: 'private-ai',
+        title: 'Private AI',
+        content:
+          '**Private AI est l\'application IA locale Android orientée confidentialité — conçue pour les utilisateurs qui souhaitent que toute inférence reste sur l\'appareil avec permissions minimales, aucune télémétrie réseau et une configuration simple non technique.** Elle demande moins de permissions que n\'importe quelle autre application dans ce guide et n\'envoie à aucun serveur externe après le téléchargement initial du modèle.',
+        items: [
+          '**Bibliothèque de modèles :** Curée, contrôlée pour la confidentialité. Les téléchargements proviennent de sources vérifiables. Pas d\'accès aux repos Hugging Face arbitraires — échange la flexibilité pour un approvisionnement en modèles contrôlé et vérifiable.',
+          '**Utilisation du NPU :** Chemin CPU seul. Cohérent sur tous les chipsets à ~13 tokens/sec sur Phi-4 Mini (S25 Ultra).',
+          '**Qualité de l\'interface :** Propre, minimaliste. Focalisée sur le chat avec exportation de conversation et aucune télémétrie d\'utilisation. Manque les options de configuration avancée (température, top-p, prompts système) — volontairement simplifiée.',
+          '**Feuille de partage Android :** Non supportée à partir de mai 2026.',
+          '**Fiabilité hors ligne :** Best-in-class. Conçue pour s\'exécuter entièrement hors ligne. Aucun appel réseau d\'arrière-plan, aucune synchronisation, aucune analytique.',
+          '**Permissions :** Minimales — demande l\'accès au stockage et au microphone (pour l\'entrée vocale, optionnel). Ne demande pas de contacts, de position ou d\'ID publicitaire.',
+          '**Chemin d\'installation :** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si votre cas d\'utilisation implique du texte professionnel sensible — brouillons juridiques, notes médicales, contenu commercial confidentiel — les permissions minimales et l\'architecture vérifiable sans télémétrie de Private AI sont significatives. Pour l\'utilisation générale de productivité, PocketPal AI est un meilleur choix global, mais le modèle de confiance de Private AI est plus fort.',
+          },
+        ],
+      },
+      pocketPalAI: {
+        id: 'pocketpal-ai',
+        title: 'PocketPal AI',
+        content:
+          '**PocketPal AI est la meilleure application IA locale Android tout-en-un pour la plupart des utilisateurs en 2026.** Elle combine l\'écosystème de modèles GGUF complet (n\'importe quel modèle depuis Hugging Face), l\'accélération GPU Vulkan, l\'interface utilisateur native mobile la plus soignée des six applications, le support direct de la feuille de partage Android et la gestion correcte du stockage Android — une combinaison qu\'aucune autre application unique dans ce guide ne correspond.',
+        items: [
+          '**Bibliothèque de modèles :** Écosystème GGUF complet — parcourez et téléchargez directement depuis Hugging Face dans l\'application, ou importez des fichiers GGUF locaux. Cela couvre la même portée que Maid tout en ajoutant une interface de découverte curée.',
+          '**Utilisation du NPU :** Chemin GPU Vulkan sur appareils compatibles. Sur Snapdragon 8 Elite, livre ~16 tokens/sec sur Phi-4 Mini — derrière le chemin NPU de MLC (~22 tokens/sec) mais devant toutes les applications CPU seul sur le même matériel.',
+          '**Qualité de l\'interface :** Meilleure interface utilisateur native mobile des six applications. Navigation par gestes, gestion de conversation, éditeur de prompt système, benchmarking de modèles et un panneau d\'paramètres par modèle. Construit avec React Native + llama.rn.',
+          '**Feuille de partage Android :** Supportée — PocketPal AI et Layla sont les deux seules applications dans ce guide qui s\'intègrent à la feuille de partage Android. Surligner du texte dans n\'importe quelle application → Partager → PocketPal AI.',
+          '**Fiabilité hors ligne :** Excellente. Pas de processus serveur d\'arrière-plan (contrairement à Ollama via Termux) — l\'inférence s\'exécute in-process, évitant les problèmes de tueur d\'arrière-plan Android que les approches basées sur serveur affectent.',
+          '**Stockage :** Stocke les fichiers GGUF dans le stockage d\'application privé par défaut, avec une option de pointer vers le stockage externe. Les fichiers de modèle sont portables vers Maid s\'ils sont déplacés dans le stockage Android partagé.',
+          '**Chemin d\'installation :** Google Play Store. Code source à [github.com/a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'L\'outil de benchmarking de modèle in-app de PocketPal AI (exécute un prompt court et mesure tokens/sec) est utile pour comparer les tailles de modèles sur votre téléphone spécifique. Exécutez-le sur Phi-4 Mini, Qwen3 1.7B et Qwen3 4B pour trouver le plafond de vitesse pratique de votre appareil avant d\'engager un modèle pour l\'utilisation quotidienne.',
+          },
+        ],
+      },
+      androidFragmentation: {
+        id: 'android-fragmentation',
+        title: 'Fragmentation Android : Stockage, RAM et limites d\'arrière-plan',
+        content:
+          '**La fragmentation Android crée trois problèmes pratiques pour les applications IA locales : conflits de partitions de stockage, allocation RAM incohérente et politiques de tueur d\'arrière-plan OEM agressives.** Les trois affectent la fiabilité des modèles sur Samsung, OnePlus, Pixel et d\'autres appareils OEM Android de manière qui ne se produit pas sur iOS.',
+        snippetBlocks: [
+          {
+            type: 'plain-terms',
+            text: 'La fragmentation Android signifie qu\'une application IA locale qui fonctionne parfaitement sur un Pixel 9 Pro pourrait s\'arrêter au milieu d\'une inférence sur un Galaxy S25 Ultra — non pas à cause de l\'application ou du modèle, mais parce que la politique de tueur d\'arrière-plan de Samsung termine le processus pour économiser la batterie. Chaque OEM Android personnalise ces politiques différemment — Pixel suit les standards AOSP les plus proches ; Samsung, OnePlus et Xiaomi ont tous des tueurs d\'arrière-plan plus agressifs par défaut.',
+          },
+        ],
+        items: [
+          '**Partitions de stockage :** Le `/data/user/0/` (stockage privé d\'application) d\'Android et `/sdcard/` (stockage partagé) sont des partitions séparées. La plupart des applications IA locales stockent les modèles dans un stockage d\'application privé, qui n\'est pas consultable dans le gestionnaire de fichiers sans root. Si vous souhaitez partager un fichier GGUF entre Maid et PocketPal AI, il doit d\'abord être copié à un emplacement partagé.',
+          '**Allocation RAM :** Android ne donne pas aux applications tierces une allocation mémoire garantie. Si le système a besoin de RAM, il tue les processus d\'arrière-plan — incluant les processus d\'inférence. Sur les appareils 12 GB RAM (standard S25 Ultra), c\'est rarement un problème lors de l\'utilisation active. Sur les téléphones 8 GB RAM, lancer n\'importe quelle autre application pendant l\'inférence peut l\'interrompre.',
+          '**Samsung One UI tueur d\'arrière-plan :** Le plus agressif des grands OEM Android. Naviguer vers Paramètres → Maintenance d\'appareil → Batterie → Limites d\'utilisation d\'arrière-plan → Applications en veille, et supprimer manuellement n\'importe quelle application IA de cette liste. Aussi verrouillez l\'application dans la barre d\'applications récentes en tapant sur son icône.',
+          '**OnePlus OxygenOS tueur d\'arrière-plan :** Similaire à Samsung. Aller à Paramètres → Batterie → Optimisation de batterie, trouver l\'application IA et la définir à "Ne pas optimiser". Aussi verrouillez l\'application dans la barre d\'aperçu des applications récentes.',
+          '**Pixel (AOSP-plus-proche) :** Le comportement d\'arrière-plan est le plus prévisible. Les applications demandant la permission `FOREGROUND_SERVICE` (PocketPal AI et Maid le font) s\'exécutent de manière fiable pendant l\'inférence active sur Pixel. L\'exclusion de l\'optimiseur de batterie est toujours recommandée pour les très longues sessions.',
+          '**Xiaomi MIUI/HyperOS :** Tueur d\'arrière-plan le plus agressif après Samsung. La fonction "Économiseur de batterie" peut terminer l\'inférence au milieu de la génération. Aller à Paramètres → Applications → Gérer les applications → [application] → Économiseur de batterie → Pas de restrictions.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Ne vous fiez pas au comportement d\'arrière-plan Android par défaut pour n\'importe quelle application IA locale. Sur les appareils Samsung et OnePlus, la politique par défaut interrompra les longues sessions d\'inférence (>2 minutes) à moins que vous ne whitelist explicitement l\'application dans les paramètres d\'optimisation de batterie. C\'est la cause numéro un des rapports "l\'application s\'est arrêtée au milieu de la réponse" pour chaque application dans ce guide.',
+          },
+        ],
+      },
+      shareSheet: {
+        id: 'share-sheet',
+        title: 'Intégration feuille de partage Android',
+        content:
+          '**L\'intégration feuille de partage Android — la capacité de sélectionner du texte dans n\'importe quelle application et l\'envoyer à l\'IA locale — est supportée par seulement deux des six applications : PocketPal AI et Layla.** Cette seule fonctionnalité rend l\'IA locale véritablement utile comme outil au niveau du système plutôt que comme application autonome.',
+        items: [
+          '**Comment cela fonctionne :** Sélectionnez n\'importe quel texte dans n\'importe quelle application Android (navigateur Web, email, lecteur PDF, application de messagerie) → appuyez sur Partager → choisissez PocketPal AI ou Layla → le texte sélectionné apparaît dans le champ d\'entrée de chat.',
+          '**Feuille de partage PocketPal AI :** Reçoit le texte brut. Ouvre une nouvelle conversation avec le texte sélectionné pré-rempli. Vous pouvez alors ajouter un prompt (par exemple, "Résumez ceci", "Traduisez en français", "Vérifiez ceci") et l\'envoyer au modèle local.',
+          '**Feuille de partage Layla :** Même fonctionnalité de base. Transition d\'interface utilisateur légèrement plus fluide de la feuille de partage vers l\'interface de chat.',
+          '**MLC Chat, Maid, Ollama via Termux, Private AI :** N\'apparaissent pas dans la feuille de partage Android à partir de mai 2026. Le texte doit être manuellement copié et collé dans ces applications.',
+          '**Cas d\'utilisation pratiques :** Résumer des articles Web lors de la navigation, traduire des emails, rédiger des réponses à des messages, vérifier des paragraphes — tout sans que le texte ne quitte votre appareil ou ne touche une API cloud.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Pour les utilisateurs avancés qui souhaitent l\'intégration feuille de partage avec la bibliothèque complète de modèles (incluant les modèles pas dans les ensembles curés de Layla ou PocketPal AI), la solution : copier le texte → ouvrir PocketPal AI → charger n\'importe quel modèle GGUF → coller. L\'intégration Hugging Face de PocketPal AI signifie que vous pouvez charger un modèle personnalisé et l\'utiliser quand même comme application cible de partage.',
+          },
+        ],
+      },
+      sideloadPaths: {
+        id: 'sideload-paths',
+        title: 'Chemins de sideload et Termux : L\'avantage Android',
+        content:
+          '**Le sideloading d\'Android et l\'écosystème Termux donnent aux utilisateurs Android un accès aux outils IA locaux qui n\'existent pas sur iOS.** C\'est la différence pratique la plus nette entre Android et iPhone pour l\'utilisation d\'IA locale en 2026.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ollama via Termux — un serveur API IA local complet sur un téléphone — est une capacité exclusive à Android en 2026 : le sandboxing iOS d\'Apple empêche la configuration équivalente sur iPhone, ce qui rend Android la seule plateforme mobile pour les utilisateurs qui ont besoin d\'une API locale compatible OpenAI sur l\'appareil.',
+          },
+        ],
+        items: [
+          '**Termux :** Un environnement Linux dans une application Android. Installez via F-Droid (pas Play Store). Exécute bash, Python, curl et pratiquement n\'importe quel binaire Linux ARM64 — incluant Ollama. Termux n\'est pas disponible sur iOS ; son équivalent (iSH) manque les capacités réseau pour fournir les APIs locales.',
+          '**Sideloading F-Droid :** Installez les applications sans Google Play — utile pour Maid, Termux et autres outils IA locaux open-source. Téléchargez l\'APK client F-Droid, activez "Installer à partir de sources inconnues" dans les paramètres de sécurité Android, installez F-Droid, puis installez n\'importe quelle application listée sur F-Droid sans compte Google.',
+          '**Sideloading ADB :** Les utilisateurs avancés peuvent sideload les APK directement via Android Debug Bridge (`adb install [app.apk]`). Cela permet d\'installer les applications dont la liste Play Store est restreinte régionalement ou supprimée.',
+          '**Avantage ROM personnalisée :** Les utilisateurs LineageOS, GrapheneOS et CalyxOS peuvent désactiver complètement Google Play et utiliser F-Droid + ADB comme leurs seuls chemins d\'installation d\'application. Maid et Termux fonctionnent entièrement sur ces plateformes. Aucun équivalent iOS n\'existe.',
+          '**Mode serveur Llama.cpp via Termux :** Au-delà d\'Ollama, llama.cpp lui-même peut être compilé via Termux et s\'exécuter en mode serveur — fournissant une API locale alternative que certains utilisateurs préfèrent pour son surcharge mémoire inférieure comparé à Ollama.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La configuration Termux + Ollama fonctionne aussi comme serveur API local pour d\'autres applications sur le même téléphone. Par exemple, les applications comme Obsidian (avec le plugin API REST Local) ou l\'automatisation personnalisée peuvent interroger `localhost:11434/api/generate` pour exécuter les tâches IA sans Internet — un modèle d\'automatisation d\'écran d\'accueil véritablement utile et pratique.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes',
+        content: '**La plupart des erreurs avec les applications IA locales Android proviennent de quatre erreurs évitables.**',
+        items: [
+          '**Installation de Termux depuis le Play Store.** La version Play Store de Termux est obsolète (Termux a cessé de la mettre à jour en 2020). Le build actuellement maintenu est sur F-Droid. `pkg install curl` et le script d\'installation Ollama échouent tous les deux dans la version Play Store de Termux.',
+          '**S\'attendre à une vitesse NPU sur un téléphone Pixel.** Le NPU Tensor G5 de Google n\'est pas accessible aux applications tierces. Les six applications s\'exécutent en CPU seul sur tous les modèles Pixel. L\'avantage NPU de MLC s\'applique uniquement à Snapdragon 8 Elite et ne s\'étend pas à Pixel.',
+          '**Ignorer la whitelist d\'optimisation de batterie sur Samsung.** Les téléphones Galaxy terminent les processus d\'arrière-plan agressivement. Une génération durant plus de 90 secondes sera probablement interrompue par la politique de tueur d\'arrière-plan à moins que Termux ou l\'application IA soit explicitement whitelisté.',
+          '**Télécharger des modèles trop volumineux pour l\'appareil.** Un modèle 7B Q4_K_M (~4.7 GB) requiert ~6 GB de RAM disponible. Sur un téléphone 12 GB avec surcharge système, c\'est serré. Sur un téléphone 8 GB, cela va OOM-kill l\'application au milieu de la génération. Utilisez Phi-4 Mini (3.8B, ~2.7 GB) pour appareils 8–10 GB et Qwen3 1.7B (~1.1 GB) pour n\'importe quoi en-dessous.',
+          '**Supposer que le stockage est accessible dans les Téléchargements.** La plupart des applications IA locales stockent les fichiers de modèle dans un stockage d\'application privé (`/data/user/0/[app-package]/`), que le gestionnaire de fichiers ne peut pas consulter sans root. Si vous téléchargez un GGUF dans le dossier Téléchargements et vous attendez à ce que l\'application le trouve, elle ne le trouvera pas — utilisez la fonction d\'importation in-app ou pointez vers le bon chemin dans les paramètres.',
+          '**Exécuter simultanément deux applications d\'inférence.** Chaque application charge le modèle en RAM. Deux modèles 3B sur un téléphone 12 GB laissent ~5 GB pour le système d\'exploitation, ce qui déclenche les tueurs. Si vous utilisez MLC Chat et PocketPal AI, fermez l\'une avant d\'ouvrir l\'autre.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          'GitHub MLC Chat et documentation — [github.com/mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm)',
+          'GitHub Maid (Mobile Artificial Intelligence) — [github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)',
+          'GitHub PocketPal AI — [github.com/a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai)',
+          'Documentation officielle Ollama — [ollama.com](https://ollama.com)',
+          'Documentation officielle Termux — [wiki.termux.com](https://wiki.termux.com)',
+          'Documentation technique NPU Hexagon Snapdragon 8 Elite — Réseau de développeurs Qualcomm',
+          'Spécifications APU MediaTek Dimensity 9400 — Page produit MediaTek',
+          'Vue d\'ensemble du chipset Google Tensor G5 — Documentation matériel Google',
+          'Limites de processus d\'arrière-plan d\'Android et optimisation de batterie — Documentation développeur Android',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Un Pixel 9 Pro peut-il exécuter un modèle 7B ?',
+            a: 'Oui, le Pixel 9 Pro a 16 GB RAM — assez d\'espace pour exécuter un modèle 7B Q4_K_M (~4.7 GB de poids de modèle) avec encore une RAM système disponible. La vitesse est ~8–10 tokens/sec à cette taille (CPU seul sur Tensor G5). Utilisez PocketPal AI ou Maid avec un GGUF 7B pour ce cas d\'utilisation. Pour une vitesse de conversation en temps réel sur Pixel 9 Pro, restez à Phi-4 Mini (3.8B, ~14 tokens/sec).',
+          },
+          {
+            q: 'Ces applications utilisent-elles le NPU Snapdragon ?',
+            a: 'Seul MLC Chat utilise le NPU Hexagon Snapdragon et uniquement sur les appareils Snapdragon 8 Elite (série Galaxy S25, OnePlus 13). Les cinq autres applications utilisent CPU ou GPU Vulkan. Le NPU Hexagon offre 2–3× une inférence plus rapide dans MLC Chat comparé au chemin CPU sur le même appareil.',
+          },
+          {
+            q: 'Puis-je exécuter l\'IA locale sur un Samsung Galaxy S22 ?',
+            a: 'Oui, sur les variantes 8 GB RAM. Le Galaxy S22 exécute Snapdragon 8 Gen 1 (ou Exynos 2200 dans certaines régions). PocketPal AI et Maid avec Qwen3 1.7B ou SmolLM2 1.7B fonctionnent à ~8–12 tokens/sec. Phi-4 Mini (3.8B) est possible mais serré sur 8 GB RAM — fermez d\'abord les autres applications. Le chemin NPU de MLC n\'est pas vérifié sur Snapdragon 8 Gen 1.',
+          },
+          {
+            q: 'Ai-je besoin de rooter mon téléphone pour l\'IA locale ?',
+            a: 'Non. Les six applications dans ce guide fonctionnent sur les téléphones Android non rootés. Termux requiert d\'activer "Installer à partir de sources inconnues" pour l\'APK F-Droid, mais ce n\'est pas du rootage. Root n\'est pertinent que pour accéder aux répertoires de stockage d\'application privée depuis un gestionnaire de fichiers — non requis pour l\'inférence.',
+          },
+          {
+            q: 'Puis-je utiliser ces applications avec Termux ?',
+            a: 'Ollama via Termux est sa propre configuration complète — vous installez Ollama à l\'intérieur de Termux et interagissez via le terminal Termux. Les cinq autres applications (MLC Chat, Maid, Layla, Private AI, PocketPal AI) sont des applications Android autonomes qui n\'interagissent pas avec Termux. Les utilisateurs avancés exécutent les deux : Ollama dans Termux pour l\'accès API et PocketPal AI pour l\'interface de chat soignée.',
+          },
+          {
+            q: 'Comment gérez-vous les limites d\'arrière-plan d\'Android ?',
+            a: 'Les limites d\'arrière-plan sont le plus grand problème de fiabilité pour les applications IA locales Android. PocketPal AI et Maid demandent la permission FOREGROUND_SERVICE, ce qui les rend plus résistants aux tueurs d\'arrière-plan. Ollama via Termux est susceptible aux politiques de tueur d\'arrière-plan de Samsung et OnePlus à moins que Termux ne soit explicitement whitelisté dans les paramètres d\'optimisation de batterie. Sur Pixel, le comportement d\'arrière-plan est le plus prévisible. Sur Samsung One UI, vous whitelistez manuellement n\'importe quelle application IA dans Maintenance d\'appareil → Batterie → Applications en veille.',
+          },
+          {
+            q: 'Puis-je partager la sortie IA locale avec d\'autres applications ?',
+            a: 'Oui, à partir de n\'importe quelle application — copiez la réponse IA et collez-la n\'importe où. Pour la direction inverse (envoi de texte d\'une autre application à l\'IA), seules PocketPal AI et Layla apparaissent dans la feuille de partage Android à partir de mai 2026.',
+          },
+          {
+            q: 'Ces applications supportent-elles Android Auto ?',
+            a: 'Non. Aucune des six applications ne supporte Android Auto à partir de mai 2026. Android Auto restreint la fonctionnalité qui peut s\'exécuter pendant la conduite, et aucune des applications IA locales n\'ont construit l\'interface compatible Auto requise pour la certification.',
+          },
+          {
+            q: 'Quelle application gère le mieux le stockage de modèles ?',
+            a: 'PocketPal AI gère le stockage de modèles le plus élégamment — elle s\'intègre directement avec Hugging Face pour les téléchargements in-app, gère correctement la division de partition de stockage Android et offre une interface de gestion de modèles. Maid est meilleure pour les utilisateurs qui souhaitent gérer manuellement les fichiers GGUF via le système de fichiers. MLC Chat utilise un format de modèle compilé propriétaire non portable à d\'autres applications.',
+          },
+          {
+            q: 'Puis-je exécuter plusieurs modèles simultanément ?',
+            a: 'Uniquement si votre appareil a assez de RAM pour les deux modèles plus le surcharge Android. Sur un Pixel 9 Pro 16 GB : deux modèles Phi-4 Mini (2.7 GB chacun) laissent ~10 GB pour le système d\'exploitation — techniquement faisable mais très serré. En pratique, fermez une application avant d\'ouvrir l\'autre. Ollama via Termux supporte le changement de modèle avec un processus `ollama serve` unique, chargeant chaque modèle à la fois.',
+          },
+          {
+            q: 'Dois-je considérer la CNIL avec les applications IA locales sur Android ?',
+            a: 'Avec l\'inférence locale sur Android, la question CNIL est limitée car les données ne quittent pas l\'appareil. La CNIL s\'applique au traitement des données — les modèles locaux sur votre téléphone Android n\'envoyant rien en dehors de l\'appareil satisfont déjà la recommandation CNIL de traitement local pour les données sensibles professionnelles (données financières, données de santé, données légales). Pas de transmission de données distante, pas d\'accès tiers. Remarque : vous êtes toujours tenu de gérer les permissions (par exemple, si l\'application lit la liste de contacts, vous devez le divulguer à l\'utilisateur). Les applications comme Maid et Private AI avec des permissions minimales réduisent ce risque.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures connexes',
+        items: [
+          '[Meilleures applications IA locales pour iPhone 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=fr) — l\'équivalent iOS : LLM Farm, Pocket Paladin et le paysage d\'inférence iPhone.',
+          '[Comment exécuter l\'IA sur une tablette : iPad et Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android?lang=fr) — Connection locale vs. distante pour le plus grand écran avec recommandations spécifiques aux tablettes.',
+          '[Modèles IA mobiles : Phi-4 Mini, Gemma, SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm?lang=fr) — Guide de sélection de modèles pour l\'inférence mobile : quels modèles s\'adaptent aux téléphones 4–16 GB.',
+          '[Répertoire logiciel IA local 2026](/power-local-llm/local-llm-software-directory-2026?lang=fr) — le répertoire d\'applications complet incluant les applications de bureau, les backends serveur et les frontends pour toutes les plateformes.',
+          '[Application IA locale la plus simple pour Windows, Mac et Linux](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=fr) — l\'équivalent de bureau : philosophie identique pour comparer les applications par facilité d\'utilisation.',
+          '[Meilleurs IA locaux 2026](/local-llms/best-local-llms-2026?lang=fr) — Article d\'autorité en matière de modèles : quels modèles open-weight utiliser dans les configurations matérielles.',
+        ],
+      },
+    },
+  },
 }
