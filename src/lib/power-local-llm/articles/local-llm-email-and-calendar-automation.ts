@@ -1610,4 +1610,391 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: '本地AI进行电子邮件和日历自动化：无需将数据发送到谷歌 (2026)',
+    seoTitle: '本地AI 电子邮件日历自动化 2026',
+    intro:
+      '本地LLMs可以起草电子邮件回复、汇总收件箱、生成会议议程和分类日历事件——所有这些都无需将您的邮件发送到云API。本指南涵盖了实用的架构：Ollama本地IMAP自动化、配备本地AI插件的开源电子邮件客户端，以及在设备上保留通信数据的隐私理由。',
+    metaDescription:
+      '使用本地LLMs自动化电子邮件草稿、收件箱整理和日历管理。Ollama、IMAP集成和隐私优先的通信自动化。',
+    twitterDescription:
+      '本地LLM电子邮件自动化：起草回复、汇总收件箱、生成会议议程——全部本地运行，无云API。Ollama + IMAP工作流设置指南。',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 14B',
+      'Mistral 7B',
+      'Phi-4 Mini',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4070 12 GB',
+    ],
+    audience:
+      '想要自动化电子邮件起草、收件箱汇总和日历管理但不想将通信数据发送到云AI服务的专业人士、小企业主和隐私意识强的个人。',
+    readTime: '阅读时间：12分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '本地LLM电子邮件自动化',
+    targetKeywords: [
+      '本地llm电子邮件自动化',
+      'ollama电子邮件草稿',
+      '本地ai收件箱汇总',
+      '本地llm日历自动化',
+      '私密ai电子邮件助手',
+      'imap本地llm工作流',
+    ],
+    leadAnswerBlock:
+      '**本地LLM电子邮件自动化最适合作为两步管道运行：电子邮件客户端或IMAP脚本获取原始邮件、删除标题、将纯文本正文传递到Ollama的本地API；模型生成您在发送前审查的草稿回复。没有电子邮件内容离开您的计算机。2026年最实用的三种设置是：(1) 按计划调用Ollama的Python IMAP脚本——50行、完全可自动化；(2) Thunderbird配合Ollama Compose插件——基于GUI、无需代码；(3) n8n自托管配合本地Ollama节点——视觉工作流构建器，适合需要条件逻辑、多步筛选和日历集成而不想编码的用户。对于日历自动化，同一个Ollama API调用可以针对导出的ICS文件或配合本地凭据的谷歌日历API工作——生成会议议程、汇总一周时间、根据事件详情起草后续电子邮件。**',
+    quickAnswerTop: {
+      zh: {
+        question: '如何使用本地AI自动化电子邮件起草，而不将电子邮件发送到云端？',
+        answer:
+          '最快的本地电子邮件自动化设置是Python IMAP脚本，它获取未读电子邮件、删除标题、将纯文本正文传递到Ollama的本地API，并将草稿回复保存到本地文件或草稿文件夹。少于50行Python代码。没有电子邮件数据离开您的计算机。作为GUI替代方案，Thunderbird配合Ollama Compose扩展让您右键单击任何电子邮件并生成回复，无需离开电子邮件客户端。对于工作流自动化，n8n自托管配合本地Ollama节点处理条件逻辑、多步筛选和日历事件集成，无需云依赖。',
+        bullets: [
+          'IMAP + Python + Ollama：50行脚本、按计划运行、本地保存草稿——最简单的设置。',
+          'Thunderbird + Ollama Compose插件：基于GUI、无需代码、在电子邮件客户端中右键单击生成回复。',
+          'n8n自托管 + Ollama节点：用于条件逻辑、筛选和日历集成的视觉工作流构建器。',
+          '日历自动化：导出ICS文件或在本地使用谷歌日历API来生成会议议程和后续草稿。',
+          '电子邮件最佳模型：Qwen3 14B或Phi-4 Mini——快速生成、低VRAM、足够的商业通信质量。',
+          '隐私：IMAP凭据和电子邮件内容永远不会离开您的计算机；这些设置中的任何一个都没有云API调用。',
+          '审查前发送是必须的：本地模型会犯语调和事实错误；将所有输出视为初稿。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '关键要点', anchor: '#key-takeaways' },
+      { label: '快速事实', anchor: '#quick-facts' },
+      { label: '为什么使用本地LLM进行电子邮件自动化？', anchor: '#why-local' },
+      { label: '方法对比', anchor: '#approach-comparison' },
+      { label: '设置1：IMAP + Python + Ollama', anchor: '#imap-python' },
+      { label: '设置2：Thunderbird + Ollama插件', anchor: '#thunderbird' },
+      { label: '设置3：n8n自托管 + Ollama', anchor: '#n8n' },
+      { label: '分类和周报告提示模板', anchor: '#triage-prompts' },
+      { label: '日历自动化', anchor: '#calendar' },
+      { label: '模型推荐', anchor: '#models' },
+      { label: '隐私和安全', anchor: '#privacy' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '相关资料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**三种设置覆盖本地电子邮件自动化用例的95%。** IMAP + Python + Ollama（50行、完全可脚本化）、Thunderbird + Ollama Compose（GUI、无需代码）、n8n自托管 + Ollama节点（视觉工作流、条件逻辑）。选择最适合您工作流的最简单选项。',
+          '**较小的模型比创意工作更适合电子邮件。** 电子邮件起草需要连贯性而不是创意。Qwen3 14B和Phi-4 Mini在16GB系统上用2–5秒生成商业级质量的草稿回复。Llama 3.3 70B对大多数电子邮件任务来说是多余的。',
+          '**发送前审查不是可选的。** 本地模型会犯语调错误（太正式、太随意）、事实错误（错误的会议时间、错误的收件人姓名），有时会从无关背景中捏造内容。发送前总是阅读草稿。',
+          '**这些设置中的任何一个都不会有电子邮件内容离开您的计算机。** IMAP连接到您的邮件服务器，而不是云AI。Ollama API是本地的。n8n自托管在您的计算机上运行。隐私优势是真实的。',
+          '**日历自动化最适合使用导出的ICS或本地谷歌日历API调用。** 将一周的事件导出到ICS文件、传递给Ollama，并要求它生成会议议程、准备检查表或发送给您的团队的周汇总电子邮件。',
+          '**IMAP凭据很敏感。** 将它们存储在环境变量或本地秘密管理器中，永远不要在脚本源代码中。轮换电子邮件特定的应用密码，而不是使用您的主帐户密码。',
+          '**n8n自托管是条件逻辑的正确选择。** 如果您想要"每天汇总来自[域]的所有电子邮件"或"在日历事件结束时生成后续电子邮件"，n8n的视觉工作流构建器可以在不编写自定义Python的情况下处理此问题。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速事实',
+        items: [
+          '**涵盖的设置：** IMAP + Python + Ollama、Thunderbird + Ollama Compose、n8n自托管 + Ollama节点。',
+          '**电子邮件最佳模型：** Qwen3 14B（快速、低VRAM、足够的商业质量）或Phi-4 Mini（最快、4GB VRAM）。',
+          '**所需VRAM：** Qwen3 14B在Q4 = ~9GB；Phi-4 Mini在Q4 = ~3GB；Llama 3.3 70B在Q4 = ~42GB。',
+          '**支持的电子邮件格式：** 纯文本IMAP（MIME解码）、EML文件、谷歌日历API（本地凭据）、通过IMAP的Outlook。',
+          '**日历格式：** ICS导出（通用）、谷歌日历API（本地OAuth）、Nextcloud日历（CalDAV）。',
+          '**脚本复杂性：** IMAP + Python = ~50行；n8n工作流 = 视觉、无代码；Thunderbird = 仅插件安装。',
+          '**隐私：** 这些设置中的任何一个都不会将电子邮件数据发送到任何云API；IMAP仅连接到您的邮件服务器。',
+        ],
+      },
+      whyLocal: {
+        id: 'why-local',
+        title: '为什么使用本地LLM进行电子邮件自动化？',
+        content:
+          '**核心原因是隐私：您粘贴到云AI助手中的每封电子邮件都可能被记录、用于训练，并受该提供商的数据保留政策约束。** 商业通信、客户沟通和个人电子邮件包含您不希望出现在第三方训练数据集中的信息。本地LLM在您的硬件上处理您的电子邮件、返回草稿并保留任何内容。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '本地LLM电子邮件自动化在您的计算机上保留所有电子邮件内容——没有云API接收您的邮件、没有第三方记录或训练您的通信、草稿生成在没有互联网连接的情况下工作。',
+          },
+          {
+            type: 'plain-terms',
+            text: '当您将电子邮件粘贴到ChatGPT或Claude.ai中要求草稿回复时，该电子邮件在OpenAI或Anthropic的服务器上处理。对于大多数人来说，大多数时候，这是可以接受的。对于商业通信、客户详细信息、合同讨论或任何包含敏感信息的通信，情况并非如此。通过Ollama设置的本地LLM在您的计算机上处理相同的电子邮件，永远不会将其发送到任何地方。',
+          },
+        ],
+        items: [
+          '**数据主权：** 电子邮件内容、发件人信息和线程背景保留在您的计算机上。没有云保留政策适用。',
+          '**离线操作：** 一旦Ollama运行且模型已下载，电子邮件草稿在没有互联网访问的情况下工作。',
+          '**没有使用限制：** 云AI API强制执行速率限制和令牌上限。本地设置没有每个请求的成本和每日限制。',
+          '**监管合规性：** GDPR、HIPAA和专业特权要求可能禁止将客户通信发送给第三方AI。本地处理消除了这个顾虑。',
+          '**短期任务的速度：** 小模型（Qwen3 14B、Phi-4 Mini）在消费者硬件上用2–5秒生成商业电子邮件草稿——比大多数短提示的云往返更快。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '本地电子邮件自动化不是电子邮件客户端的替代品——它是一个融入您现有工作流的起草助手。您仍然使用Thunderbird、Apple Mail或Gmail来发送；本地LLM生成您审查、编辑和从现有客户端发送的文本。',
+          },
+        ],
+      },
+      approachComparison: {
+        id: 'approach-comparison',
+        title: '方法对比',
+        content:
+          '**三种设置在对大多数用户重要的五个维度上有所不同：设置难度、30天可靠性、隐私态度和每种设置最适合的用户配置。** 选择覆盖您工作流的最简单选项，而不是最强大的选项。',
+        columns: ['方法', '设置', '可靠性 (30天)', '隐私', '最适合'],
+        rows: [
+          { '方法': 'Thunderbird + Ollama Compose', '设置': '简单', '可靠性 (30天)': '高（无后台进程）', '隐私': '仅本地', '最适合': '独立专业人士、日常分类、GUI用户' },
+          { '方法': 'Python + IMAP + cron', '设置': '困难（50行代码 + 调度）', '可靠性 (30天)': '非常高（可脚本化、可观察）', '隐私': '仅本地', '最适合': '想要完全控制和自定义逻辑的开发者' },
+          { '方法': 'n8n自托管 + Ollama', '设置': '中等（视觉工作流编辑器）', '可靠性 (30天)': '高（带自托管监控）', '隐私': '仅本地（自托管）', '最适合': '工作流密集型用户替换Zapier；条件逻辑' },
+        ],
+      },
+      imapPython: {
+        id: 'imap-python',
+        title: '设置1：IMAP + Python + Ollama',
+        content:
+          '**最可脚本化的设置：Python脚本通过IMAP获取未读电子邮件、删除标题和HTML、将纯文本正文传递到Ollama的本地API并保存草稿回复。** 使用cron或Task Scheduler按计划运行。50行Python代码，除了Ollama Python客户端外没有外部依赖。',
+        promptExamples: [
+          {
+            label: 'IMAP电子邮件获取 + Ollama草稿 (Python骨架)',
+            text: 'import imaplib, email, os\nimport ollama\n\n# 连接到IMAP\nmail = imaplib.IMAP4_SSL(os.environ["IMAP_HOST"])\nmail.login(os.environ["IMAP_USER"], os.environ["IMAP_PASS"])\nmail.select("INBOX")\n\n# 获取未读电子邮件\n_, msgnums = mail.search(None, "UNSEEN")\nfor num in msgnums[0].split():\n    _, data = mail.fetch(num, "(RFC822)")\n    msg = email.message_from_bytes(data[0][1])\n    body = msg.get_payload(decode=True).decode("utf-8", errors="ignore")\n    subject = msg["Subject"]\n    sender = msg["From"]\n\n    # 使用Ollama生成草稿\n    response = ollama.chat(model="qwen3:14b", messages=[\n        {"role": "system", "content": "您是一个专业电子邮件助手。写出简洁、礼貌的商务回复。匹配传入电子邮件的正式程度。"},\n        {"role": "user", "content": f"来自：{sender}\\n主题：{subject}\\n\\n正文：\\n{body[:2000]}\\n\\n写一个草稿回复。"}\n    ])\n    draft = response["message"]["content"]\n    print(f"草稿：{subject}\\n{draft}\\n---")',
+          },
+        ],
+        items: [
+          '**IMAP凭据：** 存储在环境变量（`IMAP_HOST`、`IMAP_USER`、`IMAP_PASS`）中——永远不要在源代码中。使用应用特定密码而不是您的主帐户密码。',
+          '**正文截断：** 在传递给Ollama之前，将电子邮件正文限制为2,000–3,000个字符。长电子邮件线程很少为回复草稿添加有用的背景，并会减慢生成速度。',
+          '**HTML删除：** 如果电子邮件正文是HTML，使用`html.parser`或`BeautifulSoup`在传递给模型之前提取纯文本。HTML标记会降低生成质量。',
+          '**调度：** 在macOS/Linux上，添加cron条目（`crontab -e`）以每30分钟运行一次脚本。在Windows上，使用Task Scheduler配合Python解释器路径。',
+          '**草稿存储：** 将草稿写入每个电子邮件的本地文本文件（按时间戳和主题slug命名）或使用`mail.append()`推送到"草稿"IMAP文件夹。读取文本文件对于审查更安全；IMAP草稿允许从任何客户端发送。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '不要启用自动发送。没有本地LLM可以生成足够可靠的电子邮件草稿而无需人工审查就可以发送。语调错误、错误的日期、捏造的事实和回复错误线程的错误定期发生。自动化为您节省起草时间；审查步骤是必须的。',
+          },
+        ],
+      },
+      thunderbird: {
+        id: 'thunderbird',
+        title: '设置2：Thunderbird + Ollama Compose插件',
+        content:
+          '**Thunderbird配合Ollama Compose扩展是无需代码的选项。** 安装Thunderbird、安装Ollama、拉取模型、安装扩展——电子邮件生成在编写窗口中只需右键单击即可。',
+        items: [
+          '**从thunderbird.net安装Thunderbird**。适用于macOS、Windows和Linux。',
+          '**安装Ollama并拉取模型：** `ollama pull qwen3:14b`（推荐用于电子邮件工作）。启动`ollama serve`。',
+          '**从Thunderbird附加组件管理器安装Ollama Compose扩展**。搜索"Ollama"或从项目存储库安装XPI文件。',
+          '**配置扩展**以指向`http://localhost:11434`并选择您的模型（推荐使用Qwen3 14B或Phi-4 Mini）。',
+          '**在编写窗口中：** 右键单击正文区域并选择"使用Ollama生成"——扩展将引用的原始电子邮件和光标位置发送到Ollama并插入草稿回复。',
+          '**模型切换：** 扩展允许您从编写工具栏切换模型。对于快速回复使用Phi-4 Mini；对于复杂或敏感通信切换到Qwen3 14B或Llama 3.3 70B。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在Ollama Compose设置中设置自定义系统提示。默认提示是通用的；自定义的提示会产生更好的结果。示例："您为[您的姓名]（[您的角色]在[公司]）撰写专业电子邮件回复。回复简洁（除非背景需要超过150字）、专业温暖，并与传入电子邮件的正式程度相匹配。永远不要添加免责声明或签名行。"',
+          },
+        ],
+      },
+      n8n: {
+        id: 'n8n',
+        title: '设置3：n8n自托管 + Ollama',
+        content:
+          '**n8n自托管配合本地Ollama节点是条件自动化的正确选择：按发件人域筛选电子邮件、每日汇总、在日历事件结束时生成后续、或将不同电子邮件类型路由到不同的模型提示——所有这些都无需编写代码。**',
+        items: [
+          '**安装n8n自托管：** `npm install -g n8n && n8n start`或`docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`。工作流编辑器在`http://localhost:5678`运行。',
+          '**添加Ollama节点：** 在n8n工作流编辑器中，搜索"Ollama"节点（从n8n v1.2+开始内置）。指向`http://localhost:11434`并选择您的模型。',
+          '**IMAP触发器：** 添加IMAP电子邮件节点作为工作流触发器——使用您的IMAP凭据配置。该节点轮询新电子邮件并将每个作为JSON对象传递到下一步。',
+          '**筛选逻辑：** 添加IF节点以按发件人域、主题关键字或时间筛选电子邮件。根据电子邮件类型（客户电子邮件、通讯摘要、内部团队消息）路由到不同的Ollama提示。',
+          '**日历集成：** 添加谷歌日历节点（使用本地OAuth凭据）或ICS文件阅读器来提取即将发生的事件。将事件详情传递到Ollama节点以生成会议议程或准备检查表。',
+          '**输出选项：** 将草稿写入本地文件、推送到IMAP草稿、通过Slack消息发送给自己或保存到Notion/Obsidian页面——所有都通过n8n输出节点。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'n8n自托管是日历+电子邮件工作流的最佳集成点。典型模式：IMAP触发器接收会议确认电子邮件→提取会议详情→调用谷歌日历API（本地OAuth）获取与会者→将所有背景传递给Ollama→生成会议议程→保存到指定文件夹。这在n8n视觉编辑器中大约需要20分钟来连接。',
+          },
+        ],
+      },
+      triagePrompts: {
+        id: 'triage-prompts',
+        title: '分类和周报告提示模板',
+        content:
+          '**处理最高频率电子邮件任务的两个提示：每封电子邮件分类和周收件箱审查。** 将它们投入到三种设置中的任何一种（Python脚本、Thunderbird系统提示或n8n Ollama节点正文）——它们特意是模型不知道的。',
+        promptExamples: [
+          {
+            label: '分类提示模板',
+            text: '您是一个电子邮件分类助手。给定以下电子邮件，将其分类为以下类别之一，并用一句话解释：\n- 紧急：需要在4小时内回复\n- 重要：需要在24小时内回复\n- 信息：阅读以获知，不需要回复\n- 促销：营销或通讯，可以存档\n- 垃圾邮件：不需要，建议筛选\n\n电子邮件：\n来自：{sender}\n主题：{subject}\n正文：{body[:1500]}\n\n输出格式：\n类别：[紧急|重要|信息|促销|垃圾邮件]\n推理：[一句话]\n建议操作：[回复 | 存档 | 标记 | 删除]',
+          },
+          {
+            label: '周报告提示模板',
+            text: '将以下过去一周的50封电子邮件汇总成3个部分：\n1. 仍需采取措施的紧急或重要项目（带发件人+1行摘要）\n2. 主题（例如，"Q4计划本周在12封电子邮件中出现"）\n3. 我欠回复的人（发件人+待处理天数）\n\n电子邮件（主题+每个正文前200个字符）：\n[粘贴批量电子邮件列表]\n\n输出格式：3个markdown部分。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于分类提示，将其与n8n IF节点配对以按类别路由：紧急→推送通知、重要→保存到"需要回复"文件夹、促销→自动存档、垃圾邮件→标记用于过滤规则。分类是使下游自动化安全的关键——没有它，管道无法区分客户跟进和营销电子邮件。',
+          },
+        ],
+      },
+      calendar: {
+        id: 'calendar',
+        title: '使用本地LLMs进行日历自动化',
+        content:
+          '**使用本地LLM进行日历自动化的工作模式有两种：被动模式（导出ICS、传递给Ollama进行汇总或议程生成）和主动模式（配合本地OAuth凭据的谷歌日历API进行实时事件访问）。** 被动模式更简单；主动模式支持预定工作流。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '本地LLM日历自动化通过将导出的ICS文件内容或谷歌日历API数据传递给Ollama来生成会议议程、周汇总和后续电子邮件草稿——没有日历数据接触云AI。',
+          },
+          {
+            type: 'plain-terms',
+            text: '最简单的日历自动化：从任何日历应用程序（谷歌日历、Apple日历、Nextcloud）将您一周的事件导出为ICS文件、打开终端、将ICS内容传递给Ollama配合"为每个事件生成会议议程"提示、将输出复制到您的笔记。花30秒，您的日历数据保持本地。',
+          },
+        ],
+        promptExamples: [
+          {
+            label: 'ICS至议程提示模板',
+            text: '这是我的本周日历（ICS格式）：\n\n[粘贴ICS内容]\n\n对于每个会议事件：\n1. 根据事件标题和描述生成5点会议议程。\n2. 如果列出与会者，请注明每个议程项目应由谁领导。\n3. 如果事件没有描述，为[会议类型]会议生成通用议程。\n\n格式为纯文本。每个事件一个部分，用---分隔。',
+          },
+        ],
+        items: [
+          '**ICS导出（被动）：** 谷歌日历、Apple日历、Nextcloud和Outlook都导出ICS文件。每周或每天导出，通过终端或脚本传递给Ollama，生成议程或汇总。',
+          '**谷歌日历API（主动）：** 在谷歌云控制台（个人项目）中创建本地OAuth凭据、下载凭据JSON、使用`google-auth-oauthlib` Python库来获取事件。OAuth令牌存储在本地，API调用直接进入谷歌日历——没有AI中介。',
+          '**会议议程生成提示：** 标题+与会者+描述→"生成一个5项会议议程，带有时间分配。如果会议描述为空，为[会议类型]会议建议一个通用议程。"',
+          '**周汇总提示：** 本周所有事件→"用3句话汇总本周的会议。突出任何连续块或异常长的会议。"',
+          '**后续电子邮件草稿：** 会议后（由事件结束时间触发）→"为会议"[标题]"写一个感谢与会者并汇总后续步骤的后续电子邮件。使用此事件描述作为背景：[描述]。"',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '尽可能将您的日历数据保持为纯文本。ICS是纯文本；直接传递给Ollama很容易。如果您使用专有日历格式或锁定的企业系统，首先导出到ICS。ICS标准是通用的，由每个主要日历应用程序支持。',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '电子邮件和日历任务的模型推荐',
+        content:
+          '**电子邮件和日历自动化任务倾向于小型快速模型而不是大型强大的模型。** 起草商业电子邮件回复、生成会议议程或汇总收件箱不需要Llama 3.3 70B——它需要一个足够快以感到交互的模型和足够连贯以生成可用商业文本的模型。对于所有用例中更广泛的模型景观，请参阅[2026年最佳本地LLMs](/local-llms/best-local-llms-2026?lang=zh)。',
+        columns: ['任务', '推荐模型', 'VRAM (Q4)', '为什么'],
+        rows: [
+          { '任务': '电子邮件回复起草', '推荐模型': 'Qwen3 14B', 'VRAM (Q4)': '~9GB', '为什么': '商业写作质量和生成速度的最佳平衡；处理正式和随意的语气' },
+          { '任务': '快速单行回复', '推荐模型': 'Phi-4 Mini', 'VRAM (Q4)': '~3GB', '为什么': '最快的选项；足以满足简单的确认和调度回复' },
+          { '任务': '会议议程生成', '推荐模型': 'Qwen3 14B', 'VRAM (Q4)': '~9GB', '为什么': '结构化列表生成良好；议程格式在其能力范围内' },
+          { '任务': '长电子邮件线程汇总', '推荐模型': 'Llama 3.3 70B或Qwen3 32B', 'VRAM (Q4)': '~42GB / ~20GB', '为什么': '长上下文坚持对多消息线程很重要；较小的模型会遗漏细节' },
+          { '任务': '敏感/法律通信', '推荐模型': 'Llama 3.3 70B', 'VRAM (Q4)': '~42GB', '为什么': '最佳推理质量；当错误风险高时值得硬件成本' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在16GB系统上进行大多数电子邮件任务，Qwen3 14B是正确的默认设置。使用`ollama pull qwen3:14b`拉取一次并将其用于所有电子邮件和日历自动化。仅当您遇到14B输出质量持续不足的任务类型时，才切换到更大的模型。',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '隐私和安全',
+        content:
+          '**本地电子邮件自动化的隐私优势是真实的，但它需要正确的设置。** 三件事可能会破坏它：IMAP凭据的意外云同步、第三方工具可访问的日志中的电子邮件内容，以及将工作流暴露给网络的错误配置的n8n实例。对于其他工具中"用本地AI替换SaaS"的更广泛模式，请参阅[用本地模型替换Grammarly和Notion AI](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=zh)。',
+        items: [
+          '**IMAP凭据：** 存储在环境变量或本地秘密管理器中（macOS Keychain、Linux`secret-tool`、Windows凭据管理器）。永远不要存储在脚本源代码或可能同步到云存储库的文件中。',
+          '**日志中的电子邮件内容：** 将电子邮件内容打印到stdout/stderr的Python脚本会在通过cron运行且启用日志时将电子邮件数据写入日志文件。将日志重定向到`/dev/null`或使用排除电子邮件内容的日志级别。',
+          '**n8n网络暴露：** n8n自托管默认绑定到`localhost:5678`，这是本地的。如果您将其暴露给您的家庭网络或更远的地方（例如，为了移动访问），添加身份验证并确保Ollama API也仅限于localhost。',
+          '**应用密码：** 为Gmail、Outlook和Apple Mail上的IMAP访问设置专用应用特定密码——而不是主帐户密码。如果脚本受到危害，立即撤销。',
+          '**Git存储库：** 当将自动化脚本放入版本控制时，添加`.gitignore`以排除包含凭据的`.env`文件。永远不要将凭据提交到公开或私有存储库。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '云同步风险。如果您的主目录同步到iCloud、谷歌云端硬盘或OneDrive，则同步目录中的`.env`或凭据文件将被上传到云。将凭据存储在明确从云同步中排除的目录中，或使用操作系统的本地秘密管理器。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '**在未经人工审查的情况下自动发送草稿。** 没有本地LLM可以生成足够可靠的电子邮件草稿而无需人工审查就可以发送。语调错误、错误的数据和捏造的事实很常见。发送前总是阅读。',
+          '**将整个电子邮件线程传递给模型。** 长线程包含冗余背景，浪费令牌，减慢生成。删除引用的回复块，仅传递最后2–3条消息。',
+          '**对所有电子邮件任务使用Llama 3.3 70B。** 对于大多数电子邮件起草，Qwen3 14B更快，使用更少的VRAM。为真正复杂或高风险的通信保留70B。',
+          '**在脚本中存储IMAP凭据。** 源代码中的凭据在一个`git push`中变为公开。使用环境变量。',
+          '**不为草稿提示设置字数限制。** 没有字数限制，模型会用不必要的背景、警告和礼貌装饰来填充商业回复。将"少于150字的回复"添加到所有电子邮件提示。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          'Qwen3 14B模型卡 — [阿里巴巴云 / Qwen团队](https://qwenlm.github.io)',
+          'Phi-4 Mini技术报告 — [微软研究院](https://microsoft.com/research)',
+          'Ollama API文档 — [Ollama](https://ollama.com/docs)',
+          'n8n自托管文档 — [n8n.io](https://docs.n8n.io)',
+          'GDPR第28条 — 数据处理器义务 — [EUR-Lex](https://eur-lex.europa.eu)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '这与Gmail一起工作吗？',
+            a: '是的。Gmail支持通过应用特定密码的IMAP访问。在Gmail设置中启用IMAP，在Google帐户安全设置中生成应用密码，在IMAP脚本中使用这些凭据。Gmail还公开Gmail API用于结构化访问——对于需要标签管理、线程操作和附件处理的n8n工作流很有用。',
+          },
+          {
+            q: '对于电子邮件自动化，IMAP + Python还是n8n更好？',
+            a: '如果您熟悉编写和维护脚本并想要完全控制，IMAP + Python更好。如果您想要条件逻辑（按发件人、时间或内容路由电子邮件）、日历集成或多个输出目的地，n8n更好（无需代码）。两者都使用Ollama作为本地模型后端；区别在于周围的编排层。',
+          },
+          {
+            q: '本地AI可以汇总整个电子邮件收件箱吗？',
+            a: '是的，有限制。每周收件箱汇总（50–100封电子邮件）效果很好：获取主题和每个正文的前200个字符、连接、使用"按主题和紧急性汇总"提示将其传递给Qwen3 14B。对于数千封电子邮件的完整收件箱，批处理汇总（每个API调用50封电子邮件），然后聚合批处理汇总。在一次调用中传递1,000封电子邮件超过背景限制，会产生不可靠的输出。',
+          },
+          {
+            q: '对于正式商业电子邮件，最好的本地LLM是什么？',
+            a: 'Qwen3 14B在消费者硬件上为正式商业通信产生最佳的质量对速度比。它可靠地处理正式的语气、适当的措辞和专业的结尾。对于非常高风险的通信（法律通知、行政通信、合同谈判），使用Llama 3.3 70B——质量差异在复杂和敏感的主题上是可见的。',
+          },
+          {
+            q: '这在Windows上工作吗？',
+            a: '是的。Ollama在Windows上运行（从ollama.com下载）。IMAP Python脚本在Windows上的任何Python 3.8+安装中运行。Thunderbird和Ollama Compose扩展是跨平台的。n8n自托管在Windows上通过npm或Docker Desktop运行。',
+          },
+          {
+            q: '如何处理具有多个以前回复的电子邮件线程？',
+            a: '在传递给模型之前删除引用的内容。使用Python`email`库仅提取最新回复（在第一个`>`前缀或`---原始消息---`分隔符上方的部分）。仅在总3,000字符限制内传递最后2–3条消息。模型很少需要完整的线程历史来生成足够的回复。',
+          },
+          {
+            q: '这对商业用途符合GDPR吗？',
+            a: '本地处理比云AI处理个人数据更符合GDPR。数据保留在您的计算机上，不会自动创建新的数据处理器关系（第28条）。但是，GDPR合规性取决于您的具体角色、数据性质和组织现有的数据保护政策。在处理客户或员工个人数据之前，请咨询您的数据保护官员。',
+          },
+          {
+            q: '我可以为别人使用这个来起草回复吗？',
+            a: '从技术上讲，是的——您可以配置脚本以使用您拥有凭据的任何IMAP帐户。在法律和道德上，在未经他人同意的情况下为他人生成电子邮件回复会引发关于同意和冒充的严肃问题。仅对您个人负责的帐户和通信使用此自动化。',
+          },
+          {
+            q: '我可以在传入电子邮件上触发AI吗？',
+            a: '是的，有3种模式。(1) Python + IMAP + Cron：计划脚本每30分钟运行一次、获取新的未读电子邮件、生成草稿。(2) n8n IMAP触发器节点：每1–5分钟轮询、立即为每个新电子邮件触发工作流。(3) Thunderbird过滤规则：使用curl调用Ollama的"运行脚本"过滤操作。n8n方法在真正的实时分类中最可靠；Cron在简单情况下使用30分钟延迟很好。',
+          },
+          {
+            q: '我可以跨设备同步电子邮件AI吗？',
+            a: '草稿可以通过现有IMAP草稿文件夹进行同步——将AI生成的草稿写入IMAP"草稿"文件夹（使用`mail.append()`），任何拥有IMAP访问权限的设备（手机、平板电脑、第二台笔记本电脑）都可以立即看到。Ollama后端本身不同步——在配置的机器上运行。移动设备需要网络访问到运行Ollama的家庭机器（LAN IP或Tailscale）。计划：主家庭服务器运行Ollama +自动化；所有设备从IMAP草稿文件夹读取。单个AI生成、多设备审查和发送。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关资料',
+        items: [
+          '[用本地AI代理替换Zapier](/power-local-llm/replace-zapier-with-local-ai-agents?lang=zh) — 使用n8n、Ollama和Python进行本地工作流自动化。',
+          '[本地AI代理，商业工作流：欧盟合规性](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=zh) — GDPR、欧盟AI法案和商业设置中本地AI部署的DACH合规性背景。',
+          '[本地RAG、私密商业数据](/power-local-llm/local-rag-for-private-business-data?lang=zh) — 在私密商业数据上设置文档Q&A而无需云API。',
+          '[本地AI代理，MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh) — MCP（模型背景协议）将本地LLM连接到电子邮件客户端、日历和其他工具作为代理背景。',
+          '[自主本地代理：实际有效的](/power-local-llm/autonomous-local-agents-actually-work?lang=zh) — 2026年，本地AI代理能做和不能做的诚实评估。',
+          '[用本地模型替换Grammarly和Notion AI](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=zh) — 写作工具的相邻SaaS替换模式，补充电子邮件/日历替换。',
+          '[2026年最佳本地LLMs](/local-llms/best-local-llms-2026?lang=zh) — 这三个设置之一后面的聊天模型选择的更广泛模型权威。',
+          '[零样本对比少样本提示](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=zh) — 何时在提示中包含电子邮件示例与何时保留以获得更好的泛化。',
+          '[本地LLM软件目录2026](/power-local-llm/local-llm-software-directory-2026?lang=zh) — 此堆栈的组件目录列表，Ollama、n8n、Thunderbird等。',
+        ],
+      },
+    },
+  },
 }
