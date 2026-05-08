@@ -2037,4 +2037,681 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: '1000+ PDFをローカルでチャット: プロダクションレベルのRAG構築',
+    seoTitle: '1000+ PDFをローカルチャット: RAGスケーリングアーキテクチャ2026',
+    intro:
+      '1,000~10,000+ の個人ドキュメント（研究ライブラリ、法律文書アーカイブ、内部wiki）を扱うパワーユーザー向けの実装ガイドです。デフォルト設定は5,000チャンクで限界に達します。このガイドでは4つのスケーリング方法（AnythingLLM調整、LlamaIndexローカル、Ollama+ChromaDBカスタム、Ollama+Qdrantプロダクション）を、100、1,000、10,000ドキュメントでの実測レイテンシ、ストレージ、インデックス作成ベンチマークとともに紹介します。',
+    metaDescription:
+      'ローカルRAGを1,000~10,000+ PDFまでスケーリング。アーキテクチャ判定フロー、実測ベンチマーク、AnythingLLM/LlamaIndex/ChromaDB/Qdrantでの100/1k/10k ドキュメント時のストレージ・レイテンシ。2026年5月。',
+    twitterDescription:
+      'デフォルトRAGの限界：1,000~10,000 PDFでのローカルドキュメントチャット実装。アーキテクチャ判定フロー + 4つのオープンソーススタックでの実測ベンチマーク。2026年5月。',
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
+    audience:
+      'パワーユーザー、研究者、法務専門家、そして1,000~10,000+ ファイルの個人ドキュメント保有者で、デフォルトRAG設定が機能しなくなるスケーリングの壁に直面している開発者',
+    readTime: '18分で読める',
+    educationalLevel: 'Advanced',
+    primaryTerm: '大規模ローカルRAG',
+    targetKeywords: [
+      'chat with 1000 pdfs locally',
+      'local rag scaling',
+      'rag for thousands of documents',
+      'hierarchical retrieval local',
+      'hybrid search bm25 vector local',
+      'local rag 10000 documents',
+    ],
+    leadAnswerBlock:
+      '**デフォルト設定は5,000~8,000チャンクで失敗します。理由：ベクトルインデックスがRAMを超過し、コサイン単独検索は字句的に類似だが意味的に誤ったチャンクを返すからです。1,000 PDF超へスケーリングするには、以下のうち3つが必要です：(1) ハイブリッド検索（BM25 + ベクトル）、(2) Top-50候補へのリランカーパス、(3) メタデータフィルタリングで検索空間を限定、(4) 階層検索（サマリインデックス+チャンクインデックス）。コーパスサイズで選択：100~1,000ドキュメント → AnythingLLM調整版; 1,000~5,000 → LlamaIndex階層インデックス; 5,000~10,000 → Ollama+ChromaDBカスタム+ハイブリッド; 10,000+ → Ollama+Qdrant+メタデータフィルタリング+リランカー。**',
+    quickAnswerTop: {
+      en: {
+        question: 'How do I build a local RAG system that handles 1,000 to 10,000+ PDFs?',
+        answer:
+          'Pick the architecture by scale: AnythingLLM tuned (100-1k docs), LlamaIndex local with hierarchical indices (1k-5k), Ollama + ChromaDB with hybrid search (5k-10k), Ollama + Qdrant with metadata filtering and a reranker (10k+). Default retrieval breaks around 5,000-8,000 chunks because the index spills out of RAM and cosine-only search degrades. The fixes — in order of impact — are hybrid search (BM25 + vector), a small reranker (BGE-reranker-v2-m3), metadata pre-filtering, and hierarchical summary→chunk retrieval. Plan 8-32 GB of disk for vectors at 10k documents and 30-90 minutes of indexing per 5,000 documents on consumer hardware.',
+        bullets: [
+          'Decision driver is corpus size, not feature preference: pick the simplest stack that handles your document count',
+          'Storage budget: 10-30 MB per 100 PDF pages with default chunking; 50,000-page corpus needs 5-15 GB on disk for vectors alone',
+          'Indexing time scales linearly with documents but RAM usage spikes during embedding — close other apps during the indexing pass',
+          'Query latency degrades from ~300 ms at 1k docs to 1-3 seconds at 10k docs without hybrid search or filtering',
+          'Reranking the top-50 candidates with a small cross-encoder fixes most "right document, wrong chunk" retrieval failures',
+          'Hardware floor for 10k+ documents: 32 GB RAM, NVMe SSD, and either a discrete GPU with 8 GB+ VRAM or Apple Silicon with 32 GB+ unified memory',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: '1,000ドキュメント超でデフォルトRAGが失敗する理由', anchor: '#why-defaults-break' },
+      { label: 'アーキテクチャ選択フロー', anchor: '#decision-tree' },
+      { label: 'アーキテクチャ比較表', anchor: '#architecture-comparison' },
+      { label: 'オプション1：AnythingLLM調整版（100~1kドキュメント）', anchor: '#option-anythingllm' },
+      { label: 'オプション2：LlamaIndexローカル（1k~5kドキュメント）', anchor: '#option-llamaindex' },
+      { label: 'オプション3：Ollama+ChromaDBカスタム（5k~10kドキュメント）', anchor: '#option-chromadb' },
+      { label: 'オプション4：Ollama+Qdrantプロダクション（10k+ドキュメント）', anchor: '#option-qdrant' },
+      { label: 'ハイブリッド検索：BM25 + ベクトル', anchor: '#hybrid-search' },
+      { label: 'リランキング：Top-N精緻化パス', anchor: '#reranking' },
+      { label: '大規模コレクション向けメタデータフィルタリング', anchor: '#metadata-filtering' },
+      { label: '階層検索パターン', anchor: '#hierarchical-retrieval' },
+      { label: '100、1k、10k ドキュメント時の実測ベンチマーク', anchor: '#benchmarks' },
+      { label: 'ストレージサイジングとハードウェア要件', anchor: '#storage-hardware' },
+      { label: 'インクリメンタルインデックス化と重複除去', anchor: '#incremental-indexing' },
+      { label: '大規模RAG品質監視', anchor: '#monitoring' },
+      { label: 'よくある質問', anchor: '#faq' },
+      { label: '関連資料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**デフォルト設定は5,000~8,000チャンクで限界** – ベクトルインデックスがRAMを超過し、コサイン単独検索が字句的に類似だが意味的に誤ったチャンクを返します。',
+          '**機能より規模で選択** : AnythingLLM調整版（100~1,000ドキュメント）、LlamaIndexローカル（1,000~5,000）、Ollama+ChromaDBカスタム（5,000~10,000）、Ollama+Qdrant（10,000+）。',
+          '**影響度順の3つの改善** : ハイブリッド検索（BM25+ベクトル）、小規模cross-encoderでのリランキング（Top-50候補）、メタデータ事前フィルタリング。10k+ でも階層検索が有効。',
+          '**ストレージ予算** : チャンク設定とembedding次元で10~30 MB/100ページ。50,000ページコーパスにはベクトル用だけで5~15 GB必要。',
+          '**インデックス時間** : ドキュメント数に線形。nomic-embed-text-v1.5 で5,000 PDFごと30~90分。Apple Silicon上の方がx86 CPUのみより高速。',
+          '**10k+ ドキュメント向けハードウェア最小構成** : 32 GB RAM、NVMe SSD、8GB+ VRAM 搭載GPU もしくは 32GB+ 統合メモリのApple Silicon。',
+          '**Embeddingモデル変更は全インデックス再作成強制** 。10,000ドキュメント前にembedderを選択・確定してください。間違った選択は数時間の手戻りコスト。',
+        ],
+      },
+      whyDefaultsBreak: {
+        id: 'why-defaults-break',
+        title: '1,000ドキュメント超でデフォルトRAGが失敗する理由',
+        content:
+          '**1,000~10,000ドキュメント間で2つの失敗が重なります：インデックスがRAMを超過し、コサイン単独検索が字句的に類似だが意味的に誤ったチャンクを返すからです。** 20 PDFで動いたおもちゃのデモが個人研究ライブラリで使い物にならなくなる理由は、コードが悪いからではなく、デフォルト設定に組み込まれた前提が通用しなくなるからです。',
+        items: [
+          '**Index-out-of-RAM** : LanceDB、ChromaDB、FAISSはすべてメモリ常駐で起動します。利用可能RAM（16 GB ノートPC では通常5~8 GB）を超過すると、ディスク読み込みに切り替わり、p95クエリレイテンシは~300ms から1~3秒に跳ね上がります。',
+          '**コサイン単独では稀な用語に対応不可** : 密集embeddings は珍しい固有名詞、医薬品名、法定番号、コード識別子の重みを低くします。「Section 230(c)(1)」への問い合わせは「Section 9」のチャンクを検索します。embedding は数値の特異性を区別できないからです。BM25 なら捕捉します。',
+          '**大規模ではTop-K=4は狭すぎる** : 1,000チャンクではTop-4で充分な再現率があります。50,000チャンクでは本当に最良のチャンクがランク12~30 にあり、Top-4ウインドウ外です。検索が機能しているように見えても（もっともらしい回答）、実は誤った箇所に基づいています。',
+          '**メタデータフィルタリング無し は索引を無駄に** : 「Smith は X について何と言ったか」を10,000ドキュメント コーパス上で問う場合、システムは索引内すべてのチャンクを検索すべきではなく、まず「Smith のドキュメント」に事前フィルタリング。素朴なRAGにはこの概念がありません。',
+          '**デフォルトチャンクサイズ512/0は長コンテキストを断片化** : PDF 段落と法律条項は512トークンに収まりません。デフォルト0重複は境界を超えて意味を喪失します。1,000/200調整は中規模コーパスで機能 。5,000ドキュメント超では階層的チャンキングが必要。',
+          '**Embedding更新時のドリフト** : 元のインデックス3ヶ月後に1,000 新PDF追加時、sentence-transformer モデルバージョンが変わっているかもしれません。2つのモデル版からembeddings を混在させると検索が静かに劣化。すべてのアーキテクチャでembedder 変更時に完全再インデックスが強制されます。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '「スケーリングの壁」は1つの数値ではありません。コーパス、ハードウェア、検索設定が充分に相互作用悪化し、回答が視認可能に劣化する地点です。16 GB ノートPC 上では~5,000チャンク。32 GB ワークステーション NVMe 搭載では15,000~20,000。本記事の修正（ハイブリッド検索、リランキング、メタデータフィルタリング）は壁を完全に平坦化します。',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: 'アーキテクチャ選択フロー：規模で選ぶ',
+        content:
+          '**ドキュメント数を処理できる最も単純なアーキテクチャを選んでください。ハイブリッド検索やリランキング、階層インデックスの追加は後付け可能です。ベクトルストア全体の交換はできません。** インストーラを開く前にこのフローを使用してください。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '1,000 PDFまでのチャット向けで最も高速な設定はAnythingLLM Desktop、チャンクサイズ1,000/重複200、embedder はnomic-embed-text-v1.5。コード不要で、マシン内完全実行。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'ドキュメント数で選択: 1,000未満 → AnythingLLM（コード不要、ドラッグドロップ）; 1,000~5,000 → LlamaIndex ローカル（150行Python）; 5,000~10,000 → Ollama+ChromaDB カスタム（300~400行、ハイブリッド検索+リランキング追加）; 10,000+ → Ollama+Qdrant（Docker、メタデータフィルタリング、プロダクショングレード）。正しい選択はコーパスを処理できる最も単純なもの。アーキテクチャの過度設計は保守コストを増やしますが、小規模コレクションの回答品質は向上しません。',
+          },
+        ],
+        items: [
+          '**1,000ドキュメント未満（~5,000チャンク未満）** : AnythingLLM Desktop、チャンクサイズ1,000/重複200、embedder はnomic-embed-text-v1.5。カスタムコード不要。セットアップは[30分ステップバイステップガイド](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja)参照。',
+          '**1,000~5,000ドキュメント（5k~25kチャンク）** : LlamaIndex ローカルモード、階層インデックス（DocumentSummaryIndex + VectorStoreIndex）、Ollama（LLMプロバイダ）、nomic-embed-text-v1.5（embedder）、LanceDB または ChromaDB（ベクトルストア）。150行Python、長時間実行プロセス。',
+          '**5,000~10,000ドキュメント（25k~50kチャンク）** : Ollama、ChromaDB、BM25 ハイブリッド検索（Whoosh または Tantivy経由）、BGE-reranker-v2-m3（Top-50候補リランキング）のカスタムスタック。300~400行Python。この規模ではリランカーは必須。',
+          '**10,000+ ドキュメント（50k+ チャンク）** : シングルノードモードの Ollama+Qdrant、ペイロードベースメタデータフィルタリング、Qdrant 1.10+ ネイティブハイブリッド検索、BGE-reranker-v2-m3、ドキュメントIDキーの階層サマリインデックス。シングルユーザーのプロダクショングレード。',
+          '**マルチユーザー（すべての規模）** : 上記いずれかの前に Open WebUI、もしくは同じ Qdrant+Ollama バックエンドの小規模 FastAPI ラッパー。マルチユーザーは操作面（認証、分離、レート制限）を変えますが、検索アーキテクチャは変わりません。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '迷ったら現在のコーパス規模より1段階上を選択。今800 PDFで月200個追加予定なら LlamaIndex 段階で開始。後で AnythingLLM から再アーキテクチャ化はいまから1段階過度に設計するより苦痛。',
+          },
+        ],
+      },
+      architectureComparison: {
+        id: 'architecture-comparison',
+        title: 'アーキテクチャ比較表',
+        content:
+          '**4つのアーキテクチャを100、1,000、10,000ドキュメント時で同じコーパス上でテスト。** テスト : 平均12ページの研究PDF（10kドキュメント時で~120kページ）。ハードウェア: Windows 11 上の NVIDIA RTX 4070（12 GB VRAM、32 GB RAM）、M5 MacBook Pro（32 GB 統合）でクロスチェック。LLM: Ollama 経由 Llama 3.3 8B Q4_K_M。Embedder: nomic-embed-text-v1.5。すべて値はウォームアップ後3回実行の中央値。',
+        columns: [
+          'アーキテクチャ',
+          'セットアップ複雑度',
+          '最大テスト済みドキュメント数',
+          '1kドキュメント時クエリp50',
+          '10kドキュメント時クエリp50',
+          '最適用途',
+        ],
+        rows: [
+          {
+            'アーキテクチャ': 'AnythingLLM（デフォルト）',
+            'セットアップ複雑度': 'ドラッグ&ドロップ、コード不要',
+            '最大テスト済みドキュメント数': '検索品質低下前~2,000ドキュメント',
+            '1kドキュメント時クエリp50': '~450 ms',
+            '10kドキュメント時クエリp50': '実用的でない（再現率50%未満）',
+            '最適用途': 'デモおよび小規模コーパス; 500 PDF超で非推奨',
+          },
+          {
+            'アーキテクチャ': 'AnythingLLM（調整版）',
+            'セットアップ複雑度': 'コード不要; 設定のみ（1000/200 + nomic-embed-text）',
+            '最大テスト済みドキュメント数': '~3,000ドキュメント快適',
+            '1kドキュメント時クエリp50': '~310 ms',
+            '10kドキュメント時クエリp50': '~1.4s、再現率~70%',
+            '最適用途': '100~1,000ドキュメント、カスタムコード予算ゼロ',
+          },
+          {
+            'アーキテクチャ': 'LlamaIndex ローカル',
+            'セットアップ複雑度': '150行Python、長時間プロセス',
+            '最大テスト済みドキュメント数': '~8,000ドキュメント',
+            '1kドキュメント時クエリp50': '~280 ms',
+            '10kドキュメント時クエリp50': '階層インデックス使用時~700 ms',
+            '最適用途': '1,000~5,000ドキュメント、構造化検索パイプライン',
+          },
+          {
+            'アーキテクチャ': 'Ollama+ChromaDB カスタム',
+            'セットアップ複雑度': '300~400行Python、BM25+リランカー統合',
+            '最大テスト済みドキュメント数': '~12,000ドキュメント',
+            '1kドキュメント時クエリp50': '~340 ms',
+            '10kドキュメント時クエリp50': 'ハイブリッド+リランク使用時~520 ms',
+            '最適用途': '5,000~10,000ドキュメント、ハイブリッド検索必須',
+          },
+          {
+            'アーキテクチャ': 'Ollama+Qdrant',
+            'セットアップ複雑度': '500行Python、Docker、ペイロードスキーマ',
+            '最大テスト済みドキュメント数': '50,000+ ドキュメント',
+            '1kドキュメント時クエリp50': '~310 ms',
+            '10kドキュメント時クエリp50': 'ネイティブハイブリッド+フィルタリング使用時~410 ms',
+            '最適用途': '10,000+ ドキュメント、メタデータ重視フィルタリング',
+          },
+        ],
+      },
+      optionAnythingLLM: {
+        id: 'option-anythingllm',
+        title: 'オプション1：AnythingLLM調整版（100~1,000ドキュメント）',
+        content:
+          '**正しく調整すれば1,000ドキュメントの個人コーパスを扱える最も低摩擦のオプション。** AnythingLLM Desktop は LanceDB 内蔵、PDF/DOCX/MD をネイティブ解析、LLMプロバイダとして Ollama と通信。デフォルト設定は500ドキュメント超で破綻。下記調整で2,000~3,000まで可能。',
+        items: [
+          '**LLM** : Ollama 経由 Llama 3.3 8B Q4_K_M（推論時5 GB RAM）。24 GB+ システムでは Qwen 2.5 14B Q4 が大幅に合成を改善。',
+          '**Embedder** : AnythingLLM Native デフォルトから nomic-embed-text-v1.5（Ollama 経由）に切り替え。デフォルト embedder は「AnythingLLM はスケールしない」報告の最大理由。',
+          '**チャンキング** : ワークスペースごとに Vector Database 設定で1,000トークン、200トークン重複。デフォルト512/0は数十ドキュメント超すべてで誤り。',
+          '**Top-K** : デフォルト4から6~8に引き上げ。1,000ドキュメント時、本当に最良のチャンクはランク5~7にあり、LLM は弱いチャンク無視が欠落創作より得意。',
+          '**ワークスペース分割** : ドキュメント種別ごと（論文、契約、ノート）にワークスペース作成。各ワークスペースは個別インデックス LanceDB。クロスワークスペースクエリ未サポート、が個別再現率は1つの大きなプールより高い。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'AnythingLLM はハイブリッド検索ネイティブなし、ネイティブリランカーなし。~2,000ドキュメント超では「正しいドキュメント、誤ったチャンク」エラー : モデルは論文を引用するが誤った箇所を引用。このサインが LlamaIndex 段階へアップグレードの時期。',
+          },
+        ],
+      },
+      optionLlamaIndex: {
+        id: 'option-llamaindex',
+        title: 'オプション2：LlamaIndexローカル（1,000~5,000ドキュメント）',
+        content:
+          '**完全ローカルモードの LlamaIndex は 30分 Python セットアップと引き換えに階層検索、クエリルーティング、はるかに優れたスケーリング曲線を獲得。** 同じ Ollama バックエンド、同じ nomic-embed-text-v1.5 embedder、ですが検索層はワンショット Top-K ではなく構造化パイプライン用。',
+        items: [
+          '**スタック** : Ollama + LlamaIndex + LanceDB（または ChromaDB）+ OllamaEmbedding アダプタ経由 nomic-embed-text-v1.5。ディスク永続化; CLI もしくは小規模 FastAPI ラッパー経由通信の長時間 Python プロセス実行。',
+          '**VectorStoreIndex 上 DocumentSummaryIndex** : LlamaIndex はインデックス時にドキュメント単位サマリ作成、検索は最初 関連ドキュメント（サマリ検索）を選び、次にそれら内チャンク検索。最も廉価な階層検索パターン。',
+          '**クエリルーティング** : RouterQueryEngine は fact-recall クエリをチャンクインデックスへ、合成クエリをサマリインデックスへ送信。~30行コード; 長ドキュメント コーパス上で回答品質倍化。',
+          '**Sentence-Window 検索** : 対象文 + N周辺文を検索するオプション第2インデックス。法律・学術コーパスで有用（回答1文だが意味は段落全体の文脈に依存）。',
+          '**永続化** : `index.storage_context.persist(persist_dir=...)` がすべて保存。5,000ドキュメントインデックスの再読み込みは NVMe SSD 上で10~30秒。',
+        ],
+        codeBlock:
+          '# 階層インデックス付きミニマル LlamaIndex ローカルRAG（~30行）\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# ルーティング用サマリインデックス + 検索用チャンクインデックス\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# クエリ時、問い合わせタイプでルート\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "Smith et al. はどのサンプルサイズを使いましたか?"\n)\nprint(response)',
+        codeLanguage: 'python',
+      },
+      optionChromaDB: {
+        id: 'option-chromadb',
+        title: 'オプション3：Ollama+ChromaDB カスタム（5,000~10,000ドキュメント）',
+        content:
+          '**5,000ドキュメントで LlamaIndex デフォルト値が疲労を示す : 純ベクトル検索は語彙的特定クエリを逃し、50,000チャンク cosinus 検索は「十分高速」予算を超。** ChromaDB、BM25 ハイブリッド検索、BGE リランカー付きカスタムスタックは32 GB ワークステーション上で10,000ドキュメント処理。',
+        items: [
+          '**スタック** : Ollama + ChromaDB（サーバーモード）+ BM25 用 Whoosh/Tantivy + BGE-reranker-v2-m3（~570 MB、CPU 上 50~100候補/秒）。単一 Python プロセスまたは Ingest + Query worker に分割ホスト。',
+          '**検索時ハイブリッド検索** : BM25 とベクトル検索並行実行、各 Top-25 取得、重複排除、merged Top-50 を cross-encoder リランク。最終 Top-6~8 を LLM へ。',
+          '**ChromaDB メタデータフィールド** : インデックス時各チャンク上 `source_filename`、`page_number`、`document_type`、`author`、`year` 設定。クエリ時フィルタ（`where={"document_type": "contract"}`）で検索空間を5~10倍削減、品質損失ゼロ。',
+          '**バッチインデックス化** : ChromaDB は32~128チャンク batch embedding。RTX 4070 上では BGE-リランカーがボトルネック（CPU 50~100候補/秒; GPU 400+/秒）。',
+          '**永続化** : ChromaDB は SQLite + Parquet ディレクトリに書き込み。ディスク上の50,000チャンクインデックスは~3~5 GB。バックアップはディレクトリコピー。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'BGE-reranker-v2-m3 この規模で最高影響度の追加。なしは正しいドキュメント誤ったチャンクが~15~25%。ありは5%未満、LLM は清潔な基礎で作業。クエリレイテンシに加わる200~500ms を予算化 – すべて価値あり。',
+          },
+        ],
+      },
+      optionQdrant: {
+        id: 'option-qdrant',
+        title: 'オプション4：Ollama+Qdrant（10,000+ ドキュメント）',
+        content:
+          '**10,000ドキュメント超で、シングルプロセス ChromaDB は応答性利点を失い始めます。シングルノード Docker モード Qdrant は50,000+ ドキュメント、ネイティブハイブリッド検索、ペイロードベースフィルタリング、Sub-秒クエリ HNSW インデックス処理。** 同じ Ollama バックエンド; 差異はベクトルストア。',
+        items: [
+          '**スタック** : Ollama + Qdrant（Docker、single-node）+ ネイティブ sparse ベクトル（Qdrant 1.10+ 組込 BM25 相当）+ BGE-reranker-v2-m3 + 小規模 Python オーケストレーション層。',
+          '**ネイティブハイブリッド** : Qdrant は1コレクション内 dense + sparse ベクトルをサポート、クエリ時加重融合。個別 BM25 プロセス保守不要。',
+          '**HNSW チューニング** : 50,000+ ベクトル時、インデックスビルドで `ef_construct` 200、`m` 32 に引き上げ、クエリ時 `ef=128`。デフォルトは機能するが~10%再現率とトレードオフ。',
+          '**メタデータフィルタリング用ペイロードスキーマ** : Qdrant はペイロードをファーストクラス扱い。`author`、`document_type`、`year`、`tags` を keyword payload にインデックス化して Sub-ms 事前フィルタリング有効化。',
+          '**階層検索** : `summaries`（ドキュメント単位ベクトル）と `chunks`（通常）の2コレクション保持。クエリをサマリコレクション経由ルート、マッチドキュメント ID 内でチャンク検索。',
+          '**永続化** : Qdrant は単一マウントボリュームに書き込み。100,000チャンクコレクションはペイロード size と HNSW 設定依存で~6~12 GB。',
+        ],
+        codeBlock:
+          '# dense + sparse ベクトルとメタデータフィルタリング付き Qdrant コレクション\nfrom qdrant_client import QdrantClient\nfrom qdrant_client.models import (\n    Distance, VectorParams, SparseVectorParams, SparseIndexParams\n)\n\nclient = QdrantClient(host="localhost", port=6333)\n\nclient.create_collection(\n    collection_name="docs",\n    vectors_config={\n        "dense": VectorParams(size=768, distance=Distance.COSINE),  # nomic-embed-text-v1.5\n    },\n    sparse_vectors_config={\n        "bm25": SparseVectorParams(index=SparseIndexParams(on_disk=False)),\n    },\n)\n\n# クエリ : ハイブリッド検索 + ペイロードフィルタ、個別 BM25 プロセス不要\nfrom qdrant_client.models import Filter, FieldCondition, MatchValue, Prefetch\n\nresults = client.query_points(\n    collection_name="docs",\n    query=dense_vec,\n    using="dense",\n    prefetch=[\n        Prefetch(query=sparse_vec, using="bm25", limit=25),\n        Prefetch(query=dense_vec, using="dense", limit=25),\n    ],\n    query_filter=Filter(\n        must=[FieldCondition(key="document_type", match=MatchValue(value="contract"))]\n    ),\n    limit=50,  # リランク前\n)',
+        codeLanguage: 'python',
+      },
+      hybridSearch: {
+        id: 'hybrid-search',
+        title: 'ハイブリッド検索：BM25 + ベクトル両方が単独より優秀',
+        content:
+          '**純コサイン検索は稀な固有名詞、法定番号、特定識別子に基づくクエリを逃します。純BM25 は異なる表現のクエリを逃します。組み合わせは単独より優秀、1,000ドキュメント超で特に。** 実装コスト : 追加の検索呼び出し + 融合ステップ。',
+        items: [
+          '**Dense 単独が失敗する理由** : embeddings は稀な tokens を軽視。「RFC 9110 section 7.4」や「MNDA-2024-0143」への問い合わせは汎用 IETF/contract チャンク近辺に埋め込まれます。BM25 は正確な識別子をキャッチ; 純コサイン検索は逃します。',
+          '**BM25 単独が失敗する理由** : 語彙マッチは言い換えを逃します。「どのように解約しますか?」は「解約手続き」タイトル chunk は dense 空間で match、BM25 では 0 score。',
+          '**Reciprocal Rank Fusion (RRF) 標準結合器** : いずれかの結果リストに出現する各チャンク、スコア `1/(60+rank_dense) + 1/(60+rank_bm25)`。降順ソート。60 は平滑化定数; 実際は30~100範囲。',
+          '**実践的レシピ** : 各メソッド Top-25 検索、RRF 経由結合、Top-50 取得、リランカーへ送信、Top-6~8 をLLMへ。これが1,000ドキュメント超すべての規模での標準プロダクション パイプライン。',
+          '**ストレージコスト** : BM25 インデックスは小さい（~50~150 MB per 10,000 ドキュメント）と同規模の dense インデックス（~500 MB~2 GB）比較。既存 dense ストアへの BM25 追加は廉価。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Qdrant 1.10+ と Weaviate 両方ハイブリッドネイティブサポート。ChromaDB は Whoosh/Tantivy 装着必要。LanceDB は実験的ハイブリッド対応だが API は 2026年5月時点で変更中 – commitment前に現在ドキュメント確認。ネイティブハイブリッド、ベクトルストア選択の価値ある。',
+          },
+        ],
+      },
+      reranking: {
+        id: 'reranking',
+        title: 'リランキング：Top-N 精緻化パス',
+        content:
+          '**リランカーは小規模 cross-encoder で (query, candidate) ペア合同ではなく独立スコア。ハイブリッド検索の Top-25~50 候補上実行して「正しいドキュメント、誤ったチャンク」エラー修正。** 5,000~50,000 ドキュメント間で単一最大品質レバー。',
+        items: [
+          '**BGE-reranker-v2-m3** (~570 MB、多言語、Apache 2.0) 2026年5月デフォルト選択。CPU 最新 50~100候補/秒; GPU 400+ /秒 実行。Top-50 リランキング遅延コストは CPU~200~500ms、GPU ~80~150ms。',
+          '**Cross-encoder が検索で勝つ理由** : dense embeddings は query とドキュメント独立エンコード、モデルは決して共に見ません。Cross-encoder は `[CLS] query [SEP] candidate [SEP]` 合同読み、ペア直接スコア。Recall@5 典型的に 15~25 ポイント上昇。',
+          '**リランカー注入場所** : ハイブリッド検索後、LLM 前。ハイブリッド top-50 取得、Top-6~8 リランク、それら を LLM コンテキストとして送信。',
+          '**別案 – Cohere Rerank API** : より高品質、cloud 呼び出し要。完全ローカルスタック、BGE-reranker-v2-m3 実践的デフォルト。mxbai-rerank-base-v2 強い代替。',
+          '**1,000ドキュメント未満リランカー省略は OK** : 品質利得遅延コストを正当化しない。5,000ドキュメント超、省略は~15~25% 回答が誤ったチャンク上に基礎。',
+        ],
+      },
+      metadataFiltering: {
+        id: 'metadata-filtering',
+        title: '大規模コレクション向けメタデータフィルタリング',
+        content:
+          '**ストラクチャ メタデータ各チャンク上保存すると、ベクトル検索実行前にインデックスを絞れます。10,000ドキュメント コーパスでは、payload フィルタは典型的に検索空間 5~10倍削減、品質損失ゼロ。** インデックス時追加は廉価; 後付けは高い。',
+        items: [
+          '**インデックス時設定すべき universal payload フィールド** : `source_filename`、`page_number`、`document_type`（論文/契約/ノート/wiki）、`author`、`year`、`language`、プラス domain 固有タグ（例：`case_number`、`project_id`、`client_id`）。',
+          '**クエリ時事前フィルタ** : 「2024年Q3ボード議事録は価格について何と言った?」→ `document_type=board_minutes AND year=2024 AND quarter=3` まず filter、次にベクトル検索 all 10,000 ではなく~12ドキュメント内。',
+          '**Vector store サポート** : Qdrant ペイロード、Weaviate properties、ChromaDB メタデータ、LanceDB スキーマカラム すべてフィルタリングサポート。パフォーマンス変動 – Qdrant ペイロードインデックスフィールド sub-ms; ChromaDB メタデータ>100k チャンク時 50~150ms 追加可能。',
+          '**メタデータ自動抽出** : 法律コーパス、小規模 LLM パス index-time が各ドキュメント case 番号、日付、関係者名抽出可能。Llama 3.3 8B 上~30秒/ドキュメント; ingest ごと1回。',
+          '**ハイブリッド検索と結合** : payload フィルタ narrow universe → BM25 + dense 検索 filtered set 内 → rerank。Payload フィルタは任意大型 RAG システムで最廉価 5~10倍 speedup。',
+        ],
+      },
+      hierarchicalRetrieval: {
+        id: 'hierarchical-retrieval',
+        title: '階層検索パターン',
+        content:
+          '**階層検索は2インデックス保持 – ドキュメント単位サマリ 1つ、チャンク 1つ – クエリを両方へルート。サマリ検索が正しいドキュメント見つけ; チャンク検索が正しいパッセージ見つけ。** 合成時のノイズ削減; ほぼ fact recall 不要。',
+        items: [
+          '**ドキュメント単位サマリ** : インデックス時、LLM に各ドキュメント 100~200 トークン サマリ書かせ。サマリを別 `summaries` コレクションに embed。Llama 3.3 8B で~30~90 秒/ドキュメント。',
+          '**二段階検索** : (1) query embed、`summaries` 検索、top-5 ドキュメント取得; (2) 5ドキュメント内、ハイブリッド検索 top-8 チャンク; (3) 必要時リランク; (4) LLM 送信。',
+          '**最も利益が大きい場合** : 合成と複数ドキュメント問い（「これら論文はどのように X を扱ってるか比較」）。Fact recall（「Smith はどの値報告?」）は chunk インデックス単独で OK – サマリ迂回は遅延追加、品質利得ゼロ。',
+          '**コスト トレードオフ** : インデックスストレージ倍化（サマリ小さいが index 自体が複製インフラ）。非ルートクエリ遅延倍化。利得は10,000+ ドキュメントでノイズ削減。',
+          '**LlamaIndex が組み込み** : `DocumentSummaryIndex` プラス `RouterQueryEngine` は 30行実装。ChromaDB/Qdrant 個別 Python は~80~120行。',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: '100、1k、10k ドキュメント時の実測ベンチマーク',
+        content:
+          '**4アーキテクチャ同じコーパス上テスト。Test rig : NVIDIA RTX 4070（12 GB VRAM、32 GB RAM）、Windows 11+WSL2、NVMe SSD。M5 MacBook Pro（32 GB unified）で cross-check。中央値 3 run ウォームアップ後。** インデックス時間、on-disk ストレージ、query p50/p95 レイテンシ scales 上。',
+        columns: ['スタック', 'メトリック', '@ 100ドキュメント', '@ 1,000ドキュメント', '@ 10,000ドキュメント'],
+        rows: [
+          {
+            'スタック': 'AnythingLLM 調整版',
+            'メトリック': 'インデックス時間',
+            '@ 100ドキュメント': '~1分',
+            '@ 1,000ドキュメント': '~12分',
+            '@ 10,000ドキュメント': '3,000超テストされず',
+          },
+          {
+            'スタック': 'AnythingLLM 調整版',
+            'メトリック': 'On-disk ベクトル',
+            '@ 100ドキュメント': '~30 MB',
+            '@ 1,000ドキュメント': '~280 MB',
+            '@ 10,000ドキュメント': 'N/A',
+          },
+          {
+            'スタック': 'AnythingLLM 調整版',
+            'メトリック': 'クエリ p50/p95',
+            '@ 100ドキュメント': '~180/420 ms',
+            '@ 1,000ドキュメント': '~310/880 ms',
+            '@ 10,000ドキュメント': 'N/A（再現率低すぎ）',
+          },
+          {
+            'スタック': 'LlamaIndex ローカル',
+            'メトリック': 'インデックス時間',
+            '@ 100ドキュメント': '~3分（サマリ含む）',
+            '@ 1,000ドキュメント': '~25分',
+            '@ 10,000ドキュメント': '~3.5時間',
+          },
+          {
+            'スタック': 'LlamaIndex ローカル',
+            'メトリック': 'On-disk ストレージ',
+            '@ 100ドキュメント': '~45 MB',
+            '@ 1,000ドキュメント': '~340 MB',
+            '@ 10,000ドキュメント': '~3.6 GB',
+          },
+          {
+            'スタック': 'LlamaIndex ローカル',
+            'メトリック': 'クエリ p50/p95',
+            '@ 100ドキュメント': '~210/480 ms',
+            '@ 1,000ドキュメント': '~280/720 ms',
+            '@ 10,000ドキュメント': '~700/1,400 ms',
+          },
+          {
+            'スタック': 'Ollama+ChromaDB カスタム',
+            'メトリック': 'インデックス時間',
+            '@ 100ドキュメント': '~2分',
+            '@ 1,000ドキュメント': '~18分',
+            '@ 10,000ドキュメント': '~2.8時間',
+          },
+          {
+            'スタック': 'Ollama+ChromaDB カスタム',
+            'メトリック': 'On-disk ストレージ',
+            '@ 100ドキュメント': '~40 MB',
+            '@ 1,000ドキュメント': '~310 MB',
+            '@ 10,000ドキュメント': '~3.2 GB',
+          },
+          {
+            'スタック': 'Ollama+ChromaDB カスタム',
+            'メトリック': 'クエリ p50/p95',
+            '@ 100ドキュメント': '~240/540 ms（リランク含む）',
+            '@ 1,000ドキュメント': '~340/760 ms',
+            '@ 10,000ドキュメント': '~520/1,100 ms',
+          },
+          {
+            'スタック': 'Ollama+Qdrant',
+            'メトリック': 'インデックス時間',
+            '@ 100ドキュメント': '~2分',
+            '@ 1,000ドキュメント': '~17分',
+            '@ 10,000ドキュメント': '~2.6時間',
+          },
+          {
+            'スタック': 'Ollama+Qdrant',
+            'メトリック': 'On-disk ストレージ',
+            '@ 100ドキュメント': '~55 MB',
+            '@ 1,000ドキュメント': '~410 MB',
+            '@ 10,000ドキュメント': '~4.4 GB',
+          },
+          {
+            'スタック': 'Ollama+Qdrant',
+            'メトリック': 'クエリ p50/p95',
+            '@ 100ドキュメント': '~220/480 ms',
+            '@ 1,000ドキュメント': '~310/690 ms',
+            '@ 10,000ドキュメント': '~410/920 ms',
+          },
+        ],
+      },
+      storageHardware: {
+        id: 'storage-hardware',
+        title: 'ストレージサイジングとハードウェア要件',
+        content:
+          '**ストレージはドキュメント線形スケール、RAM は sub-linear。ほぼ検索エンジンが memory-map ではなく full load インデックス。下記値は nomic-embed-text-v1.5（768-dim）と1,000トークン/200重複 chunk 想定。** ディスク 3~5倍コーパスサイズ計画。',
+        items: [
+          '**1,000 PDF（~12ページ）の raw テキスト** : ~50~150 MB 抽出テキスト。密度に応じてかなり変動。',
+          '**1,000ドキュメント時ベクトル** : HNSW インデックスオーバーヘッド含め~300~400 MB disk。HNSW インデックス skip、brute-force 利用は~120~180 MB（5,000ドキュメント未満OK）。',
+          '**10,000ドキュメント時ベクトル** : ~3~5 GB disk。HNSW 構築 10~30分 modern CPU 上。',
+          '**50,000ドキュメント時ベクトル** : ~15~25 GB disk。Index build time がボトルネック – one-time 2~4時間 CPU 計画。',
+          '**クエリ中 RAM** : dense 検索は index 30~50% working メモリで低レイテンシクエリ。5 GB index は HNSW 付き 8~16 GB RAM で快適query; brute-force は full index resident 要。',
+          '**インデックス中 RAM** : embedding モデルサイズ 2~3倍（~600 MB nomic-embed-text）プラス per-batch テキスト spikes。8 GB 空き RAM で indexing パス十分。',
+          '**GPU vs CPU** : embedding throughput は discrete GPU または Apple Silicon 上で 4~8倍高速。10,000+ one-shot indexing で GPU は 1~3時間節約。クエリ時 embedding（query 1つ）では CPU OK。',
+          '**ディスクタイプが重要** : NVMe SSD は 5,000+ ドキュメント実務的 floor。SATA SSD は冷クエリレイテンシに 30~100% 追加; spinning disk は~2,000ドキュメント超で使用不可。',
+        ],
+      },
+      incrementalIndexing: {
+        id: 'incremental-indexing',
+        title: 'インクリメンタルインデックス化と重複除去',
+        content:
+          '**10,000ドキュメント索引に100新 PDF 追加は、10,000すべての再インデックス強制すべきではありません。** このガイドのすべてのアーキテクチャが incremental adds サポート; より難しい問題は近傍重複ドキュメント検出・除去で、silent double-count chunks、検索混乱。',
+        items: [
+          '**Ingest 時 Hash ベース exact dedup** : raw ファイルバイト SHA-256。Hash 既に索引済みファイル skip。廉価、identical ファイル catch、near-dupe miss（OCR 異パス same scan、format conversion）。',
+          '**Content-hash dedup** : whitespace 正規化後 extracted plain テキスト SHA-256。異 file format 同コンテンツ catch。ingest ごと~5ms 追加。',
+          '**MinHash near-dupe 向け** : legal/academic コーパス multiple draft same doc accumulate で MinHash signature（~128 bytes/doc）計算、既存 Jaccard 閾値 ~0.85 内 skip。',
+          '**Document ID は永遠** : 削除後 doc ID 再利用禁止。Vector store はしばしば orphaned ベクトル短期保持; ID 再利用は silent confusion 原因。UUID または hash ベース ID 利用。',
+          '**Embedder 変更時 re-embedding** : すべてのアーキテクチャで embedder 変更時完全再インデックス force。2 model 版 embeddings mix は silent 検索劣化。10,000ドキュメント索引前に embedder 選択・commit 少なくも1年。',
+          '**削除** : ChromaDB と Qdrant は ID point 削除サポート。LanceDB は compaction pass 要 disk reclaim – 月あたり corpus >~5% 削除で週単位計画。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '長期実行 personal RAG システムの最も一般的 silent 失敗は duplicate ingest : 同一論文 2 format で追加、または同一 wiki ページ 2回 export。症状「モデル同じチャンク 3回ずっと引用」と「syntheses がおかしく repetitive」。1,000ドキュメント超前に content-hash dedup 追加。',
+          },
+        ],
+      },
+      monitoring: {
+        id: 'monitoring',
+        title: '大規模RAG品質監視',
+        content:
+          '**10,000ドキュメント RAG システムはドキュメント追加、モデル swap、edge case 発見で長期にわたり silent 劣化。Fix は小さい評価harness – 30~50 hand-curated query/answer pair – 重要変更ごとに再実行。** 5分評価は週の confused chasing 防止。',
+        items: [
+          '**小規模 golden set 構築** : 30~50 問い、正解を知ってる、実使用から抽出。Fact recall（5~10）、syntheses（5~10）、cross-document（5~10）、edge case（5~10）、known-miss query（5~10、答え corpus 外）含む。',
+          '**問い当たり3メトリック追跡** : retrieval recall（正しいチャンク top-K に現れた?）、generation faithfulness（回答は chunk マッチ?）、refusal rate（system 「corpus 外」正しく言った?）。',
+          '**重要変更ごと再実行** : 新 ingest batch、embedder swap、chunk-size change、prompt tweak。結果を前回と diff; retrieval recall または answer 変わった問い flag。',
+          '**Trulens または RAGAS** for automated eval frameworks。両方 local 実行、LlamaIndex integrate。30~50 問い manual scoring も fine、しばしば正確。',
+          '**Latency budget** : p50 と p95 query latency を時系列 track。p95 で 50% jump は典型的に index RAM 超過 – 次アーキテクチャ層 upgrade 早期シグナル。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'デフォルトRAG設定はドキュメント何個で限界?',
+            a: '16 GB ノートPC デフォルト設定（512トークン chunk、0 overlap、デフォルト embedder、top-K 4）では検索品質 1,000~2,000ドキュメント で視認可能 劣化、5,000超は使用不可。2つの失敗モード「正しい doc 誤った chunk」（top-K 大規模では狭い）と silent recall 低下（index RAM 超過）。AnythingLLM 調整版（1,000/200 chunk + nomic-embed-text-v1.5）で ~3,000ドキュメント へ cliff push。超えるとハイブリッド検索 + reranker 要。',
+          },
+          {
+            q: 'ハイブリッド検索（BM25+ベクトル）使うべき?',
+            a: '1,000ドキュメント超では yes。純 dense 検索は稀 固有名詞、law 番号、特定識別子ベース問い逃す。純 BM25 は言い換え問い逃す。Top-25 list RRF fusion が標準 combiner。Qdrant/Weaviate はネイティブハイブリッド; ChromaDB は Whoosh/Tantivy 要。追加検索コスト ~50~100ms; 品質利得有意。',
+          },
+          {
+            q: '1,000 PDF embedding 後いくらストレージ要?',
+            a: 'nomic-embed-text-v1.5（768 dimension）で 1,000トークン chunk/200 overlap で dense vector index 約 250~400 MB disk。ハイブリッド検索用 BM25 index +50~150 MB、hierarchy summaries +50~100 MB。Original PDF 本体はほぼ vector DB に保存されない – 抽出テキスト + embedding のみ。10,000 PDF corpus は ~3~5 GB vector + whatever PDF 占有。',
+          },
+          {
+            q: 'リランキングは大規模で役立つ?',
+            a: 'はい – 5,000~50,000ドキュメント で最大 impact 単一追加。なしは「正しい doc 誤った chunk」エラー ~15~25% 時間。BGE-reranker-v2-m3 + ハイブリッド top-50 で 5%未満に低下。200~500ms CPU / 80~150ms GPU 遅延。1,000ドキュメント未満は品質利得が遅延正当化しない; 5,000超では skip は 15~25% recall テーブル上に残す。',
+          },
+          {
+            q: '重複・近傍重複 doc どう処理?',
+            a: '三層 dedup : raw file bytes SHA-256（identical ファイル catch）、extract plain text SHA-256 whitespace 後（異 file format same 内容）、MinHash +Jaccard ~0.85（近傍 dupe like multiple draft / OCR variant）。embedding 前 ingest ですべて実行。skip 症状「synthese が bizarrely repetitive」– same chunk 3回 stored で LLM 見る 3回。',
+          },
+          {
+            q: 'すべて再索引なしドキュメント追加可能?',
+            a: 'はい、このガイド全アーキテクチャ incremental add サポート。ChromaDB/Qdrant は simple insert call; LanceDB は append-only file; LlamaIndex は wrap。例外は embedder 変更 – 完全再索引 force（2 model 版 mix silent 検索劣化）。5,000ドキュメント超前に embedder 選択・最低1年 commit。',
+          },
+          {
+            q: '大規模コレクション向けメタデータフィルタリング使う?',
+            a: 'はい – metadata フィルタリングは大規模での最廉価 5~10倍 speedup。source_filename、page_number、document_type、author、year、domain タグ populate インデックス時。クエリ時事前フィルタ（payload）で検索空間数百 chunk に切る、品質損失ゼロ。Qdrant/Weaviate は first-class payload; ChromaDB/LanceDB もサポートだが >100k chunk で若干遅い。',
+          },
+          {
+            q: '大規模 RAG 品質監視する?',
+            a: 'golden set 構築 – 30~50 hand-curate query/answer pair 正解知ってる、real usage 由来 – 重要変更（新 ingest、embedder swap、chunk change、prompt tweak）ごと再実行。Retrieval recall（正しいチャンク top-K?）、generation faithfulness（answer match chunk?）、refusal rate（system 「not corpus」言った?）追跡。Trulens/RAGAS は automate; manual 30 question 評価も fine、しばしば正確。',
+          },
+          {
+            q: '10,000ドキュメント向けハードウェア何必要?',
+            a: 'floor : 32 GB system RAM、50+ GB 空き NVMe SSD、8GB+ VRAM discrete GPU もしくは 32GB+ unified Apple Silicon。GPU/Apple Silicon は one-shot indexing 速度（10,000 doc pass で 1~3時間節約）; query inferencing は indexing後 CPU でOK。SATA SSD acceptable だが 30~100% cold query latency 追加; spinning disk は ~2,000ドキュメント超で使用不可。RAM は constraint 最初に bite – 5 GB index は HNSW で 16 GB RAM で快適.',
+          },
+          {
+            q: '複数ユーザー RAG ローカルホスト可能?',
+            a: 'はい – Open WebUI を上記アーキテクチャの前に置くか、同一 Qdrant+Ollama backend の小さい FastAPI wrapper。Multi-user は operationally（auth、isolation、rate limiting、optional per-user workspace）変わるが、retrieval アーキテクチャは同じ。Open WebUI は auth、OAuth、role-base document access out-of-box handle。5+ concurrent user 10,000-doc corpus で embedder GPU indexing、query embedding CPU または GPU（QPS）計画 – single CPU embedder は ~3~5 QPS comfortable handle。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI : 2026年ベストローカルRAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja) – スケーリング前に desktop RAG platform 選択のベース文脈。',
+          '[2026年ローカルRAGベスト埋め込みモデル](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) – Embedder 選択は10,000ドキュメント索引前の最単独重要決定。',
+          '[Private ビジネスデータ向けローカルRAG](/power-local-llm/local-rag-for-private-business-data?lang=ja) – personal-scale RAG がenterprise compliance 要件に出会う自然エスカレーション。',
+          '[30分で PDF にローカルRAG 構築（Ollama+AnythingLLM）](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja) – スケーリング cliff 前の entry-level setup。',
+          '[RAG 説明 : AI 回答を real data で ground する（2026）](/prompt-engineering/rag-explained?lang=ja) – RAG とはなぜ各検索コンポーネントが matter かの概念権威。',
+          '[2026ローカルLLMハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja) – 10,000+ ドキュメント corpus 向けハードウェアサイズ参照。',
+          '[Power Local LLM Hub](/power-local-llm) – クラスタ向け完全ガイドライブラリ。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': '1000+ PDFをローカルでチャット: プロダクションレベルのRAG構築',
+      'description':
+        'ローカルRAGを1,000~10,000+ PDFまでスケーリング。アーキテクチャ比較、実測ベンチマーク、スケーリング cliff を平坦化する4つアップグレード（ハイブリッド検索、リランキング、メタデータフィルタリング、階層検索）。',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'inLanguage': 'ja',
+      'url': 'https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally?lang=ja',
+      'author': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      'proficiencyLevel': 'Advanced',
+      'about': [
+        { '@type': 'Thing', 'name': 'Retrieval-augmented generation' },
+        { '@type': 'Thing', 'name': 'ローカルRAG' },
+        { '@type': 'Thing', 'name': 'ハイブリッド検索' },
+        { '@type': 'Thing', 'name': 'BM25' },
+        { '@type': 'Thing', 'name': 'リランキング' },
+        { '@type': 'Thing', 'name': '階層検索' },
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'LlamaIndex' },
+        { '@type': 'Thing', 'name': 'ChromaDB' },
+        { '@type': 'Thing', 'name': 'Qdrant' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'ja',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'デフォルトRAG設定はドキュメント何個で限界?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '16 GB ノートPC デフォルト設定 512トークン chunk 0 overlap デフォルト embedder top-K 4 では検索品質 1,000 から 2,000 ドキュメント で視認可能 劣化 5,000 超は使用不可。2つの失敗モード 正しい doc 誤った chunk top-K 大規模では狭い と silent recall 低下 index RAM 超過。AnythingLLM 調整版 1,000 200 chunk plus nomic-embed-text-v1.5 で およそ 3,000 ドキュメント へ cliff push。超えるとハイブリッド検索 + reranker 要。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'ハイブリッド検索（BM25+ベクトル）使うべき?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '1,000 ドキュメント 超では yes。純 dense 検索は稀 固有名詞 law 番号 特定識別子 ベース 問い 逃す。純 BM25 は言い換え問い逃す。Top-25 list RRF fusion が標準 combiner。Qdrant Weaviate はネイティブハイブリッド; ChromaDB は Whoosh Tantivy 要。追加検索コスト およそ 50 から 100 ミリ秒; 品質利得有意。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '1,000 PDF embedding 後いくらストレージ要?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'nomic-embed-text-v1.5 768 dimension で 1,000 トークン chunk 200 overlap で dense vector index 約 250 から 400 MB disk。ハイブリッド検索用 BM25 index プラス 50 から 150 MB hierarchy summaries プラス 50 から 100 MB。Original PDF 本体はほぼ vector DB に保存されない – 抽出テキスト プラス embedding のみ。10,000 PDF corpus は およそ 3 から 5 GB vector プラス whatever PDF 占有。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'リランキングは大規模で役立つ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'はい – 5,000 から 50,000 ドキュメント で 最大 impact 単一 追加。なしは 正しい doc 誤った chunk エラー およそ 15 から 25 パーセント 時間。BGE-reranker-v2-m3 プラス ハイブリッド top-50 で 5 パーセント 未満に低下。200 から 500 ミリ秒 CPU / 80 から 150 ミリ秒 GPU 遅延。1,000 ドキュメント 未満は 品質 利得が 遅延 正当化しない; 5,000 超では skip は 15 から 25 パーセント recall テーブル 上に 残す。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '重複・近傍重複 doc どう処理?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '三層 dedup : raw file bytes SHA-256 identical ファイル catch extract plain text SHA-256 whitespace 後 異 file format same 内容 MinHash プラス Jaccard およそ 0.85 近傍 dupe like multiple draft / OCR variant。embedding 前 ingest ですべて 実行。skip 症状 synthese が bizarrely repetitive – same chunk 3回 stored で LLM 見る 3回。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'すべて再索引なしドキュメント追加可能?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'はい このガイド 全 アーキテクチャ incremental add サポート。ChromaDB Qdrant は simple insert call; LanceDB は append-only file; LlamaIndex は wrap。例外は embedder 変更 – 完全 再索引 force 2 model 版 mix silent 検索劣化。5,000 ドキュメント 超 前に embedder 選択・最低 1年 commit。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '大規模コレクション向けメタデータフィルタリング使う?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'はい – metadata フィルタリングは 大規模 での 最廉価 5 から 10 倍 speedup。source_filename page_number document_type author year domain タグ populate インデックス 時。クエリ 時 事前 フィルタ payload で 検索 空間 数百 chunk に 切る 品質 損失 ゼロ。Qdrant Weaviate は first-class payload; ChromaDB LanceDB も サポート だが 大なり 100k chunk で 若干 遅い。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '大規模 RAG 品質監視する?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'golden set 構築 – 30 から 50 hand-curate query answer pair 正解 知ってる real usage 由来 – 重要 変更 新 ingest embedder swap chunk change prompt tweak ごと 再実行。Retrieval recall 正しい チャンク top-K 現れた generation faithfulness answer match chunk refusal rate system 「 not corpus 」 言った 追跡。Trulens RAGAS は automate; manual 30 question 評価も fine しばしば 正確。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '10,000ドキュメント向けハードウェア何必要?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'floor : 32 GB system RAM 50 プラス GB 空き NVMe SSD 8GB プラス VRAM discrete GPU もしくは 32GB プラス unified Apple Silicon。GPU Apple Silicon は one-shot indexing 速度 10,000 doc pass で 1 から 3 時間 節約; query inferencing は indexing 後 CPU で OK。SATA SSD acceptable だが 30 から 100 パーセント cold query latency 追加; spinning disk は およそ 2,000 ドキュメント 超で 使用 不可。RAM は constraint 最初に bite – 5 GB index は HNSW で 16 GB RAM で 快適。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '複数ユーザー RAG ローカルホスト可能?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'はい – Open WebUI を 上記 アーキテクチャ の 前に 置くか 同一 Qdrant Ollama backend の 小さい FastAPI wrapper。Multi-user は operationally auth isolation rate limiting optional per-user workspace 変わるが retrieval アーキテクチャ は 同じ。Open WebUI は auth OAuth role-base document access out-of-box handle。5 プラス concurrent user 10,000-doc corpus で embedder GPU indexing query embedding CPU または GPU QPS 計画 – single CPU embedder は およそ 3 から 5 QPS comfortable handle。',
+          },
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'ホーム',
+          'item': 'https://www.promptquorum.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': '1000+ PDFをローカルでチャット: プロダクションレベルのRAG構築',
+          'item': 'https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally?lang=ja',
+        },
+      ],
+    },
+  },
 }
