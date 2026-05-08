@@ -616,4 +616,624 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: 'Lokales RAG für Geschäftsdaten: DSGVO-konforme KI für vertrauliche Dokumente (2026)',
+    seoTitle: 'DSGVO-konformes lokales RAG für sensible Dokumente (2026)',
+    intro:
+      'Juristische, medizinische und finanzielle Teams stehen vor demselben Problem: Genau die Dokumente, die sich am meisten für eine KI-gestützte Suche lohnen, dürfen das Haus nicht verlassen. Dies ist die Architektur, das Kontrollset und die Entscheidungsmatrix für Bereitstellungsmuster eines selbst gehosteten RAG, das den Anforderungen der DSGVO, des EU AI Act, von HIPAA und des deutschen Datenschutzes gerecht wird — geschrieben für Compliance-Verantwortliche, die ein einziges Dokument an ihr IT-Team senden möchten und wollen, dass dieses weiß, was zu bauen ist.',
+    metaDescription:
+      'DSGVO-konformes lokales RAG für Recht-, Medizin- und Finanzteams. Architektur, Audit-Logging, DSFA-Umfang und 3 Bereitstellungsmuster im Vergleich.',
+    twitterDescription:
+      'Lokales RAG, das DSGVO und EU AI Act erfüllt. Air-Gap, Audit-Logs, Datenherkunft, DSFA-Umfang und 3 Bereitstellungsmuster — der Artikel, den EU-Compliance-Verantwortliche an die IT senden.',
+    audience:
+      'Compliance-Verantwortliche, Datenschutzbeauftragte (DSB), Justiziare und IT-Architekten in der EU und im DACH-Raum, die für den Aufbau selbst gehosteter RAG-Systeme über vertrauliche Dokumente verantwortlich sind — Verträge, Patientenakten, Audit-Dateien, M&A-Datenräume, Korrespondenz mit Aufsichtsbehörden.',
+    readTime: '15 Min. Lesezeit',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'DSGVO-konformes lokales RAG',
+    targetKeywords: [
+      'dsgvo konformes rag',
+      'lokales rag geschäftsdaten',
+      'eu ai act rag',
+      'privates rag für vertrauliche dokumente',
+      'on-premise rag bereitstellung',
+      'datenschutz rag',
+      'dsfa lokales rag',
+    ],
+    leadAnswerBlock:
+      '**Eine selbst gehostete RAG-Bereitstellung erfüllt die Anforderungen der DSGVO und des EU AI Act nur dann, wenn sechs Kontrollen vom ersten Tag an verankert sind: Air-Gap oder strikt kontrollierter Egress, Authentifizierung pro Nutzer mit rollenbasiertem Dokumentenzugriff, unveränderliche Audit-Logs für Ingest und Retrieval, Ende-zu-Ende-Verschlüsselung im Ruhezustand und bei der Übertragung, deterministische Datenherkunft vom Chunk bis zur Quelle sowie ein schriftlich definierter Löschpfad, der vom Quellsystem über den Vektorindex bis zu zwischengespeicherten Embeddings reicht. Das Bereitstellungsmuster (Einzelnutzer-Laptop, On-Prem-Server, private EU-Cloud) bestimmt, welche Kontrollen leicht umzusetzen sind und welche Aufwand erfordern — nicht, ob die Kontrollen erforderlich sind.**',
+    quickAnswerTop: {
+      en: {
+        question:
+          'Ist lokales RAG standardmäßig DSGVO-konform, und welches Bereitstellungsmuster sollten regulierte Teams wählen?',
+        answer:
+          'Lokales RAG ist standardmäßig nicht DSGVO-konform. Der Betrieb eines Modells On-Premise löst zwar das Problem grenzüberschreitender Datentransfers und reduziert Ihre Liste der Auftragsverarbeiter, doch die Artikel 5, 25, 30, 32 und 35 der DSGVO gelten weiterhin: Rechtsgrundlage, Datenminimierung, Audit-Logging, Sicherheit der Verarbeitung sowie eine Datenschutz-Folgenabschätzung (DSFA) für jedes System, das besondere Kategorien personenbezogener Daten in größerem Umfang verarbeitet. Wählen Sie eine Einzelnutzer-Laptop-Bereitstellung für Einzelpersonen und einmalige Mandatsprüfungen; einen On-Prem-Server für abteilungsweite Wissensbasen mit bis zu wenigen tausend Dokumenten und 5–50 Nutzern; eine private EU-Cloud (souveräne Cloud, kundenseitig verwaltete Schlüssel, ausschließlich EU-Region) für abteilungs- oder unternehmensübergreifende Bereitstellungen, bei denen multiregionale Ausfallsicherheit wichtiger ist als ein vollständiger Air-Gap. Welches Muster Sie auch wählen — die sechs Kontrollen oben sind dieselben; nur die Implementierungskosten verschieben sich.',
+        bullets: [
+          'Lokales Hosting löst grenzüberschreitende Übermittlungen (Art. 44–49) und reduziert die Liste der Auftragsverarbeiter — es löst weder die Frage der Rechtsgrundlage noch die DSFA noch die Betroffenenrechte für sich genommen.',
+          'Einzelnutzer-Laptop — am besten geeignet für einzelne Anwältinnen, Ärzte, Prüferinnen und einmalige Mandatsprüfungen. Schwer zu auditieren bei Skalierung; einfachster Air-Gap.',
+          'On-Prem-Server — am besten geeignet für Abteilungsbereitstellungen mit 5–50 Nutzern. Echte Audit-Logs, RBAC, Backup und Disaster Recovery. Höchster IT-Aufwand.',
+          'Private EU-Cloud — am besten geeignet für unternehmensübergreifende Bereitstellungen mit Anforderungen an Ausfallsicherheit. Souveräne Region + kundenseitig verwaltete Schlüssel + Klauseln, die KI-Training auf Kundendaten ausschließen, sind erforderlich.',
+          'Eine DSFA ist gemäß Artikel 35 verpflichtend, wenn besondere Kategorien personenbezogener Daten in größerem Umfang verarbeitet werden — unabhängig vom Bereitstellungsmuster.',
+          'Anträge auf Recht auf Vergessenwerden müssen sich auf Quelldokumente, Vektorindizes und zwischengespeicherte Embeddings auswirken — gestalten Sie den Löschpfad vor dem Go-Live, nicht erst nach dem ersten eingegangenen Antrag.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Schnellfakten', anchor: '#quick-facts' },
+      { label: 'Vergleich der Bereitstellungsmuster', anchor: '#deployment-comparison' },
+      { label: 'Auswahl eines Bereitstellungsmusters', anchor: '#which-deployment' },
+      { label: 'Warum lokales RAG für sensible Daten', anchor: '#why-local-rag' },
+      { label: 'Die sechs unverzichtbaren Kontrollen', anchor: '#required-controls' },
+      { label: 'Air-Gap und Egress-Kontrolle', anchor: '#air-gap' },
+      { label: 'Audit-Logging, das einer Prüfung standhält', anchor: '#audit-logging' },
+      { label: 'Datenherkunft vom Chunk bis zur Quelle', anchor: '#data-lineage' },
+      { label: 'Verschlüsselung und Zugriffskontrolle', anchor: '#encryption-access' },
+      { label: 'Einzelnutzer-Laptop-Muster', anchor: '#laptop-pattern' },
+      { label: 'On-Prem-Server-Muster', anchor: '#on-prem-pattern' },
+      { label: 'Vektordatenbank-Optionen', anchor: '#vector-db-comparison' },
+      { label: 'Privates EU-Cloud-Muster', anchor: '#private-cloud-pattern' },
+      { label: 'Einstufung nach EU AI Act', anchor: '#eu-ai-act' },
+      { label: 'DSFA-Anforderungen', anchor: '#dpia-requirements' },
+      { label: 'Deutschlandspezifische Hinweise (Datenschutz)', anchor: '#germany-datenschutz' },
+      { label: 'Compliance-Checkliste', anchor: '#compliance-checklist' },
+      { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+      { label: 'Quellen', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Lokales Hosting ist notwendig, aber nicht ausreichend.** Der Betrieb des Modells und des Vektorspeichers auf eigener Hardware löst grenzüberschreitende Datentransfers und reduziert die Liste der Auftragsverarbeiter, doch die Artikel 5, 25, 30, 32 und 35 der DSGVO gelten weiterhin. Rechtsgrundlage, Datenminimierung, Audit-Logging, Sicherheit der Verarbeitung und Datenschutz-Folgenabschätzungen werden nicht optional, nur weil die Daten im Haus bleiben.',
+          '**Sechs Kontrollen sind nicht verhandelbar** — unabhängig vom Bereitstellungsmuster: Air-Gap oder strikte Egress-Kontrolle, Authentifizierung pro Nutzer mit rollenbasiertem Zugriff, unveränderliche Audit-Logs, Verschlüsselung im Ruhezustand und bei der Übertragung, deterministische Datenherkunft vom Chunk zurück zum Quelldokument sowie ein schriftlich definierter Löschpfad, der den Vektorindex und alle zwischengespeicherten Embeddings einschließt.',
+          '**Drei Bereitstellungsmuster decken die meisten regulierten Anwendungsfälle ab.** Einzelnutzer-Laptop für Einzelpersonen und Mandatsprüfungen; On-Prem-Server für abteilungsweite Wissensbasen mit 5–50 Nutzern; private EU-Cloud (souveräne Region, kundenseitig verwaltete Schlüssel) für unternehmensübergreifende Bereitstellungen, bei denen Ausfallsicherheit wichtiger ist als ein vollständiger Air-Gap.',
+          '**Der EU AI Act stuft die meisten lokalen RAG-Systeme als System mit begrenztem Risiko ein** — sobald jedoch ein Retrieval eine automatisierte Entscheidung speist (Bonitätsbewertung, Bewerberauswahl, Anspruch auf Sozialleistungen), rutscht die Bereitstellung ins Hochrisikosegment und löst die vollständige Konformitätsbewertung, die Marktbeobachtung nach Inverkehrbringen und die Pflichten zur menschlichen Aufsicht aus.',
+          '**Eine DSFA ist nach Artikel 35 verpflichtend** für jedes RAG, das besondere Kategorien personenbezogener Daten (Gesundheit, Recht, biometrische, politische, gewerkschaftliche Daten) in größerem Umfang verarbeitet, oder für jedes System, das automatisierte Entscheidungen mit Rechtswirkung erzeugt. Wer die DSFA überspringt, überspringt zugleich die Verteidigungslinie im Audit.',
+          '**Das Recht auf Vergessenwerden ist der Löschtest, an dem die meisten Bereitstellungen scheitern.** Quelldokumente sind einfach. Vektorindizes lassen sich neu aufbauen. Zwischengespeicherte Embeddings, Retrieval-Logs und alle in der Chat-Historie gespeicherten Antworten sind die Teile, die übersehen werden — und genau die Teile, nach denen eine Aufsichtsbehörde fragen wird.',
+          '**Open-Source-Embedding-Modelle sind grundsätzlich DSGVO-konform**, aber nur unter drei Bedingungen: (a) die Modellgewichte werden einmal heruntergeladen und auf einen Hash fixiert, (b) die Inferenz läuft vollständig auf lokaler Hardware ohne Telemetrie, und (c) die Model Card und die Lizenz werden auf Klauseln geprüft, die der vertraulichen geschäftlichen Nutzung widersprechen.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Schnellfakten',
+        items: [
+          '**6 verpflichtende Kontrollen** für jedes regulierte RAG: Air-Gap, RBAC, Audit-Logs, Verschlüsselung, Datenherkunft, Löschpfad.',
+          '**3 Bereitstellungsmuster:** Einzelnutzer-Laptop (Einzelpersonen), On-Prem-Server (5–50 Nutzer), private EU-Cloud (unternehmensübergreifend).',
+          '**Eine DSFA ist verpflichtend** nach Artikel 35, wenn besondere Kategorien personenbezogener Daten (Gesundheit, Recht, biometrische Daten) in größerem Umfang verarbeitet werden.',
+          '**EU AI Act:** Die meisten lokalen RAG-Systeme = begrenztes Risiko; Hochrisiko, sobald Retrieval automatisierte Entscheidungen speist (Kredit, Beschäftigung, Sozialleistungen).',
+          '**Recht auf Vergessenwerden** muss sich auf Quelldokumente, Vektorindizes, zwischengespeicherte Embeddings UND die Antwort-Historie auswirken.',
+          '**Mitbestimmung des Betriebsrats** nach §87 BetrVG erforderlich für jedes RAG über mitarbeiterbezogene Inhalte in Deutschland.',
+          '**Open-Source-Embedding-Modelle** sind nur DSGVO-konform, wenn die Gewichte fixiert sind, die Inferenz vollständig lokal läuft und die Lizenz geprüft wurde.',
+        ],
+      },
+      comparisonTable: {
+        id: 'deployment-comparison',
+        title: 'Vergleich der Bereitstellungsmuster',
+        content:
+          'Jedes Muster lässt sich DSGVO-konform betreiben; was sich ändert, sind die Kosten der Kontrollen und die Bruchstellen, wenn etwas schiefgeht. Wählen Sie das einfachste Muster, das zu Nutzerzahl, Dokumentensensibilität und Anforderungen an die Ausfallsicherheit passt.',
+        columns: ['Kontrolle', 'Einzelnutzer-Laptop', 'On-Prem-Server', 'Private EU-Cloud'],
+        rows: [
+          {
+            'Kontrolle': 'Air-Gap (kein ausgehendes Netzwerk)',
+            'Einzelnutzer-Laptop': 'Trivial — Netzwerk deaktivieren',
+            'On-Prem-Server': 'Erreichbar — VLAN + Firewall',
+            'Private EU-Cloud': 'Schwer — nur Egress-Allowlist',
+          },
+          {
+            'Kontrolle': 'Audit-Log (wer, was, wann)',
+            'Einzelnutzer-Laptop': 'Manuell — nur OS-Ebene',
+            'On-Prem-Server': 'Stark — zentrale Log-Pipeline',
+            'Private EU-Cloud': 'Stark — Cloud-natives Logging',
+          },
+          {
+            'Kontrolle': 'Datenherkunft (Chunk → Quelle)',
+            'Einzelnutzer-Laptop': 'Nur lokale Dateien',
+            'On-Prem-Server': 'Vollständig nachvollziehbar',
+            'Private EU-Cloud': 'Vollständig — über Regionen hinweg',
+          },
+          {
+            'Kontrolle': 'EU-Datenresidenz',
+            'Einzelnutzer-Laptop': 'Inhärent — physischer Standort',
+            'On-Prem-Server': 'Inhärent — physischer Standort',
+            'Private EU-Cloud': 'Konfiguriert — souveräne Region erforderlich',
+          },
+          {
+            'Kontrolle': 'RBAC pro Nutzer',
+            'Einzelnutzer-Laptop': 'Einzelnutzer — n. v.',
+            'On-Prem-Server': 'Identitätsanbieter + Gruppen',
+            'Private EU-Cloud': 'IAM + SSO + ACLs pro Sammlung',
+          },
+          {
+            'Kontrolle': 'Backup und Disaster Recovery',
+            'Einzelnutzer-Laptop': 'Verschlüsselte externe Festplatte',
+            'On-Prem-Server': 'Bandsicherung oder externes Backup',
+            'Private EU-Cloud': 'Cross-AZ-Replikation',
+          },
+          {
+            'Kontrolle': 'Anschaffungskosten',
+            'Einzelnutzer-Laptop': 'Nur Hardware — niedrig',
+            'On-Prem-Server': 'Server + Integration — mittel',
+            'Private EU-Cloud': 'Abonnement + Setup — mittel',
+          },
+          {
+            'Kontrolle': 'Laufende Kosten',
+            'Einzelnutzer-Laptop': 'Keine — Sysadmin-Zeit',
+            'On-Prem-Server': 'IT-Betrieb + Strom + Kühlung',
+            'Private EU-Cloud': 'Monatlich wiederkehrend',
+          },
+          {
+            'Kontrolle': 'Am besten geeignet für',
+            'Einzelnutzer-Laptop': 'Einzelpersonen, Mandatsprüfungen',
+            'On-Prem-Server': '5–50 Nutzer, abteilungsweite Wissensbasen',
+            'Private EU-Cloud': 'Unternehmensübergreifende, ausfallsichere Bereitstellungen',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-deployment',
+        title: 'Auswahl eines Bereitstellungsmusters',
+        content:
+          '**Die richtige Wahl hängt von Nutzerzahl, Dokumentensensibilität, Audit-Druck und Ihrer internen IT-Kapazität ab.** Diese Entscheidungshilfe deckt die meisten realen Situationen ab.',
+        columns: ['Ihre Situation', 'Empfehlung'],
+        rows: [
+          {
+            'Ihre Situation': 'Einzelne Anwältin, Arzt oder Prüferin, die ein Mandat nach dem anderen prüft',
+            'Empfehlung': 'Einzelnutzer-Laptop',
+          },
+          {
+            'Ihre Situation': 'M&A-Datenraum mit 3–5 namentlich benannten Prüfern und festem Enddatum',
+            'Empfehlung': 'Einzelnutzer-Laptop oder On-Prem (je nach Dokumentenvolumen)',
+          },
+          {
+            'Ihre Situation': 'Compliance-Team aus 10–30 Personen, das ein Archiv mit Aufsichtsbehörden-Korrespondenz teilt',
+            'Empfehlung': 'On-Prem-Server',
+          },
+          {
+            'Ihre Situation': 'Krankenhausabteilung baut einen Assistenten für klinische Leitlinien für 50 Mitarbeitende',
+            'Empfehlung': 'On-Prem-Server',
+          },
+          {
+            'Ihre Situation': 'Konzern mit mehreren Tochtergesellschaften benötigt ein RAG über Tochtergesellschaften in mehreren EU-Ländern hinweg',
+            'Empfehlung': 'Private EU-Cloud (souveräne Region + kundenseitig verwaltete Schlüssel)',
+          },
+          {
+            'Ihre Situation': 'Versicherer mit 24/7-Verfügbarkeitsanforderung und DR-Plan',
+            'Empfehlung': 'Private EU-Cloud',
+          },
+          {
+            'Ihre Situation': 'Behörde mit Verschlusssachen oder eingeschränkten Daten',
+            'Empfehlung': 'Ausschließlich Air-Gapped On-Prem — Cloud kommt nicht in Frage',
+          },
+          {
+            'Ihre Situation': 'Aufsichtsbehörden-Audit-Verteidigung in unter 6 Wochen fällig',
+            'Empfehlung': 'On-Prem-Server (am schnellsten, um Kontrolle nachzuweisen)',
+          },
+        ],
+      },
+      whyLocalRag: {
+        id: 'why-local-rag',
+        title: 'Warum lokales RAG für sensible Daten',
+        content:
+          '**Das Argument für lokales RAG gegenüber Cloud-LLM-as-a-Service ist keine Ideologie — es ist die Form der DSGVO-Risikobewertung.** Cloud-RAG ist für viele Anwendungsfälle praktikabel; bei sensiblen Geschäftsdaten fügt es jedoch fünf Risiken hinzu, die lokales RAG bauartbedingt eliminiert.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Lokales RAG hält Ihre sensiblen Dokumente auf eigener Hardware, ermöglicht Ihrem Team aber dennoch eine KI-gestützte Suche — keine Daten verlassen das Haus, kein Drittanbieter-Auftragsverarbeiter berührt sie, und Fragen zur grenzüberschreitenden Übermittlung stellen sich nicht.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Stellen Sie sich vor, Ihr Rechtsteam könnte 10.000 Fallakten in natürlicher Sprache durchsuchen — und die Dokumente verlassen niemals den Serverraum. Genau das ist lokales RAG: Die KI liest Ihre Dokumente auf Ihrer Hardware, beantwortet Ihre Fragen auf Ihrer Hardware, und nichts wird irgendwohin gesendet. Der Compliance-Vorteil ist kein Feature — er ist die Architektur.',
+          },
+        ],
+        items: [
+          '**Grenzüberschreitende Übermittlung (Art. 44–49).** Die Übermittlung personenbezogener Daten an einen Auftragsverarbeiter außerhalb der EU erfordert Standardvertragsklauseln, eine Transfer-Folgenabschätzung und eine belastbare Antwort darauf, ob die empfangende Jurisdiktion Zugriffsrechte auf diese Daten hat. Lokales RAG übermittelt keine Daten — die Frage stellt sich nicht.',
+          '**Wildwuchs an Unterauftragsverarbeitern (Art. 28).** Cloud-LLM-Anbieter stützen sich typischerweise auf Hyperscaler-Infrastruktur, Content-Moderationsdienste und Observability-Anbieter. Jeder davon ist ein Unterauftragsverarbeiter, der gelistet, vertraglich gebunden und auditiert werden muss. Lokales RAG hat standardmäßig null Unterauftragsverarbeiter.',
+          '**Leakage von Trainingsdaten.** Viele Cloud-LLM-AGB behalten sich das Recht vor, Kunden-Prompts zur Modellverbesserung zu nutzen, sofern keine kostenpflichtige Enterprise-Stufe gewählt und die No-Training-Klausel verifiziert ist. Lokales RAG nutzt Modelle mit Gewichten, die Sie kontrollieren; nichts verlässt den Host.',
+          '**Vertraulichkeitsklauseln in Mandantenverträgen.** Außenanwaltsvereinbarungen, M&A-NDAs und Patientendatenverträge untersagen häufig die Übermittlung des geschützten Materials an Drittanbieter-Auftragsverarbeiter. Lokales RAG umgeht die Klausel vollständig.',
+          '**Behördliche und prozessuale Zugriffe.** Dokumente bei einem Cloud-Anbieter können durch ein Auskunftsersuchen an den Anbieter erzwungen werden — mit Offenlegungspflichten, von denen der Verantwortliche möglicherweise nicht rechtzeitig erfährt. Dokumente, die Ihre Räumlichkeiten nicht verlassen, können nur Ihnen gegenüber erzwungen werden.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Lokales RAG ist nicht für jede Workload die richtige Antwort. Recherche zu öffentlich verfügbaren Informationen, Marketing-Entwurfsgenerierung, Code-Assistenz für Open-Source-Repositories — all das funktioniert in der Regel besser mit Cloud-LLMs, weil das DSGVO-Risiko gering ist und die Modellqualitätslücke ins Gewicht fällt. Das Argument in diesem Artikel zielt speziell auf vertrauliche Geschäftsdaten ab: Recht, Medizin, Finanzen, Personalwesen, Korrespondenz mit Aufsichtsbehörden und Geschäftsgeheimnisse.',
+          },
+        ],
+      },
+      requiredControls: {
+        id: 'required-controls',
+        title: 'Die sechs unverzichtbaren Kontrollen',
+        content:
+          '**Diese sechs Kontrollen sind das Fundament.** Jede regulierte Bereitstellung benötigt alle sechs; das Bereitstellungsmuster ändert nur, wie Sie sie umsetzen. Das Auslassen einer einzelnen Kontrolle ist der häufigste Grund dafür, dass Audits schlecht ausgehen.',
+        numberedItems: [
+          {
+            title: 'Air-Gap oder strikte Egress-Kontrolle',
+            whyItMatters:
+              'Bestätigt, dass Dokumente und Embeddings nicht über ausgehende Verbindungen abfließen können — Telemetrie-SDKs, Modell-Update-Probes, Crash-Reporter, Content-Moderations-Callbacks, Drittanbieter-CDNs für Schriften. Deaktivieren Sie entweder den Netzzugriff vollständig (echter Air-Gap) oder betreiben Sie eine Egress-Allowlist, die ausschließlich signierte Update-Server zulässt.',
+          },
+          {
+            title: 'Authentifizierung pro Nutzer mit rollenbasiertem Zugriff',
+            whyItMatters:
+              'Sie müssen die Frage „Wer hat auf welches Dokument zugegriffen?" beantworten können, bevor eine Aufsichtsbehörde sie stellt. Single Sign-On gegen einen Identitätsanbieter, gruppenbasierter Zugriff auf Sammlungen und ACLs auf Dokumentenebene, wo das Mandat es erfordert. Geteilte Konten sind keine Kontrolle — sie sind ein Audit-Versagen, das nur auf seinen Tag wartet.',
+          },
+          {
+            title: 'Unveränderliche Audit-Logs für Ingest und Retrieval',
+            whyItMatters:
+              'Für jedes Dokument: wer es hochgeladen hat, wann, Quellpfad, Hash. Für jede Anfrage: wer gefragt hat, was gefragt wurde (sofern das Logging es zulässt), welche Chunks abgerufen wurden, aus welchen Dokument-IDs sie stammen, welche Antwort zurückgegeben wurde. Logs müssen manipulationssicher sein — append-only, signiert, mit einer Aufbewahrungsdauer, die das Untersuchungsfenster der Aufsichtsbehörde abdeckt. Für den prompt-bezogenen Audit-Trail — Versionierung, Änderungsprotokolle und Rollback — siehe [Workflows zur Versionskontrolle von Prompts](/prompt-engineering/prompt-version-control-workflows?lang=de).',
+          },
+          {
+            title: 'Verschlüsselung im Ruhezustand und bei der Übertragung',
+            whyItMatters:
+              'Festplattenverschlüsselung auf dem Host, TLS für jeden internen Service-zu-Service-Aufruf und ein Schlüsselmanagement, das einen gestohlenen Laptop oder ein kompromittiertes Admin-Konto übersteht. Kundenseitig verwaltete Schlüssel für Cloud-Bereitstellungen. Ohne diese Maßnahmen wird ein Gerätediebstahl zu einer meldepflichtigen Datenschutzverletzung nach Artikel 33.',
+          },
+          {
+            title: 'Deterministische Datenherkunft vom Chunk bis zur Quelle',
+            whyItMatters:
+              'Jeder abgerufene Chunk muss auf sein Quelldokument, seine Seite, seinen Abschnitt und seine Version zurückführbar sein. Genau das erlaubt Ihnen (a) die Antwort zu verifizieren, (b) einen Löschantrag zu erfüllen, (c) das System vor Gericht zu verteidigen, wenn eine generierte Zusammenfassung infrage gestellt wird. „Wir können nicht reproduzieren, welcher Chunk welche Antwort erzeugt hat" ist keine akzeptable Antwort gegenüber einer Aufsichtsbehörde.',
+          },
+          {
+            title: 'Schriftlich definierter Löschpfad inklusive Vektorindex und zwischengespeicherten Embeddings',
+            whyItMatters:
+              'Ein Antrag auf Recht auf Vergessenwerden muss vom Quellsystem über den Vektorindex bis hin zu zwischengespeicherten Embeddings und der Aufbewahrung von Retrieval-Logs propagieren. Die meisten Bereitstellungen erledigen die Quelllöschung sauber und vergessen den Rest. Dokumentieren Sie das Löschrunbook vor dem Go-Live; üben Sie es mit synthetischen Daten.',
+          },
+        ],
+      },
+      airGap: {
+        id: 'air-gap',
+        title: 'Air-Gap und Egress-Kontrolle',
+        content:
+          '**Air-Gap bedeutet, dass der Host keine ausgehende Netzwerkverbindung hat; Egress-Kontrolle bedeutet, dass er eine eng allowlistete Verbindung hat.** Beides ist akzeptabel; wählen Sie das stärkste Modell, das Ihr Betrieb tragen kann.',
+        items: [
+          '**Echter Air-Gap** — kein DHCP, keine DNS-Auflösung zu öffentlichen Zielen, kein ausgehendes TCP. Updates erfolgen über signierte Datenträger, die ein Administrator physisch anschließt. Das ist das richtige Modell für Verschlusssachen, bestimmte Krankenhausnetzwerke und jede Bereitstellung, deren Bedrohungsmodell eine bösartige Abhängigkeit einschließt.',
+          '**Egress-Allowlist** — ausgehende Netzwerkverbindungen sind nur zu einer kleinen Liste benannter Ziele erlaubt (Modell-Update-Server, Identitätsanbieter, Log-Forwarder zu internen Sammlern). Aller andere Verkehr wird an der Firewall verworfen. Das ist die praktikable Standardlösung für die meisten regulierten Abteilungsbereitstellungen.',
+          '**Worauf bei der Plattform zu achten ist**: null Telemetrie standardmäßig, keine ausgehenden Aufrufe während der Inferenz, keine Schriften-CDNs in der UI, keine Crash-Reporter, die Payloads versenden. Verifizieren Sie es mit einem Paketmitschnitt oder einem Tool wie Little Snitch auf dem Testbench, bevor Sie in die Produktion überführen.',
+          '**Update-Governance** — Modellgewichte, Embedder-Gewichte, Anwendungscode und OS-Patches durchlaufen alle ein kontrolliertes Update-Fenster. Der Administrator, der ein Update freigibt, zeichnet schriftlich ab; die Änderung wird protokolliert.',
+          '**Häufiger Air-Gap-Bruch:** ein Analytics-SDK, das mit einer Drittanbieter-UI-Komponente gebündelt ist, eine Schrift-CDN-Referenz im Anwendungs-Chrome oder eine „Auf Updates prüfen"-Probe, die beim Start läuft. Genau deshalb ist der Verifikationsschritt wichtig — verlassen Sie sich auf nichts, was als Standard ausgeliefert wird.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Führen Sie einen 24-stündigen Paketmitschnitt auf dem Host durch, während die Anwendung geöffnet und im Leerlauf ist. Alles Ausgehende, das nicht auf der Allowlist steht, ist ein Befund. Wiederholen Sie dies bei jedem Anwendungsupdate — Release Notes unterschätzen routinemäßig, welche neuen ausgehenden Aufrufe hinzugekommen sind.',
+          },
+        ],
+      },
+      auditLogging: {
+        id: 'audit-logging',
+        title: 'Audit-Logging, das einer Prüfung standhält',
+        content:
+          '**Das Audit-Log ist das Artefakt, das eine Aufsichtsbehörde zuerst lesen wird.** Es muss zwei Fragen für jeden Retrieval beantworten: Wer hat gefragt, und was hat das System geliefert? Ohne diese Antworten argumentieren Sie mit Worten; mit ordentlichem Logging legen Sie Belege vor.',
+        items: [
+          '**Ingest-Ereignisse**: Dokument-ID, Hash (SHA-256), Dateiname, Quellpfad, hochgeladen von, Zeitstempel, Klassifizierungs-Tag, Größe, Seitenzahl, Eigentümergruppe, Aufbewahrungsklasse. Klassifizieren Sie jedes Dokument bei der Aufnahme — eine nachträgliche Klassifizierung großer Korpora ist mühsam und selten vollständig.',
+          '**Retrieval-Ereignisse**: Anfrage-ID, Nutzer-ID, Zeitstempel, abgerufene Chunk-IDs (und die Dokument-IDs, aus denen sie stammen), Retrieval-Scores, Hash der finalen Antwort, Modell-Identifikator, Embedder-Identifikator, verwendetes Top-K. Der Anfragetext selbst ist sensibel — protokollieren Sie ihn nur, wenn Ihre Verarbeitungszwecke es abdecken; andernfalls protokollieren Sie nur Hash und Zeitstempel.',
+          '**Administrative Ereignisse**: Modellfreigabe, Embedder-Wechsel, Index-Neuaufbau, Nutzer-/Gruppenänderungen, ACL-Änderungen, Änderungen der Zugriffsrichtlinien. Jedes Ereignis ist von dem zuständigen Administrator signiert.',
+          '**Manipulationssicherheit**: append-only-Log, Hash-Kette (jeder Eintrag verweist auf den Hash des vorherigen Eintrags), Out-of-Band-Signaturschlüssel, regelmäßige Abgleiche mit einer separaten Kopie, die von einem anderen Administrator oder auf einem WORM-Medium gehalten wird.',
+          '**Aufbewahrung**: orientiert sich am Untersuchungsfenster der Aufsichtsbehörde — mindestens an der Aufbewahrungsfrist des Mandats; in regulierten Branchen üblicherweise sechs bis sieben Jahre; länger, wo Branchenregeln gelten.',
+          '**Pipeline**: Die Anwendung emittiert strukturierte Ereignisse; ein Forwarder transportiert sie zu einem separaten, schreibgeschützten Logspeicher. Der Anwendungsserver darf niemals die Berechtigung haben, Log-Einträge zu löschen oder zu überschreiben — die Funktionstrennung ist es, die das Log glaubwürdig macht.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Das Logging des Anfragetexts wirft eine eigene DSGVO-Frage auf — eine Anfrage kann selbst personenbezogene Daten enthalten (z. B. „Fasse die Krankengeschichte von Patient X zusammen"). Entscheiden Sie zur Designzeit, ob Ihre Verarbeitungszwecke das Logging von Anfragen abdecken; falls nicht, protokollieren Sie ausschließlich die für Audit und Betriebsdiagnose erforderlichen Metadaten.',
+          },
+        ],
+      },
+      dataLineage: {
+        id: 'data-lineage',
+        title: 'Datenherkunft vom Chunk bis zur Quelle',
+        content:
+          '**Datenherkunft ist das Rückgrat jeder anderen Kontrolle.** Ohne sie scheitern Löschanträge, ist Antwortverifikation unmöglich, und der Audit-Trail bricht zusammen. Bauen Sie Datenherkunft vom ersten Ingest an ein, nicht nachträglich.',
+        items: [
+          '**Datenherkunft auf Dokumentenebene**: Jedes Dokument hat eine stabile interne ID, einen Inhalts-Hash, einen Ingest-Zeitstempel, einen Eigentümer, eine Klassifizierung und eine Aufbewahrungsklasse. Die Originaldatei verbleibt im Quellsystem; das RAG-System hält eine Referenz, nicht das Original.',
+          '**Datenherkunft auf Chunk-Ebene**: Jeder Chunk verweist auf seine übergeordnete Dokument-ID, Seite (bei PDFs), Abschnitt (bei strukturierten Dokumenten), Zeichen-Offset, Länge und Version der Chunking-Strategie. Wenn Sie neu chunkten (Sie werden), werden alte Chunks tombstoned, nicht in-place gelöscht — damit alte Retrieval-Logs weiterhin auflösbar bleiben.',
+          '**Datenherkunft auf Embedding-Ebene**: Jeder Embedding-Vektor verweist auf seine Chunk-ID und seinen Embedder-Identifikator. Wenn Sie Embedder wechseln, werden die alten Vektoren behalten, bis die neuen validiert sind und alle Mandate, die sie referenzierten, abgeschlossen wurden; erst dann werden sie gelöscht.',
+          '**Datenherkunft auf Antwortebene**: Jede generierte Antwort verweist auf die Chunk-IDs, die sie hervorgebracht haben, den Modell-Identifikator, die Version der Prompt-Vorlage und den Zeitstempel. Wenn ein Nutzer fragt „Woher stammt diese Antwort?", löst das System Chunk → Dokument → Seite mit einem Klick auf.',
+          '**Re-Indexierung ohne Bruch der Datenherkunft**: Neuaufbauten erhalten Dokument-IDs und erhöhen die Versionen der Chunking-Strategie. Alte Chunk-IDs bleiben in Retrieval-Logs auflösbar, auch nachdem der Live-Index weitergezogen ist.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Testen Sie die Datenherkunftskette quartalsweise. Wählen Sie zufällig ein Retrieval aus dem Audit-Log und gehen Sie es rückwärts durch: Chunk-ID → Dokument-ID → Originaldatei im Quellsystem → Aufbewahrungsklasse. Wenn ein Schritt unterbrochen ist, beheben Sie das Schema vor der nächsten Aufsichtsprüfung — nicht währenddessen.',
+          },
+        ],
+      },
+      encryptionAccess: {
+        id: 'encryption-access',
+        title: 'Verschlüsselung und Zugriffskontrolle',
+        content:
+          '**Verschlüsselung im Ruhezustand, Verschlüsselung bei der Übertragung und Zugriffskontrolle, die auf Ihren bestehenden Identitätsanbieter abbildet.** Das sind gut verstandene Kontrollen; das Versagen besteht meist nicht in schlechter Umsetzung, sondern darin, eine der drei Schichten zu vergessen.',
+        items: [
+          '**Verschlüsselung im Ruhezustand** — Vollverschlüsselung der Festplatte auf dem Host (LUKS unter Linux, BitLocker unter Windows, FileVault unter macOS für Laptops). Bei Servern verschlüsseln Sie zusätzlich die Partitionen, die den Vektorspeicher und den Ingest-Staging-Bereich enthalten. Kundenseitig verwaltete Schlüssel für jede Cloud-Bereitstellung, mit Schlüsselrotation gemäß Ihrer Richtlinie.',
+          '**Verschlüsselung bei der Übertragung** — TLS für jeden Service-zu-Service-Hop, auch auf localhost. Cipher-Richtlinie ausgerichtet an Ihrer Branchen-Baseline. Mutual TLS, wo das Bedrohungsmodell es rechtfertigt — typischerweise Server-zu-Server in Cloud-Bereitstellungen.',
+          '**Authentifizierung** — Single Sign-On gegen Ihren bestehenden Identitätsanbieter (OIDC, SAML). Keine lokalen Konten in der Produktion. MFA für jeden Nutzer mit administrativem oder sensiblem Sammlungszugriff durchgesetzt.',
+          '**Autorisierung** — gruppenbasierter Zugriff auf Sammlungsebene; ACLs auf Dokumentenebene, wo das Mandat es erfordert (z. B. M&A-Datenräume, arbeitsrechtliche Untersuchungen). Die Retrieval-Pipeline muss ACLs zur Anfragezeit durchsetzen — nicht erst die UI. Ein Nutzer, der ein Dokument nicht sehen darf, darf auch dessen Chunks nicht zurückgegeben bekommen.',
+          '**Administrativer Zugriff** — Privileged Access Management für jedes Konto, das Indizes lesen oder neu aufbauen, Audit-Logs einsehen oder ACLs ändern kann. Just-in-Time-Erhöhung mit protokollierter Begründung schlägt dauerhafte Admin-Rechte.',
+          '**Endpunkt-Sicherheit** — verwaltete Geräte für Laptop-Bereitstellungen (MDM-eingebunden, verschlüsselt, durchgesetzte Bildschirmsperre). Ein Solo-Profi-Laptop mit entschlüsseltem Dokumentenspeicher, der unbeaufsichtigt im Café liegt, ist die Datenschutzverletzung, die Sie nicht melden möchten.',
+        ],
+      },
+      laptopDeep: {
+        id: 'laptop-pattern',
+        title: 'Einzelnutzer-Laptop-Muster',
+        content:
+          '**Der Einzelnutzer-Laptop ist das Muster, das sich am einfachsten air-gappen und am schwersten skalieren lässt.** Richtig für Einzelpersonen und einmalige Mandatsprüfungen; falsch für alles, was einen einzelnen Nutzer überdauern oder dessen Ausscheiden überstehen muss.',
+        items: [
+          '**Hardware** — ein Workstation-Laptop mit Vollverschlüsselung der Festplatte, einer dedizierten GPU (oder einer aktuellen Unified-Memory-Maschine) und mindestens 32 GB RAM. Modell und Embedder müssen neben dem Vektorspeicher-Cache in den Speicher passen. Hardwareanforderungen und Modellauswahl nach VRAM finden Sie im [Hardware-Leitfaden für lokale LLMs](/local-llms/local-llm-hardware-guide-2026?lang=de).',
+          '**Software** — eine in sich geschlossene Desktop-RAG-Anwendung, die lokal läuft; ein Open-Source-LLM mit einmal heruntergeladenen und auf einen Hash fixierten Gewichten; ein Open-Source-Embedder; ein lokaler Vektorspeicher auf der verschlüsselten Festplatte. Einen Vergleich von Open-Source-Modellen, die für lokales RAG geeignet sind, finden Sie unter [Top-Open-Source-Modelle für Ollama](/local-llms/top-open-source-models-ollama?lang=de).',
+          '**Netzwerk-Posture** — air-gapped während der Arbeit; nur für ausdrücklich signierte Updates wieder verbunden. Konfigurieren Sie die OS-Firewall so, dass sie standardmäßig alle ausgehenden Verbindungen verwirft, und legen Sie explizite Ausnahmen für den Update-Workflow an.',
+          '**Dokumentenhandhabung** — Quelldokumente auf der verschlüsselten Festplatte; eine separate Mandatsstruktur pro Mandat; wöchentliche verschlüsselte Backups auf einer externen Festplatte, die an einem anderen Ort gelagert wird.',
+          '**Audit-Posture** — Das OS-seitige Audit-Log (Login, Dateizugriff, Peripherieereignisse) ist die Grundlage. Anwendungsbezogene Ereignisse sind im On-Prem-Server-Muster einfacher; für das Laptop-Muster behandeln Sie das OS-Log als primären Nachweis und ergänzen Sie es mit manuellen Notizen pro Mandat.',
+          '**Grenzen** — Ein Einzelnutzer-Laptop ist keine Mehrnutzer-Plattform. Den Laptop zu teilen, Konten zu teilen oder den Dokumentenspeicher auf den Rechner einer Kollegin zu kopieren bricht die Audit-Posture und die Bewertung der Rechtsgrundlage.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Für Einzelpersonen, die vertrauliche Mandate bearbeiten, ist das Einzelnutzer-Laptop-Muster die wirklich stärkste verfügbare Datenschutz-Posture — besser als jede Cloud und stärker als viele On-Prem-Bereitstellungen. Der Trade-off ist operativ: Wenn der Laptop ausfällt, erbt das Mandat die Wiederherstellungszeit Ihrer Backup-Disziplin.',
+          },
+        ],
+      },
+      onPremDeep: {
+        id: 'on-prem-pattern',
+        title: 'On-Prem-Server-Muster',
+        content:
+          '**Der On-Prem-Server ist das Arbeitspferd-Muster für reguliertes abteilungsweites RAG.** Es skaliert auf 5–50 Nutzer und wenige tausend Dokumente, unterstützt ordentliches Audit-Logging und bleibt innerhalb Ihres physischen Perimeters. Der Preis ist reale IT-Betriebsarbeit.',
+        items: [
+          '**Hardware** — ein Server mit ein bis zwei Enterprise-GPUs (Workstation-GPUs sind für kleinere Korpora akzeptabel), redundanten Festplatten, ECC-Speicher und einer USV. Planen Sie das 2- bis 4-fache des Speichers Ihres Roh-Dokumentenkorpus ein, um Vektoren, Indizes, Logs und Backups abzudecken.',
+          '**Netzwerk** — ein dediziertes VLAN hinter der Unternehmens-Firewall; Egress-Allowlist oder vollständiger Air-Gap je nach Bedrohungsmodell. Interner Zugriff ausschließlich über das Unternehmensnetzwerk, kein öffentlicher Ingress.',
+          '**Software-Stack** — eine selbst gehostete RAG-Plattform (ein eigenständiges Server-Image oder eine containerisierte Bereitstellung), ein Open-Source-LLM als Chat-Modell, ein Open-Source-Embedder und ein Vektorspeicher, der zur Korpusgröße passt. Anwendungsserver, Vektorspeicher und Log-Forwarder laufen als separate Prozesse mit separaten Service-Accounts.',
+          '**Identität** — föderiert gegen den Unternehmens-Identitätsanbieter; Gruppenmitgliedschaft steuert den Sammlungszugriff. Sensible Sammlungen sind über zusätzliche Genehmigungs-Workflows abgesichert.',
+          '**Backup und DR** — nächtliche inkrementelle Backups des Dokumentenspeichers und des Vektorindex; wöchentliche Vollbackups; externe Kopie, die von der IT verwahrt wird. Dokumentiertes Wiederherstellungs-Runbook, das mindestens jährlich getestet wird.',
+          '**Betrieb** — Patch-Fenster nach Change-Management-Richtlinie; quartalsweise Zugriffsprüfungen; geübtes Lösch-Runbook für Anträge auf Recht auf Vergessenwerden; dokumentierter Upgrade-Pfad für Modelle und Embedder, der die Datenherkunft erhält.',
+          '**Kapazitätsplanung** — wenige tausend Dokumente und 5–50 gleichzeitige Nutzer passen komfortabel auf einen einzelnen Mid-Range-GPU-Server. Darüber hinaus planen Sie entweder einen leistungsstärkeren Host oder den Wechsel zum Private-Cloud-Muster.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'On-Prem-RAG ist das Muster, das am ehesten aus nicht-technischen Gründen scheitert: ein Backup, das nie wiederhergestellt wurde, ein Admin-Konto, das im IT-Team geteilt wird, eine USV, die niemand getestet hat, ein Log-Forwarder, der seit zwei Monaten unbemerkt Ereignisse verwirft. Die technischen Kontrollen sind einfacher als die operative Hygiene.',
+          },
+        ],
+      },
+      vectorDbComparison: {
+        id: 'vector-db-comparison',
+        title: 'Vektordatenbank-Optionen für On-Prem-RAG',
+        content:
+          '**Die Wahl des Vektorspeichers entscheidet selten über Compliance — sie prägt jedoch die Betriebskosten, die Skalierungsobergrenze und wie sauber das Lösch-Runbook umgesetzt werden kann.** Die meisten regulierten Bereitstellungen wählen eine dieser sechs Optionen.',
+        columns: ['Vektordatenbank', 'Typ', 'EU-Self-Hosting', 'Bestes RAG-Muster'],
+        rows: [
+          {
+            'Vektordatenbank': '**Chroma**',
+            'Typ': 'Open Source, leichtgewichtig',
+            'EU-Self-Hosting': '✅',
+            'Bestes RAG-Muster': 'Laptop + kleines On-Prem',
+          },
+          {
+            'Vektordatenbank': '**Qdrant**',
+            'Typ': 'Open Source, leistungsstark',
+            'EU-Self-Hosting': '✅',
+            'Bestes RAG-Muster': 'On-Prem-Server, filterintensiv',
+          },
+          {
+            'Vektordatenbank': '**Weaviate**',
+            'Typ': 'Open Source, voller Funktionsumfang',
+            'EU-Self-Hosting': '✅',
+            'Bestes RAG-Muster': 'On-Prem + hybride Suche',
+          },
+          {
+            'Vektordatenbank': '**Milvus**',
+            'Typ': 'Open Source, Enterprise',
+            'EU-Self-Hosting': '✅',
+            'Bestes RAG-Muster': 'Großskaliges On-Prem',
+          },
+          {
+            'Vektordatenbank': '**pgvector**',
+            'Typ': 'PostgreSQL-Erweiterung',
+            'EU-Self-Hosting': '✅',
+            'Bestes RAG-Muster': 'Teams, die bereits Postgres nutzen',
+          },
+          {
+            'Vektordatenbank': '**Pinecone**',
+            'Typ': 'Managed SaaS',
+            'EU-Self-Hosting': '⚠️ US-gehostet',
+            'Bestes RAG-Muster': 'Nur private EU-Cloud (mit Vorbehalten)',
+          },
+        ],
+      },
+      euCloudDeep: {
+        id: 'private-cloud-pattern',
+        title: 'Privates EU-Cloud-Muster',
+        content:
+          '**Das private EU-Cloud-Muster nutzt einen Cloud-Anbieter mit souveräner Region, kundenseitig verwalteten Schlüsseln, ausschließlicher EU-Datenresidenz und einer vertraglichen Klausel gegen KI-Training auf Kundendaten.** Es ist die richtige Antwort für unternehmensübergreifende Bereitstellungen, multiregionale Ausfallsicherheitsanforderungen und Teams ohne ausreichende operative Kapazität für echtes On-Prem.',
+        items: [
+          '**Anbieterauswahl** — das souveräne EU-Angebot eines Hyperscalers oder ein europäischer Cloud-Anbieter. Der AVV muss jeden Unterauftragsverarbeiter auflisten; Übermittlungsmechanismen müssen adressiert werden, falls ein Unterauftragsverarbeiter außerhalb des EWR liegt. Eine Schrems-II-konforme Transfer-Folgenabschätzung ist Bestandteil der Akte, selbst wenn der unmittelbare Auftragsverarbeiter EU-ansässig ist.',
+          '**Region** — ausschließlich EU, mit ausdrücklichen Datenresidenzgarantien. Cross-Region-Replikation nur in andere EU-Regionen. Keine US-Region als Failover, auch nicht vorübergehend, auch nicht für Backups.',
+          '**Verschlüsselung** — kundenseitig verwaltete Schlüssel mit Rotation; Bring-your-own-Key, wo der Anbieter es unterstützt; Schlüsselzugriffsereignisse separat von den betrieblichen Logs des Cloud-Anbieters protokolliert.',
+          '**Netzwerk** — privates VPC ohne öffentlichen Ingress; Zugriff ausschließlich über private Konnektivität (dedizierte Leitung oder VPN) aus Ihrem Unternehmensnetzwerk; Egress-Allowlist für jede ausgehende Abhängigkeit.',
+          '**Identität** — föderiert gegen Ihren Unternehmens-IdP; Cloud-natives IAM, gebunden an Nutzeridentitäten, nicht an geteilte Service-Accounts; ACLs pro Sammlung in der Retrieval-Pipeline durchgesetzt.',
+          '**Logging** — Cloud-natives Audit-Log, das in Ihr bestehendes SIEM eingespeist wird; separate Aufnahme für anwendungsbezogene Audit-Ereignisse; manipulationssichere Aufbewahrung, die den Erwartungen der Aufsicht entspricht.',
+          '**Verträge** — der AVV muss Artikel-28-konform sein, Unterauftragsverarbeiter auflisten, SCCs adressieren, wo erforderlich, und eine ausdrückliche No-Training-Klausel enthalten, die LLM-Gewichte und alle Hilfsdienste (Suche, Telemetrie, Support) abdeckt.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Das private EU-Cloud-Muster wirkt freizügiger als On-Prem, weil es einen Drittanbieter-Auftragsverarbeiter einbindet — aber mit souveräner Region, kundenseitig verwalteten Schlüsseln, vertraglicher No-Training-Klausel und ordentlicher Egress-Kontrolle kann es On-Prem in Verfügbarkeit und Audit-Posture erreichen oder schlagen. Die Compliance-Akte ist dicker; das operative Risiko ist geringer.',
+          },
+        ],
+      },
+      euAiAct: {
+        id: 'eu-ai-act',
+        title: 'EU-AI-Act-Einstufung: Begrenztes Risiko vs. Hochrisiko',
+        content:
+          '**Die meisten lokalen RAG-Bereitstellungen sind unter dem EU AI Act KI-Systeme mit begrenztem Risiko — sobald jedoch das Retrieval eine automatisierte Entscheidung mit Auswirkungen auf eine Person speist, rutscht die Einstufung ins Hochrisiko, und die Pflichten vervielfachen sich.** Klassifizieren Sie, bevor Sie bauen.',
+        items: [
+          '**Begrenztes Risiko (die meisten lokalen RAG)** — Das System ruft Dokumente ab und fasst sie zusammen, um einen Menschen zu unterstützen; der Mensch trifft die Entscheidung. Die Pflichten sind überwiegend Transparenzpflichten: Nutzer müssen wissen, dass sie mit einer KI interagieren, generierter Inhalt muss als solcher erkennbar sein, kein manipulatives oder irreführendes Design.',
+          '**Hochrisiko** — Das Retrieval speist eine automatisierte Entscheidung in den vom Act gelisteten Bereichen: Bonitätsbewertung, Bewerberauswahl, Bildungszulassungen, wesentliche öffentliche Dienste, Strafverfolgung, Migration, Justiz, biometrische Identifikation, kritische Infrastruktur. Ein RAG zur klinischen Entscheidungsunterstützung, das Behandlungen empfiehlt, ist Hochrisiko; ein RAG, das klinische Leitlinien zusammenfasst und einer Ärztin hilft, schneller zu lesen, ist es nicht.',
+          '**Hochrisiko-Pflichten** — Risikomanagementsystem über den Lebenszyklus, Daten-Governance (Trainings-, Validierungs- und Testdaten dokumentiert), technische Dokumentation, automatische Ereignisprotokollierung, Transparenz und Information für Nutzer, menschliche Aufsicht, Genauigkeit und Robustheit, Konformitätsbewertung vor dem Inverkehrbringen, Marktbeobachtung nach Inverkehrbringen.',
+          '**Erwägungen zu KI-Systemen mit allgemeinem Verwendungszweck** — Die Nutzung eines allgemeinen LLMs (Open Source oder anders) überträgt die Hochrisiko-Pflichten nicht auf den Modellanbieter. Der Betreiber (Ihre Organisation) trägt die Hochrisiko-Pflichten für das System, das Sie mit diesem Modell bauen.',
+          '**Verbotene Praktiken** — Social Scoring, ungezieltes Scraping von Gesichtsbildern, Emotionserkennung an Arbeitsplätzen und Schulen, bestimmte Echtzeit-biometrische Kategorisierung. Diese sind unabhängig davon, wie lokal Sie sie betreiben, vom Tisch.',
+          '**Dokumentation als Audit-Artefakt** — Die für Hochrisikosysteme erforderliche technische Akte ist kein einmaliges Lieferobjekt; sie ist ein lebendiges Dokument. Binden Sie sie an Ihren Change-Management-Prozess, sodass jede Modellfreigabe, jeder Embedder-Wechsel und jede ACL-Änderung darin reflektiert wird.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Die Linie zwischen Hochrisiko und begrenztem Risiko wird vom Anwendungsfall gezogen, nicht von der Technologie. Derselbe Vektorspeicher und dasselbe Modell können in einer Forschungsassistenten-Bereitstellung begrenztes Risiko und in einer HR-Screening-Bereitstellung Hochrisiko darstellen. Klassifizieren Sie pro Anwendungsfall, nicht pro Plattform.',
+          },
+        ],
+      },
+      dpia: {
+        id: 'dpia-requirements',
+        title: 'DSFA-Anforderungen (Artikel 35)',
+        content:
+          '**Eine Datenschutz-Folgenabschätzung (Artikel 35) ist verpflichtend für Verarbeitungen, die voraussichtlich ein hohes Risiko für die Rechte und Freiheiten der Betroffenen zur Folge haben.** Die meisten regulierten lokalen RAG-Systeme fallen in den Anwendungsbereich. Behandeln Sie die DSFA als Designdokument, nicht als nachträgliches Compliance-Artefakt.',
+        items: [
+          '**Wann verpflichtend** — systematische und umfassende Bewertung einschließlich Profiling mit Rechtswirkung; großmaßstäbliche Verarbeitung besonderer Kategorien personenbezogener Daten (Gesundheit, Recht, biometrische, rassische, politische, religiöse, gewerkschaftliche Daten); systematische Überwachung öffentlich zugänglicher Bereiche. Die nationalen Aufsichtsbehörden veröffentlichen Listen von Verarbeitungstätigkeiten, die immer eine DSFA erfordern — prüfen Sie Ihre.',
+          '**Umfang der DSFA** — Zweck und Rechtsgrundlage; Beschreibung der Verarbeitungstätigkeiten; Erforderlichkeit und Verhältnismäßigkeit; Risikobewertung gegenüber den Betroffenen; Risikominderungen und Restrisiko; Konsultation des Datenschutzbeauftragten und (bei verbleibendem hohem Risiko) der Aufsichtsbehörde vor Beginn der Verarbeitung.',
+          '**RAG-spezifische Risiken**, die zu adressieren sind: Re-Identifikation von Einzelpersonen aus abgerufenen Chunks; Generierung ungenauer Informationen, die eine Person betreffen; Leakage über Logs oder Backups; Vollständigkeit der Löschung beim Recht auf Vergessenwerden; Cross-Sammlungs-Kontamination; zu weit gefasste Zugriffe für Power-User.',
+          '**Zu dokumentierende Risikominderungen** — die sechs Kontrollen oben, plus Chunk-bezogene Schwärzung oder Pseudonymisierung, wo die Rechtsgrundlage Einwilligung oder berechtigtes Interesse ist; Lösch-Runbook mit Übungsnachweis; Zugriffsprüfungen in einer festgelegten Kadenz.',
+          '**Prüfer** — Der DSB zeichnet ab; die Aufsichtsbehörde wird konsultiert, wenn das Restrisiko nach Risikominderung weiterhin hoch bleibt. Die unterzeichnete DSFA gehört in die technische Akte zusammen mit der EU-AI-Act-Konformitätsdokumentation, falls das System ebenfalls hochriskant ist.',
+          '**Lebendiges Dokument** — Führen Sie die DSFA erneut durch, wenn der Korpus wesentlich erweitert wird, wenn das Modell oder der Embedder sich ändert, wenn Zugriffsgrenzen sich ändern oder als Baseline jährlich. Binden Sie dies an Ihren Change-Management-Prozess.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Eine DSFA, die in Woche zwei eines Projekts geschrieben wird, ist ein Planungswerkzeug. Eine DSFA, die in Woche zehn geschrieben wird, ist ein Verteidigungsdokument. Das erste ist deutlich nützlicher und bringt typischerweise Designänderungen ans Licht, die das spätere Restrisiko senken. Beginnen Sie die DSFA vor der Beschaffungsentscheidung, nicht nach der Bereitstellung.',
+          },
+        ],
+      },
+      germany: {
+        id: 'germany-datenschutz',
+        title: 'Deutschlandspezifische Hinweise (Datenschutz)',
+        content:
+          '**Die deutsche Datenschutzpraxis legt das BDSG-Neu, sektorspezifische Regeln, BSI-Grundschutz-Bausteine und die Mitbestimmung des Betriebsrats über die DSGVO-Baseline.** Eine RAG-Bereitstellung, die generische DSGVO-Anforderungen erfüllt, kann in einer deutschen Prüfung dennoch scheitern, wenn diese Punkte übersehen werden.',
+        items: [
+          '**Mitbestimmung des Betriebsrats** — Nach §87 BetrVG erfordert jedes System, das die Leistung oder das Verhalten von Beschäftigten überwacht, eine Vereinbarung mit dem Betriebsrat vor der Bereitstellung. Ein RAG über mitarbeiter-erstellte Inhalte (E-Mails, interne Dokumente) löst dies typischerweise aus. Beziehen Sie den Betriebsrat zur Designzeit ein; die Vereinbarung (Betriebsvereinbarung) wird Teil der Rechtsgrundlagen-Akte.',
+          '**Sektorspezifische Verschwiegenheit** — §203 StGB stellt die Verletzung der beruflichen Verschwiegenheit (Anwälte, Ärzte, Steuerberater, Wirtschaftsprüfer) unter Strafe. Eine RAG-Bereitstellung, die geschützte Mandanten- oder Patientendaten gegenüber nicht berufsmäßig gebundenem Personal oder externen Auftragsverarbeitern offenlegt, kann eine Straftat sein, nicht nur eine zivilrechtliche Angelegenheit. Das On-Prem- oder Air-Gapped-Muster ist in diesen Sektoren die sicherere Wahl.',
+          '**Telemediengesetz und TTDSG** — Ausgehende Telemetrie, die Endnutzergeräte berührt, wird nicht nur von der DSGVO, sondern auch vom TTDSG geregelt. Air-Gap nimmt die Frage vom Tisch; egress-kontrollierte Bereitstellungen müssen verifizieren, dass jeder ausgehende Aufruf eingewilligt, erforderlich oder strikt technisch ist.',
+          '**BSI-Grundschutz-Bausteine** — Für Behörden und KRITIS-Betreiber liefert das BSI-Grundschutz-Kompendium des Bundesamts für Sicherheit in der Informationstechnik den verbindlichen Maßstab. Auch im Mittelstand sind Bausteine wie OPS.1.2.4 (Cloud-Nutzung), OPS.2.1 (Outsourcing) und APP.4.4 (Webanwendungen) sinnvolle Referenzen für die Architekturdokumentation. Die DSFA und das technische Konzept sollten an passende Bausteine knüpfen.',
+          '**Aufsichtsbehörden (Bund und Länder)** — Die Datenschutzaufsicht ist im Privatsektor auf Länderebene organisiert. Wenden Sie sich an die zuständige Landesbeauftragte für Datenschutz, wenn eine Konsultation nach Artikel 36 erforderlich ist. Positionspapiere des BfDI und der großen Landesbeauftragten zu KI-Werkzeugen sind wertvolle Inputs für die DSFA.',
+          '**Praxis im deutschen Mittelstand** — Lokales RAG ist für den Mittelstand häufig die pragmatische Wahl: Es passt zu vorhandenen On-Prem- oder Hybrid-Architekturen, vermeidet die Komplexität von SCCs und Schrems-II-Bewertungen und erlaubt der eigenen IT, Souveränität über Modell und Daten zu behalten. Eine typische Bereitstellung ist ein On-Prem-Server, federiert gegen Microsoft Entra ID oder Keycloak, mit BSI-konformer Patch- und Backup-Disziplin.',
+          '**Dokumentationssprache** — Deutsche Aufsichtsbehörden akzeptieren englischsprachige Dokumentation, doch zentrale nutzerseitige Artefakte (Datenschutzhinweise, Transparenzerklärungen, Betriebsvereinbarungen) sollten aus rechtlichen wie praktischen Gründen auf Deutsch verfasst sein.',
+        ],
+      },
+      checklist: {
+        id: 'compliance-checklist',
+        title: 'Compliance-Checkliste vor dem Go-Live',
+        content:
+          '**Arbeiten Sie diese Liste vor jedem produktiven Rollout vollständig durch.** Jeder Punkt ist ein realer Versagensmodus aus einem realen Audit; die Liste ist bewusst kurz, damit sie auch tatsächlich genutzt wird.',
+        items: [
+          '☐ **Rechtsgrundlage dokumentiert** für jede Kategorie von Quelldaten — Einwilligung, Vertrag, gesetzliche Verpflichtung, lebenswichtige Interessen, öffentliche Aufgabe oder berechtigtes Interesse mit Abwägungstest in der Akte.',
+          '☐ **DSFA vom DSB unterzeichnet**, mit angehängtem geübten Lösch-Runbook.',
+          '☐ **Verzeichnis von Verarbeitungstätigkeiten (Artikel 30)** aktualisiert, einschließlich des RAG-Systems, der Datenkategorien, Aufbewahrung, Empfänger und Übermittlungsmechanismen (typischerweise keine bei lokalem RAG).',
+          '☐ **Sechs Kontrollen End-to-End verifiziert**: Air-Gap oder Egress-Allowlist, RBAC, Audit-Logs, Verschlüsselung, Datenherkunft, Löschpfad.',
+          '☐ **Ausgehender Paketmitschnitt** sauber über einen 24-stündigen Soak-Test; nach jedem Anwendungsupdate wiederholt.',
+          '☐ **Identitätsanbieter-Integration** mit echten Nutzern aus jeder Zugriffsstufe getestet; Zugriff auf sensible Sammlungen erfordert separate Erhöhung.',
+          '☐ **Backups erstellt und Wiederherstellung tatsächlich getestet** auf isolierter Hardware, nicht nur in einem Status-Panel verifiziert.',
+          '☐ **Recht-auf-Vergessenwerden-Runbook geübt** mit synthetischen Daten — abdeckend Quellsystem, Vektorindex, zwischengespeicherte Embeddings und Aufbewahrung der Retrieval-Logs.',
+          '☐ **EU-AI-Act-Einstufung** bestätigt (begrenztes Risiko vs. Hochrisiko); technische Akte vorhanden, falls Hochrisiko.',
+          '☐ **Anbieterverträge (sofern vorhanden) geprüft**: AVV gemäß Artikel 28, Unterauftragsverarbeiter aufgelistet, No-Training-Klausel, die Kundendaten abdeckt.',
+          '☐ **Betriebsvereinbarung** vorhanden, wo mitarbeiterbezogene Inhalte im Geltungsbereich sind (Deutschland; ähnliche EU-Regeln andernorts).',
+          '☐ **Transparenzhinweis** in nutzerverständlicher Sprache erstellt, der die KI-Unterstützung, den Human-in-the-Loop und den Datenfluss erklärt.',
+          '☐ **Incident-Response-Runbook** aktualisiert, um RAG-spezifische Szenarien zu berücksichtigen: Index-Leak, Log-Manipulation, Löschversagen, Modellwechsel mit nachgelagertem Bruch der Datenherkunft.',
+          '☐ **Quartalsweise Zugriffsprüfung** geplant und zugewiesen; erste Prüfung vor dem Go-Live im Kalender.',
+          '☐ **Jährliche DSFA-Aktualisierung** geplant und an den Change-Management-Prozess gekoppelt.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler',
+        items: [
+          '**Fehler 1: „Lokal" als Synonym für „konform" zu behandeln.** On-Prem-Betrieb löst Übermittlungs- und Auftragsverarbeiterfragen; er löst weder Rechtsgrundlage, DSFA, Audit-Logging noch Betroffenenrechte. Compliance ist ein geschichtetes Programm, keine Bereitstellungsentscheidung.',
+          '**Fehler 2: Die DSFA überspringen, weil das System „nur ein Suchwerkzeug" sei.** Ein Suchwerkzeug, das besondere Kategorien personenbezogener Daten in größerem Umfang verarbeitet, ist genau das, was Artikel 35 abdeckt. Wer die DSFA überspringt, überspringt die Verteidigungslinie im Audit.',
+          '**Fehler 3: Den Anfragetext ohne Prüfung der Rechtsgrundlage protokollieren.** Anfragen sind selbst personenbezogene Daten, wenn sie auf Einzelpersonen verweisen. Entscheiden Sie zur Designzeit, ob Ihre Verarbeitungszwecke das Logging der Anfragen abdecken; falls nicht, protokollieren Sie nur Hash und Metadaten.',
+          '**Fehler 4: Zwischengespeicherte Embeddings im Lösch-Runbook vergessen.** Quelllöschung funktioniert. Vektorindex-Neuaufbau funktioniert. Die Cache-Schicht, die Ihre Plattform aus Performance-Gründen ergänzt hat, die Embedding-Fingerabdrücke im Retrieval-Log und die Antwort-Historie im Chat-Speicher sind die Teile, die übersehen werden.',
+          '**Fehler 5: Power-Usern erlauben, Sammlungs-ACLs zu umgehen.** „Admins können alles sehen" ist bequem und sehr verbreitet; es ist auch der mit Abstand häufigste Grund dafür, dass Audits schiefgehen. Privilegierter Zugriff muss selbst zugriffskontrolliert, zeitlich begrenzt und pro Nutzung begründet sein.',
+          '**Fehler 6: Einen Workspace für mehrere Mandate oder Mandanten wiederverwenden.** Cross-Kontamination von Zitaten und Kontext ist ein Vertraulichkeitsversagen, noch bevor eine externe Partei sie sieht. Ein Mandat oder Mandant pro Sammlung; separate ACLs; separate Aufbewahrung.',
+          '**Fehler 7: Air-Gap kaufen und dann ein privates Smartphone zum Testen anschließen.** Der Air-Gap-Perimeter muss die Personen einschließen, die Daten über ihn hinwegtragen können. Endgeräte-Politik ist Teil der Kontrolle, nicht ein separater Punkt.',
+          '**Fehler 8: Modell- und Embedder-Wahl als „einmal einrichten und vergessen" behandeln.** Jedes Upgrade ist ein Change-Management-Ereignis mit Implikationen für DSFA, Datenherkunft und Audit-Trail. Planen Sie den Upgrade-Workflow vor der ersten Produktivbereitstellung.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          '[DSGVO-Volltext (Offiziell)](https://gdpr-info.eu/) — Vollständiger Text der Datenschutz-Grundverordnung mit Kommentar je Artikel.',
+          '[EU-AI-Act-Volltext](https://artificialintelligenceact.eu/) — Vollständiger Verordnungstext mit Risikoklassifizierungsrahmen.',
+          '[NIST AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — US-Bundesrahmenwerk, anwendbar auf KI-Risikobewertung.',
+          '[BDSG-Neu (Bundesdatenschutzgesetz)](https://www.gesetze-im-internet.de/bdsg_2018/) — Deutsche Umsetzung der DSGVO mit sektorspezifischen Ergänzungen.',
+          '[EDSA-Leitlinien zur DSFA](https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-data-protection-impact-assessment-and-determining_en) — Leitfaden des Europäischen Datenschutzausschusses zu Anlass und Durchführung einer DSFA.',
+          '[BfDI (Bundesbeauftragter für den Datenschutz)](https://www.bfdi.bund.de/) — Positionspapiere des Bundesbeauftragten zu KI-Bereitstellungen.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Erfüllt der lokale Betrieb von RAG automatisch die DSGVO?',
+            a: 'Nein. Lokales Hosting löst die Frage der grenzüberschreitenden Übermittlung und reduziert die Auftragsverarbeiterliste, doch die DSGVO-Grundsätze in Artikel 5 (Rechtmäßigkeit, Fairness, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität und Vertraulichkeit, Rechenschaftspflicht) gelten weiterhin. Artikel 25 (Datenschutz durch Technikgestaltung und durch Voreinstellungen), Artikel 30 (Verzeichnis von Verarbeitungstätigkeiten), Artikel 32 (Sicherheit der Verarbeitung) und Artikel 35 (DSFA) gelten unabhängig davon, wo das Modell läuft. Lokales RAG ist ein starker Ausgangspunkt, keine fertige Compliance-Posture.',
+          },
+          {
+            q: 'Was ist für die EU-AI-Act-Compliance einer lokalen RAG-Bereitstellung erforderlich?',
+            a: 'Klassifizieren Sie den Anwendungsfall als begrenztes Risiko oder Hochrisiko. Die meisten Retrieval-Assistenz-Bereitstellungen sind begrenztes Risiko und erfordern Transparenzpflichten: Nutzer müssen wissen, dass sie mit einer KI interagieren, generierte Inhalte müssen erkennbar sein. Sobald das Retrieval eine automatisierte Entscheidung in einem gelisteten Bereich speist (Kredit, Beschäftigung, Bildung, öffentliche Dienste, Strafverfolgung, Migration, Justiz, Biometrie, kritische Infrastruktur), ist die Bereitstellung Hochrisiko, und die vollständigen Pflichten greifen: Risikomanagementsystem, Daten-Governance, technische Dokumentation, automatische Ereignisprotokollierung, Transparenz, menschliche Aufsicht, Genauigkeit und Robustheit, Konformitätsbewertung sowie Marktbeobachtung nach Inverkehrbringen.',
+          },
+          {
+            q: 'Benötige ich eine DSFA für lokales RAG?',
+            a: 'Eine DSFA nach Artikel 35 ist verpflichtend für Verarbeitungen, die voraussichtlich ein hohes Risiko für die Rechte und Freiheiten der Betroffenen zur Folge haben — dazu zählen die großmaßstäbliche Verarbeitung besonderer Kategorien personenbezogener Daten (Gesundheit, Recht, biometrische, rassische, politische, religiöse, gewerkschaftliche Daten) sowie systematisches Profiling mit Rechtswirkung. Die meisten regulierten lokalen RAG-Anwendungen (Recht, Medizin, Finanzen, HR-Untersuchungen) fallen in den Anwendungsbereich. Führen Sie die DSFA früh durch, behandeln Sie sie als Designdokument und üben Sie die Risikominderungen — insbesondere das Lösch-Runbook — vor dem Go-Live.',
+          },
+          {
+            q: 'Kann ich eine lokale RAG-Bereitstellung über Abteilungen hinweg teilen?',
+            a: 'Ja, mit Sorgfalt. Zugriffskontrolle auf Sammlungsebene, Authentifizierung pro Nutzer gegen einen einzigen Identitätsanbieter und eine klare Rechtsgrundlage für die Nutzung jeder Abteilung sind die Untergrenze. Die DSFA muss die breiteste Menge der Verarbeitungszwecke abdecken; benötigt eine Abteilung eine andere Rechtsgrundlage (z. B. HR-Untersuchungen unter berechtigtem Interesse, während klinisches Personal unter öffentlicher Aufgabe arbeitet), sind getrennte Sammlungen und getrennte Zugriffsgruppen einfacher zu verteidigen als eine einzige Sammlung mit ausgefeilten ACLs.',
+          },
+          {
+            q: 'Wie auditiere ich, wer auf welches Dokument zugegriffen hat?',
+            a: 'Protokollieren Sie jeden Retrieval mit Nutzer-ID, Zeitstempel, abgerufenen Chunk-IDs und den Dokument-IDs, aus denen sie stammen. Leiten Sie die Ereignisse an einen separaten, schreibbeschränkten Logspeicher unter anderer administrativer Kontrolle als der Anwendungsserver weiter (Funktionstrennung). Nutzen Sie append-only-Speicher mit einer Hash-Kette, sodass Manipulationen erkennbar sind. Die Aufbewahrungsdauer sollte sich am Untersuchungsfenster der Aufsichtsbehörde und etwaigen branchenspezifischen Regeln orientieren — sechs bis sieben Jahre sind in regulierten Branchen üblich.',
+          },
+          {
+            q: 'Sind Open-Source-Embedding-Modelle DSGVO-konform einsetzbar?',
+            a: 'Grundsätzlich ja, mit drei Bedingungen. Erstens: Die Gewichte werden einmal heruntergeladen und auf einen Hash fixiert, sodass nachweisbar ist, was lief. Zweitens: Die Inferenz läuft vollständig lokal ohne Telemetrie oder ausgehende Aufrufe — verifizieren Sie es per Paketmitschnitt, vertrauen Sie nicht allein der Dokumentation. Drittens: Die Model Card und die Lizenz werden auf Klauseln geprüft, die der vertraulichen geschäftlichen Nutzung widersprechen (manche Open-Weight-Lizenzen knüpfen Einschränkungen an Datentypen oder Anwendungsfälle). Die praktische Standardvorgehensweise für regulierte Bereitstellungen ist, eine kleine Anzahl geprüfter Embedder zu allowlisten und bei jedem Upgrade neu zu prüfen.',
+          },
+          {
+            q: 'Wie steht es um die Datenherkunft für KI-generierte Ausgaben?',
+            a: 'Jede generierte Antwort muss auf die Chunk-IDs verweisen, die sie hervorgebracht haben, auf den Modell-Identifikator, die Version der Prompt-Vorlage und den Zeitstempel. Die Chunks lassen sich dann zu Dokument-IDs auflösen, die wiederum zu Quelldokumenten führen. Diese Kette ermöglicht es Ihnen, die Antwort zu verifizieren, sie unter Anfechtung zu verteidigen, einen Löschantrag zu erfüllen und das Ergebnis später zu reproduzieren. Ohne sie ist „Die KI hat es gesagt" die Audit-Verteidigung — und das ist überhaupt keine Verteidigung.',
+          },
+          {
+            q: 'Kann ich lokales RAG für vertrauliche Mandantendokumente nutzen?',
+            a: 'Häufig ja, manchmal nein. Viele Außenanwaltsvereinbarungen, M&A-NDAs und Patientendatenverträge erlauben KI-gestützte Prüfung, sofern die Daten eine definierte Grenze nicht verlassen und bestimmte Kontrollen erfüllt sind. Lokales RAG erfüllt die Grenz-Anforderung bauartbedingt; die vertragsspezifische Kontrollliste (Verschlüsselung, Zugriff, Audit, Aufbewahrung, Meldung von Verletzungen) muss dennoch eingehalten werden. Wenn der Vertrag KI-Verarbeitung vollständig untersagt, hilft kein Bereitstellungsmuster — das Verbot gilt unabhängig davon, ob die KI lokal oder remote läuft.',
+          },
+          {
+            q: 'Welches Logging ist für die Compliance erforderlich?',
+            a: 'Ingest-Ereignisse (Dokument-ID, Hash, Quelle, Hochlader, Zeitstempel, Klassifizierung), Retrieval-Ereignisse (Nutzer-ID, Anfragemetadaten oder -Hash, abgerufene Chunk-IDs, Antwortreferenz, Modell-/Embedder-Identifikator), administrative Ereignisse (Modellfreigabe, Embedder-Wechsel, ACL-Änderung, Nutzer-/Gruppenänderung) und betriebliche Ereignisse (Backup, Wiederherstellung, Schlüsselrotation). Alle Ereignisse werden an einen separaten Logspeicher weitergeleitet, append-only, hash-verkettet und entsprechend Ihren Mandats- und Branchenanforderungen aufbewahrt.',
+          },
+          {
+            q: 'Wie behandle ich Anträge auf Recht auf Vergessenwerden in RAG?',
+            a: 'Mit einem dokumentierten Runbook, das die Löschung durch jede Schicht führt: Quellsystem für Dokumente, Vektorindex, zwischengespeicherte Embeddings, Aufbewahrung von Retrieval-Logs (sofern die Rechtsgrundlage die Löschung des Log-Eintrags zulässt) und alle in der Chat-Historie gespeicherten Antworten. Quelllöschung ist unkompliziert; der Vektorindex-Neuaufbau ist gut verstanden; zwischengespeicherte Embeddings und die Antwort-Historie sind die Teile, die die meisten Bereitstellungen übersehen. Üben Sie das Runbook mit synthetischen Daten, dokumentieren Sie die Übung und koppeln Sie das Runbook an Ihren Incident-Response-Prozess, sodass ein realer Antrag die geübte Sequenz auslöst und keine Improvisation.',
+          },
+          {
+            q: 'Muss ich bei lokalem RAG die DSGVO und das BDSG beachten?',
+            a: 'Ja, vollumfänglich. Auch wenn die Daten Ihr Rechenzentrum nicht verlassen, bleibt Ihre Organisation Verantwortlicher im Sinne der DSGVO (Artikel 4 Nr. 7) und unterliegt sowohl der DSGVO als auch dem BDSG-Neu. Konkret bedeutet das: Rechtsgrundlage nach Artikel 6 (oder Artikel 9 bei besonderen Kategorien), Verzeichnis von Verarbeitungstätigkeiten nach Artikel 30, technische und organisatorische Maßnahmen nach Artikel 32, DSFA nach Artikel 35 (in fast allen Fällen mit besonderen Kategorien personenbezogener Daten verpflichtend), Meldepflicht bei Datenschutzverletzungen nach Artikel 33 und Erfüllung der Betroffenenrechte aus Artikel 15–22. Der Vorteil des lokalen Betriebs liegt darin, dass keine grenzüberschreitende Übermittlung nach Artikel 44 ff. stattfindet, kein AVV mit einem Cloud-Anbieter abzuschließen ist und die Eingriffsmöglichkeiten ausländischer Behörden entfallen. BDSG-Neu ergänzt zusätzlich §26 (Beschäftigtendatenschutz) für mitarbeiterbezogene Inhalte sowie sektorspezifische Regelungen — bei Berufsgeheimnisträgern ist zusätzlich §203 StGB zu beachten, der die Offenlegung an externe Auftragsverarbeiter unter Strafe stellt.',
+          },
+          {
+            q: 'Eignet sich lokales RAG für den deutschen Mittelstand?',
+            a: 'Ja, lokales RAG ist häufig die pragmatischste Wahl für den deutschen Mittelstand. Drei Gründe: Erstens passt es zu vorhandenen On-Prem- und Hybrid-Architekturen, die viele Mittelständler ohnehin betreiben — ein zusätzlicher GPU-Server im bestehenden Rechenzentrum oder Co-Location-Standort ist ein überschaubares Investment. Zweitens entfallen die rechtlichen Folgekosten von Cloud-Lösungen: keine Standardvertragsklauseln, keine Schrems-II-Folgenabschätzung, kein AVV mit Hyperscalern, keine Auseinandersetzung mit US-Zugriffsrechten. Drittens lässt sich die Architektur an etablierte Maßstäbe anbinden — BSI-Grundschutz-Bausteine (z. B. OPS.1.2.4 Cloud-Nutzung, APP.4.4 Webanwendungen) liefern den Rahmen für die technische Akte; eine Federation gegen Microsoft Entra ID oder Keycloak fügt sich in vorhandene Identitätslandschaften; Backups laufen über bestehende Pipelines. Eine typische Mittelstands-Bereitstellung umfasst einen Server mit zwei Enterprise-GPUs, einen Open-Source-LLM, einen Open-Source-Embedder, einen On-Prem-Vektorspeicher (Qdrant, Weaviate oder pgvector), federierte Authentifizierung über das bestehende Active Directory und ein Audit-Log, das in das vorhandene SIEM einspeist. Die Investition liegt typischerweise im fünfstelligen Bereich; laufende Kosten überwiegend Strom und Wartung. Wo der Datenschutzbeauftragte die DSFA frühzeitig begleitet und der Betriebsrat zur Designzeit eingebunden wird, ist die Bereitstellung in 8–12 Wochen audit-fähig — deutlich schneller als ein vergleichbares Cloud-Setup mit gleichwertigem Kontrollniveau.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Literatur',
+        items: [
+          '[AnythingLLM vs. PrivateGPT vs. Open WebUI: Bestes lokales RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — welche selbst gehosteten Plattformen welcher Compliance-Posture entsprechen, mit Hinweisen zu Telemetrie und Lizenzierung.',
+          '[Lokale KI-Agenten für Geschäftsabläufe und EU-Compliance](/de/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — angrenzendes Compliance-Thema, wenn Retrieval automatisierte Workflow-Schritte speist statt eines menschlichen Lesers.',
+          '[Lokale LLM-E-Mail- und Kalender-Automatisierung](/de/power-local-llm/local-llm-email-and-calendar-automation) — angrenzende Geschäftsautomatisierungsmuster, in denen das gleiche Kontrollset gilt.',
+          '[Lokales RAG für Ihre PDFs Schritt für Schritt](/de/power-local-llm/local-rag-on-your-pdfs-step-by-step) — praktische Implementierungsanleitung für die On-Prem- und Laptop-Muster.',
+          '[Mit 1.000 PDFs lokal chatten](/de/power-local-llm/chat-with-1000-pdfs-locally) — operative Hinweise für größere Korpora, die an die On-Prem-Obergrenze stoßen.',
+          '[Power Local LLM Hub](/de/power-local-llm) — die vollständige Bibliothek der Anleitungen für selbst gehostete LLM-Bereitstellungen.',
+        ],
+      },
+    },
+  },
 }
