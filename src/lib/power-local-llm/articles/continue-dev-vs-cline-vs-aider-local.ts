@@ -486,4 +486,488 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'Continue.dev vs Cline vs Aider: Der beste lokale Coding Agent in 2026',
+    seoTitle: 'Continue.dev vs Cline vs Aider: Lokale Coding Agents im Vergleich 2026',
+    intro:
+      'Continue.dev, Cline und Aider sind die drei ernsthaften Open-Source-Coding-Harnesses, die sich sauber mit einem lokalen LLM in 2026 kombinieren lassen. Sie sind nicht austauschbar: Jeder ist um ein anderes Workflow-Primitive herum aufgebaut — Autocomplete, autonome Agent-Schleife oder Git-natives Diff. Wählen Sie nach Workflow zuerst aus, Modell zuerst, und Sie vermeiden 90 % der Integrationsprobleme.',
+    metaDescription:
+      'Continue.dev, Cline und Aider als lokale Coding Agents 2026 verglichen. Edit-Modell, IDE-Integration, Rückgängigmachen und Kontext-Strategien — nach Workflow gewählt, nicht nach Hype.',
+    twitterDescription:
+      'Drei lokale Coding-Harnesses, drei verschiedene Workflow-Primitive. Continue.dev für Autocomplete, Cline für autonome Agenten, Aider für Git-native Diffs. Fazit pro Workflow siehe unten.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+      'Llama 3.3 70B',
+      'Codestral 22B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'Entwickler, die einen lokalen Coding-LLM (Qwen3-Coder, DeepSeek Coder, Codestral, Llama 3.3) ausführen und einen Harness wählen müssen, der zu ihrem vorhandenen Editor und Projekt-Workflow passt.',
+    readTime: '14 Min. Lesezeit',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'lokaler Coding Agent',
+    targetKeywords: [
+      'continue.dev vs cline',
+      'cline vs aider',
+      'bester lokaler coding agent 2026',
+      'lokales llm coding harness',
+      'aider lokales llm',
+      'continue.dev lokales llm',
+    ],
+    leadAnswerBlock:
+      '**Continue.dev, Cline und Aider lösen verschiedene Probleme mit demselben lokalen Modell. Continue.dev ist um Autocomplete und ein In-IDE-Chat-Panel herum aufgebaut — am besten für Edit-während-Sie-tippen-Workflows in VS Code oder JetBrains. Cline ist ein autonomer VS Code-Agent, der mehrere Dateien plant, bearbeitet und Befehle mit expliziten Approval-Gates ausführt — am besten für Multi-File-Refactorings und Bug-Hunts. Aider ist ein Terminal-First-, Git-nativer CLI, der jeden Edit in einen Commit mit chirurgischen Search-and-Replace-Diffs umwandelt — am besten für Repo-Wide-Arbeit und Reviewer, die jeden Change in `git log` abgebildet sehen möchten. Wählen Sie nach Workflow-Primitive (Autocomplete vs Agent-Schleife vs Git-Diff), nicht danach, welches Tool am mächtigsten klingt.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Welcher lokale Coding Agent ist 2026 am besten: Continue.dev, Cline oder Aider?',
+        answer:
+          'Wählen Sie Continue.dev, wenn Sie den Großteil Ihres Tages in VS Code oder JetBrains verbringen und Autocomplete plus ein Chat-Panel möchten, das in Ihre Codebasis reicht. Wählen Sie Cline, wenn Sie einen autonomen Agenten möchten, der plant, mehrere Dateien bearbeitet und Befehle mit Approval-Gates ausführt — am stärksten für Refactorings und explorative Bug-Hunts. Wählen Sie Aider, wenn Sie im Terminal arbeiten und jeden Edit als separaten, überprüfbaren Git-Commit committed möchten. Alle drei laufen vollständig offline gegen jeden lokalen LLM-Endpoint (Ollama, llama.cpp, LM Studio, vLLM). Die richtige Wahl ist eine Workflow-Entscheidung, keine Qualitätsrangfolge.',
+        bullets: [
+          'Continue.dev — Autocomplete + In-IDE-Chat. Am besten für VS Code und JetBrains-Nutzer, die inkrementelle Edits ohne Editor-Verlassen möchten.',
+          'Cline — Autonomer Agent mit Plan/Act-Modi, Tool-Calls und Pro-Step-Approval. Am besten für Multi-File-Refactorings und Bug-Hunts.',
+          'Aider — Terminal-CLI mit Git-nativen Commits und Search-and-Replace-Diffs. Am besten für überprüfbare, Undo-freundliche Repo-Wide-Arbeit.',
+          'Alle drei funktionieren mit jedem OpenAI-kompatiblen lokalen Endpoint — Ollama ist der einfachste Weg, llama.cpp und vLLM werden durch Provider-Konfigurationen unterstützt.',
+          'Workflow-Anpassung schlägt rohe Kapazität. Einen Terminal-First-Dev in Cline zu zwingen (oder einen VS Code-Only-Dev in Aider) kostet mehr Zeit, als der Harness spart.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+      { label: 'Schnelle Fakten', anchor: '#quick-facts' },
+      { label: 'Vergleichstabelle', anchor: '#comparison-table' },
+      { label: 'Welcher sollten Sie wählen?', anchor: '#which-one' },
+      { label: 'Continue.dev: Tiefgang', anchor: '#continue-dev' },
+      { label: 'Cline: Tiefgang', anchor: '#cline' },
+      { label: 'Aider: Tiefgang', anchor: '#aider' },
+      { label: 'Edit-Modell: Wie jeder Code schreibt', anchor: '#edit-model' },
+      { label: 'Rückgängigmachen und Rollback', anchor: '#undo' },
+      { label: 'Kontext-Fenster-Strategie', anchor: '#context' },
+      { label: 'Tool-Call-Zuverlässigkeit', anchor: '#tool-calls' },
+      { label: 'IDE-Integration', anchor: '#ide-integration' },
+      { label: 'Workflow-Anpassung nach Anwendungsfall', anchor: '#workflow-fit' },
+      { label: 'Entscheidungsbaum', anchor: '#decision-tree' },
+      { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+      { label: 'Quellen', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Continue.dev** ist Autocomplete-First: Eine VS Code- und JetBrains-Extension mit FIM-Completions (Fill-in-the-Middle), einem In-IDE-Chat-Sidebar und `@`-Context-Providern (Codebasis, Datei, Docs, Terminal). Das nächste Open-Source-Analogon zu Copilot für lokale Modelle.',
+          '**Cline** ist Agent-First: Eine VS Code-Extension mit expliziten Plan- und Act-Modi, einer Tool-Call-Schleife (read_file, write_to_file, execute_command, browser_action) und einem Approval-Gate bei jedem Schritt. Konzipiert, um autonom über mehrere Dateien hinweg zu laufen, während Sie überwachen.',
+          '**Aider** ist Git-First: Ein Terminal-CLI, das eine Tree-Sitter-Repo-Map verwaltet, Dateien über Search-and-Replace-Diff-Blöcke bearbeitet und jeden Change committed. Undo ist `git reset` — der überprüfbarste Workflow der drei.',
+          'Alle drei sprechen OpenAI-kompatible Endpoints. **Ollama** ist das glatteste lokale Backend; **llama.cpp** und **vLLM** funktionieren über Provider-Einstellungen oder Proxies wie LiteLLM.',
+          '**Tool-Call-Zuverlässigkeit** hängt vom Modell ab, nicht vom Harness. Qwen3-Coder 30B und DeepSeek Coder V3 sind die zuverlässigsten Tool-Caller im Mai 2026; kleinere Modelle (7B-Klasse) geben regelmäßig malformed Tool-Calls aus, unabhängig davon, welcher Harness sie umhüllt.',
+          '**Kontext-Fenster-Strategie** unterscheidet sich stark: Continue.dev verlässt sich auf den eingebetteten Codebasis-Index und `@`-gepinnten Kontext, Cline streamt vollständige Datei-Inhalte in das Gespräch (hohe Token-Nutzung), Aider nutzt eine Tree-Sitter-Repo-Map plus explizites `/add` und `/drop`, um den aktiven Satz klein zu halten.',
+          'Für einen einzelnen Entwickler dominiert **Workflow-Anpassung** die Ergebnisse mehr als jeder Benchmark. Der Harness, den Sie tatsächlich offen halten, ist derjenige, den Sie wählen sollten.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Schnelle Fakten',
+        items: [
+          '**Continue.dev** — Autocomplete + Chat, VS Code und JetBrains, reibungsloseste Installation der drei.',
+          '**Cline** — Autonomer Agent mit Approval-Gates, nur VS Code, höchste Kapazität und höchste Token-Nutzung.',
+          '**Aider** — Terminal-CLI, Git-native Commits, jeder Edit ist durch Git überprüfbar und rückgängig zu machen.',
+          'Alle drei laufen gegen dasselbe lokale Backend — **Ollama** ist der glatteste Weg; **llama.cpp** und **vLLM** funktionieren auch via OpenAI-kompatible Konfiguration.',
+          '**Tool-Call-Zuverlässigkeit ist eine Modell-Eigenschaft, keine Harness-Eigenschaft.** Qwen3-Coder 30B und DeepSeek Coder V3 sind zuverlässig in allen drei; 7B-Klasse-Modelle fehlschlagen in allen drei.',
+          '**Kontext-Budget:** Continue.dev und Aider bleiben komfortabel mit einem 32K-Kontext-Modell; Cline braucht **128K** für nichttriviale Multi-File-Aufgaben.',
+          '**Nach Editor wählen:** JetBrains → Continue.dev oder Aider. Vim/Neovim oder SSH → Aider. VS Code mit Autocomplete-Heavy-Tagen → Continue.dev. VS Code mit Multi-File-Refactorings → Cline.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Wie Continue.dev, Cline und Aider 2026 verglichen werden',
+        content:
+          'Alle drei Harnesses sind Open Source, kostenlos zu betreiben und funktionieren mit jedem lokalen LLM-Endpoint. Die strukturellen Unterschiede unten entscheiden, welcher zu Ihrem Workflow passt.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Continue.dev ist Copilot-Style-Autocomplete, Cline ist ein autonomer Agent, der dateienübergreifend bearbeitet, Aider ist ein Terminal-Tool, das jeden Edit in Git committed — wählen Sie nach Workflow, nicht nach Benchmark.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Drei kostenlose Tools, dasselbe lokale Modell, drei völlig verschiedene Workflows. Continue.dev fühlt sich wie Copilot an — Tab zum Akzeptieren von Vorschlägen in Ihrem Editor. Cline fühlt sich wie ein Junior-Entwickler an, den Sie überwachen — es plant und bearbeitet dateienübergreifend, während Sie jeden Schritt genehmigen. Aider fühlt sich wie Pair-Programming im Terminal an — Sie sprechen, es committed. Probieren Sie denjenigen aus, der zu Ihrer aktuellen Arbeitsweise passt.',
+          },
+        ],
+        columns: ['Funktion', 'Continue.dev', 'Cline', 'Aider'],
+        rows: [
+          {
+            'Funktion': 'Primäre Oberfläche',
+            'Continue.dev': 'VS Code- und JetBrains-Extension',
+            'Cline': 'VS Code-Extension',
+            'Aider': 'Terminal-CLI (beliebiger Editor daneben)',
+          },
+          {
+            'Funktion': 'Workflow-Primitive',
+            'Continue.dev': 'Autocomplete + In-IDE-Chat',
+            'Cline': 'Autonome Agent-Schleife mit Approval-Gates',
+            'Aider': 'Git-native Diff-Edits, jeder Change ein Commit',
+          },
+          {
+            'Funktion': 'Edit-Modell',
+            'Continue.dev': 'Inline FIM + Apply-to-File aus Chat',
+            'Cline': 'Tool-Calls (read_file, write_to_file, replace_in_file)',
+            'Aider': 'Search-and-Replace-Diff-Blöcke; "whole"-Modus für kleine Dateien',
+          },
+          {
+            'Funktion': 'Multi-File-Edits',
+            'Continue.dev': 'Manuell: Chat schlägt vor, Sie applizieren pro Datei',
+            'Cline': 'Nativ: Agent bearbeitet dateienübergreifend in einer Aufgabe',
+            'Aider': 'Nativ: Dateien an Prompt benennen, Edits landen in einem Commit',
+          },
+          {
+            'Funktion': 'Rückgängigmachen / Rollback',
+            'Continue.dev': 'VS Code Undo-Stack auf angewendete Edits',
+            'Cline': 'Pro-Edit-Revert in der Agent-UI; Git für Hard-Rollback',
+            'Aider': '`/undo` macht letzten Commit rückgängig; vollständige Git-Historie darunter',
+          },
+          {
+            'Funktion': 'Tool-Call-Protokoll',
+            'Continue.dev': 'OpenAI-Tools (Function-Calling) im Agent-Modus',
+            'Cline': 'Benutzerdefinierte XML-Tool-Blöcke mit striktem Schema',
+            'Aider': 'Keine Tool-Calls; fordert Modell auf, Diff-Blöcke auszugeben',
+          },
+          {
+            'Funktion': 'Codebasis-Kontext',
+            'Continue.dev': 'Lokaler Index (TF-IDF + Embeddings) + `@`-Provider',
+            'Cline': 'Streamt vollständige Datei-Inhalte in das Gespräch',
+            'Aider': 'Tree-Sitter-Repo-Map + manuelles `/add` und `/drop`',
+          },
+          {
+            'Funktion': 'Genehmigung / Sicherheit',
+            'Continue.dev': 'Diff-Vorschau vor jedem Apply',
+            'Cline': 'Pro-Step-Genehmigung; Auto-Approve-Listen konfigurierbar',
+            'Aider': 'Diff-Vorschau im Terminal; Commit-Schritt ist automatisch',
+          },
+          {
+            'Funktion': 'Beste für',
+            'Continue.dev': 'Edit-während-Sie-tippen, In-IDE-Chat, Autocomplete-Heavy-Tage',
+            'Cline': 'Multi-File-Refactorings, explorative Debugging, Repo-Aufgaben',
+            'Aider': 'Überprüfbare Repo-Wide-Changes, Terminal-gesteuerte Workflows',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: 'Welchen sollten Sie wählen',
+        content:
+          '**Der richtige Harness wird durch Ihren Editor, Ihre Toleranz für autonome Edits und die Art bestimmt, wie Sie Changes überprüfen.** Nutzen Sie diese Abkürzung.',
+        columns: ['Ihre Situation', 'Wählen Sie'],
+        rows: [
+          { 'Ihre Situation': 'Ich arbeite in VS Code oder einer JetBrains-IDE und möchte Copilot-Style-Autocomplete', 'Wählen Sie': 'Continue.dev' },
+          { 'Ihre Situation': 'Ich möchte einen Chat-Sidebar, der meine Codebasis ohne manuelle Datei-Uploads erreichen kann', 'Wählen Sie': 'Continue.dev' },
+          { 'Ihre Situation': 'Ich möchte einen Agent, der ein Refactoring dateienübergreifend plant und vor jedem Schritt fragt', 'Wählen Sie': 'Cline' },
+          { 'Ihre Situation': 'Ich möchte, dass das Modell Befehle ausführen und Terminal-Ausgabe als Teil seiner Schleife lesen kann', 'Wählen Sie': 'Cline' },
+          { 'Ihre Situation': 'Ich überprüfe Changes via `git diff` und möchte jeden Edit automatisch committed', 'Wählen Sie': 'Aider' },
+          { 'Ihre Situation': 'Ich arbeite über SSH oder in einer Terminal-First-Umgebung', 'Wählen Sie': 'Aider' },
+          { 'Ihre Situation': 'Ich möchte alle drei Workflows gelegentlich — wählen Sie den einfachsten zuerst', 'Wählen Sie': 'Starten Sie mit Continue.dev; fügen Sie Aider hinzu, wenn Sie Git-native Diffs brauchen' },
+        ],
+      },
+      continueDevDeep: {
+        id: 'continue-dev',
+        title: 'Continue.dev: Die Autocomplete-First-Wahl',
+        content:
+          '**Continue.dev ist das nächste Open-Source-Analogon zu GitHub Copilot für lokale Modelle.** Seine primäre Oberfläche ist der Editor: Tab-Completion beim Tippen plus ein Chat-Sidebar, der Ihre Codebasis kennt.',
+        items: [
+          '**Install-Weg:** VS Code Marketplace und JetBrains Marketplace. Konfiguration befindet sich in `~/.continue/config.json` (oder `config.yaml`); Modelldefinitionen, Autocomplete-Einstellungen und `@`-Context-Provider befinden sich alle dort.',
+          '**Workflow-Primitive:** Autocomplete via FIM (Fill-in-the-Middle) plus einen In-IDE-Chat-Sidebar. Das Chat-Panel kann Edits direkt auf offene Dateien anwenden; ein Agent-Modus fügt Tool-Call-Schleifen für Multi-Step-Aufgaben hinzu.',
+          '**Lokale Modell-Einrichtung:** Natives Ollama-Unterstützung ist ein Konfigurationsblock. llama.cpp, LM Studio und jeder OpenAI-kompatible Endpoint funktionieren auch. Das Standardmuster ist, separate Modelle für Autocomplete (klein, schnell — Qwen2,5-Coder 1,5B-Klasse) und Chat (größer — Qwen3-Coder 30B, DeepSeek Coder V3) zu verwenden.',
+          '**Codebasis-Kontext:** Lokaler Index (TF-IDF plus Embeddings) sitzt in Ihrem Projekt-Ordner. `@codebase`, `@file`, `@folder`, `@docs`, `@terminal` und benutzerdefinierte Provider erreichen den Index aus dem Chat-Panel.',
+          '**Edit-Modell:** Im Chat schlägt das Modell einen Code-Block vor; Klick auf "Apply" unterscheidet ihn gegen die offene Datei und Sie akzeptieren oder lehnen die Change ab. Inline-Edits via Cmd/Ctrl+I schreiben eine Auswahl an Ort und Stelle um. Beide Flows zeigen eine Diff-Vorschau vor jedem Schreiben.',
+          '**Wo es glänzt:** Tastatur-gesteuerte Bearbeitung in einer IDE, die Sie bereits verwenden, geringer kognitiver Overhead pro Edit, schnelle Feedback-Schleife. Das Tool, das Sie vergessen, installiert zu haben.',
+          '**Wo es zu kurz kommt:** Multi-File-Refactorings erfordern, dass Sie den Chat pro Datei steuern. Lang laufende autonome Aufgaben sind nicht sein natives Idiom — Agent-Modus verbessert sich, ist aber nicht der Gravitationszentrum des Projekts.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Führen Sie zwei Modelle in Ihrer Continue.dev-Konfiguration aus: ein kleines Autocomplete-Modell (Qwen2,5-Coder 1,5B bei Q4_K_M braucht ~1,5 GB VRAM) und ein größeres Chat-Modell (Qwen3-Coder 30B Q4_K_M, ~17 GB). Die Aufteilung hält Autocomplete-Latenz unter 200 ms, während das Chat-Panel für nicht triviale Fragen nützlich bleibt.',
+          },
+        ],
+      },
+      clineDeep: {
+        id: 'cline',
+        title: 'Cline: Die Autonomous-Agent-Wahl',
+        content:
+          '**Cline behandelt Coding als eine Agent-Aufgabe, nicht als eine Serie von Edits.** Sie geben ihm ein Ziel; es plant, liest Dateien, bearbeitet sie, führt Befehle aus und bittet Sie, jeden Schritt zu genehmigen.',
+        items: [
+          '**Install-Weg:** VS Code Marketplace (keine JetBrains-Version). Konfiguration ist GUI-gesteuert in der Extension-Panel — Provider, Modell, Auto-Approve-Einstellungen, benutzerdefinierte Anweisungen.',
+          '**Workflow-Primitive:** Autonome Agent-Schleife mit expliziten Plan- und Act-Modi. Plan-Modus denkt über die Aufgabe nach, ohne Dateien zu schreiben; Act-Modus führt den Plan mit Tool-Calls aus. Ein Approval-Gate erscheint zwischen Schritten, es sei denn, Sie setzen Tools auf eine Auto-Approve-Allow-Liste.',
+          '**Lokale Modell-Einrichtung:** Beliebiger OpenAI-kompatible Endpoint. Ollama ist ein Klick. Für llama.cpp oder vLLM zeigen Sie Cline auf die OpenAI-kompatible Server-URL. Die Agent-Schleife ist Token-schwer — reservieren Sie ein Modell mit mindestens einem 32K-Kontext-Fenster (Qwen3-Coder 30B bei 32K, DeepSeek Coder V3 bei 128K).',
+          '**Tool-Oberfläche:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. Die Menge ist klein und gut dokumentiert; Tool-Schemata verwenden ein benutzerdefiniertes XML-Format, das das Modell sauber ausgeben muss.',
+          '**Edit-Modell:** Für Dateien unter einigen hundert Zeilen schreibt Cline die ganze Datei. Für größere Dateien gibt es `replace_in_file`-Operationen mit expliziten Search- und Replace-Blöcken aus. Diffs werden in der Panel vor jedem Schreiben angezeigt.',
+          '**Wo es glänzt:** Multi-File-Refactorings, "warum ist dieser Test flaky" explorative Aufgaben, "füge ein Feature hinzu, das drei Schichten berührt" Workflows. Das Stärkste der drei bei Aufgaben mit mehr als fünf File-Edits.',
+          '**Wo es zu kurz kommt:** Token-Verbrauch ist hoch — vollständige Datei-Inhalte streamen bei jedem Read in das Gespräch. Lange Sessions erschöpfen 32K-Kontext-Modelle; 128K-Kontext-Modelle werden für nichttriviale Aufgaben empfohlen. Tool-Call-Zuverlässigkeit sinkt bei kleineren Modellen (7B-Klasse) deutlich — sie geben malformed XML aus und die Schleife stellt sich hin.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Clines Auto-Approve-Allow-Liste ist der Unterschied zwischen einem nützlichen Agenten und einem mühsamen. Erlauben Sie `read_file`, `list_files` und `search_files` standardmäßig; halten Sie `write_to_file`, `replace_in_file` und `execute_command` gesperrt, bis Sie dem Modell auf dieser Codebasis vertrauen. Straffen oder lockern Sie pro Projekt.',
+          },
+        ],
+      },
+      aiderDeep: {
+        id: 'aider',
+        title: 'Aider: Die Git-Native-Wahl',
+        content:
+          '**Aider ist die einzige der drei, die Ihr Repository als Quelle der Wahrheit behandelt, nicht das Gespräch.** Jeder Edit landet als Git-Commit. Undo ist `git reset`. Die Chat-Historie ist Wegwerf; das Commit-Log ist das Artefakt.',
+        items: [
+          '**Install-Weg:** `pip install aider-chat` oder `pipx install aider-chat`. CLI-Aufruf: `aider file1.py file2.py` (Dateien sind auf das Gespräch begrenzt). Konfiguration via `.aider.conf.yml` und Pro-Flag-Overrides.',
+          '**Workflow-Primitive:** Terminal-First-konversationale Bearbeitung. Geben Sie einen Prompt ein; Aider schlägt einen Diff vor; wenn Sie akzeptieren, wird die Change committed. `/add` und `/drop` verwalten, welche Dateien im Scope sind. `/undo` macht letzten Commit rückgängig. `/diff` zeigt die jüngste Change gegen HEAD.',
+          '**Lokale Modell-Einrichtung:** Beliebiges Modell erreichbar durch LiteLLM — Ollama, OpenAI-kompatible Server (llama.cpp, vLLM, LM Studio) oder die Modell-Provider direkt. `--model ollama_chat/qwen3-coder:30b` ist der typische lokale Aufruf.',
+          '**Codebasis-Kontext:** Tree-Sitter-Repo-Map. Aider parst Ihr Repository nach Definitionen (Funktionen, Klassen, Methoden), fasst sie zusammen, indem Nähe zu den In-Scope-Dateien eingestuft wird, und fügt die Zusammenfassung in den System-Prompt ein. Die Map passt grob in 1K–4K Token für kleine Repos, mehr für große — `--map-tokens` deckelt das Budget.',
+          '**Edit-Modell:** Zwei Strategien. "Diff"-Modus gibt Search-and-Replace-Blöcke aus, die das Modell wörtlich produzieren muss — chirurgisch, low-token, aber bricht, wenn das Modell den Search-Block paraphrasiert. "Whole"-Modus schreibt ganze Dateien neu — robust bei kleinen Dateien, teuer bei großen. Aider wählt Auto-Select pro-Modell-Defaults aus, die zu den bekannten Stärken des Modells passen.',
+          '**Wo es glänzt:** Repo-Wide-Changes, von denen Sie jeden Schritt im Commit-Log möchten; Pair-Programming mit Code-Review eingebaut (jeder Commit ist eine diskrete Review-Einheit); SSH und Dev-Container-Workflows, wo IDE-Extensions nicht möglich sind.',
+          '**Wo es zu kurz kommt:** Kein Autocomplete. Standardmäßig keine In-IDE-Vorschau (funktioniert prima in einem VS Code-Terminal-Pane neben Ihrem Editor, ist aber nicht integriert). Das Diff-Edit-Format ist empfindlich gegenüber Modell-Ausgabequalität — ein Modell, das den Search-Block paraphrasiert statt ihn zu reproduzieren, fehlschlag Edits und Sie sehen Wiederholungs-Versuche im Terminal.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Stellen Sie `auto-commits: true` ein (Standard) und verwenden Sie `git rebase -i`, um Aiders Commits am Ende einer Feature zu squashen. Die feinkörnigen Commits während der Arbeit sind wertvoll für `/undo`; der squashed Final-Commit ist das, was Ihr Team überprüft. Aider dokumentiert genau dieses Muster.',
+          },
+        ],
+      },
+      editModel: {
+        id: 'edit-model',
+        title: 'Edit-Modell: Wie jeder Harness Code schreibt',
+        content:
+          '**Das Edit-Modell ist der einzeln größte Bestimmungsfaktor, wie sich jeder Harness anfühlt.** Dasselbe Modell, dasselbe Ziel — drei sehr verschiedene Artefakte.',
+        items: [
+          '**Continue.dev** — für Autocomplete: FIM-Tokens um den Cursor produzieren Inline-Completions. Für Chat-gesteuerte Edits: das Modell gibt einen gefencten Code-Block zurück; "Apply" führt einen Diff gegen die offene Datei aus und präsentiert ihn zur Akzeptanz/Ablehnung. Für Inline-Edits (Cmd/Ctrl+I auf einer Auswahl): das Modell schreibt die Auswahl um und der Diff wird an Ort und Stelle angezeigt.',
+          '**Cline** — jeder Edit ist ein Tool-Call. `write_to_file` für neue Dateien oder vollständige Rewrites, `replace_in_file` für chirurgische Changes mit expliziten `<<<<<<< SEARCH` / `>>>>>>> REPLACE`-Blöcken. Tool-Calls werden gegen ein Schema validiert; malformed werden ein "Tool-Fehler", den der Agent sieht und erneut versucht. Das Gespräch ist strukturierte Tool-Calls und Tool-Ergebnisse, keine freie Prosa.',
+          '**Aider** — Search-and-Replace-Diff-Blöcke in einfacher Prosa gerendert, im CLI geparst. Das Modell gibt etwa einen Unified-Diff-gefencten Block aus; Aider wendet ihn an und committed. Wenn der SEARCH-Block die Datei nicht wörtlich passt, wird der Edit abgelehnt und Aider fordert das Modell auf, erneut zu versuchen.',
+          '**Zuverlässigkeits-Ranking bei einem 7B-Klasse-Modell:** Continue.dev > Aider > Cline. Continues "Apply" ist tolerant — kleine Paraphrasen werden durch den Diff-Algorithmus abgeglichen. Aider lehnt outright bei mismatched Search-Blöcken ab, aber der Fehler ist laut und erholbar. Clines XML-Tool-Format ist das spröde auf kleinen Modellen — malformed Tool-Calls stellen die Schleife hin.',
+          '**Zuverlässigkeits-Ranking bei einem 30B+ Tool-Calling-Modell (Qwen3-Coder 30B, DeepSeek Coder V3):** alle drei konvergieren — das Modell hat die Kapazität, präzise Diff-Blöcke und wohlgeformte Tool-Calls konsistent auszugeben.',
+          'Für strukturierte Prompting-Techniken, die Code-Generierung unabhängig davon verbessern, welcher Harness sie umhüllt, sehen Sie [Schreiben Sie besseren Code mit KI](/prompt-engineering/write-better-code-with-ai?lang=de).',
+        ],
+      },
+      undo: {
+        id: 'undo',
+        title: 'Rückgängigmachen, Rollback und die Frage "Was hat der Agent gerade getan"',
+        content:
+          '**Rückgängigmachen ist die unglamouröse Funktion, die Sie nur bemerken, wenn Sie sie brauchen.** Alle drei Harnesses sind wiederherstellbar; der Unterschied liegt darin, wie viel Reibung zwischen "das war ein Fehler" und "der Fehler ist weg" sitzt.',
+        items: [
+          '**Continue.dev** — angewendete Edits treten dem VS Code Undo-Stack bei. Cmd/Ctrl+Z macht den letzten Apply pro Datei rückgängig. Für Multi-File-Rollback macht Ihr bestehender Git-Workflow die schwere Arbeit. Es gibt keinen Harness-Level "Rückgängigmachen dieses gesamten Gesprächs"-Befehl.',
+          '**Cline** — die Agent-UI zeigt jeden Schritt als eine Karte; Pro-Edit-Revert ist ein Klick. Die Karten persistent für die Dauer der Aufgabe. Nach der Aufgabe endet, ist Rollback via Git — Cline committed nicht automatisch, so dass Sie möglicherweise einen Haufen uncommitted Changes nach einer langen Session haben.',
+          '**Aider** — `/undo` macht letzten Commit rückgängig; wiederholen Sie, um weiter zu gehen. Da jeder Edit ein separater Commit ist, passt die Granularität der Gesprächs-Schritt-für-Schritt. `git reflog` erholt alles, was `/undo` nicht kann.',
+          '**Die praktische Implikation:** Wenn Sie geneigt sind, einen Agenten 20 Minuten unüberwacht laufen zu lassen, gibt Ihnen Aider das überprüfbarste Artefakt danach (ein sauberes Commit-Log) und Cline gibt Ihnen die leserlichste In-Progress-Auditschleifen (Pro-Step-Karten, aber keine Commits). Continue.dev setzt voraus, dass Sie während des Ganzen an der Tastatur geblieben sind.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Für Cline-Sessions führen Sie `git stash` vor dem Starten einer nichttrivialen Aufgabe aus. Wenn der Agent entgleist, räumt `git stash drop` schneller auf als Pro-Datei-Revert. Für Aider ist das bestehende Commit-Log die Sicherheit — tun Sie nichts Extras.',
+          },
+        ],
+      },
+      context: {
+        id: 'context',
+        title: 'Kontext-Fenster-Strategie: Wo Token hingehen',
+        content:
+          '**Die drei Harnesses geben Token unterschiedlich aus.** Dies ist die wichtigste Budget-Entscheidung, wenn Sie ein Modell mit einem kleineren Kontext-Fenster (32K oder darunter) und ein nichttriviales Repo haben.',
+        items: [
+          '**Continue.dev** — TF-IDF plus Embedding-Index über das Projekt. Retrieval ist On-Demand: nur Chunks, die für die aktuelle Chat-Nachricht relevant sind, landen im Prompt. `@codebase` triggert eine semantische Suche; `@file path/to/x.ts` injiziert die Datei wörtlich. Token-Nutzung skaliert mit dem, was Sie pinnen, nicht mit der Größe des Repos.',
+          '**Cline** — vollständige Datei-Inhalte werden bei jedem Read in das Gespräch gestreamt. Eine 500-Zeilen-Datei verbraucht ~3K–5K Token; eine Agent-Aufgabe, die 8 Dateien berührt, brennt 25K–40K Token durch, bevor überhaupt Reasoning stattfindet. Empfohlen Minimum: 32K Kontext-Fenster; 128K ist komfortabel.',
+          '**Aider** — Tree-Sitter-Repo-Map (Standard ~2K Token, konfigurierbar via `--map-tokens`) plus die Inhalte von Dateien, die explizit `/add`-et werden. Die Map ist eine Definition-Only-Zusammenfassung, keine vollständige Code, so skaliert es viel besser mit Repo-Größe als Streaming-Dateien. `/drop` Dateien, wenn sie nicht mehr im Scope sind.',
+          '**Praktische Implikation für ein 32K-Kontext-Modell:** Continue.dev und Aider bleiben auf den meisten Repos komfortabel; Cline beginnt, Kontext-Druck auf Aufgaben zu treffen, die mehr als 5–6 Dateien berühren, es sei denn, Sie wechseln zu einem 128K-Kontext-Modell.',
+          '**Praktische Implikation für ein 128K-Kontext-Modell:** alle drei sind komfortabel. Clines höherer Verbrauch hört auf zu wichtig; der entscheidende Faktor kehrt zur Workflow-Primitive zurück.',
+          'Für eine tiefere Erklärung von Kontext-Fenstern und warum Modelle mittleren Kontext Informationen verlieren, sehen Sie [Kontext-Fenster erklärt: Warum KI vergisst](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de).',
+        ],
+      },
+      toolCalls: {
+        id: 'tool-calls',
+        title: 'Tool-Call-Zuverlässigkeit ist eine Modell-Eigenschaft',
+        content:
+          '**Tool-Call-Fehler werden normalerweise dem Harness zugeschrieben.** In der Praxis gibt das Modell einen malformed-Call aus, der Harness validiert streng, und die Schleife stellt sich hin. Dasselbe Modell in einem anderen Harness produziert denselben Fehlermodus.',
+        items: [
+          '**Modelle, die diese Harnesses zuverlässig Tool-Call (Mai 2026):** Qwen3-Coder 30B (Best-in-Class auf Clines XML-Format), DeepSeek Coder V3 (großer Kontext, stark bei Multi-Step-Plänen), Llama 3.3 70B (langsam aber zuverlässig), Codestral 22B (schnell, kleinerer Plan-Horizont).',
+          '**Modelle, die Schwierigkeiten haben:** alles unter 7B, die meisten Allzweck-Modelle unter 13B ohne Coding-Fine-Tunes und Quantisierungen strenger als Q4_K_M am unteren Ende. Symptome: malformed XML in Cline, paraphrasierte SEARCH-Blöcke in Aider, gefenceter Code, der nicht zur offenen Datei passt in Continue.dev.',
+          '**Die Lösung ist selten "wechseln Sie Harness".** Es ist "wechseln Sie Modell" oder "erhöhen Sie Quantisierung". Ein Qwen3-Coder 30B bei Q4_K_M Tool-Calls zuverlässig über alle drei Harnesses. Ein Llama 3.2 7B bei Q4 fehlschlag in allen drei.',
+          '**Continues Agent-Modus** verwendet Standard OpenAI Tool-Calling JSON. Die meisten Coding-Tuned-Modelle handhaben das gut.',
+          '**Clines XML-Format** ist das anspruchsvollste — das Modell muss exakte XML-Struktur produzieren. Coding-Tuned-Modelle, die auf vielfältigen Formaten trainiert wurden (Qwen3-Coder, DeepSeek Coder) handhaben das; Allzweck-Modelle oft nicht.',
+          '**Aider hat keine Tool-Calls per se** — es parst Search-and-Replace-Blöcke aus Prosa. Die "Zuverlässigkeits"-Frage wird "reproduziert das Modell SEARCH-Blöcke wörtlich", was die meisten Coding-Tuned 22B+ Modelle gut machen.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Wenn ein neues lokales Modell evaluiert wird, testen Sie es in dem Harness, den Sie tatsächlich verwenden, nicht in einem generischen Tool-Call-Benchmark. Das relevante Signal ist, ob Ihr täglicher Workflow stall stellt. Ein Modell, das 85 % auf einem öffentlichen Tool-Call-Benchmark scort, kann immernoch die Hälfte Ihrer Cline-Aufgaben fehlschlagen, wenn es Clines spezifisches XML nicht zuverlässig ausgibt.',
+          },
+        ],
+      },
+      ideIntegration: {
+        id: 'ide-integration',
+        title: 'IDE-Integration und Editor-Reichweite',
+        content:
+          '**Editor-Reichweite ist, wo sich die drei Harnesses am sichtbarsten unterscheiden.** Dies ist die Dimension, die die meisten Leser tatsächlich interessiert; sie ist auch am einfachsten in 10 Minuten zu testen.',
+        items: [
+          '**Continue.dev** — VS Code Marketplace und JetBrains Marketplace. Der JetBrains-Build ist real (IntelliJ, PyCharm, GoLand, WebStorm, usw.) und hat Feature-Parität mit dem VS Code-Build für Autocomplete und Chat. Cursor-Nutzer können die VS Code-Extension installieren; das Verhalten passt VS Code.',
+          '**Cline** — nur VS Code-Extension. Funktioniert in Cursor (das ist ein VS Code-Fork), ist aber nicht offiziell dort getestet; die Extension-Oberfläche ist identisch und die meisten Nutzer melden keine Probleme. JetBrains-Nutzer haben für jetzt kein Glück.',
+          '**Aider** — Terminal-First; integriert mit jedem Editor, indem er daneben sitzt. VS Code: öffnen Sie das integrierte Terminal, führen Sie Aider aus, bearbeiten Sie in der Editor-Pane, während Aider committed. JetBrains: gleiches Muster im JetBrains-Terminal. Vim/Neovim: gepaart mit `:e!` zum Neuladen nach Aider-Commits, ist das ein produktiver Flow. Cursor: identisch mit VS Code.',
+          '**Praktische Implikation für JetBrains-Nutzer:** Continue.dev oder Aider sind Ihre einzigen Optionen.',
+          '**Praktische Implikation für Vim/Neovim-Nutzer:** Aider ist der natürliche Fit. Continue.dev hat Community-Neovim-Integrationen unterschiedlicher Reife; die offizielle Oberfläche ist VS Code und JetBrains.',
+        ],
+      },
+      workflowFit: {
+        id: 'workflow-fit',
+        title: 'Workflow-Anpassung nach Anwendungsfall',
+        content:
+          '**Der nützlichste Rahmen ist "welche Art von Tag Sie haben".** Passen Sie Harness zu Tag, nicht umgekehrt.',
+        columns: ['Anwendungsfall', 'Bester Fit', 'Warum'],
+        rows: [
+          {
+            'Anwendungsfall': 'Eine Funktion zu einer bestehenden Datei mit Autocomplete hinzufügen',
+            'Bester Fit': 'Continue.dev',
+            'Warum': 'FIM-Autocomplete ist das natürliche Primitive; kein Chat nötig',
+          },
+          {
+            'Anwendungsfall': 'Fragen "was macht diese Funktion" ohne den Editor zu verlassen',
+            'Bester Fit': 'Continue.dev',
+            'Warum': 'In-IDE-Chat mit `@file` ist der reibungsloseste Weg',
+          },
+          {
+            'Anwendungsfall': 'Ein Feature über 5+ Dateien refaktorieren',
+            'Bester Fit': 'Cline',
+            'Warum': 'Native Multi-File-Edits mit Pro-Step-Approval',
+          },
+          {
+            'Anwendungsfall': '"Warum ist dieser Test flaky" explorative Bug-Hunt',
+            'Bester Fit': 'Cline',
+            'Warum': 'Agent-Schleife führt Befehle aus, liest Logs, iteriert',
+          },
+          {
+            'Anwendungsfall': 'Repo-Wide-Umbenennung oder API-Migration mit überprüfbaren Commits',
+            'Bester Fit': 'Aider',
+            'Warum': 'Jeder Edit wird ein Commit; trivial zu überprüfen und rückgängig zu machen',
+          },
+          {
+            'Anwendungsfall': 'SSH auf einen Server, arbeiten ohne IDE',
+            'Bester Fit': 'Aider',
+            'Warum': 'Terminal-Only nach Design',
+          },
+          {
+            'Anwendungsfall': 'Vim oder Neovim Daily Driver',
+            'Bester Fit': 'Aider',
+            'Warum': 'Paart natürlich mit Terminal-gesteuerte Bearbeitung',
+          },
+          {
+            'Anwendungsfall': 'JetBrains IDE (IntelliJ, GoLand, PyCharm) Nutzer',
+            'Bester Fit': 'Continue.dev oder Aider',
+            'Warum': 'Cline ist nur VS Code',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: 'Entscheidungsbaum: Welcher sollte Sie wählen',
+        content:
+          '**Fünf Fragen, in Reihenfolge, bringen die meisten Leser zur richtigen Wahl.**',
+        items: [
+          '**1. Befinden Sie sich in JetBrains, Vim oder arbeiten Sie über SSH?** → Wenn ja, sind Sie zwischen Continue.dev (nur JetBrains) und Aider (Vim/SSH). Gehen Sie zu Q4. Wenn nein, fahren Sie fort.',
+          '**2. Möchten Sie einen autonomen Agenten, der mehrere Dateien in einer Aufgabe bearbeitet?** → Ja: Cline. Nein: fahren Sie fort.',
+          '**3. Möchten Sie Autocomplete plus ein In-IDE-Chat-Panel?** → Ja: Continue.dev. Nein: fahren Sie fort.',
+          '**4. Überprüfen Sie Changes via `git diff` und möchten jeden Edit automatisch committed?** → Ja: Aider. Nein: Continue.dev (Standard).',
+          '**5. Immer noch unsicher?** → Starten Sie mit Continue.dev. Das ist die Installation mit den geringsten Reibungsverlusten, funktioniert in dem Editor, den Sie wahrscheinlich bereits verwenden, und das Hinzufügen von Aider später für Terminal-gesteuerte Arbeit ist unkompliziert. Cline ist am meisten störend, um zu einem Workflow hinzuzufügen; adoptieren Sie es nur, wenn Sie wissen, dass Sie die Agent-Schleife möchten.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler bei der Auswahl eines lokalen Coding Harness',
+        items: [
+          '**Fehler 1: Den Harness vor dem Modell zu wählen.** Ein 30B Coding-Tuned-Modell in jedem der drei Harnesses übertrifft ein 7B Allzweck-Modell im "besten" Harness. Wählen Sie das Modell zuerst; der Harness ist die zweite Entscheidung.',
+          '**Fehler 2: Ein einzelnes Modell für Autocomplete und Chat in Continue.dev zu verwenden.** Autocomplete braucht Sub-200ms Latenz; Chat toleriert Sekunden. Führen Sie ein kleines Autocomplete-Modell und ein größeres Chat-Modell in der gleichen Konfiguration aus.',
+          '**Fehler 3: Clines Auto-Approve vollständig offen zu lassen.** Eine Modell-Schleife mit `execute_command` auto-approved kann realen Schaden anrichten. Halten Sie destruktive Tools gesperrt, bis Sie dem Modell auf dieser Codebasis vertrauen.',
+          '**Fehler 4: Aider auf einem Modell zu verwenden, das Code paraphrasiert.** Wenn das Modell SEARCH-Blöcke nicht wörtlich reproduzieren kann, fehlschlag jeder Edit. Verwenden Sie ein Coding-Tuned 22B+ Modell (Qwen3-Coder, DeepSeek Coder, Codestral) für zuverlässige Diff-Edits.',
+          '**Fehler 5: Harness zu wechseln, um ein Modell-Problem zu beheben.** Wenn Tool-Calls in Cline fehlschlag, werden sie wahrscheinlich auch in Continues Agent-Modus aus demselben Grund fehlschlag. Diagnostizieren Sie das Modell zuerst.',
+          '**Fehler 6: Cline gegen ein 32K-Kontext-Modell bei Multi-File-Aufgaben auszuführen.** Token-Verbrauch brennt durch das Budget mitten in der Aufgabe. Verwenden Sie ein 128K-Kontext-Modell für nichttriviale Cline-Arbeit.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          '[Continue.dev Dokumentation](https://docs.continue.dev/) — Offizielle Einrichtungs-Anleitung, Modell-Konfiguration, `@`-Context-Provider und Agent-Modus-Referenz.',
+          '[Cline GitHub Repository](https://github.com/cline/cline) — Quellcode, Tool-Schemata, Plan/Act-Modus-Verhalten und Extension-Architektur.',
+          '[Aider Dokumentation](https://aider.chat/) — Offizielle CLI-Referenz, Edit-Format-Dokumentation, Repo-Map-Mechaniken und Pro-Modell-Defaults.',
+          '[Ollama Modell-Bibliothek](https://ollama.com/library) — Verfügbare lokale Modelle und Quantisierungs-Ebenen, die für jeden Harness referenziert werden.',
+          '[Qwen3-Coder Modell-Karte](https://huggingface.co/Qwen/Qwen3-Coder-30B) — Architektur, unterstützte Kontext-Längen und Tool-Call-Trainings-Daten für das empfohlene Coding-Modell.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Welcher ist am besten für VS Code-Nutzer?',
+            a: 'Jeder der drei funktioniert in VS Code, aber Continue.dev und Cline sind die natürlichen Fits. Continue.dev für Autocomplete-First und In-IDE-Chat; Cline für autonome Agent-Aufgaben. Aider funktioniert perfekt aus dem VS Code integrierten Terminal, aber integriert sich nicht mit der Editor-Oberfläche selbst — seine UI ist das Terminal.',
+          },
+          {
+            q: 'Unterstützt Cline die Cursor IDE?',
+            a: 'Cursor ist ein VS Code-Fork und akzeptiert VS Code-Extensions. Cline installiert und läuft in Cursor; die Extension-Oberfläche ist identisch. Das Cline-Team zielt offiziell nicht auf Cursor ab, so dass Edge-Cases (spezifische Cursor-APIs, zukünftige Cursor-Änderungen) nicht garantiert sind, aber in der Praxis melden Nutzer keine Probleme.',
+          },
+          {
+            q: 'Kann Aider ohne Git funktionieren?',
+            a: 'Ja, aber Sie verlieren das Workflow-Primitive, das es definiert. Aider läuft in nicht-Git-Verzeichnissen mit `--no-git`; Edits wenden immer noch an, aber es gibt keine Commits, so dass `/undo` deaktiviert ist und Rollback auf die Modell-Diff-Historie innerhalb der Session fällt. Für nichttriviale Arbeit initialisieren Sie ein Git-Repo — auch ein ignoriertes — bevor Sie anfangen.',
+          },
+          {
+            q: 'Welcher hat das beste Multi-File-Refactoring?',
+            a: 'Cline für autonome Multi-File-Arbeit — er plant über Dateien hinweg, liest sie nach Bedarf und bearbeitet mit Pro-Step-Approval. Aider für überprüfbare Multi-File-Arbeit, bei der Sie die Dateien explizit benennen und jeden Edit committed möchten. Continue.dev erfordert manuelle Steuerung pro Datei; es ist das schwächste der drei bei Multi-File-Refactorings.',
+          },
+          {
+            q: 'Unterstützen diese Out-of-the-Box lokales Ollama?',
+            a: 'Ja. Continue.dev hat einen nativen Ollama-Provider mit einer Konfigurationsblock. Cline listet Ollama im Provider-Dropdown auf. Aider unterstützt Ollama durch LiteLLM mit `--model ollama_chat/<model-name>`. Ollama ist das Backend mit den geringsten Reibungsverlusten für alle drei.',
+          },
+          {
+            q: 'Welcher funktioniert am besten mit Qwen3-Coder?',
+            a: 'Qwen3-Coder 30B ist zuverlässig über alle drei Harnesses im Mai 2026 — es handhaben Clines XML-Tool-Format, Aiders Search-and-Replace-Blöcke und Continues Autocomplete + Chat-Workflows ohne messbarer Verschlechterung. Kleinere Qwen3-Coder-Varianten (7B-Klasse) Tool-Call weniger zuverlässig und machen besser in Continues Autocomplete-Only-Modus als in Clines Agent-Schleife.',
+          },
+          {
+            q: 'Kann ich diese mit Cursors lokalem Modus verwenden?',
+            a: 'Cursors eingebaute Features (Tab-Autocomplete, Cmd+K) verwenden Cursors eigenes Modell-Routing, nicht diese Harnesses. Um einen lokalen LLM in Cursor zu verwenden, installieren Sie Continue.dev oder Cline als VS Code-Extensions in Cursor — sie bringen ihre eigene Provider-Konfiguration unabhängig von Cursors mit. Aider läuft in Cursors integriertem Terminal genauso wie in VS Codes.',
+          },
+          {
+            q: 'Welcher ist am stärksten für lange Sessions?',
+            a: 'Aider, weil es keinen In-Process-State zu corrumpieren hat — jeder Edit ist ein Commit, und ein Session-Crash verliert nur das Gespräch, nicht die Arbeit. Continue.dev ist über lange IDE-Sessions stabil. Clines lange Sessions können Kontext-Fenster-Druck auf kleineren Modellen treffen; das Neustarten von Aufgaben zwischen großen Refactorings vermeidet das Problem.',
+          },
+          {
+            q: 'Unterstützen diese benutzerdefinierte System-Prompts?',
+            a: 'Alle drei. Continue.dev: pro-Modell `systemMessage` in `config.json`. Cline: "Custom Instructions"-Feld in den Extension-Einstellungen. Aider: `--system-prompt`-Flag oder Pro-Modell-Defaults in `.aider.conf.yml`. Benutzerdefinierte Prompts sind besonders nützlich für Cline (Steuerung des Plan-Modus-Verhaltens) und Aider (Durchsetzung eines Coding-Stils über Commits).',
+          },
+          {
+            q: 'Müssen DevOps oder Platform-Engineering-Teams DSGVO-Anforderungen für lokale Coding Agents beachten?',
+            a: 'Ja, besonders wenn Code oder Logs, die sich auf lokale LLMs beziehen, EU-Nutzerdaten enthalten könnten. DSGVO Artikel 28 verlangt, dass alle Datenverarbeitungswerkzeuge (einschließlich der Harnesses selbst) Data Processing Agreements (DPA) mit den eingesetzten Anbietern haben. Lokale LLMs selbst (Ollama, llama.cpp) speichern keine personenbezogenen Daten, aber die Logs und Code-Verzeichnisse, die sie indizieren, könnten sensible Informationen enthalten. Das BSI-Grundschutz-Katalog empfohlen für deutsche Organisationen zusätzliche Härtung. Konsultieren Sie Ihr Datenschutzteam, bevor Sie einen Harness in einer Production Environment in einer regulierten Branche bereitstellen.',
+          },
+          {
+            q: 'Welcher Coding Agent ist am beste für Mittelstand (kleine bis mittlere Unternehmen) geeignet?',
+            a: 'Aider bietet das beste Kosten-Nutzen-Verhältnis für den Mittelstand: keine IDE-Lizenzabhängigkeit, direkt Terminal-basiert (passt zu bestehenden Entwickler-Umgebungen), minimale Hardwarevorraussetzungen (läuft mit einem 32K-Kontext-Modell), und das gesamte Audit-Trail ist im Git-Log (unterstützt einfacher Compliance und Code-Review). Continue.dev ist zweite Wahl für Teams, die stark in VS Code/JetBrains investiert haben. Cline wird teuer mit der Token-Nutzung und erfordert größere Hardwares, passt aber zu Agile-Heavy-Refactor-Workflows. Mittlere Unternehmen sparen Kosten durch On-Premise-Deployment mit lokalen Modellen — die Harness-Wahl sollte nach Bestehender Infrastruktur und Developer-Workflows erfolgen, nicht nach Hypе.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Ressourcen',
+        items: [
+          '[GitHub Copilot durch einen lokalen LLM ersetzen](/power-local-llm/replace-github-copilot-with-local-llm?lang=de) — breiterer Ersatz-Kontext, einschließlich Kosten und Privacy-Mathematik.',
+          '[Best Local Coding Models in 2026](/power-local-llm/best-local-coding-models-2026?lang=de) — die Modell-Seite der Gleichung: Qwen3-Coder vs DeepSeek vs Codestral auf realen Benchmarks.',
+          '[Local AI Agents With MCP in 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) — für Nutzer, die erweiterte Tool-Calling jenseits der obigen Harnesses möchten.',
+          '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=de) — angrenzende technische Tiefe auf Tool-Call-Zuverlässigkeit.',
+          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de) — die Inference-Engine-Schicht unter allen drei Harnesses.',
+          '[Power Local LLM Hub](/power-local-llm) — vollständige Anleitung-Bibliothek.',
+        ],
+      },
+    },
+  },
 }
