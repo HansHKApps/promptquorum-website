@@ -6,6 +6,7 @@ import {
 } from '@/lib/power-local-llm/page-helpers'
 
 // Enable caching: articles don't change per-request
+export const dynamic = 'force-static'
 export const revalidate = 86400 // 24 hours
 
 interface PageProps {
