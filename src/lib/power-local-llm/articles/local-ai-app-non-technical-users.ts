@@ -682,4 +682,338 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Apps de bureau pour débutants',
+    title: '5 apps d\'IA locale pour débutants : zéro terminal, fonctionnent immédiatement',
+    seoTitle: '5 apps d\'IA locale pour débutants (sans terminal, 2026)',
+    intro: 'GPT4All, Jan, Msty, AnythingLLM Desktop et LM Studio sont les cinq apps d\'IA locale qu\'un débutant peut installer et utiliser en moins de 10 minutes — zéro terminal, zéro Python, zéro Docker. Chacune excelle pour un profil de débutant différent. Placez un débutant face à GPT4All, il aura un chat fonctionnel en 4 clics ; Jan offre zéro télémétrie ; Msty offre l\'interface la plus élégante ; AnythingLLM Desktop offre du drag-and-drop pour les documents ; LM Studio offre la meilleure expérience Mac.',
+    metaDescription: 'Zéro ligne de commande. Pas de Python. Pas de Docker. 5 apps d\'IA locale qu\'un débutant peut installer en 10 minutes. Testé avec de vrais utilisateurs.',
+    twitterDescription: 'Cinq apps d\'IA locale sans jamais ouvrir un terminal — classées par profil de débutant. Testées en mai 2026.',
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
+    audience: 'Débutants absolus et utilisateurs non-techniques — parents, journalistes, étudiants, propriétaires de petites entreprises — qui veulent une alternative privée à ChatGPT sans jamais ouvrir un terminal.',
+    readTime: '12 min de lecture',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'app d\'IA locale pour débutants',
+    targetKeywords: [
+      'ia locale pour débutants',
+      'app ia locale plus simple',
+      'ia locale sans terminal',
+      'app llm locale débutant',
+      'ia locale pour parents',
+    ],
+    leadAnswerBlock: '**Installez GPT4All si vous n\'avez jamais utilisé un terminal — c\'est l\'app d\'IA locale la moins exigeante, avec un chemin en 4 clics du téléchargement au premier chat sur un portable de 5 ans. Choisissez Jan si vous voulez zéro télémétrie. Choisissez Msty pour l\'interface la plus élégante. Choisissez AnythingLLM Desktop pour du drag-and-drop avec les documents. Choisissez LM Studio si vous êtes sur Mac. Les cinq sont gratuites, fonctionnent hors ligne après le premier téléchargement, et ne transmettent vos conversations nulle part.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Quelle app d\'IA locale un débutant devrait-il installer en premier ?',
+        answer: 'Installez GPT4All. C\'est le plus petit téléchargement (~290 MB), il tourne sur des portables avec 8 GB de RAM sans GPU, et atteint le premier chat en 4 clics. Si vous avez besoin de confidentialité, de chat avec documents, d\'une belle interface, ou si vous êtes sur Mac, consultez la liste classée par profil ci-dessous — chaque profil a un gagnant différent.',
+        bullets: [
+          'GPT4All — meilleur pour les débutants absolus ; plus petite installation ; tourne sur du matériel faible ; 4 clics vers le premier chat.',
+          'Jan — meilleur pour les débutants soucieux de la confidentialité ; zéro télémétrie ; entièrement open source.',
+          'Msty — meilleur pour "je veux que ce soit beau" ; interface épurée moderne ; chat intégré avec documents.',
+          'AnythingLLM Desktop — meilleur pour les utilisateurs qui veulent une interface Windows familière et des dossiers de documents glisser-déposer.',
+          'LM Studio — meilleur pour les utilisateurs Mac ; optimisé pour Apple Silicon ; le plus rapide des cinq sur série M.',
+          'Les cinq fonctionnent entièrement hors ligne après le premier téléchargement de modèle.',
+          'Aucune des cinq ne nécessite une ligne de commande, Python, Docker, des droits admin, ou une carte de crédit.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Pour qui ce guide ?', anchor: '#who-should-use' },
+      { label: '#1 GPT4All — Meilleur pour débutants absolus', anchor: '#gpt4all' },
+      { label: '#2 Jan — Meilleur pour confidentialité', anchor: '#jan' },
+      { label: '#3 Msty — Meilleur pour l\'esthétique', anchor: '#msty' },
+      { label: '#4 AnythingLLM Desktop — Meilleur pour interface familière', anchor: '#anythingllm' },
+      { label: '#5 LM Studio — Meilleur pour utilisateurs Mac', anchor: '#lm-studio' },
+      { label: 'Pièges courants', anchor: '#stumbling-blocks' },
+      { label: 'Vos 10 premières minutes', anchor: '#first-ten-minutes' },
+      { label: 'Questions fréquentes', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'GPT4All est la plus simple — 4 clics du téléchargement au premier chat sur un portable de 5 ans.',
+          'Jan est la seule des cinq avec zéro télémétrie et un code entièrement open source.',
+          'Msty a l\'interface la plus épurée et le chat intégré avec PDFs sans configuration.',
+          'AnythingLLM Desktop ressemble à une app Windows classique — plus proche du "ouvre un document, pose une question".',
+          'LM Studio est la plus rapide sur Apple Silicon avec la plus grande médiathèque de modèles.',
+          'Les cinq sont gratuites, fonctionnent hors ligne après l\'installation, et ne transmettent vos entrées à aucun serveur.',
+        ],
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'Pour qui ce guide ?',
+        content: '**Ce guide s\'adresse aux débutants absolus — des personnes qui n\'ont jamais ouvert un terminal et ne veulent pas le faire.** Si vous pouvez installer Zoom, vous pouvez installer l\'une de ces cinq apps. Choisissez le profil ci-dessous qui vous correspond et allez directement à cette section.',
+        rows: [
+          { 'Votre situation': 'Je n\'ai jamais rien exécuté de la ligne de commande et je veux un ChatGPT privé', 'Installer': 'GPT4All' },
+          { 'Votre situation': 'Je suis préoccupé par la confidentialité EU / RGPD et je veux zéro télémétrie', 'Installer': 'Jan' },
+          { 'Votre situation': 'L\'apparence m\'importe. Je veux une interface propre et moderne', 'Installer': 'Msty' },
+          { 'Votre situation': 'Je veux surtout discuter avec mes propres PDFs, documents Word ou notes', 'Installer': 'AnythingLLM Desktop' },
+          { 'Votre situation': 'J\'ai un MacBook 2024+ et je veux l\'IA locale la plus rapide', 'Installer': 'LM Studio' },
+          { 'Votre situation': 'J\'ai seulement 4 GB de RAM ou un Chromebook', 'Installer': 'Aucune — essayez plutôt une app mobile' },
+        ],
+        columns: ['Votre situation', 'Installer'],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Configuration matérielle minimale réaliste : 8 GB de RAM et ~5 GB d\'espace disque libre. Avec moins, passez à une app mobile — voir les lectures complémentaires en bas.',
+          },
+        ],
+      },
+      gpt4all: {
+        id: 'gpt4all',
+        title: '#1 GPT4All — Meilleur pour débutants absolus',
+        content: '**GPT4All est l\'app d\'IA locale la moins exigeante en 2026 — un téléchargement de 290 MB qui fait passer un débutant de "je ne sais pas quoi installer" à "je parle à une IA qui tourne sur mon portable" en moins de 10 minutes.** Elle est open source (licence MIT), maintenue par Nomic AI, et a l\'overhead cognitif le plus faible de toutes les apps de cette liste.',
+        items: [
+          '**Chemin d\'installation :** Télécharger depuis gpt4all.io → lancer l\'installateur → cliquer sur "Llama 3.2 3B Instruct" dans l\'écran modèles suggérés → attendre le téléchargement de 2 GB → commencer à discuter. Total : 4 clics plus un téléchargement de modèle.',
+          '**Seuil matériel :** Tourne sans problème sur un portable Intel de 5 ans avec 8 GB de RAM et graphique intégré — pas de GPU nécessaire.',
+          '**Clarté UI :** Une fenêtre. Barre latérale gauche liste les discussions. Volet central est la conversation. Pas d\'onglets, pas de dropdowns imbriqués, pas de page "paramètres avancés" qu\'on peut casser accidentellement.',
+          '**Messages d\'erreur :** Quand quelque chose s\'échoue (manque de mémoire, fichier modèle corrompu), GPT4All montre une boîte texte simple avec une seule correction suggérée. Pas de stack traces.',
+          '**Télémétrie :** Désactivée par défaut. Vous pouvez opter pour partager l\'usage anonyme lors de l\'installation, mais le défaut est non.',
+          '**Licence :** MIT — entièrement open source. Le code source est sur GitHub pour quiconque veut l\'auditer.',
+          '**Modèle de démarrage recommandé :** Llama 3.2 3B Instruct (Q4_0). Environ 2 GB sur disque, 4–6 GB RAM à l\'exécution, confortablement rapide sur graphique intégré.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installez ceci si vous êtes : un parent qui veut un ChatGPT privé, un journaliste avec un portable budgétaire, un enseignant qui démontre l\'IA à des étudiants, ou quelqu\'un dont la première réaction à "ouvre le terminal" est "quel terminal ?".',
+          },
+        ],
+      },
+      jan: {
+        id: 'jan',
+        title: '#2 Jan — Meilleur pour confidentialité',
+        content: '**Jan est le choix respectueux de la confidentialité — zéro télémétrie, zéro SDK analytics, code open source entièrement vérifiable sous licence AGPL.** Elle ressemble et se sent comme un clone ChatGPT épuré, avec un catalogue curé d\'environ 150 modèles que vous pouvez parcourir sans quitter l\'app. **Pour la conformité :** Jan traite toutes les données localement — zéro transmission à des serveurs externes. Conforme au RGPD pour les utilisateurs qui traitent des données sensibles.',
+        items: [
+          '**Chemin d\'installation :** Télécharger l\'installateur signé depuis jan.ai → installer → choisir un modèle depuis la bibliothèque in-app (pas de compte Hugging Face, pas de logins) → discuter. Environ 5 clics au total.',
+          '**Posture confidentialité :** Zéro télémétrie. Zéro SDK analytics. Zéro "call home". Le code source est publié sur GitHub sous AGPL — les auditeurs indépendants peuvent vérifier que le binaire correspond au source.',
+          '**UI :** Interface chat moderne avec thème sombre par défaut et fils de conversation dans la barre latérale. Comparable à ChatGPT en apparence, mais tout tourne sur votre machine.',
+          '**Navigateur de modèles :** ~150 modèles curés avec une échappatoire "URL Hugging Face". Moins accablant que LM Studio, plus guidé que GPT4All.',
+          '**Outils intégrés :** Extensions optionnelles pour chat avec documents, recherche web, et serveur API compatible OpenAI. Tous optionnels et clairement marqués.',
+          '**Seuil matériel :** 8 GB de RAM, CPU moderne (2020+). Apple Silicon et GPUs NVIDIA sont détectés et utilisés automatiquement.',
+          '**Modèle de démarrage recommandé :** Phi-4 Mini (~2.6 GB) — petit, rapide, étonnamment bon pour les questions quotidiennes.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installez ceci si vous êtes : un résident EU inquiet du RGPD, un journaliste travaillant avec des sources, un avocat qui ne peut pas envoyer des brouillons à des APIs cloud, ou quelqu\'un dont le modèle de menace inclut "que transmet cette app?".',
+          },
+        ],
+      },
+      msty: {
+        id: 'msty',
+        title: '#3 Msty — Meilleur pour l\'esthétique',
+        content: '**Msty est l\'app d\'IA locale la plus épurée visuellement — une interface split-pane moderne avec comparaison de discussions côte à côte, chat intégré avec documents, et installateur de modèles en un clic.** Elle est gratuite pour usage personnel et tourne sur Windows, macOS et Linux.',
+        items: [
+          '**Chemin d\'installation :** Télécharger l\'installateur depuis msty.app → installer → choisir "IA locale" sur l\'écran d\'accueil → choisir un modèle recommandé → discuter. Environ 5–6 clics.',
+          '**Caractéristique UI remarquable :** Split-chat. Vous pouvez lancer deux modèles côte à côte répondant à la même question et choisir la meilleure réponse. Aucune autre app de cette liste ne propose cela d\'usine.',
+          '**Chat avec documents :** Intégré. Faites glisser un PDF, DOCX ou dossier vers la barre latérale et posez des questions dessus. Aucune installation de plugin requise.',
+          '**Piles de connaissances :** Vous pouvez épingler des documents à une "pile" pour que chaque discussion de cet espace de travail y ait accès — idéal pour "discute avec mes notes d\'étude".',
+          '**Seuil matériel :** 8 GB de RAM, n\'importe quel CPU 2020+. Détecte et utilise Apple Silicon, NVIDIA et accélération AMD automatiquement.',
+          '**Licence :** Propriétaire, gratuite pour usage personnel. Des tiers payants existent pour des features cloud-API avancées, mais l\'usage local-seul est gratuit indéfiniment.',
+          '**Modèle de démarrage recommandé :** Gemma 3 4B Instruct — ton amical, bon à la synthèse, s\'adapte à la plupart des portables.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installez ceci si vous êtes : un designer qui trouve les interfaces chat nues laides, un étudiant qui veut comparer deux réponses côte à côte, ou un écrivain qui veut que l\'IA lise votre dossier de notes d\'usine.',
+          },
+        ],
+      },
+      anythingllm: {
+        id: 'anythingllm',
+        title: '#4 AnythingLLM Desktop — Meilleur pour interface familière',
+        content: '**AnythingLLM Desktop est structuré autour d\'espaces de travail de documents — la chose la plus proche d\'"ouvre un dossier, pose des questions" sans aucune configuration.** Son interface emprunte la convention arborescence-à-gauche, contenu-à-droite des apps de bureau classiques, ce qui la rend particulièrement confortable pour les utilisateurs qui ont grandi avec Windows.',
+        items: [
+          '**Chemin d\'installation :** Télécharger depuis anythingllm.com → lancer l\'installateur → au premier lancement, choisir "Utiliser l\'IA locale (pas de clés API)" → choisir un modèle local intégré → glisser vos documents dans un espace de travail. Environ 6 clics.',
+          '**Modèle espace de travail :** Chaque espace de travail est son propre dossier de documents et historique de chat. Modèle mental : "ceci est le dossier Impôts 2026, et ceci est le chat qui connaît le dossier Impôts 2026".',
+          '**Support documents :** PDF, DOCX, TXT, Markdown, imports de pages web. Faites-les glisser, l\'app les indexe localement, aucun compte embedding-API nécessaire.',
+          '**UI :** Layout trois-volets familier (liste espaces / liste documents / chat) rappelant les clients email et les vieilles apps Windows. Faible charge cognitive pour les utilisateurs qui ne se sont jamais adaptés aux UIs "modernes" épurées.',
+          '**Confidentialité :** Télémétrie est opt-in. L\'indexation de documents se fait entièrement sur votre machine quand vous choisissez l\'option IA locale.',
+          '**Seuil matériel :** 8 GB de RAM, idéalement 16 GB si vos espaces de travail contiennent des centaines de documents.',
+          '**Modèle de démarrage recommandé :** Llama 3.2 3B Instruct ou Qwen3 4B — tous les deux gèrent bien le Q&A documents dans cette app.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installez ceci si vous êtes : un propriétaire de petite entreprise qui veut poser des questions sur un dossier de contrats, un chercheur avec un dossier "Papiers À Lire", un grand-parent qui trouve les UIs modernes déroutantes et préfère quelque chose qui ressemble à Outlook.',
+          },
+        ],
+      },
+      lmStudio: {
+        id: 'lm-studio',
+        title: '#5 LM Studio — Meilleur pour utilisateurs Mac',
+        content: '**LM Studio est la plus rapide des cinq sur Apple Silicon et expédie la plus grande médiathèque de modèles in-app, mais elle a la courbe d\'apprentissage la plus raide du groupe.** Pour les utilisateurs Mac non-techniques, elle reste très approchable — mais sur Windows et Linux, GPT4All ou Jan offrent généralement une première expérience plus en douceur.',
+        items: [
+          '**Chemin d\'installation :** Télécharger depuis lmstudio.ai → lancer l\'installateur → au premier lancement, accepter les paramètres par défaut → utiliser le navigateur de modèles in-app pour choisir un modèle "staff pick" → le charger → discuter. Environ 6 clics plus un téléchargement de modèle.',
+          '**Pourquoi elle arrive en premier sur Mac :** LM Studio expédie des kernels Metal Apple Silicon custom-tunés qui surpassent les defaults en amont de 15–30% sur puces M-series. Sur un MacBook Pro 16 GB, elle diffuse des modèles classe 8B à ~38 tokens par seconde.',
+          '**Profondeur navigateur modèles :** ~5.000 variantes de modèles tirées en direct de Hugging Face, filtrables par RAM/VRAM, licence, et famille. Utile quand vous surpassez les catalogues curés de Jan ou GPT4All.',
+          '**Chat intégré avec documents :** Oui (introduit en 2025), avec une interface drag-and-drop épurée.',
+          '**Télémétrie :** Les événements d\'usage anonymes sont envoyés par défaut. Ils sont faciles à désactiver dans Paramètres → Confidentialité. Les conversations et fichiers modèles ne quittent jamais l\'appareil.',
+          '**Licence :** Propriétaire (gratuite pour usage personnel et commercial). Si le code open source est non-négociable, choisissez Jan.',
+          '**Modèle de démarrage recommandé :** Phi-4 Mini sur Macs 8 GB ; Llama 3.3 8B Q4_K_M sur Macs 16 GB+.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Installez ceci si vous êtes : un utilisateur Mac qui veut l\'IA locale la plus rapide sur Apple Silicon, un écrivain avec un MacBook 16 GB+ qui veut essayer plusieurs modèles, ou quelqu\'un qui trouve les catalogues curés de Jan et GPT4All trop petits.',
+          },
+        ],
+      },
+      stumblingBlocks: {
+        id: 'stumbling-blocks',
+        title: 'Pièges courants (et comment les éviter)',
+        content: '**Voici les cinq choses qui trébuchent les utilisateurs non-techniques réels dans les 30 premières minutes.** Chacune est une correction en une ligne une fois que vous savez où regarder.',
+        items: [
+          '**"Elle dit \'développeur non-identifié\' sur macOS."** → Ouvrez Paramètres Système → Confidentialité & Sécurité, scrollez vers le bas, cliquez "Ouvrir quand même". C\'est normal pour n\'importe quelle app signée mais non-notarisée par Apple.',
+          '**"Windows Defender a signalé l\'installateur."** → Les cinq apps sont largement utilisées et sûres. Cliquez "Plus d\'infos" → "Exécuter quand même". Pour une sécurité supplémentaire, vérifiez que l\'URL de téléchargement correspond exactement au site officiel (gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai).',
+          '**"Le téléchargement du modèle prend une éternité."** → Les modèles sont des fichiers de 1.5–8 GB. Attendez-vous à 5–20 minutes sur une connexion 50 Mbps. S\'il bloque, annulez et reprenez — les cinq apps supportent les téléchargements reprennables.',
+          '**"Mon ordinateur est devenu très chaud / le ventilateur a commencé à crier."** → L\'IA locale utilise 100% de votre CPU ou GPU pendant une réponse. C\'est normal et s\'arrête quand la réponse finit. Si ça vous gêne, passez à un modèle plus petit (3B ou 4B au lieu de 7B/8B).',
+          '**"Je ne sais pas quel modèle choisir."** → Défaut sur un modèle 3B ou 4B Instruct au premier lancement. Exemples : Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. Ils sont petits, rapides, et assez bons pour la plupart des tâches quotidiennes. Passez à 7B ou 8B seulement après avoir décidé que vous utilisez réellement l\'app.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'NE téléchargez PAS les modèles depuis des sites aléatoires ou torrent. Utilisez le navigateur de modèles in-app peu importe quelle app vous avez installée — chaque app de cette liste tire depuis des mirrors Hugging Face officiels.',
+          },
+        ],
+      },
+      firstTenMinutes: {
+        id: 'first-ten-minutes',
+        title: 'Vos 10 premières minutes — Pas à pas',
+        content: '**Voici le chemin exact qu\'un utilisateur non-technique peut suivre aujourd\'hui, sur n\'importe quel portable Windows ou Mac moderne, pour passer de zéro à une conversation d\'IA locale fonctionnelle.** Les chiffres entre parenthèses sont des durées réalistes.',
+        numberedItems: [
+          'Choisissez une app depuis le tableau profils ci-dessus. Si vous ne pouvez pas décider : installez GPT4All. (1 min)',
+          'Ouvrez le site officiel (gpt4all.io / jan.ai / msty.app / anythingllm.com / lmstudio.ai) et téléchargez l\'installateur pour votre système d\'exploitation. (1 min)',
+          'Lancez l\'installateur. Acceptez les défauts. Aucune de ces cinq apps ne nécessite les droits admin sur Windows ou Mac pour une installation par-utilisateur. (2 min)',
+          'Au premier lancement, suivez l\'invite à l\'écran pour télécharger un modèle de démarrage recommandé — choisissez le plus petit modèle "Instruct" offert (paramètres 3B ou 4B). (3–5 min dépendant de votre connexion)',
+          'Tapez "Salut, peux-tu écrire un haïku sur un chat ?" dans la boîte chat et appuyez sur Entrée. Vous devriez voir une réponse en 5–10 secondes. (1 min)',
+          'Si la réponse fonctionne, vous avez terminé. L\'IA locale tourne maintenant sur votre portable, entièrement hors ligne, et votre conversation n\'a jamais quitté votre machine.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Déconnectez votre portable du Wi-Fi après l\'étape 5 et essayez une autre question. La réponse fonctionne toujours. C\'est le moment où la plupart des utilisateurs non-techniques se rendent compte que l\'IA locale est réelle.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Questions fréquentes',
+        faqs: [
+          {
+            q: 'Dois-je connaître la programmation pour utiliser l\'IA locale ?',
+            a: 'Non. Aucune des cinq apps de cette liste — GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio — ne nécessite de code, scripting ou terminal. Si vous pouvez installer une app de bureau normale et cliquer dans un assistant d\'installation, vous avez toutes les compétences nécessaires.',
+          },
+          {
+            q: 'Puis-je installer l\'IA locale sans droits admin sur un portable de travail ?',
+            a: 'Parfois. GPT4All et Jan expédient un installateur par-utilisateur qui ne nécessite pas les droits admin sur Windows. LM Studio et Msty ont généralement besoin des droits admin pour l\'installateur standard. Si vous ne pouvez pas installer de logiciel sur votre portable de travail du tout, demandez d\'abord à votre département IT — l\'IA locale est une question de politique réseau, pas technique.',
+          },
+          {
+            q: 'Et si mon ordinateur est trop vieux ?',
+            a: 'Un portable 2018+ avec 8 GB de RAM et 5 GB d\'espace libre peut exécuter un modèle paramètres 3B dans l\'une de ces apps à une vitesse utilisable (8–15 tokens par seconde). Les machines plus anciennes ou plus petites devraient essayer une app d\'IA locale mobile à la place — voir les lectures complémentaires sur les apps LLM locales iPhone et Android.',
+          },
+          {
+            q: 'L\'IA locale ralentira-t-elle mon ordinateur ?',
+            a: 'Seulement pendant qu\'elle répond activement. L\'IA locale utilise votre CPU ou GPU lourdement pendant les quelques secondes nécessaires pour générer une réponse, puis retombe en veille. Votre ventilateur portable peut tourner, votre batterie se drainera plus vite, et d\'autres apps peuvent se sentir lentes pendant une réponse. Rien n\'est permanent — fermer l\'app libère toutes les ressources.',
+          },
+          {
+            q: 'Puis-je la désinstaller proprement ?',
+            a: 'Oui. Les cinq apps se désinstallent via le désinstallateur standard Windows/Mac/Linux. Les modèles vivent dans un dossier séparé (généralement sous Vos Documents ou AppData) — vous pouvez supprimer ce dossier pour récupérer l\'espace disque. Rien ne change votre registre, fichiers système, ou autres applications.',
+          },
+          {
+            q: 'Est-il sûr de télécharger ces apps depuis Internet ?',
+            a: 'Oui, si vous utilisez le site officiel. Les cinq sites officiels sont gpt4all.io, jan.ai, msty.app, anythingllm.com et lmstudio.ai. Évitez les téléchargeurs tiers et les torrents. Chacun des cinq installateurs est signé par son éditeur ; macOS et Windows montrent tous les deux le nom de l\'éditeur pendant l\'installation.',
+          },
+          {
+            q: 'Ces apps ont-elles besoin d\'Internet pour fonctionner ?',
+            a: 'Seulement pour le tout premier téléchargement de modèle. Après qu\'un modèle soit sur disque, les cinq apps tournent entièrement hors ligne — vous pouvez éteindre le Wi-Fi, monter dans un avion, ou travailler dans un sous-sol, et l\'IA continue de répondre.',
+          },
+          {
+            q: 'Puis-je les utiliser sur un portable de travail ?',
+            a: 'Techniquement, oui. Politiquement, demandez d\'abord à votre département IT ou Conformité. L\'IA locale ne transmet vos entrées nulle part, ce qui est souvent une feature pour Conformité — mais installer un logiciel tiers sur un appareil géré est habituellement encore une question de politique. Montrez-leur cet article et les liens source AGPL/MIT pour Jan et GPT4All si une preuve de "zéro donnée ne quitte la machine" aide.',
+          },
+          {
+            q: 'Quelle est la différence entre IA locale et ChatGPT pour un utilisateur non-technique ?',
+            a: 'Trois différences : (1) l\'IA locale tourne sur votre portable et ne transmet vos entrées à aucun serveur, (2) l\'IA locale fonctionne hors ligne après le premier téléchargement de modèle, (3) l\'IA locale est gratuite pour toujours — pas d\'abonnement, pas de facture de tokens. Le compromis est vitesse et qualité : un modèle local 3B–8B est sensiblement moins capable que les modèles classe GPT-4o cloud. Pour l\'écriture quotidienne, résumé, brainstorming et Q&A, l\'écart est petit. Pour la réflexion longue et complexe, l\'écart est plus grand.',
+          },
+          {
+            q: 'Ces apps coûtent-elles de l\'argent à long terme ?',
+            a: 'Non. Les cinq sont gratuites pour usage personnel indéfiniment. GPT4All (MIT) et Jan (AGPL) sont open source. Msty a un tier payant pour des features cloud-API, mais l\'usage local-seul est gratuit indéfiniment. LM Studio est gratuite pour usage personnel et commercial. AnythingLLM Desktop est gratuite, avec un produit hébergé payant comme offre séparée.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[LM Studio vs Jan vs GPT4All : Quelle app d\'IA locale gagne en 2026](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=fr) — quand vous êtes prêt à comparer les trois meilleurs sur vitesse, médiathèque, et confidentialité.',
+          '[App d\'IA locale la plus simple pour chaque OS : Windows, Mac, Linux Picks](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=fr) — pour les utilisateurs qui veulent seulement la recommandation par-OS.',
+          '[Meilleur LLM local pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) — cas d\'usage courant non-technique.',
+          '[Meilleurs LLMs locaux 2026](/local-llms/best-local-llms-2026?lang=fr) — recommandations de modèles à charger dans l\'une de ces cinq apps.',
+          '[Meilleures apps d\'IA locale pour iPhone 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=fr) — pour les utilisateurs dont le portable est trop vieux.',
+          '[Meilleures apps d\'IA locale pour Android 2026](/power-local-llm/best-local-llm-apps-android-2026?lang=fr) — pour les utilisateurs sur Chromebook ou portable Windows bas de gamme.',
+          '[Hub Power Local LLM](/power-local-llm?lang=fr) — bibliothèque de guides complète.',
+        ],
+      },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Top 5 apps d\'IA locale pour débutants en 2026',
+      numberOfItems: 5,
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'GPT4All',
+          description:
+            'Meilleur pour débutants absolus. Plus petite installation (~290 MB). Tourne sur un portable 8 GB RAM de 5 ans sans GPU. Licence MIT open source. Télémétrie désactivée par défaut.',
+          url: 'https://gpt4all.io',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Jan',
+          description:
+            'Meilleur pour débutants soucieux de confidentialité. Entièrement open source sous AGPL. Zéro télémétrie par défaut. Catalogue curé de ~150 modèles.',
+          url: 'https://jan.ai',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Msty',
+          description:
+            'Meilleur pour les utilisateurs qui veulent une UI épurée. Interface split-pane moderne avec comparaison de modèles côte à côte. Chat intégré avec documents et piles de connaissance.',
+          url: 'https://msty.app',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'AnythingLLM Desktop',
+          description:
+            'Meilleur pour les utilisateurs qui veulent une UI Windows familière pour discuter avec des dossiers de documents. Chat basé-workspace PDF/DOCX/Markdown. Licence MIT.',
+          url: 'https://anythingllm.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'LM Studio',
+          description:
+            'Meilleur pour les utilisateurs Mac. Kernels Metal Apple Silicon custom-tunés pour 15–30% d\'inférence plus rapide. Plus grande médiathèque de modèles in-app (~5.000 variantes de Hugging Face).',
+          url: 'https://lmstudio.ai',
+        },
+      ],
+    },
+  },
 }
