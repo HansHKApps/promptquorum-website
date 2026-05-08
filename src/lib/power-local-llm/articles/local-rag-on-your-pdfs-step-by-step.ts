@@ -1266,4 +1266,629 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Chat de Documents',
+    title: 'Construire un RAG local sur vos PDFs en 30 minutes (Ollama + AnythingLLM)',
+    seoTitle: 'RAG local sur PDFs en 30 minutes 2026: Ollama + AnythingLLM',
+    intro:
+      'Un guide complet pour le chemin le plus rapide vers un système RAG personnel fonctionnel sur un portable 16 Go. Stack: Ollama, Llama 3.3 8B, AnythingLLM, nomic-embed-text. Durée totale: 30 minutes de l\'ordinateur vierge au chat avec vos propres PDFs.',
+    metaDescription:
+      'Étape par étape: installer Ollama, configurer AnythingLLM, charger des PDFs, discuter. Temps total 30 minutes. Testé sur portable 16 GB. Mai 2026.',
+    twitterDescription:
+      '30 minutes du portable vierge au chat avec vos propres PDFs. Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. Testé sur 16 GB.',
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_hardware_mentioned: ['Portable 16 GB RAM', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
+    audience: 'Développeurs et utilisateurs avancés qui souhaitent un système RAG personnel fonctionnel sur leur portable, sans dépendre d\'une API cloud.',
+    readTime: '11 min de lecture',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'RAG local sur PDFs',
+    targetKeywords: [
+      'rag local pdf tutoriel',
+      'ollama anythingllm rag',
+      'chat avec pdfs localement',
+      'rag local setup 30 minutes',
+      'rag privé sur ordinateur portable',
+    ],
+    leadAnswerBlock:
+      '**Installez Ollama, téléchargez Llama 3.3 8B, installez AnythingLLM, connectez-le à Ollama, changez le modèle d\'embedding en nomic-embed-text, glissez vos PDFs dans un espace de travail et posez des questions. Sur un portable 16 Go, le processus complet prend 30 minutes — la plupart étant le téléchargement du modèle.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Comment construire un système RAG local pour mes PDFs en 30 minutes?',
+        answer:
+          'Installez Ollama (3 min), téléchargez Llama 3.3 8B (8 min, surtout téléchargement), installez AnythingLLM (4 min), connectez-le à Ollama (3 min) et changez l\'embedder en nomic-embed-text, chargez les PDFs dans un espace de travail (5 min d\'embedding), testez les requêtes (5 min) et ajustez la taille des chunks (2 min). Total: 30 minutes sur un portable 16 Go. Après installation, le système fonctionne entièrement hors ligne.',
+        bullets: [
+          'Stack: Ollama + Llama 3.3 8B Q4_K_M + AnythingLLM + nomic-embed-text-v1.5',
+          'Matériel minimum: 16 Go RAM, 20 Go disque libre, CPU moderne (Apple Silicon, Ryzen 5000+, Intel 11e gén+)',
+          'Internet requis uniquement pour les téléchargements initiaux — l\'inférence fonctionne entièrement localement',
+          'Fonctionne sur macOS, Windows 10/11 et Linux sans admin/root pour AnythingLLM',
+          'Pas de code, pas Python, pas de configuration de base de données vectorielle — AnythingLLM inclut LanceDB',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Ce que vous construirez', anchor: '#stack-overview' },
+      { label: 'Prérequis', anchor: '#prerequisites' },
+      { label: 'Étape 1: Installer Ollama (3 min)', anchor: '#step-1-install-ollama' },
+      { label: 'Étape 2: Télécharger Llama 3.3 8B (8 min)', anchor: '#step-2-pull-model' },
+      { label: 'Étape 3: Installer AnythingLLM (4 min)', anchor: '#step-3-install-anythingllm' },
+      { label: 'Étape 4: Configurer le modèle d\'embedding (3 min)', anchor: '#step-4-configure-embedding' },
+      { label: 'Étape 5: Charger les premiers PDFs (5 min)', anchor: '#step-5-upload-pdfs' },
+      { label: 'Étape 6: Tester les requêtes (5 min)', anchor: '#step-6-test-queries' },
+      { label: 'Étape 7: Ajuster la taille des chunks (2 min)', anchor: '#step-7-tune-chunks' },
+      { label: 'Exemples de requêtes et réponses attendues', anchor: '#sample-queries' },
+      { label: 'Dépannage', anchor: '#troubleshooting' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Stack:** Ollama exécute le LLM, AnythingLLM gère l\'interface + magasin vectoriel, Llama 3.3 8B Q4_K_M répond, nomic-embed-text-v1.5 récupère.',
+          '**Temps:** 30 minutes total. L\'étape la plus longue est le téléchargement du modèle (~8 min à 50 Mbps).',
+          '**Matériel:** 16 Go RAM est le minimum pratique. 8 Go fonctionne uniquement avec Phi-4 Mini et petits ensembles de documents.',
+          '**Confidentialité:** Après installation, rien ne quitte votre machine. PDFs, embeddings, prompts et sorties restent locaux.',
+          '**Pas de code:** Zéro Python, zéro terminal sauf deux commandes Ollama. AnythingLLM est une app de bureau avec import par glisser-déposer.',
+          '**L\'embedder par défaut est mauvais:** AnythingLLM inclut un minuscule embedder par défaut. Passez à nomic-embed-text-v1.5 à l\'étape 4 — la qualité de récupération s\'améliore sensiblement.',
+          '**La taille de chunk par défaut aussi:** 1000-token chunks avec 200-token chevauchement est mieux que le défaut 512/0. Réglé à l\'étape 7.',
+        ],
+      },
+      stackOverview: {
+        id: 'stack-overview',
+        title: 'Ce que vous construirez',
+        content:
+          '**Un système RAG autonome: une fenêtre de chat où vous glissez des PDFs et posez des questions.** Quatre composants open source, tous gratuits, tous sur votre portable:',
+        items: [
+          '**Ollama** — runtime LLM local. Gère les fichiers modèles, expose une API compatible OpenAI sur localhost:11434. Fournit le modèle réponse.',
+          '**Llama 3.3 8B Instruct (Q4_K_M)** — modèle chat 8B de Meta, quantisé pour tenir en ~5 Go RAM. Bonne qualité de réponse pour questions basées sur documents.',
+          '**AnythingLLM Desktop** — l\'interface + magasin vectoriel + orchestration RAG. Inclut LanceDB intégré, analyse les PDFs/DOCX/TXT/MD nativement, communique avec Ollama.',
+          '**nomic-embed-text-v1.5** — modèle d\'embedding. Vecteurs 768-dim, s\'exécute via Ollama à ~600 chunks/sec sur CPU moderne. Remplace l\'embedder faible par défaut.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Un système RAG local est quatre pièces — un runtime (Ollama), un modèle réponse (Llama 3.3 8B), une interface plus magasin vectoriel (AnythingLLM) et un modèle d\'embedding (nomic-embed-text-v1.5) — connectés sur une machine sans appels cloud.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Glissez un PDF, posez une question, obtenez une réponse fondée avec citations — entièrement hors ligne. Les quatre pièces se partagent le travail: Ollama exécute les modèles, Llama 3.3 8B écrit la réponse, AnythingLLM gère les chunks et vecteurs, nomic-embed-text-v1.5 transforme le texte en vecteurs qui rendent la récupération possible. Installation totale: ~30 minutes; coût total: 0 €.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'AnythingLLM a aussi un LLM par défaut intégré et un embedder par défaut. Tous deux sont intentionnellement minuscules pour que l\'app démarre rapidement sur matériel faible. Nous les remplaçons aux étapes 4 et 6 parce que la qualité de récupération est tout le jeu dans un système RAG.',
+          },
+        ],
+      },
+      prerequisites: {
+        id: 'prerequisites',
+        title: 'Ce dont vous avez besoin avant de commencer',
+        content:
+          '**Un portable avec 16 Go RAM, 20 Go disque libre, connexion internet et 30 minutes.** Le système d\'exploitation peut être macOS 12+, Windows 10/11 ou Linux de bureau moderne.',
+        items: [
+          '**RAM:** 16 Go est le minimum pratique pour Llama 3.3 8B Q4 + AnythingLLM + vos apps habituelles. 8 Go fonctionne avec Phi-4 Mini Q4 — voir alternatives étape 2.',
+          '**Disque:** 20 Go libre. Llama 3.3 8B Q4_K_M est ~5 Go, embedder ~280 Mo, AnythingLLM ~600 Mo, plus espace pour embeddings (~10–30 Mo par 100 pages PDF).',
+          '**Réseau:** ~50 Mbps minimum pour téléchargement modèle. À 25 Mbps, l\'étape prend ~16 min; reste du tutoriel inaffecté.',
+          '**Permissions:** Aucun admin/root requis pour AnythingLLM. Ollama installe à `/usr/local/bin` sur macOS/Linux (demande mot de passe une fois) ou `%LOCALAPPDATA%` sur Windows (sans admin).',
+          '**Documents prêts:** 5–20 PDFs pour commencer. Plus grand fonctionne, mais petit ensemble plus rapide pour tester la qualité.',
+        ],
+      },
+      step1InstallOllama: {
+        id: 'step-1-install-ollama',
+        title: 'Étape 1: Installer Ollama (3 min)',
+        content:
+          '**Téléchargez l\'installeur Ollama pour votre OS depuis ollama.com/download et exécutez-le. L\'installeur ajoute la CLI `ollama` à PATH et démarre un service de fond.** Aucun choix de configuration.',
+        items: [
+          '**macOS:** téléchargez le `.dmg`, glissez Ollama dans Applications, lancez une fois pour installer le helper CLI. La barre de menu affiche l\'icône lama quand le service tourne.',
+          '**Windows:** téléchargez l\'`.exe`, exécutez-le, acceptez les défauts. Ollama s\'exécute en service de fond après installation — aucun lancement séparé requis.',
+          '**Linux:** installation une ligne: `curl -fsSL https://ollama.com/install.sh | sh`. Le script enregistre une unité systemd; démarrez avec `sudo systemctl start ollama`.',
+          '**Vérifier:** ouvrez un terminal et exécutez `ollama --version`. Vous devriez voir une version. Si commande non trouvée, redémarrez terminal pour PATH mis à jour.',
+        ],
+        codeBlock: 'ollama --version\n# ollama version is 0.5.x  (any 0.5+ build works for this tutorial)',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Si `ollama --version` fonctionne mais étapes ultérieures échouent avec "connexion refusée sur localhost:11434", le service de fond n\'a pas démarré auto. macOS: lancez l\'app depuis Applications. Linux: `sudo systemctl start ollama`. Windows: ouvrez l\'icône plateau Ollama.',
+          },
+        ],
+      },
+      step2PullModel: {
+        id: 'step-2-pull-model',
+        title: 'Étape 2: Télécharger Llama 3.3 8B (8 min)',
+        content:
+          '**Exécutez `ollama pull llama3.3:8b-instruct-q4_K_M` dans un terminal. Cela télécharge la 4,9 Go quantisée GGUF et l\'enregistre auprès d\'Ollama.** La plupart du total 30 min est cette étape seule.',
+        items: [
+          '**Taille téléchargement:** ~4,9 Go (quantization Q4_K_M). À 50 Mbps vous attendrez ~8 min; à 100 Mbps ~4 min; à 25 Mbps ~16 min.',
+          '**Regarder progression:** Ollama affiche pourcentage et débit. Le téléchargement reprend s\'il est interrompu — réexécutez la même commande.',
+          '**Test rapide du modèle:** après téléchargement, exécutez `ollama run llama3.3:8b-instruct-q4_K_M` et demandez "Qu\'est-ce que 2+2?". Confirmez bonne réponse. Tapez `/bye` pour quitter.',
+          '**Alternative moins RAM:** si vous avez 8 Go au lieu de 16 Go, exécutez `ollama pull phi3:mini` (Phi-4 Mini, ~2,4 Go disque). Utilisez ce nom modèle à la place à l\'étape 3.',
+        ],
+        codeBlock:
+          '# Recommandé pour 16 GB RAM\nollama pull llama3.3:8b-instruct-q4_K_M\n\n# Alternative pour 8 GB RAM\nollama pull phi3:mini\n\n# Test rapide (tapez /bye pour quitter)\nollama run llama3.3:8b-instruct-q4_K_M',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Vous avez déjà d\'autres modèles Ollama? `ollama list` les affiche tous. Vous pouvez garder plusieurs modèles installés et basculer entre eux dans les paramètres espace de travail AnythingLLM.',
+          },
+        ],
+      },
+      step3InstallAnythingLlm: {
+        id: 'step-3-install-anythingllm',
+        title: 'Étape 3: Installer AnythingLLM Desktop (4 min)',
+        content:
+          '**Téléchargez AnythingLLM Desktop depuis useanything.com (ou anythingllm.com) et exécutez l\'installeur. Lancez l\'app et ignorez "créer compte cloud" — le mode local-seulement est proposé après.** Installation sans surveillance.',
+        items: [
+          '**macOS:** téléchargez le `.dmg`, glissez AnythingLLM dans Applications, lancez. macOS peut vous demander de confirmer app d\'éditeur connu; cliquez "Ouvrir" dans Paramètres système → Confidentialité si demandé.',
+          '**Windows:** téléchargez installeur `.exe`. Windows SmartScreen peut le signaler "non couramment téléchargé" — cliquez "Plus d\'infos" → "Exécuter quand même". L\'app installe à `%LOCALAPPDATA%\\anythingllm-desktop` (pas admin).',
+          '**Linux:** téléchargez `.AppImage`, marquez exécutable (`chmod +x AnythingLLMDesktop.AppImage`), double-clic pour exécuter.',
+          '**Première exécution:** AnythingLLM propose espace de travail cloud hébergé OU configuration locale-seulement. Choisissez **Configuration locale**. C\'est le choix qui garde le système hors ligne.',
+          '**Création espace de travail:** quand invité, nommez votre premier espace de travail de façon descriptive ("articles-recherche", "contrats", "notes-perso"). Chaque espace a sa propre collection et magasin d\'embeddings.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Le LLM par défaut d\'AnythingLLM est un minuscule modèle intégré prévu seulement pour la démo de bienvenue. Nous le pointons vers votre Ollama local à l\'étape suivante. N\'utilisez pas le défaut pour vraies requêtes — les réponses seront inutilisablement faibles.',
+          },
+        ],
+      },
+      step4ConfigureEmbedding: {
+        id: 'step-4-configure-embedding',
+        title: 'Étape 4: Connecter AnythingLLM à Ollama et changer l\'embedder (3 min)',
+        content:
+          '**Ouvrez Paramètres AnythingLLM → Préférence LLM. Choisissez "Ollama" comme fournisseur, définissez URL à `http://127.0.0.1:11434` et sélectionnez `llama3.3:8b-instruct-q4_K_M` du menu déroulant. Sauvegardez. Puis allez à Préférence embedding et passez du défaut à `nomic-embed-text` via Ollama.**',
+        items: [
+          '**Panneau Préférence LLM:** Fournisseur = Ollama, Point d\'entrée = `http://127.0.0.1:11434`, Modèle = `llama3.3:8b-instruct-q4_K_M`. Cliquez "Sauvegarder modifications". Une coche verte confirme la connexion.',
+          '**Panneau Préférence embedding:** le défaut est "AnythingLLM Native Embedder" — un minuscule intégré. Changez Fournisseur à Ollama, exécutez `ollama pull nomic-embed-text` dans terminal d\'abord (~280 Mo), puis actualisez liste modèle dans panneau et sélectionnez `nomic-embed-text:latest`. Sauvegardez.',
+          '**Avertissement re-embedding:** si vous avez déjà ajouté documents sous ancien embedder, AnythingLLM vous invitera à les re-embedder. Sur installation vierge, pas de documents donc pas d\'invite.',
+          '**BD vecteur:** laissez au défaut (LanceDB). Elle est locale, fichier-sauvegardée, zéro config. Changez seulement si vous avez besoin spécifiquement PGVector ou Qdrant.',
+        ],
+        codeBlock:
+          '# Exécutez ceci dans terminal avant ouvrir panneau Préférence embedding\nollama pull nomic-embed-text',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Pourquoi nomic-embed-text-v1.5 spécifiquement? En mai 2026, il score dans top 5 du classement MTEB Retrieval pour tout modèle sous 500 Mo, tourne à 400–800 chunks/sec sur CPU moderne et 2000+ chunks/sec sur Apple Silicon, Apache 2.0 licencié. C\'est l\'upgrade première-standard pour presque tout stack RAG local — voir le [comparaison modèles embedding](/power-local-llm/best-embedding-models-local-rag-2026?lang=fr) pour alternatives.',
+          },
+        ],
+      },
+      step5UploadPdfs: {
+        id: 'step-5-upload-pdfs',
+        title: 'Étape 5: Charger vos premiers PDFs (5 min)',
+        content:
+          '**Ouvrez votre espace de travail, cliquez "Charger documents" et glissez 5–20 PDFs. AnythingLLM extrait texte, le divise en chunks (défaut 512 tokens, 0 chevauchement), embedde chaque chunk via Ollama et stocke vecteurs dans LanceDB.** Une barre de progression montre pages analysées et chunks embeddés.',
+        items: [
+          '**Formats supportés:** PDF (textuel), DOCX, TXT, MD, EPUB, plus scraping URL. PDFs image-scannée besoin OCR d\'abord — voir section dépannage.',
+          '**Vitesse:** 400–800 chunks/sec sur CPU moderne et 2000+ chunks/sec sur Apple Silicon une fois Ollama chaud. Un ensemble 20-PDF avec ~50 pages chaque (~3000 chunks total) finit en 5–8 sec temps embedding sur CPU moderne, 1–2 sec sur Apple Silicon, plus temps parsing. Compter ~5 min total charger, analyser et embedder 20 PDFs.',
+          '**RAM pendant embedding:** Ollama charge le modèle embedding (~280 Mo) sur première requête et le cache. Embeddings suivants réutilisent le cache.',
+          '**"Déplacer vers espace de travail":** après upload, AnythingLLM place documents dans pool "limbe". Vous devez explicitement cliquer "Déplacer vers espace de travail" → "Sauvegarder et embedder" pour les rendre interrogeables. Ce flux deux-étapes est intentionnel — ça vous laisse prévisualiser avant coût embedding.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'PDFs d\'anciens scans OCR contiennent souvent texte garbled ou vides — le fichier semble bon pour yeux humains mais AnythingLLM extrait "[image]" ou strings vides. Ouvrez le PDF dans éditeur texte (ou exécutez `pdftotext file.pdf -` de poppler-utils) pour confirmer couche texte existe avant upload.',
+          },
+        ],
+      },
+      step6TestQueries: {
+        id: 'step-6-test-queries',
+        title: 'Étape 6: Tester les requêtes (5 min)',
+        content:
+          '**Tapez une question dans le chat d\'espace de travail. AnythingLLM embedde la question, récupère top-N chunks de LanceDB, construit prompt avec chunks comme contexte, envoie à Ollama et affiche réponse.** Latence sur portable 16 Go est ~3–10 sec par requête.',
+        items: [
+          '**Commencez avec requête fact-recall:** "Que signifie [terme spécifique d\'un de vos PDFs]?" — teste fondement récupération. Réponse devrait citer le PDF et guillemeter la phrasing exacte.',
+          '**Puis requête synthèse:** "Résumez l\'argument principal de [auteur/titre document]." — teste comment bien modèle intègre chunks multiples.',
+          '**Puis requête comparaison** (seulement si PDFs contiennent contenu comparable): "Comparez comment [doc A] et [doc B] traitent [sujet]." — teste récupération cross-document.',
+          '**Inspecter citations:** AnythingLLM affiche chunks source sous chaque réponse. Cliquez-les pour vérifier modèle fonde sur passages droits. Si citations hors-sujet, récupération est cassée — voir étape 7.',
+        ],
+      },
+      step7TuneChunks: {
+        id: 'step-7-tune-chunks',
+        title: 'Étape 7: Ajuster la taille des chunks (2 min)',
+        content:
+          '**Ouvrez Paramètres espace de travail → Base de données vectorielle. Changez taille chunk de 512 à 1000 et chevauchement chunk de 0 à 200. Cliquez Sauvegarder, puis re-embedde vos documents (l\'interface invite).** C\'est le seul plus grand levier qualité récupération dans AnythingLLM.',
+        items: [
+          '**Pourquoi 1000/200 au lieu 512/0:** Paragraphes PDF et sections s\'ajustent rarement proprement en 512 tokens. Le chevauchement 200-token signifie phrase qui croise limite chunk apparaît quand-même entière dans au moins un voisin, donc récupération la saisit.',
+          '**Coût re-embedding:** l\'ensemble 20-PDF / 3000-chunk re-embedde en ~5 sec. Ensembles plus grands prennent proportionnellement plus longtemps. Chunk store est surécrit, pas appendé.',
+          '**Récupération top-K:** le top-K défaut est 4 (les 4 chunks meilleures-correspondance deviennent contexte). Augmentez à 6–8 si vos réponses semblent peu fondées; baissez à 2–3 si modèle se distrait par chunks bruyants.',
+          '**Template de prompt:** AnythingLLM expose le systemprompt sous Espace de travail → Paramètres chat → Prompt. Le défaut va bien; ajustez seulement si vous avez mode défaut spécifique.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Réglage empirique bat théorie: posez mêmes 5 requêtes test avant et après changement taille chunk, comparez. Si récupération à 1000/200 pire, vous avez probablement documents très courts (memos une-page, docstrings code) — essayez 256/64 à la place.',
+          },
+        ],
+      },
+      sampleQueries: {
+        id: 'sample-queries',
+        title: 'À quoi les réponses devraient ressembler?',
+        content:
+          '**Un système RAG local correctement réglé répond requêtes fact-recall mot-pour-mot de la source, synthétise quand invité et cite les chunks qu\'il utilise.** Trois exemples sur espace de travail articles-recherche avec quoi un système sain retourne:',
+        rows: [
+          {
+            'Type requête': 'Fait-recall',
+            'Exemple': 'Quelle taille d\'échantillon Smith et al. 2024 ont utilisé?',
+            'Pattern réponse saine': 'Citation directe section méthodes + citation au chunk',
+            'Pattern défaillance': 'Réponse générique ("typiquement chercheurs utilisent 100–500 participants") sans citation',
+          },
+          {
+            'Type requête': 'Synthèse',
+            'Exemple': 'Résumez la contribution principale de cet article.',
+            'Pattern réponse saine': '3–5 phrases tirant des chunks abstract + conclusion',
+            'Pattern défaillance': 'Reprend le titre ou cite une phrase de l\'abstract',
+          },
+          {
+            'Type requête': 'Cross-document',
+            'Exemple': 'Comment Smith et Jones se désaccordent sur chevauchement chunk?',
+            'Pattern réponse saine': 'Citations des deux articles avec attribution explicite',
+            'Pattern défaillance': 'Cite seulement un article, ou invente désaccord pas dans chunks',
+          },
+        ],
+        columns: ['Type requête', 'Exemple', 'Pattern réponse saine', 'Pattern défaillance'],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Une réponse RAG local saine cite le chunk source mot-pour-mot pour fait-recall, synthétise cross-chunk pour questions résumé et cite les IDs chunk spécifiques qu\'il utilise — réponses génériques sans guillemets signalent problème récupération, pas problème modèle.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Si réponse lit comme "typiquement chercheurs utilisent 100-500 participants" au lieu "Smith et al. utilisaient 287 participants (Méthodes, p.4)", la récupération est cassée et modèle invente à partir données entraînement. Réparez récupération d\'abord (taille chunk, embedder, seuil similarité) avant de changer le modèle réponse.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Utilisez ces trois patterns requête comme votre test-set après chaque changement config récupération. Si fact-recall encore rate mais synthèse marche, chunks trop grossiers. Si synthèse rate mais fact-recall marche, top-k trop bas. Le pattern échoue dit quel bouton tourner.',
+          },
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: 'Quand quelque chose casse: Six modes défaillance courants et fixes',
+        content:
+          '**La plupart défaillances tombent dans une de six catégories. Associez symptôme à la ligne, appliquez le fix.**',
+        rows: [
+          {
+            'Symptôme': 'AnythingLLM affiche "Ne peut pas se connecter à Ollama"',
+            'Cause probable': 'Service Ollama pas en cours, ou endpoint incorrect',
+            'Fix': 'Exécutez `ollama serve` (ou redémarrez l\'app/service). Confirmez endpoint est `http://127.0.0.1:11434` pas `localhost:11434` sur Windows où alias échoue parfois.',
+          },
+          {
+            'Symptôme': 'Téléchargement modèle bloque à 0% ou 99%',
+            'Cause probable': 'Problème CDN edge ou disque plein',
+            'Fix': 'Annulez avec Ctrl+C, exécutez `df -h` pour confirmer espace disque, puis réexécutez même `ollama pull` — Ollama reprend depuis dernier octet.',
+          },
+          {
+            'Symptôme': 'Étape embedding semble faire suspendre',
+            'Cause probable': 'Ollama charge modèle embedding pour première fois',
+            'Fix': 'Attendez 30–60 secondes. Chargement première-fois modèle prend 10–40 secondes selon vitesse disque. Embeddings suivants sont rapides.',
+          },
+          {
+            'Symptôme': 'Récupération retourne chunks non-relatifs à requête',
+            'Cause probable': 'Chunking 512/0 par défaut + embedder faible par défaut',
+            'Fix': 'Confirmez étape 4 (nomic-embed-text) et étape 7 (chunking 1000/200) furent appliquées. Re-embedde l\'espace de travail.',
+          },
+          {
+            'Symptôme': 'Réponses sont courtes, génériques, ou refusent engager source',
+            'Cause probable': 'Mauvais LLM toujours sélectionné (minuscule défaut) ou contexte trop petit',
+            'Fix': 'Confirmez préférence LLM affiche `llama3.3:8b-instruct-q4_K_M`. Augmentez top-K de 4 à 6.',
+          },
+          {
+            'Symptôme': 'PDFs image-scannée upload mais produisent chunks vides',
+            'Cause probable': 'Pas de couche texte dans PDF — pure image raster',
+            'Fix': 'OCR le PDF d\'abord. macOS: `ocrmypdf input.pdf output.pdf`. Linux/Windows: installez Tesseract + ocrmypdf. Puis re-uploadez output OCR\'d.',
+          },
+        ],
+        columns: ['Symptôme', 'Cause probable', 'Fix'],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Considérations pour les utilisateurs francophones',
+        content:
+          'Un système RAG local comme celui-ci répond à exigences de confidentialité et sécurité clés pour la France, la Belgique et la Suisse. Contrairement solutions RAG cloud qui envoient données à fournisseurs externes, tout reste sur votre machine.',
+        items: [
+          '**CNIL et données sensibles:** La CNIL recommande l\'IA locale pour données professionnelles sensibles (finance, santé, droit, RH). Un système RAG local qui jamais ne quitte votre serveur satisfait cette recommandation directement.',
+          '**RGPD Article 32 (Sécurité du traitement):** Infra locale avec composants open source (Ollama, AnythingLLM) satisfait exigences sécurité RGPD. Vous contrôlez où données coulent, quels modèles exécutent, comment stockage est chiffré.',
+          '**Utilisation pour secteurs régulés:** Organisations françaises, belges, suisses dans finance, services publics, éducation, santé gagnent de RAG local — zéro dépendance API cloud, zéro flux données transatlantique. Installation immédiate productive: déployez sur serveur local ou portable, connectez vos documents.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Que faire si Ollama ne s\'installe pas?',
+            a: 'Sur macOS, l\'erreur la plus commune est Gatekeeper bloquant un helper non-signé — ouvrez Paramètres système → Confidentialité & Sécurité et cliquez "Ouvrir quand même". Sur Windows, Defender SmartScreen peut mettre en quarantaine l\'installeur; clic-droit → Propriétés → Débloquer. Sur Linux, le script d\'install a besoin sudo pour écrire l\'unité systemd; si sudo indisponible, téléchargez la binaire statique depuis github.com/ollama/ollama/releases et placez-la sur PATH manuellement.',
+          },
+          {
+            q: 'Pourquoi l\'étape embedding est lente?',
+            a: 'Le premier embed d\'une session est lent parce que Ollama lazy-charge le modèle embedding dans RAM (10–40 secondes selon vitesse disque). Après, embedding tourne à 400–800 chunks par seconde sur CPU moderne et 2000+ chunks par seconde sur Apple Silicon. Si débit soutenu est sous 100 chunks par seconde, le modèle tourne probablement sur swap-disque — fermez autres apps pour libérer RAM et réessayez.',
+          },
+          {
+            q: 'Combien de PDFs puis-je charger à la fois?',
+            a: 'AnythingLLM accepte centaines de fichiers en un seul glissez-déposez. La limite pratique est RAM pendant étape parse: ~1 Go peak pour 100 PDFs taille-moyenne (50 pages chaque). Une fois embeddés, le magasin vectoriel on-disk est petit (~10–30 Mo par 100 pages PDF). Pour 1000+ PDFs, voir guide dédié [Discuter avec 1000 PDFs localement](/power-local-llm/chat-with-1000-pdfs-locally?lang=fr).',
+          },
+          {
+            q: 'Puis-je utiliser ceci pour PDFs protégés par mot de passe?',
+            a: 'AnythingLLM ne peut pas déchiffrer directement PDFs protégés. Déchiffrez d\'abord avec `qpdf --password=VOTREMOTDEPASSE --decrypt input.pdf output.pdf` (qpdf gratuit, disponible tous trois OSes), puis chargez output non-protégé. Supprimez copie non-protégée après embedding si votre threat-model l\'exige — les embeddings eux-mêmes ne sont pas lisibles-humain.',
+          },
+          {
+            q: 'Que faire si ma récupération retourne mauvais chunks?',
+            a: 'Trois boutons dans ordre d\'impact: passez de embedder par défaut à nomic-embed-text (étape 4), changez chunking de 512/0 à 1000/200 et re-embedde (étape 7), et augmentez top-K de 4 à 6 dans paramètres espace de travail. Si récupération toujours mauvaise après tout trois, vos documents peuvent avoir besoin pré-traitement — enlevez en-têtes/pieds, normalisez whitespace ou divisez très longs PDFs en fichiers per-chapitre.',
+          },
+          {
+            q: 'Devrais-je utiliser un modèle différent de Llama 3.3 8B?',
+            a: 'Llama 3.3 8B Q4_K_M est le meilleur tradeoff qualité-par-RAM 2026 pour systèmes 16 Go. Sur 8 Go RAM, utilisez Phi-4 Mini Q4_K_M (~2,4 Go). Sur 24 Go+, essayez Qwen 2.5 14B Q4 pour synthèse notablement meilleure sur longs documents. Pour charges-travail multilingues, Mistral Nemo 12B traite mieux non-English que Llama 3.3.',
+          },
+          {
+            q: 'Comment mets-à-jour le modèle après?',
+            a: 'Exécutez `ollama pull llama3.3:8b-instruct-q4_K_M` à nouveau pour obtenir latest build, puis redémarrez AnythingLLM pour qu\'il re-détecte la version modèle. Pour basculer à modèle différent entièrement, exécutez `ollama pull <nouveau-modèle>` puis changez menu-déroulant Préférence LLM dans paramètres AnythingLLM — aucun re-embedding requis parce que embeddings dépendent seulement d\'embedder, pas du modèle réponse.',
+          },
+          {
+            q: 'Puis-je déplacer ceci à un ordinateur différent?',
+            a: 'Oui. Modèles Ollama vivent dans `~/.ollama/models` (macOS/Linux) ou `%USERPROFILE%\\.ollama\\models` (Windows) — copiez le dossier. Espaces de travail AnythingLLM vivent dans `~/.anythingllm/storage` — copiez aussi. Sur la nouvelle machine, installez Ollama et AnythingLLM Desktop, puis déposez les dossiers copiés à la place. Espaces de travail et embeddings remontent identiquement.',
+          },
+          {
+            q: 'Cela fonctionne si mes PDFs sont images scannées?',
+            a: 'Pas directement — AnythingLLM extrait texte mais ne peut pas OCR images. Pré-traitez PDFs scannées avec `ocrmypdf input.pdf output.pdf` (multiplateforme, MIT-licencié, utilise Tesseract sous le capot). Sur Apple Silicon, `ocrmypdf -l eng+fra+deu` traite 70+ langues. Après OCR, PDF output a images originales plus couche texte cherchable, et AnythingLLM extrait texte correctement.',
+          },
+          {
+            q: 'Comment sauvegarde-je ma base de données documents?',
+            a: 'AnythingLLM stocke tout sous `~/.anythingllm/storage` (macOS/Linux) ou `%LOCALAPPDATA%\\anythingllm-desktop\\storage` (Windows). Tar/zip ce dossier et copiez-le sur lecteur sauvegarde. Le dossier inclut documents originaux, chunks parsés, index vectoriels et historique chat. Restauration est copie-de-retour-et-redémarrage — aucun flux d\'import spécial requis.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: Meilleur RAG local](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=fr) — pour lecteurs voulant évaluer alternatives avant de s\'engager à AnythingLLM.',
+          '[Meilleurs modèles d\'embedding pour RAG local 2026](/power-local-llm/best-embedding-models-local-rag-2026?lang=fr) — pour lecteurs voulant meilleure récupération que nomic-embed-text.',
+          '[Apps IA locales avec RAG intégré: Discuter avec vos fichiers (zéro setup)](/power-local-llm/local-ai-app-with-built-in-rag?lang=fr) — pour lecteurs réalisant ils veulent encore plus simple que AnythingLLM.',
+          '[RAG expliqué: Fonder réponses IA sur données réelles (2026)](/prompt-engineering/rag-explained?lang=fr) — autorité concept sur quoi est RAG et pourquoi chaque composant importe.',
+          '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — référence hardware-sizing si vous choisissez l\'ordinateur portable, pas juste software.',
+          '[Hub Power Local LLM](/power-local-llm?lang=fr) — bibliothèque guide complète pour le cluster.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+      'inLanguage': 'fr',
+      'headline': 'Construire un RAG local sur vos PDFs en 30 minutes (Ollama + AnythingLLM)',
+      'description':
+        'Étape par étape: installer Ollama, configurer AnythingLLM, charger des PDFs, discuter. Temps total 30 minutes. Testé sur portable 16 GB. Mai 2026.',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+        'url': 'https://www.promptquorum.com/about',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'Llama 3.3 8B' },
+        { '@type': 'Thing', 'name': 'nomic-embed-text' },
+        { '@type': 'Thing', 'name': 'Retrieval-augmented generation' },
+        { '@type': 'Thing', 'name': 'Local RAG' },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      'inLanguage': 'fr',
+      'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+      'name': 'Construire un système RAG local sur vos PDFs en 30 minutes',
+      'description':
+        'Installez Ollama, téléchargez Llama 3.3 8B, installez AnythingLLM, configurez modèle d\'embedding, chargez PDFs, testez requêtes, réglez taille chunks.',
+      'totalTime': 'PT30M',
+      'supply': [
+        { '@type': 'HowToSupply', 'name': 'Portable 16 GB RAM' },
+        { '@type': 'HowToSupply', 'name': '20 GB espace disque libre' },
+        { '@type': 'HowToSupply', 'name': 'Connexion internet (50 Mbps recommandé)' },
+        { '@type': 'HowToSupply', 'name': '5–20 PDFs pour commencer' },
+      ],
+      'tool': [
+        { '@type': 'HowToTool', 'name': 'Ollama 0.5+' },
+        { '@type': 'HowToTool', 'name': 'AnythingLLM Desktop' },
+        { '@type': 'HowToTool', 'name': 'Llama 3.3 8B Instruct (Q4_K_M)' },
+        { '@type': 'HowToTool', 'name': 'nomic-embed-text-v1.5' },
+      ],
+      'step': [
+        {
+          '@type': 'HowToStep',
+          'position': 1,
+          'name': 'Installer Ollama',
+          'text': 'Téléchargez installeur Ollama pour votre OS depuis ollama.com/download et exécutez-le. L\'installeur ajoute CLI ollama à PATH et démarre un service de fond. Vérifiez avec `ollama --version`.',
+          'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-1-install-ollama',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 2,
+          'name': 'Télécharger Llama 3.3 8B',
+          'text': 'Exécutez `ollama pull llama3.3:8b-instruct-q4_K_M` pour télécharger modèle quantisé 4,9 Go. Environ 8 minutes à 50 Mbps.',
+          'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-2-pull-model',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 3,
+          'name': 'Installer AnythingLLM Desktop',
+          'text': 'Téléchargez AnythingLLM Desktop et exécutez l\'installeur. Lancez l\'app et choisissez "Configuration locale" sur premier écran. Créez un espace de travail.',
+          'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-3-install-anythingllm',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 4,
+          'name': 'Configurer modèle d\'embedding',
+          'text': 'Dans paramètres AnythingLLM, réglez Préférence LLM à Ollama à http://127.0.0.1:11434 avec modèle llama3.3:8b-instruct-q4_K_M. Exécutez `ollama pull nomic-embed-text` et réglez Préférence embedding à ce modèle.',
+          'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-4-configure-embedding',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 5,
+          'name': 'Charger premiers PDFs',
+          'text': 'Ouvrez l\'espace de travail, cliquez "Charger documents", glissez 5–20 PDFs. Cliquez "Déplacer vers espace de travail" puis "Sauvegarder et embedder". Attendez barre de progression.',
+          'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-5-upload-pdfs',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 6,
+          'name': 'Tester requêtes',
+          'text': 'Tapez question fact-recall dans chat espace de travail. Vérifiez réponse cite un chunk de votre PDF. Essayez requête synthèse et requête cross-document.',
+          'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-6-test-queries',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 7,
+          'name': 'Ajuster taille chunks',
+          'text': 'Ouvrez Paramètres espace de travail → Base de données vectorielle. Réglez taille chunk à 1000 et chevauchement chunk à 200. Re-embedde quand invité.',
+          'url': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-7-tune-chunks',
+        },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'fr',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Que faire si Ollama ne s\'installe pas?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Sur macOS, l\'erreur la plus commune est Gatekeeper bloquant un helper non-signé — ouvrez Paramètres système → Confidentialité & Sécurité et cliquez "Ouvrir quand même". Sur Windows, Defender SmartScreen peut mettre en quarantaine l\'installeur; clic-droit → Propriétés → Débloquer. Sur Linux, le script d\'installation a besoin sudo pour écrire l\'unité systemd; si sudo indisponible, téléchargez binaire statique depuis github.com/ollama/ollama/releases et placez-la sur PATH manuellement.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Pourquoi l\'étape embedding est lente?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Le premier embed d\'une session est lent parce que Ollama lazy-charge le modèle embedding dans RAM (10–40 secondes selon vitesse disque). Après, embedding tourne à 400–800 chunks par seconde sur CPU moderne et 2000+ chunks par seconde sur Apple Silicon. Si débit soutenu est sous 100 chunks par seconde, le modèle tourne probablement sur swap-disque — fermez autres applications pour libérer RAM et réessayez.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Combien de PDFs puis-je charger à la fois?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM accepte centaines de fichiers en un seul glissez-déposez. La limite pratique est RAM pendant étape parse: environ 1 Go peak pour 100 PDFs taille-moyenne (50 pages chacun). Une fois embeddés, le magasin vectoriel on-disk est petit (10–30 Mo par 100 pages PDF). Pour 1000+ PDFs, voir guide dédié sur discussion avec 1000 PDFs localement.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je utiliser ceci pour PDFs protégés par mot de passe?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM ne peut pas déchiffrer directement PDFs protégés. Déchiffrez d\'abord avec `qpdf --password=VOTREMOTDEPASSE --decrypt input.pdf output.pdf` (qpdf gratuit, disponible sur tous les systèmes d\'exploitation), puis chargez output non-protégé. Supprimez la copie non-protégée après embedding si votre threat-model l\'exige — les embeddings eux-mêmes ne sont pas lisibles-humain.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Que faire si ma récupération retourne mauvais chunks?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Trois boutons dans ordre d\'impact: passez de embedder par défaut à nomic-embed-text (étape 4), changez chunking de 512/0 à 1000/200 et re-embedde (étape 7), et augmentez top-K de 4 à 6 dans paramètres espace de travail. Si récupération toujours mauvaise après tous trois, vos documents peuvent nécessiter pré-traitement — enlevez en-têtes et pieds, normalisez whitespace ou divisez très longs PDFs en fichiers per-chapitre.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Devrais-je utiliser un modèle différent de Llama 3.3 8B?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Llama 3.3 8B Q4_K_M est le meilleur rapport qualité-par-RAM 2026 pour systèmes 16 Go. Sur 8 Go RAM, utilisez Phi-4 Mini Q4_K_M (environ 2,4 Go). Sur 24 Go+, essayez Qwen 2.5 14B Q4 pour synthèse notablement meilleure sur longs documents. Pour charges-travail multilingues, Mistral Nemo 12B traite mieux le non-English que Llama 3.3.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Comment mets-à-jour le modèle après?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Exécutez `ollama pull llama3.3:8b-instruct-q4_K_M` à nouveau pour obtenir la dernière version, puis redémarrez AnythingLLM pour qu\'il re-détecte la version modèle. Pour basculer entièrement à un modèle différent, exécutez `ollama pull <nouveau-modèle>` puis changez le menu déroulant Préférence LLM dans paramètres AnythingLLM — aucun re-embedding requis parce que embeddings dépendent seulement de l\'embedder, pas du modèle réponse.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je déplacer ceci à un ordinateur différent?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Oui. Modèles Ollama vivent dans ~/.ollama/models sur macOS et Linux, ou %USERPROFILE%\\.ollama\\models sur Windows — copiez le dossier. Espaces de travail AnythingLLM vivent dans ~/.anythingllm/storage — copiez aussi. Sur la nouvelle machine, installez Ollama et AnythingLLM Desktop, puis déposez les dossiers copiés en place. Espaces de travail et embeddings remontent identiquement.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Cela fonctionne si mes PDFs sont images scannées?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Pas directement — AnythingLLM extrait texte mais ne peut pas OCR images. Pré-traitez PDFs scannées avec `ocrmypdf input.pdf output.pdf` (multiplateforme, MIT-licencié, utilise Tesseract sous le capot). Sur Apple Silicon, `ocrmypdf -l eng+fra+deu` traite 70+ langues. Après OCR, le PDF résultant a les images originales plus une couche texte cherchable, et AnythingLLM extrait le texte correctement.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Comment sauvegarde-je ma base de données documents?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM stocke tout sous ~/.anythingllm/storage sur macOS et Linux, ou %LOCALAPPDATA%\\anythingllm-desktop\\storage sur Windows. Compressez ce dossier et copiez-le sur un lecteur de sauvegarde. Le dossier inclut documents originaux, chunks parsés, index vectoriels et historique chat. La restauration est copie-de-retour-et-redémarrage — aucun flux d\'import spécial requis.',
+          },
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://www.promptquorum.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/fr/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Construire un RAG local sur vos PDFs en 30 minutes',
+          'item': 'https://www.promptquorum.com/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+        },
+      ],
+    },
+  },
 }
