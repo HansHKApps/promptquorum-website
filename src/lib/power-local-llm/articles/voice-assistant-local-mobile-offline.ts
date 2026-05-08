@@ -1861,4 +1861,480 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Mobile & Edge LLMs',
+    title: '在您的手机上构建完全离线语音助手：Whisper + 本地LLM（无云）— 2026',
+    seoTitle: '本地语音助手 Whisper LLM 手机 2026',
+    intro:
+      '2026年在iPhone或Android上实现完全离线语音助手需要三个组件：将语音转换为文本的Whisper、设备上本地LLM以获得响应，以及用于语音合成的Piper或系统TTS。旗舰手机上从语音到首个音频的实际延迟为0.8-1.5秒，低于2秒的"感觉可用"阈值。本指南涵盖iPhone路径（LLM Farm + WhisperKit）、Android路径（Layla + Whisper.cpp）和混合路径（手机STT +远程Ollama），并包括测量的延迟、电池和精度数字。',
+    metaDescription:
+      '2026年在iPhone和Android上完全离线的语音助手。Whisper本地STT +本地LLM + Piper TTS。iPhone、Android和混合设置；延迟、电池、隐私。',
+    twitterDescription:
+      '构建离线运行的Siri替代品：Whisper本地STT + Phi-4 Mini + Piper TTS。旗舰手机上语音到首个音频不到1.5秒。iPhone + Android设置。',
+    current_models_mentioned: [
+      'Whisper Small',
+      'Whisper Medium',
+      'WhisperKit',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Piper TTS',
+    ],
+    current_hardware_mentioned: [
+      'iPhone 17 Pro (A19 Pro)',
+      'iPhone 16 Pro (A18 Pro, 8 GB RAM)',
+      'Pixel 9 Pro (Tensor G4)',
+      'Galaxy S25 Ultra (Snapdragon 8 Elite)',
+      'OnePlus 13 (Snapdragon 8 Elite)',
+    ],
+    audience:
+      '重视隐私的手机用户，希望使用完全在设备上运行的Siri / Google助手替代品，包括旅行者、记者、医疗专业人士和构建离线语音工作流的开发者。',
+    readTime: '13分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local voice assistant',
+    targetKeywords: [
+      '本地语音助手 手机',
+      '离线 Whisper iPhone',
+      'Whisper 本地 LLM Android',
+      'Siri替代 离线',
+      'Piper TTS 移动',
+      'WhisperKit iOS',
+      'Layla Android 语音',
+    ],
+    leadAnswerBlock:
+      '**2026年完全离线语音助手需要三个组件：用于语音到文本的Whisper Small或Medium、用于响应的本地3B-4B LLM（Phi-4 Mini或Gemma 3 4B）以及用于音频输出的Piper TTS或系统TTS。** 在iPhone上，最简单的堆栈是WhisperKit（或Whisper Transcription应用）+ LLM Farm + iOS系统TTS——在iPhone 16 Pro上从语音到首个音频约0.9-1.4秒。在Android上，Layla本地捆绑类似的堆栈，或者通过Termux + whisper.cpp + Ollama + Piper自行组装。为了获得更好的LLM质量，使用混合路径：手机本地运行Whisper以进行隐私关键的STT，然后将转录发送到运行Ollama 70B模型的家庭Mac或PC。所有三种设置在下载模型后无需互联网即可工作。',
+    quickAnswerTop: {
+      zh: {
+        question: '2026年可以在手机上构建完全离线语音助手吗？',
+        answer:
+          '可以。标准堆栈是用于语音到文本的Whisper、用于响应的本地3B-4B LLM（Phi-4 Mini或Gemma 3 4B）以及用于音频输出的Piper TTS或iOS / Android系统TTS。在iPhone 16 Pro上，从语音到首个音频的延迟约为0.9-1.4秒，低于2秒的"感觉可用"阈值。在旗舰Android手机（Pixel 9 Pro、Galaxy S25 Ultra）上，延迟约为1.0-1.6秒。iPhone路径使用WhisperKit + LLM Farm；Android路径使用Layla（内置堆栈）或Termux + whisper.cpp + Ollama；混合路径在手机上保持STT，并将转录发送到运行70B模型的家庭Mac或PC。',
+        bullets: [
+          '堆栈：Whisper（STT）+ 3B-4B本地LLM + Piper或系统TTS—全部在设备上。',
+          'iPhone：WhisperKit / Whisper Transcription + LLM Farm + iOS系统语音。延迟 16 Pro约0.9-1.4秒。',
+          'Android：Layla（捆绑堆栈）或Termux + whisper.cpp + Ollama + Piper。延迟 Pixel 9 Pro约1.0-1.6秒。',
+          '混合：手机本地运行STT，将转录发送到运行Llama 3.3 70B的家庭Ollama。最高质量。',
+          '电池（1小时活跃对话）：iPhone 16 Pro约25-35% ；旗舰Android约25-40%。',
+          'Whisper Small（~466 MB）是移动标准—约12% WER、约150-300 ms STT延迟。',
+          '2秒以内的语音到首个音频是"感觉可用"阈值；1秒以内感觉本地。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '关键要点', anchor: '#key-takeaways' },
+      { label: '快速事实', anchor: '#quick-facts' },
+      { label: '应该构建哪种语音助手堆栈？', anchor: '#which-stack' },
+      { label: '语音助手堆栈比较', anchor: '#stack-comparison' },
+      { label: '三组件堆栈：STT + LLM + TTS', anchor: '#the-stack' },
+      { label: 'iPhone设置：WhisperKit + LLM Farm（5分钟）', anchor: '#iphone-setup' },
+      { label: 'Android设置：Layla或Termux堆栈（5-15分钟）', anchor: '#android-setup' },
+      { label: '混合设置：手机STT +远程Ollama', anchor: '#hybrid-setup' },
+      { label: '延迟预算：秒去哪里了', anchor: '#latency-budget' },
+      { label: '1小时以上的精度和电池消耗', anchor: '#accuracy-battery' },
+      { label: '免提：快捷方式、Tasker、CarPlay、Android Auto', anchor: '#hands-free' },
+      { label: '隐私保证：完全离线vs云辅助', anchor: '#privacy' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**完全离线堆栈是Whisper（STT）+ 3B-4B本地LLM + Piper或系统TTS。** 三个组件在安装后全部在设备上本地运行；运营期间无云调用。',
+          '**iPhone：WhisperKit + LLM Farm + iOS系统语音是最简单的路径。** WhisperKit为STT使用Apple Neural Engine；LLM Farm为响应运行Phi-4 Mini；iOS系统TTS处理音频。语音到首个音频：iPhone 16 Pro约0.9-1.4秒。',
+          '**Android：Layla本地捆绑完整堆栈，或使用Termux + whisper.cpp + Ollama + Piper手动构建。** Layla是更简单的路径；Termux构建更灵活。语音到首个音频：Pixel 9 Pro和Galaxy S25 Ultra约1.0-1.6秒。',
+          '**混合（手机STT +远程Ollama）提供最佳LLM质量。** 手机本地运行Whisper以获得隐私关键的音频，然后将转录发送到运行Llama 3.3 70B的家庭Mac或PC。更好的响应质量，需要家庭Wi-Fi。',
+          '**Whisper Small（~466 MB）是移动甜点。** 正常语音约12% WER、约150-300 ms STT延迟。Whisper Medium（~1.5 GB）更准确（~9% WER）但较慢；Whisper Tiny（~75 MB）更快但在背景噪音上容易出错。',
+          '**电池消耗很大—旗舰手机上每小时活跃对话约25-35%。** 对于全天使用，插入或使用混合路径（仅手机上运行STT，消耗降至约10-15% /小时）。',
+          '**这是一个真正的Siri替代品，适合优先考虑隐私而不是功能广度的用户。** 您放弃的：网络搜索、与专有云的智能家居集成、系统操作覆盖范围。您获得的：离线工作、无遥测、无帐户。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速事实',
+        items: [
+          '**STT引擎：** Whisper.cpp（跨平台）、WhisperKit（iOS、Apple Neural Engine优化）、Sherpa-ONNX（Android、ONNX运行时）。',
+          '**LLM：** Phi-4 Mini（3.8B）在旗舰手机上；Qwen3 1.7B或SmolLM 2 1.7B在较旧的设备上。',
+          '**TTS：** Piper TTS（开源、~50 MB /语音）、iOS系统TTS（AVSpeechSynthesizer）、Android系统TTS。',
+          '**iPhone应用：** WhisperKit、Whisper Transcription（Aiko开发者）、LLM Farm、PocketPal AI。',
+          '**Android应用：** Layla（捆绑堆栈）、Termux + whisper.cpp + Ollama、Sherpa-ONNX演示应用。',
+          '**语音到首个音频目标：** 2秒以内 = "感觉可用"；1秒以内 = "感觉本地"。',
+          '**电池（1小时活跃）：** iPhone 16 Pro ~25-35% ；Pixel 9 Pro / Galaxy S25 Ultra ~25-40%。',
+        ],
+      },
+      whichStack: {
+        id: 'which-stack',
+        title: '应该构建哪种语音助手堆栈？',
+        content:
+          '**对于大多数旗舰手机用户：设备上路径是正确的选择。** 它完全私密、离线工作并在1.5秒内产生可用的结果。仅当您特别需要70B级质量并接受家庭Wi-Fi依赖时才使用混合路径。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '通过堆叠Whisper（STT）、本地3B-4B LLM（Phi-4 Mini或Gemma 3 4B）和Piper或系统TTS来构建完全离线的语音助手—2026年旗舰手机上从语音到首个音频0.9-1.6秒。',
+          },
+          {
+            type: 'plain-terms',
+            text: '语音助手有三项工作：将您的语音转换为文本、生成回复并向您说出回复。使用Whisper进行第一步、小的本地LLM进行第二步、Piper或手机的内置语音进行第三步，您可以在没有互联网的情况下在手机上完成全部三步。完整的循环在最近的iPhone或Android旗舰上大约需要1秒—足够快，感觉像在与Siri交谈，但所有内容都保持在设备上。',
+          },
+        ],
+        decisionBlock: {
+          title: '决定：哪种语音助手堆栈？',
+          localIf: [
+            '您想要完全隐私和离线操作→完全在设备上（iPhone或Android路径）',
+            '您经常旅行并想要飞行/无信号区域的语音→完全在设备上',
+            '您是记者、医疗专业人士或律师→完全在设备上以保证来源/患者/客户保密',
+            '您是原型设计离线语音工作流的开发者→完全在设备上',
+          ],
+          cloudIf: [
+            '您需要70B+型号质量（复杂推理）→混合路径（手机STT +远程家庭Ollama）',
+            '您需要实时网络搜索或实时数据→云助手（2026年没有本地等价物）',
+            '您需要与专有云的深度集成（Google Calendar、iCloud等）→继续为这些任务使用Siri / Google助手',
+          ],
+          quick: [
+            'iPhone最简单的路径：WhisperKit + LLM Farm + iOS语音',
+            'Android最简单的路径：Layla（捆绑堆栈）',
+            '最高质量：混合（手机STT +家庭Ollama 70B）',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: '即使您最终想要混合方法，也要从完全在设备上的路径开始。设备上的设置教您移动部件（STT、LLM、TTS）并在没有家庭服务器依赖的情况下工作。运行后，将LLM调用从本地交换到远程Ollama URL是一行变化。',
+          },
+        ],
+      },
+      stackComparison: {
+        id: 'stack-comparison',
+        title: '语音助手堆栈比较',
+        content:
+          '**2026年有三种可行的堆栈，各自针对不同的优先级进行了调整：简洁性（Layla）、Apple原生抛光（WhisperKit + LLM Farm）或LLM质量（混合）。** 三种都在设备上运行STT和TTS；混合仅将LLM步骤移动到家庭计算机。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '为iOS上的简洁性选择iPhone（WhisperKit + LLM Farm + iOS语音），为Android上的简洁性选择Android（Layla），或为最佳LLM质量选择混合（手机STT +家庭Ollama）。',
+          },
+          {
+            type: 'plain-terms',
+            text: '下面的延迟数字是从语音到首个音频—您停止说话到助手开始回答的时间。2秒以内感觉可用；1秒以内感觉本地。电池是超过1小时活跃双向对话消耗的百分比。',
+          },
+        ],
+        columns: ['堆栈', '延迟（语音→首个音频）', '电池（1小时活跃）', '最适合'],
+        rows: [
+          { '堆栈': 'iPhone（WhisperKit + LLM Farm）', '延迟（语音→首个音频）': '~0.9-1.4秒（16 Pro / 17 Pro）', '电池（1小时活跃）': '~25-35%', '最适合': '想要Apple原生抛光的iOS用户' },
+          { '堆栈': 'Android（Layla、捆绑）', '延迟（语音→首个音频）': '~1.0-1.6秒（Pixel 9 Pro、Galaxy S25 Ultra）', '电池（1小时活跃）': '~25-40%', '最适合': '想要单应用简洁性的Android用户' },
+          { '堆栈': 'Android（Termux + whisper.cpp + Ollama + Piper）', '延迟（语音→首个音频）': '~1.2-2.0秒', '电池（1小时活跃）': '~30-40%', '最适合': '想要完全控制的高级用户' },
+          { '堆栈': '混合（手机STT +家庭Ollama 70B）', '延迟（语音→首个音频）': '~1.5-2.5秒（Wi-Fi依赖）', '电池（1小时活跃）': '~10-15%', '最适合': '70B级质量、家庭网络使用' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '延迟由LLM"首个令牌"步骤主导，而不是Whisper或TTS。要减少延迟，请使用较小的LLM（Qwen3 1.7B代替Phi-4 Mini将LLM步骤从~600 ms降至~250 ms）。权衡是较短、详细程度较低的响应。',
+          },
+        ],
+      },
+      theStack: {
+        id: 'the-stack',
+        title: '三组件堆栈：STT + LLM + TTS',
+        content:
+          '**语音到文本、LLM和文本到语音是三个独立的组件，您可以单独交换。** 优化其中任何一个（较小的Whisper、更快的LLM、较低的TTS延迟）会降低总延迟。',
+        items: [
+          '**STT—Whisper.cpp / WhisperKit / Sherpa-ONNX。** Whisper Small（~466 MB）是标准的移动选择—常见语音约12% WER、5秒话语约150-300 ms STT延迟。Whisper Medium（~1.5 GB）将WER降至约9%，但延迟翻倍。Whisper Tiny（~75 MB）快速但易受中等背景噪音影响。WhisperKit（iOS）通过Apple Neural Engine使用STT延迟比香草Whisper.cpp低约30-40%。',
+          '**LLM—Phi-4 Mini、Gemma 3 4B、Llama 3.2 3B。** Phi-4 Mini（3.8B Q4_K_M、~2.7 GB）是旗舰手机上推荐的默认值。短提示在iPhone 16 Pro上的首令牌时间约为400-800 ms—对总延迟的最大单一贡献者。对于较旧或RAM受限的设备，Qwen3 1.7B（~1.1 GB）更快（~200-400 ms TTFT），代价是更短、更简单的响应。',
+          '**TTS—Piper TTS或系统TTS。** Piper（Rhasspy项目、开源）支持30多种语言、~50 MB /语音、~100-200 ms首音频延迟，并在iOS、Android、Linux、macOS、Windows上运行。系统TTS（iOS上的AVSpeechSynthesizer、Android上的TextToSpeech）的延迟较低（~50-100 ms）但较旧OS版本上声音更机械。iOS 18+和Android 14+系统语音明显优于早期OS版本。',
+          '**语音活动检测（VAD）。** 大多数应用使用Silero VAD或webrtcvad来检测您何时停止说话。200-500 ms静默窗口是典型的话语结束阈值。太短→在句子中途切断您；太长→增加延迟。300 ms是合理的默认值。',
+          '**完整管道：** 麦克风捕获→VAD检测语音结束→Whisper转录→LLM生成回复→TTS说话。将LLM令牌流式传输到TTS时是到达的—这是什么让"首个音频"在旗舰手机上1秒以内到达—替代方案（等待完整LLM回复然后说话）将感觉延迟翻倍。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '如果您的堆栈感觉缓慢，请为每个步骤进行配置：记录（麦克风→STT完成）、（STT完成→LLM首令牌）、（LLM首令牌→TTS首音频）的持续时间。一个步骤通常占主导。在2026年的旗舰手机上，几乎总是LLM首令牌时间（~400-800 ms）。切换到较小的LLM以获得更快的感觉延迟。',
+          },
+        ],
+      },
+      iphoneSetup: {
+        id: 'iphone-setup',
+        title: 'iPhone设置：WhisperKit + LLM Farm（5分钟）',
+        content:
+          '**2026年最简单的完全离线iPhone语音助手：STT的WhisperKit（或Whisper Transcription）、LLM的LLM Farm和语音的iOS系统TTS。** 总设置时间为5-10分钟加上模型下载时间。',
+        numberedItems: [
+          '从App Store安装基于WhisperKit的应用（例如" Whisper Transcription"（Aiko开发者、免费）—使用Apple Neural Engine提供设备上的转录。或者，从GitHub（Argmax / WhisperKit）构建WhisperKit参考应用。',
+          '在WhisperKit / Whisper Transcription中：下载"Small"模型（~466 MB）。Tiny更快但不准确；Medium更准确但更慢。',
+          '从App Store安装LLM Farm（免费）。在LLM Farm中：点击Models → "从URL添加模型" → 粘贴Phi-4 Mini Q4_K_M的Hugging Face URL（或使用应用内库（如果可用））。模型为~2.7 GB。',
+          '通过iOS快捷方式连接：创建具有这些操作的快捷方式— （1）录制音频（或从共享表中接受音频输入）、（2）使用Whisper Transcription转录、（3）使用LLM Farm（如果公开）或私有LLM（~£10、有快捷方式操作）生成文本、（4）使用iOS系统语音说文本。',
+          '将快捷方式分配给锁屏小部件、操作按钮（iPhone 15 Pro及更新版本）或"Hey Siri、run [快捷方式名称]"。操作按钮提供最低延迟的免提触发器。',
+          '测试：按住操作按钮→说话→释放。STT运行（~200 ms）→LLM生成（~600 ms首令牌、流式传输到TTS）→首个音频在约0.9-1.4秒处播放。调整快捷方式中的VAD静默阈值，以防止其中断。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'LLM Farm目前未公开快捷方式操作（截至2026年5月）。要使用iOS快捷方式管道，您将需要私有LLM（~£10一次性），它公开"生成文本"操作。快捷方式方法是使iPhone路径"5分钟"的原因—没有快捷方式，您必须手动链接应用。',
+          },
+        ],
+      },
+      androidSetup: {
+        id: 'android-setup',
+        title: 'Android设置：Layla或Termux堆栈（5-15分钟）',
+        content:
+          '**两条Android路径：Layla（5分钟捆绑堆栈方法）或Termux + whisper.cpp + Ollama + Piper（15分钟手动方法，更多控制）。** 两者在配置后完全离线运行。',
+        items: [
+          '**路径A—Layla（5分钟）：** 从Play Store安装Layla、下载模型（Phi-4 Mini或Gemma 3 4B）、在设置中启用语音模式。Layla为STT捆绑whisper.cpp、响应的本地LLM并使用Android系统TTS。最简单的路径；妥协是可配置性较少。',
+          '**路径B—Termux堆栈（15分钟）：**',
+          '从F-Droid安装Termux（不是Play Store；Play Store版本已过时）。',
+          '在Termux中：`pkg update && pkg install git cmake clang ffmpeg`。',
+          '构建whisper.cpp：`git clone https://github.com/ggerganov/whisper.cpp && cd whisper.cpp && make`并下载Small模型：`bash ./models/download-ggml-model.sh small`。',
+          '安装Ollama（Termux ARM构建）：`curl -fsSL https://ollama.com/install.sh | sh`。拉取模型：`ollama pull phi4-mini`。启动服务器：`ollama serve`。',
+          '安装Piper：`pip install piper-tts`（在Termux Python venv中）并下载语音（例如`piper-tts --download-voice en_US-amy-low`）。',
+          '使用从`arecord`读取、在音频上运行whisper.cpp、将转录发送到Ollama at localhost:11434并将响应管道到Piper的小型Python脚本连接管道。或使用Tasker链接由按钮或快速拼贴触发的shell命令。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于路径B，使用Termux：Widget创建运行语音助手脚本的主屏幕快捷方式。窗口小部件的一次点击触发完整管道。与蓝牙按钮或Tasker快速拼贴配对以获得免提调用。Pixel 9 Pro和Galaxy S25 Ultra Action / Side键也可以触发Tasker操作。',
+          },
+        ],
+      },
+      hybridSetup: {
+        id: 'hybrid-setup',
+        title: '混合设置：手机STT +远程Ollama',
+        content:
+          '**混合堆栈仅将LLM调用移动到家庭机器，在设备上保持STT和TTS。** 这提供了对70B级模型（Llama 3.3 70B、Qwen3-Coder 32B）的访问，同时保持了音频隐私（从不离开手机—仅文本转录通过您的家庭Wi-Fi发送）。',
+        numberedItems: [
+          '在家庭机器（Mac、PC或NAS）上：安装Ollama。拉取70B模型：`ollama pull llama3.3:70b`（需要~40 GB自由磁盘+ ~48 GB RAM或24 GB GPU VRAM）。',
+          '将Ollama绑定到您的本地网络：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。注意家庭机器的本地IP（例如192.168.1.20）。',
+          '在手机上，配置您的语音助手管道（iOS快捷方式或Android Tasker）以通过HTTP POST将Whisper转录发送到`http://192.168.1.20:11434/api/generate`，而不是本地LLM调用。',
+          'TTS仍在手机上运行（Piper或系统语音），使用来自家庭机器的响应文本。',
+          '结果：Whisper STT在手机上运行（音频从不离开设备），家庭Ollama在~600-1200 ms中生成70B质量响应，TTS在手机上说话。总延迟~1.5-2.5秒—略高于完全设备上但具有更好的LLM质量。',
+        ],
+        promptExamples: [
+          {
+            label: 'iOS快捷方式：混合语音助手（操作按钮触发器）',
+            text: '1. 录制音频→保存到临时文件。\n2. 使用Whisper Transcription转录→输出：转录文本。\n3. 获取URL内容→URL：http://192.168.1.20:11434/api/generate、方法：POST、JSON正文：{"model":"llama3.3:70b","prompt":"[transcript]","stream":false}→输出：响应文本。\n4. 说文本→输入：响应文本、语音：iOS系统语音。\n分配到操作按钮。按住录制；释放发送。首个音频在~1.5-2.5秒处播放。',
+          },
+          {
+            label: 'Tasker：Android混合语音助手',
+            text: '1. 变量：%TRANSCRIPT =（记录的音频文件上的whisper-cli输出）。\n2. HTTP请求：URL http://192.168.1.20:11434/api/generate、方法POST、Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}。\n3. 变量：%REPLY =（从JSON解析的"response"字段）。\n4. 说：%REPLY（Android系统TTS或Piper（如果安装））。\n从快速拼贴、蓝牙按钮或Pixel 9 Pro上的Side-key长按触发。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '为了最低延迟混合，将Ollama设置为流模式（`"stream":true`）并在令牌到达时将其流式传输到TTS，而不是等待完整响应。iOS快捷方式无法本地流式传输，但小型Tasker插件或自定义iOS应用可以。通过流式传输，感觉"首个音频"延迟降低200-400 ms。',
+          },
+        ],
+      },
+      latencyBudget: {
+        id: 'latency-budget',
+        title: '延迟预算：秒去哪里了',
+        content:
+          '**在2026年的旗舰手机上，LLM首令牌时间主导总延迟—通常为语音到首个音频时间的50-60%。** 优化LLM步骤比调整Whisper或TTS有更多影响。',
+        columns: ['步骤', '典型时间（iPhone 16 Pro、设备上）', '笔记'],
+        rows: [
+          { '步骤': 'VAD话语结束检测', '典型时间（iPhone 16 Pro、设备上）': '~200-500 ms', '笔记': '可调；300 ms默认。计入感觉延迟。' },
+          { '步骤': 'Whisper Small STT（5秒话语）', '典型时间（iPhone 16 Pro、设备上）': '~150-300 ms', '笔记': 'WhisperKit通过Apple Neural Engine快约30-40%。' },
+          { '步骤': 'LLM首令牌时间（Phi-4 Mini）', '典型时间（iPhone 16 Pro、设备上）': '~400-800 ms', '笔记': '最大贡献者。较小的模型=更快。' },
+          { '步骤': 'TTS首音频（Piper或系统）', '典型时间（iPhone 16 Pro、设备上）': '~100-200 ms', '笔记': '系统TTS略快于Piper。' },
+          { '步骤': '总语音到首个音频', '典型时间（iPhone 16 Pro、设备上）': '~0.9-1.4秒', '笔记': '2秒以内 = "感觉可用"；1秒以内 = "感觉本地"。' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '要在1秒以内：使用Whisper Tiny（75 MB、~80 ms STT）+ Qwen3 1.7B（~250 ms TTFT）+ systemTTS（~80 ms首音频）。iPhone 16 Pro上的总~600-800 ms。妥协是较短、不太一致的LLM响应和嘈杂环境中较低的STT精度。如果响应性是您的首要任务，这是值得的。',
+          },
+        ],
+      },
+      accuracyBattery: {
+        id: 'accuracy-battery',
+        title: '1小时以上的精度和电池消耗',
+        content:
+          '**Whisper Small在中等背景噪声中的普通语音上实现约88%的精度；Whisper Medium达到约91%但延迟翻倍。** 1小时活跃对话超过电池自主性约为iPhone 16 Pro上的25-35%，旗舰Android上的25-40%。',
+        items: [
+          '**按模型大小的Whisper精度（LibriSpeech清洁WER，越低越好）：** Tiny ~7.5%、Small ~3%、Medium ~2.4%、Large v3 ~1.8%。在实际嘈杂条件下：Tiny分解为~15-20% WER、Small ~10-14%、Medium ~7-10%、Large v3 ~5-7%。',
+          '**Cloud Whisper vs本地Whisper：** OpenAI的Cloud Whisper API默认使用Large v3（清洁语音上~2% WER）。在手机上本地运行的Whisper Small是相同音频上的~3% WER—足够接近，日常助手使用的差异是不可察觉的。',
+          '**电池消耗（1小时活跃对话、屏幕打开）：** iPhone 16 Pro ~25-35% ; iPhone 17 Pro ~22-30% ; Pixel 9 Pro ~30-40% ; Galaxy S25 Ultra ~28-38%。混合模式将手机消耗降至~10-15% /小时。',
+          '**热节流：** 持续的设备上LLM推理在iPhone上触发热节流~10-15分钟后（芯片表面~38°C）；旗舰Android上~15-20分钟（平板电脑和大型手机上更好的热质量）。节流将令牌/秒降低30-50%，将LLM首令牌延迟从~600 ms扩展到~900 ms。',
+          '**长期会话缓解：** 插入充电器、将手机面朝上放在硬表面（不在手中）或切换到混合模式。手机作为麦克风使用的能量是手机作为所有东西的一小部分。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '1小时的全本地语音会话可以消耗您的手机电池自主性30-40%。对于全天或汽车使用，计划充电。混合路径（仅手机上的STT）是环境、始终打开的语音助手的现实选择—家庭机器进行繁重的工作。',
+          },
+        ],
+      },
+      handsFree: {
+        id: 'hands-free',
+        title: '免提：快捷方式、Tasker、CarPlay、Android Auto',
+        content:
+          '**免提触发取决于触发机制，而不是语音堆栈。** iOS使用带有操作按钮或"Hey Siri、run [快捷方式]"的快捷方式；Android使用带有Side Key、快速拼贴或蓝牙按钮的Tasker。',
+        items: [
+          '**iPhone操作按钮（iPhone 15 Pro及更新版本）：** 分配触发语音管道的快捷方式。按住操作按钮开始录制；释放发送。2026年iPhone上最低延迟的免提触发器。',
+          '**iPhone"Hey Siri、run [快捷方式名称]"：** 唤醒Siri（~500 ms），然后运行快捷方式。添加相对于操作按钮的延迟，但在手机解锁时随时工作免提。',
+          '**Android Side Key / Bixby键（Galaxy）：** 通过Galaxy Modes & Routines设置或Bixby键重新映射应用分配Tasker操作。按下以触发。',
+          '**Android Tasker快速拼贴：** 将快速拼贴添加到通知阴影以运行语音脚本。从锁屏快速拼贴。',
+          '**蓝牙按钮（例如Flic、通用媒体按钮）：** 与iOS或Android配对、配置以触发语音快捷方式/ Tasker任务。真正的免提（办公桌上的按钮、方向盘上、口袋里）。',
+          '**CarPlay / Android Auto：** 这些按设计使用系统Siri / Google助手—都没有公开第三方语音助手API 2026。CarPlay的解决方法是将快捷方式绑定到CarPlay操作按钮（有限的快捷方式支持）；对于Android Auto，使用Tasker通过蓝牙媒体按钮触发。都不如系统助手对汽车使用的抛光。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于没有CarPlay / Android Auto集成的汽车使用：配对一个小的蓝牙按钮（Flic、AirShou、通用媒体遥控）并将其固定到方向盘。按下触发离线语音助手—它在没有互联网的情况下工作，从不将音频发送到云，并在~1.5秒内响应。与CarPlay相比的妥协是汽车显示器上没有UI、仅限音频。',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '隐私保证：完全离线vs云辅助',
+        content:
+          '**语音助手"完全离线"仅当麦克风音频、转录和TTS音频都留在设备上且无网络调用。** 许多作为"私人"营销的应用仍然将转录或遥测发送到云—在信任前用飞行模式或网络监视器验证。',
+        items: [
+          '**如何验证"完全离线"：** 将手机置于飞行模式并使用助手。如果它以完整质量运行，它完全离线。如果它降级或失败，某个步骤取决于云服务。',
+          '**音频捕获：** 麦克风数据应在本地处理，从不写入磁盘或发送任何地方。Whisper、WhisperKit和Sherpa-ONNX都在内存中运行STT并在转录后丢弃音频。',
+          '**LLM推论：** 如果响应由手机上的本地模型（Phi-4 Mini、Gemma 3、Llama 3.2）生成，则没有提示离开设备。如果助手使用"云辅助"模式（Apple Intelligence Private Cloud Compute、Google的设备优先然后云回退），转录可能在特定条件下发送到服务器—检查应用的隐私政策。',
+          '**TTS：** Piper和系统TTS完全在设备上。一些"高级"云语音（ElevenLabs、OpenAI TTS）需要将响应文本发送到服务器—避免真正离线。',
+          '**混合路径隐私态势：** 在混合模式中，音频保留在手机上（Whisper本地），但文本转录通过您的家庭Wi-Fi发送到您的家庭Ollama服务器。这仅限本地网络，不是云—数据保留在您的网络内。对大多数隐私意识的用户可接受；对最严格的威胁模型不等同于完全设备上。',
+          '**应用特定笔记（2026年5月）：** WhisperKit和whisper.cpp是开源和可验证的离线。Layla默认本地运行（在飞行模式中验证）。LLM Farm和PocketPal AI完全在设备上运行推论。Apple Intelligence既有设备上又有Private Cloud Compute模式—在设置中禁用PCC进行完全设备上操作。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '如果完全离线操作至关重要（记者/来源保密、医疗、法律）：优先考虑开源应用（WhisperKit参考构建、whisper.cpp通过Termux、Layla），您可以在其中审核网络行为。闭源应用（即使作为"私人"营销）可以在未来的更新中添加云功能而不显著的用户通知。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '**将Whisper Tiny用于所有内容。** Tiny快速（~80 ms STT）但在嘈杂环境中容易出错（~15-20% WER对Small ~10-14%）。Tiny可接受安静房间中的短命令；对于通用语音助手使用Small。',
+          '**在TTS启动前等待完整的LLM响应。** 这将感觉延迟翻倍。在到达时将LLM令牌流式传输到TTS—Piper支持流式输入、系统TTS支持增量语音。首个音频应在LLM的第一个句子后播放，而不是完整响应后。',
+          '**在热环境中运行设备上LLM。** 热节流在直射日光或热汽车的几分钟内开始，将令牌/秒降低30-50%并将延迟推向2秒以上。使用混合路径或保持冷静。',
+          '**不验证地信任"私人"。** "私人"和"本地"在2026年是营销术语—声称本地处理的一些应用仍然因分析、模型更新或云回退转录而向主地打电话。在依赖敏感使用前在飞行模式中验证。',
+          '**在低RAM设备上构建Termux Android堆栈。** Termux + whisper.cpp + ollama + piper在峰值消耗~4 GB系统RAM。6 GB或更少RAM的设备将OOM-kill组件在对话中途。在低RAM Android上使用Layla或坚持iPhone路径。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          'Whisper.cpp — [github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)（跨平台Whisper，包括Android和iOS构建）。',
+          'WhisperKit（Argmax）—[github.com/argmaxinc/WhisperKit](https://github.com/argmaxinc/WhisperKit)（Apple Neural Engine优化的Whisper for iOS / macOS）。',
+          'Piper TTS（Rhasspy）— [github.com/rhasspy/piper](https://github.com/rhasspy/piper)（开源神经TTS、移动能力、30多种语言）。',
+          'LLM Farm — [github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)（用于本地运行GGUF模型的iPhone应用）。',
+          'Layla（Android）— [Play Store清单](https://play.google.com)和开发者文档（带语音支持的捆绑本地LLM堆栈）。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '本地Whisper与Cloud Whisper的精度如何？',
+            a: '在手机上本地运行的Whisper Small在清洁语音上实现~3% WER；OpenAI的Cloud Whisper（Large v3）实现~2%。在嘈杂的环境中，本地Small下降到~10-14% WER，而Cloud Large v3下降到~5-7%。对于日常语音助手使用，本地精度足够接近，无法察觉。对于长形式文本口述，其中每个字都很重要，云或本地Medium / Large是优选的。',
+          },
+          {
+            q: '本地语音助手可以完全取代Siri吗？',
+            a: '对于私密Q&A、草稿和摘要：是的，具有与Siri的设备上功能相当或更好的质量。对于系统操作（打开应用、设置计时器、控制HomeKit）、启动网络搜索或实时数据（天气、体育比分）：不—Siri与iOS和Apple服务的集成在2026年无法通过第三方本地堆栈复制。许多用户都保留两者：系统操作的Siri、私密Q&A的本地堆栈。',
+          },
+          {
+            q: '这在CarPlay或Android Auto中起作用吗？',
+            a: '有限。CarPlay和Android Auto按设计围绕系统Siri / Google助手—在2026年都不公开第三方语音助手API。解决方法：使用绑定到CarPlay操作按钮的快捷方式（有限的快捷方式支持），或配对蓝牙按钮（Flic、通用媒体遥控）并通过Tasker / Shortcuts触发。都不如系统助手在汽车使用上抛光。',
+          },
+          {
+            q: '我如何免提触发它？',
+            a: 'iPhone：按住操作按钮（iPhone 15 Pro及更新版本）调用快捷方式，或说"Hey Siri、run [快捷方式名称]"。Android：在Galaxy手机上使用Side Key或Bixby键、Tasker快速拼贴或配对的蓝牙按钮。对于真正的环境免提（始终听觉唤醒词），本地堆栈在2026年无法与Siri / Google助手匹配—手机系统唤醒词检测器不会暴露给第三方应用。',
+          },
+          {
+            q: '它可以处理多语言对话吗？',
+            a: '是的，但要注意。Whisper自动检测输入语言并支持99种语言。本地LLM因素：Phi-4 Mini良好的英语和主要欧洲语言合理；Qwen3具有强大的多语言支持，包括中文；Gemma 3支持100+语言。对于TTS，Piper在30多种语言中有语音；系统TTS取决于您安装的OS语言包。对话中期的语言切换在Whisper中起作用，但可能会使LLM混淆。',
+          },
+          {
+            q: '背景噪音会破坏本地STT吗？',
+            a: 'Whisper Tiny在中等噪声上大幅分解（~15-20% WER）；Small合理处理咖啡厅水平噪声（~10-14% WER）；Medium和Large很好处理大多数现实环境。对于嘈杂使用（汽车、公共交通），如果您的手机具有RAM，请使用Whisper Medium或积极应用VAD（仅在检测到语音时转录、在话语之间忽略）。',
+          },
+          {
+            q: '我如何与智能家居设备本地集成？',
+            a: '通过解析意图的解析器（例如"关闭厨房灯"）管道LLM响应，并直接调用本地智能家居集线器的API—Home Assistant有本地IP的REST API，Apple HomeKit集成通过Shortcuts"控制家庭"操作工作。避免云智能家居集成（Alexa、Google Home），如果您想要完全离线管道。',
+          },
+          {
+            q: '我可以自定义语音（TTS）吗？',
+            a: '可以。Piper TTS在30多种语言中拥有100多个社区训练的语音，可下载为~50 MB语音模型。iOS语音快捷方式让您从系统语音中选择，包括高级质量的高级语音（在设置→辅助功能→说话内容→语音中下载）。Android系统TTS支持来自Google或第三方的语音包。自定义语音克隆（您自己的语音或特定角色）需要单独的TTS工具链（Coqui、Tortoise TTS）—2026年在设备上还不实用。',
+          },
+          {
+            q: '电池寿命会受到重大打击吗？',
+            a: '是的—旗舰手机上的活跃对话每小时约25-40%。对于偶然的语音查询，影响很小。对于全天或Always-On使用，插入或使用混合路径（仅手机上运行STT，消耗降至~10-15% /小时）。被动后台监听与目标词检测目前在第三方本地堆栈上不可行，电池成本可接受。',
+          },
+          {
+            q: 'iOS 19或Android 16会破坏这个设置吗？',
+            a: '对于核心堆栈（Whisper、本地LLM、TTS），不太可能—这些是依赖标准API（麦克风捕获、TTS、网络）的用户空间应用。什么可能会破坏：如果Apple更改快捷方式API，快捷方式集成；Termux在Android上，如果Android 16进一步收紧后台进程限制（Android每次发布都进行收紧）。保持应用最新并在每次主要OS更新后验证。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[iPhone 2026年最佳本地LLM应用](/power-local-llm/best-local-llm-apps-iphone-2026?lang=zh) —iPhone路径的基础层应用（PocketPal AI、LLM Farm、Private LLM）。',
+          '[Android 2026年最佳本地LLM应用](/power-local-llm/best-local-llm-apps-android-2026?lang=zh) —Android路径的基础层应用（Layla、Maid、MLC Chat、Termux + Ollama）。',
+          '[最佳移动LLM模型2026年：Phi-4 Mini对Gemma 3对SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm?lang=zh) —语音堆栈的模型层；基准和质量对延迟权衡。',
+          '[如何在平板电脑上运行AI：iPad和Android（2026）](/power-local-llm/run-ai-on-tablet-ipad-android?lang=zh) —想要较大屏幕语音设置的用户的平板电脑等价物。',
+          '[2026年最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) —更广泛的模型权限涵盖所有硬件层，对于在混合设置中选择LLM很有用。',
+          '[本地LLM软件目录2026年](/power-local-llm/local-llm-software-directory-2026?lang=zh) —Whisper.cpp、WhisperKit、Piper TTS和其他语音堆栈组件的目录条目。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '在您的手机上构建完全离线语音助手：Whisper + 本地LLM（无云）— 2026',
+      url: 'https://www.promptquorum.com/power-local-llm/voice-assistant-local-mobile-offline?lang=zh',
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+      description: '2026年在iPhone和Android上完全离线的语音助手。Whisper本地STT +本地LLM + Piper TTS。iPhone、Android和混合设置；延迟、电池、隐私。',
+      inLanguage: 'zh',
+      author: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      about: [
+        { '@type': 'Thing', name: 'Whisper STT' },
+        { '@type': 'Thing', name: '本地LLM' },
+        { '@type': 'Thing', name: 'iPhone离线' },
+        { '@type': 'Thing', name: 'Android离线' },
+        { '@type': 'Thing', name: '语音助手' },
+        { '@type': 'Thing', name: '移动AI' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'WhisperKit' },
+        { '@type': 'SoftwareApplication', name: 'LLM Farm' },
+        { '@type': 'SoftwareApplication', name: 'Layla' },
+        { '@type': 'SoftwareApplication', name: 'Piper TTS' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
+      },
+    },
+  },
 }
