@@ -40,5 +40,5 @@ export function isPowerLLMArticlePublished(slug: string, lang: string): boolean 
 }
 
 export function isPowerLLMHubPublished(lang: string): boolean {
-  return lang === 'en' && POWER_LLM_HUB_PUBLISHED
+  return (lang === 'en' || lang === 'de') && POWER_LLM_HUB_PUBLISHED
 }

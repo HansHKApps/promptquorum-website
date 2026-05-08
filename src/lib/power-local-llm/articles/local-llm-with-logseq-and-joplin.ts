@@ -1,6 +1,6 @@
 // Power Local LLM — Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)
 // Slug: local-llm-with-logseq-and-joplin
-// EN + DE; FR/JA/ZH render as "Coming Soon" via the article page.
+// EN + DE + FR; JA/ZH render as "Coming Soon" via the article page.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
