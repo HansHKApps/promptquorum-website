@@ -1039,7 +1039,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           </h1>
           <div className="flex items-center gap-4 text-sm text-text-secondary">
             <time dateTime={article.dateModified ?? article.publishDate}>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {new Date(article.dateModified ?? article.publishDate).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {(() => { const d = article.dateModified ?? article.publishDate; return d ? new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : '' })()}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
