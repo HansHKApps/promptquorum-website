@@ -1891,4 +1891,633 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG と文書チャット',
+    title: '30分でローカルRAGシステムを構築: Ollama + AnythingLLM',
+    seoTitle: '30分でローカルRAG構築 2026: Ollama + AnythingLLM',
+    intro:
+      '16GB ノートパソコンで動作する、最速のパーソナルRAGシステム構築ガイド。スタック: Ollama、Llama 3.3 8B、AnythingLLM、nomic-embed-text。合計時間: 空のマシンからPDFとのチャットまで30分。',
+    metaDescription:
+      'ステップバイステップ: Ollama をインストール、AnythingLLM を設定、PDF をアップロード、チャット。合計時間 30分。16GB ノートパソコンで検証。2026年5月。',
+    twitterDescription:
+      '空のノートパソコンから PDF とのチャットまで 30 分。Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text。16GB RAM で検証済み。',
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_hardware_mentioned: ['16GB RAM ノートパソコン', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
+    audience: 'クラウド API に依存せず、ノートパソコン上で動作するパーソナルRAGシステムが必要な開発者とパワーユーザー。',
+    readTime: '12分で読める',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'ローカル PDF RAG',
+    targetKeywords: [
+      'ローカル rag pdf チュートリアル',
+      'ollama anythingllm rag',
+      'pdf とローカルチャット',
+      'ローカル rag 30分セットアップ',
+      'ノートパソコン上のプライベートRAG',
+    ],
+    leadAnswerBlock:
+      '**Ollama をインストール、Llama 3.3 8B をプル、AnythingLLM をインストール、Ollama に接続、embedding モデルを nomic-embed-text に変更、PDF をワークスペースにドラッグして質問を開始。16GB ノートパソコンで全体の処理時間は 30 分 — ほぼモデルのダウンロード時間です。**',
+    quickAnswerTop: {
+      ja: {
+        question: '30 分で PDF 用のローカル RAG システムを構築するにはどうすればよいですか?',
+        answer:
+          'Ollama をインストール (3 分)、Llama 3.3 8B をプル (8 分、ほぼダウンロード)、AnythingLLM をインストール (4 分)、Ollama に接続 (3 分) して embedding を nomic-embed-text に変更、PDF をワークスペースにアップロード (5 分 embedding)、クエリをテスト (5 分)、chunk サイズを調整 (2 分)。合計: 16GB ノートパソコンで 30 分。インストール後、システムは完全にオフラインで動作します。',
+        bullets: [
+          'スタック: Ollama + Llama 3.3 8B Q4_K_M + AnythingLLM + nomic-embed-text-v1.5',
+          'ハードウェア最小要件: 16GB RAM、20GB ディスク空き容量、最新 CPU (Apple Silicon、Ryzen 5000+、Intel 11世代+)',
+          'インターネットは初期モデルと app ダウンロードの時のみ必要 — 推論は完全にローカル',
+          'macOS、Windows 10/11、Linux で動作、AnythingLLM ステップで admin/root 不要',
+          'コードなし、Python なし、ベクトルデータベース設定なし — AnythingLLM に LanceDB が組み込まれている',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: '構築するもの', anchor: '#stack-overview' },
+      { label: '前提条件', anchor: '#prerequisites' },
+      { label: 'ステップ 1: Ollama をインストール (3 分)', anchor: '#step-1-install-ollama' },
+      { label: 'ステップ 2: Llama 3.3 8B をプル (8 分)', anchor: '#step-2-pull-model' },
+      { label: 'ステップ 3: AnythingLLM をインストール (4 分)', anchor: '#step-3-install-anythingllm' },
+      { label: 'ステップ 4: Embedding モデルを設定 (3 分)', anchor: '#step-4-configure-embedding' },
+      { label: 'ステップ 5: 最初の PDF をアップロード (5 分)', anchor: '#step-5-upload-pdfs' },
+      { label: 'ステップ 6: クエリをテスト (5 分)', anchor: '#step-6-test-queries' },
+      { label: 'ステップ 7: Chunk サイズを調整 (2 分)', anchor: '#step-7-tune-chunks' },
+      { label: 'サンプルクエリと予想される回答', anchor: '#sample-queries' },
+      { label: 'トラブルシューティング', anchor: '#troubleshooting' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連資料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**スタック:** Ollama が LLM を実行、AnythingLLM が UI + ベクトルストアを管理、Llama 3.3 8B Q4_K_M が回答、nomic-embed-text-v1.5 が取得。',
+          '**時間:** 合計 30 分。最長は model プル (~8 分 @ 50 Mbps)。',
+          '**ハードウェア:** 16GB RAM が実用的な最小値。8GB は Phi-4 Mini と小規模データセットのみ対応。',
+          '**プライバシー:** インストール後、何もマシンを離れません。PDF、embedding、prompt、出力は全てローカル。',
+          '**コードなし:** Python なし、terminal コマンドは 2 つの Ollama コマンドのみ。AnythingLLM はドラッグ＆ドロップ式 desktop app。',
+          '**デフォルト embedder は不適切:** AnythingLLM に tiny 組み込み embedder が付属。ステップ 4 で nomic-embed-text-v1.5 に変更 — 取得品質が大幅向上。',
+          '**デフォルト chunk サイズも不適切:** 1000-token chunks + 200-token overlap がデフォルト 512/0 より優秀。ステップ 7 で調整。',
+        ],
+      },
+      stackOverview: {
+        id: 'stack-overview',
+        title: '構築するもの',
+        content:
+          '**自己完結型 desktop RAG システム: PDF をドラッグして質問するチャットウィンドウ。** 4 つのオープンソースコンポーネント、すべて無料、全てノートパソコンで実行:',
+        items: [
+          '**Ollama** — ローカル LLM ランタイム。Model ファイルを管理、localhost:11434 で OpenAI 互換 API を公開。Answer model を提供。',
+          '**Llama 3.3 8B Instruct (Q4_K_M)** — Meta の 8B parameter chat model、量子化して ~5GB RAM に適合。2026 年の文書ベース質問で良好な回答品質。',
+          '**AnythingLLM Desktop** — UI + ベクトルストア + RAG orchestration。LanceDB 内蔵、PDF/DOCX/TXT/MD をネイティブで解析、Ollama と通信。',
+          '**nomic-embed-text-v1.5** — embedding model。768-dim vectors、Ollama 経由で最新 CPU で ~600 chunks/sec。デフォルト embedder の代わり。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'ローカル RAG システムは 4 つの部分 — ランタイム (Ollama)、answer model (Llama 3.3 8B)、UI + vector store (AnythingLLM)、embedding model (nomic-embed-text-v1.5) — クラウド呼び出しなしに 1 台のマシンで接続。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'PDF をドラッグ、質問を入力、引用付き根拠のある回答を取得 — 完全にオフライン。4 つの部分が作業を分担: Ollama がモデル実行、Llama 3.3 8B が回答作成、AnythingLLM が chunks と vectors 管理、nomic-embed-text-v1.5 がテキストを取得可能なベクトルに変換。合計インストール: ~30 分；合計コスト: ¥0。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'AnythingLLM にはビルトイン LLM とビルトイン embedder も搭載。両方が意図的に tiny なのは app が低スペック機器で高速起動するため。ステップ 4・6 で両方を置き換えます — RAG システムでは取得品質が全て。',
+          },
+        ],
+      },
+      prerequisites: {
+        id: 'prerequisites',
+        title: '開始前に必要なもの',
+        content:
+          '**16GB RAM、20GB ディスク空き、インターネット接続、30 分を備えたノートパソコン。** OS は macOS 12+、Windows 10/11、最新 Linux desktop。',
+        items: [
+          '**RAM:** 16GB は Llama 3.3 8B Q4 + AnythingLLM + 通常の desktop app の実用最小値。8GB は Phi-4 Mini Q4 で動作 — ステップ 2 の代替を参照。',
+          '**ディスク:** 20GB 空き。Llama 3.3 8B Q4_K_M は ~5GB、embedding model は ~280MB、AnythingLLM は ~600MB、embedding 用に余裕が必要 (~100 page あたり 10–30MB)。',
+          '**ネットワーク:** Model プル用に ~50 Mbps 最小。25 Mbps では ~16 分；残りのチュートリアルは影響なし。',
+          '**権限:** AnythingLLM に admin/root 不要。Ollama は macOS/Linux の `/usr/local/bin` にインストール (パスワード 1 回) または Windows `%LOCALAPPDATA%` (admin なし)。',
+          '**ドキュメント準備:** 開始に 5–20 PDF。より大きいセットも動作、小セットで取得品質テストが高速。',
+        ],
+      },
+      step1InstallOllama: {
+        id: 'step-1-install-ollama',
+        title: 'ステップ 1: Ollama をインストール (3 分)',
+        content:
+          '**ollama.com/download から OS 用 Ollama installer をダウンロード、実行。Installer が `ollama` CLI を PATH に追加、バックグラウンドサービス開始。** 設定選択肢なし。',
+        items: [
+          '**macOS:** `.dmg` をダウンロード、Ollama を Applications にドラッグ、1 回起動して CLI helper をインストール。Service が実行中はメニューバーに llama icon。',
+          '**Windows:** `.exe` をダウンロード、実行、デフォルト受け入れ。Ollama はインストール後にバックグラウンドサービスで実行 — 別途起動不要。',
+          '**Linux:** 1 行インストール: `curl -fsSL https://ollama.com/install.sh | sh`。Script が systemd unit を登録；`sudo systemctl start ollama` で開始。',
+          '**確認:** Terminal を開き `ollama --version` 実行。Version 文字列が表示されるはず。Command not found ならば Terminal を再起動して PATH を更新。',
+        ],
+        codeBlock: 'ollama --version\n# ollama version is 0.5.x  (any 0.5+ build works for this tutorial)',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'warning',
+            text: '`ollama --version` は成功するがその後のステップで "localhost:11434 接続拒否" エラーが出る場合、バックグラウンドサービスが自動起動していません。macOS: Applications から app 起動。Linux: `sudo systemctl start ollama`。Windows: Ollama tray icon を開く。',
+          },
+        ],
+      },
+      step2PullModel: {
+        id: 'step-2-pull-model',
+        title: 'ステップ 2: Llama 3.3 8B をプル (8 分)',
+        content:
+          '**Terminal で `ollama pull llama3.3:8b-instruct-q4_K_M` 実行。これで 4.9GB 量子化 GGUF をダウンロード、Ollama に登録。** 合計 30 分中ほぼこのステップだけ。',
+        items: [
+          '**ダウンロードサイズ:** ~4.9GB (Q4_K_M 量子化)。50 Mbps では ~8 分；100 Mbps では ~4 分；25 Mbps では ~16 分。',
+          '**進捗を見る:** Ollama がパーセンテージとレートを表示。ダウンロードが中断されても再実行で再開 — `ollama list` で確認。',
+          '**Model の smoke test:** ダウンロード完了後、`ollama run llama3.3:8b-instruct-q4_K_M` 実行、"2+2 は?" と聞く。妥当な回答を確認。`/bye` で終了。',
+          '**低 RAM 代替:** 8GB 搭載なら `ollama pull phi3:mini` (Phi-4 Mini、~2.4GB)。ステップ 3 でこのモデル名を使用。長い文書では品質落ちるも動作可能。',
+        ],
+        codeBlock:
+          '# 16GB RAM 推奨\nollama pull llama3.3:8b-instruct-q4_K_M\n\n# 8GB RAM 代替\nollama pull phi3:mini\n\n# Quick smoke test (終了: /bye)\nollama run llama3.3:8b-instruct-q4_K_M',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'すでに他の Ollama model がある? `ollama list` で全て表示。複数 model をインストール維持、AnythingLLM workspace 設定で切り替え可能。',
+          },
+        ],
+      },
+      step3InstallAnythingLlm: {
+        id: 'step-3-install-anythingllm',
+        title: 'ステップ 3: AnythingLLM Desktop をインストール (4 分)',
+        content:
+          '**useanything.com (または anythingllm.com) から AnythingLLM Desktop をダウンロード、installer を実行。App を起動、"クラウドアカウント作成" を無視 — Local-only mode が次画面で提示。** 無人インストール。',
+        items: [
+          '**macOS:** `.dmg` をダウンロード、AnythingLLM を Applications にドラッグ、起動。macOS がアプリ開発者確認を要求する場合、システム設定 → プライバシー で "開く" をクリック。',
+          '**Windows:** `.exe` installer をダウンロード。Windows SmartScreen が "一般的でないアプリ" とフラグ — "詳細情報" → "実行" をクリック。App は `%LOCALAPPDATA%\\anythingllm-desktop` にインストール (admin 不要)。',
+          '**Linux:** `.AppImage` をダウンロード、実行可能にマーク (`chmod +x AnythingLLMDesktop.AppImage`)、ダブルクリックで実行。',
+          '**初回選択:** AnythingLLM はホスト型クラウド workspace OR ローカルのみセットアップを提示。**ローカル設定** を選択 — このシステムをオフラインのまま。',
+          '**Workspace 作成:** プロンプト時、最初の workspace に説明的な名前を付ける ("研究論文"、"契約"、"個人メモ")。各 workspace が独自の document collection と embedding store を持つ。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'AnythingLLM のデフォルト LLM は welcome デモ専用の tiny 組み込みモデル。次のステップで local Ollama を指す。本来のクエリにデフォルト使用禁止 — 回答が使用不可能に弱い。',
+          },
+        ],
+      },
+      step4ConfigureEmbedding: {
+        id: 'step-4-configure-embedding',
+        title: 'ステップ 4: AnythingLLM を Ollama に接続、embedder を変更 (3 分)',
+        content:
+          '**AnythingLLM 設定 → LLM 選好 を開く。Provider に "Ollama" 選択、URL を `http://127.0.0.1:11434` に設定、Model dropdown から `llama3.3:8b-instruct-q4_K_M` を選択。保存。次に Embedding 選好 を開き、デフォルトから `nomic-embed-text` (via Ollama) に変更。**',
+        items: [
+          '**LLM 選好 panel:** Provider = Ollama、Endpoint = `http://127.0.0.1:11434`、Model = `llama3.3:8b-instruct-q4_K_M`。"変更を保存" クリック。緑の checkmark が接続確認。',
+          '**Embedding 選好 panel:** デフォルトは "AnythingLLM Native Embedder" (tiny 組み込み)。Provider を Ollama に変更、Terminal で `ollama pull nomic-embed-text` を先に実行 (~280MB)、panel の model list をリフレッシュ、`nomic-embed-text:latest` を選択。保存。',
+          '**Re-embedding 警告:** 旧 embedder で既に document を追加していれば、AnythingLLM が re-embed を促す。新規インストールならば document がないので prompt なし。',
+          '**ベクトル DB:** デフォルト (LanceDB) のまま。ローカル、ファイルバック、ゼロ config。PGVector や Qdrant が特に必要な場合のみ変更。',
+        ],
+        codeBlock:
+          '# Embedding 選好 panel を開く前に Terminal で実行\nollama pull nomic-embed-text',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'nomic-embed-text-v1.5 を選ぶ理由? 2026 年 5 月、500MB 以下のあらゆるモデルで MTEB Retrieval leaderboard top 5、最新 CPU で 400–800 chunks/sec、Apple Silicon で 2000+ chunks/sec、Apache 2.0 ライセンス。ほぼ全ローカル RAG stack のアップグレード first choice — 代替は [embedding model comparison](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) 参照。',
+          },
+        ],
+      },
+      step5UploadPdfs: {
+        id: 'step-5-upload-pdfs',
+        title: 'ステップ 5: 最初の PDF をアップロード (5 分)',
+        content:
+          '**Workspace を開く、"ドキュメントをアップロード" をクリック、5–20 PDF をドラッグ。AnythingLLM がテキスト抽出、chunk (デフォルト 512 token、0 overlap)、各 chunk を Ollama で embedding、vector を LanceDB に保存。** Progress bar に解析 page と embedded chunk を表示。',
+        items: [
+          '**対応フォーマット:** PDF (テキスト)、DOCX、TXT、MD、EPUB + URL scraping。スキャンした image-PDF は OCR が必要 — troubleshooting 参照。',
+          '**速度:** 最新 CPU で 400–800 chunks/sec、Apple Silicon で 2000+ chunks/sec (Ollama warm 後)。~50 page × 20 PDF (~3000 chunks 合計) は最新 CPU で embedding 5–8 秒、Apple Silicon で 1–2 秒 + parsing time。20 PDF アップロード、解析、embedding に ~5 分計上。',
+          '**Embedding 中 RAM:** Ollama が embedding model (~280MB) を最初の request で load、cache 維持。以降の embed は cache 再利用。',
+          '**"Workspace に移動":** Upload 後、AnythingLLM が document を "limbo" pool に配置。明示的に "Workspace に移動" → "保存して embedding" をクリック時のみクエリ可能に。このニステップは意図的 — embedding コスト前に preview 可能。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '古い OCR scan の PDF には破損または空の text layer — 人間の目では良好に見えるが AnythingLLM は "[image]" または空 string を抽出。Upload 前に text editor で PDF を開く (または `pdftotext file.pdf -` from poppler-utils 実行) して text layer 確認。',
+          },
+        ],
+      },
+      step6TestQueries: {
+        id: 'step-6-test-queries',
+        title: 'ステップ 6: クエリをテスト (5 分)',
+        content:
+          '**Workspace chat に質問を入力。AnythingLLM が質問を embedding、LanceDB から top-N chunk を取得、これらを context で prompt 構築、Ollama に送信、回答を表示。** 16GB ノートパソコンの latency は ~3–10 秒/query。',
+        items: [
+          '**Fact-recall query で開始:** "あなたの PDF の [特定用語] とは?" — 取得 grounding をテスト。回答は PDF を引用し正確な phrasing を例示すべき。',
+          '**次に synthesis query:** "[著者/document title] の主論を要約。" — model が複数 chunk を統合する能力をテスト。',
+          '**次に comparison query** (PDF に比較可能 content がある場合): "[doc A] と [doc B] は [topic] をどう扱う?" — cross-document 取得をテスト。',
+          '**引用を検査:** AnythingLLM は各回答の下に source chunk を表示。クリックして、model が正しい passage から根拠を取ったか確認。引用が off-topic なら、取得が broken — ステップ 7 参照。',
+        ],
+      },
+      step7TuneChunks: {
+        id: 'step-7-tune-chunks',
+        title: 'ステップ 7: Chunk サイズを調整 (2 分)',
+        content:
+          '**Workspace 設定 → ベクトルデータベース を開く。Chunk 大きさを 512 から 1000、Chunk overlap を 0 から 200 に変更。保存、document を re-embed (UI が prompt)。** AnythingLLM では単一最大レバレッジポイント。',
+        items: [
+          '**1000/200 を選ぶ理由:** PDF paragraph や section は 512 token に綺麗に適合しない。200-token overlap は chunk 境界を跨ぐ sentence が少なくとも 1 つの neighbor に完全に現れることを意味、取得がそれをつかむ。',
+          '**Re-embed コスト:** 20-PDF / 3000-chunk set は ~5 秒で re-embed。より大きい set は比例して長い。Chunk store は overwrite、append でなく。',
+          '**Top-K 取得:** デフォルト top-K は 4 (4 best-match chunks が context に)。回答が根拠薄く感じるなら 6–8 に増加；model が noisy chunk に distracted なら 2–3 に低下。',
+          '**Prompt template:** AnythingLLM は system prompt を Workspace → Chat 設定 → Prompt で公開。デフォルト OK；specific failure mode がある場合のみ tune。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '理論より empirical tuning: chunk size 変更の前後で同じ 5 test query を入力、結果比較。1000/200 での取得が worse なら、おそらく非常に短い document (1-page memo、code docstring) — 代わりに 256/64 を試す。',
+          },
+        ],
+      },
+      sampleQueries: {
+        id: 'sample-queries',
+        title: 'サンプルクエリと期待される回答',
+        content:
+          '**正しく調整されたローカル RAG システムは fact-recall を source から逐語的に回答、求められれば synthesis、使用した chunk を引用。** 研究論文 workspace での 3 つの例と健全なシステム が返すもの:',
+        rows: [
+          {
+            'Query 型': 'Fact-recall',
+            'Example': 'Smith et al. 2024 は何のサンプルサイズを使用した?',
+            '健全な回答パターン': 'Methods section からの直接引用 + chunk への引用',
+            '失敗パターン': '引用なしの generic 回答 ("通常、研究者は 100–500 人の参加者")',
+          },
+          {
+            'Query 型': 'Synthesis',
+            'Example': 'この論文の主要な貢献を要約。',
+            '健全な回答パターン': 'Abstract + Conclusion chunk から 3–5 文',
+            '失敗パターン': 'Title 反復または abstract から 1 文引用のみ',
+          },
+          {
+            'Query 型': 'Cross-document',
+            'Example': 'Smith と Jones は chunk overlap をどう異なる見方する?',
+            '健全な回答パターン': '両論文からの引用、明示的帰属',
+            '失敗パターン': '1 論文のみ引用、または chunk にない disagreement を発明',
+          },
+        ],
+        columns: ['Query 型', 'Example', '健全な回答パターン', '失敗パターン'],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '健全なローカル RAG 回答は fact-recall で source chunk を逐語引用、summary query で chunk を跨ぐ synthesis、使用した chunk ID を引用 — 引用なしの generic 回答は model problem でなく取得 problem を合図。',
+          },
+          {
+            type: 'plain-terms',
+            text: '回答が "通常、研究者は 100-500 人の参加者" 的に聞こえ、"Smith et al. 287 人を使用 (Methods p.4)" でなければ、取得が broken、model が training data から guessing。取得を先に修理 (chunk size、embedder、similarity threshold)、model を変更する前に。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'この 3 query pattern を各 retrieval config 変更後のテストセットとして使用。Fact-recall が still misses だが synthesis 機能すれば chunks が粗い。Synthesis は miss だが fact-recall 機能すれば top-k が低い。Fail パターンがどの knob を回すかを伝える。',
+          },
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: '何か壊れた時: 6 つの一般的な failure mode と fix',
+        content:
+          '**ほぼ全て failure が 6 カテゴリに該当。Symptom を行に match、fix を apply。**',
+        rows: [
+          {
+            'Symptom': 'AnythingLLM が "Ollama に接続できません" を表示',
+            '推定される原因': 'Ollama service が実行していない、または endpoint 不正',
+            'Fix': '`ollama serve` を実行 (または app/service を再起動)。Endpoint が `http://127.0.0.1:11434` であり `localhost:11434` でないことを確認 (Windows で alias が時々失敗)。',
+          },
+          {
+            'Symptom': 'Model pull が 0% または 99% で stall',
+            '推定される原因': 'CDN edge issue または disk full',
+            'Fix': 'Ctrl+C で cancel、`df -h` で disk space 確認、同じ `ollama pull` を再実行 — Ollama が last byte から resume。',
+          },
+          {
+            'Symptom': 'Embedding step が hang している風',
+            '推定される原因': 'Ollama が embedding model を初回 load',
+            'Fix': '30–60 秒待つ。初回 model load は disk speed に応じて 10–40 秒。後続 embed は fast。',
+          },
+          {
+            'Symptom': '取得が query に無関係な chunk を返す',
+            '推定される原因': 'デフォルト 512/0 chunking + weak default embedder',
+            'Fix': 'ステップ 4 (nomic-embed-text) とステップ 7 (1000/200 chunking) 両方が apply されたか確認。Workspace を re-embed。',
+          },
+          {
+            'Symptom': '回答が短い、generic、source との engagement を拒否',
+            '推定される原因': 'Wrong LLM (tiny default) が still selected または context 小さい',
+            'Fix': 'LLM 選好が `llama3.3:8b-instruct-q4_K_M` を表示するか確認。Top-K を 4 から 6 に増加。',
+          },
+          {
+            'Symptom': 'Scanned-image PDF は upload するが empty chunk を produce',
+            '推定される原因': 'PDF に text layer がない — pure raster image',
+            'Fix': 'PDF を OCR 先に。macOS: `ocrmypdf input.pdf output.pdf`。Linux/Windows: Tesseract + ocrmypdf をインストール。OCR\'d output を re-upload。',
+          },
+        ],
+        columns: ['Symptom', '推定される原因', 'Fix'],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '日本ユーザーのための活用ポイント',
+        content:
+          'ローカル RAG システムは日本のビジネスと教育における重要なニーズに対応します。METI (経済産業省) AI ガバナンス、企業セキュリティ基準、データ主権に合致した architecture。',
+        items: [
+          '**METI AI ガバナンス 2024:** 経済産業省が 2024 年に公開したフレームワークに準拠。ローカル推論で sensitive data (医療、金融、法務) を cloud LLM API に送らず、enterprise governance 要件を満たす。日本企業の risk management standard に aligned。',
+          '**東アジアデータ主権:** Japan、Malaysia、Singapore、Korea では regional data residency framework が厳化。ローカル RAG (zero cloud API) はこれらを直接満たす。企業が regional boundary 内でデータ処理を完全制御。',
+          '**日本企業活用シナリオ:** 大銀行、病院、law firm はローカル RAG を客契約書、patient record、法令解釈に使用。Zero cloud dependency、ゼロ license cost。インストール: laptop または on-premise server で 30 分、productivity: 即座。Financial/Medical/Legal sectors の due diligence、compliance scan、document search 自動化。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Ollama のインストールが失敗する場合は?',
+            a: 'macOS では Gatekeeper が未署名 helper をブロック — システム設定 → プライバシー & セキュリティ で "許可" をクリック。Windows では Defender SmartScreen が quarantine — 右クリック → プロパティ → ブロック解除。Linux では install script が sudo を要求 (systemd unit 書き込み); sudo 利用不可なら github.com/ollama/ollama/releases から static binary をダウンロード、手動で PATH に配置。',
+          },
+          {
+            q: 'Embedding step が遅い理由は?',
+            a: 'Session の初回 embed は遅い — Ollama が embedding model を lazy-load in RAM (disk speed に応じて 10–40 秒)。その後、embedding は最新 CPU で 400–800 chunks/sec、Apple Silicon で 2000+ chunks/sec。持続 throughput が 100 chunks/sec 以下なら model が swap-disk で実行 — 他 app を close してメモリ解放、retry。',
+          },
+          {
+            q: 'いくつの PDF を一度に upload できる?',
+            a: 'AnythingLLM は単一 drag-drop で数百ファイル受け入れ。Practical limit は parse step 中の RAM: ~100 medium PDF (50 page each) で ~1GB peak。Embed 後、on-disk vector store は小さい (~100 page あたり 10–30MB)。1000+ PDF は [1000 PDF locally](/power-local-llm/chat-with-1000-pdfs-locally?lang=ja) dedicated guide 参照。',
+          },
+          {
+            q: 'Password-protected PDF に使用可能?',
+            a: 'AnythingLLM は password-protected PDF を直接 decrypt できない。`qpdf --password=YOURPASSWORD --decrypt input.pdf output.pdf` で decrypt first (qpdf は無料、全 OS)、unprotected output を upload。Threat model が要求すれば embed 後に unprotected copy を delete — embedding は human-readable でない。',
+          },
+          {
+            q: '取得が wrong chunk を返す場合は?',
+            a: '3 つの knob (impact 順): default embedder から nomic-embed-text に switch (ステップ 4)、512/0 chunking を 1000/200 に change + re-embed (ステップ 7)、workspace setting で top-K を 4 から 6 に bump。3 つ全て後も取得が wrong なら、document が前処理が必要 — header/footer を strip、whitespace を normalize、long PDF を per-chapter file に split。',
+          },
+          {
+            q: 'Llama 3.3 8B 以外のモデルを使うべき?',
+            a: 'Llama 3.3 8B Q4_K_M は 16GB system での 2026 best quality-per-RAM tradeoff。8GB RAM では Phi-4 Mini Q4_K_M (~2.4GB)。24GB+ では Qwen 2.5 14B Q4 for notably better synthesis on long document。Multilingual workload は Mistral Nemo 12B が non-English より優秀 (Llama 3.3 より)。',
+          },
+          {
+            q: '後でモデルを update する方法は?',
+            a: '`ollama pull llama3.3:8b-instruct-q4_K_M` を再実行 latest build 取得、AnythingLLM を再起動して model version を re-detect。Completely different model に switch するには、`ollama pull <new-model>` 実行、AnythingLLM setting の LLM 選好 dropdown を変更 — re-embedding 不要 (embedding は model でなく embedder に依存)。',
+          },
+          {
+            q: '別のコンピュータに移動可能?',
+            a: 'はい。Ollama model は `~/.ollama/models` (macOS/Linux) または `%USERPROFILE%\\.ollama\\models` (Windows) — フォルダをコピー。AnythingLLM workspace は `~/.anythingllm/storage` — それもコピー。新 machine で Ollama と AnythingLLM Desktop をインストール、copied folder を place。Workspace と embedding は identically come up。',
+          },
+          {
+            q: 'PDF が scanned image の場合は?',
+            a: 'Not directly — AnythingLLM は text 抽出できるが image の OCR はできない。Scanned PDF を前処理: `ocrmypdf input.pdf output.pdf` (cross-platform、MIT-licensed、Tesseract 使用)。Apple Silicon では `ocrmypdf -l jpn+eng` が 70+ 言語対応。OCR 後、output PDF は original image + searchable text layer を持つ、AnythingLLM が text を正しく抽出。',
+          },
+          {
+            q: 'Document database をバックアップする方法は?',
+            a: 'AnythingLLM は全て `~/.anythingllm/storage` (macOS/Linux) または `%LOCALAPPDATA%\\anythingllm-desktop\\storage` (Windows) に store。このフォルダを tar/zip、backup drive にコピー。フォルダは original document、parsed chunk、vector index、chat history を包含。Restoration は copy-back-and-restart — special import flow 不要。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: 最高のローカル RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja) — AnythingLLM に commit する前に代替を評価したいリーダー向け。',
+          '[2026 ローカル RAG の最高 Embedding モデル](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) — nomic-embed-text より優秀な取得を望むリーダー向け。',
+          '[Built-in RAG 付きローカル AI App: ファイルとチャット (ゼロセットアップ)](/power-local-llm/local-ai-app-with-built-in-rag?lang=ja) — AnythingLLM より even simpler を実現したいリーダー向け。',
+          '[RAG 説明: リアルデータに基づいた AI 回答 (2026)](/prompt-engineering/rag-explained?lang=ja) — RAG とは何か、なぜ各 component が重要かの concept authority。',
+          '[2026 ローカル LLM ハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja) — ノートパソコンだけでなく hardware も選択中のリーダー向けの sizing reference。',
+          '[Power Local LLM Hub](/power-local-llm?lang=ja) — cluster 用の complete guide library。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+      'inLanguage': 'ja',
+      'headline': '30分でローカルRAGシステムを構築: Ollama + AnythingLLM',
+      'description':
+        'ステップバイステップ: Ollama をインストール、AnythingLLM を設定、PDF をアップロード、チャット。合計時間 30分。16GB ノートパソコンで検証。2026年5月。',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'author': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'Llama 3.3 8B' },
+        { '@type': 'Thing', 'name': 'nomic-embed-text' },
+        { '@type': 'Thing', 'name': 'Retrieval-augmented generation' },
+        { '@type': 'Thing', 'name': 'ローカル RAG' },
+      ],
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '#key-takeaways'],
+      },
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      'inLanguage': 'ja',
+      'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+      'name': '30分でローカルRAGシステムを構築',
+      'description':
+        'Ollama をインストール、Llama 3.3 8B をプル、AnythingLLM をインストール、embedding モデルを設定、PDF をアップロード、クエリをテスト、chunk サイズを調整。',
+      'totalTime': 'PT30M',
+      'supply': [
+        { '@type': 'HowToSupply', 'name': '16GB RAM ノートパソコン' },
+        { '@type': 'HowToSupply', 'name': '20GB ディスク空き容量' },
+        { '@type': 'HowToSupply', 'name': 'インターネット接続 (50 Mbps 推奨)' },
+        { '@type': 'HowToSupply', 'name': '5–20 PDF 開始用' },
+      ],
+      'tool': [
+        { '@type': 'HowToTool', 'name': 'Ollama 0.5+' },
+        { '@type': 'HowToTool', 'name': 'AnythingLLM Desktop' },
+        { '@type': 'HowToTool', 'name': 'Llama 3.3 8B Instruct (Q4_K_M)' },
+        { '@type': 'HowToTool', 'name': 'nomic-embed-text-v1.5' },
+      ],
+      'step': [
+        {
+          '@type': 'HowToStep',
+          'position': 1,
+          'name': 'Ollama をインストール',
+          'text': 'OS 用 Ollama installer を ollama.com/download からダウンロード、実行。Installer が ollama CLI を PATH に追加、background service を開始。`ollama --version` で確認。',
+          'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-1-install-ollama',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 2,
+          'name': 'Llama 3.3 8B をプル',
+          'text': '`ollama pull llama3.3:8b-instruct-q4_K_M` を実行して 4.9GB 量子化モデルをダウンロード。50 Mbps で約 8 分。',
+          'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-2-pull-model',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 3,
+          'name': 'AnythingLLM Desktop をインストール',
+          'text': 'AnythingLLM Desktop をダウンロード、installer を実行。App を起動、最初の画面で "Local Setup" を選択。Workspace を作成。',
+          'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-3-install-anythingllm',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 4,
+          'name': 'Embedding モデルを設定',
+          'text': 'AnythingLLM 設定で LLM 選好を Ollama (http://127.0.0.1:11434) に設定、model は llama3.3:8b-instruct-q4_K_M を選択。`ollama pull nomic-embed-text` を実行、embedding 選好をそのモデルに設定。',
+          'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-4-configure-embedding',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 5,
+          'name': '最初の PDF をアップロード',
+          'text': 'Workspace を開く、"Upload Documents" をクリック、5–20 PDF をドラッグ。"Move to Workspace" をクリック、"Save and Embed"。Progress bar を待つ。',
+          'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-5-upload-pdfs',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 6,
+          'name': 'クエリをテスト',
+          'text': 'Workspace chat に fact-recall question を入力。回答が PDF の chunk を引用するか確認。Synthesis query と cross-document query も試す。',
+          'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-6-test-queries',
+        },
+        {
+          '@type': 'HowToStep',
+          'position': 7,
+          'name': 'Chunk サイズを調整',
+          'text': 'Workspace 設定 → ベクトルデータベース を開く。Chunk 大きさを 1000、Chunk overlap を 200 に設定。再度 embed するよう prompt されたら実行。',
+          'url': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step#step-7-tune-chunks',
+        },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'ja',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Ollama のインストールが失敗する場合は?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'macOS では Gatekeeper が未署名 helper をブロック — システム設定 → プライバシー & セキュリティ で "許可" をクリック。Windows では Defender SmartScreen が quarantine — 右クリック → プロパティ → ブロック解除。Linux では install script が sudo を要求 (systemd unit 書き込み); sudo 利用不可なら github.com/ollama/ollama/releases から static binary をダウンロード、手動で PATH に配置。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Embedding step が遅い理由は?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Session の初回 embed は遅い — Ollama が embedding model を lazy-load in RAM (disk speed に応じて 10–40 秒)。その後、embedding は最新 CPU で 400–800 chunks 毎秒、Apple Silicon で 2000+ chunks 毎秒。持続 throughput が 100 chunks 毎秒 以下なら model が swap-disk で実行 — 他 app を close してメモリ解放、retry。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'いくつの PDF を一度に upload できる?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM は単一 drag-drop で数百ファイル受け入れ。Practical limit は parse step 中の RAM: ~100 medium PDF (50 page each) で約 1GB peak。Embed 後、on-disk vector store は小さい (100 page あたり 10–30MB)。1000+ PDF については、1000 PDF locally のための dedicated guide 参照。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Password-protected PDF に使用可能?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM は password-protected PDF を直接 decrypt できない。`qpdf --password=YOURPASSWORD --decrypt input.pdf output.pdf` で decrypt first (qpdf は無料、全オペレーティングシステム)、unprotected output を upload。Threat model が要求すれば embed 後に unprotected copy を delete — embedding は human-readable でない。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '取得が wrong chunk を返す場合は?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '3 つの knob (impact 順): default embedder から nomic-embed-text に switch (ステップ 4)、512/0 chunking を 1000/200 に change + re-embed (ステップ 7)、workspace setting で top-K を 4 から 6 に bump。3 つ全て後も取得が wrong なら、document が前処理が必要 — header と footer を strip、whitespace を normalize、long PDF を per-chapter file に split。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Llama 3.3 8B 以外のモデルを使うべき?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Llama 3.3 8B Q4_K_M は 16GB system での 2026 best quality-per-RAM tradeoff。8GB RAM では Phi-4 Mini Q4_K_M (約 2.4GB)。24GB+ では Qwen 2.5 14B Q4 for notably better synthesis on long document。Multilingual workload は Mistral Nemo 12B が non-English より優秀 (Llama 3.3 より)。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '後でモデルを update する方法は?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              '`ollama pull llama3.3:8b-instruct-q4_K_M` を再実行 latest build 取得、AnythingLLM を再起動して model version を re-detect。Completely different model に switch するには、`ollama pull <new-model>` 実行、AnythingLLM setting の LLM 選好 dropdown を変更 — re-embedding 不要 (embedding は model でなく embedder に依存)。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '別のコンピュータに移動可能?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'はい。Ollama model は ~/.ollama/models (macOS と Linux) または %USERPROFILE%\\.ollama\\models (Windows) — フォルダをコピー。AnythingLLM workspace は ~/.anythingllm/storage — それもコピー。新 machine で Ollama と AnythingLLM Desktop をインストール、copied folder を place。Workspace と embedding は identically come up。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'PDF が scanned image の場合は?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'Not directly — AnythingLLM は text 抽出できるが image の OCR はできない。Scanned PDF を前処理: `ocrmypdf input.pdf output.pdf` (cross-platform、MIT-licensed、Tesseract 使用)。Apple Silicon では `ocrmypdf -l jpn+eng` が 70+ 言語対応。OCR 後、output PDF は original image + searchable text layer を持つ、AnythingLLM が text を正しく抽出。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Document database をバックアップする方法は?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text':
+              'AnythingLLM は全て ~/.anythingllm/storage (macOS と Linux) または %LOCALAPPDATA%\\anythingllm-desktop\\storage (Windows) に store。このフォルダを tar か zip、backup drive にコピー。フォルダは original document、parsed chunk、vector index、chat history を包含。Restoration は copy-back-and-restart — special import flow 不要。',
+          },
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://www.promptquorum.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/ja/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': '30分でローカルRAGシステムを構築',
+          'item': 'https://www.promptquorum.com/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+        },
+      ],
+    },
+  },
 }
