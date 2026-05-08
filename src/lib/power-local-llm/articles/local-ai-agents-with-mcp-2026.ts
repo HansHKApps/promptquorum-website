@@ -1304,4 +1304,447 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'Ollama をデータベースと API に MCP で接続：ローカルエージェントセットアップ 2026',
+    seoTitle: 'Ollama + MCP ローカル：DB と API 接続ガイド 2026',
+    intro:
+      'Model Context Protocol (MCP) は、ローカル Ollama モデルとマシンの他の部分をつなぐ「足りない層」です。設定ファイル 1 つと tool calling 対応モデルがあれば、同じエージェントが Postgres を照会し、サンドボックス化されたディレクトリで読み書きし、ヘッドレスブラウザを操作し、GitHub プルリクエストを開けます — すべてローカル、すべてオフライン。本ガイドではモデルを信頼しない前提のセキュリティモデルとともに、エンドツーエンドで動作する構成を解説します。',
+    metaDescription:
+      'ローカル AI エージェントを 2026 年に Ollama と MCP で構築。ファイルシステム、SQLite/Postgres、ブラウザ、GitHub サーバー、動作する設定例とサンドボックスモデル。',
+    twitterDescription:
+      'ローカル Ollama + MCP = ファイルを読み、データベースを照会し、ブラウザを操作する AI エージェント — 完全オフライン。動作する設定と最初に入れるべき 4 サーバー、モデルを信頼しないセキュリティ設計。',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Qwen3-Coder 30B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+    ],
+    audience:
+      'Ollama 経由でローカル LLM を運用し、クラウドプロバイダーに何も送信せずにデータベース照会、ファイル編集、ブラウザ自動化など実際にアクションできるモデルを求める開発者および技術に明るいユーザー。',
+    readTime: '15分で読める',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'ローカル MCP エージェント',
+    targetKeywords: [
+      'mcp ollama 日本語',
+      'ローカル mcp サーバー 構築',
+      'model context protocol ローカル',
+      'ollama tool calling 2026',
+      'ローカル ai エージェント mcp',
+      'mcp claude desktop なし',
+    ],
+    leadAnswerBlock:
+      '**Model Context Protocol (MCP) は、ローカル Ollama モデルがツールを呼び出すための仕組みです — ファイルを読む、SQL クエリを実行する、Web リンクをクリックする、プルリクエストを開く — すべて標準 JSON-RPC インターフェース経由で、MCP 互換クライアント（2026 年時点で Goose、Cline、Continue.dev、LM Studio）が共通に話します。プロトコルはオープン、リファレンスサーバーはオープンソース、2026 年現在 Claude Desktop もクラウドアカウントも必要ありません。Ollama を起動し、MCP クライアントを 1 つ入れ、使いたいサーバーを記述した `mcp.json` を置けば、tool calling 対応モデル（Gemma 4、GLM-5.1、Qwen3、Llama 3.3）が、あなたの管理する権限のもとでマシン上で動作するエージェントになります。鍵となるのはセキュリティモデルです：書き込み系ツールを自動承認しない、ファイルシステムアクセスを単一ディレクトリに限定する、データベースサーバーは既定で read-only にする。**',
+    quickAnswerTop: {
+      ja: {
+        question: '2026 年に MCP と Ollama でローカル AI エージェントは動かせますか？',
+        answer:
+          'はい — そしてセットアップは午後 1 回で終わる規模になりました。tool calling 対応モデル（Gemma 4、GLM-5.1、Qwen3 または Llama 3.3 70B）で Ollama を起動し、MCP 対応クライアントを入れます（Goose が最も直接的な CLI、Cline、Continue.dev、LM Studio も 2026 年初頭に MCP 対応を追加しました）。必要な機能に応じて MCP サーバーを追加します — ファイル用に `filesystem`、データベース用に `sqlite` または `postgres`、ブラウザ自動化用に `puppeteer` または `playwright`、リポジトリ管理用に `github`。プロトコルは Claude Desktop と同じです；違いはモデルとクライアントだけです。安全策：filesystem サーバーを単一ディレクトリに限定、データベースは既定で read-only、書き込みやシェルツールは決して自動承認しない。',
+        bullets: [
+          'MCP はオープンで完全にローカル動作 — Claude Desktop も Anthropic アカウントもクラウド呼び出しも不要です。',
+          'Ollama がモデルを提供し、MCP クライアント（Goose、Cline、Continue.dev、LM Studio）が JSON-RPC 経由で Ollama と MCP サーバーを橋渡しします。',
+          '4 つのリファレンスサーバーで実用ワークフローのほぼすべてに対応：filesystem、sqlite/postgres、puppeteer/playwright（ブラウザ）、github。',
+          'tool call の信頼性はモデル特性：Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B はクリーンに動作します。7B 未満のモデルは tool call の形式不正を頻発します。',
+          'セキュリティモデル：filesystem は 1 ディレクトリ、データベースサーバーは read-only、書き込みやシェルツールは明示的承認の後ろに。',
+          'コスト：API 費用は 0 円、ただしトークンはローカルで消費 — エージェントループはトークン消費が多いため、32K+ コンテキストモデルと実用速度で動かせるマシンを用意してください。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: 'クイックファクト', anchor: '#quick-facts' },
+      { label: 'MCP が解放するもの', anchor: '#what-mcp-unlocks' },
+      { label: 'MCP サーバーの比較', anchor: '#server-comparison' },
+      { label: 'アーキテクチャ：構成要素のつながり', anchor: '#architecture' },
+      { label: 'セットアップ：Ollama + Goose を 15 分で', anchor: '#setup' },
+      { label: 'Filesystem サーバー', anchor: '#filesystem-server' },
+      { label: 'SQLite と Postgres サーバー', anchor: '#database-server' },
+      { label: 'ブラウザサーバー（Puppeteer / Playwright）', anchor: '#browser-server' },
+      { label: 'GitHub サーバー', anchor: '#github-server' },
+      { label: 'セキュリティモデル', anchor: '#security-model' },
+      { label: 'ローカル MCP vs Claude Desktop', anchor: '#vs-claude-desktop' },
+      { label: 'tool calling モデルの選定', anchor: '#picking-model' },
+      { label: 'MCP vs プレーン Function Calling', anchor: '#mcp-vs-function-calling' },
+      { label: '日本ユーザーのための活用ポイント', anchor: '#nihon-katsuyo' },
+      { label: 'よくある間違い', anchor: '#common-mistakes' },
+      { label: '出典', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連資料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**MCP はツール用の JSON-RPC 2.0 プロトコルです。** モデルは（クライアント経由で）1 つ以上の MCP サーバーに接続します。各サーバーは Tools（呼び出せる関数）、Resources（読み取り可能なデータ）、Prompts（テンプレート）を公開します。クライアントが Claude Desktop、Goose、Cline、Continue.dev、LM Studio のいずれであっても wire format は同一です。',
+          '**Ollama は MCP を直接話さない — MCP クライアントが Ollama をラップします。** Goose（Block）はネイティブ Ollama 対応を持つ最もシンプルなオープンソース CLI です。Cline、Continue.dev、LM Studio は 2026 年初頭に MCP クライアント対応を追加しました。',
+          '**4 つのリファレンスサーバーが大半のユースケースを網羅：** `filesystem`（サンドボックス化されたディレクトリの読み書き）、`sqlite` と `postgres`（データベースクエリ、既定で read-only）、`puppeteer` または `playwright`（ヘッドレスブラウザ操作）、`github`（personal access token を使った repo と PR の管理）。',
+          '**tool call の信頼性はモデルサイズと学習に比例します。** Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B は Q4_K_M で MCP をクリーンに処理します。7B 未満のモデルは形式不正な tool call を頻繁に出してループを止めます。',
+          '**セキュリティモデルはモデルを信頼しない前提です。** filesystem サーバーは単一ディレクトリに限定、データベースサーバーは read-only ロールで運用、`execute_command` や `write_file` は決して自動承認しない、長時間セッション後は監査ログを確認する。',
+          '**ローカル MCP vs Claude Desktop：** プロトコルもサーバーエコシステムも同一です。ローカルスタックはクラウドモデルをオフラインモデルに置き換え — プライバシー、トークン課金なし、レート制限なしと引き換えに、やや低い知能とセキュリティ設定の自己責任を負います。',
+          '**API 費用は 0 円ですが、トークンは実コストです。** エージェントループは多段タスク 1 件で 30K–80K トークンを消費することがあります。最低でも 32K コンテキストモデル、128K あれば余裕があります。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'クイックファクト',
+        items: [
+          '**プロトコル：** JSON-RPC 2.0 を stdio（ローカルサブプロセス）または HTTP/SSE（リモート）で通信。ローカルエージェントはほぼ stdio のみ使用します。',
+          '**メンテナー：** Anthropic（オープンソース仕様）；リファレンスサーバーは GitHub の `modelcontextprotocol/servers` で管理、加えて成長中のサードパーティーエコシステム。',
+          '**2026 年のローカルクライアント：** Goose（Block）、Cline（VS Code 拡張）、Continue.dev（VS Code/JetBrains）、LM Studio（デスクトップアプリ）、加えて複数の CLI ツール。',
+          '**互換 Ollama モデル：** ネイティブ tool call 学習を持つすべてのモデル。2026 年 5 月時点：Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。',
+          '**サーバー transport の既定：** ローカルプロセスは stdio；複数マシンや複数エージェント間でサーバーを共有する場合のみ HTTP/SSE。',
+          '**設定は 1 ファイルに集約：** `~/.config/goose/config.yaml`（Goose）、`~/.continue/config.json` の MCP ブロック（Continue.dev）、または Cline の設定 UI の `mcpServers`。形式はどれも同じ：サーバー名、command、args、env vars。',
+          '**Claude Desktop 不要。** プロトコルは Claude Desktop の独占ストーリーより古く、すべてのリファレンスサーバーは MIT/Apache ライセンスで、準拠する任意のクライアントで動作します。',
+        ],
+      },
+      whatMcpUnlocks: {
+        id: 'what-mcp-unlocks',
+        title: 'MCP がローカルモデルに対して実際に解放するもの',
+        content:
+          '**ツールのないローカル LLM はテキストでしか応答できません。MCP があれば、同じモデルがマシン上でアクションできます。** これが chatbot とエージェントの違いです。',
+        items: [
+          '**「このリポジトリのすべての TODO を見つけ、ファイルごとにグルーピングして、Markdown 要約を `notes/todos.md` に書き出してください」** — `filesystem` サーバーが読み、モデルがグルーピングし、同じサーバーが書き込みます。エンドツーエンドで往復 1 回。',
+          '**「今四半期の売上トップ 10 顧客を出して、グラフ化してください」** — `postgres` サーバーが SQL を実行（read-only ロール）、モデルが要約、`filesystem` 経由で CSV を書き出してチャートツールに渡します。',
+          '**「Hacker News のフロントページを開いて、AI 関連トップ 3 記事を見つけて要約し、私の reading list に追記してください」** — `puppeteer` サーバーがヘッドレスブラウザを操作し、モデルが抽出と要約、`filesystem` が追記します。',
+          '**「私の fork に対して `chore: bump deps` というタイトルのドラフト PR を開き、失敗中の CI run を本文にリンクしてください」** — `github` サーバーが PR を作成、run を取得、本文にリンクを書き込みます。',
+          '**「`events.db` の最新 100 行を見て、新しいエラースパイクの原因になっているユーザー ID を教えてください」** — `sqlite` サーバーが照会、モデルが推論、回答をチャットパネルで読みます。',
+          'いずれも以前はクラウドモデルとホストツール、または手書きスクリプトを必要とした「文 → アクション」ワークフローです。MCP は同じサーバーを複数クライアント間で、同じモデルを複数サーバー間で再利用できる層です。',
+        ],
+      },
+      serverComparison: {
+        id: 'server-comparison',
+        title: '最もよく使われる 4 つの MCP サーバーの比較',
+        content:
+          '下記のリファレンスサーバーは「ローカルモデルに何か実際の作業をしてほしい」というロングテールをカバーします。すべてオープンソースで、MCP クライアントが起動するローカルサブプロセスとして動作します。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'まず filesystem サーバーから（5 分、低リスク）、データ作業に SQLite を追加、必要が生じたらブラウザサーバー、マシン上のモデルを信頼できるようになったら GitHub を追加してください。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'ローカルエージェントにさせたい作業の 90 % をこの 4 つで処理できます。filesystem サーバーは選んだフォルダ内でファイルを読み書きします。SQLite または Postgres サーバーはデータベースに対してクエリを実行します。ブラウザサーバーは実際の Chromium ウィンドウを操作するため、JavaScript を必要とするページもモデルが読めます。GitHub サーバーは自分のリポジトリで issue や PR を開きます。すべて 1 コマンドでインストール可能、自分のマシン上のサブプロセスとして動作し、必要な場合を除いてインターネットに出ません（ブラウザは出ますが、他は出ません）。',
+          },
+        ],
+        columns: ['MCP サーバー', '可能になること', 'セットアップ難度', 'リスクレベル', '適した用途'],
+        rows: [
+          { 'MCP サーバー': 'Filesystem', '可能になること': 'サンドボックス化されたディレクトリでのファイル読み書き', 'セットアップ難度': '簡単（パス 1 つを allow-list）', 'リスクレベル': '中 — 範囲を厳しく絞ること', '適した用途': '個人の自動化、ノート、リポジトリ要約' },
+          { 'MCP サーバー': 'SQLite', '可能になること': 'ローカル SQLite データベースファイルへのクエリ', 'セットアップ難度': '簡単（.db ファイルへのパス）', 'リスクレベル': 'read-only なら低、書き込みありは中', '適した用途': 'データ探索、ログ解析、プロトタイピング' },
+          { 'MCP サーバー': 'Postgres', '可能になること': 'connection string 経由の Postgres データベースへのクエリ', 'セットアップ難度': '中（ロール + URL）', 'リスクレベル': '中 — read-only ロールを使用', '適した用途': '本番データ探索、レポーティング、BI プロトタイプ' },
+          { 'MCP サーバー': 'Puppeteer / Playwright', '可能になること': 'ブラウジング、スクレイピング、フォーム入力のためのヘッドレスまたは表示モードの Chromium 操作', 'セットアップ難度': '難（ブラウザバイナリ、セレクタ、レイテンシ）', 'リスクレベル': '高 — フォーム送信や任意のクリックが可能', '適した用途': 'リサーチ、スクレイピング、回帰テスト' },
+          { 'MCP サーバー': 'GitHub', '可能になること': 'リポジトリ一覧、ファイル読み取り、issue と PR の作成', 'セットアップ難度': '簡単（環境変数で PAT を渡す）', 'リスクレベル': '中 — トークンを特定 repo に絞る', '適した用途': '開発ワークフロー、トリアージ、PR ドラフト' },
+          { 'MCP サーバー': 'Custom', '可能になること': 'JSON-RPC ツールとして表現できる任意のもの', 'セットアップ難度': '難（自分でサーバーを書く）', 'リスクレベル': '可変', '適した用途': '社内 API、ニッチなシステム、glue code' },
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: '構成要素のつながり',
+        content:
+          '**3 つのプロセス、共有プロトコル 1 つ。** モデルは Ollama 内、クライアントが MCP を話し、各サーバーが小さなツールセットを公開します。tool call はクライアント → サーバーに飛び、ローカル実行され、JSON が返ります。',
+        items: [
+          '**Ollama** はバックグラウンドサービスとして `127.0.0.1:11434` で動作し、OpenAI 互換 API でモデルを提供します。MCP のことは知りません — chat completion に応答し、モデルが要求すれば tool call を出すだけです。',
+          '**MCP クライアント**（Goose、Cline、Continue.dev、LM Studio）が橋渡し役です。モデルについては Ollama と、ツールについては MCP サーバーと話します。モデルが tool call を出すと、クライアントが正しいサーバーへルーティングし、結果を取得し、会話に戻します。',
+          '**MCP サーバー** は機能ごとに独立したサブプロセスです。stdio で JSON-RPC 2.0 を話します。各サーバーが Tools、Resources、Prompts を公開し、クライアントがそれらを統合してモデルに見せます。',
+          '**stdio transport ですべてがローカルに留まります。** サーバーはクライアントによって起動され、stdin/stdout で通信し、クライアント終了時に終了します。サーバー自身が接続を開かない限り（ブラウザサーバーは開きます、filesystem とデータベースサーバーは開きません）、ネットワーク経由になりません。',
+          '**モデルはフラットなツールリストを見ます。** モデル視点ではサーバーは存在せず、`filesystem.read_file`、`sqlite.query`、`puppeteer.navigate` のようなツール名のリストがあるだけです。クライアントがルーティングを処理します。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'アーキテクチャは Claude Desktop と同一です。違いはモデル（Claude の代わりにローカル Ollama モデル）とクライアント（Claude Desktop の代わりに Goose/Cline/Continue.dev/LM Studio）です。MCP サーバーは同じサーバー — 今日 Claude Desktop で動かしている filesystem サーバーは、明日 Goose 配下で変更なく動作します。',
+          },
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: 'セットアップ：Ollama + Goose を 15 分で',
+        content:
+          '**Goose は 2026 年に動作するローカル MCP エージェントへの最短ルートです。** Block のオープンソース CLI で、ネイティブ Ollama 対応、対話型チャットインターフェース、すべての MCP サーバー設定を 1 ファイルに集約しています。Continue.dev、Cline、LM Studio でも動作しますが、初回セットアップのコストは Goose が最も低いです。',
+        items: [
+          '**Step 1 — Ollama をインストール。** `ollama.com/download`（macOS/Windows/Linux）からダウンロード。`curl http://127.0.0.1:11434/api/tags` でサービスが動作していることを確認してください。',
+          '**Step 2 — tool calling モデルを pull。** Gemma 4 27B（`gemma4:27b`）、GLM-5.1 32B（`glm5:32b`）、Qwen3 32B（`qwen3:32b`）または Llama 3.3 70B（`llama3.3:70b`）から選択。16 GB unified memory または 12 GB VRAM で 27B–32B を Q4_K_M で快適に動かせます。',
+          '**Step 3 — Goose をインストール。** `pipx install goose-ai`（macOS、Linux）または Goose リリースページからインストーラをダウンロード。CLI は `goose` としてインストールされます。',
+          '**Step 4 — Ollama をプロバイダーとして設定。** `goose configure` を実行、`ollama` をプロバイダーに選択、モデルを pull したものに、host を `http://127.0.0.1:11434` に設定。Goose は `~/.config/goose/config.yaml` に書き込みます。',
+          '**Step 5 — filesystem MCP サーバーを追加。** `~/.config/goose/config.yaml` に `mcpServers` ブロックを追加します（下に設定例）。`goose session` を再起動し、テストディレクトリのファイル一覧を尋ねてください。最初のターンでサーバー接続が確認できます。',
+          '**Step 6 — 実際のタスクで検証。** `goose session` を試し、「`notes/` 内の各 Markdown ファイルについて、タイトルと単語数の一覧を作って結果を `notes/index.md` に書いてください」と尋ねます。エージェントが読み、要約し、書き戻せばループは動作しています。',
+        ],
+        codeBlock:
+          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'すでに Cline や Continue.dev を使っているなら Goose をスキップしてそちらを使ってください — どちらも 2026 年初頭のリリースで MCP サーバー対応を追加しました。Cline の「MCP Servers」パネルはリファレンスサーバーをワンクリックでインストール、Continue.dev は `~/.continue/config.json` の `mcpServers` を読みます（下記 Goose 設定ブロックと同形式）。モデルとサーバーは同じ；ホストアプリだけが変わります。',
+          },
+        ],
+      },
+      filesystemServer: {
+        id: 'filesystem-server',
+        title: 'Filesystem サーバー：サンドボックス化されたディレクトリの読み書き',
+        content:
+          '**filesystem サーバーは最初に入れるべきサーバーで、安全に範囲を絞るのも最も簡単です。** `read_file`、`write_file`、`list_directory`、`move_file`, `search_files`、`create_directory` を公開し、すべて allow-list された 1 つ以上のパスに制限されます。',
+        items: [
+          '**インストール：** リファレンスサーバーは `@modelcontextprotocol/server-filesystem`、`npx -y` 経由で実行（グローバルインストール不要）。Goose、Cline、Continue.dev はすべて設定ブロックから自動起動します。',
+          '**パスを allow-list：** サーバーは 1 つ以上のディレクトリ引数を受け取り、それ以外の場所での操作を拒否します。常に明示的で範囲の狭いパスを渡してください — `~` や `/` は絶対に避けてください。',
+          '**公開ツール：** `read_file`、`read_multiple_files`、`write_file`、`edit_file`（行ベースの置換）、`list_directory`、`search_files`、`move_file`、`create_directory`、`directory_tree`。モデルからは `filesystem.read_file` のように見えます。',
+          '**便利機能：** `directory_tree` は JSON ツリーを返し、特定ファイルを読む前にモデルが構造を把握するのに最適です。`search_files` は grep のような再帰検索を行います。',
+          '**リスク面：** サーバーは allow-list を尊重しますが、リスト内では完全な読み書き権限を持ちます。allow-list を唯一のバリアと捉え、ホームフォルダではなく専用 workspace ディレクトリを選んでください。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  filesystem:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-filesystem"\n      - "/Users/you/agent-workspace"\n    env: {}',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: '`/` やホームディレクトリは絶対に allow-list しないでください。専用の `agent-workspace` フォルダを作成し、エージェントに触らせたいファイルのコピーをそこに置き、そのフォルダ内でのみ動作させてください。エージェントが暴走しても、被害は 1 ディレクトリで止まります。',
+          },
+        ],
+      },
+      databaseServer: {
+        id: 'database-server',
+        title: 'SQLite と Postgres サーバー：実データを照会する',
+        content:
+          '**データベースサーバーはモデルを実データで質問に答えられるジュニアアナリストに変えます — read-only に保つことが前提です。** どちらのリファレンスサーバーも `query` ツールと（オプションで）`write_query` ツールを提供します。',
+        items: [
+          '**SQLite サーバー（`@modelcontextprotocol/server-sqlite`）** は `.db` ファイルへのパスを取ります。ログ解析、スキーマのプロトタイピング、データベースを立てずにエクスポートを探索するのに有用です。',
+          '**Postgres サーバー（`@modelcontextprotocol/server-postgres`）** は connection string を取ります。推奨パターンはエージェント用の専用 read-only ロールを作成し、そのロールの connection string を使うことです。',
+          '**公開ツール：** `query`（read-only 設定時は SELECT のみ）、`list_tables`、`describe_table`。Postgres サーバーは `list_schemas` を追加します。一部のフォークは `write_query` を追加しますが、このデータベースでモデルを信頼できる場合以外は無効化しておいてください。',
+          '**スキーマ認識：** 分析的な質問の前に「テーブル一覧を出して、よく使われる 5 つを describe してください」とエージェントに頼んでください — `describe_table` を呼んだモデルは、カラム名を推測したモデルよりはるかに精度が高くなります。',
+          '**コスト：** クエリは直接データベースに飛びます。1 億行テーブルへの不適切な `SELECT *` は人間がやった場合と同じ事故です — ロールは独立した接続プールに置き、statement timeout を設定してください。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  sqlite:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-sqlite"\n      - "--db-path"\n      - "/Users/you/data/events.db"\n    env: {}\n\n  postgres:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-postgres"\n      - "postgresql://agent_ro@127.0.0.1:5432/analytics"\n    env:\n      PGPASSWORD: "${PG_AGENT_PASSWORD}"',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Postgres ロールは一度作成し、エージェントにそれ以上の権限を与えないでください：`CREATE ROLE agent_ro WITH LOGIN PASSWORD \'…\'; GRANT CONNECT ON DATABASE analytics TO agent_ro; GRANT USAGE ON SCHEMA public TO agent_ro; GRANT SELECT ON ALL TABLES IN SCHEMA public TO agent_ro; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO agent_ro;` 続いてロールに `statement_timeout = 30s` を設定してください。エージェントは書き込み不可、drop 不可、無限実行不可になります。',
+          },
+        ],
+      },
+      browserServer: {
+        id: 'browser-server',
+        title: 'ブラウザサーバー：Puppeteer または Playwright で Chromium を操作',
+        content:
+          '**ブラウザサーバーは 4 つのうち最も強力で最も危険です。** 実際の Chromium を起動し、ナビゲーション、クリック、フォーム入力、スクリーンショットを公開します — つまりブラウザでできるすべてが可能で、フォーム送信も含まれます。',
+        items: [
+          '**リファレンスサーバー：** `@modelcontextprotocol/server-puppeteer`（軽量、既定でヘッドレス）と `@modelcontextprotocol/server-playwright`（重め、複数ブラウザ対応）。ローカルエージェントには Puppeteer で十分です。',
+          '**公開ツール：** `navigate`、`screenshot`、`click`、`fill`、`select`、`evaluate`（JavaScript 実行）、`get_page_content`。モデルは構造化テキストを `get_page_content` で読み、視覚的確認に `screenshot` を使います。',
+          '**レイテンシ：** 実ブラウザセッションはアクションあたり 1–5 秒。多段ブラウジングは簡単に 30–60 秒、数万トークンを消費します（ページ内容が大きいため）。32K+ コンテキストウィンドウを使ってください。',
+          '**セレクタ：** モデルは CSS セレクタを選ぶ必要があります。小さいモデルはよく外しますが、27B+ tool calling モデルなら一般的なパターンを安定して扱います。タスクは絞ってください — 「この URL のタイトルと最初の段落を抽出してください」のほうが「サイトを巡回して contact ページを探してください」よりはるかに信頼できます。',
+          '**良いユースケース：** リサーチ（ページを開く、要約する、ノートに追記）、回帰テスト（ナビゲート、クリック、screenshot）、自分が管理するページのフォーム入力。悪いユースケース：本番 Web 上の誤クリックが結果を伴うあらゆる作業。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  puppeteer:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-puppeteer"\n    env:\n      PUPPETEER_HEADLESS: "true"\n      # Block obviously dangerous endpoints at the OS firewall level\n      # rather than relying on the agent to refuse them.',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'ブラウザサーバーに認証情報を絶対に渡さないでください。認証済みセッションが必要なら、事前認証されたブラウザプロファイルを `userDataDir` 経由で渡し、高インパクトサイト（バンキング、メール、クラウドコンソール、決済フォーム）には絶対に navigate させないでください。モデルはボタンの意味を判断できません — テキストを見てクリックするだけです。コンテキストも復旧手段もないインターンと同じ扱いをしてください。',
+          },
+        ],
+      },
+      githubServer: {
+        id: 'github-server',
+        title: 'GitHub サーバー：ローカルモデルから repo、issue、PR を扱う',
+        content:
+          '**GitHub サーバーは自然言語のリポジトリ作業を API call に変換します。** 4 つの中で最も設定が簡単で、personal access token (PAT) の権限を使って範囲を厳しく絞るのも最も容易です。',
+        items: [
+          '**インストール：** `@modelcontextprotocol/server-github`、`GITHUB_PERSONAL_ACCESS_TOKEN` 環境変数に PAT を入れて実行します。トークンが唯一の認証 — サーバー自体に別途設定はありません。',
+          '**公開ツール：** `search_repositories`、`get_file_contents`、`create_or_update_file`、`create_pull_request`、`list_issues`、`create_issue`、`add_issue_comment`、`merge_pull_request`、ほか数十。フルセットは大きいですが、ほとんどのタスクは 5–10 ツールで足ります。',
+          '**PAT を絞る。** 特定 repo に絞った fine-grained PAT を、必要最小限の権限（閲覧は Read、PR/issue 作成は Write）で使ってください。実験的エージェントに対して `repo` 権限のクラシック PAT は使わないでください。',
+          '**実例ワークフロー：** トリアージ（「直近の open issue 20 件を読んで、グルーピングしてラベル案を出してください」）、ドラフト作成（「README を読んで誤字を直す PR を開いてください」）、レポーティング（「今週 stale な PR を教えてください」）。',
+          '**リスク面：** エージェントは issue や PR を作成、コメント、（書き込み権限があれば）コミットを push できます。merge 系ツールはモデルとワークフローの両方を信頼できる場合以外は無効化してください — fine-grained PAT の repo での誤マージは復旧可能ですが、すぐに気付いた場合のみです。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  github:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-github"\n    env:\n      GITHUB_PERSONAL_ACCESS_TOKEN: "${GH_AGENT_PAT}"\n      # Fine-grained PAT scoped to one or two test repos,\n      # not your personal account-wide classic token.',
+        codeLanguage: 'yaml',
+      },
+      securityModel: {
+        id: 'security-model',
+        title: 'モデルを信頼しないセキュリティモデル',
+        content:
+          '**正しいメンタルモデルは「LLM はあなたが渡した鍵を持つ信頼できないインターン」です。** 能力はサーバーと allow-list したインターフェースから来ます — モデルの判断力からは来ません。',
+        items: [
+          '**filesystem サーバーを 1 ディレクトリに限定。** `~` や `/` は絶対に使わないでください。`agent-workspace/` フォルダを選び、エージェントに触らせたいファイルのコピーを置きます。エージェントが暴走しても、最悪のケースは 1 フォルダです。',
+          '**データベースサーバーは既定で read-only 運用。** 専用の `agent_ro` ロールを `SELECT` のみの権限と 30 秒の statement timeout で作成すれば、ある種のインシデントカテゴリ全体が消えます。',
+          '**書き込みやシェル系ツールはすべて明示的承認の後ろに。** Goose、Cline、Continue.dev はそれぞれツール単位の承認ルールをサポートしています。読み取りツールは既定で許可、`write_file`、`edit_file`、`execute_command`、`create_pull_request`、フォーム送信を行うブラウザアクションには承認を要求してください。',
+          '**監査ログを使ってください。** すべての MCP クライアントは tool call と結果を記録します。長時間セッション後にログをスキャンしてください：モデルがあなたが想定しなかった操作を試みていることに気付けます（無害な場合も、権限を絞り直すべき場合もあります）。',
+          '**サードパーティーアクセスはトークンスコープを狭く。** GitHub PAT は 2 つのテスト repo に絞る。Postgres ロールは read-only。ブラウザセッションは認証情報なし。モデルはいずれあなたが想定しなかった操作を試みます；できることの限界は、モデルが正しく振る舞うことに依存させてはいけません。',
+          '**機密データ作業時はエージェントを air-gap してください。** プライベートデータを扱うとき、エージェント実行中はホストのネットワークアクセスを無効化（または network namespace を使用）してください。ローカルスタックはマシンから何も出しませんが、defense-in-depth はサードパーティーサーバーの不具合をキャッチします。',
+          '**MCP サーバー選定は依存関係選びと同様に扱ってください。** リファレンスサーバーはよくメンテされていますが、サードパーティーサーバーの多くはそうではありません。認証情報を渡す前にサーバーのコードを読んでください。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '便利な失敗回復習慣：些細でないエージェントタスクの前に `git stash`（または `git checkout -b agent/<task>`）。タスク後に diff を確認し、欲しい部分だけ残し、それ以外は破棄します。これは長時間の Cline や Aider セッションを安全に保つ慣習と同じです — 広いパターンは [Continue.dev vs Cline vs Aider 比較](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) を参照してください。',
+          },
+        ],
+      },
+      vsClaudeDesktop: {
+        id: 'vs-claude-desktop',
+        title: 'ローカル MCP vs Claude Desktop：何が変わり、何が残るか',
+        content:
+          '**プロトコルとサーバーは同一です。モデルとクライアントだけが変わります。** これが MCP の重要性そのものです — ツーリング投資はローカルとクラウド構成間でクリーンに移植できます。',
+        columns: ['レイヤー', 'Claude Desktop', 'ローカル Ollama + Goose'],
+        rows: [
+          { 'レイヤー': 'モデル', 'Claude Desktop': 'Claude（Anthropic、クラウド）', 'ローカル Ollama + Goose': 'Gemma 4、GLM-5.1、Qwen3、または Llama 3.3（ローカル）' },
+          { 'レイヤー': 'クライアント', 'Claude Desktop': 'Claude Desktop アプリ', 'ローカル Ollama + Goose': 'Goose、Cline、Continue.dev、または LM Studio' },
+          { 'レイヤー': 'サーバー', 'Claude Desktop': '同じ MCP サーバー', 'ローカル Ollama + Goose': '同じ MCP サーバー' },
+          { 'レイヤー': 'プロトコル', 'Claude Desktop': 'MCP（JSON-RPC 2.0）', 'ローカル Ollama + Goose': 'MCP（JSON-RPC 2.0）' },
+          { 'レイヤー': 'リクエストコスト', 'Claude Desktop': 'トークン課金 API', 'ローカル Ollama + Goose': '0 円 — ローカル推論' },
+          { 'レイヤー': 'プライバシー', 'Claude Desktop': '会話は Anthropic に送信', 'ローカル Ollama + Goose': 'マシン上に留まる' },
+          { 'レイヤー': 'レート制限', 'Claude Desktop': 'API レート制限が適用', 'ローカル Ollama + Goose': 'ハードウェアスループットのみが制約' },
+          { 'レイヤー': 'tool call 品質', 'Claude Desktop': 'best-in-class', 'ローカル Ollama + Goose': '27B+ なら良好、7B 未満で急激に劣化' },
+          { 'レイヤー': 'インターネット必要', 'Claude Desktop': '必要', 'ローカル Ollama + Goose': 'サーバー自身が fetch する場合のみ（例：ブラウザ）' },
+          { 'レイヤー': 'セットアップ時間', 'Claude Desktop': '5 分', 'ローカル Ollama + Goose': '15 分（初回のみ）' },
+        ],
+      },
+      pickingModel: {
+        id: 'picking-model',
+        title: 'ローカル MCP 用 tool calling モデルの選定',
+        content:
+          '**tool call の信頼性はモデルサイズと学習に依存し、ハーネスではありません。** Cline で形式不正な tool call を出すモデルは、Goose でも同じ理由で形式不正な tool call を出します。',
+        items: [
+          '**Gemma 4 27B（`gemma4:27b`）** — Google の tool call 学習はサイズに対して best-in-class。16 GB unified memory または 24 GB VRAM で Q4_K_M に収まります。一般推論は良好；連鎖した tool call にはやや保守的です。',
+          '**GLM-5.1 32B（`glm5:32b`）** — Zhipu のモデルは tool call 信頼性が非常に高く、out of the box で 128K コンテキストウィンドウ。Gemma 4 よりやや重め；24 GB GPU に余裕で収まります。',
+          '**Qwen3 32B（`qwen3:32b`）** — バランスが良く、dense な 32B が MCP をクリーンに処理し、長時間エージェントループでも安定します。**Qwen3-Coder 30B（`qwen3-coder:30b`）** はエージェント作業がコード形態の場合の最良の選択です。',
+          '**Llama 3.3 70B（`llama3.3:70b`）** — 最高の天井ですが最も重い。Q4_K_M で 48 GB+ unified memory または 2× 24 GB GPU。ハードウェアが対応している場合のみ；通常は小さいモデルで十分です。',
+          '**MCP 作業で避けるべきもの：** 7B 未満すべて、明示的な tool call 学習のない汎用モデルすべて。形式不正な call を出してループが止まり、ハーネスを責めることになりますが — ハーネスは問題ありません。',
+          '任意のモデルで tool call 品質を改善する構造化プロンプティング手法は、[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=ja) を参照してください。',
+          '頭ごなしの比較データは、[2026 年のローカル tool calling 最強モデル](/ja/power-local-llm/best-local-models-tool-calling-2026) を参照してください。',
+        ],
+      },
+      mcpVsFunctionCalling: {
+        id: 'mcp-vs-function-calling',
+        title: 'MCP vs プレーン Function Calling：違いは何か',
+        content:
+          '**Function calling はモデルが出力するもの。MCP はクライアントとツールが互いを見つけるためのプロトコル。** 異なる層に存在し協調します；どちらかがもう一方を置き換えるわけではありません。',
+        items: [
+          '**Function calling** は LLM 側の能力です：モデルがツール名と引数を記述する構造化 JSON を出力します。OpenAI Tools、Anthropic Tools、Ollama の tool call API はすべて同じ考え方を、わずかに異なる wire format で使います。',
+          '**MCP** はその上に乗ります：ツールがどう記述、発見、呼び出し、返却されるかを、プロセス間で標準化します。Function calling モデル単体ではあなたの filesystem を知りませんが、MCP サーバーが filesystem 操作を提供し、クライアントがモデルの function calling API にマッピングし、モデルがそれを呼び出せるようになります。',
+          '**メリットは interop です。** filesystem サーバーを一度書けば、Claude Desktop、Goose、Cline、Continue.dev、LM Studio が変更なしで使います。モデルを Claude から Gemma 4 に変えても、サーバーは変わりません。',
+          '**Function calling だけでエージェントは作れます。** プロジェクトごとに filesystem、データベース、ブラウザのハンドラを再実装することになります。MCP ならそれらは out-of-the-box の依存関係です。',
+          '**1 回限りのスクリプトには素の function calling のほうが簡単です。** プロジェクトやモデルをまたいで再利用したいものなら、数日以内に MCP のほうが手間が少なくなります。',
+        ],
+      },
+      nihonNoKatsuyo: {
+        id: 'nihon-katsuyo',
+        title: '日本ユーザーのための活用ポイント',
+        content:
+          '**日本企業にとってローカル MCP は、クラウドエージェントが直面する個人情報保護法（APPI）と METI AI ガバナンスのハードルを直接下げます。** モデル、クライアント、すべてのツールサーバーが自社マシン上で動く構成なら、データは一切エンドポイントを離れません。',
+        items: [
+          '**METI AI ガバナンス 2024：** 経済産業省の AI ガバナンスガイドラインは、特に金融、医療、法務など規制業界での AI 利用において、データ保護とトレーサビリティを求めています。ローカル MCP スタックは外部データ送信を排除し、監査ログでトレーサビリティを担保するため、これらの要件にクリーンに整合します。',
+          '**個人情報保護法（APPI）：** 顧客データや従業員データをクラウド AI プロバイダーに送るには、第三者提供の同意とリスク評価が必要です。ローカル推論ではこの第三者提供自体が発生せず、契約上の負担と説明責任が大幅に軽減されます。',
+          '**日本企業のユースケース：** 法律事務所、税理士法人、医療機関、製造業の設計部門、人事 — クライアント・患者・従業員データを OpenAI、Anthropic、Google に送れない領域すべて。Apple M5 Mac mini や RTX 4090 搭載ワークステーションで 27B–32B モデルが動き、書類要約、契約レビュー、社内データベースに対するコード片の検証ができます。',
+          '**東アジアのデータ越境：** 日本、シンガポール、マレーシア、韓国はそれぞれ独自のデータ residency 枠組みを持ち、APAC 全域へのクロスボーダー転送には個別の評価が必要です。ローカル推論はこの転送を完全に回避し、東アジアでの multi-region 展開時のコンプライアンス負担を取り除きます。',
+          '**日本の中堅企業（中小企業）：** 大企業向けに作られたクラウド AI 契約は、中小企業にとってはコスト・契約レビュー両面でハードルが高いケースが多く、PoC が頓挫しがちです。ローカル MCP スタックは設備投資 1 回（マシン代）のみで月額課金なし、契約も社内のみで完結します。',
+          '**監査と説明責任：** MCP クライアントの監査ログ（Goose、Cline、Continue.dev）は「エージェントが想定外の操作をしていないこと」を示す主たる証拠になります。WORM ストレージや、エージェント自身からは上書き不可能な Git リポジトリに保存してください。日本の監査文化との親和性は高いです。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'ローカル MCP セットアップでよくある間違い',
+        items: [
+          '**間違い 1：小さい汎用モデルを使う。** 7B 未満（および tool call ファインチューニングなしの 7B–13B 汎用モデルの大半）は形式不正な tool call を出します。27B+ tool call チューン済みモデルを使い、ハーネスと戦うのをやめてください。',
+          '**間違い 2：ホームディレクトリを allow-list する。** 「テストだけ」のはずの `~` の allow-list は本番運用に残ります。最初から専用の `agent-workspace` を作ってください。',
+          '**間違い 3：データベースサーバーを read/write モードで放置。** 自信を持ったエージェントが本番テーブルに書く `DELETE` クエリこそ、これで防げるインシデントです。`agent_ro` を既定にし、書き込みが明示的に必要なタスクのためだけに、その期間だけ別の writable ロールを立ててください。',
+          '**間違い 4：すべてのツールを自動承認。** 「すべて承認」トグルは便利で危険です。読み取りツール（`read_file`、`list_directory`、`query`）は自動承認、書き込み・シェル・PR 系は常に承認を要求してください。',
+          '**間違い 5：多段ブラウザ作業に 32K コンテキストモデル。** ページ内容は大きく、3 ページ巡回で推論前に 32K トークンを使い切ることがあります。ブラウザ重めのタスクには 128K コンテキストモデルを使ってください。',
+          '**間違い 6：エージェントに判断力があると仮定。** ありません。モデルは「これは本番データベース」「この PR はデプロイされる」という概念を持ちません。権限が唯一のバリアです。',
+          '**間違い 7：リファレンスサーバーを最初に全部入れる。** ツールが多い = system prompt が大きい = ツール選択が遅く不正確になります。`filesystem` から始めて、必要になったら他を追加してください。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        items: [
+          '[Model Context Protocol 仕様](https://modelcontextprotocol.io/) — 公式仕様、JSON-RPC スキーマ、transport およびライフサイクル定義。',
+          '[modelcontextprotocol/servers GitHub リポジトリ](https://github.com/modelcontextprotocol/servers) — リファレンスサーバー（filesystem、sqlite、postgres、github、puppeteer など）と設定ドキュメント。',
+          '[Goose プロジェクトドキュメント](https://block.github.io/goose/) — CLI インストール、Ollama プロバイダー設定、MCP サーバー設定構文。',
+          '[Ollama モデルライブラリ](https://ollama.com/library) — 利用可能なローカルモデル、tool call サポートフラグ、本ガイドで参照する量子化レベル。',
+          '[Cline GitHub リポジトリ](https://github.com/cline/cline) — VS Code MCP クライアント実装、MCP サーバーパネル。',
+          '[Continue.dev ドキュメント](https://docs.continue.dev/) — Continue.dev クライアント用 `mcpServers` 設定ブロックリファレンス。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'MCP とは何で、ローカル AI にとってなぜ重要ですか？',
+            a: 'Model Context Protocol（MCP）はオープンな JSON-RPC 2.0 プロトコルで、クライアント（Goose、Cline、Continue.dev、LM Studio、Claude Desktop）が言語モデルとツールサーバーを統一的に接続できるようにします。ローカル AI にとって重要な理由は、chat モデルをエージェントに変える層を標準化することです — ツールサーバーを 1 度書けば、ローカル Ollama モデルを含む任意のクライアントとモデルで使えます。MCP がなければ、各プロジェクトが自前のクライアントに対してファイル/データベース/ブラウザのツールを再発明することになります。',
+          },
+          {
+            q: 'MCP は Claude Desktop なしで動きますか？',
+            a: 'はい。プロトコルはオープンで Claude Desktop からは完全に独立しています。2026 年現在、Goose、Cline、Continue.dev、LM Studio はすべてローカル Ollama モデルで動作する MCP クライアント実装を提供しています。リファレンスサーバー（filesystem、sqlite、postgres、puppeteer、github）は準拠する任意のクライアント配下で変更なしに動きます。',
+          },
+          {
+            q: 'MCP に最も適したローカルモデルは何ですか？',
+            a: '2026 年 5 月時点で最も信頼できる選択肢は、Gemma 4 27B、GLM-5.1 32B、Qwen3 32B（コード形態の作業なら Qwen3-Coder 30B）、Llama 3.3 70B です。4 つすべてが明示的な tool call 学習を持ち、MCP クライアントがルーティング可能なクリーンな function calling JSON を出力します。7B 未満（および tool call ファインチューニングのない汎用モデルの大半）は形式不正な tool call を頻繁に出します。',
+          },
+          {
+            q: 'MCP は安全ですか — エージェントがファイルを削除できますか？',
+            a: '許可すれば可能です。安全性はサーバーの設定から来ており、プロトコルからではありません。filesystem サーバーは allow-list したパス内でのみ動作します — 専用の `agent-workspace` ディレクトリに絞ってください。データベースサーバーは SELECT のみのロールを使えば read-only で動きます。書き込み、シェル、PR 系ツールには常に明示的承認を要求し、読み取り操作のみ自動承認にしてください。監査ログで事後にエージェントが何をしたか正確に確認できます。',
+          },
+          {
+            q: '自分で MCP サーバーを書けますか？',
+            a: 'はい — そして SDK が手間を減らします。公式の TypeScript と Python SDK（`@modelcontextprotocol/sdk` と `mcp`）が JSON-RPC のプラミングを処理します。JSON Schema でツールを定義しハンドラ関数を書けば、SDK が stdio で公開します。社内 API をラップする 1–2 ツールの単機能サーバーなら 50–100 行のファイル 1 つで済みます。',
+          },
+          {
+            q: 'MCP は Windows で動きますか？',
+            a: 'はい。Ollama、Goose、Cline、Continue.dev、LM Studio はすべて Windows で動きます。MCP サーバーは Node.js または Python のサブプロセスとして動作し、両ランタイムは Windows で完全にサポートされています。プラットフォーム固有の唯一の落とし穴はパス処理 — 設定でフォワードスラッシュを使うか、バックスラッシュを正しくエスケープしてください。それ以外は macOS や Linux と同じ体験です。',
+          },
+          {
+            q: 'MCP の tool call をサンドボックスする方法は？',
+            a: '3 層でリスクの大半をカバーします。第一に、各サーバーを設定レベルで狭く絞る：filesystem は 1 ディレクトリ、データベースは read-only ロール、GitHub はテスト repo に絞った fine-grained PAT。第二に、クライアントのツール単位の承認ルールを使う：read は自動承認、write は承認要求。第三に、エージェントを `git stash` 可能な workspace 内に置き、破壊的なものは git で取り消せるようにする。機密タスクではサーバーが明示的に必要とするエンドポイント以外ネットワークアクセスのないホストで実行してください。',
+          },
+          {
+            q: 'MCP エージェントは HTTP リクエストを行えますか？',
+            a: 'はい、特定のサーバー経由で。ブラウザサーバー（puppeteer または playwright）は実 Chromium を操作し、モデルが navigate するすべてのリクエストを行います。複数のサードパーティーサーバーが `http_get`/`http_post` ツールをより直接的に公開しています。filesystem およびデータベースサーバーはネットワークリクエストを行わず、ローカルリソースのみを操作します。',
+          },
+          {
+            q: 'MCP は Ollama とネイティブに動きますか、それともラッパーが必要ですか？',
+            a: 'Ollama 自体は MCP を話しません — OpenAI 互換 chat API を提供します。Ollama の chat API と MCP サーバーを橋渡しするクライアント（Goose、Cline、Continue.dev、LM Studio）が必要です。クライアントがモデルの tool call を正しい MCP サーバーへルーティングし、結果を会話に戻します。ユーザー視点ではクライアントをインストールして Ollama に向けるだけで、追加の設定は不要です。',
+          },
+          {
+            q: 'MCP と function calling の違いは何ですか？',
+            a: 'Function calling はツール名と引数を記述する構造化 JSON を LLM が出力すること — モデルの能力です。MCP はそれらのツールがプロセス間で記述、発見、呼び出し、返却される方法を定めるプロトコル — interop 層です。両者は協調します：クライアントが MCP のツール定義をモデルの function calling 形式に変換し、モデルが function call を出し、クライアントがそれを MCP サーバーへ戻し、サーバーが実行します。MCP がなくても function calling はできますが、プロジェクトごとに filesystem/database/browser のハンドラを再実装することになります。MCP があれば同じサーバーが任意のクライアントで動作します。',
+          },
+          {
+            q: 'ローカル MCP エージェントで METI AI ガバナンスをどう適用しますか？',
+            a: '経済産業省の AI ガバナンスガイドライン 2024 は、特に金融・医療・法務などの規制業界における AI 活用に対し、データ保護、トレーサビリティ、説明責任を求めています。ローカル MCP スタックはこれら 3 つの軸すべてに直接整合します：第一に、外部データ送信が発生しないため第三者提供のリスクがなく、APPI（個人情報保護法）の負担も軽減されます。第二に、MCP クライアントの監査ログ（Goose、Cline、Continue.dev）が tool call と結果を時系列で記録し、トレーサビリティの主たる証拠になります。第三に、サーバーごとの権限設定（filesystem は 1 ディレクトリ、データベースは read-only ロール、GitHub は fine-grained PAT）が、説明責任に必要な「何が起きうるか」の境界を明確に定義します。日本の大企業の社内監査文化と整合性が高く、内部監査での説明が容易です。',
+          },
+          {
+            q: 'ローカル MCP エージェントで日本企業のセキュリティ要件を満たせますか？',
+            a: 'はい、特にデータ residency と第三者監査の観点で適合性が高いです。日本企業のセキュリティ標準（金融機関の FISC、医療機関の 3 省 2 ガイドライン、製造業の社内 ISMS）はいずれも、機密データを扱うシステムについて「外部送信の有無」「アクセス制御」「監査ログ」を中心評価項目に置いています。ローカル MCP スタックでは、Apple M5 Mac mini や RTX 4090 搭載ワークステーションでモデル、MCP クライアント、すべてのサーバーが同一マシン上で動作するため、外部送信は発生しません。アクセス制御は filesystem サーバーの allow-list、Postgres ロール、GitHub PAT の fine-grained scope で多層化できます。監査ログは MCP クライアント側で自動収集され、WORM ストレージや内部 Git リポジトリに保管できます。中堅企業（中小企業）にとっては、月額課金なしで PoC を社内完結できる点も大きな利点です。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[2026 年のローカル tool calling 最強モデル](/ja/power-local-llm/best-local-models-tool-calling-2026) — 上記推奨モデル（Gemma 4、GLM-5.1、Qwen3、Llama 3.3）の頭ごなしベンチマーク。',
+          '[自律ローカルエージェントは実際に動く](/ja/power-local-llm/autonomous-local-agents-actually-work) — 長時間タスクでローカル MCP エージェントが何を確実にこなし何ができないかの現実チェック。',
+          '[Continue.dev vs Cline vs Aider：2026 年最強のローカルコーディングエージェント](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) — コード形態作業のための隣接エージェント文脈；Cline と Continue.dev も MCP クライアント。',
+          '[2026 年の最強ローカル LLM](/local-llms/best-local-llms-2026?lang=ja) — より広い open-weights ランドスケープのモデル権威。',
+          '[ローカル AI エージェントで Zapier を置き換える](/ja/power-local-llm/replace-zapier-with-local-ai-agents) — 同じ MCP スタックのワークフロー自動化フレーミング。',
+          '[Power Local LLM ハブ](/ja/power-local-llm) — ガイド全集。',
+        ],
+      },
+    },
+  },
 }
