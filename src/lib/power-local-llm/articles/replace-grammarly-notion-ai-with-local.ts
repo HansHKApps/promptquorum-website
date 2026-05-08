@@ -1,6 +1,6 @@
 // Power Local LLM — Replace Grammarly and Notion AI with a Local LLM (2026)
 // Slug: replace-grammarly-notion-ai-with-local
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// EN, DE, FR, JA, ZH translations.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -347,6 +347,1397 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — Q&A over private business documents, extending the note Q&A use case to larger document libraries.',
           '[Easiest Local AI App for Windows, Mac, and Linux](/power-local-llm/easiest-local-ai-app-windows-mac-linux) — if you need to set up your first local AI app before implementing the writing assistant workflow.',
           '[Local AI Agents for Business Workflows: EU Compliance](/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — GDPR and EU AI Act context for deploying local AI writing assistants in European business settings.',
+        ],
+      },
+    },
+  },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Grammarly und Notion AI durch ein lokales LLM ersetzen (2026)',
+    seoTitle: 'Grammarly & Notion AI durch lokales LLM ersetzen 2026',
+    intro:
+      'Grammarly und Notion AI senden Ihre Texte zur Verarbeitung an Cloud-Server — Ihre E-Mail-Entwürfe, vertraulichen Dokumente und persönlichen Notizen laufen systembedingt durch fremde KI-Dienste. Ein lokales LLM, betrieben über Ollama oder LM Studio, kann beide für die meisten Schreibaufgaben ersetzen: Grammatik- und Stilkorrektur, Dokumentenentwurf, Inhaltszusammenfassung und KI-gestützte Notizverwaltung — ohne dass Daten Ihren Rechner verlassen.',
+    metaDescription:
+      'Grammarly und Notion AI durch ein lokales LLM ersetzen: Datenschutz, Kosten, Funktionsvergleich. Einrichtung für Schreibkorrektur, Dokumente und Notizen.',
+    twitterDescription:
+      'Grammarly (Grammatik/Stil) und Notion AI (Entwürfe, Notizen) durch ein lokales LLM ersetzen — keine Daten verlassen Ihren Rechner. Datenschutz, Kosten, Setup.',
+    current_models_mentioned: [
+      'Qwen3 14B',
+      'Phi-4 Mini',
+      'Llama 3.3 70B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M3 MacBook Air 8 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 3060 12 GB',
+    ],
+    audience:
+      'Wissensarbeiter, Autoren, Studierende und datenschutzbewusste Fachkräfte, die Grammarly für Schreibkorrektur und Notion AI für Dokumentenassistenz nutzen und beide durch eine lokale KI ersetzen möchten, die ihre Inhalte privat hält.',
+    readTime: '11 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'Grammarly durch lokales LLM ersetzen',
+    targetKeywords: [
+      'Grammarly durch lokales LLM ersetzen',
+      'Notion AI lokal ersetzen',
+      'lokaler LLM-Schreibassistent',
+      'Grammarly-Alternative ohne Cloud',
+      'Notion AI Alternative Datenschutz',
+      'Ollama Schreibkorrektur',
+    ],
+    leadAnswerBlock:
+      '**Ein lokales LLM, das über Ollama läuft, ersetzt die Kernfunktionen von Grammarly und Notion AI, ohne dass Daten Ihren Rechner verlassen. Für den Grammarly-Ersatz: Grammatik- und Stilkorrektur über eine Prompt-Vorlage ("Korrigiere die Grammatik und verbessere den Stil dieses Absatzes. Gib nur den korrigierten Text zurück.") auf jedem Modell ab Phi-4 Mini aufwärts. Für den Notion-AI-Ersatz: Dokumentenentwurf, Inhaltsausbau und KI-Q&A über Ihren Notizen via Obsidian mit dem Smart-Connections-Plugin oder dem Copilot-Plugin, das auf Ollama zeigt. Der Datenschutzvorteil ist eindeutig: Grammarlys Nutzungsbedingungen räumen dem Anbieter eine Lizenz zur Produktverbesserung an Ihren Texten ein; Notion AI sendet Ihre Dokumente an die OpenAI-API. Ein lokales LLM verarbeitet dieselben Aufgaben auf Ihrer Hardware ohne externe Datenübertragung. Die Funktionslücke ist im Alltag schmal; sie wird sichtbarer bei anspruchsvollem Kreativtext und feiner Tonanpassung, wo Grammarlys domänenspezifisches Training einem allgemeinen lokalen Modell überlegen ist.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Kann ein lokales LLM Grammarly und Notion AI ersetzen?',
+        answer:
+          'Ja, für die meisten Alltagsfälle. Für Grammarly: Ein lokales LLM übernimmt Grammatikkorrektur, Klarheits-Umschreibung, Vermeidung von Passivkonstruktionen und einfache Tonanpassung. Es bietet keine Echtzeit-Inline-Vorschläge oder Browser-Erweiterung wie Grammarly, aber ein Prompt-basierter Ablauf deckt dieselben Korrekturen auf Anforderung ab. Für Notion AI: Obsidian mit dem Copilot-Plugin auf Ollama ersetzt Dokumentenentwurf, Inhaltsausbau und KI-Q&A über Notizen. Der Datenschutzvorteil ist vollständig — keine Dokumentinhalte verlassen Ihren Rechner. Bestes lokales Modell für Schreibassistenz: Qwen3 14B (beste Qualität auf 16-GB-Systemen) oder Phi-4 Mini (ausreichend, läuft auf 8 GB).',
+        bullets: [
+          'Grammatikkorrektur: Jedes lokale Modell mit dem System-Prompt "Nur Grammatik korrigieren, nur korrigierten Text zurückgeben" deckt 90 %+ von Grammarlys Kernfunktion ab.',
+          'Stilverbesserung: Qwen3 14B und Llama 3.3 70B liefern bessere Prosa-Umschreibungen als Phi-4 Mini; der zusätzliche VRAM lohnt sich für ernsthafte Schreibarbeit.',
+          'Notion-AI-Ersatz: Obsidian + Copilot-Plugin (oder Smart Connections) auf Ollama — KI-Q&A über Notizen, Dokumentenentwurf, Inhaltsausbau.',
+          'Echtzeitkorrektur: Lokale LLMs integrieren sich nicht so in Browser-Textfelder wie Grammarly. Der Ablauf ist Copy-Paste oder eine Hotkey-App.',
+          'Datenschutz: Grammarly lizenziert Ihren Text zur Produktverbesserung; Notion AI sendet an OpenAI. Lokales LLM verarbeitet alles lokal ohne externe Übertragung.',
+          'Kosten: Grammarly Premium kostet 12–30 €/Monat; Notion AI zusätzlich 8–10 €/Nutzer/Monat. Lokales LLM ist nach den Hardwarekosten kostenlos.',
+          'Bestes lokales Modell: Qwen3 14B für Qualität; Phi-4 Mini für Geschwindigkeit und niedrigen VRAM.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+      { label: 'Schnelle Fakten', anchor: '#quick-facts' },
+      { label: 'Was Sie ersetzen (und was nicht)', anchor: '#what-you-replace' },
+      { label: 'Grammarly ersetzen: Grammatik- und Stilkorrektur', anchor: '#grammarly-replacement' },
+      { label: 'Notion AI ersetzen: Dokumente und Notizen', anchor: '#notion-replacement' },
+      { label: 'Integrationsoptionen', anchor: '#integrations' },
+      { label: 'Modell-Empfehlungen', anchor: '#models' },
+      { label: 'Datenschutz-Vergleich', anchor: '#privacy' },
+      { label: 'Kostenvergleich', anchor: '#cost' },
+      { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+      { label: 'Quellen', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Lokale LLMs ersetzen Grammarlys Kernfunktion — Grammatik, Klarheit und einfache Stilkorrektur — aber nicht die Echtzeit-Inline-Browserintegration.** Der Ablauf wechselt von "Korrekturen erscheinen beim Tippen" zu "Text einfügen → korrigierte Version erhalten → zurück einfügen". Für viele Nutzer ist das ein akzeptabler Kompromiss für vollständige Privatsphäre.',
+          '**Der Notion-AI-Ersatz ist vollständiger.** Obsidian mit dem Copilot-Plugin (oder Smart Connections), das auf eine lokale Ollama-Instanz zeigt, bildet Notion AIs Dokumentenentwurf, Inhaltsausbau und KI-Q&A über Notizen ab — mit allen Dokumentinhalten lokal verarbeitet.',
+          '**Der Datenschutzpunkt ist nicht theoretisch.** Grammarlys Nutzungsbedingungen räumen eine breite Lizenz an eingereichten Texten zur Produktverbesserung ein. Notion AI sendet Dokumentinhalte an die OpenAI-API. Lokale LLMs verarbeiten dieselben Texte auf Ihrer Hardware ohne externe Übertragung.',
+          '**Qwen3 14B ist das beste lokale Modell für Schreibaufgaben auf 16-GB-Systemen.** Es liefert die natürlichsten Prosa-Umschreibungen und Tonanpassungen unter den lokal lauffähigen Modellen. Phi-4 Mini ist die praktische Alternative auf 8-GB-Systemen — ausreichend für Grammatikkorrektur, schwächer bei feinem Stil.',
+          '**Kosten sind ein starkes Sekundärargument.** Grammarly Premium (12–30 €/Monat) + Notion AI (8–10 €/Nutzer/Monat) ergeben 20–40 €/Monat. Das lokale LLM-Äquivalent ist nach den einmaligen Hardwarekosten für Ollama kostenlos.',
+          '**Die Funktionslücke verengt sich auf zwei konkrete Aufgaben.** Grammarly hat messbar bessere Echtzeit-Integration (Inline-Korrekturen in Gmail, Google Docs, Browser-Feldern) und bessere domänenspezifische Stilvorschläge (Recht, Wissenschaft, Business). Außerhalb dieser beiden Fälle ist ein gut geprompteter lokaler Modell gleichwertig.',
+          '**Die Einrichtung dauert 20 Minuten.** Ollama-Installation + Modell-Download + Obsidian-Plugin-Konfiguration ist eine einmalige Sache. Danach ist der Ablauf so schnell wie die Cloud-Alternativen.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Schnelle Fakten',
+        items: [
+          '**Grammarly-Kosten:** Kostenlos (eingeschränkt), Premium 12 €/Monat, Business 15 €/Nutzer/Monat.',
+          '**Notion-AI-Kosten:** 8 €/Nutzer/Monat (jährlich) zusätzlich zum Notion-Abo.',
+          '**Lokale-LLM-Kosten:** Kostenlos (Open-Source-Modelle + Ollama) — nur Hardware-Stromkosten.',
+          '**Bestes lokales Schreibmodell (Qualität):** Qwen3 14B auf 16-GB-System.',
+          '**Bestes lokales Schreibmodell (Speed/VRAM):** Phi-4 Mini auf 8-GB-System.',
+          '**Grammarly-Datenschutz:** Zur Korrektur eingereichter Text fällt unter eine Datenlizenz zur Produktverbesserung.',
+          '**Notion-AI-Datenschutz:** Dokumentinhalte werden an die OpenAI-API gesendet; abgedeckt durch Notions Auftragsverarbeitungs-Anhang.',
+        ],
+      },
+      whatYouReplace: {
+        id: 'what-you-replace',
+        title: 'Was Sie ersetzen (und was nicht)',
+        content:
+          '**Der realistische Ersatz deckt rund 80 % typischer Grammarly- und Notion-AI-Nutzung ab, doch die verbleibenden 20 % sind für manche Nutzer entscheidend.** Wer die Lücke vor dem Wechsel kennt, vermeidet Enttäuschung.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ein lokales LLM ersetzt Grammarlys Grammatikkorrektur, Stilumschreibung und Tonanpassung sowie Notion AIs Dokumentenentwurf und Notiz-Q&A — nicht aber Grammarlys Echtzeit-Inline-Browserintegration oder Notion AIs native Editor-Integration.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Grammarly funktioniert, indem es jeden Tastenanschlag im Browser beobachtet und Korrekturen beim Tippen anzeigt. Ein lokales LLM kann das nicht, ohne dass Sie eine eigene Browser-Erweiterung bauen. Was es kann: jeden Text korrigieren, den Sie hineinkopieren — der Ablauf wird also: E-Mail entwerfen, alles markieren, kopieren, in die lokale KI-App oder das Prompt-Tool einfügen, korrigierte Version zurückerhalten, in Gmail einfügen. Langsamer als Inline-Korrekturen, aber privat und kostenlos.',
+          },
+        ],
+        columns: ['Funktion', 'Grammarly', 'Lokales-LLM-Äquivalent', 'Lücke'],
+        rows: [
+          { 'Funktion': 'Grammatikkorrektur', 'Grammarly': 'Inline, in Echtzeit', 'Lokales-LLM-Äquivalent': 'Prompt-basiert, auf Anforderung', 'Lücke': 'Keine Echtzeit-Inline-Korrektur; Copy-Paste-Ablauf' },
+          { 'Funktion': 'Stilvorschläge', 'Grammarly': 'Inline mit Erklärungen', 'Lokales-LLM-Äquivalent': 'Prompt-basierte Umschreibung', 'Lücke': 'Standardmäßig keine Erklärungen pro Vorschlag' },
+          { 'Funktion': 'Tonerkennung', 'Grammarly': 'Automatisch, benannte Töne', 'Lokales-LLM-Äquivalent': 'Im Prompt vorgegebener Zielton', 'Lücke': 'Erfordert explizite Tonangabe' },
+          { 'Funktion': 'Browser-Erweiterung', 'Grammarly': 'Funktioniert in Gmail, Google Docs, Browser-Feldern', 'Lokales-LLM-Äquivalent': 'Copy-Paste oder OS-Hotkey-App', 'Lücke': 'Keine native Browserintegration' },
+          { 'Funktion': 'Notion AI: Dokumentenentwurf', 'Grammarly': 'Nicht zutreffend', 'Lokales-LLM-Äquivalent': 'Obsidian + Copilot-Plugin → Ollama', 'Lücke': 'Nicht in Notion-UI eingebettet; separate App' },
+          { 'Funktion': 'Notion AI: Q&A über Notizen', 'Grammarly': 'Nicht zutreffend', 'Lokales-LLM-Äquivalent': 'Obsidian Smart Connections → Ollama', 'Lücke': 'Erfordert Obsidian-Vault; keine Notion-DB-Suche' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Integrationslücke wiegt am stärksten, wenn Sie in Gmail, Google Docs oder anderen browserbasierten Editoren schreiben, in denen Grammarly Inline-Korrekturen einblendet. Wenn Sie hauptsächlich in Desktop-Apps schreiben (Word, Obsidian, VS Code, Scrivener), ist der Copy-Paste-Ablauf mit einem lokalen LLM kaum langsamer als Inline-Vorschläge. Klären Sie Ihre Schreibumgebung vor der Entscheidung.',
+          },
+        ],
+      },
+      grammarlyReplacement: {
+        id: 'grammarly-replacement',
+        title: 'Grammarly ersetzen: Grammatik- und Stilkorrektur',
+        content:
+          '**Der Grammarly-Ersatz-Workflow besteht aus zwei Prompt-Vorlagen und einer Tastenkombinations-App.** Eine Vorlage für reine Grammatikkorrektur; eine für vollständige Stilumschreibung. Beide brauchen 2–5 Sekunden auf Phi-4 Mini, 1–3 Sekunden auf Qwen3 14B.',
+        promptExamples: [
+          {
+            label: 'Reine Grammatikkorrektur (Grammarly-Basis-Ersatz)',
+            text: 'Korrigiere Grammatik, Rechtschreibung und Zeichensetzung des folgenden Textes. Gib nur den korrigierten Text zurück — keine Erklärung, kein Markup, keine Zusammenfassung.\n\n[Text einfügen]',
+          },
+          {
+            label: 'Stil- und Klarheits-Umschreibung (Grammarly-Premium-Ersatz)',
+            text: 'Schreibe den folgenden Text auf Klarheit und professionellen Ton um. Korrigiere Grammatik, vermeide Passiv, kürze lange Sätze und entferne Füllphrasen. Gib nur den umgeschriebenen Text zurück.\n\nZielton: [professionell / locker / akademisch / überzeugend]\nZielpublikum: [allgemein / fachlich / Führungsebene]\n\n[Text einfügen]',
+          },
+          {
+            label: 'Tonanpassungs-Prompt',
+            text: 'Schreibe die folgende E-Mail [förmlicher / lockerer / knapper / diplomatischer] um. Lass alle Sachinhalte unverändert. Gib nur die umgeschriebene E-Mail zurück.\n\n[E-Mail einfügen]',
+          },
+        ],
+        items: [
+          '**System-Prompt für Schreibsitzungen:** Setzen Sie den System-Prompt Ihrer lokalen KI-App auf "Du bist ein professioneller Lektor. Gib nur korrigierten oder umgeschriebenen Text zurück — keine Einleitung, keine Erklärung, kein Kommentar." Das verhindert, dass das Modell "Toller Text! Hier meine Korrektur..." vor die Ausgabe stellt.',
+          '**Tastenkombinations-Integration:** Nutzen Sie Raycast (macOS) oder AutoHotkey (Windows), um eine Hotkey-Belegung zu erstellen, die markierten Text an Ollama schickt und das Ergebnis einfügt. Das reduziert den Copy-Paste-Ablauf auf einen einzigen Tastendruck.',
+          '**Reine Grammatik vs. Stilumschreibung:** Verwenden Sie getrennte Prompts für Grammatikkorrektur und vollständige Stilumschreibung. Reine Grammatikkorrektur ist sicherer für juristische, technische oder strukturierte Dokumente, in denen ein verändertes Wording die Bedeutung verschieben könnte. Stilumschreibung passt zu E-Mails, Blog-Beiträgen und allgemeinem Schriftverkehr.',
+          '**Für wissenschaftliche Texte:** Ergänzen Sie "Belasse alle Zitate, Fachbegriffe und Domänen-Vokabular unverändert" im Stilumschreibungs-Prompt. Ohne diese Anweisung vereinfachen oder paraphrasieren Modelle gelegentlich Fachsprache.',
+          '**Für Geschäfts-E-Mails:** Ergänzen Sie "Der Absender ist [Name], [Funktion] bei [Unternehmen]. Die E-Mail soll dessen professionelle Stimme widerspiegeln, ohne Personalisierungsdetails in der Ausgabe." Das verankert das Register im professionellen Kontext des Absenders.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Effizientester Grammarly-Ersatz-Workflow auf macOS: Ollama installieren, Qwen3 14B laden und einen Raycast-AI-Befehl mit dem Grammatikkorrektur-Prompt anlegen. Markieren Sie beliebigen Text in jeder App, lösen Sie den Raycast-Hotkey aus, und die korrigierte Version ersetzt die Markierung. Das erreicht für absatzlange Korrekturen die Geschwindigkeit von Grammarly-Inline-Korrekturen.',
+          },
+        ],
+      },
+      notionReplacement: {
+        id: 'notion-replacement',
+        title: 'Notion AI ersetzen: Dokumente und Notizen',
+        content:
+          '**Obsidian mit lokalem Ollama-Backend ist das nächste funktionale Äquivalent zu Notion AI für Notiz- und Wissensarbeiter.** Die Notion-Datenbankstruktur lässt sich nicht 1:1 abbilden, aber für Dokumentenentwurf und KI-Q&A über Ihre Notizen ist die Funktionalität gleichwertig — bei vollständig lokaler Verarbeitung.',
+        items: [
+          '**Obsidian installieren** von obsidian.md. Kostenlos für den privaten Gebrauch. Erstellen Sie einen Vault für Ihre Notizen — das ist das Verzeichnis, das die KI-Plugins indexieren.',
+          '**Copilot-Plugin installieren** (Community-Plugins → "Copilot" suchen). Wählen Sie in den Plugin-Einstellungen "Ollama" als LLM-Anbieter, geben Sie `http://localhost:11434` als Basis-URL an und wählen Sie Ihr Modell. Copilot fügt eine Chat-Seitenleiste in Obsidian hinzu, in der Sie Fragen stellen und Inhalte im Kontext der aktuellen Notiz erzeugen.',
+          '**Smart-Connections-Plugin installieren** für Q&A über den gesamten Vault. Smart Connections indiziert alle Notizen als Embeddings über ein lokales Embedding-Modell (nomic-embed-text via Ollama) und holt vor jeder Anfrage relevante Notizen, bevor sie an das LLM gehen. Das ist der direkte Notion-AI-"Frag-meine-Notizen"-Ersatz.',
+          '**Dokumentenentwurf:** Tippen Sie im Copilot-Chat "Entwirf ein/eine [Dokumenttyp] zum Thema [Thema] basierend auf diesen Notizen: [Stichpunkte einfügen]". Das Plugin nimmt den aktuellen Notizkontext automatisch auf. Die Ausgabe erscheint im Chat; per Copy-Paste in die Notiz übernehmen.',
+          '**Inhaltsausbau:** Markieren Sie eine Stichpunkt-Gliederung in der Notiz, öffnen Sie die Copilot-Befehlspalette und wählen Sie "Auswahl ausbauen" — das Modell wandelt die Gliederung im Schreibregister der Notiz in Prosa um.',
+          '**Wochenrückblick erzeugen:** "Fasse meine Notizen dieser Woche im Wochenrückblick-Format zusammen: Erfolge, Blockaden und nächste Schritte." Smart Connections holt Notizen der letzten 7 Tage und übergibt sie automatisch dem LLM.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidian mit dem Copilot- oder Smart-Connections-Plugin auf einer lokalen Ollama-Instanz ersetzt Notion AI für Dokumentenentwurf, Inhaltsausbau und KI-Q&A über Notizen — bei vollständig lokaler Verarbeitung und ohne Datenübertragung an externe Server.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Die Einrichtung: Obsidian installieren, Ollama installieren, Qwen3 14B laden, das Copilot-Community-Plugin in Obsidian installieren, auf localhost:11434 zeigen lassen. Das ist der vollständige Ersatz für Notion AIs KI-Funktionen. Ihre Notizen bleiben im Vault-Ordner (reine Markdown-Dateien, vollständig portabel). Der KI-Chat läuft auf Ihrer Maschine. Nichts verlässt Ihren Rechner.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Obsidian speichert Notizen als reine Markdown-Dateien in einem Ordner Ihrer Wahl. Anders als Notions proprietäres Datenbankformat sind Ihre Notizen in jedem Texteditor lesbar und jederzeit exportierbar. Das ist ein zweiter Datenschutz- und Portabilitätsvorteil gegenüber Notion — Ihr Wissensbestand ist nicht in einer Cloud-Plattform eingeschlossen.',
+          },
+        ],
+      },
+      integrations: {
+        id: 'integrations',
+        title: 'Integrationsoptionen',
+        content:
+          '**Drei Integrationsstufen: einfach (Copy-Paste), mittel (Hotkey-App) und fortgeschritten (Browser-Erweiterung oder OS-weite KI-Schicht).** Beginnen Sie auf der Stufe, die zu Ihrer technischen Sicherheit passt.',
+        columns: ['Integrationsstufe', 'Wie', 'Apps', 'Geeignet für'],
+        rows: [
+          { 'Integrationsstufe': 'Einfach (Copy-Paste)', 'Wie': 'Lokale KI-App öffnen, Text einfügen, Ergebnis kopieren', 'Apps': 'LM Studio Chat, Ollama CLI, Open WebUI', 'Geeignet für': 'Gelegentliche Korrekturen; jedes OS' },
+          { 'Integrationsstufe': 'Mittel (Hotkey)', 'Wie': 'Text markieren → Hotkey → korrigierte Version ersetzt Markierung', 'Apps': 'Raycast AI (macOS), AutoHotkey + Ollama (Windows)', 'Geeignet für': 'Häufige Korrekturen in jeder App; minimale Workflow-Änderung' },
+          { 'Integrationsstufe': 'Mittel (Schreib-App)', 'Wie': 'KI-Assistent direkt im Schreib-Tool', 'Apps': 'Obsidian + Copilot-Plugin, VS Code + Continue.dev', 'Geeignet für': 'Autoren und Entwickler, die in diesen Apps leben' },
+          { 'Integrationsstufe': 'Fortgeschritten (Browser-Erweiterung)', 'Wie': 'Eigene Erweiterung schickt markierten Text an die lokale Ollama-API', 'Apps': 'Eigene Chrome-/Firefox-Erweiterung (Open-Source-Vorlagen auf GitHub)', 'Geeignet für': 'Power-User, die Grammarly-artige Browserintegration wollen' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Auf macOS ist Raycast mit einem eigenen KI-Befehl die schnellste Mittelstufe. Raycast (kostenlos) installieren, Extensions → AI Commands → New Command, den Grammatikkorrektur-Prompt einsetzen und einen Hotkey vergeben. Markieren Sie Text in beliebiger App → Hotkey → korrigierter Text ersetzt die Markierung. Erreicht rund 80 % von Grammarlys Geschwindigkeitsvorteil bei voller lokaler Privatsphäre.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'Modell-Empfehlungen für Schreibaufgaben',
+        content:
+          '**Schreibassistenz bevorzugt Modelle mit starker Anweisungsbefolgung und kohärenter Prosa.** Die Rangfolge unterscheidet sich von der für Coding oder Mathematik.',
+        columns: ['Aufgabe', 'Bestes Modell', 'Alternative (weniger VRAM)', 'Begründung'],
+        rows: [
+          { 'Aufgabe': 'Grammatikkorrektur', 'Bestes Modell': 'Qwen3 14B', 'Alternative (weniger VRAM)': 'Phi-4 Mini', 'Begründung': 'Genau, minimale unnötige Änderungen, korrekte Zeichensetzung' },
+          { 'Aufgabe': 'Stilumschreibung', 'Bestes Modell': 'Qwen3 14B oder Llama 3.3 70B', 'Alternative (weniger VRAM)': 'Mistral 7B', 'Begründung': 'Natürliche Prosa; vermeidet KI-Register' },
+          { 'Aufgabe': 'Tonanpassung', 'Bestes Modell': 'Llama 3.3 70B', 'Alternative (weniger VRAM)': 'Qwen3 14B', 'Begründung': 'Erhält Sachinhalt am besten bei Registerwechsel' },
+          { 'Aufgabe': 'Dokumentenentwurf (Notion-AI-Ersatz)', 'Bestes Modell': 'Qwen3 14B', 'Alternative (weniger VRAM)': 'Phi-4 Mini', 'Begründung': 'Solide Strukturerzeugung, folgt Format-Anweisungen' },
+          { 'Aufgabe': 'Notiz-Zusammenfassung / Q&A', 'Bestes Modell': 'Qwen3 14B', 'Alternative (weniger VRAM)': 'Phi-4 Mini', 'Begründung': 'Ausreichend für Zusammenfassung ab jeder Modellgröße über 3B' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Setzen Sie eine "Keine KI-typischen Phrasen"-Anweisung in den System-Prompt. Modelle nutzen standardmäßig hedgendes KI-Register ("Sicher! Hier ist die korrigierte Version..."). Ein System-Prompt "Gib nur den korrigierten Text zurück, keine Einleitung, kein Kommentar" eliminiert das. Für Stilumschreibungen ergänzen: "Verwende die Phrasen \'in die Tiefe gehen\', \'Geflecht\', \'fördern\', \'Reich von\' oder \'erwähnenswert\' nicht."',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Datenschutz-Vergleich',
+        content:
+          '**Der Datenschutzunterschied zwischen Cloud-Schreibassistenten und lokalen LLMs ist strukturell.** Cloud-Dienste können Ihren Text nicht verarbeiten, ohne ihn zu erhalten; lokale LLMs können Ihren Text nicht versenden, ohne eine ausdrückliche ausgehende Verbindung.',
+        items: [
+          '**Grammarly-Datenlizenz:** Grammarlys Nutzungsbedingungen (Abschnitt 5) räumen "eine weltweite, nicht-exklusive, gebührenfreie Lizenz [...] zur Nutzung, Vervielfältigung, Bearbeitung, Anpassung, Veröffentlichung, Übersetzung und Verbreitung" eingereichter Texte zur Produktverbesserung und Sicherheit ein. Das ist nicht versteckt, bedeutet aber, dass jeder in Grammarly korrigierte Satz potenziell in deren Trainings-Pipeline landet.',
+          '**Notion-AI-Datenfluss:** Notion sendet Dokumentinhalte für KI-Funktionen an die OpenAI-API. Abgedeckt durch Notions Auftragsverarbeitungs-Anhang, der vertragliche Schutzmaßnahmen vorsieht — die Daten verlassen jedoch Notions Server und gelangen in die OpenAI-Infrastruktur.',
+          '**Lokales-LLM-Datenfluss:** null. Ollama bindet sich standardmäßig an localhost. Während der Inferenz wird keine ausgehende Verbindung aufgebaut. Modellgewichte sind statische Dateien auf der Festplatte. Ihr Text wird im Speicher tokenisiert, verarbeitet und verworfen. Kein Log, kein Cache, kein externer Dienst.',
+          '**DSGVO-Pflichten und Berufsgeheimnis (DACH):** In Deutschland, Österreich und der Schweiz fallen Cloud-Schreibassistenten unter Artikel 28 DSGVO (Auftragsverarbeitung) und erfordern einen AV-Vertrag mit hinreichenden Garantien. Berufsgeheimnisträger (Anwälte nach § 203 StGB, Ärzte, Steuerberater) und Mittelstands-Unternehmen, die sich an die BSI-Grundschutz-Kataloge halten, dürfen Mandanten- oder Patientendaten nur unter strengen Voraussetzungen an Cloud-KI senden. Lokale LLMs umgehen diese Hürde, weil keine Daten den Rechner verlassen — eine Auftragsverarbeitung im Rechtssinne entfällt.',
+          '**Telemetrie:** Grammarly erfasst Tippverhalten, Dokumentmetadaten und Nutzungsmuster zusätzlich zum Textinhalt. Notion erfasst Interaktionsdaten und Funktionsnutzung. Ollama hat optionales anonymes Crash-Reporting (deaktivierbar). Lokale KI-Apps (LM Studio, Jan) bieten abschaltbare Analyse-Telemetrie — Chat-Inhalte sind nie enthalten.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Wenn Sie Grammarly für Geschäftskorrespondenz, Vertragsentwürfe oder andere Inhalte unter Vertraulichkeitspflicht einsetzen — prüfen Sie die Datenrichtlinien Ihres Unternehmens und Grammarlys Enterprise-Datenvereinbarungen, bevor Sie davon ausgehen, dass die Inhalte geschützt sind. Grammarly Business bietet eine Zero-Data-Retention-Option, die jedoch den Business-Tarif und ausdrückliche Aktivierung erfordert.',
+          },
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'Kostenvergleich',
+        content:
+          '**Wer beide Tools ersetzt, spart 20–40 €/Monat an Abo-Gebühren.** Die lokale LLM-Einrichtung ist softwareseitig kostenlos; laufende Kosten entstehen nur durch Strom.',
+        columns: ['Tool', 'Monatlich', 'Jährlich', 'Hinweise'],
+        rows: [
+          { 'Tool': 'Grammarly Free', 'Monatlich': '0 €', 'Jährlich': '0 €', 'Hinweise': 'Nur Basis-Grammatik; keine Stil- oder Tonfunktionen' },
+          { 'Tool': 'Grammarly Premium', 'Monatlich': '12–30 €/Monat', 'Jährlich': '144–360 €/Jahr', 'Hinweise': 'Volle Grammatik + Stil + Ton; Browser-Erweiterung' },
+          { 'Tool': 'Notion AI', 'Monatlich': '8–10 €/Nutzer/Monat', 'Jährlich': '96–120 €/Jahr', 'Hinweise': 'Aufpreis zum bestehenden Notion-Abo' },
+          { 'Tool': 'Ollama (lokales LLM)', 'Monatlich': '0 €', 'Jährlich': '0 €', 'Hinweise': 'Frei und Open Source; Strom ca. 1–5 €/Monat je nach Nutzung' },
+          { 'Tool': 'Obsidian (Notion-Ersatz)', 'Monatlich': '0 € (privat)', 'Jährlich': '0 €', 'Hinweise': 'Privat kostenlos; 50 €/Jahr für gewerbliche Nutzung' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Wenn Sie unentschlossen sind, verlagern Sie zunächst nur die Grammatikkorrektur 30 Tage lang auf ein lokales Modell. Lassen Sie Grammarly für die Browser-Integration aktiv. Bewerten Sie, ob die lokale Korrekturqualität und der Copy-Paste-Ablauf für Ihre Schreibarbeit akzeptabel sind. Erst danach entscheiden Sie über die Grammarly-Kündigung. Der Wechsel von Notion AI ist friktionsärmer, sofern Sie Obsidian als Notiz-Schicht akzeptieren.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler',
+        items: [
+          '**Kein System-Prompt für das Ausgabeformat.** Ohne System-Prompt stellen Modelle "Sicher! Hier der korrigierte Text:" voran, fügen Erklärungen hinzu und nutzen KI-Register-Phrasen. Setzen Sie immer einen System-Prompt, der "Gib nur den korrigierten Text zurück" vorgibt.',
+          '**Phi-4 Mini für komplexe Stilumschreibungen verwenden.** Phi-4 Mini bewältigt Grammatikkorrektur gut, liefert aber formelhaftere Stilumschreibungen als Qwen3 14B. Für stilschwere Arbeit das größere Modell wählen.',
+          '**Notion-UI-Gleichwertigkeit von Obsidian erwarten.** Obsidian ist ein Markdown-Editor, keine Datenbank. Wenn Ihr Notion-Workflow auf Datenbanken, Ansichten und Relationen beruht, ist Obsidian kein vollständiger Notion-Ersatz — nur die KI-Funktionen lassen sich übertragen. Prüfen Sie vor dem Wechsel, ob die Datenbankfunktionen kritisch sind.',
+          '**Keine Wortobergrenze bei Stilumschreibungen.** Ohne Obergrenze blähen Modelle die Umschreibung auf. Ergänzen Sie "Halte den umgeschriebenen Text innerhalb von 10 % der ursprünglichen Wortzahl" in jedem Stilumschreibungs-Prompt.',
+          '**Komplette Dokumente an ein kleines Modell senden.** Phi-4 Mini (3,8B) verliert bei Dokumenten über ca. 3.000 Wörter Kohärenz. Bei langen Dokumenten in Abschnitte gliedern und einzeln korrigieren. Qwen3 14B bewältigt 8.000+ Wörter zuverlässig.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          'Grammarly Terms of Service — Abschnitt 5 (Datenlizenz) — [grammarly.com/terms](https://www.grammarly.com/terms)',
+          'Notion AI Datenverarbeitungs-Anhang — [notion.so/help/notion-ai](https://www.notion.so/help/notion-ai)',
+          'Obsidian Copilot Plugin — Dokumentation — [GitHub: logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)',
+          'Obsidian Smart Connections Plugin — [GitHub: brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections)',
+          'Ollama — Datenverarbeitung und Telemetrie — [ollama.com/privacy](https://ollama.com/privacy)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Ist ein lokales LLM bei Grammatikkorrektur so gut wie Grammarly?',
+            a: 'Für die meisten alltäglichen Grammatik-, Zeichensetzungs- und Rechtschreibfehler: ja, Qwen3 14B ist Grammarly Premium ebenbürtig. Wo Grammarly im Vorteil bleibt: Echtzeit-Inline-Korrekturen beim Tippen, domänenspezifische Stilrichtlinien (Grammarly unterstützt APA, MLA, Chicago) und die Browser-Erweiterung in Gmail, Google Docs und anderen Web-Apps. Ein lokales LLM erfordert für Browser-Felder einen Copy-Paste-Ablauf.',
+          },
+          {
+            q: 'Kann ich Obsidian als vollständigen Notion-Ersatz nutzen?',
+            a: 'Obsidian ersetzt Notions Notiz- und Wissensbasisfunktionen gut. Es ersetzt nicht Notions Datenbank-, Projektmanagement- und Relationsfunktionen. Wenn Sie Notion vor allem für Notizen, Dokumente und Wikis nutzen — ist Obsidian ein vollständiger Ersatz. Wenn Sie auf Notion-Datenbanken, Board-Ansichten oder Relations-Eigenschaften angewiesen sind — brauchen Sie zusätzliche Tools (Anytype, Capacities oder Notion selbst für die Datenbank-Schicht und Obsidian für das Schreiben).',
+          },
+          {
+            q: 'Welches lokale Modell kommt Grammarlys Schreibvorschlägen am nächsten?',
+            a: 'Qwen3 14B liefert die Grammarly-ähnlichste Ausgabe für Grammatik- und Stilkorrekturen — präzise, vermeidet unnötige Änderungen und erhält die ursprüngliche Stimme. Llama 3.3 70B liefert in komplexen Umschreibungen leicht natürlichere Prosa, benötigt aber mehr VRAM. Phi-4 Mini reicht für einfache Grammatikkorrektur, vereinfacht aber bei Stilumschreibungen zu stark.',
+          },
+          {
+            q: 'Schickt das Obsidian-Copilot-Plugin meine Notizen in die Cloud?',
+            a: 'Nicht, wenn es auf eine lokale Ollama-Instanz konfiguriert ist. Das Plugin unterstützt sowohl Cloud-LLMs (OpenAI, Anthropic) als auch lokales Ollama. Wenn Sie Ollama als LLM-Anbieter wählen und die localhost-URL eintragen, läuft die gesamte KI-Verarbeitung lokal. Keine Notiz wird extern übertragen. Bestätigen können Sie das, indem Sie den Netzwerkverkehr mit Tools wie Little Snitch (macOS) oder Wireshark beobachten, falls Sie eine prüfungsfeste Bestätigung brauchen.',
+          },
+          {
+            q: 'Kann ich ein lokales LLM in Google Docs oder Gmail nutzen?',
+            a: 'Nicht direkt — es gibt keine lokale-LLM-Browser-Erweiterung, die wie Grammarly nativ in Browser-Textfelder eingreift. Workarounds: (1) Text in Google Docs markieren, kopieren, in die lokale KI-App einfügen, korrigierte Version kopieren, zurück in Google Docs einfügen; (2) auf macOS Raycast mit einem eigenen KI-Befehl, der markierten Text verarbeitet und ersetzt; (3) eine eigene Chrome-Erweiterung, die markierten Text liest und die lokale Ollama-API aufruft (Open-Source-Vorlagen liegen auf GitHub). Keiner dieser Wege erreicht Grammarlys nahtlose Inline-Erfahrung.',
+          },
+          {
+            q: 'Ist diese Einrichtung HIPAA- oder DSGVO-konform für den professionellen Einsatz?',
+            a: 'Ein lokales LLM, das Daten ausschließlich auf Ihrer Maschine ohne externe Übertragung verarbeitet, adressiert die Kern-Datenübertragungssorge sowohl bei HIPAA als auch bei der DSGVO. Die Konformität hängt jedoch vom gesamten Technologie-Stack, Ihren Sicherheitskontrollen und den konkreten regulatorischen Anforderungen ab. Ein lokales LLM ist nicht automatisch konform — Sie müssen Endpunktsicherheit, physischen Geräteschutz und Zugriffskontrollen prüfen. Für formelle Konformität konsultieren Sie Ihre/n Datenschutzbeauftragte/n. Lokale Verarbeitung beseitigt das Thema "Drittanbieter-Auftragsverarbeiter", ersetzt aber kein vollständiges Compliance-Programm.',
+          },
+          {
+            q: 'Welcher lokale Schreibassistent eignet sich am besten für wissenschaftliche Texte?',
+            a: 'Qwen3 14B mit System-Prompt: "Korrigiere ausschließlich Grammatik und Zeichensetzung — verändere nicht Vokabular, Satzstruktur oder Inhalt. Belasse alle Zitate, Fachbegriffe und domänenspezifische Sprache unverändert." Das entspricht Grammarlys reinem Grammatikmodus, der bei wissenschaftlichen Texten die sicherste Einstellung ist, weil veränderte Phrasen die Bedeutung verschieben oder zitierte Inhalte zu modifizieren scheinen können.',
+          },
+          {
+            q: 'Kann ich Notion AIs Meeting-Notiz-Zusammenfassung lokal ersetzen?',
+            a: 'Ja. Exportieren Sie Meeting-Notizen als Text- oder Markdown-Datei (oder fügen Sie das Transkript direkt ein). Verwenden Sie den Prompt: "Fasse diese Meeting-Notizen zusammen in: (1) getroffene Entscheidungen, (2) Aufgaben mit Verantwortlichen, (3) offene Fragen. Stichpunkte je Abschnitt. Maximal 300 Wörter." Jedes Modell ab Phi-4 Mini bewältigt Meeting-Zusammenfassungen zuverlässig. Für wiederkehrende Meetings legen Sie eine gespeicherte Prompt-Vorlage in Ihrer lokalen KI-App an.',
+          },
+          {
+            q: 'Muss ich bei der Verwendung eines lokalen LLM die DSGVO beachten?',
+            a: 'Lokale LLMs verarbeiten personenbezogene Daten weiterhin im Sinne der DSGVO — der entscheidende Punkt ist jedoch, dass keine Übermittlung an einen Auftragsverarbeiter (Art. 28 DSGVO) stattfindet, weil die Daten den Rechner nicht verlassen. Damit entfällt die Pflicht zum AV-Vertrag mit einem Cloud-Anbieter und die Prüfung von Drittlandtransfers (Schrems II). Sie bleiben Verantwortlicher i.S.v. Art. 4 Nr. 7 DSGVO und müssen weiterhin Zwecke, Rechtsgrundlagen und Betroffenenrechte (Art. 13–22) abbilden. Empfohlen für DACH-Unternehmen: BSI-Grundschutz-Kataloge zur Endpunktabsicherung anwenden, Festplattenverschlüsselung aktivieren und in der Datenschutzerklärung dokumentieren, dass die KI-Verarbeitung lokal stattfindet.',
+          },
+          {
+            q: 'Ist diese Lösung für den deutschen Mittelstand geeignet?',
+            a: 'Ja, besonders für Mittelstand-Unternehmen mit Berufsgeheimnis-Anforderungen oder Kunden im DACH-Raum, die DSGVO-Konformität nachweisen müssen. Empfohlene Vorgehensweise: Qwen3 14B oder Llama 3.3 70B auf einem Apple M5 MacBook Pro 16 GB oder einer NVIDIA RTX 3060 12 GB pro Arbeitsplatz, Obsidian für die Notiz-Schicht, Ollama als zentraler Inferenz-Server im internen Netz (LAN) für mehrere Nutzer. Vorteile gegenüber Cloud-Lösungen: keine Auftragsverarbeitung, keine Schrems-II-Risiken, vollständige Datensouveränität. Praktische Empfehlungen: BSI-Grundschutz-Bausteine SYS.4.5 (Endgeräte) und APP.4.3 (relationale Datenbanksysteme) anwenden, Backup-Strategie für Modellgewichte und Vault-Verzeichnis dokumentieren, Schulungsplan für Mitarbeiter zur Prompt-Hygiene erstellen. Für Kanzleien, Steuerberatungen, Arztpraxen und Ingenieurbüros ist der lokale Stack der direkteste Weg zur konformen KI-Nutzung.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Lokale-LLM-E-Mail- und Kalender-Automatisierung](/power-local-llm/local-llm-email-and-calendar-automation?lang=de) — Automatisierung von E-Mail-Entwürfen und Kalenderverwaltung mit lokalen LLMs als Ergänzung zum Schreibassistenten.',
+          '[Lokale LLM-Prompts für Belletristik-Autoren](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=de) — Prompt-Vorlagen für kreatives Schreiben jenseits der Grammatikkorrektur, etwa Szenen- und Figurenarbeit.',
+          '[Zapier durch lokale KI-Agenten ersetzen](/power-local-llm/replace-zapier-with-local-ai-agents?lang=de) — Lokale Workflow-Automatisierung, die Schreibwerkzeuge mit anderen Geschäftsprozessen verbindet.',
+          '[Lokales RAG für vertrauliche Geschäftsdaten](/power-local-llm/local-rag-for-private-business-data?lang=de) — Q&A über vertrauliche Geschäftsunterlagen, Erweiterung des Notiz-Q&A auf größere Dokumentbestände.',
+          '[Einfachste lokale KI-App für Windows, Mac und Linux](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=de) — Falls Sie Ihre erste lokale KI-App vor dem Schreibassistenten-Workflow einrichten müssen.',
+          '[Lokale KI-Agenten für Geschäftsprozesse: EU-Compliance](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=de) — DSGVO- und EU-AI-Act-Kontext für lokale KI-Schreibassistenten in europäischen Unternehmen.',
+        ],
+      },
+    },
+  },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Remplacer Grammarly et Notion AI par un LLM local (2026)',
+    seoTitle: 'Remplacer Grammarly et Notion AI par un LLM local 2026',
+    intro:
+      'Grammarly et Notion AI envoient vos textes vers des serveurs cloud — vos brouillons d\'e-mails, documents confidentiels et notes personnelles transitent par conception par des systèmes d\'IA tiers. Un LLM local exécuté via Ollama ou LM Studio remplace les deux pour la plupart des tâches d\'écriture : correction grammaticale et stylistique, rédaction de documents, synthèse de contenu et prise de notes assistée — sans qu\'aucune donnée ne quitte votre machine.',
+    metaDescription:
+      'Remplacer Grammarly et Notion AI par un LLM local : confidentialité, coûts, comparatif. Configuration pour correction d\'écriture, documents et automatisation.',
+    twitterDescription:
+      'Remplacer Grammarly (grammaire/style) et Notion AI (rédaction, notes) par un LLM local — aucune donnée ne quitte votre machine. Confidentialité, coûts, mise en place.',
+    current_models_mentioned: [
+      'Qwen3 14B',
+      'Phi-4 Mini',
+      'Llama 3.3 70B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M3 MacBook Air 8 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 3060 12 GB',
+    ],
+    audience:
+      'Travailleurs du savoir, rédacteurs, étudiants et professionnels soucieux de confidentialité qui utilisent Grammarly pour la correction et Notion AI pour l\'assistance documentaire, et veulent les remplacer par une IA locale qui garde leurs contenus privés.',
+    readTime: '11 min de lecture',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'remplacer Grammarly LLM local',
+    targetKeywords: [
+      'remplacer grammarly llm local',
+      'remplacer notion ai local',
+      'assistant écriture llm local',
+      'alternative grammarly sans cloud',
+      'alternative notion ai confidentialité',
+      'ollama correction écriture',
+    ],
+    leadAnswerBlock:
+      '**Un LLM local exécuté via Ollama remplace les fonctions principales de Grammarly et Notion AI sans qu\'aucune donnée ne quitte votre machine. Pour Grammarly : correction grammaticale et stylistique via un modèle de prompt ("Corrige la grammaire et améliore le style de ce paragraphe. Renvoie uniquement le texte corrigé.") sur tout modèle à partir de Phi-4 Mini. Pour Notion AI : rédaction de documents, expansion de contenu et Q&R sur vos notes via Obsidian avec le plugin Smart Connections ou le plugin Copilot pointé sur Ollama. L\'argument confidentialité est net : les conditions de Grammarly leur accordent une licence sur vos textes pour l\'amélioration produit ; Notion AI envoie vos documents à l\'API d\'OpenAI. Un LLM local traite les mêmes tâches sur votre matériel sans transmission externe. L\'écart de capacité est faible au quotidien ; il devient visible sur l\'écriture créative complexe et l\'ajustement de ton fin, où l\'entraînement spécialisé de Grammarly l\'emporte sur un modèle local généraliste.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Un LLM local peut-il remplacer Grammarly et Notion AI ?',
+        answer:
+          'Oui, pour la plupart des cas quotidiens. Pour Grammarly : un LLM local gère la correction grammaticale, la réécriture pour la clarté, la suppression du passif et l\'ajustement de ton de base. Il n\'égale pas les suggestions inline en temps réel ni l\'extension navigateur, mais un flux par prompt couvre les mêmes corrections à la demande. Pour Notion AI : Obsidian avec le plugin Copilot pointé sur Ollama remplace la rédaction, l\'expansion de contenu et les Q&R sur vos notes. L\'avantage en confidentialité est total — aucun contenu ne quitte votre machine. Meilleur modèle local pour l\'écriture : Qwen3 14B (qualité optimale sur 16 Go) ou Phi-4 Mini (qualité correcte, 8 Go).',
+        bullets: [
+          'Correction grammaticale : tout modèle local avec un system prompt "corrige la grammaire uniquement, renvoie le texte corrigé" couvre 90 %+ du cœur de Grammarly.',
+          'Amélioration stylistique : Qwen3 14B et Llama 3.3 70B produisent de meilleures réécritures que Phi-4 Mini ; le VRAM supplémentaire vaut la peine pour un travail sérieux.',
+          'Remplacement de Notion AI : Obsidian + plugin Copilot (ou Smart Connections) sur Ollama — Q&R sur les notes, rédaction, expansion de contenu.',
+          'Correction en temps réel : les LLM locaux ne s\'intègrent pas aux champs de texte du navigateur comme Grammarly. Le flux est copier-coller ou une app via raccourci.',
+          'Confidentialité : Grammarly licencie vos textes pour l\'amélioration produit ; Notion AI envoie à OpenAI. Le LLM local traite tout localement, sans transmission externe.',
+          'Coût : Grammarly Premium coûte 12 à 30 €/mois ; Notion AI ajoute 8 à 10 €/utilisateur/mois. Le LLM local est gratuit après le coût matériel.',
+          'Meilleur modèle local : Qwen3 14B pour la qualité ; Phi-4 Mini pour la rapidité et un faible VRAM.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Faits rapides', anchor: '#quick-facts' },
+      { label: 'Ce que vous remplacez (et ce que vous ne remplacez pas)', anchor: '#what-you-replace' },
+      { label: 'Remplacer Grammarly : grammaire et style', anchor: '#grammarly-replacement' },
+      { label: 'Remplacer Notion AI : documents et notes', anchor: '#notion-replacement' },
+      { label: 'Options d\'intégration', anchor: '#integrations' },
+      { label: 'Recommandations de modèles', anchor: '#models' },
+      { label: 'Comparatif confidentialité', anchor: '#privacy' },
+      { label: 'Comparatif des coûts', anchor: '#cost' },
+      { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Pour aller plus loin', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Les LLM locaux remplacent la fonction principale de Grammarly — grammaire, clarté, style de base — mais pas son intégration inline temps réel dans le navigateur.** Le flux passe de "les corrections apparaissent en tapant" à "coller le texte → obtenir la version corrigée → recoller". Pour beaucoup d\'utilisateurs, ce compromis est acceptable en échange d\'une confidentialité totale.',
+          '**Le remplacement de Notion AI est plus complet.** Obsidian avec le plugin Copilot (ou Smart Connections) pointé sur une instance Ollama locale égale Notion AI sur la rédaction, l\'expansion de contenu et les Q&R sur les notes — avec tout le contenu traité localement.',
+          '**L\'argument confidentialité n\'est pas théorique.** Les conditions de Grammarly accordent une licence large sur les textes soumis pour l\'amélioration produit. Notion AI envoie le contenu à l\'API d\'OpenAI. Les LLM locaux traitent le même texte sur votre matériel sans transmission externe.',
+          '**Qwen3 14B est le meilleur modèle local pour l\'écriture sur 16 Go.** Il produit les réécritures et ajustements de ton les plus naturels parmi les modèles locaux. Phi-4 Mini est l\'alternative pratique sur 8 Go — correct pour la grammaire, plus faible sur le style fin.',
+          '**Le coût est un argument secondaire fort.** Grammarly Premium (12 à 30 €/mois) + Notion AI (8 à 10 €/utilisateur/mois) représente 20 à 40 €/mois. L\'équivalent local est gratuit après le coût matériel unique d\'Ollama.',
+          '**L\'écart de capacité se réduit à deux tâches précises.** Grammarly conserve un avantage mesurable sur l\'intégration temps réel (Gmail, Google Docs, champs de navigateur) et les guides de style spécialisés (juridique, académique, business). En dehors de ces cas, un modèle local bien prompté est équivalent.',
+          '**La mise en place prend 20 minutes.** Installation d\'Ollama + téléchargement du modèle + configuration des plugins Obsidian est ponctuelle. Ensuite, le flux est aussi rapide que les alternatives cloud.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Faits rapides',
+        items: [
+          '**Coût Grammarly :** gratuit (limité), Premium 12 €/mois, Business 15 €/utilisateur/mois.',
+          '**Coût Notion AI :** 8 €/utilisateur/mois (annuel) en plus de l\'abonnement Notion.',
+          '**Coût LLM local :** gratuit (modèles open source + Ollama) — uniquement l\'électricité.',
+          '**Meilleur modèle local pour l\'écriture (qualité) :** Qwen3 14B sur système 16 Go.',
+          '**Meilleur modèle local (vitesse/VRAM) :** Phi-4 Mini sur système 8 Go.',
+          '**Confidentialité Grammarly :** le texte soumis tombe sous une licence de données pour l\'amélioration produit.',
+          '**Confidentialité Notion AI :** contenu envoyé à l\'API OpenAI ; couvert par l\'addendum de traitement de données de Notion.',
+        ],
+      },
+      whatYouReplace: {
+        id: 'what-you-replace',
+        title: 'Ce que vous remplacez (et ce que vous ne remplacez pas)',
+        content:
+          '**Le remplacement réaliste couvre environ 80 % des usages courants de Grammarly et Notion AI, mais les 20 % restants comptent pour certains utilisateurs.** Connaître l\'écart avant de basculer évite les déceptions.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Un LLM local remplace la correction grammaticale, la réécriture stylistique et l\'ajustement de ton de Grammarly, ainsi que la rédaction et les Q&R sur les notes de Notion AI — mais pas l\'intégration inline temps réel de Grammarly dans le navigateur ni l\'intégration native de Notion AI dans son éditeur.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Grammarly observe chaque frappe dans votre navigateur et affiche les corrections au fil de l\'écriture. Un LLM local ne peut pas faire cela sans une extension navigateur sur mesure. Ce qu\'il peut faire : corriger tout texte que vous y collez — le flux devient donc : rédiger l\'e-mail, tout sélectionner, copier, coller dans l\'app IA locale, récupérer la version corrigée, recoller dans Gmail. Plus lent qu\'inline, mais privé et gratuit.',
+          },
+        ],
+        columns: ['Fonctionnalité', 'Grammarly', 'Équivalent LLM local', 'Écart'],
+        rows: [
+          { 'Fonctionnalité': 'Correction grammaticale', 'Grammarly': 'Inline, en temps réel', 'Équivalent LLM local': 'Par prompt, à la demande', 'Écart': 'Pas d\'inline temps réel ; flux copier-coller' },
+          { 'Fonctionnalité': 'Suggestions stylistiques', 'Grammarly': 'Inline avec explications', 'Équivalent LLM local': 'Réécriture par prompt', 'Écart': 'Pas d\'explication par suggestion par défaut' },
+          { 'Fonctionnalité': 'Détection de ton', 'Grammarly': 'Automatique, tons nommés', 'Équivalent LLM local': 'Ton cible spécifié dans le prompt', 'Écart': 'Nécessite une consigne de ton explicite' },
+          { 'Fonctionnalité': 'Extension navigateur', 'Grammarly': 'Fonctionne dans Gmail, Google Docs, champs navigateur', 'Équivalent LLM local': 'Copier-coller ou app via raccourci OS', 'Écart': 'Pas d\'intégration native au navigateur' },
+          { 'Fonctionnalité': 'Notion AI : rédaction', 'Grammarly': 'Sans objet', 'Équivalent LLM local': 'Obsidian + plugin Copilot → Ollama', 'Écart': 'Pas intégré dans l\'UI de Notion ; app séparée' },
+          { 'Fonctionnalité': 'Notion AI : Q&R sur les notes', 'Grammarly': 'Sans objet', 'Équivalent LLM local': 'Obsidian Smart Connections → Ollama', 'Écart': 'Nécessite un coffre Obsidian ; pas de recherche dans les bases Notion' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'L\'écart d\'intégration pèse surtout si vous écrivez dans Gmail, Google Docs ou d\'autres éditeurs basés navigateur où Grammarly affiche les corrections inline. Si vous écrivez surtout dans des apps de bureau (Word, Obsidian, VS Code, Scrivener), le copier-coller avec un LLM local est à peine plus lent que l\'inline. Évaluez votre environnement d\'écriture avant de décider.',
+          },
+        ],
+      },
+      grammarlyReplacement: {
+        id: 'grammarly-replacement',
+        title: 'Remplacer Grammarly : grammaire et style',
+        content:
+          '**Le flux de remplacement de Grammarly tient en deux modèles de prompt et une app à raccourci clavier.** Un modèle pour la correction grammaticale seule ; un pour la réécriture stylistique complète. Les deux prennent 2 à 5 secondes sur Phi-4 Mini, 1 à 3 secondes sur Qwen3 14B.',
+        promptExamples: [
+          {
+            label: 'Correction grammaticale seule (équivalent Grammarly Free)',
+            text: 'Corrige la grammaire, l\'orthographe et la ponctuation du texte suivant. Renvoie uniquement le texte corrigé — pas d\'explication, pas de balisage, pas de résumé.\n\n[coller le texte]',
+          },
+          {
+            label: 'Réécriture style et clarté (équivalent Grammarly Premium)',
+            text: 'Réécris le texte suivant pour la clarté et un ton professionnel. Corrige la grammaire, supprime la voix passive, raccourcis les phrases longues et élimine les expressions superflues. Renvoie uniquement le texte réécrit.\n\nTon cible : [professionnel / familier / académique / persuasif]\nPublic cible : [grand public / technique / dirigeant]\n\n[coller le texte]',
+          },
+          {
+            label: 'Prompt d\'ajustement de ton',
+            text: 'Réécris l\'e-mail suivant de façon [plus formelle / plus décontractée / plus concise / plus diplomatique]. Conserve tout le contenu factuel à l\'identique. Renvoie uniquement l\'e-mail réécrit.\n\n[coller l\'e-mail]',
+          },
+        ],
+        items: [
+          '**System prompt pour les sessions d\'écriture :** définissez le system prompt de votre app IA locale comme "Tu es un éditeur professionnel. Renvoie uniquement le texte corrigé ou réécrit — pas de préambule, pas d\'explication, pas de commentaire." Cela évite que le modèle ajoute "Excellent texte ! Voici ma correction..." avant la sortie.',
+          '**Intégration par raccourci clavier :** utilisez Raycast (macOS) ou AutoHotkey (Windows) pour créer un raccourci qui envoie le texte sélectionné à Ollama et colle le résultat. Le flux copier-coller se réduit à une seule frappe.',
+          '**Grammaire seule vs. réécriture stylistique :** utilisez des prompts distincts. La correction grammaticale seule est plus sûre pour les documents juridiques, techniques ou structurés où changer la formulation peut changer le sens. La réécriture stylistique convient aux e-mails, billets de blog et correspondance générale.',
+          '**Pour l\'écriture académique :** ajoutez "Conserve toutes les citations, termes techniques et le vocabulaire spécialisé inchangés" au prompt de réécriture. Sans cette consigne, les modèles simplifient ou paraphrasent parfois la langue technique.',
+          '**Pour les e-mails professionnels :** ajoutez "L\'expéditeur est [Nom], [Fonction] chez [Entreprise]. L\'e-mail doit refléter sa voix professionnelle sans détails de personnalisation dans la sortie." Cela ancre le registre dans le contexte professionnel de l\'expéditeur.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Le flux le plus efficace sur macOS : installez Ollama, récupérez Qwen3 14B et créez une commande IA Raycast avec le prompt de correction. Sélectionnez du texte dans n\'importe quelle app, déclenchez le raccourci Raycast, et la version corrigée remplace la sélection. Cela atteint la vitesse des corrections Grammarly inline pour la plupart des paragraphes.',
+          },
+        ],
+      },
+      notionReplacement: {
+        id: 'notion-replacement',
+        title: 'Remplacer Notion AI : documents et notes',
+        content:
+          '**Obsidian avec un backend Ollama local est l\'équivalent fonctionnel le plus proche de Notion AI pour les preneurs de notes et travailleurs du savoir.** Il ne reproduit pas la structure de bases de Notion, mais pour la rédaction et les Q&R sur les notes, la capacité est équivalente — avec tout le traitement local.',
+        items: [
+          '**Installer Obsidian** depuis obsidian.md. Gratuit pour un usage personnel. Créez un coffre pour vos notes — c\'est le répertoire que les plugins IA indexeront.',
+          '**Installer le plugin Copilot** (Plugins communautaires → rechercher "Copilot"). Dans les paramètres du plugin, sélectionnez "Ollama" comme fournisseur LLM, indiquez `http://localhost:11434` comme URL de base et choisissez votre modèle. Copilot ajoute une barre latérale de chat dans Obsidian où vous pouvez poser des questions et générer du contenu dans le contexte de la note courante.',
+          '**Installer le plugin Smart Connections** pour les Q&R sur tout le coffre. Smart Connections indexe toutes vos notes en embeddings via un modèle d\'embedding local (nomic-embed-text via Ollama) et récupère les notes pertinentes avant de les envoyer au LLM. C\'est le remplacement direct du "interroge mes notes" de Notion AI.',
+          '**Rédaction de documents :** dans le chat Copilot, tapez "Rédige un [type de document] sur [sujet] à partir de ces notes : [coller les points clés]". Le plugin inclut le contexte de la note courante automatiquement. La sortie apparaît dans le chat ; copier-coller dans la note.',
+          '**Expansion de contenu :** sélectionnez un plan en puces, ouvrez la palette de commandes Copilot et utilisez "Étendre la sélection" — le modèle convertit le plan en prose dans le registre d\'écriture de la note.',
+          '**Génération de revue hebdo :** "Résume mes notes de la semaine au format revue hebdo : succès, blocages, prochaines actions." Smart Connections récupère les notes des 7 derniers jours et les transmet automatiquement au LLM.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidian avec le plugin Copilot ou Smart Connections pointé sur une instance Ollama locale remplace Notion AI pour la rédaction, l\'expansion de contenu et les Q&R sur les notes — avec un traitement entièrement local et sans transmission à un serveur externe.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'La mise en place : installer Obsidian, installer Ollama, récupérer Qwen3 14B, installer le plugin communautaire Copilot dans Obsidian, le pointer sur localhost:11434. C\'est le remplacement complet des fonctions IA de Notion. Vos notes restent dans le dossier du coffre (fichiers Markdown bruts, totalement portables). Le chat IA tourne sur votre machine. Rien ne quitte votre ordinateur.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Obsidian stocke les notes en fichiers Markdown dans un dossier que vous contrôlez. Contrairement au format de base propriétaire de Notion, vos notes sont lisibles dans n\'importe quel éditeur de texte et exportables à tout moment. C\'est un second avantage de confidentialité et de portabilité face à Notion — votre base de connaissances n\'est pas verrouillée dans une plateforme cloud.',
+          },
+        ],
+      },
+      integrations: {
+        id: 'integrations',
+        title: 'Options d\'intégration',
+        content:
+          '**Trois niveaux d\'intégration : basique (copier-coller), intermédiaire (app à raccourci) et avancé (extension navigateur ou couche IA système).** Commencez au niveau qui correspond à votre confort technique.',
+        columns: ['Niveau d\'intégration', 'Comment', 'Apps', 'Idéal pour'],
+        rows: [
+          { 'Niveau d\'intégration': 'Basique (copier-coller)', 'Comment': 'Ouvrir l\'app IA locale, coller le texte, copier le résultat', 'Apps': 'Chat LM Studio, Ollama CLI, Open WebUI', 'Idéal pour': 'Corrections occasionnelles ; tout OS' },
+          { 'Niveau d\'intégration': 'Intermédiaire (raccourci)', 'Comment': 'Sélectionner le texte → raccourci → la version corrigée remplace la sélection', 'Apps': 'Raycast AI (macOS), AutoHotkey + Ollama (Windows)', 'Idéal pour': 'Corrections fréquentes dans toute app ; impact minimal sur le flux' },
+          { 'Niveau d\'intégration': 'Intermédiaire (app d\'écriture)', 'Comment': 'Assistant IA intégré à l\'outil d\'écriture', 'Apps': 'Obsidian + plugin Copilot, VS Code + Continue.dev', 'Idéal pour': 'Rédacteurs et développeurs qui vivent dans ces apps' },
+          { 'Niveau d\'intégration': 'Avancé (extension navigateur)', 'Comment': 'Extension sur mesure qui envoie le texte sélectionné à l\'API Ollama locale', 'Apps': 'Extension Chrome/Firefox sur mesure (modèles open source sur GitHub)', 'Idéal pour': 'Utilisateurs avancés qui veulent une intégration façon Grammarly' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Sur macOS, Raycast avec une commande IA personnalisée est l\'intégration intermédiaire la plus rapide. Installez Raycast (gratuit), Extensions → AI Commands → New Command, collez le prompt de correction et attribuez un raccourci. Sélectionnez du texte dans n\'importe quelle app → raccourci → texte corrigé en place. Atteint environ 80 % du gain de vitesse de Grammarly avec une confidentialité locale totale.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'Recommandations de modèles pour l\'écriture',
+        content:
+          '**L\'assistance à l\'écriture privilégie les modèles avec un bon suivi d\'instructions et une prose cohérente.** Le classement diffère de celui des modèles pour le code ou les maths.',
+        columns: ['Tâche', 'Meilleur modèle', 'Alternative (VRAM réduit)', 'Pourquoi'],
+        rows: [
+          { 'Tâche': 'Correction grammaticale', 'Meilleur modèle': 'Qwen3 14B', 'Alternative (VRAM réduit)': 'Phi-4 Mini', 'Pourquoi': 'Précis, peu de modifications inutiles, ponctuation correcte' },
+          { 'Tâche': 'Réécriture stylistique', 'Meilleur modèle': 'Qwen3 14B ou Llama 3.3 70B', 'Alternative (VRAM réduit)': 'Mistral 7B', 'Pourquoi': 'Prose naturelle ; évite la dérive de registre IA' },
+          { 'Tâche': 'Ajustement de ton', 'Meilleur modèle': 'Llama 3.3 70B', 'Alternative (VRAM réduit)': 'Qwen3 14B', 'Pourquoi': 'Préserve mieux le contenu factuel en changeant de registre' },
+          { 'Tâche': 'Rédaction de documents (remplacement Notion AI)', 'Meilleur modèle': 'Qwen3 14B', 'Alternative (VRAM réduit)': 'Phi-4 Mini', 'Pourquoi': 'Bonne génération de structure, suit les consignes de format' },
+          { 'Tâche': 'Synthèse / Q&R sur notes', 'Meilleur modèle': 'Qwen3 14B', 'Alternative (VRAM réduit)': 'Phi-4 Mini', 'Pourquoi': 'Synthèse correcte à partir de toute taille au-dessus de 3B' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ajoutez une consigne "pas de tournures à l\'IA" dans votre system prompt. Les modèles produisent par défaut un registre IA prudent ("Bien sûr ! Voici la version corrigée..."). Un system prompt "Renvoie uniquement le texte corrigé, pas de préambule, pas de commentaire" élimine cela. Pour les réécritures stylistiques, ajoutez : "N\'utilise pas les expressions \'plonger dans\', \'tapisserie\', \'favoriser\', \'le domaine de\' ou \'il convient de noter\'."',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Comparatif confidentialité',
+        content:
+          '**La différence de confidentialité entre les assistants cloud et les LLM locaux est structurelle.** Les services cloud ne peuvent pas traiter votre texte sans le recevoir ; les LLM locaux ne peuvent pas l\'envoyer sans une connexion sortante explicite.',
+        items: [
+          '**Licence de données Grammarly :** les conditions de Grammarly (section 5) leur accordent "une licence mondiale, non exclusive, libre de redevance [...] pour utiliser, reproduire, modifier, adapter, publier, traduire, distribuer" les textes soumis pour l\'amélioration produit et la sécurité. Ce n\'est pas caché, mais cela signifie que chaque phrase corrigée dans Grammarly entre potentiellement dans leur pipeline d\'entraînement.',
+          '**Flux de données Notion AI :** Notion envoie le contenu des documents à l\'API d\'OpenAI pour les fonctions IA. Couvert par l\'addendum de traitement de données de Notion, qui prévoit des protections contractuelles — mais les données quittent les serveurs de Notion et entrent dans l\'infrastructure d\'OpenAI.',
+          '**Flux de données LLM local :** zéro. Ollama écoute sur localhost par défaut. Aucune connexion sortante n\'est établie pendant l\'inférence. Les poids du modèle sont des fichiers statiques sur disque. Votre texte est tokenisé en mémoire, traité, puis écarté. Ni log, ni cache, ni service externe.',
+          '**RGPD, CNIL et secret professionnel :** la CNIL recommande explicitement les solutions d\'IA locales lorsque les traitements concernent des données sensibles (financières, médicales, juridiques) ou lorsque l\'organisation ne peut pas garantir la sécurité d\'un transfert vers un sous-traitant cloud. Pour les avocats (secret professionnel L. 4 du Code de la justice), médecins (article L. 1110-4 du Code de la santé publique) et professions soumises à confidentialité, un LLM local supprime la qualification de sous-traitant au sens de l\'article 28 du RGPD, puisque les données ne quittent pas votre poste de travail.',
+          '**Télémétrie :** Grammarly collecte le comportement de frappe, les métadonnées de documents et les schémas d\'usage en plus du contenu. Notion collecte les données d\'interaction et l\'usage des fonctionnalités. Ollama propose un rapport anonyme de plantage optionnel (désactivable). Les apps IA locales (LM Studio, Jan) proposent une télémétrie d\'analyse désactivable — le contenu des chats n\'est jamais inclus.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Si vous utilisez Grammarly pour la correspondance professionnelle, des projets de contrats ou tout contenu soumis à confidentialité — vérifiez la politique de données de votre organisation et les accords entreprise de Grammarly avant de présumer que le contenu est protégé. Grammarly Business propose une option Zero-Data Retention, mais elle exige le palier Business et une activation explicite.',
+          },
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'Comparatif des coûts',
+        content:
+          '**Remplacer les deux outils élimine 20 à 40 €/mois d\'abonnement.** La mise en place du LLM local est gratuite côté logiciel ; le seul coût récurrent est l\'électricité.',
+        columns: ['Outil', 'Mensuel', 'Annuel', 'Notes'],
+        rows: [
+          { 'Outil': 'Grammarly Free', 'Mensuel': '0 €', 'Annuel': '0 €', 'Notes': 'Limité à la grammaire de base ; pas de style ni de ton' },
+          { 'Outil': 'Grammarly Premium', 'Mensuel': '12 à 30 €/mois', 'Annuel': '144 à 360 €/an', 'Notes': 'Grammaire + style + ton ; extension navigateur' },
+          { 'Outil': 'Notion AI', 'Mensuel': '8 à 10 €/utilisateur/mois', 'Annuel': '96 à 120 €/an', 'Notes': 'Add-on à l\'abonnement Notion existant' },
+          { 'Outil': 'Ollama (LLM local)', 'Mensuel': '0 €', 'Annuel': '0 €', 'Notes': 'Gratuit et open source ; électricité env. 1 à 5 €/mois selon usage' },
+          { 'Outil': 'Obsidian (remplacement Notion)', 'Mensuel': '0 € (perso)', 'Annuel': '0 €', 'Notes': 'Gratuit en personnel ; 50 €/an en usage commercial' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si vous hésitez, basculez d\'abord la seule correction grammaticale sur un modèle local pendant 30 jours. Gardez Grammarly actif pour l\'intégration navigateur. Évaluez si la qualité locale et le copier-coller vous conviennent. Vous déciderez ensuite de résilier Grammarly. Le passage de Notion AI est moins frictionnel si vous acceptez Obsidian comme couche de prise de notes.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes',
+        items: [
+          '**Pas de system prompt pour le format de sortie.** Sans system prompt, les modèles préfixent leurs corrections par "Bien sûr ! Voici le texte corrigé :", ajoutent des explications et utilisent un registre IA. Définissez toujours un system prompt qui précise "renvoie uniquement le texte corrigé".',
+          '**Utiliser Phi-4 Mini pour des réécritures stylistiques complexes.** Phi-4 Mini gère bien la grammaire mais produit des réécritures plus formulaires que Qwen3 14B. Pour un travail axé style, utilisez le modèle plus grand.',
+          '**Attendre l\'équivalence UI de Notion dans Obsidian.** Obsidian est un éditeur Markdown, pas une base de données. Si votre flux Notion repose sur des bases, des vues et des relations, Obsidian n\'est pas un remplacement complet — seules les fonctions IA sont transférées. Évaluez si les fonctionnalités de base sont critiques avant de basculer.',
+          '**Pas de plafond de mots sur les réécritures stylistiques.** Sans plafond, le modèle gonfle la réécriture. Ajoutez "Maintiens le texte réécrit à moins de 10 % d\'écart par rapport au nombre de mots d\'origine" à tout prompt de réécriture.',
+          '**Envoyer des documents complets à un petit modèle.** Phi-4 Mini (3,8B) perd en cohérence au-delà d\'environ 3 000 mots. Pour les longs documents, découpez par sections et corrigez chacune indépendamment. Qwen3 14B traite 8 000+ mots de manière fiable.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          'Conditions d\'utilisation Grammarly — section 5 (licence de données) — [grammarly.com/terms](https://www.grammarly.com/terms)',
+          'Addendum de traitement de données Notion AI — [notion.so/help/notion-ai](https://www.notion.so/help/notion-ai)',
+          'Documentation du plugin Obsidian Copilot — [GitHub : logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)',
+          'Plugin Obsidian Smart Connections — [GitHub : brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections)',
+          'Traitement des données et télémétrie Ollama — [ollama.com/privacy](https://ollama.com/privacy)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Un LLM local est-il aussi bon que Grammarly pour la correction grammaticale ?',
+            a: 'Pour la plupart des erreurs courantes de grammaire, ponctuation et orthographe : oui, Qwen3 14B est équivalent à Grammarly Premium. Là où Grammarly garde un avantage : les corrections inline temps réel, les guides de style spécialisés (APA, MLA, Chicago) et l\'extension navigateur dans Gmail, Google Docs et autres applications web. Un LLM local impose un flux copier-coller pour le texte des champs de navigateur.',
+          },
+          {
+            q: 'Puis-je utiliser Obsidian comme remplacement complet de Notion ?',
+            a: 'Obsidian remplace bien les fonctions de prise de notes et de base de connaissances de Notion. Il ne remplace pas les bases de données, la gestion de projets et les données relationnelles de Notion. Si votre usage de Notion est principalement les notes, documents et wikis — Obsidian est un remplacement complet. Si vous dépendez des bases Notion, des vues kanban ou des propriétés relationnelles — il faut des outils complémentaires (Anytype, Capacities ou Notion lui-même pour la couche base, Obsidian pour la rédaction).',
+          },
+          {
+            q: 'Quel modèle local se rapproche le plus des suggestions de Grammarly ?',
+            a: 'Qwen3 14B produit la sortie la plus proche de Grammarly pour la grammaire et le style — précis, évite les changements inutiles, conserve la voix d\'origine. Llama 3.3 70B donne une prose légèrement plus naturelle sur les réécritures complexes mais demande plus de VRAM. Phi-4 Mini suffit pour la grammaire simple mais sur-simplifie sur le style.',
+          },
+          {
+            q: 'Le plugin Obsidian Copilot envoie-t-il mes notes dans le cloud ?',
+            a: 'Non, lorsqu\'il est configuré pour utiliser une instance Ollama locale. Le plugin prend en charge les LLM cloud (OpenAI, Anthropic) et Ollama local. Quand vous sélectionnez Ollama comme fournisseur LLM et indiquez l\'URL localhost, tout le traitement IA est local. Aucun contenu de note n\'est transmis à l\'extérieur. Vous pouvez le confirmer en surveillant le trafic réseau avec Little Snitch (macOS) ou Wireshark si vous avez besoin d\'une preuve d\'audit.',
+          },
+          {
+            q: 'Puis-je utiliser un LLM local dans Google Docs ou Gmail ?',
+            a: 'Pas directement — il n\'existe pas d\'extension navigateur LLM locale équivalente à Grammarly qui s\'intègre nativement aux champs de texte. Les contournements : (1) sélectionner le texte dans Google Docs, copier, coller dans l\'app IA locale, copier la version corrigée, recoller dans Google Docs ; (2) sur macOS, Raycast avec une commande IA qui traite la sélection et la remplace ; (3) une extension Chrome sur mesure qui lit la sélection et appelle l\'API Ollama locale (modèles open source sur GitHub). Aucune n\'égale l\'expérience inline de Grammarly.',
+          },
+          {
+            q: 'Cette configuration est-elle conforme HIPAA ou RGPD pour un usage professionnel ?',
+            a: 'Un LLM local qui traite les données exclusivement sur votre machine sans transmission externe répond à la préoccupation centrale de transfert de données pour HIPAA comme pour le RGPD. La conformité dépend néanmoins de l\'ensemble de la pile technologique, des contrôles de sécurité et des exigences réglementaires propres. Un LLM local n\'est pas automatiquement conforme — il faut évaluer la sécurité du poste, la protection physique et les contrôles d\'accès. Pour une conformité formelle, consultez votre DPO. Le traitement local supprime le sujet "sous-traitant tiers" mais ne remplace pas un programme de conformité complet.',
+          },
+          {
+            q: 'Quel est le meilleur assistant local pour les articles académiques ?',
+            a: 'Qwen3 14B avec un system prompt qui précise "Corrige uniquement la grammaire et la ponctuation — ne change ni le vocabulaire, ni la structure des phrases, ni le contenu. Conserve toutes les citations, termes techniques et la langue spécialisée inchangés." Cela correspond au mode grammaire seule de Grammarly, le réglage le plus sûr pour l\'écriture académique où changer la formulation peut altérer le sens ou paraître modifier un contenu cité.',
+          },
+          {
+            q: 'Puis-je remplacer la synthèse de notes de réunion de Notion AI en local ?',
+            a: 'Oui. Exportez les notes de réunion en fichier texte ou Markdown (ou collez la transcription). Utilisez le prompt : "Synthétise ces notes de réunion en : (1) décisions prises, (2) actions avec responsables, (3) questions ouvertes. Liste à puces par section. Maximum 300 mots." Tout modèle à partir de Phi-4 Mini gère les synthèses de réunion de manière fiable. Pour les réunions récurrentes, créez un modèle de prompt enregistré dans votre app IA locale.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Pour aller plus loin',
+        items: [
+          '[LLM local pour l\'automatisation des e-mails et du calendrier](/power-local-llm/local-llm-email-and-calendar-automation?lang=fr) — automatisation de la rédaction d\'e-mails et de la gestion d\'agenda avec des LLM locaux, en complément de l\'assistant d\'écriture.',
+          '[Prompts LLM locaux pour les auteurs de fiction](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=fr) — modèles de prompt pour l\'écriture créative au-delà de la correction, scènes et développement de personnages.',
+          '[Remplacer Zapier par des agents IA locaux](/power-local-llm/replace-zapier-with-local-ai-agents?lang=fr) — automatisation locale des flux qui relie l\'écriture aux autres processus métier.',
+          '[RAG local pour les données métier confidentielles](/power-local-llm/local-rag-for-private-business-data?lang=fr) — Q&R sur documents métier confidentiels, extension du Q&R sur notes à de plus grandes bibliothèques.',
+          '[App IA locale la plus simple pour Windows, Mac et Linux](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=fr) — si vous devez d\'abord installer une première app IA locale avant de mettre en place l\'assistant d\'écriture.',
+          '[Agents IA locaux pour les flux métier : conformité UE](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=fr) — contexte RGPD et AI Act pour déployer des assistants IA locaux dans les organisations européennes.',
+        ],
+      },
+    },
+  },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'GrammarlyとNotion AIをローカルLLMで置き換える（2026）',
+    seoTitle: 'GrammarlyとNotion AIをローカルLLMで代替（2026）',
+    intro:
+      'GrammarlyとNotion AIは、文章を処理のためにクラウドサーバーに送信します。メールの下書き、社外秘の文書、個人のメモが、設計上、第三者のAIシステムを通過します。OllamaやLM Studioで動かすローカルLLMは、両者をほとんどの執筆タスクで置き換えられます。文法・スタイル修正、文書ドラフト、要約、AIメモアシスタント — マシンからデータを出さずに完結します。',
+    metaDescription:
+      'GrammarlyとNotion AIをローカルLLMで置き換える方法：プライバシー、コスト、機能の比較。文章修正・文書作成・メモ自動化のセットアップ手順。',
+    twitterDescription:
+      'Grammarly（文法・スタイル）とNotion AI（ドラフト・メモ）をローカルLLMで置き換え — データはマシンから出ません。プライバシー、コスト、設定方法。',
+    current_models_mentioned: [
+      'Qwen3 14B',
+      'Phi-4 Mini',
+      'Llama 3.3 70B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M3 MacBook Air 8 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 3060 12 GB',
+    ],
+    audience:
+      'Grammarlyを文章修正に、Notion AIを文書アシスタントに使っているナレッジワーカー、ライター、学生、プライバシー重視のプロフェッショナルで、内容を秘匿しつつ両者をローカルAIで置き換えたい方向け。',
+    readTime: '11分で読める',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'Grammarly ローカルLLM 置き換え',
+    targetKeywords: [
+      'Grammarly ローカルLLM 置き換え',
+      'Notion AI ローカル 代替',
+      'ローカルLLM ライティング',
+      'Grammarly 代替 クラウドなし',
+      'Notion AI 代替 プライバシー',
+      'Ollama 文章修正',
+    ],
+    leadAnswerBlock:
+      '**Ollamaで動かすローカルLLMは、GrammarlyとNotion AIの主要機能を、データをマシンから出さずに置き換えます。Grammarlyの代替には、プロンプトテンプレート（「次の段落の文法を修正し、文体を改善してください。修正後の本文のみを返してください」）をPhi-4 Mini以上のモデルに送るだけ。Notion AIの代替には、ObsidianとSmart ConnectionsプラグインまたはCopilotプラグインをOllamaに接続し、ドラフト作成、内容拡張、メモへのAI Q&Aを行います。プライバシー上の利点は明確です。Grammarlyの利用規約は、製品改善のために送信テキストを使用するライセンスを付与しており、Notion AIは文書をOpenAIのAPIに送ります。ローカルLLMは同じ処理を、外部送信なしであなたのハードウェア上で行います。日常用途での機能差は小さく、複雑なクリエイティブ・ライティングや繊細なトーン調整では、Grammarlyのドメイン特化トレーニングが汎用ローカルモデルより優位です。**',
+    quickAnswerTop: {
+      ja: {
+        question: 'ローカルLLMはGrammarlyとNotion AIを置き換えられますか？',
+        answer:
+          'はい、日常的な用途のほとんどで置き換え可能です。Grammarly：ローカルLLMは文法修正、明瞭さの書き直し、受動態の解消、基本的なトーン調整を担います。リアルタイムのインライン提案やブラウザ拡張は再現できませんが、プロンプトベースのワークフローで同じ修正をオンデマンドでカバーできます。Notion AI：ObsidianとCopilotプラグインをOllamaに接続することで、ドラフト作成、内容拡張、メモへのQ&Aを置き換えられます。プライバシーは完全 — 文書はマシンから出ません。執筆向けのおすすめモデル：Qwen3 14B（16GB環境で品質最優先）またはPhi-4 Mini（8GB環境向けの実用解）。',
+        bullets: [
+          '文法修正：「文法のみ修正し、修正後の本文のみ返す」というシステムプロンプトがあれば、どのローカルモデルでもGrammarlyの中核用途の90%以上をカバーできます。',
+          'スタイル改善：Qwen3 14BとLlama 3.3 70Bは、Phi-4 Miniより自然な書き直しを生成します。本格的な執筆作業では追加VRAMの価値があります。',
+          'Notion AI代替：Obsidian + Copilotプラグイン（またはSmart Connections）+ Ollamaで、メモへのAI Q&A、ドラフト作成、内容拡張が可能です。',
+          'リアルタイム修正：ローカルLLMはGrammarlyのようにブラウザのテキストフィールドへ統合されません。ワークフローはコピペまたはホットキー起動アプリです。',
+          'プライバシー：Grammarlyは製品改善のためにテキストにライセンスを付与し、Notion AIはOpenAIに送信します。ローカルLLMは外部送信なしでローカル処理します。',
+          'コスト：Grammarly Premiumは約¥1,800–4,500/月、Notion AIは追加で約¥1,200–1,500/ユーザー/月。ローカルLLMはハードウェア費用以降は無料です。',
+          'おすすめのローカルモデル：品質ならQwen3 14B、速度・低VRAMならPhi-4 Mini。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: '#key-takeaways' },
+      { label: 'クイックファクト', anchor: '#quick-facts' },
+      { label: '置き換えられること（と置き換えられないこと）', anchor: '#what-you-replace' },
+      { label: 'Grammarlyを置き換える：文法とスタイル修正', anchor: '#grammarly-replacement' },
+      { label: 'Notion AIを置き換える：文書ドラフトとメモ', anchor: '#notion-replacement' },
+      { label: '統合オプション', anchor: '#integrations' },
+      { label: 'モデル推奨', anchor: '#models' },
+      { label: 'プライバシー比較', anchor: '#privacy' },
+      { label: 'コスト比較', anchor: '#cost' },
+      { label: 'よくある間違い', anchor: '#common-mistakes' },
+      { label: '出典', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**ローカルLLMはGrammarlyの中核機能（文法、明瞭さ、基本スタイル修正）を置き換えますが、ブラウザのリアルタイムインライン統合は置き換えません。** ワークフローは「入力中に修正が表示される」から「テキストを貼り付け → 修正版を取得 → 戻す」へ変わります。完全なプライバシーとのトレードオフとして、多くのユーザーには許容範囲です。',
+          '**Notion AIの置き換えはより完全です。** Copilotプラグイン（またはSmart Connections）を入れたObsidianをローカルOllamaに向けると、Notion AIのドラフト作成、内容拡張、メモへのAI Q&Aを再現できます — 文書内容はすべてローカルで処理されます。',
+          '**プライバシーの論点は理論ではありません。** Grammarlyの利用規約は、製品改善のために送信テキストへの広いライセンスを付与しています。Notion AIは文書内容をOpenAIのAPIに送ります。ローカルLLMは同じテキストをハードウェア上で外部送信なしに処理します。',
+          '**16GB環境での執筆タスクではQwen3 14Bが最適です。** ローカル実行可能なモデルの中で、最も自然な散文の書き直しとトーン調整を生成します。8GB環境ではPhi-4 Miniが現実的な代替で、文法修正には十分、繊細なスタイルには弱めです。',
+          '**コストは強力な副次的論拠です。** Grammarly Premium（約¥1,800–4,500/月）+ Notion AI（約¥1,200–1,500/ユーザー/月）で約¥3,000–6,000/月。ローカルLLM相当はOllama実行ハードウェアの一時費用以降は無料です。',
+          '**機能差は2つの具体的タスクに絞られます。** Grammarlyは、リアルタイム統合（Gmail、Google Docs、ブラウザフィールドのインライン修正）と、ドメイン特化のスタイル提案（法律、学術、ビジネス）で計測可能な優位を持ちます。それ以外では、適切にプロンプトしたローカルモデルは同等です。',
+          '**セットアップは20分です。** Ollamaのインストール、モデルのダウンロード、Obsidianプラグインの設定は1回きりです。その後はクラウド代替と同等の速さで運用できます。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'クイックファクト',
+        items: [
+          '**Grammarly料金：** 無料（制限あり）、Premium 約¥1,800/月、Business 約¥2,300/ユーザー/月。',
+          '**Notion AI料金：** 約¥1,200/ユーザー/月（年契約）、Notionサブスクに加算。',
+          '**ローカルLLM料金：** 無料（オープンソースモデル + Ollama） — 電気代のみ。',
+          '**執筆向けの最適モデル（品質）：** 16GB環境でQwen3 14B。',
+          '**執筆向けの最適モデル（速度・VRAM）：** 8GB環境でPhi-4 Mini。',
+          '**Grammarlyのプライバシー：** 修正のために送信されたテキストは、製品改善のためのデータライセンス対象です。',
+          '**Notion AIのプライバシー：** 文書内容はOpenAI APIへ送信され、Notionのデータ処理付帯条項の対象となります。',
+        ],
+      },
+      whatYouReplace: {
+        id: 'what-you-replace',
+        title: '置き換えられること（と置き換えられないこと）',
+        content:
+          '**現実的な置き換えはGrammarlyとNotion AIの典型的な利用の約80%をカバーしますが、残りの20%は一部ユーザーにとって重要です。** 切り替え前にギャップを理解しておくと、期待外れを避けられます。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'ローカルLLMはGrammarlyの文法修正・スタイル書き直し・トーン調整、Notion AIのドラフト作成とメモQ&Aを置き換えますが、Grammarlyのブラウザでのリアルタイムインライン統合や、Notion AIのネイティブエディタ統合は置き換えません。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'このセクションでは、ワークフローの違いを具体例で説明します。Grammarlyはブラウザでキー入力を監視し、入力中に修正を表示します。ローカルLLMは独自のブラウザ拡張を作らない限り、これは再現できません。代わりに、貼り付けたテキストは何でも修正できます。流れは：メールを書く → 全選択 → コピー → ローカルAIアプリに貼り付け → 修正版を取得 → Gmailに戻す。インライン修正より遅いものの、プライベートで無料です。',
+          },
+        ],
+        columns: ['機能', 'Grammarly', 'ローカルLLMでの相当', 'ギャップ'],
+        rows: [
+          { '機能': '文法修正', 'Grammarly': 'インライン、リアルタイム', 'ローカルLLMでの相当': 'プロンプト経由、オンデマンド', 'ギャップ': 'リアルタイムインラインなし、コピペ運用' },
+          { '機能': 'スタイル提案', 'Grammarly': 'インライン、解説あり', 'ローカルLLMでの相当': 'プロンプトによる書き直し', 'ギャップ': 'デフォルトでは個別の解説なし' },
+          { '機能': 'トーン検出', 'Grammarly': '自動、トーン名付き', 'ローカルLLMでの相当': 'プロンプトでターゲットトーン指定', 'ギャップ': '明示的なトーン指示が必要' },
+          { '機能': 'ブラウザ拡張', 'Grammarly': 'Gmail、Google Docs、ブラウザフィールドで動作', 'ローカルLLMでの相当': 'コピペまたはOSレベルのホットキーアプリ', 'ギャップ': 'ブラウザへのネイティブ統合なし' },
+          { '機能': 'Notion AI：ドラフト作成', 'Grammarly': '対象外', 'ローカルLLMでの相当': 'Obsidian + Copilotプラグイン → Ollama', 'ギャップ': 'Notion UIには非統合、別アプリ' },
+          { '機能': 'Notion AI：メモへのQ&A', 'Grammarly': '対象外', 'ローカルLLMでの相当': 'Obsidian Smart Connections → Ollama', 'ギャップ': 'Obsidian Vaultが必要、Notion DB検索なし' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '統合ギャップが最も効くのは、Grammarlyがインライン修正を表示するGmail、Google Docs、その他ブラウザベースのエディタで書く場合です。デスクトップアプリ中心（Word、Obsidian、VS Code、Scrivener）であれば、ローカルLLMのコピペ運用はインライン提案より少し遅い程度です。判断する前に、自分の執筆環境を確認してください。',
+          },
+        ],
+      },
+      grammarlyReplacement: {
+        id: 'grammarly-replacement',
+        title: 'Grammarlyを置き換える：文法とスタイル修正',
+        content:
+          '**Grammarly代替のワークフローは、2つのプロンプトテンプレートとキーボードショートカットアプリで完結します。** 文法のみ用が1つ、フルスタイル書き直し用が1つです。Phi-4 Miniで2〜5秒、Qwen3 14Bで1〜3秒です。',
+        promptExamples: [
+          {
+            label: '文法修正のみ（Grammarly Basic相当）',
+            text: '次のテキストの文法、スペル、句読点を修正してください。修正後の本文のみを返してください — 説明、マークアップ、要約は不要です。\n\n[テキストを貼り付け]',
+          },
+          {
+            label: 'スタイルと明瞭さの書き直し（Grammarly Premium相当）',
+            text: '次のテキストを明瞭さとプロフェッショナルなトーンで書き直してください。文法を修正し、受動態を能動態に、長文を引き締め、冗長な表現を削除してください。書き直した本文のみを返してください。\n\nターゲットトーン：[プロフェッショナル / カジュアル / 学術 / 説得的]\nターゲット読者：[一般 / 技術 / 経営層]\n\n[テキストを貼り付け]',
+          },
+          {
+            label: 'トーン調整プロンプト',
+            text: '次のメールを[よりフォーマルに / よりカジュアルに / より簡潔に / より外交的に]書き直してください。事実情報はすべてそのまま保ってください。書き直したメールのみを返してください。\n\n[メールを貼り付け]',
+          },
+        ],
+        items: [
+          '**執筆セッション用システムプロンプト：** ローカルAIアプリのシステムプロンプトを「あなたはプロの編集者です。修正または書き直したテキストのみを返してください — 前置き、説明、コメントは不要です」に設定します。これにより「素晴らしい文章ですね！修正版は...」のような前置きを抑止できます。',
+          '**ショートカット統合：** Raycast（macOS）またはAutoHotkey（Windows）で、選択テキストをOllamaに送り結果を貼り付けるホットキーを作成します。コピペ運用が1キーストロークに短縮されます。',
+          '**文法のみ vs スタイル書き直し：** 法務、技術、構造化文書のように言い換えで意味が変わるリスクがある場合は、文法のみ用プロンプトを優先します。スタイル書き直しはメール、ブログ、一般的な書簡向けです。',
+          '**学術ライティング：** スタイル書き直しプロンプトに「引用、専門用語、ドメイン語彙はすべてそのまま保つこと」を追記します。これがないと、専門表現を平易化または言い換える挙動が出ることがあります。',
+          '**ビジネスメール：** 「送信者は[氏名]、[役職]（所属：[企業]）。出力にはパーソナライズ詳細を含めず、その人のプロフェッショナルな声を反映する」を追加します。送信者の業務文脈にレジスターを固定できます。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'macOSで最も効率的なGrammarly代替ワークフロー：Ollamaをインストール、Qwen3 14Bを取得、Raycast AIコマンドに文法修正プロンプトを設定。任意のアプリでテキストを選択 → Raycastホットキー → 修正版が選択範囲に置き換わります。段落程度の修正であれば、Grammarlyのインライン修正と遜色ない速度です。',
+          },
+        ],
+      },
+      notionReplacement: {
+        id: 'notion-replacement',
+        title: 'Notion AIを置き換える：文書ドラフトとメモ',
+        content:
+          '**ローカルOllamaバックエンドのObsidianは、メモ取りやナレッジワーカー向けにNotion AIに最も近い機能等価物です。** Notionのデータベース構造は再現しませんが、ドラフト作成とメモへのAI Q&Aは同等の能力で、すべての処理がローカルです。',
+        items: [
+          '**Obsidianをインストール**：obsidian.mdから。個人利用は無料です。メモ用のVault（保管庫）を作成します — AIプラグインがインデックスする対象ディレクトリです。',
+          '**Copilotプラグインをインストール**：（Community Plugins → 「Copilot」を検索）。プラグイン設定でLLMプロバイダに「Ollama」を選び、ベースURLに`http://localhost:11434`を入力、モデルを選択します。Copilotは、現在のメモ文脈で質問や生成ができるチャットサイドバーをObsidianに追加します。',
+          '**Smart Connectionsプラグインをインストール**：Vault全体のQ&A用。Smart Connectionsはローカル埋め込みモデル（OllamaのNomic Embed Text）で全メモを埋め込みインデックス化し、関連メモを取り出してからLLMに渡します。Notion AIの「メモに質問する」の直接的な代替です。',
+          '**ドラフト作成：** Copilotチャットで「次のメモから[文書タイプ]を[テーマ]について作成：[要点を貼り付け]」と入力。プラグインは現在のメモ文脈を自動で含めます。出力はチャットに表示されるので、メモにコピペします。',
+          '**内容拡張：** メモ内の箇条書きを選択し、Copilotコマンドパレットで「Expand selection」を実行 — モデルがメモの執筆レジスターで散文に変換します。',
+          '**週次レビュー生成：** 「今週分のメモを週次レビュー形式で要約：成果、ブロッカー、次のアクション」。Smart Connectionsが直近7日のメモを取得し、自動でLLMに渡します。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'ローカルOllamaに接続したObsidian + CopilotプラグインまたはSmart Connectionsプラグインで、Notion AIのドラフト作成、内容拡張、メモQ&Aを置き換えられます — すべての処理はローカルで、外部サーバーへの送信はありません。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'このセクションでは、最短セットアップを示します。ObsidianとOllamaをインストール、Qwen3 14Bを取得、ObsidianにCopilotコミュニティプラグインを入れ、localhost:11434を指す。これだけでNotion AIのAI機能の完全な代替になります。メモはVaultフォルダ（プレーンなMarkdownファイル、完全に可搬）に残ります。AIチャットはマシン上で動きます。何もコンピュータから出ません。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Obsidianはメモを自分が管理するフォルダ内のプレーンなMarkdownファイルとして保存します。Notionの独自データベース形式と異なり、メモはどんなテキストエディタでも読め、いつでもエクスポートできます。これはNotionに対する二次的なプライバシーと可搬性の利点です — 知識ベースがクラウドプラットフォームに閉じ込められません。',
+          },
+        ],
+      },
+      integrations: {
+        id: 'integrations',
+        title: '統合オプション',
+        content:
+          '**統合は3階層：基本（コピペ）、中級（ホットキーアプリ）、上級（ブラウザ拡張またはOSレベルAIレイヤー）。** 自分の技術的快適度に合うレベルから始めましょう。',
+        columns: ['統合レベル', '方法', 'アプリ', '適合する用途'],
+        rows: [
+          { '統合レベル': '基本（コピペ）', '方法': 'ローカルAIアプリを開き、貼り付け、結果をコピー', 'アプリ': 'LM Studio チャット、Ollama CLI、Open WebUI', '適合する用途': '時々の修正、どのOSでも可' },
+          { '統合レベル': '中級（ホットキー）', '方法': 'テキスト選択 → ホットキー → 修正版が選択範囲に置換', 'アプリ': 'Raycast AI（macOS）、AutoHotkey + Ollama（Windows）', '適合する用途': 'どのアプリでも頻繁に修正、ワークフロー変更最小' },
+          { '統合レベル': '中級（ライティングアプリ）', '方法': 'AIアシスタントが執筆ツールに組み込まれる', 'アプリ': 'Obsidian + Copilotプラグイン、VS Code + Continue.dev', '適合する用途': 'これらのアプリで作業するライターや開発者' },
+          { '統合レベル': '上級（ブラウザ拡張）', '方法': 'カスタム拡張が選択テキストをローカルOllama APIに送る', 'アプリ': 'カスタムChrome/Firefox拡張（GitHubにオープンソーステンプレートあり）', '適合する用途': 'Grammarly風のブラウザ統合を求めるパワーユーザー' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'macOSでは、カスタムAIコマンド付きRaycastが最速の中級統合です。Raycast（無料）をインストール、Extensions → AI Commands → New Commandで文法修正プロンプトを貼り、ホットキーを割り当てます。任意のアプリでテキスト選択 → ホットキー → 修正版が選択範囲に置換。完全ローカルなプライバシーで、Grammarlyの速度の約80%を実現します。',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '執筆タスク向けモデル推奨',
+        content:
+          '**ライティング支援は、強い指示追従と一貫した散文出力が得意なモデルが向きます。** ランキングはコーディングや数学とは異なります。',
+        columns: ['タスク', '最適モデル', '代替（低VRAM）', '理由'],
+        rows: [
+          { 'タスク': '文法修正', '最適モデル': 'Qwen3 14B', '代替（低VRAM）': 'Phi-4 Mini', '理由': '正確、不要な変更が少ない、句読点が正しい' },
+          { 'タスク': 'スタイル書き直し', '最適モデル': 'Qwen3 14B または Llama 3.3 70B', '代替（低VRAM）': 'Mistral 7B', '理由': '自然な散文出力、AIレジスターのドリフトを回避' },
+          { 'タスク': 'トーン調整', '最適モデル': 'Llama 3.3 70B', '代替（低VRAM）': 'Qwen3 14B', '理由': 'レジスター変更時の事実情報の保持が最も上手い' },
+          { 'タスク': 'ドラフト作成（Notion AI代替）', '最適モデル': 'Qwen3 14B', '代替（低VRAM）': 'Phi-4 Mini', '理由': '良好な構造生成、文書フォーマット指示に追従' },
+          { 'タスク': 'メモ要約 / Q&A', '最適モデル': 'Qwen3 14B', '代替（低VRAM）': 'Phi-4 Mini', '理由': '3B超のどのサイズでも要約には十分' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'システムプロンプトに「AIっぽい言い回しを使わない」という指示を入れます。モデルはデフォルトで「もちろんです！修正版は...」のような曖昧化されたAIレジスターになりがちです。「修正後の本文のみを返し、前置きやコメントは不要」というシステムプロンプトでこれを排除できます。スタイル書き直しでは「\'掘り下げる\'、\'タペストリー\'、\'育む\'、\'〜の領域\'、\'特筆すべき\'などの表現は使わないこと」を追加します。',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'プライバシー比較',
+        content:
+          '**クラウドのライティングアシスタントとローカルLLMのプライバシー差は構造的です。** クラウドサービスはテキストを受信せずに処理できず、ローカルLLMは明示的な送信接続なしにテキストを外部に送れません。',
+        items: [
+          '**Grammarlyのデータライセンス：** Grammarly利用規約（第5条）は、製品改善とセキュリティ目的で、送信テキストを「使用、複製、改変、翻案、公開、翻訳、配布する全世界・非独占・無償のライセンス」を付与します。隠されてはいませんが、Grammarlyで修正した文はすべて、彼らのトレーニングパイプラインに入る可能性があるという意味です。',
+          '**Notion AIのデータフロー：** NotionはAI機能のために文書内容をOpenAIのAPIに送信します。契約的保護を提供するNotionのデータ処理付帯条項の対象ですが、データはNotionのサーバーを離れOpenAIのインフラに入ります。',
+          '**ローカルLLMのデータフロー：** ゼロ。Ollamaはデフォルトでlocalhostにバインドします。推論中に外部接続は発生しません。モデルの重みはディスク上の静的ファイルです。テキストはメモリ内でトークン化、処理、破棄されます。ログ、キャッシュ、外部サービスはありません。',
+          '**METI AIガバナンス2024と日本の業界規制：** 日本のAI事業者ガイドライン（経済産業省・総務省、2024年版）は、機微情報を扱う事業者に対し、データ最小化、目的拘束、適切な処理者管理を求めています。クラウド型AIアシスタントは個人情報保護法上の委託先となり、委託先監督義務が発生します。ローカルLLMは委託の枠組み外で動作するため、士業、医療機関、金融機関、法律事務所など守秘義務を負う業務に適合しやすく、越境データ移転（FISC安全対策基準など）の論点も発生しません。',
+          '**アジア太平洋地域：** 日本以外のAPAC（シンガポールPDPA、韓国PIPA、オーストラリアPrivacy Actなど）でも、データレジデンシーと処理者契約が共通テーマです。ローカルLLMは、域内・域外問わずクライアントに対して「データはエンドポイントから出ない」と説明できる、最も明快な選択肢です。',
+          '**テレメトリ：** Grammarlyはテキスト内容に加えて、入力挙動、文書メタデータ、利用パターンを収集します。Notionは操作データと機能利用を収集します。Ollamaはオプトアウト可能な匿名クラッシュレポートのみ。ローカルAIアプリ（LM Studio、Jan）にはオプトアウト可能な分析テレメトリがありますが、チャット内容は含まれません。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Grammarlyを業務メール、契約ドラフト、または守秘義務の対象となる内容に使う場合 — 内容が保護されていると仮定する前に、所属組織のデータ方針とGrammarlyの法人向けデータ契約を確認してください。Grammarly Businessには「Zero-Data Retention」オプションがありますが、Businessプランと明示的なオプトインが必要です。',
+          },
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'コスト比較',
+        content:
+          '**両ツールを置き換えると、月額約¥3,000〜6,000のサブスク費用を削減できます。** ローカルLLMのソフトウェア費用は無料で、継続コストは電気代のみです。',
+        columns: ['ツール', '月額', '年額', '備考'],
+        rows: [
+          { 'ツール': 'Grammarly Free', '月額': '¥0', '年額': '¥0', '備考': '基本文法のみ、スタイル・トーン機能なし' },
+          { 'ツール': 'Grammarly Premium', '月額': '約¥1,800–4,500/月', '年額': '約¥21,600–54,000/年', '備考': '文法・スタイル・トーン全部、ブラウザ拡張あり' },
+          { 'ツール': 'Notion AI', '月額': '約¥1,200–1,500/ユーザー/月', '年額': '約¥14,400–18,000/年', '備考': '既存Notionサブスクへの追加課金' },
+          { 'ツール': 'Ollama（ローカルLLM）', '月額': '¥0', '年額': '¥0', '備考': '無料・オープンソース、利用量により電気代約¥150–750/月' },
+          { 'ツール': 'Obsidian（Notion代替）', '月額': '¥0（個人）', '年額': '¥0', '備考': '個人利用は無料、商用利用は約¥7,500/年' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '迷っているなら、まず文法修正だけを30日間ローカルモデルに移行してみてください。ブラウザ統合のためにGrammarlyは残します。ローカル修正の品質とコピペ運用が自分の執筆に許容できるか評価し、その上でGrammarly解約を決めます。Notion AIの切り替えは、Obsidianをメモ層として受け入れられるなら摩擦が小さいです。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'よくある間違い',
+        items: [
+          '**出力フォーマットのシステムプロンプトを設定しない。** システムプロンプトがないと、モデルは「もちろんです！修正版はこちら：」と前置きを付け、説明を加え、AIっぽい表現を使います。「修正後の本文のみを返す」と指定するシステムプロンプトを必ず設定してください。',
+          '**複雑なスタイル書き直しにPhi-4 Miniを使う。** Phi-4 Miniは文法修正は得意ですが、Qwen3 14Bよりも定型的なスタイル書き直しになります。スタイル中心の作業では大きいモデルを使ってください。',
+          '**ObsidianにNotion UI同等を期待する。** ObsidianはMarkdownエディタで、データベースではありません。Notionワークフローがデータベース、ビュー、リレーションに依存している場合、Obsidianは完全な代替にはなりません — 移植できるのはAI機能だけです。データベース機能が重要かどうかを切り替え前に評価してください。',
+          '**スタイル書き直しに語数上限を設けない。** 上限がないと、モデルは書き直しを膨らませがちです。「書き直し後のテキストは元の語数の±10%以内に収めること」をスタイル書き直しプロンプトに追加してください。',
+          '**小さなモデルに長文書を送る。** Phi-4 Mini（3.8B）は約3,000語超でコヒーレンスを失います。長い文書はセクションに分けて個別に修正してください。Qwen3 14Bは8,000語超でも安定して扱えます。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        items: [
+          'Grammarly利用規約 — 第5条（データライセンス） — [grammarly.com/terms](https://www.grammarly.com/terms)',
+          'Notion AI データ処理付帯条項 — [notion.so/help/notion-ai](https://www.notion.so/help/notion-ai)',
+          'Obsidian Copilotプラグイン ドキュメント — [GitHub: logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)',
+          'Obsidian Smart Connectionsプラグイン — [GitHub: brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections)',
+          'Ollamaのデータ取り扱いとテレメトリ — [ollama.com/privacy](https://ollama.com/privacy)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'ローカルLLMは文法修正でGrammarlyと同等ですか？',
+            a: '日常的な文法、句読点、スペルの誤りについては：はい、Qwen3 14BはGrammarly Premium相当です。Grammarlyの優位点：入力中のリアルタイムインライン修正、ドメイン特化のスタイルガイド（GrammarlyはAPA、MLA、Chicagoに対応）、Gmail・Google Docs等のWebアプリで動作するブラウザ拡張です。ローカルLLMはブラウザフィールドのテキストにはコピペ運用が必要です。',
+          },
+          {
+            q: 'ObsidianはNotionの完全な代替になりますか？',
+            a: 'Obsidianはメモ取りとナレッジベースに関しては良い代替です。ただし、Notionのデータベース、プロジェクト管理、リレーショナルデータ機能は置き換えません。Notionの主用途がメモ、文書、Wikiであれば — Obsidianは完全な代替です。Notionデータベース、ボードビュー、リレーションプロパティに依存するなら — 追加ツールが必要です（Anytype、Capacities、またはデータベース層にNotion本体＋執筆にObsidian）。',
+          },
+          {
+            q: 'Grammarlyのライティング提案に最も近いローカルモデルはどれですか？',
+            a: 'Qwen3 14Bが文法・スタイル修正で最もGrammarlyに近い出力を出します — 精密で、不要な変更を避け、元の声を保ちます。Llama 3.3 70Bは複雑な書き直しでわずかに自然な散文ですが、より多くのVRAMを要求します。Phi-4 Miniは単純な文法修正には十分ですが、スタイル書き直しでは過剰に単純化します。',
+          },
+          {
+            q: 'Obsidian Copilotプラグインはメモをクラウドに送りますか？',
+            a: 'ローカルOllamaインスタンスを使うよう設定すれば送りません。プラグインはクラウドLLM（OpenAI、Anthropic）とローカルOllamaの両方に対応します。LLMプロバイダにOllamaを選び、localhost URLを入力すると、AI処理はすべてローカルで行われます。メモ内容は外部に送信されません。監査レベルの確認が必要なら、Little Snitch（macOS）やWiresharkでネットワークトラフィックを観察して検証できます。',
+          },
+          {
+            q: 'Google DocsやGmailでローカルLLMを使えますか？',
+            a: '直接は使えません — ブラウザのテキストフィールドにネイティブ統合されるGrammarly相当のローカルLLMブラウザ拡張は存在しません。回避策：（1）Google Docsでテキストを選択しコピー、ローカルAIアプリに貼り付け、修正版をコピーしGoogle Docsに戻す；（2）macOSではRaycastのカスタムAIコマンドで選択テキストを処理し置換；（3）選択テキストを読み取りローカルOllama APIを呼ぶカスタムChrome拡張（GitHubにオープンソーステンプレートあり）。いずれもGrammarlyのシームレスなインライン体験には及びません。',
+          },
+          {
+            q: 'このセットアップはHIPAAやGDPRに業務上適合しますか？',
+            a: '外部送信なしにマシン上のみでデータを処理するローカルLLMは、HIPAAとGDPRいずれの中核的なデータ移転懸念にも対応します。ただし、コンプライアンスは技術スタック全体、セキュリティ統制、固有の規制要件に依存します。ローカルLLMは自動的に適合するわけではありません — エンドポイントセキュリティ、物理的なデバイス保護、アクセス制御の評価が必要です。正式な適合判断はコンプライアンス担当者に相談してください。ローカル処理は「第三者データ処理者」の論点を取り除きますが、完全なコンプライアンスプログラムの代替にはなりません。',
+          },
+          {
+            q: '学術論文に最適なローカルライティングアシスタントは何ですか？',
+            a: 'Qwen3 14Bと、「文法と句読点のみを修正し、語彙・文構造・内容を変えないこと。引用、専門用語、分野固有の言語はすべてそのまま保つこと」を指定するシステムプロンプト。これはGrammarlyの文法のみモードに相当し、言い換えにより意味が変わったり、引用内容を改変したと見なされうる学術ライティングで最も安全な設定です。',
+          },
+          {
+            q: 'Notion AIの会議メモ要約をローカルで置き換えられますか？',
+            a: 'はい。会議メモをテキストまたはMarkdownファイルとして書き出す（または文字起こしを直接貼り付け）。プロンプト：「これらの会議メモを次の形式で要約：（1）決定事項、（2）担当者付きのアクションアイテム、（3）未解決の疑問。各セクションは箇条書き。300語以内」。Phi-4 Mini以上のモデルなら会議要約を安定して扱えます。定例会議があるなら、ローカルAIアプリに保存済みプロンプトテンプレートを作っておきましょう。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[ローカルLLMによるメール・カレンダー自動化](/power-local-llm/local-llm-email-and-calendar-automation?lang=ja) — ローカルLLMでメールドラフトとカレンダー管理を自動化、ライティングアシスタントの補完。',
+          '[フィクション作家向けローカルLLMプロンプト](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=ja) — 文法修正を超えた創作タスク用プロンプト、シーン作成とキャラクター開発まで。',
+          '[Zapierをローカル AI エージェントで置き換える](/power-local-llm/replace-zapier-with-local-ai-agents?lang=ja) — ローカルでのワークフロー自動化、執筆ツールと業務プロセスを連結。',
+          '[社内データのためのローカルRAG](/power-local-llm/local-rag-for-private-business-data?lang=ja) — 機密ビジネス文書へのQ&A、メモQ&A用途を大規模文書ライブラリに拡張。',
+          '[Windows/Mac/Linuxで最も簡単なローカルAIアプリ](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=ja) — ライティングアシスタントを構築する前に、まずローカルAIアプリをセットアップしたい場合。',
+          '[ビジネスワークフロー向けローカルAIエージェント：EUコンプライアンス](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=ja) — 欧州市場向け展開のGDPRとEU AI Act文脈、APAC案件にも参考。',
+        ],
+      },
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: '用本地 LLM 替代 Grammarly 与 Notion AI（2026）',
+    seoTitle: '本地 LLM 替代 Grammarly 与 Notion AI 2026',
+    intro:
+      'Grammarly 与 Notion AI 把您的文本送往云端处理 — 邮件草稿、机密文档、个人笔记按设计经过第三方 AI 系统。通过 Ollama 或 LM Studio 运行的本地 LLM，可以在大多数写作任务上替代二者：语法与文风修改、文档起草、内容摘要、AI 辅助笔记 — 数据不离开您的机器。',
+    metaDescription:
+      '用本地 LLM 替代 Grammarly 与 Notion AI：隐私、成本、能力对比。写作修改、文档起草、笔记自动化的部署指南。',
+    twitterDescription:
+      '用本地 LLM 替代 Grammarly（语法/文风）和 Notion AI（草稿/笔记）— 数据不离开您的机器。隐私、成本、部署一文讲清。',
+    current_models_mentioned: [
+      'Qwen3 14B',
+      'Phi-4 Mini',
+      'Llama 3.3 70B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M3 MacBook Air 8 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 3060 12 GB',
+    ],
+    audience:
+      '使用 Grammarly 做写作修改、用 Notion AI 做文档辅助的知识工作者、写作者、学生与重视隐私的专业人士，希望用一套本地 AI 替换二者并保持内容私密。',
+    readTime: '阅读约11分钟',
+    educationalLevel: 'Beginner',
+    primaryTerm: '本地 LLM 替代 Grammarly',
+    targetKeywords: [
+      '本地 LLM 替代 Grammarly',
+      '本地替代 Notion AI',
+      '本地 LLM 写作助手',
+      'Grammarly 替代 无云',
+      'Notion AI 替代 隐私',
+      'Ollama 写作修改',
+    ],
+    leadAnswerBlock:
+      '**通过 Ollama 运行的本地 LLM 可替代 Grammarly 与 Notion AI 的核心功能，数据不离开您的机器。Grammarly 替代：用一条提示词模板（"请修正以下段落的语法并改进文风。仅返回修正后的正文。"）配合 Phi-4 Mini 及以上模型即可完成语法与文风修改。Notion AI 替代：在 Obsidian 中安装 Smart Connections 插件或 Copilot 插件并指向 Ollama，实现文档起草、内容扩写与笔记 AI 问答。隐私优势明确：Grammarly 服务条款授予其使用您文本进行产品改进的许可；Notion AI 把文档内容发往 OpenAI API。本地 LLM 在您的硬件上完成同样的任务，无任何外部传输。日常写作的能力差距很小；在复杂创作与细腻语气调整方面，Grammarly 的领域专项训练优于通用本地模型。**',
+    quickAnswerTop: {
+      zh: {
+        question: '本地 LLM 能替代 Grammarly 与 Notion AI 吗？',
+        answer:
+          '在大多数日常场景下可以。Grammarly：本地 LLM 可处理语法修改、清晰度改写、被动语态消除与基础语气调整。它无法做到 Grammarly 的实时内联建议或浏览器扩展集成，但用提示词工作流可按需覆盖相同的修改。Notion AI：Obsidian 加 Copilot 插件指向 Ollama，可以替代文档起草、内容扩写与笔记问答。隐私优势完整 — 任何文档内容都不离开机器。写作助手的最佳本地模型：16GB 系统选 Qwen3 14B（质量最优），8GB 系统选 Phi-4 Mini（够用）。',
+        bullets: [
+          '语法修改：任何本地模型只要带上"仅修正语法、仅返回正文"的系统提示词，即可覆盖 Grammarly 90%+ 的核心用例。',
+          '文风提升：Qwen3 14B 与 Llama 3.3 70B 比 Phi-4 Mini 写得更自然；正经写作场景值得多花一点 VRAM。',
+          'Notion AI 替代：Obsidian + Copilot 插件（或 Smart Connections）+ Ollama — 笔记 AI 问答、文档起草、内容扩写一站式。',
+          '实时修改：本地 LLM 不会像 Grammarly 那样集成进浏览器文本框。工作流为复制-粘贴或一键热键应用。',
+          '隐私：Grammarly 把您的文本授权用于产品改进；Notion AI 转发到 OpenAI。本地 LLM 全部在本地处理，零外发。',
+          '成本：Grammarly Premium $12–30/月；Notion AI 另加 $8–10/用户/月。本地 LLM 在硬件成本之外完全免费。',
+          '推荐本地模型：质量优先用 Qwen3 14B，速度与低 VRAM 用 Phi-4 Mini。',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '速览事实', anchor: '#quick-facts' },
+      { label: '能替代什么（不能替代什么）', anchor: '#what-you-replace' },
+      { label: '替代 Grammarly：语法与文风', anchor: '#grammarly-replacement' },
+      { label: '替代 Notion AI：文档与笔记', anchor: '#notion-replacement' },
+      { label: '集成方案', anchor: '#integrations' },
+      { label: '模型推荐', anchor: '#models' },
+      { label: '隐私对比', anchor: '#privacy' },
+      { label: '成本对比', anchor: '#cost' },
+      { label: '常见误区', anchor: '#common-mistakes' },
+      { label: '参考来源', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**本地 LLM 替代 Grammarly 的核心功能 — 语法、清晰度、基础文风修改 — 但不替代其浏览器实时内联集成。** 工作流从"边打字边出建议"变为"粘贴文本 → 拿到修改版 → 粘回原处"。对许多人来说，这是换取完整隐私的可接受代价。',
+          '**Notion AI 的替代更彻底。** Obsidian 加 Copilot 插件（或 Smart Connections）指向本地 Ollama，可对齐 Notion AI 的文档起草、内容扩写与笔记 AI 问答 — 全部内容本地处理。',
+          '**隐私论点不是空谈。** Grammarly 服务条款对提交文本授予广泛的产品改进许可。Notion AI 把文档内容发到 OpenAI API。本地 LLM 在您的硬件上处理同一文本且不外发。',
+          '**Qwen3 14B 是 16GB 系统的最佳写作模型。** 在可本地运行的模型中，它的散文改写与语气调整最自然。Phi-4 Mini 是 8GB 系统的实用替代 — 语法够用，细腻文风偏弱。',
+          '**成本是有力的次要论据。** Grammarly Premium（$12–30/月）+ Notion AI（$8–10/用户/月）= $20–40/月。本地 LLM 在 Ollama 的一次性硬件成本之后即免费。',
+          '**能力差距收敛到两个具体任务。** Grammarly 在实时集成（Gmail、Google Docs、浏览器字段的内联修改）与领域文风建议（法律、学术、商务）上有可量化优势。其余场景下，提示词得当的本地模型与之相当。',
+          '**部署只需 20 分钟。** 安装 Ollama、下载模型、配置 Obsidian 插件是一次性工作。之后日常运行速度与云端相当。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '速览事实',
+        items: [
+          '**Grammarly 价格：** 免费（受限），Premium $12/月，Business $15/用户/月。',
+          '**Notion AI 价格：** $8/用户/月（年付），叠加在 Notion 订阅之上。',
+          '**本地 LLM 价格：** 免费（开源模型 + Ollama） — 仅承担硬件电费。',
+          '**写作最佳本地模型（质量）：** 16GB 系统的 Qwen3 14B。',
+          '**写作最佳本地模型（速度/VRAM）：** 8GB 系统的 Phi-4 Mini。',
+          '**Grammarly 隐私：** 用于修改的文本受其产品改进数据许可的覆盖。',
+          '**Notion AI 隐私：** 文档内容发往 OpenAI API；适用 Notion 的数据处理附录。',
+        ],
+      },
+      whatYouReplace: {
+        id: 'what-you-replace',
+        title: '能替代什么（不能替代什么）',
+        content:
+          '**现实可替代约 80% 的 Grammarly 与 Notion AI 典型用例，剩余 20% 对部分用户依然关键。** 切换前先理解这道差距，可以避免落差。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '本地 LLM 可替代 Grammarly 的语法修改、文风改写、语气调整，以及 Notion AI 的文档起草和笔记问答 — 但不能替代 Grammarly 的浏览器实时内联集成或 Notion AI 的原生编辑器集成。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Grammarly 通过监听浏览器中的每次按键、边打字边显示建议来工作。本地 LLM 在没有自定义浏览器扩展时做不到。它能做的，是修改任何粘贴进去的文本 — 工作流变成：写邮件、全选、复制、粘贴到本地 AI 应用、拿到修改版、粘回 Gmail。比内联慢一点，但隐私且免费。',
+          },
+        ],
+        columns: ['功能', 'Grammarly', '本地 LLM 等价做法', '差距'],
+        rows: [
+          { '功能': '语法修改', 'Grammarly': '内联、实时', '本地 LLM 等价做法': '基于提示词、按需触发', '差距': '没有实时内联；走复制-粘贴' },
+          { '功能': '文风建议', 'Grammarly': '内联并附说明', '本地 LLM 等价做法': '提示词驱动改写', '差距': '默认无逐条解释' },
+          { '功能': '语气检测', 'Grammarly': '自动、命名语气', '本地 LLM 等价做法': '提示词中指定目标语气', '差距': '需要显式语气说明' },
+          { '功能': '浏览器扩展', 'Grammarly': '在 Gmail、Google Docs、浏览器字段中工作', '本地 LLM 等价做法': '复制-粘贴或系统级热键应用', '差距': '没有原生浏览器集成' },
+          { '功能': 'Notion AI：文档起草', 'Grammarly': '不适用', '本地 LLM 等价做法': 'Obsidian + Copilot 插件 → Ollama', '差距': '不内嵌于 Notion UI；为独立应用' },
+          { '功能': 'Notion AI：笔记问答', 'Grammarly': '不适用', '本地 LLM 等价做法': 'Obsidian Smart Connections → Ollama', '差距': '需 Obsidian 仓库；无法搜索 Notion 数据库' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '集成差距对那些主要在 Gmail、Google Docs 或其他浏览器编辑器中写作的人影响最大，那里 Grammarly 会显示内联修改。如果您主要在桌面应用中写作（Word、Obsidian、VS Code、Scrivener），本地 LLM 的复制-粘贴流程比内联只稍慢一点点。决策前先盘点自己的写作环境。',
+          },
+        ],
+      },
+      grammarlyReplacement: {
+        id: 'grammarly-replacement',
+        title: '替代 Grammarly：语法与文风',
+        content:
+          '**Grammarly 替代工作流由两条提示词模板加一个热键应用组成。** 一条用于纯语法修改，一条用于完整文风改写。Phi-4 Mini 上 2–5 秒，Qwen3 14B 上 1–3 秒。',
+        promptExamples: [
+          {
+            label: '纯语法修改（Grammarly 基础替代）',
+            text: '请修正下文的语法、拼写与标点。仅返回修改后的正文 — 不要解释、不要标记、不要总结。\n\n[粘贴文本]',
+          },
+          {
+            label: '文风与清晰度改写（Grammarly Premium 替代）',
+            text: '请改写下文以提升清晰度与专业语气。修正语法，去除被动语态，压缩冗长句，删除填充表达。仅返回改写后的正文。\n\n目标语气：[专业 / 随意 / 学术 / 说服性]\n目标读者：[大众 / 技术 / 高管]\n\n[粘贴文本]',
+          },
+          {
+            label: '语气调整提示词',
+            text: '请把下面的邮件改写得[更正式 / 更随意 / 更简洁 / 更外交]。保留所有事实信息不变。仅返回改写后的邮件。\n\n[粘贴邮件]',
+          },
+        ],
+        items: [
+          '**写作会话的系统提示词：** 把本地 AI 应用的系统提示词设为"你是一位专业编辑。仅返回修改或改写后的正文 — 不要前言、不要解释、不要评论"。这能阻止模型在输出前加上"很棒的文本！这是我的修改..."。',
+          '**热键集成：** 用 Raycast（macOS）或 AutoHotkey（Windows）创建一个热键，把所选文本送到 Ollama 并粘贴结果。这样复制-粘贴流程被压缩为一次按键。',
+          '**纯语法 vs 文风改写：** 把语法修正与文风改写用作两条独立提示词。法律、技术或结构化文档建议优先用纯语法版，避免改写改变原意。文风改写适合邮件、博客与一般书信。',
+          '**学术写作：** 在文风改写提示词中加上"保留所有引用、术语与领域词汇不变"。否则模型有时会把术语简化或意译。',
+          '**商务邮件：** 加上"发件人为 [姓名]，[职位]（公司：[公司]）。邮件应反映其专业声线，输出中不出现个性化细节"。这能把语域锚定在发件人的职业语境上。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'macOS 上效率最高的 Grammarly 替代工作流：安装 Ollama、拉取 Qwen3 14B、在 Raycast 中创建带语法修改提示词的 AI 命令。在任意应用中选中文本 → 触发 Raycast 热键 → 修改版自动替换选区。段落级修改的速度可与 Grammarly 内联相当。',
+          },
+        ],
+      },
+      notionReplacement: {
+        id: 'notion-replacement',
+        title: '替代 Notion AI：文档与笔记',
+        content:
+          '**搭配本地 Ollama 后端的 Obsidian，是面向笔记与知识工作者最接近 Notion AI 的功能等价方案。** 它不复刻 Notion 的数据库结构，但在文档起草和笔记 AI 问答上能力相当 — 而且完全本地处理。',
+        items: [
+          '**安装 Obsidian**：从 obsidian.md 下载，个人使用免费。为笔记新建一个仓库（Vault） — 这是 AI 插件将索引的目录。',
+          '**安装 Copilot 插件**（社区插件 → 搜索 "Copilot"）。在插件设置中将 LLM 提供方选择为 "Ollama"，把基础 URL 设为 `http://localhost:11434` 并选择模型。Copilot 会在 Obsidian 中加入聊天侧栏，可在当前笔记上下文中提问与生成内容。',
+          '**安装 Smart Connections 插件**：用于全仓库问答。Smart Connections 通过本地嵌入模型（经 Ollama 调用 nomic-embed-text）把所有笔记索引为向量，在向 LLM 发送之前先检索相关笔记。这是 Notion AI "对我的笔记提问" 的直接替代。',
+          '**文档起草：** 在 Copilot 聊天里输入"基于以下笔记起草一份[文档类型]：[粘贴要点]"。插件会自动包含当前笔记的上下文。输出在聊天中出现，复制粘贴回笔记即可。',
+          '**内容扩写：** 选中笔记中的要点提纲，打开 Copilot 命令面板并执行"扩写所选" — 模型会按笔记的写作语域把提纲转换为散文。',
+          '**生成周回顾：** "把我本周的笔记按周回顾格式总结：成果、阻塞、下一步行动。" Smart Connections 会自动检索过去 7 天的笔记并交给 LLM。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidian 配合 Copilot 或 Smart Connections 插件并指向本地 Ollama 实例，可替代 Notion AI 的文档起草、内容扩写与笔记问答 — 全部本地处理，不向任何外部服务器发送内容。',
+          },
+          {
+            type: 'plain-terms',
+            text: '部署步骤：安装 Obsidian，安装 Ollama，拉取 Qwen3 14B，在 Obsidian 安装 Copilot 社区插件，将其指向 localhost:11434。这就是 Notion AI 全部 AI 功能的完整替代。笔记仍以纯 Markdown 文件存放在您指定的仓库目录（完全可移植）。AI 聊天在本机运行。一切都不离开您的电脑。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Obsidian 把笔记保存为您完全掌控的目录中的纯 Markdown 文件。与 Notion 的私有数据库格式不同，您的笔记在任何文本编辑器中都可读、随时可导出。这是相对 Notion 的第二项隐私与可移植性优势 — 知识库不会被锁在云平台中。',
+          },
+        ],
+      },
+      integrations: {
+        id: 'integrations',
+        title: '集成方案',
+        content:
+          '**集成分三档：基础（复制-粘贴）、中级（热键应用）、高级（浏览器扩展或系统级 AI 层）。** 选择与自己技术舒适度匹配的档位起步。',
+        columns: ['集成档位', '方式', '应用', '适用场景'],
+        rows: [
+          { '集成档位': '基础（复制-粘贴）', '方式': '打开本地 AI 应用、粘贴文本、复制结果', '应用': 'LM Studio 聊天、Ollama CLI、Open WebUI', '适用场景': '偶尔修改；适用所有操作系统' },
+          { '集成档位': '中级（热键）', '方式': '选中文本 → 热键 → 修改版替换选区', '应用': 'Raycast AI（macOS）、AutoHotkey + Ollama（Windows）', '适用场景': '在任意应用频繁修改；最小化工作流改动' },
+          { '集成档位': '中级（写作应用）', '方式': '写作工具内置 AI 助手', '应用': 'Obsidian + Copilot 插件、VS Code + Continue.dev', '适用场景': '日常重度使用这些应用的写作者与开发者' },
+          { '集成档位': '高级（浏览器扩展）', '方式': '自定义扩展把所选文本发往本地 Ollama API', '应用': '自研 Chrome/Firefox 扩展（GitHub 上有开源模板）', '适用场景': '想要 Grammarly 风格浏览器集成的高级用户' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'macOS 上最快的中级方案是带自定义 AI 命令的 Raycast。安装 Raycast（免费），Extensions → AI Commands → New Command，粘贴语法修改提示词并分配热键。任意应用中选中文本 → 热键 → 修改版替换选区。可达到 Grammarly 约 80% 的速度优势，同时保持完全本地隐私。',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '写作任务模型推荐',
+        content:
+          '**写作辅助偏好指令跟随强、散文输出连贯的模型。** 排序与编程或数学场景不同。',
+        columns: ['任务', '最佳模型', '替代（更低 VRAM）', '原因'],
+        rows: [
+          { '任务': '语法修改', '最佳模型': 'Qwen3 14B', '替代（更低 VRAM）': 'Phi-4 Mini', '原因': '准确，少做不必要修改，标点正确' },
+          { '任务': '文风改写', '最佳模型': 'Qwen3 14B 或 Llama 3.3 70B', '替代（更低 VRAM）': 'Mistral 7B', '原因': '散文自然；避免 AI 腔漂移' },
+          { '任务': '语气调整', '最佳模型': 'Llama 3.3 70B', '替代（更低 VRAM）': 'Qwen3 14B', '原因': '改换语域时最能保留事实内容' },
+          { '任务': '文档起草（Notion AI 替代）', '最佳模型': 'Qwen3 14B', '替代（更低 VRAM）': 'Phi-4 Mini', '原因': '结构生成稳定，能跟随文档格式指令' },
+          { '任务': '笔记摘要 / 问答', '最佳模型': 'Qwen3 14B', '替代（更低 VRAM）': 'Phi-4 Mini', '原因': '3B 以上模型做摘要均可胜任' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在系统提示词中加入"避免 AI 腔短语"的指令。模型默认会用犹豫的 AI 腔（"当然！这是修改后的版本..."）。一条"仅返回修改后的正文，不要前言、不要评论"的系统提示词可以消除这一点。文风改写时再加："不要使用\'深入探讨\'、\'织锦\'、\'促进\'、\'……的领域\'、\'值得注意的是\'这些表达。"',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '隐私对比',
+        content:
+          '**云端写作助手与本地 LLM 的隐私差异是结构性的。** 云服务不收到文本就无法处理；本地 LLM 不主动建立外部连接就无法把文本发出去。',
+        items: [
+          '**Grammarly 数据许可：** Grammarly 服务条款（第 5 条）授予其"全球范围、非排他、免许可费的[...]使用、复制、修改、改编、发布、翻译、分发"提交文本的权利，用于产品改进与安全。这并不隐藏，但意味着您在 Grammarly 中修改的每一句话都可能进入其训练管线。',
+          '**Notion AI 数据流：** Notion 把文档内容发往 OpenAI API 用于 AI 功能。受 Notion 数据处理附录约束，提供合同层面的保护 — 但数据仍然离开了 Notion 服务器并进入 OpenAI 基础设施。',
+          '**本地 LLM 数据流：** 为零。Ollama 默认绑定到 localhost。推理过程中不会建立任何出站连接。模型权重是磁盘上的静态文件。文本仅在内存中被分词、处理、丢弃。无日志、无缓存、无外部服务。',
+          '**中国《数据安全法》《个人信息保护法》合规：** 中国 2021 年颁布的《数据安全法》以及《个人信息保护法》对企业处理重要数据、个人信息提出了本地化与最小必要原则的要求。涉及国家秘密、商业秘密、未公开技术资料的写作场景，将文本发送至境外云服务（含 Grammarly、Notion AI）通常需要走数据出境安全评估，流程复杂。本地 LLM 在内网或单机运行，不发生跨境传输，是合规层面成本最低的方案。Qwen2.5（阿里通义千问）作为国产开源模型，在中文写作场景与本国合规要求下尤为适配。',
+          '**亚太地区跨境数据：** 新加坡 PDPA、韩国 PIPA、日本 APPI、澳大利亚 Privacy Act 都把数据驻留与处理者监督列为重点。跨多个 APAC 国家运营的企业（含跨国法律、医疗、金融机构）面对的是一组互不相同的合规框架，本地 LLM 通过"数据不出端点"这一统一表述，是最易解释的合规路径。',
+          '**企业部署（金融/医疗/法律）：** 银行（受 GLBA 与各国央行管控）、医院（受 HIPAA、医疗信息保护条例约束）、律师事务所（受职业保密义务约束）通常无法把客户数据传给云端 AI 助手。本地 LLM 部署在企业内网（局域网集中式 Ollama 推理服务器，多人共享），可在不动现有合规架构的前提下，一次性满足多类业务的写作辅助需求。建议加密硬盘、最小权限访问、定期备份模型权重与笔记仓库。',
+          '**遥测：** Grammarly 除文本内容外还采集打字行为、文档元数据与使用模式。Notion 采集交互数据与功能使用情况。Ollama 提供可关闭的匿名崩溃报告。本地 AI 应用（LM Studio、Jan）有可关闭的分析遥测 — 聊天内容从不包含在内。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '如果您把 Grammarly 用于工作邮件、合同草稿或任何受保密义务约束的内容 — 在认定其受保护之前，先核对组织的数据政策与 Grammarly 的企业数据协议。Grammarly Business 提供 Zero-Data Retention 选项，但需 Business 套餐并显式启用。',
+          },
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: '成本对比',
+        content:
+          '**替换两款工具可节省 $20–40/月的订阅费用。** 本地 LLM 部署的软件成本为零，唯一持续成本是电费。',
+        columns: ['工具', '月费', '年费', '备注'],
+        rows: [
+          { '工具': 'Grammarly Free', '月费': '$0', '年费': '$0', '备注': '仅基础语法，无文风/语气功能' },
+          { '工具': 'Grammarly Premium', '月费': '$12–30/月', '年费': '$144–360/年', '备注': '语法+文风+语气全开；含浏览器扩展' },
+          { '工具': 'Notion AI', '月费': '$8–10/用户/月', '年费': '$96–120/年', '备注': '叠加在已有 Notion 订阅上' },
+          { '工具': 'Ollama（本地 LLM）', '月费': '$0', '年费': '$0', '备注': '免费开源；按使用量电费约 $1–5/月' },
+          { '工具': 'Obsidian（替代 Notion）', '月费': '$0（个人）', '年费': '$0', '备注': '个人免费；商业使用 $50/年' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '如果还在犹豫，先把语法修改这一项放到本地模型上试 30 天。保留 Grammarly 用于浏览器集成。评估本地修改质量与复制-粘贴流程能否满足您的写作需要，再决定是否退订 Grammarly。如果接受 Obsidian 作为笔记层，Notion AI 的切换阻力更小。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见误区',
+        items: [
+          '**没有为输出格式设置系统提示词。** 没有系统提示词时，模型会在修改前加"当然！下面是修改后的文本：" 之类前言，附带解释并使用 AI 腔。请始终设置一条系统提示词，明确"仅返回修改后的正文"。',
+          '**用 Phi-4 Mini 做复杂文风改写。** Phi-4 Mini 处理语法修改没问题，但与 Qwen3 14B 相比，文风改写更套路化。重视文风的工作请使用更大的模型。',
+          '**期待 Obsidian 与 Notion 在 UI 上对等。** Obsidian 是 Markdown 编辑器，不是数据库。如果您的 Notion 工作流依赖数据库、视图与关联属性，Obsidian 不是完整替代 — 只能迁移 AI 功能。切换前先评估数据库功能是否关键。',
+          '**文风改写没有设字数上限。** 没有上限时，模型会把改写写得越来越长。在文风改写提示词里加上"改写后的文本控制在原文字数 ±10% 以内"。',
+          '**把整篇长文档丢给小模型。** Phi-4 Mini（3.8B）在约 3,000 字以上文档中会失去连贯性。长文档应分章节分别处理。Qwen3 14B 可稳定处理 8,000 字以上。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考来源',
+        items: [
+          'Grammarly 服务条款 — 第 5 条（数据许可） — [grammarly.com/terms](https://www.grammarly.com/terms)',
+          'Notion AI 数据处理附录 — [notion.so/help/notion-ai](https://www.notion.so/help/notion-ai)',
+          'Obsidian Copilot 插件文档 — [GitHub: logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)',
+          'Obsidian Smart Connections 插件 — [GitHub: brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections)',
+          'Ollama 数据处理与遥测 — [ollama.com/privacy](https://ollama.com/privacy)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '本地 LLM 在语法修改上能与 Grammarly 媲美吗？',
+            a: '日常的语法、标点、拼写错误：是的，Qwen3 14B 与 Grammarly Premium 相当。Grammarly 仍占优势之处：边打字边出的实时内联修改；领域专项写作风格指南（Grammarly 支持 APA、MLA、Chicago）；以及在 Gmail、Google Docs 等 Web 应用中工作的浏览器扩展。本地 LLM 处理浏览器字段中的文本需要复制-粘贴流程。',
+          },
+          {
+            q: 'Obsidian 能作为 Notion 的完整替代吗？',
+            a: 'Obsidian 在笔记与知识库方面是不错的替代。它不替代 Notion 的数据库、项目管理与关系数据。如果您主要把 Notion 用于笔记、文档与 Wiki — Obsidian 可以完整替代。如果您依赖 Notion 数据库、看板视图或关联属性 — 需要额外工具（Anytype、Capacities，或继续用 Notion 做数据库层、Obsidian 做写作层）。',
+          },
+          {
+            q: '哪个本地模型最接近 Grammarly 的写作建议？',
+            a: 'Qwen3 14B 在语法与文风修改上输出最像 Grammarly — 精准、不做多余改动、保留原本声线。Llama 3.3 70B 在复杂改写中散文略更自然，但需要更多 VRAM。Phi-4 Mini 处理简单语法够用，但在文风改写上偏简化。',
+          },
+          {
+            q: 'Obsidian Copilot 插件会把笔记发到云端吗？',
+            a: '配置为使用本地 Ollama 实例时不会。该插件同时支持云端 LLM（OpenAI、Anthropic）与本地 Ollama。当您把 LLM 提供方选为 Ollama 并填入 localhost URL，所有 AI 处理都在本地完成。任何笔记内容都不会被外发。需要审计级验证时，可在 macOS 用 Little Snitch、或用 Wireshark 监控网络流量加以确认。',
+          },
+          {
+            q: '能在 Google Docs 或 Gmail 中使用本地 LLM 吗？',
+            a: '不能直接使用 — 不存在与 Grammarly 等价、原生集成进浏览器文本框的本地 LLM 浏览器扩展。变通方案：（1）在 Google Docs 中选中文本、复制、粘贴到本地 AI 应用、复制修改版、再粘回 Google Docs；（2）macOS 上用 Raycast 自定义 AI 命令，对所选文本处理并替换；（3）自研 Chrome 扩展，读取所选文本并调用本地 Ollama API（GitHub 上有开源模板）。这些都比不上 Grammarly 无缝的内联体验。',
+          },
+          {
+            q: '这套方案在专业用途下符合 HIPAA / GDPR 吗？',
+            a: '完全在本地处理、不外发数据的本地 LLM，针对 HIPAA 与 GDPR 中的核心"数据传输"问题给出了直接答案。但合规取决于完整的技术栈、安全控制与具体监管要求。本地 LLM 不会自动合规 — 您仍需评估终端安全、设备物理保护与访问控制。正式合规判定请咨询合规负责人。本地处理消除了"第三方数据处理者"这一议题，但不取代完整的合规体系。',
+          },
+          {
+            q: '学术论文最适合的本地写作助手是什么？',
+            a: 'Qwen3 14B，配合系统提示词："仅修改语法与标点 — 不要改动词汇、句式或内容。保留所有引用、术语与领域专门语言不变。" 这相当于 Grammarly 的"仅语法"模式，是学术写作中最安全的设置 — 改动措辞可能在不经意间改变原意，或被认为修改了引用内容。',
+          },
+          {
+            q: '可以在本地替代 Notion AI 的会议纪要摘要吗？',
+            a: '可以。把会议纪要导出为文本或 Markdown 文件（或直接粘贴文字稿）。提示词："请把这份会议纪要总结为：（1）做出的决策、（2）带责任人的行动项、（3）尚未明确的问题。每段用项目符号。控制在 300 字以内。" Phi-4 Mini 及以上的模型都能稳定胜任会议摘要。对例会，可在本地 AI 应用中保存提示词模板。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[本地 LLM 邮件与日历自动化](/power-local-llm/local-llm-email-and-calendar-automation?lang=zh) — 用本地 LLM 自动起草邮件并管理日历，与写作助手相互补充。',
+          '[小说作者的本地 LLM 提示词](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=zh) — 超越语法修改的创作提示词模板，覆盖场景与人物开发。',
+          '[用本地 AI 智能体替代 Zapier](/power-local-llm/replace-zapier-with-local-ai-agents?lang=zh) — 本地工作流自动化，把写作工具与其他业务流程串起来。',
+          '[面向私有业务数据的本地 RAG](/power-local-llm/local-rag-for-private-business-data?lang=zh) — 对机密业务文档做问答，把笔记问答的用法扩展到大型文档库。',
+          '[Windows / Mac / Linux 上最简单的本地 AI 应用](/power-local-llm/easiest-local-ai-app-windows-mac-linux?lang=zh) — 如果您需要先搭建第一款本地 AI 应用，再去落地写作助手工作流。',
+          '[业务流程的本地 AI 智能体：欧盟合规](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=zh) — 部署本地 AI 写作助手时的 GDPR 与 EU AI Act 背景，可作跨境业务参考。',
         ],
       },
     },
