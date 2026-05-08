@@ -1236,4 +1236,616 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: 'RAG local pour données métier : IA conforme RGPD pour documents sensibles (2026)',
+    seoTitle: 'RAG local conforme RGPD pour documents sensibles (2026)',
+    intro:
+      "Les équipes juridiques, médicales et financières partagent le même problème : les documents les plus précieux à interroger par IA sont précisément ceux qui ne peuvent pas quitter l'entreprise. Voici l'architecture, le jeu de contrôles et la matrice de décision pour un RAG auto-hébergé conforme au RGPD, à l'AI Act, à HIPAA et au cadre Datenschutz allemand — rédigé pour les responsables conformité qui veulent transmettre un seul document à leur équipe IT.",
+    metaDescription:
+      'RAG local conforme RGPD pour les équipes juridiques, médicales et financières. Architecture, audit, PIA et 3 modèles de déploiement comparés.',
+    twitterDescription:
+      "RAG local répondant au RGPD et à l'AI Act. Air-gap, journaux d'audit, traçabilité, périmètre PIA et 3 modèles de déploiement — l'article que les responsables conformité envoient à l'IT.",
+    audience:
+      "Responsables conformité, DPO, juristes et architectes IT en Europe et dans la francophonie chargés de bâtir un RAG auto-hébergé sur des documents confidentiels — contrats, dossiers patients, archives d'audit, salles de données M&A, correspondance avec les autorités.",
+    readTime: '15 min de lecture',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'RAG local conforme RGPD',
+    targetKeywords: [
+      'rag conforme rgpd',
+      'rag local données métier',
+      'eu ai act rag',
+      'rag privé documents confidentiels',
+      'déploiement rag on-premise',
+      'datenschutz rag',
+      'pia rag local',
+    ],
+    leadAnswerBlock:
+      "**Un déploiement RAG auto-hébergé répond au RGPD et à l'AI Act seulement si six contrôles sont en place dès le premier jour : air-gap ou egress strictement contrôlé, authentification par utilisateur avec accès basé sur les rôles, journaux d'audit immuables couvrant l'ingestion et la recherche, chiffrement de bout en bout au repos et en transit, traçabilité déterministe du chunk vers la source, et un parcours de suppression écrit qui se propage du stockage source jusqu'à l'index vectoriel et aux embeddings en cache. Le modèle de déploiement (laptop mono-utilisateur, serveur on-prem, cloud privé EU) détermine quels contrôles sont triviaux et lesquels demandent du travail — pas si les contrôles sont requis.**",
+    quickAnswerTop: {
+      en: {
+        question:
+          'Le RAG local est-il conforme RGPD par défaut, et quel modèle de déploiement choisir pour des équipes régulées ?',
+        answer:
+          "Le RAG local n'est pas conforme RGPD par défaut. Faire tourner un modèle on-premise résout le transfert hors UE et réduit la liste des sous-traitants, mais les articles 5, 25, 30, 32 et 35 du RGPD continuent de s'appliquer : base légale, minimisation, audit, sécurité du traitement et PIA pour tout système traitant des données sensibles à grande échelle. Choisissez un laptop mono-utilisateur pour les professionnels solos et les revues ponctuelles ; un serveur on-prem pour des bases documentaires départementales jusqu'à quelques milliers de documents et 5–50 utilisateurs ; un cloud privé EU (région souveraine, clés gérées par le client, EU uniquement) pour des déploiements multi-entités où la résilience compte plus qu'un air-gap intégral. Quel que soit le choix, les six contrôles sont les mêmes — seul le coût d'implémentation change.",
+        bullets: [
+          "L'hébergement local résout le transfert transfrontalier (Art. 44–49) et réduit la liste des sous-traitants — il ne résout ni la base légale, ni la PIA, ni les droits des personnes.",
+          'Laptop mono-utilisateur — idéal pour avocat, médecin ou auditeur solo. Difficile à auditer à grande échelle ; air-gap le plus simple.',
+          'Serveur on-prem — idéal pour 5–50 utilisateurs. Vrais journaux, RBAC, sauvegardes, reprise. Effort IT le plus élevé.',
+          'Cloud privé EU — idéal pour les multi-entités résilients. Région souveraine + clés gérées par le client + clause anti-entraînement obligatoires.',
+          'Une PIA est obligatoire (Art. 35) dès que des données sensibles sont traitées à grande échelle, quel que soit le modèle de déploiement.',
+          "Le droit à l'effacement doit se propager aux documents source, à l'index vectoriel et aux embeddings en cache — concevez le parcours avant la mise en production.",
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Faits rapides', anchor: '#quick-facts' },
+      { label: 'Comparaison des modèles de déploiement', anchor: '#deployment-comparison' },
+      { label: 'Choisir un modèle de déploiement', anchor: '#which-deployment' },
+      { label: 'Pourquoi un RAG local pour les données sensibles', anchor: '#why-local-rag' },
+      { label: 'Les six contrôles indispensables', anchor: '#required-controls' },
+      { label: "Air-gap et contrôle de l'egress", anchor: '#air-gap' },
+      { label: "Journaux d'audit qui tiennent face à un contrôle", anchor: '#audit-logging' },
+      { label: 'Traçabilité du chunk à la source', anchor: '#data-lineage' },
+      { label: "Chiffrement et contrôle d'accès", anchor: '#encryption-access' },
+      { label: 'Modèle laptop mono-utilisateur', anchor: '#laptop-pattern' },
+      { label: 'Modèle serveur on-prem', anchor: '#on-prem-pattern' },
+      { label: 'Bases vectorielles', anchor: '#vector-db-comparison' },
+      { label: 'Modèle cloud privé EU', anchor: '#private-cloud-pattern' },
+      { label: 'Classification AI Act', anchor: '#eu-ai-act' },
+      { label: 'Exigences PIA (Art. 35)', anchor: '#dpia-requirements' },
+      { label: 'Notes juridiction allemande (Datenschutz)', anchor: '#germany-datenschutz' },
+      { label: 'Checklist conformité avant mise en production', anchor: '#compliance-checklist' },
+      { label: 'Erreurs fréquentes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          "**L'hébergement local est nécessaire mais insuffisant.** Faire tourner le modèle et le stockage vectoriel sur votre matériel résout le transfert hors UE et réduit la liste des sous-traitants, mais les articles 5, 25, 30, 32 et 35 du RGPD restent applicables. Base légale, minimisation, audit, sécurité du traitement et PIA ne deviennent pas optionnels parce que les données restent dans vos murs.",
+          "**Six contrôles sont non négociables**, quel que soit le modèle : air-gap ou egress strict, authentification par utilisateur avec accès par rôle, journaux d'audit immuables, chiffrement au repos et en transit, traçabilité déterministe du chunk vers le document source, et parcours de suppression écrit incluant l'index vectoriel et tout embedding en cache.",
+          '**Trois modèles de déploiement couvrent la plupart des cas régulés.** Laptop mono-utilisateur pour les solos et revues ponctuelles ; serveur on-prem pour des bases départementales de 5–50 utilisateurs ; cloud privé EU (région souveraine, clés gérées par le client) pour des déploiements multi-entités où la résilience prime sur un air-gap intégral.',
+          "**L'AI Act classe la plupart des RAG locaux comme à risque limité** — mais dès que la recherche alimente une décision automatisée (scoring crédit, sélection d'emploi, éligibilité aux prestations), le déploiement bascule en haut risque et déclenche l'évaluation de conformité, la surveillance post-marché et la supervision humaine.",
+          "**Une PIA est obligatoire au titre de l'article 35** pour tout RAG ingérant des données sensibles (santé, juridique, biométrique, politique, syndicale) à grande échelle, ou pour tout système produisant des décisions automatisées à effet juridique. Sauter la PIA, c'est sauter sa défense en cas d'audit.",
+          "**Le droit à l'effacement est le test que la plupart des déploiements échouent.** Les documents source sont faciles. L'index vectoriel se reconstruit. Les embeddings en cache, les journaux de recherche et les réponses stockées dans l'historique de chat sont les parties oubliées — et celles que l'autorité de contrôle interrogera.",
+          "**Les modèles d'embeddings open source sont conformes RGPD en principe**, à trois conditions : (a) les poids sont téléchargés une fois et figés sur un hash, (b) l'inférence tourne entièrement en local sans télémétrie, (c) la fiche modèle et la licence sont relues pour toute clause incompatible avec un usage métier confidentiel.",
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Faits rapides',
+        items: [
+          "**6 contrôles obligatoires** pour tout RAG régulé : air-gap, RBAC, journaux d'audit, chiffrement, traçabilité, parcours de suppression.",
+          '**3 modèles de déploiement :** laptop mono-utilisateur (solos), serveur on-prem (5–50 utilisateurs), cloud privé EU (multi-entités).',
+          '**Une PIA est obligatoire** (Art. 35) dès que des données sensibles (santé, juridique, biométrique) sont traitées à grande échelle.',
+          '**AI Act :** la plupart des RAG locaux = risque limité ; haut risque dès que la recherche alimente des décisions automatisées (crédit, emploi, prestations).',
+          "**Le droit à l'effacement** doit se propager aux documents source, index vectoriels, embeddings en cache ET historique des réponses.",
+          "**La CNIL recommande** l'IA locale pour le traitement des données professionnelles sensibles (financières, médicales, juridiques) lorsque l'enjeu de souveraineté ou de secret professionnel le justifie.",
+          "**Les modèles d'embeddings open source** sont conformes RGPD seulement si les poids sont figés, l'inférence est entièrement locale et la licence est relue.",
+        ],
+      },
+      comparisonTable: {
+        id: 'deployment-comparison',
+        title: 'Comparaison des modèles de déploiement',
+        content:
+          "Chaque modèle peut être rendu conforme RGPD ; ce qui change, c'est le coût des contrôles et les modes de défaillance. Choisissez le modèle le plus simple qui correspond au nombre d'utilisateurs, à la sensibilité des documents et à l'exigence de résilience.",
+        columns: ['Contrôle', 'Laptop mono-utilisateur', 'Serveur on-prem', 'Cloud privé EU'],
+        rows: [
+          {
+            'Contrôle': 'Air-gap (aucun trafic sortant)',
+            'Laptop mono-utilisateur': 'Trivial — désactiver le réseau',
+            'Serveur on-prem': 'Faisable — VLAN + pare-feu',
+            'Cloud privé EU': "Difficile — uniquement allowlist d'egress",
+          },
+          {
+            'Contrôle': "Journal d'audit (qui, quoi, quand)",
+            'Laptop mono-utilisateur': 'Manuel — niveau OS uniquement',
+            'Serveur on-prem': 'Solide — pipeline de logs central',
+            'Cloud privé EU': 'Solide — logging cloud-natif',
+          },
+          {
+            'Contrôle': 'Traçabilité (chunk → source)',
+            'Laptop mono-utilisateur': 'Fichiers locaux uniquement',
+            'Serveur on-prem': 'Pipeline complètement traçable',
+            'Cloud privé EU': 'Complète — sur plusieurs régions',
+          },
+          {
+            'Contrôle': 'Résidence des données UE',
+            'Laptop mono-utilisateur': 'Inhérente — emplacement physique',
+            'Serveur on-prem': 'Inhérente — emplacement physique',
+            'Cloud privé EU': 'Configurée — région souveraine requise',
+          },
+          {
+            'Contrôle': 'RBAC par utilisateur',
+            'Laptop mono-utilisateur': 'Mono-utilisateur — N/A',
+            'Serveur on-prem': "Fournisseur d'identité + groupes",
+            'Cloud privé EU': 'IAM + SSO + ACL par collection',
+          },
+          {
+            'Contrôle': "Sauvegarde et plan de reprise d'activité",
+            'Laptop mono-utilisateur': 'Disque externe chiffré',
+            'Serveur on-prem': 'Bande ou sauvegarde hors site',
+            'Cloud privé EU': 'Réplication multi-AZ',
+          },
+          {
+            'Contrôle': 'Coût initial',
+            'Laptop mono-utilisateur': 'Matériel uniquement — faible',
+            'Serveur on-prem': 'Serveur + intégration — moyen',
+            'Cloud privé EU': 'Abonnement + setup — moyen',
+          },
+          {
+            'Contrôle': 'Coût récurrent',
+            'Laptop mono-utilisateur': 'Aucun — temps sysadmin',
+            'Serveur on-prem': 'IT ops + énergie + climatisation',
+            'Cloud privé EU': 'Mensualité récurrente',
+          },
+          {
+            'Contrôle': 'Idéal pour',
+            'Laptop mono-utilisateur': 'Solos, revues ponctuelles',
+            'Serveur on-prem': '5–50 utilisateurs, KB départementales',
+            'Cloud privé EU': 'Multi-entités, déploiements résilients',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-deployment',
+        title: 'Choisir un modèle de déploiement',
+        content:
+          "**Le bon choix dépend du nombre d'utilisateurs, de la sensibilité des documents, de la pression d'audit et de la capacité IT interne.** Ce raccourci de décision couvre la plupart des cas réels.",
+        columns: ['Votre situation', 'Recommandation'],
+        rows: [
+          {
+            'Votre situation': 'Avocat, médecin ou auditeur solo traitant un dossier à la fois',
+            'Recommandation': 'Laptop mono-utilisateur',
+          },
+          {
+            'Votre situation': 'Salle de données M&A avec 3–5 reviewers nommés et date de fin fixe',
+            'Recommandation': 'Laptop mono-utilisateur ou on-prem (selon le volume documentaire)',
+          },
+          {
+            'Votre situation': 'Équipe conformité de 10–30 personnes partageant des archives de correspondance régulateur',
+            'Recommandation': 'Serveur on-prem',
+          },
+          {
+            'Votre situation': 'Service hospitalier construisant un assistant de protocoles cliniques pour 50 personnes',
+            'Recommandation': 'Serveur on-prem',
+          },
+          {
+            'Votre situation': 'Groupe multi-entités ayant besoin d\'un seul RAG sur plusieurs filiales européennes',
+            'Recommandation': 'Cloud privé EU (région souveraine + clés gérées par le client)',
+          },
+          {
+            'Votre situation': 'Assureur avec exigence de disponibilité 24/7 et plan de reprise',
+            'Recommandation': 'Cloud privé EU',
+          },
+          {
+            'Votre situation': 'Administration avec données classifiées ou restreintes',
+            'Recommandation': 'On-prem air-gappé uniquement — le cloud est exclu',
+          },
+          {
+            'Votre situation': "Défense d'audit régulateur due dans moins de 6 semaines",
+            'Recommandation': "Serveur on-prem (le plus rapide pour démontrer la maîtrise)",
+          },
+        ],
+      },
+      whyLocalRag: {
+        id: 'why-local-rag',
+        title: 'Pourquoi un RAG local pour les données sensibles',
+        content:
+          "**L'argument du RAG local face au LLM cloud-as-a-service n'est pas une posture — c'est la forme de l'analyse de risque RGPD.** Le RAG cloud convient à de nombreux usages ; pour des données métier sensibles, il ajoute cinq risques que le RAG local élimine par construction.",
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: "Le RAG local garde vos documents sensibles sur votre matériel tout en offrant à votre équipe une recherche assistée par IA — aucune donnée ne quitte vos locaux, aucun sous-traitant tiers ne les touche, et la question du transfert transfrontalier ne se pose pas.",
+          },
+          {
+            type: 'plain-terms',
+            text: "Imaginez que votre équipe juridique puisse interroger 10 000 dossiers en langage naturel — mais que les documents ne quittent jamais votre salle serveur. C'est exactement le RAG local : l'IA lit vos documents sur votre matériel, répond à vos questions sur votre matériel, et rien n'est envoyé nulle part. L'avantage conformité n'est pas une fonctionnalité — c'est l'architecture.",
+          },
+        ],
+        items: [
+          "**Transfert transfrontalier (Art. 44–49).** Envoyer des données personnelles à un sous-traitant hors UE exige des Clauses Contractuelles Types, une analyse d'impact transfert et une réponse crédible sur les pouvoirs d'injonction de la juridiction réceptrice. Le RAG local ne transfère pas — la question disparaît.",
+          "**Prolifération des sous-traitants (Art. 28).** Les fournisseurs LLM cloud reposent typiquement sur de l'infrastructure hyperscaler, des services de modération et des outils d'observabilité. Chacun est un sous-traitant à lister, contractualiser et auditer. Le RAG local n'a aucun sous-traitant par défaut.",
+          "**Fuite vers les données d'entraînement.** De nombreuses CGU LLM cloud se réservent le droit d'utiliser les prompts clients pour améliorer le modèle, sauf à payer un palier entreprise et vérifier la clause anti-entraînement. Le RAG local utilise des modèles dont vous contrôlez les poids ; rien ne quitte l'hôte.",
+          "**Clauses de confidentialité dans les contrats clients.** Conventions d'avocat externe, NDA M&A et accords sur données patient interdisent souvent la transmission du matériel protégé à des sous-traitants tiers. Le RAG local contourne entièrement la clause.",
+          "**Exposition aux injonctions et procédures judiciaires.** Les documents stockés chez un fournisseur cloud peuvent être réquisitionnés par une procédure visant le fournisseur, parfois sans notification rapide au responsable de traitement. Les documents qui ne quittent jamais vos locaux ne peuvent être réquisitionnés que chez vous.",
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: "Le RAG local n'est pas la bonne réponse pour toutes les charges de travail. Recherche d'informations publiques, génération de brouillons marketing, assistance code sur dépôts open source — tout cela fonctionne en général mieux avec des LLM cloud, parce que l'exposition RGPD est faible et l'écart de qualité compte. L'argument de cet article concerne spécifiquement les données métier confidentielles : juridique, médical, financier, RH, correspondance régulateur et secrets d'affaires.",
+          },
+        ],
+      },
+      requiredControls: {
+        id: 'required-controls',
+        title: 'Les six contrôles indispensables',
+        content:
+          '**Ces six contrôles sont le socle.** Tout déploiement régulé en a besoin ; le modèle de déploiement ne change que la façon de les implémenter. Sauter un seul de ces contrôles est la cause la plus fréquente des audits qui se passent mal.',
+        numberedItems: [
+          {
+            title: "Air-gap ou contrôle strict de l'egress",
+            whyItMatters:
+              "Confirme que les documents et les embeddings ne peuvent pas fuir par des appels sortants — SDK de télémétrie, sondes de mises à jour, crash reporters, callbacks de modération, CDN tiers pour les polices. Désactivez complètement l'accès réseau (vrai air-gap) ou exécutez une allowlist d'egress qui n'autorise que des serveurs de mise à jour signés.",
+          },
+          {
+            title: 'Authentification par utilisateur avec accès par rôle',
+            whyItMatters:
+              "Vous devez pouvoir répondre à \"qui a accédé à quel document\" avant qu'un régulateur ne le demande. SSO contre un fournisseur d'identité, accès par groupe aux collections et ACL par document quand le dossier le justifie. Les comptes partagés ne sont pas un contrôle — c'est un échec d'audit en sursis.",
+          },
+          {
+            title: "Journaux d'audit immuables couvrant ingestion et recherche",
+            whyItMatters:
+              "Pour chaque document : qui l'a chargé, quand, chemin source, hash. Pour chaque requête : qui a demandé, ce qui a été demandé (si la base légale le permet), quels chunks ont été retournés, depuis quels document IDs, quelle réponse. Les journaux doivent être à preuve d'altération — append-only, signés, avec une rétention couvrant la fenêtre d'enquête de l'autorité de contrôle. Pour la traçabilité au niveau prompt — versionnement, changelog, rollback — voir [workflows de version control des prompts](/prompt-engineering/prompt-version-control-workflows?lang=fr).",
+          },
+          {
+            title: 'Chiffrement au repos et en transit',
+            whyItMatters:
+              "Chiffrement disque sur l'hôte, TLS pour tout appel service-à-service interne, gestion de clés qui survit au vol d'un laptop ou à la compromission d'un compte admin. Clés gérées par le client pour les déploiements cloud. Sans cela, un vol d'appareil devient une violation notifiable au titre de l'article 33.",
+          },
+          {
+            title: 'Traçabilité déterministe du chunk vers la source',
+            whyItMatters:
+              "Chaque chunk retourné doit remonter à son document source, sa page, sa section et sa version. C'est ce qui permet (a) de vérifier la réponse, (b) d'honorer une demande de suppression, (c) de défendre le système en justice quand un résumé généré est contesté. \"On ne peut pas reproduire quel chunk a produit quelle réponse\" n'est pas une réponse acceptable face à une autorité de contrôle.",
+          },
+          {
+            title: "Parcours de suppression écrit incluant l'index vectoriel et les embeddings en cache",
+            whyItMatters:
+              "Une demande de droit à l'effacement doit se propager du stockage source, à travers l'index vectoriel, jusqu'aux embeddings en cache et à la rétention des journaux de recherche. La plupart des déploiements gèrent proprement la suppression source et oublient le reste. Documentez le runbook de suppression avant la mise en production ; répétez-le sur des données synthétiques.",
+          },
+        ],
+      },
+      airGap: {
+        id: 'air-gap',
+        title: "Air-gap et contrôle de l'egress",
+        content:
+          "**Air-gap signifie que l'hôte n'a aucun chemin réseau sortant ; le contrôle d'egress signifie qu'il en a un strictement allowlisté.** Les deux sont acceptables ; choisissez le modèle le plus fort que votre exploitation peut soutenir.",
+        items: [
+          "**Vrai air-gap** — pas de DHCP, pas de résolution DNS vers des destinations publiques, pas de TCP sortant. Les mises à jour passent par des supports signés qu'un administrateur connecte physiquement. C'est le bon modèle pour les travaux classifiés, certains réseaux hospitaliers et tout déploiement dont le modèle de menace inclut une dépendance malveillante.",
+          "**Allowlist d'egress** — le réseau sortant n'est autorisé qu'à une courte liste de destinations nommées (serveurs de mise à jour de modèle, fournisseur d'identité, forwarders de logs vers des collecteurs internes). Tout autre trafic est rejeté au pare-feu. C'est le défaut pratique pour la plupart des déploiements départementaux régulés.",
+          '**Ce qu\'il faut vérifier sur la plateforme** : zéro télémétrie par défaut, aucun appel sortant pendant l\'inférence, aucun CDN de polices dans l\'UI, aucun crash reporter qui expédie des payloads. Vérifiez avec une capture de paquets ou un outil comme Little Snitch sur le banc d\'essai avant promotion en production.',
+          "**Gouvernance des mises à jour** — poids du modèle, poids de l'embedder, code applicatif et patches OS passent tous par une fenêtre de mise à jour contrôlée. L'administrateur qui promeut une mise à jour signe par écrit ; le changement est journalisé.",
+          '**Cassure d\'air-gap classique :** un SDK d\'analytique fourni avec un composant UI tiers, une référence CDN de polices dans le chrome de l\'application, ou une sonde "vérifier les mises à jour" qui s\'exécute au démarrage. C\'est pourquoi l\'étape de vérification compte — ne supposez rien à propos des défauts.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: "Lancez une capture de paquets de 24 heures sur l'hôte avec l'application ouverte et au repos. Tout ce qui sort sans être sur l'allowlist est un constat. Recommencez à chaque mise à jour applicative — les release notes sous-estiment systématiquement les nouveaux appels sortants.",
+          },
+        ],
+      },
+      auditLogging: {
+        id: 'audit-logging',
+        title: "Journaux d'audit qui tiennent face à un contrôle",
+        content:
+          "**Le journal d'audit est l'artefact qu'une autorité de contrôle lira en premier.** Il doit répondre à deux questions pour chaque recherche : qui a demandé, et qu'a livré le système. Sans cela, vous argumentez avec des mots ; avec un journal correct, vous montrez des reçus.",
+        items: [
+          "**Événements d'ingestion** : document ID, hash (SHA-256), nom de fichier, chemin source, chargé par, horodatage, tag de classification, taille, nombre de pages, groupe propriétaire, classe de rétention. Classifiez chaque document à l'ingestion — la classification rétroactive de gros corpus est laborieuse et rarement complète.",
+          "**Événements de recherche** : query ID, user ID, horodatage, chunk IDs retournés (et les document IDs d'origine), scores de retrieval, hash de la réponse finale, identifiant du modèle, identifiant de l'embedder, top-K utilisé. Le texte de la requête lui-même est sensible — ne le journalisez que si la finalité du traitement le couvre ; sinon, journalisez le hash et l'horodatage.",
+          "**Événements administratifs** : promotion de modèle, changement d'embedder, reconstruction d'index, modifications utilisateurs/groupes, modifications d'ACL, modifications de politique d'accès. Chaque événement signé par l'administrateur responsable.",
+          "**Preuve d'altération** : journal append-only, chaîne de hashs (chaque entrée référence le hash de la précédente), clé de signature out-of-band, rapprochements réguliers avec une copie distincte conservée par un autre administrateur ou sur un support write-once.",
+          "**Rétention** : alignée sur la fenêtre d'enquête de l'autorité — au minimum la durée de rétention du dossier ; communément six à sept ans dans les industries régulées ; plus longue selon les règles sectorielles.",
+          "**Pipeline** : l'application émet des événements structurés ; un forwarder les expédie vers un store de logs séparé et restreint en écriture. Le serveur applicatif ne doit jamais avoir le droit de supprimer ou réécrire des entrées de log — c'est la séparation des fonctions qui rend le journal crédible.",
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: "Journaliser le texte de la requête introduit sa propre question RGPD — une requête peut elle-même contenir des données personnelles (par exemple « résumer l'historique médical du patient X »). Décidez à la conception si la finalité du traitement couvre la journalisation des requêtes ; sinon, journalisez uniquement les métadonnées requises pour l'audit et la diagnostic opérationnel.",
+          },
+        ],
+      },
+      dataLineage: {
+        id: 'data-lineage',
+        title: 'Traçabilité du chunk à la source',
+        content:
+          "**La traçabilité est l'épine dorsale de tous les autres contrôles.** Sans elle, les demandes de suppression échouent, la vérification des réponses devient impossible et la piste d'audit s'effondre. Construisez la traçabilité dès la première ingestion, pas après.",
+        items: [
+          "**Traçabilité au niveau document** : chaque document a un ID interne stable, un hash de contenu, un horodatage d'ingestion, un propriétaire, une classification et une classe de rétention. Le fichier original reste sur le store source ; le système RAG détient une référence, pas le maître.",
+          "**Traçabilité au niveau chunk** : chaque chunk référence son document parent, sa page (PDF), sa section (documents structurés), son offset caractère, sa longueur et la version de la stratégie de chunking. Quand vous re-chunkez (vous le ferez), les anciens chunks sont marqués tombstoned, pas supprimés in place — pour que les anciens journaux de recherche restent résolvables.",
+          "**Traçabilité au niveau embedding** : chaque vecteur d'embedding référence son chunk ID et l'identifiant de l'embedder. Quand vous changez d'embedder, les anciens vecteurs sont conservés jusqu'à ce que les nouveaux soient validés et que tout dossier les ayant référencés soit clos ; alors seulement ils sont purgés.",
+          "**Traçabilité au niveau réponse** : chaque réponse générée référence les chunk IDs qui l'ont produite, l'identifiant du modèle, la version du template de prompt et l'horodatage. Quand un utilisateur demande « d'où vient cette réponse », le système résout chunk → document → page en un clic.",
+          "**Réindexation sans casser la traçabilité** : les reconstructions préservent les document IDs et incrémentent les versions de la stratégie de chunking. Les anciens chunk IDs restent résolvables dans les journaux de recherche même après que l'index live a changé.",
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: "Testez la chaîne de traçabilité chaque trimestre. Choisissez au hasard une recherche dans le journal d'audit et remontez : chunk ID → document ID → fichier original sur le store source → classe de rétention. Si une étape est cassée, corrigez le schéma avant la prochaine inspection — pas pendant.",
+          },
+        ],
+      },
+      encryptionAccess: {
+        id: 'encryption-access',
+        title: "Chiffrement et contrôle d'accès",
+        content:
+          "**Chiffrement au repos, chiffrement en transit et contrôle d'accès qui s'aligne sur votre fournisseur d'identité existant.** Ces contrôles sont bien compris ; le mode d'échec consiste à oublier l'une des trois couches, pas à mal implémenter celle choisie.",
+        items: [
+          "**Chiffrement au repos** — chiffrement disque complet sur l'hôte (LUKS sous Linux, BitLocker sous Windows, FileVault sous macOS pour les laptops). Sur les serveurs, chiffrez aussi les partitions du store vectoriel et de la zone de staging d'ingestion. Clés gérées par le client pour tout déploiement cloud, avec rotation selon votre politique.",
+          '**Chiffrement en transit** — TLS pour chaque saut service-à-service, même sur localhost. Politique de chiffrement alignée sur votre baseline sectorielle. Mutual TLS quand le modèle de menace le justifie — typiquement serveur-à-serveur en cloud.',
+          "**Authentification** — SSO contre votre fournisseur d'identité existant (OIDC, SAML). Pas de comptes locaux en production. MFA appliqué pour tout utilisateur ayant un accès administrateur ou à des collections sensibles.",
+          "**Autorisation** — accès par groupe au niveau collection ; ACL au niveau document quand le dossier le justifie (salles M&A, enquêtes RH). Le pipeline de retrieval doit appliquer les ACL au moment de la requête — pas seulement l'UI. Un utilisateur qui ne doit pas voir un document ne doit pas non plus recevoir ses chunks.",
+          "**Accès administratif** — gestion des accès privilégiés pour tout compte capable de lire ou reconstruire des index, voir les journaux d'audit ou changer les ACL. Élévation just-in-time avec justification journalisée plutôt que droits admin permanents.",
+          "**Sécurité des endpoints** — appareils gérés pour les déploiements laptop (enrôlés MDM, chiffrés, verrouillage écran imposé). Un laptop solo avec le store documentaire déchiffré laissé sans surveillance dans un café est la violation RGPD que vous ne voulez pas avoir à signaler.",
+        ],
+      },
+      laptopDeep: {
+        id: 'laptop-pattern',
+        title: 'Modèle laptop mono-utilisateur',
+        content:
+          "**Le laptop mono-utilisateur est le modèle le plus facile à air-gapper et le plus difficile à mettre à l'échelle.** Adapté pour les solos et les revues ponctuelles ; inadapté à tout ce qui doit survivre à un seul utilisateur ou à son départ.",
+        items: [
+          '**Matériel** — un laptop classe workstation avec chiffrement disque complet, GPU dédié (ou machine récente à mémoire unifiée) et au moins 32 Go de RAM. Le modèle et l\'embedder doivent tenir en mémoire avec le cache du store vectoriel. Pour les besoins matériels et la sélection par VRAM, voir le [guide matériel LLM local](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
+          "**Logiciel** — application RAG desktop autonome qui tourne en local ; LLM open source dont les poids sont téléchargés une fois et figés sur un hash ; embedder open source ; store vectoriel local sur le disque chiffré. Pour une comparaison de modèles open source adaptés au RAG local, voir [meilleurs modèles open source pour Ollama](/local-llms/top-open-source-models-ollama?lang=fr).",
+          "**Posture réseau** — air-gappé pendant le travail ; reconnecté uniquement pour des mises à jour signées explicites. Configurez le pare-feu OS pour rejeter par défaut toutes les connexions sortantes et créez des exceptions explicites pour le workflow de mise à jour.",
+          '**Manipulation des documents** — documents source sur le disque chiffré ; arborescence par dossier dédié à chaque dossier ; sauvegardes hebdomadaires chiffrées sur disque externe stocké dans un autre lieu.',
+          "**Posture d'audit** — le journal d'audit OS (login, accès fichiers, événements périphériques) est la base. Les événements applicatifs sont plus simples sur on-prem ; pour le laptop, traitez le log OS comme l'enregistrement primaire et complétez avec des notes manuelles dossier par dossier.",
+          "**Limites** — un laptop mono-utilisateur n'est pas une plateforme multi-utilisateurs. Partager le laptop, partager les comptes ou copier le store documentaire sur la machine d'un collègue casse la posture d'audit et l'analyse de base légale.",
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: "Pour les solos sur dossiers confidentiels, le modèle laptop mono-utilisateur est réellement la meilleure posture de confidentialité disponible — meilleure qu'un cloud et plus solide que beaucoup de déploiements on-prem. Le compromis est opérationnel : quand le laptop tombe, le dossier hérite du temps de récupération de votre discipline de sauvegarde.",
+          },
+        ],
+      },
+      onPremDeep: {
+        id: 'on-prem-pattern',
+        title: 'Modèle serveur on-prem',
+        content:
+          '**Le serveur on-prem est le modèle de bête de somme du RAG départemental régulé.** Il monte à 5–50 utilisateurs et quelques milliers de documents, supporte un audit logging correct et reste dans votre périmètre physique. Le prix : un vrai travail de production IT.',
+        items: [
+          "**Matériel** — un serveur avec une à deux GPU entreprise (les GPU workstation sont acceptables pour des corpus plus petits), disques redondants, mémoire ECC et onduleur. Prévoyez 2 à 4× le stockage de votre corpus brut pour couvrir vecteurs, index, journaux et sauvegardes.",
+          '**Réseau** — VLAN dédié derrière le pare-feu d\'entreprise ; allowlist d\'egress ou air-gap complet selon le modèle de menace. Accès interne uniquement via le réseau d\'entreprise, aucun ingress public.',
+          "**Stack logicielle** — plateforme RAG auto-hébergée (image serveur autonome ou déploiement conteneurisé), LLM open source en modèle de chat, embedder open source et store vectoriel adapté à la taille du corpus. Le serveur applicatif, le store vectoriel et le forwarder de logs tournent en processus séparés avec des comptes de service séparés.",
+          "**Identité** — fédéré contre le fournisseur d'identité d'entreprise ; appartenance aux groupes pilote l'accès aux collections. Les collections sensibles sont protégées par des workflows d'approbation supplémentaires.",
+          "**Sauvegarde et reprise** — sauvegardes incrémentales nocturnes du store documentaire et de l'index vectoriel ; sauvegardes complètes hebdomadaires ; copie hors site conservée par l'IT. Runbook de restauration documenté testé au moins annuellement.",
+          "**Exploitation** — fenêtre de patch selon politique de change management ; revues d'accès trimestrielles ; runbook de suppression rodé pour les demandes de droit à l'effacement ; chemin d'upgrade documenté pour modèles et embedders qui préserve la traçabilité.",
+          '**Capacité** — quelques milliers de documents et 5–50 utilisateurs concurrents tiennent confortablement sur un serveur GPU mid-range. Au-delà, prévoyez un hôte plus costaud ou le passage au modèle cloud privé.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: "Le RAG on-prem est le modèle qui échoue le plus souvent pour des raisons non techniques : une sauvegarde jamais restaurée, un compte admin partagé entre plusieurs IT, un onduleur que personne n'a testé, un forwarder de logs qui jette silencieusement des événements depuis deux mois. Les contrôles techniques sont plus faciles que l'hygiène opérationnelle.",
+          },
+        ],
+      },
+      vectorDbComparison: {
+        id: 'vector-db-comparison',
+        title: 'Bases vectorielles pour RAG on-prem',
+        content:
+          "**Le choix du store vectoriel décide rarement de la conformité — mais il façonne le coût opérationnel, le plafond de scaling et la propreté du runbook de suppression.** La plupart des déploiements régulés choisissent l'une de ces six options.",
+        columns: ['Base vectorielle', 'Type', 'Auto-hébergement EU', 'Idéal pour'],
+        rows: [
+          {
+            'Base vectorielle': '**Chroma**',
+            'Type': 'Open source, léger',
+            'Auto-hébergement EU': '✅',
+            'Idéal pour': 'Laptop + petit on-prem',
+          },
+          {
+            'Base vectorielle': '**Qdrant**',
+            'Type': 'Open source, performant',
+            'Auto-hébergement EU': '✅',
+            'Idéal pour': 'Serveur on-prem, filtrage intensif',
+          },
+          {
+            'Base vectorielle': '**Weaviate**',
+            'Type': 'Open source, complet',
+            'Auto-hébergement EU': '✅',
+            'Idéal pour': 'On-prem + recherche hybride',
+          },
+          {
+            'Base vectorielle': '**Milvus**',
+            'Type': 'Open source, entreprise',
+            'Auto-hébergement EU': '✅',
+            'Idéal pour': 'On-prem à grande échelle',
+          },
+          {
+            'Base vectorielle': '**pgvector**',
+            'Type': 'Extension PostgreSQL',
+            'Auto-hébergement EU': '✅',
+            'Idéal pour': 'Équipes déjà sous Postgres',
+          },
+          {
+            'Base vectorielle': '**Pinecone**',
+            'Type': 'SaaS managé',
+            'Auto-hébergement EU': '⚠️ Hébergé US',
+            'Idéal pour': 'Cloud privé EU uniquement (avec réserves)',
+          },
+        ],
+      },
+      euCloudDeep: {
+        id: 'private-cloud-pattern',
+        title: 'Modèle cloud privé EU',
+        content:
+          "**Le modèle cloud privé EU utilise un fournisseur cloud à région souveraine, clés gérées par le client, résidence EU et clause contractuelle anti-entraînement IA sur les données client.** C'est la bonne réponse pour les déploiements multi-entités, les exigences de résilience multi-régions et les équipes sans capacité opérationnelle pour un vrai on-prem.",
+        items: [
+          "**Sélection du fournisseur** — l'offre souveraine EU d'un hyperscaler ou un fournisseur cloud européen. Le DPA doit lister chaque sous-traitant ; les mécanismes de transfert doivent être adressés si un sous-traitant est hors EEE. Une analyse d'impact transfert type Schrems II reste au dossier même si le sous-traitant immédiat est EU.",
+          "**Région** — EU uniquement, avec garanties explicites de résidence. Réplication cross-region uniquement vers d'autres régions EU. Pas de région US comme failover, même temporairement, même pour les sauvegardes.",
+          "**Chiffrement** — clés gérées par le client avec rotation ; bring-your-own-key où le fournisseur le supporte ; les événements d'accès aux clés sont journalisés séparément des logs opérationnels du fournisseur.",
+          "**Réseau** — VPC privé sans ingress public ; accès uniquement via connectivité privée (lien dédié ou VPN) depuis votre réseau d'entreprise ; allowlist d'egress pour toute dépendance sortante.",
+          "**Identité** — fédéré contre votre IdP d'entreprise ; IAM cloud-natif lié aux identités utilisateur, pas à des comptes de service partagés ; ACL par collection appliquées dans le pipeline de retrieval.",
+          "**Logging** — log d'audit cloud-natif injecté dans votre SIEM existant ; ingestion séparée pour les événements d'audit applicatifs ; rétention à preuve d'altération qui satisfait les attentes du superviseur.",
+          "**Contrats** — le DPA doit être conforme à l'article 28, lister les sous-traitants, adresser les CCT si nécessaire et inclure une clause anti-entraînement explicite couvrant les poids LLM et tout service annexe (recherche, télémétrie, support).",
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: "Le modèle cloud privé EU paraît plus permissif que l'on-prem parce qu'il implique un sous-traitant tiers — mais avec région souveraine, clés gérées par le client, clause anti-entraînement et contrôle d'egress sérieux, il égale ou bat l'on-prem en disponibilité et en posture d'audit. Le dossier conformité est plus épais ; le risque opérationnel est plus faible.",
+          },
+        ],
+      },
+      euAiAct: {
+        id: 'eu-ai-act',
+        title: "Classification AI Act : risque limité vs haut risque",
+        content:
+          "**La plupart des RAG locaux sont des systèmes IA à risque limité au titre de l'AI Act — mais dès que la recherche alimente une décision automatisée affectant une personne, la classification bascule en haut risque et les obligations se multiplient.** Classifiez avant de construire.",
+        items: [
+          "**Risque limité (la plupart des RAG locaux)** — le système retourne et résume des documents pour assister un humain ; l'humain décide. Les obligations sont surtout de transparence : les utilisateurs doivent savoir qu'ils interagissent avec une IA, le contenu généré doit être identifiable, pas de design manipulateur ou trompeur.",
+          "**Haut risque** — la recherche alimente une décision automatisée dans les domaines listés par l'Act : scoring crédit, sélection à l'emploi, admissions éducatives, services publics essentiels, application de la loi, migration, justice, identification biométrique, infrastructures critiques. Un RAG d'aide à la décision clinique recommandant des traitements est haut risque ; un RAG qui résume des protocoles cliniques pour aider un médecin à lire plus vite ne l'est pas.",
+          '**Obligations haut risque** — système de gestion des risques sur le cycle de vie, gouvernance des données (entraînement, validation, test documentés), documentation technique, journalisation automatique, transparence et information aux utilisateurs, supervision humaine, mesures de précision et de robustesse, évaluation de conformité avant mise sur le marché, surveillance post-marché.',
+          "**IA à usage général** — utiliser un LLM à usage général (open source ou non) ne transfère pas les obligations haut risque au fournisseur du modèle. Le déployeur (votre organisation) porte les obligations haut risque pour le système que vous bâtissez avec ce modèle.",
+          "**Pratiques interdites** — scoring social, scraping massif d'images de visages, reconnaissance d'émotions sur les lieux de travail et à l'école, certaines catégorisations biométriques en temps réel. Hors-jeu, peu importe l'aspect local du déploiement.",
+          "**La documentation comme artefact d'audit** — le dossier technique requis pour les systèmes haut risque n'est pas un livrable ponctuel ; c'est un document vivant. Liez-le à votre processus de change management pour que chaque promotion de modèle, chaque changement d'embedder et chaque modification d'ACL s'y reflète.",
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: "La frontière haut risque vs risque limité est tracée par l'usage, pas par la technologie. Le même store vectoriel et le même modèle peuvent être risque limité dans un déploiement assistant de recherche et haut risque dans un déploiement de tri RH. Classifiez par cas d'usage, pas par plateforme.",
+          },
+        ],
+      },
+      dpia: {
+        id: 'dpia-requirements',
+        title: 'Exigences PIA (Article 35)',
+        content:
+          "**Une analyse d'impact relative à la protection des données (article 35) est obligatoire pour tout traitement susceptible d'engendrer un risque élevé pour les droits et libertés des personnes.** La plupart des RAG locaux régulés entrent dans le périmètre. Traitez la PIA comme un document de conception, pas un artefact de conformité a posteriori.",
+        items: [
+          "**Quand obligatoire** — évaluation systématique et étendue incluant profilage à effet juridique ; traitement à grande échelle de données sensibles (santé, juridique, biométrique, raciale, politique, religieuse, syndicale) ; surveillance systématique de zones publiques. Les autorités nationales publient des listes d'opérations qui imposent toujours une PIA — vérifiez la vôtre.",
+          '**Périmètre de la PIA** — finalité et base légale ; description des opérations de traitement ; nécessité et proportionnalité ; analyse de risque pour les personnes ; mesures et risque résiduel ; consultation du DPO et (si le risque résiduel reste élevé) de l\'autorité de contrôle avant le début du traitement.',
+          '**Risques spécifiques au RAG** à traiter : ré-identification de personnes à partir des chunks ; génération d\'informations inexactes affectant une personne ; fuite via journaux ou sauvegardes ; complétude de la suppression sur droit à l\'effacement ; contamination cross-collection ; accès trop larges pour les power users.',
+          "**Mesures à documenter** — les six contrôles ci-dessus, plus expurgation/pseudonymisation au niveau chunk quand la base légale est consentement ou intérêt légitime ; runbook de suppression avec preuve de répétition ; revues d'accès à cadence définie.",
+          "**Reviewers** — le DPO valide ; l'autorité de contrôle est consultée si le risque résiduel reste élevé après mesures. La PIA signée va au dossier technique avec la documentation de conformité AI Act si le système est aussi haut risque.",
+          '**Document vivant** — refaites la PIA quand le corpus s\'étend significativement, quand le modèle ou l\'embedder change, quand les frontières d\'accès changent ou comme baseline annuelle. Liez-la à votre processus de change management.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: "Une PIA écrite en semaine 2 d'un projet est un outil de planification. Une PIA écrite en semaine 10 est un document défensif. Le premier est nettement plus utile et fait souvent émerger des changements de design qui réduisent le risque résiduel final. Démarrez la PIA avant la décision d'achat, pas après le déploiement.",
+          },
+        ],
+      },
+      germany: {
+        id: 'germany-datenschutz',
+        title: "Notes pour la juridiction allemande (Datenschutz) et contexte CNIL",
+        content:
+          "**La pratique allemande de protection des données superpose le BDSG-Neu, des règles sectorielles, les fiches BSI-Grundschutz et la cogestion du comité d'entreprise au socle RGPD.** Un déploiement RAG conforme RGPD générique peut échouer à une revue allemande si ces points sont manqués.",
+        items: [
+          "**Cogestion du Betriebsrat** — au titre du §87 BetrVG, tout système surveillant la performance ou le comportement des salariés exige un accord du comité d'entreprise avant déploiement. Un RAG sur du contenu rédigé par les salariés (e-mails, documents internes) déclenche typiquement cette obligation. Impliquez le Betriebsrat dès la conception ; l'accord (Betriebsvereinbarung) entre dans le dossier de base légale.",
+          '**Confidentialité sectorielle** — le §203 StGB pénalise la violation du secret professionnel (avocats, médecins, conseillers fiscaux, auditeurs). Un déploiement RAG exposant des données client/patient protégées à du personnel non astreint au secret ou à des sous-traitants externes peut être une infraction pénale, pas seulement civile. On-prem ou air-gappé est le choix le plus sûr dans ces secteurs.',
+          "**Telemediengesetz et TTDSG** — la télémétrie sortante touchant des terminaux d'utilisateurs finaux est régulée non seulement par le RGPD mais aussi par le TTDSG. L'air-gap retire la question ; les déploiements à egress contrôlé doivent vérifier que tout appel sortant est consenti, nécessaire ou strictement technique.",
+          "**Fiches BSI-Grundschutz** — pour les administrations et opérateurs KRITIS, le compendium BSI-Grundschutz fournit le référentiel. Même dans le mid-market, des fiches comme OPS.1.2.4 (usage cloud), OPS.2.1 (outsourcing) et APP.4.4 (applications web) sont des références utiles pour le dossier d'architecture.",
+          "**Autorités de contrôle (Bund et Länder)** — le contrôle des données du secteur privé est organisé par Land. Adressez-vous au Landesbeauftragte für Datenschutz compétent quand une consultation au titre de l'article 36 est requise.",
+          "**Contexte CNIL pour la francophonie** — la CNIL recommande explicitement le recours à l'IA traitée localement pour les données professionnelles sensibles (financières, médicales, juridiques) lorsque le secret professionnel ou la souveraineté justifient d'écarter un sous-traitant cloud. Un RAG local satisfait l'esprit de la position CNIL par construction.",
+          "**Langue de la documentation** — les autorités allemandes acceptent la documentation en anglais, mais les artefacts utilisateur clés (mentions d'information, déclarations de transparence, accords avec le Betriebsrat) doivent être rédigés en allemand pour des raisons légales et pratiques.",
+        ],
+      },
+      checklist: {
+        id: 'compliance-checklist',
+        title: 'Checklist conformité avant la mise en production',
+        content:
+          "**Parcourez cette liste de bout en bout avant tout déploiement en production.** Chaque entrée est un mode de défaillance réel issu d'un audit réel ; la liste est volontairement courte pour qu'elle soit effectivement utilisée.",
+        items: [
+          '☐ **Base légale documentée** pour chaque catégorie de données source — consentement, contrat, obligation légale, intérêt vital, mission de service public, ou intérêt légitime avec test de mise en balance au dossier.',
+          '☐ **PIA validée** par le DPO, avec runbook de suppression rodé en pièce jointe.',
+          '☐ **Registre de traitements (Article 30)** mis à jour pour inclure le RAG, les catégories de données, la rétention, les destinataires et les mécanismes de transfert (en général aucun pour le RAG local).',
+          "☐ **Six contrôles vérifiés bout-à-bout** : air-gap ou allowlist d'egress, RBAC, journaux d'audit, chiffrement, traçabilité, parcours de suppression.",
+          '☐ **Capture de paquets sortante** propre sur 24 h ; répétée après chaque mise à jour applicative.',
+          "☐ **Intégration fournisseur d'identité** testée avec un vrai utilisateur de chaque palier d'accès ; les collections sensibles exigent une élévation séparée.",
+          '☐ **Sauvegardes prises et restauration vraiment testée** sur matériel isolé, pas seulement vérifiée dans un panneau de statut.',
+          "☐ **Runbook droit à l'effacement rodé** sur données synthétiques couvrant store source, index vectoriel, embeddings en cache et rétention des journaux.",
+          "☐ **Classification AI Act** confirmée (risque limité vs haut risque) ; dossier technique en place si haut risque.",
+          '☐ **Contrats fournisseurs (le cas échéant) revus** : DPA conforme à l\'article 28, sous-traitants listés, clause anti-entraînement couvrant les données client.',
+          '☐ **Accord avec le Betriebsrat** en place quand du contenu rédigé par les salariés est dans le périmètre (Allemagne ; règles européennes similaires ailleurs).',
+          "☐ **Mention de transparence** rédigée en langage utilisateur expliquant l'assistance IA, le human-in-the-loop et le flux de données.",
+          "☐ **Runbook de réponse à incident** mis à jour pour couvrir les scénarios spécifiques RAG : fuite d'index, manipulation de log, échec de suppression, swap de modèle cassant la traçabilité.",
+          '☐ **Revue d\'accès trimestrielle** planifiée et assignée ; première revue calée avant la mise en production.',
+          '☐ **Rafraîchissement annuel de la PIA** planifié et lié au processus de change management.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs fréquentes',
+        items: [
+          "**Erreur 1 : Traiter \"local\" comme synonyme de \"conforme\".** Le on-prem résout transfert et sous-traitants ; il ne résout pas base légale, PIA, audit logging ou droits des personnes. La conformité est un programme en couches, pas un choix de déploiement.",
+          '**Erreur 2 : Sauter la PIA parce que le système est "juste un outil de recherche".** Un outil de recherche qui ingère des données sensibles à grande échelle est exactement ce que couvre l\'article 35. Sauter la PIA, c\'est sauter sa défense en cas d\'audit.',
+          "**Erreur 3 : Journaliser le texte de requête sans vérifier la base légale.** Les requêtes elles-mêmes sont des données personnelles quand elles désignent des individus. Décidez à la conception si la finalité couvre la journalisation des requêtes ; sinon, journalisez seulement le hash et les métadonnées.",
+          "**Erreur 4 : Oublier les embeddings en cache dans le runbook de suppression.** La suppression source marche. La reconstruction d'index marche. La couche cache ajoutée par votre plateforme pour la performance, les empreintes d'embeddings dans le journal de retrieval et l'historique des réponses dans le store de chat sont les parties oubliées.",
+          '**Erreur 5 : Laisser les power users contourner les ACL de collection.** "Les admins voient tout" est commode et très répandu ; c\'est aussi la première cause d\'audits qui se passent mal. L\'accès privilégié doit lui-même être contrôlé, borné dans le temps et justifié par usage.',
+          "**Erreur 6 : Réutiliser un même workspace pour plusieurs dossiers ou clients.** La contamination croisée des citations et du contexte est un échec de confidentialité avant même qu'une partie externe ne le voie. Un dossier ou un client par collection ; ACL séparées ; rétention séparée.",
+          "**Erreur 7 : Acheter un air-gap et brancher un téléphone perso pour tester.** Le périmètre air-gap doit inclure les personnes capables de transporter les données. La politique des endpoints fait partie du contrôle, pas un sujet à part.",
+          '**Erreur 8 : Traiter le choix du modèle et de l\'embedder comme "set and forget".** Chaque upgrade est un événement de change management avec implications PIA, traçabilité et audit. Planifiez le workflow d\'upgrade avant le premier déploiement en production.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Texte intégral du RGPD (Officiel)](https://gdpr-info.eu/) — Texte complet du Règlement Général sur la Protection des Données avec commentaire article par article.',
+          "[Texte intégral de l'AI Act](https://artificialintelligenceact.eu/) — Texte réglementaire complet avec cadre de classification des risques.",
+          '[NIST AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Cadre fédéral US applicable à l\'évaluation des risques IA.',
+          '[BDSG-Neu (loi fédérale allemande)](https://www.gesetze-im-internet.de/bdsg_2018/) — Transposition allemande du RGPD avec ajouts sectoriels.',
+          '[Lignes directrices EDPB sur la PIA](https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-data-protection-impact-assessment-and-determining_en) — Guide du Comité européen de la protection des données sur quand et comment mener une PIA.',
+          '[CNIL — Recommandations IA](https://www.cnil.fr/) — Plans et fiches de la CNIL sur le déploiement IA, traitement local et données sensibles.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Faire tourner un RAG en local satisfait-il automatiquement le RGPD ?',
+            a: "Non. L'hébergement local résout la question du transfert transfrontalier et réduit la liste des sous-traitants, mais les principes RGPD de l'article 5 (licéité, loyauté, transparence, limitation des finalités, minimisation, exactitude, limitation de la conservation, intégrité et confidentialité, responsabilité) restent applicables. Les articles 25 (protection dès la conception et par défaut), 30 (registre des traitements), 32 (sécurité du traitement) et 35 (PIA) s'appliquent indépendamment de l'endroit où tourne le modèle. Le RAG local est un point de départ solide, pas une posture conformité finie.",
+          },
+          {
+            q: "Que faut-il pour la conformité AI Act d'un déploiement RAG local ?",
+            a: "Classifiez le cas d'usage en risque limité ou haut risque. La plupart des déploiements assistant de recherche sont à risque limité et exigent des obligations de transparence : les utilisateurs doivent savoir qu'ils interagissent avec une IA, le contenu généré doit être identifiable. Dès que la recherche alimente une décision automatisée dans un domaine listé (crédit, emploi, éducation, services publics, application de la loi, migration, justice, biométrie, infrastructures critiques), le déploiement est haut risque et l'ensemble des obligations s'applique : système de gestion des risques, gouvernance des données, documentation technique, journalisation automatique, transparence, supervision humaine, précision et robustesse, évaluation de conformité, surveillance post-marché.",
+          },
+          {
+            q: 'Ai-je besoin d\'une PIA pour le RAG local ?',
+            a: "Une PIA au titre de l'article 35 est obligatoire pour tout traitement susceptible d'engendrer un risque élevé pour les droits et libertés des personnes — ce qui inclut le traitement à grande échelle de données sensibles (santé, juridique, biométrique, raciale, politique, religieuse, syndicale) et le profilage systématique à effet juridique. La plupart des RAG locaux régulés (juridique, médical, financier, enquêtes RH) entrent dans le périmètre. Lancez la PIA tôt, traitez-la comme un document de conception et répétez les mesures — particulièrement le runbook de suppression — avant la mise en production.",
+          },
+          {
+            q: 'Puis-je partager un déploiement RAG local entre plusieurs services ?',
+            a: "Oui, avec précaution. Contrôle d'accès au niveau collection, authentification par utilisateur contre un fournisseur d'identité unique et base légale claire pour l'usage de chaque service sont le plancher. La PIA doit couvrir l'ensemble le plus large des finalités ; si un service a besoin d'une base légale différente (par exemple enquêtes RH au titre de l'intérêt légitime alors que les soignants opèrent en mission de service public), des collections séparées et des groupes d'accès séparés sont plus faciles à défendre qu'une collection unique avec ACL élaborées.",
+          },
+          {
+            q: "Comment auditer qui a accédé à quel document ?",
+            a: "Journalisez chaque recherche avec user ID, horodatage, chunk IDs retournés et les document IDs d'origine. Faites suivre les événements vers un store de logs séparé, restreint en écriture, sous un contrôle administratif différent du serveur applicatif (séparation des fonctions). Utilisez du stockage append-only avec chaîne de hashs pour rendre toute altération détectable. La rétention doit s'aligner sur la fenêtre d'enquête de l'autorité et les règles sectorielles — six à sept ans est commun dans les industries régulées.",
+          },
+          {
+            q: "Les modèles d'embeddings open source sont-ils utilisables dans le respect du RGPD ?",
+            a: "En principe oui, à trois conditions. Premièrement, les poids sont téléchargés une fois et figés sur un hash, pour que vous puissiez prouver ce qui tournait. Deuxièmement, l'inférence est entièrement locale sans télémétrie ni appel sortant — vérifiez par capture de paquets, ne vous fiez pas à la documentation seule. Troisièmement, la fiche modèle et la licence sont relues pour toute clause incompatible avec un usage métier confidentiel (certaines licences open weight imposent des restrictions sur les types de données ou cas d'usage). Le défaut pratique pour les déploiements régulés : allowlister un petit nombre d'embedders validés et les revérifier à chaque mise à jour.",
+          },
+          {
+            q: "Qu'en est-il de la traçabilité pour les sorties générées par IA ?",
+            a: "Chaque réponse générée doit référencer les chunk IDs qui l'ont produite, l'identifiant du modèle, la version du template de prompt et l'horodatage. Les chunks remontent ensuite à des document IDs, qui remontent aux documents source. Cette chaîne est ce qui permet de vérifier la réponse, la défendre face à une contestation, honorer une demande de suppression et reproduire le résultat plus tard. Sans elle, « l'IA l'a dit » est la défense d'audit — et ce n'est aucune défense.",
+          },
+          {
+            q: 'Puis-je utiliser un RAG local pour les documents confidentiels clients ?',
+            a: "Souvent oui, parfois non. De nombreuses conventions d'avocat externe, NDA M&A et contrats sur données patient autorisent la revue assistée par IA dès lors que les données ne quittent pas un périmètre défini et que certains contrôles sont en place. Le RAG local satisfait l'exigence de périmètre par construction ; la liste de contrôles spécifique au contrat (chiffrement, accès, audit, rétention, notification de violation) doit toujours être respectée. Quand le contrat interdit tout traitement IA, aucun modèle de déploiement ne corrige cela — l'interdiction s'applique que l'IA soit locale ou distante.",
+          },
+          {
+            q: 'Quel logging est requis pour la conformité ?',
+            a: "Événements d'ingestion (document ID, hash, source, chargeur, horodatage, classification), événements de recherche (user ID, métadonnées ou hash de la requête, chunk IDs retournés, référence de la réponse, identifiant modèle/embedder), événements administratifs (promotion de modèle, changement d'embedder, changement d'ACL, changement utilisateur/groupe) et événements opérationnels (sauvegarde, restauration, rotation de clé). Tous les événements sont expédiés vers un store de logs séparé, append-only, à chaîne de hashs, retenus selon vos exigences dossier et secteur.",
+          },
+          {
+            q: "Comment gérer les demandes de droit à l'effacement dans un RAG ?",
+            a: "Avec un runbook documenté qui mène la suppression à travers chaque couche : store de documents source, index vectoriel, embeddings en cache, rétention des journaux de recherche (quand la base légale autorise la suppression de l'entrée de log) et toutes les réponses stockées dans l'historique de chat. La suppression source est directe ; la reconstruction d'index est bien comprise ; les embeddings en cache et l'historique des réponses sont les parties que la plupart des déploiements oublient. Répétez le runbook sur données synthétiques, documentez la répétition et liez le runbook à votre processus de réponse à incident, pour qu'une demande réelle déclenche la séquence rodée et non de l'improvisation.",
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI : meilleur RAG local](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — quelles plateformes auto-hébergées pour quelle posture conformité, avec notes télémétrie et licence.',
+          '[Agents IA locaux pour workflows métier et conformité EU](/fr/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — sujet adjacent quand la recherche alimente des étapes de workflow automatisées plutôt qu\'un lecteur humain.',
+          "[Automatisation e-mail et calendrier par LLM local](/fr/power-local-llm/local-llm-email-and-calendar-automation) — schémas d'automatisation métier où le même jeu de contrôles s'applique.",
+          '[RAG local sur vos PDF étape par étape](/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step) — guide pratique pour les modèles on-prem et laptop.',
+          '[Discuter avec 1 000 PDF localement](/fr/power-local-llm/chat-with-1000-pdfs-locally) — guide opérationnel pour les corpus plus volumineux qui poussent contre le plafond on-prem.',
+          '[Power Local LLM Hub](/fr/power-local-llm) — bibliothèque complète des guides de déploiement LLM auto-hébergés.',
+        ],
+      },
+    },
+  },
 }
