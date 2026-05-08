@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-08',
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
-    theme: 'Getting Started',
+    theme: 'Mobile & Edge LLMs',
     title: 'Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones',
     seoTitle: 'Best Local LLM Apps for Android 2026: 6 Apps Tested on Real Phones',
     intro:

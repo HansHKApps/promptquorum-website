@@ -154,6 +154,40 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
 
 // Render inline link placeholders and markdown links [text](url)
 // Injects ?lang= query parameter for internal links when lang is not 'en'
+function renderUrlsAndBold(text: string, keyOffset: number) {
+  const URL_PATTERN = /(https?:\/\/[^\s,;)\]"]+)/g
+  const segments = text.split(URL_PATTERN)
+  return (
+    <span key={keyOffset}>
+      {segments.map((seg, j) => {
+        if (/(https?:\/\/[^\s,;)\]"]+)/.test(seg)) {
+          return (
+            <a
+              key={j}
+              href={seg}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-medium hover:underline break-all"
+            >
+              {seg}
+            </a>
+          )
+        }
+        const boldParts = seg.split(/(\*\*[^*]+\*\*)/g)
+        return (
+          <span key={j}>
+            {boldParts.map((bp, k) =>
+              bp.startsWith('**') && bp.endsWith('**')
+                ? <strong key={k} className="text-text-primary font-semibold">{bp.slice(2, -2)}</strong>
+                : bp
+            )}
+          </span>
+        )
+      })}
+    </span>
+  )
+}
+
 function renderInlineLinks(text: string, lang: Language = 'en') {
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
@@ -192,40 +226,27 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
       )
     }
 
-    // Handle bare URLs and **bold** markers
-    const URL_PATTERN = /(https?:\/\/[^\s,;)\]"]+)/g
-    const segments = part.split(URL_PATTERN)
-    return (
-      <span key={i}>
-        {segments.map((seg, j) => {
-          // Check if this segment is a URL by testing with a fresh regex
-          if (/(https?:\/\/[^\s,;)\]"]+)/.test(seg)) {
-            return (
-              <a
-                key={j}
-                href={seg}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-medium hover:underline break-all"
-              >
-                {seg}
-              </a>
-            )
-          }
-          // Handle **bold** markers within non-URL text
-          const boldParts = seg.split(/(\*\*[^*]+\*\*)/g)
-          return (
-            <span key={j}>
-              {boldParts.map((bp, k) =>
-                bp.startsWith('**') && bp.endsWith('**')
-                  ? <strong key={k} className="text-text-primary font-semibold">{bp.slice(2, -2)}</strong>
-                  : bp
-              )}
-            </span>
-          )
-        })}
-      </span>
-    )
+    // Handle backtick code spans — render as <code>, no URL auto-linking inside
+    if (part.includes('`')) {
+      const codeParts = part.split(/(`[^`]+`)/g)
+      return (
+        <span key={i}>
+          {codeParts.map((cp, j) => {
+            if (cp.startsWith('`') && cp.endsWith('`') && cp.length > 2) {
+              return (
+                <code key={j} className="bg-gray-100 text-text-primary px-1 py-0.5 rounded text-sm font-mono break-all">
+                  {cp.slice(1, -1)}
+                </code>
+              )
+            }
+            return renderUrlsAndBold(cp, j)
+          })}
+        </span>
+      )
+    }
+
+    // Handle bare URLs and **bold** markers (no backticks in this part)
+    return renderUrlsAndBold(part, i)
   })
 }
 
