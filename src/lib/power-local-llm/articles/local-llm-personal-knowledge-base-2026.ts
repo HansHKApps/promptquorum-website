@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-08',
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
-    theme: 'Produktivitäts- und Wissens-Tools',
+    theme: 'Productivity & Knowledge Tools',
     title: 'Persönliche Wissensdatenbank mit lokaler KI aufbauen: Stack-Guide 2026',
     seoTitle: 'Persönliche KI-Wissensdatenbank: Stack-Guide 2026',
     intro:
@@ -940,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-08',
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
-    theme: 'Outils de productivité et de gestion des connaissances',
+    theme: 'Productivity & Knowledge Tools',
     title: 'Construire une base de connaissances avec une IA locale : guide stack 2026',
     seoTitle: 'Base de connaissances IA locale : Guide stack 2026',
     intro:
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-08',
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
-    theme: '生産性とナレッジツール',
+    theme: 'Productivity & Knowledge Tools',
     title: 'ローカルAIで個人ナレッジベースを構築する: 2026年スタックガイド',
     seoTitle: 'ローカルAI個人ナレッジベース 2026 スタックガイド',
     intro:
@@ -1862,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-08',
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
-    theme: '生产力与知识工具',
+    theme: 'Productivity & Knowledge Tools',
     title: '使用本地 AI 构建个人知识库:2026 技术栈指南',
     seoTitle: '本地 AI 个人知识库:2026 技术栈指南',
     intro:
