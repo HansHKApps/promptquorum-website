@@ -1747,4 +1747,447 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: '通过 MCP 将 Ollama 连接到数据库和 API：2026 年本地智能体配置指南',
+    seoTitle: '本地 Ollama + MCP：连接数据库与 API 完整指南 2026',
+    intro:
+      'Model Context Protocol (MCP) 是本地 Ollama 模型与你的机器其余部分之间缺失的那一层。一个配置文件加上支持 tool calling 的模型，同一个智能体即可查询 Postgres 数据库、在沙箱目录中读写文件、驱动无头浏览器、提交 GitHub Pull Request——全部在本地运行，全部离线。本指南端到端讲解可工作的配置，并基于「不假设你信任模型」的安全模型展开。',
+    metaDescription:
+      '2026 年本地 AI 智能体配置指南：Ollama + Model Context Protocol (MCP)。涵盖文件系统、SQLite/Postgres、浏览器、GitHub 服务器，提供可工作的 JSON 配置和不信任 LLM 的沙箱模型。',
+    twitterDescription:
+      '本地 Ollama + MCP = 一个能读文件、查数据库、驱动浏览器的 AI 智能体——完全离线。可工作的配置、首批应安装的四个服务器，以及一个不信任模型的安全设计。',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Qwen3-Coder 30B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+    ],
+    audience:
+      '通过 Ollama 运行本地 LLM 的开发者和具备技术背景的用户，希望模型真正能够执行操作——查询数据库、编辑文件、自动化浏览器——同时不向任何云服务商发送数据。',
+    readTime: '阅读约15分钟',
+    educationalLevel: 'Advanced',
+    primaryTerm: '本地 MCP 智能体',
+    targetKeywords: [
+      'mcp ollama 中文',
+      '本地 mcp 服务器搭建',
+      'model context protocol 本地',
+      'ollama tool calling 2026',
+      '本地 ai 智能体 mcp',
+      'mcp 不需要 claude desktop',
+    ],
+    leadAnswerBlock:
+      '**Model Context Protocol (MCP) 让本地 Ollama 模型能够调用工具——读取文件、执行 SQL 查询、点击网页链接、提交 Pull Request——通过任何 MCP 兼容客户端（2026 年的 Goose、Cline、Continue.dev、LM Studio）都能识别的标准 JSON-RPC 接口完成。协议开放，参考服务器开源，截至 2026 年既不需要 Claude Desktop 也不需要任何云账号。启动 Ollama，安装一个 MCP 客户端，放入一份列出所需服务器的 `mcp.json` 配置文件，支持 tool calling 的模型（Gemma 4、GLM-5.1、Qwen3、Llama 3.3）便成为运行在你机器上、由你掌控权限的智能体。关键在于安全模型：永不自动批准写入工具，将文件系统访问限定到单一目录，数据库服务器默认只读模式。**',
+    quickAnswerTop: {
+      zh: {
+        question: '2026 年能否在本地用 MCP 和 Ollama 运行 AI 智能体？',
+        answer:
+          '可以——而且现在的搭建规模一个下午即可完成。用支持 tool calling 的模型（Gemma 4、GLM-5.1、Qwen3 或 Llama 3.3 70B）启动 Ollama，安装一个支持 MCP 的客户端（Goose 是最直接的 CLI；Cline、Continue.dev、LM Studio 均在 2026 年初加入了 MCP 支持），然后按需加入 MCP 服务器——文件用 `filesystem`，数据库用 `sqlite` 或 `postgres`，浏览器自动化用 `puppeteer` 或 `playwright`，仓库管理用 `github`。这与 Claude Desktop 使用的协议完全相同；区别仅在模型与客户端。安全要点：将 filesystem 服务器限定为单一目录，数据库默认只读，永不自动批准写入或 shell 工具。',
+        bullets: [
+          'MCP 协议开放且完全本地运行——不需要 Claude Desktop、不需要 Anthropic 账号、不需要任何云调用。',
+          'Ollama 提供模型；MCP 客户端（Goose、Cline、Continue.dev、LM Studio）通过 JSON-RPC 在 Ollama 与 MCP 服务器之间架设桥梁。',
+          '四个参考服务器覆盖大多数实际工作流：filesystem、sqlite/postgres、puppeteer/playwright（浏览器）、github。',
+          'tool call 可靠性是模型属性：Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B 与 Llama 3.3 70B 均可干净处理 MCP；7B 以下模型经常输出格式错误的 tool call。',
+          '安全模型：filesystem 限定到一个目录、数据库以只读运行、所有写入或 shell 工具都置于明确授权之后。',
+          '成本：API 费用为 $0，但 token 在本地消耗——智能体循环消耗 token 较多，请使用 32K+ 上下文模型并在性能足够的机器上运行。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '快速事实', anchor: '#quick-facts' },
+      { label: 'MCP 解锁的能力', anchor: '#what-mcp-unlocks' },
+      { label: 'MCP 服务器对比', anchor: '#server-comparison' },
+      { label: '架构：组件如何协作', anchor: '#architecture' },
+      { label: '配置：15 分钟搭建 Ollama + Goose', anchor: '#setup' },
+      { label: 'Filesystem 服务器', anchor: '#filesystem-server' },
+      { label: 'SQLite 与 Postgres 服务器', anchor: '#database-server' },
+      { label: '浏览器服务器（Puppeteer / Playwright）', anchor: '#browser-server' },
+      { label: 'GitHub 服务器', anchor: '#github-server' },
+      { label: '安全模型', anchor: '#security-model' },
+      { label: '本地 MCP vs Claude Desktop', anchor: '#vs-claude-desktop' },
+      { label: '选择支持 tool calling 的模型', anchor: '#picking-model' },
+      { label: 'MCP vs 普通 Function Calling', anchor: '#mcp-vs-function-calling' },
+      { label: '中国企业的应用方案', anchor: '#china-enterprise' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '参考资料', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**MCP 是面向工具的 JSON-RPC 2.0 协议。** 模型（通过客户端）连接一个或多个 MCP 服务器；每个服务器暴露 Tools（可调用函数）、Resources（可读数据）和 Prompts（模板）。无论客户端是 Claude Desktop、Goose、Cline、Continue.dev 还是 LM Studio，wire format 完全相同。',
+          '**Ollama 不直接说 MCP——MCP 客户端封装 Ollama。** Goose（Block）是最简单且原生支持 Ollama 的开源 CLI；Cline、Continue.dev、LM Studio 均在 2026 年初加入了 MCP 客户端支持。',
+          '**四个参考服务器覆盖大部分使用场景：** `filesystem`（在沙箱目录中读写）、`sqlite` 与 `postgres`（数据库查询，默认只读）、`puppeteer` 或 `playwright`（驱动无头浏览器）、`github`（用 personal access token 管理仓库与 PR）。',
+          '**tool call 可靠性随模型规模与训练扩展。** Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B 在 Q4_K_M 下干净处理 MCP；7B 以下模型经常输出格式错误的 tool call 并卡住循环。',
+          '**安全模型假设模型不可信。** 将 filesystem 服务器限定到单一目录、用只读角色运行数据库服务器、永不自动批准 `execute_command` 或 `write_file`、长时间会话后审查审计日志。',
+          '**本地 MCP vs Claude Desktop：** 协议相同，服务器生态相同。本地栈以离线模型替换云端模型——隐私性、零 token 费用、零速率限制，代价是模型能力略低且需自行负责安全配置。',
+          '**API 费用为 $0，但 token 是真实成本。** 智能体循环单次多步任务可能消耗 30K–80K token；最少使用 32K 上下文模型，128K 更宽裕。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速事实',
+        items: [
+          '**协议：** JSON-RPC 2.0 通过 stdio（本地子进程）或 HTTP/SSE（远程）传输。本地智能体几乎只用 stdio。',
+          '**维护方：** Anthropic（开源规范）；参考服务器维护在 GitHub 的 `modelcontextprotocol/servers`，外加快速发展的第三方生态。',
+          '**2026 年的本地客户端：** Goose（Block）、Cline（VS Code 扩展）、Continue.dev（VS Code/JetBrains）、LM Studio（桌面应用），以及多个 CLI 工具。',
+          '**兼容的 Ollama 模型：** 任何具备原生 tool call 训练的模型。2026 年 5 月：Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。',
+          '**默认 transport：** 本地进程用 stdio；只有需要跨机器或跨智能体共享服务器时才用 HTTP/SSE。',
+          '**配置集中在一个文件：** `~/.config/goose/config.yaml`（Goose）、`~/.continue/config.json` 的 MCP 块（Continue.dev）、或 Cline 设置 UI 中的 `mcpServers`。形式相同：服务器名、command、args、env vars。',
+          '**无需 Claude Desktop。** 协议早于 Claude Desktop 的独占叙事；所有参考服务器均为 MIT/Apache 许可，可在任何符合规范的客户端下运行。',
+        ],
+      },
+      whatMcpUnlocks: {
+        id: 'what-mcp-unlocks',
+        title: 'MCP 实际为本地模型解锁的能力',
+        content:
+          '**没有工具的本地 LLM 只能用文本回应。有了 MCP，同一个模型可以在你的机器上执行操作。** 这是聊天机器人与智能体的本质差别。',
+        items: [
+          '**「找出此仓库中所有 TODO，按文件分组，并将 Markdown 摘要写入 `notes/todos.md`。」** —— `filesystem` 服务器读取，模型分组，同一服务器写入。端到端一次往返。',
+          '**「列出本季度营收 Top 10 客户并绘制图表。」** —— `postgres` 服务器执行 SQL（只读角色），模型汇总，并通过 `filesystem` 写出 CSV 供你的图表工具使用。',
+          '**「打开 Hacker News 首页，找出 AI 相关的前三篇文章，总结后追加到我的阅读清单。」** —— `puppeteer` 服务器驱动无头浏览器，模型抽取并总结，`filesystem` 追加。',
+          '**「向我的 fork 提交标题为 `chore: bump deps` 的草稿 PR，并在描述中链接失败的 CI run。」** —— `github` 服务器创建 PR、获取 run、在描述中写入链接。',
+          '**「查看 `events.db` 最新 100 行，告诉我哪些 user ID 是新错误尖峰的来源。」** —— `sqlite` 服务器查询；模型推理；你在聊天面板看到答案。',
+          '以上每一项都是「一句话到操作」的工作流，过去要么需要带托管工具的云端模型，要么需要手写脚本。MCP 是让你能跨客户端复用同一服务器、跨服务器复用同一模型的那一层。',
+        ],
+      },
+      serverComparison: {
+        id: 'server-comparison',
+        title: '四个最常用 MCP 服务器对比',
+        content:
+          '下面的参考服务器覆盖「让本地模型真正做点事」的长尾需求。全部开源，作为本地子进程由 MCP 客户端启动。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '从 filesystem 服务器开始（5 分钟，低风险），数据工作加上 SQLite 服务器，确有需要再加浏览器服务器，对机器上的模型建立信任后再引入 GitHub。',
+          },
+          {
+            type: 'plain-terms',
+            text: '四个服务器处理本地智能体能完成的任务的 90%。filesystem 服务器在你选择的文件夹内读写文件。SQLite 或 Postgres 服务器对数据库执行查询。浏览器服务器驱动一个真实的 Chromium 窗口，模型可以读取需要 JavaScript 才能渲染的页面。GitHub 服务器在你的仓库上开 issue 和 PR。它们都通过一条命令安装、都作为本地子进程在你自己的机器上运行，且除非显式需要否则不会调用互联网（浏览器会，其他不会）。',
+          },
+        ],
+        columns: ['MCP 服务器', '能做什么', '搭建难度', '风险等级', '适用场景'],
+        rows: [
+          { 'MCP 服务器': 'Filesystem', '能做什么': '在沙箱目录中读写文件', '搭建难度': '简单（一条 allow-list 路径）', '风险等级': '中——严格限定范围', '适用场景': '个人自动化、笔记、仓库总结' },
+          { 'MCP 服务器': 'SQLite', '能做什么': '查询本地 SQLite 数据库文件', '搭建难度': '简单（.db 文件路径）', '风险等级': '只读时低；带写入时中', '适用场景': '数据探索、日志分析、原型搭建' },
+          { 'MCP 服务器': 'Postgres', '能做什么': '通过 connection string 查询 Postgres 数据库', '搭建难度': '中（角色 + URL）', '风险等级': '中——使用只读角色', '适用场景': '生产数据探索、报表、BI 原型' },
+          { 'MCP 服务器': 'Puppeteer / Playwright', '能做什么': '驱动无头或可见 Chromium 完成浏览、爬取、表单填写', '搭建难度': '难（浏览器二进制、选择器、延迟）', '风险等级': '高——可提交表单、点击任意元素', '适用场景': '调研、爬取、回归测试' },
+          { 'MCP 服务器': 'GitHub', '能做什么': '列出仓库、读取文件、创建 issue 与 PR', '搭建难度': '简单（环境变量传 PAT）', '风险等级': '中——将 token 限定到指定仓库', '适用场景': '开发流程、triage、PR 草稿' },
+          { 'MCP 服务器': 'Custom', '能做什么': '任何可用 JSON-RPC 工具表达的功能', '搭建难度': '难（自行实现服务器）', '风险等级': '可变', '适用场景': '内部 API、小众系统、胶水代码' },
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: '组件如何协作',
+        content:
+          '**三个进程，一套共享协议。** 模型在 Ollama 中，客户端说 MCP，每个服务器暴露一组小工具。每次 tool call 在客户端 → 服务器之间跳转，本地执行，返回 JSON。',
+        items: [
+          '**Ollama** 作为后台服务运行在 `127.0.0.1:11434`，通过 OpenAI 兼容 API 提供模型。它不知道 MCP 是什么——只是回应 chat completion，并在模型请求时输出 tool call。',
+          '**MCP 客户端**（Goose、Cline、Continue.dev、LM Studio）是桥梁。它与 Ollama 沟通模型部分，与 MCP 服务器沟通工具部分。模型发出 tool call 时，客户端将其路由到正确的服务器，获取结果，然后把结果送回对话。',
+          '**MCP 服务器** 是相互独立的子进程，每种能力一个。它们通过 stdio 说 JSON-RPC 2.0。每个服务器声明一组 Tools、Resources 和 Prompts；客户端将其合并为对模型呈现的工具表面。',
+          '**stdio transport 让一切保持本地。** 服务器由客户端启动，通过 stdin/stdout 通信，并在客户端退出时退出。除非服务器自身打开网络连接（浏览器服务器会，filesystem 与数据库服务器不会），否则不走网络。',
+          '**模型看到的是扁平工具列表。** 在模型视角中没有服务器——只有 `filesystem.read_file`、`sqlite.query`、`puppeteer.navigate` 这样的工具名。客户端处理路由。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '架构与 Claude Desktop 完全相同。区别在于模型（本地 Ollama 模型替代 Claude）与客户端（Goose/Cline/Continue.dev/LM Studio 替代 Claude Desktop）。MCP 服务器是同一套——你今天在 Claude Desktop 下跑的 filesystem 服务器，明天在 Goose 下也能不加修改地继续跑。',
+          },
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: '配置：15 分钟搭建 Ollama + Goose',
+        content:
+          '**Goose 是 2026 年通往可工作的本地 MCP 智能体的最短路径。** 这是 Block 推出的开源 CLI，原生支持 Ollama，提供交互式聊天界面，并将所有 MCP 服务器配置集中到一个文件。Continue.dev、Cline、LM Studio 也能用，但 Goose 在初次搭建上的成本最低。',
+        items: [
+          '**Step 1 —— 安装 Ollama。** 从 `ollama.com/download` 下载（macOS/Windows/Linux）。用 `curl http://127.0.0.1:11434/api/tags` 确认服务运行。',
+          '**Step 2 —— 拉取支持 tool calling 的模型。** 在 Gemma 4 27B (`gemma4:27b`)、GLM-5.1 32B (`glm5:32b`)、Qwen3 32B (`qwen3:32b`) 或 Llama 3.3 70B (`llama3.3:70b`) 中选一个。16 GB 统一内存或 12 GB VRAM 在 Q4_K_M 下从容运行 27B–32B。',
+          '**Step 3 —— 安装 Goose。** `pipx install goose-ai`（macOS、Linux），或从 Goose Releases 页下载安装程序。CLI 安装为 `goose`。',
+          '**Step 4 —— 将 Ollama 配置为 provider。** 运行 `goose configure`，选择 `ollama` 作为 provider，将模型设为已拉取的那个，host 设为 `http://127.0.0.1:11434`。Goose 会写入 `~/.config/goose/config.yaml`。',
+          '**Step 5 —— 加入 filesystem MCP 服务器。** 编辑 `~/.config/goose/config.yaml` 加入 `mcpServers` 块（配置示例见下）。重启 `goose session` 并请求列出测试目录的文件。第一轮即可确认服务器接入。',
+          '**Step 6 —— 用真实任务验证。** 试运行 `goose session`，请求「列出 `notes/` 中每个 Markdown 文件的标题与字数，并将结果写入 `notes/index.md`」。如果智能体读、汇总、回写都成功，整个循环可工作。',
+        ],
+        codeBlock:
+          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: '若你已使用 Cline 或 Continue.dev，可跳过 Goose 直接使用——两者都在 2026 年初的版本中加入了 MCP 服务器支持。Cline 的「MCP Servers」面板一键安装参考服务器；Continue.dev 从 `~/.continue/config.json` 读取 `mcpServers`（与下面的 Goose 配置块同形）。模型与服务器都相同；变化的只是宿主应用。',
+          },
+        ],
+      },
+      filesystemServer: {
+        id: 'filesystem-server',
+        title: 'Filesystem 服务器：在沙箱目录中读写',
+        content:
+          '**filesystem 服务器是首个安装的服务器，也是最容易安全限定范围的。** 它暴露 `read_file`、`write_file`、`list_directory`、`move_file`、`search_files`、`create_directory`，全部限定在一个或多个 allow-list 路径内。',
+        items: [
+          '**安装：** 参考服务器为 `@modelcontextprotocol/server-filesystem`，通过 `npx -y` 运行（无需全局安装）。Goose、Cline、Continue.dev 都从配置块自动启动。',
+          '**Allow-list 路径：** 服务器接受一个或多个目录参数，并拒绝在其外的操作。务必传入显式的、范围窄的路径——绝不要 `~` 或 `/`。',
+          '**暴露的工具：** `read_file`、`read_multiple_files`、`write_file`、`edit_file`（按行替换）、`list_directory`、`search_files`、`move_file`、`create_directory`、`directory_tree`。模型看到的形式是 `filesystem.read_file` 等。',
+          '**易用性：** `directory_tree` 返回 JSON 树状结构，便于模型在读取具体文件之前先了解结构。`search_files` 提供类似 grep 的递归搜索。',
+          '**风险面：** 服务器尊重 allow-list，但在该列表内拥有完整读写权限。把 allow-list 视作唯一屏障，并选择专用 workspace 目录而非 home 文件夹。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  filesystem:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-filesystem"\n      - "/Users/you/agent-workspace"\n    env: {}',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: '永远不要 allow-list `/` 或你的 home 目录。建立专用 `agent-workspace` 文件夹，把希望智能体接触的文件副本放进去，仅让它在该文件夹内操作。即便智能体出错，影响也止步于一个目录。',
+          },
+        ],
+      },
+      databaseServer: {
+        id: 'database-server',
+        title: 'SQLite 与 Postgres 服务器：查询真实数据',
+        content:
+          '**数据库服务器把模型变成可以基于真实数据回答问题的初级分析师——前提是保持只读。** 两个参考服务器都自带 `query` 工具与（可选的）`write_query` 工具。',
+        items: [
+          '**SQLite 服务器（`@modelcontextprotocol/server-sqlite`）** 接受一个 `.db` 文件路径。适用于日志分析、schema 原型、不开数据库即可探索导出数据。',
+          '**Postgres 服务器（`@modelcontextprotocol/server-postgres`）** 接受 connection string。推荐做法是为智能体创建专用的只读角色，并使用该角色的 connection string。',
+          '**暴露的工具：** `query`（配置为只读时仅 SELECT）、`list_tables`、`describe_table`。Postgres 服务器另加 `list_schemas`。部分 fork 加入 `write_query`——除非你信任模型在该数据库上的行为，否则保持禁用。',
+          '**Schema 感知：** 在提分析问题前请智能体「列出表并 describe 最常用的五个」——模型在调用过 `describe_table` 之后比凭空猜列名要准确得多。',
+          '**成本：** 查询直接落在数据库上。在一亿行的表上格式不当的 `SELECT *` 与人手所造成的事故同等严重——把该角色放在独立连接池并设置 statement timeout。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  sqlite:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-sqlite"\n      - "--db-path"\n      - "/Users/you/data/events.db"\n    env: {}\n\n  postgres:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-postgres"\n      - "postgresql://agent_ro@127.0.0.1:5432/analytics"\n    env:\n      PGPASSWORD: "${PG_AGENT_PASSWORD}"',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'tip',
+            text: '一次性创建 Postgres 角色并不再额外授权：`CREATE ROLE agent_ro WITH LOGIN PASSWORD \'…\'; GRANT CONNECT ON DATABASE analytics TO agent_ro; GRANT USAGE ON SCHEMA public TO agent_ro; GRANT SELECT ON ALL TABLES IN SCHEMA public TO agent_ro; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO agent_ro;` 然后给该角色设 `statement_timeout = 30s`。智能体既不能写入也不能 drop，更不能无限运行。',
+          },
+        ],
+      },
+      browserServer: {
+        id: 'browser-server',
+        title: '浏览器服务器：用 Puppeteer 或 Playwright 驱动 Chromium',
+        content:
+          '**浏览器服务器是四者中最强大也最危险的。** 它启动真实 Chromium 并暴露导航、点击、表单填写与截图——也就是说，它能完成你在浏览器里能做的一切，包括提交表单。',
+        items: [
+          '**参考服务器：** `@modelcontextprotocol/server-puppeteer`（轻量，默认 headless）与 `@modelcontextprotocol/server-playwright`（较重，支持多浏览器）。本地智能体使用 Puppeteer 即可。',
+          '**暴露的工具：** `navigate`、`screenshot`、`click`、`fill`、`select`、`evaluate`（运行 JavaScript）、`get_page_content`。模型用 `get_page_content` 读取结构化文本，用 `screenshot` 进行视觉确认。',
+          '**延迟：** 真实浏览器会话每个动作 1–5 秒。多步浏览很容易消耗 30–60 秒以及数万 token，因为页面内容较大。请使用 32K+ 上下文窗口。',
+          '**选择器：** 模型必须挑选 CSS 选择器。小模型常出错；27B+ 的 tool calling 模型对常见模式较为可靠。把任务范围收紧——「抽取此 URL 的标题与首段」远比「在站内浏览并找到联系页」可靠。',
+          '**适合场景：** 调研（打开页面、汇总、追加到笔记）、回归测试（导航、点击、截图）、在你掌控的页面上的表单填写。不适合场景：任何在真实 Web 上误点会带来后果的工作。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  puppeteer:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-puppeteer"\n    env:\n      PUPPETEER_HEADLESS: "true"\n      # Block obviously dangerous endpoints at the OS firewall level\n      # rather than relying on the agent to refuse them.',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: '永远不要把凭据交给浏览器服务器。如果需要已登录会话，请将预先登录的浏览器配置（通过 `userDataDir`）交给智能体，且绝不让它导航到高影响站点（银行、邮箱、云控制台、支付页）。模型对按钮含义没有判断力——它看见文字就点击。请把它当作没有上下文也没有补救手段的实习生对待。',
+          },
+        ],
+      },
+      githubServer: {
+        id: 'github-server',
+        title: 'GitHub 服务器：从本地模型操作仓库、issue 与 PR',
+        content:
+          '**GitHub 服务器把自然语言的仓库工作转化为 API 调用。** 它在四者中配置最简单，并通过 personal access token (PAT) 权限实现最容易的紧密限定。',
+        items: [
+          '**安装：** `@modelcontextprotocol/server-github`，将 PAT 放入 `GITHUB_PERSONAL_ACCESS_TOKEN` 环境变量后运行。token 是唯一鉴权——服务器本身没有额外配置。',
+          '**暴露的工具：** `search_repositories`、`get_file_contents`、`create_or_update_file`、`create_pull_request`、`list_issues`、`create_issue`、`add_issue_comment`、`merge_pull_request`，以及数十个其他工具。完整工具表面较大，多数任务用 5–10 个工具即可。',
+          '**收紧 PAT。** 使用限定到具体仓库的 fine-grained PAT，权限仅到必要最小（浏览给 Read，PR/issue 创建给 Write）。不要在实验性智能体上使用带 `repo` 权限的经典 PAT。',
+          '**真实工作流：** triage（「读取最近 20 个 open issue，分组并起草标签」）、起草（「读 README 并提交一个修复 typo 的 PR」）、报表（「本周哪些 PR 长时间停滞」）。',
+          '**风险面：** 智能体可以创建 issue 和 PR、发表评论，并在拥有写权限时推送 commit。除非同时信任模型与流程，否则禁用 merge 类工具——fine-grained PAT 仓库中的误合并仍可恢复，但要尽快发现。',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  github:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-github"\n    env:\n      GITHUB_PERSONAL_ACCESS_TOKEN: "${GH_AGENT_PAT}"\n      # Fine-grained PAT scoped to one or two test repos,\n      # not your personal account-wide classic token.',
+        codeLanguage: 'yaml',
+      },
+      securityModel: {
+        id: 'security-model',
+        title: '一个不信任模型的安全模型',
+        content:
+          '**正确的心智模型是「LLM 是一个手里拿着你给的钥匙的不可信实习生」。** 能力来自服务器与你 allow-list 的接口——不来自模型的判断力。',
+        items: [
+          '**将 filesystem 服务器限定到一个目录。** 永不 `~` 或 `/`。选定 `agent-workspace/` 文件夹，把智能体需要接触的文件副本放进去。即便智能体出错，最坏情况是一个文件夹。',
+          '**数据库服务器默认只读运行。** 用仅 `SELECT` 授权且 statement timeout 为 30 秒的专用 `agent_ro` 角色，可以整体消除一类事故。',
+          '**所有写入或 shell 工具都置于明确授权之后。** Goose、Cline、Continue.dev 都支持按工具的授权规则。读取工具默认放行；`write_file`、`edit_file`、`execute_command`、`create_pull_request` 以及任何提交表单的浏览器动作都需要授权。',
+          '**使用审计日志。** 每个 MCP 客户端都会记录 tool call 与结果。长会话之后扫一眼日志：你会看到模型尝试一些你未预期的事（有时无害，有时值得收紧权限）。',
+          '**第三方访问的 token 范围要紧。** GitHub PAT 限定到两个测试仓库。Postgres 角色只读。浏览器会话不带凭据。模型迟早会尝试你未预期的事；它能做什么的边界，不能依赖模型的「自觉」。',
+          '**敏感数据工作时让智能体 air-gap。** 处理私有数据时关闭主机的网络访问（或使用 network namespace）。本地栈本就不向外发数据，但纵深防御能兜住第三方服务器的失误。',
+          '**像对待依赖一样选 MCP 服务器。** 参考服务器维护良好，许多第三方服务器并非如此。在为某个需要凭据的服务器安装前，请先阅读其代码。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '一个有用的失败恢复习惯：在执行非平凡的智能体任务前 `git stash`（或 `git checkout -b agent/<task>`）。任务完成后审查 diff，保留你想要的部分，丢弃其余。这与让长时间 Cline 或 Aider 会话保持安全的做法一致——更广模式见 [Continue.dev vs Cline vs Aider 对比](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local)。',
+          },
+        ],
+      },
+      vsClaudeDesktop: {
+        id: 'vs-claude-desktop',
+        title: '本地 MCP vs Claude Desktop：什么变了，什么不变',
+        content:
+          '**协议与服务器完全相同。只有模型与客户端在变。** 这正是 MCP 重要的原因——你的工具投资可以在本地与云端配置之间无缝迁移。',
+        columns: ['层级', 'Claude Desktop', '本地 Ollama + Goose'],
+        rows: [
+          { '层级': '模型', 'Claude Desktop': 'Claude（Anthropic，云端）', '本地 Ollama + Goose': 'Gemma 4、GLM-5.1、Qwen3 或 Llama 3.3（本地）' },
+          { '层级': '客户端', 'Claude Desktop': 'Claude Desktop 应用', '本地 Ollama + Goose': 'Goose、Cline、Continue.dev 或 LM Studio' },
+          { '层级': '服务器', 'Claude Desktop': '同一套 MCP 服务器', '本地 Ollama + Goose': '同一套 MCP 服务器' },
+          { '层级': '协议', 'Claude Desktop': 'MCP（JSON-RPC 2.0）', '本地 Ollama + Goose': 'MCP（JSON-RPC 2.0）' },
+          { '层级': '单次请求成本', 'Claude Desktop': '按 token 计费的 API', '本地 Ollama + Goose': '$0 —— 本地推理' },
+          { '层级': '隐私性', 'Claude Desktop': '对话发到 Anthropic', '本地 Ollama + Goose': '保留在本机' },
+          { '层级': '速率限制', 'Claude Desktop': '受 API 速率限制', '本地 Ollama + Goose': '仅受硬件吞吐量限制' },
+          { '层级': 'tool call 质量', 'Claude Desktop': '业内最佳', '本地 Ollama + Goose': '27B+ 表现良好；7B 以下迅速劣化' },
+          { '层级': '需要联网', 'Claude Desktop': '需要', '本地 Ollama + Goose': '仅当服务器自身需要（如浏览器）' },
+          { '层级': '搭建时间', 'Claude Desktop': '5 分钟', '本地 Ollama + Goose': '15 分钟（一次性）' },
+        ],
+      },
+      pickingModel: {
+        id: 'picking-model',
+        title: '为本地 MCP 选择支持 tool calling 的模型',
+        content:
+          '**tool call 可靠性随模型规模与训练扩展，不是 harness 决定的。** 一个在 Cline 中输出格式错误 tool call 的模型，在 Goose 中也会因同一原因输出格式错误的 tool call。',
+        items: [
+          '**Gemma 4 27B (`gemma4:27b`)** —— Google 的 tool call 训练在同尺寸中处于业内最佳。Q4_K_M 下可装入 16 GB 统一内存或 24 GB VRAM。通用推理良好；在链式 tool call 上略偏保守。',
+          '**GLM-5.1 32B (`glm5:32b`)** —— 智谱的模型 tool call 可靠性极强，开箱 128K 上下文窗口。比 Gemma 4 略重；24 GB GPU 上从容运行。',
+          '**Qwen3 32B (`qwen3:32b`)** —— 综合均衡；dense 32B 干净处理 MCP，在长智能体循环中稳定。**Qwen3-Coder 30B (`qwen3-coder:30b`)** 是代码形态智能体工作的最佳选择。',
+          '**Llama 3.3 70B (`llama3.3:70b`)** —— 上限最高但最重。Q4_K_M 下需要 48 GB+ 统一内存或 2× 24 GB GPU。仅在硬件允许时使用；通常更小的模型已足够。',
+          '**MCP 工作避免：** 任何 7B 以下，以及任何没有显式 tool call 训练的通用模型。它们会输出格式错误的 call、循环卡住，而你会怪罪 harness——但 harness 没问题。',
+          '提升任何模型 tool call 质量的结构化提示工程方法，参见 [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=zh)。',
+          '逐项基准对比，参见 [2026 年最佳本地 tool calling 模型](/zh/power-local-llm/best-local-models-tool-calling-2026)。',
+        ],
+      },
+      mcpVsFunctionCalling: {
+        id: 'mcp-vs-function-calling',
+        title: 'MCP vs 普通 Function Calling：差别在哪',
+        content:
+          '**Function calling 是模型输出的内容；MCP 是让客户端与工具互相发现的协议。** 它们在不同层并相互协作；不是替代关系。',
+        items: [
+          '**Function calling** 是 LLM 端的能力：模型输出一段描述工具名与参数的结构化 JSON。OpenAI Tools、Anthropic Tools、Ollama 的 tool call API 都是同一思路，只是 wire format 略有差异。',
+          '**MCP** 在其上：它跨进程标准化工具如何被描述、发现、调用、返回。单凭 function calling 的模型并不知道你的 filesystem；MCP 服务器把 filesystem 操作暴露出来，客户端将其映射到模型的 function calling API，模型于是可以调用。',
+          '**收益是 interop。** filesystem 服务器只写一次；Claude Desktop、Goose、Cline、Continue.dev、LM Studio 都不加修改地复用。模型从 Claude 换成 Gemma 4，服务器不变。',
+          '**用纯 function calling 也能做智能体。** 但你会按项目重写 filesystem、数据库、浏览器 handler。有了 MCP，它们是开箱依赖。',
+          '**一次性脚本，纯 function calling 更简单。** 但凡你想在项目或模型间复用，几天之后 MCP 就成为更省力的路径。',
+        ],
+      },
+      zhongguoQiyeYingyong: {
+        id: 'china-enterprise',
+        title: '中国企业的应用方案',
+        content:
+          '**对中国企业而言，本地 MCP 智能体直接回应了云端智能体在《数据安全法》《个人信息保护法》《网络安全法》三法体系下面临的合规压力。** 当模型、客户端与所有工具服务器都在企业自有机器上运行时，数据并不离境，也不离厂。',
+        items: [
+          '**《数据安全法》(2021)：** 数据分级分类与重要数据出境评估是云端 AI 部署的核心障碍。本地 MCP 栈不产生数据出境行为，重要数据始终留在企业内网，对应「分级分类」中较高级别数据可在不触发出境评估的前提下使用 LLM 能力。',
+          '**《个人信息保护法》(PIPL)：** PIPL 第 23 条对个人信息委托处理与第三方提供有严格要求；第 38 条对跨境提供个人信息额外要求安全评估或单独同意。本地推理消除了 LLM 层的第三方处理者关系，简化了与 OpenAI、Anthropic、Google 等境外 AI 服务商相关的合规路径。',
+          '**《网络安全法》与等保（MLPS 2.0）：** 关键信息基础设施运营者与三级以上系统须满足数据本地化与日志可审计要求。本地 MCP 客户端的审计日志（Goose、Cline、Continue.dev）与等保审计要求天然契合，可作为 tool call 行为的主要证据存档。',
+          '**中国企业实际应用场景：** 银行（信贷材料分析）、医院（病历摘要）、律师事务所（合同审阅）、制造业（图纸辅助设计）、政府机关（公文助理）——所有「客户/患者/公民数据不能出企业」的场景都适用。Apple M5 Mac mini 或搭载 RTX 4090 的工作站可运行 27B–32B 模型，覆盖摘要、合规检查、内部数据库代码片段验证等核心需求。',
+          '**头部互联网公司参考：** 阿里巴巴、腾讯、华为、字节跳动、百度等对自研模型与外部模型混用早有实践；本地 MCP 协议层为「内部模型 + 内部数据」组合提供了一套与云端方案 wire 兼容的工具栈，便于在内外部环境之间迁移工具实现而不重写。',
+          '**注意事项：** 浏览器服务器是合规上最敏感的组件，建议为其单独建立网络隔离环境并禁止访问支付/办公等高影响系统；GitHub PAT 须改为企业内部 Git（GitLab/Gitea）的等价 token 并按仓库限定权限；审计日志须落入 WORM 存储或不可被智能体覆写的内部 Git 仓库以满足等保留存要求。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '搭建本地 MCP 时常见错误',
+        items: [
+          '**错误 1：使用小型通用模型。** 7B 以下（以及大多数没有 tool call 微调的 7B–13B 通用模型）会输出格式错误的 tool call。请使用 27B+ 的 tool call 微调模型，停止与 harness 较劲。',
+          '**错误 2：allow-list 自己的 home 目录。** 「只是测试」式的 `~` allow-list 会一路保留进入日常使用。请从一开始就建立专用的 `agent-workspace`。',
+          '**错误 3：让数据库服务器停留在读写模式。** 自信满满的智能体在真实表上写出的 `DELETE` 查询，正是这套规范要避免的事故。把 `agent_ro` 设为默认；只为明确需要写入的任务、并仅在那些任务期间，临时启用单独的可写角色。',
+          '**错误 4：自动批准每个工具。** 「全部批准」开关方便但危险。读取工具（`read_file`、`list_directory`、`query`）可自动批准；写入/shell/PR 工具一律要求授权。',
+          '**错误 5：用 32K 上下文模型做多步浏览器工作。** 页面内容很大；浏览三页就可能在推理之前耗尽 32K token。浏览器密集任务请用 128K 上下文模型。',
+          '**错误 6：假设智能体有判断力。** 它没有。模型并不理解「这是生产数据库」或「该 PR 会触发部署」。权限是你唯一的屏障。',
+          '**错误 7：一次性安装所有参考服务器。** 工具越多 = system prompt 越大 = 工具选择越慢越不可靠。从 `filesystem` 开始，只在出现需要的工作流时再添加其他。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考资料',
+        items: [
+          '[Model Context Protocol 规范](https://modelcontextprotocol.io/) —— 官方规范、JSON-RPC schema、transport 与生命周期定义。',
+          '[modelcontextprotocol/servers GitHub 仓库](https://github.com/modelcontextprotocol/servers) —— 参考服务器（filesystem、sqlite、postgres、github、puppeteer 等）及配置文档。',
+          '[Goose 项目文档](https://block.github.io/goose/) —— CLI 安装、Ollama provider 配置、MCP 服务器配置语法。',
+          '[Ollama 模型库](https://ollama.com/library) —— 可用本地模型、tool call 支持标记，以及本指南引用的量化级别。',
+          '[Cline GitHub 仓库](https://github.com/cline/cline) —— VS Code 端 MCP 客户端实现，MCP 服务器面板。',
+          '[Continue.dev 文档](https://docs.continue.dev/) —— Continue.dev 客户端 `mcpServers` 配置块参考。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: 'MCP 是什么？为什么对本地 AI 重要？',
+            a: 'Model Context Protocol (MCP) 是开放的 JSON-RPC 2.0 协议，允许客户端（Goose、Cline、Continue.dev、LM Studio、Claude Desktop）以统一方式将语言模型连接到工具服务器。它对本地 AI 重要的原因是：标准化了把聊天模型变成智能体的那一层——工具服务器只写一次，可在任意客户端、任意模型（包括本地 Ollama 模型）下使用。没有 MCP，每个项目都要在自己客户端里重新实现文件/数据库/浏览器工具。',
+          },
+          {
+            q: 'MCP 不需要 Claude Desktop 也能用吗？',
+            a: '可以。协议开放，且与 Claude Desktop 完全独立。2026 年，Goose、Cline、Continue.dev、LM Studio 都提供了能与本地 Ollama 模型协作的 MCP 客户端实现。参考服务器（filesystem、sqlite、postgres、puppeteer、github）在任何符合规范的客户端下都不需修改即可运行。',
+          },
+          {
+            q: '哪些本地模型对 MCP 支持最好？',
+            a: '2026 年 5 月最可靠的选择是 Gemma 4 27B、GLM-5.1 32B、Qwen3 32B（代码形态工作选 Qwen3-Coder 30B）和 Llama 3.3 70B。这四个都具备显式的 tool call 训练，输出干净的 function calling JSON 供 MCP 客户端路由。7B 以下模型（以及多数没有 tool call 微调的通用模型）经常产生格式错误的 tool call。',
+          },
+          {
+            q: 'MCP 安全吗？智能体会不会删除我的文件？',
+            a: '只要你允许就有可能。安全来自服务器配置而非协议本身。filesystem 服务器只在你 allow-list 的路径内操作——把它限定到专用的 `agent-workspace` 目录。数据库服务器在你使用 SELECT-only 角色时是只读的。写入、shell、PR 工具一律要求显式授权；只对读取操作自动批准。审计日志事后可以精确显示智能体做了什么。',
+          },
+          {
+            q: '我可以自己写一个 MCP 服务器吗？',
+            a: '可以——SDK 让事情很直接。官方 TypeScript 与 Python SDK（`@modelcontextprotocol/sdk` 与 `mcp`）处理 JSON-RPC 管线。你用 JSON Schema 定义工具与一个 handler 函数，SDK 通过 stdio 暴露它们。一个单功能服务器（一两个工具封装一个内部 API）通常是 50–100 行的单文件。',
+          },
+          {
+            q: 'MCP 在 Windows 下能用吗？',
+            a: '能。Ollama、Goose、Cline、Continue.dev、LM Studio 都能在 Windows 上运行。MCP 服务器作为 Node.js 或 Python 子进程运行；两者在 Windows 下都得到完整支持。唯一与平台相关的注意点是路径处理——配置中使用正斜杠或正确转义反斜杠。其余体验与 macOS、Linux 一致。',
+          },
+          {
+            q: '如何对 MCP tool call 做沙箱？',
+            a: '三层覆盖大部分风险。第一，配置层把每个服务器收紧：filesystem 限定到一个目录、数据库限定到只读角色、GitHub 限定到针对测试仓库的 fine-grained PAT。第二，使用客户端按工具的授权规则：读取自动批准，写入要求授权。第三，把智能体放在 `git stash` 友好的 workspace 中，这样任何破坏性操作都可通过 git 回退。敏感任务建议在除服务器明确需要的端点外没有网络访问的主机上运行。',
+          },
+          {
+            q: 'MCP 智能体能发起 HTTP 请求吗？',
+            a: '能，通过特定服务器。浏览器服务器（puppeteer 或 playwright）驱动一个真实 Chromium，发起模型导航过程中所需的所有请求。一些第三方服务器更直接地暴露了 `http_get`/`http_post` 工具。filesystem 与数据库服务器不发起网络请求，仅在本地资源上操作。',
+          },
+          {
+            q: 'MCP 与 Ollama 原生协作还是需要 wrapper？',
+            a: 'Ollama 本身不会说 MCP——它只提供 OpenAI 兼容的 chat API。你需要客户端（Goose、Cline、Continue.dev、LM Studio）在 Ollama 的 chat API 与 MCP 服务器之间架桥。客户端把模型的 tool call 路由到正确的 MCP 服务器，并把结果送回对话。从用户视角看，除了安装客户端并指向 Ollama 之外不需要额外配置。',
+          },
+          {
+            q: 'MCP 与 function calling 的区别是什么？',
+            a: 'Function calling 是 LLM 输出一段命名工具与参数的结构化 JSON——这是模型能力。MCP 是让工具服务器与客户端跨进程描述、发现、调用、返回工具的协议——这是 interop 层。两者协作：客户端把 MCP 工具定义转换为模型的 function calling 格式，模型发出 function call，客户端将其映射回 MCP 服务器，服务器执行。没有 MCP 你也能做 function calling，但要按项目重写 filesystem/数据库/浏览器 handler；有了 MCP，同一套服务器在任意客户端下都能用。',
+          },
+          {
+            q: '使用本地 MCP 智能体需要遵守《数据安全法》吗？',
+            a: '需要——但本地 MCP 大幅降低了合规复杂度。《数据安全法》(2021) 对数据分级分类、重要数据出境评估、数据处理者义务有明确要求。云端 LLM 智能体涉及向境外服务商发送数据（涉及第 36 条「向境外提供」的合规评估）、处理活动留痕（第 27 条）、安全审计（第 29 条）。本地 MCP 栈中模型、客户端、所有工具服务器都在企业自有机器运行：第一，没有数据出境行为，无需触发出境安全评估；第二，MCP 客户端的审计日志（Goose、Cline、Continue.dev）天然满足处理活动留痕要求；第三，工具权限的分级配置（filesystem 单目录、数据库只读角色、GitHub fine-grained PAT）与等保 2.0 的访问控制要求一致。但仍需履行：数据本身的合规义务（合法性、目的限定、最短保留）、内部 DPO 或安全负责人审批、定期安全评估。',
+          },
+          {
+            q: '本地 MCP 智能体如何满足中国企业的合规要求？',
+            a: '本地 MCP 智能体在中国企业合规上有三层优势。第一，《个人信息保护法》(PIPL) 第 23 条对委托处理者要求严格的合同与安全保障措施；本地推理消除了 LLM 层的委托处理关系，简化了与 OpenAI、Anthropic、Google 的合同与跨境合规路径。第二，《网络安全法》要求关键信息基础设施运营者数据本地化，本地推理天然满足这一要求；MCP 客户端的审计日志可作为等保 2.0 三级以上系统的访问与操作日志归档。第三，金融业（人行金融科技指引）、医疗业（卫健委「互联网+医疗健康」要求）、法律业（律师执业管理办法）的细分合规对客户/患者/当事人数据的境内处理与不得对外提供有具体规定，本地 MCP 智能体可在不触发跨境与第三方提供条款的前提下完成摘要、检索、合规检查等工作。建议落地步骤：建立内部「智能体 + 数据」白名单（哪些数据可被哪些智能体处理）、为浏览器服务器单独建立网络隔离环境、审计日志落入 WORM 存储、由内部安全或 DPO 团队定期审查。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[2026 年最佳本地 tool calling 模型](/zh/power-local-llm/best-local-models-tool-calling-2026) —— 上面推荐模型（Gemma 4、GLM-5.1、Qwen3、Llama 3.3）的逐项对比基准。',
+          '[自治本地智能体确实可用](/zh/power-local-llm/autonomous-local-agents-actually-work) —— 本地 MCP 智能体在长任务上能可靠完成什么、不能做什么的现实检查。',
+          '[Continue.dev vs Cline vs Aider：2026 年最佳本地编码智能体](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) —— 代码形态工作的相邻智能体语境；Cline 与 Continue.dev 也是 MCP 客户端。',
+          '[2026 年最佳本地 LLM](/local-llms/best-local-llms-2026?lang=zh) —— 更广 open-weights 生态的模型权威。',
+          '[用本地 AI 智能体替代 Zapier](/zh/power-local-llm/replace-zapier-with-local-ai-agents) —— 同一 MCP 栈的工作流自动化框架。',
+          '[Power Local LLM 中心](/zh/power-local-llm) —— 完整指南库。',
+        ],
+      },
+    },
+  },
 }
