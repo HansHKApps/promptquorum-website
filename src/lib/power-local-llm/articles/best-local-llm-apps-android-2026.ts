@@ -2556,7 +2556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
-      ollamaTerm ux: {
+      ollamaTermux: {
         id: 'ollama-termux',
         title: 'Ollama via Termux：高级用户的完整生态',
         content: [
