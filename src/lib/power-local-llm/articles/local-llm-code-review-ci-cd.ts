@@ -1012,7 +1012,7 @@ jobs:
       hardwareSizing: { id: 'hardware-sizing', title: 'Dimensionnement du Matériel par Taille d\'Équipe', content: '**Une RTX 4090 (24 GB) gère confortablement une équipe de 15–25 développeurs.** Le goulot d\'étranglement sur une seule GPU n\'est pas le débit par révision — c\'est la concurrence aux moments de chasse aux RP (lundi matin, fin de sprint). Les règles de dimensionnement ci-dessous supposent Qwen3-Coder 30B à Q4_K_M et une différence RP typique de 50–500 lignes.', columns: ['Taille d\'Équipe', 'GPU', 'VRAM', 'Révisions Simultanées', 'Prix Approximatif (Mai 2026)'], rows: [{ 'Taille d\'Équipe': '~5 Développeurs', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Révisions Simultanées': '1 (seulement Qwen3-Coder 7B)', 'Prix Approximatif (Mai 2026)': 'env. 899–1 099 €' }, { 'Taille d\'Équipe': '15–25 Développeurs', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Révisions Simultanées': '1–3 (Qwen3-Coder 30B)', 'Prix Approximatif (Mai 2026)': 'env. 2 299–2 799 €' }, { 'Taille d\'Équipe': '25–50 Développeurs', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Révisions Simultanées': '3–6', 'Prix Approximatif (Mai 2026)': 'env. 8 999–9 999 €' }, { 'Taille d\'Équipe': '50–100 Développeurs', 'GPU': '2× RTX 4090 ou 1× H100', 'VRAM': '48 GB / 80 GB', 'Révisions Simultanées': '6–10', 'Prix Approximatif (Mai 2026)': 'env. 5 000 € (2× 4090) ou 27 000+ € (H100)' }, { 'Taille d\'Équipe': '100+ Développeurs', 'GPU': 'Multi-GPU H100 ou H200', 'VRAM': '160 GB+', 'Révisions Simultanées': '10+ avec vLLM', 'Prix Approximatif (Mai 2026)': 'env. 50 000+ €' }], callouts: [{ type: 'tip', text: 'Pour les équipes franchissant le seuil de 50 développeurs, passez de Ollama à vLLM. Ollama privilégie la facilité d\'utilisation ; vLLM privilégie le débit sur les GPU partagées. Le même modèle Qwen3-Coder 30B s\'exécute sur les deux — seul le serveur d\'inférence change.' }] },
       gpuSharing: { id: 'gpu-sharing', title: 'Partage GPU Across Builds et Autres Charges', content: '**Une GPU dédiée pour la révision de code est l\'architecture la plus simple mais pas la seule.** Les équipes exécutant déjà une infra GPU pour l\'inférence ML ou l\'entraînement peuvent partager — avec le compromis que la contention fait monter en flèche la latence de révision.', items: ['**GPU dédiée pour la révision seulement:** modèle le plus simple. La latence est prévisible ; la planification de capacité est simple ; les modes de défaillance sont isolés. La recommandation pour toute équipe n\'exécutant pas déjà une infra GPU.', '**GPU partagée avec inférence ML:** faisable si la charge inférence a une enveloppe stable (par ex., un petit service d\'intégration s\'adaptant à 4–6 GB). Le modèle de révision occupe le reste du VRAM. Les collisions de planification sont rares sur ce motif.', '**GPU partagée avec entraînement ML:** fortement déconseillé. Les travaux d\'entraînement font sauter l\'utilisation du VRAM au limite et affament le modèle de révision, causant des latences de révision de 30–120 secondes qui érodent la confiance des développeurs dans le système.', '**vLLM avec attention paginée:** purpose-built pour le service LLM haute-concurrence. La même RTX 4090 qui gère 1–3 révisions simultanées sous Ollama peut gérer 4–8 sous vLLM, au prix d\'une configuration plus complexe. Ça vaut le coup au-delà de 25 développeurs.', '**Multi-tenant sur H100:** à l\'échelle 100+ développeurs, partitionnez un H100 en tranches MIG ou exécutez vLLM avec des quotas par tenant. C\'est du territoire plateforme-engineering ; n\'improvisez pas.'] },
       costComparison: { id: 'cost-comparison', title: 'Comparaison des Coûts avec GitHub Advanced Security', content: '**L\'économie bascule en faveur du self-host à environ 15–25 sièges payants.** C\'est une comparaison à payback d\'un an ; les horizons plus longs rendent l\'auto-hébergement plus favorable.', items: ['**GitHub Advanced Security (Code Security):** 19 $/développeur/mois au prix catalogue (vérifiez sur la page de tarification GitHub ; les remises de volume sont disponibles pour les clients enterprise).', '**API LLM Cloud (ex. OpenAI, Anthropic):** environ 50–200 $/mois par développeur actif au volume RP typique ; varie énormément selon la taille de la base de code et la conception du prompt de révision.', '**Self-Hosted Local LLM, build RTX 4090:** environ 2 299 € de matériel une seule fois (GPU + un boîtier serveur de base). Consommation électrique : ~50W au repos, ~350W sous charge — disons env. 18–28€/mois en électricité à l\'utilisation typique. Pas de frais par siège.', '**Parité à 10 développeurs:** GHAS 190 $/mois vs self-hosted env. 25€/mois exploité + env. 2 299 € capex. Capex se rentabilise en ~14 mois.', '**Parité à 25 développeurs:** GHAS 475 $/mois vs self-hosted env. 25€/mois exploité + env. 2 299 € capex. Capex se rentabilise en ~5–6 mois.', '**Parité à 50 développeurs:** GHAS 950 $/mois vs self-hosted env. 40€/mois exploité + env. 7 500 € capex (GPU 48 GB). Capex se rentabilise en ~8 mois.', '**Le chiffre capex domine les mathématiques.** Si vous achetez une GPU spécifiquement pour cela, la rentabilité est réelle. Si vous avez une capacité GPU existante, le coût marginal est plus proche de zéro et l\'auto-hébergement gagne immédiatement.'], callouts: [{ type: 'note', text: 'Ces chiffres sont des comparaisons de prix catalogue. Les tarifs GHAS négociés pour les grandes entreprises décalent la parité ; la capacité GPU existante l\'effondre. Refaites les mathématiques avec vos coûts réels avant de vous engager sur un achat de matériel.' }] },
-      securityModel: { id: 'security-model', title: 'Modèle de Sécurité et Posture d\'Audit', content: '**L\'affirmation de sécurité titre — "le code source ne quitte jamais votre réseau" — est vraie, prouvable, et le plus fort argument pour cette architecture.** La surface d\'audit est assez petite pour être défendue dans un examen de procurement.', items: ['**Le modèle ne voit que la diff que votre action envoie.** Pas de télémétrie, pas d\'appels réseau cachés. Confirmable avec `tcpdump` ou `nft monitor` sur l\'interface sortante du serveur GPU — sous opération état-stable, vous devriez voir zéro paquets sortants vers les hôtes non-internes.', '**La surface d\'audit complète est un processus et un fichier journal.** `ollama serve` est l\'intégralité de la pile LLM. Ses logs (corps de requête, latence, événements de chargement de modèle) sont l\'enregistrement d\'audit. Pas de tableau de bord SaaS à interroger, pas de politique de conservation tiers à lire.', '**L\'isolement du réseau est simple.** Liez `ollama serve` à une interface privée ; mettez un proxy inverse avec auth mTLS ou shared-secret devant ; refusez sortant sur le namespace réseau du serveur GPU sauf vers votre sous-réseau exécuteur CI. Motif zero-trust standard, pas de magie LLM-spécifique.', '**Les poids du modèle sont des artefacts statiques signés par le vendeur.** Tirez-les une seule fois via Ollama, épinglez le digest et le modèle ne peut pas changer sans action opérateur. C\'est une histoire de chaîne d\'approvisionnement plus forte qu\'une API SaaS où le modèle amont peut être silencieusement échangé.', '**Posture de conformité:** zéro sortie de données est simple à documenter pour SOC 2, ISO 27001, GDPR et la classification EU AI Act limited-risk. La partie la plus difficile de la conformité auto-hébergée est généralement de documenter le serveur d\'inférence lui-même ; Ollama et vLLM sont tous deux bien documentés.', '**Le modèle voit toujours votre code.** L\'auto-hébergé ne signifie pas privé du modèle — cela signifie privé des tiers. Les scénarios d\'insider-threat (ingénieur avec accès serveur GPU lit les logs contenant les diffs RP passées) sont toujours dans le scope ; rotez les logs et limitez l\'accès en conséquence.'], regionalContext: 'La recommandation de confidentialité pour les données sensibles en France suit la directive CNIL sur l\'IA : quand une organisation traite des données professionnelles sensibles (données financières, données médicales, dossiers juridiques), l\'inférence locale avec Qwen3-Coder satisfait les exigences CNIL de consentement et d\'absence d\'exfiltration puisque aucune donnée ne quitte le périmètre de l\'organisation.' },
+      securityModel: { id: 'security-model', title: 'Modèle de Sécurité et Posture d\'Audit', content: '**L\'affirmation de sécurité titre — "le code source ne quitte jamais votre réseau" — est vraie, prouvable, et le plus fort argument pour cette architecture.** La surface d\'audit est assez petite pour être défendue dans un examen de procurement.', items: ['**Le modèle ne voit que la diff que votre action envoie.** Pas de télémétrie, pas d\'appels réseau cachés. Confirmable avec `tcpdump` ou `nft monitor` sur l\'interface sortante du serveur GPU — sous opération état-stable, vous devriez voir zéro paquets sortants vers les hôtes non-internes.', '**La surface d\'audit complète est un processus et un fichier journal.** `ollama serve` est l\'intégralité de la pile LLM. Ses logs (corps de requête, latence, événements de chargement de modèle) sont l\'enregistrement d\'audit. Pas de tableau de bord SaaS à interroger, pas de politique de conservation tiers à lire.', '**L\'isolement du réseau est simple.** Liez `ollama serve` à une interface privée ; mettez un proxy inverse avec auth mTLS ou shared-secret devant ; refusez sortant sur le namespace réseau du serveur GPU sauf vers votre sous-réseau exécuteur CI. Motif zero-trust standard, pas de magie LLM-spécifique.', '**Les poids du modèle sont des artefacts statiques signés par le vendeur.** Tirez-les une seule fois via Ollama, épinglez le digest et le modèle ne peut pas changer sans action opérateur. C\'est une histoire de chaîne d\'approvisionnement plus forte qu\'une API SaaS où le modèle amont peut être silencieusement échangé.', '**Posture de conformité:** zéro sortie de données est simple à documenter pour SOC 2, ISO 27001, GDPR et la classification EU AI Act limited-risk. La partie la plus difficile de la conformité auto-hébergée est généralement de documenter le serveur d\'inférence lui-même ; Ollama et vLLM sont tous deux bien documentés.', '**Le modèle voit toujours votre code.** L\'auto-hébergé ne signifie pas privé du modèle — cela signifie privé des tiers. Les scénarios d\'insider-threat (ingénieur avec accès serveur GPU lit les logs contenant les diffs RP passées) sont toujours dans le scope ; rotez les logs et limitez l\'accès en conséquence.'] },
       promptDesign: { id: 'prompt-design', title: 'Conception de Prompt pour la Révision de Code', content: '**Le déterminant unique le plus grand du taux de faux positifs est le prompt système.** Un prompt vague "examinez ce code" produit des commentaires de révision vagues ; un prompt spécifique avec seuils de sévérité et résultats structurés produit des retours actionnables.', items: ['**La sortie structurée est non-négociable.** Imposez JSON avec un schéma strict (`verdict`, `summary`, `comments[]`). Sans cela, l\'action passe 30% de son code à analyser la sortie free-form et les modes de défaillance sont subtils.', 'Pour le guide complet sur l\'application de la sortie structurée sur les modèles, voir [structured output and JSON mode](/prompt-engineering/structured-output-and-json-mode?lang=fr).', '**Les seuils de sévérité appartiennent au prompt, pas à l\'action.** Dites au modèle ce qui compte comme `critique`, `haut`, `moyen`, `bas` ; dites-lui de filtrer les résultats bas-sévérité sauf explicitement demandés. C\'est beaucoup plus fiable que le filtrage post-hoc sur un champ sévérité free-form.', '**Ancrez le prompt avec des exemples.** Un prompt 1–2-shot avec une diff réelle et une JSON de révision idéale surpasse massif zero-shot pour le même modèle et la même taille de diff.', '**Distinguez l\'intention "révision" de "commentaire".** Un commentaire critique ("envisagez d\'extraire ceci vers un helper") et un blocker ("ceci introduit une injection SQL") ont besoin d\'actions différentes en CI. Tagguez-les dans la sortie structurée et faites bloquer l\'action seulement sur les bloqueurs.', '**Les variantes de prompt par langue aident au-delà d\'une certaine taille.** Une base de code polyglotte bénéficie d\'un prompt qui référence les idiomes de langue pertinents (Pythonic vs Rust idiomatique). C\'est optionnel au-dessous d\'environ 25 développeurs ; précieux au-dessus.', 'Pour l\'ancrage de l\'ingénierie de prompt plus profond — prompts système vs utilisateur, résultats structurés, few-shot prompting — voir [System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr).'] },
       falsePositives: { id: 'false-positives', title: 'Gestion des Faux Positifs Sans Éroder la Confiance des Développeurs', content: '**Les faux positifs sont la taxe opérationnelle sur la révision de code LLM.** Un taux de 5% est acceptable ; 20% est intolérable ; la différence est principalement itération de prompt et une boucle de rétroaction, pas le modèle.', items: ['**Fixez un seuil "block" haut.** Un verdict `block` qui s\'active sur chaque problème lint mineur entraîne les développeurs à contourner la vérification. Réservez `block` aux problèmes de sécurité, aux tests cassés et aux défaillances de correctness clairs.', '**Rendez les commentaires non-bloquants bon marché.** Les commentaires en ligne où le modèle est incertain devraient être tagués ("tentative" / "envisager") pour que les auteurs puissent les rejeter rapidement sans cérémonie.', '**Construisez une boucle de rétroaction au mois un.** Ajoutez une réaction (👍 / 👎) à chaque commentaire de révision. Périodiquement (hebdomadairement fonctionne) examinez les 👎s et mettez à jour le prompt système avec des instructions explicites "ne pas signaler X" pour les catégories les plus courantes de faux positifs.', '**Taux-limites le volume de commentaires par RP.** Une seule RP ne devrait pas recevoir plus de 5–10 commentaires du LLM ; au-delà, le rapport signal-bruit s\'effondre. Limitez l\'action au niveau du prompt ("retour au maximum N commentaires").', '**Suivez la corrélation verdict-to-merge hebdomadairement.** Si 80% des verdicts `block` fusionnent de toute façon, votre seuil est trop agressif. Si 0% des verdicts `comment` obtiennent toute action humaine, votre prompt produit du bruit.'] },
       operationalPitfalls: { id: 'operational-pitfalls', title: 'Pièges Opérationnels au Deuxième Mois', content: '**Le setup obtient l\'attention ; les opérations sont ignorées.** Les défaillances ci-dessous sont celles qui font que les équipes abandonnent le projet après la période lune de miel.', items: ['**Les mises à jour de modèle cassent les prompts.** Une nouvelle version Qwen3-Coder change subtilement le formatage de sortie ; l\'analyse JSON structurée échoue en CI ; les révisions cessent de poster. Épinglez le digest du modèle avec `ollama show <model> --modelfile` ; mettez à niveau dans une branche staging avant de promouvoir.', '**Fragmentation mémoire GPU sous longue uptime.** Un serveur GPU exécutant 24/7 peut fragmenter le VRAM et refuser les allocations nouvelles après des semaines d\'opération. Redémarrez `ollama serve` hebdomadairement via un travail cron ; c\'est bon marché et évite complètement le mode de défaillance.', '**Contention exécuteur CI.** Un exécuteur auto-hébergé hébergeant à la fois le serveur LLM et d\'autres travaux CI verra la latence de révision monter en flèche sous charge de build. Séparez l\'exécuteur et le serveur GPU quand la taille d\'équipe dépasse ~25 développeurs.', '**Croissance taille diff.** Les tailles RP dérivent vers le haut ; finalement une RP dépasse le contexte de travail pratique du modèle et les révisions dégradent silencieusement. Ajoutez un garde dans l\'action qui divise ou tronque les diffs au-dessus d\'env. 30K tokens et avertit l\'auteur.', '**Puissance et refroidissement.** Une RTX 4090 continuellement chargée tire env. 350W sous inférence et produit une quantité signifiante de chaleur. Une salle serveur de taille placard sans refroidissement actif affamera la GPU ; l\'affamement coûte la latence et les développeurs remarquent.', '**Rotation de log oubliée.** Ollama enregistre chaque corps de requête par défaut. Après trois mois de révisions RP, le fichier journal est grand et contient les diffs RP historiques en texte clair. Rotez les logs hebdomadairement ; archivez ou purgez par votre politique de conservation de données.'] },
@@ -1020,6 +1020,498 @@ jobs:
       sources: { id: 'sources', title: 'Sources', items: ['[Documentation Ollama](https://github.com/ollama/ollama/blob/main/docs/api.md) — Référence officielle API HTTP pour `/api/chat`, `/api/generate`, sortie structurée et gestion des modèles.', '[Documentation vLLM](https://docs.vllm.ai/) — Documentation serveur inférence haute-débit ; le chemin de mise à niveau au-delà d\'Ollama pour les équipes haute-concurrence.', '[Documentation GitHub Actions](https://docs.github.com/en/actions) — Référence officielle pour les exécuteurs auto-hébergés, les secrets et le SDK JavaScript Actions utilisé dans le flux de travail ci-dessus.', '[Tarification GitHub Advanced Security](https://github.com/pricing) — Référence prix catalogue pour la comparaison des coûts ; vérifiez par rapport à vos termes réellement négociés.', '[Fiche Technique Qwen3-Coder](https://huggingface.co/Qwen/Qwen3-Coder-30B) — Architecture, fenêtre de contexte et conditions de licence pour le modèle de révision recommandé.', '[Référence GitLab CI/CD](https://docs.gitlab.com/ee/ci/) — Référence équivalente pour les équipes GitLab ; la portion LLM-call du flux de travail est identique.'] },
       faq: { id: 'faq', title: 'FAQ', faqs: [{ q: 'Un serveur GPU unique peut-il gérer CI pour 50 développeurs ?', a: 'Une GPU unique 24 GB (RTX 4090) gère confortablement 15–25 développeurs ; 50 développeurs ont besoin d\'une carte 48 GB (L40S, A6000 Ada) ou un changement de Ollama à vLLM sur le même matériel. Le goulot d\'étranglement est la concurrence aux moments chasse-RP — lundi matin, fin de sprint — pas le débit état-stable. Pour 100+ développeurs, planifiez pour multi-GPU ou du matériel classe H100.' }, { q: 'La révision de code local affecte-t-elle la latence RP ?', a: 'Typiquement non — la latence de révision est 10–30 secondes sur une GPU unique 24 GB pour une diff typique de 200 lignes, et le temps d\'attente auteur RP est dominé par d\'autres travaux CI (build, test, lint) qui prennent bien plus longtemps. L\'exception est les très grandes RP (au-dessus d\'env. 30K tokens diff) où la révision peut prendre 60–90 secondes ; tronquez ou divisez celles-ci au niveau action.' }, { q: 'Comment puis-je auditer ce que le modèle voit ?', a: 'Ollama enregistre chaque corps de requête par défaut dans son fichier journal (l\'emplacement varie par OS ; vérifiez `journalctl -u ollama` sur systemd ou le répertoire log Ollama). Chaque diff RP qui va en révision est dans ce journal. Combiné avec `tcpdump` sur l\'interface sortante du serveur GPU pour prouver zéro sortie de données. La surface d\'audit complète est un processus et un fichier journal — bien plus simple à auditer qu\'une API révision code SaaS.' }, { q: 'Puis-je bloquer les RP basées sur la sortie du modèle local ?', a: 'Oui. L\'action retourne un champ `verdict` ; si le verdict est `block`, l\'action GitHub sort non-zéro, ce qui fait échouer la vérification, ce qui bloque fusion si la règle branch protection nécessite le passage de la vérification. La recommandation est de commencer avec `block` désactivé (beratend seulement) le premier mois, mesurer le taux de faux positifs, et promouvoir le blocage une fois le taux au-dessous d\'env. 5%.' }, { q: 'Cela fonctionne-t-il avec GitLab CI ?', a: 'Oui — architecture identique. Remplacez l\'action GitHub par un travail GitLab CI qui exécute le même `curl` au point de terminaison Ollama et poste la réponse en arrière à la demande fusion via l\'API GitLab. Le modèle, le prompt, le cache, le modèle de sécurité et le dimensionnement du matériel sont tous identiques. Bitbucket Pipelines, Jenkins et Buildkite fonctionnent de la même manière.' }, { q: 'Comment je garde le modèle à jour sans casser les pipelines ?', a: 'Épinglez le digest du modèle avec `ollama show <model> --modelfile` pour que CI production utilise une version exacte. Quand une nouvelle version modèle arrive, tirez-la sur un serveur staging, exécutez une petite suite fixture de diffs RP représentatives, comparez la sortie structurée à la version production, et promouvez seulement après que la suite de régression passe. Traitez les mises à jour modèle comme n\'importe quelle autre mise à niveau de dépendance.' }, { q: 'Puis-je utiliser ceci pour la génération de code en plus de la révision ?', a: 'Oui, mais les charges concourent pour la même GPU et ont des caractéristiques de latence différentes. La révision de code est asynchrone et tolère les réponses 30-secondes ; la génération de code interactif dans un éditeur a besoin de latence sub-2-secondes. Pattern recommandé : utilisez un modèle plus petit (Qwen3-Coder 7B) pour l\'autocomplete d\'éditeur sur les machines développeur et réservez le serveur GPU dédié aux charges de classe révision en CI.' }, { q: 'Quel est le modèle de sécurité pour le serveur GPU ?', a: 'Traitez-le comme n\'importe quel service interne : liez le serveur d\'inférence à une interface privée, mettez l\'authentification devant (auth mTLS, jetons shared-secret, ou accès VPN-seulement), restreignez sortant avec default-deny, et rotez les identifiants. L\'ajout LLM-spécifique est l\'audit de provenance poids du modèle — épinglez le digest, documentez la source, et confirmez sortie de données zéro avec captures paquets périodiques.' }, { q: 'Plusieurs repos peuvent-ils partager un serveur GPU ?', a: 'Oui — le serveur GPU est juste un point de terminaison HTTP. N\'importe quel nombre de repos peut l\'appeler tant que le serveur a de la capacité. Pour les organisations avec 10+ repos actifs, ajoutez des limites taux par-repo au proxy inverse devant Ollama pour éviter qu\'un repo bruyant (grand monorepo, pushes forcés fréquents) ne famine les autres.' }, { q: 'Comment je gère les faux positifs en CI ?', a: 'Trois couches. Premièrement, design de prompt — fixez des seuils de sévérité hauts, imposez la sortie structurée, et tagguez les résultats tentatives. Deuxièmement, filtrage niveau action — bloquez seulement sur `severity >= "high"` ; montrez moyen/bas comme commentaires. Troisièmement, une boucle de rétroaction — laissez les développeurs réagir 👍/👎 sur chaque commentaire, puis examinez hebdomadairement les 👎s et mettez à jour le prompt système pour supprimer les catégories les plus courantes de faux positifs. Attendez un taux 5–10% après un mois de réglage ; au-dessous de 5% est réalisable avec itération soutenue.' }] },
       relatedReading: { id: 'related-reading', title: 'Lectures Associées', items: ['[Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm?lang=fr) — contexte plus large de remplacement des coûts pour les équipes envisageant les outils IA auto-hébergés.', '[Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr) — ce qui exécute en pipelines vs travail éditeur interactif ; la couche harness sous le modèle.', '[Best Local Coding Models in 2026](/power-local-llm/best-local-coding-models-2026?lang=fr) — côté modèle de l\'équation : Qwen3-Coder, DeepSeek, Codestral et le paysage de licence.', '[System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr) — ancrage d\'ingénierie de prompt pour le prompt système révision.', '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr) — comparaison moteur inférence ; vLLM est le chemin mise à niveau au-delà d\'Ollama pour les équipes haute-concurrence.', '[Power Local LLM Hub](/power-local-llm?lang=fr) — bibliothèque guides complète.'] },
+    },
+  },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'ローカルLLMでCI/CDコードレビュー：セルフホスト型セットアップ2026',
+    seoTitle: 'CI/CDのローカルLLMコードレビュー：セルフホスト型セットアップ2026',
+    intro:
+      'セルフホスト型のローカルLLMコードレビューは、Qwen3-CoderモデルをあなたのCI/CDパイプラインの背後に配置して、プルリクエストがあるたびにコードベースがネットワークから出ることなくレビュー審査が実行されます。アーキテクチャは単純です——Ollama を実行する専用GPU サーバー、HTTP APIを呼び出すカスタムGitHub Action、そして偽陽性率のために調整されたレビュープロンプト——経済学は15人から25人の有料GitHubシート付近でセルフホスティングの方向にひっくり返ります。このガイドでは、アーキテクチャ、実装されたGitHub Actions ワークフロー、チームサイズ別のハードウェアサイジング、セキュリティモデル、そして2 か月目のチームを困らせる運用上の落とし穴について説明します。',
+    metaDescription:
+      'GitHub Actionsのセルフホスト型ローカルLLMコードレビュー：アーキテクチャ、実装されたワークフローYAML、チームサイズ別ハードウェアサイジング、セキュリティモデル、そしてGitHub Advanced Securityに対する経済的転換点。',
+    twitterDescription:
+      'ネットワーク内のGPUサーバーでセルフホスト型コードレビュー。GitHub ActionsはOllamaを呼び出し、Qwen3-CoderがPRをレビューします。コードベースはあなたの境界内に留まります。セットアップ、サイジング、コスト分析はこちら。',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA RTX 5090 32 GB',
+      'NVIDIA L40S 48 GB',
+      'NVIDIA A6000 Ada 48 GB',
+      'NVIDIA H100 80 GB',
+    ],
+    audience:
+      'GitHub ActionsやGitLab CIを実行し、ソースコードをサードパーティAPIに送信することなくLLM駆動のコードレビューを追加したいエンジニアリングチームリード、プラットフォームエンジニア、DevOps実務者。Docker、Linux、セルフホスト型ランナーに精通していることが前提です。',
+    readTime: '15分で読める',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'ローカルLLMコードレビュー CI/CD',
+    targetKeywords: [
+      'ローカルLLMコードレビュー',
+      'セルフホスト型コードレビューLLM',
+      'GitHub ActionsローカルLLM',
+      'Ollama GitHub Actions',
+      'プライベートコードレビューAI',
+      'OpenAIなしのコードレビュー',
+    ],
+    leadAnswerBlock:
+      '**セルフホスト型ローカルLLMコードレビューは3つの部分を使用します：Ollama（またはvLLM）を実行する専用GPUサーバー、サーバーのHTTPエンドポイントにdiffをPOSTするカスタムGitHub Action、構造化された判定（承認/コメント/ブロック）を返すレビュープロンプト。1つのRTX 4090（24 GB）でQwen3-Coder 30Bを実行すると、15～25開発者のチームに対応できます。48 GBカード（L40SまたはA6000 Ada）は約50開発者まで対応できます。H100クラスのハードウェアは100を超える場合に必要です。経済的には、GitHub Advanced Security（$19/開発者/月）の15～25有料シート付近でセルフホスティングの方向に転換します——正確な転換点はハードウェア購入対既存容量に依存します。セキュリティ上の利点は実質的です：ソースコードはネットワークから出ません。監査サーフェスはただ1つのプロセスとただ1つのログファイルです。パケットキャプチャでゼロエグレスを証明できます。**',
+    quickAnswerTop: {
+      ja: {
+        question: 'CI/CDでローカルLLMをコードレビュアーとして実行するにはどうすればよいですか？',
+        answer:
+          'Ollama（またはvLLM、llama.cpp）を実行しているGPUサーバーを構築します。コーディング調整モデル——Qwen3-Coder 30Bは2026年5月のデフォルト——を使用します。セルフホスト型GitHub Actionsランナーを同じネットワーク上に追加するか、プライベートネットワーク経由で既存のランナーにサーバーのHTTPエンドポイントを公開します。PRdiffをフェッチし、レビュープロンプト付きでLLMエンドポイントにPOSTし、構造化された応答（承認/コメント/ブロック）を解析し、PRにインラインコメントを戻すカスタムアクションを記述します。モデルはあなたの境界内に留まります。アクションは他のチェックのように動作します。ハードウェアの観点から、1つのRTX 4090でQwen3-Coder 30Bは15～25開発者を処理します。48 GBカードは約50開発者に拡張します。100を超える場合はH100クラスまたはマルチGPUが必要です。',
+        bullets: [
+          'アーキテクチャ：Ollama を実行するGPUサーバー→セルフホスト型ランナー（またはクラウドランナーからのHTTP）→カスタムGitHub Action→PRコメント。',
+          'デフォルトスタック：Ollama + Qwen3-Coder 30B（Apache 2.0）+ カスタムJavaScriptまたはコンポジットアクション。',
+          'ハードウェア：1×RTX 4090（24 GB）は15～25開発者向け。1×L40S/A6000 Ada（48 GB）は約50開発者向け。1×H100またはマルチGPUは100以上向け。',
+          '経済学：$19/開発者/月のGitHub Advanced Securityに対する転換点はおおよそ15～25の有料シート。ハードウェアコストに依存します。',
+          'セキュリティ：ソースコードはネットワークから出ません。パケットキャプチャでエグレスはゼロと証明できます。監査サーフェスは1つのプロセスと1つのログです。',
+          'GitLab CIも同じ方法で動作します——アクションの代わりにランナーですが、LLM呼び出しは同一です。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '重要なポイント', anchor: '#key-takeaways' },
+      { label: '重要な事実', anchor: '#quick-facts' },
+      { label: 'アーキテクチャ比較', anchor: '#architecture-comparison' },
+      { label: '推奨スタック', anchor: '#recommended-stack' },
+      { label: 'GitHub Actionsワークフロー', anchor: '#workflow' },
+      { label: 'チームサイズ別ハードウェアサイジング', anchor: '#hardware-sizing' },
+      { label: 'ビルド全体でのGPU共有', anchor: '#gpu-sharing' },
+      { label: 'GitHub Advanced Securityとのコスト比較', anchor: '#cost-comparison' },
+      { label: 'セキュリティモデルと監査体制', anchor: '#security-model' },
+      { label: 'コードレビュー用プロンプト設計', anchor: '#prompt-design' },
+      { label: '偽陽性への対応', anchor: '#false-positives' },
+      { label: '2か月目の運用上の落とし穴', anchor: '#operational-pitfalls' },
+      { label: 'よくある間違い', anchor: '#common-mistakes' },
+      { label: 'ソース', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連資料', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**アーキテクチャは3つの部分です：** Ollama（またはvLLM）を実行するGPUサーバー→ネットワーク経由で到達可能なCIランナー→PRdiffをPOSTし構造化判定を解析するカスタムアクション。GitHub Actions、GitLab CI、Buildkite、Jenkinsで同じ形です。',
+          '**2026年5月のデフォルトスタック：** Ollama + Qwen3-Coder 30B（Apache 2.0）+ シンカスタムGitHub Action。総インフラ：1つのGPUボックス、1つのランナー。',
+          '**ハードウェアサイジング：** RTX 4090（24 GB、¥320,000～¥360,000）は15～25開発者を処理します。L40SまたはA6000 Ada（48 GB、¥1,120,000～¥1,280,000）は50人に拡張します。H100（80 GB、¥4,000,000以上）またはマルチGPUは100以上向けです。',
+          '**経済学はおおよそ15～25の有料GitHub Advanced Securityシート($19/開発者/月)でセルフホスト領域に転換します——RTX 4090ビルドは5～10ヶ月でペイバックします。',
+          '**セキュリティ上の利点は実質的で、単なるマーケティングではありません。** コードはネットワークから出ません。`tcpdump`でゼロエグレスを証明できます。監査サーフェス全体は1つのOllamaプロセスと1つのログファイルです。',
+          '**偽陽性は運用上の税金です。** 最初の月の調整ループを計画します：プロンプト反復、重大度しきい値、レビュー担当者のフィードバック取得パスによってプロンプトは時間とともに改善します。',
+          '**遅延は許容できます。** 24 GB GPUでQwen3-Coder 30Bを実行すると、典型的な200行のPRdiffを30秒以内でレビューします。PR著者の待機時間は他のCIジョブが支配し、レビューではありません。',
+          '**人間のレビューを完全に置き換えないでください。** ローカルLLMは最初のパストリアージゲートです——明らかな問題を捕捉し、リスクのある変更にフラグを立て、LLMがまだ間違う判断呼び出しについて人間を解放します。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '重要な事実',
+        items: [
+          '**GPU メモリ要件：** Qwen3-Coder 30Bはq4_K_M量子化で最大22GB VRAMを必要とします。24GB（RTX 4090）はスリムですが機能します。余裕が欲しい場合は最小32GB（RTX 5090）を使用します。',
+          '**推論遅延：** 典型的なPRdiff（50～500行）は24 GBカードで10～30秒。H100クラスのカードは5～10秒でこれを削減します。レビュー時間をCIジョブの他の部分と比較してください——テストスイートとビルドが通常支配します。',
+          '**同時実行：** 1つのRTX 4090はGPUスケジューリング（タイムシェアリング）でおおよそ1～3同時レビューを処理できます。複数の同時PRレビューは待機時間を増加させ、最初の月は偽陽性も増加させます。',
+          '**ネットワークアーキテクチャ：** ランナーはプライベートVPC内でOllamaサーバーに到達するか、Tailscale / WireGuardなどのプライベートトンネルを経由する必要があります。インターネット公開のまま放置しないでください。',
+          '**モデル選択：** Qwen3-Coder 30Bはコード生成中間の5月2026年デフォルトです。DeepSeek Coder V3と同等です。7Bはより速いですが、レビュー品質が低下し、開発者はシステムを信じるのにやめます。',
+          '**ストレージ：** Ollama はモデルウェイトを `~/.ollama/models` に格納します。Qwen3-Coder 30B @ q4_K_Mは約14GBです。複数のモデルの場合は追加ストレージを計画します。',
+          '**キャッシング重要性：** ファイルハッシュ + diffハッシュベースのキャッシュなしでは、再び変わらないファイルを再レビューして、推論予算の約80%を浪費します。小さなキャッシュレイヤー（Redis、SQLite、またはメモリ内）は推論負荷を劇的に削減します。',
+          '**監査可能性：** Ollamaはリクエストボディをログに記録します。このログはPRdiffを含むため、ログローテーション（週単位）と暗号化を適用します。監査可能性はセキュリティ値提案の大きな部分です。',
+        ],
+      },
+      architectureComparison: {
+        id: 'architecture-comparison',
+        title: 'アーキテクチャ比較',
+        content:
+          '**3つのアーキテクチャパターンがあります：セルフホスト型（Ollama/vLLM）、API経由クラウド（OpenAI/Anthropic）、あるいはハイブリッドです。各パターンにはトレードオフがあります。**',
+        columns: [
+          'アーキテクチャ',
+          'セットアップ複雑度',
+          'コストスケーリング',
+          'データプライバシー',
+          'カスタマイズ',
+          '推奨用途',
+        ],
+        rows: [
+          {
+            'アーキテクチャ': 'セルフホスト型（Ollama）',
+            'セットアップ複雑度': '中',
+            'コストスケーリング': '15～25開発者でゼロになります',
+            'データプライバシー': 'ネットワーク内のコード',
+            'カスタマイズ': '完全な制御',
+            '推奨用途': '大チーム、機密コード、金融/医療',
+          },
+          {
+            'アーキテクチャ': 'API経由クラウド（OpenAI）',
+            'セットアップ複雑度': '低',
+            'コストスケーリング': '開発者数に対して線形',
+            'データプライバシー': 'サードパーティシステムにレプリケート',
+            'カスタマイズ': 'プロンプトのみ',
+            '推奨用途': '5人未満のチーム、公開プロジェクト、実験',
+          },
+          {
+            'アーキテクチャ': 'ハイブリッド',
+            'セットアップ複雑度': '高',
+            'コストスケーリング': 'セルフホスト対APIに基づく',
+            'データプライバシー': 'ポリシー選択可能',
+            'カスタマイズ': '高い',
+            '推奨用途': '大チーム、段階的なロールアウト',
+          },
+        ],
+        items: [
+          '**セルフホスト型（推奨）：** 初期セットアップ（GPU購入、システム管理、セキュリティ設定）は中程度の複雑度です。ただしコストは固定で、15～25開発者以上で支配的になります。コードはネットワークから出ません。プロンプトフル制御、モデル選択、および監査。大チーム（25+）の標準。',
+          '**クラウドAPI：** OpenAI、Anthropic、またはその他のAPIサービス経由で。セットアップは単純です——APIキーとカスタム GitHubアクション。コストはリクエスト単位（トークン/ドル）スケーリングします。5人未満のチームで安価。大チームでは $2,000/月+から非常に高速でスケーリングします。コードはサードパーティシステムに見えます。',
+          '**ハイブリッド：** 小さなチーム（<25人）ではクラウドAPIで始め、大きくなるにつれてセルフホストに切り替えます。ただしアーキテクチャ反復の複雑性を支払います——プロンプトをバージョン化し、モデル品質の違いを管理し、フェイルオーバーを計画します。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'この記事はセルフホスト型（Ollama + ローカルモデル）に焦点を当てています。クラウドAPIsはより良い選択肢です——セットアップと費用の観点から——チームの場合、5未満で、コード機密性が低い場合。',
+          },
+        ],
+      },
+      recommendedStack: {
+        id: 'recommended-stack',
+        title: '推奨スタック',
+        content:
+          '**2026年5月の本番環境推奨セットアップはOllama + Qwen3-Coder 30Bです。** これは柔軟性、オープンソース許可、推論速度、そしてチームサイズ別の経済学のバランスが最も良いです。',
+        items: [
+          '**Ollama：** サーバー推論フレームワーク。モデルローディング、量子化、バッチ処理を管理します。セットアップが簡単で、ドキュメント化が良く、GPUメモリ効率が適切です。https://github.com/ollama/ollama',
+          '**Qwen3-Coder 30B：** Alibaba Qwen チームのコーディング専門モデル。Apache 2.0（許可付き）。文脈長256K。一般的なコード品質、エラー検出、およびセキュリティについては、DeepSeek Coder V3に比べて比肩します。HuggingFaceで入手可能。',
+          '**カスタムGitHub Action（JavaScript）：** PR diffをフェッチし、Ollama HTTPエンドポイントにPOST、JSON応答を解析し、インラインコメントをポストします。100～200行。ユーザーとの依存関係なし。',
+          '**セルフホスト型GitHub ActionsランナーまたはプライベートCI実行者：** ランナーまたはOllamaサーバーへの到達可能性（同じVPC、Tailscale、またはproxy）が必要です。クラウドランナーは機能しません。',
+          '**セキュリティ層（オプション）：** プロキシリバース（nginx、Envoy）前のOllamaで、mTLS認証、または共有シークレット。デフォルトではOllamaはlocalhostにバインドされます。',
+          '**ログ管理：** Ollamaはリクエストボディ（PR diffを含む）をログに記録します。syslog、ファイルローテーション、またはシステムd journalctl ポリシーによってログを回転させます。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'セットアップ後、最初の月にPromt Designセクション（以下参照）に時間を費やしてください。モデルの品質は固定されています。偽陽性率はプロンプトで決まります。',
+          },
+        ],
+      },
+      workflow: {
+        id: 'workflow',
+        title: 'GitHub Actionsワークフロー',
+        content:
+          '**以下は本番環境で使用可能なワークフローです。** ファイルを`.github/workflows/local-llm-review.yml`に置き、OLLAMA_HOST秘密キーを設定し、セルフホスト型ランナーまたはVPC内のランナーで実行することを確認してください。',
+        items: [
+          '**トリガー：** `pull_request`イベント。すべてのPRが自動的にレビューされます。レビューは非ブロッキング（デフォルト）から開始し、偽陽性率が5%未満になったら`comment`から`block`に昇格させます。',
+          '**アクション1：** `git diff`をコンピュートします。チェックアウトは`fetch-depth: 0`である必要があります。浅いチェックアウトはmalformed diffを生成します。',
+          '**アクション2：** Ollama HTTPエンドポイントにdiffをPOST。モデル、温度、JSON強制形式、システムプロンプト（以下Prompt Design）を指定します。',
+          '**アクション3：** JSON応答を解析します。`verdict`（approve / comment / block）と`comments[]`（path、line、severity、message）を抽出します。',
+          '**アクション4：** PRにコメントをポスト。`verdict == "block"`の場合、アクションは非ゼロで終了し、ブランチ保護ルールが失敗をトリガーします。',
+        ],
+        codeBlock: `name: Local LLM Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: [self-hosted, linux]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get PR diff
+        id: diff
+        run: |
+          git diff origin/${{ github.base_ref }}...HEAD > /tmp/pr.diff
+          wc -l /tmp/pr.diff
+
+      - name: Call local LLM review
+        id: review
+        env:
+          OLLAMA_HOST: \${{ secrets.OLLAMA_HOST }}   # ex. http://gpu-server.internal:11434
+        run: |
+          DIFF=$(jq -Rs . < /tmp/pr.diff)
+          curl -sS "$OLLAMA_HOST/api/chat" \\
+            -H 'Content-Type: application/json' \\
+            -d "{
+              \\"model\\": \\"qwen3-coder:30b\\",
+              \\"stream\\": false,
+              \\"format\\": \\"json\\",
+              \\"messages\\": [
+                {\\"role\\": \\"system\\", \\"content\\": \\"You are a senior code reviewer. Return JSON: {verdict: 'approve'|'comment'|'block', summary: string, comments: [{path, line, severity, message}]}\\"},
+                {\\"role\\": \\"user\\", \\"content\\": $DIFF}
+              ]
+            }" > /tmp/review.json
+          echo "verdict=$(jq -r '.message.content | fromjson | .verdict' < /tmp/review.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Post review comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const review = JSON.parse(JSON.parse(fs.readFileSync('/tmp/review.json')).message.content);
+            const body = \`### Local LLM Review: \\\`\${review.verdict}\\\`\\n\\n\${review.summary}\`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+
+      - name: Block on critical verdict
+        if: steps.review.outputs.verdict == 'block'
+        run: exit 1
+`,
+        codeLanguage: 'yaml',
+        items: [
+          'ランナーはOLLAMA_HOST へのネットワークアクセスが必要です——セルフホスト型は同じVPC内、またはTailscale / WireGuardを経由する必要があります。',
+          'プロンプトシステムは構造化JSON応答を強制します。`format: "json"`と厳密なスキーマなしでは、操作上は自由形式出力を解析するのに時間を費やすことになります。',
+          '`fetch-depth: 0`はベースブランチに対する真のdiffを計算するために必要です——浅いチェックアウトはmalformed diffを生成します。',
+          'リポジトリが約50Kを超える行のコード変更の場合、diff前に送信するdiffを切り詰めるか断片化します。256K文脈はQwen3-Coder 30Bで寛容ですが、実用的な作業文脈はより64K～128K付近です（[2026年のベストローカルコーディングモデル](/power-local-llm/best-local-coding-models-2026?lang=ja)を参照）。',
+          'プロンプト深度設計——システムプロンプト対ユーザープロンプト、例、構造化結果——については、[System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja)を参照。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'このワークフローは意図的に最小限です。本番環境は以下を追加します：ファイルハッシュ + diffハッシュベースのキャッシュで変更されていないファイルの再レビューをスキップ、重大度のしきい値（`severity >= "high"`でのみブロック）、インラインコメント投稿（単一の概要コメントの代わり）、言語別のプロンプト変数、レビュー担当者のフィードバック取得でプロンプトを時間とともに改善します。',
+          },
+        ],
+      },
+      hardwareSizing: {
+        id: 'hardware-sizing',
+        title: 'チームサイズ別ハードウェアサイジング',
+        content:
+          '**1つのRTX 4090（24 GB）は15～25開発者を快適に処理します。** 単一GPUのボトルネックはレビューあたりのスループットではなく、PR追跡の競争です（月曜朝、スプリント終了）。以下のサイジング規則はq4_K_M量子化のQwen3-Coder 30Bと典型的な50～500行のPRdiffを前提としています。',
+        columns: [
+          'チームサイズ',
+          'GPU',
+          'VRAM',
+          '同時レビュー',
+          'おおよその価格（2026年5月）',
+        ],
+        rows: [
+          {
+            'チームサイズ': '～5人の開発者',
+            'GPU': 'RTX 4070 / 4070 Ti',
+            'VRAM': '12～16 GB',
+            '同時レビュー': '1（Qwen3-Coder 7Bのみ）',
+            'おおよその価格（2026年5月）': '¥96,000～¥128,000',
+          },
+          {
+            'チームサイズ': '15～25人の開発者',
+            'GPU': 'RTX 4090 / 5090',
+            'VRAM': '24～32 GB',
+            '同時レビュー': '1～3（Qwen3-Coder 30B）',
+            'おおよその価格（2026年5月）': '¥320,000～¥450,000',
+          },
+          {
+            'チームサイズ': '25～50人の開発者',
+            'GPU': 'L40S / A6000 Ada',
+            'VRAM': '48 GB',
+            '同時レビュー': '3～6',
+            'おおよその価格（2026年5月）': '¥1,120,000～¥1,280,000',
+          },
+          {
+            'チームサイズ': '50～100人の開発者',
+            'GPU': '2×RTX 4090 または 1×H100',
+            'VRAM': '48 GB / 80 GB',
+            '同時レビュー': '6～10',
+            'おおよその価格（2026年5月）': '¥640,000（2×4090） または ¥4,000,000+（H100）',
+          },
+          {
+            'チームサイズ': '100人以上の開発者',
+            'GPU': 'マルチGPU H100 または H200',
+            'VRAM': '160 GB以上',
+            '同時レビュー': 'vLLMで10+',
+            'おおよその価格（2026年5月）': '¥8,000,000+',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '50開発者のしきい値を超える場合、OllamaからvLLMに切り替えてください。Ollamaは使いやすさを優先します。vLLMは共有GPU上のスループットを優先します。同じQwen3-Coder 30Bモデルは両方で実行されます——推論サーバーのみが変わります。',
+          },
+        ],
+      },
+      gpuSharing: {
+        id: 'gpu-sharing',
+        title: 'ビルド全体でのGPU共有およびその他の負荷',
+        content:
+          '**コードレビュー用の専用GPUがシンプルなアーキテクチャですが唯一ではありません。** ML推論またはトレーニング用にGPUインフラを既に実行しているチームは共有できます——レビュー遅延が大幅に増加する代わり。',
+        items: [
+          '**コードレビューのみの専用GPU：** シンプルなモデル。遅延は予測可能です。容量計画は簡単です。障害モードは分離されます。GPUインフラをまだ実行していないチームの推奨事項。',
+          '**ML推論との共有GPU：** 推論負荷が安定した包含を持つ場合（例、小さな統合サービスが4～6GBに適応）実行可能です。レビューモデルが残りのVRAMを占有します。計画競争はこのパターンで稀です。',
+          '**ML トレーニングとの共有GPU：** 強く非推奨です。トレーニングジョブはVRAM使用量を制限にスパイクさせ、レビューモデルを飢餓させ、30～120秒のレビュー遅延を引き起こし、開発者のシステムへの信頼を蝕みます。',
+          '**ページングされた注意によるvLLM：** 高並行LLMサービス用に構築されました。同じRTX 4090は、Ollamaの下で1～3同時レビューを処理でき、vLLMの下で4～8を処理でき、より複雑な設定の代わり。25人の開発者以上で価値があります。',
+          '**H100上のマルチテナント：** 100人以上の開発者でスケーリングしているとき、H100をMIGスライスに分割するか、テナント割り当てでvLLMを実行します。これはプラットフォームエンジニアリング領域です。即興しないでください。',
+        ],
+      },
+      costComparison: {
+        id: 'cost-comparison',
+        title: 'GitHub Advanced Securityとのコスト比較',
+        content:
+          '**経済学はおおよそ15～25の有料シート付近でセルフホストに転換します。** これは1年のペイバック比較です。より長い地平線でセルフホストをより有利にしています。',
+        items: [
+          '**GitHub Advanced Security（Code Security）：** $19/開発者/月のカタログ価格（GitHubの価格ページで確認；エンタープライズ顧客はボリュームディスカウント利用可能）。',
+          '**クラウドLLM API（例OpenAI、Anthropic）：** 一般的な PR ボリュームでは約 $50～200 / 月あたり / 開発者でアクティブ。基本コード サイズとレビュー プロンプト設計に非常に大きく異なります。',
+          '**セルフホスト型ローカルLLM、RTX 4090ビルド：** ¥320,000～¥360,000のハードウェア（GPU +基本サーバーボックス）1度のみ。電力使用量：~50W休止中、~350W負荷中——約¥2,500～¥3,500/月の操作電力消費。シートごとの費用はありません。',
+          '**10人の開発者でのパリティ：** GHAS $190/月対セルフホスト約¥2,500～¥3,500/月操作 +¥320,000～¥360,000 capex。Capexは約14ヶ月で支払います。',
+          '**25人の開発者でのパリティ：** GHAS $475/月対セルフホスト約¥2,500～¥3,500/月操作 +¥320,000～¥360,000 capex。Capexは約5～6か月で支払います。',
+          '**50人の開発者でのパリティ：** GHAS $950/月対セルフホスト約¥3,500～¥4,500/月操作 +¥1,120,000～¥1,280,000 capex（48 GB GPU）。Capexは約8ヶ月で支払います。',
+          '**Capex数字が数学を支配します。** GPUを具体的にこれのために購入する場合、払い戻しは実質的です。既存のGPU容量がある場合、限界コストはゼロに近く、セルフホストは即座に勝ちます。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'これらの数字はカタログ価格比較です。大規模企業向けの交渉されたGHAS料金はパリティを変えます。既存のGPU容量はそれを崩壊させます。材料購入にコミットする前に実際のコストで数学をやり直してください。',
+          },
+        ],
+      },
+      securityModel: {
+        id: 'security-model',
+        title: 'セキュリティモデルと監査体制',
+        content:
+          '**セキュリティ公約のタイトル——「ソースコードはネットワークから決してでない」——は真実であり、証明可能であり、このアーキテクチャで最も強い引数です。** 監査サーフェスは調達検査で防御可能なほど小さいです。',
+        items: [
+          '**モデルはあなたのアクションが送信するdiffのみを見ます。** テレメトリなし、隠されたネットワーク呼び出しなし。確認可能な`tcpdump`またはGPUサーバーのインターフェース発信上の`nft monitor`——安定操作状態での実行中、内部ホスト以外に向かって発信パケットゼロが見えるはずです。',
+          '**完全な監査サーフェスは1つのプロセスと1つのログファイルです。** `ollama serve`はLLMスタック全体です。そのログ（リクエストボディ、遅延、モデルロードイベント）は監査記録です。SaaS ダッシュボード がない、シード保持ポリシー読む必要があります。',
+          '**ネットワーク分離はシンプルです。** `ollama serve`をプライベートインターフェースにバインドします。mTLSまたは共有シークレット認証を使用してリバースプロキシを前に置きます。GPUサーバーの名前空間からの発信を拒否し、CI実行ネットワークサブネット以外へ向かいます。標準ゼロトラスト パターン、LLM固有の魔法なし。',
+          '**モデルウェイトはベンダーが署名した静的成果物です。** Ollama経由で1度プルします、ダイジェストをピン、モデルは操作者アクションなしで変更できません。これはサイレント上流モデルスワップできるSaaS APIより強いサプライチェーン物語です。',
+          '**コンプライアンス体制：** ゼロデータエグレスはSOC 2、ISO 27001、GDPR、およびEU AI法限定リスク分類簡単に文書化です。セルフホスト型コンプライアンス最も困難な部分は一般的に推論サーバー自身を文書化しています。OllamaとvLLMはよく文書化です。',
+          '**METI機関と日本のAI設置ガイドラインとの関連性：** 日本の経済産業省（METI）がAI採用に対するガイドラインを発行しました。セルフホストAIは要件にはプッシュしてMETI準拠コンプライアンス——AIモデルに情報主権、テクノロジー監視力、異なる機関のモデルによるセキュリティ検証。Ollamaを実行してQwen3-Coder 30Bはこれらのすべての要件を満たします。',
+          '**モデルはあなたのコードを見えます。** セルフホスト型はモデルから秘密を意味しません——それは第三者からプライベートを意味します。内部脅威シナリオ（サーバーアクセス権のあるエンジニアがPR diffを含むログ履歴を読む）は依然スコープ内です。ログを回転させ相応にアクセスを制限します。',
+        ],
+        regionalContext:
+          'データ機密性高いを日本で処理する企業の場合、METI ガイドラインは詳しくセルフホスト推論が推奨されています：機密財務レコード、個人医療データ、法的ドキュメント扱う場合、ローカル推論QwenコーダーはMETIセキュリティ要件、データ主権、および会社境界内の監査サーフェス完全管理を満たします。',
+      },
+      promptDesign: {
+        id: 'prompt-design',
+        title: 'コードレビュー用プロンプト設計',
+        content:
+          '**偽陽性率の最大単一決定要因はシステムプロンプトです。** あいまいなプロンプト「このコードを検査」は漠然としたレビューコメントを生成します。特定のしきい値と構造化結果を持つプロンプト実行可能なレビューフィードバックを生成します。',
+        items: [
+          '**構造化出力は交渉不可です。** 厳密なスキーマ（`verdict`、`summary`、`comments[]`）を持つJSONを強制します。これなしでアクションはコード30%の自由形式出力を解析し、障害モードはサブトルです。',
+          'Structured outputと JSON modelの応用の完全な信仰については[Structured output and JSON mode](/prompt-engineering/structured-output-and-json-mode?lang=ja)を参照。',
+          '**重大度しきい値はプロンプトに属し、アクション内ではありません。** モデルに`critical`、`high`、`medium`、`low`を定義し、明確に求められない限り低重大度結果をフィルタリングするよう告げます。自由形式の重大度フィールドの事後フィルタリングより大幅に信頼できます。',
+          '**例でプロンプトをアンカーします。** 実のdiffと理想レビュー JSONを持つ1～2-shotプロンプト同じモデル大きなdiffのゼロショット同じサイズを上回ります。',
+          '**「レビュー」意図と「コメント」を区別します。** 批評コメント（「これはヘルパーへの抽出を検討」）とブロッカー（「これはSQL インジェクション導入」）には異なるCI アクションが必要です。これらを構造化出力でタグ付けし、ブロッカーのみでアクションブロックにします。',
+          '**言語別プロンプト変動体は一定以上のサイズで役立ちます。** ポリグロット コードベースは関連言語イディオムを参照するプロンプトから恩恵を受けます（Pythonic対Rust idiomatic）。これはおおよそ25開発者以下のオプション；上で価値がある。',
+          'より深いプロンプトエンジニアリングアンカー——システムプロンプト対ユーザープロンプト、構造化結果、few-shot promptingについては[System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja)を参照。',
+        ],
+      },
+      falsePositives: {
+        id: 'false-positives',
+        title: '偽陽性への対応開発者信頼を傷つけることなく',
+        content:
+          '**偽陽性はLLM コードレビューの運用税です。** 5%のレートは受け入れられます。20%は耐え難いです。差のほとんどは主にプロンプト反復と反フィードバック ループでなく、モデルです。',
+        items: [
+          '**「block」しきい値を高く設定します。** すべての小さなlintの問題の`block`判決を引き起こすことは開発者をチェックを迂回するように訓練します。`block`をセキュリティの問題、壊れたテスト、明確な正確性障害のために予約します。',
+          '**コメント非ブロッキングは安価にします。** モデルが不確実なインラインコメントを「tentative」/「consider」とタグ付けして、著者が迅速に儀式なしで却下できるようにします。',
+          '**1か月目に反フィードバック ループを構築します。** 各レビュー コメントに反応（👍 / 👎）を追加します。定期的に（週単位で機能）👎s を検査し、システムプロンプトを明示的な「X のレポートなし」の指示で更新してフォーム偽陽性のカテゴリーで最もコモン。',
+          '**PR あたりのコメント ボリュームをレート制限します。** 1 つの PR は LLM から 5～10 以上のコメントを受け取ってはいけません。超えるとシグナル対ノイズ比が崩壊します。プロンプト レベルでアクション機能（「最大Nコメント戻す」）。',
+          '**判決対マージ相関を週単位で追跡します。** 80%の`block`判決とにかくマージの場合、しきい値は非常に攻撃的です。0%の`comment`判決が人間アクション取得場合、プロンプトはノイズを生成します。',
+        ],
+      },
+      operationalPitfalls: {
+        id: 'operational-pitfalls',
+        title: '2か月目の運用上の落とし穴',
+        content:
+          '**セットアップは注意を取得します。操作は無視されます。** 以下の障害のいくつかはチーム蜜月期後プロジェクトを放棄するようにします。',
+        items: [
+          '**モデル更新はプロンプトを破ります。** 新しいQwen3-Coder バージョン構造化出力フォーマットをわずかに変更；JSON解析はCI で破ります。レビューはポストを停止します。`ollama show <model> --modelfile`でモデル ダイジェスト ピンします。新しいバージョンを段階的にプロモートする前にステージング環境にアップグレードします。',
+          '**長期稼働下の GPU メモリ断片化。** GPU サーバー 24/7 実行はVRAM を断片化でき、数週後の新しい割り当てを拒否します。`ollama serve`週単位 cron ジョブで再開。安く、この障害モード完全に避けます。',
+          '**CI ランナー競争。** セルフホスト型ランナーは LLM サーバーと他の CI ジョブ両方をホストすれば、ビルド負荷下でレビュー遅延はスパイクします。チームサイズが~25人超える時、ランナーと GPU サーバーを分離します。',
+          '**Diff サイズ漂流。** PR サイズ漂流上向き；最終的に PR 実用的なモデル コンテキスト超えで漂流で黙に低下します。大動作¥30K トークン上のdiffを分割または切り詰めるガード追加アクション；著者に警告します。',
+          '**力と冷却。** 継続的に負荷されたRTX 4090 は推論の下で約350W を取得し、かなり熱を生成します。インフラ アクティブなクーリングなくクローゼット サーバー ルーム GPU をスターベさせ；飢えコスト遅延と開発者は注意します。',
+          '**ログローテーション忘れ。** Ollama デフォルト ログ各リクエスト本体。3 ヶ月後の PR レビュー ファイル ログ古い履歴diffs明確テキストで含みます。週単位ログを回転; 保持ポリシーごとのアーカイブまたはパージ。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'ローカルLLM コードレビュー設定時の一般的な間違い',
+        items: [
+          '**間違い 1：16 GB GPU上で7Bモデルで開始。** Qwen3-Coder 7BレビューはQwen3-Coder 30B より非常に悪い。開発者は迅速に信頼失い、プロジェクトはシェルフ。30Bに適応できない場合、ガイド 6 ヶ月間 GPU を確保しながらクラウド API を使用。',
+          '**間違い 2：初日から`block`判決の PR をブロック。** 最初の月は調整です。操作者はアドバイザーとしてすべての出力を扱います昇格のみ`block`率がおおよそ 5% 未満になったら。',
+          '**間違い 3：auth なしで 0.0.0.0:11434 で公開 `ollama serve`。** これは LLM era equivalent leave Redis 公開インターフェースバインド。プライベート インターフェースにバインド; before any cross-host。',
+          '**間違い 4：cache を無視します。** 回し無変更ファイル再レビュー PR あたりおおよそ 80%の推論予算を無駄にします。小さなファイル hash + diff hash キャッシュ（Redis または SQLite）レビュー遅延を劇的に削減し、GPU 負荷します。',
+          '**間違い 5：同じ GPU に訓練ジョブを実行。** トレーニング はVRAM 使用量を制限にスパイク; レビュー モデルで餓死；30～120 秒レビュー遅延を引き起こし、開発者システム信頼を蝕みます。GPU を分離するか訓練を計画制御に実行 PR ピーク時の重複ありません。',
+          '**間違い 6：フィードバック ループなしで構築 GitHub アクション。** フィードバック ロック反応 👍/👎 なしレビュー システムあれば改善できません。ロック週 1 を構築します。データを収集; 毎月プロンプトを反復します。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'ソース',
+        items: [
+          '[Ollama Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — Official API HTTP reference for `/api/chat`, `/api/generate`, structured output, and model management.',
+          '[vLLM Documentation](https://docs.vllm.ai/) — High-throughput inference server documentation; the upgrade path beyond Ollama for high-concurrency teams.',
+          '[GitHub Actions Documentation](https://docs.github.com/en/actions) — Official reference for self-hosted runners, secrets, and GitHub Actions JavaScript SDK used in the workflow above.',
+          '[GitHub Advanced Security Pricing](https://github.com/pricing) — Catalog pricing reference for cost comparison; verify against your actual negotiated terms.',
+          '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-30B) — Architecture, context window, and license terms for the recommended review model.',
+          '[GitLab CI/CD Reference](https://docs.gitlab.com/ee/ci/) — Equivalent reference for GitLab teams; the LLM-call portion of the workflow is identical.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '単一GPU サーバーは 50 開発者の CI を処理できますか？',
+            a: '1 つの 24 GB GPU（RTX 4090）は 15～25 開発者を快適に処理します。50 開発者は 48 GB カード（L40S、A6000 Ada）または Ollama から vLLM への変更が同じハードウェアに必要です。ボトルネック PR 追跡の競争の瞬間（月曜朝、スプリント終了）であり、状態の合計スループット ではありません。100 人以上の開発者の場合、マルチ GPU またはクラス H100 ハードウェアを計画します。',
+          },
+          {
+            q: 'ローカル コード レビューは PR 遅延を影響しますか？',
+            a: '一般的にはいいえ——レビュー遅延は単一 24 GB GPU で典型的 200 行 diff で 10～30 秒、テスト スイートとビルド単位以上 OK、長く PR（約 30K トークン diff 以上で）超える。一般的に 60～90 秒を取得。これら数はアクション レベルでトランケート または断片化できます。',
+          },
+          {
+            q: 'モデルの詳細は何ですか？',
+            a: 'Ollama はデフォルト各リクエスト本体のログまたはシステム ジャーナル（systemd ベース OS で journalctl -u ollama）にあり。ログ ファイル。GPU サーバーのインターフェース 発信で tcpdump でゼロ外部をするに結合。完全な監査表面は 1 つのプロセスと 1 つのログ ファイルです——SaaS API レビュー コードより監査するために大幅にシンプル。',
+          },
+          {
+            q: 'I can block PRs based on local model output？',
+            a: 'はい。アクションは`verdict`フィールドを返します。判決は`block`の場合、アクションは非ゼロで終了し、ブランチ保護ルールが要件を通過できるまで失敗; PR 統合はブロック。推奨は最初の月`block`を無効にしておく（相談のみ）、偽陽性率を測定、約 5% のレート昇格のみそれが ブロック。',
+          },
+          {
+            q: 'これはGitLab CI で機能しますか？',
+            a: 'はい——アーキテクチャは同一です。GitHub アクション置き換え GitLab CI ジョブで Ollama エンドポイントへの同じ`curl`の実行、マージ リクエスト API 経由の響答バック。モデル、プロンプト、キャッシュ、セキュリティ モデル、ハードウェア サイジングはすべて同一です。Bitbucket Pipelines、Jenkins、Buildkite は同じ方法で機能。',
+          },
+          {
+            q: 'パイプラインを破すことなしモデルを新しく保つ方法は？',
+            a: '`ollama show <model> --modelfile`でモデル ダイジェストをピンして CI 本番使用正確バージョン。モデルの新しいバージョン到着時、ステージング サーバープル、小さなテストdiff RP 表現スイート実行し、本番バージョンへの構造化出力を比較、リグレッション スイートのみパス後昇格。回帰テストの他の依存のようなモデル アップグレード扱います。',
+          },
+          {
+            q: 'レビューに加えてコード生成のためにこれを使用できますか？',
+            a: 'はい、しかし負荷が同じ GPU について競争し、異なる遅延特性があります。コードレビューは非同期で 30 秒応答を許容します。エディター相互作用のコード生成は 2 秒以下遅延が必要です。推奨パターン：エディター自動完成大きなモデル（Qwen3-Coder 7B）と小開発者の機械に予約し、セルフホスト GPU サーバーのクラス。',
+          },
+          {
+            q: 'GPU サーバーのセキュリティ モデルは何ですか？',
+            a: '他内部サービスのように扱う：サーバーをプライベート インターフェースにバインド、前の認証（mTLS、shared-secret、またはVPN-のみアクセス）、既定の拒否されます、発信キー を制限して回転させます。LLM 固有の追加はモデル ウェイト提供チェーン監査——ダイジェスト ピン、ソース文書、周期的なパケット キャプチャでゼロ出力を確認。',
+          },
+          {
+            q: '複数のリポはGPU サーバーを共有できますか？',
+            a: 'はい——GPU サーバーはただ HTTP エンドポイント。任意の番号のリポは本社にコールできます。10+ リポの大きい組織を含む場合、リモート発信のプロキシの前に速度制限/リポを追加して回避大型リポ（大型モノレポ、無効な pushes）の独りよがりが他をスターベ。',
+          },
+          {
+            q: 'I handle false positives in CI？',
+            a: '3 層。最初に、プロンプト設計——高しきい値重大度、構造化出力に強制、残った結果タグ。第 2 にアクション レベルのフィルタ——ブロック`severity >= "high"`のみ; コメント表示として中/低。第 3 に反フィードバック ロック——開発者は各コメントで反応（👍/👎）許可し、週単位では👎s を確認し、システム プロンプトを一般的なフォーム偽陽性のカテゴリーを抑制更新します。1 か月調整後 5-10% レート想定；5% 以下は継続的な反復で実現可能。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連資料',
+        items: [
+          '[Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm?lang=ja) — セルフホスト型 AI ツール検討チームのコスト置き換えの広い文脈。',
+          '[Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=ja) — パイプライン実行は相互エディター。ハーネス層モデルの下。',
+          '[Best Local Coding Models in 2026](/power-local-llm/best-local-coding-models-2026?lang=ja) — 等式のモデル側：Qwen3-Coder、DeepSeek、Codestral とライセンス風景。',
+          '[System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja) — レビュー プロンプト システムのプロンプト エンジニアリング アンカー。',
+          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja) — 推論エンジン比較；vLLM は高並行チームのための Ollama をアップグレード経路。',
+          '[Power Local LLM Hub](/power-local-llm?lang=ja) — ガイド完全ライブラリ。',
+        ],
+      },
     },
   },
 }
