@@ -844,6 +844,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Workflow-Anpassung nach Anwendungsfall',
         content:
           '**Der nützlichste Rahmen ist "welche Art von Tag Sie haben".** Passen Sie Harness zu Tag, nicht umgekehrt.',
+        image: '/images/coding-agent-workflow-fit-de.svg',
+        imageCaption: 'Workflow-Eignung: Continue.dev für Autovervollständigung und In-IDE-Fragen; Cline für Mehrfachdatei-Refactoring und exploratives Debugging mit Befehlszugriff; Aider für git-native Änderungen, SSH und Vim/Neovim.',
         columns: ['Anwendungsfall', 'Bester Fit', 'Warum'],
         rows: [
           {
@@ -1097,6 +1099,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment Continue.dev, Cline et Aider se comparent en 2026',
         content:
           "Les trois outils sont open-source, gratuits à exécuter et fonctionnent avec n'importe quel endpoint LLM local. Les différences structurelles ci-dessous décident lequel s'adapte à votre flux de travail.",
+        image: '/images/coding-agent-comparison-fr.svg',
+        imageCaption: "Continue.dev vs Cline vs Aider : Continue.dev pour l'autocomplétion dans VS Code/JetBrains (contexte 32K), Cline pour les agents multi-fichiers autonomes dans VS Code (128K recommandé), Aider pour les commits git-natifs en terminal (contexte 32K).",
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1170,6 +1174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lequel choisir',
         content:
           "**Le bon outil est décidé par votre éditeur, votre tolérance pour les éditions autonomes et la façon dont vous examinez les modifications.** Utilisez ce raccourci.",
+        image: '/images/coding-agent-which-one-fr.svg',
+        imageCaption: "Quel outil de codage local choisir : Continue.dev pour l'autocomplétion et le chat in-IDE (VS Code + JetBrains), Cline pour les boucles agent multi-fichiers et l'exécution de commandes, Aider pour les workflows git-natifs en terminal et SSH.",
         columns: ['Votre situation', 'Choisissez'],
         rows: [
           { 'Votre situation': "Je travaille dans VS Code ou un IDE JetBrains et je veux l'autocomplétion de style Copilot", 'Choisissez': 'Continue.dev' },
@@ -1249,6 +1255,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modèle d\'édition : Comment chaque outil écrit du code',
         content:
           "**Le modèle d'édition est le plus grand déterminant unique de la façon dont chaque outil se sent.** Même modèle, même tâche — trois artefacts très différents.",
+        image: '/images/coding-agent-edit-model-fr.svg',
+        imageCaption: "Fiabilité du modèle d'édition : sur les modèles 7B, Continue.dev est le plus tolérant, Aider rejette les blocs incorrects, Cline bloque sur XML malformé ; sur les modèles 30B+ (Qwen3-Coder, DeepSeek Coder V3), les trois sont fiables.",
         items: [
           "**Continue.dev** — pour l'autocomplétion : les jetons FIM autour du curseur produisent des complétions en ligne. Pour les éditions pilotées par chat : le modèle retourne un bloc de code clôturé ; \"Apply\" exécute un diff par rapport au fichier ouvert et le présente pour acceptation/rejet. Pour les éditions en ligne (Cmd/Ctrl+I sur une sélection) : le modèle réécrit la sélection et le diff s'affiche sur place.",
           "**Cline** — chaque édition est un appel d'outil. `write_to_file` pour les nouveaux fichiers ou les réécritures complètes, `replace_in_file` pour les modifications chirurgicales avec des blocs `<<<<<<< SEARCH` / `>>>>>>> REPLACE` explicites. Les appels d'outils sont validés par rapport à un schéma ; les appels malformés reçoivent une \"erreur d'outil\" que l'agent voit et réessaye. La conversation est des appels d'outils structurés et des résultats d'outils, pas de prose libre.",
@@ -1281,6 +1289,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Stratégie de fenêtre de contexte : Où vont les jetons',
         content:
           "**Les trois outils dépensent les jetons différemment.** C'est la décision budgétaire la plus importante quand vous avez un modèle avec une fenêtre de contexte plus petite (32K ou moins) et un dépôt non trivial.",
+        image: '/images/coding-agent-context-strategy-fr.svg',
+        imageCaption: "Stratégie de contexte : Continue.dev utilise la récupération d'index à la demande (32K minimum), Cline streame les fichiers complets (128K recommandé pour les tâches multi-fichiers), Aider utilise une repo map tree-sitter + /add explicite (32K minimum).",
         items: [
           "**Continue.dev** — index TF-IDF plus embeddings sur le projet. La récupération est à la demande : seuls les chunks pertinents pour le message de chat actuel atterrissent dans l'invite. `@codebase` déclenche une recherche sémantique ; `@file path/to/x.ts` injecte le fichier textuellement. L'utilisation de jetons s'adapte à ce que vous épinglez, pas à la taille du dépôt.",
           "**Cline** — le contenu des fichiers complets est diffusé dans la conversation à chaque lecture. Un fichier de 500 lignes consomme ~3K–5K jetons ; une tâche d'agent qui touche 8 fichiers brûle 25K–40K jetons avant que tout raisonnement ne se produise. Minimum recommandé : fenêtre de contexte 32K ; 128K est confortable.",
@@ -1328,6 +1338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Adaptation aux flux de travail par cas d\'usage',
         content:
           "**Le cadre le plus utile est \"quel genre de jour vous avez\".** Faites correspondre l'outil au jour, pas l'inverse.",
+        image: '/images/coding-agent-workflow-fit-fr.svg',
+        imageCaption: "Adéquation workflow : Continue.dev pour l'autocomplétion et les questions in-IDE ; Cline pour les refactorisations multi-fichiers et le débogage exploratoire avec accès aux commandes ; Aider pour les changements git-natifs, SSH et Vim/Neovim.",
         columns: ['Cas d\'usage', 'Meilleur fit', 'Pourquoi'],
         rows: [
           {
@@ -1581,6 +1593,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Continue.dev、Cline、Aider が 2026 年にどのように比較されるか',
         content:
           '3 つのツールはすべてオープンソースで、無料で実行でき、任意のローカル LLM エンドポイントで動作します。以下の構造的な違いは、どちらがワークフローに適しているかを決定します。',
+        image: '/images/coding-agent-comparison-ja.svg',
+        imageCaption: 'Continue.dev vs Cline vs Aider：Continue.devはVS Code/JetBrainsでの自動補完（32Kコンテキスト）、ClineはVS Codeでの自律型マルチファイルエージェント（128K推奨）、Aiderはターミナルのgitネイティブコミット（32Kコンテキスト）に最適。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1654,6 +1668,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'どれを選ぶべきか',
         content:
           '**適切なツールはエディタ、自律編集への許容度、変更をレビューする方法によって決まります。** このショートカットを使用してください。',
+        image: '/images/coding-agent-which-one-ja.svg',
+        imageCaption: 'ローカルコーディングツールの選び方：Continue.devは自動補完とIDE内チャット（VS Code＋JetBrains）、Clineはマルチファイルエージェントとコマンド実行、AiderはgitネイティブターミナルとSSH環境に最適。',
         columns: ['あなたの状況', '選択してください'],
         rows: [
           { 'あなたの状況': 'VS Code または JetBrains IDE で時間の大部分を過ごし、Copilot スタイルのオートコンプリートを希望しています', '選択してください': 'Continue.dev' },
@@ -1733,6 +1749,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '編集モデル：各ツールがコードを書く方法',
         content:
           '**編集モデルは、各ツールがどのように感じるかの最大の単一の決定要因です。** 同じモデル、同じタスク。3 つの非常に異なるアーティファクト。',
+        image: '/images/coding-agent-edit-model-ja.svg',
+        imageCaption: '編集モデルの信頼性：7Bモデルでは、Continue.devが最も寛容で、Aiderは不一致ブロックを拒否、ClineはXML不正でループ停止。30B+コーディングモデル（Qwen3-Coder、DeepSeek Coder V3）では3つすべて信頼性あり。',
         items: [
           '**Continue.dev** — オートコンプリート用：カーソルの周りの FIM トークンがインライン補完を生成します。チャット駆動編集用：モデルはフェンスされたコードブロックを返します。「Apply」は開いているファイルに対して差分を実行し、受け入れ/拒否のために提示します。インライン編集（選択に Cmd/Ctrl+I）モデルはその場で選択を書き直し、差分がその場に表示されます。',
           '**Cline** — すべての編集はツール呼び出しです。新しいファイルまたは完全な書き直しの場合は `write_to_file`、明示的な `<<<<<<< SEARCH` / `>>>>>>> REPLACE` ブロックを使用した外科的変更の場合は `replace_in_file`。ツール呼び出しはスキーマに対して検証されます。不正な形式は「ツールエラー」を取得し、エージェントは表示して再試行します。会話は構造化されたツール呼び出しとツール結果です。自由散文ではありません。',
@@ -1765,6 +1783,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'コンテキストウィンドウ戦略：トークンはどこへ行くか',
         content:
           '**3 つのツールはトークンを異なる方法で費やします。** これは、より小さいコンテキストウィンドウ（32K 以下）を備えたモデルと重要でないリポジトリがある場合、最も重要なバジェット決定です。',
+        image: '/images/coding-agent-context-strategy-ja.svg',
+        imageCaption: 'コンテキストウィンドウ戦略：Continue.devはオンデマンドインデックス検索（最小32K）、Clineは完全ファイルストリーミング（マルチファイルタスクには128K推奨）、Aiderはtree-sitter repoマップ＋/add（最小32K）を使用。',
         items: [
           '**Continue.dev** — プロジェクト上の TF-IDF プラス埋め込みインデックス。取得はオンデマンドです。現在のチャットメッセージに関連するチャンクのみがプロンプトに着地します。`@codebase` がセマンティック検索をトリガーします。`@file path/to/x.ts` はファイルをリテラル的に注入します。トークン使用はリポジトリのサイズではなく、ピンで留めたものにスケーリングされます。',
           '**Cline** — 完全なファイル内容は各読み取りで会話にストリーム配信されます。500 行のファイルは約 3K–5K トークンを消費します。8 つのファイルにタッチするエージェントタスクは、推理が発生する前に 25K–40K トークンを通して燃焼します。推奨最小：32K コンテキストウィンドウ。128K は快適です。',
@@ -1812,6 +1832,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ユースケース別ワークフロー適合性',
         content:
           '**最も有用なフレームは「どんな日を過ごしているか」です。** ツールを日に合わせて、その逆ではありません。',
+        image: '/images/coding-agent-workflow-fit-ja.svg',
+        imageCaption: 'ワークフロー適合性：Continue.devは自動補完とIDE内Q&A、Clineはコマンドアクセス付きマルチファイルリファクタリングと探索的デバッグ、Aiderはgitネイティブ変更・SSH・Vim/Neovimワークフローに最適。',
         columns: ['ユースケース', '最適なフィット', '理由'],
         rows: [
           {
@@ -2064,6 +2086,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Continue.dev、Cline 和 Aider 2026 年的比较',
         content:
           '三个工具都是开源的，免费运行，可以与任何本地 LLM 端点一起使用。下面的结构差异决定了哪一个适合您的工作流。',
+        image: '/images/coding-agent-comparison-zh.svg',
+        imageCaption: 'Continue.dev vs Cline vs Aider：Continue.dev适合VS Code/JetBrains自动补全（32K上下文），Cline适合VS Code自主多文件智能体（推荐128K），Aider适合终端git原生提交（32K上下文）。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2137,6 +2161,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '应该选择哪一个',
         content:
           '**正确的工具由您的编辑器、对自主编辑的容限和如何审核更改决定。** 使用此快捷方式。',
+        image: '/images/coding-agent-which-one-zh.svg',
+        imageCaption: '选择哪个本地编程工具：Continue.dev适合自动补全和IDE内聊天（VS Code+JetBrains），Cline适合多文件智能体循环和命令执行，Aider适合git原生终端工作流和SSH环境。',
         columns: ['您的情况', '选择'],
         rows: [
           { '您的情况': '我大部分时间都在 VS Code 或 JetBrains IDE 中工作，想要 Copilot 风格的自动完成', '选择': 'Continue.dev' },
@@ -2216,6 +2242,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '编辑模型：每个工具如何编写代码',
         content:
           '**编辑模型是每个工具感觉如何的最大单一决定因素。** 相同的模型，相同的任务 — 三个非常不同的工件。',
+        image: '/images/coding-agent-edit-model-zh.svg',
+        imageCaption: '编辑模式可靠性：7B模型上，Continue.dev最宽容，Aider拒绝不匹配块，Cline因XML格式错误停滞；30B+编程模型（Qwen3-Coder、DeepSeek Coder V3）上，三者均可靠。',
         items: [
           '**Continue.dev** — 对于自动完成：光标周围的 FIM 令牌产生内联补全。对于聊天驱动的编辑：模型返回围栏代码块；"应用"对打开的文件进行差异并将其显示为接受/拒绝。对于内联编辑（选择上的 Cmd/Ctrl+I）：模型在原地重写选择，差异显示在原地。',
           '**Cline** — 每次编辑都是工具调用。新文件或完全重写的 `write_to_file`，具有显式 `<<<<<<< SEARCH` / `>>>>>>> REPLACE` 块的外科更改的 `replace_in_file`。工具调用对模式进行验证；格式错误的工具调用获得"工具错误"，代理看到并重试。对话是结构化的工具调用和工具结果。不是自由散文。',
@@ -2248,6 +2276,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '上下文窗口策略：令牌去哪里',
         content:
           '**三个工具以不同的方式花费令牌。** 这是当您拥有较小上下文窗口（32K 或更低）的模型和非平凡仓库时最重要的预算决定。',
+        image: '/images/coding-agent-context-strategy-zh.svg',
+        imageCaption: '上下文窗口策略：Continue.dev使用按需索引检索（最低32K），Cline流式传输完整文件（多文件任务推荐128K），Aider使用tree-sitter repo地图加显式/add（最低32K）。',
         items: [
           '**Continue.dev** — 项目上的 TF-IDF 加 embeddings 索引。检索是按需的：只有与当前聊天消息相关的块着陆在提示中。`@codebase` 触发语义搜索；`@file path/to/x.ts` 按字面注入文件。令牌使用按您固定的内容缩放，而不是仓库的大小。',
           '**Cline** — 完整文件内容在每次读取时流传输到对话中。500 行文件消耗约 3K–5K 令牌；接触 8 个文件的代理任务在任何推理之前燃烧 25K–40K 令牌。推荐最小：32K 上下文窗口；128K 舒适。',
@@ -2295,6 +2325,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '按用例划分的工作流适合度',
         content:
           '**最有用的框架是"您在度过什么样的一天"。** 使工具适配日，而不是相反。',
+        image: '/images/coding-agent-workflow-fit-zh.svg',
+        imageCaption: '工作流适配：Continue.dev适合自动补全和IDE内问答；Cline适合多文件重构和带命令访问的探索性调试；Aider适合git原生更改、SSH和Vim/Neovim工作流。',
         columns: ['用例', '最佳选择', '为什么'],
         rows: [
           {

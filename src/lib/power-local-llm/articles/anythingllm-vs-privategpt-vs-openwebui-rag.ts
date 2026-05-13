@@ -644,6 +644,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Multi-User-Chat-Frontend mit optionalem RAG',
           },
         ],
+        image: '/images/rag-vs-platforms-comparison-table-de.svg',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI auf 5.047-Seiten-Korpus: AnythingLLM niedrigste Halluzinationsrate (6%), PrivateGPT schnellster Abruf (240 ms p50), Open WebUI beste Multi-User-Unterstützung — alle drei skalieren bis ~8.000–12.000 Seiten auf Consumer-Hardware.',
       },
       whichOne: {
         id: 'which-one',
@@ -699,6 +701,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Die architektonischen Unterschiede verschwinden unter ~1.000 Seiten — alle drei fühlen sich zügig an. Sie werden entscheidend über ~5.000 Seiten: AnythingLLMs Re-Rank-Schritt fügt ~70 ms hinzu, aber erholt ~3 Prozentpunkte Recall; PrivateGPTs Qdrant lässt Sie den Index auf der Festplatte behalten, ohne zu pagieren; Open WebUIs fehlende Re-Rank ist der Hauptgrund, warum seine Halluzinationsrate am höchsten der drei ist.',
           },
         ],
+        image: '/images/rag-vs-platforms-architecture-de.svg',
+        imageCaption: 'RAG-Pipeline-Architektur: AnythingLLM nutzt LangChain.js + LanceDB mit Cross-Encoder Re-Ranking; PrivateGPT nutzt LlamaIndex + Qdrant mit konfigurierbarem Chunking und REST-API; Open WebUI nutzt unstructured.io + ChromaDB mit einstufiger Suche ohne Re-Ranking.',
       },
       anythingllmDeep: {
         id: 'anythingllm',
@@ -783,6 +787,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PrivateGPT gewinnt auf roher Vektorsuche, weil Qdrant die reifste Vektor-DB der drei ist und unter wiederholten Abfragen in Speicher bleibt. Open WebUI verliert an Boden durch den FastAPI-Middleware-Overhead und die fehlende Re-Rank-Phase, die sonst Abrufmisses erfangen würde.',
           },
         ],
+        image: '/images/rag-vs-platforms-latency-breakdown-de.svg',
+        imageCaption: 'Abruflatenz-Aufschlüsselung auf 5.047 Seiten: PrivateGPT schnellstes p50 240 ms / p95 720 ms; AnythingLLM 310 ms p50 / 880 ms p95 (inkl. 70 ms Re-Ranking); Open WebUI langsamste mit 380 ms p50 / 1.040 ms p95.',
       },
       hallucination: {
         id: 'hallucination',
@@ -804,6 +810,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Multi-Hop Reasoning ist, wo alle drei Plattformen leiden. Die Korrektur ist nicht die Plattform — sie ist Ihr Chat-Modell. Das Wechseln von Llama 3.3 8B zu Qwen3 14B senkte Multi-Hop-Halluzination in jeder Plattform um ~10 Prozentpunkte. RAG-Qualität ist notwendig, aber nicht ausreichend; das Chat-Modell muss über abgerufene Chunks tatsächlich Schlüsse ziehen.',
           },
         ],
+        image: '/images/rag-vs-platforms-hallucination-rate-de.svg',
+        imageCaption: 'Halluzinationsraten über 50 bewertete Abfragen: AnythingLLM 6% gesamt (0% bei Faktensuche, 0% bei Zusammenfassung); PrivateGPT 11%; Open WebUI 14% — Mehrschritt-Schlussfolgerung ist der schwächste Abfragetyp für alle drei Plattformen.',
       },
       citations: {
         id: 'citations',
@@ -829,6 +837,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Getestet auf dem Korpus mit 5.047 Seiten: Das Wechseln des Standards zu `BAAI/bge-m3` verbesserte den Gesamtabzug um 4–7 Prozentpunkte auf allen drei Plattformen, verdreifachte aber die Indexierungszeit und fügte ~1 GB GPU-Speicher während des Indexierungsdurchgangs hinzu.',
           'Für mehrsprachige Korpora (Deutsch, Französisch, Japanisch, Chinesisch gemischt) ist `bge-m3` die Default-schlagende Wahl auf allen drei Plattformen — aber nur PrivateGPTs Pipeline unterstützt es nativ ohne einen Ollama-Umweg.',
         ],
+        image: '/images/rag-vs-platforms-embedding-flexibility-de.svg',
+        imageCaption: 'Flexibilität des Einbettungsmodells: AnythingLLM bietet 8 GUI-wählbare Backends; PrivateGPT unterstützt jedes HuggingFace sentence-transformers-Modell nativ inkl. bge-m3 für 100+ Sprachen; Open WebUI nutzt Ollama-served Embedder plus SentenceTransformers.',
       },
       dachContext: {
         id: 'dach-context',
@@ -1071,6 +1081,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Frontend chat multi-utilisateurs avec RAG optionnel',
           },
         ],
+        image: '/images/rag-vs-platforms-comparison-table-fr.svg',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI sur un corpus de 5 047 pages : AnythingLLM taux d\'hallucination le plus bas (6 %), PrivateGPT récupération la plus rapide (240 ms p50), Open WebUI meilleur support multi-utilisateurs — tous trois supportent ~8 000–12 000 pages sur matériel grand public.',
       },
       whichOne: {
         id: 'which-one',
@@ -1126,6 +1138,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Les différences architecturales disparaissent sous ~1 000 pages — les trois se sentent rapides. Elles deviennent décisives au-delà de ~5 000 pages : l\'étape de re-rank d\'AnythingLLM ajoute ~70 ms mais récupère ~3 points de pourcentage de recall ; Qdrant de PrivateGPT vous permet de garder l\'index sur disque sans paging ; l\'absence de re-rank d\'Open WebUI est la raison principale de son taux d\'hallucination le plus élevé des trois.',
           },
         ],
+        image: '/images/rag-vs-platforms-architecture-fr.svg',
+        imageCaption: 'Architecture pipeline RAG : AnythingLLM utilise LangChain.js + LanceDB avec re-classement cross-encoder ; PrivateGPT utilise LlamaIndex + Qdrant avec découpage configurable et API REST ; Open WebUI utilise unstructured.io + ChromaDB avec recherche dense simple sans re-classement.',
       },
       anythingllmDeep: {
         id: 'anythingllm',
@@ -1210,6 +1224,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PrivateGPT gagne sur la recherche vectorielle brute car Qdrant est la DB vectorielle la plus mature des trois et reste chaud en mémoire sous requêtes répétées. Open WebUI perd du terrain sur le surcoût middleware FastAPI et l\'absence de phase de re-rank qui sinon attraperait les misses de l\'extraction.',
           },
         ],
+        image: '/images/rag-vs-platforms-latency-breakdown-fr.svg',
+        imageCaption: 'Latence de récupération par étape sur 5 047 pages : PrivateGPT le plus rapide à 240 ms p50 / 720 ms p95 ; AnythingLLM 310 ms p50 / 880 ms p95 (inclut 70 ms re-classement) ; Open WebUI le plus lent à 380 ms p50 / 1 040 ms p95.',
       },
       hallucination: {
         id: 'hallucination',
@@ -1231,6 +1247,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Le raisonnement multi-sauts est où les trois plateformes souffrent. La correction n\'est pas la plateforme — c\'est votre modèle de chat. Changer Llama 3.3 8B pour Qwen3 14B a réduit les hallucinations multi-sauts d\'~10 points de pourcentage dans chaque plateforme. La qualité RAG est nécessaire mais pas suffisante ; le modèle de chat doit vraiment raisonner sur les chunks extraits.',
           },
         ],
+        image: '/images/rag-vs-platforms-hallucination-rate-fr.svg',
+        imageCaption: 'Taux d\'hallucination sur 50 requêtes notées : AnythingLLM 6 % au total (0 % sur requêtes factuelles, 0 % sur résumés) ; PrivateGPT 11 % ; Open WebUI 14 % — le raisonnement multi-étapes est le type de requête le plus faible pour les trois plateformes.',
       },
       citations: {
         id: 'citations',
@@ -1256,6 +1274,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Testé sur le corpus de 5 047 pages : échanger le standard pour `BAAI/bge-m3` a amélioré le recall global de 4–7 points de pourcentage sur les trois plateformes mais a triplé le temps d\'indexation et ajouté ~1 GB de mémoire GPU pendant l\'indexation.',
           'Pour corpus multilingues (allemand, français, japonais, chinois mixés), `bge-m3` est le choix battant le standard sur les trois plateformes — mais seul le pipeline de PrivateGPT le supporte nativement sans détour Ollama.',
         ],
+        image: '/images/rag-vs-platforms-embedding-flexibility-fr.svg',
+        imageCaption: 'Flexibilité des modèles d\'embedding : AnythingLLM propose 8 backends sélectionnables en GUI ; PrivateGPT supporte tout modèle HuggingFace sentence-transformers nativement, y compris bge-m3 pour 100+ langues ; Open WebUI utilise les embedders Ollama plus SentenceTransformers.',
       },
       frenchContext: {
         id: 'french-context',
@@ -1488,6 +1508,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'オプションのRAG付きマルチユーザーチャットフロントエンド',
           },
         ],
+        image: '/images/rag-vs-platforms-comparison-table-ja.svg',
+        imageCaption: '5,047ページのコーパスでテスト：AnythingLLMは幻覚率最低（6%）、PrivateGPTは検索速度最速（p50 240ms）、Open WebUIはマルチユーザー対応が最優秀。3つとも消費者向けハードウェアで約8,000〜12,000ページまでスケール可能。',
       },
       whichOne: {
         id: 'which-one',
@@ -1543,6 +1565,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'アーキテクチャの違いは1,000ページ未満で消えます。3つすべてがスナップに感じます。彼らは5,000ページを超えて決定的になります：AnythingLLMの再ランク付けステップは約70msを追加しますが、リコールの約3パーセント ポイント回復。PrivateGPTのQdrantはページングなしディスク上のインデックスを保つことができます。Open WebUIの再ランク付けの欠如は、3つの中でハルシネーション率が最も高い主な理由です。',
           },
         ],
+        image: '/images/rag-vs-platforms-architecture-ja.svg',
+        imageCaption: 'RAGパイプラインアーキテクチャ比較：AnythingLLMはLangChain.js＋LanceDB＋クロスエンコーダー再ランキング、PrivateGPTはLlamaIndex＋Qdrant＋設定可能なチャンク分割＋REST API、Open WebUIはunstructured.io＋ChromaDB＋単段階密検索（再ランキングなし）。',
       },
       anythingllmDeep: {
         id: 'anythingllm',
@@ -1627,6 +1651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PrivateGPTは3つの中で最も成熟したベクトルDB である、Qdrantは繰り返しのクエリ下でウォームに留まるため、生のベクトル検索で優勝します。Open WebUIはFastAPI ミドルウェアのオーバーヘッドおよび再ランク付けステージ（例えば検索ミスをキャッチする）の欠如から逆転した。',
           },
         ],
+        image: '/images/rag-vs-platforms-latency-breakdown-ja.svg',
+        imageCaption: '5,047ページでの検索レイテンシ内訳：PrivateGPTが最速（p50 240ms / p95 720ms）、AnythingLLMはp50 310ms / p95 880ms（再ランキング70ms含む）、Open WebUIが最遅（p50 380ms / p95 1,040ms）。',
       },
       hallucination: {
         id: 'hallucination',
@@ -1648,6 +1674,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'マルチホップ推論は3つのプラットフォームすべてが苦しむ場所です。修正はプラットフォームではなく、チャットモデルです。Llama 3.3 8BをQwen3 14Bに交換すると、各プラットフォームでマルチホップハルシネーションが約10パーセント ポイント低下しました。RAG品質は必要だが十分ではない。チャットモデルは実際に検索したチャンクについて推論する必要があります。',
           },
         ],
+        image: '/images/rag-vs-platforms-hallucination-rate-ja.svg',
+        imageCaption: '50件評価クエリの幻覚率：AnythingLLMは全体6%（事実検索0%、要約0%）、PrivateGPT 11%、Open WebUI 14%。マルチホップ推論は3プラットフォームすべてで最も弱いクエリタイプ。',
       },
       citations: {
         id: 'citations',
@@ -1673,6 +1701,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5,047ページのコーパスでテスト：デフォルトを `BAAI/bge-m3` に交換すると、3つのプラットフォームすべての全体リコールが4〜7パーセント ポイント向上しましたが、インデックス作成時間が3倍になり、インデックス作成パス中のGPUメモリに〜1GB追加しました。',
           'マルチ言語コーパス（日本語、フランス語、中国語、ドイツ語混在）の場合、`bge-m3` は3つのプラットフォーム全体で最初のデフォルト ビート選択です。しかし、PrivateGPTのパイプラインのみがOllama迂回なしでそれをネイティブでサポートしています。',
         ],
+        image: '/images/rag-vs-platforms-embedding-flexibility-ja.svg',
+        imageCaption: '埋め込みモデルの柔軟性：AnythingLLMはGUIで8つのバックエンドを選択可能、PrivateGPTはbge-m3（100以上の言語対応）を含むHuggingFaceモデルをネイティブサポート、Open WebUIはOllama経由の埋め込みモデルとSentenceTransformersを使用。',
       },
       hiddenCosts: {
         id: 'hidden-costs',
@@ -1940,7 +1970,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock: '**在2026年5月测试的5,047页语料库上，AnythingLLM在生产可靠性上获胜（最佳引用、可交换的嵌入器、持久工作空间、6%的最低幻想率）。PrivateGPT在检索延迟上获胜（p50为240ms、完全离线设计、强化的EU合规姿态）。Open WebUI在操作人体工程学上获胜（最干净的多用户设置、精美的Ollama集成、最容易插入现有聊天工作流）。所有三个都在约10,000页时以不同的方式破裂。为您实际拥有的工作流选择，而不是您可能增长的工作流。**',
     quickAnswerTop: { en: { question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?', answer: 'Pick AnythingLLM if you need real production-grade RAG: best citations, swappable embedding models, persistent workspaces, and the lowest hallucination rate (6%) on a 5,000-page corpus. Pick PrivateGPT if retrieval latency, full offline operation, and a hardened EU-compliance posture matter more than UI polish — it is a Python service with a CLI-first mindset. Pick Open WebUI if you already run Ollama and want a multi-user chat front-end that adds RAG as a side feature rather than the core. All three are free and open source, all run fully offline, and all top out before 10,000 pages without custom work.', bullets: ['AnythingLLM — best citations, swappable embedders, lowest hallucination rate (6%), persistent workspaces. The default production pick.', 'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service, hardened compliance posture. Best for EU/regulated teams.', 'Open WebUI — cleanest multi-user UI, native Ollama RAG, easiest to bolt onto an existing chat stack. Best for shared internal deployments.', 'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.', 'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.'], updatedDate: '2026-05-07' } },
     toc: [{ label: '核心要点', anchor: '#key-takeaways' }, { label: '比较表', anchor: '#comparison-table' }, { label: '应该选择哪个', anchor: '#which-one' }, { label: '5,047页测试方法', anchor: '#how-we-tested' }, { label: '架构：各系统如何处理文档', anchor: '#architecture' }, { label: 'AnythingLLM：深度解析', anchor: '#anythingllm' }, { label: 'PrivateGPT：深度解析', anchor: '#privategpt' }, { label: 'Open WebUI：深度解析', anchor: '#open-webui' }, { label: '检索延迟（p50 / p95）', anchor: '#latency' }, { label: '按查询类型的幻想率', anchor: '#hallucination' }, { label: '引用质量', anchor: '#citations' }, { label: '嵌入模型灵活性', anchor: '#embedding-flexibility' }, { label: '没人谈论的隐性成本', anchor: '#hidden-costs' }, { label: '扩展限制：演示何时破裂', anchor: '#scaling-cliff' }, { label: '决策树：应该选择哪个', anchor: '#decision-tree' }, { label: '常见误区', anchor: '#common-mistakes' }, { label: '常见问题', anchor: '#faq' }, { label: '相关阅读', anchor: '#related-reading' }],
-    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['**AnythingLLM**在5,047页语料库上的幻想率最低（6%，vs PrivateGPT 11%，Open WebUI 14%），并生成了唯一具有文件名+页码参考的一致可引用答案。', '**PrivateGPT**的检索延迟最低（p50 240ms，p95 720ms）和最干净的离线设计姿态。没有遥测SDK、云回退或隐藏的网络调用。', '**Open WebUI**为共享部署提供了最好的操作人体工程学。多用户账户、OAuth、基于角色的文档访问、两次点击的Ollama集成。', '所有三个平台在消费者硬件上**8,000至12,000页之间**降级。索引时间线性扩展，但当向量DB超过RAM时，检索召回率下降。', '嵌入模型切换在所有三个平台上强制**完全重新索引**。在消费者硬件上，每5,000页预算30-90分钟。', '磁盘上的向量DB存储是**每1,000页40-120MB**，取决于块大小和嵌入维度。50,000页语料库仅用于向量需要2-6GB。', '对于将超过10,000页的库，考虑使用自定义Ollama + Qdrant或Weaviate堆栈。这三个平台的内置向量存储不是为该规模设计的。'] } },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**AnythingLLM**在5,047页语料库上的幻想率最低（6%，vs PrivateGPT 11%，Open WebUI 14%），并生成了唯一具有文件名+页码参考的一致可引用答案。',
+          '**PrivateGPT**的检索延迟最低（p50 240ms，p95 720ms）和最干净的离线设计姿态。没有遥测SDK、云回退或隐藏的网络调用。',
+          '**Open WebUI**为共享部署提供了最好的操作人体工程学。多用户账户、OAuth、基于角色的文档访问、两次点击的Ollama集成。',
+          '所有三个平台在消费者硬件上**8,000至12,000页之间**降级。索引时间线性扩展，但当向量DB超过RAM时，检索召回率下降。',
+          '嵌入模型切换在所有三个平台上强制**完全重新索引**。在消费者硬件上，每5,000页预算30-90分钟。',
+          '磁盘上的向量DB存储是**每1,000页40-120MB**，取决于块大小和嵌入维度。50,000页语料库仅用于向量需要2-6GB。',
+          '对于将超过10,000页的库，考虑使用自定义Ollama + Qdrant或Weaviate堆栈。这三个平台的内置向量存储不是为该规模设计的。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '如何比较 AnythingLLM、PrivateGPT 和 Open WebUI？',
+        image: '/images/rag-vs-platforms-comparison-table-zh.svg',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI 在5,047页语料库上测试：AnythingLLM幻觉率最低（6%），PrivateGPT检索速度最快（p50 240ms），Open WebUI多用户支持最佳——三者均可在消费级硬件上扩展至约8,000–12,000页。',
+      },
+      architecture: {
+        id: 'architecture',
+        title: '架构：各平台如何处理文档',
+        image: '/images/rag-vs-platforms-architecture-zh.svg',
+        imageCaption: 'RAG管道架构对比：AnythingLLM使用LangChain.js + LanceDB + 交叉编码器重排序；PrivateGPT使用LlamaIndex + Qdrant + 可配置分块 + REST API；Open WebUI使用unstructured.io + ChromaDB + 单阶段密集检索（无重排序）。',
+      },
+      latency: {
+        id: 'latency',
+        title: '检索延迟（p50 / p95）',
+        image: '/images/rag-vs-platforms-latency-breakdown-zh.svg',
+        imageCaption: '5,047页语料库各阶段检索延迟：PrivateGPT最快（p50 240ms / p95 720ms），AnythingLLM p50 310ms / p95 880ms（含70ms重排序），Open WebUI最慢（p50 380ms / p95 1,040ms）。',
+      },
+      hallucination: {
+        id: 'hallucination',
+        title: '按查询类型划分的幻觉率',
+        image: '/images/rag-vs-platforms-hallucination-rate-zh.svg',
+        imageCaption: '50条评分查询的幻觉率：AnythingLLM总体6%（事实查找0%，摘要0%），PrivateGPT 11%，Open WebUI 14%——多步推理是三个平台最薄弱的查询类型。',
+      },
+      embeddingFlexibility: {
+        id: 'embedding-flexibility',
+        title: '嵌入模型灵活性',
+        image: '/images/rag-vs-platforms-embedding-flexibility-zh.svg',
+        imageCaption: '嵌入模型灵活性：AnythingLLM提供8个GUI可选后端；PrivateGPT原生支持所有HuggingFace sentence-transformers模型，包括支持100+语言的bge-m3；Open WebUI使用Ollama提供的嵌入模型及SentenceTransformers。',
+      },
+    },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台', description: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年5月的测试结果。', image: 'https://www.promptquorum.com/api/og/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-07', dateModified: '2026-05-07', inLanguage: 'zh', url: '/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=zh', speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }, about: [{ '@type': 'Thing', name: 'AnythingLLM' }, { '@type': 'Thing', name: 'PrivateGPT' }, { '@type': 'Thing', name: 'Open WebUI' }, { '@type': 'Thing', name: 'RAG（检索增强生成）' }, { '@type': 'Thing', name: '本地LLM' }], mentions: [{ '@type': 'SoftwareApplication', name: 'Ollama' }, { '@type': 'SoftwareApplication', name: 'LanceDB' }, { '@type': 'SoftwareApplication', name: 'Qdrant' }, { '@type': 'SoftwareApplication', name: 'ChromaDB' }, { '@type': 'SoftwareApplication', name: 'Llama 3.3' }], educationalLevel: 'Advanced', faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: '哪个RAG平台处理最大的文档集？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT在消费者硬件上扩展最远。带有调整设置在32GB RAM机器上舒适地达到25,000页。AnythingLLM在10,000页左右破裂，Open WebUI在8,000页左右。超过25,000页，三个都不是正确的工具。' } }, { '@type': 'Question', name: '我可以在这些平台之间迁移文档和嵌入吗？', acceptedAnswer: { '@type': 'Answer', text: '源文档自由迁移。所有三个接受相同的文件。嵌入不迁移。每个平台以自己的格式存储向量，因此切换总是意味着重新索引。' } }, { '@type': 'Question', name: '哪个平台具有最佳引用准确性？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM。在50个评分查询中，对逐字引用查询正确引用了10个中的9个。' } }, { '@type': 'Question', name: '索引期间每个平台需要多少GPU内存？', acceptedAnswer: { '@type': 'Answer', text: '在5,047页语料库上使用默认嵌入器：AnythingLLM在6.2GB处达到峰值，Open WebUI 5.4GB，PrivateGPT 4.8GB。' } }, { '@type': 'Question', name: '我可以使用自己的嵌入模型吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在GUI中支持8个嵌入后端。PrivateGPT通过settings.yaml支持任何HuggingFace模型。Open WebUI支持Ollama和OpenAI兼容端点。' } }, { '@type': 'Question', name: '哪个平台最好处理多语言文档？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT配对BAAI/bge-m3时最好。bge-m3支持100多种语言。' } }, { '@type': 'Question', name: '他们如何处理PDF表格和图形？', acceptedAnswer: { '@type': 'Answer', text: '所有三个通过PDF解析器提取文本。表格被提取为文本。图形被提取为图像参考但未用于检索。' } }, { '@type': 'Question', name: '有多少令牌用于典型的RAG查询？', acceptedAnswer: { '@type': 'Answer', text: '查询嵌入和搜索约500-700令牌等值计算。提示组装和回答生成取决于检索的块和模型的上下文窗口大小。' } }, { '@type': 'Question', name: '这些平台之外还有其他RAG选择吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。对于更高规模：自定义Ollama + Qdrant / Weaviate。对于更简单的设置：Docling + Qdrant CLI。使用Llamaindex或LangChain直接构建自定义RAG管道。' } }, { '@type': 'Question', name: '这些平台支持审计日志吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在工作空间元数据中记录。PrivateGPT可以启用FastAPI服务日志。Open WebUI记录用户登录和文档访问。' } }], inLanguage: 'zh' } },
   },
 }

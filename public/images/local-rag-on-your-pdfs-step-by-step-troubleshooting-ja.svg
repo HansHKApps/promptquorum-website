@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="27" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">6 つの一般的な failure mode — クイック Fix 参照</text>
+
+  <!-- Header row -->
+  <rect x="0" y="40" width="800" height="34" fill="#6750A4"/>
+  <text x="130" y="62" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Symptom</text>
+  <text x="390" y="62" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">推定される原因</text>
+  <text x="660" y="62" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Fix</text>
+
+  <!-- Column dividers -->
+  <line x1="260" y1="40" x2="260" y2="346" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="520" y1="40" x2="520" y2="346" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <rect x="0" y="74" width="800" height="44" fill="#FFFFFF"/>
+  <text x="130" y="91" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama に接続できない</text>
+  <text x="130" y="107" font-size="10" fill="#49454F" text-anchor="middle">エラーメッセージが表示</text>
+  <text x="390" y="99" font-size="10" fill="#49454F" text-anchor="middle">サービス停止 / endpoint 不正</text>
+  <text x="660" y="91" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">ollama serve</text>
+  <text x="660" y="107" font-size="10" fill="#49454F" text-anchor="middle">127.0.0.1:11434 確認</text>
+
+  <!-- Row 2 -->
+  <rect x="0" y="118" width="800" height="44" fill="#F7F2FA"/>
+  <text x="130" y="135" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Model pull が 0% や</text>
+  <text x="130" y="151" font-size="10" fill="#49454F" text-anchor="middle">99% で stall</text>
+  <text x="390" y="143" font-size="10" fill="#49454F" text-anchor="middle">CDN 問題または disk full</text>
+  <text x="660" y="135" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">Ctrl+C → df -h → pull 再実行</text>
+  <text x="660" y="151" font-size="10" fill="#49454F" text-anchor="middle">Ollama は最後のバイトから再開</text>
+
+  <!-- Row 3 -->
+  <rect x="0" y="162" width="800" height="44" fill="#FFFFFF"/>
+  <text x="130" y="179" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Embedding step が</text>
+  <text x="130" y="195" font-size="10" fill="#49454F" text-anchor="middle">止まって見える</text>
+  <text x="390" y="187" font-size="10" fill="#49454F" text-anchor="middle">embedding model の初回 load</text>
+  <text x="660" y="179" font-size="10" fill="#49454F" text-anchor="middle">30–60 秒待つ — 初回</text>
+  <text x="660" y="195" font-size="10" fill="#49454F" text-anchor="middle">load = 10–40 秒</text>
+
+  <!-- Row 4 -->
+  <rect x="0" y="206" width="800" height="44" fill="#F7F2FA"/>
+  <text x="130" y="223" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">取得が無関係な chunk を返す</text>
+  <text x="130" y="239" font-size="10" fill="#49454F" text-anchor="middle">的外れな引用</text>
+  <text x="390" y="231" font-size="10" fill="#49454F" text-anchor="middle">デフォルト 512/0 + weak embedder</text>
+  <text x="660" y="223" font-size="10" fill="#6750A4" text-anchor="middle">ステップ 4 (nomic-embed-text)</text>
+  <text x="660" y="239" font-size="10" fill="#6750A4" text-anchor="middle">+ ステップ 7 (1000/200) · re-embed</text>
+
+  <!-- Row 5 -->
+  <rect x="0" y="250" width="800" height="44" fill="#FFFFFF"/>
+  <text x="130" y="267" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">回答が generic · 短い</text>
+  <text x="130" y="283" font-size="10" fill="#49454F" text-anchor="middle">PDF を無視</text>
+  <text x="390" y="275" font-size="10" fill="#49454F" text-anchor="middle">Wrong LLM (tiny default) が選択中</text>
+  <text x="660" y="267" font-size="10" fill="#49454F" text-anchor="middle">LLM → llama3.3:8b-instruct-q4_K_M</text>
+  <text x="660" y="283" font-size="10" fill="#49454F" text-anchor="middle">Top-K を 4 から 6 に増加</text>
+
+  <!-- Row 6 -->
+  <rect x="0" y="294" width="800" height="44" fill="#F7F2FA"/>
+  <text x="130" y="311" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Scanned PDF → empty chunk</text>
+  <text x="130" y="327" font-size="10" fill="#49454F" text-anchor="middle">"[image]" として抽出</text>
+  <text x="390" y="319" font-size="10" fill="#49454F" text-anchor="middle">text layer なし — raster image</text>
+  <text x="660" y="311" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#6750A4" text-anchor="middle">ocrmypdf input.pdf output.pdf</text>
+  <text x="660" y="327" font-size="10" fill="#49454F" text-anchor="middle">OCR 済み file を re-upload</text>
+
+  <!-- Table outer border -->
+  <rect x="0" y="40" width="800" height="298" fill="none" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <line x1="18" y1="354" x2="782" y2="354" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="374" font-size="11" fill="#79747E" text-anchor="middle">ほぼ全ての failure は 7 ステップ設定を順番に実行すれば解決</text>
+  <text x="400" y="394" font-size="10" fill="#79747E" text-anchor="middle">取得問題: モデルより先に embedder (ステップ 4) と chunk サイズ (ステップ 7) を修正</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
