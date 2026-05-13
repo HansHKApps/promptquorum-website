@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-label="速度基准测试：Llama 3.3 8B Q4_K_M (tok/s)"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">速度基准测试：Llama 3.3 8B Q4_K_M (tok/s)</text>
+  <text x="18" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">硬件</text>
+  <text x="360" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">LM Studio</text>
+  <text x="550" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Jan</text>
+  <text x="720" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">GPT4All</text>
+  <line x1="0" y1="68" x2="800" y2="68" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="0" y="68" width="800" height="50" fill="#FFFFFF"/>
+  <text x="18" y="97" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Apple M5 MacBook Pro (16 GB)</text>
+  <circle cx="360" cy="93" r="10" fill="#34A853"/>
+  <text x="360" y="97" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">38</text>
+  <circle cx="550" cy="93" r="10" fill="#F4B400"/>
+  <text x="550" y="97" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">32</text>
+  <circle cx="720" cy="93" r="10" fill="#79747E"/>
+  <text x="720" y="97" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">24</text>
+  <line x1="0" y1="118" x2="800" y2="118" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="0" y="118" width="800" height="50" fill="#F7F2FA"/>
+  <text x="18" y="147" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">RTX 4070 (Win 11, CUDA)</text>
+  <circle cx="360" cy="143" r="10" fill="#34A853"/>
+  <text x="360" y="147" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">74</text>
+  <circle cx="550" cy="143" r="10" fill="#F4B400"/>
+  <text x="550" y="147" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">65</text>
+  <circle cx="720" cy="143" r="10" fill="#79747E"/>
+  <text x="720" y="147" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">52</text>
+  <line x1="0" y1="168" x2="800" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="0" y="168" width="800" height="50" fill="#FFFFFF"/>
+  <text x="18" y="197" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">RTX 3060 12 GB (旧驱动)</text>
+  <circle cx="360" cy="193" r="10" fill="#34A853"/>
+  <text x="360" y="197" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">52</text>
+  <circle cx="550" cy="193" r="10" fill="#F4B400"/>
+  <text x="550" y="197" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">48</text>
+  <circle cx="720" cy="193" r="10" fill="#79747E"/>
+  <text x="720" y="197" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">40</text>
+  <line x1="0" y1="218" x2="800" y2="218" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="0" y="218" width="800" height="50" fill="#F7F2FA"/>
+  <text x="18" y="247" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Intel Core Ultra 7 (仅CPU)</text>
+  <circle cx="360" cy="243" r="10" fill="#34A853"/>
+  <text x="360" y="247" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">11</text>
+  <circle cx="550" cy="243" r="10" fill="#F4B400"/>
+  <text x="550" y="247" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">10</text>
+  <circle cx="720" cy="243" r="10" fill="#79747E"/>
+  <text x="720" y="247" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+  <text x="400" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#79747E" text-anchor="middle">200 token生成。LM Studio使用平台优化的llama.cpp；差距：Apple Silicon上15–30%，纯CPU上5–10%。</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
