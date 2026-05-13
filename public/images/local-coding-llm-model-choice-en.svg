@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" font-family="system-ui,-apple-system,sans-serif">
+
+  <!-- Background -->
+  <rect width="800" height="280" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local Coding Models for Offline Work — 2026</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="47" font-size="13" fill="#49454F" text-anchor="middle">Q4_K_M quantization · All run via Ollama on local hardware</text>
+
+  <!-- Column Headers -->
+  <text x="50" y="70" font-size="12" font-weight="700" fill="#79747E">Model</text>
+  <text x="240" y="70" font-size="12" font-weight="700" fill="#79747E">Disk (Q4)</text>
+  <text x="320" y="70" font-size="12" font-weight="700" fill="#79747E">Min RAM</text>
+  <text x="400" y="70" font-size="12" font-weight="700" fill="#79747E">Languages</text>
+  <text x="510" y="70" font-size="12" font-weight="700" fill="#79747E">Best For</text>
+
+  <!-- Header Divider -->
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Qwen3-Coder 30B (highlighted/recommended) -->
+  <rect x="18" y="80" width="764" height="32" rx="2" fill="#F7F2FA"/>
+  <text x="50" y="101" font-size="12" font-weight="700" fill="#6750A4">Qwen3-Coder 30B ★</text>
+  <text x="240" y="101" font-size="12" fill="#49454F">~18 GB</text>
+  <text x="320" y="101" font-size="12" fill="#49454F">24 GB</text>
+  <text x="400" y="101" font-size="12" fill="#49454F">TS, Python, Rust, Go</text>
+  <text x="510" y="101" font-size="12" fill="#49454F">Best overall — refactors, tool calls, 32K ctx</text>
+
+  <!-- Row separator after row 1 -->
+  <line x1="18" y1="112" x2="782" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Qwen3-Coder 7B -->
+  <text x="50" y="133" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 7B</text>
+  <text x="240" y="133" font-size="12" font-weight="700" fill="#34A853">~5 GB</text>
+  <text x="320" y="133" font-size="12" font-weight="700" fill="#34A853">8 GB</text>
+  <text x="400" y="133" font-size="12" fill="#49454F">TS, Python, Rust</text>
+  <text x="510" y="133" font-size="12" fill="#49454F">80–85% quality · fits 16 GB machines</text>
+
+  <!-- Row separator after row 2 -->
+  <line x1="18" y1="144" x2="782" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: DeepSeek Coder V3 -->
+  <text x="50" y="165" font-size="12" font-weight="600" fill="#1C1B1F">DeepSeek Coder V3</text>
+  <text x="240" y="165" font-size="12" font-weight="700" fill="#F4B400">~25 GB</text>
+  <text x="320" y="165" font-size="12" font-weight="700" fill="#F4B400">32 GB</text>
+  <text x="400" y="165" font-size="12" fill="#49454F">All major</text>
+  <text x="510" y="165" font-size="12" fill="#49454F">128K context · best for large codebases</text>
+
+  <!-- Row separator after row 3 -->
+  <line x1="18" y1="176" x2="782" y2="176" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Codestral 22B -->
+  <text x="50" y="197" font-size="12" font-weight="600" fill="#1C1B1F">Codestral 22B</text>
+  <text x="240" y="197" font-size="12" fill="#49454F">~13 GB</text>
+  <text x="320" y="197" font-size="12" fill="#49454F">16 GB</text>
+  <text x="400" y="197" font-size="12" fill="#49454F">TS, Python</text>
+  <text x="510" y="197" font-size="12" fill="#49454F">Fastest autocomplete · weaker tool calling</text>
+
+  <!-- Last row separator (prominent) -->
+  <line x1="18" y1="213" x2="782" y2="213" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="400" y="235" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">★ Recommended default · Run with: ollama pull qwen3-coder:30b</text>
+
+  <!-- Attribution -->
+  <text x="400" y="253" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-coding-llm-without-internet</text>
+
+</svg>

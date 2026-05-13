@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">What Actually Breaks Offline — and the Fix</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="47" font-size="13" fill="#49454F" text-anchor="middle">5 failure modes with pre-flight workarounds</text>
+
+  <!-- Column Headers -->
+  <text x="40" y="68" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">#</text>
+  <text x="100" y="68" font-size="12" font-weight="700" fill="#79747E">What Breaks</text>
+  <text x="470" y="68" font-size="12" font-weight="700" fill="#79747E">The Fix</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="76" x2="782" y2="76" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <circle cx="40" cy="99" r="12" fill="#EA4335"/>
+  <text x="40" y="103" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="100" y="103" font-size="12" font-weight="600" fill="#1C1B1F">New packages not in cache</text>
+  <text x="470" y="103" font-size="11" fill="#6750A4">Pre-install with npm install · pip download · cargo fetch before takeoff</text>
+  <line x1="18" y1="115" x2="782" y2="115" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <circle cx="40" cy="131" r="12" fill="#EA4335"/>
+  <text x="40" y="135" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="100" y="135" font-size="12" font-weight="600" fill="#1C1B1F">Post-cutoff API knowledge</text>
+  <text x="470" y="135" font-size="11" fill="#6750A4">Clone lib source · use rg to find real signatures</text>
+  <line x1="18" y1="147" x2="782" y2="147" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <circle cx="40" cy="163" r="12" fill="#EA4335"/>
+  <text x="40" y="167" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="100" y="167" font-size="12" font-weight="600" fill="#1C1B1F">OAuth / SSO round-trips</text>
+  <text x="470" y="167" font-size="11" fill="#6750A4">Complete auth before signal loss · cache tokens (12–24 hr)</text>
+  <line x1="18" y1="179" x2="782" y2="179" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <circle cx="40" cy="195" r="12" fill="#EA4335"/>
+  <text x="40" y="199" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="100" y="199" font-size="12" font-weight="600" fill="#1C1B1F">Tests hitting remote APIs</text>
+  <text x="470" y="199" font-size="11" fill="#6750A4">Mock with msw / nock / vcr · pre-record fixtures</text>
+  <line x1="18" y1="211" x2="782" y2="211" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <circle cx="40" cy="227" r="12" fill="#EA4335"/>
+  <text x="40" y="231" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="100" y="231" font-size="12" font-weight="600" fill="#1C1B1F">Docker images not pre-pulled</text>
+  <text x="470" y="231" font-size="11" fill="#6750A4">Run docker pull for each base image before flight</text>
+
+  <!-- Last separator (prominent) -->
+  <line x1="18" y1="243" x2="782" y2="243" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="400" y="263" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Prepare before takeoff — all 5 have offline fixes · See: Pre-Flight Checklist</text>
+
+  <!-- Attribution -->
+  <text x="400" y="281" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-coding-llm-without-internet</text>
+</svg>

@@ -195,6 +195,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'You do not need all ten of these on day one. The minimum useful offline setup is the LLM, Continue.dev or Aider, and the package cache for the language you are using on the trip. Add Devdocs and the Stack Overflow dump once the basics are working.',
           },
         ],
+        image: '/images/local-coding-llm-offline-stack-en.svg',
+        imageCaption: 'Offline coding stack — 5 core components: Continue.dev + Qwen3-Coder 30B (~18 GB), Devdocs/Zeal (~3–5 GB), Verdaccio for npm, devpi/wheelhouse for Python packages, and ripgrep + rga for local code and PDF search.',
       },
       flightTest: {
         id: 'flight-test',
@@ -243,6 +245,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Save this checklist as a script. A 30-line bash file (`pre-flight.sh`) that runs `ollama pull`, `npm install`, `pip install`, `git fetch --all`, and `docker pull` for your common dependencies turns the whole process into one command. The first run takes 45 minutes; subsequent runs take 5 because everything is cached.',
           },
         ],
+        image: '/images/local-coding-llm-pre-flight-checklist-en.svg',
+        imageCaption: 'Offline coding pre-flight checklist — 5 steps: (1) pull LLM via ollama pull, (2) warm package cache with npm install / pip install / cargo build, (3) sync Devdocs (~3–5 GB), (4) clone repos with git clone --mirror, (5) lights-off test for 30 minutes before the trip.',
       },
       hardware: {
         id: 'hardware',
@@ -263,6 +267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'If you already own a 32 GB M3 or M4 MacBook Pro, you do not need to upgrade. The 7B model runs comfortably in 8 GB of RAM and gets you 80–85% of the 30B quality. The 64 GB recommendation is for users buying the machine specifically for offline coding work; existing-hardware users should try the 7B first.',
           },
         ],
+        image: '/images/local-coding-llm-hardware-comparison-en.svg',
+        imageCaption: 'Hardware comparison for offline coding: Apple M5 MacBook Pro 64 GB is the recommended choice (35–50 tok/s, 6–8 hr battery, full 30B model support); RTX 4090 laptop wins on tokens/sec but runs ~2 hrs under inference load; RTX 4070/4090 are limited to the 7B model at 8–16 GB VRAM.',
       },
       modelChoice: {
         id: 'model-choice',
@@ -277,6 +283,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Skip:** general-purpose models under 13B without a coding fine-tune (Llama 3.2 7B, Mistral 7B), and any quantization harsher than Q4_K_M. Both fail in obvious ways on real coding work.',
           '**For the full coding-model comparison** including HumanEval+ scores per language, see [Best Local Coding Models in 2026: Qwen3-Coder vs DeepSeek vs Codestral](/power-local-llm/best-local-coding-models-2026).',
         ],
+        image: '/images/local-coding-llm-model-choice-en.svg',
+        imageCaption: 'Local coding models for offline work: Qwen3-Coder 30B Q4_K_M (~18 GB, 24 GB RAM) is the recommended default; Qwen3-Coder 7B (~5 GB, 8 GB RAM) is the lightweight fallback at 80–85% quality; DeepSeek Coder V3 (~25 GB) for 128K-context workflows; Codestral 22B for fastest autocomplete.',
       },
       dependencyCache: {
         id: 'dependency-cache',
@@ -364,6 +372,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Image and asset generation that calls external services.** Cloud-based image generators, font services, and CDN-fetched assets all fail. The fix: bake fixed assets into the repo or use a fully local image model (which is a separate stack).',
           '**The fix for the "what was that library called" problem is the model itself.** When you cannot search Google, ask the model "what is the package name for X-functionality" — for things in its training data it answers correctly 80–90% of the time. Verify against the package cache before installing.',
         ],
+        image: '/images/local-coding-llm-what-breaks-en.svg',
+        imageCaption: 'What breaks offline and the fix: (1) uncached packages — pre-install before takeoff; (2) post-cutoff API knowledge — clone source and use ripgrep; (3) OAuth round-trips — complete auth before signal loss; (4) remote API tests — mock with msw/nock; (5) missing Docker images — docker pull before flight.',
       },
       updates: {
         id: 'updates',

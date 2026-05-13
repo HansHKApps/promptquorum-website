@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 305" width="800" height="305" font-family="system-ui,-apple-system,sans-serif">
+
+  <!-- Background -->
+  <rect width="800" height="305" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Offline Coding Stack — 5 Core Components</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="47" font-size="13" fill="#49454F" text-anchor="middle">Pull once before takeoff · ~50–80 GB total on disk</text>
+
+  <!-- Column Headers -->
+  <text x="50" y="70" font-size="12" font-weight="700" fill="#79747E">Component</text>
+  <text x="210" y="70" font-size="12" font-weight="700" fill="#79747E">Online Tool</text>
+  <text x="390" y="70" font-size="12" font-weight="700" fill="#79747E">Offline Replacement</text>
+  <text x="660" y="70" font-size="12" font-weight="700" fill="#79747E">Disk Budget</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: AI Completion — highlighted with purple background -->
+  <rect x="18" y="80" width="764" height="32" rx="2" fill="#F7F2FA"/>
+  <text x="50" y="101" font-size="12" font-weight="700" fill="#6750A4">AI Completion ★</text>
+  <text x="210" y="101" font-size="12" fill="#1C1B1F">GitHub Copilot, Cursor Tab</text>
+  <text x="390" y="101" font-size="12" fill="#1C1B1F">Continue.dev + Ollama + Qwen3-Coder 30B</text>
+  <text x="660" y="101" font-size="12" fill="#1C1B1F">~18 GB</text>
+
+  <!-- Row separator after row 1 -->
+  <line x1="18" y1="112" x2="782" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Documentation -->
+  <text x="50" y="133" font-size="12" fill="#1C1B1F">Documentation</text>
+  <text x="210" y="133" font-size="12" fill="#1C1B1F">MDN, ReadTheDocs</text>
+  <text x="390" y="133" font-size="12" fill="#1C1B1F">Devdocs (PWA) or Zeal</text>
+  <text x="660" y="133" font-size="12" fill="#1C1B1F">~3–5 GB</text>
+
+  <!-- Row separator after row 2 -->
+  <line x1="18" y1="144" x2="782" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: npm Packages -->
+  <text x="50" y="165" font-size="12" fill="#1C1B1F">npm Packages</text>
+  <text x="210" y="165" font-size="12" fill="#1C1B1F">registry.npmjs.org</text>
+  <text x="390" y="165" font-size="12" fill="#1C1B1F">Verdaccio local registry</text>
+  <text x="660" y="165" font-size="12" fill="#1C1B1F">project-dep. ~2–10 GB</text>
+
+  <!-- Row separator after row 3 -->
+  <line x1="18" y1="176" x2="782" y2="176" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Python Packages -->
+  <text x="50" y="197" font-size="12" fill="#1C1B1F">Python Packages</text>
+  <text x="210" y="197" font-size="12" fill="#1C1B1F">PyPI</text>
+  <text x="390" y="197" font-size="12" fill="#1C1B1F">devpi or pip download + wheelhouse</text>
+  <text x="660" y="197" font-size="12" fill="#1C1B1F">project-dep. ~1–5 GB</text>
+
+  <!-- Row separator after row 4 -->
+  <line x1="18" y1="208" x2="782" y2="208" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Code Search -->
+  <text x="50" y="229" font-size="12" fill="#1C1B1F">Code Search</text>
+  <text x="210" y="229" font-size="12" fill="#1C1B1F">GitHub search</text>
+  <text x="390" y="229" font-size="12" fill="#1C1B1F">ripgrep (rg) + rga for PDFs</text>
+  <text x="660" y="229" font-size="12" fill="#1C1B1F">~10 MB (binaries)</text>
+
+  <!-- Final divider after last row -->
+  <line x1="18" y1="240" x2="782" y2="240" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="400" y="263" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">★ LLM + Continue.dev is the minimum viable offline setup · promptquorum.com/power-local-llm/local-coding-llm-without-internet</text>
+
+  <!-- Attribution -->
+  <text x="400" y="281" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com</text>
+
+</svg>
