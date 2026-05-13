@@ -387,4 +387,393 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: 'Beste lokale LLMs für kreatives Schreiben 2026: Belletristik, Dialog & Weltenbau',
+    seoTitle: 'Beste lokale LLMs für kreatives Schreiben 2026: Getestete Picks',
+    intro:
+      'Beim kreativen Schreiben punkten lokale LLMs nicht nur mit Datenschutz und Kosteneffizienz. Die besten Instruct-tuned und Uncensored Open-Weight-Modelle 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B sowie die Hermes/Dolphin-Uncensored-Derivate — liefern Belletristik, Dialog und Weltenbau, die auf den meisten Prompts mit führenden Cloud-Modellen mithalten können. Die Unterschiede liegen in der Stimmkonsistenz, der Bereitschaft für dunkle oder erwachsene Themen und der Fähigkeit, Anweisungen natürlich umzusetzen. Dieser Leitfaden testet sechs Modelle auf 50+ kreative Prompts aus Belletristik, Dialog, Poesie und Weltenbau — inklusive der optimalen Temperatur- und Top-p-Einstellungen.',
+    metaDescription:
+      '6 lokale Modelle für kreatives Schreiben verglichen: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 und Uncensored-Varianten. Getestet auf 50+ Prompts.',
+    twitterDescription:
+      '6 lokale Modelle für Belletristik, Dialog und Weltenbau getestet auf 50+ Prompts. Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 plus Uncensored-Picks. Urteil je Aufgabentyp.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+      'Command R+ 104B',
+      'Yi-1.5 34B',
+      'Hermes 3 Llama 3.3',
+      'Dolphin 3.0 Llama',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+    ],
+    audience:
+      'Belletristik-Autoren, Drehbuchautoren, Game-Designer, Weltenbauer und Roleplay-Enthusiasten, die lokale LLMs für kreative Arbeit nutzen, bei der Datenschutz, Stimmkonsistenz und die Bereitschaft für reife Themen wichtiger sind als Benchmark-Werte.',
+    readTime: '12 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'lokale LLMs kreatives Schreiben',
+    targetKeywords: [
+      'beste lokale llm kreatives schreiben',
+      'lokale llm belletristik',
+      'uncensored lokale llm',
+      'llama vs mistral kreatives schreiben',
+      'bestes lokales modell dialog',
+      'lokale llm weltenbau',
+    ],
+    leadAnswerBlock:
+      '**Llama 3.3 70B ist im Mai 2026 der beste Allrounder unter den lokalen Modellen für kreatives Schreiben — starke Stimmkonsistenz, folgt Anweisungen präzise und bearbeitet dunkle Themen ohne Ablehnung, wenn der System-Prompt die Arbeit als Belletristik kennzeichnet. Qwen3 32B ist die richtige Wahl für 24-GB-Systeme: nahezu gleich stark in der Prosa, deutlich geringerer Hardwarebedarf. Mistral Large gewinnt bei der Langform-Kontinuität (Novel-Länge) dank seinem nativen 128K-Kontext. Command R+ 104B hat die sauberste Dialog-Stimme. Yi-1.5 34B ist die Nischenempfehlung für Poesie und lyrische Prosa. Für Workflows, die Instruct-Modelle ablehnen, sind Hermes 3 (Llama-3.3-Basis) und Dolphin 3.0 die Uncensored-Picks — gleiche Architektur, RLHF-Sicherheitsschicht entfernt. Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich; 0,7 und darunter erzeugt flache Prosa. Uncensored ≠ unethisch — es bedeutet, dass das Modell dem Prompt folgt statt ihn abzulehnen; der Autor trägt weiterhin die Verantwortung.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Welches lokale LLM eignet sich 2026 am besten für kreatives Schreiben?',
+        answer:
+          'Llama 3.3 70B ist bei ausreichender Hardware der beste Allrounder — stark in Prosa, Dialog und Weltenbau, mit Stimmkonsistenz über lange Sessions. Auf 24-GB-Hardware, wo 70B nicht passt, ist Qwen3 32B die leichtere Alternative ohne großen Qualitätsverlust. Mistral Large ist die Wahl für den langen Kontext bei Novel-Länge (128K out of the box). Command R+ 104B hat die natürlichste Dialog-Stimme. Yi-1.5 34B ist der Spezialist für Poesie und lyrische Prosa. Für Workflows, die an der Instruct-Sicherheitsschicht scheitern (reife Belletristik, Konfliktszenen, moralisch komplexe Charaktere), verwenden Hermes 3 und Dolphin 3.0 dieselben Basismodelle mit entfernter RLHF-Sicherheitsschicht. Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich; Coding-Einstellungen (0,2–0,4) erzeugen flache Prosa.',
+        bullets: [
+          'Bester Allrounder: Llama 3.3 70B — stärkste Stimmkonsistenz, folgt Anweisungen gut, bearbeitet dunkle Themen ohne Ablehnung.',
+          'Bestes 24-GB-System: Qwen3 32B — nahezu so stark wie Llama 70B in der Prosa, deutlich geringerer Hardwarebedarf.',
+          'Beste Langform: Mistral Large — 128K-Kontext out of the box; Novel-Länge ohne Fadenriss.',
+          'Bester Dialog: Command R+ 104B — die natürlichste Gesprächsstimme über mehrere Charaktere.',
+          'Beste Poesie/Lyrik: Yi-1.5 34B — Nischenempfehlung für Verse und stilisierte Prosa.',
+          'Bei Ablehnung durch Instruct: Hermes 3 (Llama-Basis) oder Dolphin 3.0 — Uncensored, gleiche Architektur, Prompt-folgsam.',
+          'Sampling: Temperatur 0,8–1,1, Top-p 0,9–0,95 für Prosa; niedriger für engen Dialog, höher für surreale/Genre-Arbeiten.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+      { label: 'Kurzfakten', anchor: '#quick-facts' },
+      { label: 'Testmethode', anchor: '#how-we-tested' },
+      { label: 'Direktvergleich', anchor: '#comparison' },
+      { label: 'Modell-Urteile', anchor: '#verdicts' },
+      { label: 'Beispielausgaben', anchor: '#sample-outputs' },
+      { label: 'Temperatur & Top-P', anchor: '#sampling' },
+      { label: 'Uncensored-Modelle', anchor: '#uncensored' },
+      { label: 'Frontends für kreatives Schreiben', anchor: '#frontends' },
+      { label: 'Entscheidungshilfe', anchor: '#decision' },
+      { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+      { label: 'Quellen', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Llama 3.3 70B ist im Mai 2026 das beste lokale Allround-Modell für kreatives Schreiben.** Stärkste Stimmkonsistenz im Test, folgt Anweisungen präzise, bearbeitet dunkle Themen ohne Ablehnung, wenn der System-Prompt die Arbeit als Belletristik kennzeichnet.',
+          '**Qwen3 32B ist die richtige Wahl für 24-GB-Systeme.** Nahezu Llama-70B-Prosaqualität ohne den 48-GB+-VRAM-Bedarf. Standard für die meisten Laptops und Desktops.',
+          '**Mistral Large gewinnt bei der Langform-Kontinuität.** 128K-Kontext out of the box; Novel-Länge ohne Fadenriss oder Charakterstimm-Drift.',
+          '**Command R+ 104B hat die sauberste Dialog-Stimme.** Natürlichste Gesprächsbeats über Charaktere hinweg; die Wahl, wenn Dialog die tragende Funktion im Werk übernimmt.',
+          '**Yi-1.5 34B ist der Spezialist für Poesie und lyrische Prosa.** Nischenempfehlung für Verse, stilisierte Prosa und Kurzformen, bei denen Rhythmus zählt.',
+          '**Uncensored-Derivate (Hermes 3, Dolphin 3.0) sind der richtige Schritt, wenn Instruct-Modelle ablehnen.** Gleiche Basismodelle; RLHF-Sicherheitsschicht entfernt; das Modell folgt dem Prompt statt abzulehnen. Reife Belletristik, Konfliktszenen und moralisch komplexe Charaktere werden schreibbar.',
+          '**Sampling ist wichtiger als viele denken.** Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich. Coding-Einstellungen (0,2–0,4) erzeugen flache, vorhersehbare Prosa. Höher (1,2+) ist Genre-/Surrealismusbereich.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Kurzfakten',
+        items: [
+          '**Bester Allrounder:** Llama 3.3 70B bei Q4_K_M, ~42 GB VRAM. Stärkste Stimmkonsistenz in diesem Set.',
+          '**Bestes 24-GB-System:** Qwen3 32B bei Q4_K_M, ~20 GB VRAM. Standard für die meisten Nutzer.',
+          '**Beste Langform:** Mistral Large bei Q4_K_M, ~75 GB VRAM gesamt (hoch). 128K-Kontext out of the box.',
+          '**Bester Dialog:** Command R+ 104B bei Q4_K_M, ~62 GB VRAM. Sauberste Charakterstimm-Differenzierung.',
+          '**Beste Poesie:** Yi-1.5 34B bei Q4_K_M, ~21 GB VRAM. Lyrischer-Prosa-Spezialist.',
+          '**Uncensored-Optionen:** Hermes 3 (Llama-3.3-Basis, ~42 GB) und Dolphin 3.0 (mehrere Basisgrößen, 13–42 GB).',
+          '**Standard-Sampling für Prosa:** Temperatur 0,95, Top-p 0,92, Repeat Penalty 1,1. Je nach Aufgabentyp anpassen.',
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'Testmethode: 50+ kreative Prompts für sechs Modelle',
+        content:
+          '**Der Test hielt Prompt-Set, Sampling-Einstellungen und Frontend konstant; nur das Modell wurde variiert.** Dieselben 50 Prompts in Belletristik, Dialog, Poesie und Weltenbau; Ausgaben nach derselben Rubrik je Aufgabentyp bewertet.',
+        items: [
+          '**Backend:** Ollama 0.5+ auf macOS und Linux; gleiche Kontextgrenzen je Modell; Q4_K_M-Quantisierung über alle sechs Picks (Q5_K_M für kleinere 32B–34B-Modelle, wo VRAM es erlaubte, ohne messbaren Unterschied in den Rubrik-Werten).',
+          '**Frontend:** Open WebUI für den Großteil des Tests (Chat-artige Arbeit); SillyTavern für die dialog- und Roleplay-intensive Teilmenge.',
+          '**Prompt-Set:** 50 Prompts aufgeteilt auf vier Aufgabentypen — Belletristik (15), Dialog (15), Poesie (10), Weltenbau (10). Jeder Prompt 3 Mal je Modell, um Varianz zu erfassen.',
+          '**Sampling:** Temperatur 0,95, Top-p 0,92, Repeat Penalty 1,1 als Ausgangspunkt; aufgabenspezifische Anpassungen in den Modell-Urteilen.',
+          '**Bewertungsrubrik:** Stimmkonsistenz, Prompt-Treue, Prosaqualität und Bereitschaft (hat das Modell als Belletristik gerahmte Szenen abgelehnt oder aufgeweicht?).',
+          '**Transparenz-Hinweis:** Werte als relative Ränge je Aufgabe, keine erfundenen absoluten Prozentwerte. „Bester Dialog" bedeutet konsistenter erster Platz auf dem Dialog-Teilset über die 3 Läufe.',
+          'Für Prompting-Techniken, die die kreative Ausgabe auf jedem Modell verbessern, siehe [Temperatur und Top-p](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) und [Persona-Prompting](/prompt-engineering/persona-prompting?lang=de).',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Kreativ-Schreib-Benchmarks sind von Natur aus subjektiv. Die obige Rubrik (Stimmkonsistenz, Prompt-Treue, Prosaqualität, Bereitschaft) ist die nächste Annäherung an wiederholbare Bewertung. Behandle die Urteile als Ausgangshypothesen, die du an deiner eigenen Arbeit überprüfst.',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Direktvergleich: Sechs lokale Modelle bei kreativen Aufgaben',
+        content:
+          '**Llama 3.3 70B führt bei der breitesten Aufgabenpalette; die kleineren und spezialisierten Modelle gewinnen je ein oder zwei Kategorien.** Nach Aufgabentyp wählen, nicht nach Gesamtranking.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Llama 3.3 70B ist das stärkste Allround-Kreativmodell; Qwen3 32B die leichtere Alternative; Mistral Large gewinnt Langform; Command R+ gewinnt Dialog; Yi-1.5 gewinnt Poesie; Hermes/Dolphin übernehmen Szenen, die die anderen ablehnen.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Kein einzelnes Modell ist in allem am besten. Llama 3.3 70B ist der sichere Standard, wenn die Hardware passt. Qwen3 32B ist die kluge Wahl auf einer 24-GB-GPU. Einen Spezialisten wählen (Mistral für Romane, Command R+ für Dialog, Yi-1.5 für Poesie), wenn ein Aufgabentyp die tragende Funktion im Werk übernimmt. Ein Uncensored-Derivat wählen, wenn das Instruct-Modell Szenen ablehnt, die du schreiben musst.',
+          },
+        ],
+        columns: ['Modell', 'Größe', 'VRAM (Q4_K_M)', 'Belletristik', 'Dialog', 'Poesie', 'Weltenbau', 'Ideal für'],
+        rows: [
+          { 'Modell': 'Llama 3.3 70B', 'Größe': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Belletristik': 'Bester', 'Dialog': 'Stark', 'Poesie': 'Stark', 'Weltenbau': 'Bester', 'Ideal für': 'Bester Allrounder; Standard wenn Hardware ausreicht' },
+          { 'Modell': 'Qwen3 32B', 'Größe': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'Belletristik': 'Stark', 'Dialog': 'Stark', 'Poesie': 'OK', 'Weltenbau': 'Stark', 'Ideal für': '24-GB-System-Standard; geringer Qualitätsverlust vs. Llama 70B' },
+          { 'Modell': 'Mistral Large', 'Größe': '123B', 'VRAM (Q4_K_M)': '~75 GB', 'Belletristik': 'Stark (Langform)', 'Dialog': 'Stark', 'Poesie': 'OK', 'Weltenbau': 'Stark', 'Ideal für': 'Langform-Kontinuität, 128K-Kontext' },
+          { 'Modell': 'Command R+', 'Größe': '104B', 'VRAM (Q4_K_M)': '~62 GB', 'Belletristik': 'Stark', 'Dialog': 'Bester', 'Poesie': 'OK', 'Weltenbau': 'Stark', 'Ideal für': 'Dialogintensive Werke, Gruppenszenen' },
+          { 'Modell': 'Yi-1.5 34B', 'Größe': '34B', 'VRAM (Q4_K_M)': '~21 GB', 'Belletristik': 'OK', 'Dialog': 'OK', 'Poesie': 'Bester', 'Weltenbau': 'OK', 'Ideal für': 'Poesie, lyrische Prosa, stilisierte Texte' },
+          { 'Modell': 'Hermes 3 / Dolphin 3.0', 'Größe': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', 'Belletristik': 'Wie Basismodell', 'Dialog': 'Wie Basismodell', 'Poesie': 'Wie Basismodell', 'Weltenbau': 'Wie Basismodell', 'Ideal für': 'Szenen, die Instruct-Modelle ablehnen' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Zwei-Modell-Setup ist das gängige Muster: Llama 3.3 70B (oder Qwen3 32B) als täglicher Treiber, plus das Hermes-3-Derivat im selben Ollama für Szenen, die die Instruct-Version ablehnt. Zwischen ihnen je Szene wechseln; beide können gleichzeitig in `ollama list` liegen ohne Konflikt.',
+          },
+        ],
+      },
+      verdicts: {
+        id: 'verdicts',
+        title: 'Modell-Urteile',
+        items: [
+          '**Llama 3.3 70B** — bester Allrounder. Stärkste Stimmkonsistenz im Test; Charaktere behalten dieselben Sprachmuster über lange Szenen. Folgt Anweisungen präzise — wenn der System-Prompt POV, Ton oder Genre-Konventionen vorgibt, hält Llama 3.3 diese ein. Bearbeitet dunkle Themen ohne Ablehnung, wenn der Prompt die Arbeit als Belletristik kennzeichnet. Schwachpunkt: lange Passagen driften gelegentlich in einen generischen „literarischen" Stil; kleine Modelle in derselben Familie (8B) verlieren diese Stärke.',
+          '**Qwen3 32B** — bestes 24-GB-System-Modell. Leicht geringere Stimmkonsistenz als Llama 3.3 70B, aber der Abstand ist klein genug, dass die meisten Autoren ihn bei prosaschwerem Schreiben nicht bemerken. Stärkstes der kleineren Modelle beim Anweisungsfolgen. Schwachpunkt: Poesie und stilisierte Prosa bleiben merklich hinter der Konkurrenz; für diese auf Yi-1.5 wechseln.',
+          '**Mistral Large** — beste Langform-Kontinuität. 128K-Kontextfenster bedeutet, ein 50.000-Wörter-Entwurf passt ohne Kürzung; das Modell hält Charakterdetails, Handlungsfäden und Weltregeln über Kapitel hinweg. Schwachpunkt: höchste Hardware-Anforderung im Set (~75 GB bei Q4_K_M); Token-Geschwindigkeit sinkt bei langen Eingaben. Mistral La Plateforme auf EU-Infrastruktur nutzen, wenn lokale Hardware der Engpass ist.',
+          '**Command R+ 104B** — bester Dialog. Eigenständige Charakterstimmen, die über Exchanges hinweg bestehen; Gruppenszenen (3+ Sprecher) bleiben lesbar ohne den „alle klingen gleich"-Fehler, der bei anderen Modellen häufig vorkommt. Schwachpunkt: Prosaabsätze zwischen Dialog-Beats sind kompetent, aber nicht lyrisch; für rein beschreibende Passagen gewinnt Llama 3.3.',
+          '**Yi-1.5 34B** — beste Poesie und lyrische Prosa. Rhythmusbewusst, sicher in strukturierten Formen (Sonett, Villanelle, Haiku), erzeugt Verse, die sich gegenüber den größeren Allgemeinmodellen behaupten. Schwachpunkt: Langform-Belletristik ist kompetent, aber nicht seine Stärke; für narrative Arbeit Llama 3.3 oder Qwen3 wählen.',
+          '**Hermes 3 (Llama-3.3-Basis) und Dolphin 3.0** — Uncensored-Derivate. Gleiche Architektur und Basisgewichte wie Llama 3.3 70B; die RLHF-Sicherheitsschicht wird beim Fine-tuning entfernt. Das Modell folgt dem Prompt statt reife Inhalte abzulehnen oder zu entschärfen. Qualität bei nicht-reifen Prompts ist identisch mit dem Basismodell; der Unterschied ist nur bei Prompts sichtbar, bei denen Instruct-Versionen ablehnen. Diese verwenden, wenn die Arbeit es erfordert (reife Belletristik, Gewaltszenen, moralisch komplexe Charaktere) — ansonsten beim Instruct-Basismodell bleiben.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Stimmkonsistenz ist die Metrik, die Autoren bei der frühen Modellbewertung am stärksten unterschätzen. Ein Modell, das bei einem einzelnen Absatz brillante Prosa erzeugt, aber bis Absatz 5 die Sprachmuster des Charakters verliert, ist schlechter als ein Modell, das kompetente Prosa mit konsistenter Stimme über 20 Absätze produziert. Langzeit-Session-Kontinuität testen, nicht nur One-Shot-Qualität.',
+          },
+        ],
+      },
+      sampleOutputs: {
+        id: 'sample-outputs',
+        title: 'Beispielausgaben: Drei Modelle, ein Prompt',
+        content:
+          '**Gemeinsamer Prompt:** "Open a noir scene where the detective enters a rain-soaked diner at 2 AM." Gleiche Temperatur (0,95), gleiches Top-p (0,92), gleicher Repeat Penalty (1,1) — nur das Modell ändert sich. Die folgenden Auszüge sind repräsentativ für die typische Ausgabe jedes Modells bei dieser Prompt-Klasse über drei Läufe.',
+        items: [
+          '**Llama 3.3 70B** — "The bell above the door chimed twice and went silent. Rain ran down my coat in sheets, pooling on the linoleum before I\'d taken three steps…" — *Konkrete sensorische Verankerung, aktive Stimme, keine Füllwörter. Die soziale Szene wird in drei Sätzen etabliert.*',
+          '**Qwen3 32B** — "I pushed through the door into a wall of cigarette smoke and griddle grease. The diner was half-empty and fully quiet…" — *Beobachtende Einleitung vor Aktion; effiziente Atmosphäre. Leicht strukturierter als Llama 3.3, aber ebenso präzise.*',
+          '**Yi-1.5 34B** — "Rain hammered the awning with the regularity of a metronome counting out the last hours of a night no one wanted to remember…" — *Metapher-geführt ab der ersten Klausel; rhythmische Satzvariation; dichtere Bildsprache. Yi-1.5\'s Poesie-Hintergrund zeigt sich auch in der Prosa.*',
+        ],
+        columns: ['Modell', 'Typische Einleitung', 'Typisches Beschreibungsmuster'],
+        rows: [
+          { 'Modell': 'Llama 3.3 70B', 'Typische Einleitung': 'Aktion zuerst, sofortiges Sinnesdetail', 'Typisches Beschreibungsmuster': 'Konkret und physisch; vermeidet abstrakte Substantive; sozial verankert' },
+          { 'Modell': 'Qwen3 32B', 'Typische Einleitung': 'Umgebungsbeobachtung vor Charakteraktion', 'Typisches Beschreibungsmuster': 'Effizient; soziales/atmosphärisches Detail; leichtes strukturelles Anzeichen' },
+          { 'Modell': 'Yi-1.5 34B', 'Typische Einleitung': 'Metapher oder Vergleich ab der ersten Klausel', 'Typisches Beschreibungsmuster': 'Abstrakte Bildsprache; rhythmische Variation; dichter; gelegentliche Überladenheit' },
+          { 'Modell': 'Command R+ 104B', 'Typische Einleitung': 'Charakterstimme oder dialognahe Einleitung', 'Typisches Beschreibungsmuster': 'Konversationell; starke eigenständige Stimme; schwächere Solo-Beschreibung' },
+          { 'Modell': 'Mistral Large', 'Typische Einleitung': 'Szenenaufbau-Absatz; langsamerer Start', 'Typisches Beschreibungsmuster': 'Ausgeglichen und kontrolliert; konsistent über lange Passagen; leicht generisch' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Diese Auszüge illustrieren die Tendenzen jedes Modells über mehrere Läufe — keine Rosinenpickerei. Yi-1.5 34B\'s "losing arguments with entropy" erschien in einem von drei Läufen; die anderen beiden waren direkter. Jedes Modell 2–3 Mal auf demselben Prompt laufen lassen und den Auszug nehmen, der zur Szene passt.',
+          },
+        ],
+      },
+      sampling: {
+        id: 'sampling',
+        title: 'Temperatur und Top-P für kreative Arbeit',
+        content:
+          '**Kreatives Schreiben braucht höhere Sampling-Temperaturen als Coding.** Die Standard-Sampling-Parameter der meisten Chat-UIs sind für Frage-Antwort optimiert, nicht für Prosa — Temperatur 0,7 und Top-p 0,9 erzeugen flache, vorhersehbare Ausgaben bei kreativen Prompts.',
+        items: [
+          '**Ausgangspunkt für Prosa:** Temperatur 0,95, Top-p 0,92, Repeat Penalty 1,1. Startpunkt für die meisten Belletristik-, Dialog- und Weltenbau-Arbeiten. Von hier aus je Aufgabe anpassen.',
+          '**Enger Dialog:** Temperatur 0,7–0,85, Top-p 0,9. Niedrigere Temperaturen halten Charakterstimmen über Exchanges konsistent; höhere Werte erzeugen Out-of-Character-Einwürfe.',
+          '**Lyrische Prosa und Poesie:** Temperatur 1,0–1,2, Top-p 0,95. Höhere Temperaturen ermöglichen unerwartete Wortwahlen, die Verse zum Funktionieren bringen.',
+          '**Surreale oder Genre-Belletristik:** Temperatur 1,1–1,3, Top-p 0,95–0,98. Treibt das Modell zu weniger gebräuchlichen Bild- und Metaphern-Kombinationen.',
+          '**Plot-gesteuerte Szenen (Action, Mystery, Wendungen):** Temperatur 0,85–0,95, Top-p 0,9. Braucht mehr Anweisungsfolgen als Neuheit.',
+          '**Repeat Penalty 1,1–1,15** ist der richtige Bereich für die meisten kreativen Arbeiten. Höher (1,2+) lässt das Modell Wörter meiden, selbst wenn Wiederholung stilistisch gewollt ist; niedriger (1,0–1,05) lässt es bei langen Szenen in Schleifen fallen.',
+          '**min_p (0,05–0,1):** Eine neuere Alternative zu Top-p, die den Wahrscheinlichkeits-Cutoff relativ zur Peak-Token-Wahrscheinlichkeit dynamisch skaliert. Für kreative Prompts permissiver als Top-p 0,9, ohne das Inkoherenz-Risiko sehr hoher Top-p-Werte. Der empfohlene Standard für SillyTavern- und KoboldCpp-Nutzer 2026, wenn die Oberfläche ihn zugänglich macht.',
+          '**DRY Repetition Penalty (Multiplikator 0,8, Basis 1,75, erlaubte Länge 2):** Erkennt Phrasen-Wiederholungen, die der Standard-Repeat_Penalty übersieht. Wo repeat_penalty einzelne Token verfolgt, verfolgt DRY n-Gramm-Sequenzen. Nützlich für lange Sessions, bei denen das Modell aus seiner eigenen Ausgabe schöpft.',
+          '**Modernes Kreativschreiben-Baseline (2026):** Temperatur 0,95, min_p 0,05, DRY-Multiplikator 0,8 (Basis 1,75, erlaubte Länge 2). Top-p 0,92 funktioniert weiterhin gut, wenn das Frontend min_p oder DRY nicht anbietet.',
+          'Für eine tiefere Behandlung dieser Parameter und ihrer Wechselwirkungen, siehe [Temperatur und Top-p](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Sampling-Einstellungen an einer einzelnen kurzen Szene je Modell testen — drei Läufe bei jeder Einstellung, dann die Temperatur wählen, bei der das Modell am lebendigsten klingt, ohne den Prompt zu verlieren. Einstellungen, die bei Llama 3.3 70B funktionieren, lassen sich nicht perfekt auf Mistral Large oder Yi-1.5 übertragen; je Modell kalibrieren.',
+          },
+        ],
+      },
+      uncensored: {
+        id: 'uncensored',
+        title: 'Uncensored-Modelle: Was sie sind und wann sie relevant sind',
+        content:
+          '**Uncensored bedeutet nicht unethisch.** Es bedeutet, dass die Instruction-Tuning-Sicherheitsschicht (RLHF-Ablehnungen) des Modells entfernt oder umgangen wurde, sodass das Modell dem Prompt folgt statt abzulehnen oder zu entschärfen. Der Autor trägt weiterhin die Verantwortung; das Tool hört auf, im Weg zu stehen.',
+        items: [
+          '**Was „uncensored" technisch bedeutet.** Modelle wie Hermes 3 und Dolphin 3.0 sind Fine-tuned-Varianten von Basismodellen (Llama 3.3, Qwen3), bei denen der Post-Training-RLHF-Pass, der Ablehnungen bei reifen, gewaltsamen oder moralisch komplexen Prompts erzeugt, durch ein Fine-tune ersetzt wurde, das dem Prompt folgt. Gleiche Architektur, gleiche Basisgewichte, anderes Post-Training.',
+          '**Wann sie für kreative Arbeit relevant sind.** Reife Belletristik (Literaturromane mit Sexszenen, Crime-Fiction mit grafischer Gewalt, Horror), historisch genaues Schreiben (Krieg, Gräueltaten), moralisch komplexe Charaktere und Roleplay-Szenarien, die Instruct-Modelle nicht ausführen.',
+          '**Wo sie versagen.** Sie folgen dem Prompt — einschließlich schlecht geschriebener Prompts. Instruct-Modelle entschärfen vage Prompts oft zu etwas Veröffentlichbarem; Uncensored-Modelle geben genau das, was gefragt wurde, was manchmal schlechter ist. Die Anweisungen des Autors sind entscheidender.',
+          '**Ethische Grenzen.** „Das Modell schreibt es" ist keine Kreativlizenz für Inhalte, die reale Personen zum Ziel haben, nicht-einvernehmliche Szenarien mit realen oder identifizierbaren Personen darstellen oder in der Jurisdiktion des Autors illegal sind. Lokales Hosting ändert nicht das Recht; es ändert, wer den Entwurf sieht.',
+          '**Rechtlicher Kontext (Mai 2026, kurz und nicht abschließend).** EU-KI-Gesetz und mitgliedstaatliche Gesetze (insbesondere §184/§184c StGB in Deutschland) regeln spezifische Inhaltskategorien unabhängig vom Entstehungsort. US-Obszönitätsrecht gilt für die Veröffentlichung, nicht die Generierung. Für kommerzielle Veröffentlichungen ist das Modell irrelevant; das veröffentlichte Artefakt ist das, was reguliert wird.',
+          '**Für eine längere Behandlung** von Uncensored-Modell-Ethik, rechtlichem Kontext und Best Practices, siehe [Uncensored Local LLMs für kreatives Schreiben](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=de).',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Uncensored ist eine Workflow-Entscheidung, keine Identität. Viele Autoren verwenden das Instruct-Modell für den Großteil eines Projekts und wechseln für spezifische Szenen, die die Instruct-Version ablehnt, zum Uncensored-Derivat. Zwei Modell-Installs in derselben Ollama-Installation ist das gängige Muster.',
+          },
+        ],
+      },
+      frontends: {
+        id: 'frontends',
+        title: 'Frontends für kreative Arbeit',
+        content:
+          '**Das Chat-UI, in dem du schreibst, ist genauso wichtig wie das Modell.** Drei Frontends sind 2026 glaubwürdige Picks für Kreativschreib-Workflows; nach Workflow-Form wählen.',
+        items: [
+          '**Open WebUI** — der Allzweck-Pick. ChatGPT-ähnliche Oberfläche, Modellwechsel per Klick, Charakterkarten über System-Prompts, Dokument-Upload für Kontext. Bestes für prosaschweree Arbeit, bei der die Chat-Form zum Entwurfsfluss passt.',
+          '**SillyTavern** — der Roleplay- und Dialog-Pick. Charakterkarten-Ökosystem (Tavern v2 Spec), Persona-Verwaltung, Lore Books für Weltenbau, Gruppen-Chat für Mehrfigurenszenen. Bestes für dialoggetriebene Arbeit und langfristige Charakter- oder Weltenprojekte. Passt gut zu Command R+ und Uncensored-Derivaten.',
+          '**Agnai und RisuAI** — engere SillyTavern-Alternativen. Schlankere Feature-Sets, einfacherer Einstieg, weniger Anpassung. Wählen, wenn SillyTavern für den eigenen Workflow überdimensioniert wirkt.',
+          '**Plain Ollama CLI plus Texteditor** — der minimale Pick. `ollama run llama3.3:70b` und Szenen über das Terminal in das Entwurfsdokument leiten. Verliert den persistenten Charakterkontext, gewinnt aber an Schreibfokus.',
+          'Für den Direktvergleich der Roleplay-fokussierten Frontends, siehe [SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=de).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Entwurf und Überarbeitung brauchen unterschiedliche Frontends. SillyTavern für die Generierung (Charakterstimme, Szenenarbeit) nutzen, dann den Chat in einen Nur-Text-Editor exportieren. Überarbeitung im Chat-Fenster fördert die Gewohnheit, das Modell Prosa korrigieren zu lassen, statt selbst zu überarbeiten — ein langfristiges Stilrisiko.',
+          },
+        ],
+      },
+      decision: {
+        id: 'decision',
+        title: 'Entscheidungshilfe: Welches Modell für deine Arbeit',
+        content:
+          '**Fünf Fragen, in dieser Reihenfolge, führen die meisten Autoren zur richtigen Wahl.**',
+        columns: ['Meine Situation', 'Empfehlung'],
+        rows: [
+          { 'Meine Situation': 'Ich habe 48+ GB VRAM und möchte ein Modell für alles', 'Empfehlung': 'Llama 3.3 70B (Instruct) + Hermes 3 (Uncensored) im selben Ollama' },
+          { 'Meine Situation': 'Ich habe eine 24-GB-GPU oder einen 32-GB-Mac und möchte einen starken Standard', 'Empfehlung': 'Qwen3 32B' },
+          { 'Meine Situation': 'Ich schreibe an einem Roman — Langform-Kontinuität ist die Priorität', 'Empfehlung': 'Mistral Large (oder Mistral La Plateforme auf EU-Hardware, wenn lokal nicht möglich)' },
+          { 'Meine Situation': 'Mein Werk ist dialogintensiv — Charakterstimmen müssen unterscheidbar bleiben', 'Empfehlung': 'Command R+ 104B (oder Llama 3.3 70B als leichtere Alternative)' },
+          { 'Meine Situation': 'Ich schreibe Gedichte, Verse oder lyrische Prosa', 'Empfehlung': 'Yi-1.5 34B' },
+          { 'Meine Situation': 'Das Instruct-Modell lehnt Szenen ab, die ich schreiben muss', 'Empfehlung': 'Hermes 3 (Llama-3.3-Basis) oder Dolphin 3.0 — Instruct-Version für reguläre Arbeit installiert lassen' },
+          { 'Meine Situation': 'Ich möchte mit einem Modell starten und dann anpassen', 'Empfehlung': 'Qwen3 32B — deckt die meisten Workflows auf Consumer-Hardware ab; wechseln, wenn ein Aufgabentyp zum Schwerpunkt wird' },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen3 32B als Standard wählen auf einer 24-GB-GPU; Llama 3.3 70B bei 48 GB+; Mistral Large für Novel-Länge; Command R+ für Dialog; Yi-1.5 für Poesie; Hermes/Dolphin für Szenen, die Instruct-Modelle ablehnen.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Qwen3 32B ist das richtige Einstiegsmodell für die meisten Autoren. Zu einem Spezialisten wechseln, wenn ein bestimmter Aufgabentyp (Langform, Dialog, Poesie, reife Szenen) zum Engpass wird. Zwei Installs (Instruct + Uncensored) auf derselben Maschine kosten nichts — beide können in Ollama liegen und man wechselt je Szene.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die meisten Autoren denken zu viel über das Modell nach und zu wenig über den Prompt. Ein sorgfältig gestalteter System-Prompt mit Charakternotizen, Stimmproben und explizitem POV tut mehr für die Ausgabe als der Wechsel von Qwen3 zu Llama 70B. Siehe [Persona-Prompting](/prompt-engineering/persona-prompting?lang=de) für die Prompt-Struktur, die kreative Ausgaben konsistent verbessert.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler bei der Wahl und Nutzung lokaler Modelle für kreatives Schreiben',
+        items: [
+          '**Fehler 1: dem größten Modell auf Benchmarks nachjagen.** Kreativschreib-Wertungen korrelieren schlecht mit allgemeinen Benchmark-Leaderboards. Yi-1.5 34B schlägt Llama 3.3 70B bei Poesie; Command R+ schlägt beide bei Dialog. Nach Aufgabe wählen, nicht nach Leaderboard-Rang.',
+          '**Fehler 2: Coding-Sampling-Einstellungen verwenden.** Temperatur 0,2–0,4 erzeugt flache, vorhersehbare Prosa. Kreatives Schreiben braucht 0,8–1,1 mit Top-p 0,9–0,95. Die Standardeinstellungen der meisten Chat-UIs sind für Q&A optimiert, nicht für Prosa.',
+          '**Fehler 3: beim Instruct-Modell bleiben und aufgeben, wenn es ablehnt.** Die Instruct-Version lehnt Szenen ab, die explizit als Belletristik gerahmt wurden; das Uncensored-Derivat desselben Basismodells schreibt sie. Zwei Installs in Ollama ist die Lösung.',
+          '**Fehler 4: dünne System-Prompts.** „Du bist ein hilfreicher Assistent" ist der schlechtestmögliche Prompt für kreative Arbeit. Ein System-Prompt mit Charakternotizen, Stimmproben, POV, Tempus und Ton tut mehr für die Ausgabequalität als jeder Modellwechsel. Mit [Negativem Prompting](/prompt-engineering/negative-prompting?lang=de) kombinieren, um vorzugeben, was NICHT zu schreiben ist.',
+          '**Fehler 5: im Chat-Fenster überarbeiten.** Im Chat generieren ist fine; im Chat überarbeiten trainiert die Gewohnheit, das Modell Prosa korrigieren zu lassen statt selbst zu überarbeiten. Den Entwurf in einen Texteditor exportieren; die Autorenstimme wird stärker, wenn das Modell nicht im Überarbeitungsprozess ist.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Das größte Stilrisiko beim KI-gestützten Kreativschreiben ist das Auslagern des Überarbeitungspasses. Generierung ist mechanische Arbeit, die vom Modell profitiert; Überarbeitung ist der Teil, der die Prosa zum eigenen Werk macht. Autoren, die das Modell überarbeiten lassen, verlieren schnell an Stimme — selbst wenn sie nicht sagen können, welche Zeile sich verändert hat.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          '[Hugging Face Modellkarten für Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5](https://huggingface.co/) — offizielle Modelldokumentation und Lizenzen.',
+          '[Hermes 3 (NousResearch) GitHub und Modellkarte](https://huggingface.co/NousResearch) — Uncensored Llama-3.3-basierte Fine-tunes.',
+          '[Dolphin 3.0 (Cognitive Computations) Modellkarten](https://huggingface.co/cognitivecomputations) — Uncensored Fine-tunes über mehrere Basismodelle.',
+          '[Ollama Model Library](https://ollama.com/library) — verfügbare Modelle, Quantisierungsoptionen, Tool-Call-Support-Flags.',
+          '[SillyTavern-Dokumentation](https://docs.sillytavern.app/) — Charakterkarten-Spec, Persona-System, Gruppen-Chat-Features.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Welches lokale LLM eignet sich 2026 am besten für Belletristik?',
+            a: 'Llama 3.3 70B ist der beste Allrounder, wenn die Hardware passt (~42 GB VRAM bei Q4_K_M). Auf 24-GB-Systemen ist Qwen3 32B der leichtere Standard mit geringem Qualitätsverlust bei prosaschwerem Schreiben. Für Langform-Kontinuität (Romane) ist Mistral Larges 128K-Kontext der Differenziator. Nach Aufgabentyp wählen: die meisten Autoren profitieren mehr vom richtigen Spezialisten als vom größten Modell.',
+          },
+          {
+            q: 'Was ist ein Uncensored lokales LLM und wann sollte ich es verwenden?',
+            a: 'Ein Uncensored-Modell ist ein Fine-tune eines bestehenden Basismodells (typischerweise Llama 3.3 oder Qwen3), bei dem die RLHF-Sicherheitsschicht, die Ablehnungen bei reifen oder moralisch komplexen Prompts erzeugt, entfernt wurde. Das Modell folgt dem Prompt statt abzulehnen. Uncensored-Derivate (Hermes 3, Dolphin 3.0) für reife Belletristik, Konfliktszenen, historisch genaues Schreiben oder Workflows verwenden, bei denen das Instruct-Modell als Belletristik gerahmte Szenen ablehnt. Der Autor ist weiterhin der Urheber; das Modell hört auf, im Weg zu stehen.',
+          },
+          {
+            q: 'Welche Temperatur sollte ich für kreatives Schreiben verwenden?',
+            a: 'Temperatur 0,8–1,1 ist der kreative Schreibbereich, gepaart mit Top-p 0,9–0,95. Enger Dialog braucht 0,7–0,85; lyrische Prosa und Poesie 1,0–1,2; surreale oder Genre-Arbeit 1,1–1,3. Die Standards der meisten Chat-UIs (oft 0,7 mit Top-p 0,9) sind für Frage-Antwort optimiert und erzeugen flache Prosa bei kreativen Prompts. An einer kurzen Szene bei 3 Einstellungen testen, dann die wählen, bei der das Modell am lebendigsten klingt.',
+          },
+          {
+            q: 'Sind lokale Kreativschreib-Modelle so gut wie ChatGPT oder Claude?',
+            a: 'Für die meisten Prompts ja — nah genug, dass Datenschutz- und Kostenvorteile dominieren. Die Frontier-Cloud-Modelle führen noch bei den schwersten kreativen Aufgaben (Langform-Kohärenz über 50.000 Token, sehr obskure kulturelle Referenzen, seltene Sprachen). Für eine typische Belletristik- oder Roleplay-Session wird ein Autor, der Sampling-Einstellungen auf Llama 3.3 70B oder Qwen3 32B kalibriert hat, keine konsistenten Qualitätslücken gegenüber GPT-5 oder Claude feststellen.',
+          },
+          {
+            q: 'Kann ein lokales Modell einen vollständigen Roman schreiben?',
+            a: 'Es kann beim Entwurf helfen. Mistral Large mit 128K-Kontext kann einen 50.000-Wörter-Entwurf im Speicher halten; Llama 3.3 70B und Qwen3 32B bei 32K-Kontext brauchen abschnittsweises Entwerfen. Der Engpass ist nicht die Modellkapazität — es ist die Struktur des Autors (Gliederung, Charakterbibel, Lore Book), die das Modell für Kontinuität nutzt.',
+          },
+          {
+            q: 'Erzeugen Uncensored-Modelle illegale Inhalte?',
+            a: 'Nicht mehr als Instruct-Modelle. Beide erzeugen Text, den der Prompt verlangt; Uncensored-Modelle sind bereitwilliger bei reifen Themen, die die Instruct-Sicherheitsschicht ablehnt. Rechtliche Haftung trifft den Autor und die Veröffentlichung, nicht das Modell. EU-KI-Gesetz, §184/§184c StGB und US-Obszönitätsrecht regeln spezifische Inhaltskategorien unabhängig von der Generierungsmethode.',
+          },
+          {
+            q: 'Ist SillyTavern nur für Adult-Roleplay?',
+            a: 'Nein. SillyTavern ist ein chat-fokussiertes Frontend mit Charakterkarten, Persona-Verwaltung und Lore Books — nützlich für jede dialog-intensive oder charaktergetriebene Arbeit. Viele Autoren nutzen es für nicht-Roleplay-Belletristik (Mehrfigurenszenen, Stimmkonsistenz über lange Projekte). Das Charakterkarten-Ökosystem enthält Adult-Inhalte, ist aber nicht darauf beschränkt.',
+          },
+          {
+            q: 'Wie unterscheidet sich lokales Kreativschreiben von Coding-Workloads?',
+            a: 'Sampling-Einstellungen und Prompt-Struktur. Coding braucht Temperatur 0,2–0,4, deterministische Ausgabe, strukturierte (JSON, Code) Ausgabe und explizite Einschränkungen im Prompt. Kreatives Schreiben braucht Temperatur 0,8–1,1, freiere Ausgabe, Prosaform und reichhaltigere System-Prompts (Charakterstimme, POV, Ton, Genre-Konventionen). Dasselbe Modell — Llama 3.3 70B dient beiden — erzeugt wildly unterschiedliche Ausgaben je nach diesen Einstellungen.',
+          },
+          {
+            q: 'Welches lokale Modell hat die wenigsten „KI-Tells"?',
+            a: 'KI-Tells — Phrasen wie „ein Schauder lief ihr den Rücken hinunter", „Geflecht", „erkunden" und ChatGPT-artige Zusammenfassungsübergänge — sind bei kleineren Instruct-Modellen häufiger. Llama 3.3 70B und Qwen3 32B haben weniger Tells als Modelle unter 20B. Hermes 3 hat die wenigsten in diesem Set. Der wirksamste Hebel zur Tell-Reduktion ist der System-Prompt mit negativen Beispielen, nicht das Modell.',
+          },
+          {
+            q: 'Wie vermeidet man Klischees wie „ein Schauder lief ihr den Rücken hinunter"?',
+            a: 'Ein System-Prompt mit negativen Beispielen ist der wirksamste Hebel — 8–12 verbannte Phrasen explizit auflisten. Die Temperatur leicht senken (0,85–0,95 statt 1,1), um die Neigung zu Standardformulierungen zu reduzieren. Repeat Penalty 1,1 allein reicht NICHT — die Phrasen sind keine exakten Token-Wiederholungen. DRY-Penalty (Multiplikator 0,8, Basis 1,75) erkennt sie auf n-Gramm-Ebene über Szenen hinweg. Ein manueller Überarbeitungsdurchgang ist der letzte Filter. Siehe [Negatives Prompting](/prompt-engineering/negative-prompting?lang=de).',
+          },
+          {
+            q: 'Muss ich bei der Nutzung lokaler LLMs für kreatives Schreiben die DSGVO beachten?',
+            a: 'Für rein lokale Generierung auf dem eigenen Gerät ist die DSGVO-Relevanz minimal: Keine personenbezogenen Daten werden an externe Auftragsverarbeiter übermittelt, da das Modell vollständig lokal läuft. Relevant wird die DSGVO, wenn deine Belletristik reale, identifizierbare Personen verwendet oder wenn du KI-generierte Inhalte auf Plattformen veröffentlichst, die personenbezogene Daten verarbeiten. In diesen Fällen gelten die üblichen Datenschutzpflichten — nicht aufgrund des Modells, sondern aufgrund der Verarbeitung und Veröffentlichung.',
+          },
+          {
+            q: 'Welche deutschen Gesetze gelten beim Schreiben von Belletristik mit Uncensored-Modellen?',
+            a: 'Zwei Paragrafen sind besonders relevant: §184b StGB (Kinderpornografie) — absolutes Verbot, gilt auch für KI-generierte Inhalte und fiktionale Rahmungen; §184c StGB (Jugendpornografie) — ebenfalls absolutes Verbot. „Lokal generiert" oder „Fiktion" ist in keinem dieser Fälle eine Verteidigung. Für Belletristik, die keine Minderjährigen in sexuellen Kontexten, keine identifizierbaren realen Personen in NCII-Szenarien und keine Aufstachelung enthält, ist lokale Generierung rechtlich vergleichbar mit dem Schreiben mit jedem anderen Werkzeug.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Literatur',
+        items: [
+          '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend (2026)](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=de) — Direktvergleich der drei Roleplay-fokussierten Frontends mit den obigen Modellen.',
+          '[Lokale LLM-Prompts für Belletristik-Autoren: Vorlagen & Techniken](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=de) — kopierfertige Prompt-Vorlagen für Charakterentwicklung, Dialog, Weltenbau und Überarbeitungs-Workflows.',
+          '[Uncensored Local LLMs für kreatives Schreiben: Ethik, Recht & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=de) — wann Uncensored-Derivate legitime kreative Werkzeuge sind und wo die rechtlichen und ethischen Grenzen liegen.',
+          '[Temperatur und Top-P: KI-Kreativität steuern](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) — die Prompt-Engineering-Seite der Sampling-Parameter; tiefer als die Zusammenfassung in diesem Leitfaden.',
+          '[Negatives Prompting](/prompt-engineering/negative-prompting?lang=de) — vorgeben, was NICHT im Prompt stehen soll; ein Kraft-Multiplikator für System-Prompts bei kreativer Arbeit.',
+          '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) — der maßgebliche Modell-Landscape-Leitfaden; nützlich, wenn du über die sechs Kreativschreib-Picks hinaus erkunden möchtest.',
+        ],
+      },
+    },
+  },
 }
