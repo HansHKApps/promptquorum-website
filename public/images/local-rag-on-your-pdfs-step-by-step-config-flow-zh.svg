@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="27" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">第4步：连接 AnythingLLM 至 Ollama（3分钟）</text>
+
+  <!-- Left panel: LLM偏好面板 -->
+  <rect x="18" y="42" width="367" height="228" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="42" width="367" height="4" rx="0" fill="#6750A4"/>
+  <text x="201" y="68" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">① LLM偏好面板</text>
+  <text x="201" y="86" font-size="10" fill="#79747E" text-anchor="middle">AnythingLLM 设置 → LLM偏好</text>
+
+  <text x="36" y="110" font-size="11" font-weight="700" fill="#1C1B1F">提供者</text>
+  <text x="110" y="110" font-size="11" fill="#49454F">Ollama</text>
+  <text x="36" y="131" font-size="11" font-weight="700" fill="#1C1B1F">端点</text>
+  <text x="110" y="131" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F">http://127.0.0.1:11434</text>
+  <text x="36" y="152" font-size="11" font-weight="700" fill="#1C1B1F">模型</text>
+  <text x="110" y="152" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F">llama3.3:8b-instruct-q4_K_M</text>
+
+  <line x1="36" y1="166" x2="367" y2="166" stroke="#E8DEF8" stroke-width="1"/>
+
+  <rect x="60" y="176" width="282" height="28" rx="4" fill="#6750A4"/>
+  <text x="201" y="194" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">→ "保存更改"</text>
+
+  <text x="201" y="226" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">✓ 绿色对勾 = 连接已确认</text>
+  <text x="201" y="244" font-size="10" fill="#79747E" text-anchor="middle">Windows 上使用 127.0.0.1 而非 localhost</text>
+
+  <!-- Arrow between panels -->
+  <text x="400" y="162" font-size="22" fill="#6750A4" text-anchor="middle">→</text>
+  <text x="400" y="180" font-size="10" fill="#79747E" text-anchor="middle">然后</text>
+
+  <!-- Right panel: 嵌入偏好面板 -->
+  <rect x="415" y="42" width="367" height="228" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="415" y="42" width="367" height="4" rx="0" fill="#34A853"/>
+  <text x="598" y="68" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">② 嵌入偏好面板</text>
+  <text x="598" y="86" font-size="10" fill="#79747E" text-anchor="middle">AnythingLLM 设置 → 嵌入偏好</text>
+
+  <text x="433" y="106" font-size="11" font-weight="700" fill="#1C1B1F">先在终端运行：</text>
+  <text x="433" y="122" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4">ollama pull nomic-embed-text</text>
+  <text x="433" y="138" font-size="10" fill="#79747E">(~280 MB，仅需一次)</text>
+
+  <text x="433" y="157" font-size="11" font-weight="700" fill="#1C1B1F">提供者</text>
+  <text x="500" y="157" font-size="11" fill="#49454F">Ollama (从默认值更改)</text>
+  <text x="433" y="175" font-size="11" font-weight="700" fill="#1C1B1F">模型</text>
+  <text x="500" y="175" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F">nomic-embed-text:latest</text>
+
+  <line x1="433" y1="188" x2="775" y2="188" stroke="#E8DEF8" stroke-width="1"/>
+
+  <rect x="458" y="197" width="282" height="28" rx="4" fill="#34A853"/>
+  <text x="599" y="215" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">→ "保存"</text>
+
+  <text x="598" y="244" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">✓ 比默认嵌入器效果更好</text>
+
+  <!-- Footer -->
+  <line x1="18" y1="284" x2="782" y2="284" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="304" font-size="11" fill="#79747E" text-anchor="middle">向量数据库：保持默认 LanceDB — 无需配置</text>
+  <text x="400" y="323" font-size="10" fill="#79747E" text-anchor="middle">nomic-embed-text-v1.5：MTEB检索榜前5名（500 MB以内）· Apache 2.0 · 400–800 chunks/秒</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
