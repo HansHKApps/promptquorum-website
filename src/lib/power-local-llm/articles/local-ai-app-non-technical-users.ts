@@ -112,6 +112,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install this if you are: a parent who wants a private ChatGPT, a journalist on a budget laptop, a teacher demoing AI to students, or anyone whose first reaction to "open the terminal" is "what terminal?".',
           },
         ],
+        image: '/images/local-ai-nontechnical-gpt4all-install-steps-en.svg',
+        imageCaption: 'GPT4All 4-step install path: download ~290 MB from gpt4all.io, run installer, pick Llama 3.2 3B (2 GB download), start chatting — fully offline on any 8 GB laptop.',
       },
       jan: {
         id: 'jan',
@@ -132,6 +134,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install this if you are: an EU resident worried about GDPR, a journalist handling sources, a lawyer who cannot send drafts to cloud APIs, or anyone whose threat model includes "what does this app phone home with?".',
           },
         ],
+        image: '/images/local-ai-nontechnical-jan-privacy-features-en.svg',
+        imageCaption: 'Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, AGPL-auditable source, and fully offline operation after install.',
       },
       msty: {
         id: 'msty',
@@ -152,6 +156,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install this if you are: a designer who finds bare chat UIs ugly, a student who wants to compare two model answers side-by-side, or a writer who wants AI to read your notes folder out of the box.',
           },
         ],
+        image: '/images/local-ai-nontechnical-msty-ui-features-en.svg',
+        imageCaption: 'Msty feature matrix: split chat (unique to Msty) shows two models side-by-side; knowledge stacks (unique) pin documents to workspaces — free for personal use on Windows, macOS, and Linux.',
       },
       anythingllm: {
         id: 'anythingllm',
@@ -172,6 +178,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install this if you are: a small-business owner who wants to ask questions about a folder of contracts, a researcher with a "Papers To Read" folder, a grandparent who finds modern UIs confusing and prefers something that looks like Outlook.',
           },
         ],
+        image: '/images/local-ai-nontechnical-anythingllm-workspace-en.svg',
+        imageCaption: 'AnythingLLM Desktop workspace model: workspaces (left) hold documents (center) that the AI cites when answering chat questions (right) — all indexed locally, no cloud API required.',
       },
       lmStudio: {
         id: 'lm-studio',
