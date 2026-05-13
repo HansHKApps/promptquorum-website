@@ -107,6 +107,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM also has a built-in default LLM and a built-in default embedder. Both are deliberately tiny so the app starts fast on weak hardware. We replace both in Steps 4 and 6 because retrieval quality is the entire game in a RAG system.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-en.svg',
+        imageCaption: 'Local RAG stack: Ollama (runtime, localhost:11434), Llama 3.3 8B Q4_K_M (~4.9 GB, answer model), AnythingLLM Desktop (UI + LanceDB vector store), and nomic-embed-text-v1.5 (~280 MB embedder). Data flows: PDFs → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → Answer.',
       },
       prerequisites: {
         id: 'prerequisites',
@@ -120,6 +122,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Permissions:** No admin/root needed for AnythingLLM. Ollama installs to `/usr/local/bin` on macOS/Linux (asks for password once) or `%LOCALAPPDATA%` on Windows (no admin).',
           '**Documents ready:** 5–20 PDFs to start. Anything larger works, but a small set is faster to test retrieval quality on.',
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-en.svg',
+        imageCaption: 'System requirements: 16 GB RAM (floor for Llama 3.3 8B Q4 + AnythingLLM), 20 GB free disk, 50 Mbps for the model pull. macOS 12+, Windows 10/11, or Linux. No admin needed for AnythingLLM.',
       },
       step1InstallOllama: {
         id: 'step-1-install-ollama',
@@ -201,6 +205,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Why nomic-embed-text-v1.5 specifically? In May 2026 it scores in the top 5 of the MTEB Retrieval leaderboard for any model under 500 MB, runs at 400–800 chunks/sec on a modern CPU and 2000+ chunks/sec on Apple Silicon, and is Apache 2.0 licensed. It is the default first-upgrade for almost every local RAG stack — see the [embedding model comparison](/power-local-llm/best-embedding-models-local-rag-2026) for alternatives.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-en.svg',
+        imageCaption: 'Step 4 in two panels: LLM Preference (Provider = Ollama, Endpoint = http://127.0.0.1:11434, Model = llama3.3:8b-instruct-q4_K_M), then Embedding Preference (pull nomic-embed-text first, then select nomic-embed-text:latest via Ollama).',
       },
       step5UploadPdfs: {
         id: 'step-5-upload-pdfs',
@@ -249,6 +255,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Empirical tuning beats theory: ask the same 5 test queries before and after the chunk-size change, and compare. If retrieval at 1000/200 is worse, you probably have very short documents (one-page memos, code docstrings) — try 256/64 instead.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-en.svg',
+        imageCaption: 'Default vs recommended chunk settings: default 512/0/Top-K 4 leaves sentence fragments at boundaries. Recommended 1000 tokens / 200 overlap / Top-K 4–6 captures boundary sentences in the overlap window. Re-embedding 20 PDFs takes ~5 seconds.',
       },
       sampleQueries: {
         id: 'sample-queries',
@@ -331,6 +339,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['Symptom', 'Likely cause', 'Fix'],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-en.svg',
+        imageCaption: 'Six failure modes: connection refused (run ollama serve), stalled pull (Ctrl+C → df -h → retry), hanging embed (wait 30–60 s), off-topic chunks (apply Steps 4 + 7), short/generic answers (set llama3.3:8b-instruct-q4_K_M, bump Top-K), empty chunks from scanned PDFs (run ocrmypdf first).',
       },
       faq: {
         id: 'faq',
@@ -716,6 +726,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM hat auch ein eingebautes Standard-LLM und einen eingebauten Standard-Embedder. Beide sind absichtlich winzig, damit die App auf schwacher Hardware schnell startet. Wir ersetzen beide in den Schritten 4 und 6, weil Abruf-Qualität das ganze Spiel bei einem RAG-System ist.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-de.svg',
+        imageCaption: 'Lokaler RAG-Stack: Ollama (Laufzeit, localhost:11434), Llama 3.3 8B Q4_K_M (~4,9 GB, Antwortmodell), AnythingLLM Desktop (UI + LanceDB Vektorspeicher) und nomic-embed-text-v1.5 (~280 MB Embedder). Datenfluss: PDFs → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → Antwort.',
       },
       prerequisites: {
         id: 'prerequisites',
@@ -729,6 +741,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Berechtigungen:** Kein Admin/Root benötigt für AnythingLLM. Ollama installiert sich auf `/usr/local/bin` auf macOS/Linux (fragt einmal nach Passwort) oder `%LOCALAPPDATA%` auf Windows (kein Admin).',
           '**Dokumente bereit:** 5–20 PDFs zum Starten. Alles Größere funktioniert, aber eine kleine Menge ist schneller zum Testen der Abruf-Qualität.',
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-de.svg',
+        imageCaption: 'Systemanforderungen: 16 GB RAM (Untergrenze für Llama 3.3 8B Q4 + AnythingLLM), 20 GB freier Speicher, 50 Mbps für den Model-Download. macOS 12+, Windows 10/11 oder Linux. Kein Admin für AnythingLLM erforderlich.',
       },
       step1InstallOllama: {
         id: 'step-1-install-ollama',
@@ -810,6 +824,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Warum nomic-embed-text-v1.5 speziell? Im Mai 2026 liegt es in den Top 5 der MTEB-Retrieval-Leaderboard für jedes Modell unter 500 MB, läuft mit 400–800 Chunks/Sek. auf einer modernen CPU und 2000+ Chunks/Sek. auf Apple Silicon und ist Apache-2.0-lizenziert. Es ist das Standard-erste-Upgrade für fast jeden lokalen RAG-Stack — siehe den [Embedding-Modell-Vergleich](/power-local-llm/best-embedding-models-local-rag-2026?lang=de) für Alternativen.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-de.svg',
+        imageCaption: 'Schritt 4 in zwei Panels: LLM-Präferenz (Provider = Ollama, Endpoint = http://127.0.0.1:11434, Model = llama3.3:8b-instruct-q4_K_M), dann Embedding-Präferenz (zuerst nomic-embed-text ziehen, dann nomic-embed-text:latest via Ollama auswählen).',
       },
       step5UploadPdfs: {
         id: 'step-5-upload-pdfs',
@@ -858,6 +874,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Empirische Abstimmung schlägt Theorie: stelle dieselben 5 Test-Queries vor und nach der Chunk-Größen-Änderung und vergleiche. Falls Abruf bei 1000/200 schlechter ist, hast du wahrscheinlich sehr kurze Dokumente (Einseiten-Memos, Code-Docstrings) — versuche stattdessen 256/64.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-de.svg',
+        imageCaption: 'Standard- vs. empfohlene Chunk-Einstellungen: Standard 512/0/Top-K 4 lässt Satzfragmente an Chunk-Grenzen zurück. Empfohlen 1000 Token / 200 Überlappung / Top-K 4–6 erfasst Grenzsätze im Überlappungsfenster. Re-Embedding von 20 PDFs dauert ~5 Sekunden.',
       },
       sampleQueries: {
         id: 'sample-queries',
@@ -940,6 +958,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['Symptom', 'Wahrscheinliche Ursache', 'Fix'],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-de.svg',
+        imageCaption: 'Sechs Fehlermodi: Verbindung verweigert (ollama serve), angehaltener Download (Ctrl+C → df -h → Wiederholung), hängendes Embedding (30–60 s warten), irrelevante Chunks (Schritte 4 + 7 anwenden), kurze/generische Antworten (llama3.3:8b-instruct-q4_K_M setzen, Top-K erhöhen), leere Chunks aus gescannten PDFs (zuerst ocrmypdf ausführen).',
       },
       regionalContext: {
         id: 'regional-context',
@@ -1367,6 +1387,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM a aussi un LLM par défaut intégré et un embedder par défaut. Tous deux sont intentionnellement minuscules pour que l\'app démarre rapidement sur matériel faible. Nous les remplaçons aux étapes 4 et 6 parce que la qualité de récupération est tout le jeu dans un système RAG.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-fr.svg',
+        imageCaption: 'Stack RAG local : Ollama (runtime, localhost:11434), Llama 3.3 8B Q4_K_M (~4,9 Go, modèle de réponse), AnythingLLM Desktop (UI + base vectorielle LanceDB) et nomic-embed-text-v1.5 (~280 Mo embedder). Flux : PDFs → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → Réponse.',
       },
       prerequisites: {
         id: 'prerequisites',
@@ -1380,6 +1402,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Permissions:** Aucun admin/root requis pour AnythingLLM. Ollama installe à `/usr/local/bin` sur macOS/Linux (demande mot de passe une fois) ou `%LOCALAPPDATA%` sur Windows (sans admin).',
           '**Documents prêts:** 5–20 PDFs pour commencer. Plus grand fonctionne, mais petit ensemble plus rapide pour tester la qualité.',
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-fr.svg',
+        imageCaption: 'Configuration requise : 16 Go RAM (plancher pour Llama 3.3 8B Q4 + AnythingLLM), 20 Go de disque libre, 50 Mbps pour le téléchargement du modèle. macOS 12+, Windows 10/11 ou Linux. AnythingLLM ne nécessite pas de droits admin.',
       },
       step1InstallOllama: {
         id: 'step-1-install-ollama',
@@ -1461,6 +1485,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pourquoi nomic-embed-text-v1.5 spécifiquement? En mai 2026, il score dans top 5 du classement MTEB Retrieval pour tout modèle sous 500 Mo, tourne à 400–800 chunks/sec sur CPU moderne et 2000+ chunks/sec sur Apple Silicon, Apache 2.0 licencié. C\'est l\'upgrade première-standard pour presque tout stack RAG local — voir le [comparaison modèles embedding](/power-local-llm/best-embedding-models-local-rag-2026?lang=fr) pour alternatives.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-fr.svg',
+        imageCaption: 'Étape 4 en deux panneaux : Préférence LLM (Fournisseur = Ollama, Endpoint = http://127.0.0.1:11434, Modèle = llama3.3:8b-instruct-q4_K_M), puis Préférence Embedding (tirer nomic-embed-text d\'abord, puis sélectionner nomic-embed-text:latest via Ollama).',
       },
       step5UploadPdfs: {
         id: 'step-5-upload-pdfs',
@@ -1509,6 +1535,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Réglage empirique bat théorie: posez mêmes 5 requêtes test avant et après changement taille chunk, comparez. Si récupération à 1000/200 pire, vous avez probablement documents très courts (memos une-page, docstrings code) — essayez 256/64 à la place.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-fr.svg',
+        imageCaption: 'Paramètres chunks par défaut vs recommandés : défaut 512/0/Top-K 4 laisse des fragments de phrases aux limites. Recommandé 1000 tokens / 200 chevauchement / Top-K 4–6 capture les phrases limites dans la fenêtre d\'overlap. Re-embedding de 20 PDFs : ~5 secondes.',
       },
       sampleQueries: {
         id: 'sample-queries',
@@ -1591,6 +1619,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['Symptôme', 'Cause probable', 'Fix'],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-fr.svg',
+        imageCaption: 'Six modes de défaillance : connexion refusée (ollama serve), téléchargement bloqué (Ctrl+C → df -h → relancer), embedding suspendu (attendre 30–60 sec), chunks hors-sujet (appliquer étapes 4 + 7), réponses courtes/génériques (configurer llama3.3:8b-instruct-q4_K_M, augmenter Top-K), chunks vides depuis PDFs scannés (exécuter ocrmypdf d\'abord).',
       },
       regionalContext: {
         id: 'regional-context',
@@ -1992,6 +2022,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM にはビルトイン LLM とビルトイン embedder も搭載。両方が意図的に tiny なのは app が低スペック機器で高速起動するため。ステップ 4・6 で両方を置き換えます — RAG システムでは取得品質が全て。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-ja.svg',
+        imageCaption: 'ローカル RAG スタック: Ollama (ランタイム, localhost:11434)、Llama 3.3 8B Q4_K_M (~4.9 GB、回答モデル)、AnythingLLM Desktop (UI + LanceDB ベクトルストア)、nomic-embed-text-v1.5 (~280 MB embedder)。データフロー: PDF → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → 回答。',
       },
       prerequisites: {
         id: 'prerequisites',
@@ -2005,6 +2037,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**権限:** AnythingLLM に admin/root 不要。Ollama は macOS/Linux の `/usr/local/bin` にインストール (パスワード 1 回) または Windows `%LOCALAPPDATA%` (admin なし)。',
           '**ドキュメント準備:** 開始に 5–20 PDF。より大きいセットも動作、小セットで取得品質テストが高速。',
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-ja.svg',
+        imageCaption: 'システム要件: 16 GB RAM (Llama 3.3 8B Q4 + AnythingLLM の最低値)、20 GB 空きディスク、モデルダウンロードに 50 Mbps。macOS 12+、Windows 10/11、または Linux。AnythingLLM に admin 不要。',
       },
       step1InstallOllama: {
         id: 'step-1-install-ollama',
@@ -2086,6 +2120,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'nomic-embed-text-v1.5 を選ぶ理由? 2026 年 5 月、500MB 以下のあらゆるモデルで MTEB Retrieval leaderboard top 5、最新 CPU で 400–800 chunks/sec、Apple Silicon で 2000+ chunks/sec、Apache 2.0 ライセンス。ほぼ全ローカル RAG stack のアップグレード first choice — 代替は [embedding model comparison](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) 参照。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-ja.svg',
+        imageCaption: 'ステップ 4 の 2 つのパネル: LLM 選好 (プロバイダー = Ollama、エンドポイント = http://127.0.0.1:11434、モデル = llama3.3:8b-instruct-q4_K_M)、次に Embedding 選好 (nomic-embed-text を先にプル、その後 Ollama 経由で nomic-embed-text:latest を選択)。',
       },
       step5UploadPdfs: {
         id: 'step-5-upload-pdfs',
@@ -2134,6 +2170,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '理論より empirical tuning: chunk size 変更の前後で同じ 5 test query を入力、結果比較。1000/200 での取得が worse なら、おそらく非常に短い document (1-page memo、code docstring) — 代わりに 256/64 を試す。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-ja.svg',
+        imageCaption: 'デフォルト vs 推奨 Chunk 設定: デフォルト 512/0/Top-K 4 は chunk 境界の文が切れる。推奨 1000 tokens / 200 overlap / Top-K 4–6 は overlap window で境界の文をキャプチャ。20 PDF の re-embedding: ~5 秒。',
       },
       sampleQueries: {
         id: 'sample-queries',
@@ -2216,6 +2254,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['Symptom', '推定される原因', 'Fix'],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-ja.svg',
+        imageCaption: '6 つの failure mode: 接続拒否 (ollama serve を実行)、stall した pull (Ctrl+C → df -h → 再実行)、hang している embedding (30–60 秒待つ)、的外れな chunk (ステップ 4 + 7 を適用)、generic な回答 (llama3.3:8b-instruct-q4_K_M を設定、Top-K を増加)、scanned PDF からの空 chunk (ocrmypdf を先に実行)。',
       },
       regionalContext: {
         id: 'regional-context',
@@ -2621,6 +2661,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM 同样内置了一个默认LLM和一个默认嵌入器。两者都故意设计得很小，以便在低配硬件上快速启动。由于检索质量是RAG系统的核心，我们在第4步和第6步将两者都替换掉。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-zh.svg',
+        imageCaption: '本地 RAG 技术栈：Ollama（运行时，localhost:11434）、Llama 3.3 8B Q4_K_M（~4.9 GB，回答模型）、AnythingLLM Desktop（界面 + LanceDB 向量存储）和 nomic-embed-text-v1.5（~280 MB 嵌入器）。数据流：PDF → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → 回答。',
       },
       prerequisites: {
         id: 'prerequisites',
@@ -2634,6 +2676,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**权限：** AnythingLLM无需管理员/root权限。Ollama在macOS/Linux上安装至`/usr/local/bin`（仅询问一次密码），在Windows上安装至`%LOCALAPPDATA%`（无需管理员）。',
           '**准备文档：** 准备5–20个PDF开始测试。数量更多也可以，但小集合更便于快速验证检索质量。',
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-zh.svg',
+        imageCaption: '系统要求：16 GB 内存（Llama 3.3 8B Q4 + AnythingLLM 的实际门槛）、20 GB 可用磁盘、模型下载需要 50 Mbps。支持 macOS 12+、Windows 10/11 或 Linux。AnythingLLM 无需管理员权限。',
       },
       step1InstallOllama: {
         id: 'step-1-install-ollama',
@@ -2715,6 +2759,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '为何选择 nomic-embed-text-v1.5？在2026年5月，它在所有500 MB以下模型中位列MTEB检索排行榜前五，在现代CPU上以400–800 chunks/秒运行，在Apple Silicon上达2000+ chunks/秒，并采用Apache 2.0许可证。它是几乎所有本地RAG技术栈的首选升级方案——参见[嵌入模型对比](/power-local-llm/best-embedding-models-local-rag-2026?lang=zh)了解其他选项。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-zh.svg',
+        imageCaption: '第4步的两个面板：LLM偏好（提供者 = Ollama，端点 = http://127.0.0.1:11434，模型 = llama3.3:8b-instruct-q4_K_M），然后嵌入偏好（先拉取 nomic-embed-text，再通过 Ollama 选择 nomic-embed-text:latest）。',
       },
       step5UploadPdfs: {
         id: 'step-5-upload-pdfs',
@@ -2763,6 +2809,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '实证调整优于理论推断：在分块大小变更前后，用同一组5条测试查询进行对比。若1000/200的检索效果更差，你的文档可能非常短（单页备忘录、代码文档注释）——改为尝试256/64。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-zh.svg',
+        imageCaption: '默认 vs 推荐分块参数：默认 512/0/Top-K 4 导致句子在分块边界断裂。推荐 1000 tokens / 200 重叠 / Top-K 4–6 在重叠窗口中捕获边界句子。20个PDF重新向量化约需5秒。',
       },
       sampleQueries: {
         id: 'sample-queries',
@@ -2845,6 +2893,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['症状', '可能原因', '修复方法'],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-zh.svg',
+        imageCaption: '六种故障模式：连接被拒绝（运行 ollama serve）、拉取卡住（Ctrl+C → df -h → 重试）、向量化挂起（等待30–60秒）、检索返回无关分块（应用第4步和第7步）、回答简短泛泛（设置 llama3.3:8b-instruct-q4_K_M，调高 Top-K）、扫描图片PDF产生空分块（先运行 ocrmypdf）。',
       },
       faq: {
         id: 'faq',
