@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jan — 隐私功能一览</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">AGPL开源 · 零遥测 · 可审计二进制文件</text>
+  <!-- Left panel -->
+  <rect x="22" y="62" width="354" height="198" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="22" y="62" width="354" height="4" rx="0" fill="#EA4335"/>
+  <text x="199" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#EA4335" text-anchor="middle">云端AI — 数据离开设备</text>
+  <text x="44" y="114" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  提示词被发送到远程服务器</text>
+  <text x="44" y="136" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  分析SDK追踪使用情况</text>
+  <text x="44" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  闭源 — 无法验证</text>
+  <text x="44" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  需要联网才能工作</text>
+  <text x="44" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  长期订阅费用</text>
+  <text x="44" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  需要退出训练数据选项</text>
+  <!-- Right panel -->
+  <rect x="424" y="62" width="354" height="198" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="424" y="62" width="354" height="4" rx="0" fill="#34A853"/>
+  <text x="601" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Jan — 一切保留在本地</text>
+  <text x="446" y="114" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  零遥测 — 不发送任何内容</text>
+  <text x="446" y="136" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  无任何分析SDK</text>
+  <text x="446" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  AGPL开源 — 可审计二进制</text>
+  <text x="446" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  安装后完全离线运行</text>
+  <text x="446" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  永久免费，无需订阅</text>
+  <text x="446" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  不用你的数据训练模型</text>
+  <!-- Footer -->
+  <text x="400" y="277" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-ai-app-non-technical-users</text>
+</svg>

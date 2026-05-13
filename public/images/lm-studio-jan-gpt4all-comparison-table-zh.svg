@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" width="800" height="370" role="img" aria-label="LM Studio vs Jan vs GPT4All — 2026年完整对比">
+  <!-- Background -->
+  <rect width="800" height="370" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio vs Jan vs GPT4All — 2026年完整对比</text>
+  <!-- Subtitle -->
+  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">实测：Llama 3.3 8B Q4_K_M · Apple M5 MacBook Pro + NVIDIA RTX 4070</text>
+
+  <!-- Top separator -->
+  <line x1="18" y1="54" x2="782" y2="54" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Column headers -->
+  <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="start">维度</text>
+  <text x="330" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">LM Studio</text>
+  <text x="490" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Jan</text>
+  <text x="650" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">GPT4All</text>
+
+  <!-- Header underline -->
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: 最佳用户 (y=96) -->
+  <text x="20" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">最佳用户</text>
+  <text x="330" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">高级用户</text>
+  <text x="490" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">隐私用户</text>
+  <text x="650" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">新手用户</text>
+  <line x1="18" y1="104" x2="782" y2="104" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: 安装包大小 (y=124) -->
+  <text x="20" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">安装包大小</text>
+  <text x="330" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">~450 MB</text>
+  <text x="490" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">~380 MB</text>
+  <text x="650" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">~290 MB</text>
+  <line x1="18" y1="132" x2="782" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Tokens/sec M5 (y=152) -->
+  <text x="20" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Tokens/sec（M5、8B Q4）</text>
+  <text x="330" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">38</text>
+  <text x="490" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">32</text>
+  <text x="650" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">24</text>
+  <line x1="18" y1="160" x2="782" y2="160" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Tokens/sec RTX (y=180) -->
+  <text x="20" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Tokens/sec（RTX 4070、8B Q4）</text>
+  <text x="330" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">74</text>
+  <text x="490" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">65</text>
+  <text x="650" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">52</text>
+  <line x1="18" y1="188" x2="782" y2="188" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: 内置RAG (y=208) -->
+  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">内置RAG</text>
+  <text x="330" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle">是</text>
+  <text x="490" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">是（扩展）</text>
+  <text x="650" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#EA4335" text-anchor="middle">仅插件</text>
+  <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: 开源 (y=236) -->
+  <text x="20" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">开源</text>
+  <text x="330" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#EA4335" text-anchor="middle">否（专有）</text>
+  <text x="490" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">是（AGPL）</text>
+  <text x="650" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">是（MIT）</text>
+  <line x1="18" y1="244" x2="782" y2="244" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 7: 默认遥测 (y=264) -->
+  <text x="20" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">默认遥测</text>
+  <text x="330" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#F4B400" text-anchor="middle">匿名可退出</text>
+  <text x="490" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">无</text>
+  <text x="650" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">仅可选加入</text>
+  <line x1="18" y1="272" x2="782" y2="272" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 8: OpenAI兼容API (y=292) -->
+  <text x="20" y="292" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">OpenAI兼容API</text>
+  <text x="330" y="292" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">是</text>
+  <text x="490" y="292" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">是</text>
+  <text x="650" y="292" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">是</text>
+  <line x1="18" y1="300" x2="782" y2="300" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 9: 最低RAM (y=320) -->
+  <text x="20" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">最低RAM（4B模型）</text>
+  <text x="330" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">6 GB</text>
+  <text x="490" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">6 GB</text>
+  <text x="650" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">4 GB</text>
+  <!-- Last row prominent divider -->
+  <line x1="18" y1="328" x2="782" y2="328" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <text x="400" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">三款应用均免费 · Llama 3.3 8B Q4_K_M，200词元测试 · promptquorum.com</text>
+</svg>

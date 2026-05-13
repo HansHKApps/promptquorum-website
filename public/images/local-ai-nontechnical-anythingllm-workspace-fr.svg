@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">AnythingLLM Desktop — Modèle d'espaces de travail</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Un espace par sujet · glissez des documents · posez des questions</text>
+  <!-- Panel 1 -->
+  <rect x="18" y="62" width="212" height="198" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="62" width="212" height="4" rx="0" fill="#6750A4"/>
+  <text x="124" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Espaces de travail</text>
+  <rect x="30" y="96" width="188" height="26" rx="4" fill="#F7F2FA"/>
+  <text x="124" y="114" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle">📁 Documents Fiscaux 2026</text>
+  <rect x="30" y="128" width="188" height="26" rx="4" fill="#E8DEF8"/>
+  <text x="124" y="146" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">📁 Notes de Recherche ●</text>
+  <rect x="30" y="160" width="188" height="26" rx="4" fill="#F7F2FA"/>
+  <text x="124" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle">📁 Contrats Clients</text>
+  <rect x="30" y="192" width="188" height="26" rx="4" fill="#F7F2FA"/>
+  <text x="124" y="210" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">+ Nouvel Espace</text>
+  <!-- Arrow 1 -->
+  <text x="240" y="163" font-family="system-ui,-apple-system,sans-serif" font-size="22" fill="#6750A4">→</text>
+  <!-- Panel 2 -->
+  <rect x="270" y="62" width="212" height="198" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="270" y="62" width="212" height="4" rx="0" fill="#6750A4"/>
+  <text x="376" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Documents (glisser)</text>
+  <text x="286" y="114" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1C1B1F">📄 article-etude-1.pdf</text>
+  <text x="286" y="136" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1C1B1F">📄 notes-cours.docx</text>
+  <text x="286" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1C1B1F">📝 resume.txt</text>
+  <line x1="282" y1="170" x2="474" y2="170" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="286" y="186" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Indexé localement</text>
+  <text x="286" y="204" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Pas d'API cloud</text>
+  <text x="286" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#79747E">PDF · DOCX · TXT · Markdown</text>
+  <!-- Arrow 2 -->
+  <text x="492" y="163" font-family="system-ui,-apple-system,sans-serif" font-size="22" fill="#6750A4">→</text>
+  <!-- Panel 3 -->
+  <rect x="522" y="62" width="260" height="198" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="522" y="62" width="260" height="4" rx="0" fill="#34A853"/>
+  <text x="652" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">Discutez avec Vos Docs</text>
+  <rect x="536" y="96" width="232" height="38" rx="4" fill="#F7F2FA"/>
+  <text x="550" y="111" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Vous : "Que dit l'article 1</text>
+  <text x="550" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">sur la conclusion principale ?"</text>
+  <rect x="536" y="142" width="232" height="50" rx="4" fill="#E8DEF8"/>
+  <text x="550" y="157" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1C1B1F">IA : "Selon la page 3,</text>
+  <text x="550" y="172" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1C1B1F">la conclusion principale était..."</text>
+  <text x="550" y="186" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#6750A4">✓ Source : notes-cours.docx</text>
+  <text x="550" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Fonctionne hors ligne.</text>
+  <text x="550" y="230" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Rien ne quitte votre appareil.</text>
+  <!-- Footer -->
+  <text x="400" y="277" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-ai-app-non-technical-users</text>
+</svg>

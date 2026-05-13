@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 290" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="290" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio — Modellgeschwindigkeit auf Apple Silicon</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Benutzerdefinierte Metal-Kernel · 15–30 % schneller als Standard</text>
+  <!-- Column headers -->
+  <text x="52" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Modell</text>
+  <text x="240" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">RAM</text>
+  <text x="315" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">M3 (8 GB) Tok/s</text>
+  <text x="480" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">M3 Pro (16 GB) Tok/s</text>
+  <text x="662" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Wählen wenn...</text>
+  <line x1="18" y1="81" x2="782" y2="81" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1: Phi-4 Mini (highlighted) -->
+  <rect x="18" y="83" width="764" height="34" rx="2" fill="#F7F2FA"/>
+  <text x="52" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">Phi-4 Mini ★</text>
+  <text x="240" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">2,6 GB</text>
+  <text x="315" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">55–70 Tok/s</text>
+  <text x="480" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">75–90 Tok/s</text>
+  <text x="662" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">8-GB-Mac Erste Wahl</text>
+  <line x1="18" y1="117" x2="782" y2="117" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Row 2 -->
+  <text x="52" y="139" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Llama 3.2 3B</text>
+  <text x="240" y="139" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">2,0 GB</text>
+  <text x="315" y="139" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">50–65 Tok/s</text>
+  <text x="480" y="139" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">65–80 Tok/s</text>
+  <text x="662" y="139" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Allgemeiner Chat</text>
+  <line x1="18" y1="151" x2="782" y2="151" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3 -->
+  <text x="52" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Gemma 3 4B</text>
+  <text x="240" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">2,5 GB</text>
+  <text x="315" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">42–55 Tok/s</text>
+  <text x="480" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">58–70 Tok/s</text>
+  <text x="662" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Schreiben, Zusammenfassungen</text>
+  <line x1="18" y1="185" x2="782" y2="185" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4 -->
+  <text x="52" y="207" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Llama 3.3 8B Q4_K_M</text>
+  <text x="240" y="207" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">8,5 GB</text>
+  <text x="315" y="207" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">Braucht 16-GB-Mac</text>
+  <text x="480" y="207" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">35–42 Tok/s</text>
+  <text x="662" y="207" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">16-GB-Mac Beste Wahl</text>
+  <line x1="18" y1="219" x2="782" y2="219" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Footer -->
+  <text x="400" y="239" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">★ Empfohlen für 8-GB-Macs · Rot = passt nicht · Grün = schnellste Option</text>
+  <text x="400" y="257" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Geschwindigkeiten sind Näherungswerte; variieren je nach Quantisierung</text>
+  <text x="400" y="274" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-ai-app-non-technical-users</text>
+</svg>

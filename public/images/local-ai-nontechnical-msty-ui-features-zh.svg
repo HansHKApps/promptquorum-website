@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Msty — 新手用户主要功能</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">个人使用免费 · Windows、macOS、Linux</text>
+  <!-- Column headers -->
+  <text x="75" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">功能</text>
+  <text x="270" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">对你意味着什么</text>
+  <text x="648" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">独有？</text>
+  <line x1="18" y1="81" x2="782" y2="81" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1 -->
+  <rect x="18" y="83" width="764" height="36" rx="2" fill="#F7F2FA"/>
+  <text x="75" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">分屏聊天</text>
+  <text x="270" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">两个模型并排回答同一个问题</text>
+  <circle cx="666" cy="101" r="10" fill="#34A853"/>
+  <text x="666" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="119" x2="782" y2="119" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Row 2 -->
+  <text x="75" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">文档聊天</text>
+  <text x="270" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">将PDF/DOCX拖入侧边栏，立即提问</text>
+  <circle cx="666" cy="137" r="10" fill="#F4B400"/>
+  <text x="666" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="155" x2="782" y2="155" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3 -->
+  <text x="75" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">知识堆叠</text>
+  <text x="270" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">将文档固定到工作区，所有聊天都可访问</text>
+  <circle cx="666" cy="173" r="10" fill="#34A853"/>
+  <text x="666" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="191" x2="782" y2="191" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4 -->
+  <text x="75" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">一键模型安装</text>
+  <text x="270" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">精选模型库，一键下载</text>
+  <circle cx="666" cy="209" r="10" fill="#F4B400"/>
+  <text x="666" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="227" x2="782" y2="227" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5 -->
+  <text x="75" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">GPU自动检测</text>
+  <text x="270" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">自动检测Apple Silicon、NVIDIA、AMD</text>
+  <circle cx="666" cy="245" r="10" fill="#F4B400"/>
+  <text x="666" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="263" x2="782" y2="263" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Footer -->
+  <text x="400" y="281" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">✓ Msty独有  ·  ± 其他应用也有  ·  promptquorum.com</text>
+</svg>

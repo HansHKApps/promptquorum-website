@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Msty — 初心者向け主要機能</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">個人利用無料 · Windows、macOS、Linux</text>
+  <!-- Column headers -->
+  <text x="75" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">機能</text>
+  <text x="270" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">あなたにとっての意味</text>
+  <text x="648" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">独自？</text>
+  <line x1="18" y1="81" x2="782" y2="81" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1 -->
+  <rect x="18" y="83" width="764" height="36" rx="2" fill="#F7F2FA"/>
+  <text x="75" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">分割チャット</text>
+  <text x="270" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">2つのモデルが同じ質問に並べて回答</text>
+  <circle cx="666" cy="101" r="10" fill="#34A853"/>
+  <text x="666" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="119" x2="782" y2="119" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Row 2 -->
+  <text x="75" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">ドキュメントチャット</text>
+  <text x="270" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">PDF/DOCXをサイドバーにドラッグして即質問</text>
+  <circle cx="666" cy="137" r="10" fill="#F4B400"/>
+  <text x="666" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="155" x2="782" y2="155" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3 -->
+  <text x="75" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">ナレッジスタック</text>
+  <text x="270" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">ドキュメントをピン留め、すべてのチャットが参照可能</text>
+  <circle cx="666" cy="173" r="10" fill="#34A853"/>
+  <text x="666" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="191" x2="782" y2="191" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4 -->
+  <text x="75" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">ワンクリックインストール</text>
+  <text x="270" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">厳選モデルライブラリ、1クリックでダウンロード</text>
+  <circle cx="666" cy="209" r="10" fill="#F4B400"/>
+  <text x="666" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="227" x2="782" y2="227" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5 -->
+  <text x="75" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">GPU自動検出</text>
+  <text x="270" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Apple Silicon・NVIDIA・AMD自動検出、設定不要</text>
+  <circle cx="666" cy="245" r="10" fill="#F4B400"/>
+  <text x="666" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="263" x2="782" y2="263" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Footer -->
+  <text x="400" y="281" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">✓ Msty独自  ·  ± 他のアプリにも  ·  promptquorum.com</text>
+</svg>

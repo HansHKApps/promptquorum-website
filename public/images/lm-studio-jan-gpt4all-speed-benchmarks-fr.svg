@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" role="img" aria-label="LM Studio vs Jan vs GPT4All — Benchmark vitesse d'inférence 2026">
+  <rect width="800" height="320" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio vs Jan vs GPT4All — Benchmark vitesse d'inférence 2026</text>
+  <!-- Subtitle -->
+  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Llama 3.3 8B Q4_K_M, génération 200 tokens, entièrement chargé en mémoire</text>
+
+  <!-- Top separator -->
+  <line x1="18" y1="54" x2="782" y2="54" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Column headers -->
+  <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Matériel</text>
+  <text x="330" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">LM Studio</text>
+  <text x="490" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Jan</text>
+  <text x="650" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">GPT4All</text>
+
+  <!-- Header underline -->
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Apple M5 MacBook Pro -->
+  <text x="20" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="start">Apple M5 MacBook Pro (16 Go)</text>
+  <text x="330" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">38 tok/s</text>
+  <text x="490" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">32 tok/s</text>
+  <text x="650" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">24 tok/s</text>
+  <line x1="18" y1="106" x2="782" y2="106" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: RTX 4070 -->
+  <text x="20" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="start">RTX 4070 (Win 11, CUDA)</text>
+  <text x="330" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">74 tok/s</text>
+  <text x="490" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">65 tok/s</text>
+  <text x="650" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">52 tok/s</text>
+  <line x1="18" y1="142" x2="782" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: RTX 3060 -->
+  <text x="20" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="start">RTX 3060 12 Go</text>
+  <text x="330" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">52 tok/s</text>
+  <text x="490" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">48 tok/s</text>
+  <text x="650" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">40 tok/s</text>
+  <line x1="18" y1="178" x2="782" y2="178" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Intel Core Ultra 7 -->
+  <text x="20" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="start">Intel Core Ultra 7 (CPU seul)</text>
+  <text x="330" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">11 tok/s</text>
+  <text x="490" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">10 tok/s</text>
+  <text x="650" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">9 tok/s</text>
+
+  <!-- Bottom separator -->
+  <line x1="18" y1="220" x2="782" y2="220" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Bar chart section -->
+  <text x="20" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="start">RTX 4070 visualisation (tokens/sec)</text>
+
+  <!-- LM Studio bar -->
+  <text x="95" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="end">LM Studio</text>
+  <rect x="100" y="235" width="370" height="20" fill="#6750A4" rx="3"/>
+  <text x="478" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="start"> 74</text>
+
+  <!-- Jan bar -->
+  <text x="95" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="end">Jan</text>
+  <rect x="100" y="258" width="325" height="20" fill="#79747E" rx="3"/>
+  <text x="433" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="start"> 65</text>
+
+  <!-- GPT4All bar -->
+  <text x="95" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="end">GPT4All</text>
+  <rect x="100" y="281" width="260" height="20" fill="#49454F" rx="3"/>
+  <text x="368" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="start"> 52</text>
+
+  <!-- Footer -->
+  <text x="400" y="313" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">Plus rapide = conversation plus fluide · LM Studio utilise llama.cpp optimisé · promptquorum.com</text>
+</svg>
