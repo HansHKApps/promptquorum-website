@@ -98,7 +98,9 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
     title: baseTitle.length <= 45 ? `${baseTitle} | PromptQuorum` : baseTitle,
     description: desc,
     alternates: powerLLMAlternates(lang, slug),
-    robots: { index: isPublished, follow: true },
+    robots: isPublished
+      ? { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 }
+      : { index: false, follow: true },
     openGraph: {
       title: article?.title ?? fallbackTitle,
       description: desc,
@@ -308,7 +310,9 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     title: titleByLang[lang],
     description: descByLang[lang],
     alternates: powerLLMAlternates(lang),
-    robots: { index: isPublished, follow: true },
+    robots: isPublished
+      ? { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 }
+      : { index: false, follow: true },
     openGraph: {
       title: titleByLang[lang],
       description: descByLang[lang],

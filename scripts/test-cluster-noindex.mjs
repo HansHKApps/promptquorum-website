@@ -26,8 +26,11 @@ const PORT = process.env.NOINDEX_TEST_PORT || '3017'
 const HOST = `http://127.0.0.1:${PORT}`
 const READY_TIMEOUT_MS = 60_000
 const SLUGS_FILE = 'src/lib/power-local-llm/slugs.ts'
+const PUBLISHED_FILE = 'src/lib/power-local-llm/published.ts'
 const LOCALE_PREFIXES = ['', '/de', '/fr', '/ja', '/zh']
 const NON_CLUSTER_PROBES = ['/', '/local-llms/llm-quantization-explained']
+// Mirrors isPowerLLMHubPublished() in published.ts
+const PUBLISHED_HUB_LANGS = new Set(['en', 'de'])
 
 function readSlugs() {
   const src = readFileSync(SLUGS_FILE, 'utf8')
@@ -39,6 +42,16 @@ function readSlugs() {
   if (slugs.length === 0) {
     throw new Error(`Failed to parse slugs from ${SLUGS_FILE}`)
   }
+  return slugs
+}
+
+function readPublishedSlugs() {
+  const src = readFileSync(PUBLISHED_FILE, 'utf8')
+  // Match quoted slug lines inside POWER_LLM_PUBLISHED_SLUGS set literal
+  const re = /^\s+'([a-z0-9-]+)',?\s*$/gm
+  const slugs = new Set()
+  let m
+  while ((m = re.exec(src)) !== null) slugs.add(m[1])
   return slugs
 }
 
@@ -198,11 +211,14 @@ async function main() {
   const failures = []
   let passed = 0
 
-  // Cluster URLs — must all be noindex.
+  // Cluster article URLs — published EN slugs must be indexed; everything else noindex.
+  const publishedSlugs = readPublishedSlugs()
   for (const locale of LOCALE_PREFIXES) {
+    const lang = locale.slice(1) || 'en'
     for (const slug of slugs) {
+      const isPublished = lang === 'en' && publishedSlugs.has(slug)
       const url = `${HOST}${locale}/power-local-llm/${slug}`
-      const result = await checkUrl(url, 'noindex')
+      const result = await checkUrl(url, isPublished ? 'index' : 'noindex')
       if (result.ok) {
         passed++
       } else {
@@ -211,10 +227,12 @@ async function main() {
     }
   }
 
-  // Cluster hub pages — must also be noindex.
+  // Cluster hub pages — EN and DE hubs are published (indexed); FR/JA/ZH are noindex.
   for (const locale of LOCALE_PREFIXES) {
+    const lang = locale.slice(1) || 'en'
+    const isPublished = PUBLISHED_HUB_LANGS.has(lang)
     const url = `${HOST}${locale}/power-local-llm`
-    const result = await checkUrl(url, 'noindex')
+    const result = await checkUrl(url, isPublished ? 'index' : 'noindex')
     if (result.ok) {
       passed++
     } else {
@@ -246,7 +264,7 @@ async function main() {
     process.exit(1)
   }
 
-  console.log('✓ All cluster URLs serve noindex; non-cluster URLs serve indexable default.')
+  console.log('✓ Cluster robots contract verified: published URLs indexed, unpublished URLs noindex.')
   process.exit(0)
 }
 
