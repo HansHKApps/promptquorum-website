@@ -29,8 +29,8 @@ const SLUGS_FILE = 'src/lib/power-local-llm/slugs.ts'
 const PUBLISHED_FILE = 'src/lib/power-local-llm/published.ts'
 const LOCALE_PREFIXES = ['', '/de', '/fr', '/ja', '/zh']
 const NON_CLUSTER_PROBES = ['/', '/local-llms/llm-quantization-explained']
-// Mirrors isPowerLLMHubPublished() in published.ts
-const PUBLISHED_HUB_LANGS = new Set(['en', 'de'])
+// Mirrors isPowerLLMHubPublished() in published.ts — all langs now published
+const PUBLISHED_HUB_LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh'])
 
 function readSlugs() {
   const src = readFileSync(SLUGS_FILE, 'utf8')
@@ -216,7 +216,7 @@ async function main() {
   for (const locale of LOCALE_PREFIXES) {
     const lang = locale.slice(1) || 'en'
     for (const slug of slugs) {
-      const isPublished = lang === 'en' && publishedSlugs.has(slug)
+      const isPublished = publishedSlugs.has(slug)
       const url = `${HOST}${locale}/power-local-llm/${slug}`
       const result = await checkUrl(url, isPublished ? 'index' : 'noindex')
       if (result.ok) {

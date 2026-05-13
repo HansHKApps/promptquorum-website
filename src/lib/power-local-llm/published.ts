@@ -35,10 +35,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
 export const POWER_LLM_HUB_PUBLISHED = true
 
-export function isPowerLLMArticlePublished(slug: string, lang: string): boolean {
-  return lang === 'en' && POWER_LLM_PUBLISHED_SLUGS.has(slug)
+export function isPowerLLMArticlePublished(slug: string, _lang: string): boolean {
+  return POWER_LLM_PUBLISHED_SLUGS.has(slug)
 }
 
-export function isPowerLLMHubPublished(lang: string): boolean {
-  return (lang === 'en' || lang === 'de') && POWER_LLM_HUB_PUBLISHED
+export function isPowerLLMHubPublished(_lang: string): boolean {
+  return POWER_LLM_HUB_PUBLISHED
 }
