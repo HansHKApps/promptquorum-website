@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280">
+  <rect width="800" height="280" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">移动端GGUF量化级别指南 (2026)</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Q4_K_M是移动端标准 — 适用于所有6GB以上手机</text>
+
+  <!-- Column headers -->
+  <text x="32" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">级别</text>
+  <text x="155" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">质量</text>
+  <text x="235" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">文件大小</text>
+  <text x="330" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">推荐用途</text>
+
+  <!-- Header divider -->
+  <line x1="16" y1="78" x2="784" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 — highlighted -->
+  <rect x="16" y="80" width="768" height="32" fill="#F7F2FA"/>
+  <text x="32" y="100" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">Q4_K_M ★</text>
+  <text x="155" y="100" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">~95%</text>
+  <text x="235" y="100" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">×0.50</text>
+  <text x="330" y="100" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#6750A4">移动端默认 (6GB以上所有手机) — 推荐</text>
+  <line x1="16" y1="112" x2="784" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="32" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">Q5_K_M</text>
+  <text x="155" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853">~98%</text>
+  <text x="235" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">×0.62</text>
+  <text x="330" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">12GB以上手机 (iPhone Pro Max等)</text>
+  <line x1="16" y1="144" x2="784" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="32" y="164" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">Q6_K</text>
+  <text x="155" y="164" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853">~99%</text>
+  <text x="235" y="164" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">×0.75</text>
+  <text x="330" y="164" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">12GB以上手机的长文写作</text>
+  <line x1="16" y1="176" x2="784" y2="176" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="32" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">Q8_0</text>
+  <text x="155" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853">~99.5%</text>
+  <text x="235" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">×1.0</text>
+  <text x="330" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#EA4335">仅限桌面端 — 手机上请避免</text>
+  <line x1="16" y1="208" x2="784" y2="208" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <text x="32" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">Q3_K_M</text>
+  <text x="155" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#F4B400">~85%</text>
+  <text x="235" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">×0.38</text>
+  <text x="330" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F">仅4GB手机的最后选择</text>
+
+  <!-- Footer divider -->
+  <line x1="16" y1="240" x2="784" y2="240" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer text -->
+  <text x="400" y="259" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">★ 从这里开始 · Q4_K_M = ~95%质量，×0.5文件大小 · promptquorum.com</text>
+</svg>

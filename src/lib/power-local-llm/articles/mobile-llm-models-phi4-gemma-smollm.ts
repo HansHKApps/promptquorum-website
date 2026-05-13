@@ -156,6 +156,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'If unsure, start with Phi-4 Mini on a flagship phone or SmolLM 2 1.7B on a mid-range phone — both download in under 5 minutes on a fast connection and are reversible. Try one prompt you actually care about (a real email to summarise, a real question to answer). If the quality feels acceptable, you have your default. If not, swap to a sibling model in 30 seconds via PocketPal AI or LM Studio.',
           },
         ],
+        image: '/images/mobile-llm-models-decision-flow-en.svg',
+        imageCaption: '4-step model selection guide for mobile LLMs: check phone RAM, match phone tier (4 GB to 8 GB+), pick use case (speed, multilingual, or quality), then install Q4_K_M GGUF via PocketPal AI or LM Studio.',
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -189,6 +191,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'iPhone 16 Pro tokens/sec is roughly 15–25% lower than iPhone 17 Pro for every model in this table — A18 Pro vs A19 Pro Neural Engine difference. Galaxy S25 Ultra (Snapdragon 8 Elite) is roughly 10–20% lower than iPhone 17 Pro on the same Q4_K_M GGUF, mostly because Termux+Ollama on Android does not yet leverage the Snapdragon Hexagon NPU the way MLC Chat leverages Apple Metal.',
           },
         ],
+        image: '/images/mobile-llm-models-comparison-table-en.svg',
+        imageCaption: 'Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen 2.5 (1.5B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -269,6 +273,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B is the strongest pairing for an offline voice assistant stack on mobile — see [Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) for the Whisper + LLM + TTS pipeline. The high tokens/sec keeps voice turn-taking under the ~1.5-second perceptual threshold even on mid-range hardware.',
           },
         ],
+        image: '/images/mobile-llm-models-speed-chart-en.svg',
+        imageCaption: 'Tokens-per-second comparison for 6 mobile LLM models on 3 devices at Q4_K_M: Gemma 3 1B (~35–45 on iPhone 17 Pro) and SmolLM 2 1.7B (~26–32) lead on speed; Phi-4 Mini (~13–18) and Gemma 3 4B (~10–13) are slower but smarter.',
       },
       qwen25: {
         id: 'qwen-2-5',
@@ -338,6 +344,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Do not download the same model in multiple quantisations expecting to "test which is best" on a phone. The quality differences between Q4_K_M and Q5_K_M are real but small, and you will burn 5+ GB of phone storage hosting redundant variants. Pick Q4_K_M, run it for a week of real use, and only upgrade to Q5_K_M if you have specific evidence the quality is insufficient.',
           },
         ],
+        image: '/images/mobile-llm-models-quantization-guide-en.svg',
+        imageCaption: 'GGUF quantisation levels for mobile: Q4_K_M is the default for 6 GB+ phones (~95% quality, ×0.5 file size); Q5_K_M and Q6_K only for 12 GB+ phones; Q8_0 is desktop-only; Q3_K_M is the last resort for 4 GB phones.',
       },
       perTierVerdict: {
         id: 'per-tier-verdict',
@@ -369,6 +377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'For the app side of the equation, see the iPhone and Android sister guides — they cover which apps actually expose each of these models on each platform. App availability sometimes lags model availability: Gemma 3 4B was on Hugging Face six months before PocketPal AI added a one-tap downloader for it. If a model is missing from your app\'s curated list, it can usually be sideloaded as a GGUF from Hugging Face.',
           },
         ],
+        image: '/images/mobile-llm-models-per-tier-verdict-en.svg',
+        imageCaption: 'Mobile LLM recommendations by phone tier: flagship phones (8–12 GB RAM) → Phi-4 Mini 3.8B; older flagship (8 GB) → Llama 3.2 3B; mid-range (6–8 GB) → SmolLM 2 1.7B; budget (4–6 GB) → Qwen 2.5 1.5B; very old (4 GB) → Gemma 3 1B.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -605,6 +615,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wenn Sie unsicher sind, beginnen Sie mit Phi-4 Mini auf einem Flaggschiff-Gerät oder SmolLM 2 1.7B auf einem Mittelklassegerät – beide sind in unter 5 Minuten bei schneller Verbindung heruntergeladen und können rückgängig gemacht werden. Testen Sie eine Aufgabe, die Ihnen wirklich wichtig ist (eine echte E-Mail zum Zusammenfassen, eine echte Frage zu beantworten). Wenn die Qualität akzeptabel ist, haben Sie Ihren Standard. Falls nicht, wechseln Sie in 30 Sekunden über PocketPal AI oder LM Studio zum nächsten Modell.',
           },
         ],
+        image: '/images/mobile-llm-models-decision-flow-de.svg',
+        imageCaption: '4-Schritte-Entscheidungsleitfaden für mobile LLMs: RAM prüfen, Geräteklasse wählen (4 GB bis 8 GB+), Anwendungsfall auswählen (Geschwindigkeit, Mehrsprachigkeit oder Qualität), dann Q4_K_M GGUF über PocketPal AI oder LM Studio installieren.',
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -638,6 +650,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Auf dem iPhone 16 Pro sind die Tokens/Sek.-Werte für jedes Modell in dieser Tabelle ca. 15–25 % niedriger als auf dem iPhone 17 Pro – Unterschied zwischen A18 Pro und A19 Pro Neural Engine. Das Galaxy S25 Ultra (Snapdragon 8 Elite) liegt ca. 10–20 % unter dem iPhone 17 Pro für dasselbe Q4_K_M GGUF, hauptsächlich weil Termux+Ollama auf Android den Snapdragon Hexagon NPU noch nicht so nutzt wie MLC Chat Apple Metal.',
           },
         ],
+        image: '/images/mobile-llm-models-comparison-table-de.svg',
+        imageCaption: 'Sechs mobile LLM-Modelle mit Q4_K_M auf dem iPhone 17 Pro verglichen: Phi-4 Mini (3,8B, ~13–18 Tok/Sek.) ist das klügste; SmolLM 2 (1,7B, ~26–32 Tok/Sek.) ist das schnellste; Qwen 2,5 (1,5B) ist das beste für Mehrsprachigkeit; Gemma 3 1B (~35–45 Tok/Sek.) läuft auf 4-GB-Geräten.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -718,6 +732,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B ist die beste Kombination für einen Offline-Sprachassistenten auf dem Smartphone – weitere Informationen finden Sie unter [Lokalen Sprachassistenten auf dem Smartphone erstellen](/power-local-llm/voice-assistant-local-mobile-offline?lang=de) für die Whisper-+-LLM-+-TTS-Pipeline. Die hohen Tokens/Sek. halten die Sprachgesprächs-Wartezeit unter der ~1,5-Sekunden-Wahrnehmungsschwelle, selbst auf Mittelklasse-Hardware.',
           },
         ],
+        image: '/images/mobile-llm-models-speed-chart-de.svg',
+        imageCaption: 'Tokens-pro-Sekunde-Vergleich für 6 mobile LLM-Modelle auf 3 Geräten mit Q4_K_M: Gemma 3 1B (~35–45 auf iPhone 17 Pro) und SmolLM 2 1,7B (~26–32) führen bei der Geschwindigkeit; Phi-4 Mini (~13–18) und Gemma 3 4B (~10–13) sind langsamer, aber klüger.',
       },
       qwen25: {
         id: 'qwen-2-5',
@@ -787,6 +803,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Laden Sie nicht dasselbe Modell in mehreren Quantisierungen herunter, um zu „testen, welche besser ist". Die Qualitätsunterschiede zwischen Q4_K_M und Q5_K_M sind real, aber gering, und Sie verbrauchen 5+ GB Smartphone-Speicher für redundante Varianten. Wählen Sie Q4_K_M, nutzen Sie es eine Woche lang real, und steigen Sie auf Q5_K_M nur um, wenn Sie konkrete Hinweise haben, dass die Qualität unzureichend ist.',
           },
         ],
+        image: '/images/mobile-llm-models-quantization-guide-de.svg',
+        imageCaption: 'GGUF-Quantisierungsstufen für Mobilgeräte: Q4_K_M ist der Standard für 6-GB-Geräte (~95 % Qualität, ×0,5 Dateigröße); Q5_K_M und Q6_K nur für 12-GB-Geräte; Q8_0 nur für Desktop; Q3_K_M ist der letzte Ausweg für 4-GB-Geräte.',
       },
       perTierVerdict: {
         id: 'per-tier-verdict',
@@ -818,6 +836,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Für die App-Seite lesen Sie die iPhone- und Android-Parallelführer – sie zeigen, welche Apps diese Modelle auf welcher Plattform tatsächlich anbieten. App-Verfügbarkeit hinkt der Modellverfügbarkeit manchmal hinterher: Gemma 3 4B war sechs Monate vor PocketPal AIs Ein-Tap-Downloader auf Hugging Face verfügbar. Wenn ein Modell nicht in der kuratierten Liste Ihrer App aufgeführt ist, kann es in der Regel als GGUF von Hugging Face sideloadet werden.',
           },
         ],
+        image: '/images/mobile-llm-models-per-tier-verdict-de.svg',
+        imageCaption: 'Mobile LLM-Empfehlungen nach Geräteklasse: Flaggschiff (8–12 GB RAM) → Phi-4 Mini 3.8B; älteres Flaggschiff (8 GB) → Llama 3.2 3B; Mittelklasse (6–8 GB) → SmolLM 2 1.7B; Budget (4–6 GB) → Qwen 2.5 1.5B; sehr altes Gerät (4 GB) → Gemma 3 1B.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1062,6 +1082,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'En cas de doute, commencez par Phi-4 Mini sur un téléphone haut de gamme ou SmolLM 2 1.7B sur un appareil milieu de gamme — les deux se téléchargent en moins de 5 minutes avec une connexion rapide et sont réversibles. Testez une invite réelle (un e-mail à résumer, une vraie question). Si la qualité est acceptable, vous avez votre modèle par défaut. Sinon, changez en 30 secondes via PocketPal AI ou LM Studio.',
           },
         ],
+        image: '/images/mobile-llm-models-decision-flow-fr.svg',
+        imageCaption: 'Guide de sélection en 4 étapes pour les LLM mobiles : vérifier la RAM, choisir la gamme (4 Go à 8 Go+), choisir l\'usage (vitesse, multilingue ou qualité), puis installer le fichier Q4_K_M GGUF via PocketPal AI ou LM Studio.',
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -1095,6 +1117,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Les tokens/sec de l\'iPhone 16 Pro sont environ 15–25 % inférieurs à ceux de l\'iPhone 17 Pro pour chaque modèle — différence entre les Neural Engine A18 Pro et A19 Pro. Le Galaxy S25 Ultra (Snapdragon 8 Elite) est environ 10–20 % sous l\'iPhone 17 Pro sur le même Q4_K_M GGUF, principalement parce que Termux+Ollama sur Android n\'exploite pas encore le NPU Hexagon de Snapdragon comme MLC Chat exploite Apple Metal.',
           },
         ],
+        image: '/images/mobile-llm-models-comparison-table-fr.svg',
+        imageCaption: 'Six modèles LLM mobiles benchmarkés en Q4_K_M sur iPhone 17 Pro : Phi-4 Mini (3.8B, ~13–18 tok/sec) est le plus intelligent ; SmolLM 2 (1.7B, ~26–32 tok/sec) est le plus rapide ; Qwen 2.5 (1.5B) est le meilleur multilingue ; Gemma 3 1B (~35–45 tok/sec) fonctionne sur 4 Go de RAM.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -1175,6 +1199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B est le meilleur choix pour un assistant vocal hors ligne sur mobile — voir [Créer un assistant vocal local sur votre téléphone](/power-local-llm/voice-assistant-local-mobile-offline?lang=fr) pour le pipeline Whisper + LLM + TTS. Les tokens/sec élevés maintiennent le temps de réponse vocale sous le seuil perceptif de ~1.5 seconde.',
           },
         ],
+        image: '/images/mobile-llm-models-speed-chart-fr.svg',
+        imageCaption: 'Comparaison tokens/sec pour 6 modèles LLM mobiles sur 3 appareils en Q4_K_M : Gemma 3 1B (~35–45 sur iPhone 17 Pro) et SmolLM 2 1.7B (~26–32) mènent en vitesse ; Phi-4 Mini (~13–18) et Gemma 3 4B (~10–13) sont plus lents mais plus intelligents.',
       },
       qwen25: {
         id: 'qwen-2-5',
@@ -1244,6 +1270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ne téléchargez pas le même modèle en plusieurs quantisations pour « tester laquelle est meilleure ». Les différences de qualité entre Q4_K_M et Q5_K_M sont réelles mais faibles, et vous gaspillerez 5+ Go de stockage. Choisissez Q4_K_M, utilisez-le une semaine en conditions réelles, et passez à Q5_K_M uniquement si vous avez des preuves concrètes que la qualité est insuffisante.',
           },
         ],
+        image: '/images/mobile-llm-models-quantization-guide-fr.svg',
+        imageCaption: 'Niveaux de quantisation GGUF pour mobile : Q4_K_M est le standard pour les téléphones à 6 Go+ (~95 % de qualité, ×0.5 taille fichier) ; Q5_K_M et Q6_K uniquement pour 12 Go+ ; Q8_0 réservé au bureau ; Q3_K_M en dernier recours pour 4 Go.',
       },
       perTierVerdict: {
         id: 'per-tier-verdict',
@@ -1275,6 +1303,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pour le choix d\'application, consultez les guides iPhone et Android — ils couvrent quelles applications exposent ces modèles sur chaque plateforme. La disponibilité applicative retarde parfois la disponibilité du modèle. Si un modèle est absent de la liste de votre application, il peut généralement être chargé manuellement en GGUF depuis Hugging Face.',
           },
         ],
+        image: '/images/mobile-llm-models-per-tier-verdict-fr.svg',
+        imageCaption: 'Recommandations LLM mobile par gamme : haut de gamme (8–12 Go RAM) → Phi-4 Mini 3.8B ; ancien haut de gamme (8 Go) → Llama 3.2 3B ; milieu de gamme (6–8 Go) → SmolLM 2 1.7B ; entrée de gamme (4–6 Go) → Qwen 2.5 1.5B ; très ancien (4 Go) → Gemma 3 1B.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1511,6 +1541,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '迷った場合は、ハイエンド端末ではPhi-4 Mini、ミッドレンジ端末ではSmolLM 2 1.7Bから始めてみてください — 両方とも高速接続で5分以内にダウンロードでき、元に戻すことも可能です。実際に重要な作業（要約したいメール、答えを知りたい質問など）でテストしてみてください。品質が許容できれば、それがあなたのデフォルトです。そうでなければ、PocketPal AIやLM Studioで30秒以内に別のモデルに切り替えられます。',
           },
         ],
+        image: '/images/mobile-llm-models-decision-flow-ja.svg',
+        imageCaption: 'モバイルLLM選択のための4ステップガイド：スマートフォンのRAMを確認し、端末クラスを選択（4GBから8GB以上）、用途を選択（速度・多言語・品質）、Q4_K_M GGUFをPocketPal AIまたはLM Studio経由でインストール。',
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -1544,6 +1576,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'iPhone 16 Proのtokens/secはこの表のすべてのモデルでiPhone 17 Proより約15〜25%低くなります — A18 ProとA19 ProのNeural Engineの差です。Galaxy S25 Ultra（Snapdragon 8 Elite）は同じQ4_K_M GGUFでiPhone 17 Proより約10〜20%低く、主にTermux+OllamaがAndroidでSnapdragon HexagonのNPUをMLC ChatがApple Metalを活用するほど利用できていないためです。',
           },
         ],
+        image: '/images/mobile-llm-models-comparison-table-ja.svg',
+        imageCaption: 'iPhone 17 ProでQ4_K_Mにて6つのモバイルLLMモデルをベンチマーク：Phi-4 Mini（3.8B、~13–18トークン/秒）が最高精度；SmolLM 2（1.7B、~26–32トークン/秒）が最速；Qwen 2.5（1.5B）が多言語最強；Gemma 3 1B（~35–45トークン/秒）が4GBの旧端末で動作。',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -1624,6 +1658,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7Bはモバイルでのオフライン音声アシスタントスタック向けに最適です — Whisper + LLM + TTS パイプラインについては[スマートフォンでローカル音声アシスタントを構築する](/power-local-llm/voice-assistant-local-mobile-offline?lang=ja)を参照してください。高いtokens/secにより、ミッドレンジハードウェアでも音声ターンテイキングが~1.5秒の知覚しきい値を下回ります。',
           },
         ],
+        image: '/images/mobile-llm-models-speed-chart-ja.svg',
+        imageCaption: 'Q4_K_Mでの3機種における6モバイルLLMモデルのトークン/秒比較：Gemma 3 1B（iPhone 17 Proで~35–45）とSmolLM 2 1.7B（~26–32）が速度で先行；Phi-4 Mini（~13–18）とGemma 3 4B（~10–13）は遅いが高精度。',
       },
       qwen25: {
         id: 'qwen-2-5',
@@ -1693,6 +1729,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '「どちらが良いかテストする」ために同じモデルを複数の量子化でダウンロードしないでください。Q4_K_MとQ5_K_Mの品質差は実在しますが小さく、256GBのスマートフォンに5GB以上の冗長な変種を保存することになります。Q4_K_Mを選び、1週間実際に使用してから、品質が不十分だという具体的な証拠がある場合のみQ5_K_Mにアップグレードしてください。',
           },
         ],
+        image: '/images/mobile-llm-models-quantization-guide-ja.svg',
+        imageCaption: 'モバイル向けGGUF量子化レベル：Q4_K_Mは6GB以上のスマートフォンのデフォルト（~95%品質、×0.5ファイルサイズ）；Q5_K_MとQ6_Kは12GB以上のみ；Q8_0はデスクトップのみ；Q3_K_Mは4GBの最終手段。',
       },
       perTierVerdict: {
         id: 'per-tier-verdict',
@@ -1724,6 +1762,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'アプリ側については、iPhoneとAndroidの姉妹ガイドを参照してください — 各プラットフォームでこれらのモデルを実際に公開しているアプリを紹介しています。アプリの可用性がモデルの可用性に遅れる場合があります。モデルがアプリのキュレーションリストにない場合、Hugging FaceからGGUFとしてサイドロードできることが多いです。',
           },
         ],
+        image: '/images/mobile-llm-models-per-tier-verdict-ja.svg',
+        imageCaption: 'スマートフォンランク別モバイルLLM推奨：ハイエンド（RAM 8–12GB）→ Phi-4 Mini 3.8B；旧ハイエンド（8GB）→ Llama 3.2 3B；ミッドレンジ（6–8GB）→ SmolLM 2 1.7B；バジェット（4–6GB）→ Qwen 2.5 1.5B；旧機種（4GB）→ Gemma 3 1B。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1960,6 +2000,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '如果不确定，在旗舰机上先用Phi-4 Mini，在中端机上先用SmolLM 2 1.7B——两款都能在快速连接下5分钟内下载完成且可随时切换。用你真正关心的任务测试（一封需要摘要的真实邮件、一个真正想得到答案的问题）。如果质量可以接受，就定下来。如果不满意，通过PocketPal AI或LM Studio在30秒内切换到其他模型。',
           },
         ],
+        image: '/images/mobile-llm-models-decision-flow-zh.svg',
+        imageCaption: '移动端LLM选择4步指南：检查手机RAM，确定手机档次（4GB至8GB以上），选择使用场景（速度、多语言或质量），然后通过PocketPal AI或LM Studio安装Q4_K_M GGUF。',
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -1993,6 +2035,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'iPhone 16 Pro的tokens/sec比此表中iPhone 17 Pro的数据约低15–25%——A18 Pro与A19 Pro Neural Engine的差距。Galaxy S25 Ultra（Snapdragon 8 Elite）在相同Q4_K_M GGUF下比iPhone 17 Pro约低10–20%，主要因为Termux+Ollama在Android上还未能像MLC Chat利用Apple Metal那样充分利用Snapdragon Hexagon NPU。',
           },
         ],
+        image: '/images/mobile-llm-models-comparison-table-zh.svg',
+        imageCaption: '在iPhone 17 Pro上以Q4_K_M量化基准测试6款移动端LLM：Phi-4 Mini（3.8B，约13–18词元/秒）最智能；SmolLM 2（1.7B，约26–32词元/秒）最快；Qwen 2.5（1.5B）多语言最强；Gemma 3 1B（约35–45词元/秒）适用于4GB旧机。',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -2073,6 +2117,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B是手机端离线语音助手的最佳搭档——Whisper + LLM + TTS完整流程请参考[在手机上构建本地语音助手](/power-local-llm/voice-assistant-local-mobile-offline?lang=zh)。高tokens/sec让语音对话响应保持在约1.5秒的感知门槛以下，即便在中端硬件上也如此。',
           },
         ],
+        image: '/images/mobile-llm-models-speed-chart-zh.svg',
+        imageCaption: '6款移动端LLM在3设备上Q4_K_M量化的词元/秒对比：Gemma 3 1B（iPhone 17 Pro约35–45）和SmolLM 2 1.7B（约26–32）速度领先；Phi-4 Mini（约13–18）和Gemma 3 4B（约10–13）较慢但更智能。',
       },
       qwen25: {
         id: 'qwen-2-5',
@@ -2142,6 +2188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '不要以"测试哪个更好"为由下载同一模型的多个量化版本。Q4_K_M和Q5_K_M之间的质量差异真实存在但很小，却会消耗256GB手机5GB以上的冗余存储。选择Q4_K_M，使用一周，只有在有具体证据证明质量不足时才升级到Q5_K_M。',
           },
         ],
+        image: '/images/mobile-llm-models-quantization-guide-zh.svg',
+        imageCaption: '移动端GGUF量化级别：Q4_K_M是6GB以上手机的默认选择（约95%质量，×0.5文件大小）；Q5_K_M和Q6_K仅用于12GB以上；Q8_0仅适用于桌面；Q3_K_M是4GB手机的最后选择。',
       },
       perTierVerdict: {
         id: 'per-tier-verdict',
@@ -2173,6 +2221,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '关于应用侧，请查阅iPhone和Android姐妹指南——它们介绍了哪些应用实际上在每个平台上支持这些模型。应用可用性有时滞后于模型可用性：Gemma 3 4B在PocketPal AI添加一键下载器的六个月前就已上线Hugging Face。如果模型不在应用的精选列表中，通常可以从Hugging Face以GGUF格式旁加载。',
           },
         ],
+        image: '/images/mobile-llm-models-per-tier-verdict-zh.svg',
+        imageCaption: '按手机档次的移动端LLM推荐：旗舰机（RAM 8–12GB）→ Phi-4 Mini 3.8B；旧旗舰（8GB）→ Llama 3.2 3B；中端（6–8GB）→ SmolLM 2 1.7B；低端（4–6GB）→ Qwen 2.5 1.5B；超旧机型（4GB）→ Gemma 3 1B。',
       },
       commonMistakes: {
         id: 'common-mistakes',
