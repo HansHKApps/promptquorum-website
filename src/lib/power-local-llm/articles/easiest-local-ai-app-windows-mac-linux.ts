@@ -136,6 +136,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Start with LM Studio unless you have a specific reason not to. It has the best UI, the largest model library, and a clear upgrade path (Local Server tab) if you want to connect other tools later. If you strongly prefer open-source software, Jan is the equivalent choice.',
           },
         ],
+        image: '/images/easiest-local-ai-app-comparison-table-en.svg',
+        imageCaption: 'LM Studio vs Jan vs GPT4All feature comparison: LM Studio offers 50,000+ models, local API, multi-chat, and the best UI; Jan is the open-source alternative (AGPLv3); GPT4All is the simplest single-window option for pure beginners.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -157,6 +159,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'On macOS, LM Studio detects your hardware automatically and recommends the best quantisation level for your available memory. Accept the recommendation unless you have a specific reason to override it. On Windows with an NVIDIA GPU, LM Studio automatically enables GPU acceleration — you do not need to configure CUDA.',
           },
         ],
+        image: '/images/easiest-local-ai-app-setup-steps-en.svg',
+        imageCaption: 'LM Studio 4-step setup: (1) download installer from lmstudio.ai, (2) install and open the app, (3) browse Discover tab and download Q4_K_M model (~2.7–5 GB), (4) open Chat, select model, and start chatting — no terminal required.',
       },
       jan: {
         id: 'jan',
@@ -196,6 +200,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'GPT4All includes a "LocalDocs" feature that lets you add a folder of documents (PDFs, text files) and ask questions about them. This is a simplified version of RAG — useful for basic document Q&A without setting up LlamaIndex or AnythingLLM. The accuracy is limited compared to a proper RAG setup, but it requires zero additional configuration.',
           },
         ],
+        image: '/images/easiest-local-ai-app-which-app-en.svg',
+        imageCaption: 'Which local AI app to install: LM Studio for best UI and API access (50,000+ models); Jan as open-source AGPLv3 alternative; GPT4All for the simplest single-window beginner experience with ~20 curated models. All three are free and run with no cloud account.',
       },
       firstModel: {
         id: 'first-model',
@@ -215,6 +221,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Start with the smallest model that runs fast enough to feel interactive (over 8 tokens per second in real-time typing speed). A slow large model is worse to use than a fast small one — the frustration of waiting 10 seconds per sentence defeats the purpose. Upgrade to a larger model when you have experienced the limits of the small one.',
           },
         ],
+        image: '/images/easiest-local-ai-app-first-model-guide-en.svg',
+        imageCaption: 'First model guide by available RAM: ≤8 GB → Phi-4 Mini 3.8B (~2.7 GB, 15–30 tok/s on Apple Silicon); 8–16 GB → Llama 3.2 3B or Qwen3 8B; 16–32 GB → Qwen3 14B (~8.9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
       },
       hardware: {
         id: 'hardware',
@@ -244,6 +252,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Do not try to run a model larger than your available RAM. LM Studio will use disk swap if the model does not fit in RAM, which makes generation so slow (~0.5 tokens/sec) that the app feels broken. Always check the model size in the Discover tab before downloading and compare it to your available RAM.',
           },
         ],
+        image: '/images/easiest-local-ai-app-hardware-guide-en.svg',
+        imageCaption: 'Hardware requirements for local AI: Apple Silicon (M1–M5) runs models fastest with unified memory; NVIDIA GPU enables fast Windows/Linux inference; AMD GPU has improving ROCm support; CPU-only Intel/AMD runs 3B–7B models at 5–15 tok/s on any 8 GB laptop.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -445,6 +455,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Funktion': 'Linux-Unterstützung', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Funktion': 'Am besten für', 'LM Studio': 'Benutzer, die die beste Benutzeroberfläche + Entwickler-API-Zugriff wünschen', 'Jan': 'Benutzer, die Open-Source-Software bevorzugen', 'GPT4All': 'Absolute Anfänger, die die einfachste Oberfläche wünschen' },
         ],
+        image: '/images/easiest-local-ai-app-comparison-table-de.svg',
+        imageCaption: 'LM Studio vs. Jan vs. GPT4All Funktionsvergleich: LM Studio bietet 50.000+ Modelle, lokale API, Multi-Chat und die beste Benutzeroberfläche; Jan ist die Open-Source-Alternative (AGPLv3); GPT4All ist die einfachste Einzelfenster-Option für absolute Anfänger.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -460,6 +472,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Warten Sie, bis der Download abgeschlossen ist (2–5 GB je nach Modell). Der Fortschritt wird in der unteren Leiste angezeigt.',
           'Klicken Sie auf „Chat" in der Seitenleiste. Wählen Sie Ihr heruntergeladenes Modell aus dem Dropdown oben aus. Geben Sie Ihre erste Nachricht ein.',
         ],
+        image: '/images/easiest-local-ai-app-setup-steps-de.svg',
+        imageCaption: 'LM Studio 4-Schritte-Einrichtung: (1) Installationsprogramm von lmstudio.ai herunterladen, (2) App installieren und öffnen, (3) Discover-Tab durchsuchen und Q4_K_M-Modell (~2,7–5 GB) herunterladen, (4) Chat öffnen, Modell auswählen, chatten — kein Terminal erforderlich.',
       },
       jan: {
         id: 'jan',
@@ -487,6 +501,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nach dem Download öffnet sich das Chat-Fenster automatisch mit dem ausgewählten Modell. Geben Sie Ihre erste Nachricht ein.',
           'GPT4All hat keinen Multi-Gesprächs-Verlauf — jede Sitzung beginnt von vorne. Es ist für die Einzelaufgaben-Nutzung statt für erweiterte Gespräche konzipiert.',
         ],
+        image: '/images/easiest-local-ai-app-which-app-de.svg',
+        imageCaption: 'Welche lokale KI-App installieren: LM Studio für die beste Benutzeroberfläche und API-Zugriff (50.000+ Modelle); Jan als Open-Source AGPLv3-Alternative; GPT4All für das einfachste Einzelfenster-Einsteigererlebnis mit ~20 kuratierten Modellen. Alle drei kostenlos, kein Cloud-Konto erforderlich.',
       },
       firstModel: {
         id: 'first-model',
@@ -500,6 +516,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Verfügbarer RAM': '16–32 GB', 'Empfohlenes erstes Modell': 'Qwen3 14B (Q4)', 'Download-Größe': '~8,9 GB', 'Erwartete Geschwindigkeit': '15–25 Token/Sek. auf Apple Silicon; GPU erforderlich für Echtzeit auf x86' },
           { 'Verfügbarer RAM': '32 GB+ (Apple Silicon) oder 24 GB VRAM (NVIDIA)', 'Empfohlenes erstes Modell': 'Llama 3.3 70B (Q4)', 'Download-Größe': '~40 GB', 'Erwartete Geschwindigkeit': '10–20 Token/Sek. auf Apple M5 Max; 15–25 Token/Sek. RTX 4090' },
         ],
+        image: '/images/easiest-local-ai-app-first-model-guide-de.svg',
+        imageCaption: 'Erstmodell-Leitfaden nach verfügbarem RAM: ≤8 GB → Phi-4 Mini 3,8B (~2,7 GB, 15–30 Token/Sek. auf Apple Silicon); 8–16 GB → Llama 3.2 3B oder Qwen3 8B; 16–32 GB → Qwen3 14B (~8,9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
       },
       hardware: {
         id: 'hardware',
@@ -513,6 +531,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Reine Intel/AMD-CPU:** funktioniert für 3B–7B-Modelle mit 5–15 Token/Sekunde — nutzbar aber langsam. Das Erlebnis ist besser für Aufgaben, bei denen Sie einen Prompt senden und etwas anderes tun (Zusammenfassung, E-Mail-Entwurf) als für Echtzeit-Gesprächsnutzung.',
           '**RAM und VRAM:** das Modell muss vollständig in RAM (oder VRAM) passen. Ein 4B-Modell benötigt ~3 GB; ein 8B-Modell benötigt ~5 GB; ein 14B-Modell benötigt ~9 GB; ein 70B-Modell benötigt ~42 GB. Wenn das Modell zu groß ist, warnt LM Studio Sie vor dem Download.',
         ],
+        image: '/images/easiest-local-ai-app-hardware-guide-de.svg',
+        imageCaption: 'Hardware-Anforderungen für lokale KI: Apple Silicon (M1–M5) führt Modelle mit einheitlichem Speicher am schnellsten aus; NVIDIA-GPU ermöglicht schnelle Windows/Linux-Inferenz; AMD-GPU verbessert ROCm-Unterstützung; CPU-only Intel/AMD führt 3B–7B-Modelle mit 5–15 Token/Sek. auf jedem 8-GB-Laptop aus.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -900,6 +920,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Taille téléchargement', 'LM Studio': '~450 MB', 'Jan': '~380 MB', 'GPT4All': '~290 MB' },
           { 'Critère': 'API OpenAI locale', 'LM Studio': 'Oui', 'Jan': 'Oui', 'GPT4All': 'Oui' },
         ],
+        image: '/images/easiest-local-ai-app-comparison-table-fr.svg',
+        imageCaption: 'Comparaison des fonctionnalités LM Studio vs Jan vs GPT4All : LM Studio offre 50 000+ modèles, API locale, multi-chat et la meilleure UI ; Jan est l\'alternative open-source (AGPLv3) ; GPT4All est l\'option fenêtre unique la plus simple pour les débutants absolus.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -931,6 +953,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Une fois chargé, vous pouvez commencer à discuter immédiatement. Aucune autre étape. La première génération de réponse peut prendre 10–30 secondes selon votre matériel.',
           },
         ],
+        image: '/images/easiest-local-ai-app-setup-steps-fr.svg',
+        imageCaption: 'Configuration LM Studio en 4 étapes : (1) téléchargez l\'installateur depuis lmstudio.ai, (2) installez et ouvrez l\'application, (3) parcourez l\'onglet Discover et téléchargez le modèle Q4_K_M (~2,7–5 GB), (4) ouvrez Chat, sélectionnez le modèle et commencez à discuter — aucun terminal requis.',
       },
       jan: {
         id: 'jan',
@@ -993,6 +1017,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Pas d\'options supplémentaires. Juste une boîte de saisie et une fenêtre de réponse.',
           },
         ],
+        image: '/images/easiest-local-ai-app-which-app-fr.svg',
+        imageCaption: 'Quelle application d\'IA locale installer : LM Studio pour la meilleure UI et accès API (50 000+ modèles) ; Jan comme alternative open-source AGPLv3 ; GPT4All pour l\'expérience débutant fenêtre unique la plus simple avec ~20 modèles curés. Les trois sont gratuits et fonctionnent sans compte cloud.',
       },
       firstModel: {
         id: 'first-model',
@@ -1006,6 +1032,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**NVIDIA RTX 3060 ou meilleur :** Llama 3.3 8B, Mistral 7B ou Qwen3 8B. Le GPU accélère ces modèles 5–10x. Bonne qualité et vitesse combinées.',
           '**RTX 4090 ou A100 :** Llama 3.3 70B ou Mixtral 8x7B. Les plus grands modèles disponibles pour local. Qualité proche du cloud. Mais lent (5–10 tokens/sec).',
         ],
+        image: '/images/easiest-local-ai-app-first-model-guide-fr.svg',
+        imageCaption: 'Guide du premier modèle par RAM disponible : ≤8 GB → Phi-4 Mini 3.8B (~2.7 GB, 15–30 tok/s sur Apple Silicon) ; 8–16 GB → Llama 3.2 3B ou Qwen3 8B ; 16–32 GB → Qwen3 14B (~8.9 GB) ; 32 GB+ → Llama 3.3 70B (~40 GB).',
       },
       hardware: {
         id: 'hardware',
@@ -1020,6 +1048,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Processeur :** CPU moderne (Intel i7 2019+, AMD Ryzen 5 2019+, ou Apple Silicon). Les CPU anciens fonctionnent mais sont lents.',
           '**Aucune GPU requise pour commencer.** Les modèles 3B–8B fonctionnent confortablement sur CPU moderne sans GPU.',
         ],
+        image: '/images/easiest-local-ai-app-hardware-guide-fr.svg',
+        imageCaption: 'Exigences matérielles pour l\'IA locale : Apple Silicon (M1–M5) exécute les modèles le plus rapidement avec la mémoire unifiée ; GPU NVIDIA permet une inférence rapide Windows/Linux ; GPU AMD a un support ROCm amélioré ; Intel/AMD CPU-only exécute des modèles 3B–7B à 5–15 tok/s sur n\'importe quel ordinateur portable 8 GB.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1369,6 +1399,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '基準': 'ダウンロードサイズ', 'LM Studio': '約450 MB', 'Jan': '約380 MB', 'GPT4All': '約290 MB' },
           { '基準': 'ローカルOpenAI API', 'LM Studio': 'あり', 'Jan': 'あり', 'GPT4All': 'あり' },
         ],
+        image: '/images/easiest-local-ai-app-comparison-table-ja.svg',
+        imageCaption: 'LM Studio対Jan対GPT4All機能比較：LM Studioは50,000以上のモデル、ローカルAPI、マルチチャット、最高のUIを提供；JanはオープンソースのAGPLv3代替；GPT4Allは完全な初心者向けの最もシンプルな単一ウィンドウオプション。',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -1400,6 +1432,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'ロード後、すぐにチャット可能。追加ステップなし。ハードウェアに応じて最初の回答生成は10–30秒かかる。',
           },
         ],
+        image: '/images/easiest-local-ai-app-setup-steps-ja.svg',
+        imageCaption: 'LM Studio 4ステップセットアップ：（1）lmstudio.aiからインストーラをダウンロード、（2）アプリをインストールして開く、（3）Discoverタブを閲覧してQ4_K_Mモデル（~2.7–5 GB）をダウンロード、（4）Chatを開き、モデルを選択してチャット開始 — ターミナル不要。',
       },
       jan: {
         id: 'jan',
@@ -1462,6 +1496,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '追加オプション無し。入力ボックスと回答ウィンドウだけ。',
           },
         ],
+        image: '/images/easiest-local-ai-app-which-app-ja.svg',
+        imageCaption: 'インストールするローカルAIアプリ：LM Studioは最高のUIとAPIアクセス（50,000以上のモデル）；JanはオープンソースAGPLv3代替；GPT4Allは~20のキュレーションされたモデルで最もシンプルな単一ウィンドウの初心者体験。3つすべて無料でクラウドアカウント不要で動作。',
       },
       firstModel: {
         id: 'first-model',
@@ -1475,6 +1511,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**NVIDIA RTX 3060またはそれ以上：** Llama 3.3 8B、Mistral 7B、またはQwen3 8B。GPUはこれら8Bモデルを5–10倍高速化。良い品質と速度の組み合わせ。',
           '**RTX 4090またはA100：** Llama 3.3 70BまたはMixtral 8x7B。最大利用可能モデル。クラウドに近い品質。しかし遅い（5–10 tokens/sec）。',
         ],
+        image: '/images/easiest-local-ai-app-first-model-guide-ja.svg',
+        imageCaption: '利用可能なRAMによる最初のモデルガイド：≤8 GB → Phi-4 Mini 3.8B（~2.7 GB、Apple Siliconで15–30 tok/s）；8–16 GB → Llama 3.2 3BまたはQwen3 8B；16–32 GB → Qwen3 14B（~8.9 GB）；32 GB+ → Llama 3.3 70B（~40 GB）。',
       },
       hardware: {
         id: 'hardware',
@@ -1489,6 +1527,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**CPU :** モダンCPU（2019年以降のIntel i7、AMD Ryzen 5、またはApple Silicon）。古いCPUは動作但し遅い。',
           '**GPU不要で開始可能。** 3B–8BモデルはモダンCPUなしGPUで快適に動作。',
         ],
+        image: '/images/easiest-local-ai-app-hardware-guide-ja.svg',
+        imageCaption: 'ローカルAIのハードウェア要件：Apple Silicon（M1–M5）は統一メモリで最速モデル実行；NVIDIAのGPUはWindows/Linux高速推論を可能にする；AMD GPUはROCmサポートを改善中；CPU専用Intel/AMDは8 GBのラップトップで3B–7Bモデルを5–15 tok/sで実行。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1842,6 +1882,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '标准': '下载大小', 'LM Studio': '约450 MB', 'Jan': '约380 MB', 'GPT4All': '约290 MB' },
           { '标准': '本地OpenAI API', 'LM Studio': '是', 'Jan': '是', 'GPT4All': '是' },
         ],
+        image: '/images/easiest-local-ai-app-comparison-table-zh.svg',
+        imageCaption: 'LM Studio与Jan与GPT4All功能对比：LM Studio提供50,000+模型、本地API、多聊天和最佳UI；Jan是开源替代品（AGPLv3）；GPT4All是纯初学者最简单的单窗口选项。',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -1873,6 +1915,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '加载后，立即可以聊天。无需其他步骤。首次答案生成可能需要10–30秒，具体取决于你的硬件。',
           },
         ],
+        image: '/images/easiest-local-ai-app-setup-steps-zh.svg',
+        imageCaption: 'LM Studio 4步设置：（1）从lmstudio.ai下载安装程序，（2）安装并打开应用，（3）浏览Discover选项卡并下载Q4_K_M模型（~2.7–5 GB），（4）打开Chat，选择模型，开始聊天 — 无需终端。',
       },
       jan: {
         id: 'jan',
@@ -1935,6 +1979,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '无需额外选项。只是输入框和答案窗口。',
           },
         ],
+        image: '/images/easiest-local-ai-app-which-app-zh.svg',
+        imageCaption: '安装哪个本地AI应用：LM Studio提供最佳UI和API访问（50,000+模型）；Jan作为开源AGPLv3替代品；GPT4All提供约20个精选模型的最简单单窗口初学者体验。三者都免费，无需云账户运行。',
       },
       firstModel: {
         id: 'first-model',
@@ -1948,6 +1994,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**NVIDIA RTX 3060或更高版本：** Llama 3.3 8B、Mistral 7B或Qwen3 8B。GPU将这些8B模型加速5–10倍。速度和质量的良好组合。',
           '**RTX 4090或A100：** Llama 3.3 70B或Mixtral 8x7B。最大可用模型。接近云端质量。但速度慢（5–10 tokens/sec）。',
         ],
+        image: '/images/easiest-local-ai-app-first-model-guide-zh.svg',
+        imageCaption: '按可用RAM的首个模型指南：≤8 GB → Phi-4 Mini 3.8B（~2.7 GB，Apple Silicon上15–30 tok/s）；8–16 GB → Llama 3.2 3B或Qwen3 8B；16–32 GB → Qwen3 14B（~8.9 GB）；32 GB+ → Llama 3.3 70B（~40 GB）。',
       },
       hardware: {
         id: 'hardware',
@@ -1962,6 +2010,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**CPU :** 现代CPU（2019年以后的Intel i7、AMD Ryzen 5或Apple Silicon）。旧CPU工作但速度慢。',
           '**无GPU即可开始。** 3B–8B模型在无GPU的现代CPU上舒适运行。',
         ],
+        image: '/images/easiest-local-ai-app-hardware-guide-zh.svg',
+        imageCaption: '本地AI的硬件要求：Apple Silicon（M1–M5）使用统一内存运行模型最快；NVIDIA GPU支持快速Windows/Linux推断；AMD GPU的ROCm支持不断改进；仅CPU Intel/AMD在任何8 GB笔记本电脑上以5–15 tok/s运行3B–7B模型。',
       },
       commonMistakes: {
         id: 'common-mistakes',

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" width="800" height="310">
+  <rect width="800" height="310" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">どのアプリをインストールすべきか？— LM Studio vs Jan vs GPT4All</text>
+  <!-- Subtitle -->
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">3つとも無料 · ターミナル不要 · Windows・Mac・Linux対応</text>
+
+  <!-- Panel 1: LM Studio -->
+  <rect x="18" y="60" width="238" height="210" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="60" width="238" height="4" rx="0" fill="#6750A4"/>
+  <text x="137" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">LM Studio</text>
+  <text x="137" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#6750A4" text-anchor="middle">~8 min setup</text>
+  <line x1="36" y1="115" x2="238" y2="115" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="36" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• 50,000+ GGUF models</text>
+  <text x="36" y="151" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Local API (OpenAI ✓)</text>
+  <text x="36" y="169" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Multi-chat history</text>
+  <text x="36" y="187" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Best UI of the three</text>
+  <line x1="36" y1="205" x2="238" y2="205" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="137" y="223" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Best: UI + API access</text>
+
+  <!-- Panel 2: Jan -->
+  <rect x="280" y="60" width="238" height="210" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="280" y="60" width="238" height="4" fill="#34A853"/>
+  <text x="399" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Jan</text>
+  <text x="399" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853" text-anchor="middle">~10 min setup</text>
+  <line x1="298" y1="115" x2="500" y2="115" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="298" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Same models as LM Studio</text>
+  <text x="298" y="151" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• AGPLv3 open-source</text>
+  <text x="298" y="169" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Multi-chat history</text>
+  <text x="298" y="187" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Works on Linux AppImage</text>
+  <line x1="298" y1="205" x2="500" y2="205" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="399" y="223" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Best: Open-source users</text>
+
+  <!-- Panel 3: GPT4All -->
+  <rect x="543" y="60" width="238" height="210" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="543" y="60" width="238" height="4" fill="#F4B400"/>
+  <text x="662" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle">GPT4All</text>
+  <text x="662" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853" text-anchor="middle">~5 min setup ★</text>
+  <line x1="560" y1="115" x2="763" y2="115" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="560" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Simplest single window</text>
+  <text x="560" y="151" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• ~20 curated models</text>
+  <text x="560" y="169" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• LocalDocs (basic RAG)</text>
+  <text x="560" y="187" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">• Fastest first setup</text>
+  <line x1="560" y1="205" x2="763" y2="205" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="662" y="223" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle">Best: Pure beginners ★</text>
+
+  <!-- Footer -->
+  <line x1="18" y1="282" x2="782" y2="282" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">★ 最速セットアップ · 紫 = ほとんどのユーザーへの推奨 · promptquorum.com</text>
+</svg>
