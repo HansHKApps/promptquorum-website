@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">タブレット別おすすめモデル — オンデバイス推論</text>
+
+  <!-- Header row -->
+  <rect x="0" y="46" width="800" height="38" fill="#6750A4"/>
+  <text x="93" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">デバイス</text>
+  <text x="228" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">RAM</text>
+  <text x="360" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">おすすめモデル</text>
+  <text x="515" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">速度</text>
+  <text x="690" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">用途</text>
+
+  <!-- Vertical column dividers -->
+  <line x1="185" y1="46" x2="185" y2="348" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="270" y1="46" x2="270" y2="348" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="450" y1="46" x2="450" y2="348" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="580" y1="46" x2="580" y2="348" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row 1: iPad Air M2/M3 -->
+  <rect x="0" y="84" width="800" height="44" fill="#FFFFFF"/>
+  <text x="93" y="110" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPad Air M2/M3</text>
+  <text x="228" y="110" font-size="12" fill="#49454F" text-anchor="middle">8 GB</text>
+  <text x="360" y="110" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Phi-4 Mini Q4</text>
+  <rect x="460" y="99" width="110" height="22" rx="11" fill="#E6F4EA"/>
+  <text x="515" y="114" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~15–18 tok/秒</text>
+  <text x="690" y="110" font-size="11" fill="#49454F" text-anchor="middle">文章作成、要約</text>
+
+  <!-- Row 2: iPad Pro M4 -->
+  <rect x="0" y="128" width="800" height="44" fill="#F7F2FA"/>
+  <text x="93" y="147" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPad Pro M4</text>
+  <text x="93" y="162" font-size="10" fill="#49454F" text-anchor="middle">(16 GBモデル)</text>
+  <text x="228" y="154" font-size="12" fill="#49454F" text-anchor="middle">16 GB</text>
+  <text x="360" y="147" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Llama 3.2 3B /</text>
+  <text x="360" y="162" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Gemma 3 4B</text>
+  <rect x="460" y="143" width="110" height="22" rx="11" fill="#E6F4EA"/>
+  <text x="515" y="158" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~25–30 tok/秒</text>
+  <text x="690" y="154" font-size="11" fill="#49454F" text-anchor="middle">作業用、RAG、小説</text>
+
+  <!-- Row 3: Android 8 GB -->
+  <rect x="0" y="172" width="800" height="44" fill="#FFFFFF"/>
+  <text x="93" y="191" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Android 8 GB</text>
+  <text x="93" y="206" font-size="10" fill="#49454F" text-anchor="middle">(Tab S10+, Pad 2)</text>
+  <text x="228" y="198" font-size="12" fill="#49454F" text-anchor="middle">8 GB</text>
+  <text x="360" y="198" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Phi-4 Mini Q4</text>
+  <rect x="460" y="187" width="110" height="22" rx="11" fill="#FEF7E0"/>
+  <text x="515" y="202" font-size="11" font-weight="700" fill="#E37400" text-anchor="middle">~10–15 tok/秒</text>
+  <text x="690" y="198" font-size="11" fill="#49454F" text-anchor="middle">上級者向け（Termux）</text>
+
+  <!-- Row 4: Android 6 GB -->
+  <rect x="0" y="216" width="800" height="44" fill="#F7F2FA"/>
+  <text x="93" y="242" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Android 6 GB</text>
+  <text x="228" y="242" font-size="12" fill="#49454F" text-anchor="middle">6 GB</text>
+  <text x="360" y="242" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Qwen3 1.7B Q4</text>
+  <rect x="460" y="231" width="110" height="22" rx="11" fill="#E6F4EA"/>
+  <text x="515" y="246" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~15–20 tok/秒</text>
+  <text x="690" y="242" font-size="11" fill="#49454F" text-anchor="middle">軽量チャット、翻訳</text>
+
+  <!-- Row 5: Pixel Tablet (warning) -->
+  <rect x="0" y="260" width="800" height="44" fill="#FFFBF0"/>
+  <text x="93" y="279" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Pixel Tablet</text>
+  <text x="93" y="294" font-size="10" fill="#49454F" text-anchor="middle">(Tensor G2)</text>
+  <text x="228" y="286" font-size="12" fill="#49454F" text-anchor="middle">8 GB</text>
+  <text x="360" y="286" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">リモート専用</text>
+  <rect x="460" y="275" width="110" height="22" rx="11" fill="#F3EFF4"/>
+  <text x="515" y="290" font-size="11" fill="#79747E" text-anchor="middle">N/A オンデバイス</text>
+  <text x="690" y="286" font-size="11" fill="#79747E" text-anchor="middle">Tensor G2は低速すぎ</text>
+
+  <!-- Row 6: Any tablet via remote (green tint) -->
+  <rect x="0" y="304" width="800" height="44" fill="#F0FBF0"/>
+  <text x="93" y="323" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">任意のタブレット</text>
+  <text x="93" y="338" font-size="10" fill="#49454F" text-anchor="middle">（リモート）</text>
+  <text x="228" y="330" font-size="12" fill="#49454F" text-anchor="middle">—</text>
+  <text x="360" y="330" font-size="11" fill="#49454F" text-anchor="middle">任意のモデル（ホームサーバー）</text>
+  <rect x="460" y="319" width="110" height="22" rx="11" fill="#E6F4EA"/>
+  <text x="515" y="334" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~20–40 tok/秒</text>
+  <text x="690" y="330" font-size="11" fill="#49454F" text-anchor="middle">70Bモデル、高品質</text>
+
+  <!-- Table outer border -->
+  <rect x="0" y="46" width="800" height="302" fill="none" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <text x="400" y="370" font-size="11" fill="#79747E" text-anchor="middle">速度：Snapdragon 8 Gen 3 / Dimensity 9300（Android）、Mシリーズ（iPad）で計測</text>
+  <text x="400" y="390" font-size="11" fill="#79747E" text-anchor="middle">リモート速度はホストマシン依存；Apple M2+での値</text>
+  <text x="400" y="410" font-size="11" fill="#79747E" text-anchor="middle">Q4 = 4ビット量子化 — 品質を保ちながらRAM使用量を削減</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">两种模式：本机运行 vs 远程连接</text>
+
+  <!-- Left: On-Device (amber) -->
+  <rect x="18" y="42" width="372" height="292" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="18" y="42" width="372" height="4" fill="#F4B400"/>
+  <text x="204" y="68" font-size="15" font-weight="700" fill="#F4B400" text-anchor="middle">本机运行（On-Device）</text>
+
+  <text x="34" y="94" font-size="11" font-weight="700" fill="#79747E">模型大小限制</text>
+  <text x="34" y="109" font-size="12" fill="#1C1B1F">3B–8B最大（iPad Pro M4）</text>
+  <line x1="18" y1="118" x2="390" y2="118" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="34" y="136" font-size="11" font-weight="700" fill="#79747E">离线使用</text>
+  <circle cx="360" cy="133" r="11" fill="#34A853"/>
+  <text x="360" y="137" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="150" x2="390" y2="150" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="34" y="168" font-size="11" font-weight="700" fill="#79747E">生成速度</text>
+  <text x="34" y="183" font-size="12" fill="#1C1B1F">10–25 tok/秒（iPad Pro M4）</text>
+  <line x1="18" y1="192" x2="390" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="34" y="210" font-size="11" font-weight="700" fill="#79747E">平板存储占用</text>
+  <text x="34" y="225" font-size="12" fill="#1C1B1F">每个模型 2–10 GB</text>
+  <line x1="18" y1="234" x2="390" y2="234" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="34" y="252" font-size="11" font-weight="700" fill="#79747E">适用场景</text>
+  <text x="34" y="267" font-size="12" fill="#1C1B1F">外出旅行、离线、3B任务</text>
+  <line x1="18" y1="276" x2="390" y2="276" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="34" y="294" font-size="11" font-weight="700" fill="#79747E">设置难度</text>
+  <text x="34" y="309" font-size="12" fill="#1C1B1F">下载应用＋模型文件</text>
+
+  <!-- Right: Remote Connection (green) -->
+  <rect x="410" y="42" width="372" height="292" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="410" y="42" width="372" height="4" fill="#34A853"/>
+  <text x="596" y="68" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle">远程连接 ★ 推荐</text>
+
+  <text x="426" y="94" font-size="11" font-weight="700" fill="#79747E">模型大小限制</text>
+  <text x="426" y="109" font-size="12" fill="#1C1B1F">无限制 — 家用主机可运行任意模型</text>
+  <line x1="410" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="426" y="136" font-size="11" font-weight="700" fill="#79747E">离线使用</text>
+  <circle cx="752" cy="133" r="11" fill="#EA4335"/>
+  <text x="752" y="137" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <line x1="410" y1="150" x2="782" y2="150" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="426" y="168" font-size="11" font-weight="700" fill="#79747E">生成速度</text>
+  <text x="426" y="183" font-size="12" fill="#1C1B1F">20–40+ tok/秒（家用主机）</text>
+  <line x1="410" y1="192" x2="782" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="426" y="210" font-size="11" font-weight="700" fill="#79747E">平板存储占用</text>
+  <text x="426" y="225" font-size="12" fill="#34A853">无 — 模型存放在家用主机</text>
+  <line x1="410" y1="234" x2="782" y2="234" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="426" y="252" font-size="11" font-weight="700" fill="#79747E">适用场景</text>
+  <text x="426" y="267" font-size="12" fill="#1C1B1F">追求质量，70B模型</text>
+  <line x1="410" y1="276" x2="782" y2="276" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="426" y="294" font-size="11" font-weight="700" fill="#79747E">设置难度</text>
+  <text x="426" y="309" font-size="12" fill="#1C1B1F">家用主机：Ollama + Open WebUI</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -136,6 +136,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'If you already have a Mac or PC at home that can run Ollama, start with remote connection. You get better model quality on your tablet immediately without storing model files on the tablet or dealing with mobile app limitations. Add on-device capability later if you find yourself wanting offline use.',
           },
         ],
+        image: '/images/run-ai-on-tablet-two-modes-en.svg',
+        imageCaption: 'Two tablet AI modes: on-device inference (model runs on tablet chip, works offline, limited to 3B–8B models) vs remote connection (tablet browser connects to home Mac/PC running Ollama, no model stored on tablet, unlimited model size).',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
@@ -155,6 +157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Do not try to run a 7B model on an 8 GB iPad for real-time chat. At 5–8 tokens per second, every response takes 15–30 seconds. This is usable for summarisation tasks where you send a prompt and wait, but frustrating for conversational use. Use 3B models on 8 GB devices; upgrade to a 16 GB device or switch to remote connection for 7B+.',
           },
         ],
+        image: '/images/run-ai-on-tablet-ipad-speed-en.svg',
+        imageCaption: 'iPad on-device inference speed: iPad Pro M4 (16 GB) reaches 18–30 tok/sec on Phi-4 Mini and Llama 3.2 3B; iPad Air M2 (8 GB) runs 3B models at 12–18 tok/sec but drops to 5–8 tok/sec on 7B models — too slow for real-time chat.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -182,6 +186,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install the Termux:Widget addon and create a shortcut that runs "ollama serve" — this lets you start the Ollama server from your Android home screen without opening Termux manually. Once Ollama is serving, open any chat app configured to connect to localhost:11434.',
           },
         ],
+        image: '/images/run-ai-on-tablet-termux-setup-en.svg',
+        imageCaption: 'Android on-device AI: 5-step Termux + Ollama setup — install Termux from F-Droid (not Play Store), update packages, install Ollama via curl, pull a model (phi4-mini or qwen3:1.7b), then start the server at localhost:11434. Requires 8 GB RAM minimum.',
       },
       remoteConnection: {
         id: 'remote-connection',
@@ -211,6 +217,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Bookmark the home machine\'s Open WebUI URL on your tablet\'s home screen (in Safari: Share → Add to Home Screen; in Chrome: three-dot menu → Add to Home Screen). This makes it feel like a native app. On iPad, full-screen web apps in Safari hide the browser chrome for an app-like experience.',
           },
         ],
+        image: '/images/run-ai-on-tablet-remote-setup-en.svg',
+        imageCaption: 'Remote AI from a tablet in 4 steps: install Ollama on your home machine, pull a model + Open WebUI, find your home IP address, then open http://[IP]:3000 in your tablet browser — no model stored on tablet, runs 70B models at 20–40 tok/sec.',
       },
       models: {
         id: 'models',
@@ -232,6 +240,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'For most everyday tasks (drafting text, answering questions, summarising content), Phi-4 Mini (3.8B) on a tablet is adequately capable. Where it falls short compared to a 70B model: complex multi-step reasoning, nuanced creative writing, and long document analysis. For these tasks, use remote connection to a home machine running a larger model.',
           },
         ],
+        image: '/images/run-ai-on-tablet-model-by-device-en.svg',
+        imageCaption: 'Best model by tablet: iPad Pro M4 (16 GB) reaches 25–30 tok/sec on Llama 3.2 3B; iPad Air M2/M3 runs Phi-4 Mini at 15–18 tok/sec; Android 8 GB reaches 10–15 tok/sec via Termux; Pixel Tablet requires remote connection due to slow Tensor G2 chip.',
       },
       frontends: {
         id: 'frontends',
@@ -487,6 +497,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wenn Sie bereits einen Mac oder PC zu Hause haben, der Ollama ausführen kann, beginnen Sie mit der Remote-Verbindung. Sie erhalten sofort bessere Modellqualität auf Ihrem Tablet, ohne Modelldateien auf dem Tablet zu speichern oder mit mobilen App-Einschränkungen umzugehen. Fügen Sie später On-Device-Funktionalität hinzu, wenn Sie möchten.',
           },
         ],
+        image: '/images/run-ai-on-tablet-two-modes-de.svg',
+        imageCaption: 'Zwei Tablet-KI-Modi: On-Device-Inferenz (Modell läuft auf Tablet-Chip, offline nutzbar, auf 3B–8B begrenzt) vs. Remote-Verbindung (Tablet-Browser verbindet sich mit Home-Mac/PC über Ollama, kein Modell auf dem Tablet, unbegrenzte Modellgröße).',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
@@ -506,6 +518,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Versuchen Sie nicht, ein 7B-Modell auf einem 8 GB-iPad für Echtzeit-Chat auszuführen. Mit 5–8 Token pro Sekunde dauert jede Antwort 15–30 Sekunden. Dies ist für Zusammenfassungsaufgaben nützlich, bei denen Sie einen Prompt senden und warten, aber frustrierend für gesprächsbasierte Nutzung. Verwenden Sie 3B-Modelle auf 8 GB-Geräten; Upgrade auf ein 16 GB-Gerät oder wechseln Sie zur Remote-Verbindung für 7B+.',
           },
         ],
+        image: '/images/run-ai-on-tablet-ipad-speed-de.svg',
+        imageCaption: 'iPad On-Device-Geschwindigkeit: iPad Pro M4 (16 GB) erreicht 18–30 Token/Sek auf Phi-4 Mini und Llama 3.2 3B; iPad Air M2 (8 GB) läuft 3B-Modelle mit 12–18 Token/Sek, aber nur 5–8 Token/Sek auf 7B — zu langsam für Echtzeit-Chat.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -533,6 +547,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie das Termux:Widget-Add-on und erstellen Sie eine Verknüpfung, die "ollama serve" ausführt — dies ermöglicht es Ihnen, den Ollama-Server von Ihrem Android-Startbildschirm aus zu starten, ohne Termux manuell zu öffnen. Sobald Ollama läuft, öffnen Sie eine Chat-App, die für localhost:11434 konfiguriert ist.',
           },
         ],
+        image: '/images/run-ai-on-tablet-termux-setup-de.svg',
+        imageCaption: 'Android On-Device-KI: 5-Schritte Termux + Ollama-Setup — Termux von F-Droid installieren (nicht Play Store), Pakete aktualisieren, Ollama per curl installieren, Modell laden (phi4-mini oder qwen3:1.7b), Server auf localhost:11434 starten. Mindestens 8 GB RAM erforderlich.',
       },
       remoteConnection: {
         id: 'remote-connection',
@@ -562,6 +578,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Fügen Sie die Open WebUI-URL Ihres Home-Computers auf dem Startbildschirm Ihres Tablets als Lesezeichen hinzu (in Safari: Freigabe → Zum Startbildschirm hinzufügen; in Chrome: Drei-Punkt-Menü → Zum Startbildschirm hinzufügen). Dies fühlt sich wie eine native App an. Auf iPad verstecken Web-Apps im Vollbildmodus in Safari die Browser-Umgebung für ein App-ähnliches Erlebnis.',
           },
         ],
+        image: '/images/run-ai-on-tablet-remote-setup-de.svg',
+        imageCaption: 'KI per Remote vom Tablet in 4 Schritten: Ollama auf dem Heimrechner installieren, Modell + Open WebUI laden, Heimnetz-IP herausfinden, dann http://[IP]:3000 im Tablet-Browser öffnen — kein Modell auf dem Tablet, 70B-Modelle mit 20–40 Token/Sek.',
       },
       models: {
         id: 'models',
@@ -583,6 +601,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Für die meisten alltäglichen Aufgaben (Textentwurf, Fragen beantworten, Inhalte zusammenfassen) ist Phi-4 Mini (3.8B) auf einem Tablet ausreichend leistungsfähig. Wo es im Vergleich zu einem 70B-Modell schwach wird: komplexes mehrstufiges Denken, differenziertes kreatives Schreiben und lange Dokumentenanalyse. Für diese Aufgaben verwenden Sie die Remote-Verbindung zu einem Home-Computer, der ein größeres Modell ausführt.',
           },
         ],
+        image: '/images/run-ai-on-tablet-model-by-device-de.svg',
+        imageCaption: 'Bestes Modell pro Tablet: iPad Pro M4 (16 GB) erreicht 25–30 Token/Sek auf Llama 3.2 3B; iPad Air M2/M3 läuft Phi-4 Mini mit 15–18 Token/Sek; Android 8 GB erreicht 10–15 Token/Sek über Termux; Pixel Tablet benötigt Remote-Verbindung wegen langsamem Tensor G2.',
       },
       frontends: {
         id: 'frontends',
@@ -907,6 +927,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Si vous avez Mac ou PC pouvant exécuter Ollama, commencez par connexion à distance. Meilleure qualité immédiatement, sans stocker modèles tablette. Ajoutez on-device plus tard si besoin hors ligne.',
           },
         ],
+        image: '/images/run-ai-on-tablet-two-modes-fr.svg',
+        imageCaption: 'Deux modes IA tablette : inférence locale (modèle sur processeur tablette, hors ligne, limité 3B–8B) vs connexion à distance (navigateur tablette sur Mac/PC Ollama, aucun modèle sur tablette, taille illimitée).',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
@@ -926,6 +948,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ne tentez pas 7B sur iPad 8 GB pour chat temps réel. À 5–8 tok/sec, chaque réponse 15–30 sec. Utilisez 3B sur 8 GB ; passez 16 GB ou connexion à distance pour 7B+.',
           },
         ],
+        image: '/images/run-ai-on-tablet-ipad-speed-fr.svg',
+        imageCaption: 'Vitesse iPad on-device : iPad Pro M4 (16 Go) atteint 18–30 tok/sec sur Phi-4 Mini et Llama 3.2 3B ; iPad Air M2 (8 Go) tourne 3B à 12–18 tok/sec mais chute à 5–8 tok/sec sur 7B — trop lent pour chat temps réel.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -953,6 +977,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez Termux:Widget, créez raccourci "ollama serve" — démarre serveur depuis écran d\'accueil. Une fois actif, ouvrez app chat configurée localhost:11434.',
           },
         ],
+        image: '/images/run-ai-on-tablet-termux-setup-fr.svg',
+        imageCaption: 'IA Android on-device : 5 étapes Termux + Ollama — installer Termux depuis F-Droid (pas Play Store), mettre à jour les paquets, installer Ollama via curl, télécharger un modèle (phi4-mini ou qwen3:1.7b), démarrer le serveur sur localhost:11434.',
       },
       remoteConnection: {
         id: 'remote-connection',
@@ -982,6 +1008,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ajoutez URL Open WebUI écran d\'accueil tablette (Safari : Partage → Écran d\'accueil ; Chrome : Menu → Écran d\'accueil). Ressemble app native. iPad Safari fullscreen masque chrome navigateur.',
           },
         ],
+        image: '/images/run-ai-on-tablet-remote-setup-fr.svg',
+        imageCaption: 'IA distante depuis tablette en 4 étapes : installer Ollama sur la machine hôte, télécharger modèle + Open WebUI, trouver l\'IP locale, ouvrir http://[IP]:3000 dans le navigateur — aucun modèle sur tablette, modèles 70B à 20–40 tok/sec.',
       },
       models: {
         id: 'models',
@@ -1003,6 +1031,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Tâches quotidiennes (brouillon, questions, résumé) : Phi-4 Mini (3.8B) tablette est adéquat. Échoue vs 70B : raisonnement multi-étapes, créativité nuancée, longs documents. Utilisez connexion à distance pour ces cas.',
           },
         ],
+        image: '/images/run-ai-on-tablet-model-by-device-fr.svg',
+        imageCaption: 'Meilleur modèle par tablette : iPad Pro M4 (16 Go) atteint 25–30 tok/sec sur Llama 3.2 3B ; iPad Air M2/M3 tourne Phi-4 Mini à 15–18 tok/sec ; Android 8 Go atteint 10–15 tok/sec via Termux ; Pixel Tablet nécessite connexion distante (Tensor G2 trop lent).',
       },
       frontends: {
         id: 'frontends',
@@ -1296,6 +1326,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ollamaを実行できるMacまたはPCがすでにある場合は、リモート接続から始めてください。タブレットにモデルファイルを保存したり、モバイルアプリの制限に対処したりすることなく、すぐに高品質を得られます。後でオフライン利用が必要になった場合にオンデバイス機能を追加してください。',
           },
         ],
+        image: '/images/run-ai-on-tablet-two-modes-ja.svg',
+        imageCaption: '2つのタブレットAIモード：オンデバイス推論（タブレットチップでモデル実行、オフライン可能、3B〜8Bに限定）vsリモート接続（OllamaのホームMac/PCにタブレットブラウザで接続、タブレットにモデル不要、モデルサイズ無制限）。',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
@@ -1315,6 +1347,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '8GB iPadでリアルタイムチャット用に7Bモデルを実行しようとしないでください。毎秒5〜8トークンでは、各レスポンスに15〜30秒かかります。プロンプトを送信して待つ要約タスクには使えますが、会話型利用には苛立たしい速度です。8GBデバイスでは3Bモデルを使用し、7B以上には16GBデバイスへのアップグレードまたはリモート接続に切り替えてください。',
           },
         ],
+        image: '/images/run-ai-on-tablet-ipad-speed-ja.svg',
+        imageCaption: 'iPadオンデバイス推論速度：iPad Pro M4（16GB）はPhi-4 MiniとLlama 3.2 3Bで18〜30トークン/秒；iPad Air M2（8GB）は3Bを12〜18トークン/秒で実行するが7Bは5〜8トークン/秒に低下 — リアルタイムチャットには低速すぎる。',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -1342,6 +1376,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Termux:Widgetアドオンをインストールし、「ollama serve」を実行するショートカットを作成してください — Termuxを手動で開かずにAndroidのホーム画面からOllamaサーバーを起動できます。Ollamaが起動したら、localhost:11434に接続するよう設定されたチャットアプリを開いてください。',
           },
         ],
+        image: '/images/run-ai-on-tablet-termux-setup-ja.svg',
+        imageCaption: 'AndroidオンデバイスAI：5ステップTermux + Ollamaセットアップ — F-DroidからTermuxをインストール（Play Store不可）、パッケージ更新、curlでOllamaインストール、モデルをプル（phi4-miniまたはqwen3:1.7b）、localhost:11434でサーバー起動。最低8GB RAM必要。',
       },
       remoteConnection: {
         id: 'remote-connection',
@@ -1371,6 +1407,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ホームマシンのOpen WebUI URLをタブレットのホーム画面にブックマーク追加してください（Safariでは：共有 → ホーム画面に追加；Chromeでは：三点メニュー → ホーム画面に追加）。ネイティブアプリのような感覚になります。iPadでは、SafariのフルスクリーンWebアプリはブラウザのクロームを隠し、アプリのような体験が得られます。',
           },
         ],
+        image: '/images/run-ai-on-tablet-remote-setup-ja.svg',
+        imageCaption: 'タブレットからリモートAIを4ステップで設定：自宅PCにOllamaをインストール、モデル＋Open WebUIをダウンロード、自宅PCのIPアドレスを確認、タブレットブラウザでhttp://[IP]:3000を開く — タブレットにモデル不要、70Bモデルを20〜40トークン/秒で利用可能。',
       },
       models: {
         id: 'models',
@@ -1392,6 +1430,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ほとんどの日常タスク（文章草稿、質問回答、内容要約）では、タブレット上のPhi-4 Mini（3.8B）は十分に実用的です。70Bモデルと比較して劣る点：複雑な多段階推論、ニュアンスのある創作、長文書分析。これらのタスクには大型モデルを実行するホームマシンへのリモート接続を使用してください。',
           },
         ],
+        image: '/images/run-ai-on-tablet-model-by-device-ja.svg',
+        imageCaption: 'タブレット別おすすめモデル：iPad Pro M4（16GB）はLlama 3.2 3Bで25〜30トークン/秒；iPad Air M2/M3はPhi-4 Miniを15〜18トークン/秒で実行；Android 8GBはTermux経由で10〜15トークン/秒；Pixel TabletはTensor G2の低速のためリモート接続が必要。',
       },
       frontends: {
         id: 'frontends',
@@ -1696,6 +1736,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '如果家中已有能运行Ollama的Mac或PC，先从远程连接开始。无需在平板上存储模型文件，立即获得更好的模型质量。如果之后发现需要离线使用，再考虑添加本地推理能力。',
           },
         ],
+        image: '/images/run-ai-on-tablet-two-modes-zh.svg',
+        imageCaption: '两种平板AI模式：本地推理（模型在平板芯片上运行，离线可用，受限3B至8B）vs远程连接（平板浏览器连接运行Ollama的家用Mac/PC，平板无需存储模型，模型规模无限制）。',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
@@ -1715,6 +1757,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '不要在8 GB iPad上运行7B模型进行实时对话。每秒5至8词元意味着每个回复需要15至30秒。此速度勉强可用于摘要任务，但对话体验极差。8 GB设备请使用3B模型；7B以上质量需升级至16 GB设备或切换至远程连接。',
           },
         ],
+        image: '/images/run-ai-on-tablet-ipad-speed-zh.svg',
+        imageCaption: 'iPad本地推理速度：iPad Pro M4（16 GB）在Phi-4 Mini和Llama 3.2 3B上达到18至30词元/秒；iPad Air M2（8 GB）以12至18词元/秒运行3B模型，但7B模型降至5至8词元/秒——实时对话速度过慢。',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -1742,6 +1786,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装Termux:Widget插件，创建一个运行"ollama serve"的快捷方式——这样无需打开Termux就能从安卓主屏幕启动Ollama服务。Ollama启动后，打开配置连接localhost:11434的任意聊天应用即可。',
           },
         ],
+        image: '/images/run-ai-on-tablet-termux-setup-zh.svg',
+        imageCaption: '安卓本地AI：5步Termux + Ollama安装——从F-Droid安装Termux（非Play Store），更新软件包，通过curl安装Ollama，下载模型（phi4-mini或qwen3:1.7b），在localhost:11434启动服务器。最低需要8 GB内存。',
       },
       remoteConnection: {
         id: 'remote-connection',
@@ -1771,6 +1817,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '将家用机器的Open WebUI网址收藏到平板主屏幕（Safari：分享 → 添加到主屏幕；Chrome：三点菜单 → 添加到主屏幕）。这样使用体验接近原生应用。在iPad上，Safari中的全屏Web应用会隐藏浏览器地址栏，带来类应用体验。',
           },
         ],
+        image: '/images/run-ai-on-tablet-remote-setup-zh.svg',
+        imageCaption: '平板远程AI 4步设置：在家用电脑安装Ollama，下载模型和Open WebUI，查找家用电脑IP地址，在平板浏览器中打开http://[IP]:3000——平板无需存储模型，可使用70B模型，速度约20至40词元/秒。',
       },
       models: {
         id: 'models',
@@ -1792,6 +1840,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '对于大多数日常任务（起草文本、回答问题、内容摘要），平板上的Phi-4 Mini（3.8B）已足够胜任。与70B模型相比的不足之处：复杂多步推理、细腻创意写作和长文档分析。这类任务请使用远程连接到运行更大模型的家用机器。',
           },
         ],
+        image: '/images/run-ai-on-tablet-model-by-device-zh.svg',
+        imageCaption: '各平板推荐模型：iPad Pro M4（16 GB）在Llama 3.2 3B上达到25至30词元/秒；iPad Air M2/M3以15至18词元/秒运行Phi-4 Mini；安卓8 GB通过Termux达到10至15词元/秒；Pixel Tablet因Tensor G2芯片速度过慢需使用远程连接。',
       },
       frontends: {
         id: 'frontends',

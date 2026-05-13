@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="320" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPadオンデバイスAI：モデル別生成速度（2026）</text>
+
+  <!-- Header -->
+  <text x="30" y="58" font-size="12" font-weight="700" fill="#79747E">デバイス</text>
+  <text x="200" y="58" font-size="12" font-weight="700" fill="#79747E">RAM</text>
+  <text x="270" y="58" font-size="12" font-weight="700" fill="#79747E">モデル</text>
+  <text x="590" y="58" font-size="12" font-weight="700" fill="#79747E">速度（tok/秒）</text>
+  <line x1="18" y1="66" x2="782" y2="66" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="30" y="90" font-size="12" fill="#1C1B1F">iPad Pro M4</text>
+  <text x="200" y="90" font-size="12" fill="#1C1B1F">16 GB</text>
+  <text x="270" y="90" font-size="12" fill="#1C1B1F">Phi-4 Mini (Q4_K_M)</text>
+  <circle cx="694" cy="87" r="14" fill="#34A853"/>
+  <text x="694" y="92" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">~20</text>
+  <line x1="18" y1="100" x2="782" y2="100" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="124" font-size="12" fill="#1C1B1F">iPad Pro M4</text>
+  <text x="200" y="124" font-size="12" fill="#1C1B1F">16 GB</text>
+  <text x="270" y="124" font-size="12" fill="#1C1B1F">Llama 3.2 3B (Q4_K_M)</text>
+  <circle cx="694" cy="121" r="14" fill="#34A853"/>
+  <text x="694" y="126" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">~30</text>
+  <line x1="18" y1="134" x2="782" y2="134" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="158" font-size="12" fill="#1C1B1F">iPad Pro M4</text>
+  <text x="200" y="158" font-size="12" fill="#1C1B1F">16 GB</text>
+  <text x="270" y="158" font-size="12" fill="#1C1B1F">Gemma 3 4B (Q4_K_M)</text>
+  <circle cx="694" cy="155" r="14" fill="#34A853"/>
+  <text x="694" y="160" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">~18</text>
+  <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="192" font-size="12" fill="#1C1B1F">iPad Air M2/M3</text>
+  <text x="200" y="192" font-size="12" fill="#1C1B1F">8 GB</text>
+  <text x="270" y="192" font-size="12" fill="#1C1B1F">3Bモデル (Q4_K_M)</text>
+  <circle cx="694" cy="189" r="14" fill="#34A853"/>
+  <text x="694" y="194" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">12–18</text>
+  <line x1="18" y1="202" x2="782" y2="202" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="226" font-size="12" fill="#1C1B1F">iPad Air M2/M3</text>
+  <text x="200" y="226" font-size="12" fill="#1C1B1F">8 GB</text>
+  <text x="270" y="226" font-size="12" fill="#79747E">7Bモデル (Q4_K_M) ★</text>
+  <circle cx="694" cy="223" r="14" fill="#F4B400"/>
+  <text x="694" y="228" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">5–8</text>
+  <line x1="18" y1="236" x2="782" y2="236" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="265" font-size="11" fill="#79747E">● 緑＝リアルタイム速度（&gt;10 tok/秒）   ● 黄＝チャットに遅すぎる</text>
+  <text x="30" y="283" font-size="11" fill="#79747E">★ 8GB iPadで7B：3Bモデルかリモート接続に切り替えてください</text>
+<text x="792" y="315" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
