@@ -200,6 +200,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install this if you are: a Mac user who wants the fastest local AI on Apple Silicon, a writer with a 16 GB+ MacBook who wants to try several models, or anyone who finds the curated catalogs of Jan and GPT4All too small.',
           },
         ],
+        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-en.svg',
+        imageCaption: 'LM Studio model speed on Apple Silicon: Phi-4 Mini achieves 55–70 tok/s on M3 8 GB; Llama 3.3 8B Q4_K_M reaches 35–42 tok/s on M3 Pro 16 GB with custom Metal kernels.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -466,6 +468,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: ein Elternteil sind, der ein privates ChatGPT möchte, ein Journalist mit einem Budget-Laptop, ein Lehrer, der KI Schülern zeigt, oder jemand, dessen erste Reaktion auf „öffne das Terminal" „welches Terminal?" ist.',
           },
         ],
+        image: '/images/local-ai-nontechnical-gpt4all-install-steps-de.svg',
+        imageCaption: 'GPT4All 4-Schritte-Installation: ~290 MB Download von gpt4all.io, Installer ausführen, Llama 3.2 3B (2 GB) wählen, chatten — vollständig offline auf jedem 8-GB-Laptop.',
       },
       jan: {
         id: 'jan',
@@ -486,6 +490,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: ein EU-Bewohner sind, der sich um DSGVO Sorgen macht, ein Journalist, der mit Quellen arbeitet, ein Anwalt, der Entwürfe nicht an Cloud-APIs senden kann, oder jemand, dessen Bedrohungsmodell „was telefoniert diese App nach Hause mit?" enthält.',
           },
         ],
+        image: '/images/local-ai-nontechnical-jan-privacy-features-de.svg',
+        imageCaption: 'Jan Datenschutz-Vergleich: Cloud-KI sendet Eingaben an externe Server mit Analytics-SDK; Jan bietet null Telemetrie, überprüfbaren AGPL-Quellcode und vollständigen Offline-Betrieb nach der Installation.',
       },
       msty: {
         id: 'msty',
@@ -506,6 +512,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: ein Designer sind, der bare Chat-UIs hässlich findet, ein Student, der zwei Modell-Antworten nebeneinander vergleichen möchte, oder ein Schriftsteller, der möchte, dass KI Ihren Notizen-Ordner sofort liest.',
           },
         ],
+        image: '/images/local-ai-nontechnical-msty-ui-features-de.svg',
+        imageCaption: 'Msty-Feature-Matrix für Einsteiger: Split-Chat (einzigartig) zeigt zwei Modelle nebeneinander; Wissens-Stacks (einzigartig) heften Dokumente an Arbeitsbereiche — kostenlos für Privatnutzer.',
       },
       anythingllm: {
         id: 'anythingllm',
@@ -526,6 +534,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: ein Kleinunternehmer sind, der Fragen über einen Ordner von Verträgen stellen möchte, ein Forscher mit einem „zu lesenden Papieren"-Ordner, ein Großelternteil, der moderne UIs verwirrend findet und etwas bevorzugt, das wie Outlook aussieht.',
           },
         ],
+        image: '/images/local-ai-nontechnical-anythingllm-workspace-de.svg',
+        imageCaption: 'AnythingLLM Desktop Arbeitsbereich-Modell: Arbeitsbereiche (links) enthalten Dokumente (Mitte), die die KI beim Beantworten von Chat-Fragen (rechts) zitiert — lokal indexiert, keine Cloud-API.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -546,6 +556,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: ein Mac-Nutzer sind, der die schnellste lokale KI auf Apple Silicon möchte, ein Schriftsteller mit einem 16 GB+ MacBook, der mehrere Modelle testen möchte, oder jemand, der die kuratierten Kataloge von Jan und GPT4All zu klein findet.',
           },
         ],
+        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-de.svg',
+        imageCaption: 'LM Studio Modellgeschwindigkeit auf Apple Silicon: Phi-4 Mini erreicht 55–70 Tok/s auf M3 8 GB; Llama 3.3 8B Q4_K_M erreicht 35–42 Tok/s auf M3 Pro 16 GB mit Metal-Kerneln.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -820,6 +832,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : un parent qui veut un ChatGPT privé, un journaliste avec un portable budgétaire, un enseignant qui démontre l\'IA à des étudiants, ou quelqu\'un dont la première réaction à "ouvre le terminal" est "quel terminal ?".',
           },
         ],
+        image: '/images/local-ai-nontechnical-gpt4all-install-steps-fr.svg',
+        imageCaption: 'GPT4All installation en 4 étapes : télécharger ~290 MB depuis gpt4all.io, lancer l\'installeur, choisir Llama 3.2 3B (2 GB), commencer à chatter — entièrement hors ligne sur tout laptop 8 GB.',
       },
       jan: {
         id: 'jan',
@@ -840,6 +854,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : un résident EU inquiet du RGPD, un journaliste travaillant avec des sources, un avocat qui ne peut pas envoyer des brouillons à des APIs cloud, ou quelqu\'un dont le modèle de menace inclut "que transmet cette app?".',
           },
         ],
+        image: '/images/local-ai-nontechnical-jan-privacy-features-fr.svg',
+        imageCaption: 'Comparaison de confidentialité Jan : l\'IA cloud envoie les requêtes à des serveurs distants avec SDK analytics ; Jan offre zéro télémétrie, source AGPL auditable, et fonctionnement offline après installation.',
       },
       msty: {
         id: 'msty',
@@ -860,6 +876,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : un designer qui trouve les interfaces chat nues laides, un étudiant qui veut comparer deux réponses côte à côte, ou un écrivain qui veut que l\'IA lise votre dossier de notes d\'usine.',
           },
         ],
+        image: '/images/local-ai-nontechnical-msty-ui-features-fr.svg',
+        imageCaption: 'Tableau des fonctionnalités Msty : chat divisé (unique) affiche deux modèles côte à côte ; piles de connaissances (unique) épinglent des docs à des espaces — gratuit pour usage personnel.',
       },
       anythingllm: {
         id: 'anythingllm',
@@ -880,6 +898,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : un propriétaire de petite entreprise qui veut poser des questions sur un dossier de contrats, un chercheur avec un dossier "Papiers À Lire", un grand-parent qui trouve les UIs modernes déroutantes et préfère quelque chose qui ressemble à Outlook.',
           },
         ],
+        image: '/images/local-ai-nontechnical-anythingllm-workspace-fr.svg',
+        imageCaption: 'Modèle d\'espaces AnythingLLM Desktop : les espaces (gauche) contiennent des documents (centre) que l\'IA cite en répondant aux questions de chat (droite) — indexation locale, sans API cloud.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -900,6 +920,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : un utilisateur Mac qui veut l\'IA locale la plus rapide sur Apple Silicon, un écrivain avec un MacBook 16 GB+ qui veut essayer plusieurs modèles, ou quelqu\'un qui trouve les catalogues curés de Jan et GPT4All trop petits.',
           },
         ],
+        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-fr.svg',
+        imageCaption: 'Vitesse des modèles LM Studio sur Apple Silicon : Phi-4 Mini atteint 55–70 tok/s sur M3 8 GB ; Llama 3.3 8B Q4_K_M atteint 35–42 tok/s sur M3 Pro 16 GB avec kernels Metal personnalisés.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -1166,6 +1188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：親としてプライベートなChatGPTが欲しい、予算ノートパソコンのジャーナリスト、学生にAIをデモする教師、「ターミナルを開いて」と言われて「何のターミナル？」と思う人。',
           },
         ],
+        image: '/images/local-ai-nontechnical-gpt4all-install-steps-ja.svg',
+        imageCaption: 'GPT4All 4ステップインストール：gpt4all.ioから約290 MBをダウンロード、インストーラ実行、Llama 3.2 3B（2 GB）選択、チャット開始 — 8 GBノートPCで完全オフライン動作。',
       },
       jan: {
         id: 'jan',
@@ -1186,6 +1210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：GDPRを心配するEU在住者、ソースを扱うジャーナリスト、ドキュメントをクラウドAPIに送信できない弁護士、「このアプリ何を外部に送信してる？」と気になる人。',
           },
         ],
+        image: '/images/local-ai-nontechnical-jan-privacy-features-ja.svg',
+        imageCaption: 'Janのプライバシー比較：クラウドAIはプロンプトをリモートサーバーに送信；Janはテレメトリゼロ、AGPL検証可能ソース、インストール後の完全オフライン動作を提供。',
       },
       msty: {
         id: 'msty',
@@ -1206,6 +1232,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：むき出しのチャットUIは醜いと思うデザイナー、2つのモデル答えを並べて比較したい学生、自分のメモフォルダをAIに読ませたい執筆者。',
           },
         ],
+        image: '/images/local-ai-nontechnical-msty-ui-features-ja.svg',
+        imageCaption: 'Mstyの機能マトリックス：分割チャット（独自）で2モデルを並列表示；ナレッジスタック（独自）でドキュメントをピン留め — 個人利用無料、Windows・macOS・Linux対応。',
       },
       anythingllm: {
         id: 'anythingllm',
@@ -1226,6 +1254,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：契約フォルダについて質問したい小企業オーナー、「読むべき論文」フォルダを持つ研究者、モダンUIが混乱するおばあちゃんでOutlookっぽいものが好きな人。',
           },
         ],
+        image: '/images/local-ai-nontechnical-anythingllm-workspace-ja.svg',
+        imageCaption: 'AnythingLLM Desktopのワークスペースモデル：ワークスペース（左）にドキュメント（中央）を格納、AIがチャット質問（右）で引用 — ローカルインデックス、クラウドAPI不要。',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -1246,6 +1276,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：アップル・シリコンで最速ローカルAIが欲しいMacユーザー、複数モデルを試したい16GB+ MacBook執筆者、Jan・GPT4Allのキュレーションカタログが小さすぎると思う人。',
           },
         ],
+        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-ja.svg',
+        imageCaption: 'LM StudioのApple Silicon速度：Phi-4 MiniはM3 8 GBで55〜70 tok/s達成；Llama 3.3 8B Q4_K_MはM3 Pro 16 GBでMetalカーネルにより35〜42 tok/s。',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -1512,6 +1544,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：想要私有ChatGPT的家长、预算笔记本电脑的记者、向学生演示AI的教师，或第一次反应"打开终端"时想到"什么终端？"的人。',
           },
         ],
+        image: '/images/local-ai-nontechnical-gpt4all-install-steps-zh.svg',
+        imageCaption: 'GPT4All 4步安装：从gpt4all.io下载约290 MB安装包，运行安装程序，选择Llama 3.2 3B（2 GB），开始聊天 — 在任何8 GB内存笔记本上完全离线运行。',
       },
       jan: {
         id: 'jan',
@@ -1532,6 +1566,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：担心GDPR的EU居民、处理来源的记者、无法将草稿发送到云API的律师、威胁模型包括"这个应用向外发送什么？"的人。',
           },
         ],
+        image: '/images/local-ai-nontechnical-jan-privacy-features-zh.svg',
+        imageCaption: 'Jan隐私对比：云端AI将提示词发送到远程服务器；Jan提供零遥测、AGPL可审计源代码和安装后完全离线运行。',
       },
       msty: {
         id: 'msty',
@@ -1552,6 +1588,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：认为裸露聊天UI很丑的设计师、想并排比较两个模型答案的学生、想让AI开箱即用读取笔记文件夹的作家。',
           },
         ],
+        image: '/images/local-ai-nontechnical-msty-ui-features-zh.svg',
+        imageCaption: 'Msty功能矩阵：分屏聊天（独有）并排显示两个模型；知识堆叠（独有）将文档固定到工作区 — 个人使用免费，支持Windows、macOS、Linux。',
       },
       anythingllm: {
         id: 'anythingllm',
@@ -1572,6 +1610,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：想就合同文件夹提问的小企业主、拥有"要阅读的论文"文件夹的研究人员、认为现代UI令人困惑并喜欢看起来像Outlook的东西的祖父母。',
           },
         ],
+        image: '/images/local-ai-nontechnical-anythingllm-workspace-zh.svg',
+        imageCaption: 'AnythingLLM Desktop工作区模型：工作区（左）存储文档（中），AI在回答聊天问题（右）时引用文档 — 本地索引，无需云API。',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -1592,6 +1632,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：想要Apple Silicon上最快本地AI的Mac用户、想尝试多个模型的16GB+MacBook作家、或认为Jan和GPT4All的精选目录太小的人。',
           },
         ],
+        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-zh.svg',
+        imageCaption: 'LM Studio在Apple Silicon上的模型速度：Phi-4 Mini在M3 8 GB上达到55-70 tok/s；Llama 3.3 8B Q4_K_M在M3 Pro 16 GB上使用Metal内核达到35-42 tok/s。',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
