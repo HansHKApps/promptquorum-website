@@ -2509,4 +2509,632 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: '本地LLM小说写作提示词：15个模板与技巧（2026）',
+    seoTitle: '本地LLM小说写作提示词：15个模板（2026）',
+    intro:
+      '本地LLM在使用结构化提示词而非开放式请求时，会产出明显更好的小说内容。本指南涵盖15个经过验证的提示词模板——用于场景写作、角色开发、对话、世界构建、风格转换、修改和编辑任务——均通过Ollama或LM Studio本地运行的Llama 3.3 70B、Qwen3 32B和Mistral Large测试完成。每个模板均可直接复制使用，并附有各类型的调整说明。',
+    metaDescription:
+      '面向小说写作者的15个本地LLM提示词模板。场景写作、角色开发、对话、世界构建、风格转换、修改和编辑模板——适用于Ollama和LM Studio，即用即取。',
+    twitterDescription:
+      '本地LLM小说创作的15个提示词模板：场景写作、对话、角色开发、世界构建、风格转换、修改、编辑。在Llama 3.3 70B、Qwen3 32B上测试完成。',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '使用本地LLM作为起草伙伴的小说家、短篇故事作者、编剧和游戏叙事设计师，寻求能产出一致、可用输出的可靠提示词结构。',
+    readTime: '18 分钟阅读',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local LLM prompts for fiction',
+    targetKeywords: [
+      'local llm prompts fiction writers',
+      'ollama fiction writing prompts',
+      'scene writing prompt template llm',
+      'character development prompt local ai',
+      'dialogue prompt local llm',
+      'worldbuilding prompt template',
+    ],
+    leadAnswerBlock:
+      '**本地LLM小说输出最大的单项改善，来自将"写一个场景"替换为结构化5部分提示词：类型+POV+感官约束+情感节拍+字数上限。仅这一格式在实践中就能将平淡的概述性输出减少约60%——模型会产出"展示而非讲述"的散文，而非情节摘要，因为提示词没有留下走捷径的空间。对于角色开发，最可靠的模板是"矛盾提示词"：给角色一个主导特质和一个与之矛盾的行为，然后让模型写一个场景展示两者但不明说任何一个。对于对话，先设定潜台词——角色想说但不会说的话——然后让模型围绕那个隐藏信息写出的台词。对于编辑工作，用情节一致性检查捕捉连续性错误，用节奏分析识别平淡区域，用叙述展开处理信息堆砌。**',
+    quickAnswerTop: {
+      zh: {
+        question: '使用本地LLM进行小说写作的最佳提示词模板有哪些？',
+        answer:
+          '最可靠的小说写作提示词结构是：类型+POV+感官约束+情感节拍+字数上限。这能产出"展示而非讲述"的散文，而非情节摘要。对于角色开发，使用"矛盾提示词"（一个主导特质+一个矛盾行为，展示两者但不明说任何一个）。对于对话，先设定潜台词（角色想要但不会说的），再写台词。对于世界构建，先锚定一个感官细节，再向外展开。这些模板适用于任何指令调优模型；较大的模型（Llama 3.3 70B、Qwen3 32B）在长篇补全中能更好地保持约束遵从性。',
+        bullets: [
+          '场景提示词：类型+POV+1–2个感官细节+情感节拍+字数上限（150–400字）。',
+          '角色开发：一个主导特质+一个矛盾行为，展示两者但不明说任何一个。',
+          '对话：先设定潜台词（角色想要但不会说的），再生成台词。',
+          '世界构建：锚定一个感官细节，向外扩展为同心圆（房间→建筑→街区→世界）。',
+          '风格转换：命名目标作者的2–3个具体技巧，粘贴2句样本，再用这些技巧生成。',
+          '修改：粘贴草稿，命名具体问题（被动语态、副词过多、视角跳跃），要求重写。',
+          '编辑：情节一致性检查捕捉连续性错误；节奏分析映射章节节奏；叙述展开重新分配信息堆砌。',
+          '较大的模型保持约束遵从性更好；Llama 3.3 70B是大多数小说任务的默认选择。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '主要结论', anchor: '#key-takeaways' },
+      { label: '快速参考', anchor: '#quick-facts' },
+      { label: '为什么结构化提示词很重要', anchor: '#why-structure' },
+      { label: '前后对比示例', anchor: '#before-after' },
+      { label: '场景写作模板（1–2）', anchor: '#scene-writing' },
+      { label: '角色开发模板（3–5）', anchor: '#character-development' },
+      { label: '对话模板（6–7）', anchor: '#dialogue' },
+      { label: '世界构建模板（8–9）', anchor: '#worldbuilding' },
+      { label: '风格转换模板（10–11）', anchor: '#style-transfer' },
+      { label: '修改模板（12）', anchor: '#revision' },
+      { label: '编辑模板（13–15）', anchor: '#editorial-templates' },
+      { label: '模型推荐', anchor: '#models' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '参考来源', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**结构化提示词在小说写作上优于开放式请求。** 5部分场景提示词（类型+POV+感官约束+情感节拍+字数上限）产出"展示而非讲述"的散文；"写一个场景"产出情节摘要。模板本身就是技巧。',
+          '**矛盾提示词是最可靠的角色开发结构。** 给模型一个主导特质和一个矛盾行为；让它展示两者但不命名任何一个。这能产出读者需要自己推断的有层次的角色。',
+          '**先设定潜台词能让对话质量翻倍。** 先告诉模型角色想要但不会说的话。台词就会自然地围绕那个隐藏信息展开。',
+          '**字数上限防止臃肿。** 200字的上限强迫压缩；模型必须精确。当需要更多时以100字为增量提高，但始终设置上限。',
+          '**修改提示词需要命名问题。** "重写这个"产出最小的表面修改。"重写：消除所有被动语态，每句话必须以具体名词或强动词开头"产出可量化的结构改善。',
+          '**编辑模板在手稿层面运作。** 情节一致性检查、节奏分析和叙述展开适用于已完成的场景和章节——在起草后运行，而非起草中。',
+          '**较大的模型在长篇补全中更好地保持约束遵从性。** Llama 3.3 70B和Qwen3 32B可靠地遵循5部分场景约束；较小的模型在约200 token后开始偏离。',
+          '**前端的影响远小于模型和提示词。** Ollama、LM Studio、SillyTavern和Agnai都原样传递你的提示词——小说质量的差异来自模型+提示词，而非前端。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速参考',
+        items: [
+          '**涵盖模板：** 共15个——场景写作（2）、角色开发（3）、对话（2）、世界构建（2）、风格转换（2）、修改（1）、编辑（3）。',
+          '**测试平台：** Llama 3.3 70B、Qwen3 32B、Mistral Large——均通过Ollama在Apple M5 Max 64 GB和NVIDIA RTX 4090 24 GB上运行。',
+          '**字数上限：** 场景150–400字；对话100–200字；世界构建段落300–600字。',
+          '**最佳全能小说模型：** Llama 3.3 70B（指令遵从性强、叙事连贯性好、长上下文能力强）。',
+          '**最佳风格转换模型：** Mistral Large（长篇补全中保持一致的散文语域；本地可运行模型中语域忠实度最佳）。',
+          '**最佳对话模型：** Command R+ 104B或Hermes 3（角色声音区分度高；自然的口语语域）。',
+          '**系统提示词：** 在系统消息中设置类型和POV，而非在用户轮次中——它能锚定整个会话中的每次补全。',
+        ],
+      },
+      whyStructure: {
+        id: 'why-structure',
+        title: '为什么结构化提示词对小说很重要',
+        content:
+          '**本地LLM在小说创作中的默认失败模式是概述：模型告诉你发生了什么，而不是展示场景。** 这是因为指令调优模型针对任务完成而非叙事沉浸感进行了优化——一个模糊的提示词（"写一个紧张的对峙"）会触发概述启发式。结构化提示词关闭了这个出口。当你指定POV、一个感官约束、一个情感节拍和一个字数上限时，模型没有概述的空间——它必须渲染。第二个失败模式是偏移：模型在你指定的类型和声音中开始，然后在200–300 token后退化为通用AI写作语域。约束锚点（POV、感官焦点、字数上限）减慢这种偏移；命名类型和声音的系统提示词完全阻止它。',
+        callouts: [
+          {
+            type: 'tip',
+            text: '在多轮会话中，在系统提示词中设置类型和POV——参阅[系统提示词与用户提示词的区别](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=zh)了解为什么这比用户轮次指令锚定得更好。将类型和POV放在系统消息中，而非用户轮次。会话中的每次补全都会继承约束，所以你不需要重复它。示例："你是一个文学小说助手。你生成的所有散文以紧密第三人称、过去时写作，注重感官细节和潜台词。"',
+          },
+        ],
+      },
+      beforeAfter: {
+        id: 'before-after',
+        title: '前后对比：结构化提示词的实际效果',
+        content:
+          '以下三对示例精确展示了从模糊请求切换到结构化提示词后的变化——每对涵盖不同的模板类别，描述每种提示词类型的输出效果。',
+      },
+      beforeAfterScene: {
+        id: 'before-after-scene',
+        title: '第1对——场景写作',
+        promptExamples: [
+          {
+            label: '❌ 模糊的场景提示词',
+            text: 'Write a tense confrontation scene in a kitchen.',
+          },
+          {
+            label: '✅ 结构化5部分场景提示词',
+            text: 'Genre: literary fiction. POV: close third, Maya. Sensory anchor: the smell of burned coffee. Emotional beat: Maya realises her brother lied. Show without stating. Word ceiling: 200 words.',
+          },
+        ],
+        items: [
+          '**模糊输出：** 2–3句情节摘要。"玛雅在厨房里对峙了她的兄弟。他们之间的紧张感显而易见。他不安地挪动着，移开了目光。"场景是被讲述的，不是被展示的。感官世界缺失。',
+          '**结构化输出：** 一个180字的渲染场景，烧焦的咖啡锚定了动作——玛雅看到滤网中早上留下的咖啡渣，意识到她的兄弟在他说没在时其实在这里，场景以她手放在台面上的身体细节结束。认知从散文中浮现，而非被明说的情感。',
+        ],
+      },
+      beforeAfterCharacter: {
+        id: 'before-after-char',
+        title: '第2对——角色开发',
+        promptExamples: [
+          {
+            label: '❌ 特性清单式角色提示词',
+            text: 'Elena is brave, sarcastic, and loyal.',
+          },
+          {
+            label: '✅ 矛盾特质角色提示词',
+            text: "Elena is pathologically honest. She hides her sister's letters from their mother. Show both without naming either. 200 words.",
+          },
+        ],
+        items: [
+          '**特性清单输出：** 依次展示每个特质的角色。"埃莱娜毫不犹豫地走进房间——她从不畏惧。\'当然，\'她淡然说道。她愿意为她爱的人做任何事。"每个特质被展示并打勾。',
+          '**矛盾输出：** 读者需要自己解读的角色。埃莱娜主动说出了错误的咖啡订单（诚实），同时在母亲进门前把一个信封塞进厨房抽屉（隐藏）。读者必须推断出产生矛盾的伤口。那个间隙就是角色本身。',
+        ],
+      },
+      beforeAfterDialogue: {
+        id: 'before-after-dialogue',
+        title: '第3对——对话',
+        promptExamples: [
+          {
+            label: '❌ 直白式对话提示词',
+            text: 'Two friends argue about money.',
+          },
+          {
+            label: '✅ 潜台词优先对话提示词',
+            text: "Subtext: A wants to ask B for a loan but won't say it. B knows but pretends not to. 4 exchanges, 'said' tags only, no action beats.",
+          },
+        ],
+        items: [
+          '**直白输出：** 说出真正意思的角色。"\'你欠我钱，\'詹姆斯说。\'我知道，很抱歉，\'保罗说。"潜台词就是台词本身。读者没有任何可推断的内容。',
+          '**潜台词优先输出：** 四轮交流中没有一个角色提及钱或借款。A抱怨他的车需要维修。B同意车是个问题。A说他可能需要把它在车库里多放一段时间。B说他的车库已满。需求和回避都只在未说出口的话中可见。',
+        ],
+      },
+      sceneWriting: {
+        id: 'scene-writing',
+        title: '场景写作模板（模板1–2）',
+        content:
+          '**5部分场景模板是基础：类型+POV+感官锚点+情感节拍+字数上限。** 每个元素都承担着具体的工作——去掉任何一个，输出质量都会明显下降。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '最有效的本地LLM场景提示词指定类型、POV、一个感官锚点、一个情感节拍和一个字数上限——这五个约束合在一起强制产出"展示而非讲述"的散文，防止模型的默认概述模式。',
+          },
+          {
+            type: 'plain-terms',
+            text: '不要写"写一个紧张的对峙场景"，而要写："类型：惊悚。POV：紧密第三人称，埃莱娜。感官锚点：空调的嗡嗡声。情感节拍：埃莱娜意识到她错了——展示它但不要明说。字数上限：200字。"模型的输出将是一个具体场景，而非情节摘要。字数上限不是可选项——没有它模型会臃肿填充。',
+          },
+        ],
+        items: [
+          '**类型标记** — 单个词或短语（例如"哥特恐怖""温馨推理""硬科幻"）锚定散文语域。',
+          '**POV标记** — "紧密第三人称，[姓名]"或"第一人称"设置语法框架，并通过一个意识过滤所有观察。',
+          '**感官锚点** — 一个具体的感官细节（湿混凝土的气味、时钟滴答声、磨损地毯的质感）将场景扎根于物理世界，防止抽象化。',
+          '**情感节拍** — 命名场景应该落在的情感状态，然后加上"展示它但不要明说"——这激活了展示-不要-讲述约束。',
+          '**字数上限** — 150字用于压缩时刻；250–300字用于完整场景节拍；最多400字，超出后请求第二个场景而不是延伸一个。',
+        ],
+      },
+      template1: {
+        id: 'template-1',
+        title: '模板1——场景5部分结构',
+        content:
+          '基础模板。所有五个元素都是承重的——去掉任何一个，输出质量都会明显下降。',
+        codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
+POV: [first person / close third, character name]
+Sensory anchor: [one specific sensory detail — smell, texture, sound]
+Emotional beat: [what the POV character feels at the end of this scene — do not state it directly]
+Word ceiling: [150–400 words]
+
+Write the scene. Do not summarise. Every sentence must render a moment, not describe one.`,
+        codeLanguage: '场景模板',
+      },
+      template2: {
+        id: 'template-2',
+        title: '模板2——动作/战斗时间压缩',
+        content:
+          '防止模型压缩动作或在节拍之间添加不必要的缓冲散文。"每句话代表1秒"规则强制机械精准，保持序列的动感。',
+        codeBlock: `Genre: [action / thriller / fantasy combat]
+POV: [close third / first person, character name]
+Sensory anchor: [one physical sensation — impact, sound, texture]
+Time rule: every sentence represents exactly 1 second of story time
+Word ceiling: [100–200 words]
+
+Write the fight/action sequence. Enforce the time rule strictly — no sentence can span more than 1 second of story time.`,
+        codeLanguage: '场景模板',
+      },
+      characterDevelopment: {
+        id: 'character-development',
+        title: '角色开发模板（模板3–5）',
+        content:
+          '**矛盾提示词比任何特性清单方法都能产出更深度的角色。** 给模型一个特性列表（"埃莱娜勇敢、讽刺、忠诚"）会产出依次展示那些特质的角色。给模型一个主导特质和一个矛盾行为，会产出读者需要自己解读的角色。',
+        items: [
+          '**一个主导特质，一个矛盾行为** — 矛盾就是角色；读者推断出产生它的伤口或历史。',
+          '**"不要命名或解释任何一个"** — 这个指令防止模型加评论（"她天生充满矛盾……"），并强迫场景承载意义。',
+          '**关系动态提示词：** "写一段200字的[角色A]和[角色B]之间的交流，其中A想要X，B想要Y——没有人说出他们真正想要的。"',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '将角色表作为整个会话的系统提示词。在写作会话开始时构建一个纯文本角色表（姓名、主导特质、矛盾行为、核心伤口、语言风格）并粘贴到系统消息中。该会话中角色的每次出现都将保持一致。随着角色跨章节发展而更新表格。',
+          },
+        ],
+      },
+      template3: {
+        id: 'template-3',
+        title: '模板3——角色矛盾提示词',
+        content:
+          '最可靠的角色开发结构。产出读者需要推断的有层次的角色，而非展示特性清单的角色。',
+        codeBlock: `Character name: [Name]
+Dominant trait: [one trait — "relentlessly optimistic", "pathologically honest", "obsessively controlled"]
+Contradicting behaviour: [one specific action that contradicts the trait — "hides her sister's letters", "lies to the one person who believes in him"]
+
+Write a scene (200 words max) in which both the trait and the behaviour are present and visible. Do not name or explain either.`,
+        codeLanguage: '角色模板',
+      },
+      template4: {
+        id: 'template-4',
+        title: '模板4——声音孤立提示词',
+        content:
+          '将角色的声音从情节和心理中孤立出来。适用于在写对话前建立语言风格，或检查角色听起来是否与同一手稿中的其他角色不同。',
+        codeBlock: `Character: [Name]
+Task: a mundane activity — [making coffee / waiting for a bus / washing dishes]
+
+Write 5 lines of [Character]'s internal monologue during this task. Do not include plot information. Do not explain the character's psychology. Use the character's specific speech register only.`,
+        codeLanguage: '角色模板',
+      },
+      template5: {
+        id: 'template-5',
+        title: '模板5——背景挖掘',
+        content:
+          '向读者展示是什么造就了角色，而不展示成年版本。从童年场景推断出的背景比直接讲述的背景更持久。',
+        codeBlock: `Character (adult version): [Name — include dominant trait and contradicting behaviour in one sentence]
+
+Write a 150-word scene from [Character]'s childhood that makes their adult behaviour inevitable — but do not show the adult version of the character. Do not name the trait or explain the connection. Show the event; let the reader infer the rest.`,
+        codeLanguage: '角色模板',
+      },
+      dialogue: {
+        id: 'dialogue',
+        title: '对话模板（模板6–7）',
+        content:
+          '**潜台词优先对话模板产出自然的台词。** 大多数模型默认让角色说出真正意思——AI生成对话的明显标志。先设定潜台词再要求台词，迫使模型构建回避。',
+        items: [
+          '**明确说明潜台词** — 每个角色想要但不会说的话，以及为什么不会说。',
+          '**"除了\'said\'以外不用对话标签"** — 去掉模型的情感标签拐杖（"他愤怒地说"），迫使台词本身承载情感。',
+          '**"不要动作节拍"** — 去掉模型用来填充空洞对话的舞台指示（"她交叉双臂。他叹了口气。"）。在修改中削减这些。',
+          '**类型语域提示词：** "在[类型]中写一个[关系]之间5轮的争论。争论表面上关于[话题A]，但真正的争论是关于[话题B]。不要命名话题B。"',
+          '**打断提示词：** "角色A说话到一半时角色B打断了。这样写打断，使它揭示B的情感状态，而不让B说出他们的感受。"',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于多角色对话，在生成前在系统提示词中为每个角色分配一个"语言风格"。示例："埃莱娜：正式、精确、从不用缩写。马库斯：随意、经常打断、用\'听着，\'或\'关键是'开头。"模型将保持这些风格而无需每轮提醒。',
+          },
+        ],
+      },
+      template6: {
+        id: 'template-6',
+        title: '模板6——潜台词优先对话',
+        content:
+          '在写任何台词前设定每个角色想要但不会说的话。迫使模型构建回避，而非写直接说出真正意思的角色。',
+        codeBlock: `Subtext (do not include this in the dialogue itself):
+[Character A] wants [X] but will not ask for it directly because [reason].
+[Character B] knows [X] is what A wants but pretends not to because [reason].
+
+Scene: [brief setting — 10 words max]
+Length: [number] exchanges
+
+Write the dialogue. No dialogue tags except "said". No internal monologue. No action beats.`,
+        codeLanguage: '对话模板',
+      },
+      template7: {
+        id: 'template-7',
+        title: '模板7——声音区分（3种表达方式）',
+        content:
+          '测试角色声音是否足够不同以在没有归因的情况下识别出来。如果三种表达方式听起来相同，在继续会话前向系统提示词中添加语言风格约束。',
+        codeBlock: `Piece of news: [state the news in one sentence]
+
+Write this news delivered by three different characters. Each delivery should make the character's class, education level, and emotional relationship to the news immediately apparent. No exposition — voice only.
+
+Character 1: [Name — background and relationship to the news in one sentence]
+Character 2: [Name — background and relationship to the news in one sentence]
+Character 3: [Name — background and relationship to the news in one sentence]`,
+        codeLanguage: '对话模板',
+      },
+      worldbuilding: {
+        id: 'worldbuilding',
+        title: '世界构建模板（模板8–9）',
+        content:
+          '**世界构建提示词用同心圆结构效果最好：锚定一个感官细节，向外展开。** 从"描述我的奇幻城市"开始会产出目录。从"黎明市场的气味"开始会产出读者所栖居的世界。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '锚定单个感官细节并以同心圆结构（物体→房间→建筑→街道→街区）展开的世界构建提示词，产出沉浸式世界描写，而非读者在其中读到而非居住的百科全书式目录。',
+          },
+          {
+            type: 'plain-terms',
+            text: '从小而具体的东西开始——一枚硬币的重量、铁匠铺的气味、特定街头小贩的声音——然后让模型从那里向外展开。在达到城市层级之前停下。来自不同锚点的多个短暂世界构建段落，比任何一段综合描述都能构建更丰富的世界。',
+          },
+        ],
+        items: [
+          '**锚点具体性** — 锚点越具体，世界越具体。"市场的气味"是模糊的。"角落香料摊上豆蔻和湿狗气味"产出一个具体的世界。',
+          '**停止圆** — 告诉模型在哪里停止扩展（房间、建筑、街区、城市）。没有停止指令，它会概述整个世界。',
+          '**"不要命名这个世界"** — 防止模型插入知识倾泻，迫使它渲染场景。',
+          '**"不要解释历史"** — 去掉百科全书反射；历史从细节中涌现，而非解释。',
+          '**隐含技术提示词：** "通过命名角色在30秒步行中触摸的每个物体来描述你世界中的一条街道。没有旁白——只有物体名称，按顺序。"',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '避免世界构建目录。如果你的世界构建提示词产出关于你世界的项目符号列表，这个提示词太抽象了。每个不是渲染散文的回应都应该用具体锚点重新提示。目录是"描述我的世界"提示词的症状——切换到"从[特定POV]在[特定时刻]展示[特定地点]。"',
+          },
+        ],
+      },
+      template8: {
+        id: 'template-8',
+        title: '模板8——世界构建同心圆',
+        content:
+          '锚定一个感官细节并向外展开。防止百科全书式目录，产出读者所栖居而非阅读的沉浸式世界描写。',
+        codeBlock: `Anchor: [one specific sensory detail — a smell, a sound, a texture]
+POV: [observer character or omniscient]
+Rings: expand from the anchor outward — object → room → building → street → district. Stop when you reach [ring level: room / building / street / district].
+Word ceiling: [200–400 words]
+
+Do not name the world. Do not explain the history. Show only what the POV character perceives in this moment.`,
+        codeLanguage: '世界构建模板',
+      },
+      template9: {
+        id: 'template-9',
+        title: '模板9——通过物件展现派系文化',
+        content:
+          '通过物质文化而非描述或叙述来揭示世界构建。一个派系拥有、使用和公开展示的东西，比任何对其信仰的解释都更能告诉读者。',
+        codeBlock: `Faction: [name and one-line description of their core belief or function]
+
+Describe the interior of a building used by this faction — only through the objects in the room. Do not describe the people. Do not state their beliefs. Do not explain the purpose of any object. 150 words max.`,
+        codeLanguage: '世界构建模板',
+      },
+      styleTransfer: {
+        id: 'style-transfer',
+        title: '风格转换模板（模板10–11）',
+        content:
+          '**风格转换在你命名技巧而非仅命名作者时才有效。** "像科马克·麦卡锡那样写"产出通用近似——稀疏标点和西部主题。"使用麦卡锡的嵌套从句、只用具体名词、不用对话标签的技巧"产出真正有结构忠实度的东西。关于构建产出特定创意输出的提示词的更完整框架，请参阅[CRAFT框架](/frameworks/craft?lang=zh)。',
+        items: [
+          '**具体命名技巧** — "简练散文"是模糊的；"短陈述句、具体名词、无修饰语"是可操作的。',
+          '**粘贴样本** — 实际作者散文的2–3句话比单纯描述更有效地激活模型中的模式匹配。',
+          '**"不要模仿样本——复制技巧"** — 防止直接解释样本段落。',
+          '**时态和POV转换：** "重写以下段落：从第三人称过去时改为第一人称现在时。保留所有具体感官细节。不要添加新的情节信息。最多200字。"',
+          '**语域校准：** 在要求复制之前先让模型命名它在你提供的段落中看到的技巧——这个浮现步骤提高了技巧命名的准确性。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '风格转换用Mistral Large。Mistral Large在长篇补全中比大多数本地可运行模型更好地保持一致的散文语域。对于语域一致性在多段落中很重要的风格转换任务，优先选Mistral Large而非Llama 3.3 70B。对于短暂的风格转换（300字以内），任何30B以上的模型都表现充分。',
+          },
+        ],
+      },
+      template10: {
+        id: 'template-10',
+        title: '模板10——技巧命名风格转换',
+        content:
+          '命名具体技巧而非仅命名作者姓名。产出结构忠实度，而非表面级别的戏仿。',
+        codeBlock: `Target style: [Author name]
+Techniques to replicate (name 2–3 specifically):
+1. [Technique — e.g., "sentence fragments for interiority"]
+2. [Technique — e.g., "concrete Anglo-Saxon vocabulary, no Latinate abstractions"]
+3. [Technique — e.g., "em dashes for interruption, never ellipsis"]
+
+Sample passage (2–3 sentences of the author's actual prose):
+"[paste sample]"
+
+Now write [scene description] using these techniques. 200 words. Do not mimic the sample — replicate the technique.`,
+        codeLanguage: '风格转换模板',
+      },
+      template11: {
+        id: 'template-11',
+        title: '模板11——类型语域转换',
+        content:
+          '在不改变情节信息的情况下将现有散文在类型语域之间移动。当场景的语域与类型不匹配时，适用于寻找场景的正确语域或修改。',
+        codeBlock: `Source register: [thriller / romance / horror / literary fiction / commercial fiction / etc.]
+Target register: [literary fiction / commercial fiction / genre X]
+Specific changes: [longer sentences / more interiority / less action description / etc.]
+
+Rewrite the following passage in [target register]. Do not change any plot information. Word ceiling: same length as input.
+
+[paste passage]`,
+        codeLanguage: '风格转换模板',
+      },
+      revision: {
+        id: 'revision',
+        title: '修改模板（模板12）',
+        content:
+          '**修改提示词需要命名问题，而非笼统地要求改善。** "让这个更好"产出最小的表面修改。"消除每个被动结构；每句话必须使用主动语态。如果主语不清楚，虚构一个具体的主语。150字以内"产出可量化的结构变化。',
+        items: [
+          '**始终粘贴草稿，而非描述。** 修改提示词只在粘贴实际草稿文本时有效。在不展示散文的情况下描述问题，产出的是通用建议，而非重写的段落。',
+          '**命名具体问题。** "重写"不够。识别一个结构问题：被动语态、副词过多、视角跳跃、臃肿或信息堆砌。',
+          '**视角跳跃修复：** "以下段落包含POV违规——我们听到多个角色的内心想法。将它严格改写为紧密第三人称[角色名]。删除对其他角色内心的所有访问。"',
+          '**对话自然化：** "以下对话听起来是写出来的。重写：角色可以互相打断、用片段说话、说过头。保留相同的信息交换。"',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '始终粘贴草稿，而非描述。修改提示词只在粘贴实际草稿文本时有效。在不展示散文的情况下描述问题，产出的是通用建议，而非重写的段落。粘贴具体段落或交流，命名具体问题，并为重写指定字数上限。',
+          },
+        ],
+      },
+      template12: {
+        id: 'template-12',
+        title: '模板12——修改工具箱（压缩、被动语态、副词减少）',
+        content:
+          '三个命名具体问题的修改指令。分开运行每个——将所有三个合并到一个提示词中会产出不一致的结果，因为模型会将一个指令优先于其他。',
+        codeBlock: `--- COMPRESSION ---
+The following scene is [N] words. Rewrite it in [N/2] words. Preserve the emotional beat and all sensory anchors. Cut dialogue tags, action beats, and transitions first:
+
+[paste scene]
+
+---
+
+--- PASSIVE VOICE ELIMINATION ---
+Rewrite the following paragraph: every sentence must use active voice. If the subject is not clear, invent a concrete subject. 150 words max:
+
+[paste paragraph]
+
+---
+
+--- ADVERB REDUCTION ---
+Rewrite the following: remove every adverb. Replace each adverb + weak verb pair with a single strong verb. Do not add new plot information:
+
+[paste paragraph]`,
+        codeLanguage: '修改模板',
+      },
+      editorialTemplates: {
+        id: 'editorial-templates',
+        title: '编辑模板（模板13–15）',
+        content:
+          '**编辑模板在手稿层面而非场景层面运作。** 它们帮助你在连续性错误复合之前捕捉，识别整章中的节奏问题，并将信息堆砌的叙述重新分配到对话、动作和感官细节中。在起草后运行这些，而非起草中。',
+        callouts: [
+          {
+            type: 'tip',
+            text: '在完成的草稿上运行编辑模板，而非进行中的作品。情节一致性检查至少需要3个场景；节奏分析需要完整章节。在不完整的段落上运行它们会产生假阳性，并浪费上下文窗口。',
+          },
+        ],
+      },
+      template13: {
+        id: 'template-13',
+        title: '模板13——情节一致性检查',
+        content:
+          '在连续性错误跨章节复合之前识别它们。在每3–4个新场景后运行，在错误还容易修复时捕捉。',
+        codeBlock: `[paste the last 3 scenes here]
+
+Read these three scenes carefully. List every continuity error you detect: changed physical descriptions (eye colour, hair, height), location inconsistencies, timeline conflicts, object appearances that contradict earlier scenes, character knowledge they should not yet have.
+
+Output only a flag list — one sentence per flag, 150 words maximum total. Do not summarise the scenes. Do not suggest fixes. Flag only.`,
+        codeLanguage: '编辑模板',
+      },
+      template14: {
+        id: 'template-14',
+        title: '模板14——节奏分析',
+        content:
+          '映射章节中的节奏以识别平淡区域。当章节在句子层面读得正确但整体感觉很慢时有用——节奏标记显示拖沓的来源。',
+        codeBlock: `[paste chapter here]
+
+Read this chapter and mark each paragraph with: FAST / MEDIUM / SLOW.
+
+After marking, list only the SLOW paragraphs with a one-sentence diagnosis for each: what is causing the pacing to drag (over-description, dialogue repetition, excessive interiority, unnecessary backstory insertion, etc.).
+
+Output format: Paragraph [number]: [SLOW] — [one-sentence diagnosis]
+No other commentary. No summaries. Diagnosis only.`,
+        codeLanguage: '编辑模板',
+      },
+      template15: {
+        id: 'template-15',
+        title: '模板15——叙述展开',
+        content:
+          '在不添加或删除任何信息的情况下，将信息堆砌的叙述重新分配到对话、动作和感官细节中。当段落读起来像事实传递机制而非场景时使用。',
+        codeBlock: `[paste paragraph with exposition]
+
+This paragraph delivers exposition as a block. Rewrite it by distributing the same information across three channels:
+1. A line of dialogue that reveals one piece of information through character reaction (not explanation).
+2. One action beat that implies one piece of information without stating it.
+3. One sensory detail that shows one piece of information without naming it.
+
+Word ceiling: same length as the input paragraph. Do not add any new information. Do not remove any information that was in the original.`,
+        codeLanguage: '编辑模板',
+      },
+      models: {
+        id: 'models',
+        title: '小说写作的模型推荐',
+        content:
+          '**模型选择的影响小于提示词结构，但确实有影响。** 一个结构良好的提示词在7B模型上会胜过7B模型上模糊提示词——但在等效提示词的情况下，较大的模型在较长补全中更好地保持约束遵从性，并更可靠地区分角色声音。',
+        columns: ['任务', '推荐模型', '原因'],
+        rows: [
+          { '任务': '通用场景写作', '推荐模型': 'Llama 3.3 70B', '原因': '指令遵从性强、叙事连贯性好，是约束性散文的最佳全能选择' },
+          { '任务': '风格转换', '推荐模型': 'Mistral Large', '原因': '长篇补全中保持一致的散文语域；本地可运行模型中语域忠实度最佳' },
+          { '任务': '对话/角色声音', '推荐模型': 'Command R+ 104B或Hermes 3', '原因': '自然的口语语域；在长篇交流中可靠地区分角色声音' },
+          { '任务': '世界构建', '推荐模型': 'Qwen3 32B', '原因': '擅长结构化细节生成；可靠地保持同心圆扩展模式' },
+          { '任务': '修改/编辑', '推荐模型': 'Llama 3.3 70B', '原因': '最擅长在整个段落中遵循特定的结构重写指令' },
+          { '任务': '黑暗/无审查小说', '推荐模型': 'Hermes 3 Llama 3.3', '原因': '针对更少内容拒绝进行微调；本地运行时无云端服务条款限制' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '小说模型的硬件最低要求。Llama 3.3 70B在Q4量化下需要约40 GB VRAM或统一内存（NVIDIA RTX 4090 24 GB双GPU，或Apple M5 Max 64 GB）。Qwen3 32B在Q4下运行需要20–24 GB。Mistral Large在Q4下需要约24 GB。对于16 GB配置，Qwen3 14B和Mistral Small是实际的上限——两者都在较短的生成长度下可靠地遵循场景模板。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '**没有字数上限。** 没有上限，模型会臃肿填充——它添加过渡段落、动作节拍和摘要句子，直到耗尽token。始终设置上限。',
+          '**特性列表而非矛盾。** 五个特质的列表产出依次展示每个特质的角色。两个特质之间的矛盾产出读者需要解读的角色。使用矛盾结构。',
+          '**"像[作者]那样写"而不命名技巧。** 仅作者名称的风格转换产出类型戏仿，而非技巧忠实度。命名你想复制的具体技巧。',
+          '**没有POV锚点。** 没有命名POV的场景提示词默认产出视角跳跃——模型访问所有角色的内心状态，因为没有任何东西禁止它。始终命名POV角色。',
+          '**没有草稿的修改提示词。** 要求模型"改善节奏"的场景，你描述但不展示，产出通用建议。粘贴实际段落。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考来源',
+        items: [
+          'Llama 3.3 70B模型卡和指令遵从基准 — [Meta AI Research](https://ai.meta.com)',
+          'Qwen3 32B技术报告 — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
+          'Mistral Large模型文档 — [Mistral AI](https://mistral.ai)',
+          'Command R+ 104B规格 — [Cohere](https://cohere.com)',
+          'Hermes 3微调方法论 — [Nous Research](https://nousresearch.com)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '本地LLM能替代人类写作伙伴进行小说起草吗？',
+            a: '对于特定子任务——生成场景的初稿、产出对话变体、世界构建细节扫描——本地LLM是快速可靠的起草伙伴。它们不能替代人类合作作者的战略性思考：它们无法评估场景是否符合故事弧线、角色的选择是否在情感上是合理的，或章节节奏是否有效。将它们用于生成任务；保留对结构决策的人类判断。',
+          },
+          {
+            q: '小说写作用Ollama、LM Studio还是SillyTavern更好？',
+            a: '对于发送完整提示词并接收补全的结构化提示词模板，Ollama（CLI或API）和LM Studio（OpenAI兼容端点）是等效的——前端不影响输出质量。SillyTavern为多轮角色扮演和角色卡持久性增加了价值，但对于场景写作和修改提示词，简单的聊天UI或API调用就足够了。',
+          },
+          {
+            q: '这些提示词模板在较小的模型（7B–14B）上有效吗？',
+            a: '有效，但约束遵从性在约150 token后会下降。较小的模型遵循5部分提示词中的前2–3个约束，然后向其基础语域漂移。对于7B–14B模型：减少字数上限（最多150字），使用更少的同时约束（3部分而非5部分），并预期需要更频繁地修改或重新提示。Qwen3 14B是测试中针对特定小说提示词遵从性最强的小模型。',
+          },
+          {
+            q: '如何在完整的小说会话中保持角色声音一致性？',
+            a: '构建一个纯文本角色表（姓名、主导特质、矛盾行为、语言风格、3行示例对话）并在会话开始时粘贴到系统消息中。对于长会话，将已完成的场景总结为一个持续的"会话上下文"文档，并在每次用户轮次中包含最近场景的最后200–300字。这在不超过上下文窗口的情况下对抗上下文漂移。',
+          },
+          {
+            q: '写黑暗或成熟小说最好的本地LLM是什么？',
+            a: 'Hermes 3 Llama 3.3、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh)。',
+          },
+          {
+            q: '我可以在SillyTavern或Agnai中使用这些模板吗？',
+            a: '可以。本指南中的所有模板都是纯文本——它们适用于任何向本地模型传递文本的界面。在SillyTavern中，将类型和POV约束放在系统提示词字段中；在用户轮次中使用特定场景的指令。在Agnai中，设置是等效的。这些模板与前端无关。',
+          },
+          {
+            q: '场景提示词应该多长？',
+            a: '50–100字的场景提示词在实践中产出最好的结果。较长的提示词（200字以上）对复杂场景可以有效，但增加了模型忽略某些约束的机会。对于复杂场景，将提示词分为两步：首先生成场景，然后运行添加你保留的约束的修改提示词。',
+          },
+          {
+            q: '风格转换提示词是否侵犯版权？',
+            a: '复制作者的技巧（句子结构、标点选择、叙事语域）不是版权侵犯——风格不受版权保护。从受版权保护的文本中复制实质性的逐字段落是侵权。本指南中的模板使用2–3句样本作为技巧锚点，这属于标准教育合理使用范围，生成的输出复制的是技巧而非内容。',
+          },
+          {
+            q: '在中国大陆使用本地LLM进行小说写作，是否涉及《个人信息保护法》？',
+            a: '本地运行的LLM不向任何外部服务传输文本或对话数据，因此《个人信息保护法》（PIPL）中关于个人信息处理者通知义务、第三方数据共享及境外传输的条款通常不适用于本地推理。若创作内容描写真实可识别的自然人并将其公开发表，则可能涉及名誉权和隐私权相关的民事责任。使用虚构角色进行纯文学创作时，本地生成通常不产生PIPL层面的合规问题。',
+          },
+          {
+            q: '在中国大陆使用本地LLM生成成人创意内容，是否合法？',
+            a: '根据《刑法》第363条，制作、复制、出版、贩卖或传播淫秽物品属于违法行为；第364条进一步规范了传播行为。本地生成且不对外发布的私人内容，与"传播"的构成要件有所不同，但具体情形仍需以实际案例和司法解释为准。描绘未成年人的性内容在任何情况下均属绝对禁止，不论生成手段或是否公开。《网络安全法》第12条同样禁止利用网络制作或传播违法信息。本地运行LLM意味着数据不上云，但生成内容的法律责任仍由作者承担。关于风格转换提示词，复制作者技巧是允许的；逐字复制大量文本可能侵犯版权。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[2026年创意写作最佳本地LLMs](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh) — 叙事生成、采样设置和无审查选项的模型对比。',
+          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=zh) — 用于角色卡角色扮演和协作小说的前端对比。',
+          '[如何使用本地LLM进行剧本写作和长篇小说起草](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=zh) — 长篇起草工作流、章节管理和上下文窗口策略。',
+          '[创意写作的无审查本地LLM：伦理与设置](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=zh) — 成熟内容使用哪些模型、隐私影响和负责任的使用框架。',
+          '[Chain-of-Thought提示词解析](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 适用于小说情节构建和场景规划的结构化推理提示词。',
+          '[Zero-Shot vs Few-Shot提示词](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=zh) — 小说任务中何时在提示词中包含示例，何时保留它们。',
+        ],
+      },
+    },
+  },
 }
