@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="300" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="22" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Test Methodology — How We Benchmarked 5 Tool-Calling Models</text>
+  <line x1="18" y1="30" x2="782" y2="30" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="18" y="52" font-size="12" font-weight="700" fill="#79747E">Setup</text>
+  <text x="268" y="52" font-size="12" font-weight="700" fill="#79747E">Details</text>
+  <!-- Vertical divider -->
+  <line x1="255" y1="30" x2="255" y2="240" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Header underline -->
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1: y=80 -->
+  <text x="18" y="80" font-size="12" font-weight="700" fill="#1C1B1F">MCP Servers</text>
+  <text x="268" y="80" font-size="11" fill="#49454F">filesystem · sqlite · puppeteer · github</text>
+  <line x1="18" y1="94" x2="782" y2="94" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: y=112 -->
+  <text x="18" y="112" font-size="12" font-weight="700" fill="#1C1B1F">Prompt set</text>
+  <text x="268" y="112" font-size="11" fill="#49454F">50 prompts × 4 servers × 3 runs = 600 calls per model</text>
+  <line x1="18" y1="126" x2="782" y2="126" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: y=144 -->
+  <text x="18" y="144" font-size="12" font-weight="700" fill="#1C1B1F">Total calls</text>
+  <text x="268" y="144" font-size="11" fill="#49454F">~3,000 across 5 models (single + multi-step + parallel)</text>
+  <line x1="18" y1="158" x2="782" y2="158" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4: y=176 -->
+  <text x="18" y="176" font-size="12" font-weight="700" fill="#1C1B1F">Harness</text>
+  <text x="268" y="176" font-size="11" fill="#49454F">Cline 3.x (strict XML) + Goose+MCP (headless)</text>
+  <line x1="18" y1="190" x2="782" y2="190" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5: y=208 -->
+  <text x="18" y="208" font-size="12" font-weight="700" fill="#1C1B1F">Hardware</text>
+  <text x="268" y="208" font-size="11" fill="#49454F">M5 Max 64 GB (≤32B) · L40S 48 GB (Llama 3.3 70B)</text>
+  <!-- Footer -->
+  <text x="400" y="262" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Failures attribute to the model, not the harness — same Cline, same MCP servers, only model varied</text>
+</svg>

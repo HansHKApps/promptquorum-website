@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="330" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="24" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Beste lokale Modelle für Tool Calling — Benchmark-Ergebnisse (Mai 2026)</text>
+  <line x1="18" y1="32" x2="782" y2="32" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="18" y="54" font-size="12" font-weight="700" fill="#79747E">Modell</text>
+  <text x="285" y="54" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">VRAM</text>
+  <text x="435" y="54" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Wohlgeformt %</text>
+  <text x="640" y="54" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Am besten für</text>
+  <!-- Vertical dividers -->
+  <line x1="215" y1="32" x2="215" y2="320" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="360" y1="32" x2="360" y2="320" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="510" y1="32" x2="510" y2="320" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Header underline -->
+  <line x1="18" y1="62" x2="782" y2="62" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1: y=85 -->
+  <text x="18" y="85" font-size="12" font-weight="700" fill="#1C1B1F">Gemma 4 27B</text>
+  <text x="285" y="85" font-size="12" fill="#49454F" text-anchor="middle">~16 GB</text>
+  <circle cx="435" cy="82" r="16" fill="#34A853"/>
+  <text x="435" y="87" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">~95%</text>
+  <text x="640" y="80" font-size="11" fill="#49454F" text-anchor="middle">Allgemein 24 GB</text>
+  <text x="640" y="94" font-size="10" fill="#79747E" text-anchor="middle">alle MCP-Server</text>
+  <line x1="18" y1="101" x2="782" y2="101" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: y=119 -->
+  <text x="18" y="119" font-size="12" font-weight="700" fill="#1C1B1F">GLM-5.1 32B</text>
+  <text x="285" y="119" font-size="12" fill="#49454F" text-anchor="middle">~20 GB</text>
+  <circle cx="435" cy="116" r="16" fill="#F4B400"/>
+  <text x="435" y="121" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">~94%</text>
+  <text x="640" y="114" font-size="11" fill="#49454F" text-anchor="middle">Langer Kontext</text>
+  <text x="640" y="128" font-size="10" fill="#79747E" text-anchor="middle">128K-Kontext</text>
+  <line x1="18" y1="135" x2="782" y2="135" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: y=153 -->
+  <text x="18" y="153" font-size="12" font-weight="700" fill="#1C1B1F">Qwen3 32B</text>
+  <text x="285" y="153" font-size="12" fill="#49454F" text-anchor="middle">~20 GB</text>
+  <circle cx="435" cy="150" r="16" fill="#F4B400"/>
+  <text x="435" y="155" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">~93%</text>
+  <text x="640" y="148" font-size="11" fill="#49454F" text-anchor="middle">Vielseitig</text>
+  <text x="640" y="162" font-size="10" fill="#79747E" text-anchor="middle">Allgemein + Code</text>
+  <line x1="18" y1="169" x2="782" y2="169" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4: y=187 -->
+  <text x="18" y="187" font-size="12" font-weight="700" fill="#1C1B1F">Qwen3-Coder 30B</text>
+  <text x="285" y="187" font-size="12" fill="#49454F" text-anchor="middle">~18 GB</text>
+  <circle cx="435" cy="184" r="16" fill="#34A853"/>
+  <text x="435" y="189" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">~96%</text>
+  <text x="435" y="202" font-size="9" fill="#79747E" text-anchor="middle">(code)</text>
+  <text x="640" y="182" font-size="11" fill="#49454F" text-anchor="middle">Coding-Agenten</text>
+  <text x="640" y="196" font-size="10" fill="#79747E" text-anchor="middle">replace_in_file, read_file</text>
+  <line x1="18" y1="203" x2="782" y2="203" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5: y=225 -->
+  <text x="18" y="225" font-size="12" font-weight="700" fill="#1C1B1F">Llama 3.3 70B</text>
+  <text x="285" y="225" font-size="12" fill="#49454F" text-anchor="middle">~42 GB</text>
+  <circle cx="435" cy="222" r="16" fill="#34A853"/>
+  <text x="435" y="227" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">~97%</text>
+  <text x="640" y="220" font-size="11" fill="#49454F" text-anchor="middle">Höchste Zuverlässigkeit</text>
+  <text x="640" y="234" font-size="10" fill="#79747E" text-anchor="middle">48 GB+ VRAM</text>
+  <!-- Footer -->
+  <text x="400" y="308" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Getestet Mai 2026 · Cline 3.x + Ollama · Q4_K_M Quantisierung · gleiche MCP-Server</text>
+<text x="792" y="325" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
