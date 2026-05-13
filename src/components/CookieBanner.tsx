@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 
-const GA_ID = 'G-8DQ4B3DXBS'
 const STORAGE_KEY = 'analytics_consent'
 
 const COPY: Record<string, { text: string; policy: string; accept: string; decline: string }> = {
@@ -40,20 +39,10 @@ const COPY: Record<string, { text: string; policy: string; accept: string; decli
   },
 }
 
-function loadGA() {
+function gtagConsent(state: 'granted' | 'denied') {
   if (typeof window === 'undefined') return
-  if (document.getElementById('ga-script')) return
-
-  const s1 = document.createElement('script')
-  s1.id = 'ga-script'
-  s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
-  s1.async = true
-  document.head.appendChild(s1)
-
-  const s2 = document.createElement('script')
-  s2.id = 'ga-init'
-  s2.innerHTML = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`
-  document.head.appendChild(s2)
+  const w = window as Window & { gtag?: (...args: unknown[]) => void }
+  w.gtag?.('consent', 'update', { analytics_storage: state, ad_storage: state })
 }
 
 function CookieBannerInner() {
@@ -66,7 +55,7 @@ function CookieBannerInner() {
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY)
     if (stored === 'granted') {
-      loadGA()
+      gtagConsent('granted')
     } else if (!stored) {
       setVisible(true)
     }
@@ -74,12 +63,13 @@ function CookieBannerInner() {
 
   function accept() {
     localStorage.setItem(STORAGE_KEY, 'granted')
-    loadGA()
+    gtagConsent('granted')
     setVisible(false)
   }
 
   function decline() {
     localStorage.setItem(STORAGE_KEY, 'denied')
+    gtagConsent('denied')
     setVisible(false)
   }
 
