@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="LM Studio vs Jan vs GPT4All: Feature Comparison 2026">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio vs Jan vs GPT4All: Feature Comparison 2026</text>
+  <!-- Column headers -->
+  <text x="18" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Criterion</text>
+  <text x="310" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">LM Studio</text>
+  <!-- Jan header highlight -->
+  <rect x="430" y="42" width="150" height="22" fill="#E8DEF8" rx="3"/>
+  <text x="505" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Jan</text>
+  <text x="700" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">GPT4All</text>
+  <!-- Header divider -->
+  <line x1="0" y1="68" x2="800" y2="68" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1: Best for -->
+  <rect x="0" y="68" width="800" height="37" fill="#FFFFFF"/>
+  <text x="18" y="91" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Best for</text>
+  <text x="310" y="91" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Power users</text>
+  <text x="505" y="91" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Privacy users</text>
+  <text x="700" y="91" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Beginners</text>
+  <line x1="0" y1="105" x2="800" y2="105" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: Install size -->
+  <rect x="0" y="105" width="800" height="37" fill="#F7F2FA"/>
+  <text x="18" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Install size</text>
+  <text x="310" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">~450 MB</text>
+  <text x="505" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">~380 MB</text>
+  <text x="700" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">~290 MB</text>
+  <line x1="0" y1="142" x2="800" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: Speed M5 -->
+  <rect x="0" y="142" width="800" height="37" fill="#FFFFFF"/>
+  <text x="18" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Speed (M5, 8B Q4)</text>
+  <circle cx="310" cy="161" r="10" fill="#34A853"/>
+  <text x="310" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">38</text>
+  <circle cx="505" cy="161" r="10" fill="#F4B400"/>
+  <text x="505" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">32</text>
+  <circle cx="700" cy="161" r="10" fill="#79747E"/>
+  <text x="700" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">24</text>
+  <line x1="0" y1="179" x2="800" y2="179" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4: Speed RTX 4070 -->
+  <rect x="0" y="179" width="800" height="37" fill="#F7F2FA"/>
+  <text x="18" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Speed (RTX 4070, 8B Q4)</text>
+  <circle cx="310" cy="198" r="10" fill="#34A853"/>
+  <text x="310" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">74</text>
+  <circle cx="505" cy="198" r="10" fill="#F4B400"/>
+  <text x="505" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">65</text>
+  <circle cx="700" cy="198" r="10" fill="#79747E"/>
+  <text x="700" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">52</text>
+  <line x1="0" y1="216" x2="800" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5: Built-in RAG -->
+  <rect x="0" y="216" width="800" height="37" fill="#FFFFFF"/>
+  <text x="18" y="239" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Built-in RAG</text>
+  <text x="310" y="239" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Yes</text>
+  <text x="505" y="239" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Yes (extension)</text>
+  <text x="700" y="239" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Plugin only</text>
+  <line x1="0" y1="253" x2="800" y2="253" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 6: Open source -->
+  <rect x="0" y="253" width="800" height="37" fill="#F7F2FA"/>
+  <text x="18" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Open source</text>
+  <text x="310" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">No (proprietary)</text>
+  <text x="505" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Yes (AGPL)</text>
+  <text x="700" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Yes (MIT)</text>
+  <line x1="0" y1="290" x2="800" y2="290" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 7: Telemetry -->
+  <rect x="0" y="290" width="800" height="37" fill="#FFFFFF"/>
+  <text x="18" y="313" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Telemetry</text>
+  <text x="310" y="313" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Anonymous opt-out</text>
+  <text x="505" y="313" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">None</text>
+  <text x="700" y="313" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Opt-in only</text>
+  <line x1="0" y1="327" x2="800" y2="327" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 8: OpenAI API -->
+  <rect x="0" y="327" width="800" height="37" fill="#F7F2FA"/>
+  <text x="18" y="350" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">OpenAI API</text>
+  <text x="310" y="350" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Yes</text>
+  <text x="505" y="350" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Yes</text>
+  <text x="700" y="350" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Yes</text>
+  <line x1="0" y1="364" x2="800" y2="364" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 9: Min RAM -->
+  <rect x="0" y="364" width="800" height="37" fill="#FFFFFF"/>
+  <text x="18" y="387" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Min RAM (4B)</text>
+  <text x="310" y="387" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">6 GB</text>
+  <text x="505" y="387" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">6 GB</text>
+  <text x="700" y="387" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">4 GB</text>
+</svg>

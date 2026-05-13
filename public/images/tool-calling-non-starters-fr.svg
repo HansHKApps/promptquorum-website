@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 285" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="285" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="22" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Modèles qui ne fonctionnent pas pour le tool calling — 3 catégories d'échec</text>
+  <line x1="18" y1="30" x2="782" y2="30" stroke="#EA4335" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="18" y="52" font-size="12" font-weight="700" fill="#EA4335">Catégorie de modèle</text>
+  <text x="310" y="52" font-size="12" font-weight="700" fill="#EA4335">Raison de l'échec</text>
+  <!-- Vertical divider -->
+  <line x1="300" y1="30" x2="300" y2="225" stroke="#EA4335" stroke-width="1"/>
+  <!-- Header underline -->
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#EA4335" stroke-width="1.5"/>
+  <!-- Row 1: y=85 -->
+  <circle cx="285" cy="85" r="12" fill="#EA4335"/>
+  <text x="285" y="90" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <text x="18" y="85" font-size="12" font-weight="700" fill="#EA4335">Modèles sub-7B</text>
+  <text x="18" y="100" font-size="10" fill="#79747E">(Llama 3.2 1B/3B, Phi-3 Mini, Gemma 2 2B)</text>
+  <text x="310" y="85" font-size="11" fill="#49454F">Appels malformés sur les tâches multi-étapes</text>
+  <line x1="18" y1="112" x2="782" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: y=140 -->
+  <circle cx="285" cy="140" r="12" fill="#EA4335"/>
+  <text x="285" y="145" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <text x="18" y="140" font-size="12" font-weight="700" fill="#EA4335">Sans entraînement tool calling</text>
+  <text x="18" y="155" font-size="10" fill="#79747E">(la plupart des modèles chat 7B–13B génériques)</text>
+  <text x="310" y="140" font-size="11" fill="#49454F">Paraphrase les appels d'outils en prose</text>
+  <line x1="18" y1="167" x2="782" y2="167" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: y=195 -->
+  <circle cx="285" cy="195" r="12" fill="#EA4335"/>
+  <text x="285" y="200" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <text x="18" y="195" font-size="12" font-weight="700" fill="#EA4335">Quantisation Q3 / Q2</text>
+  <text x="18" y="210" font-size="10" fill="#79747E">(Q4_K_M est le seuil de production)</text>
+  <text x="310" y="195" font-size="11" fill="#49454F">Dégrade la fiabilité outil avant la qualité chat</text>
+  <!-- Footer -->
+  <text x="400" y="255" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Symptôme : XML malformé dans Cline, boucles bloquées — changer le modèle, pas le cadre</text>
+</svg>

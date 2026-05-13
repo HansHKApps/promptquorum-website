@@ -136,6 +136,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Per-call reliability compounds across an agent loop. A 95% per-call rate over 8 steps lands successfully ~66% of the time. Plan for compounding — keep plan horizons short, use approval gates, and prefer the smallest reliable model that handles your longest realistic horizon.',
           },
         ],
+        image: '/images/tool-calling-what-is-it-en.svg',
+        imageCaption: 'Tool calling in 5 steps: user prompt → LLM reads available tool schemas → emits structured JSON naming tool and arguments → harness validates against schema → tool executes (filesystem, database, browser, API). Wire format varies; the underlying LLM skill does not.',
       },
       methodology: {
         id: 'methodology',
@@ -156,6 +158,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'These numbers are from our test harness, not from BFCL or ToolBench leaderboards. Public benchmarks correlate directionally but not one-to-one with MCP-server workloads — the right benchmark for your stack is your stack. Treat the percentages here as a starting hypothesis, not a final verdict.',
           },
         ],
+        image: '/images/tool-calling-methodology-en.svg',
+        imageCaption: 'Test methodology: 4 MCP servers (filesystem, sqlite, puppeteer, github), 50 prompts × 4 servers × 3 runs = 600 graded calls per model, ~3,000 total across 5 models — same Cline 3.x harness throughout, only the model varied.',
       },
       comparison: {
         id: 'comparison',
@@ -180,6 +184,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Qwen3-Coder 30B', 'Size': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Well-formed call rate': '~96% (code) / ~91% (non-code)', 'Best for': 'Coding agents (replace_in_file, read_file, code-aware browser)', 'Common failure mode': 'Weaker on non-code servers than the general-purpose picks' },
           { 'Model': 'Llama 3.3 70B', 'Size': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Well-formed call rate': '~97%', 'Best for': 'Highest ceiling when hardware fits', 'Common failure mode': 'Slow per-token rate makes long agent loops painful' },
         ],
+        image: '/images/tool-calling-model-comparison-en.svg',
+        imageCaption: 'Five tool-calling models benchmarked on 4 MCP servers: Llama 3.3 70B leads at ~97% well-formed calls (42 GB VRAM); Qwen3-Coder 30B tops ~96% on code tools; Gemma 4 27B delivers ~95% on 16 GB VRAM; GLM-5.1 32B ~94% with 128K context; Qwen3 32B ~93% well-rounded.',
       },
       gemma4: {
         id: 'gemma-4',
@@ -265,6 +271,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Sub-7B models for tool calling is the most common time-sink we see. Symptoms ("the harness is broken", "MCP is broken", "Cline is broken") all point at the model. Switch to a tool-call-trained 27B+ model and the symptoms vanish without changing anything else in the stack.',
           },
         ],
+        image: '/images/tool-calling-non-starters-en.svg',
+        imageCaption: 'Three model categories that fail tool calling: sub-7B models emit malformed calls on multi-step tasks; models without tool-call training paraphrase calls into prose; Q3/Q2 quantisation degrades tool reliability before chat quality — Q4_K_M is the production floor.',
       },
       formatComparison: {
         id: 'format-comparison',

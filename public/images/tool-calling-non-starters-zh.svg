@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 285" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="285" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="22" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">不适合工具调用的模型——3类失败原因</text>
+  <line x1="18" y1="30" x2="782" y2="30" stroke="#EA4335" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="18" y="52" font-size="12" font-weight="700" fill="#EA4335">模型类别</text>
+  <text x="310" y="52" font-size="12" font-weight="700" fill="#EA4335">失败原因</text>
+  <!-- Vertical divider -->
+  <line x1="300" y1="30" x2="300" y2="225" stroke="#EA4335" stroke-width="1"/>
+  <!-- Header underline -->
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#EA4335" stroke-width="1.5"/>
+  <!-- Row 1: y=85 -->
+  <circle cx="285" cy="85" r="12" fill="#EA4335"/>
+  <text x="285" y="90" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <text x="18" y="85" font-size="12" font-weight="700" fill="#EA4335">7B以下模型</text>
+  <text x="18" y="100" font-size="10" fill="#79747E">(Llama 3.2 1B/3B, Phi-3 Mini, Gemma 2 2B)</text>
+  <text x="310" y="85" font-size="11" fill="#49454F">多步任务中调用格式错误</text>
+  <line x1="18" y1="112" x2="782" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: y=140 -->
+  <circle cx="285" cy="140" r="12" fill="#EA4335"/>
+  <text x="285" y="145" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <text x="18" y="140" font-size="12" font-weight="700" fill="#EA4335">无工具调用训练</text>
+  <text x="18" y="155" font-size="10" fill="#79747E">(大多数通用7B–13B聊天模型)</text>
+  <text x="310" y="140" font-size="11" fill="#49454F">将工具调用转为文字描述</text>
+  <line x1="18" y1="167" x2="782" y2="167" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: y=195 -->
+  <circle cx="285" cy="195" r="12" fill="#EA4335"/>
+  <text x="285" y="200" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <text x="18" y="195" font-size="12" font-weight="700" fill="#EA4335">Q3 / Q2量化</text>
+  <text x="18" y="210" font-size="10" fill="#79747E">（Q4_K_M是生产最低标准）</text>
+  <text x="310" y="195" font-size="11" fill="#49454F">工具可靠性下降先于聊天质量</text>
+  <!-- Footer -->
+  <text x="400" y="255" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">症状：Cline中XML格式错误、循环卡死——更换模型而非框架</text>
+</svg>
