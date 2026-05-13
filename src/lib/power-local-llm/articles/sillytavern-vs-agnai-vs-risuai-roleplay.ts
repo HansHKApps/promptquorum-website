@@ -800,4 +800,397 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: 'SillyTavern vs Agnai vs RisuAI : Meilleure interface roleplay locale (2026)',
+    seoTitle: 'SillyTavern vs Agnai vs RisuAI : Meilleure UI Roleplay 2026',
+    intro:
+      'SillyTavern, Agnai et RisuAI sont les trois interfaces roleplay crédibles pour les LLM locaux en 2026 — chacune se connecte proprement à Ollama, llama.cpp ou tout endpoint compatible OpenAI, et chacune adopte une position différente sur la densité de fonctionnalités. SillyTavern est le choix de personnalisation poussée (celui sur lequel la plupart des utilisateurs expérimentés finissent) ; Agnai est le choix multi-utilisateur (le seul avec un vrai mode serveur partagé) ; RisuAI est l\'alternative plus légère quand SillyTavern paraît surdimensionné. Ce guide les compare sur les cartes de personnages, la gestion des personas, les livres de lore, le chat de groupe, la compatibilité des modèles, la confidentialité et la disponibilité des plateformes.',
+    metaDescription:
+      'Comparatif SillyTavern, Agnai et RisuAI pour le roleplay LLM local : fonctionnalités, compatibilité des modèles, confidentialité et écosystème communautaire.',
+    twitterDescription:
+      '3 interfaces roleplay locales comparées : SillyTavern (personnalisation poussée), Agnai (multi-utilisateur), RisuAI (alternative légère). Cartes personnages, livres de lore, chat de groupe, confidentialité.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+      'Mistral Large',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'Auteurs de roleplay, concepteurs de personnages, collaborateurs de fiction et équipes d\'écriture créative utilisant des LLM locaux via des interfaces de chat dédiées avec cartes de personnages, gestion de personas et scènes de groupe.',
+    readTime: '13 min de lecture',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'interface roleplay locale',
+    targetKeywords: [
+      'sillytavern vs agnai',
+      'agnai vs risuai',
+      'meilleure interface roleplay locale',
+      'sillytavern ollama configuration',
+      'carte personnage llm local',
+      'risuai vs sillytavern',
+    ],
+    leadAnswerBlock:
+      '**SillyTavern est le bon choix pour ~80 % des utilisateurs — support de cartes de personnages le plus complet, plus grand écosystème communautaire, surface de personnalisation la plus puissante (extensions, presets, remplacements regex, world info). Agnai est le seul des trois avec un support multi-utilisateur crédible, c\'est donc le bon choix pour les serveurs partagés, le roleplay collaboratif et les petits groupes de projet. RisuAI est le choix plus léger quand la densité de fonctionnalités de SillyTavern est la friction — même spécification de cartes, surface plus petite, première utilisation plus facile. Les trois respectent la spécification de cartes Tavern v2, les trois s\'associent à Ollama ou tout endpoint compatible OpenAI, les trois fonctionnent entièrement en local sans télémétrie. Choisissez selon la forme de votre workflow : auteur solo avec des besoins de personnalisation poussée → SillyTavern ; groupe d\'auteurs partageant des personnages → Agnai ; premier utilisateur voulant commencer à chatter aujourd\'hui → RisuAI.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Quelle est la meilleure interface roleplay LLM locale en 2026 : SillyTavern, Agnai ou RisuAI ?',
+        answer:
+          'SillyTavern est le choix par défaut pour la plupart des utilisateurs — fonctionnalités les plus complètes, plus grande communauté, plus d\'extensions. Agnai est le seul choix multi-utilisateur crédible si vous partagez personnages et chats avec des collaborateurs. RisuAI est l\'alternative plus légère pour les utilisateurs trouvant SillyTavern surdimensionné. Les trois sont open source, chargent les cartes Tavern v2 et se connectent à Ollama et aux endpoints compatibles OpenAI. SillyTavern gagne sur la profondeur de personnalisation ; Agnai gagne sur le mode serveur partagé ; RisuAI gagne sur la simplicité de première utilisation. Le choix est une question de workflow, pas de qualité brute.',
+        bullets: [
+          'SillyTavern — fonctionnalités les plus complètes, plus grande communauté, choix par défaut pour les utilisateurs solos avec des besoins de personnalisation.',
+          'Agnai — seule interface avec un support multi-utilisateur crédible ; à choisir pour les serveurs partagés et le roleplay collaboratif.',
+          'RisuAI — la plus légère des trois ; à choisir quand la densité de fonctionnalités de SillyTavern est un frein.',
+          'Les trois supportent les cartes Tavern v2 ; une carte créée dans l\'une fonctionne dans les autres.',
+          'Les trois se connectent à Ollama, llama.cpp, LM Studio, vLLM et tout endpoint compatible OpenAI.',
+          'Les trois sont open source et fonctionnent entièrement en local ; aucune télémétrie par défaut.',
+          'Recommandations de modèles : Llama 3.3 70B (meilleur général), Hermes 3 (non censuré), Command R+ (dialogue), Qwen3 32B (défaut pour rigs 24 Go).',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Faits rapides', anchor: '#quick-facts' },
+      { label: 'Notre méthode de test', anchor: '#how-we-tested' },
+      { label: 'Comparatif des trois interfaces', anchor: '#comparison' },
+      { label: 'SillyTavern : analyse détaillée', anchor: '#sillytavern' },
+      { label: 'Agnai : analyse détaillée', anchor: '#agnai' },
+      { label: 'RisuAI : analyse détaillée', anchor: '#risuai' },
+      { label: 'Format de carte de personnage (Tavern v2)', anchor: '#character-cards' },
+      { label: 'Recommandations de modèles par interface', anchor: '#models' },
+      { label: 'Confidentialité : quelle interface communique à l\'extérieur', anchor: '#privacy' },
+      { label: 'Décision : choisir son interface', anchor: '#decision' },
+      { label: 'Erreurs fréquentes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Pour aller plus loin', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**SillyTavern est le choix par défaut pour ~80 % des utilisateurs en 2026.** Fonctionnalités de cartes de personnages les plus complètes, plus grand écosystème d\'extensions, surface de personnalisation la plus étendue. L\'interface sur laquelle la plupart des utilisateurs expérimentés finissent après avoir testé les alternatives.',
+          '**Agnai est le seul choix multi-utilisateur crédible.** Le mode serveur partagé permet à plusieurs auteurs de se connecter à la même instance, de partager des personnages et de collaborer sur des chats de longue durée. Le bon choix pour les petits groupes d\'écriture, les cercles d\'amis et les communautés de personnages partagés.',
+          '**RisuAI est l\'alternative plus légère.** Même support de cartes Tavern v2, surface de fonctionnalités plus petite, première utilisation plus facile. À choisir quand SillyTavern paraît surdimensionné ou que l\'on veut un chemin rapide vers « taper un message et obtenir une réponse ».',
+          '**Les trois supportent la spécification de cartes Tavern v2.** Une carte créée dans SillyTavern fonctionne dans Agnai et RisuAI sans conversion. La migration entre interfaces est triviale.',
+          '**Les trois s\'associent à Ollama, llama.cpp, LM Studio et tout endpoint compatible OpenAI.** Aucune des trois ne vous enferme dans un backend de modèle spécifique ; changer de backend est une modification de configuration.',
+          '**Confidentialité : les trois fonctionnent entièrement en local sans télémétrie par défaut.** Les fonctionnalités cloud optionnelles (traduction, génération d\'images) ne communiquent à l\'extérieur que si explicitement activées. Vérifiez avec une surveillance réseau si vous avez besoin de preuves formelles.',
+          '**Le choix du modèle est plus important que le choix de l\'interface.** Une bonne interface avec un petit modèle généraliste produit des dialogues plats ; une interface basique avec Llama 3.3 70B produit des scènes vivantes. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) pour le volet modèles.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Faits rapides',
+        items: [
+          '**SillyTavern** — Node.js + interface navigateur, hébergé localement. Personnalisation la plus poussée, plus grande communauté.',
+          '**Agnai** — Node.js + interface navigateur ; fonctionne localement ou en serveur partagé. Seule option multi-utilisateur des trois.',
+          '**RisuAI** — Application desktop Tauri/Electron ; ensemble de fonctionnalités plus léger, première utilisation la plus simple.',
+          '**Spécification de cartes :** les trois chargent Tavern v2 (le standard) ; entièrement compatibles entre elles.',
+          '**Backends de modèles :** Ollama, llama.cpp, LM Studio, vLLM, tout endpoint compatible OpenAI, plus les API cloud (optionnel).',
+          '**Confidentialité par défaut :** local uniquement, pas de télémétrie, pas d\'analytics dans aucune des trois par défaut. Les fonctionnalités cloud optionnelles doivent être activées explicitement.',
+          '**Plateformes :** SillyTavern et Agnai fonctionnent sur macOS, Windows, Linux et Termux/Android. RisuAI fonctionne sur macOS, Windows, Linux, iOS et Android.',
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'Notre méthode de test',
+        content:
+          'Les verdicts de ce guide sont basés sur une utilisation pratique des trois interfaces, pas sur une comparaison de listes de fonctionnalités.',
+        items: [
+          '**Versions :** SillyTavern 1.x (branche stable), Agnai dernière version stable, RisuAI dernière version desktop (mai 2026).',
+          '**Backend :** Ollama 0.5+ avec Llama 3.3 70B Q4_K_M comme modèle de test principal sur les trois interfaces.',
+          '**Scénarios de test :** carte de personnage Tavern v2 identique chargée dans les trois interfaces ; mêmes 5 prompts de conversation exécutés dans chacune ; scène de chat de groupe avec 3 personnages ; livre de lore avec 25 entrées (déclencheurs par mots-clés plus deux entrées récursives) ; import de preset d\'échantillonnage depuis un fichier preset tiers.',
+          '**Temps d\'installation :** médiane de 3 installations fraîches par interface sur la même machine.',
+          '**Évaluation des fonctionnalités :** les capacités décrites comme « plus simples » ou « limitées » reflètent le comportement observable dans les scénarios de test, pas les affirmations de la documentation. Là où les interfaces diffèrent en profondeur de livre de lore ou en stabilité de chat de groupe, le verdict reflète le comportement observé.',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Comparatif des trois interfaces',
+        content:
+          '**Mêmes cartes de personnages, mêmes backends de modèles — densité de fonctionnalités et utilisateur cible différents.** Le tableau ci-dessous cartographie les différences pertinentes pour la décision.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'SillyTavern est le choix de personnalisation poussée pour les utilisateurs solos ; Agnai est le choix multi-utilisateur pour les serveurs partagés ; RisuAI est l\'alternative plus légère pour les nouveaux utilisateurs — les trois chargent les mêmes cartes Tavern v2 et s\'associent aux mêmes backends de modèles.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Choisissez SillyTavern sauf raison spécifique contraire — c\'est là que la plupart des utilisateurs expérimentés finissent. Choisissez Agnai si vous voulez partager un serveur avec d\'autres auteurs. Choisissez RisuAI si SillyTavern vous semble surdimensionné et que vous voulez commencer à chatter en 5 minutes. Changer plus tard est facile car les trois chargent les mêmes cartes.',
+          },
+        ],
+        columns: ['Caractéristique', 'SillyTavern', 'Agnai', 'RisuAI'],
+        rows: [
+          { 'Caractéristique': 'Surface principale', 'SillyTavern': 'Node.js local + navigateur', 'Agnai': 'Node.js local + navigateur, ou serveur partagé', 'RisuAI': 'Application desktop Tauri/Electron + mobile' },
+          { 'Caractéristique': 'Temps de configuration (premier lancement)', 'SillyTavern': '~15 minutes', 'Agnai': '~10 minutes (mono-utilisateur) ; ~30 minutes (serveur)', 'RisuAI': '~5 minutes' },
+          { 'Caractéristique': 'Cartes de personnages', 'SillyTavern': 'Tavern v2 (spec complète) + extensions', 'Agnai': 'Tavern v2', 'RisuAI': 'Tavern v2 + format propriétaire' },
+          { 'Caractéristique': 'Persona / profil utilisateur', 'SillyTavern': 'Natif, plusieurs personas, par personnage', 'Agnai': 'Natif, multi-utilisateur', 'RisuAI': 'Natif, plus simple' },
+          { 'Caractéristique': 'Livres de lore / world info', 'SillyTavern': 'Natif, très flexible (scan récursif)', 'Agnai': 'Natif, scan plus simple', 'RisuAI': 'Natif, scan plus simple' },
+          { 'Caractéristique': 'Chat de groupe (plusieurs personnages)', 'SillyTavern': 'Natif, mature', 'Agnai': 'Natif', 'RisuAI': 'Natif, plus simple' },
+          { 'Caractéristique': 'Multi-utilisateur / serveur partagé', 'SillyTavern': 'Non (mono-utilisateur)', 'Agnai': 'Oui (le différenciateur)', 'RisuAI': 'Non (mono-utilisateur)' },
+          { 'Caractéristique': 'Extensions / plugins', 'SillyTavern': 'Plus grand écosystème (regex, presets, UIs personnalisées)', 'Agnai': 'Plus réduit', 'RisuAI': 'Système de plugins, bibliothèque plus réduite' },
+          { 'Caractéristique': 'Support de backends', 'SillyTavern': 'Ollama, llama.cpp, LM Studio, vLLM, compatible OAI, KoboldAI, Aphrodite', 'Agnai': 'Ollama, llama.cpp, LM Studio, compatible OAI', 'RisuAI': 'Ollama, llama.cpp, LM Studio, compatible OAI' },
+          { 'Caractéristique': 'Télémétrie par défaut', 'SillyTavern': 'Aucune', 'Agnai': 'Aucune', 'RisuAI': 'Aucune' },
+          { 'Caractéristique': 'Idéal pour', 'SillyTavern': 'Utilisateurs solos souhaitant une personnalisation poussée', 'Agnai': 'Serveurs partagés, collaboration multi-utilisateur', 'RisuAI': 'Nouveaux utilisateurs, configuration légère' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Le choix est une question de workflow, pas de qualité brute. Les trois produisent des conversations identiques avec le même modèle et la même carte de personnage. Choisissez selon votre façon d\'écrire — solo avec des réglages poussés, avec des collaborateurs sur un serveur partagé, ou rapidement sur une application desktop ou mobile — et vous éviterez 90 % des hésitations.',
+          },
+        ],
+      },
+      sillytavern: {
+        id: 'sillytavern',
+        title: 'SillyTavern : le choix par défaut pour la personnalisation poussée',
+        content:
+          '**SillyTavern est l\'interface sur laquelle la plupart des utilisateurs expérimentés finissent après avoir testé les alternatives.** Plus grande communauté, fonctionnalités de cartes de personnages les plus complètes, plus grand écosystème d\'extensions dans l\'espace roleplay local.',
+        items: [
+          '**Installation :** `git clone` du dépôt, `npm install`, `npm start`. Le serveur local tourne sur `http://localhost:8000`. Multi-plateforme — macOS, Windows, Linux, plus Termux sur Android. La configuration se trouve dans `data/default-user/` (paramètres, personnages, world info, presets).',
+          '**Cartes de personnages :** spécification Tavern v2 complète. Import par glisser-déposer (PNG avec JSON intégré), navigation et édition des champs dans l\'interface, export en PNG. Les cartes créées dans SillyTavern s\'ouvrent proprement dans Agnai et RisuAI ; la réciproque est vraie.',
+          '**Livres de lore / world info :** le plus flexible des trois. Supporte le scan récursif (entrées activant d\'autres entrées), priorité des mots-clés, déclencheurs conditionnels et portées par personnage. L\'outil idéal pour les campagnes longues où le monde est plus complexe que les personnages.',
+          '**Chat de groupe :** implémentation multi-personnages mature. Définissez quels personnages sont dans la scène, réglez l\'ordre des tours ou laissez le modèle gérer la prise de parole, regardez le modèle maintenir des voix distinctes sur la durée. Le choix quand les scènes de groupe sont le cœur du travail.',
+          '**Extensions :** remplacement regex (nettoyer la sortie du modèle avant affichage), presets (paramètres d\'échantillonnage par personnage), intégration Stable Diffusion (génération d\'images), traduction, recherche web, UIs personnalisées. Le plus grand écosystème de modules complémentaires dans cet espace.',
+          '**Points forts :** roleplay solo, projets personnels de longue durée, besoins de personnalisation poussée, construction de mondes complexes.',
+          '**Points faibles :** pas de mode multi-utilisateur (mono-utilisateur par conception) ; la densité de fonctionnalités peut submerger les nouveaux utilisateurs ; la prolifération de configuration (plusieurs fichiers JSON, presets, world info, regex) prend du temps à maîtriser.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Commencez avec les presets par défaut de SillyTavern et une ou deux cartes de la communauté ou de chub.ai. Résistez à l\'envie d\'installer des extensions avant les 10 premières heures d\'utilisation — la plupart des utilisateurs n\'ont jamais besoin de plus que les paramètres par défaut plus le remplacement regex et une extension de traduction.',
+          },
+        ],
+      },
+      agnai: {
+        id: 'agnai',
+        title: 'Agnai : le choix multi-utilisateur',
+        content:
+          '**Agnai est la seule interface roleplay multi-utilisateur crédible en 2026.** Même support de cartes que SillyTavern, surface de personnalisation plus réduite, mais un vrai mode serveur partagé permettant à plusieurs auteurs de se connecter à un même backend.',
+        items: [
+          '**Installation (mono-utilisateur) :** Node.js + npm install + start. Tourne sur `http://localhost:3001` par défaut. ~10 minutes de configuration, comparable à SillyTavern.',
+          '**Installation (serveur partagé) :** ajouter une base de données (MongoDB) et une couche d\'authentification ; Agnai gère nativement les comptes utilisateurs, la séparation des rôles et la propriété partagée des personnages et chats. ~30 minutes de configuration ; documenté dans le README du projet.',
+          '**Cartes de personnages :** Tavern v2 ; import/export complet. La spécification de cartes est identique à celle de SillyTavern, les cartes se transfèrent entre interfaces.',
+          '**Système de personas :** natif multi-utilisateur. Chaque utilisateur a des personas ; l\'agent choisit quelle persona est active par chat. Utile pour les serveurs partagés où plusieurs auteurs veulent leur propre profil.',
+          '**Livres de lore / world info :** présent, moins puissant que SillyTavern. Adapté à la plupart des projets ; le scan récursif profond est ce qui manque.',
+          '**Chat de groupe :** natif, plus simple que SillyTavern. Fonctionne pour le cas courant de 2 à 4 personnages dans une scène.',
+          '**Points forts :** serveurs partagés (groupes d\'écriture, cercles d\'amis, petites communautés partageant des personnages), roleplay collaboratif, projets où plusieurs utilisateurs doivent écrire ensemble.',
+          '**Points faibles :** écosystème d\'extensions plus réduit que SillyTavern ; récursion de livre de lore limitée ; pas le bon choix pour une personnalisation solo poussée.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Pour un serveur partagé, faites tourner Agnai derrière un reverse proxy (Caddy est le plus simple) avec TLS. La configuration par défaut est HTTP sur un seul port — convient pour localhost mais pas pour un serveur exposé à d\'autres auteurs. Le README couvre la configuration de production.',
+          },
+        ],
+      },
+      risuai: {
+        id: 'risuai',
+        title: 'RisuAI : l\'alternative plus légère',
+        content:
+          '**RisuAI est le bon choix quand SillyTavern paraît surdimensionné.** Mêmes cartes Tavern v2, surface de fonctionnalités plus réduite, packagé comme application desktop plutôt que serveur web local. La facilité de première utilisation est le différenciateur.',
+        items: [
+          '**Installation :** installeur desktop pour macOS, Windows, Linux, plus des applications iOS et Android. Pas de Node.js, pas de terminal — double-cliquer et ça s\'ouvre. La première utilisation la plus rapide des trois.',
+          '**Cartes de personnages :** Tavern v2 plus le format étendu propriétaire de RisuAI (plus de champs de modules, déclencheurs de plot). Les cartes de SillyTavern et Agnai se chargent proprement ; les cartes créées dans RisuAI sont en grande partie portables vers les deux autres.',
+          '**Système de personas :** présent, plus simple que SillyTavern. Une persona active par chat, commutable dans l\'interface.',
+          '**Livres de lore / world info :** présent, scan plus simple que le système récursif de SillyTavern. Suffisant pour la plupart des projets sous ~50 entrées de lore.',
+          '**Chat de groupe :** natif ; fonctionne pour les scènes typiques de 2 à 4 personnages.',
+          '**Plugins :** écosystème plus réduit que SillyTavern. Le cœur couvre la plupart des besoins courants (édition de personnages, presets d\'échantillonnage, gestion de livres de lore) sans modules complémentaires tiers.',
+          '**Points forts :** nouveaux utilisateurs, auteurs travaillant principalement sur mobile (les applications iOS/Android sont réelles, pas des ajouts de dernière minute), utilisateurs souhaitant une interface plus épurée que SillyTavern, roleplay solo avec un seul personnage. Pour les recommandations de modèles mobiles s\'associant bien à RisuAI, voir [Meilleurs modèles LLM mobiles en 2026](/power-local-llm/mobile-llm-models-phi4-gemma-smollm?lang=fr).',
+          '**Points faibles :** communauté plus réduite que SillyTavern ; moins de profondeur de personnalisation (pas de scan de lore récursif, surface d\'extensions plus réduite) ; pas le bon choix quand le plafond de fonctionnalités compte.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'L\'application mobile de RisuAI est la seule des trois réellement packagée pour iOS et Android. SillyTavern tourne sur Android via Termux (ça marche mais c\'est laborieux) ; Agnai tourne dans les navigateurs mobiles mais n\'est pas une application packagée. Si l\'usage mobile est un vrai workflow, RisuAI est le bon choix presque indépendamment des autres fonctionnalités.',
+          },
+        ],
+      },
+      characterCards: {
+        id: 'character-cards',
+        title: 'Format de carte de personnage (Tavern v2) : la lingua franca',
+        content:
+          '**Les trois interfaces chargent la spécification de cartes Tavern v2, ce qui rend la migration entre elles triviale.** Une carte est un PNG avec du JSON intégré dans les métadonnées ; le même fichier s\'ouvre dans n\'importe laquelle des trois.',
+        items: [
+          '**Contenu d\'une carte Tavern v2 :** nom, description, personnalité, scénario, premier message, exemples de dialogue, tags, notes du créateur et un prompt système. Les champs optionnels couvrent les entrées de livre de lore et les paramètres d\'échantillonnage spécifiques au personnage.',
+          '**Spécification V3 (mai 2026) :** étend V2 avec un embedding de livre de lore natif, le support multilingue et des métadonnées de créateur plus riches. SillyTavern supporte entièrement l\'import V3 ; Agnai charge les cartes V3 mais ignore certains champs V3 spécifiques ; RisuAI gère V3 partiellement via son format étendu. V2 reste la lingua franca — V3 est additif et rétrocompatible, les cartes V2 fonctionnent partout.',
+          '**Pourquoi c\'est important :** l\'ensemble de l\'écosystème de personnages construit par la communauté (chub.ai, exports JanitorAI, serveurs Discord thématiques) utilise Tavern v2. Une carte construite par quelqu\'un d\'autre se charge dans votre interface sans conversion.',
+          '**Où la spécification s\'arrête :** Tavern v2 couvre la définition statique du personnage. La mémoire de scène à long terme, l\'état dynamique des relations et les remplacements spécifiques au chat sont des implémentations propres à chaque interface. Migrer un chat actif entre interfaces est plus difficile que migrer uniquement la carte de personnage.',
+          '**Assainir les cartes importées :** une carte de chub.ai peut inclure des presets d\'échantillonnage, des remplacements de prompt système ou des prompts de jailbreak agressifs qui altèrent le comportement du modèle. Lisez les champs de prompt système et de personnalité avant d\'utiliser une carte téléchargée — surtout dans un contexte de serveur partagé (Agnai) où une carte affecte tous les utilisateurs.',
+          '**Construire sa propre carte :** les trois interfaces ont un éditeur de cartes. Celui de SillyTavern est le plus complet en fonctionnalités ; celui de RisuAI a l\'interface la plus épurée. Éditez quelques cartes existantes avant d\'en créer une de zéro — la sémantique des champs devient plus claire après avoir vu des exemples.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Les cartes communautaires importées peuvent embarquer des comportements cachés : longs prompts système de jailbreak, remplacements d\'échantillonnage, contradictions de persona. Ouvrez chaque carte téléchargée dans l\'éditeur avant la première utilisation et lisez le champ prompt système. Dans un contexte de serveur partagé (Agnai), une mauvaise carte affecte tous les utilisateurs.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'Recommandations de modèles par interface',
+        content:
+          '**Le choix de l\'interface ne contraint pas le choix du modèle.** Les trois utilisent les mêmes backends — Ollama est le plus courant — et les recommandations de modèles ci-dessous s\'appliquent également à SillyTavern, Agnai et RisuAI.',
+        items: [
+          '**Llama 3.3 70B** — le meilleur choix local général pour le travail de personnages. Meilleure cohérence de voix sur de longues sessions, suit bien les directions de personnage, gère les thèmes sombres quand le prompt système cadre le travail comme de la fiction. Nécessite ~42 Go de VRAM en Q4_K_M.',
+          '**Qwen3 32B** — le bon choix pour les rigs 24 Go. Qualité de prose proche de Llama 70B sans le coût matériel. La valeur par défaut pour la plupart des laptops et desktops grand public.',
+          '**Command R+ 104B** — le spécialiste du dialogue. Différenciation de voix conversationnelle la plus naturelle entre personnages dans une scène de groupe. Nécessite ~62 Go de VRAM en Q4_K_M.',
+          '**Hermes 3 (base Llama 3.3)** — le dérivé non censuré. Même architecture que Llama 3.3 70B ; la couche de sécurité RLHF est retirée ; le modèle suit le prompt au lieu de refuser les scènes matures. Deux installations (instruct + Hermes) sur le même Ollama est le pattern courant.',
+          '**Mistral Large** — le choix grand contexte. 128K de contexte out-of-the-box ; utile quand une session de roleplay est assez longue pour pousser les modèles à contexte plus court hors de la fenêtre.',
+          '**À éviter pour le roleplay sérieux :** tout ce qui est en dessous de 13B sans fine-tuning d\'écriture créative. Les petits modèles généralistes perdent la cohérence de voix en 5 à 10 échanges ; le personnage « dérive » vers la voix par défaut du modèle.',
+          'Pour les données comparatives sur ces choix, voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr).',
+          'Pour des templates de prompt système prêts à l\'emploi fonctionnant avec les trois interfaces, voir [Prompts LLM locaux pour les auteurs de fiction](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=fr).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les paramètres d\'échantillonnage comptent autant que le choix du modèle pour le roleplay. Température 0.85–1.05, top-p 0.9–0.95, pénalité de répétition 1.1 sont le point de départ. SillyTavern permet de sauvegarder des presets par personnage ; utilisez-le — différents personnages veulent souvent des températures différentes (une scène d\'interrogatoire tendue veut 0.7 ; une séquence de rêve surréaliste veut 1.2).',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Confidentialité : quelle interface communique à l\'extérieur',
+        content:
+          '**Les trois interfaces sont locales uniquement par défaut, sans télémétrie.** Les fonctionnalités cloud optionnelles sont protégées par un opt-in explicite ; vérifiez avec une surveillance réseau si vous avez besoin de preuves formelles.',
+        items: [
+          '**SillyTavern :** pas de télémétrie. Fonctionnalités optionnelles pouvant communiquer à l\'extérieur : backends LLM cloud (OpenAI, Claude, etc. — uniquement si configurés), extensions de traduction (utilisent des API cloud par défaut ; configurables en local), génération d\'images Stable Diffusion (utilise votre SD local ou un endpoint distant configuré), extensions de recherche web (utilisent la recherche cloud). Chacune est opt-in et étiquetée.',
+          '**Agnai :** pas de télémétrie sur l\'application principale. Le mode serveur ajoute de la télémétrie de compte uniquement si vous l\'activez. Mêmes fonctionnalités cloud optionnelles que SillyTavern (traduction, backends LLM cloud, génération d\'images) — toutes explicites.',
+          '**RisuAI :** pas de télémétrie. Même pattern — local uniquement par défaut, fonctionnalités cloud optionnelles (traduction, génération d\'images, backends LLM cloud) protégées par une configuration explicite.',
+          '**Vérifier les affirmations de confidentialité :** faites tourner l\'interface sans accès internet (coupez le Wi-Fi après l\'installation) — chattez avec un modèle local — confirmez que tout fonctionne encore. Ou lancez un moniteur réseau (Little Snitch sur macOS, Wireshark sur Linux) et observez les connexions sortantes pendant une session de chat. Les trois interfaces passent ce test par défaut.',
+          '**Où la confidentialité peut être compromise :** backends LLM cloud (vous les avez configurés ; le prompt et la réponse quittent votre machine), extensions de traduction basées sur le cloud (les messages traduits sont envoyés à un tiers), endpoints Stable Diffusion distants, extensions de recherche web. Chacun est un choix délibéré de l\'utilisateur.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Une interface locale « respectueuse de la vie privée » n\'est aussi privée que le backend sur lequel vous la pointez. Pointer SillyTavern vers GPT-5 envoie vos prompts de roleplay à OpenAI ; pointer vers Ollama garde tout en local. L\'interface elle-même n\'est pas la contrainte ; c\'est le backend du modèle.',
+          },
+        ],
+      },
+      decision: {
+        id: 'decision',
+        title: 'Décision : quelle interface choisir',
+        content:
+          '**Trois questions orientent la plupart des utilisateurs vers le bon choix.**',
+        columns: ['Votre situation', 'Choix'],
+        rows: [
+          { 'Votre situation': 'Je suis un auteur solo, je veux une personnalisation poussée et je vais investir du temps pour apprendre l\'outil', 'Choix': 'SillyTavern' },
+          { 'Votre situation': 'Je veux partager personnages et chats avec d\'autres auteurs sur un serveur partagé', 'Choix': 'Agnai' },
+          { 'Votre situation': 'Je veux commencer à chatter aujourd\'hui ; SillyTavern me semble surdimensionné', 'Choix': 'RisuAI' },
+          { 'Votre situation': 'J\'écris principalement sur mobile (iOS ou Android)', 'Choix': 'RisuAI (seule avec des applications mobiles packagées)' },
+          { 'Votre situation': 'Je gère un groupe d\'écriture ou une communauté de 3+ personnes', 'Choix': 'Agnai (serveur partagé) — seul choix multi-utilisateur crédible' },
+          { 'Votre situation': 'J\'ai une construction de monde complexe (50+ entrées de lore, déclencheurs récursifs)', 'Choix': 'SillyTavern (fonctionnalités de livre de lore les plus complètes)' },
+          { 'Votre situation': 'Je ne suis pas sûr', 'Choix': 'Essayez d\'abord RisuAI (installation en 5 min). Si vous en sortez, passez à SillyTavern. Les cartes se transfèrent.' },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'SillyTavern est le choix par défaut pour les utilisateurs solos avec des besoins de personnalisation ; Agnai est le seul choix multi-utilisateur pour les serveurs partagés ; RisuAI est l\'alternative plus légère pour les nouveaux utilisateurs et les auteurs mobiles — choisissez selon la forme de votre workflow en sachant que vous pouvez migrer car les cartes se transfèrent entre les trois.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Essayez d\'abord RisuAI si vous n\'avez jamais utilisé d\'interface roleplay — vous commencez à chatter en 5 minutes. Passez à SillyTavern quand vous commencez à toucher les limites de personnalisation. Utilisez Agnai uniquement si vous avez spécifiquement besoin du mode multi-utilisateur en serveur partagé. Les cartes créées dans l\'une des trois se chargent dans les autres, le choix est donc réversible.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Passez les 10 premières heures d\'utilisation dans l\'interface choisie avant d\'installer des extensions ou de construire des livres de lore élaborés. Les paramètres par défaut plus quelques cartes communautaires suffisent à évaluer l\'adéquation. Une configuration prématurée crée une friction que la migration vers une autre interface aurait absorbée.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs fréquentes dans le choix et l\'utilisation des interfaces roleplay',
+        items: [
+          '**Erreur 1 : chasser les fonctionnalités quand le modèle est le goulot d\'étranglement.** Une excellente interface sur un modèle généraliste 7B produit des dialogues plats peu importe la qualité du système de livre de lore. Choisissez une interface compétente et investissez le reste du budget dans un modèle créatif de 32B+. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) pour le volet modèles.',
+          '**Erreur 2 : utiliser les paramètres d\'échantillonnage par défaut sur un modèle créatif.** SillyTavern, Agnai et RisuAI sont livrés avec des paramètres par défaut calibrés pour les questions-réponses (température ~0.7, top-p ~0.9). Le roleplay créatif veut 0.85–1.05, top-p 0.9–0.95, pénalité de répétition 1.1. Sauvegardez des presets par personnage.',
+          '**Erreur 3 : importer des cartes communautaires sans les lire.** Une carte de chub.ai peut inclure un prompt système de 2 000 tokens avec du jailbreak, des remplacements d\'échantillonnage en conflit avec vos paramètres, ou des champs de personnalité contredisant la description. Ouvrez la carte dans l\'éditeur avant de l\'utiliser ; assainissez le prompt système.',
+          '**Erreur 4 : ignorer le persona / profil utilisateur.** Un persona « utilisateur » vide signifie que le modèle n\'a aucun ancrage sur qui parle. Même un persona d\'un paragraphe avec nom, âge et situation basique produit une scène dramatiquement plus engagée que l\'utilisateur vide par défaut.',
+          '**Erreur 5 : éditer dans la fenêtre de chat plutôt que dans la carte.** Ajuster la sortie du modèle via « régénérer » ou « demander au modèle de corriger » entraîne l\'habitude de laisser le modèle faire l\'écriture. Sauvegardez les modifications dans la carte de personnage ou le prompt système ; la session suivante démarre à un niveau plus élevé.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Documentation SillyTavern](https://docs.sillytavern.app/) — installation, cartes de personnages, livres de lore, extensions, presets d\'échantillonnage.',
+          '[Dépôt GitHub SillyTavern](https://github.com/SillyTavern/SillyTavern) — code source, notes de version, extensions communautaires.',
+          '[Dépôt GitHub Agnai](https://github.com/agnaistic/agnai) — installation, configuration serveur multi-utilisateur, spécification de cartes.',
+          '[Dépôt GitHub RisuAI](https://github.com/kwaroran/RisuAI) — installation, système de plugins, builds d\'applications mobiles.',
+          '[Spécification de cartes Tavern v2](https://github.com/malfoyslastname/character-card-spec-v2) — le format de carte inter-interfaces.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Quelle est la meilleure interface roleplay locale en 2026 ?',
+            a: 'SillyTavern pour ~80 % des utilisateurs — fonctionnalités les plus complètes, plus grande communauté, plus d\'extensions. Agnai est le bon choix si vous avez besoin d\'un serveur partagé multi-utilisateur (la seule option crédible des trois). RisuAI est l\'alternative plus légère pour les nouveaux utilisateurs, les auteurs mobiles ou ceux qui trouvent SillyTavern surdimensionné. Les trois supportent les cartes Tavern v2 et se connectent aux mêmes backends de modèles ; changer plus tard est simple car les cartes se transfèrent.',
+          },
+          {
+            q: 'SillyTavern, Agnai et RisuAI peuvent-ils utiliser les mêmes cartes de personnages ?',
+            a: 'Oui. Les trois chargent la spécification de cartes Tavern v2, un PNG avec du JSON intégré. Une carte créée dans SillyTavern s\'ouvre dans Agnai et RisuAI sans conversion, et vice versa. RisuAI étend le format avec des champs optionnels, mais les cartes Tavern v2 de RisuAI se chargent toujours dans SillyTavern et Agnai avec les champs d\'extension ignorés. La migration entre interfaces est triviale.',
+          },
+          {
+            q: 'Ces interfaces envoient-elles mes chats vers un serveur cloud ?',
+            a: 'Non, pas par défaut. Les trois sont locales uniquement sans télémétrie. Les données de chat, les cartes de personnages et les livres de lore restent sur votre machine. Les fonctionnalités optionnelles (backends LLM cloud, extensions de traduction, génération d\'images, recherche web) sont protégées par une configuration explicite ; si vous pointez l\'interface vers Ollama ou un autre backend local, rien ne quitte votre réseau. Vérifiez avec un moniteur réseau si vous avez besoin de preuves formelles.',
+          },
+          {
+            q: 'Quel modèle utiliser pour le roleplay ?',
+            a: 'Llama 3.3 70B est le meilleur choix général quand le matériel le permet (~42 Go de VRAM en Q4_K_M). Sur les rigs 24 Go, Qwen3 32B est la valeur par défaut plus légère. Command R+ 104B a la voix de dialogue la plus naturelle dans les scènes de groupe mais nécessite ~62 Go. Pour les scènes matures que les modèles instruct refusent, installez Hermes 3 (base Llama 3.3) sur le même Ollama et changez selon les scènes. Les modèles sous 13B sans fine-tuning d\'écriture créative perdent la cohérence de voix en 5 à 10 échanges et sont à éviter pour le roleplay sérieux.',
+          },
+          {
+            q: 'SillyTavern est-il réservé au roleplay adulte ?',
+            a: 'Non. SillyTavern est une interface de chat généraliste avec cartes de personnages, gestion de personas et livres de lore — utile pour tout travail créatif riche en dialogues ou axé sur les personnages. De nombreux auteurs l\'utilisent pour l\'ébauche de fiction non adulte, les scènes multi-personnages, le travail de cohérence de voix sur de longs projets, les exercices de scénario et l\'élaboration de narratifs de jeux. L\'écosystème communautaire (chub.ai) inclut du contenu adulte mais ne s\'y limite pas.',
+          },
+          {
+            q: 'Comment partager des personnages avec des amis ?',
+            a: 'Trois options. (1) Exporter la carte en PNG et envoyer le fichier — fonctionne sur les trois interfaces. (2) Utiliser le mode serveur partagé d\'Agnai si vous voulez des chats collaboratifs, pas seulement des personnages partagés. (3) Publier la carte sur chub.ai ou un dépôt similaire pour une diffusion publique. La plupart des groupes d\'écriture optent pour l\'option 1 (partage de fichiers) plus un canal Discord pour la coordination ; l\'option 2 est le bon choix pour les groupes qui co-écrivent activement le même chat.',
+          },
+          {
+            q: 'Ces interfaces fonctionnent-elles sur iPad ou Android ?',
+            a: 'RisuAI a des applications iOS et Android packagées. SillyTavern tourne sur Android via Termux (ça marche mais c\'est laborieux — installation en terminal, interface navigateur). Agnai tourne dans les navigateurs mobiles mais n\'est pas packagé comme application. Si le mobile est votre surface principale, RisuAI est le bon choix. Si le mobile est occasionnel, SillyTavern dans un navigateur desktop avec un repli mobile vers RisuAI est un pattern viable (les cartes se transfèrent).',
+          },
+          {
+            q: 'Puis-je utiliser un backend partagé pour plusieurs utilisateurs ?',
+            a: 'Pour le roleplay multi-utilisateur spécifiquement, Agnai est la seule interface avec un mode serveur partagé crédible (comptes utilisateurs intégrés, séparation des rôles, propriété partagée des personnages et chats). Pour partager uniquement le backend de modèle (un Ollama servant plusieurs interfaces sur la même machine), les trois fonctionnent — Ollama sert plusieurs clients et les interfaces ne sont pas en conflit. La question du « backend partagé » est en réalité deux questions : modèle partagé (facile, les trois) versus chats et personnages partagés (Agnai uniquement).',
+          },
+          {
+            q: 'Laquelle a le meilleur support de livre de lore ?',
+            a: 'SillyTavern a le système de livre de lore le plus complet — scan récursif (entrées activant d\'autres entrées), priorité des mots-clés, déclencheurs conditionnels, portées par personnage et correspondance regex. Agnai et RisuAI supportent tous deux les livres de lore avec un scan par mots-clés plus simple, adapté aux projets sous ~50 entrées. Pour la construction de mondes complexes — politique multi-factions, références récursives, révélations conditionnelles — SillyTavern est le seul choix crédible des trois.',
+          },
+          {
+            q: 'Les chats de groupe sont-ils stables sur les backends locaux ?',
+            a: 'Oui, avec le bon modèle. Le chat de groupe avec 3+ personnages nécessite un modèle avec une forte différenciation de voix — Command R+ 104B est la meilleure option, Llama 3.3 70B est la valeur par défaut pratique. Sur les petits modèles (sous 13B), les personnages dérivent vers la même voix en 5 à 10 échanges. SillyTavern a l\'implémentation de chat de groupe la plus mature ; Agnai et RisuAI gèrent proprement les scènes de 2 à 4 personnages mais offrent moins de contrôle sur la dynamique de prise de parole.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Pour aller plus loin',
+        items: [
+          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) — le volet modèles ; comparaison directe des choix recommandés dans ce guide.',
+          '[LLM locaux non censurés pour l\'écriture créative : éthique, légalité & bonnes pratiques](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=fr) — quand les dérivés non censurés (Hermes 3, Dolphin 3.0) sont le bon choix et où se situent les lignes légales.',
+          '[Meilleurs LLM locaux en 2026](/local-llms/best-local-llms-2026?lang=fr) — panorama plus large des modèles ; utile pour choisir quels modèles installer derrière ces interfaces.',
+          '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=fr) — les deux backends les plus courants associés à ces interfaces ; lequel installer en premier.',
+          '[Persona Prompting](/prompt-engineering/persona-prompting?lang=fr) — structure de prompt système pour la voix des personnages ; fonctionne avec les trois interfaces.',
+          '[Température et Top-P : contrôler la créativité de l\'IA](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — guide d\'échantillonnage pour les presets par personnage que ces interfaces supportent.',
+          '[Prompts LLM locaux pour les auteurs de fiction](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=fr) — templates de prompt système prêts à l\'emploi pour la fiction axée sur les personnages ; fonctionne avec SillyTavern, Agnai et RisuAI.',
+          '[Meilleurs modèles LLM mobiles en 2026](/power-local-llm/mobile-llm-models-phi4-gemma-smollm?lang=fr) — recommandations de modèles optimisés pour iOS et Android ; s\'associe bien aux applications mobiles de RisuAI.',
+        ],
+      },
+    },
+  },
 }
