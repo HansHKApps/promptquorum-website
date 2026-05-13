@@ -297,6 +297,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pick the format your harness supports natively, not the format that benchmarks well. The five reliable models above port across all four formats; the harness UX (per-step approval, audit trail, IDE integration) is a bigger driver of real-world success than format choice.',
           },
         ],
+        image: '/images/tool-calling-format-comparison-en.svg',
+        imageCaption: 'Four tool-call wire formats compared: OpenAI JSON (schema-validated, Continue.dev), Cline XML (very strict, first to surface failures), MCP JSON-RPC 2.0 (ecosystem standard, schema-validated), Aider SEARCH/REPLACE (pattern-matched verbatim) — all five benchmark models handle all four formats.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -503,6 +505,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pro-Call-Zuverlässigkeit schreibt sich über eine Agent-Schleife zusammen. Eine 95%ige Pro-Call-Rate über 8 Schritte landen erfolgreich ~66 % der Zeit. Planen Sie für Zusammensetzung — halten Sie Plan-Horizonte kurz, verwenden Sie Genehmigungstore und bevorzugen Sie das kleinste zuverlässige Modell, das Ihren längsten realistischen Horizont verarbeitet.',
           },
         ],
+        image: '/images/tool-calling-what-is-it-de.svg',
+        imageCaption: 'Tool Calling in 5 Schritten: Benutzer-Prompt → LLM liest verfügbare Tool-Schemas → gibt strukturiertes JSON mit Tool und Argumenten aus → Harness validiert gegen Schema → Tool wird ausgeführt. Das Wire-Format variiert; die LLM-Fähigkeit dahinter nicht.',
       },
       methodology: {
         id: 'methodology',
@@ -523,6 +527,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Diese Nummern stammen aus unserem Test-Harness, nicht aus BFCL- oder ToolBench-Leaderboards. Öffentliche Benchmarks korrelieren direktional, aber nicht eins-zu-eins mit MCP-Server-Workloads — der richtige Benchmark für Ihren Stack ist Ihr Stack. Behandeln Sie die Prozentsätze hier als eine Starthypothese, nicht als Endurteil.',
           },
         ],
+        image: '/images/tool-calling-methodology-de.svg',
+        imageCaption: 'Testmethodik: 4 MCP-Server (filesystem, sqlite, puppeteer, github), 50 Prompts × 4 Server × 3 Läufe = 600 bewertete Aufrufe pro Modell, ~3.000 gesamt über 5 Modelle — gleicher Cline 3.x-Harness durchgehend, nur das Modell variiert.',
       },
       comparison: {
         id: 'comparison',
@@ -547,6 +553,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Qwen3-Coder 30B', 'Größe': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Well-Formed-Call-Rate': '~96 % (Code) / ~91 % (Nicht-Code)', 'Am besten für': 'Coding-Agenten (replace_in_file, read_file, Code-bewusster Browser)', 'Häufiger Fehlermodus': 'Schwächer auf Non-Code-Servern als die universellen Picks' },
           { 'Modell': 'Llama 3.3 70B', 'Größe': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Well-Formed-Call-Rate': '~97 %', 'Am besten für': 'Höchste Obergrenze, wenn Hardware passt', 'Häufiger Fehlermodus': 'Langsame Pro-Token-Rate macht lange Agent-Schleifen schmerzhaft' },
         ],
+        image: '/images/tool-calling-model-comparison-de.svg',
+        imageCaption: 'Fünf Tool-Calling-Modelle auf 4 MCP-Servern benchmarkt: Llama 3.3 70B führt mit ~97% wohlgeformten Aufrufen (42 GB VRAM); Qwen3-Coder 30B ~96% auf Code-Tools; Gemma 4 27B ~95% auf 16 GB VRAM; GLM-5.1 32B ~94% mit 128K-Kontext; Qwen3 32B ~93% vielseitig.',
       },
       gemma4: {
         id: 'gemma-4',
@@ -632,6 +640,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Sub-7B-Modelle für Tool Calling ist der häufigste Zeitaufwand, den wir sehen. Symptome ("das Harness ist kaputt", "MCP ist kaputt", "Cline ist kaputt") weisen alle auf das Modell hin. Wechseln Sie zu einem Tool-Call-trainierten 27B+-Modell und die Symptome verschwinden, ohne etwas anderes im Stack zu ändern.',
           },
         ],
+        image: '/images/tool-calling-non-starters-de.svg',
+        imageCaption: 'Drei Modellkategorien, die für Tool Calling versagen: Sub-7B-Modelle erzeugen fehlerhafte Aufrufe bei Mehrschrittaufgaben; Modelle ohne Tool-Call-Training schreiben Aufrufe in Prosa um; Q3/Q2-Quantisierung verschlechtert Tool-Zuverlässigkeit vor Chat-Qualität — Q4_K_M ist die Produktionsgrenze.',
       },
       formatComparison: {
         id: 'format-comparison',
@@ -656,6 +666,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wählen Sie das Format, das Ihr Harness nativ unterstützt, nicht das Format, das gut benchmarkt. Die fünf zuverlässigen Modelle oben sind über alle vier Formate portabel; die Harness-UX (Pro-Schritt-Genehmigung, Audit-Trail, IDE-Integration) ist ein größerer Treiber für echte Weltsicherheit als Format-Wahl.',
           },
         ],
+        image: '/images/tool-calling-format-comparison-de.svg',
+        imageCaption: 'Vier Tool-Call-Formate verglichen: OpenAI JSON (Schema-validiert), Cline XML (sehr streng), MCP JSON-RPC 2.0 (Ecosystem-Standard), Aider SEARCH/REPLACE (exakt musterabgeglichen) — alle fünf Benchmark-Modelle verarbeiten alle vier Formate.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -880,6 +892,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La fiabilité par appel se compose dans une boucle d\'agent. Un taux par appel de 95 % sur 8 étapes réussit ~66 % du temps. Planifiez pour la composition — gardez les horizons de plan courts, utilisez des portes d\'approbation et préférez le plus petit modèle fiable gérant votre horizon réaliste le plus long.',
           },
         ],
+        image: '/images/tool-calling-what-is-it-fr.svg',
+        imageCaption: 'Le tool calling en 5 étapes : prompt utilisateur → LLM lit les schémas d\'outils → émet du JSON structuré nommant l\'outil et ses arguments → le cadre valide contre le schéma → l\'outil s\'exécute. Le format filaire varie ; la compétence LLM sous-jacente, non.',
       },
       methodology: {
         id: 'methodology',
@@ -900,6 +914,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ces chiffres proviennent de notre harness de test, non des leaderboards BFCL ou ToolBench. Les benchmarks publics corrèlent directionnellement mais pas un-à-un avec les charges de travail MCP-server — le bon benchmark pour votre pile est votre pile. Traitez les pourcentages ici comme une hypothèse de démarrage, pas un jugement final.',
           },
         ],
+        image: '/images/tool-calling-methodology-fr.svg',
+        imageCaption: 'Méthodologie de test : 4 serveurs MCP (filesystem, sqlite, puppeteer, github), 50 prompts × 4 serveurs × 3 exécutions = 600 appels notés par modèle, ~3 000 au total sur 5 modèles — même cadre Cline 3.x tout au long, seul le modèle a varié.',
       },
       comparison: {
         id: 'comparison',
@@ -924,6 +940,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Qwen3-Coder 30B', 'Taille': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Taux d\'appel bien formé': '~96 % (code) / ~91 % (non-code)', 'Meilleur pour': 'Agents de codage (replace_in_file, read_file, navigateur conscient du code)', 'Mode de défaillance courant': 'Plus faible sur serveurs non-code que les picks polyvalents' },
           { 'Modèle': 'Llama 3.3 70B', 'Taille': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Taux d\'appel bien formé': '~97 %', 'Meilleur pour': 'Plafond le plus élevé quand le matériel convient', 'Mode de défaillance courant': 'Débit lent par token rend longues boucles d\'agent douloureuses' },
         ],
+        image: '/images/tool-calling-model-comparison-fr.svg',
+        imageCaption: 'Cinq modèles de tool calling testés sur 4 serveurs MCP : Llama 3.3 70B en tête à ~97% d\'appels bien formés (42 Go VRAM) ; Qwen3-Coder 30B ~96% sur outils code ; Gemma 4 27B ~95% sur 16 Go VRAM ; GLM-5.1 32B ~94% avec contexte 128K ; Qwen3 32B ~93% polyvalent.',
       },
       gemma4: {
         id: 'gemma-4',
@@ -1009,6 +1027,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Modèles sous-7B pour Tool Calling est le plus grand gaspillage de temps que nous voyons. Les symptômes ("le harness est cassé", "MCP est cassé", "Cline est cassé") pointent tous vers le modèle. Basculez vers un 27B+ Tool Call-entraîné et les symptômes disparaissent sans changer quoi que ce soit d\'autre dans la pile.',
           },
         ],
+        image: '/images/tool-calling-non-starters-fr.svg',
+        imageCaption: 'Trois catégories de modèles qui échouent en tool calling : modèles sub-7B produisent des appels malformés sur les tâches multi-étapes ; modèles sans entraînement tool calling paraphrasent les appels en prose ; quantisation Q3/Q2 dégrade la fiabilité outil avant la qualité chat — Q4_K_M est le seuil de production.',
       },
       formatComparison: {
         id: 'format-comparison',
@@ -1033,6 +1053,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Choisissez le format que votre harness supporte nativement, pas le format qui benchmarke bien. Les cinq modèles fiables ci-dessus passent sur les quatre formats ; l\'UX harness (approbation par étape, piste d\'audit, intégration IDE) est un plus grand moteur de succès du monde réel que choix de format.',
           },
         ],
+        image: '/images/tool-calling-format-comparison-fr.svg',
+        imageCaption: 'Quatre formats de tool calling comparés : OpenAI JSON (validé par schéma), Cline XML (très strict), MCP JSON-RPC 2.0 (standard de l\'écosystème), Aider SEARCH/REPLACE (correspondance mot pour mot) — les cinq modèles gèrent les quatre formats.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1238,6 +1260,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ツール呼び出しの信頼性はエージェントループ全体で構成されます。95%のツール呼び出し率は8ステップで~66%のセットで着陸します。構成を計画してください — プランの地平線を短く保つ、承認ゲートを使用し、最長の現実的な地平線を処理する最小の信頼できるモデルを選択します。',
           },
         ],
+        image: '/images/tool-calling-what-is-it-ja.svg',
+        imageCaption: 'ツールコールの5ステップ：ユーザープロンプト → LLMが利用可能なツールスキーマを読み取り → ツールと引数を指定した構造化JSONを出力 → ハーネスがスキーマに照合して検証 → ツールが実行（ファイルシステム、DB、ブラウザ、API）。ワイヤーフォーマットは変わってもLLMの能力は変わらない。',
       },
       methodology: {
         id: 'methodology',
@@ -1258,6 +1282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'これらの数値は、BFCLまたはToolBenchリーダーボードではなく、テストハーネスから取得しています。パブリックベンチマークは直接的に相関しますが、MCPサーバーワークロードと1対1の相関はしません。あなたのスタックに適したベンチマークはあなたのスタックです。これらのパーセンテージを開始仮説として扱い、最終的な判定として扱うのではなく。',
           },
         ],
+        image: '/images/tool-calling-methodology-ja.svg',
+        imageCaption: 'テスト方法論：4つのMCPサーバー（filesystem、sqlite、puppeteer、github）、50プロンプト × 4サーバー × 3実行 = 1モデルあたり600回の評価、5モデルで合計約3,000回 — 全体を通じて同一のCline 3.xハーネスを使用し、モデルのみを変更。',
       },
       comparison: {
         id: 'comparison',
@@ -1282,6 +1308,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Qwen3-Coder 30B', 'サイズ': '30B', 'VRAM (Q4_K_M)': '~18 GB', '正しく形成された呼び出しレート': '~96% (コード) / ~91% (コード以外)', 'ベスト用途': 'コードエージェント(replace_in_file、read_file、コード認識ブラウザ)', '一般的な障害モード': '汎用ピックより非コードサーバーで弱い' },
           { 'モデル': 'Llama 3.3 70B', 'サイズ': '70B', 'VRAM (Q4_K_M)': '~42 GB', '正しく形成された呼び出しレート': '~97%', 'ベスト用途': 'ハードウェアが適合する場合は最高の天井', '一般的な障害モード': 'トークンレート遅延により長いエージェントループが困難' },
         ],
+        image: '/images/tool-calling-model-comparison-ja.svg',
+        imageCaption: '5つのツールコールモデルを4つのMCPサーバーでベンチマーク：Llama 3.3 70Bが最高（約97%、42 GB VRAM）、Qwen3-Coder 30Bがコードツールで約96%、Gemma 4 27Bが16 GB VRAMで約95%、GLM-5.1 32Bが128Kコンテキストで約94%、Qwen3 32Bが万能型で約93%。',
       },
       gemma4: {
         id: 'gemma-4',
@@ -1367,6 +1395,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ツール呼び出しの場合のSub-7Bモデルは、私たちが見る最大の時間浪費です。症状(「ハーネスは壊れている」、「MCPは壊れている」、「Clineは壊れている」)はすべてモデルを指します。Tool-Call-トレーニング27B+に切り替えると、スタック内の他に何も変えずに症状は消えます。',
           },
         ],
+        image: '/images/tool-calling-non-starters-ja.svg',
+        imageCaption: 'ツールコールに失敗する3つのモデルカテゴリ：7B未満のモデルは多段階タスクで不正なコールを生成、ツールコール訓練なしのモデルはコールを文章に言い換える、Q3/Q2量子化はチャット品質より先にツール信頼性を低下させる — Q4_K_Mが本番の最低基準。',
       },
       formatComparison: {
         id: 'format-comparison',
@@ -1391,6 +1421,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ハーネスがネイティブにサポートする形式を選択; ベンチマークする形式ではなく。5つの信頼できるモデルは4つの形式全体にポート; ハーネスUX(ステップごとの承認、監査トレイル、IDE統合)は形式の選択より実世界の成功の大きな運転手です。',
           },
         ],
+        image: '/images/tool-calling-format-comparison-ja.svg',
+        imageCaption: '4つのツールコールフォーマットを比較：OpenAI JSON（スキーマ検証済み）、Cline XML（非常に厳格、最初に失敗が現れる）、MCP JSON-RPC 2.0（エコシステム標準、スキーマ検証）、Aider SEARCH/REPLACE（逐語一致マッチング）— 5つのベンチマークモデルすべてが4つのフォーマットに対応。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1596,6 +1628,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '单个调用可靠性在代理循环中复合。95%的单个调用率在8个步骤中成功~66%的时间。为复合计划——保持计划地平线短、使用批准网关并倾向于最小可靠模型处理最长现实地平线。',
           },
         ],
+        image: '/images/tool-calling-what-is-it-zh.svg',
+        imageCaption: '工具调用5步流程：用户提示 → LLM读取可用工具Schema → 输出指定工具和参数的结构化JSON → 框架对照Schema验证 → 工具执行（文件系统、数据库、浏览器、API）。线格式可变，LLM底层能力不变。',
       },
       methodology: {
         id: 'methodology',
@@ -1616,6 +1650,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '这些数字来自我们的测试工具框架，不是BFCL或ToolBench排行榜。公共基准直向相关但不与MCP服务器工作负载一对一转换——适合您堆栈的正确基准是您的堆栈。将此处的百分比视为起始假设，而非最终判定。',
           },
         ],
+        image: '/images/tool-calling-methodology-zh.svg',
+        imageCaption: '测试方法论：4个MCP服务器（filesystem、sqlite、puppeteer、github），50提示 × 4服务器 × 3次运行 = 每模型600次调用，5个模型共约3,000次 — 全程使用相同的Cline 3.x框架，仅变更模型。',
       },
       comparison: {
         id: 'comparison',
@@ -1640,6 +1676,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Qwen3-Coder 30B', '大小': '30B', 'VRAM (Q4_K_M)': '~18 GB', '格式良好调用率': '~96% (代码) / ~91% (非代码)', '最佳用途': '代码代理（replace_in_file、read_file、代码感知浏览器）', '常见故障模式': '在非代码服务器上弱于通用选择' },
           { '模型': 'Llama 3.3 70B', '大小': '70B', 'VRAM (Q4_K_M)': '~42 GB', '格式良好调用率': '~97%', '最佳用途': '硬件允许时最高上限', '常见故障模式': '令牌速率缓慢使长代理循环困难' },
         ],
+        image: '/images/tool-calling-model-comparison-zh.svg',
+        imageCaption: '5个工具调用模型在4个MCP服务器上的基准测试：Llama 3.3 70B最高（约97%，42 GB VRAM），Qwen3-Coder 30B代码工具约96%，Gemma 4 27B在16 GB VRAM上约95%，GLM-5.1 32B配合128K上下文约94%，Qwen3 32B全能型约93%。',
       },
       gemma4: {
         id: 'gemma-4',
@@ -1725,6 +1763,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '工具调用的Sub-7B模型是我们看到的最大的时间浪费。症状("工具框架坏了"、"MCP坏了"、"Cline坏了")全指向模型。切换到工具调用训练27B+，堆栈中别的都不改，症状消失。',
           },
         ],
+        image: '/images/tool-calling-non-starters-zh.svg',
+        imageCaption: '三类不适合工具调用的模型：7B以下模型在多步任务中产生格式错误的调用；无工具调用训练的模型将调用转为文字描述；Q3/Q2量化在聊天质量下降前先降低工具可靠性——Q4_K_M是生产最低标准。',
       },
       formatComparison: {
         id: 'format-comparison',
@@ -1749,6 +1789,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '选择您的工具框架原生支持的格式，不是基准好的格式。上面的5个可靠模型跨4种格式移植；工具框架UX(每步批准、审计跟踪、IDE整合)是实际成功的更大驱动力比格式选择。',
           },
         ],
+        image: '/images/tool-calling-format-comparison-zh.svg',
+        imageCaption: '四种工具调用线格式对比：OpenAI JSON（Schema验证）、Cline XML（非常严格，最先暴露失败）、MCP JSON-RPC 2.0（生态系统标准，Schema验证）、Aider SEARCH/REPLACE（逐字模式匹配）——5个基准模型均支持4种格式。',
       },
       commonMistakes: {
         id: 'common-mistakes',
