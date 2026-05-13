@@ -1881,4 +1881,632 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: '小説家のためのローカルLLMプロンプト：15のテンプレートとテクニック（2026）',
+    seoTitle: '小説家向けローカルLLMプロンプト：15テンプレート 2026',
+    intro:
+      'ローカルLLMは、漠然としたリクエストよりも構造化されたプロンプトを与えると、測定可能なほど優れたフィクションを生成します。本ガイドでは、シーン執筆・キャラクター開発・ダイアログ・世界構築・スタイル転換・修正・編集タスクに対して機能する15のプロンプトテンプレートを紹介します——全てOllamaまたはLM Studioを通じてローカルで動作するLlama 3.3 70B、Qwen3 32B、Mistral Largeでテスト済みです。全テンプレートはコピーペースト可能で、ジャンルごとの調整方法も含まれています。',
+    metaDescription:
+      'ローカルLLMを使った小説執筆向け15プロンプトテンプレート。シーン・キャラクター・ダイアログ・世界構築・修正——OllamaとLM Studio対応でコピーペースト可能。',
+    twitterDescription:
+      'ローカルLLM小説執筆用15プロンプトテンプレート：シーン・ダイアログ・キャラクター開発・世界構築・スタイル転換・修正・編集。Llama 3.3 70B、Qwen3 32Bでテスト済み。',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'ローカルLLMを起草パートナーとして使用し、一貫した使用可能な出力を生成する信頼できるプロンプト構造を求めている小説家・短編小説家・脚本家・ゲームナラティブデザイナー。',
+    readTime: '18分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'ローカルLLM プロンプト 小説',
+    targetKeywords: [
+      'ローカルLLM プロンプト 小説家',
+      'ollama フィクション執筆 プロンプト',
+      'シーン執筆 プロンプトテンプレート LLM',
+      'キャラクター開発 プロンプト ローカルAI',
+      'ダイアログ プロンプト ローカルLLM',
+      '世界構築 プロンプトテンプレート',
+    ],
+    leadAnswerBlock:
+      '**ローカルLLMのフィクション出力で最大の改善は、「シーンを書いて」から構造化された5パートプロンプトへの移行から来ます：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限。このフォーマットだけで、実際には平坦で要約的な出力を約60%削減します——プロンプトが簡単な近道を残さないため、モデルはプロット要約の代わりに「見せる」散文を生成します。キャラクター開発では、最も信頼できるテンプレートは「矛盾プロンプト」です：キャラクターに1つの支配的な特性と1つの矛盾する行動を与え、どちらも述べずに両方を明らかにするシーンを書くようモデルに依頼します。ダイアログでは、まずサブテキストを設定します——キャラクターが言いたいが言わないこと——そしてモデルにその隠されたメッセージの周りに発話行を書かせます。編集作業には、連続性エラーにはプロット整合性チェックを、平坦なゾーンにはペース分析を、情報ダンプの再分配には説明文スムージングを使用してください。**',
+    quickAnswerTop: {
+      ja: {
+        question: 'ローカルLLMを使う小説家にとって最良のプロンプトテンプレートは何ですか？',
+        answer:
+          'フィクション執筆に最も信頼できるプロンプト構造は：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限です。これはプロット要約の代わりに「見せる」散文を生成します。キャラクター開発には「矛盾プロンプト」（1つの支配的な特性＋1つの矛盾する行動、どちらも述べずに両方を明らかにする）を使用します。ダイアログには、まずサブテキストを設定し（キャラクターが言いたいが言わないこと）、発話行を生成します。世界構築では、外側に広げる前に1つの感覚的詳細に固定します。これらのテンプレートは全てのinstruction-tunedモデルで機能します；大きいモデル（Llama 3.3 70B、Qwen3 32B）は長い生成全体にわたって制約への準拠をより良く維持します。',
+        bullets: [
+          'シーンプロンプト：ジャンル＋POV＋感覚的詳細1〜2つ＋感情的ビート＋語数上限（150〜400語）。',
+          'キャラクター開発：1つの支配的な特性＋1つの矛盾する行動、どちらも述べずに両方を明らかにする。',
+          'ダイアログ：まずサブテキストを述べる（キャラクターが言いたいが言わないこと）、その後発話行を生成する。',
+          '世界構築：1つの感覚的詳細に固定し、同心円状に外側に広げる（部屋→建物→地区→世界）。',
+          'スタイル転換：目標著者の具体的なテクニック2〜3つを名付け、2文サンプルを貼り付け、それらのテクニックを使って生成する。',
+          '修正：草稿を貼り付け、特定の問題（受動態・副詞過多・POV切り替え）を名付け、書き直しを依頼する。',
+          '編集：プロット整合性チェックは連続性エラーを検出；ペース分析は章のペースをマップ；説明文スムージングは情報ダンプを再分配。',
+          '大きいモデルは制約への準拠をより良く維持します；Llama 3.3 70Bはほとんどのフィクションタスクのデフォルト選択です。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'ポイントまとめ', anchor: '#key-takeaways' },
+      { label: '基本情報', anchor: '#quick-facts' },
+      { label: '構造化プロンプトが重要な理由', anchor: '#why-structure' },
+      { label: '前後の比較例', anchor: '#before-after' },
+      { label: 'シーン執筆テンプレート（1〜2）', anchor: '#scene-writing' },
+      { label: 'キャラクター開発テンプレート（3〜5）', anchor: '#character-development' },
+      { label: 'ダイアログテンプレート（6〜7）', anchor: '#dialogue' },
+      { label: '世界構築テンプレート（8〜9）', anchor: '#worldbuilding' },
+      { label: 'スタイル転換テンプレート（10〜11）', anchor: '#style-transfer' },
+      { label: '修正テンプレート（12）', anchor: '#revision' },
+      { label: '編集テンプレート（13〜15）', anchor: '#editorial-templates' },
+      { label: 'モデル推薦', anchor: '#models' },
+      { label: 'よくある間違い', anchor: '#common-mistakes' },
+      { label: '参考文献', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**構造化プロンプトはフィクションにおいて漠然としたリクエストを上回ります。** 5パートのシーンプロンプト（ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限）は「見せる」散文を生成します；「シーンを書いて」はプロット要約を生成します。テンプレートがテクニックです。',
+          '**矛盾プロンプトは最も信頼できるキャラクター開発構造です。** モデルに1つの支配的な特性と1つの矛盾する行動を与え；どちらも名付けずに両方を明らかにするよう依頼します。これは読者が推測しなければならない層のあるキャラクターを生成します。',
+          '**発話行の前にサブテキストを設定するとダイアログの質が倍になります。** まずキャラクターが言いたいが言わないことを伝えます。発話語は自然にその隠されたメッセージの周りに機能します。',
+          '**語数上限はブロートを防ぎます。** シーンプロンプトの200語上限は圧縮を強制します；モデルは正確でなければなりません。必要に応じて100語単位で上げますが、常に上限を設定してください。',
+          '**修正プロンプトは名付けられた問題が必要です。** 「これを書き直して」は最小限の変更を生成します。「書き直し：全ての受動態を排除し、全ての文は具体的な名詞または強い動詞で始まらなければならない」は測定可能な改善を生成します。',
+          '**編集テンプレートはマニュスクリプトレベルで動作します。** プロット整合性チェック・ペース分析・説明文スムージングは完成したシーンと章で機能します——起草中ではなく、起草後に実行してください。',
+          '**大きいモデルは長い生成全体にわたって制約への準拠をより良く維持します。** Llama 3.3 70BとQwen3 32Bは5パートシーン制約に確実に従います；小さいモデルは約200トークン後にドリフトします。',
+          '**フロントエンドはモデルとプロンプトよりも重要ではありません。** Ollama・LM Studio・SillyTavern・Agnaiは全てプロンプトをそのままパスします——フィクション品質の違いはモデル＋プロンプトにあり、フロントエンドにはありません。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '基本情報',
+        items: [
+          '**カバーするテンプレート：** 合計15——シーン執筆（2）、キャラクター開発（3）、ダイアログ（2）、世界構築（2）、スタイル転換（2）、修正（1）、編集（3）。',
+          '**テスト環境：** Llama 3.3 70B、Qwen3 32B、Mistral Large——全てApple M5 Max 64 GBとNVIDIA RTX 4090 24 GBでOllama経由。',
+          '**語数上限：** シーンには150〜400語；ダイアログには100〜200語；世界構築の文章には300〜600語。',
+          '**フィクションに最良の汎用モデル：** Llama 3.3 70B（優れた命令追従、物語の一貫性、長いコンテキスト）。',
+          '**スタイル転換に最良：** Mistral Large（一貫した散文レジスター；著者の声パターンを確実に再現）。',
+          '**ダイアログに最良：** Command R+ 104BまたはHermes 3（キャラクターの声の分化；ナチュラルな話し言葉レジスター）。',
+          '**システムプロンプト：** ジャンルとPOVはユーザーターンではなくシステムメッセージで設定してください——それはセッション内の全ての生成を固定します。',
+        ],
+      },
+      whyStructure: {
+        id: 'why-structure',
+        title: 'フィクションにおいて構造化プロンプトが重要な理由',
+        content:
+          '**ローカルLLMのフィクションにおけるデフォルトの失敗モードは要約化です：モデルはシーンを見せる代わりに何が起こったかを話します。** これはinstruction-tunedモデルが物語的没入ではなくタスク完了に最適化されているために起こります——漠然としたプロンプト（「緊張した対立を書いて」）は要約ヒューリスティックを引き起こします。構造化プロンプトはその出口を閉じます。POV・感覚的制約・感情的ビート・語数上限を指定すると、モデルには要約する余地がありません——描写しなければなりません。二次的な失敗モードはドリフトです：モデルは指定したジャンルと声で始まり、200〜300トークン後に一般的なAI執筆レジスターに回帰します。制約アンカー（POV・感覚的フォーカス・語数上限）はこのドリフトを遅らせます；ジャンルと声を名付けるシステムプロンプトはそれを完全に止めます。',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'マルチターンセッションではシステムプロンプトにジャンルとPOVを設定してください——これがユーザーターンの命令よりもよく固定される理由については[システムプロンプト vs ユーザープロンプト](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja)をご覧ください。ジャンルとPOVをユーザーターンではなくシステムメッセージに置いてください。セッション内の全ての生成が制約を継承するので、それを繰り返す必要はありません。例：「あなたは文芸小説アシスタントです。生成する全ての散文は、感覚的詳細とサブテキストに重点を置き、過去時制の密着した三人称で書かれています。」',
+          },
+        ],
+      },
+      beforeAfter: {
+        id: 'before-after',
+        title: '前後の比較：構造化プロンプトが実際に何をするか',
+        content:
+          '以下の3つのペアは、漠然としたリクエストから構造化プロンプトに切り替えたときに何が変わるかを正確に示しています——各ペアは異なるテンプレートカテゴリをカバーし、各プロンプトタイプから得られる出力を説明します。',
+      },
+      beforeAfterScene: {
+        id: 'before-after-scene',
+        title: 'ペア1 — シーン執筆',
+        promptExamples: [
+          {
+            label: '❌ 漠然としたシーンプロンプト',
+            text: 'Write a tense confrontation scene in a kitchen.',
+          },
+          {
+            label: '✅ 構造化5パートシーンプロンプト',
+            text: 'Genre: literary fiction. POV: close third, Maya. Sensory anchor: the smell of burned coffee. Emotional beat: Maya realises her brother lied. Show without stating. Word ceiling: 200 words.',
+          },
+        ],
+        items: [
+          '**漠然とした出力：** プロット要約の2〜3文。「マヤはキッチンで兄に立ち向かった。彼らの間の緊張は手に取るようだった。彼は居心地悪そうに身を動かし、目をそらした。」シーンは語られているだけで、見せられていません。感覚的世界は不在です。',
+          '**構造化された出力：** 焦げたコーヒーが行動を根拠付ける180語のレンダリングされたシーン——マヤは今朝のフィルターに残ったコーヒー粉を見て、兄がいないと言っていたときにここにいたと気づき、シーンはカウンターに置かれた彼女の手の物理的な詳細で終わります。気づきは述べられた感情ではなく散文から浮かび上がります。',
+        ],
+      },
+      beforeAfterCharacter: {
+        id: 'before-after-char',
+        title: 'ペア2 — キャラクター開発',
+        promptExamples: [
+          {
+            label: '❌ 特性リスト型キャラクタープロンプト',
+            text: 'Elena is brave, sarcastic, and loyal.',
+          },
+          {
+            label: '✅ 矛盾型キャラクタープロンプト',
+            text: "Elena is pathologically honest. She hides her sister's letters from their mother. Show both without naming either. 200 words.",
+          },
+        ],
+        items: [
+          '**特性リストの出力：** 各特性を順番に示すキャラクター。「エレナはためらわずに部屋に入った——彼女は恐れを知らない人間だ。『もちろん』と彼女は皮肉っぽく言った。彼女は愛する人のためなら何でもするだろう。」各特性が示されてチェックされます。',
+          '**矛盾の出力：** 読者が解釈しなければならないキャラクター。エレナは誰にも頼まれていないのに間違ったコーヒーオーダーを申告し（正直）、母親が入ってくる前にキッチンの引き出しに封筒を滑り込ませます（隠蔽）。読者は矛盾を生み出した傷を推測しなければなりません。そのギャップがキャラクターです。',
+        ],
+      },
+      beforeAfterDialogue: {
+        id: 'before-after-dialogue',
+        title: 'ペア3 — ダイアログ',
+        promptExamples: [
+          {
+            label: '❌ 直接的なダイアログプロンプト',
+            text: 'Two friends argue about money.',
+          },
+          {
+            label: '✅ サブテキスト先行ダイアログプロンプト',
+            text: "Subtext: A wants to ask B for a loan but won't say it. B knows but pretends not to. 4 exchanges, 'said' tags only, no action beats.",
+          },
+        ],
+        items: [
+          '**直接的な出力：** 言いたいことをそのまま言うキャラクター。「『あなたは私にお金を借りている』とジェームズは言った。『知ってる、ごめん』とポールは言った。」サブテキストがテキストです。読者が推測するものは何もありません。',
+          '**サブテキスト先行の出力：** どちらのキャラクターもお金やローンに言及しない4回の交換。Aは車の修理が必要だと愚痴をこぼします。Bは車が問題だと同意します。Aはもうしばらくガレージに置いておかなければならないかもしれないと言います。Bは自分のガレージはいっぱいだと言います。ニーズと回避の両方は言われていないことの中にのみ見えます。',
+        ],
+      },
+      sceneWriting: {
+        id: 'scene-writing',
+        title: 'シーン執筆テンプレート（テンプレート1〜2）',
+        content:
+          '**5パートのシーンテンプレートが基盤です：ジャンル＋POV＋感覚的アンカー＋感情的ビート＋語数上限。** 各要素は特定の働きをします——どれか1つを取り除くと出力品質は測定可能なほど低下します。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '最も効果的なローカルLLMシーンプロンプトは、ジャンル・POV・1つの感覚的アンカー・感情的ビート・語数上限を指定します——これらの5つの制約がまとめて「見せる」散文を強制し、モデルのデフォルト要約モードを防ぎます。',
+          },
+          {
+            type: 'plain-terms',
+            text: '「緊張した対立シーンを書いて」の代わりに試してみてください：「ジャンル：スリラー。POV：密着した三人称、エレナ。感覚的アンカー：HVACユニットの唸り音。感情的ビート：エレナは自分が間違いを犯したと気づく——述べずに見せて。語数上限：200語。」モデルの出力はプロット要約ではなく特定のシーンになります。語数上限は省略不可です——それなしにモデルはパディングします。',
+          },
+        ],
+        items: [
+          '**ジャンルマーカー** — 1つの単語やフレーズ（例：「ゴシックホラー」「コージーミステリー」「ハードSF」）が散文レジスターを固定します。',
+          '**POVマーカー** — 「密着した三人称、[名前]」または「一人称」が文法的枠組みを設定し、全ての観察を1つの意識を通してフィルタリングします。',
+          '**感覚的アンカー** — 1つの具体的な感覚的詳細（濡れたコンクリートの臭い・時計の音・擦り切れたカーペットの手触り）がシーンを物理世界に根拠付けて抽象化を防ぎます。',
+          '**感情的ビート** — シーンが着地すべき感情状態を名付け、「述べずに見せて」を追加します——これが「見せるvs話す」制約を活性化します。',
+          '**語数上限** — 圧縮された瞬間には150語；完全なシーンビートには250〜300語；1つを延長するのではなく第2のシーンを求める前の最大400語。',
+        ],
+      },
+      template1: {
+        id: 'template-1',
+        title: 'テンプレート1 — シーン5パート構造',
+        content:
+          '基盤テンプレートです。5つの要素全てが構造的な役割を担っています——どれか1つを取り除くと出力品質は測定可能なほど低下します。',
+        codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
+POV: [first person / close third, character name]
+Sensory anchor: [one specific sensory detail — smell, texture, sound]
+Emotional beat: [what the POV character feels at the end of this scene — do not state it directly]
+Word ceiling: [150–400 words]
+
+Write the scene. Do not summarise. Every sentence must render a moment, not describe one.`,
+        codeLanguage: 'シーンテンプレート',
+      },
+      template2: {
+        id: 'template-2',
+        title: 'テンプレート2 — アクション/戦闘の時間圧縮',
+        content:
+          'モデルがアクションを圧縮したり、ビート間に不必要な呼吸スペースの散文を追加したりするのを防ぎます。「1文につき1秒」のルールは機械的な精度を強制し、シーケンスを運動的に保ちます。',
+        codeBlock: `Genre: [action / thriller / fantasy combat]
+POV: [close third / first person, character name]
+Sensory anchor: [one physical sensation — impact, sound, texture]
+Time rule: every sentence represents exactly 1 second of story time
+Word ceiling: [100–200 words]
+
+Write the fight/action sequence. Enforce the time rule strictly — no sentence can span more than 1 second of story time.`,
+        codeLanguage: 'シーンテンプレート',
+      },
+      characterDevelopment: {
+        id: 'character-development',
+        title: 'キャラクター開発テンプレート（テンプレート3〜5）',
+        content:
+          '**矛盾プロンプトは特性リストアプローチよりも深みのあるキャラクターを生成します。** モデルに特性リストを与える（「エレナは勇敢で、皮肉屋で、忠実だ」）と、それらの特性を示すキャラクターが生成されます。モデルに1つの支配的な特性と1つの矛盾する行動を与えると、読者が解釈しなければならないキャラクターが生成されます。',
+        items: [
+          '**1つの支配的な特性、1つの矛盾する行動** — 矛盾がキャラクターです；読者はそれを生み出した傷や歴史を推測します。',
+          '**「どちらも名付けたり説明したりしない」** — この命令はモデルが社説を書くのを防ぎ（「彼女は本質的に矛盾していた…」）、シーンに意味を担わせます。',
+          '**関係の動的プロンプト：** 「[キャラクターA]はXを望み、[キャラクターB]はYを望む——どちらも実際に欲しいものを言わない200語の交換を書いてください。」',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'セッション全体のシステムプロンプトとしてキャラクターシートを使用してください。プレーンテキストのキャラクターシート（名前・支配的な特性・矛盾する行動・核心的な傷・話し言葉レジスター）を構築し、執筆セッションの開始時にシステムメッセージに貼り付けてください。そのセッション内での全てのキャラクターの登場は一貫したものになります。キャラクターが章を渡って進化するにつれてシートを更新してください。',
+          },
+        ],
+      },
+      template3: {
+        id: 'template-3',
+        title: 'テンプレート3 — キャラクター矛盾プロンプト',
+        content:
+          '最も信頼できるキャラクター開発構造です。特性リストを示すキャラクターではなく、読者が推測しなければならない層のあるキャラクターを生成します。',
+        codeBlock: `Character name: [Name]
+Dominant trait: [one trait — "relentlessly optimistic", "pathologically honest", "obsessively controlled"]
+Contradicting behaviour: [one specific action that contradicts the trait — "hides her sister's letters", "lies to the one person who believes in him"]
+
+Write a scene (200 words max) in which both the trait and the behaviour are present and visible. Do not name or explain either.`,
+        codeLanguage: 'キャラクターテンプレート',
+      },
+      template4: {
+        id: 'template-4',
+        title: 'テンプレート4 — 声の分離プロンプト',
+        content:
+          'キャラクターの声をプロットと心理から切り離します。ダイアログを書く前に話し言葉レジスターを確立するため、または同じマニュスクリプト内の他のキャラクターとは異なる音のするキャラクターを確認するために役立ちます。',
+        codeBlock: `Character: [Name]
+Task: a mundane activity — [making coffee / waiting for a bus / washing dishes]
+
+Write 5 lines of [Character]'s internal monologue during this task. Do not include plot information. Do not explain the character's psychology. Use the character's specific speech register only.`,
+        codeLanguage: 'キャラクターテンプレート',
+      },
+      template5: {
+        id: 'template-5',
+        title: 'テンプレート5 — バックストーリーの発掘',
+        content:
+          '成人版を見せずに読者にキャラクターを形成したものを見せます。子供時代のシーンから推測されるバックストーリーは、語られたバックストーリーよりも耐久性があります。',
+        codeBlock: `Character (adult version): [Name — include dominant trait and contradicting behaviour in one sentence]
+
+Write a 150-word scene from [Character]'s childhood that makes their adult behaviour inevitable — but do not show the adult version of the character. Do not name the trait or explain the connection. Show the event; let the reader infer the rest.`,
+        codeLanguage: 'キャラクターテンプレート',
+      },
+      dialogue: {
+        id: 'dialogue',
+        title: 'ダイアログテンプレート（テンプレート6〜7）',
+        content:
+          '**サブテキスト先行ダイアログテンプレートはナチュラルな発話を生成します。** ほとんどのモデルは言いたいことをそのまま言うキャラクターをデフォルトで生成します——AIが生成したダイアログの明らかな証拠です。発話行を求める前にサブテキストを設定すると、モデルに回避を構築させます。',
+        items: [
+          '**サブテキストを明示的に述べる** — 各キャラクターが言いたいが言わないこと、そしてなぜ言わないか。',
+          '**「「said」以外のダイアログタグなし」** — 感情的なタグ（「彼は怒って言った」）へのモデルの依拠を取り除き、発話語に感情を担わせます。',
+          '**「アクションビートなし」** — 空のダイアログを埋めるためにモデルが使う舞台指示を取り除きます（「彼女は腕を組んだ。彼はため息をついた。」）。修正で削除してください。',
+          '**ジャンルレジスタープロンプト：** 「[ジャンル]の[関係性]の5回の口論を書いてください。口論は表面的には[トピックA]についてですが、本当の口論は[トピックB]についてです。トピックBを名付けないでください。」',
+          '**中断プロンプト：** 「キャラクターAが文の途中でキャラクターBに中断されます。Bが自分の感情状態を言わずに中断がBの感情状態を明らかにするように書いてください。」',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '複数キャラクターのダイアログには、生成前にシステムプロンプトで各キャラクターに「話し言葉レジスター」を割り当ててください。例：「エレナ：フォーマル、正確、縮約形は使わない。マルクス：カジュアル、中断する、「見て、」や「要するに」で文を始める。」モデルは各ターンでそれを思い出させなくてもこれらのレジスターを維持します。',
+          },
+        ],
+      },
+      template6: {
+        id: 'template-6',
+        title: 'テンプレート6 — サブテキスト先行ダイアログ',
+        content:
+          '発話行を書く前に各キャラクターが言いたいが言わないことを設定します。言いたいことをそのまま言うキャラクターを書く代わりに、モデルに回避を構築させます。',
+        codeBlock: `Subtext (do not include this in the dialogue itself):
+[Character A] wants [X] but will not ask for it directly because [reason].
+[Character B] knows [X] is what A wants but pretends not to because [reason].
+
+Scene: [brief setting — 10 words max]
+Length: [number] exchanges
+
+Write the dialogue. No dialogue tags except "said". No internal monologue. No action beats.`,
+        codeLanguage: 'ダイアログテンプレート',
+      },
+      template7: {
+        id: 'template-7',
+        title: 'テンプレート7 — 声の分化（3つの提供）',
+        content:
+          'キャラクターの声が帰属なしに識別できるほど十分に異なるかどうかをテストします。3つの提供が全て同じように聞こえる場合は、セッションを続ける前にシステムプロンプトに話し言葉レジスター制約を追加してください。',
+        codeBlock: `Piece of news: [state the news in one sentence]
+
+Write this news delivered by three different characters. Each delivery should make the character's class, education level, and emotional relationship to the news immediately apparent. No exposition — voice only.
+
+Character 1: [Name — background and relationship to the news in one sentence]
+Character 2: [Name — background and relationship to the news in one sentence]
+Character 3: [Name — background and relationship to the news in one sentence]`,
+        codeLanguage: 'ダイアログテンプレート',
+      },
+      worldbuilding: {
+        id: 'worldbuilding',
+        title: '世界構築テンプレート（テンプレート8〜9）',
+        content:
+          '**世界構築プロンプトは同心円状リング構造で最もよく機能します：1つの感覚的詳細に固定し、外側に広げます。** 「私のファンタジー都市を描写して」で始めるとカタログになります。「夜明けの市場の臭い」で始めると、読者が住む世界になります。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '1つの感覚的詳細に固定し同心円状リング（物体→部屋→建物→通り→地区）として構造化された世界構築プロンプトは、百科事典的なカタログの代わりに読者が住む没入感のある世界描写を生成します。',
+          },
+          {
+            type: 'plain-terms',
+            text: '小さくて具体的なもの——コインの重み・鍛冶場の臭い・特定の路上商人の音——で始め、そこから外側に広げるようモデルに依頼してください。都市レベルに達する前に止めてください。異なるアンカーからの複数の短い世界構築の文章は、1つの包括的な描写よりも豊かな世界を構築します。',
+          },
+        ],
+        items: [
+          '**アンカーの具体性** — アンカーが具体的であるほど、世界は具体的になります。「市場の臭い」は漠然としています。「角のスパイス屋台のカルダモンと濡れた犬の臭い」は特定の世界を生成します。',
+          '**停止リング** — モデルにどこで拡張を止めるかを伝えてください（部屋・建物・地区・都市）。止めなければ、世界全体を要約します。',
+          '**「世界を名付けない」** — モデルがロアダンプを挿入するのを防ぎ、シーンを描写することを強制します。',
+          '**「歴史を説明しない」** — 百科事典的反射を取り除きます；歴史は詳細から浮かび上がり、説明からではありません。',
+          '**暗示された技術プロンプト：** 「世界の通りを、キャラクターが30秒の歩行で触れる全ての物体を名付けることで描写してください。ナレーションなし——順序通りに物体の名前のみ。」',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '世界構築カタログを避けてください。世界構築プロンプトが世界についての箇条書きリストを生成する場合、プロンプトが抽象的すぎます。レンダリングされた散文でない全ての応答は具体的なアンカーで再プロンプトする必要があります。カタログは「私の世界を描写して」プロンプトの症状です——「[特定のPOV]から[特定の瞬間]に[特定の場所]を見せて」に切り替えてください。',
+          },
+        ],
+      },
+      template8: {
+        id: 'template-8',
+        title: 'テンプレート8 — 世界構築の同心円状リング',
+        content:
+          '1つの感覚的詳細に固定し外側に広げます。百科事典的なカタログを防ぎ、読者が読むのではなく住む没入感のある世界描写を生成します。',
+        codeBlock: `Anchor: [one specific sensory detail — a smell, a sound, a texture]
+POV: [observer character or omniscient]
+Rings: expand from the anchor outward — object → room → building → street → district. Stop when you reach [ring level: room / building / street / district].
+Word ceiling: [200–400 words]
+
+Do not name the world. Do not explain the history. Show only what the POV character perceives in this moment.`,
+        codeLanguage: '世界構築テンプレート',
+      },
+      template9: {
+        id: 'template-9',
+        title: 'テンプレート9 — 物体を通じた派閥文化',
+        content:
+          '描写や説明ではなく物質文化を通じて世界構築を明らかにします。派閥が所有し、使用し、見えるところに置いているものは、その信念の説明よりも読者に多くを伝えます。',
+        codeBlock: `Faction: [name and one-line description of their core belief or function]
+
+Describe the interior of a building used by this faction — only through the objects in the room. Do not describe the people. Do not state their beliefs. Do not explain the purpose of any object. 150 words max.`,
+        codeLanguage: '世界構築テンプレート',
+      },
+      styleTransfer: {
+        id: 'style-transfer',
+        title: 'スタイル転換テンプレート（テンプレート10〜11）',
+        content:
+          '**スタイル転換は著者名だけでなくテクニックを名付けるときに機能します。** 「コーマック・マッカーシーのように書いて」は一般的な近似を生成します——まばらな句読点と西部テーマ。「マッカーシーのネストされた従属節・具体的な名詞のみ・ダイアログタグなしのテクニックを使って書いて」は実際の構造的忠実性を持つものを生成します。特定のクリエイティブ出力を生成するプロンプト構造の完全なフレームワークについては、[CRAFTフレームワーク](/frameworks/craft?lang=ja)をご覧ください。',
+        items: [
+          '**テクニックを具体的に名付ける** — 「簡潔な散文」は漠然としています；「短い宣言文・具体的な名詞・修飾子なし」は実行可能です。',
+          '**サンプルを貼り付ける** — 著者の実際の散文の2〜3文は、説明だけよりも効果的にモデルのパターンマッチングを活性化します。',
+          '**「サンプルを模倣しない——テクニックを複製する」** — サンプル文章の直接的な言い換えを防ぎます。',
+          '**時制とPOVの転換：** 「以下の文章を書き直してください：三人称過去から一人称現在に変更してください。全ての具体的な感覚的詳細を維持してください。新しいプロット情報を追加しないでください。最大200語。」',
+          '**レジスターキャリブレーション：** 提供した文章でモデルが見るテクニックを名付けるよう依頼してから、それらを複製するよう依頼してください——この表面化ステップはテクニック命名の精度を向上させます。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'スタイル転換にはMistral Largeを使用してください。Mistral Largeは長い生成全体にわたって一貫した散文レジスターを最もローカル実行可能なモデルよりもよく維持します。複数の段落にわたってレジスターの一貫性が重要なスタイル転換タスクには、Llama 3.3 70BよりもMistral Largeを優先してください。より短いバースト（300語未満）のスタイル転換には、30B以上のどのモデルでも十分に機能します。',
+          },
+        ],
+      },
+      template10: {
+        id: 'template-10',
+        title: 'テンプレート10 — テクニック命名スタイル転換',
+        content:
+          '著者名だけでなく具体的なテクニックを名付けます。表面的なパスティッシュではなく構造的忠実性を生成します。',
+        codeBlock: `Target style: [Author name]
+Techniques to replicate (name 2–3 specifically):
+1. [Technique — e.g., "sentence fragments for interiority"]
+2. [Technique — e.g., "concrete Anglo-Saxon vocabulary, no Latinate abstractions"]
+3. [Technique — e.g., "em dashes for interruption, never ellipsis"]
+
+Sample passage (2–3 sentences of the author's actual prose):
+"[paste sample]"
+
+Now write [scene description] using these techniques. 200 words. Do not mimic the sample — replicate the technique.`,
+        codeLanguage: 'スタイル転換テンプレート',
+      },
+      template11: {
+        id: 'template-11',
+        title: 'テンプレート11 — ジャンルレジスター転換',
+        content:
+          'プロット情報を変えずに既存の散文をジャンルレジスターの間で移動させます。シーンの正しいレジスターを見つけるとき、またはレジスターがジャンルと合わない場合の修正に役立ちます。',
+        codeBlock: `Source register: [thriller / romance / horror / literary fiction / commercial fiction / etc.]
+Target register: [literary fiction / commercial fiction / genre X]
+Specific changes: [longer sentences / more interiority / less action description / etc.]
+
+Rewrite the following passage in [target register]. Do not change any plot information. Word ceiling: same length as input.
+
+[paste passage]`,
+        codeLanguage: 'スタイル転換テンプレート',
+      },
+      revision: {
+        id: 'revision',
+        title: '修正テンプレート（テンプレート12）',
+        content:
+          '**修正プロンプトは一般的な改善命令ではなく名付けられた問題が必要です。** 「これをもっとよくして」は最小限の表面的な編集を生成します。「全ての受動態構造を排除してください；全ての文は具体的な名詞または強い能動動詞で始まらなければなりません」は測定可能な構造的変更を生成します。',
+        items: [
+          '**常に草稿を貼り付け、説明ではなく。** 修正プロンプトは実際の草稿テキストを貼り付けるときのみ機能します。散文を見せずに問題を説明すると、書き直した文章ではなく一般的なアドバイスが生成されます。',
+          '**具体的な問題を名付ける。** 「書き直し」だけでは不十分です。1つの構造的問題を特定してください：受動態・副詞過多・POV切り替え・ブロート・情報ダンプ。',
+          '**POV切り替えの修正：** 「以下の文章にはPOV違反が含まれています——複数のキャラクターの考えが聞こえます。密着した三人称[キャラクター名]で厳密に書き直してください。他のキャラクターへの全ての内部アクセスを取り除いてください。」',
+          '**ダイアログの自然化：** 「以下のダイアログは書かれたように聞こえます。書き直してください：キャラクターは互いに中断し、断片で話し、互いに話し過ぎることができます。交換される同じ情報を維持してください。」',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '常に草稿を貼り付け、説明ではなく。修正プロンプトは実際の草稿テキストを貼り付けるときのみ機能します。散文を見せずに問題を説明すると、書き直した文章ではなく一般的なアドバイスが生成されます。特定の段落や交換を貼り付け、特定の問題を名付け、書き直しの語数上限を指定してください。',
+          },
+        ],
+      },
+      template12: {
+        id: 'template-12',
+        title: 'テンプレート12 — 修正ツールキット（圧縮・受動態・副詞削減）',
+        content:
+          '特定の問題を名付ける3つの修正命令です。それぞれ別々に実行してください——3つ全てを1つのプロンプトに組み合わせると、モデルが1つの命令を他よりも優先するため不一致な結果を生成します。',
+        codeBlock: `--- COMPRESSION ---
+The following scene is [N] words. Rewrite it in [N/2] words. Preserve the emotional beat and all sensory anchors. Cut dialogue tags, action beats, and transitions first:
+
+[paste scene]
+
+---
+
+--- PASSIVE VOICE ELIMINATION ---
+Rewrite the following paragraph: every sentence must use active voice. If the subject is not clear, invent a concrete subject. 150 words max:
+
+[paste paragraph]
+
+---
+
+--- ADVERB REDUCTION ---
+Rewrite the following: remove every adverb. Replace each adverb + weak verb pair with a single strong verb. Do not add new plot information:
+
+[paste paragraph]`,
+        codeLanguage: 'リビジョンテンプレート',
+      },
+      editorialTemplates: {
+        id: 'editorial-templates',
+        title: '編集テンプレート（テンプレート13〜15）',
+        content:
+          '**編集テンプレートはシーンレベルではなくマニュスクリプトレベルで動作します。** 連続性エラーが複合する前に検出し、完全な章にわたってペースの問題を特定し、情報ダンプの説明文をレンダリングされた散文に再分配するのに役立ちます。起草中ではなく、起草後に実行してください。',
+        callouts: [
+          {
+            type: 'tip',
+            text: '編集テンプレートは完成した草稿で実行してください、進行中の作業ではなく。プロット整合性チェックには少なくとも3つのシーンが必要です；ペース分析には完全な章が必要です。不完全な文章で実行すると誤陽性が生成されてコンテキストウィンドウが無駄になります。',
+          },
+        ],
+      },
+      template13: {
+        id: 'template-13',
+        title: 'テンプレート13 — プロット整合性チェック',
+        content:
+          '連続性エラーが章をまたいで複合する前に特定します。まだ修正しやすい間にエラーを検出するために、新しいシーン3〜4つごとに実行してください。',
+        codeBlock: `[paste the last 3 scenes here]
+
+Read these three scenes carefully. List every continuity error you detect: changed physical descriptions (eye colour, hair, height), location inconsistencies, timeline conflicts, object appearances that contradict earlier scenes, character knowledge they should not yet have.
+
+Output only a flag list — one sentence per flag, 150 words maximum total. Do not summarise the scenes. Do not suggest fixes. Flag only.`,
+        codeLanguage: '編集テンプレート',
+      },
+      template14: {
+        id: 'template-14',
+        title: 'テンプレート14 — ペース分析',
+        content:
+          '平坦なゾーンを特定するために章全体のペースをマップします。文レベルでは正しく読めるが全体的に遅く感じる章に役立ちます——ペースマークがどこからドラッグが来るかを示します。',
+        codeBlock: `[paste chapter here]
+
+Read this chapter and mark each paragraph with: FAST / MEDIUM / SLOW.
+
+After marking, list only the SLOW paragraphs with a one-sentence diagnosis for each: what is causing the pacing to drag (over-description, dialogue repetition, excessive interiority, unnecessary backstory insertion, etc.).
+
+Output format: Paragraph [number]: [SLOW] — [one-sentence diagnosis]
+No other commentary. No summaries. Diagnosis only.`,
+        codeLanguage: '編集テンプレート',
+      },
+      template15: {
+        id: 'template-15',
+        title: 'テンプレート15 — 説明文スムージング',
+        content:
+          '情報を追加したり削除したりせずに、情報ダンプの説明文をダイアログ・アクション・感覚的詳細に再分配します。段落がシーンではなく事実配信メカニズムとして読まれるときに使用してください。',
+        codeBlock: `[paste paragraph with exposition]
+
+This paragraph delivers exposition as a block. Rewrite it by distributing the same information across three channels:
+1. A line of dialogue that reveals one piece of information through character reaction (not explanation).
+2. One action beat that implies one piece of information without stating it.
+3. One sensory detail that shows one piece of information without naming it.
+
+Word ceiling: same length as the input paragraph. Do not add any new information. Do not remove any information that was in the original.`,
+        codeLanguage: '編集テンプレート',
+      },
+      models: {
+        id: 'models',
+        title: '小説執筆のためのモデル推薦',
+        content:
+          '**モデルの選択はプロンプト構造よりも重要ではありませんが、重要です。** 7Bモデルでのよく構造化されたプロンプトは70Bモデルでの漠然としたプロンプトを上回ります——しかし同等のプロンプトでは、大きいモデルは長い生成全体にわたって制約への準拠をより良く維持し、キャラクターの声をより確実に分化させます。',
+        columns: ['タスク', 'おすすめモデル', '理由'],
+        rows: [
+          { 'タスク': '一般シーン執筆', 'おすすめモデル': 'Llama 3.3 70B', '理由': '優れた命令追従・物語の一貫性・制約された散文の汎用ベスト' },
+          { 'タスク': 'スタイル転換', 'おすすめモデル': 'Mistral Large', '理由': '長い生成全体にわたる一貫した散文レジスター；ローカル実行可能モデルの中で最高のレジスター忠実性' },
+          { 'タスク': 'ダイアログ／キャラクターの声', 'おすすめモデル': 'Command R+ 104B またはHermes 3', '理由': 'ナチュラルな話し言葉レジスター；長い交換にわたる信頼できるキャラクターの声の分化' },
+          { 'タスク': '世界構築', 'おすすめモデル': 'Qwen3 32B', '理由': '構造化詳細生成に優秀；同心円状拡張パターンを確実に維持' },
+          { 'タスク': '修正／編集', 'おすすめモデル': 'Llama 3.3 70B', '理由': '完全な段落にわたる特定の構造的書き直し命令への追従に最高' },
+          { 'タスク': 'ダーク／無検閲フィクション', 'おすすめモデル': 'Hermes 3 Llama 3.3', '理由': 'コンテンツ拒否が少ないようにファインチューニングされている；ローカル実行時のクラウド利用規約制限なし' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'フィクションモデルのハードウェア最小要件。Llama 3.3 70B（Q4量子化）は約40 GBのVRAMまたはユニファイドメモリが必要です（NVIDIA RTX 4090 24 GBデュアルGPU、またはApple M5 Max 64 GB）。Qwen3 32B（Q4）は20〜24 GBで動作します。Mistral Large（Q4）は約24 GBが必要です。16 GBリグには、Qwen3 14BとMistral Smallが実用的な上限です——両方ともより短い生成長でシーンテンプレートに確実に従います。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'よくある間違い',
+        items: [
+          '**語数上限なし。** 上限なしにモデルはパディングします——トークンが尽きるまで過渡段落・アクションビート・要約文を追加します。常に上限を設定してください。',
+          '**矛盾ではなく特性リスト。** 5つの特性リストは各特性を順番に示すキャラクターを生成します。2つの特性間の矛盾は読者が解釈しなければならないキャラクターを生成します。矛盾構造を使用してください。',
+          '**テクニック名なしで「[著者]のように書いて」。** 著者名のみのスタイル転換はジャンルパスティッシュを生成しますが、テクニックの忠実性は生成しません。複製したい具体的なテクニックを名付けてください。',
+          '**POVアンカーなし。** 命名されたPOVのないシーンプロンプトはデフォルトでPOV切り替えを生成します——何も禁止していないので、モデルは全キャラクターの内部状態にアクセスします。常にPOVキャラクターを名付けてください。',
+          '**草稿なしの修正プロンプト。** 見せないが説明するシーンの「ペースを改善してください」とモデルに依頼すると、一般的なアドバイスが生成されます。実際の文章を貼り付けてください。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考文献',
+        items: [
+          'Llama 3.3 70Bモデルカードと命令追従ベンチマーク — [Meta AI Research](https://ai.meta.com)',
+          'Qwen3 32B技術レポート — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
+          'Mistral Largeモデルドキュメント — [Mistral AI](https://mistral.ai)',
+          'Command R+ 104B仕様 — [Cohere](https://cohere.com)',
+          'Hermes 3ファインチューン手法 — [Nous Research](https://nousresearch.com)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'ローカルLLMはフィクション起草において人間の執筆パートナーの代わりになれますか？',
+            a: '特定のサブタスクに対して——シーンの最初の草稿の生成・ダイアログのバリエーションの作成・世界構築の詳細パス——ローカルLLMは高速で信頼できる起草パートナーです。人間の共著者の戦略的思考の代わりにはなりません：シーンがストーリーアークに合っているか・キャラクターの選択が感情的に正当化されているか・章のペースが機能しているかを評価することはできません。生成タスクに使用し；構造的な決定には人間の判断を維持してください。',
+          },
+          {
+            q: 'フィクション執筆にはOllama・LM Studio・SillyTavernのどれが最良ですか？',
+            a: '完全なプロンプトを送信して補完を受け取る構造化プロンプトテンプレートでは、Ollama（CLIまたはAPI）とLM Studio（OpenAI互換エンドポイント）は同等です——フロントエンドは出力品質に影響しません。SillyTavernはマルチターンロールプレイとキャラクターカードの永続性に価値を追加しますが、シーン執筆と修正プロンプトには、シンプルなチャットUIまたはAPI呼び出しで十分です。',
+          },
+          {
+            q: 'これらのプロンプトテンプレートは小さいモデル（7B〜14B）で機能しますか？',
+            a: 'はい、ただし制約への準拠は約150トークン後に低下します。小さいモデルは5パートプロンプトの最初の2〜3つの制約に従い、その後ベースレジスターにドリフトします。7B〜14Bモデルには：語数上限を下げてください（最大150語）、同時制約を少なくしてください（5パートではなく3パート）、より頻繁に修正または再プロンプトすることを想定してください。Qwen3 14Bは小説特定のプロンプト追従でテストされた最強の小さいモデルです。',
+          },
+          {
+            q: '長編小説セッション全体でキャラクターの声の一貫性を維持するにはどうすればよいですか？',
+            a: 'プレーンテキストのキャラクターシート（名前・支配的な特性・矛盾する行動・話し言葉レジスター・ダイアログの例3行）を構築し、セッション開始時にシステムメッセージに貼り付けてください。長いセッションでは、完成したシーンを実行中の「セッションコンテキスト」ドキュメントに要約し、各ユーザーターンに最近のシーンの最後200〜300語を含めてください。これはコンテキストウィンドウを超えずにコンテキストドリフトに対処します。',
+          },
+          {
+            q: 'ダークまたは成熟したフィクションを書くための最良のローカルLLMは何ですか？',
+            a: 'Hermes 3 Llama 3.3・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=ja)をご覧ください。',
+          },
+          {
+            q: 'これらのテンプレートはSillyTavernやAgnaiで使用できますか？',
+            a: 'はい。本ガイドの全テンプレートはプレーンテキストです——ローカルモデルにテキストを渡すどのインターフェースでも機能します。SillyTavernでは、ジャンルとPOV制約をシステムプロンプトフィールドに置き；ユーザーターンにシーン特定の命令を使用してください。Agnaiでも設定は同等です。テンプレートはフロントエンドに依存しません。',
+          },
+          {
+            q: 'シーンプロンプトはどのくらいの長さにすべきですか？',
+            a: '50〜100語のシーンプロンプトが実際には最良の結果を生成します。より長いプロンプト（200語以上）は複雑なシーンで機能しますが、モデルがいくつかの制約を無視するリスクが増加します。複雑なシーンには、プロンプトを2パスに分けてください：まずシーンを生成し、次に保留した制約を追加する修正プロンプトを実行します。',
+          },
+          {
+            q: 'スタイル転換プロンプトは著作権を侵害しますか？',
+            a: '著者のテクニック（文構造・句読点の選択・物語レジスター）を複製することは著作権侵害ではありません——スタイルは著作権で保護されません。著作権で保護されたテキストから実質的な逐語的文章を複製することは侵害です。本ガイドのテンプレートはテクニックアンカーとして2〜3文のサンプルを使用しますが、これは標準的な教育的フェアユースの範囲内であり、生成された出力はコンテンツではなくテクニックを複製します。',
+          },
+          {
+            q: 'ローカルLLMを小説執筆に使う場合、個人情報保護法は関係しますか？',
+            a: 'ローカルで動作するLLMは、テキストや会話データをいかなる外部サービスにも送信しません。そのため、個人情報保護委員会への届出義務や第三者提供に関する規定は通常適用されません。ただし、実在する識別可能な個人を題材とした創作物を第三者に公開する場合は、名誉毀損・プライバシー侵害に関する法律が適用されます。架空のキャラクターを用いた純粋なフィクションであれば、ローカル生成に個人情報保護法上の問題は生じません。',
+          },
+          {
+            q: '日本でローカルLLMを使って成人向けコンテンツを生成する場合、法的な注意点はありますか？',
+            a: '「児童買春・児童ポルノに係る行為等の処罰及び児童の保護等に関する法律」（いわゆる児童ポルノ禁止法）第7条は、AIによる生成物・フィクションを問わず、18歳未満の者を性的に描写するコンテンツの製造・所持・提供を絶対的に禁止しています。ローカル生成・非公開であっても例外ではありません。成人同士のフィクションコンテンツについては、刑法第175条（わいせつ物頒布罪）は「頒布・公然と陳列」する行為を規制しており、未公開の私的生成は一般に適用外です。スタイル転換プロンプトについては、著者のテクニックを複製することは許容されます；実質的な文章を逐語的に複製することは著作権を侵害する可能性があります。ローカルで標準的なフィクションを生成することには一般的な禁止事項はありません。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[クリエイティブライティングのためのベストローカルLLMs 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=ja) — 物語生成・サンプリング設定・無検閲オプションのためのモデル比較。',
+          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=ja) — キャラクターカードロールプレイと協力的なフィクションのためのフロントエンド比較。',
+          '[脚本・小説起草のためのローカルLLMの使い方](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=ja) — 長編起草ワークフロー・章管理・コンテキストウィンドウ戦略。',
+          '[クリエイティブライティングのための無検閲ローカルLLM：倫理と設定](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=ja) — 成熟したコンテンツに使用するモデル・プライバシーへの影響・責任ある使用フレーム。',
+          '[Chain-of-Thoughtプロンプティングの説明](/prompt-engineering/chain-of-thought-prompting?lang=ja) — フィクションのプロット構成とシーン計画に適用できる構造化推論プロンプト。',
+          '[Zero-Shot vs Few-Shot プロンプティング](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=ja) — フィクションタスクでプロンプトにサンプルを含めるべき時と保留すべき時。',
+        ],
+      },
+    },
+  },
 }
