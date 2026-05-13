@@ -80,6 +80,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Licence matters for commercial use.** MIT and Apache 2.0 dominate the ecosystem. AGPL appears on a handful of UIs (text-generation-webui, KoboldCpp, Jan, SillyTavern) — fine for personal use, more deliberate for commercial deployments. The "License" column below names every one explicitly.',
           '**Multi-tool stacks are normal.** Ollama + Open WebUI + AnythingLLM + Continue.dev is a single-machine setup that covers chat, RAG, and coding without compromise. The "Common Real-World Stacks" table below names the recipes that actually work in 2026.',
         ],
+        image: '/images/local-llm-software-directory-2026-layer-map-en.svg',
+        imageCaption: 'The 9 layers of a local LLM stack: 87 actively-maintained projects spanning runtimes (Ollama, llama.cpp, vLLM), desktop apps (LM Studio, Jan, GPT4All), web UIs, coding assistants, RAG systems, agent frameworks, voice & multimodal, mobile clients, and specialized productivity tools.',
       },
       runtimes: {
         id: 'runtimes',
@@ -101,6 +103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Description': 'Apple Silicon-native runtime by Apple research', 'License': 'MIT' },
         ],
         note: 'Deeper guide: [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm)',
+        image: '/images/local-llm-software-directory-2026-runtimes-comparison-en.svg',
+        imageCaption: 'Ollama vs llama.cpp vs vLLM: Ollama is MIT-licensed with one-command install and OpenAI-compatible API; llama.cpp is the foundational MIT-licensed C++ engine; vLLM is the Apache 2.0 multi-user serving choice for GPU deployments.',
       },
       desktopApps: {
         id: 'desktop-apps',
@@ -158,6 +162,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Description': 'Free Copilot alternative for VS Code', 'License': 'MIT' },
         ],
         note: 'Deeper guide: [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local)',
+        image: '/images/local-llm-software-directory-2026-coding-patterns-en.svg',
+        imageCaption: '3 local LLM coding patterns: Continue.dev for inline autocomplete in VS Code and JetBrains, Cline for autonomous agent file edits, and Aider for git-native terminal diffs — all connect to Ollama via the OpenAI-compatible API.',
       },
       ragSystems: {
         id: 'rag-systems',
@@ -179,6 +185,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', 'Description': 'Embedded vector + LLM database in one library', 'License': 'Apache 2.0' },
         ],
         note: 'Deeper guide: [AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)',
+        image: '/images/local-llm-software-directory-2026-rag-systems-en.svg',
+        imageCaption: 'Local RAG split: turn-key apps (AnythingLLM, PrivateGPT, Quivr, RAGFlow, Khoj) for no-code document chat vs framework libraries (LlamaIndex, Haystack, Dify, Flowise, txtai) for building custom pipelines.',
       },
       agentFrameworks: {
         id: 'agent-frameworks',
@@ -275,6 +283,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Goal': 'Apple Silicon', 'Stack': 'Ollama (MLX backend) or LM Studio', 'Hardware floor': 'M2/M3/M4/M5 with 16+ GB unified' },
           { 'Goal': 'Multi-user team', 'Stack': 'vLLM + Open WebUI', 'Hardware floor': '32+ GB RAM + multi-GPU' },
         ],
+        image: '/images/local-llm-software-directory-2026-real-world-stacks-en.svg',
+        imageCaption: '9 common real-world local LLM stacks by goal: from LM Studio standalone (16 GB RAM, no GPU) to vLLM + Open WebUI for multi-user teams (32 GB RAM + multi-GPU), with Ollama + Open WebUI as the best-balance default at 16 GB RAM.',
       },
       howCurrent: {
         id: 'how-current',
@@ -429,6 +439,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Lizenzen sind relevant für den kommerziellen Einsatz.** MIT und Apache 2.0 dominieren das Ökosystem. AGPL findet sich bei einigen UIs (text-generation-webui, KoboldCpp, Jan, SillyTavern) — für den Privatgebrauch unproblematisch, bei kommerziellen Deployments sorgfältig prüfen. Die Spalte „Lizenz" unten benennt jede Lizenz explizit.',
           '**Multi-Tool-Stacks sind die Norm.** Ollama + Open WebUI + AnythingLLM + Continue.dev ist ein Single-Machine-Setup, das Chat, RAG und Coding ohne Kompromisse abdeckt. Die Tabelle „Praktische Einsatz-Stacks" unten nennt die Rezepte, die in 2026 tatsächlich funktionieren.',
         ],
+        image: '/images/local-llm-software-directory-2026-layer-map-de.svg',
+        imageCaption: 'Die 9 Schichten eines lokalen LLM-Stacks: 87 aktiv gepflegte Projekte von Laufzeiten (Ollama, llama.cpp, vLLM) über Desktop-Apps, Web-UIs und Coding-Assistenten bis zu RAG-Systemen, Agenten-Frameworks, Sprache & Multimodal, Mobile-Clients und spezialisierten Produktivitäts-Tools.',
       },
       runtimes: {
         id: 'runtimes',
@@ -450,6 +462,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Beschreibung': 'Apple-Silicon-native Laufzeitumgebung von Apple Research', 'Lizenz': 'MIT' },
         ],
         note: 'Vertiefender Vergleich: [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de)',
+        image: '/images/local-llm-software-directory-2026-runtimes-comparison-de.svg',
+        imageCaption: 'Ollama vs llama.cpp vs vLLM im Vergleich: Ollama mit MIT-Lizenz und Ein-Befehl-Installation sowie OpenAI-kompatibler API; llama.cpp als grundlegender MIT-lizenzierter C++-Motor; vLLM als Apache-2.0-Option für GPU-Mehrbenutzer-Deployments.',
       },
       desktopApps: {
         id: 'desktop-apps',
@@ -507,6 +521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Beschreibung': 'Kostenlose Copilot-Alternative für VS Code', 'Lizenz': 'MIT' },
         ],
         note: 'Vertiefender Vergleich: [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de)',
+        image: '/images/local-llm-software-directory-2026-coding-patterns-de.svg',
+        imageCaption: '3 lokale LLM Coding-Muster: Continue.dev für Inline-Autovervollständigung in VS Code und JetBrains, Cline für autonome Agenten-Dateibearbeitung, Aider für Git-native Terminal-Diffs — alle verbinden sich über die OpenAI-kompatible API mit Ollama.',
       },
       ragSystems: {
         id: 'rag-systems',
@@ -528,6 +544,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', 'Beschreibung': 'Eingebettete Vektor- und LLM-Datenbank in einer Bibliothek', 'Lizenz': 'Apache 2.0' },
         ],
         note: 'Vertiefender Vergleich: [AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=de)',
+        image: '/images/local-llm-software-directory-2026-rag-systems-de.svg',
+        imageCaption: 'Lokales RAG: Fertiglösungen (AnythingLLM, PrivateGPT, Quivr, RAGFlow, Khoj) für codefreien Dokumenten-Chat vs. Framework-Bibliotheken (LlamaIndex, Haystack, Dify, Flowise, txtai) für eigene Pipelines.',
       },
       agentFrameworks: {
         id: 'agent-frameworks',
@@ -624,6 +642,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ziel': 'Apple Silicon', 'Stack': 'Ollama (MLX-Backend) oder LM Studio', 'Hardware-Mindestanforderung': 'M2/M3/M4/M5 mit 16+ GB Unified Memory' },
           { 'Ziel': 'Multi-User-Team', 'Stack': 'vLLM + Open WebUI', 'Hardware-Mindestanforderung': '32+ GB RAM + mehrere GPUs' },
         ],
+        image: '/images/local-llm-software-directory-2026-real-world-stacks-de.svg',
+        imageCaption: '9 bewährte lokale LLM-Stacks nach Anwendungsziel: von LM Studio standalone (16 GB RAM, ohne GPU) bis vLLM + Open WebUI für Teams (32 GB RAM + Multi-GPU), mit Ollama + Open WebUI als empfohlenem Standardsetup mit 16 GB RAM.',
       },
       howCurrent: {
         id: 'how-current',
@@ -786,6 +806,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La licence compte pour un usage commercial.** MIT et Apache 2.0 dominent l\'écosystème. AGPL apparaît sur quelques interfaces (text-generation-webui, KoboldCpp, Jan, SillyTavern) — acceptable pour un usage personnel, à examiner avec soin pour un déploiement commercial.',
           '**Les stacks multi-outils sont la norme.** Ollama + Open WebUI + AnythingLLM + Continue.dev couvre le chat, le RAG et le codage sur une seule machine. Le tableau « Stacks courants en production » ci-dessous liste les recettes qui fonctionnent réellement en 2026.',
         ],
+        image: '/images/local-llm-software-directory-2026-layer-map-fr.svg',
+        imageCaption: 'Les 9 couches d\'une pile LLM locale : 87 projets actifs couvrant les runtimes (Ollama, llama.cpp, vLLM), applications bureau, interfaces web, assistants de code, systèmes RAG, frameworks d\'agents, voix & multimodal, clients mobiles et outils spécialisés.',
       },
       runtimes: {
         id: 'runtimes',
@@ -807,6 +829,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Description': 'Runtime natif Apple Silicon par Apple Research', 'Licence': 'MIT' },
         ],
         note: 'Comparatif approfondi : [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr)',
+        image: '/images/local-llm-software-directory-2026-runtimes-comparison-fr.svg',
+        imageCaption: 'Ollama vs llama.cpp vs vLLM : Ollama (licence MIT, installation en une commande, API compatible OpenAI) ; llama.cpp (moteur C++ fondamental, MIT) ; vLLM (Apache 2.0, service multi-utilisateurs sur GPU).',
       },
       desktopApps: {
         id: 'desktop-apps',
@@ -864,6 +888,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Description': 'Alternative Copilot gratuite pour VS Code', 'Licence': 'MIT' },
         ],
         note: 'Comparatif approfondi : [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr)',
+        image: '/images/local-llm-software-directory-2026-coding-patterns-fr.svg',
+        imageCaption: '3 modes d\'assistance au code avec LLM local : Continue.dev pour l\'autocomplétion inline dans VS Code et JetBrains, Cline pour les modifications autonomes par agent, Aider pour les diffs git en terminal — tous connectés à Ollama via l\'API compatible OpenAI.',
       },
       ragSystems: {
         id: 'rag-systems',
@@ -885,6 +911,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', 'Description': 'Base de données vectorielle et LLM intégrée en une seule bibliothèque', 'Licence': 'Apache 2.0' },
         ],
         note: 'Comparatif approfondi : [AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=fr)',
+        image: '/images/local-llm-software-directory-2026-rag-systems-fr.svg',
+        imageCaption: 'RAG local : applications clés en main (AnythingLLM, PrivateGPT, Quivr, RAGFlow, Khoj) pour le chat documentaire sans code vs bibliothèques framework (LlamaIndex, Haystack, Dify, Flowise, txtai) pour des pipelines personnalisés.',
       },
       agentFrameworks: {
         id: 'agent-frameworks',
@@ -981,6 +1009,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Objectif': 'Apple Silicon', 'Stack': 'Ollama (backend MLX) ou LM Studio', 'Matériel minimum': 'M2/M3/M4/M5 avec 16+ Go unifié' },
           { 'Objectif': 'Équipe multi-utilisateurs', 'Stack': 'vLLM + Open WebUI', 'Matériel minimum': '32+ Go RAM + multi-GPU' },
         ],
+        image: '/images/local-llm-software-directory-2026-real-world-stacks-fr.svg',
+        imageCaption: '9 configurations LLM locales courantes selon l\'objectif : de LM Studio seul (16 Go RAM, sans GPU) à vLLM + Open WebUI pour les équipes (32 Go RAM + multi-GPU), avec Ollama + Open WebUI comme configuration équilibrée recommandée.',
       },
       howCurrent: {
         id: 'how-current',
@@ -1135,6 +1165,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ライセンスは商用利用で重要。** MITとApache 2.0がエコシステムを占めています。AGPLは一部のUI（text-generation-webui、KoboldCpp、Jan、SillyTavern）に見られます — 個人利用は問題なし、商用デプロイは要確認。',
           '**マルチツールスタックが標準的。** Ollama + Open WebUI + AnythingLLM + Continue.devは1台のマシンでチャット・RAG・コーディングを妥協なくカバーします。下の「実用的なスタック構成」テーブルに実際に機能する組み合わせを掲載しています。',
         ],
+        image: '/images/local-llm-software-directory-2026-layer-map-ja.svg',
+        imageCaption: 'ローカルLLMスタックの9層：ランタイム（Ollama、llama.cpp、vLLM）、デスクトップアプリ、Web UI、コーディング支援、RAGシステム、エージェントFW、音声・マルチモーダル、モバイル、専門ツールにわたる87プロジェクトの全体マップ。',
       },
       runtimes: {
         id: 'runtimes',
@@ -1156,6 +1188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', '概要': 'Apple Research製のApple Siliconネイティブランタイム', 'ライセンス': 'MIT' },
         ],
         note: '詳細比較：[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja)',
+        image: '/images/local-llm-software-directory-2026-runtimes-comparison-ja.svg',
+        imageCaption: 'Ollama vs llama.cpp vs vLLM比較：OllamaはMITライセンスで1コマンドインストール・OpenAI互換API、llama.cppは基盤となるMIT C++エンジン、vLLMはApache 2.0のマルチユーザーGPU配信向け選択肢。',
       },
       desktopApps: {
         id: 'desktop-apps',
@@ -1213,6 +1247,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', '概要': 'VS Code向け無料Copilot代替', 'ライセンス': 'MIT' },
         ],
         note: '詳細比較：[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=ja)',
+        image: '/images/local-llm-software-directory-2026-coding-patterns-ja.svg',
+        imageCaption: 'ローカルLLMコーディングの3パターン：Continue.devはVS Code・JetBrainsでのインライン補完、Clineは自律エージェントによるファイル編集、AiderはGitネイティブのターミナルdiff編集 — すべてOllamaのOpenAI互換APIで接続。',
       },
       ragSystems: {
         id: 'rag-systems',
@@ -1234,6 +1270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', '概要': '1ライブラリに組み込まれたベクターDB + LLMデータベース', 'ライセンス': 'Apache 2.0' },
         ],
         note: '詳細比較：[AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja)',
+        image: '/images/local-llm-software-directory-2026-rag-systems-ja.svg',
+        imageCaption: 'ローカルRAGの二択：すぐ使えるアプリ（AnythingLLM、PrivateGPT、Quivr、RAGFlow、Khoj）のノーコード文書チャット vs フレームワーク（LlamaIndex、Haystack、Dify、Flowise、txtai）でのカスタムパイプライン構築。',
       },
       agentFrameworks: {
         id: 'agent-frameworks',
@@ -1330,6 +1368,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '目的': 'Apple Silicon', 'スタック': 'Ollama（MLXバックエンド）またはLM Studio', '最低ハードウェア': 'M2/M3/M4/M5 16GB+統合メモリ' },
           { '目的': 'マルチユーザーチーム', 'スタック': 'vLLM + Open WebUI', '最低ハードウェア': '32GB+ RAM + マルチGPU' },
         ],
+        image: '/images/local-llm-software-directory-2026-real-world-stacks-ja.svg',
+        imageCaption: '目的別の実用ローカルLLMスタック9選：LM Studio単体（RAM 16GB・GPU不要）からvLLM+Open WebUIのチーム向け構成（RAM 32GB+マルチGPU）まで、Ollama+Open WebUIが最もバランスの取れた標準構成。',
       },
       howCurrent: {
         id: 'how-current',
@@ -1484,6 +1524,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**商业使用时许可证至关重要。**MIT和Apache 2.0许可证主导生态系统。少数Web界面（text-generation-webui、KoboldCpp、Jan、SillyTavern）采用AGPL——个人使用无碍，商业部署前需仔细评估。下方"许可证"列已明确列出每个项目的许可证。',
           '**多工具组合技术栈是常态。**Ollama + Open WebUI + AnythingLLM + Continue.dev在单台机器上即可同时覆盖聊天、RAG和编程需求，互不冲突。下方"常见实用技术栈"表格列出了2026年经验证、实际可用的配方。',
         ],
+        image: '/images/local-llm-software-directory-2026-layer-map-zh.svg',
+        imageCaption: '本地LLM技术栈的9个层次：87个活跃项目，涵盖运行时（Ollama、llama.cpp、vLLM）、桌面应用、Web界面、编程助手、RAG系统、智能体框架、语音与多模态、移动端及专用工具的完整生态地图。',
       },
       runtimes: {
         id: 'runtimes',
@@ -1505,6 +1547,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', '描述': 'Apple研究院出品的Apple Silicon原生运行时', '许可证': 'MIT' },
         ],
         note: '深度指南：[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh)',
+        image: '/images/local-llm-software-directory-2026-runtimes-comparison-zh.svg',
+        imageCaption: 'Ollama vs llama.cpp vs vLLM对比：Ollama（MIT许可、一条命令安装、OpenAI兼容API）；llama.cpp（基础MIT C++引擎）；vLLM（Apache 2.0，适合多用户GPU推理服务）。',
       },
       desktopApps: {
         id: 'desktop-apps',
@@ -1562,6 +1606,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', '描述': 'VS Code的免费Copilot替代插件', '许可证': 'MIT' },
         ],
         note: '深度指南：[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh)',
+        image: '/images/local-llm-software-directory-2026-coding-patterns-zh.svg',
+        imageCaption: '本地LLM编程辅助的3种模式：Continue.dev用于VS Code和JetBrains行内自动补全，Cline用于自主智能体文件编辑，Aider用于Git原生终端差异编辑 — 均通过OpenAI兼容API连接Ollama。',
       },
       ragSystems: {
         id: 'rag-systems',
@@ -1583,6 +1629,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', '描述': '将向量数据库与LLM合为一体的嵌入式库', '许可证': 'Apache 2.0' },
         ],
         note: '深度指南：[AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=zh)',
+        image: '/images/local-llm-software-directory-2026-rag-systems-zh.svg',
+        imageCaption: '本地RAG两类方案：即用型应用（AnythingLLM、PrivateGPT、Quivr、RAGFlow、Khoj）实现无代码文档问答，vs 框架库（LlamaIndex、Haystack、Dify、Flowise、txtai）用于构建自定义管道。',
       },
       agentFrameworks: {
         id: 'agent-frameworks',
@@ -1679,6 +1727,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '目标': 'Apple Silicon', '技术栈': 'Ollama（MLX后端）或LM Studio', '最低硬件要求': 'M2/M3/M4/M5，16+ GB统一内存' },
           { '目标': '多用户团队', '技术栈': 'vLLM + Open WebUI', '最低硬件要求': '32+ GB内存 + 多GPU' },
         ],
+        image: '/images/local-llm-software-directory-2026-real-world-stacks-zh.svg',
+        imageCaption: '9种常见本地LLM实用配置：从LM Studio单机版（16GB内存、无需GPU）到vLLM+Open WebUI多用户团队配置（32GB内存+多GPU），Ollama+Open WebUI为推荐的均衡默认方案。',
       },
       howCurrent: {
         id: 'how-current',

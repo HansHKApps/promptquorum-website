@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">3 Local LLM Coding Patterns</text>
+  <line x1="40" y1="38" x2="760" y2="38" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Left panel: Continue.dev (green) -->
+  <rect x="44" y="48" width="228" height="278" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="44" y="48" width="228" height="40" rx="6" fill="#34A853"/>
+  <rect x="44" y="72" width="228" height="16" fill="#34A853"/>
+  <text x="158" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Continue.dev</text>
+  <text x="158" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#E8F5E9" text-anchor="middle">Inline Autocomplete</text>
+
+  <text x="60" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">VS Code + JetBrains</text>
+  <text x="56" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#34A853">•</text>
+  <text x="60" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Tab-complete in editor</text>
+  <text x="56" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#34A853">•</text>
+  <text x="60" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Chat sidebar</text>
+  <text x="56" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#34A853">•</text>
+
+  <line x1="60" y1="286" x2="256" y2="286" stroke="#34A853" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="60" y="306" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#49454F">Best for:</text>
+  <text x="60" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">IDE-first developers</text>
+
+  <!-- Center panel: Cline (purple) -->
+  <rect x="286" y="48" width="228" height="278" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="286" y="48" width="228" height="40" rx="6" fill="#6750A4"/>
+  <rect x="286" y="72" width="228" height="16" fill="#6750A4"/>
+  <text x="400" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Cline</text>
+  <text x="400" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#E8DEF8" text-anchor="middle">Autonomous Agent</text>
+
+  <text x="302" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Creates/edits files</text>
+  <text x="298" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4">•</text>
+  <text x="302" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Runs terminal commands</text>
+  <text x="298" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4">•</text>
+  <text x="302" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Multi-step planning</text>
+  <text x="298" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4">•</text>
+
+  <line x1="302" y1="286" x2="498" y2="286" stroke="#6750A4" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="302" y="306" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#49454F">Best for:</text>
+  <text x="302" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Agentic task delegation</text>
+
+  <!-- Right panel: Aider (blue) -->
+  <rect x="528" y="48" width="228" height="278" rx="6" fill="#FFFFFF" stroke="#1565C0" stroke-width="2"/>
+  <rect x="528" y="48" width="228" height="40" rx="6" fill="#1565C0"/>
+  <rect x="528" y="72" width="228" height="16" fill="#1565C0"/>
+  <text x="642" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Aider</text>
+  <text x="642" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#BBDEFB" text-anchor="middle">Terminal Diff</text>
+
+  <text x="544" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Git-native edits</text>
+  <text x="540" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#1565C0">•</text>
+  <text x="544" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Multi-file context</text>
+  <text x="540" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#1565C0">•</text>
+  <text x="544" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Works in any editor</text>
+  <text x="540" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#1565C0">•</text>
+
+  <line x1="544" y1="286" x2="740" y2="286" stroke="#1565C0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="544" y="306" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#49454F">Best for:</text>
+  <text x="544" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Git-workflow users</text>
+
+  <text x="400" y="342" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com · All connect to Ollama via OpenAI-compatible API</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local RAG: Turn-key Apps vs Framework Libraries</text>
+  <line x1="40" y1="38" x2="760" y2="38" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Left panel: Turn-key Apps (green) -->
+  <rect x="44" y="48" width="345" height="278" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="44" y="48" width="345" height="44" rx="6" fill="#34A853"/>
+  <rect x="44" y="76" width="345" height="16" fill="#34A853"/>
+  <text x="216" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Turn-key RAG Apps</text>
+  <text x="216" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#E8F5E9" text-anchor="middle">No-code setup</text>
+
+  <text x="60" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">AnythingLLM</text>
+  <text x="60" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— easiest all-in-one</text>
+  <text x="60" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">PrivateGPT</text>
+  <text x="60" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— fully offline</text>
+  <text x="60" y="192" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Quivr</text>
+  <text x="60" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— personal knowledge base</text>
+  <text x="60" y="229" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">RAGFlow</text>
+  <text x="60" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— citation-grade retrieval</text>
+  <text x="60" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Khoj</text>
+  <text x="60" y="281" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— syncs Obsidian/Notion</text>
+
+  <!-- Right panel: Framework Libraries (purple) -->
+  <rect x="411" y="48" width="345" height="278" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="411" y="48" width="345" height="44" rx="6" fill="#6750A4"/>
+  <rect x="411" y="76" width="345" height="16" fill="#6750A4"/>
+  <text x="583" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Framework Libraries</text>
+  <text x="583" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#E8DEF8" text-anchor="middle">Build your own</text>
+
+  <text x="427" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">LlamaIndex</text>
+  <text x="427" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— Python RAG framework</text>
+  <text x="427" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Haystack</text>
+  <text x="427" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— search + RAG by deepset</text>
+  <text x="427" y="192" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Dify</text>
+  <text x="427" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— visual workflow builder</text>
+  <text x="427" y="229" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Flowise</text>
+  <text x="427" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— visual LangChain</text>
+  <text x="427" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">txtai</text>
+  <text x="427" y="281" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">— embedded vector + LLM DB</text>
+
+  <text x="400" y="342" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com</text>
+</svg>
