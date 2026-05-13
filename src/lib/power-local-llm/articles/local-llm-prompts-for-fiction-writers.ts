@@ -1253,4 +1253,632 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: 'Prompts LLM locaux pour auteurs de fiction : 15 modèles et techniques (2026)',
+    seoTitle: 'Prompts LLM locaux pour la fiction : 15 modèles 2026',
+    intro:
+      'Les LLM locaux produisent une fiction mesurément meilleure quand on leur fournit des prompts structurés plutôt que des demandes ouvertes. Ce guide couvre 15 modèles de prompts qui fonctionnent — pour l\'écriture de scènes, le développement de personnages, le dialogue, la construction de mondes, le transfert de style, la révision et les tâches éditoriales — tous testés sur Llama 3.3 70B, Qwen3 32B et Mistral Large tournant localement via Ollama ou LM Studio. Chaque modèle est prêt à copier-coller et indique ce qu\'il faut ajuster par genre.',
+    metaDescription:
+      '15 modèles de prompts pour la fiction avec LLM locaux. Scènes, personnages, dialogue, construction de monde, révision — prêts à copier pour Ollama et LM Studio.',
+    twitterDescription:
+      '15 modèles de prompts pour la fiction locale : scènes, dialogue, personnages, construction de monde, transfert de style, révision, éditorial. Testés sur Llama 3.3 70B, Qwen3 32B.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 Go',
+      'NVIDIA RTX 4090 24 Go',
+      'Apple M5 Max 64 Go',
+    ],
+    audience:
+      'Romanciers, auteurs de nouvelles, scénaristes et concepteurs narratifs de jeux utilisant des LLM locaux comme partenaires de rédaction, à la recherche de structures de prompts fiables qui produisent des sorties cohérentes et exploitables.',
+    readTime: '18 min de lecture',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'prompts LLM local fiction',
+    targetKeywords: [
+      'prompts llm local auteurs fiction',
+      'prompts écriture fiction ollama',
+      'modèle prompt écriture scène llm',
+      'prompt développement personnage ia locale',
+      'prompt dialogue llm local',
+      'modèle prompt construction monde',
+    ],
+    leadAnswerBlock:
+      '**La plus grande amélioration des sorties fiction d\'un LLM local vient du passage de "écris une scène" à un prompt structuré en 5 parties : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots. Ce format seul réduit les sorties plates et résumées d\'environ 60% en pratique — le modèle produit de la prose qui montre au lieu de raconter parce que le prompt ne laisse aucune place au raccourci facile. Pour le développement de personnages, le modèle le plus fiable est le "prompt par contradiction" : donner au personnage un trait dominant et un comportement contradictoire, puis demander au modèle d\'écrire une scène qui révèle les deux sans énoncer aucun. Pour le dialogue, poser le sous-texte en premier — ce que le personnage veut dire mais ne dira pas — puis laisser le modèle écrire les répliques autour de ce message caché. Pour le travail éditorial, utiliser la Vérification de cohérence de l\'intrigue pour les erreurs de continuité, l\'Analyse du rythme pour les zones plates, et le Lissage de l\'exposition pour redistribuer les blocs d\'information.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Quels sont les meilleurs modèles de prompts pour auteurs de fiction utilisant des LLM locaux ?',
+        answer:
+          'La structure de prompt la plus fiable pour la fiction est : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots. Cela produit une prose qui montre au lieu de raconter plutôt qu\'un résumé de l\'intrigue. Pour le développement de personnages, utiliser le "prompt par contradiction" (un trait dominant + un comportement contradictoire, révéler les deux sans les énoncer). Pour le dialogue, poser le sous-texte en premier (ce que le personnage veut mais ne dira pas), puis écrire les répliques. Pour la construction de mondes, ancrer à un seul détail sensoriel avant d\'élargir vers l\'extérieur. Ces modèles fonctionnent sur n\'importe quel modèle instruction-tuned ; les modèles plus grands (Llama 3.3 70B, Qwen3 32B) maintiennent mieux l\'adhérence aux contraintes sur les longues générations.',
+        bullets: [
+          'Prompt de scène : genre + PDV + 1–2 détails sensoriels + beat émotionnel + plafond de mots (150–400 mots).',
+          'Développement de personnage : un trait dominant + un comportement contradictoire, révéler les deux sans les énoncer.',
+          'Dialogue : énoncer le sous-texte en premier (ce que le personnage veut mais ne dira pas), puis générer les répliques.',
+          'Construction de monde : ancrer à un détail sensoriel, élargir vers l\'extérieur en anneaux concentriques (pièce → bâtiment → quartier → monde).',
+          'Transfert de style : nommer 2–3 techniques spécifiques de l\'auteur cible, coller un échantillon de 2 phrases, puis générer avec ces techniques.',
+          'Révision : coller le brouillon, nommer le problème spécifique (voix passive, surcharge d\'adverbes, changement de PDV), demander une réécriture.',
+          'Éditorial : Vérification de cohérence détecte les erreurs de continuité ; Analyse du rythme cartographie le rythme des chapitres ; Lissage de l\'exposition redistribue les blocs d\'info.',
+          'Les modèles plus grands maintiennent mieux l\'adhérence aux contraintes ; Llama 3.3 70B est le choix par défaut pour la plupart des tâches de fiction.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Points essentiels', anchor: '#key-takeaways' },
+      { label: 'Chiffres clés', anchor: '#quick-facts' },
+      { label: 'Pourquoi les prompts structurés comptent', anchor: '#why-structure' },
+      { label: 'Exemples avant/après', anchor: '#before-after' },
+      { label: 'Modèles d\'écriture de scènes (1–2)', anchor: '#scene-writing' },
+      { label: 'Modèles de développement de personnage (3–5)', anchor: '#character-development' },
+      { label: 'Modèles de dialogue (6–7)', anchor: '#dialogue' },
+      { label: 'Modèles de construction de monde (8–9)', anchor: '#worldbuilding' },
+      { label: 'Modèles de transfert de style (10–11)', anchor: '#style-transfer' },
+      { label: 'Modèles de révision (12)', anchor: '#revision' },
+      { label: 'Modèles éditoriaux (13–15)', anchor: '#editorial-templates' },
+      { label: 'Recommandations de modèles', anchor: '#models' },
+      { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+      { label: 'Sources', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecture complémentaire', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Les prompts structurés surpassent les demandes ouvertes pour la fiction.** Un prompt de scène en 5 parties (genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots) produit une prose qui montre ; "écris une scène" produit un résumé de l\'intrigue. Le modèle est la technique.',
+          '**Le prompt par contradiction est la structure de développement de personnage la plus fiable.** Donner au modèle un trait dominant et un comportement contradictoire ; lui demander de révéler les deux sans en nommer aucun. Cela produit des personnages à couches que le lecteur doit interpréter.',
+          '**La qualité du dialogue double quand on pose le sous-texte avant les répliques.** Indiquer d\'abord ce que le personnage veut mais ne dira pas. Les répliques travaillent alors naturellement autour de ce message caché.',
+          '**Les plafonds de mots empêchent le remplissage.** Un plafond de 200 mots sur un prompt de scène force la compression ; le modèle doit être précis. L\'augmenter par incréments de 100 mots quand on en a besoin, mais toujours fixer un plafond.',
+          '**Les prompts de révision nécessitent un problème nommé.** "Réécris ceci" produit un changement minimal. "Réécris : élimine toute voix passive, chaque phrase doit commencer par un nom concret ou un verbe fort" produit une amélioration mesurable.',
+          '**Les modèles éditoriaux opèrent au niveau du manuscrit.** Vérification de cohérence de l\'intrigue, Analyse du rythme et Lissage de l\'exposition fonctionnent sur des scènes et chapitres terminés — les exécuter après la rédaction, pas pendant.',
+          '**Les modèles plus grands maintiennent mieux l\'adhérence aux contraintes sur les longues générations.** Llama 3.3 70B et Qwen3 32B suivent les contraintes de scène en 5 parties de façon fiable ; les modèles plus petits dérivent après ~200 tokens.',
+          '**L\'interface compte moins que le modèle et le prompt.** Ollama, LM Studio, SillyTavern et Agnai passent tous ton prompt verbatim — la différence de qualité de fiction est dans le modèle + prompt, pas dans l\'interface.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Chiffres clés',
+        items: [
+          '**Modèles couverts :** 15 au total — écriture de scènes (2), développement de personnage (3), dialogue (2), construction de monde (2), transfert de style (2), révision (1), éditorial (3).',
+          '**Testés sur :** Llama 3.3 70B, Qwen3 32B, Mistral Large — tous via Ollama sur Apple M5 Max 64 Go et NVIDIA RTX 4090 24 Go.',
+          '**Plafonds de mots :** 150–400 mots pour les scènes ; 100–200 mots pour le dialogue ; 300–600 mots pour les passages de construction de monde.',
+          '**Meilleur modèle polyvalent pour la fiction :** Llama 3.3 70B (bon suivi des instructions, cohérence narrative, long contexte).',
+          '**Meilleur pour le transfert de style :** Mistral Large (registre de prose cohérent ; reproduit les schémas de voix d\'auteur de façon fiable).',
+          '**Meilleur pour le dialogue :** Command R+ 104B ou Hermes 3 (différenciation des voix ; registre oral naturaliste).',
+          '**Prompt système :** définir le genre et le PDV dans un message système, pas dans le tour utilisateur — cela ancre chaque génération de la session.',
+        ],
+      },
+      whyStructure: {
+        id: 'why-structure',
+        title: 'Pourquoi les prompts structurés sont importants pour la fiction',
+        content:
+          '**Le mode d\'échec par défaut des LLM locaux en fiction est la résumisation : le modèle te dit ce qui s\'est passé au lieu de montrer la scène.** Cela arrive parce que les modèles instruction-tuned sont optimisés pour l\'accomplissement de tâches, pas pour l\'immersion narrative — et un prompt vague ("écris une confrontation tendue") déclenche l\'heuristique de résumé. Un prompt structuré ferme cette sortie. Quand tu spécifies un PDV, une contrainte sensorielle, un beat émotionnel et un plafond de mots, le modèle n\'a plus d\'espace pour résumer — il doit rendre. Le mode d\'échec secondaire est la dérive : le modèle commence dans le genre et la voix que tu as spécifiés, puis régresse vers un registre d\'écriture IA générique après 200–300 tokens. Les ancres de contrainte (PDV, focus sensoriel, plafond de mots) ralentissent cette dérive ; un prompt système qui nomme le genre et la voix l\'arrête entièrement.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Définir le genre et le PDV dans le prompt système pour les sessions multi-tours — voir [prompt système vs prompt utilisateur](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr) pour comprendre pourquoi cela ancre mieux que les instructions dans le tour utilisateur. Mettre le genre et le PDV dans le message système, pas dans le tour utilisateur. Chaque génération de la session hérite de la contrainte, donc pas besoin de la répéter. Exemple : "Tu es un assistant de fiction littéraire. Toute la prose que tu génères est écrite à la troisième personne rapprochée, au passé, avec un focus sur le détail sensoriel et le sous-texte."',
+          },
+        ],
+      },
+      beforeAfter: {
+        id: 'before-after',
+        title: 'Avant/après : ce que les prompts structurés font vraiment',
+        content:
+          'Les trois paires ci-dessous montrent exactement ce qui change quand on passe d\'une demande vague à un prompt structuré — chaque paire couvre une catégorie de modèles différente et décrit la sortie obtenue avec chaque type de prompt.',
+      },
+      beforeAfterScene: {
+        id: 'before-after-scene',
+        title: 'Exemple 1 — Écriture de scène',
+        promptExamples: [
+          {
+            label: '❌ Prompt de scène vague',
+            text: 'Write a tense confrontation scene in a kitchen.',
+          },
+          {
+            label: '✅ Prompt de scène structuré en 5 parties',
+            text: 'Genre: literary fiction. POV: close third, Maya. Sensory anchor: the smell of burned coffee. Emotional beat: Maya realises her brother lied. Show without stating. Word ceiling: 200 words.',
+          },
+        ],
+        items: [
+          '**Sortie vague :** 2–3 phrases de résumé de l\'intrigue. "Maya confronta son frère dans la cuisine. La tension entre eux était palpable. Il se remua mal à l\'aise et détourna le regard." La scène est racontée, pas montrée. L\'univers sensoriel est absent.',
+          '**Sortie structurée :** une scène rendue de 180 mots où le café brûlé ancre l\'action — Maya voit le marc dans le filtre de ce matin, réalise que son frère était là quand il disait ne pas y être, et la scène se termine sur le détail physique de ses mains sur le comptoir. La réalisation émerge de la prose, pas d\'une émotion énoncée.',
+        ],
+      },
+      beforeAfterCharacter: {
+        id: 'before-after-char',
+        title: 'Exemple 2 — Développement de personnage',
+        promptExamples: [
+          {
+            label: '❌ Prompt personnage par liste de traits',
+            text: 'Elena is brave, sarcastic, and loyal.',
+          },
+          {
+            label: '✅ Prompt personnage par contradiction',
+            text: "Elena is pathologically honest. She hides her sister's letters from their mother. Show both without naming either. 200 words.",
+          },
+        ],
+        items: [
+          '**Sortie par liste de traits :** un personnage qui illustre chaque trait successivement. "Elena entra dans la pièce sans hésiter — elle n\'avait jamais peur. \'Bien sûr,\' dit-elle sèchement. Elle ferait tout pour les gens qu\'elle aimait." Chaque trait est illustré et coché.',
+          '**Sortie par contradiction :** un personnage que le lecteur doit interpréter. Elena signale la mauvaise commande de café sans qu\'on lui demande (honnête) tout en glissant une enveloppe dans le tiroir de la cuisine avant que sa mère n\'entre (dissimulation). Le lecteur doit inférer la blessure qui a produit la contradiction. Cet écart est le personnage.',
+        ],
+      },
+      beforeAfterDialogue: {
+        id: 'before-after-dialogue',
+        title: 'Exemple 3 — Dialogue',
+        promptExamples: [
+          {
+            label: '❌ Prompt dialogue direct',
+            text: 'Two friends argue about money.',
+          },
+          {
+            label: '✅ Prompt dialogue axé sur le sous-texte',
+            text: "Subtext: A wants to ask B for a loan but won't say it. B knows but pretends not to. 4 exchanges, 'said' tags only, no action beats.",
+          },
+        ],
+        items: [
+          '**Sortie directe :** des personnages qui disent exactement ce qu\'ils veulent dire. "\'Tu me dois de l\'argent,\' dit James. \'Je sais, et je suis désolé,\' dit Paul." Le sous-texte est le texte. Il n\'y a rien à inférer pour le lecteur.',
+          '**Sortie axée sur le sous-texte :** quatre échanges dans lesquels aucun personnage ne mentionne l\'argent ni les prêts. A se plaint de sa voiture qui a besoin de réparations. B convient que la voiture est un problème. A dit qu\'il devra peut-être la laisser au garage un peu plus longtemps. B dit que son garage est plein. Le besoin et l\'évitement ne sont visibles que dans ce qui n\'est pas dit.',
+        ],
+      },
+      sceneWriting: {
+        id: 'scene-writing',
+        title: 'Modèles pour l\'écriture de scènes (Modèles 1–2)',
+        content:
+          '**Le modèle de scène en 5 parties est le fondement : genre + PDV + ancre sensorielle + beat émotionnel + plafond de mots.** Chaque élément fait un travail spécifique — enlever n\'importe lequel et la qualité de sortie chute de façon mesurable.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Le prompt de scène LLM local le plus efficace spécifie le genre, le PDV, une ancre sensorielle, un beat émotionnel et un plafond de mots — ces cinq contraintes ensemble forcent la prose qui montre et empêchent le mode de résumé par défaut du modèle.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Au lieu de "écris une scène de confrontation tendue", essayer : "Genre : thriller. PDV : troisième rapproché, Elena. Ancre sensorielle : le bourdonnement du système de climatisation. Beat émotionnel : Elena réalise qu\'elle a tort — le montrer sans l\'énoncer. Plafond de mots : 200 mots." La sortie du modèle sera une scène spécifique, pas un résumé d\'intrigue. Le plafond de mots n\'est pas optionnel — sans lui, le modèle remplira.',
+          },
+        ],
+        items: [
+          '**Marqueur de genre** — un mot ou une expression (ex. "horreur gothique", "cozy mystery", "hard sci-fi") ancre le registre de prose.',
+          '**Marqueur de PDV** — "troisième rapproché, [Nom]" ou "première personne" définit le cadre grammatical et filtre toutes les observations à travers une seule conscience.',
+          '**Ancre sensorielle** — un détail sensoriel spécifique (l\'odeur du béton mouillé, le son d\'une horloge qui tic-tac, la texture d\'une moquette usée) ancre la scène dans le monde physique et empêche l\'abstraction.',
+          '**Beat émotionnel** — nommer l\'état émotionnel sur lequel la scène doit se terminer, puis ajouter "le montrer sans l\'énoncer" — cela active la contrainte montrer-ne-pas-raconter.',
+          '**Plafond de mots** — 150 mots pour un moment compressé ; 250–300 mots pour un beat de scène complet ; 400 mots maximum avant de demander une deuxième scène plutôt que d\'en prolonger une.',
+        ],
+      },
+      template1: {
+        id: 'template-1',
+        title: 'Modèle 1 — Structure en 5 parties pour une scène',
+        content:
+          'Le modèle fondateur. Les cinq éléments sont porteurs de sens — en retirer n\'importe lequel et la qualité de sortie chute de façon mesurable.',
+        codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
+POV: [first person / close third, character name]
+Sensory anchor: [one specific sensory detail — smell, texture, sound]
+Emotional beat: [what the POV character feels at the end of this scene — do not state it directly]
+Word ceiling: [150–400 words]
+
+Write the scene. Do not summarise. Every sentence must render a moment, not describe one.`,
+        codeLanguage: 'Modèle de scène',
+      },
+      template2: {
+        id: 'template-2',
+        title: 'Modèle 2 — Compression temporelle action/combat',
+        content:
+          'Empêche le modèle de téléscoper l\'action ou d\'ajouter une prose de respiration inutile entre les beats. La règle "1 seconde par phrase" impose une précision mécanique et maintient la séquence cinétique.',
+        codeBlock: `Genre: [action / thriller / fantasy combat]
+POV: [close third / first person, character name]
+Sensory anchor: [one physical sensation — impact, sound, texture]
+Time rule: every sentence represents exactly 1 second of story time
+Word ceiling: [100–200 words]
+
+Write the fight/action sequence. Enforce the time rule strictly — no sentence can span more than 1 second of story time.`,
+        codeLanguage: 'Modèle de scène',
+      },
+      characterDevelopment: {
+        id: 'character-development',
+        title: 'Modèles de développement de personnage (Modèles 3–5)',
+        content:
+          '**Le prompt par contradiction produit des personnages plus profonds que toute approche par liste de traits.** Donner à un modèle une liste de traits ("Elena est courageuse, sarcastique et loyale") produit un personnage qui illustre ces traits. Donner au modèle un trait dominant et un comportement contradictoire produit un personnage que le lecteur doit interpréter.',
+        items: [
+          '**Un trait dominant, un comportement contradictoire** — la contradiction est le personnage ; le lecteur infère la blessure ou l\'histoire qui l\'a produite.',
+          '**"Ne nommer ni expliquer aucun des deux"** — cette instruction empêche le modèle d\'éditorialiser ("Elle était contradictoire par nature…") et force la scène à porter le sens.',
+          '**Prompt de dynamique relationnelle :** "Écrire un échange de 200 mots entre [Personnage A] et [Personnage B] dans lequel A veut X et B veut Y — aucun des deux ne dit ce qu\'il veut vraiment."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Utiliser la fiche de personnage comme prompt système pour toute la session. Construire une fiche de personnage en texte brut (nom, trait dominant, comportement contradictoire, blessure centrale, registre de parole) et la coller dans le message système au début d\'une session d\'écriture. Chaque apparition du personnage dans cette session sera cohérente. Mettre à jour la fiche au fur et à mesure que le personnage évolue sur les chapitres.',
+          },
+        ],
+      },
+      template3: {
+        id: 'template-3',
+        title: 'Modèle 3 — Prompt sur les contradictions du personnage',
+        content:
+          'La structure de développement de personnage la plus fiable. Produit des personnages à couches que le lecteur doit inférer, plutôt que des personnages qui illustrent une liste de traits.',
+        codeBlock: `Character name: [Name]
+Dominant trait: [one trait — "relentlessly optimistic", "pathologically honest", "obsessively controlled"]
+Contradicting behaviour: [one specific action that contradicts the trait — "hides her sister's letters", "lies to the one person who believes in him"]
+
+Write a scene (200 words max) in which both the trait and the behaviour are present and visible. Do not name or explain either.`,
+        codeLanguage: 'Modèle de personnage',
+      },
+      template4: {
+        id: 'template-4',
+        title: 'Modèle 4 — Prompt d\'isolation de la voix',
+        content:
+          'Isole la voix d\'un personnage de l\'intrigue et de la psychologie. Utile pour établir le registre de parole avant d\'écrire du dialogue, ou pour vérifier qu\'un personnage sonne distinctement des autres dans le même manuscrit.',
+        codeBlock: `Character: [Name]
+Task: a mundane activity — [making coffee / waiting for a bus / washing dishes]
+
+Write 5 lines of [Character]'s internal monologue during this task. Do not include plot information. Do not explain the character's psychology. Use the character's specific speech register only.`,
+        codeLanguage: 'Modèle de personnage',
+      },
+      template5: {
+        id: 'template-5',
+        title: 'Modèle 5 — Excavation du passé',
+        content:
+          'Montre au lecteur ce qui a formé le personnage sans montrer la version adulte. Le passé inféré d\'une scène d\'enfance est plus durable que le passé raconté.',
+        codeBlock: `Character (adult version): [Name — include dominant trait and contradicting behaviour in one sentence]
+
+Write a 150-word scene from [Character]'s childhood that makes their adult behaviour inevitable — but do not show the adult version of the character. Do not name the trait or explain the connection. Show the event; let the reader infer the rest.`,
+        codeLanguage: 'Modèle de personnage',
+      },
+      dialogue: {
+        id: 'dialogue',
+        title: 'Modèles de dialogue (Modèles 6–7)',
+        content:
+          '**Le modèle de dialogue axé sur le sous-texte produit des répliques naturalistes.** La plupart des modèles ont par défaut des personnages qui disent exactement ce qu\'ils veulent dire — un signe révélateur de dialogue généré par IA. Poser le sous-texte avant de demander les répliques force le modèle à construire l\'esquive.',
+        items: [
+          '**Énoncer le sous-texte explicitement** — ce que chaque personnage veut mais ne dira pas, et pourquoi il ne le dira pas.',
+          '**"Pas de balises de dialogue sauf \'dit\'"** — retire le recours du modèle aux balises émotives ("dit-il avec colère") et force les répliques à porter l\'émotion.',
+          '**"Pas de beats d\'action"** — retire les didascalies que le modèle utilise pour remplir un dialogue vide ("Elle croisa les bras. Il soupira."). Les supprimer lors de la révision.',
+          '**Prompt de registre de genre :** "Écrire une dispute en 5 échanges entre [relation] dans [genre]. La dispute est en surface à propos de [sujet A], mais la vraie dispute porte sur [sujet B]. Ne pas nommer le sujet B."',
+          '**Prompt d\'interruption :** "Le personnage A est au milieu d\'une phrase quand le personnage B l\'interrompt. L\'écrire de sorte que l\'interruption révèle l\'état émotionnel de B sans que B dise ce qu\'il ressent."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Pour le dialogue multi-personnages, assigner à chaque personnage un "registre de parole" dans le prompt système avant de générer. Exemple : "Elena : formelle, précise, jamais de contractions. Marcus : décontracté, interrompt, commence ses phrases par \'Écoute,\' ou \'Le truc c\'est.\'". Le modèle maintiendra ces registres sans avoir à le lui rappeler à chaque tour.',
+          },
+        ],
+      },
+      template6: {
+        id: 'template-6',
+        title: 'Modèle 6 — Dialogue axé sur le sous-texte',
+        content:
+          'Définit ce que chaque personnage veut mais ne dira pas avant d\'écrire des répliques. Force le modèle à construire l\'esquive plutôt que d\'écrire des personnages qui disent exactement ce qu\'ils veulent dire.',
+        codeBlock: `Subtext (do not include this in the dialogue itself):
+[Character A] wants [X] but will not ask for it directly because [reason].
+[Character B] knows [X] is what A wants but pretends not to because [reason].
+
+Scene: [brief setting — 10 words max]
+Length: [number] exchanges
+
+Write the dialogue. No dialogue tags except "said". No internal monologue. No action beats.`,
+        codeLanguage: 'Modèle de dialogue',
+      },
+      template7: {
+        id: 'template-7',
+        title: 'Modèle 7 — Différenciation des voix (3 versions)',
+        content:
+          'Teste si les voix des personnages sont suffisamment distinctes pour être identifiées sans attribution. Si les trois versions sonnent pareil, ajouter des contraintes de registre de parole dans le prompt système avant de continuer la session.',
+        codeBlock: `Piece of news: [state the news in one sentence]
+
+Write this news delivered by three different characters. Each delivery should make the character's class, education level, and emotional relationship to the news immediately apparent. No exposition — voice only.
+
+Character 1: [Name — background and relationship to the news in one sentence]
+Character 2: [Name — background and relationship to the news in one sentence]
+Character 3: [Name — background and relationship to the news in one sentence]`,
+        codeLanguage: 'Modèle de dialogue',
+      },
+      worldbuilding: {
+        id: 'worldbuilding',
+        title: 'Modèles de construction de monde (Modèles 8–9)',
+        content:
+          '**Les prompts de construction de monde fonctionnent mieux avec la structure en anneaux concentriques : ancrer à un détail sensoriel, élargir vers l\'extérieur.** Commencer par "décris ma ville fantastique" produit un catalogue. Commencer par "l\'odeur du marché à l\'aube" produit un monde que le lecteur habite.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Les prompts de construction de monde ancrés à un seul détail sensoriel et structurés en anneaux concentriques (objet → pièce → bâtiment → rue → quartier) produisent une description de monde immersive au lieu de catalogues encyclopédiques.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Commencer par quelque chose de petit et de spécifique — le poids d\'une pièce de monnaie, l\'odeur d\'une forge, le son d\'un vendeur ambulant particulier — et demander au modèle d\'élargir à partir de là. S\'arrêter avant d\'atteindre le niveau de la ville. Plusieurs courts passages de construction de monde depuis des ancres différentes construisent un monde plus riche qu\'une seule description exhaustive.',
+          },
+        ],
+        items: [
+          '**Spécificité de l\'ancre** — plus l\'ancre est spécifique, plus le monde est spécifique. "L\'odeur du marché" est vague. "L\'odeur de cardamome et de chien mouillé du comptoir d\'épices au coin de la rue" produit un monde spécifique.',
+          '**Anneau d\'arrêt** — indiquer au modèle où arrêter l\'expansion (pièce, bâtiment, quartier, ville). Sans arrêt, il résumera le monde entier.',
+          '**"Ne pas nommer le monde"** — empêche le modèle d\'insérer des dumps de lore et le force à rendre la scène.',
+          '**"Ne pas expliquer l\'histoire"** — supprime le réflexe encyclopédique ; l\'histoire émerge des détails, pas des explications.',
+          '**Prompt de technologie implicite :** "Décrire une rue dans ton monde en nommant chaque objet qu\'un personnage touche dans une marche de 30 secondes. Pas de narration — noms d\'objets seulement, en séquence."',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Éviter les catalogues de construction de monde. Si ton prompt de construction de monde produit une liste à puces de faits sur ton monde, le prompt est trop abstrait. Chaque réponse qui n\'est pas de la prose rendue doit être repromptée avec une ancre concrète. Les catalogues sont un symptôme des prompts "décris mon monde" — passer à "montre-moi [lieu spécifique] depuis [PDV spécifique] à [moment spécifique]".',
+          },
+        ],
+      },
+      template8: {
+        id: 'template-8',
+        title: 'Modèle 8 — Anneaux concentriques de la construction de monde',
+        content:
+          'Ancre à un détail sensoriel et élargit vers l\'extérieur. Empêche les catalogues encyclopédiques et produit une description de monde immersive que le lecteur habite plutôt que lit.',
+        codeBlock: `Anchor: [one specific sensory detail — a smell, a sound, a texture]
+POV: [observer character or omniscient]
+Rings: expand from the anchor outward — object → room → building → street → district. Stop when you reach [ring level: room / building / street / district].
+Word ceiling: [200–400 words]
+
+Do not name the world. Do not explain the history. Show only what the POV character perceives in this moment.`,
+        codeLanguage: 'Modèle de construction de monde',
+      },
+      template9: {
+        id: 'template-9',
+        title: 'Modèle 9 — Culture de faction à travers les objets',
+        content:
+          'Révèle la construction de monde à travers la culture matérielle plutôt que par la description ou l\'exposition. Ce qu\'une faction possède, utilise et garde visible en dit plus au lecteur qu\'aucune explication de ses croyances.',
+        codeBlock: `Faction: [name and one-line description of their core belief or function]
+
+Describe the interior of a building used by this faction — only through the objects in the room. Do not describe the people. Do not state their beliefs. Do not explain the purpose of any object. 150 words max.`,
+        codeLanguage: 'Modèle de construction de monde',
+      },
+      styleTransfer: {
+        id: 'style-transfer',
+        title: 'Modèles de transfert de style (Modèles 10–11)',
+        content:
+          '**Le transfert de style fonctionne quand on nomme la technique, pas seulement l\'auteur.** "Écris comme Cormac McCarthy" produit une approximation générique — ponctuation rare et thèmes westerns. "Écris en utilisant la technique de McCarthy de propositions subordonnées imbriquées, noms concrets uniquement, pas de balises de dialogue" produit quelque chose avec une fidélité structurelle réelle. Pour un cadre plus complet sur la structuration des prompts qui produisent des sorties créatives spécifiques, voir [le cadre CRAFT](/frameworks/craft?lang=fr).',
+        items: [
+          '**Nommer les techniques spécifiquement** — "prose épurée" est vague ; "phrases déclaratives courtes, noms concrets, pas de modifieurs" est actionnable.',
+          '**Coller un échantillon** — 2–3 phrases de la vraie prose de l\'auteur active la correspondance de schémas dans le modèle plus efficacement que la description seule.',
+          '**"Ne pas imiter l\'échantillon — répliquer la technique"** — empêche la paraphrase directe du passage échantillon.',
+          '**Transfert de temps et de PDV :** "Réécrire le passage suivant : changer de troisième personne passé à première personne présent. Maintenir tous les détails sensoriels concrets. Ne pas ajouter de nouvelles informations d\'intrigue. 200 mots max."',
+          '**Calibrage de registre :** demander au modèle de nommer les techniques qu\'il voit dans un passage fourni avant de lui demander de les répliquer — cette étape de mise en évidence améliore la précision du nommage de techniques.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Mistral Large pour le transfert de style. Mistral Large maintient un registre de prose cohérent sur de longues générations mieux que la plupart des modèles exécutables localement. Pour les tâches de transfert de style où la cohérence du registre compte sur plusieurs paragraphes, préférer Mistral Large à Llama 3.3 70B. Pour le transfert de style en courtes rafales (moins de 300 mots), tout modèle 30B+ est adéquat.',
+          },
+        ],
+      },
+      template10: {
+        id: 'template-10',
+        title: 'Modèle 10 — Transfert de style par technique nommée',
+        content:
+          'Nomme des techniques spécifiques plutôt que le seul nom de l\'auteur. Produit une fidélité structurelle plutôt qu\'un pastiche superficiel.',
+        codeBlock: `Target style: [Author name]
+Techniques to replicate (name 2–3 specifically):
+1. [Technique — e.g., "sentence fragments for interiority"]
+2. [Technique — e.g., "concrete Anglo-Saxon vocabulary, no Latinate abstractions"]
+3. [Technique — e.g., "em dashes for interruption, never ellipsis"]
+
+Sample passage (2–3 sentences of the author's actual prose):
+"[paste sample]"
+
+Now write [scene description] using these techniques. 200 words. Do not mimic the sample — replicate the technique.`,
+        codeLanguage: 'Modèle de transfert de style',
+      },
+      template11: {
+        id: 'template-11',
+        title: 'Modèle 11 — Transfert de registre de genre',
+        content:
+          'Déplace la prose existante entre les registres de genre sans modifier les informations d\'intrigue. Utile pour trouver le bon registre pour une scène ou en révision quand le registre ne correspond pas au genre.',
+        codeBlock: `Source register: [thriller / romance / horror / literary fiction / commercial fiction / etc.]
+Target register: [literary fiction / commercial fiction / genre X]
+Specific changes: [longer sentences / more interiority / less action description / etc.]
+
+Rewrite the following passage in [target register]. Do not change any plot information. Word ceiling: same length as input.
+
+[paste passage]`,
+        codeLanguage: 'Modèle de transfert de style',
+      },
+      revision: {
+        id: 'revision',
+        title: 'Modèles de révision (Modèle 12)',
+        content:
+          '**Les prompts de révision nécessitent un problème nommé, pas une instruction générale d\'amélioration.** "Rends ça mieux" produit des modifications superficielles minimales. "Éliminer toute construction passive ; chaque phrase doit commencer par un nom concret ou un verbe actif fort" produit un changement structurel mesurable.',
+        items: [
+          '**Toujours coller le brouillon, pas une description.** Les prompts de révision ne fonctionnent que quand on colle le vrai texte du brouillon. Décrire le problème sans montrer la prose produit des conseils génériques plutôt qu\'un passage réécrit.',
+          '**Nommer le problème spécifique.** "Réécrire" ne suffit pas. Identifier un problème structurel : voix passive, surcharge d\'adverbes, changement de PDV, remplissage ou dump d\'info.',
+          '**Correction de changement de PDV :** "Le passage suivant contient des violations de PDV — on entend les pensées de plusieurs personnages. Le réécrire strictement à la troisième rapprochée [Nom du personnage]. Retirer tout accès intérieur aux autres personnages."',
+          '**Naturalisation du dialogue :** "Le dialogue suivant sonne écrit. Réécrire : les personnages peuvent s\'interrompre, parler en fragments, se parler en parallèle. Garder les mêmes informations échangées."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Toujours coller le brouillon, pas une description. Les prompts de révision ne fonctionnent que quand on colle le vrai texte du brouillon. Décrire le problème sans montrer la prose produit des conseils génériques plutôt qu\'un passage réécrit. Coller le paragraphe ou l\'échange spécifique, nommer le problème spécifique et spécifier le plafond de mots pour la réécriture.',
+          },
+        ],
+      },
+      template12: {
+        id: 'template-12',
+        title: 'Modèle 12 — Boîte à outils de révision (compression, voix passive, réduction des adverbes)',
+        content:
+          'Trois instructions de révision qui nomment le problème spécifique. Exécuter chacune séparément — les combiner toutes les trois dans un seul prompt produit des résultats incohérents car le modèle priorise une instruction par rapport aux autres.',
+        codeBlock: `--- COMPRESSION ---
+The following scene is [N] words. Rewrite it in [N/2] words. Preserve the emotional beat and all sensory anchors. Cut dialogue tags, action beats, and transitions first:
+
+[paste scene]
+
+---
+
+--- PASSIVE VOICE ELIMINATION ---
+Rewrite the following paragraph: every sentence must use active voice. If the subject is not clear, invent a concrete subject. 150 words max:
+
+[paste paragraph]
+
+---
+
+--- ADVERB REDUCTION ---
+Rewrite the following: remove every adverb. Replace each adverb + weak verb pair with a single strong verb. Do not add new plot information:
+
+[paste paragraph]`,
+        codeLanguage: 'Modèle de révision',
+      },
+      editorialTemplates: {
+        id: 'editorial-templates',
+        title: 'Modèles éditoriaux (Modèles 13–15)',
+        content:
+          '**Les modèles éditoriaux opèrent au niveau du manuscrit plutôt qu\'au niveau de la scène.** Ils aident à détecter les erreurs de continuité avant qu\'elles ne s\'accumulent, à identifier les problèmes de rythme sur un chapitre complet, et à redistribuer les blocs d\'exposition en prose rendue. Les exécuter après la rédaction, pas pendant.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Exécuter les modèles éditoriaux sur les brouillons terminés, pas sur les travaux en cours. La Vérification de cohérence de l\'intrigue nécessite au moins 3 scènes ; l\'Analyse du rythme nécessite un chapitre complet. Les exécuter sur des passages incomplets produit des faux positifs et gaspille la fenêtre de contexte.',
+          },
+        ],
+      },
+      template13: {
+        id: 'template-13',
+        title: 'Modèle 13 — Vérification de la cohérence de l\'intrigue',
+        content:
+          'Identifie les erreurs de continuité avant qu\'elles ne s\'accumulent sur les chapitres. Exécuter après chaque 3–4 nouvelles scènes pour détecter les erreurs pendant qu\'elles sont encore faciles à corriger.',
+        codeBlock: `[paste the last 3 scenes here]
+
+Read these three scenes carefully. List every continuity error you detect: changed physical descriptions (eye colour, hair, height), location inconsistencies, timeline conflicts, object appearances that contradict earlier scenes, character knowledge they should not yet have.
+
+Output only a flag list — one sentence per flag, 150 words maximum total. Do not summarise the scenes. Do not suggest fixes. Flag only.`,
+        codeLanguage: 'Modèle éditorial',
+      },
+      template14: {
+        id: 'template-14',
+        title: 'Modèle 14 — Analyse du rythme',
+        content:
+          'Cartographie le rythme sur un chapitre pour identifier les zones plates. Utile quand un chapitre se lit correctement au niveau de la phrase mais semble lent globalement — les marques de rythme montrent d\'où vient le ralentissement.',
+        codeBlock: `[paste chapter here]
+
+Read this chapter and mark each paragraph with: FAST / MEDIUM / SLOW.
+
+After marking, list only the SLOW paragraphs with a one-sentence diagnosis for each: what is causing the pacing to drag (over-description, dialogue repetition, excessive interiority, unnecessary backstory insertion, etc.).
+
+Output format: Paragraph [number]: [SLOW] — [one-sentence diagnosis]
+No other commentary. No summaries. Diagnosis only.`,
+        codeLanguage: 'Modèle éditorial',
+      },
+      template15: {
+        id: 'template-15',
+        title: 'Modèle 15 — Lissage de l\'exposition',
+        content:
+          'Redistribue l\'exposition en bloc d\'information sur le dialogue, l\'action et le détail sensoriel sans ajouter ni supprimer d\'information. À utiliser quand un paragraphe se lit comme un mécanisme de livraison de faits plutôt que comme une scène.',
+        codeBlock: `[paste paragraph with exposition]
+
+This paragraph delivers exposition as a block. Rewrite it by distributing the same information across three channels:
+1. A line of dialogue that reveals one piece of information through character reaction (not explanation).
+2. One action beat that implies one piece of information without stating it.
+3. One sensory detail that shows one piece of information without naming it.
+
+Word ceiling: same length as the input paragraph. Do not add any new information. Do not remove any information that was in the original.`,
+        codeLanguage: 'Modèle éditorial',
+      },
+      models: {
+        id: 'models',
+        title: 'Recommandations de modèles pour l\'écriture de fiction',
+        content:
+          '**Le choix du modèle compte moins que la structure du prompt, mais il compte.** Un prompt bien structuré sur un modèle 7B surpassera un prompt vague sur un modèle 70B — mais à prompts équivalents, les modèles plus grands maintiennent mieux l\'adhérence aux contraintes sur les longues générations et différencient les voix des personnages plus fiablement.',
+        columns: ['Tâche', 'Modèle recommandé', 'Pourquoi'],
+        rows: [
+          { 'Tâche': 'Écriture de scènes générale', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Bon suivi des instructions, cohérence narrative, meilleur polyvalent pour la prose contrainte' },
+          { 'Tâche': 'Transfert de style', 'Modèle recommandé': 'Mistral Large', 'Pourquoi': 'Registre de prose cohérent sur les longues générations ; meilleure fidélité au registre parmi les modèles exécutables localement' },
+          { 'Tâche': 'Dialogue / voix des personnages', 'Modèle recommandé': 'Command R+ 104B ou Hermes 3', 'Pourquoi': 'Registre de parole naturaliste ; différenciation fiable des voix sur les échanges longs' },
+          { 'Tâche': 'Construction de monde', 'Modèle recommandé': 'Qwen3 32B', 'Pourquoi': 'Bon pour la génération de détails structurés ; maintient fiablement le schéma d\'expansion en anneaux concentriques' },
+          { 'Tâche': 'Révision / correction', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Meilleur pour suivre des instructions de réécriture structurelles spécifiques sur un paragraphe entier' },
+          { 'Tâche': 'Fiction sombre / non censurée', 'Modèle recommandé': 'Hermes 3 Llama 3.3', 'Pourquoi': 'Fine-tuné pour moins de refus de contenu ; aucune restriction des conditions d\'utilisation cloud lors de l\'exécution locale' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Minimums matériels pour les modèles de fiction. Llama 3.3 70B en quantification Q4 nécessite ~40 Go de VRAM ou mémoire unifiée (NVIDIA RTX 4090 24 Go double GPU, ou Apple M5 Max 64 Go). Qwen3 32B en Q4 tourne sur 20–24 Go. Mistral Large en Q4 nécessite ~24 Go. Pour les rigs de 16 Go, Qwen3 14B et Mistral Small sont le plafond pratique — les deux suivent les modèles de scènes de façon fiable pour des longueurs de génération courtes.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes',
+        items: [
+          '**Pas de plafond de mots.** Sans plafond, le modèle rembourre — il ajoute des paragraphes de transition, des beats d\'action et des phrases de résumé jusqu\'à manquer de tokens. Toujours fixer un plafond.',
+          '**Listes de traits au lieu de contradictions.** Une liste de cinq traits produit un personnage qui illustre chaque trait à son tour. Une contradiction entre deux traits produit un personnage que le lecteur doit interpréter. Utiliser la structure de contradiction.',
+          '**"Écris comme [Auteur]" sans noms de techniques.** Le transfert de style par nom d\'auteur seul produit un pastiche de genre, pas une fidélité de technique. Nommer les techniques spécifiques à répliquer.',
+          '**Pas d\'ancre de PDV.** Un prompt de scène sans PDV nommé produit des changements de PDV par défaut — le modèle accède aux états intérieurs de tous les personnages parce que rien ne l\'en empêche. Toujours nommer le personnage PDV.',
+          '**Prompts de révision sans brouillon.** Demander au modèle d\'"améliorer le rythme" d\'une scène qu\'on décrit mais ne montre pas produit des conseils généraux. Coller le passage réel.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          'Fiche modèle Llama 3.3 70B et benchmarks de suivi des instructions — [Meta AI Research](https://ai.meta.com)',
+          'Rapport technique Qwen3 32B — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
+          'Documentation modèle Mistral Large — [Mistral AI](https://mistral.ai)',
+          'Spécification Command R+ 104B — [Cohere](https://cohere.com)',
+          'Méthodologie de fine-tune Hermes 3 — [Nous Research](https://nousresearch.com)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Un LLM local peut-il remplacer un partenaire d\'écriture humain pour la rédaction de fiction ?',
+            a: 'Pour des sous-tâches spécifiques — générer un premier brouillon de scène, produire des variations de dialogue, passer des détails de construction de monde — les LLM locaux sont des partenaires de rédaction rapides et fiables. Ils ne remplacent pas la pensée stratégique d\'un co-auteur humain : ils ne peuvent pas évaluer si la scène correspond à l\'arc narratif, si le choix du personnage est émotionnellement mérité, ou si le rythme du chapitre fonctionne. Les utiliser pour les tâches de génération ; garder le jugement humain pour les décisions structurelles.',
+          },
+          {
+            q: 'Qu\'est-ce qui est le mieux pour la fiction : Ollama, LM Studio ou SillyTavern ?',
+            a: 'Pour les modèles de prompts structurés où on envoie un prompt complet et reçoit une complétion, Ollama (CLI ou API) et LM Studio (endpoint compatible OpenAI) sont équivalents — l\'interface n\'affecte pas la qualité de sortie. SillyTavern apporte de la valeur pour le roleplay multi-tours et la persistance de fiches de personnages, mais pour les prompts d\'écriture de scènes et de révision, une simple interface de chat ou un appel API est suffisant.',
+          },
+          {
+            q: 'Ces modèles de prompts fonctionnent-ils sur les petits modèles (7B–14B) ?',
+            a: 'Oui, mais l\'adhérence aux contraintes se dégrade après ~150 tokens. Les petits modèles suivent les 2–3 premières contraintes d\'un prompt en 5 parties, puis dérivent vers leur registre de base. Pour les modèles 7B–14B : réduire le plafond de mots (max 150 mots), utiliser moins de contraintes simultanées (3 parties au lieu de 5), et s\'attendre à réviser ou repromter plus fréquemment. Qwen3 14B est le modèle de petite taille le plus solide testé pour le suivi de prompts spécifiques à la fiction.',
+          },
+          {
+            q: 'Comment maintenir la cohérence de la voix des personnages sur une session de roman complet ?',
+            a: 'Construire une fiche de personnage en texte brut (nom, trait dominant, comportement contradictoire, registre de parole, 3 exemples de répliques) et la coller dans le message système au début de la session. Pour les sessions longues, résumer les scènes terminées dans un document "contexte de session" courant et inclure les 200–300 derniers mots de la scène la plus récente dans chaque tour utilisateur. Cela combat la dérive de contexte sans dépasser la fenêtre de contexte.',
+          },
+          {
+            q: 'Quel est le meilleur LLM local pour écrire de la fiction sombre ou mature ?',
+            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
+          },
+          {
+            q: 'Puis-je utiliser ces modèles dans SillyTavern ou Agnai ?',
+            a: 'Oui. Tous les modèles de ce guide sont en texte brut — ils fonctionnent dans n\'importe quelle interface qui passe du texte à un modèle local. Dans SillyTavern, placer la contrainte de genre et de PDV dans le champ de prompt système ; utiliser le tour utilisateur pour les instructions spécifiques à la scène. Dans Agnai, la configuration est équivalente. Les modèles sont indépendants de l\'interface.',
+          },
+          {
+            q: 'Quelle longueur doit avoir un prompt de scène ?',
+            a: 'Un prompt de scène de 50–100 mots produit les meilleurs résultats en pratique. Les prompts plus longs (200+ mots) peuvent fonctionner pour les scènes complexes mais augmentent le risque que le modèle ignore certaines contraintes. Pour les scènes complexes, décomposer le prompt en deux passes : d\'abord générer la scène, puis exécuter un prompt de révision qui ajoute la contrainte retenue.',
+          },
+          {
+            q: 'Les prompts de transfert de style violent-ils les droits d\'auteur ?',
+            a: 'Répliquer la technique d\'un auteur (structure des phrases, choix de ponctuation, registre narratif) n\'est pas une violation des droits d\'auteur — le style n\'est pas protégeable. Reproduire des passages verbatim substantiels d\'un texte sous droits d\'auteur est une violation. Les modèles de ce guide utilisent des échantillons de 2–3 phrases comme ancres de technique, ce qui s\'inscrit dans le cadre standard de l\'usage équitable éducatif, et la sortie générée réplique la technique plutôt que le contenu.',
+          },
+          {
+            q: 'L\'utilisation d\'un LLM local pour la fiction est-elle concernée par le RGPD ?',
+            a: 'Un LLM s\'exécutant entièrement en local ne transfère aucune donnée vers un service tiers — tes textes, tes personnages et tes sessions de génération restent sur ta machine. Il n\'y a donc pas de responsable de traitement au sens de l\'article 4 du RGPD ni de sous-traitant à contractualiser. Si tu utilises tes générations locales pour traiter des données à caractère personnel de personnes réelles (par exemple, rédiger des textes qui mentionnent des individus identifiables), les obligations de base du RGPD s\'appliquent. Pour une fiction purement fictive sans personnages réels identifiables, l\'usage local est sans incidence au regard du RGPD.',
+          },
+          {
+            q: 'Quelles limites légales s\'appliquent en France à la génération de contenu sensible avec un LLM local ?',
+            a: 'L\'hébergement local ne modifie pas le droit applicable à l\'artefact produit. En France, l\'article 227-23 du Code pénal (représentation de mineurs à caractère pornographique) constitue une interdiction absolue — la génération locale, le cadrage fictionnel ou l\'usage privé ne constituent pas des exceptions. L\'article 24 de la loi du 29 juillet 1881 interdit l\'incitation à la haine ou à la discrimination. Pour les prompts de transfert de style : répliquer la technique d\'un auteur est autorisé ; reproduire des passages verbatim substantiels peut violer le droit d\'auteur. La génération locale de fiction standard entre personnages adultes fictifs ne fait pas l\'objet d\'une prohibition générale.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecture complémentaire',
+        items: [
+          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) — comparatif de modèles pour la génération narrative, les paramètres de sampling et les options non censurées.',
+          '[SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=fr) — comparatif d\'interfaces pour le roleplay avec fiches de personnages et la fiction collaborative.',
+          '[Comment utiliser un LLM local pour le scénario et la rédaction de roman](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=fr) — workflows de rédaction long format, gestion des chapitres et stratégies de fenêtre de contexte.',
+          '[LLM locaux non censurés pour l\'écriture créative : éthique et configuration](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=fr) — quels modèles utiliser pour le contenu mature, implications de confidentialité et cadre d\'utilisation responsable.',
+          '[Chain-of-Thought Prompting expliqué](/prompt-engineering/chain-of-thought-prompting?lang=fr) — prompts de raisonnement structuré applicables à la construction d\'intrigue et à la planification de scènes.',
+          '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=fr) — quand inclure des exemples dans les prompts et quand les retenir pour les tâches de fiction.',
+        ],
+      },
+    },
+  },
 }
