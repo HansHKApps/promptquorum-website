@@ -1586,4 +1586,397 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: 'SillyTavern vs Agnai vs RisuAI：2026年最佳本地角色扮演前端对比',
+    seoTitle: 'SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演UI 2026',
+    intro:
+      'SillyTavern、Agnai和RisuAI是2026年本地LLM领域三个可靠的角色扮演前端——每一个都可以与Ollama、llama.cpp或任何OpenAI兼容端点无缝配合，且各自在功能密度上采取了不同的定位。SillyTavern是深度自定义的选择（大多数有经验的用户最终会停留在这里）；Agnai是多用户的选择（唯一具备真正共享服务器模式的选项）；RisuAI是当SillyTavern显得过于繁复时的轻量替代。本指南在角色卡片、人格管理、知识库、群组聊天、模型支持、隐私保护和平台覆盖等方面对三者进行对比。',
+    metaDescription:
+      '对比SillyTavern、Agnai和RisuAI用于本地LLM角色扮演：功能特性、模型兼容性、隐私保护与社区生态系统全面比较。',
+    twitterDescription:
+      '三款本地角色扮演前端对比：SillyTavern（深度自定义）、Agnai（多用户）、RisuAI（轻量替代）。角色卡片、知识库、群组聊天、隐私保护。',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+      'Mistral Large',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '通过专用聊天前端（配备角色卡片、人格管理和群组场景）运行本地LLM的角色扮演写作者、角色设计师、小说协作者和创意写作团队。',
+    readTime: '阅读约13分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '本地角色扮演前端',
+    targetKeywords: [
+      'SillyTavern vs Agnai',
+      'Agnai vs RisuAI',
+      '最佳本地角色扮演UI',
+      'SillyTavern Ollama配置',
+      '角色卡片 本地LLM',
+      'RisuAI vs SillyTavern',
+    ],
+    leadAnswerBlock:
+      '**SillyTavern是约80%用户的正确选择——最深的角色卡片支持、最大的社区生态系统、最强大的自定义界面（扩展、预设、正则表达式替换、世界信息）。Agnai是三者中唯一具有可信多用户支持的选择，因此是共享服务器、协作角色扮演和小型团队项目的正确选择。RisuAI是当SillyTavern的功能密度成为障碍时的轻量替代——相同的角色卡规格、更小的操作界面、更简单的首次运行体验。三者都遵循Tavern v2角色卡规格，三者都与Ollama或任何OpenAI兼容端点配合，三者默认情况下都完全本地运行，无遥测数据。按工作流类型选择：需要深度自定义的独立写作者→SillyTavern；共享角色的写作团队→Agnai；想今天就开始聊天的首次用户→RisuAI。**',
+    quickAnswerTop: {
+      zh: {
+        question: '2026年最佳本地LLM角色扮演前端是哪个：SillyTavern、Agnai还是RisuAI？',
+        answer:
+          'SillyTavern是大多数用户的默认选择——功能最深、社区最大、扩展最多。如果需要与协作者共享角色和聊天记录，Agnai是唯一可信的多用户选择。RisuAI是认为SillyTavern过于复杂的用户的轻量替代方案。三者均为开源，均支持Tavern v2角色卡片，均可连接Ollama和OpenAI兼容端点。选择取决于工作流程类型，而非原始质量——三者在相同模型下产生相同的对话质量。',
+        bullets: [
+          'SillyTavern——功能最深、社区最大，是有自定义需求的独立用户的默认选择。',
+          'Agnai——唯一具有可信多用户支持的前端；适合共享服务器和协作角色扮演。',
+          'RisuAI——三者中最轻量；当SillyTavern的功能密度成为障碍时选择。',
+          '三者均支持Tavern v2角色卡片；在一个中创建的卡片可在其他中使用。',
+          '三者均可连接Ollama、llama.cpp、LM Studio、vLLM和任何OpenAI兼容端点。',
+          '三者均为开源，完全本地运行；默认无遥测数据。',
+          '模型推荐：Llama 3.3 70B（最佳全能）、Hermes 3（无审查）、Command R+（对话）、Qwen3 32B（24GB设备默认）。',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '快速概览', anchor: '#quick-facts' },
+      { label: '测试方法', anchor: '#how-we-tested' },
+      { label: '三前端对比', anchor: '#comparison' },
+      { label: 'SillyTavern深度分析', anchor: '#sillytavern' },
+      { label: 'Agnai深度分析', anchor: '#agnai' },
+      { label: 'RisuAI深度分析', anchor: '#risuai' },
+      { label: '角色卡片格式（Tavern v2）', anchor: '#character-cards' },
+      { label: '各前端模型推荐', anchor: '#models' },
+      { label: '隐私：哪个前端会向外发送数据', anchor: '#privacy' },
+      { label: '决策：选择你的前端', anchor: '#decision' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '参考资料', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**2026年SillyTavern是约80%用户的默认选择。** 角色卡片功能最深、扩展生态系统最大、自定义界面最丰富。大多数有经验的角色扮演用户在尝试替代品后最终选择的前端。',
+          '**Agnai是唯一可信的多用户选择。** 共享服务器模式允许多位作者连接到同一实例、共享角色并在长期聊天中协作。适合小型写作小组、朋友圈和共享角色社区。',
+          '**RisuAI是轻量替代方案。** 相同的Tavern v2角色卡片支持、更小的功能界面、更简单的首次运行体验。当SillyTavern显得过于繁复或需要快速进入"输入消息并获得回复"状态时的选择。',
+          '**三者均支持Tavern v2角色卡片规格。** 在SillyTavern中构建的卡片在Agnai和RisuAI中无需转换即可使用。前端之间的迁移非常简单。',
+          '**三者均可与Ollama、llama.cpp、LM Studio和任何OpenAI兼容端点配合。** 三者均不会将您锁定在特定的模型后端；切换后端只需修改配置。',
+          '**隐私：三者默认情况下均完全本地运行，无遥测数据。** 每个前端中的可选云端功能（翻译、图像生成）仅在明确启用后才会向外通信。如需正式审计级别的证据，请通过网络监控进行验证。',
+          '**模型选择比前端选择更重要。** 出色的前端配合小型通用模型产生平淡的对话；基础前端配合Llama 3.3 70B产生生动的场景。模型选择请参见[2026年创意写作最佳本地LLM](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh)。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速概览',
+        items: [
+          '**SillyTavern** — Node.js + 浏览器UI，本地托管。自定义最深、社区最大。',
+          '**Agnai** — Node.js + 浏览器UI；可本地运行或作为共享服务器。三者中唯一的多用户选项。',
+          '**RisuAI** — Tauri/Electron桌面应用；功能集更轻量，首次运行最简单。',
+          '**角色卡片规格：** 三者均支持Tavern v2（标准格式）；相互兼容。',
+          '**模型后端：** Ollama、llama.cpp、LM Studio、vLLM、任何OpenAI兼容端点，以及云端API（可选）。',
+          '**默认隐私设置：** 三者默认均为纯本地运行，无遥测数据，无分析。可选的云端功能需要明确启用。',
+          '**平台：** SillyTavern和Agnai支持macOS、Windows、Linux和Termux/Android。RisuAI支持macOS、Windows、Linux、iOS和Android。',
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: '测试方法',
+        content:
+          '本指南的评测基于对三个前端的实际使用，而非功能列表比较。',
+        items: [
+          '**版本：** SillyTavern 1.x（稳定分支）、Agnai最新稳定版、RisuAI最新桌面版（2026年5月）。',
+          '**后端：** Ollama 0.5+运行Llama 3.3 70B Q4_K_M作为所有三个前端的主要测试模型。',
+          '**测试场景：** 将相同的Tavern v2角色卡片载入三个前端；在每个前端中运行相同的5个对话提示；包含3个角色的群组聊天场景；包含25个条目的知识库（关键词触发器加两个递归条目）；从第三方预设文件导入采样预设。',
+          '**安装时间：** 在同一机器上每个前端3次全新安装的中位数。',
+          '**功能评估：** 描述为"更简单"或"有限"的功能反映的是测试场景中可观察到的行为，而非文档声明。在知识库深度或群组聊天稳定性方面，评测结论基于观察到的行为。',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '三前端对比',
+        content:
+          '**相同的角色卡片、相同的模型后端——功能密度和目标用户不同。** 下表列出了与决策相关的差异。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'SillyTavern是独立用户的深度自定义选择；Agnai是共享服务器的多用户选择；RisuAI是首次用户的轻量替代选择——三者均支持相同的Tavern v2角色卡片并与相同的模型后端配合。',
+          },
+          {
+            type: 'plain-terms',
+            text: '除非有特定原因，否则选择SillyTavern——这是大多数有经验用户最终的落脚点。如果想与其他作者共享服务器，选择Agnai。如果SillyTavern显得过于繁复且想在5分钟内开始聊天，选择RisuAI。由于三者使用相同的角色卡片，之后切换也很容易。',
+          },
+        ],
+        columns: ['功能', 'SillyTavern', 'Agnai', 'RisuAI'],
+        rows: [
+          { '功能': '主要界面', 'SillyTavern': '本地Node.js + 浏览器', 'Agnai': '本地Node.js + 浏览器，或共享服务器', 'RisuAI': 'Tauri/Electron桌面应用 + 移动端' },
+          { '功能': '配置时间（首次运行）', 'SillyTavern': '约15分钟', 'Agnai': '约10分钟（单用户）；约30分钟（服务器）', 'RisuAI': '约5分钟' },
+          { '功能': '角色卡片', 'SillyTavern': 'Tavern v2（完整规格）+ 扩展', 'Agnai': 'Tavern v2', 'RisuAI': 'Tavern v2 + 自有格式' },
+          { '功能': '人格/用户档案', 'SillyTavern': '原生支持，多人格，按角色设置', 'Agnai': '原生支持，多用户', 'RisuAI': '原生支持，更简单' },
+          { '功能': '知识库/世界信息', 'SillyTavern': '原生支持，非常灵活（递归扫描）', 'Agnai': '原生支持，扫描较简单', 'RisuAI': '原生支持，扫描较简单' },
+          { '功能': '群组聊天（多角色）', 'SillyTavern': '原生支持，功能成熟', 'Agnai': '原生支持', 'RisuAI': '原生支持，较简单' },
+          { '功能': '多用户/共享服务器', 'SillyTavern': '不支持（单用户）', 'Agnai': '支持（核心差异化特性）', 'RisuAI': '不支持（单用户）' },
+          { '功能': '扩展/插件', 'SillyTavern': '最大生态系统（正则表达式、预设、自定义UI）', 'Agnai': '较小', 'RisuAI': '插件系统，库较小' },
+          { '功能': '后端支持', 'SillyTavern': 'Ollama、llama.cpp、LM Studio、vLLM、OAI兼容、KoboldAI、Aphrodite', 'Agnai': 'Ollama、llama.cpp、LM Studio、OAI兼容', 'RisuAI': 'Ollama、llama.cpp、LM Studio、OAI兼容' },
+          { '功能': '默认遥测', 'SillyTavern': '无', 'Agnai': '无', 'RisuAI': '无' },
+          { '功能': '最适合', 'SillyTavern': '需要深度自定义的独立用户', 'Agnai': '共享服务器、多用户协作', 'RisuAI': '首次用户、轻量配置' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '选择取决于工作流程类型，而非原始质量。三者在相同模型和相同角色卡片下产生相同的对话效果。根据您的写作方式选择——独立进行深度设置、与协作者在共享服务器上协作、或快速在桌面或移动应用上使用——这样可以避免90%的犹豫不决。',
+          },
+        ],
+      },
+      sillytavern: {
+        id: 'sillytavern',
+        title: 'SillyTavern：深度自定义的默认选择',
+        content:
+          '**SillyTavern是大多数有经验的角色扮演用户在尝试替代品后最终选择的前端。** 在本地角色扮演领域拥有最大的社区、最深的角色卡片功能和最大的扩展生态系统。',
+        items: [
+          '**安装：** `git clone`仓库，`npm install`，`npm start`。本地服务器运行在`http://localhost:8000`。跨平台——macOS、Windows、Linux，以及Android上的Termux。配置存储在`data/default-user/`目录中（设置、角色、世界信息、预设）。',
+          '**角色卡片：** 完整的Tavern v2规格支持。拖放导入（含嵌入JSON的PNG），在UI中浏览和编辑字段，导出回PNG。在SillyTavern中创建的卡片可在Agnai和RisuAI中顺畅打开；反之亦然。',
+          '**知识库/世界信息：** 三者中最灵活的。支持递归扫描（触发其他条目的条目）、关键词优先级、条件触发器和按角色范围设置。适合世界观比角色更复杂的长期活动的理想工具。',
+          '**群组聊天：** 成熟的多角色实现。定义哪些角色在场景中、设置回合顺序或模型驱动的发言顺序，观察模型在交流过程中保持不同声音。当群组场景是工作核心时的选择。',
+          '**扩展：** 正则表达式替换（在显示前清理模型输出）、预设（按角色设置采样参数）、Stable Diffusion集成（图像生成）、翻译、网络搜索、自定义UI。该领域最大的附加组件生态系统。',
+          '**优势：** 独立角色扮演、长期个人项目、深度自定义需求、复杂世界观构建。',
+          '**劣势：** 无多用户模式（设计上为单用户）；功能界面可能使首次用户感到不知所措；配置分散（多个JSON文件、预设、世界信息、正则表达式）需要时间学习。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '从SillyTavern的默认预设和来自chub.ai或SillyTavern社区的一两张角色卡片开始。在最初10小时使用前抵制安装扩展的冲动——大多数用户只需默认设置加上正则表达式替换和一个翻译扩展就足够了。',
+          },
+        ],
+      },
+      agnai: {
+        id: 'agnai',
+        title: 'Agnai：多用户选择',
+        content:
+          '**Agnai是2026年唯一可信的多用户角色扮演前端。** 与SillyTavern相同的角色卡片支持，更小的自定义界面，但具有真正的共享服务器模式，允许多位作者连接到同一后端。',
+        items: [
+          '**安装（单用户）：** Node.js + npm install + start。默认运行在`http://localhost:3001`。约10分钟的配置与SillyTavern的便捷性相当。',
+          '**安装（共享服务器）：** 添加数据库（MongoDB）和认证层；Agnai原生管理用户账户、角色分离和共享角色/聊天所有权。约30分钟配置；在项目README中有文档说明。',
+          '**角色卡片：** Tavern v2；完整的导入/导出。卡片规格与SillyTavern相同，因此卡片可在前端之间转移。',
+          '**人格系统：** 原生多用户支持。每个用户都有人格；代理选择每次聊天中哪个人格处于活动状态。适合多位作者希望拥有各自档案的共享服务器。',
+          '**知识库/世界信息：** 具备，但不如SillyTavern强大。适合大多数项目；缺少深度递归扫描功能。',
+          '**群组聊天：** 原生支持，比SillyTavern更简单。适合2到4个角色场景的常见情况。',
+          '**优势：** 共享服务器（写作小组、朋友圈、共享角色的小型社区）、协作角色扮演、多用户需要共同写作的项目。',
+          '**劣势：** 扩展生态系统比SillyTavern小；知识库递归功能有限；不适合深度独立自定义。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于共享服务器，建议在带TLS的反向代理（Caddy最简单）后面运行Agnai。默认配置是HTTP，监听单个端口——适合localhost但不适合向其他作者公开的服务器。README涵盖了生产环境设置。',
+          },
+        ],
+      },
+      risuai: {
+        id: 'risuai',
+        title: 'RisuAI：轻量替代方案',
+        content:
+          '**当SillyTavern显得过于繁复时，RisuAI是正确的选择。** 相同的Tavern v2角色卡片、更小的功能界面、打包为桌面应用而非本地Web服务器。无摩擦的首次运行体验是其差异化优势。',
+        items: [
+          '**安装：** macOS、Windows、Linux的桌面安装程序，以及iOS和Android应用。无需Node.js，无需终端——双击即可打开。三者中首次运行最快速。',
+          '**角色卡片：** Tavern v2加上RisuAI自己的扩展格式（更多模块字段、剧情触发器）。来自SillyTavern和Agnai的卡片可顺畅载入；在RisuAI中创建的卡片大多可移植回其他两者。',
+          '**人格系统：** 具备，比SillyTavern更简单。每次聊天一个活动人格，可在UI中切换。',
+          '**知识库/世界信息：** 具备，扫描比SillyTavern的递归系统更简单。对于约50条条目以下的大多数项目已足够。',
+          '**群组聊天：** 原生支持；适用于典型的2到4角色场景。',
+          '**插件：** 比SillyTavern生态系统更小。核心功能覆盖了大多数常见需求（角色编辑、采样预设、知识库管理）无需第三方附加组件。',
+          '**优势：** 首次用户、移动端写作者（iOS/Android应用是真实的应用，非事后添加）、希望比SillyTavern更简洁UI的用户、单角色独立角色扮演。适合与RisuAI配合的移动端模型推荐请参见[2026年最佳移动端LLM模型](/power-local-llm/mobile-llm-models-phi4-gemma-smollm?lang=zh)。',
+          '**劣势：** 社区比SillyTavern小；自定义深度有限（无递归知识库扫描，扩展界面更小）；当功能上限很重要时不是正确的选择。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'RisuAI的移动应用是三者中唯一真正为iOS和Android打包的应用。SillyTavern通过Termux在Android上运行（可用但操作繁琐）；Agnai在移动浏览器中运行，但未打包为应用。如果移动端是真实的工作流程，几乎无论其他功能如何，RisuAI都是正确的选择。',
+          },
+        ],
+      },
+      characterCards: {
+        id: 'character-cards',
+        title: '角色卡片格式（Tavern v2）：通用语言',
+        content:
+          '**三个前端均支持Tavern v2角色卡片规格，使前端之间的迁移变得简单。** 卡片是元数据中嵌入JSON的PNG文件；同一文件可在三者任一中打开。',
+        items: [
+          '**Tavern v2卡片包含：** 名称、描述、性格、场景、第一条消息、示例对话、标签、创作者备注和系统提示。可选字段涵盖知识库条目和角色特定的采样设置。',
+          '**V3规格（2026年5月）：** 在V2基础上增加了原生知识库嵌入、多语言支持和更丰富的创作者元数据。SillyTavern完全支持V3导入；Agnai可加载V3卡片但忽略某些V3特定字段；RisuAI通过其扩展格式部分处理V3。V2仍是通用语言——V3是附加性的且向后兼容，V2卡片在任何地方都可使用。',
+          '**重要性：** 整个社区构建的角色生态系统（chub.ai、JanitorAI导出、以角色为主题的Discord服务器）都使用Tavern v2。他人创建的卡片无需转换即可在您的前端中加载。',
+          '**规格的限制：** Tavern v2涵盖静态角色定义。长期场景记忆、动态关系状态和聊天特定的覆盖是各前端自己的实现。在前端之间迁移活跃聊天比仅迁移角色卡片更困难。',
+          '**清理导入的卡片：** 来自chub.ai的卡片可能包含修改模型行为的采样预设、系统提示覆盖或激进的越狱提示。在使用下载的卡片前请阅读系统提示和性格字段——尤其是在共享服务器场景（Agnai）中，一张卡片会影响所有用户。',
+          '**创建自己的卡片：** 三个前端都有卡片编辑器。SillyTavern的功能最齐全；RisuAI的UI最简洁。在从头创建之前先编辑几张现有卡片——看过示例后字段语义会更容易理解。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '导入的社区卡片可能携带隐藏行为：长越狱系统提示、采样覆盖、人格矛盾。首次使用前请在编辑器中打开每张下载的卡片并阅读系统提示字段。在共享服务器场景（Agnai）中，一张有问题的卡片会影响所有用户。',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '各前端模型推荐',
+        content:
+          '**前端选择不限制模型选择。** 三者均支持相同的后端——Ollama最为常见——以下模型推荐同样适用于SillyTavern、Agnai和RisuAI。',
+        items: [
+          '**Llama 3.3 70B** — 角色工作最佳的本地全能选择。在长期会话中声音一致性最强，能很好地遵循角色方向，当系统提示将工作定位为小说时可处理黑暗主题。Q4_K_M约需42GB VRAM。',
+          '**Qwen3 32B** — 24GB显卡设备的正确选择。接近Llama 70B的散文质量但无需昂贵硬件。大多数笔记本电脑和消费级台式机的默认选择。',
+          '**Command R+ 104B** — 对话专家。群组场景中角色间对话声音差异化最自然。Q4_K_M约需62GB VRAM。',
+          '**Hermes 3（Llama 3.3基础版）** — 无审查派生版本。与Llama 3.3 70B相同架构；RLHF安全层已移除；模型遵循提示而非拒绝成熟场景。在同一Ollama上安装两个版本（指令版+Hermes）是常见模式。',
+          '**Mistral Large** — 长上下文选择。开箱即用128K上下文；当角色扮演会话足够长以至于将较短上下文模型推出窗口时非常有用。',
+          '**严肃角色扮演工作应避免：** 任何没有创意写作微调的13B以下模型。小型通用模型在5到10次交流内失去声音一致性；角色会"漂移"到模型的默认声音。',
+          '关于这些选择的直接对比数据，请参见[2026年创意写作最佳本地LLM](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh)。',
+          '适用于所有三个前端的即用型系统提示模板，请参见[小说写作者的本地LLM提示词](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=zh)。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '对于角色扮演，采样设置与模型选择同样重要。温度0.85-1.05、top-p 0.9-0.95、重复惩罚1.1是起点。SillyTavern允许按角色保存预设；充分利用这一功能——不同角色通常需要不同的温度（紧张的审讯场景需要0.7；超现实的梦境序列需要1.2）。',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '隐私：哪个前端会向外发送数据',
+        content:
+          '**三个前端默认情况下均为纯本地运行，无遥测数据。** 每个前端中的可选云端功能受到明确选择加入的保护；如需正式审计级别的证据，请通过网络监控进行验证。',
+        items: [
+          '**SillyTavern：** 无遥测数据。可能进行外部通信的可选功能：云端LLM后端（OpenAI、Claude等——仅在配置时）、翻译扩展（默认使用云端API；可配置为本地）、Stable Diffusion图像生成（使用您的本地SD或配置的远程端点）、网络搜索扩展（使用云端搜索）。每项均为选择加入并有标签说明。',
+          '**Agnai：** 核心应用无遥测数据。服务器模式仅在启用时添加账户遥测。与SillyTavern相同的可选云端功能（翻译、云端LLM后端、图像生成）——均为明确启用。',
+          '**RisuAI：** 无遥测数据。相同模式——默认本地运行，可选云端功能（翻译、图像生成、云端LLM后端）受明确配置保护。',
+          '**验证隐私声明：** 在没有网络访问的情况下运行前端（安装后关闭Wi-Fi）——与本地模型聊天——确认一切正常工作。或运行网络监控器（macOS上的Little Snitch，Linux上的Wireshark）并在聊天会话期间观察出站连接。三个前端默认情况下都能通过此测试。',
+          '**隐私可能被破坏的地方：** 云端LLM后端（您配置了它们；提示和响应会离开您的机器）、基于云的翻译扩展（您翻译的消息被发送给第三方）、Stable Diffusion远程端点、网络搜索扩展。每项都是用户的刻意选择。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '"隐私优先"的本地前端只有与其指向的后端一样私密。将SillyTavern指向GPT-5会将您的角色扮演提示发送给OpenAI；指向Ollama则将一切保持在本地。前端本身不是限制；模型后端才是。',
+          },
+        ],
+      },
+      decision: {
+        id: 'decision',
+        title: '决策：应该选择哪个前端',
+        content:
+          '**三个问题可以引导大多数用户找到正确的选择。**',
+        columns: ['您的情况', '选择'],
+        rows: [
+          { '您的情况': '我是独立写作者，需要深度自定义，愿意花时间学习工具', '选择': 'SillyTavern' },
+          { '您的情况': '我想在共享服务器上与其他作者共享角色和聊天记录', '选择': 'Agnai' },
+          { '您的情况': '我想今天就开始聊天；SillyTavern感觉过于繁复', '选择': 'RisuAI' },
+          { '您的情况': '我主要在移动端（iOS或Android）写作', '选择': 'RisuAI（唯一拥有打包移动应用的选择）' },
+          { '您的情况': '我管理一个3人以上的写作小组或社区', '选择': 'Agnai（共享服务器）——唯一可信的多用户选择' },
+          { '您的情况': '我有复杂的世界观构建（50+知识库条目、递归触发器）', '选择': 'SillyTavern（知识库功能最深）' },
+          { '您的情况': '我不确定', '选择': '先试试RisuAI（5分钟安装）。超出其能力后再转向SillyTavern。卡片可以转移。' },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'SillyTavern是有自定义需求的独立用户的默认选择；Agnai是共享服务器唯一的多用户选择；RisuAI是首次用户和移动端写作者的轻量替代——按工作流程类型选择，并保留切换选项，因为卡片可在三者间转移。',
+          },
+          {
+            type: 'plain-terms',
+            text: '如果您从未使用过角色扮演前端，先试试RisuAI——5分钟内就能开始聊天。当您遇到自定义限制时再转向SillyTavern。只有在明确需要共享服务器多用户模式时才使用Agnai。在三者任一中创建的角色卡片都可在其他前端中加载，所以选择是可逆的。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在安装扩展或构建精心设计的知识库之前，先在选择的前端中度过最初10小时。默认设置加上几张社区卡片足以评估适合度。过早的配置会产生摩擦，而这些摩擦本可以在迁移到下一个前端时被吸收。',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '选择和使用角色扮演前端的常见错误',
+        items: [
+          '**错误1：当模型是瓶颈时追求功能。** 出色的前端配合7B通用模型产生平淡的对话，无论知识库系统有多好。选择一个合适的前端，将剩余预算花在32B以上的创意写作友好型模型上。模型方面请参见[2026年创意写作最佳本地LLM](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh)。',
+          '**错误2：在创意模型上使用默认采样设置。** SillyTavern、Agnai和RisuAI都以针对问答调优的默认设置发布（温度约0.7，top-p约0.9）。创意角色扮演需要0.85-1.05，top-p 0.9-0.95，重复惩罚1.1。按角色保存预设。',
+          '**错误3：不阅读就导入社区卡片。** 来自chub.ai的卡片可能包含2,000个token的越狱语言系统提示、与您的默认设置冲突的采样覆盖，或与描述矛盾的性格字段。使用前在编辑器中打开卡片；清理系统提示。',
+          '**错误4：跳过人格/用户档案。** 空白的"用户"人格意味着模型没有谁在说话的锚点。即使是包含姓名、年龄和基本情况的一段话人格，也会比默认空用户产生明显更有沉浸感的场景。',
+          '**错误5：在聊天窗口而非卡片中编辑。** 通过"重新生成"或"让模型修正"来调整模型输出会训练依赖模型代替写作的习惯。将编辑保存回角色卡片或系统提示；下次会话从更高的基线开始。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考资料',
+        items: [
+          '[SillyTavern文档](https://docs.sillytavern.app/) — 安装、角色卡片、知识库、扩展、采样预设。',
+          '[SillyTavern GitHub仓库](https://github.com/SillyTavern/SillyTavern) — 源代码、发行说明、社区扩展。',
+          '[Agnai GitHub仓库](https://github.com/agnaistic/agnai) — 安装、多用户服务器设置、角色卡片规格。',
+          '[RisuAI GitHub仓库](https://github.com/kwaroran/RisuAI) — 安装、插件系统、移动应用构建。',
+          '[Tavern v2角色卡片规格](https://github.com/malfoyslastname/character-card-spec-v2) — 跨前端角色卡片格式。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '2026年最佳本地角色扮演前端是哪个？',
+            a: '约80%的用户应选择SillyTavern——功能最深、社区最大、扩展最多。如果需要多用户共享服务器支持，Agnai是正确的选择（三者中唯一可信的选项）。RisuAI是首次用户、移动端写作者或认为SillyTavern过于繁复者的轻量替代方案。三者均支持Tavern v2角色卡片并连接相同的模型后端；由于卡片可转移，之后切换很简单。',
+          },
+          {
+            q: 'SillyTavern、Agnai和RisuAI可以使用相同的角色卡片吗？',
+            a: '可以。三者均支持Tavern v2角色卡片规格，即嵌入JSON的PNG文件。在SillyTavern中创建的卡片无需转换即可在Agnai和RisuAI中打开，反之亦然。RisuAI用可选字段扩展了格式，但RisuAI的Tavern v2卡片在SillyTavern和Agnai中仍可加载（扩展字段会被忽略）。前端间迁移非常简单。',
+          },
+          {
+            q: '这些前端会将我的聊天记录发送到云服务器吗？',
+            a: '不，默认情况下不会。三者均为无遥测的纯本地运行。聊天数据、角色卡片和知识库都存储在您的机器上。可选功能（云端LLM后端、翻译扩展、图像生成、网络搜索）受明确配置保护；如果将前端指向Ollama或其他本地后端，则没有任何数据离开您的网络。如需正式审计级别的证据，请使用网络监控器验证。',
+          },
+          {
+            q: '角色扮演应该使用哪个模型？',
+            a: '硬件允许时（Q4_K_M约42GB VRAM），Llama 3.3 70B是最佳全能选择。24GB显卡设备上，Qwen3 32B是更轻量的默认选择。Command R+ 104B在群组场景中对话声音最自然，但需约62GB。对于指令调优模型拒绝的成熟场景，在同一Ollama上安装Hermes 3（Llama 3.3基础版）并按场景切换。没有创意写作微调的13B以下模型在5到10次交流内失去声音一致性，应避免用于严肃的角色扮演工作。',
+          },
+          {
+            q: 'SillyTavern只适合成人角色扮演吗？',
+            a: '不是。SillyTavern是一个通用聊天前端，配备角色卡片、人格管理和知识库——适用于任何对话丰富或以角色为核心的创意工作。许多写作者将其用于非成人小说写作、多角色场景、长期项目中的声音一致性研究、编剧练习和游戏叙事草稿。社区角色生态系统（chub.ai）包含成人内容，但不仅限于此。',
+          },
+          {
+            q: '如何与朋友分享角色？',
+            a: '三种方式：(1) 将角色卡片导出为PNG并发送文件——在三个前端中均可使用。(2) 如果需要协作聊天而不仅仅是共享角色，使用Agnai的共享服务器模式。(3) 如果想公开发布，将卡片发布到chub.ai或类似平台。大多数写作小组选择方式1（文件共享）加Discord频道协调；方式2适合积极共同创作同一聊天的群组。',
+          },
+          {
+            q: '这些前端在iPad或Android上可以使用吗？',
+            a: 'RisuAI有打包的iOS和Android应用。SillyTavern通过Termux在Android上运行（可用但操作繁琐——终端安装、浏览器UI）。Agnai在移动浏览器中运行，但未打包为应用。如果移动端是您的主要平台，RisuAI是正确的选择。如果移动端是偶尔使用，在桌面浏览器上使用SillyTavern加上在移动端回退到RisuAI是可行模式（卡片可转移）。',
+          },
+          {
+            q: '可以为多个用户使用共享后端吗？',
+            a: '对于多用户角色扮演，Agnai是唯一具有可信共享服务器模式的前端（内置用户账户、角色分离、共享角色/聊天所有权）。对于仅共享模型后端（一个Ollama为同一机器上的多个前端提供服务），三者均可工作——Ollama为多个客户端提供服务，前端不会相互冲突。"共享后端"问题实际上是两个问题：共享模型（简单，三者均可）与共享聊天和角色（仅Agnai）。',
+          },
+          {
+            q: '哪个知识库支持最好？',
+            a: 'SillyTavern拥有最深的知识库系统——递归扫描（触发其他条目的条目）、关键词优先级、条件触发器、按角色范围和正则表达式匹配。Agnai和RisuAI均支持更简单的关键词扫描知识库，适合约50条条目以下的项目。对于复杂的世界观构建——多势力政治、递归引用、条件揭示——SillyTavern是三者中唯一可信的选择。',
+          },
+          {
+            q: '在本地后端上群组聊天稳定吗？',
+            a: '是的，使用正确的模型时稳定。与3个以上角色的群组聊天需要具有强声音差异化的模型——Command R+ 104B是最佳选择，Llama 3.3 70B是实用的默认选择。在较小的模型（13B以下）上，角色在5到10次交流内向同一声音漂移。SillyTavern拥有最成熟的群组聊天实现；Agnai和RisuAI能干净地处理2到4角色场景，但对轮次动态的控制较少。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[2026年创意写作最佳本地LLM](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh) — 模型侧；本指南推荐选择的直接对比。',
+          '[创意写作无审查本地LLM：伦理、合法性与最佳实践](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=zh) — 无审查派生版本（Hermes 3、Dolphin 3.0）何时是正确选择以及法律边界在哪里。',
+          '[2026年最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) — 更广泛的模型全景；在这些前端背后选择安装哪些模型时有用。',
+          '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=zh) — 与这些前端配合最常见的两个后端；先安装哪个。',
+          '[人格提示词](/prompt-engineering/persona-prompting?lang=zh) — 角色声音的系统提示结构；在三个前端中均可使用。',
+          '[温度与Top-P：控制AI创造力](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh) — 这些前端支持的按角色预设的采样指南。',
+          '[小说写作者的本地LLM提示词](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=zh) — 即用型角色驱动小说系统提示模板；在SillyTavern、Agnai和RisuAI中均可使用。',
+          '[2026年最佳移动端LLM模型](/power-local-llm/mobile-llm-models-phi4-gemma-smollm?lang=zh) — 针对iOS和Android优化的模型推荐；与RisuAI移动应用搭配良好。',
+        ],
+      },
+    },
+  },
 }
