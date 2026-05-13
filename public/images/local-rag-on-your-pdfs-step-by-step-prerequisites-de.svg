@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">Was du vor dem Start brauchst</text>
+
+  <!-- Header row -->
+  <rect x="0" y="46" width="800" height="36" fill="#6750A4"/>
+  <text x="80" y="69" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Voraussetzung</text>
+  <text x="235" y="69" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Minimum</text>
+  <text x="555" y="69" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Hinweis</text>
+
+  <!-- Column dividers -->
+  <line x1="160" y1="46" x2="160" y2="292" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="310" y1="46" x2="310" y2="292" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row 1: RAM -->
+  <rect x="0" y="82" width="800" height="42" fill="#FFFFFF"/>
+  <text x="80" y="107" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">RAM</text>
+  <text x="235" y="107" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">16 GB</text>
+  <text x="555" y="100" font-size="11" fill="#49454F" text-anchor="middle">8 GB: stattdessen Phi-4 Mini Q4 (Schritt 2)</text>
+  <text x="555" y="115" font-size="10" fill="#79747E" text-anchor="middle">Untergrenze für Llama 3.3 8B Q4 + AnythingLLM</text>
+
+  <!-- Row 2: Speicher -->
+  <rect x="0" y="124" width="800" height="42" fill="#F7F2FA"/>
+  <text x="80" y="149" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Speicher</text>
+  <text x="235" y="142" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">20 GB</text>
+  <text x="235" y="157" font-size="10" fill="#49454F" text-anchor="middle">frei</text>
+  <text x="555" y="142" font-size="11" fill="#49454F" text-anchor="middle">Model ~5 GB + Embedder ~280 MB + App ~600 MB</text>
+  <text x="555" y="157" font-size="10" fill="#79747E" text-anchor="middle">Plus ~10–30 MB Puffer pro 100 PDF-Seiten</text>
+
+  <!-- Row 3: Netzwerk -->
+  <rect x="0" y="166" width="800" height="42" fill="#FFFFFF"/>
+  <text x="80" y="191" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Netzwerk</text>
+  <text x="235" y="191" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">50 Mbps</text>
+  <text x="555" y="184" font-size="11" fill="#49454F" text-anchor="middle">Model-Download ~8 Min. bei 50 Mbps (einmalig)</text>
+  <text x="555" y="199" font-size="10" fill="#79747E" text-anchor="middle">Rest des Tutorials läuft vollständig offline</text>
+
+  <!-- Row 4: OS -->
+  <rect x="0" y="208" width="800" height="42" fill="#F7F2FA"/>
+  <text x="80" y="233" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">OS</text>
+  <text x="235" y="226" font-size="10" font-weight="700" fill="#49454F" text-anchor="middle">macOS 12+ /</text>
+  <text x="235" y="241" font-size="10" font-weight="700" fill="#49454F" text-anchor="middle">Win 10/11 / Linux</text>
+  <text x="555" y="226" font-size="11" fill="#49454F" text-anchor="middle">Kein Admin für AnythingLLM erforderlich</text>
+  <text x="555" y="241" font-size="10" fill="#79747E" text-anchor="middle">Ollama fragt einmal nach Passwort (macOS/Linux)</text>
+
+  <!-- Row 5: Dokumente -->
+  <rect x="0" y="250" width="800" height="42" fill="#FFFFFF"/>
+  <text x="80" y="275" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Dokumente</text>
+  <text x="235" y="268" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">5–20 PDFs</text>
+  <text x="235" y="283" font-size="10" fill="#79747E" text-anchor="middle">zum Starten</text>
+  <text x="555" y="268" font-size="11" fill="#49454F" text-anchor="middle">Klein anfangen für Abruf-Qualitätsprüfung</text>
+  <text x="555" y="283" font-size="10" fill="#79747E" text-anchor="middle">PDF, DOCX, TXT, MD, EPUB unterstützt</text>
+
+  <!-- Table outer border -->
+  <rect x="0" y="46" width="800" height="246" fill="none" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <text x="400" y="318" font-size="11" fill="#79747E" text-anchor="middle">Internet nur für initiale Downloads nötig — alle Inferenz läuft nach der Einrichtung offline</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -164,6 +164,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Multi-user chat front-end with optional RAG',
           },
         ],
+        image: '/images/rag-vs-platforms-comparison-table-en.svg',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI on a 5,047-page corpus: AnythingLLM lowest hallucination rate (6%), PrivateGPT fastest retrieval (240 ms p50), Open WebUI best multi-user support — all three scale to ~8,000–12,000 pages on consumer hardware.',
       },
       whichOne: {
         id: 'which-one',
@@ -219,6 +221,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'The architectural differences disappear under ~1,000 pages — all three feel snappy. They become decisive past ~5,000 pages: AnythingLLM\'s re-rank step adds ~70 ms but recovers ~3 percentage points of recall; PrivateGPT\'s Qdrant lets you keep the index on disk without paging; Open WebUI\'s lack of re-rank is the main reason its hallucination rate is the highest of the three.',
           },
         ],
+        image: '/images/rag-vs-platforms-architecture-en.svg',
+        imageCaption: 'RAG pipeline architecture comparison: AnythingLLM uses LangChain.js + LanceDB with cross-encoder re-ranking; PrivateGPT uses LlamaIndex + Qdrant with configurable chunking and REST API; Open WebUI uses unstructured.io + ChromaDB with single-stage dense retrieval and no re-ranking.',
       },
       anythingllmDeep: {
         id: 'anythingllm',
@@ -303,6 +307,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PrivateGPT wins on raw vector search because Qdrant is the most mature vector DB of the three and stays warm in memory under repeated queries. Open WebUI loses ground on the FastAPI middleware overhead and the absence of a re-rank stage that would otherwise catch retrieval misses.',
           },
         ],
+        image: '/images/rag-vs-platforms-latency-breakdown-en.svg',
+        imageCaption: 'Retrieval latency breakdown on 5,047 pages: PrivateGPT fastest at 240 ms p50 / 720 ms p95; AnythingLLM 310 ms p50 / 880 ms p95 (includes 70 ms re-rank); Open WebUI slowest at 380 ms p50 / 1,040 ms p95 with no re-rank stage.',
       },
       hallucination: {
         id: 'hallucination',
@@ -324,6 +330,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Multi-hop reasoning is where all three platforms suffer. The fix is not the platform — it is your chat model. Swapping Llama 3.3 8B for Qwen3 14B dropped multi-hop hallucination by ~10 percentage points in each platform. RAG quality is necessary but not sufficient; the chat model has to actually reason over retrieved chunks.',
           },
         ],
+        image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
+        imageCaption: 'Hallucination rates across 50 graded queries: AnythingLLM 6% overall (0% on factual lookup, 0% on summarization); PrivateGPT 11%; Open WebUI 14% — multi-hop reasoning is the weakest query type for all three platforms.',
       },
       citations: {
         id: 'citations',
@@ -349,6 +357,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tested on the 5,047-page corpus: swapping the default for `BAAI/bge-m3` improved overall recall by 4–7 percentage points across all three platforms but tripled the indexing time and added ~1 GB of GPU memory during the indexing pass.',
           'For multilingual corpora (German, French, Japanese, Chinese mixed in), `bge-m3` is the default-beating pick in all three platforms — but only PrivateGPT\'s pipeline supports it natively without an Ollama detour.',
         ],
+        image: '/images/rag-vs-platforms-embedding-flexibility-en.svg',
+        imageCaption: 'Embedding model flexibility: AnythingLLM offers 8 GUI-selectable backends including Ollama, OpenAI, Cohere; PrivateGPT supports any HuggingFace sentence-transformers model natively including bge-m3 for 100+ languages; Open WebUI uses Ollama-served embedders plus SentenceTransformers.',
       },
       hiddenCosts: {
         id: 'hidden-costs',

@@ -115,6 +115,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Continue.dev, Cline, and Aider Compare in 2026',
         content:
           'All three harnesses are open source, free to run, and work with any local LLM endpoint. The structural differences below decide which one fits your workflow.',
+        image: '/images/coding-agent-comparison-en.svg',
+        imageCaption: 'Continue.dev vs Cline vs Aider: Continue.dev for autocomplete in VS Code/JetBrains (32K context), Cline for autonomous multi-file agents in VS Code (128K recommended), Aider for git-native terminal commits (32K context).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -188,6 +190,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Which One Should You Pick',
         content:
           '**The right harness is decided by your editor, your tolerance for autonomous edits, and how you review changes.** Use this shortcut.',
+        image: '/images/coding-agent-which-one-en.svg',
+        imageCaption: 'Which local coding harness to pick: Continue.dev for autocomplete and in-IDE chat (VS Code + JetBrains), Cline for multi-file agent loops and command execution, Aider for git-native terminal workflows and SSH environments.',
         columns: ['Your situation', 'Pick'],
         rows: [
           { 'Your situation': 'I live inside VS Code or a JetBrains IDE and want Copilot-style autocomplete', 'Pick': 'Continue.dev' },
@@ -267,6 +271,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Edit Model: How Each Harness Writes Code',
         content:
           '**The edit model is the single biggest determinant of how each harness feels.** Same model, same task — three very different artefacts.',
+        image: '/images/coding-agent-edit-model-en.svg',
+        imageCaption: 'Edit model reliability by harness: on 7B models, Continue.dev is most forgiving, Aider rejects mismatched blocks, Cline stalls on malformed XML; on 30B+ coding models (Qwen3-Coder, DeepSeek Coder V3), all three are reliable.',
         items: [
           '**Continue.dev** — for autocomplete: FIM tokens around the cursor produce inline completions. For chat-driven edits: the model returns a fenced code block; "Apply" runs a diff against the open file and surfaces it for accept/reject. For inline edits (Cmd/Ctrl+I on a selection): the model rewrites the selection and the diff shows in place.',
           '**Cline** — every edit is a tool call. `write_to_file` for new files or full rewrites, `replace_in_file` for surgical changes with explicit `<<<<<<< SEARCH` / `>>>>>>> REPLACE` blocks. Tool calls are validated against a schema; malformed ones get a "tool error" that the agent sees and retries. The conversation is structured tool calls and tool results, not free prose.',
@@ -299,6 +305,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Context Window Strategy: Where Tokens Go',
         content:
           '**The three harnesses spend tokens differently.** This is the most important budget decision when you have a model with a smaller context window (32K or under) and a non-trivial repo.',
+        image: '/images/coding-agent-context-strategy-en.svg',
+        imageCaption: 'Context window strategy: Continue.dev uses on-demand index retrieval (32K minimum), Cline streams full files into conversation (128K recommended for multi-file tasks), Aider uses a tree-sitter repo map plus explicit /add (32K minimum).',
         items: [
           '**Continue.dev** — TF-IDF plus embedding index over the project. Retrieval is on-demand: only chunks relevant to the current chat message land in the prompt. `@codebase` triggers a semantic search; `@file path/to/x.ts` injects the file verbatim. Token usage scales with what you pin, not with the size of the repo.',
           '**Cline** — full file contents are streamed into the conversation as the agent reads them. A 500-line file consumes ~3K–5K tokens; an agent task that touches 8 files burns through 25K–40K tokens before any reasoning happens. Recommended minimum: 32K context window; 128K is comfortable.',
@@ -346,6 +354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Workflow Fit by Use Case',
         content:
           '**The most useful frame is "what kind of day are you having".** Match harness to day, not the other way round.',
+        image: '/images/coding-agent-workflow-fit-en.svg',
+        imageCaption: 'Workflow fit for local coding tools: Continue.dev for autocomplete and in-IDE Q&A; Cline for multi-file refactors and exploratory debugging with command access; Aider for git-native changes, SSH, and Vim/Neovim workflows.',
         columns: ['Use case', 'Best fit', 'Why'],
         rows: [
           {
@@ -595,6 +605,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie Continue.dev, Cline und Aider 2026 verglichen werden',
         content:
           'Alle drei Harnesses sind Open Source, kostenlos zu betreiben und funktionieren mit jedem lokalen LLM-Endpoint. Die strukturellen Unterschiede unten entscheiden, welcher zu Ihrem Workflow passt.',
+        image: '/images/coding-agent-comparison-de.svg',
+        imageCaption: 'Continue.dev vs Cline vs Aider: Continue.dev für Autovervollständigung in VS Code/JetBrains (32K Kontext), Cline für autonome Mehrfachdatei-Agenten in VS Code (128K empfohlen), Aider für git-native Terminal-Commits (32K Kontext).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -668,6 +680,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Welchen sollten Sie wählen',
         content:
           '**Der richtige Harness wird durch Ihren Editor, Ihre Toleranz für autonome Edits und die Art bestimmt, wie Sie Changes überprüfen.** Nutzen Sie diese Abkürzung.',
+        image: '/images/coding-agent-which-one-de.svg',
+        imageCaption: 'Welches lokale Coding-Tool: Continue.dev für Autovervollständigung und In-IDE-Chat (VS Code + JetBrains), Cline für Mehrfachdatei-Agenten und Befehlsausführung, Aider für git-native Terminal-Workflows und SSH-Umgebungen.',
         columns: ['Ihre Situation', 'Wählen Sie'],
         rows: [
           { 'Ihre Situation': 'Ich arbeite in VS Code oder einer JetBrains-IDE und möchte Copilot-Style-Autocomplete', 'Wählen Sie': 'Continue.dev' },
@@ -747,6 +761,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Edit-Modell: Wie jeder Harness Code schreibt',
         content:
           '**Das Edit-Modell ist der einzeln größte Bestimmungsfaktor, wie sich jeder Harness anfühlt.** Dasselbe Modell, dasselbe Ziel — drei sehr verschiedene Artefakte.',
+        image: '/images/coding-agent-edit-model-de.svg',
+        imageCaption: 'Bearbeitungsmodell-Zuverlässigkeit: Bei 7B-Modellen ist Continue.dev am tolerantesten, Aider lehnt falsche Blöcke ab, Cline stoppt bei fehlerhaftem XML; bei 30B+ Coding-Modellen (Qwen3-Coder, DeepSeek Coder V3) sind alle drei zuverlässig.',
         items: [
           '**Continue.dev** — für Autocomplete: FIM-Tokens um den Cursor produzieren Inline-Completions. Für Chat-gesteuerte Edits: das Modell gibt einen gefencten Code-Block zurück; "Apply" führt einen Diff gegen die offene Datei aus und präsentiert ihn zur Akzeptanz/Ablehnung. Für Inline-Edits (Cmd/Ctrl+I auf einer Auswahl): das Modell schreibt die Auswahl um und der Diff wird an Ort und Stelle angezeigt.',
           '**Cline** — jeder Edit ist ein Tool-Call. `write_to_file` für neue Dateien oder vollständige Rewrites, `replace_in_file` für chirurgische Changes mit expliziten `<<<<<<< SEARCH` / `>>>>>>> REPLACE`-Blöcken. Tool-Calls werden gegen ein Schema validiert; malformed werden ein "Tool-Fehler", den der Agent sieht und erneut versucht. Das Gespräch ist strukturierte Tool-Calls und Tool-Ergebnisse, keine freie Prosa.',
@@ -779,6 +795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Kontext-Fenster-Strategie: Wo Token hingehen',
         content:
           '**Die drei Harnesses geben Token unterschiedlich aus.** Dies ist die wichtigste Budget-Entscheidung, wenn Sie ein Modell mit einem kleineren Kontext-Fenster (32K oder darunter) und ein nichttriviales Repo haben.',
+        image: '/images/coding-agent-context-strategy-de.svg',
+        imageCaption: 'Kontextfenster-Strategie: Continue.dev nutzt bedarfsgesteuerten Index-Abruf (32K Minimum), Cline streamt vollständige Dateien (128K für Mehrfachdatei-Aufgaben empfohlen), Aider nutzt Tree-Sitter-Repo-Map plus /add (32K Minimum).',
         items: [
           '**Continue.dev** — TF-IDF plus Embedding-Index über das Projekt. Retrieval ist On-Demand: nur Chunks, die für die aktuelle Chat-Nachricht relevant sind, landen im Prompt. `@codebase` triggert eine semantische Suche; `@file path/to/x.ts` injiziert die Datei wörtlich. Token-Nutzung skaliert mit dem, was Sie pinnen, nicht mit der Größe des Repos.',
           '**Cline** — vollständige Datei-Inhalte werden bei jedem Read in das Gespräch gestreamt. Eine 500-Zeilen-Datei verbraucht ~3K–5K Token; eine Agent-Aufgabe, die 8 Dateien berührt, brennt 25K–40K Token durch, bevor überhaupt Reasoning stattfindet. Empfohlen Minimum: 32K Kontext-Fenster; 128K ist komfortabel.',

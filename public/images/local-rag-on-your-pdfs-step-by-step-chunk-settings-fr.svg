@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="27" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Paramètres chunks : Défaut vs Recommandé (Étape 7)</text>
+
+  <!-- Left panel: Défaut (red) -->
+  <rect x="18" y="42" width="367" height="240" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="18" y="42" width="367" height="4" rx="0" fill="#EA4335"/>
+  <text x="201" y="68" font-size="14" font-weight="700" fill="#EA4335" text-anchor="middle">Défaut — Récupération médiocre</text>
+  <text x="201" y="86" font-size="10" fill="#79747E" text-anchor="middle">Paramètres AnythingLLM par défaut</text>
+
+  <text x="36" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Taille chunk</text>
+  <text x="260" y="115" font-size="22" font-weight="700" fill="#EA4335" text-anchor="middle">512</text>
+  <text x="320" y="115" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="36" y="147" font-size="12" font-weight="700" fill="#1C1B1F">Chevauchement</text>
+  <text x="260" y="147" font-size="22" font-weight="700" fill="#EA4335" text-anchor="middle">0</text>
+  <text x="320" y="147" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="36" y="179" font-size="12" font-weight="700" fill="#1C1B1F">Top-K</text>
+  <text x="260" y="179" font-size="22" font-weight="700" fill="#EA4335" text-anchor="middle">4</text>
+  <text x="320" y="179" font-size="11" fill="#49454F">chunks</text>
+
+  <line x1="36" y1="195" x2="367" y2="195" stroke="#F7F2FA" stroke-width="1.5"/>
+
+  <text x="201" y="218" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">Problème : phrases aux limites</text>
+  <text x="201" y="234" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">de chunk sont perdues</text>
+  <text x="201" y="256" font-size="10" fill="#79747E" text-anchor="middle">Résultat : récupération rate le contexte pertinent</text>
+  <text x="201" y="272" font-size="10" fill="#79747E" text-anchor="middle">PDFs s'ajustent rarement à 512 tokens</text>
+
+  <!-- Right panel: Recommandé (green) -->
+  <rect x="415" y="42" width="367" height="240" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="415" y="42" width="367" height="4" rx="0" fill="#34A853"/>
+  <text x="598" y="68" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Recommandé — Meilleure récupération</text>
+  <text x="598" y="86" font-size="10" fill="#79747E" text-anchor="middle">Paramètres espace de travail → Base données vectorielle</text>
+
+  <text x="433" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Taille chunk</text>
+  <text x="657" y="115" font-size="22" font-weight="700" fill="#34A853" text-anchor="middle">1000</text>
+  <text x="717" y="115" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="433" y="147" font-size="12" font-weight="700" fill="#1C1B1F">Chevauchement</text>
+  <text x="657" y="147" font-size="22" font-weight="700" fill="#34A853" text-anchor="middle">200</text>
+  <text x="717" y="147" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="433" y="179" font-size="12" font-weight="700" fill="#1C1B1F">Top-K</text>
+  <text x="657" y="179" font-size="22" font-weight="700" fill="#34A853" text-anchor="middle">4–6</text>
+  <text x="717" y="179" font-size="11" fill="#49454F">chunks</text>
+
+  <line x1="433" y1="195" x2="775" y2="195" stroke="#F7F2FA" stroke-width="1.5"/>
+
+  <text x="598" y="218" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">Résultat : phrases aux limites</text>
+  <text x="598" y="234" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">capturées dans la fenêtre overlap</text>
+  <text x="598" y="256" font-size="10" fill="#79747E" text-anchor="middle">Re-embedding 20 PDFs/3000 chunks : ~5 sec</text>
+  <text x="598" y="272" font-size="10" fill="#79747E" text-anchor="middle">Levier qualité récupération le plus important</text>
+
+  <!-- Footer -->
+  <line x1="18" y1="295" x2="782" y2="295" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="314" font-size="11" fill="#79747E" text-anchor="middle">Où changer : Paramètres espace de travail → Base données vectorielle → sauvegarder → re-embedder</text>
+  <text x="400" y="332" font-size="10" fill="#79747E" text-anchor="middle">Documents courts (memos, docstrings) : essayer 256/64 si 1000/200 donne pire résultat</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

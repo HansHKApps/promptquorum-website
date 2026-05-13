@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">ユースケース別ワークフロー適合性</text>
+  <text x="18" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">ユースケース</text>
+  <text x="390" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">最適</text>
+  <text x="555" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">理由</text>
+  <line x1="10" y1="65" x2="790" y2="65" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="18" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">自動補完で関数追加</text>
+  <text x="390" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Continue.dev</text>
+  <text x="555" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">FIMが自然なプリミティブ</text>
+  <line x1="10" y1="97" x2="790" y2="97" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="119" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">エディタでの'これは何?' チャット</text>
+  <text x="390" y="119" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Continue.dev</text>
+  <text x="555" y="119" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">IDE内@fileチャット</text>
+  <line x1="10" y1="129" x2="790" y2="129" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="151" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">5ファイル以上のリファクタリング</text>
+  <text x="390" y="151" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#F4B400">Cline</text>
+  <text x="555" y="151" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">ネイティブ複数ファイル＋承認</text>
+  <line x1="10" y1="161" x2="790" y2="161" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">不安定なテストの原因調査</text>
+  <text x="390" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#F4B400">Cline</text>
+  <text x="555" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">コマンド実行・ログ読み取り</text>
+  <line x1="10" y1="193" x2="790" y2="193" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="215" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">コミット付きリポジトリ全体のリネーム</text>
+  <text x="390" y="215" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#34A853">Aider</text>
+  <text x="555" y="215" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">編集=コミット</text>
+  <line x1="10" y1="225" x2="790" y2="225" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="247" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">SSH・IDEなし</text>
+  <text x="390" y="247" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#34A853">Aider</text>
+  <text x="555" y="247" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">ターミナルのみ設計</text>
+  <line x1="10" y1="257" x2="790" y2="257" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="279" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">Vim/Neovimをデイリー使用</text>
+  <text x="390" y="279" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#34A853">Aider</text>
+  <text x="555" y="279" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">ターミナルと自然な連携</text>
+  <line x1="10" y1="289" x2="790" y2="289" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="311" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">JetBrainsユーザー</text>
+  <text x="390" y="311" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Continue.dev または Aider</text>
+  <text x="555" y="311" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F">ClineはVS Codeのみ</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

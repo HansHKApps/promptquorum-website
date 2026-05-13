@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="340" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="24" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">AnythingLLM vs PrivateGPT vs Open WebUI — 主要指標</text>
+  <line x1="10" y1="32" x2="790" y2="32" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="18" y="54" font-size="12" font-weight="700" fill="#79747E">機能</text>
+  <text x="340" y="54" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">AnythingLLM</text>
+  <text x="527" y="54" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">PrivateGPT</text>
+  <text x="705" y="54" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Open WebUI</text>
+  <!-- Vertical dividers -->
+  <line x1="255" y1="32" x2="255" y2="330" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="435" y1="32" x2="435" y2="330" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="620" y1="32" x2="620" y2="330" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Header underline -->
+  <line x1="10" y1="62" x2="790" y2="62" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1: Hallucination Rate -->
+  <text x="18" y="82" font-size="12" font-weight="700" fill="#1C1B1F">幻覚率</text>
+  <circle cx="340" cy="84" r="16" fill="#34A853"/>
+  <text x="340" y="89" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">6%</text>
+  <circle cx="527" cy="84" r="16" fill="#F4B400"/>
+  <text x="527" y="89" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">11%</text>
+  <circle cx="705" cy="84" r="16" fill="#EA4335"/>
+  <text x="705" y="89" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">14%</text>
+  <line x1="10" y1="110" x2="790" y2="110" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: Retrieval p50 -->
+  <text x="18" y="129" font-size="12" font-weight="700" fill="#1C1B1F">検索 p50</text>
+  <text x="340" y="129" font-size="12" fill="#49454F" text-anchor="middle">310 ms</text>
+  <text x="527" y="124" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">240 ms</text>
+  <text x="527" y="139" font-size="10" fill="#34A853" text-anchor="middle">最速 ✓</text>
+  <text x="705" y="129" font-size="12" fill="#49454F" text-anchor="middle">380 ms</text>
+  <line x1="10" y1="148" x2="790" y2="148" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: Citation Quality -->
+  <text x="18" y="169" font-size="12" font-weight="700" fill="#1C1B1F">引用品質</text>
+  <text x="340" y="165" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">Filename + Page</text>
+  <text x="340" y="179" font-size="10" fill="#34A853" text-anchor="middle">クリック可能 ✓</text>
+  <text x="527" y="165" font-size="11" fill="#49454F" text-anchor="middle">Filename + Chunk ID</text>
+  <text x="527" y="179" font-size="10" fill="#49454F" text-anchor="middle">JSON API</text>
+  <text x="705" y="165" font-size="11" fill="#EA4335" text-anchor="middle">Filename only</text>
+  <text x="705" y="179" font-size="10" fill="#EA4335" text-anchor="middle">ページ番号なし</text>
+  <line x1="10" y1="195" x2="790" y2="195" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4: Scaling Ceiling -->
+  <text x="18" y="214" font-size="12" font-weight="700" fill="#1C1B1F">スケーリング上限</text>
+  <text x="18" y="228" font-size="10" fill="#79747E">（コンシューマHW）</text>
+  <text x="340" y="218" font-size="11" fill="#49454F" text-anchor="middle">~10,000ページ</text>
+  <text x="527" y="213" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">~12,000ページ</text>
+  <text x="527" y="227" font-size="10" fill="#34A853" text-anchor="middle">最高 ✓</text>
+  <text x="705" y="218" font-size="11" fill="#EA4335" text-anchor="middle">~8,000ページ</text>
+  <line x1="10" y1="240" x2="790" y2="240" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5: Best For -->
+  <text x="18" y="263" font-size="12" font-weight="700" fill="#1C1B1F">最適な用途</text>
+  <text x="340" y="259" font-size="11" fill="#49454F" text-anchor="middle">引用・</text>
+  <text x="340" y="274" font-size="11" fill="#49454F" text-anchor="middle">本番環境</text>
+  <text x="527" y="259" font-size="11" fill="#49454F" text-anchor="middle">EUコンプライアンス</text>
+  <text x="527" y="274" font-size="11" fill="#49454F" text-anchor="middle">&amp; API優先</text>
+  <text x="705" y="259" font-size="11" fill="#49454F" text-anchor="middle">マルチユーザー</text>
+  <text x="705" y="274" font-size="11" fill="#49454F" text-anchor="middle">&amp; OAuth</text>
+  <line x1="10" y1="290" x2="790" y2="290" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Footer -->
+  <text x="400" y="322" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">5,047ページのコーパスでテスト · Llama 3.3 8B Q4_K_M · RTX 4070 12 GB · 2026年5月</text>
+<text x="792" y="335" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

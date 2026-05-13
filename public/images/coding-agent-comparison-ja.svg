@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">Continue.dev vs Cline vs Aider：主な違い</text>
+  <rect x="404" y="38" width="194" height="26" fill="#E8DEF8"/>
+  <text x="90" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">機能</text>
+  <text x="295" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Continue.dev</text>
+  <text x="500" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Cline</text>
+  <text x="690" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Aider</text>
+  <line x1="10" y1="65" x2="790" y2="65" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="404" y="65" width="194" height="338" fill="#F7F2FA" rx="0"/>
+  <text x="18" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">主な画面</text>
+  <text x="295" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">VS Code + JetBrains</text>
+  <text x="500" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">VS Code only</text>
+  <text x="690" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Terminal CLI</text>
+  <line x1="10" y1="96" x2="790" y2="96" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="116" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">ワークフロー</text>
+  <text x="295" y="116" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">自動補完 + チャット</text>
+  <text x="500" y="116" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">自律エージェントループ</text>
+  <text x="690" y="116" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Gitネイティブコミット</text>
+  <line x1="10" y1="126" x2="790" y2="126" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="146" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">編集モデル</text>
+  <text x="295" y="146" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">FIM + apply-to-file</text>
+  <text x="500" y="146" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">ツールコール（書込/置換）</text>
+  <text x="690" y="146" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">検索置換diffブロック</text>
+  <line x1="10" y1="156" x2="790" y2="156" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">複数ファイル</text>
+  <text x="295" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">ファイルごとに手動</text>
+  <text x="500" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">ネイティブ複数ファイル</text>
+  <text x="690" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">/add でネイティブ対応</text>
+  <line x1="10" y1="186" x2="790" y2="186" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="206" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">元に戻す</text>
+  <text x="295" y="206" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">VS Code undoスタック</text>
+  <text x="500" y="206" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">UI内でステップ毎に戻す</text>
+  <text x="690" y="206" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">/undoで最後のコミットを戻す</text>
+  <line x1="10" y1="216" x2="790" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">コンテキスト</text>
+  <text x="295" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">インデックス + @プロバイダ</text>
+  <text x="500" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">全ファイルストリーミング</text>
+  <text x="690" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Repoマップ + /addファイル</text>
+  <line x1="10" y1="246" x2="790" y2="246" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="266" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">最小コンテキスト</text>
+  <text x="295" y="266" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">32K</text>
+  <text x="500" y="266" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">128K推奨</text>
+  <text x="690" y="266" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">32K</text>
+  <line x1="10" y1="276" x2="790" y2="276" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">最適な用途</text>
+  <text x="295" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">タイプ時IDE編集</text>
+  <text x="500" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">複数ファイルリファクタ</text>
+  <text x="690" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">レビュー可能なgit diffs</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
