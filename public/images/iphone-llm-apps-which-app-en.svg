@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Which iPhone Local AI App?</text>
+
+  <!-- Column headers -->
+  <text x="22" y="58" font-size="12" font-weight="700" fill="#79747E">YOUR NEED</text>
+  <text x="310" y="58" font-size="12" font-weight="700" fill="#79747E">BEST APP</text>
+  <text x="530" y="58" font-size="12" font-weight="700" fill="#79747E">WHY</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="66" x2="782" y2="66" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <text x="22" y="90" font-size="12" fill="#1C1B1F">Free offline chat</text>
+  <text x="310" y="90" font-size="12" font-weight="600" fill="#6750A4">PocketPal AI</text>
+  <text x="530" y="90" font-size="12" fill="#49454F">Free, any GGUF model</text>
+  <line x1="18" y1="100" x2="782" y2="100" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="22" y="124" font-size="12" fill="#1C1B1F">Siri + Shortcuts</text>
+  <text x="310" y="124" font-size="12" font-weight="600" fill="#6750A4">Private LLM</text>
+  <text x="530" y="124" font-size="12" fill="#49454F">Deep iOS integration</text>
+  <line x1="18" y1="134" x2="782" y2="134" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="22" y="158" font-size="12" fill="#1C1B1F">Fastest generation</text>
+  <text x="310" y="158" font-size="12" font-weight="600" fill="#6750A4">MLC Chat</text>
+  <text x="530" y="158" font-size="12" fill="#49454F">Metal GPU-accelerated</text>
+  <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="22" y="192" font-size="12" fill="#1C1B1F">Advanced config</text>
+  <text x="310" y="192" font-size="12" font-weight="600" fill="#6750A4">LLM Farm</text>
+  <text x="530" y="192" font-size="12" fill="#49454F">All sampling params</text>
+  <line x1="18" y1="202" x2="782" y2="202" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <text x="22" y="226" font-size="12" fill="#1C1B1F">Writing in iOS apps</text>
+  <text x="310" y="226" font-size="12" font-weight="600" fill="#6750A4">Apple Intelligence</text>
+  <text x="530" y="226" font-size="12" fill="#49454F">Built into iOS 18+</text>
+  <line x1="18" y1="236" x2="782" y2="236" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Footer note -->
+  <text x="400" y="265" font-size="11" fill="#79747E" text-anchor="middle">All apps run fully offline once model is downloaded. No jailbreak required.</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

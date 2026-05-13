@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Main title -->
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPhone LLM: Akku &amp; Wärme</text>
+
+  <!-- Left panel (red) -->
+  <rect x="20" y="46" width="365" height="280" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="20" y="46" width="365" height="4" rx="0" fill="#EA4335"/>
+  <text x="202" y="70" font-size="14" font-weight="700" fill="#EA4335" text-anchor="middle">Aktive Inferenz</text>
+
+  <!-- Left bullets -->
+  <circle cx="38" cy="90" r="3" fill="#EA4335"/>
+  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W Leistungsaufnahme</text>
+
+  <circle cx="38" cy="116" r="3" fill="#EA4335"/>
+  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% Akku/Std. (iPhone 16 Pro)</text>
+
+  <circle cx="38" cy="142" r="3" fill="#EA4335"/>
+  <text x="50" y="146" font-size="12" fill="#49454F">Drossel ab ~38°C (nach 10–15 Min.)</text>
+
+  <circle cx="38" cy="168" r="3" fill="#EA4335"/>
+  <text x="50" y="172" font-size="12" fill="#49454F">30–50% Geschwindigkeitsverlust</text>
+
+  <!-- Right panel (green) -->
+  <rect x="415" y="46" width="365" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="415" y="46" width="365" height="4" rx="0" fill="#34A853"/>
+  <text x="597" y="70" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Verbrauch minimieren</text>
+
+  <!-- Right bullets -->
+  <circle cx="433" cy="90" r="3" fill="#34A853"/>
+  <text x="445" y="94" font-size="12" fill="#49454F">Gerät mit Display nach oben legen</text>
+
+  <circle cx="433" cy="116" r="3" fill="#34A853"/>
+  <text x="445" y="120" font-size="12" fill="#49454F">Direkte Sonneneinstrahlung meiden</text>
+
+  <circle cx="433" cy="142" r="3" fill="#34A853"/>
+  <text x="445" y="146" font-size="12" fill="#49454F">Kurze Sessions: &lt;5 Min. → kein Throttling</text>
+
+  <circle cx="433" cy="168" r="3" fill="#34A853"/>
+  <text x="445" y="172" font-size="12" fill="#49454F">Bei langen Sessions ans Ladegerät</text>
+
+  <!-- Footer -->
+  <text x="400" y="342" font-size="11" fill="#79747E" text-anchor="middle">Auf iPhone 15 Pro: MagSafe + Inferenz gleichzeitig vermeiden – erhöht thermischen Druck.</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

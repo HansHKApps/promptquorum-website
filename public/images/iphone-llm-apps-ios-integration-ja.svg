@@ -1,0 +1,79 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Hiragino Sans', 'Yu Gothic', sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">アプリ別iOS統合機能</text>
+
+  <!-- Column headers -->
+  <text x="22" y="56" font-size="12" font-weight="700" fill="#79747E">アプリ</text>
+  <text x="210" y="56" font-size="12" font-weight="700" fill="#79747E">ショートカット</text>
+  <text x="355" y="56" font-size="12" font-weight="700" fill="#79747E">Siri</text>
+  <text x="445" y="56" font-size="12" font-weight="700" fill="#79747E">オープンソース</text>
+  <text x="610" y="56" font-size="12" font-weight="700" fill="#79747E">App Store</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="64" x2="782" y2="64" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: PocketPal AI -->
+  <text x="22" y="90" font-size="12" font-weight="600" fill="#1C1B1F">PocketPal AI</text>
+  <circle cx="260" cy="86" r="9" fill="#EA4335"/>
+  <text x="260" y="90" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="370" cy="86" r="9" fill="#EA4335"/>
+  <text x="370" y="90" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="492" cy="86" r="9" fill="#34A853"/>
+  <text x="492" y="90" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="643" cy="86" r="9" fill="#34A853"/>
+  <text x="643" y="90" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="100" x2="782" y2="100" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Private LLM -->
+  <text x="22" y="124" font-size="12" font-weight="600" fill="#1C1B1F">Private LLM</text>
+  <circle cx="260" cy="120" r="9" fill="#34A853"/>
+  <text x="260" y="124" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="370" cy="120" r="9" fill="#34A853"/>
+  <text x="370" y="124" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="492" cy="120" r="9" fill="#EA4335"/>
+  <text x="492" y="124" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="643" cy="120" r="9" fill="#34A853"/>
+  <text x="643" y="124" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="134" x2="782" y2="134" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: MLC Chat -->
+  <text x="22" y="158" font-size="12" font-weight="600" fill="#1C1B1F">MLC Chat</text>
+  <circle cx="260" cy="154" r="9" fill="#EA4335"/>
+  <text x="260" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="370" cy="154" r="9" fill="#EA4335"/>
+  <text x="370" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="492" cy="154" r="9" fill="#34A853"/>
+  <text x="492" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="643" cy="154" r="9" fill="#34A853"/>
+  <text x="643" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: LLM Farm -->
+  <text x="22" y="192" font-size="12" font-weight="600" fill="#1C1B1F">LLM Farm</text>
+  <circle cx="260" cy="188" r="9" fill="#EA4335"/>
+  <text x="260" y="192" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="370" cy="188" r="9" fill="#EA4335"/>
+  <text x="370" y="192" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="492" cy="188" r="9" fill="#34A853"/>
+  <text x="492" y="192" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="643" cy="188" r="9" fill="#34A853"/>
+  <text x="643" y="192" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="202" x2="782" y2="202" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Apple Intelligence -->
+  <text x="22" y="226" font-size="12" font-weight="600" fill="#1C1B1F">Apple Intelligence</text>
+  <circle cx="260" cy="222" r="9" fill="#34A853"/>
+  <text x="260" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="370" cy="222" r="9" fill="#34A853"/>
+  <text x="370" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="492" cy="222" r="9" fill="#EA4335"/>
+  <text x="492" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <rect x="615" y="212" width="56" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="643" y="224" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">内蔵</text>
+  <line x1="18" y1="236" x2="782" y2="236" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="400" y="265" font-size="11" fill="#79747E" text-anchor="middle">Private LLMのみショートカット＋Siri対応。PocketPal AI、MLC Chat、LLM Farmはスタンドアロンのチャットアプリ。</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
