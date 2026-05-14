@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easiest Local AI App for Windows, Mac, and Linux (2026) | PromptQuorum</title>
+  <meta name="description" content="LM Studio, Jan, GPT4All ranked by ease 2026: install time, model support, hardware needs. No terminal required. Windows, Mac, Linux compared." />
+  <meta property="og:title" content="Easiest Local AI App 2026 — PromptQuorum" />
+  <meta property="og:description" content="LM Studio, Jan, GPT4All compared by setup time, model library, and hardware. No terminal required." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f6f4f4; color: #1c1b1f; overflow: hidden;
+    }
+    .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+    .slide {
+      width: 100%; height: 100%; display: none; flex-direction: column;
+      justify-content: center; align-items: center; padding: 32px 48px;
+      text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .slide h1 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+    .slide h2 { font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
+    .slide p { font-size: clamp(14px, 1.6vw, 18px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+    .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+    .slide.title .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+    .slide.title p { font-size: clamp(14px, 1.6vw, 20px); color: #6750a4; font-weight: 500; margin-top: 12px; }
+    .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; transition: all 0.2s; }
+    .slide.title a:hover { color: #7d5260; border-bottom-color: #7d5260; }
+    .slide ul, .slide ol { text-align: left; margin: 10px auto; max-width: 680px; }
+    .slide ul li, .slide ol li { font-size: clamp(13px, 1.4vw, 16px); margin-bottom: 9px; line-height: 1.5; }
+    .slide strong { color: #1c1b1f; font-weight: 700; }
+    table { margin: 10px auto; border-collapse: collapse; font-size: clamp(11px, 1.2vw, 14px); text-align: left; max-width: 92%; }
+    th { background: #6750a4; color: white; padding: 7px 12px; font-weight: 700; border: none; }
+    td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+    tr:hover td { background: #f7f2fa; }
+    .header {
+      padding: 10px 20px; border-bottom: 1px solid #e0e0e0;
+      display: flex; justify-content: space-between; align-items: center;
+      background: white; flex-shrink: 0;
+    }
+    .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+    .header-left img { width: 28px; height: 28px; }
+    .header-links { display: flex; gap: 16px; }
+    .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; transition: color 0.2s; }
+    .header-links a:hover { color: #7d5260; }
+    .content-area { flex: 1; overflow: hidden; }
+    .controls {
+      display: flex; gap: 12px; align-items: center; justify-content: center;
+      padding: 10px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0;
+    }
+    button {
+      background: #6750a4; color: white; border: none; padding: 8px 16px;
+      border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s;
+    }
+    button:hover { background: #7d5260; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+    .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 50px; text-align: center; }
+    @page { size: A4 landscape; margin: 0; }
+    @media (max-width: 640px) {
+      .slide { padding: 20px 16px; }
+      .slide h1 { font-size: clamp(18px, 5vw, 26px); }
+      .slide h2 { font-size: clamp(15px, 4vw, 20px); }
+      .slide p { font-size: 13px; }
+      .slide ul li, .slide ol li { font-size: 12px; margin-bottom: 7px; }
+      table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.8em; }
+      table th, table td { padding: 5px 7px; white-space: nowrap; }
+      .header { padding: 8px 12px; }
+      .header-left span { font-size: 11px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-links { gap: 8px; font-size: 10px; }
+    }
+    @media print {
+      * { margin: 0; padding: 0; }
+      html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; }
+      .header, .controls { display: none !important; }
+      .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
+      .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
+      .slide {
+        display: flex !important; flex-direction: column; justify-content: center; align-items: center;
+        page-break-after: always; break-after: page; width: 100%; height: 210mm;
+        padding: 18mm 22mm; box-sizing: border-box; overflow: visible !important;
+        margin: 0; background: white; color: #1c1b1f; position: relative; counter-increment: page-counter;
+      }
+      .slide::before {
+        content: "https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux";
+        position: absolute; bottom: 12mm; left: 22mm; font-size: 8pt; color: #999;
+      }
+      .slide::after {
+        content: counter(page-counter) " / 14";
+        position: absolute; bottom: 12mm; right: 22mm; font-size: 8pt; color: #999;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="presentation-container">
+  <div class="header">
+    <div class="header-left">
+      <img src="/logo.svg" alt="PromptQuorum" />
+      <span id="header-title">Easiest Local AI App 2026</span>
+    </div>
+    <div class="header-links">
+      <a id="back-link" href="https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux" target="_blank" rel="noopener">← Back to Article</a>
+      <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+    </div>
+  </div>
+  <div class="content-area" id="slides-container"></div>
+  <div class="controls">
+    <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+    <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+    <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+  </div>
+</div>
+<script>
+const SLUG = 'easiest-local-ai-app-windows-mac-linux';
+const BASE_URL = 'https://www.promptquorum.com/power-local-llm/' + SLUG;
+
+const CONTENT = {
+  en: {
+    title: 'Easiest Local AI App for Windows, Mac, and Linux (2026)',
+    slides: [
+      {
+        type: 'title',
+        h1: 'Easiest Local AI App for Windows, Mac, and Linux (2026)',
+        subtitle: 'LM Studio installs in under 10 minutes — no terminal, no Python, no cloud account. Download, install, pick a model, and chat.',
+        link: BASE_URL
+      },
+      {
+        type: 'list',
+        h2: 'Key Takeaways — Part 1',
+        items: [
+          '<strong>LM Studio:</strong> fastest setup — download from lmstudio.ai, search "Phi-4 Mini", download, chat. Under 10 minutes.',
+          '<strong>Jan:</strong> open-source alternative with the same ease of use — fully open-source, works on Linux AppImage.',
+          '<strong>GPT4All:</strong> most simplified experience — single chat window, curated model list, no browsing overhead.',
+          '<strong>Start with Phi-4 Mini (3B) or Llama 3.2 3B</strong> — runs on any laptop from the last 7 years, no GPU required.'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Key Takeaways — Part 2',
+        items: [
+          '<strong>No cloud account required</strong> — everything runs locally after the initial download. No API key, no subscription.',
+          '<strong>Apple Silicon:</strong> M3 MacBook Air (8 GB) runs Phi-4 Mini fluently. M5 Max (64 GB) runs 70B models.',
+          '<strong>LM Studio Local Server</strong> exposes an OpenAI-compatible API at localhost — connect Obsidian, VS Code, and more.'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Quick Facts',
+        items: [
+          '<strong>LM Studio:</strong> lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb)',
+          '<strong>Jan:</strong> jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage)',
+          '<strong>GPT4All:</strong> gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage)',
+          '<strong>Minimum hardware:</strong> 8 GB RAM for 3B–7B models; 16 GB+ for 8B–14B; 24 GB+ for 30B+',
+          '<strong>No GPU required</strong> for 3B–7B models on Apple Silicon or CPU inference mode',
+          '<strong>First model:</strong> Phi-4 Mini (~2.7 GB) for ≤8 GB RAM; Qwen3 8B for 8–16 GB systems'
+        ]
+      },
+      {
+        type: 'table',
+        h2: 'Three Apps Compared',
+        columns: ['Feature', 'LM Studio', 'Jan', 'GPT4All'],
+        rows: [
+          { Feature: 'Setup time', 'LM Studio': '~8 min', Jan: '~10 min', GPT4All: '~5 min' },
+          { Feature: 'Model library', 'LM Studio': '50,000+ GGUF models', Jan: 'Curated + HuggingFace', GPT4All: '~20 curated models' },
+          { Feature: 'Local API', 'LM Studio': 'Yes (OpenAI-compat.)', Jan: 'Yes (OpenAI-compat.)', GPT4All: 'Yes (limited)' },
+          { Feature: 'Chat history', 'LM Studio': 'Yes', Jan: 'Yes', GPT4All: 'Single session only' },
+          { Feature: 'Licence', 'LM Studio': 'Free, source-available', Jan: 'AGPLv3 (OSS)', GPT4All: 'MIT (OSS)' },
+          { Feature: 'Linux', 'LM Studio': 'AppImage, .deb', Jan: 'AppImage', GPT4All: 'AppImage' },
+          { Feature: 'Best for', 'LM Studio': 'Best UI + dev API', Jan: 'Open-source users', GPT4All: 'Pure beginners' }
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'LM Studio: Setup Guide (5 Steps)',
+        items: [
+          'Go to lmstudio.ai — download the installer for your platform (Windows .exe, macOS .dmg, Linux .AppImage)',
+          'Run the installer — accept any security prompt (new app, may trigger OS warning)',
+          'Click "Discover" — search "Phi-4 Mini" (≤8 GB RAM) or "Qwen3 8B" (16 GB+ RAM)',
+          'Click the model → click "Download" next to the Q4_K_M variant — best quality/size tradeoff',
+          'Wait for download (2–5 GB) → click "Chat" → select model from dropdown → start chatting'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'Jan: Setup Guide (5 Steps)',
+        items: [
+          'Go to jan.ai — download the installer for your platform',
+          'Run the installer and open Jan',
+          'Click "Hub" in the left sidebar to browse models',
+          'Search "Phi-4 Mini" or "Qwen3 8B" → click "Download" (pulls GGUF from Hugging Face)',
+          'Click "Thread" to start a conversation — select model from the picker at the bottom of the chat window'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'GPT4All: Setup Guide (5 Steps)',
+        items: [
+          'Go to gpt4all.io — download the installer for your platform',
+          'Run the installer and open GPT4All',
+          'The Models tab shows a curated list with plain-English descriptions — click "Download" on the closest match to your hardware',
+          'Once downloaded, the chat window opens automatically — type your first message',
+          'Note: GPT4All has no multi-conversation history — each session starts fresh'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Which Model Should I Download First?',
+        items: [
+          '<strong>≤8 GB RAM:</strong> Phi-4 Mini (3.8B Q4, ~2.7 GB) — 15–30 tok/s on Apple Silicon; 5–10 tok/s CPU-only',
+          '<strong>8–16 GB RAM:</strong> Llama 3.2 3B (Q4) or Qwen3 8B (Q4) — 20–40 tok/s on Apple Silicon',
+          '<strong>16–32 GB RAM:</strong> Qwen3 14B (Q4, ~8.9 GB) — 15–25 tok/s on Apple Silicon',
+          '<strong>32 GB+ Apple Silicon or 24 GB VRAM:</strong> Llama 3.3 70B (~40 GB) — 10–20 tok/s on M5 Max',
+          '<strong>Tip:</strong> Start with the smallest model that runs at 8+ tok/s — fast and small beats slow and large'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Hardware Requirements',
+        items: [
+          '<strong>Apple Silicon (M1–M5):</strong> Best consumer hardware — M3 Air (8 GB) runs Phi-4 Mini at 20+ tok/s; M5 Max runs 70B',
+          '<strong>NVIDIA GPU (Windows/Linux):</strong> CUDA acceleration in LM Studio — RTX 3060 12 GB runs Qwen3 8B in real time',
+          '<strong>AMD GPU:</strong> ROCm support improving — check LM Studio release notes for your specific card',
+          '<strong>CPU-only Intel/AMD:</strong> Works for 3B–7B at 5–15 tok/s — usable for non-interactive tasks (summarization, drafting)',
+          '<strong>RAM rule:</strong> Model must fit entirely in RAM — 4B→3 GB; 8B→5 GB; 14B→9 GB; 70B→42 GB'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Common Mistakes',
+        items: [
+          '<strong>Downloading a model too large for your RAM</strong> — LM Studio will disk-swap (~0.5 tok/s, feels broken)',
+          '<strong>Expecting cloud AI quality from a 3B model</strong> — small local models make more mistakes and lose context faster',
+          '<strong>Not using Q4_K_M quantization</strong> — Q8 doubles RAM for modest gain; Q2 degrades output noticeably',
+          '<strong>Losing chat history</strong> — save or pin important conversations; LM Studio stores history per session',
+          '<strong>Forgetting the Local Server</strong> — for Obsidian/VS Code: click Local Server tab in LM Studio → Start'
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Part 1',
+        faqs: [
+          { q: 'Is there any cost to running a local AI app?', a: 'No ongoing cost. All three apps are free. Models are open-source and free. Only cost is electricity and the one-time model download (2–40 GB).' },
+          { q: 'Do I need internet after the initial download?', a: 'No. After downloading the app and model, everything runs locally — no internet needed on a plane, hotel, or restricted network.' },
+          { q: 'How private is a local AI app?', a: 'Completely private. Conversations never leave your machine. No logging, no training data collection. LM Studio has opt-out analytics; Jan and GPT4All have none.' }
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Part 2',
+        faqs: [
+          { q: 'What is the difference between LM Studio and Ollama?', a: 'LM Studio is a GUI app — no terminal needed. Ollama is command-line. LM Studio is easier for beginners; Ollama\'s API is simpler for developers.' },
+          { q: 'Can I run multiple models at the same time?', a: 'LM Studio supports one model in the GUI but multiple via Local Server with enough RAM. Jan and GPT4All are single-model only.' },
+          { q: 'Which quantization should I use?', a: 'Start with Q4_K_M — the default in LM Studio. Q8 doubles RAM for modest quality gain. Q2 saves RAM but noticeably degrades output.' }
+        ]
+      },
+      {
+        type: 'cta',
+        h2: 'Run Local AI — No Cloud Account Needed',
+        body: 'PromptQuorum helps you test and compare AI models — from cloud APIs to local LLMs — in one unified interface.',
+        cta: 'Try PromptQuorum Free',
+        href: 'https://www.promptquorum.com'
+      }
+    ]
+  },
+  de: {
+    title: 'Die einfachste lokale AI-App für Windows, Mac und Linux (2026)',
+    slides: [
+      {
+        type: 'title',
+        h1: 'Die einfachste lokale AI-App für Windows, Mac und Linux (2026)',
+        subtitle: 'LM Studio installiert sich in unter 10 Minuten — kein Terminal, kein Python, kein Cloud-Konto.',
+        link: BASE_URL
+      },
+      {
+        type: 'list',
+        h2: 'Wichtige Erkenntnisse — Teil 1',
+        items: [
+          '<strong>LM Studio:</strong> schnellstes Setup — Installer herunterladen, "Phi-4 Mini" suchen, herunterladen, chatten. Unter 10 Minuten.',
+          '<strong>Jan:</strong> Open-Source-Alternative mit gleicher Benutzerfreundlichkeit — vollständig Open-Source, läuft auf Linux AppImage.',
+          '<strong>GPT4All:</strong> einfachstes Erlebnis — einzelnes Chat-Fenster, kuratierte Modelle, kein Durchsuchungsaufwand.',
+          '<strong>Starten mit Phi-4 Mini (3B) oder Llama 3.2 3B</strong> — läuft auf jedem Laptop der letzten 7 Jahre, keine GPU erforderlich.'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Wichtige Erkenntnisse — Teil 2',
+        items: [
+          '<strong>Kein Cloud-Konto erforderlich</strong> — alles läuft lokal nach dem initialen Download. Kein API-Schlüssel, kein Abonnement.',
+          '<strong>Apple Silicon:</strong> M3 MacBook Air (8 GB) führt Phi-4 Mini flüssig aus. M5 Max (64 GB) führt 70B-Modelle aus.',
+          '<strong>LM Studio Local Server</strong> öffnet eine OpenAI-kompatible API auf localhost — Obsidian, VS Code verbinden.'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Grundfakten',
+        items: [
+          '<strong>LM Studio:</strong> lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb)',
+          '<strong>Jan:</strong> jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage)',
+          '<strong>GPT4All:</strong> gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage)',
+          '<strong>Mindestanforderungen:</strong> 8 GB RAM für 3B–7B-Modelle; 16 GB+ für 8B–14B; 24 GB+ für 30B+',
+          '<strong>Keine GPU erforderlich</strong> für 3B–7B-Modelle auf Apple Silicon oder CPU-Inferenzmodus',
+          '<strong>Erstes Modell:</strong> Phi-4 Mini (~2,7 GB) für ≤8 GB RAM; Qwen3 8B für 8–16 GB Systeme'
+        ]
+      },
+      {
+        type: 'table',
+        h2: 'Die drei Optionen verglichen',
+        columns: ['Funktion', 'LM Studio', 'Jan', 'GPT4All'],
+        rows: [
+          { Funktion: 'Installationszeit', 'LM Studio': '~8 Min.', Jan: '~10 Min.', GPT4All: '~5 Min.' },
+          { Funktion: 'Modellbibliothek', 'LM Studio': '50.000+ GGUF-Modelle', Jan: 'Kuratiert + HuggingFace', GPT4All: '~20 Modelle' },
+          { Funktion: 'Lokale API', 'LM Studio': 'Ja (OpenAI-kompatibel)', Jan: 'Ja (OpenAI-kompatibel)', GPT4All: 'Ja (eingeschränkt)' },
+          { Funktion: 'Chat-Verlauf', 'LM Studio': 'Ja', Jan: 'Ja', GPT4All: 'Nur einzelne Sitzung' },
+          { Funktion: 'Lizenz', 'LM Studio': 'Kostenlos, quelloffen', Jan: 'AGPLv3 (OSS)', GPT4All: 'MIT (OSS)' },
+          { Funktion: 'Linux', 'LM Studio': 'AppImage, .deb', Jan: 'AppImage', GPT4All: 'AppImage' },
+          { Funktion: 'Ideal für', 'LM Studio': 'Beste UI + Entwickler-API', Jan: 'Open-Source-Nutzer', GPT4All: 'Absolute Anfänger' }
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'LM Studio: Installationsleitfaden',
+        items: [
+          'Gehen Sie zu lmstudio.ai — Installer herunterladen (Windows .exe, macOS .dmg, Linux .AppImage)',
+          'Installer ausführen — Sicherheitsaufforderungen akzeptieren',
+          '"Discover" klicken — "Phi-4 Mini" (≤8 GB) oder "Qwen3 8B" (16 GB+) suchen',
+          'Modell klicken → "Download" neben Q4_K_M-Variante — bester Qualitäts-Größen-Ausgleich',
+          'Download abwarten (2–5 GB) → "Chat" klicken → Modell auswählen → chatten beginnen'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'Jan: Installationsleitfaden',
+        items: [
+          'Gehen Sie zu jan.ai — Installer für Ihre Plattform herunterladen',
+          'Installer ausführen und Jan öffnen',
+          '"Hub" in der linken Seitenleiste klicken, um Modelle zu durchsuchen',
+          '"Phi-4 Mini" oder "Qwen3 8B" suchen → "Download" klicken (lädt GGUF von Hugging Face)',
+          '"Thread" klicken für neues Gespräch — Modell aus der Auswahl am unteren Ende wählen'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'GPT4All: Installationsleitfaden',
+        items: [
+          'Gehen Sie zu gpt4all.io — Installer herunterladen',
+          'Installer ausführen und GPT4All öffnen',
+          'Models-Tab zeigt kuratierte Liste mit klaren Beschreibungen — "Download" klicken',
+          'Nach Download öffnet sich das Chat-Fenster automatisch — erste Nachricht eingeben',
+          'Hinweis: GPT4All hat keinen Multi-Gesprächs-Verlauf — jede Sitzung beginnt neu'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Welches Modell zuerst herunterladen?',
+        items: [
+          '<strong>≤8 GB RAM:</strong> Phi-4 Mini (3,8B Q4, ~2,7 GB) — 15–30 Token/Sek. auf Apple Silicon',
+          '<strong>8–16 GB RAM:</strong> Llama 3.2 3B (Q4) oder Qwen3 8B (Q4) — 20–40 Token/Sek. Apple Silicon',
+          '<strong>16–32 GB RAM:</strong> Qwen3 14B (Q4, ~8,9 GB) — 15–25 Token/Sek. auf Apple Silicon',
+          '<strong>32 GB+ Apple Silicon oder 24 GB VRAM:</strong> Llama 3.3 70B (~40 GB) — 10–20 Token/Sek. M5 Max',
+          '<strong>Tipp:</strong> Beginnen Sie mit dem kleinsten Modell, das >8 Token/Sek. läuft'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Hardware-Anforderungen',
+        items: [
+          '<strong>Apple Silicon (M1–M5):</strong> Beste Consumer-Hardware — M3 Air (8 GB) führt Phi-4 Mini mit 20+ Token/Sek. aus',
+          '<strong>NVIDIA-GPU (Windows/Linux):</strong> CUDA-Beschleunigung in LM Studio — RTX 3060 12 GB führt Qwen3 8B aus',
+          '<strong>AMD-GPU:</strong> ROCm-Unterstützung verbessert sich — LM Studio-Versionshinweise prüfen',
+          '<strong>Nur CPU Intel/AMD:</strong> Funktioniert für 3B–7B mit 5–15 Token/Sek. — nutzbar für nicht-interaktive Aufgaben',
+          '<strong>RAM-Regel:</strong> Modell muss vollständig in RAM passen — 4B→3 GB; 8B→5 GB; 14B→9 GB; 70B→42 GB'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Häufige Fehler',
+        items: [
+          '<strong>Zu großes Modell für RAM herunterladen</strong> — LM Studio nutzt Festplatten-Swap (~0,5 Token/Sek.)',
+          '<strong>Cloud-AI-Qualität von 3B-Modellen erwarten</strong> — kleine lokale Modelle machen mehr Fehler',
+          '<strong>Q4_K_M-Quantisierung nicht verwenden</strong> — Q8 verdoppelt RAM; Q2 verschlechtert Qualität merklich',
+          '<strong>Chat-Verlauf verlieren</strong> — wichtige Gespräche speichern oder anheften',
+          '<strong>Local Server vergessen</strong> — für Obsidian/VS Code: Local Server-Tab → Start klicken'
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Teil 1',
+        faqs: [
+          { q: 'Entstehen Kosten für das Ausführen einer lokalen AI-App?', a: 'Keine laufenden Kosten. Alle drei Apps sind kostenlos. Modelle sind Open-Source und kostenlos.' },
+          { q: 'Benötige ich nach dem ersten Download noch Internet?', a: 'Nein. Nach Download läuft alles lokal — kein Internet im Flugzeug, Hotel oder eingeschränkten Netzwerk.' },
+          { q: 'Wie privat ist eine lokale AI-App?', a: 'Vollständig privat. Ihre Gespräche verlassen niemals Ihren Computer. Kein Logging, keine Datenerfassung.' }
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Teil 2',
+        faqs: [
+          { q: 'Was ist der Unterschied zwischen LM Studio und Ollama?', a: 'LM Studio ist eine GUI-App — kein Terminal nötig. Ollama ist Befehlszeile. LM Studio ist einfacher für Anfänger; Ollamafs API ist einfacher für Entwickler.' },
+          { q: 'Kann ich mehrere Modelle gleichzeitig ausführen?', a: 'LM Studio: ein Modell in GUI, mehrere über Local Server mit genug RAM. Jan und GPT4All sind einzelnes Modell.' },
+          { q: 'Welche Quantisierung sollte ich verwenden?', a: 'Starten Sie mit Q4_K_M — Standard in LM Studio. Q8 verdoppelt RAM für bescheidene Gewinne. Q2 verschlechtert die Ausgabe merklich.' }
+        ]
+      },
+      {
+        type: 'cta',
+        h2: 'Lokale KI ausführen — kein Cloud-Konto erforderlich',
+        body: 'PromptQuorum hilft Ihnen, KI-Modelle zu testen und zu vergleichen — von Cloud-APIs bis zu lokalen LLMs.',
+        cta: 'PromptQuorum kostenlos testen',
+        href: 'https://www.promptquorum.com'
+      }
+    ]
+  },
+  fr: {
+    title: 'Application IA locale la plus facile pour Windows, Mac et Linux (2026)',
+    slides: [
+      {
+        type: 'title',
+        h1: 'Application IA locale la plus facile pour Windows, Mac et Linux (2026)',
+        subtitle: 'LM Studio s\'installe en moins de 10 minutes — aucun terminal, aucun Python, aucun compte cloud.',
+        link: BASE_URL
+      },
+      {
+        type: 'list',
+        h2: 'Points clés — Partie 1',
+        items: [
+          '<strong>LM Studio :</strong> installation la plus rapide — téléchargez depuis lmstudio.ai, cherchez "Phi-4 Mini", discutez. Moins de 10 min.',
+          '<strong>Jan :</strong> alternative open-source avec la même facilité — entièrement open-source, fonctionne sur AppImage Linux.',
+          '<strong>GPT4All :</strong> expérience la plus simplifiée — fenêtre unique, modèles curés, sans navigation complexe.',
+          '<strong>Commencez avec Phi-4 Mini (3B) ou Llama 3.2 3B</strong> — fonctionne sur tout ordinateur des 7 dernières années.'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Points clés — Partie 2',
+        items: [
+          '<strong>Aucun compte cloud requis</strong> — tout fonctionne localement après le téléchargement. Aucune clé API, aucun abonnement.',
+          '<strong>Apple Silicon :</strong> MacBook Air M3 (8 GB) exécute Phi-4 Mini couramment. M5 Max (64 GB) exécute les modèles 70B.',
+          '<strong>LM Studio Local Server</strong> expose une API compatible OpenAI sur localhost — connectez Obsidian, VS Code, etc.'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Faits rapides',
+        items: [
+          '<strong>LM Studio :</strong> lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb)',
+          '<strong>Jan :</strong> jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage)',
+          '<strong>GPT4All :</strong> gpt4all.io — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage)',
+          '<strong>Matériel minimum :</strong> 8 GB RAM pour modèles 3B–7B ; 16 GB+ pour 8B–14B ; 24 GB+ pour 30B+',
+          '<strong>Pas de GPU requis</strong> pour modèles 3B–7B sur Apple Silicon ou mode inférence CPU',
+          '<strong>Premier modèle :</strong> Phi-4 Mini (~2,7 GB) pour ≤8 GB RAM ; Qwen3 8B pour 8–16 GB'
+        ]
+      },
+      {
+        type: 'table',
+        h2: 'Les trois options comparées',
+        columns: ['Critère', 'LM Studio', 'Jan', 'GPT4All'],
+        rows: [
+          { Critère: 'Facilité installation', 'LM Studio': '9/10', Jan: '9/10', GPT4All: '10/10' },
+          { Critère: 'Performance (M3, Llama 8B)', 'LM Studio': '28 tok/s', Jan: '22 tok/s', GPT4All: '16 tok/s' },
+          { Critère: 'Bibliothèque modèles', 'LM Studio': '50 000+ GGUF', Jan: 'Curated + HuggingFace', GPT4All: '~20 curés' },
+          { Critère: 'API locale', 'LM Studio': 'Oui', Jan: 'Oui', GPT4All: 'Oui' },
+          { Critère: 'Licence', 'LM Studio': 'Propriétaire (gratuit)', Jan: 'AGPL (open-source)', GPT4All: 'MIT (open-source)' },
+          { Critère: 'Linux', 'LM Studio': 'AppImage, .deb', Jan: 'AppImage', GPT4All: 'AppImage' }
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'LM Studio : Guide d\'installation',
+        items: [
+          'Téléchargez LM Studio depuis lmstudio.ai (Windows .exe, macOS .dmg, Linux .AppImage)',
+          'Ouvrez LM Studio — acceptez les invites de sécurité si nécessaire',
+          'Cliquez sur "Discover" — cherchez "Phi-4 Mini" (≤8 GB) ou "Qwen3 8B" (16 GB+)',
+          'Cliquez sur le modèle → "Download" à côté de Q4_K_M — meilleur compromis qualité/taille',
+          'Attendez le téléchargement (2–5 GB) → "Chat" → sélectionnez le modèle → commencez'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'Jan : Guide d\'installation',
+        items: [
+          'Téléchargez Jan depuis jan.ai',
+          'Exécutez l\'installateur et ouvrez Jan',
+          'Cliquez sur "Hub" dans la barre latérale pour parcourir les modèles',
+          'Cherchez "Phi-4 Mini" ou "Qwen3 8B" → "Download" (télécharge GGUF depuis Hugging Face)',
+          'Cliquez "Thread" pour démarrer — sélectionnez le modèle en bas du chat'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'GPT4All : Guide d\'installation',
+        items: [
+          'Téléchargez GPT4All depuis gpt4all.io',
+          'Exécutez l\'installateur et ouvrez GPT4All',
+          'L\'onglet Models affiche une liste curée avec descriptions — cliquez "Download"',
+          'Après téléchargement, la fenêtre chat s\'ouvre automatiquement — tapez votre message',
+          'Note : GPT4All n\'a pas d\'historique multi-conversation — chaque session repart de zéro'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Quel modèle télécharger en premier ?',
+        items: [
+          '<strong>≤8 GB RAM :</strong> Phi-4 Mini (3B, ~3 GB) — 15–30 tok/s sur Apple Silicon',
+          '<strong>8–16 GB RAM :</strong> Llama 3.2 3B ou Qwen3 8B — bon équilibre vitesse/qualité',
+          '<strong>Apple Silicon M3–M5 :</strong> Qwen3 8B ou Llama 3.3 8B — excellentes vitesse et qualité',
+          '<strong>NVIDIA RTX 3060+ :</strong> Llama 3.3 8B, Mistral 7B — accélération GPU 5–10x',
+          '<strong>Conseil :</strong> commencez avec le modèle le plus petit qui tourne à >8 tok/s'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Exigences matérielles',
+        items: [
+          '<strong>Apple Silicon (M1–M5) :</strong> Meilleur matériel grand public — M3 Air (8 GB) tourne Phi-4 Mini à 20+ tok/s',
+          '<strong>GPU NVIDIA (Windows/Linux) :</strong> Accélération CUDA dans LM Studio — RTX 3060 tourne Qwen3 8B',
+          '<strong>GPU AMD :</strong> Support ROCm en amélioration — vérifiez les notes LM Studio pour votre carte',
+          '<strong>CPU seul Intel/AMD :</strong> Fonctionne pour 3B–7B à 5–15 tok/s — utilisable pour tâches non-interactives',
+          '<strong>Règle RAM :</strong> Le modèle doit tenir entièrement en mémoire — 4B→3 GB ; 8B→5 GB ; 70B→42 GB'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'Erreurs courantes',
+        items: [
+          '<strong>Télécharger un modèle trop grand pour la RAM</strong> — LM Studio utilisera le disque (~0,5 tok/s)',
+          '<strong>Attendre la qualité cloud d\'un modèle 3B</strong> — les petits modèles font plus d\'erreurs',
+          '<strong>Ne pas utiliser Q4_K_M</strong> — Q8 double la RAM ; Q2 dégrade la qualité notablement',
+          '<strong>Perdre l\'historique de chat</strong> — enregistrez les conversations importantes dans LM Studio',
+          '<strong>Oublier le Local Server</strong> — pour Obsidian/VS Code : cliquez Local Server → Démarrer'
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Partie 1',
+        faqs: [
+          { q: 'Y a-t-il un coût pour utiliser une application IA locale ?', a: 'Aucun coût continu. Les trois applications sont gratuites. Les modèles sont open-source et gratuits.' },
+          { q: 'Ai-je besoin d\'internet après le téléchargement initial ?', a: 'Non. Tout fonctionne localement après le téléchargement — idéal pour avion, hôtel ou réseau restreint.' },
+          { q: 'Quelle est la confidentialité d\'une application IA locale ?', a: 'Entièrement privée. Vos conversations ne quittent jamais votre machine. Aucun journalisation, aucune collecte de données.' }
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Partie 2',
+        faqs: [
+          { q: 'Quelle est la différence entre LM Studio et Ollama ?', a: 'LM Studio est une application GUI — aucun terminal. Ollama est ligne de commande. LM Studio est plus facile pour débutants.' },
+          { q: 'Puis-je exécuter plusieurs modèles simultanément ?', a: 'LM Studio : un modèle dans GUI, plusieurs via Local Server. Jan et GPT4All : modèle unique à la fois.' },
+          { q: 'Quelle quantification utiliser ?', a: 'Commencez par Q4_K_M — défaut dans LM Studio. Q8 double la RAM. Q2 dégrade nettement la qualité.' }
+        ]
+      },
+      {
+        type: 'cta',
+        h2: 'Lancez votre IA locale — sans compte cloud',
+        body: 'PromptQuorum vous aide à tester et comparer des modèles IA — des APIs cloud aux LLMs locaux.',
+        cta: 'Essayer PromptQuorum gratuitement',
+        href: 'https://www.promptquorum.com'
+      }
+    ]
+  },
+  ja: {
+    title: '最も簡単なローカルAIアプリ Windows、Mac、Linux (2026)',
+    slides: [
+      {
+        type: 'title',
+        h1: '最も簡単なローカルAIアプリ Windows、Mac、Linux (2026)',
+        subtitle: 'LM StudioはWindows、Mac、Linuxで10分以内にインストール完了。ターミナル不要、Python不要、クラウド不要。',
+        link: BASE_URL
+      },
+      {
+        type: 'list',
+        h2: '重要ポイント — Part 1',
+        items: [
+          '<strong>LM Studio：</strong>最速セットアップ — lmstudio.aiからダウンロード、"Phi-4 Mini"を検索、ダウンロード、チャット。10分以内。',
+          '<strong>Jan：</strong>同じ使いやすさのオープンソース代替 — 完全オープンソース、Linux AppImageで動作。',
+          '<strong>GPT4All：</strong>最もシンプルな体験 — 単一ウィンドウ、キュレーションされたモデル、閲覧不要。',
+          '<strong>Phi-4 Mini（3B）またはLlama 3.2 3Bで開始</strong> — 過去7年のすべてのラップトップで動作、GPU不要。'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '重要ポイント — Part 2',
+        items: [
+          '<strong>クラウドアカウント不要</strong> — 初期ダウンロード後すべてローカル実行。APIキー不要、サブスクリプション不要。',
+          '<strong>Apple Silicon：</strong>M3 MacBook Air（8 GB）はPhi-4 Miniを流暢に実行。M5 Max（64 GB）は70Bモデルを実行。',
+          '<strong>LM Studio Local Server</strong>はlocalhost上でOpenAI互換APIを公開 — Obsidian、VS Codeに接続可能。'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '基本情報',
+        items: [
+          '<strong>LM Studio：</strong>lmstudio.ai — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage、.deb）',
+          '<strong>Jan：</strong>jan.ai — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）',
+          '<strong>GPT4All：</strong>gpt4all.io — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）',
+          '<strong>最小ハードウェア：</strong>3B–7Bモデルに8 GB RAM；8B–14Bに16 GB+；30B+に24 GB+',
+          '<strong>Apple SiliconまたはCPU推論モードで3B–7BモデルにGPU不要</strong>',
+          '<strong>最初のモデル：</strong>≤8 GB RAMにPhi-4 Mini（~2.7 GB）；8–16 GBにQwen3 8B'
+        ]
+      },
+      {
+        type: 'table',
+        h2: '3つのアプリを比較',
+        columns: ['基準', 'LM Studio', 'Jan', 'GPT4All'],
+        rows: [
+          { '基準': 'インストール容易さ', 'LM Studio': '9/10', Jan: '9/10', GPT4All: '10/10' },
+          { '基準': 'パフォーマンス（M3、Llama 8B）', 'LM Studio': '28 tok/s', Jan: '22 tok/s', GPT4All: '16 tok/s' },
+          { '基準': 'モデルライブラリ', 'LM Studio': '50,000+ GGUF', Jan: 'キュレーション+HuggingFace', GPT4All: '約20モデル' },
+          { '基準': 'ローカルAPI', 'LM Studio': 'あり', Jan: 'あり', GPT4All: 'あり' },
+          { '基準': 'ライセンス', 'LM Studio': 'プロプライエタリ（無料）', Jan: 'AGPL（OSS）', GPT4All: 'MIT（OSS）' },
+          { '基準': 'Linux', 'LM Studio': 'AppImage、.deb', Jan: 'AppImage', GPT4All: 'AppImage' }
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'LM Studio：セットアップガイド',
+        items: [
+          'lmstudio.aiへアクセス — プラットフォーム向けインストーラをダウンロード',
+          'インストーラを実行 — セキュリティプロンプトを承認',
+          '"Discover"をクリック — "Phi-4 Mini"（≤8 GB）または"Qwen3 8B"（16 GB+）を検索',
+          'モデルをクリック → Q4_K_M変体の"Download"をクリック — 品質とサイズの最適バランス',
+          'ダウンロード待機（2–5 GB）→ "Chat"クリック → モデル選択 → チャット開始'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'Jan：セットアップガイド',
+        items: [
+          'jan.aiへアクセス — インストーラをダウンロード',
+          'インストーラを実行してJanを開く',
+          '左サイドバーの"Hub"をクリックしてモデルを閲覧',
+          '"Phi-4 Mini"または"Qwen3 8B"を検索 → "Download"クリック（Hugging FaceからGGUF取得）',
+          '"Thread"クリックで新しい会話を開始 — チャット下部のモデルピッカーで選択'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'GPT4All：セットアップガイド',
+        items: [
+          'gpt4all.ioへアクセス — インストーラをダウンロード',
+          'インストーラを実行してGPT4Allを開く',
+          'Modelsタブに平易な説明付きキュレーションリスト表示 — "Download"クリック',
+          'ダウンロード後、チャットウィンドウが自動的に開く — 最初のメッセージを入力',
+          '注意：GPT4Allはマルチ会話履歴なし — 各セッションは新たに開始'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '最初にダウンロードすべきモデルは？',
+        items: [
+          '<strong>≤8 GB RAM：</strong>Phi-4 Mini（3.8B Q4、~2.7 GB）— Apple Siliconで15–30 tok/s',
+          '<strong>8–16 GB RAM：</strong>Llama 3.2 3B（Q4）またはQwen3 8B（Q4）— 速度と品質のバランス良好',
+          '<strong>Apple Silicon M3–M5：</strong>Qwen3 8BまたはLlama 3.3 8B — 優れた品質と速度',
+          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B、Mistral 7B — GPU加速で5–10倍高速化',
+          '<strong>ヒント：</strong>8 tok/s以上で動作する最小モデルから始める'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'ハードウェア要件',
+        items: [
+          '<strong>Apple Silicon（M1–M5）：</strong>最高のコンシューマハードウェア — M3 Air（8 GB）はPhi-4 Miniを20+ tok/sで実行',
+          '<strong>NVIDIA GPU（Windows/Linux）：</strong>LM StudioのCUDA加速 — RTX 3060 12 GBでQwen3 8Bを実行',
+          '<strong>AMD GPU：</strong>ROCmサポート改善中 — 特定カードのLM Studioリリースノートを確認',
+          '<strong>CPUのみIntel/AMD：</strong>3B–7Bで5–15 tok/s — 非対話型タスクに使用可能',
+          '<strong>RAM規則：</strong>モデルは完全にRAMに収まる必要 — 4B→3 GB；8B→5 GB；14B→9 GB；70B→42 GB'
+        ]
+      },
+      {
+        type: 'list',
+        h2: 'よくある間違い',
+        items: [
+          '<strong>RAMに対して大きすぎるモデルのダウンロード</strong> — LM Studioはディスクスワップ使用（~0.5 tok/s）',
+          '<strong>3Bモデルにクラウドレベルの品質を期待</strong> — 小さなローカルモデルはより多くの誤りを犯す',
+          '<strong>Q4_K_M量子化を使用しない</strong> — Q8はRAMを倍増；Q2は品質を明らかに低下',
+          '<strong>チャット履歴の消失</strong> — LM StudioとJanで重要な会話を保存またはピン留め',
+          '<strong>Local Serverを忘れる</strong> — Obsidian/VS Code統合には：Local Server → Startをクリック'
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Part 1',
+        faqs: [
+          { q: 'ローカルAIアプリの実行にコストはかかりますか？', a: '継続的なコストなし。3つのアプリすべて無料。モデルはオープンソースで無料。コストは電気代と一度きりのモデルダウンロードのみ。' },
+          { q: '初期ダウンロード後にインターネットは必要ですか？', a: '不要。ダウンロード後はすべてローカル実行 — 飛行機、ホテル、制限ネットワークで使用可能。' },
+          { q: 'ローカルAIアプリはどれほどプライベートですか？', a: '完全にプライベート。会話はマシンを出ない。ログなし、データ収集なし。' }
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — Part 2',
+        faqs: [
+          { q: 'LM StudioとOllamaの違いは何ですか？', a: 'LM StudioはGUIアプリ — ターミナル不要。OllamaはCLI。LM Studioは初心者に簡単；OllamaのAPIは開発者に便利。' },
+          { q: '複数のモデルを同時に実行できますか？', a: 'LM Studio：GUIでは1つ、Local Serverで複数（十分RAM必要）。JanとGPT4Allは単一モデルのみ。' },
+          { q: 'どの量子化を使用すべきですか？', a: 'Q4_K_Mから始める — LM Studioのデフォルト。Q8はRAMを倍増。Q2は出力品質を低下させる。' }
+        ]
+      },
+      {
+        type: 'cta',
+        h2: 'ローカルAIを実行 — クラウドアカウント不要',
+        body: 'PromptQuorumはクラウドAPIからローカルLLMまで、AIモデルのテストと比較を支援します。',
+        cta: 'PromptQuorumを無料で試す',
+        href: 'https://www.promptquorum.com'
+      }
+    ]
+  },
+  zh: {
+    title: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
+    slides: [
+      {
+        type: 'title',
+        h1: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
+        subtitle: 'LM Studio在Windows、Mac、Linux上10分钟内安装完成。无需终端、无需Python、无需云账户。',
+        link: BASE_URL
+      },
+      {
+        type: 'list',
+        h2: '核心要点 — 第1部分',
+        items: [
+          '<strong>LM Studio：</strong>最快设置 — 从lmstudio.ai下载，搜索"Phi-4 Mini"，下载，聊天。10分钟内完成。',
+          '<strong>Jan：</strong>同等易用的开源替代品 — 完全开源，在Linux AppImage上运行。',
+          '<strong>GPT4All：</strong>最简化的体验 — 单窗口，精选模型，无需浏览。',
+          '<strong>从Phi-4 Mini（3B）或Llama 3.2 3B开始</strong> — 在过去7年任何笔记本上运行，无需GPU。'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '核心要点 — 第2部分',
+        items: [
+          '<strong>无需云账户</strong> — 初始下载后一切本地运行。无API密钥，无订阅，无数据发送到服务器。',
+          '<strong>Apple Silicon：</strong>M3 MacBook Air（8 GB）流畅运行Phi-4 Mini。M5 Max（64 GB）运行70B模型。',
+          '<strong>LM Studio Local Server</strong>在localhost公开OpenAI兼容API — 连接Obsidian、VS Code等工具。'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '基本信息',
+        items: [
+          '<strong>LM Studio：</strong>lmstudio.ai — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage、.deb）',
+          '<strong>Jan：</strong>jan.ai — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）',
+          '<strong>GPT4All：</strong>gpt4all.io — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage）',
+          '<strong>最低硬件：</strong>3B–7B模型需8 GB RAM；8B–14B需16 GB+；30B+需24 GB+',
+          '<strong>Apple Silicon或CPU推理模式下3B–7B模型无需GPU</strong>',
+          '<strong>首个模型：</strong>≤8 GB RAM用Phi-4 Mini（约2.7 GB）；8–16 GB用Qwen3 8B'
+        ]
+      },
+      {
+        type: 'table',
+        h2: '3个应用对比',
+        columns: ['标准', 'LM Studio', 'Jan', 'GPT4All'],
+        rows: [
+          { '标准': '安装容易', 'LM Studio': '9/10', Jan: '9/10', GPT4All: '10/10' },
+          { '标准': '性能（M3 Mac，Llama 8B）', 'LM Studio': '28 tok/s', Jan: '22 tok/s', GPT4All: '16 tok/s' },
+          { '标准': '模型库', 'LM Studio': '50,000+ GGUF', Jan: '精选+HuggingFace', GPT4All: '约20个精选' },
+          { '标准': '本地API', 'LM Studio': '是', Jan: '是', GPT4All: '是' },
+          { '标准': '许可证', 'LM Studio': '专有（免费）', Jan: 'AGPL（开源）', GPT4All: 'MIT（开源）' },
+          { '标准': 'Linux', 'LM Studio': 'AppImage，.deb', Jan: 'AppImage', GPT4All: 'AppImage' }
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'LM Studio：设置指南',
+        items: [
+          '访问lmstudio.ai — 为你的平台下载安装程序（Windows .exe，macOS .dmg，Linux .AppImage）',
+          '运行安装程序 — 接受安全提示',
+          '点击"Discover" — 搜索"Phi-4 Mini"（≤8 GB）或"Qwen3 8B"（16 GB+）',
+          '点击模型 → 点击Q4_K_M变体旁的"Download" — 最佳质量/大小权衡',
+          '等待下载（2–5 GB）→ 点击"Chat" → 选择模型 → 开始聊天'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'Jan：设置指南',
+        items: [
+          '访问jan.ai — 下载安装程序',
+          '运行安装程序并打开Jan',
+          '点击左侧边栏的"Hub"浏览模型',
+          '搜索"Phi-4 Mini"或"Qwen3 8B" → 点击"Download"（从Hugging Face拉取GGUF）',
+          '点击"Thread"开始新对话 — 从聊天底部的模型选择器选择模型'
+        ]
+      },
+      {
+        type: 'numbered',
+        h2: 'GPT4All：设置指南',
+        items: [
+          '访问gpt4all.io — 下载安装程序',
+          '运行安装程序并打开GPT4All',
+          'Models选项卡显示带有简洁描述的精选列表 — 点击"Download"',
+          '下载后，聊天窗口自动打开 — 输入你的第一条消息',
+          '注意：GPT4All没有多对话历史 — 每次会话重新开始'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '首先应该下载哪个模型？',
+        items: [
+          '<strong>≤8 GB RAM：</strong>Phi-4 Mini（3.8B Q4，约2.7 GB）— Apple Silicon上15–30 tok/s',
+          '<strong>8–16 GB RAM：</strong>Llama 3.2 3B（Q4）或Qwen3 8B（Q4）— 速度与质量的良好平衡',
+          '<strong>Apple Silicon M3–M5：</strong>Qwen3 8B或Llama 3.3 8B — 卓越的质量和速度',
+          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B，Mistral 7B — GPU加速5–10倍',
+          '<strong>提示：</strong>从能以8+ tok/s运行的最小模型开始'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '硬件要求',
+        items: [
+          '<strong>Apple Silicon（M1–M5）：</strong>最佳消费级硬件 — M3 Air（8 GB）以20+ tok/s运行Phi-4 Mini',
+          '<strong>NVIDIA GPU（Windows/Linux）：</strong>LM Studio中的CUDA加速 — RTX 3060 12 GB运行Qwen3 8B',
+          '<strong>AMD GPU：</strong>ROCm支持改进中 — 检查特定显卡的LM Studio发行说明',
+          '<strong>CPU专用Intel/AMD：</strong>3B–7B以5–15 tok/s工作 — 适用于非交互式任务',
+          '<strong>RAM规则：</strong>模型必须完全装入RAM — 4B→3 GB；8B→5 GB；14B→9 GB；70B→42 GB'
+        ]
+      },
+      {
+        type: 'list',
+        h2: '常见错误',
+        items: [
+          '<strong>下载RAM放不下的模型</strong> — LM Studio将使用磁盘交换（约0.5 tok/s）',
+          '<strong>期望3B模型有云AI质量</strong> — 小型本地模型会犯更多错误',
+          '<strong>不使用Q4_K_M量化</strong> — Q8将RAM翻倍；Q2明显降低质量',
+          '<strong>丢失聊天历史</strong> — 在LM Studio中保存或固定重要对话',
+          '<strong>忘记Local Server</strong> — 对于Obsidian/VS Code集成：点击Local Server → 启动'
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — 第1部分',
+        faqs: [
+          { q: '运行本地AI应用有任何费用吗？', a: '没有持续费用。三个应用都免费。模型是开源且免费的。唯一的成本是电费和一次性模型下载（2–40 GB）。' },
+          { q: '初始下载后需要互联网吗？', a: '不需要。下载后一切本地运行 — 适合飞机、酒店或受限网络环境使用。' },
+          { q: '本地AI应用有多私密？', a: '完全私密。你的对话永远不会离开你的机器。无日志记录，无数据收集。' }
+        ]
+      },
+      {
+        type: 'faq',
+        h2: 'FAQ — 第2部分',
+        faqs: [
+          { q: 'LM Studio和Ollama有什么区别？', a: 'LM Studio是GUI应用 — 无需终端。Ollama是命令行工具。LM Studio对初学者更容易；Ollama的API对开发者更简单。' },
+          { q: '能同时运行多个模型吗？', a: 'LM Studio GUI中一次一个模型，但可以通过Local Server运行多个（需足够RAM）。Jan和GPT4All只支持单模型。' },
+          { q: '应该使用哪种量化？', a: '从Q4_K_M开始 — LM Studio的默认值。Q8将RAM翻倍。Q2明显降低输出质量。' }
+        ]
+      },
+      {
+        type: 'cta',
+        h2: '运行你的本地AI — 无需云账户',
+        body: 'PromptQuorum帮助你测试和比较AI模型 — 从云API到本地LLM，一个统一界面。',
+        cta: '免费试用PromptQuorum',
+        href: 'https://www.promptquorum.com'
+      }
+    ]
+  }
+};
+
+function renderSlide(slide, lang) {
+  const articleUrl = BASE_URL + '?lang=' + lang;
+  const footerLink = '<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>';
+  let html = '';
+
+  switch (slide.type) {
+    case 'title':
+      html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+        + '<h1>' + slide.h1 + '</h1>'
+        + '<p>' + slide.subtitle + '</p>'
+        + '<p style="margin-top: 32px; font-size: 15px; color: #79747e;">'
+        + '<a href="' + slide.link + '" target="_blank" rel="noopener">' + slide.link.replace('https://www.promptquorum.com/', '') + '</a>'
+        + '</p>'
+        + footerLink;
+      break;
+
+    case 'list':
+      html = '<h2>' + slide.h2 + '</h2>';
+      if (slide.intro) html += '<p>' + slide.intro + '</p>';
+      html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+      html += '</ul>' + footerLink;
+      break;
+
+    case 'numbered':
+      html = '<h2>' + slide.h2 + '</h2>';
+      html += '<ol style="font-size: 1.05em; margin-top: 16px;">';
+      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+      html += '</ol>' + footerLink;
+      break;
+
+    case 'table':
+      html = '<h2>' + slide.h2 + '</h2>';
+      html += '<table><tr>';
+      slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+      html += '</tr>';
+      slide.rows.forEach(function(row) {
+        html += '<tr>';
+        slide.columns.forEach(function(col) { html += '<td>' + row[col] + '</td>'; });
+        html += '</tr>';
+      });
+      html += '</table>' + footerLink;
+      break;
+
+    case 'faq':
+      html = '<h2>' + slide.h2 + '</h2>';
+      slide.faqs.forEach(function(faq) {
+        html += '<div style="margin-bottom: 18px; text-align: left; max-width: 680px;">'
+          + '<strong>Q: ' + faq.q + '</strong>'
+          + '<p style="margin-top: 6px;">A: ' + faq.a + '</p>'
+          + '</div>';
+      });
+      html += footerLink;
+      break;
+
+    case 'cta':
+      html = '<h2>' + slide.h2 + '</h2>'
+        + '<p style="margin-top: 20px; font-size: 1.2em;">' + slide.body + '</p>'
+        + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: 700;">' + slide.cta + '</a>'
+        + footerLink;
+      break;
+  }
+
+  return '<div class="slide ' + slide.type + '">' + html + '</div>';
+}
+
+const params = new URLSearchParams(window.location.search);
+const lang = params.get('lang') || 'en';
+const isPrint = params.get('print') === '1';
+const content = CONTENT[lang] || CONTENT.en;
+
+document.getElementById('header-title').textContent = content.title;
+const backLink = document.getElementById('back-link');
+backLink.href = BASE_URL + '?lang=' + lang;
+
+const container = document.getElementById('slides-container');
+content.slides.forEach(function(slide) {
+  container.innerHTML += renderSlide(slide, lang);
+});
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+document.getElementById('totalSlides').textContent = totalSlides;
+
+function showSlide(n) {
+  if (n >= totalSlides) currentSlide = totalSlides - 1;
+  else if (n < 0) currentSlide = 0;
+  else currentSlide = n;
+  slides.forEach(function(s) { s.classList.remove('active'); });
+  slides[currentSlide].classList.add('active');
+  document.getElementById('currentSlide').textContent = currentSlide + 1;
+  document.getElementById('prevBtn').disabled = currentSlide === 0;
+  document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+}
+
+function changeSlide(n) { showSlide(currentSlide + n); }
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowLeft') changeSlide(-1);
+  if (e.key === 'ArrowRight') changeSlide(1);
+});
+
+window.addEventListener('beforeprint', function() {
+  slides.forEach(function(s) { s.style.display = 'flex'; });
+});
+window.addEventListener('afterprint', function() {
+  slides.forEach(function(s) { s.style.removeProperty('display'); });
+  showSlide(currentSlide);
+});
+
+if (isPrint) { window.addEventListener('load', function() { window.print(); }); }
+
+showSlide(0);
+</script>
+</body>
+</html>

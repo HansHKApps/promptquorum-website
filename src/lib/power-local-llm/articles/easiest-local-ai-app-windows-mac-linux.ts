@@ -78,6 +78,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/easiest-local-ai-app-windows-mac-linux-static.html',
+    gammaDescription: 'The slide deck below covers: LM Studio, Jan, and GPT4All compared by setup time and features, 5-step installation guides for each app, first model recommendations by available RAM (8 GB to 32 GB+), hardware requirements, and 6 FAQ answers. Download the PDF as an easiest local AI app reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -413,6 +415,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/easiest-local-ai-app-windows-mac-linux-static.html',
+    gammaDescription: 'Die Präsentation unten behandelt: LM Studio, Jan und GPT4All im Vergleich nach Setup-Zeit und Funktionen, 5-Schritt-Installationsanleitungen für jede App, erste Modellempfehlungen nach RAM (8 GB bis 32 GB+), Hardware-Anforderungen und 6 FAQ-Antworten. PDF als Referenzkarte für einfache lokale AI-Apps herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -879,6 +883,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/easiest-local-ai-app-windows-mac-linux-static.html',
+    gammaDescription: 'Le diaporama ci-dessous couvre : LM Studio, Jan et GPT4All comparés par temps de configuration et fonctionnalités, guides d\'installation en 5 étapes, recommandations de premier modèle par RAM (8 GB à 32 GB+), exigences matérielles et 6 réponses FAQ. Téléchargez le PDF comme carte de référence pour l\'application IA locale la plus facile.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1358,6 +1364,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連読み物', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/easiest-local-ai-app-windows-mac-linux-static.html',
+    gammaDescription: '以下のスライドデッキはこれらのトピックを扱います：LM Studio、Jan、GPT4Allのセットアップ時間と機能比較、各アプリの5ステップインストールガイド、利用可能なRAM（8 GBから32 GB+）による最初のモデル推奨、ハードウェア要件、6つのFAQ回答。PDFをダウンロードして最も簡単なローカルAIアプリのリファレンスカードとして使用してください。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1841,6 +1849,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '相关阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/easiest-local-ai-app-windows-mac-linux-static.html',
+    gammaDescription: '以下幻灯片涵盖：LM Studio、Jan和GPT4All按设置时间和功能对比、各应用5步安装指南、按可用RAM（8 GB至32 GB+）推荐的首个模型、硬件要求和6个FAQ答案。下载PDF作为最简单本地AI应用参考卡。',
     sections: {
       tldr: {
         id: 'key-takeaways',
