@@ -83,6 +83,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      'The slide deck below covers: how MCP turns a local Ollama model into an agent that queries databases, reads files, drives a browser, and opens pull requests — all offline; the four reference servers (filesystem, SQLite/Postgres, browser, GitHub) with setup difficulty and risk ratings; a 6-step Goose setup guide; a security model that does not trust the LLM; and a side-by-side comparison with Claude Desktop. Download the PDF as a local MCP agent reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -504,6 +507,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      'Die Präsentation behandelt: wie MCP ein lokales Ollama-Modell zu einem Agenten macht, der Datenbanken abfragt, Dateien liest, einen Browser steuert und Pull Requests öffnet – alles offline; die vier Referenz-Server (Filesystem, SQLite/Postgres, Browser, GitHub) mit Setup-Aufwand und Risikobewertung; ein 6-Schritte-Goose-Setup; ein Sicherheitsmodell, das dem LLM nicht vertraut; und ein direkter Vergleich mit Claude Desktop. Als lokales MCP-Agenten-Referenzblatt als PDF herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -947,6 +953,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      "La présentation couvre : comment MCP transforme un modèle Ollama local en agent capable d'interroger des bases de données, lire des fichiers, piloter un navigateur et ouvrir des pull requests — le tout hors ligne ; les quatre serveurs de référence (filesystem, SQLite/Postgres, navigateur, GitHub) avec difficulté de configuration et niveau de risque ; un guide de configuration Goose en 6 étapes ; un modèle de sécurité qui ne fait pas confiance au LLM ; et une comparaison directe avec Claude Desktop. Téléchargez le PDF comme référence pour agent MCP local.",
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1382,6 +1391,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連資料', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      'このスライドデッキは以下を扱います：MCP がローカル Ollama モデルをデータベース照会・ファイル読み書き・ブラウザ操作・PR 作成が可能なエージェントに変える仕組み（すべてオフライン）、4 つのリファレンスサーバー（filesystem、SQLite/Postgres、ブラウザ、GitHub）のセットアップ難易度とリスク評価、Goose を使った 6 ステップセットアップ、LLM を信頼しないセキュリティモデル、Claude Desktop との直接比較。ローカル MCP エージェントリファレンスカードとして PDF をダウンロードしてください。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1825,6 +1837,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: '#faq' },
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      '幻灯片涵盖：MCP 如何将本地 Ollama 模型转变为能查询数据库、读写文件、驱动浏览器、提交 Pull Request 的智能体（全部离线）；四个参考服务器（filesystem、SQLite/Postgres、浏览器、GitHub）的配置难度与风险评级；使用 Goose 的 6 步配置指南；不信任 LLM 的安全模型；以及与 Claude Desktop 的直接对比。可将 PDF 下载为本地 MCP 智能体参考卡片。',
     sections: {
       tldr: {
         id: 'key-takeaways',
