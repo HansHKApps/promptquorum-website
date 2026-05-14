@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" font-family="system-ui, -apple-system, sans-serif">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="290" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">PDF Upload → Embedding Flow in AnythingLLM</text>
+  <circle cx="70" cy="85" r="22" fill="#6750A4"/>
+  <text x="70" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="120" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="214" cy="85" r="22" fill="#6750A4"/>
+  <text x="214" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="264" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="358" cy="85" r="22" fill="#6750A4"/>
+  <text x="358" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="408" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="502" cy="85" r="22" fill="#6750A4"/>
+  <text x="502" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="552" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="646" cy="85" r="22" fill="#6750A4"/>
+  <text x="646" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="70" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Upload PDFs</text>
+  <text x="70" y="147" font-size="10" fill="#49454F" text-anchor="middle">drag &amp; drop</text>
+  <text x="70" y="162" font-size="10" fill="#49454F" text-anchor="middle">5–20 to start</text>
+  <text x="214" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Parse Text</text>
+  <text x="214" y="147" font-size="10" fill="#49454F" text-anchor="middle">text-layer PDFs</text>
+  <text x="214" y="162" font-size="10" fill="#49454F" text-anchor="middle">DOCX · TXT · MD</text>
+  <text x="358" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Chunk 1000/200</text>
+  <text x="358" y="147" font-size="10" fill="#49454F" text-anchor="middle">1000 tokens</text>
+  <text x="358" y="162" font-size="10" fill="#49454F" text-anchor="middle">200 overlap</text>
+  <text x="502" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Embed</text>
+  <text x="502" y="147" font-family="'SF Mono',Monaco,monospace" font-size="10" fill="#49454F" text-anchor="middle">nomic-embed-text</text>
+  <text x="502" y="162" font-size="10" fill="#49454F" text-anchor="middle">via Ollama</text>
+  <text x="646" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Store &amp; Query</text>
+  <text x="646" y="147" font-size="10" fill="#49454F" text-anchor="middle">LanceDB vectors</text>
+  <text x="646" y="162" font-size="10" fill="#49454F" text-anchor="middle">ask questions</text>
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="215" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle">Embedding speed: 400–800 chunks/sec (CPU) · 2000+ chunks/sec (Apple Silicon)</text>
+  <text x="400" y="233" font-size="11" fill="#79747E" text-anchor="middle">After upload: click "Move to Workspace" → "Save and Embed" to make PDFs queryable</text>
+  <text x="400" y="251" font-size="11" fill="#79747E" text-anchor="middle">20 PDFs (~3000 chunks) embeds in ~5–8 s (CPU) · Re-embed any time after tuning chunk size</text>
+  <text x="792" y="282" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

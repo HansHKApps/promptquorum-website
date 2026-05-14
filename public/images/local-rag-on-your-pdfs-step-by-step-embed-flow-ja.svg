@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" font-family="system-ui, -apple-system, sans-serif">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="290" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">PDFアップロード → エンベディングフロー（AnythingLLM）</text>
+  <circle cx="70" cy="85" r="22" fill="#6750A4"/>
+  <text x="70" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="120" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="214" cy="85" r="22" fill="#6750A4"/>
+  <text x="214" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="264" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="358" cy="85" r="22" fill="#6750A4"/>
+  <text x="358" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="408" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="502" cy="85" r="22" fill="#6750A4"/>
+  <text x="502" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="552" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="646" cy="85" r="22" fill="#6750A4"/>
+  <text x="646" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="70" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">PDFアップ</text>
+  <text x="70" y="147" font-size="10" fill="#49454F" text-anchor="middle">ドラッグ&amp;ドロップ</text>
+  <text x="70" y="162" font-size="10" fill="#49454F" text-anchor="middle">5〜20個から開始</text>
+  <text x="214" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">テキスト抽出</text>
+  <text x="214" y="147" font-size="10" fill="#49454F" text-anchor="middle">テキスト層PDF</text>
+  <text x="214" y="162" font-size="10" fill="#49454F" text-anchor="middle">DOCX · TXT · MD</text>
+  <text x="358" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">チャンク化</text>
+  <text x="358" y="147" font-size="10" fill="#49454F" text-anchor="middle">1000トークン</text>
+  <text x="358" y="162" font-size="10" fill="#49454F" text-anchor="middle">200オーバーラップ</text>
+  <text x="502" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">エンベディング</text>
+  <text x="502" y="147" font-family="'SF Mono',Monaco,monospace" font-size="10" fill="#49454F" text-anchor="middle">nomic-embed-text</text>
+  <text x="502" y="162" font-size="10" fill="#49454F" text-anchor="middle">Ollama経由</text>
+  <text x="646" y="128" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">保存・クエリ</text>
+  <text x="646" y="147" font-size="10" fill="#49454F" text-anchor="middle">LanceDBベクトル</text>
+  <text x="646" y="162" font-size="10" fill="#49454F" text-anchor="middle">質問して回答を得る</text>
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="215" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle">速度: 400–800チャンク/秒(CPU) · 2000+チャンク/秒(Apple Silicon)</text>
+  <text x="400" y="233" font-size="11" fill="#79747E" text-anchor="middle">アップ後: "Move to Workspace" → "Save and Embed"でクエリ可能に</text>
+  <text x="400" y="251" font-size="11" fill="#79747E" text-anchor="middle">20PDF (~3000チャンク) 約5–8秒(CPU) · チャンクサイズ調整後はいつでも再エンベディング可能</text>
+  <text x="792" y="282" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

@@ -165,6 +165,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Already have other Ollama models? `ollama list` shows them all. You can keep multiple models installed and switch between them in AnythingLLM\'s workspace settings.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-en.svg',
+        imageCaption: 'Model options by RAM: Llama 3.3 8B Q4_K_M (~4.9 GB, 16 GB RAM, ~8 min at 50 Mbps) is recommended; Phi-4 Mini Q4 (~2.4 GB, 8 GB RAM, ~4 min) for low-memory machines; Mistral 7B Q4_K_M (~4.1 GB, 16 GB RAM, ~7 min) as an alternative.',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -184,6 +186,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM\'s default LLM is a tiny built-in model meant only for the welcome demo. We point it at your local Ollama in the next step. Do not use the default for real queries — the answers will be unusably weak.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-en.svg',
+        imageCaption: 'AnythingLLM Desktop 4-step install: Download from anythingllm.com (~600 MB), Install with no admin required, Launch and skip the cloud prompt, then choose "Local Setup" to keep all data offline.',
       },
       step4ConfigureEmbedding: {
         id: 'step-4-configure-embedding',
@@ -225,6 +229,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PDFs from older OCR scans often contain garbled or empty text layers — the file looks fine to human eyes but AnythingLLM extracts "[image]" or empty strings. Open the PDF in a text editor (or run `pdftotext file.pdf -` from poppler-utils) to confirm the text layer exists before uploading.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-en.svg',
+        imageCaption: 'PDF upload to query in 5 steps: Upload PDFs (drag & drop) → Parse text layer → Chunk at 1000 tokens / 200 overlap → Embed via nomic-embed-text through Ollama → Store in LanceDB and ask questions. Speed: 400–800 chunks/sec on CPU, 2000+ on Apple Silicon.',
       },
       step6TestQueries: {
         id: 'step-6-test-queries',
@@ -300,6 +306,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Use these three query patterns as your test set after every retrieval-config change. If fact-recall still misses but synthesis works, your chunks are too coarse. If synthesis misses but fact-recall works, your top-k is too low. The pattern of what fails tells you which knob to turn.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-en.svg',
+        imageCaption: '3 RAG query types: Fact Recall (direct quote + citation = healthy; generic answer = broken retrieval), Synthesis (3–5 sentences from abstract + conclusion = healthy), Cross-Document (quotes from both papers = healthy; cites one or invents = broken). Green = healthy, red = fix retrieval first.',
       },
       troubleshooting: {
         id: 'troubleshooting',
@@ -784,6 +792,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Hast du bereits andere Ollama-Modelle? `ollama list` zeigt sie alle. Du kannst mehrere Modelle installiert behalten und zwischen ihnen in AnythingLLMs Workspace-Einstellungen wechseln.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-de.svg',
+        imageCaption: 'Modelloptionen nach RAM: Llama 3.3 8B Q4_K_M (~4,9 GB, 16 GB RAM, ~8 Min. bei 50 Mbps) empfohlen; Phi-4 Mini Q4 (~2,4 GB, 8 GB RAM) für wenig RAM; Mistral 7B Q4_K_M (~4,1 GB, 16 GB RAM) als Alternative.',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -803,6 +813,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Das Standard-LLM von AnythingLLM ist ein winziges eingebautes Modell, gedacht nur für die Willkommens-Demo. Wir zeigen ihm in den nächsten Schritt deinen lokalen Ollama. Verwende nicht das Standard-Modell für echte Queries — die Antworten werden unbrauchbar schwach sein.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-de.svg',
+        imageCaption: 'AnythingLLM Desktop in 4 Schritten: Herunterladen von anythingllm.com (~600 MB), Installieren ohne Admin, Starten und Cloud-Prompt überspringen, dann "Local Setup" wählen um alle Daten offline zu halten.',
       },
       step4ConfigureEmbedding: {
         id: 'step-4-configure-embedding',
@@ -844,6 +856,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PDFs von älteren OCR-Scans enthalten oft beschädigte oder leere Text-Layer — die Datei sieht für menschliche Augen gut aus, aber AnythingLLM extrahiert "[image]" oder leere Strings. Öffne die PDF in einem Text-Editor (oder führe `pdftotext file.pdf -` aus poppler-utils aus) um zu bestätigen, dass die Text-Layer existiert, bevor du sie hochlädst.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-de.svg',
+        imageCaption: 'PDF-Upload bis Abfrage in 5 Schritten: PDFs hochladen → Text extrahieren → Chunking (1000/200) → Einbetten via nomic-embed-text/Ollama → LanceDB speichern. Geschwindigkeit: 400–800 Chunks/Sek. (CPU), 2000+ auf Apple Silicon.',
       },
       step6TestQueries: {
         id: 'step-6-test-queries',
@@ -919,6 +933,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Verwende diese drei Query-Muster als dein Test-Set nach jeder Abruf-Konfigurations-Änderung. Falls Fakten-Abruf immer noch verfehlt aber Synthese funktioniert, sind deine Chunks zu grob. Falls Synthese verfehlt aber Fakten-Abruf funktioniert, ist dein Top-k zu niedrig. Das Muster was verfehlt sagt dir welcher Knopf zu drehen ist.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-de.svg',
+        imageCaption: '3 RAG-Abfragetypen: Faktenabfrage (direktes Zitat + Quelle = gesund), Synthese (3–5 Sätze aus Abstract + Fazit = gesund), Dokumentübergreifend (Zitate aus beiden Papieren = gesund). Grün = gesund, Rot = Abruf defekt — zuerst Retrieval beheben.',
       },
       troubleshooting: {
         id: 'troubleshooting',
@@ -1445,6 +1461,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Vous avez déjà d\'autres modèles Ollama? `ollama list` les affiche tous. Vous pouvez garder plusieurs modèles installés et basculer entre eux dans les paramètres espace de travail AnythingLLM.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-fr.svg',
+        imageCaption: 'Options de modèles par RAM : Llama 3.3 8B Q4_K_M (~4,9 Go, 16 Go RAM, ~8 min à 50 Mbps) recommandé ; Phi-4 Mini Q4 (~2,4 Go, 8 Go RAM) pour peu de RAM ; Mistral 7B Q4_K_M (~4,1 Go, 16 Go RAM) en alternative.',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -1464,6 +1482,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Le LLM par défaut d\'AnythingLLM est un minuscule modèle intégré prévu seulement pour la démo de bienvenue. Nous le pointons vers votre Ollama local à l\'étape suivante. N\'utilisez pas le défaut pour vraies requêtes — les réponses seront inutilisablement faibles.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-fr.svg',
+        imageCaption: 'Installation AnythingLLM Desktop en 4 étapes : Télécharger depuis anythingllm.com (~600 Mo), Installer sans admin, Lancer et ignorer l\'invite cloud, puis choisir "Local Setup" pour garder toutes les données hors ligne.',
       },
       step4ConfigureEmbedding: {
         id: 'step-4-configure-embedding',
@@ -1505,6 +1525,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PDFs d\'anciens scans OCR contiennent souvent texte garbled ou vides — le fichier semble bon pour yeux humains mais AnythingLLM extrait "[image]" ou strings vides. Ouvrez le PDF dans éditeur texte (ou exécutez `pdftotext file.pdf -` de poppler-utils) pour confirmer couche texte existe avant upload.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-fr.svg',
+        imageCaption: 'Upload PDF vers requête en 5 étapes : Upload PDFs → Extraire texte → Chunking (1000/200) → Encoder via nomic-embed-text/Ollama → Stocker dans LanceDB. Vitesse : 400–800 chunks/sec (CPU), 2000+ sur Apple Silicon.',
       },
       step6TestQueries: {
         id: 'step-6-test-queries',
@@ -1580,6 +1602,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Utilisez ces trois patterns requête comme votre test-set après chaque changement config récupération. Si fact-recall encore rate mais synthèse marche, chunks trop grossiers. Si synthèse rate mais fact-recall marche, top-k trop bas. Le pattern échoue dit quel bouton tourner.',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-fr.svg',
+        imageCaption: '3 types de requêtes RAG : Rappel de faits (citation directe + source = sain), Synthèse (3–5 phrases de l\'abstract + conclusion = sain), Croisement docs (citations des deux articles = sain). Vert = sain, rouge = récupération défectueuse.',
       },
       troubleshooting: {
         id: 'troubleshooting',
@@ -2080,6 +2104,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'すでに他の Ollama model がある? `ollama list` で全て表示。複数 model をインストール維持、AnythingLLM workspace 設定で切り替え可能。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-ja.svg',
+        imageCaption: 'RAM別モデルオプション: Llama 3.3 8B Q4_K_M (~4.9GB, 16GB RAM, 50Mbpsで~8分) 推奨; Phi-4 Mini Q4 (~2.4GB, 8GB RAM) 低メモリ向け; Mistral 7B Q4_K_M (~4.1GB, 16GB RAM) 代替案。',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -2099,6 +2125,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM のデフォルト LLM は welcome デモ専用の tiny 組み込みモデル。次のステップで local Ollama を指す。本来のクエリにデフォルト使用禁止 — 回答が使用不可能に弱い。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-ja.svg',
+        imageCaption: 'AnythingLLM Desktop 4ステップインストール: anythingllm.comからダウンロード(~600MB) → 管理者不要でインストール → 起動してクラウド画面スキップ → "Local Setup"を選択してデータをオフライン維持。',
       },
       step4ConfigureEmbedding: {
         id: 'step-4-configure-embedding',
@@ -2140,6 +2168,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '古い OCR scan の PDF には破損または空の text layer — 人間の目では良好に見えるが AnythingLLM は "[image]" または空 string を抽出。Upload 前に text editor で PDF を開く (または `pdftotext file.pdf -` from poppler-utils 実行) して text layer 確認。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-ja.svg',
+        imageCaption: 'PDFアップロードからクエリまで5ステップ: PDFアップ → テキスト抽出 → チャンク化(1000/200) → nomic-embed-text/Ollama経由でエンベディング → LanceDB保存。速度: 400–800チャンク/秒(CPU)、2000+(Apple Silicon)。',
       },
       step6TestQueries: {
         id: 'step-6-test-queries',
@@ -2215,6 +2245,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'この 3 query pattern を各 retrieval config 変更後のテストセットとして使用。Fact-recall が still misses だが synthesis 機能すれば chunks が粗い。Synthesis は miss だが fact-recall 機能すれば top-k が低い。Fail パターンがどの knob を回すかを伝える。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-ja.svg',
+        imageCaption: '3つのRAGクエリタイプ: 事実確認(直接引用+出典=正常)、合成(概要+結論から3–5文=正常)、文書横断(両論文から引用=正常)。緑=正常、赤=検索障害 — 回答モデルではなく検索を先に修正。',
       },
       troubleshooting: {
         id: 'troubleshooting',
@@ -2719,6 +2751,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '已安装了其他 Ollama 模型？`ollama list`可查看所有已安装模型。你可以同时保留多个模型，并在 AnythingLLM 工作区设置中随时切换。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-zh.svg',
+        imageCaption: '按内存选择模型: Llama 3.3 8B Q4_K_M (~4.9GB, 16GB内存, 50Mbps约8分钟) 推荐; Phi-4 Mini Q4 (~2.4GB, 8GB内存) 低内存方案; Mistral 7B Q4_K_M (~4.1GB, 16GB内存) 备选。',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -2738,6 +2772,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM 的默认LLM是仅用于欢迎演示的极小内置模型。下一步我们将把它指向你本地的 Ollama。请勿使用默认模型进行实际查询——回答质量会极差。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-zh.svg',
+        imageCaption: 'AnythingLLM桌面版4步安装: 从anythingllm.com下载(~600MB) → 无需管理员权限安装 → 启动并跳过云端提示 → 选择"Local Setup"使所有数据完全离线。',
       },
       step4ConfigureEmbedding: {
         id: 'step-4-configure-embedding',
@@ -2779,6 +2815,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '旧版OCR扫描的PDF通常包含损坏或空白的文本层——肉眼看起来正常，但 AnythingLLM 提取的是"[image]"或空字符串。上传前，用文本编辑器打开PDF（或运行`pdftotext file.pdf -`，来自poppler-utils）确认文本层存在。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-zh.svg',
+        imageCaption: 'PDF上传到查询5步流程: 上传PDF → 解析文本层 → 分块(1000/200) → nomic-embed-text/Ollama向量化 → LanceDB存储查询。速度: 400–800块/秒(CPU)，2000+(Apple Silicon)。',
       },
       step6TestQueries: {
         id: 'step-6-test-queries',
@@ -2854,6 +2892,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '每次调整检索配置后，用这三类查询模式作为测试集。若事实召回仍然失败但综合可以，说明分块粒度太粗。若综合失败但事实召回正常，说明Top-k太低。失败的模式告诉你该调哪个参数。',
           },
         ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-zh.svg',
+        imageCaption: '3种RAG查询类型: 事实检索(直接引用+来源=正常)、综合归纳(摘要+结论3–5句=正常)、跨文档(两篇论文引用+明确来源=正常)。绿色=正常，红色=检索故障 — 先修复检索再改模型。',
       },
       troubleshooting: {
         id: 'troubleshooting',

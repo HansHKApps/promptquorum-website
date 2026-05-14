@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="system-ui, -apple-system, sans-serif">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="340" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">RAG-Abfragetypen — Wie gesunde Antworten aussehen</text>
+  <rect x="0" y="38" width="800" height="36" fill="#6750A4"/>
+  <text x="80" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Abfragetyp</text>
+  <text x="240" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Beispielabfrage</text>
+  <text x="490" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Gesundes Antwortmuster</text>
+  <text x="710" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Fehlersignal</text>
+  <line x1="160" y1="38" x2="160" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="320" y1="38" x2="320" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="630" y1="38" x2="630" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <rect x="0" y="74" width="800" height="58" fill="#FFFFFF"/>
+  <circle cx="30" cy="103" r="10" fill="#34A853"/>
+  <text x="80" y="97" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Faktenabfrage</text>
+  <text x="80" y="113" font-size="10" fill="#49454F" text-anchor="middle">Grundierungstest</text>
+  <text x="240" y="97" font-size="11" fill="#49454F" text-anchor="middle">"Welche Stichprobengröße</text>
+  <text x="240" y="112" font-size="11" fill="#49454F" text-anchor="middle">verwendete Smith 2024?"</text>
+  <text x="490" y="97" font-size="11" fill="#34A853" text-anchor="middle">Direktes Zitat + Quellenangabe</text>
+  <text x="490" y="112" font-size="11" fill="#34A853" text-anchor="middle">aus dem Quell-Chunk</text>
+  <text x="710" y="97" font-size="11" fill="#EA4335" text-anchor="middle">Generische Antwort,</text>
+  <text x="710" y="112" font-size="11" fill="#EA4335" text-anchor="middle">kein Zitat oder Quelle</text>
+  <rect x="0" y="132" width="800" height="58" fill="#F7F2FA"/>
+  <circle cx="30" cy="161" r="10" fill="#6750A4"/>
+  <text x="80" y="155" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Synthese</text>
+  <text x="80" y="171" font-size="10" fill="#49454F" text-anchor="middle">Integrationstest</text>
+  <text x="240" y="155" font-size="11" fill="#49454F" text-anchor="middle">"Fasse den Hauptbeitrag</text>
+  <text x="240" y="170" font-size="11" fill="#49454F" text-anchor="middle">zusammen."</text>
+  <text x="490" y="155" font-size="11" fill="#34A853" text-anchor="middle">3–5 Sätze aus Abstract</text>
+  <text x="490" y="170" font-size="11" fill="#34A853" text-anchor="middle">und Fazit-Chunks</text>
+  <text x="710" y="155" font-size="11" fill="#EA4335" text-anchor="middle">Wiederholt nur den Titel</text>
+  <text x="710" y="170" font-size="11" fill="#EA4335" text-anchor="middle">oder zitiert eine Zeile</text>
+  <rect x="0" y="190" width="800" height="64" fill="#FFFFFF"/>
+  <circle cx="30" cy="222" r="10" fill="#F4B400"/>
+  <text x="80" y="216" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Dokumentübergr.</text>
+  <text x="80" y="232" font-size="10" fill="#49454F" text-anchor="middle">Abruftest</text>
+  <text x="240" y="213" font-size="11" fill="#49454F" text-anchor="middle">"Wie widersprechen sich</text>
+  <text x="240" y="228" font-size="11" fill="#49454F" text-anchor="middle">Smith und Jones beim</text>
+  <text x="240" y="243" font-size="11" fill="#49454F" text-anchor="middle">Chunk-Overlap?"</text>
+  <text x="490" y="216" font-size="11" fill="#34A853" text-anchor="middle">Zitate aus beiden Papieren</text>
+  <text x="490" y="231" font-size="11" fill="#34A853" text-anchor="middle">mit expliziter Quellenangabe</text>
+  <text x="710" y="213" font-size="11" fill="#EA4335" text-anchor="middle">Zitiert nur ein Papier</text>
+  <text x="710" y="228" font-size="11" fill="#EA4335" text-anchor="middle">oder erfindet Widerspruch</text>
+  <rect x="0" y="38" width="800" height="216" fill="none" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="0" y1="132" x2="800" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="0" y1="190" x2="800" y2="190" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="18" y1="272" x2="782" y2="272" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="292" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle">Grün = gesund · Rot = Abruf defekt (Chunk-Größe oder Embedder korrigieren, nicht das Antwortmodell)</text>
+  <text x="400" y="310" font-size="11" fill="#79747E" text-anchor="middle">Alle 3 Abfragetypen als Testset nach jeder Konfigurationsänderung — Fehlermuster zeigt welcher Knopf zu drehen ist</text>
+  <text x="792" y="334" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

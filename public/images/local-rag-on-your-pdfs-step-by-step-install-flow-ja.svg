@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" font-family="system-ui, -apple-system, sans-serif">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="290" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">AnythingLLM Desktopインストール — 4ステップ</text>
+  <circle cx="160" cy="85" r="22" fill="#6750A4"/>
+  <text x="160" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="240" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="320" cy="85" r="22" fill="#6750A4"/>
+  <text x="320" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="400" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="480" cy="85" r="22" fill="#6750A4"/>
+  <text x="480" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="560" y="93" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <circle cx="640" cy="85" r="22" fill="#6750A4"/>
+  <text x="640" y="93" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="160" y="128" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">ダウンロード</text>
+  <text x="160" y="147" font-family="'SF Mono',Monaco,monospace" font-size="10" fill="#49454F" text-anchor="middle">anythingllm.com</text>
+  <text x="160" y="162" font-size="10" fill="#49454F" text-anchor="middle">macOS · Win · Linux</text>
+  <text x="320" y="128" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">インストール</text>
+  <text x="320" y="147" font-size="10" fill="#49454F" text-anchor="middle">インストーラー実行</text>
+  <text x="320" y="162" font-size="10" fill="#49454F" text-anchor="middle">~600MB · 管理者不要</text>
+  <text x="480" y="128" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">起動</text>
+  <text x="480" y="147" font-size="10" fill="#49454F" text-anchor="middle">クラウド画面スキップ</text>
+  <text x="480" y="162" font-size="10" fill="#49454F" text-anchor="middle">macOS: セキュリティ許可</text>
+  <text x="640" y="128" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">ローカル選択</text>
+  <text x="640" y="147" font-size="10" fill="#49454F" text-anchor="middle">Local Setupを選択</text>
+  <text x="640" y="162" font-size="10" fill="#49454F" text-anchor="middle">データはオフライン</text>
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="215" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle">合計時間: ~4分 · 無料 · オープンソース · デスクトップアプリ (macOS · Windows · Linux)</text>
+  <text x="400" y="233" font-size="11" fill="#79747E" text-anchor="middle">インストール先: ~/Applications (macOS) · %LOCALAPPDATA% (Windows) · .AppImage (Linux)</text>
+  <text x="400" y="251" font-size="11" fill="#79747E" text-anchor="middle">ステップ4「Local Setup」でPDF・埋め込み・クエリがすべてオフライン — クラウドアカウント不要</text>
+  <text x="792" y="282" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

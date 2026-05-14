@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="system-ui, -apple-system, sans-serif">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="340" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">RAG查询类型 — 正常回答的识别方式</text>
+  <rect x="0" y="38" width="800" height="36" fill="#6750A4"/>
+  <text x="80" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">查询类型</text>
+  <text x="240" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">示例查询</text>
+  <text x="490" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">正常回答模式</text>
+  <text x="710" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">失败信号</text>
+  <line x1="160" y1="38" x2="160" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="320" y1="38" x2="320" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="630" y1="38" x2="630" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <rect x="0" y="74" width="800" height="58" fill="#FFFFFF"/>
+  <circle cx="30" cy="103" r="10" fill="#34A853"/>
+  <text x="80" y="97" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">事实检索</text>
+  <text x="80" y="113" font-size="10" fill="#49454F" text-anchor="middle">接地测试</text>
+  <text x="240" y="97" font-size="11" fill="#49454F" text-anchor="middle">"Smith 2024使用了</text>
+  <text x="240" y="112" font-size="11" fill="#49454F" text-anchor="middle">多少样本量?"</text>
+  <text x="490" y="97" font-size="11" fill="#34A853" text-anchor="middle">原文直接引用</text>
+  <text x="490" y="112" font-size="11" fill="#34A853" text-anchor="middle">+ 源块引用</text>
+  <text x="710" y="97" font-size="11" fill="#EA4335" text-anchor="middle">通用回答，</text>
+  <text x="710" y="112" font-size="11" fill="#EA4335" text-anchor="middle">无引用无来源</text>
+  <rect x="0" y="132" width="800" height="58" fill="#F7F2FA"/>
+  <circle cx="30" cy="161" r="10" fill="#6750A4"/>
+  <text x="80" y="155" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">综合归纳</text>
+  <text x="80" y="171" font-size="10" fill="#49454F" text-anchor="middle">整合测试</text>
+  <text x="240" y="155" font-size="11" fill="#49454F" text-anchor="middle">"总结这篇文章的</text>
+  <text x="240" y="170" font-size="11" fill="#49454F" text-anchor="middle">主要贡献。"</text>
+  <text x="490" y="155" font-size="11" fill="#34A853" text-anchor="middle">来自摘要和结论块的</text>
+  <text x="490" y="170" font-size="11" fill="#34A853" text-anchor="middle">3–5句综合</text>
+  <text x="710" y="155" font-size="11" fill="#EA4335" text-anchor="middle">只重述标题或</text>
+  <text x="710" y="170" font-size="11" fill="#EA4335" text-anchor="middle">引用一行摘要</text>
+  <rect x="0" y="190" width="800" height="64" fill="#FFFFFF"/>
+  <circle cx="30" cy="222" r="10" fill="#F4B400"/>
+  <text x="80" y="216" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">跨文档</text>
+  <text x="80" y="232" font-size="10" fill="#49454F" text-anchor="middle">检索测试</text>
+  <text x="240" y="213" font-size="11" fill="#49454F" text-anchor="middle">"Smith和Jones在</text>
+  <text x="240" y="228" font-size="11" fill="#49454F" text-anchor="middle">块重叠问题上</text>
+  <text x="240" y="243" font-size="11" fill="#49454F" text-anchor="middle">有何分歧?"</text>
+  <text x="490" y="216" font-size="11" fill="#34A853" text-anchor="middle">两篇论文的引用</text>
+  <text x="490" y="231" font-size="11" fill="#34A853" text-anchor="middle">+ 明确来源归属</text>
+  <text x="710" y="213" font-size="11" fill="#EA4335" text-anchor="middle">只引用一篇论文</text>
+  <text x="710" y="228" font-size="11" fill="#EA4335" text-anchor="middle">或捏造分歧</text>
+  <rect x="0" y="38" width="800" height="216" fill="none" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="0" y1="132" x2="800" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="0" y1="190" x2="800" y2="190" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="18" y1="272" x2="782" y2="272" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="292" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle">绿色=正常 · 红色=检索故障(修复块大小或嵌入模型，而非回答模型)</text>
+  <text x="400" y="310" font-size="11" fill="#79747E" text-anchor="middle">每次配置变更后用3种类型测试 — 失败模式指示需要调整的参数</text>
+  <text x="792" y="334" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
