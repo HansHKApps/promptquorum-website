@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Replace Zapier With Local AI Agents: 5 Workflows, $30/Month Saved | PromptQuorum</title>
+  <meta name="description" content="n8n + Ollama + Llama 3.2 3B replaces 5 Zapier workflows for $0/month. Cost math, setup steps, 30-day reliability test, and where Zapier still wins." />
+  <meta property="og:title" content="Replace Zapier With Local AI Agents — PromptQuorum" />
+  <meta property="og:description" content="Save $360/year replacing Zapier Pro with self-hosted n8n + Ollama. 5 workflows, 30-day reliability data, honest trade-offs." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/replace-zapier-with-local-ai-agents" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #1c1b1f;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+      gap: 16px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .header-left img { height: 28px; flex-shrink: 0; }
+
+    #header-title {
+      font-size: 13px;
+      color: #49454f;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 500px;
+    }
+
+    .header-links { display: flex; gap: 16px; flex-shrink: 0; }
+
+    .header-links a {
+      font-size: 13px;
+      color: #6750a4;
+      text-decoration: none;
+    }
+
+    .header-links a:hover { text-decoration: underline; }
+
+    .content-area { flex: 1; overflow: hidden; position: relative; }
+
+    .slide {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 36px 56px;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide.active { display: flex; }
+
+    .slide h1 {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      color: #1c1b1f;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .slide h2 {
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 700;
+      color: #1c1b1f;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide p {
+      font-size: clamp(14px, 1.6vw, 18px);
+      color: #49454f;
+      line-height: 1.55;
+      max-width: 820px;
+    }
+
+    .slide ul {
+      text-align: left;
+      max-width: 820px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .slide ul li {
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: #1c1b1f;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .slide ol {
+      text-align: left;
+      max-width: 820px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .slide ol li {
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: #1c1b1f;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .slide table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 920px;
+      margin-top: 12px;
+      font-size: clamp(11px, 1.1vw, 13px);
+    }
+
+    .slide table th {
+      background: #6750a4;
+      color: #fff;
+      padding: 7px 10px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .slide table td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .slide table tr:nth-child(even) td { background: #f8f4ff; }
+
+    .logo { width: 100px; margin-bottom: 20px; }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 24px;
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .controls button {
+      padding: 8px 20px;
+      border: 1px solid #6750a4;
+      border-radius: 20px;
+      background: transparent;
+      color: #6750a4;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .controls button:hover:not(:disabled) { background: #f0ebff; }
+    .controls button:disabled { opacity: 0.35; cursor: default; }
+
+    .slide-counter { font-size: 14px; color: #79747e; min-width: 60px; text-align: center; }
+
+    @page { size: landscape; margin: 0; }
+
+    @media print {
+      body { height: auto; overflow: visible; }
+      .presentation-container { max-width: 100%; height: auto; }
+      .header { display: none; }
+      .controls { display: none; }
+      .content-area { overflow: visible; height: auto; }
+      .slide { display: flex !important; height: 100vh; page-break-after: always; break-after: page; }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Replace Zapier With Local AI Agents (2026)</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/replace-zapier-with-local-ai-agents" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const BASE_URL = 'https://www.promptquorum.com/power-local-llm/replace-zapier-with-local-ai-agents';
+
+    const CONTENT = {
+      en: {
+        title: 'Replace Zapier With Local AI Agents (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Replace Zapier With Local AI Agents',
+            subtitle: 'n8n + Ollama + Llama 3.2 3B replaces 5 common Zapier workflows for $0/month after hardware — saving $360/year vs Zapier Pro ($29.99/month).',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>Stack: n8n (self-hosted, Docker) + Ollama + Llama 3.2 3B.</strong> Runs on a Raspberry Pi 5 8GB ($130) or any laptop. RAM needed: 8 GB total.',
+              '<strong>Cost: $0/month after hardware vs $29.99/month Zapier Pro.</strong> Break-even in 1 month on existing hardware, ~5 months on a new Pi 5. $360/year saved per seat.',
+              '<strong>5 workflows tested over 30 days:</strong> Gmail to Notion, RSS digest, calendar reminders, file backup, content scheduling. 4 of 5 hit 99%+ reliability.',
+              '<strong>Hard limits:</strong> incoming webhooks need a Cloudflare Tunnel, you manage OAuth credentials yourself, and your machine must stay online.',
+              '<strong>Privacy bonus:</strong> email body, calendar contents, and files never leave your network — useful for NDA work and EU GDPR compliance.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Local Stack vs Zapier at a Glance',
+            columns: ['Criterion', 'Local (n8n + Ollama)', 'Zapier Pro'],
+            rows: [
+              ['Monthly cost', '$0', '$29.99'],
+              ['Tasks/month limit', 'Unlimited', '2,000'],
+              ['Email/file/calendar privacy', 'Local only', 'Sent to Zapier servers'],
+              ['Pre-built integrations', '~400 (n8n)', '7,000+'],
+              ['AI step (summarise, classify)', 'Free — local LLM', '$ per task (Zapier AI)'],
+              ['Public webhooks', 'Tunnel required (Cloudflare)', 'Built-in URL'],
+              ['OAuth token management', 'You handle refreshes', 'Fully managed'],
+              ['Setup time (first workflow)', '~45 min', '~5 min'],
+              ['No lock-in', 'Export workflows as JSON', 'Subscription + ToS changes']
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5 Workflows at a Glance',
+            columns: ['Workflow', 'Zapier setup', 'Local setup', 'Reliability (30d)'],
+            rows: [
+              ['Gmail to Notion (triage + summary)', '5 min', '20 min', '96% (1 OAuth refresh)'],
+              ['RSS to AI digest email', '4 min', '12 min', '100%'],
+              ['Calendar smart reminders', '6 min', '15 min', '99.7%'],
+              ['File backup (Drive → local + dedupe)', '8 min', '18 min', '100%'],
+              ['Content scheduling (cross-post)', '7 min', '25 min', '99%']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'The Recommended Stack',
+            items: [
+              '<strong>n8n (Apache 2.0, self-hosted)</strong> — the workflow engine. ~400 pre-built integrations (Gmail, Notion, Drive, RSS, HTTP, Schedule). Drag-and-drop builder. Closest 1:1 Zapier UX in open source.',
+              '<strong>Ollama</strong> — the local LLM runtime. One-line install, exposes an OpenAI-compatible API at <code>http://localhost:11434</code>. n8n calls it via HTTP Request or the dedicated Ollama node.',
+              '<strong>Llama 3.2 3B Q4_K_M</strong> — runs on 4 GB RAM. Strong enough for email triage, RSS summarisation, short text generation. ~5 tok/sec on Pi 5, ~40–60 tok/sec on Mac mini M4.',
+              '<strong>Cloudflare Tunnel (free)</strong> — exposes local n8n to the internet for incoming webhooks. Optional but needed for Workflows 4 and 5 (content scheduling, CMS triggers).',
+              '<strong>Total setup time:</strong> 30–45 minutes first time including Docker, Ollama pull, and one imported workflow.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Cost Math (24 Months)',
+            columns: ['Scenario', 'Hardware', 'Electricity', 'Total local', 'Zapier Pro 24mo', 'Savings'],
+            rows: [
+              ['Existing laptop/Mac (8 GB+)', '$0', '~$30', '$30', '$719.76', '$689.76'],
+              ['New Raspberry Pi 5 8GB + SSD', '$160', '~$20', '$180', '$719.76', '$539.76'],
+              ['New Mac mini M4 8GB', '$599', '~$25', '$624', '$719.76', '$95.76'],
+              ['New MacBook Pro M5 (host only)', '$2,000', '~$25', '$2,025', '$719.76', '−$1,305 (Zapier wins)']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Setup Walkthrough (10 Steps)',
+            items: [
+              'Install Docker Desktop from docker.com.',
+              'Install Ollama and pull the model: <code>ollama pull llama3.2:3b</code> (~2 GB download).',
+              'Create <code>~/n8n-stack/docker-compose.yml</code> — n8n service with persistent volume.',
+              'Run <code>docker compose up -d</code>. n8n starts at <code>http://localhost:5678</code>.',
+              'Create the n8n admin account and verify the dashboard loads.',
+              'Add Ollama credential in n8n: Settings → Credentials → Ollama → Base URL <code>http://host.docker.internal:11434</code>.',
+              'Import the first workflow JSON (Gmail to Notion is highest-value first build).',
+              'Add Gmail and Notion OAuth credentials in n8n — identical flow to Zapier.',
+              'Test with "Execute Workflow" before activating the schedule.',
+              'Optional: install Cloudflare Tunnel (<code>brew install cloudflared</code>) for public webhook support.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 1: Gmail → Notion & Workflow 2: RSS Digest',
+            items: [
+              '<strong>Gmail → Notion:</strong> Schedule triggers every 10 min → Gmail gets unread messages → Ollama classifies as {Action, FYI, Newsletter} + 2-sentence summary → Notion creates a row with sender, category, summary, and link back to thread.',
+              '<strong>Gmail → Notion reliability:</strong> 96% over 30 days. One OAuth refresh failure at day 19 — add a daily "ping credential" n8n workflow + ntfy alert to catch this early.',
+              '<strong>RSS Digest:</strong> Trigger at 07:00 daily → poll 10 feeds → filter last 24h → Ollama writes 1-sentence summary per item → send HTML digest email via SMTP.',
+              '<strong>RSS reliability: 100%.</strong> Pure read-only, no OAuth refresh, no public endpoint — most reliable of the five. Cap item input at 500 chars to keep generation fast on Pi 5.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 3: Calendar & Workflow 4: File Backup',
+            items: [
+              '<strong>Calendar Reminders:</strong> Schedule every 30 min → Google Calendar lists events in next 60 min → Ollama writes context-aware nudge → push to ntfy.sh or Pushover. Deduplication via Set node state.',
+              '<strong>Calendar reliability: 99.7%.</strong> Two missed nudges during router reboot. Fix: <code>restart: unless-stopped</code> in Docker Compose auto-recovers after downtime.',
+              '<strong>File Backup:</strong> Google Drive watches folder → download file binary → SHA-256 dedupe check → skip duplicates → save to <code>/backup/yyyy/MM/filename</code> → log hash to SQLite.',
+              '<strong>File Backup reliability: 100%.</strong> SHA-256 dedupe makes it idempotent — even if n8n reruns a file, hash check catches it. Optional: Ollama summarises PDF/text and writes a sidecar <code>.summary.txt</code>.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 5: Content Scheduling (Cross-Post)',
+            items: [
+              '<strong>Trigger:</strong> Webhook (via Cloudflare Tunnel) receives payload from CMS: <code>{ title, url, summary, publishAt }</code>.',
+              '<strong>AI copy generation:</strong> Ollama × 3 — LinkedIn (≤700 chars, professional), Twitter (≤280 chars, hook + link), Mastodon (≤500 chars, casual).',
+              '<strong>Wait Until node:</strong> holds workflow until <code>publishAt</code> timestamp — replaces Zapier\'s scheduled posting.',
+              '<strong>HTTP Request nodes:</strong> post to LinkedIn API, Twitter API v2, Mastodon API in parallel.',
+              '<strong>Reliability: 99%</strong> over 30 days. One LinkedIn rate-limit hiccup caught by built-in retry. Start with Workflows 1–4 first — this is the most complex of the five.',
+              '<strong>Setup checklist:</strong> Cloudflare Tunnel running, platform API keys in n8n credentials, test each platform separately, retry policy = 3 attempts with exponential backoff.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '30-Day Reliability Test (12,847 runs, 0.30% failure)',
+            columns: ['Failure mode', 'Frequency', 'Impact', 'Mitigation'],
+            rows: [
+              ['Gmail OAuth refresh expired', '1× in 30 days', '~3h missed triage', '"Ping credential" workflow + ntfy alert'],
+              ['Router reboot (no retry)', '2× in 30 days', '2 missed nudges', 'restart: unless-stopped + UPS'],
+              ['LinkedIn API rate limit', '1× in 30 days', '0 (retry caught it)', 'Built-in retry policy (already in recipe)'],
+              ['Llama 3.2 3B malformed JSON', '~12× in 30 days', '0 (parse-error branch)', 'Ollama JSON mode (format: "json")'],
+              ['Cloudflare Tunnel disconnect', '0× in 30 days', 'None', 'Run cloudflared as systemd service']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Where Local Wins — Where Zapier Still Wins',
+            items: [
+              '<strong>Local wins — Cost:</strong> $0/month on existing hardware vs $360/year Zapier Pro. Savings grow with every added workflow.',
+              '<strong>Local wins — Unlimited tasks:</strong> 500 emails/day on Zapier Pro exceeds the 2,000/month cap. Local has no per-task fee.',
+              '<strong>Local wins — Privacy:</strong> email, calendar, and file content never leave your network. Strongest posture for NDA and EU GDPR work.',
+              '<strong>Local wins — Free AI steps:</strong> Ollama triage/summarisation at zero marginal cost vs Zapier AI per-task billing.',
+              '<strong>Zapier wins — Managed OAuth:</strong> Zapier handles every token refresh, every consent screen update, every ToS change. You fix OAuth yourself with n8n.',
+              '<strong>Zapier wins — 7,000+ integrations:</strong> n8n has ~400. Niche SaaS (regional CRMs, payroll, regulated APIs) often only in Zapier.',
+              '<strong>Zapier wins — Public webhooks out of the box:</strong> no tunnel, no DNS, no always-on machine needed.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes',
+            items: [
+              '<strong>Running n8n on a laptop that sleeps.</strong> Closed-lid pauses Docker. Fix: use Pi 5 ($130) or Mac mini as always-on host, or disable lid-sleep on AC.',
+              '<strong>Using a 7B+ model on 4 GB RAM.</strong> Llama 3.1 8B on Pi 5 8GB swaps to disk, takes 30+ sec per email triage. Fix: stick to Llama 3.2 3B Q4_K_M on 8 GB devices.',
+              '<strong>Exposing port 5678 directly to the internet.</strong> A public n8n is credential-harvested within hours. Fix: always use Cloudflare Tunnel, never port-forward n8n.',
+              '<strong>Asking the LLM for free-form output and parsing with regex.</strong> Llama 3.2 3B adds prose around JSON ~5% of runs. Fix: use Ollama JSON mode (<code>format: "json"</code>). Drops parse failures to ~0.1%.',
+              '<strong>No alerting on failure.</strong> n8n stays silent unless you wire an error handler. Fix: add a global n8n error workflow that pushes failures to ntfy or Pushover. 5-minute setup.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              {
+                q: 'Can local AI agents replace 100% of my Zapier workflows?',
+                a: 'Plan for ~80%. Workflows requiring niche SaaS integrations Zapier supports natively (regional CRMs, payroll, strict-IP-allowlist APIs) are the gap. Run Zapier free tier (100 tasks/month) alongside n8n for those edge cases.'
+              },
+              {
+                q: 'How do I receive webhooks locally?',
+                a: 'Use Cloudflare Tunnel (free). Run "cloudflared tunnel login" then "cloudflared tunnel --url http://localhost:5678" to get a stable public hostname. Run cloudflared as a systemd service for 24/7 uptime. ngrok works but the free tier rotates URLs.'
+              },
+              {
+                q: 'How reliable are local agents over weeks?',
+                a: '99.7% across 12,847 runs in a 30-day test. Failure modes (OAuth refresh, router reboot, malformed JSON) are predictable and have one-time fixes. After mitigations, expected reliability is ~99.95%.'
+              },
+              {
+                q: 'What if my computer is offline when a workflow should run?',
+                a: 'The run is missed, not queued. Unlike Zapier (always-on cloud), local depends on machine uptime. Fix: Raspberry Pi 5 ($130) as a dedicated 24/7 host, or "restart: unless-stopped" in Docker Compose plus a UPS for short outages.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Compare AI Models Across Providers',
+            body: 'PromptQuorum dispatches your prompt to multiple AI models simultaneously and shows results side by side — so you always pick the right model for each task.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Zapier durch lokale KI-Agenten ersetzen (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Zapier durch lokale KI-Agenten ersetzen',
+            subtitle: 'n8n + Ollama + Llama 3.2 3B ersetzt 5 Zapier-Workflows für €0/Monat nach Hardware — spart €335/Jahr gegenüber Zapier Pro (€27,99/Monat).',
+            link: BASE_URL + '?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              '<strong>Stack: n8n (selbstgehostet, Docker) + Ollama + Llama 3.2 3B.</strong> Läuft auf Raspberry Pi 5 8GB (€120) oder einem beliebigen Laptop. Benötigter RAM: 8 GB.',
+              '<strong>Kosten: €0/Monat nach Hardware vs €27,99/Monat Zapier Pro.</strong> Break-Even in 1 Monat auf vorhandener Hardware. €335,88/Jahr gespart pro Seat.',
+              '<strong>5 Workflows über 30 Tage getestet:</strong> Gmail zu Notion, RSS-Digest, Kalender-Erinnerungen, Datei-Sicherung, Content-Planung. 4 von 5 bei 99%+ Zuverlässigkeit.',
+              '<strong>Harte Grenzen:</strong> Webhooks brauchen Cloudflare Tunnel, OAuth-Credentials selbst verwalten, Maschine muss online bleiben.',
+              '<strong>Datenschutz-Bonus:</strong> E-Mail-Body, Kalenderinhalte und Dateien verlassen niemals Ihr Netzwerk — ideal für NDA-Arbeit und EU-DSGVO.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Local Stack vs Zapier auf einen Blick',
+            columns: ['Kriterium', 'Local (n8n + Ollama)', 'Zapier Pro'],
+            rows: [
+              ['Monatliche Kosten', '€0', '€27,99'],
+              ['Tasks/Monat Limit', 'Unbegrenzt', '2.000'],
+              ['E-Mail/Datei/Kalender-Datenschutz', 'Nur lokal', 'An Zapier-Server gesendet'],
+              ['Vordefinierte Integrationen', 'etwa 400 (n8n)', '7.000+'],
+              ['KI-Schritt (zusammenfassen, klassifizieren)', 'Kostenlos — lokales LLM', '€ pro Task (Zapier AI)'],
+              ['Öffentliche Webhooks', 'Tunnel erforderlich (Cloudflare)', 'Eingebaute URL'],
+              ['OAuth-Token-Verwaltung', 'Sie verwalten Refreshes', 'Vollständig verwaltet'],
+              ['Einrichtungszeit (erster Workflow)', 'etwa 45 Min', 'etwa 5 Min'],
+              ['Kein Lock-in', 'Workflows als JSON exportieren', 'Abonnement + AGB-Änderungen']
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5 Workflows auf einen Blick',
+            columns: ['Workflow', 'Zapier-Setup', 'Local-Setup', 'Zuverlässigkeit (30d)'],
+            rows: [
+              ['Gmail zu Notion (Triage + Zusammenfassung)', '5 Min', '20 Min', '96% (1 OAuth-Refresh)'],
+              ['RSS zu KI-Digest-Email', '4 Min', '12 Min', '100%'],
+              ['Kalender-Erinnerungen', '6 Min', '15 Min', '99,7%'],
+              ['Datei-Sicherung (Drive → lokal + Dedupe)', '8 Min', '18 Min', '100%'],
+              ['Content-Planung (Cross-Post)', '7 Min', '25 Min', '99%']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Der empfohlene Stack',
+            items: [
+              '<strong>n8n (Apache 2.0, selbstgehostet)</strong> — die Workflow-Engine. Etwa 400 vordefinierte Integrationen. Drag-and-Drop-Builder. Engste 1:1-Zapier-UX im Open-Source-Bereich.',
+              '<strong>Ollama</strong> — der lokale LLM-Runtime. Ein-Zeilen-Installation, OpenAI-kompatibler API auf <code>http://localhost:11434</code>.',
+              '<strong>Llama 3.2 3B Q4_K_M</strong> — läuft auf 4 GB RAM. Stark genug für E-Mail-Triage und RSS-Zusammenfassung. ~5 Token/Sek. auf Pi 5, ~40–60 auf Mac mini M4.',
+              '<strong>Cloudflare Tunnel (kostenlos)</strong> — öffentliche URL für Webhooks ohne Port-Weiterleitung.',
+              '<strong>Gesamt-Einrichtungszeit:</strong> 30–45 Minuten beim ersten Mal einschließlich Docker, Ollama-Download und einem importierten Workflow.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Kostenrechnung (24 Monate)',
+            columns: ['Szenario', 'Hardware', 'Strom', 'Local gesamt', 'Zapier 24 Mo.', 'Ersparnis'],
+            rows: [
+              ['Vorhandener Laptop/Mac (8 GB+)', '€0', 'etwa €28', '€28', '€671,76', '€643,76'],
+              ['Neuer Raspberry Pi 5 8GB + SSD', '€150', 'etwa €18', '€168', '€671,76', '€503,76'],
+              ['Neuer Mac mini M4 8GB', '€649', 'etwa €23', '€672', '€671,76', 'etwa gleich'],
+              ['Neues MacBook M5 (nur für n8n)', '€2.000', 'etwa €23', '€2.023', '€671,76', '−€1.351 (Zapier gewinnt)']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Einrichtungs-Anleitung (10 Schritte)',
+            items: [
+              'Docker Desktop von docker.com installieren.',
+              'Ollama installieren und Modell pullen: <code>ollama pull llama3.2:3b</code> (~2 GB Download).',
+              '<code>~/n8n-stack/docker-compose.yml</code> erstellen — n8n-Dienst mit persistentem Volume.',
+              '<code>docker compose up -d</code> ausführen. n8n startet auf <code>http://localhost:5678</code>.',
+              'n8n Admin-Konto erstellen und Dashboard verifizieren.',
+              'Ollama-Credential in n8n hinzufügen: Einstellungen → Credentials → Ollama → Base URL <code>http://host.docker.internal:11434</code>.',
+              'Ersten Workflow-JSON importieren (Gmail zu Notion ist der wertvollste Einstieg).',
+              'Gmail- und Notion-OAuth-Credentials in n8n hinzufügen.',
+              'Mit "Workflow ausführen" testen, bevor der Zeitplan aktiviert wird.',
+              'Optional: Cloudflare Tunnel (<code>brew install cloudflared</code>) für öffentliche Webhooks.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 1: Gmail → Notion & Workflow 2: RSS-Digest',
+            items: [
+              '<strong>Gmail → Notion:</strong> Zeitplan alle 10 Min → Gmail liest ungelesene Nachrichten → Ollama klassifiziert als {Aktion, FYI, Newsletter} + 2-Satz-Zusammenfassung → Notion erstellt eine Zeile.',
+              '<strong>Zuverlässigkeit: 96%.</strong> Ein OAuth-Refresh-Fehler an Tag 19. Lösung: täglicher "Ping Credential"-Workflow + ntfy-Benachrichtigung.',
+              '<strong>RSS-Digest:</strong> Täglich um 07:00 → 10 Feeds abfragen → letzten 24h filtern → Ollama schreibt 1-Satz-Zusammenfassung → HTML-Digest-Email via SMTP.',
+              '<strong>RSS-Zuverlässigkeit: 100%.</strong> Rein lesend, kein OAuth-Refresh, kein öffentlicher Endpunkt — der zuverlässigste der fünf.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 3: Kalender & Workflow 4: Datei-Sicherung',
+            items: [
+              '<strong>Kalender-Erinnerungen:</strong> Zeitplan alle 30 Min → Google Kalender listet Termine in den nächsten 60 Min → Ollama schreibt kontextsensitiven Hinweis → Push via ntfy.sh oder Pushover.',
+              '<strong>Zuverlässigkeit: 99,7%.</strong> Zwei verpasste Hinweise beim Router-Neustart. Lösung: <code>restart: unless-stopped</code> in Docker Compose.',
+              '<strong>Datei-Sicherung:</strong> Google Drive überwacht Ordner → Datei herunterladen → SHA-256-Dedupe → Duplikat überspringen → nach <code>/backup/yyyy/MM/dateiname</code> speichern.',
+              '<strong>Zuverlässigkeit: 100%.</strong> SHA-256-Dedupe macht es idempotent. Optional: Ollama fasst PDF/Text zusammen und schreibt <code>.zusammenfassung.txt</code> daneben.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 5: Content-Planung (Cross-Post)',
+            items: [
+              '<strong>Trigger:</strong> Webhook (via Cloudflare Tunnel) empfängt CMS-Payload: <code>{ title, url, summary, publishAt }</code>.',
+              '<strong>KI-Copy-Generierung:</strong> Ollama × 3 — LinkedIn (≤700 Zeichen), Twitter (≤280 Zeichen, Hook + Link), Mastodon (≤500 Zeichen).',
+              '<strong>Wait-Until-Node:</strong> hält Workflow bis <code>publishAt</code>-Zeitstempel.',
+              '<strong>Zuverlässigkeit: 99%.</strong> Ein LinkedIn-Rate-Limit durch eingebaute Wiederholung abgefangen. Komplexester der fünf — starten Sie mit Workflows 1–4.',
+              '<strong>Setup-Checkliste:</strong> Cloudflare Tunnel läuft, API-Keys in n8n, jeden Kanal separat testen, Retry-Policy = 3 Versuche mit exponentiellem Backoff.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '30-Tage-Zuverlässigkeitstest (12.847 Läufe, 0,30% Fehlerrate)',
+            columns: ['Fehlerart', 'Häufigkeit', 'Auswirkung', 'Lösung'],
+            rows: [
+              ['Gmail OAuth-Refresh abgelaufen', '1× in 30 Tagen', '~3h verpasste Triage', '"Ping Credential"-Workflow + ntfy'],
+              ['Router-Neustart (kein Retry)', '2× in 30 Tagen', '2 verpasste Hinweise', 'restart: unless-stopped + USV'],
+              ['LinkedIn API Rate-Limit', '1× in 30 Tagen', '0 (Retry)', 'Eingebaute Retry-Policy'],
+              ['Llama 3.2 3B fehlerhafte JSON', '~12× in 30 Tagen', '0 (Parse-Fehler-Branch)', 'Ollama JSON-Modus (format: "json")'],
+              ['Cloudflare Tunnel Disconnect', '0× in 30 Tagen', 'Keine', 'cloudflared als systemd-Dienst']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wo Local gewinnt — Wo Zapier gewinnt',
+            items: [
+              '<strong>Local gewinnt — Kosten:</strong> €0/Monat auf vorhandener Hardware vs €335/Jahr Zapier Pro.',
+              '<strong>Local gewinnt — Unbegrenzte Tasks:</strong> 500 E-Mails/Tag übersteigen das 2.000/Monat-Limit von Zapier Pro. Local hat keine Pro-Task-Gebühr.',
+              '<strong>Local gewinnt — Datenschutz:</strong> E-Mail, Kalender und Dateien verlassen niemals Ihr Netzwerk. Stärkstes Sicherheitsniveau für NDA und DSGVO.',
+              '<strong>Local gewinnt — Kostenlose KI-Schritte:</strong> Ollama-Triage bei null Grenzkosten vs Zapier AI pro Task.',
+              '<strong>Zapier gewinnt — Verwaltetes OAuth:</strong> Zapier verwaltet jeden Token-Refresh, jede Consent-Screen-Aktualisierung.',
+              '<strong>Zapier gewinnt — 7.000+ Integrationen:</strong> n8n hat etwa 400. Nische SaaS oft nur bei Zapier.',
+              '<strong>Zapier gewinnt — Öffentliche Webhooks out of the box.</strong>'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              {
+                q: 'Können lokale KI-Agenten 100% meiner Zapier-Workflows ersetzen?',
+                a: 'Planen Sie mit etwa 80%. Workflows, die nischige SaaS-Integrationen von Zapier benötigen (regionale CRMs, Gehaltsabrechnungen), bleiben die Lücke. Zapier Free Tier (100 Tasks/Monat) parallel zu n8n für diese Fälle nutzen.'
+              },
+              {
+                q: 'Wie empfange ich Webhooks lokal?',
+                a: 'Nutzen Sie Cloudflare Tunnel (kostenlos). "cloudflared tunnel login" ausführen, dann "cloudflared tunnel --url http://localhost:5678" für einen stabilen öffentlichen Hostnamen. Als systemd-Dienst für 24/7-Verfügbarkeit ausführen.'
+              },
+              {
+                q: 'Wie zuverlässig sind lokale Agenten über Wochen?',
+                a: '99,7% über 12.847 Läufe in einem 30-Tage-Test. Fehlerarten (OAuth-Refresh, Router-Neustart, fehlerhafte JSON) sind vorhersehbar und haben einmalige Lösungen. Nach Maßnahmen: ~99,95% erwartet.'
+              },
+              {
+                q: 'Was passiert, wenn mein Computer offline ist?',
+                a: 'Der Lauf wird verpasst, nicht in die Warteschlange gestellt. Lösung: Raspberry Pi 5 (€120) als dedizierter 24/7-Host oder "restart: unless-stopped" in Docker Compose plus USV für kurze Ausfälle.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'KI-Modelle mehrerer Anbieter vergleichen',
+            body: 'PromptQuorum sendet Ihren Prompt gleichzeitig an mehrere KI-Modelle und zeigt die Ergebnisse nebeneinander — damit Sie stets das richtige Modell für jede Aufgabe wählen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Remplacer Zapier par des agents IA locaux (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Remplacer Zapier par des agents IA locaux',
+            subtitle: 'n8n + Ollama + Llama 3.2 3B remplace 5 workflows Zapier pour 0 €/mois après le matériel — économie de 360 €/an vs Zapier Pro (29,99 €/mois).',
+            link: BASE_URL + '?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              '<strong>Stack : n8n (auto-hébergé, Docker) + Ollama + Llama 3.2 3B.</strong> Tourne sur un Raspberry Pi 5 8 Go (120 €) ou n\'importe quel ordinateur portable. RAM nécessaire : 8 Go.',
+              '<strong>Coût : 0 €/mois après le matériel vs 29,99 €/mois Zapier Pro.</strong> Seuil de rentabilité en 1 mois sur matériel existant. 360 €/an économisés par siège.',
+              '<strong>5 workflows testés sur 30 jours :</strong> Gmail vers Notion, digest RSS, rappels calendrier, sauvegarde de fichiers, planification de contenu. 4 sur 5 à 99 %+ de fiabilité.',
+              '<strong>Limites strictes :</strong> les webhooks entrants nécessitent un tunnel Cloudflare, vous gérez OAuth vous-même, la machine doit rester en ligne.',
+              '<strong>Bonus confidentialité :</strong> les e-mails, l\'agenda et les fichiers ne quittent jamais votre réseau — idéal pour le travail sous NDA et la conformité RGPD.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Stack local vs Zapier en un coup d\'œil',
+            columns: ['Critère', 'Local (n8n + Ollama)', 'Zapier Pro'],
+            rows: [
+              ['Coût mensuel', '0 €', '29,99 €'],
+              ['Limite tâches/mois', 'Illimitées', '2 000'],
+              ['Confidentialité e-mail/fichier/agenda', 'Local uniquement', 'Envoyé aux serveurs Zapier'],
+              ['Intégrations pré-construites', '~400 (n8n)', '7 000+'],
+              ['Étape IA (résumer, classifier)', 'Gratuit — LLM local', '€ par tâche (Zapier AI)'],
+              ['Webhooks publics', 'Tunnel requis (Cloudflare)', 'URL intégrée'],
+              ['Gestion tokens OAuth', 'Vous gérez les renouvellements', 'Entièrement géré'],
+              ['Temps de config (1er workflow)', '~45 min', '~5 min'],
+              ['Sans verrouillage', 'Export JSON', 'Abonnement + changements CGU']
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5 workflows en un coup d\'œil',
+            columns: ['Workflow', 'Config Zapier', 'Config locale', 'Fiabilité (30j)'],
+            rows: [
+              ['Gmail vers Notion (triage + résumé)', '5 min', '20 min', '96 % (1 renouvellement OAuth)'],
+              ['RSS vers digest e-mail IA', '4 min', '12 min', '100 %'],
+              ['Rappels calendrier intelligents', '6 min', '15 min', '99,7 %'],
+              ['Sauvegarde fichiers (Drive → local + dédupe)', '8 min', '18 min', '100 %'],
+              ['Planification contenu (cross-post)', '7 min', '25 min', '99 %']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Le stack recommandé',
+            items: [
+              '<strong>n8n (Apache 2.0, auto-hébergé)</strong> — le moteur de workflow. ~400 intégrations pré-construites. Interface drag-and-drop. L\'équivalent open-source le plus proche de Zapier.',
+              '<strong>Ollama</strong> — le runtime LLM local. Installation en une ligne, API compatible OpenAI sur <code>http://localhost:11434</code>.',
+              '<strong>Llama 3.2 3B Q4_K_M</strong> — tourne sur 4 Go de RAM. Suffisant pour le triage Gmail et les résumés RSS. ~5 tok/sec sur Pi 5, ~40–60 sur Mac mini M4.',
+              '<strong>Cloudflare Tunnel (gratuit)</strong> — URL publique pour les webhooks sans redirection de port.',
+              '<strong>Temps d\'installation total :</strong> 30–45 minutes la première fois, Docker, pull Ollama et un workflow importé inclus.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Calcul des coûts (24 mois)',
+            columns: ['Scénario', 'Matériel', 'Électricité', 'Total local', 'Zapier Pro 24 mo.', 'Économies'],
+            rows: [
+              ['Ordinateur/Mac existant (8 Go+)', '0 €', '~28 €', '28 €', '719,76 €', '691,76 €'],
+              ['Nouveau Raspberry Pi 5 8 Go + SSD', '150 €', '~18 €', '168 €', '719,76 €', '551,76 €'],
+              ['Nouveau Mac mini M4 8 Go', '649 €', '~23 €', '672 €', '719,76 €', '~47 €'],
+              ['Nouveau MacBook M5 (hôte uniquement)', '2 000 €', '~23 €', '2 023 €', '719,76 €', '−1 303 € (Zapier gagne)']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Guide de configuration (10 étapes)',
+            items: [
+              'Installer Docker Desktop depuis docker.com.',
+              'Installer Ollama et télécharger le modèle : <code>ollama pull llama3.2:3b</code> (~2 Go).',
+              'Créer <code>~/n8n-stack/docker-compose.yml</code> — service n8n avec volume persistant.',
+              'Lancer <code>docker compose up -d</code>. n8n démarre sur <code>http://localhost:5678</code>.',
+              'Créer le compte admin n8n et vérifier le tableau de bord.',
+              'Ajouter le credential Ollama dans n8n : Paramètres → Credentials → Ollama → URL de base <code>http://host.docker.internal:11434</code>.',
+              'Importer le premier workflow JSON (Gmail vers Notion est le plus rentable en premier).',
+              'Ajouter les credentials OAuth Gmail et Notion dans n8n.',
+              'Tester avec "Exécuter le workflow" avant d\'activer la planification.',
+              'Optionnel : installer Cloudflare Tunnel (<code>brew install cloudflared</code>) pour les webhooks publics.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 1 : Gmail → Notion & Workflow 2 : Digest RSS',
+            items: [
+              '<strong>Gmail → Notion :</strong> Planning toutes les 10 min → Gmail lit les non-lus → Ollama classe en {Action, FYI, Newsletter} + résumé 2 phrases → Notion crée une ligne.',
+              '<strong>Fiabilité : 96 %.</strong> Une défaillance OAuth au jour 19. Solution : workflow quotidien de "ping credential" + alerte ntfy.',
+              '<strong>Digest RSS :</strong> Déclenchement à 07:00 quotidien → interroger 10 flux → filtrer 24h → Ollama écrit un résumé d\'1 phrase → e-mail HTML digest via SMTP.',
+              '<strong>Fiabilité RSS : 100 %.</strong> Lecture seule, pas de refresh OAuth, pas d\'endpoint public — le plus fiable des cinq.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 3 : Calendrier & Workflow 4 : Sauvegarde fichiers',
+            items: [
+              '<strong>Rappels calendrier :</strong> Planning toutes les 30 min → Google Agenda liste les événements dans 60 min → Ollama écrit une relance contextuelle → push via ntfy.sh ou Pushover.',
+              '<strong>Fiabilité : 99,7 %.</strong> Deux rappels manqués lors d\'un redémarrage du routeur. Solution : <code>restart: unless-stopped</code> dans Docker Compose.',
+              '<strong>Sauvegarde fichiers :</strong> Google Drive surveille un dossier → télécharger le fichier → dédupliquation SHA-256 → sauvegarde dans <code>/backup/aaaa/MM/nom-fichier</code>.',
+              '<strong>Fiabilité : 100 %.</strong> Le SHA-256 rend le workflow idempotent. Optionnel : Ollama résume les PDF/textes et écrit un fichier <code>.résumé.txt</code> associé.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Workflow 5 : Planification de contenu (Cross-Post)',
+            items: [
+              '<strong>Déclencheur :</strong> Webhook (via Cloudflare Tunnel) reçoit le payload du CMS : <code>{ title, url, summary, publishAt }</code>.',
+              '<strong>Génération de texte IA :</strong> Ollama × 3 — LinkedIn (≤700 chars), Twitter (≤280 chars), Mastodon (≤500 chars).',
+              '<strong>Nœud "Attendre jusqu\'à" :</strong> maintient le workflow jusqu\'au timestamp <code>publishAt</code>.',
+              '<strong>Fiabilité : 99 %.</strong> Un rate limit LinkedIn rattrapé par la politique de réessai. Le plus complexe des cinq — commencez par les workflows 1–4.',
+              '<strong>Checklist :</strong> Tunnel actif, clés API dans les credentials n8n, tester chaque plateforme séparément, politique de réessai = 3 tentatives avec backoff exponentiel.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Test de fiabilité 30 jours (12 847 exécutions, 0,30 % d\'échec)',
+            columns: ['Mode de défaillance', 'Fréquence', 'Impact', 'Mitigation'],
+            rows: [
+              ['Expiration OAuth Gmail', '1× en 30 jours', '~3h triage manqué', 'Workflow "ping credential" + ntfy'],
+              ['Redémarrage routeur (sans retry)', '2× en 30 jours', '2 rappels manqués', 'restart: unless-stopped + onduleur'],
+              ['Rate limit API LinkedIn', '1× en 30 jours', '0 (retry)', 'Politique de réessai intégrée'],
+              ['JSON malformé Llama 3.2 3B', '~12× en 30 jours', '0 (branche d\'erreur)', 'Mode JSON Ollama (format: "json")'],
+              ['Déconnexion Cloudflare Tunnel', '0× en 30 jours', 'Aucun', 'cloudflared en service systemd']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Où le local gagne — Où Zapier l\'emporte encore',
+            items: [
+              '<strong>Local gagne — Coût :</strong> 0 €/mois sur matériel existant vs 360 €/an Zapier Pro.',
+              '<strong>Local gagne — Tâches illimitées :</strong> 500 e-mails/jour dépasse la limite de 2 000/mois de Zapier Pro.',
+              '<strong>Local gagne — Confidentialité :</strong> e-mail, agenda et fichiers restent sur votre réseau. Idéal pour NDA et RGPD.',
+              '<strong>Local gagne — Étapes IA gratuites :</strong> triage/résumé Ollama à coût marginal zéro.',
+              '<strong>Zapier gagne — OAuth géré :</strong> Zapier gère chaque renouvellement de token, chaque mise à jour de consentement.',
+              '<strong>Zapier gagne — 7 000+ intégrations :</strong> n8n en a ~400. Les SaaS de niche sont souvent uniquement dans Zapier.',
+              '<strong>Zapier gagne — Webhooks publics intégrés.</strong>'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes',
+            faqs: [
+              {
+                q: 'Les agents IA locaux peuvent-ils remplacer 100 % de mes workflows Zapier ?',
+                a: 'Prévoyez ~80 %. Les workflows nécessitant des intégrations SaaS de niche (CRM régionaux, paie) restent un manque. Utilisez Zapier Free Tier (100 tâches/mois) en parallèle avec n8n pour ces cas.'
+              },
+              {
+                q: 'Comment recevoir des webhooks localement ?',
+                a: 'Cloudflare Tunnel (gratuit). Lancez "cloudflared tunnel login" puis "cloudflared tunnel --url http://localhost:5678" pour obtenir un nom d\'hôte public stable. Exécutez cloudflared en service systemd pour 24/7.'
+              },
+              {
+                q: 'Quelle est la fiabilité sur plusieurs semaines ?',
+                a: '99,7 % sur 12 847 exécutions en 30 jours. Les modes de défaillance (OAuth, redémarrage routeur, JSON malformé) sont prévisibles avec des corrections uniques. Fiabilité attendue après corrections : ~99,95 %.'
+              },
+              {
+                q: 'Que se passe-t-il si mon ordinateur est hors ligne ?',
+                a: 'L\'exécution est manquée, pas mise en file d\'attente. Solution : Raspberry Pi 5 (120 €) comme hôte 24/7 dédié, ou "restart: unless-stopped" dans Docker Compose plus onduleur pour les courtes pannes.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Comparer les modèles IA de plusieurs fournisseurs',
+            body: 'PromptQuorum envoie votre prompt simultanément à plusieurs modèles IA et affiche les résultats côte à côte — pour toujours choisir le bon modèle pour chaque tâche.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'ZapierをローカルAIエージェントで置き換える (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'ZapierをローカルAIエージェントで置き換える',
+            subtitle: 'n8n + Ollama + Llama 3.2 3BがZapierの5つのワークフローをハードウェア後¥0/月で代替 — Zapier Pro（月¥4,900）比で年¥58,800節約。',
+            link: BASE_URL + '?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: '主要なポイント',
+            items: [
+              '<strong>スタック：n8n（自己ホスト、Docker）+ Ollama + Llama 3.2 3B。</strong>Raspberry Pi 5 8GB（約¥20,000）または任意のノートPCで動作。必要RAM：8 GB。',
+              '<strong>コスト：ハードウェア後¥0/月 vs Zapier Pro ¥4,900/月。</strong>既存ハードウェアで1ヶ月でブレークイーブン。年¥58,800節約/シート。',
+              '<strong>30日間テスト済みの5つのワークフロー：</strong>GmailからNotion、RSSダイジェスト、カレンダーリマインダー、ファイルバックアップ、コンテンツスケジューリング。5つ中4つが99%以上の信頼性。',
+              '<strong>厳しい制限：</strong>WebhookにはCloudflareトンネルNeed、OAuthクレデンシャルは自分で管理、マシンはオンラインを維持する必要。',
+              '<strong>プライバシーボーナス：</strong>メール本文、カレンダー内容、ファイルはネットワークを出ない — NDA業務とEU GDPR対応に最適。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ローカルスタック vs Zapier 比較',
+            columns: ['基準', 'ローカル (n8n + Ollama)', 'Zapier Pro'],
+            rows: [
+              ['月額コスト', '¥0', '¥4,900'],
+              ['タスク/月 制限', '無制限', '2,000'],
+              ['メール/ファイル/カレンダーのプライバシー', 'ローカルのみ', 'Zapierサーバーに送信'],
+              ['プリビルド統合数', '約400 (n8n)', '7,000+'],
+              ['AIステップ（要約、分類）', '無料 — ローカルLLM', 'タスクあたり¥ (Zapier AI)'],
+              ['パブリックWebhook', 'トンネル必要 (Cloudflare)', '組み込みURL'],
+              ['OAuthトークン管理', '自分でリフレッシュ管理', '完全管理'],
+              ['設定時間（初回ワークフロー）', '約45分', '約5分'],
+              ['ロックインなし', 'JSON形式でエクスポート可', 'サブスクリプション + ToS変更']
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5つのワークフロー一覧',
+            columns: ['ワークフロー', 'Zapier設定', 'ローカル設定', '信頼性 (30日)'],
+            rows: [
+              ['GmailからNotion（トリアージ + 要約）', '5分', '20分', '96% (OAuth 1回リフレッシュ)'],
+              ['RSSからAIダイジェストメール', '4分', '12分', '100%'],
+              ['カレンダースマートリマインダー', '6分', '15分', '99.7%'],
+              ['ファイルバックアップ（Drive → ローカル + 重複除去）', '8分', '18分', '100%'],
+              ['コンテンツスケジューリング（クロスポスト）', '7分', '25分', '99%']
+            ]
+          },
+          {
+            type: 'list',
+            h2: '推奨スタック',
+            items: [
+              '<strong>n8n（Apache 2.0、自己ホスト）</strong> — ワークフローエンジン。約400のプリビルド統合。ドラッグ＆ドロップビルダー。オープンソースで最もZapierに近いUX。',
+              '<strong>Ollama</strong> — ローカルLLMランタイム。1行インストール、<code>http://localhost:11434</code>でOpenAI互換API公開。',
+              '<strong>Llama 3.2 3B Q4_K_M</strong> — 4 GB RAMで動作。メールトリアージとRSS要約に十分。Pi 5で~5 tok/sec、Mac mini M4で~40–60 tok/sec。',
+              '<strong>Cloudflare Tunnel（無料）</strong> — ポートフォワーディングなしでWebhook用の公開URL。',
+              '<strong>総セットアップ時間：</strong>初回は30–45分（Docker、Ollamaプル、1ワークフローインポートを含む）。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'コスト計算（24ヶ月）',
+            columns: ['シナリオ', 'ハードウェア', '電気代', 'ローカル合計', 'Zapier 24ヶ月', '節約額'],
+            rows: [
+              ['既存ノートPC/Mac (8 GB+)', '¥0', '約¥4,000', '約¥4,000', '¥117,600', '約¥113,600'],
+              ['新規 Raspberry Pi 5 8GB + SSD', '約¥22,000', '約¥2,700', '約¥24,700', '¥117,600', '約¥92,900'],
+              ['新規 Mac mini M4 8GB', '約¥90,000', '約¥3,400', '約¥93,400', '¥117,600', '約¥24,200'],
+              ['新規 MacBook Pro M5 (ホスト専用)', '約¥290,000', '約¥3,400', '約¥293,400', '¥117,600', '−約¥175,800 (Zapier有利)']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'セットアップ手順（10ステップ）',
+            items: [
+              'docker.comからDocker Desktopをインストール。',
+              'Ollamaをインストールしてモデルをプル：<code>ollama pull llama3.2:3b</code>（~2 GBダウンロード）。',
+              '<code>~/n8n-stack/docker-compose.yml</code>を作成 — 永続ボリューム付きn8nサービス。',
+              '<code>docker compose up -d</code>を実行。n8nが<code>http://localhost:5678</code>で起動。',
+              'n8n管理者アカウントを作成してダッシュボードを確認。',
+              'n8nにOllamaクレデンシャルを追加：設定 → Credentials → Ollama → ベースURL <code>http://host.docker.internal:11434</code>。',
+              '最初のワークフローJSONをインポート（GmailからNotionが最初の高価値ビルド）。',
+              'n8nにGmailとNotionのOAuthクレデンシャルを追加。',
+              'スケジュールを有効にする前に「ワークフロー実行」でテスト。',
+              'オプション：Cloudflare Tunnel（<code>brew install cloudflared</code>）をWebhook用にインストール。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ワークフロー1: Gmail → Notion & ワークフロー2: RSSダイジェスト',
+            items: [
+              '<strong>Gmail → Notion：</strong>10分ごとのスケジュール → Gmailが未読メッセージ取得 → Ollamaが{アクション、FYI、ニュースレター}に分類 + 2文要約 → Notionが行を作成。',
+              '<strong>信頼性：96%。</strong>19日目にOAuthリフレッシュ失敗が1回。解決策：毎日の「クレデンシャルピング」ワークフロー + ntfy通知。',
+              '<strong>RSSダイジェスト：</strong>毎朝07:00にトリガー → 10フィード取得 → 過去24時間をフィルタ → Ollamaが1文要約 → SMTP経由でHTMLダイジェストメール送信。',
+              '<strong>RSS信頼性：100%。</strong>読み取り専用、OAuthリフレッシュなし、パブリックエンドポイントなし — 5つの中で最も信頼性が高い。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ワークフロー3: カレンダー & ワークフロー4: ファイルバックアップ',
+            items: [
+              '<strong>カレンダーリマインダー：</strong>30分ごとのスケジュール → Googleカレンダーが次60分のイベントをリスト → Ollamaがコンテキスト対応のナッジを作成 → ntfy.shまたはPushoverにプッシュ。',
+              '<strong>信頼性：99.7%。</strong>ルーター再起動中に2回ナッジを見逃し。解決策：Docker Composeで<code>restart: unless-stopped</code>。',
+              '<strong>ファイルバックアップ：</strong>Google Driveフォルダを監視 → ファイルをダウンロード → SHA-256重複チェック → 重複をスキップ → <code>/backup/yyyy/MM/ファイル名</code>に保存。',
+              '<strong>信頼性：100%。</strong>SHA-256重複排除でべき等性確保。オプション：Ollamaがテキスト/PDFを要約し<code>.summary.txt</code>を隣に保存。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ワークフロー5: コンテンツスケジューリング（クロスポスト）',
+            items: [
+              '<strong>トリガー：</strong>Webhook（Cloudflare Tunnel経由）がCMSからペイロードを受信：<code>{ title, url, summary, publishAt }</code>。',
+              '<strong>AIコピー生成：</strong>Ollama × 3 — LinkedIn（≤700文字）、Twitter（≤280文字、フック + リンク）、Mastodon（≤500文字）。',
+              '<strong>「待機まで」ノード：</strong><code>publishAt</code>タイムスタンプまでワークフローを保留。',
+              '<strong>信頼性：99%。</strong>LinkedInのレートリミット1回を組み込みリトライで対処。5つの中で最も複雑 — ワークフロー1〜4から始めること。',
+              '<strong>セットアップチェックリスト：</strong>Cloudflare Tunnel稼働中、APIキーがn8nクレデンシャルに設定、各プラットフォームを個別にテスト、リトライポリシー = 指数バックオフで3回試行。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '30日間信頼性テスト（12,847回実行、障害率0.30%）',
+            columns: ['障害モード', '頻度', '影響', '対策'],
+            rows: [
+              ['Gmail OAuthリフレッシュ期限切れ', '30日間で1回', '~3時間のトリアージ見逃し', '「クレデンシャルピング」ワークフロー + ntfy'],
+              ['ルーター再起動（リトライなし）', '30日間で2回', '2件のナッジ見逃し', 'restart: unless-stopped + UPS'],
+              ['LinkedIn APIレートリミット', '30日間で1回', '0（リトライで対処）', '組み込みリトライポリシー'],
+              ['Llama 3.2 3B 不正JSON', '30日間で~12回', '0（パースエラーブランチで対処）', 'Ollama JSONモード（format: "json"）'],
+              ['Cloudflare Tunnel切断', '30日間で0回', 'なし', 'cloudflaredをsystemdサービスとして実行']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ローカルが勝つ場面 — Zapierが依然勝つ場面',
+            items: [
+              '<strong>ローカルが勝つ — コスト：</strong>既存ハードウェアで月¥0 vs 年¥58,800 Zapier Pro。',
+              '<strong>ローカルが勝つ — タスク無制限：</strong>1日500通のメールがZapier Proの月2,000タスク上限を超える。ローカルはタスク課金なし。',
+              '<strong>ローカルが勝つ — プライバシー：</strong>メール、カレンダー、ファイルがネットワークから出ない。NDAとGDPRに最強。',
+              '<strong>ローカルが勝つ — AIステップ無料：</strong>Ollamaのトリアージ/要約は限界費用ゼロ。',
+              '<strong>Zapierが勝つ — 管理されたOAuth：</strong>Zapierはすべてのトークンリフレッシュと同意画面更新を管理。',
+              '<strong>Zapierが勝つ — 7,000以上の統合：</strong>n8nは約400。ニッチなSaaSは多くZapierにしかない。',
+              '<strong>Zapierが勝つ — 即座のパブリックWebhook：</strong>トンネルもDNSも常時起動マシンも不要。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              {
+                q: 'ローカルAIエージェントはZapierのワークフローを100%置き換えられますか？',
+                a: '約80%を想定してください。ZapierがネイティブサポートするニッチなSaaS統合（地域CRM、給与システム）はカバーできません。これらのケースにはZapier Freeティア（月100タスク）をn8nと並行して使用。'
+              },
+              {
+                q: 'ローカルでWebhookを受け取るにはどうすればよいですか？',
+                a: 'Cloudflare Tunnel（無料）を使用。"cloudflared tunnel login"を実行し、"cloudflared tunnel --url http://localhost:5678"で安定した公開ホスト名を取得。24/7稼働にはsystemdサービスとして実行。'
+              },
+              {
+                q: '数週間にわたるローカルエージェントの信頼性は？',
+                a: '30日間テストで12,847回実行中99.7%。障害モード（OAuthリフレッシュ、ルーター再起動、不正JSON）は予測可能で一回限りの修正があります。対策後の予想信頼性：~99.95%。'
+              },
+              {
+                q: 'コンピュータがオフラインの場合はどうなりますか？',
+                a: '実行は見逃され、キューには入りません。解決策：Raspberry Pi 5（約¥20,000）を専用24/7ホストとして使用、またはDocker Composeで"restart: unless-stopped"と短時間停電用UPS。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '複数プロバイダーのAIモデルを比較する',
+            body: 'PromptQuorumはプロンプトを複数のAIモデルに同時に送信し、結果を並べて表示します — 各タスクに最適なモデルを常に選択できます。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '用本地AI代理替代Zapier (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: '用本地AI代理替代Zapier',
+            subtitle: 'n8n + Ollama + Llama 3.2 3B以硬件后$0/月替代5个Zapier工作流 — 比Zapier Pro（$29.99/月）节省$360/年。',
+            link: BASE_URL + '?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>技术栈：n8n（自托管，Docker）+ Ollama + Llama 3.2 3B。</strong>在Raspberry Pi 5 8GB（约¥900）或任何笔记本上运行。所需RAM：8 GB。',
+              '<strong>成本：硬件后$0/月 vs Zapier Pro $29.99/月。</strong>在现有硬件上1个月回本。每席位每年节省$360。',
+              '<strong>30天测试的5个工作流：</strong>Gmail到Notion、RSS摘要、日历提醒、文件备份、内容发布。5个中4个达到99%以上可靠性。',
+              '<strong>硬限制：</strong>入站webhook需要Cloudflare隧道，自己管理OAuth凭据，机器必须保持在线。',
+              '<strong>隐私奖励：</strong>电子邮件、日历内容和文件从不离开您的网络 — 适合NDA工作和EU GDPR合规。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '本地堆栈 vs Zapier对比',
+            columns: ['标准', '本地 (n8n + Ollama)', 'Zapier Pro'],
+            rows: [
+              ['月成本', '$0', '$29.99'],
+              ['任务/月限制', '无限', '2,000'],
+              ['邮件/文件/日历隐私', '仅本地', '发送至Zapier服务器'],
+              ['预建集成数', '约400 (n8n)', '7,000+'],
+              ['AI步骤（摘要、分类）', '免费 — 本地LLM', '每任务计费 (Zapier AI)'],
+              ['公共Webhook', '需要隧道 (Cloudflare)', '内置URL'],
+              ['OAuth令牌管理', '自己处理刷新', '完全托管'],
+              ['设置时间（第一个工作流）', '约45分钟', '约5分钟'],
+              ['无锁定', 'JSON格式导出工作流', '订阅 + 条款变更']
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5个工作流一览',
+            columns: ['工作流', 'Zapier设置', '本地设置', '可靠性 (30天)'],
+            rows: [
+              ['Gmail到Notion（分类+摘要）', '5分钟', '20分钟', '96%（1次OAuth刷新）'],
+              ['RSS到AI摘要邮件', '4分钟', '12分钟', '100%'],
+              ['日历智能提醒', '6分钟', '15分钟', '99.7%'],
+              ['文件备份（Drive→本地+去重）', '8分钟', '18分钟', '100%'],
+              ['内容发布（跨平台）', '7分钟', '25分钟', '99%']
+            ]
+          },
+          {
+            type: 'list',
+            h2: '推荐技术栈',
+            items: [
+              '<strong>n8n（Apache 2.0，自托管）</strong> — 工作流引擎。约400个预建集成。拖拽式构建器。开源界最接近Zapier UX的选择。',
+              '<strong>Ollama</strong> — 本地LLM运行时。一行安装，在<code>http://localhost:11434</code>公开OpenAI兼容API。',
+              '<strong>Llama 3.2 3B Q4_K_M</strong> — 在4 GB RAM上运行。足够处理邮件分类和RSS摘要。Pi 5上约5 tok/sec，Mac mini M4上约40–60 tok/sec。',
+              '<strong>Cloudflare Tunnel（免费）</strong> — 无需端口转发的Webhook公共URL。',
+              '<strong>总设置时间：</strong>首次30–45分钟，包括Docker、Ollama拉取和一个工作流导入。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '成本计算（24个月）',
+            columns: ['场景', '硬件', '电费', '本地总计', 'Zapier 24月', '节省'],
+            rows: [
+              ['现有笔记本/Mac（8 GB+）', '$0', '约$30', '$30', '$719.76', '$689.76'],
+              ['新Raspberry Pi 5 8GB + SSD', '$160', '约$20', '$180', '$719.76', '$539.76'],
+              ['新Mac mini M4 8GB', '$599', '约$25', '$624', '$719.76', '$95.76'],
+              ['新MacBook Pro M5（仅托管）', '$2,000', '约$25', '$2,025', '$719.76', '−$1,305（Zapier更划算）']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '设置步骤（10步）',
+            items: [
+              '从docker.com安装Docker Desktop。',
+              '安装Ollama并拉取模型：<code>ollama pull llama3.2:3b</code>（约2 GB下载）。',
+              '创建<code>~/n8n-stack/docker-compose.yml</code> — 带持久卷的n8n服务。',
+              '运行<code>docker compose up -d</code>。n8n在<code>http://localhost:5678</code>启动。',
+              '创建n8n管理员账户并验证仪表板加载。',
+              '在n8n中添加Ollama凭据：设置 → 凭据 → Ollama → 基础URL <code>http://host.docker.internal:11434</code>。',
+              '导入第一个工作流JSON（Gmail到Notion是最高价值的首选）。',
+              '在n8n中添加Gmail和Notion OAuth凭据。',
+              '激活计划前用"执行工作流"测试。',
+              '可选：安装Cloudflare Tunnel（<code>brew install cloudflared</code>）以支持公共Webhook。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '工作流1：Gmail→Notion & 工作流2：RSS摘要',
+            items: [
+              '<strong>Gmail → Notion：</strong>每10分钟计划 → Gmail获取未读消息 → Ollama分类为{行动、仅供参考、Newsletter} + 2句摘要 → Notion创建带发件人、类别、摘要和原始链接的行。',
+              '<strong>可靠性：96%。</strong>第19天一次OAuth刷新失败。解决方案：每日"ping凭据"工作流 + ntfy通知。',
+              '<strong>RSS摘要：</strong>每天07:00触发 → 查询10个RSS源 → 过滤过去24小时 → Ollama写1句摘要 → 通过SMTP发送HTML摘要邮件。',
+              '<strong>RSS可靠性：100%。</strong>只读操作，无OAuth刷新，无公共端点 — 五个中最可靠。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '工作流3：日历 & 工作流4：文件备份',
+            items: [
+              '<strong>日历提醒：</strong>每30分钟计划 → Google日历列出未来60分钟内的事件 → Ollama写感知上下文的提示 → 通过ntfy.sh或Pushover推送。',
+              '<strong>可靠性：99.7%。</strong>路由器重启期间错过2次提醒。解决方案：Docker Compose中的<code>restart: unless-stopped</code>。',
+              '<strong>文件备份：</strong>Google Drive监控文件夹 → 下载文件 → SHA-256去重检查 → 跳过重复 → 保存到<code>/backup/yyyy/MM/文件名</code>。',
+              '<strong>可靠性：100%。</strong>SHA-256去重使其具有幂等性。可选：Ollama总结PDF/文本并写入隔壁<code>.summary.txt</code>。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '工作流5：内容发布（跨平台）',
+            items: [
+              '<strong>触发器：</strong>Webhook（通过Cloudflare隧道）接收CMS的载荷：<code>{ title, url, summary, publishAt }</code>。',
+              '<strong>AI文案生成：</strong>Ollama × 3 — LinkedIn（≤700字符，专业）、Twitter（≤280字符，钩子+链接）、Mastodon（≤500字符，休闲）。',
+              '<strong>"等待至"节点：</strong>保持工作流直到<code>publishAt</code>时间戳。',
+              '<strong>可靠性：99%。</strong>一次LinkedIn速率限制被内置重试捕获。五个中最复杂 — 先从工作流1-4开始。',
+              '<strong>设置清单：</strong>Cloudflare隧道运行中，API密钥在n8n凭据中，单独测试每个平台，重试策略=3次指数退避。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '30天可靠性测试（12,847次运行，故障率0.30%）',
+            columns: ['故障模式', '频率', '影响', '缓解措施'],
+            rows: [
+              ['Gmail OAuth刷新过期', '30天内1次', '约3小时分类遗漏', '"ping凭据"工作流 + ntfy'],
+              ['路由器重启（无重试）', '30天内2次', '2次提醒遗漏', 'restart: unless-stopped + UPS'],
+              ['LinkedIn API速率限制', '30天内1次', '0（重试处理）', '内置重试策略'],
+              ['Llama 3.2 3B格式错误JSON', '30天约12次', '0（解析错误分支）', 'Ollama JSON模式（format: "json"）'],
+              ['Cloudflare隧道断开', '30天0次', '无', '将cloudflared作为systemd服务运行']
+            ]
+          },
+          {
+            type: 'list',
+            h2: '本地优势 vs Zapier仍然胜出的地方',
+            items: [
+              '<strong>本地优势 — 成本：</strong>在现有硬件上$0/月 vs Zapier Pro每年$360。',
+              '<strong>本地优势 — 无限任务：</strong>每天500封邮件超过Zapier Pro的月2,000任务上限。本地无每任务费用。',
+              '<strong>本地优势 — 隐私：</strong>邮件、日历和文件不离开网络。NDA和GDPR最强姿态。',
+              '<strong>本地优势 — 免费AI步骤：</strong>Ollama分类/摘要零边际成本。',
+              '<strong>Zapier胜出 — 托管OAuth：</strong>Zapier处理每次令牌刷新和同意屏幕更新。',
+              '<strong>Zapier胜出 — 7,000+集成：</strong>n8n约400个。利基SaaS往往只在Zapier中。',
+              '<strong>Zapier胜出 — 开箱即用的公共Webhook：</strong>无需隧道、DNS或常开机器。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              {
+                q: '本地AI代理能100%替代我的Zapier工作流吗？',
+                a: '预计约80%。需要Zapier原生支持的利基SaaS集成（区域CRM、薪资系统）是缺口。对这些情况使用Zapier免费版（100任务/月）与n8n并行运行。'
+              },
+              {
+                q: '如何在本地接收webhook？',
+                a: '使用Cloudflare Tunnel（免费）。运行"cloudflared tunnel login"，然后"cloudflared tunnel --url http://localhost:5678"获得稳定的公共主机名。作为systemd服务运行以实现24/7在线。'
+              },
+              {
+                q: '本地代理几周内的可靠性如何？',
+                a: '30天测试12,847次运行中99.7%。故障模式（OAuth刷新、路由器重启、格式错误JSON）可预测且有一次性修复。缓解后预期可靠性：约99.95%。'
+              },
+              {
+                q: '如果我的电脑离线怎么办？',
+                a: '运行被错过，不排队。解决方案：Raspberry Pi 5（$130）作为专用24/7主机，或Docker Compose中的"restart: unless-stopped"加短时停电用UPS。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '对比多家提供商的AI模型',
+            body: 'PromptQuorum将您的提示同时发送到多个AI模型，并并排显示结果 — 帮助您为每个任务选择合适的模型。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = BASE_URL + '?lang=' + lang;
+      const footerLink = '<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>';
+
+      switch (slide.type) {
+        case 'title':
+          html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+            + '<h1>' + slide.h1 + '</h1>'
+            + '<p>' + slide.subtitle + '</p>'
+            + '<p style="margin-top: 32px; font-size: 15px; color: #79747e;"><a href="' + slide.link + '" target="_blank" rel="noopener" style="color: #6750a4; text-decoration: none;">' + slide.link.replace('https://', '') + '</a></p>'
+            + footerLink;
+          break;
+
+        case 'list':
+          html = '<h2>' + slide.h2 + '</h2>';
+          if (slide.intro) html += '<p style="margin-bottom: 8px;">' + slide.intro + '</p>';
+          html += '<ul>';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ul>' + footerLink;
+          break;
+
+        case 'table':
+          html = '<h2>' + slide.h2 + '</h2><table><tr>';
+          slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+          html += '</tr>';
+          slide.rows.forEach(function(row) {
+            html += '<tr>';
+            if (Array.isArray(row)) {
+              row.forEach(function(cell) { html += '<td>' + cell + '</td>'; });
+            } else {
+              slide.columns.forEach(function(col) { html += '<td>' + (row[col] || '') + '</td>'; });
+            }
+            html += '</tr>';
+          });
+          html += '</table>' + footerLink;
+          break;
+
+        case 'comparison':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top: 36px; font-size: clamp(15px, 1.8vw, 20px);">' + slide.line1 + '</p>'
+            + '<p style="margin-top: 20px; font-size: clamp(15px, 1.8vw, 20px);">' + slide.line2 + '</p>'
+            + '<p style="margin-top: 32px; font-size: clamp(13px, 1.4vw, 16px); color: #6750a4;">' + slide.tip + '</p>'
+            + footerLink;
+          break;
+
+        case 'numbered':
+          html = '<h2>' + slide.h2 + '</h2><ol>';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ol>' + footerLink;
+          break;
+
+        case 'faq':
+          html = '<h2 style="margin-bottom: 14px;">' + slide.h2 + '</h2>';
+          slide.faqs.forEach(function(faq) {
+            html += '<div style="margin-bottom: 12px; text-align: left; max-width: 820px; width: 100%;"><strong style="font-size: clamp(12px, 1.3vw, 15px);">Q: ' + faq.q + '</strong><p style="margin-top: 4px; font-size: clamp(11px, 1.2vw, 14px); color: #49454f;">A: ' + faq.a + '</p></div>';
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="max-width: 600px; margin-top: 16px;">' + slide.body + '</p>'
+            + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: #fff; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 600;">' + slide.cta + '</a>'
+            + footerLink;
+          break;
+      }
+
+      return '<div class="slide ' + slide.type + '">' + html + '</div>';
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = BASE_URL + '?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(function(slide) {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(function(s) { s.classList.remove('active'); });
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) { showSlide(currentSlide + n); }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', function() {
+      slides.forEach(function(s) { s.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', function() {
+      slides.forEach(function(s) { s.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', function() { window.print(); });
+    }
+
+    showSlide(0);
+  </script>
+</body>
+</html>

@@ -67,6 +67,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/replace-zapier-with-local-ai-agents-static.html',
+    gammaDescription: 'The slide deck below covers: the n8n + Ollama + Llama 3.2 3B stack for replacing Zapier, a head-to-head comparison table (cost, privacy, webhook support, OAuth handling), 5 workflow breakdowns (Gmail to Notion, RSS digest, calendar reminders, file backup, content scheduling), cost math over 24 months ($30 vs $720), a 30-day reliability test across 12,847 runs, and where Zapier still wins. Download the PDF as a local Zapier alternative reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -538,6 +540,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Empfohlene Lektüre', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/replace-zapier-with-local-ai-agents-static.html',
+    gammaDescription: 'Das Folien-Deck behandelt: den n8n + Ollama + Llama 3.2 3B Stack für Zapier-Ersatz, eine Vergleichstabelle (Kosten, Datenschutz, Webhook-Support), 5 Workflow-Details (Gmail zu Notion, RSS-Digest, Kalender-Erinnerungen, Datei-Sicherung, Content-Planung), 24-Monats-Kostenrechnung ($30 vs $720), einen 30-Tage-Zuverlässigkeitstest (12.847 Läufe) und wo Zapier noch gewinnt. Laden Sie das PDF als lokale Zapier-Alternative-Referenzkarte herunter.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1009,6 +1013,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures recommandées', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/replace-zapier-with-local-ai-agents-static.html',
+    gammaDescription: 'Le diaporama couvre : le stack n8n + Ollama + Llama 3.2 3B pour remplacer Zapier, un tableau comparatif (coût, confidentialité, support webhook), 5 détails de workflows (Gmail vers Notion, digest RSS, rappels calendrier, sauvegarde fichiers, planification contenu), calcul des coûts sur 24 mois ($30 vs $720), un test de fiabilité sur 30 jours (12 847 exécutions) et où Zapier l\'emporte encore. Téléchargez le PDF comme carte de référence alternative Zapier locale.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1480,6 +1486,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '推奨読み物', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/replace-zapier-with-local-ai-agents-static.html',
+    gammaDescription: 'このスライドデッキは、ZapierをローカルAIで置き換えるn8n + Ollama + Llama 3.2 3Bスタック、対比表（コスト、プライバシー、Webhook対応）、5つのワークフロー詳細（GmailからNotion、RSSダイジェスト、カレンダーリマインダー、ファイルバックアップ、コンテンツスケジューリング）、24ヶ月コスト計算($30 vs $720)、30日間信頼性テスト(12,847回実行)、Zapierが依然勝つケースをカバーしています。PDFをローカルZapier代替リファレンスカードとしてダウンロードしてください。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1951,6 +1959,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '推荐阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/replace-zapier-with-local-ai-agents-static.html',
+    gammaDescription: '幻灯片涵盖：用于替代Zapier的n8n + Ollama + Llama 3.2 3B堆栈，对比表（成本、隐私、webhook支持、OAuth处理），5个工作流程详情（Gmail到Notion、RSS摘要、日历提醒、文件备份、内容发布），24个月成本计算（$30 vs $720），30天可靠性测试（12,847次运行）以及Zapier仍然胜出的地方。将PDF下载为本地Zapier替代参考卡。',
     sections: {
       tldr: {
         id: 'key-takeaways',
