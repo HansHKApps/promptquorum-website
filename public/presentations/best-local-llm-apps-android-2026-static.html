@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Local LLM Apps for Android 2026: 6 Apps Compared | PromptQuorum</title>
+  <meta name="description" content="Six Android apps run large language models entirely offline in 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, and PocketPal AI — compared on Galaxy S25 Ultra, Pixel 9 Pro, and OnePlus 13." />
+  <meta property="og:title" content="Best Local LLM Apps for Android 2026: 6 Apps Compared — PromptQuorum" />
+  <meta property="og:description" content="MLC Chat hits ~40 tok/sec via Snapdragon Hexagon NPU. PocketPal AI is the best overall. Ollama via Termux gives a full local API. Speed table + chipset guide." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #1c1b1f;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+      gap: 16px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .header-left img {
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    #header-title {
+      font-size: 13px;
+      color: #49454f;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 500px;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .header-links a {
+      font-size: 13px;
+      color: #6750a4;
+      text-decoration: none;
+    }
+
+    .header-links a:hover { text-decoration: underline; }
+
+    .content-area {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 36px 56px;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide.active { display: flex; }
+
+    .slide h1 {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      color: #1c1b1f;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .slide h2 {
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 700;
+      color: #1c1b1f;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide p {
+      font-size: clamp(14px, 1.6vw, 18px);
+      color: #49454f;
+      line-height: 1.55;
+      max-width: 820px;
+    }
+
+    .slide ul {
+      text-align: left;
+      max-width: 820px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .slide ul li {
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: #1c1b1f;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .slide ol {
+      text-align: left;
+      max-width: 820px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .slide ol li {
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: #1c1b1f;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .slide table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 12px;
+      font-size: clamp(11px, 1.2vw, 14px);
+    }
+
+    .slide table th {
+      background: #6750a4;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .slide table td {
+      padding: 7px 12px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .slide table tr:nth-child(even) td { background: #f8f4ff; }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 24px;
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .controls button {
+      padding: 8px 20px;
+      border: 1px solid #6750a4;
+      border-radius: 20px;
+      background: transparent;
+      color: #6750a4;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .controls button:hover:not(:disabled) { background: #f0ebff; }
+    .controls button:disabled { opacity: 0.35; cursor: default; }
+
+    .slide-counter { font-size: 14px; color: #79747e; min-width: 60px; text-align: center; }
+
+    @page { size: landscape; margin: 0; }
+
+    @media print {
+      body { height: auto; overflow: visible; }
+      .presentation-container { max-width: 100%; height: auto; }
+      .header { display: none; }
+      .controls { display: none; }
+      .content-area { overflow: visible; height: auto; }
+      .slide { display: flex !important; height: 100vh; page-break-after: always; break-after: page; }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Best Local LLM Apps for Android 2026</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const BASE_URL = 'https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026';
+
+    const CONTENT = {
+      en: {
+        title: 'Best Local LLM Apps for Android 2026: 6 Apps Compared',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Best Local LLM Apps for Android in 2026',
+            subtitle: '6 apps compared on Galaxy S25 Ultra, Pixel 9 Pro, and OnePlus 13 — MLC Chat, Maid, Layla, Ollama via Termux, Private AI, and PocketPal AI.',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>MLC Chat is the speed leader on Snapdragon 8 Elite.</strong> Hexagon NPU delivers ~40 tok/sec on Qwen3 1.7B and ~22 tok/sec on Phi-4 Mini — 3–4× faster than CPU-only apps on the same hardware.',
+              '<strong>PocketPal AI is the best all-around pick for most users.</strong> Full GGUF ecosystem, Hugging Face integration, polished UI, Android share sheet support, and correct storage handling.',
+              '<strong>Ollama via Termux is the only path to a full OpenAI-compatible local API on Android.</strong> Supports tool use, function calling, and third-party app connections to a locally running model.',
+              '<strong>Tensor G5 (Pixel 9 Pro) does not expose its NPU to third-party apps.</strong> All six apps run CPU-only on every Pixel model — 10–18 tok/sec on Phi-4 Mini.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways (continued)',
+            items: [
+              '<strong>Maid is the F-Droid / de-Googled pick.</strong> No Play Store dependency, no Google account required, direct GGUF import from the file manager.',
+              '<strong>Android background limits are the biggest usability issue.</strong> Samsung, OnePlus, and Xiaomi aggressively kill background processes. Whitelist your LLM app in battery optimization settings.',
+              '<strong>Model storage is the second biggest Android issue.</strong> GGUF files must go in app-private storage, not the Downloads folder — most apps cannot access files placed there.',
+              '<strong>The Android advantage is real.</strong> Termux and sideloading unlock tools with no iOS equivalent — Ollama via Termux cannot be replicated on iPhone.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'App Comparison (S25 Ultra, Phi-4 Mini)',
+            columns: ['App', 'Tok/sec', 'NPU Support', 'Best For'],
+            rows: [
+              ['MLC Chat', '~22 (NPU path)', 'Yes — Hexagon NPU', 'Speed on Snapdragon phones'],
+              ['Maid', '~18 (Vulkan GPU)', 'Partial — Vulkan', 'F-Droid / open-source users'],
+              ['PocketPal AI', '~16 (Vulkan)', 'Partial — Vulkan', 'Most users — best UI + GGUF'],
+              ['Layla', '~14 (CPU)', 'No', 'Beginners, curated models'],
+              ['Private AI', '~13 (CPU)', 'No', 'Privacy-first, minimal permissions'],
+              ['Ollama Termux', '~10 (CPU)', 'No', 'Power users, API + tool use']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Which App Should You Choose?',
+            items: [
+              '<strong>Snapdragon 8 Elite phone (S25 Ultra, OnePlus 13):</strong> Start with MLC Chat for speed. Add PocketPal AI as second app for models not in MLC Chat\'s curated library.',
+              '<strong>Pixel 9 Pro (Tensor G5):</strong> NPU advantage disappears — PocketPal AI is top pick for UI quality and model breadth.',
+              '<strong>Customization-first (any Android):</strong> Ollama via Termux + a chat front-end. Requires ~30 minutes of terminal work but gives a full local OpenAI-compatible API.',
+              '<strong>De-Googled / privacy phone:</strong> Maid from F-Droid. Works on GrapheneOS, CalyxOS. No Play Services dependency.',
+              '<strong>8 GB RAM phone:</strong> Any of the six apps with Qwen3 1.7B or SmolLM2 1.7B. PocketPal AI handles model storage most gracefully on constrained devices.',
+              '<strong>Samsung Galaxy (any model):</strong> Whitelist the LLM app in Device Care → Battery → Sleeping Apps to prevent mid-inference kills.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Chipset Comparison',
+            columns: ['Chipset', 'NPU for 3rd-party apps', 'Best Path', 'Phi-4 Mini Speed'],
+            rows: [
+              ['Snapdragon 8 Elite', 'Yes — Hexagon via MLCC (MLC Chat only)', 'NPU (MLC) / Vulkan (Maid, PocketPal)', '~22 tok/sec NPU / ~16–18 Vulkan'],
+              ['Google Tensor G5', 'No — reserved for Google apps', 'CPU only', '~12–15 tok/sec CPU'],
+              ['MediaTek Dim. 9400', 'Limited — NNAPI experimental', 'Vulkan GPU (best option)', '~14–18 tok/sec Vulkan'],
+              ['Snapdragon 8 Gen 3', 'Partial — older Hexagon gen', 'Vulkan GPU or CPU', '~12–15 tok/sec Vulkan']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'MLC Chat & Maid',
+            items: [
+              '<strong>MLC Chat — speed leader:</strong> Uses Snapdragon Hexagon NPU via MLCC framework. Curated model library (Qwen3 1.7B, Phi-4 Mini, Gemma 3 1B). Custom models require compile toolchain — not casual import.',
+              '<strong>MLC Chat limitation:</strong> No Android share sheet. Compiled model format is not portable to other apps. Speed tool, not a flexibility tool.',
+              '<strong>Maid — open-source, F-Droid-first:</strong> Built with Flutter + llama.cpp. Supports any GGUF file imported via file manager. Vulkan GPU path on Snapdragon (~18 tok/sec on Phi-4 Mini).',
+              '<strong>Maid advantage:</strong> Runs on GrapheneOS / CalyxOS. No Google Play Services dependency. Best choice for de-Googled builds.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Layla & Ollama via Termux',
+            items: [
+              '<strong>Layla — beginner-friendly:</strong> Curated model downloads, no terminal required, polished chat UI, Android share sheet supported. CPU-only (~14 tok/sec Phi-4 Mini). Best for new users.',
+              '<strong>Layla\'s killer feature:</strong> Share sheet integration. Highlight text in any app → Share → Layla → ask a question. One of only two apps with this workflow.',
+              '<strong>Ollama via Termux setup:</strong> Install Termux from F-Droid (not Play Store) → pkg install curl → curl install script → ollama pull phi4-mini → ollama serve.',
+              '<strong>Ollama via Termux advantage:</strong> Full OpenAI-compatible API at localhost:11434. Tool use, function calling, all Ollama models. Only Android app that provides this. CPU-only (~10 tok/sec) but unmatched for API workflows.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PocketPal AI & Private AI',
+            items: [
+              '<strong>PocketPal AI — best all-around:</strong> Full GGUF ecosystem, in-app Hugging Face model browser, Vulkan GPU acceleration (~16 tok/sec), Android share sheet, best native mobile UI of the six apps.',
+              '<strong>PocketPal AI advantage:</strong> In-app model benchmarking, system prompt editor, no background server process (avoids Android kill issues). Best choice for Pixel 9 Pro users.',
+              '<strong>Private AI — privacy-first:</strong> No network telemetry, auditable no-telemetry architecture, minimal permissions (storage + optional mic only). ~13 tok/sec CPU-only.',
+              '<strong>Private AI use case:</strong> Professional text with sensitive content — legal drafts, medical notes, confidential business materials. Trust model is stronger than any other app here.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Android Fragmentation: Background & Storage',
+            items: [
+              '<strong>Samsung One UI background kill:</strong> Settings → Device Care → Battery → Background Usage Limits → Sleeping Apps. Remove the LLM app. Also lock it in the recent apps tray.',
+              '<strong>OnePlus OxygenOS:</strong> Settings → Battery → Battery Optimization → find the app → Don\'t optimize. Lock in recent apps overview.',
+              '<strong>Xiaomi MIUI/HyperOS:</strong> Most aggressive. Settings → Apps → Manage Apps → [app] → Battery Saver → No Restrictions.',
+              '<strong>Storage partitions:</strong> Android splits /data/user/0/ (app-private) and /sdcard/ (shared). Most apps store models in private storage — not browsable in file manager without root. Use app\'s built-in import, not file manager copy to Downloads.',
+              '<strong>RAM rule:</strong> 6 GB available RAM minimum for 3B models. On 8 GB devices, close all other apps before inference.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Share Sheet & Android Advantage',
+            items: [
+              '<strong>Share sheet (only PocketPal AI + Layla):</strong> Select text in any app → Share → PocketPal AI or Layla → text pre-fills chat input. Most useful for summarizing articles, translating emails, drafting replies — without text leaving the device.',
+              '<strong>MLC Chat, Maid, Ollama, Private AI:</strong> Do not appear in Android share sheet. Manual copy-paste required.',
+              '<strong>Termux is an Android exclusive:</strong> A full Linux environment on Android. Runs bash, Python, curl, and any Linux ARM64 binary — including Ollama. No iOS equivalent.',
+              '<strong>F-Droid sideloading:</strong> Install apps without Google Play. Enables Maid, Termux, and other open-source tools. Works on GrapheneOS and custom ROMs.',
+              '<strong>Llama.cpp server mode via Termux:</strong> Beyond Ollama — llama.cpp compiled in Termux gives an alternative local API with lower memory overhead.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes',
+            items: [
+              '<strong>Installing Termux from the Play Store.</strong> The Play Store Termux stopped updates in 2020. Use F-Droid — the only maintained build.',
+              '<strong>Expecting NPU speed on a Pixel phone.</strong> Tensor G5 NPU is reserved for Google apps. All six apps run CPU-only on every Pixel model.',
+              '<strong>Skipping battery optimization whitelist on Samsung.</strong> Galaxy phones kill background processes after ~90 seconds of inference unless whitelisted.',
+              '<strong>Downloading models too large for the device.</strong> 7B Q4_K_M (~4.7 GB) needs ~6 GB available RAM. On 8 GB phones, use Phi-4 Mini (~2.7 GB) or Qwen3 1.7B (~1.1 GB).',
+              '<strong>Downloading GGUF to the Downloads folder.</strong> Most apps store models in private app storage — they cannot find files placed in Downloads. Use the app\'s built-in import.',
+              '<strong>Running two inference apps simultaneously.</strong> Two 3B models on a 12 GB phone triggers OOM kills. Close one app before opening the other.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              {
+                q: 'Do these apps use the Snapdragon NPU?',
+                a: 'Only MLC Chat uses the Hexagon NPU, and only on Snapdragon 8 Elite devices. The other five apps use CPU or Vulkan GPU. MLC Chat\'s NPU delivers 2–3× faster inference than CPU on the same device.'
+              },
+              {
+                q: 'Can a Pixel 9 Pro run a 7B model?',
+                a: 'Yes — Pixel 9 Pro has 16 GB RAM, enough for a 7B Q4_K_M model. Speed is ~8–10 tok/sec CPU-only. Use PocketPal AI or Maid with a GGUF file. For real-time conversation speed, stick to Phi-4 Mini (~14 tok/sec) on Pixel 9 Pro.'
+              },
+              {
+                q: 'Do I need to root my phone for local AI?',
+                a: 'No. All six apps work on unrooted Android phones. Termux requires enabling "Install from unknown sources" for the F-Droid APK, but that is not rooting.'
+              },
+              {
+                q: 'How do they handle Android background limits?',
+                a: 'PocketPal AI and Maid request FOREGROUND_SERVICE permission, which makes them more resistant to background kill. On Samsung, manually whitelist in Device Care → Battery → Sleeping Apps. On Pixel, background behavior is most predictable.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Compare AI Models Across Providers',
+            body: 'PromptQuorum dispatches your prompt to multiple AI models simultaneously and shows you the results side by side — helping you choose the right model for every task.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Beste lokale LLM-Apps für Android 2026: 6 Apps im Vergleich',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Beste lokale LLM-Apps für Android 2026',
+            subtitle: '6 Apps verglichen auf Galaxy S25 Ultra, Pixel 9 Pro und OnePlus 13 — MLC Chat, Maid, Layla, Ollama via Termux, Private AI und PocketPal AI.',
+            link: BASE_URL + '?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              '<strong>MLC Chat ist der Geschwindigkeitsführer auf Snapdragon 8 Elite.</strong> Hexagon NPU liefert ~40 Token/Sek. auf Qwen3 1,7B und ~22 Token/Sek. auf Phi-4 Mini — 3–4× schneller als reine CPU-Apps auf derselben Hardware.',
+              '<strong>PocketPal AI ist die beste Gesamtwahl für die meisten Nutzer.</strong> Vollständiges GGUF-Ökosystem, Hugging Face Integration, poliertes UI, Android Share Sheet und korrektes Speicher-Handling.',
+              '<strong>Ollama via Termux ist der einzige Weg zu einem OpenAI-kompatiblen lokalen API auf Android.</strong> Unterstützt Tool Use, Function Calling und Verbindungen von Drittanbieter-Apps zum lokal laufenden Modell.',
+              '<strong>Tensor G5 (Pixel 9 Pro) macht die NPU nicht für Drittanbieter-Apps verfügbar.</strong> Alle sechs Apps laufen nur auf der CPU auf jedem Pixel-Gerät — 10–18 Token/Sek. auf Phi-4 Mini.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Weitere wichtige Erkenntnisse',
+            items: [
+              '<strong>Maid ist die F-Droid / De-Googled-Wahl.</strong> Keine Play Store-Abhängigkeit, kein Google-Konto erforderlich, direkter GGUF-Import aus dem Dateimanager.',
+              '<strong>Android-Hintergrundlimits sind das größte Nutzungsproblem.</strong> Samsung, OnePlus und Xiaomi beenden Hintergrundprozesse aggressiv. Die LLM-App in den Batterieoptimierungseinstellungen auf die Whitelist setzen.',
+              '<strong>Modellspeicher ist das zweitgrößte Android-Problem.</strong> GGUF-Dateien müssen im App-privaten Speicher abgelegt werden, nicht im Downloads-Ordner.',
+              '<strong>Der Android-Vorteil ist real.</strong> Termux und Sideloading ermöglichen Tools ohne iOS-Äquivalent — Ollama via Termux ist auf dem iPhone nicht möglich.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'App-Vergleich (S25 Ultra, Phi-4 Mini)',
+            columns: ['App', 'Token/Sek.', 'NPU-Support', 'Am besten für'],
+            rows: [
+              ['MLC Chat', '~22 (NPU-Pfad)', 'Ja — Hexagon NPU', 'Geschwindigkeit auf Snapdragon'],
+              ['Maid', '~18 (Vulkan GPU)', 'Teilweise — Vulkan', 'F-Droid / Open-Source-Nutzer'],
+              ['PocketPal AI', '~16 (Vulkan)', 'Teilweise — Vulkan', 'Meiste Nutzer — bestes UI + GGUF'],
+              ['Layla', '~14 (CPU)', 'Nein', 'Anfänger, kuratierte Modelle'],
+              ['Private AI', '~13 (CPU)', 'Nein', 'Datenschutz, minimale Berechtigungen'],
+              ['Ollama Termux', '~10 (CPU)', 'Nein', 'Power-User, API + Tool Use']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Welche App sollten Sie wählen?',
+            items: [
+              '<strong>Snapdragon 8 Elite (S25 Ultra, OnePlus 13):</strong> Mit MLC Chat beginnen. PocketPal AI als zweite App für Modelle, die nicht in MLCs Bibliothek sind.',
+              '<strong>Pixel 9 Pro (Tensor G5):</strong> NPU-Vorteil fällt weg — PocketPal AI ist die Top-Wahl für UI-Qualität und Modellbreite.',
+              '<strong>Anpassung zuerst (jedes Android):</strong> Ollama via Termux + Chat-Frontend. ~30 Minuten Terminal-Arbeit, aber vollständiger OpenAI-kompatibler API.',
+              '<strong>De-Googled / Privacy-Telefon:</strong> Maid von F-Droid. Funktioniert auf GrapheneOS, CalyxOS. Keine Play Services-Abhängigkeit.',
+              '<strong>8 GB RAM-Telefon:</strong> Jede der sechs Apps mit Qwen3 1,7B oder SmolLM2 1,7B. PocketPal AI verwaltet Modellspeicher am elegantesten.',
+              '<strong>Samsung Galaxy:</strong> LLM-App in Gerätewartung → Batterie → Schlafende Apps auf Whitelist setzen.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Chipset-Vergleich',
+            columns: ['Chipset', 'NPU für Drittanbieter', 'Bester Pfad', 'Phi-4 Mini Geschwindigkeit'],
+            rows: [
+              ['Snapdragon 8 Elite', 'Ja — Hexagon via MLCC (nur MLC Chat)', 'NPU (MLC) / Vulkan (Maid, PocketPal)', '~22 NPU / ~16–18 Vulkan'],
+              ['Google Tensor G5', 'Nein — für Google-Apps reserviert', 'Nur CPU', '~12–15 Token/Sek. CPU'],
+              ['MediaTek Dim. 9400', 'Begrenzt — NNAPI experimentell', 'Vulkan GPU (beste Option)', '~14–18 Vulkan'],
+              ['Snapdragon 8 Gen 3', 'Teilweise — ältere Hexagon-Gen', 'Vulkan GPU oder CPU', '~12–15 Vulkan']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'MLC Chat & Maid',
+            items: [
+              '<strong>MLC Chat — Geschwindigkeitsführer:</strong> Nutzt Snapdragon Hexagon NPU via MLCC-Framework. Kuratierte Modellbibliothek (Qwen3 1,7B, Phi-4 Mini, Gemma 3 1B). Benutzerdefinierte Modelle erfordern Compile-Toolchain.',
+              '<strong>MLC Chat Einschränkung:</strong> Kein Android Share Sheet. Kompiliertes Modellformat nicht portierbar zu anderen Apps. Geschwindigkeitswerkzeug, kein Flexibilitätswerkzeug.',
+              '<strong>Maid — Open-Source, F-Droid-First:</strong> Mit Flutter + llama.cpp gebaut. Unterstützt jede GGUF-Datei via Dateimanager-Import. Vulkan GPU auf Snapdragon (~18 Token/Sek. auf Phi-4 Mini).',
+              '<strong>Maid-Vorteil:</strong> Läuft auf GrapheneOS / CalyxOS. Keine Google Play Services-Abhängigkeit. Beste Wahl für De-Googled-Builds.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Layla & Ollama via Termux',
+            items: [
+              '<strong>Layla — anfängerfreundlich:</strong> Kuratierte Modelldownloads, kein Terminal erforderlich, poliertes Chat-UI, Android Share Sheet unterstützt. Nur CPU (~14 Token/Sek. Phi-4 Mini). Bestes für neue Nutzer.',
+              '<strong>Layas Killerfeature:</strong> Share Sheet Integration. Text in einer App markieren → Teilen → Layla → Frage stellen. Eine von nur zwei Apps mit diesem Workflow.',
+              '<strong>Ollama via Termux Setup:</strong> Termux von F-Droid installieren (nicht Play Store) → pkg install curl → Ollama via curl → ollama pull phi4-mini → ollama serve.',
+              '<strong>Ollama via Termux Vorteil:</strong> Vollständiger OpenAI-kompatibler API auf localhost:11434. Tool Use, Function Calling, alle Ollama-Modelle. Die einzige Android-App, die dies bietet.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PocketPal AI & Private AI',
+            items: [
+              '<strong>PocketPal AI — bestes Gesamtpaket:</strong> Vollständiges GGUF-Ökosystem, In-App Hugging Face-Modell-Browser, Vulkan GPU (~16 Token/Sek.), Android Share Sheet, bestes natives mobiles UI.',
+              '<strong>PocketPal AI Vorteil:</strong> In-App Modell-Benchmarking, Systemprompt-Editor, kein Hintergrund-Server-Prozess (vermeidet Android-Kill-Probleme). Beste Wahl für Pixel 9 Pro-Nutzer.',
+              '<strong>Private AI — datenschutzorientiert:</strong> Keine Netzwerk-Telemetrie, auditierbare Architektur, minimale Berechtigungen (nur Speicher + optionales Mikrofon). ~13 Token/Sek. nur CPU.',
+              '<strong>Private AI Anwendungsfall:</strong> Professioneller Text mit sensiblen Inhalten — Rechtsentwürfe, medizinische Notizen, vertrauliche Geschäftsdaten.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Android-Fragmentierung: Hintergrund & Speicher',
+            items: [
+              '<strong>Samsung One UI Hintergrund-Kill:</strong> Einstellungen → Gerätewartung → Batterie → Hintergrundnutzungslimits → Schlafende Apps. LLM-App entfernen.',
+              '<strong>OnePlus OxygenOS:</strong> Einstellungen → Batterie → Batterieoptimierung → App auswählen → Nicht optimieren.',
+              '<strong>Xiaomi MIUI/HyperOS:</strong> Einstellungen → Apps → Apps verwalten → [App] → Energiesparer → Keine Einschränkungen.',
+              '<strong>Speicherpartitionen:</strong> Android teilt /data/user/0/ (App-privat) und /sdcard/ (geteilt). Modelle müssen im App-privaten Speicher sein — nicht im Downloads-Ordner.',
+              '<strong>RAM-Regel:</strong> Mindestens 6 GB verfügbarer RAM für 3B-Modelle. Auf 8-GB-Geräten alle anderen Apps schließen.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Share Sheet & Android-Vorteil',
+            items: [
+              '<strong>Share Sheet (nur PocketPal AI + Layla):</strong> Text in einer App auswählen → Teilen → PocketPal AI oder Layla → Text füllt Chat-Eingabe vor. Nützlich für das Zusammenfassen von Artikeln, Übersetzen von E-Mails.',
+              '<strong>MLC Chat, Maid, Ollama, Private AI:</strong> Erscheinen nicht im Android Share Sheet. Manuelles Kopieren/Einfügen erforderlich.',
+              '<strong>Termux ist ein Android-Exklusiv:</strong> Eine vollständige Linux-Umgebung auf Android. Läuft bash, Python, curl und jede Linux ARM64-Binary — einschließlich Ollama. Kein iOS-Äquivalent.',
+              '<strong>F-Droid Sideloading:</strong> Apps ohne Google Play installieren. Ermöglicht Maid, Termux und andere Open-Source-Tools. Funktioniert auf GrapheneOS und Custom ROMs.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Fehler',
+            items: [
+              '<strong>Termux aus dem Play Store installieren.</strong> Play Store Termux erhält seit 2020 keine Updates. F-Droid verwenden — die einzige gepflegte Version.',
+              '<strong>NPU-Geschwindigkeit auf einem Pixel-Telefon erwarten.</strong> Tensor G5 NPU ist für Google-Apps reserviert. Alle sechs Apps laufen nur CPU auf jedem Pixel-Gerät.',
+              '<strong>Batterieoptimierungs-Whitelist auf Samsung überspringen.</strong> Galaxy-Telefone beenden Hintergrundprozesse nach ~90 Sekunden Inferenz ohne Whitelist.',
+              '<strong>Zu große Modelle für das Gerät herunterladen.</strong> 7B Q4_K_M (~4,7 GB) benötigt ~6 GB verfügbaren RAM. Auf 8-GB-Geräten Phi-4 Mini (~2,7 GB) oder Qwen3 1,7B (~1,1 GB) verwenden.',
+              '<strong>GGUF in den Downloads-Ordner herunterladen.</strong> Die meisten Apps können dort abgelegte Dateien nicht finden. Den integrierten Import der App verwenden.',
+              '<strong>Zwei Inferenz-Apps gleichzeitig ausführen.</strong> Zwei 3B-Modelle auf einem 12-GB-Telefon lösen OOM-Kills aus. Eine App schließen, bevor die andere geöffnet wird.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              {
+                q: 'Nutzen diese Apps die Snapdragon NPU?',
+                a: 'Nur MLC Chat nutzt die Hexagon NPU, und nur auf Snapdragon 8 Elite-Geräten. Die anderen fünf Apps verwenden CPU oder Vulkan GPU. MLCs NPU liefert 2–3× schnellere Inferenz als CPU auf demselben Gerät.'
+              },
+              {
+                q: 'Kann ein Pixel 9 Pro ein 7B-Modell ausführen?',
+                a: 'Ja — Pixel 9 Pro hat 16 GB RAM, genug für ein 7B Q4_K_M-Modell. Geschwindigkeit ist ~8–10 Token/Sek. nur CPU. PocketPal AI oder Maid mit einer GGUF-Datei verwenden.'
+              },
+              {
+                q: 'Muss ich mein Telefon rooten für lokale KI?',
+                a: 'Nein. Alle sechs Apps funktionieren auf ungerootetem Android. Termux erfordert "Installation aus unbekannten Quellen" für das F-Droid APK — das ist kein Rooten.'
+              },
+              {
+                q: 'Wie gehen sie mit Android-Hintergrundlimits um?',
+                a: 'PocketPal AI und Maid fordern FOREGROUND_SERVICE-Berechtigung an, was sie widerstandsfähiger gegen Hintergrund-Kill macht. Auf Samsung manuell in Gerätewartung → Batterie → Schlafende Apps auf Whitelist setzen.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'KI-Modelle mehrerer Anbieter vergleichen',
+            body: 'PromptQuorum sendet Ihren Prompt gleichzeitig an mehrere KI-Modelle und zeigt Ihnen die Ergebnisse nebeneinander — damit Sie für jede Aufgabe das richtige Modell wählen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Meilleures applications LLM locales pour Android 2026 : 6 applications comparées',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Meilleures applications LLM locales pour Android en 2026',
+            subtitle: '6 applications comparées sur Galaxy S25 Ultra, Pixel 9 Pro et OnePlus 13 — MLC Chat, Maid, Layla, Ollama via Termux, Private AI et PocketPal AI.',
+            link: BASE_URL + '?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              '<strong>MLC Chat est le leader de vitesse sur Snapdragon 8 Elite.</strong> Le NPU Hexagon atteint ~40 tok/sec sur Qwen3 1,7B et ~22 tok/sec sur Phi-4 Mini — 3–4× plus rapide que les apps CPU-only sur le même matériel.',
+              '<strong>PocketPal AI est le meilleur choix global pour la plupart des utilisateurs.</strong> Écosystème GGUF complet, intégration Hugging Face, interface soignée, share sheet Android et gestion correcte du stockage.',
+              '<strong>Ollama via Termux est la seule voie vers une API locale OpenAI-compatible sur Android.</strong> Supporte tool use, function calling et les connexions d\'apps tierces au modèle local.',
+              '<strong>Le Tensor G5 (Pixel 9 Pro) n\'expose pas son NPU aux apps tierces.</strong> Les six apps tournent en CPU-only sur tout Pixel — 10–18 tok/sec sur Phi-4 Mini.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Points clés (suite)',
+            items: [
+              '<strong>Maid est le choix F-Droid / de-Googled.</strong> Aucune dépendance Play Store, pas de compte Google, import GGUF direct depuis le gestionnaire de fichiers.',
+              '<strong>Les limites d\'arrière-plan Android sont le plus grand problème d\'utilisation.</strong> Samsung, OnePlus et Xiaomi tuent agressivement les processus en arrière-plan. Ajouter l\'app LLM à la liste blanche d\'optimisation de batterie.',
+              '<strong>Le stockage des modèles est le deuxième plus grand problème Android.</strong> Les fichiers GGUF doivent aller dans le stockage privé de l\'app, pas dans le dossier Téléchargements.',
+              '<strong>L\'avantage Android est réel.</strong> Termux et le sideloading débloquent des outils sans équivalent iOS — Ollama via Termux ne peut pas être répliqué sur iPhone.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Comparaison des applications (S25 Ultra, Phi-4 Mini)',
+            columns: ['Application', 'Tok/sec', 'Support NPU', 'Meilleur pour'],
+            rows: [
+              ['MLC Chat', '~22 (voie NPU)', 'Oui — NPU Hexagon', 'Vitesse sur Snapdragon'],
+              ['Maid', '~18 (Vulkan GPU)', 'Partiel — Vulkan', 'Utilisateurs F-Droid / open-source'],
+              ['PocketPal AI', '~16 (Vulkan)', 'Partiel — Vulkan', 'La plupart — meilleure UI + GGUF'],
+              ['Layla', '~14 (CPU)', 'Non', 'Débutants, modèles sélectionnés'],
+              ['Private AI', '~13 (CPU)', 'Non', 'Confidentialité, permissions minimales'],
+              ['Ollama Termux', '~10 (CPU)', 'Non', 'Utilisateurs avancés, API + tool use']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Quelle application choisir ?',
+            items: [
+              '<strong>Snapdragon 8 Elite (S25 Ultra, OnePlus 13) :</strong> Commencer avec MLC Chat. Ajouter PocketPal AI pour les modèles non présents dans la bibliothèque MLC.',
+              '<strong>Pixel 9 Pro (Tensor G5) :</strong> L\'avantage NPU disparaît — PocketPal AI est le meilleur choix pour la qualité UI et la largeur de modèles.',
+              '<strong>Personnalisation en priorité (tout Android) :</strong> Ollama via Termux + interface de chat. ~30 minutes de travail en terminal, mais API OpenAI-compatible complet.',
+              '<strong>Téléphone de-Googled / confidentialité :</strong> Maid via F-Droid. Fonctionne sur GrapheneOS, CalyxOS. Aucune dépendance Play Services.',
+              '<strong>Téléphone 8 Go de RAM :</strong> N\'importe laquelle des six apps avec Qwen3 1,7B ou SmolLM2 1,7B. PocketPal AI gère le stockage le plus gracieusement.',
+              '<strong>Samsung Galaxy :</strong> Ajouter l\'app LLM en liste blanche dans Maintenance de l\'appareil → Batterie → Applications en veille.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Comparaison des chipsets',
+            columns: ['Chipset', 'NPU pour tiers', 'Meilleure voie', 'Vitesse Phi-4 Mini'],
+            rows: [
+              ['Snapdragon 8 Elite', 'Oui — Hexagon via MLCC (MLC Chat seul)', 'NPU (MLC) / Vulkan (Maid, PocketPal)', '~22 NPU / ~16–18 Vulkan'],
+              ['Google Tensor G5', 'Non — réservé aux apps Google', 'CPU uniquement', '~12–15 tok/sec CPU'],
+              ['MediaTek Dim. 9400', 'Limité — NNAPI expérimental', 'Vulkan GPU (meilleure option)', '~14–18 Vulkan'],
+              ['Snapdragon 8 Gen 3', 'Partiel — ancienne génération Hexagon', 'Vulkan GPU ou CPU', '~12–15 Vulkan']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'MLC Chat & Maid',
+            items: [
+              '<strong>MLC Chat — leader de vitesse :</strong> Utilise le NPU Hexagon Snapdragon via le framework MLCC. Bibliothèque de modèles sélectionnés (Qwen3 1,7B, Phi-4 Mini, Gemma 3 1B). Modèles personnalisés nécessitent une chaîne de compilation.',
+              '<strong>Limitation de MLC Chat :</strong> Pas de share sheet Android. Format de modèle compilé non portable vers d\'autres apps. Outil de vitesse, pas de flexibilité.',
+              '<strong>Maid — open-source, F-Droid-first :</strong> Construit avec Flutter + llama.cpp. Supporte tout fichier GGUF importé via le gestionnaire de fichiers. Voie Vulkan GPU sur Snapdragon (~18 tok/sec sur Phi-4 Mini).',
+              '<strong>Avantage de Maid :</strong> Tourne sur GrapheneOS / CalyxOS. Aucune dépendance Google Play Services. Meilleur choix pour les builds de-Googled.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Layla & Ollama via Termux',
+            items: [
+              '<strong>Layla — conviviale pour les débutants :</strong> Téléchargements de modèles sélectionnés, aucun terminal requis, interface de chat soignée, share sheet Android supporté. CPU-only (~14 tok/sec Phi-4 Mini).',
+              '<strong>Fonctionnalité phare de Layla :</strong> Intégration share sheet. Surligner du texte dans n\'importe quelle app → Partager → Layla → poser une question. L\'une des deux seules apps avec ce workflow.',
+              '<strong>Configuration Ollama via Termux :</strong> Installer Termux depuis F-Droid (pas Play Store) → pkg install curl → Ollama via curl → ollama pull phi4-mini → ollama serve.',
+              '<strong>Avantage Ollama via Termux :</strong> API OpenAI-compatible complet sur localhost:11434. Tool use, function calling, tous les modèles Ollama. La seule app Android qui offre cela.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PocketPal AI & Private AI',
+            items: [
+              '<strong>PocketPal AI — meilleur équilibre global :</strong> Écosystème GGUF complet, navigateur de modèles Hugging Face intégré, Vulkan GPU (~16 tok/sec), share sheet Android, meilleure UI mobile native des six apps.',
+              '<strong>Avantage PocketPal AI :</strong> Benchmarking de modèles intégré, éditeur de prompt système, pas de processus serveur en arrière-plan. Meilleur choix pour les utilisateurs Pixel 9 Pro.',
+              '<strong>Private AI — axé sur la confidentialité :</strong> Aucune télémétrie réseau, architecture auditée, permissions minimales (stockage + micro optionnel). ~13 tok/sec CPU-only.',
+              '<strong>Cas d\'usage Private AI :</strong> Texte professionnel sensible — brouillons juridiques, notes médicales, données commerciales confidentielles.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Fragmentation Android : Arrière-plan & Stockage',
+            items: [
+              '<strong>Suppression d\'arrière-plan Samsung One UI :</strong> Paramètres → Maintenance de l\'appareil → Batterie → Limites d\'utilisation en arrière-plan → Applications en veille. Retirer l\'app LLM.',
+              '<strong>OnePlus OxygenOS :</strong> Paramètres → Batterie → Optimisation de la batterie → trouver l\'app → Ne pas optimiser.',
+              '<strong>Xiaomi MIUI/HyperOS :</strong> Paramètres → Applications → Gérer les apps → [app] → Économiseur de batterie → Aucune restriction.',
+              '<strong>Partitions de stockage :</strong> Android divise /data/user/0/ (privé à l\'app) et /sdcard/ (partagé). Les modèles doivent être dans le stockage privé — pas dans le dossier Téléchargements.',
+              '<strong>Règle RAM :</strong> Minimum 6 Go de RAM disponible pour les modèles 3B. Sur les appareils 8 Go, fermer toutes les autres apps avant l\'inférence.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Share Sheet & Avantage Android',
+            items: [
+              '<strong>Share sheet (PocketPal AI + Layla uniquement) :</strong> Sélectionner du texte dans n\'importe quelle app → Partager → PocketPal AI ou Layla → le texte pré-remplit l\'entrée de chat.',
+              '<strong>MLC Chat, Maid, Ollama, Private AI :</strong> N\'apparaissent pas dans le share sheet Android. Copier-coller manuel requis.',
+              '<strong>Termux est exclusif à Android :</strong> Un environnement Linux complet sur Android. Lance bash, Python, curl et tout binaire Linux ARM64 — y compris Ollama. Aucun équivalent iOS.',
+              '<strong>Sideloading F-Droid :</strong> Installer des apps sans Google Play. Permet Maid, Termux et d\'autres outils open-source. Fonctionne sur GrapheneOS et les ROMs personnalisées.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs courantes',
+            items: [
+              '<strong>Installer Termux depuis le Play Store.</strong> Le Termux du Play Store n\'est plus mis à jour depuis 2020. Utiliser F-Droid — la seule version maintenue.',
+              '<strong>Attendre la vitesse NPU sur un Pixel.</strong> Le NPU Tensor G5 est réservé aux apps Google. Les six apps tournent en CPU-only sur tout Pixel.',
+              '<strong>Sauter la liste blanche d\'optimisation batterie sur Samsung.</strong> Les Galaxy tuent les processus d\'arrière-plan après ~90 secondes d\'inférence sans liste blanche.',
+              '<strong>Télécharger des modèles trop grands pour l\'appareil.</strong> 7B Q4_K_M (~4,7 Go) nécessite ~6 Go de RAM disponible. Sur 8 Go, utiliser Phi-4 Mini (~2,7 Go) ou Qwen3 1,7B (~1,1 Go).',
+              '<strong>Télécharger des GGUF dans le dossier Téléchargements.</strong> La plupart des apps ne peuvent pas trouver les fichiers placés là. Utiliser l\'import intégré de l\'app.',
+              '<strong>Faire tourner deux apps d\'inférence simultanément.</strong> Deux modèles 3B sur un téléphone 12 Go déclenchent des OOM kills. Fermer une app avant d\'ouvrir l\'autre.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes',
+            faqs: [
+              {
+                q: 'Ces apps utilisent-elles le NPU Snapdragon ?',
+                a: 'Seul MLC Chat utilise le NPU Hexagon, et uniquement sur les appareils Snapdragon 8 Elite. Les cinq autres apps utilisent CPU ou Vulkan GPU. Le NPU de MLC Chat offre 2–3× plus d\'inférence que CPU sur le même appareil.'
+              },
+              {
+                q: 'Un Pixel 9 Pro peut-il faire tourner un modèle 7B ?',
+                a: 'Oui — le Pixel 9 Pro a 16 Go de RAM, suffisant pour un modèle 7B Q4_K_M. Vitesse ~8–10 tok/sec CPU-only. Utiliser PocketPal AI ou Maid avec un fichier GGUF.'
+              },
+              {
+                q: 'Faut-il rooter son téléphone pour l\'IA locale ?',
+                a: 'Non. Les six apps fonctionnent sur Android non rooté. Termux requiert d\'activer "Installer depuis des sources inconnues" pour l\'APK F-Droid — ce n\'est pas du rooting.'
+              },
+              {
+                q: 'Comment gèrent-elles les limites d\'arrière-plan Android ?',
+                a: 'PocketPal AI et Maid demandent la permission FOREGROUND_SERVICE, les rendant plus résistantes au kill. Sur Samsung, ajouter manuellement à la liste blanche dans Maintenance de l\'appareil → Batterie → Apps en veille.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Comparer les modèles IA de plusieurs fournisseurs',
+            body: 'PromptQuorum envoie votre prompt à plusieurs modèles IA simultanément et vous montre les résultats côte à côte — pour choisir le bon modèle pour chaque tâche.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: '2026年Android用ローカルLLMアプリ最良：6アプリ比較',
+        slides: [
+          {
+            type: 'title',
+            h1: '2026年 Android用ローカルLLMアプリ最良',
+            subtitle: 'Galaxy S25 Ultra、Pixel 9 Pro、OnePlus 13で6アプリを比較 — MLC Chat、Maid、Layla、Ollama via Termux、Private AI、PocketPal AI。',
+            link: BASE_URL + '?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: '主要なポイント',
+            items: [
+              '<strong>MLC ChatはSnapdragon 8 Eliteで速度トップ。</strong>Hexagon NPUがQwen3 1.7Bで~40 tok/sec、Phi-4 Miniで~22 tok/secを達成 — 同じハードウェアのCPUのみアプリより3～4倍速い。',
+              '<strong>PocketPal AIはほとんどのユーザーにとって最良の総合的な選択。</strong>完全なGGUFエコシステム、Hugging Face統合、洗練されたUI、Android共有シート、正確なストレージ管理。',
+              '<strong>Ollama via TermuxはAndroidで完全なOpenAI互換ローカルAPIへの唯一の経路。</strong>ツール使用、関数呼び出し、ローカルモデルへのサードパーティアプリ接続をサポート。',
+              '<strong>Tensor G5（Pixel 9 Pro）はサードパーティアプリにNPUを公開しない。</strong>6アプリ全てがすべてのPixelデバイスでCPUのみで動作 — Phi-4 Miniで10～18 tok/sec。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '主要なポイント（続き）',
+            items: [
+              '<strong>MaidはF-Droid / de-Googledの選択。</strong>Play Store依存なし、Googleアカウント不要、ファイルマネージャーから直接GGUFインポート。',
+              '<strong>Androidバックグラウンド制限が最大のユーザビリティ問題。</strong>Samsung、OnePlus、Xiaomiがバックグラウンドプロセスを積極的に終了。バッテリー最適化設定でLLMアプリをホワイトリストに登録。',
+              '<strong>モデルストレージが2番目に大きなAndroid問題。</strong>GGUFファイルはアプリプライベートストレージに置く必要がある — ダウンロードフォルダには置けない。',
+              '<strong>Androidの優位性は本物。</strong>TermuxとサイドローディングがiOSの同等物のないツールを解放 — Ollama via TermuxはiPhoneで実現できない。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'アプリ比較（S25 Ultra、Phi-4 Mini）',
+            columns: ['アプリ', 'Tok/sec', 'NPUサポート', '最適な用途'],
+            rows: [
+              ['MLC Chat', '~22（NPUパス）', 'あり — Hexagon NPU', 'Snapdragonの速度重視'],
+              ['Maid', '~18（Vulkan GPU）', '一部 — Vulkan', 'F-Droid / オープンソースユーザー'],
+              ['PocketPal AI', '~16（Vulkan）', '一部 — Vulkan', 'ほとんどのユーザー — 最良UI + GGUF'],
+              ['Layla', '~14（CPU）', 'なし', '初心者、厳選モデル'],
+              ['Private AI', '~13（CPU）', 'なし', 'プライバシー重視、最小限の権限'],
+              ['Ollama Termux', '~10（CPU）', 'なし', 'パワーユーザー、API + ツール使用']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'どのアプリを選ぶべきか？',
+            items: [
+              '<strong>Snapdragon 8 Elite（S25 Ultra、OnePlus 13）：</strong>MLC Chatから開始。MLCのライブラリにないモデルにはPocketPal AIを追加。',
+              '<strong>Pixel 9 Pro（Tensor G5）：</strong>NPUの優位性が消える — PocketPal AIがUI品質とモデル幅でトップの選択。',
+              '<strong>カスタマイズ最優先（どのAndroidでも）：</strong>Ollama via Termux + チャットフロントエンド。~30分のターミナル作業が必要だが、完全なOpenAI互換APIが得られる。',
+              '<strong>de-Googled / プライバシー重視：</strong>F-DroidのMaid。GrapheneOS、CalyxOSで動作。Play Services依存なし。',
+              '<strong>8 GB RAMスマートフォン：</strong>Qwen3 1.7BまたはSmolLM2 1.7Bで6アプリのどれでも。PocketPal AIが制限されたデバイスでストレージを最も適切に処理。',
+              '<strong>Samsung Galaxy（どのモデルでも）：</strong>デバイスケア → バッテリー → スリープ状態のアプリでLLMアプリをホワイトリストに登録。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'チップセット比較',
+            columns: ['チップセット', 'サードパーティNPU', '最良パス', 'Phi-4 Mini速度'],
+            rows: [
+              ['Snapdragon 8 Elite', 'あり — MLCC経由Hexagon（MLC Chatのみ）', 'NPU（MLC）/ Vulkan（Maid、PocketPal）', '~22 NPU / ~16–18 Vulkan'],
+              ['Google Tensor G5', 'なし — Googleアプリ用に予約済み', 'CPUのみ', '~12–15 tok/sec CPU'],
+              ['MediaTek Dim. 9400', '限定 — NNAPI実験的', 'Vulkan GPU（最良オプション）', '~14–18 Vulkan'],
+              ['Snapdragon 8 Gen 3', '一部 — 旧世代Hexagon', 'Vulkan GPUまたはCPU', '~12–15 Vulkan']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'MLC Chat & Maid',
+            items: [
+              '<strong>MLC Chat — 速度リーダー：</strong>MLCCフレームワーク経由でSnapdragon Hexagon NPUを使用。厳選モデルライブラリ（Qwen3 1.7B、Phi-4 Mini、Gemma 3 1B）。カスタムモデルにはコンパイルツールチェーンが必要。',
+              '<strong>MLC Chatの制限：</strong>Android共有シートなし。コンパイルされたモデル形式は他のアプリに移植不可。速度ツールであり、柔軟性ツールではない。',
+              '<strong>Maid — オープンソース、F-Droidファースト：</strong>Flutter + llama.cppで構築。ファイルマネージャー経由でGGUFファイルをインポート可能。Snapdragonで~18 tok/sec（Vulkan GPU）。',
+              '<strong>Maidの利点：</strong>GrapheneOS / CalyxOSで動作。Google Play Services依存なし。de-Googledビルドに最適。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Layla & Ollama via Termux',
+            items: [
+              '<strong>Layla — 初心者フレンドリー：</strong>厳選モデルダウンロード、ターミナル不要、洗練されたチャットUI、Android共有シートサポート。CPUのみ（~14 tok/sec Phi-4 Mini）。',
+              '<strong>Laylaのキラー機能：</strong>共有シート統合。任意のアプリでテキストを選択 → 共有 → Layla → 質問。このワークフローを持つわずか2つのアプリのうちの1つ。',
+              '<strong>Ollama via Termuxセットアップ：</strong>F-DroidからTermuxをインストール（Play Storeではない）→ pkg install curl → Ollama curl経由 → ollama pull phi4-mini → ollama serve。',
+              '<strong>Ollama via Termuxの利点：</strong>localhost:11434で完全なOpenAI互換API。ツール使用、関数呼び出し、全Ollamaモデル。これを提供する唯一のAndroidアプリ。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PocketPal AI & Private AI',
+            items: [
+              '<strong>PocketPal AI — 最良のバランス：</strong>完全なGGUFエコシステム、アプリ内Hugging Faceモデルブラウザ、Vulkan GPU（~16 tok/sec）、Android共有シート、6アプリ中最良のネイティブモバイルUI。',
+              '<strong>PocketPal AIの利点：</strong>アプリ内モデルベンチマーク、システムプロンプトエディタ、バックグラウンドサーバープロセスなし。Pixel 9 Proユーザーに最適。',
+              '<strong>Private AI — プライバシー重視：</strong>ネットワークテレメトリなし、監査可能なアーキテクチャ、最小限の権限（ストレージ + オプションのマイクのみ）。~13 tok/sec CPUのみ。',
+              '<strong>Private AIのユースケース：</strong>機密性の高いプロフェッショナルテキスト — 法的ドラフト、医療メモ、機密ビジネスデータ。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Android断片化：バックグラウンドとストレージ',
+            items: [
+              '<strong>Samsung One UIバックグラウンド強制終了：</strong>設定 → デバイスケア → バッテリー → バックグラウンド使用制限 → スリープ状態のアプリ。LLMアプリを削除。',
+              '<strong>OnePlus OxygenOS：</strong>設定 → バッテリー → バッテリー最適化 → アプリを見つける → 最適化しない。',
+              '<strong>Xiaomi MIUI/HyperOS：</strong>設定 → アプリ → アプリ管理 → [アプリ] → バッテリーセーバー → 制限なし。',
+              '<strong>ストレージパーティション：</strong>AndroidはApp専用（/data/user/0/）と共有（/sdcard/）を分割。モデルはアプリプライベートストレージに必要 — ダウンロードフォルダは不可。',
+              '<strong>RAMルール：</strong>3Bモデルには最低6 GBの利用可能RAM。8 GBデバイスでは推論前に他の全アプリを閉じる。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '共有シートとAndroidの利点',
+            items: [
+              '<strong>共有シート（PocketPal AI + Laylaのみ）：</strong>任意のアプリでテキストを選択 → 共有 → PocketPal AIまたはLayla → チャット入力にテキストが事前入力される。',
+              '<strong>MLC Chat、Maid、Ollama、Private AI：</strong>Android共有シートに表示されない。手動のコピー＆ペーストが必要。',
+              '<strong>TermuxはAndroid限定：</strong>Android上の完全なLinux環境。bash、Python、curl、任意のLinux ARM64バイナリ（Ollamaを含む）を実行。iOSの同等物なし。',
+              '<strong>F-Droidサイドローディング：</strong>Google Playなしでアプリをインストール。Maid、Termux、その他のオープンソースツールを有効化。GrapheneOSとカスタムROMで動作。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'よくある間違い',
+            items: [
+              '<strong>Play StoreからTermuxをインストールする。</strong>Play Store版Termuxは2020年から更新停止。F-Droidを使用 — 唯一メンテナンスされているビルド。',
+              '<strong>PixelスマートフォンでNPU速度を期待する。</strong>Tensor G5 NPUはGoogleアプリ用に予約済み。6アプリ全てがすべてのPixelデバイスでCPUのみで動作。',
+              '<strong>Samsung上でバッテリー最適化ホワイトリストをスキップする。</strong>GalaxyスマートフォンはホワイトリストなしでTrimux推論の~90秒後にバックグラウンドプロセスを終了。',
+              '<strong>デバイスには大きすぎるモデルをダウンロードする。</strong>7B Q4_K_M（~4.7 GB）には~6 GBの利用可能RAMが必要。8 GBデバイスではPhi-4 Mini（~2.7 GB）かQwen3 1.7B（~1.1 GB）を使用。',
+              '<strong>GGUFをダウンロードフォルダにダウンロードする。</strong>ほとんどのアプリはそこに置かれたファイルを見つけられない。アプリの組み込みインポートを使用。',
+              '<strong>2つの推論アプリを同時に実行する。</strong>12 GBスマートフォンに2つの3BモデルでOOMキルが発生。もう一方を開く前に一方を閉じる。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              {
+                q: 'これらのアプリはSnapdragon NPUを使用しますか？',
+                a: 'MLC ChatのみHexagon NPUを使用し、Snapdragon 8 Eliteデバイスのみです。他の5つのアプリはCPUまたはVulkan GPUを使用します。MLC ChatのNPUは同じデバイスのCPUより2～3倍速い推論を提供します。'
+              },
+              {
+                q: 'Pixel 9 Proは7Bモデルを実行できますか？',
+                a: 'はい — Pixel 9 Proには16 GBのRAMがあり、7B Q4_K_Mモデルに十分です。速度はCPUのみで~8～10 tok/sec。GGUFファイルでPocketPal AIまたはMaidを使用してください。'
+              },
+              {
+                q: 'ローカルAIのためにスマートフォンをrootする必要がありますか？',
+                a: 'いいえ。6つのアプリ全てがroot化されていないAndroidで動作します。TermuxはF-Droid APKに「不明なソースからのインストール」を有効にする必要がありますが、これはrootではありません。'
+              },
+              {
+                q: 'Androidのバックグラウンド制限をどのように処理しますか？',
+                a: 'PocketPal AIとMaidはFOREGROUND_SERVICE権限を要求し、バックグラウンド強制終了に対してより耐性があります。Samsung上では、デバイスケア → バッテリー → スリープ状態のアプリで手動でホワイトリストに登録してください。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '複数プロバイダーのAIモデルを比較する',
+            body: 'PromptQuorumはプロンプトを複数のAIモデルに同時に送信し、結果を並べて表示します — 各タスクに適したモデルを選択できます。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '2026年安卓本地LLM最佳应用：6款应用对比',
+        slides: [
+          {
+            type: 'title',
+            h1: '2026年安卓本地LLM最佳应用',
+            subtitle: '在Galaxy S25 Ultra、Pixel 9 Pro和OnePlus 13上对比6款应用 — MLC Chat、Maid、Layla、Ollama via Termux、Private AI和PocketPal AI。',
+            link: BASE_URL + '?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>MLC Chat是Snapdragon 8 Elite上的速度领导者。</strong>Hexagon NPU在Qwen3 1.7B上达到约40 token/秒，在Phi-4 Mini上约22 token/秒 — 比同一硬件上仅CPU应用快3-4倍。',
+              '<strong>PocketPal AI是大多数用户的最佳全能之选。</strong>完整GGUF生态、Hugging Face集成、精美UI、Android分享表支持和正确的存储管理。',
+              '<strong>Ollama via Termux是安卓上访问完整OpenAI兼容本地API的唯一路径。</strong>支持Tool Use、函数调用以及第三方应用与本地运行模型的连接。',
+              '<strong>Tensor G5（Pixel 9 Pro）不向第三方应用暴露其NPU。</strong>6款应用全部在所有Pixel设备上仅CPU运行 — Phi-4 Mini上10-18 token/秒。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '核心要点（续）',
+            items: [
+              '<strong>Maid是F-Droid / de-Googled的选择。</strong>无Play Store依赖、无需Google账户、通过文件管理器直接GGUF导入。',
+              '<strong>Android后台限制是最大的可用性问题。</strong>Samsung、OnePlus和Xiaomi积极杀死后台进程。在电池优化设置中将LLM应用加入白名单。',
+              '<strong>模型存储是第二大Android问题。</strong>GGUF文件必须放在应用专用存储中 — 不能放在下载文件夹。',
+              '<strong>Android优势是真实的。</strong>Termux和侧载解锁iOS无同等物的工具 — Ollama via Termux在iPhone上无法实现。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '应用对比（S25 Ultra、Phi-4 Mini）',
+            columns: ['应用', 'Token/秒', 'NPU支持', '最适用于'],
+            rows: [
+              ['MLC Chat', '约22（NPU路径）', '是 — Hexagon NPU', 'Snapdragon手机速度优先'],
+              ['Maid', '约18（Vulkan GPU）', '部分 — Vulkan', 'F-Droid / 开源用户'],
+              ['PocketPal AI', '约16（Vulkan）', '部分 — Vulkan', '大多数用户 — 最佳UI + GGUF'],
+              ['Layla', '约14（CPU）', '否', '初学者，精选模型'],
+              ['Private AI', '约13（CPU）', '否', '隐私优先，最少权限'],
+              ['Ollama Termux', '约10（CPU）', '否', '高级用户，API + Tool Use']
+            ]
+          },
+          {
+            type: 'list',
+            h2: '应选择哪款应用？',
+            items: [
+              '<strong>Snapdragon 8 Elite（S25 Ultra、OnePlus 13）：</strong>从MLC Chat开始。MLC Chat库中没有的模型则添加PocketPal AI。',
+              '<strong>Pixel 9 Pro（Tensor G5）：</strong>NPU优势消失 — PocketPal AI是UI质量和模型广度的最佳选择。',
+              '<strong>自定义优先（任何安卓）：</strong>Ollama via Termux + 聊天前端。约30分钟终端工作，但提供完整的OpenAI兼容API。',
+              '<strong>de-Googled / 隐私手机：</strong>F-Droid的Maid。在GrapheneOS、CalyxOS上运行。无Play Services依赖。',
+              '<strong>8 GB RAM手机：</strong>任何6款应用搭配Qwen3 1.7B或SmolLM2 1.7B。PocketPal AI在受限设备上最优雅地处理模型存储。',
+              '<strong>Samsung Galaxy（任何型号）：</strong>在设备管理 → 电池 → 休眠应用中将LLM应用加入白名单。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '芯片组对比',
+            columns: ['芯片组', '第三方NPU', '最佳路径', 'Phi-4 Mini速度'],
+            rows: [
+              ['Snapdragon 8 Elite', '是 — Hexagon via MLCC（仅MLC Chat）', 'NPU（MLC）/ Vulkan（Maid、PocketPal）', '约22 NPU / 约16-18 Vulkan'],
+              ['Google Tensor G5', '否 — 为Google应用保留', '仅CPU', '约12-15 token/秒 CPU'],
+              ['MediaTek Dim. 9400', '有限 — NNAPI实验性', 'Vulkan GPU（最佳选项）', '约14-18 Vulkan'],
+              ['Snapdragon 8 Gen 3', '部分 — 旧版Hexagon', 'Vulkan GPU或CPU', '约12-15 Vulkan']
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'MLC Chat & Maid',
+            items: [
+              '<strong>MLC Chat — 速度领导者：</strong>通过MLCC框架使用Snapdragon Hexagon NPU。精选模型库（Qwen3 1.7B、Phi-4 Mini、Gemma 3 1B）。自定义模型需要编译工具链。',
+              '<strong>MLC Chat限制：</strong>无Android分享表。编译后的模型格式无法移植到其他应用。速度工具，不是灵活性工具。',
+              '<strong>Maid — 开源，F-Droid优先：</strong>用Flutter + llama.cpp构建。支持通过文件管理器导入任何GGUF文件。Snapdragon上Vulkan GPU路径（Phi-4 Mini约18 token/秒）。',
+              '<strong>Maid优势：</strong>在GrapheneOS / CalyxOS上运行。无Google Play Services依赖。de-Googled构建的最佳选择。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Layla & Ollama via Termux',
+            items: [
+              '<strong>Layla — 初学者友好：</strong>精选模型下载、无需终端、精美聊天UI、Android分享表支持。仅CPU（Phi-4 Mini约14 token/秒）。适合新用户。',
+              '<strong>Layla的杀手级功能：</strong>分享表集成。在任何应用中选择文本 → 分享 → Layla → 提问。仅有此工作流程的两个应用之一。',
+              '<strong>Ollama via Termux设置：</strong>从F-Droid安装Termux（非Play Store）→ pkg install curl → curl安装Ollama → ollama pull phi4-mini → ollama serve。',
+              '<strong>Ollama via Termux优势：</strong>localhost:11434完整OpenAI兼容API。Tool Use、函数调用、所有Ollama模型。提供此功能的唯一Android应用。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'PocketPal AI & Private AI',
+            items: [
+              '<strong>PocketPal AI — 最佳平衡：</strong>完整GGUF生态、应用内Hugging Face模型浏览器、Vulkan GPU（约16 token/秒）、Android分享表、6款应用中最佳原生移动UI。',
+              '<strong>PocketPal AI优势：</strong>应用内模型基准测试、系统提示编辑器、无后台服务进程（避免Android杀死问题）。Pixel 9 Pro用户的最佳选择。',
+              '<strong>Private AI — 隐私优先：</strong>无网络遥测、可审计架构、最少权限（仅存储 + 可选麦克风）。仅CPU约13 token/秒。',
+              '<strong>Private AI使用场景：</strong>敏感专业文本 — 法律草稿、医疗记录、机密商业数据。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '安卓碎片化：后台与存储',
+            items: [
+              '<strong>Samsung One UI后台杀死：</strong>设置 → 设备管理 → 电池 → 后台使用限制 → 休眠应用。移除LLM应用。',
+              '<strong>OnePlus OxygenOS：</strong>设置 → 电池 → 电池优化 → 找到应用 → 不优化。',
+              '<strong>Xiaomi MIUI/HyperOS：</strong>设置 → 应用 → 管理应用 → [应用] → 省电 → 无限制。',
+              '<strong>存储分区：</strong>Android分离/data/user/0/（应用专用）和/sdcard/（共享）。模型必须在应用专用存储中 — 不在下载文件夹。',
+              '<strong>RAM规则：</strong>3B模型最少需要6 GB可用RAM。8 GB设备上推理前关闭所有其他应用。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '分享表与Android优势',
+            items: [
+              '<strong>分享表（仅PocketPal AI + Layla）：</strong>在任何应用中选择文本 → 分享 → PocketPal AI或Layla → 文本预填充聊天输入框。',
+              '<strong>MLC Chat、Maid、Ollama、Private AI：</strong>不出现在Android分享表中。需要手动复制粘贴。',
+              '<strong>Termux是Android独有：</strong>Android上的完整Linux环境。运行bash、Python、curl和任何Linux ARM64二进制文件（包括Ollama）。无iOS同等物。',
+              '<strong>F-Droid侧载：</strong>无需Google Play安装应用。启用Maid、Termux和其他开源工具。在GrapheneOS和自定义ROM上工作。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '常见错误',
+            items: [
+              '<strong>从Play Store安装Termux。</strong>Play Store版Termux自2020年停止更新。使用F-Droid — 唯一维护中的构建版本。',
+              '<strong>在Pixel手机上期望NPU速度。</strong>Tensor G5 NPU为Google应用保留。6款应用全部在所有Pixel设备上仅CPU运行。',
+              '<strong>在Samsung上跳过电池优化白名单。</strong>Galaxy手机在没有白名单的情况下约90秒推理后终止后台进程。',
+              '<strong>下载对设备来说太大的模型。</strong>7B Q4_K_M（约4.7 GB）需要约6 GB可用RAM。在8 GB手机上使用Phi-4 Mini（约2.7 GB）或Qwen3 1.7B（约1.1 GB）。',
+              '<strong>将GGUF下载到下载文件夹。</strong>大多数应用无法找到放置在那里的文件。使用应用的内置导入功能。',
+              '<strong>同时运行两个推理应用。</strong>12 GB手机上的两个3B模型触发OOM杀死。打开另一个前先关闭一个。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              {
+                q: '这些应用使用Snapdragon NPU吗？',
+                a: '只有MLC Chat使用Hexagon NPU，且仅在Snapdragon 8 Elite设备上。其他五款应用使用CPU或Vulkan GPU。MLC Chat的NPU在同一设备上提供比CPU快2-3倍的推理速度。'
+              },
+              {
+                q: 'Pixel 9 Pro能运行7B模型吗？',
+                a: '能 — Pixel 9 Pro有16 GB RAM，足够运行7B Q4_K_M模型。速度约8-10 token/秒仅CPU。使用PocketPal AI或Maid加载GGUF文件。'
+              },
+              {
+                q: '本地AI需要Root手机吗？',
+                a: '不需要。6款应用全部在未Root的Android手机上运行。Termux需要为F-Droid APK启用"允许安装未知来源应用" — 这不是Root。'
+              },
+              {
+                q: '如何处理Android后台限制？',
+                a: 'PocketPal AI和Maid请求FOREGROUND_SERVICE权限，使其更能抵抗后台杀死。在Samsung上，手动在设备管理 → 电池 → 休眠应用中加入白名单。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '对比多家提供商的AI模型',
+            body: 'PromptQuorum将您的提示同时发送到多个AI模型，并并排显示结果 — 帮助您为每个任务选择合适的模型。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = BASE_URL + '?lang=' + lang;
+      const footerLink = '<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>';
+
+      switch (slide.type) {
+        case 'title':
+          html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+            + '<h1>' + slide.h1 + '</h1>'
+            + '<p>' + slide.subtitle + '</p>'
+            + '<p style="margin-top: 32px; font-size: 16px; color: #79747e;"><a href="' + slide.link + '" target="_blank" rel="noopener" style="color: #6750a4; text-decoration: none;">' + slide.link.replace('https://', '') + '</a></p>'
+            + footerLink;
+          break;
+
+        case 'list':
+          html = '<h2>' + slide.h2 + '</h2>';
+          if (slide.intro) html += '<p style="margin-bottom: 8px;">' + slide.intro + '</p>';
+          html += '<ul style="font-size: clamp(13px, 1.4vw, 16px);">';
+          slide.items.forEach(function(item) {
+            html += '<li>' + item + '</li>';
+          });
+          html += '</ul>' + footerLink;
+          break;
+
+        case 'table':
+          html = '<h2>' + slide.h2 + '</h2><table><tr>';
+          slide.columns.forEach(function(col) {
+            html += '<th>' + col + '</th>';
+          });
+          html += '</tr>';
+          slide.rows.forEach(function(row) {
+            html += '<tr>';
+            if (Array.isArray(row)) {
+              row.forEach(function(cell) {
+                html += '<td>' + cell + '</td>';
+              });
+            } else {
+              slide.columns.forEach(function(col) {
+                html += '<td>' + (row[col] || '') + '</td>';
+              });
+            }
+            html += '</tr>';
+          });
+          html += '</table>' + footerLink;
+          break;
+
+        case 'comparison':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top: 36px; font-size: clamp(15px, 1.8vw, 20px);">' + slide.line1 + '</p>'
+            + '<p style="margin-top: 20px; font-size: clamp(15px, 1.8vw, 20px);">' + slide.line2 + '</p>'
+            + '<p style="margin-top: 32px; font-size: clamp(13px, 1.4vw, 16px); color: #6750a4;">' + slide.tip + '</p>'
+            + footerLink;
+          break;
+
+        case 'numbered':
+          html = '<h2>' + slide.h2 + '</h2><ol>';
+          slide.items.forEach(function(item) {
+            html += '<li>' + item + '</li>';
+          });
+          html += '</ol>' + footerLink;
+          break;
+
+        case 'faq':
+          html = '<h2 style="margin-bottom: 16px;">' + slide.h2 + '</h2>';
+          slide.faqs.forEach(function(faq) {
+            html += '<div style="margin-bottom: 14px; text-align: left; max-width: 820px; width: 100%;"><strong style="font-size: clamp(12px, 1.3vw, 15px);">Q: ' + faq.q + '</strong><p style="margin-top: 4px; font-size: clamp(11px, 1.2vw, 14px); color: #49454f;">A: ' + faq.a + '</p></div>';
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="max-width: 600px; margin-top: 16px;">' + slide.body + '</p>'
+            + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: #fff; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 600;">' + slide.cta + '</a>'
+            + footerLink;
+          break;
+      }
+
+      return '<div class="slide ' + slide.type + '">' + html + '</div>';
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = BASE_URL + '?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(function(slide) {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(function(s) { s.classList.remove('active'); });
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      showSlide(currentSlide + n);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', function() {
+      slides.forEach(function(s) { s.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', function() {
+      slides.forEach(function(s) { s.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', function() { window.print(); });
+    }
+
+    showSlide(0);
+  </script>
+</body>
+</html>
