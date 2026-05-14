@@ -525,6 +525,14 @@ if __name__ == "__main__":
             q: 'Is the local multimodal pipeline GDPR compliant for medical or legal use?',
             a: 'A local multimodal pipeline that generates zero network traffic during operation is compliant by design for internal use cases — no data processing agreement is needed because no personal data leaves your systems. To verify compliance: run Wireshark during operation and confirm zero outbound packets from the pipeline process. Log storage is also important — if your orchestrator stores conversation history or image files, those stores are subject to retention requirements. Use ephemeral in-memory storage or encrypted local storage with appropriate retention policies.',
           },
+          {
+            q: 'Can I add web search to the multimodal pipeline?',
+            a: 'Yes. Add a search step between the orchestrator and the text LLM. Use the DuckDuckGo API or a local RAG system (AnythingLLM, PrivateGPT) to retrieve context before the LLM reasoning step. The LLM then reasons over the transcript + image description + search results combined. This adds 0.5–2 seconds to latency but enables answering current-events questions alongside visual analysis.',
+          },
+          {
+            q: 'How much electricity does the full multimodal stack use running 24/7?',
+            a: 'Idle with models warm in VRAM: ~50–80W (desktop GPU), ~15–25W (Mac Mini M5 Pro). Active processing: ~150–300W (desktop GPU), ~30–60W (Mac Mini M5 Pro). Monthly cost at $0.15/kWh: approximately $5–15 (Mac Mini) or $15–35 (desktop). This is less than running a cloud API at comparable query volumes — a Mac Mini running the full stack 24/7 costs less in electricity per month than two days of GPT-4o API usage at 100 queries/day.',
+          },
         ],
       },
       sources: {
