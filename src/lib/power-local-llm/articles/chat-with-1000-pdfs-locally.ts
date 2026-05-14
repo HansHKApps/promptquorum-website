@@ -73,6 +73,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/chat-with-1000-pdfs-locally-static.html',
+    gammaDescription: 'The slide deck below covers: why default RAG breaks at 5,000-8,000 chunks, the 4-architecture decision tree (AnythingLLM→Qdrant by corpus size), hybrid search BM25+vector, BGE reranker top-50 refinement, metadata filtering for 10x speedup, and measured benchmarks at 100/1k/10k documents. Download the PDF as a local RAG scaling reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -748,6 +750,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/chat-with-1000-pdfs-locally-static.html',
+    gammaDescription: 'Der Foliensatz behandelt: warum Standard-RAG bei 5.000-8.000 Chunks scheitert, der 4-Architektur-Entscheidungsbaum (AnythingLLM→Qdrant nach Bestandsgröße), Hybrid-Suche BM25+Vektor, BGE-Reranker Top-50-Verfeinerung, Metadaten-Filterung für 10-fache Beschleunigung und gemessene Benchmarks bei 100/1k/10k Dokumenten. PDF als lokales RAG-Skalierungs-Referenzkarte herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1426,6 +1430,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/chat-with-1000-pdfs-locally-static.html',
+    gammaDescription: 'Le diaporama couvre : pourquoi le RAG par défaut échoue à 5.000-8.000 chunks, l\'arbre de décision à 4 architectures (AnythingLLM→Qdrant selon la taille du corpus), la recherche hybride BM25+vecteur, le reranker BGE top-50, le filtrage de métadonnées pour 10x de gain, et des benchmarks mesurés à 100/1k/10k documents. Téléchargez le PDF comme fiche de référence RAG local.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2104,6 +2110,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'よくある質問', anchor: '#faq' },
       { label: '関連資料', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/chat-with-1000-pdfs-locally-static.html',
+    gammaDescription: 'スライドデッキは以下をカバー：デフォルトRAGが5,000〜8,000チャンクで破綻する理由、4アーキテクチャ決定木（AnythingLLM→Qdrantのコーパスサイズ別）、ハイブリッド検索BM25+ベクター、BGEリランカーTop-50精製、メタデータフィルタリングによる10倍高速化、100/1k/10kドキュメントの実測ベンチマーク。PDFをローカルRAGスケーリング参照カードとしてダウンロード。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2759,6 +2767,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    gammaEmbedUrl: '/presentations/chat-with-1000-pdfs-locally-static.html',
+    gammaDescription: '幻灯片涵盖：默认RAG在5000-8000个chunks时失效的原因、4架构决策树（按语料库大小AnythingLLM→Qdrant）、混合搜索BM25+向量、BGE重排器Top-50精化、元数据过滤实现10倍加速，以及100/1k/10k文档的实测基准。下载PDF作为本地RAG扩展参考卡。',
     sections: {
       tldr: {
         id: 'key-takeaways',

@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples</title>
+    <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape with mm dimensions */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+
+    @media (max-width: 640px) {
+      .slide { padding: 20px 16px; }
+      .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+      .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+      .slide p { font-size: 14px; margin-bottom: 10px; }
+      .slide ul { font-size: 1em; margin: 10px 0; }
+      .slide ul li { margin-bottom: 8px; }
+      .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+      .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
+      .header { padding: 10px 12px; }
+      .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-links { gap: 8px; font-size: 11px; }
+      .subtitle { font-size: 14px; }
+      .logo { height: 24px; margin-bottom: 12px; }
+      .controls { padding: 10px 12px; }
+      .controls button { padding: 6px 12px; font-size: 12px; }
+    }
+
+    @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Chat With 1000+ PDFs Locally</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const ARTICLE_URL = 'https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally';
+
+        const CONTENT = {
+            en: {
+                title: 'Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples',
+                intro: 'A decision guide for power users with 1,000–10,000+ document corpora. Defaults break at 5,000 chunks — here are the four scaling paths with measured benchmarks.',
+                slides: [
+                    // Slide 1: title
+                    { type: 'title' },
+                    // Slide 2: why defaults break
+                    {
+                        type: 'list',
+                        heading: 'Why Default RAG Breaks Past 1,000 Documents',
+                        items: [
+                            '<strong>Index-out-of-RAM:</strong> ChromaDB/FAISS go disk-backed; p95 latency jumps from ~300 ms to 1–3 s',
+                            '<strong>Cosine-only fails rare terms:</strong> statute numbers, drug names, code IDs — BM25 catches these',
+                            '<strong>Top-K=4 too narrow at scale:</strong> best chunk is often at rank 12–30 in a 50k-chunk index',
+                            '<strong>No metadata filtering wastes the index:</strong> naive RAG searches every chunk instead of pre-filtering'
+                        ]
+                    },
+                    // Slide 3: decision tree
+                    {
+                        type: 'numbered',
+                        heading: 'Architecture Decision Tree',
+                        items: [
+                            '<strong>Under 1,000 docs:</strong> AnythingLLM Desktop — chunk 1000/200, nomic-embed-text-v1.5, no code',
+                            '<strong>1,000–5,000 docs:</strong> LlamaIndex local — hierarchical indices, ~150 lines Python',
+                            '<strong>5,000–10,000 docs:</strong> Ollama + ChromaDB — BM25 hybrid search + BGE reranker, ~300–400 lines',
+                            '<strong>10,000+ docs:</strong> Ollama + Qdrant — native hybrid, payload filtering, Docker',
+                            '<strong>Multi-user (any scale):</strong> Open WebUI or FastAPI wrapper in front of any above stack'
+                        ]
+                    },
+                    // Slide 4: architecture comparison table
+                    {
+                        type: 'table',
+                        heading: 'Architecture Comparison',
+                        cols: ['Architecture', 'Setup', 'Max Docs', 'p50 @ 1k', 'p50 @ 10k', 'Best for'],
+                        rows: [
+                            ['AnythingLLM (tuned)', 'No code', '~3,000', '~310 ms', '~1.4 s', '100–1k docs'],
+                            ['LlamaIndex local', '~150 lines Python', '~8,000', '~280 ms', '~700 ms', '1k–5k docs'],
+                            ['Ollama + ChromaDB', '~300–400 lines Python', '~12,000', '~340 ms', '~520 ms', '5k–10k docs'],
+                            ['Ollama + Qdrant', '~500 lines + Docker', '50,000+', '~310 ms', '~410 ms', '10k+ docs']
+                        ]
+                    },
+                    // Slide 5: AnythingLLM tuned
+                    {
+                        type: 'list',
+                        heading: 'Option 1: AnythingLLM Tuned (100–1k docs)',
+                        items: [
+                            '<strong>LLM:</strong> Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM during inference)',
+                            '<strong>Embedder:</strong> Switch to nomic-embed-text-v1.5 — default embedder is the #1 scaling failure',
+                            '<strong>Chunking:</strong> 1,000 tokens / 200 overlap — default 512/0 is wrong for any real corpus',
+                            '<strong>Top-K:</strong> Raise to 6–8; best chunk is often at rank 5–7 at 1k docs'
+                        ]
+                    },
+                    // Slide 6: LlamaIndex local
+                    {
+                        type: 'list',
+                        heading: 'Option 2: LlamaIndex Local (1k–5k docs)',
+                        items: [
+                            '<strong>Stack:</strong> Ollama + LlamaIndex + LanceDB/ChromaDB + nomic-embed-text-v1.5',
+                            '<strong>DocumentSummaryIndex + VectorStoreIndex:</strong> first picks documents, then searches chunks within them',
+                            '<strong>RouterQueryEngine:</strong> routes fact-recall to chunk index, synthesis to summary index — ~30 lines',
+                            '<strong>Persistence:</strong> 5k-document index reloads in 10–30 s on NVMe SSD'
+                        ]
+                    },
+                    // Slide 7: ChromaDB vs Qdrant comparison
+                    {
+                        type: 'comparison',
+                        heading: 'Custom Stacks at Scale: ChromaDB vs Qdrant',
+                        left: {
+                            title: 'Ollama + ChromaDB (5k–10k docs)',
+                            points: [
+                                '~300–400 lines Python, server mode',
+                                'BM25 via Whoosh/Tantivy + dense vectors',
+                                'BGE-reranker-v2-m3 over top-50 candidates',
+                                '~3–5 GB disk for 50k chunks'
+                            ]
+                        },
+                        right: {
+                            title: 'Ollama + Qdrant (10k+ docs)',
+                            points: [
+                                'Docker + ~500 lines Python',
+                                'Native sparse + dense vectors, no extra BM25 process',
+                                'Payload-based metadata filtering (sub-ms)',
+                                'HNSW tuning for 50,000+ vectors'
+                            ]
+                        }
+                    },
+                    // Slide 8: hybrid search
+                    {
+                        type: 'list',
+                        heading: 'Hybrid Search: BM25 + Vector Beats Either Alone',
+                        items: [
+                            '<strong>Dense fails rare terms:</strong> "RFC 9110 §7.4" or contract MSA numbers embed near generic chunks — BM25 catches them',
+                            '<strong>BM25 fails paraphrase:</strong> "How do we cancel?" matches "Termination procedures" in dense but scores 0 in BM25',
+                            '<strong>Reciprocal Rank Fusion (RRF):</strong> score = 1/(60+rank_dense) + 1/(60+rank_bm25), merge top-50',
+                            '<strong>Standard pipeline:</strong> BM25 top-25 + dense top-25 → RRF merge → reranker → top-6–8 to LLM'
+                        ]
+                    },
+                    // Slide 9: reranking
+                    {
+                        type: 'list',
+                        heading: 'Reranking: Top-N Refinement Pass',
+                        items: [
+                            '<strong>BGE-reranker-v2-m3</strong> (~570 MB, Apache 2.0): 50–100 candidates/sec CPU, 400+/sec GPU',
+                            '<strong>Why cross-encoders win:</strong> reads [CLS] query [SEP] candidate jointly — Recall@5 jumps 15–25 points',
+                            '<strong>Inject after hybrid search:</strong> take top-50, rerank to top-6–8, send to LLM',
+                            '<strong>Skip under 1k docs;</strong> past 5k docs, skipping leaves ~15–25% grounded on wrong chunks'
+                        ]
+                    },
+                    // Slide 10: metadata filtering
+                    {
+                        type: 'list',
+                        heading: 'Metadata Filtering: Pre-Narrow the Search Space',
+                        items: [
+                            '<strong>Index-time fields:</strong> source_filename, page_number, document_type, author, year, language, tags',
+                            '<strong>Query-time filter:</strong> "Q3 board minutes on pricing" → filter to ~12 docs, not all 10,000',
+                            '<strong>5–10x speedup</strong> with zero quality loss — cheapest performance win in any large RAG system',
+                            '<strong>Qdrant payloads</strong> filter in sub-milliseconds on indexed fields; ChromaDB adds 50–150 ms at 100k+ chunks'
+                        ]
+                    },
+                    // Slide 11: hierarchical retrieval
+                    {
+                        type: 'list',
+                        heading: 'Hierarchical Retrieval: Summary First, Chunks Second',
+                        items: [
+                            '<strong>Two indices:</strong> summaries collection (1 vector/doc) + chunks collection (standard)',
+                            '<strong>Two-stage query:</strong> embed → search summaries → top-5 docs → search chunks within those docs → rerank',
+                            '<strong>Best for synthesis:</strong> "Compare how these papers handle X" — adds noise reduction at 10k+ docs',
+                            '<strong>LlamaIndex built-in:</strong> DocumentSummaryIndex + RouterQueryEngine = ~30 lines'
+                        ]
+                    },
+                    // Slide 12: benchmarks table
+                    {
+                        type: 'table',
+                        heading: 'Benchmarks: Indexing Time &amp; Query Latency',
+                        cols: ['Stack', 'Metric', '@ 100 docs', '@ 1,000 docs', '@ 10,000 docs'],
+                        rows: [
+                            ['AnythingLLM tuned', 'Index time', '~1 min', '~12 min', 'N/A (max ~3k)'],
+                            ['LlamaIndex local', 'Index time', '~3 min', '~25 min', '~3.5 hr'],
+                            ['Ollama+ChromaDB', 'Index time', '~2 min', '~18 min', '~2.8 hr'],
+                            ['Ollama+Qdrant', 'Index time', '~2 min', '~17 min', '~2.6 hr'],
+                            ['LlamaIndex local', 'Query p50', '~210 ms', '~280 ms', '~700 ms'],
+                            ['Ollama+ChromaDB', 'Query p50', '~240 ms', '~340 ms', '~520 ms'],
+                            ['Ollama+Qdrant', 'Query p50', '~220 ms', '~310 ms', '~410 ms']
+                        ]
+                    },
+                    // Slide 13: FAQ
+                    {
+                        type: 'faq',
+                        heading: 'FAQ',
+                        faqs: [
+                            {
+                                q: 'When do default RAG settings break?',
+                                a: 'Around 1,000–2,000 docs on a 16 GB laptop; unusable past 5,000. Tuned AnythingLLM (1000/200 + nomic-embed) pushes to ~3,000.'
+                            },
+                            {
+                                q: 'Should I use hybrid search (BM25 + vector)?',
+                                a: 'Yes, past 1,000 docs. RRF of the two top-25 lists is the standard combiner. Added cost ~50–100 ms; quality gain is significant.'
+                            },
+                            {
+                                q: 'How much storage does 1,000 PDFs need after embedding?',
+                                a: 'Roughly 250–400 MB for the dense vector index. Add 50–150 MB for BM25 and 50–100 MB for summaries if used.'
+                            }
+                        ]
+                    },
+                    // Slide 14: CTA
+                    {
+                        type: 'cta',
+                        h2: 'Start Chatting With Your PDFs',
+                        body: 'Find and compare the best local RAG stacks for your corpus size.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: '1000+ PDFs lokal chatten: RAG-Skalierung über Demo-Beispiele',
+                intro: 'Entscheidungsleitfaden für Poweruser mit 1.000–10.000+ Dokumenten. Standardeinstellungen scheitern bei 5.000 Chunks — vier Skalierungspfade mit gemessenen Benchmarks.',
+                slides: [
+                    { type: 'title' },
+                    {
+                        type: 'list',
+                        heading: 'Warum Standard-RAG über 1.000 Dokumente scheitert',
+                        items: [
+                            '<strong>Index-außerhalb-RAM:</strong> ChromaDB/FAISS wechseln zu Festplatte; p95-Latenz springt von ~300 ms auf 1–3 s',
+                            '<strong>Cosinus-Only scheitert bei seltenen Begriffen:</strong> Statutennummern, Medikamentennamen — BM25 erfasst diese',
+                            '<strong>Top-K=4 zu eng im großen Maßstab:</strong> bester Chunk liegt oft bei Rang 12–30 bei 50k Chunks',
+                            '<strong>Keine Metadaten-Filterung:</strong> naives RAG durchsucht jeden Chunk statt vorzufiltern'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        heading: 'Architektur-Entscheidungsbaum',
+                        items: [
+                            '<strong>Unter 1.000 Dokumente:</strong> AnythingLLM Desktop — 1000/200 Chunk, nomic-embed-text-v1.5, kein Code',
+                            '<strong>1.000–5.000 Dokumente:</strong> LlamaIndex lokal — hierarchische Indizes, ~150 Zeilen Python',
+                            '<strong>5.000–10.000 Dokumente:</strong> Ollama + ChromaDB — BM25 Hybrid + BGE-Reranker, ~300–400 Zeilen',
+                            '<strong>10.000+ Dokumente:</strong> Ollama + Qdrant — natives Hybrid, Payload-Filterung, Docker',
+                            '<strong>Multi-User (jeder Umfang):</strong> Open WebUI oder FastAPI-Wrapper vor einem der obigen Stacks'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: 'Architektur-Vergleich',
+                        cols: ['Architektur', 'Setup', 'Max Docs', 'p50 @ 1k', 'p50 @ 10k', 'Am besten für'],
+                        rows: [
+                            ['AnythingLLM (opt.)', 'Kein Code', '~3.000', '~310 ms', '~1,4 s', '100–1k Docs'],
+                            ['LlamaIndex lokal', '~150 Zeilen Python', '~8.000', '~280 ms', '~700 ms', '1k–5k Docs'],
+                            ['Ollama + ChromaDB', '~300–400 Zeilen Python', '~12.000', '~340 ms', '~520 ms', '5k–10k Docs'],
+                            ['Ollama + Qdrant', '~500 Zeilen + Docker', '50.000+', '~310 ms', '~410 ms', '10k+ Docs']
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Option 1: AnythingLLM optimiert (100–1.000 Docs)',
+                        items: [
+                            '<strong>LLM:</strong> Llama 3.3 8B Q4_K_M über Ollama (5 GB RAM während Inferenz)',
+                            '<strong>Embedding-Modell:</strong> Wechsel zu nomic-embed-text-v1.5 — Standard-Embedder ist der #1-Skalierungsfehler',
+                            '<strong>Chunking:</strong> 1.000 Tokens / 200 Überlappung — Standard 512/0 ist falsch für echte Bestände',
+                            '<strong>Top-K:</strong> Auf 6–8 erhöhen; bester Chunk liegt oft bei Rang 5–7 bei 1k Docs'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Option 2: LlamaIndex lokal (1k–5k Docs)',
+                        items: [
+                            '<strong>Stack:</strong> Ollama + LlamaIndex + LanceDB/ChromaDB + nomic-embed-text-v1.5',
+                            '<strong>DocumentSummaryIndex + VectorStoreIndex:</strong> wählt zuerst Dokumente, dann Chunks innerhalb',
+                            '<strong>RouterQueryEngine:</strong> routet Faktenabruf zum Chunk-Index, Synthese zum Summary-Index — ~30 Zeilen',
+                            '<strong>Persistenz:</strong> 5k-Dokument-Index lädt in 10–30 s auf NVMe SSD'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        heading: 'Custom Stacks: ChromaDB vs. Qdrant',
+                        left: {
+                            title: 'Ollama + ChromaDB (5k–10k Docs)',
+                            points: [
+                                '~300–400 Zeilen Python, Server-Modus',
+                                'BM25 via Whoosh/Tantivy + dichte Vektoren',
+                                'BGE-reranker-v2-m3 über Top-50-Kandidaten',
+                                '~3–5 GB Festplatte für 50k Chunks'
+                            ]
+                        },
+                        right: {
+                            title: 'Ollama + Qdrant (10k+ Docs)',
+                            points: [
+                                'Docker + ~500 Zeilen Python',
+                                'Natives Sparse + Dense, kein separater BM25',
+                                'Payload-Filterung (Sub-ms auf indizierten Feldern)',
+                                'HNSW-Tuning für 50.000+ Vektoren'
+                            ]
+                        }
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Hybrid-Suche: BM25 + Vektor schlägt alle',
+                        items: [
+                            '<strong>Dense scheitert bei seltenen Begriffen:</strong> RFC-Nummern, MSA-Vertragskenner — BM25 erfasst sie',
+                            '<strong>BM25 scheitert bei Paraphrase:</strong> "Wie stornieren?" matcht "Kündigungs-Verfahren" in dense, 0 in BM25',
+                            '<strong>Reciprocal Rank Fusion (RRF):</strong> Score = 1/(60+rank_dense) + 1/(60+rank_bm25), Top-50 zusammenführen',
+                            '<strong>Standard-Pipeline:</strong> BM25 Top-25 + Dense Top-25 → RRF → Reranker → Top-6–8 zum LLM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Reranking: Top-N-Verfeinerungspass',
+                        items: [
+                            '<strong>BGE-reranker-v2-m3</strong> (~570 MB, Apache 2.0): 50–100 Kandidaten/Sek CPU, 400+/Sek GPU',
+                            '<strong>Warum Cross-Encoder gewinnt:</strong> liest Query + Kandidat gemeinsam — Recall@5 steigt um 15–25 Punkte',
+                            '<strong>Injizieren nach Hybrid-Suche:</strong> Top-50 nehmen, auf Top-6–8 reranken, an LLM senden',
+                            '<strong>Unter 1k Docs überspringen OK;</strong> über 5k Docs ~15–25% falsch geerdet ohne Reranker'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Metadaten-Filterung: Suchraum vorher verengen',
+                        items: [
+                            '<strong>Index-Zeit-Felder:</strong> source_filename, page_number, document_type, author, year, language, Tags',
+                            '<strong>Abfrage-Zeit-Filter:</strong> "Q3-Vorstandsprotokoll zu Preisen" → Filter auf ~12 Docs statt aller 10.000',
+                            '<strong>5–10x Speedup</strong> ohne Qualitätsverlust — billigster Leistungsgewinn in jedem großen RAG-System',
+                            '<strong>Qdrant-Payloads</strong> filtern Sub-ms auf indizierten Feldern; ChromaDB +50–150 ms über 100k Chunks'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Hierarchischer Abruf: Summary zuerst, Chunks zweites',
+                        items: [
+                            '<strong>Zwei Indizes:</strong> summaries-Sammlung (1 Vektor/Dokument) + chunks-Sammlung (Standard)',
+                            '<strong>Zwei-Stufen-Abruf:</strong> embed → Zusammenfassungen → Top-5 Docs → Chunks in diesen Docs',
+                            '<strong>Am besten für Synthese:</strong> "Vergleiche wie Papiere X behandeln" — Rauschreduktion bei 10k+ Docs',
+                            '<strong>LlamaIndex eingebaut:</strong> DocumentSummaryIndex + RouterQueryEngine = ~30 Zeilen'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: 'Benchmarks: Indexierungszeit &amp; Abfrage-Latenz',
+                        cols: ['Stack', 'Metrik', '@ 100 Docs', '@ 1.000 Docs', '@ 10.000 Docs'],
+                        rows: [
+                            ['AnythingLLM opt.', 'Indexierungszeit', '~1 Min', '~12 Min', 'N/V (max ~3k)'],
+                            ['LlamaIndex lokal', 'Indexierungszeit', '~3 Min', '~25 Min', '~3,5 Std'],
+                            ['Ollama+ChromaDB', 'Indexierungszeit', '~2 Min', '~18 Min', '~2,8 Std'],
+                            ['Ollama+Qdrant', 'Indexierungszeit', '~2 Min', '~17 Min', '~2,6 Std'],
+                            ['LlamaIndex lokal', 'Abfrage p50', '~210 ms', '~280 ms', '~700 ms'],
+                            ['Ollama+ChromaDB', 'Abfrage p50', '~240 ms', '~340 ms', '~520 ms'],
+                            ['Ollama+Qdrant', 'Abfrage p50', '~220 ms', '~310 ms', '~410 ms']
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        heading: 'Häufig gestellte Fragen',
+                        faqs: [
+                            {
+                                q: 'Wann scheitern Standard-RAG-Einstellungen?',
+                                a: 'Um 1.000–2.000 Docs auf einem 16-GB-Laptop; über 5.000 nicht verwendbar. Optimiertes AnythingLLM (1000/200 + nomic-embed) schiebt auf ~3.000.'
+                            },
+                            {
+                                q: 'Sollte ich Hybrid-Suche (BM25 + Vektor) verwenden?',
+                                a: 'Ja, über 1.000 Docs. RRF der zwei Top-25-Listen ist der Standard-Kombiner. Zusatzkosten ~50–100 ms; Qualitätsgewinn bedeutend.'
+                            },
+                            {
+                                q: 'Wie viel Speicher benötigen 1.000 PDFs nach Embedding?',
+                                a: 'Ungefähr 250–400 MB für den dichten Vektor-Index. +50–150 MB für BM25 und +50–100 MB für Zusammenfassungen.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'PDFs lokal chatten: Jetzt starten',
+                        body: 'Finden und vergleichen Sie die besten lokalen RAG-Stacks für Ihre Bestandsgröße.',
+                        cta: 'PromptQuorum kostenlos testen',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Discuter avec 1000+ fichiers PDF en local : Évolution du RAG',
+                intro: 'Guide décisionnel pour utilisateurs avancés avec 1.000–10.000+ documents. Les paramètres par défaut échouent à 5.000 chunks — quatre chemins d\'évolution avec benchmarks mesurés.',
+                slides: [
+                    { type: 'title' },
+                    {
+                        type: 'list',
+                        heading: 'Pourquoi le RAG standard échoue au-delà de 1.000 documents',
+                        items: [
+                            '<strong>Index-hors-RAM :</strong> ChromaDB/FAISS basculent sur disque ; latence p95 de ~300 ms à 1–3 s',
+                            '<strong>Cosinus-seul échoue sur termes rares :</strong> numéros statut, noms médicaments — BM25 les capture',
+                            '<strong>Top-K=4 trop étroit à grande échelle :</strong> meilleur chunk souvent au rang 12–30 dans 50k chunks',
+                            '<strong>Pas de filtrage métadonnées :</strong> RAG naïf cherche chaque chunk au lieu de pré-filtrer'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        heading: 'Arborescence décisionnelle',
+                        items: [
+                            '<strong>Moins de 1.000 documents :</strong> AnythingLLM Desktop — chunk 1000/200, nomic-embed-text-v1.5, zéro code',
+                            '<strong>1.000–5.000 documents :</strong> LlamaIndex local — indices hiérarchiques, ~150 lignes Python',
+                            '<strong>5.000–10.000 documents :</strong> Ollama + ChromaDB — BM25 hybride + BGE reranker, ~300–400 lignes',
+                            '<strong>10.000+ documents :</strong> Ollama + Qdrant — hybride natif, filtrage payload, Docker',
+                            '<strong>Multi-utilisateur (toute échelle) :</strong> Open WebUI ou wrapper FastAPI devant l\'une des stacks'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: 'Comparaison des architectures',
+                        cols: ['Architecture', 'Setup', 'Max Docs', 'p50 @ 1k', 'p50 @ 10k', 'Meilleur pour'],
+                        rows: [
+                            ['AnythingLLM (ajusté)', 'Pas de code', '~3.000', '~310 ms', '~1,4 s', '100–1k docs'],
+                            ['LlamaIndex local', '~150 lignes Python', '~8.000', '~280 ms', '~700 ms', '1k–5k docs'],
+                            ['Ollama + ChromaDB', '~300–400 lignes Python', '~12.000', '~340 ms', '~520 ms', '5k–10k docs'],
+                            ['Ollama + Qdrant', '~500 lignes + Docker', '50.000+', '~310 ms', '~410 ms', '10k+ docs']
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Option 1 : AnythingLLM ajusté (100–1.000 docs)',
+                        items: [
+                            '<strong>LLM :</strong> Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM lors inférence)',
+                            '<strong>Embedder :</strong> Passer à nomic-embed-text-v1.5 — embedder défaut est la raison #1 d\'échec',
+                            '<strong>Chunking :</strong> 1.000 tokens / 200 overlap — défaut 512/0 faux pour tout corpus réel',
+                            '<strong>Top-K :</strong> Relevez à 6–8 ; meilleur chunk souvent au rang 5–7 à 1k docs'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Option 2 : LlamaIndex local (1k–5k docs)',
+                        items: [
+                            '<strong>Stack :</strong> Ollama + LlamaIndex + LanceDB/ChromaDB + nomic-embed-text-v1.5',
+                            '<strong>DocumentSummaryIndex + VectorStoreIndex :</strong> sélectionne d\'abord documents, puis chunks dedans',
+                            '<strong>RouterQueryEngine :</strong> route fact-recall vers index chunk, synthèse vers index résumé — ~30 lignes',
+                            '<strong>Persistance :</strong> index 5k-documents recharge en 10–30 s sur SSD NVMe'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        heading: 'Stacks personnalisées : ChromaDB vs Qdrant',
+                        left: {
+                            title: 'Ollama + ChromaDB (5k–10k docs)',
+                            points: [
+                                '~300–400 lignes Python, mode serveur',
+                                'BM25 via Whoosh/Tantivy + vecteurs denses',
+                                'BGE-reranker-v2-m3 sur top-50 candidats',
+                                '~3–5 GB disque pour 50k chunks'
+                            ]
+                        },
+                        right: {
+                            title: 'Ollama + Qdrant (10k+ docs)',
+                            points: [
+                                'Docker + ~500 lignes Python',
+                                'Sparse + dense natifs, pas de BM25 séparé',
+                                'Filtrage payload sub-ms sur champs indexés',
+                                'Tuning HNSW pour 50.000+ vecteurs'
+                            ]
+                        }
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Recherche hybride : BM25 + Vecteur bat chacun seul',
+                        items: [
+                            '<strong>Dense échoue termes rares :</strong> numéros RFC, identifiants MSA — BM25 les capture',
+                            '<strong>BM25 échoue paraphrase :</strong> "Comment annuler ?" matche "Procédures résiliation" en dense, 0 en BM25',
+                            '<strong>Reciprocal Rank Fusion (RRF) :</strong> score = 1/(60+rank_dense) + 1/(60+rank_bm25), fusionner top-50',
+                            '<strong>Pipeline standard :</strong> BM25 top-25 + dense top-25 → RRF → reranker → top-6–8 au LLM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Reranking : Passage de raffinement Top-N',
+                        items: [
+                            '<strong>BGE-reranker-v2-m3</strong> (~570 MB, Apache 2.0) : 50–100 candidats/sec CPU, 400+/sec GPU',
+                            '<strong>Pourquoi cross-encoders gagnent :</strong> lit requête + candidat ensemble — Recall@5 +15–25 points',
+                            '<strong>Injecter après hybride :</strong> top-50, reranker vers top-6–8, envoyer au LLM',
+                            '<strong>Passer sous 1k docs OK ;</strong> au-delà 5k docs ~15–25% ancrés sur mauvais chunks sans reranker'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Filtrage métadonnées : Rétrécir avant espace recherche',
+                        items: [
+                            '<strong>Champs index-time :</strong> source_filename, page_number, document_type, author, year, language, tags',
+                            '<strong>Filtre query-time :</strong> "Q3 board minutes sur tarifs" → filtre ~12 docs pas tous 10.000',
+                            '<strong>Speedup 5–10x</strong> zéro perte qualité — moins cher gain performance dans tout gros système RAG',
+                            '<strong>Payloads Qdrant</strong> sub-ms sur champs indexés ; ChromaDB +50–150 ms au-delà 100k chunks'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Récupération hiérarchique : Résumé d\'abord, Chunks ensuite',
+                        items: [
+                            '<strong>Deux indices :</strong> collection summaries (1 vecteur/doc) + collection chunks (standard)',
+                            '<strong>Récupération deux-étapes :</strong> embed → résumés → top-5 docs → chunks dans ces docs',
+                            '<strong>Meilleur pour synthèse :</strong> "Comparez comment ces papiers gèrent X" — réduction bruit 10k+ docs',
+                            '<strong>LlamaIndex intégré :</strong> DocumentSummaryIndex + RouterQueryEngine = ~30 lignes'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: 'Benchmarks : Temps indexation &amp; latence requête',
+                        cols: ['Stack', 'Métrique', '@ 100 docs', '@ 1.000 docs', '@ 10.000 docs'],
+                        rows: [
+                            ['AnythingLLM ajusté', 'Temps indexation', '~1 min', '~12 min', 'N/A (max ~3k)'],
+                            ['LlamaIndex local', 'Temps indexation', '~3 min', '~25 min', '~3,5 h'],
+                            ['Ollama+ChromaDB', 'Temps indexation', '~2 min', '~18 min', '~2,8 h'],
+                            ['Ollama+Qdrant', 'Temps indexation', '~2 min', '~17 min', '~2,6 h'],
+                            ['LlamaIndex local', 'Requête p50', '~210 ms', '~280 ms', '~700 ms'],
+                            ['Ollama+ChromaDB', 'Requête p50', '~240 ms', '~340 ms', '~520 ms'],
+                            ['Ollama+Qdrant', 'Requête p50', '~220 ms', '~310 ms', '~410 ms']
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        heading: 'Questions fréquentes',
+                        faqs: [
+                            {
+                                q: 'Quand les paramètres RAG standard échouent-ils ?',
+                                a: 'Vers 1.000–2.000 docs sur laptop 16 GB ; inutilisable au-delà 5.000. AnythingLLM ajusté (1000/200 + nomic-embed) pousse à ~3.000.'
+                            },
+                            {
+                                q: 'Dois-je utiliser la recherche hybride (BM25 + Vecteur) ?',
+                                a: 'Oui, au-delà 1.000 docs. RRF des deux listes top-25 est le combiner standard. Coût supplémentaire ~50–100 ms ; gain qualité significatif.'
+                            },
+                            {
+                                q: 'Quel stockage demandent 1.000 PDF après embedding ?',
+                                a: 'Environ 250–400 MB pour l\'index vecteur dense. +50–150 MB pour BM25 et +50–100 MB pour résumés si utilisés.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Commencez à chatter avec vos PDFs',
+                        body: 'Trouvez et comparez les meilleures stacks RAG locales pour la taille de votre corpus.',
+                        cta: 'Essayer PromptQuorum gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: '1000+ PDFをローカルでチャット: プロダクションレベルのRAG構築',
+                intro: '1,000〜10,000+ドキュメントの個人コーパス向け実装ガイド。デフォルト設定は5,000チャンクで限界 — 4つのスケーリング方法と実測ベンチマーク。',
+                slides: [
+                    { type: 'title' },
+                    {
+                        type: 'list',
+                        heading: '1,000ドキュメント超でデフォルトRAGが失敗する理由',
+                        items: [
+                            '<strong>Index-out-of-RAM：</strong>ChromaDB/FAISSがディスクに切替え; p95レイテンシが~300msから1~3秒に',
+                            '<strong>コサイン単独では稀な用語に対応不可：</strong>法定番号、医薬品名 — BM25なら捕捉',
+                            '<strong>Top-K=4は大規模では狭すぎ：</strong>最良チャンクが50kチャンクでランク12~30にある',
+                            '<strong>メタデータフィルタリングなし：</strong>素朴なRAGは事前フィルタなく全チャンク検索'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        heading: 'アーキテクチャ選択フロー',
+                        items: [
+                            '<strong>1,000ドキュメント未満：</strong>AnythingLLM Desktop — チャンク1000/200、nomic-embed-text-v1.5、コード不要',
+                            '<strong>1,000〜5,000ドキュメント：</strong>LlamaIndex ローカル — 階層インデックス、~150行Python',
+                            '<strong>5,000〜10,000ドキュメント：</strong>Ollama + ChromaDB — BM25ハイブリッド + BGEリランカー、~300〜400行',
+                            '<strong>10,000+ドキュメント：</strong>Ollama + Qdrant — ネイティブハイブリッド、ペイロードフィルタリング、Docker',
+                            '<strong>マルチユーザー（すべての規模）：</strong>Open WebUI または FastAPI ラッパー'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: 'アーキテクチャ比較',
+                        cols: ['アーキテクチャ', 'セットアップ', '最大Docs', 'p50 @ 1k', 'p50 @ 10k', '最適用途'],
+                        rows: [
+                            ['AnythingLLM（調整版）', 'コード不要', '~3,000', '~310 ms', '~1.4s', '100~1kドキュメント'],
+                            ['LlamaIndex ローカル', '~150行Python', '~8,000', '~280 ms', '~700 ms', '1k~5kドキュメント'],
+                            ['Ollama + ChromaDB', '~300~400行Python', '~12,000', '~340 ms', '~520 ms', '5k~10kドキュメント'],
+                            ['Ollama + Qdrant', '~500行 + Docker', '50,000+', '~310 ms', '~410 ms', '10k+ドキュメント']
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'オプション1：AnythingLLM調整版（100~1kドキュメント）',
+                        items: [
+                            '<strong>LLM：</strong>Ollama経由 Llama 3.3 8B Q4_K_M（推論時5 GB RAM）',
+                            '<strong>Embedder：</strong>nomic-embed-text-v1.5に切替え — デフォルトembedderはスケール失敗の最大原因',
+                            '<strong>チャンキング：</strong>1,000トークン / 200重複 — デフォルト512/0は実際のコーパスでは不適',
+                            '<strong>Top-K：</strong>6~8に引き上げ; 1kドキュメントで最良チャンクはランク5~7に'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'オプション2：LlamaIndexローカル（1k~5kドキュメント）',
+                        items: [
+                            '<strong>スタック：</strong>Ollama + LlamaIndex + LanceDB/ChromaDB + nomic-embed-text-v1.5',
+                            '<strong>DocumentSummaryIndex + VectorStoreIndex：</strong>最初にドキュメント選択、次にチャンク検索',
+                            '<strong>RouterQueryEngine：</strong>fact-recallをチャンクインデックスへ、合成をサマリインデックスへ — ~30行',
+                            '<strong>永続化：</strong>5kドキュメントインデックスはNVMe SSD上で10~30秒で再読み込み'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        heading: 'カスタムスタック：ChromaDB vs Qdrant',
+                        left: {
+                            title: 'Ollama + ChromaDB（5k~10kドキュメント）',
+                            points: [
+                                '~300~400行Python、サーバーモード',
+                                'Whoosh/Tantivy経由BM25 + dense ベクトル',
+                                'BGE-reranker-v2-m3でTop-50候補リランキング',
+                                '50kチャンクで~3~5 GBディスク'
+                            ]
+                        },
+                        right: {
+                            title: 'Ollama + Qdrant（10k+ドキュメント）',
+                            points: [
+                                'Docker + ~500行Python',
+                                'ネイティブsparse + dense、個別BM25プロセス不要',
+                                'ペイロードフィルタリング（インデックスフィールドでsub-ms）',
+                                '50,000+ベクトル向けHNSWチューニング'
+                            ]
+                        }
+                    },
+                    {
+                        type: 'list',
+                        heading: 'ハイブリッド検索：BM25+ベクトルが単独より優秀',
+                        items: [
+                            '<strong>Dense単独が失敗する理由：</strong>RFC番号、MSA識別子は汎用チャンク近辺に埋め込まれる — BM25がキャッチ',
+                            '<strong>BM25単独が失敗する理由：</strong>「解約方法は?」は「解約手続き」にdenseでマッチ、BM25で0スコア',
+                            '<strong>Reciprocal Rank Fusion (RRF)：</strong>スコア = 1/(60+rank_dense) + 1/(60+rank_bm25)、Top-50統合',
+                            '<strong>標準パイプライン：</strong>BM25 Top-25 + dense Top-25 → RRF → リランカー → Top-6~8をLLMへ'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'リランキング：Top-N精緻化パス',
+                        items: [
+                            '<strong>BGE-reranker-v2-m3</strong>（~570 MB、Apache 2.0）: CPU 50~100候補/秒、GPU 400+/秒',
+                            '<strong>Cross-encoderが勝つ理由：</strong>クエリ+候補を合同読み — Recall@5が15~25ポイント上昇',
+                            '<strong>ハイブリッド検索後に注入：</strong>Top-50を取得、Top-6~8にリランク、LLMへ送信',
+                            '<strong>1kドキュメント未満は省略OK；</strong>5k超では~15~25%が誤ったチャンクに基礎'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'メタデータフィルタリング：検索空間を事前絞込み',
+                        items: [
+                            '<strong>インデックス時フィールド：</strong>source_filename、page_number、document_type、author、year、language、tags',
+                            '<strong>クエリ時フィルタ：</strong>「2024年Q3ボード議事録の価格」→ ~12ドキュメントにフィルタ、10,000ではなく',
+                            '<strong>5~10倍高速化</strong>品質損失ゼロ — 大型RAGシステムで最廉価パフォーマンス向上',
+                            '<strong>Qdrantペイロード</strong>インデックスフィールドでsub-ms; ChromaDB 100k+チャンクで+50~150ms'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: '階層検索：サマリ先行、チャンク二段目',
+                        items: [
+                            '<strong>2インデックス：</strong>summariesコレクション（1ベクトル/ドキュメント）+ chunksコレクション',
+                            '<strong>二段階クエリ：</strong>embed → サマリ検索 → Top-5ドキュメント → その中でチャンク検索',
+                            '<strong>合成クエリで最も効果：</strong>「論文X比較」— 10k+ドキュメントでノイズ削減',
+                            '<strong>LlamaIndex組込み：</strong>DocumentSummaryIndex + RouterQueryEngine = ~30行'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: 'ベンチマーク：インデックス時間 &amp; クエリレイテンシ',
+                        cols: ['スタック', 'メトリック', '@ 100ドキュメント', '@ 1,000ドキュメント', '@ 10,000ドキュメント'],
+                        rows: [
+                            ['AnythingLLM調整版', 'インデックス時間', '~1分', '~12分', 'N/A（最大~3k）'],
+                            ['LlamaIndex ローカル', 'インデックス時間', '~3分', '~25分', '~3.5時間'],
+                            ['Ollama+ChromaDB', 'インデックス時間', '~2分', '~18分', '~2.8時間'],
+                            ['Ollama+Qdrant', 'インデックス時間', '~2分', '~17分', '~2.6時間'],
+                            ['LlamaIndex ローカル', 'クエリ p50', '~210 ms', '~280 ms', '~700 ms'],
+                            ['Ollama+ChromaDB', 'クエリ p50', '~240 ms', '~340 ms', '~520 ms'],
+                            ['Ollama+Qdrant', 'クエリ p50', '~220 ms', '~310 ms', '~410 ms']
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        heading: 'よくある質問',
+                        faqs: [
+                            {
+                                q: 'デフォルトRAG設定はいつ限界を迎える?',
+                                a: '16 GBノートPC上で1,000~2,000ドキュメント; 5,000超は使用不可。AnythingLLM調整版（1000/200 + nomic-embed）で~3,000まで延長。'
+                            },
+                            {
+                                q: 'ハイブリッド検索（BM25+ベクトル）を使うべき?',
+                                a: '1,000ドキュメント超ではyes。2つのTop-25リストのRRFが標準結合器。追加コスト~50~100ms; 品質向上は有意。'
+                            },
+                            {
+                                q: '1,000 PDF embedding後のストレージ必要量は?',
+                                a: 'Dense vector indexで約250~400 MB。BM25用+50~150 MB、サマリ使用時+50~100 MB。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'PDFとのチャットを始める',
+                        body: 'コーパスサイズに最適なローカルRAGスタックを見つけて比較しましょう。',
+                        cta: 'PromptQuorumを無料で試す',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地处理1000+ PDF: 构建生产级RAG系统',
+                intro: '针对1000-10000+个文档语料库的高级用户决策指南。默认RAG在5000个chunks时失效 — 四种扩展路径与实测基准。',
+                slides: [
+                    { type: 'title' },
+                    {
+                        type: 'list',
+                        heading: '为什么默认RAG在大规模下失效',
+                        items: [
+                            '<strong>索引超出RAM：</strong>ChromaDB/FAISS切换到磁盘IO；p95延迟从~300ms跳到1~3秒',
+                            '<strong>纯余弦搜索对稀有词汇无效：</strong>法规编号、合同标识符 — BM25可捕获这些',
+                            '<strong>Top-K=4在大规模下太窄：</strong>最佳chunk经常在50k chunks中排名12~30',
+                            '<strong>无元数据过滤浪费索引：</strong>朴素RAG搜索所有chunks而非预先过滤'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        heading: '架构决策树：按语料库大小选择',
+                        items: [
+                            '<strong>100~1000个文档：</strong>AnythingLLM调优 — chunk 1000/200、nomic-embed-text-v1.5、无需代码',
+                            '<strong>1000~5000个文档：</strong>LlamaIndex本地 — 分层索引、~150行Python',
+                            '<strong>5000~10000个文档：</strong>Ollama + ChromaDB — BM25混合搜索 + BGE reranker、~300~400行',
+                            '<strong>10000+个文档：</strong>Ollama + Qdrant — 原生混合搜索、payload过滤、Docker',
+                            '<strong>多用户（任何规模）：</strong>Open WebUI或FastAPI wrapper'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: '四种架构对比',
+                        cols: ['架构', '安装复杂度', '最大文档数', 'p50 @ 1k', 'p50 @ 10k', '最适合'],
+                        rows: [
+                            ['AnythingLLM（调优）', '无需代码', '~3,000', '~310 ms', '~1.4s', '100~1k文档'],
+                            ['LlamaIndex本地', '~150行Python', '~8,000', '~280 ms', '~700 ms', '1k~5k文档'],
+                            ['Ollama + ChromaDB', '~300~400行Python', '~12,000', '~340 ms', '~520 ms', '5k~10k文档'],
+                            ['Ollama + Qdrant', '~500行 + Docker', '50,000+', '~310 ms', '~410 ms', '10k+文档']
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: '选项1：AnythingLLM调优（100~1k文档）',
+                        items: [
+                            '<strong>LLM：</strong>Ollama运行Llama 3.3 8B Q4_K_M（推理时5 GB RAM）',
+                            '<strong>Embedder：</strong>切换到nomic-embed-text-v1.5 — 默认embedder是扩展失败的首要原因',
+                            '<strong>分块：</strong>1000 tokens / 200 overlap — 默认512/0对真实语料库不适合',
+                            '<strong>Top-K：</strong>提升到6~8；1k文档时最佳chunk通常在排名5~7'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: '选项2：LlamaIndex本地（1k~5k文档）',
+                        items: [
+                            '<strong>技术栈：</strong>Ollama + LlamaIndex + LanceDB/ChromaDB + nomic-embed-text-v1.5',
+                            '<strong>DocumentSummaryIndex + VectorStoreIndex：</strong>先选文档，再在其中搜索chunks',
+                            '<strong>RouterQueryEngine：</strong>事实查询路由到chunk索引，合成查询到摘要索引 — ~30行',
+                            '<strong>持久化：</strong>5k文档索引在NVMe SSD上10~30秒重新加载'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        heading: '自定义技术栈：ChromaDB vs Qdrant',
+                        left: {
+                            title: 'Ollama + ChromaDB（5k~10k文档）',
+                            points: [
+                                '~300~400行Python，服务器模式',
+                                'Whoosh/Tantivy提供BM25 + dense向量',
+                                'BGE-reranker-v2-m3对top-50候选重排',
+                                '50k chunks约3~5 GB磁盘'
+                            ]
+                        },
+                        right: {
+                            title: 'Ollama + Qdrant（10k+文档）',
+                            points: [
+                                'Docker + ~500行Python',
+                                '原生sparse + dense向量，无需独立BM25进程',
+                                'Payload过滤（索引字段sub-ms）',
+                                '50,000+向量的HNSW调优'
+                            ]
+                        }
+                    },
+                    {
+                        type: 'list',
+                        heading: '混合搜索：BM25+向量组合优于单独使用',
+                        items: [
+                            '<strong>纯Dense搜索失效原因：</strong>RFC编号、MSA合同编号被嵌入到通用chunks附近 — BM25捕获精确标识符',
+                            '<strong>纯BM25失效原因：</strong>"如何取消?"与"终止程序"在dense空间匹配，BM25得分为0',
+                            '<strong>Reciprocal Rank Fusion (RRF)：</strong>分数 = 1/(60+rank_dense) + 1/(60+rank_bm25)，合并top-50',
+                            '<strong>标准流水线：</strong>BM25 top-25 + dense top-25 → RRF → reranker → top-6~8到LLM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: 'Reranking：用交叉编码器优化top-N排序',
+                        items: [
+                            '<strong>BGE-reranker-v2-m3</strong>（~570 MB，Apache 2.0）：CPU 50~100候选/秒，GPU 400+/秒',
+                            '<strong>交叉编码器获胜原因：</strong>联合读取查询+候选 — Recall@5提升15~25个百分点',
+                            '<strong>在混合搜索后注入：</strong>取top-50，重排为top-6~8，发送给LLM',
+                            '<strong>1k文档以下可跳过；</strong>5k文档以上跳过会导致~15~25%基于错误chunks'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: '元数据过滤：预先缩小搜索空间',
+                        items: [
+                            '<strong>索引时字段：</strong>source_filename、page_number、document_type、author、year、language、tags',
+                            '<strong>查询时过滤：</strong>"2024年Q3董事会纪要价格" → 过滤到~12个文档，而非全部10,000',
+                            '<strong>5~10倍加速</strong>零质量损失 — 任何大型RAG系统中最便宜的性能提升',
+                            '<strong>Qdrant payloads</strong>在索引字段上sub-ms；ChromaDB在100k+ chunks上+50~150 ms'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        heading: '分层检索：摘要索引+chunk索引',
+                        items: [
+                            '<strong>两个索引：</strong>summaries集合（每文档1个向量）+ chunks集合（标准）',
+                            '<strong>两阶段查询：</strong>embed → 搜索摘要 → top-5文档 → 在这些文档中搜索chunks',
+                            '<strong>最适合合成查询：</strong>"比较这些论文如何处理X" — 在10k+文档时减少噪声',
+                            '<strong>LlamaIndex内置：</strong>DocumentSummaryIndex + RouterQueryEngine = ~30行'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        heading: '基准测试：索引时间 &amp; 查询延迟',
+                        cols: ['技术栈', '指标', '@ 100文档', '@ 1,000文档', '@ 10,000文档'],
+                        rows: [
+                            ['AnythingLLM调优', '索引时间', '~1分钟', '~12分钟', 'N/A（最大~3k）'],
+                            ['LlamaIndex本地', '索引时间', '~3分钟', '~25分钟', '~3.5小时'],
+                            ['Ollama+ChromaDB', '索引时间', '~2分钟', '~18分钟', '~2.8小时'],
+                            ['Ollama+Qdrant', '索引时间', '~2分钟', '~17分钟', '~2.6小时'],
+                            ['LlamaIndex本地', '查询 p50', '~210 ms', '~280 ms', '~700 ms'],
+                            ['Ollama+ChromaDB', '查询 p50', '~240 ms', '~340 ms', '~520 ms'],
+                            ['Ollama+Qdrant', '查询 p50', '~220 ms', '~310 ms', '~410 ms']
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        heading: '常见问题',
+                        faqs: [
+                            {
+                                q: '为什么向量搜索在10k文档时变慢？',
+                                a: '当索引超出RAM时，数据库切换到磁盘IO。添加元数据过滤（预缩小搜索空间）或分层索引（两阶段搜索）可解决。'
+                            },
+                            {
+                                q: '混合搜索真的比纯向量搜索好吗？',
+                                a: '是。对于特定术语查询BM25完美，对模糊查询向量搜索更好。组合在10k文档上将准确率从65%提升到92%。'
+                            },
+                            {
+                                q: '1,000 PDF embedding后需要多少存储？',
+                                a: '约250~400 MB dense向量索引。+50~150 MB BM25索引，+50~100 MB文档摘要（如使用）。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '开始与PDF聊天',
+                        body: '找到并比较最适合您语料库大小的本地RAG堆栈。',
+                        cta: '免费试用PromptQuorum',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        let currentSlideIndex = 0;
+        let lang = 'en';
+
+        function getLang() {
+            const params = new URLSearchParams(window.location.search);
+            const l = params.get('lang');
+            return (l && CONTENT[l]) ? l : 'en';
+        }
+
+        function footer(l) {
+            return `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${ARTICLE_URL}?lang=${l}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+        }
+
+        function renderSlide(slide, l, index) {
+            const c = CONTENT[l] || CONTENT.en;
+            let html = '';
+
+            if (slide.type === 'title') {
+                html = `<div class="slide title active" data-lang="${l}" style="position:relative;">
+                    <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                    <h1>${c.title}</h1>
+                    <p>${c.intro}</p>
+                    <p style="margin-top:16px;font-size:13px;"><a href="${ARTICLE_URL}?lang=${l}" target="_blank" rel="noopener">${ARTICLE_URL}</a></p>
+                    ${footer(l)}
+                </div>`;
+            } else if (slide.type === 'list') {
+                const items = slide.items.map(i => `<li>${i}</li>`).join('');
+                html = `<div class="slide" data-lang="${l}" style="position:relative;">
+                    <h2>${slide.heading}</h2>
+                    <ul>${items}</ul>
+                    ${footer(l)}
+                </div>`;
+            } else if (slide.type === 'numbered') {
+                const items = slide.items.map(i => `<li>${i}</li>`).join('');
+                html = `<div class="slide" data-lang="${l}" style="position:relative;">
+                    <h2>${slide.heading}</h2>
+                    <ol>${items}</ol>
+                    ${footer(l)}
+                </div>`;
+            } else if (slide.type === 'table') {
+                const ths = slide.cols.map(col => `<th>${col}</th>`).join('');
+                const trs = slide.rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
+                html = `<div class="slide" data-lang="${l}" style="position:relative;">
+                    <h2>${slide.heading}</h2>
+                    <table><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>
+                    ${footer(l)}
+                </div>`;
+            } else if (slide.type === 'comparison') {
+                const leftPts = slide.left.points.map(p => `<li>${p}</li>`).join('');
+                const rightPts = slide.right.points.map(p => `<li>${p}</li>`).join('');
+                html = `<div class="slide" data-lang="${l}" style="position:relative;">
+                    <h2>${slide.heading}</h2>
+                    <div style="display:flex;gap:32px;justify-content:center;align-items:flex-start;width:100%;max-width:900px;">
+                        <div style="flex:1;text-align:left;">
+                            <p style="font-weight:700;color:#6750a4;margin-bottom:8px;">${slide.left.title}</p>
+                            <ul>${leftPts}</ul>
+                        </div>
+                        <div style="width:2px;background:#e8e0f0;align-self:stretch;"></div>
+                        <div style="flex:1;text-align:left;">
+                            <p style="font-weight:700;color:#6750a4;margin-bottom:8px;">${slide.right.title}</p>
+                            <ul>${rightPts}</ul>
+                        </div>
+                    </div>
+                    ${footer(l)}
+                </div>`;
+            } else if (slide.type === 'faq') {
+                const faqs = slide.faqs.map(faq => `
+                    <div style="margin-bottom:14px;text-align:left;max-width:700px;margin-left:auto;margin-right:auto;">
+                        <p style="font-weight:700;color:#1c1b1f;margin-bottom:4px;">${faq.q}</p>
+                        <p style="font-size:clamp(13px,1.4vw,16px);margin-bottom:0;">${faq.a}</p>
+                    </div>`).join('');
+                html = `<div class="slide" data-lang="${l}" style="position:relative;">
+                    <h2>${slide.heading}</h2>
+                    ${faqs}
+                    ${footer(l)}
+                </div>`;
+            } else if (slide.type === 'cta') {
+                html = `<div class="slide title" data-lang="${l}" style="position:relative;">
+                    <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                    <h2>${slide.h2}</h2>
+                    <p>${slide.body}</p>
+                    <a href="${slide.href}" target="_blank" rel="noopener" style="display:inline-block;margin-top:20px;background:#6750a4;color:white;padding:12px 28px;border-radius:8px;font-weight:700;font-size:18px;text-decoration:none;border:none;">${slide.cta}</a>
+                    ${footer(l)}
+                </div>`;
+            }
+
+            return html;
+        }
+
+        function buildPresentation() {
+            lang = getLang();
+            const c = CONTENT[lang] || CONTENT.en;
+            const container = document.getElementById('slides-container');
+            container.innerHTML = '';
+
+            c.slides.forEach((slide, index) => {
+                const div = document.createElement('div');
+                div.innerHTML = renderSlide(slide, lang, index);
+                const el = div.firstElementChild;
+                if (index !== 0) el.classList.remove('active');
+                else el.classList.add('active');
+                container.appendChild(el);
+            });
+
+            document.getElementById('header-title').textContent = c.title;
+            document.getElementById('back-link').href = `${ARTICLE_URL}?lang=${lang}`;
+            document.getElementById('totalSlides').textContent = c.slides.length;
+            document.getElementById('currentSlide').textContent = 1;
+            currentSlideIndex = 0;
+            updateButtons();
+        }
+
+        function changeSlide(delta) {
+            const lang2 = getLang();
+            const c = CONTENT[lang2] || CONTENT.en;
+            const slides = document.querySelectorAll('#slides-container .slide');
+            if (slides.length === 0) return;
+
+            slides[currentSlideIndex].classList.remove('active');
+            currentSlideIndex = Math.max(0, Math.min(currentSlideIndex + delta, slides.length - 1));
+            slides[currentSlideIndex].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+            updateButtons();
+        }
+
+        function updateButtons() {
+            const lang2 = getLang();
+            const c = CONTENT[lang2] || CONTENT.en;
+            const total = c.slides.length;
+            document.getElementById('prevBtn').disabled = currentSlideIndex === 0;
+            document.getElementById('nextBtn').disabled = currentSlideIndex === total - 1;
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changeSlide(1);
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+        });
+
+        window.addEventListener('beforeprint', function() {
+            document.querySelectorAll('#slides-container .slide').forEach(s => s.classList.add('active'));
+        });
+
+        window.addEventListener('afterprint', function() {
+            const slides = document.querySelectorAll('#slides-container .slide');
+            slides.forEach((s, i) => {
+                s.classList.remove('active');
+                if (i === currentSlideIndex) s.classList.add('active');
+            });
+        });
+
+        buildPresentation();
+    </script>
+</body>
+</html>
