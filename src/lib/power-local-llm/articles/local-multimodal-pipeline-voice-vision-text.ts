@@ -705,7 +705,37 @@ if __name__ == "__main__":
       '2026年にローカルマルチモーダルAIパイプラインを構築：音声入力にwhisper.cpp、ビジョンにLLaVA 1.6、テキスト推論にOllama、音声出力にPiper TTS。アーキテクチャ、ハードウェア階層、ユースケース、Pythonオーケストレーターコード。完全オフライン対応。',
     twitterDescription:
       'ローカルマルチモーダルAI 2026：Whisper STT + LLaVAビジョン + Ollama LLM + Piper TTSを1つのオフラインパイプラインに統合。アーキテクチャガイド、ハードウェア階層、Pythonコード。',
-    sections: {},
+    readTime: '18分で読める',
+    educationalLevel: 'Advanced',
+    sections: {
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'Llama 3.2 Vision だけで音声、ビジョン、テキストを処理できますか？', a: 'はい。Llama 3.2 Vision 11B は画像とテキストを処理できます。これを単一モデルとして使用し、whisper.cpp を音声入力に、Piper を出力に追加します。VRAM を ~15 GB から ~8 GB に削減します。' },
+          { q: 'ビジョンとテキスト LLM を一緒に実行すべきですか、それとも別々に？', a: '12+ GB VRAM がある場合は一緒に。8 GB の場合は別々（スワップ）— VLM をロード、説明を保存、アンロード、LLM をロード。別々は ~2–3 秒のレイテンシオーバーヘッドですが、VRAM を節約。' },
+          { q: 'ビジョンモデルの選択：LLaVA 1.6、Qwen2-VL、Llama 3.2 Vision？', a: 'LLaVA 1.6：高速（~1秒）、十分な精度。Qwen2-VL：より良い画像理解（~1.5秒）。Llama 3.2 Vision：最高品質、ビジョン+テキスト推論を統合（~2秒）。' },
+          { q: 'パイプラインはリアルタイム音声アシスタントに十分に高速ですか？', a '最適化されていれば はい。whisper ~1–2秒、LLM ~1–2秒、TTS ~0.1秒 = 計 ~2–4秒。クラウド API より高速ですが、人間の会話ほど同期的ではありません。非同期アシスタントに最適。' },
+          { q: 'RTX 3060 12GB でパイプラインを実行できますか？', a: '4つ全て同時実行は不可（~15 GB 必要）。解決策：Llama 3.2 Vision 11B（8 GB）のみ、または INT4 量子化（~10 GB）。入力タイプに応じてモデルをスワップ。' },
+          { q: '医療・法的用途で GDPR 準拠ですか？', a: '設計上準拠 — ゼロネットワークトラフィック。Wireshark で検証。ストレージに注意 — 会話履歴やファイルを保存する場合は保持期間（GDPR 記事 5）を守る。' },
+          { q: 'パイプラインにウェブ検索を追加できますか？', a: 'はい。オーケストレーターとテキスト LLM の間に検索ステップを追加。DuckDuckGo API またはローカル RAG を使用。0.5–2 秒のレイテンシを追加するが、時事問題に対応可能。' },
+          { q: '24/7 で消費する電力量は？', a: 'アイドル時：~50–80 W（GPU）、~15–25 W（Mac M5 Pro）。処理中：~150–300 W（GPU）、~30–60 W（Mac）。コスト：月 $5–15（Mac）または $15–35（デスクトップ）。' },
+          { q: '外部 GPU なしのラップトップで実行できますか？', a: 'CPU のみ：非常に遅い（~30+ 秒レイテンシ）。統合 GPU（Metal、Arc）：良好だが理想的ではない。推奨：外部 GPU またはクラウド。' },
+          { q: '専門 VLM vs 汎用モデル？', a: '専門（LLaVA）：より高速、より軽量。汎用（Llama 3.2 Vision）：複雑なシーン向け。実践的：専門 + 推論 LLM が大規模汎用モデル単体より優れた結果。' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'ソース',
+        items: [
+          '[Ollama](https://ollama.ai) — ローカル LLM オーケストレーション、ビジョンモデルとチャット API をサポート。',
+          '[whisper.cpp on GitHub](https://github.com/ggerganov/whisper.cpp) — 高速 CPU ベース音声認識、Metal/CUDA アクセラレーション。',
+          '[LLaVA on Hugging Face](https://huggingface.co/liuhaotian/llava-v1.6-7b-hf) — ビジョン言語モデル、オープンソース。',
+          '[Llama 3.2 Vision](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision) — マルチモーダル LLM、11B。',
+          '[Piper TTS on GitHub](https://github.com/rhasspy/piper) — ローカル テキスト音声変換、高速。',
+        ],
+      },
+    },
   },
 
   zh: {
@@ -722,6 +752,36 @@ if __name__ == "__main__":
       '2026年构建本地多模态AI流水线：语音输入用whisper.cpp，视觉用LLaVA 1.6，文本推理用Ollama，语音输出用Piper TTS。包含架构设计、硬件配置层级、使用场景和Python编排器代码。完全离线运行。',
     twitterDescription:
       '本地多模态AI 2026：将Whisper STT + LLaVA视觉 + Ollama LLM + Piper TTS整合成一个离线流水线。架构指南、硬件层级和Python代码。',
-    sections: {},
+    readTime: '阅读约18分钟',
+    educationalLevel: 'Advanced',
+    sections: {
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: '我能仅用 Llama 3.2 Vision 处理语音、视觉和文本吗？', a: '可以。Llama 3.2 Vision 11B 可以处理图像和文本。将其用作单一模型，为语音输入添加 whisper.cpp，为输出添加 Piper。将 VRAM 从 ~15 GB 减少到 ~8 GB。缺点：没有专门的 VLM 进行复杂图像分析。' },
+          { q: '我应该一起运行视觉和文本 LLM，还是分别运行？', a: '如果有 12+ GB VRAM，一起运行。如果有 8 GB，分别运行（交换）— 加载 VLM、存储描述、卸载、加载 LLM。分别运行会增加 ~2–3 秒延迟，但节省 VRAM。对于交互式应用，一起更好。' },
+          { q: '选择哪个视觉模型：LLaVA 1.6、Qwen2-VL 还是 Llama 3.2 Vision？', a: 'LLaVA 1.6：快速（~1秒），精度足够。Qwen2-VL：更好的图像理解（~1.5秒）。Llama 3.2 Vision：最高质量，整合视觉+文本推理（~2秒）。速度优先：LLaVA。质量优先：Llama 3.2 Vision。' },
+          { q: '流水线对实时语音助手足够快吗？', a: '如果优化得当，可以。whisper ~1–2秒，LLM ~1–2秒，TTS ~0.1秒 = 总计 ~2–4秒。比许多云 API 快，但不像人类对话那样同步。对异步助手完美。' },
+          { q: '我能在 RTX 3060 12GB 上运行流水线吗？', a: '不能同时运行全部四个（需要 ~15 GB）。解决方案：仅使用 Llama 3.2 Vision 11B（8 GB）或量化为 INT4（~10 GB）。或根据输入类型交换模型。' },
+          { q: '用于医疗或法律用途符合 GDPR 吗？', a: '设计上符合 — 零网络流量。用 Wireshark 验证。注意存储 — 如果保存对话历史或文件，遵守保留期限（GDPR 第 5 条）。' },
+          { q: '我能给流水线添加网络搜索吗？', a: '可以。在编排器和文本 LLM 之间添加搜索步骤。使用 DuckDuckGo API 或本地 RAG。增加 0.5–2 秒延迟，但支持时事问题。' },
+          { q: '24/7 运行消耗多少电力？', a: '空闲时：~50–80 W（GPU）、~15–25 W（Mac M5 Pro）。处理中：~150–300 W（GPU）、~30–60 W（Mac）。成本：月 $5–15（Mac）或 $15–35（桌面）。' },
+          { q: '我能在没有外部 GPU 的笔记本上运行它吗？', a: '仅 CPU：非常慢（~30+ 秒延迟）。集成 GPU（Metal、Arc）：更好但非理想。建议：外部 GPU 或云替代方案。' },
+          { q: '专门 VLM vs 通用模型？', a: '专门（LLaVA）：更快、更轻。通用（Llama 3.2 Vision）：复杂场景更好。实际上：专门 + 推理 LLM 通常比大型通用模型单独产生更好结果。' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '资源',
+        items: [
+          '[Ollama](https://ollama.ai) — 本地 LLM 编排，支持视觉模型和聊天 API。',
+          '[whisper.cpp on GitHub](https://github.com/ggerganov/whisper.cpp) — 快速 CPU 基础语音识别，Metal/CUDA 加速。',
+          '[LLaVA on Hugging Face](https://huggingface.co/liuhaotian/llava-v1.6-7b-hf) — 视觉语言模型，开源。',
+          '[Llama 3.2 Vision](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision) — 多模态 LLM，11B。',
+          '[Piper TTS on GitHub](https://github.com/rhasspy/piper) — 本地文本转语音，快速。',
+        ],
+      },
+    },
   },
 }
