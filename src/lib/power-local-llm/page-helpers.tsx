@@ -678,6 +678,21 @@ const HUB_THEMES: Array<{
       'replace-grammarly-notion-ai-with-local',
     ],
   },
+  {
+    id: 'voice-speech-multimodal',
+    badge: 'Voice, Speech & Multimodal',
+    question: 'Voice, Speech & Multimodal: How Do You Build a Fully Offline Voice and Vision Pipeline?',
+    description: 'Local STT with whisper.cpp and faster-whisper. Local TTS with Piper, Coqui, and XTTS v2. Vision models (LLaVA, Llama 3.2 Vision) via Ollama. Full offline voice assistant builds and multimodal pipelines — no cloud microphone required.',
+    colorBadge: 'bg-violet-50 text-violet-700 border-violet-200',
+    colorDot: 'bg-violet-400',
+    slugs: [
+      'local-whisper-stt-comparison-2026',
+      'local-vision-models-llava-ollama-2026',
+      'local-tts-voice-cloning-piper-coqui-xtts',
+      'build-local-voice-assistant-2026',
+      'local-multimodal-pipeline-voice-vision-text',
+    ],
+  },
 ]
 
 // ─── LOCALIZED HUB CONTENT ────────────────────────────────────────────────
@@ -725,6 +740,11 @@ const HUB_THEME_TEXT_DE: Array<{ badge: string; question: string; description: s
     badge: 'Produktivität & Wissenswerkzeuge',
     question: 'Produktivität: Wie integrieren Sie lokale KI in Ihren Arbeitsalltag?',
     description: 'Obsidian-, Logseq- und Joplin-Integrationen. E-Mail- und Kalender-Automatisierung. Grammarly und Notion AI durch lokale Modelle ersetzen. Der vollständige Personal-Knowledge-Base-Stack für über 10.000 Einträge.',
+  },
+  {
+    badge: 'Sprache, Spracheingabe & Multimodal',
+    question: 'Sprache & Multimodal: Wie bauen Sie eine vollständig offline betriebene Sprach- und Vision-Pipeline?',
+    description: 'Lokale Spracherkennung mit whisper.cpp und faster-whisper. Lokale Sprachsynthese mit Piper, Coqui und XTTS v2. Vision-Modelle (LLaVA, Llama 3.2 Vision) via Ollama. Vollständige Offline-Sprachassistenten und multimodale Pipelines — ohne Cloud-Mikrofon.',
   },
 ]
 
