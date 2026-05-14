@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026 | PromptQuorum</title>
+  <meta name="description" content="Continue.dev, Cline, and Aider compared as local coding agents: edit model, IDE fit, undo, context strategy, and tool-call reliability." />
+  <meta property="og:title" content="Continue.dev vs Cline vs Aider: Local Coding Agent 2026 — PromptQuorum" />
+  <meta property="og:description" content="Three workflows, one local model. Continue.dev for autocomplete, Cline for autonomous agents, Aider for git-native diffs." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f6f4f4; color: #1c1b1f; overflow: hidden;
+    }
+    .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+    .slide {
+      width: 100%; height: 100%; display: none; flex-direction: column;
+      justify-content: center; align-items: center; padding: 32px 48px;
+      text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .slide h1 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+    .slide h2 { font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
+    .slide p { font-size: clamp(14px, 1.6vw, 18px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+    .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+    .slide.title .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+    .slide.title p { font-size: clamp(14px, 1.6vw, 20px); color: #6750a4; font-weight: 500; margin-top: 12px; }
+    .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; transition: all 0.2s; }
+    .slide.title a:hover { color: #7d5260; border-bottom-color: #7d5260; }
+    .slide ul, .slide ol { text-align: left; margin: 10px auto; max-width: 680px; }
+    .slide ul li, .slide ol li { font-size: clamp(13px, 1.4vw, 16px); margin-bottom: 9px; line-height: 1.5; }
+    .slide strong { color: #1c1b1f; font-weight: 700; }
+    table { margin: 10px auto; border-collapse: collapse; font-size: clamp(11px, 1.2vw, 14px); text-align: left; max-width: 96%; }
+    th { background: #6750a4; color: white; padding: 7px 12px; font-weight: 700; border: none; }
+    td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+    tr:hover td { background: #f7f2fa; }
+    .header {
+      padding: 10px 20px; border-bottom: 1px solid #e0e0e0;
+      display: flex; justify-content: space-between; align-items: center;
+      background: white; flex-shrink: 0;
+    }
+    .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+    .header-left img { width: 28px; height: 28px; }
+    .header-links { display: flex; gap: 16px; }
+    .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; transition: color 0.2s; }
+    .header-links a:hover { color: #7d5260; }
+    .content-area { flex: 1; overflow: hidden; }
+    .controls {
+      display: flex; gap: 12px; align-items: center; justify-content: center;
+      padding: 10px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0;
+    }
+    button {
+      background: #6750a4; color: white; border: none; padding: 8px 16px;
+      border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s;
+    }
+    button:hover { background: #7d5260; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+    .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 50px; text-align: center; }
+    @page { size: A4 landscape; margin: 0; }
+    @media (max-width: 640px) {
+      .slide { padding: 20px 16px; }
+      .slide h1 { font-size: clamp(18px, 5vw, 26px); }
+      .slide h2 { font-size: clamp(15px, 4vw, 20px); }
+      .slide p { font-size: 13px; }
+      .slide ul li, .slide ol li { font-size: 12px; margin-bottom: 7px; }
+      table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.8em; }
+      table th, table td { padding: 5px 7px; white-space: nowrap; }
+      .header { padding: 8px 12px; }
+      .header-left span { font-size: 11px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-links { gap: 8px; font-size: 10px; }
+    }
+    @media print {
+      * { margin: 0; padding: 0; }
+      html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; }
+      .header, .controls { display: none !important; }
+      .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
+      .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
+      .slide {
+        display: flex !important; flex-direction: column; justify-content: center; align-items: center;
+        page-break-after: always; break-after: page; width: 100%; height: 210mm;
+        padding: 18mm 22mm; box-sizing: border-box; overflow: visible !important;
+        margin: 0; background: white; color: #1c1b1f; position: relative; counter-increment: page-counter;
+      }
+      .slide::before {
+        content: "https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local";
+        position: absolute; bottom: 12mm; left: 22mm; font-size: 8pt; color: #999;
+      }
+      .slide::after {
+        content: counter(page-counter) " / 14";
+        position: absolute; bottom: 12mm; right: 22mm; font-size: 8pt; color: #999;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Continue.dev vs Cline vs Aider: Best Local Coding Agent 2026</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    var SLUG = 'continue-dev-vs-cline-vs-aider-local';
+    var BASE_URL = 'https://www.promptquorum.com/power-local-llm/' + SLUG;
+
+    const CONTENT = {
+      en: {
+        title: 'Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Continue.dev vs Cline vs Aider',
+            subtitle: 'Three open-source coding harnesses, one local LLM. Not interchangeable — each is built around a different workflow primitive. Pick by workflow first, model second.',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>Continue.dev</strong> is autocomplete-first: VS Code and JetBrains, FIM completions, in-IDE chat sidebar with @-context providers. The open-source Copilot analogue for local models.',
+              '<strong>Cline</strong> is agent-first: VS Code extension, Plan and Act modes, tool-call loop with approval gates at every step. Autonomous multi-file edits.',
+              '<strong>Aider</strong> is git-first: terminal CLI, tree-sitter repo map, search-and-replace diff blocks, every edit committed. Undo is git reset.',
+              'All three speak OpenAI-compatible endpoints. <strong>Ollama</strong> is the smoothest local backend; llama.cpp and vLLM also work.',
+              '<strong>Tool-calling reliability is a model property, not a harness property.</strong> Qwen3-Coder 30B and DeepSeek Coder V3 are reliable in all three; 7B-class models fail in all three.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways (cont.)',
+            items: [
+              '<strong>Context window strategy differs sharply:</strong> Continue.dev uses on-demand index retrieval, Cline streams full file contents (high token usage), Aider uses a tree-sitter repo map + explicit /add.',
+              '<strong>Context budget:</strong> Continue.dev and Aider stay comfortable on 32K-context models. Cline needs 128K for non-trivial multi-file tasks.',
+              '<strong>Pick by editor:</strong> JetBrains → Continue.dev or Aider. Vim/Neovim or SSH → Aider. VS Code + autocomplete-heavy days → Continue.dev. VS Code + multi-file refactors → Cline.',
+              '<strong>Workflow fit dominates outcomes</strong> more than any benchmark. The harness you actually keep open is the one you should pick.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'How the Three Harnesses Compare',
+            columns: ['Feature', 'Continue.dev', 'Cline', 'Aider'],
+            rows: [
+              { 'Feature': 'Primary surface', 'Continue.dev': 'VS Code + JetBrains extension', 'Cline': 'VS Code extension', 'Aider': 'Terminal CLI' },
+              { 'Feature': 'Workflow primitive', 'Continue.dev': 'Autocomplete + in-IDE chat', 'Cline': 'Autonomous agent loop', 'Aider': 'Git-native diff commits' },
+              { 'Feature': 'Multi-file edits', 'Continue.dev': 'Manual (per-file chat)', 'Cline': 'Native (one task, N files)', 'Aider': 'Native (one commit, N files)' },
+              { 'Feature': 'Undo', 'Continue.dev': 'VS Code undo stack', 'Cline': 'Per-edit revert in UI', 'Aider': '/undo (git reset)' },
+              { 'Feature': 'Context min', 'Continue.dev': '32K', 'Cline': '128K recommended', 'Aider': '32K' },
+              { 'Feature': 'Best for', 'Continue.dev': 'Edit-as-you-type, autocomplete', 'Cline': 'Multi-file refactors', 'Aider': 'Reviewable repo-wide changes' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Which One Should You Pick',
+            items: [
+              '<strong>VS Code/JetBrains, want Copilot-style autocomplete</strong> → Continue.dev',
+              '<strong>Want a chat sidebar that reaches into your codebase</strong> → Continue.dev',
+              '<strong>Want an agent that plans a multi-file refactor with approval gates</strong> → Cline',
+              '<strong>Want the model to run commands and read terminal output</strong> → Cline',
+              '<strong>Review changes through git diff and want every edit auto-committed</strong> → Aider',
+              '<strong>Working over SSH or in a terminal-first setup</strong> → Aider',
+              '<strong>Vim/Neovim daily driver</strong> → Aider',
+              '<strong>Still unsure</strong> → Start with Continue.dev; add Aider when you need git-native diffs'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev: The Autocomplete-First Pick',
+            intro: 'The closest open-source analogue to GitHub Copilot for local models.',
+            items: [
+              '<strong>Install:</strong> VS Code Marketplace and JetBrains Marketplace. Config at ~/.continue/config.json.',
+              '<strong>Workflow:</strong> FIM (fill-in-the-middle) autocomplete + in-IDE chat sidebar. Agent mode adds tool-call loops.',
+              '<strong>Local model setup:</strong> native Ollama support in one config block. Run a small model for autocomplete (Qwen2.5-Coder 1.5B) and a larger model for chat (Qwen3-Coder 30B).',
+              '<strong>Context:</strong> TF-IDF + embedding index. @codebase, @file, @folder, @docs, @terminal from the chat panel.',
+              '<strong>Shines at:</strong> keyboard-driven editing inside your IDE, low cognitive overhead per edit, fast feedback loop.',
+              '<strong>Falls short:</strong> multi-file refactors require manual per-file chat drives. Long autonomous tasks are not its native idiom.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Cline: The Autonomous Agent Pick',
+            intro: 'Give it an objective; it plans, reads files, edits, runs commands, and asks you to approve each step.',
+            items: [
+              '<strong>Install:</strong> VS Code Marketplace only (no JetBrains). GUI-driven config inside the extension panel.',
+              '<strong>Workflow:</strong> Plan mode reasons without writing files; Act mode executes with tool calls. Approval gate at every step.',
+              '<strong>Tool surface:</strong> read_file, write_to_file, replace_in_file, execute_command, list_files, search_files, browser_action.',
+              '<strong>Edit model:</strong> full file rewrites for small files; search-and-replace blocks for larger files. Diff shown in panel before each write.',
+              '<strong>Shines at:</strong> multi-file refactors, exploratory bug-hunts, features touching multiple layers.',
+              '<strong>Falls short:</strong> high token consumption (128K recommended). Tool-call reliability degrades sharply on 7B-class models.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Aider: The Git-Native Pick',
+            intro: 'Your repository is the source of truth, not the conversation. Every edit lands as a git commit.',
+            items: [
+              '<strong>Install:</strong> pip install aider-chat or pipx install aider-chat. CLI: aider file1.py file2.py.',
+              '<strong>Workflow:</strong> terminal-first. Prompt → diff → commit. /add and /drop manage in-scope files. /undo reverts the last commit.',
+              '<strong>Local model:</strong> any model via LiteLLM. --model ollama_chat/qwen3-coder:30b is the typical invocation.',
+              '<strong>Context:</strong> tree-sitter repo map (~2K–4K tokens for small repos) + explicitly /add-ed files. /drop removes out-of-scope files.',
+              '<strong>Shines at:</strong> repo-wide changes with full git history; SSH and terminal-first environments; reviewable commits per step.',
+              '<strong>Falls short:</strong> no autocomplete. Diff edit format breaks if the model paraphrases the SEARCH block instead of reproducing it verbatim.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Edit Model: How Each Harness Writes Code',
+            intro: 'Same model, same task — three very different artefacts.',
+            items: [
+              '<strong>Continue.dev:</strong> FIM tokens for autocomplete; chat proposes fenced code block; "Apply" diffs against open file; Cmd+I rewrites selection. Forgiving diff algorithm reconciles small paraphrases.',
+              '<strong>Cline:</strong> every edit is a validated tool call (write_to_file or replace_in_file with SEARCH/REPLACE blocks). Schema validation catches malformed calls; loop retries on failure.',
+              '<strong>Aider:</strong> search-and-replace diff blocks in plain prose. If SEARCH block does not match verbatim, edit is rejected and Aider asks model to retry.',
+              '<strong>Reliability on 7B-class model:</strong> Continue.dev > Aider > Cline. Continue.dev is most forgiving; Cline XML is most brittle on small models.',
+              '<strong>Reliability on 30B+ coding model (Qwen3-Coder 30B, DeepSeek Coder V3):</strong> all three converge. Model has capacity for precise diffs and well-formed tool calls.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Undo, Rollback, and Recovery',
+            intro: 'All three are recoverable; the difference is friction between "this was a mistake" and "the mistake is gone".',
+            items: [
+              '<strong>Continue.dev:</strong> applied edits join VS Code undo stack. Cmd+Z reverts per file. No harness-level "undo whole conversation" command.',
+              '<strong>Cline:</strong> per-edit revert is one click in the agent UI. After task ends, rollback is via git — Cline does not auto-commit, so a long session leaves uncommitted changes.',
+              '<strong>Aider:</strong> /undo reverts the most recent commit. Repeat to walk back further. git reflog recovers anything /undo cannot.',
+              '<strong>Tip for Cline sessions:</strong> run git stash before a non-trivial task. If agent goes off the rails, git stash drop cleans up instantly.',
+              '<strong>Aider\'s advantage:</strong> a 20-minute autonomous session leaves a clean, reviewable commit log. Each commit corresponds to one conversation step.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Context Window Strategy',
+            intro: 'The three harnesses spend tokens very differently — critical on 32K-context models.',
+            items: [
+              '<strong>Continue.dev:</strong> TF-IDF + embedding index. Only chunks relevant to the current message land in the prompt. Token usage scales with what you pin, not repo size.',
+              '<strong>Cline:</strong> streams full file contents as the agent reads. A 500-line file = ~3K–5K tokens. 8 files read = 25K–40K tokens before reasoning. Minimum 32K; 128K recommended.',
+              '<strong>Aider:</strong> tree-sitter repo map (~2K tokens default, capped via --map-tokens) + /add-ed files. Map is definitions only — scales far better than streaming files.',
+              '<strong>On 32K-context model:</strong> Continue.dev and Aider comfortable on most repos; Cline hits pressure past 5–6 files.',
+              '<strong>On 128K-context model:</strong> all three comfortable. Workflow primitive becomes the deciding factor.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Tool Call Reliability and IDE Integration',
+            items: [
+              '<strong>Tool-call failures are model failures, not harness failures.</strong> Same model, same failure mode across all three harnesses.',
+              '<strong>Reliable models (2026):</strong> Qwen3-Coder 30B (best on Cline XML), DeepSeek Coder V3 (large context, strong multi-step), Codestral 22B (fast, smaller plan horizon).',
+              '<strong>Models that struggle:</strong> anything below 7B; general-purpose models under 13B without coding fine-tunes; quantizations harsher than Q4_K_M.',
+              '<strong>Continue.dev</strong> — VS Code and JetBrains (full feature parity). Cursor users install the VS Code extension.',
+              '<strong>Cline</strong> — VS Code only. JetBrains users cannot use Cline.',
+              '<strong>Aider</strong> — terminal-first; pairs with any editor. Natural fit for Vim/Neovim and SSH workflows.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Workflow Fit by Use Case',
+            columns: ['Use Case', 'Best Fit'],
+            rows: [
+              { 'Use Case': 'Adding a function with autocomplete', 'Best Fit': 'Continue.dev — FIM is the natural primitive' },
+              { 'Use Case': '"What does this function do" without leaving editor', 'Best Fit': 'Continue.dev — @file in-IDE chat' },
+              { 'Use Case': 'Refactoring a feature across 5+ files', 'Best Fit': 'Cline — native multi-file + approval gates' },
+              { 'Use Case': '"Find why this test is flaky" bug-hunt', 'Best Fit': 'Cline — agent runs commands and reads logs' },
+              { 'Use Case': 'Repo-wide rename with reviewable commits', 'Best Fit': 'Aider — every edit becomes a commit' },
+              { 'Use Case': 'SSH onto a server, no IDE', 'Best Fit': 'Aider — terminal-only by design' },
+              { 'Use Case': 'JetBrains IDE user', 'Best Fit': 'Continue.dev or Aider (Cline is VS Code-only)' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes',
+            items: [
+              '<strong>Picking the harness before the model.</strong> A 30B coding-tuned model in any harness beats a 7B general model in the "best" harness. Model first, harness second.',
+              '<strong>Using one model for both autocomplete and chat in Continue.dev.</strong> Autocomplete needs sub-200ms latency. Run a small autocomplete model + a larger chat model.',
+              '<strong>Leaving Cline auto-approve fully open.</strong> execute_command auto-approved can do real damage. Gate destructive tools until you trust the model.',
+              '<strong>Using Aider on a model that paraphrases code.</strong> Use a coding-tuned 22B+ model (Qwen3-Coder, DeepSeek Coder, Codestral) for reliable diff edits.',
+              '<strong>Switching harnesses to fix a model problem.</strong> Tool-call failures in Cline will fail in Continue.dev Agent mode for the same reason. Diagnose the model.',
+              '<strong>Running Cline against a 32K-context model on multi-file tasks.</strong> Token budget blown mid-task. Use 128K for non-trivial Cline work.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Compare AI Model Outputs With PromptQuorum',
+            body: 'PromptQuorum dispatches the same prompt to multiple AI models simultaneously and shows all responses side-by-side — ideal for evaluating coding model outputs and picking the best for your harness.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Continue.dev vs Cline vs Aider: Der beste lokale Coding Agent in 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Continue.dev vs Cline vs Aider',
+            subtitle: 'Drei Open-Source-Coding-Harnesses, ein lokales LLM. Nicht austauschbar — jeder ist um ein anderes Workflow-Primitive aufgebaut. Erst nach Workflow, dann nach Modell wählen.',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              '<strong>Continue.dev</strong> ist Autocomplete-first: VS Code und JetBrains, FIM-Vervollständigungen, In-IDE-Chat-Sidebar mit @-Kontext-Providern. Die Open-Source-Alternative zu Copilot für lokale Modelle.',
+              '<strong>Cline</strong> ist Agent-first: VS Code-Extension, Plan- und Act-Modi, Tool-Call-Schleife mit Genehmigungsstufen bei jedem Schritt. Autonome Multi-Datei-Bearbeitungen.',
+              '<strong>Aider</strong> ist Git-first: Terminal-CLI, Tree-Sitter-Repo-Map, Such-und-Ersetze-Diff-Blöcke, jede Bearbeitung wird committet. Rückgängig machen über git reset.',
+              'Alle drei sprechen OpenAI-kompatible Endpunkte. <strong>Ollama</strong> ist das einfachste lokale Backend; llama.cpp und vLLM funktionieren ebenfalls.',
+              '<strong>Tool-Call-Zuverlässigkeit ist eine Modelleigenschaft, keine Harness-Eigenschaft.</strong> Qwen3-Coder 30B und DeepSeek Coder V3 sind in allen dreien zuverlässig; 7B-Modelle versagen in allen dreien.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse (Forts.)',
+            items: [
+              '<strong>Context-Window-Strategie unterscheidet sich stark:</strong> Continue.dev nutzt On-Demand-Index-Abruf, Cline streamt vollständige Dateiinhalte (hoher Token-Verbrauch), Aider nutzt Tree-Sitter-Repo-Map + explizites /add.',
+              '<strong>Context-Budget:</strong> Continue.dev und Aider bleiben mit 32K-Context-Modellen komfortabel. Cline benötigt 128K für nicht-triviale Multi-Datei-Aufgaben.',
+              '<strong>Nach Editor wählen:</strong> JetBrains → Continue.dev oder Aider. Vim/Neovim oder SSH → Aider. VS Code + Autocomplete-intensive Tage → Continue.dev. VS Code + Multi-Datei-Refactorings → Cline.',
+              '<strong>Workflow-Fit dominiert Ergebnisse</strong> mehr als jedes Benchmark. Der Harness, den Sie tatsächlich offen halten, ist der richtige.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Vergleich der drei Harnesses',
+            columns: ['Merkmal', 'Continue.dev', 'Cline', 'Aider'],
+            rows: [
+              { 'Merkmal': 'Primäre Oberfläche', 'Continue.dev': 'VS Code + JetBrains', 'Cline': 'VS Code Extension', 'Aider': 'Terminal CLI' },
+              { 'Merkmal': 'Workflow-Primitive', 'Continue.dev': 'Autocomplete + In-IDE-Chat', 'Cline': 'Autonome Agent-Schleife', 'Aider': 'Git-native Diff-Commits' },
+              { 'Merkmal': 'Multi-Datei-Bearbeitungen', 'Continue.dev': 'Manuell (per-Datei-Chat)', 'Cline': 'Nativ (eine Aufgabe, N Dateien)', 'Aider': 'Nativ (ein Commit, N Dateien)' },
+              { 'Merkmal': 'Rückgängig', 'Continue.dev': 'VS Code Undo-Stack', 'Cline': 'Per-Edit-Revert in UI', 'Aider': '/undo (git reset)' },
+              { 'Merkmal': 'Context Minimum', 'Continue.dev': '32K', 'Cline': '128K empfohlen', 'Aider': '32K' },
+              { 'Merkmal': 'Geeignet für', 'Continue.dev': 'Edit-as-you-type, Autocomplete', 'Cline': 'Multi-Datei-Refactorings', 'Aider': 'Überprüfbare Repo-Änderungen' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Den Richtigen Wählen',
+            items: [
+              '<strong>VS Code/JetBrains, Copilot-ähnliche Autocomplete gewünscht</strong> → Continue.dev',
+              '<strong>Chat-Sidebar, die ins Codebase reicht</strong> → Continue.dev',
+              '<strong>Agent, der Multi-Datei-Refactoring plant, mit Genehmigungsstufen</strong> → Cline',
+              '<strong>Modell soll Befehle ausführen und Terminal-Output lesen</strong> → Cline',
+              '<strong>Änderungen über git diff reviewen, jede Bearbeitung auto-committet</strong> → Aider',
+              '<strong>Über SSH oder terminal-first arbeiten</strong> → Aider',
+              '<strong>Vim/Neovim täglich</strong> → Aider',
+              '<strong>Noch unsicher</strong> → Mit Continue.dev starten; Aider hinzufügen, wenn Git-native Diffs benötigt'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev: Der Autocomplete-First-Pick',
+            intro: 'Die nächste Open-Source-Alternative zu GitHub Copilot für lokale Modelle.',
+            items: [
+              '<strong>Installation:</strong> VS Code Marketplace und JetBrains Marketplace. Konfiguration unter ~/.continue/config.json.',
+              '<strong>Workflow:</strong> FIM-Autocomplete + In-IDE-Chat-Sidebar. Agent-Modus fügt Tool-Call-Schleifen hinzu.',
+              '<strong>Lokale Modelle:</strong> natives Ollama-Support in einem Config-Block. Kleines Modell für Autocomplete (Qwen2.5-Coder 1.5B) + größeres für Chat (Qwen3-Coder 30B).',
+              '<strong>Kontext:</strong> TF-IDF + Embedding-Index. @codebase, @file, @folder, @docs, @terminal im Chat-Panel.',
+              '<strong>Stärken:</strong> Tastaturgesteuertes Editieren im bekannten IDE, geringer kognitiver Aufwand pro Edit, schneller Feedback-Loop.',
+              '<strong>Schwächen:</strong> Multi-Datei-Refactorings erfordern manuelle Steuerung pro Datei. Lange autonome Aufgaben sind nicht das native Idiom.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Cline: Der Autonome-Agent-Pick',
+            intro: 'Ziel geben, Cline plant, liest Dateien, bearbeitet, führt Befehle aus, bittet bei jedem Schritt um Genehmigung.',
+            items: [
+              '<strong>Installation:</strong> Nur VS Code Marketplace (kein JetBrains). GUI-gesteuerte Konfiguration im Extension-Panel.',
+              '<strong>Workflow:</strong> Plan-Modus denkt ohne Dateien zu schreiben; Act-Modus führt mit Tool-Calls aus. Genehmigungsstufe bei jedem Schritt.',
+              '<strong>Tool-Oberfläche:</strong> read_file, write_to_file, replace_in_file, execute_command, list_files, search_files, browser_action.',
+              '<strong>Edit-Modell:</strong> vollständige Dateiumschreibung für kleine Dateien; Such-und-Ersetze-Blöcke für größere. Diff im Panel vor jedem Schreiben.',
+              '<strong>Stärken:</strong> Multi-Datei-Refactorings, explorative Bug-Jagden, Features die mehrere Schichten berühren.',
+              '<strong>Schwächen:</strong> hoher Token-Verbrauch (128K empfohlen). Tool-Call-Zuverlässigkeit fällt bei 7B-Modellen stark ab.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Aider: Der Git-Native-Pick',
+            intro: 'Das Repository ist die Quelle der Wahrheit. Jede Bearbeitung wird als Git-Commit gespeichert.',
+            items: [
+              '<strong>Installation:</strong> pip install aider-chat oder pipx install aider-chat. CLI: aider datei1.py datei2.py.',
+              '<strong>Workflow:</strong> Terminal-first. Prompt → Diff → Commit. /add und /drop verwalten die Dateien im Scope. /undo revertiert den letzten Commit.',
+              '<strong>Lokales Modell:</strong> jedes Modell über LiteLLM. --model ollama_chat/qwen3-coder:30b ist die typische lokale Variante.',
+              '<strong>Kontext:</strong> Tree-Sitter-Repo-Map (~2K–4K Tokens für kleine Repos) + explizit /add-te Dateien.',
+              '<strong>Stärken:</strong> repo-weite Änderungen mit vollständiger Git-Historie; SSH- und Terminal-first-Umgebungen; jeder Commit entspricht einem Gesprächsschritt.',
+              '<strong>Schwächen:</strong> kein Autocomplete. Diff-Bearbeitungsformat bricht, wenn das Modell den SEARCH-Block paraphrasiert statt ihn verbatim reproduziert.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Edit-Modell und Kontext-Strategie',
+            items: [
+              '<strong>Continue.dev:</strong> FIM für Autocomplete; Chat schlägt Code-Block vor; "Apply" vergleicht mit offener Datei. Vergebender Diff-Algorithmus toleriert kleine Paraphrasen.',
+              '<strong>Cline:</strong> jede Bearbeitung ist ein validierter Tool-Call. Schema-Validierung fängt fehlerhafte Calls ab; Schleife wiederholt bei Fehler.',
+              '<strong>Aider:</strong> Such-und-Ersetze-Blöcke in Prosa. Wenn SEARCH-Block nicht verbatim übereinstimmt, wird die Bearbeitung abgelehnt.',
+              '<strong>Zuverlässigkeit auf 7B-Modell:</strong> Continue.dev > Aider > Cline. Continue.dev vergibt am meisten; Cline-XML am anfälligsten.',
+              '<strong>Context auf 32K-Modell:</strong> Continue.dev und Aider komfortabel; Cline gerät ab 5–6 Dateien unter Druck.',
+              '<strong>Context auf 128K-Modell:</strong> alle drei komfortabel — Workflow-Primitive entscheidet.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Rückgängig, Rollback und IDE-Integration',
+            items: [
+              '<strong>Continue.dev:</strong> Bearbeitungen im VS Code Undo-Stack. Cmd+Z revertiert pro Datei. Kein harness-weites "Konversation rückgängig machen".',
+              '<strong>Cline:</strong> Per-Edit-Revert ist ein Klick in der Agent-UI. Nach Aufgabenende: Rollback über git — Cline committet nicht automatisch.',
+              '<strong>Aider:</strong> /undo revertiert den jüngsten Commit. Wiederholen für weitere Schritte. git reflog rettet alles was /undo nicht kann.',
+              '<strong>Continue.dev:</strong> VS Code und JetBrains (vollständige Funktionsparität).',
+              '<strong>Cline:</strong> nur VS Code. JetBrains-Nutzer können Cline nicht verwenden.',
+              '<strong>Aider:</strong> Terminal-first, mit jedem Editor. Natürlicher Fit für Vim/Neovim und SSH.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Workflow-Fit nach Anwendungsfall',
+            columns: ['Anwendungsfall', 'Beste Wahl'],
+            rows: [
+              { 'Anwendungsfall': 'Funktion mit Autocomplete hinzufügen', 'Beste Wahl': 'Continue.dev — FIM ist das natürliche Primitive' },
+              { 'Anwendungsfall': '"Was macht diese Funktion" ohne Editor zu verlassen', 'Beste Wahl': 'Continue.dev — @file In-IDE-Chat' },
+              { 'Anwendungsfall': 'Feature über 5+ Dateien refactorn', 'Beste Wahl': 'Cline — nativ Multi-Datei + Genehmigungsstufen' },
+              { 'Anwendungsfall': '"Warum ist dieser Test flaky" Bug-Jagd', 'Beste Wahl': 'Cline — Agent führt Befehle aus, liest Logs' },
+              { 'Anwendungsfall': 'Repo-weites Rename mit überprüfbaren Commits', 'Beste Wahl': 'Aider — jede Bearbeitung wird Commit' },
+              { 'Anwendungsfall': 'SSH-Arbeit ohne IDE', 'Beste Wahl': 'Aider — terminal-only by design' },
+              { 'Anwendungsfall': 'JetBrains-IDE-Nutzer', 'Beste Wahl': 'Continue.dev oder Aider (Cline ist VS Code-only)' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Fehler',
+            items: [
+              '<strong>Harness vor Modell wählen.</strong> 30B-Coding-Modell in jedem Harness schlägt 7B-Allgemeinmodell im "besten" Harness. Modell zuerst, Harness zweite Entscheidung.',
+              '<strong>Ein Modell für Autocomplete und Chat in Continue.dev verwenden.</strong> Autocomplete braucht unter 200 ms Latenz. Kleines Autocomplete-Modell + größeres Chat-Modell betreiben.',
+              '<strong>Cline Auto-Approve vollständig offen lassen.</strong> execute_command auto-approved kann echten Schaden anrichten. Destruktive Tools absichern.',
+              '<strong>Aider mit einem Modell verwenden, das Code paraphrasiert.</strong> Coding-tuned 22B+ Modell verwenden (Qwen3-Coder, DeepSeek Coder, Codestral) für zuverlässige Diff-Bearbeitungen.',
+              '<strong>Harness wechseln um ein Modellproblem zu lösen.</strong> Tool-Call-Fehler in Cline werden aus demselben Grund auch in Continue.dev\'s Agent-Modus fehlschlagen. Modell zuerst diagnostizieren.',
+              '<strong>Cline gegen 32K-Context-Modell auf Multi-Datei-Aufgaben.</strong> Token-Budget wird mid-task gesprengt. 128K für nicht-triviale Cline-Arbeit verwenden.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'KI-Modellausgaben mit PromptQuorum vergleichen',
+            body: 'PromptQuorum sendet denselben Prompt gleichzeitig an mehrere KI-Modelle und zeigt alle Antworten nebeneinander — ideal zum Evaluieren von Coding-Modell-Ausgaben.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Continue.dev vs Cline vs Aider : Meilleur agent de codage local 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Continue.dev vs Cline vs Aider',
+            subtitle: "Trois outils de codage open-source, un LLM local. Pas interchangeables — chacun est construit autour d'une primitive de flux de travail différente. Choisissez d'abord selon le workflow.",
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              "<strong>Continue.dev</strong> est autocomplete-first : VS Code et JetBrains, complétions FIM, panneau de chat in-IDE avec fournisseurs de contexte @. L'alternative open-source à Copilot pour les modèles locaux.",
+              "<strong>Cline</strong> est agent-first : extension VS Code, modes Plan et Act, boucle d'appel d'outils avec portes d'approbation à chaque étape. Éditions multi-fichiers autonomes.",
+              '<strong>Aider</strong> est git-first : CLI terminal, repo map tree-sitter, blocs de diff recherche-et-remplacement, chaque édition commitée. Annuler = git reset.',
+              "Tous trois parlent aux endpoints compatibles OpenAI. <strong>Ollama</strong> est le backend local le plus simple ; llama.cpp et vLLM fonctionnent aussi.",
+              "<strong>La fiabilité des tool calls est une propriété du modèle, pas du harness.</strong> Qwen3-Coder 30B et DeepSeek Coder V3 sont fiables dans les trois ; les modèles 7B échouent dans les trois."
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Points clés (suite)',
+            items: [
+              "<strong>La stratégie de fenêtre de contexte diffère fortement :</strong> Continue.dev utilise la récupération d'index à la demande, Cline streame le contenu complet des fichiers (haute consommation de tokens), Aider utilise la repo map tree-sitter + /add explicite.",
+              '<strong>Budget contexte :</strong> Continue.dev et Aider restent confortables sur des modèles 32K. Cline nécessite 128K pour les tâches multi-fichiers non triviales.',
+              "<strong>Choisir par éditeur :</strong> JetBrains → Continue.dev ou Aider. Vim/Neovim ou SSH → Aider. VS Code + journées autocomplete-intensives → Continue.dev. VS Code + refactors multi-fichiers → Cline.",
+              "<strong>L'adéquation au workflow domine les résultats</strong> plus que tout benchmark. Le harness que vous gardez vraiment ouvert est celui qu'il faut choisir."
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Comparaison des trois harnesses',
+            columns: ['Fonctionnalité', 'Continue.dev', 'Cline', 'Aider'],
+            rows: [
+              { 'Fonctionnalité': 'Surface principale', 'Continue.dev': 'VS Code + JetBrains', 'Cline': 'Extension VS Code', 'Aider': 'CLI terminal' },
+              { 'Fonctionnalité': 'Primitive de workflow', 'Continue.dev': 'Autocomplete + chat in-IDE', 'Cline': "Boucle d'agent autonome", 'Aider': 'Commits diff natifs Git' },
+              { 'Fonctionnalité': 'Éditions multi-fichiers', 'Continue.dev': 'Manuel (chat par fichier)', 'Cline': 'Natif (une tâche, N fichiers)', 'Aider': 'Natif (un commit, N fichiers)' },
+              { 'Fonctionnalité': 'Annuler', 'Continue.dev': 'Pile undo VS Code', 'Cline': 'Revert par édition dans UI', 'Aider': '/undo (git reset)' },
+              { 'Fonctionnalité': 'Contexte minimum', 'Continue.dev': '32K', 'Cline': '128K recommandé', 'Aider': '32K' },
+              { 'Fonctionnalité': 'Idéal pour', 'Continue.dev': 'Edit-as-you-type, autocomplete', 'Cline': 'Refactors multi-fichiers', 'Aider': 'Changements repo révisables' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Lequel choisir',
+            items: [
+              '<strong>VS Code/JetBrains, autocomplete style Copilot souhaité</strong> → Continue.dev',
+              '<strong>Panneau de chat qui accède à votre codebase</strong> → Continue.dev',
+              "<strong>Agent qui planifie un refactor multi-fichiers avec portes d'approbation</strong> → Cline",
+              '<strong>Modèle capable de lancer des commandes et lire la sortie terminal</strong> → Cline',
+              '<strong>Réviser les changements via git diff, chaque édition auto-commitée</strong> → Aider',
+              '<strong>Travailler en SSH ou en mode terminal-first</strong> → Aider',
+              '<strong>Utilisateur Vim/Neovim au quotidien</strong> → Aider',
+              "<strong>Encore indécis</strong> → Commencer avec Continue.dev ; ajouter Aider quand les diffs natifs Git sont nécessaires"
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev : le choix autocomplete-first',
+            intro: "L'alternative open-source la plus proche de GitHub Copilot pour les modèles locaux.",
+            items: [
+              '<strong>Installation :</strong> VS Code Marketplace et JetBrains Marketplace. Config dans ~/.continue/config.json.',
+              '<strong>Workflow :</strong> autocomplete FIM (fill-in-the-middle) + panneau de chat in-IDE. Le mode Agent ajoute des boucles tool-call.',
+              '<strong>Modèle local :</strong> support Ollama natif en un bloc de config. Petit modèle pour autocomplete (Qwen2.5-Coder 1.5B) + grand modèle pour chat (Qwen3-Coder 30B).',
+              '<strong>Contexte :</strong> index TF-IDF + embeddings. @codebase, @file, @folder, @docs, @terminal depuis le panneau de chat.',
+              "<strong>Points forts :</strong> édition pilotée au clavier dans votre IDE, faible surcharge cognitive par édition, boucle de retour rapide.",
+              '<strong>Points faibles :</strong> refactors multi-fichiers nécessitent un pilotage manuel par fichier. Les tâches autonomes longues ne sont pas son idiome natif.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: "Cline : le choix agent autonome",
+            intro: "Donnez-lui un objectif ; il planifie, lit des fichiers, édite, lance des commandes, et demande votre approbation à chaque étape.",
+            items: [
+              '<strong>Installation :</strong> VS Code Marketplace uniquement (pas de JetBrains). Configuration via GUI dans le panneau extension.',
+              "<strong>Workflow :</strong> mode Plan raisonne sans écrire de fichiers ; mode Act exécute avec tool calls. Porte d'approbation à chaque étape.",
+              '<strong>Surface outil :</strong> read_file, write_to_file, replace_in_file, execute_command, list_files, search_files, browser_action.',
+              "<strong>Modèle d'édition :</strong> réécriture complète pour petits fichiers ; blocs recherche-et-remplacement pour les grands. Diff affiché dans le panneau avant chaque écriture.",
+              '<strong>Points forts :</strong> refactors multi-fichiers, débogage exploratoire, fonctionnalités touchant plusieurs couches.',
+              '<strong>Points faibles :</strong> haute consommation de tokens (128K recommandé). Fiabilité tool-call dégradée sur modèles 7B.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Aider : le choix git-natif',
+            intro: "Votre dépôt est la source de vérité, pas la conversation. Chaque édition atterrit comme un commit git.",
+            items: [
+              '<strong>Installation :</strong> pip install aider-chat ou pipx install aider-chat. CLI : aider fichier1.py fichier2.py.',
+              '<strong>Workflow :</strong> terminal-first. Prompt → diff → commit. /add et /drop gèrent les fichiers en scope. /undo annule le dernier commit.',
+              '<strong>Modèle local :</strong> tout modèle via LiteLLM. --model ollama_chat/qwen3-coder:30b est la syntaxe locale typique.',
+              '<strong>Contexte :</strong> repo map tree-sitter (~2K–4K tokens pour petits repos) + fichiers /add-és explicitement.',
+              "<strong>Points forts :</strong> changements repo-wide avec historique git complet ; SSH et environnements terminal-first ; chaque commit correspond à une étape de conversation.",
+              "<strong>Points faibles :</strong> pas d'autocomplete. Le format diff se brise si le modèle paraphrase le bloc SEARCH au lieu de le reproduire verbatim."
+            ]
+          },
+          {
+            type: 'list',
+            h2: "Modèle d'édition et stratégie contexte",
+            items: [
+              "<strong>Continue.dev :</strong> FIM pour autocomplete ; chat propose un bloc code ; \"Apply\" compare avec le fichier ouvert. Algorithme diff indulgent tolère les petites paraphrases.",
+              "<strong>Cline :</strong> chaque édition est un tool call validé. La validation du schéma détecte les appels mal formés ; boucle réessaie en cas d'échec.",
+              "<strong>Aider :</strong> blocs diff recherche-et-remplacement en prose. Si SEARCH ne correspond pas verbatim, l'édition est rejetée.",
+              "<strong>Fiabilité sur modèle 7B :</strong> Continue.dev > Aider > Cline. Continue.dev est le plus indulgent ; XML Cline est le plus fragile.",
+              "<strong>Contexte sur modèle 32K :</strong> Continue.dev et Aider confortables ; Cline sous pression au-delà de 5–6 fichiers.",
+              "<strong>Contexte sur modèle 128K :</strong> tous trois confortables — la primitive de workflow décide."
+            ]
+          },
+          {
+            type: 'list',
+            h2: "Annuler, rollback et intégration IDE",
+            items: [
+              "<strong>Continue.dev :</strong> éditions dans la pile undo VS Code. Cmd+Z par fichier. Pas de commande harness-level 'annuler toute la conversation'.",
+              "<strong>Cline :</strong> revert par édition en un clic dans l'UI agent. Après la tâche : rollback via git — Cline ne commit pas automatiquement.",
+              "<strong>Aider :</strong> /undo annule le commit le plus récent. Répéter pour reculer davantage. git reflog récupère tout ce que /undo ne peut pas.",
+              "<strong>Continue.dev :</strong> VS Code et JetBrains (parité de fonctionnalités complète).",
+              "<strong>Cline :</strong> VS Code uniquement. Les utilisateurs JetBrains ne peuvent pas utiliser Cline.",
+              "<strong>Aider :</strong> terminal-first, compatible avec tout éditeur. Adapté naturellement à Vim/Neovim et SSH."
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Adéquation workflow par cas d\'utilisation',
+            columns: ["Cas d'utilisation", 'Meilleur choix'],
+            rows: [
+              { "Cas d'utilisation": "Ajouter une fonction avec autocomplete", 'Meilleur choix': "Continue.dev — FIM est la primitive naturelle" },
+              { "Cas d'utilisation": '"Que fait cette fonction" sans quitter l\'éditeur', 'Meilleur choix': 'Continue.dev — @file chat in-IDE' },
+              { "Cas d'utilisation": 'Refactorer une fonctionnalité sur 5+ fichiers', 'Meilleur choix': "Cline — multi-fichiers natif + portes d'approbation" },
+              { "Cas d'utilisation": '"Pourquoi ce test est flaky" débogage exploratoire', 'Meilleur choix': 'Cline — agent lance des commandes, lit les logs' },
+              { "Cas d'utilisation": 'Renommage repo-wide avec commits révisables', 'Meilleur choix': 'Aider — chaque édition devient un commit' },
+              { "Cas d'utilisation": 'Travail en SSH sans IDE', 'Meilleur choix': 'Aider — terminal-only by design' },
+              { "Cas d'utilisation": 'Utilisateur JetBrains IDE', 'Meilleur choix': 'Continue.dev ou Aider (Cline = VS Code uniquement)' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs courantes',
+            items: [
+              "<strong>Choisir le harness avant le modèle.</strong> Un modèle 30B orienté code dans n'importe quel harness bat un modèle généraliste 7B dans le \"meilleur\" harness. Modèle d'abord.",
+              "<strong>Un seul modèle pour autocomplete et chat dans Continue.dev.</strong> L'autocomplete a besoin de moins de 200 ms de latence. Petit modèle autocomplete + grand modèle chat.",
+              "<strong>Laisser l'auto-approve Cline complètement ouvert.</strong> execute_command auto-approuvé peut causer de vrais dégâts. Garder les outils destructifs gated.",
+              "<strong>Utiliser Aider avec un modèle qui paraphrase le code.</strong> Utiliser un modèle coding-tuned 22B+ pour des éditions diff fiables.",
+              "<strong>Changer de harness pour résoudre un problème de modèle.</strong> Les échecs tool-call dans Cline échoueront pour la même raison dans le mode Agent de Continue.dev.",
+              "<strong>Cline contre un modèle 32K sur des tâches multi-fichiers.</strong> Budget token épuisé en cours de tâche. Utiliser 128K pour le travail Cline non trivial."
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Comparer les sorties de modèles IA avec PromptQuorum',
+            body: 'PromptQuorum envoie le même prompt simultanément à plusieurs modèles IA et affiche toutes les réponses côte à côte — idéal pour évaluer les sorties de modèles de codage.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'Continue.dev vs Cline vs Aider：ローカルコーディング AI 2026 比較',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Continue.dev vs Cline vs Aider',
+            subtitle: '3 つのオープンソースコーディングツール、1 つのローカル LLM。交換可能ではない — 各ツールは異なるワークフロープリミティブの周りに構築されています。まずワークフロー、次にモデルで選ぶ。',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: '主要ポイント',
+            items: [
+              '<strong>Continue.dev</strong> はオートコンプリート最優先：VS Code と JetBrains、FIM 補完、@コンテキストプロバイダー付きの In-IDE チャットサイドバー。ローカルモデル向け Copilot 代替のオープンソース版。',
+              '<strong>Cline</strong> はエージェント最優先：VS Code 拡張機能、Plan・Act モード、各ステップで承認ゲートを持つツールコールループ。自律的なマルチファイル編集。',
+              '<strong>Aider</strong> は Git 最優先：ターミナル CLI、tree-sitter リポジトリマップ、検索と置換の diff ブロック、すべての編集がコミット。元に戻すは git reset。',
+              '3 つとも OpenAI 互換エンドポイントを話す。<strong>Ollama</strong> が最もスムーズなローカルバックエンド。llama.cpp と vLLM も対応。',
+              '<strong>ツールコールの信頼性はモデルの特性であり、ハーネスの特性ではない。</strong>Qwen3-Coder 30B と DeepSeek Coder V3 は 3 つとも信頼性が高い；7B クラスのモデルは 3 つすべてで失敗する。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '主要ポイント（続き）',
+            items: [
+              '<strong>コンテキストウィンドウ戦略は大きく異なる：</strong>Continue.dev はオンデマンドインデックス取得を使用、Cline はファイル全体をストリーム（高トークン消費）、Aider は tree-sitter リポマップ + 明示的な /add を使用。',
+              '<strong>コンテキスト予算：</strong>Continue.dev と Aider は 32K コンテキストモデルで快適。Cline は非自明なマルチファイルタスクに 128K が必要。',
+              '<strong>エディタで選ぶ：</strong>JetBrains → Continue.dev または Aider。Vim/Neovim や SSH → Aider。VS Code + オートコンプリート重視 → Continue.dev。VS Code + マルチファイルリファクタ → Cline。',
+              '<strong>ワークフローの適合性がどんなベンチマークよりも結果を左右する。</strong>実際に開いたままにするハーネスが選ぶべきもの。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '3 つのハーネスの比較',
+            columns: ['機能', 'Continue.dev', 'Cline', 'Aider'],
+            rows: [
+              { '機能': 'メイン表面', 'Continue.dev': 'VS Code + JetBrains', 'Cline': 'VS Code 拡張機能', 'Aider': 'ターミナル CLI' },
+              { '機能': 'ワークフロープリミティブ', 'Continue.dev': 'オートコンプリート + IDE 内チャット', 'Cline': '自律エージェントループ', 'Aider': 'Git ネイティブ diff コミット' },
+              { '機能': 'マルチファイル編集', 'Continue.dev': 'マニュアル（ファイルごとチャット）', 'Cline': 'ネイティブ（1 タスク、N ファイル）', 'Aider': 'ネイティブ（1 コミット、N ファイル）' },
+              { '機能': '元に戻す', 'Continue.dev': 'VS Code undo スタック', 'Cline': 'UI 内の編集ごと revert', 'Aider': '/undo（git reset）' },
+              { '機能': 'コンテキスト最小', 'Continue.dev': '32K', 'Cline': '128K 推奨', 'Aider': '32K' },
+              { '機能': '適用場面', 'Continue.dev': '入力しながら編集、オートコンプリート', 'Cline': 'マルチファイルリファクタ', 'Aider': '見直し可能なリポジトリ変更' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'どれを選ぶべきか',
+            items: [
+              '<strong>VS Code/JetBrains、Copilot スタイルのオートコンプリートが欲しい</strong> → Continue.dev',
+              '<strong>コードベースに届くチャットサイドバーが欲しい</strong> → Continue.dev',
+              '<strong>承認ゲートを持つマルチファイルリファクタを計画するエージェントが欲しい</strong> → Cline',
+              '<strong>モデルにコマンドを実行させてターミナル出力を読ませたい</strong> → Cline',
+              '<strong>git diff で変更をレビューし、すべての編集を自動コミットしたい</strong> → Aider',
+              '<strong>SSH またはターミナルファーストの環境で作業している</strong> → Aider',
+              '<strong>Vim/Neovim を日常的に使っている</strong> → Aider',
+              '<strong>まだ決まらない</strong> → Continue.dev から始め、Git ネイティブ diff が必要になったら Aider を追加する'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev：オートコンプリートファーストの選択',
+            intro: 'ローカルモデル向け GitHub Copilot の最も近いオープンソース代替品。',
+            items: [
+              '<strong>インストール：</strong>VS Code Marketplace と JetBrains Marketplace。設定は ~/.continue/config.json。',
+              '<strong>ワークフロー：</strong>FIM（fill-in-the-middle）オートコンプリート + In-IDE チャットサイドバー。エージェントモードがツールコールループを追加。',
+              '<strong>ローカルモデル設定：</strong>1 つの設定ブロックでネイティブ Ollama サポート。小さなオートコンプリート用モデル（Qwen2.5-Coder 1.5B）+ 大きなチャット用モデル（Qwen3-Coder 30B）。',
+              '<strong>コンテキスト：</strong>TF-IDF + 埋め込みインデックス。チャットパネルから @codebase、@file、@folder、@docs、@terminal。',
+              '<strong>得意分野：</strong>使い慣れた IDE でのキーボード駆動編集、編集ごとの認知負荷が低い、高速なフィードバックループ。',
+              '<strong>苦手分野：</strong>マルチファイルリファクタはファイルごとに手動でチャットを操作する必要がある。長い自律タスクは本来の使い方ではない。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Cline：自律エージェントの選択',
+            intro: '目標を与えると計画し、ファイルを読み、編集し、コマンドを実行し、各ステップで承認を求める。',
+            items: [
+              '<strong>インストール：</strong>VS Code Marketplace のみ（JetBrains 版なし）。拡張機能パネル内で GUI 設定。',
+              '<strong>ワークフロー：</strong>Plan モードはファイルを書かずに推論；Act モードはツールコールで実行。各ステップで承認ゲート。',
+              '<strong>ツール：</strong>read_file、write_to_file、replace_in_file、execute_command、list_files、search_files、browser_action。',
+              '<strong>編集モデル：</strong>小さいファイルは全体書き換え；大きいファイルは検索・置換ブロック。各書き込み前にパネルで diff 表示。',
+              '<strong>得意分野：</strong>マルチファイルリファクタ、探索的なバグハント、複数レイヤーに影響する機能追加。',
+              '<strong>苦手分野：</strong>高いトークン消費（128K 推奨）。7B クラスモデルではツールコール信頼性が急落。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Aider：Git ネイティブの選択',
+            intro: 'リポジトリが真実の源。すべての編集が git コミットとして保存される。',
+            items: [
+              '<strong>インストール：</strong>pip install aider-chat または pipx install aider-chat。CLI：aider file1.py file2.py。',
+              '<strong>ワークフロー：</strong>ターミナルファースト。プロンプト → diff → コミット。/add と /drop でスコープ内ファイルを管理。/undo が最後のコミットを元に戻す。',
+              '<strong>ローカルモデル：</strong>LiteLLM 経由で任意のモデル。--model ollama_chat/qwen3-coder:30b が典型的なローカル起動方法。',
+              '<strong>コンテキスト：</strong>tree-sitter リポマップ（小リポジトリで ~2K～4K トークン）+ 明示的に /add されたファイル。',
+              '<strong>得意分野：</strong>完全な git 履歴を持つリポジトリ全体の変更；SSH とターミナルファースト環境；各ステップが 1 つのレビュー単位。',
+              '<strong>苦手分野：</strong>オートコンプリートなし。モデルが SEARCH ブロックを逐語的に再現せずに言い換えると diff 編集が失敗する。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '編集モデルとコンテキスト戦略',
+            items: [
+              '<strong>Continue.dev：</strong>オートコンプリートに FIM；チャットがコードブロックを提案；「Apply」で開いているファイルと比較。寛容な diff アルゴリズムが小さな言い換えを許容。',
+              '<strong>Cline：</strong>すべての編集は検証済みのツールコール。スキーマ検証が不正なコールを検出；失敗時にループが再試行。',
+              '<strong>Aider：</strong>散文形式の検索・置換 diff ブロック。SEARCH ブロックが逐語的に一致しない場合、編集は拒否される。',
+              '<strong>7B クラスモデルでの信頼性：</strong>Continue.dev > Aider > Cline。Continue.dev が最も寛容；Cline XML が最も脆弱。',
+              '<strong>32K モデルのコンテキスト：</strong>Continue.dev と Aider は快適；Cline は 5～6 ファイルを超えると圧迫。',
+              '<strong>128K モデルのコンテキスト：</strong>3 つとも快適 — ワークフロープリミティブが決め手。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '元に戻す方法と IDE 統合',
+            items: [
+              '<strong>Continue.dev：</strong>適用された編集は VS Code undo スタックに入る。Cmd+Z でファイルごとに元に戻す。',
+              '<strong>Cline：</strong>編集ごとの revert はエージェント UI で 1 クリック。タスク終了後は git でロールバック — Cline は自動コミットしないため長いセッション後に未コミット変更が残る。',
+              '<strong>Aider：</strong>/undo が最新コミットを元に戻す。繰り返してさらに戻れる。git reflog が /undo で回収できないものを救う。',
+              '<strong>Continue.dev：</strong>VS Code と JetBrains（完全な機能同等性）。',
+              '<strong>Cline：</strong>VS Code のみ。JetBrains ユーザーは Cline を使用できない。',
+              '<strong>Aider：</strong>ターミナルファースト、あらゆるエディタと組み合わせ可能。Vim/Neovim と SSH に自然にフィット。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ユースケース別ワークフロー適合性',
+            columns: ['ユースケース', '最適な選択'],
+            rows: [
+              { 'ユースケース': 'オートコンプリートで関数を追加する', '最適な選択': 'Continue.dev — FIM が自然なプリミティブ' },
+              { 'ユースケース': 'エディタを離れずに「この関数は何をする？」', '最適な選択': 'Continue.dev — @file In-IDE チャット' },
+              { 'ユースケース': '5 ファイル以上にわたる機能のリファクタ', '最適な選択': 'Cline — ネイティブマルチファイル + 承認ゲート' },
+              { 'ユースケース': '「なぜこのテストは不安定？」探索的バグハント', '最適な選択': 'Cline — エージェントがコマンドを実行、ログを読む' },
+              { 'ユースケース': 'レビュー可能なコミットでリポジトリ全体のリネーム', '最適な選択': 'Aider — すべての編集がコミットになる' },
+              { 'ユースケース': 'SSH、IDE なしのサーバー作業', '最適な選択': 'Aider — ターミナルオンリー設計' },
+              { 'ユースケース': 'JetBrains IDE ユーザー', '最適な選択': 'Continue.dev または Aider（Cline は VS Code のみ）' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'よくある間違い',
+            items: [
+              '<strong>モデルより先にハーネスを選ぶ。</strong>どのハーネスの 30B コーディング特化モデルも「最良の」ハーネスの 7B 汎用モデルを上回る。モデルを先に選ぶ。',
+              '<strong>Continue.dev でオートコンプリートとチャットに同じモデルを使う。</strong>オートコンプリートは 200ms 未満のレイテンシが必要。小さなオートコンプリートモデル + 大きなチャットモデルを別々に実行。',
+              '<strong>Cline の自動承認を完全に開放する。</strong>execute_command の自動承認は本当の損害を引き起こせる。信頼できるまで破壊的なツールにゲートを設ける。',
+              '<strong>コードを言い換えるモデルで Aider を使う。</strong>信頼性の高い diff 編集には コーディング特化 22B+ モデル（Qwen3-Coder、DeepSeek Coder）を使用。',
+              '<strong>モデルの問題を解決するためにハーネスを切り替える。</strong>Cline でのツールコール失敗は Continue.dev のエージェントモードでも同じ理由で失敗する。まずモデルを診断。',
+              '<strong>マルチファイルタスクで Cline を 32K コンテキストモデルで実行する。</strong>タスク途中でトークン予算が枯渇。非自明な Cline 作業には 128K を使用。'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'PromptQuorum で AI モデル出力を比較',
+            body: 'PromptQuorum は同じプロンプトを複数の AI モデルに同時に送信し、すべての回答を並べて表示します。コーディングモデルの出力評価に最適。',
+            cta: 'PromptQuorum を無料で試す',
+            href: 'https://promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: 'Continue.dev vs Cline vs Aider：2026 年本地编码代理对比',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Continue.dev vs Cline vs Aider',
+            subtitle: '三个开源编码工具，一个本地 LLM。不可互换——每个工具围绕不同的工作流原语构建。先按工作流选择，再选模型。',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>Continue.dev</strong> 以自动补全为核心：VS Code 和 JetBrains，FIM 补全，带 @ 上下文提供商的 In-IDE 聊天侧边栏。本地模型版 Copilot 开源替代品。',
+              '<strong>Cline</strong> 以智能体为核心：VS Code 扩展，Plan 和 Act 模式，每步均有审批门的工具调用循环。自主多文件编辑。',
+              '<strong>Aider</strong> 以 Git 为核心：终端 CLI，tree-sitter 仓库地图，搜索替换 diff 块，每次编辑都提交。撤销即 git reset。',
+              '三者都支持 OpenAI 兼容端点。<strong>Ollama</strong> 是最顺滑的本地后端；llama.cpp 和 vLLM 也支持。',
+              '<strong>工具调用可靠性是模型特性，不是工具特性。</strong>Qwen3-Coder 30B 和 DeepSeek Coder V3 在三者中均可靠；7B 类模型在三者中均失败。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '核心要点（续）',
+            items: [
+              '<strong>上下文窗口策略差异显著：</strong>Continue.dev 使用按需索引检索，Cline 流式传输完整文件内容（高 token 消耗），Aider 使用 tree-sitter 仓库地图 + 显式 /add。',
+              '<strong>上下文预算：</strong>Continue.dev 和 Aider 在 32K 上下文模型上运行舒适。Cline 处理复杂多文件任务需要 128K。',
+              '<strong>按编辑器选择：</strong>JetBrains → Continue.dev 或 Aider。Vim/Neovim 或 SSH → Aider。VS Code + 自动补全密集型 → Continue.dev。VS Code + 多文件重构 → Cline。',
+              '<strong>工作流适配性对结果的影响超过任何基准测试。</strong>你实际保持打开的工具就是该选的那个。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '三个工具对比',
+            columns: ['功能', 'Continue.dev', 'Cline', 'Aider'],
+            rows: [
+              { '功能': '主要界面', 'Continue.dev': 'VS Code + JetBrains', 'Cline': 'VS Code 扩展', 'Aider': '终端 CLI' },
+              { '功能': '工作流原语', 'Continue.dev': '自动补全 + IDE 内聊天', 'Cline': '自主智能体循环', 'Aider': 'Git 原生 diff 提交' },
+              { '功能': '多文件编辑', 'Continue.dev': '手动（逐文件聊天）', 'Cline': '原生（一个任务，N 个文件）', 'Aider': '原生（一次提交，N 个文件）' },
+              { '功能': '撤销', 'Continue.dev': 'VS Code undo 栈', 'Cline': 'UI 内逐编辑 revert', 'Aider': '/undo（git reset）' },
+              { '功能': '最低上下文', 'Continue.dev': '32K', 'Cline': '建议 128K', 'Aider': '32K' },
+              { '功能': '适用于', 'Continue.dev': '输入时编辑、自动补全', 'Cline': '多文件重构', 'Aider': '可审查的仓库全局变更' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '该选哪个',
+            items: [
+              '<strong>VS Code/JetBrains，想要 Copilot 式自动补全</strong> → Continue.dev',
+              '<strong>想要能访问代码库的聊天侧边栏</strong> → Continue.dev',
+              '<strong>想要一个带审批门规划多文件重构的智能体</strong> → Cline',
+              '<strong>想让模型执行命令并读取终端输出</strong> → Cline',
+              '<strong>通过 git diff 审查变更，每次编辑自动提交</strong> → Aider',
+              '<strong>通过 SSH 或终端优先环境工作</strong> → Aider',
+              '<strong>Vim/Neovim 日常使用者</strong> → Aider',
+              '<strong>仍不确定</strong> → 从 Continue.dev 开始；需要 Git 原生 diff 时再加入 Aider'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev：自动补全优先的选择',
+            intro: '本地模型的最接近 GitHub Copilot 的开源替代品。',
+            items: [
+              '<strong>安装：</strong>VS Code Marketplace 和 JetBrains Marketplace。配置在 ~/.continue/config.json。',
+              '<strong>工作流：</strong>FIM（fill-in-the-middle）自动补全 + IDE 内聊天侧边栏。Agent 模式添加工具调用循环。',
+              '<strong>本地模型设置：</strong>一个配置块即可原生支持 Ollama。小型自动补全模型（Qwen2.5-Coder 1.5B）+ 大型聊天模型（Qwen3-Coder 30B）。',
+              '<strong>上下文：</strong>TF-IDF + 嵌入索引。从聊天面板使用 @codebase、@file、@folder、@docs、@terminal。',
+              '<strong>优势：</strong>在熟悉的 IDE 中键盘驱动编辑，每次编辑认知负荷低，快速反馈循环。',
+              '<strong>不足：</strong>多文件重构需要逐文件手动引导聊天。长时间自主任务不是其原生使用场景。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Cline：自主智能体的选择',
+            intro: '给它一个目标；它规划、读取文件、编辑、运行命令，并在每步请求你的批准。',
+            items: [
+              '<strong>安装：</strong>仅 VS Code Marketplace（无 JetBrains 版本）。在扩展面板内 GUI 配置。',
+              '<strong>工作流：</strong>Plan 模式无需写文件即可推理；Act 模式通过工具调用执行。每步均有审批门。',
+              '<strong>工具集：</strong>read_file、write_to_file、replace_in_file、execute_command、list_files、search_files、browser_action。',
+              '<strong>编辑模型：</strong>小文件全文重写；大文件使用搜索替换块。每次写入前在面板显示 diff。',
+              '<strong>优势：</strong>多文件重构、探索性 bug 排查、涉及多层的功能添加。',
+              '<strong>不足：</strong>token 消耗高（建议 128K）。7B 类模型上工具调用可靠性急剧下降。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Aider：Git 原生的选择',
+            intro: '仓库是事实来源，不是对话。每次编辑都作为 git commit 保存。',
+            items: [
+              '<strong>安装：</strong>pip install aider-chat 或 pipx install aider-chat。CLI：aider file1.py file2.py。',
+              '<strong>工作流：</strong>终端优先。提示 → diff → 提交。/add 和 /drop 管理范围内的文件。/undo 撤销最后一次提交。',
+              '<strong>本地模型：</strong>通过 LiteLLM 支持任意模型。--model ollama_chat/qwen3-coder:30b 是典型的本地调用方式。',
+              '<strong>上下文：</strong>tree-sitter 仓库地图（小仓库约 2K～4K token）+ 显式 /add 的文件。',
+              '<strong>优势：</strong>带完整 git 历史的仓库全局变更；SSH 和终端优先环境；每个提交对应一个对话步骤。',
+              '<strong>不足：</strong>无自动补全。如果模型对 SEARCH 块进行释义而非逐字复现，diff 编辑会失败。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '编辑模型与上下文策略',
+            items: [
+              '<strong>Continue.dev：</strong>自动补全用 FIM；聊天提议代码块；"Apply" 与打开的文件比对。宽容的 diff 算法可以协调小的释义。',
+              '<strong>Cline：</strong>每次编辑都是经过验证的工具调用。Schema 验证检测格式错误的调用；失败时循环重试。',
+              '<strong>Aider：</strong>散文中的搜索替换 diff 块。如果 SEARCH 块不能逐字匹配，编辑被拒绝。',
+              '<strong>7B 类模型上的可靠性：</strong>Continue.dev > Aider > Cline。Continue.dev 最宽容；Cline XML 最脆弱。',
+              '<strong>32K 模型的上下文：</strong>Continue.dev 和 Aider 舒适；Cline 超过 5～6 个文件后有压力。',
+              '<strong>128K 模型的上下文：</strong>三者均舒适 — 工作流原语决定选择。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '撤销方式与 IDE 集成',
+            items: [
+              '<strong>Continue.dev：</strong>应用的编辑进入 VS Code undo 栈。Cmd+Z 按文件撤销。没有工具级别的"撤销整个对话"命令。',
+              '<strong>Cline：</strong>智能体 UI 中一键逐编辑 revert。任务结束后通过 git 回滚 — Cline 不自动提交，长会话后留有未提交变更。',
+              '<strong>Aider：</strong>/undo 撤销最近一次提交。重复使用可以回退更多步骤。git reflog 可恢复 /undo 无法处理的情况。',
+              '<strong>Continue.dev：</strong>VS Code 和 JetBrains（功能完全对等）。',
+              '<strong>Cline：</strong>仅 VS Code。JetBrains 用户无法使用 Cline。',
+              '<strong>Aider：</strong>终端优先，与任意编辑器配合。Vim/Neovim 和 SSH 工作流的自然选择。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '按使用场景的工作流适配性',
+            columns: ['使用场景', '最佳选择'],
+            rows: [
+              { '使用场景': '用自动补全添加函数', '最佳选择': 'Continue.dev — FIM 是自然的原语' },
+              { '使用场景': '不离开编辑器了解"这个函数做什么"', '最佳选择': 'Continue.dev — @file IDE 内聊天' },
+              { '使用场景': '跨 5+ 文件重构功能', '最佳选择': 'Cline — 原生多文件 + 审批门' },
+              { '使用场景': '"为什么这个测试不稳定"探索性 bug 排查', '最佳选择': 'Cline — 智能体运行命令、读取日志' },
+              { '使用场景': '可审查提交的仓库全局重命名', '最佳选择': 'Aider — 每次编辑变成一次提交' },
+              { '使用场景': 'SSH 连接服务器，无 IDE', '最佳选择': 'Aider — 终端专属设计' },
+              { '使用场景': 'JetBrains IDE 用户', '最佳选择': 'Continue.dev 或 Aider（Cline 仅限 VS Code）' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '常见错误',
+            items: [
+              '<strong>在模型之前选择工具。</strong>任意工具中的 30B 编码专用模型都胜过"最佳"工具中的 7B 通用模型。先选模型。',
+              '<strong>在 Continue.dev 中用同一个模型做自动补全和聊天。</strong>自动补全需要低于 200ms 的延迟。运行小型自动补全模型 + 大型聊天模型。',
+              '<strong>将 Cline 自动批准完全开放。</strong>execute_command 自动批准可能造成真实损害。在信任模型之前保持破坏性工具的审批门。',
+              '<strong>用会释义代码的模型使用 Aider。</strong>使用编码专用 22B+ 模型（Qwen3-Coder、DeepSeek Coder）以获得可靠的 diff 编辑。',
+              '<strong>切换工具来解决模型问题。</strong>Cline 中的工具调用失败在 Continue.dev 的 Agent 模式中也会因同样原因失败。先诊断模型。',
+              '<strong>在多文件任务中对 32K 上下文模型运行 Cline。</strong>Token 预算在任务中途耗尽。非简单 Cline 任务使用 128K。'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '用 PromptQuorum 比较 AI 模型输出',
+            body: 'PromptQuorum 将同一提示同时发送给多个 AI 模型，并将所有回答并排展示——非常适合评估编码模型输出并为你的工具选择最佳模型。',
+            cta: '免费试用 PromptQuorum',
+            href: 'https://promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide, articleUrl) {
+      var footerLink = '<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>';
+      var html = '';
+
+      if (slide.type === 'title') {
+        html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+          + '<h1>' + slide.h1 + '</h1>'
+          + '<p>' + slide.subtitle + '</p>'
+          + '<p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="' + slide.link + '" target="_blank" rel="noopener">' + SLUG.replace(/-/g, ' ') + '</a></p>'
+          + footerLink;
+      } else if (slide.type === 'list') {
+        html = '<h2>' + slide.h2 + '</h2>';
+        if (slide.intro) { html += '<p style="margin-bottom: 12px; font-size: clamp(13px, 1.3vw, 15px);">' + slide.intro + '</p>'; }
+        html += '<ul style="font-size: 1.05em; margin-top: 8px;">';
+        for (var i = 0; i < slide.items.length; i++) { html += '<li>' + slide.items[i] + '</li>'; }
+        html += '</ul>' + footerLink;
+      } else if (slide.type === 'numbered') {
+        html = '<h2>' + slide.h2 + '</h2>';
+        html += '<ol style="font-size: 1.05em; margin-top: 12px;">';
+        for (var j = 0; j < slide.items.length; j++) { html += '<li>' + slide.items[j] + '</li>'; }
+        html += '</ol>' + footerLink;
+      } else if (slide.type === 'table') {
+        html = '<h2>' + slide.h2 + '</h2>';
+        html += '<table style="margin-top: 12px;"><tr>';
+        for (var k = 0; k < slide.columns.length; k++) { html += '<th>' + slide.columns[k] + '</th>'; }
+        html += '</tr>';
+        for (var r = 0; r < slide.rows.length; r++) {
+          html += '<tr>';
+          for (var c = 0; c < slide.columns.length; c++) { html += '<td>' + slide.rows[r][slide.columns[c]] + '</td>'; }
+          html += '</tr>';
+        }
+        html += '</table>' + footerLink;
+      } else if (slide.type === 'cta') {
+        html = '<h2>' + slide.h2 + '</h2>'
+          + '<p style="margin-top: 20px;">' + slide.body + '</p>'
+          + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: 700;">' + slide.cta + '</a>'
+          + footerLink;
+      }
+
+      return '<div class="slide ' + slide.type + '">' + html + '</div>';
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var lang = params.get('lang') || 'en';
+    var isPrint = params.get('print') === '1';
+    var content = CONTENT[lang] || CONTENT.en;
+    var articleUrl = BASE_URL + '?lang=' + lang;
+
+    document.getElementById('header-title').textContent = content.title;
+    var backLink = document.getElementById('back-link');
+    backLink.href = articleUrl;
+
+    var container = document.getElementById('slides-container');
+    for (var s = 0; s < content.slides.length; s++) {
+      container.innerHTML += renderSlide(content.slides[s], articleUrl);
+    }
+
+    var currentSlideIdx = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlideIdx = totalSlides - 1;
+      else if (n < 0) currentSlideIdx = 0;
+      for (var i = 0; i < slides.length; i++) { slides[i].classList.remove('active'); }
+      slides[currentSlideIdx].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlideIdx + 1;
+      document.getElementById('prevBtn').disabled = currentSlideIdx === 0;
+      document.getElementById('nextBtn').disabled = currentSlideIdx === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlideIdx += n;
+      showSlide(currentSlideIdx);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', function() {
+      for (var i = 0; i < slides.length; i++) { slides[i].style.display = 'flex'; }
+    });
+    window.addEventListener('afterprint', function() {
+      for (var i = 0; i < slides.length; i++) { slides[i].style.removeProperty('display'); }
+      showSlide(currentSlideIdx);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', function() { window.print(); });
+    }
+
+    showSlide(0);
+  </script>
+</body>
+</html>

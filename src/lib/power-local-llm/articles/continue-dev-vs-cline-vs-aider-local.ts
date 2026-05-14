@@ -83,6 +83,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/continue-dev-vs-cline-vs-aider-local-static.html',
+    gammaDescription: 'The slide deck below covers: how Continue.dev, Cline, and Aider differ as local coding harnesses (autocomplete vs autonomous agent vs git-native diffs), a side-by-side feature comparison table, edit model reliability by harness and model size, context window strategy (32K vs 128K requirements), IDE integration (VS Code, JetBrains, Vim/SSH), and 6 common mistakes when picking a harness. Download the PDF as a local coding agent reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -573,6 +575,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/continue-dev-vs-cline-vs-aider-local-static.html',
+    gammaDescription: 'Die Präsentation unten behandelt: wie sich Continue.dev, Cline und Aider als lokale Coding-Harnesses unterscheiden (Autovervollständigung vs. autonomer Agent vs. git-native Diffs), eine Funktionsvergleichstabelle, Zuverlässigkeit des Edit-Modells nach Harness und Modellgröße, Context-Window-Strategie (32K vs. 128K), IDE-Integration (VS Code, JetBrains, Vim/SSH) und 6 häufige Fehler bei der Wahl des Harness. PDF als Referenzkarte für lokale Coding-Agenten herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1067,6 +1071,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/continue-dev-vs-cline-vs-aider-local-static.html',
+    gammaDescription: 'La présentation ci-dessous couvre : comment Continue.dev, Cline et Aider diffèrent en tant que harnais de codage locaux (autocomplétion vs agent autonome vs diffs natifs git), un tableau comparatif des fonctionnalités, la fiabilité du modèle d\'édition selon le harnais et la taille du modèle, la stratégie de fenêtre de contexte (32K vs 128K), l\'intégration IDE (VS Code, JetBrains, Vim/SSH) et 6 erreurs courantes lors du choix d\'un harnais. Téléchargez le PDF comme carte de référence pour agents de codage locaux.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1561,6 +1567,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連資料', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/continue-dev-vs-cline-vs-aider-local-static.html',
+    gammaDescription: '以下のスライドデッキでは、Continue.dev・Cline・Aiderがローカルコーディングハーネスとしてどのように異なるか（自動補完 vs 自律エージェント vs gitネイティブdiff）、機能比較表、ハーネスとモデルサイズ別の編集モデル信頼性、コンテキストウィンドウ戦略（32K vs 128K）、IDE統合（VS Code・JetBrains・Vim/SSH）、およびハーネス選択時の6つのよくある間違いを解説します。PDFをローカルコーディングエージェントのリファレンスカードとしてダウンロードできます。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2054,6 +2062,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '相关阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/continue-dev-vs-cline-vs-aider-local-static.html',
+    gammaDescription: '以下幻灯片涵盖：Continue.dev、Cline和Aider作为本地编码工具的区别（自动补全 vs 自主智能体 vs git原生差异对比），功能对比表，按工具和模型规模划分的编辑模型可靠性，上下文窗口策略（32K vs 128K），IDE集成（VS Code、JetBrains、Vim/SSH），以及选择工具时的6个常见错误。可将PDF下载为本地编码智能体参考卡。',
     sections: {
       tldr: {
         id: 'key-takeaways',
