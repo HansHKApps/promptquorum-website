@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local AI Agents for Business Workflows: EU Compliance Guide 2026 | PromptQuorum</title>
+  <meta name="description" content="5 workflow templates, GDPR controls, EU AI Act classification, DACH specifics, model and stack comparison for local AI agents in EU business workflows." />
+  <meta property="og:title" content="Local AI Agents for EU Business Workflows: Compliance Guide 2026 — PromptQuorum" />
+  <meta property="og:description" content="GDPR, EU AI Act, Works Council, §203 StGB. 5 production workflow templates and a reference stack that holds up in an audit." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f6f4f4; color: #1c1b1f; overflow: hidden;
+    }
+    .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+    .slide {
+      width: 100%; height: 100%; display: none; flex-direction: column;
+      justify-content: center; align-items: center; padding: 32px 48px;
+      text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .slide h1 { font-size: clamp(24px, 3vw, 40px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+    .slide h2 { font-size: clamp(20px, 2.6vw, 34px); font-weight: 700; margin-bottom: 14px; color: #1c1b1f; }
+    .slide p { font-size: clamp(13px, 1.5vw, 17px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+    .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+    .slide.title .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+    .slide.title p { font-size: clamp(13px, 1.5vw, 18px); color: #6750a4; font-weight: 500; margin-top: 12px; }
+    .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; transition: all 0.2s; }
+    .slide.title a:hover { color: #7d5260; border-bottom-color: #7d5260; }
+    .slide ul, .slide ol { text-align: left; margin: 8px auto; max-width: 700px; }
+    .slide ul li, .slide ol li { font-size: clamp(12px, 1.3vw, 15px); margin-bottom: 8px; line-height: 1.5; }
+    .slide strong { color: #1c1b1f; font-weight: 700; }
+    table { margin: 8px auto; border-collapse: collapse; font-size: clamp(10px, 1.1vw, 13px); text-align: left; max-width: 94%; }
+    th { background: #6750a4; color: white; padding: 7px 10px; font-weight: 700; border: none; }
+    td { padding: 6px 10px; border-bottom: 1px solid #e0e0e0; }
+    tr:hover td { background: #f7f2fa; }
+    .header {
+      padding: 10px 20px; border-bottom: 1px solid #e0e0e0;
+      display: flex; justify-content: space-between; align-items: center;
+      background: white; flex-shrink: 0;
+    }
+    .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+    .header-left img { width: 28px; height: 28px; }
+    .header-links { display: flex; gap: 16px; }
+    .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; transition: color 0.2s; }
+    .header-links a:hover { color: #7d5260; }
+    .content-area { flex: 1; overflow: hidden; }
+    .controls {
+      display: flex; gap: 12px; align-items: center; justify-content: center;
+      padding: 10px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0;
+    }
+    button {
+      background: #6750a4; color: white; border: none; padding: 8px 16px;
+      border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s;
+    }
+    button:hover { background: #7d5260; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+    .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 50px; text-align: center; }
+    @page { size: A4 landscape; margin: 0; }
+    @media (max-width: 640px) {
+      .slide { padding: 20px 16px; }
+      .slide h1 { font-size: clamp(16px, 5vw, 24px); }
+      .slide h2 { font-size: clamp(14px, 4vw, 19px); }
+      .slide p { font-size: 12px; }
+      .slide ul li, .slide ol li { font-size: 11px; margin-bottom: 6px; }
+      table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.75em; }
+      table th, table td { padding: 4px 6px; white-space: nowrap; }
+      .header { padding: 8px 12px; }
+      .header-left span { font-size: 11px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-links { gap: 8px; font-size: 10px; }
+    }
+    @media print {
+      * { margin: 0; padding: 0; }
+      html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; }
+      .header, .controls { display: none !important; }
+      .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
+      .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
+      .slide {
+        display: flex !important; flex-direction: column; justify-content: center; align-items: center;
+        page-break-after: always; break-after: page; width: 100%; height: 210mm;
+        padding: 16mm 20mm; box-sizing: border-box; overflow: visible !important;
+        margin: 0; background: white; color: #1c1b1f; position: relative; counter-increment: page-counter;
+      }
+      .slide::before {
+        content: "https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance";
+        position: absolute; bottom: 10mm; left: 20mm; font-size: 7pt; color: #999;
+      }
+      .slide::after {
+        content: counter(page-counter) " / 14";
+        position: absolute; bottom: 10mm; right: 20mm; font-size: 7pt; color: #999;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Local AI Agents for Business Workflows: EU Compliance</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    var SLUG = 'local-ai-agents-business-workflows-eu-compliance';
+    var BASE_URL = 'https://www.promptquorum.com/power-local-llm/' + SLUG;
+
+    const CONTENT = {
+      en: {
+        title: 'Local AI Agents for Business Workflows: EU Compliance Guide (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Local AI Agents for Business Workflows: EU Compliance Guide',
+            subtitle: 'When model, tools, and data sit inside your own infrastructure, the cloud-LLM compliance burden disappears. Here is what remains — and how to handle it.',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>Local-only architecture is the strongest privacy control.</strong> When the model, tool servers, and data sit inside the controller\'s infrastructure with zero egress, Schrems II, sub-processor lists, and cross-border transfer assessments do not apply.',
+              '<strong>5 workflow templates cover most production demand:</strong> document intake and classification, email triage with draft replies, meeting summary and action extraction, compliance report generation, invoice processing with PO matching.',
+              '<strong>EU AI Act tiers determine the obligations.</strong> Most business workflows are Limited-risk (transparency only). HR screening, credit decisions, and benefits eligibility are High-risk (full conformity assessment). Workplace emotion recognition is Prohibited.',
+              '<strong>GDPR work is unchanged by going local.</strong> Lawful basis (Art. 6), data minimisation (Art. 5), security of processing (Art. 32), audit logging, and a DPIA (Art. 35) for high-impact workflows still apply.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways (cont.)',
+            items: [
+              '<strong>DACH adds two extra layers.</strong> Works Council co-determination (BetrVG §87) applies whenever the agent touches employee data — even passively. §203 StGB professional confidentiality (lawyers, doctors, auditors) makes local-only architecture mandatory, not optional.',
+              '<strong>Reference stack:</strong> Ollama or vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline or Goose+MCP + immutable audit log + human approval on every write or send action.',
+              '<strong>Three failure modes to avoid:</strong> deploying without a DPIA on a workflow that needs one; mixing personal and business data in one agent workspace; skipping approval gates on outbound actions (email send, contract sign, payment).'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'What Local AI Agents Do for Business Teams',
+            intro: 'An agent is a tool-calling model plus a tool surface plus an approval gate — not a chat assistant, not a workflow automator.',
+            items: [
+              '<strong>Definition:</strong> model + tool surface (filesystem, database, email, calendar, internal API) + approval gate per write = agent. The model proposes; the runtime executes; the human approves anything that mutates state or leaves the network.',
+              '<strong>Different from automation (n8n/Zapier):</strong> automation uses fixed triggers and branches. An agent is non-deterministic — the model decides which tool to call based on the input. Use automation when the path is fixed; use an agent when the path varies.',
+              '<strong>Different from a chat assistant:</strong> a chat assistant answers questions; an agent takes actions — reads inbox, classifies, drafts replies, queues for approval.',
+              '<strong>Why "local" matters:</strong> data residency is provable, the audit trail is end-to-end, there is no third-party processor in the chain. The compliance argument writes itself when the architecture eliminates entire risk categories.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5 Workflow Templates',
+            columns: ['Workflow', 'Trigger', 'Model', 'AI Act Tier'],
+            rows: [
+              { 'Workflow': 'Document intake', 'Trigger': 'PDF in watched folder', 'Model': 'Gemma 4 27B / Qwen3 32B', 'AI Act Tier': 'Limited-risk' },
+              { 'Workflow': 'Email triage', 'Trigger': 'New message in inbox', 'Model': 'Llama 3.2 3B (triage) + Gemma 4 27B (draft)', 'AI Act Tier': 'Limited-risk' },
+              { 'Workflow': 'Meeting summary', 'Trigger': 'Transcript in storage', 'Model': 'Qwen3 32B (128K ctx)', 'AI Act Tier': 'Limited-risk' },
+              { 'Workflow': 'Compliance report', 'Trigger': 'Scheduled (monthly)', 'Model': 'GLM-5.1 32B / Llama 3.3 70B', 'AI Act Tier': 'Limited-risk' },
+              { 'Workflow': 'Invoice processing', 'Trigger': 'Invoice in AP folder', 'Model': 'Gemma 4 27B / Qwen3 32B', 'AI Act Tier': 'Limited-risk' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU AI Act Classification',
+            items: [
+              '<strong>Limited-risk (most templates):</strong> transparency obligations only. Users receiving AI-generated emails or summaries must know AI was involved. A clear marker in the message and one-line disclosure in documentation typically suffice.',
+              '<strong>High-risk (specific use cases):</strong> full conformity assessment, EU database registration, post-market monitoring. Patterns that hit High-risk: HR screening, CV ranking, credit decisions, benefits eligibility. Annex III of the Act is the operative list.',
+              '<strong>Prohibited (do not deploy):</strong> workplace emotion recognition, social scoring of natural persons, real-time biometric identification in public spaces, manipulative techniques targeting vulnerabilities.',
+              '<strong>Provider vs Deployer:</strong> internal-only local agents make you a Deployer (fewer obligations, but still real). Building the model into a product sold to others makes you a Provider.',
+              '<strong>Action item:</strong> classify every new workflow before approving deployment — one written decision (Limited / High / Prohibited) with a justification, signed by the DPO, kept in the technical file.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'GDPR Controls for Agent Workflows',
+            items: [
+              '<strong>Lawful basis (Art. 6):</strong> document before deployment. Most business workflows run on contract or legitimate interest (with a balancing test). Special-category data needs an Art. 9 condition on top.',
+              '<strong>Data minimisation (Art. 5(1)(c)):</strong> the agent sees only what the workflow needs. Chunk and filter at the RAG layer. Avoid streaming full documents when only one section is relevant.',
+              '<strong>Purpose limitation (Art. 5(1)(b)):</strong> an agent approved for invoices cannot absorb HR duties without re-evaluation and a new lawful basis.',
+              '<strong>Security of processing (Art. 32):</strong> encryption at rest, access control on the workspace, immutable audit log, incident-response plan.',
+              '<strong>Audit logging:</strong> timestamp, user/initiator, model ID and version, input hash, tool calls and arguments, output hash, approver. Append-only, integrity-protected.',
+              '<strong>DPIA (Art. 35):</strong> mandatory for High-risk and systematic processing with significant impact. Write it at design time — 4–8 pages for most agent workflows.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'DACH Specifics: Works Council and §203 StGB',
+            items: [
+              '<strong>Works Council co-determination (BetrVG §87(1) Nr. 6):</strong> any technical system that monitors employee conduct or performance triggers co-determination. "Monitor" is interpreted broadly — an agent classifying employee emails counts.',
+              '<strong>Engage the Works Council at design time, not deployment time.</strong> Sign a Betriebsvereinbarung that defines purpose, retention, access, and audit requirements. It becomes part of the system\'s technical file.',
+              '<strong>§203 StGB professional confidentiality:</strong> lawyers, doctors, auditors, and tax advisers have criminal liability for disclosure. A cloud LLM is an external processor — the legal reason why §203-bound firms have moved to local stacks.',
+              '<strong>Austria §121 StGB / Switzerland Art. 321 StGB:</strong> similar confidentiality obligations. The architectural conclusion is the same — local-only, no exceptions for sensitive professional data.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Model Selection for Business Workflows',
+            columns: ['Model', 'VRAM', 'Best For'],
+            rows: [
+              { 'Model': 'Gemma 4 27B', 'VRAM': '16 GB unified / 24 GB', 'Best For': 'General tool calling, document intake, email triage' },
+              { 'Model': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', 'Best For': 'Compliance reporting, long transcripts (128K ctx)' },
+              { 'Model': 'Qwen3 32B', 'VRAM': '24 GB VRAM', 'Best For': 'Multi-step plans, invoice processing, fallback' },
+              { 'Model': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', 'Best For': 'Highest reliability, exception handling' },
+              { 'Model': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', 'Best For': 'High-volume classification only — not drafting' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Agent Stack Comparison',
+            columns: ['Runtime', 'Setup', 'Approval Gates', 'Best For'],
+            rows: [
+              { 'Runtime': 'Cline (VS Code)', 'Setup': 'One extension', 'Approval Gates': 'Per-step, in-IDE', 'Best For': 'Dev teams, coding-shaped workflows' },
+              { 'Runtime': 'Goose + MCP', 'Setup': 'brew install', 'Approval Gates': 'CLI prompts', 'Best For': 'Headless servers, scheduled reports' },
+              { 'Runtime': 'n8n + Ollama', 'Setup': 'Docker', 'Approval Gates': 'Human-in-loop nodes', 'Best For': 'Deterministic workflows + 1–2 model steps' },
+              { 'Runtime': 'LangGraph + Ollama', 'Setup': 'Python project', 'Approval Gates': 'Built by you', 'Best For': 'Production workflows, custom audit trails' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes Deploying Local Agents in EU Workflows',
+            items: [
+              '<strong>Deploying without a DPIA.</strong> Mandatory for high-impact workflows. 4–8 pages, written before processing begins — what supervisory authorities ask for first.',
+              '<strong>Cloud-connected runtime for confidential documents.</strong> One cloud dependency in the chain breaks the local-only argument entirely.',
+              '<strong>No approval gate on write or send actions.</strong> Auto-send agents are how regulators hear about you. Manual approval on every outbound action is non-negotiable.',
+              '<strong>Mixing personal and business data in one workspace.</strong> Violates purpose limitation. Cross-contamination is expensive to remediate.',
+              '<strong>Skipping the audit log.</strong> "Conversation history" is not a compliant audit log. Append-only, hash-chained, retained per the relevant retention period.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ',
+            faqs: [
+              {
+                q: 'Are local AI agents GDPR-compliant by default?',
+                a: 'No — GDPR-compatible by architecture, not compliant by default. Local-only removes Schrems II and sub-processor obligations. Lawful basis, data minimisation, security, audit logging, and DPIA still apply.'
+              },
+              {
+                q: 'Which workflows are High-risk under the EU AI Act?',
+                a: 'HR screening, CV ranking, candidate scoring, credit decisions, benefits eligibility (Annex III). The 5 base templates are all Limited-risk; re-purposing for HR or credit inherits High-risk obligations.'
+              },
+              {
+                q: 'Do I need a DPIA for an email triage agent?',
+                a: 'Trigger-based for general inboxes. Mandatory if the inbox handles employee data or special-category data. Most teams should run one regardless — cost is hours, benefit is documented DPO sign-off.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ (cont.)',
+            faqs: [
+              {
+                q: 'Can a local agent process employee data in Germany?',
+                a: 'Yes, with Works Council co-determination (BetrVG §87(1) Nr. 6). Engage at design time, sign a Betriebsvereinbarung. Skipping this step has voided rollouts in German labour courts after deployment.'
+              },
+              {
+                q: 'What model handles business workflows reliably?',
+                a: 'Gemma 4 27B for general tool calling. GLM-5.1 32B for long input (128K ctx). Avoid models below 7B — they emit malformed tool calls in production. Use Q4_K_M quantisation as the floor.'
+              },
+              {
+                q: 'Can I share one agent runtime across departments?',
+                a: 'Architecturally yes, legally complex. Use separate workspaces per workflow to preserve purpose limitation. The model is a shared resource; the workflows and audit logs are not.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Start With One Workflow',
+            body: 'Pick the lowest-risk entry point: document intake or email triage. Both are Limited-risk, both have clear approval boundaries, and both build the audit-log infrastructure you reuse across all five templates.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Lokale KI-Agenten in Geschäftsworkflows: DSGVO & EU AI Act Leitfaden 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Lokale KI-Agenten in Geschäftsworkflows: DSGVO & EU AI Act',
+            subtitle: 'Wenn Modell, Tools und Daten innerhalb Ihrer Infrastruktur bleiben, entfällt das Cloud-LLM-Bedrohungsmodell. Was bleibt — und wie Sie es handhaben.',
+            link: BASE_URL + '?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Zusammenfassung',
+            items: [
+              '<strong>Lokale Architektur ist die stärkste Datenschutz-Kontrolle.</strong> Schrems II, Auftragsverarbeiterlisten und Folgenabschätzungen für grenzüberschreitende Übermittlungen entfallen, wenn alles im Verantwortlichen-Netz bleibt.',
+              '<strong>5 Workflow-Vorlagen decken den Großteil der Produktionsnachfrage:</strong> Dokumentenannahme, E-Mail-Triage, Meeting-Zusammenfassung, Compliance-Reports, Rechnungsverarbeitung.',
+              '<strong>EU-AI-Act-Stufen bestimmen die Pflichten.</strong> Meiste Workflows: Limited-Risk (nur Transparenz). HR-Screening und Kreditentscheidungen: High-Risk (volle Konformitätsbewertung). Emotionserkennung am Arbeitsplatz: verboten.',
+              '<strong>DSGVO-Arbeit bleibt unverändert.</strong> Rechtsgrundlage (Art. 6), Datenminimierung (Art. 5), Sicherheit (Art. 32), Audit-Log und DSFA (Art. 35) gelten weiterhin.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Zusammenfassung (Forts.)',
+            items: [
+              '<strong>DACH ergänzt zwei Ebenen.</strong> Mitbestimmung des Betriebsrats (BetrVG §87) bei Mitarbeiterdaten. §203 StGB macht lokale Architektur für Berufsgeheimnisträger zur Pflicht, nicht zur Option.',
+              '<strong>Referenz-Stack:</strong> Ollama oder vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline oder Goose+MCP + unveränderliches Audit-Log + manuelle Freigabe bei jedem Schreib- oder Sendevorgang.',
+              '<strong>Drei Fehlermodi:</strong> Betrieb ohne DSFA; Vermischung personenbezogener und geschäftlicher Daten; Auslassen von Freigabe-Gates bei ausgehenden Aktionen (E-Mail, Vertragsunterzeichnung, Zahlung).'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Was lokale KI-Agenten für Geschäftsteams leisten',
+            intro: 'Ein Agent ist ein Tool-Calling-Modell plus Tool-Oberfläche plus Freigabe-Gate — kein Chat-Assistent, kein Workflow-Automatisierer.',
+            items: [
+              '<strong>Definition:</strong> Modell + Tool-Oberfläche (Dateisystem, Datenbank, E-Mail, Kalender, interne API) + Freigabe-Gate pro Schreibaktion = Agent.',
+              '<strong>Unterschied zu Automatisierung (n8n/Zapier):</strong> Automatisierung nutzt feste Trigger und Verzweigungen. Ein Agent ist nicht-deterministisch — das Modell entscheidet, welches Tool aufgerufen wird.',
+              '<strong>Unterschied zu einem Chat-Assistenten:</strong> Ein Chat-Assistent beantwortet Fragen; ein Agent handelt — liest Postfach, klassifiziert, entwirft Antworten, stellt sie zur Freigabe bereit.',
+              '<strong>Warum "lokal" zählt:</strong> Datenresidenz ist nachweisbar, der Audit-Trail ist lückenlos, kein Drittanbieter-Prozessor in der Kette.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5 Workflow-Vorlagen',
+            columns: ['Workflow', 'Auslöser', 'Modell', 'AI-Act-Stufe'],
+            rows: [
+              { 'Workflow': 'Dokumentenannahme', 'Auslöser': 'PDF im überwachten Ordner', 'Modell': 'Gemma 4 27B / Qwen3 32B', 'AI-Act-Stufe': 'Limited-Risk' },
+              { 'Workflow': 'E-Mail-Triage', 'Auslöser': 'Neue Nachricht im Postfach', 'Modell': 'Llama 3.2 3B (Triage) + Gemma 4 27B', 'AI-Act-Stufe': 'Limited-Risk' },
+              { 'Workflow': 'Meeting-Zusammenfassung', 'Auslöser': 'Transkript im Speicher', 'Modell': 'Qwen3 32B (128K Kontext)', 'AI-Act-Stufe': 'Limited-Risk' },
+              { 'Workflow': 'Compliance-Report', 'Auslöser': 'Geplant (monatlich)', 'Modell': 'GLM-5.1 32B / Llama 3.3 70B', 'AI-Act-Stufe': 'Limited-Risk' },
+              { 'Workflow': 'Rechnungsverarbeitung', 'Auslöser': 'Rechnung im AP-Ordner', 'Modell': 'Gemma 4 27B / Qwen3 32B', 'AI-Act-Stufe': 'Limited-Risk' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU-AI-Act-Klassifizierung',
+            items: [
+              '<strong>Limited-Risk (meiste Vorlagen):</strong> Nur Transparenzpflichten. Nutzer, die KI-generierte E-Mails oder Zusammenfassungen erhalten, müssen über den KI-Einsatz informiert werden.',
+              '<strong>High-Risk (bestimmte Anwendungen):</strong> Volle Konformitätsbewertung, Registrierung in der EU-Datenbank, Marktüberwachung. HR-Screening, Kreditentscheidungen, Leistungsbewertungen.',
+              '<strong>Verboten:</strong> Emotionserkennung am Arbeitsplatz, Social Scoring natürlicher Personen, biometrische Echtzeit-Identifikation in öffentlichen Räumen.',
+              '<strong>Anbieter vs. Betreiber:</strong> Interne lokale Agenten machen Sie zum Betreiber (weniger Pflichten, aber reale Pflichten). Produkte für Dritte = Anbieter.',
+              '<strong>Maßnahme:</strong> Jeden neuen Workflow vor Freigabe klassifizieren — eine schriftliche Entscheidung (Limited / High / Verboten) mit Begründung, vom DSB unterzeichnet, in der technischen Akte.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'DSGVO-Kontrollen für Agent-Workflows',
+            items: [
+              '<strong>Rechtsgrundlage (Art. 6):</strong> Vor Bereitstellung dokumentieren. Meiste Workflows: Vertrag oder berechtigtes Interesse (mit Interessenabwägungstest).',
+              '<strong>Datenminimierung (Art. 5(1)(c)):</strong> Agent sieht nur, was der Workflow benötigt. Filter auf RAG-Ebene, nicht auf Modell-Ebene.',
+              '<strong>Zweckbindung (Art. 5(1)(b)):</strong> Ein für Rechnungen genehmigter Agent darf keine HR-Aufgaben ohne Neubewertung übernehmen.',
+              '<strong>Sicherheit der Verarbeitung (Art. 32):</strong> Verschlüsselung im Ruhezustand, Zugriffskontrolle, unveränderliches Audit-Log.',
+              '<strong>Audit-Logging:</strong> Zeitstempel, Nutzer/Initiator, Modell-ID und -version, Input-Hash, Tool-Aufrufe und Argumente, Output-Hash, Freigeber.',
+              '<strong>DSFA (Art. 35):</strong> Pflicht bei High-Risk und systematischer Verarbeitung mit erheblicher Auswirkung. Vor Betriebsbeginn erstellen — 4–8 Seiten für die meisten Agent-Workflows.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'DACH-Spezifika: Betriebsrat und §203 StGB',
+            items: [
+              '<strong>Mitbestimmung des Betriebsrats (BetrVG §87(1) Nr. 6):</strong> Jedes technische System, das das Verhalten oder die Leistung von Mitarbeitern überwacht, löst die Mitbestimmung aus — auch passiv.',
+              '<strong>Betriebsrat zum Designzeitpunkt einbinden, nicht erst bei Bereitstellung.</strong> Betriebsvereinbarung abschließen: Zweck, Aufbewahrung, Zugriff, Audit-Anforderungen. Wird Teil der technischen Akte.',
+              '<strong>§203 StGB Berufsgeheimnis:</strong> Anwälte, Ärzte, Wirtschaftsprüfer, Steuerberater haben strafrechtliche Haftung bei unbefugter Offenbarung. Cloud-LLM = externer Auftragsverarbeiter — lokale Architektur ist Pflicht.',
+              '<strong>Österreich §121 StGB / Schweiz Art. 321 StGB:</strong> Ähnliche Pflichten. Architektonisches Fazit: nur lokal, keine Ausnahmen bei sensiblen Professionsdaten.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Modellauswahl für Geschäfts-Workflows',
+            columns: ['Modell', 'VRAM', 'Einsatzgebiet'],
+            rows: [
+              { 'Modell': 'Gemma 4 27B', 'VRAM': '16 GB unified / 24 GB', 'Einsatzgebiet': 'Allgemeines Tool-Calling, Dokumentenannahme, E-Mail-Triage' },
+              { 'Modell': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', 'Einsatzgebiet': 'Compliance-Reporting, lange Transkripte (128K Kontext)' },
+              { 'Modell': 'Qwen3 32B', 'VRAM': '24 GB VRAM', 'Einsatzgebiet': 'Mehrstufige Pläne, Rechnungsverarbeitung' },
+              { 'Modell': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', 'Einsatzgebiet': 'Höchste Zuverlässigkeit, Ausnahmebehandlung' },
+              { 'Modell': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', 'Einsatzgebiet': 'Nur Hochvolumen-Klassifizierung — nicht für Antwortentwürfe' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Agent-Stack-Vergleich',
+            columns: ['Runtime', 'Einrichtung', 'Freigabe-Gates', 'Am besten für'],
+            rows: [
+              { 'Runtime': 'Cline (VS Code)', 'Einrichtung': 'Eine Extension', 'Freigabe-Gates': 'Pro Schritt, in IDE', 'Am besten für': 'Dev-Teams, Code-nahe Workflows' },
+              { 'Runtime': 'Goose + MCP', 'Einrichtung': 'brew install', 'Freigabe-Gates': 'CLI-Prompts', 'Am besten für': 'Server ohne GUI, geplante Reports' },
+              { 'Runtime': 'n8n + Ollama', 'Einrichtung': 'Docker', 'Freigabe-Gates': 'Human-in-Loop-Knoten', 'Am besten für': 'Deterministische Workflows + 1–2 Modellschritte' },
+              { 'Runtime': 'LangGraph + Ollama', 'Einrichtung': 'Python-Projekt', 'Freigabe-Gates': 'Selbst gebaut', 'Am besten für': 'Produktions-Workflows, eigene Audit-Trails' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Fehler bei der Bereitstellung',
+            items: [
+              '<strong>Bereitstellung ohne DSFA.</strong> Pflicht bei hochwirksamen Workflows. 4–8 Seiten, vor Beginn der Verarbeitung — was Aufsichtsbehörden zuerst verlangen.',
+              '<strong>Cloud-verbundene Runtime für vertrauliche Dokumente.</strong> Eine Cloud-Abhängigkeit in der Kette zerstört das lokale Argument vollständig.',
+              '<strong>Kein Freigabe-Gate bei Schreib- oder Sendeaktionen.</strong> Auto-Senden ist der Weg, auf dem Aufsichtsbehörden von Ihnen erfahren.',
+              '<strong>Vermischung personenbezogener und geschäftlicher Daten in einem Workspace.</strong> Verletzt die Zweckbindung. Korrektur ist teuer.',
+              '<strong>Kein Audit-Log.</strong> "Gesprächshistorie" ist kein konformes Audit-Log. Append-only, hash-gekettet, gemäß Aufbewahrungsfristen gespeichert.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ',
+            faqs: [
+              {
+                q: 'Sind lokale KI-Agenten standardmäßig DSGVO-konform?',
+                a: 'Nein — DSGVO-kompatibel durch Architektur, aber nicht standardmäßig konform. Lokal entfallen Schrems II und Auftragsverarbeiterpflichten. Rechtsgrundlage, Datenminimierung, Sicherheit, Audit-Log und DSFA gelten weiterhin.'
+              },
+              {
+                q: 'Welche Workflows sind High-Risk unter dem EU AI Act?',
+                a: 'HR-Screening, Lebenslauf-Ranking, Kreditentscheidungen, Leistungsbewertungen (Anhang III). Die 5 Basis-Vorlagen sind alle Limited-Risk; Zweckänderung für HR erbt High-Risk-Pflichten.'
+              },
+              {
+                q: 'Benötige ich eine DSFA für einen E-Mail-Triage-Agent?',
+                a: 'Auslöserbasiert bei allgemeinen Postfächern. Pflicht, wenn das Postfach Mitarbeiter- oder Sonderkategorie-Daten enthält. Die meisten Teams sollten eine erstellen — Aufwand sind Stunden, Nutzen ist dokumentierte DSB-Freigabe.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ (Forts.)',
+            faqs: [
+              {
+                q: 'Kann ein lokaler Agent Mitarbeiterdaten in Deutschland verarbeiten?',
+                a: 'Ja, mit Mitbestimmung des Betriebsrats (BetrVG §87(1) Nr. 6). Zum Designzeitpunkt einbinden, Betriebsvereinbarung unterzeichnen. Ohne diesen Schritt wurden Rollouts nachträglich von Arbeitsgerichten gestoppt.'
+              },
+              {
+                q: 'Welches Modell eignet sich für Geschäfts-Workflows?',
+                a: 'Gemma 4 27B für allgemeines Tool-Calling. GLM-5.1 32B für lange Eingaben (128K Kontext). Modelle unter 7B vermeiden — sie erzeugen in der Produktion fehlerhafte Tool-Aufrufe.'
+              },
+              {
+                q: 'Kann ich eine Agent-Runtime abteilungsübergreifend teilen?',
+                a: 'Architektonisch ja, rechtlich komplex. Separate Workspaces pro Workflow zur Wahrung der Zweckbindung nutzen. Das Modell ist eine gemeinsame Ressource; Workflows und Audit-Logs sind es nicht.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Mit einem Workflow beginnen',
+            body: 'Wählen Sie den risikoärmsten Einstieg: Dokumentenannahme oder E-Mail-Triage. Beide sind Limited-Risk, beide haben klare Freigabegrenzen und schaffen die Audit-Log-Infrastruktur, die Sie für alle fünf Vorlagen wiederverwenden.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Agents IA locaux pour workflows métier : guide conformité UE 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Agents IA locaux pour workflows métier : conformité UE',
+            subtitle: 'Quand le modèle, les outils et les données restent dans votre infrastructure, le modèle de menace LLM-cloud disparaît. Voici ce qui reste — et comment le gérer.',
+            link: BASE_URL + '?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              '<strong>L\'architecture locale est le contrôle de confidentialité le plus fort.</strong> Schrems II, listes de sous-traitants et analyses d\'impact des transferts transfrontaliers ne s\'appliquent plus quand tout reste dans l\'infrastructure du responsable.',
+              '<strong>5 modèles de workflows couvrent la majorité des besoins :</strong> ingestion documentaire, triage d\'e-mails, résumé de réunions, rapports de conformité, traitement des factures.',
+              '<strong>Les niveaux EU AI Act déterminent les obligations.</strong> La plupart des workflows : Risque limité (transparence seulement). Screening RH, décisions de crédit : Haut risque (évaluation de conformité complète). Reconnaissance des émotions en milieu de travail : Interdit.',
+              '<strong>Les obligations RGPD restent inchangées.</strong> Base légale (Art. 6), minimisation des données (Art. 5), sécurité (Art. 32), journal d\'audit et AIPD (Art. 35) continuent de s\'appliquer.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Points clés (suite)',
+            items: [
+              '<strong>Les spécificités DACH ajoutent deux couches.</strong> Codétermination du comité d\'entreprise (BetrVG §87) pour les données des employés. §203 StGB rend l\'architecture locale obligatoire pour les professionnels soumis au secret.',
+              '<strong>Stack de référence :</strong> Ollama ou vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline ou Goose+MCP + journal d\'audit immuable + approbation humaine sur chaque écriture ou envoi.',
+              '<strong>Trois modes d\'échec à éviter :</strong> déploiement sans AIPD ; mélange de données personnelles et professionnelles dans un même espace de travail ; absence de gate d\'approbation sur les actions sortantes.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Ce que font les agents IA locaux pour les équipes métier',
+            intro: 'Un agent est un modèle à appel d\'outils + une surface d\'outils + une gate d\'approbation — pas un assistant conversationnel, pas un automatiseur de workflows.',
+            items: [
+              '<strong>Définition :</strong> modèle + surface d\'outils (système de fichiers, base de données, e-mail, calendrier, API interne) + gate d\'approbation par écriture = agent.',
+              '<strong>Différent de l\'automatisation (n8n/Zapier) :</strong> l\'automatisation utilise des déclencheurs et des branches fixes. Un agent est non-déterministe — le modèle décide quel outil appeler selon le contexte.',
+              '<strong>Différent d\'un assistant conversationnel :</strong> l\'assistant répond à des questions ; l\'agent prend des actions — lit la boîte mail, classe, rédige des réponses, met en file pour approbation.',
+              '<strong>Pourquoi « local » compte :</strong> résidence des données prouvable, trail d\'audit de bout en bout, aucun sous-traitant tiers dans la chaîne.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5 modèles de workflows',
+            columns: ['Workflow', 'Déclencheur', 'Modèle', 'Niveau AI Act'],
+            rows: [
+              { 'Workflow': 'Ingestion documentaire', 'Déclencheur': 'PDF dans dossier surveillé', 'Modèle': 'Gemma 4 27B / Qwen3 32B', 'Niveau AI Act': 'Risque limité' },
+              { 'Workflow': 'Triage d\'e-mails', 'Déclencheur': 'Nouveau message entrant', 'Modèle': 'Llama 3.2 3B (triage) + Gemma 4 27B', 'Niveau AI Act': 'Risque limité' },
+              { 'Workflow': 'Résumé de réunion', 'Déclencheur': 'Transcription disponible', 'Modèle': 'Qwen3 32B (128K ctx)', 'Niveau AI Act': 'Risque limité' },
+              { 'Workflow': 'Rapport de conformité', 'Déclencheur': 'Planifié (mensuel)', 'Modèle': 'GLM-5.1 32B / Llama 3.3 70B', 'Niveau AI Act': 'Risque limité' },
+              { 'Workflow': 'Traitement des factures', 'Déclencheur': 'Facture dans le dossier AP', 'Modèle': 'Gemma 4 27B / Qwen3 32B', 'Niveau AI Act': 'Risque limité' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Classification EU AI Act',
+            items: [
+              '<strong>Risque limité (la plupart des modèles) :</strong> obligations de transparence uniquement. Les utilisateurs recevant des e-mails ou résumés générés par IA doivent être informés de l\'implication de l\'IA.',
+              '<strong>Haut risque (cas spécifiques) :</strong> évaluation de conformité complète, inscription dans la base de données UE, surveillance post-commercialisation. Screening RH, décisions de crédit, éligibilité aux aides.',
+              '<strong>Interdit :</strong> reconnaissance des émotions en milieu de travail, scoring social, identification biométrique en temps réel dans les espaces publics.',
+              '<strong>Fournisseur vs Déployeur :</strong> les agents locaux internes font de vous un Déployeur (moins d\'obligations, mais obligations réelles). Intégrer le modèle dans un produit vendu à des tiers = Fournisseur.',
+              '<strong>Action requise :</strong> classifiez chaque nouveau workflow avant d\'approuver le déploiement — une décision écrite (Limité / Élevé / Interdit) signée par le DPO, conservée dans le dossier technique.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Contrôles RGPD pour les workflows d\'agents',
+            items: [
+              '<strong>Base légale (Art. 6) :</strong> documenter avant le déploiement. La plupart des workflows : contrat ou intérêt légitime (avec test d\'équilibre).',
+              '<strong>Minimisation des données (Art. 5(1)(c)) :</strong> l\'agent ne voit que ce dont le workflow a besoin. Filtrer au niveau RAG, pas au niveau du modèle.',
+              '<strong>Limitation des finalités (Art. 5(1)(b)) :</strong> un agent approuvé pour les factures ne peut pas traiter des données RH sans réévaluation.',
+              '<strong>Sécurité du traitement (Art. 32) :</strong> chiffrement au repos, contrôle d\'accès à l\'espace de travail, journal d\'audit immuable.',
+              '<strong>Journal d\'audit :</strong> horodatage, utilisateur/initiateur, ID et version du modèle, hash d\'entrée, appels d\'outils et arguments, hash de sortie, approbateur.',
+              '<strong>AIPD (Art. 35) :</strong> obligatoire pour les traitements à haut risque. À rédiger avant le déploiement — 4 à 8 pages pour la plupart des workflows d\'agents.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Spécificités DACH : comité d\'entreprise et §203 StGB',
+            items: [
+              '<strong>Codétermination du comité d\'entreprise (BetrVG §87(1) Nr. 6) :</strong> tout système technique surveillant la conduite ou les performances des employés déclenche la codétermination — même passivement.',
+              '<strong>Impliquer le comité d\'entreprise à la conception, pas au déploiement.</strong> Signer un Betriebsvereinbarung définissant finalité, conservation, accès, exigences d\'audit. Devient partie du dossier technique.',
+              '<strong>§203 StGB secret professionnel :</strong> avocats, médecins, commissaires aux comptes, conseillers fiscaux ont une responsabilité pénale pour la divulgation. Un LLM cloud est un prestataire externe — l\'architecture locale devient obligatoire.',
+              '<strong>Autriche §121 StGB / Suisse Art. 321 StGB :</strong> obligations similaires. Conclusion architecturale identique : local uniquement, sans exceptions pour les données professionnelles sensibles.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Sélection du modèle',
+            columns: ['Modèle', 'VRAM', 'Idéal pour'],
+            rows: [
+              { 'Modèle': 'Gemma 4 27B', 'VRAM': '16 Go unifiée / 24 Go', 'Idéal pour': 'Appel d\'outils général, ingestion documentaire, triage' },
+              { 'Modèle': 'GLM-5.1 32B', 'VRAM': '24 Go+ VRAM', 'Idéal pour': 'Reporting conformité, longues transcriptions (128K ctx)' },
+              { 'Modèle': 'Qwen3 32B', 'VRAM': '24 Go VRAM', 'Idéal pour': 'Plans multi-étapes, traitement de factures' },
+              { 'Modèle': 'Llama 3.3 70B', 'VRAM': '48 Go+ VRAM', 'Idéal pour': 'Fiabilité maximale, gestion des exceptions' },
+              { 'Modèle': 'Llama 3.2 3B', 'VRAM': '8 Go VRAM', 'Idéal pour': 'Classification haut volume uniquement — pas pour les brouillons' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Comparaison des stacks d\'agents',
+            columns: ['Runtime', 'Installation', 'Gates d\'approbation', 'Idéal pour'],
+            rows: [
+              { 'Runtime': 'Cline (VS Code)', 'Installation': 'Une extension', 'Gates d\'approbation': 'Par étape, dans l\'IDE', 'Idéal pour': 'Équipes dev, workflows code' },
+              { 'Runtime': 'Goose + MCP', 'Installation': 'brew install', 'Gates d\'approbation': 'Invites CLI', 'Idéal pour': 'Serveurs sans interface, rapports planifiés' },
+              { 'Runtime': 'n8n + Ollama', 'Installation': 'Docker', 'Gates d\'approbation': 'Nœuds human-in-loop', 'Idéal pour': 'Workflows déterministes + 1–2 étapes modèle' },
+              { 'Runtime': 'LangGraph + Ollama', 'Installation': 'Projet Python', 'Gates d\'approbation': 'Construites par vous', 'Idéal pour': 'Workflows de production, audit trails personnalisés' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs courantes lors du déploiement',
+            items: [
+              '<strong>Déploiement sans AIPD.</strong> Obligatoire pour les workflows à fort impact. 4 à 8 pages, à rédiger avant le début du traitement.',
+              '<strong>Runtime connecté au cloud pour des documents confidentiels.</strong> Une dépendance cloud dans la chaîne brise entièrement l\'argument local.',
+              '<strong>Absence de gate d\'approbation sur les actions d\'écriture ou d\'envoi.</strong> Les agents à envoi automatique sont la façon dont les régulateurs vous entendent parler.',
+              '<strong>Mélange de données personnelles et professionnelles dans un même espace.</strong> Viole la limitation des finalités. La remédiation est coûteuse.',
+              '<strong>Absence de journal d\'audit.</strong> L\'historique de conversation n\'est pas un journal d\'audit conforme. Append-only, chaîné par hash, conservé selon les durées applicables.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ',
+            faqs: [
+              {
+                q: 'Les agents IA locaux sont-ils conformes au RGPD par défaut ?',
+                a: 'Non — compatibles par architecture, pas conformes par défaut. Le local supprime Schrems II et les obligations de sous-traitance. La base légale, la minimisation, la sécurité, le journal d\'audit et l\'AIPD continuent de s\'appliquer.'
+              },
+              {
+                q: 'Quels workflows sont à Haut risque selon l\'EU AI Act ?',
+                a: 'Screening RH, classement de CV, décisions de crédit, éligibilité aux aides (Annexe III). Les 5 modèles de base sont tous à Risque limité ; la réaffectation pour le RH hérite des obligations Haut risque.'
+              },
+              {
+                q: 'Ai-je besoin d\'une AIPD pour un agent de triage d\'e-mails ?',
+                a: 'Basé sur des déclencheurs pour les boîtes générales. Obligatoire si la boîte contient des données d\'employés ou des catégories spéciales. La plupart des équipes devraient en réaliser une — coût en heures, bénéfice en validation documentée.'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'FAQ (suite)',
+            faqs: [
+              {
+                q: 'Un agent local peut-il traiter des données d\'employés en Allemagne ?',
+                a: 'Oui, avec la codétermination du comité d\'entreprise (BetrVG §87(1) Nr. 6). Impliquer à la conception, signer un Betriebsvereinbarung. Sans cette étape, des déploiements ont été invalidés par les tribunaux du travail allemands.'
+              },
+              {
+                q: 'Quel modèle gère les workflows métier de manière fiable ?',
+                a: 'Gemma 4 27B pour l\'appel d\'outils général. GLM-5.1 32B pour les entrées longues (128K ctx). Éviter les modèles sous 7B — ils émettent des appels d\'outils malformés en production.'
+              },
+              {
+                q: 'Peut-on partager un runtime d\'agent entre départements ?',
+                a: 'Architecturalement oui, légalement complexe. Espaces de travail séparés par workflow pour préserver la limitation des finalités. Le modèle est une ressource partagée ; les workflows et journaux d\'audit ne le sont pas.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Commencer par un workflow',
+            body: 'Choisissez le point d\'entrée le moins risqué : ingestion documentaire ou triage d\'e-mails. Tous deux sont à Risque limité, ont des limites d\'approbation claires et construisent l\'infrastructure de journal d\'audit réutilisable pour les cinq modèles.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'ローカルAIエージェントの業務ワークフロー：GDPR & EU AI Act準拠ガイド 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'ローカルAIエージェントの業務ワークフロー：EU準拠ガイド',
+            subtitle: 'モデル・ツール・データがすべて自社インフラ内にある場合、クラウドLLMのコンプライアンス負担は消滅します。残るものと対処方法を解説します。',
+            link: BASE_URL + '?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: '主なポイント',
+            items: [
+              '<strong>ローカル専用アーキテクチャは最強のプライバシー管理策です。</strong>モデル・ツールサーバー・データすべてが管理者のインフラ内にある場合、Schrems II・サブプロセッサーリスト・越境移転影響評価は適用されません。',
+              '<strong>5つのワークフローテンプレートが主要な要求をカバーします：</strong>文書取り込み・分類、メールトリアージと返信ドラフト、会議サマリーとアクション抽出、コンプライアンスレポート生成、発注書照合付き請求書処理。',
+              '<strong>EU AI Actのリスク区分が義務を決定します。</strong>ほとんどのビジネスワークフローは限定リスク（透明性義務のみ）。HR選考・与信判断・給付資格は高リスク（完全な適合性評価）。職場の感情認識は禁止。',
+              '<strong>GDPRの義務はローカル化しても変わりません。</strong>適法根拠（第6条）・データ最小化（第5条）・処理の安全性（第32条）・監査ログ・高影響ワークフローのDPIA（第35条）は引き続き適用されます。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '主なポイント（続き）',
+            items: [
+              '<strong>DACHでは2つの追加レイヤーがあります。</strong>従業員データに触れる場合は労働者委員会（BetrVG §87）の共同決定権が適用されます。§203 StGBはBeruf秘匿義務者（弁護士・医師・監査人）に対してローカル専用を義務付けます。',
+              '<strong>参照スタック：</strong>Ollama/vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline/Goose+MCP + 不変監査ログ + すべての書き込み・送信アクションへの人間承認。',
+              '<strong>3つの失敗パターン：</strong>必要なワークフローへのDPIA未実施；個人データと業務データの混在；送信アクションへの承認ゲートのスキップ。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ローカルAIエージェントが業務チームに提供するもの',
+            intro: 'エージェントはツール呼び出しモデル＋ツールサーフェス＋承認ゲートです——チャットアシスタントでも、ワークフロー自動化ツールでもありません。',
+            items: [
+              '<strong>定義：</strong>モデル＋ツールサーフェス（ファイルシステム・データベース・メール・カレンダー・内部API）＋書き込みごとの承認ゲート＝エージェント。',
+              '<strong>自動化ツール（n8n/Zapier）との違い：</strong>自動化は固定トリガーと分岐を使用。エージェントは非決定論的——モデルが入力に基づいてどのツールを呼び出すかを決定します。',
+              '<strong>チャットアシスタントとの違い：</strong>アシスタントは質問に答える；エージェントはアクションを取る——受信トレイ読み取り→分類→返信ドラフト→承認待ちキュー。',
+              '<strong>「ローカル」が重要な理由：</strong>データ居住地が証明可能、エンドツーエンドの監査証跡、チェーンにサードパーティプロセッサーが存在しない。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5つのワークフローテンプレート',
+            columns: ['ワークフロー', 'トリガー', 'モデル', 'AI Actレベル'],
+            rows: [
+              { 'ワークフロー': '文書取り込み', 'トリガー': '監視フォルダへのPDF', 'モデル': 'Gemma 4 27B / Qwen3 32B', 'AI Actレベル': '限定リスク' },
+              { 'ワークフロー': 'メールトリアージ', 'トリガー': '受信トレイの新着メッセージ', 'モデル': 'Llama 3.2 3B（トリアージ）+ Gemma 4 27B', 'AI Actレベル': '限定リスク' },
+              { 'ワークフロー': '会議サマリー', 'トリガー': 'ストレージ内の文字起こし', 'モデル': 'Qwen3 32B（128Kコンテキスト）', 'AI Actレベル': '限定リスク' },
+              { 'ワークフロー': 'コンプライアンスレポート', 'トリガー': '定期実行（月次）', 'モデル': 'GLM-5.1 32B / Llama 3.3 70B', 'AI Actレベル': '限定リスク' },
+              { 'ワークフロー': '請求書処理', 'トリガー': '経理フォルダへの請求書', 'モデル': 'Gemma 4 27B / Qwen3 32B', 'AI Actレベル': '限定リスク' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU AI Act分類',
+            items: [
+              '<strong>限定リスク（ほとんどのテンプレート）：</strong>透明性義務のみ。AI生成メールやサマリーを受け取るユーザーはAIの関与を知らされる必要があります。',
+              '<strong>高リスク（特定のユースケース）：</strong>完全な適合性評価・EU登録・市場後監視が必要。HR選考・履歴書ランキング・与信判断・給付資格（附属書III参照）。',
+              '<strong>禁止：</strong>職場での感情認識、自然人のソーシャルスコアリング、公共空間でのリアルタイム生体認識。',
+              '<strong>提供者 vs 展開者：</strong>内部専用ローカルエージェントは通常あなたを展開者にします（義務は少ないが実在します）。',
+              '<strong>必須アクション：</strong>展開承認前にすべての新しいワークフローを分類——DPOが署名した1つの書面決定（限定/高リスク/禁止）をテクニカルファイルに保管。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'エージェントワークフローのGDPR管理策',
+            items: [
+              '<strong>適法根拠（第6条）：</strong>展開前に文書化。ほとんどの業務ワークフロー：契約または正当な利益（バランシングテスト付き）。',
+              '<strong>データ最小化（第5条(1)(c)）：</strong>エージェントはワークフローに必要なデータのみを参照。モデルレベルではなくRAGレベルでフィルタリング。',
+              '<strong>目的限定（第5条(1)(b)）：</strong>請求書処理で承認されたエージェントは、再評価なしにHR業務を引き受けることはできません。',
+              '<strong>処理の安全性（第32条）：</strong>保存時の暗号化・アクセス制御・不変監査ログ・インシデント対応計画。',
+              '<strong>監査ログ：</strong>タイムスタンプ・ユーザー/開始者・モデルIDとバージョン・入力ハッシュ・ツール呼び出しと引数・出力ハッシュ・承認者。追記専用・整合性保護。',
+              '<strong>DPIA（第35条）：</strong>高リスクと重大な影響を持つ体系的処理に必須。設計時に作成——ほとんどのエージェントワークフローで4〜8ページ。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'DACH固有事項：労働者委員会と§203 StGB',
+            items: [
+              '<strong>労働者委員会の共同決定権（BetrVG §87(1) Nr. 6）：</strong>従業員の行動や業績を監視する技術システムは共同決定権を発動します——受動的な場合も含みます。',
+              '<strong>展開時ではなく設計時に労働者委員会を関与させる。</strong>Betriebsvereinbarungに署名：目的・保存・アクセス・監査要件を定義。テクニカルファイルの一部になります。',
+              '<strong>§203 StGB職業上の秘密保持：</strong>弁護士・医師・監査人・税務顧問は開示に対して刑事責任を負います。クラウドLLMは外部プロセッサー——§203対象の企業にとってローカル専用は法的要件です。',
+              '<strong>オーストリア §121 StGB / スイス Art. 321 StGB：</strong>同様の義務。アーキテクチャ上の結論は同じ——機密専門データには例外なくローカル専用。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'モデル選択ガイド',
+            columns: ['モデル', 'VRAM', '最適用途'],
+            rows: [
+              { 'モデル': 'Gemma 4 27B', 'VRAM': '16 GB統合 / 24 GB', '最適用途': '汎用ツール呼び出し・文書取り込み・メールトリアージ' },
+              { 'モデル': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', '最適用途': 'コンプライアンスレポート・長い文字起こし（128Kコンテキスト）' },
+              { 'モデル': 'Qwen3 32B', 'VRAM': '24 GB VRAM', '最適用途': '多段階プラン・請求書処理・フォールバック' },
+              { 'モデル': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', '最適用途': '最高の信頼性・例外処理' },
+              { 'モデル': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', '最適用途': '大量分類のみ——返信ドラフトには不向き' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'エージェントスタック比較',
+            columns: ['ランタイム', 'セットアップ', '承認ゲート', '最適用途'],
+            rows: [
+              { 'ランタイム': 'Cline (VS Code)', 'セットアップ': '1つの拡張機能', '承認ゲート': 'ステップごと・IDE内', '最適用途': '開発チーム・コード関連ワークフロー' },
+              { 'ランタイム': 'Goose + MCP', 'セットアップ': 'brew install', '承認ゲート': 'CLIプロンプト', '最適用途': 'ヘッドレスサーバー・定期レポート' },
+              { 'ランタイム': 'n8n + Ollama', 'セットアップ': 'Docker', '承認ゲート': 'ヒューマン・イン・ループノード', '最適用途': '決定論的ワークフロー＋1〜2モデルステップ' },
+              { 'ランタイム': 'LangGraph + Ollama', 'セットアップ': 'Pythonプロジェクト', '承認ゲート': '自前実装', '最適用途': '本番ワークフロー・カスタム監査証跡' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'EU業務ワークフローでのよくある間違い',
+            items: [
+              '<strong>DPIAなしでの展開。</strong>高影響ワークフローには必須。処理開始前に4〜8ページを作成——監督機関が最初に求めるもの。',
+              '<strong>機密文書への機密情報をクラウド接続のランタイムで処理。</strong>チェーン内の1つのクラウド依存関係がローカル専用の主張を完全に崩します。',
+              '<strong>書き込み・送信アクションへの承認ゲートがない。</strong>自動送信エージェントは規制当局があなたについて聞く方法です。',
+              '<strong>1つのワークスペースに個人データと業務データを混在させる。</strong>目的限定に違反します。是正コストは高くなります。',
+              '<strong>監査ログのスキップ。</strong>「会話履歴」は準拠した監査ログではありません。追記専用・ハッシュチェーン・関連保存期間に従って保管が必要。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              {
+                q: 'ローカルAIエージェントはデフォルトでGDPR準拠ですか？',
+                a: 'いいえ——アーキテクチャ的にGDPR互換ですが、デフォルトで準拠しているわけではありません。ローカル化によりSchrems IIとサブプロセッサー義務は消滅しますが、適法根拠・データ最小化・セキュリティ・監査ログ・DPIAは引き続き適用されます。'
+              },
+              {
+                q: 'EU AI ActでどのワークフローがHigh-Riskですか？',
+                a: 'HR選考・履歴書ランキング・与信判断・給付資格（附属書III）。5つの基本テンプレートはすべて限定リスクですが、HR・与信目的への転用は高リスク義務を継承します。'
+              },
+              {
+                q: 'メールトリアージエージェントにDPIAは必要ですか？',
+                a: '一般的な受信トレイではトリガーベース。従業員データや特別カテゴリデータを含む受信トレイには必須。ほとんどのチームは実施すべき——コストは数時間、利点はDPOによる文書化された承認。'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問（続き）',
+            faqs: [
+              {
+                q: 'ローカルエージェントはドイツで従業員データを処理できますか？',
+                a: '労働者委員会の共同決定権（BetrVG §87(1) Nr. 6）があれば可能です。設計時に関与させ、Betriebsvereinbarungに署名。このステップをスキップすると、ドイツの労働裁判所により展開後に無効化された事例があります。'
+              },
+              {
+                q: 'どのモデルが業務ワークフローを確実に処理しますか？',
+                a: '汎用ツール呼び出しにはGemma 4 27B。長い入力（128Kコンテキスト）にはGLM-5.1 32B。7B未満のモデルは本番環境で不正なツール呼び出しを生成するため避けてください。'
+              },
+              {
+                q: '1つのエージェントランタイムを部門間で共有できますか？',
+                a: 'アーキテクチャ的には可能ですが、法的には複雑です。目的限定を維持するためワークフローごとに別々のワークスペースを使用してください。モデルは共有リソースですが、ワークフローと監査ログは共有しません。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '1つのワークフローから始める',
+            body: '最もリスクの低いエントリーポイントを選択してください：文書取り込みまたはメールトリアージ。どちらも限定リスクで、明確な承認境界があり、残り4つのテンプレートで再利用できる監査ログインフラを構築します。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '本地AI智能体业务工作流：GDPR与EU AI Act合规指南 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: '本地AI智能体业务工作流：EU合规指南',
+            subtitle: '当模型、工具和数据全部位于自有基础设施内时，云LLM合规负担消失。以下是仍然存在的内容以及应对方法。',
+            link: BASE_URL + '?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>本地专用架构是最强的隐私控制措施。</strong>当模型、工具服务器和数据均在数据控制者的基础设施内且零出口时，Schrems II、子处理者清单和跨境传输影响评估均不适用。',
+              '<strong>5个工作流模板涵盖大部分生产需求：</strong>文档接收与分类、带回复草稿的邮件分类、会议摘要与行动项提取、合规报告生成、带采购订单匹配的发票处理。',
+              '<strong>EU AI Act分级决定合规义务。</strong>大多数业务工作流为有限风险（仅透明度要求）。HR筛选、信贷决策、福利资格为高风险（需完整合格评定）。职场情绪识别为禁止。',
+              '<strong>GDPR义务不因本地化而改变。</strong>法律依据（第6条）、数据最小化（第5条）、处理安全性（第32条）、审计日志和高影响工作流的DPIA（第35条）仍然适用。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '核心要点（续）',
+            items: [
+              '<strong>DACH地区增加两个额外层次。</strong>工作委员会共同决定权（BetrVG §87）适用于任何接触员工数据的情况。§203 StGB使本地专用架构对职业保密义务人（律师、医生、审计师）成为强制要求。',
+              '<strong>参考技术栈：</strong>Ollama或vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline或Goose+MCP + 不可变审计日志 + 每次写入或发送操作均需人工审批。',
+              '<strong>三种需要避免的失败模式：</strong>未进行DPIA就部署需要它的工作流；在一个工作区混合个人数据和业务数据；跳过外发操作（邮件发送、合同签署、付款授权）的审批门控。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '本地AI智能体为业务团队提供的价值',
+            intro: '智能体是工具调用模型+工具界面+审批门控——不是聊天助手，也不是工作流自动化工具。',
+            items: [
+              '<strong>定义：</strong>模型+工具界面（文件系统、数据库、邮件、日历、内部API）+每次写入的审批门控=智能体。',
+              '<strong>与自动化工具（n8n/Zapier）的区别：</strong>自动化使用固定触发器和分支；智能体是非确定性的——模型根据输入决定调用哪个工具。',
+              '<strong>与聊天助手的区别：</strong>聊天助手回答问题；智能体采取行动——读取收件箱、分类、起草回复、排队等待审批。',
+              '<strong>为什么"本地"很重要：</strong>数据驻留可证明，端到端审计链路完整，链路中无第三方处理者。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '5个工作流模板',
+            columns: ['工作流', '触发条件', '推荐模型', 'AI Act分级'],
+            rows: [
+              { '工作流': '文档接收', '触发条件': 'PDF落入监控文件夹', '推荐模型': 'Gemma 4 27B / Qwen3 32B', 'AI Act分级': '有限风险' },
+              { '工作流': '邮件分类', '触发条件': '收件箱新邮件', '推荐模型': 'Llama 3.2 3B（分类）+ Gemma 4 27B', 'AI Act分级': '有限风险' },
+              { '工作流': '会议摘要', '触发条件': '转录文件就绪', '推荐模型': 'Qwen3 32B（128K上下文）', 'AI Act分级': '有限风险' },
+              { '工作流': '合规报告', '触发条件': '定期执行（月度）', '推荐模型': 'GLM-5.1 32B / Llama 3.3 70B', 'AI Act分级': '有限风险' },
+              { '工作流': '发票处理', '触发条件': '发票落入财务文件夹', '推荐模型': 'Gemma 4 27B / Qwen3 32B', 'AI Act分级': '有限风险' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU AI Act分类',
+            items: [
+              '<strong>有限风险（大多数模板）：</strong>仅需透明度义务。接收AI生成邮件或摘要的用户必须知晓AI的参与。',
+              '<strong>高风险（特定用例）：</strong>需完整合格评定、EU数据库注册、上市后监控。常见高风险场景：HR筛选、简历排名、信贷决策、福利资格（参见附录III）。',
+              '<strong>禁止：</strong>职场情绪识别、自然人社会评分、公共场所实时生物特征识别、针对漏洞的操控技术。',
+              '<strong>提供者vs部署者：</strong>内部专用本地智能体通常使您成为部署者（义务较少，但仍然存在）。为他人构建产品则为提供者。',
+              '<strong>必要行动：</strong>每个新工作流在批准部署前需分类——一份书面决定（有限/高风险/禁止），由DPO签署，保存在技术文档中。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '智能体工作流的GDPR控制措施',
+            items: [
+              '<strong>法律依据（第6条）：</strong>部署前记录。大多数业务工作流：合同或正当利益（附平衡测试）。特殊类别数据需在第6条依据之上附加第9条条件。',
+              '<strong>数据最小化（第5条(1)(c)）：</strong>智能体只看工作流需要的数据。在RAG层过滤，而非在模型层过滤。',
+              '<strong>目的限制（第5条(1)(b)）：</strong>批准用于发票处理的智能体不能在未重新评估的情况下承担HR职责。',
+              '<strong>处理安全性（第32条）：</strong>静态加密、工作区访问控制、不可变审计日志、事件响应计划。',
+              '<strong>审计日志：</strong>时间戳、用户/发起者、模型ID和版本、输入哈希、工具调用和参数、输出哈希、审批者。追加专用、完整性保护。',
+              '<strong>DPIA（第35条）：</strong>高风险和具有重大影响的系统性处理必须进行。在处理开始前编写——大多数智能体工作流4-8页即可。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'DACH特殊要求：工作委员会与§203 StGB',
+            items: [
+              '<strong>工作委员会共同决定权（BetrVG §87(1) Nr. 6）：</strong>任何监控员工行为或绩效的技术系统均触发共同决定权——即使是被动方式。',
+              '<strong>在设计阶段而非部署阶段与工作委员会沟通。</strong>签署Betriebsvereinbarung：定义目的、保留期限、访问权限、审计要求。成为系统技术文档的一部分。',
+              '<strong>§203 StGB职业保密：</strong>律师、医生、审计师、税务顾问对未经授权的披露承担刑事责任。云LLM是外部服务提供商——这正是§203约束的企业转向本地技术栈的法律核心。',
+              '<strong>奥地利§121 StGB / 瑞士Art. 321 StGB：</strong>类似义务。架构结论相同——本地专用，敏感职业数据无例外。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '业务工作流模型选择',
+            columns: ['模型', 'VRAM', '最适合'],
+            rows: [
+              { '模型': 'Gemma 4 27B', 'VRAM': '16 GB统一 / 24 GB', '最适合': '通用工具调用、文档接收、邮件分类' },
+              { '模型': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', '最适合': '合规报告、长文字转录（128K上下文）' },
+              { '模型': 'Qwen3 32B', 'VRAM': '24 GB VRAM', '最适合': '多步骤规划、发票处理、备选方案' },
+              { '模型': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', '最适合': '最高可靠性、异常处理' },
+              { '模型': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', '最适合': '仅高量分类——不适合起草回复' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: '智能体技术栈比较',
+            columns: ['运行时', '安装', '审批门控', '最适合'],
+            rows: [
+              { '运行时': 'Cline (VS Code)', '安装': '一个扩展', '审批门控': '每步骤·IDE内', '最适合': '开发团队、代码类工作流' },
+              { '运行时': 'Goose + MCP', '安装': 'brew install', '审批门控': 'CLI提示', '最适合': '无界面服务器、定期报告' },
+              { '运行时': 'n8n + Ollama', '安装': 'Docker', '审批门控': '人工循环节点', '最适合': '确定性工作流+1-2个模型步骤' },
+              { '运行时': 'LangGraph + Ollama', '安装': 'Python项目', '审批门控': '自行构建', '最适合': '生产工作流、定制审计链路' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '部署EU业务工作流时的常见错误',
+            items: [
+              '<strong>未进行DPIA就部署。</strong>高影响工作流必须进行DPIA。4-8页，在处理开始前完成——监管机构首先要求查看的材料。',
+              '<strong>使用云连接运行时处理机密文档。</strong>链路中任何一个云依赖项都会完全破坏本地专用的论据。',
+              '<strong>写入或发送操作没有审批门控。</strong>自动发送的智能体是监管机构了解到您的方式。',
+              '<strong>在一个工作区混合个人数据和业务数据。</strong>违反目的限制原则。整改代价高昂。',
+              '<strong>跳过审计日志。</strong>"对话历史"不是合规的审计日志。需要：追加专用、哈希链式、按相关保留期限保存、可响应数据主体访问请求。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              {
+                q: '本地AI智能体默认符合GDPR吗？',
+                a: '不——架构上与GDPR兼容，但默认并不符合规定。本地化消除了Schrems II和子处理者义务，但法律依据、数据最小化、安全性、审计日志和DPIA仍然适用。'
+              },
+              {
+                q: 'EU AI Act下哪些工作流属于高风险？',
+                a: 'HR筛选、简历排名、信贷决策、福利资格（附录III）。5个基础模板均为有限风险；将其改用于HR或信贷用途则继承高风险义务。'
+              },
+              {
+                q: '邮件分类智能体需要DPIA吗？',
+                a: '对于普通收件箱基于触发条件判断。如果收件箱处理员工数据或特殊类别数据则为必须。大多数团队应主动进行——成本是数小时工作，收益是有文档记录的DPO批准。'
+              }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题（续）',
+            faqs: [
+              {
+                q: '本地智能体能在德国处理员工数据吗？',
+                a: '能，但需要工作委员会共同决定权（BetrVG §87(1) Nr. 6）。在设计阶段介入，签署Betriebsvereinbarung。跳过此步骤已导致德国劳动法院在部署后裁定无效的案例。'
+              },
+              {
+                q: '哪个模型能可靠处理业务工作流？',
+                a: 'Gemma 4 27B用于通用工具调用。GLM-5.1 32B用于长输入（128K上下文）。避免7B以下模型——它们在生产环境中产生格式错误的工具调用。'
+              },
+              {
+                q: '能跨部门共享一个智能体运行时吗？',
+                a: '架构上可以，法律上复杂。每个工作流使用独立工作区以维护目的限制。模型是共享资源，但工作流和审计日志不是。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '从一个工作流开始',
+            body: '选择风险最低的切入点：文档接收或邮件分类。两者都是有限风险，都有明确的审批边界，并构建可在全部五个模板中复用的审计日志基础设施。',
+            cta: '免费试用 PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide, lang) {
+      var articleUrl = BASE_URL + '?lang=' + lang;
+      var footerLink = '<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>';
+      var html = '';
+
+      if (slide.type === 'title') {
+        html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />' +
+          '<h1>' + slide.h1 + '</h1>' +
+          '<p>' + slide.subtitle + '</p>' +
+          '<p style="margin-top: 32px; font-size: 16px; color: #79747e;"><a href="' + slide.link + '" target="_blank" rel="noopener">promptquorum.com/power-local-llm</a></p>';
+      } else if (slide.type === 'list') {
+        html = '<h2>' + slide.h2 + '</h2>';
+        if (slide.intro) { html += '<p style="margin-bottom: 8px; font-size: clamp(12px,1.3vw,15px);">' + slide.intro + '</p>'; }
+        html += '<ul style="font-size: clamp(12px,1.3vw,15px); margin-top: 8px;">';
+        for (var i = 0; i < slide.items.length; i++) { html += '<li>' + slide.items[i] + '</li>'; }
+        html += '</ul>' + footerLink;
+      } else if (slide.type === 'table') {
+        html = '<h2>' + slide.h2 + '</h2><table><tr>';
+        for (var c = 0; c < slide.columns.length; c++) { html += '<th>' + slide.columns[c] + '</th>'; }
+        html += '</tr>';
+        for (var r = 0; r < slide.rows.length; r++) {
+          html += '<tr>';
+          for (var c2 = 0; c2 < slide.columns.length; c2++) { html += '<td>' + slide.rows[r][slide.columns[c2]] + '</td>'; }
+          html += '</tr>';
+        }
+        html += '</table>' + footerLink;
+      } else if (slide.type === 'numbered') {
+        html = '<h2>' + slide.h2 + '</h2><ol style="font-size: clamp(12px,1.3vw,15px); margin-top: 8px; text-align: left; max-width: 700px;">';
+        for (var n = 0; n < slide.items.length; n++) { html += '<li style="margin-bottom: 9px;">' + slide.items[n] + '</li>'; }
+        html += '</ol>' + footerLink;
+      } else if (slide.type === 'faq') {
+        html = '<h2>' + slide.h2 + '</h2>';
+        for (var f = 0; f < slide.faqs.length; f++) {
+          html += '<div style="margin-bottom: 14px; text-align: left; max-width: 700px;"><strong style="font-size: clamp(12px,1.3vw,14px);">Q: ' + slide.faqs[f].q + '</strong><p style="margin-top: 6px; font-size: clamp(11px,1.2vw,13px); color: #49454f;">A: ' + slide.faqs[f].a + '</p></div>';
+        }
+        html += footerLink;
+      } else if (slide.type === 'cta') {
+        html = '<h2>' + slide.h2 + '</h2>' +
+          '<p style="max-width: 600px; font-size: clamp(13px,1.4vw,16px);">' + slide.body + '</p>' +
+          '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px;">' + slide.cta + '</a>';
+      }
+
+      return '<div class="slide ' + slide.type + '">' + html + '</div>';
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var lang = params.get('lang') || 'en';
+    var content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    var backLink = document.getElementById('back-link');
+    backLink.href = BASE_URL + '?lang=' + lang;
+
+    var container = document.getElementById('slides-container');
+    for (var s = 0; s < content.slides.length; s++) {
+      container.innerHTML += renderSlide(content.slides[s], lang);
+    }
+
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) { currentSlide = totalSlides - 1; }
+      else if (n < 0) { currentSlide = 0; }
+      for (var i = 0; i < slides.length; i++) { slides[i].classList.remove('active'); }
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') { changeSlide(-1); }
+      if (e.key === 'ArrowRight') { changeSlide(1); }
+    });
+
+    window.addEventListener('beforeprint', function() {
+      for (var i = 0; i < slides.length; i++) { slides[i].style.display = 'flex'; }
+    });
+    window.addEventListener('afterprint', function() {
+      for (var i = 0; i < slides.length; i++) { slides[i].style.removeProperty('display'); }
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>

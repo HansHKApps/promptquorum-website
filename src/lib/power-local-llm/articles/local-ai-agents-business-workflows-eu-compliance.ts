@@ -79,6 +79,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-business-workflows-eu-compliance-static.html',
+    gammaDescription: 'The slide deck below covers: 5 production workflow templates for EU-compliant local AI agents (document intake, email triage, meeting summary, compliance reports, invoice processing), EU AI Act risk classification (Limited vs High-risk vs Prohibited), 6 GDPR controls (lawful basis, data minimisation, DPIA), DACH specifics (Works Council BetrVG §87, §203 StGB professional confidentiality), model selection table (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B), and 5 common deployment mistakes. Download the PDF as an EU AI compliance reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -427,6 +429,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-business-workflows-eu-compliance-static.html',
+    gammaDescription: 'Die Präsentation unten behandelt: 5 produktionsreife Workflow-Vorlagen für DSGVO-konforme lokale KI-Agenten (Dokumentenannahme, E-Mail-Triage, Meeting-Zusammenfassung, Compliance-Reports, Rechnungsverarbeitung), EU-AI-Act-Klassifizierung (Limited- vs. High-Risk vs. Verboten), 6 DSGVO-Kontrollen (Rechtsgrundlage, Datenminimierung, DSFA), DACH-Spezifika (Betriebsrat §87 BetrVG, §203 StGB Berufsgeheimnis), Modellauswahltabelle und 5 häufige Bereitstellungsfehler. PDF als EU-KI-Compliance-Referenzkarte herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -733,6 +737,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Pour aller plus loin', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-business-workflows-eu-compliance-static.html',
+    gammaDescription: 'La présentation ci-dessous couvre : 5 modèles de workflows de production pour agents IA locaux conformes à l\'UE (ingestion documentaire, triage d\'e-mails, résumé de réunions, rapports de conformité, traitement des factures), classification EU AI Act (Risque limité vs Haut risque vs Interdit), 6 contrôles RGPD, spécificités DACH (comité d\'entreprise BetrVG §87, §203 StGB secret professionnel), tableau de sélection des modèles et 5 erreurs courantes. Téléchargez le PDF comme carte de référence conformité IA EU.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1031,6 +1037,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'よくある質問', anchor: '#faq' },
       { label: '関連記事', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-business-workflows-eu-compliance-static.html',
+    gammaDescription: '以下のスライドデッキでは：EU準拠ローカルAIエージェントの5つの本番ワークフローテンプレート（文書取り込み・メールトリアージ・会議サマリー・コンプライアンスレポート・請求書処理）、EU AI Actリスク分類（限定リスク vs 高リスク vs 禁止）、6つのGDPR管理策（適法根拠・データ最小化・DPIA）、DACH固有事項（労働者委員会BetrVG §87・§203 StGB職業秘匿義務）、モデル選択表、5つのよくある導入ミスを解説します。PDFをEU AI準拠リファレンスカードとしてダウンロードできます。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1329,6 +1337,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: '#faq' },
       { label: '相关阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-business-workflows-eu-compliance-static.html',
+    gammaDescription: '以下幻灯片涵盖：EU合规本地AI智能体的5个生产工作流模板（文档接收、邮件分类、会议摘要、合规报告、发票处理），EU AI Act风险分类（有限风险 vs 高风险 vs 禁止），6项GDPR控制措施（法律依据、数据最小化、DPIA），DACH特殊要求（工作委员会BetrVG §87、§203 StGB职业保密），模型选择表和5个常见部署错误。可将PDF下载为EU AI合规参考卡。',
     sections: {
       tldr: {
         id: 'key-takeaways',
