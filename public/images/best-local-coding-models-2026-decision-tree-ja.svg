@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">判断フロー：ローカルコーディングモデル選択</text>
+  <line x1="18" y1="38" x2="782" y2="38" stroke="#E8DEF8" stroke-width="1.5"/>
+  <circle cx="38" cy="62" r="14" fill="#6750A4"/>
+  <text x="38" y="66" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="62" y="57" font-size="12" font-weight="700" fill="#1C1B1F">VRAMを確認</text>
+  <text x="62" y="73" font-size="11" fill="#49454F">≥24GB → Qwen3-Coder 30B。12–16GB → Qwen3-Coder 7B / Codestral 22B。≤10GB → Qwen3-Coder 7B。</text>
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="109" r="14" fill="#6750A4"/>
+  <text x="38" y="113" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="62" y="104" font-size="12" font-weight="700" fill="#1C1B1F">商用ライセンスが必要か？</text>
+  <text x="62" y="120" font-size="11" fill="#49454F">必要 → Apache 2.0のみ使用（Qwen3-Coder、DeepSeek V3、Granite Code）。Codestral/StarCoder 2は除外。</text>
+  <line x1="18" y1="135" x2="782" y2="135" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="156" r="14" fill="#6750A4"/>
+  <text x="38" y="160" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="62" y="151" font-size="12" font-weight="700" fill="#1C1B1F">長コンテキスト（リポジトリ全体）が必要か？</text>
+  <text x="62" y="167" font-size="11" fill="#49454F">必要 → DeepSeek Coder V3（コンテキスト保持最良）。VRAM ≥48GB必要。それ以外 → Qwen3-Coder 30B。</text>
+  <line x1="18" y1="182" x2="782" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="203" r="14" fill="#6750A4"/>
+  <text x="38" y="207" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="62" y="198" font-size="12" font-weight="700" fill="#1C1B1F">エージェント/ツール呼び出しを使う？</text>
+  <text x="62" y="214" font-size="11" fill="#49454F">使う → 30B以上が必要。7Bモデルはエージェントループで不安定なため非推奨。</text>
+  <line x1="18" y1="229" x2="782" y2="229" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="250" r="14" fill="#6750A4"/>
+  <text x="38" y="254" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="62" y="245" font-size="12" font-weight="700" fill="#1C1B1F">ニッチ言語（Rust、Lua、Solidity）？</text>
+  <text x="62" y="261" font-size="11" fill="#49454F">必要 → StarCoder 2 15B（ニッチ言語カバレッジ最良）。ただし16KコンテキストとOpenRAIL-Mライセンスに注意。</text>
+  <line x1="18" y1="276" x2="782" y2="276" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="297" r="14" fill="#6750A4"/>
+  <text x="38" y="301" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="62" y="292" font-size="12" font-weight="700" fill="#1C1B1F">速度 vs 品質のトレードオフ</text>
+  <text x="62" y="308" font-size="11" fill="#49454F">速度優先 → Codestral 22B（13GB、高速推論）。品質優先 → Qwen3-Coder 30B（推奨デフォルト）。</text>
+  <line x1="18" y1="323" x2="782" y2="323" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="349" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">VRAM → ライセンス → コンテキスト → エージェント → 言語 → 速度 の順で判断</text>
+  <text x="400" y="395" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

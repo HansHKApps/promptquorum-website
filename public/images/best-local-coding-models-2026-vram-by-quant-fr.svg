@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="26" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">VRAM par niveau de quantification</text>
+  <text x="400" y="45" font-size="11" fill="#79747E" text-anchor="middle">Règle : (param. en B) × multiplicateur + 2–4 Go surcharge contexte/outils</text>
+  <text x="30" y="70" font-size="12" font-weight="700" fill="#79747E">Quantification</text>
+  <text x="185" y="70" font-size="12" font-weight="700" fill="#79747E">Go par B param.</text>
+  <text x="285" y="70" font-size="12" font-weight="700" fill="#79747E">Modèle 7B</text>
+  <text x="365" y="70" font-size="12" font-weight="700" fill="#79747E">Modèle 30B</text>
+  <text x="455" y="70" font-size="12" font-weight="700" fill="#79747E">Notes</text>
+  <line x1="18" y1="77" x2="782" y2="77" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="18" y="78" width="764" height="36" fill="#F7F2FA"/>
+  <text x="30" y="100" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono',Monaco,monospace">Q4_K_M</text>
+  <text x="30" y="114" font-size="10" fill="#6750A4">(défaut)</text>
+  <text x="185" y="100" font-size="12" font-weight="600" fill="#1C1B1F">~0,60 Go</text>
+  <text x="285" y="100" font-size="12" font-weight="600" fill="#1C1B1F">~5 Go</text>
+  <text x="365" y="100" font-size="12" font-weight="600" fill="#1C1B1F">~18 Go</text>
+  <text x="455" y="100" font-size="11" fill="#1C1B1F">Meilleur équilibre — choix par défaut</text>
+  <line x1="18" y1="120" x2="782" y2="120" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="30" y="140" font-size="12" fill="#49454F" font-family="'SF Mono',Monaco,monospace">Q5_K_M</text>
+  <text x="185" y="140" font-size="12" fill="#49454F">~0,75 Go</text>
+  <text x="285" y="140" font-size="12" fill="#49454F">~6 Go</text>
+  <text x="365" y="140" font-size="12" fill="#49454F">~22 Go</text>
+  <text x="455" y="140" font-size="11" fill="#49454F">Petit gain qualité ; passe sur carte 32 Go</text>
+  <line x1="18" y1="152" x2="782" y2="152" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="172" font-size="12" fill="#49454F" font-family="'SF Mono',Monaco,monospace">Q6_K</text>
+  <text x="185" y="172" font-size="12" fill="#49454F">~0,85 Go</text>
+  <text x="285" y="172" font-size="12" fill="#49454F">~7 Go</text>
+  <text x="365" y="172" font-size="12" fill="#49454F">~26 Go</text>
+  <text x="455" y="172" font-size="11" fill="#49454F">Rendements décroissants en qualité coding</text>
+  <line x1="18" y1="184" x2="782" y2="184" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="204" font-size="12" fill="#49454F" font-family="'SF Mono',Monaco,monospace">Q8_0</text>
+  <text x="185" y="204" font-size="12" fill="#49454F">~1,05 Go</text>
+  <text x="285" y="204" font-size="12" fill="#49454F">~8 Go</text>
+  <text x="365" y="204" font-size="12" fill="#49454F">~32 Go</text>
+  <text x="455" y="204" font-size="11" fill="#49454F">Qualité proche FP16, VRAM divisée par 2</text>
+  <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="236" font-size="12" fill="#79747E" font-family="'SF Mono',Monaco,monospace">FP16</text>
+  <text x="185" y="236" font-size="12" fill="#79747E">~2,00 Go</text>
+  <text x="285" y="236" font-size="12" fill="#79747E">~14 Go</text>
+  <text x="365" y="236" font-size="12" fill="#79747E">~60 Go</text>
+  <text x="455" y="236" font-size="11" fill="#79747E">Fine-tuning uniquement ; jamais pour l'inférence</text>
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="272" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">VRAM contexte : ~1 Go par 32K tokens actifs · Surcharge outils : +0,5–1 Go (Ollama / llama.cpp)</text>
+  <text x="400" y="320" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

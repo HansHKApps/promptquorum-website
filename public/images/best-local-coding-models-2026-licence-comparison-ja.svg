@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="330" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">ライセンス比較 — ローカルコーディングモデル</text>
+  <text x="62" y="56" font-size="12" font-weight="700" fill="#79747E">モデル</text>
+  <text x="220" y="56" font-size="12" font-weight="700" fill="#79747E">ライセンス</text>
+  <text x="360" y="56" font-size="12" font-weight="700" fill="#79747E">商用利用</text>
+  <text x="470" y="56" font-size="12" font-weight="700" fill="#79747E">主な制約</text>
+  <line x1="18" y1="63" x2="782" y2="63" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="18" y="64" width="764" height="32" fill="#F7F2FA"/>
+  <text x="62" y="85" font-size="12" font-weight="700" fill="#6750A4">Qwen3-Coder 30B</text>
+  <text x="220" y="85" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="360" y="85" font-size="11" font-weight="600" fill="#34A853">制限なし</text>
+  <text x="470" y="85" font-size="11" fill="#1C1B1F">なし</text>
+  <line x1="18" y1="96" x2="782" y2="96" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="62" y="115" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 7B</text>
+  <text x="220" y="115" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="360" y="115" font-size="11" font-weight="600" fill="#34A853">制限なし</text>
+  <text x="470" y="115" font-size="11" fill="#49454F">なし</text>
+  <line x1="18" y1="127" x2="782" y2="127" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="62" y="147" font-size="12" font-weight="600" fill="#1C1B1F">DeepSeek Coder V3</text>
+  <text x="220" y="147" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="360" y="147" font-size="11" font-weight="600" fill="#34A853">制限なし</text>
+  <text x="470" y="147" font-size="11" fill="#49454F">なし</text>
+  <line x1="18" y1="159" x2="782" y2="159" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="62" y="179" font-size="12" font-weight="600" fill="#1C1B1F">Codestral 22B</text>
+  <text x="220" y="179" font-size="11" font-weight="600" fill="#F4B400">Mistral非本番</text>
+  <text x="360" y="179" font-size="11" font-weight="600" fill="#EA4335">商用非本番</text>
+  <text x="470" y="179" font-size="11" fill="#49454F">本番：Mistral商用ライセンス必要</text>
+  <line x1="18" y1="191" x2="782" y2="191" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="62" y="211" font-size="12" font-weight="600" fill="#1C1B1F">Granite Code 34B</text>
+  <text x="220" y="211" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="360" y="211" font-size="11" font-weight="600" fill="#34A853">制限なし</text>
+  <text x="470" y="211" font-size="11" fill="#49454F">なし — 企業向けにクリーン</text>
+  <line x1="18" y1="223" x2="782" y2="223" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="62" y="243" font-size="12" font-weight="600" fill="#1C1B1F">StarCoder 2 15B</text>
+  <text x="220" y="243" font-size="11" font-weight="600" fill="#F4B400">OpenRAIL-M</text>
+  <text x="360" y="243" font-size="11" font-weight="600" fill="#F4B400">制限付き</text>
+  <text x="470" y="243" font-size="11" fill="#49454F">使用制限あり — ライセンス要確認</text>
+  <line x1="18" y1="255" x2="782" y2="255" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="279" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">商用製品：Codestral以外はApache 2.0を選択 · 統合前にライセンスを確認</text>
+  <text x="400" y="308" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

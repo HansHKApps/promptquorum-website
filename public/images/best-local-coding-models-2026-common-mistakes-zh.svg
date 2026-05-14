@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="430" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">选择本地编程模型的6个常见错误</text>
+  <line x1="18" y1="38" x2="782" y2="38" stroke="#E8DEF8" stroke-width="1.5"/>
+  <circle cx="38" cy="62" r="14" fill="#EA4335"/>
+  <text x="38" y="66" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="62" y="57" font-size="12" font-weight="700" fill="#1C1B1F">按排行榜选择而非显存余量</text>
+  <text x="62" y="73" font-size="11" fill="#49454F">Q4_K_M 下显存余量不足 2–4GB 会触发磁盘交换，导致模型不可用。</text>
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="109" r="14" fill="#EA4335"/>
+  <text x="38" y="113" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="62" y="104" font-size="12" font-weight="700" fill="#1C1B1F">相信标称上下文窗口</text>
+  <text x="62" y="120" font-size="11" fill="#49454F">超过约一半后注意力质量下降。按实用值规划，而非营销数字。</text>
+  <line x1="18" y1="135" x2="782" y2="135" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="156" r="14" fill="#EA4335"/>
+  <text x="38" y="160" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="62" y="151" font-size="12" font-weight="700" fill="#1C1B1F">不读许可证</text>
+  <text x="62" y="167" font-size="11" fill="#49454F">未获 Mistral 商业授权就将 Codestral 用于商业产品，会导致采购合规风险。</text>
+  <line x1="18" y1="182" x2="782" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="203" r="14" fill="#EA4335"/>
+  <text x="38" y="207" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="62" y="198" font-size="12" font-weight="700" fill="#1C1B1F">忽略 Agent 工具调用可靠性</text>
+  <text x="62" y="214" font-size="11" fill="#49454F">7B 模型在 Agent 循环（Cline、Continue.dev）中频繁失败。Agent 场景使用 30B 以上。</text>
+  <line x1="18" y1="229" x2="782" y2="229" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="250" r="14" fill="#EA4335"/>
+  <text x="38" y="254" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="62" y="245" font-size="12" font-weight="700" fill="#1C1B1F">聊天和自动补全共用同一个模型</text>
+  <text x="62" y="261" font-size="11" fill="#49454F">30B 用于 200ms 补全是大材小用。单独运行 1.5B–7B 模型处理补全请求。</text>
+  <line x1="18" y1="276" x2="782" y2="276" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="297" r="14" fill="#EA4335"/>
+  <text x="38" y="301" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="62" y="292" font-size="12" font-weight="700" fill="#1C1B1F">6个月后不重新评估模型</text>
+  <text x="62" y="308" font-size="11" fill="#49454F">开源权重迭代很快，许可证也会变化。在 2026年11月前重新审视选择。</text>
+  <line x1="18" y1="323" x2="782" y2="323" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="350" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">显存余量 + 许可证核查 + Agent 循环测试 = 最常被忽略的3个步骤</text>
+  <text x="400" y="400" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Decision Tree: 6 Questions to Pick Your Model</text>
+  <line x1="18" y1="38" x2="782" y2="38" stroke="#E8DEF8" stroke-width="1.5"/>
+  <circle cx="38" cy="65" r="16" fill="#6750A4"/>
+  <text x="38" y="70" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="66" y="59" font-size="13" font-weight="700" fill="#1C1B1F">How much VRAM do you have?</text>
+  <text x="66" y="76" font-size="11" fill="#49454F">&lt;12 GB → Qwen3-Coder 7B · 12–16 GB → 7B or Codestral 22B · 24 GB → 30B · 48 GB+ → DeepSeek V3 (full)</text>
+  <line x1="18" y1="92" x2="782" y2="92" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="116" r="16" fill="#6750A4"/>
+  <text x="38" y="121" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="66" y="110" font-size="13" font-weight="700" fill="#1C1B1F">Shipping a commercial product?</text>
+  <text x="66" y="127" font-size="11" fill="#49454F">Yes → prefer Apache 2.0 (Qwen3-Coder, DeepSeek, Granite). Avoid Codestral without Mistral Commercial licence.</text>
+  <line x1="18" y1="143" x2="782" y2="143" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="167" r="16" fill="#6750A4"/>
+  <text x="38" y="172" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="66" y="161" font-size="13" font-weight="700" fill="#1C1B1F">Need a context window above 32K?</text>
+  <text x="66" y="178" font-size="11" fill="#49454F">Yes → skip Codestral (32K limit) and StarCoder 2 (16K limit). Pick Qwen3-Coder, DeepSeek, Llama, or Granite.</text>
+  <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="218" r="16" fill="#6750A4"/>
+  <text x="38" y="223" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="66" y="212" font-size="13" font-weight="700" fill="#1C1B1F">Writing niche languages (Rust, Lua, Haskell, Solidity)?</text>
+  <text x="66" y="229" font-size="11" fill="#49454F">Yes → StarCoder 2 15B, despite the 16K context limit. Best open-weight niche-language coverage.</text>
+  <line x1="18" y1="245" x2="782" y2="245" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="269" r="16" fill="#6750A4"/>
+  <text x="38" y="274" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="66" y="263" font-size="13" font-weight="700" fill="#1C1B1F">Regulated industry — procurement audit required?</text>
+  <text x="66" y="280" font-size="11" fill="#49454F">Yes → Granite Code 34B: Apache 2.0 + IBM training-data provenance documentation included.</text>
+  <line x1="18" y1="296" x2="782" y2="296" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="320" r="16" fill="#6750A4"/>
+  <text x="38" y="325" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="66" y="314" font-size="13" font-weight="700" fill="#1C1B1F">Still unsure?</text>
+  <text x="66" y="331" font-size="11" fill="#49454F">Default to Qwen3-Coder — 30B on a 24 GB GPU, 7B on a laptop or 8 GB GPU. Re-evaluate when you outgrow it.</text>
+  <line x1="18" y1="347" x2="782" y2="347" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="375" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Answer questions in order · First binding constraint wins · May 2026</text>
+  <text x="400" y="400" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

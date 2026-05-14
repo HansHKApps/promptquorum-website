@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="370" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">6 Modèles Locaux de Coding — Comparaison 2026</text>
+  <text x="40" y="56" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">#</text>
+  <text x="62" y="56" font-size="12" font-weight="700" fill="#79747E">Modèle</text>
+  <text x="208" y="56" font-size="12" font-weight="700" fill="#79747E">VRAM (Q4_K_M)</text>
+  <text x="300" y="56" font-size="12" font-weight="700" fill="#79747E">Contexte</text>
+  <text x="362" y="56" font-size="12" font-weight="700" fill="#79747E">Licence</text>
+  <text x="490" y="56" font-size="12" font-weight="700" fill="#79747E">Idéal pour</text>
+  <line x1="18" y1="63" x2="782" y2="63" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="18" y="64" width="764" height="34" fill="#F7F2FA"/>
+  <circle cx="40" cy="81" r="12" fill="#6750A4"/>
+  <text x="40" y="85" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="62" y="85" font-size="12" font-weight="700" fill="#6750A4">Qwen3-Coder 30B ★</text>
+  <text x="208" y="85" font-size="11" fill="#1C1B1F">~17–18 Go</text>
+  <text x="300" y="85" font-size="11" fill="#1C1B1F">256K</text>
+  <text x="362" y="85" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="490" y="85" font-size="11" fill="#1C1B1F">Choix par défaut — GPU 24 Go</text>
+  <line x1="18" y1="98" x2="782" y2="98" stroke="#E8DEF8" stroke-width="1"/>
+  <circle cx="40" cy="115" r="12" fill="#6750A4"/>
+  <text x="40" y="119" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="62" y="119" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 7B</text>
+  <text x="208" y="119" font-size="11" fill="#49454F">~5 Go</text>
+  <text x="300" y="119" font-size="11" fill="#49454F">128K</text>
+  <text x="362" y="119" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="490" y="119" font-size="11" fill="#49454F">Laptop / GPU 8–10 Go</text>
+  <line x1="18" y1="132" x2="782" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="40" cy="149" r="12" fill="#6750A4"/>
+  <text x="40" y="153" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="62" y="149" font-size="12" font-weight="600" fill="#1C1B1F">DeepSeek Coder V3</text>
+  <text x="208" y="149" font-size="11" fill="#49454F">~48 Go+ (complet)</text>
+  <text x="300" y="149" font-size="11" fill="#49454F">128K</text>
+  <text x="362" y="149" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="490" y="149" font-size="11" fill="#49454F">Long contexte / repo entier</text>
+  <line x1="18" y1="162" x2="782" y2="162" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="40" cy="179" r="12" fill="#6750A4"/>
+  <text x="40" y="183" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="62" y="179" font-size="12" font-weight="600" fill="#1C1B1F">Codestral 22B</text>
+  <text x="208" y="179" font-size="11" fill="#49454F">~13 Go</text>
+  <text x="300" y="179" font-size="11" fill="#49454F">32K</text>
+  <text x="362" y="179" font-size="11" font-weight="600" fill="#F4B400">Mistral Non-Prod</text>
+  <text x="490" y="179" font-size="11" fill="#49454F">Vitesse / GPU 16 Go</text>
+  <line x1="18" y1="192" x2="782" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="40" cy="209" r="12" fill="#6750A4"/>
+  <text x="40" y="213" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="62" y="209" font-size="12" font-weight="600" fill="#1C1B1F">Granite Code 34B</text>
+  <text x="208" y="209" font-size="11" fill="#49454F">~20 Go</text>
+  <text x="300" y="209" font-size="11" fill="#49454F">128K</text>
+  <text x="362" y="209" font-size="11" font-weight="600" fill="#34A853">Apache 2.0</text>
+  <text x="490" y="209" font-size="11" fill="#49454F">Entreprise / audit</text>
+  <line x1="18" y1="222" x2="782" y2="222" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="40" cy="239" r="12" fill="#6750A4"/>
+  <text x="40" y="243" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="62" y="239" font-size="12" font-weight="600" fill="#1C1B1F">Llama 3.3 Code</text>
+  <text x="208" y="239" font-size="11" fill="#49454F">~40 Go (70B)</text>
+  <text x="300" y="239" font-size="11" fill="#49454F">128K</text>
+  <text x="362" y="239" font-size="11" font-weight="600" fill="#F4B400">Llama Community</text>
+  <text x="490" y="239" font-size="11" fill="#49454F">Écosystème Llama</text>
+  <line x1="18" y1="252" x2="782" y2="252" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="40" cy="269" r="12" fill="#6750A4"/>
+  <text x="40" y="273" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+  <text x="62" y="269" font-size="12" font-weight="600" fill="#1C1B1F">StarCoder 2 15B</text>
+  <text x="208" y="269" font-size="11" fill="#49454F">~9 Go</text>
+  <text x="300" y="269" font-size="11" fill="#49454F">16K</text>
+  <text x="362" y="269" font-size="11" font-weight="600" fill="#F4B400">OpenRAIL-M</text>
+  <text x="490" y="269" font-size="11" fill="#49454F">Langages de niche</text>
+  <line x1="18" y1="282" x2="782" y2="282" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="308" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">VRAM à Q4_K_M · Mai 2026 · ★ = choix par défaut recommandé</text>
+  <text x="400" y="326" font-size="10" fill="#79747E" text-anchor="middle">Licence : vert = Apache 2.0 (commercial OK) · ambre = conditions supplémentaires · vérifier la fiche modèle</text>
+  <text x="400" y="350" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

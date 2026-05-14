@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">决策流程：本地编程模型选择</text>
+  <line x1="18" y1="38" x2="782" y2="38" stroke="#E8DEF8" stroke-width="1.5"/>
+  <circle cx="38" cy="62" r="14" fill="#6750A4"/>
+  <text x="38" y="66" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="62" y="57" font-size="12" font-weight="700" fill="#1C1B1F">确认显存</text>
+  <text x="62" y="73" font-size="11" fill="#49454F">≥24GB → Qwen3-Coder 30B。12–16GB → Qwen3-Coder 7B / Codestral 22B。≤10GB → Qwen3-Coder 7B。</text>
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="109" r="14" fill="#6750A4"/>
+  <text x="38" y="113" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="62" y="104" font-size="12" font-weight="700" fill="#1C1B1F">需要商业许可证？</text>
+  <text x="62" y="120" font-size="11" fill="#49454F">需要 → 仅选 Apache 2.0（Qwen3-Coder、DeepSeek V3、Granite Code）。排除 Codestral / StarCoder 2。</text>
+  <line x1="18" y1="135" x2="782" y2="135" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="156" r="14" fill="#6750A4"/>
+  <text x="38" y="160" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="62" y="151" font-size="12" font-weight="700" fill="#1C1B1F">需要长上下文（整个仓库）？</text>
+  <text x="62" y="167" font-size="11" fill="#49454F">需要 → DeepSeek Coder V3（上下文保留最佳），需要显存 ≥48GB。否则 → Qwen3-Coder 30B。</text>
+  <line x1="18" y1="182" x2="782" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="203" r="14" fill="#6750A4"/>
+  <text x="38" y="207" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="62" y="198" font-size="12" font-weight="700" fill="#1C1B1F">使用 Agent / 工具调用？</text>
+  <text x="62" y="214" font-size="11" fill="#49454F">使用 → 需要 30B 以上。7B 模型在 Agent 循环中不稳定，不推荐。</text>
+  <line x1="18" y1="229" x2="782" y2="229" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="250" r="14" fill="#6750A4"/>
+  <text x="38" y="254" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="62" y="245" font-size="12" font-weight="700" fill="#1C1B1F">小众语言（Rust、Lua、Solidity）？</text>
+  <text x="62" y="261" font-size="11" fill="#49454F">需要 → StarCoder 2 15B（小众语言覆盖最佳），注意 16K 上下文和 OpenRAIL-M 许可证。</text>
+  <line x1="18" y1="276" x2="782" y2="276" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="297" r="14" fill="#6750A4"/>
+  <text x="38" y="301" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="62" y="292" font-size="12" font-weight="700" fill="#1C1B1F">速度 vs 质量权衡</text>
+  <text x="62" y="308" font-size="11" fill="#49454F">速度优先 → Codestral 22B（13GB，高速推理）。质量优先 → Qwen3-Coder 30B（推荐默认）。</text>
+  <line x1="18" y1="323" x2="782" y2="323" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="349" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">显存 → 许可证 → 上下文 → Agent → 语言 → 速度 顺序决策</text>
+  <text x="400" y="395" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

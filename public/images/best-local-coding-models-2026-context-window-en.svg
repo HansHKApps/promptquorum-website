@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="26" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Context Window: Claimed vs. Practical (Coding)</text>
+  <text x="400" y="45" font-size="11" fill="#79747E" text-anchor="middle">Coding models lose attention quality past roughly half the claimed window. Plan for the practical column.</text>
+  <text x="30" y="68" font-size="12" font-weight="700" fill="#79747E">Model</text>
+  <text x="185" y="68" font-size="12" font-weight="700" fill="#79747E">Claimed</text>
+  <text x="255" y="68" font-size="12" font-weight="700" fill="#79747E">Practical (coding)</text>
+  <text x="420" y="68" font-size="12" font-weight="700" fill="#79747E">Verdict</text>
+  <line x1="18" y1="75" x2="782" y2="75" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="30" y="95" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 30B</text>
+  <text x="185" y="95" font-size="11" fill="#49454F">256K</text>
+  <text x="255" y="95" font-size="11" fill="#49454F">~64K–128K</text>
+  <text x="420" y="95" font-size="11" font-weight="600" fill="#34A853">Best long-context open-weight</text>
+  <line x1="18" y1="107" x2="782" y2="107" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="127" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 7B</text>
+  <text x="185" y="127" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="127" font-size="11" fill="#49454F">~32K–64K</text>
+  <text x="420" y="127" font-size="11" fill="#49454F">Good for single-file work</text>
+  <line x1="18" y1="139" x2="782" y2="139" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="159" font-size="12" font-weight="600" fill="#1C1B1F">DeepSeek Coder V3</text>
+  <text x="185" y="159" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="159" font-size="11" fill="#49454F">~64K–96K</text>
+  <text x="420" y="159" font-size="11" font-weight="600" fill="#34A853">Long-context leader in this set</text>
+  <line x1="18" y1="171" x2="782" y2="171" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="191" font-size="12" font-weight="600" fill="#1C1B1F">Codestral 22B</text>
+  <text x="185" y="191" font-size="11" fill="#49454F">32K</text>
+  <text x="255" y="191" font-size="11" fill="#49454F">~16K–24K</text>
+  <text x="420" y="191" font-size="11" font-weight="600" fill="#F4B400">Tightest in 22B+ tier</text>
+  <line x1="18" y1="203" x2="782" y2="203" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="223" font-size="12" font-weight="600" fill="#1C1B1F">Granite Code 34B</text>
+  <text x="185" y="223" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="223" font-size="11" fill="#49454F">~32K–64K</text>
+  <text x="420" y="223" font-size="11" fill="#49454F">Average recall; not a leader</text>
+  <line x1="18" y1="235" x2="782" y2="235" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="255" font-size="12" font-weight="600" fill="#1C1B1F">Llama 3.3 Code</text>
+  <text x="185" y="255" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="255" font-size="11" fill="#49454F">~32K–64K</text>
+  <text x="420" y="255" font-size="11" fill="#49454F">Trails Qwen3-Coder on recall</text>
+  <line x1="18" y1="267" x2="782" y2="267" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="287" font-size="12" font-weight="600" fill="#1C1B1F">StarCoder 2 15B</text>
+  <text x="185" y="287" font-size="11" fill="#49454F">16K</text>
+  <text x="255" y="287" font-size="11" fill="#49454F">~8K–12K</text>
+  <text x="420" y="287" font-size="11" font-weight="600" fill="#F4B400">Hardest limit in this set</text>
+  <line x1="18" y1="299" x2="782" y2="299" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="323" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Practical context = working recall at full attention quality · Marketing numbers are upper bounds</text>
+  <text x="400" y="344" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

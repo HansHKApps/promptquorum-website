@@ -192,6 +192,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Broad language coverage incl. niche languages',
           },
         ],
+        image: '/images/best-local-coding-models-2026-model-comparison-en.svg',
+        imageCaption: 'Seven local coding models ranked by VRAM, context window, licence, and best-fit use case at Q4_K_M in May 2026. Qwen3-Coder 30B is the default 24 GB pick; DeepSeek Coder V3 leads on long-context; StarCoder 2 15B leads on niche-language coverage.',
       },
       whichOne: {
         id: 'which-one',
@@ -209,6 +211,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I write Rust, Lua, Haskell, Solidity, or other niche languages', 'Pick': 'StarCoder 2 15B' },
           { 'Your situation': 'My priority is tokens-per-second, not absolute quality', 'Pick': 'Codestral 22B' },
         ],
+        image: '/images/best-local-coding-models-2026-which-pick-en.svg',
+        imageCaption: 'Eight decision shortcuts mapping hardware, licence, context, and use-case constraints to the right local coding model. VRAM is the first filter; licence is the second.',
       },
       qwenCoderDeep: {
         id: 'qwen3-coder',
@@ -349,6 +353,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'For a deeper explanation of how quantization works and why Q4_K_M is the most cited default, see [LLM Quantization Explained](/local-llms/llm-quantization-explained). The rest of this guide assumes the math above.',
           },
         ],
+        image: '/images/best-local-coding-models-2026-vram-by-quant-en.svg',
+        imageCaption: 'VRAM requirements by quantization level for 7B and 30B models at Q4_K_M through FP16. Q4_K_M is the recommended default at ~0.60 GB per billion parameters; add 2–4 GB for context and tooling overhead.',
       },
       contextWindow: {
         id: 'context-window',
@@ -371,6 +377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Practical working context is what determines whether the model can hold your repo in mind, not the headline number. For multi-file refactors, prefer the actual recall column over the marketing column — Codestral\'s 32K is real, Llama 3.3\'s 128K is partial.',
           },
         ],
+        image: '/images/best-local-coding-models-2026-context-window-en.svg',
+        imageCaption: 'Claimed vs practical working context window for seven local coding models. Coding models typically lose attention quality past roughly half the claimed window; plan for the practical column, not the marketing number.',
       },
       licensing: {
         id: 'licensing',
@@ -392,6 +400,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Codestral\'s Mistral Non-Production licence trips up teams that prototype with it then ship without re-checking. If the model touches a paying user — even indirectly through an internal tool that produces customer-facing artefacts — you need Mistral Commercial. Move to Qwen3-Coder or Granite Code (both Apache 2.0) before integration to avoid the licence-renegotiation cycle.',
           },
         ],
+        image: '/images/best-local-coding-models-2026-licence-comparison-en.svg',
+        imageCaption: 'Licence comparison for six local coding models: four carry Apache 2.0 (unrestricted commercial use), Codestral requires a paid Mistral Commercial licence for production, and StarCoder 2 uses OpenRAIL-M with use-case restrictions.',
       },
       decisionTree: {
         id: 'decision-tree',
@@ -422,6 +432,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'The decision tree is intentionally short. Most teams overthink the model choice and underthink the harness choice — see [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local) for the harness side. The model differences within the reliable picks are smaller than the harness-fit differences.',
           },
         ],
+        image: '/images/best-local-coding-models-2026-decision-tree-en.svg',
+        imageCaption: 'Six-question decision flow for choosing a local coding model: VRAM first, licence second, context third, agent reliability fourth, niche-language coverage fifth, speed vs quality last. Qwen3-Coder 30B is the safe default at 24 GB.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -434,6 +446,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mistake 5: not pairing a small autocomplete model with the larger chat model.** A 30B chat model is overkill for sub-200 ms autocomplete. Run a 1.5B–7B autocomplete model alongside the chat model — total VRAM stays manageable, latency stays interactive.',
           '**Mistake 6: not re-checking the model card every six months.** Open-weight model lines update; quantization recipes improve; licences occasionally tighten. The default pick today is not necessarily the default in November 2026.',
         ],
+        image: '/images/best-local-coding-models-2026-common-mistakes-en.svg',
+        imageCaption: 'Six common mistakes when picking a local coding model: ignoring VRAM headroom, trusting marketing context window numbers, skipping the licence read, overlooking agent tool-call reliability, running one model for both chat and autocomplete, and not re-evaluating every six months.',
       },
       sources: {
         id: 'sources',
@@ -622,6 +636,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kriterium': 'Größe optimal für', 'Qwen3-Coder 30B': '24 GB GPU', 'DeepSeek V3': '48+ GB VRAM', 'Codestral 22B': '16 GB GPU', 'Llama 3.3': '48+ GB VRAM', 'Granite 34B': '24 GB GPU', 'StarCoder 2': '8 GB GPU' },
           { 'Kriterium': 'Training-Fokus', 'Qwen3-Coder 30B': 'Code + Mathe', 'DeepSeek V3': 'Code nur', 'Codestral 22B': 'Code nur', 'Llama 3.3': 'Generalist (Code)', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-Sprache' },
         ],
+        image: '/images/best-local-coding-models-2026-model-comparison-de.svg',
+        imageCaption: 'Sieben lokale Coding-Modelle im Vergleich: VRAM, Kontext-Fenster, Lizenz und bestes Einsatzszenario bei Q4_K_M im Mai 2026. Qwen3-Coder 30B ist die Standard-Wahl für 24-GB-GPUs.',
       },
       whichOne: {
         id: 'which-one',
@@ -635,6 +651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sie brauchen kommerziell-freundliche Lizenzierung?** → Codestral (Mistral hat klare kommerzielle Tiers) oder Granite Code (IBM Enterprise).',
           '**Sie codieren in seltenen Sprachen?** → StarCoder 2. Es wurde auf 80+ Programmiersprachen trainiert; andere haben Schwerpunkt auf Python/Typescript/C++.',
         ],
+        image: '/images/best-local-coding-models-2026-which-pick-de.svg',
+        imageCaption: 'Entscheidungsmatrix: Welches lokale Coding-Modell passt zu Ihrer Hardware, Ihrem Anwendungsfall und Ihren Lizenz-Anforderungen? VRAM ist die erste Beschränkung.',
       },
       qwen3Coder: {
         id: 'qwen3-coder',
@@ -657,6 +675,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Lizenz-Story?** DeepSeek lizenziert unter Mistral Non-Production; kommerzielle Nutzung benötigt Verkaufsabsprache. Das ist für Open-Source-Liebhaber wichtig — denken Sie dies bei Deployment durch.',
           '**Häufige Fehler?** Zu viel Kontext füttern führt zu Token-Explosion. 48 GB ist der Q4_K_M Boden für volle Größe; gekürzte Versionen sind möglich, aber verlieren Vorteile.',
         ],
+        image: '/images/best-local-coding-models-2026-vram-by-quant-de.svg',
+        imageCaption: 'VRAM-Bedarf nach Quantisierungsstufe für 7B- und 30B-Modelle. Q4_K_M ist der empfohlene Standard mit ca. 0,60 GB pro Milliarde Parameter; zusätzlich 2–4 GB Puffer für Kontext und Tooling.',
       },
       codestral: {
         id: 'codestral',
@@ -667,6 +687,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Für wen geeignet?** Teams, die Latency klein halten mössen. IDE-Plug-in Entwickler. Startups, die kommerzielle Lizenzklarheit wollen.',
           '**Häufige Fehler?** Kontext-Fenster ist nur 32K, nicht 256K — das ist ein großer Schritt zurück von Qwen3-Coder. Ganze Repositories passen nicht. Für kleine Dateien / Single-File-Edits ist es perfekt.',
         ],
+        image: '/images/best-local-coding-models-2026-context-window-de.svg',
+        imageCaption: 'Kontext-Fenster-Vergleich: Nominale vs. praktische Arbeitsgröße für sieben lokale Coding-Modelle. Die tatsächliche Aufmerksamkeitsqualität sinkt ab ca. der Hälfte des nominalen Fensters.',
       },
       llamaCode: {
         id: 'llama-code',
@@ -677,6 +699,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wann wählen?** Sie haben bereits Llama-Tooling, Fine-Tunes, oder Deployments in Production. Der Ökosystem-Schmerz überwiegt den Performance-Nachteil.',
           '**Lizenz?** Llama 2 Community License — Non-Commercial-Sektion ist komplizierter als Apache 2.0. Meta hat später clarified, dass ML Inference non-commercial nicht bedeutet, aber es ist komplexer.',
         ],
+        image: '/images/best-local-coding-models-2026-decision-tree-de.svg',
+        imageCaption: 'Sechs-Fragen-Entscheidungsbaum zur Wahl des richtigen lokalen Coding-Modells: VRAM zuerst, dann Lizenz, Kontext, Agent-Stabilität, Sprachen-Breite und schließlich Geschwindigkeit vs. Qualität.',
       },
       graniteCode: {
         id: 'granite-code',
@@ -686,6 +710,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stärken?** IBM-Unterstützung für Enterprise-Deployments. Apache 2.0 Lizenz ist klar. 34B Größe ist zwischen 30B und 70B, mit angemessenen VRAM-Anforderungen.',
           '**Häufige Fehler?** Granite Code ist weniger breit "geted" als Qwen3-Coder und hat kleinere HumanEval+-Zahlen. Wenn Sie Enterprises sind, können IBM-Verträge den Performance-Nachteil wert sein.',
         ],
+        image: '/images/best-local-coding-models-2026-licence-comparison-de.svg',
+        imageCaption: 'Lizenz-Vergleich für sechs lokale Coding-Modelle: vier Apache 2.0 (uneingeschränkte kommerzielle Nutzung), Codestral benötigt eine kostenpflichtige Mistral-Lizenz, StarCoder 2 hat Nutzungsbeschränkungen unter OpenRAIL-M.',
       },
       starCoder2: {
         id: 'starcoder2',
@@ -718,6 +744,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kontext zu schnell fullen bei Multi-Turn Dialogen** — "Ich habe 128K Kontext, also kann ich 100 edits im selben Gespräch machen" — falsch. Token-Länge im Kontext inkludiert auch History. Nach 10–20 Turns sind Sie bei 50K Tokens. Beginnen Sie neuen Chat.',
           '**Keine Quantisierungs-Validierung** — Sie quantisieren ein Modell lokal und testen es nicht gegen Baseline. Manche Quantisierungstools führen zu subtlen Bugs. Validieren Sie gegen einfachen Test-Code zuerst.',
         ],
+        image: '/images/best-local-coding-models-2026-common-mistakes-de.svg',
+        imageCaption: 'Sechs häufige Fehler bei der Wahl eines lokalen Coding-Modells: VRAM-Margin ignorieren, nominales Kontext-Fenster vertrauen, Lizenz nicht lesen, Agent-Tool-Call-Stabilität übersehen, Chat und Autovervollständigung mit demselben Modell betreiben und keine Neubewertung nach sechs Monaten.',
       },
       relatedReading: {
         id: 'related-reading',
@@ -1039,6 +1067,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Taille optimal pour', 'Qwen3-Coder 30B': 'GPU 24 GB', 'DeepSeek V3': 'VRAM 48+ GB', 'Codestral 22B': 'GPU 16 GB', 'Llama 3.3': 'VRAM 48+ GB', 'Granite 34B': 'GPU 24 GB', 'StarCoder 2': 'GPU 8 GB' },
           { 'Critère': 'Focus formation', 'Qwen3-Coder 30B': 'Code + Maths', 'DeepSeek V3': 'Code seul', 'Codestral 22B': 'Code seul', 'Llama 3.3': 'Généraliste (Code)', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-langue' },
         ],
+        image: '/images/best-local-coding-models-2026-model-comparison-fr.svg',
+        imageCaption: 'Sept modèles de codage locaux comparés sur VRAM, fenêtre de contexte, licence et cas d\'utilisation optimal en mai 2026. Qwen3-Coder 30B est le choix par défaut pour GPU 24 Go.',
       },
       whichOne: {
         id: 'which-one',
@@ -1052,6 +1082,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vous avez besoin licensing commercially-friendly ?** → Codestral (Mistral a tiers commerciaux clairs) ou Granite Code (IBM Enterprise).',
           '**Vous codez dans langues rares ?** → StarCoder 2. Il a été entraîné sur 80+ langues de programmation; d\'autres ont emphase sur Python/Typescript/C++.',
         ],
+        image: '/images/best-local-coding-models-2026-which-pick-fr.svg',
+        imageCaption: 'Matrice de décision : quel modèle de codage local correspond à votre matériel, votre cas d\'usage et vos contraintes de licence ? La VRAM est la première contrainte à évaluer.',
       },
       qwen3Coder: {
         id: 'qwen3-coder',
@@ -1074,6 +1106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Licence-story ?** DeepSeek licence sous Mistral Non-Production; usage commercial besoin accord ventes. Important pour open-source lovers — pensez à cela pour deployment.',
           '**Erreurs courantes ?** Trop contexte feeding mène explosion token. 48 GB est Q4_K_M floor pour full size; versions tronquées possibles mais perdent avantages.',
         ],
+        image: '/images/best-local-coding-models-2026-vram-by-quant-fr.svg',
+        imageCaption: 'Besoins VRAM par niveau de quantisation pour modèles 7B et 30B. Q4_K_M est la valeur par défaut recommandée à environ 0,60 Go par milliard de paramètres ; ajouter 2–4 Go pour le contexte et les outils.',
       },
       codestral: {
         id: 'codestral',
@@ -1084,6 +1118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pour qui adapté ?** Equipes qui doivent tenir latency petit. Développeurs IDE plug-in. Startups qui veulent clarté licence commerciale.',
           '**Erreurs courantes ?** Fenêtre contexte seulement 32K, non 256K — ça c\'est grand stepback de Qwen3-Coder. Repos entiers ne rentrent pas. Pour petits fichiers / edits single-file c\'est parfait.',
         ],
+        image: '/images/best-local-coding-models-2026-context-window-fr.svg',
+        imageCaption: 'Comparaison des fenêtres de contexte : valeur nominale vs. valeur pratique pour sept modèles de codage locaux. La qualité d\'attention décline après environ la moitié de la fenêtre annoncée.',
       },
       llamaCode: {
         id: 'llama-code',
@@ -1094,6 +1130,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Quand choisir ?** Vous avez déjà Llama-tooling, fine-tunes, ou production deployments. Les douleurs écosystème outweigh le performance-nachteil.',
           '**License ?** Llama 2 Community License — Non-Commercial section est plus compliqué qu\'Apache 2.0. Meta a après clarified qu\'inférence ML non-commercial non veut dire, mais c\'est plus complexe.',
         ],
+        image: '/images/best-local-coding-models-2026-decision-tree-fr.svg',
+        imageCaption: 'Arbre de décision en six questions pour choisir le bon modèle de codage local : VRAM d\'abord, puis licence, contexte, fiabilité agent, couverture linguistique et vitesse vs qualité.',
       },
       graniteCode: {
         id: 'granite-code',
@@ -1103,6 +1141,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Points forts ?** Support IBM pour deployments enterprise. License Apache 2.0 est clair. Taille 34B est entre 30B et 70B, avec VRAM-requirements raisonnables.',
           '**Erreurs courantes ?** Granite Code est moins largement "ciblé" qu\'Qwen3-Coder et a nombres HumanEval+ plus petits. Si vous êtes enterprise, les contrats IBM pourraient justifier performance-nachteil.',
         ],
+        image: '/images/best-local-coding-models-2026-licence-comparison-fr.svg',
+        imageCaption: 'Comparaison des licences pour six modèles de codage locaux : quatre sous Apache 2.0 (usage commercial libre), Codestral nécessite une licence Mistral payante pour la production, StarCoder 2 impose des restrictions d\'usage sous OpenRAIL-M.',
       },
       starCoder2: {
         id: 'starcoder2',
@@ -1135,6 +1175,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Fullfeed contexte trop-rapide multi-turn dialogs** — "J\'ai 128K contexte, donc je fais 100 edits en même conversation" — faux. Token-length en contexte inclut aussi history. Après 10–20 turns vous êtes à 50K tokens. Commencer nouveau chat.',
           '**No quantization-validation** — Vous quantize un modèle localement et ne le testez pas contre baseline. Quelques quantization-tools mènent subtle bugs. Validater contre simple test-code d\'abord.',
         ],
+        image: '/images/best-local-coding-models-2026-common-mistakes-fr.svg',
+        imageCaption: 'Six erreurs fréquentes dans le choix d\'un modèle de codage local : ignorer la marge VRAM, faire confiance à la fenêtre de contexte annoncée, ne pas lire la licence, négliger la fiabilité des appels d\'outils pour les agents, utiliser le même modèle pour le chat et l\'autocomplétion, et ne pas réévaluer après six mois.',
       },
       relatedReading: {
         id: 'related-reading',
@@ -1506,6 +1548,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': '広言語対応。ニッチ言語を含む',
           },
         ],
+        image: '/images/best-local-coding-models-2026-model-comparison-ja.svg',
+        imageCaption: '2026年5月のQ4_K_M時点での7つのローカルコーディングモデル比較：VRAM、コンテキストウィンドウ、ライセンス、最適な用途。Qwen3-Coder 30Bは24GB GPU向けデフォルト選択。',
       },
       whichOne: {
         id: 'which-one',
@@ -1523,6 +1567,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'あなたの状況': 'Rust、Lua、Haskell、Solidity、またはその他のニッチ言語を書く', '選択': 'StarCoder 2 15B' },
           { 'あなたの状況': '優先順位は絶対品質ではなく、トークン毎秒である', '選択': 'Codestral 22B' },
         ],
+        image: '/images/best-local-coding-models-2026-which-pick-ja.svg',
+        imageCaption: 'ハードウェア、用途、ライセンス制約に基づくローカルコーディングモデル選択ガイド。VRAMが最初のフィルター、次にライセンスで絞り込む。',
       },
       qwenCoderDeep: {
         id: 'qwen3-coder',
@@ -1663,6 +1709,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '量子化がどのように機能するか、およびQ4_K_Mがなぜほとんどの引用デフォルトであるかについてのより深い説明については、[LLM量子化説明](/local-llms/llm-quantization-explained)を参照してください。このガイドの残りは上記の計算を想定しています。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-vram-by-quant-ja.svg',
+        imageCaption: '量子化レベル別の7Bおよび30Bモデルのメモリ要件。Q4_K_Mは十億パラメータあたり約0.60GBの推奨デフォルト。コンテキストとツールの追加オーバーヘッドとして2〜4GBを加算。',
       },
       contextWindow: {
         id: 'context-window',
@@ -1685,6 +1733,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '実用的作業コンテキストはマーケティング列ではなく、モデルがあなたのリポジトリを心に保つことができるかを決めます。マルチファイルリファクター向けには、見出しの数ではなく実際のリコール列を優先してください — Codestralの32Kは実際、Llama 3.3の128Kは部分的。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-context-window-ja.svg',
+        imageCaption: '7つのローカルコーディングモデルの公称値と実用的なコンテキストウィンドウの比較。コーディングモデルは公称値の約半分を超えると注意品質が低下する。',
       },
       licensing: {
         id: 'licensing',
@@ -1706,6 +1756,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Codestralのライセンスはそれでプロトタイプを作成し、再確認なしで出荷するチームを引っかかります。モデルが支払中のユーザーに触れる場合 — 間接的にも内部ツールを通じてカスタマーフェーシング成果物を生成してください — Mistralコマーシャルが必要です。ライセンス再交渉サイクルを避けるために統合前にQwen3-CoderまたはGranite Code（両方Apache 2.0）に移動してください。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-licence-comparison-ja.svg',
+        imageCaption: 'ローカルコーディングモデル6つのライセンス比較：4つはApache 2.0で商用利用制限なし、Codestralは本番環境にMistral商用ライセンスが必要、StarCoder 2はOpenRAIL-Mの利用制限あり。',
       },
       decisionTree: {
         id: 'decision-tree',
@@ -1736,6 +1788,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'デシジョンツリーは意図的に短いです。ほとんどのチームはモデル選択を過度に考え、ハーネス選択を過度に考えていません — ハーネス側については[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local)を参照してください。信頼できるピック内のモデル違いはハーネスフィット違いより小さい。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-decision-tree-ja.svg',
+        imageCaption: 'ローカルコーディングモデル選択の6つの判断フロー：VRAM→ライセンス→コンテキスト→エージェント信頼性→言語対応→速度vs品質の順で最適なモデルを特定。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1748,6 +1802,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**間違い5：より大きいチャットモデルと小さい自動補完モデルをペアにしていない。** 30Bチャットモデルは200ms未満の自動補完向けオーバーキル。チャットモデル隣に1.5B～7B自動補完モデルを実行 — 合計VRAMは管理可能で、遅延はインタラクティブのままです。',
           '**間違い6：モデルカードを6か月毎に再確認していない。** オープンウェイトモデルラインは更新；量子化レシピは改善；ライセンスは時々緊縮。今日のデフォルト選択は2026年11月のデフォルト必ずしもではありません。',
         ],
+        image: '/images/best-local-coding-models-2026-common-mistakes-ja.svg',
+        imageCaption: 'ローカルコーディングモデル選択の6つのよくある間違い：VRAMマージン無視、公称コンテキスト信頼、ライセンス未確認、エージェントツール呼び出し信頼性の軽視、チャットと補完の同一モデル使用、半年後の未見直し。',
       },
       sources: {
         id: 'sources',
@@ -2010,6 +2066,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '广泛语言覆盖（包括小众语言）',
           },
         ],
+        image: '/images/best-local-coding-models-2026-model-comparison-zh.svg',
+        imageCaption: '2026年5月Q4_K_M量化下七个本地编程模型对比：显存、上下文窗口、许可证和最佳使用场景。Qwen3-Coder 30B是24GB显卡的默认首选。',
       },
       whichOne: {
         id: 'which-one',
@@ -2027,6 +2085,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '您的情况': '我编写Rust、Lua、Haskell、Solidity或其他小众语言', '选择': 'StarCoder 2 15B' },
           { '您的情况': '我的优先级是每秒令牌数，而不是绝对质量', '选择': 'Codestral 22B' },
         ],
+        image: '/images/best-local-coding-models-2026-which-pick-zh.svg',
+        imageCaption: '基于硬件、使用场景和许可证约束的本地编程模型选型指南。显存是第一过滤条件，许可证是第二过滤条件。',
       },
       qwenCoderDeep: {
         id: 'qwen3-coder',
@@ -2167,6 +2227,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '关于量化如何工作以及为什么Q4_K_M是最常见的默认值的更深入解释，请参阅[LLM量化解释](/local-llms/llm-quantization-explained)。本指南的其余部分假设上面的数学。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-vram-by-quant-zh.svg',
+        imageCaption: '7B和30B模型在不同量化级别下的显存需求。Q4_K_M是推荐默认值，约每十亿参数0.60GB；另需加2–4GB用于上下文和工具开销。',
       },
       contextWindow: {
         id: 'context-window',
@@ -2189,6 +2251,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '实际工作上下文决定模型是否可以将您的存储库记在脑子里，而不是营销列。对于多文件重构，优先考虑实际回忆列而不是头条 — Codestral的32K是真实的，Llama 3.3的128K是部分的。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-context-window-zh.svg',
+        imageCaption: '七个本地编程模型的标称值与实用上下文窗口对比。编程模型超过标称值约一半时注意力质量下降，应按实用值而非营销数字规划。',
       },
       licensing: {
         id: 'licensing',
@@ -2210,6 +2274,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Codestral的许可证困扰了用它进行原型设计然后无需重新检查就发布的团队。如果模型接触付费用户 — 甚至通过产生面向客户工件的内部工具间接接触 — 您需要Mistral商业。在集成前移动到Qwen3-Coder或Granite Code（两者Apache 2.0）以避免许可证重新谈判循环。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-licence-comparison-zh.svg',
+        imageCaption: '六个本地编程模型许可证对比：四个采用Apache 2.0（商用无限制），Codestral生产环境需要付费Mistral商业许可证，StarCoder 2在OpenRAIL-M下有使用限制。',
       },
       decisionTree: {
         id: 'decision-tree',
@@ -2240,6 +2306,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '决策树有意简短。大多数团队过度思考模型选择，轻视工具选择 — 对于工具一侧，请参阅[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local)。可靠选择内的模型差异小于工具适配差异。',
           },
         ],
+        image: '/images/best-local-coding-models-2026-decision-tree-zh.svg',
+        imageCaption: '本地编程模型选型六步决策流程：显存→许可证→上下文→Agent可靠性→语言覆盖→速度vs质量。Qwen3-Coder 30B是24GB显卡的安全默认选择。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2252,6 +2320,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**错误5：不与较大聊天模型配对小自动补完模型。** 30B聊天模型对200毫秒以下自动补完过度。在聊天模型旁边运行1.5B～7B自动补完模型 — 总VRAM保持可管理，延迟保持交互式。',
           '**错误6：不每六个月重新检查模型卡。** 开放权重模型线更新；量化方案改进；许可证有时收紧。今天的默认选择不一定是2026年11月的默认值。',
         ],
+        image: '/images/best-local-coding-models-2026-common-mistakes-zh.svg',
+        imageCaption: '选择本地编程模型的六个常见错误：忽略显存余量、轻信标称上下文、不读许可证、忽视Agent工具调用可靠性、聊天与补全共用同一模型、六个月后不重新评估。',
       },
       sources: {
         id: 'sources',
