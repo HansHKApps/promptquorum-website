@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Embedding Models for Local RAG in 2026 | PromptQuorum</title>
+    <meta name="description" content="6 embedding models benchmarked on legal, research, code, and multilingual corpora. retrieval@10, CPU/GPU speed, memory. May 2026 verdict." />
+    <meta property="og:title" content="Best Embedding Models for Local RAG in 2026 — PromptQuorum" />
+    <meta property="og:description" content="jina-embeddings-v3 vs bge-large vs nomic vs gte vs mxbai vs snowflake-arctic — full benchmark results." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .slide { padding: 20px 16px; }
+            .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+            .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+            .slide p { font-size: 14px; margin-bottom: 10px; }
+            .slide ul { font-size: 1em; margin: 10px 0; }
+            .slide ul li { margin-bottom: 8px; }
+            .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+            .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
+            .header { padding: 10px 12px; }
+            .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .header-links { gap: 8px; font-size: 11px; }
+            .controls { padding: 10px 12px; }
+            .controls button { padding: 6px 12px; font-size: 12px; }
+        }
+
+        @media print {
+            * { margin: 0; padding: 0; }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls { display: none !important; }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+            .slide strong { color: #000 !important; font-weight: 700; }
+            .slide li { color: #000 !important; }
+            table th { background: #6750a4 !important; color: #fff !important; }
+            table td { color: #000 !important; border-color: #ccc !important; }
+            .slide:last-child { page-break-after: avoid; break-after: avoid; }
+        }
+
+        @media (max-width: 768px) {
+            .slide { padding: 24px; }
+            .slide h1 { font-size: 28px; }
+            .slide h2 { font-size: 22px; }
+            button { padding: 6px 12px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Best Embedding Models for Local RAG in 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container"></div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const BASE_URL = 'https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026';
+
+    const CONTENT = {
+      en: {
+        title: 'Best Embedding Models for Local RAG in 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Best Embedding Models for Local RAG in 2026',
+            subtitle: '6 open-weight models benchmarked on legal, research, code &amp; multilingual corpora — retrieval@10, CPU/GPU speed, memory. May 2026.',
+            link: 'https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026'
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>jina-embeddings-v3 wins accuracy</strong> — 92% retrieval@10 overall, best on every document type',
+              '<strong>bge-large-en-v1.5 wins English-only</strong> — 91% on legal and research, drops to 79% multilingual',
+              '<strong>nomic-embed-text-v2 wins CPU speed</strong> — 580 chunks/sec, ~5× faster than 1,024-dim alternatives',
+              '<strong>Dimensions help up to ~1,024</strong> — beyond that, recall gain &lt;1% and storage doubles'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways (continued)',
+            items: [
+              '<strong>Code retrieval is hardest</strong> — all 6 models lose 5–10 points on TypeScript/Python vs natural language',
+              '<strong>Multilingual support is not free</strong> — English-only embedders drop 10–15 points on DE/FR/JA/ZH text',
+              '<strong>Switching embedders = full re-index</strong> — budget 30–90 min per 5,000 pages on consumer hardware'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '6 Embedding Models Compared (May 2026)',
+            columns: ['Model', 'Dims', 'retrieval@10', 'Multilingual', 'Best For'],
+            rows: [
+              ['nomic-embed-text-v2', '768', '88%', '100+ langs (MoE)', 'CPU-only deployments'],
+              ['bge-large-en-v1.5', '1,024', '91% (EN) / 79% (multi)', 'English-only', 'English accuracy-critical'],
+              ['gte-large', '1,024', '90% (EN) / 78% (multi)', 'English-focused', 'Apache-2.0 licensing'],
+              ['mxbai-embed-large-v1', '1,024', '89% (EN) / 80% (multi)', 'English-focused', 'Balanced English RAG'],
+              ['snowflake-arctic-l-v2.0', '1,024', '87% (EN) / 86% (multi)', '~30 langs', 'Long-context (8k+ chunks)'],
+              ['jina-embeddings-v3', '1,024 (→256 Matryoshka)', '92% (EN) / 89% (multi)', '89 langs', 'Default-beating pick']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Retrieval@10 by Document Type',
+            columns: ['Model', 'Legal', 'Research', 'Code', 'Multi', 'Overall'],
+            rows: [
+              ['nomic-embed-text-v2', '88%', '90%', '82%', '92%', '88%'],
+              ['bge-large-en-v1.5', '94%', '93%', '85%', '79%', '88%'],
+              ['gte-large', '92%', '92%', '86%', '78%', '87%'],
+              ['mxbai-embed-large-v1', '91%', '91%', '84%', '80%', '87%'],
+              ['snowflake-arctic-l-v2.0', '88%', '89%', '83%', '86%', '87%'],
+              ['jina-embeddings-v3', '93%', '92%', '87%', '89%', '92%']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'CPU Speed: Chunks/Sec (Apple M3 Pro, batch 32)',
+            columns: ['Model', 'Chunks/sec', '5K-page time', 'Note'],
+            rows: [
+              ['nomic-embed-text-v2', '580', '~9 min', 'MoE: 305M of 475M params active'],
+              ['jina-embeddings-v3', '220', '~24 min', 'LoRA adapters; disable for +15% speed'],
+              ['snowflake-arctic-l-v2.0', '130', '~40 min', 'Distilled; benefits from AVX-512'],
+              ['gte-large', '110', '~48 min', 'Standard 1,024-dim BERT-style'],
+              ['mxbai-embed-large-v1', '105', '~50 min', '1,024-dim standard'],
+              ['bge-large-en-v1.5', '95', '~55 min', 'Most accurate English; slowest CPU']
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'GPU Speed Highlights (RTX 4070, 12 GB VRAM)',
+            line1: 'nomic-embed-text-v2: <strong>4,800 chunks/sec</strong> — fastest GPU throughput',
+            line2: 'jina-embeddings-v3: <strong>3,200 chunks/sec</strong> — top accuracy + fast indexing',
+            tip: 'Even the slowest GPU number (bge-large at 1,400/sec) is 2.4× faster than the fastest CPU. With GPU, a 5K-page re-index takes 1–4 minutes.'
+          },
+          {
+            type: 'list',
+            h2: 'Memory &amp; Dimension Tradeoffs',
+            items: [
+              '<strong>768 dims (nomic):</strong> ~90 MB for 30K chunks; 1,024-dim models: ~120 MB same corpus',
+              '<strong>Matryoshka truncation</strong> (jina, nomic): slice to 512/256 dims after embedding — no re-indexing needed',
+              '<strong>Truncation cost:</strong> 512 dims → ~1 point retrieval loss; 256 dims → ~3 points',
+              '<strong>int8 vector quantisation:</strong> halves storage, ~0.5 point loss — worth it above 25K chunks',
+              '<strong>Model RAM:</strong> nomic 1.2 GB, others 1.9–2.7 GB peak at bf16'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Which Embedding Model Should You Pick?',
+            columns: ['Your Situation', 'Pick'],
+            rows: [
+              ['Mixed-language corpus, GPU, best accuracy', 'jina-embeddings-v3'],
+              ['English-only legal/research, accuracy critical', 'bge-large-en-v1.5'],
+              ['CPU-only, no GPU available', 'nomic-embed-text-v2'],
+              ['Need Apache-2.0 licence (commercial)', 'gte-large or mxbai-embed-large-v1'],
+              ['Very long docs (8k+ token chunks)', 'snowflake-arctic-embed-l-v2.0'],
+              ['Code-heavy corpus', 'None of the 6 — use a code-specific embedder']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5-Step Decision Tree',
+            items: [
+              '<strong>GPU available for indexing?</strong> No → nomic-embed-text-v2 (5× CPU speed). Yes → next.',
+              '<strong>English-only corpus?</strong> Yes → bge-large-en-v1.5 (accuracy) or gte-large (Apache-2.0). No → next.',
+              '<strong>Very long documents (8k+ tokens)?</strong> Yes → snowflake-arctic-embed-l-v2.0. No → next.',
+              '<strong>Need dimension flexibility later?</strong> Yes → jina-embeddings-v3 (Matryoshka). No → next.',
+              '<strong>Commercial product?</strong> Yes → avoid jina (CC BY-NC); use nomic (Apache-2.0) or bge-m3 (MIT).'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '6 Common Mistakes',
+            items: [
+              '<strong>Sticking with platform defaults</strong> — AnythingLLM, PrivateGPT, Open WebUI defaults underperform jina-v3 by 5–10 points',
+              '<strong>Choosing 1,024 dims when 768 is enough</strong> — nomic at 88% covers most use cases; 5× CPU speed matters more',
+              '<strong>English-only embedder for multilingual corpus</strong> — bge-large drops 15 points on Japanese/Chinese content',
+              '<strong>Ignoring the licence</strong> — jina-embeddings-v3 is CC BY-NC; verify before shipping in a paid product',
+              '<strong>Benchmarking on too few documents</strong> — differences become decisive above 5,000 chunks',
+              '<strong>Forgetting re-index cost</strong> — every embedder swap = 30–90 min per 5K pages; plan before you switch'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              {
+                q: 'Which model is fastest on CPU?',
+                a: 'nomic-embed-text-v2 — 580 chunks/sec on Apple M3 Pro, ~5× faster than bge-large (95/sec). The MoE architecture activates only ~305M of 475M parameters per token.'
+              },
+              {
+                q: 'Do larger dimensions really improve retrieval?',
+                a: 'Up to ~1,024 dims, yes. Beyond that, &lt;1 point gain. Matryoshka truncation (jina, nomic) lets you cut dims later without re-indexing the corpus.'
+              },
+              {
+                q: 'Are open-source embeddings as good as OpenAI?',
+                a: 'For most local RAG, yes. OpenAI text-embedding-3-large leads published English benchmarks by 2–4 points, but jina-v3 is within 2 points and keeps data on your machine.'
+              },
+              {
+                q: 'How often should I upgrade my embedding model?',
+                a: 'When a new model beats yours by 3+ points on similar data AND you have a baseline retrieval@10 to compare. Most deployments are stable for 12–18 months.'
+              }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Self-Hosted vs OpenAI: Cost per 1M Tokens',
+            columns: ['Approach', 'Cost / 1M tokens', 'Notes'],
+            rows: [
+              ['OpenAI text-embedding-3-large', '$0.13', 'Top English accuracy; data leaves your machine'],
+              ['jina-embeddings-v3 on RTX 4070', '~$0.001', 'Best local accuracy; CC BY-NC licence'],
+              ['bge-large-en-v1.5 on RTX 4070', '~$0.001', 'Best English accuracy; MIT licence'],
+              ['nomic-embed-text-v2 on RTX 4070', '~$0.0005', 'Fastest GPU throughput; Apache-2.0'],
+              ['nomic-embed-text-v2 on M3 Pro CPU', '~$0.0008', 'No GPU needed; ~30 min per 1M tokens']
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Find the Right Embedding Model for Your RAG',
+            body: 'PromptQuorum lets you run prompts across multiple models simultaneously — compare, benchmark, and pick the best embedder for your local RAG pipeline.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      de: {
+        title: 'Beste Embedding-Modelle für lokale RAG 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Beste Embedding-Modelle für lokale RAG 2026',
+            subtitle: '6 Open-Weight-Modelle auf Rechtsverträgen, Forschungsarbeiten, Code &amp; Wiki benchmarkt. Mai 2026.',
+            link: 'https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026'
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              '<strong>jina-embeddings-v3 gewinnt Genauigkeit</strong> — 92% retrieval@10 insgesamt, bestes auf jedem Dokumenttyp',
+              '<strong>bge-large-en-v1.5 gewinnt bei Englisch</strong> — 91% auf Rechts-/Forschungstexte, fällt auf 79% bei Mehrsprachigkeit',
+              '<strong>nomic-embed-text-v2 gewinnt CPU-Geschwindigkeit</strong> — 580 Chunks/Sek, ~5× schneller als 1.024-Dim-Alternativen',
+              '<strong>Dimensionen helfen bis ~1.024</strong> — darüber hinaus &lt;1% Recall-Gewinn und Speicher verdoppelt sich'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse (Fortsetzung)',
+            items: [
+              '<strong>Code-Abruf ist am schwierigsten</strong> — alle 6 Modelle verlieren 5–10 Punkte auf TypeScript/Python vs. natürlicher Sprache',
+              '<strong>Mehrsprachigkeit ist nicht kostenlos</strong> — rein englische Embedder fallen 10–15 Punkte auf DE/FR/JA/ZH-Text',
+              '<strong>Embedder-Wechsel = vollständiger Re-Index</strong> — 30–90 Min. pro 5.000 Seiten auf Consumer-Hardware einplanen'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '6 Embedding-Modelle im Vergleich (Mai 2026)',
+            columns: ['Modell', 'Dims', 'retrieval@10', 'Mehrsprachig', 'Am besten für'],
+            rows: [
+              ['nomic-embed-text-v2', '768', '88%', '100+ Sprachen (MoE)', 'Nur-CPU-Deployments'],
+              ['bge-large-en-v1.5', '1.024', '91% (EN) / 79% (multi)', 'Nur Englisch', 'Englische Genauigkeit'],
+              ['gte-large', '1.024', '90% (EN) / 78% (multi)', 'Englisch-fokussiert', 'Apache-2.0-Lizenz'],
+              ['mxbai-embed-large-v1', '1.024', '89% (EN) / 80% (multi)', 'Englisch-fokussiert', 'Ausgewogenes RAG'],
+              ['snowflake-arctic-l-v2.0', '1.024', '87% (EN) / 86% (multi)', '~30 Sprachen', 'Lange Dokumente (8k+)'],
+              ['jina-embeddings-v3', '1.024 (→256 Matryoshka)', '92% (EN) / 89% (multi)', '89 Sprachen', 'Beste Allround-Wahl']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'retrieval@10 nach Dokumenttyp',
+            columns: ['Modell', 'Recht', 'Forschung', 'Code', 'Multi', 'Gesamt'],
+            rows: [
+              ['nomic-embed-text-v2', '88%', '90%', '82%', '92%', '88%'],
+              ['bge-large-en-v1.5', '94%', '93%', '85%', '79%', '88%'],
+              ['gte-large', '92%', '92%', '86%', '78%', '87%'],
+              ['mxbai-embed-large-v1', '91%', '91%', '84%', '80%', '87%'],
+              ['snowflake-arctic-l-v2.0', '88%', '89%', '83%', '86%', '87%'],
+              ['jina-embeddings-v3', '93%', '92%', '87%', '89%', '92%']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'CPU-Geschwindigkeit: Chunks/Sek (Apple M3 Pro)',
+            columns: ['Modell', 'Chunks/Sek', '5K-Seiten-Zeit', 'Hinweis'],
+            rows: [
+              ['nomic-embed-text-v2', '580', '~9 Min.', 'MoE: 305M von 475M Params aktiv'],
+              ['jina-embeddings-v3', '220', '~24 Min.', 'LoRA-Adapter; deaktivieren für +15%'],
+              ['snowflake-arctic-l-v2.0', '130', '~40 Min.', 'Destilliert; profitiert von AVX-512'],
+              ['gte-large', '110', '~48 Min.', 'Standard 1.024-Dim BERT-Stil'],
+              ['mxbai-embed-large-v1', '105', '~50 Min.', '1.024-Dim Standard'],
+              ['bge-large-en-v1.5', '95', '~55 Min.', 'Genauestes Englisch; langsamste CPU']
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'GPU-Geschwindigkeit RTX 4070 (12 GB VRAM)',
+            line1: 'nomic-embed-text-v2: <strong>4.800 Chunks/Sek</strong> — schnellster GPU-Durchsatz',
+            line2: 'jina-embeddings-v3: <strong>3.200 Chunks/Sek</strong> — höchste Genauigkeit + schnelles Indexieren',
+            tip: 'Auch die langsamste GPU (bge-large bei 1.400/Sek) ist 2,4× schneller als die schnellste CPU. 5K-Seiten in 1–4 Minuten.'
+          },
+          {
+            type: 'list',
+            h2: 'Arbeitsspeicher und Dimensions-Tradeoffs',
+            items: [
+              '<strong>768 Dims (nomic):</strong> ~90 MB für 30K Chunks; 1.024-Dim-Modelle: ~120 MB derselbe Corpus',
+              '<strong>Matryoshka-Trunkierung</strong> (jina, nomic): Vektor auf 512/256 Dims schneiden — kein Re-Indexing nötig',
+              '<strong>Trunkierungskosten:</strong> 512 Dims → ~1 Punkt Verlust; 256 Dims → ~3 Punkte',
+              '<strong>int8-Vektorquantisierung:</strong> halbiert Speicher, ~0,5 Punkte Verlust — lohnt ab 25K Chunks',
+              '<strong>Modell-RAM:</strong> nomic 1,2 GB, andere 1,9–2,7 GB bei bf16'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Welches Embedding-Modell wählen?',
+            columns: ['Ihre Situation', 'Empfehlung'],
+            rows: [
+              ['Mehrsprachiger Corpus, GPU, höchste Genauigkeit', 'jina-embeddings-v3'],
+              ['Rein englischer Rechts-/Forschungstext', 'bge-large-en-v1.5'],
+              ['Nur CPU, keine GPU verfügbar', 'nomic-embed-text-v2'],
+              ['Apache-2.0-Lizenz erforderlich (kommerziell)', 'gte-large oder mxbai-embed-large-v1'],
+              ['Sehr lange Dokumente (8k+ Token-Chunks)', 'snowflake-arctic-embed-l-v2.0'],
+              ['Code-lastiger Corpus', 'Code-spezifischen Embedder verwenden']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5-Schritte-Entscheidungsbaum',
+            items: [
+              '<strong>GPU für Indizierung verfügbar?</strong> Nein → nomic-embed-text-v2 (5× CPU-Speed). Ja → weiter.',
+              '<strong>Rein englischer Corpus?</strong> Ja → bge-large-en-v1.5 (Genauigkeit) oder gte-large (Apache-2.0). Nein → weiter.',
+              '<strong>Sehr lange Dokumente (8k+ Token)?</strong> Ja → snowflake-arctic-embed-l-v2.0. Nein → weiter.',
+              '<strong>Dimensionen später anpassen?</strong> Ja → jina-embeddings-v3 (Matryoshka). Nein → weiter.',
+              '<strong>Kommerzielles Produkt?</strong> Ja → nomic (Apache-2.0) oder bge-m3 (MIT) statt jina (CC BY-NC).'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '6 häufige Fehler',
+            items: [
+              '<strong>Plattform-Standard beibehalten</strong> — AnythingLLM, PrivateGPT, Open WebUI-Standards 5–10 Punkte schlechter als jina-v3',
+              '<strong>1.024 Dims wenn 768 reichen</strong> — nomic bei 88% deckt die meisten Fälle; 5× CPU-Speed überwiegt',
+              '<strong>Englisch-Embedder für mehrsprachigen Corpus</strong> — bge-large verliert 15 Punkte bei Japanisch/Chinesisch',
+              '<strong>Lizenz ignorieren</strong> — jina-embeddings-v3 ist CC BY-NC; vor kommerziellem Einsatz prüfen',
+              '<strong>Zu kleiner Testcorpus</strong> — Unterschiede werden erst ab 5.000 Chunks entscheidend',
+              '<strong>Re-Index-Kosten vergessen</strong> — jeder Embedder-Wechsel = 30–90 Min. pro 5K Seiten'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              {
+                q: 'Welches Modell ist am schnellsten auf CPU?',
+                a: 'nomic-embed-text-v2 — 580 Chunks/Sek auf Apple M3 Pro, ~5× schneller als bge-large (95/Sek). MoE-Architektur aktiviert nur ~305M von 475M Parametern.'
+              },
+              {
+                q: 'Verbessern größere Dimensionen den Abruf wirklich?',
+                a: 'Bis ~1.024 Dims, ja. Darüber hinaus &lt;1 Punkt Gewinn. Matryoshka-Trunkierung ermöglicht späteres Kürzen ohne Re-Indexing.'
+              },
+              {
+                q: 'Sind Open-Source-Embeddings so gut wie OpenAI?',
+                a: 'Für die meisten lokalen RAG-Einsätze ja. OpenAI führt bei Englisch um 2–4 Punkte, aber jina-v3 liegt nur 2 Punkte dahinter und hält Daten lokal.'
+              },
+              {
+                q: 'Wie oft sollte ich das Embedding-Modell aktualisieren?',
+                a: 'Wenn ein neues Modell Ihres um 3+ Punkte auf ähnlichen Daten übertrifft. Die meisten Deployments sind 12–18 Monate stabil.'
+              }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Self-Hosted vs OpenAI: Kosten pro 1 Mio. Token',
+            columns: ['Ansatz', 'Kosten / 1M Token', 'Hinweise'],
+            rows: [
+              ['OpenAI text-embedding-3-large', '$0,13', 'Höchste englische Genauigkeit; Daten verlassen Ihre Hardware'],
+              ['jina-embeddings-v3 auf RTX 4070', '~$0,001', 'Beste lokale Genauigkeit; CC BY-NC-Lizenz'],
+              ['bge-large-en-v1.5 auf RTX 4070', '~$0,001', 'Beste englische Genauigkeit; MIT-Lizenz'],
+              ['nomic-embed-text-v2 auf RTX 4070', '~$0,0005', 'Schnellster GPU-Durchsatz; Apache-2.0'],
+              ['nomic-embed-text-v2 auf M3 Pro CPU', '~$0,0008', 'Kein GPU nötig; ~30 Min. pro 1M Token']
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Das richtige Embedding-Modell für Ihre RAG',
+            body: 'PromptQuorum ermöglicht es Ihnen, Prompts gleichzeitig auf mehreren Modellen zu testen — vergleichen, benchmarken und das beste Embedding für Ihre lokale RAG-Pipeline wählen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      fr: {
+        title: "Meilleurs modèles d'embedding pour RAG local 2026",
+        slides: [
+          {
+            type: 'title',
+            h1: "Meilleurs modèles d'embedding pour RAG local 2026",
+            subtitle: '6 modèles testés sur contrats légaux, recherche, code &amp; wiki multilingue. Mai 2026.',
+            link: 'https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026'
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              '<strong>jina-embeddings-v3 gagne en précision</strong> — 92% retrieval@10 global, meilleur sur tous les types de documents',
+              '<strong>bge-large-en-v1.5 gagne en anglais</strong> — 91% contrats et recherche, chute à 79% multilingue',
+              '<strong>nomic-embed-text-v2 gagne en vitesse CPU</strong> — 580 chunks/sec, ~5× plus rapide que les alternatives 1 024-dim',
+              '<strong>Dimensions utiles jusqu\'à ~1 024</strong> — au-delà, gain recall &lt;1% et stockage doublé'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Points clés (suite)',
+            items: [
+              '<strong>La récupération de code est la plus difficile</strong> — tous les 6 modèles perdent 5–10 points sur TypeScript/Python',
+              "<strong>Multilingue n'est pas gratuit</strong> — embedders anglais seulement perdent 10–15 points sur DE/FR/JA/ZH",
+              '<strong>Changer d\'embedder = ré-indexation complète</strong> — prévoir 30–90 min par 5 000 pages'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '6 modèles d\'embedding comparés (mai 2026)',
+            columns: ['Modèle', 'Dims', 'retrieval@10', 'Multilingue', 'Idéal pour'],
+            rows: [
+              ['nomic-embed-text-v2', '768', '88%', '100+ langues (MoE)', 'Déploiements CPU seul'],
+              ['bge-large-en-v1.5', '1 024', '91% (EN) / 79% (multi)', 'Anglais seulement', 'Précision anglaise critique'],
+              ['gte-large', '1 024', '90% (EN) / 78% (multi)', 'Focalisé anglais', 'Licence Apache-2.0'],
+              ['mxbai-embed-large-v1', '1 024', '89% (EN) / 80% (multi)', 'Focalisé anglais', 'RAG anglais équilibré'],
+              ['snowflake-arctic-l-v2.0', '1 024', '87% (EN) / 86% (multi)', '~30 langues', 'Longs documents (8k+)'],
+              ['jina-embeddings-v3', '1 024 (→256 Matryoshka)', '92% (EN) / 89% (multi)', '89 langues', 'Meilleur choix par défaut']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'retrieval@10 par type de document',
+            columns: ['Modèle', 'Légal', 'Recherche', 'Code', 'Multi', 'Global'],
+            rows: [
+              ['nomic-embed-text-v2', '88%', '90%', '82%', '92%', '88%'],
+              ['bge-large-en-v1.5', '94%', '93%', '85%', '79%', '88%'],
+              ['gte-large', '92%', '92%', '86%', '78%', '87%'],
+              ['mxbai-embed-large-v1', '91%', '91%', '84%', '80%', '87%'],
+              ['snowflake-arctic-l-v2.0', '88%', '89%', '83%', '86%', '87%'],
+              ['jina-embeddings-v3', '93%', '92%', '87%', '89%', '92%']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Vitesse CPU : chunks/sec (Apple M3 Pro)',
+            columns: ['Modèle', 'Chunks/sec', 'Temps 5K pages', 'Note'],
+            rows: [
+              ['nomic-embed-text-v2', '580', '~9 min', 'MoE : 305M de 475M params actifs'],
+              ['jina-embeddings-v3', '220', '~24 min', 'Adapters LoRA ; désactiver pour +15%'],
+              ['snowflake-arctic-l-v2.0', '130', '~40 min', 'Distillé ; bénéficie de AVX-512'],
+              ['gte-large', '110', '~48 min', 'Standard 1 024-dim BERT'],
+              ['mxbai-embed-large-v1', '105', '~50 min', '1 024-dim standard'],
+              ['bge-large-en-v1.5', '95', '~55 min', 'Meilleure précision EN ; CPU le plus lent']
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Vitesse GPU RTX 4070 (12 Go VRAM)',
+            line1: 'nomic-embed-text-v2 : <strong>4 800 chunks/sec</strong> — débit GPU le plus rapide',
+            line2: 'jina-embeddings-v3 : <strong>3 200 chunks/sec</strong> — meilleure précision + indexation rapide',
+            tip: "Même le GPU le plus lent (bge-large à 1 400/sec) est 2,4× plus rapide que le CPU le plus rapide. Ré-indexation 5K pages en 1–4 minutes."
+          },
+          {
+            type: 'list',
+            h2: 'Mémoire et compromis de dimensions',
+            items: [
+              '<strong>768 dims (nomic) :</strong> ~90 Mo pour 30K chunks ; modèles 1 024-dim : ~120 Mo même corpus',
+              '<strong>Troncature Matryoshka</strong> (jina, nomic) : réduire à 512/256 dims sans ré-indexation',
+              '<strong>Coût de troncature :</strong> 512 dims → ~1 point perdu ; 256 dims → ~3 points',
+              '<strong>Quantisation int8 :</strong> stockage divisé par 2, ~0,5 point perdu — utile au-dessus de 25K chunks',
+              '<strong>RAM modèle :</strong> nomic 1,2 Go, autres 1,9–2,7 Go en bf16'
+            ]
+          },
+          {
+            type: 'table',
+            h2: "Quel modèle d'embedding choisir ?",
+            columns: ['Votre situation', 'Choix'],
+            rows: [
+              ['Corpus multilingue, GPU, meilleure précision', 'jina-embeddings-v3'],
+              ['Corpus anglais uniquement, légal/recherche', 'bge-large-en-v1.5'],
+              ['CPU uniquement, pas de GPU', 'nomic-embed-text-v2'],
+              ['Licence Apache-2.0 (commercial)', 'gte-large ou mxbai-embed-large-v1'],
+              ['Très longs documents (8k+ tokens)', 'snowflake-arctic-embed-l-v2.0'],
+              ['Corpus code intensif', 'Embedder spécifique au code']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: "Arbre de décision en 5 étapes",
+            items: [
+              '<strong>GPU disponible pour l\'indexation ?</strong> Non → nomic-embed-text-v2. Oui → continuer.',
+              '<strong>Corpus uniquement anglais ?</strong> Oui → bge-large-en-v1.5 ou gte-large. Non → continuer.',
+              '<strong>Très longs documents (8k+) ?</strong> Oui → snowflake-arctic-embed-l-v2.0. Non → continuer.',
+              '<strong>Besoin de flexibilité des dimensions ?</strong> Oui → jina-embeddings-v3. Non → continuer.',
+              '<strong>Produit commercial ?</strong> Oui → nomic (Apache-2.0) ou bge-m3 (MIT) — éviter jina (CC BY-NC).'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '6 erreurs courantes',
+            items: [
+              '<strong>Garder les paramètres par défaut</strong> — defaults AnythingLLM/PrivateGPT/Open WebUI inférieurs de 5–10 pts à jina-v3',
+              '<strong>1 024 dims quand 768 suffisent</strong> — nomic à 88% couvre la plupart des cas ; vitesse 5× plus importante',
+              '<strong>Embedder anglais pour corpus multilingue</strong> — bge-large perd 15 pts sur japonais/chinois',
+              '<strong>Ignorer la licence</strong> — jina CC BY-NC ; vérifier avant usage commercial',
+              '<strong>Corpus de test trop petit</strong> — différences décisives au-dessus de 5 000 chunks',
+              '<strong>Oublier le coût de ré-indexation</strong> — changement d\'embedder = 30–90 min par 5K pages'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes',
+            faqs: [
+              {
+                q: 'Quel modèle est le plus rapide sur CPU ?',
+                a: 'nomic-embed-text-v2 — 580 chunks/sec sur M3 Pro, ~5× plus rapide que bge-large (95/sec). Architecture MoE activant ~305M des 475M paramètres.'
+              },
+              {
+                q: "Les grandes dimensions améliorent-elles vraiment la récupération ?",
+                a: "Jusqu'à ~1 024 dims, oui. Au-delà, &lt;1 point de gain. La troncature Matryoshka permet de réduire sans ré-indexation."
+              },
+              {
+                q: "Les embeddings open-source sont-ils aussi bons qu'OpenAI ?",
+                a: "Pour la plupart des RAG locaux, oui. OpenAI mène de 2–4 pts en anglais, mais jina-v3 n'est qu'à 2 pts et garde les données localement."
+              },
+              {
+                q: "À quelle fréquence mettre à jour le modèle d'embedding ?",
+                a: "Quand un nouveau modèle dépasse le vôtre de 3+ pts sur données similaires. La plupart des déploiements sont stables 12–18 mois."
+              }
+            ]
+          },
+          {
+            type: 'table',
+            h2: "Auto-hébergé vs OpenAI : coût par 1M tokens",
+            columns: ['Approche', 'Coût / 1M tokens', 'Notes'],
+            rows: [
+              ['OpenAI text-embedding-3-large', '$0,13', "Meilleure précision EN ; données quittent la machine"],
+              ['jina-embeddings-v3 sur RTX 4070', '~$0,001', 'Meilleure précision locale ; licence CC BY-NC'],
+              ['bge-large-en-v1.5 sur RTX 4070', '~$0,001', 'Meilleure précision anglaise ; licence MIT'],
+              ['nomic-embed-text-v2 sur RTX 4070', '~$0,0005', 'Débit GPU le plus rapide ; Apache-2.0'],
+              ['nomic-embed-text-v2 sur M3 Pro CPU', '~$0,0008', 'Pas de GPU ; ~30 min par 1M tokens']
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Trouvez le bon modèle d\'embedding pour votre RAG',
+            body: "PromptQuorum vous permet de tester des prompts sur plusieurs modèles simultanément — comparez, benchmarquez et choisissez le meilleur embedder pour votre pipeline RAG local.",
+            cta: 'Essayez PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      ja: {
+        title: 'ローカルRAGの最高埋め込みモデル2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'ローカルRAGの最高埋め込みモデル2026',
+            subtitle: '法的文書・研究論文・コード・多言語Wikiで6モデルをベンチマーク。2026年5月。',
+            link: 'https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026'
+          },
+          {
+            type: 'list',
+            h2: '重要なポイント',
+            items: [
+              '<strong>jina-embeddings-v3が精度で優位</strong> — 4つのドキュメントタイプ全体で92% retrieval@10',
+              '<strong>bge-large-en-v1.5が英語で優位</strong> — 法律・研究で91%、多言語では79%に低下',
+              '<strong>nomic-embed-text-v2がCPU速度で優位</strong> — 580チャンク/秒、1,024次元より約5倍高速',
+              '<strong>次元は~1,024まで有効</strong> — それ以上はrecall向上&lt;1%、ストレージが2倍に'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '重要なポイント（続き）',
+            items: [
+              '<strong>コード取得が最も困難</strong> — 全6モデルがTypeScript/Pythonで5–10ポイント低下',
+              '<strong>多言語サポートは無料ではない</strong> — 英語専用embedderはDE/FR/JA/ZHテキストで10–15ポイント低下',
+              '<strong>Embedder変更=完全な再インデックス</strong> — コンシューマーHWで5,000ページあたり30–90分'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '6つの埋め込みモデル比較（2026年5月）',
+            columns: ['モデル', '次元', 'retrieval@10', '多言語', '最適用途'],
+            rows: [
+              ['nomic-embed-text-v2', '768', '88%', '100+言語 (MoE)', 'CPUのみの展開'],
+              ['bge-large-en-v1.5', '1,024', '91% (EN) / 79% (multi)', '英語のみ', '英語精度重視'],
+              ['gte-large', '1,024', '90% (EN) / 78% (multi)', '英語フォーカス', 'Apache-2.0ライセンス'],
+              ['mxbai-embed-large-v1', '1,024', '89% (EN) / 80% (multi)', '英語フォーカス', 'バランスの取れた英語RAG'],
+              ['snowflake-arctic-l-v2.0', '1,024', '87% (EN) / 86% (multi)', '~30言語', '長文書（8k+チャンク）'],
+              ['jina-embeddings-v3', '1,024 (→256 Matryoshka)', '92% (EN) / 89% (multi)', '89言語', 'ベストオールラウンド']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ドキュメントタイプ別 retrieval@10',
+            columns: ['モデル', '法律', '研究', 'コード', '多言語', '総合'],
+            rows: [
+              ['nomic-embed-text-v2', '88%', '90%', '82%', '92%', '88%'],
+              ['bge-large-en-v1.5', '94%', '93%', '85%', '79%', '88%'],
+              ['gte-large', '92%', '92%', '86%', '78%', '87%'],
+              ['mxbai-embed-large-v1', '91%', '91%', '84%', '80%', '87%'],
+              ['snowflake-arctic-l-v2.0', '88%', '89%', '83%', '86%', '87%'],
+              ['jina-embeddings-v3', '93%', '92%', '87%', '89%', '92%']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'CPU速度：チャンク/秒（Apple M3 Pro）',
+            columns: ['モデル', 'チャンク/秒', '5Kページ時間', 'メモ'],
+            rows: [
+              ['nomic-embed-text-v2', '580', '~9分', 'MoE: 475Mのうち305Mが有効'],
+              ['jina-embeddings-v3', '220', '~24分', 'LoRAアダプター; 無効化で+15%'],
+              ['snowflake-arctic-l-v2.0', '130', '~40分', '蒸留済み; AVX-512で高速化'],
+              ['gte-large', '110', '~48分', '標準1,024次元BERTスタイル'],
+              ['mxbai-embed-large-v1', '105', '~50分', '1,024次元標準'],
+              ['bge-large-en-v1.5', '95', '~55分', '最高英語精度; 最も遅いCPU']
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'GPU速度 RTX 4070（12 GB VRAM）',
+            line1: 'nomic-embed-text-v2：<strong>4,800チャンク/秒</strong> — 最速GPUスループット',
+            line2: 'jina-embeddings-v3：<strong>3,200チャンク/秒</strong> — 最高精度+高速インデックス',
+            tip: '最も遅いGPU（bge-largeの1,400/秒）でも最速CPUの2.4倍速い。5Kページを1–4分で再インデックス。'
+          },
+          {
+            type: 'list',
+            h2: 'メモリと次元のトレードオフ',
+            items: [
+              '<strong>768次元（nomic）：</strong>30Kチャンクで~90MB；1,024次元モデル：同コーパスで~120MB',
+              '<strong>Matryoshka切り詰め</strong>（jina、nomic）：再インデックスなしで512/256次元に削減可能',
+              '<strong>切り詰めコスト：</strong>512次元→~1ポイント損失；256次元→~3ポイント',
+              '<strong>int8ベクター量子化：</strong>ストレージ半減、~0.5ポイント損失 — 25Kチャンク超で有効',
+              '<strong>モデルRAM：</strong>nomic 1.2GB、その他1.9–2.7GB（bf16ピーク）'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'どの埋め込みモデルを選ぶか？',
+            columns: ['あなたの状況', '選択'],
+            rows: [
+              ['多言語コーパス、GPU有、最高精度', 'jina-embeddings-v3'],
+              ['英語のみ、法律/研究、精度重視', 'bge-large-en-v1.5'],
+              ['CPUのみ、GPU不使用', 'nomic-embed-text-v2'],
+              ['Apache-2.0ライセンス（商用）', 'gte-large または mxbai-embed-large-v1'],
+              ['非常に長い文書（8k+トークン）', 'snowflake-arctic-embed-l-v2.0'],
+              ['コード中心のコーパス', 'コード専用embedderを使用']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5ステップ決定木',
+            items: [
+              '<strong>インデックス用GPUあり？</strong> なし → nomic-embed-text-v2（5× CPU速度）。あり → 次へ。',
+              '<strong>英語のみコーパス？</strong> はい → bge-large-en-v1.5またはgte-large。いいえ → 次へ。',
+              '<strong>非常に長い文書（8k+）？</strong> はい → snowflake-arctic-embed-l-v2.0。いいえ → 次へ。',
+              '<strong>後で次元を調整？</strong> はい → jina-embeddings-v3（Matryoshka）。いいえ → 次へ。',
+              '<strong>商用製品？</strong> はい → nomic（Apache-2.0）またはbge-m3（MIT）— jina（CC BY-NC）は避ける。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '6つのよくある失敗',
+            items: [
+              '<strong>プラットフォームのデフォルトを使い続ける</strong> — AnythingLLM等のデフォルトはjina-v3より5–10ポイント低い',
+              '<strong>768で十分なのに1,024次元を選ぶ</strong> — nomicの88%はほとんどのユースケースをカバー',
+              '<strong>多言語コーパスに英語専用Embedderを使う</strong> — bge-largeは日本語/中国語で15ポイント低下',
+              '<strong>ライセンスを無視する</strong> — jina-embeddings-v3はCC BY-NC；商用前に確認必須',
+              '<strong>テストコーパスが小さすぎる</strong> — 5,000チャンク超で差が決定的になる',
+              '<strong>再インデックスコストを忘れる</strong> — Embedder変更=5Kページあたり30–90分'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              {
+                q: 'CPUで最も速いモデルは？',
+                a: 'nomic-embed-text-v2 — Apple M3 Proで580チャンク/秒、bge-large（95/秒）の約5倍。MoEアーキテクチャが475Mのうち約305Mのみ有効化。'
+              },
+              {
+                q: '次元が大きいほど本当に取得精度が向上するか？',
+                a: '~1,024次元まではYes。それ以上は1ポイント未満の向上。Matryoshka切り詰めは再インデックスなしで後から削減可能。'
+              },
+              {
+                q: 'オープンソースembeddingはOpenAIと同等か？',
+                a: 'ほとんどのローカルRAGではYes。OpenAIは英語で2–4ポイント優位だが、jina-v3は2ポイント差でデータをローカルに保持できる。'
+              },
+              {
+                q: 'Embeddingモデルはどのくらいの頻度で更新すべき？',
+                a: '類似データで新モデルが3ポイント以上上回り、ベースラインretrieval@10があるとき。ほとんどは12–18ヶ月安定。'
+              }
+            ]
+          },
+          {
+            type: 'table',
+            h2: '自己ホスト vs OpenAI：1Mトークンあたりのコスト',
+            columns: ['アプローチ', 'コスト/1Mトークン', 'メモ'],
+            rows: [
+              ['OpenAI text-embedding-3-large', '$0.13', '最高英語精度；データが機外に出る'],
+              ['jina-embeddings-v3 on RTX 4070', '~$0.001', '最高ローカル精度；CC BY-NCライセンス'],
+              ['bge-large-en-v1.5 on RTX 4070', '~$0.001', '最高英語精度；MITライセンス'],
+              ['nomic-embed-text-v2 on RTX 4070', '~$0.0005', '最速GPUスループット；Apache-2.0'],
+              ['nomic-embed-text-v2 on M3 Pro CPU', '~$0.0008', 'GPU不要；1Mトークンあたり~30分']
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'RAGに最適な埋め込みモデルを見つける',
+            body: 'PromptQuorumは複数のモデルで同時にプロンプトをテストできます — ローカルRAGパイプラインに最適なembedderを比較・ベンチマーク・選択できます。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      zh: {
+        title: '2026年本地RAG最佳嵌入模型',
+        slides: [
+          {
+            type: 'title',
+            h1: '2026年本地RAG最佳嵌入模型',
+            subtitle: '在法律合同、研究论文、代码和多语言wiki上对6个模型进行基准测试。2026年5月。',
+            link: 'https://www.promptquorum.com/power-local-llm/best-embedding-models-local-rag-2026'
+          },
+          {
+            type: 'list',
+            h2: '关键要点',
+            items: [
+              '<strong>jina-embeddings-v3精度领先</strong> — 总体92% retrieval@10，在所有文档类型中最佳',
+              '<strong>bge-large-en-v1.5英文领先</strong> — 法律和研究91%，多语言降至79%',
+              '<strong>nomic-embed-text-v2 CPU速度领先</strong> — 580块/秒，比1,024维替代品快约5倍',
+              '<strong>维度在~1,024时有效</strong> — 超过此范围recall提升&lt;1%，存储翻倍'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '关键要点（续）',
+            items: [
+              '<strong>代码检索最困难</strong> — 所有6个模型在TypeScript/Python上比自然语言低5–10分',
+              '<strong>多语言支持不是免费的</strong> — 纯英文嵌入器在DE/FR/JA/ZH文本上下降10–15分',
+              '<strong>切换嵌入器=完全重建索引</strong> — 消费级硬件每5,000页需30–90分钟'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '6个嵌入模型对比（2026年5月）',
+            columns: ['模型', '维度', 'retrieval@10', '多语言', '最适用于'],
+            rows: [
+              ['nomic-embed-text-v2', '768', '88%', '100+语言 (MoE)', '仅CPU部署'],
+              ['bge-large-en-v1.5', '1,024', '91% (EN) / 79% (multi)', '仅英文', '英文精度优先'],
+              ['gte-large', '1,024', '90% (EN) / 78% (multi)', '英文为主', 'Apache-2.0许可证'],
+              ['mxbai-embed-large-v1', '1,024', '89% (EN) / 80% (multi)', '英文为主', '均衡英文RAG'],
+              ['snowflake-arctic-l-v2.0', '1,024', '87% (EN) / 86% (multi)', '~30种语言', '长文档（8k+块）'],
+              ['jina-embeddings-v3', '1,024 (→256 Matryoshka)', '92% (EN) / 89% (multi)', '89种语言', '最佳综合选择']
+            ]
+          },
+          {
+            type: 'table',
+            h2: '按文档类型划分的 retrieval@10',
+            columns: ['模型', '法律', '研究', '代码', '多语言', '总体'],
+            rows: [
+              ['nomic-embed-text-v2', '88%', '90%', '82%', '92%', '88%'],
+              ['bge-large-en-v1.5', '94%', '93%', '85%', '79%', '88%'],
+              ['gte-large', '92%', '92%', '86%', '78%', '87%'],
+              ['mxbai-embed-large-v1', '91%', '91%', '84%', '80%', '87%'],
+              ['snowflake-arctic-l-v2.0', '88%', '89%', '83%', '86%', '87%'],
+              ['jina-embeddings-v3', '93%', '92%', '87%', '89%', '92%']
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'CPU速度：块/秒（Apple M3 Pro）',
+            columns: ['模型', '块/秒', '5K页时间', '架构说明'],
+            rows: [
+              ['nomic-embed-text-v2', '580', '~9分钟', 'MoE: 475M参数中305M激活'],
+              ['jina-embeddings-v3', '220', '~24分钟', 'LoRA适配器; 禁用可+15%速度'],
+              ['snowflake-arctic-l-v2.0', '130', '~40分钟', '蒸馏模型; 受益于AVX-512'],
+              ['gte-large', '110', '~48分钟', '标准1,024维BERT风格'],
+              ['mxbai-embed-large-v1', '105', '~50分钟', '1,024维标准'],
+              ['bge-large-en-v1.5', '95', '~55分钟', '最高英文精度; CPU最慢']
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'GPU速度 RTX 4070（12 GB VRAM）',
+            line1: 'nomic-embed-text-v2：<strong>4,800块/秒</strong> — GPU吞吐量最快',
+            line2: 'jina-embeddings-v3：<strong>3,200块/秒</strong> — 最高精度+快速索引',
+            tip: '即使最慢的GPU（bge-large的1,400/秒）也比最快的CPU快2.4倍。5K页重建索引仅需1–4分钟。'
+          },
+          {
+            type: 'list',
+            h2: '内存和维度权衡',
+            items: [
+              '<strong>768维（nomic）：</strong>30K块约90MB；1,024维模型：同语料库约120MB',
+              '<strong>Matryoshka截断</strong>（jina、nomic）：无需重建索引即可截断至512/256维',
+              '<strong>截断成本：</strong>512维→约1分损失；256维→约3分',
+              '<strong>int8向量量化：</strong>存储减半，约0.5分损失 — 超过25K块时值得使用',
+              '<strong>模型RAM：</strong>nomic 1.2GB，其他1.9–2.7GB（bf16峰值）'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '应该选择哪个嵌入模型？',
+            columns: ['您的情况', '选择'],
+            rows: [
+              ['多语言语料库、有GPU、最高精度', 'jina-embeddings-v3'],
+              ['纯英文法律/研究，精度优先', 'bge-large-en-v1.5'],
+              ['仅CPU，无GPU', 'nomic-embed-text-v2'],
+              ['需要Apache-2.0许可证（商用）', 'gte-large 或 mxbai-embed-large-v1'],
+              ['非常长的文档（8k+词块）', 'snowflake-arctic-embed-l-v2.0'],
+              ['代码密集型语料库', '使用代码专用嵌入器']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5步决策树',
+            items: [
+              '<strong>有GPU可用于索引？</strong> 否 → nomic-embed-text-v2（5× CPU速度）。是 → 继续。',
+              '<strong>仅英文语料库？</strong> 是 → bge-large-en-v1.5或gte-large。否 → 继续。',
+              '<strong>非常长的文档（8k+）？</strong> 是 → snowflake-arctic-embed-l-v2.0。否 → 继续。',
+              '<strong>需要后续调整维度？</strong> 是 → jina-embeddings-v3（Matryoshka）。否 → 继续。',
+              '<strong>商业产品？</strong> 是 → nomic（Apache-2.0）或bge-m3（MIT）— 避免jina（CC BY-NC）。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '6个常见错误',
+            items: [
+              '<strong>沿用平台默认设置</strong> — AnythingLLM等默认比jina-v3低5–10分',
+              '<strong>768维足够时选1,024维</strong> — nomic的88%涵盖大多数用例；5倍CPU速度更有价值',
+              '<strong>多语言语料库使用英文嵌入器</strong> — bge-large在日语/中文上下降15分',
+              '<strong>忽视许可证</strong> — jina-embeddings-v3是CC BY-NC；商业使用前须验证',
+              '<strong>测试语料库太小</strong> — 超过5,000块后差异才变得决定性',
+              '<strong>忘记重建索引成本</strong> — 每次切换嵌入器=每5K页30–90分钟'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              {
+                q: '哪个模型CPU速度最快？',
+                a: 'nomic-embed-text-v2 — Apple M3 Pro上580块/秒，比bge-large（95/秒）快约5倍。MoE架构每个token仅激活475M参数中的约305M。'
+              },
+              {
+                q: '更大的维度真的能提高检索效果吗？',
+                a: '到~1,024维时是，超过此范围收益小于1分。Matryoshka截断（jina、nomic）允许后续缩减而无需重建索引。'
+              },
+              {
+                q: '开源嵌入模型和OpenAI一样好吗？',
+                a: '对于大多数本地RAG来说是的。OpenAI在英文上领先2–4分，但jina-v3仅差2分且保持数据本地化。'
+              },
+              {
+                q: '应该多久升级一次嵌入模型？',
+                a: '当新模型在相似数据上超过您的模型3分以上，且有基准retrieval@10可比较时。大多数部署稳定12–18个月。'
+              }
+            ]
+          },
+          {
+            type: 'table',
+            h2: '自托管 vs OpenAI：每百万token成本',
+            columns: ['方案', '成本/1M token', '备注'],
+            rows: [
+              ['OpenAI text-embedding-3-large', '$0.13', '最高英文精度；数据离开本机'],
+              ['jina-embeddings-v3 on RTX 4070', '~$0.001', '最佳本地精度；CC BY-NC许可证'],
+              ['bge-large-en-v1.5 on RTX 4070', '~$0.001', '最佳英文精度；MIT许可证'],
+              ['nomic-embed-text-v2 on RTX 4070', '~$0.0005', '最快GPU吞吐量；Apache-2.0'],
+              ['nomic-embed-text-v2 on M3 Pro CPU', '~$0.0008', '无需GPU；每1M token约30分钟']
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '为您的RAG找到合适的嵌入模型',
+            body: 'PromptQuorum帮助您同时在多个模型上运行提示词 — 比较、基准测试，并为您的本地RAG流程选择最佳嵌入器。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide, lang) {
+      let html = '';
+      const articleUrl = BASE_URL + '?lang=' + lang;
+      const footerLink = '<p style="position:absolute;bottom:16px;right:16px;font-size:11px;color:#999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color:#999;text-decoration:none;border-bottom:1px solid #ddd;">← Article</a></p>';
+
+      switch (slide.type) {
+        case 'title':
+          html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+            + '<h1>' + slide.h1 + '</h1>'
+            + '<p>' + slide.subtitle + '</p>'
+            + '<p style="margin-top:32px;font-size:16px;color:#79747e;">'
+            + '<a href="' + slide.link + '" target="_blank" rel="noopener">' + BASE_URL.replace('https://www.promptquorum.com/', '') + '</a>'
+            + '</p>'
+            + footerLink;
+          break;
+
+        case 'list':
+          html = '<h2>' + slide.h2 + '</h2>';
+          if (slide.intro) html += '<p>' + slide.intro + '</p>';
+          html += '<ul style="font-size:1.1em;margin-top:16px;">';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ul>' + footerLink;
+          break;
+
+        case 'table':
+          html = '<h2>' + slide.h2 + '</h2>';
+          html += '<table><tr>';
+          slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+          html += '</tr>';
+          slide.rows.forEach(function(row) {
+            html += '<tr>';
+            if (Array.isArray(row)) {
+              row.forEach(function(cell) { html += '<td>' + cell + '</td>'; });
+            } else {
+              slide.columns.forEach(function(col) { html += '<td>' + row[col] + '</td>'; });
+            }
+            html += '</tr>';
+          });
+          html += '</table>' + footerLink;
+          break;
+
+        case 'comparison':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top:36px;font-size:clamp(16px,1.8vw,22px);">' + slide.line1 + '</p>'
+            + '<p style="font-size:clamp(16px,1.8vw,22px);margin-top:12px;">' + slide.line2 + '</p>'
+            + '<p style="margin-top:36px;font-size:clamp(14px,1.5vw,18px);color:#6750a4;">' + slide.tip + '</p>'
+            + footerLink;
+          break;
+
+        case 'numbered':
+          html = '<h2>' + slide.h2 + '</h2>';
+          html += '<ol style="font-size:clamp(13px,1.4vw,17px);margin-top:16px;text-align:left;max-width:640px;">';
+          slide.items.forEach(function(item) { html += '<li style="margin-bottom:10px;">' + item + '</li>'; });
+          html += '</ol>' + footerLink;
+          break;
+
+        case 'faq':
+          html = '<h2>' + slide.h2 + '</h2>';
+          slide.faqs.forEach(function(faq) {
+            html += '<div style="margin-bottom:16px;text-align:left;max-width:700px;">'
+              + '<strong style="font-size:clamp(13px,1.4vw,16px);">Q: ' + faq.q + '</strong>'
+              + '<p style="margin-top:4px;font-size:clamp(12px,1.3vw,15px);color:#49454f;">A: ' + faq.a + '</p>'
+              + '</div>';
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="max-width:600px;">' + slide.body + '</p>'
+            + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:24px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-weight:700;font-size:18px;">'
+            + slide.cta + '</a>'
+            + footerLink;
+          break;
+
+        default:
+          html = '<p>Slide</p>';
+      }
+
+      return '<div class="slide ' + slide.type + '" data-lang="' + lang + '">' + html + '</div>';
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var lang = params.get('lang');
+    if (!lang || !CONTENT[lang]) lang = 'en';
+    var isPrint = params.get('print') === '1';
+    var content = CONTENT[lang];
+
+    document.getElementById('header-title').textContent = content.title;
+    var backLink = document.getElementById('back-link');
+    backLink.href = BASE_URL + '?lang=' + lang;
+
+    var container = document.getElementById('slides-container');
+    content.slides.forEach(function(slide) {
+      container.innerHTML += renderSlide(slide, lang);
+    });
+
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      slides.forEach(function(s) { s.classList.remove('active'); });
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', function() {
+      slides.forEach(function(s) { s.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', function() {
+      slides.forEach(function(s) { s.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', function() { window.print(); });
+    }
+
+    showSlide(0);
+    </script>
+</body>
+</html>

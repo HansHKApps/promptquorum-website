@@ -85,6 +85,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-embedding-models-local-rag-2026-static.html',
+    gammaDescription: 'The slide deck below covers: 6 embedding models benchmarked on 4 document types (legal, research, code, multilingual), retrieval@10 results (jina-embeddings-v3 at 92%, bge-large at 91% English, nomic at 580 chunks/sec CPU), memory and Matryoshka dimension tradeoffs, and a 5-step decision tree for choosing the right embedder. Download the PDF as a local RAG embedding model reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -516,6 +518,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-embedding-models-local-rag-2026-static.html',
+    gammaDescription: 'Der untenstehende Foliensatz behandelt: 6 Embedding-Modelle auf 4 Dokumenttypen (Recht, Forschung, Code, Mehrsprachig) benchmarkt, retrieval@10-Ergebnisse (jina-embeddings-v3 bei 92%, bge-large bei 91% Englisch, nomic bei 580 Chunks/Sek CPU), Matryoshka-Dimensionstradeoffs und einen 5-Schritte-Entscheidungsbaum. PDF als Embedding-Modell-Referenzkarte herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -941,6 +945,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-embedding-models-local-rag-2026-static.html',
+    gammaDescription: "Le diaporama ci-dessous couvre : 6 modèles d'embedding benchmarqués sur 4 types de documents (légal, recherche, code, multilingue), résultats retrieval@10 (jina-embeddings-v3 à 92%, bge-large à 91% anglais, nomic à 580 chunks/sec CPU), compromis de dimensions Matryoshka et arbre de décision en 5 étapes. Téléchargez le PDF comme fiche de référence embedding RAG local.",
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1361,6 +1367,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連情報', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-embedding-models-local-rag-2026-static.html',
+    gammaDescription: '下のスライドデッキには、4つのドキュメントタイプ（法律・研究・コード・多言語）でベンチマークした6つの埋め込みモデル、retrieval@10結果（jina-embeddings-v3が92%、bge-largeが英語91%、nomicがCPU 580チャンク/秒）、Matryoshka次元トレードオフ、5ステップ決定木が含まれます。PDFをローカルRAG埋め込みモデル参照カードとしてダウンロード。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1792,6 +1800,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: "FAQ", anchor: "#faq" },
       { label: "相关阅读", anchor: "#related-reading" },
     ],
+    gammaEmbedUrl: '/presentations/best-embedding-models-local-rag-2026-static.html',
+    gammaDescription: '下方幻灯片涵盖：在4种文档类型（法律、研究、代码、多语言）上基准测试的6个嵌入模型，retrieval@10结果（jina-embeddings-v3达92%，bge-large英文91%，nomic CPU 580块/秒），Matryoshka维度权衡及5步决策树。下载PDF作为本地RAG嵌入模型参考卡。',
     sections: {
       tldr: {
         id: "key-takeaways",
