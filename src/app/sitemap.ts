@@ -146,38 +146,50 @@ export default function sitemap(): MetadataRoute.Sitemap {
   PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
     if (isExcluded(path)) return
 
-    // Only EN pages as <loc> entries; all language variants via hreflang
-    const enUrl = `${BASE}${path}`
-
-    // Power Local LLM uses subdirectory routing; other clusters use query-string
     const isPowerLLM = path.startsWith('/power-local-llm')
-    const alternateUrls = isPowerLLM
-      ? {
-          'en': `${BASE}${path}`,
-          'de': `${BASE}/de${path}`,
-          'fr': `${BASE}/fr${path}`,
-          'ja': `${BASE}/ja${path}`,
-          'zh': `${BASE}/zh${path}`,
-          'x-default': `${BASE}${path}`,
-        }
-      : {
-          'en': enUrl,
-          'de': `${BASE}${path}?lang=de`,
-          'fr': `${BASE}${path}?lang=fr`,
-          'ja': `${BASE}${path}?lang=ja`,
-          'zh': `${BASE}${path}?lang=zh`,
-          'x-default': enUrl,
-        }
 
-    entries.push({
-      url: enUrl,
-      lastModified: lastmod,
-      changeFrequency: changefreq,
-      priority,
-      alternates: {
-        languages: alternateUrls,
-      },
-    })
+    if (isPowerLLM) {
+      // Power LLM locale variants (/de/power-local-llm/...) are excluded until content is ready.
+      // Emit EN-only <loc> with hreflang alternates.
+      entries.push({
+        url: `${BASE}${path}`,
+        lastModified: lastmod,
+        changeFrequency: changefreq,
+        priority,
+        alternates: {
+          languages: {
+            'en': `${BASE}${path}`,
+            'de': `${BASE}/de${path}`,
+            'fr': `${BASE}/fr${path}`,
+            'ja': `${BASE}/ja${path}`,
+            'zh': `${BASE}/zh${path}`,
+            'x-default': `${BASE}${path}`,
+          },
+        },
+      })
+    } else {
+      // All other clusters: emit a <loc> entry for each language variant so Google
+      // keeps all 5 language URLs in its crawl queue. Each entry carries full hreflang
+      // alternates pointing to all 5 variants.
+      const alternates = {
+        'en': `${BASE}${path}`,
+        'de': `${BASE}${path}?lang=de`,
+        'fr': `${BASE}${path}?lang=fr`,
+        'ja': `${BASE}${path}?lang=ja`,
+        'zh': `${BASE}${path}?lang=zh`,
+        'x-default': `${BASE}${path}`,
+      }
+      LANGS.forEach(lang => {
+        const url = lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`
+        entries.push({
+          url,
+          lastModified: lastmod,
+          changeFrequency: changefreq,
+          priority,
+          alternates: { languages: alternates },
+        })
+      })
+    }
   })
 
   return entries
