@@ -54,4 +54,11 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-personal-knowledge-base-2026':      'local-llm-personal-knowledge-base-2026',
   'local-llm-email-and-calendar-automation':     'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local':      'replace-grammarly-notion-ai-with-local',
+
+  // Category 9 — Voice, Speech & Multimodal
+  'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
+  'local-vision-models-llava-ollama-2026':        'local-vision-models-llava-ollama-2026',
+  'local-tts-voice-cloning-piper-coqui-xtts':    'local-tts-voice-cloning-piper-coqui-xtts',
+  'build-local-voice-assistant-2026':             'build-local-voice-assistant-2026',
+  'local-multimodal-pipeline-voice-vision-text':  'local-multimodal-pipeline-voice-vision-text',
 }

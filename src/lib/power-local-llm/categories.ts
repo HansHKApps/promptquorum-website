@@ -111,4 +111,17 @@ export const POWER_LLM_CATEGORIES: PowerLLMCategory[] = [
       'replace-grammarly-notion-ai-with-local',
     ],
   },
+  {
+    id: 'voice-speech-multimodal',
+    slug: 'voice-speech-multimodal',
+    titleEn: 'Voice, Speech & Multimodal',
+    descriptionEn: 'Local STT, TTS, vision models, and full offline voice pipelines. No cloud microphone required.',
+    articleSlugs: [
+      'local-whisper-stt-comparison-2026',
+      'local-vision-models-llava-ollama-2026',
+      'local-tts-voice-cloning-piper-coqui-xtts',
+      'build-local-voice-assistant-2026',
+      'local-multimodal-pipeline-voice-vision-text',
+    ],
+  },
 ]

@@ -39,6 +39,7 @@ const CANONICAL_THEMES = new Set([
   'Creative & Roleplay',
   'Mobile & Edge LLMs',
   'Productivity & Knowledge Tools',
+  'Voice, Speech & Multimodal',
 ]);
 
 /**

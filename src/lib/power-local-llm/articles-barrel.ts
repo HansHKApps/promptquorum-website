@@ -41,6 +41,11 @@ import { article as a_local_llm_screenwriting_and_novel_drafting } from './artic
 import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles/sillytavern-vs-agnai-vs-risuai-roleplay'
 import { article as a_uncensored_local_llm_creative_writing_ethics } from './articles/uncensored-local-llm-creative-writing-ethics'
 import { article as a_voice_assistant_local_mobile_offline } from './articles/voice-assistant-local-mobile-offline'
+import { article as a_local_whisper_stt_comparison_2026 } from './articles/local-whisper-stt-comparison-2026'
+import { article as a_local_vision_models_llava_ollama_2026 } from './articles/local-vision-models-llava-ollama-2026'
+import { article as a_local_tts_voice_cloning_piper_coqui_xtts } from './articles/local-tts-voice-cloning-piper-coqui-xtts'
+import { article as a_build_local_voice_assistant_2026 } from './articles/build-local-voice-assistant-2026'
+import { article as a_local_multimodal_pipeline_voice_vision_text } from './articles/local-multimodal-pipeline-voice-vision-text'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
@@ -78,5 +83,10 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-screenwriting-and-novel-drafting':  a_local_llm_screenwriting_and_novel_drafting,
   'sillytavern-vs-agnai-vs-risuai-roleplay':     a_sillytavern_vs_agnai_vs_risuai_roleplay,
   'uncensored-local-llm-creative-writing-ethics': a_uncensored_local_llm_creative_writing_ethics,
-  'voice-assistant-local-mobile-offline':         a_voice_assistant_local_mobile_offline,
+  'voice-assistant-local-mobile-offline':              a_voice_assistant_local_mobile_offline,
+  'local-whisper-stt-comparison-2026':                 a_local_whisper_stt_comparison_2026,
+  'local-vision-models-llava-ollama-2026':             a_local_vision_models_llava_ollama_2026,
+  'local-tts-voice-cloning-piper-coqui-xtts':          a_local_tts_voice_cloning_piper_coqui_xtts,
+  'build-local-voice-assistant-2026':                  a_build_local_voice_assistant_2026,
+  'local-multimodal-pipeline-voice-vision-text':       a_local_multimodal_pipeline_voice_vision_text,
 }
