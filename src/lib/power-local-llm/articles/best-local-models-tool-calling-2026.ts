@@ -81,6 +81,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-models-tool-calling-2026-static.html',
+    gammaDescription: 'The slide deck below covers: 5 local models benchmarked on real MCP workflows (Gemma 4 27B ~95%, GLM-5.1 32B ~94%, Qwen3 32B ~93%, Qwen3-Coder 30B ~96% code, Llama 3.3 70B ~97%), VRAM requirements and quantisation floor (Q4_K_M), models that fail (sub-7B, no tool-call training, heavy quantisation), tool-call format comparison (OpenAI JSON, Cline XML, MCP JSON-RPC 2.0, Aider SEARCH/REPLACE), reliability compounding across agent loops, and 5 common mistakes. Download the PDF as a local tool-calling model reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -450,6 +452,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-models-tool-calling-2026-static.html',
+    gammaDescription: 'Die Präsentation umfasst: 5 lokale Modelle im Benchmark auf echten MCP-Workflows (Gemma 4 27B ~95%, GLM-5.1 32B ~94%, Qwen3 32B ~93%, Qwen3-Coder 30B ~96% Code, Llama 3.3 70B ~97%), VRAM-Anforderungen und Quantisierungs-Untergrenze (Q4_K_M), Modelle die scheitern (unter 7B, kein Tool-Call-Training, starke Quantisierung), Tool-Call-Format-Vergleich (OpenAI JSON, Cline XML, MCP JSON-RPC 2.0, Aider SEARCH/REPLACE), Zuverlässigkeits-Compounding über Agent-Loops und 5 häufige Fehler. PDF als Referenzkarte für lokale Tool-Calling-Modelle herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -837,6 +841,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-models-tool-calling-2026-static.html',
+    gammaDescription: 'La présentation couvre : 5 modèles locaux benchmarkés sur des workflows MCP réels (Gemma 4 27B ~95%, GLM-5.1 32B ~94%, Qwen3 32B ~93%, Qwen3-Coder 30B ~96% code, Llama 3.3 70B ~97%), exigences VRAM et seuil de quantification (Q4_K_M), modèles qui échouent (sous 7B, sans entraînement tool-call, quantification excessive), comparaison des formats tool-call (OpenAI JSON, Cline XML, MCP JSON-RPC 2.0, Aider SEARCH/REPLACE), fiabilité composée sur les boucles d\'agent et 5 erreurs fréquentes. Téléchargez le PDF comme carte de référence des modèles locaux pour le tool-calling.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1205,6 +1211,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連資料', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-models-tool-calling-2026-static.html',
+    gammaDescription: 'スライドデッキでは以下を解説します：実際のMCPワークフローでベンチマークした5つのローカルモデル（Gemma 4 27B ~95%、GLM-5.1 32B ~94%、Qwen3 32B ~93%、Qwen3-Coder 30B ~96%コード、Llama 3.3 70B ~97%）、VRAMの要件と量子化の最低基準（Q4_K_M）、失敗するモデル（7B未満、ツールコール未学習、過度な量子化）、ツールコール形式比較（OpenAI JSON、Cline XML、MCP JSON-RPC 2.0、Aider SEARCH/REPLACE）、エージェントループ全体の信頼性の複合効果、よくある5つのミス。PDFをローカルツールコールモデルのリファレンスカードとしてダウンロードできます。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1573,6 +1581,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-models-tool-calling-2026-static.html',
+    gammaDescription: '幻灯片涵盖：5个本地模型在真实MCP工作流中的基准测试（Gemma 4 27B ~95%、GLM-5.1 32B ~94%、Qwen3 32B ~93%、Qwen3-Coder 30B ~96%代码、Llama 3.3 70B ~97%），VRAM需求与量化最低标准（Q4_K_M），失败的模型（7B以下、无工具调用训练、过度量化），工具调用格式对比（OpenAI JSON、Cline XML、MCP JSON-RPC 2.0、Aider SEARCH/REPLACE），智能体循环中的可靠性复合效应，以及5个常见错误。下载PDF作为本地工具调用模型参考卡。',
     sections: {
       tldr: {
         id: 'key-takeaways',
