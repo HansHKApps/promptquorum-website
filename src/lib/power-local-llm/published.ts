@@ -62,6 +62,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 8 — Tools & App Reviews
   'lm-studio-vs-jan-vs-gpt4all-2026',
   'best-local-models-tool-calling-2026',
+
+  // Cat 9 — Voice, Speech & Multimodal
+  'local-whisper-stt-comparison-2026',
+  'local-vision-models-llava-ollama-2026',
+  'local-tts-voice-cloning-piper-coqui-xtts',
+  'build-local-voice-assistant-2026',
+  'local-multimodal-pipeline-voice-vision-text',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
