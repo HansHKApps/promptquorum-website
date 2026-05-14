@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local AI for Non-Technical Users: 5 Apps That Just Work (No Terminal) | PromptQuorum</title>
+  <meta name="description" content="GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio — install in 10 minutes, no terminal, no Python, no Docker. Persona-ranked for non-technical users." />
+  <meta property="og:title" content="Local AI for Non-Technical Users: 5 Apps That Just Work — PromptQuorum" />
+  <meta property="og:description" content="5 local AI apps a non-technical person can install and chat with in under 10 minutes — no terminal, no Python, no Docker." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f6f4f4; color: #1c1b1f; overflow: hidden;
+    }
+
+    .presentation-container {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; background: white;
+    }
+
+    .slide {
+      width: 100%; height: 100%;
+      display: none; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 32px 48px; text-align: center;
+      overflow: hidden;
+      animation: fadeIn 0.4s ease-in;
+      position: relative;
+    }
+
+    .slide.active { display: flex; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .slide h1 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700; margin-bottom: 12px;
+      color: #1c1b1f; line-height: 1.2;
+    }
+
+    .slide h2 {
+      font-size: clamp(22px, 2.8vw, 36px);
+      font-weight: 700; margin-bottom: 14px; color: #1c1b1f;
+    }
+
+    .slide p {
+      font-size: clamp(14px, 1.6vw, 18px);
+      margin-bottom: 8px; color: #49454f; line-height: 1.5;
+    }
+
+    .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+
+    .slide.title .logo { width: 52px; height: 52px; margin-bottom: 16px; }
+
+    .slide.title p { font-size: clamp(14px, 1.6vw, 20px); color: #6750a4; font-weight: 500; margin-top: 10px; }
+
+    .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; }
+
+    .slide ul, .slide ol {
+      text-align: left; margin: 10px auto; max-width: 680px;
+    }
+
+    .slide ul li, .slide ol li {
+      font-size: clamp(13px, 1.4vw, 17px);
+      margin-bottom: 9px; line-height: 1.5;
+    }
+
+    .slide strong { color: #1c1b1f; font-weight: 700; }
+
+    table {
+      margin: 10px auto; border-collapse: collapse;
+      font-size: clamp(11px, 1.2vw, 14px);
+      text-align: left; max-width: 95%;
+    }
+
+    th {
+      background: #6750a4; color: white;
+      padding: 7px 12px; font-weight: 700; border: none;
+    }
+
+    td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+
+    tr:hover td { background: #f7f2fa; }
+
+    .header {
+      padding: 10px 18px; border-bottom: 1px solid #e0e0e0;
+      display: flex; justify-content: space-between; align-items: center;
+      background: white; flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; font-weight: 600; color: #1c1b1f;
+    }
+
+    .header-left img { width: 26px; height: 26px; }
+
+    .header-links { display: flex; gap: 14px; }
+
+    .header-links a { font-size: 11px; color: #6750a4; text-decoration: none; }
+    .header-links a:hover { color: #7d5260; }
+
+    .content-area { flex: 1; overflow: hidden; }
+
+    .controls {
+      display: flex; gap: 12px; align-items: center; justify-content: center;
+      padding: 10px 18px; background: white;
+      border-top: 1px solid #e8e0f0; flex-shrink: 0;
+    }
+
+    button {
+      background: #6750a4; color: white; border: none;
+      padding: 8px 16px; border-radius: 6px; cursor: pointer;
+      font-size: 13px; font-weight: 600; transition: background 0.2s;
+    }
+
+    button:hover { background: #7d5260; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+
+    .slide-counter {
+      font-size: 13px; color: #49454f; font-weight: 600;
+      min-width: 48px; text-align: center;
+    }
+
+    .slide-footer {
+      position: absolute; bottom: 14px; right: 18px;
+      font-size: 10px; color: #bbb;
+    }
+
+    .slide-footer a {
+      color: #bbb; text-decoration: none; border-bottom: 1px solid #ddd;
+    }
+
+    .slide-footer a:hover { color: #6750a4; border-bottom-color: #6750a4; }
+
+    @media (max-width: 640px) {
+      .slide { padding: 18px 14px; }
+      .slide h1 { font-size: clamp(18px, 5vw, 26px); }
+      .slide h2 { font-size: clamp(15px, 4vw, 20px); }
+      .slide p { font-size: 13px; }
+      .slide ul li, .slide ol li { font-size: 13px; }
+      table { display: block; overflow-x: auto; font-size: 0.8em; }
+      th, td { padding: 5px 8px; white-space: nowrap; }
+      .header { padding: 8px 10px; }
+      .header-left span { max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .controls { padding: 8px 10px; }
+    }
+
+    @page { size: A4 landscape; margin: 0; }
+
+    @media print {
+      * { margin: 0; padding: 0; }
+      html, body { overflow: visible !important; height: auto !important; background: white !important; }
+      .header, .controls { display: none !important; }
+      .presentation-container { display: block !important; height: auto !important; counter-reset: page-counter; }
+      .content-area { display: block !important; overflow: visible !important; height: auto !important; }
+      .slide {
+        display: flex !important; flex-direction: column;
+        justify-content: center; align-items: center;
+        page-break-after: always; break-after: page;
+        width: 100%; height: 210mm; padding: 18mm 22mm;
+        overflow: visible !important; background: white;
+        counter-increment: page-counter; position: relative;
+      }
+      .slide::before {
+        content: "https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users";
+        position: absolute; bottom: 12mm; left: 22mm;
+        font-size: 8pt; color: #999;
+      }
+      .slide::after {
+        content: counter(page-counter) " / 14";
+        position: absolute; bottom: 12mm; right: 22mm;
+        font-size: 8pt; color: #999; font-weight: 600;
+      }
+      .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+      .slide strong { color: #000 !important; font-weight: 700; }
+      table { max-width: 100%; }
+      th { background: #6750a4 !important; color: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .slide-footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Local AI for Non-Technical Users</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Local AI for Non-Technical Users: 5 Apps That Just Work (No Terminal)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Local AI for Non-Technical Users',
+            subtitle: '5 apps you can install in under 10 minutes — no terminal, no Python, no Docker. GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio.',
+            link: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>GPT4All</strong> — lowest-friction starter; 4 clicks from download to first chat; runs on 5-year-old laptops.',
+              '<strong>Jan</strong> — only one with zero telemetry by default; fully AGPL open source; best for GDPR.',
+              '<strong>Msty</strong> — most polished UI; unique split-chat (two models side-by-side); built-in PDF chat.',
+              '<strong>AnythingLLM Desktop</strong> — familiar 3-pane layout; closest to "open folder, ask question".',
+              '<strong>LM Studio</strong> — fastest on Apple Silicon; ~5,000 model variants; best for Mac users.',
+              '<strong>All five:</strong> free, fully offline after first download, never send your prompts to a server.',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Pick the App That Fits You',
+            columns: ['Your Situation', 'Install'],
+            rows: [
+              { 'Your Situation': 'Never used a terminal, want private ChatGPT', 'Install': 'GPT4All' },
+              { 'Your Situation': 'EU privacy / GDPR, zero telemetry', 'Install': 'Jan' },
+              { 'Your Situation': 'I care how it looks — modern UI', 'Install': 'Msty' },
+              { 'Your Situation': 'Chat with my own PDFs and docs', 'Install': 'AnythingLLM Desktop' },
+              { 'Your Situation': '2024+ MacBook, fastest local AI', 'Install': 'LM Studio' },
+              { 'Your Situation': 'Only 4 GB RAM or Chromebook', 'Install': 'None — try a phone app' },
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#1 GPT4All — Best for Absolute Beginners',
+            intro: '290 MB download. MIT open source. 4 clicks to first chat. No GPU needed.',
+            items: [
+              '<strong>Install:</strong> gpt4all.io → installer → click "Llama 3.2 3B Instruct" → 2 GB download → chat',
+              '<strong>Hardware floor:</strong> 5-year-old Intel laptop, 8 GB RAM, integrated graphics — no GPU',
+              '<strong>One window, no clutter:</strong> sidebar + conversation pane, no hidden dropdowns to break',
+              '<strong>Telemetry:</strong> off by default. Recommended model: Llama 3.2 3B Instruct Q4_0 (2 GB disk)',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#2 Jan — Best for Privacy-Conscious Beginners',
+            intro: 'Zero telemetry. Zero analytics SDK. AGPL open source. Best for GDPR-sensitive users.',
+            items: [
+              '<strong>Install:</strong> jan.ai signed installer → pick model in-app (no Hugging Face account) → chat',
+              '<strong>Privacy:</strong> zero telemetry, zero phone-home; source on GitHub under AGPL — independently auditable',
+              '<strong>Model browser:</strong> ~150 curated models. Less overwhelming than LM Studio, more guided than GPT4All',
+              '<strong>Recommended model:</strong> Phi-4 Mini (~2.6 GB) — small, fast, good for everyday questions',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#3 Msty — Best for a Beautiful UI',
+            intro: 'Modern split-pane interface. Side-by-side model comparison. Knowledge stacks. Built-in document chat.',
+            items: [
+              '<strong>Install:</strong> msty.app → "Local AI" on welcome screen → pick model → chat (5–6 clicks)',
+              '<strong>Split chat:</strong> run two models side-by-side answering the same question — unique to Msty',
+              '<strong>Document chat:</strong> drag PDF, DOCX, or folder to sidebar and ask questions — no plugin required',
+              '<strong>Recommended model:</strong> Gemma 3 4B Instruct — friendly tone, great at summarization',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#4 AnythingLLM Desktop — Best Familiar UI',
+            intro: 'Workspace-based document chat. 3-pane layout like email clients. Closest to "open folder, ask question".',
+            items: [
+              '<strong>Install:</strong> anythingllm.com → "Use local AI (no API keys)" → pick model → drop docs (6 clicks)',
+              '<strong>Workspace model:</strong> each workspace = its own folder of docs + chat history',
+              '<strong>Documents:</strong> PDF, DOCX, TXT, Markdown, web pages — indexed locally, no embedding API needed',
+              '<strong>Recommended models:</strong> Llama 3.2 3B Instruct or Qwen3 4B — both handle doc Q&A well',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#5 LM Studio — Best for Mac Users',
+            intro: 'Fastest on Apple Silicon. Custom Metal kernels: 15–30% faster on M-series. ~5,000 model variants.',
+            items: [
+              '<strong>Install:</strong> lmstudio.ai → defaults → model browser → pick staff pick → load → chat',
+              '<strong>Why first for Mac:</strong> custom Apple Silicon Metal kernels beat upstream by 15–30% on M-series chips',
+              '<strong>Model browser:</strong> ~5,000 variants from Hugging Face, filterable by RAM/VRAM and license',
+              '<strong>Recommended:</strong> Phi-4 Mini on 8 GB Macs; Llama 3.3 8B Q4_K_M on 16 GB+ Macs',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'App Comparison at a Glance',
+            columns: ['App', 'Min RAM', 'Best For', 'License'],
+            rows: [
+              { App: 'GPT4All', 'Min RAM': '8 GB', 'Best For': 'Absolute beginners, no terminal', License: 'MIT' },
+              { App: 'Jan', 'Min RAM': '8 GB', 'Best For': 'Privacy, GDPR, zero telemetry', License: 'AGPL' },
+              { App: 'Msty', 'Min RAM': '8 GB', 'Best For': 'Beautiful UI, side-by-side chat', License: 'Proprietary (free)' },
+              { App: 'AnythingLLM', 'Min RAM': '8 GB', 'Best For': 'Familiar 3-pane, document folders', License: 'MIT' },
+              { App: 'LM Studio', 'Min RAM': '8 GB', 'Best For': 'Mac / Apple Silicon, largest catalog', License: 'Proprietary (free)' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Stumbling Blocks',
+            items: [
+              '"Unidentified developer" on macOS → System Settings → Privacy & Security → Open Anyway. Normal for signed apps.',
+              'Windows Defender flagged installer → "More info" → "Run anyway". Verify URL matches the official site exactly.',
+              'Model download taking forever → Models are 1.5–8 GB files. Cancel and resume — all 5 apps support resumable downloads.',
+              'Computer got hot / fan screaming → Normal during inference. Switch to a 3B or 4B model if it bothers you.',
+              'Don\'t know which model → Default to 3B or 4B Instruct: Llama 3.2 3B, Phi-4 Mini, or Gemma 3 4B.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Your First 10 Minutes',
+            items: [
+              'Pick an app from the persona table above. Can\'t decide? Install GPT4All. (1 min)',
+              'Open the official site (gpt4all.io / jan.ai / msty.app / anythingllm.com / lmstudio.ai) and download the installer. (1 min)',
+              'Run the installer. Accept defaults. No admin rights required for per-user install on Windows or Mac. (2 min)',
+              'On first launch, download the smallest "Instruct" model offered — 3B or 4B parameters. (3–5 min)',
+              'Type "Hello, can you write a haiku about a cat?" and press Enter. Reply arrives in 5–10 seconds. (1 min)',
+              'Disconnect Wi-Fi and ask another question. The reply still works — local AI is real and fully offline.',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions (1/2)',
+            faqs: [
+              { q: 'Do I need to know coding?', a: 'No. None of the five apps require code, scripting, or a terminal. If you can install Zoom and click through a setup wizard, you have all the skills needed.' },
+              { q: 'What if my computer is too old?', a: 'A 2018+ laptop with 8 GB RAM can run a 3B model at 8–15 tok/s in any of these apps. Older or smaller machines should try a phone-based local AI app instead.' },
+              { q: 'Will local AI slow down my computer?', a: 'Only while replying. CPU/GPU go to 100% for a few seconds, then drop back to idle. Nothing is permanent — closing the app frees all resources.' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions (2/2)',
+            faqs: [
+              { q: 'Do these apps need internet to work?', a: 'Only for the first model download. After that, all five run fully offline — on a plane, in a basement, anywhere.' },
+              { q: 'Is it safe to download these apps?', a: 'Yes, if you use the official sites: gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai. Avoid third-party downloaders and torrent sites.' },
+              { q: 'What\'s the difference between local AI and ChatGPT?', a: '(1) runs on your laptop, no prompts sent to a server; (2) works offline after first download; (3) free forever. Trade-off: less capable than GPT-4o-class models for complex tasks.' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'Compare Models with PromptQuorum',
+            body: 'Once you have a local model running, use PromptQuorum to benchmark it against cloud models and find the best prompt for your task.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      de: {
+        title: '5 lokale KI-Apps für nicht-technische Nutzer: Keine Terminal-Befehle',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Lokale KI für nicht-technische Nutzer',
+            subtitle: '5 Apps, die Sie in 10 Minuten installieren — kein Terminal, kein Python, kein Docker. GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio.',
+            link: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              '<strong>GPT4All</strong> — einfachster Einstieg; 4 Klicks vom Download zum ersten Chat; läuft auf alten Laptops.',
+              '<strong>Jan</strong> — einzige mit null Telemetrie; AGPL Open Source; am besten für DSGVO.',
+              '<strong>Msty</strong> — schönstes UI; einzigartiger Split-Chat (zwei Modelle nebeneinander); PDF-Chat.',
+              '<strong>AnythingLLM Desktop</strong> — vertrautes 3-Pane-Layout; nächste an „Ordner öffnen, Frage stellen".',
+              '<strong>LM Studio</strong> — am schnellsten auf Apple Silicon; ~5.000 Modell-Varianten; am besten für Mac.',
+              '<strong>Alle fünf:</strong> kostenlos, offline nach erstem Download, keine Daten werden gesendet.',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Die richtige App für Sie',
+            columns: ['Ihre Situation', 'Installieren'],
+            rows: [
+              { 'Ihre Situation': 'Noch nie Terminal genutzt, privates ChatGPT', 'Installieren': 'GPT4All' },
+              { 'Ihre Situation': 'EU-Datenschutz / DSGVO, null Telemetrie', 'Installieren': 'Jan' },
+              { 'Ihre Situation': 'Ich achte auf das Aussehen — modernes UI', 'Installieren': 'Msty' },
+              { 'Ihre Situation': 'Mit eigenen PDFs und Dokumenten chatten', 'Installieren': 'AnythingLLM Desktop' },
+              { 'Ihre Situation': '2024+ MacBook, schnellste lokale KI', 'Installieren': 'LM Studio' },
+              { 'Ihre Situation': 'Nur 4 GB RAM oder Chromebook', 'Installieren': 'Keine — Phone-App verwenden' },
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#1 GPT4All — Das Beste für absolute Anfänger',
+            intro: '290 MB Download. MIT Open Source. 4 Klicks zum ersten Chat. Keine GPU nötig.',
+            items: [
+              '<strong>Installation:</strong> gpt4all.io → Installer → „Llama 3.2 3B Instruct" → 2 GB Download → Chat',
+              '<strong>Hardware-Minimum:</strong> 5 Jahre alter Intel-Laptop, 8 GB RAM, integrierte Grafik — keine GPU',
+              '<strong>Ein Fenster, kein Chaos:</strong> Seitenleiste + Konversation, keine versteckten Dropdowns',
+              '<strong>Telemetrie:</strong> standardmäßig aus. Startmodell: Llama 3.2 3B Instruct Q4_0 (2 GB)',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#2 Jan — Das Beste für Datenschutz',
+            intro: 'Null Telemetrie. AGPL Open Source. Am besten für DSGVO-Konformität.',
+            items: [
+              '<strong>Installation:</strong> jan.ai signierter Installer → Modell in der App wählen (kein Konto) → Chat',
+              '<strong>Datenschutz:</strong> null Telemetrie, kein „nach Hause telefonieren"; Code auf GitHub unter AGPL',
+              '<strong>Modell-Browser:</strong> ~150 kuratierte Modelle. Weniger überwältigend als LM Studio',
+              '<strong>Startmodell:</strong> Phi-4 Mini (~2,6 GB) — klein, schnell, gut für alltägliche Fragen',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#3 Msty — Das Beste für schönes UI',
+            intro: 'Modernes Split-Pane-UI. Zwei Modelle nebeneinander. Eingebauter Dokument-Chat.',
+            items: [
+              '<strong>Installation:</strong> msty.app → „Lokale KI" → Modell wählen → Chat (5–6 Klicks)',
+              '<strong>Split-Chat:</strong> zwei Modelle gleichzeitig mit derselben Frage vergleichen — einzigartig',
+              '<strong>Dokument-Chat:</strong> PDF, DOCX oder Ordner in die Seitenleiste ziehen — kein Plugin',
+              '<strong>Startmodell:</strong> Gemma 3 4B Instruct — freundlicher Ton, gut bei Zusammenfassungen',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#4 AnythingLLM Desktop — Vertraute Oberfläche',
+            intro: 'Workspace-basierter Dokument-Chat. 3-Pane-Layout wie E-Mail-Client.',
+            items: [
+              '<strong>Installation:</strong> anythingllm.com → „Lokale KI" → Modell → Dokumente einfügen (6 Klicks)',
+              '<strong>Workspace-Modell:</strong> jeder Workspace = eigener Dokumentordner + Chat-Verlauf',
+              '<strong>Dokumente:</strong> PDF, DOCX, TXT, Markdown, Webseiten — lokal indexiert',
+              '<strong>Startmodelle:</strong> Llama 3.2 3B Instruct oder Qwen3 4B',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#5 LM Studio — Das Beste für Mac-Nutzer',
+            intro: 'Am schnellsten auf Apple Silicon. Metal Kernels: 15–30% schneller. ~5.000 Modell-Varianten.',
+            items: [
+              '<strong>Installation:</strong> lmstudio.ai → Standardeinstellungen → Modell-Browser → laden → Chat',
+              '<strong>Warum Mac-Nr.1:</strong> Metal Kernels schlagen Standard um 15–30% auf M-Serie Chips',
+              '<strong>Modell-Browser:</strong> ~5.000 Varianten von Hugging Face, filtrierbar nach RAM/VRAM',
+              '<strong>Startmodell:</strong> Phi-4 Mini auf 8 GB Macs; Llama 3.3 8B Q4_K_M auf 16 GB+ Macs',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'App-Vergleich auf einen Blick',
+            columns: ['App', 'Min RAM', 'Am besten für', 'Lizenz'],
+            rows: [
+              { App: 'GPT4All', 'Min RAM': '8 GB', 'Am besten für': 'Absolute Anfänger, kein Terminal', Lizenz: 'MIT' },
+              { App: 'Jan', 'Min RAM': '8 GB', 'Am besten für': 'Datenschutz, DSGVO, null Telemetrie', Lizenz: 'AGPL' },
+              { App: 'Msty', 'Min RAM': '8 GB', 'Am besten für': 'Schönes UI, nebeneinander Chat', Lizenz: 'Proprietär (kostenlos)' },
+              { App: 'AnythingLLM', 'Min RAM': '8 GB', 'Am besten für': 'Vertrautes 3-Pane, Dokumentordner', Lizenz: 'MIT' },
+              { App: 'LM Studio', 'Min RAM': '8 GB', 'Am besten für': 'Mac / Apple Silicon, größter Katalog', Lizenz: 'Proprietär (kostenlos)' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Stolpersteine',
+            items: [
+              '"Unidentified developer" auf macOS → Systemeinstellungen → Datenschutz → Trotzdem öffnen.',
+              'Windows Defender hat Installer gekennzeichnet → „Weitere Infos" → „Trotzdem ausführen". URL prüfen.',
+              'Modell-Download dauert ewig → Modelle sind 1,5–8 GB. Abbrechen und fortsetzen — alle 5 Apps unterstützen das.',
+              'Computer heiß / Lüfter laut → Normal während der Inferenz. Zu 3B oder 4B Modell wechseln.',
+              'Welches Modell wählen? → Standard: Llama 3.2 3B, Phi-4 Mini oder Gemma 3 4B.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Ihre ersten 10 Minuten',
+            items: [
+              'Eine App aus der Persona-Tabelle wählen. Unsicher? GPT4All installieren. (1 Min)',
+              'Die offizielle Website öffnen und den Installer für Ihr OS herunterladen. (1 Min)',
+              'Installer ausführen. Standardwerte akzeptieren. Keine Admin-Rechte erforderlich. (2 Min)',
+              'Beim ersten Start: kleinstes „Instruct"-Modell herunterladen (3B oder 4B). (3–5 Min)',
+              '„Hallo, können Sie ein Haiku über eine Katze schreiben?" eingeben → Enter. Antwort in 5–10 Sek. (1 Min)',
+              'WLAN trennen und noch eine Frage stellen. Die Antwort funktioniert noch — lokale KI ist real.',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen (1/2)',
+            faqs: [
+              { q: 'Muss ich Code kennen?', a: 'Nein. Keine der fünf Apps erfordert Code, Scripting oder Terminal. Wenn Sie eine normale App installieren können, haben Sie alle Fähigkeiten.' },
+              { q: 'Was, wenn mein Computer zu alt ist?', a: 'Ein 2018+ Laptop mit 8 GB RAM kann ein 3B-Modell mit 8–15 Tok/Sek ausführen. Ältere Geräte sollten stattdessen eine Phone-App ausprobieren.' },
+              { q: 'Verlangsamt lokale KI meinen Computer?', a: 'Nur während der Antwort. CPU/GPU gehen auf 100% für einige Sekunden, dann zurück auf Leerlauf. Nichts ist dauerhaft.' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen (2/2)',
+            faqs: [
+              { q: 'Brauchen diese Apps Internet?', a: 'Nur für den ersten Modell-Download. Danach funktionieren alle fünf vollständig offline — im Flugzeug, im Keller, überall.' },
+              { q: 'Ist das Download sicher?', a: 'Ja, wenn Sie die offiziellen Seiten verwenden: gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai. Keine Drittanbieter.' },
+              { q: 'Unterschied lokale KI vs. ChatGPT?', a: '(1) läuft auf Ihrem Laptop — keine Daten an Server; (2) offline nach erstem Download; (3) für immer kostenlos. Nachteil: weniger leistungsfähig als GPT-4o-Klasse Modelle.' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'Modelle mit PromptQuorum vergleichen',
+            body: 'Sobald Sie ein lokales Modell laufen haben, nutzen Sie PromptQuorum, um es mit Cloud-Modellen zu vergleichen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      fr: {
+        title: '5 apps d\'IA locale pour débutants : zéro terminal, fonctionnent immédiatement',
+        slides: [
+          {
+            type: 'title',
+            h1: 'IA locale pour débutants',
+            subtitle: '5 apps à installer en 10 minutes — zéro terminal, zéro Python, zéro Docker. GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio.',
+            link: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              '<strong>GPT4All</strong> — plus simple à démarrer ; 4 clics du téléchargement au premier chat ; portable de 5 ans.',
+              '<strong>Jan</strong> — zéro télémétrie par défaut ; AGPL open source ; meilleur pour RGPD.',
+              '<strong>Msty</strong> — UI la plus épurée ; split-chat unique (2 modèles côte à côte) ; chat PDF intégré.',
+              '<strong>AnythingLLM Desktop</strong> — layout 3-volets familier ; plus proche d\'"ouvre un dossier, pose une question".',
+              '<strong>LM Studio</strong> — plus rapide sur Apple Silicon ; ~5 000 modèles ; meilleur pour Mac.',
+              '<strong>Les cinq :</strong> gratuites, offline après le premier téléchargement, aucune donnée envoyée.',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Choisissez l\'app qui vous convient',
+            columns: ['Votre situation', 'Installer'],
+            rows: [
+              { 'Votre situation': 'Jamais utilisé un terminal, ChatGPT privé', 'Installer': 'GPT4All' },
+              { 'Votre situation': 'Confidentialité EU / RGPD, zéro télémétrie', 'Installer': 'Jan' },
+              { 'Votre situation': 'L\'apparence compte — UI moderne', 'Installer': 'Msty' },
+              { 'Votre situation': 'Discuter avec mes PDFs et documents', 'Installer': 'AnythingLLM Desktop' },
+              { 'Votre situation': 'MacBook 2024+, IA locale la plus rapide', 'Installer': 'LM Studio' },
+              { 'Votre situation': 'Seulement 4 GB RAM ou Chromebook', 'Installer': 'Aucune — app mobile' },
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#1 GPT4All — Meilleur pour débutants absolus',
+            intro: '290 MB à télécharger. MIT open source. 4 clics vers le premier chat. Pas de GPU.',
+            items: [
+              '<strong>Installation :</strong> gpt4all.io → installateur → "Llama 3.2 3B Instruct" → 2 GB → chat',
+              '<strong>Seuil matériel :</strong> portable Intel de 5 ans, 8 GB RAM, graphique intégré — pas de GPU',
+              '<strong>Une fenêtre, rien de caché :</strong> barre latérale + conversation, zéro dropdown imbriqué',
+              '<strong>Télémétrie :</strong> désactivée par défaut. Modèle : Llama 3.2 3B Instruct Q4_0 (2 GB)',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#2 Jan — Meilleur pour la confidentialité',
+            intro: 'Zéro télémétrie. Zéro SDK analytics. AGPL open source. Idéal pour les utilisateurs RGPD.',
+            items: [
+              '<strong>Installation :</strong> installateur signé jan.ai → modèle in-app (sans compte) → chat',
+              '<strong>Confidentialité :</strong> zéro télémétrie, zéro call home ; source sur GitHub sous AGPL',
+              '<strong>Navigateur modèles :</strong> ~150 modèles curés. Moins accablant que LM Studio',
+              '<strong>Modèle recommandé :</strong> Phi-4 Mini (~2.6 GB) — petit, rapide, bon au quotidien',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#3 Msty — Meilleur pour l\'esthétique',
+            intro: 'Interface split-pane moderne. Comparaison de modèles côte à côte. Chat docs intégré.',
+            items: [
+              '<strong>Installation :</strong> msty.app → "IA locale" → modèle → chat (5–6 clics)',
+              '<strong>Split-chat :</strong> deux modèles répondant à la même question côte à côte — unique',
+              '<strong>Chat docs :</strong> glisser PDF, DOCX ou dossier dans la barre latérale — aucun plugin',
+              '<strong>Modèle recommandé :</strong> Gemma 3 4B Instruct — ton amical, bon à la synthèse',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#4 AnythingLLM Desktop — Interface familière',
+            intro: 'Chat par espaces de travail. Layout 3-volets comme les clients email.',
+            items: [
+              '<strong>Installation :</strong> anythingllm.com → "IA locale" → modèle → déposer docs (6 clics)',
+              '<strong>Modèle workspace :</strong> chaque espace = son propre dossier de docs + historique chat',
+              '<strong>Documents :</strong> PDF, DOCX, TXT, Markdown, pages web — indexés localement',
+              '<strong>Modèles recommandés :</strong> Llama 3.2 3B Instruct ou Qwen3 4B',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#5 LM Studio — Meilleur pour utilisateurs Mac',
+            intro: 'Plus rapide sur Apple Silicon. Kernels Metal : 15–30% plus vite. ~5 000 variantes.',
+            items: [
+              '<strong>Installation :</strong> lmstudio.ai → défauts → navigateur modèles → staff pick → charger → chat',
+              '<strong>Pourquoi premier sur Mac :</strong> kernels Metal custom surpassent l\'upstream de 15–30%',
+              '<strong>Navigateur modèles :</strong> ~5 000 variantes de Hugging Face, filtrables par RAM/VRAM',
+              '<strong>Recommandé :</strong> Phi-4 Mini sur Macs 8 GB ; Llama 3.3 8B Q4_K_M sur Macs 16 GB+',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Comparatif des apps',
+            columns: ['App', 'RAM min', 'Meilleur pour', 'Licence'],
+            rows: [
+              { App: 'GPT4All', 'RAM min': '8 GB', 'Meilleur pour': 'Débutants, zéro terminal', Licence: 'MIT' },
+              { App: 'Jan', 'RAM min': '8 GB', 'Meilleur pour': 'Confidentialité, RGPD', Licence: 'AGPL' },
+              { App: 'Msty', 'RAM min': '8 GB', 'Meilleur pour': 'Belle UI, chat côte à côte', Licence: 'Propriétaire (gratuit)' },
+              { App: 'AnythingLLM', 'RAM min': '8 GB', 'Meilleur pour': '3-volets familier, dossiers docs', Licence: 'MIT' },
+              { App: 'LM Studio', 'RAM min': '8 GB', 'Meilleur pour': 'Mac / Apple Silicon, grand catalogue', Licence: 'Propriétaire (gratuit)' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Pièges courants',
+            items: [
+              '"Développeur non-identifié" sur macOS → Paramètres Système → Confidentialité → Ouvrir quand même.',
+              'Windows Defender a signalé l\'installateur → "Plus d\'infos" → "Exécuter quand même". Vérifier l\'URL.',
+              'Téléchargement du modèle trop lent → Modèles : 1.5–8 GB. Annuler et reprendre — toutes les 5 apps supportent ça.',
+              'L\'ordinateur est chaud / le ventilateur crie → Normal pendant l\'inférence. Passer à un modèle 3B ou 4B.',
+              'Quel modèle choisir ? → Défaut : Llama 3.2 3B, Phi-4 Mini ou Gemma 3 4B Instruct.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Vos 10 premières minutes',
+            items: [
+              'Choisissez une app du tableau profils. Indécis ? Installez GPT4All. (1 min)',
+              'Téléchargez l\'installateur depuis le site officiel pour votre OS. (1 min)',
+              'Lancez l\'installateur. Acceptez les défauts. Pas de droits admin requis. (2 min)',
+              'Au premier lancement : téléchargez le plus petit modèle "Instruct" offert (3B ou 4B). (3–5 min)',
+              'Tapez "Salut, peux-tu écrire un haïku sur un chat ?" et appuyez Entrée. Réponse en 5–10 sec. (1 min)',
+              'Coupez le Wi-Fi et posez une autre question. La réponse fonctionne encore — l\'IA locale est réelle.',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes (1/2)',
+            faqs: [
+              { q: 'Dois-je connaître la programmation ?', a: 'Non. Aucune des cinq apps ne nécessite code, scripting ou terminal. Si vous pouvez installer Zoom, vous avez toutes les compétences.' },
+              { q: 'Et si mon ordinateur est trop vieux ?', a: 'Un portable 2018+ avec 8 GB RAM peut exécuter un modèle 3B à 8–15 tok/s. Les machines plus anciennes devraient essayer une app mobile.' },
+              { q: 'L\'IA locale ralentit mon ordinateur ?', a: 'Seulement pendant la réponse. CPU/GPU à 100% quelques secondes, puis retour à l\'idle. Rien n\'est permanent.' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes (2/2)',
+            faqs: [
+              { q: 'Ces apps ont besoin d\'internet ?', a: 'Seulement pour le premier téléchargement de modèle. Ensuite, toutes les cinq tournent offline — avion, sous-sol, partout.' },
+              { q: 'Est-il sûr de télécharger ces apps ?', a: 'Oui, via les sites officiels : gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai. Évitez les téléchargeurs tiers.' },
+              { q: 'Différence entre IA locale et ChatGPT ?', a: '(1) tourne sur votre portable — aucune donnée transmise ; (2) offline après premier téléchargement ; (3) gratuit pour toujours. Moins puissant que GPT-4o pour les tâches complexes.' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'Comparez les modèles avec PromptQuorum',
+            body: 'Une fois votre modèle local en marche, utilisez PromptQuorum pour le comparer aux modèles cloud.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      ja: {
+        title: '初心者向けローカルAIアプリ5つ：ターミナルなし、すぐに使える',
+        slides: [
+          {
+            type: 'title',
+            h1: '初心者向けローカルAIアプリ5選',
+            subtitle: '10分以内にインストール可能。ターミナルなし、Pythonなし、Dockerなし。GPT4All、Jan、Msty、AnythingLLM Desktop、LM Studio。',
+            link: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
+          },
+          {
+            type: 'list',
+            h2: '重要ポイント',
+            items: [
+              '<strong>GPT4All</strong> — 最も導入簡単；4クリックで最初のチャット；5年前のノートPCで動作。',
+              '<strong>Jan</strong> — デフォルトでテレメトリーゼロ；AGPL オープンソース；GDPRに最適。',
+              '<strong>Msty</strong> — 最も美しいUI；独自のスプリットチャット（2モデル並列）；PDF チャット内蔵。',
+              '<strong>AnythingLLM Desktop</strong> — 使い慣れた3ペインレイアウト；「フォルダを開いて質問」に最も近い。',
+              '<strong>LM Studio</strong> — Apple Siliconで最速；~5,000モデルバリアント；Macユーザーに最適。',
+              '<strong>5つすべて：</strong>無料、初回ダウンロード後は完全オフライン、プロンプトを外部に送信しない。',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'あなたに合うアプリを選ぶ',
+            columns: ['あなたの状況', '選択肢'],
+            rows: [
+              { 'あなたの状況': 'ターミナル未経験、プライベートChatGPT希望', '選択肢': 'GPT4All' },
+              { 'あなたの状況': 'GDPR・プライバシー重視、テレメトリーゼロ', '選択肢': 'Jan' },
+              { 'あなたの状況': '見た目重視、モダンなUI希望', '選択肢': 'Msty' },
+              { 'あなたの状況': 'PDFや文書とチャットしたい', '選択肢': 'AnythingLLM Desktop' },
+              { 'あなたの状況': '2024年以降のMacBook、最速ローカルAI', '選択肢': 'LM Studio' },
+              { 'あなたの状況': 'RAM 4GB以下またはChromebook', '選択肢': 'なし — モバイルアプリ推奨' },
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#1 GPT4All — 完全初心者向けベスト',
+            intro: '290MB ダウンロード。MIT オープンソース。4クリックで最初のチャット。GPU不要。',
+            items: [
+              '<strong>インストール：</strong> gpt4all.io → インストーラー → "Llama 3.2 3B Instruct" → 2GB → チャット',
+              '<strong>ハードウェア要件：</strong> 5年前の Intel、8GB RAM、統合グラフィックス — GPU不要',
+              '<strong>1つのウィンドウ：</strong> サイドバー + 会話ペイン、隠れたドロップダウンなし',
+              '<strong>テレメトリー：</strong> デフォルト無効。推奨モデル：Llama 3.2 3B Instruct Q4_0 (2GB)',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#2 Jan — プライバシー重視向けベスト',
+            intro: 'テレメトリーゼロ。AGPLオープンソース。GDPR対応に最適。',
+            items: [
+              '<strong>インストール：</strong> jan.ai 署名済みインストーラー → アプリ内でモデル選択 → チャット',
+              '<strong>プライバシー：</strong> テレメトリーなし、外部通信なし；ソース GitHub AGPLで公開・監査可能',
+              '<strong>モデルブラウザ：</strong> 約150の厳選モデル。LM Studioほど多すぎず、GPT4Allより詳細',
+              '<strong>推奨モデル：</strong> Phi-4 Mini (~2.6GB) — 小型・高速・日常質問に優秀',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#3 Msty — 美しいUI向けベスト',
+            intro: 'モダンなスプリットペインUI。2モデル並列比較。ドキュメントチャット内蔵。',
+            items: [
+              '<strong>インストール：</strong> msty.app → 「ローカルAI」 → モデル選択 → チャット (5–6クリック)',
+              '<strong>スプリットチャット：</strong> 2つのモデルに同じ質問を並列で出し、より良い答えを選ぶ — Mstyのみ',
+              '<strong>ドキュメントチャット：</strong> PDF・DOCX・フォルダをサイドバーにドラッグ — プラグイン不要',
+              '<strong>推奨モデル：</strong> Gemma 3 4B Instruct — 親しみやすいトーン、要約が得意',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#4 AnythingLLM Desktop — 使い慣れたUI向けベスト',
+            intro: 'ワークスペースベースのドキュメントチャット。3ペインレイアウト。「フォルダを開いて質問」に最も近い体験。',
+            items: [
+              '<strong>インストール：</strong> anythingllm.com → 「ローカルAI」 → モデル → 文書ドロップ (6クリック)',
+              '<strong>ワークスペースモデル：</strong> 各ワークスペース = 独自のドキュメントフォルダ + チャット履歴',
+              '<strong>ドキュメント：</strong> PDF・DOCX・TXT・Markdown・Webページ — ローカルインデックス',
+              '<strong>推奨モデル：</strong> Llama 3.2 3B Instruct または Qwen3 4B',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#5 LM Studio — Macユーザー向けベスト',
+            intro: 'Apple Siliconで最速。Metalカーネル：M系列で15–30%高速。~5,000モデルバリアント。',
+            items: [
+              '<strong>インストール：</strong> lmstudio.ai → デフォルト → モデルブラウザ → staff pick → 読込 → チャット',
+              '<strong>Mac最速の理由：</strong> カスタムApple Silicon Metalカーネルで上流より15–30%速い',
+              '<strong>モデルブラウザ：</strong> Hugging Faceから約5,000バリアント。RAM/VRAMやライセンスで絞り込み可',
+              '<strong>推奨：</strong> 8GB Mac：Phi-4 Mini；16GB+ Mac：Llama 3.3 8B Q4_K_M',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'アプリ比較一覧',
+            columns: ['アプリ', '最小RAM', 'ベストな用途', 'ライセンス'],
+            rows: [
+              { 'アプリ': 'GPT4All', '最小RAM': '8 GB', 'ベストな用途': '完全初心者、ターミナルなし', 'ライセンス': 'MIT' },
+              { 'アプリ': 'Jan', '最小RAM': '8 GB', 'ベストな用途': 'プライバシー、GDPR対応', 'ライセンス': 'AGPL' },
+              { 'アプリ': 'Msty', '最小RAM': '8 GB', 'ベストな用途': '美しいUI、並列チャット', 'ライセンス': '独占（無料）' },
+              { 'アプリ': 'AnythingLLM', '最小RAM': '8 GB', 'ベストな用途': '3ペイン、ドキュメントフォルダ', 'ライセンス': 'MIT' },
+              { 'アプリ': 'LM Studio', '最小RAM': '8 GB', 'ベストな用途': 'Mac/Apple Silicon、大カタログ', 'ライセンス': '独占（無料）' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'よくあるつまずきと対処法',
+            items: [
+              'macOSで「unidentified developer」→ システム設定 → プライバシー → とにかく開く。署名済みアプリでは正常。',
+              'Windows Defenderがフラグ → 「詳細」→「実行」。ダウンロードURLが公式サイトと一致することを確認。',
+              'モデルダウンロードが遅い → 1.5–8GBファイル。止まったらキャンセル・再開 — 5つすべて再開可能。',
+              'コンピュータが熱くなった → 推論中は正常。3Bまたは4Bの小さいモデルに切り替えると改善。',
+              'どのモデルを選ぶ？ → デフォルト：Llama 3.2 3B、Phi-4 Mini、またはGemma 3 4B。',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'あなたの最初の10分',
+            items: [
+              'ペルソナテーブルから1つアプリを選ぶ。決められない？GPT4Allをインストール。（1分）',
+              '公式サイトを開いてOSのインストーラーをダウンロード。（1分）',
+              'インストーラーを実行。デフォルト受け入れ。管理者権限不要。（2分）',
+              '初回起動：最小の「Instruct」モデルをダウンロード（3Bまたは4Bパラメータ）。（3–5分）',
+              'チャットボックスに「猫についてのハイクを書いてください」と入力 → Enter。5–10秒で返答。（1分）',
+              'Wi-Fiを切ってもう一つ質問してみる。返答はまだ機能する — ローカルAIは本物で完全オフライン。',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問（1/2）',
+            faqs: [
+              { q: 'コーディングの知識が必要ですか？', a: 'いいえ。5つのアプリはいずれもコード、スクリプト、ターミナル不要。Zoomをインストールできれば、必要なスキルがすべてあります。' },
+              { q: 'パソコンが古すぎたら？', a: '2018年以降のノートPC、8GB RAM あれば3Bモデルが8–15 tok/sで動作。それより古いマシンはモバイルアプリを試してください。' },
+              { q: 'ローカルAIでパソコンが遅くなる？', a: '返答中のみ。CPU/GPUが数秒間100%になり、その後アイドルに戻ります。アプリを閉じればすべてのリソースが解放されます。' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問（2/2）',
+            faqs: [
+              { q: 'これらアプリはインターネットが必要？', a: '最初のモデルダウンロードのみ。その後は5つすべて完全オフライン — 機内、地下室、どこでも動作します。' },
+              { q: 'ダウンロードは安全？', a: '公式サイトを使えば安全：gpt4all.io、jan.ai、msty.app、anythingllm.com、lmstudio.ai。サードパーティは避けること。' },
+              { q: 'ローカルAIとChatGPTの違いは？', a: '(1)ノートPCで実行、プロンプトをサーバーに送信しない；(2)最初のダウンロード後はオフライン；(3)永遠無料。複雑なタスクではGPT-4oクラスより能力が低い。' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'PromptQuorumでモデルを比較',
+            body: 'ローカルモデルを起動したら、PromptQuorumを使ってクラウドモデルとベンチマーク比較してみましょう。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      zh: {
+        title: '初学者本地AI应用5款：无需终端，即装即用',
+        slides: [
+          {
+            type: 'title',
+            h1: '初学者本地AI应用5选',
+            subtitle: '10分钟内安装完成。零终端命令，无需Python，无需Docker。GPT4All、Jan、Msty、AnythingLLM Desktop、LM Studio。',
+            link: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>GPT4All</strong> — 入门最简单；4次点击到首次聊天；5年前的笔记本电脑可用。',
+              '<strong>Jan</strong> — 默认零遥测；AGPL开源；最适合GDPR合规。',
+              '<strong>Msty</strong> — 界面最精美；独有分屏聊天（两模型并排）；内置PDF聊天。',
+              '<strong>AnythingLLM Desktop</strong> — 熟悉的三窗格布局；最接近"打开文件夹、提问"。',
+              '<strong>LM Studio</strong> — Apple Silicon上最快；~5,000模型变体；Mac用户首选。',
+              '<strong>五款应用：</strong>全部免费，首次下载后完全离线，绝不发送您的提示词到服务器。',
+            ],
+          },
+          {
+            type: 'table',
+            h2: '选择适合你的应用',
+            columns: ['你的情况', '选择'],
+            rows: [
+              { '你的情况': '从未用过终端，想要私有ChatGPT', '选择': 'GPT4All' },
+              { '你的情况': 'EU隐私/GDPR，零遥测要求', '选择': 'Jan' },
+              { '你的情况': '外观很重要，现代UI', '选择': 'Msty' },
+              { '你的情况': '想和自己的PDF和文档聊天', '选择': 'AnythingLLM Desktop' },
+              { '你的情况': '2024年+MacBook，最快本地AI', '选择': 'LM Studio' },
+              { '你的情况': '只有4GB RAM或Chromebook', '选择': '无——用手机应用' },
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#1 GPT4All——最适合完全初学者',
+            intro: '290MB下载。MIT开源。4次点击到首次聊天。无需GPU。',
+            items: [
+              '<strong>安装路径：</strong> gpt4all.io → 安装程序 → "Llama 3.2 3B Instruct" → 2GB → 开始聊天',
+              '<strong>硬件要求：</strong> 5年前Intel笔记本，8GB RAM，集成显卡 — 无需GPU',
+              '<strong>一个窗口，无杂乱：</strong> 侧边栏 + 对话区，无嵌套下拉菜单',
+              '<strong>遥测：</strong>默认关闭。推荐模型：Llama 3.2 3B Instruct Q4_0 (2GB磁盘)',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#2 Jan——最适合隐私至上的初学者',
+            intro: '零遥测。AGPL开源。最适合GDPR敏感用户。',
+            items: [
+              '<strong>安装路径：</strong> jan.ai签名安装程序 → 应用内选模型（无需账户）→ 聊天',
+              '<strong>隐私立场：</strong> 零遥测，零电话回家；源码在GitHub以AGPL发布，可独立审计',
+              '<strong>模型浏览器：</strong> 约150个精选模型。比LM Studio轻松，比GPT4All更有指引',
+              '<strong>推荐模型：</strong> Phi-4 Mini (~2.6GB) — 小巧快速，日常问题表现出色',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#3 Msty——最适合美观界面',
+            intro: '现代分屏界面。并排模型对比。内置文档聊天。知识库功能。',
+            items: [
+              '<strong>安装路径：</strong> msty.app → "本地AI" → 选模型 → 聊天（5–6次点击）',
+              '<strong>分屏聊天：</strong> 两个模型并排回答同一问题，选出更好答案 — Msty独有',
+              '<strong>文档聊天：</strong> 将PDF、DOCX或文件夹拖入侧边栏提问 — 无需插件',
+              '<strong>推荐模型：</strong> Gemma 3 4B Instruct — 语气友善，擅长总结',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#4 AnythingLLM Desktop——最适合熟悉界面',
+            intro: '基于工作区的文档聊天。三窗格布局，类似邮件客户端。',
+            items: [
+              '<strong>安装路径：</strong> anythingllm.com → "使用本地AI" → 选模型 → 拖入文档（6次点击）',
+              '<strong>工作区模型：</strong> 每个工作区 = 独立文档文件夹 + 聊天历史',
+              '<strong>文档支持：</strong> PDF、DOCX、TXT、Markdown、网页 — 本地索引，无需API',
+              '<strong>推荐模型：</strong> Llama 3.2 3B Instruct 或 Qwen3 4B',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '#5 LM Studio——最适合Mac用户',
+            intro: 'Apple Silicon上最快。Metal内核：M系列快15–30%。~5,000模型变体。',
+            items: [
+              '<strong>安装路径：</strong> lmstudio.ai → 默认设置 → 模型浏览器 → 精选 → 加载 → 聊天',
+              '<strong>Mac第一的原因：</strong> 定制Apple Silicon Metal内核比上游默认快15–30%',
+              '<strong>模型浏览器：</strong> Hugging Face约5,000变体，可按RAM/VRAM和许可证筛选',
+              '<strong>推荐：</strong> 8GB Mac：Phi-4 Mini；16GB+ Mac：Llama 3.3 8B Q4_K_M',
+            ],
+          },
+          {
+            type: 'table',
+            h2: '应用对比一览',
+            columns: ['应用', '最小RAM', '最适合', '许可证'],
+            rows: [
+              { '应用': 'GPT4All', '最小RAM': '8 GB', '最适合': '完全初学者，零终端', '许可证': 'MIT' },
+              { '应用': 'Jan', '最小RAM': '8 GB', '最适合': '隐私、GDPR、零遥测', '许可证': 'AGPL' },
+              { '应用': 'Msty', '最小RAM': '8 GB', '最适合': '精美UI，并排聊天', '许可证': '专有（免费）' },
+              { '应用': 'AnythingLLM', '最小RAM': '8 GB', '最适合': '三窗格，文档文件夹', '许可证': 'MIT' },
+              { '应用': 'LM Studio', '最小RAM': '8 GB', '最适合': 'Mac/Apple Silicon，大目录', '许可证': '专有（免费）' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: '常见问题及解决方案',
+            items: [
+              'macOS显示"unidentified developer" → 系统设置 → 隐私和安全 → 仍然打开。签名应用的正常现象。',
+              'Windows Defender标记了安装程序 → "更多信息" → "仍然运行"。验证下载URL与官方网站完全匹配。',
+              '模型下载太慢 → 模型文件1.5–8GB。如果卡住，取消并恢复 — 5款应用均支持断点续传。',
+              '电脑变热/风扇嗡嗡叫 → 推理时正常。切换到更小的3B或4B模型可改善。',
+              '不知道选哪个模型？ → 默认：Llama 3.2 3B、Phi-4 Mini或Gemma 3 4B Instruct。',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: '你的前10分钟',
+            items: [
+              '从上面的角色表选择一个应用。无法决定？安装GPT4All。（1分钟）',
+              '打开官方网站下载适合你操作系统的安装程序。（1分钟）',
+              '运行安装程序。接受默认值。无需管理员权限。（2分钟）',
+              '首次启动时：下载最小的"Instruct"模型（3B或4B参数）。（3–5分钟）',
+              '在聊天框输入"你好，能写一首关于猫的俳句吗？"并按Enter。5–10秒内收到回复。（1分钟）',
+              '断开Wi-Fi再问一个问题。回复依然有效 — 本地AI是真实的，完全离线运行。',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: '常见问题解答（1/2）',
+            faqs: [
+              { q: '使用本地AI需要编程知识吗？', a: '不需要。五款应用都不需要代码、脚本或终端。如果您能安装Zoom并点击设置向导，您就拥有所需的全部技能。' },
+              { q: '如果我的电脑太旧怎么办？', a: '2018年以后的笔记本，8GB RAM，可在任何这些应用中以8–15 tok/s运行3B模型。更旧的设备应该尝试手机端本地AI应用。' },
+              { q: '本地AI会减慢我的电脑吗？', a: '只在回复时。CPU/GPU几秒钟内达100%，之后回到空闲状态。关闭应用即可释放所有资源，没有任何永久影响。' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: '常见问题解答（2/2）',
+            faqs: [
+              { q: '这些应用需要联网吗？', a: '只需要首次模型下载时联网。之后五款应用均可完全离线运行 — 飞机上、地下室、任何地方。' },
+              { q: '从网上下载这些应用安全吗？', a: '使用官方网站即安全：gpt4all.io、jan.ai、msty.app、anythingllm.com、lmstudio.ai。避免第三方下载器和种子网站。' },
+              { q: '本地AI和ChatGPT有什么区别？', a: '(1)在您笔记本上运行，不向服务器发送提示词；(2)首次下载后离线工作；(3)永远免费。缺点：复杂任务上比GPT-4o级模型能力弱。' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: '用PromptQuorum比较模型',
+            body: '一旦您的本地模型运行起来，使用PromptQuorum将它与云模型进行基准测试并找到最佳提示词。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+    };
+
+    function renderSlide(slide, lang) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users' + (lang !== 'en' ? '?lang=' + lang : '');
+      const footerHtml = `<p class="slide-footer"><a href="${articleUrl}" target="_blank" rel="noopener">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 32px; font-size: 16px;">
+              <a href="${slide.link}" target="_blank" rel="noopener">${slide.link}</a>
+            </p>
+            ${footerHtml}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p style="margin-bottom: 10px; font-style: italic;">${slide.intro}</p>`;
+          html += '<ul>';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ul>';
+          html += footerHtml;
+          break;
+
+        case 'table': {
+          html = `<h2>${slide.h2}</h2><table><tr>`;
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerHtml;
+          break;
+        }
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2><ol>`;
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ol>';
+          html += footerHtml;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 18px; text-align: left; max-width: 680px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px;">A: ${faq.a}</p></div>`;
+          });
+          html += footerHtml;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 16px; max-width: 580px;">${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 17px; font-weight: 700;">${slide.cta}</a>
+            ${footerHtml}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    if (lang !== 'en') backLink.href += '?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => { container.innerHTML += renderSlide(slide, lang); });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      slides.forEach(s => s.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) { currentSlide += n; showSlide(currentSlide); }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => { slides.forEach(s => { s.style.display = 'flex'; }); });
+    window.addEventListener('afterprint', () => { slides.forEach(s => { s.style.removeProperty('display'); }); showSlide(currentSlide); });
+
+    if (isPrint) { window.addEventListener('load', () => { window.print(); }); }
+
+    showSlide(0);
+  </script>
+</body>
+</html>

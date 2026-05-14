@@ -349,6 +349,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
+    gammaEmbedUrl: '/presentations/local-ai-app-non-technical-users-static.html',
+    gammaDescription: 'The slide deck below covers: a persona-ranked comparison of GPT4All, Jan, Msty, AnythingLLM Desktop, and LM Studio for non-technical users; a quick-pick table (zero terminal experience to Mac user); key highlights per app (telemetry policy, model recommendations, UI style); 5 common stumbling blocks with one-line fixes; and a 6-step first-10-minutes guide. Download the PDF as a local AI beginner reference card.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -713,6 +715,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
+    gammaEmbedUrl: '/presentations/local-ai-app-non-technical-users-static.html',
+    gammaDescription: 'Die Präsentation zeigt: einen Persona-Vergleich von GPT4All, Jan, Msty, AnythingLLM Desktop und LM Studio für nicht-technische Nutzer; eine Schnellauswahl-Tabelle; App-Highlights (Telemetrie, Modellempfehlungen, UI-Stil); 5 häufige Stolpersteine mit Einzeiler-Lösungen; eine 6-Schritte-Anleitung für die ersten 10 Minuten. Als PDF-Einsteiger-Referenzkarte herunterladen.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1069,6 +1073,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
+    gammaEmbedUrl: '/presentations/local-ai-app-non-technical-users-static.html',
+    gammaDescription: 'La présentation ci-dessous couvre : une comparaison par profil de GPT4All, Jan, Msty, AnythingLLM Desktop et LM Studio pour débutants ; un tableau de sélection rapide ; points clés par app (télémétrie, modèles recommandés, UI) ; 5 pièges courants avec solutions en une ligne ; guide en 6 étapes pour vos 10 premières minutes. Téléchargez le PDF comme carte de référence débutant IA locale.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1425,6 +1431,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
+    gammaEmbedUrl: '/presentations/local-ai-app-non-technical-users-static.html',
+    gammaDescription: '以下のスライドデッキでは：初心者向けにGPT4All、Jan、Msty、AnythingLLM Desktop、LM Studioをペルソナ別に比較；クイック選択表（ターミナルゼロからMacユーザーまで）；各アプリのハイライト（テレメトリー、推奨モデル、UIスタイル）；5つのよくあるつまずきと解決策；6ステップの最初の10分間ガイドを掲載。PDFをローカルAI初心者リファレンスカードとしてダウンロードしてください。',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1781,6 +1789,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
+    gammaEmbedUrl: '/presentations/local-ai-app-non-technical-users-static.html',
+    gammaDescription: '以下幻灯片包含：初学者角色排序比较GPT4All、Jan、Msty、AnythingLLM Desktop和LM Studio；快速选择表（零终端到Mac用户）；每款应用的关键亮点（遥测政策、推荐模型、UI风格）；5个常见问题的单行修复方案；6步骤首10分钟指南。将PDF作为本地AI初学者参考卡下载。',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
