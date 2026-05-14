@@ -68,6 +68,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
+    gammaDescription: 'The slide deck below covers: Ollama, GPT4All, Jan, and llama.cpp tested on 8 GB RAM with no GPU (4–18 tok/sec ranges); the exact settings that buy 30–60% more speed (context 1024, batch 8, KV cache q8_0); best model per app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 3 4B); and five common mistakes that trigger swap death. Download the PDF as a low-end PC local AI reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -655,6 +657,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
+    gammaDescription: 'Die Präsentation unten zeigt: Ollama, GPT4All, Jan und llama.cpp auf 8 GB RAM ohne GPU getestet (4–18 Tok/Sek); die genauen Einstellungen für 30–60 % mehr Geschwindigkeit (Kontext 1024, Batch 8, KV-Cache q8_0); bestes Modell pro App (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 3 4B); und fünf häufige Fehler, die Swap-Death auslösen. PDF als Referenzkarte für Schwachrechner herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1055,6 +1059,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
+    gammaDescription: 'La présentation ci-dessous couvre : Ollama, GPT4All, Jan et llama.cpp testés sur 8 Go RAM sans GPU (4–18 tok/s) ; les paramètres exacts pour 30–60 % de vitesse en plus (contexte 1024, lot 8, cache KV q8_0) ; le meilleur modèle par appli (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 3 4B) ; et cinq erreurs courantes qui déclenchent le swap fatal. Téléchargez le PDF comme fiche de référence pour PC modeste.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1341,6 +1347,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連記事', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
+    gammaDescription: '以下のスライドデッキでは：Ollama、GPT4All、Jan、llama.cppを8GB RAM・GPU無しで実測（4〜18 tok/s）；速度30〜60%向上の正確な設定（コンテキスト1024、バッチ8、KVキャッシュq8_0）；各アプリの推奨モデル（Phi-4 Mini Q4_K_M、SmolLM 2 1.7B、Gemma 3 4B）；スワップ死を引き起こす5つのよくある間違いをカバーしています。低スペックPCローカルAIリファレンスカードとしてPDFをダウンロードできます。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1631,6 +1639,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: '#faq' },
       { label: '相关阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
+    gammaDescription: '以下幻灯片包含：Ollama、GPT4All、Jan和llama.cpp在8GB内存+无GPU下实测（4〜18 tok/s）；提速30〜60%的精确设置（上下文1024、批处理8、KV缓存q8_0）；各应用推荐模型（Phi-4 Mini Q4_K_M、SmolLM 2 1.7B、Gemma 3 4B）；以及触发交换死亡的五个常见错误。下载PDF作为低端PC本地AI参考卡片。',
     sections: {
       tldr: {
         id: 'key-takeaways',
