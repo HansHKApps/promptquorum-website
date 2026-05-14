@@ -6,10 +6,16 @@
 //
 // Launched 2026-05-08: Cat 2 (RAG, 5) + Cat 6 (Mobile/Edge, 5) + Cat 7
 // (Productivity, 5) + Directory (1) + Hub. 16 articles + hub = 17 URLs.
+// 2026-05-14: Opened all remaining 20 articles.
 
 export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 0 — Overview & Reference (1)
   'local-llm-software-directory-2026',
+
+  // Cat 1 — Getting Started
+  'easiest-local-ai-app-windows-mac-linux',
+  'best-local-ai-app-low-end-pc',
+  'local-ai-app-non-technical-users',
 
   // Cat 2 — RAG & Document Chat (5)
   'anythingllm-vs-privategpt-vs-openwebui-rag',
@@ -17,6 +23,27 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-embedding-models-local-rag-2026',
   'chat-with-1000-pdfs-locally',
   'local-rag-for-private-business-data',
+  'local-ai-app-with-built-in-rag',
+
+  // Cat 3 — Coding
+  'continue-dev-vs-cline-vs-aider-local',
+  'best-local-coding-models-2026',
+  'local-coding-llm-without-internet',
+  'replace-github-copilot-with-local-llm',
+  'local-llm-code-review-ci-cd',
+
+  // Cat 4 — Agents & Automation
+  'local-ai-agents-with-mcp-2026',
+  'autonomous-local-agents-actually-work',
+  'local-ai-agents-business-workflows-eu-compliance',
+  'replace-zapier-with-local-ai-agents',
+
+  // Cat 5 — Creative Writing
+  'best-local-llm-creative-writing-2026',
+  'local-llm-prompts-for-fiction-writers',
+  'local-llm-screenwriting-and-novel-drafting',
+  'sillytavern-vs-agnai-vs-risuai-roleplay',
+  'uncensored-local-llm-creative-writing-ethics',
 
   // Cat 6 — Mobile & Edge LLMs (5)
   'best-local-llm-apps-iphone-2026',
@@ -31,6 +58,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-personal-knowledge-base-2026',
   'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local',
+
+  // Cat 8 — Tools & App Reviews
+  'lm-studio-vs-jan-vs-gpt4all-2026',
+  'best-local-models-tool-calling-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
