@@ -69,6 +69,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-llm-software-directory-2026-static.html',
+    gammaDescription: 'The slide deck below covers: a 9-layer local LLM stack overview (runtimes through specialized plugins); 6-tool comparison tables for runtimes (Ollama/llama.cpp/vLLM/LocalAI/ExLlamaV2/MLX-LM), desktop apps, web UIs, coding assistants, RAG systems, and agent frameworks; a 9-row real-world stacks table (goal, stack, hardware floor); 5-step stack selection guide; and FAQ. Download the PDF as a local LLM software directory reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -428,6 +430,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-llm-software-directory-2026-static.html',
+    gammaDescription: 'Die Präsentation zeigt: eine 9-Schichten-Übersicht des lokalen LLM-Stacks (von Laufzeitumgebungen bis spezialisierte Plugins); 6-Tool-Vergleichstabellen für Laufzeitumgebungen (Ollama/llama.cpp/vLLM), Desktop-Apps, Web-UIs, Coding-Assistenten, RAG-Systeme und Agenten-Frameworks; eine 9-Zeilen-Stacks-Tabelle (Ziel, Stack, Hardware-Minimum); eine 5-Schritte-Stack-Auswahlhilfe; sowie FAQ. Als PDF-Referenzkarte für lokale LLM-Software herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -795,6 +799,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-llm-software-directory-2026-static.html',
+    gammaDescription: 'La présentation ci-dessous couvre : un aperçu de la stack LLM locale en 9 couches (des runtimes aux plugins spécialisés) ; des tableaux de comparaison de 6 outils pour les runtimes (Ollama/llama.cpp/vLLM), les apps bureau, les interfaces web, les assistants de codage, les systèmes RAG et les frameworks d\'agents ; un tableau de stacks réels en 9 lignes (objectif, stack, matériel minimum) ; un guide de sélection en 5 étapes ; et une FAQ. Téléchargez le PDF comme carte de référence pour les logiciels LLM locaux.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1154,6 +1160,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連資料', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-llm-software-directory-2026-static.html',
+    gammaDescription: '以下のスライドデッキでは：ローカルLLMスタックの9層概要（ランタイムから専門プラグインまで）；ランタイム（Ollama/llama.cpp/vLLM）、デスクトップアプリ、Web UI、コーディングアシスタント、RAGシステム、エージェントフレームワークの6ツール比較表；目的・スタック・最低ハードウェアの9行実用スタック表；5ステップのスタック選択ガイド；よくある質問を掲載しています。PDFをローカルLLMソフトウェア参照カードとしてダウンロードしてください。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1513,6 +1521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: '#faq' },
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/local-llm-software-directory-2026-static.html',
+    gammaDescription: '以下幻灯片包含：本地LLM技术栈9层概览（从运行时到专业化插件）；运行时（Ollama/llama.cpp/vLLM）、桌面应用、Web界面、编程助手、RAG系统及智能体框架的6工具对比表；包含目标、技术栈与最低硬件配置的9行实用技术栈表；5步技术栈选择指南；以及常见问题。将PDF作为本地LLM软件参考卡下载。',
     sections: {
       tldr: {
         id: 'key-takeaways',
