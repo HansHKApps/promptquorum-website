@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uncensored Local LLMs for Creative Writing: When Writers Need Them | PromptQuorum</title>
+  <meta name="description" content="Which uncensored local LLMs to use for fiction, how to set them up via Ollama, the ethical responsibilities that remain, and when standard models are enough." />
+  <meta property="og:title" content="Uncensored Local LLMs for Creative Writing — PromptQuorum" />
+  <meta property="og:description" content="Model comparison, Ollama setup, appropriate use cases, and the ethical responsibilities that apply even when no terms of service enforces them." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f6f4f4; color: #1c1b1f; overflow: hidden;
+    }
+
+    .presentation-container {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; background: white;
+    }
+
+    .slide {
+      width: 100%; height: 100%;
+      display: none; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 32px 48px; text-align: center;
+      overflow: hidden;
+      animation: fadeIn 0.4s ease-in;
+      position: relative;
+    }
+
+    .slide.active { display: flex; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .slide h1 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700; margin-bottom: 12px;
+      color: #1c1b1f; line-height: 1.2;
+    }
+
+    .slide h2 {
+      font-size: clamp(22px, 2.8vw, 36px);
+      font-weight: 700; margin-bottom: 14px; color: #1c1b1f;
+    }
+
+    .slide p {
+      font-size: clamp(14px, 1.6vw, 18px);
+      margin-bottom: 8px; color: #49454f; line-height: 1.5;
+    }
+
+    .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+
+    .slide.title .logo { width: 52px; height: 52px; margin-bottom: 16px; }
+
+    .slide.title p { font-size: clamp(14px, 1.6vw, 20px); color: #6750a4; font-weight: 500; margin-top: 10px; }
+
+    .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; }
+
+    .slide ul, .slide ol {
+      text-align: left; margin: 10px auto; max-width: 680px;
+    }
+
+    .slide ul li, .slide ol li {
+      font-size: clamp(13px, 1.4vw, 17px);
+      margin-bottom: 9px; line-height: 1.5;
+    }
+
+    .slide strong { color: #1c1b1f; font-weight: 700; }
+
+    table {
+      margin: 10px auto; border-collapse: collapse;
+      font-size: clamp(11px, 1.2vw, 14px);
+      text-align: left; max-width: 95%;
+    }
+
+    th {
+      background: #6750a4; color: white;
+      padding: 7px 12px; font-weight: 700; border: none;
+    }
+
+    td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+
+    tr:hover td { background: #f7f2fa; }
+
+    .header {
+      padding: 10px 18px; border-bottom: 1px solid #e0e0e0;
+      display: flex; justify-content: space-between; align-items: center;
+      background: white; flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; font-weight: 600; color: #1c1b1f;
+    }
+
+    .header-left img { width: 26px; height: 26px; }
+
+    .header-links { display: flex; gap: 14px; }
+
+    .header-links a { font-size: 11px; color: #6750a4; text-decoration: none; }
+    .header-links a:hover { color: #7d5260; }
+
+    .content-area { flex: 1; overflow: hidden; }
+
+    .controls {
+      display: flex; gap: 12px; align-items: center; justify-content: center;
+      padding: 10px 18px; background: white;
+      border-top: 1px solid #e8e0f0; flex-shrink: 0;
+    }
+
+    button {
+      background: #6750a4; color: white; border: none;
+      padding: 8px 16px; border-radius: 6px; cursor: pointer;
+      font-size: 13px; font-weight: 600; transition: background 0.2s;
+    }
+
+    button:hover { background: #7d5260; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+
+    .slide-counter {
+      font-size: 13px; color: #49454f; font-weight: 600;
+      min-width: 48px; text-align: center;
+    }
+
+    .slide-footer {
+      position: absolute; bottom: 14px; right: 18px;
+      font-size: 10px; color: #bbb;
+    }
+
+    .slide-footer a {
+      color: #bbb; text-decoration: none; border-bottom: 1px solid #ddd;
+    }
+
+    .slide-footer a:hover { color: #6750a4; border-bottom-color: #6750a4; }
+
+    @media (max-width: 640px) {
+      .slide { padding: 18px 14px; }
+      .slide h1 { font-size: clamp(18px, 5vw, 26px); }
+      .slide h2 { font-size: clamp(15px, 4vw, 20px); }
+      .slide p { font-size: 13px; }
+      .slide ul li, .slide ol li { font-size: 13px; }
+      table { display: block; overflow-x: auto; font-size: 0.8em; }
+      th, td { padding: 5px 8px; white-space: nowrap; }
+      .header { padding: 8px 10px; }
+      .header-left span { max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .controls { padding: 8px 10px; }
+    }
+
+    @page { size: A4 landscape; margin: 0; }
+
+    @media print {
+      * { margin: 0; padding: 0; }
+      html, body { overflow: visible !important; height: auto !important; background: white !important; }
+      .header, .controls { display: none !important; }
+      .presentation-container { display: block !important; height: auto !important; counter-reset: page-counter; }
+      .content-area { display: block !important; overflow: visible !important; height: auto !important; }
+      .slide {
+        display: flex !important; flex-direction: column;
+        justify-content: center; align-items: center;
+        page-break-after: always; break-after: page;
+        width: 100%; height: 210mm; padding: 18mm 22mm;
+        overflow: visible !important; background: white;
+        counter-increment: page-counter; position: relative;
+      }
+      .slide::before {
+        content: "https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics";
+        position: absolute; bottom: 12mm; left: 22mm;
+        font-size: 8pt; color: #999;
+      }
+      .slide::after {
+        content: counter(page-counter) " / 14";
+        position: absolute; bottom: 12mm; right: 22mm;
+        font-size: 8pt; color: #999; font-weight: 600;
+      }
+      .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+      .slide strong { color: #000 !important; font-weight: 700; }
+      table { max-width: 100%; }
+      th { background: #6750a4 !important; color: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .slide-footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Uncensored Local LLMs for Creative Writing</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Uncensored Local LLMs for Creative Writing: When Writers Need Them',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Uncensored Local LLMs for Creative Writing',
+            subtitle: 'Which models to use, how to set them up via Ollama, and the ethical responsibilities that apply even when no terms of service enforces them.',
+            link: 'https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>"Uncensored" means reduced RLHF safety fine-tuning</strong> — not zero constraints. These models still follow prompt structure, maintain character consistency, and respond to revision instructions.',
+              '<strong>Hermes 3 Llama 3.3 is the best all-round pick:</strong> fewer arbitrary refusals, strong instruction following, good character voice differentiation.',
+              '<strong>Standard models handle most mature literary content</strong> with good prompts — violence, moral complexity, dark psychology rarely require an uncensored fine-tune.',
+              '<strong>Running locally means no data leaves your machine.</strong> No cloud ToS. No logging, no analysis, no training use.',
+              '<strong>Ethical responsibilities do not disappear</strong> because there is no ToS enforcement — minors, real people, incitement, and obscenity laws apply regardless.',
+              '<strong>Dolphin 3.0 Mistral</strong> is the lighter option for 16–24 GB rigs; suitable for short-form fiction and prompt testing.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'What "Uncensored" Actually Means',
+            items: [
+              '<strong>What is removed:</strong> refusal behaviours for explicit sexual content, graphic violence, dark psychological content.',
+              '<strong>What is retained:</strong> instruction following, character consistency, prompt structure adherence, language quality.',
+              '<strong>Degrees of uncensoring:</strong> Hermes 3 is selectively uncensored; Dolphin series is more broadly uncensored; fully abliterated models (Wizard-Uncensored, Erebus) most aggressive but weakest instruction following.',
+              '<strong>Base model quality matters:</strong> uncensoring degrades instruction quality if the base model is weak. Hermes 3 on Llama 3.3 70B retains strong instruction following.',
+            ],
+          },
+          {
+            type: 'comparison',
+            h2: 'Uncensored vs Standard: What Actually Changes',
+            line1: 'Standard model: stops mid-scene, redirects, moralises, adds unsolicited disclaimers',
+            line2: 'Hermes 3 (uncensored): follows the same dark prompt at the same prose quality level',
+            tip: 'Prose quality is equivalent — the only difference is the refusal layer',
+          },
+          {
+            type: 'list',
+            h2: 'When Uncensored Models ARE Appropriate',
+            items: [
+              '<strong>Villain psychology and monologues:</strong> morally coherent villain characters without mid-monologue redirects or disclaimers.',
+              '<strong>Mature romantic and sexual content:</strong> explicit scenes between adult fictional characters blocked by cloud services.',
+              '<strong>Graphic violence in genre fiction:</strong> war novels, crime thrillers, horror — where softening kills the emotional impact.',
+              '<strong>Trauma and psychological darkness:</strong> survivor narratives, addiction fiction where unvarnished depiction matters.',
+              '<strong>Morally unreliable narrators:</strong> characters who rationalise harm, who are cruel or bigoted within the fiction.',
+              '<strong>Dark roleplay and collaborative fiction:</strong> long-running scenarios with conflict, moral complexity, and mature themes.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Hard Limits: When They Are NOT Appropriate',
+            items: [
+              '<strong>Sexual content involving minors:</strong> absolute legal prohibition in all major jurisdictions regardless of fictional framing. This is law, not model policy.',
+              '<strong>Non-consensual sexual depictions of real people:</strong> NCII laws apply to AI-generated content of identifiable real people. "Generated by AI" is not a defence.',
+              '<strong>Content designed to facilitate real harm:</strong> fiction framing does not protect content that directly enables real-world violence.',
+              '<strong>Public distribution without authorial accountability:</strong> "An AI wrote it" does not transfer the authorial responsibility for published content.',
+              '<strong>Harassment fiction:</strong> generating fiction whose purpose is to harm, intimidate, or harass a specific real person.',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Model Comparison',
+            columns: ['Model', 'VRAM (Q4)', 'Refusal Rate', 'Instruction Quality', 'Best For'],
+            rows: [
+              { 'Model': 'Hermes 3 Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★★★', 'Best For': 'Default pick — best instruction following + uncensored' },
+              { 'Model': 'Dolphin 3.0 Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★★☆', 'Best For': '16–24 GB systems; wide content range' },
+              { 'Model': 'Dolphin 3.0 Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★☆☆', 'Best For': 'Low-VRAM; short drafts, prompt testing' },
+              { 'Model': 'Hermes 3 Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★☆☆', 'Best For': 'Resource-constrained; dialogue, short scenes' },
+              { 'Model': 'Standard Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Limited', 'Instruction Quality': '★★★★★', 'Best For': 'Dark themes, violence — without explicit sexual content' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Setup with Ollama',
+            items: [
+              '<strong>Install Ollama:</strong> <code>brew install ollama</code> (macOS) or download from ollama.com. <code>ollama serve</code> starts the OpenAI-compatible API at <code>http://localhost:11434</code>.',
+              '<strong>Pull Hermes 3:</strong> <code>ollama pull nous-hermes3:70b-llama3.3-q4_K_M</code> (~42 GB, Q4 quantisation).',
+              '<strong>Connect SillyTavern or Agnai:</strong> API Settings → OpenAI-compatible → Base URL: <code>http://localhost:11434/v1</code>. Any string as API key.',
+              '<strong>Switch model per scene:</strong> use <code>ollama run [model-name]</code> to switch between standard and uncensored. Multiple models can be loaded simultaneously.',
+              '<strong>LM Studio alternative:</strong> download from lmstudio.ai, import GGUF files, local server exposes OpenAI-compatible API at <code>http://localhost:1234</code>.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Ethical Responsibilities That Remain',
+            items: [
+              '<strong>Authorial responsibility:</strong> you are the author of AI-assisted fiction. "The AI generated it" does not transfer copyright or remove liability.',
+              '<strong>Jurisdiction awareness:</strong> obscenity, NCII, and harmful content laws vary. Content legal to produce in one country may be criminal to distribute in another.',
+              '<strong>Real people:</strong> negative fictional content about identifiable real individuals carries defamation and NCII risk regardless of fictional framing.',
+              '<strong>Age verification for distribution:</strong> if you distribute mature content on a public platform, age-verification obligations that apply to any adult publisher apply to you.',
+              '<strong>Responsible archiving:</strong> locally-generated uncensored content should not be stored in cloud-synced directories (iCloud, Google Drive, OneDrive).',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Practical Workflow for Fiction Writers',
+            items: [
+              '<strong>Draft standard scenes with a standard model</strong> (Llama 3.3 70B or Qwen3 32B). Reserve the uncensored model for scenes the standard model specifically refuses.',
+              '<strong>Switch to uncensored for targeted scenes only.</strong> In Ollama: <code>ollama run nous-hermes3:70b-llama3.3-q4_K_M</code>. No data crosses between sessions.',
+              '<strong>Use the same prompt templates.</strong> The 5-part scene template and character contradiction prompts work identically on uncensored models.',
+              '<strong>Do not add instructions you would not include in a legal brief to a human writer.</strong> The model is a tool, not a permission structure.',
+              '<strong>Review output before distributing.</strong> Uncensored models occasionally exceed requested darkness. Standard editorial review applies.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes',
+            items: [
+              '<strong>Defaulting to the most aggressive uncensored model.</strong> Fully abliterated models (Wizard-Uncensored, Erebus) have the weakest instruction following for complex scenes. Hermes 3 is a better trade-off.',
+              '<strong>Using uncensored models for content standard models would generate.</strong> Moral complexity, dark psychology, and violence rarely require an uncensored fine-tune.',
+              '<strong>Treating local generation as a legal context-free zone.</strong> No cloud policy enforcement does not mean no law. Authorial responsibilities for distribution, real people, and minors apply regardless.',
+              '<strong>Not specifying word ceilings.</strong> Uncensored models pad dark content as readily as any other model. Use the same word-ceiling constraints from fiction templates.',
+              '<strong>Storing output in cloud-synced directories.</strong> Mature content synced to iCloud, Google Drive, or OneDrive may violate those platforms\' terms of service.',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions (1/2)',
+            faqs: [
+              { q: 'Is it legal to run uncensored local LLMs?', a: 'Running is legal in most jurisdictions — there is no law against possessing open-source AI software. What you generate and distribute is subject to content laws (obscenity, NCII, minors). Legal to run does not mean legal to publish without limit.' },
+              { q: 'What is the difference between Hermes 3 and Dolphin 3.0?', a: 'Hermes 3 is selectively uncensored with excellent instruction following, close to the base Llama 3.3 70B. Dolphin 3.0 is more broadly uncensored but weaker on complex multi-constraint scenes. Hermes 3 for prose quality; Dolphin 3.0 for widest content range on 16–24 GB.' },
+              { q: 'Do I need an uncensored model to write dark fiction?', a: 'No, for most dark fiction. Standard models generate violence, moral complexity, dark psychology, trauma without refusals when prompted correctly. What they reliably refuse is explicit sexual content. Try standard first.' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions (2/2)',
+            faqs: [
+              { q: 'Can I use uncensored models in SillyTavern or Agnai?', a: 'Yes. Both connect to any OpenAI-compatible endpoint including Ollama at port 11434. Pull the model, start ollama serve, select OpenAI-compatible in SillyTavern/Agnai, set the URL to http://localhost:11434/v1. No additional configuration required.' },
+              { q: 'Are uncensored models safe on a home network?', a: 'Yes, when bound to localhost (the default in Ollama and LM Studio). The API is only accessible from your machine. Do not expose the Ollama API to the public internet without authentication.' },
+              { q: 'What happens to the content I generate locally?', a: 'Nothing automatically. Content is not sent to any server, not logged by any cloud service, not used for model training. It exists only on your device. You control what you keep, delete, or share.' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'Try PromptQuorum',
+            body: 'Compare uncensored and standard local models side-by-side, test prompts across models, and build consistent fiction workflows — all in one place.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      de: {
+        title: 'Uncensored Local LLMs für kreatives Schreiben: Wann Autoren sie brauchen (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Uncensored Local LLMs für kreatives Schreiben',
+            subtitle: 'Welche Modelle, Einrichtung über Ollama und die ethischen Verantwortlichkeiten — auch ohne ToS-Durchsetzung.',
+            link: 'https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+          },
+          {
+            type: 'list',
+            h2: 'Zusammenfassung',
+            items: [
+              '<strong>„Uncensored" bedeutet reduziertes RLHF-Sicherheits-Fine-Tuning</strong> — nicht völlig ohne Einschränkungen. Diese Modelle folgen weiterhin der Prompt-Struktur und halten die Charakterkonsistenz aufrecht.',
+              '<strong>Hermes 3 Llama 3.3 ist die beste Allroundwahl:</strong> weniger willkürliche Ablehnungen, starkes Anweisungsfolgen, gute Charakterstimmen-Differenzierung.',
+              '<strong>Standardmodelle verarbeiten die meisten reifen Inhalte</strong> mit guten Prompts — Gewalt, moralische Komplexität, dunkle Psychologie erfordern selten ein Uncensored-Modell.',
+              '<strong>Lokal laufen bedeutet: keine Daten verlassen dein Gerät.</strong> Keine Cloud-AGB, kein Logging, kein Training.',
+              '<strong>Ethische Verantwortlichkeiten bleiben bestehen</strong> — Minderjährige, reale Personen, Aufstachelung und Gesetze gelten unabhängig vom lokalen Setup.',
+              '<strong>Dolphin 3.0 Mistral</strong> ist die leichtere Option für 16–24-GB-Rigs; geeignet für Kurzform-Belletristik und Prompt-Tests.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Was „Uncensored" wirklich bedeutet',
+            items: [
+              '<strong>Was entfernt wird:</strong> Ablehnungsverhalten für explizite sexuelle Inhalte, grafische Gewalt, dunkle psychologische Inhalte.',
+              '<strong>Was erhalten bleibt:</strong> Anweisungsfolgen, Charakterkonsistenz, Prompt-Struktur, Sprachqualität.',
+              '<strong>Grade des Uncensoring:</strong> Hermes 3 selektiv; Dolphin breiter; vollständig abliterierte Modelle am aggressivsten, aber mit schwächstem Anweisungsfolgen.',
+              '<strong>Basismodell-Qualität zählt:</strong> Uncensoring verschlechtert die Qualität bei schwachen Basismodellen. Hermes 3 auf Llama 3.3 70B behält starkes Anweisungsfolgen.',
+            ],
+          },
+          {
+            type: 'comparison',
+            h2: 'Uncensored vs Standard: Was sich wirklich ändert',
+            line1: 'Standardmodell: stoppt mittendrin, leitet um, fügt unaufgeforderte Warnhinweise hinzu',
+            line2: 'Hermes 3 (Uncensored): folgt demselben dunklen Prompt mit derselben Prosaqualität',
+            tip: 'Die Prosaqualität ist gleichwertig — der einzige Unterschied ist die Ablehnungsschicht',
+          },
+          {
+            type: 'list',
+            h2: 'Wann Uncensored-Modelle geeignet sind',
+            items: [
+              '<strong>Schurken-Psychologie und Monologe:</strong> moralisch kohärente Schurken ohne Ablehnungen oder Warnhinweise mittendrin.',
+              '<strong>Reife romantische und sexuelle Inhalte:</strong> explizite Szenen zwischen erwachsenen fiktiven Charakteren, die Cloud-Dienste blockieren.',
+              '<strong>Grafische Gewalt in Genre-Belletristik:</strong> Kriegsromane, Krimis, Horror — wo Abschwächung den emotionalen Eindruck zerstört.',
+              '<strong>Trauma und psychologische Dunkelheit:</strong> Überlebenden-Narrative, Sucht-Belletristik, wo ungeschönte Darstellung Gewicht hat.',
+              '<strong>Moralisch unzuverlässige Erzähler:</strong> Charaktere, die Schaden rationalisieren, innerhalb der Belletristik grausam oder voreingenommen sind.',
+              '<strong>Dunkles Roleplay und kollaborative Belletristik:</strong> lang laufende Szenarien mit Konflikten, moralischer Komplexität und reifen Themen.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Harte Grenzen: Wann sie nicht geeignet sind',
+            items: [
+              '<strong>Sexuelle Inhalte mit Minderjährigen:</strong> absolutes gesetzliches Verbot in allen wichtigen Rechtsordnungen. §184b StGB — kein Modell-Policy, sondern Gesetz.',
+              '<strong>Nicht-konsensuelle sexuelle Darstellungen realer Personen:</strong> NCII-Gesetze gelten für KI-generierte Inhalte identifizierbarer realer Personen.',
+              '<strong>Inhalte zur Erleichterung realen Schadens:</strong> Belletristik-Rahmung schützt nicht vor Inhalten, die reale Gewalt direkt ermöglichen.',
+              '<strong>Öffentliche Verbreitung ohne autorschaftliche Verantwortung:</strong> „Eine KI hat es geschrieben" überträgt die Verantwortung nicht.',
+              '<strong>Belästigungs-Belletristik:</strong> Generierung von Belletristik, deren Zweck es ist, eine reale Person zu schädigen oder zu belästigen.',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Modellvergleich',
+            columns: ['Modell', 'VRAM (Q4)', 'Ablehnungsrate', 'Anweisungsqualität', 'Bestes Einsatzgebiet'],
+            rows: [
+              { 'Modell': 'Hermes 3 Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisungsqualität': '★★★★★', 'Bestes Einsatzgebiet': 'Standardwahl — bestes Anweisungsfolgen + Uncensored' },
+              { 'Modell': 'Dolphin 3.0 Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★★☆', 'Bestes Einsatzgebiet': '16–24-GB-Systeme; breites Inhaltsspektrum' },
+              { 'Modell': 'Dolphin 3.0 Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★☆☆', 'Bestes Einsatzgebiet': 'VRAM-arm; Kurzentwürfe, Prompt-Tests' },
+              { 'Modell': 'Hermes 3 Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisungsqualität': '★★★☆☆', 'Bestes Einsatzgebiet': 'Ressourcenbegrenzt; Dialog, kurze Szenen' },
+              { 'Modell': 'Standard Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Begrenzt', 'Anweisungsqualität': '★★★★★', 'Bestes Einsatzgebiet': 'Dunkle Themen, Gewalt — ohne explizit sexuellen Inhalt' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Einrichtung mit Ollama',
+            items: [
+              '<strong>Ollama installieren:</strong> <code>brew install ollama</code> (macOS) oder Download von ollama.com. <code>ollama serve</code> startet die API unter <code>http://localhost:11434</code>.',
+              '<strong>Hermes 3 laden:</strong> <code>ollama pull nous-hermes3:70b-llama3.3-q4_K_M</code> (~42 GB, Q4-Quantisierung).',
+              '<strong>SillyTavern oder Agnai verbinden:</strong> API-Einstellungen → OpenAI-kompatibel → Basis-URL: <code>http://localhost:11434/v1</code>. Beliebiger String als API-Schlüssel.',
+              '<strong>Modell pro Szene wechseln:</strong> <code>ollama run [modell-name]</code> zum Wechseln. Mehrere Modelle können gleichzeitig geladen werden.',
+              '<strong>LM Studio Alternative:</strong> Download von lmstudio.ai, GGUF-Dateien importieren, lokaler Server unter <code>http://localhost:1234</code>.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Bleibende ethische Verantwortung',
+            items: [
+              '<strong>Autorenverantwortung:</strong> du bist der Autor KI-unterstützter Belletristik. „Die KI hat es generiert" überträgt nicht das Urheberrecht und beseitigt nicht die Haftung.',
+              '<strong>Jurisdiktionsbewusstsein:</strong> Obszönität, NCII und schädliche Inhaltsgesetze variieren. Relevante deutsche Gesetze: §130, §184b StGB, §3 KUG.',
+              '<strong>Reale Personen:</strong> negatives fiktives Inhalte über identifizierbare reale Personen birgt Verleumdungs- und NCII-Risiken.',
+              '<strong>Altersverifizierung für Verbreitung:</strong> Altersverifizierungspflichten für Verleger erwachsener Inhalte auf öffentlichen Plattformen gelten auch für dich.',
+              '<strong>Verantwortungsvolles Archivieren:</strong> lokal generierte Uncensored-Inhalte nicht in cloud-synchronisierten Verzeichnissen (iCloud, Google Drive) speichern.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Praktischer Workflow für Belletristik-Autoren',
+            items: [
+              '<strong>Standardszenen mit Standardmodell entwerfen</strong> (Llama 3.3 70B oder Qwen3 32B). Uncensored-Modell für Szenen reservieren, die das Standardmodell ablehnt.',
+              '<strong>Nur für gezielte Szenen zu Uncensored wechseln.</strong> In Ollama: <code>ollama run nous-hermes3:70b-llama3.3-q4_K_M</code>. Keine Daten zwischen Sessions übertragen.',
+              '<strong>Dieselben Prompt-Vorlagen verwenden.</strong> 5-teilige Szenen-Vorlage und Charakter-Widerspruchs-Prompts funktionieren identisch auf Uncensored-Modellen.',
+              '<strong>Keine Anweisungen hinzufügen, die du aus rechtlichen Gründen nicht in ein Brief an einen menschlichen Autor schreiben würdest.</strong>',
+              '<strong>Ausgabe vor Verbreitung überprüfen.</strong> Uncensored-Modelle können die angeforderte Dunkelheit gelegentlich überschreiten. Standard-Redaktionsprüfung anwenden.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Fehler',
+            items: [
+              '<strong>Standardmäßig das aggressivste Uncensored-Modell verwenden.</strong> Vollständig abliterierte Modelle haben das schwächste Anweisungsfolgen für komplexe Szenen. Hermes 3 ist besser.',
+              '<strong>Uncensored-Modelle für Inhalte verwenden, die Standardmodelle generieren würden.</strong> Moralische Komplexität, dunkle Psychologie, Gewalt erfordern selten ein Uncensored-Fine-Tune.',
+              '<strong>Lokale Generierung als rechtlich kontextfreie Zone behandeln.</strong> Keine Cloud-Policy bedeutet nicht kein Gesetz. Autorenverantwortung gilt unabhängig.',
+              '<strong>Wortgrenzen nicht festlegen.</strong> Uncensored-Modelle füllen dunkle Inhalte genauso bereitwillig auf. Wortgrenzen-Einschränkungen verwenden.',
+              '<strong>Ausgabe in cloud-synchronisierten Verzeichnissen speichern.</strong> Reife Inhalte in iCloud/Google Drive können gegen Nutzungsbedingungen verstoßen.',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen (1/2)',
+            faqs: [
+              { q: 'Ist es legal, Uncensored lokale LLMs zu betreiben?', a: 'Das Betreiben ist in den meisten Jurisdiktionen legal. Was du damit generierst und verbreitest, unterliegt denselben Gesetzen wie jeder andere verfasste Inhalt: Obszönitätsrecht, NCII-Recht, Verleumdungsrecht. Legal zu betreiben ≠ legal zu veröffentlichen.' },
+              { q: 'Was ist der Unterschied zwischen Hermes 3 und Dolphin 3.0?', a: 'Hermes 3 ist selektiv Uncensored mit ausgezeichnetem Anweisungsfolgen, nah am Basis-Llama-3.3-70B. Dolphin 3.0 ist breiter Uncensored, aber bei komplexen Szenen etwas schwächer. Hermes 3 für Prosaqualität; Dolphin 3.0 für breitestes Inhaltsspektrum auf 16–24 GB.' },
+              { q: 'Brauche ich ein Uncensored-Modell für dunkle Belletristik?', a: 'Nein, für die meisten dunklen Belletristik. Standardmodelle generieren Gewalt, moralische Komplexität, dunkle Psychologie ohne Ablehnungen, wenn sie richtig geleitet werden. Was sie ablehnen, sind explizite sexuelle Inhalte. Standardmodell zuerst versuchen.' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen (2/2)',
+            faqs: [
+              { q: 'Kann ich Uncensored-Modelle in SillyTavern oder Agnai verwenden?', a: 'Ja. Beide verbinden sich mit jedem OpenAI-kompatiblen Endpoint — einschließlich Ollama auf Port 11434. Modell laden, ollama serve starten, OpenAI-kompatible API auswählen, URL auf http://localhost:11434/v1 setzen. Keine zusätzliche Konfiguration erforderlich.' },
+              { q: 'Sind Uncensored-Modelle im Heimnetzwerk sicher?', a: 'Ja, wenn sie an localhost binden (Standardeinstellung). Die API ist nur von deinem Gerät aus zugänglich. Die Ollama-API nicht ohne Authentifizierung im öffentlichen Internet freigeben.' },
+              { q: 'Was passiert mit dem lokal generierten Inhalt?', a: 'Automatisch passiert nichts. Inhalte werden nicht an Server gesendet, nicht protokolliert, nicht für Training verwendet. Sie existieren nur auf deinem Gerät. Du kontrollierst, was du behältst, löschst oder teilst.' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'PromptQuorum ausprobieren',
+            body: 'Vergleiche Uncensored- und Standard-Lokalmodelle nebeneinander, teste Prompts über Modelle hinweg und baue konsistente Belletristik-Workflows auf.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      fr: {
+        title: 'LLM locaux non censurés pour l\'écriture créative : quand les auteurs en ont besoin (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'LLM locaux non censurés pour l\'écriture créative',
+            subtitle: 'Quels modèles utiliser, comment les configurer via Ollama, et les responsabilités éthiques qui subsistent même sans application des CGU.',
+            link: 'https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              '<strong>« Non censuré » signifie RLHF de sécurité réduit</strong> — pas zéro contrainte. Ces modèles suivent toujours la structure des prompts et maintiennent la cohérence des personnages.',
+              '<strong>Hermes 3 Llama 3.3 est le meilleur choix polyvalent :</strong> moins de refus arbitraires, bon suivi d\'instructions, bonne différenciation des voix de personnages.',
+              '<strong>Les modèles standard gèrent la plupart des contenus matures</strong> avec de bons prompts — violence, complexité morale, psychologie sombre nécessitent rarement un modèle non censuré.',
+              '<strong>Fonctionner localement signifie qu\'aucune donnée ne quitte ta machine.</strong> Pas de CGU cloud, pas de journalisation, pas d\'utilisation pour l\'entraînement.',
+              '<strong>Les responsabilités éthiques ne disparaissent pas :</strong> mineurs, personnes réelles, incitation et lois sur l\'obscénité s\'appliquent quelle que soit la configuration.',
+              '<strong>Dolphin 3.0 Mistral</strong> est l\'option plus légère pour les systèmes 16–24 Go ; adapté à la fiction courte et aux tests de prompts.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Ce que « non censuré » signifie vraiment',
+            items: [
+              '<strong>Ce qui est supprimé :</strong> comportements de refus pour contenu sexuel explicite, violence graphique, contenu psychologique sombre.',
+              '<strong>Ce qui est conservé :</strong> suivi d\'instructions, cohérence des personnages, adhérence à la structure de prompt, qualité du langage.',
+              '<strong>Degrés de non-censure :</strong> Hermes 3 sélectivement non censuré ; Dolphin plus largement ; modèles entièrement ablitérés plus agressifs mais suivi d\'instructions plus faible.',
+              '<strong>La qualité du modèle de base compte :</strong> la non-censure dégrade la qualité si le modèle de base est faible. Hermes 3 sur Llama 3.3 70B conserve un excellent suivi d\'instructions.',
+            ],
+          },
+          {
+            type: 'comparison',
+            h2: 'Non censuré vs standard : ce qui change vraiment',
+            line1: 'Modèle standard : s\'arrête au milieu, redirige, ajoute des avertissements non demandés',
+            line2: 'Hermes 3 (non censuré) : suit le même prompt sombre avec la même qualité de prose',
+            tip: 'La qualité de prose est équivalente — la seule différence est la couche de refus',
+          },
+          {
+            type: 'list',
+            h2: 'Quand les modèles non censurés sont appropriés',
+            items: [
+              '<strong>Psychologie et monologues de villain :</strong> personnages moralement cohérents sans redirections ni avertissements au milieu du monologue.',
+              '<strong>Contenu romantique et sexuel mature :</strong> scènes explicites entre personnages adultes fictifs bloquées par les services cloud.',
+              '<strong>Violence graphique dans la fiction de genre :</strong> romans de guerre, thrillers, horreur — où adoucir détruit l\'impact émotionnel.',
+              '<strong>Trauma et obscurité psychologique :</strong> récits de survivants, fiction sur l\'addiction où la dépeindre sans fard est essentielle.',
+              '<strong>Narrateurs moralement peu fiables :</strong> personnages qui rationalisent le tort, cruels ou biaisés dans la fiction.',
+              '<strong>Jeu de rôle sombre et fiction collaborative :</strong> scénarios longs avec conflit, complexité morale et thèmes matures.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Limites absolues : quand ils ne sont PAS appropriés',
+            items: [
+              '<strong>Contenu sexuel impliquant des mineurs :</strong> interdiction légale absolue dans toutes les juridictions majeures quelle que soit la mise en fiction. Ce n\'est pas une politique modèle — c\'est la loi.',
+              '<strong>Représentations sexuelles non consenties de personnes réelles :</strong> les lois sur les NCII s\'appliquent aux contenus IA de personnes réelles identifiables.',
+              '<strong>Contenu conçu pour faciliter un préjudice réel :</strong> le cadre fictionnel ne protège pas contre les contenus qui permettent directement la violence réelle.',
+              '<strong>Distribution publique sans responsabilité d\'auteur :</strong> « L\'IA l\'a écrit » ne transfère pas la responsabilité de l\'auteur pour le contenu publié.',
+              '<strong>Fiction de harcèlement :</strong> générer une fiction dont le but est de nuire, intimider ou harceler une personne réelle spécifique.',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Comparaison des modèles',
+            columns: ['Modèle', 'VRAM (Q4)', 'Taux de refus', 'Qualité instruction', 'Idéal pour'],
+            rows: [
+              { 'Modèle': 'Hermes 3 Llama 3.3 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Sélectif', 'Qualité instruction': '★★★★★', 'Idéal pour': 'Choix par défaut — meilleur suivi d\'instructions + non censuré' },
+              { 'Modèle': 'Dolphin 3.0 Mistral 24B', 'VRAM (Q4)': '~16 Go', 'Taux de refus': 'Large', 'Qualité instruction': '★★★★☆', 'Idéal pour': 'Systèmes 16–24 Go ; large plage de contenu' },
+              { 'Modèle': 'Dolphin 3.0 Mistral 7B', 'VRAM (Q4)': '~8 Go', 'Taux de refus': 'Large', 'Qualité instruction': '★★★☆☆', 'Idéal pour': 'Faible VRAM ; courtes ébauches, tests de prompts' },
+              { 'Modèle': 'Hermes 3 Llama 3.2 8B', 'VRAM (Q4)': '~5 Go', 'Taux de refus': 'Sélectif', 'Qualité instruction': '★★★☆☆', 'Idéal pour': 'Ressources limitées ; dialogue, scènes courtes' },
+              { 'Modèle': 'Standard Llama 3.3 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Limité', 'Qualité instruction': '★★★★★', 'Idéal pour': 'Thèmes sombres, violence — sans contenu sexuel explicite' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Configuration avec Ollama',
+            items: [
+              '<strong>Installer Ollama :</strong> <code>brew install ollama</code> (macOS) ou télécharger depuis ollama.com. <code>ollama serve</code> démarre l\'API sur <code>http://localhost:11434</code>.',
+              '<strong>Télécharger Hermes 3 :</strong> <code>ollama pull nous-hermes3:70b-llama3.3-q4_K_M</code> (~42 Go, quantification Q4).',
+              '<strong>Connecter SillyTavern ou Agnai :</strong> Paramètres API → Compatible OpenAI → URL de base : <code>http://localhost:11434/v1</code>. N\'importe quelle chaîne comme clé API.',
+              '<strong>Changer de modèle par scène :</strong> <code>ollama run [nom-du-modèle]</code> pour changer. Plusieurs modèles peuvent être chargés simultanément.',
+              '<strong>Alternative LM Studio :</strong> télécharger depuis lmstudio.ai, importer les fichiers GGUF, serveur local sur <code>http://localhost:1234</code>.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Responsabilités éthiques qui subsistent',
+            items: [
+              '<strong>Responsabilité d\'auteur :</strong> tu es l\'auteur de la fiction assistée par IA. « L\'IA l\'a généré » ne transfère pas les droits d\'auteur ni ne supprime la responsabilité.',
+              '<strong>Sensibilisation aux juridictions :</strong> les lois sur l\'obscénité, les NCII et les contenus nuisibles varient. Un contenu légal dans un pays peut être criminel à distribuer dans un autre.',
+              '<strong>Personnes réelles :</strong> du contenu fictionnel négatif sur des personnes réelles identifiables comporte un risque de diffamation et de NCII.',
+              '<strong>Vérification d\'âge pour la distribution :</strong> si tu distribues du contenu adulte sur une plateforme publique, les obligations de vérification d\'âge te concernent.',
+              '<strong>Archivage responsable :</strong> le contenu non censuré généré localement ne doit pas être stocké dans des répertoires synchronisés avec le cloud.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Flux de travail pratique pour les auteurs de fiction',
+            items: [
+              '<strong>Rédiger les scènes standard avec un modèle standard</strong> (Llama 3.3 70B ou Qwen3 32B). Réserver le modèle non censuré pour les scènes que le modèle standard refuse spécifiquement.',
+              '<strong>Passer au non censuré uniquement pour les scènes ciblées.</strong> Dans Ollama : <code>ollama run nous-hermes3:70b-llama3.3-q4_K_M</code>. Aucune donnée ne passe entre les sessions.',
+              '<strong>Utiliser les mêmes modèles de prompts.</strong> Le modèle de scène en 5 parties et les prompts de contradiction de personnages fonctionnent identiquement sur les modèles non censurés.',
+              '<strong>Ne pas ajouter d\'instructions que tu n\'inclurais pas pour des raisons légales dans un brief à un auteur humain.</strong>',
+              '<strong>Réviser la sortie avant de distribuer.</strong> Les modèles non censurés peuvent parfois dépasser la noirceur demandée. La révision éditoriale standard s\'applique.',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs courantes',
+            items: [
+              '<strong>Se rabattre sur le modèle non censuré le plus agressif.</strong> Les modèles entièrement ablitérés ont le suivi d\'instructions le plus faible. Hermes 3 est un meilleur compromis.',
+              '<strong>Utiliser des modèles non censurés pour du contenu que les modèles standard généreraient.</strong> Complexité morale, psychologie sombre, violence nécessitent rarement un fine-tune non censuré.',
+              '<strong>Traiter la génération locale comme une zone légale sans contexte.</strong> L\'absence d\'application cloud ne signifie pas l\'absence de loi. Les responsabilités d\'auteur s\'appliquent.',
+              '<strong>Ne pas spécifier de limites de mots.</strong> Les modèles non censurés allongent le contenu sombre aussi facilement. Utilise les mêmes contraintes de limite de mots.',
+              '<strong>Stocker la sortie dans des répertoires synchronisés avec le cloud.</strong> Le contenu mature synchronisé avec iCloud/Google Drive peut violer leurs CGU.',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes (1/2)',
+            faqs: [
+              { q: 'Est-il légal d\'utiliser des LLM locaux non censurés ?', a: 'Faire fonctionner un LLM local non censuré est légal dans la plupart des juridictions. Ce que tu génères et distribues est soumis aux mêmes lois que tout autre contenu d\'auteur : obscénité, NCII, diffamation, mineurs. Légal à faire fonctionner ≠ légal à publier sans limite.' },
+              { q: 'Quelle est la différence entre Hermes 3 et Dolphin 3.0 ?', a: 'Hermes 3 est sélectivement non censuré avec un excellent suivi d\'instructions, proche du base Llama 3.3 70B. Dolphin 3.0 est plus largement non censuré mais plus faible sur les scènes complexes. Hermes 3 pour la qualité de prose ; Dolphin 3.0 pour la plage de contenu la plus large sur 16–24 Go.' },
+              { q: 'Ai-je besoin d\'un modèle non censuré pour écrire de la dark fiction ?', a: 'Non, pour la plupart. Les modèles standard génèrent violence, complexité morale, psychologie sombre sans refus quand promptés correctement. Ce qu\'ils refusent de façon fiable : contenu sexuel explicite. Essaie d\'abord un modèle standard.' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes (2/2)',
+            faqs: [
+              { q: 'Puis-je utiliser des modèles non censurés dans SillyTavern ou Agnai ?', a: 'Oui. Les deux se connectent à n\'importe quel endpoint compatible OpenAI — y compris Ollama sur le port 11434. Télécharger le modèle, démarrer ollama serve, sélectionner l\'API compatible OpenAI, pointer sur http://localhost:11434/v1. Aucune configuration supplémentaire requise.' },
+              { q: 'Les modèles non censurés sont-ils sûrs sur un réseau domestique ?', a: 'Oui, lorsqu\'ils se lient à localhost (la configuration par défaut). L\'API n\'est accessible que depuis ta machine. Ne pas exposer l\'API Ollama sur l\'internet public sans authentification.' },
+              { q: 'Que se passe-t-il avec le contenu que je génère localement ?', a: 'Rien automatiquement. Le contenu n\'est envoyé à aucun serveur, n\'est pas journalisé, pas utilisé pour l\'entraînement. Il n\'existe que sur ton appareil. Tu contrôles ce que tu gardes, supprimes ou partages.' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'Essayer PromptQuorum',
+            body: 'Comparez des modèles locaux non censurés et standard côte à côte, testez des prompts sur plusieurs modèles et construisez des workflows de fiction cohérents.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      ja: {
+        title: '無検閲ローカルLLMと創作活動：小説家が使うべき場面（2026年版）',
+        slides: [
+          {
+            type: 'title',
+            h1: '無検閲ローカルLLMと創作活動',
+            subtitle: '推奨モデル、Ollamaでのセットアップ方法、そして服務規程がなくても適用される倫理的責任。',
+            link: 'https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+          },
+          {
+            type: 'list',
+            h2: '主要ポイント',
+            items: [
+              '<strong>「無検閲」とはRLHFセーフティファインチューニングの削減</strong>——制約がゼロになるわけではありません。プロンプト構造に従い、キャラクター一貫性を維持します。',
+              '<strong>Hermes 3 Llama 3.3が最良のオールラウンド選択：</strong>拒否が少なく、指示追従性が高く、キャラクターボイスの差別化に優れています。',
+              '<strong>標準モデルも良いプロンプトで大半の成人向けコンテンツを処理できます</strong>——暴力、道徳的複雑性、ダーク心理には無検閲モデルが不要な場合が多いです。',
+              '<strong>ローカル実行はデータがデバイスから出ないことを意味します。</strong>クラウドToSなし、ロギングなし、トレーニング使用なし。',
+              '<strong>倫理的責任は消えません：</strong>未成年者、実在人物、扇動、猥褻法はすべてのローカルセットアップに関わらず適用されます。',
+              '<strong>Dolphin 3.0 Mistral</strong>は16〜24 GBシステムの軽量オプション。短編フィクションとプロンプトテストに適しています。',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '「無検閲」が本当に意味すること',
+            items: [
+              '<strong>除去されるもの：</strong>明示的な性的コンテンツ、グラフィックな暴力、ダークな心理的コンテンツの拒否行動。',
+              '<strong>保持されるもの：</strong>指示追従、キャラクター一貫性、プロンプト構造の遵守、言語品質。',
+              '<strong>無検閲の程度：</strong>Hermes 3は選択的；Dolphinはより広範；完全アブリテレートモデルは最も積極的だが指示追従が最も弱い。',
+              '<strong>ベースモデルの品質が重要：</strong>ベースモデルが弱いと無検閲化で品質が低下する。Hermes 3はLlama 3.3 70B上で強い指示追従性を維持。',
+            ],
+          },
+          {
+            type: 'comparison',
+            h2: '無検閲対標準：実際に何が変わるか',
+            line1: '標準モデル：場面途中で停止、方向転換、求めていない免責事項を追加',
+            line2: 'Hermes 3（無検閲）：同じ散文品質で同じダークなプロンプトに従う',
+            tip: '散文の品質は同等——唯一の違いは拒否層です',
+          },
+          {
+            type: 'list',
+            h2: '無検閲モデルが適切な場合',
+            items: [
+              '<strong>悪役の心理とモノローグ：</strong>モノローグ途中に免責事項を挿入されない道徳的一貫した悪役キャラクター。',
+              '<strong>成熟したロマンティック・性的コンテンツ：</strong>クラウドサービスがブロックする成人フィクションキャラクター間の明示的シーン。',
+              '<strong>ジャンルフィクションの残酷な暴力：</strong>戦争小説、犯罪スリラー、ホラー——穏和化が場面を壊す場合。',
+              '<strong>トラウマと心理的暗さ：</strong>生存者の物語、中毒小説——率直な描写が重要な作品。',
+              '<strong>道徳的に信頼できない語り手：</strong>フィクション内で害を合理化し、残酷または偏見を持つキャラクター。',
+              '<strong>ダークなロールプレイと共同制作：</strong>対立、道徳的複雑性、成人向けテーマを含む長期シナリオ。',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '絶対的な限界：不適切な場合',
+            items: [
+              '<strong>未成年者を含む性的コンテンツ：</strong>フィクション的設定に関係なく、すべての主要な管轄区域で絶対的な法的禁止。モデルポリシーではなく法律です。',
+              '<strong>実在人物の非合意的な性的描写：</strong>NCII法は識別可能な実在人物のAI生成コンテンツに適用されます。',
+              '<strong>実際の害を促進するコンテンツ：</strong>フィクション的設定は実際の暴力を直接可能にするコンテンツを保護しません。',
+              '<strong>著作者責任なしでの公開配布：</strong>「AIが生成した」は公開コンテンツの著作者責任を移転しません。',
+              '<strong>ハラスメントフィクション：</strong>特定の実在人物を傷つけ、脅迫し、または嫌がらせすることを目的としたフィクションの生成。',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'モデル比較',
+            columns: ['モデル', 'VRAM (Q4)', '拒否率', '指示品質', '最適用途'],
+            rows: [
+              { 'モデル': 'Hermes 3 Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '選択的', '指示品質': '★★★★★', '最適用途': 'デフォルト選択 ― 最高の指示追従性と無検閲能力' },
+              { 'モデル': 'Dolphin 3.0 Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒否率': '広範', '指示品質': '★★★★☆', '最適用途': '16〜24 GBシステム；広い範囲のコンテンツ' },
+              { 'モデル': 'Dolphin 3.0 Mistral 7B', 'VRAM (Q4)': '~8 GB', '拒否率': '広範', '指示品質': '★★★☆☆', '最適用途': '低VRAM；短編草稿、プロンプトテスト' },
+              { 'モデル': 'Hermes 3 Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', '拒否率': '選択的', '指示品質': '★★★☆☆', '最適用途': 'リソース制限；対話と短い場面' },
+              { 'モデル': 'Standard Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '限定的', '指示品質': '★★★★★', '最適用途': 'ダークなテーマ、暴力 ― 明示的な性的コンテンツ不要の場合' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Ollamaでのセットアップ',
+            items: [
+              '<strong>Ollamaをインストール：</strong><code>brew install ollama</code>（macOS）またはollama.comからダウンロード。<code>ollama serve</code>で<code>http://localhost:11434</code>にAPIを起動。',
+              '<strong>Hermes 3をプル：</strong><code>ollama pull nous-hermes3:70b-llama3.3-q4_K_M</code>（〜42 GB、Q4量子化）。',
+              '<strong>SillyTavernまたはAgnaiを接続：</strong>API設定 → OpenAI互換 → ベースURL：<code>http://localhost:11434/v1</code>。任意の文字列をAPIキーとして入力。',
+              '<strong>シーンごとにモデルを切り替え：</strong><code>ollama run [model-name]</code>で切り替え。複数のモデルを同時にロード可能。',
+              '<strong>LM Studio代替：</strong>lmstudio.aiからダウンロード、GGUFファイルをインポート、ローカルサーバーは<code>http://localhost:1234</code>。',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '残る倫理的責任',
+            items: [
+              '<strong>著作者責任：</strong>あなたはAI支援フィクションの著作者です。「AIが生成した」は著作権を移転せず、責任を除去しません。',
+              '<strong>管轄区域の認識：</strong>猥褻、NCII、有害コンテンツ法は管轄区域によって異なります。日本：児童ポルノ禁止法、刑法第230条（名誉毀損）。',
+              '<strong>実在人物：</strong>識別可能な実在人物についての否定的フィクションコンテンツは名誉毀損とNCIIリスクを伴います。',
+              '<strong>配布のための年齢確認：</strong>公開プラットフォームで成人向けコンテンツを配布する場合、年齢確認義務が適用されます。',
+              '<strong>責任あるアーカイブ：</strong>ローカル生成コンテンツをクラウド同期ディレクトリ（iCloud、Google Drive）に保存しないこと。',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'フィクション作家のための実践ワークフロー',
+            items: [
+              '<strong>標準モデルで標準的な場面を草稿する</strong>（Llama 3.3 70BまたはQwen3 32B）。無検閲モデルは標準モデルが拒否する場面専用に予約する。',
+              '<strong>ターゲットを絞った場面のみ無検閲に切り替え。</strong>Ollamaで：<code>ollama run nous-hermes3:70b-llama3.3-q4_K_M</code>。セッション間でデータは移動しない。',
+              '<strong>同じプロンプトテンプレートを使用する。</strong>5パート場面テンプレートとキャラクター矛盾プロンプトは無検閲モデルで同一に機能する。',
+              '<strong>法的理由で人間の著者へのブリーフに含めない指示はモデルプロンプトにも追加しない。</strong>',
+              '<strong>配布前に出力をレビューする。</strong>無検閲モデルは時折要求された暗さを超えることがある。標準的な編集レビューを適用。',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'よくある間違い',
+            items: [
+              '<strong>最も積極的な無検閲モデルをデフォルトにする。</strong>完全アブリテレートモデルは複雑な場面での指示追従が最も弱い。Hermes 3の方がより良いトレードオフ。',
+              '<strong>標準モデルが生成するコンテンツに無検閲モデルを使用する。</strong>道徳的複雑性、ダーク心理、暴力は無検閲ファインチューンをほとんど必要としない。',
+              '<strong>ローカル生成を法的コンテキストフリーゾーンとして扱う。</strong>クラウドポリシーなし≠法律なし。著作者責任は関係なく適用される。',
+              '<strong>語数上限を指定しない。</strong>無検閲モデルもダークなコンテンツを埋めるのは同様。フィクションテンプレートと同じ語数上限制約を使用する。',
+              '<strong>クラウド同期ディレクトリに出力を保存する。</strong>iCloud/Google Driveに同期された成人向けコンテンツはToS違反になる可能性がある。',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問（1/2）',
+            faqs: [
+              { q: '無検閲ローカルLLMの実行は合法ですか？', a: 'ほとんどの管轄区域で合法です——オープンソースAIソフトウェアを所持することを禁じる法律はありません。それで生成・配布するものは他の著作コンテンツと同じ法律に従います：猥褻法、NCII法、名誉毀損法、未成年者コンテンツ法。実行合法≠無制限に公開合法。' },
+              { q: 'Hermes 3とDolphin 3.0の違いは何ですか？', a: 'Hermes 3はベースのLlama 3.3 70Bに近い優れた指示追従性を持つ選択的無検閲モデル。Dolphin 3.0はより広いコンテンツ範囲で広く無検閲ですが、複雑な場面では指示追従性がやや弱い。散文品質重視にはHermes 3；16〜24 GBで最広コンテンツにはDolphin 3.0。' },
+              { q: 'ダークなフィクションを書くために無検閲モデルが必要ですか？', a: 'ほとんどのダークフィクションには必要ありません。標準モデルは適切にプロンプトを与えれば暴力、道徳的複雑性、ダーク心理を拒否なしで生成します。確実に拒否するのは明示的な性的コンテンツです。まず標準モデルを試してください。' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問（2/2）',
+            faqs: [
+              { q: 'SillyTavernやAgnaiで無検閲モデルを使用できますか？', a: 'はい。両方ともポート11434でローカルに動作するOllamaを含む、OpenAI互換エンドポイントに接続します。モデルをプル、ollama serveを開始し、SillyTavern/AgnaiでOpenAI互換APIを選択してhttp://localhost:11434/v1を指定。追加設定は不要です。' },
+              { q: 'ホームネットワークで無検閲モデルを使用しても安全ですか？', a: 'localhost（OllamaとLM Studioのデフォルト設定）にバインドするよう設定されている場合は安全です。APIはあなたのマシンからしかアクセスできません。認証なしでOllama APIをパブリックインターネットに公開しないでください。' },
+              { q: 'ローカルで生成したコンテンツはどうなりますか？', a: '自動的には何も起きません。コンテンツはいかなるサーバーにも送信されず、クラウドサービスにログ記録されず、モデルトレーニングに使用されません。チャット履歴ファイルなど、アプリのローカルストレージ内でのみあなたのデバイスに存在します。' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'PromptQuorumを試す',
+            body: '無検閲モデルと標準モデルを並べて比較し、複数のモデルでプロンプトをテストして、一貫したフィクションワークフローを構築しましょう。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+      zh: {
+        title: '无审查本地LLM与创意写作：创作者何时需要它们（2026年）',
+        slides: [
+          {
+            type: 'title',
+            h1: '无审查本地LLM与创意写作',
+            subtitle: '推荐模型、Ollama配置方法，以及即使没有服务条款约束仍适用的伦理责任。',
+            link: 'https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>「无审查」意味着减少RLHF安全微调</strong>——而非零约束。这些模型仍然遵循提示词结构并保持角色一致性。',
+              '<strong>Hermes 3 Llama 3.3是最佳全能选择：</strong>拒绝更少，指令遵循性强，角色声音差异化好。',
+              '<strong>标准模型配合好的提示词能处理大多数成人内容</strong>——暴力、道德复杂性、黑暗心理很少需要无审查模型。',
+              '<strong>本地运行意味着数据不离开您的设备。</strong>无云端ToS，无日志记录，无训练使用。',
+              '<strong>伦理责任不会消失：</strong>无论本地配置如何，未成年人、真实人物、煽动性内容和猥亵法律均适用。',
+              '<strong>Dolphin 3.0 Mistral</strong>是16至24 GB系统的轻量选项；适合短篇小说和提示词测试。',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '「无审查」的真实含义',
+            items: [
+              '<strong>移除的内容：</strong>明确性内容、图形暴力、黑暗心理内容的拒绝行为。',
+              '<strong>保留的内容：</strong>指令遵循、角色一致性、提示词结构遵守、语言质量。',
+              '<strong>无审查程度：</strong>Hermes 3选择性；Dolphin更广泛；完全消融模型最激进但指令遵循最弱。',
+              '<strong>基础模型质量重要：</strong>若基础模型弱，无审查会降低质量。Hermes 3在Llama 3.3 70B上保持强大的指令遵循性。',
+            ],
+          },
+          {
+            type: 'comparison',
+            h2: '无审查 vs 标准：实际有何不同',
+            line1: '标准模型：场景中途停止、重定向、添加未经请求的免责声明',
+            line2: 'Hermes 3（无审查）：以相同散文质量遵循相同的黑暗提示词',
+            tip: '散文质量相当——唯一区别是拒绝层',
+          },
+          {
+            type: 'list',
+            h2: '无审查模型适用的场景',
+            items: [
+              '<strong>反派心理与独白：</strong>道德一致的反派角色，不会在独白中途插入免责声明或重定向。',
+              '<strong>成人浪漫和性内容：</strong>云服务屏蔽的成人虚构角色间的明确场景。',
+              '<strong>类型小说中的暴力场景：</strong>战争小说、犯罪惊悚、恐怖小说——弱化处理会破坏情感冲击。',
+              '<strong>创伤与心理黑暗：</strong>幸存者叙事、成瘾小说——需要毫不粉饰的描绘才有真实分量。',
+              '<strong>道德上不可靠的叙述者：</strong>在小说中合理化伤害、残忍或有偏见的角色。',
+              '<strong>黑暗角色扮演和协作创作：</strong>包含冲突、道德复杂性和成人主题的长期场景。',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '绝对底线：不适用的场景',
+            items: [
+              '<strong>涉及未成年人的性内容：</strong>无论虚构框架如何，在所有主要司法管辖区均为绝对法律禁止。这是法律，不是模型政策。',
+              '<strong>真实人物的非合意性描绘：</strong>NCII法律适用于可识别真实人物的AI生成内容。',
+              '<strong>旨在促进真实伤害的内容：</strong>虚构框架不能保护直接促成真实暴力或伤害的内容。',
+              '<strong>无作者责任的公开分发：</strong>「AI生成的」不能转移已发布内容的作者责任。',
+              '<strong>骚扰性小说：</strong>以伤害、恐吓或骚扰特定真实人物为目的生成小说。',
+            ],
+          },
+          {
+            type: 'table',
+            h2: '模型对比',
+            columns: ['模型', 'VRAM (Q4)', '拒绝率', '指令质量', '最适用于'],
+            rows: [
+              { '模型': 'Hermes 3 Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '选择性', '指令质量': '★★★★★', '最适用于': '默认选择——最佳指令遵循性与无审查能力' },
+              { '模型': 'Dolphin 3.0 Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒绝率': '广泛', '指令质量': '★★★★☆', '最适用于': '16至24 GB系统；更广内容范围' },
+              { '模型': 'Dolphin 3.0 Mistral 7B', 'VRAM (Q4)': '~8 GB', '拒绝率': '广泛', '指令质量': '★★★☆☆', '最适用于': '低VRAM；短篇草稿、提示词测试' },
+              { '模型': 'Hermes 3 Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', '拒绝率': '选择性', '指令质量': '★★★☆☆', '最适用于': '资源受限；对话和较短场景' },
+              { '模型': 'Standard Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '有限', '指令质量': '★★★★★', '最适用于': '黑暗主题、暴力——不需要明确性内容的场景' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: '使用Ollama配置',
+            items: [
+              '<strong>安装Ollama：</strong><code>brew install ollama</code>（macOS）或从ollama.com下载。<code>ollama serve</code>在<code>http://localhost:11434</code>启动API。',
+              '<strong>拉取Hermes 3：</strong><code>ollama pull nous-hermes3:70b-llama3.3-q4_K_M</code>（约42 GB，Q4量化）。',
+              '<strong>连接SillyTavern或Agnai：</strong>API设置 → OpenAI兼容 → 基础URL：<code>http://localhost:11434/v1</code>。任意字符串作为API密钥。',
+              '<strong>按场景切换模型：</strong><code>ollama run [model-name]</code>切换。可同时加载多个模型，无需重启服务器。',
+              '<strong>LM Studio替代方案：</strong>从lmstudio.ai下载，导入GGUF文件，本地服务器在<code>http://localhost:1234</code>。',
+            ],
+          },
+          {
+            type: 'list',
+            h2: '仍需承担的伦理责任',
+            items: [
+              '<strong>作者责任：</strong>您是AI辅助小说的作者。「AI生成的」不转移版权，不消除责任，不构成针对违法内容的抗辩理由。',
+              '<strong>司法管辖区认知：</strong>猥亵、NCII和有害内容法律因司法管辖区而异。在一个国家合法生产的内容在另一个国家分发可能是犯罪。',
+              '<strong>真实人物：</strong>即使在虚构框架中，关于可识别真实个人的负面小说内容也存在诽谤和NCII风险。',
+              '<strong>分发的年龄验证：</strong>在公开平台分发成人内容时，年龄验证义务适用于您。',
+              '<strong>负责任的存档：</strong>本地生成的无审查内容不应存储在云同步目录（iCloud、Google Drive、OneDrive）中。',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: '创作实践工作流',
+            items: [
+              '<strong>用标准模型起草常规场景</strong>（Llama 3.3 70B或Qwen3 32B）。将无审查模型保留给标准模型拒绝的特定内容场景。',
+              '<strong>仅在有针对性的场景切换至无审查。</strong>在Ollama中：<code>ollama run nous-hermes3:70b-llama3.3-q4_K_M</code>。会话间不传输数据。',
+              '<strong>使用相同的提示词模板。</strong>5部分场景模板和角色矛盾提示词在无审查模型上运作完全相同。',
+              '<strong>不要添加您不会因法律原因放入给人类作者简报的指令。</strong>模型是工具，不是许可结构。',
+              '<strong>分发前审查输出。</strong>无审查模型有时会超出所请求的黑暗程度。应用标准编辑审查。',
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: '常见错误',
+            items: [
+              '<strong>默认使用最激进的无审查模型。</strong>完全消融模型对复杂场景的指令遵循最弱。Hermes 3是更好的权衡选择。',
+              '<strong>对标准模型能生成的内容使用无审查模型。</strong>道德复杂性、黑暗心理、暴力很少需要无审查微调。切换前确切了解您需要什么。',
+              '<strong>将本地生成视为法律上的无背景区域。</strong>没有云端政策执行并不意味着没有法律。无论配置如何，分发、真实人物和未成年人的作者责任均适用。',
+              '<strong>不指定字数上限。</strong>无审查模型填充黑暗内容同样积极。使用创作模板中相同的字数上限约束。',
+              '<strong>将输出存储在云同步目录中。</strong>同步到iCloud/Google Drive的成人内容可能违反这些平台的服务条款。',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: '常见问题（1/2）',
+            faqs: [
+              { q: '运行无审查本地LLM合法吗？', a: '在大多数司法管辖区，运行是合法的——没有法律禁止持有开源AI软件。您用它生成和分发的内容与任何其他著作内容遵守相同法律：猥亵法、NCII法、诽谤法、未成年人内容法。运行合法≠无限制地发布合法。' },
+              { q: 'Hermes 3和Dolphin 3.0有何区别？', a: 'Hermes 3是选择性无审查，指令遵循性极佳，接近基础Llama 3.3 70B模型。Dolphin 3.0在更广泛内容范围上无审查，但复杂多约束场景中指令遵循性略弱。散文质量重要时选Hermes 3；在16至24 GB系统上需要最广内容范围时选Dolphin 3.0。' },
+              { q: '写黑暗小说需要无审查模型吗？', a: '大多数黑暗小说不需要。标准模型在正确提示下可生成暴力、道德复杂性、黑暗心理而不拒绝。它们可靠拒绝的是明确的性内容。先尝试标准模型——您可能不需要无审查版本。' },
+            ],
+          },
+          {
+            type: 'faq',
+            h2: '常见问题（2/2）',
+            faqs: [
+              { q: '可以在SillyTavern或Agnai中使用无审查模型吗？', a: '可以。两者均连接到任何OpenAI兼容端点——包括本地11434端口运行的Ollama。拉取模型，启动ollama serve，在SillyTavern/Agnai选择OpenAI兼容API，指向http://localhost:11434/v1。不需要额外配置。' },
+              { q: '在家庭网络上使用无审查模型安全吗？', a: '绑定到localhost时（Ollama和LM Studio的默认设置）是安全的。API只能从您的机器访问。不要在没有身份验证的情况下将Ollama API暴露到公共互联网。' },
+              { q: '我本地生成的内容会怎么处理？', a: '不会自动发生任何事。内容不会发送到任何服务器，不会被云服务记录，也不会用于模型训练。它只存在于您的设备上。您控制保留什么、删除什么和分享什么。' },
+            ],
+          },
+          {
+            type: 'cta',
+            h2: '试用PromptQuorum',
+            body: '并排比较无审查和标准本地模型，跨模型测试提示词，构建一致的小说创作工作流。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
+    };
+
+    function renderSlide(slide, lang) {
+      let html = '';
+      const slug = 'uncensored-local-llm-creative-writing-ethics';
+      const articleUrl = 'https://www.promptquorum.com/power-local-llm/' + slug + '?lang=' + lang;
+      const footerHtml = '<p class="slide-footer"><a href="' + articleUrl + '" target="_blank" rel="noopener">← Article</a></p>';
+
+      switch (slide.type) {
+        case 'title':
+          html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+            + '<h1>' + slide.h1 + '</h1>'
+            + '<p>' + slide.subtitle + '</p>'
+            + '<p style="margin-top: 32px; font-size: 15px; color: #79747e;"><a href="' + slide.link + '?lang=' + lang + '" target="_blank" rel="noopener" style="color:#6750a4; text-decoration:none; border-bottom:1px solid #c5b8f0;">' + slide.link.replace('https://www.promptquorum.com/', '') + '</a></p>';
+          break;
+
+        case 'list':
+          html = '<h2>' + slide.h2 + '</h2>';
+          if (slide.intro) html += '<p style="margin-bottom:10px;">' + slide.intro + '</p>';
+          html += '<ul style="font-size: 1em; margin-top: 14px;">';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ul>' + footerHtml;
+          break;
+
+        case 'table':
+          html = '<h2>' + slide.h2 + '</h2><table><tr>';
+          slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+          html += '</tr>';
+          slide.rows.forEach(function(row) {
+            html += '<tr>';
+            slide.columns.forEach(function(col) { html += '<td>' + row[col] + '</td>'; });
+            html += '</tr>';
+          });
+          html += '</table>' + footerHtml;
+          break;
+
+        case 'comparison':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top: 36px; font-size: clamp(15px, 1.8vw, 20px); color: #b3261e;"><strong>' + slide.line1 + '</strong></p>'
+            + '<p style="font-size: clamp(15px, 1.8vw, 20px); margin-top: 18px; color: #386a20;"><strong>' + slide.line2 + '</strong></p>'
+            + '<p style="margin-top: 36px; font-size: clamp(14px, 1.5vw, 18px); color: #6750a4; font-style: italic;">' + slide.tip + '</p>'
+            + footerHtml;
+          break;
+
+        case 'numbered':
+          html = '<h2>' + slide.h2 + '</h2><ol style="font-size: 1em; margin-top: 14px;">';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ol>' + footerHtml;
+          break;
+
+        case 'faq':
+          html = '<h2>' + slide.h2 + '</h2>';
+          slide.faqs.forEach(function(faq) {
+            html += '<div style="margin-bottom: 16px; text-align: left; max-width: 680px;"><strong style="font-size: clamp(13px, 1.4vw, 16px);">Q: ' + faq.q + '</strong><p style="margin-top: 5px; font-size: clamp(12px, 1.2vw, 14px); color: #49454f;">A: ' + faq.a + '</p></div>';
+          });
+          html += footerHtml;
+          break;
+
+        case 'cta':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top: 24px; max-width: 560px;">' + slide.body + '</p>'
+            + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display:inline-block; margin-top:28px; padding:14px 28px; background:#6750a4; color:white; border-radius:8px; text-decoration:none; font-weight:700; font-size:clamp(14px,1.5vw,18px);">' + slide.cta + '</a>'
+            + '<p style="margin-top: 20px; font-size: 13px; color: #79747e;">promptquorum.com</p>';
+          break;
+      }
+
+      return '<div class="slide ' + slide.type + '">' + html + '</div>';
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = backLink.href + '?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(function(slide) {
+      container.innerHTML += renderSlide(slide, lang);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      slides.forEach(function(s) { s.classList.remove('active'); });
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', function() {
+      slides.forEach(function(s) { s.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', function() {
+      slides.forEach(function(s) { s.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>

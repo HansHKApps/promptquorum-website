@@ -80,6 +80,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
+    gammaDescription: 'The slide deck below covers: what "uncensored" fine-tuning actually means (RLHF removal vs. zero constraints); a 5-model comparison table (Hermes 3 Llama 3.3 to Dolphin 3.0 Mistral 7B with VRAM, refusal rate, instruction quality); appropriate vs. inappropriate use cases; Ollama setup commands; ethical responsibilities that remain regardless of local setup; and 5 common mistakes. Download the PDF as an uncensored local LLM creative writing reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -445,6 +447,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
+    gammaDescription: 'Die Präsentation zeigt: was „Uncensored"-Fine-Tuning wirklich bedeutet (RLHF-Entfernung vs. null Einschränkungen); eine 5-Modell-Vergleichstabelle (Hermes 3 Llama 3.3 bis Dolphin 3.0 Mistral 7B mit VRAM, Ablehnungsrate, Anweisungsqualität); geeignete und ungeeignete Anwendungsfälle; Ollama-Einrichtungsbefehle; bleibende ethische Verantwortlichkeiten; und 5 häufige Fehler. Als PDF-Referenzkarte für Uncensored-LLM-Kreativschreiben herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -810,6 +814,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
+    gammaDescription: 'La présentation ci-dessous couvre : ce que signifie réellement le fine-tuning « non censuré » (suppression du RLHF vs. zéro contrainte) ; un tableau de comparaison de 5 modèles (Hermes 3 Llama 3.3 à Dolphin 3.0 Mistral 7B avec VRAM, taux de refus, qualité d\'instruction) ; cas d\'usage appropriés et inappropriés ; commandes de configuration Ollama ; responsabilités éthiques qui subsistent ; et 5 erreurs courantes. Téléchargez le PDF comme carte de référence pour l\'écriture créative avec LLM non censuré.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1183,6 +1189,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連読み物', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
+    gammaDescription: '以下のスライドデッキでは：「無検閲」ファインチューニングが実際に意味すること（RLHF除去対ゼロ制約）；5モデル比較表（Hermes 3 Llama 3.3からDolphin 3.0 Mistral 7BまでのVRAM、拒否率、指示品質）；適切・不適切なユースケース；Ollamaセットアップコマンド；ローカルセットアップに関わらず残る倫理的責任；5つのよくある間違いを掲載。PDFを無検閲ローカルLLM創作活動リファレンスカードとしてダウンロードしてください。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1549,6 +1557,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: '#faq' },
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
+    gammaDescription: '以下幻灯片包含：「无审查」微调的真实含义（RLHF移除对比零约束）；5模型对比表（Hermes 3 Llama 3.3至Dolphin 3.0 Mistral 7B，含VRAM、拒绝率、指令质量）；适用与不适用场景；Ollama配置命令；无论本地配置如何仍需承担的伦理责任；以及5个常见错误。将PDF作为无审查本地LLM创意写作参考卡下载。',
     sections: {
       tldr: {
         id: 'key-takeaways',
