@@ -15,14 +15,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline',
     seoTitle: 'Local Multimodal AI Pipeline 2026: Voice + Vision + Text Models Offline',
     intro:
-      'A local multimodal AI pipeline combines separate specialized models for each modality — whisper.cpp for voice input, LLaVA or Llama 3.2 Vision for image understanding, an Ollama LLM for text reasoning, and Piper TTS for voice output — orchestrated into a single coherent system that runs 100% offline. This is the local equivalent of GPT-4o\'s multimodal capabilities: no single model understands everything, but the orchestrator routes each input type to the right model and combines the outputs. This guide covers the architecture, component stack, hardware tiers, four practical use cases, and a Python async orchestrator that processes voice and vision inputs in parallel.',
+      'A local multimodal AI pipeline combines separate specialized models for each modality — whisper.cpp for voice input, LLaVA or Llama 3.2 Vision for image understanding, an Ollama LLM for text reasoning, and Piper TTS for voice output — orchestrated into a single coherent system that runs 100% offline. This is the local equivalent of GPT-4o\'s multimodal capabilities: no single model understands everything, but the orchestrator routes each input type to the right model and combines the outputs. This guide shows how to build local multimodal pipeline capabilities from these open-source components — covering the architecture, component stack, hardware tiers, five practical use cases, and a Python async orchestrator that processes voice and vision inputs in parallel.',
     metaDescription:
       'Build a local multimodal AI pipeline in 2026: whisper.cpp for voice input, LLaVA 1.6 for vision, Ollama for text reasoning, Piper TTS for voice output. Architecture, hardware tiers, use cases, and Python orchestrator code. All offline.',
     twitterDescription:
       'Local multimodal AI in 2026: combine Whisper STT + LLaVA vision + Ollama LLM + Piper TTS into one offline pipeline. Architecture guide, hardware tiers, and Python code.',
     audience:
       'Developers building full multimodal local AI systems — combining voice, vision, and text processing into a single offline pipeline for document analysis, accessibility tools, meeting assistants, or visual Q&A.',
-    readTime: '13 min read',
+    readTime: '16 min read',
     educationalLevel: 'Advanced',
     primaryTerm: 'local multimodal AI pipeline',
     targetKeywords: [
@@ -38,8 +38,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'whisper.cpp large-v3',
       'LLaVA 1.6 7B',
+      'Qwen2-VL 7B',
       'Llama 3.2 Vision 11B',
       'Llama 3.1 8B',
+      'Moondream 2',
       'Piper TTS',
       'Coqui TTS',
     ],
@@ -73,6 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'What Is a Multimodal AI Pipeline?', anchor: '#what-is-multimodal' },
+      { label: 'Cost: Local Pipeline vs Cloud APIs', anchor: '#cost-comparison' },
       { label: 'Architecture Overview', anchor: '#architecture' },
       { label: 'The Component Stack', anchor: '#component-stack' },
       { label: 'Hardware Tiers', anchor: '#hardware-tiers' },
@@ -80,6 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Use Case 2: Visual Q&A Assistant', anchor: '#use-case-2' },
       { label: 'Use Case 3: Meeting Transcription + Slide Analysis', anchor: '#use-case-3' },
       { label: 'Use Case 4: Local Accessibility Tool', anchor: '#use-case-4' },
+      { label: 'Use Case 5: Security Camera Analysis', anchor: '#use-case-5' },
       { label: 'Building the Python Orchestrator', anchor: '#orchestrator' },
       { label: 'Performance Optimization', anchor: '#performance' },
       { label: 'Limitations and Honest Assessment', anchor: '#limitations' },
@@ -95,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A local multimodal pipeline is four separate models orchestrated together — not a single model like GPT-4o.** whisper.cpp handles voice, a VLM (LLaVA or Llama 3.2 Vision) handles images, an LLM handles text reasoning, and Piper handles speech output. The orchestrator routes inputs to the right model and combines outputs.',
           '**Llama 3.2 Vision 11B can replace both the VLM and the text LLM in one model.** It accepts text and images simultaneously and handles both description and reasoning in one pass — reducing VRAM from ~15 GB (separate models) to ~8 GB (single Llama 3.2 Vision 11B).',
           '**Minimum hardware for the full stack: RTX 4070 12 GB or Apple M5 Pro 36 GB.** An RTX 3060 12 GB can run a constrained version (Phi-4 instead of Llama 3.1 8B, or sequential model loading) — usable but slower.',
-          '**Four practical use cases justify the complexity:** voice-controlled document analysis, visual Q&A with voice interaction, meeting transcription combined with slide analysis, and local screen-reader accessibility tools.',
+          '**Five practical use cases justify the complexity:** voice-controlled document analysis, visual Q&A with voice interaction, meeting transcription combined with slide analysis, local screen-reader accessibility tools, and local security camera analysis.',
           '**Async orchestration is essential for acceptable performance.** STT and vision can run in parallel when both audio and image inputs are available — the text LLM waits for both, then generates a combined response.',
           '**Streaming LLM output to TTS reduces perceived latency by 0.3–0.7 seconds.** Start generating audio from the first completed sentence while the LLM is still writing the rest of the response.',
           '**This is not GPT-4o.** Separate models produce "seams" — the vision model\'s description passes as text to the LLM, losing some cross-modal reasoning. Quality on complex multimodal tasks is below frontier closed models but adequate for structured document and clear photo tasks.',
@@ -125,6 +129,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Why build local:** Privacy (medical images, proprietary documents, confidential screenshots), cost (zero per-query fees), offline capability (no internet required after model download), customization (swap any component).',
           '**Modular advantage:** You can upgrade any one component independently. When a better local STT model ships, replace only the STT layer. When a better VLM ships, swap only the vision model — the rest of the pipeline is unchanged.',
         ],
+      },
+      costComparison: {
+        id: 'cost-comparison',
+        title: 'Cost: Local Pipeline vs Cloud APIs (Monthly)',
+        content:
+          'At moderate usage (100+ queries/day), a local multimodal pipeline pays for itself in 3–6 months. At light usage (10 queries/day), break-even extends to 12–18 months.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A local multimodal pipeline costs $0/month in API fees after the one-time hardware investment ($600–3,500), with break-even against GPT-4o API costs ($135–225/mo) in 3–18 months depending on query volume.',
+          },
+        ],
+        columns: ['Usage', 'GPT-4o API', 'Google Cloud', 'Local'],
+        rows: [
+          { 'Usage': '100 voice queries/day', 'GPT-4o API': '$90–150/mo', 'Google Cloud': '$60–120/mo', 'Local': '$0' },
+          { 'Usage': '50 image analyses/day', 'GPT-4o API': '$45–75/mo', 'Google Cloud': '$30–60/mo', 'Local': '$0' },
+          { 'Usage': 'Combined (typical)', 'GPT-4o API': '$135–225/mo', 'Google Cloud': '$90–180/mo', 'Local': '$0' },
+          { 'Usage': 'Hardware (one-time)', 'GPT-4o API': '$0', 'Google Cloud': '$0', 'Local': '$600–3,500' },
+          { 'Usage': 'Break-even', 'GPT-4o API': '—', 'Google Cloud': '—', 'Local': '3–18 months' },
+        ],
+        note: 'The local pipeline pays for itself in 3–6 months at moderate usage (100+ queries/day). At light usage (10 queries/day), the break-even extends to 12–18 months.',
       },
       architecture: {
         id: 'architecture',
@@ -198,6 +223,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'tip',
             text: 'Use Llama 3.2 Vision 11B instead of separate LLaVA + Llama 3.1 8B to cut VRAM to ~8 GB. Llama 3.2 Vision handles both image description and text reasoning in one model, eliminating the need for a separate VLM.',
           },
+          {
+            type: 'tip',
+            text: 'Alternative VLM: [Qwen2-VL 7B](/power-local-llm/local-vision-models-llava-ollama-2026) (~6 GB VRAM) — stronger than LLaVA on multilingual OCR and document understanding. Recommended if processing Chinese, Japanese, or Korean documents.',
+          },
         ],
       },
       hardwareTiers: {
@@ -232,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Tier': 'Apple Mid',
             'GPU': 'M5 Pro 36 GB',
             'RAM': '36 GB unified',
-            'Can Run': 'Full stack with 8B models via Metal (recommended)',
+            'Can Run': 'Full stack with 8B models via Metal (recommended). Qwen2-VL 7B + Llama 3.1 8B fits comfortably in 36 GB with room for Whisper large-v3.',
             'Latency (voice query + image)': '2–4 sec',
           },
           {
@@ -244,6 +273,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note: 'Latency is measured from end of voice query to start of TTS playback, including image processing if an image is present.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The M5 Max with 128 GB unified memory is the ultimate local multimodal platform. It can run Whisper large-v3 (3 GB) + Llama 3.2 Vision 90B (~64 GB) + Piper TTS simultaneously — the 90B vision model is the highest-quality local VLM available, approaching GPT-4o on document and photo tasks. No discrete GPU setup can match this without multi-GPU configurations costing 2–3× more.',
+          },
+        ],
       },
       useCase1: {
         id: 'use-case-1',
@@ -294,6 +329,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Privacy benefit:** Users with disabilities often use accessibility tools in sensitive contexts (medical portals, financial accounts). A local tool ensures no screen content is transmitted to third parties.',
           '**Low-connectivity use:** Works in hospitals, government buildings, and areas with restricted internet — important for institutional accessibility deployments.',
           '**Model choice for accessibility:** Moondream 2 for fast screen descriptions (2 GB VRAM, ~1 sec per frame). LLaVA 7B for richer descriptions (6 GB VRAM, ~3 sec per frame).',
+        ],
+      },
+      useCase5: {
+        id: 'use-case-5',
+        title: 'Use Case 5: Local Security Camera Analysis',
+        content:
+          '**Capture frames from an IP camera, run motion detection locally, and trigger VLM analysis only when movement is detected — without cloud camera services or third-party video storage.**',
+        items: [
+          '**Frame capture:** Use OpenCV to capture a frame every 5–10 seconds from an IP camera via RTSP (`cv2.VideoCapture("rtsp://camera-ip:554/stream")`). For USB cameras, use device index 0.',
+          '**Motion detection:** Compute the diff between consecutive frames with `cv2.absdiff()`. Skip frames below the motion threshold — this avoids unnecessary VLM calls on static, empty scenes.',
+          '**VLM analysis:** When motion is detected, send the frame to the VLM: "Describe what is happening. Is there a person? What are they doing?"',
+          '**Alert output:** If the response indicates a person or anomaly, trigger a local desktop notification and a Piper TTS announcement ("Person detected at front door"). No cloud notification service required.',
+          '**Privacy advantage:** Ring and Nest send video to AWS and Google servers respectively. This setup keeps all footage on your hardware — no subscription, no third-party video storage, no data sharing with external services.',
+          '**Best VLM for speed:** Moondream 2 for fast frame processing (~1 second per frame, ~2 GB VRAM) or LLaVA 7B for richer scene descriptions (~3 seconds per frame, ~6 GB VRAM).',
+          '**Hardware note:** A dedicated Mac Mini M5 (~$600) running this stack 24/7 consumes ~15–25W idle — less annually in electricity than a Ring Doorbell Pro subscription.',
         ],
       },
       orchestrator: {
@@ -358,6 +408,9 @@ async def reason(transcript: str, image_description: str | None = None) -> str:
         )
     else:
         prompt = transcript
+    # Note: /api/generate is for single-turn queries.
+    # For multi-turn conversation with context, use
+    # /api/chat with a messages array instead.
     loop = asyncio.get_event_loop()
     response = await loop.run_in_executor(None, lambda: requests.post(
         OLLAMA_URL,
