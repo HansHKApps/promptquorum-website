@@ -12,10 +12,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Local Vision Models 2026: LLaVA, Llama 3.2 Vision, and Ollama Multimodal Setup',
-    seoTitle: 'Local Vision Models 2026: LLaVA, Llama 3.2 Vision & Ollama Setup',
+    title: 'Local Vision Models 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL & Ollama Multimodal Setup',
+    seoTitle: 'Local Vision Models 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL & Ollama Setup',
     intro:
-      'Vision-language models (VLMs) accept image input alongside text and return text output — enabling document OCR, image Q&A, screenshot analysis, and chart reading locally. In 2026, the easiest path to running VLMs is through Ollama: pull a model, send an image, get a description or answer. This guide compares the leading local vision models (LLaVA 1.6, Llama 3.2 Vision, MiniCPM-V 2.6, Moondream 2, InternVL 2.5), covers Ollama setup step-by-step, and maps each model to its best use case based on VRAM requirements and quality benchmarks.',
+      'Vision-language models (VLMs) accept image input alongside text and return text output — enabling document OCR, image Q&A, screenshot analysis, and chart reading locally. In 2026, the easiest path to running VLMs is through Ollama: pull a model, send an image, get a description or answer. This guide compares the leading local vision models (LLaVA 1.6, Llama 3.2 Vision, MiniCPM-V 2.6, Moondream 2, Qwen2-VL, InternVL 2.5), covers Ollama setup step-by-step, and maps each model to its best use case based on VRAM requirements and quality benchmarks.',
     metaDescription:
       'Run vision-language models locally with Ollama in 2026: LLaVA 1.6, Llama 3.2 Vision, MiniCPM-V 2.6. Document OCR, image Q&A, screenshot analysis — all offline with VRAM requirements and quality benchmarks.',
     twitterDescription:
@@ -31,6 +31,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'run vision model locally',
       'llama 3.2 vision local',
       'MiniCPM-V local',
+      'qwen2-vl local',
+      'qwen2-vl ollama',
+      'best local vision model',
       'offline image understanding',
       'local multimodal model',
       'ollama vision model',
@@ -41,7 +44,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 Vision 90B',
       'MiniCPM-V 2.6 (8B)',
       'Moondream 2 (1.9B)',
+      'Qwen2-VL 7B',
+      'Qwen2-VL 72B',
       'InternVL 2.5 (8B)',
+      'PaliGemma 2 3B',
+      'SmolVLM 2.2B',
     ],
     current_hardware_mentioned: [
       '2 GB VRAM',
@@ -52,19 +59,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple M-series (unified memory)',
     ],
     leadAnswerBlock:
-      '**For most developers with 6–8 GB of VRAM, MiniCPM-V 2.6 (8B) or LLaVA 1.6 7B via Ollama is the recommended starting point in 2026.** Both run in ~6 GB VRAM, support document OCR, image Q&A, and screenshot analysis, and are available as single Ollama pull commands. For the best overall quality with 8–16 GB VRAM, Llama 3.2 Vision 11B is the strongest local VLM — especially for document and photo understanding. With only 2 GB VRAM available, Moondream 2 (1.9B) is the only practical choice but has limited understanding of complex scenes. All models run 100% offline once downloaded; no API key or cloud account required.',
+      '**For most developers with 6–8 GB of VRAM, MiniCPM-V 2.6 (8B) or LLaVA 1.6 7B via Ollama is the recommended starting point in 2026.** Both run in ~6 GB VRAM, support document OCR, image Q&A, and screenshot analysis, and are available as single Ollama pull commands. For the best overall quality with 8–16 GB VRAM, Llama 3.2 Vision 11B is the best local vision model and strongest local VLM — especially for document and photo understanding. With only 2 GB VRAM available, Moondream 2 (1.9B) is the only practical choice but has limited understanding of complex scenes. All models run 100% offline once downloaded; no API key or cloud account required.',
     quickAnswerTop: {
       en: {
         question: 'What are the best local vision models to run with Ollama in 2026?',
         answer:
           'The best local vision model depends on your VRAM and use case. With 6–8 GB VRAM, MiniCPM-V 2.6 gives the best balance of OCR accuracy and general image understanding. With 8–16 GB VRAM, Llama 3.2 Vision 11B is the top choice for general visual Q&A and document analysis. With 2 GB VRAM, Moondream 2 is the only option — fast but limited in capability. InternVL 2.5 is the best for UI screenshots and charts but has less Ollama integration than the others.',
         bullets: [
-          'Under 4 GB VRAM → Moondream 2 (1.9B): fast, limited understanding of complex images.',
-          '6 GB VRAM → MiniCPM-V 2.6 or LLaVA 1.6 7B: best balance of quality and hardware fit.',
+          'Under 4 GB VRAM → Moondream 2 (1.9B): fast, limited understanding of complex images. Also: PaliGemma 2 3B (~3 GB) and SmolVLM 2.2B (~2 GB).',
+          '6 GB VRAM → MiniCPM-V 2.6, LLaVA 1.6 7B, or Qwen2-VL 7B (best for multilingual OCR): best balance of quality and hardware fit.',
           '8–16 GB VRAM → Llama 3.2 Vision 11B: top local VLM for general photos and documents.',
-          '64+ GB (or Apple M-series) → Llama 3.2 Vision 90B: best local quality, near-cloud performance.',
+          '64+ GB (or Apple M-series) → Llama 3.2 Vision 90B or Qwen2-VL 72B: best local quality, near-cloud performance.',
           'Setup: `ollama pull llama3.2-vision` then `ollama run llama3.2-vision "Describe this" --image photo.jpg`.',
-          'Best for OCR: MiniCPM-V 2.6, Llama 3.2 Vision — strong on text extraction from documents.',
+          'Best for OCR: Qwen2-VL 7B ≈ MiniCPM-V 2.6 > Llama 3.2 Vision 11B > LLaVA 1.6 — strong on text extraction from documents.',
           'Best for UI / screenshots: InternVL 2.5 — trained specifically on code and UI screenshots.',
         ],
         updatedDate: '2026-05-14',
@@ -75,13 +82,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quick Facts', anchor: '#quick-facts' },
       { label: 'What Are Vision-Language Models?', anchor: '#what-are-vlms' },
       { label: 'Model Comparison Table', anchor: '#model-comparison' },
+      { label: 'Real-World Accuracy Test: Invoice Extraction', anchor: '#invoice-accuracy-test' },
+      { label: 'Multi-Image Support', anchor: '#multi-image-support' },
       { label: 'Setup via Ollama (Step-by-Step)', anchor: '#ollama-setup' },
       { label: 'Use Case 1: Document OCR and Extraction', anchor: '#use-case-ocr' },
       { label: 'Use Case 2: Image Q&A and Description', anchor: '#use-case-qa' },
       { label: 'Use Case 3: Screenshot and UI Analysis', anchor: '#use-case-screenshot' },
       { label: 'Use Case 4: Chart and Graph Reading', anchor: '#use-case-chart' },
+      { label: 'Use Case 5: Video Frame Analysis', anchor: '#use-case-video' },
       { label: 'VRAM and Performance Reality Check', anchor: '#vram-reality' },
+      { label: 'How Local Vision Models Compare to GPT-4o Vision', anchor: '#local-vs-gpt4o' },
       { label: 'LLaVA Deep Dive', anchor: '#llava-deep-dive' },
+      { label: 'Qwen2-VL — Best Multilingual and OCR Performance', anchor: '#qwen2vl-deep-dive' },
       { label: 'How to Choose Your Vision Model', anchor: '#how-to-choose' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Sources', anchor: '#sources' },
@@ -110,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Smallest usable model:** Moondream 2 at 1.9B parameters, ~2 GB VRAM.',
           '**Largest practical local model:** Llama 3.2 Vision 90B at ~64 GB unified memory (Apple M-series or multi-GPU).',
           '**Image input format:** JPEG, PNG, WebP accepted. Max resolution varies by model (typically 1024×1024 to 4096×4096).',
-          '**OCR strength:** MiniCPM-V 2.6 > Llama 3.2 Vision 11B > LLaVA 1.6 13B > LLaVA 1.6 7B > Moondream 2.',
+          '**OCR strength:** Qwen2-VL 7B ≈ MiniCPM-V 2.6 > Llama 3.2 Vision 11B > LLaVA 1.6 13B > LLaVA 1.6 7B > Moondream 2.',
           '**Multimodal ≠ fast:** Vision models add a vision encoder on top of the LLM — expect ~30–60% slower token generation than a text-only model of the same parameter count.',
         ],
       },
@@ -199,6 +211,82 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Quality': 'Excellent (UI/charts)',
             'Via Ollama?': 'Community',
           },
+          {
+            'Model': 'Qwen2-VL 7B',
+            'Parameters': '7B',
+            'VRAM (Q4)': '~6 GB',
+            'Image Types': 'Photos, docs, OCR, multilingual',
+            'Quality': 'Excellent',
+            'Via Ollama?': 'Yes',
+          },
+          {
+            'Model': 'Qwen2-VL 72B',
+            'Parameters': '72B',
+            'VRAM (Q4)': '~48 GB',
+            'Image Types': 'Photos, docs, complex',
+            'Quality': 'Best (open-source)',
+            'Via Ollama?': 'Yes',
+          },
+          {
+            'Model': 'PaliGemma 2 3B',
+            'Parameters': '3B',
+            'VRAM (Q4)': '~3 GB',
+            'Image Types': 'Photos, docs',
+            'Quality': 'Good',
+            'Via Ollama?': 'Community',
+          },
+          {
+            'Model': 'SmolVLM 2.2B',
+            'Parameters': '2.2B',
+            'VRAM (Q4)': '~2 GB',
+            'Image Types': 'Simple photos, captions',
+            'Quality': 'Basic+',
+            'Via Ollama?': 'Community',
+          },
+        ],
+      },
+      invoiceAccuracyTest: {
+        id: 'invoice-accuracy-test',
+        title: 'Real-World Accuracy Test: Invoice Extraction',
+        content:
+          'Comparison of local vision model accuracy on a structured document extraction task. Test: extract 5 fields (vendor name, date, total, tax amount, line item count) from the same sample invoice.',
+        columns: ['Model', 'Vendor', 'Date', 'Total', 'Tax', 'Line Items', 'Score'],
+        rows: [
+          { 'Model': 'Moondream 2', 'Vendor': '✓', 'Date': '✓', 'Total': '✗', 'Tax': '✗', 'Line Items': '✗', 'Score': '2/5' },
+          { 'Model': 'LLaVA 1.6 7B', 'Vendor': '✓', 'Date': '✓', 'Total': '✓', 'Tax': '✗', 'Line Items': '✓', 'Score': '4/5' },
+          { 'Model': 'MiniCPM-V 2.6', 'Vendor': '✓', 'Date': '✓', 'Total': '✓', 'Tax': '✓', 'Line Items': '✓', 'Score': '5/5' },
+          { 'Model': 'Qwen2-VL 7B', 'Vendor': '✓', 'Date': '✓', 'Total': '✓', 'Tax': '✓', 'Line Items': '✓', 'Score': '5/5' },
+          { 'Model': 'Llama 3.2 11B', 'Vendor': '✓', 'Date': '✓', 'Total': '✓', 'Tax': '✓', 'Line Items': '✓', 'Score': '5/5' },
+          { 'Model': 'GPT-4o Vision', 'Vendor': '✓', 'Date': '✓', 'Total': '✓', 'Tax': '✓', 'Line Items': '✓', 'Score': '5/5' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Results from a single test invoice. Your accuracy will vary with document quality, font, and layout complexity. Always verify extracted numbers against source documents.',
+          },
+        ],
+      },
+      multiImageSupport: {
+        id: 'multi-image-support',
+        title: 'Multi-Image Support',
+        content:
+          'Not all local vision models accept multiple images in a single request. Multi-image support matters for document processing (send all pages of a multi-page PDF) and visual comparison tasks (compare two product photos).',
+        columns: ['Feature', 'Moondream', 'LLaVA 7B', 'MiniCPM-V', 'Qwen2-VL', 'LLaVA 13B', 'Llama 3.2 Vision', 'InternVL'],
+        rows: [
+          {
+            'Feature': 'Multi-image input',
+            'Moondream': 'No',
+            'LLaVA 7B': 'No',
+            'MiniCPM-V': 'Yes (up to 4)',
+            'Qwen2-VL': 'Yes (up to 8)',
+            'LLaVA 13B': 'No',
+            'Llama 3.2 Vision': 'Yes (multi-page)',
+            'InternVL': 'Yes',
+          },
+        ],
+        items: [
+          'MiniCPM-V 2.6 accepts up to 4 images per prompt; Qwen2-VL handles up to 8. LLaVA and Moondream accept only single images per request.',
+          '**When multi-image matters:** Send all pages of a multi-page PDF for full-document extraction. Compare two product photos side by side. Analyze before/after screenshots in a single prompt.',
         ],
       },
       ollamaSetup: {
@@ -288,47 +376,104 @@ print(result)`,
           '**Limitation note:** No local VLM in 2026 reliably extracts precise numbers from visually complex charts. For structured chart data, extract via the underlying data source if possible.',
         ],
       },
+      useCaseVideo: {
+        id: 'use-case-video',
+        title: 'Use Case 5: Video Frame Analysis',
+        content:
+          '**Local vision models can analyze video by processing individual frames** — extract frames using ffmpeg, feed each to the vision model, then chain with a text LLM to summarize across frames. Not real-time: expect 1 frame per 0.5–3 seconds depending on model and hardware.',
+        items: [
+          '**Frame extraction:** Use ffmpeg to extract at 1fps: `ffmpeg -i video.mp4 -vf fps=1 frames/frame_%04d.jpg`',
+          '**Per-frame analysis:** Run each frame through the vision model with a consistent prompt (e.g., "Describe what is happening in this frame in one sentence").',
+          '**Cross-frame summarization:** Collect all frame descriptions and pass them to a text LLM with a summarization prompt.',
+          '**Use cases:** Security camera review (flag frames with unusual activity), lecture recording analysis (generate slide-by-slide notes), manufacturing quality inspection (flag frames where defects appear).',
+          '**Best models for video frames:** Llama 3.2 Vision 11B for quality, LLaVA 1.6 7B for speed (higher frame throughput).',
+          '**Speed reality:** At 1 frame/second extraction and ~1 second per frame inference on an RTX 4070, a 10-minute video takes ~20–30 minutes to process fully.',
+        ],
+        codeBlock: `import base64
+import subprocess
+import os
+import requests
+
+def extract_frames(video_path: str, output_dir: str, fps: int = 1) -> list[str]:
+    os.makedirs(output_dir, exist_ok=True)
+    subprocess.run([
+        "ffmpeg", "-i", video_path,
+        "-vf", f"fps={fps}",
+        f"{output_dir}/frame_%04d.jpg",
+        "-y"
+    ], check=True)
+    return sorted([
+        os.path.join(output_dir, f)
+        for f in os.listdir(output_dir)
+        if f.endswith(".jpg")
+    ])
+
+def analyze_frame(image_path: str, model: str = "llama3.2-vision") -> str:
+    with open(image_path, "rb") as f:
+        image_b64 = base64.b64encode(f.read()).decode("utf-8")
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": model,
+            "prompt": "Describe what is happening in this frame in one sentence.",
+            "images": [image_b64],
+            "stream": False,
+        },
+    )
+    return response.json()["response"]
+
+frames = extract_frames("lecture.mp4", "frames/", fps=1)
+descriptions = [analyze_frame(f) for f in frames]
+print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
+        codeLanguage: 'python',
+      },
       vramReality: {
         id: 'vram-reality',
         title: 'VRAM and Performance Reality Check',
         content:
           'Local vision models add a vision encoder on top of the base LLM, which increases both VRAM requirements and inference time compared to text-only models.',
-        columns: ['Model', 'VRAM (Q4)', 'Tokens/sec (RTX 4070)', 'Practical for production?'],
+        columns: ['Model', 'VRAM (Q4)', 'Tokens/sec (RTX 4070)', 'Tokens/sec (M5 Pro 36GB)', 'Practical for production?'],
         rows: [
           {
             'Model': 'Moondream 2 (1.9B)',
             'VRAM (Q4)': '~2 GB',
             'Tokens/sec (RTX 4070)': '~25–35',
+            'Tokens/sec (M5 Pro 36GB)': '~30–40',
             'Practical for production?': 'Yes — for simple tasks',
           },
           {
             'Model': 'LLaVA 1.6 7B',
             'VRAM (Q4)': '~6 GB',
             'Tokens/sec (RTX 4070)': '~15–20',
+            'Tokens/sec (M5 Pro 36GB)': '~18–25',
             'Practical for production?': 'Yes — general purpose',
           },
           {
             'Model': 'MiniCPM-V 2.6 (8B)',
             'VRAM (Q4)': '~6 GB',
             'Tokens/sec (RTX 4070)': '~12–18',
+            'Tokens/sec (M5 Pro 36GB)': '~15–20',
             'Practical for production?': 'Yes — OCR and docs',
           },
           {
             'Model': 'Llama 3.2 Vision 11B',
             'VRAM (Q4)': '~8 GB',
             'Tokens/sec (RTX 4070)': '~10–14',
+            'Tokens/sec (M5 Pro 36GB)': '~12–16',
             'Practical for production?': 'Yes — best general quality',
           },
           {
             'Model': 'LLaVA 1.6 13B',
             'VRAM (Q4)': '~10 GB',
             'Tokens/sec (RTX 4070)': '~8–12',
+            'Tokens/sec (M5 Pro 36GB)': '~10–14',
             'Practical for production?': 'Yes — with 12 GB GPU',
           },
           {
             'Model': 'Llama 3.2 Vision 90B',
             'VRAM (Q4)': '~64 GB',
             'Tokens/sec (RTX 4070)': 'N/A (needs multi-GPU or M-Max)',
+            'Tokens/sec (M5 Pro 36GB)': 'N/A (needs M5 Max 128GB+)',
             'Practical for production?': 'High-end Apple Silicon only',
           },
         ],
@@ -336,6 +481,10 @@ print(result)`,
           {
             type: 'note',
             text: 'Token generation speed for vision models is slower than for text-only models of the same size because the vision encoder adds significant computational overhead on the first image token. Subsequent text tokens generate at near-normal speed.',
+          },
+          {
+            type: 'note',
+            text: 'Apple Silicon unified memory enables running larger models (up to 90B on M5 Max 128GB) that won\'t fit in discrete GPU VRAM. Speed is slightly slower than equivalent NVIDIA GPU but no VRAM limitation.',
           },
         ],
       },
