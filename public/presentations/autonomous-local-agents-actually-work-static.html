@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local AI Agents in 2026: What Actually Works | PromptQuorum</title>
+    <meta name="description" content="Six local AI agent stacks tested on five real tasks for 30 days. Two work. Three fail in surprising ways. One is unusable. Honest verdicts." />
+    <meta property="og:title" content="Local AI Agents in 2026: What Actually Works — PromptQuorum" />
+    <meta property="og:description" content="Six local AI agent stacks tested on five real tasks for 30 days. Two work. Three fail in surprising ways. One is unusable. Honest verdicts." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape with mm dimensions */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+
+    @media (max-width: 640px) {
+      .slide { padding: 20px 16px; }
+      .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+      .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+      .slide p { font-size: 14px; margin-bottom: 10px; }
+      .slide ul { font-size: 1em; margin: 10px 0; }
+      .slide ul li { margin-bottom: 8px; }
+      .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+      .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
+      .header { padding: 10px 12px; }
+      .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-links { gap: 8px; font-size: 11px; }
+      .subtitle { font-size: 14px; }
+      .logo { height: 24px; margin-bottom: 12px; }
+      .controls { padding: 10px 12px; }
+      .controls button { padding: 6px 12px; font-size: 12px; }
+    }
+
+    @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local AI Agents in 2026: What Actually Works</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        // Content in 5 languages
+        const CONTENT = {
+            en: {
+                title: 'Local AI Agents in 2026: What Actually Works',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Local AI Agents in 2026: What Actually Works',
+                        subtitle: 'Six stacks tested on five real tasks for 30 days. Two work. Three fail. One is unusable.',
+                        link: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>Two stacks land real work:</strong> Cline + Ollama and Continue.dev Agent mode — both scoped to one editor, one model, one approval gate.',
+                            '<strong>Three stacks fail surprisingly:</strong> LangGraph (brittle past 4–5 steps), OpenInterpreter (too eager to execute shell), MetaGPT (multi-agent role-play breaks down).',
+                            '<strong>One stack is unusable:</strong> AutoGPT-local — stalled project, broken dependencies, planning loop drifts within minutes.',
+                            '<strong>Tool-call reliability = model property:</strong> Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B work. Models under 7B fail in all stacks.',
+                            '<strong>The supervised assistant model wins in 2026.</strong> Agents that stop for approval finish more tasks than unattended autonomous agents.',
+                            '<strong>Supervision cost is the real metric.</strong> 3–12 approvals = shippable. 40+ approvals = you are doing the work, not the agent.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quick Facts',
+                        items: [
+                            '<strong>Stacks tested:</strong> Cline + Ollama, Continue.dev Agent, LangGraph + Ollama, AutoGPT-local, OpenInterpreter, MetaGPT local.',
+                            '<strong>Tasks tested:</strong> topic research, multi-file refactor, email-draft triage, scrape-and-summarize, bug debugging.',
+                            '<strong>Hardware:</strong> Apple M5 Max 64 GB and 2× NVIDIA RTX 3090 24 GB — both run Qwen3-Coder 30B at >15 tokens/s.',
+                            '<strong>Verdict shape:</strong> 2 stacks reliable on all 5 tasks, 3 reliable on 1–2 tasks, 1 unusable.',
+                            '<strong>Cost:</strong> $0 API fees. ~$0.05–$0.30 in electricity per task. Local inference only.',
+                            '<strong>Smart config:</strong> auto-approve read tools; require manual approval for writes and shell commands.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Agent Reality Table',
+                        columns: ['Stack', 'Success rate', 'Verdict'],
+                        rows: [
+                            { 'Stack': 'Cline + Ollama', 'Success rate': '13–15 / 15 runs', 'Verdict': 'Works. Default pick for coding tasks.' },
+                            { 'Stack': 'Continue.dev Agent', 'Success rate': '12–14 / 15 runs', 'Verdict': 'Works. Lighter for small tasks.' },
+                            { 'Stack': 'LangGraph + Ollama', 'Success rate': '4–7 / 15 runs', 'Verdict': 'Failed. Build effort > value.' },
+                            { 'Stack': 'AutoGPT-local', 'Success rate': '0–2 / 15 runs', 'Verdict': 'Unusable. Skip in 2026.' },
+                            { 'Stack': 'OpenInterpreter', 'Success rate': '6–9 / 15 (with risk)', 'Verdict': 'Failed for autonomy. Babysat REPL only.' },
+                            { 'Stack': 'MetaGPT local', 'Success rate': '3–6 / 15 runs', 'Verdict': 'Failed. Multi-agent abstraction breaks.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Works: Cline + Ollama',
+                        intro: 'The only stack that landed every task type with predictable supervision cost.',
+                        items: [
+                            '<strong>VS Code extension</strong> — proposes a plan, executes via tools (read/write/execute), asks approval per step.',
+                            '<strong>Approval flow is front-and-centre</strong> — every step is a card you accept or reject; failures are one click to revert.',
+                            '<strong>Shines on:</strong> multi-file refactors, exploratory bug debugging, scoped research producing markdown.',
+                            '<strong>Stumbles on:</strong> non-coding tasks needing external HTTP without an MCP server wired in.',
+                            '<strong>Supervision cost:</strong> ~5–12 approvals per task. Set write/shell to require manual approval.',
+                            '<strong>Token tip:</strong> switch to a 128K-context model for tasks touching >6 files.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Works: Continue.dev Agent Mode',
+                        intro: 'The right pick when Cline is overkill — same IDE, smaller surface, fewer approvals.',
+                        items: [
+                            '<strong>Lighter agent loop</strong> — fewer tools, shorter default horizons, every edit lands as a diff preview.',
+                            '<strong>Shines on:</strong> single- or two-file tasks, function rewrites, test additions.',
+                            '<strong>Stumbles on:</strong> plans longer than 5 steps — stops after 2–3 files and asks you to continue.',
+                            '<strong>Supervision cost:</strong> ~4–8 approvals per task, mostly diff previews (high signal, fast accept).',
+                            '<strong>Token cost:</strong> lower than Cline — uses TF-IDF + embeddings index instead of streaming whole files.',
+                            '<strong>Pick over Cline when:</strong> task fits 2–3 files, token budget is tight, or you already use it for autocomplete.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Fails: LangGraph + Ollama',
+                        intro: 'Right tool for production orchestration. Wrong tool for a desktop agent.',
+                        items: [
+                            '<strong>Brittle past 4–5 steps:</strong> state machines cycle when a tool returns unexpected data (empty HTTP body, directory path).',
+                            '<strong>No native approval gate</strong> — you build human-in-the-loop interrupts yourself; Cline gives this for free.',
+                            '<strong>Debugging the graph is half the work</strong> — failures attribute to orchestration code, not the model.',
+                            '<strong>Where it belongs:</strong> server-side workflows with fixed tool surfaces and real test suites.',
+                            '<strong>Verdict:</strong> skip unless the workflow shape is genuinely incompatible with Cline + MCP servers.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Fails: OpenInterpreter & MetaGPT',
+                        items: [
+                            '<strong>OpenInterpreter — babysat only:</strong> executes shell commands too eagerly; auto-confirm mode is where every horror story comes from.',
+                            '<strong>OpenInterpreter cost:</strong> 40+ confirmations for a 30-minute task; you are supervising every block.',
+                            '<strong>MetaGPT multi-agent role-play:</strong> PM → Engineer → QA personas blur past two hand-offs; agents repeat earlier work.',
+                            '<strong>MetaGPT deeper issue:</strong> multi-agent adds turns without adding capability; a single agent with a checklist prompt beats it.',
+                            '<strong>Both verdicts:</strong> useful in narrow scopes; failed as autonomous agents on any real task we ran.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Why Agent Demos Look Better Than Reality',
+                        items: [
+                            '<strong>Demo tasks are scoped:</strong> small file surface, unambiguous success signal. Real tasks are open-ended.',
+                            '<strong>Demos are cherry-picked:</strong> the stalled and hallucinated runs are not in the cut. You see one success, not the success rate.',
+                            '<strong>Demo prompts are over-specified:</strong> the context the model needs is pre-loaded into files. Your real context is in a Slack thread.',
+                            '<strong>Demo models are larger:</strong> cloud demos run frontier models; local agents run what you can serve at >10 tokens/s.',
+                            '<strong>Expect the median:</strong> 70–80% success on real tasks, 20–30% requiring intervention. Plan for the median run.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Supervision Cost: The Real Metric',
+                        items: [
+                            '<strong>3–8 approvals (low):</strong> scoped Cline refactor or Continue.dev single-file task — task time dominated by model latency.',
+                            '<strong>10–20 approvals (medium):</strong> Cline touching 8+ files — half task time is you approving diffs.',
+                            '<strong>40+ approvals (high):</strong> OpenInterpreter on anything non-trivial — agent is a typing multiplier, not a productivity multiplier.',
+                            '<strong>Approval fatigue:</strong> past ~30 approvals, humans rubber-stamp — the safety gate becomes fictional.',
+                            '<strong>Right knob — auto-approve allow-list:</strong> read_file/list_files/search = auto. write_to_file/execute_command = manual always.',
+                            '<strong>Right unit:</strong> count approvals on a real task. Over 20 = the stack is not actually saving you work.'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Tasks You Should Never Trust an Agent With',
+                        items: [
+                            'Production database writes — run read-only roles by default; writable role only for the duration of explicit tasks.',
+                            'Anything with money or auth — payments, OAuth, account creation, role/permission changes.',
+                            'Long-horizon planning past 8–10 steps — agents drift; use human-approved plan + step-by-step execution.',
+                            'Tasks where you cannot verify success quickly — if fact-checking costs more than rewriting, skip the agent.',
+                            'Files outside a sandboxed workspace directory — treat the workspace as disposable.',
+                            'Multi-tenant or shared infrastructure — local agents are personal-machine tools in 2026.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Decision: Pick Your Stack',
+                        columns: ['Your situation', 'Pick'],
+                        rows: [
+                            { 'Your situation': 'Coding tasks in VS Code (refactor, debug, multi-file)', 'Pick': 'Cline + Ollama + Qwen3-Coder 30B' },
+                            { 'Your situation': 'Already using Continue.dev, need a lighter agent', 'Pick': 'Continue.dev Agent mode' },
+                            { 'Your situation': 'Agent that drives browser, queries DB, reads files', 'Pick': 'Cline + Ollama + MCP servers' },
+                            { 'Your situation': 'Local code interpreter REPL', 'Pick': 'OpenInterpreter (babysat only)' },
+                            { 'Your situation': 'Production workflow with deterministic tools', 'Pick': 'LangGraph + Ollama + real test suite' },
+                            { 'Your situation': 'Fully autonomous unsupervised agents', 'Pick': 'Wait — 2026 stack cannot deliver this.' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Common Mistakes',
+                        items: [
+                            'Optimising for autonomy — \'How long unattended\' is wrong; \'how few approvals to land the task\' is right.',
+                            'Using small models for tool-call work — anything below 7B emits malformed calls; use Qwen3-Coder 30B or similar.',
+                            '32K context for multi-file work — Cline streams full files; 8-file task blows through 32K fast; use 128K models.',
+                            'Auto-approving everything — auto-approve reads only; manual for writes and shell commands always.',
+                            'Production database writes from an agent — read-only role by default; writable only when explicitly needed.',
+                            'Building custom LangGraph before trying Cline — 90% of \'I need custom agent\' use cases fit Cline + MCP servers.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Find the Right Local Agent Stack',
+                        body: 'PromptQuorum helps you compare model and stack combinations for agent tasks.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Lokale KI-Agenten 2026: Was wirklich funktioniert',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Lokale KI-Agenten 2026: Was wirklich funktioniert',
+                        subtitle: 'Sechs Stacks, fünf echte Aufgaben, 30 Tage. Zwei funktionieren. Drei scheitern. Einer ist unbrauchbar.',
+                        link: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Kernpunkte',
+                        items: [
+                            '<strong>Zwei Stacks liefern echte Arbeit:</strong> Cline + Ollama und Continue.dev Agent mode — beide auf einen Editor, ein Modell, ein Approval-Gate beschränkt.',
+                            '<strong>Drei Stacks scheitern überraschend:</strong> LangGraph (fragil ab Schritt 4–5), OpenInterpreter (führt Shell-Befehle zu eifrig aus), MetaGPT (Multi-Agent-Rollenspiel bricht ab).',
+                            '<strong>Ein Stack ist unbrauchbar:</strong> AutoGPT-local — stagniertes Projekt, kaputte Abhängigkeiten, Planungsschleife driftet in Minuten.',
+                            '<strong>Tool-Call-Zuverlässigkeit = Modell-Eigenschaft:</strong> Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B funktionieren. Modelle unter 7B versagen in allen Stacks.',
+                            '<strong>Das Modell "beaufsichtigter Assistent" gewinnt 2026.</strong> Agenten, die bei der Genehmigung stoppen, erledigen mehr Aufgaben.',
+                            '<strong>Überwachungskosten sind die echte Metrik.</strong> 3–12 Genehmigungen = lieferbar. 40+ = Sie machen die Arbeit, nicht der Agent.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Kurzfakten',
+                        items: [
+                            '<strong>Getestete Stacks:</strong> Cline + Ollama, Continue.dev Agent, LangGraph + Ollama, AutoGPT-local, OpenInterpreter, MetaGPT local.',
+                            '<strong>Getestete Aufgaben:</strong> Themenrecherche, Multi-Datei-Refactoring, E-Mail-Triage, Scrape-and-Summarize, Bug-Debugging.',
+                            '<strong>Hardware:</strong> Apple M5 Max 64 GB und 2× NVIDIA RTX 3090 24 GB.',
+                            '<strong>Verdikt-Profil:</strong> 2 Stacks zuverlässig auf allen 5 Aufgaben, 3 auf 1–2 Aufgaben, 1 unbrauchbar.',
+                            '<strong>Kosten:</strong> 0 € API-Gebühren. ~0,05–0,30 € Strom pro Aufgabe. Nur lokale Inferenz.',
+                            '<strong>Konfiguration:</strong> Read-Tools auto-genehmigen; Write/Shell manuell genehmigen.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Agenten-Realitätstabelle',
+                        columns: ['Stack', 'Erfolgsquote', 'Verdikt'],
+                        rows: [
+                            { 'Stack': 'Cline + Ollama', 'Erfolgsquote': '13–15 / 15 Läufe', 'Verdikt': 'Funktioniert. Standardwahl für Code-Aufgaben.' },
+                            { 'Stack': 'Continue.dev Agent', 'Erfolgsquote': '12–14 / 15 Läufe', 'Verdikt': 'Funktioniert. Leichtere Alternative.' },
+                            { 'Stack': 'LangGraph + Ollama', 'Erfolgsquote': '4–7 / 15 Läufe', 'Verdikt': 'Gescheitert. Aufwand übersteigt Nutzen.' },
+                            { 'Stack': 'AutoGPT-local', 'Erfolgsquote': '0–2 / 15 Läufe', 'Verdikt': 'Unbrauchbar. In 2026 überspringen.' },
+                            { 'Stack': 'OpenInterpreter', 'Erfolgsquote': '6–9 / 15 (mit Risiko)', 'Verdikt': 'Gescheitert für Autonomie. Nur beaufsichtigt.' },
+                            { 'Stack': 'MetaGPT local', 'Erfolgsquote': '3–6 / 15 Läufe', 'Verdikt': 'Gescheitert. Multi-Agent-Abstraktion bricht.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was funktioniert: Cline + Ollama',
+                        intro: 'Der einzige Stack, der jeden Aufgabentyp mit vorhersehbaren Überwachungskosten erledigte.',
+                        items: [
+                            '<strong>VS Code Erweiterung</strong> — schlägt einen Plan vor, führt ihn über Tools aus, fragt bei jedem Schritt nach Genehmigung.',
+                            '<strong>Approval-Flow im Vordergrund</strong> — jeder Schritt ist eine Karte zum Akzeptieren oder Ablehnen; Fehler sind per Klick rückgängig zu machen.',
+                            '<strong>Stark bei:</strong> Multi-Datei-Refactoring, Bug-Debugging, fokussierter Recherche mit Markdown-Ausgabe.',
+                            '<strong>Schwach bei:</strong> Nicht-Coding-Aufgaben, die externen HTTP ohne MCP-Server benötigen.',
+                            '<strong>Überwachungskosten:</strong> ~5–12 Genehmigungen pro Aufgabe. Write/Shell auf manuelle Genehmigung setzen.',
+                            '<strong>Token-Tipp:</strong> Bei Aufgaben mit >6 Dateien auf ein 128K-Kontextmodell wechseln.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was funktioniert: Continue.dev Agent Mode',
+                        intro: 'Die richtige Wahl, wenn Cline überdimensioniert ist — gleiche IDE, kleinere Oberfläche, weniger Genehmigungen.',
+                        items: [
+                            '<strong>Leichterer Agent-Loop</strong> — weniger Tools, kürzere Horizonte, jede Bearbeitung als Diff-Vorschau.',
+                            '<strong>Stark bei:</strong> Ein- oder Zwei-Datei-Aufgaben, Funktions-Rewrites, Test-Ergänzungen.',
+                            '<strong>Schwach bei:</strong> Plänen länger als 5 Schritte — stoppt nach 2–3 Dateien und fragt nach Fortsetzung.',
+                            '<strong>Überwachungskosten:</strong> ~4–8 Genehmigungen pro Aufgabe, meist Diff-Vorschauen (hohes Signal, schnelle Bestätigung).',
+                            '<strong>Token-Kosten:</strong> Niedriger als Cline — verwendet TF-IDF + Embeddings-Index statt Streaming ganzer Dateien.',
+                            '<strong>Bevorzugen gegenüber Cline, wenn:</strong> Aufgabe passt in 2–3 Dateien, Token-Budget knapp, oder bereits für Autocomplete genutzt.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was scheitert: LangGraph + Ollama',
+                        intro: 'Richtiges Tool für Produktions-Orchestrierung. Falsches Tool für einen Desktop-Agenten.',
+                        items: [
+                            '<strong>Fragil ab 4–5 Schritten:</strong> Zustandsmaschinen laufen in Schleifen, wenn ein Tool unerwartete Daten zurückgibt.',
+                            '<strong>Kein natives Approval-Gate</strong> — Human-in-the-Loop-Unterbrechungen müssen selbst gebaut werden; Cline bietet dies gratis.',
+                            '<strong>Graph debuggen ist halbe Arbeit</strong> — Fehler werden dem Orchestrierungscode zugeschrieben, nicht dem Modell.',
+                            '<strong>Richtiger Einsatz:</strong> Server-seitige Workflows mit festen Tool-Oberflächen und echten Test-Suites.',
+                            '<strong>Verdikt:</strong> Überspringen, es sei denn, der Workflow passt wirklich nicht zu Cline + MCP-Servern.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was scheitert: OpenInterpreter & MetaGPT',
+                        items: [
+                            '<strong>OpenInterpreter — nur beaufsichtigt:</strong> führt Shell-Befehle zu eifrig aus; Auto-Confirm-Modus ist die Quelle aller Horrorfälle.',
+                            '<strong>OpenInterpreter-Kosten:</strong> 40+ Bestätigungen für eine 30-Minuten-Aufgabe; jeder Block wird beaufsichtigt.',
+                            '<strong>MetaGPT Multi-Agent-Rollenspiel:</strong> PM → Engineer → QA-Personas verwischen nach zwei Übergaben; Agenten wiederholen frühere Arbeit.',
+                            '<strong>MetaGPT tieferes Problem:</strong> Multi-Agent fügt Schritte hinzu ohne Fähigkeiten; ein einzelner Agent mit Checklisten-Prompt schlägt es.',
+                            '<strong>Beide Verdikts:</strong> in engen Anwendungsfällen nützlich; als autonome Agenten bei realen Aufgaben gescheitert.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Warum Agent-Demos besser aussehen als die Realität',
+                        items: [
+                            '<strong>Demo-Aufgaben sind begrenzt:</strong> kleine Dateioberfläche, eindeutiges Erfolgssignal. Echte Aufgaben sind offen.',
+                            '<strong>Demos sind selektiv:</strong> ins Stocken geratene und halluzinierte Läufe sind nicht im Schnitt. Man sieht einen Erfolg, nicht die Erfolgsrate.',
+                            '<strong>Demo-Prompts sind über-spezifiziert:</strong> der benötigte Kontext ist in Dateien vorgeladen. Echter Kontext ist in einem Slack-Thread.',
+                            '<strong>Demo-Modelle sind größer:</strong> Cloud-Demos laufen mit Frontier-Modellen; lokale Agenten laufen mit dem, was >10 Token/s liefert.',
+                            '<strong>Den Median erwarten:</strong> 70–80% Erfolg bei realen Aufgaben, 20–30% erfordern Eingriff. Für den Median-Lauf planen.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Überwachungskosten: Die echte Metrik',
+                        items: [
+                            '<strong>3–8 Genehmigungen (niedrig):</strong> fokussiertes Cline-Refactoring oder Continue.dev Einzeldatei-Aufgabe — Aufgabenzeit dominiert von Modell-Latenz.',
+                            '<strong>10–20 Genehmigungen (mittel):</strong> Cline berührt 8+ Dateien — halbe Aufgabenzeit für das Genehmigen von Diffs.',
+                            '<strong>40+ Genehmigungen (hoch):</strong> OpenInterpreter für alles Nicht-Triviale — Agent ist ein Tipp-Multiplikator, kein Produktivitäts-Multiplikator.',
+                            '<strong>Genehmigungsmüdigkeit:</strong> ab ~30 Genehmigungen stempeln Menschen ab — das Sicherheitstor wird fiktiv.',
+                            '<strong>Richtiger Knopf — Auto-Approve-Allowlist:</strong> read_file/list_files/search = auto. write_to_file/execute_command = immer manuell.',
+                            '<strong>Richtige Einheit:</strong> Genehmigungen bei einer echten Aufgabe zählen. Über 20 = Stack spart keine Arbeit.'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Aufgaben, die Sie einem Agenten nie anvertrauen sollten',
+                        items: [
+                            'Produktionsdatenbank-Schreibvorgänge — standardmäßig Read-Only-Rollen; Schreibzugriff nur für explizite Aufgaben.',
+                            'Alles mit Geld oder Auth — Zahlungen, OAuth, Kontoerstellung, Rollen-/Berechtigungsänderungen.',
+                            'Langfristige Planung über 8–10 Schritte — Agenten driften; menschlich genehmigten Plan + schrittweise Ausführung nutzen.',
+                            'Aufgaben, bei denen Erfolg nicht schnell verifiziert werden kann — wenn Fakten-Check mehr kostet als Neuschreiben, Agent überspringen.',
+                            'Dateien außerhalb eines abgesicherten Workspace-Verzeichnisses — Workspace als wegwerfbar behandeln.',
+                            'Multi-Tenant- oder gemeinsame Infrastruktur — lokale Agenten sind 2026 Personal-Machine-Tools.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Entscheidung: Wählen Sie Ihren Stack',
+                        columns: ['Ihre Situation', 'Wahl'],
+                        rows: [
+                            { 'Ihre Situation': 'Coding-Aufgaben in VS Code (Refactor, Debug, Multi-Datei)', 'Wahl': 'Cline + Ollama + Qwen3-Coder 30B' },
+                            { 'Ihre Situation': 'Bereits Continue.dev, leichteren Agenten benötigt', 'Wahl': 'Continue.dev Agent mode' },
+                            { 'Ihre Situation': 'Agent für Browser, DB, Dateizugriff', 'Wahl': 'Cline + Ollama + MCP Server' },
+                            { 'Ihre Situation': 'Lokaler Code-Interpreter REPL', 'Wahl': 'OpenInterpreter (nur beaufsichtigt)' },
+                            { 'Ihre Situation': 'Produktions-Workflow mit deterministischen Tools', 'Wahl': 'LangGraph + Ollama + echte Test-Suite' },
+                            { 'Ihre Situation': 'Vollständig autonome unbeaufsichtigte Agenten', 'Wahl': 'Warten — 2026-Stack kann das nicht liefern.' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Häufige Fehler',
+                        items: [
+                            'Für Autonomie optimieren — "Wie lange unbeaufsichtigt" ist falsch; "wie wenige Genehmigungen für die Aufgabe" ist richtig.',
+                            'Kleine Modelle für Tool-Call-Arbeit nutzen — unter 7B werden fehlerhafte Calls emittiert; Qwen3-Coder 30B oder ähnliches verwenden.',
+                            '32K-Kontext für Multi-Datei-Arbeit — Cline streamt ganze Dateien; 8-Datei-Aufgabe überschreitet 32K schnell; 128K-Modelle nutzen.',
+                            'Alles auto-genehmigen — nur Reads auto-genehmigen; Writes und Shell immer manuell.',
+                            'Produktionsdatenbank-Schreibvorgänge von einem Agenten — standardmäßig Read-Only; Schreibzugriff nur wenn explizit benötigt.',
+                            'Eigenes LangGraph bauen, bevor Cline probiert — 90% der "Ich brauche Custom Agent"-Fälle passen zu Cline + MCP Server.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Den richtigen lokalen Agent-Stack finden',
+                        body: 'PromptQuorum hilft Ihnen, Modell- und Stack-Kombinationen für Agent-Aufgaben zu vergleichen.',
+                        cta: 'PromptQuorum kostenlos testen',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Agents IA locaux 2026 : Ce qui fonctionne réellement',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Agents IA locaux 2026 : Ce qui fonctionne réellement',
+                        subtitle: 'Six stacks, cinq tâches réelles, 30 jours. Deux fonctionnent. Trois échouent. Un est inutilisable.',
+                        link: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points clés',
+                        items: [
+                            '<strong>Deux stacks livrent du vrai travail :</strong> Cline + Ollama et Continue.dev Agent mode — tous deux limités à un éditeur, un modèle, une porte d\'approbation.',
+                            '<strong>Trois stacks échouent de façon surprenante :</strong> LangGraph (fragile au-delà de 4–5 étapes), OpenInterpreter (trop prompt à exécuter du shell), MetaGPT (le jeu de rôles multi-agents s\'effondre).',
+                            '<strong>Un stack est inutilisable :</strong> AutoGPT-local — projet stagnant, dépendances cassées, boucle de planification dérive en minutes.',
+                            '<strong>Fiabilité des appels d\'outils = propriété du modèle :</strong> Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B fonctionnent. Les modèles sous 7B échouent dans tous les stacks.',
+                            '<strong>Le modèle "assistant supervisé" gagne en 2026.</strong> Les agents qui s\'arrêtent pour approbation terminent plus de tâches.',
+                            '<strong>Le coût de supervision est la vraie métrique.</strong> 3–12 approbations = livrable. 40+ = c\'est vous qui faites le travail, pas l\'agent.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Faits rapides',
+                        items: [
+                            '<strong>Stacks testés :</strong> Cline + Ollama, Continue.dev Agent, LangGraph + Ollama, AutoGPT-local, OpenInterpreter, MetaGPT local.',
+                            '<strong>Tâches testées :</strong> recherche thématique, refactoring multi-fichiers, triage d\'e-mails, scrape-and-summarize, débogage de bugs.',
+                            '<strong>Matériel :</strong> Apple M5 Max 64 Go et 2× NVIDIA RTX 3090 24 Go.',
+                            '<strong>Profil des verdicts :</strong> 2 stacks fiables sur les 5 tâches, 3 fiables sur 1–2 tâches, 1 inutilisable.',
+                            '<strong>Coût :</strong> 0 € de frais API. ~0,05–0,30 € d\'électricité par tâche. Inférence locale uniquement.',
+                            '<strong>Config intelligente :</strong> auto-approuver les outils de lecture ; approbation manuelle pour les écritures et les commandes shell.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Table de réalité des agents',
+                        columns: ['Stack', 'Taux de succès', 'Verdict'],
+                        rows: [
+                            { 'Stack': 'Cline + Ollama', 'Taux de succès': '13–15 / 15 exécutions', 'Verdict': 'Fonctionne. Choix par défaut pour le code.' },
+                            { 'Stack': 'Continue.dev Agent', 'Taux de succès': '12–14 / 15 exécutions', 'Verdict': 'Fonctionne. Plus léger pour petites tâches.' },
+                            { 'Stack': 'LangGraph + Ollama', 'Taux de succès': '4–7 / 15 exécutions', 'Verdict': 'Échoué. Effort de construction > valeur.' },
+                            { 'Stack': 'AutoGPT-local', 'Taux de succès': '0–2 / 15 exécutions', 'Verdict': 'Inutilisable. À éviter en 2026.' },
+                            { 'Stack': 'OpenInterpreter', 'Taux de succès': '6–9 / 15 (avec risque)', 'Verdict': 'Échoué pour l\'autonomie. REPL supervisé seulement.' },
+                            { 'Stack': 'MetaGPT local', 'Taux de succès': '3–6 / 15 exécutions', 'Verdict': 'Échoué. Abstraction multi-agent cassée.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce qui fonctionne : Cline + Ollama',
+                        intro: 'Le seul stack qui a accompli chaque type de tâche avec un coût de supervision prévisible.',
+                        items: [
+                            '<strong>Extension VS Code</strong> — propose un plan, exécute via des outils (lecture/écriture/exécution), demande approbation à chaque étape.',
+                            '<strong>Flux d\'approbation central</strong> — chaque étape est une carte à accepter ou rejeter ; les échecs se révoquent en un clic.',
+                            '<strong>Excelle dans :</strong> refactoring multi-fichiers, débogage exploratoire, recherche ciblée produisant du markdown.',
+                            '<strong>Peine sur :</strong> tâches non-coding nécessitant HTTP externe sans serveur MCP.',
+                            '<strong>Coût de supervision :</strong> ~5–12 approbations par tâche. Écriture/shell en approbation manuelle.',
+                            '<strong>Conseil tokens :</strong> passer à un modèle 128K pour les tâches touchant >6 fichiers.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce qui fonctionne : Continue.dev Agent Mode',
+                        intro: 'Le bon choix quand Cline est excessif — même IDE, surface plus petite, moins d\'approbations.',
+                        items: [
+                            '<strong>Boucle d\'agent plus légère</strong> — moins d\'outils, horizons plus courts, chaque édition apparaît en prévisualisation diff.',
+                            '<strong>Excelle dans :</strong> tâches sur un ou deux fichiers, réécritures de fonctions, ajouts de tests.',
+                            '<strong>Peine sur :</strong> plans de plus de 5 étapes — s\'arrête après 2–3 fichiers et demande à continuer.',
+                            '<strong>Coût de supervision :</strong> ~4–8 approbations par tâche, surtout des prévisualisations diff (signal élevé, acceptation rapide).',
+                            '<strong>Coût en tokens :</strong> inférieur à Cline — utilise TF-IDF + index d\'embeddings au lieu de streamer des fichiers entiers.',
+                            '<strong>Choisir plutôt que Cline quand :</strong> tâche sur 2–3 fichiers, budget tokens serré, ou déjà utilisé pour l\'autocomplétion.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce qui échoue : LangGraph + Ollama',
+                        intro: 'Bon outil pour l\'orchestration de production. Mauvais outil pour un agent de bureau.',
+                        items: [
+                            '<strong>Fragile au-delà de 4–5 étapes :</strong> les machines à états bouclent quand un outil retourne des données inattendues.',
+                            '<strong>Pas de porte d\'approbation native</strong> — les interruptions humaines dans la boucle doivent être construites manuellement ; Cline les offre gratuitement.',
+                            '<strong>Déboguer le graphe est la moitié du travail</strong> — les échecs sont attribués au code d\'orchestration, pas au modèle.',
+                            '<strong>Sa place :</strong> workflows côté serveur avec surfaces d\'outils fixes et vraies suites de tests.',
+                            '<strong>Verdict :</strong> à ignorer sauf si le workflow est vraiment incompatible avec Cline + serveurs MCP.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce qui échoue : OpenInterpreter & MetaGPT',
+                        items: [
+                            '<strong>OpenInterpreter — supervisé seulement :</strong> exécute les commandes shell trop facilement ; le mode auto-confirm est la source de tous les cauchemars.',
+                            '<strong>Coût OpenInterpreter :</strong> 40+ confirmations pour une tâche de 30 minutes ; chaque bloc est supervisé.',
+                            '<strong>Jeu de rôles multi-agents MetaGPT :</strong> les personas PM → Ingénieur → QA se confondent après deux transferts ; les agents répètent le travail précédent.',
+                            '<strong>Problème plus profond de MetaGPT :</strong> le multi-agent ajoute des tours sans ajouter de capacité ; un seul agent avec une invite checklist le bat.',
+                            '<strong>Les deux verdicts :</strong> utiles dans des périmètres étroits ; ont échoué comme agents autonomes sur toute tâche réelle.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Pourquoi les démos d\'agents semblent meilleures que la réalité',
+                        items: [
+                            '<strong>Les tâches de démo sont délimitées :</strong> petite surface de fichiers, signal de succès non ambigu. Les vraies tâches sont ouvertes.',
+                            '<strong>Les démos sont sélectives :</strong> les exécutions bloquées et hallucinations ne sont pas montrées. On voit un succès, pas le taux de succès.',
+                            '<strong>Les prompts de démo sont sur-spécifiés :</strong> le contexte nécessaire est pré-chargé dans des fichiers. Votre contexte réel est dans un thread Slack.',
+                            '<strong>Les modèles de démo sont plus grands :</strong> les démos cloud utilisent des modèles frontier ; les agents locaux utilisent ce qui sert >10 tokens/s.',
+                            '<strong>Attendre la médiane :</strong> 70–80% de succès sur les vraies tâches, 20–30% nécessitant intervention. Planifier pour l\'exécution médiane.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Coût de supervision : La vraie métrique',
+                        items: [
+                            '<strong>3–8 approbations (faible) :</strong> refactoring Cline ciblé ou tâche mono-fichier Continue.dev — temps de tâche dominé par la latence du modèle.',
+                            '<strong>10–20 approbations (moyen) :</strong> Cline touchant 8+ fichiers — la moitié du temps de tâche est passée à approuver des diffs.',
+                            '<strong>40+ approbations (élevé) :</strong> OpenInterpreter sur tout ce qui est non-trivial — l\'agent multiplie la frappe, pas la productivité.',
+                            '<strong>Fatigue d\'approbation :</strong> au-delà de ~30 approbations, les humains tamponnent — la porte de sécurité devient fictive.',
+                            '<strong>Bon réglage — liste d\'autorisation auto-approve :</strong> read_file/list_files/search = auto. write_to_file/execute_command = toujours manuel.',
+                            '<strong>Bonne unité :</strong> compter les approbations sur une vraie tâche. Au-delà de 20 = le stack ne vous économise pas de travail.'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Tâches à ne jamais confier à un agent',
+                        items: [
+                            'Écritures en base de données de production — rôles read-only par défaut ; rôle inscriptible seulement pour des tâches explicites.',
+                            'Tout ce qui touche à l\'argent ou à l\'auth — paiements, OAuth, création de compte, changements de rôles/permissions.',
+                            'Planification longue au-delà de 8–10 étapes — les agents dérivent ; utiliser plan approuvé par un humain + exécution étape par étape.',
+                            'Tâches dont le succès ne peut pas être vérifié rapidement — si la vérification des faits coûte plus que réécrire, ignorer l\'agent.',
+                            'Fichiers hors d\'un répertoire workspace sandboxé — traiter le workspace comme jetable.',
+                            'Infrastructure multi-locataire ou partagée — les agents locaux sont des outils machine personnelle en 2026.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Décision : Choisissez votre stack',
+                        columns: ['Votre situation', 'Choix'],
+                        rows: [
+                            { 'Votre situation': 'Tâches de code dans VS Code (refactor, debug, multi-fichiers)', 'Choix': 'Cline + Ollama + Qwen3-Coder 30B' },
+                            { 'Votre situation': 'Déjà sur Continue.dev, besoin d\'un agent plus léger', 'Choix': 'Continue.dev Agent mode' },
+                            { 'Votre situation': 'Agent qui pilote navigateur, interroge DB, lit fichiers', 'Choix': 'Cline + Ollama + serveurs MCP' },
+                            { 'Votre situation': 'REPL interpréteur de code local', 'Choix': 'OpenInterpreter (supervisé seulement)' },
+                            { 'Votre situation': 'Workflow de production avec outils déterministes', 'Choix': 'LangGraph + Ollama + vraie suite de tests' },
+                            { 'Votre situation': 'Agents autonomes entièrement non supervisés', 'Choix': 'Attendre — le stack 2026 ne peut pas livrer ça.' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Erreurs courantes',
+                        items: [
+                            'Optimiser pour l\'autonomie — "Combien de temps sans surveillance" est faux ; "combien d\'approbations pour terminer la tâche" est juste.',
+                            'Utiliser de petits modèles pour les appels d\'outils — sous 7B, les appels sont malformés ; utiliser Qwen3-Coder 30B ou similaire.',
+                            'Contexte 32K pour le travail multi-fichiers — Cline streame des fichiers entiers ; une tâche à 8 fichiers dépasse 32K vite ; utiliser des modèles 128K.',
+                            'Tout auto-approuver — auto-approuver uniquement les lectures ; toujours manuel pour les écritures et les commandes shell.',
+                            'Écritures de base de données de production depuis un agent — read-only par défaut ; inscriptible seulement si explicitement nécessaire.',
+                            'Construire un LangGraph personnalisé avant d\'essayer Cline — 90% des cas "besoin d\'agent personnalisé" rentrent dans Cline + serveurs MCP.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Trouvez le bon stack d\'agent local',
+                        body: 'PromptQuorum vous aide à comparer les combinaisons de modèles et stacks pour les tâches d\'agents.',
+                        cta: 'Essayer PromptQuorum gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ローカルAIエージェント2026年：実際に機能するもの',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ローカルAIエージェント2026年：実際に機能するもの',
+                        subtitle: '6スタック、5つの実務タスク、30日間。2つは機能する。3つは失敗する。1つは使用不可。',
+                        link: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work'
+                    },
+                    {
+                        type: 'list',
+                        h2: '主要なポイント',
+                        items: [
+                            '<strong>2つのスタックが実際の作業を完成：</strong>Cline + OllamaとContinue.dev Agentモード — 両方とも1つのエディタ、1つのモデル、1つの承認ゲートに限定。',
+                            '<strong>3つのスタックが予想外に失敗：</strong>LangGraph（4〜5ステップ以降は脆弱）、OpenInterpreter（シェルを積極的に実行しすぎ）、MetaGPT（マルチエージェントロールプレイが崩壊）。',
+                            '<strong>1つのスタックは使用不可：</strong>AutoGPT-local — 停滞したプロジェクト、壊れた依存関係、計画ループが数分で漂流。',
+                            '<strong>ツール呼び出し信頼性 = モデルの特性：</strong>Qwen3-Coder 30B、GLM-5.1 32B、Gemma 4 27B、Llama 3.3 70Bは機能する。7B未満のモデルはすべてのスタックで失敗。',
+                            '<strong>2026年は「監督付きアシスタント」モデルが勝つ。</strong>承認のために停止するエージェントの方が多くのタスクを完成させる。',
+                            '<strong>監督コストが真の指標。</strong>3〜12回の承認 = 出荷可能。40回以上 = あなたが作業しており、エージェントではない。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'クイックファクト',
+                        items: [
+                            '<strong>テストしたスタック：</strong>Cline + Ollama、Continue.dev Agent、LangGraph + Ollama、AutoGPT-local、OpenInterpreter、MetaGPT local。',
+                            '<strong>テストしたタスク：</strong>テーマ調査、マルチファイルリファクタ、メール下書きトリアージ、スクレイプ＆要約、バグデバッグ。',
+                            '<strong>ハードウェア：</strong>Apple M5 Max 64 GBおよび2× NVIDIA RTX 3090 24 GB。',
+                            '<strong>評決の形状：</strong>2スタックがすべての5タスクで信頼できる、3スタックが1〜2タスクで信頼できる、1スタックは使用不可。',
+                            '<strong>コスト：</strong>API费用 $0。タスクあたり電力費約$0.05〜$0.30。ローカル推論のみ。',
+                            '<strong>スマート設定：</strong>読み取りツールを自動承認；書き込みとシェルコマンドは手動承認。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'エージェント現実表',
+                        columns: ['スタック', '成功率', '評決'],
+                        rows: [
+                            { 'スタック': 'Cline + Ollama', '成功率': '13–15 / 15回', '評決': '機能する。コーディングタスクのデフォルト選択。' },
+                            { 'スタック': 'Continue.dev Agent', '成功率': '12–14 / 15回', '評決': '機能する。小さなタスクに軽量。' },
+                            { 'スタック': 'LangGraph + Ollama', '成功率': '4–7 / 15回', '評決': '失敗。構築コスト > 価値。' },
+                            { 'スタック': 'AutoGPT-local', '成功率': '0–2 / 15回', '評決': '使用不可。2026年はスキップ。' },
+                            { 'スタック': 'OpenInterpreter', '成功率': '6–9 / 15（リスクあり）', '評決': '自律性で失敗。監視付きREPLのみ。' },
+                            { 'スタック': 'MetaGPT local', '成功率': '3–6 / 15回', '評決': '失敗。マルチエージェント抽象化が崩壊。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '機能するもの：Cline + Ollama',
+                        intro: '予測可能な監督コストですべてのタスクタイプを完成させた唯一のスタック。',
+                        items: [
+                            '<strong>VS Code拡張機能</strong> — 計画を提案し、ツール（読み取り/書き込み/実行）で実行し、各ステップで承認を求める。',
+                            '<strong>承認フローが中心</strong> — 各ステップは受け入れるか拒否するカード；失敗は1クリックで元に戻せる。',
+                            '<strong>得意：</strong>マルチファイルリファクタ、探索的バグデバッグ、マークダウンを生成する範囲調査。',
+                            '<strong>苦手：</strong>MCPサーバーなしで外部HTTPが必要な非コーディングタスク。',
+                            '<strong>監督コスト：</strong>タスクあたり〜5〜12回の承認。書き込み/シェルを手動承認に設定。',
+                            '<strong>トークンヒント：</strong>>6ファイルのタスクには128Kコンテキストモデルに切り替える。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '機能するもの：Continue.dev Agentモード',
+                        intro: 'Clineが過剰な場合の適切な選択 — 同じIDE、より小さい表面、より少ない承認。',
+                        items: [
+                            '<strong>軽量エージェントループ</strong> — より少ないツール、短いデフォルトホライズン、各編集がdiffプレビューとして表示。',
+                            '<strong>得意：</strong>1〜2ファイルのタスク、関数の書き直し、テストの追加。',
+                            '<strong>苦手：</strong>5ステップ以上の計画 — 2〜3ファイル後に停止して続行を求める。',
+                            '<strong>監督コスト：</strong>タスクあたり〜4〜8回の承認、ほとんどがdiffプレビュー（高シグナル、素早い受け入れ）。',
+                            '<strong>トークンコスト：</strong>Clineより低い — ファイル全体のストリーミングの代わりにTF-IDF + 埋め込みインデックスを使用。',
+                            '<strong>Clineより選ぶ場合：</strong>タスクが2〜3ファイルに収まる、トークン予算が厳しい、またはオートコンプリートに既に使用中。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '失敗するもの：LangGraph + Ollama',
+                        intro: 'プロダクション向けオーケストレーションには適切。デスクトップエージェントには不適切。',
+                        items: [
+                            '<strong>4〜5ステップ以降は脆弱：</strong>ツールが予期しないデータを返すとステートマシンがループ。',
+                            '<strong>ネイティブ承認ゲートなし</strong> — ヒューマン・イン・ザ・ループの割り込みを自分で構築；Clineはこれを無料で提供。',
+                            '<strong>グラフのデバッグが作業の半分</strong> — 失敗はオーケストレーションコードに帰属、モデルではなく。',
+                            '<strong>適切な場所：</strong>固定ツール表面と実際のテストスイートを持つサーバーサイドワークフロー。',
+                            '<strong>評決：</strong>Cline + MCPサーバーと真に互換性がないワークフロー形状でない限りスキップ。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '失敗するもの：OpenInterpreter & MetaGPT',
+                        items: [
+                            '<strong>OpenInterpreter — 監視付きのみ：</strong>シェルコマンドを積極的に実行しすぎ；自動確認モードがすべてのホラー話の元凶。',
+                            '<strong>OpenInterpreterのコスト：</strong>30分のタスクに40回以上の確認；すべてのブロックを監視する。',
+                            '<strong>MetaGPTマルチエージェントロールプレイ：</strong>PM → エンジニア → QAのペルソナが2回の引き渡し後にぼやける；エージェントが以前の作業を繰り返す。',
+                            '<strong>MetaGPTの深い問題：</strong>マルチエージェントは能力を追加せずにターンを追加；チェックリストプロンプトを持つ単一エージェントがそれを上回る。',
+                            '<strong>両方の評決：</strong>狭い範囲では有用；実際のタスクでは自律エージェントとして失敗。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'なぜエージェントのデモが現実より良く見えるのか',
+                        items: [
+                            '<strong>デモタスクは範囲が限定：</strong>小さなファイル表面、明確な成功シグナル。実際のタスクはオープンエンド。',
+                            '<strong>デモは厳選：</strong>停滞と幻覚の実行は含まれない。1つの成功を見るが、成功率を見ない。',
+                            '<strong>デモプロンプトは過剰に指定：</strong>モデルが必要とするコンテキストはファイルに事前ロード。実際のコンテキストはSlackスレッドにある。',
+                            '<strong>デモモデルはより大きい：</strong>クラウドデモはフロンティアモデルで実行；ローカルエージェントは>10トークン/秒で提供できるものを実行。',
+                            '<strong>中央値を期待：</strong>実際のタスクで70〜80%の成功、20〜30%は介入が必要。中央値の実行を計画する。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '監督コスト：真の指標',
+                        items: [
+                            '<strong>3〜8回の承認（低）：</strong>範囲限定のClineリファクタまたはContinue.dev単一ファイルタスク — タスク時間はモデルレイテンシが支配。',
+                            '<strong>10〜20回の承認（中）：</strong>Clineが8以上のファイルを変更 — タスク時間の半分がdiff承認。',
+                            '<strong>40回以上の承認（高）：</strong>OpenInterpreterの非自明なタスク — エージェントはタイピング乗数であり、生産性乗数ではない。',
+                            '<strong>承認疲労：</strong>〜30回以上の承認で、人間がゴム印を押す — 安全ゲートが架空になる。',
+                            '<strong>適切なノブ — 自動承認許可リスト：</strong>read_file/list_files/search = 自動。write_to_file/execute_command = 常に手動。',
+                            '<strong>適切な単位：</strong>実際のタスクで承認回数を数える。20回以上 = スタックが実際に作業を節約していない。'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'エージェントに任せてはいけないタスク',
+                        items: [
+                            'プロダクションデータベースの書き込み — デフォルトで読み取り専用ロール；明示的タスクの期間のみ書き込み可能ロール。',
+                            'お金または認証に関わるもの — 支払い、OAuth、アカウント作成、ロール/パーミッション変更。',
+                            '8〜10ステップ以上の長期計画 — エージェントが漂流；人間が承認した計画 + ステップバイステップ実行を使用。',
+                            '成功をすぐに確認できないタスク — ファクトチェックが書き直しより費用がかかる場合、エージェントをスキップ。',
+                            'サンドボックス化されたワークスペースディレクトリ外のファイル — ワークスペースを使い捨て可能として扱う。',
+                            'マルチテナントまたは共有インフラ — ローカルエージェントは2026年の個人マシンツール。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '決定：スタックを選ぶ',
+                        columns: ['あなたの状況', '選択'],
+                        rows: [
+                            { 'あなたの状況': 'VS Codeのコーディングタスク（リファクタ、デバッグ、マルチファイル）', '選択': 'Cline + Ollama + Qwen3-Coder 30B' },
+                            { 'あなたの状況': 'すでにContinue.devを使用、軽量エージェントが必要', '選択': 'Continue.dev Agentモード' },
+                            { 'あなたの状況': 'ブラウザ、DB、ファイルを操作するエージェント', '選択': 'Cline + Ollama + MCPサーバー' },
+                            { 'あなたの状況': 'ローカルコードインタープリタREPL', '選択': 'OpenInterpreter（監視付きのみ）' },
+                            { 'あなたの状況': '確定的ツールを持つプロダクションワークフロー', '選択': 'LangGraph + Ollama + 実際のテストスイート' },
+                            { 'あなたの状況': '完全に自律的な無監視エージェント', '選択': '待機 — 2026年のスタックはこれを提供できない。' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'よくある間違い',
+                        items: [
+                            '自律性に最適化する — "無監視でどれだけ長く"は誤り；"タスクを完成させるのに承認が何回必要か"が正しい。',
+                            'ツール呼び出し作業に小さなモデルを使用 — 7B未満は不正なコールを出す；Qwen3-Coder 30B以上を使用。',
+                            'マルチファイル作業に32Kコンテキスト — Clineはファイル全体をストリーム；8ファイルのタスクはすぐに32Kを超える；128Kモデルを使用。',
+                            'すべてを自動承認 — 読み取りのみ自動承認；書き込みとシェルコマンドは常に手動。',
+                            'エージェントからのプロダクションDB書き込み — デフォルトで読み取り専用；明示的に必要な場合のみ書き込み可能。',
+                            'Clineを試す前にカスタムLangGraphを構築 — "カスタムエージェントが必要"の90%はCline + MCPサーバーで対応可能。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '最適なローカルエージェントスタックを見つける',
+                        body: 'PromptQuorumはエージェントタスクのモデルとスタックの組み合わせを比較するのに役立ちます。',
+                        cta: 'PromptQuorumを無料で試す',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地AI代理2026：实际可行的方案',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '本地AI代理2026：实际可行的方案',
+                        subtitle: '六个框架，五项真实任务，30天。两个有效。三个失败。一个无法使用。',
+                        link: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work'
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            '<strong>两个框架完成真实工作：</strong>Cline + Ollama 和 Continue.dev Agent模式 — 两者都限制在一个编辑器、一个模型、一个批准门控。',
+                            '<strong>三个框架意外失败：</strong>LangGraph（4-5步后脆弱）、OpenInterpreter（过于积极执行shell）、MetaGPT（多代理角色扮演崩溃）。',
+                            '<strong>一个框架无法使用：</strong>AutoGPT-local — 停滞的项目，损坏的依赖，计划循环在几分钟内漂移。',
+                            '<strong>工具调用可靠性 = 模型属性：</strong>Qwen3-Coder 30B、GLM-5.1 32B、Gemma 4 27B、Llama 3.3 70B有效。7B以下模型在所有框架中失败。',
+                            '<strong>2026年"监督助手"模式获胜。</strong>为批准而停止的代理比无人看管的自主代理完成更多任务。',
+                            '<strong>监督成本是真实指标。</strong>3-12次批准 = 可交付。40次以上 = 你在做工作，不是代理。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '快速事实',
+                        items: [
+                            '<strong>测试框架：</strong>Cline + Ollama、Continue.dev Agent、LangGraph + Ollama、AutoGPT-local、OpenInterpreter、MetaGPT local。',
+                            '<strong>测试任务：</strong>主题研究、多文件重构、邮件草稿分类、抓取摘要、Bug调试。',
+                            '<strong>硬件：</strong>Apple M5 Max 64 GB 和 2× NVIDIA RTX 3090 24 GB。',
+                            '<strong>评决分布：</strong>2个框架在全部5项任务中可靠，3个在1-2项任务可靠，1个无法使用。',
+                            '<strong>成本：</strong>API费用 $0。每项任务约$0.05-$0.30的电费。仅本地推理。',
+                            '<strong>智能配置：</strong>自动批准读取工具；写入和shell命令需要手动批准。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '代理现实表',
+                        columns: ['框架', '成功率', '评决'],
+                        rows: [
+                            { '框架': 'Cline + Ollama', '成功率': '13–15 / 15次', '评决': '有效。编码任务的默认选择。' },
+                            { '框架': 'Continue.dev Agent', '成功率': '12–14 / 15次', '评决': '有效。小任务更轻量。' },
+                            { '框架': 'LangGraph + Ollama', '成功率': '4–7 / 15次', '评决': '失败。构建成本 > 价值。' },
+                            { '框架': 'AutoGPT-local', '成功率': '0–2 / 15次', '评决': '无法使用。2026年跳过。' },
+                            { '框架': 'OpenInterpreter', '成功率': '6–9 / 15（有风险）', '评决': '自主性失败。仅监视REPL。' },
+                            { '框架': 'MetaGPT local', '成功率': '3–6 / 15次', '评决': '失败。多代理抽象崩溃。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '有效的：Cline + Ollama',
+                        intro: '唯一以可预测监督成本完成每种任务类型的框架。',
+                        items: [
+                            '<strong>VS Code扩展</strong> — 提出计划，通过工具（读/写/执行）执行，每步请求批准。',
+                            '<strong>批准流程居中</strong> — 每步都是接受或拒绝的卡片；失败一键撤销。',
+                            '<strong>擅长：</strong>多文件重构、探索性Bug调试、生成Markdown的范围调研。',
+                            '<strong>不足：</strong>需要外部HTTP但没有连接MCP服务器的非编码任务。',
+                            '<strong>监督成本：</strong>每任务约5-12次批准。将写入/shell设置为手动批准。',
+                            '<strong>Token提示：</strong>涉及>6个文件的任务切换到128K上下文模型。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '有效的：Continue.dev Agent模式',
+                        intro: 'Cline过重时的正确选择 — 相同IDE，更小表面，更少批准。',
+                        items: [
+                            '<strong>更轻的代理循环</strong> — 更少工具，更短的默认视野，每次编辑作为diff预览呈现。',
+                            '<strong>擅长：</strong>单个或两个文件任务、函数重写、测试添加。',
+                            '<strong>不足：</strong>超过5步的计划 — 在2-3个文件后停止并请求继续。',
+                            '<strong>监督成本：</strong>每任务约4-8次批准，主要是diff预览（高信噪比，快速接受）。',
+                            '<strong>Token成本：</strong>低于Cline — 使用TF-IDF + 嵌入索引而非流式传输整个文件。',
+                            '<strong>优先于Cline的情况：</strong>任务适合2-3个文件，Token预算紧张，或已用于自动补全。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '失败的：LangGraph + Ollama',
+                        intro: '适合生产编排的工具。不适合桌面代理。',
+                        items: [
+                            '<strong>4-5步后脆弱：</strong>工具返回意外数据时状态机循环（空HTTP体、目录路径）。',
+                            '<strong>无原生批准门控</strong> — 需要自己构建人在回路中断；Cline免费提供这些。',
+                            '<strong>调试图是一半工作</strong> — 失败归因于编排代码而非模型。',
+                            '<strong>适合的场景：</strong>具有固定工具表面和真实测试套件的服务器端工作流。',
+                            '<strong>评决：</strong>除非工作流形状真的与Cline + MCP服务器不兼容，否则跳过。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '失败的：OpenInterpreter & MetaGPT',
+                        items: [
+                            '<strong>OpenInterpreter — 仅限监视：</strong>执行shell命令过于积极；自动确认模式是每个噩梦故事的来源。',
+                            '<strong>OpenInterpreter成本：</strong>30分钟任务需要40次以上确认；监督每个代码块。',
+                            '<strong>MetaGPT多代理角色扮演：</strong>PM → 工程师 → QA角色在两次交接后模糊；代理重复早期工作。',
+                            '<strong>MetaGPT更深层问题：</strong>多代理增加轮次而不增加能力；带清单提示的单一代理胜过它。',
+                            '<strong>两者评决：</strong>在狭窄范围内有用；在我们运行的任何真实任务上作为自主代理都失败了。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '为什么代理演示看起来比现实更好',
+                        items: [
+                            '<strong>演示任务有范围限制：</strong>小文件表面，明确的成功信号。真实任务是开放式的。',
+                            '<strong>演示是精心挑选的：</strong>停滞和幻觉运行不在剪辑中。你看到一次成功，而不是成功率。',
+                            '<strong>演示提示过于具体：</strong>模型需要的上下文预加载到文件中。你的真实上下文在Slack线程中。',
+                            '<strong>演示模型更大：</strong>云端演示运行前沿模型；本地代理运行能以>10 token/s服务的模型。',
+                            '<strong>期望中位数：</strong>真实任务70-80%成功，20-30%需要干预。为中位数运行做计划。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '监督成本：真实指标',
+                        items: [
+                            '<strong>3-8次批准（低）：</strong>范围限定的Cline重构或Continue.dev单文件任务 — 任务时间由模型延迟主导。',
+                            '<strong>10-20次批准（中）：</strong>Cline涉及8个以上文件 — 一半任务时间用于批准diff。',
+                            '<strong>40次以上批准（高）：</strong>OpenInterpreter处理任何非简单任务 — 代理是打字乘数而非生产力乘数。',
+                            '<strong>批准疲劳：</strong>超过约30次批准后，人类会惯性盖章 — 安全门变成虚构。',
+                            '<strong>正确旋钮 — 自动批准允许列表：</strong>read_file/list_files/search = 自动。write_to_file/execute_command = 始终手动。',
+                            '<strong>正确单位：</strong>在真实任务上计算批准次数。超过20 = 框架实际上没有为你节省工作。'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '永远不要信任代理执行的任务',
+                        items: [
+                            '生产数据库写入 — 默认运行只读角色；仅在明确任务期间使用可写角色。',
+                            '涉及金钱或认证的任何事情 — 支付、OAuth、账户创建、角色/权限更改。',
+                            '超过8-10步的长期规划 — 代理会漂移；使用人类批准的计划 + 逐步执行。',
+                            '无法快速验证成功的任务 — 如果事实核查成本超过重写，跳过代理。',
+                            '沙盒工作空间目录之外的文件 — 将工作空间视为可丢弃的。',
+                            '多租户或共享基础设施 — 2026年的本地代理是个人机器工具。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '决策：选择你的框架',
+                        columns: ['你的情况', '选择'],
+                        rows: [
+                            { '你的情况': 'VS Code中的编码任务（重构、调试、多文件）', '选择': 'Cline + Ollama + Qwen3-Coder 30B' },
+                            { '你的情况': '已使用Continue.dev，需要更轻量的代理', '选择': 'Continue.dev Agent模式' },
+                            { '你的情况': '驱动浏览器、查询DB、读取文件的代理', '选择': 'Cline + Ollama + MCP服务器' },
+                            { '你的情况': '本地代码解释器REPL', '选择': 'OpenInterpreter（仅限监视）' },
+                            { '你的情况': '具有确定性工具的生产工作流', '选择': 'LangGraph + Ollama + 真实测试套件' },
+                            { '你的情况': '完全自主无监督代理', '选择': '等待 — 2026年框架无法实现这一点。' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '常见错误',
+                        items: [
+                            '优化自主性 — "无监督多长时间"是错的；"完成任务需要多少次批准"才是对的。',
+                            '对工具调用工作使用小模型 — 7B以下会发出格式错误的调用；使用Qwen3-Coder 30B或类似模型。',
+                            '多文件工作使用32K上下文 — Cline流式传输完整文件；8文件任务很快突破32K；使用128K模型。',
+                            '自动批准一切 — 只自动批准读取；写入和shell命令始终手动。',
+                            '从代理进行生产数据库写入 — 默认只读；仅在明确需要时可写。',
+                            '在尝试Cline之前构建自定义LangGraph — 90%的"需要自定义代理"用例适合Cline + MCP服务器。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '找到合适的本地代理框架',
+                        body: 'PromptQuorum帮助您比较代理任务的模型和框架组合。',
+                        cta: '免费试用PromptQuorum',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        // Utility: render slide to HTML
+        function renderSlide(slide) {
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.2em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.2em; margin-top: 20px; text-align: left; max-width: 640px; margin-left: auto; margin-right: auto;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2 style="color: #6750a4;">${slide.h2}</h2>
+                        <p style="margin-top: 30px; font-size: 1.2em;">${slide.body}</p>
+                        <p style="margin-top: 40px;">
+                            <a href="${slide.href}" style="display: inline-block; padding: 16px 40px; background: #6750a4; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: 700; transition: background 0.2s;">
+                                ${slide.cta}
+                            </a>
+                        </p>
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}" style="position: relative;">${html}<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work?lang=${lang}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p></div>`;
+        }
+
+        // Main script
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        // Render slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        // Initialize slide navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Print handlers — show all slides before browser's print layout, restore after
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        // Print trigger
+        if (isPrint) {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>

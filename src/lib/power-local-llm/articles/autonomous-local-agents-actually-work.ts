@@ -86,6 +86,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/autonomous-local-agents-actually-work-static.html',
+    gammaDescription: 'The slide deck below covers: why 4 of 6 local agent stacks fail (named verdicts), the 30-day test methodology (6 stacks × 5 tasks), supervision cost as the real metric (3–12 vs 40+ approvals), tasks agents must never run unsupervised, and a decision table for picking the right stack. Download the PDF as a local AI agent evaluation reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -530,6 +532,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/autonomous-local-agents-actually-work-static.html',
+    gammaDescription: "Le diaporama couvre : pourquoi 4 des 6 stacks d'agents locaux échouent (verdicts nommés), la méthodologie de test sur 30 jours (6 stacks × 5 tâches), le coût de supervision comme vraie métrique (3–12 vs 40+ approbations), les tâches qu'agents ne doivent jamais exécuter sans surveillance, et une table de décision pour choisir le bon stack. Téléchargez le PDF comme fiche d'évaluation d'agent IA local.",
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -937,6 +941,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     leadAnswerBlock:
       '6つのローカルAIエージェントスタックを30日間テストしました。2つは本番実務に適しています。3つは予想外に失敗します。1つは実質的に使用不可能です。以下は名前が付けられた失敗を伴う具体的な評決です。',
+    gammaEmbedUrl: '/presentations/autonomous-local-agents-actually-work-static.html',
+    gammaDescription: 'スライドデッキは以下をカバー：6つのローカルエージェントスタックのうち4つが失敗する理由（名前付き評決）、30日間テスト方法論（6スタック×5タスク）、実際の指標としての監視コスト（3〜12対40以上の承認）、エージェントが無人で実行してはいけないタスク、最適なスタック選択の決定表。PDFをローカルAIエージェント評価参照カードとしてダウンロード。',
     sections: {
       tldr: {
         title: '概要',
@@ -1389,6 +1395,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
     ],
+    gammaEmbedUrl: '/presentations/autonomous-local-agents-actually-work-static.html',
+    gammaDescription: 'Der Foliensatz behandelt: warum 4 von 6 lokalen Agent-Stacks scheitern (benannte Verdikts), die 30-Tage-Testmethodik (6 Stacks × 5 Aufgaben), Überwachungskosten als echte Metrik (3–12 vs 40+ Genehmigungen), Aufgaben die Agenten nie unbeaufsichtigt ausführen sollten, und eine Entscheidungstabelle zur Stack-Auswahl. PDF als lokalen KI-Agenten-Evaluierungs-Referenzkarte herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1796,6 +1804,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     leadAnswerBlock:
       '**在2026年5月，两个本地代理框架可靠地完成真实工作而无需持续监督：Cline + Ollama 和 Continue.dev Agent模式。两者都界限明确、维护良好，在单个编辑器内运行Tool-calling模型，具有明确的批准门控。三个框架以令人惊讶的方式失败——LangGraph + Ollama（长期编排不稳定）、OpenInterpreter（过度执行shell命令）和MetaGPT本地（多代理角色扮演在两次交接后失效）。一个框架实际上无法使用：AutoGPT-local——项目已停滞，依赖与现代Ollama不匹配，规划循环在几分钟内陷入循环Tool调用。规律是一致的：有界限、有观点的框架包裹一个强Tool-calling模型，在每项任务上都胜过雄心勃勃的自主代理。**',
+    gammaEmbedUrl: '/presentations/autonomous-local-agents-actually-work-static.html',
+    gammaDescription: '幻灯片涵盖：6个本地代理框架中4个失败的原因（具名评决）、30天测试方法论（6框架×5任务）、监督成本作为真实指标（3-12次对比40+次批准）、代理永远不应无监督运行的任务，以及选择正确框架的决策表。下载PDF作为本地AI代理评估参考卡。',
     sections: {
       tldr: {
         title: '核心要点',
