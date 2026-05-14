@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Coding LLM Without Internet: Fully Offline Dev Setup (2026) | PromptQuorum</title>
+  <meta name="description" content="A fully offline coding setup in 2026 fits in roughly 60 GB on disk and survives a 14-hour flight without a single network call." />
+  <meta property="og:title" content="Local Coding LLM Without Internet: Fully Offline Dev Setup (2026) — PromptQuorum" />
+  <meta property="og:description" content="Offline coding stack tested on a 14-hour flight. Local LLM, cached npm/pip, Devdocs, ripgrep — ~60 GB on disk, zero network calls." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #1c1b1f;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+      gap: 16px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .header-left img {
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    #header-title {
+      font-size: 13px;
+      color: #49454f;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 500px;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .header-links a {
+      font-size: 13px;
+      color: #6750a4;
+      text-decoration: none;
+    }
+
+    .header-links a:hover { text-decoration: underline; }
+
+    .content-area {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 36px 56px;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide.active { display: flex; }
+
+    .slide h1 {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      color: #1c1b1f;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .slide h2 {
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 700;
+      color: #1c1b1f;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide p {
+      font-size: clamp(14px, 1.6vw, 18px);
+      color: #49454f;
+      line-height: 1.55;
+      max-width: 820px;
+    }
+
+    .slide ul {
+      text-align: left;
+      max-width: 820px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .slide ul li {
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: #1c1b1f;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .slide ol {
+      text-align: left;
+      max-width: 820px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .slide ol li {
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: #1c1b1f;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .slide table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 12px;
+      font-size: clamp(11px, 1.2vw, 14px);
+    }
+
+    .slide table th {
+      background: #6750a4;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .slide table td {
+      padding: 7px 12px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .slide table tr:nth-child(even) td { background: #f8f4ff; }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 24px;
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .controls button {
+      padding: 8px 20px;
+      border: 1px solid #6750a4;
+      border-radius: 20px;
+      background: transparent;
+      color: #6750a4;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .controls button:hover:not(:disabled) { background: #f0ebff; }
+    .controls button:disabled { opacity: 0.35; cursor: default; }
+
+    .slide-counter { font-size: 14px; color: #79747e; min-width: 60px; text-align: center; }
+
+    @media print {
+      body { height: auto; overflow: visible; }
+      .presentation-container { max-width: 100%; height: auto; }
+      .header { display: none; }
+      .controls { display: none; }
+      .content-area { overflow: visible; height: auto; }
+      .slide { display: flex !important; height: 100vh; page-break-after: always; break-after: page; }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Local Coding LLM Without Internet (2026)</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const BASE_URL = 'https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet';
+
+    const CONTENT = {
+      en: {
+        title: 'Local Coding LLM Without Internet: Fully Offline Dev Setup (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Local Coding LLM Without Internet: Fully Offline Dev Setup (2026)',
+            subtitle: 'A fully offline coding setup in 2026 fits in roughly 60 GB on disk and survives a 14-hour flight without a single network call.',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>Five components make a coding setup truly offline:</strong> local LLM, editor harness, package cache, docs mirror, local search. Skip any one and you hit a "needs internet" wall within an hour.',
+              '<strong>Disk budget: ~50–80 GB.</strong> Qwen3-Coder 30B Q4_K_M is ~18 GB; Devdocs ~3 GB; Stack Overflow dump ~8 GB; the rest is package caches sized to your projects.',
+              '<strong>Hardware floor:</strong> 32 GB unified RAM (Apple Silicon) or 16 GB VRAM for the 30B model, 16 GB unified for 7B fallback. Sweet spot: M5 MacBook Pro 64 GB — model, editor, Docker, browser fit without paging.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways (continued)',
+            items: [
+              '<strong>Continue.dev and Aider both run fully offline</strong> against a local Ollama endpoint. No telemetry calls, no licence checks. GitHub Copilot, Cursor Tab autocomplete, and Codeium all require network calls and silently degrade.',
+              '<strong>The two things that genuinely break:</strong> installing brand-new third-party packages (no cache hit, no fallback) and asking the model about APIs released after its training cutoff.',
+              '<strong>The 14-hour flight test passed:</strong> shipped one real feature, fixed two bugs, ran the full test suite — all without a single network call. The setup is genuine, not theoretical.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'The Offline Stack',
+            columns: ['Component', 'Online Tool', 'Offline Replacement', 'Cache Size'],
+            rows: [
+              ['AI code completion', 'GitHub Copilot, Cursor Tab', 'Continue.dev + Ollama + Qwen3-Coder 30B', '~18 GB'],
+              ['Official docs', 'MDN, ReadTheDocs', 'Devdocs (web) or Zeal (desktop)', '~3–5 GB'],
+              ['Stack Overflow', 'stackoverflow.com', 'Stack Exchange data dump (Kiwix)', '~8 GB'],
+              ['npm packages', 'registry.npmjs.org', 'Verdaccio with warmed cache', '~2–10 GB'],
+              ['Python packages', 'PyPI', 'devpi or pip download + wheelhouse', '~1–5 GB'],
+              ['Code search', 'GitHub search, Sourcegraph', 'ripgrep (code), rga (PDFs/archives)', '~10 MB']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Pre-Flight Checklist',
+            items: [
+              'Pull the local LLM: <code>ollama pull qwen3-coder:30b</code> (or <code>:7b</code> on 16 GB). Verify it responds in seconds.',
+              'Install Continue.dev or Aider; configure to point at <code>http://localhost:11434</code>.',
+              'Warm the package cache: run <code>npm install</code> / <code>pip install</code> / <code>cargo build</code> in each project.',
+              'Install any optional deps you might need mid-trip — they land in the cache for offline use.',
+              'Pre-clone repos you might reference: <code>git clone --mirror</code> for full history.',
+              'Sync Devdocs offline; pre-pull Docker images; do a 30-minute lights-off rehearsal at home.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Hardware: Why M5 64 GB Wins',
+            items: [
+              '<strong>Unified memory keeps the model resident</strong> when you switch to Docker. On a discrete-GPU laptop with 16 GB VRAM, swapping costs 5–10 seconds per switch.',
+              '<strong>30B fits in 24 GB; 64 GB leaves headroom</strong> for three Docker containers, VS Code, a Devdocs browser tab — all running simultaneously without slowdown.',
+              '<strong>Battery life under load: 6–8 hours.</strong> M5 energy-per-token is ~3× better than discrete-GPU laptops at the same throughput.',
+              '<strong>No fan noise on a quiet plane.</strong> Discrete-GPU laptops audibly spin up under inference load — fine at home, a social problem in row 27.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Picking the Right Local Model',
+            items: [
+              '<strong>Qwen3-Coder 30B Q4_K_M (~18 GB) — recommended default.</strong> Best-in-class on TypeScript, Python, Rust, Go autocomplete; reliable tool calling; 32K-token context. Needs 24 GB available memory.',
+              '<strong>Qwen3-Coder 7B Q4_K_M (~5 GB) — lightweight fallback.</strong> Runs on 8 GB unified RAM. ~80–85% of 30B quality on everyday work; gap shows on multi-step refactors.',
+              '<strong>DeepSeek Coder V3 (~25 GB) — for very long contexts.</strong> Supports 128K tokens; useful when debugging across many files in one prompt.',
+              '<strong>Codestral 22B — fastest autocomplete.</strong> Weaker on tool calling and multi-step plans; good for autocomplete-dominant workflows.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Caching Dependencies: npm, pip, cargo, go',
+            items: [
+              '<strong>npm:</strong> install Verdaccio, point npm at <code>http://localhost:4873/</code>, run <code>npm install</code> once per project. Cache persists in <code>~/.local/share/verdaccio/storage</code>.',
+              '<strong>pip:</strong> <code>pip download -r requirements.txt -d ~/wheelhouse</code> then install offline with <code>--no-index --find-links ~/wheelhouse</code>.',
+              '<strong>cargo:</strong> <code>cargo vendor</code> writes all deps to a project <code>vendor/</code> dir — builds offline forever once committed.',
+              '<strong>go:</strong> <code>go mod vendor</code> per project; or run a local Athens proxy and set <code>GOPROXY=http://localhost:3000</code>.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Offline Documentation',
+            items: [
+              '<strong>Devdocs (~3 GB):</strong> open devdocs.io, enable the docs you use, hit "Make available offline." Works in airplane mode forever after.',
+              '<strong>Zeal (~5 GB):</strong> native desktop docs browser using Dash docsets — better keyboard navigation than Devdocs. Pick one or the other; both is overkill.',
+              '<strong>Stack Overflow data dump (~8 GB compressed):</strong> Internet Archive torrent. Kiwix renders it as a browsable site for offline Q&A.',
+              '<strong>The model itself is docs</strong> for anything in its training data — TypeScript, React, Python stdlib, NumPy, AWS SDKs. Asking the model often beats searching Devdocs for these.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Local Search Without Google',
+            line1: '<strong>ripgrep (rg):</strong> blazing-fast code search — replaces grep -r, reads .gitignore, 10–50× faster on large repos',
+            line2: '<strong>rga (ripgrep-all):</strong> searches PDFs, zips, SQLite, Office docs — turns a 2-min PDF skim into a 200 ms search',
+            tip: 'For quick code questions, Cmd+L in Continue.dev searches the whole codebase in 1–2 seconds — no search query needed'
+          },
+          {
+            type: 'list',
+            h2: 'Which IDE Works Fully Offline',
+            items: [
+              '<strong>VS Code + Continue.dev (recommended):</strong> Continue.dev runs entirely against local Ollama — no network calls. GitHub Copilot stops immediately; Cursor Tab degrades silently.',
+              '<strong>JetBrains IDEs:</strong> work fully offline once licence is cached (pings every 30 days, tolerates extended offline windows).',
+              '<strong>Vim / Neovim:</strong> fully offline by design. Pair with Aider in a side terminal pane or use the llm.nvim plugin.',
+              '<strong>Cursor:</strong> IDE runs offline but AI features (Tab, Cmd+K) require cloud routing. Fix: install Continue.dev as a VS Code extension inside Cursor.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Common Mistakes',
+            items: [
+              'Forgetting to test the setup offline before the trip — run a 30-minute lights-off rehearsal at home.',
+              'Caching only the packages you currently use, not the ones you might need mid-trip.',
+              'Leaving Cursor\'s Tab autocomplete enabled — it silently falls back to nothing offline.',
+              'Using a model under 7B for serious coding — sub-7B models miss enough to slow you down.',
+              'Trusting the model on libraries newer than its training cutoff — it will hallucinate confidently.',
+              'Skipping the package cache and assuming <code>npm install</code> at the airport lounge is fast enough.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              { q: 'How big is the full offline coding setup?', a: '~50–80 GB: 18 GB model, 3–5 GB docs, 8 GB Stack Overflow dump, plus per-project package caches of 2–10 GB each.' },
+              { q: 'Can I install new npm packages offline?', a: 'Only if already cached in Verdaccio. Pre-cache the day before — packages not in your cache cannot be installed offline.' },
+              { q: 'Does GitHub work offline?', a: 'Git commands (commit, branch, rebase, log) all run locally. git push / pull / fetch and the web UI require the network.' },
+              { q: 'Is offline coding faster than online?', a: '~280 ms autocomplete on M5 vs ~180–400 ms for Copilot. Local inference is deterministic; network inference varies with connection quality.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Dispatch Code Reviews Across Multiple AI Models',
+            body: 'PromptQuorum sends your code to multiple AI models simultaneously and synthesizes their feedback — online or offline workflows supported.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'Offline-Entwicklungsumgebung ohne Internet: Vollständig lokal codieren (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Offline-Entwicklungsumgebung ohne Internet: Vollständig lokal codieren (2026)',
+            subtitle: 'Eine vollständig offline Entwicklungsumgebung im Jahr 2026 passt auf etwa 60 GB Festplatte und übersteht einen 14-Stunden-Flug ohne eine einzige Netzwerkverbindung.',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            items: [
+              '<strong>Fünf Komponenten machen eine Entwicklungsumgebung wirklich offline:</strong> lokales LLM, Editor-Integration, Paketcache, Dokumentationsspiegelung, lokale Suche. Lassen Sie eine aus und Sie stoßen innerhalb einer Stunde auf eine Wand.',
+              '<strong>Festplattenbudget: etwa 50–80 GB.</strong> Qwen3-Coder 30B Q4_K_M ist ~18 GB; Devdocs ~3 GB; Stack-Overflow-Dump ~8 GB; der Rest sind Paketcaches.',
+              '<strong>Hardware-Minimum:</strong> 32 GB Unified RAM (Apple Silicon) oder 16 GB VRAM für das 30B-Modell. Sweet Spot: M5 MacBook Pro mit 64 GB.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse (Fortsetzung)',
+            items: [
+              '<strong>Continue.dev und Aider laufen beide vollständig offline</strong> gegen einen lokalen Ollama-Endpoint. Keine Telemetrie, keine Lizenzprüfungen. GitHub Copilot und Cursor Tab benötigen Netzwerkaufrufe.',
+              '<strong>Die zwei Dinge, die wirklich brechen:</strong> Installation von brandneuen Third-Party-Paketen (kein Cache-Hit) und Anfragen des Modells über APIs nach seinem Training-Cutoff.',
+              '<strong>Der 14-Stunden-Flugtest bestand:</strong> ein echtes Feature ausgeliefert, zwei Bugs behoben, vollständige Test-Suite durchgeführt – alles ohne einen einzigen Netzwerkaufruf.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Der Offline-Stack',
+            columns: ['Komponente', 'Online-Tool', 'Offline-Ersatz', 'Cache-Größe'],
+            rows: [
+              ['KI-Code-Vervollständigung', 'GitHub Copilot, Cursor Tab', 'Continue.dev + Ollama + Qwen3-Coder 30B', '~18 GB'],
+              ['Offizielle Dokumentation', 'MDN, ReadTheDocs', 'Devdocs (Web) oder Zeal (Desktop)', '~3–5 GB'],
+              ['Stack Overflow', 'stackoverflow.com', 'Stack Exchange Daten-Dump (Kiwix)', '~8 GB'],
+              ['npm-Pakete', 'registry.npmjs.org', 'Verdaccio mit gewärmtem Cache', '~2–10 GB'],
+              ['Python-Pakete', 'PyPI', 'devpi oder pip download + wheelhouse', '~1–5 GB'],
+              ['Code-Suche', 'GitHub-Suche, Sourcegraph', 'ripgrep (Code), rga (PDFs/Archive)', '~10 MB']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Pre-Flight-Checkliste',
+            items: [
+              'LLM abrufen: <code>ollama pull qwen3-coder:30b</code> (oder <code>:7b</code> auf 16-GB-Maschinen). Verifizieren Sie, dass es in Sekunden antwortet.',
+              'Continue.dev oder Aider installieren und auf <code>http://localhost:11434</code> konfigurieren.',
+              'Paketcache aufwärmen: <code>npm install</code> / <code>pip install</code> / <code>cargo build</code> in jedem Projekt ausführen.',
+              'Optionale Abhängigkeiten vorab installieren, die Sie möglicherweise brauchen – sie landen im Cache.',
+              'Repos vorklonen: <code>git clone --mirror</code> für vollständige Historie.',
+              'Devdocs offline synchronisieren; Docker-Images vorziehen; 30-Minuten "lights-off"-Probe zu Hause.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Hardware: Warum M5 64 GB gewinnt',
+            items: [
+              '<strong>Unified Memory hält das Modell resident,</strong> wenn Sie zu Docker wechseln. Auf einem Laptop mit diskreter GPU kostet der Modell-Swap 5–10 Sekunden pro Wechsel.',
+              '<strong>30B passt in 24 GB; 64 GB lässt Spielraum</strong> für drei Docker-Container, VS Code, Devdocs – alles gleichzeitig ohne Verlangsamung.',
+              '<strong>Akkulaufzeit unter Last: 6–8 Stunden.</strong> M5 Energie-pro-Token ist ~3× besser als Laptops mit diskreter GPU.',
+              '<strong>Kein Lüftergeräusch im Flugzeug.</strong> Laptops mit diskreter GPU drehen unter Inferenzlast hörbar die Lüfter.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wahl des richtigen lokalen Modells',
+            items: [
+              '<strong>Qwen3-Coder 30B Q4_K_M (~18 GB) – empfohlener Standard.</strong> Best-in-class für TypeScript, Python, Rust, Go; 32K-Token-Kontext. Benötigt 24 GB Speicher.',
+              '<strong>Qwen3-Coder 7B Q4_K_M (~5 GB) – leichter Fallback.</strong> Läuft auf 8 GB Unified RAM. ~80–85 % der 30B-Qualität.',
+              '<strong>DeepSeek Coder V3 (~25 GB) – für sehr lange Kontexte.</strong> Unterstützt 128K Token; nützlich beim Debuggen über viele Dateien.',
+              '<strong>Codestral 22B – schnellstes Autocomplete.</strong> Schwächer bei Tool-Aufrufen und Multi-Step-Plänen.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Caching von Abhängigkeiten: npm, pip, cargo, go',
+            items: [
+              '<strong>npm:</strong> Verdaccio installieren, npm auf <code>http://localhost:4873/</code> zeigen, einmal <code>npm install</code> pro Projekt ausführen.',
+              '<strong>pip:</strong> <code>pip download -r requirements.txt -d ~/wheelhouse</code> dann offline installieren mit <code>--no-index --find-links</code>.',
+              '<strong>cargo:</strong> <code>cargo vendor</code> schreibt alle Abhängigkeiten in ein <code>vendor/</code>-Verzeichnis – baut offline für immer.',
+              '<strong>go:</strong> <code>go mod vendor</code> pro Projekt; oder lokalen Athens-Proxy mit <code>GOPROXY=http://localhost:3000</code>.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Offline-Dokumentation',
+            items: [
+              '<strong>Devdocs (~3 GB):</strong> devdocs.io öffnen, benötigte Docs aktivieren, "Offline verfügbar machen". Funktioniert danach im Flugzeugmodus.',
+              '<strong>Zeal (~5 GB):</strong> nativer Desktop-Docs-Browser mit Dash-Docsets – bessere Tastaturnavigation als Devdocs.',
+              '<strong>Stack Overflow Daten-Dump (~8 GB):</strong> Internet Archive Torrent. Kiwix rendert ihn als durchsuchbare Website.',
+              '<strong>Das Modell selbst ist Dokumentation</strong> für alles in seinen Trainingsdaten – TypeScript, React, Python-Stdlib, NumPy, AWS-SDKs.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Lokale Suche ohne Google',
+            line1: '<strong>ripgrep (rg):</strong> blitzschnelle Code-Suche — ersetzt grep -r, liest .gitignore, 10–50× schneller auf großen Repos',
+            line2: '<strong>rga (ripgrep-all):</strong> durchsucht PDFs, Zips, SQLite, Office-Dokumente — 2-Minuten-PDF-Skim wird zu 200-ms-Suche',
+            tip: 'Für schnelle Code-Fragen ist das Modell schneller als die Suche — Cmd+L in Continue.dev durchsucht die Codebasis in 1–2 Sekunden'
+          },
+          {
+            type: 'list',
+            h2: 'Welche IDE funktioniert vollständig offline',
+            items: [
+              '<strong>VS Code + Continue.dev (empfohlen):</strong> Continue.dev läuft vollständig gegen lokales Ollama. GitHub Copilot hört sofort auf; Cursor Tab degradiert stumm.',
+              '<strong>JetBrains IDEs:</strong> vollständig offline, sobald Lizenz gecacht (Ping alle 30 Tage, toleriert erweiterte Offline-Fenster).',
+              '<strong>Vim / Neovim:</strong> vollständig offline nach Design. Pairing mit Aider im Seiten-Terminal.',
+              '<strong>Cursor:</strong> IDE läuft offline, aber AI-Features (Tab, Cmd+K) benötigen Cloud-Routing. Lösung: Continue.dev als VS Code-Erweiterung in Cursor installieren.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Häufige Fehler',
+            items: [
+              'Vergessen, das Setup offline vor der Reise zu testen — 30-Minuten "lights-off"-Probe zu Hause durchführen.',
+              'Nur die aktuell genutzten Pakete cachen, nicht die möglicherweise benötigten.',
+              'Cursors Tab-Autocomplete aktiviert lassen — es fällt stumm auf nichts zurück wenn offline.',
+              'Ein Modell unter 7B für ernste Codierungsarbeit verwenden — sub-7B-Modelle bremsen mehr als sie helfen.',
+              'Dem Modell bei Bibliotheken nach seinem Training-Cutoff vertrauen — es wird selbstbewusst halluzinieren.',
+              'Den Paketcache überspringen und annehmen, <code>npm install</code> im Lounge ist schnell genug.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              { q: 'Wie groß ist das vollständige Offline-Coding-Setup?', a: '~50–80 GB: 18 GB Modell, 3–5 GB Docs, 8 GB Stack-Overflow-Dump, plus Paketcaches von 2–10 GB pro Projekt.' },
+              { q: 'Kann ich neue npm-Pakete offline installieren?', a: 'Nur wenn sie bereits im Verdaccio-Cache sind. Vorab cachen — nicht gecachte Pakete können nicht offline installiert werden.' },
+              { q: 'Funktioniert GitHub offline?', a: 'Git-Befehle (commit, branch, rebase, log) laufen lokal. git push / pull / fetch und die Web-UI benötigen das Netzwerk.' },
+              { q: 'Ist Offline-Coding schneller als Online?', a: '~280 ms Autocomplete auf M5 vs. ~180–400 ms für Copilot. Lokale Inferenz ist deterministisch; Netzwerk-Inferenz variiert.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'KI-Modelle parallel für Code-Reviews einsetzen',
+            body: 'PromptQuorum sendet Ihren Code gleichzeitig an mehrere KI-Modelle und fasst deren Feedback zusammen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Environnement de Développement Hors Ligne Sans Internet : Codage Entièrement Local (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Environnement de Développement Hors Ligne Sans Internet : Codage Entièrement Local (2026)',
+            subtitle: 'Un environnement de codage entièrement hors ligne en 2026 tient sur environ 60 Go de disque et survit à un vol de 14 heures sans un seul appel réseau.',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: 'Points Clés',
+            items: [
+              '<strong>Cinq composants rendent une configuration de codage vraiment hors ligne :</strong> LLM local, intégration d\'éditeur, cache de paquets, miroir de documentation, recherche locale. Ignorez-en un et vous heurterez un mur en une heure.',
+              '<strong>Budget disque : environ 50–80 Go.</strong> Qwen3-Coder 30B Q4_K_M est ~18 Go ; Devdocs ~3 Go ; vidage Stack Overflow ~8 Go ; le reste est des caches de paquets.',
+              '<strong>Minimum matériel :</strong> 32 Go de RAM unifiée (Apple Silicon) ou 16 Go de VRAM pour le modèle 30B. Point idéal : MacBook Pro M5 64 Go.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Points Clés (suite)',
+            items: [
+              '<strong>Continue.dev et Aider s\'exécutent tous deux entièrement hors ligne</strong> contre un endpoint Ollama local. Pas de télémétrie, pas de vérifications de licence. GitHub Copilot et Cursor Tab nécessitent des appels réseau.',
+              '<strong>Les deux choses qui cassent vraiment :</strong> installer de nouveaux paquets tiers (pas de cache) et demander au modèle des APIs publiées après sa date limite d\'entraînement.',
+              '<strong>Le test de vol de 14 heures a réussi :</strong> une fonctionnalité livrée, deux bugs corrigés, suite de tests complète exécutée — tout sans un seul appel réseau.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'La Pile Hors Ligne',
+            columns: ['Composant', 'Outil En Ligne', 'Remplacement Hors Ligne', 'Taille du Cache'],
+            rows: [
+              ['Achèvement de code IA', 'GitHub Copilot, Cursor Tab', 'Continue.dev + Ollama + Qwen3-Coder 30B', '~18 Go'],
+              ['Documentation officielle', 'MDN, ReadTheDocs', 'Devdocs (web) ou Zeal (bureau)', '~3–5 Go'],
+              ['Stack Overflow', 'stackoverflow.com', 'Vidage Stack Exchange (Kiwix)', '~8 Go'],
+              ['Paquets npm', 'registry.npmjs.org', 'Verdaccio avec cache réchauffé', '~2–10 Go'],
+              ['Paquets Python', 'PyPI', 'devpi ou pip download + wheelhouse', '~1–5 Go'],
+              ['Recherche de code', 'GitHub, Sourcegraph', 'ripgrep (code), rga (PDF/archives)', '~10 Mo']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Liste de Contrôle Pré-Vol',
+            items: [
+              'Tirer le LLM local : <code>ollama pull qwen3-coder:30b</code> (ou <code>:7b</code> sur 16 Go). Vérifiez qu\'il répond en secondes.',
+              'Installer Continue.dev ou Aider ; configurer pour pointer sur <code>http://localhost:11434</code>.',
+              'Réchauffer le cache des paquets : <code>npm install</code> / <code>pip install</code> / <code>cargo build</code> dans chaque projet.',
+              'Installer les dépendances optionnelles dont vous pourriez avoir besoin — elles arrivent dans le cache.',
+              'Pré-cloner les repos : <code>git clone --mirror</code> pour l\'historique complet.',
+              'Synchroniser Devdocs hors ligne ; pré-extraire les images Docker ; répétition "lumières éteintes" de 30 min à la maison.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Matériel : Pourquoi le M5 64 Go Gagne',
+            items: [
+              '<strong>La mémoire unifiée maintient le modèle résident</strong> quand vous passez à Docker. Sur un laptop à GPU discret, l\'échange coûte 5–10 secondes.',
+              '<strong>30B tient dans 24 Go ; 64 Go laisse de la marge</strong> pour trois conteneurs Docker, VS Code, onglet Devdocs — tout simultanément.',
+              '<strong>Autonomie sous charge : 6–8 heures.</strong> L\'énergie par token du M5 est ~3× meilleure que les laptops à GPU discret.',
+              '<strong>Pas de bruit de ventilateur en vol.</strong> Les laptops à GPU discret font audiblement tourner les ventilateurs sous inférence.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Choisir le Bon Modèle Local',
+            items: [
+              '<strong>Qwen3-Coder 30B Q4_K_M (~18 Go) — défaut recommandé.</strong> Meilleur de sa catégorie sur TypeScript, Python, Rust, Go ; contexte 32K tokens. Nécessite 24 Go de mémoire.',
+              '<strong>Qwen3-Coder 7B Q4_K_M (~5 Go) — fallback léger.</strong> Tourne sur 8 Go de RAM unifiée. ~80–85 % de la qualité 30B.',
+              '<strong>DeepSeek Coder V3 (~25 Go) — pour les très longs contextes.</strong> Supporte 128K tokens ; utile pour déboguer sur de nombreux fichiers.',
+              '<strong>Codestral 22B — autocomplétion la plus rapide.</strong> Plus faible sur les appels d\'outils et les plans multi-étapes.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Mise en Cache des Dépendances : npm, pip, cargo, go',
+            items: [
+              '<strong>npm :</strong> installer Verdaccio, pointer npm sur <code>http://localhost:4873/</code>, exécuter <code>npm install</code> une fois par projet.',
+              '<strong>pip :</strong> <code>pip download -r requirements.txt -d ~/wheelhouse</code> puis installer hors ligne avec <code>--no-index --find-links</code>.',
+              '<strong>cargo :</strong> <code>cargo vendor</code> écrit toutes les dépendances dans un répertoire <code>vendor/</code> — se construit hors ligne pour toujours.',
+              '<strong>go :</strong> <code>go mod vendor</code> par projet ; ou proxy Athens local avec <code>GOPROXY=http://localhost:3000</code>.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Documentation Hors Ligne',
+            items: [
+              '<strong>Devdocs (~3 Go) :</strong> ouvrir devdocs.io, activer les docs, cliquer "Rendre disponible hors ligne". Fonctionne en mode avion pour toujours.',
+              '<strong>Zeal (~5 Go) :</strong> navigateur de docs bureau natif avec Dash docsets — meilleure navigation clavier que Devdocs.',
+              '<strong>Vidage Stack Overflow (~8 Go) :</strong> torrent Internet Archive. Kiwix le rend en site consultable hors ligne.',
+              '<strong>Le modèle lui-même est de la documentation</strong> pour tout dans ses données d\'entraînement — TypeScript, React, Python stdlib, NumPy, AWS SDKs.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Recherche Locale Sans Google',
+            line1: '<strong>ripgrep (rg) :</strong> recherche de code ultra-rapide — remplace grep -r, lit .gitignore, 10–50× plus rapide sur les grands repos',
+            line2: '<strong>rga (ripgrep-all) :</strong> recherche dans les PDF, zip, SQLite, docs Office — un skim PDF de 2 min devient une recherche de 200 ms',
+            tip: 'Pour les questions de code rapides, Cmd+L dans Continue.dev recherche toute la base de code en 1–2 secondes'
+          },
+          {
+            type: 'list',
+            h2: 'Quel IDE Fonctionne Entièrement Hors Ligne',
+            items: [
+              '<strong>VS Code + Continue.dev (recommandé) :</strong> Continue.dev tourne entièrement contre Ollama local. GitHub Copilot s\'arrête immédiatement ; Cursor Tab se dégrade silencieusement.',
+              '<strong>JetBrains IDEs :</strong> fonctionnent hors ligne une fois la licence en cache (ping tous les 30 jours, tolère les fenêtres hors ligne étendues).',
+              '<strong>Vim / Neovim :</strong> entièrement hors ligne par conception. Pairing avec Aider dans un volet terminal latéral.',
+              '<strong>Cursor :</strong> l\'IDE fonctionne hors ligne mais les fonctionnalités IA nécessitent le cloud. Solution : installer Continue.dev en extension VS Code dans Cursor.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Erreurs Courantes',
+            items: [
+              'Oublier de tester la configuration hors ligne avant le voyage — répétition "lumières éteintes" de 30 minutes à la maison.',
+              'Mettre en cache seulement les paquets actuels, pas ceux qu\'on pourrait avoir besoin en vol.',
+              'Laisser l\'autocomplétion Tab de Cursor activée — elle se replie silencieusement sur rien hors ligne.',
+              'Utiliser un modèle sous 7B pour du codage sérieux — les modèles sub-7B ralentissent plus qu\'ils n\'aident.',
+              'Faire confiance au modèle sur des bibliothèques plus récentes que sa date limite d\'entraînement.',
+              'Ignorer le cache des paquets et supposer que <code>npm install</code> au lounge est suffisamment rapide.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions Fréquentes',
+            faqs: [
+              { q: 'Quelle est la taille de la configuration hors ligne complète ?', a: '~50–80 Go : 18 Go de modèle, 3–5 Go de docs, 8 Go de vidage Stack Overflow, plus des caches de paquets de 2–10 Go par projet.' },
+              { q: 'Puis-je installer de nouveaux paquets npm hors ligne ?', a: 'Seulement s\'ils sont déjà dans le cache Verdaccio. Pré-cacher la veille — les paquets non en cache ne peuvent pas être installés hors ligne.' },
+              { q: 'GitHub fonctionne-t-il hors ligne ?', a: 'Les commandes Git (commit, branch, rebase, log) tournent toutes localement. git push / pull / fetch et l\'interface web nécessitent le réseau.' },
+              { q: 'Le codage hors ligne est-il plus rapide qu\'en ligne ?', a: '~280 ms d\'autocomplétion sur M5 vs ~180–400 ms pour Copilot. L\'inférence locale est déterministe ; l\'inférence réseau varie.' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Distribuez les Revues de Code sur Plusieurs Modèles IA',
+            body: 'PromptQuorum envoie votre code à plusieurs modèles IA simultanément et synthétise leur retour — en ligne ou hors ligne.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'インターネットなしのオフラインコーディング環境：完全ローカル開発セットアップ (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: 'インターネットなしのオフラインコーディング環境：完全ローカル開発セットアップ (2026)',
+            subtitle: '2026年の完全にオフラインなコーディング環境は約60GBのディスクに収まり、ネットワーク呼び出しなしに14時間のフライトに耐えられます。',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: '重要なポイント',
+            items: [
+              '<strong>5つのコンポーネントがコーディングセットアップを本当にオフラインにします：</strong>ローカルLLM、エディタ統合、パッケージキャッシュ、ドキュメントミラー、ローカル検索。1つ欠けたら実際の仕事の1時間以内に壁にぶつかります。',
+              '<strong>ディスク予算：約50〜80GB。</strong>Qwen3-Coder 30B Q4_K_Mは約18GB；Devdocs約3GB；Stack Overflowダンプ約8GB；残りはパッケージキャッシュ。',
+              '<strong>ハードウェアフロア：</strong>30Bモデルの場合32GB統一RAM（Apple Silicon）または16GB VRAM。推奨：64GB搭載M5 MacBook Pro。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '重要なポイント（続き）',
+            items: [
+              '<strong>Continue.devとAiderは両方とも完全にオフラインで実行します</strong>ローカルOllamaエンドポイントに対して。テレメトリ呼び出しなし、ライセンスチェックなし。GitHub CopilotとCursor Tabはネットワーク呼び出しが必要です。',
+              '<strong>本当に壊れる2つのこと：</strong>新しいサードパーティパッケージのインストール（キャッシュなし）とモデルがトレーニングカットオフ後のAPIについて尋ねること。',
+              '<strong>14時間飛行テストパス：</strong>1つの機能を配備、2つのバグを修正、フルテストスイート実行 — すべてネットワーク呼び出しなし。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'オフラインスタック',
+            columns: ['コンポーネント', 'オンラインツール', 'オフライン置換', 'キャッシュサイズ'],
+            rows: [
+              ['AIコード補完', 'GitHub Copilot, Cursor Tab', 'Continue.dev + Ollama + Qwen3-Coder 30B', '約18GB'],
+              ['公式ドキュメント', 'MDN, ReadTheDocs', 'Devdocs (Web) またはZeal (Desktop)', '約3〜5GB'],
+              ['Stack Overflow', 'stackoverflow.com', 'Stack Exchangeデータダンプ (Kiwix)', '約8GB'],
+              ['npmパッケージ', 'registry.npmjs.org', 'Verdaccio（ウォームキャッシュ）', '約2〜10GB'],
+              ['Pythonパッケージ', 'PyPI', 'devpiまたはpip download + wheelhouse', '約1〜5GB'],
+              ['コード検索', 'GitHub検索, Sourcegraph', 'ripgrep（コード）、rga（PDF/アーカイブ）', '約10MB']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'フライト前チェックリスト',
+            items: [
+              'ローカルLLMを取得：<code>ollama pull qwen3-coder:30b</code>（16GBは<code>:7b</code>）。数秒で応答を確認。',
+              'Continue.devまたはAiderをインストールし、<code>http://localhost:11434</code>を設定。',
+              'パッケージキャッシュを温める：各プロジェクトで<code>npm install</code>/<code>pip install</code>/<code>cargo build</code>を実行。',
+              '必要な可能性のあるオプションの依存関係をインストール — キャッシュに保存されます。',
+              'リポジトリをプリクローン：<code>git clone --mirror</code>で完全な履歴。',
+              'Devdocsをオフライン同期；Docker イメージをプリプル；自宅で30分の「明かりを消す」リハーサル。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ハードウェア：M5 64GBが勝つ理由',
+            items: [
+              '<strong>統一メモリはDockerに切り替えてもモデルを常駐させます。</strong>ディスクレートGPUのラップトップではモデルスワップが切り替えごとに5〜10秒かかります。',
+              '<strong>30Bは24GBに快適に収まります；64GBは余裕があります</strong>3つのDockerコンテナ、VS Code、Devdocsタブ — すべて同時に実行可能。',
+              '<strong>負荷下の電池寿命：6〜8時間。</strong>M5のトークンあたりのエネルギーはディスクレートGPUより約3倍優れています。',
+              '<strong>静かな飛行機でファンノイズなし。</strong>ディスクレートGPUのラップトップは推論負荷下で聴こえるようにファンが回ります。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '適切なローカルモデルを選ぶ',
+            items: [
+              '<strong>Qwen3-Coder 30B Q4_K_M（約18GB）— 推奨デフォルト。</strong>TypeScript、Python、Rust、Go自動補完のベストインクラス；32Kトークンコンテキスト。24GBのメモリが必要。',
+              '<strong>Qwen3-Coder 7B Q4_K_M（約5GB）— 軽量フォールバック。</strong>8GB統一RAMで実行。日常の仕事で30B品質の約80〜85%。',
+              '<strong>DeepSeek Coder V3（約25GB）— 非常に長いコンテキスト向け。</strong>128Kトークンをサポート；多くのファイルにまたがるデバッグに有用。',
+              '<strong>Codestral 22B — 最速の自動補完。</strong>ツール呼び出しとマルチステッププランは弱い。自動補完中心のワークフローに適しています。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '依存関係キャッシング：npm、pip、cargo、go',
+            items: [
+              '<strong>npm：</strong>Verdaccioをインストール、npmを<code>http://localhost:4873/</code>に向けて、各プロジェクトで1度<code>npm install</code>を実行。',
+              '<strong>pip：</strong><code>pip download -r requirements.txt -d ~/wheelhouse</code>の後、<code>--no-index --find-links</code>でオフラインインストール。',
+              '<strong>cargo：</strong><code>cargo vendor</code>ですべての依存関係を<code>vendor/</code>に書き込み — コミット後はオフラインで永遠にビルド可能。',
+              '<strong>go：</strong>プロジェクトごとに<code>go mod vendor</code>；またはローカルAthenプロキシで<code>GOPROXY=http://localhost:3000</code>。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'オフラインドキュメント',
+            items: [
+              '<strong>Devdocs（約3GB）：</strong>devdocs.ioを開き、使用するドキュメントを有効化し「オフライン利用可能にする」をクリック。その後は飛行機モードで永久に機能。',
+              '<strong>Zeal（約5GB）：</strong>Dash docsets使用のネイティブデスクトップドキュメントブラウザ — Devdocsより優れたキーボードナビゲーション。',
+              '<strong>Stack Overflowデータダンプ（約8GB）：</strong>Internet Archiveトレント。Kiwixで閲覧可能なサイトとしてレンダリング。',
+              '<strong>モデル自体がドキュメント</strong>です（TypeScript、React、Python stdlib、NumPy、AWS SDKなどトレーニングデータ内のもの全て）。'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Googleなしのローカル検索',
+            line1: '<strong>ripgrep (rg)：</strong>超高速コード検索 — grep -rを置き換え、.gitignoreを自動読み込み、大型リポで10〜50倍高速',
+            line2: '<strong>rga (ripgrep-all)：</strong>PDF、zip、SQLite、Officeドキュメント内を検索 — 2分のPDFスキムが200msの検索に',
+            tip: '素早いコード質問にはContinue.devのCmd+Lがコードベース全体を1〜2秒で検索 — 検索ツールより速い'
+          },
+          {
+            type: 'list',
+            h2: '完全にオフラインで機能するIDE',
+            items: [
+              '<strong>VS Code + Continue.dev（推奨）：</strong>Continue.devはローカルOllamaのみで完全動作。GitHub Copilotは即座に停止；Cursor Tabは無声に低下。',
+              '<strong>JetBrains IDE：</strong>ライセンスキャッシュ後は完全オフライン（30日ごとにping、長期オフラインに対応）。',
+              '<strong>Vim / Neovim：</strong>設計上完全オフライン。サイドターミナルパネルでAiderとペア。',
+              '<strong>Cursor：</strong>IDE自体はオフライン動作するがAI機能はクラウドが必要。解決策：Cursor内にContinue.devをVS Code拡張としてインストール。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'よくある間違い',
+            items: [
+              'フライト前にオフラインでセットアップをテストしない — 自宅で30分の「明かりを消す」リハーサルを実行。',
+              '現在使用しているパッケージのみキャッシュし、フライト中に必要になる可能性があるものをキャッシュしない。',
+              'CursorのTab自動補完を有効にしたままにする — オフラインでは無声に何も返さなくなります。',
+              '真剣なコーディング作業に7B未満のモデルを使用する — sub-7Bモデルは助けるより遅くします。',
+              'トレーニングカットオフより新しいライブラリについてモデルを信頼する — 自信を持って幻覚します。',
+              'パッケージキャッシュをスキップして<code>npm install</code>が空港ラウンジで十分速いと仮定する。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              { q: '完全なオフラインコーディングセットアップのサイズは？', a: '約50〜80GB：18GBモデル、3〜5GBドキュメント、8GB Stack Overflowダンプ、プロジェクトごとのパッケージキャッシュ2〜10GB。' },
+              { q: 'オフラインで新しいnpmパッケージをインストールできますか？', a: 'Verdaccioキャッシュにある場合のみ。前日に事前キャッシュ — キャッシュされていないパッケージはオフラインでインストールできません。' },
+              { q: 'GitHubはオフラインで動作しますか？', a: 'Gitコマンド（commit、branch、rebase、log）はすべてローカルで実行。git push/pull/fetchとウェブUIはネットワークが必要。' },
+              { q: 'オフラインコーディングはオンラインより速いですか？', a: 'M5で約280msの自動補完 vs Copilotの約180〜400ms。ローカル推論は決定論的；ネットワーク推論は接続品質によって変わります。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '複数のAIモデルにコードレビューを並列送信',
+            body: 'PromptQuorumはあなたのコードを複数のAIモデルに同時に送信し、フィードバックを統合します。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '无互联网的离线编码环境：完全本地开发设置 (2026)',
+        slides: [
+          {
+            type: 'title',
+            h1: '无互联网的离线编码环境：完全本地开发设置 (2026)',
+            subtitle: '2026年完全离线的编码设置大约占用60GB硬盘并能存活14小时的飞行，无任何网络调用。',
+            link: BASE_URL
+          },
+          {
+            type: 'list',
+            h2: '关键要点',
+            items: [
+              '<strong>五个组件使编码设置真的离线：</strong>本地LLM、编辑器集成、包缓存、文档镜像、本地搜索。缺少任何一个你会在实际工作的一小时内撞到"需要互联网"的墙。',
+              '<strong>磁盘预算：大约50〜80GB。</strong>Qwen3-Coder 30B Q4_K_M大约18GB；Devdocs约3GB；Stack Overflow转储约8GB；其余是包缓存。',
+              '<strong>硬件下限：</strong>30B模型32GB统一RAM（Apple Silicon）或16GB VRAM。推荐甜蜜点：64GB M5 MacBook Pro。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '关键要点（续）',
+            items: [
+              '<strong>Continue.dev和Aider都完全离线运行</strong>针对本地Ollama端点。无遥测调用、无许可证检查。GitHub Copilot和Cursor Tab需要网络调用。',
+              '<strong>真的破裂的两件事：</strong>安装全新第三方包（无缓存命中）和询问模型关于训练截止后发布的API。',
+              '<strong>14小时飞行测试通过：</strong>部署了真实功能、修复了两个bug、运行了完整测试套件 — 全部无任何网络调用。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '离线堆栈',
+            columns: ['组件', '在线工具', '离线替换', '缓存大小'],
+            rows: [
+              ['AI代码补全', 'GitHub Copilot, Cursor Tab', 'Continue.dev + Ollama + Qwen3-Coder 30B', '约18GB'],
+              ['官方文档', 'MDN, ReadTheDocs', 'Devdocs（网页）或Zeal（桌面）', '约3〜5GB'],
+              ['Stack Overflow', 'stackoverflow.com', 'Stack Exchange数据转储（Kiwix）', '约8GB'],
+              ['npm包', 'registry.npmjs.org', '带预热缓存的Verdaccio', '约2〜10GB'],
+              ['Python包', 'PyPI', 'devpi或pip download + wheelhouse', '约1〜5GB'],
+              ['代码搜索', 'GitHub搜索, Sourcegraph', 'ripgrep（代码）、rga（PDF/存档）', '约10MB']
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '离飞前检查清单',
+            items: [
+              '拉取本地LLM：<code>ollama pull qwen3-coder:30b</code>（16GB机器用<code>:7b</code>）。验证它在秒内响应。',
+              '安装Continue.dev或Aider；配置指向<code>http://localhost:11434</code>。',
+              '预热包缓存：在每个项目中运行<code>npm install</code>/<code>pip install</code>/<code>cargo build</code>。',
+              '安装你可能需要的任何可选依赖项 — 它们会进入缓存。',
+              '预克隆repos：<code>git clone --mirror</code>获取完整历史。',
+              '同步Devdocs离线；预拉取Docker镜像；在家进行30分钟"熄灯"演练。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '硬件：为什么M5 64GB赢',
+            items: [
+              '<strong>统一内存在切换到Docker时保持模型驻留。</strong>在离散GPU笔记本上，交换模型每次切换成本5〜10秒。',
+              '<strong>30B舒适地适应24GB；64GB为其他所有内容留有余地</strong>——三个Docker容器、VS Code、Devdocs标签页同时运行无缓慢。',
+              '<strong>负载下电池寿命：6〜8小时。</strong>M5每令牌能耗约比离散GPU笔记本好3倍。',
+              '<strong>在安静飞机上无风扇噪音。</strong>离散GPU笔记本在推理负载下会听得到地旋转风扇。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '选择正确的本地模型',
+            items: [
+              '<strong>Qwen3-Coder 30B Q4_K_M（约18GB）— 推荐默认。</strong>TypeScript、Python、Rust、Go自动完成的同类最佳；32K令牌上下文。需要24GB内存。',
+              '<strong>Qwen3-Coder 7B Q4_K_M（约5GB）— 轻量级后备。</strong>在8GB统一RAM上运行。日常工作30B质量的约80〜85%。',
+              '<strong>DeepSeek Coder V3（约25GB）— 非常长的上下文。</strong>支持128K令牌；跨多个文件调试时有用。',
+              '<strong>Codestral 22B — 最快自动完成。</strong>工具调用和多步计划较弱；适合自动完成主导的工作流。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '缓存依赖：npm、pip、cargo、go',
+            items: [
+              '<strong>npm：</strong>安装Verdaccio，将npm指向<code>http://localhost:4873/</code>，每个项目运行一次<code>npm install</code>。',
+              '<strong>pip：</strong><code>pip download -r requirements.txt -d ~/wheelhouse</code>然后用<code>--no-index --find-links</code>离线安装。',
+              '<strong>cargo：</strong><code>cargo vendor</code>将所有依赖写入<code>vendor/</code>目录 — 提交后永远离线构建。',
+              '<strong>go：</strong>每项目<code>go mod vendor</code>；或运行本地Athens代理设置<code>GOPROXY=http://localhost:3000</code>。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '离线文档',
+            items: [
+              '<strong>Devdocs（约3GB）：</strong>打开devdocs.io、启用所需文档、点击"Make available offline"。之后飞行模式永久工作。',
+              '<strong>Zeal（约5GB）：</strong>使用Dash docsets的原生桌面文档浏览器 — 比Devdocs更好的键盘导航。',
+              '<strong>Stack Overflow数据转储（约8GB）：</strong>Internet Archive torrent。Kiwix将其呈现为可浏览网站。',
+              '<strong>模型本身就是文档</strong>——TypeScript、React、Python stdlib、NumPy、AWS SDK等训练数据中的所有内容。'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '无Google的本地搜索',
+            line1: '<strong>ripgrep (rg)：</strong>超快代码搜索 — 替换grep -r、读取.gitignore、大型repos上10〜50倍更快',
+            line2: '<strong>rga (ripgrep-all)：</strong>搜索PDF、zip、SQLite、Office文档内 — 2分钟的PDF浏览变为200ms搜索',
+            tip: '对于快速代码问题，Continue.dev中的Cmd+L在1〜2秒内搜索整个代码库 — 无需输入搜索查询'
+          },
+          {
+            type: 'list',
+            h2: '哪个IDE完全离线工作',
+            items: [
+              '<strong>VS Code + Continue.dev（推荐）：</strong>Continue.dev完全针对本地Ollama运行。GitHub Copilot立即停止；Cursor Tab无声性能下降。',
+              '<strong>JetBrains IDE：</strong>许可缓存后完全离线工作（每30天ping、容忍扩展离线窗口）。',
+              '<strong>Vim / Neovim：</strong>离线设计。与侧面终端窗格中的Aider配对。',
+              '<strong>Cursor：</strong>IDE离线运行但AI功能（Tab、Cmd+K）需要云路由。解决方案：在Cursor内安装Continue.dev作为VS Code扩展。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '常见错误',
+            items: [
+              '忘记在旅行前离线测试设置 — 在家进行30分钟"熄灯"演练。',
+              '仅缓存当前使用的包，不缓存旅行中可能需要的包。',
+              '启用Cursor的Tab自动完成 — 它在离线时无声地回退到无任何响应。',
+              '使用7B以下的模型进行认真的编码工作 — sub-7B模型减慢速度比帮助更多。',
+              '信任模型关于比其训练截止更新的库 — 它会自信地幻视。',
+              '跳过包缓存假设机场休息室<code>npm install</code>足够快。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              { q: '完整离线编码设置的大小是多少？', a: '约50〜80GB：18GB模型、3〜5GB文档、8GB Stack Overflow转储，加上每项目2〜10GB的包缓存。' },
+              { q: '我能在离线时安装新的npm包吗？', a: '仅如果已在Verdaccio缓存中。前一天预缓存 — 未缓存的包无法离线安装。' },
+              { q: 'GitHub离线工作吗？', a: 'Git命令（commit、branch、rebase、log）全部本地运行。git push/pull/fetch和网页UI需要网络。' },
+              { q: '离线编码比在线更快吗？', a: 'M5上约280ms自动完成 vs Copilot约180〜400ms。本地推理是确定性的；网络推理随连接质量变化。' }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '跨多个AI模型并行发送代码审查',
+            body: 'PromptQuorum将您的代码同时发送到多个AI模型，并综合其反馈 — 支持在线或离线工作流。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide, lang) {
+      const articleUrl = BASE_URL + '?lang=' + lang;
+      const footerLink = '<p style="position:absolute;bottom:16px;right:16px;font-size:11px;color:#999;"><a href="' + articleUrl + '" target="_blank" rel="noopener" style="color:#999;text-decoration:none;border-bottom:1px solid #ddd;">← Article</a></p>';
+      let html = '';
+
+      switch (slide.type) {
+        case 'title':
+          html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" />'
+            + '<h1>' + slide.h1 + '</h1>'
+            + '<p>' + slide.subtitle + '</p>'
+            + '<p style="margin-top:32px;font-size:15px;color:#79747e;"><a href="' + slide.link + '?lang=' + lang + '" target="_blank" rel="noopener" style="color:#6750a4;">' + slide.link.replace('https://www.promptquorum.com/', '') + '</a></p>'
+            + footerLink;
+          break;
+
+        case 'list':
+          html = '<h2>' + slide.h2 + '</h2>';
+          if (slide.intro) html += '<p style="margin-bottom:12px;">' + slide.intro + '</p>';
+          html += '<ul>';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'numbered':
+          html = '<h2>' + slide.h2 + '</h2>';
+          html += '<ol>';
+          slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = '<h2>' + slide.h2 + '</h2>';
+          html += '<table><thead><tr>';
+          slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+          html += '</tr></thead><tbody>';
+          slide.rows.forEach(function(row) {
+            html += '<tr>';
+            if (Array.isArray(row)) {
+              row.forEach(function(cell) { html += '<td>' + cell + '</td>'; });
+            } else {
+              slide.columns.forEach(function(col) { html += '<td>' + row[col] + '</td>'; });
+            }
+            html += '</tr>';
+          });
+          html += '</tbody></table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top:32px;font-size:clamp(14px,1.6vw,18px);line-height:1.6;">' + slide.line1 + '</p>'
+            + '<p style="margin-top:20px;font-size:clamp(14px,1.6vw,18px);line-height:1.6;">' + slide.line2 + '</p>'
+            + '<p style="margin-top:32px;font-size:clamp(13px,1.4vw,15px);color:#6750a4;font-style:italic;">' + slide.tip + '</p>'
+            + footerLink;
+          break;
+
+        case 'faq':
+          html = '<h2>' + slide.h2 + '</h2>';
+          html += '<div style="text-align:left;max-width:820px;width:100%;margin-top:12px;">';
+          slide.faqs.forEach(function(faq) {
+            html += '<div style="margin-bottom:14px;">'
+              + '<p style="font-size:clamp(13px,1.3vw,15px);font-weight:600;color:#1c1b1f;">' + faq.q + '</p>'
+              + '<p style="font-size:clamp(12px,1.2vw,14px);color:#49454f;margin-top:4px;">' + faq.a + '</p>'
+              + '</div>';
+          });
+          html += '</div>';
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = '<h2>' + slide.h2 + '</h2>'
+            + '<p style="margin-top:20px;max-width:640px;">' + slide.body + '</p>'
+            + '<a href="' + slide.href + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:28px;padding:12px 28px;background:#6750a4;color:#fff;border-radius:24px;text-decoration:none;font-size:16px;font-weight:600;">' + slide.cta + '</a>'
+            + footerLink;
+          break;
+      }
+
+      return '<div class="slide ' + slide.type + '">' + html + '</div>';
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = BASE_URL + '?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(function(slide) {
+      container.innerHTML += renderSlide(slide, lang);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      slides.forEach(function(s) { s.classList.remove('active'); });
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', function() {
+      slides.forEach(function(s) { s.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', function() {
+      slides.forEach(function(s) { s.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', function() { window.print(); });
+    }
+
+    showSlide(0);
+  </script>
+</body>
+</html>
