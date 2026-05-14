@@ -313,6 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Community status:** Coqui Inc shut down in late 2023. The open-source repo (`coqui-ai/TTS`) is community-maintained. No active commercial support.',
           '**License:** MPL 2.0 — commercial use allowed, but source code of modifications must be disclosed.',
           '**Best for:** Developers who want voice cloning with an open-source toolkit and a permissive license.',
+          '**Listen to samples:** Official coqui.ai demo archived. Community audio examples are linked in the [coqui-ai/TTS GitHub repository](https://github.com/coqui-ai/TTS) under the demos section.',
         ],
       },
       xttsDeep: {
