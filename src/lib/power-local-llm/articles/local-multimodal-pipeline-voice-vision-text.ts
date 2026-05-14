@@ -572,12 +572,76 @@ if __name__ == "__main__":
     title: 'Lokale multimodale KI-Pipeline 2026: Sprache, Vision und Text-Modelle offline kombinieren',
     seoTitle: 'Lokale multimodale KI-Pipeline 2026: Sprache + Vision + Text offline',
     intro:
-      'Eine lokale multimodale KI-Pipeline kombiniert separate spezialisierte Modelle für jede Modalität — whisper.cpp für Spracheingabe, LLaVA oder Llama 3.2 Vision für Bildverständnis, ein Ollama LLM für Textreasoning und Piper TTS für Sprachausgabe — orchestriert zu einem kohärenten System, das 100 % offline arbeitet. Dies ist das lokale Äquivalent zu GPT-4os multimodalen Fähigkeiten: kein einzelnes Modell versteht alles, aber der Orchestrator leitet jeden Eingabetyp an das richtige Modell weiter und kombiniert die Ausgaben.',
+      'Eine lokale multimodale KI-Pipeline kombiniert separate spezialisierte Modelle für jede Modalität — whisper.cpp für Spracheingabe, LLaVA oder Llama 3.2 Vision für Bildverständnis, ein Ollama LLM für Textreasoning und Piper TTS für Sprachausgabe — orchestriert zu einem kohärenten System, das 100 % offline arbeitet. Dies ist das lokale Äquivalent zu GPT-4os multimodalen Fähigkeiten: kein einzelnes Modell versteht alles, aber der Orchestrator leitet jeden Eingabetyp an das richtige Modell weiter und kombiniert die Ausgaben. Dieser Leitfaden zeigt, wie Sie lokale multimodale Pipeline-Funktionen aus diesen Open-Source-Komponenten aufbauen — mit Abdeckung der Architektur, des Component-Stacks, Hardware-Tiers, fünf praktischer Use Cases und eines Python-Async-Orchestrators, der Sprach- und Vision-Eingaben parallel verarbeitet.',
     metaDescription:
       'Lokale multimodale KI-Pipeline 2026 aufbauen: whisper.cpp für Spracheingabe, LLaVA 1.6 für Vision, Ollama für Textreasoning, Piper TTS für Sprachausgabe. Architektur, Hardware-Tiers, Use Cases und Python-Orchestrator-Code. Vollständig offline.',
     twitterDescription:
       'Lokale multimodale KI 2026: Whisper STT + LLaVA Vision + Ollama LLM + Piper TTS in einer Offline-Pipeline kombinieren. Architektur-Leitfaden, Hardware-Tiers und Python-Code.',
-    sections: {},
+    readTime: '18 Min. Lesezeit',
+    educationalLevel: 'Advanced',
+    sections: {
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Kann ich Llama 3.2 Vision allein für Sprache, Vision und Text verwenden?',
+            a: 'Ja. Llama 3.2 Vision 11B kann Bilder und Text verarbeiten. Sie können es als einziges Modell verwenden und whisper.cpp für Spracheingabe + Piper für Sprachausgabe hinzufügen. Dies reduziert die VRAM-Anforderungen von ~15 GB (separate VLM + LLM) auf ~8 GB (Llama 3.2 Vision 11B allein). Der Nachteil: kein spezialisiertes VLM für komplexe Bildanalyse — Kompromiss zwischen Geschwindigkeit und Qualität.',
+          },
+          {
+            q: 'Sollte ich die Vision und das Text-LLM zusammen oder getrennt ausführen?',
+            a: 'Zusammen, wenn Sie 12+ GB VRAM haben (eine Ollama-Instanz, beide Modelle geladen). Getrennt (swapout), wenn Sie 8 GB haben — laden Sie die VLM, speichern Sie die Bildbeschreibung, entladen Sie, laden Sie das Text-LLM. Getrennt hat ~2–3 Sekunden Latenz-Overhead pro Anfrage, aber spart VRAM. Für interaktive Anwendungen (Voice-Assistent) ist zusammen besser.',
+          },
+          {
+            q: 'Kann ich auf einem Mac M5 Pro 36 GB die komplette Pipeline mit vollem Durchsatz ausführen?',
+            a: 'Ja, aber mit Vorsicht bei der Parallelisierung. whisper.cpp ist CPU-basiert und nutzt ARM-Kerne gut. Die Vision + LLM sollten auf GPU laufen (Metal-beschleunigt), aber nicht beide gleichzeitig — stellen Sie sicher, dass Ihre async-Tasks nicht Spike-Latenz verursachen. Best practice: STT parallel starten, dann VLM + LLM sequenziell auf GPU.',
+          },
+          {
+            q: 'Ist eine lokale multimodale Pipeline schnell genug für Echtzeit-Sprachassistenten?',
+            a: 'Für Echtzeit-Voice-Output: Ja, wenn Sie optimieren. whisper.cpp ~1–2 Sekunden, LLM ~1–2 Sekunden, TTS ~0,1 Sekunden. Gesamt: ~2–4 Sekunden von Spracheingabe zu Sprachausgabe. Schneller als viele Cloud-APIs, aber nicht synchron wie ein menschliches Gespräch. Für asynchrone Assistenten (Notizen, Zusammenfassungen) ist es perfekt.',
+          },
+          {
+            q: 'Kann ich die Pipeline auf einer RTX 3060 12 GB mit allen vier Modellen ausführen?',
+            a: 'Nein, nicht alle vier gleichzeitig — 3060 hat 12 GB, aber die Stack-Anforderungen sind ~15 GB (whisper 3 + LLaVA 6 + Llama 3.1 8 6 + Piper CPU). Lösung: Verwenden Sie Llama 3.2 Vision 11B (8 GB) allein oder quantisieren Sie die Modelle auf INT4 (reduziert auf ~10 GB). Oder swappen Sie Models in/out je nach Eingabetyp.',
+          },
+          {
+            q: 'Welches Vision-Modell sollte ich wählen: LLaVA 1.6, Qwen2-VL oder Llama 3.2 Vision?',
+            a: 'LLaVA 1.6 7B: schnell (~1 Sekunde), ausreichende Genauigkeit, ältere Architektur. Qwen2-VL 7B: bessere Bildverständnis, ~1,5 Sekunden. Llama 3.2 Vision 11B: beste Qualität, kombiniert VLM + Text-Reasoning in einem Modell, ~2 Sekunden. Für Geschwindigkeit: LLaVA. Für Qualität: Llama 3.2 Vision. Für Balance: Qwen2-VL.',
+          },
+          {
+            q: 'Kann ich Web-Suche zur multimodalen Pipeline hinzufügen?',
+            a: 'Ja. Fügen Sie einen Suche-Schritt zwischen den Orchestrator und das Text-LLM ein. Verwenden Sie die DuckDuckGo API oder ein lokales RAG-System (AnythingLLM, PrivateGPT), um Kontext vor dem LLM-Reasoning-Schritt abzurufen. Das LLM argumentiert dann über das Transkript + Bildbeschreibung + Suchergebnisse kombiniert. Dies addiert 0,5–2 Sekunden Latenz, ermöglicht aber die Beantwortung von aktuelle-Ereignisse-Fragen neben Bildanalyse.',
+          },
+          {
+            q: 'Wie viel Elektrizität verbraucht der komplette multimodale Stack 24/7?',
+            a: 'Ruhe mit Modellen warm in VRAM: ~50–80 W (Desktop-GPU), ~15–25 W (Mac Mini M5 Pro). Aktive Verarbeitung: ~150–300 W (Desktop-GPU), ~30–60 W (Mac Mini M5 Pro). Monatliche Kosten bei $0,15/kWh: ungefähr $5–15 (Mac Mini) oder $15–35 (Desktop). Dies ist weniger als eine Cloud-API bei vergleichbarem Query-Volumen — ein Mac Mini mit dem kompletten Stack 24/7 kostet weniger Elektrizität pro Monat als zwei Tage GPT-4o API-Nutzung bei 100 Queries/Tag.',
+          },
+          {
+            q: 'Ist die lokale multimodale Pipeline GDPR-konform für medizinische oder rechtliche Nutzung?',
+            a: 'Eine lokale multimodale Pipeline, die Null-Netzwerk-Traffic während der Operation generiert, ist per Design konform für interne Anwendungsfälle — keine Datenverarbeitungsvereinbarung ist erforderlich, da keine persönlichen Daten Ihre Systeme verlassen. Zur Überprüfung der Konformität: Führen Sie Wireshark während des Betriebs aus und bestätigen Sie Null ausgehende Pakete vom Pipeline-Prozess. Speicherung ist auch wichtig — wenn Ihr Orchestrator Gesprächsverlauf oder Bilddateien speichert, unterliegen diese Speicher auch Aufbewahrungsanforderungen. Verwenden Sie kurzlebigen In-Memory-Speicher oder verschlüsselt lokalen Speicher mit angemessenen Aufbewahrungsrichtlinien.',
+          },
+          {
+            q: 'Kann ich die Pipeline auf einem Laptop ohne externe GPU ausführen?',
+            a: 'Mit CPU-only: Ja, aber langsam. whisper.cpp auf CPU ~5–10 Sekunden. LLaVA auf CPU ~20+ Sekunden. Total: ~30+ Sekunden latency — nicht für Echtzeit-Assistenten. Mit integrierten GPU (Mac Metal, Intel Arc): besser, aber immer noch nicht ideal. Empfehlung: externe GPU (RTX 4070 via Thunderbolt) oder verwenden Sie eine Cloud-Alternative für GPU-intensive Modelle.',
+          },
+          {
+            q: 'Sollte ich einen spezialisierten VLM oder ein generalistisches Modell wie Llama 3.2 Vision verwenden?',
+            a: 'Spezialisiert (LLaVA 1.6): schneller (~1 Sekunde), leichter (6 GB). Generalistisch (Llama 3.2 Vision 11B): besser für komplexe Szenen, kombiniert Sehen + Reasoning. Wenn Sie einfache Bildtitel oder Objekterkennung brauchen: spezialisiert. Für komplexes Szenen-Verständnis und kontextuelle Fragen: generalistisch. In der Praxis: spezialisiert + Reasoning-LLM erzeugt oft bessere Outputs als ein großes generalistisches Modell allein.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          '[Ollama](https://ollama.ai) — Lokale LLM-Orchestration, unterstützt Vision-Modelle und Chat-APIs.',
+          '[whisper.cpp auf GitHub](https://github.com/ggerganov/whisper.cpp) — Schnelle CPU-basierte Speech-to-Text, Metal/CUDA-beschleunigt.',
+          '[LLaVA auf Hugging Face](https://huggingface.co/liuhaotian/llava-v1.6-7b-hf) — Vision-Language-Modell, Open Source.',
+          '[Llama 3.2 Vision](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision) — Multimodales LLM mit Vision und Text, 11B.',
+          '[Piper TTS auf GitHub](https://github.com/rhasspy/piper) — Schnelle lokale Text-to-Speech.',
+        ],
+      },
+    },
   },
 
   fr: {
@@ -594,7 +658,37 @@ if __name__ == "__main__":
       'Construire un pipeline IA multimodal local en 2026 : whisper.cpp pour la saisie vocale, LLaVA 1.6 pour la vision, Ollama pour le raisonnement textuel, Piper TTS pour la sortie vocale. Architecture, niveaux matériels, cas d\'usage et code Python de l\'orchestrateur. Entièrement hors ligne.',
     twitterDescription:
       'IA multimodale locale 2026 : combiner Whisper STT + vision LLaVA + LLM Ollama + Piper TTS dans un pipeline hors ligne. Guide d\'architecture, niveaux matériels et code Python.',
-    sections: {},
+    readTime: '16 min de lecture',
+    educationalLevel: 'Advanced',
+    sections: {
+      faq: {
+        id: 'faq',
+        title: 'Questions fréquemment posées',
+        faqs: [
+          { q: 'Puis-je utiliser Llama 3.2 Vision seul pour la voix, la vision et le texte?', a: 'Oui. Llama 3.2 Vision 11B peut traiter les images et le texte. Vous pouvez l\'utiliser comme modèle unique avec whisper.cpp pour la voix et Piper pour la sortie. Cela réduit VRAM de ~15 GB à ~8 GB. Inconvénient : pas de VLM spécialisé pour l\'analyse d\'images complexes.' },
+          { q: 'Dois-je exécuter la vision et le LLM ensemble ou séparément?', a: 'Ensemble si 12+ GB VRAM. Séparé (échange) si 8 GB — charge VLM, stocke description, décharge, charge LLM. Séparé ajoute ~2–3 sec latence mais économise VRAM. Pour interactif : ensemble.' },
+          { q: 'Quel modèle de vision: LLaVA 1.6, Qwen2-VL ou Llama 3.2 Vision?', a: 'LLaVA 1.6: rapide (~1s), suffisant. Qwen2-VL: meilleure compréhension (~1,5s). Llama 3.2 Vision: meilleure qualité, combine vision+texte (~2s). Pour vitesse: LLaVA. Pour qualité: Llama 3.2 Vision.' },
+          { q: 'Le pipeline est-il assez rapide pour les assistants vocaux temps réel?', a: 'Oui si optimisé. whisper ~1–2s, LLM ~1–2s, TTS ~0,1s = ~2–4s total. Plus rapide que cloud APIs, mais pas synchrone. Parfait pour assistants asynchrones.' },
+          { q: 'Puis-je exécuter le pipeline sur RTX 3060 12 GB?', a: 'Non les quatre simultanément (~15 GB requis). Solution: Llama 3.2 Vision 11B (8 GB) seul ou quantifiez à INT4 (~10 GB). Ou échangez modèles selon type d\'entrée.' },
+          { q: 'Est-ce conforme au RGPD pour utilisation médicale/juridique?', a: 'Oui par conception — zéro trafic réseau, zéro données personnelles qui quittent vos systèmes. Vérifiez avec Wireshark. Attention au stockage — si vous gardez historique/images, respectez les périodes de rétention (Article 5 RGPD).' },
+          { q: 'Puis-je ajouter recherche web au pipeline?', a: 'Oui. Ajoutez étape recherche (DuckDuckGo API ou RAG local) entre orchestrateur et LLM texte. Ajoute 0,5–2s latence mais permet questions d\'actualité.' },
+          { q: 'Consommation électrique 24/7?', a: 'Au repos: ~50–80 W (GPU), ~15–25 W (Mac M5 Pro). Actif: ~150–300 W (GPU), ~30–60 W (Mac). Coût: $5–15 (Mac) ou $15–35 (desktop) par mois. Moins qu\'API cloud comparable.' },
+          { q: 'Puis-je exécuter sur laptop sans GPU externe?', a: 'CPU seul: très lent (~30s+ latence). GPU intégré (Metal, Arc): mieux mais pas idéal. Mieux: GPU externe ou cloud.' },
+          { q: 'VLM spécialisé ou généraliste?', a: 'Spécialisé (LLaVA): plus rapide, plus léger. Généraliste (Llama 3.2 Vision): meilleur pour scènes complexes. Pratique: spécialisé + LLM reasoning donne souvent meilleurs résultats.' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Ollama](https://ollama.ai) — Orchestration locale LLM, supporte modèles vision et APIs chat.',
+          '[whisper.cpp sur GitHub](https://github.com/ggerganov/whisper.cpp) — Speech-to-text rapide CPU, accélération Metal/CUDA.',
+          '[LLaVA sur Hugging Face](https://huggingface.co/liuhaotian/llava-v1.6-7b-hf) — Modèle Vision-Language open source.',
+          '[Llama 3.2 Vision](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision) — LLM multimodal, 11B.',
+          '[Piper TTS sur GitHub](https://github.com/rhasspy/piper) — Text-to-speech local rapide.',
+        ],
+      },
+    },
   },
 
   ja: {
