@@ -585,7 +585,56 @@ tts.tts_to_file(
       'Lokale TTS-Engines 2026 im Vergleich: Piper, Coqui TTS, XTTS v2, F5-TTS, Bark und StyleTTS 2. Voice-Cloning, Mehrsprachigkeit, VRAM-Anforderungen, Qualitätsbenchmarks und Lizenzübersicht. Vollständig offline, keine API-Schlüssel erforderlich.',
     twitterDescription:
       '6 lokale TTS-Engines im Vergleich 2026: Piper, Coqui, XTTS v2, F5-TTS, Bark, StyleTTS 2. Voice-Cloning, Qualität, Geschwindigkeit und Datenschutz. Vollständig offline – keine API-Schlüssel erforderlich.',
-    sections: {},
+    readTime: '16 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Piper ist die beste Wahl für Geschwindigkeit und Embedded-Anwendungen.** Es läuft vollständig auf der CPU, erzeugt Echtzeit-Sprache auf einem Raspberry Pi 5 und unterstützt 20+ Sprachen über herunterladbare Voice-Packs. Keine GPU, keine Python-Komplexität, MIT-Lizenz.',
+          '**XTTS v2 erzeugt die beste lokale Voice-Cloning-Qualität 2026.** Geben Sie 6 Sekunden Referenzaudio ein und es klont die Stimme in 17 Sprachen. Benötigt 4–6 GB GPU-VRAM. Die CPML-Lizenz beschränkt die kommerzielle Nutzung — überprüfen Sie die Lizenz vor der Bereitstellung.',
+          '**F5-TTS ist die schnell wachsende Alternative für Zero-Shot-Voice-Cloning.** Es verwendet eine Flow-Matching-Architektur anstelle von GPT, klont eine Stimme aus ~3 Sekunden Referenzaudio und erzielt Qualität vergleichbar mit XTTS v2 bei schnellerem Inferenzen. Lizenz: CC-BY-NC-4.0 (nur nicht-kommerziell).',
+          '**Coqui TTS ist das flexibelste Open-Source-TTS-Toolkit.** Es unterstützt mehrere Backends (Tacotron2, VITS, XTTS), Voice-Cloning und 20+ Sprachen unter MIT 2.0-Lizenz. Hinweis: Das Coqui-Unternehmen wurde 2023 geschlossen; das Projekt wird nun von der Community gepflegt.',
+          '**Bark ist die einzige lokale TTS, die nicht-sprachliche Audio generiert.** Es kann Lachen, Husten, Seufzer, Musikschnipsel und Umgebungsgeräusche neben Sprache erzeugen — nützlich für kreative Audioinhalte, Podcast-Produktion und interaktive Fiktion. Die Ausgaben sind langsam und nicht-deterministisch.',
+          '**StyleTTS 2 erreicht die höchsten MOS-Werte (Mean Opinion Score) aller Open-Source-englischen TTS-Engines.** Sein diffusionsbasiertes Style-Transfer erzeugt fast-menschliche Natürlichkeit bei englischen Narrationen. Es unterstützt nur Englisch und hat kein Voice-Cloning.',
+          '**Lizenz ist für die kommerzielle Nutzung entscheidend.** Piper (MIT), Bark (MIT), StyleTTS 2 (MIT): uneingeschränkt kommerziell. Coqui (MPL 2.0): Kommerzielle Nutzung erlaubt mit Offenlegungsbedingungen. XTTS v2 (CPML): Kommerzielle Nutzung erfordert eine Lizenzvereinbarung. F5-TTS (CC-BY-NC-4.0): Kommerzielle Nutzung ohne separate Vereinbarung untersagt.',
+          '**Keine entsprechen kommerzieller TTS-Qualität im großen Maßstab.** ElevenLabs, Google Text-to-Speech und Azure TTS übertreffen lokale Engines immer noch bei Konsistenz, Natürlichkeit und Latenz. Lokale TTS ist die richtige Wahl, wenn Datenschutz, Kosten oder Offline-Betrieb wichtiger ist als absolute Qualität.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Wie viel Referenz-Audio benötige ich für Voice-Cloning mit XTTS v2?',
+            a: 'XTTS v2 benötigt mindestens 3 Sekunden sauberes Referenzaudio, wobei 6+ Sekunden deutlich bessere Ergebnisse geben. Das Audio muss ein einzelner Sprecher mit minimalem Hintergrundgeräusch und ohne Musik sein. Higher-Quality-Quellmaterial erzeugt bessere Klone als komprimiertes Audio.',
+          },
+          {
+            q: 'Kann ich Piper TTS in einem kommerziellen Produkt verwenden?',
+            a: 'Ja. Piper ist unter der MIT-Lizenz lizenziert, die unbegrenzte kommerzielle Nutzung gestattet. Sie müssen die MIT-Lizenznotiz in Ihrem Produkt angeben. Die Voice-Modelle (ONNX-Dateien) können separate Lizenzen pro Voice haben.',
+          },
+          {
+            q: 'Muss ich bei der Verwendung von lokalen TTS-Engines die DSGVO beachten?',
+            a: 'Lokale TTS-Engines, die vollständig offline laufen, verursachen per Design keine DSGVO-Probleme für interne Nutzung — da keine persönlichen Daten Ihre Systeme verlassen, ist keine Datenverarbeitungsvereinbarung erforderlich. Überprüfen Sie jedoch Ihre lokale Speicherung: Wenn Ihr Orchestrator Gesprächsverlauf oder Audio-Dateien speichert, unterliegen diese Speicher den Aufbewahrungsanforderungen (DSGVO Artikel 5). Verwenden Sie kurzlebigen In-Memory-Speicher oder verschlüsselt lokalen Speicher mit angemessenen Aufbewahrungsrichtlinien.',
+          },
+          {
+            q: 'Ist lokale TTS für den deutschen Mittelstand geeignet?',
+            a: 'Ja. Für kleine und mittlere Unternehmen (KMU) bietet lokale TTS Kosten-Effizienz, Datenschutz und Compliance mit BSI-Grundschutz-Standards. Piper ist ideal für einfache Automatisierung und Customer-Service-Anwendungen. Coqui TTS oder XTTS v2 eignen sich für anspruchsvollere Voice-Cloning-Anforderungen in Finanz-, Rechts- oder Gesundheitskontexten.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          '[Piper TTS auf GitHub](https://github.com/rhasspy/piper) — Quellcode, Voice-Packs, ONNX-Modell-Downloads und Raspberry-Pi-Anleitung.',
+          '[Coqui TTS auf GitHub](https://github.com/coqui-ai/TTS) — Quellcode, Modelliste, Voice-Cloning-Dokumentation und Python-API-Referenz.',
+          '[XTTS v2 Dokumentation](https://docs.coqui.ai/en/latest/models/xtts.html) — XTTS v2 Modellkarte, Lizenz (CPML) und Voice-Cloning-API.',
+          '[F5-TTS auf GitHub](https://github.com/SWivid/F5-TTS) — Flow-Matching-TTS mit Zero-Shot-Voice-Cloning, Installationsanleitung und mehrsprachiger Unterstützung.',
+        ],
+      },
+    },
   },
 
   fr: {
@@ -602,7 +651,56 @@ tts.tts_to_file(
       'Comparaison des moteurs TTS locaux en 2026 : Piper, Coqui TTS, XTTS v2, F5-TTS, Bark et StyleTTS 2. Clonage vocal, support multilingue, exigences VRAM, benchmarks de qualité et détail des licences. Entièrement hors ligne, sans clés API.',
     twitterDescription:
       '6 moteurs TTS locaux comparés en 2026 : Piper, Coqui, XTTS v2, F5-TTS, Bark, StyleTTS 2. Clonage vocal, qualité, vitesse et confidentialité. Entièrement hors ligne — sans clés API.',
-    sections: {},
+    readTime: '14 min de lecture',
+    educationalLevel: 'Intermediate',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Piper est le meilleur choix pour la vitesse et les applications embarquées.** Il s\'exécute entièrement sur CPU, produit la parole en temps réel sur un Raspberry Pi 5 et supporte 20+ langues via des packs de voix téléchargeables. Pas de GPU, pas de complexité Python, licence MIT.',
+          '**XTTS v2 produit la meilleure qualité de clonage vocal local en 2026.** Donnez-lui 6 secondes d\'audio de référence et il clone la voix dans 17 langues. Nécessite 4–6 GB de VRAM GPU. La licence CPML restreint l\'utilisation commerciale.',
+          '**F5-TTS est l\'alternative en pleine croissance pour le clonage vocal zéro-shot.** Il utilise une architecture de flux-matching au lieu de GPT, clone une voix à partir de ~3 secondes d\'audio de référence et atteint une qualité comparable à XTTS v2 avec une inférence plus rapide. Licence : CC-BY-NC-4.0.',
+          '**Coqui TTS est le toolkit TTS open-source le plus flexible.** Il supporte plusieurs backends (Tacotron2, VITS, XTTS), le clonage vocal et 20+ langues sous licence MIT 2.0. Remarque : L\'entreprise Coqui a fermé en 2023; le projet est maintenant maintenu par la communauté.',
+          '**Bark est le seul TTS local qui génère de l\'audio non-vocal.** Il peut produire du rire, de la toux, des soupirs, des extraits musicaux et des bruits ambiants aux côtés de la parole — utile pour l\'audio créatif, la production de podcasts et la fiction interactive.',
+          '**StyleTTS 2 atteint les scores MOS (Mean Opinion Score) les plus élevés de tous les moteurs TTS anglais open-source.** Son transfert de style basé sur la diffusion produit une naturalité quasi-humaine pour la narration en anglais. Supports l\'anglais uniquement et n\'a pas de clonage vocal.',
+          '**La licence est critique pour l\'utilisation commerciale.** Piper (MIT), Bark (MIT), StyleTTS 2 (MIT): entièrement commercial. Coqui (MPL 2.0): utilisation commerciale autorisée avec conditions de divulgation. XTTS v2 (CPML): utilisation commerciale nécessite un accord de licence. F5-TTS (CC-BY-NC-4.0): utilisation commerciale interdite sans accord séparé.',
+          '**Aucun ne correspond à la qualité TTS commerciale à grande échelle.** ElevenLabs, Google Text-to-Speech et Azure TTS surpassent toujours les moteurs locaux en cohérence, naturalité et latence. Le TTS local est le bon choix quand la confidentialité, le coût ou l\'opération hors ligne importent plus que la qualité absolue.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Questions fréquemment posées',
+        faqs: [
+          {
+            q: 'Combien d\'audio de référence me faut-il pour le clonage vocal avec XTTS v2?',
+            a: 'XTTS v2 nécessite un minimum de 3 secondes d\'audio de référence propre, 6+ secondes donnant des résultats nettement meilleurs. L\'audio doit être un seul locuteur avec un bruit de fond minimal et sans musique. Un matériel source de meilleure qualité produit de meilleurs clones que l\'audio compressé.',
+          },
+          {
+            q: 'Puis-je utiliser Piper TTS dans un produit commercial?',
+            a: 'Oui. Piper est licencié sous MIT, qui permet l\'utilisation commerciale illimitée. Vous devez inclure la notice de licence MIT dans votre produit. Les modèles de voix (fichiers ONNX) peuvent avoir des licences séparées par voix.',
+          },
+          {
+            q: 'Quel moteur TTS local a le meilleur support multilingue?',
+            a: 'XTTS v2 supporte 17 langues avec clonage vocal multilingue — la fonctionnalité multilingue la plus impressionnante de tous les moteurs locaux. Coqui TTS a 20+ modèles de langues mais sans clonage multilingue. Piper a 20+ packs de voix pour l\'inférence CPU rapide.',
+          },
+          {
+            q: 'Quel moteur TTS local sonne le plus humain?',
+            a: 'StyleTTS 2 pour la narration en anglais — il atteint les scores MOS les plus élevés de tous les moteurs TTS anglais open-source (~4,3 vs référence humaine ~4,5). XTTS v2 et F5-TTS sont compétitifs (~4,1) pour la naturalité de voix clonée.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Piper TTS sur GitHub](https://github.com/rhasspy/piper) — Code source, packs de voix, téléchargements de modèles ONNX et guide Raspberry Pi.',
+          '[Coqui TTS sur GitHub](https://github.com/coqui-ai/TTS) — Code source, liste de modèles, documentation sur le clonage vocal et référence de l\'API Python.',
+          '[Documentation XTTS v2](https://docs.coqui.ai/en/latest/models/xtts.html) — Fiche de modèle XTTS v2, licence (CPML) et API de clonage vocal.',
+          '[F5-TTS sur GitHub](https://github.com/SWivid/F5-TTS) — TTS flow-matching avec clonage vocal zéro-shot, guide d\'installation et support multilingue.',
+        ],
+      },
+    },
   },
 
   ja: {
@@ -619,7 +717,56 @@ tts.tts_to_file(
       '2026年のローカルTTSエンジン比較：Piper、Coqui TTS、XTTS v2、F5-TTS、Bark、StyleTTS 2。ボイスクローニング、多言語対応、VRAM要件、品質ベンチマーク、ライセンス詳細。完全オフライン、APIキー不要。',
     twitterDescription:
       '6つのローカルTTSエンジンを2026年に比較：Piper、Coqui、XTTS v2、F5-TTS、Bark、StyleTTS 2。ボイスクローニング、品質、速度、プライバシー。完全オフライン — APIキー不要。',
-    sections: {},
+    readTime: '16分で読める',
+    educationalLevel: 'Intermediate',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Piperは速度と組み込みアプリケーションの最良の選択です。** CPUのみで実行され、Raspberry Pi 5でリアルタイム音声を生成し、20+言語をダウンロード可能なボイスパックでサポートしています。GPU なし、Python の複雑性なし、MIT ライセンス。',
+          '**XTTS v2は2026年のローカルボイスクローニング品質の最高です。** 6秒の参照オーディオを与えると、17言語でボイスをクローンします。4–6 GB GPU VRAM が必要です。CPML ライセンスは商用利用を制限しています。',
+          '**F5-TTSはゼロショットボイスクローニング向けの急速に成長している代替案です。** GPTの代わりにフローマッチングアーキテクチャを使用し、~3秒の参照オーディオからボイスをクローンし、より高速なインファレンスでXTTS v2に匹敵する品質を実現します。ライセンス：CC-BY-NC-4.0（非商用のみ）。',
+          '**Coqui TTSはもっとも柔軟なオープンソースTTSツールキットです。** 複数のバックエンド（Tacotron2、VITS、XTTS）、ボイスクローニング、20+言語をMIT 2.0ライセンスでサポートしています。注：Coqui社は2023年に閉鎖されました。プロジェクトはコミュニティによって維持されています。',
+          '**Barkは非言語オーディオを生成する唯一のローカルTTSです。** 笑い、咳、ため息、音楽スニペット、周囲音を音声と共に生成できます — クリエイティブオーディオ、ポッドキャスト制作、インタラクティブフィクションに有用です。',
+          '**StyleTTS 2はすべてのオープンソース英語TTSエンジンの最高MOS（Mean Opinion Score）スコアを達成します。** 拡散ベースのスタイルトランスファーは英語ナレーションで準人間的な自然さを生成します。英語のみをサポートし、ボイスクローニングはありません。',
+          '**ライセンスは商用利用にとって重要です。** Piper（MIT）、Bark（MIT）、StyleTTS 2（MIT）：制限なし商用。Coqui（MPL 2.0）：商用利用は開示条件で許可。XTTS v2（CPML）：商用利用にはライセンス契約が必要。F5-TTS（CC-BY-NC-4.0）：別途の契約なしの商用利用は禁止。',
+          '**どれも大規模な商用TTS品質には相当しません。** ElevenLabs、Google Text-to-Speech、Azure Speech はまだ一貫性、自然さ、レイテンシーですべてのローカルエンジンを上回ります。プライバシー、コスト、またはオフライン運用が絶対品質より重要な場合は、ローカル TTS が正しい選択です。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'XTTS v2でボイスクローニングに必要な参照オーディオの量は？',
+            a: 'XTTS v2は最低3秒のクリーンな参照オーディオを必要とします。6+秒でより良い結果が得られます。オーディオは単一の話者で、背景ノイズと音楽がなくなければなりません。高品質のソース素材は圧縮されたオーディオより良いクローンを生成します。',
+          },
+          {
+            q: 'Piper TTSを商用製品で使用できますか？',
+            a: 'はい。PiperはMITライセンスの下でライセンスされており、無制限の商用利用が可能です。製品にMITライセンス通知を含める必要があります。ボイスモデル（ONNXファイル）は音声ごとに個別のライセンスを持つ可能性があります。',
+          },
+          {
+            q: 'どのローカルTTSエンジンが最高の多言語サポートを持っていますか？',
+            a: 'XTTS v2は17言語で多言語ボイスクローニング対応しています — すべてのローカルエンジンの中で最も印象的な多言語機能です。Coqui TTSは20+言語モデルですが、多言語クローニングはありません。Piperは高速CPU推論のために20+言語ボイスパックを持っています。',
+          },
+          {
+            q: 'どのローカルTTSエンジンが最も人間らしく聞こえますか？',
+            a: '英語ナレーションではStyleTTS 2 — すべてのオープンソース英語TTSエンジンの最高MOS（~4.3 vs 人間参照 ~4.5）を達成します。XTTS v2とF5-TTSはクローンボイスの自然さで競争力があります（~4.1）。',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'ソース',
+        items: [
+          '[Piper TTS on GitHub](https://github.com/rhasspy/piper) — ソースコード、ボイスパック、ONNXモデルダウンロード、Raspberry Pi セットアップガイド。',
+          '[Coqui TTS on GitHub](https://github.com/coqui-ai/TTS) — ソースコード、モデルリスト、ボイスクローニングドキュメント、Python API リファレンス。',
+          '[XTTS v2 ドキュメント](https://docs.coqui.ai/en/latest/models/xtts.html) — XTTS v2 モデルカード、ライセンス（CPML）、ボイスクローニング API。',
+          '[F5-TTS on GitHub](https://github.com/SWivid/F5-TTS) — フローマッチング TTS、ゼロショットボイスクローニング、インストールガイド、多言語サポート。',
+        ],
+      },
+    },
   },
 
   zh: {
@@ -636,6 +783,55 @@ tts.tts_to_file(
       '2026年本地TTS引擎对比：Piper、Coqui TTS、XTTS v2、F5-TTS、Bark和StyleTTS 2。声音克隆、多语言支持、VRAM要求、质量基准和许可证详情。完全离线，无需API密钥。',
     twitterDescription:
       '2026年6款本地TTS引擎对比：Piper、Coqui、XTTS v2、F5-TTS、Bark、StyleTTS 2。声音克隆、质量、速度与隐私保护。完全离线——无需API密钥。',
-    sections: {},
+    readTime: '阅读约16分钟',
+    educationalLevel: 'Intermediate',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Piper是速度和嵌入式应用的最佳选择。** 完全在CPU上运行，在Raspberry Pi 5上生成实时语音，通过可下载的语音包支持20+种语言。无GPU、无Python复杂性、MIT许可证。',
+          '**XTTS v2是2026年本地声音克隆质量最佳的选择。** 输入6秒参考音频，它就能在17种语言中克隆声音。需要4–6 GB GPU VRAM。CPML许可证限制商业使用。',
+          '**F5-TTS是零样本声音克隆领域快速增长的替代方案。** 它采用流匹配架构而非GPT，从~3秒参考音频克隆声音，实现与XTTS v2相当的质量但推理速度更快。许可证：CC-BY-NC-4.0（仅非商业）。',
+          '**Coqui TTS是最灵活的开源TTS工具包。** 它支持多个后端（Tacotron2、VITS、XTTS）、声音克隆和20+种语言，采用MPL 2.0许可证。注：Coqui公司于2023年关闭；该项目现由社区维护。',
+          '**Bark是唯一生成非语音音频的本地TTS。** 它可以在语音旁边生成笑声、咳嗽、叹气、音乐片段和环境声——适用于创意音频、播客制作和交互式小说。',
+          '**StyleTTS 2达到所有开源英文TTS引擎中最高的MOS（平均意见得分）。** 其基于扩散的风格转移为英文叙述产生接近人类的自然效果。仅支持英文，无声音克隆。',
+          '**许可证对商业使用至关重要。** Piper（MIT）、Bark（MIT）、StyleTTS 2（MIT）：完全商业化。Coqui（MPL 2.0）：商业使用允许但须披露条件。XTTS v2（CPML）：商业使用需要许可协议。F5-TTS（CC-BY-NC-4.0）：未经单独协议禁止商业使用。',
+          '**都无法与大规模商业TTS质量相媲美。** ElevenLabs、Google Text-to-Speech和Azure Speech在一致性、自然度和延迟方面仍然超过所有本地引擎。当隐私、成本或离线操作比绝对质量更重要时，本地TTS是正确选择。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '使用XTTS v2进行声音克隆需要多少参考音频？',
+            a: 'XTTS v2需要至少3秒的干净参考音频，6+秒会得到明显更好的效果。音频必须是单个扬声器，背景噪声和音乐最少。高质量的源材料比压缩音频产生更好的克隆。',
+          },
+          {
+            q: '我可以在商业产品中使用Piper TTS吗？',
+            a: '可以。Piper在MIT许可证下授权，允许无限制的商业使用。您必须在产品中包含MIT许可证声明。语音模型（ONNX文件）可能具有单个语音的单独许可证。',
+          },
+          {
+            q: '哪个本地TTS引擎具有最佳的多语言支持？',
+            a: 'XTTS v2支持17种语言的多语言声音克隆——所有本地引擎中最令人印象深刻的多语言功能。Coqui TTS拥有20+种语言模型但缺乏多语言克隆。Piper为快速CPU推理拥有20+种语言语音包。',
+          },
+          {
+            q: '哪个本地TTS引擎听起来最像人类？',
+            a: '英文叙述方面StyleTTS 2最佳——它达到所有开源英文TTS引擎的最高MOS分数（~4.3 对人类参考 ~4.5）。XTTS v2和F5-TTS在克隆语音自然度方面有竞争力（~4.1）。',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '参考资源',
+        items: [
+          '[Piper TTS on GitHub](https://github.com/rhasspy/piper) — 源代码、语音包、ONNX模型下载和Raspberry Pi设置指南。',
+          '[Coqui TTS on GitHub](https://github.com/coqui-ai/TTS) — 源代码、模型列表、声音克隆文档和Python API参考。',
+          '[XTTS v2文档](https://docs.coqui.ai/en/latest/models/xtts.html) — XTTS v2模型卡、许可证（CPML）和声音克隆API。',
+          '[F5-TTS on GitHub](https://github.com/SWivid/F5-TTS) — 流匹配TTS、零样本声音克隆、安装指南和多语言支持。',
+        ],
+      },
+    },
   },
 }
