@@ -33,6 +33,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Limitations You Should Know', anchor: '#limitations' },
         { label: 'When Will Mobile LLMs Become Practical?', anchor: '#future' },
         { label: 'Regional Considerations', anchor: '#regional-context' },
+        { label: 'Watch: Running Local AI Models on Your Phone with PocketPal AI', anchor: '#video-walkthrough' },
         { label: 'FAQ', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
@@ -200,6 +201,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**2028+ phones:** 13–24B models expected. Quality approaching GPT-3.5 level on-device. Battery and thermal constraints remain the bottleneck.',
             '**Best option today:** Use your phone for quick offline queries and run a [Mac mini M4 Pro](/local-llms/best-mini-pcs-local-llm) or [desktop GPU](/local-llms/local-llm-hardware-guide-2026) as a local server accessible from your phone via Wi-Fi. This gives you mobile convenience with desktop-quality inference.',
           ],
+        },
+        videoWalkthrough: {
+          id: 'video-walkthrough',
+          title: 'Watch: Running Local AI Models on Your Phone with PocketPal AI',
+          content: 'In this hands-on walkthrough, a developer demonstrates how to run Small Language Models completely offline on a smartphone using PocketPal AI. The video covers searching and downloading Hugging Face models directly on-device, optimizing memory usage and token generation speed, and unlocking vision capabilities — all with zero internet connection and full data privacy.',
+          youtubeUrl: 'https://www.youtube.com/watch?v=sMIEK_dzNLU',
         },
         faqSection: {
           id: 'faq',
