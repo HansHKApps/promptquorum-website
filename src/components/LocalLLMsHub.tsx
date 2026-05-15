@@ -12,6 +12,20 @@ function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
 }
 
+function renderDescription(text: string, lang: Language): React.ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g)
+  return parts.map((part, i) => {
+    const boldMatch = part.match(/^\*\*([^*]+)\*\*$/)
+    if (boldMatch) return <strong key={i}>{boldMatch[1]}</strong>
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (linkMatch) {
+      const href = lang !== 'en' ? `${linkMatch[2]}?lang=${lang}` : linkMatch[2]
+      return <Link key={i} href={href} className="text-primary hover:underline">{linkMatch[1]}</Link>
+    }
+    return part
+  })
+}
+
 const HUB_HERO_TITLE: Record<string, string> = {
   en: 'Best Local LLMs May 2026: Ollama, LM Studio, Hardware & VRAM Guide',
   de: 'Beste Lokale LLMs Mai 2026: Ollama, LM Studio, Hardware & VRAM Guide',
@@ -910,7 +924,7 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   return (
     <Link
       href={href}
-      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+      className="flex items-start gap-3 bg-card border border-primary/30 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
     >
       <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
       <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
@@ -923,7 +937,7 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
 function ArticleComingSoon({ articleKey, lang }: { articleKey: string; lang: Language }) {
   const title = getArticleTitle(articleKey, lang)
   return (
-    <div className="flex items-start gap-3 bg-card border border-primary/10 rounded-xl p-4 opacity-50 cursor-default select-none">
+    <div className="flex items-start gap-3 bg-card border border-primary/20 rounded-xl p-4 opacity-50 cursor-default select-none">
       <span className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-gray-300" />
       <span className="text-text-secondary text-sm font-medium leading-snug flex-1">
         {title}
@@ -953,7 +967,7 @@ function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
       </div>
       <h2 className="text-xl sm:text-2xl font-bold text-text-primary mb-3">{label}</h2>
       <p className="text-text-secondary text-sm mb-6 max-w-2xl">
-        {THEME_DESCRIPTIONS[theme.id]?.[lang] ?? THEME_DESCRIPTIONS[theme.id]?.['en'] ?? theme.description}
+        {renderDescription(THEME_DESCRIPTIONS[theme.id]?.[lang] ?? THEME_DESCRIPTIONS[theme.id]?.['en'] ?? theme.description ?? '', lang)}
       </p>
       {hasContent ? (
         <div className="grid sm:grid-cols-2 gap-3">
