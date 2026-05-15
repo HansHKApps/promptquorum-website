@@ -98,6 +98,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Quick Facts',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-en.svg',
+        imageCaption: 'Setup time & installation: SillyTavern 15 minutes (git clone + npm), Agnai single-user 10 minutes (npm), Agnai shared server 30 minutes (+ MongoDB + authentication), RisuAI 5 minutes (download desktop app, no terminal needed). First-time users: RisuAI fastest.',
         items: [
           '**SillyTavern** — Node.js + browser UI, hosted locally. Deepest customisation, largest community.',
           '**Agnai** — Node.js + browser UI; runs locally or as shared server. Only multi-user pick of the three.',
@@ -126,6 +128,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Three-Frontend Comparison',
         content:
           '**Same character cards, same model backends — different feature density and target user.** The table below maps the decision-relevant differences.',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-en.svg',
+        imageCaption: 'Feature comparison: SillyTavern offers deepest lore books and extensions, multi-character group chat (mature), no multi-user mode. Agnai adds credible multi-user/shared-server mode, simpler lore books. RisuAI simplest setup (5 min), mobile apps built-in, lighter feature set. All three load Tavern v2 character cards.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -227,6 +231,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Character Card Format (Tavern v2): The Lingua Franca',
         content:
           '**All three frontends load the Tavern v2 character-card spec, which makes migration between them trivial.** A card is a PNG with embedded JSON in the metadata; the same file opens in any of the three.',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-character-cards-en.svg',
+        imageCaption: 'Tavern v2 character card format: PNG + embedded JSON metadata. Contains name, description, personality, scenario, first message, example dialogue, system prompt. Interoperable across SillyTavern, Agnai, RisuAI (all load the same spec). V3 spec (May 2026) adds native lore embedding & multi-language support, backward-compatible. Community cards from chub.ai work in all three frontends.',
         items: [
           '**What is in a Tavern v2 card:** name, description, personality, scenario, first message, example dialogue, tags, creator notes, and a system prompt. Optional fields cover lore-book entries and character-specific sampling settings.',
           '**V3 spec (May 2026):** extends V2 with native lore-book embedding, multi-language support, and richer creator metadata. SillyTavern fully supports V3 import; Agnai loads V3 cards but ignores some V3-specific fields; RisuAI handles V3 partially via its extended format. V2 remains the lingua franca — V3 is additive and backward-compatible, so V2 cards work everywhere.',
@@ -247,6 +253,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Model Recommendations Per Frontend',
         content:
           '**Frontend choice does not constrain model choice.** All three speak the same backends — Ollama is the most common — and the model picks below apply equally to SillyTavern, Agnai, and RisuAI.',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-models-en.svg',
+        imageCaption: 'Recommended models (all 3 frontends): Llama 3.3 70B is the standard (best all-round, 42 GB VRAM, voice consistency). Qwen3 32B is the popular pick for 24 GB rigs (nearly 70B quality). Command R+ 104B for dialogue specialists (group scenes, 62 GB VRAM). Hermes 3 for uncensored 70B work. Avoid models <13B without creative fine-tunes.',
         items: [
           '**Llama 3.3 70B** — the best all-round local pick for character work. Strongest voice consistency across long sessions, takes character direction well, handles dark themes when the system prompt frames the work as fiction. Wants ~42 GB VRAM at Q4_K_M.',
           '**Qwen3 32B** — the right 24 GB-rig pick. Nearly Llama 70B prose quality without the hardware bill. The default for most laptops and consumer desktops.',
@@ -288,6 +296,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision: Which Frontend Should You Pick',
         content:
           '**Three questions get most users to the right pick.**',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-decision-en.svg',
+        imageCaption: 'Decision flowchart: (1) Sharing with other writers? → Yes: Agnai (multi-user only). (2) Want deep customisation? → Yes: SillyTavern. (3) Mobile-first? → Yes: RisuAI (packaged iOS/Android apps). Default if unsure: SillyTavern (80% of users settle here eventually). Character cards transfer between all three — switching overhead is minimal.',
         columns: ['Your situation', 'Pick'],
         rows: [
           { 'Your situation': 'I am a solo writer, want deep customisation, and will invest time in learning the tool', 'Pick': 'SillyTavern' },

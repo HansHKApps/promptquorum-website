@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Setup Time & Installation Complexity
+  </text>
+
+  <!-- SillyTavern -->
+  <text x="80" y="70" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">SillyTavern</text>
+  <rect x="40" y="80" width="80" height="140" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="40" y="80" width="80" height="4" fill="#6750A4" rx="0"/>
+
+  <text x="80" y="110" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">15 min</text>
+  <text x="80" y="150" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">git clone</text>
+  <text x="80" y="165" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">npm install</text>
+  <text x="80" y="180" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">npm start</text>
+  <text x="80" y="210" font-size="9" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">localhost:8000</text>
+
+  <!-- Agnai (single-user) -->
+  <text x="280" y="70" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Agnai (Single-User)</text>
+  <rect x="240" y="80" width="80" height="140" rx="4" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="240" y="80" width="80" height="4" fill="#34A853" rx="0"/>
+
+  <text x="280" y="110" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">10 min</text>
+  <text x="280" y="150" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">npm install</text>
+  <text x="280" y="165" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">npm start</text>
+  <text x="280" y="210" font-size="9" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">localhost:3001</text>
+
+  <!-- Agnai (shared server) -->
+  <text x="480" y="70" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Agnai (Server)</text>
+  <rect x="440" y="80" width="80" height="140" rx="4" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="440" y="80" width="80" height="4" fill="#F4B400" rx="0"/>
+
+  <text x="480" y="110" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">30 min</text>
+  <text x="480" y="145" font-size="9" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">+ MongoDB</text>
+  <text x="480" y="160" font-size="9" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">+ Auth config</text>
+  <text x="480" y="180" font-size="9" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">+ Reverse proxy</text>
+  <text x="480" y="210" font-size="9" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Production-ready</text>
+
+  <!-- RisuAI -->
+  <text x="680" y="70" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">RisuAI</text>
+  <rect x="640" y="80" width="80" height="140" rx="4" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="640" y="80" width="80" height="4" fill="#EA4335" rx="0"/>
+
+  <text x="680" y="110" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">5 min</text>
+  <text x="680" y="150" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Download</text>
+  <text x="680" y="165" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Double-click</text>
+  <text x="680" y="180" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Start chatting</text>
+  <text x="680" y="210" font-size="9" font-weight="600" fill="#79747E" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">No terminal</text>
+
+  <!-- Key metrics -->
+  <line x1="50" y1="280" x2="750" y2="280" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="50" y="305" font-size="11" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Install requirements:</text>
+  <text x="50" y="325" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">SillyTavern & Agnai: Node.js + npm (command line). RisuAI: none — download the app installer for macOS/Windows/Linux/iOS/Android.</text>
+  <text x="50" y="340" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">First-time users: RisuAI is the fastest. If you want shared-server multi-user from day one, budget 30 minutes for Agnai + MongoDB.</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
