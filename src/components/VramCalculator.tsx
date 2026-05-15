@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
+import { useLang } from '@/hooks/useLang';
 
 interface GPU {
   name: string;
@@ -13,27 +14,219 @@ interface Tooltip {
   description: string;
 }
 
-const TOOLTIPS: Record<string, Tooltip> = {
-  modelSize: {
-    title: 'Model Size',
-    description: 'The number of parameters in billions (B). Larger models (70B) are more capable but require more VRAM. Examples: 7B is good for general tasks, 13B for coding/analysis, 70B for advanced reasoning.'
+type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh';
+
+const VRAM_TRANSLATIONS: Record<Language, {
+  popularModels: string;
+  modelSize: string;
+  quantization: string;
+  context: string;
+  batchSize: string;
+  useCase: string;
+  singleUser: string;
+  multiUser: string;
+  batchProcessing: string;
+  baseModel: string;
+  contextOH: string;
+  batchOH: string;
+  systemOH: string;
+  totalMinimum: string;
+  recommended: string;
+  lookFor: string;
+  compatibleGPUs: string;
+  headroom: string;
+  shortBy: string;
+  proTips: string;
+  tips: string[];
+  shareConfig: string;
+  loading: string;
+  tooltips: Record<string, Tooltip>;
+}> = {
+  en: {
+    popularModels: 'Popular Models',
+    modelSize: 'Model Size',
+    quantization: 'Quantization',
+    context: 'Context',
+    batchSize: 'Batch Size',
+    useCase: 'Use Case',
+    singleUser: 'Single-user chat',
+    multiUser: 'Multi-user API',
+    batchProcessing: 'Batch processing',
+    baseModel: 'Base Model',
+    contextOH: 'Context OH',
+    batchOH: 'Batch OH',
+    systemOH: 'System OH',
+    totalMinimum: 'Total Minimum',
+    recommended: 'Recommended (with 25% safety margin)',
+    lookFor: 'Look for a GPU with at least',
+    compatibleGPUs: 'Compatible GPUs',
+    headroom: 'GB headroom',
+    shortBy: 'Short by',
+    proTips: '💡 Pro Tips:',
+    tips: [
+      'Always use the "with safety margin" figure when buying a GPU',
+      'Q4 gives 90-95% quality with 25% size reduction. Q5 is better if you have room',
+      'Context overhead grows with conversation length. Budget 1-3 GB for typical usage',
+      'Batch size matters for multi-user APIs. Single-user chat can ignore batch overhead',
+    ],
+    shareConfig: '📋 Share this configuration:',
+    loading: 'Loading...',
+    tooltips: {
+      modelSize: { title: 'Model Size', description: 'The number of parameters in billions (B). Larger models (70B) are more capable but require more VRAM. Examples: 7B is good for general tasks, 13B for coding/analysis, 70B for advanced reasoning.' },
+      quantization: { title: 'Quantization', description: 'Reduces precision of model weights to save VRAM. FP16 is full precision (100% quality), Q8 = 8-bit (99% quality), Q4 = 4-bit (95% quality). Q4 is standard; saves ~75% VRAM with minimal quality loss.' },
+      context: { title: 'Context Length', description: 'Maximum conversation history the model can remember. 4K = ~3,000 words, 8K = ~6,000 words, 16K = ~12,000 words. Longer context uses more VRAM during inference.' },
+      batchSize: { title: 'Batch Size', description: 'Number of requests processed simultaneously. Size 1 = one user at a time (single-user chat). Size 4+ = multiple users (APIs/servers). Larger batches use more VRAM but improve throughput.' },
+      useCase: { title: 'Use Case', description: 'Single-user chat = one person talking to the model. Multi-user API = server handling many concurrent requests. Batch processing = running many requests sequentially (no real-time requirement).' },
+    },
   },
-  quantization: {
-    title: 'Quantization',
-    description: 'Reduces precision of model weights to save VRAM. FP16 is full precision (100% quality), Q8 = 8-bit (99% quality), Q4 = 4-bit (95% quality). Q4 is standard; saves ~75% VRAM with minimal quality loss.'
+  de: {
+    popularModels: 'Beliebte Modelle',
+    modelSize: 'Modellgröße',
+    quantization: 'Quantisierung',
+    context: 'Kontext',
+    batchSize: 'Batch-Größe',
+    useCase: 'Anwendungsfall',
+    singleUser: 'Einzelnutzer-Chat',
+    multiUser: 'Multi-User-API',
+    batchProcessing: 'Batch-Verarbeitung',
+    baseModel: 'Basismodell',
+    contextOH: 'Kontext-Overhead',
+    batchOH: 'Batch-Overhead',
+    systemOH: 'System-Overhead',
+    totalMinimum: 'Mindest-VRAM',
+    recommended: 'Empfohlen (mit 25 % Sicherheitspuffer)',
+    lookFor: 'GPU mit mindestens',
+    compatibleGPUs: 'Kompatible GPUs',
+    headroom: 'GB Puffer',
+    shortBy: 'Fehlen',
+    proTips: '💡 Praxis-Tipps:',
+    tips: [
+      'Kaufen Sie immer anhand des Werts „mit Sicherheitspuffer"',
+      'Q4 liefert 90–95 % Qualität bei 25 % weniger Größe. Q5 ist besser, wenn VRAM vorhanden',
+      'Kontext-Overhead wächst mit der Konversationslänge. Planen Sie 1–3 GB für typische Nutzung ein',
+      'Batch-Größe ist wichtig für Multi-User-APIs. Einzelnutzer-Chat kann Batch-Overhead ignorieren',
+    ],
+    shareConfig: '📋 Diese Konfiguration teilen:',
+    loading: 'Wird geladen …',
+    tooltips: {
+      modelSize: { title: 'Modellgröße', description: 'Anzahl der Parameter in Milliarden (B). Größere Modelle (70B) sind leistungsfähiger, benötigen aber mehr VRAM. Beispiele: 7B für allgemeine Aufgaben, 13B für Code/Analyse, 70B für komplexes Reasoning.' },
+      quantization: { title: 'Quantisierung', description: 'Reduziert die Präzision der Modellgewichte, um VRAM zu sparen. FP16 = volle Präzision (100 % Qualität), Q8 = 8-Bit (99 % Qualität), Q4 = 4-Bit (95 % Qualität). Q4 ist Standard: spart ~75 % VRAM bei minimalem Qualitätsverlust.' },
+      context: { title: 'Kontextlänge', description: 'Maximale Konversationshistorie, die das Modell behalten kann. 4K = ~3.000 Wörter, 8K = ~6.000 Wörter, 16K = ~12.000 Wörter. Längerer Kontext verbraucht mehr VRAM.' },
+      batchSize: { title: 'Batch-Größe', description: 'Anzahl gleichzeitig verarbeiteter Anfragen. Größe 1 = ein Nutzer gleichzeitig. Größe 4+ = mehrere Nutzer (APIs/Server). Größere Batches brauchen mehr VRAM, verbessern aber den Durchsatz.' },
+      useCase: { title: 'Anwendungsfall', description: 'Einzelnutzer-Chat = eine Person spricht mit dem Modell. Multi-User-API = Server verarbeitet viele gleichzeitige Anfragen. Batch-Verarbeitung = viele Anfragen sequenziell ohne Echtzeit-Anforderung.' },
+    },
   },
-  context: {
-    title: 'Context Length',
-    description: 'Maximum conversation history the model can remember. 4K = ~3,000 words, 8K = ~6,000 words, 16K = ~12,000 words. Longer context uses more VRAM during inference.'
+  fr: {
+    popularModels: 'Modèles populaires',
+    modelSize: 'Taille du modèle',
+    quantization: 'Quantisation',
+    context: 'Contexte',
+    batchSize: 'Taille du lot',
+    useCase: 'Cas d\'usage',
+    singleUser: 'Chat mono-utilisateur',
+    multiUser: 'API multi-utilisateurs',
+    batchProcessing: 'Traitement par lots',
+    baseModel: 'Modèle de base',
+    contextOH: 'Surcharge contexte',
+    batchOH: 'Surcharge lot',
+    systemOH: 'Surcharge système',
+    totalMinimum: 'VRAM minimum',
+    recommended: 'Recommandé (avec marge de sécurité 25 %)',
+    lookFor: 'Choisissez un GPU avec au moins',
+    compatibleGPUs: 'GPU compatibles',
+    headroom: 'Go de marge',
+    shortBy: 'Manque',
+    proTips: '💡 Conseils pratiques :',
+    tips: [
+      'Achetez toujours en vous basant sur la valeur "avec marge de sécurité"',
+      'Q4 offre 90-95 % de qualité avec 25 % de réduction de taille. Q5 est préférable si vous avez de la marge',
+      'La surcharge de contexte augmente avec la longueur des conversations. Prévoyez 1-3 Go pour un usage typique',
+      'La taille du lot compte pour les API multi-utilisateurs. Le chat mono-utilisateur peut ignorer la surcharge de lot',
+    ],
+    shareConfig: '📋 Partager cette configuration :',
+    loading: 'Chargement…',
+    tooltips: {
+      modelSize: { title: 'Taille du modèle', description: 'Nombre de paramètres en milliards (B). Les modèles plus grands (70B) sont plus performants mais nécessitent plus de VRAM. Exemples : 7B pour les tâches générales, 13B pour le code/analyse, 70B pour le raisonnement avancé.' },
+      quantization: { title: 'Quantisation', description: 'Réduit la précision des poids du modèle pour économiser la VRAM. FP16 = précision totale (100 % qualité), Q8 = 8 bits (99 % qualité), Q4 = 4 bits (95 % qualité). Q4 est standard : économise ~75 % de VRAM avec une perte de qualité minimale.' },
+      context: { title: 'Longueur de contexte', description: 'Historique de conversation maximal que le modèle peut mémoriser. 4K = ~3 000 mots, 8K = ~6 000 mots, 16K = ~12 000 mots. Un contexte plus long utilise plus de VRAM pendant l\'inférence.' },
+      batchSize: { title: 'Taille du lot', description: 'Nombre de requêtes traitées simultanément. Taille 1 = un utilisateur à la fois. Taille 4+ = plusieurs utilisateurs (APIs/serveurs). Les lots plus grands utilisent plus de VRAM mais améliorent le débit.' },
+      useCase: { title: 'Cas d\'usage', description: 'Chat mono-utilisateur = une personne parle au modèle. API multi-utilisateurs = serveur gérant de nombreuses requêtes simultanées. Traitement par lots = nombreuses requêtes séquentielles sans exigence temps réel.' },
+    },
   },
-  batchSize: {
-    title: 'Batch Size',
-    description: 'Number of requests processed simultaneously. Size 1 = one user at a time (single-user chat). Size 4+ = multiple users (APIs/servers). Larger batches use more VRAM but improve throughput.'
+  ja: {
+    popularModels: '人気モデル',
+    modelSize: 'モデルサイズ',
+    quantization: '量子化',
+    context: 'コンテキスト',
+    batchSize: 'バッチサイズ',
+    useCase: 'ユースケース',
+    singleUser: 'シングルユーザーチャット',
+    multiUser: 'マルチユーザーAPI',
+    batchProcessing: 'バッチ処理',
+    baseModel: 'ベースモデル',
+    contextOH: 'コンテキストOH',
+    batchOH: 'バッチOH',
+    systemOH: 'システムOH',
+    totalMinimum: '最低VRAM',
+    recommended: '推奨（25%安全マージン込み）',
+    lookFor: '最低でも以下のVRAMを持つGPUを選択してください：',
+    compatibleGPUs: '対応GPU',
+    headroom: 'GB余裕',
+    shortBy: '不足：',
+    proTips: '💡 実践的なヒント：',
+    tips: [
+      'GPU購入時は常に「安全マージン込み」の値を使用してください',
+      'Q4は25%サイズ削減で90〜95%の品質を提供します。余裕があればQ5がより良い',
+      'コンテキストオーバーヘッドは会話の長さと共に増加します。通常の使用には1〜3 GBを見込んでください',
+      'バッチサイズはマルチユーザーAPIで重要です。シングルユーザーチャットはバッチオーバーヘッドを無視できます',
+    ],
+    shareConfig: '📋 この設定を共有：',
+    loading: '読み込み中…',
+    tooltips: {
+      modelSize: { title: 'モデルサイズ', description: 'パラメータ数（十億単位）。大きいモデル（70B）はより高性能ですが、より多くのVRAMが必要です。例：7Bは一般タスク向け、13Bはコード/分析向け、70Bは高度な推論向け。' },
+      quantization: { title: '量子化', description: 'VRAMを節約するためにモデルウェイトの精度を下げます。FP16は完全精度（品質100%）、Q8=8ビット（99%）、Q4=4ビット（95%）。Q4は標準的で、最小限の品質低下でVRAMを約75%節約します。' },
+      context: { title: 'コンテキスト長', description: 'モデルが記憶できる会話履歴の最大量。4K=約3,000語、8K=約6,000語、16K=約12,000語。長いコンテキストは推論中により多くのVRAMを使用します。' },
+      batchSize: { title: 'バッチサイズ', description: '同時に処理するリクエスト数。サイズ1=一度に1ユーザー。サイズ4以上=複数ユーザー（API/サーバー）。バッチが大きいほどVRAMが多く必要ですが、スループットが向上します。' },
+      useCase: { title: 'ユースケース', description: 'シングルユーザーチャット=1人がモデルと会話。マルチユーザーAPI=多数の同時リクエストを処理するサーバー。バッチ処理=リアルタイム要件なしで多数のリクエストを順次実行。' },
+    },
   },
-  useCase: {
-    title: 'Use Case',
-    description: 'Single-user chat = one person talking to the model. Multi-user API = server handling many concurrent requests. Batch processing = running many requests sequentially (no real-time requirement).'
-  }
+  zh: {
+    popularModels: '热门模型',
+    modelSize: '模型大小',
+    quantization: '量化',
+    context: '上下文',
+    batchSize: '批量大小',
+    useCase: '使用场景',
+    singleUser: '单用户聊天',
+    multiUser: '多用户API',
+    batchProcessing: '批量处理',
+    baseModel: '基础模型',
+    contextOH: '上下文开销',
+    batchOH: '批量开销',
+    systemOH: '系统开销',
+    totalMinimum: '最低VRAM',
+    recommended: '推荐（含25%安全余量）',
+    lookFor: '请选择至少具备以下VRAM的GPU：',
+    compatibleGPUs: '兼容GPU',
+    headroom: 'GB余量',
+    shortBy: '不足',
+    proTips: '💡 实用技巧：',
+    tips: [
+      '购买GPU时始终参考"含安全余量"的数值',
+      'Q4以减少25%大小获得90-95%质量，有余量时Q5更佳',
+      '上下文开销随对话长度增加，典型使用请预留1-3 GB',
+      '批量大小对多用户API很重要，单用户聊天可忽略批量开销',
+    ],
+    shareConfig: '📋 分享此配置：',
+    loading: '加载中…',
+    tooltips: {
+      modelSize: { title: '模型大小', description: '参数数量（以十亿为单位）。更大的模型（70B）能力更强但需要更多VRAM。示例：7B适合一般任务，13B适合代码/分析，70B适合高级推理。' },
+      quantization: { title: '量化', description: '降低模型权重精度以节省VRAM。FP16为全精度（100%质量），Q8=8位（99%质量），Q4=4位（95%质量）。Q4是标准选择，以最小质量损失节省约75%的VRAM。' },
+      context: { title: '上下文长度', description: '模型可记忆的最大对话历史。4K≈3,000词，8K≈6,000词，16K≈12,000词。更长的上下文在推理过程中需要更多VRAM。' },
+      batchSize: { title: '批量大小', description: '同时处理的请求数量。大小1=每次一个用户（单用户聊天）。大小4以上=多个用户（API/服务器）。更大的批量使用更多VRAM，但可提高吞吐量。' },
+      useCase: { title: '使用场景', description: '单用户聊天=一个人与模型对话。多用户API=服务器处理多个并发请求。批量处理=顺序运行多个请求（无实时要求）。' },
+    },
+  },
 };
 
 interface Preset {
@@ -125,6 +318,9 @@ const BATCH_MULTIPLIER: { [key: string]: number } = {
 };
 
 export function VramCalculator() {
+  const lang = (useLang() as Language) in VRAM_TRANSLATIONS ? (useLang() as Language) : 'en';
+  const t = VRAM_TRANSLATIONS[lang];
+
   const [modelSize, setModelSize] = useState<string>('13B');
   const [quantization, setQuantization] = useState<string>('Q4');
   const [contextLength, setContextLength] = useState<string>('4K');
@@ -197,9 +393,9 @@ export function VramCalculator() {
 
   const required = parseFloat(calculations.withSafety);
 
-  const LabelWithInfo = ({ name, tooltipKey }: { name: string; tooltipKey: string }) => (
+  const LabelWithInfo = ({ tooltipKey }: { tooltipKey: string }) => (
     <div className="flex items-center gap-1">
-      <label className="text-sm font-semibold text-slate-700">{name}</label>
+      <label className="text-sm font-semibold text-slate-700">{t.tooltips[tooltipKey]?.title ?? tooltipKey}</label>
       <button
         type="button"
         onClick={(e) => {
@@ -225,7 +421,7 @@ export function VramCalculator() {
     <div className="space-y-6 bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-lg border border-slate-200">
       {/* Preset Buttons */}
       <div className="space-y-2">
-        <p className="text-xs font-semibold text-slate-600 uppercase">Popular Models</p>
+        <p className="text-xs font-semibold text-slate-600 uppercase">{t.popularModels}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {PRESETS.map((preset) => (
             <button
@@ -243,12 +439,12 @@ export function VramCalculator() {
         {/* Model Size */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo name="Model Size" tooltipKey="modelSize" />
+            <LabelWithInfo tooltipKey="modelSize" />
           </div>
           {activeTooltip === 'modelSize' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg max-w-xs text-xs">
-              <p className="font-semibold mb-1">{TOOLTIPS.modelSize.title}</p>
-              <p>{TOOLTIPS.modelSize.description}</p>
+              <p className="font-semibold mb-1">{t.tooltips.modelSize.title}</p>
+              <p>{t.tooltips.modelSize.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
             </div>
           )}
@@ -266,12 +462,12 @@ export function VramCalculator() {
         {/* Quantization */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo name="Quantization" tooltipKey="quantization" />
+            <LabelWithInfo tooltipKey="quantization" />
           </div>
           {activeTooltip === 'quantization' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
-              <p className="font-semibold mb-1">{TOOLTIPS.quantization.title}</p>
-              <p>{TOOLTIPS.quantization.description}</p>
+              <p className="font-semibold mb-1">{t.tooltips.quantization.title}</p>
+              <p>{t.tooltips.quantization.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
             </div>
           )}
@@ -289,12 +485,12 @@ export function VramCalculator() {
         {/* Context Length */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo name="Context" tooltipKey="context" />
+            <LabelWithInfo tooltipKey="context" />
           </div>
           {activeTooltip === 'context' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
-              <p className="font-semibold mb-1">{TOOLTIPS.context.title}</p>
-              <p>{TOOLTIPS.context.description}</p>
+              <p className="font-semibold mb-1">{t.tooltips.context.title}</p>
+              <p>{t.tooltips.context.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
             </div>
           )}
@@ -312,12 +508,12 @@ export function VramCalculator() {
         {/* Batch Size */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo name="Batch Size" tooltipKey="batchSize" />
+            <LabelWithInfo tooltipKey="batchSize" />
           </div>
           {activeTooltip === 'batchSize' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
-              <p className="font-semibold mb-1">{TOOLTIPS.batchSize.title}</p>
-              <p>{TOOLTIPS.batchSize.description}</p>
+              <p className="font-semibold mb-1">{t.tooltips.batchSize.title}</p>
+              <p>{t.tooltips.batchSize.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
             </div>
           )}
@@ -335,12 +531,12 @@ export function VramCalculator() {
         {/* Use Case */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo name="Use Case" tooltipKey="useCase" />
+            <LabelWithInfo tooltipKey="useCase" />
           </div>
           {activeTooltip === 'useCase' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
-              <p className="font-semibold mb-1">{TOOLTIPS.useCase.title}</p>
-              <p>{TOOLTIPS.useCase.description}</p>
+              <p className="font-semibold mb-1">{t.tooltips.useCase.title}</p>
+              <p>{t.tooltips.useCase.description}</p>
               <div className="absolute -top-1 left-6 w-2 h-2 bg-slate-900 rotate-45"></div>
             </div>
           )}
@@ -349,9 +545,9 @@ export function VramCalculator() {
             onChange={(e) => setUseCase(e.target.value)}
             className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white text-slate-900 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           >
-            <option value="single">Single-user chat</option>
-            <option value="multi">Multi-user API</option>
-            <option value="batch">Batch processing</option>
+            <option value="single">{t.singleUser}</option>
+            <option value="multi">{t.multiUser}</option>
+            <option value="batch">{t.batchProcessing}</option>
           </select>
         </div>
       </div>
@@ -360,37 +556,37 @@ export function VramCalculator() {
       <div className="bg-white border border-slate-200 rounded-lg p-6 space-y-4">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="border-l-4 border-blue-400 pl-4">
-            <p className="text-xs font-semibold text-slate-600 uppercase">Base Model</p>
+            <p className="text-xs font-semibold text-slate-600 uppercase">{t.baseModel}</p>
             <p className="text-xl font-bold text-slate-900">{calculations.baseVram} GB</p>
           </div>
           <div className="border-l-4 border-purple-400 pl-4">
-            <p className="text-xs font-semibold text-slate-600 uppercase">Context OH</p>
+            <p className="text-xs font-semibold text-slate-600 uppercase">{t.contextOH}</p>
             <p className="text-xl font-bold text-slate-900">{calculations.contextVram} GB</p>
           </div>
           <div className="border-l-4 border-orange-400 pl-4">
-            <p className="text-xs font-semibold text-slate-600 uppercase">Batch OH</p>
+            <p className="text-xs font-semibold text-slate-600 uppercase">{t.batchOH}</p>
             <p className="text-xl font-bold text-slate-900">{calculations.batchVram} GB</p>
           </div>
           <div className="border-l-4 border-gray-400 pl-4">
-            <p className="text-xs font-semibold text-slate-600 uppercase">System OH</p>
+            <p className="text-xs font-semibold text-slate-600 uppercase">{t.systemOH}</p>
             <p className="text-xl font-bold text-slate-900">{calculations.systemVram} GB</p>
           </div>
           <div className="border-l-4 border-red-400 pl-4 md:col-span-2">
-            <p className="text-xs font-semibold text-slate-600 uppercase">Total Minimum</p>
+            <p className="text-xs font-semibold text-slate-600 uppercase">{t.totalMinimum}</p>
             <p className="text-xl font-bold text-slate-900">{calculations.totalRequired} GB</p>
           </div>
         </div>
 
         <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-300 rounded-lg p-4">
-          <p className="text-xs font-semibold text-slate-600 uppercase mb-1">Recommended (with 25% safety margin)</p>
+          <p className="text-xs font-semibold text-slate-600 uppercase mb-1">{t.recommended}</p>
           <p className="text-2xl font-bold text-purple-700">{calculations.withSafety} GB</p>
-          <p className="text-xs text-slate-600 mt-2">👉 Look for a GPU with at least {calculations.withSafety} GB VRAM</p>
+          <p className="text-xs text-slate-600 mt-2">👉 {t.lookFor} {calculations.withSafety} GB VRAM</p>
         </div>
       </div>
 
       {/* GPU Compatibility */}
       <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-slate-800">Compatible GPUs</h3>
+        <h3 className="text-sm font-semibold text-slate-800">{t.compatibleGPUs}</h3>
         <div className="space-y-2">
           {GPUS.map((gpu) => {
             const fit = getGpuFit(required, gpu.vram);
@@ -399,7 +595,9 @@ export function VramCalculator() {
                 <div>
                   <p className={`font-semibold ${fit.text}`}>{gpu.name} ({gpu.vram} GB)</p>
                   <p className="text-xs text-slate-600">
-                    {gpu.vram >= required ? `${(gpu.vram - required).toFixed(1)} GB headroom` : `Short by ${(required - gpu.vram).toFixed(1)} GB`}
+                    {gpu.vram >= required
+                      ? `${(gpu.vram - required).toFixed(1)} ${t.headroom}`
+                      : `${t.shortBy} ${(required - gpu.vram).toFixed(1)} GB`}
                   </p>
                 </div>
                 <span className="text-lg font-bold">{fit.status}</span>
@@ -411,22 +609,19 @@ export function VramCalculator() {
 
       {/* Tips */}
       <div className="bg-blue-50 border-l-4 border-blue-400 p-4 text-sm text-slate-700 space-y-1">
-        <p className="font-semibold text-blue-900">💡 Pro Tips:</p>
+        <p className="font-semibold text-blue-900">{t.proTips}</p>
         <ul className="list-disc list-inside space-y-1 text-xs">
-          <li>Always use the "with safety margin" figure when buying a GPU</li>
-          <li>Q4 gives 90-95% quality with 25% size reduction. Q5 is better if you have room</li>
-          <li>Context overhead grows with conversation length. Budget 1-3 GB for typical usage</li>
-          <li>Batch size matters for multi-user APIs. Single-user chat can ignore batch overhead</li>
+          {t.tips.map((tip, i) => <li key={i}>{tip}</li>)}
         </ul>
       </div>
 
       {/* URL Share Feature */}
       <div className="text-xs text-slate-500 pt-4 border-t border-slate-200">
-        <p className="font-semibold text-slate-700 mb-2">📋 Share this configuration:</p>
+        <p className="font-semibold text-slate-700 mb-2">{t.shareConfig}</p>
         <div className="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs break-all">
           {typeof window !== 'undefined'
             ? `${window.location.origin}${window.location.pathname}${generateShareUrl(modelSize, quantization, contextLength, batchSize)}`
-            : 'Loading...'}
+            : t.loading}
         </div>
       </div>
     </div>

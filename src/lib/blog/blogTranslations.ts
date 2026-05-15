@@ -72,16 +72,16 @@ export const blogMetadata = {
   },
   promptToolsMarket2026: {
     en: { category: 'Research', title: 'Prompt Optimization & Comparison Tools: Market Overview 2026', intro: 'The LLM Prompt Tools market reached $456M in 2024 (projected $1,018M by 2031). Independent comparison of 17 tools across 6 groups — pricing, features, and acquisition data. March 2026.', publishDate: 'Published March 2026', readTime: '15 min read' },
-    de: { category: 'Forschung', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '15 Min. Lesezeit' },
-    fr: { category: 'Recherche', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '15 min de lecture' },
-    ja: { category: '研究', title: '', intro: '', publishDate: '2026年3月公開', readTime: '15分の読み物' },
-    zh: { category: '研究', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '15分钟阅读' }
+    de: { category: 'Forschung', title: 'Prompt-Optimierungs- und Vergleichstools: Marktüberblick 2026', intro: 'Der LLM-Prompt-Tools-Markt erreichte 2024 456 Mio. USD (Prognose: 1.018 Mio. USD bis 2031). Unabhängiger Vergleich von 17 Tools in 6 Kategorien — Preise, Funktionen und Akquisitionsdaten. März 2026.', publishDate: 'Veröffentlicht März 2026', readTime: '15 Min. Lesezeit' },
+    fr: { category: 'Recherche', title: 'Outils d\'optimisation et de comparaison de prompts : Vue d\'ensemble du marché 2026', intro: 'Le marché des outils LLM Prompt a atteint 456 M$ en 2024 (projection : 1 018 M$ d\'ici 2031). Comparaison indépendante de 17 outils en 6 groupes — tarifs, fonctionnalités et données d\'acquisition. Mars 2026.', publishDate: 'Publié mars 2026', readTime: '15 min de lecture' },
+    ja: { category: '研究', title: 'プロンプト最適化・比較ツール：2026年市場概観', intro: 'LLMプロンプトツール市場は2024年に4億5,600万ドルに達しました（2031年には10億1,800万ドルと予測）。6グループ17ツールを独立評価 — 価格、機能、買収データ。2026年3月。', publishDate: '2026年3月公開', readTime: '15分で読める' },
+    zh: { category: '研究', title: '提示词优化与比较工具：2026年市场概览', intro: 'LLM提示词工具市场2024年达4.56亿美元（预计2031年达10.18亿美元）。独立对比17款工具，覆盖6大类别——定价、功能及收购数据。2026年3月。', publishDate: '发布于 2026年3月', readTime: '阅读约15分钟' }
   },
   frontierModelsPromptLibrary: {
     en: { category: 'AI Model Comparison', title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond', intro: 'Frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude Opus 4.7, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.', publishDate: 'Published March 24, 2026', readTime: '15 min read' },
-    de: { category: 'KI-Modellvergleich', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '15 Min. Lesezeit' },
-    fr: { category: 'Comparaison de modèles IA', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '15 min de lecture' },
-    ja: { category: 'AIモデル比較', title: '', intro: '', publishDate: '2026年3月公開', readTime: '15分の読み物' },
-    zh: { category: 'AI模型比较', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '15分钟阅读' }
+    de: { category: 'KI-Modellvergleich', title: 'Frontier-KI-Modelle und Prompt-Bibliothek: GPT-5.x, Claude 4.6, Gemini 3 Pro und mehr', intro: 'Frontier-KI-Modelle bilden die Spitze der Large-Language-Model-Entwicklung. Dieser Leitfaden vergleicht GPT-5.x, Claude Opus 4.7, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 und Grok 4.1 nach Reasoning, Kosten, Geschwindigkeit und Praxisleistung — mit 170+ Evaluierungs-Prompts zum selbst testen.', publishDate: 'Veröffentlicht März 2026', readTime: '15 Min. Lesezeit' },
+    fr: { category: 'Comparaison de modèles IA', title: 'Modèles IA frontier et bibliothèque de prompts : GPT-5.x, Claude 4.6, Gemini 3 Pro et au-delà', intro: 'Les modèles IA frontier représentent l\'état de l\'art en développement de LLM. Ce guide compare GPT-5.x, Claude Opus 4.7, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 et Grok 4.1 sur le raisonnement, le coût, la vitesse et la performance réelle — avec 170+ prompts d\'évaluation.', publishDate: 'Publié mars 2026', readTime: '15 min de lecture' },
+    ja: { category: 'AIモデル比較', title: 'フロンティアAIモデルとプロンプトライブラリ：GPT-5.x、Claude 4.6、Gemini 3 Proとその先へ', intro: 'フロンティアAIモデルは大規模言語モデル開発の最先端です。このガイドはGPT-5.x、Claude Opus 4.7、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3、Grok 4.1を推論・コスト・速度・実務性能で比較し、170以上の評価プロンプトを提供します。', publishDate: '2026年3月公開', readTime: '15分で読める' },
+    zh: { category: 'AI模型比较', title: '前沿AI模型与提示词库：GPT-5.x、Claude 4.6、Gemini 3 Pro及更多', intro: '前沿AI模型代表大型语言模型开发的最前沿。本指南比较GPT-5.x、Claude Opus 4.7、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3和Grok 4.1的推理能力、成本、速度和实际任务表现，并提供170+评测提示词。', publishDate: '发布于 2026年3月', readTime: '阅读约15分钟' }
   }
 }
