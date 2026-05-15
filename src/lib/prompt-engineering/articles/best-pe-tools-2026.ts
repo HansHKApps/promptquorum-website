@@ -10,8 +10,8 @@ export const article: Record<Language, PEArticle> = {
     en: {
       theme: 'Tools & Platforms',
       title: 'Best Prompt Engineering Tools 2026: Ranked by Use Case',
-      seoTitle: 'Best Prompt Engineering Tools 2026: Ranked by Use Case',
-      metaDescription: 'Compare 6 prompt engineering tools: Braintrust, Vellum, Promptfoo, PromptHub, LangSmith, PromptQuorum — ranked by use case. Pricing: free to $500/mo.',
+      seoTitle: 'Prompt Engineering Tools 2026: Complete Directory & Comparison',
+      metaDescription: 'Directory of 6 prompt engineering tools: Braintrust (evaluation), Vellum (production), Promptfoo (testing), PromptHub (versioning), LangSmith, PromptQuorum. Free to $500/mo.',
       ogTitle: '6 Prompt Engineering Tools Ranked — Which Solves Your Bottleneck?',
       ogDescription: 'Evaluation, testing, versioning, production, multi-model dispatch. One tool per job. Side-by-side comparison table inside.',
       twitterTitle: 'Best Prompt Engineering Tools 2026: Side-by-Side Comparison',
@@ -53,7 +53,7 @@ export const article: Record<Language, PEArticle> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-28',
-        url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-tools-2026',
+        url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-tools-2026?lang=en',
         inLanguage: 'en',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -353,8 +353,8 @@ export const article: Record<Language, PEArticle> = {
     de: {
   theme: 'Tools & Plattformen',
   title: 'Beste Prompt-Engineering-Tools 2026: Vergleich nach Einsatzzweck',
-  seoTitle: 'Prompt-Engineering-Tools 2026: Vergleich nach Einsatzzweck',
-  metaDescription: 'Braintrust, Vellum, Promptfoo, PromptHub, LangSmith: 5 Tools nach Einsatzzweck gerankt — Evaluierung bis Produktion. Preise: kostenlos bis 500 €/Monat.',
+  seoTitle: 'Prompt Engineering Tools 2026: Verzeichnis & Vergleich',
+  metaDescription: 'Verzeichnis von 6 Prompt-Engineering-Tools: Braintrust (Evaluierung), Vellum (Produktion), Promptfoo (Testing), PromptHub (Versionierung), LangSmith, PromptQuorum. Kostenlos bis 500 €/Monat.',
   ogTitle: '6 Prompt-Engineering-Tools im Vergleich — welches löst Ihr Problem?',
   ogDescription: 'Evaluierung, Tests, Versionierung, Produktion, Multi-Modell-Dispatch. Ein Tool pro Aufgabe. Vergleichstabelle inklusive.',
   twitterTitle: 'Beste Prompt-Engineering-Tools 2026: Direktvergleich',
@@ -694,8 +694,8 @@ export const article: Record<Language, PEArticle> = {
     fr: {
   theme: 'Outils & Plateformes',
   title: 'Meilleurs outils de prompt engineering 2026 : classés par usage',
-  seoTitle: 'Meilleurs outils de prompt engineering 2026 : par usage',
-  metaDescription: 'Braintrust, Vellum, Promptfoo, PromptHub, LangSmith : 5 outils classés par usage. Évaluation, tests, versionnage, déploiement. Gratuit à 500 $/mois.',
+  seoTitle: 'Outils Prompt Engineering 2026 : Répertoire et Comparaison',
+  metaDescription: 'Répertoire de 6 outils : Braintrust (évaluation), Vellum (production), Promptfoo (test), PromptHub (versionnage), LangSmith, PromptQuorum. Gratuit à 500 $/mois.',
   ogTitle: '6 outils de prompt engineering comparés — lequel résout votre problème ?',
   ogDescription: 'Évaluation, tests, versioning, production, dispatch multi-modèle. Un outil par besoin. Tableau comparatif inclus.',
   twitterTitle: 'Meilleurs outils de prompt engineering 2026 : comparatif',
@@ -758,8 +758,8 @@ export const article: Record<Language, PEArticle> = {
     ja: {
   theme: 'ツール＆プラットフォーム',
   title: 'プロンプトエンジニアリングツール2026：用途別ランキング',
-  seoTitle: 'プロンプトエンジニアリングツール2026：Braintrust等5製品を用途別に比較',
-  metaDescription: 'Braintrust・Vellum・Promptfoo・PromptHub・LangSmith・PromptQuorumを評価・テスト・バージョン管理・デプロイ・マルチモデル配信で比較。料金は無料〜月額500ドル。',
+  seoTitle: 'プロンプトエンジニアリングツール2026：完全ディレクトリと比較',
+  metaDescription: '6つのプロンプトエンジニアリングツール完全ガイド：Braintrust（評価）、Vellum（本番環境）、Promptfoo（テスト）、PromptHub（バージョン管理）、LangSmith、PromptQuorum。無料～月額500ドル。2026年更新。',
   ogTitle: 'プロンプトエンジニアリングツール6選——あなたの課題を解決するのは？',
   ogDescription: '評価、テスト、バージョン管理、本番運用、マルチモデル配信。用途別に1ツール。比較表あり。',
   twitterTitle: 'プロンプトエンジニアリングツール2026：徹底比較',
@@ -1084,8 +1084,8 @@ export const article: Record<Language, PEArticle> = {
     zh: {
   theme: '工具与平台',
   title: '2026最佳提示词工程工具：按用途排名',
-  seoTitle: '2026最佳提示词工程工具：Braintrust、Vellum等6款产品按用途对比',
-  metaDescription: '对比Braintrust、Vellum、Promptfoo、PromptHub、LangSmith和PromptQuorum——按评估、测试、版本管理、部署和多模型分发排名。价格从免费到500美元/月。',
+  seoTitle: '提示词工程工具2026：完整目录和对比',
+  metaDescription: '6款提示词工程工具完整目录：Braintrust（评估）、Vellum（生产环境）、Promptfoo（测试）、PromptHub（版本管理）、LangSmith、PromptQuorum。免费至月费500美元。2026年更新。',
   ogTitle: '6款提示词工程工具对比——哪个能解决你的瓶颈？',
   ogDescription: '评估、测试、版本管理、生产部署、多模型分发。每项任务一个工具。内含对比表。',
   twitterTitle: '2026年最佳提示词工程工具：全面对比',
