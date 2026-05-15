@@ -468,11 +468,15 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
             <tbody>
               {section.rows.map((row, i) => (
                 <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
-                  {section.columns!.map((col, colIdx) => (
-                    <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
-                      {renderInlineLinks(row[col] ?? '—', lang)}
-                    </td>
-                  ))}
+                  {section.columns!.map((col, colIdx) => {
+                    const key = col.toLowerCase().replace(/\./g, '')
+                    const value = row[key] ?? row[col] ?? '—'
+                    return (
+                      <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
+                        {renderInlineLinks(value, lang)}
+                      </td>
+                    )
+                  })}
                 </tr>
               ))}
             </tbody>
@@ -756,7 +760,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center">
           <p className="text-text-secondary mb-6">
-            {POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
+            {article?.ctaText ?? POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
             href={lang === 'en' ? '/' : `/?lang=${lang}`}

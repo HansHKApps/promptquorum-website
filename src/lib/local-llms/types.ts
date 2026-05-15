@@ -82,4 +82,5 @@ export interface LLMArticle {
   current_hardware_mentioned?: string[]
   archive_after?: string
   specific_year?: number
+  ctaText?: string
 }
