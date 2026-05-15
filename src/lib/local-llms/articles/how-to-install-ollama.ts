@@ -198,6 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Run Your First Local LLM](/local-llms/run-first-local-llm) -- Next step after installation',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) -- Model recommendations by hardware',
             '[Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers) -- Alternative tools to Ollama',
+            '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework comparison for Apple Silicon: speed, setup time, and ecosystem trade-offs.',
             'Ollama is now installed and ready. The next challenge: writing prompts that get good results. Start here: [what is prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) covers fundamentals in plain language.',
           ],
         },
@@ -497,6 +498,7 @@ schema: {
             '[Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de) -- Alternative Tools zu Ollama',
             '[So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) -- GUI-Alternative für Anfänger',
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=de) -- Detaillierter Vergleich von CLI vs. GUI-Ansätzen',
+            '[MLX vs Ollama vs llama.cpp auf Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=de) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Kompromisse.',
           ],
         },
         faq: {
@@ -822,6 +824,7 @@ schema: {
             '[Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr) -- Outils alternatifs à Ollama',
             '[Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Alternative GUI pour les débutants',
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Comparaison détaillée des approches CLI vs GUI',
+            '[MLX vs Ollama vs llama.cpp sur Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=fr) -- Comparaison de framework pour Apple Silicon : vitesse, temps de setup, et compromis écosystème.',
           ],
         },
         faq: {
@@ -1147,6 +1150,7 @@ schema: {
             '[Local LLM ワンクリック インストーラー](/local-llms/local-llm-one-click-installers?lang=ja) - Ollama への代替ツール',
             '[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) - 初心者向けの GUI 代替',
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=ja) - CLI vs GUI アプローチの詳細比較',
+            '[Mac 2026 での MLX vs Ollama vs llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=ja) - Apple Silicon フレームワーク比較：速度、セットアップ時間、エコシステムのトレードオフ。',
           ],
         },
         faq: {
@@ -1472,6 +1476,7 @@ schema: {
             '[Local LLM 一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh) - Ollama 的替代工具',
             '[如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) - 初学者 GUI 替代方案',
             '[Ollama 与 LM Studio 的对比](/local-llms/how-to-install-lm-studio?lang=zh) - CLI 与 GUI 方法的详细比较',
+            '[2026年Mac上的MLX对比Ollama对比llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=zh) - Apple Silicon框架比较：速度、设置时间和生态系统权衡。',
           ],
         },
         faq: {

@@ -328,6 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- Q4_K_M vs Q8_0 vs Q5_K_M in depth',
             '[Small Local LLM Models Under 4 GB](/local-llms/small-local-llm-models) -- 3B models for 8 GB laptops',
             '[Laptop vs Desktop for Local LLMs 2026](/local-llms/laptop-vs-desktop-local-llm) -- Buying guide: performance comparison, cost analysis, and which platform to buy.',
+            '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework comparison for Apple Silicon: speed, setup time, and ecosystem trade-offs.',
           ],
         },
       },
@@ -690,6 +691,7 @@ schema: {
             '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Detaillierter Vergleich von Inferenz-Architekturen, die für die Auswahl von Laptop-Hardware relevant sind',
             '[Lokale LLMs vs Cloud-APIs](/local-llms/local-llms-vs-cloud-apis) -- Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann Laptop-Inferenz die richtige Wahl ist',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Vollständiger Leitfaden zu Q4/Q5/Q8-Quantisierungs-Kompromissen für speicherbegrenzte Laptop-Umgebungen',
+            '[MLX vs Ollama vs llama.cpp auf Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=de) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Überlegungen.',
           ],
         },
         faqSection: {
@@ -1052,6 +1054,7 @@ schema: {
             '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- comparaison détaillée des architectures d\'inférence pertinentes pour la sélection du matériel d\'ordinateur portable',
             '[Local LLMs vs API cloud](/local-llms/local-llms-vs-cloud-apis) -- comparaison des coûts et de la vitesse pour vous aider à décider quand l\'inférence d\'ordinateur portable est le bon choix',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- guide complet des compromis de quantification Q4/Q5/Q8 pour les environnements d\'ordinateur portable à mémoire limitée',
+            '[MLX vs Ollama vs llama.cpp sur Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=fr) -- Comparaison des frameworks pour Apple Silicon: vitesse, temps de configuration et compromis d\'écosystème.',
           ],
         },
         faqSection: {
@@ -1413,6 +1416,7 @@ schema: {
             '[GPUvs CPUvs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)--ノートパソコンハードウェア選択に関連する推論アーキテクチャの詳細な比較',
             '[ローカルLLMs vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis)--ノートパソコン推論がいつ正しい選択であるかを決定するのに役立つコストと速度の比較',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)--メモリ制約のあるノートパソコン環境向けのQ4/Q5/Q8量子化トレードオフの完全なガイド',
+            '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=ja) -- Apple Silicon フレームワーク比較: スピード、セットアップ時間、エコシステムトレードオフ',
           ],
         },
         faqSection: {
@@ -1774,6 +1778,7 @@ schema: {
             '[GPU与CPU与Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- 与笔记本电脑硬件选择相关的推理架构的详细比较',
             '[本地LLM与云API](/local-llms/local-llms-vs-cloud-apis) -- 成本和速度比较，可帮助您决定何时笔记本电脑推理是正确的选择',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- 关于内存受限笔记本电脑环境的Q4/Q5/Q8量化权衡的完整指南',
+            '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=zh) -- Apple Silicon 框架对比：速度、设置时间和生态系统权衡',
           ],
         },
         faqSection: {
